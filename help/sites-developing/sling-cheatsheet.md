@@ -21,4 +21,4 @@ ht-degree: 13%
 
 ![了解Apache Sling脚本解析。](assets/sling-cheatsheet-01.png)
 
-![使用SlingPostServlet — 这是POST请求的默认处理程序；它几乎可以做任何事。](assets/sling-cheatsheet-02.png)
+![使用SlingPostServlet — 这是您的POST请求的默认处理程序；它几乎可以执行任何操作。](assets/sling-cheatsheet-02.png)

@@ -10,10 +10,10 @@ topic-tags: operations
 content-type: reference
 discoiquuid: d9c96e7f-9416-48e1-a6af-47384f7bee92
 exl-id: 90923d39-3ac5-4028-976c-d011f0404476
-source-git-commit: 8b4459c69b73159ce5afd819dfb772df5c51cd16
+source-git-commit: 1b57fca352457e973bd7395e060e3d0495a9d920
 workflow-type: tm+mt
-source-wordcount: '1136'
-ht-degree: 87%
+source-wordcount: '1134'
+ht-degree: 84%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 87%
 
 >[!NOTE]
 >
->的 [JMX控制台](/help/sites-administering/jmx-console.md#workflow-maintenance) 提供了其他工作流维护操作。
+>此 [JMX控制台](/help/sites-administering/jmx-console.md#workflow-maintenance) 提供其他工作流维护操作。
 
 提供了一系列控制台来管理您的工作流。使用[全局导航](/help/sites-authoring/basic-handling.md#global-navigation)以打开&#x200B;**工具**&#x200B;窗格，然后选择&#x200B;**工作流**：
 
@@ -54,7 +54,7 @@ ht-degree: 87%
    * 有效负载路径：选择特定路径
    * 工作流模型：选择工作流模型
    * 被分派人：选择工作流被分派人
-   * 类型：任务、工作流项或工作流故障
+   * 类型：任务、工作流项目或工作流失败
    * 任务状态：活动、完成或已终止
    * 我的角色：所有者和被分派人、仅所有者、仅被分派人
    * 开始日期：指定日期之前或之后的开始日期
@@ -98,13 +98,13 @@ ht-degree: 87%
 
 * **故障详细信息**
 打开一个窗口以显示 
-**故障消息**、**步骤**&#x200B;和&#x200B;**故障堆栈**。
+**失败消息**， **步骤**、和 **失败栈栈**.
 
 * **打开历史记录**
 显示工作流历史记录的详细信息。
 
-* **重试步骤**&#x200B;再次执行脚本步骤组件实例。修复了原始错误的原因后，请使用“重试步骤”命令。 例如，在修复流程步骤执行的脚本中的错误后，重试该步骤。
-* **终止** 如果错误导致了工作流的不可考虑情况，则终止工作流。 例如，工作流可以依赖于环境条件，例如存储库中对工作流实例不再有效的信息。
+* **重试步骤**&#x200B;再次执行脚本步骤组件实例。修复导致原始错误的故障后，使用“重试步骤”命令。例如，在修复流程步骤执行的脚本中的错误后，重试该步骤。
+* **终止**&#x200B;如果错误导致工作流出现不可调和的情况，则终止工作流。例如，工作流可以依赖于环境条件，例如存储库中对工作流实例不再有效的信息。
 * **终止并重试**&#x200B;类似于&#x200B;**终止**，只不过使用原始有效负载、标题和描述来启动新的工作流实例。
 
 要调查故障，然后恢复或终止工作流，请执行以下步骤：
@@ -119,11 +119,11 @@ ht-degree: 87%
 
 最大限度地减少工作流实例的数量可以提高工作流引擎的性能，因此，您可以定期从存储库中清除已完成或正在运行的工作流实例。
 
-配置 **Adobe Granite 工作流清除配置**&#x200B;以根据其时限和状态清除工作流实例。您还可以清除所有模型或特定模型的工作流实例。
+配置 **AdobeGranite工作流清除配置** 要根据工作流实例的年龄和状态清除工作流实例，请执行以下操作： 您还可以清除所有模型或特定模型的工作流实例。
 
 您还可以创建多个服务配置以清除满足不同条件的工作流实例。例如，创建一个配置，以便在特定工作流模型的实例的运行时间显著超出预期时间时清除这些实例。创建另一个配置，以便在一定天数后清除所有已完成的工作流，从而最大限度地减小存储库。
 
-要配置服务，您可以使用 [Web控制台](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) 或 [将OSGi配置添加到存储库](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository). 下表介绍了任一方法所需的属性。
+要配置服务，您可以使用 [Web控制台](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) 或 [将OSGi配置添加到存储库](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository). 下表描述了任一方法所需的属性。
 
 >[!NOTE]
 >
@@ -159,7 +159,7 @@ ht-degree: 87%
   <tr>
    <td>要清除的模型</td>
    <td>scheduledpurge.modelIds</td>
-   <td><p>要清除的工作流模型的 ID。ID 是模型节点的路径，例如：<br />/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model<br /> 不指定任何值可清除所有工作流模型的实例。</p> <p>要指定多个模型，请单击 Web 控制台中的 + 按钮。 </p> </td>
+   <td><p>要清除的工作流模型的 ID。ID是模型节点的路径，例如：<br /> /var/workflow/models/dam/update_asset<br /> </p> <p>要指定多个模型，请单击 Web 控制台中的 + 按钮。 </p> <p>不要指定任何值以清除所有工作流模型的实例。</p> </td>
   </tr>
   <tr>
    <td>工作流时限</td>
@@ -171,7 +171,7 @@ ht-degree: 87%
 
 ## 设置收件箱的最大大小 {#setting-the-maximum-size-of-the-inbox}
 
-您可以通过配置 **AdobeGranite工作流服务**，使用 [Web控制台](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) 或 [将OSGi配置添加到存储库](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository). 下表介绍了为任一方法配置的属性。
+您可以通过配置 **AdobeGranite工作流服务**，使用 [Web控制台](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) 或 [将OSGi配置添加到存储库](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository). 下表描述了为任一方法配置的属性。
 
 >[!NOTE]
 >
@@ -185,7 +185,7 @@ ht-degree: 87%
 
 ## 对客户拥有的数据存储使用工作流变量 {#using-workflow-variables-customer-datastore}
 
-工作流处理的数据存储在 Adobe 提供的存储 (JCR) 中。此类数据本质上可能是敏感的。您可能希望将所有用户定义的元数据/数据保存在您自己的托管存储中，而不是 Adobe 提供的存储中。这些部分描述了如何为外部存储设置这些变量。
+工作流处理的数据存储在 Adobe 提供的存储 (JCR) 中。此类数据本质上可能是敏感的。您可能希望将所有用户定义的元数据/数据保存在您自己的托管存储中，而不是 Adobe 提供的存储中。以下各节将介绍如何为外部存储设置这些变量。
 
 ### 设置模型以使用元数据的外部存储 {#set-model-for-external-storage}
 
@@ -193,7 +193,7 @@ ht-degree: 87%
 
 属性 *userMetadataPersistenceEnabled* 将存储在工作流模型的 *jcr:content 节点*&#x200B;上。此标志将作为 *cq:userMetaDataCustomPersistenceEnabled* 保留在工作流元数据中。
 
-下图表明必须在工作流上设置标志。
+下图显示了如何在工作流中设置标记。
 
 ![workflow-externalize-config](assets/workflow-externalize-config.png)
 

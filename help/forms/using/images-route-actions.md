@@ -18,23 +18,23 @@ ht-degree: 0%
 
 # 自定义路由操作中使用的图像 {#customize-images-used-in-route-actions}
 
-要自定义在路由操作中使用的图像，请执行 [自定义的一般步骤](/help/forms/using/generic-steps-html-workspace-customization.md) 执行本文所述的步骤。
+要定制路由操作中使用的图像，请执行中所述的步骤 [自定义的一般步骤](/help/forms/using/generic-steps-html-workspace-customization.md) ，然后执行本文中所述的步骤。
 
-## 用于路由操作的图像 {#images-for-route-actions}
+## 路由操作的图像 {#images-for-route-actions}
 
-1. 在CSS中为新路由操作的以下位置添加定义图像的样式：
+1. 为新的布线操作在CSS中的以下位置添加定义图像的样式：
 
    `/apps/ws/css/newStyle.css`
 
-   例如：添加名为 `myStyle1`如下所示，并上传图像文件 `myStyleIcon1.png` 到 `/apps/ws/image`使用WebDAV客户端的文件夹。
+   例如：添加一个名为的新样式 `myStyle1`如下所示，并上传图像文件 `myStyleIcon1.png` 到 `/apps/ws/image`s文件夹中的IP地址。
 
    >[!NOTE]
    >
-   >有关WebDAV访问的更多信息，请参阅 [https://dev.day.com/docs/en/crx/current/how_to/webdav_access.html](https://docs.adobe.com/docs/en/crx/current/how_to/webdav_access.html).
+   >有关WebDAV访问的详细信息，请参见 [https://dev.day.com/docs/en/crx/current/how_to/webdav_access.html](https://docs.adobe.com/docs/en/crx/current/how_to/webdav_access.html).
 
    >[!NOTE]
    >
-   >希望使用样式名称与路由操作名称相同。
+   >希望使用与路由操作名称相同的样式名称。
 
    ```css
    .myStyle1{
@@ -46,11 +46,11 @@ ht-degree: 0%
 
 ## 任务列表任务操作弹出窗口 {#task-list-task-action-popup}
 
-1. 创建任务列表操作弹出窗口，请参阅 [构建AEM Forms工作区代码](introduction-customizing-html-workspace.md#building-html-workspace-code). 需要使用开发包。
+1. 创建任务列表操作弹出窗口，请参阅 [构建AEM Forms工作区代码](introduction-customizing-html-workspace.md#building-html-workspace-code). 它需要使用开发包。
 
-1. 复制 `/libs/ws/js/runtime/templates/task.html` to `/apps/ws/js/runtime/templates/task.html`.
+1. 复制 `/libs/ws/js/runtime/templates/task.html` 到 `/apps/ws/js/runtime/templates/task.html`.
 
-1. 如果CSS样式的名称与来自服务器的路由操作名称相同，请在 `/apps/ws/js/runtime/templates/task.html`:
+1. 如果CSS样式的名称与来自服务器的路由操作名称相同，请在中修改以下代码 `/apps/ws/js/runtime/templates/task.html`：
 
    ```jsp
    <%if(routeList == null){%>
@@ -80,7 +80,7 @@ ht-degree: 0%
                <%}%>
    ```
 
-1. 如果CSS样式的名称与来自服务器的路由操作名称不同，请在 `/apps/ws/js/runtime/templates/task.html`. 它会添加 `if-else` servlet条件以使用路由操作名称映射样式。
+1. 如果CSS样式的名称与来自服务器的路由操作名称不同，请在中修改以下代码 `/apps/ws/js/runtime/templates/task.html`. 它会添加一栈 `if-else` 用于映射样式和路由操作名称的servlet条件。
 
 ```jsp
 <%if(routeList == null){%>
@@ -116,11 +116,11 @@ To
             <%}%>
 ```
 
-## “任务详细信息”任务操作弹出窗口 {#task-details-task-action-popup}
+## 任务详细信息任务操作弹出窗口 {#task-details-task-action-popup}
 
-1. 复制 `/libs/ws/js/runtime/templates/taskdetails.html` to `/apps/ws/js/runtime/templates/taskdetails.html`.
+1. 复制 `/libs/ws/js/runtime/templates/taskdetails.html` 到 `/apps/ws/js/runtime/templates/taskdetails.html`.
 
-1. 如果CSS样式的名称与来自服务器的路由操作名称相同，请在 `/apps/ws/js/runtime/templates/taskdetails.html`:
+1. 如果CSS样式的名称与来自服务器的路由操作名称相同，请在中修改以下代码 `/apps/ws/js/runtime/templates/taskdetails.html`：
 
    ```jsp
    <%for (var i = 0; i < availableCommands.directCommands.length; i++) {%>
@@ -140,7 +140,7 @@ To
                        <%}%>
    ```
 
-1. 如果CSS样式的名称与来自服务器的路由操作名称不同，请在 `/apps/ws/js/runtime/templates/taskdetails.html`. 它会添加一堆 `if-else` servlet条件以使用路由操作名称映射样式。
+1. 如果CSS样式的名称与来自服务器的路由操作名称不同，请在中修改以下代码 `/apps/ws/js/runtime/templates/taskdetails.html`. 它添加了一栈 `if-else` 用于映射样式和路由操作名称的servlet条件。
 
    ```jsp
    <%for (var i = 0; i < availableCommands.directCommands.length; i++) {%>
@@ -168,7 +168,7 @@ To
                <%}%>
    ```
 
-1. 打开 `/apps/ws/js/registry.js` 进行编辑和查找以下文本：
+1. 打开 `/apps/ws/js/registry.js` 进行编辑并查找以下文本：
    `"text!/lc/libs/ws/js/runtime/templates/taskdetails.html"`
 
 1. 将文本替换为以下内容：

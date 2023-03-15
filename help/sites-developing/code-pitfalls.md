@@ -1,7 +1,7 @@
 ---
-title: 代码缺陷
+title: 代码陷阱
 seo-title: Code pitfalls
-description: 为AEM开发时需要避免的常见编码陷阱
+description: 为AEM开发时要避免的常见编码陷阱
 seo-description: Common coding pitfalls to avoid when developing for AEM
 uuid: e7413bdc-4889-45ff-bdcb-b0893d33a3b7
 contentOwner: User
@@ -17,16 +17,16 @@ ht-degree: 0%
 
 ---
 
-# 代码缺陷{#code-pitfalls}
+# 代码陷阱{#code-pitfalls}
 
-## 避免在Java代码中绑定Sling {#avoid-sling-bindings-in-java-code}
+## 避免Java代码中的Sling绑定 {#avoid-sling-bindings-in-java-code}
 
-在90%的情况下，Sling绑定是获取服务访问权限的不适当方式。 相反，您应使用 *@Reference* 或 *@Inject* 批注。
+在90%的情况下，使用Sling绑定访问服务是不合适的方法。 您应该改用 *@Reference* 或 *@Inject* 注释。
 
-## 避免Java代码中的线程。中断 {#avoid-thread-interrupt-in-java-code}
+## 避免Java代码中的Thread.interrupt {#avoid-thread-interrupt-in-java-code}
 
-*线程。中断* 是危险的，因为当在错误的时间调用时，可能会关闭文件（包括Lucene文件和永久缓存文件）。
+*Thread.interrupt* 很危险，因为它可能会在错误时间调用时关闭文件，包括Lucene文件和永久缓存文件。
 
 ## 避免将Java同步与ReadWriteLocks混合 {#avoid-mixing-java-synchronization-with-readwritelocks}
 
-这可能会导致代码最终会陷入死锁的争用情况。
+这可能导致争用情况，在这种情况下，代码将最终死锁。

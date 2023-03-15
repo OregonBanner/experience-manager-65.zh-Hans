@@ -1,5 +1,5 @@
 ---
-title: 为输出指定文件位置
+title: 指定输出的文件位置
 seo-title: Specify file locations for Output
 description: 了解如何为输出指定文件位置。
 seo-description: Learn how to specify file locations for Output.
@@ -17,34 +17,34 @@ ht-degree: 1%
 
 ---
 
-# 为输出指定文件位置 {#specify-file-locations-for-output}
+# 指定输出的文件位置 {#specify-file-locations-for-output}
 
-您可以指定“输出”在何处查找它需要的特定类型的文件。
+您可以指定Output查找所需特定类型文件的位置。
 
 1. 在管理控制台中，单击服务>输出。
-1. 在位置下，指定相应的选项。
+1. 在“位置”下，指定相应的选项。
 1. 单击“保存”。
 
 ## 位置设置 {#locations-settings}
 
-**内容根URI:** 从中检索表单的存储库的URI或绝对位置。 此值与通过API指定的sForm参数结合使用，以构建检索到的表单的绝对路径。 此值可引用可使用HTTP访问的目录或Web位置。
+**内容根URI：** 从中检索表单的存储库的URI或绝对位置。 此值将与sForm参数（通过API指定）相结合，以构造检索到的表单的绝对路径。 此值可以引用可使用HTTP访问的目录或Web位置。
 
-默认值是空字符串。
+默认值为空字符串。
 
-**XCI配置文件：** 输出服务用于渲染的XCI配置文件的相对或绝对位置。 对于相对值，假定XCI文件位于AEM Forms可部署的EAR文件中。
+**XCI配置文件：** 输出服务用于渲染的XCI配置文件的相对或绝对位置。 对于相对值，假定XCI文件位于AEM Forms可部署EAR文件中。
 
 默认值为 `com/adobe/formServer/PA/pa_output.xci`。
 
-**缓存位置：** 指定输出磁盘缓存的位置。 更改此设置时，将重置当前位置的所有现有缓存信息，并在新位置创建新缓存。 选择以下选项之一：
+**缓存位置：** 指定输出磁盘缓存的位置。 更改此设置时，将重置当前位置的所有现有缓存信息，并在新位置创建一个新缓存。 选择以下选项之一：
 
-**默认位置：** 这是默认选项。 选择此选项后，将在依赖于您所使用的应用程序服务器的位置创建缓存：
+**默认位置：** 这是默认选项。 如果选择该选项，将在依赖于您正在使用的应用程序服务器的位置创建缓存：
 
-* **JBoss:** `[JBoss Home]\server\[install type]\svcdata\Output\Cache`
-* **WebLogic:** `[WebLogic Home]\user_projects\domains\[aem-forms domain Name]\adobe\[forms server name]\Output\Cache`
-* **WebSphere:** `[IBM Home]\WebSphere\AppServer\installedApps\adobe\server1\Output\Cache`
+* **JBoss：** `[JBoss Home]\server\[install type]\svcdata\Output\Cache`
+* **WebLogic：** `[WebLogic Home]\user_projects\domains\[aem-forms domain Name]\adobe\[forms server name]\Output\Cache`
+* **WebSphere：** `[IBM Home]\WebSphere\AppServer\installedApps\adobe\server1\Output\Cache`
 
-**LC临时目录：** 缓存在AEM Forms temp目录的子目录中创建，该目录在管理控制台中的设置>核心系统设置>配置>临时目录位置下指定。 子目录名为 `adobeoutput_[servername]`.
+**LC临时目录：** 缓存在AEM forms临时目录的子目录中创建，该目录在管理控制台中的“设置”>“核心系统设置”>“配置”>“临时目录的位置”下指定。 子目录名为 `adobeoutput_[servername]`.
 
 >[!NOTE]
 >
->如果您使用的是临时清理实用程序，请注意，删除这些目录不会影响功能，但在创建新缓存之前，这会在短时间内对性能产生重大影响。 要避免出现此问题，请在清除AEM表单临时目录时不要删除这些目录。
+>如果您使用临时清理实用程序，请注意，虽然删除这些目录不会影响功能，但在创建新缓存之前，可能会在短时间内显着影响性能。 为避免出现此问题，在清除AEM forms临时目录时，请勿删除这些目录。

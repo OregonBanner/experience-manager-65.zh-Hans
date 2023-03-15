@@ -1,7 +1,7 @@
 ---
 title: 工作区概述
 seo-title: Overview of Workspace
-description: 通过工作区，用户可以启动、参与和跟踪业务流程。 让我们进一步了解工作区。
+description: 工作区允许用户启动、参与和跟踪业务流程。 让我们进一步了解工作区。
 seo-description: The workspace lets users start, participate in, and track business processes. Let us learn more about the workspace.
 uuid: 25374641-a70b-485a-8d34-5d7b156c08e8
 contentOwner: admin
@@ -19,18 +19,18 @@ ht-degree: 0%
 
 # 工作区概述 {#overview-of-workspace}
 
-工作区让用户能够开始、参与和跟踪业务流程。
+Workspace允许用户启动、参与和跟踪业务流程。
 
-在管理控制台的“工作区”页面上，您可以执行以下任务：
+在管理控制台的Workspace页上，可以执行以下任务：
 
-* 设置要在工作区用户界面的欢迎页面上显示的消息
-* 配置要在工作区中使用的搜索模板，以搜索流程和任务
+* 设置要在Workspace用户界面的“欢迎”页面上显示的消息
+* 配置要在Workspace中用于搜索流程和任务的搜索模板
 * 导入和导出搜索模板和全局设置
 
 >[!NOTE]
 >
->AEM Forms版本已弃用Flex Workspace。
+>AEM Forms版本弃用Flex工作区。
 
 >[!NOTE]
 >
->您必须在管理控制台中使用导航方法。 请勿在Web浏览器中使用“返回”、“转发”或“刷新”按钮。 使用这些按钮可能会导致数据捕获和数据显示问题。
+>您必须使用管理控制台中的导航方法。 请勿使用Web浏览器中的“后退”、“前进”或“刷新”按钮。 使用这些按钮可能会导致数据捕获和数据显示问题。

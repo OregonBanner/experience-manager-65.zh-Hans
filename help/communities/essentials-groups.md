@@ -19,11 +19,11 @@ ht-degree: 1%
 
 # 社区组要点  {#community-group-essentials}
 
-“社区组”功能是让来自发布和创作环境的授权用户在社区站点内动态创建子社区的功能。
+社区组功能允许发布和创作环境中的授权用户在社区站点中动态创建子社区。
 
-截至社区 [功能包1](deploy-communities.md#latestfeaturepack)，则可以将组嵌套在其他组中
+截至社区 [功能包1](deploy-communities.md#latestfeaturepack)时，组可以嵌套在其他组中
 
-## 客户端要点 {#essentials-for-client-side}
+## 适用于客户端的Essentials {#essentials-for-client-side}
 
 ### 社区组成员列表 {#community-groups-member-list}
 
@@ -31,10 +31,10 @@ ht-degree: 1%
  <tbody>
   <tr>
    <td> <strong>resourceType</strong></td>
-   <td>社交/组/组件/hbs/社区组成员列表</td>
+   <td>social/group/components/hbs/communitygroupmemberlist</td>
   </tr>
   <tr>
-   <td> <a href="clientlibs.md"><strong>clientlibs</strong></a></td>
+   <td> <a href="clientlibs.md"><strong>clientllibs</strong></a></td>
    <td>cq.social.hbs.communitygroups</td>
   </tr>
   <tr>
@@ -47,7 +47,7 @@ ht-degree: 1%
   </tr>
   <tr>
    <td><strong>属性</strong></td>
-   <td>请参阅 <a href="creating-groups.md">社区组</a></td>
+   <td>参见 <a href="creating-groups.md">社区组</a></td>
   </tr>
  </tbody>
 </table>
@@ -58,10 +58,10 @@ ht-degree: 1%
  <tbody>
   <tr>
    <td> <strong>resourceType</strong></td>
-   <td>社交/组/组件/hbs/社区组</td>
+   <td>social/group/components/hbs/communitygroups</td>
   </tr>
   <tr>
-   <td> <a href="clientlibs.md"><strong>clientlibs</strong></a></td>
+   <td> <a href="clientlibs.md"><strong>clientllibs</strong></a></td>
    <td>cq.social.hbs.communitygroups</td>
   </tr>
   <tr>
@@ -77,7 +77,7 @@ ht-degree: 1%
 
 * [客户端自定义](client-customize.md)
 
-## 服务器端要点 {#essentials-for-server-side}
+## 服务器端Essentials {#essentials-for-server-side}
 
 * [社区组API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/group/client/api/package-summary.html)
 
@@ -85,29 +85,29 @@ ht-degree: 1%
 
 * [服务器端自定义](server-customize.md)
 
-### 组函数 {#groups-function}
+### 组功能 {#groups-function}
 
-一种社区站点结构，包括 [组函数](functions.md#groups-function) 将支持创建新的 `community groups` （从发布和创作环境）。 创建的社区组将包含 `community groups member list` 列出组成员的组件。
+社区站点结构包括 [组功能](functions.md#groups-function) 将支持创建新的 `community groups` 发布和创作环境中的。 创建的社区组将包括 `community groups member list` 将列出组成员的成员。
 
-一个或多个 [社区组模板](tools-groups.md)，当将功能添加到 [社区站点模板](sites.md) 或嵌套在社区组模板中。
+一个或多个 [社区组模板](tools-groups.md)（提供社区组页面设计），可以在将函数添加到时为组函数进行配置 [社区站点模板](sites.md) 或嵌套在社区组模板中。
 
-如 [社区团体](creating-groups.md) 作者。
+包括多个社区组模板将导致在为社区站点创建新社区组时向授权用户呈现设计选择，如上部分所示 [社区组](creating-groups.md) 供作者使用。
 
-### 嵌套群组 {#nested-groups}
+### 嵌套组 {#nested-groups}
 
-截至社区 [FP1](deploy-communities.md#latestfeaturepack)，则组函数可能包含在组模板中，从而允许嵌套组（子社区）。
+截至社区 [FP1](deploy-communities.md#latestfeaturepack)，组模板中可以包含组函数，从而允许嵌套的组（子社区）。
 
-当社区站点或组模板包含“组”功能时，可以：
+当社区站点或组模板包含组功能时，可以：
 
 * 在创作环境中创建子社区。
 
-* 在发布环境中创建群组（如果配置为允许）。
+* 配置允许后，在发布环境中创建组。
 
-在创作环境中创建群组时，需要先发布社区站点，然后再发布群组。 发布社区站点将发布组的页面，而不会创建设置了ACL的子社区成员组。 因此，在明确发布受限（秘密）组之前，该组是可见的。
+在创作环境中创建组时，必须首先发布社区站点，然后发布组。 发布社区站点将发布组的页面，而不创建设置了ACL的子社区的成员组。 因此，在显式发布某个受限（机密）组之前，该组可能一直可见。
 
 ## 链接和相关信息 {#links-and-related-information}
 
 * [管理用户和用户组](users.md)
 * [社区组控制台](groups.md)
-* [组函数](functions.md#groups-function)
+* [组功能](functions.md#groups-function)
 * [组模板](tools-groups.md)

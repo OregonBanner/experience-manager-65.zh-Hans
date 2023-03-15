@@ -1,6 +1,6 @@
 ---
 title: 将 Dynamic Media 资源添加到页面
-description: 要将Dynamic Media功能添加到您在网站上使用的资产中，您可以直接在页面上添加Dynamic Media或交互式媒体组件。
+description: 要将Dynamic Media功能添加到您在网站上使用的资源，您可以直接在页面上添加Dynamic Media或交互式媒体组件。
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: authoring
@@ -15,9 +15,9 @@ ht-degree: 32%
 
 # 将 Dynamic Media 资源添加到页面{#adding-dynamic-media-assets-to-pages}
 
-要将Dynamic Media功能添加到您在网站上使用的资产中，您可以将 **[!UICONTROL Dynamic Media]** 或 **[!UICONTROL 交互式媒体]** 组件。 输入 **[!UICONTROL 设计]** 模式并启用Dynamic Media组件。 然后，您可以将这些组件添加到页面，并将资产添加到该组件。 Dynamic Media和交互式媒体组件是智能的 — 它们知道您添加的是图像还是视频，可用的选项会相应地发生更改。
+要将Dynamic Media功能添加到您在网站上使用的资源，您可以添加 **[!UICONTROL Dynamic Media]** 或 **[!UICONTROL 交互式媒体]** 组件直接显示在页面上。 输入 **[!UICONTROL 设计]** 模式和启用Dynamic Media组件。 然后，您可以将这些组件添加到页面，并将资产添加到该组件。 Dynamic Media和交互式媒体组件是智能的，它们知道您添加的是图像还是视频，并且可用的选项会相应地发生更改。
 
-如果您使用Dynamic Media作为WCM，则可以直接将Adobe Experience Manager资产添加到页面。
+如果您使用Dynamic Media作为WCM，则可以直接将Adobe Experience Manager资源添加到页面。
 
 >[!NOTE]
 >
@@ -25,42 +25,42 @@ ht-degree: 32%
 
 ## 将Dynamic Media组件添加到页面 {#adding-a-dynamic-media-component-to-a-page}
 
-添加 [!UICONTROL Dynamic Media] 或 [!UICONTROL 交互式媒体] 将组件添加到页面与将组件添加到任何页面相同。 的 [!UICONTROL Dynamic Media] 和 [!UICONTROL 交互式媒体] 以下各节对组件进行了详细描述。
+添加 [!UICONTROL Dynamic Media] 或 [!UICONTROL 交互式媒体] 将组件添加到页面与将组件添加到任何页面相同。 此 [!UICONTROL Dynamic Media] 和 [!UICONTROL 交互式媒体] 以下各节将详细介绍组件。
 
 要将 Dynamic Media 组件/查看器添加到页面，请执行以下操作：
 
 1. 在Experience Manager中，打开要添加Dynamic Media组件的页面。
 1. 如果没有可用的Dynamic Media组件，请在 [!UICONTROL Sidekick] 输入 **[!UICONTROL 设计]** 模式。
 1. 选择 **[!UICONTROL 编辑]** parsys。
-1. 选择 **[!UICONTROL Dynamic Media]** 以便使Dynamic Media组件可用。
+1. 选择 **[!UICONTROL Dynamic Media]** 以使得Dynamic Media组件可用。
 
    >[!NOTE]
    >
    >请参阅[在设计模式中配置组件](/help/sites-authoring/default-components-designmode.md)，以了解更多信息。
 
-1. 返回 **[!UICONTROL 编辑]** 模式(在 [!UICONTROL Sidekick].
-1. 拖动 **[!UICONTROL Dynamic Media]** 或 **[!UICONTROL 交互式媒体]** 组件 **[!UICONTROL 其他]** 在sidekick中将群组分组到所需位置的页面上。
-1. 选择 **[!UICONTROL 编辑]** 这样组件就会打开。
-1. [编辑组件](#dynamic-media-component) 视需要。
-1. 选择 **[!UICONTROL 确定]** 以便保存更改。
+1. 返回到 **[!UICONTROL 编辑]** 模式，方法是单击 [!UICONTROL Sidekick].
+1. 拖动 **[!UICONTROL Dynamic Media]** 或 **[!UICONTROL 交互式媒体]** 组件来自 **[!UICONTROL 其他]** 在sidekick中分组到所需位置的页面上。
+1. 选择 **[!UICONTROL 编辑]** 因此组件将打开。
+1. [编辑组件](#dynamic-media-component) 视需要而定。
+1. 选择 **[!UICONTROL 确定]** 以保存更改。
 
 ## Dynamic Media 组件 {#dynamic-media-components}
 
-[!UICONTROL Dynamic Media] 和 [!UICONTROL 交互式媒体] 在 [!UICONTROL Sidekick] 在 **[!UICONTROL Dynamic Media]**. 对于任何交互式资产（例如交互式视频、交互式图像或传送集），请使用&#x200B;**[!UICONTROL 交互式媒体]**&#x200B;组件。对于所有其他Dynamic Media组件，请使用 **[!UICONTROL Dynamic Media]** 组件。
+[!UICONTROL Dynamic Media] 和 [!UICONTROL 交互式媒体] 中提供 [!UICONTROL Sidekick] 下 **[!UICONTROL Dynamic Media]**. 对于任何交互式资产（例如交互式视频、交互式图像或传送集），请使用&#x200B;**[!UICONTROL 交互式媒体]**&#x200B;组件。对于所有其他Dynamic Media组件，请使用 **[!UICONTROL Dynamic Media]** 组件。
 
 ![chlimage_1-71](assets/chlimage_1-71a.png)
 
 >[!NOTE]
 >
->默认情况下，这些组件不可用，在使用之前必须在设计模式下选择这些组件。 [在设计模式下使用它们后](/help/sites-authoring/default-components-designmode.md)，则可以像将其他任何Experience Manager组件添加到页面一样将组件添加到页面。
+>默认情况下，这些组件不可用，在使用之前必须在“设计”模式下选择它们。 [在“设计”模式下可用它们之后](/help/sites-authoring/default-components-designmode.md)中，您可以将组件添加到页面，就像添加任何其他Experience Manager组件一样。
 
 ### Dynamic Media 组件 {#dynamic-media-component}
 
-Dynamic Media组件是智能的 — 根据您添加的是图像还是视频，您有各种不同的选项。 该组件支持图像预设、基于图像的查看器（例如图像集、旋转集、混合媒体集）和视频。此外，查看器是响应式的。 也就是说，屏幕的大小会根据屏幕大小自动更改。 所有查看器都是基于HTML5的查看器。
+Dynamic Media组件是智能的 — 根据您添加的是图像还是视频，您有各种不同的选项。 该组件支持图像预设、基于图像的查看器（例如图像集、旋转集、混合媒体集）和视频。此外，查看器会做出响应。 也就是说，屏幕大小会根据屏幕大小自动更改。 所有查看器都是基于HTML5的查看器。
 
 >[!NOTE]
 >
->当您添加 [!UICONTROL Dynamic Media] 组件和 **[!UICONTROL Dynamic Media设置]** 为空，或者您无法正确添加资产，请勾选以下内容：
+>当您添加 [!UICONTROL Dynamic Media] 组件，和 **[!UICONTROL Dynamic Media设置]** 为空，或者无法正确添加资产，请检查以下各项：
 >
 >* 您已经[启用了 Dynamic Media](/help/assets/config-dynamic.md)。默认情况下，Dynamic Media 处于禁用状态。
 >* 图像具有金字塔 TIFF 文件。在启用Dynamic Media之前导入的图像没有金字塔tiff文件。
@@ -69,91 +69,91 @@ Dynamic Media组件是智能的 — 根据您添加的是图像还是视频，�
 
 #### 处理图像时 {#when-working-with-images}
 
-的 [!UICONTROL Dynamic Media] 组件允许您添加动态图像，包括图像集、旋转集和混合媒体集。 您可以缩放图像，并在适当的情况下在旋转集内旋转图像，或从其他类型的集合中选择图像。
+此 [!UICONTROL Dynamic Media] 组件允许您添加动态图像，包括图像集、旋转集和混合媒体集。 您可以缩放图像，并在适当的情况下在旋转集内旋转图像，或从其他类型的集合中选择图像。
 
 您还可以直接在组件中配置查看器预设、图像预设或图像格式。要使图像具有响应性，您可以设置断点或应用响应式图像预设。
 
 ![chlimage_1-72](assets/chlimage_1-72a.png)
 
-您可以通过单击 **[!UICONTROL 编辑]** ，然后单击 **[!UICONTROL Dynamic Media设置]** 选项卡。
+您可以通过单击来编辑以下Dynamic Media设置 **[!UICONTROL 编辑]** ，然后单击 **[!UICONTROL Dynamic Media设置]** 选项卡。
 
 ![chlimage_1-73](assets/chlimage_1-73a.png)
 
 >[!NOTE]
 >
->默认情况下，Dynamic media图像组件是自适应的。 如果要使其变为固定大小，请在 **[!UICONTROL 高级]** 选项卡 **[!UICONTROL 宽度]** 和 **[!UICONTROL 高度]** 属性。
+>默认情况下，Dynamic media图像组件是自适应的。 如果要使其变为固定大小，请在的组件中设置它 **[!UICONTROL 高级]** 制表符 **[!UICONTROL 宽度]** 和 **[!UICONTROL 高度]** 属性。
 
-**[!UICONTROL 查看器预设]**  — 从下拉菜单中选择现有的查看器预设。 如果您要查找的查看器预设不可见，则必须使其可见。 请参阅[管理查看器预设](/help/assets/managing-viewer-presets.md)。如果您使用的是图像预设，则无法选择查看器预设，反之，则无法选择查看器预设。
+**[!UICONTROL 查看器预设]**  — 从下拉菜单中选择现有的查看器预设。 如果您要查找的查看器预设不可见，则必须使其可见。 请参阅[管理查看器预设](/help/assets/managing-viewer-presets.md)。如果您使用的是图像预设，则无法选择查看器预设，反之亦然。
 
-仅当您查看图像集、旋转集或混合媒体集时，此选项才可用。 显示的查看器预设是智能的。 也就是说，只显示相关的查看器预设。
+此选项仅在查看图像集、旋转集或混合媒体集时可用。 显示的查看器预设是智能的。 也就是说，只显示相关的查看器预设。
 
-**[!UICONTROL 图像预设]**  — 从下拉菜单中选择现有的图像预设。 如果您要查找的图像预设不可见，则必须使其可见。 请参阅[管理图像预设](/help/assets/managing-image-presets.md)。如果您使用的是图像预设，则无法选择查看器预设，反之，则无法选择查看器预设。
-
-如果您查看的是图像集、旋转集或混合媒体集，则此选项不可用。
-
-**[!UICONTROL 图像修饰符]**  — 您可以通过提供其他图像命令来更改图像效果。 这些命令在 [管理图像预设](/help/assets/managing-viewer-presets.md) 和 [命令引用](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html).
+**[!UICONTROL 图像预设]**  — 从下拉菜单中选择现有的图像预设。 如果您要查找的图像预设不可见，则必须使其可见。 请参阅[管理图像预设](/help/assets/managing-image-presets.md)。如果您使用的是图像预设，则无法选择查看器预设，反之亦然。
 
 如果您查看的是图像集、旋转集或混合媒体集，则此选项不可用。
 
-**[!UICONTROL 断点]**  — 如果您在响应式网站上使用此资产，则必须添加页面断点。 图像断点之间用逗号分隔(,)。 当图像预设中未定义高度或宽度时，可以使用此选项。
+**[!UICONTROL 图像修饰符]**  — 通过提供其他图像命令可以更改图像效果。 这些命令在 [管理图像预设](/help/assets/managing-viewer-presets.md) 和 [命令引用](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html).
 
 如果您查看的是图像集、旋转集或混合媒体集，则此选项不可用。
 
-您可以编辑以下内容 [!UICONTROL 高级设置] 单击 **[!UICONTROL 编辑]** 中。
+**[!UICONTROL 断点]**  — 如果您在响应式网站上使用此资产，则必须添加页面断点。 图像断点由逗号(，)分隔。 当图像预设中未定义高度或宽度时，可以使用此选项。
+
+如果您查看的是图像集、旋转集或混合媒体集，则此选项不可用。
+
+您可以编辑以下内容 [!UICONTROL 高级设置] 通过单击 **[!UICONTROL 编辑]** 在组件中。
 
 **[!UICONTROL 标题]**  — 更改图像的标题。
 
-**[!UICONTROL 替换文本]**  — 为已关闭图形的用户在图像中添加标题。
+**[!UICONTROL 替换文字]**  — 为已关闭图形的用户在图像中添加标题。
 
 如果您查看的是图像集、旋转集或混合媒体集，则此选项不可用。
 
-**[!UICONTROL URL，在中打开]**  — 您可以设置资产来打开链接。 设置 **[!UICONTROL URL]** 和 **[!UICONTROL 在中打开]** 以指示您希望在同一窗口还是新窗口中打开该窗口。
+**[!UICONTROL URL，打开方式]**  — 您可以从设置资产以打开链接。 设置 **[!UICONTROL URL]** 和 **[!UICONTROL 打开方式]** 以指明希望它在同一窗口还是新窗口中打开。
 
 如果您查看的是图像集、旋转集或混合媒体集，则此选项不可用。
 
-**[!UICONTROL 宽度和高度]**  — 如果希望图像具有固定大小，请输入值（以像素为单位）。 将这两个值留空会使资产成为自适应资产。
+**[!UICONTROL 宽度和高度]**  — 如果希望图像为固定大小，请输入以像素为单位的值。 将这两个值留空会使资产成为自适应资产。
 
 #### 使用视频时 {#when-working-with-video}
 
-使用 **[!UICONTROL Dynamic Media]** 组件将动态视频添加到网页。 编辑组件时，您可以选择使用预定义的视频查看器预设来在页面上播放视频。
+使用 **[!UICONTROL Dynamic Media]** 用于将动态视频添加到网页的组件。 编辑组件时，您可以选择使用预定义的视频查看器预设来播放页面上的视频。
 
 ![chlimage_1-74](assets/chlimage_1-74a.png)
 
-您可以编辑以下内容 [!UICONTROL Dynamic Media设置] 单击 **[!UICONTROL 编辑]** 中。
+您可以编辑以下内容 [!UICONTROL Dynamic Media设置] 通过单击 **[!UICONTROL 编辑]** 在组件中。
 
 >[!NOTE]
 >
->默认情况下，Dynamic Media 视频组件为自适应组件。如果要使其变为固定大小，请在组件中使用 **[!UICONTROL 宽度]** 和 **[!UICONTROL 高度]** 在 **[!UICONTROL 高级]** 选项卡。
+>默认情况下，Dynamic Media 视频组件为自适应组件。如果要使其变为固定大小，请在组件中设置它，并使用 **[!UICONTROL 宽度]** 和 **[!UICONTROL 高度]** 在 **[!UICONTROL 高级]** 选项卡。
 
 **[!UICONTROL 查看器预设]**  — 从下拉菜单中选择现有的视频查看器预设。 如果您要查找的查看器预设不可见，则必须使其可见。 请参阅[管理查看器预设](/help/assets/managing-viewer-presets.md)。
 
-您可以编辑以下内容 [!UICONTROL 高级] 单击 **[!UICONTROL 编辑]** 中。
+您可以编辑以下内容 [!UICONTROL 高级] 通过单击设置 **[!UICONTROL 编辑]** 在组件中。
 
 **[!UICONTROL 标题]**  — 更改视频的标题。
 
-**[!UICONTROL 宽度和高度]**  — 如果希望视频具有固定大小，请输入值（以像素为单位）。 将这两个值留空会使视频成为自适应资产。
+**[!UICONTROL 宽度和高度]**  — 如果希望视频为固定大小，请输入以像素为单位的值。 将这两个值留空会使视频成为自适应资产。
 
-#### 提供安全视频 {#how-to-delivery-secure-video}
+#### 投放安全视频 {#how-to-delivery-secure-video}
 
-在Experience Manager6.2中，安装 [FP-13480](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq620/featurepack/cq-6.2.0-featurepack-13480)，则可以控制视频是通过安全SSL连接(HTTPS)还是不安全连接(HTTP)来传送。 默认情况下，视频传输协议会自动继承嵌入式网页的协议。如果网页通过 HTTPS 加载，则视频也会通过 HTTPS 进行传输。反之，如果网页是HTTP，则视频会通过HTTP传送。 通常，此默认行为是正常的，无需进行任何配置更改。 但是，您可以覆盖此默认行为。 附加 `VideoPlayer.ssl=on` 指向URL路径的结尾或嵌入代码片段中其他查看器配置参数的列表。 任一操作都会强制确保视频传输安全。
+在Experience Manager6.2中，当您安装 [FP-13480](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq620/featurepack/cq-6.2.0-featurepack-13480)中，您可以控制是通过安全SSL连接(HTTPS)还是不安全连接(HTTP)来交付视频。 默认情况下，视频传输协议会自动继承嵌入式网页的协议。如果网页通过 HTTPS 加载，则视频也会通过 HTTPS 进行传输。反过来，如果网页位于HTTP上，则视频将通过HTTP发送。 通常，此默认行为是正常的，无需进行任何配置更改。 但是，您可以覆盖此默认行为。 附加 `VideoPlayer.ssl=on` 指向URL路径的末尾或嵌入代码片段中其他查看器配置参数的列表。 这两个操作中的任何一个都会强制进行安全视频交付。
 
-有关视频安全传输和在 URL 路径中使用 `VideoPlayer.ssl` 配置属性的更多信息，请参阅《查看器参考指南》中的[视频安全传输](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/c-html5-video-viewer-20-securevideodelivery.html)。除了视频查看器之外，安全视频交付也适用于混合媒体查看器和交互式视频查看器。
+有关视频安全传输和在 URL 路径中使用 `VideoPlayer.ssl` 配置属性的更多信息，请参阅《查看器参考指南》中的[视频安全传输](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/c-html5-video-viewer-20-securevideodelivery.html)。除了视频查看器之外，安全视频交付还可用于混合媒体查看器和交互式视频查看器。
 
 ### 交互式媒体组件 {#interactive-media-component}
 
 交互式媒体组件适用于具有交互功能的资产，例如热点或图像映射。如果您具有交互式图像、交互式视频或传送横幅，请使用&#x200B;**[!UICONTROL 交互式媒体]**&#x200B;组件。
 
-的 [!UICONTROL 交互式媒体] 组件是智能的 — 根据您添加的是图像还是视频，您可以选择各种选项。 此外，查看器是响应式的。 也就是说，屏幕的大小会根据屏幕大小自动更改。 所有查看器都是基于HTML5的查看器。
+此 [!UICONTROL 交互式媒体] 组件是智能的 — 根据您添加的是图像还是视频，您拥有各种选项。 此外，查看器会做出响应。 也就是说，屏幕大小会根据屏幕大小自动更改。 所有查看器都是基于HTML5的查看器。
 
 ![chlimage_1-75](assets/chlimage_1-75a.png)
 
 您可以通过在组件中单击&#x200B;**[!UICONTROL 编辑]**，来编辑以下&#x200B;**[!UICONTROL 常规]**&#x200B;设置。
 
-**[!UICONTROL 查看器预设]**  — 从下拉菜单中选择现有的查看器预设。 如果您要查找的查看器预设不可见，则必须使其可见。 查看器预设必须先发布，然后才能使用。请参阅 [管理查看器预设](/help/assets/managing-viewer-presets.md).
+**[!UICONTROL 查看器预设]**  — 从下拉菜单中选择现有的查看器预设。 如果您要查找的查看器预设不可见，则必须使其可见。 查看器预设必须先发布，然后才能使用。参见 [管理查看器预设](/help/assets/managing-viewer-presets.md).
 
 **[!UICONTROL 标题]**  — 更改视频的标题。
 
-**[!UICONTROL 宽度和高度]**  — 如果希望视频具有固定大小，请输入值（以像素为单位）。 将这两个值留空会使视频成为自适应资产。
+**[!UICONTROL 宽度和高度]**  — 如果希望视频为固定大小，请输入以像素为单位的值。 将这两个值留空会使视频成为自适应资产。
 
 您可以通过在组件中单击&#x200B;**[!UICONTROL 编辑]**，来编辑以下&#x200B;**[!UICONTROL 添加到购物车]**&#x200B;设置。
 
@@ -161,4 +161,4 @@ Dynamic Media组件是智能的 — 根据您添加的是图像还是视频，�
 
 **[!UICONTROL 显示产品价格]**  — 默认情况下，此值处于选中状态。 产品价格会按“商务”模块中的定义显示项目的价格。清除复选标记不会显示产品价格。
 
-**[!UICONTROL 显示产品表单]**  — 默认情况下，未选择此值。 产品表单包含所有产品变量，例如大小和颜色。清除复选标记不会显示产品变量。
+**[!UICONTROL 显示产品表单]**  — 默认情况下，不选中此值。 产品表单包含所有产品变量，例如大小和颜色。清除复选标记不会显示产品变量。

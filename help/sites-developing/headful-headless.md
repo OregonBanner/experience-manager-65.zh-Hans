@@ -1,85 +1,85 @@
 ---
 title: AEM 中的 Headful 和 Headless
-description: AEM项目可以采用无头和无头模型来实施，但选择不是二进制的。 AEM可以灵活地在一个项目中利用这两个模型的优势。
+description: AEM项目可以在headful和headless模型中实施，但选择不是二进制的。 利用 AEM，可以在一个项目中灵活地运用这两种模型的优势。
 exl-id: c9597c78-be05-42ff-84fe-f7451119e83d
 source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
 workflow-type: tm+mt
 source-wordcount: '1011'
-ht-degree: 1%
+ht-degree: 94%
 
 ---
 
 # AEM 中的 Headful 和 Headless {#headful-headless}
 
-Adobe Experience Manager项目可以在头部和无头两种模型中实施，但选择不是二进制的。 AEM可以灵活地在一个项目中利用这两个模型的优势。 本文档概述了不同的模型并描述了SPA集成的级别。
+Adobe Experience Manager项目可以在headful和headless模型中实施，但选择不是二进制的。 利用 AEM，可以在一个项目中灵活地运用这两种模型的优势。本文档概述了各种模型，并描述了SPA集成的级别。
 
 ## 概述 {#overview}
 
-AEM提供了强大的工具，可在一个平台中管理内容的创建及其交付。 这是一种传统的“头戴式”内容管理模型，内容作者和开发人员在同一平台上工作，以向内容消费者提供体验。
+AEM 提供了功能强大的工具来管理一个平台上的内容创建和交付操作。这是传统的内容管理“Headful”模型，在该模型中，内容作者和开发人员在同一个平台上工作以将体验交付给内容消费者。
 
-AEM还可用于简单地管理内容，从而允许由其他平台管理内容的演示和交付。 这是内容管理的“无头”模型，内容作者和开发人员在不同的平台上工作，以向内容消费者提供体验。
+AEM 还可用于简单地管理内容，并允许呈现和交付要由另一个平台管理的内容。这是内容管理“Headless”模型，在该模型中，内容作者和开发人员在不同的平台上工作以将体验交付给内容消费者。
 
-但这不一定是二选一。 AEM提供了前所未有的灵活性，允许您利用这两个模型在项目中的优势。
+但这不必是一个二选一的选择。AEM 提供了前所未有的灵活性，使您能够在项目中灵活地运用这两种模型的优势。
 
 ![AEM 实施模型](headless/assets/aem-implementation-models.png)
 
-在标题式或全堆栈式模型中，内容基于Java、HTL等在AEM存储库和AEM组件中进行管理。 用于呈现用户体验的内容。 在此模型中，可在AEM中创建内容、为其设置样式、演示内容并交付所有内容。
+在 Headful 或全栈模型中，内容在 AEM 存储库中进行管理，而基于 Java、HTL 等的 AEM 组件用于呈现用户体验的内容。在此模型中，内容的创建、样式设置、呈现和交付操作都在 AEM 中进行。
 
-在无头模型中，内容在AEM存储库中进行管理，但通过REST和GraphQL等API交付到其他系统，以呈现用户体验的内容。 在此模型中，内容是在AEM中创建的，但是会为其设置样式、呈现内容并在其他平台上交付所有内容。
+在 Headless 模型中，内容在 AEM 存储库中管理，但通过 REST 和 GraphQL 等 API 交付到另一个系统以呈现用户体验的内容。在此模型中，内容的创建操作是在 AEM 中进行的，但内容的样式设置、呈现和交付操作是在另一个平台中进行的。
 
-单页应用程序(SPA)通常是AEM无缝交付内容的目标。 但是，这些SPA不必完全是AEM的外部组件。 AEM允许您决定将SPA集成到AEM的程度。 让我们举个例子。
+单页应用程序 (SPA) 通常是 AEM 以 Headless 方式交付内容的目标。但是，这些 SPA 不必完全在 AEM 外部。利用 AEM，您可以决定 SPA 集成到 AEM 中的程度。让我们举个例子。
 
-## Web Shop示例 {#web-shop-example}
+## 网上商店示例 {#web-shop-example}
 
-假设您现有一个Web商店，供您的公司用作SPA。 其中包含您的所有产品详细信息和图像。 然后，您将引入AEM以支持营销工作，如促销网站、博客和营销活动内容。 如何将二者相结合？ AEM可启用一系列选项：
+假设您将公司现有的网上商店作为 SPA，其中包含所有产品详细信息和图像。随后，您引入 AEM 来支持您的营销工作，例如促销网站、博客和活动内容。如何将这两者集成？AEM 支持一系列选项：
 
-* **允许系统独立运行。**
-* **通过GraphQL从AEM中为Web商店提供有限的内容。** 内容可由作者在AEM中创建，但只能通过Web商店SPA查看。
-* **在AEM中嵌入Web Shop SPA。** 内容可由作者在AEM中创建，并在AEM的Web Shop上下文中查看，但不能进行操作。
-* **在AEM中嵌入Web Shop SPA，并启用可编辑的点。** 内容可由作者在AEM中创建，并在AEM中在Web Shop的上下文中查看，而且作者在AEM中处理Web Shop SPA内容的能力有限。
-* **在AEM中嵌入网页商店SPA，并启用整个区域进行编辑。** 内容可由作者在AEM中创建，并在AEM中在Web Shop的上下文中查看，而且作者在AEM中处理Web Shop SPA内容的能力有限。
+* **允许系统单独运行。**
+* **通过 GraphQL 向网上商店提供来自 AEM 的有限内容。**&#x200B;内容可以由作者在 AEM 中创建，但只能通过网上商店 SPA 查看。
+* **在 AEM 中嵌入网上商店 SPA。**&#x200B;内容可以由作者在 AEM 中创建，并在 AEM 中的网上商店情境中查看，但不能进行操作。
+* **在 AEM 中嵌入网上商店 SPA，并启用可编辑点。**&#x200B;内容可以由作者在 AEM 中创建，并在 AEM 中的网上商店情境中查看，并且作者只能对 AEM 中的网上商店 SPA 内容进行有限的操作。
+* **在 AEM 中嵌入网上商店 SPA，并启用整个区域以进行编辑。**&#x200B;内容可以由作者在 AEM 中创建，并在 AEM 中的网上商店情境中查看，并且作者只能对 AEM 中的网上商店 SPA 内容进行有限的操作。
 
-下一节将更详细地探讨这些级别的集成。
+在下一部分中，我们将更详细地探究这些集成级别。
 
 >[!NOTE]
 >
->当然，您还可以将Web Shop SPA作为一个功能完备的AEM SPA进行重新实施 [使用AEM SPA Editor框架。](/help/sites-developing/spa-walkthrough.md) 如果您已经拥有AEM，并且希望创建新的Web商店或其他SPA，则建议使用此方法，但此方法不在本文档的涵盖范围内。
+>当然，您也可以将网上商店 SPA 作为功能齐全的 AEM SPA 重新实施，方式是[使用 AEM SPA Editor 框架。](/help/sites-developing/spa-walkthrough.md)如果您已拥有 AEM 并希望创建新的网上商店或其他 SPA，建议使用此方式，但本文档未对此方式进行介绍。
 
-## SPA集成级别 {#integration-levels}
+## SPA 集成级别 {#integration-levels}
 
-SPA集成属于AEM中的四个级别。
+SPA 集成归入 AEM 中包含四个级别的系列中。
 
-* **级别0:无集成**
-   * SPA和AEM单独存在，且不交换任何信息。
-   * 内容是在两个不同的系统中独立创建、管理和交付的。
-* **级别1:内容片段集成**
-   * [内容片段](/help/assets/content-fragments/content-fragments.md) 用于创建和管理SPA的有限内容。
-   * SPA通过AEM检索此内容 [GraphQL API。](/help/assets/content-fragments/graphql-api-content-fragments.md)
-   * 某些内容在AEM中进行管理，而某些内容则在外部系统中管理。
-   * 内容只能在SPA中查看。
-* **级别2:在AEM中嵌入SPA**
-   * [内容片段](/help/assets/content-fragments/content-fragments.md) 用于创建和管理SPA的内容。
-   * SPA通过AEM检索此内容 [GraphQL API。](/help/assets/content-fragments/graphql-api-content-fragments.md)
-   * 某些内容在AEM中进行管理，而某些内容则在外部系统中管理。
-   * 可以在AEM内在上下文中查看内容。
-   * 可以在AEM中编辑有限的内容。
-* **第3级：在AEM中嵌入并完全启用SPA**
-   * [内容片段](/help/assets/content-fragments/content-fragments.md) 用于创建和管理SPA的内容。
-   * SPA通过AEM检索此内容 [GraphQL API。](/help/assets/content-fragments/graphql-api-content-fragments.md)
-   * 可以在AEM内在上下文中查看内容。
-   * 大多数内容都可以在AEM中编辑。
+* **级别 0：无集成**
+   * SPA 和 AEM 单独存在，并且不交换任何信息。
+   * 在两个独立的系统中单独创建、管理和交付内容。
+* **级别 1：内容片段集成**
+   * [内容片段](/help/assets/content-fragments/content-fragments.md)在 AEM 中用于创建和管理 SPA 的有限内容。
+   * SPA 通过 AEM 的 [GraphQL API](/help/assets/content-fragments/graphql-api-content-fragments.md) 检索此内容。
+   * 在 AEM 中管理一些内容，在外部系统中管理另一些内容。
+   * 只能在 SPA 中查看内容。
+* **级别 2：将 SPA 嵌入 AEM**
+   * [内容片段](/help/assets/content-fragments/content-fragments.md)在 AEM 中用于创建和管理 SPA 的内容。
+   * SPA 通过 AEM 的 [GraphQL API](/help/assets/content-fragments/graphql-api-content-fragments.md) 检索此内容。
+   * 在 AEM 中管理一些内容，在外部系统中管理另一些内容。
+   * 可在 AEM 中的上下文中查看内容。
+   * 可在 AEM 中编辑有限内容。
+* **级别 3：在 AEM 中嵌入并完全启用 SPA**
+   * [内容片段](/help/assets/content-fragments/content-fragments.md)在 AEM 中用于创建和管理 SPA 的内容。
+   * SPA 通过 AEM 的 [GraphQL API](/help/assets/content-fragments/graphql-api-content-fragments.md) 检索此内容。
+   * 可在 AEM 中的上下文中查看内容。
+   * 可在 AEM 中编辑大多数内容。
 
-1级是典型无头实施的示例。 但是，内容作者只能在SPA中在上下文中查看其内容。 AEM只是一个创作工具。
+级别 1 是典型 Headless 实施的示例。但是，内容作者只能在 SPA 中的上下文中查看其内容。AEM 只是一项创作工具。
 
-在级别2和级别3中，AEM的优势和灵活性变得显而易见，同时仍保留SPA的优势。 内容作者可以在AEM中创建其内容，但也可以在AEM中在上下文中查看内容。 SPA具有在AEM中创作的功能，但仍作为SPA提供。
+AEM 的优势和灵活性在级别 2 和级别 3 中变得明显，同时仍保留了 SPA 的优势。内容作者既可以在 AEM 中创建其内容，也可以在 AEM 中的上下文中查看其内容。虽然可以在 AEM 中创作 SPA，但它将作为 SPA 交付。
 
 ## 实施集成级别 {#implementing}
 
-AEM中提供了不同的工具，具体取决于您选择的集成级别。 每个级别都基于上一个级别中使用的工具。 以下列表链接到相关资源。
+AEM 中提供了不同的工具，具体取决于您选择的集成级别。每个级别均基于之前使用的工具而构建。以下列表将链接到相关资源。
 
-* **级别1:** 内容片段和 [AEM headless框架](/help/sites-developing/headless/introduction.md) 用于将AEM内容交付到SPA。
-* **级别2:** 除第一级外：
-   * [RemotePage组件](/help/sites-developing/spa-remote-page.md) 可用于将外部SPA嵌入到AEM中，以便在上下文中查看AEM内容。
-   * SPA上的某些点也可以 [允许在AEM中进行有限编辑。](/help/sites-developing/spa-edit-external.md)
-* **第3级：** 除第二级外：
-   * 可以启用SPA的整个区域，以便在AEM中进行全面编辑。
+* **级别 1：**&#x200B;内容片段和 [AEM Headless 框架](/help/sites-developing/headless/introduction.md)可用于将 AEM 内容交付给 SPA。
+* **级别 2：**&#x200B;除了级别 1 之外：
+   * [RemotePage 组件](/help/sites-developing/spa-remote-page.md)可用于将外部 SPA 嵌入到 AEM 中，这样便能在上下文中查看 AEM 内容。
+   * 还可以启用 SPA 上的某些点以[允许在 AEM 中进行有限编辑。](/help/sites-developing/spa-edit-external.md)
+* **级别 3：**&#x200B;除了级别 2 之外：
+   * 可以启用 SPA 的整个区域以允许在 AEM 中进行全面编辑。

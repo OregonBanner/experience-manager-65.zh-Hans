@@ -19,50 +19,50 @@ ht-degree: 5%
 
 # 使用投票 {#using-voting}
 
-的 `Voting` 组件是一个有用的工具，它允许社区成员对特定内容片段（如QnA组件中的答案）进行评级。 使用 `Voting` 组件中，成员选择向上或向下箭头来指示其意见。
+此 `Voting` 组件是一种非常有用的工具，它允许社区成员对特定内容（如QnA组件中的答案）进行评级。 使用 `Voting` 组件，成员选择向上箭头或向下箭头来指示其意见。
 
 ## 向页面添加投票 {#adding-voting-to-a-page}
 
-添加 `Voting` 组件添加到创作模式下的页面，可使用组件浏览器找到 `Communities / Voting` 并将其拖动到页面上的适当位置，例如相对于该功能的位置，供用户投票。
+添加 `Voting` 组件添加到创作模式下的页面，请使用组件浏览器来查找 `Communities / Voting` 并将其拖动到页面上的适当位置，例如相对于供用户投票的功能位置。
 
 有关必要信息，请访问 [社区组件基础知识](basics.md).
 
-当 [所需的客户端库](essentials-voting.md#essentials-for-client-side) 包含，这是 `Voting` 组件。
+当 [所需的客户端库](essentials-voting.md#essentials-for-client-side) 包括，这就是 `Voting` 组件随即出现。
 
 ![投票组件](assets/voting-component.png)
 
 ## 配置投票 {#configuring-voting}
 
-选择已放置的 `Voting` 要访问和选择的组件 `Configure` 图标，打开编辑对话框。
+选择已放置的 `Voting` 组件以访问和选择 `Configure` 图标，打开“编辑”对话框。
 
 ![配置](assets/configure-new.png)
 
 在 **[!UICONTROL 文本和标签]** 选项卡，指定用于记录投票的属性。
 
-![投票标签](assets/voting-label.png)
+![voting-label](assets/voting-label.png)
 
 * **[!UICONTROL 正面响应标签]**
 
-   (*必需*)正面响应的内部属性名称。
+   (*必需*)积极响应的内部属性名称。
 
 * **[!UICONTROL 负面响应标签]**
 
-   (*必需*)负响应的内部属性名称。
+   (*必需*)负面响应的内部属性名称。
 
 * **[!UICONTROL 标签名称]**
 
-   (*必需*)此投票组件实例的内部可识别属性名称。
+   (*必需*)投票组件的此实例的内部可识别属性名称。
 
 ## 网站访客体验 {#site-visitor-experience}
 
 ### 成员 {#members}
 
-成员只可投一次票，但可随时改变投票。
+成员只能投票一次，但可随时更改投票。
 
 ### 匿名 {#anonymous}
 
-不支持匿名投票。 网站访客必须注册（成为会员）并登录以参加一次投票。
+不支持匿名投票。 网站访客必须注册（成为会员）并登录才能参与投票一次。
 
 ## 附加信息 {#additional-information}
 
-有关 [投票要点](essentials-voting.md) 页面。
+欲知更多信息，请访问 [Voting Essentials](essentials-voting.md) 适用于开发人员的页面。

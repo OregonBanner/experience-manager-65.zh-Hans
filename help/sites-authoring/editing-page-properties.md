@@ -92,7 +92,7 @@ ht-degree: 90%
 
    允许您输入此页面的虚 URL，以便使用更短并且/或者含意更清楚的 URL。
 
-   例如，如果虚URL设置为 `welcome`路径标识的页面 `/v1.0/startpage`网站的 `http://example.com,` then `http://example.com/welcome`应该是的虚URL `http://example.com/content/v1.0/startpage`
+   例如，如果将虚URL设置为 `welcome`到由路径标识的页面 `/v1.0/startpage`用于网站 `http://example.com,` 则 `http://example.com/welcome`将成为的虚URL `http://example.com/content/v1.0/startpage`
 
    >[!CAUTION]
    >
@@ -103,7 +103,7 @@ ht-degree: 90%
    >* 不应设置为现有页面。
 
 
-   您还需要配置Dispatcher以启用对虚URL的访问。 请参阅 [启用对虚URL的访问](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#enabling-access-to-vanity-urls-vanity-urls) 以了解更多详细信息。
+   您还需要配置Dispatcher以启用对虚名URL的访问。 参见 [启用对虚名URL的访问](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#enabling-access-to-vanity-urls-vanity-urls) 了解更多详细信息。
 
 * **重定向虚 URL**
 
@@ -134,7 +134,7 @@ ht-degree: 90%
    * 例如，如果您为页面 `/content/wknd/us/en/magazine/members-only` 定义别名 `private`，则也可以通过 `/content/wknd/us/en/magazine/private` 访问此页面
    * 创建别名将设置页面节点上的 `sling:alias` 属性，这只会影响资源，而不会影响存储库路径。
    * 无法发布编辑器中按别名处理的页面。编辑器中的[发布选项](/help/sites-authoring/publishing-pages.md)仅适用于通过其实际路径访问的页面。
-   * 有关更多详细信息，请参阅 [“SEO和URL管理最佳实践”下的本地化页面名称](/help/managing/seo-and-url-management.md#localized-page-names).
+   * 有关更多详细信息，请参阅 [SEO和URL管理最佳实践下的本地化页面名称](/help/managing/seo-and-url-management.md#localized-page-names).
 
 * **继承自 &lt;*路径*>**
 
@@ -158,7 +158,7 @@ ht-degree: 90%
 
    >[!CAUTION]
    >
-   >的 **[权限](/help/sites-authoring/editing-page-properties.md#main-pars-procedure-949394300)** 选项卡，允许根据 `granite:AuthenticationRequired` 混合。 如果页面权限是使用已弃用的CUG配置配置的，则 `cq:cugEnabled` 属性中，将显示一条警告消息 **身份验证要求** 选项将不可编辑， [权限](/help/sites-authoring/editing-page-properties.md#permissions) 可编辑。
+   >此 **[权限](/help/sites-authoring/editing-page-properties.md#main-pars-procedure-949394300)** 选项卡允许根据以下项的存在来编辑CUG配置 `granite:AuthenticationRequired` mixin。 如果页面权限是使用已弃用的CUG配置配置的，则根据是否存在 `cq:cugEnabled` 属性，下面将显示一条警告消息 **身份验证要求** 并且选项将不可编辑，也不会 [权限](/help/sites-authoring/editing-page-properties.md#permissions) 可编辑。
    >
    >
    >对于此类情况，必须在[经典 UI](/help/sites-classic-ui-authoring/classic-page-author-edit-page-properties.md) 中编辑 CUG 权限。
@@ -199,7 +199,8 @@ ht-degree: 90%
 
    * **为 Facebook 启用用户共享**
    * **为 Pinterest 启用用户共享**
-   * **首选体验片段变量** 定义用于为页面生成元数据的体验片段变量
+   * **首选体验片段变体**
+定义用于为页面生成元数据的体验片段变体
 
 ### Cloud Service {#cloud-services}
 
@@ -232,14 +233,14 @@ ht-degree: 90%
    * 查看[有效权限](/help/sites-administering/user-group-ac-admin.md)
    >[!CAUTION]
    >
-   >的 **权限** 选项卡，允许根据 `granite:AuthenticationRequired` 混合。 如果页面权限是使用已弃用的 CUG 配置来配置的，则在存在 `cq:cugEnabled` 属性的情况下，将会显示一条警告消息，且 CUG 权限将不可编辑，同时[高级](/help/sites-authoring/editing-page-properties.md#advanced)选项卡上的“身份验证要求”也将不可编辑。
+   >此 **权限** 选项卡允许根据以下项的存在来编辑CUG配置 `granite:AuthenticationRequired` mixin。 如果页面权限是使用已弃用的 CUG 配置来配置的，则在存在 `cq:cugEnabled` 属性的情况下，将会显示一条警告消息，且 CUG 权限将不可编辑，同时[高级](/help/sites-authoring/editing-page-properties.md#advanced)选项卡上的“身份验证要求”也将不可编辑。
    >
    >
    >对于此类情况，必须在[经典 UI](/help/sites-classic-ui-authoring/classic-page-author-edit-page-properties.md) 中编辑 CUG 权限。
 
    >[!NOTE]
    >
-   >“权限”选项卡不允许创建空 CUG 组，这可用作拒绝每个用户访问的简单方式。为此，必须使用 CRX 资源管理器。查看文档 [用户、组和访问权限管理](/help/sites-administering/user-group-ac-admin.md) 以了解更多信息。
+   >“权限”选项卡不允许创建空 CUG 组，这可用作拒绝每个用户访问的简单方式。为此，必须使用 CRX 资源管理器。查看文档 [用户、组和访问权限管理](/help/sites-administering/user-group-ac-admin.md) 了解更多信息。
 
 ### Blueprint {#blueprint}
 
@@ -301,7 +302,7 @@ ht-degree: 90%
 
    ![screen_shot_2018-03-22at095740](assets/screen_shot_2018-03-22at095740.png)
 
-1. 选择 **打开属性** 此时将打开一个用于编辑属性的对话框，这些属性按相应的选项卡进行排序。 工具栏右侧还提供以下按钮：
+1. 选择 **打开属性** 此时将打开一个对话框，允许您编辑按相应选项卡排序的属性。 工具栏右侧还提供以下按钮：
 
    * **取消**
    * **保存并关闭**

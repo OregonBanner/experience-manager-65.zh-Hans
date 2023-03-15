@@ -1,7 +1,7 @@
 ---
 title: 目录功能
 seo-title: Catalog Feature
-description: 启用分配和启用目录组件是启用社区的组件
+description: “启用分配”和“启用目录”组件是启用社区的组件
 seo-description: The Enablement Assignments and Enablement Catalog components are components of an enablement community
 uuid: ee9fd9f6-9f8e-4d8a-b4c1-73f466dd52e2
 contentOwner: msm-service
@@ -19,14 +19,14 @@ ht-degree: 1%
 
 # 目录功能 {#catalog-feature}
 
-的 [`Enablement Assignments`](assignments.md) 和 `Enablement Catalog` 组件浏览器中的社区组中的组件是 [启用社区](overview.md#enablement-community).
+此 [`Enablement Assignments`](assignments.md) 和 `Enablement Catalog` 在组件浏览器的Communities组中找到的组件是 [启用社区](overview.md#enablement-community).
 
-的 `Enablement Catalog` 组件允许社区成员访问 [启用资源](resources.md). 使用AEM标记是管理目录中支持资源列表的重要部分(请参阅 [标记支持资源](tag-resources.md))。
+此 `Enablement Catalog` 组件允许社区成员访问以下项的目录： [启用资源](resources.md). 使用AEM标记是管理目录中启用资源列表的重要组成部分(请参阅 [标记启用资源](tag-resources.md))。
 
-从 [AEM Communities启用入门](getting-started-enablement.md) 教程，请参阅 [体验已发布的网站](enablement-published-site.md) 中。
+从 [AEM Communities启用入门](getting-started-enablement.md) 教程中，查看成员在 [体验已发布的站点](enablement-published-site.md) 部分。
 
 ## 附加信息 {#additional-information}
 
-有关 [目录要点](catalog-developer-essentials.md) 页面。
+欲知更多信息，请访问 [目录要点](catalog-developer-essentials.md) 适用于开发人员的页面。
 
-的 [目录函数](functions.md#catalog-function) 在创建 [社区网站](sites-console.md).
+此 [目录功能](functions.md#catalog-function) 创建时可用 [社区站点](sites-console.md).

@@ -1,7 +1,7 @@
 ---
-title: 配置Cookie使用情况
+title: 配置Cookie用法
 seo-title: Configuring Cookie Usage
-description: AEM提供了一项服务，可让您配置和控制如何在网页中使用cookie
+description: AEM提供的服务允许您配置并控制Cookie在网页中的使用方式
 seo-description: AEM provides a service that enables you to configure and control how cookies are used with your web pages
 uuid: 10d95176-0a56-41f1-9d36-01dbdac757d4
 contentOwner: Guillaume Carlino
@@ -17,41 +17,41 @@ ht-degree: 2%
 
 ---
 
-# 配置Cookie使用情况{#configuring-cookie-usage}
+# 配置Cookie用法{#configuring-cookie-usage}
 
-AEM提供了一项服务，可让您配置和控制如何在您的网页中使用cookie:
+AEM提供的服务允许您配置并控制Cookie在网页中的使用方式：
 
-* 可配置的服务器端服务维护可使用的Cookie列表。
+* 可配置的服务器端服务维护可用的Cookie列表。
 * Javascript API允许您的Javascript代码验证是否可以使用Cookie。
 
-使用此功能可确保您的页面符合用户对Cookie使用情况的同意。
+使用此功能可确保您的页面在有关Cookie使用方面符合用户的同意。
 
 ## 配置允许的Cookie {#configuring-allowed-cookies}
 
-配置AdobeGranite选择退出服务以指定如何在您的网页上使用Cookie。 下表介绍了可配置的属性。
+配置AdobeGranite选择退出服务，以指定在网页上使用Cookie的方式。 下表描述了可以配置的属性。
 
-要配置服务，您可以使用 [Web控制台](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) 或 [将OSGi配置添加到存储库](/help/sites-deploying/configuring-osgi.md#adding-a-new-configuration-to-the-repository). 下表介绍了任一方法所需的属性。 对于OSGi配置，服务PID为 `com.adobe.granite.optout`.
+要配置服务，您可以使用 [Web控制台](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) 或 [将OSGi配置添加到存储库](/help/sites-deploying/configuring-osgi.md#adding-a-new-configuration-to-the-repository). 下表描述了任一方法所需的属性。 对于OSGi配置，服务PID为 `com.adobe.granite.optout`.
 
 | 属性名称（Web 控制台） | OSGi 属性名称 | 描述 |
 |---|---|---|
-| 禁用Cookie | optout.cookies | Cookie的名称，当用户设备上存在时，该名称指示用户不同意使用Cookie。 |
-| 选择禁用HTTP标头 | optout.headers | 表示用户未同意使用Cookie的HTTP标头的名称（如果存在）。 |
-| 白名单Cookie | optout.whitelist.cookies | 对网站运行至关重要，且未经用户同意即可使用的Cookie列表。 |
+| 选择退出Cookie | optout.cookies | Cookie的名称，指示当用户在设备上存在时，用户尚未同意使用Cookie。 |
+| 选择禁用HTTP标头 | optout.headers | 表示用户尚未同意使用Cookie的HTTP标头的名称（如果存在）。 |
+| 白名单Cookie | optout.whitelist.cookies | 对网站运行至关重要的且可以在未经用户同意的情况下使用的Cookie列表。 |
 
 ## 验证Cookie使用情况 {#validating-cookie-usage}
 
-使用客户端Javascript调用AdobeGranite选择退出服务，以验证您是否可以使用Cookie。 使用Granite.OptOutUtil javascript对象执行以下任何任务：
+使用客户端javascript调用AdobeGranite选择退出服务以验证您是否可以使用Cookie。 使用Granite.OptOutUtil javascript对象执行以下任何任务：
 
-* 获取表示用户不同意将Cookie用于跟踪的Cookie名称列表。
-* 获取可使用的Cookie列表。
+* 获取Cookie名称列表，以表明用户不同意使用Cookie进行跟踪。
+* 获取可用的Cookie列表。
 * 确定Web浏览器是否包含指示用户不同意使用Cookie进行跟踪的Cookie。
 * 确定是否可以使用特定Cookie。
 
-granite.utils [客户端库文件夹](/help/sites-developing/clientlibs.md#referencing-client-side-libraries) 提供Granite.OptOutUtil对象。 将以下代码添加到页眉JSP，以包含指向Javascript库的链接：
+granite.utils [客户端库文件夹](/help/sites-developing/clientlibs.md#referencing-client-side-libraries) 提供Granite.OptOutUtil对象。 将以下代码添加到页头JSP以包含指向javascript库的链接：
 
 `<ui:includeClientLib categories="granite.utils" />`
 
-例如，以下javascript函数确定是否允许在写入COOKIE_NAME Cookie之前使用该Cookie:
+例如，以下javascript函数决定在写入之前是否允许使用COOKIE_NAME Cookie：
 
 ```
 function writeCookie(value){
@@ -70,48 +70,48 @@ Granite.OptOutUtil允许您确定是否允许使用Cookie。
 
 ### getCookieNames()函数 {#getcookienames-function}
 
-返回Cookie的名称（如果存在），表示用户未同意使用Cookie。
+返回Cookie的名称，如果存在，则表示用户未同意使用Cookie。
 
 **参数**
 
 无.
 
-**返回结果**
+**返回**
 
 Cookie名称数组。
 
 #### getWhitelistCookieNames()函数 {#getwhitelistcookienames-function}
 
-返回可在用户同意的情况下使用的Cookie的名称。
+返回可在未经用户同意的情况下使用的Cookie的名称。
 
 **参数**
 
 无.
 
-**返回结果**
+**返回**
 
 Cookie名称数组。
 
 #### isOptedOut()函数 {#isoptedout-function}
 
-确定用户的浏览器是否包含任何指示尚未同意使用Cookie的Cookie。
+确定用户的浏览器是否包含表明未同意使用Cookie的任何Cookie。
 
 **参数**
 
 无.
 
-**返回结果**
+**返回**
 
-布尔值 `true` 如果发现表示未同意的Cookie，则 `false` 如果没有cookie表示不同意。
+布尔值 `true` 如果找到指示不同意的Cookie，并且值为 `false` 如果没有Cookie表示不同意。
 
 ### maySetCookie(cookieName)函数 {#maysetcookie-cookiename-function}
 
-确定能否在用户的浏览器上使用特定的Cookie。 此函数等同于使用 `isOptedOut` 函数，同时确定给定Cookie是否包含在 `getWhitelistCookieNames` 函数返回。
+确定在用户浏览器上是否可以使用特定Cookie。 此函数等同于使用 `isOptedOut` 函数来确定是否将给定的Cookie包含在 `getWhitelistCookieNames` 函数返回。
 
 **参数**
 
-* cookieName:字符串。 Cookie的名称。
+* cookieName：字符串。 Cookie的名称。
 
-**返回结果**
+**返回**
 
-布尔值 `true` if `cookieName` 值，或 `false` if `cookieName` 无法使用。
+布尔值 `true` 如果 `cookieName` 可使用，或值为 `false` 如果 `cookieName` 无法使用。

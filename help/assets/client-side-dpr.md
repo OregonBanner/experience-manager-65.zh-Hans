@@ -1,6 +1,6 @@
 ---
 title: 使用具有客户端设备像素比的智能成像
-description: 了解如何在Adobe Experience Manager as a Cloud Service中结合使用客户端设备像素比率和智能成像，以及Dynamic Media。
+description: 了解如何在带Dynamic Media的Adobe Experience Manager as a Cloud Service中将客户端设备像素比与智能成像结合使用。
 role: Admin,User
 exl-id: e38f522a-242a-4ea9-a866-d8d129950831
 source-git-commit: c8682118f15132063073df5cdc2b576b6e62a0c8
@@ -14,23 +14,23 @@ ht-degree: 0%
 
 当前的智能成像解决方案使用用户代理字符串来确定正在使用的设备类型（台式机、平板电脑、移动设备等）。
 
-设备检测功能（基于用户代理字符串的DPR）通常不准确，尤其是对于Apple设备。 此外，无论何时启动新设备，都必须对其进行验证。
+设备检测功能（基于用户代理字符串的DPR）通常不准确，特别是对于Apple设备。 此外，无论新设备何时启动，都必须对其进行验证。
 
-客户端DPR可为您提供100%的准确值，并且适用于任何设备(无论是Apple还是启动的任何其他新设备)。
+客户端DPR可为您提供100%准确的值，并且适用于任何设备，无论是Apple还是任何其他已启动的新设备。
 
 ## 使用客户端DPR代码
 
 **服务器端渲染的应用程序**
 
-1. 加载服务工作程序初始化(`srvinit.js`)，方法是在HTML页面的标头部分包含以下脚本：
+1. 加载Service Worker init (`srvinit.js`)，方法是在页面HTML的标题部分中包含以下脚本：
 
    ```javascript
    <script type="text/javascript" src="srvinit.js"></script>
    ```
 
-   Adobe建议您加载此脚本 _之前_ 任何其他脚本，以便服务工作人员立即开始初始化。
+   Adobe建议您加载此脚本 _早于_ 任何其他脚本，以便Service Worker立即开始初始化。
 
-1. 在HTML页面正文部分的顶部包含以下DPR图像标记代码：
+1. 将以下DPR图像标记代码包含在HTML页正文部分的顶部：
 
    ```html
    <img src="aem_dm_dpr_1x.jpg" style="width:1px;height:1px;display:none"
@@ -41,25 +41,25 @@ ht-degree: 0%
        aem_dm_dpr_5x.jpg 5x">
    ```
 
-   必须包含此DPR图像标记代码 _之前_ 您的HTML页面中的所有静态图像。
+   必须包含此DPR图像标记代码 _早于_ HTML页中的所有静态图像。
 
 **客户端渲染的应用程序**
 
-1. 在HTML页面的标题部分包含以下DPR脚本：
+1. 在HTML页的标题部分中包含以下DPR脚本：
 
    ```javascript
    <script type="text/javascript" src="srvinit.js"></script>
    <script type="text/javascript" src="dprImageInjection.js"></script>
    ```
 
-   您可以将两个DPR脚本合并为一个脚本，以避免多个网络请求。
+   您可以将两个DPR脚本合并到一个脚本中，以避免多个网络请求。
 
-   Adobe建议您加载这些脚本 _之前_ “HTML”页面中的任何其他脚本。
-Adobe还建议您在差异HTML标记下Bootstrap应用程序，而不是正文元素。 原因是 `dprImageInjection.js` 动态插入位于HTML页面主体部分顶部的图像标记。
+   Adobe建议您加载这些脚本 _早于_ “HTML”页中的任何其他脚本。
+Adobe还建议您将应用程序Bootstrap在diffHTML标记下，而不是在正文元素下。 原因在于 `dprImageInjection.js` 动态注入“HTML”页面中“正文”部分顶部的图像标记。
 
 ## JavaScript文件下载 {#client-side-dpr-script}
 
-下载中的以下JavaScript文件仅作为示例引用提供给您。 如果您打算在HTML页面中使用这些文件，请确保编辑每个文件的代码以符合您自己的要求。
+下载中的以下JavaScript文件仅作为示例引用提供给您。 如果您打算在HTML页中使用这些文件，请务必编辑每个文件的代码以满足自己的要求。
 
 * `dprImageInjection.js`
 * `srvinit.js`

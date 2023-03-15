@@ -1,7 +1,7 @@
 ---
-title: 流程报告疑难解答
+title: 疑难解答流程报告
 seo-title: Troubleshooting Process Reporting
-description: 对AEM Forms中的JEE流程报告问题进行故障诊断
+description: 解决AEM Forms on JEE流程报表中的问题
 seo-description: Troubleshoot issues in AEM Forms on JEE Process Reporting
 page-status-flag: de-activated
 uuid: 1c1cc27c-fbed-4366-bffe-e1581d269a93
@@ -16,20 +16,20 @@ ht-degree: 0%
 
 ---
 
-# 流程报告疑难解答 {#troubleshooting-process-reporting}
+# 疑难解答流程报告 {#troubleshooting-process-reporting}
 
-## 在Microsoft Windows 7的Internet Explorer 9上创建过滤器时遇到的问题 {#issues-faced-in-creating-filters-on-internet-explorer-on-microsoft-windows}
+## 在Microsoft Windows 7上的Internet Explorer 9上创建过滤器时遇到的问题 {#issues-faced-in-creating-filters-on-internet-explorer-on-microsoft-windows}
 
-如果为预定义报表创建过滤器，则 **Internet Explorer 9** 表示 **Microsoft Windows 7** 环境：
+如果您为预定义报表创建过滤器，则以下问题会间歇性地出现在 **Internet Explorer 9** 对象 **Microsoft Windows 7** 环境：
 
-* “值”(Value)字段中的下拉列表显示唯一标识符，而不是值。
+* 值字段中的下拉列表显示唯一标识符而不是值。
 * “值”字段中的“日历”控件显示日语字符。
-* “条件”字段不显示。
+* 条件字段不显示。
 * “值”字段中的“日历”控件不显示。
 
 ### 解决方法 {#resolution}
 
-当您仍然登录到Process Reporting时：
+当您仍登录到流程报告时：
 
 1. 清除浏览器缓存。
 1. 刷新浏览器屏幕。

@@ -20,15 +20,15 @@ ht-degree: 37%
 
 # 经典UI标记控制台{#classic-ui-tagging-console}
 
-此部分适用于经典UI标记控制台。
+本节适用于经典UI标记控制台。
 
-触屏优化UI标记控制台为 [此处](/help/sites-administering/tags.md#tagging-console).
+触屏优化UI标记控制台是 [此处](/help/sites-administering/tags.md#tagging-console).
 
 要访问经典UI标记控制台，请执行以下操作：
 
-* 在作者
+* 在作者上
 * 使用管理权限登录
-* 例如，浏览到控制台。 [https://localhost:4502/tagging](https://localhost:4502/tagging)
+* 浏览到控制台，例如， [https://localhost:4502/tagging](https://localhost:4502/tagging)
 
 ![](assets/managing_tags_usingthetagasministrationconsole.png)
 
@@ -44,16 +44,16 @@ ht-degree: 37%
 
    ![](assets/creating_tags_andnamespacesinnewnamespace.png)
 
-1. 在这两种情况下，输入
+1. 在这两种情况下，请输入
 
    * **标题**
 (
-*必需*)标记的显示标题。 虽然可以输入任何字符，但建议不要使用这些特殊字符：
+*必需*)标记的显示标题。 虽然可以输入任何字符，但建议不要使用以下特殊字符：
 
       * `colon (:)`  — 命名空间分隔符
       * `forward slash (/)`  — 子标记分隔符
 
-      如果输入，则不会显示这些字符。
+      如果输入，将不显示这些字符。
 
    * **名称**
 (
@@ -77,13 +77,13 @@ ht-degree: 37%
 
 1. 在右侧窗格中，选择要删除的标记。
 1. 单击&#x200B;**删除**。
-1. 单击 **是** 来关闭对话框。
+1. 单击 **是** 以关闭对话框。
 
    标记不应再列出。
 
 ## 激活和取消激活标记 {#activating-and-deactivating-tags}
 
-1. 在右侧窗格中，选择要激活（发布）或取消激活（取消发布）的命名空间或标记。
+1. 在右侧窗格中，选择要激活（发布）或停用（取消发布）的命名空间或标记。
 1. 根据需要单击“**激活**”或“**取消激活**”。
 
 ## 列表 - 显示引用标记的位置 {#list-showing-where-tags-are-referenced}
@@ -127,7 +127,7 @@ ht-degree: 37%
 
 1. 单击“**合并**”。
 
-的 **合并标记** 对话框如下所示：
+此 **合并标记** 对话框如下所示：
 
 ![](assets/mergetag.png)
 
@@ -140,14 +140,14 @@ ht-degree: 37%
 
 ## 管理不同语言的标记 {#managing-tags-in-different-languages}
 
-可选 `title`标记的属性可以翻译成多种语言。 标记 `titles` 随后可根据用户语言或页面语言显示。
+可选 `title`标记属性可以翻译成多种语言。 标记 `titles` 然后可以根据用户语言或页面语言进行显示。
 
 ### 用多种语言定义标记标题 {#defining-tag-titles-in-multiple-languages}
 
-以下过程显示如何翻译 `title`标记 **动物** 英语、德语和法语：
+以下过程说明如何翻译 `title`标记的 **动物** 英语、德语和法语：
 
 1. 转到 **标记** 控制台。
-1. 编辑标记 **动物** 下面 **标记** > **Stock摄影**.
+1. 编辑标记 **动物** 以下 **标记** > **Stock摄影**.
 1. 添加以下语言的翻译：
 
    * **英语**：Animals
@@ -160,27 +160,27 @@ ht-degree: 37%
 
 ![](assets/edit_tag.png)
 
-标记控制台使用用户语言设置，因此对于Animal标记，会为在用户属性中将语言设置为法语的用户显示“Animaux”。
+“标记”控制台使用用户语言设置，因此对于Animal标记，对于在用户属性中将语言设置为“法语”的用户，将显示“Animaux”。
 
-要向对话框中添加新语言，请参阅章节 [向“编辑标记”对话框添加新语言](/help/sites-developing/building.md#adding-a-new-language-to-the-edit-tag-dialog) 在 **面向开发人员的标记** 中。
+要向对话框添加新语言，请参阅一节 [向“编辑标记”对话框添加新语言](/help/sites-developing/building.md#adding-a-new-language-to-the-edit-tag-dialog) 在 **为开发人员添加标记** 部分。
 
-### 在页面属性中以指定语言显示标记标题 {#displaying-tag-titles-in-page-properties-in-a-specified-language}
+### 以指定语言在页面属性中显示标记标题 {#displaying-tag-titles-in-page-properties-in-a-specified-language}
 
-默认情况下，标记 `titles`在中，属性以页面语言显示。 页面属性中的标记对话框具有用于显示标记的语言字段 `titles`用不同的语言。 以下过程介绍如何显示标记 `titles`法语：
+默认情况下，标记 `titles`在中，页面属性以页面语言显示。 页面属性中的标记对话框有一个可显示标记的语言字段 `titles`换了语言。 以下过程介绍了如何显示标记 `titles`法语：
 
-1. 请参阅上一节，将法语翻译添加到 **动物** 下面 **标记** > **Stock摄影**.
+1. 请参阅上一节以将法语翻译添加到 **动物** 以下 **标记** > **Stock摄影**.
 1. 打开英语分支的 **Geometrixx** 站点中的&#x200B;**产品**&#x200B;页面的页面属性。
-1. 打开 **标记/关键词** 对话框（通过选择“标记/关键词”显示区域右侧的下拉菜单），然后选择 **法语** 语言。
-1. 使用左 — 右箭头滚动，直到能够选择 **Stock摄影** 选项卡
+1. 打开 **标记/关键字** 对话框（通过选择“标记”/“关键字”显示区域右侧的下拉菜单），然后选择 **法语** 从右下角的下拉菜单中选取语言。
+1. 使用左右箭头滚动，直到能够选择 **Stock摄影** 选项卡
 
-   选择 **动物** (**阿尼莫**)标记，并在对话框外部选择以将其关闭，然后将标记添加到页面属性中。
+   选择 **动物** (**阿尼莫**)，然后选择对话框外部以将其关闭并将标记添加到页面属性。
 
    ![](assets/french_tag.png)
 
-默认情况下，页面属性对话框会显示标记 `titles`页面语言。
+默认情况下，“页面属性”对话框会显示标记 `titles`根据页面语言。
 
-通常，如果页面语言可用，则会从页面语言中获取标记的语言。 当 [ `tag` 小组件](/help/sites-developing/building.md#tagging-on-the-client-side) 在其他情况下（例如在表单或对话框中），标记语言取决于上下文。
+通常，如果页面语言可用，则从页面语言中获取标记的语言。 当 [ `tag` 构件](/help/sites-developing/building.md#tagging-on-the-client-side) 在其他情况下（例如在表单或对话框中）使用，标记语言取决于上下文。
 
 >[!NOTE]
 >
->标准页面组件中的标记云和元关键字使用本地化的标记 `titles`（如果可用）。
+>标准页面组件中的标记云和元关键字使用本地化的标记 `titles`基于页面语言（如果可用）。

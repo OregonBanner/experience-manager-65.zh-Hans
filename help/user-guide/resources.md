@@ -15,16 +15,16 @@ ht-degree: 9%
 
 ## AEM 6.5 发行说明 {#aem-64-release-notes}
 
-[在发行说明中了解AEM 6.5的最新新增功能。](/help/release-notes/home.md)
+[在发行说明中了解AEM 6.5中的最新新增功能。](/help/release-notes/home.md)
 
 ## AEM 6.5教程视频 {#aem-64-tutorial-videos}
 
 * [AEM 6.5培训视频](https://helpx.adobe.com/experience-manager/kt/index/aem-6-4-videos.html)
 * [AEM 教程](https://helpx.adobe.com/experience-manager/tutorials.html)
 
-## 类和认证 {#classes-and-certification}
+## 课程和认证 {#classes-and-certification}
 
-[通过面对面课程和虚拟课堂服务，扩展您的学习。](https://training.adobe.com/training/courses.html#solution=adobeExperienceManager)
+[通过现场和虚拟课堂服务扩展您的学习。](https://training.adobe.com/training/courses.html#solution=adobeExperienceManager)
 
 ## GDPR 就绪 {#gdpr-readiness}
 

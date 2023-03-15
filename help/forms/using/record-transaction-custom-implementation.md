@@ -1,7 +1,7 @@
 ---
 title: 记录自定义实施的交易
 seo-title: Record a transaction for custom implementations
-description: 使用TransactionRecorder API记录未自动入帐为事务的操作
+description: 使用TransactionRecorder API自动记录未作为事务入帐的操作
 seo-description: Use the TransactionRecorder API to record actions which are not accounted as transactions automatically
 uuid: a22b1a0b-7553-4a17-8fb4-a3bee97b4a98
 contentOwner: khsingh
@@ -18,15 +18,15 @@ ht-degree: 0%
 
 # 记录自定义实施的交易 {#record-a-transaction-for-custom-implementations}
 
-使用TransactionRecorder API记录未自动入帐为事务的操作
+使用TransactionRecorder API自动记录未作为事务入帐的操作
 
-您可以使用自定义代码提交PDF表单、向最终用户发送代理UI预览URL以预览交互式通信，或使用自定义方法提交表单，而不是使用AEM Forms提供的提交方法。 之前提到的所有AEM Forms API操作和自定义实施均不会计为交易。 AEM Forms提供了一个API， [交易记录器](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/aem/transaction/core/ITransactionRecorder.html)，以记录此类操作（如交易）。
+您可以使用自定义代码提交PDF表单、向最终用户发送代理UI预览URL以预览交互式通信，或使用自定义方法提交表单，而不是使用AEM Forms提供的提交方法。 前面提到的AEM Forms API的所有操作和自定义实施都不会计为交易。 AEM Forms提供了一个API， [TransactionRecorder](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/aem/transaction/core/ITransactionRecorder.html)，将此类操作记录为事务处理。
 
-要记录事务，请写入 [标准sling servlet](https://helpx.adobe.com/experience-manager/using/custom-sling-servlets.html) 并从客户端调用servlet以记录事务。 您可以使用AJAX或任何其他标准方法调用Servlet。
+要记录事务处理，请编写 [标准sling servlet](https://helpx.adobe.com/experience-manager/using/custom-sling-servlets.html) 并从客户端调用servlet以记录事务。 您可以使用AJAX或任何其他标准方法调用servlet。
 
 ## 服务器端代码示例 {#sample-server-sided-code}
 
-您可以使用以下示例代码从JAVA类中使用自定义OSGi包运行TransactionRecorder API。
+您可以使用以下示例代码通过自定义OSGi捆绑包从JAVA类运行TransactionRecorder API。
 
 ```java
 import com.adobe.aem.transaction.core.ITransactionRecorder;
@@ -74,7 +74,7 @@ private TransactionRecord extractTxRecordFromRequest(SlingHttpServletRequest req
 
 ## 示例客户端代码 {#sample-client-side-code}
 
-您可以使用以下示例代码调用具有 `TransactionRecorder`API。
+您可以使用以下示例代码调用具有以下特性的servlet： `TransactionRecorder`API。
 
 ```javascript
 $.ajax({
@@ -92,6 +92,6 @@ $.ajax({
 
 ## 相关文章 {#related-articles}
 
-* [交易报表概述](/help/forms/using/transaction-reports-overview.md)
-* [查看和了解交易报表](/help/forms/using/viewing-and-understanding-transaction-reports.md)
-* [交易报表计费API](/help/forms/using/transaction-reports-billable-apis.md)
+* [事务处理报表概览](/help/forms/using/transaction-reports-overview.md)
+* [查看和了解事务处理报表](/help/forms/using/viewing-and-understanding-transaction-reports.md)
+* [交易报告可记帐API](/help/forms/using/transaction-reports-billable-apis.md)

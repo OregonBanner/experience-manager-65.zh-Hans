@@ -20,12 +20,12 @@ ht-degree: 73%
 
 # 与 Adobe Analytics 集成{#integrating-with-adobe-analytics}
 
-将Adobe Analytics和AEM集成后，您可以跟踪网页活动：
+通过将Adobe Analytics与AEM集成，您可以跟踪您的网页活动：
 
 * Adobe Analytics 配置可让 AEM 通过 Adobe Analytics 进行身份验证。
 * 框架标识发送到 Adobe Analytics 报告包的数据。
 
-数据包括页面数据和用户数据；例如：
+该数据包括页面和用户数据；例如：
 
 * AEM 组件收集的数据
 * 链接点击次数
@@ -34,7 +34,7 @@ ht-degree: 73%
 
 以下页面可帮助您配置集成：
 
-* [连接到Adobe Analytics和创建框架](/help/sites-administering/adobeanalytics-connect.md)
+* [连接到Adobe Analytics并创建框架](/help/sites-administering/adobeanalytics-connect.md)
 * [为 Adobe Analytics 配置链接跟踪](/help/sites-administering/adobeanalytics-link.md)
 * [建立组件数据与 Adobe Analytics 属性的映射](/help/sites-administering/adobeanalytics-mapping.md)
 * [为 Adobe Analytics 配置视频跟踪](/help/sites-administering/adobeanalytics-video.md)

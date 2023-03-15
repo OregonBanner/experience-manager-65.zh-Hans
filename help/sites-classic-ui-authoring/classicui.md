@@ -21,13 +21,13 @@ ht-degree: 79%
 
 ## 经典UI和触屏UI {#classic-ui-and-touch-enabled-ui}
 
-经典UI是面向桌面的用户界面，自CQ5(AEM的前身)起便已推出。 以下创作文档主要针对此 UI 进行介绍。
+经典UI是自CQ5(AEM的前身)以来提供的面向桌面的用户界面。 以下创作文档主要针对此 UI 进行介绍。
 
 触屏优化 UI 是 AEM 的新标准用户界面，它既适用于触控设备，也适用于桌面设备。有关更多信息，请参阅[标准创作文档](/help/sites-authoring/author.md)。
 
 >[!NOTE]
 >
->由于触屏优化 UI 是 AEM 的标准 UI，因此不再对经典 UI 进行维护。这意味着某些功能在经典UI中不可用。
+>由于触屏优化 UI 是 AEM 的标准 UI，因此不再对经典 UI 进行维护。这意味着经典UI中无法使用某些功能。
 
 ## 创作（和发布）的概念 {#concept-of-authoring-and-publishing}
 

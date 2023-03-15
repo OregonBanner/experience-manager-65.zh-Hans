@@ -1,7 +1,7 @@
 ---
-title: HTML5表单中的从右到左语言
+title: HTML5表单中的从右至左语言
 seo-title: Right-to-left languages in HTML5 forms
-description: HTML5表单可以以从右到左的语言显示或填写，如希伯来语。
+description: HTML5表单可以用从右至左的语言显示或填写，例如希伯来语。
 seo-description: HTML5 forms can be displayed or filled in right-to-left languages, such as Hebrew.
 uuid: 37639671-3207-49aa-b110-8e39fd648449
 content-type: reference
@@ -17,10 +17,10 @@ ht-degree: 0%
 
 ---
 
-# HTML5表单中的从右到左语言 {#right-to-left-languages-in-html-forms}
+# HTML5表单中的从右至左语言 {#right-to-left-languages-in-html-forms}
 
-HTML5表单支持从右到左的语言，如希伯来语。 您可以以从右到左的语言显示和填写HTML5表单。 从右到左和从左到右的语言都采用同一形式。 例如，您可以在公共字段中同时使用英语和希伯来语。 移动设备Forms使用区域设置在表单中显示本地化的日期和时间信息。
+HTML5表单支持从右至左的语言，例如希伯来语。 您可以按从右至左的语言显示和填写HTML5表单。 从右至左和从左至右两种语言形式相同。 例如，您可以在公共字段中同时使用英语和希伯来语。 Mobile Forms使用区域设置来在表单中显示本地化的日期和日期信息。
 
 **限制**
 
-除Internet Explorer外，所有浏览器中的移动设备Forms都支持从右到左的语言。
+除Internet Explorer之外，Mobile Forms在所有浏览器中均支持从右至左的语言。

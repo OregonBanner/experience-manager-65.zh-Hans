@@ -1,6 +1,6 @@
 ---
-title: AEM Fluid Experiences功能列表
-description: 流式体验功能列表
+title: AEM Fluid Experience功能列表
+description: 流畅体验功能列表
 index: n
 feature: Authoring
 exl-id: 3ac61645-4873-4602-b740-2236aba5bc5e
@@ -11,31 +11,31 @@ ht-degree: 9%
 
 ---
 
-# AEM Fluid Experiences功能列表{#aem-fluid-experiences-feature-list}
+# AEM Fluid Experience功能列表{#aem-fluid-experiences-feature-list}
 
-Adobe Experience Manager流式体验利用AEM Sites、AEM Dynamic Media和AEM Assets等强大的功能集，为无头内容交付提供了强大的解决方案。
+Adobe Experience Manager Fluid Experiences可利用AEM Sites、AEM Dynamic Media和AEM Assets的强大功能集，为Headless内容交付提供可靠的解决方案。
 
-AEM Fluid Experiences将自己与经典AEM区别在于，只解决无头投放用例。 通过 [完整的AEM Sites、 Assets和Dynamic Media解决方案。](https://experienceleague.adobe.com/docs/experience-manager-65/user-guide/home.html?lang=zh-Hans)
+AEM Fluid Experiences与经典AEM的不同之处在于，它仅涉及Headless投放用例。 Headful内容创作和交付以及AEM对混合用例的强大支持都随 [完整的AEM Sites、Assets和Dynamic Media解决方案。](https://experienceleague.adobe.com/docs/experience-manager-65/user-guide/home.html?lang=zh-Hans)
 
-下表定义了AEM流式体验的功能并链接到相关支持文档。
+下表定义了AEM Fluid Experiences的功能，并链接到相关的支持文档。
 
 * [存储库](#repository-features)
 * [访问、API和交付](#access-api-and-delivery-features)
 * [管理和集成](#admin-and-integration-features)
-* [分析和个性化](#analytics-and-personalization)
+* [Analytics和个性化](#analytics-and-personalization)
 
 >[!NOTE]
 >
->AEM Fluid Experiences是AEM功能的子集。 这些表中链接到的功能可能包括AEM中包含的其他功能，但不包括AEM Fluid Experiences中包含的其他功能。
+>AEM流式体验是AEM功能的一个子集。 这些表中链接到的功能可能包括AEM中包含的其他功能，但不包括AEM Fluid Experiences中的其他功能。
 
 ## 存储库功能 {#repository-features}
 
 |  |
 |---|
 | [内容存储库](/help/assets/manage-assets.md) |
-| [资产类型](/help/assets/assets-formats.md) |
-| [图像呈现](/help/assets/image-presets.md) |
-| [元数据和标签管理](/help/assets/metadata.md) |
+| [资源类型](/help/assets/assets-formats.md) |
+| [图像演绎版](/help/assets/image-presets.md) |
+| [元数据和标记管理](/help/assets/metadata.md) |
 | [搜索](/help/assets/manage-assets.md) |
 | [收藏集](/help/assets/manage-assets.md) 和 [灯箱](/help/assets/light-box.md) |
 | [配置文件](/help/assets/processing-profiles.md) |
@@ -51,8 +51,8 @@ AEM Fluid Experiences将自己与经典AEM区别在于，只解决无头投放�
 | [结构化内容模型](/help/assets/content-fragments/content-fragments.md) |
 | [内容服务](https://helpx.adobe.com/experience-manager/kt/sites/using/content-services-tutorial-use.html) |
 | [体验片段](/help/sites-authoring/experience-fragments.md) |
-| 适用于结构化内容的HTTP API（读取） |
-| 适用于结构化内容(CRUD)的HTTP API |
+| 结构化内容的HTTP API（读取） |
+| 用于结构化内容的HTTP API (CRUD) |
 | [核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans) |
 | [Dynamic Media](/help/assets/dynamic-media.md) |
 
@@ -72,20 +72,20 @@ AEM Fluid Experiences将自己与经典AEM区别在于，只解决无头投放�
 | [工作流](/help/sites-administering/workflows-starting.md) |
 | 连接（云服务） |
 
-## 分析和个性化 {#analytics-and-personalization}
+## Analytics和个性化 {#analytics-and-personalization}
 
 |  |
 |---|
 | [资产报表](/help/assets/asset-reports.md) |
-| 由Adobe Analytics提供支持的增强分析功能 |
-| 由Adobe Target提供支持的增强分析功能 |
+| 由Adobe Analytics提供支持的增强型见解 |
+| 由Adobe Target提供支持的增强型见解 |
 
 ## 了解详情 {#learn-more}
 
-* [无头用例的流畅体验](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/aem-headless-usecases.html)
-* [AEM内容服务：什么，为什么，怎么？](https://helpx.adobe.com/experience-manager/kt/eseminars/ask-the-expert/aem-content-services.html)
+* [无头用例的流体验](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/aem-headless-usecases.html)
+* [AEM Content Service：什么、为什么和如何进行？](https://helpx.adobe.com/experience-manager/kt/eseminars/ask-the-expert/aem-content-services.html)
 * [使用内容服务](https://helpx.adobe.com/experience-manager/kt/sites/using/structured-fragments-content-services-feature-video-use.html)
 * [开发移动应用程序](https://experienceleague.adobe.com/docs/experience-manager-64/mobile/developing/developing-content-services.html)
 * [第三方访问常见问题解答](https://helpx.adobe.com/experience-manager/kt/sites/using/content-services-tutorial-use/part7.html)
-* [随时随地流畅体验](https://helpx.adobe.com/experience-manager/using/using-sling-apis.html)
+* [随时随地提供流畅的体验](https://helpx.adobe.com/experience-manager/using/using-sling-apis.html)
 * [使用Sling API](https://helpx.adobe.com/experience-manager/using/using-sling-apis.html)

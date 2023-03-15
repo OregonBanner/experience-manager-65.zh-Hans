@@ -1,7 +1,7 @@
 ---
 title: 在脱机模式下工作
 seo-title: Working in the offline mode
-description: 将移动设备脱机到AEM Forms网络范围外或完全脱机模式，然后在AEM Forms应用程序上工作
+description: 在AEM Forms网络范围之外或完全脱机模式下，使移动设备脱机，然后在AEM Forms应用程序上工作
 seo-description: Take your mobile device offline outside your AEM Forms network range or in a completely offline mode and work on the AEM Forms app
 uuid: b900a0f8-90ce-486a-bde6-6cdf11bd2801
 content-type: reference
@@ -18,35 +18,35 @@ ht-degree: 0%
 
 # 在脱机模式下工作 {#working-in-the-offline-mode}
 
-通过AEM Forms应用程序的离线模式，即使应用程序离线，您也可以无缝地工作。 您可以打开、更新和提交表单，而无需任何网络连接。
+AEM Forms应用程序的离线模式允许您无缝工作，即使应用程序离线也是如此。 您可以打开、更新和提交表格，而无需任何网络连接。
 
-您可以通过将应用程序与AEM Forms服务器同步来开始使用AEM Forms应用程序。 分配给您的所有表单都将在您的应用程序中下载。 对于JEE上的AEM Forms，任务选项卡中会获取任务，并且Forms选项卡中会提供与表单和其他表单关联的起点。 对于OSGi上的AEM Forms，“Forms”选项卡中只加载Forms。
+您可通过将应用程序与AEM Forms服务器同步来开始使用AEM Forms应用程序。 分配给您的所有表单都将在您的应用程序中下载。 对于JEE上的AEM Forms，任务在“任务”选项卡中获取，起点关联表单和其他表单在“Forms”选项卡中获取。 对于OSGi上的AEM Forms，Forms选项卡中只加载Forms。
 
 有关如何同步应用程序的详细信息，请参阅 [同步应用程序](/help/forms/using/sync-app.md).
 
-## 使Forms脱机可用 {#making-forms-available-offline}
+## 使Forms可离线使用 {#making-forms-available-offline}
 
-将应用程序与AEM Forms服务器同步后，这些表单会下载到您的移动设备。 但是，默认情况下，不会下载与表单关联的附件。 这意味着，如果您处于联机状态，则可以查看附件。 但是，为确保您能够在脱机模式下查看附件，请更改应用程序中的默认设置。
+将应用程序与AEM Forms服务器同步时，表单将下载到移动设备。 但是，默认情况下，不会下载与表单关联的附件。 这意味着如果您处于联机状态，则可以查看附件。 但是，要确保您可以在脱机模式下查看附件，请更改应用程序中的默认设置。
 
-要确保随每个表单一起下载关联的附件，请将“获取附件”设置为“开”。 有关详细信息，请参阅 [更新常规设置](/help/forms/using/update-general-settings.md).
+为确保随每个表单一起下载关联的附件，请将“提取附件”设置为“启用”。 有关详细信息，请参阅 [更新常规设置](/help/forms/using/update-general-settings.md).
 
-由于从移动设备上下载数据可能会影响设备的性能，因此默认情况下，“获取附件”设置将设置为“关闭”。 将设置更新为ON后，将从服务器下载的任何任务的附件都会被提取到设备。 在脱机模式下，用户随后可以在设置 **获取附件** 选项。
+由于在移动设备上下载数据可能会影响设备的性能，因此，默认情况下，提取附件设置将设置为OFF。 在设置更新为“开”后，将从服务器下载的任何任务的附件都会被提取到设备中。 在脱机模式下，用户可以在设置之后处理下载到设备的所有任务 **获取附件** 选项更改为ON。
 
 ## 为AEM Forms应用程序配置离线服务 {#configuring-offline-service-for-aem-forms-app-br}
 
-AEM Forms应用程序离线服务可标识表单中使用的资源。 AEM Forms应用程序依赖此服务来获取有关表单依赖关系的信息。 要启用离线功能，需要提供有关表单依赖项的信息。 AEM Forms应用程序离线服务会缓存表单中所用资源的路径或URL。 缓存会根据表单中的更改以及为离线服务配置的有效期来更新。 缓存表单中所用资源的路径或URL可提高服务器端性能。
+AEM Forms app离线服务标识表单中使用的资源。 AEM Forms应用程序依赖此服务获取有关表单依赖项的信息。 需要有关表单依赖项的信息才能启用离线功能。 AEM Forms App离线服务可缓存表单中使用的资源的路径或URL。 缓存会根据表单中的更改以及为离线服务配置的有效期进行更新。 缓存表单中使用的资源的路径或URL可提高服务器端性能。
 
 要配置AEM Forms应用程序的服务器端离线组件，请执行以下操作：
 
-1. 在创作实例中，导航到 **Adobe Experience Manager** >**工具** > **Forms** > **配置Forms应用程序离线服务**.
+1. 在创作实例中，导航到 **Adobe Experience Manager** >**工具** > **Forms** > **配置Forms App离线服务**.
 
    URL: `https://<server>:<port>/<context-path>/libs/fd/workspace-offline/gui/content/config.html`
 
-1. 在“常规设置”下，您可以执行以下操作：
+1. 在“常规设置”下，可以执行以下操作：
 
-   * **清除缓存**:清除表单依赖项的服务器端缓存。
-   * **重置配置**:重置AEM Forms应用程序离线配置。
-   * **缓存有效性**:指定服务器端离线缓存的有效期。
-   * **资源观察路径**:指定离线服务监视资源更改的路径。 如果指定路径中发生任何更改，则所有从属表单的脱机缓存会更新。 例如：`/etc/clientlibs/fd,/content/dam/images`。
+   * **清除缓存**：清除表单依赖项的服务器端缓存。
+   * **重置配置**：重置AEM Forms应用程序离线配置。
+   * **缓存有效性**：指定服务器端离线缓存的有效期。
+   * **资源观察路径**：指定脱机服务用于监视资源更改的路径。 如果在指定的路径中发生任何更改，则会更新所有依赖表单的离线缓存。 例如：`/etc/clientlibs/fd,/content/dam/images`。
 
-1. 在 **手动资源缓存** 选项卡，指定脱机服务无法识别的表单依赖项。 您可以指定资源，如从JavaScript中加载的图像。 AEM Forms应用程序将下载这些资源以及脱机模式下的资源。
+1. 在 **手动资源缓存** 选项卡，指定表单依赖项脱机服务无法识别。 您可以指定资源，例如从JavaScript中加载的图像。 AEM Forms应用程序也将下载这些资源，以用于离线模式。

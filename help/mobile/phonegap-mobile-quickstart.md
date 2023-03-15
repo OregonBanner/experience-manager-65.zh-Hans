@@ -1,7 +1,7 @@
 ---
-title: 移动设备快速入门
+title: 移动快速入门
 seo-title: Mobile Quickstart
-description: 可查看本页以了解有关AEM Verify应用程序的信息。 AEM Verify应用程序是在任何iOS或Android移动设备上运行AEM移动应用程序的一种快速而简便的方法。
+description: 关注此页面，了解AEM Verify应用程序。 AEM Verify应用程序是在任何iOS或Android移动设备上运行AEM移动应用程序的快速轻松的方法。
 seo-description: Follow this page to learn about AEM Verify app. The AEM Verify app is a quick and an easy way to run your AEM mobile applications on any iOS or Android mobile device.
 uuid: afae4b9d-f835-4d83-b758-39a0d7741510
 contentOwner: User
@@ -17,7 +17,7 @@ ht-degree: 2%
 
 ---
 
-# 移动设备快速入门 {#mobile-quickstart}
+# 移动快速入门 {#mobile-quickstart}
 
 >[!NOTE]
 >
@@ -27,4 +27,4 @@ ht-degree: 2%
 
 >[!CAUTION]
 >
->AEM验证应用程序已弃用。 该应用程序已从Apple AppStore和Android PlayStore中删除。
+>AEM Verify应用程序已被弃用。 该应用程序已从Apple AppStore和Android PlayStore中删除。

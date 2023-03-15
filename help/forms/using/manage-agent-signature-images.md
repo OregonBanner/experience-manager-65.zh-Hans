@@ -1,7 +1,7 @@
 ---
 title: 管理代理签名图像
 seo-title: Manage agent signature images
-description: 创建信件模板后，可以使用该模板在AEM Forms中通过管理数据、内容和附件来创建通信。
+description: 创建信件模板后，可通过管理数据、内容和附件在AEM Forms中使用该模板创建信件。
 seo-description: After you have created a letter template, you can use it to create correspondence in AEM Forms by managing data, content, and attachments.
 uuid: 48b2697e-6065-4e23-9aa8-333e7b11ede1
 content-type: reference
@@ -22,23 +22,23 @@ ht-degree: 1%
 
 ## 概述 {#overview}
 
-在通信管理中，您可以使用图像以字母形式呈现代理签名。 在设置代理签名图像后，在创建信件时，您可以将信件中的代理签名图像呈现为发件人代理的签名。
+在通信管理中，您可以使用图像在信件中渲染代理签名。 设置代理签名图像后，在创建信件时，可以将信件中的代理签名图像渲染为发件人代理的签名。
 
-agentSignatureImage DDE是表示代理的签名图像的计算DDE。 此计算DDE的表达式使用由表达式管理器构建基块公开的新自定义函数。 此自定义函数以agentID和agentFolder作为输入参数，并根据这些参数获取图像内容。 SystemContext系统数据字典在通信管理中提供对当前系统上下文中信息的访问权限。 系统上下文包括有关当前登录的用户和活动配置参数的信息。
+agentSignatureImage DDE是一个计算的DDE，表示代理的签名图像。 此计算DDE的表达式使用由Expression Manager构建块公开的新自定义函数。 此自定义函数将agentID和agentFolder作为输入参数，并根据这些参数获取图像内容。 SystemContext系统数据字典允许“通信管理”中的信件访问当前系统上下文中的信息。 系统上下文包含有关当前登录的用户和活动配置参数的信息。
 
-您可以在cmuserroot文件夹下添加图像。 在 [通信管理配置属性](/help/forms/using/cm-configuration-properties.md)使用CM用户根属性，您可以更改从中提取代理签名图像的文件夹。
+您可以在cmuserroot文件夹下添加图像。 In [通信管理配置属性](/help/forms/using/cm-configuration-properties.md)，使用CM User Root属性，您可以更改获取代理签名图像的文件夹。
 
-agentFolder DDE的值取自通信管理配置属性的CMUserRoot配置参数。 默认情况下，此配置参数指向CRX存储库中的/content/cmUserRoot。 您可以在配置属性中更改CMUserRoot配置的值。
-您还可以覆盖默认的自定义函数以定义您自己用于获取用户签名图像的逻辑。
+agentFolder DDE的值从“通信管理”配置属性的CMUserRoot配置参数中获取。 默认情况下，此配置参数指向CRX存储库中的/content/cmUserRoot。 您可以在配置属性中更改CMUserRoot配置的值。
+您还可以覆盖默认的自定义函数，以定义您自己的用于获取用户签名图像的逻辑。
 
 ## 添加代理签名图像 {#adding-agent-signature-image}
 
-1. 确保代理签名图像与用户的AEM用户名具有相同的名称。 （图像文件名不需要扩展名。）
-1. 在CRX中，创建一个名为 `cmUserRoot` 中。
+1. 确保代理签名图像与用户的AEM用户名同名。 （图像文件名不需要扩展名。）
+1. 在CRX中，创建一个名为的文件夹 `cmUserRoot` 在内容文件夹中。
 
    1. 转到 `https://'[server]:[port]'/crx/de`. 如有必要，请以管理员身份登录。
 
-   1. 右键单击 **内容** 文件夹，选择 **创建** > **创建文件夹**.
+   1. 右键单击 **内容** 文件夹并选择 **创建** > **创建文件夹**.
 
       ![创建文件夹](assets/1_createnode_cmuserroot.png)
 
@@ -52,40 +52,40 @@ agentFolder DDE的值取自通信管理配置属性的CMUserRoot配置参数。 
 
    1. 转到 `https://'[server]:[port]'/crx/explorer/index.jsp`. 如有必要，以管理员身份登录。
    1. 单击 **内容资源管理器**. 内容资源管理器将在新窗口中打开。
-   1. 在内容资源管理器中，导航到cmUserRoot文件夹并将其选中。 右键单击 **cmUserRoot** 文件夹，选择 **新建节点**.
+   1. 在内容资源管理器中，导航到cmUserRoot文件夹并将其选定。 右键单击 **cmUserRoot** 文件夹并选择 **新建节点**.
 
       ![cmUserRoot中的新节点](assets/2_cmuserroot_newnode.png)
 
-      在新节点的行中输入以下条目，然后单击绿色复选标记。
+      在新节点的行中生成以下条目，然后单击绿色复选标记。
 
-      **名称：** JohnDoe（或您的代理签名文件的名称）
+      **名称：** JohnDoe（或代理签名文件的名称）
 
-      **类型：** nt:file
+      **类型：** nt：file
 
-      在 `cmUserRoot` 文件夹，名为 `JohnDoe` （或上一步中指定的名称）。
+      在 `cmUserRoot` 文件夹，一个名为的新文件夹 `JohnDoe` （或您在上一步中给定的名称）将创建。
 
-   1. 单击已创建的新文件夹(此处为 `JohnDoe`)。 “内容资源管理器”会将文件夹的内容显示为灰显。
+   1. 单击已创建的新文件夹（此处） `JohnDoe`)。 内容资源管理器将文件夹的内容显示为灰色。
 
-   1. 双击 **jcr:content** 属性，将其类型设置为 **nt:resource**，然后单击绿色复选标记以保存条目。
+   1. 双击 **jcr：content** 属性，将其类型设置为 **nt：resource**，然后单击绿色复选标记以保存条目。
 
-      如果属性不存在，请首先创建名为jcr:content的属性。
+      如果属性不存在，请先创建一个名为jcr：content的属性。
 
-      ![jcr:content属性](assets/3_jcrcontentntresource.png)
+      ![jcr：content属性](assets/3_jcrcontentntresource.png)
 
-      jcr:content的子属性中有jcr:data，该属性灰显。 双击jcr:data。 该属性将变得可编辑，并且“选择文件”按钮将显示在条目中。 单击 **选择文件** 并选择要用作徽标的图像文件。 图像文件不需要具有扩展名。
+      jcr：content的子属性中包括jcr：data，它呈灰色。 双击jcr：data。 该属性将变为可编辑，并且条目中会显示“选择文件”按钮。 单击 **选择文件** 并选择要用作徽标的图像文件。 图像文件无需扩展名。
 
       ![JCR数据](assets/5_jcrdata.png)
    单击 **全部保存**.
 
-1. 确保您在信件中使用的XDP\layout在左下角有一个图像字段（或布局中要渲染签名的其他适当位置）来渲染签名图像。
-1. 创建通信时，在“数据”选项卡中，使用以下步骤为签名图像选择图像字段：
+1. 确保信件中使用的XDP\layout在左下方（或布局中要渲染签名的其他适当位置）有一个用于渲染签名图像的图像字段。
+1. 创建通信时，在“数据”选项卡中，使用以下步骤为签名图像选择一个图像字段：
 
-   1. 从右窗格的“链接类型”(Linkage Type)弹出菜单中选择“系统”(System)。
+   1. 从右窗格的“链接类型”弹出菜单中选择“系统”。
 
    1. 从SystemContext DD的“数据元素”面板的列表中选择agentSignatureImage DDE。
 
-   1. 保存信。
+   1. 保存书信。
 
-1. 呈现信件后，您可以在图像字段的信件预览中根据布局看到您的签名。
+1. 呈现信件时，您可以在信件预览中看到您根据布局在图像字段中签名。
 
    ![信件中的代理签名图像](assets/letterwithsignature.png)

@@ -1,7 +1,7 @@
 ---
 title: 自定义草稿和提交数据服务
 seo-title: Customizing Draft and Submission data services
-description: AEM Forms默认情况下，会将草稿和提交的自适应表单存储在Publish实例的默认节点中。 但是，您可以配置AEM Forms的草稿和提交数据服务，以自定义草稿和提交的自适应表单的存储。
+description: 默认情况下，AEM Forms会将草稿和提交的自适应表单存储在发布实例的默认节点中。 但是，您可以配置AEM Forms的草稿和提交数据服务，以自定义草稿和提交的自适应表单的存储。
 seo-description: AEM Forms, by default, stores draft and submitted adaptive forms in a default node on the Publish instance. However, you can configure the draft and submission data services of AEM Forms to customize the storage of draft and submitted adaptive forms.
 uuid: c3ec1708-3b11-4142-93f0-1cffb6643f34
 content-type: reference
@@ -20,26 +20,26 @@ ht-degree: 0%
 
 ## 概述 {#overview}
 
-AEM Forms允许用户将自适应表单另存为草稿。 草稿功能为用户提供了用于维护正在进行表单的选项。 然后，用户可以随时从任何设备填写并提交表单。
+AEM Forms允许用户将自适应表单另存为草稿。 草稿功能为用户提供了维护工作进行中表单的选项。 然后，用户可随时从任何设备填写并提交表单。
 
-默认情况下，AEM Forms会在 `/content/forms/fp` 节点。
+默认情况下，AEM Forms会将与草稿和提交关联的用户数据存储在的发布实例中 `/content/forms/fp` 节点。
 
-但是，AEM Forms门户组件提供了数据服务，允许您自定义存储草稿和提交用户数据的实施。 例如，您可以将数据存储在您组织中当前实施的数据存储中。
+但是，AEM Forms门户组件提供数据服务，允许您自定义存储用于草稿和提交的用户数据的实施。 例如，您可以将数据存储在组织中当前实施的数据存储中。
 
 要自定义用户数据的存储，您需要实施 [草稿数据](/help/forms/using/custom-draft-submission-data-services.md#p-draft-data-service-p) 和 [提交数据](/help/forms/using/custom-draft-submission-data-services.md#p-submission-data-service-p) 服务。
 
 ## 前提条件 {#prerequisites}
 
-* 启用 [Forms门户组件](/help/forms/using/enabling-forms-portal-components.md)
-* 创建 [表单门户页面](/help/forms/using/creating-form-portal-page.md)
+* 启用 [Forms portal组件](/help/forms/using/enabling-forms-portal-components.md)
+* 创建 [forms portal page](/help/forms/using/creating-form-portal-page.md)
 * 启用 [表单门户自适应表单](/help/forms/using/draft-submission-component.md)
-* 学习 [自定义存储的实施详细信息](/help/forms/using/draft-submission-component.md#customizing-the-storage)
+* 了解 [自定义存储的实施详细信息](/help/forms/using/draft-submission-component.md#customizing-the-storage)
 
 ## 草稿数据服务 {#draft-data-service}
 
-要自定义用户草稿数据的存储，您需要为 `DraftAFDataService` 界面。
+要自定义用户草稿数据的存储，您需要为的所有方法提供实施 `DraftAFDataService` 界面。
 
-接口的以下代码示例中提供了方法及其参数的描述：
+以下接口的代码示例中提供了这些方法及其参数的说明：
 
 ```java
 public interface DraftAFDataService {
@@ -84,9 +84,9 @@ public interface DraftAFDataService {
 
 ## 提交数据服务 {#submission-data-service}
 
-要自定义用户提交数据的存储，您需要为 `SubmittedAFDataService` 界面。
+要自定义用户提交数据的存储，您需要为的所有方法提供实施 `SubmittedAFDataService` 界面。
 
-接口的以下代码示例中提供了方法及其参数的描述：
+以下接口的代码示例中提供了这些方法及其参数的说明：
 
 ```java
 public interface SubmittedAFDataService {

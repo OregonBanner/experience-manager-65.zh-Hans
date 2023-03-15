@@ -1,5 +1,5 @@
 ---
-title: 特色内容要点
+title: 精选内容要点
 seo-title: Featured Content Essentials
 description: 使用功能内容
 seo-description: Working with feature content
@@ -17,14 +17,14 @@ ht-degree: 5%
 
 ---
 
-# 特色内容要点  {#featured-content-essentials}
+# 精选内容要点  {#featured-content-essentials}
 
-本页提供了使用特色内容的基本信息。
+本页提供了使用精选内容的基本信息。
 
-与将帖子固定到论坛顶部不同，此功能允许在社区站点的任何位置突出显示内容。
+与将帖子固定到论坛顶部不同，此功能允许突出显示社区网站中的任何内容。
 
 
-## 客户端要点 {#essentials-for-client-side}
+## 适用于客户端的Essentials {#essentials-for-client-side}
 
 <table>
  <tbody>
@@ -37,7 +37,7 @@ ht-degree: 5%
    <td>否</td>
   </tr>
   <tr>
-   <td> <a href="clientlibs.md"><strong>clientlibs</strong></a></td>
+   <td> <a href="clientlibs.md"><strong>clientllibs</strong></a></td>
    <td> <i>默认</i></td>
   </tr>
   <tr>
@@ -50,7 +50,7 @@ ht-degree: 5%
   </tr>
   <tr>
    <td><strong> 属性</strong></td>
-   <td>请参阅 <a href="featured.md">特色内容</a></td>
+   <td>参见 <a href="featured.md">专题内容</a></td>
   </tr>
  </tbody>
 </table>
@@ -59,4 +59,4 @@ ht-degree: 5%
 
 ### 文件库功能 {#file-library-function}
 
-包含 [特色内容功能](functions.md#featured-content-function)，包括已配置的 `featured content` 组件。
+社区站点结构包括 [专题内容功能](functions.md#featured-content-function)，包括已配置的 `featured content` 组件。

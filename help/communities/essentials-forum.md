@@ -21,20 +21,20 @@ ht-degree: 1%
 
 本页提供了使用论坛功能的基本信息。
 
-## 客户端要点 {#essentials-for-client-side}
+## 适用于客户端的Essentials {#essentials-for-client-side}
 
 <table>
  <tbody>
   <tr>
-   <td> <strong>resourceTypes</strong></td>
-   <td>社交/论坛/组件/hbs/论坛<br /> social/forum/components/hbs/topic<br /> 社交/论坛/组件/hbs/post</td>
+   <td> <strong>资源类型</strong></td>
+   <td>social/forum/components/hbs/forum<br /> social/forum/components/hbs/topic<br /> social/forum/components/hbs/post</td>
   </tr>
   <tr>
    <td> <a href="scf.md#add-or-include-a-communities-component"><strong>可包含</strong></a></td>
    <td>否</td>
   </tr>
   <tr>
-   <td> <a href="clientlibs.md"><strong>clientlibs</strong></a></td>
+   <td> <a href="clientlibs.md"><strong>clientllibs</strong></a></td>
    <td>cq.ckeditor<br /> cq.social.hbs.voting<br /> cq.social.hbs.forum</td>
   </tr>
   <tr>
@@ -47,14 +47,14 @@ ht-degree: 1%
   </tr>
   <tr>
    <td><strong> 属性</strong></td>
-   <td>请参阅 <a href="forum.md">论坛功能</a></td>
+   <td>参见 <a href="forum.md">论坛功能</a></td>
   </tr>
  </tbody>
 </table>
 
 * [客户端自定义](client-customize.md)
 
-## 服务器端要点 {#essentials-for-server-side}
+## 服务器端Essentials {#essentials-for-server-side}
 
 * [论坛API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/forum/client/api/package-summary.html)
 
@@ -64,20 +64,20 @@ ht-degree: 1%
 
 ### 论坛功能 {#forum-function}
 
-包含 [论坛功能](functions.md#forum-function)，包括已配置的 `forum` 组件，以及影响审核、标记和翻译的设置。
+社区站点结构包括 [论坛功能](functions.md#forum-function)，包括已配置的 `forum` 以及影响审核、标记和翻译的设置。
 
 ### 访问论坛帖子(UGC) {#accessing-forum-posts-ugc}
 
-UGC应使用其中一种标准审核方法进行审核。
-请参阅 [审核用户生成的内容](moderate-ugc.md).
+UGC应使用标准审核方法之一进行审核。
+参见 [审核用户生成的内容](moderate-ugc.md).
 
-自AEM 6.1 Communities起，使用 [公用商店](working-with-srp.md) 对于UGC，包括以编程方式访问UGC，而不考虑选择的存储选项（如ASRP、MSRP或JSRP）。
+自AEM 6.1社区起，使用 [公用存储](working-with-srp.md) for UGC包括对UGC的编程访问，而不管选择的存储选项（如ASRP、MSRP或JSRP）。
 
-**UGC在存储库中的位置和格式可能会发生更改，但不会发出警告**.
+**UGC在存储库中的位置和格式可能会发生更改，恕不发出警告**.
 
 请参阅：
 
 * [存储资源提供程序概述](srp.md)  — 简介和存储库使用概述。
-* [SRP和UGC要点](srp-and-ugc.md) - SRP实用程序方法和示例。
+* [SRP和UGC Essentials](srp-and-ugc.md) - SRP实用程序方法和示例。
 * [使用SRP访问UGC](accessing-ugc-with-srp.md)  — 编码准则。
-* [SocialUtils重构](socialutils.md)  — 将已弃用的实用程序方法映射到当前SRP实用程序方法。
+* [SocialUtils重构](socialutils.md)  — 将已弃用的实用程序方法映射到当前的SRP实用程序方法。

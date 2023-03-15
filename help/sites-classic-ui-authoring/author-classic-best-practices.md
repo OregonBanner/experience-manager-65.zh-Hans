@@ -35,9 +35,9 @@ ht-degree: 62%
 
 以下各表中介绍了具体的文档并提供了相应链接。
 
-## 资产 {#assets}
+## Assets {#assets}
 
-以下主题介绍了有关资产(包括Dynamic Media功能和Dynamic Media Classic集成)的最佳实践：
+以下主题介绍了有关资产的最佳实践，包括Dynamic Media功能和Dynamic Media Classic集成：
 
 <table>
  <tbody>
@@ -54,7 +54,7 @@ ht-degree: 62%
   <tr>
    <td>动态图像处理</td>
    <td><a href="/help/assets/best-practices-for-optimizing-the-quality-of-your-images.md">动态图像处理最佳实践</a></td>
-   <td><p>介绍在使用Dynamic Media功能或与Dynamic Media Classic集成时，如何锐化图像以获得最佳效果，以及如何以最佳方式优化图像质量。 </p> </td>
+   <td><p>描述如何在使用Dynamic Media功能或与Dynamic Media Classic集成时锐化图像以获得最佳结果，以及优化图像质量的最佳方法。 </p> </td>
   </tr>
   <tr>
    <td>多语言资产</td>
@@ -64,14 +64,14 @@ ht-degree: 62%
  </tbody>
 </table>
 
-## 站点 {#sites}
+## Sites {#sites}
 
 在管理和创作网站内容方面具有一些最佳实践，如下所述：
 
-创作： [创作环境和工具](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md)  — 提供有关如何创作页面的概述。
+创作： [创作环境和工具](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md)  — 概述如何创作页面。
 
 ## Forms {#forms}
 
-自适应表单： [使用自适应表单的最佳实践](/help/forms/using/adaptive-forms-best-practices.md)  — 介绍有关设置、创作和自定义自适应表单的最佳实践。
+自适应表单： [使用自适应表单的最佳实践](/help/forms/using/adaptive-forms-best-practices.md)  — 介绍设置、创作和自定义自适应表单的最佳实践。
 
 HTML5表单： [设计HTML5表单的最佳实践](/help/forms/using/best-practices-for-html5-forms.md)  — 介绍处理HTML5表单布局和设计的最佳实践。

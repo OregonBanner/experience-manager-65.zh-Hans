@@ -1,78 +1,78 @@
 ---
-title: AEM — 使用商务集成框架的商务集成常见问题解答
-description: AEM — 使用商务集成框架的商务集成常见问题解答
-exl-id: 0a946d98-22c7-445d-984a-9e09c306ce45
-source-git-commit: a467009851937c4a10b165a3d253c47bf990bbc5
+title: AEM - Commerce Integration使用Commerce Integration Framework的常见问题解答
+description: AEM - Commerce Integration使用Commerce Integration Framework的常见问题解答
+exl-id: d541607f-c4c9-4dd5-aadf-64d4cb5f9f2a
+source-git-commit: a2ababa9dd9115e963b91a7271d204d287557c40
 workflow-type: tm+mt
 source-wordcount: '963'
 ht-degree: 0%
 
 ---
 
-# AEM — 使用商务集成框架的商务集成常见问题解答
+# AEM - Commerce Integration使用Commerce Integration Framework的常见问题解答
 
-## 1. CIF GraphQL是仅用于商务，还是可用于查询AEM上创作的内容？ JCR?
+## 1. CIF GraphQL是否仅用于商务，还是可用于查询在AEM JCR上创作的内容？
 
-Adobe已采用Adobe Commerce的GraphQL API作为其官方商务API，用于所有与商务相关的数据。 因此，AEM使用GraphQL通过I/O运行时与Adobe Commerce以及任何商务引擎交换商务数据。 此GraphQL API与AEM GraphQL API无关，可用于访问内容片段。
+Adobe已采用Adobe Commerce的GraphQL API作为适用于所有商业相关数据的官方Commerce API。 因此，AEM使用GraphQL通过I/O运行时与Adobe Commerce和任何商业引擎交换商业数据。 此GraphQL API独立于AEM GraphQL API，无法访问内容片段。
 
-## 2.能否通过Adobe Commerce管理员从AEM中存储和引用产品资产（图像）？ 如何使用Dynamic Media中的资产？
+## 2.能否通过Adobe Commerce管理员从AEM存储和引用产品资产（图像）？ 如何使用Dynamic Media中的资源？
 
-没有正式的AEM Assets - Adobe Commerce集成可用。 在 [市场](https://marketplace.magento.com/bounteous-dam.html).
+没有官方的AEM Assets - Adobe Commerce集成可用。 上有一个合作伙伴连接器 [marketplace](https://marketplace.magento.com/bounteous-dam.html).
 
-或者，作为解决方法，您可以在AEM Assets中存储产品资产（图像），但必须在Adobe Commerce中手动存储资产URL。 Dynamic Media现在是AEM Assets的一部分，将以同样的方式工作。
+或者，作为解决方法，您可以在AEM Assets中存储产品资产（图像），但您必须在Adobe Commerce中手动存储资产URL。 Dynamic Media现在是AEM Assets的一部分，也将以相同的方式工作。
 
-## 3.在何处部署商务解决方案是否重要？ （内部或云中）
+## 3.在哪里部署商业解决方案是否重要？ （内部部署或云中）
 
-不，商务解决方案的部署位置并不重要。 CIF和AEM店面无论使用何种部署模式，都将起作用。 但是，如果该解决方案与建议的E2E参考体系结构一起部署，则E2E测试可能会针对代表典型企业客户配置文件的性能KPI运行。 这将提供可用作基准的其他信息。
+不需要，商业解决方案部署位置无关紧要。 无论采用何种部署模型，CIF和AEM店面都将正常工作。 但是，如果解决方案是使用推荐的E2E参考体系结构部署的，则E2E测试可以根据代表典型企业客户概要文件的性能KPI运行。 这将提供可用作基准的其他信息。
 
-## 4.如何在AEM中创建目录页面或产品页面？ 它们如何在AEM中持续？
+## 4.如何在AEM中创建目录页面或产品页面？ 它们如何在AEM中保留？
 
-目录页面和产品页面是根据通用目录和产品页面模板在AEM中动态创建和缓存的。 不会在AEM中导入和存储任何产品或目录数据。
+目录页面和产品页面是基于通用目录和产品页面模板在AEM中动态创建和缓存的。 AEM中未导入和存储任何产品或目录数据。
 
-## 5.在商务解决方案中更新产品数据时，是否是实时推送到AEM? 还是批量处理？
+## 5.在商务解决方案中更新产品数据时，是否实时推送到AEM？ 还是批处理？
 
-与AEM一起使用的CIF附加组件允许数据从商务解决方案流向AEM按需。 因此，当您的商务解决方案中存在更新时，这不是实时推送或批量处理流程。
+与AEM一起使用的CIF加载项使数据能够从Commerce解决方案按需流向AEM。 因此，当您的商业解决方案中有更新时，这不是实时推送或批处理。
 
-## 6. CIF支持的AEM目录大小是多少？
+## 6. AEM支持CIF的目录大小是多少？
 
-这取决于您需要考虑的其他几个方面。 目录数据和页面的缓存比率是多少？ 在高峰时段，您预计会有多少个并发请求？ 您的商务解决方案的API有多大的可扩展性？
+这取决于您还必须考虑的几个其他方面。 您的目录数据和页面的缓存比率是多少？ 您预计在高峰时段有多少并发请求？ 您的商业解决方案的API可扩展性如何？
 
-## 7. PIM在这个框架中如何发挥作用？
+## 7. PIM如何在这个框架中发挥作用？
 
-PIM数据将通过GraphQL请求公开给AEM和客户端。 我们的建议是将PIM与商务引擎(Adobe Commerce或其他)集成，以便随后可以从商务引擎中检索PIM数据。
+PIM数据通过GraphQL请求向AEM和客户端公开。 我们的建议是将PIM与商业引擎(Adobe Commerce或其他引擎)集成，以便随后可以从商业引擎检索PIM数据。
 
-## 8.您是否还通过Dispatcher缓存定价和其他数据。 这是否会经常引发缓存失效问题？
+## 8.您是否还通过Dispatcher缓存定价和其他数据？ 这是否会引发频繁的缓存失效挑战？
 
-不会在Dispatcher中缓存价格或库存等动态数据。 动态数据是通过GraphQL API直接通过Web组件在客户端获取的。 只有静态数据（如产品或类别数据）会缓存在Dispatcher中。 如果产品数据发生更改，则需要使缓存失效。
+Dispatcher上未缓存价格或库存等动态数据。 使用Web组件直接通过GraphQL API在客户端获取动态数据。 Dispatcher上仅缓存静态数据（如产品或类别数据）。 如果产品数据发生更改，则需要使缓存失效。
 
-## 9. AEM Dispatcher的缓存失效如何与AEM和商务一起使用？
+## 9. AEM Dispatcher的缓存失效如何与AEM和commerce一起使用？
 
-我们建议为Dispatcher上缓存的页面设置基于TTL的缓存失效。 对于价格或库存等动态信息，我们建议渲染客户端日期。 有关基于TTL的缓存失效的详细信息，请参阅 [AEM Dispatcher](https://helpx.adobe.com/experience-manager/kb/optimizing-the-dispatcher-cache.html)
+我们建议为Dispatcher上缓存的页面设置基于TTL的缓存失效。 对于价格或股票等动态信息，我们建议在客户端渲染日期。 有关基于TTL的缓存失效的更多信息，请参阅 [AEM调度程序](https://helpx.adobe.com/experience-manager/kb/optimizing-the-dispatcher-cache.html)
 
-## 10.是否建议使用商务在AEM内容中进行统一搜索？
+## 10.是否建议使用Commerce跨AEM内容进行统一搜索？
 
-提供了产品搜索参考实施，但没有对内容进行统一搜索。 此功能通常非常具有客户特性，并且在项目特定级别能够更好地解决此问题。
+提供了产品搜索引用实施，但没有提供带有内容的统一搜索。 此功能通常非常特定于客户，并且可在特定于项目的级别上更好地解决。
 
-## 11.如何使用CIF在AEM和商务中使用搜索？
+## 11. Search如何使用CIF与AEM和Commerce配合使用？
 
-CIF提供搜索栏和搜索结果组件。 搜索栏组件向商务解决方案发送包含搜索词的GraphQL请求，该解决方案随后会返回包含产品名称、价格、SLUG等的产品列表。 然后，搜索结果组件在在AEM中创建的搜索结果页面的库视图中显示搜索结果。 搜索支持基本的全文搜索。 我们使用SLUG/url键构建对PDP的引用。
+CIF提供搜索栏和搜索结果组件。 搜索栏组件将带有搜索词的GraphQL请求发送到商业解决方案，然后返回包含产品名称、价格、SLUG等的产品列表。 然后，搜索结果组件将在AEM中创建的搜索结果页上的库视图中显示搜索结果。 搜索支持基本的全文搜索。 我们使用SLUG/url键构建对PDP的引用。
 
 ## 12.如何在MSM或翻译中使用产品数据？
 
-产品数据通常已在PIM或Adobe Commerce中翻译。 AEM - Adobe Commerce集成支持与多个Adobe Commerce商店和商店视图的连接。 在MSM设置中，通常有一个AEM站点链接到一个Adobe Commerce存储视图。
+产品数据通常已在PIM或Adobe Commerce中转换。 AEM - Adobe Commerce集成支持与多个Adobe Commerce商店和商店视图的连接。 在MSM设置中，通常一个AEM站点链接到一个Adobe Commerce商店视图。
 
-## 13.是否有办法用商业文本增强产品数据？ 你在哪里做？ 在AEM中还是在商务解决方案中？
+## 13.是否有办法用商业文本加强产品数据？ 你在哪里做这件事？ 在AEM中还是在商业解决方案中？
 
-我们建议在AEM中管理与营销相关的数据和内容。 使用使用内容片段的其他属性装饰您的商务解决方案中的产品数据，或创建非结构化内容的体验片段并将其与您的产品关联。
+我们建议在AEM中管理与营销相关的数据和内容。 使用内容片段使用其他属性装饰商业解决方案中的产品数据，或者为非结构化内容创建体验片段并将其链接到您的产品。
 
-## 14.在整个表示层使用AEM时，我们如何确保PCI合规性？
+## 14.在整个展示层中使用AEM时，我们如何确保PCI合规性？
 
-我们建议使用抽象的支付方法。 这使得浏览器客户端与支付网关提供商直接通信，从而Adobe或商业解决方案都不能保存或传递持卡人数据。 这种方法只需要3级PCI合规性。 但是，还有一些其他事项需要考虑完全符合PCI标准，例如员工如何与系统和数据交互。 有关Adobe Commerce PCI合规性的详细信息，请参阅 [PCI合规性](https://business.adobe.com/products/magento/pci-compliance.html)
+我们建议使用抽象的支付方式。 这使得浏览器客户端与支付网关提供商直接通信，这样Adobe或商业解决方案都不会保留或传递持卡人数据。 此方法只需要第3级PCI合规性。 但是，还需要考虑其他完全符合PCI标准的因素，例如员工如何与系统和数据交互。 有关Adobe Commerce PCI合规性的更多信息，请参阅 [PCI合规性](https://business.adobe.com/products/magento/pci-compliance.html)
 
-## 15.如果我使用AEM和Adobe Commerce云版本，此联合解决方案是否符合PCI标准？
+## 15.如果我使用AEM和Adobe Commerce云版本，则此联合解决方案是否符合PCI标准？
 
-是的，可应要求提供自我评估调查表D和合规性证明。
+可以，可以应要求提供自我评估问卷D和合规证明。
 
-## 16.如何请求I/O运行时试用许可证？
+## 16.如何申请I/O运行时试用许可证？
 
 您可以请求试用许可证以使用I/O运行时 [此处](https://adobeio.typeform.com/to/obqgRm).

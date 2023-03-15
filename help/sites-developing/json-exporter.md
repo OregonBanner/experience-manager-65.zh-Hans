@@ -27,45 +27,45 @@ AEM 内容服务旨在概括 AEM 中/来自 AEM 的内容的描述和投放，�
 * 本机移动设备应用程序
 * AEM 外部的其他渠道和接触点
 
-对于使用结构化内容的内容片段，您可以使用JSON导出程序以JSON数据模型格式交付(y)AEM页面的内容，从而提供内容服务。 然后，您自己的应用程序就可以使用此功能。
+对于使用结构化内容的内容片段，您可以通过使用JSON导出程序以JSON数据模型格式交付AEM页面的内容来提供内容服务。 然后，这可以由您自己的应用程序使用。
 
 >[!NOTE]
 >
->此处描述的功能适用于以下所有核心组件： [核心组件版本1.1.0](https://docs.adobe.com/content/docs/en/core-components/v1.html).
+>此处描述的功能适用于以下时间以来的所有核心组件： [核心组件1.1.0版](https://docs.adobe.com/content/docs/en/core-components/v1.html).
 
 ## 包含内容片段核心组件的JSON导出程序 {#json-exporter-with-content-fragment-core-components}
 
-使用AEM JSON导出程序，您可以以JSON数据模型格式交付(y)AEM页面的内容。 然后，您自己的应用程序就可以使用此功能。
+使用AEM JSON导出程序，您可以以JSON数据模型格式交付AEM页面的内容。 然后，这可以由您自己的应用程序使用。
 
 在AEM中，使用选择器实现投放 `model` 和 `.json` 扩展。
 
 `.model.json`
 
-1. 例如，URL，如：
+1. 例如，URL，例如：
 
    ```shell
    http://localhost:4502/content/we-retail/language-masters/en.model.json
    ```
 
-1. 将提供以下内容：
+1. 将投放内容，例如：
 
    ![chlimage_1-192](assets/chlimage_1-192.png)
 
-您也可以通过专门定位结构化内容片段来交付其内容。
+或者，您可以通过专门定向结构化内容片段来投放其内容。
 
-可以使用片段的整个路径(通过 `jcr:content`);例如，带有后缀（如）。
+这是使用片段的整个路径完成的(通过 `jcr:content`)；例如，后缀为。
 
 `.../jcr:content/root/responsivegrid/contentfragment.model.json`
 
-您的页面可以包含一个内容片段或多种类型的多个组件。 您还可以使用列表组件等机制自动搜索相关内容。
+您的页面可以包含单个内容片段或多个各种类型的组件。 您还可以使用列表组件等机制来自动搜索相关内容。
 
-* 例如，URL，如：
+* 例如，URL，例如：
 
    ```shell
    http://localhost:4502/content/we-retail/language-masters/en/manchester-airport/jcr:content/root/responsivegrid/contentfragment.model.json
    ```
 
-* 将提供以下内容：
+* 将投放内容，例如：
 
    ![chlimage_1-193](assets/chlimage_1-193.png)
 
@@ -75,29 +75,29 @@ AEM 内容服务旨在概括 AEM 中/来自 AEM 的内容的描述和投放，�
 
    >[!NOTE]
    >
-   >尽管不是标准实施， [支持多个选择器，](json-exporter-components.md#multiple-selectors) 但 `model` 必须是第一个。
+   >虽然不是标准实施， [支持多个选择器，](json-exporter-components.md#multiple-selectors) 但是 `model` 必须是第一个。
 
 ### 更多信息 {#further-information}
 
 另请参阅：
 
-* 资源 HTTP API
+* Assets HTTP API
 
-   * [资源 HTTP API](/help/assets/mac-api-assets.md)
+   * [Assets HTTP API](/help/assets/mac-api-assets.md)
 
 * Sling 模型:
 
-   * [Sling模型 — 自130年起将模型类与资源类型关联](https://sling.apache.org/documentation/bundles/models.html#associating-a-model-class-with-a-resource-type-since-130)
+   * [Sling模型 — 自130年起将模型类与资源类型相关联](https://sling.apache.org/documentation/bundles/models.html#associating-a-model-class-with-a-resource-type-since-130)
 
-* 包含JSON的AEM:
+* 带有JSON的AEM：
 
-   * [以JSON格式获取页面信息](/help/sites-developing/pageinfo.md)
+   * [获取JSON格式的页面信息](/help/sites-developing/pageinfo.md)
 
 ## 相关文档 {#related-documentation}
 
 有关更多详细信息，请参阅：
 
-* 的 [Assets用户指南中的内容片段主题](https://helpx.adobe.com/experience-manager/6-4/assets/user-guide.html?topic=/experience-manager/6-4/assets/morehelp/content-fragments.ug.js)
+* 此 [资产用户指南中的内容片段主题](https://helpx.adobe.com/experience-manager/6-4/assets/user-guide.html?topic=/experience-manager/6-4/assets/morehelp/content-fragments.ug.js)
 
 * [内容片段模型](/help/assets/content-fragments/content-fragments-models.md)
 * [使用内容片段创作](/help/sites-authoring/content-fragments.md)

@@ -1,5 +1,5 @@
 ---
-title: 交易报表计费API
+title: 交易报告可记帐API
 seo-title: Transaction Reports Billable APIs
 description: 作为交易入账的所有API的列表
 seo-description: List of all the APIs that are accounted as transactions
@@ -16,30 +16,30 @@ ht-degree: 7%
 
 ---
 
-# 交易报表计费API{#transaction-reports-billable-apis}
+# 交易报告可记帐API{#transaction-reports-billable-apis}
 
-AEM Forms提供了多个API来提交表单、处理文档和渲染文档。 某些API作为交易入账，而其他API则可免费使用。 本文档提供了作为交易报表中的交易入账的所有API的列表。 以下是使用可计费API的一些常见情况：
+AEM Forms提供了多个API来提交表单、处理文档和渲染文档。 有些API作为交易入账，而其他API则免费使用。 本文档提供了在交易报表中作为交易入账的所有API的列表。 以下是一些使用可记帐API的常见方案：
 
 * 提交自适应表单、HTML5表单和表单集
-* 呈现交互式通信的打印版或Web版
+* 呈现交互式通信的打印版本或Web版本
 * 将文档从一种格式转换为另一种格式
 * 拼合动态PDF文档
 * 生成记录文档
-* 将交互式PDF文档与其他PDF文档合并
-* 使用AEM Workflow的分配任务步骤和文档服务步骤
+* 将交互式PDF文档与另一个PDF文档合并
+* 使用AEM Workflows的分配任务步骤和文档服务步骤
 * 在自适应表单中使用自适应表单
 
-帐单API不考虑页数、文档或表单的长度或渲染文档的最终格式。 事务报表将事务分为两类：已提交和Forms已提交的文档。
+计费API不考虑页数、文档或表单的长度或渲染文档的最终格式。 事务报表将事务分为两类：已渲染的文档和Forms已提交。
 
-* **Forms已提交：** 从使用AEM Forms创建的任何类型的表单提交数据，并将数据提交到任何数据存储库或数据库时，都会将数据视为表单提交。 例如，提交自适应表单、HTML5表单、PDF forms和表单集将作为提交的表单入账。 表单集中的每个表单都被视为提交。 例如，如果表单集有5个表单，则提交表单集后，交易报告服务会将其计为5次提交。
+* **Forms已提交：** 从使用AEM Forms创建的任何类型的表单中提交数据，并将其提交到任何数据存储存储库或数据库时，都视为表单提交。 例如，提交自适应表单、HTML5表单、PDF forms和表单集均被视为提交的表单。 表单集中的每个表单都被视为提交。 例如，如果一个表单集有5个表单，在提交该表单集时，transaction reporting服务将其计为5次提交。
 
-* **呈现的文档：** 通过组合模板和数据、对文档进行数字签名或认证、使用用于文档服务的可计费文档服务API或将文档从一种格式转换为另一种格式来生成文档，都作为所呈现的文档入账。
+* **呈现的文档：** 通过将模板和数据组合、对文档进行数字签名或认证、使用用于文档服务的可计费文档服务API或将文档从一种格式转换为另一种格式来生成文档，均被视为文档渲染。
 
 >[!NOTE]
 >
->交易报表UI显示三个类别：Forms已提交、已提交的文档和已处理的文档。 已呈现的文档和已处理的文档均作为已呈现的文档入账。
+>交易报表UI显示三个类别：Forms已提交、已渲染文档和已处理的文档。 所呈现的文档和处理的文档均被视为所呈现的文档。
 
-## 计费文档服务API {#billable-document-services-apis}
+## 可记帐文档服务API {#billable-document-services-apis}
 
 ### 生成PDF服务 {#generate-pdf-service}
 
@@ -48,18 +48,18 @@ AEM Forms提供了多个API来提交表单、处理文档和渲染文档。 某�
   <tr>
    <td><p>API</p> </td>
    <td>描述</td>
-   <td>交易记录报表类别</td>
+   <td>交易报告类别</td>
    <td>附加信息</td>
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/pdfg/service/api/GeneratePDFService.html#createPDF-com.adobe.aemfd.docmanager.Document-java.lang.String-java.lang.String-java.lang.String-java.lang.String-com.adobe.aemfd.docmanager.Document-com.adobe.aemfd.docmanager.Document-" target="_blank">createPDF</a></td>
-   <td>从支持的文件类型创建Adobe PDF 。</td>
+   <td>从支持的文件类型创建Adobe PDF。</td>
    <td>已处理的文档</td>
    <td> </td>
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/pdfg/service/api/GeneratePDFService.html#createPDF2-com.adobe.aemfd.docmanager.Document-java.lang.String-java.lang.String-java.lang.String-java.lang.String-com.adobe.aemfd.docmanager.Document-com.adobe.aemfd.docmanager.Document-" target="_blank">createPDF2</a></td>
-   <td>从支持的文件类型创建Adobe PDF 。</td>
+   <td>从支持的文件类型创建Adobe PDF。</td>
    <td>已处理的文档</td>
    <td> </td>
   </tr>
@@ -83,25 +83,25 @@ AEM Forms提供了多个API来提交表单、处理文档和渲染文档。 某�
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/pdfg/service/api/GeneratePDFService.html#htmlFileToPdf-com.adobe.aemfd.docmanager.Document-java.lang.String-java.lang.String-com.adobe.aemfd.docmanager.Document-com.adobe.aemfd.docmanager.Document-">htmlFileToPdf</a></td>
-   <td><p>从PDF页面创建HTML。</p> </td>
+   <td><p>从HTML页创建PDF。</p> </td>
    <td>已处理的文档<br /> </td>
    <td> </td>
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/pdfg/service/api/GeneratePDFService.html#htmlToPdf-java.lang.String-java.lang.String-java.lang.String-com.adobe.aemfd.docmanager.Document-com.adobe.aemfd.docmanager.Document-" target="_blank">htmlToPdf</a></td>
-   <td>从指向PDF页面的URL创建HTML。</td>
+   <td>从指向HTML页面的URL创建PDF。</td>
    <td>已处理的文档<br /> </td>
    <td> </td>
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/pdfg/service/api/GeneratePDFService.html#htmlToPdf2-java.lang.String-java.lang.String-java.lang.String-com.adobe.aemfd.docmanager.Document-com.adobe.aemfd.docmanager.Document-" target="_blank">htmlToPdf2</a></td>
-   <td>从指向PDF页面的URL创建HTML。</td>
+   <td>从指向HTML页面的URL创建PDF。</td>
    <td>已处理的文档<br /> </td>
    <td> </td>
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/pdfg/service/api/GeneratePDFService.html#optimizePDF-com.adobe.aemfd.docmanager.Document-java.lang.String-com.adobe.aemfd.docmanager.Document-" target="_blank">optimizePDF</a></td>
-   <td>优化PDF以减小文件大小，方法是在不影响质量的情况下删除不必要的元数据。</td>
+   <td>优化PDF以通过在不影响质量的情况下剥离不必要的元数据来减小文件大小。</td>
    <td>已处理的文档<br /> </td>
    <td> </td>
   </tr>
@@ -115,36 +115,36 @@ AEM Forms提供了多个API来提交表单、处理文档和渲染文档。 某�
   <tr>
    <td><p>API</p> </td>
    <td>描述</td>
-   <td>交易记录报表类别</td>
+   <td>交易报告类别</td>
    <td>附加信息</td>
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/pdfg/service/api/DistillerService.html#createPDF-com.adobe.aemfd.docmanager.Document-java.lang.String-java.lang.String-java.lang.String-com.adobe.aemfd.docmanager.Document-com.adobe.aemfd.docmanager.Document-" target="_blank">createPDF</a><br /> </td>
-   <td>从支持的文件类型创建Adobe PDF 。</td>
+   <td>从支持的文件类型创建Adobe PDF。</td>
    <td>已处理的文档</td>
    <td> </td>
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/pdfg/service/api/DistillerService.html#createPDF2-com.adobe.aemfd.docmanager.Document-java.lang.String-java.lang.String-java.lang.String-com.adobe.aemfd.docmanager.Document-com.adobe.aemfd.docmanager.Document-" target="_blank">createPDF2</a></td>
-   <td>从支持的文件类型创建Adobe PDF 。</td>
+   <td>从支持的文件类型创建Adobe PDF。</td>
    <td>已处理的文档</td>
    <td> </td>
   </tr>
  </tbody>
 </table>
 
-### 记录服务文档（DoR服务） {#document-of-record-service-dor-service}
+### 记录文档服务（DoR服务） {#document-of-record-service-dor-service}
 
 <table>
  <tbody>
   <tr>
    <td><p>API</p> </td>
    <td>描述</td>
-   <td>交易记录报表类别</td>
+   <td>交易报告类别</td>
    <td>附加信息</td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/aemds/guide/addon/dor/DoRService.html#render-com.adobe.aemds.guide.addon.dor.DoROptions-" target="_blank">render</a></td>
+   <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/aemds/guide/addon/dor/DoRService.html#render-com.adobe.aemds.guide.addon.dor.DoROptions-" target="_blank">渲染</a></td>
    <td>调用指定的渲染方法以使用提供的参数生成记录文档。</td>
    <td>已处理的文档</td>
    <td> </td>
@@ -159,7 +159,7 @@ AEM Forms提供了多个API来提交表单、处理文档和渲染文档。 某�
   <tr>
    <td><p>API</p> </td>
    <td>描述</td>
-   <td>交易记录报表类别</td>
+   <td>交易报告类别</td>
    <td>附加信息</td>
   </tr>
   <tr>
@@ -178,25 +178,25 @@ AEM Forms提供了多个API来提交表单、处理文档和渲染文档。 某�
    <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/output/api/OutputService.html#generatePDFOutputBatch-java.util.Map-java.util.Map-com.adobe.fd.output.api.PDFOutputOptions-com.adobe.fd.output.api.BatchOptions-" target="_blank">generatePDFOutputBatch</a></td>
    <td>合并数据和模板以创建一组PDF文档。</td>
    <td>已处理的文档</td>
-   <td> generatePDFOutputBatch API将表单模板与记录组合在一起，并生成PDF。 当您处理一批记录时，事务报表服务会将每个记录计为单独的PDF演绎版。 <br> 您可以使用 <a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/output/api/BatchOptions.html#getGenerateManyFiles--">getGenerateManyFiles</a> 标记将多个演绎版合并到单个PDF文件。 无论标记状态如何，服务都会将每个记录计为单独的PDF呈现。 </td>
+   <td> generatePDFOutputBatch API将表单模板与记录组合在一起，并生成PDF。 当您处理一批记录时，交易报告服务会将每个记录计为单独的PDF演绎版。 <br> 您可以使用 <a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/output/api/BatchOptions.html#getGenerateManyFiles--">getGenerateManyFile</a> 将多个演绎版组合为单个PDF文件的标记。 无论标志的状态如何，该服务将每个记录计为单独的PDF演绎版。 </td>
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/output/api/OutputService.html#generatePrintedOutput-com.adobe.aemfd.docmanager.Document-com.adobe.aemfd.docmanager.Document-com.adobe.fd.output.api.PrintedOutputOptions-" target="_blank">generatePrintedOutput</a></td>
-   <td>将XDP和PDF文档转换为PostScript(PS)、打印机命令语言(PCL)和ZPL文件格式。 </td>
+   <td>将XDP和PDF文档转换为PostScript (PS)、打印机命令语言(PCL)和ZPL文件格式。 </td>
    <td>已处理的文档</td>
    <td> </td>
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/output/api/OutputService.html#generatePrintedOutput-java.lang.String-com.adobe.aemfd.docmanager.Document-com.adobe.fd.output.api.PrintedOutputOptions-" target="_blank">generatePrintedOutput</a></td>
-   <td>将XDP和PDF文档转换为PostScript(PS)、打印机命令语言(PCL)和ZPL文件格式。 </td>
+   <td>将XDP和PDF文档转换为PostScript (PS)、打印机命令语言(PCL)和ZPL文件格式。 </td>
    <td>已处理的文档</td>
    <td> </td>
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/output/api/OutputService.html#generatePrintedOutputBatch-java.util.Map-java.util.Map-com.adobe.fd.output.api.PrintedOutputOptions-com.adobe.fd.output.api.BatchOptions-" target="_blank">generatePrintedOutputBatch</a></td>
-   <td>将一组XDP和PDF文档转换为一组PostScript(PS)、打印机命令语言(PCL)和ZPL文件格式。 </td>
+   <td>将一组XDP和PDF文档转换为一组PostScript (PS)、打印机命令语言(PCL)和ZPL文件格式。 </td>
    <td>已处理的文档</td>
-   <td> generatePDFOutputBatch API将表单模板与记录组合在一起，并生成PDF。 当您处理一批记录时，事务报表服务会将每个记录计为单独的PDF演绎版。 <br> 您可以使用 <a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/output/api/BatchOptions.html#getGenerateManyFiles--">getGenerateManyFiles</a> 标记将多个演绎版合并到单个PDF文件。 无论标记状态如何，服务都会将每个记录计为单独的PDF呈现。 </td>
+   <td> generatePDFOutputBatch API将表单模板与记录组合在一起，并生成PDF。 当您处理一批记录时，交易报告服务会将每个记录计为单独的PDF演绎版。 <br> 您可以使用 <a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/output/api/BatchOptions.html#getGenerateManyFiles--">getGenerateManyFile</a> 将多个演绎版组合为单个PDF文件的标记。 无论标志的状态如何，该服务将每个记录计为单独的PDF演绎版。 </td>
   </tr>
  </tbody>
 </table>
@@ -208,18 +208,18 @@ AEM Forms提供了多个API来提交表单、处理文档和渲染文档。 某�
   <tr>
    <td><p>API</p> </td>
    <td>描述</td>
-   <td>交易记录报表类别</td>
+   <td>交易报告类别</td>
    <td>附加信息</td>
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/forms/api/FormsService.html#renderPDFForm-java.lang.String-com.adobe.aemfd.docmanager.Document-com.adobe.fd.forms.api.PDFFormRenderOptions-" target="_blank">renderPDFForm</a></td>
-   <td>从XDP模板渲染PDF表单。 XP模板在Forms Designer中创建。</td>
+   <td>从XDPPDF中渲染模板表单。 XP模板是在Forms Designer中创建的。</td>
    <td>已处理的文档</td>
    <td> </td>
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/forms/api/FormsService.html#exportData-com.adobe.aemfd.docmanager.Document-com.adobe.fd.forms.api.DataFormat-" target="_blank">exportData</a></td>
-   <td>从PDF表单或XDP模板提取数据</td>
+   <td>从PDF表单或XDP模板中提取数据</td>
    <td>已处理的文档</td>
    <td> </td>
   </tr>
@@ -233,18 +233,18 @@ AEM Forms提供了多个API来提交表单、处理文档和渲染文档。 某�
   <tr>
    <td><p>API</p> </td>
    <td>描述</td>
-   <td>交易记录报表类别</td>
+   <td>交易报告类别</td>
    <td>附加信息</td>
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/cpdf/api/ConvertPdfService.html#toImage-com.adobe.aemfd.docmanager.Document-com.adobe.fd.cpdf.api.ToImageOptionsSpec-" target="_blank">toImage</a></td>
-   <td>将PDF文档转换为图像文档列表。 支持的图像格式包括JPEG、JPEG2K、PNG和TIFF。</td>
+   <td>将PDF文档转换为图像文档的列表。 支持的图像格式包括JPEG、JPEG2K、PNG和TIFF。</td>
    <td>已处理的文档</td>
    <td> </td>
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/cpdf/api/ConvertPdfService.html#toImage-com.adobe.aemfd.docmanager.Document-com.adobe.fd.cpdf.api.ToImageOptionsSpec-" target="_blank">toPS</a></td>
-   <td>使用选项规范中指定的选项将平面PDF文件转换为PostScript格式。</td>
+   <td>使用选项规范中指定的选项将FlatPDF文件转换为PostScript格式。</td>
    <td>已处理的文档</td>
    <td> </td>
   </tr>
@@ -258,12 +258,12 @@ AEM Forms提供了多个API来提交表单、处理文档和渲染文档。 某�
   <tr>
    <td><p>API</p> </td>
    <td>描述</td>
-   <td>交易记录报表类别</td>
+   <td>交易报告类别</td>
    <td>附加信息</td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/bcf/api/BarcodedFormsService.html#decode-com.adobe.aemfd.docmanager.Document-java.lang.Boolean-java.lang.Boolean-java.lang.Boolean-java.lang.Boolean-java.lang.Boolean-java.lang.Boolean-java.lang.Boolean-java.lang.Boolean-com.adobe.fd.bcf.api.CharSet-" target="_blank">解码</a></td>
-   <td>解码Document对象中的所有条形码，并返回一个org.w3c.dom.Document对象，该对象包含从条形码中检索的数据。</td>
+   <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/bcf/api/BarcodedFormsService.html#decode-com.adobe.aemfd.docmanager.Document-java.lang.Boolean-java.lang.Boolean-java.lang.Boolean-java.lang.Boolean-java.lang.Boolean-java.lang.Boolean-java.lang.Boolean-java.lang.Boolean-com.adobe.fd.bcf.api.CharSet-" target="_blank">decode</a></td>
+   <td>解码Document对象中的所有条形码，并返回包含从条形码检索的数据的org.w3c.dom.Document对象。</td>
    <td>已处理的文档</td>
    <td> </td>
   </tr>
@@ -277,17 +277,17 @@ AEM Forms提供了多个API来提交表单、处理文档和渲染文档。 某�
   <tr>
    <td><p>API</p> </td>
    <td>描述</td>
-   <td>交易记录报表类别</td>
+   <td>交易报告类别</td>
    <td>附加信息</td>
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/fd/assembler/service/AssemblerService.html#invoke-com.adobe.aemfd.docmanager.Document-java.util.Map-com.adobe.fd.assembler.client.AssemblerOptionSpec-">调用</a></td>
    <td>执行指定的DDX文档并返回 <a href="https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/fd/assembler/client/AssemblerResult.html">汇编程序结果</a> 包含生成文档的对象。 </td>
    <td>已处理的文档</td>
-   <td>下列业务不会入账为交易：
+   <td>下列操作不作为交易入账：
     <ul>
      <li>创建资源包或项目组合</li>
-     <li>拼合多个XDP </li>
+     <li>拼接多个XDP </li>
     </ul> </td>
   </tr>
   <tr>
@@ -307,8 +307,8 @@ AEM Forms提供了多个API来提交表单、处理文档和渲染文档。 某�
 
 >[!NOTE]
 >
->* 汇编程序服务的调用API可以根据输入在内部调用另一个服务的计费API。 因此，调用API可以计为无、单个或多个事务。 计数的事务数取决于输入和调用的内部API。
->* 使用汇编程序服务生成的单个PDF文档可以计为无、单个或多个事务。 计数的交易数取决于提供的DDX代码。
+>* 汇编程序服务的调用API可以在内部调用另一个服务的可记帐API，具体取决于输入。 因此，调用API可以计为无、单个或多个事务。 计算事务数的数量取决于输入和调用的内部API。
+>* 使用汇编程序服务生成的单个PDF单据可以计为“无”、“单个”或“多个”事务处理。 计算事务数的数量取决于提供的DDX代码。
 >
 
 
@@ -319,7 +319,7 @@ AEM Forms提供了多个API来提交表单、处理文档和渲染文档。 某�
   <tr>
    <td><p>API</p> </td>
    <td>描述</td>
-   <td>交易记录报表类别</td>
+   <td>交易报告类别</td>
    <td>附加信息</td>
   </tr>
   <tr>
@@ -331,9 +331,9 @@ AEM Forms提供了多个API来提交表单、处理文档和渲染文档。 某�
  </tbody>
 </table>
 
-## 计费数据捕获API {#billable-data-capture-apis}
+## 可计费数据捕获API {#billable-data-capture-apis}
 
-自适应表单、HTML5 Forms和表单集的所有提交事件均作为交易记录入账。 默认情况下，提交PDF表单不会计为交易。 使用提供的 [交易记录器API](record-transaction-custom-implementation.md) 将PDF forms提交记录为交易记录。
+自适应表单、HTML5 Forms和表单集的所有提交事件都被视为交易。 默认情况下，PDF表单的提交不作为交易记帐。 使用提供的 [交易记录器API](record-transaction-custom-implementation.md) 将PDF forms提交记录为事务处理。
 
 ### 自适应表单 {#adaptive-forms}
 
@@ -342,7 +342,7 @@ AEM Forms提供了多个API来提交表单、处理文档和渲染文档。 某�
   <tr>
    <td><p>用例</p> </td>
    <td>描述</td>
-   <td>交易记录报表类别</td>
+   <td>交易报告类别</td>
    <td>附加信息</td>
   </tr>
   <tr>
@@ -351,8 +351,8 @@ AEM Forms提供了多个API来提交表单、处理文档和渲染文档。 某�
    <td>已提交的表单</td>
    <td>
     <ul>
-     <li>成功提交仅考虑一两项交易。 计数的事务处理数取决于用于提交的提交操作类型。 例如，通过电子邮件提交操作帐户发送PDF，以计入两个交易计数。 一个交易用于表单提交，另一个交易用于使用记录文档(DOR)服务生成的PDF。 </li>
-     <li>在自适应表单（自适应表单集）中使用自适应表单只会计入单笔交易。 自适应表单中可以包含任意数量的自适应表单。</li>
+     <li>单个或两个交易记录的成功提交帐户。 计数的交易记录数取决于用于提交的提交操作类型。 例如，通过电子邮件发送PDF提交操作帐户可计算两次交易。 一个交易用于表单提交，另一个交易用于使用记录文档(DOR)服务生成的PDF。 </li>
+     <li>在自适应表单（自适应表单表单集）中使用自适应表单时，只会计入单个交易。 一个自适应表单中可以有任意数量的自适应表单。</li>
     </ul> </td>
   </tr>
  </tbody>
@@ -365,7 +365,7 @@ AEM Forms提供了多个API来提交表单、处理文档和渲染文档。 某�
   <tr>
    <td><p>用例</p> </td>
    <td>描述 </td>
-   <td>交易记录报表类别</td>
+   <td>交易报告类别</td>
    <td>附加信息</td>
   </tr>
   <tr>
@@ -384,25 +384,25 @@ AEM Forms提供了多个API来提交表单、处理文档和渲染文档。 某�
   <tr>
    <td><p>API</p> </td>
    <td>描述</td>
-   <td>交易记录报表类别</td>
+   <td>交易报告类别</td>
    <td>附加信息</td>
   </tr>
   <tr>
    <td>提交表单集</td>
-   <td>将表单集提交到在表单集中配置的提交URL。</td>
+   <td>将表单集提交到表单集中配置的提交URL。</td>
    <td>已提交的表单</td>
    <td>
     <ul>
-     <li>在自适应表单（自适应表单集）中使用自适应表单只会计入单笔交易。 自适应表单中可以包含任意数量的自适应表单。</li>
-     <li>HTML5 Forms表单中的每个表单都将帐户设置为单独的事务。 </li>
+     <li>在自适应表单（自适应表单表单集）中使用自适应表单时，只会计入单个交易。 一个自适应表单中可以有任意数量的自适应表单。</li>
+     <li>HTML5 Forms表单中的每个表单都将帐户设置为单独的交易。 </li>
     </ul> </td>
   </tr>
  </tbody>
 </table>
 
-## OSGi API上的计费交互式通信和以表单为中心的AEM工作流 {#billable-interactive-communication-and-form-centric-aem-workflows-on-osgi-apis}
+## OSGi API上的可计费交互式通信和以表单为中心的AEM工作流 {#billable-interactive-communication-and-form-centric-aem-workflows-on-osgi-apis}
 
-在OSGi和交互式通信的所有演绎版上分配以表单为中心的AEM工作流的任务和文档服务步骤，并作为事务处理入账。 在创作实例上预览交互式通信和使用代理UI在发布实例上预览不会计为事务。 如果工作流步骤将事务处理入帐，且工作流无法完成，则事务处理计数不会冲销。
+在OSGi上分配以表单为中心的AEM Workflow的任务和文档服务步骤以及交互式通信的所有演绎版，并作为事务处理入账。 在创作实例上预览交互式通信和使用代理UI在发布实例上预览不会计为事务。 如果工作流步骤将事务处理入帐，但工作流未能完成，则不会冲销事务处理计数。
 
 ### 交互通信 - Web 渠道 {#interactive-communication-web-channel}
 
@@ -411,11 +411,11 @@ AEM Forms提供了多个API来提交表单、处理文档和渲染文档。 某�
   <tr>
    <td><p>API</p> </td>
    <td>描述</td>
-   <td>交易记录报表类别</td>
+   <td>交易报告类别</td>
    <td>附加信息</td>
   </tr>
   <tr>
-   <td>呈现Web渠道</td>
+   <td>渲染Web渠道</td>
    <td>打开交互式通信的Web版本。</td>
    <td>已渲染的文档</td>
    <td>
@@ -432,11 +432,11 @@ AEM Forms提供了多个API来提交表单、处理文档和渲染文档。 某�
   <tr>
    <td><p>API</p> </td>
    <td>描述</td>
-   <td>交易记录报表类别</td>
+   <td>交易报告类别</td>
    <td>附加信息</td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/ccm/channels/print/api/model/PrintChannel.html" target="_blank">render</a> (转换为PDF)</td>
+   <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/ccm/channels/print/api/model/PrintChannel.html" target="_blank">渲染</a> (转换为PDF)</td>
    <td>生成交互式通信的PDF版本。</td>
    <td>已渲染的文档</td>
    <td>
@@ -452,7 +452,7 @@ AEM Forms提供了多个API来提交表单、处理文档和渲染文档。 某�
  <tbody>
   <tr>
    <td><p>用例</p> </td>
-   <td>交易记录报表类别</td>
+   <td>交易报告类别</td>
    <td>附加信息</td>
   </tr>
   <tr>
@@ -475,12 +475,12 @@ AEM Forms提供了多个API来提交表单、处理文档和渲染文档。 某�
  </tbody>
 </table>
 
-## 将计费API记录为自定义代码的交易记录 {#recording-billable-apis-as-transactions-for-custom-code}
+## 将可记帐API记录为自定义代码的交易记录 {#recording-billable-apis-as-transactions-for-custom-code}
 
-诸如提交PDF表单、使用代理UI预览交互式通信、使用非标准表单提交和自定义实施等操作不会计为交易。 AEM Forms提供了一个API来记录此类操作（如交易）。 您可以从自定义实施中将API调用到 [记录交易](/help/forms/using/record-transaction-custom-implementation.md).
+提交PDF表单、使用代理UI预览交互式通信、使用非标准表单提交和自定义实施等操作不计为交易。 AEM Forms提供了一个API来记录此类操作，例如交易。 您可以从自定义实施中调用API到 [记录交易](/help/forms/using/record-transaction-custom-implementation.md).
 
 ## 相关文章 {#related-articles}
 
-* [交易报表概述](../../forms/using/transaction-reports-overview.md)
-* [查看和了解交易报表](../../forms/using/viewing-and-understanding-transaction-reports.md)
+* [事务处理报表概览](../../forms/using/transaction-reports-overview.md)
+* [查看和了解事务处理报表](../../forms/using/viewing-and-understanding-transaction-reports.md)
 * [记录自定义实施的交易](/help/forms/using/record-transaction-custom-implementation.md)

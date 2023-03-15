@@ -31,7 +31,7 @@ ht-degree: 91%
 * 模拟用户体验。
 * 配置 Target 组件，以进行更多自定义。
 
-您可以将 AEM 或 Adobe Target 用作定位引擎（您必须拥有有效的 Adobe Target 帐户才能使用 Adobe Target）。如果您使用的是 Adobe Target，则必须先配置集成。请参阅 [与Adobe Target集成的说明](/help/sites-administering/target.md).
+您可以将 AEM 或 Adobe Target 用作定位引擎（您必须拥有有效的 Adobe Target 帐户才能使用 Adobe Target）。如果您使用的是 Adobe Target，则必须先配置集成。参见 [与Adobe Target集成的说明](/help/sites-administering/target.md).
 
 ![chlimage_1-8](assets/chlimage_1-8.png)
 
@@ -295,7 +295,7 @@ ht-degree: 91%
    >如果管理员进行了相应设置，您可能需要明确设置此位置。
    >
    >
-   >管理员可以决定是否需要在以下位置设置此配置：**https://&lt;host>:&lt;port>/system/console/configMgr/com.day.cq.personalization.impl.servlets.TargetingConfigurationServlet**
+   >管理员可以决定是否需要在以下位置设置此配置：**https://&lt;host>：&lt;port>/system/console/configMgr/com.day.cq.personalization.impl.servlets.TargetingConfigurationServlet**
    要要求用户输入位置，请选中**强制位置**复选框。
 
 1. 选择要为其创建选件的体验。
@@ -464,8 +464,8 @@ ht-degree: 91%
    <td><strong>转化</strong></td>
    <td><p>已单击正在测试的体验的任何部分的访客的百分比。转化可以按每个访客计数一次，也可以在每次访客完成转化时计数一次。转化量度设置为以下项之一: </p>
     <ul>
-     <li><strong>已查看页面</strong>  — 您可以通过选择 <strong>URL为</strong> ，然后定义一个或多个URL，或通过选择 <strong>URL包含</strong> 然后添加路径或关键词。</li>
-     <li><strong>已查看mbox</strong>  — 您可以通过输入mbox的名称来定义受众查看的mbox。 您可以通过单击 <strong>添加Mbox</strong>.</li>
+     <li><strong>已查看页面</strong>  — 您可以通过选择以下任一选项来定义受众查看的页面 <strong>URL是</strong> 然后定义URL或多个URL，或者通过选择 <strong>URL包含</strong> 然后添加路径或关键字。</li>
+     <li><strong>已查看mbox</strong>  — 通过输入mbox的名称，您可以定义受众查看的mbox。 您可以通过单击输入多个mbox <strong>添加Mbox</strong>.</li>
     </ul> </td>
   </tr>
   <tr>
@@ -502,10 +502,10 @@ ht-degree: 91%
   </tr>
   <tr>
    <td><strong>增量计数并保持用户处于活动状态</strong></td>
-   <td>指定递增计数的方式：
+   <td>指定计数的递增方式：
     <ul>
      <li>每个参加者一次</li>
-     <li>每次展示时（不包括页面刷新）</li>
+     <li>每次展示时，不包括页面刷新</li>
      <li>每次展示时</li>
     </ul> </td>
   </tr>
@@ -515,14 +515,14 @@ ht-degree: 91%
     <ul>
      <li>相同体验</li>
      <li>随机体验</li>
-     <li>看不见的体验</li>
+     <li>未见的体验</li>
     </ul> </td>
   </tr>
   <tr>
-   <td><strong>递增计数、释放用户并再次进入条</strong></td>
+   <td><strong>增量计数、释放用户并阻止再次进入</strong></td>
    <td>确定用户看到的内容而不是活动内容：
     <ul>
-     <li>相同的体验，不进行跟踪</li>
+     <li>相同的体验，无跟踪</li>
      <li>默认内容或其他活动内容</li>
     </ul> </td>
   </tr>
@@ -665,7 +665,7 @@ ht-degree: 91%
   </tr>
   <tr>
    <td><strong>引擎</strong></td>
-   <td>在 <strong>客户端规则（不跟踪）、Adobe Target、ContextHub、 </strong>和<strong> Adobe Campaign </strong>具体取决于您要使用的引擎。</td>
+   <td>选择范围 <strong>客户端规则（无跟踪）、Adobe Target、ContextHub、 </strong>和<strong> Adobe Campaign </strong>这取决于您要使用的引擎。</td>
   </tr>
  </tbody>
 </table>
@@ -682,7 +682,7 @@ ht-degree: 91%
   </tr>
   <tr>
    <td><strong>准确定位</strong></td>
-   <td><p>启用“准确定位”可告知组件等到客户端上下文或上下文中心数据可用之后，再将请求发送到 Adobe Target。这可能会增加加载时间。在创作时，“准确定位”始终处于启用状态。</p> <p>如果您选择 <strong>准确定位</strong> 复选框，mbox将执行 <code>mboxDefine</code> 第一个和 <code>mboxUpdate</code> 之后，当数据可用时，会生成Ajax请求。</p> <p>如果未选择 <strong>准确定位</strong> 复选框，mbox将执行 <code>mboxCreate</code> 立即导致同步请求（在这种情况下，并非所有上下文数据都可用）。</p> <p><strong>注意：</strong> 对特定组件启用或禁用准确定位不会影响您全局设置的设置。 您始终可以通过在组件中选择“准确定位”来覆盖全局设置。</p> </td>
+   <td><p>启用“准确定位”可告知组件等到客户端上下文或上下文中心数据可用之后，再将请求发送到 Adobe Target。这可能会增加加载时间。在创作时，“准确定位”始终处于启用状态。</p> <p>如果您选择 <strong>准确定位</strong> 复选框，mbox将执行 <code>mboxDefine</code> 第一个和 <code>mboxUpdate</code> 之后，当数据可用时，生成Ajax请求。</p> <p>如果您不选择 <strong>准确定位</strong> 复选框，mbox将执行 <code>mboxCreate</code> 立即生成同步请求（在这种情况下，并非所有上下文数据都可用）。</p> <p><strong>注意：</strong> 在特定组件上启用或禁用“准确定位”不会影响已设置的全局设置。 您始终可以通过在组件中选择“准确定位”来覆盖全局设置。</p> </td>
   </tr>
   <tr>
    <td><strong>包含已解析的区段</strong></td>
@@ -694,11 +694,11 @@ ht-degree: 91%
   </tr>
   <tr>
    <td><strong>上下文参数</strong></td>
-   <td>单击或点按 <strong>添加字段</strong> 配置其他上下文参数（与Target框架中可用的内容相同）。 向组件添加的上下文参数应用 <i>仅</i> 直接添加到组件，而不是添加到其他组件，与将上下文参数直接添加到框架的情况相同。</td>
+   <td>单击或点按 <strong>添加字段</strong> 以配置其他上下文参数（与Target框架中可用的参数相同）。 将上下文参数添加到组件中应用 <i>仅限</i> 添加到组件，而不是添加到其他组件，这与将上下文参数直接添加到框架的情况相同。</td>
   </tr>
   <tr>
    <td><strong>静态参数</strong></td>
-   <td>单击或点按 <strong>添加字段</strong> 配置其他静态参数（与Target框架中可用的功能相同）。 添加到组件的静态参数应用 <i>仅</i> 直接将静态参数添加到框架中时，不会像其他组件那样将其添加到组件。 静态参数不是来自于上下文（内容中心的客户端上下文）。</td>
+   <td>单击或点按 <strong>添加字段</strong> 以配置其他静态参数（与Target框架中可用的参数相同）。 添加到组件的静态参数适用 <i>仅限</i> 添加到组件，而不是添加到其他组件，这与将静态参数直接添加到框架的情况相同。 静态参数不是来自于上下文（内容中心的客户端上下文）。</td>
   </tr>
  </tbody>
 </table>
@@ -718,11 +718,11 @@ ht-degree: 91%
   </tr>
   <tr>
    <td><strong>客户端选项 — 策略</strong></td>
-   <td><p>从以下选项之一中进行选择：</p>
+   <td><p>从以下选项中进行选择：</p>
     <ul>
-     <li><strong>第一个</strong>:在营销活动中按顺序排列的列表中排名最前的体验。</li>
-     <li><strong>随机</strong>:使用任何体验。</li>
-     <li><strong>点击流得分</strong>:将使用在Client Context中跟踪的标记和相关标记点击。 将比较 Teaser 页面上定义的标记的点击率。</li>
+     <li><strong>第一个</strong>：在营销活动中排序的列表中排名最前的体验。</li>
+     <li><strong>Random</strong>：使用任何体验。</li>
+     <li><strong>Clickstream分数</strong>：使用在客户端上下文中跟踪的标记和相关标记点击。 将比较 Teaser 页面上定义的标记的点击率。</li>
     </ul> </td>
   </tr>
  </tbody>

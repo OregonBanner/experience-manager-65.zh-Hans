@@ -76,7 +76,7 @@ ht-degree: 99%
 1. [选择资源](/help/sites-authoring/basic-handling.md#viewingandselectingyourresources)，然后打开[时间线](/help/sites-authoring/basic-handling.md#timeline)（或打开时间线，然后选择资源）。
 1. 可以使用评论字段中的箭头显示&#x200B;**启动工作流**：
 
-   ![screenshot_2019-03-05at120026](assets/screen-shot_2019-03-05at120026.png)
+   ![screen-shot_2019-03-05at120026](assets/screen-shot_2019-03-05at120026.png)
 
 1. **创建工作流**&#x200B;向导将帮助您[指定工作流详细信息](#specifying-workflow-details-in-the-create-workflow-wizard)。
 

@@ -19,19 +19,19 @@ ht-degree: 3%
 
 # 在生产就绪模式下运行AEM{#running-aem-in-production-ready-mode}
 
-在AEM 6.1中，Adobe引入了 `"nosamplecontent"` runmode旨在自动完成准备AEM实例以在生产环境中部署所需的步骤。
+通过AEM 6.1，Adobe推出了新的 `"nosamplecontent"` runmode旨在自动执行准备AEM实例以在生产环境中部署所需的步骤。
 
-新的运行模式不仅将自动配置实例以遵循安全检查列表中所述的安全最佳实践，还将删除该过程中所有示例geometrixx应用程序和配置。
+新的运行模式不仅会自动配置实例以遵循安全清单中所述的安全最佳实践，而且还会在此过程中删除所有示例geometrixx应用程序和配置。
 
 >[!NOTE]
 >
->由于实际原因，AEM生产就绪模式将仅涵盖保护实例所需的大多数任务，因此强烈建议您查阅 [安全检查列表](/help/sites-administering/security-checklist.md) 开始使用生产环境。
+>由于实际原因，AEM Production Ready模式将仅涵盖保护实例所需的大多数任务，因此强烈建议您查阅 [安全核对清单](/help/sites-administering/security-checklist.md) 在生产环境上线之前。
 >
->另外，请注意，在生产就绪模式下运行AEM将有效地禁用对CRXDE Lite的访问。 如果出于调试目的需要，请参阅 [在AEM中启用CRXDE Lite](/help/sites-administering/enabling-crxde-lite.md).
+>此外，请注意，在生产就绪模式下运行AEM将有效地禁用对CRXDE Lite的访问。 如果您出于调试目的而需要它，请参阅 [在AEM中启用CRXDE Lite](/help/sites-administering/enabling-crxde-lite.md).
 
 ![chlimage_1-83](assets/chlimage_1-83a.png)
 
-要在生产就绪模式下运行AEM，您只需将 `nosamplecontent` 通过 `-r` runmode切换到您现有的启动参数：
+要在生产就绪模式下运行AEM，您只需添加 `nosamplecontent` 通过 `-r` runmode切换到现有的启动参数：
 
 ```shell
 java -jar aem-quickstart.jar -r nosamplecontent
@@ -43,35 +43,35 @@ java -jar aem-quickstart.jar -r nosamplecontent
 java -jar aem-quickstart.jar -r author,crx3,crx3mongo,nosamplecontent -Doak.mongo.uri=mongodb://remoteserver:27017 -Doak.mongo.db=aem-author
 ```
 
-## 更改生产就绪模式的部分 {#changes-part-of-the-production-ready-mode}
+## 更改部分生产就绪模式 {#changes-part-of-the-production-ready-mode}
 
-更具体地说，当在生产就绪模式下运行AEM时，将执行以下配置更改：
+更具体地说，当AEM在生产就绪模式下运行时，将执行以下配置更改：
 
-1. 的 **CRXDE支持包** ( `com.adobe.granite.crxde-support`)在生产就绪模式下默认处于禁用状态。 它可以随时从Adobe公共Maven存储库安装。 AEM 6.1需要使用版本3.0.0。
+1. 此 **CRXDE支持捆绑包** ( `com.adobe.granite.crxde-support`)在生产就绪模式下默认处于禁用状态。 可以随时从Adobe的公共Maven存储库安装它。 AEM 6.1需要版本3.0.0。
 
-1. 的 **对存储库的Apache Sling简单WebDAV访问** ( `org.apache.sling.jcr.webdav`)包将仅在 **作者** 实例。
+1. 此 **Apache Sling对存储库的简单WebDAV访问** ( `org.apache.sling.jcr.webdav`)包将仅在 **作者** 实例。
 
 1. 新创建的用户需要在首次登录时更改密码。 这不适用于管理员用户。
-1. **生成调试信息** 对于 **Apache Sling Java脚本处理程序**.
+1. **生成调试信息** 已为禁用 **Apache Sling Java脚本处理程序**.
 
-1. **映射的内容** 和 **生成调试信息** 对于 **Apache Sling JSP脚本处理程序**.
+1. **映射的内容** 和 **生成调试信息** 已为禁用 **Apache Sling JSP脚本处理程序**.
 
-1. 的 **Day CQ WCM过滤器** 设置为 `edit` on **作者** 和 `disabled` on **发布** 实例。
+1. 此 **Day CQ WCM过滤器** 设置为 `edit` 日期 **作者** 和 `disabled` 日期 **发布** 实例。
 
-1. 的 **AdobeGraniteHTML库管理器** 配置了以下设置：
+1. 此 **AdobeGraniteHTML库管理器** 进行了以下设置：
 
    1. **缩小：** `enabled`
    1. **调试：** `disabled`
-   1. **Gzip:** `enabled`
-   1. **时间：** `disabled`
+   1. **Gzip：** `enabled`
+   1. **计时：** `disabled`
 
-1. 的 **Apache SlingGETServlet** 默认情况下，设置为支持安全配置，如下所示：
+1. 此 **Apache SlingGETServlet** 设置为默认支持安全配置，如下所示：
 
 | **配置** | **创作** | **发布** |
 |---|---|---|
-| TXT呈现版本 | 已禁用 | 已禁用 |
-| HTML呈现 | 已禁用 | 已禁用 |
-| JSON呈现版本 | 已启用 | 已启用 |
-| XML呈现版本 | 已禁用 | 已禁用 |
+| TXT演绎版 | 已禁用 | 已禁用 |
+| HTML演绎版 | 已禁用 | 已禁用 |
+| JSON演绎版 | 已启用 | 已启用 |
+| XML演绎版 | 已禁用 | 已禁用 |
 | json.maximumresults | 1000 | 100 |
 | 自动索引 | 已禁用 | 已禁用 |

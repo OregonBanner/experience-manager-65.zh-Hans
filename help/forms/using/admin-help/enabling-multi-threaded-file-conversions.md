@@ -20,11 +20,11 @@ ht-degree: 0%
 
 # 启用多线程文件转换 {#enabling-multi-threaded-file-conversions}
 
-PDF生成器提供为某些类型的文件启用多线程文件转换的功能。 多线程文件转换允许PDF生成器同时执行多次转换，从而提高了线程生成器的性能。
+PDF生成器提供了为某些类型的文件启用多线程文件转换的功能。 多线程文件转换通过允许PDF生成器同时执行多个转换而提高了其性能。
 
 ## 为OpenOffice、Word和PowerPoint文档启用多线程文件转换 {#enabling-multi-threaded-file-conversions-for-openoffice-word-and-powerpoint-documents}
 
-默认情况下，PDF生成器一次只能转换一个OpenOffice、Microsoft Word或PowerPoint文档。 如果启用多线程转换，PDF生成器可以同时转换多个文档。 PDF生成器将启动OpenOffice或PDFMaker的多个实例（用于执行Word和PowerPoint转换）。
+默认情况下，PDF生成器一次只能转换一个OpenOffice、Microsoft Word或PowerPoint文档。 如果启用多线程转换，则PDF生成器可以同时转换多个文档。 PDF生成器将启动多个OpenOffice或PDFMaker实例（用于执行Word和PowerPoint转换）。
 
 >[!NOTE]
 >
@@ -34,55 +34,55 @@ PDF生成器提供为某些类型的文件启用多线程文件转换的功能�
 >
 >Microsoft Excel、Microsoft Visio、Microsoft Project或Microsoft Publisher不支持多线程文件转换。
 
-OpenOffice或PDFMaker的每个实例都使用单独的用户帐户启动。 您添加的每个用户帐户都必须是在Forms服务器计算机上具有管理权限的有效用户。 在群集环境中，同一组用户必须对群集的所有节点都有效。
+每个OpenOffice或PDFMaker实例都使用单独的用户帐户启动。 您添加的每个用户帐户都必须是对Forms Server计算机具有管理权限的有效用户。 在群集环境中，同一组用户必须对群集的所有节点有效。
 
-在管理控制台的“用户帐户”页面上，您可以指定用于多线程文件转换的用户帐户。 您可以添加帐户、删除帐户或更改帐户密码。 如果您在Windows Server 2003或Windows Server 2008上运行PDF生成器，请至少添加三个具有管理员权限的用户帐户。
+在管理控制台的“用户帐户”页上，可以指定用于多线程文件转换的用户帐户。 您可以添加帐户、删除帐户或更改帐户密码。 如果您在Windows Server 2003或Windows Server 2008上运行PDF生成器，请至少添加三个具有管理员权限的用户帐户。
 
-在Windows Server 2003或2008上为OpenOffice、Microsoft Word或Microsoft PowerPoint添加用户，或在Linux或Sun™ Solaris™上为OpenOffice添加用户时，请关闭所有用户的初始激活对话框。
+在Windows Server 2003或2008上添加OpenOffice、Microsoft Word或Microsoft PowerPoint的用户，或者在Linux或Sun™ Solaris™上添加OpenOffice的用户时，为所有用户关闭初始激活对话框。
 
-### 添加替换进程级令牌的权限 {#add-the-right-to-replace-the-process-level-token}
+### 添加权限以替换进程级令牌 {#add-the-right-to-replace-the-process-level-token}
 
-在Windows操作系统上，用于PDF转换（PDFG用户）的管理员用户帐户将需要替换进程级别的令牌权限。 您可以使用组策略编辑器添加此权限：
+在Windows操作系统上，用于PDF转换的管理员用户帐户（PDFG用户）需要替换进程级别的令牌权限。 您可以使用组策略编辑器添加此权限：
 
-1. 在“Windows开始”菜单中，单击“运行”，然后输入gpedit.msc。
-1. 单击“本地计算机策略”>“计算机配置”>“Windows设置”>“安全设置”>“本地策略”>“用户权限分配”。 编辑 *替换进程级别令牌* 策略以包含“管理员”组。
-1. 将用户添加到替换进程级别令牌条目。
+1. 在Windows“开始”菜单中，单击“运行”，然后输入gpedit.msc。
+1. 单击本地计算机策略>计算机配置> Windows设置>安全设置>本地策略>用户权限分配。 编辑 *替换进程级别令牌* 策略以包含Administrators组。
+1. 将用户添加到“替换进程级令牌”条目。
 
 ### Windows Server 2008上的OpenOffice、Microsoft Word和Microsoft PowerPoint所需的其他配置 {#additional-configuration-required-for-openoffice-microsoft-word-and-microsoft-powerpoint-on-windows-server-2008}
 
-如果您在Windows Server 2008上运行OpenOffice、Microsoft Word或Microsoft PowerPoint，请为添加的每个用户禁用UAC。
+如果您在Windows Server 2008上运行OpenOffice、Microsoft Word或Microsoft PowerPoint，请为添加的每位用户禁用UAC。
 
-1. 单击控制面板>用户帐户>打开或关闭用户帐户控制。
-1. 取消选中“使用用户帐户控制(UAC)帮助保护计算机”框，然后单击“确定”。
+1. 单击“控制面板”>“用户帐户”>“打开或关闭用户帐户控制”。
+1. 取消选中“Use User Account Control (UAC) to help protect your computer(使用用户帐户控制(UAC)帮助保护计算机)”框，然后单击“OK（确定）”。
 1. 重新启动计算机以使设置生效。
 
 ### Linux或Solaris上的OpenOffice所需的其他配置 {#additional-configuration-required-for-openoffice-on-linux-or-solaris}
 
 1. 添加用户帐户。 (请参阅 [添加用户帐户](enabling-multi-threaded-file-conversions.md#add-a-user-account).)
-1. 接下来，您将对/etc/sudoers文件进行更改。 此文件的默认权限为440。 将此文件的权限更改为可写。
-1. 在/etc/sudoers文件中为其他用户（运行表单服务器的管理员除外）添加条目。 例如，如果您以名为lcadm的用户和名为myhost的服务器的身份运行AEM表单，并且要模拟user1和user2，请将以下条目添加到/etc/sudoers:
+1. 接下来，您将更改/etc/sudoers文件。 此文件的默认权限为440。 将此文件的权限更改为可写。
+1. 在/etc/sudoers文件中添加其他用户（除运行表单服务器的管理员之外）的条目。 例如，如果您以名为lcadm的用户和名为myhost的服务器的身份运行AEM forms，并且要模拟user1和user2，请将以下条目添加到/etc/sudoers：
 
    ```shell
     lcadm myhost=(user1) NOPASSWD: ALL
     lcadm myhost=(user2) NOPASSWD: ALL
    ```
 
-   此配置使lcadm能够在主机“myhost”上以“user1”或“user2”的形式运行任何命令，而无需提示输入密码。
+   此配置使lcadm能够以“user1”或“user2”在主机“myhost”上运行任何命令而不提示输入密码。
 
    >[!NOTE]
    >
-   >确保已将系统用户和PDFG用户角色分配给“user1”和“user2”。 要向用户分配PDFG角色，请参阅 [添加用户帐户](enabling-multi-threaded-file-conversions.md#add-a-user-account)
+   >确保已将系统用户和PDFG用户角色分配给“user1”和“user2” 。 要将PDFG角色分配给用户，请参阅 [添加用户帐户](enabling-multi-threaded-file-conversions.md#add-a-user-account)
 
-1. 此外，在/etc/sudoers文件中，通过在行的开头添加数字符号(#)来找到此行并注释掉：
+1. 此外，在/etc/sudoers文件中，通过在行首添加数字符号(#)来查找并注释掉此行：
 
    ```shell
    Defaults requiretty
    ```
 
-   这样您就可以添加Linux用户。
+   这使您能够添加Linux用户。
 
-1. 将etc/sudoers文件的权限更改回440。
-1. 允许您通过添加的所有用户 [添加用户帐户](enabling-multi-threaded-file-conversions.md#add-a-user-account) 与表单服务器建立连接。 例如，要允许名为user1的本地用户具有与表单服务器建立连接的权限，请使用以下命令
+1. 将etc/sudoers文件的权限更改为440。
+1. 允许您通过添加的所有用户 [添加用户帐户](enabling-multi-threaded-file-conversions.md#add-a-user-account) 以连接表单服务器。 例如，要允许名为user1的本地用户连接到表单服务器，请使用以下命令
 
    `xhost +local:user1@`
 
@@ -92,16 +92,16 @@ OpenOffice或PDFMaker的每个实例都使用单独的用户帐户启动。 您�
 
 >[!NOTE]
 >
->必须将OpenOffice安装在所有PDFG用户都可以访问的目录位置中。 您可以以PDFG用户身份登录并检查是否可以在无问题的情况下启动OpenOffice来验证这一点。
+>OpenOffice必须安装在所有PDFG用户可以访问的目录位置。 您可以通过以PDFG用户身份登录并检查是否可以在没有问题的情况下启动OpenOffice来验证这一点。
 
 ### 添加用户帐户 {#add-a-user-account}
 
 1. 在管理控制台中，单击服务>PDF生成器>用户帐户。
-1. 单击添加，然后输入对表单服务器具有管理权限的用户的用户名和密码。 如果要为OpenOffice配置用户，请关闭初始的OpenOffice激活对话框。
+1. 单击添加，然后输入对表单服务器具有管理权限的用户名和密码。 如果要为OpenOffice配置用户，请关闭初始OpenOffice激活对话框。
 
    >[!NOTE]
    >
-   >如果为OpenOffice配置用户，则OpenOffice的实例数不能大于此步骤中指定的用户帐户数。
+   >如果要为OpenOffice配置用户，OpenOffice的实例数不能大于此步骤中指定的用户帐户数。
 
 1. 重新启动表单服务器。
 

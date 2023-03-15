@@ -15,13 +15,13 @@ ht-degree: 38%
 
 ## AEM Foundation {#aem-foundation}
 
-[了解有关安装、部署和架构Adobe Experience Manager 6.5的更多信息](/help/sites-deploying/home.md)，包括我们的Adobe Managed Services云部署。
+[详细了解Adobe Experience Manager 6.5的安装、部署和架构](/help/sites-deploying/home.md)，包括我们的Adobe Managed Services云部署。
 
 [了解如何管理AEM项目](/help/managing/home.md).
 
 ## AEM Sites {#aem-sites}
 
-[了解在AEM中创建内容和进行创作的关键概念](/help/sites-authoring/home.md).
+[了解在AEM中创建内容和创作的主要概念](/help/sites-authoring/home.md).
 
 [了解如何管理AEM](/help/sites-administering/home.md).
 
@@ -37,9 +37,9 @@ ht-degree: 38%
 
 [了解用于发布动态和交互式体验的数字标牌解决方案。](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html)
 
-## AEM Commerce {#aem-commerce}
+## AEM商务 {#aem-commerce}
 
-[了解AEM Commerce。](/help/commerce/home.md)
+[了解AEM商务。](/help/commerce/home.md)
 
 ## AEM Communities {#aem-communities}
 

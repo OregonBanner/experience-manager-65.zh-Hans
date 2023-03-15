@@ -24,7 +24,7 @@ ht-degree: 96%
 
 该控制台可从&#x200B;**工具** -> **常规** -> **组件**&#x200B;中访问。在控制台中，卡片视图和列表视图均可用。 由于组件没有树结构，因此列视图不可用。
 
-![screenshot_2019-03-05at113145](assets/screen-shot_2019-03-05at113145.png)
+![screen-shot_2019-03-05at113145](assets/screen-shot_2019-03-05at113145.png)
 
 >[!NOTE]
 >
@@ -34,7 +34,7 @@ ht-degree: 96%
 
 通过&#x200B;**仅限内容**&#x200B;图标（左上方），您可以打开&#x200B;**搜索**&#x200B;面板以搜索和/或筛选组件：
 
-![screenshot_2019-03-05at113251](assets/screen-shot_2019-03-05at113251.png)
+![screen-shot_2019-03-05at113251](assets/screen-shot_2019-03-05at113251.png)
 
 ### 组件详细信息 {#component-details}
 

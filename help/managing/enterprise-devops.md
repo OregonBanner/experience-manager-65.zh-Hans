@@ -32,7 +32,7 @@ DevOps 旨在避免出现以下问题：
 
 ## 环境 {#environments}
 
-Adobe Experience Manager(AEM)部署通常包含多个环境，用于不同级别上的不同目的：
+Adobe Experience Manager (AEM)部署通常包含多个环境，分别用于不同级别的不同用途：
 
 * [开发](#development)
 * [质量保证](#quality-assurance)
@@ -62,7 +62,7 @@ Adobe Experience Manager(AEM)部署通常包含多个环境，用于不同级别
 
 ### 质量保证 {#quality-assurance}
 
-质量保证团队使用此环境来全面 [测试](/help/sites-developing/test-plan.md) 新系统；设计和功能。 它应同时具有创作和发布环境（包含适当的内容），并提供所有必要的服务以启用完整的测试套件。
+质量保证团队使用此环境来全面了解 [测试](/help/sites-developing/test-plan.md) 您的新系统；设计和功能。 它应同时具有创作和发布环境（包含适当的内容），并提供所有必要的服务以启用完整的测试套件。
 
 ### 暂存 {#staging}
 

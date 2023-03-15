@@ -1,15 +1,15 @@
 ---
-title: 创建内容片段无头快速入门指南
+title: 创建内容片段Headless快速入门指南
 description: 了解如何使用 AEM 的内容片段设计、创建、管理和使用独立于页面的内容，用于 Headless 投放。
-exl-id: a227ae2c-f710-4968-8a00-bfe48aa66145
-source-git-commit: 8ab774b8d21dd16e4873cd39ef0175ead3f2da23
+exl-id: 5787204d-bcce-447e-b98c-2bc1c0d744c3
+source-git-commit: a2ababa9dd9115e963b91a7271d204d287557c40
 workflow-type: tm+mt
 source-wordcount: '387'
 ht-degree: 91%
 
 ---
 
-# 创建内容片段无头快速入门指南 {#creating-content-fragments}
+# 创建内容片段Headless快速入门指南 {#creating-content-fragments}
 
 了解如何使用 AEM 的内容片段设计、创建、管理和使用独立于页面的内容，用于 Headless 投放。
 
@@ -25,8 +25,8 @@ ht-degree: 91%
 
 内容作者将创建任意数量的内容片段，用于呈现他们创建的内容。这将是他们在 AEM 中的主要任务。对于本指南快速入门，我们只需要创建一个。
 
-1. 登录AEM，然后从主菜单中选择 **导航 — >资产**.
-1. 导航到 [文件夹。](create-assets-folder.md)
+1. 登录AEM，从主菜单选择 **导航 — >资源**.
+1. 导航到 [之前创建的文件夹。](create-assets-folder.md)
 1. 点击或单击&#x200B;**创建 -> 内容片段**。
 1. 内容片段的创建以两步向导的方式呈现。首先选择您希望使用什么模型来创建内容片段，然后点击或单击&#x200B;**下一步**。
    * 可用的模型取决于&#x200B;[**您为资源文件夹定义的云配置**](create-assets-folder.md)，您将在该文件夹中创建内容片段。

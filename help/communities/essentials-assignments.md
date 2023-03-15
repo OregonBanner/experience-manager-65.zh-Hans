@@ -1,7 +1,7 @@
 ---
-title: 工作总揽
+title: Assignations Essentials
 seo-title: Assignments Essentials
-description: 启用社区的工作总揽功能概述
+description: 赋值功能概述，用于启用社区
 seo-description: Assignments feature overview for enablement communities
 uuid: e49fce26-1091-4f37-93e8-c4ec85371811
 contentOwner: Guillaume Carlino
@@ -18,13 +18,13 @@ ht-degree: 12%
 
 ---
 
-# 工作总揽 {#assignments-essentials}
+# Assignations Essentials {#assignments-essentials}
 
-阅读以了解使用 [启用社区](/help/communities/overview.md#enablement-community) 站点。
+请阅读以了解有关使用的任务功能的基本信息 [启用社区](/help/communities/overview.md#enablement-community) 站点。
 
-分配功能是将支持资源和学习路径分配给支持社区的成员的功能。
+分配功能是向赋权社区成员分配赋权资源和学习路径的功能。
 
-## 客户端要点 {#essentials-for-client-side}
+## 适用于客户端的Essentials {#essentials-for-client-side}
 
 <table>
  <tbody>
@@ -37,7 +37,7 @@ ht-degree: 12%
    <td>否</td>
   </tr>
   <tr>
-   <td> <a href="/help/communities/clientlibs.md"><strong>clientlibs</strong></a></td>
+   <td> <a href="/help/communities/clientlibs.md"><strong>clientllibs</strong></a></td>
    <td>cq.social.enablement.hbs.breadcrumbs<br /> cq.social.enablement.hbs.myassigned<br /> cq.social.enablement.hbs.resource<br /> cq.social.enablement.hbs.learningpath</td>
   </tr>
   <tr>
@@ -50,14 +50,14 @@ ht-degree: 12%
   </tr>
   <tr>
    <td><strong> 属性</strong></td>
-   <td>请参阅 <a href="/help/communities/assignments.md">工作分配功能</a></td>
+   <td>参见 <a href="/help/communities/assignments.md">任务功能</a></td>
   </tr>
  </tbody>
 </table>
 
 ### 完成和成功状态 {#completion-and-success-status}
 
-“工作总揽”上的报表和状态横幅中使用“完成”和“成功”状态。
+完成和成功状态用于分配中的报告和状态横幅。
 
 完成状态:
 
@@ -72,7 +72,7 @@ ht-degree: 12%
 * 通过
 * 失败
 
-完成状态和成功状态的唯一可能组合包括：
+完成和成功状态的唯一可能组合为：
 
 | **完成** | **成功** |
 |---|---|
@@ -81,11 +81,11 @@ ht-degree: 12%
 | 完成 | 通过 |
 | 完成 | 失败 |
 
-## 服务器端要点 {#essentials-for-server-side}
+## 服务器端Essentials {#essentials-for-server-side}
 
 ### 指定任务功能 {#assignments-function}
 
-包含 [分配函数](/help/communities/functions.md#assignments-function)，包括已配置的 ` [assignments](/help/communities/assignments.md)` 组件。
+社区站点结构包括 [指定任务功能](/help/communities/functions.md#assignments-function)，包括已配置的 ` [assignments](/help/communities/assignments.md)` 组件。
 
 ### 参考API {#reference-apis}
 
@@ -93,4 +93,4 @@ ht-degree: 12%
 
 * [报表API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/reporting/dv/api/package-summary.html)
 
-* [报表分析API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/reporting/dv/model/api/package-summary.html)
+* [Reporting Analytics API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/reporting/dv/model/api/package-summary.html)

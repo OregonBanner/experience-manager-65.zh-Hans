@@ -45,7 +45,7 @@ ht-degree: 96%
 
 >[!CAUTION]
 >
->使用创建的页面和模板 **“模板”控制台** 经典UI中不使用，因此不支持这种使用。
+>使用创建的页面和模板 **模板控制台** 不能与经典UI一起使用，并且不支持此类使用。
 
 ## 开始之前 {#before-you-start}
 
@@ -110,7 +110,7 @@ ht-degree: 96%
    * 此类模板[由开发人员提供](/help/sites-developing/page-templates-static.md)，因此不能由作者创建或编辑。
    * 可复制此类模板，以创建新页面，但是创建之后，页面与模板之间不存在动态连接（即使已注册模板名称来获取相关信息）。
    * 可使用[设计模式](/help/sites-authoring/default-components-designmode.md)来保留设计属性。
-   * 由于编辑静态模板是开发人员的专有任务，请参阅开发人员文档 [页面模板 — 静态](/help/sites-developing/page-templates-static.md) 以了解更多信息。
+   * 由于编辑静态模板是开发人员的独家任务，请参阅开发人员文档 [页面模板 — 静态](/help/sites-developing/page-templates-static.md) 了解更多信息。
 
 按照定义，“模板”控制台和模板编辑器只允许创建和编辑可编辑的模板。因此，本文档将专门重点介绍可编辑的模板。
 
@@ -147,7 +147,7 @@ ht-degree: 96%
 
 >[!CAUTION]
 >
->切勿在模板中输入任何需要[国际化](/help/sites-developing/i18n.md)的信息。出于内部化目的， [核心组件的本地化功能](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/localization.html) 。
+>切勿在模板中输入任何需要[国际化](/help/sites-developing/i18n.md)的信息。出于内部化目的， [核心组件的本地化功能](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/localization.html) 建议使用。
 
 ### 创建模板文件夹 – 管理员 {#creating-a-template-folder-admin}
 
@@ -622,7 +622,7 @@ ht-degree: 96%
 
 要访问&#x200B;**页面设计**&#x200B;对话框，请执行以下操作：
 
-1. 从 **模板编辑器**，选择 **页面信息** ，然后 **页面设计** 打开对话框。
+1. 从 **模板编辑器**，选择 **页面信息** 从工具栏中，然后 **页面设计** 以打开对话框。
 1. 随即会打开&#x200B;**页面设计**&#x200B;对话框，该对话框分成两个部分：
 
    * 左半部分定义了[页面策略](/help/sites-authoring/templates.md#page-policies)

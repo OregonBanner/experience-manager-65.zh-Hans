@@ -1,7 +1,7 @@
 ---
-title: SharePoint连接器许可证、版权声明和免责声明
+title: SharePoint Connector许可证、版权声明和免责声明
 seo-title: SharePoint Connector Licenses, Copyright Notices, and Disclaimers
-description: 了解SharePoint连接器许可证、版权声明和免责声明。
+description: 了解SharePoint Connector许可证、版权声明和免责声明。
 seo-description: Learn about SharePoint Connector Licenses, Copyright Notices and Disclaimers.
 uuid: 182c8f0f-dcca-461a-9d8f-f05b376ad0cb
 contentOwner: User
@@ -18,19 +18,19 @@ ht-degree: 19%
 
 ---
 
-# SharePoint连接器许可证、版权声明和免责声明{#sharepoint-connector-licenses-copyright-notices-and-disclaimers}
+# SharePoint Connector许可证、版权声明和免责声明{#sharepoint-connector-licenses-copyright-notices-and-disclaimers}
 
-本节列出了所有必须与MS SharePoint的Day JCR Connector相关的许可证、版权声明和免责声明。
+本节列出了必须与Day JCR Connector for MS SharePoint一起明确声明的所有许可证、版权声明和免责声明。
 
 ## Connector第三方库概述 {#overview-of-connector-rd-party-libraries}
 
-下表列出了在SharePoint Connector核心库中使用的第三方库，以及涵盖这些库的许可证、版权声明或免责声明：
+下表列出了SharePoint Connector核心库中使用的第三方库，以及涵盖了这些库的许可证、版权声明或免责声明：
 
 | 库 | 许可类型 |
 |---|---|
-| annogen | [Apache](#apache) |
+| 注释 | [Apache](#apache) |
 | axiom-api | [Apache](#apache) |
-| 公理dom | [Apache](#apache) |
+| axiom-dom | [Apache](#apache) |
 | axiom-impl | [Apache](#apache) |
 | axis2-adb | [Apache](#apache) |
 | axis2-kernel | [Apache](#apache) |
@@ -49,18 +49,18 @@ ht-degree: 19%
 | jackrabbit-jcr-commons | [Apache](#apache) |
 | jackrabbit-spi-commons | [Apache](#apache) |
 | jackrabbit-spi | [Apache](#apache) |
-| 亚申 | BSD |
+| 雅森 | BSD |
 | log4j | [Apache](#apache) |
 | lucene-core | [Apache](#apache) |
-| 尼特希 | [Apache](#apache) |
+| neethi | [Apache](#apache) |
 | slf4j-api | [SLF4J.ORG](#slf-j-org) |
 | slf4j-jdk14 | [SLF4J.ORG](#slf-j-org) |
 | stax-api | [Apache](#apache) |
 | wsdl4j | [Apache](#apache) |
 | wstx-asl | [Apache](#apache) |
-| 沙兰 | [Apache](#apache) |
+| xalan | [Apache](#apache) |
 | xbean | [Apache](#apache) |
-| xml-api | [Apache](#apache) （包含公共域和W3C软件许可证涵盖的部分） |
+| xml-api | [Apache](#apache) （包含由公共域和W3C软件许可证覆盖的部分） |
 | XmlSchema | [Apache](#apache) |
 
 ## CRX第三方库概述 {#overview-of-crx-rd-party-libraries}
@@ -109,7 +109,7 @@ ht-degree: 19%
    <td><a href="#hypersonic-sql-group">高超音速SQL组</a></td>
   </tr>
   <tr>
-   <td>jaxen-1.1 beta-6.jar</td>
+   <td>jaxen-1.1-beta-6.jar</td>
    <td><a href="#apache">Apache</a></td>
   </tr>
   <tr>
@@ -133,7 +133,7 @@ ht-degree: 19%
    <td><a href="#pdfbox">PDFBox</a></td>
   </tr>
   <tr>
-   <td>poi-2.5.1天.jar</td>
+   <td>poi-2.5.1-day.jar</td>
    <td><a href="#apache">Apache</a></td>
   </tr>
   <tr>
@@ -157,7 +157,7 @@ ht-degree: 19%
 
 ## CQSE第三方库概述 {#overview-of-cqse-rd-party-libraries}
 
-下表列出了公报Servlet引擎内使用的第三方库，以及涉及这些库的许可证、版权声明或免责声明：
+下表列出了公报Servlet引擎中使用的第三方库，以及涵盖这些库的许可证、版权声明或免责声明：
 
 <table>
  <colgroup>
@@ -202,7 +202,7 @@ ht-degree: 19%
    <td><a href="#sun-servlet">Sun Servlet</a></td>
   </tr>
   <tr>
-   <td>xml-api-2.0.2.jar</td>
+   <td>xml-apis-2.0.2.jar</td>
    <td><a href="#apache">Apache</a></td>
   </tr>
   <tr>

@@ -1,7 +1,7 @@
 ---
 title: 添加附件
 seo-title: Adding attachments
-description: 在AEM Forms应用程序中，将照片和笔记作为批注添加到任务中
+description: 在AEM Forms应用程序中将照片和涂鸦笔记作为批注添加到任务中
 seo-description: Add photographs and scribble notes as annotations to your task in the AEM Forms app
 uuid: 3d2738b4-fd43-44ec-8eaf-a2ad4b7e5af5
 content-type: reference
@@ -19,17 +19,17 @@ ht-degree: 0%
 
 # 添加附件{#adding-attachments}
 
-## 在与AEM Forms工作流服务器(JEE上的AEM Forms)同步的表单中添加附件 {#adding-annotations}
+## 在与AEM Forms Workflow Server (JEE上的AEM Forms)同步的表单中添加附件 {#adding-annotations}
 
-AEM Forms应用程序允许您将图像、潦草的注释和文本注释附加到与AEM Forms JEE服务器同步的表单中。 如果您的表单是从AEM Forms工作流服务器加载的，则附件会添加到表单中。 您可以点按附件按钮 ![attachments-app](assets/attachments-app.png) 一起查看表单中的所有附件。 红色通知指定表单中的附件数。 如果表单中没有附件，则看不到红色通知按钮。 如果表单中没有附件，则在您点按附件按钮时 ![attch](assets/attch.png)，则可以选择附加照片或涂写。
+AEM Forms应用程序允许您将图像、手写笔记和文本笔记附加到与AEM Forms JEE服务器同步的表单中。 如果表单是从AEM Forms Workflow服务器加载的，则附件会添加到表单中。 您可以点按附件按钮 ![attachments-app](assets/attachments-app.png) 一起查看表单中的所有附件。 红色通知指定表单中的附件数量。 如果表单中没有附件，您将看不到红色通知按钮。 如果表单中没有附件，则点击附件按钮时 ![附加](assets/attch.png)，您可以选择附加照片或涂鸦。
 
 您的选项包括：
 
-* **图库**:用于根据设备上保存的图片添加图片。
+* **图库**：用于从保存在设备上的图片添加图片。
 
-* **相机**:允许您拍摄照片并将其添加到表单中。
+* **相机**：用于拍摄图片并将其添加到表单。
 
-* **注释**:允许您添加涂写或文本注释。 使用 ![涂写](assets/scribble.png) 添加涂写，以及 ![键盘](assets/keyboard.png) 添加文本注释。
+* **注释**：用于添加涂鸦或文本注释。 使用 ![涂鸦](assets/scribble.png) 添加涂鸦，以及 ![键盘](assets/keyboard.png) 以添加文本注释。
 
 >[!NOTE]
 >
@@ -37,55 +37,55 @@ AEM Forms应用程序允许您将图像、潦草的注释和文本注释附加�
 
 ### “附件”屏幕 {#the-attachments-screen}
 
-要查看某个位置中的所有附件，请点按 ![attachments-app](assets/attachments-app.png). 您可以在此处添加、重命名和删除附件。
+要查看某个位置的所有附件，请点按 ![attachments-app](assets/attachments-app.png). 您可以在此处添加、重命名和删除附件。
 
-![所有附件都在一个位置](assets/attachments-screen.png)
+![一个位置中的所有附件](assets/attachments-screen.png)
 
-您可以使用 **+** “附件”屏幕中的“附件”按钮，以附加其他图片、涂写或文本。
+您可以使用 **+** “附件”屏幕中的按钮，用于附加其他图片、涂鸦或文本。
 
 ### 添加照片 {#adding-a-photograph}
 
-您可以使用移动设备的相机或设备中保存的图片来附加表单中的图片。
+您可以使用移动设备的相机或设备中保存的图片在表单中附加图片。
 
-1. 点按附件按钮 ![attch](assets/attch.png) 在窗口底部。
-1. 点按 **图库** 或 **相机** 中。
+1. 点按附件按钮 ![附加](assets/attch.png) 在窗口底部。
+1. 点按 **图库** 或 **相机** 在出现的弹出窗口中。
 1. 根据您选择的选项，执行以下操作：
 
    1. 如果您选择 **相机**.
 
-      拍照。 然后点按 **使用** ![use-pic](assets/use-pic.png) 按钮。
+      拍张照片。 然后点按 **使用** ![use-pic](assets/use-pic.png) 按钮。
 
-      或点按 **重拍** ![重修](assets/retake.png) 按钮重拍照片。
+      或点按 **重新获取** ![retake](assets/retake.png) 按钮重拍照片。
 
    1. 如果您选择 **图库**.
 
-      此时会弹出设备的图像浏览器。 在设备的图片浏览器中，点按要附加的图片。
+      设备的图像浏览器弹出。 在设备的图片浏览器中，点按要附加的图片。
 
 ### 添加注释 {#adding-a-note}
 
-的 **注释** 选项允许您在表单中添加手绘脚本和文本附件。
+此 **注释** 选项允许您在表单中添加手绘涂鸦和文本附件。
 
-1. 点按附件按钮 ![attch](assets/attch.png) 在窗口底部。
-1. 点按 **注释** 中。
-1. 在启动的“注释”用户界面中，捕获手绘。
+1. 点按附件按钮 ![附加](assets/attch.png) 在窗口底部。
+1. 点按 **注释** 在出现的弹出窗口中。
+1. 在启动的Notes用户界面中，捕获手绘涂鸦。
 
-   ![涂写界面](assets/scribble-ui.png)
+   ![涂鸦界面](assets/scribble-ui.png)
 
-   涂写
+   涂鸦
 
-   您可以在涂写界面中使用以下选项：
+   您可以在“涂鸦”界面中使用以下选项：
 
-   * **清除**:清除屏幕。
-   * **“完成”按钮**:附加当前涂写。
-   * **“取消”按钮**:放弃当前涂写并退出涂写用户界面。
-   * ![键盘](assets/keyboard.png):清除涂写，并允许您添加文本注释。
+   * **清除**：清除屏幕。
+   * **“完成”按钮**：附加当前涂鸦。
+   * **“取消”按钮**：放弃当前涂写并退出涂写用户界面。
+   * ![键盘](assets/keyboard.png)：清除涂写并允许添加文本注释。
 
-   ![AEM Forms应用程序中的键盘涂写](assets/keyboard-inapp.png)
+   ![AEM Forms应用程序中的键盘涂鸦](assets/keyboard-inapp.png)
 
-## 表单中的附件与AEM Forms服务器同步，但没有AEM Forms工作流(OSGi上的AEM Forms) {#attachments-in-forms-synced-with-the-aem-forms-servers-without-aem-forms-workflow-aem-forms-on-osgi}
+## 表单中的附件在未使用AEM Forms Workflow (OSGi上的AEM Forms)的情况下与AEM Forms服务器同步 {#attachments-in-forms-synced-with-the-aem-forms-servers-without-aem-forms-workflow-aem-forms-on-osgi}
 
-与AEM Forms OSGi服务器同步的移动表单的附件与AEM Forms JEE服务器类似。
+与AEM Forms OSGi服务器同步的移动表单附件与AEM Forms JEE服务器的工作方式类似。
 
-从AEM Forms OSGi服务器在应用程序中加载的自适应表单不支持表单级别附件。 要附加图像或文本注释，请在创作表单时启用表单中的字段级附件。 将文件附件组件从组件浏览器拖放到字段上。
+从AEM Forms OSGi服务器加载到应用程序中的自适应表单不支持表单级别附件。 要附加图像或文本注释，请在创作时启用表单中的字段级附件。 从组件浏览器中将文件附件组件拖放到字段中。
 
-如果是自适应表单，则可以查看记录文档(DoR)中的附加文件。 看， [为非XFA自适应表单生成记录文档](../../forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.md).
+对于自适应表单，您可以查看记录文档(DoR)中的附加文件。 参见， [为非XFA自适应表单生成记录文档](../../forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.md).

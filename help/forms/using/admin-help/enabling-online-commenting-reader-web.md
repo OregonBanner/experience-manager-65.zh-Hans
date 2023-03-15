@@ -1,7 +1,7 @@
 ---
 title: 为Adobe Reader Web浏览器插件启用在线注释
 seo-title: Enabling online commenting for Adobe Reader web browser plug-in
-description: 了解如何为Adobe Reader Web浏览器插件启用在线注释。
+description: 了解如何为Adobe Reader Web浏览器插件启用在线评论。
 seo-description: Learn how to enable online commenting for Adobe Reader web browser plug-in.
 uuid: 3ac5270f-2b8a-47b1-b0ca-a5607476923f
 contentOwner: admin
@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # 为Adobe Reader Web浏览器插件启用在线注释 {#enabling-online-commenting-for-adobe-reader-web-browser-plug-in}
 
-要在使用Adobe Reader Web浏览器插件查看的PDF文件中启用“注释和标记”工具栏，必须设置协作后端，如审阅服务器。 如果协作后端不可用，您必须将PDF文件保存到计算机，在Adobe Reader中对文件进行审阅和标记，然后将其发送回创作者。
+要在使用Adobe Reader Web浏览器插件查看的PDF文件中启用“注释和标记”工具栏，必须设置协作后端，如审阅服务器。 如果协作后端不可用，则必须将PDF文件保存到计算机，在Adobe Reader中查看并标记该文件，然后将其发送回创作者。
 
-如果在非协作环境中需要联机注释，请联系Adobe支持以了解更多信息。
+如果在非协作环境中需要在线评论，请联系Adobe支持部门以获取更多信息。

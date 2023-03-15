@@ -356,14 +356,14 @@ query {
 }
 ```
 
-### 示例查询 – 所有城市的名称 标记为城市中断 {#sample-names-all-cities-tagged-city-breaks}
+### 示例查询 – 所有城市的名称 已标记为城市间断 {#sample-names-all-cities-tagged-city-breaks}
 
 如果您：
 
-* 创建各种标记，名为 `Tourism` : `Business`, `City Break`, `Holiday`
-* 并将它们分配给 `City` 实例
+* 创建各种标记，已命名 `Tourism` ： `Business`， `City Break`， `Holiday`
+* 并将它们分配给各种主控变体 `City` 实例
 
-然后，您可以使用查询返回 `name` 和 `tags`在 `city`架构。
+然后，您可以使用查询返回 `name` 和 `tags`中所有标记为“城市间断”的条目 `city`架构。
 
 **示例查询**
 
@@ -1539,7 +1539,7 @@ query {
 
 此查询查找：
 
-* （对于类型的内容片段） `article` 所有变量
+* 类型为的内容片段 `article` 和所有变体
 
 **示例查询**
 
@@ -1562,11 +1562,11 @@ query {
 }
 ```
 
-### 附加了特定标记的给定模型的内容片段变量查询示例{#sample-wknd-fragment-variations-given-model-specific-tag}
+### 附加了特定标记的给定模型的内容片段变体示例查询{#sample-wknd-fragment-variations-given-model-specific-tag}
 
 此查询查找：
 
-* （对于类型的内容片段） `article` 具有标记的一个或多个变体 `WKND : Activity / Hiking`
+* 类型为的内容片段 `article` 具有一个或多个标记的变体 `WKND : Activity / Hiking`
 
 **示例查询**
 
@@ -1680,11 +1680,11 @@ query {
 
 #### 公司 {#fragment-company}
 
-| 公司名称 | 首席执行官 | 员工 |
+| 公司名称 | CEO | 员工 |
 |--- |--- |--- |
 | Apple | Steve Jobs | Duke Marsh<br>Max Caulfield |
 | Little Pony Inc. | Adam Smith | Lara Croft<br>Cutter Slade |
-| NextStep Inc. | 史蒂夫·乔布斯 | Joe Smith<br>Abe Lincoln |
+| NextStep Inc. | Steve Jobs | Joe Smith<br>Abe Lincoln |
 
 #### 人员 {#fragment-person}
 
@@ -1717,4 +1717,4 @@ query {
 | 圣弗朗西斯科 | 美国 |  883306 |  city:beach<br>city:na |
 | 圣何塞 | 美国 |  102635 | city:na |
 | 斯图加特 | 德国 | 634830 | city:emea |
-| 苏黎世 | 瑞士 | 415367 |  城市：资本<br>城市：emea |
+| 苏黎世 | 瑞士 | 415367 |  city:capital<br>city:emea |

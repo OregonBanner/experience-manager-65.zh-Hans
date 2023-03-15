@@ -1,6 +1,6 @@
 ---
-title: 如何在JEE Workbench上的AEM Forms中使用执行脚本服务来构建XML数据？
-description: 使用JEE Workbench上AEM Forms中的执行脚本服务来构建XML数据
+title: 如何在AEM Forms on JEE Workbench中使用execute script服务构建XML数据？
+description: 使用AEM Forms on JEE Workbench中的执行脚本服务构建XML数据
 exl-id: 2ec57cd4-f41b-4e5c-849d-88ca3d2cfe19
 source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
 workflow-type: tm+mt
@@ -9,45 +9,45 @@ ht-degree: 0%
 
 ---
 
-# 使用JEE Workbench上AEM Forms中的执行脚本服务来构建XML数据 {#using-execute-script-service-forms-jee-workbench}
+# 使用AEM Forms on JEE Workbench中的执行脚本服务构建XML数据 {#using-execute-script-service-forms-jee-workbench}
 
-在JEE流程管理工作流中，AEM Forms涉及大量XML，例如：XML信息可以在流程中构建，并发送到JEE Workspace上AEM Forms中的Flex应用程序，用于系统设置，或将信息传递到表单和表单。 在很多情况下，JEE上的AEM Forms开发人员需要管理XML，但很多时候这要求XML通过JEE上的AEM Forms流程进行管理。
+JEE流程管理工作流中AEM Forms涉及许多XML，例如：可以在流程中构建XML信息并将其发送到JEE Workspace中AEM Forms的Flex应用程序，用于系统设置，或者在表单之间传递信息。 在许多情况下，JEE上的AEM Forms开发人员需要管理XML，并且很多时候这需要通过JEE上的AEM Forms流程来管理XML。
 
-处理简单的XML设置时，您可以使用 `Set Value` 服务，这是JEE服务上的默认AEM Forms。 此服务设置流程数据模型中一个或多个数据项的值。 对于非常简单的条件逻辑“如果这样，则是那样”情景，此服务可以满足目的。
+在处理简单的XML设置时，可以使用 `Set Value` 服务，它是JEE服务中的默认AEM Forms。 此服务设置流程数据模型中一个或多个数据项的值。 对于非常简单的条件逻辑“如果是，则是”方案，此服务可以符合目的。
 
-但是，在更复杂的情况下，“设置值”服务没有那么有效。 在这些情况下，需要依赖一组更加稳健的编程命令，例如由Java等编程语言提供的那些命令。 使用Java构建复杂的XML比在“设置值”服务中从简单文本构建XML文档更简单、更清晰。 此外，在Java中包含条件编程比在设置值服务中更容易。
+但是，在更复杂的情况下，设置值服务没有那么有效。 在这些情况下，需要依赖一组更强大的编程命令，例如Java等编程语言提供的命令。 使用Java构建复杂的XML比通过Set Value服务中的简单文本构建XML文档更简单、更清晰。 此外，在Java中包含条件编程比在Set Value服务中包含更容易。
 
 ## 在进程中使用执行脚本服务 {#using-execute-script-service-in-process}
 
-在JEE Workbench上AEM Forms中提供的JEE上的标准AEM Forms服务集中， `Execute Script` 服务。 此服务允许您在流程中执行脚本，并提供 `executeScript` 操作。
+在AEM Forms on JEE Workbench中提供的AEM Forms on JEE标准服务集内，是 `Execute Script` 服务。 此服务允许您在进程中执行脚本，并提供 `executeScript` 操作完成此操作。
 
-### 创建将“执行脚本”服务定义为活动的应用程序和进程 {#create-an-application}
+### 使用定义为活动的“执行脚本”服务创建应用程序和进程 {#create-an-application}
 
-在本教程中，整个应用程序和进程创建都不适合，但为了本说明，我们创建了一个名为“DemoApplication02”的应用程序。 假定已创建应用程序，我们需要在此应用程序中创建一个进程以调用executeScript服务。 向应用程序添加一个流程，该流程包括 `Execute Script` 服务：
+在本教程中，整个应用程序和过程的创建超出了范围，但出于本说明的考虑，我们创建了一个名为“DemoApplication02”的应用程序。 假定已创建应用程序，我们需要在此应用程序中创建进程以调用executeScript服务。 向应用程序添加一个进程，该进程包括 `Execute Script` 服务：
 
-1. 右键单击您的应用程序并选择 [!UICONTROL 新建]. 在 [!UICONTROL 新建] 滑出菜单，选择 [!UICONTROL 进程]. 相应地命名您的流程，根据需要添加描述，然后选择要表示此流程的图标。 在本教程中，我们创建了一个流程，并将其命名为  `executeScriptDemoProcess`.
-1. 定义起点，或简单选择稍后添加起点。
-1. 此时将创建该进程，该进程应在 [!UICONTROL 流程设计] 窗口。 在此窗口中，单击“流程设计”窗口顶部的活动选取器图标，然后将新活动拖动到泳道上。 此时， [!UICONTROL 定义活动窗口] 应显示（请参阅下图）。
+1. 右键单击您的应用程序并选择 [!UICONTROL 新]. In [!UICONTROL 新] 滑出菜单，选择 [!UICONTROL 进程]. 相应地命名您的进程，添加说明（如有必要），然后选择您希望代表此进程的图标。 在本教程中，我们创建了一个流程，并将其命名为  `executeScriptDemoProcess`.
+1. 定义起始点，或简单地选择稍后添加起始点。
+1. 该进程现已创建，应自动在中打开 [!UICONTROL 流程设计] 窗口。 在此窗口中，单击“流程设计”窗口顶部的“活动选取器”图标，然后将新活动拖到泳道上。 此时， [!UICONTROL 定义活动窗口] （参见下图）。
    ![定义活动](assets/define-activity.jpg)
-1. executeScript服务可在 `Foundation` 服务集。 服务名称将对象列为 `Execute Script – 1.0` 和操作名称 `executeScript`. 单击以选择此项目。
-1. 此时应创建此流程，默认情况下， [!UICONTROL 进程属性] 窗口应显示在左侧的窗格中。
+1. executeScript服务位于 `Foundation` 服务集。 服务名称将对象列为 `Execute Script – 1.0` 具有操作名称 `executeScript`. 单击以选择此项目。
+1. 现在应创建此流程，默认情况下， [!UICONTROL 进程属性] 窗口应显示在左侧的窗格中。
 
-#### 使用“执行脚本”服务向进程添加脚本 {#add-script-to-process-with-execute-script}
+#### 使用“Execute Script”服务向进程添加脚本 {#add-script-to-process-with-execute-script}
 
-在定义了“执行脚本”服务活动创建进程后，您便可以向此进程添加脚本。 要向此过程添加脚本，请执行以下操作：
+一旦创建了定义了“执行脚本”服务活动的进程，就可以向此进程添加脚本。 要向此进程添加脚本，请执行以下操作：
 
-1. 导航到 [!UICONTROL 进程属性] 面板。 在此面板中，展开 [!UICONTROL 输入] ，然后单击“……”图标。
+1. 导航到 [!UICONTROL 进程属性] 调色板。 在此面板中，展开 [!UICONTROL 输入] 部分中，然后单击“……”图标。
 
-1. 在显示的文本框中，写入您的脚本。 写完脚本后，按“确定”（请参阅下图）。
+1. 在显示的文本框中编写脚本。 编写脚本后，请按“确定”（参见下图）。
    ![执行脚本](assets/execute-script.jpg)
 
 ## 使用Execute Script服务创建XML {#create-xml-execute-script-service}
 
-创建包含执行脚本服务的进程后，可以使用此脚本创建XML。 您可以使用 `Execute Script` 服务部分。
+创建包含Execute Script服务的进程后，就可以使用此脚本创建XML。 可以使用将脚本添加到进程中所描述的文本框中编写以下所述的脚本 `Execute Script` “服务”部分。
 
-**关于执行脚本服务的技术**
+**关于Execute Script服务的技术**
 
-为了了解执行脚本服务的能力和限制，您必须了解该服务的技术基础。 AEM Forms on JEE使用Apache Xerces文档对象模型(DOM)解析器在进程中创建和存储XML变量。 Xerces是W3C文档对象模型规范的Java实现；定义 [此处](https://dom.spec.whatwg.org/). DOM规范是处理自1998年以来一直存在的XML的一种标准方式。 Xerces - J的Java实现支持DOM 2级1.0版。
+要了解Execute Script服务的能力和限制，必须了解该服务的技术基础。 JEE上的AEM Forms使用Apache Xerces文档对象模型(DOM)解析器在进程中创建和存储XML变量。 Xerces是W3C的Java实现的文档对象模型规范；定义了 [此处](https://dom.spec.whatwg.org/). DOM规范是处理XML的标准方法，自1998年以来，XML一直被使用。 Xerces的Java实现Xerces-J支持DOM级别2版本1.0。
 
 用于存储XML变量的Java类包括：
 
@@ -57,9 +57,9 @@ ht-degree: 0%
 
 DocumentImpl是NodeImpl的子类，因此可以假定任何XML进程变量都是NodeImpl派生。 您可以找到有关NodeImpl的文档 [此处](https://xerces.apache.org/xerces-j/apiDocs/org/apache/xerces/dom/NodeImpl.html).
 
-**使用Execute Script服务创建XML的示例**
+**使用Execute Script服务创建示例XML**
 
-以下是在执行脚本服务中创建XML的示例。 该进程具有XML类型的变量节点。 此活动的最终结果将是XML文档。 该文档的用途或它如何适用于整个过程，在本教程中是不可用的；最终取决于XML在整个应用程序中所需执行的操作。 正如导言中所述，XML可在JEE表单和流程上的AEM Forms中用于多种目的，这只是对如何对执行脚本活动进行代码以输出简单XML文档的说明。
+以下是在Execute Script服务中创建XML的示例。 该进程具有一个类型为XML的变量（节点）。 此活动的最终结果将是一个XML文档。 该文档的作用，或它如何应用于整个过程在本教程中超出了范围；最终要归结为在整个应用程序中需要使用XML做什么。 正如简介中所述，XML可以在AEM Forms中用于JEE表单和流程中的许多目的，这仅仅是对如何编写“执行脚本”活动的代码以输出简单XML文档的解释。
 
 用于输出XML的简单Java脚本如下所示：
 
@@ -91,7 +91,7 @@ patExecContext.setProcessDataValue("/process_data/node", document);
 
 >[!NOTE]
 >
->必须将上述DOM对象导入脚本。
+>必须将上述DOM对象导入到脚本中。
 
 此简单脚本的结果是新的XML文档，其变量节点设置为：
 
@@ -103,9 +103,9 @@ patExecContext.setProcessDataValue("/process_data/node", document);
 </resources>
 ```
 
-**使用迭代循环向XML添加节点**
+**使用迭代循环将节点添加到XML**
 
-节点也可以添加到进程内的现有XML变量中。 变量（节点）包含我们刚刚创建的XML对象。
+节点也可以添加到流程中的现有XML变量中。 变量node包含我们刚刚创建的XML对象。
 
 ```xml
 Document document = patExecContext.getProcessDataValue("/process_data/node");

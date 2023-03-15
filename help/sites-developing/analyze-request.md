@@ -1,7 +1,7 @@
 ---
 title: 请求分析脚本
 seo-title: Request Analysis Script
-description: 请求分析脚本的编写，旨在简化对access.log文件的分析，生成可读报告供以后处理
+description: 制作request analysis脚本是为了便于分析access.log文件，从而生成可读报告供以后处理
 seo-description: The request analysis script is made to ease the analysis of the access.log files producing a readable report for later processing
 uuid: 24eff3c6-5748-46f3-a30c-4a3a6427ce1d
 contentOwner: Guillaume Carlino
@@ -21,32 +21,32 @@ ht-degree: 2%
 
 ## 下载 {#download}
 
-此脚本旨在简化 `access.log` 生成可读报告以供日后处理的文件。
+编写此脚本是为了便于分析 `access.log` 生成可读报告以供以后处理的文件。
 
 [获取文件](assets/analyse-access.sh)
 
 ## 描述 {#description}
 
-此脚本旨在简化 `access.log` 生成可读报告以供日后处理的文件。
+编写此脚本是为了便于分析 `access.log` 生成可读报告以供以后处理的文件。
 
-它会生成总的请求数、GET与POST、随时间推移的请求分发等。
+它可以生成整体请求数、GET与POST、请求随时间推移的分布等等。
 
-输出采用Markdown语法，因此使用pandoc等工具将其转换为PDF，或在带有Markdown查看器等插件的浏览器中显示将会更轻松。
+输出采用Markdown语法，因此将输出转换为使用pandoc等PDF或使用Markdown查看器等插件在浏览器中显示的工具会更容易。
 
 它可以分析命令行上提供的自定义路径。
 
-从告诉您如何运行该注释的文件中获取注释：
+从文件中指明如何运行该程序的注释获取：
 
-分析CQ `access.log` 根据 `stdout`.
+分析CQ `access.log` 推断各种信息并生成Markdown输出 `stdout`.
 
 ## 用途 {#usage}
 
 `./analyse-access.sh access.log.2013-&ast;`
 
-您可以提供其他自定义路径以在命令行上进行分析
+您可以在命令行中提供其他要分析的自定义路径
 
 `/analyse-access.sh access.log.2013-&ast; /my/custom/path/1 /my/custom/path/2`
 
-可以通过简单的管道保存输出
+可通过简单管道保存输出
 
 `./analyse-access.sh access.log.2013-&ast; | tee yr2013.md`

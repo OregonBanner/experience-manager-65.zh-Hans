@@ -20,30 +20,30 @@ ht-degree: 0%
 
 # 配置回退字体 {#configuring-fallback-fonts}
 
-您可以手动配置FontManagerResources.properties文件，以将默认的AEM表单字体映射到回退（或替换）（如果服务器上没有默认字体）。 此属性文件位于adobe-fontmanager.jar文件中。
+您可以手动配置FontManagerResources.properties文件，以便在服务器上没有默认字体时，将默认AEM forms字体映射到回退（或替换）。 此属性文件位于adobe-fontmanager.jar文件中。
 
 >[!NOTE]
 >
 >回退字体配置也适用于汇编程序服务。
 
-1. 导航到adobe-livecycle-*`[appserver]`*.ear文件(位于 *`[aem-forms root]`*/configurationManager/export目录，创建备份副本，并解包原始副本。
+1. 导航到adobe-livecycle-*`[appserver]`*&#x200B;中的.ear文件 *`[aem-forms root]`*/configurationManager/export目录，生成备份副本，然后取消打包原始文件。
 1. 找到adobe-fontmanager.jar文件并将其解包。
-1. 找到FontManagerResources.properties文件，并在文本编辑器中将其打开。
-1. 根据需要修改通用字体和回退字体位置和名称，并保存文件。
+1. 找到FontManagerResources.properties文件，然后在文本编辑器中将其打开。
+1. 根据需要修改“通用”和“后备”字体位置和名称，并保存文件。
 
-   FontManagerResources.properties文件中的字体条目与 *`[aem-forms root]`*/fonts目录。 如果指定的字体不是默认的AEM表单字体，则必须在此目录结构中（在现有目录中或新创建的目录中）安装这些字体。
+   FontManagerResources.properties文件中的字体条目是相对于 *`[aem-forms root]`*/fonts目录。 如果指定的字体不是默认的AEM forms字体，则必须将这些字体安装在此目录结构内（在现有目录内或新创建的目录中）。
 
    >[!NOTE]
    >
-   >如果指定的字体或默认字体不包含特定的unicode字符，或者如果不可用，则根据以下优先级从回退字体中提取该字符：
+   >如果指定的字体或默认字体不包含特定的unicode字符，或者如果不可用，则根据以下优先级从回退字体中获取该字符：
 
-   * 特定于区域设置的字体
-   * 未设置区域设置时的根字体
-   * 通用字体，按回退表中的顺序集搜索
+   * 区域设置特定的字体
+   * 如果未设置区域设置，则为ROOT字体
+   * 通用字体，按备用表中的顺序集搜索
 
 1. 重新打包adobe-fontmanager.jar文件。
 1. 重新打包adobe-livecycle-*`[appserver]`*.ear文件，然后手动或通过运行Configuration Manager重新部署它。
 
 >[!NOTE]
 >
->请勿使用Configuration Manager重新打包adobe-livecycle-`[appserver]`.ear文件，因为它将使用AEM表单默认值覆盖您的修改。
+>请勿使用Configuration Manager重新打包adobe-livecycle-`[appserver]`.ear文件，因为它将使用AEM forms默认值覆盖您的修改。

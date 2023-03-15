@@ -1,7 +1,7 @@
 ---
-title: 创作嵌套群组
+title: 创作嵌套组
 seo-title: Authoring Nested Groups
-description: 创建嵌套群组
+description: 创建嵌套组
 seo-description: Create nested groups
 uuid: b377dc1b-bbb6-41c9-b0fc-8281e1410685
 contentOwner: Janice Kendall
@@ -18,43 +18,43 @@ ht-degree: 4%
 
 ---
 
-# 创作嵌套群组{#authoring-nested-groups}
+# 创作嵌套组{#authoring-nested-groups}
 
-## 在创作时创建组 {#creating-groups-on-author}
+## 创建作者群组 {#creating-groups-on-author}
 
-在AEM创作实例上，从全局导航中：
+在AEM创作实例上，从全局导航：
 
-* 选择 **[!UICONTROL 社区]** > **[!UICONTROL 站点]**.
-* 选择 **[!UICONTROL 参与文件夹]** 打开它。
-* 为 **[!UICONTROL 入门教程]** 英文网站。
+* 选择 **[!UICONTROL Communities]** > **[!UICONTROL 站点]**.
+* 选择 **[!UICONTROL engage文件夹]** 打开它。
+* 选择卡 **[!UICONTROL 入门教程]** 英文网站。
 
    * 选择卡片图像。
-   * 做 *not* 选择一个图标。
+   * Do *非* 选择一个图标。
 
-结果是达到 [“组”控制台](/help/communities/groups.md):
+结果是达到 [组控制台](/help/communities/groups.md)：
 
-![创建组](assets/create-group.png)
+![create-group](assets/create-group.png)
 
-组函数将显示为在其中创建组实例的文件夹。 选择Groups文件夹以将其打开。 将显示在发布时创建的组。
+组功能将显示为文件夹，在其中创建组的实例。 选择“组”文件夹以将其打开。 发布时创建的组可见。
 
 ![create-new-group](assets/create-new-group.png)
 
-## 创建主要艺术组 {#create-main-arts-group}
+## 创建主艺术组 {#create-main-arts-group}
 
-可以创建此组，因为参与的站点结构包含组功能。 站点的 `Reference Template` 默认为允许选择任何已启用的组模板。 因此，为此新组选择的模板是 `Reference Group`.
+可以创建此组，因为engage的站点结构包含组功能。 站点中函数的配置 `Reference Template` 默认为允许选择任何已启用的组模板。 因此，为该新组选择的模板是 `Reference Group`.
 
-这些控制台与“社区站点”控制台类似。
+这些控制台与社区站点控制台类似。
 
-* 选择 **[!UICONTROL 创建群组]**
+* 选择 **[!UICONTROL 创建组]**
 
 * **社区组模板**:
 
-   * **[!UICONTROL 社区组标题]**:艺术
-   * **[!UICONTROL 社区组描述]**:各种艺术团体的家长组
-   * **[!UICONTROL 社区组根]**: *默认保留*
-   * **[!UICONTROL 其他可用的社区组语言]**:使用下拉菜单选择可用的社区组语言。 该菜单显示创建父社区站点的所有语言。 用户可以在这些语言中进行选择，以在此单步中的多个区域设置中创建组。 在相应社区站点的“组”控制台中，会以多种指定语言创建同一组。
-   * **[!UICONTROL 社区组名称]**:艺术
-   * **[!UICONTROL 模板]**:下拉框选择 `Reference Group`
+   * **[!UICONTROL 社区组标题]**：艺术
+   * **[!UICONTROL 社区组描述]**：各种艺术团体的父组
+   * **[!UICONTROL 社区组根目录]**： *保留为默认值*
+   * **[!UICONTROL 其他可用的社区组语言]**：使用下拉菜单选择可用的社区组语言。 该菜单显示创建父社区站点所用的所有语言。 用户可以在这些语言中进行选择，以便通过此单一步骤在多个区域设置中创建组。 在相应社区站点的“组”控制台中，使用多种指定语言创建同一个组。
+   * **[!UICONTROL 社区组名称]**：艺术
+   * **[!UICONTROL 模板]**：下拉菜单以选择 `Reference Group`
    * 选择 **[!UICONTROL 下一个]**
 
 ![嵌套社区组](assets/parent-to-nestedgroup.png)
@@ -63,17 +63,17 @@ ht-degree: 4%
 
 * **[!UICONTROL Design]**
 
-   * 更改设计或允许默认父网站的设计。
+   * 更改设计或允许默认父站点的设计。
    * 选择&#x200B;**[!UICONTROL 下一步]**。
 
 * **[!UICONTROL 设置]**
 
    * **[!UICONTROL 审核]**
 
-      * 将留空（从父站点继承）。
+      * 留空（继承自父站点）。
    * **[!UICONTROL 成员资格]**
 
-      * 使用默认 `Optional Membership.`
+      * 使用默认值 `Optional Membership.`
 
       * **[!UICONTROL 缩略图]**
          * `optional.*`
@@ -83,54 +83,54 @@ ht-degree: 4%
 
 * 选择&#x200B;**[!UICONTROL 创建]**。
 
-### 艺术组中的嵌套组 {#nesting-groups-within-arts-group}
+### 艺术组内的嵌套组 {#nesting-groups-within-arts-group}
 
-的 `groups` 文件夹现在包含两个组（刷新页面）。
+此 `groups` 文件夹现在包含两个组（刷新页面）。
 
 ![嵌套组](assets/create-community-group.png)
 
 #### 发布组 {#publish-group}
 
-在创建嵌套在 `arts` 群组中，将鼠标悬停在 `arts` 卡片上，然后选择“发布”图标以发布它。
+在创建嵌套于中的组之前 `arts` 组，将鼠标悬停在 `arts` 信息卡，然后选择发布图标以进行发布。
 
 ![publish-site](assets/publish-site.png)
 
-等待确认群组已发布。
+等待确认组已发布。
 
-![组发布](assets/group-published.png)
+![已发布组](assets/group-published.png)
 
-的 `arts` 组还应包含 `groups` 文件夹，但是空的，可在其中创建新群组的文件夹。 导航到艺术组文件夹并创建3个嵌套组，每个组具有不同的成员资格设置：
+此 `arts` 组还应包含 `groups` 文件夹，但为空的文件夹，可以在其中创建新组。 导航到艺术组文件夹，并创建3个嵌套的艺术组，每个艺术组具有不同的成员资格设置：
 
-1. **[!UICONTROL 可视]**
+1. **[!UICONTROL 可视化]**
 
    * 标题: `Visual Arts`
    * 名称: `visual`
    * 模板: `Reference Group`
-   * 会员资格：选择 `Optional Membership`，公开给所有成员的群组。
+   * 成员资格：选择 `Optional Membership`，一个公共组，对所有成员开放。
 
 1. **[!UICONTROL 听觉]**
 
    * 标题: `Auditory Arts`
    * 名称: `auditory`
    * 模板: `Reference Group`
-   * 会员资格：选择 `Required Membership`，一个打开的组，可供成员加入。
+   * 成员资格：选择 `Required Membership`，一个开放组，可供成员加入。
 
 1. **[!UICONTROL 历史]**
 
    * 标题: `Art History`
    * 名称: `history`
    * 模板: `Reference Group`
-   * 会员资格：选择 `Restricted Membership`，秘密组，仅对受邀成员可见。 例如，邀请 [演示用户](/help/communities/tutorials.md#demo-users) `emily.andrews@mailinator.com`.
+   * 成员资格：选择 `Restricted Membership`，一个机密组，仅对受邀成员可见。 例如，邀请 [演示用户](/help/communities/tutorials.md#demo-users) `emily.andrews@mailinator.com`.
 
-刷新页面可查看所有三个嵌套群组（子社区）。
+刷新页面可查看所有三个嵌套组（子社区）。
 
-要从“社区站点”控制台导航到嵌套的组，请执行以下操作：
+要从社区站点控制台导航到嵌套组，请执行以下操作：
 
-* 选择 **[!UICONTROL 参与文件夹]**
-* 选择 **[!UICONTROL 快速入门教程卡]**
-* 选择 **[!UICONTROL 群组]** 文件夹
+* 选择 **[!UICONTROL engage文件夹]**
+* 选择 **[!UICONTROL “快速入门”教程卡]**
+* 选择 **[!UICONTROL 组]** 文件夹
 * 选择 **[!UICONTROL 艺术卡]**
-* 选择 **[!UICONTROL 群组]** 文件夹
+* 选择 **[!UICONTROL 组]** 文件夹
 
 ![create-new-group2](assets/create-new-group2.png)
 
@@ -138,31 +138,31 @@ ht-degree: 4%
 
 ![publish-site](assets/publish-site.png)
 
-发布主社区网站后：
+发布主社区站点后：
 
 * 单独发布每个组：
 
-   * 等待确认群组已发布。
+   * 正在等待确认该组已发布。
 
-* 在发布嵌套在中的所有组之前发布父组：
+* 发布嵌套在以下内容中的任何组之前发布父组：
 
-   * 所有群组都必须以自上而下的方式发布。
+   * 必须以自上而下的方式发布所有组。
 
-![组发布](assets/group-published.png)
+![已发布组](assets/group-published.png)
 
 ## 发布体验 {#experience-on-publish}
 
-登录后，可能会体验不同的群组，例如使用 [演示用户](/help/communities/tutorials.md#demo-users) 用于：
+登录时可能会遇到不同的组，例如 [演示用户](/help/communities/tutorials.md#demo-users) 用于：
 
-* 艺术/历史组成员：emily.andrews@mailinator.com
-   * 受限（秘密）组艺术/历史可见：
-   * 可以查看可选（公共）群组。
-   * 可以加入受限（打开）组。
+* 艺术/历史组成员：emily.andrews@mailinator.com/password
+   * 受限（机密）组（艺术/历史）可见：
+   * 可以查看可选（公共）组。
+   * 可以加入受限制（开放）的组。
 
-* 组管理器：aaron.mcdonald@mailinator.com
+* 组管理器： aaron.mcdonald@mailinator.com/password
 
-   * 可以查看可选（公共）群组。
-   * 可以加入受限（打开）组。
-   * 看不到受限（密钥）组。
+   * 可以查看可选（公共）组。
+   * 可以加入受限制（开放）的组。
+   * 无法看到受限（机密）组。
 
-访问社区 [“成员”和“组”控制台](/help/communities/members.md) 创作时，将其他用户添加到与社区组对应的各个成员组。
+访问社区 [成员和组控制台](/help/communities/members.md) 将其他用户添加到与社区组对应的各种成员组。

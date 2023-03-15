@@ -20,21 +20,21 @@ ht-degree: 0%
 
 # 更改外观(HBS) {#alter-the-appearance-hbs}
 
-现在，应用程序目录(/apps)中自定义注释系统的组件就位，并且resourceSuperType引用默认注释系统并注册了自定义模型/视图，因此可以修改实施。
+现在，应用程序目录(/apps)中的自定义注释系统组件已准备就绪，并且resourceSuperType引用了默认注释系统和注册的自定义模型/视图，因此可以修改实施。
 
-对于简单的演示，会删除视觉功能（发布评论的已登录用户显示的头像）。
+对于简单的演示，将删除视觉功能，即发布评论的登录用户的头像。
 
 >[!NOTE]
 >
->要使用该扩展，要受影响的网站(/content)中评论系统的实例必须将其resourceType设置为自定义评论系统。
+>要使用扩展，要受影响的网站中的注释系统实例(/content)必须将其resourceType设置为自定义注释系统。
 
 ## 修改HBS脚本 {#modify-the-hbs-scripts}
 
-使用 [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md):
+使用 [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md)：
 
-* 打开 [/apps/custom/components/comments/comments/comment/**comment.hbs**](https://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments/comment/comment.hbs)
+* 打开 [/apps/custom/components/comments/comment/**comment.hbs**](https://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments/comment/comment.hbs)
 
-   * 注释掉包含评论帖子头像的标记（~第21行）：
+   * 注释掉包含注释帖子头像的标记（~第21行）：
 
       ```
         <!--
@@ -44,7 +44,7 @@ ht-degree: 0%
 
 * 打开 [/apps/custom/components/comments/**comments.hbs**](https://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments/comments.hbs)
 
-   * 注释掉包含下一个评论条目的头像的标记（~第44行）：
+   * 注释掉包含下一个注释条目（~第44行）的头像的标记：
 
       ```
         <!--
@@ -58,24 +58,24 @@ ht-degree: 0%
 
 修改应用程序后，需要重新复制自定义组件。
 
-一种方法是：
+实现目标的一种方法是：
 
 * 从主菜单
 
    * 选择 **[!UICONTROL 工具]** > **[!UICONTROL 操作]** > **[!UICONTROL 复制]**.
    * 选择 **[!UICONTROL 激活树]**.
-   * 已设置 `Start Path` to `/apps/custom`.
+   * 设置 `Start Path` 到 `/apps/custom`.
    * 取消选择 **[!UICONTROL 仅已修改]**.
    * 选择 **[!UICONTROL 激活]** 按钮。
 
-### 在已发布的示例页面上查看已修改的注释 {#view-modified-comment-on-published-sample-page}
+### 查看已发布示例页面上的修改评论 {#view-modified-comment-on-published-sample-page}
 
-[继续体验](/help/communities/extend-sample-page.md#publish-sample-page) 在发布实例上（仍以同一用户身份登录），现在可以在发布环境中刷新页面以查看修改以删除头像：
+[继续体验](/help/communities/extend-sample-page.md#publish-sample-page) 在仍以同一用户身份登录的发布实例上，现在可以在发布环境中刷新页面以查看删除头像的修改：
 
 ![view-modified-content](assets/view-modified-content.png)
 
 ### 示例注释扩展包 {#sample-comment-extension-package}
 
-附加的是在本教程中创建的自定义注释应用程序包。
+附件是本教程中创建的自定义注释应用程序包。
 
 [获取文件](assets/sample-comment-extension-6-1-fp3.zip)

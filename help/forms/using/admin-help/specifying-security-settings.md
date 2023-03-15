@@ -19,10 +19,10 @@ ht-degree: 2%
 
 # 指定安全设置 {#specifying-security-settings}
 
-Forms允许您控制是否解析XML输入中的外部实体。 默认情况下，这些表单已解析，但您可以更改此行为以提高AEM表单系统的安全性。
+通过Forms，您可以控制是否解析XML输入中的外部实体。 默认情况下，这些问题会得到解决，但您可以更改此行为以提高AEM表单系统的安全性。
 
 **阻止处理包含对外部实体的引用的XML数据文件**
 
-1. 在管理控制台中，单击 **[!UICONTROL 服务>Forms]**.
-1. 清除“解析外部实体”(Resolve External Entities)复选框。
+1. 在管理控制台中，单击 **[!UICONTROL 服务> Forms]**.
+1. 清除“解析外部图元”复选框。
 1. 单击“**[!UICONTROL 保存]**”。

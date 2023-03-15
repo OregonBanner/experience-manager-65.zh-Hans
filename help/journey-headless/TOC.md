@@ -8,7 +8,7 @@ role: Developer, Architect
 source-git-commit: 2523d9dcdbbfd9107e43ca53e2bb586452be1cb8
 workflow-type: tm+mt
 source-wordcount: '225'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 94%
 # AEM Headless 历程 {#headless-journey}
 
 + [AEM Headless 历程](/help/journey-headless/home.md)
-+ AEM Headless开发人员历程 {#developer}
++ AEM Headless 开发人员历程 {#developer}
    + [了解 AEM 中的 Headless](developer/overview.md)
    + [了解 CMS Headless 开发](developer/learn-about.md)
    + [AEM Headless 快速入门](developer/getting-started.md)
@@ -32,13 +32,13 @@ ht-degree: 94%
    + [使用 AEM 对 Headless 进行内容建模 – 简介](architect/introduction.md)
    + [了解使用 AEM 对 Headless 进行内容建模的基础知识](architect/basics.md)
    + [了解如何在 AEM 中创建内容片段模型](architect/model-structure.md)
-+ AEM Headless内容创作历程 {#author}
++ AEM Headless 内容作者历程 {#author}
    + [AEM Headless 内容创作历程 – 概述](author/overview.md)
    + [使用 AEM 为 Headless 创作 – 简介](author/introduction.md)
    + [使用 AEM 为 Headless 创作基本内容](author/basics.md)
    + [了解如何在内容片段中使用参考内容](author/references.md)
    + [了解如何为内容片段定义元数据和标记](author/metadata-tagging.md)
-+ AEM无头翻译历程 {#translation}
++ AEM Headless 翻译历程 {#translation}
    + [了解 AEM 中的 Headless 翻译](translation/overview.md)
    + [AEM Headless 翻译快速入门](translation/getting-started.md)
    + [了解 AEM 中的 Headless 内容和翻译方法](translation/learn-about.md)

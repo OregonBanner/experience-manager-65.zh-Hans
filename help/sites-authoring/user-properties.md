@@ -50,7 +50,7 @@ AEM 提供了配置帐户和创作环境某些方面的功能。
 
 每个用户都可以为自己设置特定的属性。
 
-![screenshot_2019-03-05at100322](assets/screen-shot_2019-03-05at100322.png)
+![screen-shot_2019-03-05at100322](assets/screen-shot_2019-03-05at100322.png)
 
 * **语言**
 

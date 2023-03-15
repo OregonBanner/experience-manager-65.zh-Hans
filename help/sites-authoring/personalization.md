@@ -13,7 +13,7 @@ exl-id: be34760a-875b-419d-9fa4-2359b314a3b7
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '519'
-ht-degree: 87%
+ht-degree: 89%
 
 ---
 
@@ -43,7 +43,7 @@ AEM 为创作目标内容和呈现个性化体验提供了一个工具框架。
 
 受众基于在 AEM 或 Adobe Target 中创建的营销区段。当访客打开网页时，页面逻辑会确定他们所属的受众，并显示您为该受众创建的内容。
 
-例如，某项活动定义了针对两类不同受众的体验：30 岁以上的女性和 30 岁以下的女性。We.Retail网站的“女性”页面针对每个体验显示不同的产品。
+例如，某项活动定义了针对两类不同受众的体验：30 岁以上的女性和 30 岁以下的女性。We.Retail网站的女性页面针对每种体验显示不同的产品。
 
 您可以为活动定义体验。您可以使用[“活动”控制台](/help/sites-authoring/activitylib.md#adding-editing-an-activity-using-the-activities-console)或[定位模式](/help/sites-authoring/content-targeting-touch.md#adding-and-removing-experiences-using-targeting-mode)将体验添加到活动中。
 
@@ -51,7 +51,7 @@ AEM 为创作目标内容和呈现个性化体验提供了一个工具框架。
 
 选件是指显示在页面上的某个位置以提供体验的内容。可针对不同的体验使用不同的选件，以最大限度地提高受众内容的有效性。
 
-例如，We.Retail示例网站的“女士”页面可以使用选件作为显示在页面顶部的Teaser图像。 对于 30 岁以上的女性体验和 30 岁以下的女性体验，将使用不同的选件作为 Teaser。
+例如，We.Retail示例网站的女性页面可以使用选件作为显示在页面顶部的Teaser图像。 对于 30 岁以上的女性体验和 30 岁以下的女性体验，将使用不同的选件作为 Teaser。
 
 使用[“选件”控制台](/help/sites-authoring/offerlib.md)，可创建您可以在多个体验中使用的选件。[创作目标内容](/help/sites-authoring/content-targeting-touch.md)时，可创建单次使用选件或添加选件库中的选件。
 
@@ -70,4 +70,4 @@ Adobe Target 定位引擎允许从 Adobe Target 中跟踪的页面访问收集�
 * 使用此定位引擎时，您可以使用从 Adobe Target 导入的区段来定义体验受众。
 * 使用 Adobe Target 引擎的活动会[同步到 Target](/help/sites-authoring/activitylib.md#synchronizing-activities-with-adobe-target)。
 
-您可以在 [与Adobe Target集成](/help/sites-administering/opt-in.md).
+[与 Adobe Target 集成后](/help/sites-administering/opt-in.md)，您便可以使用此引擎。

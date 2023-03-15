@@ -1,5 +1,5 @@
 ---
-title: 审核凭据使用信息
+title: 查看凭据使用信息
 seo-title: Review credential use information
 description: 了解如何查看凭据使用信息。
 seo-description: Learn how to review credential use information.
@@ -17,13 +17,13 @@ ht-degree: 0%
 
 ---
 
-# 审核凭据使用信息 {#review-credential-use-information}
+# 查看凭据使用信息 {#review-credential-use-information}
 
-凭据包含描述其预期用途的信息，这些用途可通过Acrobat Reader DC扩展最终用户Web应用程序访问。 您可以使用此信息来确定安装的凭据类型（评估或生产）及其有效日期。
+凭据包含的信息描述其预期用途，可以通过Acrobat Reader DC扩展最终用户Web应用程序访问。 您可以使用此信息确定安装的凭据类型（评估凭据或生产凭据）及其有效日期。
 
-1. 打开Web浏览器并输入以下URL:
+1. 打开Web浏览器并输入此URL：
 
-   http://localhost:port/ReaderExtensions(其中 *端口* 是您的应用程序服务器的端口号)
+   http://localhost:port/ReaderExtensions (其中 *端口* 是应用程序服务器的端口号)
 
 1. 使用默认用户名和密码登录：
 
@@ -33,10 +33,10 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >您必须具有管理员或超级用户权限才能使用默认用户名和密码登录。 要允许其他用户访问Acrobat Reader DC扩展，请在“用户管理”中创建用户帐户，并向用户授予Acrobat Reader DC扩展的“Web应用程序”角色。
+   >您必须具有管理员或超级用户权限才能使用默认用户名和密码登录。 要允许其他用户访问Acrobat Reader DC扩展，请在“用户管理”中创建用户帐户，并授予用户Acrobat Reader DC扩展Web应用程序角色。
 
-1. 从“选择凭据”列表中选择凭据别名，并查看“过期日期”和“预期使用通知”中包含的信息。
+1. 从“选择凭据”列表中选择凭据别名，并查看“到期日期”和“预期使用通知”中包含的信息。
 
 >[!NOTE]
 >
->凭据的过期日期还可在管理控制台的“设置”>“信任存储管理”>“本地凭据”页面的“过期日期”下找到。
+>凭据的过期日期还可在管理控制台的“设置”>“信任存储区管理”>“本地凭据”页面的“过期日期”下找到。

@@ -40,13 +40,13 @@ ht-degree: 83%
 >
 >切换到经典 UI 的各种选项无法立即开箱即用，必须对您的实例进行专门配置。
 >
->请参阅 [启用对经典UI的访问](/help/sites-administering/enable-classic-ui.md) 以了解更多信息。
+>参见 [启用对经典UI的访问](/help/sites-administering/enable-classic-ui.md) 了解更多信息。
 
 >[!NOTE]
 >
 >对于从以前版本升级而来的实例，页面创作将继续使用经典 UI。
 >
->升级后，页面创作不会自动切换到触屏优化UI，但您可以使用 [OSGi配置](/help/sites-deploying/configuring-osgi.md) 的 **WCM创作UI模式服务** ( `AuthoringUIMode` 服务)。 请参阅[编辑器的 UI 重写](#ui-overrides-for-the-editor)。
+>升级后，页面创作不会自动切换到触控式UI，但您可以使用来配置此设置 [OSGi配置](/help/sites-deploying/configuring-osgi.md) 的 **WCM创作UI模式服务** ( `AuthoringUIMode` 服务)。 请参阅[编辑器的 UI 重写](#ui-overrides-for-the-editor)。
 
 ## 配置实例的默认 UI {#configuring-the-default-ui-for-your-instance}
 
@@ -71,7 +71,7 @@ ht-degree: 83%
    >用于切换到经典 UI 的该选项无法立即开箱即用，必须对您的实例进行专门配置。
    >
    >
-   >请参阅 [启用对经典UI的访问](/help/sites-administering/enable-classic-ui.md) 以了解更多信息。
+   >参见 [启用对经典UI的访问](/help/sites-administering/enable-classic-ui.md) 了解更多信息。
 
    如果启用该选项，那么每当您将鼠标悬停在适用的控制台上时，都会显示一个图标（一个显示器符号），点按/单击它将在经典 UI 中打开相应的位置。
 
@@ -81,7 +81,7 @@ ht-degree: 83%
 
 * **URL**
 
-   经典UI可通过欢迎屏幕的URL()访问 `welcome.html`.例如：
+   可以使用欢迎屏幕的URL访问经典UI，网址为 `welcome.html`.例如：
 
    `https://localhost:4502/welcome.html`
 
@@ -98,7 +98,7 @@ ht-degree: 83%
 >
 >用于切换到经典 UI 的该选项无法立即开箱即用，必须对您的实例进行专门配置。
 >
->请参阅 [启用对经典UI的访问](/help/sites-administering/enable-classic-ui.md) 以了解更多信息。
+>参见 [启用对经典UI的访问](/help/sites-administering/enable-classic-ui.md) 了解更多信息。
 
 如果已启用，**打开经典 UI** 将可从&#x200B;**页面信息**&#x200B;对话框中访问：
 
@@ -110,15 +110,15 @@ ht-degree: 83%
 
 * 创作页面时：
 
-   * 在使用 `cf#` 中。 例如：
+   * 使用访问页面时，强制使用经典编辑器 `cf#` 在URL中。 例如：
       `https://localhost:4502/cf#/content/geometrixx/en/products/triangle.html`
 
-   * 在使用 `/editor.html` 在URL中或使用触控设备时。 例如：
+   * 使用时强制使用触屏编辑器 `/editor.html` 在URL中或使用触控设备时。 例如：
       `https://localhost:4502/editor.html/content/geometrixx/en/products/triangle.html`
 
 * 任何强制操作都是临时的，而且仅对浏览器会话有效
 
-   * 将根据是否启用触屏( `editor.html`)或classic( `cf#`)。
+   * Cookie集的设置将取决于是否启用了触控( `editor.html`)或经典( `cf#`)时，不会将反向链接计算两次。
 
 * 在通过 `siteadmin` 打开页面时，将检查以下各项是否存在：
 

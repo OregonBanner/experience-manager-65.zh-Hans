@@ -35,9 +35,9 @@ ht-degree: 70%
 
 以下各表中介绍了具体的文档并提供了相应链接。
 
-## 资产 {#assets}
+## Assets {#assets}
 
-以下主题介绍了有关资产(包括Dynamic Media功能和Dynamic Media Classic集成)的最佳实践：
+以下主题介绍了有关资产的最佳实践，包括Dynamic Media功能和Dynamic Media Classic集成：
 
 <table>
  <tbody>
@@ -54,7 +54,7 @@ ht-degree: 70%
   <tr>
    <td>动态图像处理</td>
    <td><a href="/help/assets/best-practices-for-optimizing-the-quality-of-your-images.md">动态图像处理最佳实践</a></td>
-   <td><p>介绍在使用Dynamic Media功能或与Dynamic Media Classic集成时，如何锐化图像以获得最佳效果，以及如何以最佳方式优化图像质量。 </p> </td>
+   <td><p>描述如何在使用Dynamic Media功能或与Dynamic Media Classic集成时锐化图像以获得最佳结果，以及优化图像质量的最佳方法。 </p> </td>
   </tr>
   <tr>
    <td>多语言资产</td>
@@ -64,14 +64,14 @@ ht-degree: 70%
  </tbody>
 </table>
 
-## 站点 {#sites}
+## Sites {#sites}
 
 在管理和创作网站内容方面具有一些最佳实践，如下所述：
 
 |  |  |  |
 |---|---|---|
-| 创作工具 | [创作环境和工具](/help/sites-authoring/author-environment-tools.md) | 提供页面创作工具的概述。 |
-| 组织页面 | [创建和组织页面](/help/sites-authoring/managing-pages.md) | 提供有关如何对页面进行最佳组织的概述，包括命名约定。 |
+| 创作工具 | [创作环境和工具](/help/sites-authoring/author-environment-tools.md) | 提供用于创作页面的工具的概述。 |
+| 组织页面 | [创建和组织页面](/help/sites-authoring/managing-pages.md) | 提供了有关如何以最佳方式组织页面的概述，包括命名约定。 |
 
 ## Forms {#forms}
 

@@ -27,7 +27,7 @@ ht-degree: 88%
 >
 >要创建基于现有标准站点的移动站点，请创建标准站点的 Live Copy。(请参阅 [为不同渠道创建Live Copy](/help/sites-administering/msm-livecopy.md).)
 >
->AEM 开发人员可以创建新设备组。(请参阅 [创建设备组过滤器](/help/sites-developing/groupfilters.md).)
+>AEM 开发人员可以创建新设备组。(请参阅 [创建设备组筛选器](/help/sites-developing/groupfilters.md).)
 
 请使用以下过程来创作移动页面：
 

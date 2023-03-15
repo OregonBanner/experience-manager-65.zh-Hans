@@ -34,11 +34,11 @@ Adobe Experience Manager (AEM) 附带多种现成的组件，这些组件为网�
 
 * [用于创作页面的组件](/help/sites-classic-ui-authoring/classic-page-author-edit-mode.md)
 
-   用于创建标准页面内容的组件主要包含在组中 **常规**, **列** 和 **Forms**.
+   用于创建标准页面内容的组件主要包含在组中 **常规**， **列** 和 **Forms**.
 
 * [电子商务](/help/commerce/cif-classic/administering/ecommerce.md)
 
-   AEM中的电子商务功能还包含一系列组件，这些组件位于 **商务** 群组。 实际用途取决于所使用的商业引擎。
+   AEM中的电子商务功能还包括一系列组件，这些组件包含在 **商务** 组。 实际用途取决于所使用的商业引擎。
 
 ## 使用设计模式配置组件 {#using-design-mode-to-configure-components}
 

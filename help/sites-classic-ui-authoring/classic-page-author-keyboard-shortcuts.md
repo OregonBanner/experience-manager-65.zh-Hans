@@ -23,7 +23,7 @@ ht-degree: 90%
 
 >[!NOTE]
 >
->在下表中，对于 **快捷键** 列中，Ctrl键和Command键都适用于macOS。
+>在下表中，对于 **快捷键** 列中，Ctrl键和Command键均适用于macOS。
 
 >[!NOTE]
 >
@@ -167,7 +167,7 @@ ht-degree: 90%
   </tr>
   <tr>
    <td>编辑模式</td>
-   <td>在URL中设置以下后缀：<br /> <code>?debugClientLibs=true</code><br /> 然后，使用：<br /> <strong><code>Ctrl-Shift-U</code></strong></td>
+   <td>在URL中设置以下后缀：<br /> <code>?debugClientLibs=true</code><br /> 然后使用：<br /> <strong><code>Ctrl-Shift-U</code></strong></td>
    <td>查看页面加载的计时统计数据。</td>
   </tr>
  </tbody>

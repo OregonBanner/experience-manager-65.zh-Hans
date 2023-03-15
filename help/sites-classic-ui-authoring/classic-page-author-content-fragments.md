@@ -22,7 +22,7 @@ ht-degree: 100%
 
 Adobe Experience Manager (AEM) 内容片段[作为独立于页面的资产而创建和管理](/help/assets/content-fragments/content-fragments.md)。
 
-这允许您创建渠道中性内容，以及各种（特定于渠道的）变量。您随后可以在创作内容页面时使用这些片段及其变量。
+这允许您创建渠道中性内容，以及各种（特定于渠道的）变体。您随后可以在创作内容页面时使用这些片段及其变体。
 
 >[!CAUTION]
 >

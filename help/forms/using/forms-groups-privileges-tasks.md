@@ -1,7 +1,7 @@
 ---
-title: AEM Forms关于OSGi组和权限
+title: OSGi组和权限上的AEM Forms
 seo-title: AEM Forms on OSGi Groups and Privileges
-description: 将用户分配到组以在OSGi中管理AEM Forms
+description: 将用户分配给组以在OSGi上管理AEM Forms
 seo-description: Assign users to the groups to manage AEM Forms on OSGi
 uuid: f269a206-356d-4cee-b449-05c5da87121a
 contentOwner: anujkapo
@@ -19,11 +19,11 @@ ht-degree: 1%
 
 ---
 
-# AEM Forms关于OSGi组和权限{#aem-forms-on-osgi-groups-and-privileges}
+# OSGi组和权限上的AEM Forms{#aem-forms-on-osgi-groups-and-privileges}
 
 您可以 [创建组](/help/sites-administering/user-group-ac-admin.md#group-administration) 并分配策略和 [用户](/help/sites-administering/user-group-ac-admin.md#user-administration) 到AEM中的组。 这些策略控制属于组的用户的权限。
 
-安装后 [AEM Forms附加组件包](../../forms/using/installing-configuring-aem-forms-osgi.md)，本文中提及的组（如表单用户和表单超级用户）可自动进行分配。 下表列出了用户在OSGi上可根据组分配为AEM Forms执行的任务：
+安装后 [AEM Forms附加组件包](../../forms/using/installing-configuring-aem-forms-osgi.md)，则本文中提到的组（例如forms-users和forms-power-user ）可自动进行分配。 下表列出了用户可以根据组分配在OSGi上为AEM Forms执行的任务：
 
 <table>
  <tbody>
@@ -32,37 +32,37 @@ ht-degree: 1%
    <td>任务</td> 
   </tr>
   <tr>
-   <td>表单用户 <sup>[1]</sup></td> 
+   <td>forms-users <sup>[1]</sup></td> 
    <td>
     <ul> 
      <li>创建、预览、发布和提交自适应表单</li> 
      <li>创建、预览和发布交互式通信和文档片段</li> 
-     <li>将资产上传到AEM实例</li> 
+     <li>将资源上传到AEM实例</li> 
      <li>创建主题</li> 
     </ul> </td> 
   </tr>
   <tr>
-   <td>表单级用户</td> 
+   <td>forms-power-users</td> 
    <td>
     <ul> 
      <li>创建、预览、发布和提交自适应表单</li> 
      <li>创建、预览和发布交互式通信和文档片段</li> 
-     <li>使用代码编辑器为自适应表单创建脚本</li> 
-     <li>上传资产（包括脚本）</li> 
+     <li>使用代码编辑器创建自适应表单脚本</li> 
+     <li>上传包括脚本在内的资源</li> 
      <li>创建主题</li> 
      <li>导入包含XDP的包</li> 
     </ul> </td> 
   </tr>
   <tr>
-   <td>forms-submission-reviewers</td> 
+   <td>forms-submission-reviewer</td> 
    <td>
     <ul> 
-     <li>审查提交</li> 
+     <li>审核提交</li> 
      <li>批准或拒绝提交</li> 
     </ul> </td> 
   </tr>
   <tr>
-   <td>模板 — 作者 <sup>[2]</sup></td> 
+   <td>template-author <sup>[2]</sup></td> 
    <td>
     <ul> 
      <li>创建和预览自适应表单或交互式通信模板</li> 
@@ -83,7 +83,7 @@ ht-degree: 1%
     </ul> </td> 
   </tr>
   <tr>
-   <td><p>工作流编辑器</p> </td> 
+   <td><p>workflow-editor</p> </td> 
    <td>
     <ul> 
      <li>创建收件箱应用程序</li> 
@@ -91,10 +91,10 @@ ht-degree: 1%
     </ul> </td> 
   </tr>
   <tr>
-   <td>工作流用户</td> 
+   <td>workflow-users</td> 
    <td>
     <ul> 
-     <li>使用AEM收件箱应用程序<br /> <strong>注意： </strong>您必须分配cm-agent-users和workflow-users组才能在AEM收件箱中访问Interactive Communications Agent UI。</li> 
+     <li>使用AEM收件箱应用程序<br /> <strong>注意： </strong>您必须具有cm-agent-users和workflow-users组分配，才能访问AEM收件箱中的Interactive Communications Agent UI。</li> 
      <li>管理工作流实例</li> 
     </ul> </td> 
   </tr>
@@ -103,12 +103,12 @@ ht-degree: 1%
    <td>
     <ul> 
      <li>配置 PDF 生成器</li> 
-     <li>配置监视文件夹</li> 
+     <li>配置Watched文件夹</li> 
      <li>管理工作流应用程序</li> 
     </ul> </td> 
   </tr>
  </tbody>
 </table>
 
-1. 具有表单用户组权限的用户无法编写自适应表单的脚本。
-1. 具有模板作者组权限的用户无法为模板编写脚本。
+1. 具有表单 — 用户组权限的用户无法编写自适应表单的脚本。
+1. 具有模板作者组权限的用户无法编写模板的脚本。

@@ -61,7 +61,7 @@ ht-degree: 98%
 
 * 当打开资源的&#x200B;**时间线**&#x200B;时，将会显示工作流步骤。当单击/点按警报横幅时，也会显示可用的操作：
 
-   ![screenshot_2019-03-05at120453](assets/screen-shot_2019-03-05at120453.png)
+   ![screen-shot_2019-03-05at120453](assets/screen-shot_2019-03-05at120453.png)
 
 ### 完成参与者步骤 {#completing-a-participant-step}
 
@@ -104,15 +104,15 @@ ht-degree: 98%
 
 1. 选择所需的页面，然后打开&#x200B;**时间线**（或者先打开&#x200B;**时间线**，然后再选择页面）：
 
-   ![screenshot_2019-03-05at120744](assets/screen-shot_2019-03-05at120744.png)
+   ![screen-shot_2019-03-05at120744](assets/screen-shot_2019-03-05at120744.png)
 
 1. 单击/点按警报横幅以显示可用的操作。选择&#x200B;**前进**：
 
-   ![screenshot_2019-03-05at120453-1](assets/screen-shot_2019-03-05at120453-1.png)
+   ![screen-shot_2019-03-05at120453-1](assets/screen-shot_2019-03-05at120453-1.png)
 
 1. 根据工作流，您可以选择下一步：
 
-   ![screenshot_2019-03-05at120905](assets/screen-shot_2019-03-05at120905.png)
+   ![screen-shot_2019-03-05at120905](assets/screen-shot_2019-03-05at120905.png)
 
 1. 选择&#x200B;**前进**&#x200B;以确认操作。
 
@@ -164,11 +164,11 @@ ht-degree: 98%
 1. 选择所需的页面，然后打开&#x200B;**时间线**（或者先打开&#x200B;**时间线**，然后再选择页面）。
 1. 单击/点按警报横幅以显示可用的操作。选择&#x200B;**更改被分派人**：
 
-   ![screenshot_2019-03-05at120453-2](assets/screen-shot_2019-03-05at120453-2.png)
+   ![screen-shot_2019-03-05at120453-2](assets/screen-shot_2019-03-05at120453-2.png)
 
 1. 指定新的被分派人：
 
-   ![screenshot_2019-03-05at121025](assets/screen-shot_2019-03-05at121025.png)
+   ![screen-shot_2019-03-05at121025](assets/screen-shot_2019-03-05at121025.png)
 
 1. 选择&#x200B;**分配**，确认操作。
 
@@ -215,11 +215,11 @@ ht-degree: 98%
 1. 选择所需的页面，然后打开&#x200B;**时间线**（或者先打开&#x200B;**时间线**，然后再选择页面）。
 1. 单击/点按警报横幅以显示可用的操作。选择&#x200B;**回滚**：
 
-   ![screenshot_2019-03-05at121131](assets/screen-shot_2019-03-05at121131.png)
+   ![screen-shot_2019-03-05at121131](assets/screen-shot_2019-03-05at121131.png)
 
 1. 指定工作流应返回到的步骤：
 
-   ![screenshot_2019-03-05at121158](assets/screen-shot_2019-03-05at121158.png)
+   ![screen-shot_2019-03-05at121158](assets/screen-shot_2019-03-05at121158.png)
 
 1. 选择&#x200B;**回滚**，确认操作。
 

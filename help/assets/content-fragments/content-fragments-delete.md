@@ -24,7 +24,7 @@ ht-degree: 79%
 1. **内容片段作为单个实体。**
 
    * **用例**：需要编辑/更新内容片段的用户 – **并删除整个片段**。
-   * **权限**:的 [删除](/help/sites-administering/security.md#actions) 权限可以 [通过用户和/或群组管理分配](/help/sites-administering/security.md#managing-permissions).
+   * **权限**：此 [删除](/help/sites-administering/security.md#actions) 权限可以是 [通过用户和/或组管理分配](/help/sites-administering/security.md#managing-permissions).
 
 2. **构成内容片段的多个子实体；例如，变体、子节点。**
 
@@ -35,7 +35,7 @@ ht-degree: 79%
 
 >[!NOTE]
 >
->当用户没有 [删除](/help/sites-administering/security.md#actions) 权限，内容片段编辑器在 *只读* 模式。
+>当用户没有任何 [删除](/help/sites-administering/security.md#actions) 权限，内容片段编辑器在中运行 *只读* 模式。
 
 >[!NOTE]
 >
@@ -49,7 +49,7 @@ ht-degree: 79%
 
 >[!NOTE]
 >
->编辑/更新内容片段所需的删除权限包含在“删除”权限中 [通过用户和/或群组管理分配](/help/sites-administering/security.md#managing-permissions).
+>编辑/更新内容片段所需的删除权限包含在删除权限中 [通过用户和/或组管理分配](/help/sites-administering/security.md#managing-permissions).
 
 编辑/更新片段所需的权限需要应用于包含内容片段的节点或适当的父节点（在 `/content/dam` 下的任何级别）。当分配给此类父节点时，权限将应用于该分支中的所有节点。
 
@@ -81,10 +81,10 @@ ht-degree: 79%
 
    * `jcr:addChildNodes`, `jcr:modifyProperties` 和 `jcr:removeChildNodes`, `jcr:removeNode`
 
-这些 `remove` 权限必须 [在CRXDE Lite中使用访问控制列表进行管理](/help/sites-administering/user-group-ac-admin.md#access-right-management).
+这些 `remove` 权限必须为 [在CRXDE Lite中使用访问控制列表进行管理](/help/sites-administering/user-group-ac-admin.md#access-right-management).
 
-的 `add` 和 `modify` 权限也可以在CRXDE Lite中管理，或使用“用户管理”控制台管理。
+此 `add` 和 `modify` 权限也可以在CRXDE Lite中管理，也可以使用“用户管理”控制台进行管理。
 
-例如， `remove` 群组的权限 `content-authors-no-delete`:
+例如，定义 `remove` 组的权限 `content-authors-no-delete`：
 
 ![cf-delete-03](assets/cf-delete-03.png)

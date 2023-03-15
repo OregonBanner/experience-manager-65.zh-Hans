@@ -22,7 +22,7 @@ ht-degree: 9%
 
 >[!NOTE]
 >
->查看最新的 [AEM Service Pack发行说明](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html?lang=zh-Hans) 以获取已修复问题的完整列表。
+>查看最新的 [AEM Service Pack发行说明](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html) 以获取已修复问题的完整列表。
 
 ## Experience Manager Forms 6.5中包含的内容
 
@@ -53,7 +53,7 @@ Adobe Experience Manager (AEM) Forms service pack包括新增和升级的功能�
 +++2.下载所需软件：
 
 * [AEM Forms on JEE Service Pack](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)
-* [AEM 服务包](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html?lang=zh-Hans)
+* [AEM 服务包](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html)
 * [Forms 附加组件包](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)
 * [片段Servlet](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Forg.apache.felix.http.servlet-api-1.2.0_fragment_full.jar)
 
@@ -192,7 +192,7 @@ Adobe Experience Manager (AEM) Forms service pack包括新增和升级的功能�
 
 +++2.下载所需软件：
 
-* [AEM 服务包](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html?lang=zh-Hans)
+* [AEM 服务包](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html)
 * [Forms 附加组件包](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)
 
 +++

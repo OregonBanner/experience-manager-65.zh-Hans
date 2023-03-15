@@ -1,7 +1,7 @@
 ---
 title: 管理受众
 seo-title: Managing Audiences
-description: 通过“受众”控制台，您可以创建、组织和管理 Adobe Target 帐户的受众，或管理 ContextHub 的区段 或Client Context
+description: 通过“受众”控制台，您可以创建、组织和管理 Adobe Target 帐户的受众，或管理 ContextHub 的区段 或客户端上下文
 seo-description: The Audiences console enables you to create, organize, and manage audiences for your Adobe Target account or manage segments for ContextHub or Client Context
 uuid: 76408a8c-25db-4e9f-8a69-27e820a2a7cf
 contentOwner: msm-service
@@ -20,12 +20,12 @@ ht-degree: 90%
 
 # 管理受众{#managing-audiences}
 
-通过“受众”控制台，您可以创建、组织和管理 Adobe Target 帐户的受众，或管理 ContextHub 的区段 或Client Context:
+通过“受众”控制台，您可以创建、组织和管理 Adobe Target 帐户的受众，或管理 ContextHub 的区段 或客户端上下文：
 
 * 添加受众 - Adobe Target 受众或 ContextHub 区段。
 * 管理受众。
 
-一个名为 *区段* 在ContextHub和Client Context中，是由特定条件定义的一类访客，可确定哪些人会看到目标活动。 定位活动时，您可以直接在“定位”过程中选择受众，也可以在“受众”控制台中创建新受众。
+受众，称为 *区段* 在ContextHub和Client Context中，是由特定标准定义的一类访客，可确定哪些人会看到目标活动。 定位活动时，您可以直接在“定位”过程中选择受众，也可以在“受众”控制台中创建新受众。
 
 在“受众”控制台中，各受众按品牌进行组织。
 
@@ -46,7 +46,7 @@ ht-degree: 90%
 1. 在“导航”控制台中，单击或点按&#x200B;**个性化**。单击或点按&#x200B;**受众**。
 1. 点按或单击&#x200B;**创建 ContextHub 区段**。
 
-   ![screenshot_2019-03-05at124034](assets/screen-shot_2019-03-05at124034.png)
+   ![screen-shot_2019-03-05at124034](assets/screen-shot_2019-03-05at124034.png)
 
 1. 在&#x200B;**新 ContextHub 区段**&#x200B;对话框中，输入标题并调整提升，然后单击&#x200B;**创建**。新 ContextHub 区段随即会显示在受众列表中。
 
@@ -66,15 +66,15 @@ ht-degree: 90%
 
 >[!NOTE]
 >
->如果您在中未看到**创建目标**众 **创建** 菜单，则您没有创建受众的必要权限。 您需要在 **/etc/segmentation** 才能创建受众。 默认情况下，组内容作者具有写权限。
+>如果您在中看不到**创建目标受众** **创建** 菜单，则您没有创建受众的必要权限。 您需要以下项的写入权限 **/etc/segments** 才能创建受众。 默认情况下，组内容作者具有写权限。
 
 要创建 Adobe Target 受众，请执行以下操作：
 
 1. 在“导航”控制台中，单击或点按&#x200B;**个性化**。单击或点按&#x200B;**受众**。
 
-   ![screenshot_2019-03-05at124139](assets/screen-shot_2019-03-05at124139.png)
+   ![screen-shot_2019-03-05at124139](assets/screen-shot_2019-03-05at124139.png)
 
-1. 在受众控制台中，点按或单击 **创建** 然后**创建目标受众**。
+1. 在“受众”控制台中，点按或单击 **创建** 然后**创建目标受众**。
 
    ![chlimage_1-168](assets/chlimage_1-168.png)
 

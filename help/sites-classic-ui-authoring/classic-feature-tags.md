@@ -21,7 +21,7 @@ ht-degree: 84%
 
 标记是用于对网站中的内容进行分类的简单快捷方法。可以将标记视为可附加到页面、资产或其他内容，以便在进行搜索时能够找到该内容及相关内容的关键字或标签。
 
-* 请参阅 [管理标记](/help/sites-administering/tags.md) 有关创建和管理标记以及已对哪些内容应用标记的信息。
+* 参见 [管理标记](/help/sites-administering/tags.md) 有关创建和管理标记以及已对哪些内容应用标记的信息。
 * 有关标记框架以及在自定义应用程序中包括和扩展标记的信息，请参阅[针对开发人员的标记](/help/sites-developing/tags.md)。
 
 ## 使用标记的十大理由 {#ten-reasons-to-use-tagging}
@@ -43,7 +43,7 @@ ht-degree: 84%
 
 在创作环境中，作者可以通过访问页面属性并在&#x200B;**标记/关键字**&#x200B;字段中输入一个或多个标记来应用标记。
 
-应用 [预定义标记](/help/sites-administering/tags.md)，在 **页面属性** 窗口使用 `Tags/Keywords` 字段下拉列表，从页面允许的标记列表中进行选择。 在 **标准标记** 选项卡是默认的命名空间，这表示 `namespace-string:` 前缀为分类。
+要应用，请执行以下操作 [预定义标记](/help/sites-administering/tags.md)，在 **页面属性** 窗口使用 `Tags/Keywords` 字段下拉列表，以从页面允许的标记列表中进行选择。 此 **标准标记** tab是默认的命名空间，这意味着没有 `namespace-string:` 在分类前添加前缀。
 
 ![chlimage_1-2](assets/chlimage_1-2a.png)
 
@@ -59,7 +59,7 @@ ht-degree: 84%
 
 >[!NOTE]
 >
->激活页面时，会自动打开一个对话框，通过该对话框可以激活属于该页面的未激活标记。
+>激活页面时，会自动打开一个对话框，通过该对话框可激活属于该页面的未激活标记。
 
 **取消激活**
 
@@ -77,6 +77,6 @@ ht-degree: 84%
 
 ### 使用搜索组件 {#using-search-component}
 
-添加 [搜索组件](/help/sites-classic-ui-authoring/classic-page-author-edit-mode.md#search) 到页面可提供包含标记的搜索功能，该功能可在创作和发布环境中使用。
+添加 [搜索组件](/help/sites-classic-ui-authoring/classic-page-author-edit-mode.md#search) “到”页面提供搜索功能，该功能包括标记并且可以在创作和发布环境中使用。
 
 ![chlimage_1-3](assets/chlimage_1-3a.png)

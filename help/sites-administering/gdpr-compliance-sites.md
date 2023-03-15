@@ -1,7 +1,7 @@
 ---
-title: AEM Sites - GDPR就绪
+title: AEM Sites - GDPR准备工作
 seo-title: AEM Sites - GDPR Readiness
-description: 了解有关为AEM Sites做好GDPR准备的详细信息。
+description: 了解有关AEM Sites的GDPR准备工作的详细信息。
 seo-description: Learn about the details of GDPR Readiness for AEM Sites.
 uuid: 00d1fdce-ef9a-4902-a7a5-7225728e8ffc
 contentOwner: AEM Docs
@@ -17,68 +17,68 @@ ht-degree: 55%
 
 ---
 
-# AEM Sites - GDPR就绪{#aem-sites-gdpr-readiness}
+# AEM Sites - GDPR准备工作{#aem-sites-gdpr-readiness}
 
 >[!IMPORTANT]
 >
->GDPR用作以下部分的示例，但相关详细信息适用于所有数据保护和隐私法规；例如GDPR、CCPA等
+>以下部分使用GDPR作为示例，但所涵盖的详细信息适用于所有数据保护和隐私法规；例如GDPR、CCPA等。
 
-欧盟的《数据隐私权通用数据保护条例》已于2018年5月正式生效。
+欧盟有关数据隐私权的《通用数据保护条例》自2018年5月起生效。
 
-AEM Sites随时准备帮助客户履行其GDPR合规义务。 本页面将指导客户完成在AEM Sites中处理GDPR请求的过程。 它描述了私有数据的存储位置，以及如何手动或使用代码删除私有数据。
+AEM Sites随时准备帮助客户履行其GDPR合规义务。 本页将指导客户完成在AEM Sites中处理GDPR请求的过程。 它描述了私有数据的存储位置，以及如何手动或使用代码删除私有数据。
 
-有关详细信息，请参阅 [Adobe隐私中心的GDPR页面](https://www.adobe.com/privacy/general-data-protection-regulation.html).
+欲知更多信息，请参见 [Adobe隐私中心的GDPR页面](https://www.adobe.com/privacy/general-data-protection-regulation.html).
 
 >[!NOTE]
 >
->请参阅 [AEM GDPR就绪](/help/managing/data-protection-and-privacy.md) 以了解更多详细信息。
+>参见 [AEM GDPR就绪](/help/managing/data-protection-and-privacy.md) 了解更多详细信息。
 
 ## 作者服务器 {#author-server}
 
-作者服务器上的用户帐户和UGC内容在 [平台GDPR文档](/help/managing/data-protection-and-privacy.md).
+创作服务器上的用户帐户和UGC内容包含在 [平台GDPR文档](/help/managing/data-protection-and-privacy.md).
 
 ## 发布服务器 {#publish-server}
 
-在 [平台GDPR文档](/help/managing/data-protection-and-privacy.md).
+用于对网站上的访客进行身份验证的用户帐户以及发布服务器上的UGC内容包含在 [平台GDPR文档](/help/managing/data-protection-and-privacy.md).
 
 默认情况下，AEM Sites 组件不会存储访客在发布服务器上输入的表单数据。建议将数据转发到第三方系统或 Adobe Campaign 以供进一步处理。
 
 ## 选择加入/选择退出 {#opt-in-opt-out}
 
-AEM具有 [cookie选择退出服务](/help/sites-developing/cookie-optout.md) 用于管理用户的选择启用/选择禁用。
+AEM具有 [Cookie选择退出服务](/help/sites-developing/cookie-optout.md) 可用于管理用户的选择启用/选择禁用。
 
-## 增强的Analytics分析功能 {#enhanced-insights-by-analytics}
+## Analytics的增强见解 {#enhanced-insights-by-analytics}
 
-AEM Sites包含与Analytics“增强的分析”的可选集成，后者使用Adobe Analytics按需服务中的功能。
+AEM Sites包括与Enhanced Insights by Analytics的可选集成，该集成使用Adobe Analytics按需服务中的功能。
 
 有关管理与Adobe Analytics相关的GDPR数据主体请求的更多信息，请参阅 [Adobe Analytics和GDPR](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/an-gdpr-overview.html).
 
-## 按Target增强的个性化功能 {#enhanced-personalization-by-target}
+## Target的增强型个性化 {#enhanced-personalization-by-target}
 
-AEM Sites包含与Enhanced Personalization by Target的可选集成，后者使用Adobe Target On-demand Service中的功能。
+AEM Sites包括与Enhanced Personalization by Target的可选集成，该集成使用Adobe Target On-demand Service中的功能。
 
 有关管理与Adobe Target相关的GDPR数据主体请求的更多信息，请参阅 [Adobe Target — 隐私和《通用数据保护条例》](https://experienceleague.adobe.com/docs/target/using/implement-target/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.html).
 
 ## ContextHub {#contexthub}
 
-AEM提供可选数据层，其中 [ContextHub](/help/sites-developing/contexthub.md). 这会将特定于访客的数据保留在浏览器中，以用于基于规则的个性化。
+AEM提供了一个可选的数据层，它具有 [ContextHub](/help/sites-developing/contexthub.md). 这会将特定于访客的数据保留在浏览器中，以用于基于规则的个性化。
 
 默认情况下，此访客数据不会存储在 AEM 中；AEM 将规则发送到数据层，以在浏览器中做出个性化决策。
 
 >[!NOTE]
 >
->在Adobe CQ 5.6之前，ClientContext（ContextHub的早期版本）确实将数据发送到了服务器，但并未存储这些数据。
+>在Adobe CQ 5.6之前，ClientContext（ContextHub的早期版本）确实将数据发送到服务器，但未存储这些数据。
 >
->Adobe CQ 5.5及更早版本现在处于生命周期终止状态，且未包含在本文档中。
+>Adobe CQ 5.5及更早版本现已停用，本文档未涉及这些版本。
 
 ### 实施选择加入/选择退出 {#implementing-opt-in-opt-out}
 
 网站所有者需要根据以下指南实施选择退出组件。
 
-这些指南将选择加入作为默认设置加以实施。因此，在将任何个人数据存储到浏览器的（客户端）持久性中之前，网站访客必须明确同意。
+这些指南将选择加入作为默认设置加以实施。因此，在将任何个人数据存储到浏览器（客户端）的持久存储中之前，网站访客必须明确同意。
 
 * 每次包含 ContextHub 组件时都应包含选择退出组件。
-* 与网站GDPR相关的条款和条件必须显示给网站访客，以便他们能够：
+* 必须向网站访客显示与网站的GDPR相关的条款和条件，以便访客：
 
    * 接受
    * 拒绝

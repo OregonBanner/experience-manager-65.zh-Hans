@@ -1,5 +1,5 @@
 ---
-title: 屏幕的内容管理
+title: 屏幕内容管理
 seo-title: Content Management for Screens
 description: 了解屏幕内容管理的基础知识。
 seo-description: Learn about the basics of Content Management for Screens.
@@ -17,15 +17,15 @@ ht-degree: 1%
 
 ---
 
-# 屏幕的内容管理{#content-management-for-screens}
+# 屏幕内容管理{#content-management-for-screens}
 
-A ***内容管理器*** 对于AEM Screens而言，他是一位创意专业人士，与营销活动密切合作，并了解营销活动、受众和所需的关注点。 内容管理器负责通过开发不同的渠道并将序列分配给定时渠道体验来创建和编排最终用户体验。
+A ***内容管理器*** 因为AEM Screens是一位创意专业人士，与营销部门紧密合作，了解营销活动、受众和所需焦点。 内容管理员负责通过开发不同的渠道并将序列分配给定时渠道体验来创建和编排最终用户体验。
 
-Content Manager for Screens设计位置和计划、维护渠道完整性、执行分析和报告，以及维护视频配置文件。
+Content Manager for Screens设计位置和计划，维护渠道完整性，执行分析和报告，以及维护视频配置文件。
 
-AEM Screens内容经理负责以下任务：
+AEM Screens内容管理员负责以下任务：
 
 * 设计位置
-* 设计计划
+* 设计时间表
 * 维护渠道完整性
 * 视频配置文件

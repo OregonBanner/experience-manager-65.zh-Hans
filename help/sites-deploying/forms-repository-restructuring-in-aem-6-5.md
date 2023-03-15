@@ -1,7 +1,7 @@
 ---
-title: Forms 6.5中的存储库重组
+title: AEM 6.5中的Forms存储库重组
 seo-title: Forms Repository Restructuring in AEM 6.5
-description: 了解如何进行必要的更改，以便迁移到AEM 6.5 for Forms中的新存储库结构。
+description: 了解如何进行必要的更改，以迁移到AEM 6.5 for Forms中的新存储库结构。
 seo-description: Learn how to make the necessary changes in order to migrate to the new repository structure in AEM 6.5 for Forms.
 uuid: e60830d4-23ca-4be9-941a-ee4abe4786a6
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -17,11 +17,11 @@ ht-degree: 7%
 
 ---
 
-# Forms 6.5中的存储库重组{#forms-repository-restructuring-in-aem}
+# AEM 6.5中的Forms存储库重组{#forms-repository-restructuring-in-aem}
 
-如父项中所述 [AEM 6.5中的存储库重组](/help/sites-deploying/repository-restructuring.md) 页面，升级到AEM 6.5的客户应使用此页面来评估与影响AEM Forms解决方案的存储库更改相关的工作量。 某些更改需要在AEM 6.5升级过程中完成工作，而其他更改可能会推迟到将来进行升级。
+如父项中所述 [AEM 6.5中的存储库重组](/help/sites-deploying/repository-restructuring.md) 页面，升级到AEM 6.5的客户应使用此页面评估与影响AEM Forms解决方案的存储库更改相关的工作量。 在AEM 6.5升级过程中，有些更改需要您投入精力，而有些则可能会推迟到将来升级。
 
-**升级6.5版**
+**6.5版升级**
 
 * [杂项](/help/sites-deploying/forms-repository-restructuring-in-aem-6-5.md#misc)
 
@@ -32,100 +32,100 @@ ht-degree: 7%
 * [TypekitCloud Service配置](/help/sites-deploying/forms-repository-restructuring-in-aem-6-5.md#typekit-cloud-service-configurations)
 * [杂项](/help/sites-deploying/forms-repository-restructuring-in-aem-6-5.md#misc)
 
-## 升级6.5版 {#with-upgrade}
+## 6.5版升级 {#with-upgrade}
 
 ### 杂项 {#misc}
 
-| **上一位置** | `/etc/clientlibs/fd/fp` |
+| **上一个位置** | `/etc/clientlibs/fd/fp` |
 |---|---|
 | **新位置** | `/libs/fd/fp/components` |
-| **重组指导** | 自定义代码中对旧版位置的任何显式引用都必须更新到新位置。 |
+| **重构指南** | 自定义代码中对旧版位置的任何显式引用都必须更新到新位置。 |
 | **注释** | 不应修改或扩展这些客户端库。 |
 
-| **上一位置** | `/etc/clientlibs/fd/rte` |
+| **上一个位置** | `/etc/clientlibs/fd/rte` |
 |---|---|
 | **新位置** | `/libs/fd/rte` |
-| **重组指导** | 对于客户端库中可通过绝对路径引荐的资源，您需要在新资产中使用较新的路径。 |
+| **重构指南** | 对于客户端库中可通过绝对路径引用的资源，您需要在新资产中使用较新的路径。 |
 | **注释** | 不适用 |
 
-| **上一位置** | `/etc/clientlibs/fd/af` |
+| **上一个位置** | `/etc/clientlibs/fd/af` |
 |---|---|
 | **新位置** | `/libs/fd/af/authoring/clientlibs` |
-| **重组指导** | 对于客户端库中可通过绝对路径引荐的资源，您需要在新资产中使用较新的路径。 |
+| **重构指南** | 对于客户端库中可通过绝对路径引用的资源，您需要在新资产中使用较新的路径。 |
 | **注释** | 不适用 |
 
-| **上一位置** | `/etc/clientlibs/fd/xfaforms` |
+| **上一个位置** | `/etc/clientlibs/fd/xfaforms` |
 |---|---|
 | **新位置** | `/libs/fd/xfaforms/clientlibs/` |
-| **重组指导** | 对于客户端库中可通过绝对路径引荐的资源，您需要在新资产中使用较新的路径。 |
+| **重构指南** | 对于客户端库中可通过绝对路径引用的资源，您需要在新资产中使用较新的路径。 |
 | **注释** | 不适用 |
 
-| **上一位置** | `/etc/clientlibs/fd/af` |
+| **上一个位置** | `/etc/clientlibs/fd/af` |
 |---|---|
 | **新位置** | `/libs/fd/af/runtime/clientlibs` |
-| **重组指导** | 对于客户端库中可通过绝对路径引荐的资源，您需要在新资产中使用较新的路径。 |
+| **重构指南** | 对于客户端库中可通过绝对路径引用的资源，您需要在新资产中使用较新的路径。 |
 | **注释** | 不适用 |
 
-| **上一位置** | `/etc/clientlibs/fd/af` |
+| **上一个位置** | `/etc/clientlibs/fd/af` |
 |---|---|
 | **新位置** | `/libs/fd/af/runtime/clientlibs` |
-| **重组指导** | 对于客户端库中可通过绝对路径引荐的资源，您需要在新资产中使用较新的路径。 |
+| **重构指南** | 对于客户端库中可通过绝对路径引用的资源，您需要在新资产中使用较新的路径。 |
 | **注释** | 不适用 |
 
-| **上一位置** | `/etc/clientlibs/fd/expeditor` |
+| **上一个位置** | `/etc/clientlibs/fd/expeditor` |
 |---|---|
 | **新位置** | `/libs/fd/expeditor/clientlibs` |
-| **重组指导** | 对于客户端库中可通过绝对路径引荐的资源，您需要在新资产中使用较新的路径。 |
+| **重构指南** | 对于客户端库中可通过绝对路径引用的资源，您需要在新资产中使用较新的路径。 |
 | **注释** | 不适用 |
 
-| **上一位置** | `/etc/clientlibs/fd/fmaddon` |
+| **上一个位置** | `/etc/clientlibs/fd/fmaddon` |
 |---|---|
 | **新位置** | `/libs/fd/fmaddon` |
-| **重组指导** | 从不建议或支持更改这些clientlib。 如果已对这些clientlib进行了修改，则应回滚它们以使用AEM提供的代码。 |
+| **重构指南** | 从不建议或支持更改这些clientlibs。 如果对这些clientlib进行了修改，则应回退以使用AEM提供的代码。 |
 | **注释** | 不适用 |
 
-| **上一位置** | `/etc/aep` |
+| **上一个位置** | `/etc/aep` |
 |---|---|
 | **新位置** | `/var/fd/content/annotations` |
-| **重组指导** | 从不建议或支持更改这些clientlib。 如果已对这些clientlib进行了修改，则应回滚它们以使用AEM提供的代码。 |
+| **重构指南** | 从不建议或支持更改这些clientlibs。 如果对这些clientlib进行了修改，则应回退以使用AEM提供的代码。 |
 | **注释** | 不适用 |
 
 ## 在将来升级之前 {#prior-to-upgrade}
 
 ### EchosignCloud Service配置 {#echosign-cloud-service-configuration}
 
-| **上一位置** | `/etc/cloudservices/echosign` |
+| **上一个位置** | `/etc/cloudservices/echosign` |
 |---|---|
 | **新位置** | `/conf/<tenant>/settings/cloudconfigs/echosign` |
-| **重组指导** | 的 [延迟内容迁移](/help/sites-deploying/lazy-content-migration.md) 实用程序。 |
+| **重构指南** | 此 [延迟内容迁移](/help/sites-deploying/lazy-content-migration.md) 要从Forms迁移UI触发的实用程序。 |
 | **注释** | 不适用 |
 
 ### RecaptchaCloud Service配置 {#recaptcha-cloud-service-configurations}
 
-| **上一位置** | `/etc/cloudservices/recaptcha` |
+| **上一个位置** | `/etc/cloudservices/recaptcha` |
 |---|---|
 | **新位置** | `/conf/<tenant>/settings/cloudconfigs/recaptcha` |
-| **重组指导** | 的 [延迟内容迁移](/help/sites-deploying/lazy-content-migration.md) 实用程序。 |
+| **重构指南** | 此 [延迟内容迁移](/help/sites-deploying/lazy-content-migration.md) 要从Forms迁移UI触发的实用程序。 |
 | **注释** | 不适用 |
 
 ### TypekitCloud Service配置 {#typekit-cloud-service-configurations}
 
-| **上一位置** | `/etc/cloudservices/typekit` |
+| **上一个位置** | `/etc/cloudservices/typekit` |
 |---|---|
 | **新位置** | `/conf/<tenant>/settings/cloudconfigs/typekit` |
-| **重组指导** | 的 [延迟内容迁移](/help/sites-deploying/lazy-content-migration.md) 实用程序。 |
+| **重构指南** | 此 [延迟内容迁移](/help/sites-deploying/lazy-content-migration.md) 要从Forms迁移UI触发的实用程序。 |
 | **注释** | 不适用 |
 
 ### 杂项 {#misc-1}
 
-| **上一位置** | `/etc/cloudservices/fdm` |
+| **上一个位置** | `/etc/cloudservices/fdm` |
 |---|---|
 | **新位置** | `/conf/<tenant>/settings/cloudconfigs/fdm` |
-| **重组指导** | 的 [延迟内容迁移](/help/sites-deploying/lazy-content-migration.md) 实用程序。 |
+| **重构指南** | 此 [延迟内容迁移](/help/sites-deploying/lazy-content-migration.md) 要从Forms迁移UI触发的实用程序。 |
 | **注释** | 不适用 |
 
-| **上一位置** | `/etc/designs/fd/fp` |
+| **上一个位置** | `/etc/designs/fd/fp` |
 |---|---|
 | **新位置** | `/libs/fd/fp` |
-| **重组指导** | 对/etc模板的任何引用最终应当进行更新，以指向其 `/libs` 对应。 |
+| **重构指南** | 最终应更新对/etc模板的任何引用，以指向它们的 `/libs` 对方。 |
 | **注释** | 不适用 |

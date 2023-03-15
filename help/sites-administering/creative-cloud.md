@@ -1,7 +1,7 @@
 ---
 title: 与Adobe Creative Cloud共享文件夹
 seo-title: Folder sharing with Adobe Creative Cloud
-description: 了解与Adobe Creative Cloud共享文件夹
+description: 了解如何与Adobe Creative Cloud共享文件夹
 seo-description: Learn about sharing folder with Adobe Creative Cloud
 uuid: 4d93df7d-36da-43bb-a069-42993c607b2b
 contentOwner: asgupta
@@ -22,7 +22,7 @@ ht-degree: 15%
 
 >[!CAUTION]
 >
->AEM到Creative Cloud文件夹共享功能已弃用。 强烈建议客户使用较新的功能，例如 [Adobe资产链接](https://helpx.adobe.com/cn/enterprise/using/adobe-asset-link.html) 或 [AEM桌面应用程序](https://helpx.adobe.com/cn/experience-manager/desktop-app/aem-desktop-app.html). 在 [AEM和Creative Cloud集成最佳实践](/help/assets/aem-cc-integration-best-practices.md).
+>已弃用AEM到Creative Cloud的文件夹共享功能。 强烈建议客户使用较新的功能，例如 [Adobe资源链接](https://helpx.adobe.com/cn/enterprise/using/adobe-asset-link.html) 或 [AEM桌面应用程序](https://helpx.adobe.com/cn/experience-manager/desktop-app/aem-desktop-app.html). 了解详情，请参阅 [AEM和Creative Cloud集成最佳实践](/help/assets/aem-cc-integration-best-practices.md).
 
 <!-- TBD: This article is removed from TOC and is not published. The functionality does not exist.
 

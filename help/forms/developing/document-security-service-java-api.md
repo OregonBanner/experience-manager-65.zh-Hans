@@ -1,7 +1,7 @@
 ---
-title: 文档安全服务JavaAPI快速入门(SOAP)
+title: Document Security Service JavaAPI快速入门(SOAP)
 seo-title: Document Security Service JavaAPI Quick Start(SOAP)
-description: 文档安全服务JavaAPI快速入门(SOAP)
+description: Document Security Service JavaAPI快速入门(SOAP)
 uuid: f3823a95-c8c2-42c8-8edc-3ab8ab4311dc
 contentOwner: admin
 content-type: reference
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 ---
 
-# 文档安全服务Java API快速入门(SOAP) {#document-security-service-javaapi-quick-start-soap}
+# Document Security Service Java API快速入门(SOAP) {#document-security-service-javaapi-quick-start-soap}
 
 Java API快速入门(SOAP)可用于Rights Management服务：
 
@@ -31,29 +31,29 @@ Java API快速入门(SOAP)可用于Rights Management服务：
 
 [快速入门（SOAP模式）：使用Java API从PDF文档中删除策略](document-security-service-java-api.md#quick-start-soap-mode-removing-a-policy-from-a-pdf-document-using-the-java-api)
 
-[快速入门（SOAP模式）：使用Java API撤消文档](document-security-service-java-api.md#quick-start-soap-mode-revoking-a-document-using-the-java-api)
+[快速入门（SOAP模式）：使用Java API撤销文档](document-security-service-java-api.md#quick-start-soap-mode-revoking-a-document-using-the-java-api)
 
-[快速入门（SOAP模式）：使用Java API恢复对已吊销文档的访问](document-security-service-java-api.md#quick-start-soap-mode-reinstating-access-to-a-revoked-document-using-the-java-api)
+[快速入门（SOAP模式）：使用Java API恢复对已撤销文档的访问](document-security-service-java-api.md#quick-start-soap-mode-reinstating-access-to-a-revoked-document-using-the-java-api)
 
 [快速入门（SOAP模式）：使用Java API检查受策略保护的PDF文档](document-security-service-java-api.md#quick-start-soap-mode-inspecting-policy-protected-pdf-documents-using-the-java-api)
 
 [快速入门（SOAP模式）：使用Java API创建水印](document-security-service-java-api.md#quick-start-soap-mode-creating-a-pdf-watermark-using-the-java-api)
 
-[快速入门（SOAP模式）：使用Java API修改水印](document-security-service-java-api.md#quick-start-soap-mode-modifying-a-watermark-using-the-java-api)
+[快速启动（SOAP模式）：使用Java API修改水印](document-security-service-java-api.md#quick-start-soap-mode-modifying-a-watermark-using-the-java-api)
 
 [快速入门（SOAP模式）：使用Java API搜索事件](document-security-service-java-api.md#quick-start-soap-mode-searching-for-events-using-the-java-api)
 
 [快速入门（SOAP模式）：使用Java API从Word文档中删除策略](document-security-service-java-api.md#quick-start-soap-mode-removing-a-policy-from-a-word-document-using-the-java-api)
 
-AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置为SOAP。
+AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应设置为SOAP。
 
 >[!NOTE]
 >
->位于“使用AEM Forms进行编程”中的“快速入门”基于Forms服务器操作系统。 但是，如果您使用的是其他操作系统（如UNIX），请将特定于Windows的路径替换为适用操作系统支持的路径。 同样，如果您使用的是其他J2EE应用程序服务器，请确保指定有效的连接属性。 请参阅 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>位于“使用AEM Forms编程”中的快速入门基于Forms服务器操作系统。 但是，如果您使用的是其他操作系统（如UNIX），请将特定于Windows的路径替换为适用的操作系统支持的路径。 同样，如果您使用的是其他J2EE应用程序服务器，请确保指定有效的连接属性。 参见 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
 ## 快速入门（SOAP模式）：使用Java API创建策略 {#quick-start-soap-mode-creating-a-policy-using-the-java-api}
 
-以下Java代码示例将创建一个名为 *允许复制*. 将为添加策略的策略集命名 *全局策略集*. 默认情况下，此策略集存在。 (请参阅 [创建策略](/help/forms/developing/protecting-documents-policies.md#creating-policies).)
+以下Java代码示例创建一个名为的新策略 *允许复制*. 将策略添加到其中的策略集已命名 *全局策略集*. 默认情况下，此策略集存在。 (请参阅 [创建策略](/help/forms/developing/protecting-documents-policies.md#creating-policies).)
 
 ```java
  /*
@@ -182,7 +182,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
 
 ## 快速入门（SOAP模式）：使用Java API修改策略 {#quick-start-soap-mode-modifying-a-policy-using-the-java-api}
 
-以下Java代码示例修改了名为 *允许复制* 将离线租赁期设置为40天。 (请参阅 [修改策略](/help/forms/developing/protecting-documents-policies.md#modifying-policies).)
+以下Java代码示例修改了一个名为的策略 *允许复制* 通过将离线租赁期设置为40天。 (请参阅 [修改策略](/help/forms/developing/protecting-documents-policies.md#modifying-policies).)
 
 ```java
  /*
@@ -283,7 +283,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
 
 ## 快速入门（SOAP模式）：使用Java API删除策略 {#quick-start-soap-mode-deleting-a-policy-using-the-java-api}
 
-以下Java代码示例将删除名为 *允许复制*. (请参阅 [删除策略](/help/forms/developing/protecting-documents-policies.md#deleting-policies).)
+以下Java代码示例删除名为的策略 *允许复制*. (请参阅 [删除策略](/help/forms/developing/protecting-documents-policies.md#deleting-policies).)
 
 ```java
  /*
@@ -375,7 +375,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
 
 ## 快速入门（SOAP模式）：使用Java API将策略应用到PDF文档 {#quick-start-soap-mode-applying-a-policy-to-a-pdf-document-using-the-java-api}
 
-以下Java代码示例应用了名为 *允许复制* 到名为的PDF文档 *Loan.pdf*. 将为添加策略的策略集命名 *全局策略集*. 受策略保护的文档另存为名为*PolicyProtectedLoanDoc.pdf的PDF文件。 *(请参阅 [将策略应用于PDF文档](/help/forms/developing/protecting-documents-policies.md#applying-policies-to-pdf-documents).)
+以下Java代码示例应用名为的策略 *允许复制* 到名为的PDF文档 *Loan.pdf*. 将策略添加到其中的策略集已命名 *全局策略集*. 受策略保护的文档另存为名为*PolicyProtectedLoanDoc.pdf的PDF文件。 *(请参阅 [将策略应用于PDF文档](/help/forms/developing/protecting-documents-policies.md#applying-policies-to-pdf-documents).)
 
 ```java
  /*
@@ -481,7 +481,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
 
 ## 快速入门（SOAP模式）：使用Java API从PDF文档中删除策略 {#quick-start-soap-mode-removing-a-policy-from-a-pdf-document-using-the-java-api}
 
-以下代码示例从名为的PDF文档中删除策略 *PolicyProtectedLoanDoc.pdf*. 不安全的PDF文档将另存为 *unProtectedLoan.pdf*. (请参阅 [从PDF文档中删除策略](/help/forms/developing/protecting-documents-policies.md#removing-policies-from-pdf-documents).)
+以下代码示例从名为的PDF文档中删除策略 *PolicyProtectedLoanDoc.pdf*. 不安全的PDF文档另存为 *unProtectedLoan.pdf*. (请参阅 [从PDF文档中删除策略](/help/forms/developing/protecting-documents-policies.md#removing-policies-from-pdf-documents).)
 
 ```java
  /*
@@ -586,9 +586,9 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  
 ```
 
-## 快速入门（SOAP模式）：使用Java API撤消文档 {#quick-start-soap-mode-revoking-a-document-using-the-java-api}
+## 快速入门（SOAP模式）：使用Java API撤销文档 {#quick-start-soap-mode-revoking-a-document-using-the-java-api}
 
-以下Java代码示例撤销了名为 *PolicyProtectedLoanDoc.pdf*. 修订的PDF文档位于以下URL位置 `https://'[server]:[port]'/RightsManagement/UpdatedLoan.pdf`. (请参阅 [撤消对文档的访问](/help/forms/developing/protecting-documents-policies.md#revoking-access-to-documents).)
+以下Java代码示例撤销一个名为的受策略保护的文档 *PolicyProtectedLoanDoc.pdf*. 修订的PDF文档位于以下URL位置 `https://'[server]:[port]'/RightsManagement/UpdatedLoan.pdf`. (请参阅 [撤销对文档的访问权限](/help/forms/developing/protecting-documents-policies.md#revoking-access-to-documents).)
 
 ```java
  /*
@@ -702,7 +702,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
 
 ## 快速入门（SOAP模式）：使用Java API检查受策略保护的PDF文档 {#quick-start-soap-mode-inspecting-policy-protected-pdf-documents-using-the-java-api}
 
-以下Java代码示例会检查名为的受策略保护的PDF文档 *PolicyProtectedLoanDoc.pd* f.(请参阅 [检查受策略保护的PDF文档](/help/forms/developing/protecting-documents-policies.md#inspecting-policy-protected-pdf-documents).)
+以下Java代码示例检查名为的受策略PDF文档 *PolicyProtectedLoanDoc.pd* f. (请参阅 [检查受策略保护的PDF文档](/help/forms/developing/protecting-documents-policies.md#inspecting-policy-protected-pdf-documents).)
 
 ```java
  /*
@@ -818,9 +818,9 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  
 ```
 
-## 快速入门（SOAP模式）：使用Java API恢复对已吊销文档的访问 {#quick-start-soap-mode-reinstating-access-to-a-revoked-document-using-the-java-api}
+## 快速入门（SOAP模式）：使用Java API恢复对已撤销文档的访问 {#quick-start-soap-mode-reinstating-access-to-a-revoked-document-using-the-java-api}
 
-以下Java代码示例重新声明对名为的已吊销PDF文档的访问 *PolicyProtectedLoanDoc.pdf*. (请参阅 [恢复对已吊销文档的访问](/help/forms/developing/protecting-documents-policies.md#reinstating-access-to-revoked-documents).)
+以下Java代码示例恢复对名为的已撤销PDF文档的访问 *PolicyProtectedLoanDoc.pdf*. (请参阅 [恢复对已撤消文档的访问](/help/forms/developing/protecting-documents-policies.md#reinstating-access-to-revoked-documents).)
 
 ```java
  /*
@@ -926,7 +926,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
 
 ## 快速入门（SOAP模式）：使用Java API创建PDF水印 {#quick-start-soap-mode-creating-a-pdf-watermark-using-the-java-api}
 
-以下Java代码示例创建了一个名为“示例PDF水印”的新PDF水印。 此水印包含单个元素(请参阅 [创建水印](/help/forms/developing/protecting-documents-policies.md#creating-watermarks))。
+以下Java代码示例创建一个名为“示例PDF水印”的新PDF水印。 此水印包含单个元素(请参阅 [创建水印](/help/forms/developing/protecting-documents-policies.md#creating-watermarks))。
 
 ```java
 /*
@@ -1059,7 +1059,7 @@ public class PDFWatermarksSOAPMode {
 
 ## 快速入门（SOAP模式）：使用Java API创建文本水印 {#quick-start-soap-mode-creating-a-text-watermark-using-the-java-api}
 
-以下Java代码示例创建了一个名为 *示例文本水印*. 此水印包含单个元素。
+以下Java代码示例创建一个名为的新文本水印 *示例文本水印*. 此水印包含单个元素。
 
 ```java
 /*
@@ -1208,7 +1208,7 @@ public class TextWatermarks {
 
 ## 快速入门（SOAP模式）：使用Java API修改文本水印 {#quick-start-soap-mode-modifying-a-text-watermark-using-the-java-api}
 
-以下Java代码示例修改了名为“示例文本水印”的水印，并将第一个元素的不透明度设置为100。
+以下Java代码示例修改名为“示例文本水印”的水印，并将第一个元素的不透明度设置为100。
 
 ```java
 /*
@@ -1318,9 +1318,9 @@ public class ModifyWatermarks {
 }
 ```
 
-## 快速入门（SOAP模式）：使用Java API修改水印 {#quick-start-soap-mode-modifying-a-watermark-using-the-java-api}
+## 快速启动（SOAP模式）：使用Java API修改水印 {#quick-start-soap-mode-modifying-a-watermark-using-the-java-api}
 
-以下Java代码示例修改了名为 *机密* 通过修改 `opacity` 属于80。
+以下Java代码示例修改了名为的水印 *机密* 通过修改 `opacity` 属性为80。
 
 ```java
  /*
@@ -1418,7 +1418,7 @@ public class ModifyWatermarks {
 
 ## 快速入门（SOAP模式）：使用Java API搜索事件 {#quick-start-soap-mode-searching-for-events-using-the-java-api}
 
-以下Java代码示例会搜索创建策略事件。
+以下Java代码示例用于搜索创建策略事件。
 
 ```java
  /*
@@ -1529,9 +1529,9 @@ public class ModifyWatermarks {
  
 ```
 
-## 快速入门(SOAP):使用Java API将策略应用到Word文档 {#quick-start-soap-applying-a-policy-to-a-word-document-using-the-java-api}
+## 快速入门(SOAP)：使用Java API将策略应用到Word文档 {#quick-start-soap-applying-a-policy-to-a-word-document-using-the-java-api}
 
-以下Java代码示例应用了名为 *允许复制* 到已命名的Word文档 *Loan.doc*. 将为添加策略的策略集命名 *全局策略集*. 受策略保护的文档将另存为名为*PolicyProtectedLoanDoc.doc的DOC文件。 *(请参阅 [将策略应用于PDF文档](/help/forms/developing/protecting-documents-policies.md#applying-policies-to-pdf-documents).)
+以下Java代码示例应用名为的策略 *允许复制* 到名为的Word文档 *Loan.doc*. 将策略添加到其中的策略集已命名 *全局策略集*. 受策略保护的文档将另存为名为*PolicyProtectedLoanDoc.doc的DOC文件。 *(请参阅 [将策略应用于PDF文档](/help/forms/developing/protecting-documents-policies.md#applying-policies-to-pdf-documents).)
 
 ```java
  /*
@@ -1646,7 +1646,7 @@ public class ModifyWatermarks {
 
 ## 快速入门（SOAP模式）：使用Java API从Word文档中删除策略 {#quick-start-soap-mode-removing-a-policy-from-a-word-document-using-the-java-api}
 
-以下代码示例从名为 *PolicyProtectedLoanDoc.doc*. 不安全的Word文档另存为 *unProtectedLoan.doc*. (请参阅 [从Word文档中删除策略](/help/forms/developing/protecting-documents-policies.md#removing-policies-from-word-documents).)
+以下代码示例从名为的Word文档中删除策略 *PolicyProtectedLoanDoc.doc*. 不安全的Word文档另存为 *unProtectedLoan.doc*. (请参阅 [从Word文档中删除策略](/help/forms/developing/protecting-documents-policies.md#removing-policies-from-word-documents).)
 
 ```java
  /*
@@ -1754,7 +1754,7 @@ public class ModifyWatermarks {
 
 ## 快速入门（SOAP模式）：使用Java API创建抽象策略 {#quick-start-soap-mode-creating-an-abstract-policy-using-the-java-api}
 
-以下Java代码示例创建了一个名为AllowCopy的新抽象策略。 将策略添加到的策略集命名为全局策略集。 默认情况下，此策略集存在。 （请参阅创建策略。）
+以下Java代码示例创建一个名为AllowCopy的新抽象策略。 将策略添加到其中的策略集被命名为全局策略集。 默认情况下，此策略集存在。 （请参阅创建策略。）
 
 ```java
 /*
@@ -1871,7 +1871,7 @@ public class CreateAbstractPolicySoap {
 
 ## 快速入门（SOAP模式）：使用Java API修改抽象策略 {#quick-start-soap-mode-modifying-an-abstract-policy-using-the-java-api}
 
-以下Java代码示例修改了名为AllowCopy的抽象策略。 在其中修改策略的策略集被命名为全局策略集。 默认情况下，此策略集存在。 （请参阅创建策略。）
+以下Java代码示例修改名为AllowCopy的抽象策略。 在其中修改策略的策略集被命名为全局策略集。 默认情况下，此策略集存在。 （请参阅创建策略。）
 
 ```java
 /*
@@ -1970,7 +1970,7 @@ public class ModifyingAbstractPolicySoap {
 
 ## 快速入门（SOAP模式）：使用Java API删除抽象策略 {#quick-start-soap-mode-deleting-an-abstract-policy-using-the-java-api}
 
-以下Java代码示例将删除名为AllowCopy的抽象策略。 从中删除策略的策略集被命名为全局策略集。 默认情况下，此策略集存在。 （请参阅创建策略。）
+以下Java代码示例删除名为AllowCopy的抽象策略。 从中删除策略的策略集被命名为全局策略集。 默认情况下，此策略集存在。 （请参阅创建策略。）
 
 ```java
 /*
@@ -2055,9 +2055,9 @@ public class DeleteAbstractPolicySoap {
 }
 ```
 
-## 快速入门（SOAP模式）：Protect使用Java API为现有用户创建语句PDF工作流 {#quick-start-soap-mode-protect-a-pdf-in-statement-workflow-for-an-existing-user-using-the-java-api}
+## 快速入门（SOAP模式）：使用Java API在现有用户的语句工作流中ProtectPDF {#quick-start-soap-mode-protect-a-pdf-in-statement-workflow-for-an-existing-user-using-the-java-api}
 
-以下Java代码示例演示了为现有用户保护语句工作流中文档的方法。
+以下Java代码示例演示了为现有用户保护语句工作流中的文档的方法。
 
 ```java
 /*
@@ -2163,11 +2163,11 @@ public class protectStatementWorkFlowExistingUserSoap {
 }
 ```
 
-## 快速入门（SOAP模式）：Protect语句中的PDF工作流，供新用户使用，使用Java API {#quick-start-soap-mode-protect-a-pdf-in-statement-workflow-for-a-new-user-using-the-java-api}
+## 快速入门（SOAP模式）：使用Java API在新用户的语句工作流中ProtectPDF {#quick-start-soap-mode-protect-a-pdf-in-statement-workflow-for-a-new-user-using-the-java-api}
 
-以下Java代码示例演示了如何在语句工作流中保护文档。 这是一个分为两步的过程：
+以下Java代码示例演示了如何在语句工作流中保护文档。 此过程分为两步：
 
-* 将创建新的用户、许可证和策略。
+* 将创建一个新的用户、许可证和策略。
 * 用户与许可证和策略相关联，并且文档受保护。
 
 ```java

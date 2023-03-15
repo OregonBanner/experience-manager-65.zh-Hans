@@ -1,7 +1,7 @@
 ---
 title: SPA WKND 教程
 seo-title: SPA WKND Tutorial
-description: 通过本多部分教程，您可以领导您完成项目设置、组件映射、前端开发工具和应用程序路由来实施您自己的SPA，从而沉浸在SPA开发中。
+description: 使用此多部分教程来让自己沉浸在SPA开发中，引导您完成项目设置、组件映射、前端开发工具和应用程序路由，以实施自己的SPA。
 seo-description: Immerse yourself in SPA development with this multi-part tutorial leading you through project setup, component mapping, front-end development tools, and application routing to implement your own SPA.
 uuid: f57be84b-a037-4c76-856e-afb0275c1a0f
 contentOwner: bohnert
@@ -19,13 +19,13 @@ ht-degree: 17%
 
 # SPA WKND 教程{#spa-wknd-tutorial}
 
-通过本多部分教程，您可以领导您完成项目设置、组件映射、前端开发工具和应用程序路由来实施您自己的SPA，从而沉浸在SPA开发中。
+使用此多部分教程来让自己沉浸在SPA开发中，引导您完成项目设置、组件映射、前端开发工具和应用程序路由，以实施自己的SPA。
 
 ## 教程 {#tutorials}
 
-有关构建您自己的单页应用程序的端到端示例(该示例可在AEM通过应用程序路由从项目设置开始进行编辑)，请参阅WKND SPATutorials:
+有关构建您自己的单页应用程序的端到端示例，这些应用程序可以使用AEM进行编辑，从通过应用程序路由设置项目开始，请参阅WKND SPATutorials：
 
 * [AEM SPA Editor 和 Angular 快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-angular-tutorial/overview.html)
 * [AEM SPA Editor 和 React 快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-react-tutorial/overview.html)
 
-但是，在开始您自己的AEMSPA项目之前，请务必查看 [开发SPA for AEM](/help/sites-developing/spa-architecture.md) 文档。
+但是，在开始自己的AEM SPA项目之前，请务必查看 [开发SPA for AEM](/help/sites-developing/spa-architecture.md) 文档。

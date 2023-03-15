@@ -1,7 +1,7 @@
 ---
 title: 在维护模式下运行AEM表单
 seo-title: Running AEM forms in maintenance mode
-description: 维护模式在执行诸如修补DSC、升级AEM表单或应用Service Pack之类的任务时非常有用。 了解有关在维护模式下运行AEM表单的更多信息。
+description: 在执行打补丁DSC、升级AEM表单或应用Service Pack等任务时，维护模式很有用。 了解有关在维护模式下运行AEM表单的更多信息。
 seo-description: Maintenance mode is useful when performing tasks such as patching a DSC, upgrading AEM forms, or applying a service pack. Learn more about running AEM forms in maintenance mode.
 uuid: 9aa3be20-f17e-4384-b4ce-daaee2898c96
 contentOwner: admin
@@ -19,12 +19,12 @@ ht-degree: 0%
 
 # 在维护模式下运行AEM表单 {#running-aem-forms-in-maintenance-mode}
 
-维护模式在执行诸如修补DSC、升级AEM表单或应用Service Pack之类的任务时非常有用。
+在执行打补丁DSC、升级AEM表单或应用Service Pack等任务时，维护模式很有用。
 
 避免在服务器处于维护模式时调用任何进程。 如果在服务器处于维护模式时调用进程，则会发生以下情况：
 
-* 如果该过程的生命周期较长，则会将其添加到作业数据库，但不会启动。 退出维护模式时，AEM Forms会处理其队列中长期存在的作业，即使服务器在维护模式下重新启动也是如此。
-* 如果该流程的生命周期很短，则会立即进行处理。
+* 如果进程是长期的，则会将其添加到作业数据库，但不会启动。 当您退出维护模式时，AEM Forms会处理其队列中的长期作业，即使服务器在维护模式下重新启动也是如此。
+* 如果处理周期较短，则会立即进行处理。
 
 **将AEM表单置于维护模式**
 
@@ -32,19 +32,19 @@ ht-degree: 0%
 
    `https://[hostname]:[port]/dsc/servlet/DSCStartupServlet?maintenanceMode=pause&user=[administrator username]&password=[password]`
 
-   浏览器窗口中将显示“现在已暂停”消息。
+   浏览器窗口中将显示“现已暂停”消息。
 
    >[!NOTE]
    >
-   >如果在服务器处于维护模式时关闭服务器，则重新启动服务器后仍将处于维护模式。 完成维护任务后，必须关闭维护模式。
+   >如果在服务器处于维护模式时将其关闭，则在重新启动时它仍将处于维护模式。 完成维护任务后，必须关闭维护模式。
 
-**检查AEM表单是否在维护模式下运行**
+**检查AEM表单是否正在维护模式下运行**
 
 1. 在Web浏览器中，输入：
 
    `https://[hostname]:[port]/dsc/servlet/DSCStartupServlet?maintenanceMode=isPaused&user=[administrator username]&password=[password]`
 
-   状态显示在浏览器窗口中。 状态为“true”表示服务器在维护模式下运行，而“false”表示服务器未处于维护模式。
+   状态将显示在浏览器窗口中。 状态“true”表示服务器正在维护模式下运行，“false”表示服务器不在维护模式下。
 
 **关闭维护模式**
 
@@ -52,4 +52,4 @@ ht-degree: 0%
 
    `https://[hostname]:[port]/dsc/servlet/DSCStartupServlet?maintenanceMode=resume&user=[administrator username]&password=[password]`
 
-   浏览器窗口中会显示“当前正在运行”消息。
+   浏览器窗口中将显示“正在运行”消息。

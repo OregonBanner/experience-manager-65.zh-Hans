@@ -22,53 +22,53 @@ ht-degree: 4%
 
 ## 概述 {#overview}
 
-AEM Communities功能通常要求网站访客在参与发布环境的社区之前先进行注册和登录。 他们的用户注册只需存在于发布环境中，通常称为 *成员* 要区分 *用户* 已在创作环境中注册。
+AEM Communities功能通常要求网站访客在注册并登录后才可参与发布环境中的社区。 它们的用户注册只需要存在于发布环境中，通常称为 *成员* 来区分他们 *用户* 已在创作环境中注册。
 
-### 发布时的成员（用户） {#members-users-on-publish}
+### 发布中的成员（用户） {#members-users-on-publish}
 
-使用“社区成员”和“组”控制台，在 *发布* 环境可从创建和管理 *作者* 环境。 仅当 [隧道服务](deploy-communities.md#tunnel-service-on-author) 启用。
+使用在中注册的社区成员和组控制台、成员和成员组 *发布* 可以从创建和管理环境 *作者* 环境。 只有当 [隧道服务](deploy-communities.md#tunnel-service-on-author) 已启用。
 
-### 创作用户 {#users-on-author}
+### 作者中的用户 {#users-on-author}
 
-用于管理在 *作者* 环境中，使用平台的安全控制台时需要：
+用于管理在中注册的用户和组 *作者* 环境，是使用该平台的安全控制台所必需的：
 
-* 从全局导航中，选择 **[!UICONTROL 工具]** > **[!UICONTROL 安全性]** > **[!UICONTROL 用户]**.
-* 从全局导航中，选择 **[!UICONTROL 工具]** > **[!UICONTROL 安全性]** > **[!UICONTROL 群组]**.
+* 在全局导航中，选择 **[!UICONTROL 工具]** > **[!UICONTROL 安全性]** > **[!UICONTROL 用户]**.
+* 在全局导航中，选择 **[!UICONTROL 工具]** > **[!UICONTROL 安全性]** > **[!UICONTROL 组]**.
 
 >[!NOTE]
 >
->部署并启用了示例内容后，许多示例用户同时存在于创作和发布环境中。 运行时，这些用户将不存在 [nosamplecontent运行模式](../../help/sites-administering/production-ready.md).
+>部署并启用示例内容后，创作和发布环境中都会存在许多示例用户。 运行时，这些用户将不存在 [nosamplecontent运行模式](../../help/sites-administering/production-ready.md).
 
 ## 成员控制台 {#members-console}
 
 在创作环境中，要访问“成员”控制台以管理在发布环境中注册的成员，请执行以下操作：
 
-* 从全局导航中，选择 **[!UICONTROL 导航]** > **[!UICONTROL 社区]** > **[!UICONTROL 成员]**
+* 在全局导航中，选择 **[!UICONTROL 导航]** > **[!UICONTROL Communities]** > **[!UICONTROL 成员]**
 
 >[!CAUTION]
 >
->如果 [隧道服务](deploy-communities.md#tunnel-service-on-author) 未启用。
+>在以下情况下，将无法使用成员控制台： [隧道服务](deploy-communities.md#tunnel-service-on-author) 未启用。
 
 ![member-console1](assets/member-console1.png)
 
 ### 搜索 {#search-features}
 
-选择 `Members` 标题。
+选择左侧面板图标 `Members` 标题以切换打开搜索侧面板。
 
 ![](assets/leftpanel-icon.png)
 
 
 ![member-console2](assets/member-console2.png)
 
-选择 `Members` 标题。
+选择左侧的搜索图标 `Members` 标题以关闭搜索侧面板。
 
 ### 成员统计 {#member-statistics}
 
-显示的列 `Views`, `Posts`, `Follows` 和 `Likes` 当用户是具有Adobe Analytics的一个或多个社区站点的成员时，将会进行更新 [已启用](sites-console.md#analytics).
+显示的列 `Views`， `Posts`， `Follows` 和 `Likes` 当用户是具有Adobe Analytics的一个或多个社区网站的成员时，将更新 [已启用](sites-console.md#analytics).
 
 ### 导出 CSV {#export-csv}
 
-选择 `Export CSV` 链接会导致下载所有成员作为逗号分隔值列表，这些值适合导入到电子表格中。
+选择 `Export CSV` 链接会以逗号分隔值的列表形式下载所有成员，适合导入到电子表格中。
 
 列标题为
 
@@ -76,24 +76,24 @@ AEM Communities功能通常要求网站访客在参与发布环境的社区之�
 
 ## 创建新成员 {#create-new-member}
 
-选择 `Create Member` 以在发布环境中创建用户。
+选择 `Create Member` 以便在发布环境中创建用户。
 
 ![create-member1](assets/create-member1.png)
 
 ### 常规 — 成员详细信息 {#general-member-details}
 
-大多数字段是成员稍后可以在其配置文件中填写的可选字段。
+大多数字段是可选字段，成员以后可在其配置文件中填写。
 
 * **[!UICONTROL ID]**
 
-(*必需*)可授权的ID是成员的登录ID。
-默认情况下，ID会设置为所需电子邮件地址的值。
-*创建ID后，无法修改该ID*.
+(*必需*)可授权ID是成员的登录ID。
+默认情况下，ID设置为所需电子邮件地址的值。
+*ID创建后即不可修改*.
 
 * **[!UICONTROL 电子邮件地址]**
 
 (*必需*)成员的电子邮件地址。
-成员在更新其用户档案时可能会更改其电子邮件地址。如果ID默认为电子邮件地址，则ID将 *not* 更改电子邮件地址时进行更改。
+成员在更新其用户档案时可能会更改其电子邮件地址。I如果ID默认为电子邮件地址，则ID将 *非* 更改电子邮件地址时进行更改。
 
 * **[!UICONTROL 密码]**
 
@@ -109,7 +109,7 @@ AEM Communities功能通常要求网站访客在参与发布环境的社区之�
 
 * **[!UICONTROL 将成员添加到组]**
 
-   (*可选*)从现有成员组中选择，以将成员添加到该组。
+   (*可选*)从现有成员组中进行选择，以将成员添加到该组。
 
 * 选择 **[!UICONTROL 保存]**
 
@@ -118,64 +118,64 @@ AEM Communities功能通常要求网站访客在参与发布环境的社区之�
 在“帐户设置”下，社区管理员可以：
 
 * **[!UICONTROL 状态]**
-   * 被禁止会员无法登录，无法查看页面或参与需要登录的活动。 他们可能仍会匿名访问一个开放的社区网站。
+   * 已禁止成员无法登录，导致他们无法查看页面或参与需要登录的活动。 他们仍可匿名访问开放的社区站点。
 
-   * 未禁用A成员拥有对社区站点的完全访问权限。
+   * 未禁止成员具有对社区站点的完全访问权限。
 
    默认为 `Not Banned`.
 
 * **[!UICONTROL 贡献限制]**
 
-   如果选中此项，则成员发布内容的能力会受到限制。
+   如果选中，则成员发布内容的能力有限。
 默认值取决于贡献限制的配置。
-请参阅 [会员缴费限制](limits.md).
+参见 [成员缴款限制](limits.md).
 
 * **[!UICONTROL 更改密码]**
 
-   修改现有成员时存在的链接。 提供社区管理员为成员重置密码的功能。
+   修改现有成员时显示的链接。 使社区管理员能够重置成员的密码。
 
 ### 常规 — 照片 {#general-photo}
 
-要为成员提供头像，请首先选择 **[!UICONTROL 上传图像]** 并选择.jpg、.png、.tif或.gif类型的图像。 图像的首选大小为240 x 240像素，为72 dpi。
+要为成员提供头像，请从选择开始 **[!UICONTROL 上传图像]** 并选择.jpg、.png、.tif或.gif类型的图像。 图像的首选大小为240 x 240像素(72 dpi)。
 
 ### 常规 — 将成员添加到站点 {#general-add-member-to-sites}
 
-该成员可以被添加到一个或多个社区站点的成员组中。 首先，在文本框中输入文本。
+可以将成员添加到一个或多个社区站点的成员组。 首先在文本框中输入文本。
 
 ### 常规 — 将成员添加到组 {#general-add-member-to-groups}
 
-该成员可以添加到一个或多个成员组。 首先，在文本框中输入文本。
+可以将成员添加到一个或多个成员组。 首先在文本框中输入文本。
 
 ### “徽章”选项卡 {#badges-tab}
 
-的 `BADGES` 面板提供手动分配徽章以及撤消徽章的功能。 这些徽章可用于分配的角色以及通常获得的徽章。
+此 `BADGES` 面板提供手动分配徽章以及撤销徽章的功能。 该徽章可能是用于分配的角色以及通常获得的徽章。
 
 另请参阅 [评分和徽章](implementing-scoring.md).
 
 ![create-member2](assets/create-member2.png)
 
 * **[!UICONTROL 添加徽章]**
-   * 开始键入内容以从中进行选择 [可用徽章](badges.md). 选择标记后，选择每个网站或所有网站，该标记应与成员的头像一起显示在这些网站上。
+   * 开始键入以从中进行选择 [可用徽章](badges.md). 选择徽章后，选择每个网站或所有网站，其中徽章应随成员的头像一起显示。
    * 可以选择多个徽章和站点。
 * **[!UICONTROL 删除徽章]**
    * 选择徽章旁边的垃圾桶图标以将其删除。
 
-## 群组控制台 {#groups-console}
+## 组控制台 {#groups-console}
 
-“组”控制台（可从创作环境中访问）允许创建和管理在发布环境中注册的成员组。 它特别适用于：
-* [特权成员组](users.md#privilegedmembersgroups)
+使用可在创作环境中使用的组控制台，可以创建和管理在发布环境中注册的成员组。 它尤其适用于：
+* [拥有权限的成员组](users.md#privilegedmembersgroups)
 * 基于组的分配 [启用资源](resources.md)
 
 要访问“组”控制台，请执行以下操作：
-* 从全局导航中，选择 **[!UICONTROL 导航]** > **[!UICONTROL 社区]** > **[!UICONTROL 群组]**.
+* 在全局导航中，选择 **[!UICONTROL 导航]** > **[!UICONTROL Communities]** > **[!UICONTROL 组]**.
 
 >[!CAUTION]
 >
->如果 [隧道服务](deploy-communities.md#tunnel-service-on-author) 未启用。
+>在以下情况下，将无法使用组控制台： [隧道服务](deploy-communities.md#tunnel-service-on-author) 未启用。
 
 ### 创建新组 {#create-new-group}
 
-选择 `Add Group` 以在发布环境中创建群组。
+选择 `Add Group` 以便在发布环境中创建组。
 
 ![group-console1](assets/group-console1.png)
 
@@ -183,30 +183,30 @@ AEM Communities功能通常要求网站访客在参与发布环境的社区之�
 
 * **[!UICONTROL ID]**
 
-   (*必需*)群组唯一ID。
+   (*必需*)组的唯一ID。
 
-   *创建ID后，无法修改该ID。*
+   *ID创建后即不可修改。*
 
 * **[!UICONTROL 名称]**
 
-   (*可选*)群组的显示名称。
+   (*可选*)组的显示名称。
 
    默认值为ID。
 
 * **[!UICONTROL 描述]**
 
-   (*可选*)群组用途和权限的描述。
+   (*可选*)对组用途和权限的描述。
 
 * **[!UICONTROL 将成员添加到组]**
 
-   (*可选*)选择要作为组初始成员包含的发布端成员。
+   (*可选*)选择要作为组的初始成员包含的发布端成员。
 
 * 选择 **[!UICONTROL 保存]**
 
 ## 授权管理员 {#authorized-administrators}
 
-在社区成员控制台中使用成员时，必须以具有相应权限的用户身份登录，并且需要以 [隧道服务](deploy-communities.md#tunnel-service-on-author) 才能正确配置。
+在“社区”成员控制台中使用成员时，需要以具有适当权限的用户身份登录，并且还需要使用复制代理。 [隧道服务](deploy-communities.md#tunnel-service-on-author) 进行正确配置。
 
 如果未登录为 `admin`，则登录用户必须是 `administrators` 用户组。
 
-另请参阅 [创作上的复制代理](deploy-communities.md#replication-agents-on-author).
+另请参阅 [创作实例上的复制代理](deploy-communities.md#replication-agents-on-author).

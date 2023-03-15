@@ -25,7 +25,7 @@ ht-degree: 59%
 >
 >AEM 功能板是基于每位用户创建的，因此用户只能访问他们自己的功能板。
 >
->但是， [功能板模板](#creating-a-dashboard-template) 可用于共享常用配置和功能板布局。
+>但是， [功能板模板](#creating-a-dashboard-template) 可用于共享通用配置和功能板布局。
 
 ![chlimage_1-22](assets/chlimage_1-22.jpeg)
 
@@ -36,7 +36,7 @@ ht-degree: 59%
 要创建新的功能板，可按照以下步骤进行操作：
 
 1. 在&#x200B;**工具**&#x200B;区域中，单击&#x200B;**配置控制台**。
-1. 在树中，双击 **功能板**.
+1. 在树中，双击 **仪表板**.
 1. 单击&#x200B;**新建功能板**。
 1. 键入&#x200B;**标题**（例如“我的功能板”）和&#x200B;**名称**。
 1. 单击&#x200B;**创建**。
@@ -73,7 +73,7 @@ ht-degree: 59%
 
 ### 网站分析报表组件 {#web-analytics-reporting-components}
 
-AEM随附一组组件，这些组件可渲染您的 [SiteCatalyst](/help/sites-administering/adobeanalytics.md) 数据。 这些组件在&#x200B;**功能板**&#x200B;区域下方的 Sidekick 中列出。
+AEM附带一组组件，这些组件渲染您的多个量度 [SiteCatalyst](/help/sites-administering/adobeanalytics.md) 数据。 这些组件在&#x200B;**功能板**&#x200B;区域下方的 Sidekick 中列出。
 
 每个报表组件提供至少三个选项卡：
 
@@ -88,7 +88,7 @@ AEM随附一组组件，这些组件可渲染您的 [SiteCatalyst](/help/sites-a
 
 **基本**&#x200B;选项卡提供对以下配置条目的访问权：
 
-**标题** 功能板上显示的标题。
+**标题** 仪表板上显示的标题。
 
 **请求类型** 请求数据的方式。
 
@@ -104,9 +104,9 @@ AEM随附一组组件，这些组件可渲染您的 [SiteCatalyst](/help/sites-a
 >
 >若设置一个较大的日期范围，会降低功能板的响应能力。
 
-**日期自** 从中获取数据的绝对或相对日期。
+**起始日期** 从中获取数据的绝对或相对日期。
 
-**日期至** 获取数据的绝对或相对日期。
+**结束日期** 获取数据的绝对或相对日期。
 
 每个组件还定义特定设置。
 
@@ -114,17 +114,17 @@ AEM随附一组组件，这些组件可渲染您的 [SiteCatalyst](/help/sites-a
 
 ![chlimage_1-26](assets/chlimage_1-26a.png)
 
-**日期粒度** X轴的时间单位（例如，日、小时）。
+**日期粒度** X轴的时间单位（例如，天、小时）。
 
 **量度** 要显示的事件列表。
 
-**元素** 划分图表中量度数据的元素列表。
+**元素** 划分图形中量度数据的元素列表。
 
 #### 排名列表报表 {#ranked-list-report}
 
 ![chlimage_1-27](assets/chlimage_1-27a.png)
 
-**元素** 用于划分图表中量度数据的元素。
+**元素** 在图形中划分量度数据的元素。
 
 **量度** 要显示的事件。
 
@@ -136,7 +136,7 @@ AEM随附一组组件，这些组件可渲染您的 [SiteCatalyst](/help/sites-a
 
 **量度** 要显示的事件。
 
-**元素** 用于划分图表中量度数据的元素。
+**元素** 在图形中划分量度数据的元素。
 
 #### 热门网站区域报表 {#top-site-section-report}
 
@@ -144,17 +144,17 @@ AEM随附一组组件，这些组件可渲染您的 [SiteCatalyst](/help/sites-a
 
 ![chlimage_1-29](assets/chlimage_1-29a.png)
 
-**否. 排名最前的项目** 报表中显示的区域数。
+**否. 排名最前的项目** 报告中显示的节数。
 
 #### 趋势报表 {#trended-report}
 
 ![chlimage_1-30](assets/chlimage_1-30a.png)
 
-**日期粒度** X轴的时间单位（例如，日、小时）。
+**日期粒度** X轴的时间单位（例如，天、小时）。
 
 **量度** 要显示的事件。
 
-**元素** 用于划分图表中量度数据的元素。
+**元素** 在图形中划分量度数据的元素。
 
 ## 扩展功能板 {#extending-dashboard}
 
@@ -162,13 +162,13 @@ AEM随附一组组件，这些组件可渲染您的 [SiteCatalyst](/help/sites-a
 
 功能板是普通页面 (`cq:Page`)，因此任何组件都可用于构建功能板。
 
-有一个默认的组件组 `Dashboard` 包含默认在模板中启用的analytics报表组件。
+有一个默认的组件组 `Dashboard` 包含默认在模板上启用的analytics报表组件。
 
 ### 创建功能板模板 {#creating-a-dashboard-template}
 
 模板定义新功能板的默认内容。您可以使用多个模板来创建不同类型的功能板。
 
-功能板模板的创建方式与其他页面模板类似，只是它们存储在 `/libs/cq/dashboards/templates/`. 请参阅 [创建内容页面模板](/help/sites-developing/website.md#creating-the-contentpage-template) 中。
+功能板模板与其他页面模板一样创建，只是它们存储在 `/libs/cq/dashboards/templates/`. 请参阅 [正在创建Contentpage模板](/help/sites-developing/website.md#creating-the-contentpage-template) 部分。
 
 >[!NOTE]
 >
@@ -180,7 +180,7 @@ AEM随附一组组件，这些组件可渲染您的 [SiteCatalyst](/help/sites-a
 
 ![chlimage_1-31](assets/chlimage_1-31a.png)
 
-顶级创作组件存储在位于的存储库中 `/apps/geometrixx-outdoors/components/reporting` 和由：
+顶级创作组件存储在存储库中的 `/apps/geometrixx-outdoors/components/reporting` 并由：
 
 1. 一个 `jsp` 文件，它可读取数据并定义 `html` 占位符。
 
@@ -188,9 +188,9 @@ AEM随附一组组件，这些组件可渲染您的 [SiteCatalyst](/help/sites-a
 
 ![chlimage_1-32](assets/chlimage_1-32a.png)
 
-以下Javascript文件在 `geout.reporting.topauthors` [客户端库](/help/sites-developing/clientlibs.md) 作为组件本身的子项。
+以下Javascript文件是在 `geout.reporting.topauthors` [客户端库](/help/sites-developing/clientlibs.md) 作为组件本身的子项。
 
-的 [QueryBuilder](/help/sites-developing/querybuilder-api.md) 用于查询要读取的存储库 `cq:AuditEvent` 节点。 查询结果是一个可从其中提取作者投稿的 JSON 对象。
+此 [Querybuilder](/help/sites-developing/querybuilder-api.md) 用于查询要读取的存储库 `cq:AuditEvent` 节点。 查询结果是一个可从其中提取作者投稿的 JSON 对象。
 
 #### top_authors.js {#top-authors-js}
 
@@ -237,7 +237,7 @@ $.ajax({
 });
 ```
 
-的 `JSP` 包括 `global.jsp` 和 `clientlib`.
+此 `JSP` 包括两者 `global.jsp` 和 `clientlib`.
 
 #### top_authors.jsp {#top-authors-jsp}
 

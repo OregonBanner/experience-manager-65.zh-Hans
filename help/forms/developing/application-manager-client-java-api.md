@@ -17,7 +17,7 @@ ht-degree: 0%
 
 ---
 
-# 应用程序管理器客户端JavaAPI快速启动(SOAP) {#application-manager-client-javaapi-quick-start-soap}
+# 应用程序管理器客户端JavaAPI快速入门(SOAP) {#application-manager-client-javaapi-quick-start-soap}
 
 以下Java API快速入门(SOAP)适用于应用程序管理器客户端。
 
@@ -37,11 +37,11 @@ ht-degree: 0%
 
 [快速入门（SOAP模式）：使用Java API删除AEM Forms应用程序存档](application-manager-client-java-api.md#quick-start-soap-mode-deleting-the-application-archive-using-the-java-api)
 
-AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置为SOAP。
+AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应设置为SOAP。
 
 >[!NOTE]
 >
->“使用AEM Forms进行编程”中的快速入门是基于JBoss和Windows操作系统上部署的Forms服务器。 但是，如果您使用的是其他操作系统（如Unix），请将特定于窗口的路径替换为适用操作系统支持的路径。 同样，如果您使用的是其他J2EE应用程序服务器，请确保指定有效的连接属性。 请参阅 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>位于“使用AEM Forms编程”中的快速入门指南基于部署在JBoss和Windows操作系统上的Forms Server。 但是，如果您使用的是其他操作系统（如Unix），请用适用的操作系统支持的路径替换特定于windows的路径。 同样，如果您使用的是其他J2EE应用程序服务器，请确保指定有效的连接属性。 参见 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
 ## 快速入门（SOAP模式）：使用Java API创建应用程序版本 {#quick-start-soap-mode-creating-application-version-using-the-java-api}
 
@@ -251,7 +251,7 @@ public class ExportLCA_SOAP {
 
 >[!NOTE]
 >
->Java API importApplication()用较新的应用程序替换具有相同名称的现有应用程序。 要更新现有应用程序，请使用API importApplication()代替API updateApplication()。
+>Java API importApplication()用较新的应用程序替换现有的同名应用程序。 要更新现有应用程序，请使用API importApplication()代替API updateApplication()。
 
 ```java
 /*
@@ -443,7 +443,7 @@ public class GetApplication_SOAP {
 
 以下Java代码示例使用Java API获取应用程序。
 
-**注释**:获取AEM Forms应用程序API、getApplications()，只返回已部署的应用程序。
+**注释**：获取AEM Forms应用程序API getApplications()，将仅返回已部署的应用程序。
 
 ```java
 /*
@@ -643,7 +643,7 @@ public class GetApplicationStatus_SOAP {
 }
 ```
 
-## 快速入门（SOAP模式）：使用Java API预览LiveCycleES2及更高版本的应用程序存档 {#quick-start-soap-mode-previewing-the-livecycle-es2-and-later-application-archive-using-the-java-api}
+## 快速入门（SOAP模式）：使用Java API预览LiveCycleES2和更高版本的应用程序存档 {#quick-start-soap-mode-previewing-the-livecycle-es2-and-later-application-archive-using-the-java-api}
 
 以下Java代码示例用于使用Java API预览AEM Forms和更高版本的应用程序存档。
 

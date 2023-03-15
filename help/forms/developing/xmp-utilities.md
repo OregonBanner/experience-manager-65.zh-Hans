@@ -20,36 +20,36 @@ ht-degree: 0%
 
 # 使用XMP实用程序 {#working-with-xmp-utilities}
 
-**本文档中的示例和示例仅适用于JEE环境中的AEM Forms。**
+**本文档中的示例和示例仅适用于AEM Forms on JEE环境。**
 
 **关于XMP Utilities服务**
 
-PDF文档包含元数据，元数据是与文档内容区分的有关文档的信息，如文本和图形。 Adobe可扩展元数据平台(XMP)是处理文档元数据的标准。
+PDF文档包含元数据，元数据是有关文档的信息，与文档内容（如文本和图形）不同。 Adobe可扩展元数据平台(XMP)是处理文档元数据的标准。
 
-XMP实用程序服务可以从PDF文档中检索和保存XMP元数据，以及将XMP元数据导入PDF文档。
+XMP Utilities服务可以从PDF文档中检索和保存XMP元数据，并将XMP元数据导入PDF文档。
 
-您可以使用XMP Utilities服务完成以下任务：
+您可以使用XMP Utilities服务完成这些任务：
 
 * 将元数据导入PDF文档。 (请参阅 [将元数据导入PDF文档](xmp-utilities.md#importing-metadata-into-pdf-documents).)
 * 从PDF文档导出元数据。 (请参阅 [从PDF文档导出元数据](xmp-utilities.md#exporting-metadata-from-pdf-documents).)
 
 >[!NOTE]
 >
->有关XMP Utilities服务的更多信息，请参阅 [AEM Forms服务参考](https://www.adobe.com/go/learn_aemforms_services_63).
+>有关XMP Utilities服务的详细信息，请参见 [AEM Forms的服务参考](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ## 将元数据导入PDF文档 {#importing-metadata-into-pdf-documents}
 
-您可以使用XMP实用程序Java和Web服务API以编程方式将XMP元数据导入PDF文档。 元数据提供有关PDF文档的信息，如文档的作者和与文档相关的关键字。 元数据可以在文档的“文档属性”对话框中找到，如下图所示。
+您可以使用XMP实用程序Java和Web服务API以编程方式将XMP元数据导入PDF文档。 元数据提供有关PDF文档的信息，例如文档的作者和与文档相关的关键字。 元数据可以位于文档的“文档属性”对话框中，如下图所示。
 
-![ww_ww_metadatadialog](assets/ww_ww_metadatadialog.png)
+![ww_ww_metadatadatalog](assets/ww_ww_metadatadialog.png)
 
-要以编程方式将元数据导入PDF文档，您可以使用指定元数据值的现有XML文档，也可以使用类型的对象 `XMPUtilityMetadata`. (请参阅 [AEM Forms API参考](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).)
+要以编程方式将元数据导入PDF文档，可以使用指定元数据值的现有XML文档，也可以使用类型的对象 `XMPUtilityMetadata`. (请参阅 [AEM Forms API参考](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).)
 
 >[!NOTE]
 >
 >本节讨论如何使用XML文档将元数据导入PDF文档。
 
-以下XML代码包含与上图对应的元数据值。 例如，请注意指定关键词的粗体项目。
+以下XML代码包含与上图对应的元数据值。 例如，请注意用于指定关键字的粗体项目。
 
 ```xml
  <?xpacket begin="?" id="W5M0MpCehiHzreSzNTczkc9d"?>
@@ -116,7 +116,7 @@ XMP实用程序服务可以从PDF文档中检索和保存XMP元数据，以及�
 
 >[!NOTE]
 >
->有关XMP Utilities服务的更多信息，请参阅 [AEM Forms服务参考](https://www.adobe.com/go/learn_aemforms_services_63).
+>有关XMP Utilities服务的详细信息，请参见 [AEM Forms的服务参考](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### 步骤摘要 {#summary-of-steps}
 
@@ -126,17 +126,17 @@ XMP实用程序服务可以从PDF文档中检索和保存XMP元数据，以及�
 1. 创建XMPUtilityService客户端。
 1. 调用XMP元数据导入操作。
 
-**包含项目文件**
+**包括项目文件**
 
-在开发项目中包含必需的文件。 如果您使用Java创建客户端应用程序，请包含必需的JAR文件。 如果您使用的是Web服务，请确保包含代理文件。
+在开发项目中包含必要的文件。 如果要使用Java创建客户端应用程序，请包含必要的JAR文件。 如果使用Web服务，请确保包含代理文件。
 
 **创建XMPUtilityService客户端**
 
-在以编程方式执行XMP实用程序操作之前，必须创建XMPUtilityService客户端。 通过Java API，可通过创建 `XMPUtilityServiceClient` 对象。 使用Web服务API，可通过使用 `XMPUtilityServiceService` 对象。
+必须先创建XMPUtilityService客户端，然后才能以编程方式执行XMP Utilities操作。 使用Java API，可通过创建 `XMPUtilityServiceClient` 对象。 通过Web服务API，可使用 `XMPUtilityServiceService` 对象。
 
 **调用XMP元数据导入操作**
 
-创建服务客户端后，可以调用其中一个XMP元数据导入操作，以将XMP元数据导入指定的PDF文档。
+创建服务客户端后，可以调用某个XMP元数据导入操作以将XMP元数据导入指定的PDF文档。
 
 **另请参阅**
 
@@ -150,35 +150,35 @@ XMP实用程序服务可以从PDF文档中检索和保存XMP元数据，以及�
 
 ### 使用Java API导入XMP元数据 {#import-xmp-metadata-using-the-java-api}
 
-使用XMP实用程序API(Java)导入XMP元数据：
+使用XMP Utilities API (Java)导入XMP元数据：
 
-1. 包含项目文件
+1. 包括项目文件
 
-   在Java项目的类路径中包含客户端JAR文件，如adobe-pdfutility-client.jar。
+   在Java项目的类路径中包含客户端JAR文件，例如adobe-pdfutility-client.jar。
 
    >[!NOTE]
    >
-   >adobe-pdfutility-client.jar文件包含允许您以编程方式调用XMP实用程序服务的类。
+   >adobe-pdfutility-client.jar文件包含的类允许您以编程方式调用XMP实用程序服务。
 
 1. 创建XMPUtilityService客户端
 
-   创建 `XMPUtilityServiceClient` 对象，并使用其构造函数进行传递 `ServiceClientFactory` 包含连接属性的对象。
+   创建 `XMPUtilityServiceClient` 对象通过使用该对象的构造函数传递 `ServiceClientFactory` 包含连接属性的对象。
 
 1. 调用XMP元数据导入操作
 
-   要修改XMP元数据，请调用 `XMPUtilityServiceClient` 对象 `importMetadata` 方法或其 `importXMP` 方法。
+   要修改XMP元数据，请调用 `XMPUtilityServiceClient` 对象的 `importMetadata` 方法或其 `importXMP` 方法。
 
-   如果您使用 `importMetadata` 方法中，传入以下值：
+   如果您使用 `importMetadata` 方法，传入以下值：
 
    * A `com.adobe.idp.Document` 表示PDF文件的对象。
-   * 安 `XMPUtilityMetadata` 包含要导入的元数据的对象。
+   * An `XMPUtilityMetadata` 包含要导入的元数据的对象。
 
-   如果您使用 `importXMP` 方法中，传入以下值：
+   如果您使用 `importXMP` 方法，传入以下值：
 
    * A `com.adobe.idp.Document` 表示PDF文件的对象。
    * A `com.adobe.idp.Document` 表示包含要导入的元数据的XML文件的对象。
 
-   无论哪种情况，返回的值都是 `com.adobe.idp.Document` 表示包含新导入元数据的PDF文件的对象。 然后，可将此对象保存到磁盘。
+   在任一情况下，返回的值都是 `com.adobe.idp.Document` 表示包含新导入的PDF的元数据文件的对象。 然后，您可以将此对象保存到磁盘。
 
 **另请参阅**
 
@@ -192,9 +192,9 @@ XMP实用程序服务可以从PDF文档中检索和保存XMP元数据，以及�
 
 要使用XMP实用程序Web服务API以编程方式导入XMP元数据，请执行以下任务：
 
-1. 包含项目文件
+1. 包括项目文件
 
-   * 创建使用XMP实用程序服务WSDL文件的Microsoft .NET客户端程序集。 (请参阅 [使用Base64编码调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding).)
+   * 创建一个使用XMP Utilities服务WSDL文件的Microsoft .NET客户端程序集。 (请参阅 [使用Base64编码调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding).)
    * 引用Microsoft .NET客户端程序集。 (请参阅 [创建使用Base64编码的.NET客户端程序集](/help/forms/developing/invoking-aem-forms-using-web.md#creating-a-net-client-assembly-that-uses-base64-encoding).)
 
 1. 创建XMPUtilityService客户端
@@ -203,19 +203,19 @@ XMP实用程序服务可以从PDF文档中检索和保存XMP元数据，以及�
 
 1. 调用XMP元数据导入操作
 
-   要修改XMP元数据，请调用 `XMPUtilityServiceService` 对象 `importMetadata` 方法或其 `importXMP` 方法。
+   要修改XMP元数据，请调用 `XMPUtilityServiceService` 对象的 `importMetadata` 方法或其 `importXMP` 方法。
 
-   如果您使用 `importMetadata` 方法中，传入以下值：
+   如果您使用 `importMetadata` 方法，传入以下值：
 
    * A `BLOB` 表示PDF文件的对象。
-   * 安 `XMPUtilityMetadata` 包含要导入的元数据的对象。
+   * An `XMPUtilityMetadata` 包含要导入的元数据的对象。
 
-   如果您使用 `importXMP` 方法中，传入以下值：
+   如果您使用 `importXMP` 方法，传入以下值：
 
    * A `BLOB` 表示PDF文件的对象。
    * A `BLOB` 表示包含要导入的元数据的XML文件的对象。
 
-   无论哪种情况，返回的值都是 `BLOB` 表示包含新导入元数据的PDF文件的对象。 然后，可将此对象保存到磁盘。
+   在任一情况下，返回的值都是 `BLOB` 表示包含新导入的PDF的元数据文件的对象。 然后，您可以将此对象保存到磁盘。
 
 **另请参阅**
 
@@ -233,23 +233,23 @@ XMP实用程序服务可以从PDF文档中检索和保存XMP元数据，以及�
 
 >[!NOTE]
 >
->有关XMP Utilities服务的更多信息，请参阅 [AEM Forms服务参考](https://www.adobe.com/go/learn_aemforms_services_63).
+>有关XMP Utilities服务的详细信息，请参见 [AEM Forms的服务参考](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### 步骤摘要 {#summary_of_steps-1}
 
-要从PDF文档导出XMP元数据，请执行以下步骤：
+要从PDF文档中导出XMP元数据，请执行以下步骤：
 
 1. 包括项目文件。
 1. 创建XMPUtilityService客户端。
 1. 调用XMP元数据导出操作。
 
-**包含项目文件**
+**包括项目文件**
 
-在开发项目中包含必需的文件。 如果您使用Java创建客户端应用程序，请包含必需的JAR文件。 如果您使用的是Web服务，请确保包含代理文件。
+在开发项目中包含必要的文件。 如果要使用Java创建客户端应用程序，请包含必要的JAR文件。 如果使用Web服务，请确保包含代理文件。
 
 **创建XMPUtilityService客户端**
 
-在以编程方式执行XMP实用程序操作之前，必须创建XMPUtilityService客户端。 使用Java AP，如果可以通过创建 `XMPUtilityServiceClient` 对象。 通过Web服务API，可以使用 `XMPUtilityServiceService` 对象。
+必须先创建XMPUtilityService客户端，然后才能以编程方式执行XMP Utilities操作。 使用Java AP，可通过创建 `XMPUtilityServiceClient` 对象。 通过Web服务API，可使用 `XMPUtilityServiceService` 对象。
 
 **调用XMP元数据导出操作**
 
@@ -267,25 +267,25 @@ XMP实用程序服务可以从PDF文档中检索和保存XMP元数据，以及�
 
 ### 使用Java API导出XMP元数据 {#export-xmp-metadata-using-the-java-api}
 
-使用XMP实用程序API(Java)导出XMP元数据：
+使用XMP Utilities API (Java)导出XMP元数据：
 
-1. 包含项目文件
+1. 包括项目文件
 
-   在Java项目的类路径中包含客户端JAR文件，如adobe-pdfutility-client.jar。
+   在Java项目的类路径中包含客户端JAR文件，例如adobe-pdfutility-client.jar。
 
    >[!NOTE]
    >
-   >adobe-pdfutility-client.jar文件包含允许您以编程方式调用XMP Utility服务的类。
+   >adobe-pdfutility-client.jar文件包含的类使您能够以编程方式调用XMP实用程序服务。
 
 1. 创建XMPUtilityService客户端
 
-   创建 `XMPUtilityServiceClient` 对象，并使用其构造函数进行传递 `ServiceClientFactory` 包含连接属性的对象。
+   创建 `XMPUtilityServiceClient` 对象通过使用该对象的构造函数传递 `ServiceClientFactory` 包含连接属性的对象。
 
 1. 调用XMP元数据导入操作
 
-   要检查XMP元数据，请调用 `XMPUtilityServiceClient` 对象 `exportMetadata` 方法和传递 `com.adobe.idp.Document` 表示PDF文件的对象。 方法会返回 `XMPUtilityMetadata` 包含检索元数据的对象。
+   要检查XMP元数据，请调用 `XMPUtilityServiceClient` 对象的 `exportMetadata` 方法和传入 `com.adobe.idp.Document` 表示PDF文件的对象。 此方法会返回 `XMPUtilityMetadata` 包含检索的元数据的对象。
 
-   要检索并保存XMP元数据，请调用 `XMPUtilityServiceClient` 对象 `exportXMP` 方法和传递 `com.adobe.idp.Document` 表示PDF文件的对象。 方法会返回 `com.adobe.idp.Document` 包含检索到的元数据的对象，您随后可以将其另存为XML文件。
+   要检索和保存XMP元数据，请调用 `XMPUtilityServiceClient` 对象的 `exportXMP` 方法和传入 `com.adobe.idp.Document` 表示PDF文件的对象。 此方法会返回 `com.adobe.idp.Document` 包含已检索元数据的对象，随后可将其另存为XML文件保存到磁盘。
 
 **另请参阅**
 
@@ -297,11 +297,11 @@ XMP实用程序服务可以从PDF文档中检索和保存XMP元数据，以及�
 
 ### 使用Web服务API导出XMP元数据 {#export-xmp-metadata-using-the-web-service-api}
 
-使用XMP实用程序API（Web服务）导出XMP元数据：
+使用XMP Utilities API （Web服务）导出XMP元数据：
 
-1. 包含项目文件
+1. 包括项目文件
 
-   * 创建使用XMP实用程序服务WSDL文件的Microsoft .NET客户端程序集。
+   * 创建一个使用XMP Utilities服务WSDL文件的Microsoft .NET客户端程序集。
    * 引用Microsoft .NET客户端程序集。
 
 1. 创建XMPUtilityService客户端
@@ -310,9 +310,9 @@ XMP实用程序服务可以从PDF文档中检索和保存XMP元数据，以及�
 
 1. 调用XMP元数据导入操作
 
-   要检查XMP元数据，请调用 `XMPUtilityServiceClient` 对象 `exportMetadata` 方法和传递 `BLOB` 表示PDF文件的对象。 方法会返回 `XMPUtilityMetadata` 包含检索元数据的对象。
+   要检查XMP元数据，请调用 `XMPUtilityServiceClient` 对象的 `exportMetadata` 方法和传入 `BLOB` 表示PDF文件的对象。 此方法会返回 `XMPUtilityMetadata` 包含检索的元数据的对象。
 
-   要检索并保存XMP元数据，请调用 `XMPUtilityServiceClient` 对象 `exportXMP` 方法和传递 `BLOB` 表示PDF文件的对象。 方法会返回 `BLOB` 包含检索到的元数据的对象，您随后可以将其另存为XML文件。
+   要检索和保存XMP元数据，请调用 `XMPUtilityServiceClient` 对象的 `exportXMP` 方法和传入 `BLOB` 表示PDF文件的对象。 此方法会返回 `BLOB` 包含已检索元数据的对象，随后可将其另存为XML文件保存到磁盘。
 
 **另请参阅**
 

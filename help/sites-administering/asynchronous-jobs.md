@@ -145,7 +145,7 @@ AEM 每天 01:00 运行清除作业，以删除已完成的已超过一天的异
 >* [创建和组织页面](/help/sites-authoring/managing-pages.md)
 >* [创建并同步 Live Copy](/help/sites-administering/msm-livecopy.md)
 >* [在Experience Manager中配置电子邮件](/help/sites-administering/notification.md).
->* [导入资产元数据](/help/assets/metadata.md#import-metadata).
->* [导出资产元数据](/help/assets/metadata.md#export-metadata).
+>* [导入资源元数据](/help/assets/metadata.md#import-metadata).
+>* [导出资源元数据](/help/assets/metadata.md#export-metadata).
 >* [使用“连接的资产”从远程部署中共享 DAM 资产](/help/assets/use-assets-across-connected-assets-instances.md)。
 

@@ -20,20 +20,20 @@ ht-degree: 1%
 
 # 更改界面上的字体{#changing-the-font-on-the-interface}
 
-您可以更改在AEM Forms工作区中显示的字体。 在用户界面的特定部分中使用的字体在样式表的相应部分中定义。 您可以选择性地更改用户界面上的字体。
+您可以更改AEM Forms工作区中显示的字体。 在用户界面的特定部分中使用的字体在样式表的相应部分中定义。 可以选择性地更改用户界面上的字体。
 
-关注 [AEM Forms工作区自定义的一般步骤](../../forms/using/generic-steps-html-workspace-customization.md) 并根据您的要求，按照自定义CSS和/或HTML的步骤操作。
+请遵循 [AEM Forms工作区自定义的一般步骤](../../forms/using/generic-steps-html-workspace-customization.md) 并根据您的要求，执行自定义CSS、HTML或两者的步骤。
 
-1. 更改或添加现有样式的字体系列。
-1. 更改或添加HTML元素的内嵌字体系列。
+1. 在现有样式中更改或添加字体系列。
+1. 更改或添加HTML元素的字体系列。
 1. 添加样式并将其用于HTML元素。
 
 例如，要将顶部导航栏锚点文本的字体更改为Courier New，请执行以下步骤：
 
-1. 通过访问以登录CRXDE Lite `https://'[server]:[port]'/lc/crx/de/index.jsp`.
+1. 通过访问登录到CRXDE Lite `https://'[server]:[port]'/lc/crx/de/index.jsp`.
 1. 执行下列操作之一：
 
-   1. 要更改现有样式的字体系列，请在/apps/ws/css的newStyle.css文件中添加以下内容。
+   1. 要更改现有样式中的font-family，请在/apps/ws/css的newStyle.css文件中添加以下内容。
 
       ```css
       #topnav a {
@@ -41,7 +41,7 @@ ht-degree: 1%
       }
       ```
 
-   1. 要为HTML元素添加内嵌的字体系列，请复制 `/libs/ws/js/runtime/templates/appnavigation.html` 文件到 `/apps/ws/js/runtime/templates/appnavigation.html`.
+   1. 要为HTML元素添加字体系列，请复制 `/libs/ws/js/runtime/templates/appnavigation.html` 文件到 `/apps/ws/js/runtime/templates/appnavigation.html`.
 
       按如下方式更新/apps/ws/js/runtime/templates/appnavigation.html文件：
 
@@ -52,9 +52,9 @@ ht-degree: 1%
       <li class="preference"><a href="#/preferences" title="<%= $.t('index.header.topnav.preferences.detail')%>" style="font-family:Courier New;" ><%= $.t('index.header.topnav.preferences.name')%></a></li>
       ```
 
-      打开/apps/ws/js/registry.js文件进行编辑和替换 `text!/lc/libs/ws/js/runtime/templates/appnavigation.html` with `text!/lc/apps/ws/js/runtime/templates/appnavigation.html`.
+      打开/apps/ws/js/registry.js文件进行编辑和替换 `text!/lc/libs/ws/js/runtime/templates/appnavigation.html` 替换为 `text!/lc/apps/ws/js/runtime/templates/appnavigation.html`.
 
-   1. 要添加定义font-family的样式，请在/apps/ws/css的newStyle.css文件中添加以下内容。
+   1. 要添加定义font-family的样式，请在newStyle.css文件（位于/apps/ws/css）中添加以下内容。
 
       ```css
       .myNewFontStyle a {
@@ -62,7 +62,7 @@ ht-degree: 1%
       }
       ```
 
-      要为HTML元素添加内联的字体系列，请在apps/ws/js/runtime/templates的appnavigation.html文件中添加以下内容。
+      要为HTML元素添加font-family内联，请在/apps/ws/js/runtime/templates的appnavigation.html文件中添加以下内容。
 
       ```jsp
       <div id="topnav" class="myNewFontStyle">
@@ -83,4 +83,4 @@ ht-degree: 1%
 
 ![change_font_after](assets/change_font_after.png)
 
-自定义第一个选项卡的字体后显示顶部导航栏
+第一个选项卡的字体自定义后的顶部导航栏

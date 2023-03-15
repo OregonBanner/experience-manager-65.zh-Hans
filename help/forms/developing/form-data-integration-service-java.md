@@ -20,21 +20,21 @@ ht-degree: 0%
 
 # 表单数据集成服务Java API快速入门(SOAP) {#form-data-integration-service-javaapi-quick-start-soap}
 
-表单数据集成服务提供以下快速入门。
+以下快速入门适用于表单数据集成服务。
 
 [快速入门（SOAP模式）：使用Java API导入表单数据](form-data-integration-service-java.md#quick-start-soap-mode-importing-form-data-using-the-java-api)
 
 [快速入门（SOAP模式）：使用Java API导出表单数据](form-data-integration-service-java.md#quick-start-soap-mode-exporting-form-data-using-the-java-api)
 
-AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置为SOAP。
+AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应设置为SOAP。
 
 >[!NOTE]
 >
->“使用AEM表单进行编程”中的“快速入门”基于在JBoss应用程序服务器和Microsoft Windows操作系统上部署的Forms服务器。 但是，如果您使用的是其他操作系统（如UNIX），请将特定于Windows的路径替换为适用操作系统支持的路径。 同样，如果您使用的是其他J2EE应用程序服务器，请确保指定有效的连接属性。 请参阅 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>位于“使用AEM进行编程”表单中的快速入门指南基于部署在JBoss Application Server和Microsoft Windows操作系统上的Forms Server。 但是，如果您使用的是其他操作系统（如UNIX），请将特定于Windows的路径替换为适用的操作系统支持的路径。 同样，如果您使用的是其他J2EE应用程序服务器，请确保指定有效的连接属性。 参见 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
 ## 快速入门（SOAP模式）：使用Java API导入表单数据 {#quick-start-soap-mode-importing-form-data-using-the-java-api}
 
-以下Java代码示例将数据导入PDF表单。 数据位于名为的XML文件中 *Loan_data.xml* 而PDF表单将另存为名为的PDF文件 *ResultLoanForm.pdf*. (请参阅 [导入表单数据](/help/forms/developing/importing-exporting-data.md#importing-form-data).)
+以下Java代码示例将数据导入PDF表单。 数据位于名为的XML文件中 *Loan_data.xml* PDF表单将另存为名为的PDF文件 *ResultLoanForm.pdf*. (请参阅 [导入表单数据](/help/forms/developing/importing-exporting-data.md#importing-form-data).)
 
 ```java
  /*
@@ -136,7 +136,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
 
 ## 快速入门（SOAP模式）：使用Java API导出表单数据 {#quick-start-soap-mode-exporting-form-data-using-the-java-api}
 
-以下Java代码示例从PDF表单导出数据。 表单数据将另存为名为的XML文件 *Loan_data.xml*. (请参阅 [导出表单数据](/help/forms/developing/importing-exporting-data.md#exporting-form-data).)
+以下Java代码示例从PDF表单中导出数据。 表单数据保存为名为的XML文件 *Loan_data.xml*. (请参阅 [导出表单数据](/help/forms/developing/importing-exporting-data.md#exporting-form-data).)
 
 ```java
  /*

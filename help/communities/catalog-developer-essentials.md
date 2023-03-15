@@ -21,13 +21,13 @@ ht-degree: 2%
 
 本页提供了有关使用启用社区站点的目录功能的基本信息。
 
-目录功能（当包含在社区站点中时）允许社区成员浏览并选择目录中列出的支持资源。
+当包含在社区站点中时，目录功能允许社区成员浏览和选择目录中列出的启用资源。
 
-的 [ `enablement catalog` 组件](catalog.md) 允许社区成员访问 [启用资源](resources.md). 使用AEM标记是管理目录中启用资源外观的重要部分。
+此 [ `enablement catalog` 组件](catalog.md) 允许社区成员访问目录 [启用资源](resources.md). 使用AEM标记是管理目录中启用资源外观的重要组成部分。
 
-请参阅 [标记支持资源](tag-resources.md).
+参见 [标记启用资源](tag-resources.md).
 
-## 客户端要点 {#essentials-for-client-side}
+## 适用于客户端的Essentials {#essentials-for-client-side}
 
 <table>
  <tbody>
@@ -40,7 +40,7 @@ ht-degree: 2%
    <td>否</td>
   </tr>
   <tr>
-   <td> <a href="clientlibs.md"><strong>clientlibs</strong></a></td>
+   <td> <a href="clientlibs.md"><strong>clientllibs</strong></a></td>
    <td>cq.social.enablement.hbs.breadcrumbs<br /> cq.social.enablement.hbs.catalog<br /> cq.social.enablement.hbs.resource<br /> cq.social.enablement.hbs.learningpath</td>
   </tr>
   <tr>
@@ -53,29 +53,29 @@ ht-degree: 2%
   </tr>
   <tr>
    <td><strong> 属性</strong></td>
-   <td>请参阅 <a href="catalog.md">目录功能</a></td>
+   <td>参见 <a href="catalog.md">目录功能</a></td>
   </tr>
  </tbody>
 </table>
 
-## 服务器端要点 {#essentials-for-server-side}
+## 服务器端Essentials {#essentials-for-server-side}
 
 ### 目录功能 {#catalog-function}
 
-包含 [目录函数](functions.md#catalog-function)，包括已配置的 `enablement catalog` 组件。
+社区站点结构包括 [目录功能](functions.md#catalog-function)，包括已配置的 `enablement catalog` 组件。
 
 ### 预过滤器 {#pre-filters}
 
-将目录功能添加到社区站点后，可以通过指定预过滤器来限制目录中显示的支持资源和学习路径。 这可以通过在网站的目录资源实例中设置属性来完成。
+将“目录”功能添加到社区站点后，可以通过指定预过滤器来限制出现在目录中的启用资源和学习路径。 这是通过在站点的目录资源实例上设置属性来完成的。
 
-使用 [启用教程](getting-started-enablement.md):
+以为例 [启用教程](getting-started-enablement.md)：
 
-* 在作者时
+* 在作者上
 * 使用 [CRXDE](../../help/sites-developing/developing-with-crxde-lite.md)
 
-   * 例如 [https://&lt;server>:&lt;port>/crx/de](http://localhost:4502/crx/de)
+   * 例如 [https://&lt;server>：&lt;port>/crx/de](http://localhost:4502/crx/de)
 
-* 导航到目录页面上的目录资源
+* 导航到目录页上的目录资源
 
    * 例如，`/content/sites/enable/en/catalog/jcr:content/content/primary/catalog`
 
@@ -88,26 +88,26 @@ ht-degree: 2%
       * 类型: `nt:unstructured`
       * 选择 **[!UICONTROL 全部保存]**
 
-* 添加 `se_resource-tags` 属性 `filters` 节点
+* 添加 `se_resource-tags` 属性到 `filters` 节点
 
    * 选择 `filters` 节点
    * 添加多属性
 
       * 名称: `se_resource-tags`
       * 类型：字符串
-      * 值： *&lt;enter a=&quot;&quot; span=&quot;&quot; id=&quot;1&quot; translate=&quot;no&quot; />TagID](#pre-filter-tagids)>*[
-         * 选择 **[!UICONTROL 多]**
+      * 值： *&lt;enter a=&quot;&quot; span=&quot;&quot; id=&quot;1&quot; translate=&quot;no&quot; />标记ID](#pre-filter-tagids)>*[
+         * 选择 **[!UICONTROL 多个]**
          * 选择 **[!UICONTROL 添加]**
 
-            * 在弹出对话框中，选择 `+` 添加其他预过滤标记ID
+            * 在弹出对话框中，选择 `+` 添加其他预筛选标记ID
 
 * 重新发布社区站点
 
 ![configure-catalog](assets/configure-catalog.png)
 
-#### 预过滤标记ID {#pre-filter-tagids}
+#### 预筛选标记ID {#pre-filter-tagids}
 
-预过滤器 [标记ID](../../help/sites-developing/framework.md#tagid) 必须完全匹配应用于启用资源的标记。 这些参数在 `resources` 作为属性值的网站文件夹 `se_resource-tags`.
+预过滤器 [标记ID](../../help/sites-developing/framework.md#tagid) 必须与应用于启用资源的标记完全匹配。 这些组件在 `resources` 站点的文件夹，作为属性的值 `se_resource-tags`.
 
 ![configure-filters](assets/configure-catalog1.png)
 
@@ -117,4 +117,4 @@ ht-degree: 2%
 
 * [报表API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/reporting/dv/api/package-summary.html)
 
-* [报表分析API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/reporting/dv/model/api/package-summary.html)
+* [Reporting Analytics API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/reporting/dv/model/api/package-summary.html)

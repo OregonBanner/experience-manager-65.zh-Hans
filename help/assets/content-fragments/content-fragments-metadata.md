@@ -1,6 +1,6 @@
 ---
 title: 元数据 – 片段属性
-description: 了解如何在AEM中查看和编辑内容片段的元数据属性，以调整无头内容。
+description: 了解如何在AEM中查看和编辑内容片段的元数据属性以调整Headless内容。
 feature: Content Fragments
 role: User
 exl-id: 6316ef72-7647-4e85-b8cf-152557b26540
@@ -13,7 +13,7 @@ ht-degree: 59%
 
 # 元数据 – 片段属性 {#metadata-fragment-properties}
 
-了解如何在AEM中查看和编辑内容片段的元数据属性，以调整无头内容。
+了解如何在AEM中查看和编辑内容片段的元数据属性以调整Headless内容。
 
 ## 编辑属性/元数据 {#editing-properties-meta-data}
 
@@ -34,10 +34,10 @@ ht-degree: 59%
    * **描述**
    * **标记**
       * [标记](/help/sites-authoring/tags.md)在组织片段时可发挥强大作用，因为其可用于内容分类和分类。 标记可用于查找内容（按标记）和应用批量操作。
-例如，您可以将相关片段标记为“圣诞节启动”，以仅允许作为子集浏览这些片段，或复制这些片段以供将来在新文件夹中的另一个启动项使用。
+例如，您可以将相关片段标记为“圣诞节发布”，以仅允许作为子集浏览这些片段，或复制这些片段以供将来在新文件夹中再次发布。
       >[!NOTE]
       >
-      >**标记** 在 [创作变体内容](/help/assets/content-fragments/content-fragments-variations.md#authoring-your-content) 和时间 [创建变体](/help/assets/content-fragments/content-fragments-variations.md#creating-a-variation).
+      >**标记** 在以下情况下也可以添加 [创作变体内容](/help/assets/content-fragments/content-fragments-variations.md#authoring-your-content) 和时间 [创建变体](/help/assets/content-fragments/content-fragments-variations.md#creating-a-variation).
 
    * **已创建** （仅显示）
    例如：

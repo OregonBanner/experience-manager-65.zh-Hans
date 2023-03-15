@@ -1,5 +1,5 @@
 ---
-title: 为任务自定义选项卡
+title: 自定义任务的选项卡
 seo-title: Customizing tabs for a task
 description: 如何在LiveCycleAEM Forms工作区中自定义任务的选项卡名称。
 seo-description: How-to customize the names of the tabs for your tasks, in LiveCycle AEM Forms workspace.
@@ -16,16 +16,16 @@ ht-degree: 0%
 
 ---
 
-# 为任务自定义选项卡 {#customizing-tabs-for-a-task}
+# 自定义任务的选项卡 {#customizing-tabs-for-a-task}
 
-您可以自定义 `Start Process` 组件 `Start Process` Uber视图和 `Task Details` 组件 `ToDo` 优步视图。
+您可以自定义的选项卡名称 `Start Process` 中的组件 `Start Process` Uber视图和 `Task Details` 中的组件 `ToDo` Uber视图。
 
-1. 关注 [AEM Forms工作区自定义的一般步骤](/help/forms/using/generic-steps-html-workspace-customization.md).
-1. 更改 `tabname`在 `translation.json` 文件。
+1. 请遵循 [AEM Forms工作区自定义的一般步骤](/help/forms/using/generic-steps-html-workspace-customization.md).
+1. 更改值 `tabname`在 `translation.json` 文件。
 
-   例如，更改 `/apps/ws/locales/en-US/translation.json` 对下面的内容进行英语翻译。
+   例如，更改 `/apps/ws/locales/en-US/translation.json` 英语的译文。
 
-   * 对于在启动过程中启动的任务，请使用 `"startprocess" : {}` 块。
+   * 对于在启动过程中启动的任务，请使用以下代码片段： `"startprocess" : {}` 块。
 
    ```json
    "tabname" : {
@@ -36,7 +36,7 @@ ht-degree: 0%
            }
    ```
 
-   * 对于待办事项中的任务，请使用 `"todo" : {}` 块。
+   * 对于待办事项中的任务，使用以下代码片段 `"todo" : {}` 块。
 
    ```json
    "tabname" : {

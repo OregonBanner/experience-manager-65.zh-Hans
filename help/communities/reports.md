@@ -29,102 +29,102 @@ ht-degree: 7%
 
 * [指定报表](#assignments-report)
 
-   对于 [启用社区](/help/communities/overview.md#enablement-community)，提供学习者分配进度的概述，包括实施SCORM标准时的关联得分。
+   对于 [启用社区](/help/communities/overview.md#enablement-community)，提供学习者在其任务中的进度概述，包括实施SCORM标准时的关联分数。
 
 * [查看次数报表](#views-report)
 
-   提供任何社区站点的社区成员和站点访客查看内容的图表。
+   按社区成员和站点访客提供任意社区站点的内容视图图表。
 
 * [发布报表](#posts-report)
 
-   提供由社区成员到任何社区站点的各种类型帖子的图表。
+   提供社区成员在任何社区站点上发表的各种类型的帖子的图表。
 
-When [Adobe Analytics已启用](/help/communities/sites-console.md#analytics)，报表将包括一段时间内每个启用资源的查看次数、播放次数、评论次数和评级。
+时间 [Adobe Analytics已启用](/help/communities/sites-console.md#analytics)，报告将包括一段时间内每个支持资源的查看次数、播放次数、评论次数和评级。
 
 表格报表可以导出为.csv格式，以供后续处理。
 
 ## 报表控制台 {#reporting-consoles}
 
-### 社区站点报告 {#reports-for-community-sites}
+### 社区站点报表 {#reports-for-community-sites}
 
-* 从全局导航： **[!UICONTROL 导航]** > **[!UICONTROL 社区]** >  **[!UICONTROL 报表]**
+* 从全局导航： **[!UICONTROL 导航]** > **[!UICONTROL Communities]** >  **[!UICONTROL 报告]**
 
-* 选择：
+* 选择自：
 
    * **[!UICONTROL 指定报表]**
 
       * 为选定的社区站点、用户或组以及分配生成报告。
    * **[!UICONTROL 发布报表]**
 
-      * 为选定的社区站点、内容类型和时间段生成报表。
+      * 为选定的社区站点、内容类型和时间段生成报告。
    * **[!UICONTROL 查看次数报表]**
 
-      * 为选定的社区站点、内容类型和时间段生成报表。
+      * 为选定的社区站点、内容类型和时间段生成报告。
 
 
 
 ![报告](assets/reports1.png)
 
-### 有关启用资源和学习路径的报表 {#reports-for-enablement-resources-and-learning-paths}
+### 启用资源和学习路径报表 {#reports-for-enablement-resources-and-learning-paths}
 
-* 从全局导航： **[!UICONTROL 导航]** > **[!UICONTROL 社区]** >  **[!UICONTROL 资源]**
+* 从全局导航： **[!UICONTROL 导航]** > **[!UICONTROL Communities]** >  **[!UICONTROL 资源]**
 
-* 选择现有的启用社区网站：
+* 选择现有的启用社区站点：
 
-   * 选择 **报表** 图标以生成涵盖所有启用资源的报表。
+   * 选择 **报告** 图标以生成涵盖所有启用资源的报表。
    * 选择启用学习路径。
-   * 选择 **报表** 用于生成报表的图标：
+   * 选择 **报告** 图标以生成以下项目的报告：
 
-      * 包含的支持资源。
+      * 包含的启用资源。
       * 分配给学习路径的学习者。
 
-* 这些报表提供：
+* 这些报告提供：
 
-   * 表格数据，可下载为CSV格式：
+   * 可下载为CSV的表数据：
 
       * 识别学习者
       * 他们的状态
-      * 通过目录分配或访问
-      * 评论次数
-      * 给定星级
+      * 是否通过目录分配或访问
+      * 评论的数量
+      * 给予的星级
 
-有关更多详细信息，请参阅 [报表部分](/help/communities/resources.md#report) 的子菜单。
+有关更多详细信息，请参阅 [“报表”部分](/help/communities/resources.md#report) 资源控制台的。
 
 ## 指定报表 {#assignments-report}
 
-“工作总揽”控制台允许按启用社区网站、用户或组以及工作总揽过滤报表。
+“工作总揽”控制台允许按启用社区站点、用户或组以及分配筛选报告。
 
-报告提供了有关其进展情况以及提供的任何评论或评级的信息。
+报告提供有关其进展的信息以及任何评论或评级。
 
-![赋值报告](assets/assignment-report.png)
+![任务报告](assets/assignment-report.png)
 
-为报表选择标准：
+选择报告的标准：
 
 * **站点**
 
-   选择一个支持社区网站。
+   选择启用社区站点。
 
 * **用户或组**
-   * 选择“用户”以为一个学员生成报告。
-   * 选择“组”以为学习者组生成报告。
+   * 选择用户为一个学习者生成报告。
+   * 选择“群组”可生成一组学习者的报告。
 
-   隧道服务将从发布环境访问成员和成员组。
+   通道服务将从发布环境访问成员和成员组。
 
 * **指定任务**
 
-   从分配给选定学习者的支持资源中进行选择。
+   从分配给选定学习者的启用资源中进行选择。
 
-选择 **生成** 要创建报表，请执行以下操作：
+选择 **生成** 要创建报告，请执行以下操作：
 
-![生成报告](assets/generate-assignment-report.png)
+![generate-report](assets/generate-assignment-report.png)
 
 ## 查看次数报表 {#views-report}
 
-查看次数控制台允许在给定时间段内按社区功能在页面查看次数中生成报表。
+通过“查看次数”控制台，可按社区功能生成给定时间段内的页面查看次数报表。
 
-![查看报表](assets/view-report.png)
+![view-report](assets/view-report.png)
 
-为报表选择标准：
+选择报告的标准：
 
 * **[!UICONTROL 站点]**
 
@@ -134,7 +134,7 @@ When [Adobe Analytics已启用](/help/communities/sites-console.md#analytics)，
 
    可以选择“所有内容”或选择网站上存在的功能之一。
 
-* **[!UICONTROL 时间范围]**
+* **[!UICONTROL 期限]**
 
    选择以下选项之一：
 
@@ -143,17 +143,17 @@ When [Adobe Analytics已启用](/help/communities/sites-console.md#analytics)，
    * 过去 90 天
    * 去年
 
-选择 **[!UICONTROL 生成]** 以创建报表。
+选择 **[!UICONTROL 生成]** 以创建报告。
 
-![生成视图](assets/generate-views.png)
+![generate-view](assets/generate-views.png)
 
 ## 发布报表 {#posts-report}
 
-“帖子”控制台允许在给定时间段内生成有关社区功能的帖子数量的报表。
+通过“帖子”控制台，可生成给定时间段内社区功能的帖子数量报告。
 
-![帖子 — 报告](assets/posts-report.png)
+![帖子报表](assets/posts-report.png)
 
-为报表选择标准：
+选择报告的标准：
 
 * **[!UICONTROL 站点]**
 
@@ -163,7 +163,7 @@ When [Adobe Analytics已启用](/help/communities/sites-console.md#analytics)，
 
    可以选择“所有内容”或选择网站上存在的功能之一。
 
-* **[!UICONTROL 时间范围]**
+* **[!UICONTROL 期限]**
 
    选择以下选项之一：
 
@@ -172,18 +172,18 @@ When [Adobe Analytics已启用](/help/communities/sites-console.md#analytics)，
    * 过去 90 天
    * 去年
 
-选择 **[!UICONTROL 生成]** 以创建报表。
+选择 **[!UICONTROL 生成]** 以创建报告。
 
-![生成报告](assets/generate-posts-report.png)
+![generate-report](assets/generate-posts-report.png)
 
 ## 疑难解答 {#troubleshooting}
 
 ### 未列出社区站点 {#no-community-sites-listed}
 
-如果未列出社区站点，请确保已为站点启用Adobe Analytics。 如果选择分配报告，请确保分配功能在社区站点的结构中。
+如果未列出任何社区站点，请确保已为站点启用Adobe Analytics。 如果选择分配报表，请确保分配功能在社区站点的结构中。
 
-### 报表未在AEM创作实例中显示 {#reports-do-not-show-in-aem-author-instance}
+### 报告未显示在AEM创作实例中 {#reports-do-not-show-in-aem-author-instance}
 
-如果报表未在AEM创作实例中显示，请检查自定义设置，如发布实例上的URL映射。 如果URL映射仅在社区站点的AEM发布实例上完成，请确保已在的AEM创作实例中配置了该URL映射 **网站趋势报表社交组件工厂** 配置。
+如果报表未显示在AEM创作实例中，请检查自定义设置，例如发布实例上的URL映射。 如果仅在Communities站点的AEM发布实例上完成URL映射，请确保已在的AEM创作实例中配置相同的URL映射 **网站趋势报表社交组件工厂** 配置。
 
 ![AEM作者上的URL映射](assets/sitetrend.png)

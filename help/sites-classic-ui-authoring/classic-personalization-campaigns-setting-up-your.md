@@ -99,7 +99,7 @@ ht-degree: 94%
 
 * **Adobe Target：**&#x200B;这些属性用于配置与 Adobe Target 集成的营销活动。（请参阅[与 Adobe Target 集成](/help/sites-administering/target.md)。）
 
-1. 从&#x200B;**营销活动**&#x200B;中，选择您的品牌。在右窗格中，选择您的营销活动并单击 **属性**.
+1. 从&#x200B;**营销活动**&#x200B;中，选择您的品牌。在右侧窗格中，选择您的营销活动，然后单击 **属性**.
 
    您可以输入各种属性，包括“**标题**”、“**说明**”和所需的任何“**云服务**”。
 
@@ -234,7 +234,7 @@ ht-degree: 94%
    >CSV 列表中的第一行为预定义标签，必须严格按以下示例写入：
    >
    >
-   >`email,givenName,familyName`  — 如果写为 `givenname`例如，系统将无法识别它。
+   >`email,givenName,familyName`  — 如果写为 `givenname`例如，系统不会识别它。
 
    ![screen_shot_2012-02-21at123055pm](assets/screen_shot_2012-02-21at123055pm.png)
 

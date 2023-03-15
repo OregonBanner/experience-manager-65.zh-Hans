@@ -104,9 +104,9 @@ ht-degree: 94%
 
 >[!CAUTION]
 >
->不支持在Launch页面上对组件进行重新排序。
+>不支持在Launch页面上重新排序组件。
 >
->提升页面时，将反映任何内容更改，但组件位置不会发生更改。
+>提升页面时，将反映任何内容更改，但组件位置不会更改。
 
 
 ### “启动项”控制台 {#the-launches-console}
@@ -123,8 +123,8 @@ ht-degree: 94%
 1. 打开&#x200B;**引用**&#x200B;边栏并选择源页面。
 1. 选择&#x200B;**启动项**，此时将列出现有的启动项：
 
-   ![screenshot_2019-03-05at121901-1](assets/screen-shot_2019-03-05at121901-1.png)
+   ![screen-shot_2019-03-05at121901-1](assets/screen-shot_2019-03-05at121901-1.png)
 
 1. 点按/单击相应的启动项，此时将显示可执行的操作列表：
 
-   ![screenshot_2019-03-05at121952-1](assets/screen-shot_2019-03-05at121952-1.png)
+   ![screen-shot_2019-03-05at121952-1](assets/screen-shot_2019-03-05at121952-1.png)

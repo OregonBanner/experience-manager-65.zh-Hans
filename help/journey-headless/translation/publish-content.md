@@ -5,7 +5,7 @@ exl-id: 32c387fe-fa1b-499b-861f-b4822f5e139e
 source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
 workflow-type: tm+mt
 source-wordcount: '1378'
-ht-degree: 82%
+ht-degree: 97%
 
 ---
 
@@ -15,17 +15,17 @@ ht-degree: 82%
 
 ## 迄今为止的故事 {#story-so-far}
 
-在AEM无头翻译历程的上一文档中， [翻译内容、](configure-connector.md) 您学习了如何使用AEM翻译项目来翻译无头内容。 您现在应：
+在 AEM Headless 翻译历程的上一个文档[翻译内容](configure-connector.md)中，您已了解如何使用 AEM 翻译项目来翻译 Headless 内容。您现在应：
 
 * 了解什么是翻译项目。
 * 能够创建新的翻译项目。
-* 使用翻译项目来翻译您的无头内容。
+* 使用翻译项目来翻译 Headless 内容。
 
 现在，您的初始翻译已完成，本文将引导您完成该内容的发布流程的下一步，以及如何在语言根中的基础内容发生更改时更新您的翻译。
 
 ## 目标 {#objective}
 
-本文档可帮助您了解如何在AEM中发布无标题内容，以及如何创建持续工作流以保持翻译处于最新状态。 阅读本文档后，您应：
+本文档可帮助您了解如何在 AEM 中发布 Headless 内容以及如何创建持续工作流以使您的翻译保持最新。阅读本文档后，您应：
 
 * 了解 AEM 的创作-发布模型。
 * 了解如何发布翻译的内容。
@@ -47,7 +47,7 @@ ht-degree: 82%
 
 ## 发布翻译的内容 {#publishing}
 
-一旦您对翻译内容的状态感到满意，就必须发布该内容，以便无头服务能够使用该内容。 此任务通常不是翻译专家的责任，此处记录它是为了说明完整的工作流。
+在您对翻译的内容的状态感到满意后，必须发布此内容以供 Headless 服务使用。此任务通常不是翻译专家的责任，此处记录它是为了说明完整的工作流。
 
 >[!NOTE]
 >
@@ -63,7 +63,7 @@ ht-degree: 82%
 
 此路径下提供了每种翻译语言的子文件夹，并且您可以选择要发布的语言。
 
-1. 转到 **导航** -> **资产** -> **文件** 并打开项目文件夹。
+1. 转到&#x200B;**导航** -> **资产** -> **文件**，然后打开项目文件夹。
 1. 在这里，您可以看到语言根文件夹和所有其他语言文件夹。选择您希望发布的一种或多种本地化语言。
    ![选择语言文件夹](assets/select-language-folder.png)
 1. 点按或单击&#x200B;**管理发布**。
@@ -71,10 +71,10 @@ ht-degree: 82%
    ![管理发布选项](assets/manage-publication-options.png)
 1. 在下一个&#x200B;**管理发布**&#x200B;窗口中，确认已选择一条或多条适当的路径。点按或单击&#x200B;**发布**。
    ![管理发布范围](assets/manage-publication-scope.png)
-1. AEM会在屏幕顶部显示一条弹出消息，以确认发布操作。
+1. AEM通过屏幕顶部的弹出消息确认发布操作。
    ![资源发布横幅](assets/resources-published-message.png)
 
-您翻译的无标题内容现已发布！ 现在，您的无头服务可以访问并使用它。
+您的翻译的 Headless 内容现已发布！它现在可以由 Headless 服务访问和使用。
 
 >[!TIP]
 >
@@ -92,7 +92,7 @@ ht-degree: 82%
 
 ### 更新自动创建的翻译项目 {#updating-automatic-project}
 
-1. 导航到&#x200B;**导航** -> **资产** -> **文件**。请记住，AEM中的无标题内容存储为称为内容片段的资产。
+1. 导航到&#x200B;**导航** -> **资产** -> **文件**。请记住，AEM 中的 Headless 内容将存储为称作内容片段的资产。
 1. 选择项目的语言根。在此示例中，我们已选择 `/content/dam/wknd/en`。
 1. 点按或单击边栏选择器，这将显示&#x200B;**引用**&#x200B;面板。
 1. 点按或单击&#x200B;**语言副本**。
@@ -100,7 +100,7 @@ ht-degree: 82%
 1. 展开“引用”面板底部的&#x200B;**更新语言副本**&#x200B;部分。
 1. 在&#x200B;**项目**&#x200B;下拉列表中，选择&#x200B;**添加到现有翻译项目**。
 1. 在&#x200B;**现有翻译项目**&#x200B;下拉列表中，选择为初始翻译创建的项目。
-1. 点按或单击 **开始**.
+1. 点按或单击&#x200B;**开始**。
 
 ![将项目添加到现有翻译项目](assets/add-to-existing-project.png)
 
@@ -110,7 +110,7 @@ ht-degree: 82%
 1. 点按或单击刚刚更新的项目。
 1. 点按或单击该语言或已更新的某种语言。
 
-您会看到新的工作卡会相应地添加到项目中。
+您会看到新作业信息卡已根据需要添加到项目中。
 
 <!--
 You see that a new job card was added to the project. In this example, another Spanish translation was added.
@@ -118,7 +118,7 @@ You see that a new job card was added to the project. In this example, another S
 ![Additional translation job added](assets/additional-translation-job.png)
 -->
 
-您可能会注意到新信息卡中列出的统计信息（资产数量和内容片段数）不同。 这是因为 AEM 可以识别自上次翻译以来发生的变化，并且仅包含需要翻译的内容。这包括已更新内容的重新翻译以及新内容的首次翻译。
+您可能会发现，新信息卡上列出的统计数据（资产和内容片段数量）有所不同。这是因为 AEM 可以识别自上次翻译以来发生的变化，并且仅包含需要翻译的内容。这包括已更新内容的重新翻译以及新内容的首次翻译。
 
 从此时起，您可以[像处理初始翻译一样启动和管理您的翻译作业。](translate-content.md#using-translation-project)
 
@@ -154,14 +154,14 @@ You see that a new job card was added to the project. In this example, another S
 
 ## 历程结束？ {#end-of-journey}
 
-恭喜！您已完成无头翻译历程！ 您现在应：
+恭喜！您已完成 Headless 翻译历程！您现在应：
 
-* 概述什么是无标题内容交付。
-* 了解AEM的无头功能。
-* 了解AEM翻译功能以及它们与无标题内容的相关性。
-* 能够开始翻译您自己的无头内容。
+* 大致了解 Headless 内容交付的含义。
+* 基本了解 AEM 的 Headless 功能。
+* 了解 AEM 的翻译功能以及它们如何与 Headless 内容相关联。
+* 能够开始翻译您自己的 Headless 内容。
 
-现在，您可以在AEM中翻译自己的无头内容。 不过，AEM 是一个功能强大的工具，并且提供了许多其他选项。查看[“其他资源”部分](#additional-resources)中的一些其他资源，详细了解您在此历程中看到的功能。
+您现在可以在 AEM 中翻译您自己的 Headless 内容了。不过，AEM 是一个功能强大的工具，并且提供了许多其他选项。查看[“其他资源”部分](#additional-resources)中的一些其他资源，详细了解您在此历程中看到的功能。
 
 ## 其他资源 {#additional-resources}
 

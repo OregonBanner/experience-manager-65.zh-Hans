@@ -1,7 +1,7 @@
 ---
-title: 用于在表单门户上处理已提交表单的API
+title: 用于处理表单门户上已提交表单的API
 seo-title: APIs to work with submitted forms on forms portal
-description: AEM Forms提供了API，您可以使用这些API来查询在表单门户中提交的表单数据并对其执行操作。
+description: AEM Forms提供了API，您可以使用这些API来查询表单门户中已提交的表单数据并对其执行操作。
 seo-description: AEM Forms provides APIs that you can use to query and take actions on submitted forms data in forms portal.
 uuid: c47c8392-e5a9-4c40-b65e-4a7f379a6b45
 content-type: reference
@@ -17,15 +17,15 @@ ht-degree: 7%
 
 ---
 
-# 用于在表单门户上处理已提交表单的API {#apis-to-work-with-submitted-forms-on-forms-portal}
+# 用于处理表单门户上已提交表单的API {#apis-to-work-with-submitted-forms-on-forms-portal}
 
-AEM Forms提供了API，您可以使用这些API查询通过表单门户提交的表单数据。 此外，您还可以使用本文档中介绍的API发布评论或更新已提交表单的属性。
+AEM Forms提供了可用于查询通过表单门户提交的表单数据的API。 此外，您还可以使用本文档中介绍的API发布注释或更新已提交表单的属性。
 
 >[!NOTE]
 >
->必须将调用API的用户添加到审阅人组，如 [将提交审阅人关联到表单](/help/forms/using/adding-reviewers-form.md).
+>必须将将调用API的用户添加到审阅者组中，如中所述 [将提交审阅者与表单关联](/help/forms/using/adding-reviewers-form.md).
 
-## GET/content/forms/portal/submission.review.json?func=getFormsFormsSubmissionReview {#get-content-forms-portal-submission-review-json-func-getformsforsubmissionreview-br}
+## GET/content/forms/portal/submission.review.json？func=getFormsForSubmissionReview {#get-content-forms-portal-submission-review-json-func-getformsforsubmissionreview-br}
 
 返回所有符合条件的表单的列表。
 
@@ -35,7 +35,7 @@ AEM Forms提供了API，您可以使用这些API查询通过表单门户提交�
 
 ### 响应 {#response}
 
-响应对象包含一个JSON数组，其中包含表单名称及其存储库路径。 响应的结构如下：
+响应对象包含一个JSON数组，其中包含表单名称及其存储库路径。 响应结构如下：
 
 ```json
 [
@@ -59,7 +59,7 @@ https://[host]:[port]/content/forms/portal/submission.review.json?func=getFormsF
 [{"formPath":"/content/dam/formsanddocuments/forms-review/form2","formName":"form2"},{"formPath":"/content/dam/formsanddocuments/forms-review/form1","formName":"form1"}]
 ```
 
-## GET/content/forms/portal/submission.review.json?func=getAllSubmissions {#get-content-forms-portal-submission-review-json-func-getallsubmissions}
+## GET/content/forms/portal/submission.review.json？func=getAllSubmissions {#get-content-forms-portal-submission-review-json-func-getallsubmissions}
 
 返回所有已提交表单的详细信息。 但是，您可以使用URL参数来限制结果。
 
@@ -75,38 +75,38 @@ https://[host]:[port]/content/forms/portal/submission.review.json?func=getFormsF
   </tr>
   <tr>
    <td><code>formPath</code></td>
-   <td>指定表单所在的CRX存储库路径。 如果未指定表单路径，则返回空响应。<br /> </td>
+   <td>指定表单所在的CRX存储库路径。 如果不指定表单路径，则会返回空响应。<br /> </td>
   </tr>
   <tr>
    <td><code>offset</code> （可选）</td>
-   <td>在结果集的索引中指定起点。 默认值为 <strong>0</strong>.</td>
+   <td>指定结果集索引中的起点。 默认值为 <strong>0</strong>.</td>
   </tr>
   <tr>
    <td><code>limit</code> （可选）</td>
-   <td>限制结果数量。 默认值为 <strong>30</strong>.</td>
+   <td>限制结果的数量。 默认值为 <strong>30</strong>.</td>
   </tr>
   <tr>
    <td><code>orderby</code> <br /> （可选）</td>
-   <td>指定对结果进行排序的属性。 默认值为 <strong>jcr:lastModified</strong>，根据上次修改时间对结果进行排序。</td>
+   <td>指定用于排序结果的属性。 默认值为 <strong>jcr：lastModified</strong>，根据上次修改时间对结果进行排序。</td>
   </tr>
   <tr>
    <td><code>sort</code> <br /> （可选）</td>
-   <td>指定对结果进行排序的顺序。 默认值为 <strong>desc</strong>，则会按降序排序。 您可以指定 <code>asc</code> 以升序排序结果。</td>
+   <td>指定排序结果的顺序。 默认值为 <strong>desc</strong>，以降序对结果进行排序。 您可以指定 <code>asc</code> 以按升序对结果进行排序。</td>
   </tr>
   <tr>
    <td><code>cutPoints</code> <br /> （可选）</td>
-   <td>指定要包含在结果中的表单属性列表（以逗号分隔）。 默认属性为：<br /> <code>formName</code>, <code>formPath</code>, <code>submitID</code>, <code>formType</code>, <code>jcr:lastModified</code>, <code>owner</code></td>
+   <td>指定要包含在结果中的表单属性的逗号分隔列表。 默认属性为：<br /> <code>formName</code>， <code>formPath</code>， <code>submitID</code>， <code>formType</code>， <code>jcr:lastModified</code>， <code>owner</code></td>
   </tr>
   <tr>
    <td><code>search</code> <br /> （可选）</td>
-   <td>在表单属性中搜索指定的值，并返回具有匹配值的表单。 默认值为 <strong>""</strong>.</td>
+   <td>在表单属性中搜索指定的值并返回具有匹配值的表单。 默认值为 <strong>""</strong>.</td>
   </tr>
  </tbody>
 </table>
 
 ### 响应 {#response-1}
 
-响应对象包含一个JSON数组，其中包含指定表单的详细信息。 响应的结构如下：
+响应对象包含一个JSON数组，其中包含指定表单的详细信息。 响应结构如下：
 
 ```json
 {
@@ -129,7 +129,7 @@ https://[host]:[port]/content/forms/portal/submission.review.json?func=getAllSub
 {"total":1,"items":[{"formName":"form2","formPath":"/content/dam/formsanddocuments/forms-review/form2","submitID":"1403037413508500","formType":"af","jcr:lastModified":"2015-11-05T17:52:32.243+05:30","owner":"admin"}]}
 ```
 
-## POST/content/forms/portal/submission.review.json?func=addComment {#post-content-forms-portal-submission-review-json-func-addcomment-br}
+## POST/content/forms/portal/submission.review.json？func=addComment {#post-content-forms-portal-submission-review-json-func-addcomment-br}
 
 向指定的提交实例添加注释。
 
@@ -160,9 +160,9 @@ https://[host:'port'/content/forms/portal/submission.review.json?func=addComment
 1403873422601300
 ```
 
-## GET/content/forms/portal/submission.review.json?func=getComments   {#get-content-forms-portal-submission-review-json-func-getcomments-nbsp}
+## GET/content/forms/portal/submission.review.json？func=getComments   {#get-content-forms-portal-submission-review-json-func-getcomments-nbsp}
 
-返回在指定的提交实例上发布的所有评论。
+返回在指定的提交实例上发布的所有注释。
 
 ### URL参数 {#url-parameters-3}
 
@@ -174,7 +174,7 @@ https://[host:'port'/content/forms/portal/submission.review.json?func=addComment
 
 ### 响应 {#response-3}
 
-响应对象包含一个JSON数组，其中包含与指定提交ID关联的所有注释。 响应的结构如下：
+响应对象包含一个JSON数组，该数组包含与指定的提交ID关联的所有注释。 响应结构如下：
 
 ```json
 [{
@@ -198,9 +198,9 @@ https://[host]:'port'/content/forms/portal/submission.review.json?func=getCommen
 [{"owner":"fr1","comment":"API test comment","time":1446726988250}]
 ```
 
-## POST/content/forms/portal/submission.review.json?func=updateSubmission {#post-content-forms-portal-submission-review-json-func-updatesubmission-br}
+## POST/content/forms/portal/submission.review.json？func=updateSubmission {#post-content-forms-portal-submission-review-json-func-updatesubmission-br}
 
-更新指定提交表单实例的指定属性的值。
+更新指定提交的表单实例的指定属性的值。
 
 ### URL参数 {#url-parameters-4}
 
@@ -214,7 +214,7 @@ https://[host]:'port'/content/forms/portal/submission.review.json?func=getCommen
 
 ### 响应 {#response-4}
 
-返回包含有关已发布更新的信息的JSON对象。
+返回一个包含有关已发布更新的信息的JSON对象。
 
 ### 示例 {#example-4}
 

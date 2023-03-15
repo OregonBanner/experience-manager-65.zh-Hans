@@ -19,16 +19,16 @@ ht-degree: 1%
 
 # 营销活动{#campaigns}
 
-营销活动管理为数字营销人员提供了提供个性化内容并为访客创建专用体验的机会。
+Campaign管理为数字营销人员提供了交付个性化内容并为访客创建专用体验的机会。
 
-如果您管理营销活动（包括登陆页面），则可能需要执行以下操作：
+如果您管理的是营销策划（包括登陆页面），则可能需要执行以下操作：
 
 * **定义区段**  — 您需要为目标内容定义区段和策略。
-* **准备登陆页面HTML**  — 登陆页面允许作者快速轻松地将设计和内容直接导入AEM页面。 您需要准备HTML，以便能够正确导入资产。 在创建只在有限时间内处于活动状态且需要快速创建的营销登陆页面时，登陆页面非常有用。
+* **为登录页准备HTML**  — 利用登陆页面，作者可以快速轻松地将设计和内容直接导入AEM页面。 您需要准备HTML，以便能够正确导入资源。 在创建仅在有限时间内有效且需要快速创建的营销登陆页面时，登陆页面很有用。
 * **与SiteCatalyst集成**  — 您可以将登陆页面与SiteCatalyst集成。
 
 请参阅以下页面：
 
 * [配置分段](/help/sites-administering/campaign-segmentation.md)
 * [为登陆页面扩展和配置设计导入程序](/help/sites-administering/extending-the-design-importer-for-landingpages.md)
-* [将登陆页面与Adobe Analytics集成](/help/sites-administering/integrating-landing-pages-with-adobe-analytics.md)
+* [将Landing Pages与Adobe Analytics集成](/help/sites-administering/integrating-landing-pages-with-adobe-analytics.md)

@@ -1,6 +1,6 @@
 ---
-title: 变量 – 创作片段内容
-description: 了解变量如何允许您为片段创作内容，然后根据目的创建该内容的变量，从而使AEM中的无头内容更加灵活。
+title: 变体 – 创作片段内容
+description: 了解变体如何允许您为片段创作内容，然后根据用途创建该内容的变体，从而使AEM中的Headless内容更加灵活。
 feature: Content Fragments
 role: User
 exl-id: 50982ede-7ccf-45b2-b0dd-a49d23e0f971
@@ -11,16 +11,16 @@ ht-degree: 87%
 
 ---
 
-# 变量 – 创作片段内容{#variations-authoring-fragment-content}
+# 变体 – 创作片段内容{#variations-authoring-fragment-content}
 
-[变体](/help/assets/content-fragments/content-fragments.md#constituent-parts-of-a-content-fragment) 是AEM内容片段的一项重要功能，因为它们允许您创建和编辑主控内容的副本以用于特定渠道和/或方案，从而更加灵活地交付无头内容。
+[变体](/help/assets/content-fragments/content-fragments.md#constituent-parts-of-a-content-fragment) 是AEM内容片段的一项重要功能，因为它们允许您创建和编辑主控内容的副本，以用于特定渠道和/或场景，从而使headless内容投放更加灵活。
 
 从&#x200B;**“变体”**&#x200B;选项卡，您可：
 
 * 为片段[输入内容](#authoring-your-content)，
 * [创建和管理&#x200B;**主**&#x200B;内容的变体](#managing-variations)，
 
-根据所编辑的数据类型执行一系列其他操作；例如：
+根据正在编辑的数据类型执行一系列其他操作；例如：
 
 * [将可视化资产插入片段](#inserting-assets-into-your-fragment)（图像）
 
@@ -40,7 +40,7 @@ ht-degree: 87%
 
 ## 创作内容 {#authoring-your-content}
 
-当您打开内容片段进行编辑时，**变体**&#x200B;选项卡将默认打开。 在此，您可以为主要或任何变体创作内容。 结构化片段包含在内容模型中定义的各种数据类型的字段。
+当您打开内容片段进行编辑时，**变体**&#x200B;选项卡将默认打开。 在此，您可以为主要或任何变体创作内容。 结构化片段包含内容模型中定义的各种数据类型的字段。
 
 例如：
 
@@ -48,7 +48,7 @@ ht-degree: 87%
 
 您可以：
 
-* 直接在 **变体** 选项卡；每种数据类型提供不同的编辑选项，例如：
+* 直接在中编辑您的内容 **变体** 选项卡；每种数据类型提供不同的编辑选项，例如：
 
    * 对于&#x200B;**多行文本**&#x200B;字段，您还可以打开[全屏编辑器](#full-screen-editor)，以：
 
@@ -58,18 +58,18 @@ ht-degree: 87%
    * 对于&#x200B;**片段引用**&#x200B;字段，[“编辑内容片段”](#fragment-references-edit-content-fragment)选项可用，具体取决于模型定义。
 
 
-* 分配 **标记** （二）与当前变动值一致；可以添加、更新和删除标记
+* 分配 **标记** 到当前变体；可以添加、更新和删除标记
 
    * [标记](/help/sites-authoring/tags.md)在组织片段时可发挥强大作用，因为其可用于内容分类和分类。 标记可用于查找内容（按标记）和应用批量操作。
 
 
-      * 搜索标记将返回片段，并突出显示标记变体。
-      * 变量标记还可用于对特定内容交付网络(CDN)配置文件（用于CDN缓存）的变量进行分组，而不是使用变量名称。
+      * 搜索标记将返回片段，并突出显示标记的变量。
+      * 变体标记还可用于对特定内容分发网络(CDN)配置文件的变体进行分组（用于CDN缓存），而不是使用变体名称。
 
-      例如，您可以将相关片段标记为“圣诞节启动”，以仅允许作为子集浏览这些片段，或复制这些片段以供将来在新文件夹中的另一个启动项使用。
+      例如，您可以将相关片段标记为“圣诞节发布”，以仅允许作为子集浏览这些片段，或复制这些片段以供将来在新文件夹中再次发布。
    >[!NOTE]
    >
-   >**标记** 也可以添加到 **主控** 变量)作为 [元数据](/help/assets/content-fragments/content-fragments-metadata.md)
+   >**标记** 也可以添加(到 **主控** 变体)，作为 [元数据](/help/assets/content-fragments/content-fragments-metadata.md)
 
 * [创建和管理变体](#managing-variations) 的 **主控** 内容。
 
@@ -98,7 +98,7 @@ ht-degree: 87%
 
 * [显示文本统计信息](#viewing-key-statistics)
 
-* [与主要内容同步](#synchronizing-with-master)（编辑变量时）
+* [与主要内容同步](#synchronizing-with-master)（编辑变体时）
 
 * [总结文本](#summarizing-text)
 
@@ -234,7 +234,7 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 
 >[!CAUTION]
 英语是现成的。
-其他语言作为包共享中的语言模型包提供：
+其他语言作为语言模型包从包共享中提供：
 * [法语 (fr)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-fr)
 * [德语 (de)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-de)
 * [意大利语 (it)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-it)
@@ -242,7 +242,7 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 >
 
 
-1. 选择&#x200B;**主要变量**&#x200B;或所需的变量。
+1. 选择&#x200B;**主要变体**&#x200B;或所需的变体。
 1. 打开全屏编辑器。
 
 1. 从工具栏中选择&#x200B;**“摘要文本”**。
@@ -272,7 +272,7 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 
 要对片段添加注释：
 
-1. 选择&#x200B;**主要变量**&#x200B;或所需的变量。
+1. 选择&#x200B;**主要变体**&#x200B;或所需的变体。
 
 1. 打开全屏编辑器。
 
@@ -381,7 +381,7 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 1. 使用&#x200B;**“选择”**&#x200B;将所选内容片段的引用添加到当前内容片段（在当前位置）。
 
    >[!CAUTION]
-   如果在添加对其他片段的引用后，您将格式更改为：
+   如果在添加对其他片段的引用后，将格式更改为：
    * **纯文本**：引用将从片段中完全丢失。
    * **Markdown**：引用将保留。
 
@@ -404,7 +404,7 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
    创建新变体时，复制的始终是&#x200B;**主要内容**，而不是当前打开的变体。
 
    >[!NOTE]
-   创建新变体时，所有 **标记** 当前分配给 **主控** 变体将会复制到新变体中。
+   当您创建新变体时，所有 **标记** 当前分配给 **主控** 变量将被复制到您的新变量中。
 
 ### 编辑变体 {#editing-a-variation}
 
@@ -417,7 +417,7 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 
 ### 重命名变体 {#renaming-a-variation}
 
-要重命名现有变量，请执行以下操作：
+要重命名现有变体，请执行以下操作：
 
 1. 打开片段，然后从侧面板中选择&#x200B;**“变体”**。
 1. 选择所需的变体。
@@ -451,7 +451,7 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 
 >[!CAUTION]
 同步仅可将更改从&#x200B;***母版**复制到变体*。
-将仅同步变量的当前元素。
+将仅同步变体的当前元素。
 同步仅适用于 **多行文本** 数据类型。
 不提供将更改&#x200B;*从变体传输到&#x200B;**母版***选项。
 
@@ -477,4 +477,4 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 
    ![与母版同步](assets/cfm-variations-11c.png)
 
-1. 选择 **同步**，则将更新并显示变体。
+1. 选择 **同步**，则将更新并显示变量。

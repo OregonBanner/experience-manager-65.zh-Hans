@@ -20,16 +20,16 @@ ht-degree: 0%
 
 # 使用凭据 {#working-with-credentials}
 
-**本文档中的示例和示例仅适用于JEE环境中的AEM Forms。**
+**本文档中的示例和示例仅适用于AEM Forms on JEE环境。**
 
 **关于凭据服务**
 
-凭据包含签名或识别文档所需的私钥信息。 证书是您为信任配置的公钥信息。 AEM Forms将证书和凭据用于以下几个目的：
+凭据包含签名或识别文档所需的私钥信息。 证书是您为信任而配置的公钥信息。 AEM Forms将证书和凭据用于多种用途：
 
-* Acrobat Reader DC扩展使用凭据来启用PDF文档中的Adobe Reader使用权限。 (请参阅 [将使用权限应用于PDF文档](/help/forms/developing/assigning-usage-rights.md#applying-usage-rights-to-pdf-documents).)
-* 签名服务在执行诸如数字签名PDF文档之类的操作时访问证书和凭据。 (请参阅 [数字签名PDF文档](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-pdf-documents).)
+* Acrobat Reader DC扩展使用凭据在PDF文档中启用Adobe Reader使用权限。 (请参阅 [对PDF文档应用使用权限](/help/forms/developing/assigning-usage-rights.md#applying-usage-rights-to-pdf-documents).)
+* 签名服务在执行操作(如对PDF文档进行数字签名)时访问证书和凭据。 (请参阅 [对PDF文档进行数字签名](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-pdf-documents).)
 
-您可以使用信任管理器Java API以编程方式与凭据服务交互。 您可以执行以下任务：
+您可以使用信任管理器Java API以编程方式与Credential服务交互。 您可以执行以下任务：
 
 * [使用信任管理器API导入凭据](credentials.md#importing-credentials-by-using-the-trust-manager-api)
 * [使用信任管理器API删除凭据](credentials.md#deleting-credentials-by-using-the-trust-manager-api)
@@ -40,9 +40,9 @@ ht-degree: 0%
 
 ## 使用信任管理器API导入凭据 {#importing-credentials-by-using-the-trust-manager-api}
 
-您可以使用信任管理器API以编程方式将凭据导入AEM Forms。 例如，您可以导入用于对PDF文档进行签名的凭据。 (请参阅 [数字签名PDF文档](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-pdf-documents))。
+您可以使用信任管理器API以编程方式将凭据导入AEM Forms。 例如，您可以导入用于签署PDF文档的凭据。 (请参阅 [对PDF文档进行数字签名](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-pdf-documents))。
 
-在导入凭据时，需为凭据指定别名。 别名用于执行需要凭据的Forms操作。 导入凭据后，即可在管理控制台中查看凭据，如下图所示。 请注意，凭据的别名为 *安全*.
+导入凭据时，请为凭据指定别名。 别名用于执行需要凭据的Forms操作。 导入凭据后，即可在管理控制台中查看，如下图所示。 请注意，凭据的别名是 *安全*.
 
 ![ww_ww_truststore](assets/ww_ww_truststore.png)
 
@@ -59,19 +59,19 @@ ht-degree: 0%
 1. 引用凭据。
 1. 执行导入操作。
 
-**包含项目文件**
+**包括项目文件**
 
-在开发项目中包含必需的文件。 如果您使用Java创建客户端应用程序，请包含必要的JAR文件。 如果您使用的是Web服务，请确保包含代理文件。
+在开发项目中包含必要的文件。 如果要使用Java创建客户端应用程序，则包含必要的JAR文件。 如果您使用的是Web服务，请确保包含代理文件。
 
 必须将以下JAR文件添加到项目的类路径中：
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-truststore-client.jar
-* adobe-utilities.jar(在JBoss上部署AEM Forms时必需)
-* jbossall-client.jar(在JBoss上部署AEM Forms时必需)
+* adobe-utilities.jar(如果将AEM Forms部署在JBoss上，则此为必需字段)
+* jbossall-client.jar(如果在JBoss上部署了AEM Forms，则此为必填字段)
 
-有关这些JAR文件的位置的信息，请参阅 [包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
+有关这些JAR文件位置的信息，请参见 [包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
 
 **创建凭据服务客户端**
 
@@ -79,11 +79,11 @@ ht-degree: 0%
 
 **引用凭据**
 
-引用要导入AEM Forms的凭据。 与此部分关联的快速入门引用了位于文件系统中的P12文件。
+引用要导入到AEM Forms中的凭据。 与此部分关联的快速入门引用了位于文件系统中的一个P12文件。
 
 **执行导入操作**
 
-引用凭据后，将凭据导入AEM Forms。 如果凭据未成功导入，则会引发异常。 在导入凭据时，需为凭据指定别名。
+引用凭据后，将凭据导入AEM Forms。 如果未成功导入凭据，则会引发异常。 导入凭据时，请为凭据指定别名。
 
 **另请参阅**
 
@@ -93,37 +93,37 @@ ht-degree: 0%
 
 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[凭据服务API快速入门](/help/forms/developing/credential-service-java-api-quick.md#credential-service-java-api-quick-start-soap)
+[凭据服务API快速启动](/help/forms/developing/credential-service-java-api-quick.md#credential-service-java-api-quick-start-soap)
 
 [使用信任管理器API删除凭据](credentials.md#deleting-credentials-by-using-the-trust-manager-api)
 
 ### 使用Java API导入凭据 {#import-credentials-using-the-java-api}
 
-使用信任管理器API(Java)将凭据导入AEM Forms:
+使用信任管理器API (Java)将凭据导入AEM Forms：
 
-1. 包含项目文件
+1. 包括项目文件
 
-   在Java项目的类路径中包含客户端JAR文件，如adobe-truststore-client.jar。
+   在Java项目的类路径中包含客户端JAR文件，例如adobe-truststore-client.jar。
 
 1. 创建凭据服务客户端
 
    * 创建 `ServiceClientFactory` 包含连接属性的对象。
-   * 创建 `CredentialServiceClient` 对象，并使用其构造函数进行传递 `ServiceClientFactory` 对象。
+   * 创建 `CredentialServiceClient` 对象，使用它的构造函数传递 `ServiceClientFactory` 对象。
 
 1. 引用凭据
 
-   * 创建 `java.io.FileInputStream` 对象。 传递指定凭据位置的字符串值。
-   * 创建 `com.adobe.idp.Document` 使用 `com.adobe.idp.Document` 构造函数。 传递 `java.io.FileInputStream` 包含构造函数凭据的对象。
+   * 创建 `java.io.FileInputStream` 对象。 传递一个指定凭据位置的字符串值。
+   * 创建 `com.adobe.idp.Document` 通过使用 `com.adobe.idp.Document` 构造函数。 传递 `java.io.FileInputStream` 包含构造函数的凭据的对象。
 
 1. 执行导入操作
 
    * 创建一个包含一个元素的字符串数组。 分配值 `truststore.usage.type.sign` 到元素。
-   * 调用 `CredentialServiceClient` 对象 `importCredential` 方法并传递以下值：
+   * 调用 `CredentialServiceClient` 对象的 `importCredential` 方法，并传递以下值：
 
-      * 一个字符串值，用于指定凭据的别名值。
-      * 的 `com.adobe.idp.Document` 存储凭据的实例。
-      * 一个字符串值，用于指定与凭据关联的密码。
-      * 包含使用值的字符串数组。 例如，您可以指定此值 `truststore.usage.type.sign`. 要导入Reader扩展凭据，请指定 `truststore.usage.type.lcre`.
+      * 一个字符串值，它指定凭据的别名值。
+      * 此 `com.adobe.idp.Document` 存储凭据的实例。
+      * 一个字符串值，它指定与凭据关联的密码。
+      * 包含用法值的字符串数组。 例如，您可以指定此值 `truststore.usage.type.sign`. 要导入Reader扩展凭据，请指定 `truststore.usage.type.lcre`.
 
 **另请参阅**
 
@@ -137,11 +137,11 @@ ht-degree: 0%
 
 ## 使用信任管理器API删除凭据 {#deleting-credentials-by-using-the-trust-manager-api}
 
-您可以使用信任管理器API以编程方式删除凭据。 删除凭据时，您需要指定与凭据对应的别名。 删除凭据后，便无法使用凭据执行操作。
+您可以使用信任管理器API以编程方式删除凭据。 删除凭据时，请指定与该凭据对应的别名。 删除后，无法使用凭据执行操作。
 
 >[!NOTE]
 >
->您无法使用Web服务将凭据删除到AEM Forms中。
+>无法使用Web服务删除AEM Forms中的凭据。
 
 ### 步骤摘要 {#summary_of_steps-1}
 
@@ -151,25 +151,25 @@ ht-degree: 0%
 1. 创建凭据服务客户端。
 1. 执行删除操作。
 
-**包含项目文件**
+**包括项目文件**
 
-在开发项目中包含必需的文件。 如果您使用Java创建客户端应用程序，请包含必要的JAR文件。 必须将以下JAR文件添加到项目的类路径中：
+在开发项目中包含必要的文件。 如果要使用Java创建客户端应用程序，则包含必要的JAR文件。 必须将以下JAR文件添加到项目的类路径中：
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-truststore-client.jar
-* adobe-utilities.jar(在JBoss上部署AEM Forms时必需)
-* jbossall-client.jar(在JBoss上部署AEM Forms时必需)
+* adobe-utilities.jar(如果将AEM Forms部署在JBoss上，则此为必需字段)
+* jbossall-client.jar(如果在JBoss上部署了AEM Forms，则此为必填字段)
 
-有关这些JAR文件的位置的信息，请参阅 [包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
+有关这些JAR文件位置的信息，请参见 [包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
 
 **创建凭据服务客户端**
 
-在以编程方式删除凭据之前，请先创建Data Integration Service客户端。 在创建服务客户端时，您可以定义调用服务所需的连接设置。 有关信息，请参阅 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+在以编程方式删除凭据之前，请先创建数据集成服务客户端。 创建服务客户端时，您可以定义调用服务所需的连接设置。 有关信息，请参阅 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
 **执行删除操作**
 
-要删除凭据，请指定与凭据对应的别名。 如果指定的别名不存在，则会引发异常。
+要删除凭据，请指定与该凭据对应的别名。 如果指定的别名不存在，则会引发异常。
 
 **另请参阅**
 
@@ -183,20 +183,20 @@ ht-degree: 0%
 
 ### 使用Java API删除凭据 {#deleting-credentials-using-the-java-api}
 
-使用信任管理器API(Java)从AEM Forms中删除凭据：
+使用信任管理器API (Java)从AEM Forms中删除凭据：
 
-1. 包含项目文件
+1. 包括项目文件
 
-   在Java项目的类路径中包含客户端JAR文件，如adobe-truststore-client.jar。
+   在Java项目的类路径中包含客户端JAR文件，例如adobe-truststore-client.jar。
 
 1. 创建凭据服务客户端
 
    * 创建 `ServiceClientFactory` 包含连接属性的对象。
-   * 创建 `CredentialServiceClient` 对象，并使用其构造函数进行传递 `ServiceClientFactory` 对象。
+   * 创建 `CredentialServiceClient` 对象，使用它的构造函数传递 `ServiceClientFactory` 对象。
 
 1. 执行删除操作
 
-   调用 `CredentialServiceClient` 对象 `deleteCredential` 方法，并传递指定别名值的字符串值。
+   调用 `CredentialServiceClient` 对象的 `deleteCredential` 并传递一个指定别名值的字符串值。
 
 **另请参阅**
 

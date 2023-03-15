@@ -1,60 +1,60 @@
 ---
-title: 如何通过AEM Assets API更新您的内容
-description: 在AEM无头开发人员历程的这一部分中，了解如何使用REST API访问和更新内容片段的内容。
+title: 如何通过 AEM Assets API 更新您的内容
+description: 在 AEM Headless 开发人员历程的这一部分中，了解如何使用 REST API 访问和更新内容片段的内容。
 exl-id: af29cb77-0210-4fc4-8d86-2a833d19b49f
 source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
 workflow-type: tm+mt
 source-wordcount: '1040'
-ht-degree: 3%
+ht-degree: 92%
 
 ---
 
-# 如何通过AEM Assets API更新您的内容 {#update-your-content}
+# 如何通过 AEM Assets API 更新您的内容 {#update-your-content}
 
-在 [AEM Headless开发人员历程,](overview.md) 了解如何使用REST API访问和更新内容片段的内容。
+在 [AEM Headless 开发人员历程](overview.md)的这一部分中，了解如何使用 REST API 访问和更新内容片段的内容。
 
 ## 迄今为止的故事 {#story-so-far}
 
-在AEM无头历程的上一个文档中， [如何通过AEM交付API访问您的内容](access-your-content.md) 您学习了如何通过AEM GraphQL API在AEM中访问无头内容，现在应该：
+在 AEM Headless 历程的上一个文档[如何通过 AEM 交付 API 访问您的内容](access-your-content.md)中，您已了解如何通过 AEM GraphQL API 访问 AEM 中的 Headless 内容，您现在应该：
 
-* 深入了解GraphQL。
-* 了解AEM GraphQL API的工作方式。
-* 了解一些实用的示例查询。
+* 深入了解 GraphQL。
+* 了解 AEM GraphQL API 的工作原理。
+* 了解一些实际的示例查询。
 
-本文基于这些基础知识，以便您了解如何通过REST API在AEM中更新现有的无头内容。
+本文基于这些基础知识编写，以便您了解如何通过 REST API 更新 AEM 中现有的 Headless 内容。
 
 ## 目标 {#objective}
 
-* **受众**:高级
-* **目标**:了解如何使用REST API访问和更新内容片段的内容：
-   * 介绍AEM Assets HTTP API。
-   * 介绍并讨论API中的内容片段支持。
-   * 说明API的详细信息。
+* **受众**：高级
+* **目标**：了解如何使用 REST API 访问和更新内容片段的内容：
+   * 引入 AEM Assets HTTP API。
+   * 引入和讨论 API 中的内容片段支持。
+   * 阐释 API 的详细信息。
 
 <!--
   * Look at sample code to see how things work in practice.
 -->
 
-## 为什么内容片段需要资产HTTP API {#why-http-api}
+## 为什么您需要用于内容片段的 Assets HTTP API？ {#why-http-api}
 
-在无头历程的上一步中，您了解了如何使用AEM GraphQL API来使用查询检索内容。
+在 Headless 历程的上一个阶段，您已了解如何使用 AEM GraphQL API 通过查询来检索您的内容。
 
-那么，为何需要其他API?
+那么，为什么需要另一个 API 呢？
 
-资产HTTP API允许您 **读取** 您的内容，但它也允许您 **创建**, **更新** 和 **删除** 内容 — GraphQL API无法执行的操作。
+Assets HTTP API 不仅可让您&#x200B;**读取**&#x200B;内容，还可让您&#x200B;**创建**、**更新**&#x200B;和&#x200B;**删除**&#x200B;内容，这些操作无法通过 GraphQL API 执行。
 
-在最新Adobe Experience Manager版本的每次现成安装中，都提供Assets REST API。
+Assets REST API 在最新版本的 Adobe Experience Manager 的每个现成安装中提供。
 
-## 资源 HTTP API {#assets-http-api}
+## Assets HTTP API {#assets-http-api}
 
-资产HTTP API包括：
+Assets HTTP API 包含：
 
-* 资产REST API
+* Assets REST API
 * 包括对内容片段的支持
 
-资产HTTP API的当前实施基于 **REST** 架构样式，并允许您通过 **CRUD** 操作（创建、读取、更新、删除）。
+Assets HTTP API 的当前实施基于 **REST** 架构样式，并使您能够通过 **CRUD** 操作（创建、读取、更新、删除）访问内容（存储在 AEM 中）。
 
-通过这些操作，API允许您通过向JavaScript前端应用程序提供内容服务，将Adobe Experience Manager作为无头CMS（内容管理系统）进行操作。 或任何可以执行HTTP请求并处理JSON响应的其他应用程序。 例如，单页应用程序(SPA)（基于框架或自定义）需要通过API提供的内容，通常采用JSON格式。
+通过这些操作，API允许您通过向JavaScript前端应用程序提供内容服务，将Adobe Experience Manager作为Headless CMS（内容管理系统）运行。 或者，任何其他可以执行 HTTP 请求并处理 JSON 响应的应用程序。例如，基于框架或自定义的单页应用程序 (SPA) 需要通过 API 提供的内容（通常采用 JSON 格式）。
 
 <!--
 >[!NOTE]
@@ -178,9 +178,9 @@ The binary data of an asset is exposed as a SIREN link of type `content`.
 Assets can have multiple renditions. These are typically exposed as child entities, one exception being a thumbnail rendition, which is exposed as a link of type `thumbnail` ( `rel="thumbnail"`).
 -->
 
-## 资产HTTP API和内容片段 {#assets-http-api-content-fragments}
+## Assets HTTP API 和内容片段 {#assets-http-api-content-fragments}
 
-内容片段用于无标题交付，而内容片段是一种特殊类型的资产。 它们用于访问结构化数据，例如文本、数字、日期等。
+内容片段用于 Headless 交付，它是一种特殊类型的资源。它们用于访问结构化数据，例如文本、数字、日期等。
 
 <!--
 As there are several differences to *standard* assets (such as images or audio), some additional rules apply to handling them.
@@ -205,61 +205,61 @@ To create a new content fragment, the (internal repository) path of the model ha
 Associated content is currently not exposed.
 -->
 
-## 使用资产REST API {#using-aem-assets-rest-api}
+## 使用 Assets REST API {#using-aem-assets-rest-api}
 
 ### 访问 {#access}
 
-资产REST API使用 `/api/assets` 端点，并且需要资产的路径才能访问该资产(不具有前导 `/content/dam`)。
+Assets REST API 使用 `/api/assets` 端点并需要资产路径才能访问资产（不带前导 `/content/dam`）。
 
-* 这意味着要在以下位置访问资产：
+* 这意味着，要访问以下位置的资产：
    * `/content/dam/path/to/asset`
 * 您需要请求：
    * `/api/assets/path/to/asset`
 
-例如，要访问 `/content/dam/wknd/en/adventures/cycling-tuscany`，请求 `/api/assets/wknd/en/adventures/cycling-tuscany.json`
+例如，要访问 `/content/dam/wknd/en/adventures/cycling-tuscany`，需要请求 `/api/assets/wknd/en/adventures/cycling-tuscany.json`
 
 >[!NOTE]
 >访问：
 >
->* `/api/assets` **不** 需要使用 `.model` 选择器。
->* `/content/path/to/page` **does** 要求使用 `.model` 选择器。
+>* `/api/assets`**不**&#x200B;需要使用 `.model` 选择器。
+>* `/content/path/to/page`**需要**&#x200B;使用 `.model` 选择器。
 
 
 ### 操作 {#operation}
 
-HTTP方法确定要执行的操作：
+HTTP 方法决定了要执行的操作：
 
-* **GET**  — 检索资产或文件夹的JSON表示形式
-* **POST**  — 创建新资产或文件夹
-* **PUT**  — 更新资产或文件夹的属性
-* **DELETE**  — 删除资产或文件夹
+* **GET** – 检索资产或文件夹的 JSON 表示形式
+* **POST** – 创建新资产或文件夹
+* **PUT** – 更新资产或文件夹的属性
+* **DELETE** – 删除资产或文件夹
 
 >[!NOTE]
 >
->请求正文和/或URL参数可用于配置其中的一些操作；例如，定义文件夹或资产应由 **POST** 请求。
+>请求正文和/或 URL 参数可用于配置其中一些操作；例如，定义文件夹或资产应由 **POST** 请求创建。
 
-支持的请求的确切格式在API引用文档中定义。
+API 引用文档中将定义受支持请求的准确格式。
 
-用法可能因您使用的是AEM创作环境还是发布环境以及特定用例而异。
+根据您使用的是 AEM 创作环境还是发布环境以及您的具体用例，使用情况可能会有所不同。
 
-* 强烈建议将创建绑定到创作实例（并且当前没有方法使用此API复制片段以发布）。
-* 可以同时从两者进行交付，因为AEM仅以JSON格式提供请求的内容。
+* 强烈建议您将创建绑定到创作实例（目前无法使用此 API 复制要发布的片段）。
+* 可以通过这两种方式交付，因为 AEM 仅以 JSON 格式提供请求的内容。
 
-   * 从AEM创作实例进行存储和交付应足以在防火墙后部署媒体库应用程序。
+   * 来自 AEM 创作实例的存储和交付应足以满足防火墙背后的媒体库应用程序的需求。
 
-   * 对于实时Web交付，建议使用AEM发布实例。
+   * 对于实时 Web 交付，建议使用 AEM 发布实例。
 
 >[!CAUTION]
 >
->AEM实例上的调度程序配置可能会阻止访问 `/api`.
+>AEM实例上的Dispatcher配置可能会阻止对的访问 `/api`.
 
 >[!NOTE]
 >
->有关更多详细信息，请参阅API引用。 特别是， [Adobe Experience Manager Assets API — 内容片段](https://www.adobe.io/experience-manager/reference-materials/6-5/assets-api-content-fragments/index.html).
+>有关更多详细信息，请参阅 API 引用。具体而言，[Adobe Experience Manager Assets API – 内容片段](https://www.adobe.io/experience-manager/reference-materials/6-5/assets-api-content-fragments/index.html)。
 
-### 读取/投放 {#read-delivery}
+### 读取/交付 {#read-delivery}
 
-用法包括：
+使用者式：
 
 `GET /{cfParentPath}/{cfName}.json`
 
@@ -267,48 +267,48 @@ HTTP方法确定要执行的操作：
 
 `http://<host>/api/assets/wknd/en/adventures/cycling-tuscany.json`
 
-响应将以内容片段中的结构化进行序列化JSON。 引用作为引用URL提供。
+响应是序列化的 JSON，其内容的结构与内容片段中的一样。引用将作为引用 URL 提供。
 
 可以执行两种类型的读取操作：
 
-* 按路径读取特定内容片段，将返回内容片段的JSON表示形式。
-* 按路径读取内容片段的文件夹：这会返回文件夹中所有内容片段的JSON表示形式。
+* 按路径读取特定内容片段，这将返回内容片段的 JSON 表示形式。
+* 按路径读取内容片段的文件夹：这将返回文件夹中的所有内容片段的 JSON 表示形式。
 
 ### 创建 {#create}
 
-用法包括：
+使用者式：
 
 `POST /{cfParentPath}/{cfName}`
 
-主体必须包含要创建的内容片段的JSON表示形式，包括应在内容片段元素中设置的任何初始内容。 必须将 `cq:model` 属性，且必须指向有效的内容片段模型。 如果不这样做，则会导致错误。 还需要添加标头 `Content-Type` 将设置为 `application/json`.
+正文必须包含要创建的内容片段的 JSON 表示形式，包括应在内容片段元素上设置的任何初始内容。必须设置 `cq:model` 属性，并且该属性必须指向有效的内容片段模型。如果不这样做，将导致出错。此外，还必须添加一个设置为 `application/json` 的标头 `Content-Type`。
 
 ### 更新 {#update}
 
-使用方式为
+使用者式
 
 `PUT /{cfParentPath}/{cfName}`
 
-正文必须包含要为给定内容片段更新内容的JSON表示形式。
+正文必须包含要为给定内容片段更新的内容的 JSON 表示形式。
 
-这可以只是内容片段、单个元素或所有元素值和/或元数据的标题或描述。
+这可以是内容片段的标题或描述、单个元素或所有元素值和/或元数据。
 
 ### 删除 {#delete}
 
-用法包括：
+使用者式：
 
 `DELETE /{cfParentPath}/{cfName}`
 
-有关使用AEM Assets REST API的更多详细信息，您可以引用：
+有关使用 AEM Assets REST API 的更多详细信息，您可以引用：
 
 * Adobe Experience Manager Assets HTTP API（其他资源）
-* AEM Assets HTTP API中的内容片段支持（其他资源）
+* AEM Assets HTTP API 中的内容片段支持（其他资源）
 
-## 下一步 {#whats-next}
+## 后续内容 {#whats-next}
 
-现在，您已完成AEM Headless开发人员历程的这一部分，接下来您应该：
+现在您已完成 AEM Headless 开发人员历程的这一部分，您应：
 
-* 了解AEM Assets HTTP API的基础知识。
-* 了解此API如何支持内容片段。
+* 了解 AEM Assets HTTP API 的基础知识。
+* 了解此 API 中如何支持内容片段。
 
 <!--
 * Have experience with sample code and know how the API works in practice.
@@ -318,15 +318,15 @@ HTTP方法确定要执行的操作：
 
 <!--You should continue your AEM headless journey by next reviewing the document [How to Put It All Together - Your App and Your Content in AEM Headless](put-it-all-together.md) where you learn how to take your AEM Headless project and prepare it for going live.-->
 
-您应该通过下一步审阅文档来继续您的AEM无头历程 [如何使用您的无头应用程序](go-live.md) 您实际将AEM Headless项目上线！
+您应该通过下一次查看文档来继续您的AEM Headless历程 [如何使用Headless应用程序上线](go-live.md) 您实际将AEM Headless项目上线的位置！
 
 ## 其他资源 {#additional-resources}
 
-* [资源 HTTP API](/help/assets/mac-api-assets.md)
+* [Assets HTTP API](/help/assets/mac-api-assets.md)
 * [内容片段 REST API](/help/assets/assets-api-content-fragments.md)
-   * [API参考](/help/assets/assets-api-content-fragments.md#api-reference)
-* [Adobe Experience Manager Assets API — 内容片段](https://www.adobe.io/experience-manager/reference-materials/6-5/assets-api-content-fragments/index.html)
+   * [API 引用](/help/assets/assets-api-content-fragments.md#api-reference)
+* [Adobe Experience Manager Assets API – 内容片段](https://www.adobe.io/experience-manager/reference-materials/6-5/assets-api-content-fragments/index.html)
 * [使用内容片段](/help/assets/content-fragments/content-fragments.md)
 * [AEM 核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)
-* [CORS/AEM说明](https://helpx.adobe.com/experience-manager/kt/platform-repository/using/cors-security-article-understand.html)
-* [视频 — 使用AEM开发CORS](https://helpx.adobe.com/experience-manager/kt/platform-repository/using/cors-security-technical-video-develop.html)
+* [已说明 CORS/AEM](https://helpx.adobe.com/experience-manager/kt/platform-repository/using/cors-security-article-understand.html)
+* [视频 – 使用 AEM 针对 CORS 进行开发](https://helpx.adobe.com/experience-manager/kt/platform-repository/using/cors-security-technical-video-develop.html)

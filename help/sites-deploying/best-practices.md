@@ -19,7 +19,7 @@ ht-degree: 16%
 
 # 部署最佳实践{#deploying-best-practices}
 
-部署最佳实践介绍了如何以最高效、最有效的方式部署或维护AEM。 这些主题涵盖 AEM 中的多个区域，此外还将不断增加新的主题。
+部署最佳实践描述了如何以尽可能高效和最有效的方式部署或维护AEM。 这些主题涵盖 AEM 中的多个区域，此外还将不断增加新的主题。
 
 以下区域提供了有关部署和维护最佳实践和建议的文档：
 
@@ -38,64 +38,64 @@ ht-degree: 16%
 
 ## OAK {#oak}
 
-[Oak](/help/sites-deploying/platform.md) 是一个可扩展且性能卓越的分层内容存储库，是AEM的基础。
+[Oak](/help/sites-deploying/platform.md) 是一个可扩展且性能良好的分层内容存储库，它是AEM的基础。
 
 <table>
  <tbody>
   <tr>
    <td><p>可扩展性、性能和灾难恢复</p> </td>
    <td><a href="/help/sites-deploying/performance.md">性能和可扩展性</a></td>
-   <td>提供白皮书，介绍技术敏捷性、高性能和可靠的灾难恢复功能</td>
+   <td>提供一份白皮书，讨论技术灵活性、高性能和良好的灾难恢复功能</td>
   </tr>
   <tr>
    <td>推荐的OAK部署</td>
-   <td><a href="/help/sites-deploying/recommended-deploys.md">推荐的部署</a></td>
+   <td><a href="/help/sites-deploying/recommended-deploys.md">建议的部署</a></td>
    <td>描述部署方案</td>
   </tr>
   <tr>
    <td>Mongo拓扑</td>
    <td><a href="/help/sites-deploying/recommended-deploys.md">Mongo拓扑最佳实践</a></td>
-   <td>描述mongo拓扑 — 何时使用哪种拓扑。</td>
+   <td>描述mongo拓扑 — 何时使用哪个拓扑。</td>
   </tr>
   <tr>
    <td>数据存储选项</td>
    <td><a href="/help/sites-deploying/data-store-config.md">配置节点和数据存储</a></td>
-   <td>本文档介绍有关存储二进制数据和内容节点的最佳实践。 包括有关使用Amazon S3数据存储的信息。</td>
+   <td>本文档介绍了有关存储二进制数据和内容节点的最佳实践。 包括有关使用Amazon S3数据存储的信息。</td>
   </tr>
   <tr>
    <td>在OAK中搜索</td>
    <td><a href="/help/sites-deploying/best-practices-for-queries-and-indexing.md">有关查询和索引的最佳实践</a><br /> </td>
-   <td>介绍有关如何索引内容的最佳实践。</td>
+   <td>描述有关如何为内容编制索引的最佳实践。</td>
   </tr>
  </tbody>
 </table>
 
 ## 社区 {#communities}
 
-AEM Communities简化了内部部署社区的创建和管理。 以下介绍了AEM Communities的最佳实践：
+AEM Communities简化了内部部署社区的创建和管理。 此处介绍了AEM Communities的最佳实践：
 
 [社区内容存储](/help/communities/working-with-srp.md)  — 讨论用户生成内容(UGC)的新共享存储功能以及选择基础内容的注意事项 [拓扑](/help/communities/topologies.md).
 
-[推荐的社区部署](/help/sites-deploying/recommended-deploys.md#considerations-for-aem-communities)  — 介绍推荐的社区部署。 |
+[针对社区的推荐部署](/help/sites-deploying/recommended-deploys.md#considerations-for-aem-communities)  — 介绍社区推荐的部署。 |
 
 ## UI {#ui}
 
-下面介绍了有关用户界面的最佳实践：
+有关用户界面的最佳实践，请参阅此处：
 
-[面向客户的用户界面Recommendations](/help/sites-deploying/ui-recommendations.md)
+[客户的用户界面Recommendations](/help/sites-deploying/ui-recommendations.md)
 
-AEM当前有两个UI:同一版本中的经典用户界面和触屏优化用户界面。 因此，客户必须在项目实施期间决定要使用哪些组件。 本文档旨在帮助查找正确的选择。
+AEM当前在同一个版本中具有两个UI：经典UI和触控优化UI。 因此，客户必须在项目实施期间决定使用哪些。 本文档旨在帮助找到正确的选择。
 
 ## 演出 {#performance}
 
-以下列出了有关性能的最佳实践：
+此处列出了有关性能的最佳实践：
 
 <table>
  <tbody>
   <tr>
    <td>质量保证最佳实践</td>
    <td><a href="/help/sites-deploying/configuring-performance.md#best-practices-for-quality-assurance">质量保证最佳实践</a></td>
-   <td>针对您的性能测试专门定义测试概念时涉及的问题的标准化概述 <em>发布</em> 环境。 这主要是QA工程师、项目经理和系统管理员感兴趣的。</td>
+   <td>对定义测试概念时涉及的问题的标准化概述，专门用于对 <em>发布</em> 环境。 这主要与QA工程师、项目经理和系统管理员有关。</td>
   </tr>
   <tr>
    <td>将 Dispatcher 与 CDN 结合使用</td>
@@ -105,12 +105,12 @@ AEM当前有两个UI:同一版本中的经典用户界面和触屏优化用户�
   <tr>
    <td>性能优化</td>
    <td><a href="/help/sites-deploying/configuring-performance.md">性能优化</a></td>
-   <td>一个关键问题是您的网站响应访客请求所花费的时间。</td>
+   <td>关键问题是网站响应访客请求所用的时间。</td>
   </tr>
   <tr>
    <td>性能测试</td>
-   <td><a href="/help/sites-deploying/best-practices-for-performance-testing.md">性能测试的最佳实践</a></td>
-   <td>介绍在AEM部署上运行性能测试的最佳实践。<br /> </td>
+   <td><a href="/help/sites-deploying/best-practices-for-performance-testing.md">性能测试最佳实践</a></td>
+   <td>描述在AEM部署上运行性能测试的最佳实践。<br /> </td>
   </tr>
  </tbody>
 </table>

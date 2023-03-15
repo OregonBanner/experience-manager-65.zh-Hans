@@ -37,7 +37,7 @@ ht-degree: 88%
    >  这两个术语与发布/取消发布同义。
 >
 >* **复制**
-   >  这些是技术术语，用于描述数据（例如页面内容、文件、代码、用户评论）从一个环境移动到另一个环境（例如在发布或反向复制用户评论时）的移动。
+   >  这些是技术术语，用于描述数据（例如页面内容、文件、代码、用户注释）从一个环境移动到另一个环境，例如发布或反向复制用户注释时。
 >
 
 
@@ -110,7 +110,7 @@ ht-degree: 88%
 
    ![pp-02](assets/pp-02.png)
 
-1. 在快速发布对话框中，单击 **发布** 或单击以取消 **取消**. 请记住，任何未发布的引用也将被自动发布。
+1. 在快速发布对话框中，单击以确认发布 **Publish** 或单击 **取消**. 请记住，任何未发布的引用也将被自动发布。
 
    ![chlimage_1-1](assets/chlimage_1-1.png)
 
@@ -143,7 +143,7 @@ ht-degree: 88%
 
    单击&#x200B;**下一步**&#x200B;以继续。
 
-1. 在“管理发布”向导的下一步中， **范围**，您可以定义发布/取消发布的范围，如包括子页面和/或包括引用。
+1. 在“管理发布”向导的下一步中， **范围**，您可以定义发布/取消发布的范围，例如包括以包含子页面和/或包括引用。
 
    ![screen_shot_2018-03-21at153354](assets/screen_shot_2018-03-21at153354.png)
 
@@ -177,7 +177,7 @@ ht-degree: 88%
 
    ![pp-04](assets/pp-04.png)
 
-   的 **发布的引用** 对话框显示所选内容的引用。 默认情况下，这些引用全部处于选中状态并将进行发布/取消发布，但您可以取消选择它们，以便将它们排除在操作之外。
+   此 **已发布引用** 对话框显示选定内容的引用。 默认情况下，这些引用全部处于选中状态并将进行发布/取消发布，但您可以取消选择它们，以便将它们排除在操作之外。
 
    单击 **完成** 保存更改或 **取消** 以取消选择并返回到向导。
 
@@ -193,12 +193,12 @@ ht-degree: 88%
 
    >[!NOTE]
    >
-   >将根据用户可能拥有也可能没有的权限显示&#x200B;**工作流**&#x200B;步骤。请参阅 [本页的前面注释](/help/sites-authoring/publishing-pages.md#main-pars-note-0-ejsjqg-refd) 关于发布权限 [管理工作流的访问权限](/help/sites-administering/workflows-managing.md) 和 [将工作流应用于页面](/help/sites-authoring/workflows-applying.md#main-pars-text-5-bvhbkh-refd) 以了解详细信息。
+   >将根据用户可能拥有也可能没有的权限显示&#x200B;**工作流**&#x200B;步骤。请参阅 [此页面上的上一注释](/help/sites-authoring/publishing-pages.md#main-pars-note-0-ejsjqg-refd) 关于发布权限以及 [管理对工作流的访问权限](/help/sites-administering/workflows-managing.md) 和 [将工作流应用于页面](/help/sites-authoring/workflows-applying.md#main-pars-text-5-bvhbkh-refd) 了解详细信息。
 
    资源将按触发的工作流分组，并且每组都提供了用于执行以下操作的选项：
 
    * 定义工作流的标题。
-   * 保留工作流包，前提是工作流已 [多资源支持](/help/sites-developing/workflows-models.md#configuring-a-workflow-for-multi-resource-support).
+   * 保留工作流包，前提是工作流具有 [多资源支持](/help/sites-developing/workflows-models.md#configuring-a-workflow-for-multi-resource-support).
    * 在选择保留工作流包的选项时，定义工作流包的标题。
 
    单击&#x200B;**发布**&#x200B;或&#x200B;**稍后发布**&#x200B;以完成发布。
@@ -264,7 +264,7 @@ ht-degree: 88%
 
    请记住，您还可以通过&#x200B;**已发布引用**&#x200B;选项查看要发布的引用。
 
-1. [照常继续“管理发布”向导](#manage-publication) 以完成树的发布或取消发布。
+1. [照常继续执行“管理发布”向导](#manage-publication) 完成发布或取消发布树。
 
 ## 确定发布状态 {#determining-publication-status}
 
@@ -272,7 +272,7 @@ ht-degree: 88%
 
 * 在[站点控制台上的资源概述信息](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)中
 
-   ![screenshot_2019-03-05at112019](assets/screen-shot_2019-03-05at112019.png)
+   ![screen-shot_2019-03-05at112019](assets/screen-shot_2019-03-05at112019.png)
 
    站点控制台的[信息卡](/help/sites-authoring/basic-handling.md#card-view)、[列](/help/sites-authoring/basic-handling.md#column-view)和[列表](/help/sites-authoring/basic-handling.md#list-view)视图中将显示发布状态。
 

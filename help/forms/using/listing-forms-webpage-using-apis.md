@@ -1,7 +1,7 @@
 ---
-title: 使用API在网页上列出表单
+title: 在使用API的网页上列出表单
 seo-title: Listing forms on a web page using APIs
-description: 以编程方式查询Forms Manager，以检索过滤的表单列表并在您自己的网页上显示。
+description: 以编程方式查询Forms Manager以检索经过筛选的表单列表，并在您自己的网页上显示。
 seo-description: Programmatically query Forms Manager to retrieve a filtered list of forms and display on your own web pages.
 uuid: e51cb2d4-816f-4e6d-a081-51e4999b00ba
 content-type: reference
@@ -16,11 +16,11 @@ ht-degree: 1%
 
 ---
 
-# 使用API在网页上列出表单 {#listing-forms-on-a-web-page-using-apis}
+# 在使用API的网页上列出表单 {#listing-forms-on-a-web-page-using-apis}
 
-AEM Forms提供了一个基于REST的搜索API，Web开发人员可以使用该API查询和检索一组符合搜索条件的表单。 您可以使用API根据各种过滤器搜索表单。 响应对象包含表单属性、属性和表单的渲染端点。
+AEM Forms提供了一个基于REST的搜索API，Web开发人员可以使用该API来查询和检索一组符合搜索条件的表单。 您可以使用API根据各种筛选器搜索表单。 响应对象包含表单属性、属性和渲染表单端点。
 
-要使用REST API搜索表单，请向服务器发送GET请求，地址为 `https://'[server]:[port]'/libs/fd/fm/content/manage.json` 查询参数。
+要使用REST API搜索表单，请向服务器发送GET请求，地址为 `https://'[server]:[port]'/libs/fd/fm/content/manage.json` 查询参数一起使用。
 
 ## 查询参数 {#query-parameters}
 
@@ -31,30 +31,30 @@ AEM Forms提供了一个基于REST的搜索API，Web开发人员可以使用该A
    <td><strong>描述<br /> </strong></td>
   </tr>
   <tr>
-   <td>func<br /> </td>
-   <td><p>指定要调用的函数。 要搜索表单，请设置 <code>func </code>属性 <code>searchForms</code>.</p> <p>例如， <code class="code">
+   <td>函数<br /> </td>
+   <td><p>指定要调用的函数。 要搜索表单，请设置 <code>func </code>属性至 <code>searchForms</code>.</p> <p>例如， <code class="code">
        URLParameterBuilder entityBuilder=new URLParameterBuilder ();
-       entityBuilder.add("func", "searchForms");</code></p> <p><strong>注意：</strong> <em>此参数是必选参数。</em><br /> </p> </td>
+       entityBuilder.add("func", "searchForms");</code></p> <p><strong>注意：</strong> <em>此参数是必需的。</em><br /> </p> </td>
   </tr>
   <tr>
-   <td>appPath<br /> </td>
-   <td><p>指定用于搜索表单的应用程序路径。 默认情况下，appPath属性会搜索根节点级别上所有可用的应用程序。<br /> </p> <p>您可以在单个搜索查询中指定多个应用程序路径。 使用管道字符(|)分隔多个路径。 </p> </td>
+   <td>应用程序路径<br /> </td>
+   <td><p>指定用于搜索表单的应用程序路径。 默认情况下，appPath属性会搜索在根节点级别可用的所有应用程序。<br /> </p> <p>您可以在单个搜索查询中指定多个应用程序路径。 使用管道字符(|)分隔多个路径。 </p> </td>
   </tr>
   <tr>
-   <td>cutPoints<br /> </td>
-   <td><p>指定要与资产一起获取的属性。 您可以使用星号(*)一次获取所有属性。 使用管道(|)运算符指定多个属性。 </p> <p>例如， <code>cutPoints=propertyName1|propertyName2|propertyName3</code></p> <p><strong>注意</strong>: </p>
+   <td>剪切点<br /> </td>
+   <td><p>指定要使用资源获取的属性。 可以使用星号(*)一次获取所有属性。 使用管道(|)运算符指定多个属性。 </p> <p>例如， <code>cutPoints=propertyName1|propertyName2|propertyName3</code></p> <p><strong>注意</strong>: </p>
     <ul>
-     <li><em>始终获取id、路径和名称等属性。 </em></li>
-     <li><em>每个资产都有一组不同的属性。 formUrl、pdfUrl和guideUrl等属性不依赖于刀位点属性。 这些属性取决于资产类型，会相应地获取这些属性。 </em></li>
+     <li><em>始终获取ID、路径和名称等属性。 </em></li>
+     <li><em>每个资产都具有一组不同的属性。 formUrl、pdfUrl和guideUrl等属性不依赖于cutpoints属性。 这些属性取决于资产类型，因此会相应提取。 </em></li>
     </ul> </td>
   </tr>
   <tr>
    <td>relation<br /> </td>
-   <td>指定要获取的相关资产以及搜索结果。 您可以选择以下选项之一来获取相关资产：
+   <td>指定要与搜索结果一起获取的相关资源。 您可以选择以下选项之一来获取相关资源：
     <ul>
-     <li><strong>NO_RELATION</strong>:请勿获取相关资产。</li>
-     <li><strong>立即</strong>:获取与搜索结果直接相关的资产。</li>
-     <li><strong>全部</strong>:获取直接和间接相关的资产。</li>
+     <li><strong>NO_RELATION</strong>：不获取相关资源。</li>
+     <li><strong>立即</strong>：获取与搜索结果直接相关的资产。</li>
+     <li><strong>全部</strong>：获取直接和间接相关的资产。</li>
     </ul> </td>
   </tr>
   <tr>
@@ -62,8 +62,8 @@ AEM Forms提供了一个基于REST的搜索API，Web开发人员可以使用该A
    <td>指定要获取的最大表单数。</td>
   </tr>
   <tr>
-   <td>偏移</td>
-   <td>指定要从开始跳过的表单数。</td>
+   <td>offset</td>
+   <td>指定要从头开始跳过的表单数。</td>
   </tr>
   <tr>
    <td>returnCount</td>
@@ -71,15 +71,15 @@ AEM Forms提供了一个基于REST的搜索API，Web开发人员可以使用该A
   </tr>
   <tr>
    <td>语句</td>
-   <td><p>指定语句列表。 查询在JSON格式指定的语句列表中执行。 </p> <p>例如，</p> <p><code class="code">JSONArray statementArray=new JSONArray();
+   <td><p>指定语句的列表。 查询在JSON格式指定的语句列表中执行。 </p> <p>例如，</p> <p><code class="code">JSONArray statementArray=new JSONArray();
        JSONObject statement=new JSONObject();
        statement.put("name", "title");
        statement.put("value", "SimpleSurveyAF");
-       statement.put("operator", "EQ"); statementArray.put(statement);</code></p> <p>在上述示例中， </p>
+       statement.put("operator", "EQ"); statementArray.put(statement);</code></p> <p>在上例中， </p>
     <ul>
-     <li><strong>name</strong>:指定要搜索的属性的名称。</li>
-     <li><strong>值</strong>:指定要搜索的属性的值。</li>
-     <li><strong>运算符</strong>:指定在搜索时要应用的运算符。 支持以下运算符：
+     <li><strong>name</strong>：指定要搜索的属性的名称。</li>
+     <li><strong>值</strong>：指定要搜索的属性的值。</li>
+     <li><strong>运算符</strong>：指定搜索时要应用的运算符。 支持以下运算符：
       <ul>
        <li>EQ — 等于 </li>
        <li>NEQ — 不等于</li>
@@ -87,26 +87,26 @@ AEM Forms提供了一个基于REST的搜索API，Web开发人员可以使用该A
        <li>LT — 小于</li>
        <li>GTEQ — 大于或等于</li>
        <li>LTEQ — 小于或等于</li>
-       <li>包含 — 如果B是A的一部分，则A包含B</li>
+       <li>CONTAINS — 如果B是A的一部分，则A包含B</li>
        <li>全文 — 全文搜索</li>
-       <li>STARTSWITH — 如果B是A的开头部分，则A以B开头</li>
-       <li>ENDSWITH — 如果B是A的结束部分，则A以B结束</li>
-       <li>LIKE — 实施LIKE运算符</li>
+       <li>STARTSTWITH — 如果B是A的开头部分，则A以B开头</li>
+       <li>ENDSTWITH — 如果B是A的结束部分，则A以B结束</li>
+       <li>LIKE — 实现LIKE运算符</li>
        <li>AND — 合并多个语句</li>
       </ul> <p><strong>注意：</strong> <em>GT、LT、GTEQ和LTEQ运算符适用于线性类型的属性，如LONG、DOUBLE和DATE。</em></p> </li>
     </ul> </td>
   </tr>
   <tr>
    <td>排序<br /> </td>
-   <td><p>指定搜索结果的顺序条件。 标准以JSON格式定义。 您可以对多个字段的搜索结果进行排序。 在查询中显示字段时，结果会按相应顺序排序。</p> <p>例如，</p> <p>要以升序方式检索按标题属性排序的查询结果，请添加以下参数： </p> <p><code class="code">JSONArray orderingsArray=new JSONArray();
+   <td><p>指定搜索结果的顺序条件。 标准以JSON格式定义。 您可以对多个字段的搜索结果进行排序。 结果按字段在查询中的显示顺序排序。</p> <p>例如，</p> <p>要检索按标题属性升序排序的查询结果，请添加以下参数： </p> <p><code class="code">JSONArray orderingsArray=new JSONArray();
        JSONObject orderings=new JSONObject();
        orderings.put("name", "title");
        orderings.put("criteria", "ASC");
        orderingsArray.put(orderings);
        entityBuilder.add("orderings", orderingsArray.toString());</code></p>
     <ul>
-     <li><strong>name</strong>:指定用于对搜索结果排序的属性的名称。</li>
-     <li><strong>标准</strong>:指定结果的顺序。 顺序属性接受以下值：
+     <li><strong>name</strong>：指定用于对搜索结果排序的属性的名称。</li>
+     <li><strong>标准</strong>：指定结果的顺序。 order属性接受以下值：
       <ul>
        <li>ASC — 使用ASC以升序排列结果。<br /> </li>
        <li>DES — 使用DES以降序排列结果。</li>
@@ -115,11 +115,11 @@ AEM Forms提供了一个基于REST的搜索API，Web开发人员可以使用该A
   </tr>
   <tr>
    <td>includeXdp</td>
-   <td>指定是否检索二进制内容。 的 <code>includeXdp</code> 属性适用于类型的资产 <code>FORM</code>, <code>PDFFORM</code>和 <code>PRINTFORM</code>.</td>
+   <td>指定是否检索二进制内容。 此 <code>includeXdp</code> 属性适用于以下类型的资产 <code>FORM</code>， <code>PDFFORM</code>、和 <code>PRINTFORM</code>.</td>
   </tr>
   <tr>
-   <td>assetType</td>
-   <td>指定要从所有已发布资产中检索的资产类型。 使用管道(|)运算符指定多个资产类型。 有效的资产类型包括表单、PDFFORM、打印表单、资源和指南。</td>
+   <td>资产类型</td>
+   <td>指定要从所有发布的资源中检索的资源类型。 使用管道(|)运算符指定多个资源类型。 有效的资源类型为FORM、PDFFORM、PRINTFORM、RESOURCE和GUIDE。</td>
   </tr>
  </tbody>
 </table>
@@ -172,9 +172,9 @@ orderings:[{"name" :"lastModifiedDate":"order":"ASC"}]
 
 * [启用表单门户组件](/help/forms/using/enabling-forms-portal-components.md)
 * [创建表单门户页面](/help/forms/using/creating-form-portal-page.md)
-* [使用API在网页上列出表单](/help/forms/using/listing-forms-webpage-using-apis.md)
+* [使用API列出网页上的表单](/help/forms/using/listing-forms-webpage-using-apis.md)
 * [使用草稿和提交组件](/help/forms/using/draft-submission-component.md)
-* [自定义草稿和提交表单的存储](/help/forms/using/draft-submission-component.md)
+* [自定义草稿和已提交表单的存储](/help/forms/using/draft-submission-component.md)
 * [将草稿和提交组件与数据库集成的示例](/help/forms/using/integrate-draft-submission-database.md)
 * [自定义表单门户组件的模板](/help/forms/using/customizing-templates-forms-portal-components.md)
-* [在门户上发布表单简介](/help/forms/using/introduction-publishing-forms.md)
+* [在门户上发布表单的简介](/help/forms/using/introduction-publishing-forms.md)

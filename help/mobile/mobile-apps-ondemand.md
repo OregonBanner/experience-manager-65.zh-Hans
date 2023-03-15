@@ -1,7 +1,7 @@
 ---
 title: Mobile On-Demand
 seo-title: Mobile On-Demand
-description: 可查看本页以了解AEM Mobile On-Demand Services作者的角色和职责。
+description: 请阅读本页，了解AEM Mobile On-Demand Services作者的角色和职责。
 seo-description: Follow this page to learn about the roles and responsibilities for AEM mobile On-Demand services author.
 uuid: dd0184d8-1220-4f6a-96b2-acdb31caae17
 contentOwner: msm-service
@@ -25,19 +25,19 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->如果您未使用Adobe Experience Manager(AEM)作为内容管理源，请参阅 [AEM Mobile On-demand Services帮助](https://helpx.adobe.com/digital-publishing-solution/topics.html).
+>如果您没有使用Adobe Experience Manager (AEM)作为内容管理源，请参阅 [AEM Mobile On-demand Services帮助](https://helpx.adobe.com/digital-publishing-solution/topics.html).
 
 >[!NOTE]
 >
 >**先决条件:**
 >
->在使用AEM Mobile On-demand Services并执行本快速入门指南中的步骤之前，用户应该熟悉 [AEM](/help/sites-deploying/deploy.md).
+>在使用AEM Mobile On-demand Services并按照本快速入门指南中的步骤操作之前，用户应该熟悉 [AEM](/help/sites-deploying/deploy.md).
 
-## AEM Mobile作者 {#aem-mobile-author}
+## AEM Mobile Author {#aem-mobile-author}
 
-安 ***AEM作者* (或 *营销人员*)**使用自定义开发或现成的模板和组件来添加和编辑页面、拖放组件以及从DAM添加所有类型的媒体，包括图像、视频和文本片段（内容片段）。 AEM内置内容编辑器随后由 *AEM作者* 以在应用程序中创建丰富且相关的体验，包括与Adobe Marketing Cloud其他部分的集成。
+An ***AEM创作* (或 *营销人员*)**使用自定义开发或现成的模板和组件来添加和编辑页面、拖放组件以及从DAM添加所有类型的媒体，包括图像、视频和文本片段（内容片段）。 随后，使用AEM内置内容编辑器的是 *AEM作者* 在应用程序中创建丰富的相关体验，包括与Adobe Marketing Cloud其余部分的集成。
 
-使用AEM On Demand Services创建应用程序时，AEM Mobile作者负责执行以下任务。
+使用AEM Mobile On Demand Services创建应用程序时，AEM作者负责以下任务。
 
 **为AEM Mobile On-demand Services应用程序创作AEM内容** 涉及以下操作：
 
@@ -46,11 +46,11 @@ ht-degree: 4%
 * [云配置](/help/mobile/mobile-on-demand-associating-an-on-demand-app-to-cloud-configuration.md)
 * [管理内容](/help/mobile/mobile-apps-ondemand-manage-content-ondemand.md)
 
-了解 **内容服务**，请参阅 [内容服务概述](/help/mobile/develop-content-as-a-service.md) 以开始使用。
+要了解 **内容服务**，请参见 [内容服务概述](/help/mobile/develop-content-as-a-service.md) 以开始使用。
 
 >[!NOTE]
 >
->要一般了解AEM中模板和组件的基础知识，请参阅以下资源：
+>要全面了解AEM中的模板和组件基础知识，请参阅以下资源：
 >
 >* [模板](/help/sites-developing/templates.md)
 >* [组件](/help/sites-developing/components.md)

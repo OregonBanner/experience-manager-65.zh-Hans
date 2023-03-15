@@ -1,6 +1,6 @@
 ---
 title: Markdown
-description: 了解内容片段编辑器如何使用Markdown语法来轻松创建无标题内容。
+description: 了解内容片段编辑器如何使用Markdown语法，轻松地创建Headless内容。
 feature: Content Fragments
 role: User
 exl-id: e4340828-fe16-4edf-94c9-b0b145740e74
@@ -13,7 +13,7 @@ ht-degree: 91%
 
 # Markdown {#markdown}
 
-当您 [创作](/help/assets/content-fragments/content-fragments-variations.md#authoring-your-content)，内容片段编辑器使用 *markdown* 允许您轻松写入无标题内容的语法：
+当您 [创作](/help/assets/content-fragments/content-fragments-variations.md#authoring-your-content)，内容片段编辑器使用 *Markdown* 语法让您能够轻松编写Headless内容：
 
 ![Markdown 编辑器](/help/assets/content-fragments/assets/cfm-markdown-01.png)
 

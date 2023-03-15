@@ -23,14 +23,14 @@ Please note that all links to other guides need to be absolute references with l
    + [什么是文档历程？](home.md)
 
 + Headless 历程 {#headless}
-   + [无头历程主页](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/home.html)
+   + [Headless历程主页](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/home.html)
    + Headless 开发人员历程 {#developer}
       + [了解 AEM 中的 Headless](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/overview.html)
       + [了解 CMS Headless 开发](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/learn-about.html)
       + [AEM Headless as a Cloud Service 快速入门](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/getting-started.html)
       + [首次 AEM Headless 使用体验的路径](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/path-to-first-experience.html)
       + [如何将内容建模为 AEM 内容模型](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/model-your-content.html)
-      + [如何通过 AEM 投放 API 访问您的内容](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/access-your-content.html)
+      + [如何通过 AEM 交付 API 访问您的内容](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/access-your-content.html)
       + [如何通过 AEM Assets API 更新您的内容](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/update-your-content.html)
       + [如何融于一起](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/put-it-all-together.html)
       + [如何使用 Headless 应用程序上线](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/go-live.html)
@@ -47,12 +47,12 @@ Please note that all links to other guides need to be absolute references with l
       + [AEM Headless 内容创作历程 – 概述](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/author/overview.html)
       + [使用 AEM 为 Headless 创作 – 简介](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/author/introduction.html)
       + [使用 AEM 为 Headless 创作基本内容](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/author/basics.html)
-      + [了解如何在内容片段中使用参考内容](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/author/references.html)
+      + [了解如何在内容片段中使用引用](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/author/references.html)
       + [了解如何为内容片段定义元数据和标记](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/author/metadata-tagging.html)
    + Headless 内容架构师历程 {#architect}
       + [AEM Headless 内容架构师历程概述](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/architect/overview.html)
       + [使用 AEM 对 Headless 进行内容建模 – 简介](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/architect/introduction.html)
-      + [了解使用 AEM 对 Headless 进行内容建模的基础知识](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/architect/basics.html)
+      + [学习使用 AEM 对 Headless 进行内容建模的基础知识](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/architect/basics.html)
       + [了解如何在 AEM 中创建内容片段模型](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/architect/model-structure.html)
    + Headless 翻译历程 {#translation}
       + [了解 AEM 中的 Headless 翻译](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/translation/overview.html)

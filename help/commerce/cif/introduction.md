@@ -1,78 +1,78 @@
 ---
 title: 简介和概述
-description: 内容和商务的简介和概述。 Experience Manager商务集成框架(CIF)是Adobe推荐的模式，用于将Adobe Commerce和其他第三方商务解决方案的商务服务与Experience Cloud集成和扩展。
+description: Content and Commerce 的简介和概述。Experience Manager Commerce Integration Framework (CIF) 是 Adobe 推荐的模式，用于通过 Experience Cloud 集成和扩展来自 Adobe Commerce 和其他第三方商务解决方案的商务服务。
 thumbnail: introducing-aem-commerce.jpg
 exl-id: 52dad8f9-1812-42a3-8106-92b23f8517cd
 source-git-commit: a467009851937c4a10b165a3d253c47bf990bbc5
 workflow-type: tm+mt
 source-wordcount: '870'
-ht-degree: 2%
+ht-degree: 92%
 
 ---
 
 # Content and Commerce {#content-commerce}
 
-借助Adobe Experience Manager内容和商务，品牌可以更快地扩展和创新，以区分商务体验并捕获加速的在线支出。 AEM内容与商务将Experience Manager中沉浸式、全方位和个性化的体验与任意数量的商务解决方案结合在一起，为购物历程的所有部分提供差异化的体验，缩短实现价值的时间并提高转化率。
+借助 Adobe Experience Manager Content and Commerce，品牌可以更快地扩展和创新，区分商务体验并捕获快速增长的在线支出。AEM Content and Commerce 将 Experience Manager 中的沉浸式、全渠道和个性化体验与任意数量的商务解决方案相结合，为购物历程的各个部分带来差异化的体验，缩短价值实现时间并加快实现更高的转化率。
 
-## 内容和商务如何帮助客户取得成功
+## Content and Commerce 如何帮助客户取得成功
 
-随着客户对在线商务体验的期望越来越高，品牌不得不更快地提供与众不同的体验和更多内容。 但是，实施内容管理平台通常需要花费大量时间和预算来开发基本元素，例如自定义组件和创作工具，以及在维护和升级过程中产生的成本。 Experience Manager Sites提供内容和商务作为Experience Manager的附加模块，可提供现成的商务核心组件、创作工具和参考店面，以加快上线速度、实现跨团队的无缝协作并促进转化。
+随着客户对在线商务体验的期望不断提高，品牌不得不更快地交付差异化的体验和更多内容。然而，实施内容管理平台通常需要花费大量时间和预算来开发基础元素（例如，自定义组件和创作工具），并且会增加维护和升级成本。Experience Manager Sites 提供 Content and Commerce 作为 Experience Manager 的附加模块，这将提供现成的商务核心组件、创作工具和引用店面，以加速上线，实现跨团队的无缝协作并提高转化率。
 
-品牌可以将Experience Manager与Adobe Commerce(Adobe Experience Cloud的一部分)以及所选的任何商务引擎相集成。 通过Experience Manager内容和商务，品牌可以：
+品牌可以将 Experience Manager 与 Adobe Commerce（Adobe Experience Cloud 的一部分）以及任何选定商务引擎集成。借助 Experience Manager Content and Commerce，品牌可以：
 
 * 更快地扩展和创新
-* 个性化体验以促进转化
-* 创建一次，然后随处发布
-* 丰富和区分客户体验
-* 通过商务数据访问简化创作过程
+* 用于推动转化的个性化体验
+* 一次创建，随处发布
+* 丰富和区分面向客户的体验
+* 通过商业数据访问简化创作
 
-## AEM Commerce集成框架(CIF)简介 {#cif-intro}
+## 介绍 AEM Commerce Integration Framework (CIF) {#cif-intro}
 
-由于这些项目必须处理集成商务解决方案的复杂性。 商务解决方案可以是从商业解决方案(如Adobe Commerce)到一组自定义商务服务的任意内容。 集成高度依赖于用例和生态系统。 它通常触及不同的地方，有多种不同的口味：
+由于这些项目必须处理集成商务解决方案方面的复杂性。商业解决方案可以是任何内容，从Adobe Commerce等商业解决方案到一组自定义商业服务。 集成高度依赖于用例和生态系统。它通常涉及不同的位置并具有许多不同的风格：
 
-* 复杂而动态的生态系统的集成（示例产品目录）
-* 企业需要以高效、全方位的方式管理具有其自身生命周期的产品内容
-* 为各位负责人构建复杂且个性化的购物历程
-* 在后端和前端快速适应和创新的能力
-* 运行可扩展且稳定的E2E基础架构，以实现最佳性能(Flash销售、黑色星期五……)。 这包括统一的搜索和缓存管理。
+* 集成复杂、动态的生态系统（示例产品目录）
+* 企业需要以高效的全渠道方式管理具有其生命周期的产品内容
+* 为各种头构建复杂、个性化的购物历程
+* 能够在后端和前端快速适应并进行创新
+* 运行可扩展、稳定的 E2E 基础架构，该基础架构专为实现最佳性能而构建（限时抢购、黑色星期五...）。这包括统一搜索和缓存管理。
 
-这种复杂性为潜在故障点、增加总体拥有成本、延迟和降低价值实现打开了大门。 这些原因导致了商务集成框架(CIF)的开发，该框架是本Experience Manager的附加组件。 CIF通过商务功能扩展Experience Manager，并标准化与商务引擎的集成。 结果是提供了一个经得起未来考验、稳定且可扩展的解决方案，并降低了总体拥有成本。 它通过灵活的工具和无缝集成的功能来解锁技术和业务创新，以构建引人入胜的商务体验。
+这种复杂性会导致出现潜在故障点、增加 TCO、产生延迟和减少实现的价值。这些原因促使开发 Commerce Integration Framework (CIF)，它是 Experience Manager 的加载项。CIF 利用商务功能扩展 Experience Manager，并实施与商务引擎的集成的标准化。最终获得具有前瞻性、稳定且可扩展的解决方案，同时 TCO 更低。它通过敏捷的工具和无缝集成的功能解锁技术和业务创新，从而构建引人入胜的商务体验。
 
-![CIF元素](./assets/CIF/CIF_Overview.png)
+![CIF 元素](./assets/CIF/CIF_Overview.png)
 
-## CIF自2013年起成功支持客户
+## 自 2013 年以来，CIF 一直为客户提供强有力的支持
 
-CIF拥有200多家客户，已成为成功的内容及商业项目的成功原料。 这为当今和未来的IT和业务提供了价值。 最近的客户项目将CIF描述为“一个极好的加速器和一个巨大的省时功能，具有很大的价值”。
+CIF 拥有 200 多家客户，已成为促使 Content and Commerce 项目取得成功的重要因素。这为当今和将来的 IT 和企业提供了价值。最近的客户项目将 CIF 描述为“用于加速和节省大量时间的绝佳工具，具有巨大的价值”。
 
-## CIF优势 {#cif-benefits}
+## CIF 好处 {#cif-benefits}
 
-CIF提供了现成的商务核心组件，可减少对自定义代码的需求，从而加快品牌的上市时间。 所有核心组件均与Adobe的客户端数据层开箱即用集成，以补充客户配置文件，如统一的配置文件。 此配置文件可详细捕获访客的行为，可用于实时预测和个性化客户旅程。
+CIF 提供现成的商务核心组件，可减少对自定义代码的需求，从而加快品牌的上市速度。所有核心组件都与 Adobe 的客户端数据层即时集成以补充客户配置文件（例如，统一配置文件）。此配置文件详细捕获访客行为，可用于实时预测和个性化设置客户历程。
 
-CIF附加组件将产品上下文引入Experience Manager中，并提供诸如产品控制台和产品/类别选取器之类的创作工具，使营销人员能够在Experience Manager中创建和交付购物体验，而无需依赖开发人员。 优点包括：
+CIF 加载项将产品上下文引入 Experience Manager 中，并提供产品控制台和产品/类别选取器等创作工具，使营销人员能够在 Experience Manager 中创建和交付可购买的体验，而无需依靠开发人员。优势包括：
 
 ### 体验
 
-AEM中功能强大的CIF工具使内容创建者能够以一种与交付无关的可扩展方式快速构建丰富的个性化商务体验，从而抓住商机。
+利用 AEM 中功能强大的 CIF 工具，内容创建者能够以可扩展且与交付无关的方式快速构建丰富且个性化的商务体验来抓住商机。
 
-![CIF元素](./assets/CIF/CIF_Product_Experience_Management.png)
+![CIF 元素](./assets/CIF/CIF_Product_Experience_Management.png)
 
-### 值时间(TTV)
+### 价值实现时间 (TTV)
 
-通过 [AEM核心组件](https://www.aemcomponents.dev/), [AEM Venia参考店面](https://github.com/adobe/aem-cif-guides-venia), [AEM项目原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)、以及PWA（无头内容和商务）的集成模式。
+使用加快项目开发 [AEM核心组件](https://www.aemcomponents.dev/)， [AEM Venia参考店面](https://github.com/adobe/aem-cif-guides-venia)， [AEM项目原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)和PWA(Headless Content and Commerce)的集成模式。
 
-CIF是为不断创新而构建的，具有始终保持最新的附加功能，允许客户访问新功能和改进功能。
+CIF 旨在通过始终保持最新的加载项持续创新，使客户能够访问新的和改进的功能。
 
 ### 集成
 
-使用将您的生态系统（例如商务解决方案）与Experience Cloud连接  [Adobe I/O Runtime](https://www.adobe.io/apis/experienceplatform/runtime.html)、基于微服务的无服务器PaaS，以及 [CIF的参考实施](https://github.com/adobe/commerce-cif-graphql-integration-reference).
+使用以下方式将您的生态系统（例如，商业解决方案）与Experience Cloud连接  [Adobe I/O Runtime](https://www.adobe.io/apis/experienceplatform/runtime.html)，一种基于微服务的无服务器PaaS，以及 [CIF的参考实施](https://github.com/adobe/commerce-cif-graphql-integration-reference).
 
-## 经验证的模式和最佳实践
+## 经过验证的模式和最佳实践
 
-CIF支持基于最佳实践的标准化集成模式客户。 这有助于客户在今天取得成功，并且能够灵活地与客户一起增长并适应未来的需求：
+CIF 利用基于最佳实践的标准化集成模式来为客户提供支持。这有助于客户在当今环境中取得成功，能够灵活地与客户一起成长并满足未来要求：
 
-* 消除了可能出现的产品目录集成方面的典型挑战。 示例：
-   * 目录卷数量增加或复杂性增加的性能问题
-   * 无权访问暂存数据
+* 消除了可能出现的产品目录集成方面的典型挑战。示例：
+   * 目录量或复杂性增加所带来的性能问题
+   * 无法访问暂存数据
    * 需要实时产品数据和体验
-* 日益成熟的数字化带来了对体验管理的需求。 CIF附带了产品体验管理功能，这些功能可以在无需额外IT工作的情况下以增量方式整合。
-* 面向全渠道：CIF支持多种接触点技术（服务器端、混合、客户端），包括模式、加速器和核心组件。
+* 不断提高的数字化成熟度产生了对体验管理的需求。CIF 附带产品体验管理功能，无需额外的 IT 工作即可逐步整合这些功能。
+* 全渠道就绪：CIF 支持具有模式、加速器和核心组件的多种接触点技术（服务器端、混合、客户端）。

@@ -1,7 +1,7 @@
 ---
-title: 为卸载创建和使用作业
+title: 创建和使用卸载作业
 seo-title: Creating and Consuming Jobs for Offloading
-description: Apache Sling Discovery功能提供了一个Java API，允许您创建使用JobManager作业和JobConsumer服务
+description: Apache Sling Discovery功能提供了一个Java API，使您能够创建JobManager作业和使用这些作业的JobConsumer服务
 seo-description: The Apache Sling Discovery feature provides a Java API that enables you to create JobManager jobs and JobConsumer services that consume them
 uuid: d6a5beb0-0618-4b61-9b52-570862eac920
 contentOwner: Guillaume Carlino
@@ -17,33 +17,33 @@ ht-degree: 0%
 
 ---
 
-# 为卸载创建和使用作业{#creating-and-consuming-jobs-for-offloading}
+# 创建和使用卸载作业{#creating-and-consuming-jobs-for-offloading}
 
-Apache Sling Discovery功能提供了一个Java API，允许您创建使用JobManager作业和JobConsumer服务的Java API。
+Apache Sling Discovery功能提供了一个Java API，使您能够创建JobManager作业和使用这些作业的JobConsumer服务。
 
-有关创建卸载拓扑和配置主题使用情况的信息，请参阅 [卸载作业](/help/sites-deploying/offloading.md).
+有关创建卸载拓扑和配置主题消耗的信息，请参阅 [卸载作业](/help/sites-deploying/offloading.md).
 
 ## 处理作业负载 {#handling-job-payloads}
 
-卸载框架定义了两个用于标识作业负载的作业属性。 卸载的复制代理使用这些属性来标识要复制到拓扑中实例的资源：
+卸载框架定义了两个用于标识作业有效负载的作业属性。 卸载复制代理使用这些属性来标识要复制到拓扑中实例的资源：
 
-* `offloading.job.input.payload`:以逗号分隔的内容路径列表。 内容会复制到执行该作业的实例。
-* `offloading.job.output.payload`:以逗号分隔的内容路径列表。 作业执行完成后，作业有效负载将复制到创建作业的实例上的这些路径。
+* `offloading.job.input.payload`：以逗号分隔的内容路径列表。 内容将复制到执行作业的实例。
+* `offloading.job.output.payload`：以逗号分隔的内容路径列表。 作业执行完成后，作业有效负载将复制到创建该作业的实例上的这些路径。
 
-使用 `OffloadingJobProperties` 引用属性名称的枚举：
+使用 `OffloadingJobProperties` 枚举以引用属性名称：
 
 * `OffloadingJobProperties.INPUT_PAYLOAD.propertyName()`
 * `OffloadingJobProperties.OUTPUT_PAYLOAD.propetyName()`
 
-作业不需要负载。 但是，如果作业需要处理资源并且作业卸载到未创建作业的计算机，则有效负载是必需的。
+作业不需要负载。 但是，如果作业需要操作资源并且作业被卸载到未创建该作业的计算机，则有效负载是必需的。
 
-## 为卸载创建作业 {#creating-jobs-for-offloading}
+## 创建卸载作业 {#creating-jobs-for-offloading}
 
-创建调用JobManager.addJob方法的客户端，以创建由自动选择的JobConsumer执行的作业。 提供以下信息以创建作业：
+创建一个调用JobManager.addJob方法的客户端，以创建自动选择的JobConsumer执行的作业。 提供以下信息以创建作业：
 
 * 主题：作业主题。
-* 名称：（可选）
-* 属性映射：A `Map<String, Object>` 包含任意数量属性的对象，例如输入有效负载路径和输出有效负载路径。 此映射对象可用于执行该作业的JobConsumer对象。
+* 名称： （可选）
+* 属性映射：A `Map<String, Object>` 包含任意数量属性的对象，例如输入有效负载路径和输出有效负载路径。 此Map对象可用于执行作业的JobConsumer对象。
 
 以下示例服务为给定主题和输入有效负载路径创建作业。
 
@@ -93,17 +93,17 @@ public class JobGeneratorImpl implements JobGenerator  {
 }
 ```
 
-在为 `com/adobe/example/offloading` 主题和 `/content/geometrixx/de/services` 有效负载：
+当对调用JobGeneratorImpl.createJob时，日志包含以下消息 `com/adobe/example/offloading` 主题和 `/content/geometrixx/de/services` 有效负载：
 
 ```shell
 10.06.2013 15:43:33.868 *INFO* [JobHandler: /etc/workflow/instances/2013-06-10/model_1554418768647484:/content/geometrixx/en/company] com.adobe.example.offloading.JobGeneratorImpl Received request to make job for topic com/adobe/example/offloading and payload /content/geometrixx/de/services
 ```
 
-## 发展就业消费者 {#developing-a-job-consumer}
+## 发展工作消费者 {#developing-a-job-consumer}
 
-要使用作业，请开发一个实施 `org.apache.sling.event.jobs.consumer.JobConsumer` 界面。 使用识别要使用的主题 `JobConsumer.PROPERTY_TOPICS` 属性。
+要使用作业，请开发一个实施 `org.apache.sling.event.jobs.consumer.JobConsumer` 界面。 使用要使用的主题进行标识 `JobConsumer.PROPERTY_TOPICS` 属性。
 
-以下示例JobConsumer实施在 `com/adobe/example/offloading` 主题。 用户只需将有效负载内容节点的Unsed属性设置为true即可。
+以下示例JobConsumer实施向 `com/adobe/example/offloading` 主题。 使用者只需将有效负载内容节点的Consumed属性设置为true即可。
 
 ```java
 package com.adobe.example.offloading;
@@ -168,7 +168,7 @@ public class MyJobConsumer implements JobConsumer {
 }
 ```
 
-MyJobConsumer类为/content/geometrixx/de/services的输入负载生成以下日志消息：
+MyJobConsumer类为/content/geometrixx/de/services的输入有效负载生成以下日志消息：
 
 ```shell
 10.06.2013 16:02:40.803 *INFO* [pool-7-thread-17-<main queue>(com/adobe/example/offloading)] com.adobe.example.offloading.MyJobConsumer Consuming job of topic: com/adobe/example/offloading
@@ -176,13 +176,13 @@ MyJobConsumer类为/content/geometrixx/de/services的输入负载生成以下日
 10.06.2013 16:02:40.884 *INFO* [pool-7-thread-17-<main queue>(com/adobe/example/offloading)] com.adobe.example.offloading.MyJobConsumer Job OK for payload /content/geometrixx/de/services
 ```
 
-使用CRXDE Lite可以观察使用的属性：
+可以使用CRXDE Lite观察Consumed属性：
 
 ![chlimage_1-25](assets/chlimage_1-25a.png)
 
 ## Maven依赖项 {#maven-dependencies}
 
-将以下依赖关系维护添加到pom.xml文件，以便Maven能够解析与卸载相关的类。
+将以下依赖关系定义添加到pom.xml文件，以便Maven能够解析卸载相关类。
 
 ```xml
 <dependency>
@@ -199,7 +199,7 @@ MyJobConsumer类为/content/geometrixx/de/services的输入负载生成以下日
 </dependency>
 ```
 
-以前的示例还需要以下依赖关系定义：
+前面的示例还需要以下依赖关系定义：
 
 ```xml
 <dependency>

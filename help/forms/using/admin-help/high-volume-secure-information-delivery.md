@@ -1,7 +1,7 @@
 ---
-title: 大容量安全信息传送
+title: 高容量安全信息交付
 seo-title: High-volume secure information delivery
-description: 文档安全支持将许可证与用户关联，而不是与批量生产环境中的文档关联。
+description: Document Security支持将许可证与用户关联，而不是与批量生产环境中的文档关联。
 seo-description: Document security supports the association of licenses to users, rather than to the documents in mass production environments.
 uuid: 9747d283-506c-434e-9850-e50b95290cc8
 contentOwner: admin
@@ -18,16 +18,16 @@ ht-degree: 0%
 
 ---
 
-# 大容量安全信息传送 {#high-volume-secure-information-delivery}
+# 高容量安全信息交付 {#high-volume-secure-information-delivery}
 
-在大规模生产环境中，例如为电信公司生成安全的每月发票的环境中，创建特定于每个文档的许可证可以成为资源密集型过程。 在这种情况下，文档安全支持将许可证与用户关联，而不是与文档关联。 为用户生成的许可证用于为该用户保护的所有文档。
+在批量生产环境中（例如为电信公司生成每月安全发票的环境），创建特定于每个文档的许可证可能会成为一个资源密集型过程。 在这种情况下，Document Security支持将许可证与用户关联，而不是与文档关联。 为用户生成的许可证用于为该用户保护的所有文档。
 
-这种方法的一个优势是文档安全数据库的大小不会随着文档而线性增长，而是随着用户数量而增长。 此外，由于您只需为用户创建一次许可证，因此通过这些策略对文档的后续保护会变得更快。 所有此类文档都支持离线访问、文档过期和撤销等功能。
+此方法的一个优点是， document security数据库的大小不会随着文档而线性增长，而是随着用户数量的增加而线性增长。 此外，由于您只需为用户创建一次许可证，因此通过这些策略对文档的后续保护会变得更加快速。 所有此类文档都支持脱机访问、文档过期和吊销等功能。
 
-文档安全还支持抽象策略。 抽象策略是包含所有策略属性（如文档安全设置和使用权限）但不包含主体列表的策略模板。 管理员可以使用应具有文档访问权限的不同承担者从抽象策略创建任意数量的策略。 对抽象策略所做的更改不会影响从抽象策略生成的实际策略。
+Document Security还支持抽象策略。 抽象策略是包含所有策略属性（如Document Security设置和使用权限）但不包含承担者列表的策略模板。 管理员可以从抽象策略创建任意数量的策略，这些策略具有应该有权访问文档的不同承担者。 对抽象策略所做的更改不会影响从抽象策略生成的实际策略。
 
-对于电信公司每月生成发票的情况，您可以创建抽象策略，创建用户，然后为每个用户生成唯一的许可证。 这些许可证稍后将应用于每个用户的文档。
+在电信公司每月生成发票时，您需要创建一个抽象策略，创建用户，然后为每个用户生成唯一的许可证。 许可证稍后应用于每个用户的文档。
 
-只有通过文档安全Java SDK才支持创建抽象策略。 但是，您可以从文档安全网页的抽象策略管理您创建的策略。 使用此方法创建的策略的行为与从文档安全网页创建的策略相同。
+仅通过Document Security Java SDK支持创建抽象策略。 但是，您可以管理从document security网页的抽象策略创建的策略。 使用此方法创建的策略的行为与从Document Security网页创建的策略相同。
 
-请参阅 [使用AEM表单进行编程](https://www.adobe.com/go/learn_aemforms_programming_63) 以了解更多信息。
+参见 [使用AEM表单编程](https://www.adobe.com/go/learn_aemforms_programming_63) 了解更多信息。

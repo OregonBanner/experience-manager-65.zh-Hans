@@ -19,9 +19,9 @@ ht-degree: 0%
 
 # 一致性和遍历检查{#consistency-and-traversal-checks}
 
-升级时，可能会因工作区不一致而出现问题。 您可以运行测试升级以查看这是否是问题，也可以运行一致性检查作为预防性操作。
+升级时，可能会由于工作区不一致而出现问题。 您可以运行测试升级以查看这是否会造成问题，也可以将一致性检查作为预防性操作运行。
 
-如果您运行的测试升级因工作区不一致而失败，您将在crx-quickstart/logs/crx/error.log中看到类似以下内容的条目：
+如果运行因工作区不一致而失败的测试升级，您将在crx-quickstart/logs/crx/error.log中看到类似以下内容的条目：
 
 ```xml
 *ERROR* TarPersistenceManager: No bundle found for uuid 'deadbeef-cafe-babe-cafe-babecafebabe'
@@ -33,12 +33,12 @@ javax.jcr.RepositoryException: Error indexing workspace: Error indexing workspac
 
 ## 执行一致性检查 {#perform-a-consistency-check}
 
-要执行一致性检查，请导航到JMX Mbean** com.adobe.granite（存储库）**的管理页面。 从AEM主屏幕中，转到：
+要执行一致性检查，请导航到JMX Mbean** com.adobe.granite (Repository)的管理页面** 从AEM主屏幕，转到：
 
-**“工具”>“Web控制台”>“主”（位于菜单栏上）>“JMX”>“com.adobe.granite（存储库）”**
+**工具> Web控制台>主页（位于菜单栏上）> JMX > com.adobe.granite （存储库）**
 
-在默认安装中，可在此处找到：  **[|显示我|](http://localhost:4502/system/console/jmx/com.adobe.granite%3Atype%3DRepository)**
+在默认安装中，可以在此处找到它：  **[|显示给我|](http://localhost:4502/system/console/jmx/com.adobe.granite%3Atype%3DRepository)**
 
-在 **操作** 在页面的部分中，可找到两种方法： **`traversalCheck`** 和 **`consistencyCheck`**. 要执行检查，请单击操作并输入所需的参数。
+在 **操作** 部分，您将找到两种方法： **`traversalCheck`** 和 **`consistencyCheck`**. 要执行检查，请单击操作并输入所需的参数。
 
 ![chlimage_1-117](assets/chlimage_1-117.png)

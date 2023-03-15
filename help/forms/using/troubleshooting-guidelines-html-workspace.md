@@ -1,7 +1,7 @@
 ---
-title: AEM Forms工作区疑难解答准则
+title: AEM Forms工作区疑难解答指南
 seo-title: Troubleshooting guidelines for AEM Forms workspace
-description: 在浏览器中启用日志并使用调试器对AEM Forms工作区进行故障诊断。
+description: 启用日志并在浏览器中使用调试器对AEM Forms工作区进行故障排除。
 seo-description: Enable logs and use debugger in browser to troubleshoot AEM Forms workspace.
 uuid: 07b8c8ed-f1ff-4be5-8005-251ff7b2ac85
 contentOwner: robhagat
@@ -17,17 +17,17 @@ ht-degree: 0%
 
 ---
 
-# AEM Forms工作区疑难解答准则 {#troubleshooting-guidelines-for-aem-forms-workspace}
+# AEM Forms工作区疑难解答指南 {#troubleshooting-guidelines-for-aem-forms-workspace}
 
-本文讨论如何通过启用日志记录并在浏览器中使用调试器来调试AEM Forms工作区。 此外，该文档还说明了在使用AEM Forms工作区时可能遇到的一些常见问题及其解决方法。
+本文讨论如何通过启用日志记录和使用浏览器中的调试器来调试AEM Forms工作区。 它还解释了您在使用AEM Forms工作区时可能会遇到的一些常见问题及其解决方法。
 
 ## 无法安装AEM Forms工作区包 {#unable-to-install-aem-forms-workspace-package}
 
-安装修补程序后，打开AEM Forms工作区。 如果遇到“找不到资源”错误，请打开CRX包管理器并重新安装 `adobe-lc-workspace-pkg-<version>.zip` 包。
+安装修补程序后，打开AEM Forms工作区。 如果遇到未找到资源错误，请打开CRX包管理器，然后重新安装 `adobe-lc-workspace-pkg-<version>.zip` 包。
 
 安装包时，如果遇到错误 `javax.jcr.nodetype.ConstraintViolationException: OakConstraint0025: Authorizable property rep:authorizableId may not be removed`，请执行以下步骤：
 
-1. 登录到CRX DE Lite。 默认URL为 `https://[localhost]:'port'/lc/crx/de/index.jsp`
+1. 登录到CRX DE lite。 默认URL为 `https://[localhost]:'port'/lc/crx/de/index.jsp`
 1. 删除以下节点：
 
    `/home/groups/P/PERM_WORKSPACE_USER`
@@ -38,110 +38,110 @@ ht-degree: 0%
 
 ## AEM Forms工作区日志记录 {#aem-forms-workspace-nbsp-logging}
 
-您可以在不同级别生成日志，以便对错误进行最佳故障诊断。 例如，在复杂的应用程序中，在组件级别进行日志记录有助于调试特定组件并对其进行故障诊断。
+您可以在各个级别生成日志，以实现错误的最佳故障排除。 例如，在复杂的应用程序中，在组件级别进行日志记录有助于对特定组件进行调试和故障排除。
 
 在AEM Forms工作区中：
 
-* 要获取有关特定组件文件的日志记录信息，请附加 `/log/<ComponentFile>/<LogLevel>` ，然后按 `Enter`. 组件文件在指定日志级别的所有日志记录信息都将打印在控制台上。
+* 要获取有关特定组件文件的日志记录信息，请附加 `/log/<ComponentFile>/<LogLevel>` 在URL中，然后按 `Enter`. 在指定的日志级别上，组件文件的所有日志记录信息都打印在控制台上。
 
-* 要获取所有组件文件的日志记录信息，请附加 `/log/all/trace` ，然后按 `Enter`.
+* 要获取所有组件文件的日志记录信息，请附加 `/log/all/trace` 在URL中，然后按 `Enter`.
 
 * 日志格式： `<Component file> <Date>:<Time>: <Log Level> : <Log Message>`
 
 >[!NOTE]
 >
->默认情况下，所有组件的日志级别都设置为“信息”。
+>默认情况下，所有组件的日志级别均设置为INFO。
 
-* 用户设置的日志级别仅针对该浏览器会话进行维护。 当用户刷新页面时，所有组件的日志级别都会设置为其初始值。
+* 用户设置的日志级别仅针对该浏览器会话进行维护。 当用户刷新页面时，所有组件的日志级别将设置为初始值。
 
 ### AEM Forms工作区中的组件文件列表 {#list-of-component-files-in-nbsp-aem-forms-workspace}
 
 <table>
  <tbody>
   <tr>
-   <td><p>allcategoryModel</p> </td>
+   <td><p>allcategorymodel</p> </td>
    <td><p>processinstanceModel</p> </td>
-   <td><p>tasklistModel</p> </td>
+   <td><p>任务列表模型</p> </td>
   </tr>
   <tr>
    <td><p>appnavigationModel</p> </td>
    <td><p>processInstanceView</p> </td>
-   <td><p>tasklistView</p> </td>
+   <td><p>任务列表视图</p> </td>
   </tr>
   <tr>
    <td><p>appnavigationView</p> </td>
    <td><p>processnamelistModel</p> </td>
-   <td><p>taskModel</p> </td>
+   <td><p>任务模型</p> </td>
   </tr>
   <tr>
    <td><p>categorylistModel</p> </td>
    <td><p>processnamelistView</p> </td>
-   <td><p>taskView</p> </td>
+   <td><p>任务视图</p> </td>
   </tr>
   <tr>
    <td><p>categorylistView</p> </td>
    <td><p>processnameModel</p> </td>
-   <td><p>teamqueuesView</p> </td>
+   <td><p>teamqueuseview</p> </td>
   </tr>
   <tr>
-   <td><p>categoryModel</p> </td>
+   <td><p>categorymodel</p> </td>
    <td><p>processnameView</p> </td>
    <td><p>todoView</p> </td>
   </tr>
   <tr>
    <td><p>categoryView</p> </td>
    <td><p>searchtemplatedetailsView</p> </td>
-   <td><p>trackingView</p> </td>
+   <td><p>trackingview</p> </td>
   </tr>
   <tr>
    <td><p>favoritecategoryModel</p> </td>
-   <td><p>sharequeueModel</p> </td>
-   <td><p>uisettingsModel</p> </td>
+   <td><p>共享模型</p> </td>
+   <td><p>uissettingsModel</p> </td>
   </tr>
   <tr>
-   <td><p>filterlistView</p> </td>
-   <td><p>sharequeueView</p> </td>
-   <td><p>uisettingsView</p> </td>
+   <td><p>筛选列表视图</p> </td>
+   <td><p>共享视图</p> </td>
+   <td><p>uissettingsView</p> </td>
   </tr>
   <tr>
-   <td><p>filterView</p> </td>
+   <td><p>筛选视图</p> </td>
    <td><p>startpointlistModel</p> </td>
    <td><p>userinfoModel</p> </td>
   </tr>
   <tr>
    <td><p>outofficeModel</p> </td>
    <td><p>startpointlistView</p> </td>
-   <td><p>userinfoView</p> </td>
+   <td><p>用户信息视图</p> </td>
   </tr>
   <tr>
    <td><p>outofficeView</p> </td>
-   <td><p>startpointModel</p> </td>
+   <td><p>起始点模型</p> </td>
    <td><p>usersearchModel</p> </td>
   </tr>
   <tr>
-   <td><p>preferencesView</p> </td>
-   <td><p>startpointView</p> </td>
+   <td><p>首选项视图</p> </td>
+   <td><p>起始点视图</p> </td>
    <td><p>usersearchView</p> </td>
   </tr>
   <tr>
    <td><p>processinstancehistoryView</p> </td>
    <td><p>startProcessView</p> </td>
-   <td><p>wserrorModel</p> </td>
+   <td><p>错误模型</p> </td>
   </tr>
   <tr>
    <td><p>processinstancelistModel</p> </td>
    <td><p>startprocessView</p> </td>
-   <td><p>wserrorView</p> </td>
+   <td><p>错误视图</p> </td>
   </tr>
   <tr>
    <td><p>processinstancelistView</p> </td>
-   <td><p>taskdetailsView</p> </td>
+   <td><p>任务详细信息视图</p> </td>
    <td><p>wsmessageView</p> </td>
   </tr>
  </tbody>
 </table>
 
-### AEM Forms工作区中可用的日志级别 {#log-levels-available-in-nbsp-aem-forms-workspace}
+### AEM Forms Workspace中可用的日志级别 {#log-levels-available-in-nbsp-aem-forms-workspace}
 
 * 致命
 * 错误
@@ -155,15 +155,15 @@ ht-degree: 0%
 
 可以在不同的浏览器中调试脚本和样式。
 
-* **在IE中调试**:要在IE中调试AEM Forms工作区，请参阅： [https://msdn.microsoft.com/en-us/library/hh772704(v=vs.85).aspx](https://msdn.microsoft.com/en-us/library/hh772704(v=vs.85).aspx).
+* **在IE中进行调试**：要在IE中调试AEM Forms工作区，请参阅： [https://msdn.microsoft.com/en-us/library/hh772704(v=vs.85).aspx](https://msdn.microsoft.com/en-us/library/hh772704(v=vs.85).aspx).
 
-* **在Chrome中调试**:要在Chrome中打开调试器，请使用快捷键：Ctrl+Shift+I。有关更多信息，请参阅： [https://developer.chrome.com/extensions/tut_debugging.html](https://developer.chrome.com/extensions/tut_debugging.html).
+* **在Chrome中进行调试**：要在Chrome中打开调试器，请使用快捷键：Ctrl+Shift+I。有关更多信息，请参阅： [https://developer.chrome.com/extensions/tut_debugging.html](https://developer.chrome.com/extensions/tut_debugging.html).
 
-* **在Firefox中调试**:在Firefox中，有几个插件可用于调试脚本和样式。 例如，Firebug就是这样的调试实用程序([https://getfirebug.com](https://getfirebug.com))。
+* **在Firefox中进行调试**：有多个加载项可用于在Firefox中调试脚本和样式。 例如，Firebug就是这样一个调试实用程序([https://getfirebug.com](https://getfirebug.com))。
 
 ## 常见问题解答 {#faqs}
 
-1. PDF表单未在Google Chrome中呈现或提交。
+1. PDF表单未在Google Chrome中渲染或提交。
 
    1. 安装Adobe®Reader®插件。
    1. 在Chrome中，打开chrome://plugins以查看可用的插件。
@@ -172,25 +172,25 @@ ht-degree: 0%
 1. SWF表单或指南未在Google Chrome中呈现。
 
    1. 在Chrome中，打开chrome://plugins以查看可用的插件。
-   1. 请参阅AdobeFlash®播放器插件的详细信息。
-   1. 在“AdobeFlash Player”插件下禁用PepperFlash。
+   1. 有关AdobeFlash®播放器插件的详细信息，请参阅。
+   1. 禁用“AdobeFlash Player”插件下的PepperFlash。
 
-1. 我已自定义AEM Forms工作区，但无法看到更改。
+1. 我已经自定义了AEM Forms工作区，但看不到更改内容。
 
    清除浏览器的缓存，然后访问AEM Forms工作区。
 
-1. 当用户在桌面中打开表单时，需要执行哪些操作才能使表单以HTML呈现？
+1. 用户在桌面中打开表单时，需要执行哪些操作才能在HTML中渲染表单？
 
-   使用Workbench时，在分配任务步骤中为默认配置文件选择HTML单选按钮。
+   在使用Workbench时，为分配任务步骤中的默认配置文件选择“HTML”单选按钮。
 
-1. 单击时，附件不显示。
+1. 单击时未显示附件。
 
    要查看附件，请在浏览器中启用弹出窗口。
 
-1. 用户已登录到表单应用程序。 如果用户尝试登录工作区，但用户没有工作区权限，则可能无法加载该工作区。
+1. 用户登录到表单应用程序。 如果用户尝试登录到workspace，如果用户没有workspace权限，则可能无法加载。
 
-   注销其他表单应用程序，然后登录到工作区。
+   从其他表单应用程序注销，然后登录到工作区。
 
-1. HTML表单在其设计中使用“流程属性”，在AEM Forms工作区中呈现后，在表单内显示“提交”按钮。
+1. HTML表单，在其设计中使用“流程属性”，在AEM Forms工作区中呈现时，在表单内显示“提交”按钮。
 
-   在设计表单时，使用“流程属性”时，它会在表单内添加一个“提交”按钮。 在AEM Forms工作区中作为PDF呈现时，“提交”按钮对最终用户不可见。 但是，在AEM Forms工作区中作为HTML表单进行渲染时，最终用户可以看到“提交”按钮。 单击表单内的此提交按钮不会启动任何操作。 在表单外，单击AEM Forms工作区底部的“提交”按钮，即可完成任务。
+   设计表单时，当您使用流程属性时，它会在表单中添加一个提交按钮。 在AEM Forms工作区中呈现为PDF时，“提交”按钮对最终用户不可见。 但是，在AEM Forms工作区中以HTML表单形式呈现时，最终用户可看到“提交”按钮。 单击表单中的此“提交”按钮不会启动任何操作。 单击表单外部AEM Forms工作区底部的“提交”按钮可完成任务。

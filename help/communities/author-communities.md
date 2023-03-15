@@ -32,17 +32,17 @@ ht-degree: 44%
 
 >[!NOTE]
 >
->如果不熟悉创作环境，请查看 [基本操作](/help/sites-authoring/basic-handling.md) 和 [页面创作快速指南](/help/sites-authoring/qg-page-authoring.md).
+>如果不熟悉创作环境，请查看文档 [基本处理](/help/sites-authoring/basic-handling.md) 和 [页面创作快速指南](/help/sites-authoring/qg-page-authoring.md).
 
-## 可用的社区组件 {#available-communities-components}
+## 可用社区组件 {#available-communities-components}
 
-下表列出了在组件浏览器(Sidekick)中启用后，作者可看到的社区组件。
+下表列出了在组件浏览器(sidekick)中启用时对作者可见的社区组件。
 
 另请参阅交互式 [社区组件指南](/help/communities/components-guide.md).
 
 >[!NOTE]
 >
->读取 [社区组件基础知识](/help/communities/basics.md) 因为其中包含使用社区组件进行创作所需的信息。
+>读取 [社区组件基础知识](/help/communities/basics.md) 因为它包含使用Communities组件创作所需的信息。
 
 | **组件标题** | **功能** |
 |---|---|
@@ -79,12 +79,12 @@ ht-degree: 44%
 
 >[!NOTE]
 >
->投票组件不再可用，并且在Experience Manager社区中受支持。
+>轮询组件不再可用，并且在Experience Manager社区中不受支持。
 
 ## 相关社区文档 {#related-communities-documentation}
 
 * 访问 [部署社区](/help/communities/deploy-communities.md) 以了解建议的部署。
 
-* 访问 [管理社区站点](/help/communities/administer-landing.md) 要了解有关创建社区站点、配置社区站点模板、审核社区内容、管理成员和配置消息传送的信息，请执行以下操作：
+* 访问 [管理社区站点](/help/communities/administer-landing.md) 了解有关创建社区站点、配置社区站点模板、审核社区内容、管理成员和配置消息传送的信息。
 
-* 访问 [发展社区](/help/communities/communities.md) 了解社交组件框架(SCF)和自定义社区组件和功能。
+* 访问 [发展中的社区](/help/communities/communities.md) 了解社交组件框架(SCF)和自定义社区组件和功能。

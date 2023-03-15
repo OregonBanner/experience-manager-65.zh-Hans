@@ -67,7 +67,7 @@ AEM 使用一组机制为页面实现响应式布局：
 
 >[!NOTE]
 >
->通过对模板进行配置，可以启用上述机制。请参阅 [配置响应式布局](/help/sites-administering/configuring-responsive-layout.md) 以了解更多信息。
+>通过对模板进行配置，可以启用上述机制。参见 [配置响应式布局](/help/sites-administering/configuring-responsive-layout.md) 以进一步了解。
 
 ## 布局定义、设备模拟和断点 {#layout-definitions-device-emulation-and-breakpoints}
 
@@ -224,7 +224,7 @@ AEM 允许您根据设备的宽度定义布局：
 
    * **父项**
 
-      允许您选择整个布局容器组件以对整体执行操作。
+      允许您选择整个布局容器组件以便对整体执行操作。
 
    * **浮动到新行**
 
@@ -243,7 +243,7 @@ AEM 允许您根据设备的宽度定义布局：
 
    ![](do-not-localize/screen_shot_2018-03-23at090823.png)
 
-   * **显示隐藏的组件**  — 显示所有或各个组件。 数字表示当前隐藏的组件数量。计数器显示隐藏的组件数量。
+   * **显示隐藏的组件**  — 显示所有或各个组件。 数字表示当前存在的隐藏组件数。计数器显示隐藏的组件数。
 
    ![](do-not-localize/screen_shot_2018-03-23at091007.png)
 

@@ -1,7 +1,7 @@
 ---
-title: 对HTML5表单的图片子句支持
+title: HTML5表单的Picture子句支持
 seo-title: Picture clause support for HTML5 forms
-description: HTML5表单支持XFA Picture子句用于显示值，以及日期、文本和数字符号的格式化值。
+description: HTML5表单支持XFA Picture子句，用于显示日期、文本和数字符号的值以及格式化的值。
 seo-description: HTML5 forms supports XFA Picture clause for display value and formatted value for date, text, and numeric symbols.
 uuid: ca5074ce-8219-4f27-a37c-b1f0dca4ce03
 contentOwner: robhagat
@@ -18,31 +18,31 @@ ht-degree: 1%
 
 ---
 
-# 对HTML5表单的图片子句支持 {#picture-clause-support-for-html-forms}
+# HTML5表单的Picture子句支持 {#picture-clause-support-for-html-forms}
 
-HTML5表单支持XFA Picture子句用于显示值，以及日期、文本和数字符号的格式化值。 支持以下Picture子句表达式：
+HTML5表单支持XFA Picture子句，用于显示日期、文本和数字符号的值以及格式化的值。 支持以下Picture子句表达式：
 
 * category(locale){picture-clause} | category(locale){picture-clause} | category(locale){picture-clause}
 * category.subcategory{}
 
 >[!NOTE]
 >
->目前，Mobiles Forms不支持编辑图片子句。 此外，不支持DateTime和Time Picture子句符号。
+>目前，Mobiles Forms不支持Edit Picture子句。 此外，不支持DateTime和Time Picture子句符号。
 
 ## 支持的日期字段符号 {#supported-date-field-symbols}
 
-支持的Date Picture子句表达式：
+Date Picture子句支持的表达式：
 
 * date.long{}
 * date.short{}
 * date.medium{}
 * date.full{}
 * date.short{}
-* date{date Picture Clause符号}
+* date{date Picture子句符号}
 
 >[!NOTE]
 >
->图片子句的默认模式为{MMM D， YYYY}模式。 如果未应用模式，则使用默认模式。
+>picture子句的默认模式为{MMM D， YYYY}模式。 如果未应用任何阵列，则使用缺省阵列。
 
 <table>
  <tbody>
@@ -52,19 +52,19 @@ HTML5表单支持XFA Picture子句用于显示值，以及日期、文本和数�
   </tr>
   <tr>
    <td>D</td>
-   <td>每月的1位或2位(1-31)</td>
+   <td>每月的1或2位数(1-31)日</td>
   </tr>
   <tr>
    <td>DD</td>
-   <td>每月的零位(01-31)。<br /> </td>
+   <td>每月补零两位数(01-31)的天数。<br /> </td>
   </tr>
   <tr>
    <td>M</td>
-   <td>1 — 或2位(1-12)的月份。<br /> </td>
+   <td>一年中的1或2位数(1-12)月份。<br /> </td>
   </tr>
   <tr>
    <td>MM</td>
-   <td>一年中的零位(01-12)。<br /> </td>
+   <td>月份中填充零的两位数(01-12)。<br /> </td>
   </tr>
   <tr>
    <td>MMM</td>
@@ -93,27 +93,27 @@ HTML5表单支持XFA Picture子句用于显示值，以及日期、文本和数�
  </tbody>
 </table>
 
-## 数值图片子句 {#numeric-picture-clause}
+## Numeric Picture子句 {#numeric-picture-clause}
 
-HTML5表单支持数字图片符号。 但是，PDF forms和HTMLForms在支持方面存在差异。
+HTML5表单支持数字图片符号。 但是，PDF forms和HTMLForms之间的支持存在差异。
 
-在 **PDF forms**，则不管Picture子句中符号的数量如何，都会设置数字的格式
+In **PDF forms**，数字的格式与Picture子句中的符号数无关
 
-在 **HTMLForms**，则仅当数字的位数小于Picture子句中符号数时，才会设置数字的格式。
+In **HTMLForms**，仅当数字的位数小于Picture子句中的符号数时，才会对数字进行格式化。
 
-**示例**:请考虑一个图片条款：num{zzz，zzz，zz9}。
+**示例**：考虑一个Picture子句： num{zzz，zzz，zz9}。
 
-数字 **10000** 格式为 **一万** HTML和PDF forms。
+数字 **10000** 格式为 **10,000** 在HTML和PDF forms中。
 
-编号1000000的格式为1,000,000PDF forms。 但是，在HTMLForms中，数字仍未格式化为1000000。
+数字1000000PDF forms格式为1,000,000。 但是，在HTMLForms中，数字保持为1000000格式。
 
-支持中数值图片子句的表达式 **HTMLForms** 为：
+中支持的Numeric Picture子句表达式 **HTMLForms** 为：
 
 * num.integer{}
 * num.decimal{}
 * num.currency{}
 * num.percent{}
-* num{Numeric Picture Clause Symbols}
+* num{Numeric Picture子句符号}
 
 <table>
  <tbody>
@@ -124,72 +124,72 @@ HTML5表单支持数字图片符号。 但是，PDF forms和HTMLForms在支持�
   </tr>
   <tr>
    <td>9</td>
-   <td><strong>输出格式</strong>:一个数字。 或者，如果输入数据为空或对应位置有空格，则为零位。<br /> </td>
+   <td><strong>输出格式</strong>：一位数字。 或者，如果输入数据为空或相应位置有空格，则为零位数。<br /> </td>
    <td>一位数</td>
   </tr>
   <tr>
    <td>Z</td>
-   <td><strong>输出格式</strong>:一个数字。 或者，如果输入数据为空，则在相应位置输入空格或零位。<br /> </td>
-   <td>单位数或空格</td>
+   <td><strong>输出格式</strong>：一位数字。 或者，如果输入数据为空，则为空格，或者为相应位置中的零位数。<br /> </td>
+   <td>一位数或空格</td>
   </tr>
   <tr>
    <td>z</td>
-   <td><strong>输出格式</strong>:一个数字。 或者，如果输入数据为空、空格或相应位置的零位，则不会有任何用处。<br /> </td>
-   <td>一位数或零</td>
+   <td><strong>输出格式</strong>：一位数字。 或者，如果输入数据为空、有空格或对应位置中的零位数，则无意义。<br /> </td>
+   <td>一位数或无</td>
   </tr>
   <tr>
    <td>E</td>
-   <td><strong>输出格式</strong>:由指数符号(E)组成的浮点数的指数部分。 后跟可选的加号或减号。 后跟指数值。<br /> </td>
-   <td>与输出格式相同</td>
+   <td><strong>输出格式</strong>：由指数符号(E)组成的浮点数的指数部分。 后跟一个可选的加号或减号。 后跟指数值。<br /> </td>
+   <td>与输出格式设置相同</td>
   </tr>
   <tr>
-   <td>CR或CR<br /> </td>
-   <td>如果数字为负，则计数符号(CR)。 否则就没有。</td>
+   <td>Cr或cr<br /> </td>
+   <td>如果数字为负，则为贷方符号(CR)。 否则什么也没有。</td>
    <td><br type="_moz" /> </td>
   </tr>
   <tr>
    <td>S或s<br /> </td>
-   <td>输出格式：如果数字为负数，则显示减号。 其他空间。<br /> </td>
-   <td>如果数字为负数，则减号。 数字为正数时加号</td>
+   <td>输出格式：数字为负数时为负号。 其他空间。<br /> </td>
+   <td>如果数字为负数，则使用负号。 如果数字为正数，则使用加号</td>
   </tr>
   <tr>
    <td>V</td>
-   <td>当前区域设置的小数基数。 允许在输入解析时隐含小数基数。</td>
+   <td>常用区域设置的十进制基数。 允许在输入解析时隐含十进制基数。</td>
    <td><br type="_moz" /> </td>
   </tr>
   <tr>
    <td>v</td>
-   <td>当前区域设置的小数基数。 允许在输入解析和输出格式时隐含小数基数。</td>
+   <td>常用区域设置的十进制基数。 允许在输入解析和输出格式设置时隐含十进制基数。</td>
    <td><br type="_moz" /> </td>
   </tr>
   <tr>
    <td>。</td>
-   <td>当前区域设置的小数基数。</td>
+   <td>常用区域设置的十进制基数。</td>
    <td><br type="_moz" /> </td>
   </tr>
   <tr>
-   <td>,(U+FF0C)</td>
-   <td>当前区域设置的分组分隔符</td>
+   <td>， (U+FF0C)</td>
+   <td>主要区域设置的分组分隔符</td>
    <td><br type="_moz" /> </td>
   </tr>
   <tr>
-   <td>$(U+FF04)</td>
+   <td>$ (U+FF04)</td>
    <td>当前区域设置的货币符号。</td>
    <td><br type="_moz" /> </td>
   </tr>
   <tr>
-   <td>%(U+FF05)</td>
-   <td>当前区域设置的百分比符号。</td>
+   <td>% (U+FF05)</td>
+   <td>常用区域设置的百分比符号。</td>
    <td><br type="_moz" /> </td>
   </tr>
   <tr>
-   <td>(U+FF08)</td>
-   <td>如果数字为负数，则使用左括号。 其他空间。</td>
+   <td>( (U+FF08)</td>
+   <td>数字为负数时用左括号。 其他空间。</td>
    <td><br type="_moz" /> </td>
   </tr>
   <tr>
-   <td>)(U+FF09)</td>
-   <td>如果数字为负数，则右括号。 其他空间。</td>
+   <td>) (U+FF09)</td>
+   <td>数字为负数时用右括号。 其他空间。</td>
    <td><br type="_moz" /> </td>
   </tr>
   <tr>
@@ -202,9 +202,9 @@ HTML5表单支持数字图片符号。 但是，PDF forms和HTMLForms在支持�
 
 ## 文本图片子句 {#text-picture-clause}
 
-HTML5表单支持以下文本图片子句表达式：
+HTML5表单支持以下Text Picture子句表达式：
 
-* text{text picture子句符号}
+* text{text Picture子句符号}
 
 | **符号** | **解释** |
 |---|---|
@@ -212,4 +212,4 @@ HTML5表单支持以下文本图片子句表达式：
 | X | 单个字符。 |
 | O | 单个字母数字字符。 |
 | 0（零） | 单个字母数字字符。 |
-| 9 | 一位数。 |
+| 9 | 一位数字。 |

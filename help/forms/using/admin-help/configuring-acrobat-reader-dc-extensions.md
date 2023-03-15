@@ -1,5 +1,5 @@
 ---
-title: 为数据捕获配置Acrobat Reader DC扩展
+title: 配置用于数据捕获的Acrobat Reader DC扩展
 seo-title: Configuring Acrobat Reader DC extensions for data capture
 description: 了解如何配置Acrobat Reader DC扩展以进行数据捕获。
 seo-description: Learn how to configure Acrobat Reader DC extensions for data capture.
@@ -17,25 +17,25 @@ ht-degree: 0%
 
 ---
 
-# 为数据捕获配置Acrobat Reader DC扩展 {#configuring-acrobat-reader-dc-extensions-for-data-capture}
+# 配置用于数据捕获的Acrobat Reader DC扩展 {#configuring-acrobat-reader-dc-extensions-for-data-capture}
 
-如果AEM Forms安装的用户使用Content Services的数据捕获功能（已弃用），则建议您为这些用户创建具有只读访问权限的角色。
+如果AEM Forms安装的用户使用Content Services的数据捕获功能（已弃用），建议您为这些用户创建一个具有只读访问权限的角色。
 
-***注释&#x200B;**:Adobe®LiveCycle® Content Services ES（已弃用）是随LiveCycle一起安装的内容管理系统。 它使用户能够设计、管理、监控和优化以人为中心的流程。 内容服务（已弃用）支持将于12/31/2014终止。 请参阅 [Adobe产品生命周期文档](https://www.adobe.com/support/products/enterprise/eol/eol_matrix.html).*
+***注释&#x200B;**：Adobe®LiveCycle®内容服务ES（已弃用）是随LiveCycle一起安装的内容管理系统。 它使用户能够设计、管理、监控和优化以人为中心的流程。 内容服务（已弃用）支持于2014年12月31日终止。 参见 [Adobe产品生命周期文档](https://www.adobe.com/support/products/enterprise/eol/eol_matrix.html).*
 
-数据捕获要求您分配用户角色以访问SampleReaderExtensionsCredential。 您可以分配标准的“信任管理员”角色，但请考虑，此角色为一般的非管理用户提供了强大的管理员权限，这些权限可以控制PKI信任设置和管理PKI凭据，这可能会危及您在生产环境中安装AEM表单的安全性。 建议AEM Forms系统管理员创建一个仅授予信任存储的只读访问权限的角色，并将此新角色分配给使用数据捕获的非管理员用户。
+数据捕获要求您分配用户角色以访问SampleReaderExtensionsCredential。 您可以指定标准的信任管理员角色，但认为此角色可为常规的非管理用户赋予强大的管理员权限，这些权限可控制PKI信任设置并管理PKI凭据，这可能会危及生产环境中AEM表单安装的安全性。 建议AEM表单系统管理员创建一个仅授予对信任存储的只读访问权限的角色，并将此新角色分配给使用数据捕获的非管理员用户。
 
 ## 为数据捕获用户创建角色 {#create-a-role-for-data-capture-users}
 
 1. 在管理控制台中，单击设置>用户管理>角色管理，然后单击新建角色。
-1. 在相应字段中输入角色名称（例如，Data Capture User）和说明，然后单击“下一步”。
-1. 在角色权限屏幕上，单击查找权限，然后从可用权限列表中选择凭据读取。
+1. 在相应的字段中输入角色名称（例如，数据捕获用户）和说明，然后单击下一步。
+1. 在“角色权限”屏幕上，单击“查找权限”，然后从可用权限列表中选择“凭据读取”。
 1. 单击“确定”，然后单击“完成”。
 
 ## 分配数据捕获角色 {#assign-the-data-capture-role}
 
 1. 在管理控制台中，单击设置>用户管理>角色管理，然后单击查找。
 1. 单击您创建的数据捕获用户角色。
-1. 在角色用户/群组选项卡上，单击查找用户/群组。
-1. 在“查找用户和群组”屏幕上，单击“查找”，选择需要数据捕获用户角色的用户，然后单击“确定”。
+1. 在“角色用户/组”选项卡上，单击“查找用户/组”。
+1. 在查找用户和组屏幕上，单击查找，选择需要数据捕获用户角色的用户，然后单击确定。
 1. 在“编辑角色”屏幕上，单击“保存”。

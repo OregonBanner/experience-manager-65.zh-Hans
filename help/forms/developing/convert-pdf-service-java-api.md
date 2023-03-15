@@ -1,7 +1,7 @@
 ---
-title: 转换PDF服务Java API快速入门(SOAP)
+title: 转换PDF服务Java API快速启动(SOAP)
 seo-title: Convert PDF Service Java API QuickStart(SOAP)
-description: 转换PDF服务Java API快速入门(SOAP)
+description: 转换PDF服务Java API快速启动(SOAP)
 uuid: 97253ac7-f0c1-4766-a7bd-c19af52adf51
 contentOwner: admin
 content-type: reference
@@ -19,21 +19,21 @@ ht-degree: 0%
 
 # 转换PDF服务Java API快速入门(SOAP) {#convert-pdf-service-java-api-quickstart-soap}
 
-以下快速入门可用于转换PDF服务API。
+以下快速启动适用于ConvertPDF服务API。
 
 [快速入门（SOAP模式）：使用Java API将PDF文档转换为PostScript](convert-pdf-service-java-api.md#quick-start-soap-mode-converting-a-pdf-document-to-postscript-using-the-java-api)
 
 [快速入门（SOAP模式）：使用Java API将PDF文档转换为JPEG文件](convert-pdf-service-java-api.md#quick-start-soap-mode-converting-a-pdf-document-to-jpeg-files-using-the-java-api)
 
-AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置为SOAP。
+AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应设置为SOAP。
 
 >[!NOTE]
 >
->“使用AEM表单进行编程”中的“快速入门”基于在JBoss应用程序服务器和Microsoft Windows操作系统上部署的Forms服务器。 但是，如果您使用的是其他操作系统（如UNIX），请将特定于Windows的路径替换为适用操作系统支持的路径。 同样，如果您使用的是其他J2EE应用程序服务器，请确保指定有效的连接属性。 请参阅 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+>位于“使用AEM进行编程”表单中的快速入门指南基于部署在JBoss Application Server和Microsoft Windows操作系统上的Forms Server。 但是，如果您使用的是其他操作系统（如UNIX），请将特定于Windows的路径替换为适用的操作系统支持的路径。 同样，如果您使用的是其他J2EE应用程序服务器，请确保指定有效的连接属性。 参见 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
 ## 快速入门（SOAP模式）：使用Java API将PDF文档转换为PostScript {#quick-start-soap-mode-converting-a-pdf-document-to-postscript-using-the-java-api}
 
-以下代码示例将转换名为 *Loan.pdf* 到名为 *Loan.ps*. (请参阅 [将PDF文档转换为PostScript](/help/forms/developing/converting-pdf-postscript-image-files.md#converting-pdf-documents-to-postscript).)
+以下代码示例转换一个名为的PDF文档 *Loan.pdf* 到名为的PostScript文档 *贷款.ps*. (请参阅 [将PDF文档转换为PostScript](/help/forms/developing/converting-pdf-postscript-image-files.md#converting-pdf-documents-to-postscript).)
 
 ```java
  /*
@@ -148,7 +148,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
 
 ## 快速入门（SOAP模式）：使用Java API将PDF文档转换为JPEG文件 {#quick-start-soap-mode-converting-a-pdf-document-to-jpeg-files-using-the-java-api}
 
-以下Java代码示例将转换名为 *Loan.pdf* 到一组JPEG文件，并将它们存储在C:\Adobe directory文件夹中。 每个文件均命名为 `tempFile[index].jpg`，其中第一个图像文件名为 *tempFile0.jpg*. (请参阅 [将PDF文档转换为图像格式](/help/forms/developing/converting-pdf-postscript-image-files.md#converting-pdf-documents-to-image-formats).)
+以下Java代码示例将一个PDF文档转换为 *Loan.pdf* 到一组JPEG文件，并将其存储在C:\Adobe目录中。 每个文件都命名为 `tempFile[index].jpg`，其中第一个图像文件名为 *tempFile0.jpg*. (请参阅 [将PDF文档转换为图像格式](/help/forms/developing/converting-pdf-postscript-image-files.md#converting-pdf-documents-to-image-formats).)
 
 ```java
  /*

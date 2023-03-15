@@ -32,4 +32,4 @@ ht-degree: 85%
 
 >[!NOTE]
 >
->直接在控制台中显示站点分析数据仅在触屏优化 UI 中可用。请参阅 [查看页面分析数据](/help/sites-authoring/page-analytics-using.md) ，以了解详细信息。
+>直接在控制台中显示站点分析数据仅在触屏优化 UI 中可用。参见 [查看页面分析数据](/help/sites-authoring/page-analytics-using.md) 有关详细信息，请参阅标准创作文档。

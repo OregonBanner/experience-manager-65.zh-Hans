@@ -1,6 +1,6 @@
 ---
 title: 使用IMS与Adobe Analytics集成
-description: 了解如何使用IMS将AEM与Adobe Analytics集成。
+description: 了解如何使用IMS将AEM与Adobe Analytics集成
 exl-id: 2833a6df-ef32-48ab-8395-0f26816f8443
 source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
 workflow-type: tm+mt
@@ -11,13 +11,13 @@ ht-degree: 66%
 
 # 使用IMS与Adobe Analytics集成 {#integration-with-adobe-analytics-using-ims}
 
-要通过Analytics Standard API将AEM与Adobe Analytics集成，需要使用Adobe Developer控制台配置Adobe IMS(Identity Management系统)。
+通过Analytics Standard API将AEM与Adobe Analytics集成需要使用Adobe Developer控制台配置Adobe IMS (Identity Management System)。
 
 >[!NOTE]
 >
 >AEM 6.5.12.0中新增了对Adobe Analytics Standard API 2.0的支持。此版本的API支持IMS身份验证。
 >
->仍支持在AEM中使用Adobe Analytics Classic API 1.4以实现向后兼容性。 的 [Analytics Classic API使用用户凭据身份验证](/help/sites-administering/adobeanalytics-connect.md).
+>为了向后兼容，仍支持在AEM中使用Adobe Analytics Classic API 1.4。 此 [Analytics Classic API使用用户凭据身份验证](/help/sites-administering/adobeanalytics-connect.md).
 >
 >API 选择由用于 AEM/Analytics 集成的身份验证方法驱动。
 >
@@ -34,9 +34,9 @@ ht-degree: 66%
    * Adobe Analytics 和
    * Adobe IMS (Identity Management System)
 
-* 贵组织的系统管理员应使用Admin Console将组织中所需的开发人员添加到相关的产品配置文件中。
+* 您组织的系统管理员应使用Admin Console将您组织中所需的开发人员添加到相关的产品配置文件中。
 
-   * 这为特定开发人员提供了在Adobe Developer控制台中启用集成的权限。
+   * 这将为特定开发人员提供在Adobe Developer控制台中启用集成的权限。
    * 有关更多详细信息，请参阅[管理开发人员](https://helpx.adobe.com/cn/enterprise/admin-guide.html/enterprise/using/manage-developers.ug.html)。
 
 
@@ -89,7 +89,7 @@ ht-degree: 66%
 
    >[!NOTE]
    >
-   >如果您订阅了Adobe Analytics，但未在列表中看到它，则应查看 [先决条件](#prerequisites).
+   >如果您已订阅Adobe Analytics，但它并未列出，您应查看 [先决条件](#prerequisites).
 
    ![添加 API](assets/integration-analytics-io-12.png)
 
@@ -141,16 +141,16 @@ ht-degree: 66%
 * APIS
    * 例如，Adobe Analytics
 
-其中一些内容需要完成AEM中的Adobe Analytics集成。
+要在AEM中完成Adobe Analytics的集成，您需要其中的一些项。
 
 ## 在 AEM 中完成 IMS 配置 {#completing-the-ims-configuration-in-aem}
 
-返回AEM后，您可以通过从Analytics集成项目中添加所需值来完成IMS配置：
+通过返回到AEM，您可以通过从Analytics的集成项目添加所需的值来完成IMS配置：
 
 1. 返回到 [AEM 中打开的 IMS 配置](#configuring-an-ims-configuration-generating-a-public-key)。
 1. 选择&#x200B;**下一步**。
 
-1. 在此，您可以使用 [存储的Adobe Developer控制台集成项目的详细信息](#details-stored-for-the-ims-integration-project):
+1. 在这里，您可以使用 [为Adobe Developer控制台集成项目存储的详细信息](#details-stored-for-the-ims-integration-project)：
 
    * **标题**：您的文本。
    * **授权服务器**：复制并粘贴以下&#x200B;**有效负载**&#x200B;部分的 `aud` 行的内容，例如，下面的示例中的 `https://ims-na1.adobelogin.com`
@@ -188,33 +188,33 @@ ht-degree: 66%
 
 ## 配置Adobe Analytics Cloud服务 {#configuring-the-adobe-analytics-cloud-service}
 
-现在，可以为Cloud Service引用配置以使用Analytics Standard API:
+现在可为Cloud Service引用配置以使用Analytics Standard API：
 
-1. 打开 **工具** 菜单。 然后，在 **Cloud Services** 选择 **旧版Cloud Services**.
-1. 向下滚动到 **Adobe Analytics** 选择 **立即配置**.
+1. 打开 **工具** 菜单。 然后，在 **Cloud Services** 部分，选择 **旧版Cloud Services**.
+1. 向下滚动到 **Adobe Analytics** 并选择 **立即配置**.
 
-   的 **创建配置** 对话框。
+   此 **创建配置** 此时将打开对话框。
 
-1. 输入 **标题** 如果你愿意， **名称** （如果留空，则从标题生成）。
+1. 输入 **标题** 如果你愿意，还有 **名称** （如果留空，将从标题中生成此字段）。
 
    您还可以选择所需的模板（如果有多个模板可用）。
 
 1. 选择&#x200B;**创建**&#x200B;来确认。
 
-   的 **编辑组件** 对话框。
+   此 **编辑组件** 此时将打开对话框。
 
-1. 在 **Analytics设置** 选项卡：
+1. 请在以下位置输入详细信息 **Analytics设置** 选项卡：
 
-   * **身份验证**:IMS
+   * **身份验证**： IMS
 
-   * **IMS配置**:选择IMS配置的名称
+   * **IMS配置**：选择IMS配置的名称
 
 1. 单击 **连接到Analytics** 初始化与Adobe Analytics的连接。
 
    如果连接成功，则将显示消息&#x200B;**连接成功**。
 
-1. 选择 **确定** 消息中。
+1. 选择 **确定** 在消息上。
 
-1. 根据需要完成其他参数，然后是 **确定** ，以确认配置。
+1. 根据需要完成其他参数，然后 **确定** ，以确认配置。
 
-1. 您现在可以继续 [添加Analytics框架](/help/sites-administering/adobeanalytics-connect.md) 以配置将发送到Adobe Analytics的参数。
+1. 您现在可以继续访问 [添加Analytics框架](/help/sites-administering/adobeanalytics-connect.md) 以配置将发送到Adobe Analytics的参数。

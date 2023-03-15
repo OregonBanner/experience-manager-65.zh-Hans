@@ -1,7 +1,7 @@
 ---
 title: Analytics与外部提供程序
 seo-title: Analytics with External Providers
-description: 了解Analytics与外部提供程序。
+description: 了解使用外部提供程序的Analytics。
 seo-description: Learn about Analytics with External Providers.
 uuid: 31a773ca-901e-45f2-be8f-951c26f9dbc5
 contentOwner: Guillaume Carlino
@@ -20,20 +20,20 @@ ht-degree: 3%
 
 # Analytics与外部提供程序 {#analytics-with-external-providers}
 
-Analytics可以为您提供有关网站使用方式的重要且有趣的信息。
+Analytics可向您提供有关网站的使用方式的重要且有趣的信息。
 
-各种开箱即用的配置可用于与相应的服务集成，例如：
+各种现成的配置可用于与相应的服务集成，例如：
 
 * [Adobe Analytics](/help/sites-administering/adobeanalytics.md)
 * [Adobe Target](/help/sites-administering/target.md)
 
-您还可以配置自己的 **通用Analytics代码段** 定义新的服务配置。
+您还可以配置自己的实例 **通用Analytics代码片段** 以定义新的服务配置。
 
-然后，通过添加到网页的代码片段来收集信息。 例如：
+然后，通过添加到网页中的代码小片段来收集信息。 例如：
 
 >[!CAUTION]
 >
->不得将脚本包含在 `script` 标记。
+>脚本不得包含在 `script` 标记之间。
 
 ```
 var _gaq = _gaq || [];
@@ -47,20 +47,20 @@ _gaq.push(['_trackPageview']);
 })();
 ```
 
-这样的代码片段可以收集数据并生成报告。 收集的实际数据取决于提供程序和使用的实际代码段。 示例统计信息包括：
+通过此类片段，可以收集数据并生成报告。 实际收集的数据取决于提供商和实际使用的代码段。 统计信息示例包括：
 
-* 一段时间内的访客人数
-* 访问的页数
+* 一段时间内访客的数量
+* 访问的页面数量
 * 使用的搜索词
 * 登陆页面
 
 >[!CAUTION]
 >
->配置了Geometrixx-Outdoors演示网站，以便将“页面属性”中提供的属性附加到HTML源代码的正上方 `</html>` endtag) `js` 脚本。
+>Geometrixx-Outdoors演示站点已进行配置，以便“页面属性”中提供的属性被附加到html源代码中(位于 `</html>` endtag) `js` 脚本。
 >
->如果您自己 `/apps` 不从默认页面组件继承( `/libs/foundation/components/page`)您（或您的开发人员）必须确保 `js` 包含脚本，例如通过以下任一方式 `cq/cloudserviceconfigs/components/servicescomponents`，或使用类似的机制。
+>如果您自己的 `/apps` 不继承自默认页面组件( `/libs/foundation/components/page`)您（或您的开发人员）必须确保 `js` 包含脚本，例如，通过包含 `cq/cloudserviceconfigs/components/servicescomponents`，或使用类似的机制。
 >
->如果没有此功能，则任何服务（通用、Analytics、Target等）都将无法正常运行。
+>没有它，任何服务（通用、Analytics、Target等）都无法正常工作。
 
 ## 使用通用代码片段创建新服务 {#creating-a-new-service-with-a-generic-snippet}
 
@@ -72,11 +72,11 @@ _gaq.push(['_trackPageview']);
 
    ![](assets/analytics_genericoverview.png)
 
-1. 单击+以使用对话框添加新配置；至少分配一个名称，例如google analytics:
+1. 单击+以使用对话框添加新配置；至少指定一个名称，例如google analytics：
 
    ![](assets/analytics_addconfig.png)
 
-1. 单击 **创建**，将立即打开代码片段对话框 — 将相应的javascript代码片段粘贴到字段中：
+1. 单击 **创建**，将会立即打开代码片段对话框 — 将相应的javascript代码片段粘贴到字段中：
 
    ![](assets/analytics_snippet.png)
 
@@ -84,25 +84,25 @@ _gaq.push(['_trackPageview']);
 
 ## 在页面上使用新服务 {#using-your-new-service-on-pages}
 
-创建了服务配置后，您现在需要配置所需的页面才能使用它：
+创建服务配置后，您现在需要配置所需的页面才能使用它：
 
 1. 导航到页面。
 1. 打开 **页面属性** 从sidekick，然后 **Cloud Services** 选项卡。
-1. 单击 **添加服务**，然后选择所需的服务；例如， **通用Analytics代码片段**:
+1. 单击 **添加服务**，然后选择所需的服务；例如 **通用Analytics代码片段**：
 
    ![](assets/analytics_selectservice.png)
 
 1. 单击&#x200B;**确定**&#x200B;进行保存。
-1. 您将返回到 **Cloud Services** 选项卡。 的 **通用Analytics代码片段** 现在随消息一起列出 `Configuration reference missing`. 使用下拉列表选择您的特定服务实例；例如google-analytics:
+1. 您将会返回到 **Cloud Services** 选项卡。 此 **通用Analytics代码片段** 现在与消息一起列出 `Configuration reference missing`. 使用下拉列表选择您的特定服务实例；例如google-analytics：
 
    ![](assets/analytics_selectspecificservice.png)
 
 1. 单击&#x200B;**确定**&#x200B;进行保存。
 
-   现在，如果您查看页面的页面源，则可以查看代码片段。
+   现在，如果您查看页面的页面源，则可以看到该代码片段。
 
-   在经过适当的时间段后，您将能够查看已收集的统计资料。
+   经过适当的时间段后，您将能够查看已收集的统计数据。
 
    >[!NOTE]
    >
-   >如果配置附加到具有子页面的页面，则这些页面也会继承该服务。
+   >如果将配置附加到具有子页面的页面，则这些页面也会继承服务。

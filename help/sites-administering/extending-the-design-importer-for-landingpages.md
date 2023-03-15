@@ -20,7 +20,7 @@ ht-degree: 58%
 
 # 为登陆页面扩展和配置设计导入程序{#extending-and-configuring-the-design-importer-for-landing-pages}
 
-此部分介绍如何针对登录页面配置和扩展（如果需要）设计导入程序。在 [登陆页面。](/help/sites-classic-ui-authoring/classic-personalization-campaigns-landingpage.md)
+此部分介绍如何针对登录页面配置和扩展（如果需要）设计导入程序。中涵盖导入后使用登陆页面 [登陆页面。](/help/sites-classic-ui-authoring/classic-personalization-campaigns-landingpage.md)
 
 **使设计导入程序提取自定义组件**
 
@@ -28,14 +28,14 @@ ht-degree: 58%
 
 1. 创建TagHandler
 
-   * 标记处理程序是处理特定类型 HTML 标记的 POJO。TagHandler可以处理的“类型”HTML标记通过TagHandlerFactory的OSGi属性“tagpattern.name”定义。 此 OSGi 属性实质上是应与要处理的输入 HTML 标记匹配的正则表达式。所有嵌套的标记都会交由标记处理程序进行处理。例如，如果注册的div包含嵌套 &lt;p> 标记， &lt;p> 标记也会投放到您的TagHandler中，具体如何处理取决于您自己。
+   * 标记处理程序是处理特定类型 HTML 标记的 POJO。您的TagHandler可以处理的HTML标记的“种类”是通过TagHandlerFactory的OSGi属性“tagpattern.name”定义的。 此 OSGi 属性实质上是应与要处理的输入 HTML 标记匹配的正则表达式。所有嵌套的标记都会交由标记处理程序进行处理。例如，如果注册包含嵌套的div &lt;p> 标记， &lt;p> 标记也会被抛到您的TagHandler中，具体取决于您希望如何处理它。
    * 标记处理程序的界面与 SAX 内容处理程序的界面类似。它接收每个 HTML 标记的 SAX 事件。作为标记处理程序提供者，您需要实施设计导入程序框架自动调用的特定生命周期方法。
 
-1. 创建其相应的TagHandlerFactory。
+1. 创建相应的TagHandlerFactory。
 
    * 标记处理程序工厂是 OSGi 组件 (singleton)，负责生成标记处理程序的实例。
-   * 您的标记处理程序工厂必须公开名为“tagpattern.name”的OSGi属性，其值与输入html标记匹配。
-   * 如果有多个标记处理程序与输入html标记匹配，则会选取排名较高的标记处理程序。 排名本身作为OSGi属性公开 **service.ranking**.
+   * 您的标记处理程序工厂必须公开名为“tagpattern.name”的OSGi属性，该属性的值与输入html标记匹配。
+   * 如果有多个标记处理程序与输入html标记匹配，则会选择排名较高的处理程序。 排名本身会显示为OSGi资产 **service.ranking**.
    * TagHandlerFactory 是一个 OSGi 组件。要提供给 TagHandler 的任何引用都必须通过此工厂提供。
 
 1. 如果要覆盖默认值，请确保TagHandlerFactory具有更好的排名。
@@ -46,7 +46,7 @@ ht-degree: 58%
 
 ## 准备要导入的 HTML {#preparing-the-html-for-import}
 
-创建导入程序页面后，可以导入完整的HTML登陆页面。 要导入 HTML 登录页面，需要首先将其内容压缩到设计包中。设计包包含 HTML 登录页面以及引用的资产（图像、css、图标、脚本，等等）。
+创建导入程序页面后，您可以导入完整的HTML登录页面。 要导入 HTML 登录页面，需要首先将其内容压缩到设计包中。设计包包含 HTML 登录页面以及引用的资产（图像、css、图标、脚本，等等）。
 
 以下备忘录提供了如何准备导入 HTML 的示例：
 
@@ -62,22 +62,22 @@ ht-degree: 58%
 
 zip 文件的示例布局如下所示：
 
-* /index.html ->登陆页面HTML文件
-* /css ->添加到CSS clientlib中
+* /index.html ->登录页HTML文件
+* /css ->以添加到CSS clientlib
 * /img ->所有图像和资产
-* /js ->添加到JS clientlib中
+* /js ->以添加到JS clientlib
 
 该布局基于 HTML5 Boilerplate 最佳实践布局。有关更多信息，请参阅 [https://html5boilerplate.com/](https://html5boilerplate.com/)
 
 >[!NOTE]
 >
->至少，设计包 **必须** 包含 **index.html** 文件。 如果要导入的登陆页面也具有移动版本，则zip必须包含 **mobile.index.html** 与 **index.html** 在根级别。
+>至少，设计包 **必须** 包含 **index.html** 文件。 如果要导入的登陆页面也有移动设备版本，则zip文件中必须包含 **mobile.index.html** 以及 **index.html** 在根级别。
 
 ### 准备登录页面 HTML {#preparing-the-landing-page-html}
 
 为了能够导入 HTML，需要向登录页面 HTML 添加画布 div。
 
-画布div是html **div** with `id="cqcanvas"` 必须插入到HTML中 `<body>` 标记，且必须包含要转化的内容。
+画布div是一个html **div** 替换为 `id="cqcanvas"` 必须插入到HTML中的 `<body>` 标记并且必须包含用于转换的内容。
 
 添加画布 div 后的登录页面 HTML 示例代码片段如下所示：
 
@@ -101,11 +101,11 @@ zip 文件的示例布局如下所示：
 
 导入登录页面时，可以选择按原样导入页面，这意味着导入登录页面之后，无法在 AEM 中编辑任何导入的项目（但仍可以在页面上添加其他 AEM 组件）。
 
-导入登录页面之前，您可能要转换登录页面的某些部分，以便它们成为可编辑的 AEM 组件。这样，即使在导入登陆页面设计后，您也可以快速编辑登陆页面的各个部分。
+导入登录页面之前，您可能要转换登录页面的某些部分，以便它们成为可编辑的 AEM 组件。这样，您就可以快速编辑登陆页面的各个部分，即使在已导入登陆页面设计之后也是如此。
 
 通过将 `data-cq-component` 添加到导入 HTML 文件中的相应组件，可完成此操作。
 
-以下部分介绍如何编辑 HTML 文件，以便可以将登录页面的某些部分转换为可编辑的不同 AEM 组件。组件在 [登陆页面组件](/help/sites-classic-ui-authoring/classic-personalization-campaigns-landingpage.md).
+以下部分介绍如何编辑 HTML 文件，以便可以将登录页面的某些部分转换为可编辑的不同 AEM 组件。在以下位置详细介绍了组件： [登陆页面组件](/help/sites-classic-ui-authoring/classic-personalization-campaigns-landingpage.md).
 
 >[!NOTE]
 >
@@ -115,13 +115,13 @@ zip 文件的示例布局如下所示：
 
 导入之前，请注意以下限制：
 
-### 在标记上应用的任何属性（如类或 id） &amp;lt;body>标记不保留 {#any-attribute-like-class-or-id-applied-on-the-amp-lt-body-tag-is-not-preserved}
+### 在标记上应用的任何属性（如类或 id） 未保留&amp;lt；body>标记 {#any-attribute-like-class-or-id-applied-on-the-amp-lt-body-tag-is-not-preserved}
 
-例如，如果对body标记应用了id或类等任何属性 `<body id="container">` 导入后不会保留。 因此，导入的设计不应与应用于 `<body>` 标记。
+如果将任何属性（如id或类）应用于body标记，例如 `<body id="container">` 则在导入后不会保留该值。 因此，要导入的设计不应与应用于的属性有任何依赖关系。 `<body>` 标记之前。
 
 ### 拖放 zip {#drag-and-drop-zip}
 
-Internet Explorer和Firefox版本3.6及更早版本不支持拖放zip上传。 要在使用这些浏览器时上传设计，请单击放置文件区域，打开文件上传对话框，然后使用该框上传您的设计。
+Internet Explorer和Firefox版本3.6及更低版本不支持拖放zip上传。 要在使用这些浏览器时上传设计，请单击放置文件区域，打开文件上传对话框，然后使用该框上传您的设计。
 
 支持设计zip文件“拖放”的浏览器包括Chrome、Safari5.x、Firefox 4及更高版本。
 
@@ -133,7 +133,7 @@ Internet Explorer和Firefox版本3.6及更早版本不支持拖放zip上传。 �
 
 导入设计包前为页面（使用空白登录页面模板）设置的任何页面属性（例如，自定义域、强制 HTTPS，等等）在导入设计之后都会丢失。因此，推荐的做法是在导入设计包后设置页面属性。
 
-### HTML仅假定加价 {#html-only-markup-assumed}
+### 假定仅HTML标记 {#html-only-markup-assumed}
 
 导入时，出于安全原因会对标记进行清理，以避免导入和发布无效标记。这种情况会假定只有 HTML 标记；所有其他形式的元素，例如内联 SVG 或 Web 组件等，都会被筛选掉。
 
@@ -147,8 +147,8 @@ Internet Explorer和Firefox版本3.6及更早版本不支持拖放zip上传。 �
 
 要在 HTML 中包含以上标记，请执行以下操作：
 
-* 创建可编辑的AEM文本组件( `sling:resourceType=foundation/components/text`)。
-* 设置 `text` 创建的文本组件的属性添加到 `div`.
+* 创建可编辑的AEM文本组件( `sling:resourceType=foundation/components/text`)，该页面为导入设计包后创建的登陆页面。
+* 设置 `text` HTML创建的文本组件的属性，该属性包含在 `div`.
 
 **短组件标记声明**：
 
@@ -179,7 +179,7 @@ Internet Explorer和Firefox版本3.6及更早版本不支持拖放zip上传。 �
 
 ### 标题 {#title}
 
-HTML标记以插入标题组件( `wcm/landingpage/components/title`)HTML中：
+用于插入标题组件的HTML标记( `wcm/landingpage/components/title`)，位于design package的HTML中：
 
 ```xml
 <div data-cq-component="title"> <h1>This is some editable title text</h1> </div>
@@ -187,9 +187,9 @@ HTML标记以插入标题组件( `wcm/landingpage/components/title`)HTML中：
 
 要在 HTML 中包含以上标记，请执行以下操作：
 
-* 创建可编辑的AEM标题组件( `sling:resourceType=wcm/landingpage/components/title`)。
+* 创建可编辑的AEM标题组件( `sling:resourceType=wcm/landingpage/components/title`)，该页面为导入设计包后创建的登陆页面。
 * 将创建的标题组件的 `jcr:title` 属性设置为标题标记内 div 中包含的文本。
-* 设置 `type` 属性到标题标记中，在本例中为 `h1`.
+* 设置 `type` 属性到标题标记，在本例中为 `h1`.
 
 标题组件支持7种类型 —  `h1, h2, h3, h4, h5, h6` 和 `default`.
 
@@ -211,12 +211,12 @@ HTML标记以插入标题组件( `wcm/landingpage/components/title`)HTML中：
 
 要在 HTML 中包含以上标记，请执行以下操作：
 
-* 创建可编辑的AEM图像组件( `sling:resourceType=foundation/components/image`)。
+* 创建可编辑的AEM图像组件( `sling:resourceType=foundation/components/image`)，该页面为导入设计包后创建的登陆页面。
 * 将创建的图像组件的 `fileReference` 属性设置为导入的 src 属性中指定的图像路径。
-* 设置 `alt` 属性的值。
-* 设置 `title` 属性的值。
-* 设置 `width` 属性的值。
-* 设置 `height` 属性到img标记中高度属性的值。
+* 设置 `alt` 属性，该值位于img标记中的alt属性值。
+* 设置 `title` 属性。
+* 设置 `width` 属性，该值是img标记中width属性的值。
+* 设置 `height` 属性，该属性为img标记中height属性的值。
 
 **短组件标记声明：**
 
@@ -226,7 +226,7 @@ HTML标记以插入标题组件( `wcm/landingpage/components/title`)HTML中：
 
 #### 图像组件 Div 内不支持绝对 URL img src {#absolute-url-img-src-not-supported-within-image-component-div}
 
-如果 `<img>` 尝试使用绝对url src进行组件转换时，会使用相应的 **UnsupportedTagContentException** 的值。 例如，不支持以下内容：
+如果 `<img>` 已尝试使用绝对url src标记进行组件转换，适当的 **UnsupportedTagContentException** 会抬高。 例如，不支持以下内容：
 
 `<div data-cq-component="image">`
 
@@ -238,7 +238,7 @@ HTML标记以插入标题组件( `wcm/landingpage/components/title`)HTML中：
 
 ### 行动动员组件 {#call-to-action-components}
 
-您可以标记登陆页面的一部分以将其导入为“可编辑的行动动员组件” — 这样，导入的行动动员组件后，便可以编辑这些组件。 AEM 包含以下 CTA 组件：
+您可以将导入的登陆页面部分标记为“可编辑的行动号召组件” — 在导入登陆页面后，可以编辑此类导入的行动号召组件。 AEM 包含以下 CTA 组件：
 
 * 点进率链接 - 允许您添加一个文本链接，当访客单击这个链接时即被引向目标 URL。
 * 图像链接 - 允许您添加一个图像链接，当访客单击这个链接时即被引向目标 URL。
@@ -253,7 +253,7 @@ HTML标记以插入标题组件( `wcm/landingpage/components/title`)HTML中：
 * 目标 URL，支持第三方和 AEM URL
 * 页面渲染选项（同一窗口、新窗口等）
 
-用于在导入的 zip 文件中包含点进组件的 HTML 标记。此处的href映射到目标URL，“查看产品详细信息”映射到标签，依此类推。
+用于在导入的 zip 文件中包含点进组件的 HTML 标记。此处，href映射到目标URL，“查看产品详细信息”映射到标签，等等。
 
 ```xml
 <div id="cqcanvas">
@@ -286,7 +286,7 @@ HTML标记以插入标题组件( `wcm/landingpage/components/title`)HTML中：
 * 目标 URL，支持第三方和 AEM URL
 * 页面渲染选项（同一窗口、新窗口等）
 
-用于在导入的 zip 文件中包含图形链接组件的 HTML 标记。此处的href将映射到目标url，img src将作为渲染图像，“标题”将被用作悬停文本，依此类推。
+用于在导入的 zip 文件中包含图形链接组件的 HTML 标记。此处href将映射到目标url，img src将是渲染图像，“title”将被视为悬停文本等。
 
 ```xml
 <div id="cqcanvas">
@@ -302,7 +302,7 @@ HTML标记以插入标题组件( `wcm/landingpage/components/title`)HTML中：
 
 >[!NOTE]
 >
->要创建clickthroughgraphical链接，您需要将锚点标记和图像标记包含在div中 `data-cq-component="clickthroughgraphicallink"` 属性。
+>要创建点进图形链接，您需要使用将锚点标记和图像标记包裹在div中 `data-cq-component="clickthroughgraphicallink"` 属性。
 >
 >例如`<div data-cq-component="clickthroughlink"> <a href="https://myURLhere/"><img src="image source here"></a> </div>`
 >
@@ -314,28 +314,28 @@ HTML标记以插入标题组件( `wcm/landingpage/components/title`)HTML中：
 >
 >`</div>`
 >
->与 `css .hasbackground { background-image: pathtoimage }`
+>具有关联的 `css .hasbackground { background-image: pathtoimage }`
 
 ### 潜在客户表单 {#lead-form}
 
-潜在客户表单是一种用于搜集访客/潜在客户个人资料信息的表单。这类信息可被存储起来，以供以后进行有针对性的营销活动。此信息通常包括标题、名称、电子邮件、出生日期、地址、关注，等等。它是“CTA潜在客户表单”组的一部分。
+潜在客户表单是一种用于搜集访客/潜在客户个人资料信息的表单。这类信息可被存储起来，以供以后进行有针对性的营销活动。此信息通常包括标题、名称、电子邮件、出生日期、地址、关注，等等。它是“CTA潜在客户”组的一部分。
 
 **支持的功能**
 
-* 预定义潜在客户字段 — Sidekick中提供了名字、姓氏、地址、Dob、性别、关于、userId、emailId、提交按钮。 只需将所需的组件拖放到您的潜在客户表单即可。
-* 借助于这些组件，作者可以设计独立的潜在客户表单，这些字段与潜在客户表单字段相对应。在独立或导入的zip应用程序中，用户可以使用cq:form或cta潜在客户表单字段添加其他字段，并根据要求对其进行命名和设计。
-* 使用CTA潜在客户表单的特定预定义名称映射潜在客户表单字段，例如，firstName表示潜在客户表单中的名字，等等。
+* 预定义的潜在客户字段 — 名字、姓氏、地址、dob、性别、关于、用户ID、电子邮件ID、提交按钮在Sidekick中可用。 只需将所需的组件拖放到您的潜在客户表单即可。
+* 借助于这些组件，作者可以设计独立的潜在客户表单，这些字段与潜在客户表单字段相对应。在独立或导入的zip应用程序中，用户可以使用cq：form或cta潜在客户表单字段添加额外的字段，并根据要求命名和设计。
+* 使用CTA潜在客户表单的特定预定义名称映射潜在客户表单字段，例如 — 潜在客户表单中名字的firstName等。
 * 未映射到潜在客户表单的字段将映射到 cq:form 组件 - 文本、单选按钮、复选框、下拉框、隐藏、密码。
-* 用户可以使用“标签”标记提供标题，并可以使用样式属性“class”来提供样式（仅适用于CTA潜在客户表单组件）。
-* 感谢页面和订阅列表可作为表单的隐藏参数提供（在index.htm中提供），也可从“潜在客户表单的开头”的编辑栏添加/编辑
+* 用户可以使用“label”标记提供标题，也可以使用样式属性“class”提供样式（仅适用于CTA潜在客户表单组件）。
+* 感谢页面和订阅列表可作为表单的隐藏参数提供（位于index.htm中），也可以从“潜在客户表单开始”的编辑栏添加/编辑
 
    &lt;input type=&quot;hidden&quot; name=&quot;redirectUrl&quot; value=&quot;/content/we-retail/en/user/register/thank_you&quot;/>
 
    &lt;input type=&quot;hidden&quot; name=&quot;groupName&quot; value=&quot;leadForm&quot;/>
 
-* 约束（如 — 必需）可通过每个组件的编辑配置来提供。
+* 可以通过编辑每个组件的配置来提供约束，例如必需。
 
-用于在导入的 zip 文件中包含图形链接组件的 HTML 标记。此处的“firstName”已映射到潜在客户表单firstName等，但复选框除外 — 这两个复选框映射到cq:form下拉组件。
+用于在导入的 zip 文件中包含图形链接组件的 HTML 标记。此处“firstName”映射到潜在客户表单firstName等，但复选框 — 这两个复选框映射到cq：form下拉组件。
 
 ```xml
 <div id="cqcanvas">
@@ -415,15 +415,15 @@ AEM parsys 组件是可包含其他 AEM 组件的容器组件。可以在导入�
 
 * 通过提取导入 HTML 中定义的元数据设置页面属性。
 * 指定 HTML 中的字符集编码。
-* 覆盖导入器页面模板。
+* 覆盖导入程序页面模板。
 
 ### 通过提取导入 HTML 中定义的元数据设置页面属性 {#setting-page-properties-by-extracting-metadata-defined-in-imported-html}
 
-设计导入程序应将导入HTML标题中声明的以下元数据作为属性“jcr:description”进行提取和保留：
+设计导入器应提取并保留在导入HTML头中声明的以下元数据，作为属性“jcr：description”：
 
 * &lt;meta name=&quot;description&quot; content=&quot;&quot;>
 
-HTML标记中设置的Lang属性将由设计导入器作为属性“jcr:language”进行提取和保留
+设计导入程序应提取并保留HTML标记中设置的Lang属性作为属性“jcr：language”
 
 * &lt;html lang=&quot;en&quot;>
 
@@ -441,7 +441,7 @@ HTML标记中设置的Lang属性将由设计导入器作为属性“jcr:language
 
 ### 覆盖模板 {#overlaying-template}
 
-通过在以下位置创建新登陆页面，可以覆盖空白登陆页面模板： `/apps/<appName>/designimporter/templates/<templateName>`
+可以通过在下列位置创建新模板来覆盖空白登陆页面模板： `/apps/<appName>/designimporter/templates/<templateName>`
 
 说明了在AEM中创建新模板的步骤 [此处](/help/sites-developing/templates.md).
 
@@ -460,22 +460,22 @@ data-cq-component 中的路径应为 resourceType 组件。
 | E > F | E 元素的子元素 F 元素 | [子组合器](https://www.w3.org/TR/css3-selectors/#child-combinators) |
 |---|---|---|
 | E + F | 紧贴在 E 元素之后的 F 元素 | [相邻同级组合器](https://www.w3.org/TR/css3-selectors/#adjacent-sibling-combinators) |
-| E ~ F | E 元素之后的 F 元素 | [一般同级组合器](https://www.w3.org/TR/css3-selectors/#general-sibling-combinators) |
+| E ~ F | E 元素之后的 F 元素 | [常规同级组合器](https://www.w3.org/TR/css3-selectors/#general-sibling-combinators) |
 | E:root | E 元素，文档的根元素 | [结构伪类](https://www.w3.org/TR/css3-selectors/#structural-pseudos) |
 | E:nth-child(n) | E 元素，其父元素的第 n 个子元素 | [结构伪类](https://www.w3.org/TR/css3-selectors/#structural-pseudos) |
 | E:nth-last-child(n) | E 元素，从最后一个元素算起，其父元素的第 n 个子元素 | [结构伪类](https://www.w3.org/TR/css3-selectors/#structural-pseudos) |
 | E:nth-of-type(n) | E 元素，同类型的第 n 个兄弟元素 | [结构伪类](https://www.w3.org/TR/css3-selectors/#structural-pseudos) |
 | E:nth-last-of-type(n) | E 元素，从最后一个元素算起，同类型的第 n 个兄弟元素 | [结构伪类](https://www.w3.org/TR/css3-selectors/#structural-pseudos) |
 
-这是因为其他html元素，例如 &lt;div> 标记会在导入后添加到生成的HTML中。
+这是因为其他html元素如 &lt;div> 标记会添加到导入后生成的Html中。
 
 * 对于已标记为转换到 AEM 组件的元素，也不建议使用依赖于类似上文结构的脚本。
-* 在标记标记上使用样式进行组件转换，如 &lt;div data-cq-component=&quot;&amp;ast;&quot;> 不建议。
-* 设计布局应遵循 HTML5 Boilerplate 中的最佳实践。阅读更多内容： [https://html5boilerplate.com/](https://html5boilerplate.com/).
+* 在标记标记上使用样式进行组件转换，例如 &lt;div data-cq-component=&quot;&amp;ast;&quot;> 不推荐。
+* 设计布局应遵循 HTML5 Boilerplate 中的最佳实践。详细了解： [https://html5boilerplate.com/](https://html5boilerplate.com/).
 
 ## 配置 OSGI 模块 {#configuring-osgi-modules}
 
-公开可通过OSGi控制台配置的属性的组件如下所示：
+公开通过OSGI控制台配置的属性的组件如下：
 
 * 登录页面设计导入程序
 * 登录页面生成器
@@ -499,12 +499,12 @@ data-cq-component 中的路径应为 resourceType 组件。
   <tr>
    <td>登录页面生成器</td>
    <td>文件模式</td>
-   <td>登陆页面生成器可以配置为处理与由文件模式定义的正则表达式匹配的HTML文件。</td>
+   <td>可以将Landing Page Builder配置为处理与由文件模式定义的正则表达式匹配的HTML文件。</td>
   </tr>
   <tr>
    <td>移动登录页面生成器</td>
    <td>文件模式</td>
-   <td>登陆页面生成器可以配置为处理与由文件模式定义的正则表达式匹配的HTML文件。</td>
+   <td>可以将Landing Page Builder配置为处理与由文件模式定义的正则表达式匹配的HTML文件。</td>
   </tr>
   <tr>
    <td> </td>
@@ -514,7 +514,7 @@ data-cq-component 中的路径应为 resourceType 组件。
   <tr>
    <td>登录页面条目处理器</td>
    <td>搜索模式 </td>
-   <td>用于在归档条目内容中进行搜索的模式。此正则表达式与条目内容逐行匹配。 匹配后，匹配的文本将被指定的替换模式替换。<br /><br />请参阅下方有关登录页面条目处理器当前限制的注释。</td>
+   <td>用于在归档条目内容中进行搜索的模式。此正则表达式与条目内容逐行匹配。 匹配后，匹配的文本将替换为指定的替换模式。<br /><br />请参阅下方有关登录页面条目处理器当前限制的注释。</td>
   </tr>
   <tr>
    <td> </td>
@@ -532,7 +532,7 @@ data-cq-component 中的路径应为 resourceType 组件。
 >例如，如果默认配置为
 >`/\* *CQ_DESIGN_PATH *\*/ *(['"])`
 >
->你需要替换 >`CQ_DESIGN_PATH` with `VIPURL` 在搜索模式中，搜索模式应当如下所示：
+>而且你需要更换 >`CQ_DESIGN_PATH` 替换为 `VIPURL` 在搜索模式中，您的搜索模式应如下所示：
 `/\* *VIPURL *\*/ *(['"])`
 
 ## 疑难解答 {#troubleshooting}
@@ -545,14 +545,14 @@ data-cq-component 中的路径应为 resourceType 组件。
 
 ### 导入过程中显示的错误消息 {#error-messages-displayed-during-import}
 
-如果发生任何错误（例如，导入的包不是有效的zip文件），则设计导入不会导入包，而是会在页面顶部的拖放框上方显示一条错误消息。 下面描述了一些错误情况的示例。更正错误之后，可以将更新的 zip 重新导入到同一空白登录页面上。引发错误的各种情况如下：
+如果发生任何错误（例如，导入的包不是有效的zip文件），设计导入将不会导入包，而是会在页面顶部拖放框的正上方显示错误消息。 下面描述了一些错误情况的示例。更正错误之后，可以将更新的 zip 重新导入到同一空白登录页面上。引发错误的各种情况如下：
 
 * 导入的设计包不是有效的 zip 归档。
-* 导入的设计包在顶级不包含index.html。
+* 导入的设计包不包含顶级的index.html。
 
 ### 导入后显示警告 {#warnings-displayed-after-import}
 
-如果出现任何警告(例如，HTML引用包中不存在的图像)，设计导入程序将导入zip文件，但同时在“结果窗格”上显示问题/警告列表，单击问题链接，将显示警告列表，其中指明了设计包中的任何问题。 设计导入程序捕获并显示警告的不同情况如下：
+出现任何警告时(例如，HTML是指包中不存在的图像)，设计导入程序将导入zip文件，但同时在结果窗格中显示问题/警告列表，单击“问题”链接将显示警告列表，指出设计包中的任何问题。 设计导入程序捕获并显示警告的不同情况如下：
 
 * HTML是指包中不存在的图像。
 * HTML是指包中不存在的脚本。
@@ -560,11 +560,11 @@ data-cq-component 中的路径应为 resourceType 组件。
 
 ### ZIP 文件中的文件将被存储在 AEM 的什么位置？ {#where-are-the-files-of-the-zip-file-being-stored-in-aem}
 
-登录页面导入之后，设计包中的文件（图像、css、js，等等）存储在AEM中的以下位置：
+登录页面导入之后，设计包中的文件（图像、css、js，等等）在设计包中，存储在AEM的以下位置：
 
 `/etc/designs/default/canvas/content/campaigns/<name of brand>/<name of campaign>/<name of landing page>`
 
-假设登陆页面是在营销活动We.Retail下创建的，且登陆页面的名称为 **myBlankLandingPage** 然后，Zip文件的存储位置如下：
+假设登陆页面是在营销活动We.Retail下创建的，且登陆页面的名称为 **myBlankLandingPage** 则Zip文件的存储位置如下所示：
 
 `/etc/designs/default/canvas/content/campaigns/geometrixx/myBlankLandingPage`
 
@@ -572,7 +572,7 @@ data-cq-component 中的路径应为 resourceType 组件。
 
 创建 CSS 时，请注意以下限制：
 
-如果文本和（可编辑）图像类似于以下内容：
+如果文本和（可编辑的）图像如下所示：
 
 ```xml
 <div class="box">
@@ -581,7 +581,7 @@ height="116" /></div>Some Text </p>
 </div>
 ```
 
-类上应用了CSS `box` 如下所示：
+将CSS应用于类时 `box` 如下所示：
 
 ```xml
 .box
@@ -589,7 +589,7 @@ height="116" /></div>Some Text </p>
 { width: 450px; padding:10px; border: 1px #C5DBE7 solid; margin: 0px auto 0 auto; background-image:url(assets/box.gif); background-repeat:repeat-x,y; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:12px; color:#6D6D6D; }
 ```
 
-然后 `box img` 在设计导入器中使用，生成的登陆页面似乎未保留格式。 要解决该问题，请注意，AEM 在 CSS 中添加了 div 标记，请相应地重写代码。否则，有些 CSS 规则将无效。
+则 `box img` 在设计导入程序中使用，生成的登陆页面似乎未保留格式。 要解决该问题，请注意，AEM 在 CSS 中添加了 div 标记，请相应地重写代码。否则，有些 CSS 规则将无效。
 
 ```xml
 .box img
@@ -598,4 +598,4 @@ height="116" /></div>Some Text </p>
 ```
 
 >[!NOTE]
-此外，设计人员还应注意，只有 **id=cqcanvas** 标记被导入程序识别，否则不会保留设计。
+此外，设计人员应该注意，只有中的代码 **id=cqcanvas** 标记由导入器识别，否则不保留设计。

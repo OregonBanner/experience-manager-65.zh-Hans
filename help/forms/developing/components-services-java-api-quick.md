@@ -1,7 +1,7 @@
 ---
-title: 组件和服务Java APIQ快速开始(SOAP)
+title: 组件和服务Java APIQuick Start(SOAP)
 seo-title: Components and Services Java APIQuick Start(SOAP)
-description: 组件和服务Java APIQ快速开始(SOAP)
+description: 组件和服务Java APIQuick Start(SOAP)
 uuid: 7d9ade2d-f927-4558-9e80-df08bd572772
 contentOwner: admin
 content-type: reference
@@ -19,39 +19,39 @@ ht-degree: 0%
 
 # 组件和服务Java API快速入门(SOAP) {#components-and-services-java-apiquick-start-soap}
 
-Java API快速入门(SOAP)适用于组件和服务。
+Java API快速入门(SOAP)可用于组件和服务。
 
 
 [快速入门（SOAP模式）：使用Java API部署组件](components-services-java-api-quick.md#quick-start-soap-mode-deploying-a-component-using-the-java-api)
 
 [快速入门（SOAP模式）：使用Java API设置服务的执行上下文](components-services-java-api-quick.md#quick-start-soap-mode-setting-the-execution-context-of-a-service-using-the-java-api)
 
-[快速入门（SOAP模式）：使用Java API禁用服务安全性](components-services-java-api-quick.md#quick-start-soap-mode-disabling-service-security-using-the-java-api)
+[快速启动（SOAP模式）：使用Java API禁用服务安全性](components-services-java-api-quick.md#quick-start-soap-mode-disabling-service-security-using-the-java-api)
 
-[快速入门（SOAP模式）：使用Java API启动服务](components-services-java-api-quick.md#quick-start-soap-mode-starting-a-service-using-the-java-api)
+[快速启动（SOAP模式）：使用Java API启动服务](components-services-java-api-quick.md#quick-start-soap-mode-starting-a-service-using-the-java-api)
 
 [快速入门（SOAP模式）：使用Java API修改服务配置值](components-services-java-api-quick.md#quick-start-soap-mode-modifying-a-services-configuration-values-using-the-java-api)
 
 [快速入门（SOAP模式）：使用Java API删除组件](components-services-java-api-quick.md#quick-start-soap-mode-removing-components-using-the-java-api)
 
 
-AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置为SOAP。
+AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应设置为SOAP。
 
 >[!NOTE]
 >
->您不能使用Web服务以编程方式处理组件和服务。
+>无法使用Web服务以编程方式操作组件和服务。
 
 >[!NOTE]
 >
->“使用AEM表单进行编程”中的快速入门基于JBoss和Windows操作系统上部署的Forms服务器。 但是，如果您使用的是其他操作系统（如Unix），请将特定于Windows的路径替换为适用操作系统支持的路径。 同样，如果您使用的是其他J2EE应用程序服务器，请确保指定有效的连接属性。 请参阅 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>位于“使用AEM窗体编程”中的快速入门基于部署在JBoss和Windows操作系统上的Forms服务器。 但是，如果您使用的是其他操作系统（如Unix），请用适用的操作系统支持的路径替换Windows特定的路径。 同样，如果您使用的是其他J2EE应用程序服务器，请确保指定有效的连接属性。 参见 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
 >[!NOTE]
 >
->如果您有自定义组件，并且使用SOAP或EJB协议在同一本地服务器上调用DSC，并且这些调用在升级后停止工作，则使用VM内调用策略。 将VM内DSC调用方法与默认ServiceClientFactory结合使用，而不要使用SOAP或EJB协议构建ServiceClientFactory。
+>如果您有自定义组件，并且使用SOAP或EJB协议调用同一本地服务器上的DSC，并且这些调用在升级后停止工作，则使用VM内调用策略。 使用具有默认ServiceClientFactory的in-VM DSC调用方法，并且不要使用SOAP或EJB协议构建ServiceClientFactory。
 
 ## 快速入门（SOAP模式）：使用Java API部署组件 {#quick-start-soap-mode-deploying-a-component-using-the-java-api}
 
-以下Java示例部署了一个基于名为的JAR文件的组件 *adobe-emailSample-dsc.jar*.
+以下Java示例部署基于名为的JAR文件的组件 *adobe-emailSample-dsc.jar*.
 
 ```java
  /* 
@@ -153,7 +153,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
 
 ## 快速入门（SOAP模式）：使用Java API设置服务的执行上下文 {#quick-start-soap-mode-setting-the-execution-context-of-a-service-using-the-java-api}
 
-以下Java代码示例将“运行为调用程序”执行上下文设置为名为的示例服务 *EncryptDocument*.
+以下Java代码示例将运行方式调用程序执行上下文设置为名为的示例服务 *EncryDocument*.
 
 ```java
  /* 
@@ -243,9 +243,9 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  
 ```
 
-## 快速入门（SOAP模式）：使用Java API禁用服务安全性 {#quick-start-soap-mode-disabling-service-security-using-the-java-api}
+## 快速启动（SOAP模式）：使用Java API禁用服务安全性 {#quick-start-soap-mode-disabling-service-security-using-the-java-api}
 
-以下Java代码示例禁用了示例EncryptDocument服务以及从此服务（Set Value和Encryption服务）中调用的服务的安全性。
+以下Java代码示例禁用示例EncryptDocument服务和从该服务中调用的服务（Set Value和Encryption服务）的安全性。
 
 ```java
  /* 
@@ -356,9 +356,9 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  
 ```
 
-## 快速入门（SOAP模式）：使用Java API启动服务 {#quick-start-soap-mode-starting-a-service-using-the-java-api}
+## 快速启动（SOAP模式）：使用Java API启动服务 {#quick-start-soap-mode-starting-a-service-using-the-java-api}
 
-以下Java代码示例启动名为 *SendEmailService*.
+以下Java代码示例启动一个名为的服务 *SendEmailService*.
 
 ```java
  package com.adobe.sample.servicemanager; 
@@ -416,7 +416,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
 
 ## 快速入门（SOAP模式）：使用Java API修改服务配置值 {#quick-start-soap-mode-modifying-a-services-configuration-values-using-the-java-api}
 
-以下Java示例修改属于SendEmail服务的配置值。
+以下Java示例修改了属于SendEmail服务的配置值。
 
 ```java
  /* 
@@ -528,7 +528,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
 
 ## 快速入门（SOAP模式）：使用Java API删除组件 {#quick-start-soap-mode-removing-components-using-the-java-api}
 
-以下Java代码示例使用Java API删除组件。
+以下Java代码示例通过使用Java API删除组件。
 
 ```java
  /* 

@@ -1,6 +1,6 @@
 ---
-title: 对AEM 6.5的相同网站Cookie支持
-description: 对AEM 6.5的相同网站Cookie支持
+title: AEM 6.5支持相同的站点Cookie
+description: AEM 6.5支持相同的站点Cookie
 topic-tags: security
 exl-id: e1616385-0855-4f70-b787-b01701929bbc
 source-git-commit: f7a4907ca6ce8ecaff9ef1fdf99ec0951ff497e0
@@ -10,13 +10,13 @@ ht-degree: 74%
 
 ---
 
-# 对AEM 6.5的相同网站Cookie支持 {#same-site-cookie-support-for-aem-65}
+# AEM 6.5支持相同的站点Cookie {#same-site-cookie-support-for-aem-65}
 
-从 80 版开始，Chrome 和后来的 Safari 都引入了一种新的 Cookie 安全模型。此模式旨在通过名为 `SameSite`. 有关更多详细信息，请参阅[本文](https://web.dev/samesite-cookies-explained/)。
+从 80 版开始，Chrome 和后来的 Safari 都引入了一种新的 Cookie 安全模型。此模式旨在通过名为的设置向第三方站点引入有关Cookie可用性的安全控制措施 `SameSite`. 有关更多详细信息，请参阅[本文](https://web.dev/samesite-cookies-explained/)。
 
 此设置的默认值 (`SameSite=Lax`) 可能会导致 AEM 实例或服务之间的身份验证不起作用。这是因为这些服务的域或 URL 结构可能不受此 Cookie 策略的约束。
 
-要绕过此问题，您需要将 `SameSite` cookie属性 `None` ，用于登录令牌。
+要解决此问题，您需要设置 `SameSite` 的Cookie属性 `None` 用于登录令牌。
 
 >[!CAUTION]
 >

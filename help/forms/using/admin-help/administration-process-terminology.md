@@ -1,5 +1,5 @@
 ---
-title: 关于管理和流程术语
+title: 关于管理和过程术语
 seo-title: About administration and process terminology
 description: 了解管理和流程术语，如流程实例、流程图和操作。
 seo-description: Learn about administration and process terms like process instance, process diagram and operation.
@@ -17,15 +17,15 @@ ht-degree: 0%
 
 ---
 
-# 关于管理和流程术语 {#about-administration-and-process-terminology}
+# 关于管理和过程术语 {#about-administration-and-process-terminology}
 
-要有效管理表单工作流，您应了解以下术语和元素的层次结构：
+要有效地管理表单工作流，您应该了解以下术语和元素的层次结构：
 
-* *流程类别* 将流程组织到逻辑组中。
-* *流程* 表示自动化的业务流程。 每个已实施的业务流程至少应存在一个流程。
-* A *流程图* 是正在自动化的业务流程的直观表示形式。
-* A *过程实例* 是用户启动的流程（如填写和提交表单）或自动步骤。 一个进程可能有多个实例。
-* 安 *操作* 是流程图的一个步骤，在Workbench中由流程图中的图标表示。
-* A *任务* 是已分配给用户的操作。 当运行任务并执行操作时，用户服务会将任务分配给用户。
+* *流程类别* 将进程组织到逻辑组中。
+* *进程* 代表自动化的业务流程。 对于所实施的每个业务流程，应至少存在一个流程。
+* A *流程图* 是正在自动执行的业务流程的可视化表示形式。
+* A *进程实例* 是由用户启动的流程（如填写和提交表单）或自动化步骤。 一个进程可以有多个实例。
+* An *操作* 是流程图的一个步骤，在Workbench中用流程图中的图标表示。
+* A *任务* 是已分配给用户的操作。 当运行任务并执行操作时，User服务将任务分配给用户。
 
 有关这些术语的更多信息，请参阅 [Workbench帮助](https://www.adobe.com/go/learn_aemforms_workbench_63).

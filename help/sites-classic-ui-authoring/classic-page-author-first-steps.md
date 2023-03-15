@@ -23,9 +23,9 @@ ht-degree: 92%
 
 它涵盖以下内容：
 
-* [快速入门](#getting-started):详细介绍创建和发布首个页面所需的一系列基本事件。
+* [快速入门](#getting-started)：详细描述创建和发布第一个页面所需事件的基本序列。
 
-* [其他操作](#further-actions):继续执行您在创作时可以使用的许多其他操作。
+* [进一步操作](#further-actions)：继续进行创作时可以使用的许多其他操作。
 
 ## 快速入门 {#getting-started}
 

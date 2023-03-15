@@ -102,7 +102,7 @@ AEM 的创作环境提供了各种可用于组织和编辑内容的机制. 可�
 
 ### 查找页面 {#finding-pages}
 
-此选项卡显示所有页面。双击任意页面以将其打开进行编辑。
+此选项卡显示所有页面。双击任何页面以打开它进行编辑。
 
 ![chlimage_1-115](assets/chlimage_1-115.png)
 
@@ -134,7 +134,7 @@ AEM 的创作环境提供了各种可用于组织和编辑内容的机制. 可�
 >
 >还有一个伪属性“name”，必须在执行通配符搜索时使用。
 
-例如，如果有一个图像可用，其名称为：
+例如，如果存在名称为的可用图像：
 
 `ad-nmvtis.jpg`
 
@@ -161,7 +161,7 @@ AEM 允许您查看哪些页面链接至您当前工作的页面。
 
    ![screen_shot_2012-02-16at83127pm](assets/screen_shot_2012-02-16at83127pm.png)
 
-1. 选择 **显示引用……** AEM会打开引用窗口，并显示哪些页面引用选定页面，包括其路径。
+1. 选择 **显示引用……** AEM会打开“引用”窗口，并显示引用选定页面的页面，包括其路径。
 
    ![screen_shot_2012-02-16at83311pm](assets/screen_shot_2012-02-16at83311pm.png)
 
@@ -182,7 +182,7 @@ AEM 允许您查看哪些页面链接至您当前工作的页面。
 
 ## 页面信息 {#page-information}
 
-网站控制台 [提供有关页面当前状态的信息](/help/sites-classic-ui-authoring/author-env-basic-handling.md#page-information-on-the-websites-console) 如发布、修改、锁定、Live Copy等。
+网站控制台也 [提供有关页面当前状态的信息](/help/sites-classic-ui-authoring/author-env-basic-handling.md#page-information-on-the-websites-console) 例如发布、修改、锁定、活动副本等。
 
 ## 页面模式 {#page-modes}
 

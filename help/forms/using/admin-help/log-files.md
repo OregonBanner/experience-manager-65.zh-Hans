@@ -1,7 +1,7 @@
 ---
 title: 日志文件
 seo-title: Log files
-description: 运行时或启动错误等事件将记录到应用程序服务器日志文件中，可以使用任何文本编辑器打开这些文件。
+description: 运行时间或启动错误等事件将记录到应用程序服务器日志文件中，该文件可使用任何文本编辑器打开。
 seo-description: Events such as run-time or startup errors are recorded to the application server log files, which can be  opened using any text editor.
 uuid: 6ed9fdcd-ff02-4b35-893f-09261a6a557a
 contentOwner: admin
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # 日志文件 {#log-files}
 
-运行时或启动错误等事件将记录到应用程序服务器日志文件中。 如果在部署到应用程序服务器时遇到任何问题，可以使用日志文件帮助您查找问题。 您可以使用任何文本编辑器打开日志文件。
+诸如运行时或启动错误等事件将记录到应用程序服务器日志文件中。 如果在部署到应用程序服务器时遇到任何问题，可以使用日志文件来帮助您找到问题。 您可以使用任何文本编辑器打开日志文件。
 
 (JBoss)以下日志文件位于 `[appserver root]/server/'server'/log` 目录：
 

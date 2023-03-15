@@ -1,7 +1,7 @@
 ---
 title: 编辑和转换现有域
 seo-title: Editing and converting existing domains
-description: 了解如何从域管理页面更改现有域的设置。 将现有企业域转换为混合域，或将混合域转换为混合域。
+description: 了解如何从“域管理”页面更改现有域的设置。 将现有企业域转换为混合域，反之亦然。
 seo-description: Learn how to change the settings for existing domains from the Domain Management page. Convert an existing enterprise domain to a hybrid domain or vice versa.
 uuid: 4cc9547e-b4ec-4588-b1cf-18720f06149a
 contentOwner: admin
@@ -24,18 +24,18 @@ ht-degree: 0%
 ## 编辑现有域 {#edit-an-existing-domain}
 
 1. 在管理控制台中，单击设置>用户管理>域管理。
-1. 单击要编辑的域名。
-1. 要更改域名，请在“名称”(Name)框中更改文本。
-1. 要更改企业域或混合域的身份验证信息，请单击页面底部的相应身份验证名称。 在“编辑身份验证”页面上，根据需要更改设置。 (请参阅 [身份验证设置](/help/forms/using/admin-help/configuring-authentication-providers.md#authentication-settings).)
-1. 要更改企业域的目录信息，请单击页面底部的相应目录名称。 在“编辑目录”页面中，根据需要更改设置。 (请参阅 [添加目录或自定义SPI](/help/forms/using/admin-help/configuring-directories.md#adding-directories-or-custom-spis).)
-1. 完成更改后，单击确定。
+1. 单击要编辑的域的名称。
+1. 要更改域名，请更改“名称”框中的文本。
+1. 要更改企业域或混合域的验证信息，请单击该页底部相应的验证名称。 在“编辑身份验证”页面上，根据需要更改设置。 (请参阅 [身份验证设置](/help/forms/using/admin-help/configuring-authentication-providers.md#authentication-settings).)
+1. 要更改企业域的目录信息，请单击该页底部的相应目录名。 在“编辑目录”页上，根据需要更改设置。 (请参阅 [添加目录或自定义SPI](/help/forms/using/admin-help/configuring-directories.md#adding-directories-or-custom-spis).)
+1. 完成更改后，单击“确定”。
 
 ## 将企业域转换为混合域 {#convert-an-enterprise-domain-to-a-hybrid-domain}
 
 1. 在管理控制台中，单击设置>用户管理>域管理。
-1. 单击要转换的企业域名称。
+1. 单击要转换的企业域的名称。
 1. 单击转换为混合域。
-1. 查看显示的有关用户和组数据以及用户身份验证的信息，然后单击确定。
+1. 查看显示的有关用户和组数据以及用户验证的信息，然后单击“确定”。
 1. 编辑混合域的设置，然后单击“确定”。
 
 >[!NOTE]
@@ -46,6 +46,6 @@ ht-degree: 0%
 
 1. 在管理控制台中，单击设置>用户管理>域管理。
 1. 单击要转换的混合域的名称。
-1. 单击转换到企业域。
-1. 查看显示的有关用户和组数据以及用户身份验证的信息，然后单击确定。
-1. 单击“添加目录”并配置所需的目录信息。 (请参阅 [添加目录或自定义SPI](/help/forms/using/admin-help/configuring-directories.md#adding-directories-or-custom-spis).)
+1. 单击转换为企业域。
+1. 查看显示的有关用户和组数据以及用户验证的信息，然后单击“确定”。
+1. 单击添加目录并配置所需的目录信息。 (请参阅 [添加目录或自定义SPI](/help/forms/using/admin-help/configuring-directories.md#adding-directories-or-custom-spis).)

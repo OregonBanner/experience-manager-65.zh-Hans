@@ -1,7 +1,7 @@
 ---
-title: 将创建通信UI与自定义门户集成
+title: 将Create Correspondence UI与自定义门户集成
 seo-title: Integrating Create Correspondence UI with your custom portal
-description: 了解如何将创建通信UI与自定义门户相集成
+description: 了解如何将创建通信UI与您的自定义门户集成
 seo-description: Learn how to integrate create correspondence UI with your custom portal
 uuid: 68ef5bf2-b271-4c44-8840-6c495069164d
 content-type: reference
@@ -18,43 +18,43 @@ ht-degree: 4%
 
 ---
 
-# 将创建通信UI与自定义门户集成{#integrating-create-correspondence-ui-with-your-custom-portal}
+# 将Create Correspondence UI与自定义门户集成{#integrating-create-correspondence-ui-with-your-custom-portal}
 
 ## 概述 {#overview}
 
-本文详细介绍如何将“创建通信解决方案”与您的环境相集成。
+本文详细介绍了如何将创建通信解决方案与您的环境集成。
 
 ## 基于URL的调用 {#url-based-invocation}
 
-从自定义门户调用“创建通信”应用程序的一种方法是使用以下请求参数准备URL:
+从自定义门户调用“创建通信”应用程序的一种方法是使用以下请求参数准备URL：
 
-* 信件模板的标识符（使用cmLetterId参数）。
+* 书信模板的标识符（使用cmLetterId参数）。
 
 * 从所需数据源获取的XML数据的URL（使用cmDataUrl参数）。
 
 例如，自定义门户会将URL准备为\
-`https://'[server]:[port]'/[contextPath]/aem/forms/createcorrespondence.html?random=[timestamp]&cmLetterId=[letter identifier]&cmDataUrl=[data URL]`，可以是门户链接中的href。
+`https://'[server]:[port]'/[contextPath]/aem/forms/createcorrespondence.html?random=[timestamp]&cmLetterId=[letter identifier]&cmDataUrl=[data URL]`，这可以是门户上链接的href。
 
 >[!NOTE]
 >
->以这种方式调用是不安全的，因为通过在URL中公布相同（显示得很清楚）的参数，将必需的参数作为GET请求传递。
+>以这种方式调用并不安全，因为必需的参数是作为GET请求传递的，方法是在URL中公开相同的（清晰可见）。
 
 >[!NOTE]
 >
->在调用创建通信应用程序之前，请保存并上传数据，以在给定的dataURL中调用创建通信UI。 这可以通过自定义门户本身或通过其他后端流程来完成。
+>在调用创建通信应用程序之前，保存并上传数据以在给定dataURL处调用创建通信UI。 这可以从自定义门户本身完成，也可以通过其他后端流程完成。
 
-## 内联基于数据的调用 {#inline-data-based-invocation}
+## 基于内联数据的调用 {#inline-data-based-invocation}
 
-调用创建通信应用程序的另一种（也是更安全的）方法是，只需点击https://&#39;上的URL即可[服务器]:[端口]&#39;/[contextPath]/aem/forms/createcorrespondence.html中)，将参数和数据发送以作为POST请求调用创建通信应用程序时（向最终用户隐藏它们）。 这还意味着您现在可以在内联传递Create Correspondence应用程序的XML数据（作为同一请求的一部分，使用cmData参数），在以前的方法中，这是不可能的/理想的。
+调用“创建通信”应用程序的另一个（也是更安全的）方法可能是，只需点击位于https://&#39;的URL[服务器]：[端口]&#39;/[contextpath]/aem/forms/createcorrespondence.html中，在发送参数和数据，以作为POST请求调用创建通信应用程序时（对最终用户隐藏这些参数和数据）。 这也意味着您现在可以内联传递“创建通信”应用程序的XML数据（作为同一请求的一部分，使用cmData参数），这在之前的方法中是不可能的/理想的。
 
-### 用于指定信件的参数 {#parameters-for-specifying-letter}
+### 用于指定字母的参数 {#parameters-for-specifying-letter}
 
 | **名称** | **类型** | **描述** |
 |---|---|---|
-| cmLetterInstanceId | 字符串 | 信件实例的标识符。 |
-| cmLetterId | 字符串 | 信件模板的名称。 |
+| cmLetterInstanceId | 字符串 | 书信实例的标识符。 |
+| cmLetterId | 字符串 | 书信模板的名称。 |
 
-表中的参数顺序指定用于加载信件的参数的首选项。
+表中的参数顺序指定了用于加载书信的参数首选项。
 
 ### 用于指定XML数据源的参数 {#parameters-for-specifying-the-xml-data-source}
 
@@ -68,7 +68,7 @@ ht-degree: 4%
   <tr>
    <td>cmDataUrl<br /> </td> 
    <td>URL</td> 
-   <td>使用基本协议（如cq、ftp、http或文件）从源文件获取XML数据。<br /> </td> 
+   <td>使用基本协议（如cq、ftp、http或文件）从源文件中获取XML数据。<br /> </td> 
   </tr>
   <tr>
    <td>cmLetterInstanceId</td> 
@@ -77,13 +77,13 @@ ht-degree: 4%
   </tr>
   <tr>
    <td>cmUseTestData</td> 
-   <td>布尔型</td> 
-   <td>重复使用数据字典中附加的测试数据。</td> 
+   <td>布尔值</td> 
+   <td>重用数据字典中附加的测试数据。</td> 
   </tr>
  </tbody>
 </table>
 
-表中参数的顺序指定用于加载XML数据的参数的首选项。
+表中的参数顺序指定了用于加载XML数据的参数的首选项。
 
 ### 其他参数 {#other-parameters}
 
@@ -96,15 +96,15 @@ ht-degree: 4%
   </tr>
   <tr>
    <td>cmPreview<br /> </td> 
-   <td>布尔型</td> 
-   <td>如果在预览模式下打开信件，则为true<br /> </td> 
+   <td>布尔值</td> 
+   <td>True表示在预览模式下打开书信<br /> </td> 
   </tr>
   <tr>
    <td>随机</td> 
    <td>时间戳</td> 
-   <td>用于解决浏览器缓存问题。</td> 
+   <td>解决浏览器缓存问题。</td> 
   </tr>
  </tbody>
 </table>
 
-如果您对cmDataURL使用http或cq协议，则http/cq的URL应当可以匿名访问。
+如果您对cmDataURL使用http或cq协议，则http/cq的URL应可匿名访问。

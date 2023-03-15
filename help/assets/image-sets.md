@@ -20,28 +20,28 @@ ht-degree: 27%
 
 # 图像集 {#image-sets}
 
-图像集为用户提供了集成的查看体验，用户可以通过选择缩略图来查看项目的不同视图。 图像集使您可以展示同一项目的替换视图，并且查看器提供了可用于仔细检查图像的缩放工具。
+图像集为用户提供了集成的查看体验，用户可以通过选择缩略图图像来查看项目的不同视图。 图像集使您可以展示同一项目的替换视图，并且查看器提供了可用于仔细检查图像的缩放工具。
 
-图像集由带有单词的横幅来指定 `IMAGESET`. 此外，如果图像集已发布，则横幅上会显示由 **[!UICONTROL World]** 图标指示的发布日期以及由铅笔图标指示的上次修改日期 **** 。
+图像集由带有单词的横幅指定 `IMAGESET`. 此外，如果图像集已发布，则横幅上会显示由 **[!UICONTROL World]** 图标指示的发布日期以及由铅笔图标指示的上次修改日期 **** 。
 
 ![图像集](assets/chlimage_1-339.png)
 
-在图像集中，您还可以通过创建图像集并添加缩略图来创建样本。
+在图像集中，您还可以通过创建图像集并添加缩略图来创建色板。
 
-当您希望以不同的颜色、模式或外表显示项目时，此应用程序非常有用。 要创建带有颜色色板的图像集，您需要为要向用户呈现的每种不同颜色、模式或外表提供一个图像。 每种颜色、模式或外表还需要有一个颜色、模式或外表样本。
+当您想要以不同的颜色、图案或成品显示项目时，此应用程序非常有用。 要创建包含颜色样本的图像集，您需要为要呈现给用户的每种颜色、图案或完成程度都创建一个图像。 每种颜色、模式或外表还需要有一个颜色、模式或外表样本。
 
-例如，假定您要展示帽檐颜色各异的帽子图像，且帽檐分别为红色、绿色和蓝色。在这种情况下，您需要准备同一款帽子的三张拍照。这三张拍照分别对应红色、绿色和蓝色的帽檐。您还需要准备红色、绿色和蓝色三种颜色的样本。颜色色板用作用户在色板集查看器中选择的缩略图，以查看红色、绿色或蓝色的帽子。
+例如，假定您要展示帽檐颜色各异的帽子图像，且帽檐分别为红色、绿色和蓝色。在这种情况下，您需要准备同一款帽子的三张拍照。这三张拍照分别对应红色、绿色和蓝色的帽檐。您还需要准备红色、绿色和蓝色三种颜色的样本。颜色样本用作用户在样本集查看器中选择的缩略图，以查看红色计费、绿色计费或蓝色计费的次数上限。
 
 >[!NOTE]
 >
->有关Assets用户界面的信息，请参阅 [管理资产](/help/assets/manage-assets.md).
+>有关Assets用户界面的信息，请参阅 [管理资源](/help/assets/manage-assets.md).
 
-在创建图像集时，Adobe会推荐以下最佳实践，并实施以下限制：
+创建图像集时，Adobe建议采用以下最佳实践并强制实施以下限制：
 
-| 限制类型 | 最佳实践 | 规定的限制 |
+| 限制类型 | 最佳实践 | 施加的限制 |
 | --- | --- | --- |
-| 每个集的重复资产数 | 无重复项 | 20 |
-| 每组图像的最大数量 | 每组5-10张图像 | 1000 |
+| 每集的重复资产数 | 无重复项 | 20 |
+| 每组图像的最大数量 | 每组5-10个图像 | 1000 |
 
 另请参阅 [Dynamic Media限制](/help/assets/limitations.md).
 
@@ -49,11 +49,11 @@ ht-degree: 27%
 
 **要快速设置并运行图像集，请执行以下操作：**
 
-1. [为多个视图上传主源图像](#uploading-assets-in-image-sets).
+1. [上传主源图像以供多个视图使用](#uploading-assets-in-image-sets).
 
-   首先为图像集上传图像。选择图像时，请记住客户可以在图像集查看器中缩放图像。 确保图像的最大尺寸至少为2000像素，以优化缩放详细信息。 Dynamic Media每张可渲染多达250万像素（百万像素）的图像。 例如，您可以使用5000 x 5000 MP的图像，或任何其他大小组合，最多25 MP。
+   首先为图像集上传图像。当您选择图像时，请记住，您的客户可以在图像集查看器中放大图像。 确保图像的最大尺寸至少为2000像素，以获得最佳的缩放细节。 Dynamic Media可以渲染每个高达2500万像素(MB)的图像。 例如，您可以使用5000 x 5000 MP图像或任何其他大小组合，最大可达25 MP。
 
-   请参阅 [Dynamic Media — 支持的栅格图像格式](/help/assets/assets-formats.md#supported-raster-image-formats-dynamic-media) ，以获取图像集支持的格式列表。
+   参见 [Dynamic Media — 支持的栅格图像格式](/help/assets/assets-formats.md#supported-raster-image-formats-dynamic-media) 有关图像集支持的格式的列表。
 
 <!--    Adobe Experience Manager Assets supports many image file formats, but lossless TIFF, PNG, and EPS images are recommended. -->
 
@@ -63,51 +63,51 @@ ht-degree: 27%
 
    要在资产中创建图像集，请转到 **[!UICONTROL 创建]** > **[!UICONTROL 图像集]**. 然后，添加图像并选择 **[!UICONTROL 保存]**.
 
-   您还可以通过 [批次集预设](/help/assets/config-dms7.md).
+   您还可以通过自动创建图像集 [批次集预设](/help/assets/config-dms7.md).
    >[!IMPORTANT]
    >
-   >批量集由IPS（图像生产系统）作为资产摄取的一部分创建，并且只能在Dynamic Media - Scene7模式下使用。
+   >批量集由IPS(Image Production System)作为资产引入的一部分创建，并且仅在Dynamic Media - Scene7模式下可用。
 
-   请参阅 [准备图像集资产以上传和上传文件](#uploading-assets-in-image-sets).
+   参见 [准备图像集资产以上传和上传文件](#uploading-assets-in-image-sets).
 
-   请参阅 [使用选择器](/help/assets/working-with-selectors.md).
+   参见 [使用选择器](/help/assets/working-with-selectors.md).
 
-1. 添加 [图像集查看器预设](/help/assets/managing-viewer-presets.md)，根据需要。
+1. 添加 [图像集查看器预设](/help/assets/managing-viewer-presets.md)（根据需要）。
 
    管理员可以创建或修改图像集查看器预设。要查看带有查看器预设的图像集，请选择图像集，然后在左边栏下拉菜单中，选择 **[!UICONTROL 查看器]**.
 
-   导航到 **[!UICONTROL 工具]** > **[!UICONTROL 资产]** > **[!UICONTROL 查看器预设]** 要创建或编辑查看器预设。
+   导航到 **[!UICONTROL 工具]** > **[!UICONTROL 资产]** > **[!UICONTROL 查看器预设]** 创建或编辑查看器预设。
 
-1. （可选） [查看图像集](/help/assets/image-sets.md#viewing-image-sets) 批次集预设创建的集合。
+1. （可选） [查看图像集](/help/assets/image-sets.md#viewing-image-sets) 使用批次集预设创建的。
 1. [预览图像集](/help/assets/previewing-assets.md).
 
-   选择图像集后，您便可以预览该图像集。选择缩略图图标，以便在选定的查看器中检查图像集。 您可以从 **[!UICONTROL 查看器]** 菜单（可从左边栏下拉菜单中访问）。
+   选择图像集后，您便可以预览该图像集。选择缩略图图标，以便在选定的查看器中检查图像集。 您可以从中选择不同的查看器 **[!UICONTROL 查看器]** 菜单，可从左边栏下拉菜单中访问。
 
 1. [发布图像集](/help/assets/publishing-dynamicmedia-assets.md).
 
-   发布图像集时，会激活URL和嵌入代码。 此外，您还必须 [发布任何自定义查看器预设](/help/assets/managing-viewer-presets.md) 创建的。 现成的查看器预设已发布。
+   发布图像集将激活URL和嵌入代码。 此外，您必须 [发布任何自定义查看器预设](/help/assets/managing-viewer-presets.md) 您已创建的内容。 现成的查看器预设已发布。
 
 1. [将 URL 关联到您的 Web 应用程序](/help/assets/linking-urls-to-yourwebapplication.md)或者[嵌入视频查看器或图像查看器](/help/assets/embed-code.md)。
 
-   Experience Manager Assets会为图像集创建URL调用，并在您发布图像集后将其激活。 预览资产时，您可以复制这些 URL。或者，您也可以将它们嵌入到您的网站上。
+   Experience Manager Assets为图像集创建URL调用，并在您发布图像集后激活它们。 预览资产时，您可以复制这些 URL。或者，您也可以将它们嵌入到网站中。
 
    选择图像集，然后在左边栏下拉菜单中选择&#x200B;**[!UICONTROL 查看器]**。
 
-   请参阅 [将图像集关联到网页](/help/assets/linking-urls-to-yourwebapplication.md) 和 [嵌入视频查看器或图像查看器](/help/assets/embed-code.md).
+   参见 [将图像集链接到网页](/help/assets/linking-urls-to-yourwebapplication.md) 和 [嵌入视频查看器或图像查看器](/help/assets/embed-code.md).
 
 要编辑图像集，请参阅 [编辑图像集](#editing-image-sets). 此外，您还可以查看和编辑 [图像集属性](/help/assets/manage-assets.md#editing-properties).
 
-如果您在创建集时遇到问题，请参阅 [Dynamic Media - Scene7模式故障诊断](/help/assets/troubleshoot-dms7.md#images-and-sets).
+如果在创建集时遇到问题，请参阅以下文档中的图像和集： [Dynamic Media故障诊断 — Scene7模式](/help/assets/troubleshoot-dms7.md#images-and-sets).
 
 ## 上传图像集中的资产 {#uploading-assets-in-image-sets}
 
-首先为图像集上传图像。选择图像时，请记住客户可以在图像集查看器中缩放图像。 确保图像的最大尺寸至少为2000像素。图像集支持很多种图像文件格式，但建议使用无损的 TIFF、PNG 和 EPS 图像。
+首先为图像集上传图像。当您选择图像时，请记住，您的客户可以在图像集查看器中放大图像。 确保图像的最大尺寸至少为2000像素。图像集支持很多种图像文件格式，但建议使用无损的 TIFF、PNG 和 EPS 图像。
 
 为图像集上传图像的方法与[在资产中上传任何其他资产](/help/assets/manage-assets.md#uploading-assets)的方法相同。
 
-请参阅 [Dynamic Media — 支持的栅格图像格式](/help/assets/assets-formats.md#supported-raster-image-formats-dynamic-media) ，以获取图像集支持的格式列表。
+参见 [Dynamic Media — 支持的栅格图像格式](/help/assets/assets-formats.md#supported-raster-image-formats-dynamic-media) 有关图像集支持的格式的列表。
 
-### 准备要上传的图像集资产 {#preparing-image-set-assets-for-upload}
+### 准备图像集资源以供上传 {#preparing-image-set-assets-for-upload}
 
 在创建图像集之前，请确保图像的大小和格式均合适。
 
@@ -117,7 +117,7 @@ ht-degree: 27%
 
 >[!NOTE]
 >
->此外，如果您使用缩略图指示产品色板，则必须执行以下操作：
+>此外，如果使用缩略图指示产品样本，则必须执行以下操作：
 >
 >您需要小插图，也就是同一图像的不同拍照，以显示该图像的不同颜色、模式或外表。您还需要与不同颜色、模式或外表相对应的缩略图文件。例如，要通过显示同一款夹克的黑色、咖色和绿色版的图像集展示缩略图，您需要：
 >
@@ -131,52 +131,52 @@ ht-degree: 27%
 
 >[!NOTE]
 >
->您还可以通过 [批次集预设](/help/assets/config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets).
->**重要信息：** 批量集由IPS（图像生产系统）作为资产摄取的一部分创建，并且只能在Dynamic Media - Scene7模式下使用。
+>您还可以通过自动创建图像集 [批次集预设](/help/assets/config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets).
+>**重要提示：** 批量集由IPS(Image Production System)作为资产引入的一部分创建，并且仅在Dynamic Media - Scene7模式下可用。
 
-在将资产添加到资产集时，资产会按字母数字顺序自动添加。 您可以在添加资产后手动重新排序或排序资产。
+在将资源添加到集时，会自动按字母数字顺序添加资源。 添加资源后，您可以手动对资源重新排序或排序。
 
 >[!NOTE]
 >
->文件名中具有“，”（逗号）的资产不支持图像集。
+>文件名中带有“，”（逗号）的资源不支持图像集。
 
-在创建图像集时，Adobe会推荐以下最佳实践，并实施以下限制：
+创建图像集时，Adobe建议采用以下最佳实践并强制实施以下限制：
 
-| 限制类型 | 最佳实践 | 规定的限制 |
+| 限制类型 | 最佳实践 | 施加的限制 |
 | --- | --- | --- |
-| 每个集的重复资产数 | 无重复项 | 20 |
-| 每组图像的最大数量 | 每组5-10张图像 | 1000 |
+| 每集的重复资产数 | 无重复项 | 20 |
+| 每组图像的最大数量 | 每组5-10个图像 | 1000 |
 
 另请参阅 [Dynamic Media限制](/help/assets/limitations.md).
 
 **要创建图像集，请执行以下操作：**
 
-1. 在Experience Manager中，选择Experience Manager徽标以访问全局导航控制台，然后转到 **[!UICONTROL 导航]** > **[!UICONTROL 资产]**. 导航到要创建图像集的位置，然后转到 **[!UICONTROL 创建]** > **[!UICONTROL 图像集]** 打开“图像集编辑器”页面。
+1. 在Experience Manager中，选择Experience Manager徽标以访问全局导航控制台，然后转到 **[!UICONTROL 导航]** > **[!UICONTROL 资产]**. 导航到要创建图像集的位置，然后转到 **[!UICONTROL 创建]** > **[!UICONTROL 图像集]** 以打开“图像集编辑器”页面。
 
    您还可以从包含资产的文件夹中创建旋转集。
 
    ![6_5_imagesets-createpulldown](assets/6_5_imagesets-createpulldown.png)
 
-1. 在“图像集编辑器”页面的 **[!UICONTROL 标题]** 字段，输入图像集的名称。 该名称会显示在图像集的横幅中。（可选）输入说明。
+1. 在“图像集编辑器”页面的 **[!UICONTROL 标题]** 字段中，输入图像集的名称。 该名称会显示在图像集的横幅中。（可选）输入说明。
 
-   ![6_5_imageset-createnewset](assets/6_5_imageset-creatingnewset.png)
+   ![6_5_imageset-creatingnewset](assets/6_5_imageset-creatingnewset.png)
 
 1. 执行以下操作之一：
 
    * 在“图像集编辑器”页面的左上角附近，选择 **[!UICONTROL 添加资产]**.
 
-   * 在“图像集编辑器”页面的中间附近，选择 **[!UICONTROL 点按以打开资产选择器]**.
-   选择要包含在图像集中的资产。 选定资产上有一个复选标记图标。完成后，在页面的右上角附近，选择 **[!UICONTROL 选择]**.
+   * 在“图像集编辑器”页面中间附近，选择 **[!UICONTROL 点按以打开资产选择器]**.
+   选择要包含在图像集中的资源。 选定资产上有一个复选标记图标。完成后，在页面的右上角附近，选择 **[!UICONTROL 选择]**.
 
-   借助资产选择器，您可以通过键入关键字并点按或单击&#x200B;**[!UICONTROL 返回]**&#x200B;来搜索资产。您还可以应用过滤器来优化搜索结果。您可以按路径、收藏集、文件类型和标记进行过滤。选择过滤器，然后选择 **[!UICONTROL 过滤器]** 图标。 点按“视图”图标并选择&#x200B;**[!UICONTROL 列视图]**、**[!UICONTROL 卡片视图]**&#x200B;或&#x200B;**[!UICONTROL 列表视图]**&#x200B;可更改视图。
+   借助资产选择器，您可以通过键入关键字并点按或单击&#x200B;**[!UICONTROL 返回]**&#x200B;来搜索资产。您还可以应用过滤器来优化搜索结果。您可以按路径、收藏集、文件类型和标记进行过滤。选择过滤器，然后选择 **[!UICONTROL 筛选条件]** 图标。 点按“视图”图标并选择&#x200B;**[!UICONTROL 列视图]**、**[!UICONTROL 卡片视图]**&#x200B;或&#x200B;**[!UICONTROL 列表视图]**&#x200B;可更改视图。
 
-   请参阅 [使用选择器](/help/assets/working-with-selectors.md).
+   参见 [使用选择器](/help/assets/working-with-selectors.md).
 
-   ![6_5_imageset-addassets](assets/6_5_imageset-addingassets.png)
+   ![6_5_imageset-addingassets](assets/6_5_imageset-addingassets.png)
 
-1. 在将资产添加到资产集时，资产会按字母数字顺序自动添加。 您可以在添加资产后手动重新排序或排序资产。
+1. 在将资源添加到集时，会自动按字母数字顺序添加资源。 添加资源后，您可以手动对资源重新排序或排序。
 
-   如有必要，请将资产的重新排序图标拖动到资产文件名右侧，以在设置列表的上下方对图像重新排序。
+   如有必要，请将资源的“重新排序”图标拖动到资源文件名的右侧，以将图像在集列表中向上或向下重新排序。
 
    ![6_5_imageset-reorderassets](assets/6_5_imageset-reorderassets.png)
 
@@ -184,12 +184,12 @@ ht-degree: 27%
 
 1. （可选）执行以下操作之一：
 
-   * 要删除图像，请选择该图像并选择 **[!UICONTROL 删除资产]**.
+   * 要删除图像，请选择该图像并选择 **[!UICONTROL 删除资源]**.
 
-   * 要应用预设，请在页面的右上角附近，选择 **[!UICONTROL 预设]**，然后选择要同时应用于所有资产的预设。
+   * 要应用预设，请在页面的右上角附近，选择 **[!UICONTROL 预设]**，然后选择要一次性应用于所有资产的预设。
    >[!NOTE]
    >
-   >创建图像集时，您可以更改图像集缩略图，或者允许Experience Manager根据图像集中的资产自动选择缩略图。 要选择缩略图，请选择 **[!UICONTROL 更改缩略图]** 在“图像集编辑器”页面的“标题”字段上方，选择任意图像（您也可以导航到其他文件夹以查找图像）。 如果您选择了缩略图，然后决定让Experience Manager从图像集中生成缩略图，请选择 **[!UICONTROL 切换到]** > **[!UICONTROL 自动缩略图]**.
+   >创建图像集时，您可以更改图像集缩略图，或允许Experience Manager根据图像集中的资源自动选择缩略图。 要选择缩略图，请选择 **[!UICONTROL 更改缩略图]** 在“图像集编辑器”页面上的“标题”字段上方，选择任意图像（您也可以导航到其他文件夹以查找图像）。 如果您选择了缩略图，然后决定让Experience Manager从图像集生成缩略图，请选择 **[!UICONTROL 切换到]** > **[!UICONTROL 自动缩略图]**.
 
 1. 选择&#x200B;**[!UICONTROL 保存]**。您新创建的图像集会显示在创建时所用的文件夹中。
 
@@ -199,35 +199,35 @@ ht-degree: 27%
 
 >[!IMPORTANT]
 >
->批集由IPS创建 [图像生成系统] 作为资产摄取的一部分，且仅在Dynamic Media - Scene7模式下可用。)
+>批次集由IPS创建 [图像制作系统] 作为资源提取的一部分，并且仅在Dynamic Media - Scene7模式下可用。)
 
-但是，使用批集预设创建的集，请执行 *not* 显示在用户界面中。 您可以通过三种不同方式查看这些集。 （即使您是在用户界面中创建图像集，这些方法也可用）。
+但是，使用批次集预设创建的集可以 *非* 显示在用户界面中。 您可以通过三种不同的方式查看这些集合。 （即使在用户界面中创建了图像集，这些方法也可用）。
 
-* 打开单个资产的属性。 属性指示引用选定资产或其成员的集。 如果要查看整个集，请选择集的名称。
+* 打开单个资产的属性。 属性指明所选资产被引用或作为成员的设置。 如果要查看整个集，请选择集的名称。
 
    ![6_5_imageset-assetproperties](assets/6_5_imageset-assetproperties2.png)
 
-* 来自任何集的成员图像。选择 **[!UICONTROL 集]** 菜单，以显示资产所属的集。
+* 来自任何集的成员图像。选择 **[!UICONTROL 集]** 菜单以显示资产所属的集。
 
-   ![6_5_imageset-setspuldownmenu](assets/6_5_imageset-setspulldownmenu.png)
+   ![6_5_imageset-setspulldownmenu](assets/6_5_imageset-setspulldownmenu.png)
 
-* 从搜索中，您可以选择 **[!UICONTROL 过滤器]**，然后展开 **[!UICONTROL Dynamic Media]** 选择 **[!UICONTROL 集]**.
+* 在搜索中，您可以选择 **[!UICONTROL 筛选条件]**，然后展开 **[!UICONTROL Dynamic Media]** 并选择 **[!UICONTROL 集]**.
 
-   搜索会返回在UI中手动创建的匹配集，或通过批集预设自动创建的匹配集。 对于自动集，搜索查询使用“开始于”搜索标准进行，该搜索标准与基于使用“包含”搜索标准的Experience Manager搜索不同。 将过滤器设置为 **[!UICONTROL 集]** 是搜索自动集的唯一方法。
+   搜索会返回在UI中手动创建或通过批次集预设自动创建的匹配集。 对于自动集，搜索查询使用“开头为”搜索条件执行，这与基于使用“包含”搜索条件的Experience Manager搜索不同。 将筛选条件设置为 **[!UICONTROL 集]** 这是搜索自动化集的唯一方法。
 
    ![chlimage_1-134](assets/chlimage_1-134.png)
 
 >[!NOTE]
 >
->您可以通过用户界面查看集，如 [编辑图像集](#editing-image-sets).
+>您可以通过用户界面查看集，如中所述 [编辑图像集](#editing-image-sets).
 
 ## 编辑图像集 {#editing-image-sets}
 
-您可以对图像集执行各种编辑任务，如：
+您可以对图像集执行各种编辑任务，如下所示：
 
 * 向图像集中添加图像。
 * 对图像集中的图像重新排序。
-* 删除图像集中的资产。
+* 删除图像集中的资源。
 * 应用查看器预设。
 * 删除图像集。
 
@@ -235,33 +235,33 @@ ht-degree: 27%
 
 1. 执行以下任一操作：
 
-   * 将鼠标悬停在图像集资产上，然后选择 **[!UICONTROL 编辑]** （铅笔图标）。
-   * 将鼠标悬停在图像集资产上，选择 **[!UICONTROL 选择]** （复选标记图标），然后选择 **[!UICONTROL 编辑]** 中。
-   * 在图像集资产上选择，然后选择 **[!UICONTROL 编辑]** （铅笔图标）。
+   * 将鼠标悬停在图像集资源上，然后选择 **[!UICONTROL 编辑]** （铅笔图标）。
+   * 将鼠标悬停在图像集资源上，选择 **[!UICONTROL 选择]** （复选标记图标），然后选择 **[!UICONTROL 编辑]** 工具栏上。
+   * 在图像集资源上选择，然后选择 **[!UICONTROL 编辑]** （铅笔图标）。
 
 1. 要编辑图像集中的图像，请执行以下任意操作：
 
-   * 要对资产重新排序，请将图像拖到新位置（选择重新排序图标以移动项目）。
-   * 要按升序或降序对项目进行排序，请选择列标题。
-   * 要添加资产或更新现有资产，请选择 **[!UICONTROL 添加资产]**. 导航到资产，选择该资产，然后选择 **[!UICONTROL 选择]** 在页面的右上角附近。
+   * 要重新排序资产，请将图像拖动到新位置（选择重新排序图标以移动项目）。
+   * 要按升序或降序对项排序，请选择列标题。
+   * 要添加资源或更新现有资源，请选择 **[!UICONTROL 添加资产]**. 导航到某个资源，选择该资源，然后选择 **[!UICONTROL 选择]** 在页面的右上角附近。
 
       >[!NOTE]
       >
-      >如果您通过将Experience Manager用作缩略图的图像替换为其他图像来删除图像，则仍会显示原始资产。
-   * 要删除资产，请选择资产，然后选择 **[!UICONTROL 删除资产]**.
+      >如果通过将Experience Manager用于缩略图的图像替换为其他图像来删除该图像，则仍会显示原始资源。
+   * 要删除资源，请选择该资源并选择 **[!UICONTROL 删除资源]**.
    * 要应用预设，请在页面的右上角附近，选择 **[!UICONTROL 预设]**，然后选择查看器预设。
-   * 要添加或更改缩略图，请选择资产右侧的缩略图图标。 导航到新的缩略图或色板资产，将其选中，然后选择 **[!UICONTROL 选择]**.
-   * 要删除整个图像集，请导航到图像集，选择该图像集，然后选择 **[!UICONTROL 删除]**.
+   * 要添加或更改缩略图，请选择资源右侧旁边的缩略图图标。 导航到新的缩略图或样本资源，选择它，然后选择 **[!UICONTROL 选择]**.
+   * 要删除整个图像集，请导航到该图像集，选择它，然后选择 **[!UICONTROL 删除]**.
 
    >[!NOTE]
    >
-   >您可以导航到图像集，然后选择 **[!UICONTROL 设置成员]** ，然后选择单个资产上的铅笔图标以打开编辑窗口。
+   >您可以通过导航到图像集来编辑图像，然后选择 **[!UICONTROL 设置成员]** 然后，选择单个资产上的“铅笔”图标以打开编辑窗口。
 
-1. 选择 **[!UICONTROL 保存]** 完成编辑后。
+1. 选择 **[!UICONTROL 保存]** 完成编辑时。
 
 ## 预览图像集 {#previewing-image-sets}
 
-请参阅 [预览资产](/help/assets/previewing-assets.md).
+参见 [预览资源](/help/assets/previewing-assets.md).
 
 ## 发布图像集 {#publishing-image-sets}
 

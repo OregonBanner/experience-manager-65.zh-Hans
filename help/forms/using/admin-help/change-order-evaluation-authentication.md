@@ -1,7 +1,7 @@
 ---
 title: 更改身份验证的评估顺序
 seo-title: Change the order of evaluation for authentication
-description: 您可以更改AEM表单评估多个身份验证提供程序的顺序。
+description: 您可以更改AEM Forms评估多个身份验证提供程序的顺序。
 seo-description: You can change the order in which AEM forms evaluates multiple authentication providers.
 uuid: c2693e5b-cf09-4bb8-815a-2b20ebf6eea0
 contentOwner: admin
@@ -19,10 +19,10 @@ ht-degree: 0%
 
 # 更改身份验证的评估顺序 {#change-the-order-of-evaluation-for-authentication}
 
-如果您配置了多个身份验证提供程序，则可以更改AEM表单对其进行身份验证评估的顺序。 config.xml文件中列出的身份验证提供程序的顺序决定了身份验证评估的顺序。
+如果您配置了多个身份验证提供程序，则可以更改AEM Forms评估它们以进行身份验证的顺序。 config.xml文件中列出的身份验证提供程序的顺序决定了身份验证的评估顺序。
 
 1. 在管理控制台中，单击设置>用户管理>配置>导入和导出配置文件。
-1. 要将当前配置设置导出到文件，请单击“导出”，然后将配置文件保存到其他位置。
+1. 要将当前配置设置导出到文件，请单击“导出”并将配置文件保存到其他位置。
 1. 在文件中找到以下节点：
 
    ```xml
@@ -43,7 +43,7 @@ ht-degree: 0%
     </node>
    ```
 
-   在 `<entry key="order" value="3" />`，编辑每个节点的值以设置身份验证评估的顺序。
+   In `<entry key="order" value="3" />`，编辑每个节点的值以设置身份验证评估的顺序。
 
-1. 要导入更新的文件，请在“用户管理”中，单击配置>导入和导出配置文件。
-1. 单击“浏览”(Browse)查找文件，单击“导入”(Import)，然后单击“确定”(OK)。
+1. 要导入更新的文件，请在“用户管理”中单击“配置”>“导入和导出配置文件”。
+1. 单击“浏览”查找文件，单击“导入”，然后单击“确定”。

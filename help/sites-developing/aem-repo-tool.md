@@ -1,7 +1,7 @@
 ---
 title: AEM Repo 工具
 seo-title: AEM Repo Tool
-description: AEM Repo工具是一种简单的解决方案，可通过与FTP类似的命令行在本地文件系统和AEM服务器之间传输JCR内容。 AEM Repo工具与Jackrabbit FileVault工具类似，但速度更快，依赖关系最小，是一个简单的bash脚本。
+description: AEM Repo Tool是一个简单的解决方案，它通过类似于FTP的命令行在本地文件系统和AEM服务器之间传输JCR内容。 AEM Repo工具与Jackrabbit FileVault工具类似，但速度更快，具有最小的依赖关系，而且是一个简单的bash脚本。
 seo-description: The AEM Repo Tool is a simple solution to transfer JCR content between your local filesystem and the AEM server via the command line comparable to FTP. The AEM Repo Tool is similar to the Jackrabbit FileVault tool, but is faster, has minimal dependencies, and is a simple bash script.
 uuid: 6c4a3504-e8e8-46c0-83cb-c18d9791f93e
 contentOwner: User
@@ -19,13 +19,13 @@ ht-degree: 2%
 
 # AEM Repo 工具{#aem-repo-tool}
 
-AEM Repo工具是一种简单的解决方案，可通过与FTP类似的命令行在本地文件系统和AEM服务器之间传输JCR内容。 AEM Repo工具类似于 [Jackrabbit FileVault工具](/help/sites-developing/ht-vlttool.md)，但速度更快，具有最小的依赖项，并且是一个简单的bash脚本。
+AEM Repo Tool是一个简单的解决方案，它通过类似于FTP的命令行在本地文件系统和AEM服务器之间传输JCR内容。 AEM Repo工具类似于 [Jackrabbit FileVault工具](/help/sites-developing/ht-vlttool.md)，但速度更快，具有最小的依赖关系，并且是一个简单的bash脚本。
 
-此工具可简化开发人员的文件传输，还可集成到IntelliJ和Eclipse中，以提高开发效率。
+此工具简化了开发人员的文件传输，并且还可以集成到IntelliJ和Eclipse中，以提高开发效率。
 
 ## 概述 {#overview}
 
-对于 `jcr_root` 文件系统上的文件结构， AEM Repo工具会为整个子树创建一个包，该包具有单个过滤器，并将其推送到服务器（类似于FTP） `put`)，从服务器( `get`)或比较差异( `status` 和 `diff`)。
+对于内的给定路径 `jcr_root` filevault结构在文件系统上， AEM Repo Tool为整个子树创建一个带有单个过滤器的包，并将其推送到服务器（与FTP类似） `put`)，从服务器获取它( `get`)或比较两者之间的差异( `status` 和 `diff`)。
 
 该工具不支持多个过滤器路径或FileVault的 `filter.xml`.
 
@@ -35,9 +35,9 @@ AEM Repo工具是一种简单的解决方案，可通过与FTP类似的命令行
 
 ## 下载和文档 {#download-and-documentation}
 
-的 [AEM Repo工具可通过此链接在GitHub上提供](https://github.com/Adobe-Marketing-Cloud/tools/tree/master/repo) 以及详细的安装和使用说明。
+此 [通过此链接，可在GitHub上使用AEM Repo工具](https://github.com/Adobe-Marketing-Cloud/tools/tree/master/repo) 以及详细的安装和使用说明。
 
-如果您要下载AEM Repo工具的源，请参阅下面链接的GitHub项目。
+如果要下载AEM Repo工具的源，请参阅下面链接的GitHub项目。
 
 GITHUB上的代码
 

@@ -1,7 +1,7 @@
 ---
 title: AEM Mobile On-Demand
 seo-title: AEM Mobile On-Demand
-description: 请阅读本页，以开始管理AEM Mobile On-Demand Services应用程序。 它概述了AEM管理员在On-Demand服务中的角色和职责。
+description: 请按照本页面开始管理AEM Mobile On-Demand Services应用程序。 它概述了AEM管理员对On-Demand Services的角色和职责。
 seo-description: Follow this page to get started with administering AEM mobile On-Demand services app. It provides an overview of the roles and responsibilities of an AEM administrator for On-Demand services.
 uuid: fd99c032-287a-489b-9690-b18980c55c29
 contentOwner: msm-service
@@ -25,7 +25,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->如果您没有将AEM用作内容管理源，请参阅 [AEM Mobile On-demand Services帮助](https://helpx.adobe.com/digital-publishing-solution/topics.html).
+>如果您没有使用AEM作为内容管理源，请参阅 [AEM Mobile On-demand Services帮助](https://helpx.adobe.com/digital-publishing-solution/topics.html).
 
 ## AEM 管理员 {#aem-administrator}
 
@@ -33,17 +33,17 @@ ht-degree: 2%
 >
 >**先决条件:**
 >
->在开始设置AEM Mobile On-demand Services环境之前，请参阅 [AEM Mobile应用程序功能板或控制中心](/help/mobile/mobile-apps-ondemand-application-dashboard.md).
+>在开始为AEM Mobile On-demand Services设置环境之前，请参阅 [AEM Mobile Application Dashboard或控制中心](/help/mobile/mobile-apps-ondemand-application-dashboard.md).
 
-安 ***AEM管理员*** 负责通过使用创建向导创建新应用程序或导入现有应用程序，将新应用程序添加到AEM Mobile目录。 使用AEM Mobile创建新应用程序的AEM管理员 *创建向导* 通常从现成的引用示例中选择所需的应用程序模板之一，或者（在大多数情况下）从创建的自定义应用程序模板中选择 *AEM开发人员。*
+An ***AEM管理员*** 负责向AEM Mobile目录中添加新应用程序，方法是使用创建向导创建新应用程序，或导入现有应用程序。 使用AEM Mobile创建新应用程序的AEM管理员 *创建向导* 通常情况下，从我们现成的参考示例中选择一个所需的应用程序模板，或者（在大多数情况下）从以下对象创建的自定义应用程序模板中进行选择 *AEM开发人员。*
 
 >[!NOTE]
 >
->有关设置AEM组和权限的更多信息，请单击 [创建用户角色并授予访问权限](https://helpx.adobe.com/digital-publishing-solution/help/account-admin-dps.html) 中。
+>有关设置AEM组和权限的详细信息，请单击 [创建用户角色和授予访问权限](https://helpx.adobe.com/digital-publishing-solution/help/account-admin-dps.html) 在线帮助中。
 
-使用AEM创建应用程序时， AEM Mobile On-demand Services管理员负责执行以下任务：
+使用AEM Mobile On-demand Services创建应用程序时，AEM管理员负责以下任务：
 
-* [设置AEM Mobile](/help/mobile/aem-mobile-setup.md)，其中包含
+* [设置AEM Mobile](/help/mobile/aem-mobile-setup.md)，涵盖
 
    * AEM Mobile配置
    * 为AEM Mobile创建项目
@@ -51,7 +51,7 @@ ht-degree: 2%
    * 添加AEM Mobile用户角色和分配权限
 
 * [配置用户和用户组](/help/mobile/aem-mobile-configure-users.md)
-* [使用预检预览](/help/mobile/aem-mobile-manage-ondemand-services.md)
+* [使用Preflight预览](/help/mobile/aem-mobile-manage-ondemand-services.md)
 * [管理内容服务](/help/mobile/developing-content-services.md)
 
 ## 其他资源 {#additional-resources}

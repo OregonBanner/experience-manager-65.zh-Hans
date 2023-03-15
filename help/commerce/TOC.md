@@ -14,7 +14,7 @@ ht-degree: 70%
 # 商务 {#commerce}
 
 + [AEM Content and Commerce](/help/commerce/home.md)
-+ [对AEM内容和商务的显着更改](cif/changes.md)
++ [对AEM Content and Commerce的重要更改](cif/changes.md)
 + [简介和概述](cif/introduction.md)
 + 集成 {#integrations}
    + [Adobe Commerce](cif/integrating/magento.md)
@@ -49,13 +49,13 @@ ht-degree: 70%
    + [概述](/help/commerce/cif-classic/home.md)
    + 部署 {#deploying}
       + [电子商务概述](/help/commerce/cif-classic/deploying/ecommerce.md)
-      + [SAPCommerce Cloud](/help/commerce/cif-classic/deploying/sap-commerce-cloud.md)
+      + [SAPCOMMERCE CLOUD](/help/commerce/cif-classic/deploying/sap-commerce-cloud.md)
    + 管理 {#administering}
       + [电子商务](/help/commerce/cif-classic/administering/ecommerce.md)
-      + [概念 ](/help/commerce/cif-classic/administering/concepts.md)
+      + [概念](/help/commerce/cif-classic/administering/concepts.md)
       + [管理通用电子商务](/help/commerce/cif-classic/administering/generic.md)
-      + [SAPCommerce Cloud](/help/commerce/cif-classic/administering/sap-commerce-cloud.md)
+      + [SAPCOMMERCE CLOUD](/help/commerce/cif-classic/administering/sap-commerce-cloud.md)
    + 开发 {#developing}
       + [电子商务](/help/commerce/cif-classic/developing/ecommerce.md)
-      + [开发（一般）](/help/commerce/cif-classic/developing/generic.md)
-      + [使用SAP进行开发Commerce Cloud](/help/commerce/cif-classic/developing/sap-commerce-cloud.md)
+      + [开发（通用）](/help/commerce/cif-classic/developing/generic.md)
+      + [使用SAPCommerce Cloud进行开发](/help/commerce/cif-classic/developing/sap-commerce-cloud.md)

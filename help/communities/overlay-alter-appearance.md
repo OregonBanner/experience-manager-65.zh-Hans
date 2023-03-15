@@ -22,11 +22,11 @@ ht-degree: 0%
 
 ## 修改脚本 {#modify-the-script}
 
-comment.hbs脚本负责为每个注释创建整体HTML。
+comment.hbs脚本负责为每个评论创建整体HTML。
 
-要在每个已发布评论旁边不显示头像，请执行以下操作：
+不显示每个已发布评论旁的头像：
 
-1. 复制 `comment.hbs`从 `libs`to `apps`
+1. 复制 `comment.hbs`起始日期 `libs`到 `apps`
 
    1. 选择 `/libs/social/commons/components/hbs/comments/comment/comment.hbs`
    1. 选择 **[!UICONTROL 复制]**
@@ -35,16 +35,16 @@ comment.hbs脚本负责为每个注释创建整体HTML。
 
 1. 打开覆盖的 `comment.hbs`
 
-   * 双击节点 `comment.hbs` in `/apps/social/commons/components/hbs/comments/comment folder`
+   * 双击节点 `comment.hbs` 在 `/apps/social/commons/components/hbs/comments/comment folder`
 
-1. 找到以下行，并删除或注释它们：
+1. 查找以下行，然后删除它们或将其注释掉：
 
 ```xml
   <aside class="scf-comment-author">
         <img class="scf-comment-avatar {{#if topLevel}}withTopLevel{{/if}}" src="{{author.avatarUrl}}"></img>
 ```
 
-删除线条，或在线条周围设置 `<!--` 和 `-->` 去评论一下。 此外，还会添加字符“xxx”作为头像所在位置的视觉指示器。
+删除这些行，或者用以下内容将它们围起来 `<!--` 和 `-->` 让他们置之不理。 此外，字符“xxx”将被添加为显示头像位置的可视指示器。
 
 ```xml
    xxx
@@ -55,22 +55,22 @@ comment.hbs脚本负责为每个注释创建整体HTML。
 
 ### 复制叠加 {#replicate-the-overlay}
 
-使用复制工具将覆盖的评论组件推送到发布实例。
+使用复制工具将覆盖的注释组件推送到发布实例。
 
 >[!NOTE]
 >
->一种更为可靠的复制形式是在包管理器和 [激活](/help/sites-administering/package-manager.md#replicating-packages) 它。 可以导出和存档资源包。
+>更可靠的复制形式是在包管理器中创建包，并且 [激活](/help/sites-administering/package-manager.md#replicating-packages) 它。 可以导出和存档资源包。
 
-在全局导航中，选择 **[!UICONTROL 工具]** > **[!UICONTROL 部署]** > **[!UICONTROL 复制]** 单击 **[!UICONTROL 激活树]**.
+在全局导航中，选择 **[!UICONTROL 工具]** > **[!UICONTROL 部署]** > **[!UICONTROL 复制]** 并单击 **[!UICONTROL 激活树]**.
 
-对于开始路径，输入 `/apps/social/commons` 选择 **[!UICONTROL 激活]**.
+对于“起始路径”，输入 `/apps/social/commons` 并选择 **[!UICONTROL 激活]**.
 
 ![verify-content-template](assets/verify-content-template.png)
 
 ### 查看结果 {#view-results}
 
-如果您以管理员身份登录发布实例，例如以管理员/管理员身份登录https://localhost:4503/crx/de ，则可以验证覆盖的组件是否位于此处。
+如果您以管理员身份(例如，以admin/admin身份登录https://localhost:4503/crx/de )登录到发布实例，则可以验证是否存在覆盖的组件。
 
-如果您注销，并重新登录为 `aaron.mcdonald@mailinator.com/password` 刷新页面后，您会发现发布的评论不再显示为头像，而是显示一个简单的“xxx”。
+如果您注销并重新登录为 `aaron.mcdonald@mailinator.com/password` 并刷新页面，您会发现发布的评论不再显示头像，而是显示一个简单的“xxx”。
 
 ![create-template-component](assets/create-template-component.png)

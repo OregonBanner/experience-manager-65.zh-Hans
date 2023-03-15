@@ -325,7 +325,7 @@ AEM用户界面针对大屏幕（通常是笔记本电脑和台式计算机）�
 
 **Microsoft Windows 7+**
 
-要成功与Microsoft Windows 7+连接到未使用SSL保护的AEM实例，必须在Windows中启用通过不安全网络进行的基本身份验证。 这要求在WebClient的Windows注册表中进行更改：
+要成功与Microsoft Windows 7+连接到未使用SSL进行保护的AEM实例，必须在Windows中启用通过不安全网络进行的基本身份验证。 这要求在WebClient的Windows注册表中进行更改：
 
 1. 找到注册表子项：
 

@@ -45,7 +45,7 @@ AEM 允许您在网站上创建和使用与 Adobe Campaign 交互的表单。可
 
 您必须先在 AEM 应用程序中启用不同的模板，然后才能创建特定于 Adobe Campaign 的表单。
 
-要实现此目的，请参阅 [模板文档](/help/sites-developing/templates.md#template-availability).
+要执行此操作，请参阅 [模板文档](/help/sites-developing/templates.md#template-availability).
 
 ## 创建表单 {#creating-a-form}
 
@@ -56,7 +56,7 @@ AEM 允许您在网站上创建和使用与 Adobe Campaign 交互的表单。可
 >使用 Adobe Campaign Classic 或 Adobe Campaign Standard 时，请确保页面的 **jcr:content** 节点上的 **acMapping** 属性分别设置为 **mapRecipient** 或 **profile**。
 
 1. 在 AEM 的“站点”中，导航到要创建新页面的位置。
-1. 创建页面并选择 **Adobe Campaign Classic个人资料**&#x200B;或&#x200B;**Adobe Campaign Standard个人资料** 单击 **下一个**.
+1. 创建页面并选择 **Adobe Campaign Classic配置文件**&#x200B;或&#x200B;**Adobe Campaign Standard配置文件** 并单击 **下一个**.
 
    ![chlimage_1-43](assets/chlimage_1-43a.png)
 
@@ -80,7 +80,7 @@ Adobe Campaign 的专用表单具有特定的组件。这些组件提供了一�
 >
 >如果所需的模板不可用，请参阅 [使模板可用](/help/sites-authoring/adobe-campaign.md).
 
-此部分仅详细介绍了 Adobe Campaign 的特定链接。有关如何在Adobe Experience Manager中使用表单的更全面概述，请参阅 [编辑模式组件](/help/sites-authoring/default-components-foundation.md).
+此部分仅详细介绍了 Adobe Campaign 的特定链接。有关如何在Adobe Experience Manager中使用表单的更一般概述的更多信息，请参阅 [Editmode组件](/help/sites-authoring/default-components-foundation.md).
 
 1. 选择&#x200B;**打开属性**，然后在“云服务”中，添加 Adobe Campaign 配置并选择复选标记以保存所做的更改。
 
@@ -90,21 +90,21 @@ Adobe Campaign 的专用表单具有特定的组件。这些组件提供了一�
 
    ![chlimage_1-46](assets/chlimage_1-46a.png)
 
-1. 单击 **高级** 选项卡上，选择表单的类型 —  **订阅、取消订阅、** 或 **保存配置文件** 单击 **好。**&#x200B;每个表单只能具有一种类型。
+1. 单击 **高级** 选项卡并选择表单类型 —  **订阅，取消订阅，** 或 **保存配置文件** 并单击 **好的。**&#x200B;每个表单只能具有一种类型。
 
    * **Adobe Campaign: 保存配置文件**：允许您在 Adobe Campaign 中创建或更新收件人（默认值）。
    * **Adobe Campaign: 订阅服务**：允许您在 Adobe Campaign 中管理收件人的订阅。
    * **Adobe Campaign: 取消订阅服务**：允许您在 Adobe Campaign 中取消收件人的订阅。
 
 1. 每个表单上必须具有一个&#x200B;**已加密的主要密钥**&#x200B;组件。此组件定义将用于接受 Adobe Campaign 配置文件的已加密主要密钥的 URL 参数。在“组件”中，选择“Adobe Campaign”，以便只显示这些组件。
-1. 拖动组件 **已加密的主密钥** 到表单（任意位置），然后单击或点按 **配置** 图标。 在 **Adobe Campaign** 选项卡中，为 URL 参数指定任意名称。单击或点按复选标记以保存所做的更改。
+1. 拖动组件 **加密的主密钥** 到表单（任何位置），然后单击或点按 **配置** 图标。 在 **Adobe Campaign** 选项卡中，为 URL 参数指定任意名称。单击或点按复选标记以保存所做的更改。
 
    为此表单生成的链接需要使用此 URL 参数为其分配 Adobe Campaign 配置文件的已加密主要密钥。已加密的主要密钥必须进行相应的 URL（百分比）编码。
 
    ![chlimage_1-47](assets/chlimage_1-47a.png)
 
 1. 根据需要，向表单中添加组件，例如文本字段、日期字段、复选框字段、选项字段等。有关每个组件的更多信息，请参阅 [Adobe Campaign 表单组件](/help/sites-authoring/adobe-campaign-components.md)。
-1. 单击“配置”图标以打开组件。例如， **文本字段（营销活动）** ，请更改标题和文本。
+1. 单击“配置”图标以打开组件。例如，在 **文本字段（营销活动）** 组件，更改标题和文本。
 
    单击 **Adobe Campaign** 以将表单字段映射到 Adobe Campaign 元数据变量。提交表单后，映射的字段会在 Adobe Campaign 中进行更新。在变量选取器中，只能选择具有匹配类型的字段（例如，对于文本字段，只能选择字符串变量）。
 
@@ -112,7 +112,7 @@ Adobe Campaign 的专用表单具有特定的组件。这些组件提供了一�
 
    >[!NOTE]
    >
-   >您可以按照以下说明添加/删除在收件人表中显示的字段： [https://blogs.adobe.com/experiencedelivers/experience-management/aem-campaign-integration/](https://blogs.adobe.com/experiencedelivers/experience-management/aem-campaign-integration/)
+   >您可以按照下面的说明添加/删除收件人表中显示的字段： [https://blogs.adobe.com/experiencedelivers/experience-management/aem-campaign-integration/](https://blogs.adobe.com/experiencedelivers/experience-management/aem-campaign-integration/)
 
 1. 单击&#x200B;**发布页面**。该页面会在您的站点上激活。您可以通过转到 AEM 发布实例来查看它。此外，您还可以[测试表单](#testing-a-form)。
 
@@ -126,20 +126,20 @@ Adobe Campaign 的专用表单具有特定的组件。这些组件提供了一�
 
 >[!NOTE]
 >
->您必须具有 **已加密的主密钥** 组件。 在“组件”中，选择“Adobe Campaign”，以便只显示这些组件。
+>您必须拥有 **加密的主键** 每个表单上的组件。 在“组件”中，选择“Adobe Campaign”，以便只显示这些组件。
 >
 >在此过程中，虽然您手动输入了 EPK 编号，但实际上，用户可以在新闻稿中获得此页面的链接（无论是取消订阅、订阅还是更新配置文件）。EPK 会根据用户自动进行更新。
 >
->要创建该链接，请使用变量 **主要资源标识符**(Adobe Campaign Standard)或 **加密的标识符** (Adobe Campaign Classic)(例如， **文本与个性化（营销活动）** 组件)，链接到Adobe Campaign中的epk。
+>要创建该链接，您需要使用变量 **主要资源标识符**(Adobe Campaign Standard)或 **加密标识符** (Adobe Campaign Classic)(例如，在 **文本和个性化（营销活动）** 组件)，用于链接到Adobe Campaign中的epk。
 
 为此，您需要手动获取 Adobe Campaign 配置文件的 EPK，然后将其附加到 URL：
 
 1. 要获取 Adobe Campaign 配置文件的已加密的主要密钥 (EPK)，请执行以下操作：
 
-   * 在Adobe Campaign Standard中 — 导航到 **用户档案和受众** > **用户档案**，其中列出了现有配置文件。 确保表格显示 **主资源标识符** 字段(可通过单击/点按来配置 **配置列表**)。 复制所需配置文件的主要资源标识符。
-   * 在Adobe Campaign Classic，转到 **用户档案和目标** >  **收件人**，其中列出了现有配置文件。 确保表格显示 **加密的标识符** 字段(可通过右键单击某个条目并选择 **配置列表……**)。 复制所需配置文件的已加密标识符。
+   * 在Adobe Campaign Standard中 — 导航到 **用户档案和受众** > **配置文件**，其中列出了现有用户档案。 确保表显示 **主资源标识符** 列中的字段（这可以通过单击/点按进行配置） **配置列表**)。 复制所需配置文件的主要资源标识符。
+   * 在Adobe Campaign Classic中，转到 **配置文件和目标** >  **收件人**，其中列出了现有用户档案。 确保表显示 **加密标识符** 列中的字段(这可以通过右键单击条目并选择 **配置列表……**)。 复制所需配置文件的已加密标识符。
 
-1. 在AEM中，打开发布实例上的表单页面，并将步骤1中的EPK作为URL参数附加：使用您在创作表单时在EPK组件中定义的相同名称(例如： `?epk=...`)
+1. 在AEM中，打开发布实例上的表单页面，并将步骤1中的EPK作为URL参数附加：在创作表单时，请使用之前在EPK组件中定义的相同名称(例如： `?epk=...`)
 1. 现在，表单可用于修改与链接的 Adobe Campaign 配置文件相关联的数据和订阅。修改某些字段并提交表单后，您可以在 Adobe Campaign 内验证相应数据是否已更新。
 
 验证表单后，Adobe Campaign 数据库中的数据便会更新。

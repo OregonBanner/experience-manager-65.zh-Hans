@@ -19,14 +19,14 @@ ht-degree: 0%
 
 # 显示用户头像 {#displaying-the-user-avatar}
 
-登录用户的头像显示在AEM Forms工作区的右上角。 此外，组织层次结构中直接报表的变量会显示在“管理器视图”中。 您可以配置AEM Forms工作区，从数据库中选取用户图像，如LDAP服务器。
+登录用户的头像显示在AEM Forms工作区的右上角。 此外，组织层次结构中直接下属的头像显示在“经理”视图中。 您可以将AEM Forms工作区配置为从数据库（如LDAP服务器）中选取用户映像。
 
 >[!NOTE]
 >
->用户图像的支持宽高比为1:1。
+>用户图像的受支持长宽比为1:1。
 
-1. 使用下一步中所述的详细信息创建DSC。 有关更多信息，请参阅 [使用AEM Forms编程](https://www.adobe.com/go/learn_aemforms_programming_63) 的双曲余切值。
-1. 在DSC中，定义一个新的SPI，该SPI公开getCurrentUserImageUrl和getUserImageUrl方法，以获取AEM Forms用户的图像URL。 以下是Java™代码片段示例：
+1. 使用下一步中所述的详细信息创建DSC。 有关更多信息，请参阅中的“为AEM Forms开发组件”主题 [使用AEM Forms编程](https://www.adobe.com/go/learn_aemforms_programming_63) 指南。
+1. 在DSC中，定义一个新的SPI，公开getCurrentUserImageUrl和getUserImageUrl方法以获取AEM Forms用户的图像URL。 以下是示例Java™代码段：
 
    ```java
    public class DemoUserImageURLProviderService {
@@ -41,7 +41,7 @@ ht-degree: 0%
    }
    ```
 
-1. 创建component.xml文件。 请确保规范id为，如以下代码片段中所示。
+1. 创建一个component.xml文件。 请确保spec-id如下面的代码片段中所示。
 
    以下代码片段是一个示例。 根据您的特定要求对其进行自定义。
 

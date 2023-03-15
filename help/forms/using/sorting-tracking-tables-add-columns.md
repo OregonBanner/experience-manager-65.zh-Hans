@@ -1,7 +1,7 @@
 ---
 title: 自定义跟踪表
 seo-title: Customize tracking tables
-description: 如何自定义在任务表(显示在AEM Forms工作区的跟踪选项卡中)中显示的用户进程详细信息的显示。
+description: 如何自定义任务表中用户进程详细信息的显示，该表显示在AEM Forms工作区的“跟踪”选项卡中。
 seo-description: How-to customize the display of the details of user processes in the task table displayed in the tracking tab of AEM Forms workspace.
 uuid: 13d6ebf2-99d5-434f-85f9-b0cba5f5751a
 content-type: reference
@@ -18,7 +18,7 @@ ht-degree: 3%
 
 # 自定义跟踪表{#customize-tracking-tables}
 
-AEM Forms工作区中的跟踪选项卡用于显示涉及登录用户的进程实例的详细信息。 要查看跟踪表，请首先在左窗格中选择一个进程名称，以在中间窗格中查看其实例列表。 选择一个进程实例，以在右侧窗格中查看由此实例生成的任务列表。 默认情况下，表列显示以下任务属性（任务模型中的相应属性在括号中给出）：
+AEM Forms工作区中的“跟踪”选项卡用于显示与登录用户有关的进程实例的详细信息。 要查看跟踪表，请先在左窗格中选择进程名称，然后在中间窗格中查看其实例列表。 选择一个进程实例，以在右侧窗格中查看由此实例生成的任务表。 默认情况下，表列显示以下任务属性（任务模型中的相应属性在括号中给出）：
 
 * ID ( `taskId`)
 * 名称 ( `stepName`)
@@ -28,14 +28,14 @@ AEM Forms工作区中的跟踪选项卡用于显示涉及登录用户的进程�
 * 完成时间( `completeTime`)
 * 所有者 ( `currentAssignment.queueOwner`)
 
-任务模型中可显示在任务表中的其余属性包括：
+任务模型中可在任务表中显示的其余属性包括：
 
 <table>
  <tbody>
   <tr>
    <td><p>actionInstanceId</p> </td>
    <td><p>isOpenFullScreen</p> </td>
-   <td><p>reminderCount</p> </td>
+   <td><p>提醒计数</p> </td>
   </tr>
   <tr>
    <td><p>classOfTask</p> </td>
@@ -48,8 +48,8 @@ AEM Forms工作区中的跟踪选项卡用于显示涉及登录用户的进程�
    <td><p>savedFormCount</p> </td>
   </tr>
   <tr>
-   <td><p>contentType</p> </td>
-   <td><p>isShowAttachments</p> </td>
+   <td><p>内容类型</p> </td>
+   <td><p>isshowAttachments</p> </td>
    <td><p>serializedImageTicket</p> </td>
   </tr>
   <tr>
@@ -63,18 +63,18 @@ AEM Forms工作区中的跟踪选项卡用于显示涉及登录用户的进程�
    <td><p>serviceTitle</p> </td>
   </tr>
   <tr>
-   <td><p>currentAssignment</p> </td>
+   <td><p>当前分配</p> </td>
    <td><p>nextReminder</p> </td>
-   <td><p>showACLAactions</p> </td>
+   <td><p>showACLActions</p> </td>
   </tr>
   <tr>
-   <td><p>截止时间</p> </td>
+   <td><p>截止日期</p> </td>
    <td><p>numForms</p> </td>
    <td><p>showDirectActions</p> </td>
   </tr>
   <tr>
    <td><p>描述</p> </td>
-   <td><p>numFormsToBeSaved</p> </td>
+   <td><p>numformsToBeSaved</p> </td>
    <td><p>状态</p> </td>
   </tr>
   <tr>
@@ -95,12 +95,12 @@ AEM Forms工作区中的跟踪选项卡用于显示涉及登录用户的进程�
   <tr>
    <td><p>isCustomUI</p> </td>
    <td><p>processInstanceId</p> </td>
-   <td><p>taskFormType</p> </td>
+   <td><p>任务表单类型</p> </td>
   </tr>
   <tr>
    <td><p>isDefaultImage</p> </td>
-   <td><p>processInstanceStatus</p> </td>
-   <td><p>taskUserInfo</p> </td>
+   <td><p>processinstancestatus</p> </td>
+   <td><p>任务用户信息</p> </td>
   </tr>
   <tr>
    <td><p>isLocked</p> </td>
@@ -115,11 +115,11 @@ AEM Forms工作区中的跟踪选项卡用于显示涉及登录用户的进程�
  </tbody>
 </table>
 
-对于任务表中的以下自定义，您需要在源代码中进行语义更改。 请参阅 [自定义AEM Forms工作区简介](/help/forms/using/introduction-customizing-html-workspace.md) 了解如何使用工作区SDK进行语义更改，以及如何从更改的源构建缩小的包。
+对于任务表中的以下自定义，您需要在源代码中进行语义更改。 参见 [自定义AEM Forms工作区简介](/help/forms/using/introduction-customizing-html-workspace.md) 有关如何使用Workspace SDK进行语义更改以及如何从更改的源构建缩小的包。
 
 ## 更改表列及其顺序 {#changing-table-columns-and-their-order}
 
-1. 要修改表中显示的任务属性及其顺序，请配置文件/ws/js/runtime/templates/processinstancehistory.html :
+1. 要修改表中显示的任务属性及其顺序，请配置文件/ws/js/runtime/templates/processinstancehistory.html ：
 
    ```html
    <table>
@@ -157,7 +157,7 @@ AEM Forms工作区中的跟踪选项卡用于显示涉及登录用户的进程�
 
 要在单击列标题时对任务列表表进行排序，请执行以下操作：
 
-1. 为注册点击处理程序 `.fixedTaskTableHeader th` 文件 `js/runtime/views/processinstancehistory.js`.
+1. 注册点击处理程序 `.fixedTaskTableHeader th` 在文件中 `js/runtime/views/processinstancehistory.js`.
 
    ```javascript
    events: {
@@ -167,7 +167,7 @@ AEM Forms工作区中的跟踪选项卡用于显示涉及登录用户的进程�
    }
    ```
 
-   在处理程序中，调用 `onTaskTableHeaderClick` 函数 `js/runtime/util/history.js`.
+   在处理程序中，调用 `onTaskTableHeaderClick` 功能 `js/runtime/util/history.js`.
 
    ```javascript
    onTaskTableHeaderClick: function (event) {
@@ -175,11 +175,11 @@ AEM Forms工作区中的跟踪选项卡用于显示涉及登录用户的进程�
    }
    ```
 
-1. 公开 `TaskTableHeaderClick` 方法 `js/runtime/util/history.js`.
+1. 公开 `TaskTableHeaderClick` 中的方法 `js/runtime/util/history.js`.
 
-   方法从点击事件中查找任务属性，对该属性中的任务列表进行排序，并呈现带有排序任务列表的任务表。
+   该方法从单击事件中查找任务属性，对该属性上的任务列表进行排序，然后使用排序的任务列表来呈现任务表。
 
-   通过提供比较器函数，使用任务列表集合上的骨干排序函数进行排序。
+   通过提供比较器函数，使用任务列表集合上的主干排序函数完成排序。
 
    ```javascript
        return {

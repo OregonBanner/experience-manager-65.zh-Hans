@@ -1,7 +1,7 @@
 ---
 title: 创作页面
 seo-title: Authoring Pages
-description: 有两个关于使用AEM进行创作的概述。 (1)作者的首要步骤 — 新作者的简介，以及(2)页面创作快速指南 — 主要操作的快速指南（概要）。
+description: 使用AEM创作有两种概述。 (1)面向作者的首要步骤 — 面向新作者的简介；(2)页面创作快速指南 — 主要操作的快速指南（高级别）。
 seo-description: There are two overviews to authoring with AEM. (1) First Steps for Authors - an introduction for new authors, and (2) Quick Guide to Authoring Pages - a quick guide (high-level) to the main actions.
 uuid: 95d12bd6-c51d-4b7c-9d67-a152a822eb01
 contentOwner: Chris Bohnert
@@ -19,7 +19,7 @@ ht-degree: 86%
 
 # 创作页面{#authoring-pages}
 
-以下内容概述了如何使用AEM进行创作：
+下面提供了使用AEM进行创作的概述：
 
 * [创作的首要步骤 - 针对新作者的简介](/help/sites-classic-ui-authoring/classic-page-author-first-steps.md)
 

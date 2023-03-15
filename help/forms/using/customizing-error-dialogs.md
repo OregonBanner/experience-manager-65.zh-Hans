@@ -1,7 +1,7 @@
 ---
 title: 自定义错误对话框
 seo-title: Customizing error dialogs
-description: 如何自定义LiveCycleAEM Forms工作区的错误对话框，以添加不同的故障描述。
+description: 如何自定义LiveCycleAEM Forms工作区的错误对话框，以添加其他错误描述。
 seo-description: How-to customize the error dialogs of LiveCycle AEM Forms workspace to add different fault descriptions.
 uuid: 5ed1da68-bd5b-4a36-9a14-9d61733237e6
 content-type: reference
@@ -18,11 +18,11 @@ ht-degree: 4%
 
 # 自定义错误对话框 {#customizing-error-dialogs}
 
-AEM Forms工作区允许您自定义错误对话框。 执行 [AEM Forms工作区自定义的一般步骤](/help/forms/using/generic-steps-html-workspace-customization.md) 按照以下步骤自定义错误对话框。
+AEM Forms工作区允许您自定义错误对话框。 执行 [AEM Forms工作区自定义的一般步骤](/help/forms/using/generic-steps-html-workspace-customization.md) ，然后执行以下步骤以自定义错误对话框。
 
 ## 自定义文本 {#customizing-text}
 
-1. 在 `/apps/ws/locales/en-US/translation.json` ，请更改 `wserror` 值。 例如：
+1. 在 `/apps/ws/locales/en-US/translation.json` 文件，更改值 `wserror` 到自定义值。 例如：
 
    ```json
    "wserror" : {
@@ -52,7 +52,7 @@ AEM Forms工作区允许您自定义错误对话框。 执行 [AEM Forms工作�
 
 ## 自定义CSS {#customizing-css}
 
-1. 您可以通过在 `/apps/ws/css/newStyle.css` 文件：
+1. 您可以通过添加以下代码片段来更新对话框、标题、内容区域、脚栏、脚栏按钮和其他附属项 `/apps/ws/css/newStyle.css` 文件：
 
    ```css
    /*-------- Error Dialog -------------------------------------------------------------------------------------------------------------------*/
@@ -187,7 +187,7 @@ AEM Forms工作区允许您自定义错误对话框。 执行 [AEM Forms工作�
    }
    ```
 
-1. 对于脚条按钮跨度，请将 `.error-dialog` 和 `.foot-bar` 按钮跨复合列表。 要进行此更改，请在newStyle.css文件中添加以下内容：
+1. 对于脚杆按钮跨度，将 `.error-dialog` 和 `.foot-bar` 按钮跨越复合列表。 要进行此更改，请在newStyle.css文件中添加以下内容：
 
    ```css
    .browse-btn span, .attachementbtn span, .cancelAttachmentUpdate span, #taskAttachmentsContainer .uploadStatus span, .submitNoteButton span, .updateNoteButton span, .cancelNoteUpdate span,
@@ -224,7 +224,7 @@ AEM Forms工作区允许您自定义错误对话框。 执行 [AEM Forms工作�
 
 >[!NOTE]
 >
->如果您引用的是其他图像，请在 `/apps/ws/images`.
+>如果引用其他图像，请将其添加到下的所需层次结构中 `/apps/ws/images`.
 
 ## 示例 {#examples}
 

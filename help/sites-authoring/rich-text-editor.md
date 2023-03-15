@@ -46,9 +46,9 @@ ht-degree: 68%
 
 ## 全屏编辑 {#full-screen-editing}
 
-对于基于文本的组件，点按工具栏中的全屏模式 ![](do-not-localize/screen_shot_2018-03-21at163236.png) 打开富文本编辑器，并隐藏页面内容的其余部分。
+对于基于文本的组件，从工具栏中点按全屏模式 ![](do-not-localize/screen_shot_2018-03-21at163236.png) 打开富文本编辑器并隐藏页面内容的其余部分。
 
-全屏模式显示可用于创作的所有已配置选项。 可用性是选项 [取决于配置](/help/sites-administering/rich-text-editor.md).
+全屏模式会显示可用于创作的所有已配置选项。 可用性是选项 [取决于配置](/help/sites-administering/rich-text-editor.md).
 
 ![screen_shot_2018-03-21at163248](assets/screen_shot_2018-03-21at163248.png)
 
@@ -65,4 +65,4 @@ ht-degree: 68%
 
 >[!NOTE]
 >
->将嵌套列表从Microsoft Word复制到RTE中可能会产生不一致的结果，并且在RTE中粘贴文本后可能需要手动调整。
+>将嵌套列表从Microsoft Word复制到RTE中可能会产生不一致的结果，并且在RTE中粘贴文本后可能需要手动进行调整。

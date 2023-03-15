@@ -19,22 +19,22 @@ ht-degree: 0%
 
 # 在Windows Vista上配置SSL {#configuring-ssl-on-windows-vista}
 
-要在Windows Vista™上配置SSL，您需要一个包含RSA密钥的SSL证书进行身份验证。 您可以使用Java密钥工具创建证书。
+要在Windows Vista™上配置SSL，您需要具有RSA密钥的SSL证书以进行身份验证。 您可以使用Java keytool创建证书。
 
 >[!NOTE]
 >
->Windows Vista无法与DSA密钥配合使用。
+>Windows Vista不能使用DSA密钥。
 
-您可以使用包含创建证书和密钥库所需的所有信息的单个命令来运行密钥工具。
+您可以使用包含创建证书和密钥库所需的所有信息的单个命令来运行keytool。
 
 **创建SSL证书**
 
 1. 在命令提示符下，导航到 *`[JAVA HOME]`*/bin并键入以下命令以创建证书和密钥库：
 
-   `keytool -genkey -keyalg RSA -dname "CN=`*主机名* `, OU=`*群组名称* `, O=`*公司名称* `,L=`*城市名称* `, S=`*州* `, C=`*国家/地区代码* `" -alias`*&quot;LC证书&quot;* `-keypass` `key`*_* *密码* `-keystore`*密钥重命名* `.keystore`
+   `keytool -genkey -keyalg RSA -dname "CN=`*主机名* `, OU=`*组名称* `, O=`*公司名称* `,L=`*城市名称* `, S=`*状态* `, C=`*国家/地区代码* `" -alias`*&quot;LC Cert&quot;* `-keypass` `key`*_* *密码* `-keystore`*keystorename* `.keystore`
 
    >[!NOTE]
    >
-   >替换 *`[JAVA_HOME]`使用安装JDK的目录，并将斜体文本替换为与您的环境对应的值。*
+   >Replace *`[JAVA_HOME]`替换为安装JDK的目录，并将斜体文本替换为与您的环境对应的值。*
 
 1. 类型 `changeit` 作为密码。 此密码是Java安装的默认密码，系统管理员可能已更改此密码。

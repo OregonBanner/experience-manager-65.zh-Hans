@@ -20,11 +20,11 @@ ht-degree: 5%
 
 # 社区站点 {#communities-sites}
 
-本节面向那些管理AEM Communities并熟悉AEM Communities功能的用户。
+本节适用于那些管理AEM Communities并假定熟悉AEM Communities功能的人员。
 
 ## 概述 {#overview}
 
-有关概述和快速入门教程，请访问：
+有关概述和入门教程，请访问：
 
 * [AEM Communities概述](overview.md)
 * [AEM Communities 快速入门](getting-started.md)
@@ -34,7 +34,7 @@ ht-degree: 5%
 
 ### 社区站点创建和管理 {#communities-site-creation-and-management}
 
-* 社区 [控制台](consoles.md)
+* Communities [控制台](consoles.md)
 
    * [Sites](sites-console.md)
 
@@ -45,7 +45,7 @@ ht-degree: 5%
    * [报告](reports.md)
 
 
-* 社区 [*工具*](tools.md):
+* Communities [*工具*](tools.md)：
 
    * [站点模板](sites.md)
    * [组模板](tools-groups.md)
@@ -57,51 +57,51 @@ ht-degree: 5%
 
 ### 用户生成的内容 {#user-generated-content}
 
-AEM Communities的一项主要功能是，通过登录网站访客（成员）生成用户生成的内容(UGC)。 要了解有关使用UGC的更多信息，请访问：
+AEM Communities的一个主要功能是通过登录网站访客（成员）生成用户生成的内容(UGC)。 要了解有关使用UGC的更多信息，请访问：
 
-* [常用UGC存储](working-with-srp.md):UGC共享存储SRP的选择
-* [审核UGC](moderate-ugc.md):受信任的成员可以批量审核或在上下文中审核UGC
-* [标记UGC](tag-ugc.md):功能可配置为允许成员标记内容
-* [翻译UGC](translate-ugc.md):功能可配置为翻译所有UGC或允许成员翻译所选帖子
-* [Analytics配置](analytics.md):使Adobe Analytics能够报告与成员活动有关的各种量度
+* [通用UGC存储](working-with-srp.md)：为UGC的共享存储选择SRP
+* [正在审核UGC](moderate-ugc.md)：受信任成员可以批量或上下文中审核UGC
+* [标记UGC](tag-ugc.md)：可以将功能配置为允许成员标记内容
+* [翻译UGC](translate-ugc.md)：可以将功能配置为翻译所有UGC或允许成员翻译选定的帖子
+* [Analytics配置](analytics.md)：启用Adobe Analytics以报告有关成员活动的各种指标
 
 ### 社区成员 {#community-members}
 
-* [管理用户和用户组](users.md):社区成员和成员组（包括特权成员）的详细信息。
-* [贡献限制](limits.md):能够限制由新成员发布的内容。
-* [隧道服务](deploy-communities.md#tunnel-service-on-author):允许从创作环境访问发布端成员和成员组。
-* [“成员”和“组”控制台](members.md):允许从创作环境创建和管理发布端成员和成员组。
-* [用户同步](sync.md):用于在多个发布实例中同步成员和成员组。
-* [使用Facebook和Twitter进行社交登录](social-login.md):站点访客能够使用其Facebook或Twitter凭据成为社区成员。
-* [评分和徽章](implementing-scoring.md):能够分配徽章以识别成员的角色，以及通过成员参与社区获得徽章。
-* [通知](notifications.md):能够向成员发送其所关注活动的通知。
-* [订阅](subscriptions.md):允许成员使用外部电子邮件与社区交互。
-* [消息传送](messaging.md):让成员能够使用内部消息与社区交互。
+* [管理用户和用户组](users.md)：社区成员和成员组（包括拥有权限的成员）的详细信息。
+* [贡献限制](limits.md)：限制新成员发布的功能。
+* [通道服务](deploy-communities.md#tunnel-service-on-author)：允许从创作环境访问发布端成员和成员组。
+* [成员和组控制台](members.md)：允许从创作环境创建和管理发布端成员和成员组。
+* [用户同步](sync.md)：用于跨多个发布实例同步成员和成员组。
+* [使用Facebook和Twitter进行社交登录](social-login.md)：允许网站访客使用其Facebook或Twitter凭据成为社区成员。
+* [评分和徽章](implementing-scoring.md)：能够分配徽章以标识成员的角色，并且成员能够通过参与社区来获取徽章。
+* [通知](notifications.md)：能够让成员收到其所关注活动的通知。
+* [订阅](subscriptions.md)：成员可使用外部电子邮件与社区进行交互。
+* [消息传送](messaging.md)：成员可以使用内部消息与社区进行交互。
 
 ### 启用功能 {#enablement-features}
 
-* [配置启用](enablement.md):有关正确设置启用功能的必需信息。
-* [Analytics配置](analytics.md):有关启用Adobe Analytics for Communities功能的必要信息。
-* [标记支持资源](tag-resources.md):创建启用目录时必需的信息。
+* [配置启用](enablement.md)：正确设置启用功能所必需的信息。
+* [Analytics配置](analytics.md)：为Communities功能启用Adobe Analytics的必要信息。
+* [标记启用资源](tag-resources.md)：创建启用目录所必需的。
 
 ### 部署 {#deployment}
 
 部署部分包含特定于AEM Communities的信息。
 
-使用社区内容的性质会影响部署的结构：
+使用社区内容的性质会影响部署结构：
 
 * [推荐的社区拓扑](topologies.md)
 
 在AEM平台上安装最新的Communities版本很重要：
 
-* [最新社区功能包](deploy-communities.md#latestfeaturepack)
+* [最新的Communities功能包](deploy-communities.md#latestfeaturepack)
 
-有关其他特定于Communities的信息，请参阅部署页面，例如 [升级](upgrade.md), [Dispatcher](dispatcher.md) 和 [复制](deploy-communities.md#replication-agents-on-author).
+有关其他特定于Communities的信息(例如 [升级](upgrade.md)， [调度程序](dispatcher.md) 和 [复制](deploy-communities.md#replication-agents-on-author).
 
 ## 相关社区文档 {#related-communities-documentation}
 
 * 访问 [部署社区](deploy-communities.md) 以了解建议的部署。
 
-* 访问 [发展社区](communities.md) 了解社交组件框架(SCF)和自定义社区组件和功能。
+* 访问 [发展中的社区](communities.md) 了解社交组件框架(SCF)和自定义社区组件和功能。
 
-* 访问 [创作社区组件](author-communities.md) 了解如何使用和配置社区组件进行创作。
+* 访问 [创作社区组件](author-communities.md) 了解如何使用创作和配置社区组件。

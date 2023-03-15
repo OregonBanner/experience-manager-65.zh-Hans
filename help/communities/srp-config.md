@@ -20,9 +20,9 @@ ht-degree: 4%
 
 # 存储配置 {#storage-configuration}
 
-存储配置是标识为社区内容选择的存储的一种方法，也称为用户生成内容(UGC)。
+存储配置是标识为社区内容(也称为用户生成内容(UGC))选择的存储的方法。
 
-此设置会通知AEM Communities代码在访问UGC时将使用存储资源提供程序(SRP)的实现，并且必须反映部署AEM时建立的拓扑。
+此设置会通知AEM Communities代码，在访问UGC时将使用存储资源提供程序(SRP)的哪个实现，并且必须反映在部署AEM时建立的拓扑。
 
 有关存储选项和部署拓扑的讨论，请访问：
 
@@ -31,20 +31,20 @@ ht-degree: 4%
 
 ## 存储配置控制台 {#storage-configuration-console}
 
-![jsrp-configuration](assets/jsrp-configuration.png)
+![jsrp配置](assets/jsrp-configuration.png)
 
-在创作环境中，以访问存储配置控制台。
+在创作环境中，访问存储配置控制台。
 
-* 从全局导航中，选择 **[!UICONTROL 工具]** > **[!UICONTROL 社区]** > **[!UICONTROL 存储配置]**
+* 在全局导航中，选择 **[!UICONTROL 工具]** > **[!UICONTROL Communities]** > **[!UICONTROL 存储配置]**
 
 要选择默认JCR以外的存储选项，请执行以下操作：
 
 * 选择选项
 * 正确配置
 
-   * 请参阅详细信息 [选择MSRP](msrp.md#select-msrp)
-   * 请参阅详细信息 [选择DSRP](dsrp.md#select-dsrp)
-   * 请参阅详细信息 [选择ASRP](asrp.md#select-asrp)
+   * 查看详细信息 [选择MSRP](msrp.md#select-msrp)
+   * 查看详细信息 [选择DSRP](dsrp.md#select-dsrp)
+   * 查看详细信息 [选择ASRP](asrp.md#select-asrp)
 
 * 选择&#x200B;**[!UICONTROL 提交]**。
 
@@ -52,10 +52,10 @@ ht-degree: 4%
 
 请注意，如果未进行任何选择，则默认为AEM存储库JCR。
 
-JCR为 *not* 由创作和发布环境共享的公共存储。 社区内容将仅在创建社区内容的创作或发布环境中可见。
+JCR是 *非* 作者和发布环境共享的公用存储。 社区内容将仅从创建它的创作或发布环境中可见。
 
-访问 [JCR商店](jsrp.md) 以了解其他信息。
+访问 [JCR存储](jsrp.md) 以获取其他信息。
 
 >[!NOTE]
 >
->节点的缺失 `srpc` 在 `/etc/socialconfig` 表示默认 [JCR商店](jsrp.md).
+>节点不存在 `srpc` 下 `/etc/socialconfig` 指示默认值 [JCR存储](jsrp.md).

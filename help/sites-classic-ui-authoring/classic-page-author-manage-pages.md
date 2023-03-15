@@ -70,7 +70,7 @@ ht-degree: 89%
     /...
 ```
 
-此结构可以从“网站”控制台中查看，您可以使用该控制台 [在树结构中导航](/help/sites-classic-ui-authoring/author-env-basic-handling.md#main-pars-text-15).
+此结构可以从网站控制台中查看，您可以将其用于 [在树结构中导航](/help/sites-classic-ui-authoring/author-env-basic-handling.md#main-pars-text-15).
 
 ![chlimage_1-151](assets/chlimage_1-151.png)
 
@@ -88,9 +88,9 @@ ht-degree: 89%
    * 用于生成 URI。
    * 此字段的用户输入是可选的。如果未指定，名称会从标题派生。
 
-创建新页面时，AEM将 [根据惯例验证页面名称](/help/sites-developing/naming-conventions.md) 由AEM和JCR强加。
+创建新页面时，AEM将 [根据惯例验证页面名称](/help/sites-developing/naming-conventions.md) 由AEM和JCR强制实施。
 
-实施和允许使用的字符列表因UI而略有不同（触屏UI更为广泛），但最低允许使用的字符数为：
+根据UI，允许的实施和字符列表略有不同（触屏UI允许的实施和字符列表范围更广），但允许的最低值为：
 
 * 从“a”到“z”
 * 从“A”到“Z”
@@ -107,7 +107,7 @@ ht-degree: 89%
 | 标题 | 派生的名称 |
 |---|---|
 | Schön | schoen.html |
-| SC%&amp;ast;ç+ | sc---c-.html |
+| SC%&amp;&amp;ast；c+ | sc---c-.html |
 
 #### 名称 {#name}
 
@@ -143,7 +143,7 @@ AEM 附带了一些现成的模板。预提供的模板取决于各个网站，�
 
 ### 组件 {#components}
 
-组件是AEM提供的元素，旨在让您能够添加特定类型的内容。AEM附带一系列功能完备的现成组件；这包括：
+组件是AEM提供的元素，用于添加特定类型的内容。AEM附带一系列现成的组件，它们提供了全面的功能；这些组件包括：
 
 * 文本
 * 图像
@@ -151,7 +151,7 @@ AEM 附带了一些现成的模板。预提供的模板取决于各个网站，�
 * 视频
 * 更多
 
-创建并打开页面后，您可以 [使用组件添加内容](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md#insertinganewparagraph)，可从 [sidekick](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#sidekick).
+创建并打开页面后，您可以 [使用组件添加内容](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md#insertinganewparagraph)，可从获得 [sidekick](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#sidekick).
 
 ## 管理页面 {#managing-pages}
 
@@ -197,7 +197,7 @@ AEM 附带了一些现成的模板。预提供的模板取决于各个网站，�
 
    >[!NOTE]
    >
-   >您也可以在编辑现有页面时创建页面。使用**创建子页** **页面** 选项卡，则会在正在编辑的页面下方创建一个新页面。
+   >您也可以在编辑现有页面时创建页面。使用**创建子页面**从 **页面** 选项卡，将直接在正在编辑的页面下创建新页面。
 
 ### 打开页面进行编辑 {#opening-a-page-for-editing}
 

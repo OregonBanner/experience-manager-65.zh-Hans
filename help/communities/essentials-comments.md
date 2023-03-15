@@ -1,5 +1,5 @@
 ---
-title: 评论要点
+title: 注释要点
 seo-title: Comments Essentials
 description: 注释组件概述
 seo-description: Comments component overview
@@ -17,13 +17,13 @@ ht-degree: 3%
 
 ---
 
-# 评论要点 {#comments-essentials}
+# 注释要点 {#comments-essentials}
 
-本页提供了使用评论系统（评论组件）的要点以及用于管理用户在成员发布评论或回复时生成的内容(UGC)的选项。
+此页面提供了使用评论系统（评论组件）的要点，以及管理用户在发表评论或回复时生成的内容(UGC)的选项。
 
-评论部分建立评论系统，使得每个帖子由评论部分（单数）表示。 页面上包含的评论系统。 注释系统将在调用时创建单个注释。
+评论部件建立一个评论系统，使得每个单独的帖子由一个评论部件（单数）表示。 它是包含在页面上的评论系统。 当调用时，注释系统将创建单个注释。
 
-## 客户端要点 {#essentials-for-client-side}
+## 适用于客户端的Essentials {#essentials-for-client-side}
 
 <table>
  <tbody>
@@ -33,7 +33,7 @@ ht-degree: 3%
   </tr>
   <tr>
    <td> <a href="scf.md#add-or-include-a-communities-component"><strong>可包含</strong></a></td>
-   <td>是 — 可在 <i>设计 </i>模式</td>
+   <td>是 — 属性在中可编辑 <i>设计 </i>模式</td>
   </tr>
   <tr>
    <td> <a href="client-customize.md#clientlibs-for-scf"><strong>clientlibs</strong></a></td>
@@ -49,7 +49,7 @@ ht-degree: 3%
   </tr>
   <tr>
    <td><strong> 属性</strong></td>
-   <td> 请参阅 <a href="comments.md">使用注释</a></td>
+   <td> 参见 <a href="comments.md">使用注释</a></td>
   </tr>
  </tbody>
 </table>
@@ -58,9 +58,9 @@ ht-degree: 3%
 
 ### 每页一个实例 {#one-instance-per-page}
 
-分页和使用URL进行缓存和链接时，每个评论系统的URL必须是唯一的。 因此，每页只允许一个评论系统实例。
+分页以及将URL用于缓存和链接要求每个注释系统的URL必须是唯一的。 因此，每个页面只允许一个注释系统实例。
 
-其他功能已包括评论系统。 这四个关键原则分别是：
+其他功能已经包括注释系统。 这四个关键原则分别是：
 
 * [博客](blog-developer-basics.md)
 * [日程表](calendar-basics-for-developers.md)
@@ -71,32 +71,32 @@ ht-degree: 3%
 
 ### 标记原因列表 {#flag-reason-list}
 
-可以通过向应用程序添加flagreasonlist.hbs来自定义标记原因列表，以覆盖中的内容
+可以通过向应用程序添加flagreasonlist.hbs以覆盖中的内容来自定义标记原因列表
 
 * `/libs/social/commons/components/hbs/comments/comment/flagreasonlist.hbs`
 
 这适用于扩展注释系统的任何组件。
 
-## 服务器端要点 {#essentials-for-server-side}
+## 服务器端Essentials {#essentials-for-server-side}
 
 * [注释API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/commons/comments/api/package-summary.html)
 
-* [注释端点](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/commons/comments/endpoints/package-summary.html)
+* [评论端点](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/commons/comments/endpoints/package-summary.html)
 
 * [服务器端自定义](server-customize.md)
 
-### 访问已发布的评论(UGC) {#accessing-posted-comments-ugc}
+### 访问发表的评论(UGC) {#accessing-posted-comments-ugc}
 
-UGC应使用其中一种标准审核方法进行审核。
-请参阅 [审核用户生成的内容](moderate-ugc.md).
+UGC应使用标准审核方法之一进行审核。
+参见 [审核用户生成的内容](moderate-ugc.md).
 
-自AEM 6.1 Communities起，使用 [公用商店](working-with-srp.md) 对于UGC，包括以编程方式访问UGC，而不考虑选择的存储选项（如ASRP、MSRP或JSRP）。
+自AEM 6.1社区起，使用 [公用存储](working-with-srp.md) for UGC包括对UGC的编程访问，而不管选择的存储选项（如ASRP、MSRP或JSRP）。
 
-**UGC在存储库中的位置和格式可能会发生更改，但不会发出警告**.
+**UGC在存储库中的位置和格式可能会发生更改，恕不发出警告**.
 
 请参阅：
 
 * [存储资源提供程序概述](srp.md)  — 简介和存储库使用概述。
-* [SRP和UGC要点](srp-and-ugc.md) - SRP实用程序方法和示例。
+* [SRP和UGC Essentials](srp-and-ugc.md) - SRP实用程序方法和示例。
 * [使用SRP访问UGC](accessing-ugc-with-srp.md)  — 编码准则。
-* [SocialUtils重构](socialutils.md)  — 将已弃用的实用程序方法映射到当前SRP实用程序方法。
+* [SocialUtils重构](socialutils.md)  — 将已弃用的实用程序方法映射到当前的SRP实用程序方法。

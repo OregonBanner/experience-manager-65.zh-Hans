@@ -1,7 +1,7 @@
 ---
 title: 调试HTML5表单
 seo-title: Debugging HTML5 forms
-description: 该文档列出了对各种已知问题进行故障诊断的步骤。
+description: 本文档列出了解决各种已知问题的步骤。
 seo-description: The document list steps to troubleshoot various known issues.
 uuid: df1835aa-6033-4ecb-97c8-4c3b7b96b943
 contentOwner: robhagat
@@ -20,11 +20,11 @@ ht-degree: 0%
 
 # 调试HTML5表单 {#debugging-html-forms}
 
-本文档包括若干疑难解答情景。 对于每种情况，都提供了一些步骤来解决问题。 按照这些步骤操作，如果问题仍然存在，请配置记录器以获取并查看日志，以获取错误/警告。 有关HTML5表单日志记录的更多详细信息，请参阅 [为HTML5表单生成日志](/help/forms/using/enable-logs.md).
+本文档包含多个疑难解答场景。 对于每种情况，都提供了一些解决问题的步骤。 按照以下步骤操作，如果问题仍然存在，请配置日志记录器以获取并查看错误/警告日志。 有关HTML5表单日志记录的更多详细信息，请参阅 [为HTML5表单生成日志](/help/forms/using/enable-logs.md).
 
-## 问题：呈现表单时，我看到org.apache.sling.api.SlingException页面 {#problem-when-rendering-the-form-i-see-org-apache-sling-api-slingexception-exception-page}
+## 问题：在渲染表单时，我看到org.apache.sling.api.SlingException异常页面 {#problem-when-rendering-the-form-i-see-org-apache-sling-api-slingexception-exception-page}
 
-在例外详细信息中，搜索单词 **由**.
+在例外详细信息中，搜索word **导致**.
 
 可能的原因是URL中的一个或多个参数不正确。
 
@@ -42,11 +42,11 @@ ht-degree: 0%
   </tr>
   <tr>
    <td>contentRoot</td>
-   <td>模板和关联资源所在的路径</td>
+   <td>模板和相关资源所在的路径</td>
   </tr>
   <tr>
    <td>dataRef</td>
-   <td>与模板合并的数据文件的绝对路径。<br /> 注意：路径定义数据文件的绝对路径。</td>
+   <td>与模板合并的数据文件的绝对路径。<br /> 注意： Path定义数据文件的绝对路径。</td>
   </tr>
   <tr>
    <td>数据</td>
@@ -55,17 +55,17 @@ ht-degree: 0%
  </tbody>
 </table>
 
-## 问题：无法呈现表单（显示错误消息） {#problem-unable-to-render-form}
+## 问题：无法渲染表单（显示错误消息） {#problem-unable-to-render-form}
 
-1. 确保指定的参数正确无误。 有关参数的详细信息，请参阅 [呈现参数](#problem-when-rendering-the-form-i-see-org-apache-sling-api-slingexception-exception-page).
-1. 登录到CRX包管理器(位于https://)&lt;server>:&lt;port>/crx/packmgr/index.jsp)并检查以下包是否正确安装：
+1. 确保指定的参数正确。 有关参数的详细信息，请参阅 [渲染参数](#problem-when-rendering-the-form-i-see-org-apache-sling-api-slingexception-exception-page).
+1. 登录到CRX包管理器(位于https://)&lt;server>：&lt;port>/crx/packmgr/index.jsp)，并检查是否正确安装了以下包：
 
    * adobe-lc-forms-content-pkg-&lt;version>.zip
    * adobe-lc-forms-runtime-pkg-&lt;version>.zip
 
-1. 登录到CQ Web控制台(Felix Console)，网址为https://&lt;server>:&lt;port>/system/console/bundles。
+1. 登录到CQ Web控制台（Felix控制台），网址为https://&lt;server>：&lt;port>/system/console/bundles.
 
-   确保以下包的状态为“活动”：
+   确保以下捆绑包的状态为“活动”：
 
    * scala-lang.bundle [osgi]
 
@@ -75,23 +75,23 @@ ht-degree: 0%
 
    (com.adobe.livecycle.adobe-lc-forms-core)
 
-   * AdobeXFA Forms LC连接器
+   * AdobeXFA Forms LC Connector
 
    (com.adobe.livecycle.adobe-lc-forms-lc-connector)
 
-## 问题：表单呈现时不带样式 {#problem-form-renders-without-styles}
+## 问题：表单渲染时没有样式 {#problem-form-renders-without-styles}
 
 1. 在浏览器中，打开 **开发人员工具**. 确保profile.css可用。
-1. 如果profile.css文件不可用，请通过https://登录CRX DE&lt;server>:&lt;port>/crx/de.
+1. 如果profile.css文件不可用，请在https://登录CRX DE&lt;server>：&lt;port>/crx/de.
 1. 在左侧的文件夹层次结构中，导航到/etc/clientlibs/fd/xfaforms/。 打开文件夹中列出的css.txt文件。
 
    * 配置文件
    * 运行时
-   * 滚动导航
+   * scrollnav
    * 工具栏
    * xfalib
 
-1. 验证css.txt中提及的文件是否存在于CRX DE Lite中的/libs/fd/xfaforms/clientlibs/xfalib/css。
+1. 验证css.txt中提到的文件是否存在于CRX DE lite的/libs/fd/xfaforms/clientlibs/xfalib/css中。
 
    ```css
    #base=css
@@ -106,39 +106,39 @@ ht-degree: 0%
 
 ### 问题：遇到意外错误 {#problem-unexpected-error-encountered}
 
-1. 在表单URL中，添加查询参数debugClientLibs并将其值设置为true(例如：https://&lt;server>:&lt;port>/content/xfaforms/profiles/test.html?contentRoot=&lt;some path=&quot;&quot;>&amp;template=&lt;name of=&quot;&quot; xdp=&quot;&quot; file=&quot;&quot;>&amp;log=1-a9-b9-c9&amp;debugClientLibs=true)
+1. 在表单URL中，添加查询参数debugClientLibs并将其值设置为true(例如：https://)&lt;server>：&lt;port>/content/xfaforms/profiles/test.html？contentRoot=&lt;some path=&quot;&quot;>template=(&amp;t)&lt;name of=&quot;&quot; xdp=&quot;&quot; file=&quot;&quot;>&amp;log=1-a9-b9-c9&amp;debugClientLibs=true)
 1. 在桌面浏览器（如chrome）中，转到开发人员工具 — >控制台。
-1. 打开日志以标识错误类型。 有关日志的详细信息，请参阅 [HTML5表单日志](/help/forms/using/enable-logs.md).
-1. 转到“开发人员工具” — >“控制台”。 使用堆栈跟踪来查找导致错误的代码。 调试错误以解决问题。
+1. 打开日志以标识错误类型。 有关日志的详细信息，请参阅 [HTML5表单的日志](/help/forms/using/enable-logs.md).
+1. 转到“开发人员工具” — >“控制台”。 使用栈栈跟踪来查找导致错误的代码。 调试错误以解决问题。
 
    >[!NOTE]
    >
-   >如果脚本编写失败，请检查表单的PDF呈现过程中是否也出现相同的问题。 如果是，则表单脚本逻辑中出现问题。
+   >如果脚本编写失败，请检查在PDF呈现表单期间是否也出现同样的问题。 如果为“是”，则表单脚本逻辑中存在问题。
 
 ## 问题：无法提交表单 {#problem-unable-to-submit-the-form}
 
-1. 确保您有权访问AEM服务器，并且已连接到服务器。
+1. 确保您有权访问AEM服务器，并且已连接到该服务器。
 1. 检查参数submitUrl是否正确。
-1. 按照 [HTML5表单的日志](/help/forms/using/enable-logs.md) 使用调试选项作为 **1-a5-b5-c5**. 然后渲染表单并单击提交。 打开浏览器调试控制台并检查是否出错。
-1. 按照 [HTML5表单的日志](/help/forms/using/enable-logs.md). 检查提交期间服务器日志中是否存在任何错误。
+1. 启用客户端日志，如中所述 [HTML5表单的日志](/help/forms/using/enable-logs.md) 将调试选项用作 **1-a5-b5-c5**. 然后渲染表单并单击提交。 打开浏览器调试控制台并检查是否存在错误。
+1. 找到服务器日志，如下所述： [HTML5表单的日志](/help/forms/using/enable-logs.md). 检查提交期间服务器日志中是否有任何错误。
 
-## 问题：未显示本地化的错误消息 {#problem-localized-error-messages-do-not-display}
+## 问题：本地化的错误消息不显示 {#problem-localized-error-messages-do-not-display}
 
-1. 使用附加查询参数渲染表单 **debugClientLibs=true** 在桌面浏览器中，然后转到“开发人员工具” — >“资源”并检查文件I18N.css。
-1. 如果文件不可用，请通过https://登录CRX DE&lt;server>:&lt;port>/crx/de.
-1. 在左侧的文件夹层次结构中，导航到/libs/fd/xfaforms/clientlibs/I18N，并确保存在以下文件和文件夹：
+1. 使用其他查询参数渲染表单 **debugClientLibs=true** 在桌面浏览器中，然后转到“开发人员工具” — >“资源”并检查文件I18N.css。
+1. 如果文件不可用，请在https://登录CRX DE&lt;server>：&lt;port>/crx/de.
+1. 在左侧的文件夹层次结构中，导航到/libs/fd/xfaforms/clientlibs/I18N ，并确保存在以下文件和文件夹：
 
    * Namespace.js
    * LogMessages.js
    * 语言文件夹
 
-1. 如果以上任何文件或文件夹不存在，请安装 **adobe-lc-forms-runtime-pkg-&lt;version>.zip** 包。
-1. 导航到与区域设置名称同名的文件夹，并检查其内容。 文件夹必须包含以下文件：
+1. 如果以上任何文件或文件夹不存在，请安装 **adobe-lc-forms-runtime-pkg-&lt;version>.zip** 再次打包。
+1. 导航到与区域设置名称相同的文件夹，并检查其内容。 文件夹必须包含以下文件：
 
    * I18N.js
    * js.txt
 
-1. 检查js.txt的内容，并确保其包含以下条目。
+1. 检查js.txt的内容，并确保它包含以下条目。
 
    ```javascript
    ../Namespace.js
@@ -146,11 +146,11 @@ ht-degree: 0%
    ../LogMessages.js
    ```
 
-## 问题：未显示图像 {#problem-image-not-showing-up}
+## 问题：图像未显示 {#problem-image-not-showing-up}
 
 1. 确保图像URL正确。
-1. 检查您的浏览器是否支持此类图像。
-1. 在例外详细信息中，搜索单词 **由**.
+1. 检查您的浏览器是否支持此类型的图像。
+1. 在例外详细信息中，搜索word **导致**.
 
    可能的原因是URL中的一个或多个参数不正确。
 
@@ -168,11 +168,11 @@ ht-degree: 0%
   </tr>
   <tr>
    <td>contentRoot</td>
-   <td>模板和关联资源所在的路径</td>
+   <td>模板和相关资源所在的路径</td>
   </tr>
   <tr>
    <td>dataRef</td>
-   <td>与模板合并的数据文件的绝对路径。<br /> 注意：路径定义数据文件的绝对路径。</td>
+   <td>与模板合并的数据文件的绝对路径。<br /> 注意： Path定义数据文件的绝对路径。</td>
   </tr>
   <tr>
    <td>数据</td>
@@ -181,6 +181,6 @@ ht-degree: 0%
  </tbody>
 </table>
 
-1. 在桌面浏览器中，转到“开发人员工具” — >“资源”。
+1. 在桌面浏览器中，转到开发人员工具 — >资源。
 
-   如果显示图像，请在“帧”中检查左侧。
+   如果图像显示，请检查“帧”中左侧的部分。

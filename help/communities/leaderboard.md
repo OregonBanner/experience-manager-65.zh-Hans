@@ -21,24 +21,24 @@ ht-degree: 5%
 
 本页提供了使用排行榜功能的基本信息。
 
-在将排行榜组件包含到页面之前，需要配置 [社区评分和徽章](implementing-scoring.md).
+在页面上包含排行榜组件之前，需要配置 [社区评分和徽章](implementing-scoring.md).
 
-请参阅 [评分和徽章要点](configure-scoring.md).
+参见 [评分和徽章要点](configure-scoring.md).
 
-## 客户端要点 {#essentials-for-client-side}
+## 适用于客户端的Essentials {#essentials-for-client-side}
 
 <table>
  <tbody>
   <tr>
    <td> <strong>resourceType</strong></td>
-   <td>社交/游戏化/组件/hbs/排行榜</td>
+   <td>social/gamification/components/hbs/leaderboard</td>
   </tr>
   <tr>
    <td> <a href="scf.md#add-or-include-a-communities-component"><strong>可包含</strong></a></td>
    <td>否</td>
   </tr>
   <tr>
-   <td> <a href="clientlibs.md"><strong>clientlibs</strong></a></td>
+   <td> <a href="clientlibs.md"><strong>clientllibs</strong></a></td>
    <td>cq.social.gamification.hbs.leaderboard</td>
   </tr>
   <tr>
@@ -51,7 +51,7 @@ ht-degree: 5%
   </tr>
   <tr>
    <td><strong> 属性</strong></td>
-   <td>请参阅 <a href="enabling-leaderboard.md">排行榜功能</a></td>
+   <td>参见 <a href="enabling-leaderboard.md">排行榜功能</a></td>
   </tr>
  </tbody>
 </table>
@@ -60,4 +60,4 @@ ht-degree: 5%
 
 ### 文件库功能 {#file-library-function}
 
-包含 [排行榜功能](functions.md#leaderboard-function)，包括已配置的 `leaderboard` 组件。
+社区站点结构包括 [排行榜功能](functions.md#leaderboard-function)，包括已配置的 `leaderboard` 组件。

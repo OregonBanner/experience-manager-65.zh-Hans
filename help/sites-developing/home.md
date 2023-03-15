@@ -1,7 +1,7 @@
 ---
 title: AEM 6.5 Developing 用户指南
 seo-title: AEM 6.5 Developing User Guide
-description: 了解如何构建AEM实例。 进一步了解该平台和组件，并查找有关开发工具和个性化的信息。
+description: 了解如何构建AEM实例。 了解有关平台和组件的更多信息，并查找有关开发工具和个性化的信息。
 seo-description: Covers how to build out your AEM instance.
 exl-id: 4413f5e8-7e52-4ea7-8be3-5717b780a6e2
 source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
@@ -13,9 +13,9 @@ ht-degree: 28%
 
 # AEM 6.5 Developing 用户指南
 
-了解如何构建AEM实例。 进一步了解该平台和组件，并查找有关开发工具和个性化的信息。
+了解如何构建AEM实例。 了解有关平台和组件的更多信息，并查找有关开发工具和个性化的信息。
 
-## 关键AEM文章
+## 重要AEM文章
 
 * [AEM 快速入门](https://experienceleague.adobe.com/docs/experience-manager-65.html?lang=zh-Hans)
 * [AEM 6.5 发行说明](/help/release-notes/home.md)
@@ -26,25 +26,25 @@ ht-degree: 28%
 
 | 用户指南 | 描述 |
 |--- |---|
-| [发行说明](/help/release-notes/home.md) | 提供有关最新版本AEM的重要信息，包括新增功能、受支持的平台、已弃用和已删除的功能以及已知问题。 |
-| [Assets 用户指南](/help/assets/home.md) | 了解如何创建、管理、交付和优化数字资产。 |
+| [发行说明](/help/release-notes/home.md) | 提供有关最新版本的AEM的重要信息，包括新增功能、支持的平台、已弃用和已删除的功能以及已知问题。 |
+| [Assets 用户指南](/help/assets/home.md) | 了解如何创建、管理、交付和优化数字资源。 |
 | [Forms用户指南](/help/forms/home.md) | 本指南介绍如何创建、管理、发布和更新数字表单。 |
 | [Communities用户指南](/help/communities/home.md) | 创建在线体验，如论坛、用户组、学习资源和其他社交功能。 |
 | [Administering 指南](/help/sites-administering/home.md) | 了解如何管理 AEM |
-| [Authoring 指南](/help/sites-authoring/home.md) | 本指南介绍了在AEM中创作的概念。 |
-| [经典UI创作指南](/help/sites-classic-ui-authoring/home.md) | 本指南介绍在经典用户界面的AEM中创作的概念。 |
+| [Authoring 指南](/help/sites-authoring/home.md) | 本指南介绍在AEM中创作的概念。 |
+| [经典UI创作指南](/help/sites-classic-ui-authoring/home.md) | 本指南在经典用户界面中说明在AEM中创作的概念。 |
 | [Screens用户指南](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html) | 了解用于发布动态和交互式数字体验的数字标牌解决方案。 |
-| [Deploying用户指南](/help/sites-deploying/home.md) | 本指南向您展示AEM的基础知识。 |
-| [Developing用户指南](/help/sites-developing/home.md) | 了解如何构建AEM实例。 |
+| [Deploying用户指南](/help/sites-deploying/home.md) | 本指南向您介绍AEM的基础知识。 |
+| [开发用户指南](/help/sites-developing/home.md) | 了解如何构建AEM实例。 |
 | [Managing用户指南](/help/managing/home.md) | 本指南介绍如何成功管理AEM项目。 |
-| [Commerce 用户指南](/help/commerce/home.md) | 了解AEM上的Commerce Integration Framework。 |
+| [Commerce 用户指南](/help/commerce/home.md) | 了解AEM上的Commerce集成框架。 |
 | [Mobile用户指南](/help/mobile/home.md) | 本指南介绍如何为移动设备应用程序创建和管理内容。 |
-| [AEM Livefyre](https://experienceleague.adobe.com/docs/livefyre/using/home.html) | 本指南将向您展示如何与Livefyre共享用户生成的内容。 |
+| [AEM Livefyre](https://experienceleague.adobe.com/docs/livefyre/using/home.html) | 本指南向您说明如何与Livefyre共享用户生成的内容。 |
 
-## 关键AEM资源
+## 重要AEM资源
 
 * [AEM教程](https://helpx.adobe.com/experience-manager/kt/index/aem-6-4-videos.html)
-* [Dispatcher用户指南](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hans)
+* [Dispatcher用户指南](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)
 * [HTL用户指南](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)
 * [核心组件用户指南](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)
 * [Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html)

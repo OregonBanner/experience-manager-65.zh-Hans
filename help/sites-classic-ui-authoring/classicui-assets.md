@@ -21,6 +21,6 @@ ht-degree: 90%
 
 [创作环境和工具](/help/sites-authoring/author-environment-tools.md)部分提供了有关在编辑页面时通过内容查找器查找和使用资产的信息。AEM Assets 提供了使用资产的其他方法：
 
-* [将Dynamic Media Classic功能添加到页面](/help/sites-classic-ui-authoring/manage-assets-classic-s7.md)
+* [将Dynamic Media Classic功能添加到您的页面](/help/sites-classic-ui-authoring/manage-assets-classic-s7.md)
 * [使用 Dynamic Media](/help/sites-classic-ui-authoring/dynamic-media-assets.md)
 * [资产的命名约定](/help/sites-classic-ui-authoring/asset-naming-conventions.md)

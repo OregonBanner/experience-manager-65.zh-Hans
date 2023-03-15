@@ -1,6 +1,6 @@
 ---
 title: 用于内容片段的 AEM GraphQL API
-description: 了解如何将Adobe Experience Manager(AEM)中的内容片段与AEM GraphQL API结合使用来交付无头内容。
+description: 了解如何在Adobe Experience Manager (AEM)中将内容片段与AEM GraphQL API一起使用来投放Headless内容。
 feature: Content Fragments,GraphQL API
 exl-id: beae1f1f-0a76-4186-9e58-9cab8de4236d
 source-git-commit: 42ef4694a3301ae1cd34766ce4c19f4b0e2f2c38
@@ -12,7 +12,7 @@ ht-degree: 91%
 
 # 用于内容片段的 AEM GraphQL API {#graphql-api-for-use-with-content-fragments}
 
-了解如何将Adobe Experience Manager(AEM)中的内容片段与AEM GraphQL API结合使用来交付无头内容。
+了解如何在Adobe Experience Manager (AEM)中将内容片段与AEM GraphQL API一起使用来投放Headless内容。
 
 与内容片段一起使用的 AEM GraphQL API 很大程度上依赖于标准的开源 GraphQL API。
 
@@ -24,7 +24,7 @@ ht-degree: 91%
 
 >[!NOTE]
 >
->GraphQL当前用于Adobe Experience Manager(AEM)的两个（单独）方案：
+>GraphQL当前用于Adobe Experience Manager (AEM)中的两个（单独的）场景：
 >
 >* [AEM Commerce 通过 GraphQL 使用来自 Commerce 平台的数据](/help/commerce/cif/integrating/magento.md)。
 >* AEM 内容片段与 AEM GraphQL API（一种自定义实施，基于标准 GraphQL）配合使用，提供结构化内容用于您的应用程序。
@@ -231,14 +231,14 @@ AEM 全局端点的 GraphQL 的存储库路径为：
 
 ## 针对创作环境和发布环境的用例 {#use-cases-author-publish-environments}
 
-用例取决于AEM环境的类型：
+用例可以取决于AEM环境的类型：
 
 * 发布环境；用于：
    * 查询 JS 应用程序的数据（标准用例）
 
 * 创作环境；用于：
    * 查询用于“内容管理用途”的数据：
-      * AEM中的GraphQL当前是只读API。
+      * AEM中的GraphQL当前为只读API。
       * REST API 可用于 CR(u)D 操作。
 
 ## 权限 {#permission}
@@ -560,10 +560,10 @@ query {
    * 将 `List` 添加到模型名称；例如，`cityList`
    * 请参阅[示例查询 – 关于所有城市的所有信息](#sample-all-information-all-cities)
 
-* 过滤器 `includeVariations` 包含在 `List` 查询类型。  要在查询结果中检索内容片段变量，请 `includeVariations` 筛选器必须设置为 `true`.
+* 筛选条件 `includeVariations` 包含在 `List` 查询类型。  要在查询结果中检索内容片段变体，请 `includeVariations` 筛选器必须设置为 `true`.
 
    >[!CAUTION]
-   >过滤器 `includeVariations` 不能与系统生成的字段一起使用 `_variation`.
+   >筛选条件 `includeVariations` 不能与系统生成的字段一起使用 `_variation`.
 
 * 如果您希望使用逻辑 OR：
    * 使用 ` _logOp: OR`
@@ -598,14 +598,14 @@ query {
          >系统生成的字段 `_variation` 不能与过滤器一起使用 `includeVariations`.
 
          * 请参阅[示例查询 – 具有指定变体的所有城市](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-cities-named-variation)
-      * `_tags` :显示包含标记的内容片段或变体的ID;这是 `cq:tags` 标识符。
+      * `_tags` ：用于显示包含标记的内容片段或变量的ID；这是一个数组 `cq:tags` 标识符。
 
-         * 请参阅 [示例查询 — 标记为城市中断的所有城市的名称](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-names-all-cities-tagged-city-breaks)
-         * 请参阅 [附加了特定标记的给定模型的内容片段变量查询示例](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-wknd-fragment-variations-given-model-specific-tag)
+         * 参见 [示例查询 — 标记为城市分隔符的所有城市的名称](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-names-all-cities-tagged-city-breaks)
+         * 参见 [附加了特定标记的给定模型的内容片段变体示例查询](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-wknd-fragment-variations-given-model-specific-tag)
 
          >[!NOTE]
          >
-         >还可以通过列出内容片段的元数据来查询标记。
+         >标记也可以通过列出内容片段的元数据来查询。
    * 以及操作：
 
       * `_operator`：应用特定运算符；`EQUALS`、`EQUALS_NOT`、`GREATER_EQUAL`、`LOWER`、`CONTAINS`、`STARTS_WITH`
@@ -633,7 +633,7 @@ query {
 
 * 在查询嵌套片段时回退：
 
-   * 如果请求的变量在嵌套片段中不存在，则 **主控** 将返回变量。
+   * 如果请求的变体在嵌套片段中不存在，则 **主控** 将返回变量。
 
 <!--
 ## Persisted Queries (Caching) {#persisted-queries-caching}
@@ -868,7 +868,7 @@ To access the GraphQL endpoint from an external website you need to configure th
 
 要访问GraphQL端点，必须在客户Git存储库中配置CORS策略。 此操作可通过为所需端点添加相应的 OSGi CORS 配置文件来完成。
 
-此配置必须指定受信任的网站源 `alloworigin` 或 `alloworiginregexp` 必须授予其访问权限。
+此配置必须指定受信任的网站来源 `alloworigin` 或 `alloworiginregexp` 必须授予其访问权限。
 
 例如，要授予对 GraphQL 端点  的访问权限，以及对 `https://my.domain` 的持久查询端点的访问权限，您可以使用：
 
@@ -909,9 +909,9 @@ To access the GraphQL endpoint from an external website you need to configure th
 
 ### 反向链接筛选条件 {#referrer-filter}
 
-除了CORS配置之外，还必须配置反向链接过滤器，以允许从第三方主机访问。
+除了CORS配置之外，还必须配置反向链接筛选条件以允许从第三方主机进行访问。
 
-这是通过添加相应的OSGi反向链接过滤器配置文件来完成的，该配置文件：
+这是通过添加适当的OSGi反向链接筛选条件配置文件来完成的，该配置文件可以：
 
 * 指定了可信的网站主机名；可以为 `allow.hosts` 或 `allow.hosts.regexp`。
 * 授予了对此主机名的访问权限。

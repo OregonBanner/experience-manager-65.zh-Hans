@@ -1,7 +1,7 @@
 ---
 title: 徽章控制台
 seo-title: Badges Console
-description: 社区徽章控制台允许您添加自定义徽章，这些徽章可在成员获得（授予）或在社区中承担特定角色（已分配）时为其显示
+description: “社区徽章”控制台允许您添加自定义徽章，当成员获得（奖励）或在社区中承担特定角色（已分配）时，可以显示这些徽章
 seo-description: The Communities Badges console lets you add custom badges that can be displayed for members when earned (awarded) or when they take on a specific role in the community (assigned)
 uuid: 7103b133-ef3f-47d6-a2dc-4e6ff92e8fed
 contentOwner: Janice Kendall
@@ -23,11 +23,11 @@ ht-degree: 4%
 
 ## 关于徽章 {#about-badges}
 
-社区徽章控制台提供了添加自定义徽章的功能，当会员获得（授予）或在社区中承担特定角色（分配）时，可向其显示自定义徽章。
+“社区徽章”控制台提供添加自定义徽章的功能，当成员获得（奖励）或在社区中承担特定角色（已分配）时，可以显示这些徽章。
 
 ### 徽章可见性 {#badge-visibility}
 
-目前，社区成员获得或分配的徽章将与其姓名和头像一起显示在以下位置：
+目前，社区成员获得的徽章或已分配的徽章将与其名称和头像一起显示在以下位置：
 
 * 配置文件
 * [论坛](/help/communities/forum.md)
@@ -37,15 +37,15 @@ ht-degree: 4%
 
 在创作环境中，导航到徽章控制台：
 
-* 从全局导航： **[!UICONTROL 工具]** > **[!UICONTROL 社区]** > **[!UICONTROL 徽章]**
+* 从全局导航： **[!UICONTROL 工具]** > **[!UICONTROL Communities]** > **[!UICONTROL 徽章]**
 
-此控制台会显示当前可用的徽章，以及可从中添加新徽章的徽章。
+此控制台显示当前可用的徽章，并可从中添加新徽章。
 
-![徽章主页](assets/badges-homepage.png)
+![徽章 — 主页](assets/badges-homepage.png)
 
 ## 创建徽章 {#create-badge}
 
-通过上传合适的小图像（72dpi，高度在26-32像素之间）并提供名称来创建标记。 徽章图像存储在位于 `/libs/settings/community/badging/images` 和会自动复制到发布环境。
+通过上载适当小图像（高度在26-32像素范围内的72dpi）并提供名称来产生徽章。 徽章图像存储在存储库中的 `/libs/settings/community/badging/images` 和会自动复制到发布环境。
 
 如果发布环境是发布者的场，则需要配置 [用户同步](/help/communities/sync.md).
 
@@ -53,22 +53,22 @@ ht-degree: 4%
 
 * **上传图像**
 
-   (*必需*)以JPEG或PNG格式显示的徽章图像，建议大小为32 x 32像素，为72dpi。
+   (*必需*)以JPEG或PNG格式表示的徽章图像，建议大小为32 x 32像素(72dpi)。
 
 * **名称**
 
-   (*必需*)标记名称。 它是默认 `Display Name` 以及存储库节点名称。 如果 `Name` 不是有效的存储库节点名称，将会修改该名称。
+   (*必需*)徽章名称。 这是默认设置 `Display Name` 以及存储库节点名称。 如果 `Name` 不是有效的存储库节点名称，将被修改。
 
 * **显示名称**
 
-   (*可选*)要在UI中显示标记的名称。 默认为 `Name`.
+   (*可选*)为UI中的徽章显示的名称。 默认值为为为输入的未更改文本 `Name`.
 
 * **描述**
 
-   (*可选*)标记的描述。
+   (*可选*)徽章的描述。
 
 ## 附加信息 {#additional-information}
 
-有关设置评分和标记规则的详细信息，请参阅 [评分和徽章](/help/communities/implementing-scoring.md).
+有关设置评分和徽章规则的详细信息，请参阅 [评分和徽章](/help/communities/implementing-scoring.md).
 
 有关管理成员的徽章，请参阅 [成员控制台](/help/communities/members.md).

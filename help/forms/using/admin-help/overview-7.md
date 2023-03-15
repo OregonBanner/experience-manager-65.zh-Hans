@@ -1,7 +1,7 @@
 ---
 title: 配置表单的基础知识
 seo-title: Basics of configuring forms
-description: 了解可帮助您创建交互式数据捕获应用程序的各种表单服务。
+description: 了解帮助您创建交互式数据捕获应用程序的各种表单服务。
 seo-description: Learn about the various forms services that help you create interactive data capture applications.
 uuid: f495c170-2d17-45b0-b09d-22cce101131e
 contentOwner: admin
@@ -19,14 +19,14 @@ ht-degree: 0%
 
 # 配置表单的基础知识 {#basics-of-configuring-forms}
 
-Forms服务允许您创建交互式数据捕获客户端应用程序，以验证、处理、转换和交付通常在Designer中创建的表单。 表单作者开发了Forms服务以各种格式呈现的单个表单设计：
+Forms服务使您能够创建交互式数据捕获客户端应用程序，这些应用程序验证、处理、转换和交付通常在Designer中创建的表单。 表单作者开发了一个Forms服务以各种格式呈现的表单设计：
 
-* 在Adobe Reader中或在浏览器中作为PDF
-* 作为各种浏览器环境的HTML，包括兼容的XHTML 1.0渲染
-* 作为表单指南(在支持AdobeFlash Player的各种浏览器环境中)。
+* 作为Adobe Reader或浏览器中的PDF
+* 在各种浏览器环境中（包括兼容的XHTML 1.0渲染）作为HTML
+* 在支持AdobeFlash Player的各种浏览器环境中作为表单指南。
 
-有关Forms服务的其他信息，请参阅 [服务参考](https://www.adobe.com/go/learn_aemforms_services_63).
+有关Forms服务的更多信息，请参阅 [服务参考](https://www.adobe.com/go/learn_aemforms_services_63).
 
-使用管理控制台中的Forms页面，可以配置Forms服务的行为。 这些设置适用于服务的所有调用。 通过AEM Forms SDK发送的任何参数都会覆盖管理控制台中设置的设置；但是，它们只影响这一特定的援引。
+使用管理控制台中的Forms页面，您可以配置Forms服务的行为。 这些设置适用于服务的所有调用。 通过AEM Forms SDK发送的任何参数都将覆盖管理控制台中设置的设置；但是，它们仅影响该特定调用。
 
-在管理控制台中更改Forms设置后，单击保存。 您无需重新启动服务器，更改即可生效。 但是，在配置缓存模式设置时，您可能需要停止并重新启动Forms服务。 (请参阅 [启动和停止服务](/help/forms/using/admin-help/starting-stopping-services.md#starting-and-stopping-services).)
+在管理控制台中更改Forms设置后，单击保存。 您无需重新启动服务器即可使更改生效。 但是，在配置缓存模式设置时，您可能需要停止并重新启动Forms服务。 (请参阅 [启动和停止服务](/help/forms/using/admin-help/starting-stopping-services.md#starting-and-stopping-services).)

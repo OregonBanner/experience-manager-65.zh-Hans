@@ -10,7 +10,7 @@ ht-degree: 94%
 
 # 使用 GraphiQL IDE {#graphiql-ide}
 
-标准的实施 [GraphiQL](https://graphql.org/learn/serving-over-http/#graphiql) IDE可与Adobe Experience Manager的GraphQL API(AEM)一起使用。
+标准的实施 [GraphiQL](https://graphql.org/learn/serving-over-http/#graphiql) IDE可以与Adobe Experience Manager (AEM)的GraphQL API一起使用。
 
 >[!NOTE]
 >
@@ -131,7 +131,7 @@ Using GraphQL you can configure the HTTP Cache Headers  to control these paramet
 
 ## 正在发布持久查询 {#publishing-persisted-queries}
 
-选择 [持久化查询](/help/assets/content-fragments/persisted-queries.md) 在列表（左侧面板）中，您可以使用 **发布** 和 **取消发布** 操作。 这会将它们激活到您的发布环境（例如，`dev-publish`），以便您的应用程序在测试时轻松访问。
+选择您的 [持久查询](/help/assets/content-fragments/persisted-queries.md) 从列表（左侧面板）中，您可以使用 **Publish** 和 **取消发布** 操作。 这会将它们激活到您的发布环境（例如，`dev-publish`），以便您的应用程序在测试时轻松访问。
 
 >[!NOTE]
 >

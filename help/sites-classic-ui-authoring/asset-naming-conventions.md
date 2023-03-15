@@ -19,7 +19,7 @@ ht-degree: 86%
 
 # 资产的命名约定 测试{#naming-conventions-for-assets-testing}
 
-存储库中的节点受 [Java内容存储库](/help/sites-developing/the-basics.md#java-content-repository). 但是，Adobe Experience Manager 对资产节点的名称做了进一步约定。
+存储库中的节点遵循的命名约定 [Java内容存储库](/help/sites-developing/the-basics.md#java-content-repository). 但是，Adobe Experience Manager 对资产节点的名称做了进一步约定。
 
 ## 经典 UI {#classic-ui}
 

@@ -159,7 +159,7 @@ ht-degree: 96%
 
    您可以在此处：
 
-   * 创建 **新建……** 经验；例如，Adobe Target选件、Teaser和新闻稿。
+   * 创建 **新建……** 体验；例如，Adobe Target优惠、Teaser和新闻稿。
    * **编辑**&#x200B;特定的 Teaser 页面或新闻稿的详细信息（也可以使用双击）。
    * 为特定的 Teaser 页面或新闻稿定义&#x200B;**属性...**。
    * **模拟**&#x200B;体验（Teaser 页面或新闻稿）的外观。当模拟的页面打开时，您可以打开 sidekick 以切换到该页面的编辑模式。
@@ -182,4 +182,4 @@ ht-degree: 96%
 
 在 MCM 中，单击&#x200B;**营销活动**。确保列表视图处于激活状态，然后选择所需的营销活动体验，并选择&#x200B;**分析...**。将会显示一段时间内的页面展示图。
 
-![mcm_campaignanyze](assets/mcm_campaignanalyze.png)
+![mcm_campaignanalyze](assets/mcm_campaignanalyze.png)

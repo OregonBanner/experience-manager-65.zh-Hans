@@ -1,7 +1,7 @@
 ---
 title: 将草稿和提交组件与数据库集成的示例
 seo-title: Sample for integrating drafts & submissions component with database
-description: 引用自定义数据和元数据服务的实施，以将草稿和提交组件与数据库集成。
+description: 参考自定义数据和元数据服务的实施，以将草稿和提交组件与数据库集成。
 seo-description: Reference implementation of customized data and metadata services to integrate drafts and submissions component with a database.
 uuid: ccdb900e-2c2e-4ed3-8a88-5c97aa0092a1
 content-type: reference
@@ -20,50 +20,50 @@ ht-degree: 1%
 
 ## 示例概述 {#sample-overview}
 
-AEM Forms Portal的草稿和提交组件允许用户将其表单另存为草稿，稍后从任何设备提交。 此外，用户还可以在门户上查看其提交的表单。 为启用此功能，AEM Forms提供了数据和元数据服务，用于存储用户在表单中填写的数据以及与草稿和提交的表单关联的表单元数据。 默认情况下，此数据存储在CRX存储库中。 但是，当用户通过AEM发布实例与表单进行交互时（通常位于企业防火墙之外），组织可能希望自定义数据存储以使其更加安全可靠。
+AEM Forms portal草稿和提交组件允许用户将其表单另存为草稿，并稍后从任何设备提交。 此外，用户还可以在门户上查看他们提交的表单。 为了启用此功能，AEM Forms提供数据和元数据服务，以存储用户填写的表单数据，以及与草稿和已提交表单关联的表单元数据。 默认情况下，此数据存储在CRX存储库中。 但是，当用户通过AEM发布实例（通常位于企业防火墙之外）与表单进行交互时，组织可能希望自定义数据存储以便使其更加安全和可靠。
 
-本文档中讨论的示例是自定义数据和元数据服务的参考实现，用于将草稿和提交组件与数据库集成在一起。 示例实现中使用的数据库为 **MySQL 5.6.24**. 但是，您可以将草稿和提交组件与您选择的任何数据库相集成。
+本文档中讨论的示例是自定义数据和元数据服务的参考实现，用于将草稿和提交组件与数据库集成。 示例实施中使用的数据库是 **MySQL 5.6.24**. 但是，您可以将草稿和提交组件与所选的任何数据库集成。
 
 >[!NOTE]
 >
->* 本文档中介绍的示例和配置符合MySQL 5.6.24的要求，您必须将其适当替换为数据库系统。
+>* 本文档中说明的示例和配置均基于MySQL 5.6.24，您必须将它们适当地替换为您的数据库系统。
 >* 确保您已安装最新版本的AEM Forms附加组件包。 有关可用包的列表，请参阅 [AEM Forms版本](https://helpx.adobe.com/cn/aem-forms/kb/aem-forms-releases.html) 文章。
 >* 示例包仅适用于自适应Forms提交操作。
 
 
 ## 设置和配置示例 {#set-up-and-configure-the-sample}
 
-对所有创作实例和发布实例执行以下步骤以安装和配置示例：
+在所有创作和发布实例上执行以下步骤，以安装和配置示例：
 
-1. 下载以下内容 **aem-fp-db-integration-sample-pkg-6.1.2.zip** 包到文件系统。
+1. 下载以下内容 **aem-fp-db-integration-sample-pkg-6.1.2.zip** 包到您的文件系统。
 
-   数据库集成的示例包
+   用于数据库集成的示例包
 
 [获取文件](assets/aem-fp-db-integration-sample-pkg-6.1.2.zip)
 
-1. 转到AEM包管理器，网址为https://[*主机*]:[*端口*]/crx/packmgr/。
+1. 转到AEM包管理器，网址为https://[*主机*]：[*端口*]/crx/packmgr/.
 1. 单击 **[!UICONTROL 上传包]**.
 
-1. 浏览以选择 **aem-fp-db-integration-sample-pkg-6.1.2.zip** 包并单击 **[!UICONTROL 确定]**.
-1. 单击 **[!UICONTROL 安装]** ，以安装包。
+1. 浏览以选择 **aem-fp-db-integration-sample-pkg-6.1.2.zip** 打包并单击 **[!UICONTROL 确定]**.
+1. 单击 **[!UICONTROL 安装]** 到包旁边以安装包。
 1. 转到 **[!UICONTROL AEM Web控制台配置]**
-https://页面[*主机*]:[*端口*]/system/console/configMgr。
-1. 单击以打开 **[!UICONTROL Forms门户草稿和提交配置]** 在编辑模式下。
+页面：https://[*主机*]：[*端口*]/system/console/configMgr.
+1. 单击以打开 **[!UICONTROL Forms Portal草稿和提交配置]** 在编辑模式下。
 
-1. 指定属性的值，如下表所述：
+1. 按照下表中的说明指定属性的值：
 
    | **属性** | **描述** | **值** |
    |---|---|---|
-   | Forms门户草稿数据服务 | 草稿数据服务的标识符 | formsportal.sampledataservice |
-   | Forms门户草稿元数据服务 | 草稿元数据服务的标识符 | formsportal.samplemetadataservice |
+   | Forms Portal草稿数据服务 | 草稿数据服务的标识符 | formsportal.sampledataservice |
+   | Forms Portal草稿元数据服务 | 草稿元数据服务的标识符 | formsportal.samplemetadataservice |
    | Forms门户提交数据服务 | 提交数据服务的标识符 | formsportal.sampledataservice |
    | Forms门户提交元数据服务 | 提交元数据服务的标识符 | formsportal.samplemetadataservice |
-   | Forms门户待签署的Data Service | 挂起签名数据服务的标识符 | formsportal.sampledataservice |
-   | Forms门户待签名元数据服务 | 挂起的签名元数据服务的标识符 | formsportal.samplemetadataservice |
+   | Forms Portal挂起的签名数据服务 | 待处理签名数据服务的标识符 | formsportal.sampledataservice |
+   | Forms Portal挂起的签名元数据服务 | 待处理签名元数据服务的标识符 | formsportal.samplemetadataservice |
 
    >[!NOTE]
    >
-   >这些服务通过其名称解析，这些名称在 `aem.formsportal.impl.prop` 键：
+   >服务名称作为服务的值来解析 `aem.formsportal.impl.prop` 键如下所示：
 
    ```java
    @Service(value = {SubmitDataService.class, DraftDataService.class})
@@ -76,19 +76,19 @@ https://页面[*主机*]:[*端口*]/system/console/configMgr。
 
    要为元数据表提供其他名称，请执行以下操作：
 
-   * 在Web控制台配置中，找到并单击Forms门户元数据服务实施示例。 您可以更改数据源、元数据/其他元数据表名称的值。
+   * 在“Web控制台配置”中，查找并单击Forms Portal元数据服务示例实施。 您可以更改数据源、元数据/其他元数据表名的值。
 
-   要为数据表提供其他名称，请执行以下操作：
+   为数据表提供不同的名称：
 
-   * 在“Web控制台配置”中，找到并单击Forms Portal Data Service实施示例。 您可以更改数据源和数据表名称的值。
+   * 在“Web控制台配置”中，找到并单击Forms Portal数据服务示例实施。 您可以更改数据源和数据表名称的值。
    >[!NOTE]
    >
-   >如果更改表名称，请在表单门户配置中提供它们。
+   >如果更改表名，请在表单门户配置中提供它们。
 
-1. 保持其他配置原样，然后单击 **[!UICONTROL 保存]**.
+1. 保留其他配置不变，然后单击 **[!UICONTROL 保存]**.
 
-1. 数据库连接可通过Apache Sling连接池化数据源完成。
-1. 对于Apache Sling连接，找到并单击以打开 **[!UICONTROL Apache Sling连接池化数据源]** 在“Web控制台配置”的编辑模式下。 指定属性的值，如下表所述：
+1. 可以通过Apache Sling连接池数据源建立数据库连接。
+1. 对于Apache Sling连接，请查找并单击以打开 **[!UICONTROL Apache Sling连接池化数据源]** 在“Web控制台配置”的编辑模式下。 按照下表中的说明指定属性的值：
 
 <table>
  <tbody>
@@ -98,7 +98,7 @@ https://页面[*主机*]:[*端口*]/system/console/configMgr。
   </tr>
   <tr>
    <td>数据源名称</td>
-   <td><p>用于从数据源池筛选驱动程序的数据源名称</p> <p><strong>注意： </strong><em>实施示例使用FormsPortal作为数据源名称。</em></p> </td>
+   <td><p>用于从数据源池筛选驱动程序的数据源名称</p> <p><strong>注意： </strong><em>示例实施使用FormsPortal作为数据源名称。</em></p> </td>
   </tr>
   <tr>
    <td>JDBC驱动程序类</td>
@@ -106,11 +106,11 @@ https://页面[*主机*]:[*端口*]/system/console/configMgr。
   </tr>
   <tr>
    <td>JDBC连接URI<br /> </td>
-   <td>jdbc:mysql://[<em>主机</em>]:[<em>端口</em>]/[<em>schema_name</em>]</td>
+   <td>jdbc:mysql://[<em>主机</em>]：[<em>端口</em>]/[<em>schema_name</em>]</td>
   </tr>
   <tr>
    <td>用户名</td>
-   <td>对数据库表进行身份验证和执行操作的用户名</td>
+   <td>用于对数据库表进行身份验证和执行操作的用户名</td>
   </tr>
   <tr>
    <td>密码</td>
@@ -129,7 +129,7 @@ https://页面[*主机*]:[*端口*]/system/console/configMgr。
    <td>100</td>
   </tr>
   <tr>
-   <td>最小空闲连接</td>
+   <td>最小空闲连接数</td>
    <td>10</td>
   </tr>
   <tr>
@@ -141,7 +141,7 @@ https://页面[*主机*]:[*端口*]/system/console/configMgr。
    <td>100000</td>
   </tr>
   <tr>
-   <td>借用测试</td>
+   <td>借入测试</td>
    <td>已选中</td>
   </tr>
   <tr>
@@ -150,7 +150,7 @@ https://页面[*主机*]:[*端口*]/system/console/configMgr。
   </tr>
   <tr>
    <td>验证查询</td>
-   <td>示例值包括：SELECT 1(mysql)、从dual(oracle)中选择1、SELECT 1(MS Sql Server)(validationQuery)</td>
+   <td>示例值为SELECT 1(mysql)，从dual(oracle)中选择1，SELECT 1(MS Sql Server) (validationQuery)</td>
   </tr>
   <tr>
    <td>验证查询超时</td>
@@ -161,15 +161,15 @@ https://页面[*主机*]:[*端口*]/system/console/configMgr。
 
 >[!NOTE]
 >
->* MySQL的JDBC驱动程序未提供示例。 确保已为其进行配置，并提供配置JDBC连接池所需的信息。
+>* 示例中未提供用于MySQL的JDBC驱动程序。 确保已为其配置并提供配置JDBC连接池所需的信息。
 >* 将创作实例和发布实例指向使用同一数据库。 对于所有创作实例和发布实例，JDBC连接URI字段的值必须相同。
 
 
-1. 保持其他配置原样，然后单击 **[!UICONTROL 保存]**.
+1. 保留其他配置不变，然后单击 **[!UICONTROL 保存]**.
 
-1. 如果数据库架构中已有表，请跳转到下一步。
+1. 如果数据库模式中已有表，请跳至下一步。
 
-   否则，如果数据库架构中没有表，请执行以下SQL语句，为数据库架构中的数据、元数据和其他元数据创建单独的表：
+   否则，如果数据库模式中还没有表，请执行以下SQL语句，为数据库模式中的数据、元数据和其他元数据创建单独的表：
 
    >[!NOTE]
    >
@@ -227,7 +227,7 @@ https://页面[*主机*]:[*端口*]/system/console/configMgr。
    ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
    ```
 
-   **用于其他元数据的SQL语句**
+   **SQL语句for additionalmetadatable**
 
    ```sql
    CREATE TABLE `additionalmetadatatable` (
@@ -250,7 +250,7 @@ https://页面[*主机*]:[*端口*]/system/console/configMgr。
    `time` varchar(255) DEFAULT NULL);
    ```
 
-1. 如果数据库架构中已经有表（数据、元数据和其他元数据），请执行以下alter表查询：
+1. 如果数据库模式中已有表（数据、元数据和additionalmetadatable），请执行以下更改表查询：
 
    **用于更改数据表的SQL语句**
 
@@ -266,7 +266,7 @@ https://页面[*主机*]:[*端口*]/system/console/configMgr。
 
    >[!NOTE]
    >
-   >如果您已经运行ALTER TABLE元数据添加查询，并且表中存在markedforDeletion列，则该查询将失败。
+   >如果您已运行ALTER TABLE元数据添加查询，并且表中存在marketforDeletion列，则该查询会失败。
 
    ```sql
    ALTER TABLE metadata add agreementId varchar(255) DEFAULT NULL,
@@ -293,57 +293,57 @@ https://页面[*主机*]:[*端口*]/system/console/configMgr。
    CHANGE `xdpRef` `xdpRef` VARCHAR(1000) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL;
    ```
 
-   **用于更改附加元数据表的SQL语句**
+   **用于更改additionalmetadatable表的SQL语句**
 
    ```sql
    ALTER TABLE `additionalmetadatatable` CHANGE `value` `value` TEXT CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL, CHANGE `key` `key` VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL;
    ```
 
-现在已配置示例实施，您可以在数据库中存储所有数据和元数据时，使用该实施列出草稿和提交。 现在，让我们看看如何在示例中配置数据和元数据服务。
+现在已配置示例实施，您可以在将所有数据和元数据存储在数据库中时，使用该实施列出草稿和提交内容。 现在，让我们查看示例中数据和元数据服务的配置方式。
 
 ## 安装mysql-connector-java-5.1.39-bin.jar文件 {#install-mysql-connector-java-bin-jar-file}
 
-对所有创作实例和发布实例执行以下步骤，以安装mysql-connector-java-5.1.39-bin.jar文件：
+在所有创作实例和发布实例上执行以下步骤，安装mysql-connector-java-5.1.39-bin.jar文件：
 
 1. 导航到 `https://'[server]:[port]'/system/console/depfinder` 和搜索com.mysql.jdbc包。
-1. 在“导出方式”列中，检查包是否由任何包导出。
+1. 在“导出方式”列中，检查是否按任意包导出包。
 
-   如果包未被任何包导出，则继续。
+   如果包未由任何捆绑包导出，请继续。
 
-1. 导航到 `https://'[server]:[port]'/system/console/bundles` 单击 **[!UICONTROL 安装/更新]**.
-1. 单击 **[!UICONTROL 选择文件]** 并浏览以选择mysql-connector-java-5.1.39-bin.jar文件。 此外，选择 **[!UICONTROL 启动包]** 和 **[!UICONTROL 刷新包]** 复选框。
+1. 导航到 `https://'[server]:[port]'/system/console/bundles` 并单击 **[!UICONTROL 安装/更新]**.
+1. 单击 **[!UICONTROL 选择文件]** 并浏览以选择mysql-connector-java-5.1.39-bin.jar文件。 此外，选择 **[!UICONTROL 启动捆绑包]** 和 **[!UICONTROL 刷新包]** 复选框。
 1. 单击 **[!UICONTROL 安装或更新]**. 完成后，重新启动服务器。
 1. (*仅限Windows*)关闭操作系统的系统防火墙。
 
 ## 表单门户数据和元数据服务的示例代码 {#sample-code-for-forms-portal-data-and-metadata-service}
 
-以下zip文件包含 `FormsPortalSampleDataServiceImpl` 和 `FormsPortalSampleMetadataServiceImpl` （实施类）。 此外，它包含编译上述实现类所需的所有类。
+以下zip文件包含 `FormsPortalSampleDataServiceImpl` 和 `FormsPortalSampleMetadataServiceImpl` （实现类）用于数据和元数据服务接口。 此外，它还包含编译上述实现类所需的所有类。
 
 [获取文件](assets/sample_package.zip)
 
 ## 验证文件名的长度  {#verify-length-of-the-file-name}
 
-Forms Portal的数据库实施使用其他元数据表。 表具有基于表的键和id列的复合主键。 MySQL允许主键的长度不超过255个字符。 您可以使用以下客户端验证脚本来验证附加到文件小组件的文件名长度。 附加文件后，将运行验证。 当文件名大于150（包括扩展名）时，以下过程中提供的脚本会显示一条消息。 您可以修改脚本，以检查其是否存在不同数量的字符。
+Forms Portal的数据库实施使用其他元数据表。 该表具有基于表的键和ID列的复合主键。 MySQL允许主键长度不超过255个字符。 您可以使用以下客户端验证脚本来验证附加到文件小部件的文件名的长度。 在附加文件时运行验证。 当文件名大于150（包括扩展名）时，以下过程中提供的脚本将显示一条消息。 您可以修改脚本以检查其他字符数。
 
-执行以下步骤以创建 [客户端库](/help/sites-developing/clientlibs.md) 和使用脚本：
+执行以下步骤以创建 [客户端库](/help/sites-developing/clientlibs.md) 并使用脚本：
 
 1. 登录到CRXDE并导航到/etc/clientlibs/
-1. 创建类型的节点 **cq:ClientLibraryFolder** 和提供节点的名称。 例如：`validation`。
+1. 创建节点类型 **cq：ClientLibraryFolder** 并提供节点的名称。 例如：`validation`。
 
    单击 **[!UICONTROL 全部保存]**.
 
-1. 右键单击节点，单击 **[!UICONTROL 创建新文件]**，然后创建扩展名为.txt的文件。 例如， `js.txt`将以下代码添加到新创建的.txt文件中，然后单击 **[!UICONTROL 全部保存]**.
+1. 右键单击节点，然后单击 **[!UICONTROL 创建新文件]**，并创建一个扩展名为.txt的文件。 例如， `js.txt`将以下代码添加到新创建的.txt文件中，然后单击 **[!UICONTROL 全部保存]**.
 
    ```javascript
    #base=util
     util.js
    ```
 
-   在上述代码中， `util` 是文件夹的名称，并且 `util.js` 中文件的名称 `util` 文件夹。 的 `util` 文件夹和 `util.js` 文件。
+   在上述代码中， `util` 是文件夹的名称，并且 `util.js` 中文件的名称 `util` 文件夹。 此 `util` 文件夹和 `util.js` 文件是在后续步骤中创建的。
 
-1. 右键单击 `cq:ClientLibraryFolder` 在步骤2中创建的节点，选择创建>创建文件夹。 创建名为的文件夹 `util`. 单击 **[!UICONTROL 全部保存]**. 右键单击 `util` 文件夹，选择创建>创建文件。 创建名为 `util.js`. 单击 **[!UICONTROL 全部保存]**.
+1. 右键单击 `cq:ClientLibraryFolder` 在步骤2中创建的节点，选择创建>创建文件夹。 创建名为的文件夹 `util`. 单击 **[!UICONTROL 全部保存]**. 右键单击 `util` 文件夹，选择“创建”>“创建文件”。 创建名为的文件 `util.js`. 单击 **[!UICONTROL 全部保存]**.
 
-1. 将以下代码添加到util.js文件中，然后单击 **[!UICONTROL 全部保存]**. 代码验证文件名的长度。
+1. 将以下代码添加到util.js文件，然后单击 **[!UICONTROL 全部保存]**. 代码验证文件名的长度。
 
    ```javascript
    /*
@@ -398,9 +398,9 @@ Forms Portal的数据库实施使用其他元数据表。 表具有基于表的�
 
    >[!NOTE]
    >
-   >此脚本适用于开箱即用(OOTB)附件小组件。 如果您已自定义OOTB附件小组件，请更改上述脚本以合并相应更改。
+   >该脚本用于现成(OOTB)附件小部件组件。 如果您自定义了OOTB附件小组件，请更改上述脚本以包含相应的更改。
 
-1. 将以下属性添加到在步骤2中创建的文件夹中，然后单击 **[!UICONTROL 全部保存]**.
+1. 将以下属性添加到在步骤2中创建的文件夹，然后单击 **[!UICONTROL 全部保存]**.
 
    * **[!UICONTROL 名称：]** 类别
 
@@ -410,12 +410,12 @@ Forms Portal的数据库实施使用其他元数据表。 表具有基于表的�
 
    * **[!UICONTROL 多选项：]** 已启用
 
-1. 导航到 `/libs/fd/af/runtime/clientlibs/guideRuntime`并附加 `fp.validation` 的值。
+1. 导航到 `/libs/fd/af/runtime/clientlibs/guideRuntime`并附加 `fp.validation` 值。
 
-1. 导航到/libs/fd/af/runtime/clientlibs/guideRuntimeWithXFA并附加 `fp.validation` 值嵌入属性。
+1. 导航到/libs/fd/af/runtime/clientlibs/guideRuntimeWithXFA并附加 `fp.validation` 值到嵌入属性。
 
    >[!NOTE]
    >
-   >如果您使用的是自定义客户端库，而不是guideRuntime和guideRuntimeWithXfa客户端库，请使用类别名称将此过程中创建的客户端库嵌入到运行时加载的自定义库中。
+   >如果您使用的是自定义客户端库，而不是guideRuntime和guideRuntimeWithXfa客户端库，请使用类别名称将此过程中创建的客户端库嵌入在运行时加载的自定义库中。
 
-1. 单击 **[!UICONTROL 全部保存。]** 现在，当文件名大于150（包括扩展名）字符时，会显示消息。
+1. 单击 **[!UICONTROL 全部保存。]** 现在，当文件名大于150（包括扩展名）字符时，会显示一条消息。

@@ -1,15 +1,15 @@
 ---
-title: 创建内容片段模型无头快速入门指南
+title: 创建内容片段模型Headless快速入门指南
 description: 定义您将创建的内容的结构，并使用内容片段模型通过 AEM 的 Headless 功能提供内容。
-exl-id: 8e3e4d00-34d3-4d4f-bc3a-43b8a322b986
-source-git-commit: a5cb385aa369a5e59889e77597119358b77b55be
+exl-id: 653e35c9-7b6a-49ae-b55d-af2ec40e257d
+source-git-commit: a2ababa9dd9115e963b91a7271d204d287557c40
 workflow-type: tm+mt
 source-wordcount: '492'
 ht-degree: 93%
 
 ---
 
-# 创建内容片段模型无头快速入门指南 {#creating-content-fragment-models}
+# 创建内容片段模型Headless快速入门指南 {#creating-content-fragment-models}
 
 定义您将创建的内容的结构，并使用内容片段模型通过 AEM 的 Headless 功能提供内容。
 
@@ -23,7 +23,7 @@ ht-degree: 93%
 
 信息架构师只会在偶尔需要新模型时执行这些任务。对于本指南快速入门，我们只需要创建一个模型。
 
-1. 登录AEM，然后从主菜单中选择 **工具 — >资产 — >内容片段模型**.
+1. 登录AEM，从主菜单选择 **工具 — >资产 — >内容片段模型**.
 1. 点按或单击通过创建配置生成的文件夹。
 
    ![模型文件夹 ](../assets/models-folder.png)

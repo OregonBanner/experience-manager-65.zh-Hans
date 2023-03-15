@@ -1,5 +1,5 @@
 ---
-title: 日历要点
+title: Calendar Essentials
 seo-title: Calendar Essentials
 description: 日历功能概述
 seo-description: Calendar feature overview
@@ -17,11 +17,11 @@ ht-degree: 2%
 
 ---
 
-# 日历要点 {#calendar-essentials}
+# Calendar Essentials {#calendar-essentials}
 
-本页提供了有关使用日历功能的基本信息。
+本页提供有关使用日历功能的基本信息。
 
-## 客户端要点 {#essentials-for-client-side}
+## 适用于客户端的Essentials {#essentials-for-client-side}
 
 <table>
  <tbody>
@@ -34,7 +34,7 @@ ht-degree: 2%
    <td>否</td>
   </tr>
   <tr>
-   <td> <a href="client-customize.md#clientlibs-for-scf"><strong>clientlibs</strong></a></td>
+   <td> <a href="client-customize.md#clientlibs-for-scf"><strong>clientllibs</strong></a></td>
    <td>cq.social.hbs.calendar</td>
   </tr>
   <tr>
@@ -48,14 +48,14 @@ ht-degree: 2%
   </tr>
   <tr>
    <td><strong> 属性</strong></td>
-   <td>请参阅 <a href="calendar.md">使用日历</a></td>
+   <td>参见 <a href="calendar.md">使用日历</a></td>
   </tr>
  </tbody>
 </table>
 
 * [客户端自定义](client-customize.md)
 
-## 服务器端要点 {#essentials-for-server-side}
+## 服务器端Essentials {#essentials-for-server-side}
 
 * [日历API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/calendar/client/api/package-summary.html)
 
@@ -65,17 +65,17 @@ ht-degree: 2%
 
 ### 日历功能 {#calendar-function}
 
-包含 [日历函数](functions.md#calendar-function) 将配置 `calendar` 组件。 日历功能支持识别 [特权成员用户组](users.md#privileged-members-group).
+社区站点结构包括 [日历功能](functions.md#calendar-function) 将配置一个 `calendar` 组件。 Calendar功能支持识别 [拥有权限的成员用户组](users.md#privileged-members-group).
 
 ### 访问日历帖子(UGC) {#accessing-calendar-posts-ugc}
 
-自AEM 6.1 Communities起，使用 [公用商店](working-with-srp.md) 对于UGC，包括以编程方式访问UGC，而不考虑选择的存储选项（如ASRP、MSRP或JSRP）。
+自AEM 6.1社区起，使用 [公用存储](working-with-srp.md) for UGC包括对UGC的编程访问，而不管选择的存储选项（如ASRP、MSRP或JSRP）。
 
-**UGC在存储库中的位置和格式可能会发生更改，但不会发出警告**.
+**UGC在存储库中的位置和格式可能会发生更改，恕不发出警告**.
 
 请参阅：
 
-* [存储资源提供程序概述](srp.md)  — 简介和存储库使用概述
-* [SRP和UGC要点](srp-and-ugc.md) - SRP实用程序方法和示例
+* [存储资源提供程序概述](srp.md)  — 简介和存储库使用情况概述
+* [SRP和UGC Essentials](srp-and-ugc.md) - SRP实用程序方法和示例
 * [使用SRP访问UGC](accessing-ugc-with-srp.md)  — 编码准则
 * [SocialUtils重构](socialutils.md)  — 将已弃用的实用程序方法映射到当前SRP实用程序方法

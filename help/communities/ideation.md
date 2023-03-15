@@ -1,5 +1,5 @@
 ---
-title: 构思要点
+title: Ideation Essentials
 seo-title: Ideation Essentials
 description: 构思功能概述
 seo-description: Ideation feature overview
@@ -17,25 +17,25 @@ ht-degree: 3%
 
 ---
 
-# 构思要点 {#ideation-essentials}
+# Ideation Essentials {#ideation-essentials}
 
-本页提供了使用构思功能的基本信息，该功能与论坛类似，但能够另存为草稿，且具有更协作的感觉。
+此页面提供了使用构思功能的基本信息，该功能与论坛类似，但可以另存为草稿并提供更具协作性的体验。
 
-## 客户端要点 {#essentials-for-client-side}
+## 适用于客户端的Essentials {#essentials-for-client-side}
 
 <table>
  <tbody>
   <tr>
    <td> <strong>resourceType</strong></td>
-   <td>社交/构思/组件/hbs/构思</td>
+   <td>social/ideation/components/hbs/ideation</td>
   </tr>
   <tr>
    <td> <a href="scf.md#add-or-include-a-communities-component"><strong>可包含</strong></a></td>
    <td>否</td>
   </tr>
   <tr>
-   <td> <a href="clientlibs.md"><strong>clientlibs</strong></a></td>
-   <td>cq.social.hbs.voting<br /> cq.social.hbs.like<br /> cq.social.hbs.identation</td>
+   <td> <a href="clientlibs.md"><strong>clientllibs</strong></a></td>
+   <td>cq.social.hbs.voting<br /> cq.social.hbs.liking<br /> cq.social.hbs.ideation</td>
   </tr>
   <tr>
    <td> <strong>模板</strong></td>
@@ -47,7 +47,7 @@ ht-degree: 3%
   </tr>
   <tr>
    <td><strong> 属性</strong></td>
-   <td>请参阅 <a href="ideation-feature.md">构思功能</a></td>
+   <td>参见 <a href="ideation-feature.md">构思特征</a></td>
   </tr>
  </tbody>
 </table>
@@ -56,4 +56,4 @@ ht-degree: 3%
 
 ### 构思功能 {#ideation-function}
 
-包含 [构思函数](functions.md#ideation-function)，包括已配置的 `ideation` 组件。
+社区站点结构包括 [构思功能](functions.md#ideation-function)，包括已配置的 `ideation` 组件。

@@ -37,9 +37,9 @@ ht-degree: 85%
 
 可以从网站控制台启动工作流，也可以在编辑页面时从 Sidekick 启动工作流。
 
-的 **状态** 列 **网站** 控制台指示工作流是否已应用于页面：
+此 **状态** 中的列 **网站** console指示工作流是否已应用于页面：
 
-![工作流状态](assets/workflowstatus.png)
+![workflowstatus](assets/workflowstatus.png)
 
 ### 从网站控制台启动工作流 {#starting-a-workflow-from-the-websites-console}
 

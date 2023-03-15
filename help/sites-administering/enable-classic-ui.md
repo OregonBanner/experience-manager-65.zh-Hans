@@ -1,7 +1,7 @@
 ---
 title: 启用对经典UI的访问
 seo-title: Enabling Access to Classic UI
-description: 了解如何启用对经典UI的访问权限。
+description: 了解如何启用对经典UI的访问。
 seo-description: Lear how to enable access to Classic UI.
 uuid: 08698023-6e0d-4160-8c4d-d282e74182bc
 contentOwner: Chris Bohnert
@@ -19,7 +19,7 @@ ht-degree: 23%
 
 # 启用对经典UI的访问{#enabling-access-to-classic-ui}
 
-由于触屏功能与AEM的许多区域中的经典UI达到同等级别，并且实际上已超过经典UI，因此现在默认情况下，通过触屏界面访问经典界面时将被禁用。 以下页面说明了如何在必要时重新启用此访问。
+由于触屏功能在AEM的许多区域中已达到与经典UI相当的水平，并且实际上已超过经典UI，因此现在默认禁用通过触屏界面访问经典界面。 以下页面说明了如何在必要时重新启用此访问权限。
 
 * [编辑者](/help/sites-administering/enable-classic-ui-editor.md)
 * [Admin Console](/help/sites-administering/enable-classic-ui-admin.md)

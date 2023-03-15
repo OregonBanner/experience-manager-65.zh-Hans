@@ -24,15 +24,15 @@ ht-degree: 84%
 
 >[!CAUTION]
 >
->AEM 6.5现已弃用大多数基础组件。请参阅 [发行说明](/help/release-notes/deprecated-removed-features.md) 以了解更多信息。
+>大多数基础组件现已在AEM 6.5中弃用。请参阅 [发行说明](/help/release-notes/deprecated-removed-features.md) 以进一步了解。
 >
->Adobe 建议在 AEM 项目中利用更现代且可扩展的[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)。这些是 [We.Retail示例内容](/help/sites-developing/we-retail.md) 也可以 [独立安装及用于开发](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/using.html) 由您的管理员。
+>Adobe 建议在 AEM 项目中利用更现代且可扩展的[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)。这些组件是 [We.Retail示例内容](/help/sites-developing/we-retail.md) 也可以是 [单独安装并用于开发](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/using.html) 由您的管理员执行。
 >
->您可以使用 [AEM现代化工具套件](https://opensource.adobe.com/aem-modernize-tools/) 以重构基于基础组件的网站，以使用核心组件。
+>您可以使用 [AEM Modernize Tools Suite](https://opensource.adobe.com/aem-modernize-tools/) 重构基于基础组件的站点以使用核心组件。
 
 基础组件专门为在创作标准网页内容时使用而设计。这些组件构成了适用于标准 AEM 安装的现成组件的子集。
 
-有些组件可通过组件浏览器立即使用，而其他各种组件也可使用 [设计模式](/help/sites-authoring/default-components-designmode.md) （如果页面基于静态模板）或 [编辑模板](/help/sites-authoring/templates.md) （如果页面基于可编辑的模板）。
+有些可通过组件浏览器立即访问，而其他各种可通过使用 [设计模式](/help/sites-authoring/default-components-designmode.md) （如果页面基于静态模板）或 [编辑模板](/help/sites-authoring/templates.md) （如果页面基于可编辑的模板）。
 
 支持使用基础组件，但它们大部分已被弃用并被核心组件取代，核心组件提供了更大的可扩展性和灵活性。
 
@@ -65,7 +65,7 @@ ht-degree: 84%
 
 >[!CAUTION]
 >
->此基础组件已被弃用。Adobe 建议改用[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)。
+>此基础组件已被弃用。Adobe 建议改用[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)。
 
 您可以为链接定义标题和描述。
 
@@ -184,7 +184,7 @@ ht-degree: 84%
 
 * **列表**
 
-   在此，您可以指定页面在轮播中的包含方式：
+   在这里，您可以指定在轮播中包含页面的方式：
 
    * **生成列表对象**
 生成页面列表的方式有若干种：使用“子页面”、“固定列表”、“搜索”或“高级搜索”（所有方式如下所述）。
@@ -199,7 +199,7 @@ ht-degree: 84%
 
          * **页面**
 选择页面列表。使用 
-`+` 添加更多条目，并使用向上/向下按钮调整顺序。
+`+` 以添加更多条目和上/下按钮以调整顺序。
       * **搜索选项**
 
          * **开始**
@@ -212,9 +212,9 @@ ht-degree: 84%
          * **QueryBuilder 谓词记号**
 可以使用“QueryBuilder 谓词记号”输入搜索查询。例如，您可以输入“fulltext=Marketing”，以使内容带有“Marketing”的所有页面都显示在传送中。
 有关查询表达式的完整说明和更多示例，请参阅 [QueryBuilder API](/help/sites-developing/querybuilder-api.md)。
-   * **订购依据**
+   * **排序方式**
 选择 
-`jcr:title`, `jcr:created`, `cq:lastModified`或 `cq:template` 下拉菜单中。
+`jcr:title`， `jcr:created`， `cq:lastModified`，或 `cq:template` 下拉菜单中。
 
    * **限制**
 您希望在传送中使用的最多项目数；这是可选项。
@@ -231,14 +231,14 @@ ht-degree: 84%
 
 >[!CAUTION]
 >
->此基础组件已被弃用。Adobe 建议改用[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)。
+>此基础组件已被弃用。Adobe 建议改用[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)。
 
 图表组件允许您添加条形图、折线图或饼图。AEM 可根据您提供的数据创建图表。您可通过在“数据”选项卡中直接键入或通过复制并粘贴电子表格来提供数据。
 
 * **数据**
 
    * **图表数据**
-使用CSV格式输入图表数据；逗号分隔值格式使用逗号(&quot;,&quot;)作为字段分隔符。
+使用CSV格式输入图表数据；逗号分隔值格式使用逗号(“，”)作为字段分隔符。
 
 * **高级**
 
@@ -268,13 +268,13 @@ ht-degree: 84%
 >
 >此基础组件已被弃用。Adobe 建议改用[内容片段核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html?lang=zh-Hans)。
 
-[内容片段](/help/sites-authoring/content-fragments.md)将作为独立于页面的资产来创建和管理。您随后可以在创作内容页面时使用这些片段及其变量。
+[内容片段](/help/sites-authoring/content-fragments.md)将作为独立于页面的资产来创建和管理。您随后可以在创作内容页面时使用这些片段及其变体。
 
 ### 设计导入程序 {#design-importer}
 
 >[!CAUTION]
 >
->此基础组件已被弃用。Adobe 建议改用[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)。
+>此基础组件已被弃用。Adobe 建议改用[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)。
 
 此组件允许您上传含有设计包的 zip 文件。
 
@@ -282,7 +282,7 @@ ht-degree: 84%
 
 >[!CAUTION]
 >
->此基础组件已被弃用。Adobe 建议改用[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)。
+>此基础组件已被弃用。Adobe 建议改用[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)。
 
 下载组件可在所选网页上创建下载指定文件的链接。您可以从内容查找器中拖动资产或上传文件。
 
@@ -302,14 +302,14 @@ ht-degree: 84%
 
 >[!CAUTION]
 >
->此基础组件已被弃用。Adobe 建议改用[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)。
+>此基础组件已被弃用。Adobe 建议改用[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)。
 
 外部应用程序集成组件（**外部**）允许您使用 iFrame 将外部应用程序嵌入到您的 AEM 页面。
 
 * **外部**
 
    * **目标应用程序**
-指定要集成的Web应用程序的URL;例如：
+指定要集成的Web应用程序的URL；例如：
 
       ```
       https://en.wikipedia.org/wiki/Main_Page
@@ -332,11 +332,11 @@ ht-degree: 84%
 
 >[!CAUTION]
 >
->此基础组件已被弃用。Adobe 建议改用[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)。
+>此基础组件已被弃用。Adobe 建议改用[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)。
 
 >[!CAUTION]
 >
->如果没有进行广泛的项目级别自定义，此组件将不再能够开箱即用运行。
+>如果没有广泛的项目级别自定义，则此组件将无法再开箱即用。
 
 Flash 组件允许您加载 Flash 影片。您可以从内容查找器中将 Flash 资产拖动到组件上，也可以使用对话框：
 
@@ -396,7 +396,7 @@ Flash 组件允许您加载 Flash 影片。您可以从内容查找器中将 Fla
 
 >[!NOTE]
 >
->就地编辑器在编辑时使用图像的原始大小和宽高比。您还可以指定高度和宽度属性。在保存编辑更改时，将应用属性中定义的任何大小和宽高比限制。
+>就地编辑器在编辑时使用图像的原始大小和长宽比。您还可以指定高度和宽度属性。保存编辑更改时，将应用属性中定义的任何大小和长宽比限制。
 >
 >根据您的实例，[页面设计](/help/sites-developing/designer.md)还可能会强制应用最小和最大限制；这些限制在项目实施过程中开发。
 
@@ -416,15 +416,15 @@ Flash 组件允许您加载 Flash 影片。您可以从内容查找器中将 Fla
 
 * **地图**
 
-   要映射图像，请选择“映射”。 您可以指定创建图像映射的方式（矩形、多边形等）以及该区域应指向的位置。
+   要映射图像，请选择映射。 您可以指定创建图像映射的方式（矩形、多边形等）以及该区域应指向的位置。
 
 * **裁剪**
 
-   选择“裁剪”以裁剪图像。 可使用鼠标裁剪图像。
+   选择裁切以裁切图像。 可使用鼠标裁剪图像。
 
 * **旋转**
 
-   要旋转图像，请选择“旋转”。 连续使用“旋转”，直到图像旋转成您需要的外观。
+   要旋转图像，请选择旋转。 连续使用“旋转”，直到图像旋转成您需要的外观。
 
 * **清除**
 
@@ -436,11 +436,11 @@ Flash 组件允许您加载 Flash 影片。您可以从内容查找器中将 Fla
 
 * **替换文本**
 
-   用于创建辅助内容时使用的替换文本。
+   创建无障碍内容时使用的替换文本。
 
 * **链接到**
 
-   创建指向资产或您网站中其他页面的链接。
+   创建指向您的网站中的资产或其他页面的链接。
 
 * **描述**
 
@@ -507,13 +507,13 @@ Flash 组件允许您加载 Flash 影片。您可以从内容查找器中将 Fla
 
          * **QueryBuilder 谓词记号**
 
-            您可以使用QueryBuilder谓词记号输入搜索查询。 例如，您可以输入“fulltext=Marketing”，以使内容带有“Marketing”的所有页面都显示在传送中。
+            您可以使用Querybuilder谓词表示法输入搜索查询。 例如，您可以输入“fulltext=Marketing”，以使内容带有“Marketing”的所有页面都显示在传送中。
 
 
             有关查询表达式的完整说明和更多示例，请参阅 [QueryBuilder API](/help/sites-developing/querybuilder-api.md)。
       * **标记**
 
-         指定 **父页面**, **标记/关键词** 和所需的匹配条件。
+         指定 **父页面**， **标记/关键字** 以及所需的匹配条件。
    * **显示方式**
 
       希望列出项目的方式；包括链接、Teaser 和新闻。
@@ -547,11 +547,11 @@ Flash 组件允许您加载 Flash 影片。您可以从内容查找器中将 Fla
 
 >[!CAUTION]
 >
->此基础组件已被弃用。Adobe 建议改用[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)。
+>此基础组件已被弃用。Adobe 建议改用[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)。
 
 >[!CAUTION]
 >
->如果没有进行广泛的项目级别自定义，此组件将不再能够开箱即用运行。
+>如果没有广泛的项目级别自定义，则此组件将无法再开箱即用。
 
 此组件提供了“用户名”和“密码”字段。
 
@@ -591,7 +591,7 @@ Flash 组件允许您加载 Flash 影片。您可以从内容查找器中将 Fla
 
 >[!CAUTION]
 >
->如果没有进行广泛的项目级别自定义，此组件将不再能够开箱即用运行。
+>如果没有广泛的项目级别自定义，则此组件将无法再开箱即用。
 
 * **标题**
 
@@ -605,7 +605,7 @@ Flash 组件允许您加载 Flash 影片。您可以从内容查找器中将 Fla
 
    * **类型/大小**
 
-      从提供的选择中进行选择。
+      从提供的选择中选择。
 
 ![chlimage_1-95](assets/chlimage_1-95.png)
 
@@ -613,7 +613,7 @@ Flash 组件允许您加载 Flash 影片。您可以从内容查找器中将 Fla
 
 >[!CAUTION]
 >
->此基础组件已被弃用。Adobe 建议改用[内容片段核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html)。
+>此基础组件已被弃用。Adobe 建议改用[内容片段核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html?lang=zh-Hans)。
 
 使用&#x200B;**引用**&#x200B;组件可以从 AEM 网站的其他页面引用文本（在当前实例中）。引用的段落内容会像在当前页面上一样进行显示。当源段落发生更改时，此内容也将随之更新（可能需要刷新页面）。
 
@@ -657,7 +657,7 @@ Flash 组件允许您加载 Flash 影片。您可以从内容查找器中将 Fla
 
    * **节点类型**
 
-      如果搜索限制为特定的节点类型，请在此处列出它们；例如， `cq:Page`.
+      如果搜索仅限于特定节点类型，请在此处列出它们；例如， `cq:Page`.
 
    * **搜索路径**
 
@@ -715,7 +715,7 @@ Flash 组件允许您加载 Flash 影片。您可以从内容查找器中将 Fla
 
 >[!CAUTION]
 >
->此基础组件已被弃用。Adobe建议利用 [导航](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/navigation.html), [语言导航](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/language-navigation.html)和 [痕迹导航核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/breadcrumb.html) 中。
+>此基础组件已被弃用。Adobe建议利用 [导航](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/navigation.html)， [语言导航](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/language-navigation.html)、和 [痕迹导航核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/breadcrumb.html) 而是。
 
 自动 Sitemap 列表，该列表（具有默认设置）列出了当前网站中的所有页面（作为活动链接）。例如，提取结果如下所示：
 
@@ -737,7 +737,7 @@ Flash 组件允许您加载 Flash 影片。您可以从内容查找器中将 Fla
 
 >[!CAUTION]
 >
->如果没有进行广泛的项目级别自定义，此组件将不再能够开箱即用运行。
+>如果没有广泛的项目级别自定义，则此组件将无法再开箱即用。
 
 此组件允许您加载一系列将在您的页面上显示为幻灯片放映的图像。您可以添加或删除图像以及为每个图像指定标题。在“高级”下，您还可以指定显示区域的大小。
 
@@ -747,7 +747,7 @@ Flash 组件允许您加载 Flash 影片。您可以从内容查找器中将 Fla
 
    * **新幻灯片**
 
-      您可以使用 **添加** (和 **删除**)按钮。
+      您可以使用 **添加** (和 **移除**)按钮。
 
    * **标题**
 
@@ -826,7 +826,7 @@ Flash 组件允许您加载 Flash 影片。您可以从内容查找器中将 Fla
 
 ![chlimage_1-98](assets/chlimage_1-98.png)
 
-当您打开 **配置** 对话框中，您还可以设置：
+当您打开 **配置** 对话框，您还可以设置：
 
 * **分隔条**
 * **文本样式**
@@ -922,11 +922,11 @@ Flash 组件允许您加载 Flash 影片。您可以从内容查找器中将 Fla
 
 >[!CAUTION]
 >
->此基础组件已被弃用。Adobe建议利用 [核心组件嵌入组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/embed.html) 中。
+>此基础组件已被弃用。Adobe建议利用 [核心组件嵌入组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/embed.html) 而是。
 
 >[!CAUTION]
 >
->如果没有进行广泛的项目级别自定义，此组件将不再能够开箱即用运行。
+>如果没有广泛的项目级别自定义，则此组件将无法再开箱即用。
 
 **视频**&#x200B;组件允许您在页面上放置一个预定义的现成视频元素。
 
@@ -938,7 +938,7 @@ Flash 组件允许您加载 Flash 影片。您可以从内容查找器中将 Fla
 
    * **视频资产**
 
-      上传或拖放视频资产。
+      上传或放置您的视频资产。
 
    * **大小**
 
@@ -983,7 +983,7 @@ Flash 组件允许您加载 Flash 影片。您可以从内容查找器中将 Fla
 
 >[!CAUTION]
 >
->组件中的基础组件已被弃用。Adobe 建议改用[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)。
+>组件中的基础组件已被弃用。Adobe 建议改用[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)。
 
 表单组件用于为访客创建表单以提交输入。表单和表单组件可用于收集用户反馈（例如，客户满意度调查问卷）和用户信息（例如，用户注册）等信息。
 
@@ -1072,19 +1072,19 @@ Flash 组件允许您加载 Flash 影片。您可以从内容查找器中将 Fla
 
    * **必填**
 
-      这取决于表单组件类型，但会提供一个或多个单击框，以指示此字段或此字段的某些部分是必需的。
+      这取决于表单组件类型，但提供一个或多个单击框以指示该字段或该字段的某些部分为必填。
 
    * **必需的消息**
 
-      通知用户此字段为必填字段的消息；必填字段还将标有星号和。
+      用于通知用户此字段为必填项的消息；必填字段还将标记有和星号。
 
    * **约束**
 
-      可供选择的约束取决于表单组件类型。
+      可供选择的约束取决于表单元件类型。
 
    * **约束消息**
 
-      用于告知用户所需内容的消息。
+      通知用户所需内容的消息。
 
 * **样式**
 
@@ -1112,7 +1112,7 @@ Flash 组件允许您加载 Flash 影片。您可以从内容查找器中将 Fla
 
 >[!NOTE]
 >
->基础组件表单组件仅支持使用其他基础组件表单组件（按钮、文本、隐藏等）。不支持在基础组件表单中使用[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)表单组件（反之亦然）。
+>基础组件表单组件仅支持使用其他基础组件表单组件（按钮、文本、隐藏等）。不支持在基础组件表单中使用[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)表单组件（反之亦然）。
 
 #### 表单开始 {#start-of-form}
 
@@ -1164,7 +1164,7 @@ Flash 组件允许您加载 Flash 影片。您可以从内容查找器中将 Fla
 
    * **加载路径**
 
-      用于将预定义值加载到表单字段的节点属性的路径。
+      节点属性的路径，用于将预定义值加载到表单字段中。
 
       这是指定库中节点的路径的可选字段。如果此节点具有与字段名称相匹配的属性，则表单上的相应字段将随这些属性的值预加载。如果不存在任何匹配，则字段将包含默认值。
 
@@ -1187,7 +1187,7 @@ Flash 组件允许您加载 Flash 影片。您可以从内容查找器中将 Fla
          `/apps/<*myApp*>/form/<*myValidation*>/formservervalidation.jsp`
    * **操作配置**
 
-      中的可用选项 **操作配置** 取决于 **操作类型** 选定项：
+      中可用的选项 **操作配置** 取决于 **操作类型** 已选定：
 
       * **帐户请求**
 
@@ -1204,7 +1204,7 @@ Flash 组件允许您加载 Flash 影片。您可以从内容查找器中将 Fla
 
          * **类型**
 
-            选择所需类型。
+            选择所需的类型。
 
          * **表单**
 
@@ -1216,7 +1216,7 @@ Flash 组件允许您加载 Flash 影片。您可以从内容查找器中将 Fla
 
          * **资源类型**
 
-            如果已设置，则会将此内容作为 `sling:resourceType`
+            如果设置，则会将此项作为添加到每个注释中 `sling:resourceType`
 
          * **视图选择器**
       * **创建潜在客户**
@@ -1240,7 +1240,7 @@ Flash 组件允许您加载 Flash 影片。您可以从内容查找器中将 Fla
 
          * **查看数据...**
 
-            单击此按钮可访问有关批量编辑器中表单结果的信息。从此处，您可以将信息导出到 `.tsv` （制表符分隔）文件（例如，在Excel电子表格中使用）。
+            单击此按钮可访问有关批量编辑器中表单结果的信息。从此处，您可以将信息导出到 `.tsv` （制表符分隔）文件（例如用于Excel电子表格中）。
       * **邮件**
 
          * **从**
@@ -1276,10 +1276,10 @@ Flash 组件允许您加载 Flash 影片。您可以从内容查找器中将 Fla
 
          * **查看数据...**
 
-            单击此按钮可访问有关批量编辑器中表单结果的信息。从此处，您可以将信息导出到.tsv（制表符分隔）文件（例如，在Excel电子表格中使用）。
+            单击此按钮可访问有关批量编辑器中表单结果的信息。从此处，您可以将信息导出到.tsv（制表符分隔）文件（例如用于Excel电子表格中）。
       * **通过上传存储内容**
 
-         此选项与 **存储内容**.
+         此选项与具有相同的选项 **存储内容**.
 
       * **取消订阅者的订阅**
 
@@ -1344,19 +1344,19 @@ Flash 组件允许您加载 Flash 影片。您可以从内容查找器中将 Fla
 
 此组件允许您采用以下格式添加国际地址字段：
 
-![dc_form_addresfield](assets/dc_form_addressfield.png)
+![dc_form_addressfield](assets/dc_form_addressfield.png)
 
 组件配置为立即使用，但您可以根据需要更改配置。例如，可以为地址的单个元素添加约束。将字段留空将使用默认设置。
 
-### Captcha {#captcha}
+### 验证码 {#captcha}
 
 >[!CAUTION]
 >
->此基础组件已被弃用。Adobe 建议改用[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)。
+>此基础组件已被弃用。Adobe 建议改用[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)。
 
 >[!CAUTION]
 >
->如果没有进行广泛的项目级别自定义，此组件将不再能够开箱即用运行。
+>如果没有广泛的项目级别自定义，则此组件将无法再开箱即用。
 
 Captcha 组件需要用户键入屏幕上所示的字母数字字符串。该字符串会随每次刷新而变。
 
@@ -1386,7 +1386,7 @@ Captcha 组件需要用户键入屏幕上所示的字母数字字符串。该字
 
 >[!CAUTION]
 >
->此基础组件已被弃用。Adobe 建议改用[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)。
+>此基础组件已被弃用。Adobe 建议改用[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)。
 
 此组件允许您提供输入信用卡详细信息所需的字段。您可以对其进行配置，以指定接受的卡类型和所需的信息（例如，安全码）。
 
@@ -1398,7 +1398,7 @@ Captcha 组件需要用户键入屏幕上所示的字母数字字符串。该字
 >
 >此基础组件已被弃用。Adobe 建议改用[表单选项核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/forms/form-options.html)。
 
-可以将下拉列表配置为为用户提供一系列值供您选择：
+下拉列表可以配置为为您提供一系列值供您选择：
 
 ![dc_form_dropdownlistuse](assets/dc_form_dropdownlistuse.png)
 
@@ -1414,7 +1414,7 @@ Captcha 组件需要用户键入屏幕上所示的字母数字字符串。该字
 
 >[!CAUTION]
 >
->此基础组件已被弃用。Adobe 建议改用[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)。
+>此基础组件已被弃用。Adobe 建议改用[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)。
 
 文件上传组件为用户提供了选择和上传文件的途径。
 
@@ -1454,7 +1454,7 @@ Captcha 组件需要用户键入屏幕上所示的字母数字字符串。该字
 
 >[!CAUTION]
 >
->此基础组件已被弃用。Adobe 建议改用[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)。
+>此基础组件已被弃用。Adobe 建议改用[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)。
 
 图像上传组件为用户提供了选择和上传图像文件的途径。
 
@@ -1464,7 +1464,7 @@ Captcha 组件需要用户键入屏幕上所示的字母数字字符串。该字
 
 >[!CAUTION]
 >
->此基础组件已被弃用。Adobe 建议改用[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)。
+>此基础组件已被弃用。Adobe 建议改用[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)。
 
 链接字段允许用户指定 URL：
 
@@ -1476,7 +1476,7 @@ Captcha 组件需要用户键入屏幕上所示的字母数字字符串。该字
 
 >[!CAUTION]
 >
->此基础组件已被弃用。Adobe 建议改用[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)。
+>此基础组件已被弃用。Adobe 建议改用[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)。
 
 此组件用于允许用户输入密码：
 
@@ -1486,7 +1486,7 @@ Captcha 组件需要用户键入屏幕上所示的字母数字字符串。该字
 
 >[!CAUTION]
 >
->此基础组件已被弃用。Adobe 建议改用[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)。
+>此基础组件已被弃用。Adobe 建议改用[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)。
 
 此组件为用户提供了两个字段，分别用于：
 
@@ -1515,7 +1515,7 @@ Captcha 组件需要用户键入屏幕上所示的字母数字字符串。该字
 >
 >请参阅[预载包含多个值的表单字段](/help/sites-developing/developing-forms.md#preloading-form-fields-with-multiple-values)。
 
-### 提交按钮 {#submit-button}
+### “提交”按钮 {#submit-button}
 
 >[!CAUTION]
 >
@@ -1533,7 +1533,7 @@ Captcha 组件需要用户键入屏幕上所示的字母数字字符串。该字
 
 >[!CAUTION]
 >
->此基础组件已被弃用。Adobe 建议改用[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)。
+>此基础组件已被弃用。Adobe 建议改用[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)。
 
 此字段允许您选择标记：
 

@@ -1,11 +1,11 @@
 ---
-title: 了解创作基础知识
-description: 了解使用内容片段为无头CMS创作内容的概念和机制。
+title: 学习创作基础知识
+description: 了解使用内容片段为 Headless CMS 创作内容的概念和机制。
 exl-id: 125c4d0b-1572-4dba-823d-cdef2778f275
 source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
 workflow-type: tm+mt
 source-wordcount: '1693'
-ht-degree: 5%
+ht-degree: 82%
 
 ---
 
@@ -13,20 +13,20 @@ ht-degree: 5%
 
 ## 迄今为止的故事 {#story-so-far}
 
-于 [AEM Headless内容创作历程](overview.md) the [简介](introduction.md) 介绍了与无头创作相关的基本概念和术语。
+在 [AEM Headless 内容作者历程](overview.md)的开头，[简介](introduction.md)涵盖了与针对 Headless 进行创作相关的基本概念和术语。
 
-本文以这些内容为基础，以便您了解如何为AEM无头项目创作您自己的内容。
+本文基于这些内容编写，以便您了解如何为 AEM Headless 项目创作您自己的内容。
 
 ## 目标 {#objective}
 
-* **受众**:初学者
-* **目标**:介绍无头CMS创作的基础知识：
-   * AEMaCS创作简介
+* **受众**：初学者
+* **目标**：介绍 Headless CMS 创作的基础知识：
+   * 使用 AEMaaCS 进行创作简介
    * 内容片段简介
 
 ## 基本处理 {#basic-handling}
 
-在您了解内容片段之前，请先简要介绍如何使用AEM....但是，没有什么东西能真正取代登录和尝试使用系统的体验。
+在您掌握内容片段之前，这里提供了有关如何使用 AEM 的（非常）简短的介绍....但没有什么能真正取代登录和尝试使用系统的体验。
 
 ### 创作和发布 {#author-preview-publish}
 
@@ -35,104 +35,104 @@ AEM 安装通常至少包含两个环境：
 * 创作
 * 发布
 
-您可以登录，然后使用创作环境生成内容。 准备就绪后，您可以发布内容，以便内容可正常使用。 如果没有头，这将适用于其他应用程序，对于网页，这将适用于网上的读者。
+您登录并使用创作环境来生成您的内容。准备就绪后，您可以发布您的内容以使其公开可用。对于 Headless，这针对的是其他应用程序；对于网页，这针对的是网络上的读者。
 
 有关更多详细信息，请参阅创作概念。
 
 ### 登录 {#signing-in}
 
-与大多数系统一样，您需要登录。 作为作者，您将获得：
+与大多数系统一样，您将需要登录。作为作者，您将获得：
 
-* 用户（帐户）名称
+* 用户（帐户）名
 * 密码
 * 用于访问登录屏幕的链接
 
-您的帐户将配置了您需要的任何权限。 如果您有任何问题，我们建议您联系您的内部项目支持团队。
+您的帐户将配置有您需要的任何权限。如果您有任何问题，我们建议您联系您的内部项目支持团队。
 
 ### 导航 {#navigation}
 
-首次登录小型在线教程时，将重点介绍用户界面的一些主要功能。
+首次登录时，简短的在线教程将重点介绍用户界面的一些主要功能。
 
-然后，您可以使用导航面板访问AEM的关键区域。 对于内容片段，您将使用 **资产控制台**.
+之后，您可以使用导航面板访问 AEM 的关键区域。对于内容片段，您将使用 **资产控制台**.
 
-可通过选择左上角的Adobe图标，然后选择小罗盘图标来打开导航面板：
+要打开“导航”面板，请选择左上角的“Adobe”图标，然后按小指南针图标：
 
 ![“导航”面板](/help/journey-headless/author/assets/headless-journey-author-navigation-01.png)
 
 >[!NOTE]
->尽管内容片段是AEM的一项功能 **站点**，则可在 **资产** 控制台。 这是一个技术详细信息，不应影响您，但可能有助于您了解。
+>尽管内容片段是AEM的一项功能 **站点**，它们可在 **资产** 控制台。 这是一个技术细节，应该不会影响您，但了解它可能会有所帮助。
 
-在控制台中，您可以选择要导航到内容片段的文件夹，或选择痕迹导航（在标题中）以导航回树。
+在控制台中，您可以选择文件夹以导航到您的内容片段，或者选择痕迹导航（在标题中）以导航到备份树。
 
 ![痕迹导航](/help/journey-headless/author/assets/headless-journey-author-navigation-02.png)
 
-### 操作，选择，查看 {#actions-selecting-viewing}
+### 操作、选择、查看 {#actions-selecting-viewing}
 
-的 **资产** 控制台具有专用 **操作工具栏**&#x200B;和 **快速操作** 在选择资源（例如，文件夹或内容片段）后可以使用的附加内容。
+此 **资产** 控制台已专用 **操作工具栏**、和 **快速操作** 在选择资源（例如，文件夹或内容片段）后可以使用的区段。
 
 快速操作适用于单个资源，请参阅 **巴塞尔** 在以下示例中：
 
 ![快速操作](/help/journey-headless/author/assets/headless-journey-author-navigation-05.png)
 
-“操作”工具栏提供了对所有操作（适用于当前方案）的访问权限。 可用的操作可能会发生变化；例如，取决于您的位置，或您是否选择了多个资源：
+通过操作工具栏，可以访问适用于当前方案的全部操作。 可用的操作可能会发生更改；例如，取决于您的位置或您是否已选择多个资源：
 
 ![操作工具栏](/help/journey-headless/author/assets/headless-journey-author-navigation-06.png)
 
-您可以使用视图选择器选择查看资源的格式：
+您可以使用视图选择器选择用于查看资源的格式：
 
 ![视图选择器](/help/journey-headless/author/assets/headless-journey-author-navigation-03.png)
 
-您可以使用边栏选择器查看有关项目的其他信息。 这还允许访问其他操作。
+您可以使用边栏选择器查看有关项目的其他信息。 这样还可以访问其他操作。
 
 ![左边栏](/help/journey-headless/author/assets/headless-journey-author-navigation-04.png)
 
 ## 创作内容片段 {#authoring-content-fragments}
 
-因此，这是对AEM用户界面(UI)的非常快速的介绍，但希望您有机会试用它。 现在，我们开始关注您真正感兴趣的内容片段 — Headless的内容片段。
+虽然这是对 AEM 用户界面 (UI) 的非常简要的介绍，但希望您有机会尝试一下。现在，我们开始探究您真正感兴趣的内容 – Headless 的内容片段。
 
-我们必须从头到尾逐步完成相关操作，但您的实例可能已经创建了文件夹和/或片段，这些文件夹和/或片段可能位于不同位置。 原则是一样的。
+我们必须从头到尾探究这些内容，但您的实例可能已创建文件夹和/或片段，并且它们可能位于不同的位置。准则是一样的。
 
-### 组织和导航 {#organizing-and-navigating}
+### 编排和导航 {#organizing-and-navigating}
 
-除非您有很少的内容片段，否则您将需要组织这些片段 — 以便您（和其他人）能够再次找到它们。
+除非您的内容片段非常少，否则您将需要编排内容 - 以便您（和其他人）能够再次找到它们。
 
 #### 创建文件夹 {#creating-folder}
 
-为此，可在 **文件** 的子菜单。 选择 **创建** 选项（右上方），后跟 **文件夹**:
+您可以通过在 Assets 控制台的&#x200B;**文件**&#x200B;部分中创建一系列文件夹来完成此操作。选择&#x200B;**创建**&#x200B;选项（右上角），然后选择&#x200B;**文件夹**：
 
 ![“创建文件夹”选项](/help/journey-headless/author/assets/headless-journey-author-folder-01.png)
 
-此时将打开一个对话框，您可以在其中输入详细信息，然后使用进行确认 **创建**:
+这将打开一个对话框，可在其中输入详细信息，然后使用&#x200B;**创建**&#x200B;进行确认：
 
 ![“创建文件夹”对话框](/help/journey-headless/author/assets/headless-journey-author-folder-02.png)
 
 #### 使用路径和标记限制文件夹中可用的内容片段模型 {#tags-paths-for-models-in-folder}
 
-此部分的级别稍高一些。 如果你只是开始尝试一些东西，你并不需要它，但是 *非常* 当您有大量片段时很有用。 因此，即使你还没用到，了解情况也是件好事。
+此部分的内容略为深入一些。如果您刚开始尝试，则并不是真的需要它；但当您有大量片段时，它&#x200B;*非常*&#x200B;有用。了解它是件好事，即使您尚未使用它。
 
-您的内容架构师将创建当前项目所需的所有内容片段模型，也可能创建了其他一些项目所需的所有内容片段模型。 为了帮助您自己和其他作者保持简单，您可以限制适用于特定文件夹的模型列表。
+您的内容架构师将创建您的当前项目以及其他一些项目所需的所有内容片段模型。为了帮助您和其他作者简化工作，您可以限制可用于特定文件夹的模型列表。
 
-创建文件夹后，可以打开该文件夹 **属性**. 此处提供了各种选项卡，其中包含有关文件夹的信息和配置详细信息。 特别是对于内容片段，您可以使用 **策略** 选项卡来定义此文件夹的特定路径和/或标记。 这限制了可在文件夹中使用的内容片段模型，因为这意味着内容片段模型必须满足这些要求，才能在此文件夹中用于生成片段。
+创建文件夹后，您可以打开文件夹&#x200B;**属性**。这里提供了各种选项卡，其中包含有关文件夹的信息和配置详细信息。具体而言，对于内容片段，您可以使用&#x200B;**策略**&#x200B;选项卡为此文件夹定义特定的路径和/或标记。这将限制可在文件夹中使用的内容片段模型，因为这意味着内容片段模型必须先满足这些要求，之后才能用于在此文件夹中生成片段。
 
-![创建文件夹属性 — 策略](/help/journey-headless/author/assets/headless-journey-author-folder-04.png)
-
->[!NOTE]
->
->您可以在内容片段模型 — 允许资产文件夹上的内容片段模型下阅读更多详细信息。
-
-然后，在这些文件夹中导航以创建和编辑内容片段。
-
-#### 以防万一 — 文件夹Cloud Services配置 {#cloud-services-folder}
-
-以防……
-
-您可能会得到一个初始文件夹，您可以在其中创建文件夹。 这是因为某些配置详细信息必须（通常由开发人员或系统管理员）应用到根文件夹。 您可能不会感兴趣，但如有必要，您可以检查 **配置** 在 **Cloud Services** 文件夹的 **属性**:
-
-![创建文件夹属性 — 配置](/help/journey-headless/author/assets/headless-journey-author-folder-03.png)
+![创建文件夹属性 – 策略](/help/journey-headless/author/assets/headless-journey-author-folder-04.png)
 
 >[!NOTE]
 >
->您可以在将配置应用到您的资产文件夹下阅读更多内容。
+>您可以参阅“内容片段模型”下的更多详细信息 - 允许 Assets 文件夹中的内容片段模型。
+
+之后，您可以浏览这些文件夹以创建和编辑您的内容片段。
+
+#### 以防万一 – 文件夹云服务配置 {#cloud-services-folder}
+
+以防万一...
+
+您可能会获得一个初始文件夹，可以在其中创建文件夹。这是因为必须将一些配置详细信息应用于根文件夹（此操作通常由开发人员或系统管理员执行）。您可能对此不感兴趣，但如有必要，您可以检查文件夹&#x200B;**属性**&#x200B;的&#x200B;**云服务**&#x200B;中的&#x200B;**配置**：
+
+![创建文件夹属性 – 配置](/help/journey-headless/author/assets/headless-journey-author-folder-03.png)
+
+>[!NOTE]
+>
+>您可以参阅“将配置应用于 Assets 文件夹”下的更多信息。
 
 ### 创建内容片段 {#creating-fragment}
 
@@ -144,96 +144,96 @@ AEM 安装通常至少包含两个环境：
 
 ![创建内容片段 — 选择模型](/help/journey-headless/author/assets/headless-journey-author-content-fragment-02.png)
 
-继续 **下一个** 您可以提供详细信息(**基本** 和 **高级**):
+继续使用后 **下一个** 您可以提供详细信息(**基本** 和 **高级**)对于您的片段：
 
-![创建内容片段 — 提供名称](/help/journey-headless/author/assets/headless-journey-author-content-fragment-03.png)
+![创建内容片段 – 提供名称](/help/journey-headless/author/assets/headless-journey-author-content-fragment-03.png)
 
-使用确认 **创建** 你可以 **打开** 您的片段。
+确认方式 **创建** 然后你可以 **打开** 您的片段在编辑器中。
 
 ### 编辑片段 {#editing-fragment}
 
-您可以在创建片段后立即打开该片段，或者从资产控制台中选择该片段以将其打开。
+您可以在创建片段后立即打开片段，也可以通过从“资产”控制台中选择它来打开片段。
 
-编辑器首次打开时，您将看到：
+在编辑器首次打开时，您将看到：
 
-* 左侧的图标列表 — 允许您访问各个功能区域。 编辑器将在 **变体** 选项卡，这是大多数编辑操作的位置。 您可能对 **批注** 和 **元数据** 选项卡。
+* 左侧的图标列表 – 可利用这些图标访问各种功能区域。编辑器在&#x200B;**变体**&#x200B;选项卡中打开，将在此处完成大部分编辑工作。您可能还对&#x200B;**批注**&#x200B;和&#x200B;**元数据**&#x200B;选项卡感兴趣。
 
-* 包含片段信息以及各种操作访问权限的标头。
+* 包含有关片段的信息的标头，以及对各种操作的访问权限。
 
-* 主编辑区域 — 这取决于用于创建片段的模型。
+* 主要编辑区域，这取决于用于创建片段的模型。
 
 例如：
 
-* 仅需要多个信息片段的片段，其中一些信息具有特定类型。 对于无头内容，引用是关键，您将在历程的稍后部分了解这些内容。
+* 只需要多条信息（其中一些信息具有特定类型）的片段。对于 Headless 内容，引用很重要，您将在历程的后面部分中了解相关信息。
 
-   ![内容片段编辑器 — 我的片段](/help/journey-headless/author/assets/headless-journey-author-content-fragment-04.png)
+   ![内容片段编辑器 – 我的片段](/help/journey-headless/author/assets/headless-journey-author-content-fragment-04.png)
 
-* 允许您写入长段文本的片段。 此处提供了用于管理和设置文本格式的其他选项。 您甚至可以在全屏编辑器中打开各个文本字段（使用右侧的小屏幕样图标）
+* 一个允许您编写长段文本的片段。这里提供了用于管理文本并设置其格式的其他选项。您甚至可以在全屏编辑器中打开各个文本字段（使用右侧的类似小屏幕的图标）
 
-   ![内容片段编辑器 — 阿拉斯加精灵](/help/journey-headless/author/assets/headless-journey-author-content-fragment-05.png)
-
->[!NOTE]
->
->要帮助作者详细了解如何成功填写某些字段，可能需要特定于项目的文档。
->
->有关一般详细信息，请参阅内容片段模型 — 数据类型和属性。
-
-通过以下任一方式确认您的更新 **保存** 或 **保存并关闭**.
+   ![内容片段编辑器 – 阿拉斯加烈酒](/help/journey-headless/author/assets/headless-journey-author-content-fragment-05.png)
 
 >[!NOTE]
 >
->有关更多详细信息，您可以阅读变体 — 创作内容片段。
+>可能需要项目特定的文档来帮助作者详细了解如何成功填写某些字段。
+>
+>有关一般详细信息，请参阅“内容片段模型 – 数据类型和属性”。
 
-#### 你（可能）不需要担心的 {#what-you-probably-do-not-need-to-worry-about}
+使用&#x200B;**保存**&#x200B;或&#x200B;**保存并关闭**&#x200B;来确认更新。
 
-好，这看起来有点奇怪，但是一旦您打开内容片段编辑器并开始探索，您将看到各种选项（可能），这些选项并不适用于您作为内容作者的无头历程。 因此，这只是关于在无头环境中应该忽略的内容的快速提示：
+>[!NOTE]
+>
+>有关更多详细信息，您可以参阅“变体 – 创作内容片段”。
+
+#### 您（可能）无需担心的事情 {#what-you-probably-do-not-need-to-worry-about}
+
+好吧，这似乎是一个有点奇怪的部分，但在您打开内容片段编辑器并开始浏览之后，您将看到各种选项，它们（可能）不适用于您（作为内容作者）的 Headless 历程。因此，这只是一个快速提示，说明您应该能够在 Headless 上下文中忽略的内容：
 
 * **内容片段模型**
 
-   您将在编辑器的顶部看到内容片段模型的名称 — 直接在片段名称下方。 这也是指向模型编辑器的链接。
-内容片段模型在定义您使用的结构时，对于内容片段而言实际上至关重要。 但是，创建和编辑角色（通常）由其他角色（内容架构师）负责。
+   您将在编辑器顶部看到内容片段模型的名称 - 位于片段名称的正下方。这也是一个可将您转至模型编辑器的链接。
+实际上，内容片段模型对您的内容片段至关重要，因为它们定义了您使用的结构。不过，创建和编辑这些模型（通常）是另一个角色（即内容架构师）的责任。
 
    >[!NOTE]
    >
-   >如果您想了解更多信息，可以阅读AEM Headless Content Architect历程。
+   >如果您想了解详情，可以参阅“AEM Headless 内容架构师历程”。
 
 * **关联的内容**
 
-   这个很明显，因为它是编辑中的一个选项卡。
+   这一个非常明显，因为它是编辑器中的一个选项卡。
 
-   AEM中提供了许多版本的内容片段。 最初，在创作页面时，可以使用“传统”方式来创作页面…….而它们仍然在这种环境下使用。 这可能涉及到关联资产（例如图像），这些资产（虽然未嵌入到片段中）在创作页面时需要供作者使用。
+   对于相当多的版本，内容片段已在 AEM 中提供。最初，它们在创作页面时可用于“传统”用途....并且它们仍在此上下文中使用。这可能涉及关联资产（例如图像），这些资产未嵌入片段中，需要在创作页面提供给作者。
 
 * **预览**
 
-   这是编辑器中的另一个选项卡，提供了技术视图，主要面向开发人员。
+   这是编辑器中的另一个选项卡，它提供了技术视图，主要供开发人员使用。
 
 * **更新页面引用**
 
-   此操作可从 **...** （省略号）下拉菜单。 对于无头作者而言，此内容并不有趣，因为它与页面创作相关。
+   可从 **...**（省略号）下拉列表中执行此操作。Headless 作者对它并不感兴趣，因为它与页面创作有关。
 
 ### 发布 {#publishing}
 
 <!-- needs more details -->
 
-完成片段后，您可以 **发布** 这样，它就可用于无头应用。
+完成片段后，您可以&#x200B;**发布**&#x200B;它，以便 Headless 应用程序可使用它。
 
-发布操作在编辑器中(或从 **资产** 控制台):
+发布操作在编辑器中可用(或者从 **资产** console)：
 
-![内容片段编辑器 — 我的片段](/help/journey-headless/author/assets/headless-journey-author-content-fragment-06.png)
+![内容片段编辑器 – 我的片段](/help/journey-headless/author/assets/headless-journey-author-content-fragment-06.png)
 
-## 下一步 {#whats-next}
+## 后续内容 {#whats-next}
 
-既然您已经学习了基础知识，下一步就是 [了解参考资料](references.md). 这将介绍和讨论各种可用的引用，以及如何使用片段引用创建结构级别 — 无头创作的关键部分。
+现在您已了解基础知识，下一步是[了解引用](references.md)。这将介绍和讨论可用的各种引用，以及如何使用片段引用（针对 Headless 的创作的关键部分）创建结构层次。
 
 ## 其他资源 {#additional-resources}
 
 * [创作概念](/help/sites-authoring/author.md)
 
-* [基本操作](/help/sites-authoring/basic-handling.md)  — 此页面主要基于 **站点** 控制台，但许多/大多数功能也与创作相关 **内容片段** 下 **资产** 控制台。
+* [基本处理](/help/sites-authoring/basic-handling.md) – 此页面主要基于&#x200B;**站点**&#x200B;控制台，但许多/大多数功能也用于在 **Assets** 控制台下创作&#x200B;**内容片段**。
 
    * [“导航”面板](/help/sites-authoring/basic-handling.md#navigation-panel)
 
-   * [标题](/help/sites-authoring/basic-handling.md#the-header)
+   * [标头](/help/sites-authoring/basic-handling.md#the-header)
 
    * [操作工具栏](/help/sites-authoring/basic-handling.md#actions-toolbar)
 
@@ -247,23 +247,23 @@ AEM 安装通常至少包含两个环境：
 
    * [管理内容片段](/help/assets/content-fragments/content-fragments-managing.md)
 
-      * [将配置应用到您的Assets文件夹](/help/assets/content-fragments/content-fragments-configuration-browser.md#apply-the-configuration-to-your-assets-folder)
+      * [将配置应用到 Assets 文件夹](/help/assets/content-fragments/content-fragments-configuration-browser.md#apply-the-configuration-to-your-assets-folder)
 
       * [创建内容片段](/help/assets/content-fragments/content-fragments-managing.md#creating-a-content-fragment)
-   * [变量 — 创作内容片段](/help/assets/content-fragments/content-fragments-variations.md)
+   * [变体 - 创作片段内容](/help/assets/content-fragments/content-fragments-variations.md)
 
    * [内容片段模型](/help/assets/content-fragments/content-fragments-models.md)
 
-      * [内容片段模型 — 数据类型](/help/assets/content-fragments/content-fragments-models.md#data-types)
+      * [内容片段模型 – 数据类型](/help/assets/content-fragments/content-fragments-models.md#data-types)
 
-      * [内容片段模型 — 属性](/help/assets/content-fragments/content-fragments-models.md#properties)
+      * [内容片段模型 – 属性](/help/assets/content-fragments/content-fragments-models.md#properties)
 
-      * [内容片段模型 — 允许在Assets文件夹中使用内容片段模型](/help/assets/content-fragments/content-fragments-models.md#allowing-content-fragment-models-assets-folder)
+      * [内容片段模型 – 允许 Assets 文件夹中的内容片段模型](/help/assets/content-fragments/content-fragments-models.md#allowing-content-fragment-models-assets-folder)
 
 
-* 入门指南
-   * [创建Assets文件夹无标题快速入门指南](/help/sites-developing/headless/getting-started/create-assets-folder.md)
+* 快速入门指南
+   * [创建资源文件夹Headless快速入门指南](/help/sites-developing/headless/getting-started/create-assets-folder.md)
 
 * [AEM Headless 内容架构师历程](/help/journey-headless/architect/overview.md)
 
-* [AEM无头翻译历程](/help/journey-headless/translation/overview.md)
+* [AEM Headless 翻译历程](/help/journey-headless/translation/overview.md)

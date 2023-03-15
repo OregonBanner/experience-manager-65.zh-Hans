@@ -1,7 +1,7 @@
 ---
 title: ASRP -Adobe存储资源提供程序
 seo-title: ASRP - Adobe Storage Resource Provider
-description: 设置AEM Communities以使用关系数据库作为其公共存储
+description: 设置AEM Communities以使用关系数据库作为其公用存储
 seo-description: Set up AEM Communities to use a relational database as its common store
 uuid: abe47ad9-9f72-4dad-a5e9-6d621a9722d4
 contentOwner: Janice Kendall
@@ -23,41 +23,41 @@ ht-degree: 1%
 
 ## 关于ASRP {#about-asrp}
 
-当AEM Communities配置为使用ASRP作为其公共存储时，可以从所有创作和发布实例访问用户生成的内容(UGC)，而无需同步或复制。
+当AEM Communities配置为使用ASRP作为其公用存储时，用户生成的内容(UGC)可从所有创作和发布实例访问，而无需同步或复制。
 
-另请参阅 [SRP选项的特点](/help/communities/working-with-srp.md#characteristics-of-srp-options) 和 [推荐的拓扑](/help/communities/topologies.md).
+另请参阅 [SRP选项的特性](/help/communities/working-with-srp.md#characteristics-of-srp-options) 和 [推荐的拓扑](/help/communities/topologies.md).
 
 ## 要求 {#requirements}
 
 使用ASRP需要额外的许可证。
 
-要将AEM Communities网站配置为使用ASRP for UGC，请联系您的客户代表，以获取：
+要将AEM Communities站点配置为使用ASRP进行UGC，请联系您的客户代表：
 
 * 数据中心URL（ASRP端点的地址）
 * 使用者密钥
 * 密钥
 * 报表包ID
 
-消费者密钥和密钥将在公司的所有报表包中共享。 每个租户有一个报表包。
+消费方密钥和密钥在公司的所有报表包中共享。 每个租户有一个报表包。
 
 ## 配置 {#configuration}
 
 ### 选择ASRP {#select-asrp}
 
-的 [存储配置控制台](/help/communities/srp-config.md) 允许选择默认存储配置，该配置标识要使用的SRP实施。
+此 [存储配置控制台](/help/communities/srp-config.md) 允许选择默认存储配置，该配置标识要使用的SRP实现。
 
 **在AEM创作实例上：**
 
-* 从全局导航中，导航到 **[!UICONTROL 工具>社区>存储配置]** 选择 **[!UICONTROL Adobe存储资源提供程序(ASRP)]**.
+* 在全局导航中，导航到 **[!UICONTROL 工具>社区>存储配置]** 并选择 **[!UICONTROL Adobe存储资源提供程序(ASRP)]**.
 
 ![asrp-default](assets/asrp-default.png)
 
-以下信息来自配置过程：
+以下信息来自预配过程：
 
-* **数据中心URL**:下拉列表，选择由您的客户代表标识的生产数据中心。
-* **默认报表包**:输入默认报表包的名称。
-* **消费者密钥**:输入用户密钥。
-* **密码**:输入密码。
+* **数据中心URL**：下拉列表以选择由您的客户代表标识的生产数据中心。
+* **默认报表包**：输入默认报表包的名称。
+* **使用者密钥**：输入使用者密钥。
+* **密码**：输入密码。
 * 选择&#x200B;**提交**。
 
 准备发布实例：
@@ -69,29 +69,29 @@ ht-degree: 1%
 
 * 选择 **测试配置**.
 
-   对于每个创作和发布实例，请从“存储配置”控制台测试与数据中心的连接。
+   对于每个创作和发布实例，从“存储配置”控制台测试与数据中心的连接。
 
-* 确保配置文件数据的网站URL可通过 [外部链接](#externalize-links).
+* 确保配置文件数据的站点URL可从数据中心路由，方法是 [将链接外部化](#externalize-links).
 
 ### 复制加密密钥 {#replicate-the-crypto-key}
 
-消费者密钥和密钥已加密。 为了正确加密/解密密钥，所有AEM实例上的主Granite Crypto密钥必须相同。
+用户密钥和密钥已加密。 为了使密钥正确加密/解密，所有AEM实例上的主Granite加密密钥必须相同。
 
-按照 [复制加密密钥](/help/communities/deploy-communities.md#replicate-the-crypto-key).
+按照上的说明操作 [复制加密密钥](/help/communities/deploy-communities.md#replicate-the-crypto-key).
 
 ### 将链接外部化 {#externalize-links}
 
-要获取正确的配置文件和配置文件图像链接，请务必正确 [配置链接外部器](/help/sites-developing/externalizer.md).
+要获得正确的配置文件和配置文件图像链接，请确保正确地 [配置链接外部化器](/help/sites-developing/externalizer.md).
 
 请确保将域设置为可从数据中心URL（ASRP端点）路由的URL。
 
 ### 时间同步 {#time-synchronization}
 
-要成功使用ASRP端点进行身份验证，运行托管AEM Communities的计算机必须进行时间同步，例如与 [网络时间协议(NTP)](https://www.ntp.org/).
+为了成功通过ASRP端点进行身份验证，运行托管AEM Communities的计算机必须经过时间同步，例如与 [网络时间协议(NTP)](https://www.ntp.org/).
 
 ### 发布配置 {#publishing-the-configuration}
 
-ASRP必须被标识为所有创作实例和发布实例上的公共存储。
+ASRP必须标识为所有创作实例和发布实例上的公用存储。
 
 要使相同的配置在发布环境中可用，请执行以下操作：
 
@@ -99,7 +99,7 @@ ASRP必须被标识为所有创作实例和发布实例上的公共存储。
 
 * 从主菜单导航到 **[!UICONTROL 工具]** > **[!UICONTROL 部署]** > **[!UICONTROL 复制]**
 * 选择 **激活树**
-* **开始路径**:浏览 `/conf/global/settings/communities/srpc/`
+* **起始路径**：浏览到 `/conf/global/settings/communities/srpc/`
 * 取消选择 **仅已修改**
 * 选择 **激活**
 
@@ -107,15 +107,15 @@ ASRP必须被标识为所有创作实例和发布实例上的公共存储。
 
 >[!CAUTION]
 >
->如果在已发布的社区网站上启用ASRP，则任何已存储在 [JCR](/help/communities/jsrp.md) 不再可见，因为内部部署存储和云存储之间不存在数据同步。
+>如果在已发布的社区站点上启用ASRP，则任何UGC都已存储在 [JCR](/help/communities/jsrp.md) 不再可见，因为内部部署存储和云存储之间没有数据同步。
 
-**`AEM Communities Extension`** 之前在AEM 6.0 social communities as a cloud service中引入。 自AEM 6.1 Communities起，无需云配置，只需从 [存储配置控制台](/help/communities/srp-config.md).
+**`AEM Communities Extension`** 之前在AEM 6.0 social communities as a cloud service中引入。 对于AEM 6.1 Communities，无需云配置，只需从中选择ASRP [存储配置控制台](/help/communities/srp-config.md).
 
-由于新的存储结构，因此必须遵循 [升级](/help/communities/upgrade.md#adobe-cloud-storage) 从社交社区升级到社区时的说明。
+由于新的存储结构，必须遵循 [升级](/help/communities/upgrade.md#adobe-cloud-storage) 从社交社区升级到社区时的说明。
 
 ## 管理用户数据 {#managing-user-data}
 
-有关 *用户*, *用户配置文件* 和 *用户组*，通常在发布环境中输入，访问
+有关信息 *用户*， *用户配置文件* 和 *用户组*，通常在发布环境中输入，访问
 
 * [用户同步](/help/communities/sync.md)
 * [管理用户和用户组](/help/communities/users.md)
@@ -124,27 +124,27 @@ ASRP必须被标识为所有创作实例和发布实例上的公共存储。
 
 ### 升级后UGC消失 {#ugc-disappears-after-upgrade}
 
-如果从现有AEM 6.0社交社区网站进行升级，请务必遵循 [升级说明](/help/communities/upgrade.md#adobe-cloud-storage)，否则UGC将丢失。
+如果从现有AEM 6.0社交社区站点升级，请务必遵循 [升级说明](/help/communities/upgrade.md#adobe-cloud-storage)，否则UGC似乎会丢失。
 
 ### 身份验证错误 {#authentication-errors}
 
-如果收到针对数据中心URL的身份验证错误，且AEM error.log包含有关过时时间戳的消息，则请验证是否正在进行时间同步。
+如果收到针对数据中心URL的身份验证错误，并且AEM error.log包含有关过时时间戳的消息，请验证是否进行了时间同步。
 
-使用工具，例如 [网络时间协议(NTP)](https://www.ntp.org/) 来同步所有AEM创作和发布服务器。
+使用工具，例如 [网络时间协议(NTP)](https://www.ntp.org/) 以定时同步所有AEM创作服务器和发布服务器。
 
-### 搜索中不显示新内容 {#new-content-does-not-appear-in-searches}
+### 新内容未出现在搜索中 {#new-content-does-not-appear-in-searches}
 
-Adobe云存储基础架构使用 *最终一致性* 以实现其规模和绩效目标。 因此，新内容不会立即可用，并且需要几秒钟才能在搜索结果中显示。
+Adobe云存储基础架构使用 *最终一致性* 以实现其扩展和性能目标。 因此，新内容不会立即可用，并且需要几秒钟才能显示在搜索结果中。
 
-在监控影响最终一致性的间隔时，如果新内容需要超过几秒钟才能在搜索中显示，请联系您的客户代表。
+在监视影响最终一致性的间隔时，如果新内容在搜索中需要超过几秒的时间才能显示，请联系您的客户代表。
 
 ### UGC在ASRP中不可见 {#ugc-not-visible-in-asrp}
 
 通过检查存储选项的配置，确保ASRP已配置为默认提供程序。 默认情况下，存储资源提供程序是JSRP，而不是ASRP。
 
-在所有创作和发布AEM实例上，重新访问存储配置控制台，或检查AEM存储库。
+在所有创作和发布AEM实例上，重新访问“存储配置”控制台，或检查AEM存储库。
 
-在JCR中，如果 [/conf/global/settings/communities](https://localhost:4502/crx/de/index.jsp#/etc/socialconfig/):
+在JCR中，如果 [/conf/global/settings/communities](https://localhost:4502/crx/de/index.jsp#/etc/socialconfig/)：
 
-* 不包含 [srpc](https://localhost:4502/crx/de/index.jsp#/conf/global/settings/communities/srp) 节点，表示存储提供程序是JSRP。
-* 如果srpc节点存在并包含 [defaultconfiguration](https://localhost:4502/crx/de/index.jsp#/conf/global/settings/communities/srp/defaultconfiguration) 节点，默认配置的属性将ASRP定义为默认提供程序。
+* 不包含 [srpc](https://localhost:4502/crx/de/index.jsp#/conf/global/settings/communities/srp) 节点，这意味着存储提供程序是JSRP。
+* 如果srpc节点存在并包含 [默认配置](https://localhost:4502/crx/de/index.jsp#/conf/global/settings/communities/srp/defaultconfiguration) 节点，defaultconfiguration的属性将ASRP定义为默认提供程序。

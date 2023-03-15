@@ -19,9 +19,9 @@ ht-degree: 0%
 
 # 查看PDF文件的使用权限 {#review-the-usage-rights-of-a-pdf-file}
 
-在将PDF文件上传到Acrobat Reader DC扩展Web应用程序时，您可以查看以下信息：要查看该文件是否已扩展、已应用的任何使用权限及其到期日期。
+将PDF文件上传到Acrobat Reader DC扩展Web应用程序时，您可以查看以下信息：查看是否已Reader扩展、是否应用了任何使用权限及其到期日期。
 
-1. 登录到Acrobat Reader DC扩展Web应用程序，网址为 `http://[localhost]:[port]/ReaderExtensions` (其中 *[端口]* 是您的应用程序服务器的端口号)。
-1. 单击浏览以上传PDF文件，然后单击“信息”。 该信息显示在文件名的下方。
+1. 登录到Acrobat Reader DC扩展Web应用程序，网址为 `http://[localhost]:[port]/ReaderExtensions` (其中 *[端口]* 是应用程序服务器的端口号)。
+1. 单击“浏览”上传PDF文件，然后单击“信息”。 该信息显示在文件名下方。
 
    有关修改文件使用权限的详细信息，请参阅Acrobat Reader DC扩展帮助。

@@ -21,7 +21,7 @@ ht-degree: 43%
 
 以下管理工具可用于管理网站和页面：
 
-* 多站点管理器(MSM)允许您在多个位置使用相同的站点内容，同时允许进行以下变量：
+* 多站点管理器(MSM)允许您在多个位置使用相同的站点内容，同时允许以下变化：
 
    * [重用内容：多站点管理器和 Live Copy](/help/sites-administering/msm.md)
 
@@ -29,19 +29,19 @@ ht-degree: 43%
 
    * [翻译多语言站点的内容](/help/sites-administering/translation.md)
 
-* 这两项功能可结合使用，以满足两者均为 [跨国和多语言](#multinational-and-multilingual-sites).
+* 可以结合使用这两种功能，以满足兼具两种功能的网站的需求 [跨国和多语言](#multinational-and-multilingual-sites).
 
 ## 跨国和多语言站点 {#multinational-and-multilingual-sites}
 
-通过结合使用多站点管理器和翻译工作流，您可以高效地为跨国和多语言站点创建内容。为特定国家/地区创建一个主控网站，然后根据需要使用翻译，将该内容用作其他网站的基础：
+通过结合使用多站点管理器和翻译工作流，您可以高效地为跨国和多语言站点创建内容。为特定国家/地区以一种语言创建主控站点，然后将该内容用作其他站点的基础，并在需要时使用翻译：
 
 * 将主站点[翻译](/help/sites-administering/translation.md)成其他语言。
 
 * 使用[多站点管理器](/help/sites-administering/msm.md)可以：
 
-   * 重新使用主控网站和翻译中的内容，为其他国家和文化创建网站。
-   * 确保将多站点管理器的使用限制为一种语言的内容，例如，“英语主控” — >国家/地区站点中的英语分支、“法语主控” — >国家/地区站点中的法语分支。
-   * 根据需要，分离Live Copy的元素以添加本地化详细信息。
+   * 重复使用主控站点的内容和翻译，为其他国家/地区和文化创建站点。
+   * 确保将多站点管理器的使用限制为使用一种语言的内容，例如，英语主控->国家/地区站点的英语分支，法语主控->国家/地区站点的法语分支。
+   * 如果需要，可分离活动副本的元素以添加本地化详细信息。
 
 下图说明了主要概念的相交部分（但未显示涉及的所有级别/元素）：
 
@@ -51,7 +51,7 @@ ht-degree: 43%
 >
 >在此场景以及类似场景中，MSM 不会管理不同的语言版本。
 >
->* [MSM](/help/sites-administering/msm.md) 管理语言边界内将已翻译内容从Blueprint(例如全局主控)部署到Live Copy（例如本地站点）。
+>* [MSM](/help/sites-administering/msm.md) 管理在语言边界内从Blueprint(例如全局主控)到活动副本（例如本地站点）的已翻译内容部署。
 >* AEM 的[翻译](/help/sites-administering/translation.md)集成功能与第三方翻译管理服务相结合，可以管理语言并将内容翻译成这些不同的语言。
 >
 >在更高级的用例中，也可以跨语言母版使用 MSM。
@@ -60,7 +60,7 @@ ht-degree: 43%
 >
 >对于所有用例，建议阅读以下最佳实践：
 >
->* [MSM 的最佳实践](/help/sites-administering/msm-best-practices.md);特别是：
+>* [MSM 的最佳实践](/help/sites-administering/msm-best-practices.md)；特别是：
    >
    >   * [创建站点](/help/sites-administering/msm-best-practices.md#create-site)
    >   * [MSM 和多语言网站](/help/sites-administering/msm-best-practices.md#msm-and-multilingual-websites)

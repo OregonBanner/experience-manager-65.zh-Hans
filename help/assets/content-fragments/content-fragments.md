@@ -1,6 +1,6 @@
 ---
 title: 使用内容片段
-description: 了解Adobe Experience Manager(AEM)中的内容片段如何允许您设计、创建、策划和使用独立于页面的内容，非常适合无头交付。
+description: 了解Adobe Experience Manager (AEM)中的内容片段如何允许您设计、创建、策划和使用独立于页面的内容，非常适用于Headless投放。
 feature: Content Fragments
 role: User
 exl-id: 0ee883c5-0cea-46b7-a759-600b8ea3bc3e
@@ -13,7 +13,7 @@ ht-degree: 93%
 
 # 使用内容片段 {#working-with-content-fragments}
 
-通过Adobe Experience Manager(AEM)，内容片段允许您设计、创建、策划和 [发布独立于页面的内容](/help/sites-authoring/content-fragments.md) 利用这些功能，可准备内容以准备在多个位置/多个渠道上使用，非常适合无头投放。
+借助Adobe Experience Manager (AEM)，内容片段允许您设计、创建、管理和 [发布独立于页面的内容](/help/sites-authoring/content-fragments.md) 利用这些功能，可准备内容以准备在多个位置/多个渠道上使用，非常适用于Headless投放。
 
 内容片段包含结构化内容：
 
@@ -39,11 +39,11 @@ ht-degree: 93%
 * [为您的实例启用内容片段功能](/help/assets/content-fragments/content-fragments-configuration-browser.md)
 * [内容片段模型](/help/assets/content-fragments/content-fragments-models.md) – 启用、创建和定义模型
 * [管理内容片段](/help/assets/content-fragments/content-fragments-managing.md) – 创建内容片段；然后，编辑、发布和引用
-* [变量 – 创作片段内容](/help/assets/content-fragments/content-fragments-variations.md) – 创作片段内容并创建主控
+* [变体 – 创作片段内容](/help/assets/content-fragments/content-fragments-variations.md) – 创作片段内容并创建主控
 * [Markdown](/help/assets/content-fragments/content-fragments-markdown.md) – 使用片段的 markdown 语法
 * [使用关联内容](/help/assets/content-fragments/content-fragments-assoc-content.md) – 添加关联内容
 * [元数据 – 片段属性](/help/assets/content-fragments/content-fragments-metadata.md) – 查看和编辑片段属性
-* 使用 [内容片段与GraphQL一起交付内容](/help/assets/content-fragments/content-fragments-graphql.md) ，以在您的应用程序中使用。 要帮助您完成此操作，您可以预览 [JSON输出](/help/assets/content-fragments/content-fragments-json-preview.md).
+* 使用 [内容片段与GraphQL一起交付内容](/help/assets/content-fragments/content-fragments-graphql.md) 以便在您的应用程序中使用。 要帮助您完成此操作，您可以预览 [JSON输出](/help/assets/content-fragments/content-fragments-json-preview.md).
 
 >[!NOTE]
 >
@@ -126,7 +126,7 @@ AEM 内容片段可用于描述和管理结构化内容。 结构化内容在可
 
 * 存储为&#x200B;**资产**：
 
-   * 可以从 **资产** 控制台。
+   * 内容片段（及其变体）可以从以下网站创建和维护 **资产** 控制台。
    * 在内容片段编辑器中创作和编辑。
 
 * 通过内容片段组件](/help/sites-authoring/content-fragments.md)（引用组件）在[页面编辑器中使用：
@@ -298,4 +298,4 @@ AEM 内容片段可用于描述和管理结构化内容。 结构化内容在可
 
 ## 使用示例 {#example-usage}
 
-片段及其元素和变量可用于为多个渠道创建一致的内容。 在设计片段时，您需要考虑将在何处使用的内容。
+片段及其元素和变体可用于为多个渠道创建一致的内容。 在设计片段时，您需要考虑将在何处使用的内容。

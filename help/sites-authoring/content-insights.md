@@ -50,7 +50,7 @@ ht-degree: 96%
 
 >[!NOTE]
 >
->内容分析报表要求您的管理员将 AEM 与 SiteCatalyst、Target 和 BrightEdge 集成在一起。请参阅 [与SightCatalyst集成](/help/sites-administering/adobeanalytics.md), [与Adobe Target集成](/help/sites-administering/target.md)和 [与BrightEdge集成](/help/sites-administering/brightedge.md).
+>内容分析报表要求您的管理员将 AEM 与 SiteCatalyst、Target 和 BrightEdge 集成在一起。参见 [与SightCatalyst集成](/help/sites-administering/adobeanalytics.md)， [与Adobe Target集成](/help/sites-administering/target.md)、和 [与BrightEdge集成](/help/sites-administering/brightedge.md).
 
 ## “查看次数”报表 {#the-views-report}
 

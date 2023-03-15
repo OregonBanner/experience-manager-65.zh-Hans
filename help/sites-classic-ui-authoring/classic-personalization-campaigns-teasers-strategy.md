@@ -26,33 +26,33 @@ ht-degree: 89%
 >
 >AEM 6.2 中已弃用 Teaser 组件。请改为使用 [Target 组件](/help/sites-authoring/content-targeting-touch.md)。
 
-* **品牌页面** 存储在网站的“营销活动”部分中。 品牌包含多个单独的营销活动。
-* **促销活动页面** 存储在网站的“营销活动”部分中。 每个营销活动都有单独的页面，该页面包含 Teaser 定义。容器或概述页面也包含有关单独的 Teaser 页面的特定信息和统计数据。
+* **品牌页面** 存储在网站的Campaigns部分。 品牌包含多个单独的营销活动。
+* **Campaign页面** 存储在网站的Campaigns部分。 每个营销活动都有单独的页面，该页面包含 Teaser 定义。容器或概述页面也包含有关单独的 Teaser 页面的特定信息和统计数据。
 
 AEM 中的 Teaser 由若干部分组成：
 
-* **Teaser页面** 存储在相应的营销活动页面下，并保存每个特定营销活动可用的teaser段落定义。 在显示 Teaser 段落时，需使用这些定义；包括内容变体，以及要用于选择变体和提升因子的区段。
-* **Teaser 组件**&#x200B;开箱即用，使用它可以在内容页面中创建特定 Teaser 段落的实例。您可以从 Sidekick 拖动 Teaser 组件，然后指定 Teaser 定义，以便创建自己的 Teaser 段落。**注意：** AEM 6.2中已弃用Teaser组件。请使用 [目标组件](/help/sites-authoring/content-targeting-touch.md) 中。
+* **Teaser页面** 存储在相应的营销活动页面下，其中包含可用于每个特定营销活动的Teaser段落的定义。 在显示 Teaser 段落时，需使用这些定义；包括内容变体，以及要用于选择变体和提升因子的区段。
+* **Teaser 组件**&#x200B;开箱即用，使用它可以在内容页面中创建特定 Teaser 段落的实例。您可以从 Sidekick 拖动 Teaser 组件，然后指定 Teaser 定义，以便创建自己的 Teaser 段落。**注意：** AEM 6.2中已弃用Teaser组件。请使用 [目标组件](/help/sites-authoring/content-targeting-touch.md) 而是。
 * **Teaser 段落**&#x200B;是内容页面中的实际 Teaser 实例。这些段落用于吸引特定访客区段访问其关注的内容。
 * 包含针对特定访客区段的营销活动内容的页面。通常，Teaser 段落将引导访客访问此类页面。
 
 ## 战略 {#strategies}
 
-在向页面添加Teaser段落时，您需要定义 **策略**.
+将Teaser段落添加到页面时，您需要定义 **策略**.
 
 这适用于以下情况：由于几个 Teaser 的分配区段都成功解析，这几个 Teaser 都可供选择。**战略**&#x200B;随后指定用于选择显示的 Teaser 的额外标准：
 
 * **Clickstream 得分**，基于访客的 ClientContext 中包含的标记和相关标记点击量（显示包含各个标记的页面上的访客点击频率）。将比较 Teaser 页面上定义的标记的点击率。
-* **随机**，用于“随机”选择；使用为页面生成的随机因子，可通过 [客户端上下文](/help/sites-administering/client-context.md).
-* **第一个** 在已解析的区段列表中。 该顺序即为营销活动容器页面中 Teaser 的顺序。
+* **Random**，用于“随机”选择；使用为页面生成的随机因子，这可以通过以下图标查看 [客户端上下文](/help/sites-administering/client-context.md).
+* **第一个** 已解析区段的列表中。 该顺序即为营销活动容器页面中 Teaser 的顺序。
 
-的 [提升因子](/help/sites-administering/campaign-segmentation.md#boost-factor) 区段对选择也有影响。 该因子是添加到区段定义中的加权因子，用以提升/降低被选中的相对可能性。
+此 [提升因子](/help/sites-administering/campaign-segmentation.md#boost-factor) 区段的选择也会受到影响。 该因子是添加到区段定义中的加权因子，用以提升/降低被选中的相对可能性。
 
 各种选择条件的作用和相互关系可通过举例（这种方法还可用于确保所需受众看到 Teaser）得到最佳阐释。
 
 如果已经创建以下段，并为其分配了各自的提升因子：
 
-| 区段 | 提升因子 |
+| 市场细分 | 提升因子 |
 |---|---|
 | S1 | 0 |
 | S2 | 0 |
@@ -69,7 +69,7 @@ AEM 中的 Teaser 由若干部分组成：
    <td>营销活动</td>
    <td>Teaser</td>
    <td>分配的区段</td>
-   <td>分配的标记 </td>
+   <td>已分配的标记 </td>
   </tr>
   <tr>
    <td>C1</td>
@@ -112,7 +112,7 @@ AEM 中的 Teaser 由若干部分组成：
 
 那么，如果我们对访客应用此类内容，其中：
 
-* **S1**, **S2** 和 **S6** 已成功解析
+* **S1**， **S2** 和 **S6** 解决成功
 
 * **营销**&#x200B;标记具有 3 次点击量
 * **企业**&#x200B;标记具有 6 次点击量
@@ -134,7 +134,7 @@ AEM 中的 Teaser 由若干部分组成：
    <td>标记 </td>
    <td>成功匹配？</td>
    <td>结果提升因子</td>
-   <td>生成的点击流得分 </td>
+   <td>生成的Clickstream分数 </td>
   </tr>
   <tr>
    <td>C1</td>

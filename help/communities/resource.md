@@ -21,21 +21,21 @@ ht-degree: 6%
 
 ## 添加启用资源 {#add-an-enablement-resource}
 
-要向新社区站点添加支持资源，请执行以下操作：
+要将启用资源添加到新社区站点，请执行以下操作：
 
-* 以系统管理员身份登录到创作实例：
+* 以系统管理员身份登录创作实例：
    * 例如， [http://localhost:4502/](http://localhost:4503/)
-* 从全局导航中，选择 **[!UICONTROL 社区]** > **[!UICONTROL 资源]**
+* 在全局导航中，选择 **[!UICONTROL Communities]** > **[!UICONTROL 资源]**
 
    ![资源](assets/resources.png)
 
-   ![启用资源](assets/enablement-resource.png)
-* 选择要向其添加支持资源的社区站点：
+   ![enablement-resource](assets/enablement-resource.png)
+* 选择要向其中添加启用资源的社区站点：
    * 选择 **[!UICONTROL 启用教程]**.
 * 从菜单中，选择 **[!UICONTROL 创建]**.
 * 选择 **[!UICONTROL 资源]**.
 
-![创建资源](assets/create-enablement-resource.png)
+![create-resource](assets/create-enablement-resource.png)
 
 ### 基本信息 {#basic-info}
 
@@ -43,9 +43,9 @@ ht-degree: 6%
 
 * **[!UICONTROL 网站名称]**
 
-   设置为选定社区站点的名称：启用教程
+   设置为所选社区站点的名称：启用教程
 
-* **[!UICONTROL 资源名称(&amp;A);]**
+* **[!UICONTROL 资源名称(&amp;A)；]**
 
    滑雪课程1
 
@@ -55,33 +55,33 @@ ht-degree: 6%
 
 * **[!UICONTROL 在目录中显示]**
 
-   将其设置为 **开**.
+   将其设置为 **日期**.
 
 * **[!UICONTROL 描述]**
 
-   初学者在雪上滑动。
+   在雪上滑行，给初学者看。
 
 * **[!UICONTROL 添加]**
 
-   向其“分配”视图中的成员添加表示资源的图像。
+   在成员的“工作总揽”视图中添加图像以表示该资源。
 
-   ![基本信息](assets/basic-info.png)
+   ![basic-info](assets/basic-info.png)
 
 * 选择 **[!UICONTROL 下一个]**
 
 ### 添加内容 {#add-content}
 
-虽然它看起来好像可以选择多个资源，但只允许一个资源。
+虽然看起来好像可以选择多个资源，但仅允许选择一个。
 
-选择 `'+' icon`，以通过标识源来开始选择资源的过程。
+选择 `'+' icon`，开始通过标识源来选择资源的过程。
 
-![添加内容](assets/add-content.png)
+![add-content](assets/add-content.png)
 
-![上载资源](assets/upload-resource.png)
+![upload-resource](assets/upload-resource.png)
 
-上传资源。 如果视频资源，请上传自定义图像以在视频开始播放之前显示，或者允许从视频生成缩略图（可能需要几分钟 — 无需等待）。
+上传资源。 如果是视频资源，请在视频开始播放之前上传要显示的自定义图像，或者允许从视频生成缩略图（可能需要几分钟，无需等待）。
 
-![上传 — 视频](assets/upload-video.png)
+![upload-video](assets/upload-video.png)
 
 * 选择&#x200B;**[!UICONTROL 下一步]**。
 
@@ -89,17 +89,17 @@ ht-degree: 6%
 
 * **[!UICONTROL 社交设置]**
 
-   保留默认设置，以便学习者对支持资源的体验进行评论和评级。
+   保留默认设置以体验学习者对启用资源进行评论和评级。
 
 * **[!UICONTROL 到期日期]**
 
-   *（可选）* 可以选择应完成分配的日期。
+   *（可选）* 可选取应完成分配的日期。
 
 * **[!UICONTROL 资源作者]**
 
    *（可选）* 留空。
 
-* **[!UICONTROL 资源联系人(&amp;A);]**
+* **[!UICONTROL 资源联系人(&amp;A)；]**
 
    *（必需）* 使用下拉菜单选择成员 `Quinn Harper`.
 
@@ -107,9 +107,9 @@ ht-degree: 6%
 
    *（可选）* 留空。
 
-   **注意**:如果用户或组不可见，请检查是否已将它们添加到 `Community Enable Members` 本集团及 *已保存* 在发布实例上。
+   **注释**：如果用户或组不可见，请检查它们是否已添加到 `Community Enable Members` 组和 *已保存* 在发布实例上。
 
-   ![启用设置](assets/enablement-settings.png)
+   ![enablement-settings](assets/enablement-settings.png)
 
 * 选择 **[!UICONTROL 下一个]**
 
@@ -117,56 +117,56 @@ ht-degree: 6%
 
 * **[!UICONTROL 添加被分派人]**
 
-   保持未设置状态，因为此启用资源将添加到学习路径中。 如果将学习者分配到单个启用资源以及包含启用资源的学习路径，则会将学习者分配到启用资源两次。
+   保留为未设置，因为此启用资源将添加到学习路径中。 如果将学习者分配给单个启用资源以及一个包含启用资源的学习路径，则会将学习者分配给启用资源两次。
 
-   ![添加分配](assets/add-assignments.png)
+   ![add-assigments](assets/add-assignments.png)
 
 * 选择 **[!UICONTROL 创建]**
 
-   ![创建资源](assets/create-resource.png)
+   ![create-resource](assets/create-resource.png)
 
-成功创建资源会返回到资源控制台，并选择新创建的资源。 在此控制台中，可以发布、添加学习者并更改其他设置。
+成功创建资源后，将返回到资源控制台，并选中新创建的资源。 通过此控制台，您可以发布、添加学习者并更改其他设置。
 
-要上传启用资源的新版本，建议创建新资源，然后从旧版本中取消注册成员，并将他们注册到新版本中。
+要上传新版本的启用资源，建议创建一个新资源，然后从旧版本中取消注册成员并在新版本中注册这些成员。
 
 ### 发布资源 {#publish-the-resource}
 
-在登记者能够查看分配的资源之前，必须先发布该资源：
+必须先发布分配的资源，然后登记者才能查看这些资源：
 
 * 选择世界 `Publish` 图标
 
-成功消息确认激活：
+确认激活并显示一条成功消息：
 
 ![publish-resource](assets/publish-resource.png)
 
 ## 添加第二个启用资源 {#add-a-second-enablement-resource}
 
-重复上述步骤以创建并发布第二个相关的支持资源，以从中创建学习路径。
+重复上述步骤以创建并发布另一个相关的支持资源，从中创建学习路径。
 
 ![添加资源](assets/add-resource.png)
 
-**发布** 第二个资源。
+**Publish** 第二个资源。
 
-返回其资源的启用教程列表。
+返回到其资源的启用教程列表。
 
-*提示：如果两个资源都不可见，请刷新页面。*
+*提示：如果两个资源均不可见，请刷新页面。*
 
-![刷新资源](assets/refresh-resource.png)
+![refresh — 资源](assets/refresh-resource.png)
 
 ## 添加学习路径 {#add-a-learning-path}
 
-学习路径是构成课程的支持资源的逻辑分组。
+学习路径是对构成课程的支持资源的逻辑分组。
 
-* 从资源控制台中，选择 `+ Create`
+* 从“资源”控制台中，选择 `+ Create`
 * 选择 **[!UICONTROL 学习路径]**
 
 ![add-learning-path](assets/add-learning-path.png)
 
-添加 **[!UICONTROL 基本信息]**:
+添加 **[!UICONTROL 基本信息]**：
 
 * **[!UICONTROL 学习路径名称]**
 
-   滑雪课
+   滑雪课程
 
 * **[!UICONTROL 标记]**
 
@@ -174,45 +174,45 @@ ht-degree: 6%
 
 * **[!UICONTROL 在目录中显示]**
 
-   不选中
+   保持未选中状态
 
 * **[!UICONTROL 上传图像]**
 
-   用于在“资源”控制台中表示学习路径。
+   在“资源”控制台中表示学习路径。
 
-   ![学习路径基本](assets/learningpath-basic.png)
+   ![学习路径 — 基本](assets/learningpath-basic.png)
 
 * 选择&#x200B;**[!UICONTROL 下一步]**。
 
-跳过下一个面板，因为没有要添加的先决学习路径。
+跳过下一个面板，因为没有要添加的前提条件学习路径。
 
 * 选择 **[!UICONTROL 下一个]**
 
 在“添加资源”面板上：
 
-* 选择 `+ Add Resources` 选择2个滑雪课程资源以添加到学习路径中。
+* 选择 `+ Add Resources` 以选择要添加到学习路径的2个滑雪缆绳资源。
 
-   注意：仅 **发布** 资源将可供选择。
+   注意：仅限 **已发布** 资源将可供选择。
 
 >[!NOTE]
 >
->您只能选择与学习路径处于同一级别的可用资源。 例如，对于在组中创建的学习路径，只有组级别资源可用；对于在社区站点中创建的学习路径，该站点中的资源可用于添加到学习路径中。
+>您只能选择与学习路径处于同一级别的可用资源。 例如，对于在组中创建的学习路径，只有组级别的资源可用；对于在社区站点中创建的学习路径，该站点中的资源可用于添加到该学习路径中。
 
 * 选择&#x200B;**[!UICONTROL 提交]**。
 
    ![学习路径](assets/learningpath-add.png)
 
-   ![创建学习路径](assets/create-learningpath.png)
+   ![create-learningpath](assets/create-learningpath.png)
 
 * 选择 **[!UICONTROL 下一个]**
 
-   ![学习路径设置](assets/learningpath-settings.png)
+   ![learningpath-settings](assets/learningpath-settings.png)
 
 * **[!UICONTROL 添加被分派人]**
 
-   使用下拉菜单选择 `Community Ski Class` 组，其中应包括成员 `Riley Taylor` 和 `Sidney Croft.`
+   使用下拉菜单选择 `Community Ski Class` 组，其中应包含成员 `Riley Taylor` 和 `Sidney Croft.`
 
-* **[!UICONTROL 学习路径联系方式(&amp;A);]**
+* **[!UICONTROL 学习路径联系人&amp;ast；]**
 
    *（必需）* 使用下拉菜单选择成员 `Quinn Harper`.
 
@@ -220,6 +220,6 @@ ht-degree: 6%
 
    ![learningpath-info](assets/learningpath-info.png)
 
-成功创建学习路径会返回到“资源”控制台，并选择新创建的学习路径。 在此控制台中，可以发布、添加学习者并更改其他设置。
+成功创建学习路径后，学习路径将返回到“资源”控制台，并选中新创建的学习路径。 通过此控制台，您可以发布、添加学习者并更改其他设置。
 
-**发布** 学习之路。
+**Publish** 学习路径。

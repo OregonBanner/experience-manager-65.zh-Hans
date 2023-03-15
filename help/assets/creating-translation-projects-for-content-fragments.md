@@ -21,73 +21,73 @@ ht-degree: 0%
 
 # 为内容片段创建翻译项目 {#creating-translation-projects-for-content-fragments}
 
-除了资产之外，Adobe Experience Manager(AEM)资产还支持 [内容片段](/help/assets/content-fragments/content-fragments.md) （包括变体）。 在内容片段上运行语言副本工作流无需其他优化。 在每个工作流中，都会发送整个内容片段以进行翻译。
+除了资源外，Adobe Experience Manager (AEM) Assets还支持以下项的语言复制工作流 [内容片段](/help/assets/content-fragments/content-fragments.md) （包括变体）。 对内容片段运行语言复制工作流不需要其他优化。 在每个工作流中，会发送整个内容片段以供翻译。
 
-您可以在内容片段上运行的工作流类型与您为资产运行的工作流类型完全相似。 此外，每个工作流类型中可用的选项与资产相应工作流类型下的可用选项相匹配。
+您可以在内容片段上运行的工作流类型与您为资产运行的工作流类型完全相似。 此外，每个工作流类型中可用的选项与资产的相应工作流类型下可用的选项相匹配。
 
-您可以对内容片段运行以下类型的语言副本工作流：
+您可以在内容片段上运行以下类型的语言复制工作流：
 
 **创建并翻译**
 
-在此工作流中，要翻译的内容片段会复制到要翻译的语言的语言根目录中。 此外，根据您选择的选项，将在“项目”控制台中为内容片段创建翻译项目。 根据设置，可以手动启动翻译项目，也可以在翻译项目创建后立即自动运行翻译项目。
+在此工作流中，要翻译的内容片段将被复制到要翻译的语言的语言根中。 此外，根据您选择的选项，将在项目控制台中为内容片段创建翻译项目。 根据设置，可以手动启动翻译项目，也可以允许在创建翻译项目后立即自动运行翻译项目。
 
 **更新语言副本**
 
-更新或修改源内容片段时，需要重新换算相应的区域设置/语言特定内容片段。 更新语言副本工作流翻译一组额外的内容片段，并将其包含在特定区域设置的语言副本中。 在这种情况下，翻译后的内容片段会添加到已包含先前翻译的内容片段的目标文件夹中。
+更新或修改源内容片段时，对应的区域设置/语言特定的内容片段需要重新翻译。 更新语言副本工作流会翻译另一组内容片段，并将其包含在特定区域设置的语言副本中。 在这种情况下，会将已翻译的内容片段添加到已包含先前翻译的内容片段的目标文件夹。
 
 ## 创建和翻译工作流 {#create-and-translate-workflow}
 
-创建和翻译工作流包含以下选项。 与每个选项关联的过程步骤与与资产的相应选项关联的过程步骤相似。
+创建和翻译工作流包含以下选项。 与每个选项关联的过程步骤类似于与资产的相应选项关联的步骤。
 
 * 仅创建结构：有关过程步骤，请参阅 [仅为资产创建结构](translation-projects.md#create-structure-only).
-* 创建新的翻译项目：有关过程步骤，请参阅 [为资产创建新的翻译项目](translation-projects.md#create-a-new-translation-project).
+* 创建新翻译项目：有关过程步骤，请参阅 [为资产创建新的翻译项目](translation-projects.md#create-a-new-translation-project).
 * 添加到现有翻译项目：有关过程步骤，请参阅 [添加到资产的现有翻译项目](translation-projects.md#add-to-existing-translation-project).
 
 ## 更新语言副本工作流 {#update-language-copies-workflow}
 
-更新语言副本工作流包含以下选项。 与每个选项关联的过程步骤与与资产的相应选项关联的过程步骤相似。
+更新语言副本工作流包含以下选项。 与每个选项关联的过程步骤类似于与资产的相应选项关联的步骤。
 
-* 创建新的翻译项目：有关过程步骤，请参阅 [为资产创建新的翻译项目](translation-projects.md#create-a-new-translation-project) （更新工作流）。
+* 创建新翻译项目：有关过程步骤，请参阅 [为资产创建新的翻译项目](translation-projects.md#create-a-new-translation-project) （更新工作流）。
 * 添加到现有翻译项目：有关过程步骤，请参阅 [添加到资产的现有翻译项目](translation-projects.md#add-to-existing-translation-project) （更新工作流）。
 
-您还可以为片段创建临时语言副本，其方式与为资产创建临时副本类似。 有关详细信息，请参阅 [为资产创建临时语言副本](translation-projects.md#creating-temporary-language-copies).
+您还可以为片段创建临时语言副本，其方式与为资产创建临时副本类似。 有关详细信息，请参阅 [为资源创建临时语言副本](translation-projects.md#creating-temporary-language-copies).
 
 ## 翻译混合媒体片段 {#translating-mixed-media-fragments}
 
-AEM允许您翻译包含各种类型的媒体资产和收藏集的内容片段。 如果您翻译的内容片段包含内联资产，则这些资产的翻译副本将存储在目标语言根目录下。
+AEM允许您翻译包含各种媒体资产和收藏集的内容片段。 如果您翻译包含内联资源的内容片段，则这些资源的翻译副本将存储在目标语言根下。
 
-如果内容片段包含收藏集，则收藏集中的资产将与内容片段一起翻译。 资产的翻译副本存储在与源语言根目录下源资产的物理位置匹配的位置，相应的目标语言根目录中。
+如果内容片段包含收藏集，则收藏集中的资产将随内容片段一起翻译。 资产的已翻译副本存储在相应的目标语言根中，其位置与源语言根下的源资产的物理位置匹配。
 
-为了能够翻译包含混合媒体的内容片段，请首先编辑默认的翻译框架，以便能够翻译与内容片段关联的内联资产和收藏集。
+为了能够翻译包含混合媒体的内容片段，请首先编辑默认翻译框架，以启用与内容片段关联的内联资产和收藏集的翻译。
 
-1. 单击/点按AEM徽标，然后导航到 **[!UICONTROL 工具>部署>Cloud Services]**.
-1. 定位 **[!UICONTROL 翻译集成]** 在 **[!UICONTROL Adobe Marketing Cloud]**，然后单击/点按 **[!UICONTROL 显示配置]**.
+1. 单击/点按AEM徽标，然后导航到 **[!UICONTROL “工具”>“部署”>“Cloud Services”]**.
+1. 查找 **[!UICONTROL 翻译集成]** 下 **[!UICONTROL Adobe Marketing Cloud]**，然后单击/点按 **[!UICONTROL 显示配置]**.
 
    ![chlimage_1-444](assets/chlimage_1-444.png)
 
-1. 在可用配置列表中，单击/点按 **[!UICONTROL 默认配置（翻译集成配置）]** 打开 **[!UICONTROL 默认配置]** 页面。
+1. 从可用配置列表中，单击/点按 **[!UICONTROL 默认配置（翻译集成配置）]** 以打开 **[!UICONTROL 默认配置]** 页面。
 
    ![chlimage_1-445](assets/chlimage_1-445.png)
 
-1. 单击 **[!UICONTROL 编辑]** 来显示 **[!UICONTROL 翻译配置]** 对话框。
+1. 单击 **[!UICONTROL 编辑]** 以显示 **[!UICONTROL 翻译配置]** 对话框。
 
    ![chlimage_1-446](assets/chlimage_1-446.png)
 
-1. 导航到 **[!UICONTROL 资产]** ，然后选择 **[!UICONTROL 内联媒体资产和关联的收藏集]** 从 **[!UICONTROL 翻译内容片段资产]** 列表。 单击/点按 **[!UICONTROL 确定]** 以保存更改。
+1. 导航到 **[!UICONTROL 资产]** 选项卡，然后选择 **[!UICONTROL 内联媒体资产和关联的收藏集]** 从 **[!UICONTROL 翻译内容片段资产]** 列表。 单击/点按 **[!UICONTROL 确定]** 以保存更改。
 
    ![chlimage_1-447](assets/chlimage_1-447.png)
 
-1. 从英文根文件夹中，打开内容片段。
+1. 从英语根文件夹中，打开一个内容片段。
 
    ![chlimage_1-448](assets/chlimage_1-448.png)
 
-1. 单击/点按 **[!UICONTROL 插入资产]** 图标。
+1. 单击/点按 **[!UICONTROL 插入资源]** 图标。
 
    ![chlimage_1-449](assets/chlimage_1-449.png)
 
-1. 在内容片段中插入资产。
+1. 将资产插入内容片段。
 
-   ![将资产插入内容片段](assets/column-view.png)
+   ![将资源插入到内容片段](assets/column-view.png)
 
 1. 单击/点按 **[!UICONTROL 关联内容]** 图标。
 
@@ -97,36 +97,36 @@ AEM允许您翻译包含各种类型的媒体资产和收藏集的内容片段�
 
    ![chlimage_1-452](assets/chlimage_1-452.png)
 
-1. 选择一个集合并将其包含到内容片段中。 单击/点按 **[!UICONTROL 保存]**.
+1. 选择一个收藏集并将其包含到内容片段中。 单击/点按 **[!UICONTROL 保存]**.
 
    ![chlimage_1-453](assets/chlimage_1-453.png)
 
 1. 选择内容片段，然后单击/点按 **[!UICONTROL GlobalNav]** 图标。
-1. 选择 **[!UICONTROL 引用]** 来显示 **[!UICONTROL 引用]** 中。
+1. 选择 **[!UICONTROL 引用]** 以显示 **[!UICONTROL 引用]** 窗格。
 
    ![chlimage_1-454](assets/chlimage_1-454.png)
 
-1. 单击/点按 **[!UICONTROL 语言副本]** 在 **[!UICONTROL 副本]** 以显示语言副本。
+1. 单击/点按 **[!UICONTROL 语言副本]** 下 **[!UICONTROL 副本]** 以显示语言副本。
 
    ![chlimage_1-455](assets/chlimage_1-455.png)
 
-1. 单击/点按 **[!UICONTROL 创建和翻译]** 从面板底部显示 **[!UICONTROL 创建和翻译]** 对话框。
+1. 单击/点按 **[!UICONTROL 创建并翻译]** ，以显示 **[!UICONTROL 创建并翻译]** 对话框。
 
    ![chlimage_1-456](assets/chlimage_1-456.png)
 
-1. 从 **[!UICONTROL 目标语言]** 列表。
+1. 从中选择目标语言 **[!UICONTROL 目标语言]** 列表。
 
    ![chlimage_1-457](assets/chlimage_1-457.png)
 
-1. 从 **[!UICONTROL 项目]** 列表。
+1. 从中选择翻译项目类型 **[!UICONTROL 项目]** 列表。
 
    ![chlimage_1-458](assets/chlimage_1-458.png)
 
-1. 在 **[!UICONTROL 项目标题]** 框中，然后单击/点按 **创建**.
+1. 在中指定项目标题 **[!UICONTROL 项目标题]** 框，然后单击/点按 **创建**.
 
    ![chlimage_1-459](assets/chlimage_1-459.png)
 
-1. 导航到 **[!UICONTROL 项目]** ，然后打开您创建的翻译项目的项目文件夹。
+1. 导航到 **[!UICONTROL 项目]** 控制台中，打开您创建的翻译项目的项目文件夹。
 
    ![chlimage_1-460](assets/chlimage_1-460.png)
 
@@ -134,8 +134,8 @@ AEM允许您翻译包含各种类型的媒体资产和收藏集的内容片段�
 
    ![chlimage_1-461](assets/chlimage_1-461.png)
 
-1. 从翻译作业拼贴中，验证要翻译的资产数量。
-1. 从 **[!UICONTROL 翻译作业]** 拼贴，启动翻译作业。
+1. 在翻译作业拼贴中，验证要翻译的资产数量。
+1. 从 **[!UICONTROL 翻译作业]** 图块，启动翻译作业。
 
    ![chlimage_1-462](assets/chlimage_1-462.png)
 
@@ -143,24 +143,24 @@ AEM允许您翻译包含各种类型的媒体资产和收藏集的内容片段�
 
    ![chlimage_1-463](assets/chlimage_1-463.png)
 
-1. 单击/点按内容片段，以检查已翻译的关联资产的路径。
+1. 单击/点按内容片段以检查已翻译关联资产的路径。
 
    ![chlimage_1-464](assets/chlimage_1-464.png)
 
-1. 在收藏集控制台中查看收藏集的语言副本。
+1. 在“收藏集”控制台中查看收藏集的语言副本。
 
    ![chlimage_1-465](assets/chlimage_1-465.png)
 
-   请注意，只有集合的内容已翻译。 集合本身未翻译。
+   请注意，仅翻译收藏集的内容。 收藏集本身不会翻译。
 
-1. 导航到已翻译的关联资产的路径。 请注意，已翻译的资产存储在目标语言根目录下。
+1. 导航到已翻译关联资产的路径。 请注意，已翻译的资产存储在目标语言根下。
 
    ![chlimage_1-466](assets/chlimage_1-466.png)
 
-1. 导航到与内容片段一起翻译的集合中的资产。 请注意，资产的已翻译副本存储在相应的目标语言根目录中。
+1. 导航到收藏集中与内容片段一起翻译的资产。 请注意，资产的翻译副本存储在相应的目标语言根中。
 
    ![chlimage_1-467](assets/chlimage_1-467.png)
 
    >[!NOTE]
    >
-   >向现有项目添加内容片段或执行更新工作流的过程与资产的相应过程类似。 有关这些程序的指导，请参阅资产描述的程序。
+   >将内容片段添加到现有项目或执行更新工作流的过程与资产的相应过程类似。 有关这些程序的指导，请参阅为资产描述的程序。

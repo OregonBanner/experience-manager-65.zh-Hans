@@ -66,7 +66,7 @@ ht-degree: 86%
 >
 >当页面树包含与不同 Adobe Analytics 云配置关联的子项时，您无法为页面配置可用数据列。
 
-1. 在列表视图中，使用视图选择器（工具栏右侧），选择 **查看设置** 然后 **添加自定义Analytics数据**.
+1. 在列表视图中，使用视图选择器（工具栏的右侧），选择 **查看设置** 然后 **添加自定义分析数据**.
 
    ![spad-03](assets/spad-03.png)
 
@@ -78,7 +78,7 @@ ht-degree: 86%
 
 ### 从站点打开内容分析 {#opening-content-insights-from-sites}
 
-打开 [内容分析](/help/sites-authoring/content-insights.md) 从“站点”控制台中，进一步调查页面的有效性。
+打开 [内容分析](/help/sites-authoring/content-insights.md) 以进一步调查页面有效性。
 
 1. 在站点控制台中，选择要查看“内容分析”的页面。
 1. 在工具栏上，单击“分析和建议”图标。
@@ -91,4 +91,4 @@ ht-degree: 86%
 >
 >由于 Adobe Analytics API 中的安全性更改，无法再使用 AEM 中包含的 Activity Map 版本。
 >
->的 [ActivityMap插件由Adobe Analytics提供](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html) 现在应使用。
+>此 [Adobe Analytics提供的ActivityMap插件](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html) 现在应使用。

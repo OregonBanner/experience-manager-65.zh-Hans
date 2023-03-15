@@ -19,23 +19,23 @@ ht-degree: 1%
 
 # 将自适应表单嵌入到外部网页中{#embed-adaptive-form-in-external-web-page}
 
-您可以 [在AEM Sites页面中嵌入自适应表单](/help/forms/using/embed-adaptive-form-aem-sites.md) 或在AEM外托管的网页。 嵌入式自适应表单功能齐全，用户无需离开页面即可填写和提交表单。 它有助于用户停留在网页上其他元素的上下文中，并同时与表单进行交互。
+您可以 [在AEM Sites页面中嵌入自适应表单](/help/forms/using/embed-adaptive-form-aem-sites.md) 或托管在AEM外部的网页。 嵌入式自适应表单功能齐全，用户无需离开页面即可填写和提交表单。 它有助于用户停留在网页上其他元素的上下文中，同时与表单交互。
 
 ## 前提条件 {#prerequisites}
 
 在将自适应表单嵌入到外部网站之前，请执行以下步骤
 
 * 发布要嵌入到AEM Forms服务器发布实例的自适应表单。
-* 在您的网站上创建或识别网页以托管自适应表单。 确保网页可以 [从CDN读取jQuery文件](https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js) 或嵌入了jQuery的本地副本。 呈现自适应表单时需要jQuery。
-* 当AEM服务器和网页位于不同的域上时，请执行部分中列出的步骤， [启用AEM Forms以向跨域站点提供自适应表单](#cross-site).
+* 在您的网站上创建或标识要托管自适应表单的网页。 确保网页可以 [从CDN读取jQuery文件](https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js) 或嵌入了jQuery的本地副本。 呈现自适应表单需要jQuery。
+* 如果AEM服务器和网页位于不同的域中，请执行部分中列出的步骤， [启用AEM Forms以向跨域站点提供自适应表单](#cross-site).
 
 ## 嵌入自适应表单 {#embed-adaptive-form}
 
-您可以通过在网页中插入几行JavaScript来嵌入自适应表单。 代码中的API会向AEM服务器发送HTTP请求以获取自适应表单资源，并在指定的表单容器中插入自适应表单。
+通过在网页中插入几行JavaScript，可以嵌入自适应表单。 代码中的API向AEM服务器发送自适应表单资源的HTTP请求，并将自适应表单注入指定的表单容器中。
 
-要嵌入自适应表单，请执行以下操作：
+嵌入自适应表单：
 
-1. 在您的网站上使用以下代码创建网页：
+1. 使用以下代码在您的网站上创建网页：
 
    ```html
    <!doctype html>
@@ -98,43 +98,43 @@ ht-degree: 1%
 
 1. 在嵌入代码中：
 
-   * 更改 *options.path* 变量，其路径为自适应表单的发布URL。 如果AEM服务器在上下文路径上运行，请确保URL包含上下文路径。 始终提及自适应表单的完整名称（包括扩展）。   例如，上述代码和自适应从驻留在同一AEM表单服务器上，因此该示例使用自适应表单/content/forms/af/locbasic.html的上下文路径。
-   * 替换 *options.dataRef* ，其中包含要与URL一起传递的属性。 您可以将dataref变量用于 [预填自适应表单](/help/forms/using/prepopulate-adaptive-form-fields.md).
-   * 替换 *options.themePath* 具有在自适应表单中配置的主题以外的主题的路径。 或者，您也可以使用请求属性指定主题路径。
-   * CSS_Selector是在其中嵌入自适应表单的表单容器的CSS选择器。 例如，.customafsection css类是上例中的CSS选择器。
+   * 更改的值 *选项路径* 变量填充自适应表单的发布URL路径。 如果AEM服务器在上下文路径上运行，请确保URL包含上下文路径。 始终提及自适应表单的完整名称，包括扩展名。   例如，上述代码和自适应表单位于同一AEM表单服务器上，因此该示例使用自适应表单的上下文路径/content/forms/af/locbasic.html 。
+   * Replace *options.dataRef* 属性以通过URL传递。 您可以使用dataref变量来 [预填自适应表单](/help/forms/using/prepopulate-adaptive-form-fields.md).
+   * Replace *options.themePath* 使用非自适应表单中配置的主题的路径。 或者，您也可以使用请求属性指定主题路径。
+   * CSS_Selector是嵌入了自适应表单的表单容器的CSS选择器。 例如，.customafsection css类是上述示例中的CSS选择器。
 
-自适应表单会嵌入到网页中。 在嵌入的自适应表单中观察以下内容：
+自适应表单将嵌入到网页中。 在嵌入的自适应表单中注意以下事项：
 
-* 原始自适应表单中的页眉和页脚未包含在嵌入的表单中。
-* 草稿和提交的表单位于Forms门户的“草稿和提交”选项卡中。
-* 在原始自适应表单上配置的提交操作将保留在嵌入的表单中。
-* 自适应表单规则将保留，并在嵌入的表单中完全正常运行。
-* 在原始自适应表单中配置的体验定位和A/B测试在嵌入式表单中不起作用。
-* 如果在原始表单上配置了Adobe Analytics，则会在Adobe Analytics服务器中捕获分析数据。 但是，它在Forms分析报表中不可用。
+* 原始自适应表单中的页眉和页脚未包含在嵌入表单中。
+* 草稿和已提交的表单可在Forms门户的“草稿和提交”选项卡中获取。
+* 在原始自适应表单上配置的提交操作会保留在嵌入表单中。
+* 自适应表单规则会保留，并在嵌入表单中充分发挥作用。
+* 在原始自适应表单中配置的体验定位和A/B测试在嵌入表单中不起作用。
+* 如果在原始表单上配置了Adobe Analytics，则会在Adobe Analytics服务器中捕获Analytics数据。 但是，它在Forms analytics报表中不可用。
 
 ## 示例拓扑 {#sample-topology}
 
-嵌入自适应表单的外部网页会向AEM服务器发送请求，该服务器通常位于专用网络的防火墙后面。 为确保将请求安全定向到AEM服务器，建议设置反向代理服务器。
+嵌入自适应表单的外部网页将请求发送到AEM服务器，该服务器通常位于专用网络的防火墙之后。 为确保请求安全定向到AEM服务器，建议设置反向代理服务器。
 
-让我们看一个示例，了解如何在不使用调度程序的情况下设置Apache 2.4反向代理服务器。 在本例中，您将使用 `/forms` 上下文路径和映射 `/forms` 对于反向代理。 它可确保 `/forms` Apache服务器上的AEM实例。 由于所有请求都带有前缀，此拓扑有助于减少调度程序层的规则数 `/forms` 路由到AEM服务器。
+让我们看一个示例，了解如何在不使用Dispatcher的情况下设置Apache 2.4反向代理服务器。 AEM在此示例中，您将使用 `/forms` 上下文路径和映射 `/forms` 反向代理。 它确保任何请求 `/forms` Apache Server上的代码将被定向到AEM实例。 此拓扑有助于减少Dispatcher层的规则数量，因为所有请求都以为前缀 `/forms` 路由到AEM服务器。
 
-1. 打开 `httpd.conf` 配置文件，并取消对以下代码行的注释。 或者，您也可以在文件中添加这些代码行。
+1. 打开 `httpd.conf` 配置文件并取消注释以下代码行。 或者，也可以在文件中添加这些代码行。
 
    ```text
    LoadModule proxy_html_module modules/mod_proxy_html.so
    LoadModule proxy_http_module modules/mod_proxy_http.so
    ```
 
-1. 通过在 `httpd-proxy.conf` 配置文件。
+1. 通过在代理规则中添加以下代码行来设置代理规则 `httpd-proxy.conf` 配置文件。
 
    ```text
    ProxyPass /forms https://[AEM_Instance]/forms
    ProxyPassReverse /forms https://[AEM_Instance]/forms
    ```
 
-   替换 `[AEM_Instance]` 中的AEM服务器发布URL。
+   Replace `[AEM_Instance]` 将AEM服务器发布URL添加到规则中。
 
-如果不在上下文路径上装载AEM服务器，则Apache层的代理规则将如下所示：
+如果您没有在上下文路径上装载AEM服务器，则Apache层的代理规则将如下所示：
 
 ```text
 ProxyPass /content https://<AEM_Instance>/content
@@ -151,20 +151,20 @@ ProxyPassReverse /content https://<AEM_Instance>/content
 
 >[!NOTE]
 >
->如果设置任何其他拓扑，请确保将提交、预填充和其他URL添加到调度程序层允许列表的中。
+>允许列表如果您设置了任何其他拓扑，请确保将提交、预填充和其他URL添加到Dispatcher层的。
 
 ## 最佳实践 {#best-practices}
 
 在网页中嵌入自适应表单时，请考虑以下最佳实践：
 
-* 确保网页CSS中定义的样式规则与表单对象CSS不冲突。 为避免冲突，您可以使用AEM客户端库在自适应表单主题中重复使用网页CSS。 有关在自适应表单主题中使用客户端库的信息，请参阅 [AEM Forms主题](../../forms/using/themes.md).
-* 使网页中的表单容器使用整个窗口宽度。 它可确保为移动设备配置的CSS规则在无任何更改的情况下正常工作。 如果表单容器不采用整个窗口宽度，则需要编写自定义CSS以使表单适应不同的移动设备。
-* 使用 `[getData](https://helpx.adobe.com/experience-manager/6-3/forms/javascript-api/GuideBridge.html)` 用于在客户端中获取表单数据的XML或JSON表示形式的API。
-* 使用 `[unloadAdaptiveForm](https://helpx.adobe.com/experience-manager/6-3/forms/javascript-api/GuideBridge.html)` 用于从HTMLDOM中卸载自适应表单的API。
-* 从AEM服务器发送响应时设置access-control-origin标头。
+* 确保在网页CSS中定义的样式规则不会与表单对象CSS冲突。 为避免冲突，您可以使用AEM客户端库在自适应表单主题中重用网页CSS。 有关在自适应表单主题中使用客户端库的信息，请参阅 [AEM Forms中的主题](../../forms/using/themes.md).
+* 使网页中的表单容器使用整个窗口宽度。 它可确保为移动设备配置的CSS规则无需进行任何更改即可正常工作。 如果表单容器未采用整个窗口宽度，则需要编写自定义CSS，以使表单适应不同的移动设备。
+* 使用 `[getData](https://helpx.adobe.com/experience-manager/6-3/forms/javascript-api/GuideBridge.html)` 用于获取客户端中表单数据的XML或JSON表示形式的API。
+* 使用 `[unloadAdaptiveForm](https://helpx.adobe.com/experience-manager/6-3/forms/javascript-api/GuideBridge.html)` 用于从HTMLDOM卸载自适应表单的API。
+* 设置从AEM服务器发送响应时的访问控制源标头。
 
-## 使AEM Forms能够向跨域站点提供自适应表单 {#cross-site}
+## 启用AEM Forms以向跨域站点提供自适应表单 {#cross-site}
 
-1. 在AEM发布实例上，转到AEM Web Console配置管理器(位于 `https://'[server]:[port]'/system/console/configMgr`.
-1. 找到并打开 **Apache Sling反向链接过滤器** 配置。
-1. 在允许的主机字段中，指定网页所在的域。 它允许主机向AEM服务器发出POST请求。 您还可以使用正则表达式指定一系列外部应用程序域。
+1. 在AEM发布实例上，转到AEM Web控制台配置管理器，网址为 `https://'[server]:[port]'/system/console/configMgr`.
+1. 找到并打开 **Apache Sling引用过滤器** 配置。
+1. 在允许的主机字段中，指定网页所在的域。 它使主机能够向AEM服务器发出POST请求。 还可以使用正则表达式指定一系列外部应用程序域。

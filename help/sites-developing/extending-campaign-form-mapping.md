@@ -1,7 +1,7 @@
 ---
 title: 创建自定义表单映射
 seo-title: Creating Custom Form Mappings
-description: 在Adobe Campaign中创建自定义表时，您可能希望在AEM中构建一个映射到该自定义表的表单
+description: 在Adobe Campaign中创建自定义表时，您可能希望在AEM中构建映射到该自定义表的表单
 seo-description: When you create a custom table in Adobe Campaign, you may want to build a form in AEM that maps to that custom table
 uuid: f3bde513-6edb-4eb6-9048-40045ee08c4a
 contentOwner: User
@@ -19,9 +19,9 @@ ht-degree: 3%
 
 # 创建自定义表单映射{#creating-custom-form-mappings}
 
-在Adobe Campaign中创建自定义表时，您可能希望在AEM中构建一个映射到该自定义表的表单。
+在Adobe Campaign中创建自定义表时，您可能希望在AEM中构建映射到该自定义表的表单。
 
-本文档介绍如何创建自定义表单映射。 完成本文档中的步骤后，您将为用户提供一个事件页面，用户可在该页面注册即将发生的事件。 然后，通过Adobe Campaign跟踪这些用户。
+本文档介绍如何创建自定义表单映射。 完成本文档中的步骤后，您将为用户提供一个事件页面，用户可以在其中注册即将举行的事件。 然后，您可以通过Adobe Campaign跟进这些用户。
 
 ## 前提条件 {#prerequisites}
 
@@ -30,22 +30,22 @@ ht-degree: 3%
 * Adobe Experience Manager
 * Adobe Campaign Classic
 
-请参阅 [将AEM与Adobe Campaign Classic集成](/help/sites-administering/campaignonpremise.md) 以了解更多信息。
+参见 [将AEM与Adobe Campaign Classic集成](/help/sites-administering/campaignonpremise.md) 了解更多信息。
 
 ## 创建自定义表单映射 {#creating-custom-form-mappings-2}
 
-要创建自定义表单映射，您需要遵循以下高级步骤，有关这些步骤的详细说明，请参阅以下章节：
+要创建自定义表单映射，您需要遵循以下各节中详述的这些高级步骤：
 
 1. 创建自定义表。
-1. 扩展 **种子** 表。
+1. 扩展 **种子** 表格。
 1. 创建自定义映射。
-1. 基于自定义映射创建投放。
+1. 根据自定义映射创建投放。
 1. 在AEM中构建表单，该表单将使用创建的投放。
 1. 提交表单以进行测试。
 
 ### 在Adobe Campaign中创建自定义表 {#creating-the-custom-table-in-adobe-campaign}
 
-首先在Adobe Campaign中创建自定义表。 在本例中，我们使用以下定义来创建事件表：
+首先，在Adobe Campaign中创建自定义表。 在此示例中，我们使用以下定义来创建事件表：
 
 ```xml
 <element autopk="true" label="Event" labelSingular="Event" name="event">
@@ -60,7 +60,7 @@ ht-degree: 3%
 
 ### 扩展种子表 {#extending-the-seed-table}
 
-在Adobe Campaign中，点按/单击 **添加** 创建的新扩展 **种子地址(nms)** 表。
+在Adobe Campaign中，点按/单击 **添加** 要创建 **种子地址(nms)** 表格。
 
 ![chlimage_1-194](assets/chlimage_1-194.png)
 
@@ -79,11 +79,11 @@ ht-degree: 3%
 
 ### 创建自定义目标映射 {#creating-custom-target-mapping}
 
-在 **管理/营销活动管理** t，转到 **目标映射** 并添加新T **目标映射。**
+In **管理/营销活动管理** t，转到 **目标映射** 并添加新的T **目标映射。**
 
 >[!NOTE]
 >
->确保为 **内部名称**.
+>请确保对以下内容使用有意义的名称 **内部名称**.
 
 ![chlimage_1-195](assets/chlimage_1-195.png)
 
@@ -91,13 +91,13 @@ ht-degree: 3%
 
 在此步骤中，您将添加一个使用创建的 **目标映射**.
 
-在 **资源/模板**，导航到投放模板并复制现有AEM投放。 单击 **至**，选择创建事件 **目标映射**.
+In **资源/模板**，导航到投放模板并复制现有AEM投放。 当您单击 **至**，选择创建事件 **目标映射**.
 
 ![chlimage_1-196](assets/chlimage_1-196.png)
 
 ### 在AEM中构建表单 {#building-the-form-in-aem}
 
-在AEM中，确保已在 **页面属性**.
+在AEM中，确保您已在以下位置配置了Cloud Service： **页面属性**.
 
 然后，在 **Adobe Campaign** 选项卡，选择在中创建的投放 [创建自定义投放模板](#creating-a-custom-delivery-template).
 
@@ -107,11 +107,11 @@ ht-degree: 3%
 
 配置字段后，您需要手动更改映射。
 
-在CRXDE-lite中，转到 **jcr:content** （页面的）节点，并更改 **acMapping** 的内部名称 **目标映射**.
+在CRXDE-lite中，转到 **jcr：content** （页面）节点并更改 **acMapping** 的内部名称的值 **目标映射**.
 
 ![chlimage_1-198](assets/chlimage_1-198.png)
 
-在表单的配置中，确保选中复选框以在不存在时创建
+在表单的配置中，确保选中要创建的复选框（如果不存在）
 
 ![chlimage_1-199](assets/chlimage_1-199.png)
 
@@ -123,8 +123,8 @@ ht-degree: 3%
 
 ## 疑难解答 {#troubleshooting}
 
-**&quot;元素&#39;@eventdate&#39;中值&#39;02/02/2015&#39;的类型无效(类型为&#39;Event&#39;的文档([adb:event])&#39;)&quot;**
+**“元素‘@eventdate’的值‘02/02/2015’的类型无效(类型为‘Event ([adb：event])&#39;)”**
 
 提交表单时，此错误将记录在 **error.log** 在AEM中。
 
-这是由于日期字段的格式无效所致。 解决方法是 **yyyy-mm-dd** 作为值。
+这是由于日期字段的格式无效。 解决方法是提供 **yyyy-mm-dd** 作为值。

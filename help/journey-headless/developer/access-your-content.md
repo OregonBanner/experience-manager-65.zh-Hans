@@ -11,14 +11,14 @@ ht-degree: 96%
 
 # 如何通过 AEM 交付 API 访问您的内容 {#access-your-content}
 
-在 [AEM Headless 开发人员历程](overview.md)的这一部分中，您可以了解如何使用 GraphQL 查询访问内容片段的内容并将其提供给您的应用程序（Headless 交付）。
+在 [AEM Headless 开发人员历程](overview.md)的这部分中，您可以了解如何使用 GraphQL 查询访问内容片段的内容并将其提供给您的应用程序（Headless 交付）。
 
 ## 迄今为止的故事 {#story-so-far}
 
 在 AEM Headless 历程的上一文档[如何为内容建模](model-your-content.md)中，您已学习 AEM 中内容建模的基础知识，因此，您现在应了解如何为您的内容结构建模，然后使用 AEM 内容片段模型和内容片段实施该结构：
 
 * 了解与内容建模相关的概念和术语。
-* 理解为什么需要进行内容建模才能进行 Headless 内容交付。
+* 了解为什么需要进行内容建模才能进行 Headless 内容交付。
 * 了解如何使用 AEM 内容片段模型实施此结构（以及使用内容片段创作内容）。
 * 了解如何为内容建模；带基本示例的准则。
 
@@ -32,28 +32,28 @@ ht-degree: 96%
 
 ## 您想访问您的内容？ {#so-youd-like-to-access-your-content}
 
-那么...您已获得所有这些结构整齐的内容（在内容片段中），并正等待为您的新应用程序提供信息。问题是 - 如何做到这一点？
+那么...您已获得所有这些结构整齐的内容（在内容片段中），并正等待为您的新应用程序提供信息。问题是如何做到这一点？
 
 您需要通过一种方式来定位特定的内容，选择所需内容并将其返回到您的应用程序以供进一步处理。
 
-借助Adobe Experience Manager(AEM)，您可以使用AEM GraphQL API有选择地访问内容片段，以仅返回所需的内容。 这意味着您可以实施结构化内容的 Headless 交付以便在您的应用程序中使用。
+借助Adobe Experience Manager (AEM)，您可以使用AEM GraphQL API有选择地访问内容片段，以仅返回所需的内容。 这意味着您可以实施结构化内容的 Headless 交付以便在您的应用程序中使用。
 
 >[!NOTE]
 >
 >AEM GraphQL API 是基于标准 GraphQL API 规范的自定义实施。
 
-## GraphQL - 简介 {#graphql-introduction}
+## GraphQL – 简介 {#graphql-introduction}
 
 GraphQL 是一种开源规范，它提供：
 
 * 一种查询语言，可让您从结构化对象中选择特定内容。
-* 一个运行时，用于使用结构化内容实施这些查询。
+* 一个运行库，用于使用结构化内容实施这些查询。
 
 GraphQL 是一个&#x200B;*强*&#x200B;类型 API。这意味着，*所有*&#x200B;内容必须按类型清晰地编排和组织，以便 GraphQL 能够&#x200B;*理解*&#x200B;访问内容和访问方式。数据字段将在 GraphQL 架构中定义，该架构定义了内容对象的结构。
 
 之后，GraphQL 端点提供响应 GraphQL 查询的路径。
 
-所有这一切意味着，您的应用程序可以准确、可靠和高效地选择它需要的内容 - 在与 AEM 结合使用时需要的内容。
+所有这一切意味着，您的应用程序可以准确、可靠和高效地选择它需要的内容（仅在与 AEM 结合使用时需要的内容）。
 
 >[!NOTE]
 >
@@ -242,7 +242,7 @@ It provides features such as syntax-highlighting, auto-complete, auto-suggest, t
 在开始查询您的内容之前，您需要：
 
 * 启用端点
-   * 使用工具 — > Assets -> GraphQL
+   * 使用工具 — >资源 — > GraphQL
    * [启用 GraphQL 端点](/help/assets/content-fragments/graphql-api-content-fragments.md#enabling-graphql-endpoint)
 
 * 访问GraphiQL（如果需要）
@@ -254,11 +254,11 @@ It provides features such as syntax-highlighting, auto-complete, auto-suggest, t
 
 * 公司
    * 姓名 - 文本
-   * CEO（人员）- 片段引用
-   * 员工（人员）- 片段引用
+   * CEO（人员）– 片段引用
+   * 员工（人员）– 片段引用
 * 人员
    * 姓名 - 文本
-   * 名字 - 文本
+   * 名字 – 文本
 
 如您所见，“CEO”和“员工”字段引用“人员”片段。
 
@@ -269,7 +269,7 @@ It provides features such as syntax-highlighting, auto-complete, auto-suggest, t
 
 ### 用于测试查询的位置 {#where-to-test-your-queries}
 
-查询可以在 [GraphiQL接口](/help/assets/content-fragments/graphiql-ide.md)，例如：
+查询可在 [GraphiQL接口](/help/assets/content-fragments/graphiql-ide.md)，例如：
 
 * `http://localhost:4502/aem/graphiql.html`
 

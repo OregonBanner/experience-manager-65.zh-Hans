@@ -140,7 +140,7 @@ AEM 的创作环境提供了各种可用于组织和编辑内容的机制. 可�
 * 名称
 * 路径
 * 资产类型，例如图像、手稿、文档、视频、页面、段落和产品
-* 资产特性，如方向（纵向、横向、正方形）和样式（颜色、单色、灰度）
+* 资产特征，如方向（纵向、横向、正方形）和样式（颜色、单色、灰度）
 
    * 仅适用于某些资产类型
 
@@ -285,7 +285,7 @@ AEM 的创作环境提供了各种可用于组织和编辑内容的机制. 可�
 例如，在适当时，**页面信息**&#x200B;还有以下选项：
 
 * [提升启动项](/help/sites-authoring/launches-promoting.md)，如果该页面是启动项。
-* [在经典UI中打开](/help/sites-authoring/select-ui.md#switching-to-classic-ui-when-editing-a-page) 如果此选项已 [由管理员启用](/help/sites-administering/enable-classic-ui-editor.md)
+* [在经典用户界面中打开](/help/sites-authoring/select-ui.md#switching-to-classic-ui-when-editing-a-page) 如果此选项已 [由管理员启用](/help/sites-administering/enable-classic-ui-editor.md)
 
 另外，在适当时，**页面信息**&#x200B;还允许访问分析和建议。
 

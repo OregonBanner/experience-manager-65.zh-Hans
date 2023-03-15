@@ -33,7 +33,7 @@ ht-degree: 97%
    >
    >仅在已将 AEM 配置为[与 Adobe Analytics 集成](/help/sites-administering/adobeanalytics-connect.md)时，才会显示页面的分析和推荐。
 
-   ![screenshot_2019-03-05at115319](assets/screen-shot_2019-03-05at115319.png)
+   ![screen-shot_2019-03-05at115319](assets/screen-shot_2019-03-05at115319.png)
 
 ### 更改报表时间段 {#changing-the-reporting-period}
 

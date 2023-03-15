@@ -22,7 +22,7 @@ ht-degree: 67%
 
 通过将AEM与Adobe Campaign集成，您可以直接在AEM中管理电子邮件投放、内容和表单。 需要同时完成 Adobe Campaign Classic 和 AEM 的配置步骤才可以实现解决方案之间的双向通信。
 
-此集成允许单独使用AEM和Adobe Campaign Classic。 营销人员可以在Adobe Campaign中创建营销活动和使用定位，而内容创建者可以并行处理AEM中的内容设计。 通过使用该集成，Adobe Campaign可以定位和交付在AEM中创建的营销活动的内容和设计。
+此集成允许AEM和Adobe Campaign Classic单独使用。 营销人员可以在Adobe Campaign中创建活动并使用定位，而内容创建者则可以同时在AEM中进行内容设计。 通过集成，Adobe Campaign可以定位和交付在AEM中创建的营销活动的内容和设计。
 
 ## 集成步骤 {#integration-steps}
 
@@ -42,7 +42,7 @@ AEM 和 Campaign 之间的集成需要在这两种解决方案中完成多个步
 * 具有 Adobe Campaign Classic 管理员访问权限
    * 要执行集成，您需要一个有效的 Adobe Campaign Classic 实例，包括一个已配置的数据库。
    * 如果您需要有关如何设置和配置 Adobe Campaign Classic 的更多详细信息，请参阅 [Adobe Campaign Classic 文档](https://experienceleague.adobe.com/docs/campaign-classic/using/campaign-classic-home.html)，特别是《安装和配置指南》。
-* 管理员对AEM的访问权限
+* AEM的管理员访问权限
 
 ## 在Campaign中安装AEM集成包 {#install-package}
 
@@ -152,11 +152,11 @@ AEM 现在可以与 Adobe Campaign 通信。
 >
 >确保您的 Adobe Campaign 服务器可以通过 Internet 访问。AEM无法访问专用网络。
 
-## 配置复制到AEM发布实例 {#replication}
+## 配置到AEM发布实例的复制 {#replication}
 
-促销活动内容由内容作者在AEM创作实例上创建。 此实例通常仅在您的组织内部可用。 对于营销活动收件人可访问的图像和资产等内容，您需要发布该内容。
+Campaign内容由内容作者在AEM创作实例上创建。 此实例通常仅在贵组织内部可用。 要使营销活动的收件人能够访问图像和资产等内容，您需要发布该内容。
 
-复制代理负责将您的内容从AEM创作实例发布到发布实例，且必须设置该内容才能使集成正常工作。 要将某些创作实例配置复制到发布实例中，还需要执行此步骤。
+复制代理负责将内容从AEM创作实例发布到发布实例，并且必须设置该代理才能使集成正常工作。 此外，还需要执行此步骤以将某些创作实例配置复制到发布实例。
 
 要配置从AEM创作实例到发布实例的复制，请执行以下操作：
 
@@ -166,40 +166,40 @@ AEM 现在可以与 Adobe Campaign 通信。
 
    ![配置复制代理](assets/acc-replication-config.png)
 
-1. 点按或单击 **编辑** 然后选择 **运输** 选项卡。
+1. 点击或单击 **编辑** 然后选择 **传输** 选项卡。
 
-1. 配置 **URI** 字段 `localhost` 值。
+1. 配置 **URI** 字段，用于替换默认字段 `localhost` 值与AEM发布实例的IP地址。
 
    ![“传输”选项卡](assets/acc-transport-tab.png)
 
-1. 点按或单击 **确定** 以保存对代理设置的更改。
+1. 点击或单击 **确定** 保存对代理设置所做的更改。
 
-您已配置了复制到AEM发布实例，以便营销活动收件人可以访问您的内容。
+您已配置复制到AEM发布实例，以便您的Campaign收件人可以访问您的内容。
 
 >[!NOTE]
 >
->如果您不想使用复制URL，而是使用面向公众的URL，则可以通过OSGi在以下配置设置中设置公共URL
+>如果您不想使用复制URL，而是使用面向公众的URL，则可以通过OSGi在以下配置设置中设置公开URL
 >
 >从全局导航侧边栏中，选择 **工具** > **操作** > **Web控制台** > **OSGi配置** 和搜索 **AEM Campaign集成 — 配置**. 编辑配置并更改字段 **公共URL** (`com.day.cq.mcm.campaign.impl.IntegrationConfigImpl#aem.mcm.campaign.publicUrl`)。
 
 ## 配置 AEM 外部化器 {#externalizer}
 
-[外部化器是 AEM 中的一个 OSGi 服务，它可将资源路径转换为外部和绝对 URL，这是 AEM 提供 Campaign 可以使用的内容所必需的。](/help/sites-developing/externalizer.md)您必须对其进行配置，Campaign集成才能正常工作。
+[外部化器是 AEM 中的一个 OSGi 服务，它可将资源路径转换为外部和绝对 URL，这是 AEM 提供 Campaign 可以使用的内容所必需的。](/help/sites-developing/externalizer.md)您必须对其进行配置以使Campaign集成正常工作。
 
 1. 以管理员身份登录到 AEM 创作实例。
-1. 从全局导航侧边栏中，选择 **工具** > **操作** > **Web控制台** > **OSGi配置** 和搜索 **Day CQ链接外部器**.
-1. 默认情况下， **域** 字段。 将URL从默认 `http://localhost:4503` 到公开可用的发布实例。
+1. 从全局导航侧边栏中，选择 **工具** > **操作** > **Web控制台** > **OSGi配置** 和搜索 **Day CQ链接外部化器**.
+1. 默认情况下， **域** 字段适用于发布实例。 将URL从默认值更改为其他值 `http://localhost:4503` 发布实例。
 
-   ![配置外部器](assets/acc-externalizer-config.png)
+   ![配置外部化器](assets/acc-externalizer-config.png)
 
 1. 点按或单击&#x200B;**保存**。
 
-您已配置外部器，Adobe Campaign现在可以访问您的内容。
+您已经配置了Externalizer，Adobe Campaign现在可以访问您的内容。
 
 >[!NOTE]
-发布实例必须可以从 Adobe Campaign 服务器中访问。如果它指向 `localhost:4503` 或者Adobe Campaign无法访问的其他服务器，则来自AEM的图像将不会显示在Adobe Campaign控制台中。
+发布实例必须可以从 Adobe Campaign 服务器中访问。如果它指向 `localhost:4503` 或者Adobe Campaign无法访问的其他服务器，来自AEM的图像将不会显示在Adobe Campaign控制台中。
 
-## 在AEM中配置campaign-remote用户 {#configure-user}
+## 在AEM中配置活动远程用户 {#configure-user}
 
 如要实现 Campaign 与 AEM 之间的通信，您需要在 AEM 中为 `campaign-remote` 用户设置一个密码。
 
@@ -247,6 +247,6 @@ Adobe Campaign 现在可以与 AEM 通信。
 
 ## 后续步骤 {#next-steps}
 
-配置了Adobe Campaign Classic和AEM后，集成现已完成。
+在配置Adobe Campaign Classic和AEM后，集成现已完成。
 
 您现在可以通过继续阅读[本文档](/help/sites-authoring/campaign.md)学习如何在 Adobe Experience Manager 中创建新闻稿。

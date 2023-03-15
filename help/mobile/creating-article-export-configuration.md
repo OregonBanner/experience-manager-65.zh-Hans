@@ -1,7 +1,7 @@
 ---
 title: 创建文章导出配置
 seo-title: Creating Article Export Configuration
-description: 可查看本页以了解有关将内容从Adobe Experience Manager(AEM)导出以上传到AEM Mobile的信息。
+description: 请按照本页了解如何从Adobe Experience Manager (AEM)导出内容以供上传到AEM Mobile。
 seo-description: Follow this page to learn about exporting content from Adobe Experience Manager (AEM) for upload to AEM Mobile.
 uuid: 089bc15b-669e-4623-bdbb-fd9abf46e098
 contentOwner: User
@@ -29,32 +29,32 @@ ht-degree: 1%
 >
 >要了解有关创建和修改共享资源的信息，请参阅 [内容同步](/help/mobile/mobile-ondemand-contentsync.md) 了解基本概念。
 
-AEM Mobile用户使用“内容同步”将实时内容导出为静态内容以供在移动设备应用程序中使用，当内容从AEM Mobile上传到Mobile On-Demand Services时，会执行此导出。
+AEM Mobile用户使用Content Sync将实时内容导出到静态内容，以供在Mobile Apps中使用，当内容从AEM Mobile上传到Mobile On-Demand Services时，会发生此导出。
 
-资产 ***dps-exportTemplate*** 上表中所述，定义应用程序导出配置的路径。 设置此属性可创建和修改共享资源。
+属性 ***dps-exportTemplate*** 在上表中提到，可定义应用程序导出配置的路径。 设置此属性以创建和修改共享资源。
 
-以下资源介绍如何将内容从Adobe Experience Manager(AEM)导出以上传到AEM Mobile。
+以下资源介绍了如何从Adobe Experience Manager (AEM)导出内容以供上传到AEM Mobile。
 
-文章包含需要导出和上传的内容。 其中某些内容可以在文章之间共享。
+文章包含需要导出和上传的内容。 某些内容可以在文章之间共享。
 
-使用 [ContentSync](/help/mobile/mobile-ondemand-contentsync.md) 收集内容并创建 ***共享资源*** 包。
+使用 [ContentSync](/help/mobile/mobile-ondemand-contentsync.md) 将内容收集在一起并创建 ***共享资源*** 包。
 
-在 **&lt;dps-exporttemplate>/dps-article>** 应配置为导出设备上属性静态渲染所需的所有内容和文章。
+ContentSync配置位于 **&lt;dps-exporttemplate>/dps-article>** 应配置为导出设备上属性静态渲染所需的文章中的所有内容。
 
 >[!CAUTION]
 >
->仅当您具有以下权限时，才可以执行以下步骤来查看示例共享资源：
+>只有在具备以下条件时，您才可以执行以下步骤查看共享资源的示例：
 >
->* 安装了示例内容
+>* 已安装示例内容
 >* 运行AEM实例
->* 未配置自定义上下文或其他端口
+>* 没有已配置的自定义上下文或其他端口
 >
 
 
 要查看共享资源示例，请参阅以下步骤：
 
 1. 在AEM服务器上打开CRXDE Lite。
-1. 浏览到此路径 [/etc/contentsync/templates/dps-we-unlimited-app/dps-article](http://localhost:4502/crx/de/index.jsp#/etc/contentsync/templates/dps-we-unlimited-app/dps-article)，以查看共享资源的示例。
+1. 浏览到此路径 [/etc/contentsync/templates/dps-we-unlimited-app/dps-article](http://localhost:4502/crx/de/index.jsp#/etc/contentsync/templates/dps-we-unlimited-app/dps-article)，以查看示例共享资源。
 
    您可以查看创建共享资源所需的所有属性，如下图所示：
 

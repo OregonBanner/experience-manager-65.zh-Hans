@@ -1,7 +1,7 @@
 ---
 title: 最佳实践
 seo-title: Best Practices
-description: 请阅读本页以了解最佳实践和准则，这些实践和准则将帮助那些希望构建移动设备应用程序模板和组件的经验丰富的AEM网站开发人员。
+description: 请按照此页面了解最佳实践和准则，这些实践和准则将有助于经验丰富的AEM网站开发人员构建移动应用程序模板和组件。
 seo-description: Follow this page to  learn best practices and guidelines that will help experienced AEM developers for sites, who want to build mobile app templates and components.
 uuid: 7733c8b1-a88c-455c-8080-f7add4205b92
 contentOwner: User
@@ -23,69 +23,69 @@ ht-degree: 1%
 >
 >Adobe建议对需要基于单页应用程序框架的客户端渲染（例如React）的项目使用SPA编辑器。 [了解更多](/help/sites-developing/spa-overview.md)。
 
-构建AEM Mobile On-demand Services应用程序与直接在Cordova（或PhoneGap）Shell中运行的应用程序不同。 开发人员应该熟悉：
+构建AEM Mobile On-demand Services应用程序与构建直接在Cordova（或PhoneGap）外壳中运行的应用程序不同。 开发人员应该熟悉：
 
-* 开箱即用支持的插件以及特定于AEM Mobile的插件。
+* 现成支持的插件以及特定于AEM Mobile的插件。
 
 >[!NOTE]
 >
 >要深入了解插件，请参阅以下资源：
 >
 >* [在AEM Mobile中使用Cordova插件](https://helpx.adobe.com/digital-publishing-solution/help/cordova-api.html)
->* [使用特定于AEM Mobile的启用Cordova的插件](https://helpx.adobe.com/digital-publishing-solution/help/app-runtime-api.html)
+>* [使用特定于AEM Mobile且启用了Cordova的插件](https://helpx.adobe.com/digital-publishing-solution/help/app-runtime-api.html)
 >
 
 
-* 使用插件功能的模板的编写方式应当使其仍可在浏览器中创作，而不应存在插件桥。
+* 使用插件功能的模板应以一种可在浏览器中创作（无需插件桥）的方式编写。
 
-   * 例如，确保等待 *deviceready* 函数，然后再尝试访问插件的API。
+   * 例如，确保等待 *deviceready* 函数。
 
-## 面向AEM开发人员的准则 {#guidelines-for-aem-developers}
+## AEM开发人员指南 {#guidelines-for-aem-developers}
 
-以下准则将帮助那些希望构建移动设备应用程序模板和组件的经验丰富的AEM网站开发人员：
+以下准则将帮助经验丰富的AEM网站开发人员构建移动应用程序模板和组件：
 
 **构建AEM站点模板以鼓励重复使用和可扩展性**
 
-* 与单个整体文件相比，需要多个组件脚本文件
+* 与单个整体脚本文件相比，更喜欢多个组件脚本文件
 
-   * 提供了许多空的扩展点，例如 *customheaderlibs.html* 和 *customfooterlibs.html*，允许开发人员在复制尽可能少的核心代码时更改页面模板
-   * 然后，可以通过Sling的 *sling:resourceSuperType* 机理
+   * 提供了许多空扩展点，例如 *customheaderlibs.html* 和 *customfooterlibs.html*，这允许开发人员更改页面模板，同时尽可能少地复制核心代码
+   * 随后，可通过Sling的 *sling：resourceSuperType* 机制
 
-* 与JSP相比，使用Sightly/HTL作为模板语言更好
+* 与将JSP作为模板语言相比，更倾向于使用Sightly/HTL
 
-   * 使用它可以将代码与标记分离，在XSS保护中内置选件，并且具有更为熟悉的语法
+   * 使用它可鼓励将代码与标记分离，提供XSS保护中内置的选件，并具有更熟悉的语法
 
-**优化设备内性能**
+**优化设备上性能**
 
-* 文章特定脚本和样式表应使用dps-article contentsync模板包含在文章有效负载中
-* 由多篇文章共享的脚本和样式表应通过dps-HTMLResourcescontentsync模板包含在共享资源中
-* 请勿引用任何呈现阻塞的外部脚本
-
->[!NOTE]
->
->您可以详细了解关于渲染阻止外部脚本的更多信息 [此处](https://developers.google.com/speed/docs/insights/BlockingJS).
-
-**与特定于Web的库相比，首选使用特定于应用程序的客户端JS和CSS库**
-
-* 为避免在jQuery Mobile等库中开销，以处理大量设备和浏览器
-* 当模板在应用程序的Web视图中运行时，您可以控制应用程序将支持的平台和版本，并了解将会提供JavaScript支持。 例如，与jQuery Mobile和Onsen UI相比，更喜欢Ionic（可能只是CSS）和Bootstrap。
+* 应使用dps-article contentsync模板将特定于文章的脚本和样式表包含在文章有效负荷中
+* 由多个项目共享的脚本和样式表应通过dps-HTMLResources contentsync模板包含在共享资源中
+* 请勿引用任何渲染阻止的外部脚本
 
 >[!NOTE]
 >
->要深入了解jQuery移动设备，请单击 [此处](https://jquerymobile.com/browser-support/1.4/).
+>您可以详细了解渲染阻止外部脚本 [此处](https://developers.google.com/speed/docs/insights/BlockingJS).
 
-**相对于全栈，首选微库**
+**与特定于Web的库相比，更喜欢特定于应用程序的客户端JS和CSS库**
 
-* 您的文章所依赖的每个库都会减慢将内容放到设备玻璃上所需的时间。 如果使用新Webview渲染每篇文章，则速度会更慢，因此必须重新初始化每个库
-* 如果您的文章未作为SPA（单页应用程序）构建，则可能不需要包含完整堆栈库，如Angular
-* 希望使用更小的单用途库来帮助增加页面所需的交互性，例如 [快速点击](https://github.com/ftlabs/fastclick) 或 [Velocity.js](https://velocityjs.org)
+* 避免jQuery Mobile等库处理大量设备和浏览器的开销
+* 当模板在应用程序的Webview中运行时，您可以控制应用程序将支持的平台和版本，并了解将支持JavaScript。 例如，与Bootstrap相比，首选爱奥尼亚语（可能只是CSS）而不是jQuery Mobile和Onsen UI。
 
-**最大限度地减小文章有效负载的大小**
+>[!NOTE]
+>
+>要深入了解jQuery mobile，请单击 [此处](https://jquerymobile.com/browser-support/1.4/).
 
-* 以合理的分辨率使用尽可能小的资产，以有效地覆盖您将支持的最大视区
-* 使用诸如之类的工具 *ImageOptim* 删除任何多余的元数据
+**与全栈库相比，更喜欢微库**
 
-## 抢滩 {#getting-ahead}
+* 您的文章所依赖的每个库都会减慢将内容放到设备玻璃杯上所需的时间。 当使用新的Webview呈现每篇文章时，这种放缓会加剧，因此必须从头开始再次初始化每个库
+* 如果您的文章未构建为SPA（单页应用程序），则可能不需要包含Angular等全栈库
+* 首选更小的单用途库，以帮助添加页面所需的交互性，例如 [Fastclick](https://github.com/ftlabs/fastclick) 或 [Velocity.js](https://velocityjs.org)
+
+**最小化文章有效负载的大小**
+
+* 使用尽可能最小的资产，以合理的分辨率有效地覆盖您将支持的最大视区
+* 使用工具，例如 *ImageOptim* ，以删除任何多余的元数据
+
+## 快速入门 {#getting-ahead}
 
 要进一步了解其他两个角色和职责，请参阅以下资源：
 

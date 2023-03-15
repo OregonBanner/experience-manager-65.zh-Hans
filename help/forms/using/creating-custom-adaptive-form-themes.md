@@ -1,7 +1,7 @@
 ---
 title: 创建自定义自适应表单主题
 seo-title: Creating custom adaptive form themes
-description: 自适应表单主题是AEM客户端库，用于定义自适应表单的样式（外观）。 了解如何创建自定义自适应表单主题。
+description: 自适应表单主题是一个AEM客户端库，可使用它定义自适应表单的样式（外观）。 了解如何创建自定义自适应表单主题。
 seo-description: An adaptive form theme is an AEM client library that you use to define the styles (look and feel) for an adaptive form. Learn how you can create custom adaptive form themes.
 uuid: b25df10e-b07c-4e9d-a799-30f1c6fb3c44
 content-type: reference
@@ -20,19 +20,19 @@ ht-degree: 0%
 
 >[!CAUTION]
 >
->AEM Forms提供 [主题编辑器](/help/forms/using/themes.md) 能够创建和修改自适应表单 [主题](/help/forms/using/themes.md). 仅当您从未升级的版本升级了 [主题编辑器](/help/forms/using/themes.md) 并且您对使用Less/CSS文件（预主题编辑器方法）创建的主题已有投资。
+>AEM Forms提供 [主题编辑器](/help/forms/using/themes.md) 创建和修改自适应表单的功能 [主题](/help/forms/using/themes.md). 执行本文中列出的步骤（仅当从没有的版本升级时） [主题编辑器](/help/forms/using/themes.md) 并且您目前在使用Less/CSS文件（预主题编辑器方法）创建的主题方面有所投资。
 
 ## 前提条件 {#prerequisites}
 
-* LESS（精简版CSS）框架知识
+* 了解LESS (Leaner CSS)框架
 * 如何在Adobe Experience Manager中创建客户端库
 * [创建自适应表单模板](/help/forms/using/custom-adaptive-forms-templates.md) 用于使用您创建的主题
 
 ## 自适应表单主题 {#adaptive-form-theme}
 
-安 **自适应表单主题** 是一个AEM客户端库，用于定义自适应表单的样式（外观）。
+An **自适应表单主题** 是一个AEM客户端库，可使用它定义自适应表单的样式（外观）。
 
-您可以创建 **自适应模板** 并将主题应用到模板。 然后，使用此自定义模板创建 **自适应表单**.
+您创建 **自适应模板** 并将主题应用于模板。 然后，您可以使用此自定义模板创建 **自适应表单**.
 
 ![自适应表单和客户端库](assets/hierarchy.png)
 
@@ -40,49 +40,49 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->使用AEM对象（如节点、属性和文件夹）的示例名称描述了以下过程。
+>以下过程使用AEM对象（如节点、属性和文件夹）的示例名称进行描述。
 >
 >如果使用名称执行这些步骤，则生成的模板应类似于以下快照：
 
-![林主题自适应表单快照](assets/thumbnail.png)
+![林主题的自适应表单快照](assets/thumbnail.png)
 **图：** *林主题示例*
 
-1. 创建类型的节点 `cq:ClientLibraryFolder` 下 `/apps`节点。
+1. 创建节点类型 `cq:ClientLibraryFolder` 在 `/apps`节点。
 
    例如，创建以下节点：
 
    `/apps/myAfThemes/forestTheme`
 
-1. 添加多值字符串属性 `categories` 并相应地设置其值。
+1. 添加多值字符串属性 `categories` ，并相应地设置其值。
 
    例如，将属性设置为： `af.theme.forest`.
 
    ![CRX存储库快照](assets/3-2.png)
 
-1. 添加两个文件夹， `less` 和 `css`，以及文件 `css.txt` 到在步骤1中创建的节点：
+1. 添加两个文件夹， `less` 和 `css`和文件 `css.txt` 到步骤1中创建的节点：
 
-   * `less` 文件夹：包含 `less` 变量文件，您可以在其中定义 `less` 变量和 `less mixins` 用于管理.css样式的URL。
+   * `less` 文件夹：包含 `less` 变量文件，可在其中定义 `less` 变量和 `less mixins` 用于管理.css样式的属性。
 
-      此文件夹由 `less` 变量文件， `less` 混合文件， `less` 使用mixin和变量定义样式的文件。 然后，所有这些较少的文件都将以styles.less的形式导入。
+      此文件夹包括 `less` 变量文件， `less` mixin文件， `less` 使用mixin和变量定义样式的文件。 然后所有这些较少的文件以样式.less导入。
 
-   * `css`文件夹：包含.css文件，您可以在其中定义要在主题中使用的静态样式。
+   * `css`文件夹：包含.css文件，可在其中定义要在主题中使用的静态样式。
 
-   **变量文件较少**:这些文件是您在其中定义或覆盖定义CSS样式时使用的变量的文件。
+   **变量较少文件**：这些是文件，您可以在其中定义或覆盖在定义CSS样式中使用的变量。
 
-   自适应表单提供在以下.less文件中定义的OOTB变量：
+   自适应表单提供以下.less文件中定义的OOTB变量：
 
    * `/apps/clientlibs/fd/af/guidetheme/common/less/globalvariables.less`
    * `/apps/clientlibs/fd/af/guidetheme/common/less/layoutvariables.less`
 
-   自适应表单还提供以下内容中定义的第三方变量：
+   自适应表单还提供中定义的第三方变量：
 
    `/apps/clientlibs/fd/af/third-party/less/variables.less`
 
-   您可以使用随自适应表单提供的较少变量，可以覆盖这些变量，也可以创建新的较少变量。
+   您可以使用自适应表单中提供的更少变量，也可以覆盖这些变量，或者创建新的更少变量。
 
    >[!NOTE]
    >
-   >导入较少预处理器的文件时，在import语句中指定文件的相对路径。
+   >在导入较少预处理器的文件时，在import语句中指定文件的相对路径。
 
    覆盖变量的示例：
 
@@ -94,32 +94,32 @@ ht-degree: 0%
    @button-font-color: #ffffff;
    ```
 
-   覆盖 `less`变量：
+   要覆盖 `less`变量：
 
    1. 导入默认自适应表单变量：
 
       `/apps/clientlibs/fd/af/guidetheme/common/less/globalvariables.less/apps/clientlibs/fd/af/guidetheme/common/less/layoutvariables.less`
 
-   1. 然后，导入包含被覆盖变量的较少文件。
+   1. 然后导入包含被覆盖变量的较少文件。
 
-   示例新变量定义：
+   新变量定义示例：
 
    ```css
    @button-focus-bg-color: rgb(40, 208, 90);
    @button-hover-bg-color: rgb(30, 156, 67);
    ```
 
-   **混合文件较少：** 您可以定义接受变量作为参数的函数。 这些函数的输出是生成的样式。 在不同样式中使用这些混合，以避免重复CSS样式。
+   **更少的mixin文件：** 您可以定义接受变量作为参数的函数。 这些函数的输出是生成样式。 请在不同的样式中使用这些mixin，以避免重复CSS样式。
 
-   自适应表单提供在以下位置定义的OOTB混合：
+   自适应表单提供中定义的OOTB mixin：
 
    * `/apps/clientlibs/fd/af/guidetheme/common/less/adaptiveforms-mixins.less`
 
-   自适应表单还提供以下定义的第三方混合：
+   自适应表单还提供中定义的第三方Mixin：
 
    * `/apps/clientlibs/fd/af/third-party/less/mixins.less`
 
-   混合定义示例：
+   示例mixin定义：
 
    ```css
    .rounded-corners (@radius) {
@@ -135,11 +135,11 @@ ht-degree: 0%
    }
    ```
 
-   **Styles.less文件：** 使用此文件可包含您在客户端库中需要使用的所有较少文件（变量、混合、样式）。
+   **Styles.less文件：** 使用此文件可以包含需要在客户端库中使用的所有较少文件（变量、mixin、样式）。
 
-   在以下示例中 `styles.less` 文件中，导入语句可以按任意顺序放置。
+   在以下示例中 `styles.less` 文件，导入语句可以按任意顺序放置。
 
-   必须使用用于导入以下.less文件的语句：
+   导入以下.less文件的语句是必需的：
 
    * `globalvariables.less`
    * `layoutvariables.less`
@@ -174,7 +174,7 @@ ht-degree: 0%
    }
    ```
 
-   的 `css.txt` 包含要为库下载的.css文件的路径。
+   此 `css.txt` 包含要为库下载的.css文件的路径。
 
    例如：
 
@@ -194,9 +194,9 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >styles.less文件不是必填文件。 这意味着，如果您未定义任何自定义样式、变量或混合，则无需创建此文件。
+   >styles.less文件不是强制性的。 这意味着如果您尚未定义任何自定义样式、变量或mixin，则无需创建此文件。
    >
-   >但是，如果不创建style.less文件，则需要在css.txt文件中取消注释以下行：
+   >但是，如果您未创建style.less文件，则需要在css.txt文件中取消注释以下行：
    >
    >**`#base=less`**
    >
@@ -206,9 +206,9 @@ ht-degree: 0%
 
 ## 在自适应表单中使用主题 {#to-use-a-theme-in-an-adaptive-form}
 
-创建自适应表单主题后，请执行以下步骤以在自适应表单中使用此主题：
+创建自适应表单主题后，执行以下步骤以在自适应表单中使用此主题：
 
-1. 包含在中创建的主题 [创建自适应表单主题](/help/forms/using/creating-custom-adaptive-form-themes.md#p-to-create-an-adaptive-form-theme-p) 部分，创建类型为 `cq:Component`.
+1. 包括在中创建的主题 [创建自适应表单主题](/help/forms/using/creating-custom-adaptive-form-themes.md#p-to-create-an-adaptive-form-theme-p) 部分，创建类型的自定义页面 `cq:Component`.
 
    例如，`/apps/myAfCustomizations/myAfPages/forestPage`
 
@@ -218,19 +218,19 @@ ht-degree: 0%
 
    1. 要在页面中使用主题，您需要向节点添加覆盖文件library.jsp。
 
-      然后，导入在创建本文自适应表单主题部分中创建的主题。
+      然后，导入在本文的创建自适应表单主题部分中创建的主题。
 
-      以下代码片段示例导入 `af.theme.forest` 主题。
+      以下示例代码片段导入 `af.theme.forest` 主题。
 
       ```jsp
       <%@include file="/libs/fd/af/components/guidesglobal.jsp"%>
       <cq:includeClientLib categories="af.theme.forest"/>
       ```
 
-   1. **可选**:在自定义页中，根据需要覆盖header.jsp、footer.jsp和body.jsp。
+   1. **可选**：在自定义页面中，根据需要覆盖header.jsp、footer.jsp和body.jsp。
 
-1. 创建自定义模板(例如： `/apps/myAfCustomizations/myAfTemplates/forestTemplate`)，其jcr:content指向在上一步中创建的自定义页面(例如： `myAfCustomizations/myAfPages/forestPage)`.
+1. 创建自定义模板(例如： `/apps/myAfCustomizations/myAfTemplates/forestTemplate`)的jcr：content指向在上一步中创建的自定义页面(例如： `myAfCustomizations/myAfPages/forestPage)`.
 
    ![CRX存储库快照](assets/2-1.png)
 
-1. 使用在上一步中创建的模板创建自适应表单。 自适应表单的外观由本文创建自适应表单主题部分中创建的主题定义。
+1. 使用上一步中创建的模板创建自适应表单。 自适应表单的外观由本文的创建自适应表单主题部分中创建的主题定义。

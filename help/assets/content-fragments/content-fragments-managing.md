@@ -1,6 +1,6 @@
 ---
 title: 管理内容片段
-description: 了解如何使用AEM控制台来管理您的Assets内容片段（无头内容的基础）。
+description: 了解如何使用Assets控制台管理您的AEM内容片段（Headless内容的基础）。
 feature: Content Fragments
 role: User
 exl-id: 25c91a85-06ff-4666-a809-46778a689e25
@@ -13,13 +13,13 @@ ht-degree: 81%
 
 # 管理内容片段 {#managing-content-fragments}
 
-了解如何使用AEM控制台来管理您的Assets内容片段（无头内容的基础）。
+了解如何使用Assets控制台管理您的AEM内容片段（Headless内容的基础）。
 
 定义完您的[内容片段模型](#creating-a-content-model)后，您可以使用这些模型[创建您的内容片段](#creating-a-content-fragment)。
 
 [内容片段编辑器](#opening-the-fragment-editor)提供各种[模式](#modes-in-the-content-fragment-editor)，使您能够：
 
-* [编辑内容](#editing-the-content-of-your-fragment)和[管理变量](#creating-and-managing-variations-within-your-fragment)
+* [编辑内容](#editing-the-content-of-your-fragment)和[管理变体](#creating-and-managing-variations-within-your-fragment)
 * [在片段中添加批注](/help/assets/content-fragments/content-fragments-variations.md#annotating-a-content-fragment)
 * [将内容与片段关联](#associating-content-with-your-fragment)
 * [配置元数据](#viewing-and-editing-the-metadata-properties-of-your-fragment)
@@ -37,7 +37,7 @@ ht-degree: 81%
 
 >[!NOTE]
 >
->内容片段存储为 **资产**，因此主要从 **资产** 控制台。
+>内容片段存储为 **资产**，因此主要通过 **资产** 控制台。
 
 ## 创建内容片段 {#creating-content-fragments}
 
@@ -53,9 +53,9 @@ ht-degree: 81%
 1. 选择 **创建**，然后选择 **内容片段** ，以打开向导。
 1. 向导的第一步要求您指定新片段的基础。
 
-   * [模型](/help/assets/content-fragments/content-fragments-models.md)  — 用于创建需要结构化内容的片段；例如， **冒险** 模型
+   * [模型](/help/assets/content-fragments/content-fragments-models.md)  — 用于创建需要结构化内容的片段；例如 **冒险** 模型
 
-      * 将显示所有可用的模型。
+      * 将显示所有可用模型。
 
    选择后，使用 **下一个** 以继续。
 
@@ -78,22 +78,22 @@ ht-degree: 81%
 
       * **名称**
 
-         名称；将用于形成URL。
+         名称；将用于构成URL。
 
-         强制；将自动从标题派生，但可以更新。
+         必需；将自动从标题派生，但可以更新。
 
 
 1. 选 **择创建** ，以完成操作，然后打开片段 **进行编辑** ，或返回控制台并执行完 **成**。
 
    >[!NOTE]
-   >在 **列表** 的模式下，您可以更新 **查看设置** 启用 **内容片段模型** 列。
+   >In **列表** 控制台的模式，您可以更新 **查看设置** 以启用 **内容片段模型** 列。
 
-## 资产控制台中内容片段的操作 {#actions-for-a-content-fragment-assets-console}
+## 资产控制台中的内容片段操作 {#actions-for-a-content-fragment-assets-console}
 
-在 **资产** 控制台为您的内容片段提供了一系列操作，包括：
+在 **资产** 控制台为您的内容片段提供了一系列可用的操作，包括：
 
-* 工具栏中；选择片段后，所有适当的操作都可用。
-* 作为 [快速操作](/help/sites-authoring/basic-handling.md#quick-actions);可用于单个片段卡的操作子集。
+* 从工具栏中；选择片段后，所有适当的操作都可用。
+* 作为 [快速操作](/help/sites-authoring/basic-handling.md#quick-actions)；可用于单个片段卡片的一组操作。
 
 ![操作](assets/cfm-managing-02.png)
 
@@ -101,7 +101,7 @@ ht-degree: 81%
 
 * **下载**
 
-   * 将片段另存为ZIP文件；您可以定义是否包含元素、变量、元数据。
+   * 将片段另存为ZIP文件；您可以定义是否包含元素、变体、元数据。
 
 * **创建**
 * **签出**
@@ -111,7 +111,7 @@ ht-degree: 81%
 
 * **编辑**
 
-   * 允许您 [打开片段以编辑内容](/help/assets/content-fragments/content-fragments-variations.md) 元素、变量、关联内容和元数据。
+   * 允许您 [打开片段以编辑内容](/help/assets/content-fragments/content-fragments-variations.md) 及其元素、变体、关联内容和元数据。
 
 * **管理标记**
 * **目标收藏集**
@@ -123,7 +123,7 @@ ht-degree: 81%
 
 >[!NOTE]
 >
->其中很多是 [资产的标准操作](/help/assets/manage-assets.md) 和/或 [AEM桌面应用程序](https://helpx.adobe.com/cn/experience-manager/desktop-app/aem-desktop-app.html).
+>其中许多是 [资产标准操作](/help/assets/manage-assets.md) 和/或 [AEM桌面应用程序](https://helpx.adobe.com/cn/experience-manager/desktop-app/aem-desktop-app.html).
 
 ## 打开片段编辑器 {#opening-the-fragment-editor}
 
@@ -137,11 +137,11 @@ ht-degree: 81%
 >
 >要编辑内容片段，您需要相应的权限。 如果您遇到问题，请联系您的系统管理员。
 
-1. 使用 **资产** 控制台以导航到内容片段的位置。
+1. 使用 **资产** 控制台导航到内容片段的位置。
 1. 通过以下任一方式打开片段进行编辑：
 
-   * 单击/点按片段或片段链接（这取决于控制台视图）。
-   * 选择片段，然后 **编辑** 中。
+   * 单击/点按片段或片段链接（具体取决于控制台视图）。
+   * 选择片段，然后 **编辑** 工具栏中。
 
 1. 将打开片段编辑器。 根据需要进行更改：
 
@@ -165,7 +165,7 @@ ht-degree: 81%
 
 使用侧面板中的图标在各种模式中导航：
 
-* 变体：[编辑内容](#editing-the-content-of-your-fragment)和[管理变量](#creating-and-managing-variations-within-your-fragment)
+* 变体：[编辑内容](#editing-the-content-of-your-fragment)和[管理变体](#creating-and-managing-variations-within-your-fragment)
 
 * [注释](/help/assets/content-fragments/content-fragments-variations.md#annotating-a-content-fragment)
 * [关联的内容](#associating-content-with-your-fragment)
@@ -361,7 +361,7 @@ This updates any page references and ensures that the Dispatcher is flushed as r
 
 * 创建后；使用 [“资产”控制台中可用的操作](#actions-for-a-content-fragment-assets-console).
 * 从[内容片段编辑器](#toolbar-actions-in-the-content-fragment-editor).
-* 当您 [发布使用片段的页面](/help/sites-authoring/content-fragments.md#publishing);片段将在页面引用中列出。
+* 当您 [发布使用片段的页面](/help/sites-authoring/content-fragments.md#publishing)；片段将在页面引用中列出。
 
 >[!CAUTION]
 片段发布和/或引用后，当作者再次打开片段进行编辑时，AEM 将显示警告。 这是为了警告，对片段所做的更改也会影响引用的页面。

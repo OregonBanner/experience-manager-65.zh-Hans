@@ -21,7 +21,7 @@ ht-degree: 84%
 
 >[!NOTE]
 >
->以下文档重点介绍经典 UI。有关在现代化触屏优化UI中进行创作的信息，请参阅 [标准创作文档](/help/assets/assets.md).
+>以下文档重点介绍经典 UI。有关在启用了触屏的现代UI中进行创作的信息，请参阅 [标准创作文档](/help/assets/assets.md).
 
 在创作环境中，您可以执行与以下各项相关的任务：
 
@@ -45,7 +45,7 @@ ht-degree: 84%
    * 这是新式标准 AEM UI。
    * 主色调为灰色，且采用整洁的平面界面。
    * 既适用于触控设备，也适用于桌面设备（针对触屏进行了优化）。其外观和感觉在所有设备上都是相同的，只是[查看和选择资源](/help/sites-authoring/basic-handling.md)稍有不同（分别采用点按和单击方式）。
-   * 请参阅 [标准创作文档](/help/sites-authoring/author.md) 有关如何使用触屏UI进行创作的更多详细信息。 以下文档重点介绍经典 UI。
+   * 请参阅 [标准创作文档](/help/sites-authoring/author.md) 有关如何使用基于触摸的UI进行创作的更多详细信息。 以下文档重点介绍经典 UI。
 
    * 桌面设备：
    ![chlimage_1-150](assets/chlimage_1-150.png)

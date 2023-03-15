@@ -21,19 +21,19 @@ ht-degree: 0%
 
 ## 简介 {#introduction}
 
-您可以使用现有数据预填自适应表单的字段。 用户打开表单时，将预填这些字段的值。 要在自适应表单中预填充数据，请以符合自适应表单预填充数据结构的格式，将用户数据作为预填充XML/JSON提供。
+您可以使用现有数据预填自适应表单的字段。 当用户打开表单时，这些字段的值会预先填充。 要在自适应表单中预填充数据，请按照自适应表单预填充数据结构所遵循的格式使用户数据可用作预填充XML/JSON。
 
 ## 预填充数据的结构 {#the-prefill-structure}
 
-自适应表单可以混合绑定和未绑定字段。 绑定字段是从“内容查找器”选项卡中拖动并包含非空的字段 `bindRef` 属性值。 未绑定的字段直接从Sidekick的组件浏览器中拖动，并且具有空 `bindRef` 值。
+自适应表单可以包含绑定字段和未绑定字段的混合。 绑定字段是从“内容查找器”选项卡拖动并包含非空的字段 `bindRef` 字段编辑对话框中的属性值。 未绑定的字段直接从Sidekick的组件浏览器中拖动，并且为空 `bindRef` 值。
 
-您可以预填自适应表单的绑定和未绑定字段。 预填充数据包含afBoundData和afUnBoundData部分，用于预填充自适应表单的绑定和未绑定字段。 的 `afBoundData` 部分包含绑定字段和面板的预填充数据。 此数据必须与关联的表单模型架构兼容：
+您可以预填充自适应表单的绑定和未绑定字段。 预填充数据包含afBoundData和afUnBoundData部分，用于预填充自适应表单的绑定和未绑定字段。 此 `afBoundData` 部分包含绑定字段和面板的预填充数据。 此数据必须符合关联的表单模型架构：
 
-* 对于使用 [XFA表单模板](../../forms/using/prepopulate-adaptive-form-fields.md)，则使用与XFA模板的数据架构兼容的预填充XML。
-* 对于使用的自适应表单 [XML架构](#xml-schema-af)，使用与XML架构结构兼容的预填充XML。
-* 对于使用的自适应表单 [JSON架构](#json-schema-based-adaptive-forms)，请使用与JSON架构兼容的预填充JSON。
+* 对于自适应表单，使用 [XFA表单模板](../../forms/using/prepopulate-adaptive-form-fields.md)，使用与XFA模板的数据架构兼容的预填充XML。
+* 对于自适应表单，使用 [XML架构](#xml-schema-af)，使用与XML架构结构兼容的预填充XML。
+* 对于自适应表单，使用 [JSON架构](#json-schema-based-adaptive-forms)，使用与JSON架构兼容的预填充JSON。
 * 对于使用FDM架构的自适应表单，请使用与FDM架构兼容的预填充JSON。
-* 对于具有 [无窗体模型](#adaptive-form-with-no-form-model)，则没有绑定数据。 每个字段都是未绑定的字段，并使用未绑定的XML预填充。
+* 对于自适应表单，使用 [无表单模型](#adaptive-form-with-no-form-model)，则没有绑定的数据。 每个字段都是未绑定的字段，并使用未绑定的XML预填充。
 
 ### 预填充XML结构示例 {#sample-prefill-xml-structure}
 
@@ -75,15 +75,15 @@ ht-degree: 0%
 }
 ```
 
-对于具有相同绑定字段或具有相同名称的未绑定字段，将在XML标记或JSON对象中指定的数据填写在所有字段中。 例如，表单中的两个字段会映射到该名称 `textbox` 中。 在运行时，如果第一个文本框字段包含“A”，则“A”会自动填充到第二个文本框中。 此链接称为自适应表单字段的实时链接。
+对于同名的绑定字段或未绑定字段，所有字段中都会填充XML标记或JSON对象中指定的数据。 例如，表单中的两个字段映射到名称 `textbox` 在预填充数据中。 在运行时，如果第一个文本框字段包含“A”，则“A”会自动填充到第二个文本框中。 此链接称为自适应表单字段的实时链接。
 
 ### 使用XFA表单模板的自适应表单 {#xfa-based-af}
 
 基于XFA的自适应表单的预填充XML和提交的XML的结构如下：
 
-* **预填充XML结构**:基于XFA的自适应表单的预填充XML必须与XFA表单模板的数据架构兼容。 要预填充未绑定字段，请将预填充XML结构包装到 `/afData/afBoundData` 标记。
+* **预填充XML结构**：基于XFA的自适应表单的预填充XML必须与XFA表单模板的数据架构兼容。 要预填充未绑定的字段，请将预填充XML结构封装到 `/afData/afBoundData` 标记之前。
 
-* **提交的XML结构**:当不使用预填充XML时，提交的XML包含中绑定和未绑定字段的数据 `afData` 包装器标记。 如果使用预填充XML，则提交的XML与预填充XML的结构相同。 如果预填充XML以 `afData` 根标记，输出XML也具有相同的格式。 如果预填充XML没有 `afData/afBoundData`包装器，而是直接从架构根标记（如）启动 `employeeData`，提交的XML也以 `employeeData` 标记。
+* **已提交的XML结构**：当不使用预填充XML时，提交的XML包含中绑定和未绑定字段的数据 `afData` 包装器标记。 如果使用预填充XML，则提交的XML具有与预填充XML相同的结构。 如果预填充XML以 `afData` 根标记时，输出XML的格式也相同。 如果预填充XML没有 `afData/afBoundData`包装器，而是直接从架构根标记开始，如 `employeeData`，提交的XML也以 `employeeData` 标记之前。
 
 Prefill-Submit-Data-ContentPackage.zip
 
@@ -94,8 +94,8 @@ Prefill-Submit-Data-ContentPackage.zip
 
 基于XML架构的自适应表单预填充XML和提交XML的结构如下：
 
-* **预填充XML结构**:预填充XML必须与关联的XML架构兼容。 要预填充未绑定的字段，请将预填充XML结构包装到/afData/afBoundData标记中。
-* **提交的XML结构**:如果未使用预填充XML，则提交的XML包含中绑定和未绑定字段的数据 `afData` 包装器标记。 如果使用预填充XML，则提交的XML与预填充XML的结构相同。 如果预填充XML以 `afData` 根标记，则输出XML的格式相同。 如果预填充XML没有 `afData/afBoundData` 包装器，而是直接从架构根标记（如）启动 `employeeData`，提交的XML也以 `employeeData` 标记。
+* **预填充XML结构**：预填充XML必须与关联的XML架构兼容。 要预填充未绑定的字段，请将预填充XML结构封装到/afData/afBoundData标记中。
+* **已提交的XML结构**：如果未使用预填充XML，则提交的XML将同时包含中绑定和未绑定字段的数据 `afData` 包装器标记。 如果使用预填充XML，则提交的XML具有与预填充XML相同的结构。 如果预填充XML以 `afData` 根标记时，输出XML的格式相同。 如果预填充XML没有 `afData/afBoundData` 包装而不是直接从架构根标记开始，如 `employeeData`，提交的XML也以 `employeeData` 标记之前。
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?> 
@@ -113,7 +113,7 @@ Prefill-Submit-Data-ContentPackage.zip
 </xs:schema>
 ```
 
-对于模型为XML架构的字段，数据将预填充到 `afBoundData` 标记，如下面的示例XML中所示。 它可用于预填具有一个或多个未绑定文本字段的自适应表单。
+对于模型为XML架构的字段，数据预填充在 `afBoundData` 标记，如下面的示例XML所示。 它可用于使用一个或多个未绑定的文本字段预填自适应表单。
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?><afData>
@@ -132,9 +132,9 @@ Prefill-Submit-Data-ContentPackage.zip
 
 >[!NOTE]
 >
->建议不要在绑定面板（具有非空的面板）中使用未绑定字段 `bindRef` （通过从Sidekick或数据源选项卡拖动组件来创建）。 这可能导致这些未绑定字段的数据丢失。 此外，建议各个表单中字段的名称是唯一的，特别是对于未绑定字段。
+>建议不要在绑定面板（具有非空的面板）中使用未绑定字段 `bindRef` （通过从Sidekick或“数据源”选项卡拖动组件而创建）。 它可能会导致这些未绑定字段的数据丢失。 此外，建议整个表单中的字段名称是唯一的，尤其是未绑定的字段。
 
-#### 没有afData和afBoundData包装器的示例 {#an-example-without-afdata-and-afbounddata-wrapper}
+#### 不含afData和afBoundData包装器的示例 {#an-example-without-afdata-and-afbounddata-wrapper}
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?><config>
@@ -145,10 +145,10 @@ Prefill-Submit-Data-ContentPackage.zip
 
 ### 基于JSON模式的自适应表单 {#json-schema-based-adaptive-forms}
 
-对于基于JSON架构的自适应表单，预填充JSON和提交JSON的结构如下所述。 有关更多信息，请参阅 [使用JSON模式创建自适应表单](../../forms/using/adaptive-form-json-schema-form-model.md).
+对于基于JSON架构的自适应表单，预填充JSON和提交的JSON的结构描述如下。 有关更多信息，请参阅 [使用JSON架构创建自适应表单](../../forms/using/adaptive-form-json-schema-form-model.md).
 
-* **预填充JSON结构**:预填充JSON必须与关联的JSON架构兼容。 或者，如果您还希望预填充未绑定字段，也可以将其封装到/afData/afBoundData对象中。
-* **已提交的JSON结构**:如果未使用预填充JSON，则提交的JSON包含afData包装器标记中绑定和未绑定字段的数据。 如果使用预填充JSON，则提交的JSON的结构与预填充JSON的结构相同。 如果预填充JSON以afData根对象开头，则输出JSON的格式相同。 如果预填充JSON没有afData/afBoundData包装器，而是直接从架构根对象（如用户）启动，则提交的JSON也将以用户对象开头。
+* **预填充JSON结构**：预填充JSON必须与关联的JSON架构兼容。 或者，如果您还希望预填充未绑定的字段，也可以将其包装在/afData/afBoundData对象中。
+* **已提交JSON结构**：如果未使用预填充JSON，则提交的JSON将包含afData包装标记中绑定字段和未绑定字段的数据。 如果使用预填充JSON，则提交的JSON具有与预填充JSON相同的结构。 如果预填充JSON以afData根对象开头，则输出JSON的格式相同。 如果预填充JSON没有afData/afBoundData包装器，而是直接从架构根对象（如用户）开始，则提交的JSON也将从用户对象开始。
 
 ```json
 {
@@ -167,7 +167,7 @@ Prefill-Submit-Data-ContentPackage.zip
 }}}}}
 ```
 
-对于使用JSON模式模型的字段，数据将预填充到afBoundData对象中，如以下示例JSON中所示。 它可用于预填具有一个或多个未绑定文本字段的自适应表单。 以下是 `afData/afBoundData` 包装器：
+对于使用JSON模式模型的字段，数据预填充到afBoundData对象中，如下面的示例JSON所示。 它可用于使用一个或多个未绑定的文本字段预填自适应表单。 以下是数据示例 `afData/afBoundData` 包装器：
 
 ```json
 {
@@ -184,7 +184,7 @@ Prefill-Submit-Data-ContentPackage.zip
 }}}}}}}
 ```
 
-以下示例不包含 `afData/afBoundData` 包装器：
+以下是一个示例，不包含 `afData/afBoundData` 包装器：
 
 ```json
 {
@@ -197,13 +197,13 @@ Prefill-Submit-Data-ContentPackage.zip
 
 >[!NOTE]
 >
->在绑定面板中使用未绑定字段（具有非空bindRef的面板，这些面板是通过从Sidekick或数据源选项卡中拖动组件而创建的） **not** 建议使用，因为它可能导致未绑定字段的数据丢失。 建议在整个表单中具有唯一的字段名称，特别是对于未绑定的字段。
+>在绑定面板（具有非空bindRef的面板，这些面板是通过从Sidekick或“数据源”选项卡拖动组件创建的）中使用未绑定字段是 **非** 建议这样做，因为它可能会导致未绑定字段的数据丢失。 建议在表单中保留唯一的字段名称，尤其是未绑定的字段。
 
-### 没有表单模型的自适应表单 {#adaptive-form-with-no-form-model}
+### 无表单模型的自适应表单 {#adaptive-form-with-no-form-model}
 
 对于没有表单模型的自适应表单，所有字段的数据都位于 `<data>` 标记 `<afUnboundData> tag`.
 
-另外，请注意以下事项：
+此外，请注意以下事项：
 
 为各个字段提交的用户数据的XML标记使用字段名称生成。 因此，字段名称必须是唯一的。
 
@@ -226,48 +226,48 @@ Prefill-Submit-Data-ContentPackage.zip
 </afData>
 ```
 
-## 使用配置管理器配置预填充服务 {#configuring-prefill-service-using-configuration-manager}
+## 使用Configuration Manager配置预填充服务 {#configuring-prefill-service-using-configuration-manager}
 
-要启用预填充服务，请在AEM Web控制台配置中指定默认预填充服务配置。 请按照以下步骤配置预填充服务：
+要启用预填充服务，请在AEM Web控制台配置中指定默认预填充服务配置。 使用以下步骤配置预填充服务：
 
 >[!NOTE]
 >
 >预填充服务配置适用于自适应表单、HTML5表单和HTML5表单集。
 
-1. 打开 **[!UICONTROL Adobe Experience Manager Web控制台配置]** 使用URL:\
-   https://&lt;server>:&lt;port>/system/console/configMgr
+1. 打开 **[!UICONTROL Adobe Experience Manager Web控制台配置]** 通过使用URL：\
+   https://&lt;server>：&lt;port>/system/console/configMgr
 1. 搜索并打开 **[!UICONTROL 默认预填充服务配置]**.
 
    ![预填充配置](assets/prefill_config_new.png)
 
-1. 输入数据位置或的正则表达式（正则表达式） **数据文件位置**. 有效数据文件位置的示例包括：
+1. 输入的数据位置或正则表达式 **数据文件位置**. 有效数据文件位置的示例包括：
 
-   * file:///C:/Users/public/Document/Prefill/。&#42;
+   * file:///C:/Users/public/Document/Prefill/.&#42;
    * https://localhost:8000/somesamplexmlfile.xml
    >[!NOTE]
    >
-   >默认情况下，允许通过所有类型的自适应Forms（XSD、XDP、JSON、FDM，并且不基于表单模型）的crx文件进行预填充。 仅允许使用JSON和XML文件进行预填充。
+   >默认情况下，所有类型的自适应Forms（XSD、XDP、JSON、FDM和不基于表单模型）都允许通过crx文件预填充。 仅允许对JSON和XML文件使用预填充。
 
-1. 现在已为您的表单配置预填充服务。
+1. 现在已为您的表单配置了预填充服务。
 
    >[!NOTE]
    >
-   >crx协议负责预填充数据的安全性，因此默认情况下允许使用。 使用通用正则表达式通过其他协议预填充可能会导致漏洞。 在配置中，指定用于保护数据的安全URL配置。
+   >crx协议负责预填充的数据安全性，因此默认情况下允许使用。 使用通用正则表达式通过其他协议进行预填充可能会导致漏洞。 在配置中，指定用于保护数据的安全URL配置。
 
 ## 可重复面板的奇特案例 {#the-curious-case-of-repeatable-panels}
 
-通常，绑定（表单架构）和未绑定字段是在同一自适应表单中创作的，但在绑定可重复的情况下，以下是少数例外：
+通常，绑定（表单架构）和未绑定字段以相同的自适应表单创作，但如果绑定可重复，以下是一些例外情况：
 
-* 对于使用XFA表单模板、XSD、JSON架构或FDM架构的自适应表单，不支持未绑定的可重复面板。
-* 请勿在绑定的可重复面板中使用未绑定字段。
+* 使用XFA表单模板、XSD、JSON架构或FDM架构的自适应表单不支持未绑定的可重复面板。
+* 请勿在绑定的可重复面板中使用未绑定的字段。
 
 >[!NOTE]
 >
->作为经验法则，如果绑定和未绑定字段在未绑定字段中由最终用户填充的数据中相交，则不要混合这些字段。 如果可能，您应修改架构或XFA表单模板，并为未绑定字段添加一个条目，以便该模板也会绑定，并且其数据与已提交数据中的其他字段一样可用。
+>根据经验，如果绑定字段和未绑定字段在最终用户填充的数据中相交，请勿将它们混合在一起。 如果可能，您应该修改架构或XFA表单模板，并为未绑定的字段添加一个条目，这样该字段也会绑定，并且其数据就像提交数据中的其他字段一样可用。
 
-## 支持的预填充用户数据的协议 {#supported-protocols-for-prefilling-user-data}
+## 预填充用户数据的支持协议 {#supported-protocols-for-prefilling-user-data}
 
-使用有效正则表达式配置后，可通过以下协议以预填充数据格式预填充用户数据：
+使用有效的正则表达式配置时，可以通过以下协议使用预填充数据格式的用户数据预填充自适应表单：
 
 ### crx://协议 {#the-crx-protocol}
 
@@ -275,7 +275,7 @@ Prefill-Submit-Data-ContentPackage.zip
 https://localhost:4502/content/forms/af/xml.html?wcmmode=disabled&dataRef=crx:///tmp/fd/af/myassets/sample.xml
 ```
 
-指定的节点必须具有名为 `jcr:data` 并保存数据。
+指定的节点必须具有名为的属性 `jcr:data` 保存数据。
 
 ### file://协议  {#the-file-protocol-nbsp}
 
@@ -297,8 +297,8 @@ https://localhost:4502/content/forms/af/xml.html?wcmmode=disabled&dataRef=https:
 https://localhost:4502/content/forms/af/abc.html?wcmmode=disabled&dataRef=service://[SERVICE_NAME]/[IDENTIFIER]
 ```
 
-* SERVICE_NAME是指OSGI预填充服务的名称。 请参阅 [创建和运行预填充服务](../../forms/using/prepopulate-adaptive-form-fields.md#create-and-run-a-prefill-service).
-* 标识符是指OSGI预填充服务获取预填充数据所需的任何元数据。 已登录用户的标识符就是可使用的元数据示例。
+* SERVICE_NAME是指OSGI预填充服务的名称。 参考 [创建并运行预填充服务](../../forms/using/prepopulate-adaptive-form-fields.md#create-and-run-a-prefill-service).
+* IDENTIFIER是指OSGI预填充服务获取预填充数据所需的任何元数据。 登录用户的标识符是可以使用的元数据示例。
 
 >[!NOTE]
 >
@@ -306,7 +306,7 @@ https://localhost:4502/content/forms/af/abc.html?wcmmode=disabled&dataRef=servic
 
 ### 在slingRequest中设置数据属性 {#setting-data-attribute-in-slingrequest}
 
-您还可以设置 `data` 属性 `slingRequest`，其中 `data` 属性是包含XML或JSON的字符串，如以下示例代码中所示（XML示例）：
+您还可以设置 `data` 中的属性 `slingRequest`，其中 `data` attribute是包含XML或JSON的字符串，如以下示例代码所示（示例用于XML）：
 
 ```javascript
 <%
@@ -324,68 +324,68 @@ https://localhost:4502/content/forms/af/abc.html?wcmmode=disabled&dataRef=servic
 %>
 ```
 
-您可以编写一个包含所有数据的简单XML或JSON字符串，并在slingRequest中对其进行设置。 您可以轻松地在渲染器JSP中为任何组件完成此操作，您要将组件包含在可在其中设置slingRequest数据属性的页面中。
+您可以编写包含所有数据的简单XML或JSON字符串，并在slingRequest中设置它。 可以在任何组件的渲染器JSP中轻松完成此操作，您想要将这些组件包含在可设置slingRequest数据属性的页面中。
 
-例如，您希望页面的特定设计具有特定类型的标题。 要实现此目的，您可以自行编写 `header.jsp`，您可以将其包含在页面组件中并设置 `data` 属性。
+例如，您希望为页眉具有特定类型的页面使用特定设计。 要实现此目的，您可以自行编写 `header.jsp`，可将其包含在页面组件中，并设置 `data` 属性。
 
-另一个好示例是您希望通过Facebook、Twitter或LinkedIn等社交帐户预填登录数据的用例。 在这种情况下，您可以在 `header.jsp`，用于从用户帐户获取数据并设置数据参数。
+另一个很好的示例是用例，您希望在通过Facebook、Twitter或LinkedIn等社交帐户登录时预填充数据。 在这种情况下，您可以在中包含一个简单的JSP `header.jsp`，从用户帐户中获取数据并设置数据参数。
 
-prefill-page component.zip
+预填充页面component.zip
 
 [获取文件](assets/prefill-page-component.zip)
-页面组件中的示例prefill.jsp
+页面组件中的prefill.jsp示例
 
 ## AEM Forms自定义预填充服务 {#aem-forms-custom-prefill-service}
 
-对于您经常从预定义源中读取数据的情况，您可以使用自定义预填充服务。 预填充服务从定义的数据源中读取数据，并使用预填充数据文件的内容预填充自适应表单的字段。 它还可帮助您将预填数据与自适应表单永久关联。
+您可以对场景使用自定义预填充服务，在这些场景中，您会不断从预定义的源中读取数据。 预填充服务从定义的数据源中读取数据，并使用预填充数据文件的内容预填充自适应表单的字段。 它还有助于您将预填数据与自适应表单永久关联。
 
-### 创建和运行预填充服务 {#create-and-run-a-prefill-service}
+### 创建并运行预填充服务 {#create-and-run-a-prefill-service}
 
-预填充服务是OSGi服务，通过OSGi包进行打包。 您可以创建、上传OSGi包并将其安装到AEM Forms包。 开始创建包之前：
+预填充服务是一种OSGi服务，通过OSGi捆绑包进行打包。 您可以创建OSGi捆绑包，将其上传并安装到AEM Forms捆绑包。 开始创建捆绑包之前：
 
 * [下载AEM Forms客户端SDK](https://helpx.adobe.com/cn/aem-forms/kb/aem-forms-releases.html)
 * 下载样板包
 
-* 将数据（预填充数据）文件放置到crx-repository中。 您可以将文件放置在crx-repository的\contents文件夹中的任意位置。
+* 将数据（预填充数据）文件放入crx存储库中。 可以将文件放置在crx-repository的\contents文件夹中的任意位置。
 
 [获取文件](assets/prefill-sumbit-xmlsandcontentpackage.zip)
 
 #### 创建预填充服务 {#create-a-prefill-service}
 
-样板包（示例预填充服务包）包含AEM Forms预填充服务的示例实现。 在代码编辑器中打开样板包。 例如，在Eclipse中打开样板项目进行编辑。 在代码编辑器中打开样板包后，请执行以下步骤以创建服务。
+样板包（示例预填充服务包）包含AEM Forms预填充服务的示例实现。 在代码编辑器中打开样板包。 例如，在Eclipse中打开样板项目进行编辑。 在代码编辑器中打开样板包后，请执行以下步骤，以创建该服务。
 
 1. 打开src\main\java\com\adobe\test\Prefill.java文件进行编辑。
 1. 在代码中，将值设置为：
 
-   * `nodePath:` 指向crx-repository位置的节点路径变量包含数据（预填充）文件的路径。 例如， /content/prefilldata.xml
-   * `label:` 标签参数指定服务的显示名称。 例如，默认预填充服务
+   * `nodePath:` 指向crx存储库位置的节点路径变量包含数据（预填充）文件的路径。 例如， /content/prefilldata.xml
+   * `label:` label参数指定服务的显示名称。 例如，默认预填充服务
 
 1. 保存并关闭 `Prefill.java` 文件。
-1. 添加 `AEM Forms Client SDK` 包到样板项目的构建路径中。
+1. 添加 `AEM Forms Client SDK` 包到样板项目的生成路径。
 1. 编译项目并为包创建.jar。
 
 #### 启动和使用预填充服务 {#start-and-use-the-prefill-service}
 
-要启动预填充服务，请将JAR文件上载到AEM Forms Web Console，然后激活该服务。 现在，服务开始在自适应表单编辑器中显示。 要将预填充服务与自适应表单关联，请执行以下操作：
+要启动预填充服务，请将JAR文件上传到AEM Forms Web控制台，然后激活该服务。 现在，该服务开始出现在自适应表单编辑器中。 要将预填充服务与自适应表单关联，请执行以下操作：
 
-1. 在Forms编辑器中打开自适应表单，然后打开表单容器的属性面板。
+1. 在Forms编辑器中打开自适应表单，然后打开表单容器的“属性”面板。
 1. 在“属性”控制台中，导航到AEM Forms容器>基本>预填充服务。
-1. 选择默认预填充服务并单击 **[!UICONTROL 保存]**. 该服务与表单关联。
+1. 选择默认预填充服务并单击 **[!UICONTROL 保存]**. 服务与表单相关联。
 
 ## 在客户端预填充数据 {#prefill-at-client}
 
-当您预填自适应表单时，AEM Forms服务器会将数据与自适应表单合并，并将填写的表单交付给您。 默认情况下，数据合并操作会在服务器中进行。
+预填自适应表单时，AEM Forms服务器会将数据与自适应表单合并，并将填写的表单交付给您。 默认情况下，数据合并操作在服务器上执行。
 
-您可以配置AEM Forms服务器以在客户端而不是服务器上执行数据合并操作。 它显着缩短了预填充和渲染自适应表单所需的时间。 默认情况下，该功能处于禁用状态。 可以从配置管理器或命令行中启用它。
+您可以将AEM Forms服务器配置为在客户端而不是服务器上执行数据合并操作。 它显着缩短了预填充和渲染自适应表单所需的时间。 默认情况下，该功能处于禁用状态。 您可以从Configuration Manager或命令行启用它。
 
-* 要从配置管理器中启用或禁用，请执行以下操作：
+* 要从配置管理器启用或禁用，请执行以下操作：
    1. 打开AEM Configuration Manager。
    1. 找到并打开自适应表单和交互式通信Web渠道配置
    1. 启用Configuration.af.clientside.datamerge.enabled.name选项
-* 要从命令行中启用或禁用，请执行以下操作：
+* 要从命令行启用或禁用，请执行以下操作：
    * 要启用，请运行以下cURL命令：
       `curl -u admin:admin -X POST -d apply=true \ -d propertylist=af.clientside.datamerge.enabled \ -d af.clientside.datamerge.enabled=true \ http://${crx.host}:${crx.port}/system/console/configMgr/Adaptive%20Form%20and%20Interactive%20Communication%20Web%20Channel%20Configuration`
 
    * 要禁用，请运行以下cURL命令：
       `curl -u admin:admin -X POST -d apply=true \ -d propertylist=af.clientside.datamerge.enabled \ -d af.clientside.datamerge.enabled=false \ http://${crx.host}:${crx.port}/system/console/configMgr/Adaptive%20Form%20and%20Interactive%20Communication%20Web%20Channel%20Configuration`
-   要充分利用“客户端预填充数据”选项，请更新您的预填充服务以返回 [FileAttachmentMap](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/forms/common/service/PrefillData.html) 和 [CustomContext](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/forms/common/service/PrefillData.html)
+   要充分利用在客户端预填充数据选项，请更新您的预填充服务以返回 [文件附件映射](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/forms/common/service/PrefillData.html) 和 [自定义上下文](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/forms/common/service/PrefillData.html)

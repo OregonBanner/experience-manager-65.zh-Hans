@@ -1,7 +1,7 @@
 ---
-title: 为Microsoft SharePoint配置Connector
+title: 配置Microsoft SharePoint的连接器
 seo-title: Configuring Connector for Microsoft SharePoint
-description: 为Microsoft SharePoint配置Connector，以启用AEM表单与Microsoft SharePoint之间的通信。
+description: 配置Microsoft SharePoint的连接器，以启用AEM表单与Microsoft SharePoint之间的通信。
 seo-description: Configure Connector for Microsoft SharePoint to enable communication between AEM forms and Microsoft SharePoint.
 uuid: f1561b41-da20-4220-b13a-e78472a9449f
 contentOwner: admin
@@ -17,12 +17,12 @@ ht-degree: 1%
 
 ---
 
-# 为Microsoft SharePoint配置Connector {#configuring-connector-for-microsoft-sharepoint}
+# 配置Microsoft SharePoint的连接器 {#configuring-connector-for-microsoft-sharepoint}
 
-适用于Microsoft SharePoint的Connector支持AEM表单与Microsoft SharePoint之间的通信。 有关其他背景信息，请参阅 [服务参考](https://www.adobe.com/go/learn_aemforms_services_63).
+Microsoft SharePoint的连接器支持AEM表单与Microsoft SharePoint之间的通信。 有关其他背景信息，请参阅中的“Connectors for ECM” [服务参考](https://www.adobe.com/go/learn_aemforms_services_63).
 
-1. 在管理控制台中，单击服务>用于Microsoft SharePoint的连接器。
-1. 为SharePoint服务器指定以下设置：
+1. 在管理控制台中，单击服务>Microsoft SharePoint的连接器。
+1. 为您的SharePoint服务器指定以下设置：
 
    **SharePoint服务器主机名：** SharePoint服务器上Web应用程序的主机名端口号，格式为 `[hostname]:'port'`.
 
@@ -36,11 +36,11 @@ ht-degree: 1%
 
 ## Microsoft SharePoint配置服务 {#microsoft-sharepoint-configuration-service}
 
-Microsoft SharePoint配置服务 `(MSSharePointConfigService)` 允许您为具有模拟权限的AEM表单用户指定凭据。 有关模拟权限的信息，请参阅 [为Microsoft SharePoint配置Connector](https://help.adobe.com/en_US/AEMForms/6.1/SharePointConfig/index.html). 请按照以下步骤指定 `MSSharePointConfigService`:
+Microsoft SharePoint配置服务 `(MSSharePointConfigService)` 允许您为具有模拟权限的AEM forms用户指定凭据。 有关模拟权限的信息，请参阅 [配置Microsoft SharePoint的连接器](https://help.adobe.com/en_US/AEMForms/6.1/SharePointConfig/index.html). 按照以下步骤指定设置 `MSSharePointConfigService`：
 
 1. 在管理控制台中，单击服务>应用程序和服务>服务管理。
-1. 导航服务列表，然后单击 `MSSharePointConfigService`.
-1. 在“配置”页面上指定以下设置：
+1. 在服务列表中导航并单击 `MSSharePointConfigService`.
+1. 在“配置”页上指定以下设置：
 
    * 具有模拟权限的用户的用户名
    * 上述用户的密码

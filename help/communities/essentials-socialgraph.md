@@ -1,7 +1,7 @@
 ---
 title: 社交图要点
 seo-title: Social Graph Essentials
-description: 以下组件概述
+description: 跟随组件和跟随组件概述
 seo-description: follow component and following component overview
 uuid: 8ea33760-62b1-4de2-b07f-bc2417ade156
 contentOwner: Guillaume Carlino
@@ -19,13 +19,13 @@ ht-degree: 3%
 
 # 社交图要点  {#social-graph-essentials}
 
-社区成员遵循的能力 [活动](essentials-activities.md) 并通过两个部分建立：
+社区成员可以关注的功能 [活动](essentials-activities.md) 以及遵循通过两个组件来建立：
 
-的 `following` 组件必须与其他资源关联，并且已为 [社区网站](overview.md#communitiessites).
+此 `following` 组件必须与其他资源相关联，并且已为中的现有Communities成员和功能建立此关联 [社区站点](overview.md#communitiessites).
 
-的 `following` 组件列出当前成员之后或当前成员后面的成员。 该社区网站的用户配置文件中包含成员之间的关系社交图。
+此 `following` 组件列出位于当前成员后面或位于当前成员后面的成员。 此成员之间关系的社交图包含在为社区站点建立的用户配置文件中。
 
-## 客户端要点 {#essentials-for-client-side}
+## 适用于客户端的Essentials {#essentials-for-client-side}
 
 ### 关注 {#following}
 
@@ -40,7 +40,7 @@ ht-degree: 3%
    <td>否</td>
   </tr>
   <tr>
-   <td> <a href="clientlibs.md"><strong>clientlibs</strong></a></td>
+   <td> <a href="clientlibs.md"><strong>clientllibs</strong></a></td>
    <td>cq.social.hbs.socialgraph</td>
   </tr>
   <tr>
@@ -53,7 +53,7 @@ ht-degree: 3%
   </tr>
   <tr>
    <td><strong> 属性</strong></td>
-   <td>请参阅 <a href="socialgraph.md">使用社交图</a></td>
+   <td>参见 <a href="socialgraph.md">使用社交图</a></td>
   </tr>
   <tr>
    <td><strong> 可选<br /> 属性</strong></td>
@@ -63,10 +63,10 @@ ht-degree: 3%
      <li>类型：布尔型</li>
      <li>值:<br />
       <ul>
-       <li><i>True </i>- <code>following</code> 组件将列出当前已登录成员的成员 <code>follows</code></li>
-       <li><i>False </i>- <code>following</code> 组件将列出 <code>follow </code>当前已登录的会员</li>
+       <li><i>True </i>- <code>following</code> 组件将列出当前登录的成员 <code>follows</code></li>
+       <li><i>False </i>- <code>following</code> 组件将列出满足以下条件的成员 <code>follow </code>当前登录的成员</li>
       </ul> </li>
-    </ul> <p>默认为 <i>true</i> 属性缺失时。 当前，无法在创作模式下使用编辑对话框设置此属性。 必须将资产添加到的实例 <code>following </code>节点使用 <a href="../../help/sites-developing/developing-with-crxde-lite.md">CRXDE|Lite</a>.</p> </td>
+    </ul> <p>默认为 <i>true</i> 如果属性缺失。 目前，在创作模式下无法使用“编辑”对话框设置此属性。 必须将属性添加到的实例 <code>following </code>节点使用 <a href="../../help/sites-developing/developing-with-crxde-lite.md">CRXDE|Lite</a>.</p> </td>
   </tr>
  </tbody>
 </table>
@@ -81,7 +81,7 @@ ht-degree: 3%
 
 * [客户端自定义](client-customize.md)
 
-## 服务器端要点 {#essentials-for-server-side}
+## 服务器端Essentials {#essentials-for-server-side}
 
 * [社交图API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/graph/client/api/package-frame.html)
 

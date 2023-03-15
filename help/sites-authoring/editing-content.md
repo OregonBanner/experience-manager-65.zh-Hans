@@ -106,9 +106,9 @@ ht-degree: 94%
 
 通知会列出正在针对页面运行的工作流。如果用户参与了当前工作流步骤，还可以使用[影响工作流状态](/help/sites-authoring/workflows-participating.md)和获取更多工作流相关信息的选项，例如：
 
-* **完成**  — 打开 **完成工作项** 对话框
+* **完成**  — 打开 **完成工作项目** 对话框
 
-* **委派**  — 打开 **完成工作项** 对话框
+* **委派**  — 打开 **完成工作项目** 对话框
 
 * **查看详细信息** - 打开工作流的&#x200B;**详细信息**&#x200B;窗口
 
@@ -298,7 +298,7 @@ ht-degree: 94%
 
    ![](do-not-localize/screen_shot_2018-03-22at113044.png)
 
-* **转换为体验片段变量**
+* **转换为体验片段变体**
 
    允许您从选定的组件创建一个新的[体验片段](/help/sites-authoring/experience-fragments.md)，或将其添加到现有的体验片段中。
 
@@ -411,7 +411,7 @@ ht-degree: 94%
 
 >[!NOTE]
 >
->“布局”操作仅限用于选定的组件。例如，如果您正在编辑一个组件的布局，然后单击另一个组件，则会为新选择的组件显示标准编辑工具栏（而非布局工具栏），大小调整手柄以及模拟器工具栏将消失。
+>“布局”操作仅限用于选定的组件。例如，如果您正在编辑一个组件的布局，然后单击另一个组件，则会为新选择的组件显示标准编辑工具栏（而不是布局工具栏），并且重新整理手柄以及模拟器工具栏将会消失。
 >
 >如果您需要编辑影响到多个组件的总体页面布局，请切换到[布局模式](/help/sites-authoring/responsive-layout.md)。
 
@@ -453,7 +453,7 @@ ht-degree: 94%
 
 如果页面基于[可编辑的模板](/help/sites-authoring/templates.md#editable-and-static-templates)，则可以通过选择[“页面信息”菜单](/help/sites-authoring/author-environment-tools.md#page-information)中的&#x200B;**编辑模板**，轻松地切换到[模板编辑器](/help/sites-authoring/templates.md#editing-templates-template-authors)。
 
-如果页面基于 [静态模板](/help/sites-authoring/templates.md#editable-and-static-templates)，您可以切换到 [设计模式](/help/sites-authoring/default-components-designmode.md) 使用 [页面模式选择器](/help/sites-authoring/author-environment-tools.md#page-modes) 启用/禁用组件以在页面上使用。
+如果页面基于 [静态模板](/help/sites-authoring/templates.md#editable-and-static-templates)，您可以切换到 [设计模式](/help/sites-authoring/default-components-designmode.md) 使用 [页面模式选择器](/help/sites-authoring/author-environment-tools.md#page-modes) 工具栏上的来启用/禁用要在页面上使用的组件。
 
 在[列视图](/help/sites-authoring/basic-handling.md#column-view)或[列表视图](/help/sites-authoring/basic-handling.md#list-view)中选择页面时，您可以轻松查看该页面所基于的模板。
 

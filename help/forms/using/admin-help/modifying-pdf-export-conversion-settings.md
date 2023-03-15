@@ -20,13 +20,13 @@ ht-degree: 0%
 
 # 修改PDF导出转换设置 {#modifying-the-pdf-export-conversion-settings}
 
-使用以下过程修改用于导出PDF、EPS、DOC、TXT、RTF、XML或HTML文件的转换设置。 默认情况下，PDF文件使用在Adobe Acrobat Professional或Acrobat Standard中配置的默认“另存为”设置。 例如，Acrobat中用于将PDF文件转换为EPS的默认“另存为”设置，将只导致PDF文件中有一个页面被转换为EPS。
+使用以下过程修改用于导出PDF、EPS、DOC、TXT、RTF、XML或HTML文件的转换设置。 默认情况下，PDF文件使用在Adobe Acrobat Professional或Acrobat Standard中配置的默认“另存为”设置。 例如，Acrobat中用于将PDF文件转换为EPS的默认另存为设置将只导致将PDF文件转换为EPS的一个页面。
 
 >[!NOTE]
 >
->在修改一种文件格式的另存为设置后，该设置将应用于从PDF生成器导出时同类型的所有转换。
+>修改一种文件格式的“另存为”设置后，从PDF生成器导出相同类型的所有转换时，都将应用该设置。
 
-1. 在Acrobat中打开PDF文件，选择“文件”>“另存为”。
-1. 在“另存为类型”列表中，选择相应的格式。
-1. 单击设置，然后根据需要设置文件格式设置。
-1. 单击确定，然后单击保存以导出PDF文件。
+1. 在Acrobat中打开PDF文件后，选择“文件”>“另存为”。
+1. 在“另存为类型”列表中，选择适当的格式。
+1. 单击“设置”，并根据需要设置文件格式设置。
+1. 单击“确定”，然后单击“保存”以导出PDF文件。

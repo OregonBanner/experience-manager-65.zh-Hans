@@ -21,33 +21,33 @@ ht-degree: 0%
 
 ## 概述 {#overview}
 
-此功能允许将所有OSGi配置属性存储在受保护的加密表单中，而不是明文。 Web控制台UI中的表单用于使用系统范围的加密主控密钥从明文创建加密文本。
+此功能允许所有OSGi配置属性都以受保护的加密格式存储，而不是以明文形式存储。 Web控制台UI中的表单用于使用系统范围加密主控密钥从明文创建加密文本。
 
 添加了OSGi配置插件支持，以便在服务使用属性之前对其进行解密。
 
 >[!NOTE]
 >
->期望加密值的服务需要使用IsProtected检查来在尝试解密之前查看值是否已加密，因为该值可能已解密。
+>预期加密值的服务需要先使用IsProtected检查，查看值是否加密，然后再尝试解密，因为值可能已经解密。
 
 ## 启用加密支持 {#enabling-encryption-support}
 
-这些步骤说明如何加密Mail服务的SMTP密码。 您可以为要加密的OSGI属性完成这些步骤。
+这些步骤显示如何加密Mail服务的SMTP密码。 您可以为要加密的OSGI属性完成这些步骤。
 
-1. 转到AEM Web Console(位于 *https://&lt;serveraddress>:&lt;serverport>/system/console/configMgr*
-1. 在左上角，转到 **主 — 加密支持**
+1. 转到AEM Web Console，网址为 *https://&lt;serveraddress>：&lt;serverport>/system/console/configMgr*
+1. 在左上角，转到 **主要 — 加密支持**
 
    ![chlimage_1-325](assets/chlimage_1-325.png)
 
-1. 的 **Adobe Experience Manager Web控制台加密支持** 页面。
+1. 此 **Adobe Experience Manager Web控制台加密支持** 页面。
 
    ![screen_shot_2018-08-01at113417am](assets/screen_shot_2018-08-01at113417am.png)
 
-1. 在 **纯文本** 字段，输入要保护的敏感数据的文本。
-1. 选择 **Protect**. “受保护”文本显示为加密文本。
+1. 在 **纯文本** 字段中，输入要保护的敏感数据的文本。
+1. 选择 **Protect**. 受保护文本显示为加密文本。
 
    ![screen_shot_2018-08-01at113844am](assets/screen_shot_2018-08-01at113844am.png)
 
-1. 复制步骤5中的受保护文本，并将其粘贴到OSGI表单值中。 在本例中，加密 **SMTP密码** 添加到 *Day CQ Mail Service*.
+1. 复制步骤5中的受保护文本并将其粘贴到OSGI表单值中。 在此示例中，已解密 **SMTP密码** 已添加到 *Day CQ邮件服务*.
 
    ![screen_shot_2016-12-18at105809pm](assets/screen_shot_2016-12-18at105809pm.png)
 
@@ -55,4 +55,4 @@ ht-degree: 0%
 
 ## 解密支持 {#decryption-support}
 
-AEM现在提供了配置插件来解密配置属性。 此AEM插件将自动解密和检索明文属性。
+AEM现在提供了一个配置插件来解密配置属性。 此AEM插件将自动解密和检索明文属性。

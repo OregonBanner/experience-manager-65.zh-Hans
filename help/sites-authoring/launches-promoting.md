@@ -82,7 +82,7 @@ ht-degree: 98%
 
    例如，当选择仅提升已修改的页面时：
 
-   ![launchs-pd-06](assets/launches-pd-06.png)
+   ![launches-pd-06](assets/launches-pd-06.png)
 
    >[!NOTE]
    >

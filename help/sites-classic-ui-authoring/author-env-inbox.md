@@ -25,7 +25,7 @@ ht-degree: 93%
 您会在按通知类型分开的两个收件箱中接收这些通知：
 
 * 在一个收件箱中，您会看到因订阅而收到的通知，后续部分对该收件箱进行了说明。
-* 工作流项目的专用收件箱在 [参与工作流](/help/sites-classic-ui-authoring/classic-workflows-participating.md) 文档。
+* 有关工作流项目的专用收件箱的说明，请参见 [参与工作流](/help/sites-classic-ui-authoring/classic-workflows-participating.md) 文档。
 
 ## 查看通知 {#viewing-your-notifications}
 
@@ -91,7 +91,7 @@ ht-degree: 93%
 1. 定义要通知的页面的路径：
 
    * 单击&#x200B;**添加**&#x200B;向表添加新行。
-   * 单击 **路径** 表格单元格，然后输入路径，例如 `/content/docs`.
+   * 单击 **路径** 表单元格并输入路径，例如 `/content/docs`.
 
    * 要接收属于子树的所有页面的通知，请将“**是否精确？**&#x200B;设置为&#x200B;**否**。要仅接收路径定义的页面上的操作通知，请将&#x200B;**是否精确？**&#x200B;设置为&#x200B;**是**。
 

@@ -1,7 +1,7 @@
 ---
 title: SEO 和 URL 管理最佳实践
 seo-title: SEO and URL Management Best Practices
-description: 了解SEO最佳实践以及在AEM实施中实现这些最佳实践的建议。
+description: 了解在AEM实施中实现这些目标的SEO最佳实践和建议。
 seo-description: Learn about SEO best practices and recommendations for achieving these on an AEM implementation.
 topic-tags: managing
 content-type: reference
@@ -30,7 +30,7 @@ ht-degree: 96%
 
 在 AEM 项目中评估 URL 时，请问自己以下问题：
 
-“如果用户要查看此URL而页面上没有内容，他们能否描述此页面是什么？”
+“如果用户要查看此URL而页面上没有内容，他们会怎样描述此页面？”
 
 如果答案是“是”，则很可能此 URL 非常适用于搜索引擎。
 
@@ -366,9 +366,9 @@ AEM 使用 [Apache Sling Sitemap 模块](https://github.com/apache/sling-org-apa
 
 >[!NOTE]
 >
->自Adobe Experience Manager版本6.5.11.0起，此功能便可用作产品功能。
+>自Adobe Experience Manager版本6.5.11.0起，此功能作为产品功能提供。
 > 
->对于旧版本，您可以自行注册一个Sling Servlet，以侦听 `sitemap.xml` 调用并使用通过servlet API提供的资源来查找当前页面及其子体，以输出sitemap.xml文件。
+>对于旧版本，您可以自行注册Sling Servlet，以监听 `sitemap.xml` 调用并使用通过servlet API提供的资源查找当前页面及其后代以输出sitemap.xml文件。
 
 对于由 `sling:sitemapRoot` 属性设置为 `true` 的任何资源生成的顶级 Sitemap 和嵌套 Sitemap，Apache Sling Sitemap 模块会予以区分。通常，使用树的顶级 Sitemap 路径上的选择器来呈现 Sitemap，而顶级 Sitemap 是没有其他 Sitemap 根祖先的资源。此顶级 Sitemap 根还公开 Sitemap 索引，该索引通常是站点所有者将在搜索引擎的配置门户中配置或添加到站点的 `robots.txt` 的内容。
 
@@ -472,7 +472,7 @@ public class SitemapGeneratorImpl extends ResourceTreeSitemapGenerator {
 }
 ```
 
-此外，为XML站点地图实现的功能也可用于不同的用例，例如，将规范链接或语言替代添加到页面标题中。 有关更多信息，请参阅 [SeoTags](https://javadoc.io/doc/com.adobe.cq.wcm/com.adobe.aem.wcm.seo/latest/com/adobe/aem/wcm/seo/SeoTags.html) 接口。
+此外，为XML Sitemap实施的功能也可以用于不同的用例，例如，将规范链接或语言替代项添加到页头。 有关更多信息，请参阅 [SeoTags](https://javadoc.io/doc/com.adobe.cq.wcm/com.adobe.aem.wcm.seo/latest/com/adobe/aem/wcm/seo/SeoTags.html) 接口。
 
 ### 为旧版 URL 创建 301 重定向 {#creating-redirects-for-legacy-urls}
 

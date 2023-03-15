@@ -1,7 +1,7 @@
 ---
-title: 存储库服务API快速入门
+title: 存储库服务API快速启动
 seo-title: Repository Service API Quick Starts
-description: 使用AEM Forms Repository服务可创建文件夹、写入资源、列出资源、读取资源、更新资源、搜索资源、创建资源间关系、锁定资源、管理访问控制列表和删除资源。
+description: 使用AEM Forms Repository服务可以创建文件夹、写入资源、列出资源、读取资源、更新资源、搜索资源、创建资源之间的关系、锁定资源、管理访问控制列表和删除资源。
 seo-description: Use the AEM Forms Repository service to create a folder, write  a resource, list resources, reading a resource, update a resource, search for resources, create relationships between resources, locking a resource, managing access control lists, and delete a resource.
 uuid: 9c307e6e-d9a4-4021-8493-9f28a745dedb
 contentOwner: admin
@@ -18,11 +18,11 @@ ht-degree: 0%
 
 ---
 
-# 存储库服务API快速入门 {#repository-service-api-quick-starts}
+# 存储库服务API快速启动 {#repository-service-api-quick-starts}
 
-**本文档中的示例和示例仅适用于JEE环境中的AEM Forms。**
+**本文档中的示例和示例仅适用于AEM Forms on JEE环境。**
 
-以下快速入门可用于AEM Forms存储库服务。
+以下快速启动适用于AEM Forms Repository服务。
 
 [快速入门（SOAP模式）：使用Java API创建文件夹](repository-service-api-quick-starts.md#quick-start-soap-mode-creating-a-folder-using-the-java-api)
 
@@ -44,29 +44,29 @@ ht-degree: 0%
 
 [快速入门（SOAP模式）：使用Java API删除资源](repository-service-api-quick-starts.md#quick-start-soap-mode-deleting-a-resource-using-the-java-api)
 
-AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置为SOAP
+AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应设置为SOAP
 
-**应用程序/表单应用程序**
+**Applications/FormsApplication**
 
-大多数AEM Forms存储库服务快速入门与名为 `Applications/FormsApplication,` 如下图所示。
+大多数AEM Forms存储库服务都会快速启动与名为的应用程序的交互 `Applications/FormsApplication,` 如下图所示。
 
-文件夹FormsFolder是AEM Forms存储库中的一个位置。 例如，您可以以编程方式将此文件夹添加到 `Applications/FormsApplication`. (请参阅 [快速入门（SOAP模式）：使用Java API创建文件夹](repository-service-api-quick-starts.md#quick-start-soap-mode-creating-a-folder-using-the-java-api).)
+文件夹FormsFolder是AEM Forms存储库中的一个位置。 例如，您可以通过编程方式将此文件夹添加到 `Applications/FormsApplication`. (请参阅 [快速入门（SOAP模式）：使用Java API创建文件夹](repository-service-api-quick-starts.md#quick-start-soap-mode-creating-a-folder-using-the-java-api).)
 
-位于AEM Forms存储库中的资源的路径是：
+位于AEM Forms存储库中的资源的路径为：
 
 `Applications/Application-name/Application-version/Folder.../Filename`
 
 >[!NOTE]
 >
->您可以使用Web浏览器浏览AEM Forms存储库。 要浏览存储库，请在Web浏览器中输入以下URL `https://[server name]:[server port]/repository`. 您可以使用Web浏览器验证快速启动结果。 例如，如果向AEM Forms存储库添加内容，则可以在Web浏览器中查看该内容。
+>您可以使用Web浏览器浏览AEM Forms存储库。 要浏览存储库，请在Web浏览器中输入以下URL `https://[server name]:[server port]/repository`. 您可以使用Web浏览器验证快速入门结果。 例如，如果将内容添加到AEM Forms存储库，则可以在Web浏览器中查看内容。
 
 >[!NOTE]
 >
->默认情况下，Applications/FormsApplication不存在。 要跟进快速入门，请使用Workbench创建此应用程序。 有关使用Workbench创建应用程序的信息，请参阅 [流程设计入门](https://www.adobe.com/go/learn_aemforms_workbench_65).
+>默认情况下，Applications/FormsApplication不存在。 要在快速启动过程中遵循，请使用Workbench创建此应用程序。 有关使用Workbench创建应用程序的信息，请参阅 [流程设计入门](https://www.adobe.com/go/learn_aemforms_workbench_65).
 
 ## 快速入门（SOAP模式）：使用Java API创建文件夹 {#quick-start-soap-mode-creating-a-folder-using-the-java-api}
 
-以下Java代码示例将创建一个名为 *FormsFolder* 在以下位置 `/Applications/FormsApplication/1.0/`. (请参阅 [创建文件夹](/help/forms/developing/aem-forms-repository.md#creating-folders).)
+以下Java代码示例创建一个名为的文件夹 *FormsFolder* 在以下位置 `/Applications/FormsApplication/1.0/`. (请参阅 [创建文件夹](/help/forms/developing/aem-forms-repository.md#creating-folders).)
 
 ```java
  /*
@@ -172,7 +172,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
 
 ## 快速入门（SOAP模式）：使用Java API编写资源 {#quick-start-soap-mode-writing-a-resource-using-the-java-api}
 
-以下Java代码示例写入了名为 *loan.xdp* 中。 资源将添加到 `/Applications/FormsApplication/1.0/FormsFolder` 位置。 (请参阅 [编写资源](/help/forms/developing/aem-forms-repository.md#writing-resources).)
+以下Java代码示例编写了名为的资源 *loan.xdp* 在存储库中。 资源将添加到 `/Applications/FormsApplication/1.0/FormsFolder` 位置。 (请参阅 [写入资源](/help/forms/developing/aem-forms-repository.md#writing-resources).)
 
 ```java
  /*
@@ -399,7 +399,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
 
 ## 快速入门（SOAP模式）：使用Java API读取资源 {#quick-start-soap-mode-reading-a-resource-using-the-java-api}
 
-以下Java代码示例读取了名为 *Loan.xdp* 从存储库。 XDP文件位于 `/Applications/FormsApplication/1.0/FormsFolder/`. (请参阅 [读取资源](/help/forms/developing/aem-forms-repository.md#reading-resources).)
+以下Java代码示例读取名为的资源 *Loan.xdp* 从存储库中。 XDP文件位于 `/Applications/FormsApplication/1.0/FormsFolder/`. (请参阅 [正在读取资源](/help/forms/developing/aem-forms-repository.md#reading-resources).)
 
 ```java
  /*
@@ -500,7 +500,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
 
 ## 快速入门（SOAP模式）：使用Java API更新资源 {#quick-start-soap-mode-updating-a-resource-using-the-java-api}
 
-以下Java代码示例更新 `/Applications/FormsApplication/1.0/FormsFolder` 修改其描述。 (请参阅 [更新资源](/help/forms/developing/aem-forms-repository.md#updating-resources).)
+以下Java代码示例已更新 `/Applications/FormsApplication/1.0/FormsFolder` 通过修改其描述。 (请参阅 [更新资源](/help/forms/developing/aem-forms-repository.md#updating-resources).)
 
 ```java
  /*
@@ -612,7 +612,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
 
 ## 快速入门（SOAP模式）：使用Java API搜索资源 {#quick-start-soap-mode-searching-for-resources-using-the-java-api}
 
-以下Java代码示例在 `Applications/FormsApplication/1.0/FormsFolder`. (请参阅 [搜索资源](/help/forms/developing/aem-forms-repository.md#searching-for-resources).)
+以下Java代码示例在中搜索Loan.xdp `Applications/FormsApplication/1.0/FormsFolder`. (请参阅 [搜索资源](/help/forms/developing/aem-forms-repository.md#searching-for-resources).)
 
 ```java
  /*
@@ -877,7 +877,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
 
 ## 快速入门（SOAP模式）：使用Java API锁定资源 {#quick-start-soap-mode-locking-a-resource-using-the-java-api}
 
-以下Java代码示例锁定/Applications/FormsApplication/1.0/FormsFolder/Loan.xdp。 (请参阅 [锁定资源](/help/forms/developing/aem-forms-repository.md#locking-resources).)
+以下Java代码示例锁定/Applications/FormsApplication/1.0/FormsFolder/Loan.xdp 。 (请参阅 [锁定资源](/help/forms/developing/aem-forms-repository.md#locking-resources).)
 
 ```java
  /*
@@ -988,7 +988,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
 
 ## 快速入门（SOAP模式）：使用Java API管理访问控制列表 {#quick-start-soap-mode-managing-access-control-lists-using-the-java-api}
 
-以下Java代码示例在存储库中读取并创建访问控制列表(ACL)。
+以下Java代码示例读取并在存储库中创建访问控制列表(ACL)。
 
 ```java
  /*
@@ -1103,7 +1103,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
 
 ## 快速入门（SOAP模式）：使用Java API删除资源 {#quick-start-soap-mode-deleting-a-resource-using-the-java-api}
 
-以下Java代码示例从中删除Loan.xdp `Applications/FormsApplication/1.0/FormsFolder`. 如果此XDP文件不在此文件夹中，则会引发异常。 (请参阅 [删除资源](/help/forms/developing/aem-forms-repository.md#deleting-resources).)
+以下Java代码示例从删除Loan.xdp `Applications/FormsApplication/1.0/FormsFolder`. 如果此XDP文件不在此文件夹中，则会引发异常。 (请参阅 [删除资源](/help/forms/developing/aem-forms-repository.md#deleting-resources).)
 
 ```java
  /*

@@ -297,7 +297,7 @@ ht-degree: 97%
 
    此时会显示引用类型列表：
 
-   ![screenshot_2019-03-05at114412](assets/screen-shot_2019-03-05at114412.png)
+   ![screen-shot_2019-03-05at114412](assets/screen-shot_2019-03-05at114412.png)
 
 1. 点按/单击所需的引用类型，以显示更多详细信息并（视需要）执行进一步操作。
 
@@ -311,7 +311,7 @@ ht-degree: 97%
 
 1. 点按/单击“时间轴”列右下方的向上箭头以显示其他按钮，包括&#x200B;**另存为版本**。
 
-   ![screenshot_2019-03-05at114600](assets/screen-shot_2019-03-05at114600.png)
+   ![screen-shot_2019-03-05at114600](assets/screen-shot_2019-03-05at114600.png)
 
 1. 选择&#x200B;**另存为版本**，然后再选择&#x200B;**创建**。
 

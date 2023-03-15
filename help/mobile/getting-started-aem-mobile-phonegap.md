@@ -1,7 +1,7 @@
 ---
 title: AEM Adobe PhoneGap
 seo-title: AEM Adobe PhoneGap
-description: AEM与PhoneGap集成，以便您能够使用AEM页面轻松创建应用程序。 请阅读本页，以开始使用Adobe PhoneGap Enterprise。
+description: AEM与PhoneGap集成，以便您可以使用AEM页面轻松创建应用程序。 关注本页以开始使用Adobe PhoneGap Enterprise。
 seo-description: AEM integrates with PhoneGap so that you can easily create apps using AEM pages. Follow this page to get started with Adobe PhoneGap Enterprise.
 uuid: bdd90cda-2489-4763-a90a-9c409d6e68ae
 contentOwner: User
@@ -23,42 +23,42 @@ ht-degree: 1%
 >
 >Adobe建议对需要基于单页应用程序框架的客户端渲染（例如React）的项目使用SPA编辑器。 [了解更多](/help/sites-developing/spa-overview.md)。
 
-AEM与PhoneGap集成，以便您能够使用AEM页面轻松创建应用程序。 PhoneGap允许用户创建实用工具应用程序，以便用户处理内容。 通过内容同步，您可以创建页面的版本控制存档以与应用程序捆绑在一起。
+AEM与PhoneGap集成，以便您可以使用AEM页面轻松创建应用程序。 PhoneGap允许用户创建实用工具应用程序，以便用户处理内容。 内容同步允许您创建页面的版本化存档，以便与应用程序捆绑在一起。
 
-通常， ***AEM管理员*** 负责通过使用创建向导创建新应用程序或导入现有应用程序，将新应用程序添加到AEM Mobile目录。
+通常， ***AEM管理员*** 负责向AEM Mobile目录中添加新应用程序，方法是使用创建向导创建新应用程序，或导入现有应用程序。
 
-从此处 ***AEM作者*** (或 *营销人员*)现在可以使用现成的模板和组件来添加和编辑页面、拖放组件以及添加DAM中所有类型的媒体，包括图像、视频和文本片段（内容片段）。
+从此处开始 ***AEM创作*** (或 *营销人员*)现在可以使用现成的模板和组件来添加和编辑页面、拖放组件以及从DAM添加所有类型的媒体，包括图像、视频和文本片段（内容片段）。
 
-AEM Mobile的真正力量是 *精明* ***AEM开发人员*** 可以扩展和创建自定义web模板和组件，以启用 *AEM作者* 以创建美妙而引人入胜的移动体验。 这些模板和组件不仅针对移动设备应用程序领域进行了优化；但是，要与设备和AEM服务器（任何远程服务器）通信到全渠道服务端点。
+AEM Mobile的真正力量在于 *精明* ***AEM开发人员*** 可以扩展和创建自定义Web模板和组件，以启用 *AEM创作* 创造美妙而引人入胜的移动体验。 这些模板和组件不仅针对移动应用程序世界进行了优化，而且还与设备通信，并与全渠道服务端点的AEM服务器（任何远程服务器）通信。
 
 >[!NOTE]
 >
->当 *AEM作者* 相信应用程序已准备就绪，他们可以先让利益相关方通过 **[Adobe验证](/help/mobile/phonegap-mobile-quickstart.md)** （可在AppStore和PlayStore中使用）以供审核和批准。 他们收到绿灯后，便能够通过AEM Mobile ContentSync内容发布管理功能板，直接向用户发布此新内容或更新内容。 一个人可以承担任何数量的角色，这取决于您和您的治理政策。
+>当 *AEM创作* 确信应用程序已就绪，他们可以首先让利益相关者下载应用程序， **[Adobe验证](/help/mobile/phonegap-mobile-quickstart.md)** （在AppStore和PlayStore中均可用）以供审阅和批准。 一旦他们收到绿灯，就可以通过AEM Mobile ContentSync内容发布管理功能板，直接向其用户发布这些新的或更新后的内容。 一个人可以担任任意数量的角色，具体取决于您和您的治理策略。
 
 ## 前提条件 {#prerequisites}
 
-AEM Mobile只是构成完整AEM平台的一个支柱。
+AEM Mobile只是构成整个AEM平台的支柱之一。
 
-在使用AEM Mobile并执行本快速入门指南中的步骤之前，用户应该熟悉AEM和AEM Mobile控制中心。 请参阅：
+在使用AEM Mobile并按照本快速入门指南中的步骤操作之前，用户应该熟悉AEM和AEM Mobile控制中心。 请参阅：
 
 [AEM 快速入门](/help/sites-deploying/deploy.md)
 
-[AEM Mobile管制中心的演练](/help/mobile/phonegap-authoring-apps.md)
+[AEM Mobile控制中心演练](/help/mobile/phonegap-authoring-apps.md)
 
-## 适用于作者的快速链接 {#quicklinks-for-authors}
+## 作者的快速链接 {#quicklinks-for-authors}
 
-请参阅 [在AEM中为Adobe PhoneGap企业版创作](/help/mobile/phonegap.md) 了解作者的角色和职责。
+参见 [在AEM中为Adobe PhoneGap Enterprise创作](/help/mobile/phonegap.md) 了解作者的角色和职责。
 
-## 面向开发人员的QuickLinks {#quicklinks-for-developers}
+## 面向开发人员的快速链接 {#quicklinks-for-developers}
 
-有一些示例应用程序将与AEM Mobile集成，并且可由开发人员自定义。 单击 [使用AEM开发Adobe PhoneGap企业](/help/mobile/developing-in-phonegap.md).
+有一些示例应用程序将与AEM Mobile集成并可由开发人员进行自定义。 单击 [使用AEM开发Adobe PhoneGap Enterprise](/help/mobile/developing-in-phonegap.md).
 
-在后续的章节中，您将学习一些高级概念，如为您的应用程序设置白色标签、本地化、国际化、内容同步、定位、分析等。
+在接下来的章节中，您将了解高级概念，如白色标签设置、应用程序、本地化、国际化、内容同步、定位、分析等。
 
-## 面向管理员的快速链接 {#quicklinks-for-administrators}
+## 适用于管理员的快速链接 {#quicklinks-for-administrators}
 
-请参阅 [使用AEM管理Adobe PhoneGap Enterprise的内容](/help/mobile/administer-phonegap.md) 来设置和管理移动应用程序。
+参见 [使用AEM管理Adobe PhoneGap Enterprise的内容](/help/mobile/administer-phonegap.md) 以设置和管理您的移动应用程序。
 
 >[!NOTE]
 >
->使用混合移动技术，您可以创建丰富的移动应用程序， *脱机运行和联机运行* 事实上，使用AEM Mobile，许多客户会选择创建一些应用程序，以检查他们在线或离线的时间并据此行事。
+>使用混合移动技术，您可以创建丰富的移动应用程序， *脱机运行和联机运行* 事实上，通过AEM Mobile，许多客户会选择创建应用程序，以便检查他们在线或离线时的情况，并做出相应的行为。

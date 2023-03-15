@@ -55,7 +55,7 @@ Dynamic Media Classic视频组件支持以下格式：
 如果您需要对资产使用工作流或进行版本控制，应首先将资产上传到 Adobe Assets。下面是建议的工作流：
 
 1. 将视频资源上传到Adobe资源，并自动编码和发布到Dynamic Media Classic。
-1. 在Experience Manager中，访问WCM中位于以下位置中的视频资源： **[!UICONTROL 电影]** 选项卡。
+1. 在Experience Manager中，访问WCM中位于以下位置的视频资源： **[!UICONTROL 电影]** 选项卡。
 1. 使用Dynamic Media Classic视频或基础视频组件创作。
 
 #### 如果您要将视频上传到Dynamic Media Classic {#if-you-are-uploading-your-video-to-scene}
@@ -63,7 +63,7 @@ Dynamic Media Classic视频组件支持以下格式：
 如果您不需要为资源创建工作流或版本控制，则应将资源上传到Dynamic Media Classic。 下面是建议的工作流：
 
 1. 在Dynamic Media Classic桌面应用程序中， [设置计划的FTP上传和编码到Dynamic Media Classic（系统自动）](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/uploading-files.html#upload-options).
-1. 在Experience Manager中，访问WCM中位于以下位置中的视频资源： **[!UICONTROL Dynamic Media Classic]** 选项卡。
+1. 在Experience Manager中，访问WCM中位于以下位置的视频资源： **[!UICONTROL Dynamic Media Classic]** 选项卡。
 1. 使用Dynamic Media Classic视频组件创作。
 
 ### 配置与Dynamic Media Classic的集成视频 {#configuring-integration-with-scene-video}

@@ -19,30 +19,30 @@ ht-degree: 0%
 
 # 自适应模板渲染{#adaptive-template-rendering}
 
-自适应模板渲染提供了一种管理页面及其变体的方法。 此功能最初可用于为移动设备（例如功能电话和智能电话）交付各种HTML输出，但当需要将体验交付到需要不同标记或HTML输出的各种设备时，此功能非常有用。
+自适应模板渲染提供了一种管理具有变体的页面的方法。 这项功能最初可用于为移动设备（例如功能手机与智能手机）提供各种HTML输出，当需要将体验提供给需要不同标记或HTML输出的各种设备时，这项功能会很有用。
 
 ## 概述 {#overview}
 
-模板通常围绕响应式网格构建，并且基于这些模板创建的页面是完全响应的，可根据客户端设备的视区自动调整。 使用页面编辑器中的模拟器工具栏，作者可以将布局定位到特定设备。
+模板通常围绕响应式网格构建，基于这些模板创建的页面具有完全响应式，可自动根据客户端设备的视区进行调整。 使用页面编辑器中的模拟器工具栏，作者可以将布局定位到特定设备。
 
-还可以设置模板以支持自适应渲染。 正确配置设备组后，当在模拟器模式下选择设备时，页面将在URL中以不同的选择器呈现。 使用选择器，可以通过URL直接调用特定页面渲染。
+也可以设置模板以支持自适应渲染。 正确配置设备组后，在模拟器模式下选择设备时，页面将通过URL中的其他选择器呈现。 使用选择器，可通过URL直接调用特定页面渲染。
 
-在设置设备组时请记住：
+设置设备组时请记住：
 
 * 每个设备必须至少位于一个设备组中。
-* 设备可以位于多个设备组中。
+* 一个设备可以位于多个设备组中。
 * 由于设备可以位于多个设备组中，因此可以组合选择器。
-* 选择器组合会从上到下进行评估，因为它们会保留在存储库中。
+* 选择器组合在存储库中保留时会自上而下评估。
 
 >[!NOTE]
 >
->设备组 **响应式设备** 将永远没有选择器，因为被识别为支持响应式设计的设备假定不需要自适应布局
+>设备组 **响应式设备** 将永远不会有选择器，因为假定被识别为支持响应式设计的设备不需要自适应布局
 
 ## 配置 {#configuration}
 
-可以为现有设备组配置自适应渲染选择器，或者 [您自己创建的组。](/help/sites-developing/mobile.md#device-groups)
+自适应渲染选择器可以为现有设备组配置，也可以配置为 [您自己创建的组。](/help/sites-developing/mobile.md#device-groups)
 
-在本例中，我们将配置现有设备组 **智能手机** 以在 **体验页面** 模板。
+在本例中，我们将配置现有的设备组 **智能手机** 将自适应渲染选择器作为 **体验页面** We.Retail中的模板。
 
 1. 在中编辑需要自适应选择器的设备组 `http://localhost:4502/miscadmin#/etc/mobile/groups`
 
@@ -50,34 +50,34 @@ ht-degree: 0%
 
    ![chlimage_1-157](assets/chlimage_1-157.png)
 
-1. 选择器将可用于 **Blackberry** 和 **iPhone 4** 提供了设备组 **智能手机** 将添加到模板和页面结构中。
+1. 选择器将可用于 **Blackberry** 和 **IPHONE 4** 已提供设备组 **智能手机** 会添加到模板和页面结构中。
 
    ![chlimage_1-158](assets/chlimage_1-158.png)
 
-1. 使用CRX DE Lite，通过将设备组添加到多值字符串属性中，来允许在模板上使用设备组 `cq:deviceGroups` 在模板的结构中。
+1. 使用CRX DE Lite，通过将设备组添加到多值字符串属性，允许在模板上使用设备组 `cq:deviceGroups` 模板的结构中。
 
    `/conf/<your-site>/settings/wcm/templates/<your-template>/structure/jcr:content`
 
-   例如，如果我们想添加智能电话设备组：
+   例如，如果要添加Smartphone设备组：
 
    `/conf/we-retail/settings/wcm/templates/experience-page/structure/jcr:content`
 
    ![chlimage_1-159](assets/chlimage_1-159.png)
 
-1. 使用CRX DE Lite，通过将设备组添加到多值字符串属性中来允许在您的网站上使用设备组 `cq:deviceGroups` 在您网站的结构中。
+1. 使用CRX DE Lite，通过将设备组添加到多值字符串属性，允许该设备组在您的网站上使用 `cq:deviceGroups` 网站结构的信息。
 
    `/content/<your-site>/jcr:content`
 
-   例如，如果我们希望允许 **智能手机** 设备组：
+   例如，如果我们要允许 **智能手机** 设备组：
 
    `/content/we-retail/jcr:content`
 
    ![chlimage_1-160](assets/chlimage_1-160.png)
 
-现在，当使用 [模拟器](/help/sites-authoring/responsive-layout.md#layout-definitions-device-emulation-and-breakpoints) (例如， [修改布局](/help/sites-authoring/responsive-layout.md))后，您将选择已配置设备组的设备，页面将会呈现为URL的一部分并带有一个选择器。
+现在，使用 [模拟器](/help/sites-authoring/responsive-layout.md#layout-definitions-device-emulation-and-breakpoints) 在页面编辑器中(例如 [修改布局](/help/sites-authoring/responsive-layout.md))，并且您选择了所配置设备组中的设备，则页面将在URL中通过选择器呈现。
 
-在本例中，根据 **体验页面** 模板，并在模拟器中选择iPhone 4，此时将呈现页面，其中包括选择器作为 `arctic-surfing-in-lofoten.smart.html` 而不是 `arctic-surfing-in-lofoten.html`
+在本例中，当编辑基于 **体验页面** 模板，并在模拟器中选择iPhone 4，则会呈现页面，其中包括选择器，如 `arctic-surfing-in-lofoten.smart.html` 而不是 `arctic-surfing-in-lofoten.html`
 
-也可以使用此选择器直接调用页面。
+也可以使用此选择器直接调用该页面。
 
 ![chlimage_1-161](assets/chlimage_1-161.png)

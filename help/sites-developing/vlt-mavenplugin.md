@@ -11,16 +11,16 @@ ht-degree: 9%
 
 # Adobe内容包Maven插件 {#adobe-content-package-maven-plugin}
 
-使用Adobe内容包Maven插件将包部署和管理任务集成到您的Maven项目中。
+使用Adobe内容包Maven插件将包部署和管理任务集成到Maven项目中。
 
-将已构建的包部署到AEM由Adobe内容包Maven插件执行，并且支持使用AEM包管理器正常执行的任务的自动化。
+将已构建的包部署到AEM是由Adobe内容包Maven插件执行的，并允许自动执行通常使用AEM包管理器执行的任务。
 
 >[!TIP]
 >
 >有关更多详细信息，请参阅：
 >
->* 的 [Adobe内容包Maven插件](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developer-tools/maven-plugin.html?lang=en#developer-tools) 有关如何部署AEM应用程序的AEMas a Cloud Service文档中的文章。
->* 的 [AEM项目结构](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html) 有关如何构建现代AEM项目的AEMas a Cloud Service文档中的文章。
->* 的 [AEM项目原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) 文档介绍了如何使用原型启动新的AEM项目。
+>* 此 [Adobe内容包Maven插件](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developer-tools/maven-plugin.html?lang=en#developer-tools) AEMas a Cloud Service文档中的文章，了解如何部署AEM应用程序。
+>* 此 [AEM项目结构](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html) AEMas a Cloud Service文档中的一篇文章，介绍如何构建现代AEM项目。
+>* 此 [AEM项目原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) 有关如何使用原型启动新的AEM项目的文档。
 >
->这三个文档都适用于AEM 6.5。
+>所有三个文档都适用于AEM 6.5。

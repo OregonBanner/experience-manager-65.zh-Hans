@@ -29,15 +29,15 @@ Java API快速入门(SOAP)可用于应用程序管理器服务。
 >
 >应用程序管理器API仅支持AEM Forms LCA文件。 它不支持LiveCycleES2和ES4的LCA文件。
 
-AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置为SOAP。
+AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应设置为SOAP。
 
 >[!NOTE]
 >
->使用AEM表单进行编程中的Java API(SOAP)快速入门基于Forms（如果您使用的是其他操作系统，如Unix），则使用适用操作系统支持的路径替换特定于Windows的路径。 同样，如果您使用的是其他J2EE应用程序服务器，请确保指定有效的连接属性。 请参阅 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>如果使用Unix等其他操作系统，则将特定于Windows的路径替换为适用操作系统支持的路径，则“使用AEM进行编程”表单中的Java API(SOAP)快速入门将基于Forms。 同样，如果您使用的是其他J2EE应用程序服务器，请确保指定有效的连接属性。 参见 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
 ## 快速入门（SOAP模式）：使用Java API部署应用程序 {#quick-start-soap-mode-deploying-applications-using-the-java-api}
 
-以下Java代码示例基于名为的现有LCA文件导入应用程序 *EncryptDocument.lca*.
+以下Java代码示例根据名为的现有LCA文件导入应用程序 *EncryptDocument.lca*.
 
 ```java
  /*
@@ -139,7 +139,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
 
 ## 快速入门（SOAP模式）：使用Java API删除应用程序 {#quick-start-soap-mode-removing-an-application-using-the-java-api}
 
-以下Java代码示例将删除名为 *EncryptDocument*.
+以下Java代码示例删除名为的应用程序 *EncryDocument*.
 
 ```java
  /*

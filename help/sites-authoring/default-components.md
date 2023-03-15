@@ -58,7 +58,7 @@ Adobe Experience Manager (AEM) 附带多种现成的组件，这些组件为网�
 
 * [核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans) - 核心组件提供了灵活且功能丰富的创作功能，可提供创建页面所需的基本内容类型。
 
-* [社区](/help/communities/author-communities.md) - 这些组件为网站提供了交互式功能，例如论坛和评论。当 [社区站点](/help/communities/overview.md) 创建时。
+* [社区](/help/communities/author-communities.md) - 这些组件为网站提供了交互式功能，例如论坛和评论。在以下情况下会包含这些组件中的许多： [社区站点](/help/communities/overview.md) 创建。
 
 * [电子商务](/help/commerce/cif-classic/administering/ecommerce.md) - AEM 中的电子商务功能也包含一系列组件。实际用途取决于所使用的商业引擎。
 

@@ -70,7 +70,7 @@ ht-degree: 96%
 
    **默认收件人列表**&#x200B;为必填字段，因为它构成了新闻稿的触点（请参阅[使用列表](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#workingwithlists)，以了解更多有关列表的信息）。
 
-   ![mcm_newnewsletterdialog](assets/mcm_newnewsletterdialog.png)
+   ![mcm_newsletterdialog](assets/mcm_newnewsletterdialog.png)
 
    * **发件人姓名** 应显示为新闻稿发件人的姓名。
 
@@ -132,7 +132,7 @@ ht-degree: 96%
 
 >[!NOTE]
 >
->在发送新闻稿之前，请检查Day CQ Link Externalizer（位于）的OSGi配置 `https://localhost:4502/system/console/configMgr`.
+>在发送新闻稿之前，请检查Day CQ Link Externalizer的OSGi配置 `https://localhost:4502/system/console/configMgr`.
 >
 >默认情况下，参数的值为 `localhost:4502`，并且如果运行实例的端口发生更改，将无法完成操作。
 
@@ -220,7 +220,7 @@ ht-degree: 96%
 
 >[!NOTE]
 >
->在发送新闻稿之前，请检查Day CQ Link Externalizer（位于）的OSGi配置 `https://localhost:4502/system/console/configMgr`.
+>在发送新闻稿之前，请检查Day CQ Link Externalizer的OSGi配置 `https://localhost:4502/system/console/configMgr`.
 >
 >默认情况下，参数的值为 `localhost:4502`，并且如果运行实例的端口发生更改，将无法完成操作。
 

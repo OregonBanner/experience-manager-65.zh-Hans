@@ -18,7 +18,7 @@ ht-degree: 87%
 
 # AEM 6.5 Authoring 用户指南 {#authoring}
 
-+ [Authoring用户指南概述](home.md)
++ [创作用户指南概述](home.md)
 + AEM创作的基本任务、工具和概念 {#essentials}
    + [创作的首要步骤](first-steps.md)
    + [页面创作](page-authoring.md)
@@ -28,7 +28,7 @@ ht-degree: 87%
    + [搜索](search.md)
    + [配置帐户环境](user-properties.md)
    + [您的收件箱](inbox.md)
-   + [键盘快捷键 （在控制台中）](keyboard-shortcuts.md)
+   + [键盘快捷键 适用于控制台](keyboard-shortcuts.md)
    + [选择您的 UI](select-ui.md)
 + 创作 {#authoring}
    + [创作环境和工具](author-environment-tools.md)
