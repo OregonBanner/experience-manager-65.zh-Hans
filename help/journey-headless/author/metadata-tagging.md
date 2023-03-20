@@ -2,10 +2,10 @@
 title: 了解如何为内容片段定义元数据和标记
 description: 了解如何为内容片段定义元数据和标记
 exl-id: b4cc1311-1ef7-409a-bd41-0456519b3436
-source-git-commit: a2ababa9dd9115e963b91a7271d204d287557c40
+source-git-commit: d33abafa0478de1f7b637a14df6d2b7712000c03
 workflow-type: tm+mt
-source-wordcount: '237'
-ht-degree: 97%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -31,6 +31,10 @@ ht-degree: 97%
 * 首次创建片段时：
 
    ![创建内容片段 – 提供名称](/help/journey-headless/author/assets/headless-journey-author-content-fragment-03.png)
+
+* 的 **变体** 内容片段编辑器的选项卡允许您添加预定义的 **标记** 从您的项目中：
+
+   ![内容片段编辑器 – 阿拉斯加烈酒](/help/journey-headless/author/assets/headless-journey-author-content-fragment-05.png)
 
 * 内容片段编辑器的&#x200B;**元数据**&#x200B;选项卡可让您添加元数据的各种字段以及您项目中的预定义的&#x200B;**标记**：
 
