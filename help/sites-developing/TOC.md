@@ -4,14 +4,14 @@ product: adobe experience manager
 solution: Experience Manager, Experience Manager Sites
 audience: end-user
 user-guide-title: AEM 6.5 Developing 用户指南
-breadcrumb-title: Developing 指南
+breadcrumb-title: 开发指南
 user-guide-description: 本指南介绍如何构建 AEM 实例。
 feature: Developing
 role: Developer
 source-git-commit: c5bc743f845281bdbad522053c0e57791921ffd2
 workflow-type: tm+mt
 source-wordcount: '1317'
-ht-degree: 37%
+ht-degree: 36%
 
 ---
 
@@ -22,20 +22,20 @@ ht-degree: 37%
 + 开发人员简介{#introduction}
    + [AEM Sites 开发快速入门 – WKND 教程](getting-started.md)
    + [AEM核心概念](the-basics.md)
-   + [AEM触屏优化UI的结构](touch-ui-structure.md)
-   + [AEM触屏优化UI的概念](touch-ui-concepts.md)
+   + [AEM触屏UI的结构](touch-ui-structure.md)
+   + [AEM触屏UI的概念](touch-ui-concepts.md)
    + [AEM开发 — 准则和最佳实践](dev-guidelines-bestpractices.md)
    + [使用客户端库](clientlibs.md)
    + [开发和页面差异](pagediff.md)
    + [编辑器限制](editor-limitations.md)
    + [CSRF保护框架](csrf-protection.md)
-   + [数据建模 — David Nuescheler模型](model-data.md)
-   + [向AEM投稿](contributing-to-cq.md)
+   + [数据建模 — 大卫·纽谢勒的模型](model-data.md)
+   + [参与AEM](contributing-to-cq.md)
    + [安全性](security.md)
    + [参考资料](reference-materials.md)
    + [创建功能齐全的网站（经典UI）](website.md)
    + [设计和设计器（经典UI）](designer.md)
-   + [迁移到触控UI](/help/sites-developing/touch-ui-migration.md)
+   + [迁移到触屏UI](/help/sites-developing/touch-ui-migration.md)
 + 平台{#platform}
    + [Sling 备忘单](sling-cheatsheet.md)
    + [使用 Sling 适配器](sling-adapters.md)
@@ -57,14 +57,14 @@ ht-degree: 37%
    + 标记{#tagging}
       + [标记](tags.md)
       + [AEM 标记框架](framework.md)
-      + [在AEM应用程序中构建标记](building.md)
+      + [将标记构建到AEM应用程序](building.md)
    + [自定义错误处理程序显示的页面](customizing-errorhandler-pages.md)
    + [自定义节点类型](custom-nodetypes.md)
-   + [为图形渲染添加字体](adding-fonts.md)
+   + [添加用于图形渲染的字体](adding-fonts.md)
    + [连接到SQL数据库](jdbc.md)
-   + [将URL外部化](externalizer.md)
-   + [创建和使用卸载作业](dev-offloading.md)
-   + [配置Cookie用法](cookie-optout.md)
+   + [外部化URL](externalizer.md)
+   + [为卸载创建和使用作业](dev-offloading.md)
+   + [配置Cookie使用情况](cookie-optout.md)
    + [如何以编程方式访问AEM JCR](access-jcr.md)
    + [将服务与JMX控制台集成](jmx-integration.md)
    + [开发批量编辑器](dev-bulk-editor.md)
@@ -85,11 +85,11 @@ ht-degree: 37%
    + [开发人员模式](developer-mode.md)
    + [测试您的UI](hobbes.md)
    + [内容片段的组件](components-content-fragments.md)
-   + [获取JSON格式的页面信息](pageinfo.md)
+   + [以JSON格式获取页面信息](pageinfo.md)
    + 国际化{#internationalization}
-      + [国际化组件](i18n.md)
+      + [组件国际化](i18n.md)
       + [国际化UI字符串](i18n-dev.md)
-      + [使用Translator管理词典](i18n-translator.md)
+      + [使用翻译器管理字典](i18n-translator.md)
       + [提取字符串以进行翻译](i18n-extract.md)
    + 经典UI组件{#classic-ui-components}
       + [开发AEM组件（经典UI）](developing-components-classic.md)
@@ -140,7 +140,7 @@ ht-degree: 37%
       + [内容片段 REST API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/assets-api-content-fragments.html)
       + [内容片段 GraphQL API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/graphql-api-content-fragments.html)
       + [使用 GraphiQL IDE](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/graphiql-ide.html)
-      + [持久查询](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/persisted-queries.html)
+      + [持久化查询](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/persisted-queries.html)
       + [对内容片段的远程 AEM GraphQL 查询的身份验证](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/graphql-authentication-content-fragments.html)
       + [带内容片段的 AEM GraphQL API - 示例内容和查询](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/content-fragments-graphql-samples.html)
 + 混合和SPA AEM开发{#spas}
@@ -155,7 +155,7 @@ ht-degree: 37%
    + [SPA 编辑器概述](spa-overview.md)
    + [SPA Blueprint](spa-blueprint.md)
    + [SPA 页面组件](spa-page-component.md)
-   + [对组件映射进行动态建模 对于SPA](spa-dynamic-model-to-component-mapping.md)
+   + [对组件映射进行动态建模 for SPA](spa-dynamic-model-to-component-mapping.md)
    + [SPA模型路由](spa-routing.md)
    + [RemotePage 组件](spa-remote-page.md)
    + [在 AEM 中编辑外部 SPA](spa-edit-external.md)
@@ -170,7 +170,7 @@ ht-degree: 37%
    + [对话框编辑器](dialog-editor.md)
    + [对话框转换工具](dialog-conversion.md)
    + [使用CRXDE Lite进行开发](developing-with-crxde-lite.md)
-   + [使用Maven管理包](vlt-mavenplugin.md)
+   + [使用Maven管理资源包](vlt-mavenplugin.md)
    + [如何使用Eclipse开发AEM项目](howto-projects-eclipse.md)
    + [如何使用Apache Maven构建AEM项目](ht-projects-maven.md)
    + [如何使用IntelliJ IDEA开发AEM项目](ht-intellij.md)
@@ -181,22 +181,22 @@ ht-degree: 37%
    + [AEM Repo 工具](aem-repo-tool.md)
 + 个性化{#personlization}
    + [ContextHub](contexthub.md)
-   + [配置上下文中心](ch-configuring.md)
-   + [将ContextHub添加到页面并访问存储](ch-adding.md)
+   + [配置ContextHub](ch-configuring.md)
+   + [将ContextHub添加到页面和访问存储](ch-adding.md)
    + [扩展 ContextHub](ch-extend.md)
-   + [示例ContextHub存储候选项](ch-samplestores.md)
-   + [示例ContextHub UI模块类型](ch-samplemodules.md)
+   + [ContextHub存储候选示例](ch-samplestores.md)
+   + [ContextHub UI模块类型示例](ch-samplemodules.md)
    + [ContextHub 诊断](ch-diagnostics.md)
    + [针对目标内容进行开发](target.md)
    + [ContextHub Javascript API参考](contexthub-api.md)
    + ClientContext{#client-context}
-      + [客户端上下文详细信息](client-context.md)
+      + [Client Context详细信息](client-context.md)
       + [Client Context Javascript API](ccjsapi.md)
 + 扩展AEM{#extending-aem}
    + [使用 Adobe Developer App Builder 扩展 AEM](app-builder.md)
    + [自定义页面创作](customizing-page-authoring-touch.md)
    + [自定义控制台](customizing-consoles-touch.md)
-   + [自定义页面属性视图](page-properties-views.md)
+   + [自定义页面属性的视图](page-properties-views.md)
    + [配置页面以批量编辑页面属性](bulk-editing.md)
    + [自定义和扩展内容片段](customizing-content-fragments.md)
    + [配置用于呈现的组件的内容片段](content-fragments-config-components-rendering.md)
@@ -215,7 +215,7 @@ ht-degree: 37%
       + [扩展事件跟踪](extending-analytics.md)
       + [将Adobe Analytics跟踪添加到组件](extending-analytics-components.md)
       + [自定义Adobe Analytics框架](extending-analytics-framework.md)
-      + [实施Analytics的服务器端页面命名](extending-analytics-pa-naming.md)
+      + [为Analytics实施服务器端页面命名](extending-analytics-pa-naming.md)
    + 云服务{#extending-cloud-services}
       + [Cloud Service 配置](extending-cloud-config.md)
       + [创建自定义Cloud Service](extending-cloud-config-custom-cloud.md)
@@ -233,14 +233,14 @@ ht-degree: 37%
 + 测试{#testing}
    + [规划](planning.md)
    + [需要哪些测试环境？](test-environments.md)
-   + [定义测试用例](test-cases.md)
-   + [测试 — 何时与谁？](when-who.md)
+   + [定义测试案例](test-cases.md)
+   + [测试 — 何时与谁一起进行？](when-who.md)
    + [编译测试计划](test-plan.md)
    + [跟踪结果并提供反馈](results-and-feedback.md)
    + [测试和跟踪工具](tools.md)
-   + [接受和签核](acceptance-signoff.md)
+   + [接受和签收](acceptance-signoff.md)
    + [下一个版本……](the-next-release.md)
-   + [核对清单](checklists.md)
+   + [检查列表](checklists.md)
    + [艰难的一天](tough-day.md)
    + [测试您的UI](https://experienceleague.adobe.com/docs/experience-manager-65/developing/components/hobbes.html)
 + 最佳实践{#bestpractices}
@@ -248,24 +248,24 @@ ht-degree: 37%
    + [AEM开发准则和最佳实践](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/dev-guidelines-bestpractices.html)
    + [开发最佳实践](development-practices.md)
    + [内容架构](content-architecture.md)
-   + [软件体系结构](software-architecture.md)
+   + [软件架构](software-architecture.md)
    + We.Retail参考实施{#we-retail}
       + [We.Retail参考实施](we-retail.md)
       + [在We.Retail中尝试内容片段](we-retail-content-fragments.md)
       + [在We.Retail中试用核心组件](we-retail-core-components.md)
-      + [在We.Retail中尝试可编辑模板](we-retail-editable-templates.md)
+      + [在We.Retail中尝试可编辑的模板](we-retail-editable-templates.md)
       + [在We.Retail中尝试响应式布局](we-retail-responsive-layout.md)
-      + [在We.Retail中尝试全局化网站结构](we-retail-globalized-site-structure.md)
+      + [在We.Retail中尝试全球化网站结构](we-retail-globalized-site-structure.md)
       + [在We.Retail中尝试体验片段](we-retail-experience-fragments.md)
    + [编码提示](coding-tips.md)
-   + [代码陷阱](code-pitfalls.md)
+   + [代码缺陷](code-pitfalls.md)
    + [OSGi包](osgi-bundles.md)
    + [JCR集成](jcr-integration.md)
    + [代码示例](code-samples.md)
-   + [排查查询速度缓慢的问题](troubleshooting-slow-queries.md)
-+ 移动 Web{#mobileweb}
-   + [移动 Web](mobile-web.md)
-   + [创建设备组筛选器](groupfilters.md)
-   + [网页的响应式设计](responsive.md)
+   + [慢速查询疑难解答](troubleshooting-slow-queries.md)
++ 移动Web{#mobileweb}
+   + [移动Web](mobile-web.md)
+   + [创建设备组过滤器](groupfilters.md)
+   + [网页响应式设计](responsive.md)
    + [为移动设备创建站点](mobile.md)
    + [模拟器](emulators.md)
