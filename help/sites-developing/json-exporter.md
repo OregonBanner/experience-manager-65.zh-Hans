@@ -10,10 +10,10 @@ topic-tags: components
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 discoiquuid: 4c7e33ea-f2d3-4d69-b676-aeb50c610d70
 exl-id: 647395c0-f392-427d-a998-e9ddf722b9f9
-source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
+source-git-commit: 4fa868f3ae4778d3a637e90b91f7c5909fe5f8aa
 workflow-type: tm+mt
-source-wordcount: '441'
-ht-degree: 33%
+source-wordcount: '444'
+ht-degree: 35%
 
 ---
 
@@ -27,45 +27,45 @@ AEM 内容服务旨在概括 AEM 中/来自 AEM 的内容的描述和投放，�
 * 本机移动设备应用程序
 * AEM 外部的其他渠道和接触点
 
-对于使用结构化内容的内容片段，您可以通过使用JSON导出程序以JSON数据模型格式交付AEM页面的内容来提供内容服务。 然后，这可以由您自己的应用程序使用。
+对于使用结构化内容的内容片段，您可以使用JSON导出程序以JSON数据模型格式交付任何AEM页面的内容，从而提供内容服务。 然后，您自己的应用程序可以使用此方法。
 
 >[!NOTE]
 >
->此处描述的功能适用于以下时间以来的所有核心组件： [核心组件1.1.0版](https://docs.adobe.com/content/docs/en/core-components/v1.html).
+>此处描述的功能适用于以下所有核心组件： [核心组件版本1.1.0](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans).
 
 ## 包含内容片段核心组件的JSON导出程序 {#json-exporter-with-content-fragment-core-components}
 
-使用AEM JSON导出程序，您可以以JSON数据模型格式交付AEM页面的内容。 然后，这可以由您自己的应用程序使用。
+使用AEM JSON导出程序，您可以以JSON数据模型格式交付任何AEM页面的内容。 然后，您自己的应用程序可以使用此方法。
 
 在AEM中，使用选择器实现投放 `model` 和 `.json` 扩展。
 
 `.model.json`
 
-1. 例如，URL，例如：
+1. 例如，URL，如：
 
    ```shell
    http://localhost:4502/content/we-retail/language-masters/en.model.json
    ```
 
-1. 将投放内容，例如：
+1. 提供以下内容：
 
    ![chlimage_1-192](assets/chlimage_1-192.png)
 
-或者，您可以通过专门定向结构化内容片段来投放其内容。
+您也可以通过专门定位结构化内容片段来交付其内容。
 
-这是使用片段的整个路径完成的(通过 `jcr:content`)；例如，后缀为。
+使用片段的整个路径(通过 `jcr:content`);例如，带有后缀（如）。
 
 `.../jcr:content/root/responsivegrid/contentfragment.model.json`
 
-您的页面可以包含单个内容片段或多个各种类型的组件。 您还可以使用列表组件等机制来自动搜索相关内容。
+您的页面可以包含一个内容片段或多种类型的多个组件。 您还可以使用列表组件等机制自动搜索相关内容。
 
-* 例如，URL，例如：
+* 例如，URL，如：
 
    ```shell
    http://localhost:4502/content/we-retail/language-masters/en/manchester-airport/jcr:content/root/responsivegrid/contentfragment.model.json
    ```
 
-* 将投放内容，例如：
+* 提供以下内容：
 
    ![chlimage_1-193](assets/chlimage_1-193.png)
 
@@ -75,7 +75,7 @@ AEM 内容服务旨在概括 AEM 中/来自 AEM 的内容的描述和投放，�
 
    >[!NOTE]
    >
-   >虽然不是标准实施， [支持多个选择器，](json-exporter-components.md#multiple-selectors) 但是 `model` 必须是第一个。
+   >尽管不是标准实施， [支持多个选择器，](json-exporter-components.md#multiple-selectors) 但 `model` 必须是第一个。
 
 ### 更多信息 {#further-information}
 
@@ -87,20 +87,20 @@ AEM 内容服务旨在概括 AEM 中/来自 AEM 的内容的描述和投放，�
 
 * Sling 模型:
 
-   * [Sling模型 — 自130年起将模型类与资源类型相关联](https://sling.apache.org/documentation/bundles/models.html#associating-a-model-class-with-a-resource-type-since-130)
+   * [Sling模型 — 自130年起将模型类与资源类型关联](https://sling.apache.org/documentation/bundles/models.html#associating-a-model-class-with-a-resource-type-since-130)
 
-* 带有JSON的AEM：
+* 包含JSON的AEM:
 
-   * [获取JSON格式的页面信息](/help/sites-developing/pageinfo.md)
+   * [以JSON格式获取页面信息](/help/sites-developing/pageinfo.md)
 
 ## 相关文档 {#related-documentation}
 
 有关更多详细信息，请参阅：
 
-* 此 [资产用户指南中的内容片段主题](https://helpx.adobe.com/experience-manager/6-4/assets/user-guide.html?topic=/experience-manager/6-4/assets/morehelp/content-fragments.ug.js)
+* 的 [Assets用户指南中的内容片段主题](https://experienceleague.adobe.com/docs/experience-manager-64/assets/home.html?lang=en&amp;topic=/experience-manager/6-4/assets/morehelp/content-fragments.ug.js)
 
 * [内容片段模型](/help/assets/content-fragments/content-fragments-models.md)
 * [使用内容片段创作](/help/sites-authoring/content-fragments.md)
 * [为组件启用 JSON 导出](/help/sites-developing/json-exporter-components.md)
 
-* [核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans) 和 [内容片段组件](https://helpx.adobe.com/experience-manager/core-components/using/content-fragment-component.html)
+* [核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans) 和 [内容片段组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/content-fragment-component.html?lang=en)
