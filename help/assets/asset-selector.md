@@ -1,11 +1,11 @@
 ---
 title: 资产选择器
 description: 了解如何使用资产选择器搜索、筛选、浏览和获取Adobe Experience Manager Assets中资产的元数据。 另外，了解如何自定义资产选择器界面。
-contentOwner: AG
+contentOwner: Adobe
 feature: Asset Management,Metadata,Search
 role: User
 exl-id: 4b518ac0-5b8b-4d61-ac31-269aa1f5abe4
-source-git-commit: 4139b42d5cd3d7d1d93863dc07cfafd58c3f64f2
+source-git-commit: 0c6c269e9f0cbdcc0c5e3b925ef09b9923cbb2b3
 workflow-type: tm+mt
 source-wordcount: '490'
 ht-degree: 1%
