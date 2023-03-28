@@ -1,18 +1,18 @@
 ---
 title: 用于内容片段的 AEM GraphQL API
-description: 了解如何在Adobe Experience Manager (AEM)中将内容片段与AEM GraphQL API一起使用来投放Headless内容。
+description: 了解如何将Adobe Experience Manager(AEM)中的内容片段与AEM GraphQL API结合使用来交付无头内容。
 feature: Content Fragments,GraphQL API
 exl-id: beae1f1f-0a76-4186-9e58-9cab8de4236d
-source-git-commit: 42ef4694a3301ae1cd34766ce4c19f4b0e2f2c38
+source-git-commit: f6bf99e58fabcb1fb51d8724e1442784811c47d7
 workflow-type: tm+mt
-source-wordcount: '3695'
+source-wordcount: '3696'
 ht-degree: 91%
 
 ---
 
 # 用于内容片段的 AEM GraphQL API {#graphql-api-for-use-with-content-fragments}
 
-了解如何在Adobe Experience Manager (AEM)中将内容片段与AEM GraphQL API一起使用来投放Headless内容。
+了解如何将Adobe Experience Manager(AEM)中的内容片段与AEM GraphQL API结合使用来交付无头内容。
 
 与内容片段一起使用的 AEM GraphQL API 很大程度上依赖于标准的开源 GraphQL API。
 
@@ -24,7 +24,7 @@ ht-degree: 91%
 
 >[!NOTE]
 >
->GraphQL当前用于Adobe Experience Manager (AEM)中的两个（单独的）场景：
+>GraphQL当前用于Adobe Experience Manager(AEM)的两个（单独）方案：
 >
 >* [AEM Commerce 通过 GraphQL 使用来自 Commerce 平台的数据](/help/commerce/cif/integrating/magento.md)。
 >* AEM 内容片段与 AEM GraphQL API（一种自定义实施，基于标准 GraphQL）配合使用，提供结构化内容用于您的应用程序。
@@ -109,9 +109,10 @@ AEM 提供将查询（两种类型）转换为[](/help/assets/content-fragments/
 * 它们被缓存
 * 它们由AEM集中管理
 
+<!-- is this fully accurate? -->
 >[!NOTE]
 >
->通常“作者”上没有 Dispatcher/CDN，因此在那里使用持久查询没有任何好处；除了测试它们。
+>通常，作者上没有调度程序/CDN，因此在使用保留查询时不会获得任何性能提升；除了测试它们。
 
 不建议使用 POST 请求的 GraphQL 查询，因为它们未缓存，因此在默认实例中，Dispatcher 配置为阻止此类查询。
 
@@ -231,14 +232,14 @@ AEM 全局端点的 GraphQL 的存储库路径为：
 
 ## 针对创作环境和发布环境的用例 {#use-cases-author-publish-environments}
 
-用例可以取决于AEM环境的类型：
+用例取决于AEM环境的类型：
 
 * 发布环境；用于：
    * 查询 JS 应用程序的数据（标准用例）
 
 * 创作环境；用于：
    * 查询用于“内容管理用途”的数据：
-      * AEM中的GraphQL当前为只读API。
+      * AEM中的GraphQL当前是只读API。
       * REST API 可用于 CR(u)D 操作。
 
 ## 权限 {#permission}
@@ -560,10 +561,10 @@ query {
    * 将 `List` 添加到模型名称；例如，`cityList`
    * 请参阅[示例查询 – 关于所有城市的所有信息](#sample-all-information-all-cities)
 
-* 筛选条件 `includeVariations` 包含在 `List` 查询类型。  要在查询结果中检索内容片段变体，请 `includeVariations` 筛选器必须设置为 `true`.
+* 过滤器 `includeVariations` 包含在 `List` 查询类型。  要在查询结果中检索内容片段变量，请 `includeVariations` 筛选器必须设置为 `true`.
 
    >[!CAUTION]
-   >筛选条件 `includeVariations` 不能与系统生成的字段一起使用 `_variation`.
+   >过滤器 `includeVariations` 不能与系统生成的字段一起使用 `_variation`.
 
 * 如果您希望使用逻辑 OR：
    * 使用 ` _logOp: OR`
@@ -598,14 +599,14 @@ query {
          >系统生成的字段 `_variation` 不能与过滤器一起使用 `includeVariations`.
 
          * 请参阅[示例查询 – 具有指定变体的所有城市](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-cities-named-variation)
-      * `_tags` ：用于显示包含标记的内容片段或变量的ID；这是一个数组 `cq:tags` 标识符。
+      * `_tags` :显示包含标记的内容片段或变体的ID;这是 `cq:tags` 标识符。
 
-         * 参见 [示例查询 — 标记为城市分隔符的所有城市的名称](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-names-all-cities-tagged-city-breaks)
-         * 参见 [附加了特定标记的给定模型的内容片段变体示例查询](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-wknd-fragment-variations-given-model-specific-tag)
+         * 请参阅 [示例查询 — 标记为城市中断的所有城市的名称](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-names-all-cities-tagged-city-breaks)
+         * 请参阅 [附加了特定标记的给定模型的内容片段变量查询示例](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-wknd-fragment-variations-given-model-specific-tag)
 
          >[!NOTE]
          >
-         >标记也可以通过列出内容片段的元数据来查询。
+         >还可以通过列出内容片段的元数据来查询标记。
    * 以及操作：
 
       * `_operator`：应用特定运算符；`EQUALS`、`EQUALS_NOT`、`GREATER_EQUAL`、`LOWER`、`CONTAINS`、`STARTS_WITH`
@@ -633,232 +634,7 @@ query {
 
 * 在查询嵌套片段时回退：
 
-   * 如果请求的变体在嵌套片段中不存在，则 **主控** 将返回变量。
-
-<!--
-## Persisted Queries (Caching) {#persisted-queries-caching}
-
-After preparing a query with a POST request, it can be executed with a GET request that can be cached by HTTP caches or a CDN.
-
-This is required as POST queries are usually not cached, and if using GET with the query as a parameter there is a significant risk of the parameter becoming too large for HTTP services and intermediates.
-
-Persisted queries must always use the endpoint related to the [appropriate Sites configuration](#graphql-aem-endpoint); so they can use either, or both:
-
-* The Global configuration and endpoint
-  The query has access to all Content Fragment Models.
-* Specific Sites configuration(s) and endpoint(s)
-  Creating a persisted query for a specific Sites configuration requires a corresponding Sites-configuration-specific endpoint (to provide access to the related Content Fragment Models). 
-  For example, to create a persisted query specifically for the WKND Sites configuration, a corresponding WKND-specific Sites configuration, and a WKND-specific endpoint must be created in advance.
-
->[!NOTE]
->
->See [Enable Content Fragment Functionality in Configuration Browser](/help/assets/content-fragments/content-fragments-configuration-browser.md#enable-content-fragment-functionality-in-configuration-browser) for more details.
->
->The **GraphQL Persistence Queries** need to be enabled, for the appropriate Sites configuration. 
-
-For example, if there is a particular query called `my-query`, which uses a model `my-model` from the Sites configuration `my-conf`:
-
-* You can create a query using the `my-conf` specific endpoint, and then the query will be saved as following: 
-`/conf/my-conf/settings/graphql/persistentQueries/my-query`
-* You can create the same query using `global` endpoint, but then the query will be saved as following:
-`/conf/global/settings/graphql/persistentQueries/my-query`
-
->[!NOTE]
->
->These are two different queries - saved under different paths. 
->
->They just happen to use the same model - but via different endpoints.
-
-
-Here are the steps required to persist a given query:
-
-1. Prepare the query by PUTing it to the new endpoint URL `/graphql/persist.json/<config>/<persisted-label>`.
-
-   For example, create a persisted query:
-
-   ```xml
-   $ curl -X PUT \
-       -H 'authorization: Basic YWRtaW46YWRtaW4=' \
-       -H "Content-Type: application/json" \
-       "http://localhost:4502/graphql/persist.json/wknd/plain-article-query" \
-       -d \
-   '{
-     articleList {
-       items{
-           _path
-           author
-           main {
-               json
-           }
-       }
-     }
-   }'
-   ```
-
-1. At this point, check the response.
-
-   For example, check for success:
-
-     ```xml
-     {
-       "action": "create",
-       "configurationName": "wknd",
-       "name": "plain-article-query",
-       "shortPath": "/wknd/plain-article-query",
-       "path": "/conf/wknd/settings/graphql/persistentQueries/plain-article-query"
-     }
-     ```
-
-1. You can then replay the persisted query by GETing the URL `/graphql/execute.json/<shortPath>`.
-
-   For example, use the persisted query:
-
-   ```xml
-   $ curl -X GET \
-       http://localhost:4502/graphql/execute.json/wknd/plain-article-query
-   ```
-
-1. Update a persisted query by POSTing to an already existing query path.
-
-   For example, use the persisted query:
-
-   ```xml
-   $ curl -X POST \
-       -H 'authorization: Basic YWRtaW46YWRtaW4=' \
-       -H "Content-Type: application/json" \
-       "http://localhost:4502/graphql/persist.json/wknd/plain-article-query" \
-       -d \
-   '{
-     articleList {
-       items{
-           _path
-           author
-           main {
-               json
-           }
-         referencearticle {
-           _path
-         }
-       }
-     }
-   }'
-   ```
-
-1. Create a wrapped plain query.
-
-   For example:
-
-   ```xml
-   $ curl -X PUT \
-       -H 'authorization: Basic YWRtaW46YWRtaW4=' \
-       -H "Content-Type: application/json" \
-       "http://localhost:4502/graphql/persist.json/wknd/plain-article-query-wrapped" \
-       -d \
-   '{ "query": "{articleList { items { _path author main { json } referencearticle { _path } } } }"}'
-   ```
-
-1. Create a wrapped plain query with cache control.
-
-   For example:
-
-   ```xml
-   $ curl -X PUT \
-       -H 'authorization: Basic YWRtaW46YWRtaW4=' \
-       -H "Content-Type: application/json" \
-       "http://localhost:4502/graphql/persist.json/wknd/plain-article-query-max-age" \
-       -d \
-   '{ "query": "{articleList { items { _path author main { json } referencearticle { _path } } } }", "cache-control": { "max-age": 300 }}'
-   ```
-
-1. Create a persisted query with parameters:
-
-   For example:
-
-   ```xml
-   $ curl -X PUT \
-       -H 'authorization: Basic YWRtaW46YWRtaW4=' \
-       -H "Content-Type: application/json" \
-       "http://localhost:4502/graphql/persist.json/wknd/plain-article-query-parameters" \
-       -d \
-   'query GetAsGraphqlModelTestByPath($apath: String!, $withReference: Boolean = true) {
-     articleByPath(_path: $apath) {
-       item {
-         _path
-           author
-           main {
-           plaintext
-           }
-           referencearticle @include(if: $withReference) {
-           _path
-           }
-         }
-       }
-     }'
-   ```
-
-1. Executing a query with parameters.
-
-   For example:
-
-   ```xml
-   $ curl -X POST \
-       -H 'authorization: Basic YWRtaW46YWRtaW4=' \
-       -H "Content-Type: application/json" \
-       "http://localhost:4502/graphql/execute.json/wknd/plain-article-query-parameters;apath=%2fcontent2fdam2fwknd2fen2fmagazine2falaska-adventure2falaskan-adventures;withReference=false"
-
-   $ curl -X GET \
-       "http://localhost:4502/graphql/execute.json/wknd/plain-article-query-parameters;apath=%2fcontent2fdam2fwknd2fen2fmagazine2falaska-adventure2falaskan-adventures;withReference=false"
-   ```
-
-1. To execute the query on publish, the related persist tree need to replicated
-
-   * Using a POST for replication:
-
-     ```xml
-     $curl -X POST   http://localhost:4502/bin/replicate.json \
-       -H 'authorization: Basic YWRtaW46YWRtaW4=' \
-       -F path=/conf/wknd/settings/graphql/persistentQueries/plain-article-query \
-       -F cmd=activate
-     ```
-
-   * Using a package:
-     1. Create a new package definition.
-     1. Include the configuration (for example, `/conf/wknd/settings/graphql/persistentQueries`).
-     1. Build the package.
-     1. Replicate the package.
-
-   * Using replication/distribution tool.
-     1. Go to the Distribution tool.
-     1. Select tree activation for the configuration (for example, `/conf/wknd/settings/graphql/persistentQueries`).
-
-   * Using a workflow (via workflow launcher configuration):
-     1. Define a workflow launcher rule for executing a workflow model that would replicate the configuration on different events (for example, create, modify, amongst others).
-
-1. Once the query configuration is on publish, the same principles apply, just using the publish endpoint.
-
-   >[!NOTE]
-   >
-   >For anonymous access the system assumes that the ACL allows "everyone" to have access to the query configuration.
-   >
-   >If that is not the case it will not be able to execute.
-
-   >[!NOTE]
-   >
-   >Any semicolons (";") in the URLs need to be encoded.
-   >
-   >For example, as in the request to Execute a persisted query:
-   >
-   >```xml
-   >curl -X GET \ "http://localhost:4502/graphql/execute.json/wknd/plain-article-query-parameters%3bapath=%2fcontent2fdam2fwknd2fen2fmagazine2falaska-adventure2falaskan-adventures;withReference=false"
-   >```
-
-## Querying the GraphQL endpoint from an External Website {#query-graphql-endpoint-from-external-website}
-
-To access the GraphQL endpoint from an external website you need to configure the:
-
-* [CORS Filter](#cors-filter)
-* [Referrer Filter](#referrer-filter)
--->
+   * 如果请求的变量在嵌套片段中不存在，则 **主控** 将返回变量。
 
 ### CORS 筛选条件 {#cors-filter}
 
@@ -868,7 +644,7 @@ To access the GraphQL endpoint from an external website you need to configure th
 
 要访问GraphQL端点，必须在客户Git存储库中配置CORS策略。 此操作可通过为所需端点添加相应的 OSGi CORS 配置文件来完成。
 
-此配置必须指定受信任的网站来源 `alloworigin` 或 `alloworiginregexp` 必须授予其访问权限。
+此配置必须指定受信任的网站源 `alloworigin` 或 `alloworiginregexp` 必须授予其访问权限。
 
 例如，要授予对 GraphQL 端点  的访问权限，以及对 `https://my.domain` 的持久查询端点的访问权限，您可以使用：
 
@@ -909,9 +685,9 @@ To access the GraphQL endpoint from an external website you need to configure th
 
 ### 反向链接筛选条件 {#referrer-filter}
 
-除了CORS配置之外，还必须配置反向链接筛选条件以允许从第三方主机进行访问。
+除了CORS配置之外，还必须配置反向链接过滤器，以允许从第三方主机访问。
 
-这是通过添加适当的OSGi反向链接筛选条件配置文件来完成的，该配置文件可以：
+这是通过添加相应的OSGi反向链接过滤器配置文件来完成的，该配置文件：
 
 * 指定了可信的网站主机名；可以为 `allow.hosts` 或 `allow.hosts.regexp`。
 * 授予了对此主机名的访问权限。
@@ -958,18 +734,6 @@ To access the GraphQL endpoint from an external website you need to configure th
 ## 身份验证 {#authentication}
 
 请参阅[对内容片段的远程 AEM GraphQL 查询的身份验证](/help/assets/content-fragments/graphql-authentication-content-fragments.md)。
-
-<!-- to be addressed later -->
-
-<!--
-## Sorting {#sorting}
--->
-
-<!-- to be addressed later -->
-
-<!--
-## Paging {#paging}
--->
 
 ## 常见问题解答 {#faqs}
 
