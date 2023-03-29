@@ -2,7 +2,7 @@
 title: 如何通过 AEM 交付 API 访问您的内容
 description: 在 AEM Headless 开发人员历程的这一部分中，了解如何使用 GraphQL 查询访问内容片段的内容。
 exl-id: 44f85d00-a958-470a-8a6e-e2ae1580525a
-source-git-commit: 62d921df1b03520b53ceefa072530bf0214df30a
+source-git-commit: ad0f0bd8b0c230e002c734adca87da22bfa3a7cd
 workflow-type: tm+mt
 source-wordcount: '1335'
 ht-degree: 96%
@@ -36,7 +36,7 @@ ht-degree: 96%
 
 您需要通过一种方式来定位特定的内容，选择所需内容并将其返回到您的应用程序以供进一步处理。
 
-借助Adobe Experience Manager (AEM)，您可以使用AEM GraphQL API有选择地访问内容片段，以仅返回所需的内容。 这意味着您可以实施结构化内容的 Headless 交付以便在您的应用程序中使用。
+借助Adobe Experience Manager(AEM)，您可以使用AEM GraphQL API有选择地访问内容片段，以仅返回所需的内容。 这意味着您可以实施结构化内容的 Headless 交付以便在您的应用程序中使用。
 
 >[!NOTE]
 >
@@ -242,11 +242,11 @@ It provides features such as syntax-highlighting, auto-complete, auto-suggest, t
 在开始查询您的内容之前，您需要：
 
 * 启用端点
-   * 使用工具 — >资源 — > GraphQL
-   * [启用 GraphQL 端点](/help/assets/content-fragments/graphql-api-content-fragments.md#enabling-graphql-endpoint)
+   * 使用工具 — > Assets -> GraphQL
+   * [启用 GraphQL 端点](/help/sites-developing/headless/graphql-api/graphql-endpoint.md#enabling-graphql-endpoint)
 
 * 访问GraphiQL（如果需要）
-   * [AEM GraphiQL接口](/help/assets/content-fragments/graphql-api-content-fragments.md#graphiql-interface)
+   * [AEM GraphiQL接口](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#graphiql-interface)
 
 ### 示例结构 {#sample-structure}
 
@@ -269,7 +269,7 @@ It provides features such as syntax-highlighting, auto-complete, auto-suggest, t
 
 ### 用于测试查询的位置 {#where-to-test-your-queries}
 
-查询可在 [GraphiQL接口](/help/assets/content-fragments/graphiql-ide.md)，例如：
+查询可以在 [GraphiQL接口](/help/sites-developing/headless/graphql-api/graphiql-ide.md)，例如：
 
 * `http://localhost:4502/aem/graphiql.html`
 
@@ -362,14 +362,14 @@ query {
    * [变量](https://graphql.org/learn/queries/#variables)
    * [GraphQL Java 库](https://graphql.org/code/#java)
 * [GraphiQL](https://graphql.org/learn/serving-over-http/#graphiql)
-* [了解如何将 GraphQL 与 AEM 结合使用](/help/assets/content-fragments/graphql-api-content-fragments.md)
-   * [启用 GraphQL 端点](/help/assets/content-fragments/graphql-api-content-fragments.md#enabling-graphql-endpoint)
-   * [安装 AEM GraphiQL 接口](/help/assets/content-fragments/graphql-api-content-fragments.md#installing-graphiql-interface)
-* [示例内容片段结构](/help/assets/content-fragments/content-fragments-graphql-samples.md#content-fragment-structure-graphql)
-* [了解如何将 GraphQL 与 AEM 结合使用 – 示例内容和查询](/help/assets/content-fragments/content-fragments-graphql-samples.md)
-   * [示例查询 – 一个特定城市片段](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-single-specific-city-fragment)
-   * [元数据的示例查询 – 列出标题为 GB 的奖项的元数据](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-metadata-awards-gb)
-   * [示例查询 – 具有指定变体的所有城市](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-cities-named-variation)
+* [了解如何将 GraphQL 与 AEM 结合使用](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md)
+   * [启用 GraphQL 端点](/help/sites-developing/headless/graphql-api/graphql-endpoint.md#enabling-graphql-endpoint)
+   * [安装 AEM GraphiQL 接口](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#installing-graphiql-interface)
+* [示例内容片段结构](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#content-fragment-structure-graphql)
+* [了解如何将 GraphQL 与 AEM 结合使用 – 示例内容和查询](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md)
+   * [示例查询 – 一个特定城市片段](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-single-specific-city-fragment)
+   * [元数据的示例查询 – 列出标题为 GB 的奖项的元数据](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-metadata-awards-gb)
+   * [示例查询 – 具有指定变体的所有城市](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-cities-named-variation)
 * [在配置浏览器中启用内容片段功能](/help/assets/content-fragments/content-fragments-configuration-browser.md#enable-content-fragment-functionality-in-configuration-browser)
 * [使用内容片段](/help/assets/content-fragments/content-fragments.md)
    * [内容片段模型](/help/assets/content-fragments/content-fragments-models.md)

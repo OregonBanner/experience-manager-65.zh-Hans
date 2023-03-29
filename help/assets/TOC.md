@@ -6,10 +6,10 @@ audience: end-user
 user-guide-title: Assets 指南
 breadcrumb-title: Assets 指南
 user-guide-description: 创建、管理、处理和分发数字资产。
-source-git-commit: 0c6c269e9f0cbdcc0c5e3b925ef09b9923cbb2b3
+source-git-commit: ad0f0bd8b0c230e002c734adca87da22bfa3a7cd
 workflow-type: tm+mt
-source-wordcount: '683'
-ht-degree: 49%
+source-wordcount: '723'
+ht-degree: 46%
 
 ---
 
@@ -96,11 +96,11 @@ ht-degree: 49%
    + [扩展资产编辑器](asseteditorx.md)
    + [[!DNL Assets] HTTP API](mac-api-assets.md)
    + [中的内容片段支持 [!DNL Assets] HTTP API](assets-api-content-fragments.md)
-   + [内容片段的 GraphQL API](content-fragments/graphql-api-content-fragments.md)
-   + [使用 GraphiQL IDE](content-fragments/graphiql-ide.md)
-   + [持久化查询](content-fragments/persisted-queries.md)
-   + [对内容片段的远程 GraphQL 查询的身份验证](content-fragments/graphql-authentication-content-fragments.md)
-   + [带内容片段的 GraphQL API - 示例内容和查询](/help/assets/content-fragments/content-fragments-graphql-samples.md)
+   + [内容片段的 GraphQL API](https://experienceleague.adobe.com/docs/experience-manager-65/developing/headless/delivery-api/graphql-api-content-fragments.html)
+   + [使用 GraphiQL IDE](https://experienceleague.adobe.com/docs/experience-manager-65/developing/headless/delivery-api/graphiql-ide.html)
+   + [持久化查询](https://experienceleague.adobe.com/docs/experience-manager-65/developing/headless/delivery-api/persisted-queries.html)
+   + [对内容片段的远程 GraphQL 查询的身份验证](https://experienceleague.adobe.com/docs/experience-manager-65/developing/headless/delivery-api/graphql-authentication-content-fragments.html)
+   + [带内容片段的 GraphQL API - 示例内容和查询](https://experienceleague.adobe.com/docs/experience-manager-65/developing/headless/delivery-api/content-fragments-graphql-samples.html)
    + [[!DNL Assets] 代理开发](proxy.md)
 + 管理资产 {#administer}
    + [支持的文件格式](assets-formats.md)

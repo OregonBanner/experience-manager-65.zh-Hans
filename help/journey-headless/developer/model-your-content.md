@@ -2,7 +2,7 @@
 title: 如何为您的内容建模
 description: 在 AEM Headless 开发人员历程的这一部分中，了解如何使用内容建模与内容片段模型和内容片段对 AEM Headless 交付进行内容建模。
 exl-id: f75b433f-5a81-4259-a9f5-b58954b87970
-source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+source-git-commit: ad0f0bd8b0c230e002c734adca87da22bfa3a7cd
 workflow-type: tm+mt
 source-wordcount: '1826'
 ht-degree: 99%
@@ -214,7 +214,7 @@ AEM 提供了以下数据类型以供您用来进行内容建模：
 >
 >请参阅“其他资源 – 配置浏览器中的内容片段”
 
-之后，可以创建内容片段模型并定义结构。这可以在“工具” — >“资产” — >“内容片段模型”下完成。 例如：
+之后，可以创建内容片段模型并定义结构。这可以在工具 — >资产 — >内容片段模型下完成。 例如：
 
 ![内容片段模型](assets/cfm-model.png)
 
@@ -275,6 +275,6 @@ tbc...
    * [内容片段模型](/help/assets/content-fragments/content-fragments-models.md) – 创建和编辑内容片段模型
    * [管理内容片段](/help/assets/content-fragments/content-fragments-managing.md) – 创建和创作内容片段；此页面将您转至其他详细部分
 * [AEM GraphQL 架构](access-your-content.md) – GraphQL 如何实施模型
-* [示例内容片段结构](/help/assets/content-fragments/content-fragments-graphql-samples.md#content-fragment-structure-graphql)
+* [示例内容片段结构](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#content-fragment-structure-graphql)
 * [AEM Headless 快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html) – 一个简短的视频教程系列，概述了如何使用 AEM 的 Headless 功能，包括内容建模和 GraphQL
    * [GraphQL 建模基础知识](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/video-series/modeling-basics.html?lang=zh-Hans) – 了解如何在 Adobe Experience Manager (AEM) 中定义和使用内容片段，以便与 GraphQL 一起使用。

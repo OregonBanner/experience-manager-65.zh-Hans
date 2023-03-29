@@ -8,10 +8,10 @@ breadcrumb-title: 开发指南
 user-guide-description: 本指南介绍如何构建 AEM 实例。
 feature: Developing
 role: Developer
-source-git-commit: c5bc743f845281bdbad522053c0e57791921ffd2
+source-git-commit: ad0f0bd8b0c230e002c734adca87da22bfa3a7cd
 workflow-type: tm+mt
-source-wordcount: '1317'
-ht-degree: 36%
+source-wordcount: '1285'
+ht-degree: 37%
 
 ---
 
@@ -138,11 +138,12 @@ ht-degree: 36%
    + 投放 API{#delivery-api}
       + [资产 HTTP API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/mac-api-assets.html)
       + [内容片段 REST API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/assets-api-content-fragments.html)
-      + [内容片段 GraphQL API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/graphql-api-content-fragments.html)
-      + [使用 GraphiQL IDE](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/graphiql-ide.html)
-      + [持久化查询](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/persisted-queries.html)
-      + [对内容片段的远程 AEM GraphQL 查询的身份验证](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/graphql-authentication-content-fragments.html)
-      + [带内容片段的 AEM GraphQL API - 示例内容和查询](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/content-fragments-graphql-samples.html)
+      + [内容片段 GraphQL API](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md)
+      + [管理GraphQL端点](/help/sites-developing/headless/graphql-api/graphql-endpoint.md)
+      + [使用 GraphiQL IDE](/help/sites-developing/headless/graphql-api/graphiql-ide.md)
+      + [持久化查询](/help/sites-developing/headless/graphql-api/persisted-queries.md)
+      + [对内容片段的远程 AEM GraphQL 查询的身份验证](/help/sites-developing/headless/graphql-api/graphql-authentication-content-fragments.md)
+      + [带内容片段的 AEM GraphQL API - 示例内容和查询](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md)
 + 混合和SPA AEM开发{#spas}
    + [使用 AEM 的混合和 SPA](https://business.adobe.com/content/dam/dx/us/en/products/experience-manager/sites/headless-content-management-system/pdfs/aem-hybrid-architecture-wp-1-18-19.pdf)
    + [SPA 简介和演练](spa-walkthrough.md)

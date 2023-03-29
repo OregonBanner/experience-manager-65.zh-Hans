@@ -1,19 +1,19 @@
 ---
 title: 使用内容片段
-description: 了解Adobe Experience Manager (AEM)中的内容片段如何允许您设计、创建、策划和使用独立于页面的内容，非常适用于Headless投放。
+description: 了解Adobe Experience Manager(AEM)中的内容片段如何允许您设计、创建、策划和使用独立于页面的内容，非常适合无头交付。
 feature: Content Fragments
 role: User
 exl-id: 0ee883c5-0cea-46b7-a759-600b8ea3bc3e
-source-git-commit: b5cf18d8e83786a23005aadf8aafe43d006a2e67
+source-git-commit: ad0f0bd8b0c230e002c734adca87da22bfa3a7cd
 workflow-type: tm+mt
 source-wordcount: '1989'
-ht-degree: 93%
+ht-degree: 92%
 
 ---
 
 # 使用内容片段 {#working-with-content-fragments}
 
-借助Adobe Experience Manager (AEM)，内容片段允许您设计、创建、管理和 [发布独立于页面的内容](/help/sites-authoring/content-fragments.md) 利用这些功能，可准备内容以准备在多个位置/多个渠道上使用，非常适用于Headless投放。
+通过Adobe Experience Manager(AEM)，内容片段允许您设计、创建、策划和 [发布独立于页面的内容](/help/sites-authoring/content-fragments.md) 利用这些功能，可准备内容以准备在多个位置/多个渠道上使用，非常适合无头投放。
 
 内容片段包含结构化内容：
 
@@ -43,7 +43,7 @@ ht-degree: 93%
 * [Markdown](/help/assets/content-fragments/content-fragments-markdown.md) – 使用片段的 markdown 语法
 * [使用关联内容](/help/assets/content-fragments/content-fragments-assoc-content.md) – 添加关联内容
 * [元数据 – 片段属性](/help/assets/content-fragments/content-fragments-metadata.md) – 查看和编辑片段属性
-* 使用 [内容片段与GraphQL一起交付内容](/help/assets/content-fragments/content-fragments-graphql.md) 以便在您的应用程序中使用。 要帮助您完成此操作，您可以预览 [JSON输出](/help/assets/content-fragments/content-fragments-json-preview.md).
+* 使用 [内容片段与GraphQL一起交付内容](/help/assets/content-fragments/content-fragments-graphql.md) ，以在您的应用程序中使用。 要帮助您完成此操作，您可以预览 [JSON输出](/help/assets/content-fragments/content-fragments-json-preview.md).
 
 >[!NOTE]
 >
@@ -53,7 +53,7 @@ ht-degree: 93%
 >* [自定义和扩展内容片段](/help/sites-developing/customizing-content-fragments.md)
 >* [内容片段配置用于呈现的组件](/help/sites-developing/content-fragments-config-components-rendering.md)
 >* [AEM Assets HTTP API 中的内容片段支持](/help/assets/assets-api-content-fragments.md)
->* [用于内容片段的 AEM GraphQL API](/help/assets/content-fragments/graphql-api-content-fragments.md)
+>* [用于内容片段的 AEM GraphQL API](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md)
 
 
 通信渠道的数量在逐年增加。 通常，渠道称为投放机制，如：
@@ -126,14 +126,14 @@ AEM 内容片段可用于描述和管理结构化内容。 结构化内容在可
 
 * 存储为&#x200B;**资产**：
 
-   * 内容片段（及其变体）可以从以下网站创建和维护 **资产** 控制台。
+   * 可以从 **资产** 控制台。
    * 在内容片段编辑器中创作和编辑。
 
 * 通过内容片段组件](/help/sites-authoring/content-fragments.md)（引用组件）在[页面编辑器中使用：
 
    * **内容片段**&#x200B;组件可供页面作者使用。 它允许他们以 HTML 或 JSON 格式引用和投放所需的内容片段。
 
-* 可使用 [AEM GraphQL API](/help/assets/content-fragments/graphql-api-content-fragments.md)。
+* 可使用 [AEM GraphQL API](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md)。
 
 内容片段是一种内容结构，其中：
 
@@ -269,7 +269,7 @@ AEM 内容片段可用于描述和管理结构化内容。 结构化内容在可
 
 >[!CAUTION]
 >
->中间内容是页面内容。它不会存储在内容片段中。
+>中间内容是页面内容。 它不存储在内容片段中。
 
 ### 片段必需 {#required-by-fragments}
 
