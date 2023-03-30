@@ -19,7 +19,7 @@ ht-degree: 2%
 
 # 创建和管理自适应表单的A/B测试{#create-and-manage-a-b-test-for-adaptive-forms}
 
-|负|[!BADGE 已终止]{type=negative tooltip="此功能现已终止使用"}
+|负|[!BADGE 已终止]{type=negative tooltip="此功能现已终止使用"}|
 <div class="preview"> 自适应表单功能的A/B测试已终止，不再受支持。 </div>
 
 ## 概述 {#overview-br}
