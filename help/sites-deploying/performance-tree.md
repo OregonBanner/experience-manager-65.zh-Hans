@@ -1,8 +1,7 @@
 ---
 title: 性能树
 seo-title: Performance Tree
-description: 了解为解决AEM中的性能问题需要采取的步骤。
-seo-description: Learn about the steps that need to be taken in order to troubleshoot performance issues in AEM.
+description: 了解在AEM中对性能问题进行故障诊断时需要采取的步骤。
 uuid: ab0624f7-6b39-4255-89e0-54c74b54cd98
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,10 +9,10 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: 5febbb1e-795c-49cd-a8f4-c6b4b540673d
 exl-id: f2f968b8-b21c-487d-bc0d-ed60903bc4bf
-source-git-commit: 30327950779337ce869b6ca376120bc09826be21
+source-git-commit: e147605ff4d5c3d2403632285956559db235c084
 workflow-type: tm+mt
-source-wordcount: '1200'
-ht-degree: 5%
+source-wordcount: '1198'
+ht-degree: 8%
 
 ---
 
@@ -21,7 +20,7 @@ ht-degree: 5%
 
 ## 范围 {#scope}
 
-下图旨在为解决性能问题需要采取的步骤提供指导。 它分为5个部分，以便于阅读。
+下图旨在提供对性能问题进行故障诊断的步骤指导。 它分为五个部分，以便于阅读。
 
 图中的每个步骤都会链接到文档资源或推荐。
 
@@ -29,7 +28,7 @@ ht-degree: 5%
 
 假定在给定页面(AEM控制台或网页)上观察到性能问题，并且可以一致重现。 在开始调查之前，必须具备测试或监控性能的方法。
 
-分析从步骤0开始。 目标是确定哪个实体(调度程序、外部主机或AEM)负责性能问题，然后确定应调查哪个区域（服务器或网络）。
+分析从步骤0开始。 目标是确定哪个实体(调度程序、外部主机或AEM)负责性能问题，然后确定应调查的区域（服务器或网络）。
 
 ### 章节 1 {#section}
 
@@ -63,12 +62,12 @@ ht-degree: 5%
   <tr>
    <td><strong>步骤 0</strong></td>
    <td>分析请求流</td>
-   <td><p>您可以在浏览器中使用标准HTTP请求分析来分析请求流。 有关如何在Chrome上执行此操作的更多信息，请参阅：<br /> </p> <p><a href="https://developers.google.com/web/tools/chrome-devtools/profile/network-performance/resource-loading">https://developers.google.com/web/tools/chrome-devtools/profile/network-performance/resource-loading</a><a href="https://developers.google.com/web/tools/chrome-devtools/profile/network-performance/understanding-resource-timing"><br /> https://developers.google.com/web/tools/chrome-devtools/profile/network-performance/understanding-resource-timing</a><br /> </p> </td>
+   <td><p>您可以在浏览器中使用标准HTTP请求分析来分析请求流。 有关如何在Chrome上进行此分析的更多信息，请参阅：<br /> </p> <p><a href="https://developers.google.com/web/tools/chrome-devtools/profile/network-performance/resource-loading">https://developer.chrome.com/docs/devtools/</a><a href="https://developers.google.com/web/tools/chrome-devtools/profile/network-performance/understanding-resource-timing"><br /> https://developer.chrome.com/docs/devtools/</a><br /> </p> </td>
   </tr>
   <tr>
    <td><strong>步骤 2</strong></td>
    <td>请求是否来自外部主机？</td>
-   <td>您可以在浏览器中使用标准HTTP请求分析来分析请求流。 请参阅上述链接，了解如何在Chrome上执行此操作。<br /> </td>
+   <td>您可以在浏览器中使用标准HTTP请求分析来分析请求流。 有关如何在Chrome上进行此分析，请参阅上述链接。<br /> </td>
   </tr>
   <tr>
    <td><strong>步骤 3</strong></td>
@@ -78,12 +77,12 @@ ht-degree: 5%
   <tr>
    <td><strong>步骤 4</strong></td>
    <td>是来自Dispatcher的请求吗？</td>
-   <td><p>检查 <a href="https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#debugging">Dispatcher调试文档</a> 以查看请求是否缓存正确。<br /> </p> </td>
+   <td><p>要查看请求是否缓存正确，请检查 <a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#debugging">Dispatcher调试文档</a>.<br /> </p> </td>
   </tr>
   <tr>
    <td><strong>步骤 5</strong></td>
    <td>Dispatcher是否尝试通过AEM来验证每个请求？</td>
-   <td>检查调度程序是否发送 <code>HEAD</code> 请求AEM进行身份验证，然后再传递缓存的资源。 您可以通过查找 <code>HEAD</code> AEM中的请求 <code>access.log</code>. 有关更多信息，请参阅 <a href="/help/sites-deploying/configure-logging.md">记录</a>.<br /> </td>
+   <td>检查Dispatcher是否发送 <code>HEAD</code> 请求AEM进行身份验证，然后再传递缓存的资源。 查找 <code>HEAD</code> AEM中的请求 <code>access.log</code>. 有关更多信息，请参阅 <a href="/help/sites-deploying/configure-logging.md">记录</a>.<br /> </td>
   </tr>
   <tr>
    <td><strong>步骤 6</strong></td>
@@ -98,7 +97,7 @@ ht-degree: 5%
   <tr>
    <td><strong>步骤 8</strong></td>
    <td>速度慢能否在本地实例中重现？</td>
-   <td><br /> <p>使用 <a href="/help/sites-developing/tough-day.md">艰难的一天</a> 从生产实例中复制“真实世界”条件。 如果这对于您的开发解决方案不现实，请确保在其他网络上下文中测试生产实例（或相同的暂存实例）。<br /> </p> </td>
+   <td><br /> <p>使用 <a href="/help/sites-developing/tough-day.md">艰难的一天</a> 从生产实例中复制“真实世界”条件。 如果此方案对于开发空间不现实，请确保在其他网络上下文中测试生产实例（或相同的暂存实例）。<br /> </p> </td>
   </tr>
   <tr>
    <td><strong>步骤 9</strong></td>
@@ -108,7 +107,7 @@ ht-degree: 5%
   <tr>
    <td><strong>步骤10和29</strong></td>
    <td>调查网络层</td>
-   <td><p>调查网络层的饱和和延迟问题。</p> <p>对于创作层，建议延迟不要超过100毫秒。</p> <p>有关性能优化提示的更多信息，请参阅 <a href="https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html">本页</a>.</p> </td>
+   <td><p>调查网络层的饱和和延迟问题。</p> <p>对于创作层，建议延迟不要超过100毫秒。</p> <p>有关性能优化提示的更多信息，请参阅 <a href="https://helpx.adobe.com/customer-care-office-hours/aem/6x-performance-tuning-best-practices.html">本页</a>.</p> </td>
   </tr>
   <tr>
    <td><strong>步骤 11</strong></td>
@@ -153,7 +152,7 @@ ht-degree: 5%
   <tr>
    <td><strong>步骤 19</strong></td>
    <td>100% CPU</td>
-   <td><a href="/help/sites-deploying/monitoring-and-maintaining.md#monitoring-performance">https://helpx.adobe.com/experience-manager/6-3/sites-deploying/monitoring-and-maintaining.html#MonitoringPerformance</a></td>
+   <td><a href="/help/sites-deploying/monitoring-and-maintaining.md#monitoring-performance">https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hans</a></td>
   </tr>
   <tr>
    <td><strong>步骤 20</strong></td>
@@ -162,7 +161,7 @@ ht-degree: 5%
     <ol>
      <li><a href="/help/sites-deploying/monitoring-and-maintaining.md#out-of-memory">内存不足</a></li>
      <li><a href="/help/sites-deploying/troubleshooting.md">我的应用程序引发内存不足错误</a></li>
-     <li><a href="https://helpx.adobe.com/experience-manager/kb/AnalyzeMemoryProblems.html">在Helpx上分析内存问题。</a><br /> </li>
+     <li><a href="https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17482.html?lang=zh-Hans">分析内存问题。</a><br /> </li>
     </ol> </td>
   </tr>
   <tr>
@@ -185,7 +184,7 @@ ht-degree: 5%
    <td>存储库优化</td>
    <td>
     <ul>
-     <li><a href="https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html">性能调整提示</a></li>
+     <li><a href="https://helpx.adobe.com/customer-care-office-hours/aem/6x-performance-tuning-best-practices.html">性能调整提示</a></li>
      <li><a href="/help/sites-deploying/configuring-performance.md#configuring-for-performance">性能配置</a></li>
      <li><a href="https://www.slideshare.net/jukka/repository-performance-tuning">存储库性能优化</a></li>
     </ul> </td>
@@ -204,7 +203,7 @@ ht-degree: 5%
   <tr>
    <td><strong>步骤 26</strong></td>
    <td>MSM基础架构</td>
-   <td><p><a href="/help/sites-administering/msm-best-practices.md">多站点管理器最佳实践</a><br /> </p> </td>
+   <td><p><a href="/help/sites-administering/msm-best-practices.md">Multisite Manager最佳实践</a><br /> </p> </td>
   </tr>
   <tr>
    <td><strong>步骤 27</strong></td>
@@ -213,7 +212,7 @@ ht-degree: 5%
     <ol>
      <li><a href="/help/sites-deploying/configuring-performance.md#cq-dam-asset-synchronization-service">资产同步服务</a></li>
      <li><a href="/help/sites-deploying/configuring-performance.md#multiple-dam-instances">多个DAM实例</a></li>
-     <li>性能调整提示文章 <a href="https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html">此处</a> 和 <a href="https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html">此处</a>.<br /> </li>
+     <li>性能调整提示文章 <a href="https://helpx.adobe.com/customer-care-office-hours/aem/6x-performance-tuning-best-practices.html">此处</a> 和 <a href="https://helpx.adobe.com/customer-care-office-hours/aem/6x-performance-tuning-best-practices.html">此处</a>.<br /> </li>
     </ol> </td>
   </tr>
   <tr>
@@ -223,27 +222,27 @@ ht-degree: 5%
   </tr>
   <tr>
    <td><strong>步骤 30</strong></td>
-   <td>更近一些Dispatcher（每个“区域”添加一个？）</td>
+   <td>使Dispatcher更靠近一些（每个“区域”添加一个？）</td>
    <td> </td>
   </tr>
   <tr>
    <td><strong>步骤 31</strong></td>
-   <td>在调度程序之前使用CDN</td>
-   <td><a href="https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html#using-dispatcher-with-a-cdn">将 Dispatcher 与 CDN 结合使用</a><br /> </td>
+   <td>在Dispatcher之前使用CDN</td>
+   <td><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hans#using-dispatcher-with-a-cdn">将 Dispatcher 与 CDN 结合使用</a><br /> </td>
   </tr>
   <tr>
    <td><strong>步骤 32</strong></td>
-   <td>在调度程序级别使用会话管理来卸载AEM服务器</td>
-   <td><p><a href="https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#enabling-secure-sessions-sessionmanagement">启用安全会话</a></p> </td>
+   <td>要卸载AEM服务器，请在Dispatcher级别使用会话管理</td>
+   <td><p><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#enabling-secure-sessions-sessionmanagement">启用安全会话</a></p> </td>
   </tr>
   <tr>
    <td><strong>步骤 33</strong></td>
    <td>使请求可缓存</td>
    <td>
     <ol>
-     <li><a href="https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html">常规Dispatcher配置</a></li>
-     <li><a href="https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#configuring-the-dispatcher-cache-cache">配置调度程序缓存</a></li>
-    </ol> <p>如何提高缓存率；使请求可缓存（Dispatcher最佳实践）</p> <p>此外，还请考虑以下设置以优化缓存配置<br /> </p>
+     <li><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hans">常规Dispatcher配置</a></li>
+     <li><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#configuring-the-dispatcher-cache-cache">配置调度程序缓存</a></li>
+    </ol> <p>如何提高缓存率；使请求可缓存（Dispatcher最佳实践）</p> <p>此外，请考虑以下设置以优化缓存配置<br /> </p>
     <ol>
      <li>为非GET的HTTP请求设置无缓存规则</li>
      <li>将查询字符串配置为不可缓存</li>
@@ -254,20 +253,20 @@ ht-degree: 5%
   <tr>
    <td><strong>步骤 34</strong></td>
    <td>升级Dispatcher版本</td>
-   <td><p>您可以在此位置下载最新的Dispatcher版本：</p> <p><a href="https://helpx.adobe.com/experience-manager/dispatcher/release-notes.html">关注链接</a></p> </td>
+   <td><p>您可以在此位置下载最新的Dispatcher版本：</p> <p><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/release-notes.html?lang=en">关注链接</a></p> </td>
   </tr>
   <tr>
    <td><strong>步骤 35</strong></td>
-   <td>配置Dispatcher</td>
-   <td><a href="https://helpx.adobe.com/cn/experience-manager/dispatcher/using/dispatcher-configuration.html">配置Dispatcher</a><br /> </td>
+   <td>配置 Dispatcher</td>
+   <td><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hans">配置Dispatcher</a><br /> </td>
   </tr>
   <tr>
    <td><strong>步骤 36</strong></td>
    <td>检查缓存失效</td>
    <td><br />
     <ul>
-     <li><a href="https://helpx.adobe.com/experience-manager/dispatcher/using/page-invalidate.html#invalidating-dispatcher-cache-from-the-authoring-environment">创作层的缓存失效；</a></li>
-     <li><a href="https://helpx.adobe.com/experience-manager/dispatcher/using/page-invalidate.html#invalidating-dispatcher-cache-from-a-publishing-instance">发布层的缓存失效。</a></li>
+     <li><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html?lang=en#invalidating-dispatcher-cache-from-the-authoring-environment">创作层的缓存失效；</a></li>
+     <li><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html?lang=en#invalidating-dispatcher-cache-from-a-publishing-instance">发布层的缓存失效。</a></li>
     </ul> </td>
   </tr>
   <tr>
@@ -278,7 +277,7 @@ ht-degree: 5%
   <tr>
    <td><strong>步骤 39</strong></td>
    <td>使用预连接以减少连接开销</td>
-   <td>见上面所示的创业板会议。 此外，W3c上的其他预连接文档：<a href="https://www.w3.org/TR/resource-hints/#dfn-preconnect"> https://www.w3.org/TR/resource-hints/#dfn-preconnect</a></td>
+   <td>请参见上文的Gem会议。 此外，W3c上的其他预连接文档：<a href="https://html.spec.whatwg.org/#linkTypes"> https://html.spec.whatwg.org/#linkTypes</a></td>
   </tr>
   <tr>
    <td><strong>步骤40和41</strong><br /> </td>
@@ -298,7 +297,7 @@ ht-degree: 5%
   <tr>
    <td><strong>步骤42和43</strong></td>
    <td>保持活动状态</td>
-   <td><p>是 <code>Keep-Alive</code> 标头是否存在于重复使用连接的不同请求中？ 否则，这意味着每个请求都会导致另一个连接建立，这会产生不必要的开销。 （浏览器中的标准HTTP请求分析）</p> <p>您可以检查 <a href="/help/sites-administering/proxy-jar.md">代理服务器工具</a> 来检查“保持活动”连接。<br /> </p> </td>
+   <td><p>是 <code>Keep-Alive</code> 在重复使用连接的不同请求中存在标头吗？ 否则，这意味着每个请求都会导致另一个连接建立，这会产生不必要的开销。 （浏览器中的标准HTTP请求分析）</p> <p>您可以检查 <a href="/help/sites-administering/proxy-jar.md">代理服务器工具</a> 来检查“保持活动”连接。<br /> </p> </td>
   </tr>
   <tr>
    <td><strong>步骤 44</strong></td>
@@ -310,7 +309,7 @@ ht-degree: 5%
    <td>减少请求数</td>
    <td>
     <ol>
-     <li>连接资源（图像、CSS Sprite、JSON等）<br /> </li>
+     <li>连接资源（图像、CSS Sprite、JSON）<br /> </li>
      <li>Clientlibs嵌入：
       <ol>
        <li><a href="/help/sites-developing/clientlibs.md#creating-client-library-folders">创建客户端库文件夹</a>  — 请参阅使用嵌入最小化请求的标题</li>
