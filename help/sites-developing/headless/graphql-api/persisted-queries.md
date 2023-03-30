@@ -1,7 +1,7 @@
 ---
 title: 持久 GraphQL 查询
 description: 了解如何在 Adobe Experience Manager 中使用持久 GraphQL 查询优化性能。客户端应用程序可以使用HTTPGET方法来请求持久化查询，并且响应可以缓存在Dispatcher和CDN层，从而最终提高客户端应用程序的性能。
-source-git-commit: d87b226d846c6d144e8dfe0b06ec4c296edcad05
+source-git-commit: f4a3b7edc9187c1984afedb4e3b4c558354a4d84
 workflow-type: tm+mt
 source-wordcount: '1428'
 ht-degree: 73%
@@ -271,6 +271,8 @@ query getAdventuresByActivity($activity: String!) {
 | CDN | `s-maxage` | `surrogate-control : max-age` | `surrogateControlMaxAge` |
 | CDN | `stale-while-revalidate` | `surrogate-control : stale-while-revalidate ` | `surrogateControlStaleWhileRevalidate` |
 | CDN | `stale-if-error` | `surrogate-control : stale-if-error` | `surrogateControlStaleIfError` |
+
+{style="table-layout:auto"}
 
 ### 创作实例 {#author-instances}
 
