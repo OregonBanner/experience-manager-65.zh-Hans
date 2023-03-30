@@ -10,10 +10,10 @@ topic-tags: development-tools
 content-type: reference
 discoiquuid: a2ae76a8-50b0-4e43-b791-ad3be25b8582
 exl-id: 00473769-c447-4966-a71e-117c669e0151
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 71842228dd3cb1ce3b79728912e8333d25fccefc
 workflow-type: tm+mt
-source-wordcount: '808'
-ht-degree: 3%
+source-wordcount: '779'
+ht-degree: 4%
 
 ---
 
@@ -23,70 +23,70 @@ ht-degree: 3%
 
 ## 概述 {#overview}
 
-AEM Developer Tools for Eclipse是一个基于 [适用于Apache Sling的Eclipse插件](https://sling.apache.org/documentation/development/ide-tooling.html) 根据Apache许可证2发布。
+“AEM Developer Tools”是一个基于 [适用于Apache Sling的Eclipse插件](https://sling.apache.org/documentation/development/ide-tooling.html) 已根据Apache许可证2发布。
 
-它提供了几项使AEM开发更轻松的功能：
+它提供了以下几项功能，可简化AEM开发：
 
 * 通过Eclipse Server Connector与AEM实例无缝集成。
-* 内容和OSGI捆绑包的同步。
-* 使用代码热交换功能调试支持。
-* 通过特定项目创建向导简单引导AEM项目。
+* 内容和OSGI包的同步。
+* 具有代码热交换功能的调试支持。
+* 通过特定的项目创建向导对AEM项目进行简单Bootstrap。
 * 轻松编辑JCR属性。
 
 ## 要求 {#requirements}
 
-在使用AEM Developer Tools之前，您需要：
+在使用AEM开发人员工具之前，请执行以下操作：
 
-* 下载并安装 [面向Java EE开发人员的Eclipse IDE](https://eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/lunar). AEM开发人员工具当前支持Eclipse Kepler或更高版本
+* 下载并安装 [面向Java™ EE开发人员的Eclipse IDE](https://www.eclipse.org/downloads/packages/release/luna/r/eclipse-ide-java-ee-developers). AEM开发人员工具当前支持Eclipse Kepler或更高版本
 
 * 可与AEM版本5.6.1或更高版本一起使用
-* 通过编辑您的Eclipse安装，确保您至少有1 GB的栈内存。 `eclipse.ini` 配置文件，如 [Eclipse常见问题解答](https://wiki.eclipse.org/FAQ_How_do_I_increase_the_heap_size_available_to_Eclipse%3F).
+* 配置Eclipse安装，以通过编辑 `eclipse.ini` 配置文件，如 [Eclipse常见问题解答](https://wiki.eclipse.org/FAQ_How_do_I_increase_the_heap_size_available_to_Eclipse%3F).
 
 >[!NOTE]
 >
->在macOS上，您需要右键单击 **Eclipse.app** 然后选择 **显示包内容** 以查找您的 `eclipse.ini`**.**
+>在macOS上，右键单击 **Eclipse.app**，然后选择 **显示包内容** 查找 `eclipse.ini`.
 
-## 如何安装适用于Eclipse的AEM开发人员工具 {#how-to-install-the-aem-developer-tools-for-eclipse}
+## 如何安装AEM Developer Tools for Eclipse {#how-to-install-the-aem-developer-tools-for-eclipse}
 
-一旦您满足了 [要求](#requirements) 如上所示，您可以安装插件：
+完成 [要求](#requirements) 在上面，您可以按如下方式安装插件：
 
-1. 浏览 [**AEM** 开发人员工具网站](https://eclipse.adobe.com/aem/dev-tools/).
+1. 浏览 **AEM Developer Tools** 网站： `https://eclipse.adobe.com/aem/dev-tools/`.
 
 1. 复制 **安装链接**.
 
-   请注意，您也可以下载归档文件，而不是使用安装链接。 这允许脱机安装，但您将无法通过此方式发送自动更新通知。
+   或者，您也可以下载存档，而不是使用安装链接。 这样做会允许离线安装，但您会错过自动更新通知。
 
 1. 在Eclipse中，打开 **帮助** 菜单。
 1. 单击 **安装新软件**.
 1. 单击 **添加……**.
-1. In **名称** 键入AEM Developer Tools。
-1. In **位置** 复制安装URL
+1. 在 **名称** 键入AEM Developer Tools。
+1. 在 **位置** 复制安装URL。
 1. 单击 **确定**.
-1. 选中两者 **AEM** 和 **Sling** 插件。
+1. 同时检查 **AEM** 和 **Sling** 插件。
 1. 单击&#x200B;**下一步**。
 1. 单击&#x200B;**下一步**。
-1. 接受Lincese协议，然后单击 **完成**.
-1. 单击 **是** 以重新启动Eclipse。
+1. 接受这些临时协议并单击 **完成**.
+1. 单击 **是** 来重新启动Eclipse。
 
 ## 如何导入现有项目 {#how-to-import-existing-projects}
 
 >[!NOTE]
 >
->参见 [如何在Eclipse中使用从AEM下载的捆绑包](https://stackoverflow.com/questions/29699726/how-to-work-with-a-bundle-in-eclipse-when-it-was-downloaded-from-aem/29705407#29705407).
+>请参阅 [从AEM下载Eclipse包时，如何在包中使用](https://stackoverflow.com/questions/29699726/how-to-work-with-a-bundle-in-eclipse-when-it-was-downloaded-from-aem/29705407#29705407).
 
-## AEM视角 {#the-aem-perspective}
+## AEM透视 {#the-aem-perspective}
 
-Eclipse的AEM开发工具附带了一个透视，可让您完全控制AEM项目和实例。
+Eclipse的AEM开发工具附带一个透视图，通过该视图，您可以完全控制AEM项目和实例。
 
 ![chlimage_1-2](assets/chlimage_1-2a.jpeg)
 
 ## 示例多模块项目 {#sample-multi-module-project}
 
-AEM Developer Tools for Eclipse附带了一个示例的多模块项目，可帮助您快速了解Eclipse中的项目设置，并作为几项AEM功能的最佳实践指南。 [了解有关项目原型的更多信息](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype).
+“AEM开发人员工具”包括一个多模块的示例项目，可帮助您快速了解Eclipse中的项目设置。 它还是一些AEM功能的最佳实践指南。 [进一步了解项目原型](https://github.com/adobe/aem-project-archetype).
 
-按照以下步骤创建示例项目：
+要创建示例项目，请完成以下步骤：
 
-1. 在 **文件** > **新** > **项目** 菜单，浏览到 **AEM** 部分并选择 **AEM示例多模块项目**.
+1. 在 **文件** > **新建** > **项目** 菜单，浏览到 **AEM** 选择 **AEM多模块项目示例**.
 
    ![chlimage_1-69](assets/chlimage_1-69a.png)
 
@@ -94,21 +94,21 @@ AEM Developer Tools for Eclipse附带了一个示例的多模块项目，可帮�
 
    >[!NOTE]
    >
-   >此步骤可能需要一些时间，因为m2eclipse需要扫描原型目录。
+   >此步骤可能需要一些时间，因为m2eclipse必须扫描原型目录。
 
    ![chlimage_1-70](assets/chlimage_1-70a.png)
 
-1. 选择 **com.adobe.granite.archetypes ： sample-project-archetype ：（最高数字）** 在菜单中，然后单击 **下一个**.
+1. 选择 **com.adobe.granite.archetypes :sample-project-archetype :（最高数）** ，然后单击 **下一个**.
 
    ![chlimage_1-71](assets/chlimage_1-71a.png)
 
-1. 填写 **名称**， **组ID** 和 **工件ID** 作为示例项目。 您还可以选择设置一些高级属性。
+1. 填写 **名称**, **组ID**，和 **项目ID** ，以查看示例项目。 您还可以选择设置一些高级属性。
 
    ![chlimage_1-72](assets/chlimage_1-72a.png)
 
-1. 然后，您应该配置一个AEM服务器，Eclipse将连接到该服务器。
+1. 现在，配置Eclipse可以连接到的AEM服务器。
 
-   要使用Debugger功能，您需要以调试模式启动AEM — 例如，可以通过在命令行中添加以下内容来实现：
+   要使用调试器功能，请确保在调试模式下启动AEM，可以通过将以下内容添加到命令行中来实现该操作：
 
    ```
        -nofork -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=10123
@@ -116,28 +116,28 @@ AEM Developer Tools for Eclipse附带了一个示例的多模块项目，可帮�
 
    ![chlimage_1-73](assets/chlimage_1-73a.png)
 
-1. 单击 **完成**. 创建项目结构。
+1. 单击 **完成**. 随即会创建项目结构。
 
    >[!NOTE]
    >
-   >在新安装中（更具体地说：从未下载maven依赖项时），您可能会创建项目，但出现错误。 在此情况下，请按照 [解析无效的项目定义](#resolving-invalid-project-definition).
+   >在全新安装中(更具体地说：从未下载maven依赖项时)，您可能会收到创建的项目并出现错误。 在本例中，请按照 [解决无效项目定义](#resolving-invalid-project-definition).
 
 ## 疑难解答 {#troubleshooting}
 
-### 解析无效的项目定义 {#resolving-invalid-project-definition}
+### 解决无效项目定义 {#resolving-invalid-project-definition}
 
-要解决无效的依赖项和项目定义，请按照以下步骤操作：
+要解决无效的依赖项，项目定义将按如下步骤进行：
 
-1. 选择所有创建的项目。
-1. 右键单击。 在菜单中 **Maven** 选择 **更新项目**.
-1. Check **强制更新快照/版本**.
+1. 选择所有已创建的项目。
+1. 右键单击。 在菜单中 **马文**，选择 **更新项目**.
+1. 检查 **强制更新快照/版本**.
 1. 单击&#x200B;**确定**。Eclipse会尝试下载所需的依赖项。
 
 ### 在JSP文件中启用标记库自动完成 {#enabling-tag-library-autocompletion-in-jsp-files}
 
-标记库自动完成功能可开箱即用，前提是将适当的依赖关系添加到项目中。 使用AEM Uber Jar时存在一个已知问题，该问题不包括所需的tld和TagExtraInfo文件。
+标记库自动完成功能开箱即用，因为项目中已添加了适当的依赖关系。 使用AEM Uber Jar时存在一个已知问题，该问题不包括所需的tld和TagExtraInfo文件。
 
-要解决此问题，请确保org.apache.sling.scripting.jsp.taglib工件位于AEM Uber Jar之前的类路径中。 对于Maven项目，请将以下依赖项放在pom.xml中的Uber Jar之前。
+要解决此问题，请确保org.apache.sling.scripting.jsp.taglib对象位于AEM Uber Jar之前的类路径中。 对于Maven项目，请将以下依赖项放在pom.xml中Uber Jar之前。
 
 ```xml
 <dependency>
@@ -147,18 +147,18 @@ AEM Developer Tools for Eclipse附带了一个示例的多模块项目，可帮�
 </dependency>
 ```
 
-确保为AEM的部署添加正确的版本。
+确保为部署AEM添加正确的版本。
 
 ## 更多信息 {#more-information}
 
-适用于Eclipse网站的官方Apache Sling IDE工具为您提供了有用的信息：
+适用于Eclipse网站的官方Apache Sling IDE工具为您提供了以下有用信息：
 
-* 此 [**适用于Eclipse的Apache Sling IDE工具** 用户指南](https://sling.apache.org/documentation/development/ide-tooling.html)，本文档将指导您了解AEM开发工具支持的总体概念、服务器集成和部署功能。
-* 此 [“疑难解答”部分](https://sling.apache.org/documentation/development/ide-tooling.html#troubleshooting).
-* 此 [已知问题列表](https://sling.apache.org/documentation/development/ide-tooling.html#known-issues).
+* 的 [**适用于Eclipse的Apache Sling IDE工具** 用户指南](https://sling.apache.org/documentation/development/ide-tooling.html)，本文档将指导您了解AEM开发工具支持的总体概念、服务器集成和部署功能。
+* 的 [疑难解答部分](https://sling.apache.org/documentation/development/ide-tooling.html#troubleshooting).
+* 的 [已知问题列表](https://sling.apache.org/documentation/development/ide-tooling.html#known-issues).
 
-以下官员 [Eclipse](https://eclipse.org/) 文档可以帮助设置环境：
+以下官员 [Eclipse](https://www.eclipse.org/) 文档可帮助设置您的环境：
 
-* [Eclipse快速入门](https://eclipse.org/users/)
-* [Eclipse Luna帮助系统](https://help.eclipse.org/luna/index.jsp)
+* [Eclipse快速入门](https://www.eclipse.org/getting-started/)
+* [Eclipse Luna帮助系统](https://help.eclipse.org/latest/index.jsp)
 * [Maven集成(m2eclipse)](https://www.eclipse.org/m2e/)

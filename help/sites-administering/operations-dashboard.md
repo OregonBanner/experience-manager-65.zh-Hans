@@ -12,9 +12,9 @@ discoiquuid: b210f5d7-1d68-49ee-ade7-667c6ab11d2b
 docset: aem65
 exl-id: f9a88156-91a2-4c85-9bc9-8f23700c2cbd
 feature: Operations
-source-git-commit: ce6d24e53a27b64a5d0a9db2e4b6672bd77cf9ec
+source-git-commit: 71842228dd3cb1ce3b79728912e8333d25fccefc
 workflow-type: tm+mt
-source-wordcount: '6065'
+source-wordcount: '6053'
 ht-degree: 2%
 
 ---
@@ -138,9 +138,9 @@ A **复合运行状况检查** 是用于聚合多个单独检查中的信息的�
 
 ### 创建复合运行状况检查 {#creating-a-composite-health-check}
 
-复合运行状况检查的作用是聚合多个共享一组通用功能的单独运行状况检查。 例如，安全复合运行状况检查会对执行安全相关验证的所有单独运行状况检查进行分组。 创建复合检查的第一步是添加OSGI配置。 要使其显示在操作功能板中，必须添加新的配置节点，这与我们进行简单检查的方式相同。
+复合运行状况检查的作用是聚合多个共享一组通用功能的单独运行状况检查。 例如，安全复合运行状况检查会对执行安全相关验证的所有单独运行状况检查进行分组。 创建复合检查的第一步是添加OSGI配置。 要使其显示在操作功能板中，必须以与简单检查相同的方式添加新配置节点。
 
-1. 转到OSGI控制台中的Web配置管理器。 您可以通过访问 `https://serveraddress:port/system/console/configMgr`
+1. 转到OSGI控制台中的Web配置管理器。 访问 `https://serveraddress:port/system/console/configMgr`
 1. 搜索名为的条目 **Apache Sling复合运行状况检查**. 在找到该配置后，请注意已有两种配置可用：一个用于系统检查，另一个用于安全检查。
 1. 按配置右侧的“+”按钮以创建配置。 此时会出现一个新窗口，如下所示：
 
@@ -153,7 +153,7 @@ A **复合运行状况检查** 是用于聚合多个单独检查中的信息的�
    * **名称(hc.name):** 复合运行状况检查的名称。 建议使用有意义的名称。
    * **标记(hc.tags):** 此运行状况检查的标记。 如果此复合运行状况检查旨在成为另一个复合运行状况检查的一部分（例如，在运行状况检查层次结构中），请添加此复合所关联的标记。
    * **MBean名称(hc.mbean.name):** 此复合运行状况检查的JMX MBean所指定的Mbean的名称。
-   * **过滤标记(filter.tags):** 特定于复合运行状况检查的属性。 这些是复合应聚合的标记。 复合运行状况检查将其组下的所有运行状况检查聚合到一起，这些检查具有与此复合的任何过滤器标记匹配的任何标记。 例如，具有过滤器标签的复合运行状况检查 **测试** 和 **check**，聚合所有具有以下任何 **测试** 和 **check** 标记属性( `hc.tags`)。
+   * **过滤标记(filter.tags):** 特定于复合运行状况检查的属性。 这些标记由组合聚合。 复合运行状况检查将其组下的所有运行状况检查聚合到一起，这些检查具有与此复合的任何过滤器标记匹配的任何标记。 例如，具有过滤器标签的复合运行状况检查 **测试** 和 **check**，聚合所有具有以下任何 **测试** 和 **check** 标记属性( `hc.tags`)。
 
    >[!NOTE]
    >
@@ -309,11 +309,11 @@ A **复合运行状况检查** 是用于聚合多个单独检查中的信息的�
   </tr>
   <tr>
    <td>代码缓存检查</td>
-   <td><p>这是运行状况检查，用于验证可触发Java 7中存在的CodeCache错误的多个JVM条件：</p>
+   <td><p>运行状况检查，用于验证可触发Java™ 7中存在的CodeCache错误的多个JVM条件：</p>
     <ul>
-     <li>如果实例在启用“代码缓存刷新”的情况下在Java 7中运行，则返回警告</li>
-     <li>如果实例在Java 7中运行，并且保留代码缓存大小小于最小阈值（默认值为90 MB），则返回警告</li>
-    </ul> <p>的 <code>minimum.code.cache.size</code> 阈值是可配置的。 有关该错误的更多信息， <a href="https://bugs.java.com/bugdatabase/view_bug.do?bug_id=8012547">检查此页面</a>.</p> <p>此运行状况检查的MBean为 <a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DcodeCacheHealthCheck%2Ctype%3DHealthCheck" target="_blank">org.apache.sling.healthcheck:name=codeCacheHealthCheck，type=HealthCheck</a>.</p> </td>
+     <li>如果实例在启用“代码缓存刷新”的情况下在Java™ 7中运行，则返回警告</li>
+     <li>如果实例在Java™ 7中运行，并且保留代码缓存大小小于最小阈值（默认值为90 MB），则返回警告</li>
+    </ul> <p>的 <code>minimum.code.cache.size</code> 阈值是可配置的。 有关该错误的更多信息，请参阅 <a href="https://bugs.java.com/bugdatabase/"> 然后搜索错误ID 8012547</a>.</p> <p>此运行状况检查的MBean为 <a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DcodeCacheHealthCheck%2Ctype%3DHealthCheck" target="_blank">org.apache.sling.healthcheck:name=codeCacheHealthCheck，type=HealthCheck</a>.</p> </td>
   </tr>
   <tr>
    <td>资源搜索路径错误</td>
@@ -630,7 +630,7 @@ UI可用于筛选表格中的索引，方法是在屏幕左上角的搜索框中
 
 ## 自定义维护任务 {#custom-maintenance-tasks}
 
-自定义维护任务可以作为OSGi服务实施。 由于维护任务基础架构基于Apache Sling的作业处理，因此维护任务必须实施java接口 ` [org.apache.sling.event.jobs.consumer.JobExecutor](https://sling.apache.org/apidocs/sling7/org/apache/sling/event/jobs/consumer/JobExecutor.html)`. 此外，它必须声明若要作为维护任务检测的多个服务注册属性，如下所示：
+自定义维护任务可以作为OSGi服务实施。 由于维护任务基础架构基于Apache Sling的作业处理，因此维护任务必须实施Java™接口 ` [org.apache.sling.event.jobs.consumer.JobExecutor](https://sling.apache.org/apidocs/sling7/org/apache/sling/event/jobs/consumer/JobExecutor.html)`. 此外，它必须声明若要作为维护任务检测的多个服务注册属性，如下所示：
 
 <table>
  <tbody>
@@ -767,7 +767,7 @@ src/main/java/com/adobe/granite/samples/maintenance/impl/DeleteTempFilesTask.jav
    <td>系统</td>
    <td>
     <ul>
-     <li>操作系统和操作系统版本(例如，Mac OS X)</li>
+     <li>操作系统和操作系统版本(例如，macOS X)</li>
      <li>系统负载平均值，检索自 <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/management/OperatingSystemMXBean.html#getSystemLoadAverage--">OperatingSystemMXBeanusable</a></li>
      <li>磁盘空间（在主目录所在的分区上）</li>
      <li>最大堆数，由 <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/management/MemoryMXBean.html#getHeapMemoryUsage--">MemoryMXBean</a></li>

@@ -2,10 +2,10 @@
 title: 如何使用 Headless 应用程序上线
 description: 在AEM Headless开发人员历程的这一部分中，了解如何实时部署无头应用程序。
 exl-id: ec3356ef-9e60-4151-984d-3ebdab593b96
-source-git-commit: ad0f0bd8b0c230e002c734adca87da22bfa3a7cd
+source-git-commit: 71842228dd3cb1ce3b79728912e8333d25fccefc
 workflow-type: tm+mt
-source-wordcount: '1903'
-ht-degree: 54%
+source-wordcount: '1846'
+ht-degree: 50%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 54%
 
 ## 目标 {#objective}
 
-本文档可帮助您了解AEM无头发布管道以及在使用应用程序之前需要注意的性能注意事项。
+本文档可帮助您了解 AEM Headless 发布管道，以及在通过您的应用程序上线之前必须了解的性能注意事项。
 
 * 了解AEM SDK和所需的开发工具
 * 设置本地开发运行时以在上线之前模拟内容
@@ -33,68 +33,68 @@ ht-degree: 54%
 
 ## AEM SDK {#the-aem-sdk}
 
-AEM SDK 用于构建和部署自定义代码。它是您开发和测试无头应用程序之前所需的主要工具。 它包含以下构件：
+AEM SDK 用于构建和部署自定义代码。它是您在上线之前必须开发和测试无头应用程序的主要工具。 它包含以下构件：
 
 * 快速入门 jar – 可用于设置创作和发布实例的可执行的 jar 文件
 * 调度程序工具 — Dispatcher模块及其对基于Windows和UNIX的系统的依赖项
-* Java API Jar - Java Jar/Maven依赖项，它公开了可用于针对AEM进行开发的所有允许的Java API
-* Javadoc jar - Java API Jar的javadoc
+* Java™ API Jar – Java™ Jar/Maven 依赖项，公开了所有允许的 Java™ API，它们可用于针对 AEM 进行开发
+* Javadoc jar – Java™ API jar 的 javadoc
 
 ## 其他开发工具 {#additional-development-tools}
 
 除了AEM SDK之外，您还需要其他工具，以便在本地开发和测试代码和内容：
 
-* Java
+* Java™
 * Git
 * Apache Maven
 * Node.js 库
 * 您选择的 IDE
 
-由于AEM是一个Java应用程序，因此您需要安装Java和Java SDK才能支持AEMas a Cloud Service的开发。
+由于AEM是Java™应用程序，因此您必须安装Java™和Java™ SDK才能支持AEMas a Cloud Service的开发。
 
-您将使用Git来管理源控件，以及将更改签入到Cloud Manager中，然后将其部署到生产实例。
+Git 可用于管理源代码管理和签入对 Cloud Manager 的更改，然后将它们部署到生产实例。
 
-AEM使用Apache Maven来构建从AEM Maven项目原型生成的项目。 所有主要 IDE 都提供对 Maven 的集成支持。
+AEM 使用 Apache Maven 构建从 AEM Maven 项目原型生成的项目。所有主要 IDE 都提供对 Maven 的集成支持。
 
-Node.js 是一个 JavaScript 运行时环境，用于处理 AEM 项目的 `ui.frontend` 子项目的前端资产。Node.js与npm一起分发，npm是事实上的Node.js包管理器，用于管理JavaScript依赖项。
+Node.js是一个JavaScript运行时环境，用于处理AEM项目的前端资产 `ui.frontend` 子项目。 Node.js与npm一起分发，npm是事实上的Node.js包管理器，用于管理JavaScript依赖项。
 
 ## AEM 系统组件概览 {#components-of-an-aem-system-at-a-glance}
 
-接下来，让我们看一下AEM环境的组成部分。
+接下来，让我们看看 AEM 环境的组成部分。
 
-完整的 AEM 环境由创作、发布和 Dispatcher 构成。这些相同的组件将在本地开发运行时中提供，以便您在上线之前更轻松地预览代码和内容。
+完整的 AEM 环境由创作、发布和 Dispatcher 构成。这些相同的组件在本地开发运行时中可用，以便您在上线前更轻松地预览代码和内容。
 
 * **Author 服务**&#x200B;是内部用户创建、管理和预览内容的地方。
 
-* **Publish 服务**&#x200B;被视为“实时”环境，通常是最终用户与之交互的对象。内容在创作服务上进行编辑和批准后，会分发（复制）到发布服务。 AEM Headless 应用程序最常见的部署模式是将应用程序的生产版本连接到 AEM Publish 服务。
+* **发布服务** 被视为“实时”环境，通常是最终用户与之交互的环境。 内容在创作服务上进行编辑和批准后，会分发（复制）到发布服务。 AEM Headless 应用程序最常见的部署模式是将应用程序的生产版本连接到 AEM Publish 服务。
 
 * **Dispatcher** 是一个通过 AEM Dispatcher 模块增强的静态 Web 服务器。它缓存由发布实例生成的网页以提高性能。
 
 ## 本地开发工作流 {#the-local-development-workflow}
 
-本地开发项目基于 Apache Maven 构建，并使用 Git 进行源代码管理。为了更新项目，开发人员可以使用他们首选的集成开发环境，例如Eclipse、Visual Studio代码或IntelliJ等。
+本地开发项目基于 Apache Maven 构建，并使用 Git 进行源代码管理。要更新项目，开发人员可以使用他们首选的集成开发环境，例如Eclipse、Visual Studio代码或IntelliJ等。
 
-要测试将由您的无头应用程序摄取的代码或内容更新，您需要将更新部署到本地AEM运行时，其中包括AEM创作和发布服务的本地实例。
+要测试由无头应用程序摄取的代码或内容更新，请将更新部署到本地AEM运行时。 这些实例包括AEM创作和发布服务的本地实例。
 
 请务必记下本地 AEM 运行时中每个组件之间的区别，因为在更新最起作用的位置测试更新是非常重要的。例如，在创作实例上测试内容更新或在发布实例上测试新代码。
 
-在生产系统中，调度程序和http Apache服务器将始终位于AEM发布实例之前。 它们为AEM系统提供缓存和安全服务，因此测试针对调度程序的代码和内容更新至关重要。
+在生产系统中，Dispatcher 和 http Apache 服务器将始终位于 AEM 发布实例的前面。它们为 AEM 系统提供缓存和安全服务，因此，针对 Dispatcher 测试代码和内容更新也至为重要。
 
 ## 使用本地开发环境在本地预览您的代码和内容 {#previewing-your-code-and-content-locally-with-the-local-development-environment}
 
-要为启动您的AEM无头项目做好准备，您需要确保项目的所有组成部分都正常运行。
+要为启动做好AEM无头项目准备，请确保项目的所有组成部分都正常运行。
 
-为此，您需要将所有内容整合在一起：代码、内容和配置，并在本地开发环境中测试它，以便进行上线准备。
+为此，您必须将所有内容整合在一起：代码、内容和配置，并在本地开发环境中测试它，以便进行上线准备。
 
-本地开发环境包含三个主要区域：
+地方发展环境主要由三个方面组成：
 
-1. AEM项目 — 其中将包含AEM开发人员将要处理的所有自定义代码、配置和内容
-1. 本地AEM运行时 — AEM创作和发布服务的本地版本，将用于从AEM项目部署代码
+1. AEM项目 — 包含AEM开发人员将要处理的所有自定义代码、配置和内容
+1. 本地 AEM 运行时 – 本地版本的 AEM 创作和发布服务，用于从 AEM 项目部署代码
 1. 本地 Dispatcher 运行时 – 包含 Dispatcher 模块的 Apache httpd Web 服务器的本地版本
 
-在设置本地开发环境后，您可以通过本地部署静态节点服务器来模拟向 React 应用程序提供内容。
+设置本地开发环境后，您可以通过在本地部署静态节点服务器来模拟向React应用程序提供内容的过程。
 
-为了更深入地了解如何设置本地开发环境以及内容预览所需的所有依赖关系，请参阅 [生产部署文档](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/production-deployment.html?lang=en#prerequisites).
+要更深入地了解设置本地开发环境以及内容预览所需的所有依赖关系，请参阅 [生产部署文档](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/overview.html?lang=en).
 
 ## 准备AEM Headless应用程序上线 {#prepare-your-aem-headless-application-for-golive}
 
@@ -108,18 +108,18 @@ Node.js 是一个 JavaScript 运行时环境，用于处理 AEM 项目的 `ui.fr
 
 ### 模型结构与 GraphQL 输出 {#structure-vs-output}
 
-* 避免创建输出超过 15kb JSON（以 gzip 格式压缩）的查询。长 JSON 文件是客户端应用程序要分析的资源密集型文件。
+* 避免创建输出超过15 KB JSON（gzip压缩）的查询。 长 JSON 文件是客户端应用程序要分析的资源密集型文件。
 * 避免超过五个嵌套级别的片段层级。其他级别会使内容作者难以考虑其更改产生的影响。
-* 使用多对象查询而不是在模型中使用依赖项层级对查询进行建模。这将带来更长期的灵活性以便重构 JSON 输出，而无需进行大量内容更改。
+* 使用多对象查询而不是在模型中使用依赖项层级对查询进行建模。这样，在重构JSON输出方面就具有更大的长期灵活性，而无需进行许多内容更改。
 
 ### 最大程度地提高 CDN 缓存命中率 {#maximize-cdn}
 
 * 不要使用直接 GraphQL 查询，除非您从表面请求实时内容。
    * 尽可能使用持久查询。
-   * 提供超过 600 秒的 CDN TTL，以便 CDN 缓存它们。
+   * 提供CDN TTL（超过600秒），以便CDN可以缓存它们。
    * AEM 可以计算模型更改对现有查询的影响。
-* 将 JSON 文件/GraphQL 查询拆分为低内容变化率和高内容变化率，以减少客户端到 CDN 的流量并分配更高的 TTL。这可以最大程度地减少使用源服务器重新验证 JSON 的 CDN。
-* 要主动使来自 CDN 的内容无效，请使用软清除。这样，CDN便可重新下载内容，而不会导致缓存丢失。
+* 在低内容更改率和高内容更改率之间拆分JSON文件/GraphQL查询，以减少客户端到CDN的流量并分配更高的TTL。 这样可最大限度地减少CDN使用源服务器重新验证JSON的情况。
+* 要主动使CDN中的内容失效，请使用软清除。 这样，CDN便可重新下载内容，而不会导致缓存丢失。
 
 >[!NOTE]
 >
@@ -130,7 +130,7 @@ Node.js 是一个 JavaScript 运行时环境，用于处理 AEM 项目的 `ui.fr
 * 确保 HTTP 客户端使用 HTTP/2。
 * 确保 HTTP 客户端接受 gzip 的标头请求。
 * 最大程度地减少用于托管 JSON 的域和引用的构件的数量。
-* 利用 `Last-modified-since` 刷新资源。
+* 使用 `Last-modified-since` 刷新资源。
 * 使用 JSON 文件中的 `_reference` 输出开始下载资产，而无需分析完整的 JSON 文件。
 
 <!-- End of CDN Review -->
@@ -141,13 +141,13 @@ Node.js 是一个 JavaScript 运行时环境，用于处理 AEM 项目的 `ui.fr
 
 ## 使用Maven部署到生产环境 {#deploy-to-production-maven}
 
-对于 *传统* 使用Maven部署（非AMS）时，您可以看到 [WKND教程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/project-setup.html?lang=en#build) ，以查看概述。
+对于 *传统* 使用Maven部署（非AMS），请参阅 [WKND教程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/project-setup.html?lang=en#build) ，以查看概述。
 
 ## 使用Cloud Manager部署到生产环境 {#deploy-to-production-cloud-manager}
 
-如果您是使用Cloud Manager的AMS客户，则在确保所有内容均已测试并正常运行后，您便可以将代码更新推送到 [Cloud Manager中的集中式Git存储库](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/managing-code/setup-cloud-manager-git-integration.html).
+如果您是使用Cloud Manager的AMS客户，则在确保所有内容都经过测试并正常运行后，您可以将代码更新推送到 [Cloud Manager中的集中式Git存储库](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/managing-code/git-integration.html).
 
-在将更新上传到 Cloud Manager 后，可以使用 [Cloud Manager 的 CI/CD 管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/deploying-code.html)将这些更新部署到 AEM 
+将更新上传到Cloud Manager后，请使用将其部署到AEM [Cloud Manager的CI/CD管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-deployment.html).
 
 <!-- Can't find a parallel link -->
 <!--
@@ -156,7 +156,7 @@ You can start deploying your code by leveraging the Cloud Manager CI/CD pipeline
 
 ## 性能监控 {#performance-monitoring}
 
-为了让用户在使用AEM无头应用程序时获得最佳体验，您务必要监控关键性能量度，如下所述：
+要让用户在使用 AEM Headless 应用程序时获得最佳体验，请务必监控关键性能指标，详情如下：
 
 * 验证应用程序的预览版和生产版
 * 验证当前服务可用性状态的 AEM 状态页面
@@ -164,7 +164,7 @@ You can start deploying your code by leveraging the Cloud Manager CI/CD pipeline
    * 交付性能
       * 源服务器 – 调用次数、错误率、CPU 负载、负载流量
    * 创作性能
-      * 检查用户数、请求数和负载
+      * 检查用户、请求和加载的数量
 * 访问特定于应用程序和空间的性能报表
    * 在服务器启动后，检查一般指标是否为绿色/橙色/红色，然后识别具体的应用程序问题
    * 打开上面过滤到应用程序或空间的相同报告（例如，Photoshop 桌面、付费专区）
@@ -180,12 +180,12 @@ You can start deploying your code by leveraging the Cloud Manager CI/CD pipeline
 * 使用应用程序的预览版本验证功能和性能
 * 使用应用程序的生产版本验证功能和性能
 * 使用内容片段编辑器的 JSON 预览版进行验证
-* 检查客户端应用程序中的 JSON，确定是否存在客户端应用程序或交付问题
-* 使用 GraphQL 检查 JSON，确认是否存在与缓存内容或 AEM 相关的问题
+* 要检查是否存在客户端应用程序或交付问题，请检查客户端应用程序中的JSON
+* 要检查是否存在与缓存内容或AEM相关的问题，请使用GraphQL检查JSON
 
 ### 借助支持记录错误 {#logging-a-bug-with-support}
 
-要在需要进一步帮助的情况下借助支持有效记录错误，请执行以下步骤：
+要通过支持部门高效记录错误，如果您需要进一步的帮助，请完成以下步骤：
 
 * 如有必要，可拍摄问题屏幕快照
 * 记录重现问题的方法
@@ -202,15 +202,15 @@ You can start deploying your code by leveraging the Cloud Manager CI/CD pipeline
 * 如何在 AEM 中创建 Headless 内容。
 * 如何在 AEM 中检索和更新 Headless 内容。
 * 如何使用 AEM Headless 项目上线。
-* 上线后怎么办。
+* 上线完成后要执行的操作。
 
-您要么已启动第一个 AEM Headless 项目，要么已具备执行此操作所需的所有知识。做得好！
+您已经启动了您的第一个AEM Headless项目，或者现在已具备执行此操作的所有知识。 做得好！
 
 ### 探究单页应用程序 {#explore-spa}
 
-但 AEM 中的 Headless 存储不需要止步于此。您可能记得 [入门指南部分](getting-started.md#integration-levels) 我们简要讨论了AEM如何不仅支持无头交付和传统的全栈模型，而且还支持结合两者优点的混合模型。
+不过，无需停止AEM中的无头存储。 在 [入门指南部分](getting-started.md#integration-levels)，它讨论了AEM不仅支持无头交付和传统的全栈模型，还支持结合两者优势的混合模型。
 
-如果您的项目需要这种灵活性，请继续进行历程的可选附加部分[如何使用 AEM 创建单页应用程序 (SPA)。](create-spa.md)
+如果您需要这种灵活性来完成项目，请继续进行历程中的可选其他部分， [如何使用AEM创建单页应用程序(SPA)。](create-spa.md)
 
 ## 其他资源 {#additional-resources}
 
@@ -218,7 +218,7 @@ You can start deploying your code by leveraging the Cloud Manager CI/CD pipeline
 
 * [WKND教程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=en)
 
-* [Cloud Manager for AEM](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html?lang=en)
+* [Cloud Manager for AEM](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html?lang=zh-Hans)
 
 * CDN缓存
 
