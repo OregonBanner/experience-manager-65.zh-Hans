@@ -1,7 +1,7 @@
 ---
 title: 为社区配置Dispatcher
 seo-title: Configuring Dispatcher for Communities
-description: 为AEM Communities配置Dispatcher
+description: 为AEM Communities配置调度程序
 seo-description: Configure the dispatcher for AEM Communities
 uuid: c17daca9-3244-4b10-9d4e-2e95df633dd9
 contentOwner: msm-service
@@ -10,10 +10,10 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: 23745dd3-1424-4d22-8456-d2dbd42467f4
 exl-id: fb4e3973-2193-4bb5-8120-bf2f3ec80112
-source-git-commit: b5cf18d8e83786a23005aadf8aafe43d006a2e67
+source-git-commit: 9f9f80eb4cb74b687c7fadd41d0f8ea4ee967865
 workflow-type: tm+mt
-source-wordcount: '668'
-ht-degree: 10%
+source-wordcount: '636'
+ht-degree: 11%
 
 ---
 
@@ -21,29 +21,29 @@ ht-degree: 10%
 
 ## AEM Communities {#aem-communities}
 
-对于AEM Communities，必须配置Dispatcher以确保正常运行 [社区站点](overview.md#community-sites). 当包含社区启用和社交登录等功能时，需要额外的配置。
+对于AEM Communities，需要配置Dispatcher以确保 [社区站点](overview.md#community-sites). 在包含社交登录等功能时，需要额外配置。
 
 了解特定部署和站点设计所需的内容
 
 * 联系[客户关怀团队](https://helpx.adobe.com/cn/marketing-cloud/contact-support.html)
 
-另请参阅主要 [Dispatcher文档](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html).
+另请参阅 [Dispatcher文档](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html).
 
-## Dispatcher缓存 {#dispatcher-caching}
+## 调度程序缓存 {#dispatcher-caching}
 
 ### 概述 {#overview}
 
-AEM Communities的Dispatcher缓存让Dispatcher能够为社区站点的页面提供完全缓存版本。
+AEM Communities的调度程序缓存是指调度程序能够提供社区网站页面的完全缓存版本。
 
-目前，它仅支持匿名网站访客，例如浏览社区网站或因搜索而登陆社区页面的用户，以及索引页面的搜索引擎。 其好处是匿名用户和搜索引擎将体验到更好的性能。
+目前，仅支持匿名网站访客（例如浏览社区网站或因搜索而登陆社区页面的用户）以及为页面编制索引的搜索引擎。 其好处是匿名用户和搜索引擎将体验到改进的性能。
 
-对于已登录的成员，Dispatcher会绕过缓存，将请求直接转发给发布者，以便动态生成并交付所有页面。
+对于已登录的成员，调度程序绕过缓存，直接将请求转发给发布者，以便所有页面都是动态生成和交付的。
 
-当配置为支持Dispatcher缓存时，会向标头添加基于TTL的“最大期限”过期时间，以确保Dispatcher缓存的页面是最新的。
+当配置为支持调度程序缓存时，将在标头中添加基于TTL的“最大页面”过期时间，以确保调度程序缓存的页面是最新的。
 
 ### 要求 {#requirements}
 
-* Dispatcher版本4.1.2或更高版本(请参阅 [安装Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-install.html) （适用于最新版本）
+* Dispatcher版本4.1.2或更高版本(请参阅 [安装Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-install.html) )
 * [ACS AEM Commons包](https://adobe-consulting-services.github.io/acs-aem-commons/)
 
    * 版本3.3.2或更高版本
@@ -51,53 +51,49 @@ AEM Communities的Dispatcher缓存让Dispatcher能够为社区站点的页面提
 
 ### 配置 {#configuration}
 
-OSGi配置 **ACS AEM Commons - Dispatcher缓存控制标头 — Max Age** 设置显示在指定路径下的缓存页面的过期时间。
+OSGi配置 **ACS AEM Commons — 调度程序缓存控制标头 — 最大年龄** 设置在指定路径下显示的缓存页面的过期时间。
 
 * 从 [Web控制台](../../help/sites-deploying/configuring-osgi.md)
 
    * 例如， [http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr)
 
-* 查找 `ACS AEM Commons - Dispatcher Cache Control Header - Max Age`
-* 选择“+”图标以创建新的连接配置
+* 定位 `ACS AEM Commons - Dispatcher Cache Control Header - Max Age`
+* 选择“+”图标以创建新连接配置
 
    ![dispatcher](assets/dispatcher.png)
 
 * **筛选模式**
 
-   *（必需）* 社区页面的一个或多个路径。 例如：`/content/sites/engage/(.*)`。
+   *（必需）* 一个或多个到社区页面的路径。 例如：`/content/sites/engage/(.*)`。
 
-* **Cache-Control Max Age**
+* **Cache-Control Max Age（缓存控制最大年龄）**
 
-   *（必需）* 要添加到“缓存控制”标头的最长时间（以秒为单位）。 该值必须大于零(0)。
+   *（必需）* 要添加到缓存控制标头的最大页面（以秒为单位）。 值必须大于零(0)。
 
-## Dispatcher客户端标头 {#dispatcher-client-headers}
+## 调度程序过滤器 {#dispatcher-filters}
 
-在的/clientheaders部分中 `dispatcher.any`，如果列出了一组特定的标头，则需要包含 `"CSRF-Token"` 为了使 [启用功能](enablement.md) 才能正常工作。
+的/filter部分 `dispatcher.any` 文件记录在 [配置对内容的访问 — /filter](https://helpx.adobe.com/cn/experience-manager/dispatcher/using/dispatcher-configuration.html#filter).
 
-## Dispatcher过滤器 {#dispatcher-filters}
+本节介绍社区功能正常运行可能需要的条目。
 
-的/filter部分 `dispatcher.any` 文件记录于 [配置对内容的访问 — /filter](https://helpx.adobe.com/cn/experience-manager/dispatcher/using/dispatcher-configuration.html#filter).
+过滤器属性名称遵循使用四位数字来指示应用过滤器模式的顺序的惯例。 对一个请求应用了多个筛选模式时，最后一个应用的筛选模式生效。因此，第一过滤模式通常用于拒绝所有内容，使得以下模式用于以受控方式恢复访问。
 
-此部分介绍社区功能正常运行可能需要的条目。
-
-过滤器属性名称遵循使用四位数字指示应用过滤器模式的顺序的约定。 对一个请求应用了多个筛选模式时，最后一个应用的筛选模式生效。因此，第一过滤模式通常用于拒绝所有内容，使得以下模式用于以受控方式恢复访问。
-
-以下示例使用的属性名称可能需要修改，以适应任何特定的dispatcher.any文件。
+以下示例使用的属性名称，该属性名称可能需要进行修改以适合任何特定的dispatcher.any文件。
 
 另请参阅：
 
-* [Dispatcher安全核对清单](https://helpx.adobe.com/cn/experience-manager/dispatcher/using/security-checklist.html)
+* [调度程序安全检查列表](https://helpx.adobe.com/cn/experience-manager/dispatcher/using/security-checklist.html)
 
 >[!NOTE]
 >
 >**属性名称示例**
->显示的所有属性名称，例如 **/0050** 和 **/0170**，应进行调整以适合现有的dispatcher.any配置文件。
+>显示的所有属性名称，如 **/0050** 和 **/0170**，应调整为适合现有dispatcher.any配置文件。
 
 >[!CAUTION]
 >
->请参阅 [Dispatcher 安全检查清单](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/security-checklist.html)以了解使用 Dispatcher 限制访问时的更多注意事项。此外，请阅读 [AEM安全检查列表](https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/security-checklist.html) 了解有关AEM安装的其他安全详细信息。
+>请参阅 [Dispatcher 安全检查清单](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/security-checklist.html)以了解使用 Dispatcher 限制访问时的更多注意事项。此外，请阅读 [AEM安全检查列表](https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/security-checklist.html) 有关AEM安装的其他安全详细信息。
 
-应将以下条目添加到/filter部分的末尾，尤其是在所有拒绝条目之后。
+应将以下条目添加到/filter部分的末尾，特别是所有拒绝条目之后。
 
 <!-- New code wrt CQDOC-16081, changed by Vishabh on 10 Dec 2020.
 -->
@@ -129,16 +125,6 @@ OSGi配置 **ACS AEM Commons - Dispatcher缓存控制标头 — Max Age** 设置
 
 # enable personalization
 /0062 { /type "allow" /url "/libs/cq/personalization/*" }
-
-# for Enablement features
-/0170 { /type "allow" /url "/libs/granite/csrf/token.json*" }
-/0171 { /type "allow" /url "/content/sites/*/resources/en/*" }
-/0172 { /type "allow" /url "/content/communities/enablement/reports/*" }
-/0173 { /type "allow" /url "/content/sites/*" }
-/0174 { /type "allow" /url "/content/communities/scorm/*" }
-/0175 { /type "allow" /url "/content/sites/*" }
-/0176 { /type "allow" /url "/libs/granite/security/userinfo.json"}
-/0177 { /type "allow" /url "/libs/granite/security/currentuser.json" }
 
 # Enable CSRF token otherwise nothings works.
 /5001 { /type "allow" /url "/libs/granite/csrf/token.json *"}
@@ -203,16 +189,6 @@ OSGi配置 **ACS AEM Commons - Dispatcher缓存控制标头 — Max Age** 设置
 # enable personalization
 /0062 { /type "allow" /url "/libs/cq/personalization/*" }
 
-# for Enablement features
-/0170 { /type "allow" /url "/libs/granite/csrf/token.json*" }
-/0171 { /type "allow" /glob "POST /content/sites/*/resources/en/*" }
-/0172 { /type "allow" /glob "GET /content/communities/enablement/reports/*" }
-/0173 { /type "allow" /glob "GET /content/sites/*" }
-/0174 { /type "allow" /glob "GET /content/communities/scorm/*" }
-/0175 { /type "allow" /url "GET /content/sites/*" }
-/0176 { /type "allow" /url "GET /libs/granite/security/userinfo.json"}
-/0177 { /type "allow" /url "GET /libs/granite/security/currentuser.json" }
-
 # Enable CSRF token otherwise nothings works.
 /5001 { /type "allow" /glob "GET /libs/granite/csrf/token.json *"}
 # Allow SCF User Model to bootstrap as it depends on the granite user
@@ -247,9 +223,9 @@ OSGi配置 **ACS AEM Commons - Dispatcher缓存控制标头 — Max Age** 设置
 ```
 -->
 
-## Dispatcher规则 {#dispatcher-rules}
+## 调度程序规则 {#dispatcher-rules}
 
-的规则部分 `dispatcher.any` 根据请求的URL定义应缓存哪些响应。 对于社区，规则部分用于定义绝不应缓存的内容。
+的规则部分 `dispatcher.any` 定义应根据请求的URL缓存哪些响应。 对于社区，使用规则部分定义不应缓存的内容。
 
 <!-- New code wrt CQDOC-16081, changed by Vishabh on 10 Dec 2020.
 -->
@@ -297,13 +273,13 @@ OSGi配置 **ACS AEM Commons - Dispatcher缓存控制标头 — Max Age** 设置
 
 ## 疑难解答 {#troubleshooting}
 
-问题的一个主要原因是插入过滤器规则时没有注意到对以前规则的影响，尤其是在添加拒绝访问的规则时。
+导致问题的一个主要原因是插入过滤器规则时不会注意对早期规则的影响，尤其是在添加规则以拒绝访问时。
 
-第一个过滤器模式通常用于拒绝所有内容，以便以下过滤器以可控方式恢复访问。 如果一个请求应用了多个过滤器，则最后一个应用的过滤器是已生效的过滤器。
+第一个过滤器模式通常用于拒绝所有内容，以便后续过滤器以受控方式恢复访问。 当多个过滤器应用于一个请求时，应用的最后一个过滤器即是生效的过滤器。
 
-## 示例dispatcher.any {#sample-dispatcher-any}
+## Dispatcher.any示例 {#sample-dispatcher-any}
 
-以下是示例 `dispatcher.any` 包含Communities /filters和/rules的文件。
+以下示例 `dispatcher.any` 包含Communities /filters和/rules的文件。
 
 <!-- New code wrt CQDOC-16081, changed by Vishabh on 10 Dec 2020.
 -->
@@ -428,17 +404,7 @@ OSGi配置 **ACS AEM Commons - Dispatcher缓存控制标头 — Max Age** 设置
    /0064 { /type "allow" /url "/etc/cloudservices/*" }
    /0062 { /type "allow" /url "/libs/cq/personalization/*"  }  # enable personalization
 
-   # For Enablement features
-   /0170 { /type "allow" /url "/libs/granite/csrf/token.json*" }
-   /0171 { /type "allow" /url "/content/sites/*/resources/en/*" }
-   /0172 { /type "allow" /url "/content/communities/enablement/reports/*" }
-   /0173 { /type "allow" /url "/content/sites/*" }
-   /0174 { /type "allow" /url "/content/communities/scorm/*" }
-   /0175 { /type "allow" /url "/content/sites/*" }
-   /0176 { /type "allow" /url "/libs/granite/security/userinfo.json"}
-   /0177 { /type "allow" /url "/libs/granite/security/currentuser.json" }
-
-      # Enable CSRF token otherwise nothings works.
+         # Enable CSRF token otherwise nothings works.
    /5001 { /type "allow" /url "/libs/granite/csrf/token.json *"}
 
    # Allow SCF User Model to bootstrap as it depends on the granite user
@@ -750,17 +716,7 @@ OSGi配置 **ACS AEM Commons - Dispatcher缓存控制标头 — Max Age** 设置
    /0063 { /type "allow" /glob "* /system/sling/logout*" }
    /0064 { /type "allow" /glob "GET /etc/cloudservices/*" }
    /0062 { /type "allow" /url "/libs/cq/personalization/*"  }  # enable personalization
-
-   # For Enablement features
-   /0170 { /type "allow" /url "/libs/granite/csrf/token.json*" }
-   /0171 { /type "allow" /glob "POST /content/sites/*/resources/en/*" }
-   /0172 { /type "allow" /glob "GET /content/communities/enablement/reports/*" }
-   /0173 { /type "allow" /glob "GET /content/sites/*" }
-   /0174 { /type "allow" /glob "GET /content/communities/scorm/*" }
-   /0175 { /type "allow" /url "GET /content/sites/*" }
-   /0176 { /type "allow" /url "GET /libs/granite/security/userinfo.json"}
-   /0177 { /type "allow" /url "GET /libs/granite/security/currentuser.json" }
-
+   
       # Enable CSRF token otherwise nothings works.
    /5001 { /type "allow" /glob "GET /libs/granite/csrf/token.json *"}
 
