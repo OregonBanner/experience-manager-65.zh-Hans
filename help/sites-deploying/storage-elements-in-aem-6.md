@@ -11,49 +11,49 @@ content-type: reference
 discoiquuid: 0aa2c22f-32bb-4e50-8328-63ed73c0f19e
 legacypath: /content/docs/en/aem/6-0/deploy/upgrade/microkernels-in-aem-6-0
 exl-id: 52437eb5-f9fb-4945-9950-5a1562fe878d
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 9defa6d1843007e9375d839f72f6993c691a37c0
 workflow-type: tm+mt
-source-wordcount: '714'
+source-wordcount: '708'
 ht-degree: 1%
 
 ---
 
 # AEM 6.5中的存储元素{#storage-elements-in-aem}
 
-在本文中，我们将介绍：
+本文涵盖以下内容：
 
 * [AEM 6中的存储概述](/help/sites-deploying/storage-elements-in-aem-6.md#overview-of-storage-in-aem)
 * [维护存储库](/help/sites-deploying/storage-elements-in-aem-6.md#maintaining-the-repository)
 
 ## AEM 6中的存储概述 {#overview-of-storage-in-aem}
 
-AEM 6最重要的变化之一是存储库级别的创新。
+AEM 6中最重要的更改之一是存储库级别的创新。
 
-目前，AEM6中有两种节点存储实施：Tar存储和MongoDB存储。
+目前，AEM6中提供了两个节点存储实施：Tar存储和MongoDB存储。
 
-### Tar存储 {#tar-storage}
+### 焦油存储 {#tar-storage}
 
 #### 使用Tar存储运行新安装的AEM实例 {#running-a-freshly-installed-aem-instance-with-tar-storage}
 
 >[!CAUTION]
 >
->区段节点存储的PID已从org.apache.jackrabbit.oak更改。**插件**&#x200B;在AEM 6的早期版本中为.segment.SegmentNodeStoreService，而在AEM 6.3中为org.apache.jackrabbit.oak.segment.SegmentNodeStoreService。确保进行必要的配置调整以反映此更改。
+>区段节点存储的PID已从org.apache.jackrabbit.oak发生更改。**plugins** AEM 6.3中的org.apache.jackrabbit.oak.segment.SegmentNodeStoreService的早期AEM 6版本中的.segment.SegmentNodeStoreService。请确保进行必要的配置调整，以便反映更改。
 
-默认情况下，AEM 6使用默认配置选项使用Tar存储来存储节点和二进制文件。 要手动配置其存储设置，请执行以下步骤：
+默认情况下，AEM 6使用Tar存储，使用默认配置选项来存储节点和二进制文件。 您可以通过执行以下操作手动配置其存储设置：
 
-1. 下载AEM 6快速入门jar并将其放入新文件夹中。
-1. 通过运行以下命令解压缩AEM：
+1. 下载AEM 6快速入门Jar并将其置于新文件夹中。
+1. 运行以解包AEM:
 
    `java -jar cq-quickstart-6.jar -unpack`
 
 1. 创建名为的文件夹 `crx-quickstart\install` 在安装目录中。
 
-1. 创建一个名为的文件 `org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.cfg` 新建的文件夹中的路径。
+1. 创建一个名为 `org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.cfg` 中。
 
-1. 编辑文件并设置配置选项。 以下选项可用于区段节点存储，它是AEM Tar存储实施的基础：
+1. 编辑文件并设置配置选项。 区段节点存储提供了以下选项，这是AEM Tar存储实施的基础：
 
-   * `repository.home`：存储各种存储库相关数据的存储库主目录的路径。 默认情况下，区段文件将存储在crx-quickstart/segmentstore目录下。
-   * `tarmk.size`：区段的最大大小（以MB为单位）。 默认值为256MB。
+   * `repository.home`:存储各种与存储库相关数据的存储库主页的路径。 默认情况下，区段文件将存储在crx-quickstart/segmentstore目录下。
+   * `tarmk.size`:区段的最大大小(MB)。 默认为256 MB。
 
 1. 启动AEM。
 
@@ -61,49 +61,49 @@ AEM 6最重要的变化之一是存储库级别的创新。
 
 #### 使用Mongo Storage运行新安装的AEM实例 {#running-a-freshly-installed-aem-instance-with-mongo-storage}
 
-可以按照以下过程将AEM 6配置为使用MongoDB存储运行：
+AEM 6可配置为通过MongoDB存储运行，具体过程如下：
 
-1. 下载AEM 6快速入门jar并将其放入新文件夹中。
-1. 通过运行以下命令解压缩AEM：
+1. 下载AEM 6快速入门Jar并将其放入新文件夹中。
+1. 运行以下命令解包AEM:
 
    `java -jar cq-quickstart-6.jar -unpack`
 
-1. 确保已安装MongoDB并且实例为 `mongod` 正在运行。 有关更多信息，请参阅 [安装MongoDB](https://docs.mongodb.org/manual/installation/).
+1. 确保安装了MongoDB，并且实例为 `mongod` 正在运行。 有关更多信息，请参阅 [安装MongoDB](https://docs.mongodb.org/manual/installation/).
 1. 创建名为的文件夹 `crx-quickstart\install` 在安装目录中。
-1. 通过创建一个包含您想在中使用的配置名称的配置文件来配置节点存储 `crx-quickstart\install` 目录。
+1. 通过创建一个配置文件来配置节点存储，该配置文件的名称是您要在 `crx-quickstart\install` 目录访问Advertising Cloud的帮助。
 
-   Document Node Store(AEM MongoDB存储实施的基础)使用一个名为的文件 `org.apache.jackrabbit.oak.plugins.document.DocumentNodeStoreService.cfg`
+   文档节点存储(是AEM MongoDB存储实施的基础)使用名为的文件 `org.apache.jackrabbit.oak.plugins.document.DocumentNodeStoreService.cfg`
 
 1. 编辑文件并设置配置选项。 以下选项可供选择：
 
-   * `mongouri`：此 [MongoURI](https://docs.mongodb.org/manual/reference/connection-string/) 需要连接到Mongo数据库。 默认为 `mongodb://localhost:27017`
-   * `db`：Mongo数据库的名称。 默认情况下，新的AEM 6安装使用 **aem-author** 作为数据库名称。
-   * `cache`：缓存大小（以MB为单位）。 这分布在DocumentNodeStore中使用的各种缓存中。 默认为 256。
-   * `changesSize`：Mongo中用于缓存差异输出的限定集合的大小（以MB为单位）。 默认为 256。
-   * `customBlobStore`：布尔值，指示将使用自定义数据存储。 默认值为false。
+   * `mongouri`:的 [MongoURI](https://docs.mongodb.org/manual/reference/connection-string/) 连接到Mongo数据库时需要。 默认值为 `mongodb://localhost:27017`
+   * `db`:Mongo数据库的名称。 默认情况下，新的AEM 6安装使用 **aem-author** 作为数据库名称。
+   * `cache`:高速缓存大小(MB)。 此缓存大小分布在DocumentNodeStore中使用的各种缓存中。 默认为256。
+   * `changesSize`:Mongo中用于缓存差异输出的封闭集合的大小(MB)。 默认为256。
+   * `customBlobStore`:布尔值，指示使用自定义数据存储。 默认值为false。
 
-1. 使用要使用的数据存储的PID创建配置文件，并编辑该文件以设置配置选项。 有关详细信息，请参阅 [配置节点存储和数据存储](/help/sites-deploying/data-store-config.md).
+1. 使用您要使用的数据存储的PID创建配置文件，然后编辑该文件以设置配置选项。 有关详细信息，请参阅 [配置节点存储和数据存储](/help/sites-deploying/data-store-config.md).
 
-1. 通过运行以下命令，启动具有MongoDB存储后端的AEM 6 jar：
+1. 通过运行以下操作，使用MongoDB存储后端启动AEM 6 jar :
 
    ```shell
    java -jar cq-quickstart-6.jar -r crx3,crx3mongo
    ```
 
-   位置 **`-r`** 是后端运行模式。 在此示例中，它将从MongoDB支持开始。
+   后端运行模式为 **`-r`**，此示例以MongoDB支持开头。
 
-#### 禁用透明超大页面 {#disabling-transparent-huge-pages}
+#### 禁用透明大页面 {#disabling-transparent-huge-pages}
 
-Red Hat Linux使用称为Transparent Great Pages (THP)的内存管理算法。 虽然AEM执行细粒度读取和写入，但THP已针对大型操作进行了优化。 因此，建议您在Tar和Mongo存储中禁用THP。 要禁用算法，请执行以下步骤：
+Red Hat® Linux®使用称为“透明大页”(THP)的内存管理算法。 在AEM执行细粒度读取和写入时，THP已针对大型操作进行优化。 因此，建议您在Tar和Mongo存储上禁用THP。 要禁用算法，请执行以下步骤：
 
-1. 打开 `/etc/grub.conf` 文件中的文本编辑器。
+1. 打开 `/etc/grub.conf` 文件。
 1. 将以下行添加到 **grub.conf** 文件：
 
    ```
    transparent_hugepage=never
    ```
 
-1. 最后，通过运行以下命令，检查设置是否已生效：
+1. 最后，通过运行以检查该设置是否生效：
 
    ```
    cat /sys/kernel/mm/redhat_transparent_hugepage/enabled
@@ -117,13 +117,13 @@ Red Hat Linux使用称为Transparent Great Pages (THP)的内存管理算法。 �
 
 >[!NOTE]
 >
->此外，您还可以参阅以下资源：
+>请查阅以下资源：
 >
->* 有关Red Hat Linux上透明大型页面的更多信息，请参阅此 [文章](https://access.redhat.com/solutions/46111).
->* 有关Linux调整提示，请参阅此 [文章](https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html).
+>* 有关Red Hat® Linux®上透明大页的详细信息，请参阅此 [文章](https://access.redhat.com/solutions/46111).
+* 有关Linux®调整提示，请参阅此 [文章](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html?lang=zh-Hans).
 >
 
 
 ## 维护存储库 {#maintaining-the-repository}
 
-存储库的每次更新都会创建一个新的内容修订版本。 因此，存储库的大小会随着每次更新而增长。 为避免存储库增长失控，需要清理旧修订以释放磁盘资源。 此维护功能称为修订版清理。 修订清理机制将通过从存储库中删除过时数据来回收磁盘空间。 有关修订版清理的更多详细信息，请阅读 [“修订清理”页面](/help/sites-deploying/revision-cleanup.md).
+对存储库的每次更新都会创建一个内容修订版本。 因此，每次更新时，存储库的大小都会增大。 为避免存储库增长失控，必须清理旧的修订版本以释放磁盘资源。 此维护功能称为修订清理。 修订清理机制通过从存储库中删除过时的数据来回收磁盘空间。 有关修订清理的更多详细信息，请阅读 [“修订清理”页](/help/sites-deploying/revision-cleanup.md).

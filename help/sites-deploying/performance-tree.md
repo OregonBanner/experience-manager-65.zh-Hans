@@ -9,9 +9,9 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: 5febbb1e-795c-49cd-a8f4-c6b4b540673d
 exl-id: f2f968b8-b21c-487d-bc0d-ed60903bc4bf
-source-git-commit: e147605ff4d5c3d2403632285956559db235c084
+source-git-commit: 9defa6d1843007e9375d839f72f6993c691a37c0
 workflow-type: tm+mt
-source-wordcount: '1198'
+source-wordcount: '1178'
 ht-degree: 8%
 
 ---
@@ -62,7 +62,7 @@ ht-degree: 8%
   <tr>
    <td><strong>步骤 0</strong></td>
    <td>分析请求流</td>
-   <td><p>您可以在浏览器中使用标准HTTP请求分析来分析请求流。 有关如何在Chrome上进行此分析的更多信息，请参阅：<br /> </p> <p><a href="https://developers.google.com/web/tools/chrome-devtools/profile/network-performance/resource-loading">https://developer.chrome.com/docs/devtools/</a><a href="https://developers.google.com/web/tools/chrome-devtools/profile/network-performance/understanding-resource-timing"><br /> https://developer.chrome.com/docs/devtools/</a><br /> </p> </td>
+   <td><p>您可以在浏览器中使用标准HTTP请求分析来分析请求流。 有关如何在Chrome上进行此分析的更多信息，请参阅：<br /> </p> <p><a href="https://developers.google.com/web/tools/chrome-devtools/profile/network-performance/resource-loading">https://developer.chrome.com/docs/devtools/</a><br /> </p> </td>
   </tr>
   <tr>
    <td><strong>步骤 2</strong></td>
@@ -212,7 +212,7 @@ ht-degree: 8%
     <ol>
      <li><a href="/help/sites-deploying/configuring-performance.md#cq-dam-asset-synchronization-service">资产同步服务</a></li>
      <li><a href="/help/sites-deploying/configuring-performance.md#multiple-dam-instances">多个DAM实例</a></li>
-     <li>性能调整提示文章 <a href="https://helpx.adobe.com/customer-care-office-hours/aem/6x-performance-tuning-best-practices.html">此处</a> 和 <a href="https://helpx.adobe.com/customer-care-office-hours/aem/6x-performance-tuning-best-practices.html">此处</a>.<br /> </li>
+     <li>性能调整提示文章 <a href="https://helpx.adobe.com/customer-care-office-hours/aem/6x-performance-tuning-best-practices.html">此处</a>.<br /> </li>
     </ol> </td>
   </tr>
   <tr>
@@ -277,7 +277,7 @@ ht-degree: 8%
   <tr>
    <td><strong>步骤 39</strong></td>
    <td>使用预连接以减少连接开销</td>
-   <td>请参见上文的Gem会议。 此外，W3c上的其他预连接文档：<a href="https://html.spec.whatwg.org/#linkTypes"> https://html.spec.whatwg.org/#linkTypes</a></td>
+   <td>请参见上文的Gem会议。 此外，关于W3c的其他连接前文档：<a href="https://html.spec.whatwg.org/#linkTypes"> https://html.spec.whatwg.org/#linkTypes</a></td>
   </tr>
   <tr>
    <td><strong>步骤40和41</strong><br /> </td>

@@ -11,20 +11,20 @@ topic-tags: configuring
 discoiquuid: 257f3e4a-4b59-4cbb-bf61-f72f173676e6
 feature: Configuring
 exl-id: e9ea9df4-a355-41fc-a102-01a5d7ca2629
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 9defa6d1843007e9375d839f72f6993c691a37c0
 workflow-type: tm+mt
-source-wordcount: '84'
-ht-degree: 0%
+source-wordcount: '88'
+ht-degree: 10%
 
 ---
 
 # 配置操作方法文章{#configuration-how-to-articles}
 
-以下主题介绍了如何完成特定的AEM部署任务：
+以下主题介绍如何完成特定AEM部署任务：
 
 * [如何使用日志查看器](https://helpx.adobe.com/experience-manager/kb/logsviewer.html)
 * [如何清除工作流和审核日志](https://helpx.adobe.com/experience-manager/kb/howtopurgewf.html)
 
-* [性能调整提示](https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html)
+* [性能调整提示](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html?lang=zh-Hans)
 * [如何从欢迎屏幕中删除功能](/help/sites-developing/customizing-the-welcome-console.md)
 * [如何关闭位置跟踪器功能](https://helpx.adobe.com/experience-manager/kb/turn-off-geolocation.html)
