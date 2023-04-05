@@ -6,10 +6,10 @@ mini-toc-levels: 2
 role: User, Admin, Leader
 feature: Connected Assets,User and Groups
 exl-id: 4ceb49d8-b619-42b1-81e7-c3e83d4e6e62
-source-git-commit: b10b7d957ef3a28b5eeb05383a7504c6516f7aa7
+source-git-commit: 8d4ff8bcb7df4770bc1ed7e7c2cad27befe3d175
 workflow-type: tm+mt
-source-wordcount: '3856'
-ht-degree: 18%
+source-wordcount: '3909'
+ht-degree: 17%
 
 ---
 
@@ -364,5 +364,5 @@ Experience Manager允许您将远程DAM部署作为源连接到多个Experience 
 
    ![检索资产远程引用失败](assets/reference-report-failure.png)
 
-
+* 如果Cookie未从Sites服务器发送到Google Chrome中的Assets服务器，这是因为资产连接未通过HTTPS。 如果您未在Assets实例上使用HTTPS，则 `SameSite=None` 在Assets服务器上进行身份验证后，无法将标头添加到响应中。
 
