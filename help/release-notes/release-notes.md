@@ -2,7 +2,7 @@
 title: 的发行说明 [!DNL Adobe Experience Manager] 6.5
 description: 查找发行信息、新增功能、安装操作方法，以及 [!DNL Adobe Experience Manager] 6.5。
 mini-toc-levels: 3
-source-git-commit: 99a2167fa1eaee8111ad4e3bd7cdd36ad47a9a4c
+source-git-commit: a17b25e55a0bf16a0df42a7ba4768503618a19e2
 workflow-type: tm+mt
 source-wordcount: '2705'
 ht-degree: 2%
@@ -80,7 +80,7 @@ Dynamic Media的一个关键改进是：
 
 ### [!DNL Forms] 主要功能 {#forms-features-6516}
 
-* [无头自适应Forms](https://experienceleague.corp.adobe.com/docs/experience-manager-headless-adaptive-forms/using/overview.html) 使您的开发人员能够创建、发布和管理可通过API访问和交互的交互式表单，而不是通过传统的图形用户界面。
+* [无头自适应Forms](https://experienceleague.adobe.com/docs/experience-manager-headless-adaptive-forms/using/overview.html) 使您的开发人员能够创建、发布和管理可通过API访问和交互的交互式表单，而不是通过传统的图形用户界面。
 
 * [自适应Forms核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html#features) 是一组24个符合BEM规范的开源组件，这些组件基于Adobe Experience Manager WCM核心组件构建。 这些组件是开源的，使开发人员能够轻松自定义和扩展这些组件，以满足其组织的特定需求。 任何具备定制技能的人 [WCM核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/authoring.html?lang=en) 可以轻松自定义和设置这些组件的样式。
 
@@ -100,7 +100,7 @@ Dynamic Media的一个关键改进是：
    * Microsoft® Excel频繁崩溃。
    * 在打开安全文档时， **文件安全办公室** 未在计算机上检测到安装扩展。 指示用户下载并安装安全扩展。 (NPR-39768)
 * 用户升级到AEM 6.5.15.0 Service Pack后，无法进行PostScript到Pdf的转换。 (NPR-39765)、(NPR-39764)
-* 当用户在打开自适应表单后尝试打开导览屏幕时，会失败，出现空指针异常：`[172.17.0.1[1662032923933]GET/libs/fd/af/content/editors/form/tour/content.htmlHTTP/1.1]com.day.cq.wcm.core.impl.WCMDebugFilterException:org.apache.sling.api.scripting.ScriptEvaluationException:”` (NPR-39654)
+* 当用户在打开自适应表单后尝试打开导览屏幕时，会失败，出现空指针异常：`[172.17.0.1[1662032923933]GET/libs/fd/af/content/editors/form/tour/content.htmlHTTP/1.1]com.day.cq.wcm.core.impl.WCMDebugFilterException:org.apache.sling.api.scripting.ScriptEvaluationException:"` (NPR-39654)
 * 在Windows中，当用户启用高对比度黑色设置时，HTML5 Forms内容在浏览器中以HTML预览形式呈现时将不清晰。 (NPR-39018)
 
 ## 集成 {#integrations-6516}
