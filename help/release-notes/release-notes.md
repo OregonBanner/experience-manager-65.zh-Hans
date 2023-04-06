@@ -2,9 +2,9 @@
 title: 的发行说明 [!DNL Adobe Experience Manager] 6.5
 description: 查找发行信息、新增功能、安装操作方法，以及 [!DNL Adobe Experience Manager] 6.5。
 mini-toc-levels: 3
-source-git-commit: ea90bd913b437a564fb50e01af7719510fa22e74
+source-git-commit: 99a2167fa1eaee8111ad4e3bd7cdd36ad47a9a4c
 workflow-type: tm+mt
-source-wordcount: '2692'
+source-wordcount: '2705'
 ht-degree: 2%
 
 ---
@@ -226,7 +226,11 @@ Dynamic Media的一个关键改进是：
 
 ### 安装用于GraphQL内容片段的Experience Manager索引包 {#install-aem-graphql-index-add-on-package}
 
-使用GraphQL的客户应安装 [AEM内容片段(包含GraphQL索引包1.0.5)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Fcfm-graphql-index-def-1.0.5.zip). 这样，用户就可以根据实际使用的功能添加所需的索引定义。
+使用GraphQL的客户应安装 [AEM内容片段(包含GraphQL索引包1.0.5)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Fcfm-graphql-index-def-1.0.5.zip).
+
+这样，您就可以根据实际使用的功能添加所需的索引定义。
+
+安装此包失败可能会导致GraphQL查询变慢或失败。
 
 >[!NOTE]
 >
