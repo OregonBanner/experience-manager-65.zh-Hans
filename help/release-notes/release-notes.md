@@ -2,10 +2,10 @@
 title: 的发行说明 [!DNL Adobe Experience Manager] 6.5
 description: 查找发行信息、新增功能、安装操作方法，以及 [!DNL Adobe Experience Manager] 6.5。
 mini-toc-levels: 3
-source-git-commit: 72b3eaea279911569dbd6b9acf41527111e9e53c
+source-git-commit: ea90bd913b437a564fb50e01af7719510fa22e74
 workflow-type: tm+mt
-source-wordcount: '2665'
-ht-degree: 3%
+source-wordcount: '2692'
+ht-degree: 2%
 
 ---
 
@@ -224,6 +224,14 @@ Dynamic Media的一个关键改进是：
 
 有关在AEM Forms上安装Service Pack的说明，请参阅 [AEM Forms Service Pack安装说明](/help/release-notes/aem-forms-current-service-pack-installation-instructions.md).
 
+### 安装用于GraphQL内容片段的Experience Manager索引包 {#install-aem-graphql-index-add-on-package}
+
+使用GraphQL的客户应安装 [AEM内容片段(包含GraphQL索引包1.0.5)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Fcfm-graphql-index-def-1.0.5.zip). 这样，用户就可以根据实际使用的功能添加所需的索引定义。
+
+>[!NOTE]
+>
+>每个实例只能安装一次此包；无需随每个Service Pack重新安装它。
+
 ### UberJar {#uber-jar}
 
 UberJar [!DNL Experience Manager] 6.5.16.0在 [Maven中央存储库](https://repo.maven.apache.org/maven2/com/adobe/aem/uber-jar/6.5.15/). <!-- CHECK FOR UPDATE EACH NEW RELEASE -->
@@ -266,9 +274,6 @@ UberJar [!DNL Experience Manager] 6.5.16.0在 [Maven中央存储库](https://rep
 <!-- REMOVED AS PER CQDOC-20022, JANUARY 23, 2023 * If you install [!DNL Experience Manager] 6.5 Service Pack 10 or a previous service pack on [!DNL Experience Manager] 6.5, the runtime copy of your assets custom workflow model (created in `/var/workflow/models/dam`) is deleted.
 To retrieve your runtime copy, Adobe recommends to synchronize the design-time copy of the custom workflow model with its runtime copy using the HTTP API:
 `<designModelPath>/jcr:content.generate.json`. -->
-
-* [AEM内容片段(包含GraphQL索引包1.0.5)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Fcfm-graphql-index-def-1.0.5.zip)
-使用GraphQL的客户需要此包；这样，用户便可以根据实际使用的功能添加所需的索引定义。
 
 * 请将您的GraphQL查询（可能已使用内容模型的自定义API名称）更新为改用内容模型的默认名称。
 
