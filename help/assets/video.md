@@ -12,9 +12,9 @@ docset: aem65
 feature: Asset Management
 role: User, Admin
 exl-id: 28cf9e39-cab4-4278-b6c9-e84cc31964db
-source-git-commit: 5ac1b0a343c3742f27fecbfb0de577d65c2607d0
+source-git-commit: 3430897fc98aecbcf6cc7bf6bdc9b3df24e92366
 workflow-type: tm+mt
-source-wordcount: '8091'
+source-wordcount: '8098'
 ht-degree: 3%
 
 ---
@@ -278,7 +278,7 @@ DASH是国际标准，HLS是Apple标准。 这两种方法都用于自适应视�
 
 >[!IMPORTANT]
 >
->*要对视频使用DASH，必须先由您帐户上的Adobe技术支持人员启用。 请参阅 [在您的帐户上启用短划线](#enable-dash).)
+>*要对视频使用DASH，必须先由您帐户上的Adobe技术支持人员启用。 请参阅 [在您的帐户上启用短划线](#enable-dash).
 
 ## Dynamic Media视频解决方案的架构 {#architecture-of-dynamic-media-video-solution}
 
@@ -445,7 +445,7 @@ DASH（HTTP上的数字自适应流播放）是视频流播放的国际标准，
 
    >[!IMPORTANT]
    >
-   >目前，在您的帐户上启用DASH仅在北美地区可用。
+   >目前，在您的帐户上启用DASH仅在亚太和北美地区提供；即将在欧洲 — 中东 — 非洲推出。
 
 在您的帐户中启用DASH需要两个步骤：
 
@@ -476,7 +476,7 @@ DASH（HTTP上的数字自适应流播放）是视频流播放的国际标准，
 >
 >视频报表仅在运行Dynamic Media — 混合模式时可用。
 
-视频报表显示指定时间内的多个汇总量度，以帮助您监控*已发布*单个和汇总视频是否按预期执行。 以下热门量度数据是针对整个网站中所有已发布视频的汇总数据：
+视频报表显示指定时间内的多个汇总量度，以帮助您监控 *发布* 单个视频和聚合视频将按预期执行。 以下热门量度数据是针对整个网站中所有已发布视频的汇总数据：
 
 * 视频开始
 * 完成率
