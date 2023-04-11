@@ -2,9 +2,9 @@
 title: 的发行说明 [!DNL Adobe Experience Manager] 6.5
 description: 查找发行信息、新增功能、安装操作方法，以及 [!DNL Adobe Experience Manager] 6.5。
 mini-toc-levels: 3
-source-git-commit: a17b25e55a0bf16a0df42a7ba4768503618a19e2
+source-git-commit: a2fa4eacf1b39f185fdf46581ca7c5dcc8083969
 workflow-type: tm+mt
-source-wordcount: '2705'
+source-wordcount: '2967'
 ht-degree: 2%
 
 ---
@@ -88,7 +88,7 @@ Dynamic Media的一个关键改进是：
 
 ### [!DNL Forms] 修复 {#forms-fixes-6516}
 
-* 使用“分配任务**”步骤为分配的任务发送通知时，会发送两封电子邮件，而不是一封给分配的个人。 (NPR-40078)
+* 使用 **分配任务** 为已分配任务发送通知的步骤是，向已分配的个人发送两封电子邮件，而不是一封。 (NPR-40078)
 * 当用户隐藏表标题时，会导致取消设置以前设置的列宽，并且所有列都保持相同的宽度。 (NPR-40063)
 * 如果您将管理员用户的默认密码从 `admin`，执行 `Prepare Adobe Experience Manager Server For DSC deployment` 检查AEM Forms JEE Service Pack失败。 (NPR-40062)、(NPR-39387)
 * 输出服务和汇编程序服务API无法将PDF表单转换为PDF/A。(NPR-39990)
@@ -102,6 +102,18 @@ Dynamic Media的一个关键改进是：
 * 用户升级到AEM 6.5.15.0 Service Pack后，无法进行PostScript到Pdf的转换。 (NPR-39765)、(NPR-39764)
 * 当用户在打开自适应表单后尝试打开导览屏幕时，会失败，出现空指针异常：`[172.17.0.1[1662032923933]GET/libs/fd/af/content/editors/form/tour/content.htmlHTTP/1.1]com.day.cq.wcm.core.impl.WCMDebugFilterException:org.apache.sling.api.scripting.ScriptEvaluationException:"` (NPR-39654)
 * 在Windows中，当用户启用高对比度黑色设置时，HTML5 Forms内容在浏览器中以HTML预览形式呈现时将不清晰。 (NPR-39018)
+* 当用户尝试添加元数据时，“保存”按钮将对“草稿”和“提交”组件不起作用。(CQ-4349601)
+* 升级到AEM 6.5.15.0 Service Pack后，相对URL的重定向在可视编辑器中不再有效。 (NPR-39947)
+* 当用户升级到AEM 6.5.15.0 Service Pack时，重定向将停止与Internet Explorer一起使用。 (CQ-4351745)
+* 用户升级到AEM 6.5.15.0 Service Pack后，无法识别HTML标题标记。 标题标记的HTML代码在HTML表单中显示为文本。 (NPR-39915)
+* 当用户尝试提交自适应表单时，会出现类型偏差错误： `ERROR [10.207.64.167 [1668589530607] POST /app/LS4/content/forms/af/revalidate/jcr:content/guideContainer.af.submit.jsp HTTP/1.1]`(NPR-39809)
+* 当用户使用 **发送电子邮件** 提交操作时，无法正确显示该操作。 邮件模板嵌入在记录文档的预览中。 (CQ-4352155)
+* 当用户在具有IE兼容模式的Microsoft Edge浏览器上将自适应表单预览为HTML时，该表单无法正确显示。(CQ-4352216)
+* 词典需要包含带有特殊字符（如下划线或连字符）的新区域设置才能启用翻译。 (NPR-40088)
+
+安装AEM 6.5.16.0 Forms附加组件包后，客户面临以下问题。 因此，已发布AEM 6.5.16.0 Forms附加组件服务包的更新版本：
+* 当用户尝试与表单用户组中的用户一起创建自适应表单时，选择任何模板的选项不存在，并出现类似于以下内容的错误：内部服务器错误：在com.adobe.aem.formsndocuments.servlet.ThemeClientLibraryDataSourceServlet.lambda$getThemeClientLibCategoryList$3(ThemeClientLibraryDataSourceServlet.java:76)a.base/java.util.stream.ReferencePipeline$2$1(ReferencePipeline.176)at.base/java.util.Iterator.java.inator.13（每个剩余的Java.iterater3：）(FORMS-7629)
+* 无法保存在代码编辑器规则中所做的更改。(FORMS市–7532)
 
 ## 集成 {#integrations-6516}
 
