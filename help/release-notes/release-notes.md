@@ -2,9 +2,9 @@
 title: 的发行说明 [!DNL Adobe Experience Manager] 6.5
 description: 查找发行信息、新增功能、安装操作方法，以及 [!DNL Adobe Experience Manager] 6.5。
 mini-toc-levels: 3
-source-git-commit: a2fa4eacf1b39f185fdf46581ca7c5dcc8083969
+source-git-commit: f53dbe7d51ff976f8d79702a86527f984aa00997
 workflow-type: tm+mt
-source-wordcount: '2967'
+source-wordcount: '2983'
 ht-degree: 2%
 
 ---
@@ -111,7 +111,7 @@ Dynamic Media的一个关键改进是：
 * 当用户在具有IE兼容模式的Microsoft Edge浏览器上将自适应表单预览为HTML时，该表单无法正确显示。(CQ-4352216)
 * 词典需要包含带有特殊字符（如下划线或连字符）的新区域设置才能启用翻译。 (NPR-40088)
 
-安装AEM 6.5.16.0 Forms附加组件包后，客户面临以下问题。 因此，已发布AEM 6.5.16.0 Forms附加组件服务包的更新版本：
+安装AEM 6.5.16.0 Forms附加组件包后，客户遇到了以下列问题。 因此， [AEM 6.5.16.0 Forms附加组件服务包 — 6.0.914](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) 已发布。 Adobe建议使用更新的Service Pack:
 * 当用户尝试与表单用户组中的用户一起创建自适应表单时，选择任何模板的选项不存在，并出现类似于以下内容的错误：内部服务器错误：在com.adobe.aem.formsndocuments.servlet.ThemeClientLibraryDataSourceServlet.lambda$getThemeClientLibCategoryList$3(ThemeClientLibraryDataSourceServlet.java:76)a.base/java.util.stream.ReferencePipeline$2$1(ReferencePipeline.176)at.base/java.util.Iterator.java.inator.13（每个剩余的Java.iterater3：）(FORMS-7629)
 * 无法保存在代码编辑器规则中所做的更改。(FORMS市–7532)
 
