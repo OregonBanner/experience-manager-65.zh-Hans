@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: d701e4ba-417f-4b57-b103-27fd25290736
 feature: Configuring
 exl-id: 5ecd09a3-c4be-4361-9816-03106435346f
-source-git-commit: 55f6aab3e41159735e332b2740e3a21c563c1157
+source-git-commit: 2981f11565db957fac323f81014af83cab2c0a12
 workflow-type: tm+mt
-source-wordcount: '1950'
+source-wordcount: '1949'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 OSGi &quot;*提供标准化的基元，它允许应用程序从可重用的小组件和协作组件构建。 这些组件可以组合成应用程序并进行部署*&quot;
 
-这样可以轻松管理包，因为可以单独停止、安装和启动包。 互依关系会自动处理。 每个OSGi组件(请参阅 [OSGi规范](https://www.osgi.org/Specifications/HomePage))包含在各种包中的一个包中。
+这样可以轻松管理包，因为可以单独停止、安装和启动包。 互依关系会自动处理。 每个OSGi组件(请参阅 [OSGi规范](https://docs.osgi.org/specification/))包含在各种包中的一个包中。
 
 您可以通过以下任一方式管理此类包的配置设置：
 
@@ -194,7 +194,7 @@ Web控制台不显示您的更改已保存在存储库中的位置，但可以�
    * `config`  — 用于所有运行模式
    * `config.author`  — 对于创作环境
    * `config.publish`  — 对于发布环境
-   * `config.<run-mode>`  — 酌情
+   * `config.<run-mode>` - 酌情
 
 1. 是 **配置** 或 **工厂配置** 必要吗？
 1. 要配置的单个参数，包括必须重新创建的任何现有参数定义。
