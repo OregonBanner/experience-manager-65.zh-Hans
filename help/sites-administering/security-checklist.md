@@ -12,7 +12,7 @@ discoiquuid: de7d7209-c194-4d19-853b-468ebf3fa4b2
 docset: aem65
 exl-id: 314a6409-398c-470b-8799-0c4e6f745141
 feature: Security
-source-git-commit: e44480535ea7058dc41fc747351446b670d03b7f
+source-git-commit: f23adcf200b625e2ab2a766460c41fd7e38fae83
 workflow-type: tm+mt
 source-wordcount: '2986'
 ht-degree: 1%
@@ -390,7 +390,7 @@ Sling是 *以内容为中心*. 当每个(HTTP)请求以JCR资源（存储库节�
 >
 >有关更多信息，请参阅Oak文档(位于 [可授权的节点名称生成](https://jackrabbit.apache.org/oak/docs/security/user/authorizablenodename.html).
 
-**匿名权限强化包**
+### 匿名权限强化包 {#anonymous-permission-hardening-package}
 
 默认情况下，AEM会存储系统元数据，例如 `jcr:createdBy` 或 `jcr:lastModifiedBy` 作为存储库中常规内容旁边的节点属性。 根据配置和访问控制设置，在某些情况下，这可能会导致泄露个人身份信息(PII)，例如，当此类节点呈现为原始JSON或XML时。
 
