@@ -12,9 +12,9 @@ discoiquuid: de7d7209-c194-4d19-853b-468ebf3fa4b2
 docset: aem65
 exl-id: 314a6409-398c-470b-8799-0c4e6f745141
 feature: Security
-source-git-commit: 70c2d7c910f61169869aab9fdcbff4c4564ea9bd
+source-git-commit: e44480535ea7058dc41fc747351446b670d03b7f
 workflow-type: tm+mt
-source-wordcount: '2818'
+source-wordcount: '2986'
 ht-degree: 1%
 
 ---
@@ -389,6 +389,14 @@ Sling是 *以内容为中心*. 当每个(HTTP)请求以JCR资源（存储库节�
 >[!NOTE]
 >
 >有关更多信息，请参阅Oak文档(位于 [可授权的节点名称生成](https://jackrabbit.apache.org/oak/docs/security/user/authorizablenodename.html).
+
+**匿名权限强化包**
+
+默认情况下，AEM会存储系统元数据，例如 `jcr:createdBy` 或 `jcr:lastModifiedBy` 作为存储库中常规内容旁边的节点属性。 根据配置和访问控制设置，在某些情况下，这可能会导致泄露个人身份信息(PII)，例如，当此类节点呈现为原始JSON或XML时。
+
+与所有存储库数据一样，这些属性也通过Oak授权堆栈进行中介。 应根据最少特权原则限制对他们的访问。
+
+为支持此功能，Adobe提供了权限强化包，作为客户构建基础。 它的工作方式是在存储库根目录上安装“拒绝”访问控制条目，以限制对常用系统属性的匿名访问。 包可供下载 [此处](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/helper/anonymous-permissions-pkg-0.1.2.zip) 和可以安装在所有受支持的AEM版本上。 有关详细信息，请参阅发行说明。
 
 ### 防御点击劫持攻击 {#prevent-clickjacking}
 
