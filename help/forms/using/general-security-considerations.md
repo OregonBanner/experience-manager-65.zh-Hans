@@ -11,9 +11,9 @@ discoiquuid: 64bc6018-2828-4634-9275-48f1d411452b
 docset: aem65
 role: Admin
 exl-id: 3f150dd5-f486-4f16-9de9-035cde53b034
-source-git-commit: d3923e5e693e7426ee57e81e203f31964a23af3a
+source-git-commit: c47b4dcfd2fbdcb0b98ad815f5b04d8f593e4f64
 workflow-type: tm+mt
-source-wordcount: '1060'
+source-wordcount: '1059'
 ht-degree: 1%
 
 ---
@@ -65,7 +65,7 @@ ht-degree: 1%
   </tr>
   <tr>
    <td>OracleLinux® 7更新3</td>
-   <td><a href="https://docs.oracle.com/cd/E52668_01/E54670/E54670.pdf" target="_blank">版本7的安全指南</a><br /> </td>
+   <td><a href="https://docs.oracle.com/en/operating-systems/oracle-linux/7/security/" target="_blank">版本7的安全指南</a><br /> </td>
   </tr>
   <tr>
    <td>CentOS 7<sup> </sup></td>
@@ -212,7 +212,7 @@ JBoss® Application Server使用8080作为默认HTTP端口。 JBoss®还具有�
 
 1. 打开以下文件进行编辑：
 
-   单个服务器安装： [JBoss®根]/standalone/configuration/standalone.xml
+   单服务器安装： [JBoss®根]/standalone/configuration/standalone.xml
 
    群集安装： [JBoss®根]/domain/configuration/domain.xml
 
@@ -245,8 +245,8 @@ lc_[数据库].xml文件不应包含明文格式的密码。 请咨询应用程�
 >
 >JEE JBoss®统包安装程序上的AEM Forms加密数据库密码。
 
-IBM® WebSphere® Application Server和OracleWebLogic Server默认情况下可能会加密数据源密码。 但是，请通过应用程序服务器文档进行确认，以确保出现这种情况。
+IBM® WebSphere® Application Server和OracleWebLogic Server默认情况下可能会加密数据源密码。 但是，您应该使用应用程序服务器文档进行确认，以确保正在发生该事件。
 
 ### 保护存储在信任存储中的私钥 {#protecting-the-private-key-stored-in-trust-store}
 
-在信任存储中导入的私钥或凭据存储在JEE数据库的AEM Forms中。 采取适当的预防措施保护数据库并限制仅对指定管理员的访问。
+在信任存储中导入的私钥或凭据存储在JEE数据库的AEM Forms中。 要保护数据库并限制仅访问指定的管理员，请采取适当的预防措施。
