@@ -12,9 +12,9 @@ discoiquuid: ed3a858c-7a43-4515-a2ff-43ca465c7d7d
 docset: aem65
 feature: Configuring
 exl-id: 19eedcf2-140a-452d-aa8f-6fd7f219e5f8
-source-git-commit: af60428255fb883265ade7b2d9f363aacb84b9ad
+source-git-commit: d3923e5e693e7426ee57e81e203f31964a23af3a
 workflow-type: tm+mt
-source-wordcount: '3431'
+source-wordcount: '3430'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 OSGi &quot;*提供标准化的基元，它允许应用程序从可重用的小组件和协作组件构建。 这些组件可以组合成应用程序并进行部署*&quot;
 
-利用此功能，可轻松管理包，因为可以单独停止、安装和启动这些包。 互依关系会自动处理。 每个OSGi组件(请参阅 [OSGi规范](https://www.osgi.org/Specifications/HomePage))包含在各种包中的一个包中。 使用AEM时，可通过多种方法来管理此类包的配置设置；请参阅 [配置OSGi](/help/sites-deploying/configuring-osgi.md) 以了解更多详细信息和建议的实践。
+利用此功能，可轻松管理包，因为可以单独停止、安装和启动这些包。 互依关系会自动处理。 每个OSGi组件(请参阅 [OSGi规范](https://docs.osgi.org/specification/))包含在各种包中的一个包中。 使用AEM时，可通过多种方法来管理此类包的配置设置；请参阅 [配置OSGi](/help/sites-deploying/configuring-osgi.md) 以了解更多详细信息和建议的实践。
 
 以下OSGi配置设置（根据包列出）与项目实施相关。 列出的设置并非都需要调整，其中有些设置可帮助您了解AEM的操作方式。
 
