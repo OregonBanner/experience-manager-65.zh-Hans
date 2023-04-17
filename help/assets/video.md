@@ -12,9 +12,9 @@ docset: aem65
 feature: Asset Management
 role: User, Admin
 exl-id: 28cf9e39-cab4-4278-b6c9-e84cc31964db
-source-git-commit: 3430897fc98aecbcf6cc7bf6bdc9b3df24e92366
+source-git-commit: c704397f08e163a58ee6ac1dbaefc3171298864e
 workflow-type: tm+mt
-source-wordcount: '8098'
+source-wordcount: '8086'
 ht-degree: 3%
 
 ---
@@ -115,7 +115,6 @@ ht-degree: 3%
 
       * 使用网页上的嵌入代码集成视频：
          [在网页上嵌入视频查看器](embed-code.md).
-   * [将视频发布到YouTube](#publishing-videos-to-youtube).
    * [生成视频报表](#viewing-video-reports).
 
    * [在视频中添加字幕](#adding-captions-to-video).
@@ -292,7 +291,7 @@ DASH是国际标准，HLS是Apple标准。 这两种方法都用于自适应视�
 
 ## 视频编码最佳实践 {#best-practices-for-encoding-videos}
 
-的 **Dynamic Media编码视频** 如果您已启用Dynamic Media并设置了视频云服务，则工作流会对视频进行编码。 此工作流会捕获工作流进程历史记录和失败信息。请参阅 [监控视频编码和YouTube发布进度](#monitoring-video-encoding-and-youtube-publishing-progress). 如果您已启用Dynamic Media并设置了视频云服务，则 **[!UICONTROL Dynamic Media编码视频]** 在您上传视频时，工作流会自动生效。 (如果您没有使用Dynamic Media，则 **[!UICONTROL DAM更新资产]** 工作流生效。)
+的 **Dynamic Media编码视频** 如果您已启用Dynamic Media并设置了视频云服务，则工作流会对视频进行编码。 此工作流会捕获工作流进程历史记录和失败信息。如果您已启用Dynamic Media并设置了视频云服务，则 **[!UICONTROL Dynamic Media编码视频]** 在您上传视频时，工作流会自动生效。 (如果您没有使用Dynamic Media，则 **[!UICONTROL DAM更新资产]** 工作流生效。)
 
 <!-- DEAD The following are best-practice tips for encoding source video files.
 
