@@ -11,9 +11,9 @@ topic-tags: Security
 discoiquuid: 68077369-0549-4c0f-901b-952e323013ea
 docset: aem65
 exl-id: 574e2fc2-6ebf-49b6-9b65-928237a8a34d
-source-git-commit: 252924afb70dd311a27d04278fbe363db15e9519
+source-git-commit: 9273282b26aeab5f65f0f05aa8ad754962dc59ec
 workflow-type: tm+mt
-source-wordcount: '850'
+source-wordcount: '853'
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ ht-degree: 0%
 
    ![chlimage_1-104](assets/chlimage_1-104.png)
 
-1. 输入凭据后，单击 **下一个** 的双曲余切值。 然后，上载SSL连接的关联私钥和证书。
+1. 输入凭据后，单击 **下一个** 的双曲余切值。 然后，为SSL/TLS连接上传关联的私钥和证书。
 
    ![chlimage_1-105](assets/chlimage_1-105.png)
 
@@ -152,7 +152,7 @@ it for any subsequent updating of the private key or certificate.</dd>
 
 ### 通过包 {#via-package}
 
-或者，您也可以通过上载已包含以下必需项目的包来自动设置SSL:
+或者，您也可以通过上传已包含以下必需项的包来自动设置SSL/TLS:
 
 * ssl-service用户的密钥库。 位于 */home/users/system/security/ssl-service/keystore* 中。
 * 的 `GraniteSslConnectorFactory` 配置
@@ -178,7 +178,7 @@ it for any subsequent updating of the private key or certificate.</dd>
    openssl req -sha256 -new -key localhostprivate.key -out localhost.csr -subj "/CN=localhost"
    ```
 
-1. 生成SSL证书并使用私钥对其进行签名。 在本例中，将从现在起一年到期：
+1. 生成SSL/TLS证书并使用私钥对其进行签名。 在本例中，将从现在起一年到期：
 
    ```shell
    openssl x509 -req -days 365 -in localhost.csr -signkey localhostprivate.key -out localhost.crt
