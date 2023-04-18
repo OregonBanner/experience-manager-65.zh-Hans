@@ -1,8 +1,6 @@
 ---
-title: 使用标记
-seo-title: Using Tags
-description: 标记是用于对网站中的内容进行分类的简单快捷方法
-seo-description: Tags are a quick and easy method of classifying content within a website
+title: 使用标记对网站中的内容进行分类
+description: 标记是对网站中的内容进行分类的一种快速而简便的方法。
 uuid: 5d922443-f924-426e-acf4-27dffd1053f6
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,18 +9,18 @@ topic-tags: site-features
 discoiquuid: 9fb6d603-eb17-4192-bfa6-6c316f14ac7d
 docset: aem65
 exl-id: 49f95b31-92cd-4124-8c0f-c9802099fd0b
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
 workflow-type: tm+mt
-source-wordcount: '569'
-ht-degree: 87%
+source-wordcount: '575'
+ht-degree: 66%
 
 ---
 
 # 使用标记{#using-tags}
 
-标记是用于对网站中的内容进行分类的简单快捷方法。可以将标记视为可附加到页面、资产或其他内容，以便在进行搜索时能够找到该内容及相关内容的关键字或标签。
+标记是对网站中的内容进行分类的一种快速而简便的方法。 标记可以被视为可附加到页面、资产或其他内容的关键字或标签，以便能够搜索以查找该内容和相关内容。
 
-* 参见 [管理标记](/help/sites-administering/tags.md) 有关创建和管理标记以及已对哪些内容应用标记的信息。
+* 请参阅 [管理标记](/help/sites-administering/tags.md) 有关创建和管理标记以及已对哪些内容应用标记的信息。
 * 有关标记框架以及在自定义应用程序中包括和扩展标记的信息，请参阅[针对开发人员的标记](/help/sites-developing/tags.md)。
 
 ## 使用标记的十大理由 {#ten-reasons-to-use-tagging}
@@ -36,17 +34,17 @@ ht-degree: 87%
 1. **启用 SEO** - 作为页面属性应用的标记将自动显示在页面的元标记中，以对搜索引擎可见。
 1. **化繁为简** - 可以简单地通过一个词语和触摸按钮来创建标记。之后，可以添加标题、描述和无限数量的标签以向标记提供更多语义。
 1. **核心一致性** - 标记系统是 AEM 的核心组件，可供所有 AEM 功能用来对内容分类。此外，开发人员可以使用标记 API 来创建支持标记的应用程序，以便访问相同的分类。
-1. **结构化与灵活性相结合** - 鉴于对页面和路径的嵌套，AEM 非常适合处理结构化信息。凭借内置的全文搜索功能，它在处理非结构化信息时也非常强大。标记兼具结构化和灵活性的强大优势。
+1. **结构化与灵活性相结合** - 鉴于对页面和路径的嵌套，AEM 非常适合处理结构化信息。由于内置的全文搜索功能，在处理非结构化信息时，它同样具有强大的功能。 标记结合了结构和灵活性的优势。
 
-在设计站点的内容结构和资产的元数据架构时，请考虑使用标记提供的轻量级可行方法。
+在设计网站的内容结构和资产的元数据架构时，请考虑使用标记提供的轻量级易访问方法。
 
 ## 应用标记 {#applying-tags}
 
 在创作环境中，作者可以通过访问页面属性并在&#x200B;**标记/关键字**&#x200B;字段中输入一个或多个标记来应用标记。
 
-要应用，请执行以下操作 [预定义标记](/help/sites-administering/tags.md)，在 **页面属性** 窗口使用 **标记** 字段和 **选择标记** 窗口。 **标准标记**&#x200B;选项卡是默认的命名空间，这意味着分类前面没有 `namespace-string:` 前缀。
+应用 [预定义标记](/help/sites-administering/tags.md)，在 **页面属性** 窗口使用 **标记** 字段和 **选择标记** 窗口。 **标准标记**&#x200B;选项卡是默认的命名空间，这意味着分类前面没有 `namespace-string:` 前缀。
 
-![“选择标记”窗口；使用X按钮取消选择当前选定的标记](assets/chlimage_1-41.png)
+![选择“标记”窗口；使用X按钮取消选择当前选定的标记](assets/chlimage_1-41.png)
 
 ### 发布标记 {#publishing-tags}
 
@@ -60,7 +58,7 @@ ht-degree: 87%
 
 >[!NOTE]
 >
->激活页面时，会自动打开一个对话框，通过该对话框可激活属于该页面的未激活标记。
+>激活页面时，会自动打开一个对话框，通过该对话框可以激活属于该页面的未激活标记。
 
 **取消激活**
 

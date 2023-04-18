@@ -1,26 +1,24 @@
 ---
-title: SAPCOMMERCE CLOUD
-seo-title: SAP Commerce Cloud
+title: 使用SAP部署电子商务Commerce Cloud
 description: 了解如何使用SAPCommerce Cloud部署电子商务。
-seo-description: Learn how to deploy eCommerce with SAP Commerce Cloud.
 contentOwner: Guillaume Carlino
 topic-tags: e-commerce
 content-type: reference
 exl-id: ecbd0097-c407-4581-bab2-4729a71df4a3
-source-git-commit: 78359fb8ecbcc0227ab5a3910175aed73d823902
+source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
 workflow-type: tm+mt
-source-wordcount: '721'
+source-wordcount: '724'
 ht-degree: 2%
 
 ---
 
-# SAPCOMMERCE CLOUD{#sap-commerce-cloud}
+# SAPCommerce Cloud{#sap-commerce-cloud}
 
 >[!NOTE]
 >
->本页包含指向hybris网站的链接。 对于某些页面，您需要帐户才能登录。
+>本页包含指向hybris网站的链接。 对于某些页面，您需要一个帐户才能登录。
 
-## 使用SAPCommerce Cloud部署eCommerce {#deploying-ecommerce-with-sap-commerce-cloud}
+## 使用SAP部署eCommerceCommerce Cloud {#deploying-ecommerce-with-sap-commerce-cloud}
 
 >[!NOTE]
 >
@@ -28,30 +26,30 @@ ht-degree: 2%
 >
 >`Geometrixx Outdoors Site English (US)`
 
-部署 [必要的电子商务包](#packages-needed-for-ecommerce-with-hybris) 将提供电子商务框架的完整功能，以及随hybris实施提供的电子商务功能的参考实施（包括演示目录）
+部署 [必要的电子商务包](#packages-needed-for-ecommerce-with-hybris) 将提供电子商务框架的完整功能，以及随hybris实施（包括演示目录）提供的电子商务功能的参考实施
 
-可在英语（美国）分支( `/content/geometrixx-outdoors/en_US`Geometrixx Outdoors )，其网址为：
+此功能可在英语（美国）分支( `/content/geometrixx-outdoors/en_US`)Geometrixx Outdoors站点：
 
-* [产品信息](#productinformationwithcolorvariants) （在适当的时候使用颜色变体）
+* [产品信息](#productinformationwithcolorvariants) （酌情包含颜色变体）
 
 * [购物车内容概述](#shoppingcartcontentoverview)
 * [客户注册](#customersignup) 和 [客户登录](#customersignin)
 
-* [对Hybris管理控制台的访问权限](#accesstothehybrismanagementconsole)
+* [访问hybris管理控制台](#accesstothehybrismanagementconsole)
 
 ### 技术要求 — hybris Server {#technical-requirements-hybris-server}
 
-电子商务集成框架的hybris扩展已更新，以支持Hybris 5（作为默认值），同时保持与的向后兼容性 [Hybris 4](/help/commerce/cif-classic/developing/sap-commerce-cloud.md#developing-for-hybris).
+eCommerce Integration Framework的hybris扩展已更新，以支持Hybris 5（默认），同时保持与的向后兼容性 [Hybris 4](/help/commerce/cif-classic/developing/sap-commerce-cloud.md#developing-for-hybris).
 
 >[!NOTE]
 >
 >* 支持版本18.11及更高版本。
->* 您需要使用Java 7来运行 [hybris 5服务器。](https://www.hybris.com/en/architecture-technology)
->* hybris附加模块 [电信加速器](https://www.hybris.com/en/products/telecommunication)AEM扩展不支持。
+>* 您需要Java 7才能运行 [hybris 5服务器。](https://www.hybris.com/en/architecture-technology)
+>* hybris add-on， [电信加速器](https://www.hybris.com/en/products/telecommunication)，则AEM扩展不支持。
 >
 
 
-### 带有hybris的电子商务所需的包 {#packages-needed-for-ecommerce-with-hybris}
+### 具有hybris的eCommerce需要的包 {#packages-needed-for-ecommerce-with-hybris}
 
 要安装电子商务功能，您需要：
 
@@ -60,37 +58,37 @@ ht-degree: 2%
 
    * 这是标准AEM安装的一部分
 
-* AEM全Geometrixx包：
+* AEMGeometrixx全部包：
 
    * `cq-geometrixx-all-pkg`
 
-* AEM hybris内容包：
+* AEM hybris content packages:
 
    * `cq-hybris-content-6.3.2`
-   * 特定于hybris的API实施
+   * hybris特定API实施
    * `cq-geometrixx-hybris-content-6.3.2`
-   * 说明使用hybris ( `geometrixx-outdoors/en_US`)
+   * 用于说明hybris用法的引用实施( `geometrixx-outdoors/en_US`)
 
-### 使用Hybris安装电子商务 {#installation-of-ecommerce-with-hybris}
+### 使用hybris安装eCommerce {#installation-of-ecommerce-with-hybris}
 
-要安装完整的配置(使用演示目录、Geometrixx Outdoors)，基本步骤包括：
+要安装完整的配置(使用演示目录、Geometrixx Outdoors)，基本步骤如下：
 
 1. [安装AEM](/help/sites-deploying/deploy.md).
-1. 安装全Geometrixx包
+1. 安装Geometrixx全部包
 
    1. ` [cq-geometrixx-all-pkg](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq60/product/cq-geometrixx-all-pkg)`
 
-1. 使用安装演示内容包 [包管理器](/help/sites-administering/package-manager.md)：
+1. 使用安装演示内容包 [包管理器](/help/sites-administering/package-manager.md):
 
    1. ` [cq-hybris-content-6.3.2](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/product/cq-hybris-content)`
    1. ` [cq-geometrixx-hybris-content-6.3.2](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/product/cq-geometrixx-hybris-content)`
 
-1. [下载并构建hybris服务器](#download-and-build-your-hybris-server).
+1. [下载并构建您的hybris Server](#download-and-build-your-hybris-server).
 1. 在电子商务引擎中构建目录：
 
-   1. [设置Geometrixx户外商店](#setup-the-geometrixx-outdoors-store).
+   1. [设置Geometrixx室外商店](#setup-the-geometrixx-outdoors-store).
 
-1. [作者](/help/sites-authoring/qg-page-authoring.md) 您在AEM中所需的任何补充页面。
+1. [作者](/help/sites-authoring/qg-page-authoring.md) 您在AEM中需要的任何补充页面。
 
 >[!CAUTION]
 >
@@ -98,28 +96,28 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->面向开发人员 [API文档](/help/commerce/cif-classic/developing/ecommerce.md#api-documentation) 也可供下载。
+>对于开发人员 [API文档](/help/commerce/cif-classic/developing/ecommerce.md#api-documentation) 也可供下载。
 
-### 下载并构建hybris服务器 {#download-and-build-your-hybris-server}
+### Download and Build your hybris Server {#download-and-build-your-hybris-server}
 
-此过程中的步骤将下载并构建hybris服务器。 它还将进行hybris和cq之间的连接所需的初始配置。 随后，该扩展将可与默认设置一起使用。
+此过程中的步骤将下载并构建hybris服务器。 它还将进行hybris和cq之间连接所需的初始配置。 然后，该扩展将可在默认设置下使用。
 
 >[!CAUTION]
 >
->不支持5.5.1之前的Hybris版本。
+>不支持低于5.5.1的Hybris版本。
 
 >[!NOTE]
 >
 >要完成此操作，您需要 [Groovy](https://groovy-lang.org/) 安装在系统上。
 
-1. 下载 **hybris Commerce Suite** 从hybris下载站点分发。
+1. 下载 **hybris Commerce Suite** 分发（从hybris下载网站）。
 
    >[!CAUTION]
    >
-   >您需要一个帐户（来自hybris）才能访问它。
+   >您需要一个帐户（来自hybris）才能访问此内容。
 
-1. 将分发文件解压缩到所需的位置(称为 &lt;hybris-root-directory>)。
-1. 在命令行中，执行以下命令：
+1. 将分发文件解压缩到所需位置(称为 &lt;hybris-root-directory>)。
+1. 从命令行中，执行以下操作：
 
    ```shell
    cd <hybris-root-directory>/bin/platform
@@ -134,9 +132,9 @@ ht-degree: 2%
    >
    >`ant clean all`
    >
-   >按 `Return` 需要时。
+   >按 `Return` （如果需要）。
 
-1. 将以下文件下载到解压缩的hybris分发的根文件夹，
+1. 将以下文件下载到提取的hybris分发的根文件夹中，
 
    ```
        <hybris-root-directory>
@@ -153,10 +151,10 @@ ht-degree: 2%
 
 [获取文件](/help/sites-deploying/assets/setup-1.groovy)
 
-1. 从命令行中，执行以下命令到：
+1. 从命令行中，执行以下操作：
 
-   * 更新hybris服务器的配置（根据扩展的要求）
-   * 使用修改后的配置重新构建hybris服务器
+   * 更新hybris server的配置（扩展所需）
+   * 使用修改的配置重新构建hybris服务器
    * 启动服务器
 
    ```shell
@@ -168,41 +166,41 @@ ht-degree: 2%
 
    >[!NOTE]
    >
-   >根据您的系统，其中几个步骤可能需要几分钟才能完成。
+   >根据您的系统，完成其中几个步骤可能需要几分钟时间。
 
-1. 在浏览器中，导航到 **hybris管理控制台** 在：
+1. 在您的浏览器中，导航到 **hybris管理控制台** at:
 
    [http://localhost:9002](http://localhost:9002)
 
 1. 单击 **初始化** 然后确认初始化操作（因为它将删除现有数据）。
 
-   进度将显示在控制台中，带有 `FINISHED` 指示完成。
+   将在控制台中显示进度，其中 `FINISHED` 表示已完成。
 
    >[!NOTE]
    >
-   >根据您的系统，这可能需要几分钟才能完成。
+   >根据您的系统，完成此过程可能需要几分钟时间。
 
-### 设置Geometrixx Outdoors商店 {#setup-the-geometrixx-outdoors-store}
+### 设置Geometrixx Outdoors存储 {#setup-the-geometrixx-outdoors-store}
 
 此过程将上载并配置演示存储 — 联机Geometrixx。
 
-1. 启动hybris实例。 在命令行中，执行以下命令：
+1. 启动hybris实例。 从命令行中，执行以下操作：
 
    ```shell
    cd <hybris-root-directory>/bin/platform
    sh hybrisserver.sh
    ```
 
-1. 在浏览器中，导航到 **hybris管理控制台** 在：
+1. 在您的浏览器中，导航到 **hybris管理控制台** at:
 
    [https://localhost:9002/backoffice](https://localhost:9002/backoffice)
 
    使用以下凭据：
-   * 用户名：admin
+   * 用户名：管理员
    * 密码：nimda
 
-1. 在侧栏导航中，展开 **系统** 和 **工具**. 然后选择 **导入** 以打开 **向导：CSV导入** 窗口。
-1. 在 **配置** 选项卡， **上传** 以下各项 **导入文件**：
+1. 在侧栏导航中，展开 **系统** 和 **工具**. 然后选择 **导入** 打开 **向导：CSV导入** 窗口。
+1. 在 **配置** 选项卡， **上传** 以下 **导入文件**:
 
 [获取文件](/help/sites-deploying/assets/geometrixx-outdoors-export.csv)
 
@@ -211,17 +209,17 @@ ht-degree: 2%
    `en_US - English (United States)`
 
 1. 打开 **资源** 选项卡。
-1. **上传** 以下各项 **Media-Zip**：
+1. **上传** 以下 **Media-Zip**:
 
 [获取文件](/help/sites-deploying/assets/geometrixx-outdoors-images.zip)
 
-1. 单击 **开始** 以导入指定的文件。 此 **结果** 选项卡将显示任何日志条目。
+1. 单击 **开始** 导入指定文件。 的 **结果** 选项卡将显示所有日志条目。
 
 1. 单击 **完成** 以关闭导入窗口。
 
 1. 在侧栏中，选择 **系统**，则 **工具**，则 **导入**.
 
-1. **上传** 以下各项 **导入文件**：
+1. **上传** 以下 **导入文件**:
 
 [获取文件](/help/sites-deploying/assets/base-store.csv)
 
@@ -233,10 +231,10 @@ ht-degree: 2%
 
    `en_US - English (United States)`
 
-1. 单击 **开始** 以导入指定的文件。 此 **结果** 选项卡将显示任何日志条目。
+1. 单击 **开始** 导入指定文件。 的 **结果** 选项卡将显示所有日志条目。
 
 1. 单击 **完成** 以关闭导入窗口。
 
-1. 您现在可以使用产品驾驶舱查看导入的目录和产品：
+1. 您现在可以使用产品座舱查看导入的目录和产品：
 
    [http://localhost:9002/productcockpit](http://localhost:9002/productcockpit)

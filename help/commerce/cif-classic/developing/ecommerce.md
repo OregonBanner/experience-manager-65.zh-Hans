@@ -1,8 +1,6 @@
 ---
-title: 电子商务
-seo-title: eCommerce
-description: 集成框架包括集成层和API
-seo-description: The integration framework includes an integration layer with an API
+title: 电子商务集成层与API
+description: 集成框架包括一个带有API的集成层。
 uuid: 48e01bbb-8f9e-489c-bbe4-24563e84ff35
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,39 +8,39 @@ content-type: reference
 topic-tags: platform
 docset: aem65
 exl-id: da63c576-34cd-40ce-81de-d7391a331364
-source-git-commit: 78359fb8ecbcc0227ab5a3910175aed73d823902
+source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
 workflow-type: tm+mt
-source-wordcount: '140'
-ht-degree: 1%
+source-wordcount: '145'
+ht-degree: 0%
 
 ---
 
 # 电子商务{#ecommerce}
 
-集成框架包括带有API的集成层。 这允许您：
+集成框架包括一个带有API的集成层。 这样，您就可以：
 
-* 插入电子商务系统并将产品数据提取到AEM中
-* 为独立于特定电子商务引擎的商务功能构建AEM组件
+* 插入电子商务系统并将产品数据提取到AEM
+* 构建AEM组件以实现独立于特定电子商务引擎的商务功能
 
 有关更多信息，请参阅：
 
-* [开发（通用）](/help/commerce/cif-classic/developing/generic.md)
-* [使用SAPCommerce Cloud进行开发](/help/commerce/cif-classic/developing/sap-commerce-cloud.md)
+* [开发（一般）](/help/commerce/cif-classic/developing/generic.md)
+* [使用SAP进行开发Commerce Cloud](/help/commerce/cif-classic/developing/sap-commerce-cloud.md)
 
 >[!NOTE]
 >
->由于电子商务框架可与任何电子商务解决方案一起使用，请参阅 [开发（通用）](/help/commerce/cif-classic/developing/generic.md) 以获取有关开发可能性的更多信息。
+>由于电子商务框架可与任何电子商务解决方案一起使用，请参阅 [开发（一般）](/help/commerce/cif-classic/developing/generic.md) 以了解有关开发可能性的更多信息。
 
 >[!NOTE]
 >
->要将集成框架与外部电子商务提供商一起使用，您首先需要安装所需的包。 有关更多信息，请参阅 [部署电子商务](/help/commerce/cif-classic/deploying/ecommerce.md).
+>要将集成框架与外部电子商务提供程序结合使用，您首先需要安装所需的包。 有关更多信息，请参阅 [部署eCommerce](/help/commerce/cif-classic/deploying/ecommerce.md).
 >
 >有关概念和管理电子商务实施的信息，请参阅 [管理电子商务](/help/commerce/cif-classic/administering/ecommerce.md).
 
 ## API文档 {#api-documentation}
 
-电子商务API由以下包提供：
+电子商务API由包提供：
 
 `com.adobe.cq.commerce.*`
 
-请参阅 [API文档](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/index.html) 以进一步了解。
+请参阅 [API文档](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/index.html) 以了解更多信息。

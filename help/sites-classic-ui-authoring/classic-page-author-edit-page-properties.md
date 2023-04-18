@@ -1,8 +1,6 @@
 ---
 title: 编辑页面属性
-seo-title: Editing Page Properties
-description: 页面属性会因页面性质而异。例如，某些页面可能会连接到 Live Copy，而其他页面则可能不会，Live Copy 信息将在适当情况下才可用。
-seo-description: Properties of a page can vary depending on the nature of the page. For example some pages might be connected to a live copy while others are not and the live copy information will be available as appropriate.
+description: 页面的属性可能会因页面的性质而异。 例如，某些页面可能已连接到Live Copy，而其他页面则未连接，Live Copy信息将根据需要提供。
 uuid: 63d37d1b-52da-489d-b02b-e8b3d17571d1
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,10 +8,10 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 23768c73-ac64-4727-8313-160c8c131b05
 exl-id: 1a77e4cd-bbf8-4d05-bb35-fd43c02eaf30
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
 workflow-type: tm+mt
 source-wordcount: '763'
-ht-degree: 96%
+ht-degree: 26%
 
 ---
 
@@ -23,71 +21,71 @@ ht-degree: 96%
 
 ## 页面属性 {#page-properties}
 
-属性分布于多个选项卡：
+属性分布在多个选项卡中：
 
 ### 基本 {#basic}
 
 * **标题**
 
-   页面的标题会显示在各种不同的位置。例如，**网站**&#x200B;选项卡列表和&#x200B;**站点**&#x200B;卡片/列表视图。
+   页面的标题会显示在不同的位置。 例如， **网站** 选项卡列表和 **站点** 卡片/列表视图。
 
    这是必填字段。
 
 * **标记**
 
-   在此，可以通过更新选择框中的列表在页面中添加或删除标记：
+   在此，您可以通过更新选择框中的列表在页面中添加或删除标记：
 
-   * 选择标记后，它会列在选择框下。您可以使用“x”从此列表中删除标记。
+   * 选择标记后，它会列在选择框下。您可以使用“x”从此列表中移除标记。
    * 可通过在空白选择框中键入名称输入全新标记。
 
-      按 Enter 将实际创建新标记。新标记随后将显示在框中，并且右侧带有一个小星星，表示该标记为新标记。
+      按Enter将实际创建新标记。 随后，新标记将显示在框中，右侧带有一个小星形，表示该标记为新标记。
 
    * 使用下拉列表功能，可从现有标记中进行选择。
-   * 当您将鼠标停留在选择框中的标记条目之上时，会显示 x；此 x 可用于为此页面删除该标记。
+   * 将鼠标悬停在选择框中的标记条目上时，会显示x;这可用于删除此页面的该标记。
 
 * **隐藏导航**
 
-   一个切换开关，用于指示在页面导航中显示还是隐藏页面。
+   一个切换开关，用于指示在页面导航中是显示还是隐藏页面。
 
 * **页面标题**
 
-   要在页面中使用的标题。
+   要在页面上使用的标题。
 
 * **导航标题**
 
-   您可以指定单独的标题以便在导航中使用（例如，如果您想用一种更加简洁明了的说法）。如果留空，则将使用&#x200B;**标题**。
+   您可以指定单独的标题以在导航中使用（例如，如果您希望某些内容能更加简洁）。 如果为空，则 **标题** 中，将使用。
 
 * **子标题**
 
-   要在页面中使用的子标题。
+   要在页面上使用的子标题。
 
 * **描述**
 
-   页面的描述、用途或要添加的任何其他详细信息。
+   您对页面的描述、用途或要添加的任何其他详细信息。
 
 * **开始时间**
 
-   将激活已发布页面的日期和时间。发布后，此页面在指定时间之前将一直保持休眠。
+   激活已发布页面的日期和时间。 发布后，此页面在指定的时间之前将保持休眠。
 
-   对于要立即发布的页面，将这些字段保留为空（正常情况）。
+   对于要立即发布的页面，请将这些字段留空（正常情况）。
 
 * **结束时间**
 
-   将取消激活已发布页面的时间。
+   将停用已发布页面的时间。
 
-   对于要立即发布的页面，也将这些字段保留为空。
+   对于要立即发布的页面，请再次将这些字段留空。
 
 * **虚 URL**
 
-   允许您为此页面输入虚 URL。通过这种方式，您可以使用更短并且含意更清楚的 URL。
+   允许您为此页面输入虚URL。 这样，您的URL就更短、表达更清楚。
 
-   例如，如果虚URL设置为w `elcome`到由路径/标识的页面 `v1.0/startpage`网站h `ttp://example.com,` 然后h `ttp://example.com/welcome`将为h的虚URL `ttp://example.com/content/v1.0/startpage`
+   例如，如果虚URL设置为w `elcome`到路径/标识的页面 `v1.0/startpage`网站h `ttp://example.com,` 然后 `ttp://example.com/welcome`应该是h的虚URL `ttp://example.com/content/v1.0/startpage`
 
    >[!CAUTION]
    >
    >虚 URL：
    >
-   >* 必须是唯一的，因此您应该确保该值没有被其他页面使用。
+   >* 必须是唯一的，因此您应该注意该值尚未被其他页面使用。
    >* 不支持正则表达式模式。
 
 
@@ -107,15 +105,15 @@ ht-degree: 96%
 
 * **Design**
 
-   指示要用于此页面的[设计](/help/sites-developing/designer.md)。
+   指示 [设计](/help/sites-developing/designer.md) 用于此页面。
 
 * **别名**
 
-   指定要用于此页面的别名。
+   指定要用于此页的别名。
 
 * **启用已关闭的用户组**
 
-   启用（或禁用）[已关闭的用户组](/help/sites-administering/cug.md) (CUG)。
+   启用（或禁用） [封闭用户组](/help/sites-administering/cug.md) (CUG)。
 
 * **登录页面**
 
@@ -123,11 +121,11 @@ ht-degree: 96%
 
 * **公认组**
 
-   有资格登录 CUG 的组。
+   有资格登录CUG的组。
 
 * **领域**
 
-   用于 CUG 的领域名称。
+   CUG的领域名称。
 
 * **导出配置**
 
@@ -137,7 +135,7 @@ ht-degree: 96%
 
 * **页面缩略图**
 
-   显示页面缩略图图像。您可以：
+   显示页面缩略图图像。 您可以：
 
    * **生成预览**
 
@@ -151,7 +149,7 @@ ht-degree: 96%
 
 * **Cloud Service**
 
-   为[云服务](/help/sites-developing/extending-cloud-config.md)定义属性。
+   为定义属性 [云服务](/help/sites-developing/extending-cloud-config.md).
 
 ### 个性化 {#personalization}
 
@@ -161,21 +159,21 @@ ht-degree: 96%
 
 ### 权限 {#permissions}
 
-* **权限**（触屏优化 UI）
+* **权限** （触屏优化UI）
 
-   查看[有效权限，以及添加新权限](/help/sites-administering/user-group-ac-admin.md)。
+   查看 [有效权限和添加新权限](/help/sites-administering/user-group-ac-admin.md).
 
 ### Blueprint {#blueprint}
 
 * **Blueprint**
 
-   在[多站点管理](/help/sites-administering/msm.md)中为 Blueprint 页面定义属性。控制将修改传播到 Live Copy 的情况。
+   为 [多站点管理](/help/sites-administering/msm.md). 控制将修改传播到Live Copy的情况。
 
 ### Live Copy {#live-copy}
 
 * **Live Copy**
 
-   在[多站点管理](/help/sites-administering/msm.md)中为 Live Copy 页面定义属性。控制将从 Blueprint 中传播修改的情况。
+   为 [多站点管理](/help/sites-administering/msm.md). 控制将从Blueprint中传播修改的情况。
 
 ### 站点结构 {#site-structure}
 
@@ -185,12 +183,12 @@ ht-degree: 96%
 
 ### 编辑特定页面的页面属性 {#editing-page-properties-for-a-specific-page}
 
-页面属性定义页面在网站和其他位置显示时的各个属性，如标题。
+页面属性定义页面在网站和其他页面上显示时的各种属性，如标题。
 
 1. 打开要编辑的页面。
 
-1. 在 Sidekick 中，打开&#x200B;**页面**&#x200B;选项卡，然后选择&#x200B;**页面属性...**。
+1. 在Sidekick中，打开 **页面** 选项卡，然后选择 **页面属性……**
 
-   这会打开一个包含多个选项卡的对话框。
+   这将打开一个包含多个选项卡的对话框。
 
-1. 进行所需的更改，然后单击“**确定**”以保存。
+1. 进行所需的更改，然后单击 **确定** 保存。

@@ -1,8 +1,6 @@
 ---
-title: 搜索
-seo-title: Search
-description: 使用完备的搜索功能更快速地查找您的内容
-seo-description: Find your content faster with comprehensive search
+title: 全面搜索
+description: 通过全面的搜索，更快地查找内容。
 uuid: 21605b96-b467-4d01-9a64-9d0648d539f1
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,10 +9,10 @@ content-type: reference
 discoiquuid: 4ec15013-f7ab-44d6-8053-ed28b14f95e2
 docset: aem65
 exl-id: dd65b308-c449-4f64-9f46-0797b922910f
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
 workflow-type: tm+mt
-source-wordcount: '503'
-ht-degree: 96%
+source-wordcount: '504'
+ht-degree: 52%
 
 ---
 
@@ -24,7 +22,7 @@ AEM 的创作环境提供了多种内容搜索机制，具体取决于资源类�
 
 >[!NOTE]
 >
->在创作环境以外，还有其他机制可用于进行搜索，例如 [Query Builder](/help/sites-developing/querybuilder-api.md) 和 [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md)。
+>在创作环境之外，还可以使用其他机制进行搜索，例如 [查询生成器](/help/sites-developing/querybuilder-api.md) 和 [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md).
 
 ## 搜索基础知识 {#search-basics}
 
@@ -46,7 +44,7 @@ AEM 的创作环境提供了多种内容搜索机制，具体取决于资源类�
 
 要搜索和筛选您的资源，请执行以下操作：
 
-1. 打开&#x200B;**搜索**（使用工具栏中的放大镜）并输入您的搜索词。将向您提供相关的建议，并且可供您选择：
+1. 打开 **搜索** （带有工具栏中的放大镜）并输入搜索词。 将会提出建议，并且可以选择：
 
    ![s-01](assets/s-01.png)
 
@@ -55,70 +53,70 @@ AEM 的创作环境提供了多种内容搜索机制，具体取决于资源类�
    ![screen_shot_2018-03-23at101445](assets/screen_shot_2018-03-23at101445.png)
 
 1. 如果需要，您可以删除位置过滤器（选中要删除的过滤器上的 **X**），以在所有控制台/资源类型之间进行筛选。
-1. 将会显示结果，并按控制台和相关的资源类型进行分组。
+1. 将显示结果，并根据控制台和相关资源类型进行分组。
 
    您可以选择一种特定的资源（用于未来操作），或通过选择所需的资源类型向下展开；例如&#x200B;**查看全部站点**：
 
-   ![screen-shot_2019-03-05at101900](assets/screen-shot_2019-03-05at101900.png)
+   ![screenshot_2019-03-05at101900](assets/screen-shot_2019-03-05at101900.png)
 
 1. 如果您需要进一步向下展开，请选择“边栏”符号（左上方）以打开侧面板&#x200B;**过滤器和选项**。
 
    ![](do-not-localize/screen_shot_2018-03-23at101542.png)
 
-   根据资源类型，搜索将显示预定义的搜索/筛选条件选项。
+   根据资源类型，搜索将显示预定义的搜索/筛选条件选择。
 
-   侧面板允许您选择以下内容：
+   侧面板允许您选择：
 
    * 保存的搜索
    * 搜索目录
    * 标记
-   * 搜索条件；例如修改日期、发布状态、LiveCopy 状态。
+   * 搜索条件；例如，修改日期、发布状态、LiveCopy状态。
 
    >[!NOTE]
    >
-   >搜索条件可能会视情况而异：
+   >搜索条件可能会有所不同：
    >
    >
    >
-   >    * 具体视您选择的资源类型而定；例如，资产和社区条件理所当然是专用的；
-   >    * 您可以自定义[搜索表单](/help/sites-administering/search-forms.md)实例（对应于在 AEM 中的位置）。
+   >    * 根据您选择的资源类型；例如，资产和社区标准显然是专用的。
+   >    * 您的实例作为 [搜索Forms](/help/sites-administering/search-forms.md) 可以自定义(对应于AEM中的位置)。
 
 
-   ![screen-shot_2019-03-05at102509](assets/screen-shot_2019-03-05at102509.png)
+   ![screenshot_2019-03-05at102509](assets/screen-shot_2019-03-05at102509.png)
 
 1. 您还可以添加其他搜索词：
 
-   ![screen-shot_2019-03-05at102613](assets/screen-shot_2019-03-05at102613.png)
+   ![screenshot_2019-03-05at102613](assets/screen-shot_2019-03-05at102613.png)
 
 1. 使用 **X**（右上方）关闭&#x200B;**搜索**。
 
 >[!NOTE]
 >
->在搜索结果中选择某个项目时，搜索条件会持续保留。
+>在搜索结果中选择项目时，搜索条件会被保留。
 >
 >当您在搜索结果页面上选择某个项目时，如果使用浏览器后退按钮返回到搜索页面，则搜索条件仍将存在。
 
 ## 保存的搜索 {#saved-searches}
 
-除了按照多方面条件进行搜索以外，您还可以保存特定的搜索配置以供日后检索和使用：
+除了按各种方面进行搜索之外，您还可以保存特定的搜索配置以供在以后的阶段检索和使用：
 
-1. 定义搜索条件，然后选择&#x200B;**保存**。
+1. 定义搜索标准并选择 **保存**.
 
-   ![screen-shot_2019-03-05at102613-1](assets/screen-shot_2019-03-05at102613-1.png)
+   ![screenshot_2019-03-05at102613-1](assets/screen-shot_2019-03-05at102613-1.png)
 
 1. 指定名称，然后使用&#x200B;**保存**&#x200B;进行确认。
 
-   ![screen-shot_2019-03-05at102725](assets/screen-shot_2019-03-05at102725.png)
+   ![screenshot_2019-03-05at102725](assets/screen-shot_2019-03-05at102725.png)
 
 1. 在下次访问搜索面板时，您可以从选择器中选择保存的搜索：
 
-   ![screen-shot_2019-03-05at102927](assets/screen-shot_2019-03-05at102927.png)
+   ![screenshot_2019-03-05at102927](assets/screen-shot_2019-03-05at102927.png)
 
-1. 在保存之后，您可以执行以下操作：
+1. 保存后，您可以：
 
-   * 使用 **x**（针对保存的搜索的名称）以开始新的查询（保存的搜索本身将不会被删除）。
-   * **编辑保存的搜索**，更改搜索条件，然后再次&#x200B;**保存**。
+   * 使用 **x** （根据保存的搜索的名称）以启动新查询（保存的搜索本身将不会被删除）。
+   * **编辑保存的搜索**，更改搜索条件，然后 **保存** 再次。
 
 通过选择保存的搜索并单击搜索面板底部的&#x200B;**编辑保存的搜索**，可以修改保存的搜索。
 
-![screen-shot_2019-03-05at103010](assets/screen-shot_2019-03-05at103010.png)
+![screenshot_2019-03-05at103010](assets/screen-shot_2019-03-05at103010.png)

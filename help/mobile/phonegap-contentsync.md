@@ -1,8 +1,6 @@
 ---
-title: 通过内容同步移动设备
-seo-title: Mobile with Content Sync
-description: 关注本页，了解Content Sync for Adobe PhoneGap Enterprise with AEM。
-seo-description: Follow this page to learn about Content Sync for Adobe PhoneGap Enterprise with AEM.
+title: 与AEM同步Adobe PhoneGap Enterprise的内容
+description: 可查看本页以了解有关将Adobe PhoneGap企业版与AEM进行内容同步的信息。
 uuid: c3a82171-e070-4e32-b1ef-26e65ae23d99
 contentOwner: User
 content-type: reference
@@ -11,134 +9,134 @@ topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: 923fc031-1a06-4a9d-94da-a2a4e82c54ee
 docset: aem65
 exl-id: 2cadd9c5-4335-48d0-8d1c-941fca717409
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: f4b6eb2ded17ec641f23a1fc3b977ce77169c8a1
 workflow-type: tm+mt
-source-wordcount: '2971'
+source-wordcount: '2975'
 ht-degree: 0%
 
 ---
 
-# 通过内容同步移动设备{#mobile-with-content-sync}
+# 具有内容同步的移动设备{#mobile-with-content-sync}
 
 >[!NOTE]
 >
->Adobe建议对需要基于单页应用程序框架的客户端渲染（例如React）的项目使用SPA编辑器。 [了解更多](/help/sites-developing/spa-overview.md)。
+>Adobe建议对需要基于单页应用程序框架的客户端渲染（例如React）的项目使用SPA编辑器。 [了解详情](/help/sites-developing/spa-overview.md).
 
 >[!NOTE]
 >
->本文档是 [AEM Mobile快速入门](/help/mobile/getting-started-aem-mobile.md) 指南，建议的AEM Mobile参考起点。
+>本文档是 [开始使用AEM Mobile](/help/mobile/getting-started-aem-mobile.md) 指南，AEM Mobile参考的推荐起点。
 
-使用Content Sync将内容打包，以便在本机移动设备应用程序中使用这些内容。 在AEM中创作的页面可用作应用程序内容，即使设备处于离线状态也是如此。 此外，由于AEM页面基于Web标准，因此它们可跨平台工作，使您能够将其嵌入任何本机包装器中。 此策略可减少开发工作量，并让您能够轻松更新应用程序内容。
+使用内容同步来打包内容，以便将其用在本机移动设备应用程序中。 在AEM中创作的页面可用作应用程序内容，即使设备处于离线状态也是如此。 此外，由于AEM页面基于Web标准，因此它们可以跨平台工作，从而可以将它们嵌入到任何本机包装器中。 此策略可减少开发工作，并让您能够轻松更新应用程序内容。
 
 >[!NOTE]
 >
->您使用AEM工具创建的PhoneGap应用程序已配置为通过Content Sync将AEM页面用作内容。
+>使用AEM工具创建的PhoneGap应用程序已配置为通过内容同步将AEM页面用作内容。
 
-内容同步框架会创建一个包含Web内容的存档文件。 内容可以是简单页面、图像和PDF文件或整个Web应用程序中的任何内容。 内容同步API提供了从移动应用程序或构建过程访问存档文件的权限，以便可以检索内容并将其包含在应用程序中。
+内容同步框架会创建一个包含Web内容的存档文件。 内容可以是简单页面、图像和PDF文件或整个Web应用程序中的任何内容。 内容同步API允许从移动设备应用程序或构建流程中访问存档文件，以便能够检索内容并将其包含在应用程序中。
 
-以下步骤序列说明了Content Sync的典型用例：
+以下步骤顺序说明了内容同步的典型用例：
 
-1. AEM开发人员创建一个内容同步配置，用于指定要包含的内容。
-1. 内容同步框架收集和缓存内容。
-1. 在移动设备上，启动移动应用程序并从服务器请求内容（以ZIP文件形式交付）。
-1. 客户端将ZIP内容解压缩到本地文件系统。 ZIP文件中的文件夹结构模拟客户端（如浏览器）通常从服务器请求的路径。
+1. AEM开发人员创建内容同步配置，以指定要包含的内容。
+1. 内容同步框架会收集和缓存内容。
+1. 在移动设备上，启动移动应用程序并从服务器请求内容，该内容以ZIP文件形式交付。
+1. 客户端将ZIP内容解包到本地文件系统。 ZIP文件中的文件夹结构模拟客户端（例如浏览器）通常从服务器请求的路径。
 1. 客户端在嵌入式浏览器中打开内容，或以其他方式使用内容。
-1. 稍后，客户端从服务器请求更新内容。 内容同步框架提供增量更新以减少下载大小和时间，由于带宽或数据量有限，这对于移动设备可能非常重要。
+1. 之后，客户端从服务器请求更新内容。 内容同步框架提供了增量更新以减小下载大小和时间，由于带宽或数据卷有限，这对于移动设备可能非常重要。
 
 >[!NOTE]
 >
->要获取有关开发内容同步处理程序的准则的更多信息，请参阅开箱即用的应用程序处理程序，请参阅 [开发内容同步处理程序](/help/mobile/contentsync-app-handlers.md).
+>要获取有关开发内容同步处理程序的准则的更多信息，请参阅开箱即用的应用程序处理程序 [开发内容同步处理程序](/help/mobile/contentsync-app-handlers.md).
 
 ## 配置内容同步内容 {#configuring-the-content-sync-content}
 
-创建内容同步配置以指定传送到客户端的ZIP文件的内容。 您可以创建任意数量的内容同步配置。 每个配置都有一个名称用于标识。
+创建内容同步配置，以指定要交付给客户端的ZIP文件的内容。 您可以创建任意数量的内容同步配置。 每个配置都有一个用于标识的名称。
 
-要创建内容同步配置，请添加 `cq:ContentSyncConfig` 节点到存储库，使用 `sling:resourceType` 属性设置为 `contentsync/config`. 此 `cq:ContentSyncConfig` 节点可以位于存储库中的任意位置，但是AEM发布实例上的用户必须能够访问该节点。 因此，您应该添加以下节点 `/content`.
+要创建内容同步配置，请添加 `cq:ContentSyncConfig` 节点到存储库， `sling:resourceType` 属性设置为 `contentsync/config`. 的 `cq:ContentSyncConfig` 节点可以位于存储库中的任意位置，但AEM发布实例上的用户必须可以访问该节点。 因此，您应将节点添加到下面 `/content`.
 
-要指定内容同步ZIP文件的内容，请将子节点添加到cq：ContentSyncConfig节点。 每个子节点的以下属性标识要包含的内容项，以及在添加该内容项时如何对其进行处理：
+要指定内容同步ZIP文件的内容，请将子节点添加到cq:ContentSyncConfig节点。 每个子节点的以下属性标识要包含的内容项目以及添加该内容项目时如何处理该内容项目：
 
-* `path`：内容的位置。
-* `type`：用于处理内容的配置类型的名称。 提供了几种类型，在配置类型中对此进行了介绍。
+* `path`:内容的位置。
+* `type`:用于处理内容的配置类型的名称。 有几种类型可用，有关这些类型的说明，请参见配置类型。
 
 请参阅示例内容同步配置。
 
-创建内容同步配置后，该配置将显示在内容同步控制台中。
+创建内容同步配置后，该配置会显示在内容同步控制台中。
 
 >[!NOTE]
 >
->内容同步框架不检查资产和相关设计文件的依赖项是否包含在内容同步包中。 确保在ZIP文件中包含所有必需的文件。
+>内容同步框架不会检查内容同步包中是否包含资产和与设计相关的文件的依赖项。 确保在ZIP文件中包含所有必需的文件。
 
-### 配置对内容同步下载的访问权限 {#configuring-access-to-content-sync-downloads}
+### 配置对内容同步下载的访问 {#configuring-access-to-content-sync-downloads}
 
-指定可从内容同步下载的用户或组。 您可以配置可以从所有内容同步缓存下载的默认用户或组，也可以覆盖默认用户或组并配置特定内容同步配置的访问权限。
+指定可从内容同步下载的用户或组。 您可以配置默认用户或组，以从所有内容同步缓存中下载该用户或组，并且可以覆盖默认用户或组，并配置对特定内容同步配置的访问权限。
 
-安装AEM后，管理员组的成员可以默认从Content Sync下载。
+安装AEM后，管理员组的成员默认可以从内容同步下载。
 
 ### 设置内容同步下载的默认访问权限 {#setting-the-default-access-for-content-sync-downloads}
 
-Day CQ内容同步管理器服务控制对内容同步的访问。 配置此服务以指定默认情况下可从Content Sync下载的用户或组。
+Day CQ内容同步管理器服务控制对内容同步的访问。 配置此服务以指定默认可从内容同步下载的用户或组。
 
-如果您是 [使用Web控制台配置服务](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)，键入用户或组的名称作为后备缓存可授权属性的值。
+如果您 [使用Web控制台配置服务](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)，键入用户或组的名称作为回退缓存可授权属性的值。
 
-如果您是 [在存储库中配置](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository)中，使用以下有关服务的信息：
+如果您 [在存储库中配置](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository)，请使用有关服务的以下信息：
 
-* PID： com.day.cq.contentsync.impl.ContentSyncManagerImpl
-* 属性名称： contentsync.fallback.authorizable
+* PID:com.day.cq.contentsync.impl.ContentSyncManagerImpl
+* 属性名称：contentsync.fallback.authorizable
 
-#### 覆盖内容同步缓存的下载访问权限 {#overriding-download-access-for-a-content-sync-cache}
+#### 覆盖内容同步缓存的下载访问 {#overriding-download-access-for-a-content-sync-cache}
 
-要配置特定内容同步配置的下载访问权限，请将以下属性添加到 `cq:ContentSyncConfig` 节点：
+要为特定内容同步配置配置下载访问权限，请将以下属性添加到 `cq:ContentSyncConfig` 节点：
 
 * 名称：可授权
 * 类型：字符串
 * 值：可下载的用户或组的名称。
 
-例如，您的应用程序允许用户直接从Content Sync安装更新。 要允许所有用户下载更新，请将可授权属性的值设置为 `everyone`.
+例如，您的应用程序允许用户直接从内容同步安装更新。 要使所有用户能够下载更新，请将可授权属性的值设置为 `everyone`.
 
-如果 `cq:ContentSyncConfig` 节点没有可授权属性，为Day CQ Content Sync Manager服务的Fallback Cache Authorizable属性配置的默认用户或组决定了谁可以下载。
+如果 `cq:ContentSyncConfig` 节点没有可授权属性，为Day CQ内容同步管理器服务的回退缓存可授权属性配置的默认用户或组将决定可以下载的人员。
 
 ### 配置用户以更新内容同步缓存 {#configuring-the-user-for-updating-a-content-sync-cache}
 
-当用户对内容同步缓存执行更新时，特定用户帐户代表用户执行该操作。 默认情况下，匿名用户会更新所有Content Sync缓存。
+当用户对内容同步缓存执行更新时，特定用户帐户代表用户执行该操作。 默认情况下，匿名用户会更新所有内容同步缓存。
 
-您可以覆盖默认用户，并指定更新特定内容同步缓存的用户或组。
+您可以覆盖默认用户并指定更新特定内容同步缓存的用户或组。
 
-要覆盖默认用户，请指定用户或组，通过将以下属性添加到cq：ContentSyncConfig节点来为特定内容同步配置执行更新：
+要覆盖默认用户，请通过向cq:ContentSyncConfig节点添加以下属性来指定执行特定内容同步配置更新的用户或组：
 
-* 名称： updateuser
+* 名称：updateuser
 * 类型：字符串
 * 值：可执行更新的用户或组的名称。
 
-如果cq：ContentSyncConfig节点没有updateuser属性，则默认匿名用户将更新缓存。
+如果cq:ContentSyncConfig节点没有updateuser属性，则默认匿名用户会更新缓存。
 
 ### 配置类型 {#configuration-types}
 
-处理范围从呈现简单的JSON到完全呈现页面（包括其引用的资产）。 此部分列出了可用的配置类型及其特定参数：
+处理过程可能包括渲染简单的JSON，以及完全渲染页面（包括其引用的资产）。 本节列出了可用的配置类型及其特定参数：
 
-**复制** 只需复制文件和文件夹。
+**复制** 只需复制文件和文件夹即可。
 
-* **路径**  — 如果路径指向单个文件，则仅复制该文件。 如果它指向一个文件夹（这包含页面节点），则会复制下面的所有文件和文件夹。
+* **路径**  — 如果路径指向单个文件，则仅复制文件。 如果指向文件夹（其中包括页面节点），则将复制下面的所有文件和文件夹。
 
-**内容** 使用标准Sling请求处理呈现内容。
+**内容** 使用标准Sling请求处理渲染内容。
 
-* **路径**  — 应输出的资源的路径。
-* **扩展**  — 应在请求中使用的扩展。 常见示例包括 *html* 和 *json*，但任何其他扩展都是可能的。
+* **路径**  — 应输出的资源路径。
+* **扩展**  — 请求中应使用的扩展。 常见示例包括 *html* 和 *json*，但可以使用任何其他扩展。
 
-* **选择器**  — 可选的选择器，以点分隔。 常见示例包括 *触控* 用于呈现页面的移动版本或 *无限* 用于JSON输出。
+* **选择器**  — 可选选择器，以圆点分隔。 常见示例包括 *触控* 用于呈现页面或 *无限* （对于JSON输出）。
 
 **clientlib** 打包Javascript或CSS客户端库。
 
 * **路径**  — 客户端库的根路径。
-* **扩展**  — 客户端库的类型。 此参数应设置为 *js* 或 *css* 此刻。
+* **扩展**  — 客户端库的类型。 此值应设置为 *js* 或 *css* 现在。
 
-* **includeFolders**  — 类型是一个字符串数组，它允许用户指定要在客户端库中扫描的其他文件夹以获取文件（如自定义字体）。
+* **includeFolders**  — 类型是字符串数组，它允许用户指定其他文件夹，以在客户端库中扫描以获取文件（如自定义字体）。
 
 **资产**
 
-收集资源的原始演绎版。
+收集资产的原始演绎版。
 
-* **路径** - /content/dam下的资源文件夹的路径。
-* **演绎版**  — 类型是一个字符串数组，允许用户指定要使用的演绎版，而不是默认图像。 以下列表汇总了一些现成的演绎版，但您也可以使用工作流创建的任何演绎版：
+* **路径** - /content/dam下资产文件夹的路径。
+* **演绎版**  — 类型是一个字符串数组，用户可以指定要使用的演绎版，而不是默认图像。 以下列表汇总了一些现成的演绎版，但您也可以使用工作流创建的任何演绎版：
 
    * *原始*
    * *cq5dam.thumbnail.48.48.png*
@@ -152,42 +150,42 @@ Day CQ内容同步管理器服务控制对内容同步的访问。 配置此服�
 
 图像类型用于在zip文件中包含We.Retail徽标。
 
-**页面** 渲染AEM页面并收集引用的资源。
+**页面** 呈现AEM页面并收集引用的资产。
 
-* **路径**  — 页面的路径。
-* **扩展**  — 应在请求中使用的扩展。 对于页面，这种情况几乎总是 *html*，但其他功能仍然可用。
+* **路径**  — 页面路径。
+* **扩展**  — 请求中应使用的扩展。 对于页面，这几乎总是 *html*&#x200B;但其他仍有可能。
 
-* **选择器**  — 可选的选择器，以点分隔。 常见示例包括 *触控* 用于呈现页面的移动设备版本。
+* **选择器**  — 可选选择器，以圆点分隔。 常见示例包括 *触控* ，用于渲染页面的移动版本。
 
-* **深**  — 可选的布尔属性，用于确定是否也应包含子页面。 默认值为 *对。*
+* **深层**  — 确定是否应包含子页面的可选布尔属性。 默认值为 *真的。*
 
-* **includeImages**  — 可选的布尔属性，用于确定是否应包含图像。 默认值为 *true*.
-默认情况下，只考虑包含资源类型为foundation/components/image的图像组件。 您可以通过配置 **Day CQ WCM页面更新处理程序** 在Web控制台中。
+* **includeImages**  — 确定是否应包含图像的可选布尔属性。 默认值为 *true*.
+默认情况下，仅考虑包含资源类型为foundation/components/image的图像组件。 您可以通过配置 **Day CQ WCM页面更新处理程序** 中。
 
-**重写** rewrite节点定义如何在导出的页面中重写链接。 重写的链接可以指向zip文件中包含的文件或服务器上的资源。
+**重写** 重写节点定义链接在导出的页面中的重写方式。 重写的链接可以指向zip文件中包含的文件，也可以指向服务器上的资源。
 
-此 `rewrite` 节点需要位于 `page` 节点。
+的 `rewrite` 节点需要位于 `page` 节点。
 
-此 `rewrite` 节点可以具有以下一个或多个属性：
+的 `rewrite` 节点可以具有以下一个或多个属性：
 
-* `clientlibs`：重写clientlibs路径。
+* `clientlibs`:重写clientlibs路径。
 
-* `images`：重写图像路径。
-* `links`：重写链接路径。
+* `images`:重写图像路径。
+* `links`:重写链接路径。
 
 每个属性可以具有以下值之一：
 
-* `REWRITE_RELATIVE`：使用相对于文件系统上的页面.html文件的位置重写路径。
+* `REWRITE_RELATIVE`:用相对于文件系统上的page .html文件的位置重写路径。
 
-* `REWRITE_EXTERNAL`：通过使用AEM指向服务器上的资源来重写路径 [Externalizer服务](/help/sites-developing/externalizer.md).
+* `REWRITE_EXTERNAL`:使用AEM通过指向服务器上的资源重写路径 [外部器服务](/help/sites-developing/externalizer.md).
 
-AEM服务调用了 **PathRewriterTransformerFactory** 用于配置将重写的特定html属性。 该服务可以在Web控制台中配置，并且每个属性的配置都为 `rewrite` 节点： `clientlibs`， `images` 和 `links`.
+名为的AEM服务 **PathRewriterTransformerFactory** 用于配置将被重写的特定html属性。 该服务可以在Web控制台中配置，并且为 `rewrite` 节点： `clientlibs`, `images` 和 `links`.
 
-AEM 5.5中添加了此功能。
+此功能已在AEM 5.5中添加。
 
-### 示例内容同步配置 {#example-content-sync-configuration}
+### 内容同步配置示例 {#example-content-sync-configuration}
 
-以下列表显示了内容同步的示例配置。
+下面列出了内容同步的示例配置。
 
 ```java
 + weretail_go [cq:ContentSyncConfig]
@@ -223,49 +221,49 @@ AEM 5.5中添加了此功能。
   + ...
 ```
 
-**etc.designs.default和etc.designs.mobile** 配置的前两个条目应该非常明显。 由于我们将包含多个移动页面，因此我们需要/etc/designs下的相关设计文件。 由于不需要额外的处理，因此只需复制即可。
+**etc.designs.default等.designs.mobile** 配置的前两个条目应该非常明显。 由于我们将包含许多移动页面，因此需要/etc/designs下的相关设计文件。 由于不需要额外处理，因此复制就足够了。
 
-**events.plist** 这个条目有点特别。 如简介中所述，应用程序应提供包含事件位置标记的地图视图。 我们将以PLIST格式作为单独的文件提供所需的位置信息。 要使此功能正常工作，在索引页面上使用的事件列表组件具有一个名为plist.jsp的脚本。 当使用.plist扩展名请求组件的资源时，将执行此脚本。 与往常一样，组件路径在path属性中给出，并且类型设置为content，因为我们希望利用Sling请求处理。
+**events.plist** 这个条目有点特别。 如导言中所述，应用程序应提供包含事件位置标记的地图视图。 我们将以PLIST格式作为单独的文件提供必要的位置信息。 要使其正常工作，在索引页上使用的事件列表组件具有一个名为plist.jsp的脚本。 当使用.plist扩展名请求组件的资源时，将执行此脚本。 与往常一样，组件路径在path属性中给定，类型设置为内容，因为我们希望利用Sling请求处理。
 
-**events.touch.html** 接下来是将在应用程序中显示的实际页面。 path属性设置为事件的根页面。 该页面下的所有事件页面也将包含在内，因为deep属性默认为true。 我们将页面用作配置类型，以便包含可能从页面上的图像或下载组件引用的任何图像或其他文件。 此外，设置触摸选择器可为我们提供页面的移动设备版本。 功能包中的配置包含更多此类条目，但为了简单起见，此处省略了这些条目。
+**events.touch.html** 接下来是应用程序中将显示的实际页面。 路径属性将设置为事件的根页面。 该页面下的所有事件页面也将包含在内，因为深层属性默认为true。 我们将页面用作配置类型，以便包含可能从页面上的图像或下载组件引用的任何图像或其他文件。 此外，设置触屏选择器还为我们提供了页面的移动版本。 功能包中的配置包含更多此类条目，但为方便起见，此处未列出这些条目。
 
-**徽标** 到目前为止，尚未提及徽标配置类型，并且它不属于任何内置类型。 但是，内容同步框架在某种程度上是可扩展的，本例将在下一节中介绍。
+**徽标** 目前尚未提到徽标配置类型，并且它不是内置类型。 但是，内容同步框架在一定程度上是可扩展的，这是一个示例，将在下一节中介绍。
 
-**清单** 通常需要在zip文件中包含某种类型的元数据，例如内容的起始页。 但是，对这些信息进行硬编码会妨碍您以后轻松更改这些信息。 内容同步框架支持此用例，方法是查找配置中的清单节点，该节点仅由名称标识，不需要配置类型。 在该特定节点上定义的每个属性都会添加到文件中，该文件也称为manifest ，驻留在zip文件的根中。
+**清单** 通常需要在zip文件中包含某种类型的元数据，例如内容的开始页面。 但是，对此类信息进行硬编码会阻止您稍后轻松更改该信息。 内容同步框架通过在配置中查找清单节点来支持此用例，清单节点仅通过名称进行标识，不需要配置类型。 在该特定节点上定义的每个属性都会添加到文件中，该文件也称为清单，并位于zip文件的根中。
 
-在本例中，事件列表页面应该是初始页面。 此信息请参见 **indexPage** 属性，因此可以随时轻松更改。 第二个属性定义 *events.plist* 文件。 正如我们稍后将看到的，客户端应用程序现在可以读取清单并根据清单执行操作。
+在示例中，事件列表页面应为初始页面。 此信息在 **indexPage** 属性，因此可以随时轻松更改。 第二个属性定义 *events.plist* 文件。 正如我们稍后将看到的，客户端应用程序现在可以读取清单并根据清单执行操作。
 
-一旦设置好配置，就可以通过浏览器或任何其他HTTP客户端下载内容，或者，如果您正在为iOS开发，则可以使用专用的WAppKitSync客户端库。 下载位置由配置的路径和 *.zip* 扩展(例如，使用本地AEM实例时)： *https://localhost:4502/content/weretail_go.zip*
+设置配置后，可以使用浏览器或任何其他HTTP客户端下载内容，或者，如果您正在为iOS进行开发，则可以使用专用的WAppKitSync客户端库。 下载位置由配置的路径和 *.zip* 扩展，例如使用本地AEM实例时： *https://localhost:4502/content/weretail_go.zip*
 
 ### 内容同步控制台 {#the-content-sync-console}
 
-内容同步控制台列出存储库中的所有内容同步配置（类型为的所有节点） `cq:ContentSyncConfig`)并为每个配置执行以下操作：
+“内容同步”控制台列出了存储库中的所有“内容同步”配置（所有类型的节点） `cq:ContentSyncConfig`)，并且对于每个配置，您可以执行以下操作：
 
 * 更新缓存。
 * 清除缓存。
 * 下载完整的zip文件。
-* 下载现在与特定日期和时间的邮政编码差异。
+* 下载现在与特定日期和时间之间的差异zip文件。
 
-这对于开发和故障排除非常有用。
+它可用于开发和疑难解答。
 
-可在以下位置访问该控制台：
+控制台可从以下位置访问：
 
 `https://localhost:4502/libs/cq/contentsync/content/console.html`
 
-它看起来如下所示：
+如下所示：
 
 ![chlimage_1](assets/chlimage_1.png)
 
 ### 扩展内容同步框架 {#extending-the-content-sync-framework}
 
-尽管配置选项的数量已经相当庞大，但可能并不涵盖特定用例的所有要求。 此部分介绍Content Sync框架的扩展点以及如何创建自定义配置类型。
+尽管配置选项的数量已经非常多，但它可能并不涵盖特定用例的所有要求。 本节介绍内容同步框架的扩展点以及如何创建自定义配置类型。
 
-对于每个配置类型，都有一个 *内容更新处理程序*，是为特定类型注册的OSGi组件工厂。 这些处理程序收集和处理内容，并将其添加到由内容同步框架维护的缓存中。 实现以下接口或抽象基类：
+对于每种配置类型，都有 *内容更新处理程序*，这是为该特定类型注册的OSGi组件工厂。 这些处理程序会收集内容、处理内容并将其添加到由内容同步框架维护的缓存中。 实现以下接口或抽象基类：
 
 * `com.day.cq.contentsync.handler.ContentUpdateHandler`  — 所有更新处理程序都需要实施的接口
-* `com.day.cq.contentsync.handler.AbstractSlingResourceUpdateHandler`  — 一个抽象类，使用Sling简化了资源的渲染
+* `com.day.cq.contentsync.handler.AbstractSlingResourceUpdateHandler`  — 使用Sling简化资源渲染的抽象类
 
-将类注册为OSGi组件工厂，并将其部署在捆绑包中的OSGi容器中。 这可以使用以下代码来完成 [Maven SCR插件](https://felix.apache.org/site/apache-felix-maven-scr-plugin.html) 使用JavaDoc标记或注释。 以下示例显示了JavaDoc版本：
+将类注册为OSGi组件工厂，并将其部署在包中的OSGi容器中。 可以使用 [Maven SCR插件](https://felix.apache.org/site/apache-felix-maven-scr-plugin.html) 使用JavaDoc标记或批注。 以下示例显示JavaDoc版本：
 
 ```java
 /*
@@ -285,15 +283,15 @@ public class OtherTypeUpdateHandler extends AbstractSlingResourceUpdateHandler {
 }
 ```
 
-请注意 *工厂* definition包含公共接口和用斜杠分隔的自定义类型。 此策略使内容同步框架能够查找并创建自定义类的实例，因为它可以识别配置条目中的自定义类型。 下一部分提供了自定义更新处理程序的具体示例。
+请注意， *工厂* 定义包含通用界面和以斜杠分隔的自定义类型。 此策略使内容同步框架能够查找和创建自定义类的实例，因为它识别配置条目中的自定义类型。 下一节提供了自定义更新处理程序的具体示例。
 
 >[!CAUTION]
 >
->在AbstractSlingResourceUpdateHandler基类上构建时，必须添加 *inherit* 定义。 否则，OSGi容器不会设置基类中声明的必需引用。
+>在基于AbstractSlingResourceUpdateHandler基类构建时，必须添加 *继承* 定义。 否则，OSGi容器将不会设置在基类中声明的必需引用。
 
 ### 实施自定义更新处理程序 {#implementing-a-custom-update-handler}
 
-每个We.Retail Mobile页面的左上角都有一个徽标，当然，我们要将该徽标包含在zip文件中。 但是，对于缓存优化，AEM不会引用图像文件在存储库中的实际位置，这会阻止我们仅使用 **复制** 配置类型。 相反，我们需要做的是提供我们自己的 **徽标** 使图像在AEM请求的位置可用的配置类型。 以下代码列表显示了徽标更新处理程序的完整实施：
+当然，每个We.Retail Mobile页面的左上角都包含一个要包含在zip文件中的徽标。 但是，对于缓存优化， AEM不会引用图像文件在存储库中的实际位置，这会阻止我们仅使用 **复制** 配置类型。 相反，我们需要做的是提供我们自己的 **徽标** 使图像在AEM请求的位置可用的配置类型。 以下代码列表显示了徽标更新处理程序的完整实施：
 
 #### LogoUpdateHandler.java {#logoupdatehandler-java}
 
@@ -359,39 +357,39 @@ public class LogoUpdateHandler implements ContentUpdateHandler {
 }
 ```
 
-此 `LogoUpdateHandler` 类实现 `ContentUpdateHandler` 界面 `updateCacheEntry(ConfigEntry, Long, String, Session, Session)` 方法，它采用多个参数：
+的 `LogoUpdateHandler` 类实现 `ContentUpdateHandler` 界面 `updateCacheEntry(ConfigEntry, Long, String, Session, Session)` 方法，它采用多个参数：
 
-* A `ConfigEntry` 提供对配置条目（该处理程序针对此条目而调用）及其属性的访问权限的实例。
-* A `lastUpdated` 时间戳，指示内容同步上次更新其缓存的时间。 处理程序不应更新在该时间戳之后未修改的内容。
-* A `configCacheRoot` 参数，指定缓存的根路径。 所有更新的文件都必须存储在此路径下方，才能添加到zip文件中。
-* 应用于所有与缓存相关的存储库操作的管理会话。
-* 用户会话，可用于更新特定用户上下文中的内容，从而提供个性化内容。
+* A `ConfigEntry` 提供对为其调用此处理程序的配置条目及其属性的访问权限的实例。
+* A `lastUpdated` 时间戳，指示内容同步上次更新其缓存的时间。 处理程序不应更新在该时间戳后未修改的内容。
+* A `configCacheRoot` 指定缓存根路径的参数。 所有更新的文件都必须存储在此路径下方，才能添加到zip文件中。
+* 应用于所有缓存相关存储库操作的管理会话。
+* 一种用户会话，可用于在特定用户的上下文中更新内容，从而提供一种个性化内容。
 
-要实施自定义处理程序，请首先基于配置条目中给定的资源创建Image类的实例。 这基本上与我们页面上实际的徽标组件执行的操作相同。 它确保图像的目标路径与页面中引用的路径相同。
+要实施自定义处理程序，请首先根据配置条目中给定的资源创建Image类的实例。 这基本上与我们页面上实际的徽标组件执行的操作过程相同。 它可确保图像的目标路径与从页面引用的路径相同。
 
-接下来，检查自上次更新以来是否修改了资源。 自定义实施应避免对缓存进行不必要的更新，如果未做任何更改，则返回false。 如果修改了资源，请将映像复制到相对于缓存根目录的预期目标位置。 最后， `true` 返回以向框架指示缓存已更新。
+接下来，检查自上次更新后是否修改了资源。 自定义实施应避免对缓存进行不必要的更新，并在没有发生任何更改时返回false。 如果资源已修改，请将图像复制到与缓存根目录相关的预期目标位置。 最后， `true` 返回，以向框架指示缓存已更新。
 
-## 使用客户端上的内容 {#using-the-content-on-the-client}
+## 在客户端上使用内容 {#using-the-content-on-the-client}
 
-要在内容同步提供的移动应用程序中使用内容，您需要通过HTTP或HTTPS连接请求内容。 因此，检索的内容（打包在ZIP文件中）可以被提取并存储在移动设备本地。 请注意，内容不仅涉及数据，还涉及逻辑，即完整的Web应用程序；从而使移动用户即使没有网络连接也能执行检索到的Web应用程序和相应的数据。
+要在内容同步提供的移动设备应用程序中使用内容，您需要通过HTTP或HTTPS连接请求内容。 因此，可以提取检索到的内容（打包成ZIP文件）并将其存储在移动设备上的本地。 请注意，内容不仅指数据，还指逻辑，即完整的Web应用程序；从而使得移动用户即使在没有网络连接的情况下也能执行检索到的web应用和相应的数据。
 
-内容同步以智能方式交付内容：仅交付自上次成功数据同步后发生的数据更改，从而减少数据传输所需的时间。 在首次运行应用程序时，从1970年1月1日起请求更改数据，而随后只请求自上次成功同步以来更改的数据。 AEM利用iOS的客户端通信框架来简化数据通信和传输，从而只需少量本机代码即可启用基于iOS的Web应用程序。
+内容同步以智能方式交付内容：只传送自上次成功数据同步以来的数据更改，从而减少数据传输所需的时间。 自1970年1月1日起，在首次运行应用程序时请求数据更改，随后只请求自上次成功同步以来更改的数据。 AEM利用iOS的客户端通信框架来简化数据通信和传输，从而需要最少量的本机代码才能启用基于iOS的web应用程序。
 
-所有传输的数据都可提取到相同的目录结构中，提取数据时不需要额外的步骤（例如依赖关系检查）。 对于iOS，所有数据都存储在iOS应用程序的Documents文件夹的子文件夹中。
+所有传输的数据都可以提取到同一目录结构中，因此在提取数据时无需执行其他步骤（如依赖项检查）。 对于iOS，所有数据都存储在iOS应用程序Documents文件夹的子文件夹中。
 
 基于iOS的AEM Mobile应用程序的典型执行路径：
 
 * 用户在iOS设备上启动应用程序。
-* 应用程序尝试连接到AEM后端，并请求自上次运行以来的数据更改。
-* 服务器检索有问题的数据并将这些数据压缩到一个文件中。
-* 数据将返回到客户端设备，并提取到文档文件夹中。
+* 应用程序会尝试连接到AEM后端，并请求自上次运行以来的数据更改。
+* 服务器会检索相关数据，并将其压缩到文件中。
+* 数据将返回到客户端设备，并将其提取到文档文件夹中。
 * UIWebView组件启动/刷新。
 
-如果无法建立连接，将显示以前下载的数据。
+如果无法建立连接，则会显示之前下载的数据。
 
-### 快速入门 {#getting-ahead}
+### 抢滩 {#getting-ahead}
 
 要了解管理员和开发人员的角色和职责，请参阅以下资源：
 
-* [使用AEM为Adobe PhoneGap Enterprise创作](/help/mobile/phonegap.md)
+* [使用AEM创作Adobe PhoneGap企业版](/help/mobile/phonegap.md)
 * [使用AEM管理Adobe PhoneGap Enterprise的内容](/help/mobile/administer-phonegap.md)

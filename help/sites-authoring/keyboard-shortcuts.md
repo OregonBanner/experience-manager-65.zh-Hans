@@ -1,8 +1,6 @@
 ---
-title: 控制台的键盘快捷键
-seo-title: Keyboard Shortcuts for Consoles
-description: 创作时使用这些键盘快捷键可以节省时间
-seo-description: Save time when authoring by using these keyboard shortcuts
+title: AEM控制台的键盘快捷键
+description: 使用这些键盘快捷键进行创作时可节省时间。
 uuid: 3b90570f-e187-4f09-9ccf-838e5657de2f
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,10 +8,10 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: f5ab3f61-aa5a-49ae-a976-6ab7f0d11ea6
 exl-id: c58981a0-cdde-4593-b633-7f6898f8f5f5
-source-git-commit: ad8f98d22c2f2095ee92741331170be996103d95
+source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
 workflow-type: tm+mt
-source-wordcount: '378'
-ht-degree: 100%
+source-wordcount: '380'
+ht-degree: 52%
 
 ---
 
@@ -36,7 +34,7 @@ ht-degree: 100%
 |  | `Left Arrow` | 向上导航树结构/折叠树节点 |
 |  | `Down Arrow` | 在同一级别的页面列表中向下移动 |
 |  | `Up Arrow` | 在同一级别的页面列表中向上移动 |
-| 控制台 - 列视图 | `Shift-Up/Down Arrow` | 在同一级别的页面列表中向上移动 |
+| 控制台 — 列视图 | `Shift-Up/Down Arrow` | 在同一级别的页面列表中向上移动 |
 |  | `Esc` | 在同一级别的页面列表中向上移动 |
 | 控制台 | `?` | 键盘快捷键帮助 |
 |  | `/` | 调用[搜索](/help/sites-authoring/search.md) |
@@ -52,7 +50,7 @@ ht-degree: 100%
 
 这些列出的组合键采用的是 Windows [修饰符键](/help/sites-authoring/keyboard-shortcuts.md#os-specific-modifier-keys)。
 
-在使用[页面编辑器](/help/sites-authoring/page-authoring-keyboard-shortcuts.md)创作页面时，桌面用户也可以使用各种键盘快捷键。
+在使用 [页面编辑器](/help/sites-authoring/page-authoring-keyboard-shortcuts.md) 创作页面。
 
 ## 特定于操作系统的修饰符键 {#os-specific-modifier-keys}
 
@@ -65,19 +63,19 @@ ht-degree: 100%
 
 ## 浏览器和键盘快捷键 {#browsers-and-keyboard-shortcuts}
 
-AEM 会避免使用已被常用浏览器使用的常见快捷键，但默认的浏览器行为不会被 AEM 快捷键覆盖。
+AEM会避免常用浏览器已使用的常见快捷键，但默认的浏览器行为不会被AEM快捷键覆盖。
 
-另外，键盘快捷键对于所有区域设置和键盘布局都是相同的。
+此外，所有区域设置和键盘布局的键盘快捷键都是相同的。
 
 >[!NOTE]
 >
->AEM 快捷键不会覆盖默认的浏览器行为。
+>AEM快捷键不会覆盖默认的浏览器行为。
 >
->如果 AEM 快捷键和浏览器快捷键之间发生冲突，则 AEM 快捷键将不起作用，而是会执行浏览器功能。
+>如果AEM快捷键和浏览器快捷键之间发生冲突，则AEM快捷键将无法正常使用，而是只能使用浏览器功能。
 
 >[!CAUTION]
 >
->AEM 键盘快捷键可能会干扰屏幕阅读器、某些浏览器功能以及其他辅助功能工具。
+>AEM键盘快捷键可能会干扰屏幕阅读器、某些浏览器功能和其他辅助工具。
 >
 >Adobe 建议在使用屏幕阅读器时[禁用 AEM 键盘快捷键](/help/sites-authoring/keyboard-shortcuts.md#deactivating-keyboard-shortcuts)。
 
@@ -85,7 +83,7 @@ AEM 会避免使用已被常用浏览器使用的常见快捷键，但默认的�
 
 AEM 为一些常用功能（编辑、属性、复制/粘贴、显示各种侧边栏菜单等）提供了键盘快捷键。
 
-对于不使用键盘快捷键或要求使用特定辅助功能的用户，可禁用所有键盘快捷键。
+对于未使用键盘快捷键或要求使用特定辅助功能的用户，可以禁用所有键盘快捷键。
 
 您可以在以下两个位置取消激活键盘快捷键：
 
