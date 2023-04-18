@@ -1,8 +1,6 @@
 ---
-title: 疑难解答
-seo-title: Troubleshooting
+title: 对AEM安装问题进行故障诊断
 description: 本文介绍了您在使用AEM时可能遇到的一些安装问题。
-seo-description: This article covers some of the installation issues you might encounter with AEM.
 uuid: 2ca898c3-b074-4ccd-a383-b92f226e6c14
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,14 +8,14 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: 5542de4e-6262-4300-9cf8-0eac79ba4f9a
 exl-id: 55576729-be9c-412e-92ac-4be90650c6fa
-source-git-commit: e147605ff4d5c3d2403632285956559db235c084
+source-git-commit: a2fd3c0c1892ac648c87ca0dec440e22144c37a2
 workflow-type: tm+mt
-source-wordcount: '1163'
+source-wordcount: '1171'
 ht-degree: 0%
 
 ---
 
-# 疑难解答{#troubleshooting}
+# 对AEM安装问题进行故障诊断{#troubleshooting}
 
 本节包含可帮助您进行故障诊断的日志的详细信息，还包含有关您在AEM中可能遇到的一些问题的信息。
 

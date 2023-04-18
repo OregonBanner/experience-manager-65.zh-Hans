@@ -1,8 +1,6 @@
 ---
-title: AEM 故障排除
-seo-title: Troubleshooting AEM
+title: 疑难解答Adobe Experience Manager
 description: 了解AEM的疑难解答。
-seo-description: Learn about troubleshooting issues with AEM.
 uuid: 72379531-915c-45d0-ba70-42b212665272
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,16 +9,16 @@ content-type: reference
 discoiquuid: 6346cd93-1ca3-4510-9c31-a74c41017ddb
 docset: aem65
 exl-id: d2d351e7-87a5-4895-b4ec-391fb0b66798
-source-git-commit: e147605ff4d5c3d2403632285956559db235c084
+source-git-commit: a2fd3c0c1892ac648c87ca0dec440e22144c37a2
 workflow-type: tm+mt
-source-wordcount: '538'
+source-wordcount: '545'
 ht-degree: 4%
 
 ---
 
-# AEM 故障排除 {#troubleshooting-aem}
+# 疑难解答Adobe Experience Manager {#troubleshooting-aem}
 
-以下部分涵盖您在使用AEM时可能遇到的一些问题，以及有关如何对这些问题进行故障诊断的建议。
+以下部分涵盖您在使用AEM(Adobe Experience Manager)时可能遇到的一些问题，以及有关如何对这些问题进行故障诊断的建议。
 
 >[!NOTE]
 >

@@ -1,41 +1,41 @@
 ---
-title: 如何使用WS-security标头传递凭据？
-description: 了解如何使用WS-security标头传递凭据
+title: 在JEE自定义DSC中使用AEM Forms压缩和解压缩文件
+description: 了解如何在JEE Custom DSC中使用AEM Forms压缩和解压缩文件
 exl-id: 1b950d8f-6b54-452a-831b-f5644370691d
-source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
+source-git-commit: a2fd3c0c1892ac648c87ca0dec440e22144c37a2
 workflow-type: tm+mt
-source-wordcount: '473'
+source-wordcount: '485'
 ht-degree: 0%
 
 ---
 
 # 在JEE自定义DSC中使用AEM Forms压缩和解压缩文件 {#compressing-decompressing-files}
 
-## 必备知识 {#prerequisites}
+## 先决知识 {#prerequisites}
 
-在JEE流程管理、基本Java编程和创建自定义组件方面使用AEM Forms的经验。
+在JEE流程管理、基本Java编程和创建自定义组件方面的AEM Forms经验。
 
-**其他必需的其他产品**
+**其他必需的产品**
 
 Java编辑器，例如 [Eclipse](https://www.eclipse.org/) 或 [Netbeans IDE](https://netbeans.apache.org/)
 
 ## 用户级别 {#user-level}
 
-中级
+中间
 
-通过JEE上的AEM Forms，开发人员可以创建自定义DSC（文档服务容器），以创建丰富的开箱即用功能。 创建此类组件可插入JEE运行时环境的AEM Forms，并且符合预期目的。 本文介绍如何创建自定义ZIP服务，该服务可用于将文件列表压缩为.zip文件，并将.zip解压缩为文档列表。
+AEM Forms on JEE使开发人员能够创建自定义DSC（文档服务容器），以创建富集的开箱即用功能。 创建此类组件可插入到JEE运行时环境上的AEM Forms，并且可达到预期目的。 本文介绍如何创建自定义ZIP服务，该服务可用于将文件列表压缩为.zip文件，并将.zip解压缩到文档列表。
 
 ## 创建自定义DSC组件 {#create-custom-dsc-component}
 
-创建具有两个服务操作的自定义DSC组件，以压缩和解压缩文档列表。 此组件使用java.util.zip包进行压缩和解压缩。 请按照以下步骤创建自定义组件：
+使用两个服务操作创建自定义DSC组件以压缩和解压缩文档列表。 此组件使用java.util.zip包进行压缩和解压缩。 按照以下步骤创建自定义组件：
 
 1. 将adobe-livecycle-client.jar文件添加到库中
 1. 添加所需的图标
 1. 创建公共类
-1. 创建两个名为UnzipDocument和ZipDocuments的公共方法
-1. 编写压缩和解压缩逻辑
+1. 创建两个名为UnzipDocument &amp; ZipDocuments的公共方法
+1. 编写压缩和解压缩的逻辑
 
-可以在此处找到代码：
+代码可在此处找到：
 
 ```java
 /*
@@ -122,7 +122,7 @@ public class ZIPService {
 
 ## 创建Component.XML文件 {#create-component-xml-file}
 
-必须在包的根文件夹内创建component.xml文件，该文件定义了服务操作及其参数。
+必须在定义服务操作及其参数的包的根文件夹中创建component.xml文件。
 
 component.xml文件如下所示：
 
@@ -188,22 +188,22 @@ component.xml文件如下所示：
 ## 打包和部署组件 {#packaging-deploying-component}
 
 1. 编译Java项目并创建.JAR文件。
-1. 通过Workbench在JEE运行时将组件（.JAR文件）部署到AEM Forms。
+1. 通过Workbench将组件（.JAR文件）部署到JEE运行时的AEM Forms。
 1. 从Workbench启动服务（请参阅下图）。
 
 ![流程设计](assets/process-design.jpg)
 
 ## 在工作流中使用ZIP服务 {#using-zip-service-in-workflows}
 
-自定义服务的UnzipDocument操作现在可接受文档变量作为输入，并返回文档变量列表作为输出。
+自定义服务的UnzipDocument操作现在可以接受文档变量作为输入，并返回文档变量列表作为输出。
 
 ![解压缩文档](assets/unzip-doc.jpg)
 
-同样，自定义组件的ZipDocuments操作可以接受文档列表作为输入，将它们压缩为zip文件并返回压缩的文档。
+同样，自定义组件的ZipDocuments操作也可以接受文档列表作为输入，将其压缩为zip文件，并返回压缩的文档。
 
-![Zip文档](assets/zip-doc.jpg)
+![邮政编码文档](assets/zip-doc.jpg)
 
-以下工作流编排显示了如何解压缩给定的ZIP文件，将其压缩回另一个ZIP文件并返回输出（请参阅下图）。
+以下工作流编排展示了如何解压缩给定的ZIP文件，将其压缩回另一个ZIP文件，并返回输出（请参阅下图）。
 
 ![解压缩Zip工作流](assets/unzip-zip-process.jpg)
 
@@ -211,12 +211,12 @@ component.xml文件如下所示：
 
 您可以将此ZIP服务用于以下用例：
 
-* 查找给定文件夹中的所有文件，并将文件作为压缩文档返回。
+* 在给定文件夹中查找所有文件，并将文件作为压缩文档返回。
 
-* 提供包含许多PDF文档的ZIP文件，在解压缩文档后可以扩展这些文档的读取器。 这需要AEM Forms on JEEReader扩展模块。
+* 提供包含大量PDF文档的ZIP文件，在解压缩后，这些文档可供读取器扩展。 这需要JEEReader扩展模块上的AEM Forms。
 
-* 提供一个包含异种类型文档的ZIP文件，可使用生成PDF服务将这些文件解压缩并转换为PDF文档。
+* 提供包含异构类型文档的ZIP文件，此类文档可以通过“生成PDF”服务解压缩并转换为PDF文档。
 
-* 策略保护文档列表并作为ZIP文件返回。
+* 策略可保护文档列表并以ZIP文件形式返回。
 
-* 允许用户将流程实例的所有附件下载为一个ZIP文件。
+* 允许用户将流程实例的所有附件下载为单个ZIP文件。

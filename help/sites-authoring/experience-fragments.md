@@ -1,8 +1,6 @@
 ---
-title: 体验片段
-seo-title: Experience Fragments
+title: AEM Sites创作中的体验片段
 description: 体验片段
-seo-description: null
 uuid: 9a1d12ef-5690-4a2e-8635-a710775efa39
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,33 +9,33 @@ content-type: reference
 discoiquuid: 4c5b52c3-5e23-4125-9306-48bf2ded23cb
 docset: aem65
 exl-id: 1ff9ac47-9a3a-4a4e-8af8-bc73048e0409
-source-git-commit: 2f635d5c856b35794ef2d62c15bc7cf4f4e57773
+source-git-commit: a2fd3c0c1892ac648c87ca0dec440e22144c37a2
 workflow-type: tm+mt
-source-wordcount: '1440'
-ht-degree: 96%
+source-wordcount: '1444'
+ht-degree: 65%
 
 ---
 
 # 体验片段{#experience-fragments}
 
-体验片段是由一个或多个组件构成的组件组，包括可在页面内引用的内容和布局。它们可包含任意组件。
+体验片段是由一个或多个组件组成的组，这些组件包括可在页面中引用的内容和布局。 它们可以包含任何组件。
 
 体验片段：
 
-* 体验的一部分（页面）。
-* 可以跨多个页面使用。
+* 是体验（页面）的一部分。
+* 可跨多个页面使用。
 * 基于模板（仅可编辑）来定义结构和组件。
 * 此模板用于创建体验片段的&#x200B;*根页面*。
-* 由段落系统中的一个或多个的组件及布局构成。
+* 由段落系统中一个或多个具有布局的组件组成。
 * 可以包含其他体验片段。
-* 可以与其他组件（包括其他体验片段）结合使用来构成完整的页面（体验）。
+* 可以与其他组件（包括其他体验片段）组合，以形成完整的页面（体验）。
 * 可以基于根页面创建一个或多个变体。
 * 这些变体可以共享内容和/或组件。
 * 可以划分为可在片段的多个变体中使用的构建块。
 
 您可以使用体验片段：
 
-* 如果作者希望重复使用页面的某些部分（某个体验片段），则需要复制并粘贴该片段。创建并维护这些复制/粘贴体验非常费时，而且容易导致用户错误。体验片段无需复制/粘贴。
+* 如果作者希望重复使用页面的各个部分（体验的片段），则需要复制并粘贴该片段。 创建并维护这些复制/粘贴体验非常费时，而且容易导致用户错误。体验片段无需复制/粘贴。
 * 支持 headless CMS 用例。
 作者希望仅将 AEM 用于创作，而不是用于提供给客户。第三方系统/触点会使用该体验，然后将其提供给最终用户。
 
@@ -48,28 +46,28 @@ ht-degree: 96%
 >    `experience-fragments-editors`
 如果您遇到任何问题，请联系您的系统管理员。
 
-## 应在何时使用体验片段？ {#when-should-you-use-experience-fragments}
+## 何时应使用体验片段？ {#when-should-you-use-experience-fragments}
 
-体验片段应在以下时候使用：
+体验片段的使用说明：
 
-* 当您需要重复使用体验时。
+* 当您想要重复使用体验时。
 
-   * 将重复使用内容相同或相似的体验
+   * 将重复使用且内容相同或相似的体验
 
 * 当您使用 AEM 作为第三方的内容投放平台时。
 
    * 任何需要使用 AEM 作为内容投放平台的解决方案
-   * 将内容嵌入第三方触点
+   * 在第三方触点中嵌入内容
 
-* 当您有一个具有不同变体或呈现版本的体验时。
+* 如果您的体验具有不同的变体或演绎版。
 
-   * 特定于渠道或上下文的变体
-   * 一些对组织有意义的体验（例如，在各渠道间具有不同体验的营销活动）
+   * 特定于渠道或上下文的变量
+   * 对组有意义的体验（例如，跨渠道具有不同体验的营销活动）
 
 * 当您使用全渠道商业时。
 
-   * 在[社交媒体](/help/sites-developing/experience-fragments.md#social-variations)渠道中大规模共享商业相关内容
-   * 使触点具有事务性
+   * 在上共享商务相关内容 [社交媒体](/help/sites-developing/experience-fragments.md#social-variations) 大规模渠道
+   * 使接触点具有事务性
 
 ## 组织您的体验片段 {#organizing-your-experience-fragments}
 
@@ -174,7 +172,7 @@ WKND 项目可根据 `Contributors` 构建一些体验片段。使用的结构�
 
 1. 输入&#x200B;**体验片段**&#x200B;的&#x200B;**属性**。
 
-   **标题**&#x200B;是必填项。如果&#x200B;**名称**&#x200B;留空，将从&#x200B;**标题**&#x200B;派生名称。
+   A **标题** 为必填项。 如果 **名称** 留空，它将从 **标题**.
 
    ![xf-04](assets/xf-04.png)
 
@@ -184,7 +182,7 @@ WKND 项目可根据 `Contributors` 构建一些体验片段。使用的结构�
 
 1. 单击&#x200B;**创建**。
 
-   将显示一条消息。选择：
+   将显示一条消息。 选择:
 
    * **完成**，可返回至控制台
 
@@ -195,44 +193,44 @@ WKND 项目可根据 `Contributors` 构建一些体验片段。使用的结构�
 体验片段编辑器提供了与普通页面编辑器类似的功能。
 
 >[!NOTE]
-请参阅[编辑页面内容](/help/sites-authoring/editing-content.md)以了解有关如何使用页面编辑器的更多信息。
+请参阅 [编辑页面内容](/help/sites-authoring/editing-content.md) 以了解有关如何使用页面编辑器的更多信息。
 
-以下示例过程说明了如何为产品创建 Teaser：
+以下示例过程说明了如何为产品创建Teaser:
 
-1. 在[组件浏览器](/help/sites-authoring/author-environment-tools.md#components-browser)中拖放 **Teaser**。
+1. 拖放 **Teaser** 从 [组件浏览器](/help/sites-authoring/author-environment-tools.md#components-browser).
 
    ![xf-05](assets/xf-05.png)
 
-1. 从组件工具栏中选择&#x200B;**[配置](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste)**。
+1. 选择 **[配置](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste)** 中。
 1. 添加&#x200B;**资产**，并根据需要定义&#x200B;**属性**。
-1. 使用&#x200B;**完成**（勾选图标）确认定义。
+1. 使用确认定义 **完成** （勾号图标）。
 1. 根据需要添加更多组件。
 
 ## 创建体验片段变体 {#creating-an-experience-fragment-variation}
 
-您可以根据自己的需要创建体验片段的变体：
+您可以根据自己的需求创建体验片段的变体：
 
-1. 打开您要进行[编辑](/help/sites-authoring/experience-fragments.md#editing-your-experience-fragment)的片段。
+1. 打开片段 [编辑](/help/sites-authoring/experience-fragments.md#editing-your-experience-fragment).
 1. 打开&#x200B;**变体**&#x200B;选项卡。
 
    ![xf-authoring-06](assets/xf-authoring-06.png)
 
-1. **创建**&#x200B;使您能够创建：
+1. **创建** 允许您创建：
 
    * **变体**
-   * **[live-copy 形式的变体](/help/sites-administering/msm.md#live-copies)**。
+   * **[live-copy 形式的变量](/help/sites-administering/msm.md#live-copies)**.
 
-1. 定义所需属性：
+1. 定义所需的属性：
 
    * **模板**
    * **标题**
-   * **名称**；如果留空，将从“标题”派生名称
+   * **名称**;如果留空，则从“标题”派生
    * **描述**
    * **变体标记**
 
    ![xf-06](assets/xf-06.png)
 
-1. 使用&#x200B;**完成**（勾选图标）确认，新的变体将显示在面板中：
+1. 使用确认 **完成** （勾号图标），则新变量将显示在面板中：
 
    ![xf-07](assets/xf-07.png)
 
@@ -240,18 +238,18 @@ WKND 项目可根据 `Contributors` 构建一些体验片段。使用的结构�
 
 您现在可以在创作页面时使用您的体验片段：
 
-1. 打开要编辑的任何页面。
+1. 打开任意页面进行编辑。
 
    例如： [https://localhost:4502/editor.html/content/we-retail/language-masters/en/products/men.html](https://localhost:4502/editor.html/content/we-retail/language-masters/en/products/men.html)
 
-1. 通过将组件从组件浏览器拖动到页面段落系统来创建“体验片段”组件的实例：
+1. 通过将组件从组件浏览器拖动到页面段落系统，创建体验片段组件的实例：
 
    ![xf-08](assets/xf-08.png)
 
 1. 向组件实例添加实际的体验片段；通过：
 
-   * 将所需片段从资产浏览器拖放到该组件上
-   * 从组件工具栏中选择&#x200B;**配置**，指定要使用的片段，然后使用&#x200B;**完成**（勾选图标）确认
+   * 将所需片段从资产浏览器拖放到组件上
+   * 选择 **配置** 从组件工具栏中，指定要使用的片段，使用确认 **完成** （勾号）
 
    ![xf-09](assets/xf-09.png)
 
@@ -284,7 +282,7 @@ WKND 项目可根据 `Contributors` 构建一些体验片段。使用的结构�
 
 #### 管理构建块 {#managing-a-building-block}
 
-您的构建块会显示在&#x200B;**构建块**&#x200B;选项卡中。对于每个基块，可执行以下操作：
+您的构建块会显示在&#x200B;**构建块**&#x200B;选项卡中。对于每个块，可以执行以下操作：
 
 * 转至母版：在新选项卡中打开根页面变体
 * 重命名
@@ -325,7 +323,7 @@ WKND 项目可根据 `Contributors` 构建一些体验片段。使用的结构�
       * **变体总数** – 仅供参考
 
       * **Web 变体的数量** – 仅供参考
-      * **非 Web 变体的数量** - **仅供参考**
+      * **非Web变体的数量** - inf **仅供参考**
 
       * **使用此片段的页数** – 仅供参考
    * **Cloud Service**
@@ -353,6 +351,6 @@ WKND 项目可根据 `Contributors` 构建一些体验片段。使用的结构�
 
 ## 导出体验片段 {#exporting-experience-fragments}
 
-默认情况下，将以 HTML 格式提供体验片段。这可以由 AEM 和相似的第三方渠道使用。
+默认情况下，体验片段以HTML格式交付。 此操作可同时由AEM和第三方渠道使用。
 
-要导出到 Adobe Target，还可以使用 JSON。请参阅 [Target 与体验片段集成](/help/sites-administering/experience-fragments-target.md)，以获取完整信息。
+要导出到Adobe Target，还可以使用JSON。 请参阅 [Target与体验片段集成](/help/sites-administering/experience-fragments-target.md) 以了解完整信息。
