@@ -9,10 +9,10 @@ content-type: reference
 discoiquuid: f488ba79-5bda-46e9-9c15-9a8c3dbfa2ce
 docset: aem65
 exl-id: 3b3c118b-ca35-484b-a62e-7bec98953123
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
+source-git-commit: bc1f0bd20804bbae78c7ea9a5209e183d6bbaaf3
 workflow-type: tm+mt
-source-wordcount: '2222'
-ht-degree: 40%
+source-wordcount: '2230'
+ht-degree: 39%
 
 ---
 
@@ -264,7 +264,7 @@ AEM 的创作环境提供了各种可用于组织和编辑内容的机制. 可�
 
 ## 页面信息 {#page-information}
 
-“页面信息”（均衡器图标）会打开一个菜单，其中也会提供有关上次编辑和上次发布的详细信息。根据页面、其站点和您的实例的特性，可用的选项可能会更多，也可能会更少：
+“页面信息”按钮（均衡器图标）会打开一个菜单，其中还提供有关上次编辑和上次发布的详细信息。 根据页面、其站点和您的实例的特性，可用的选项可能会更多，也可能会更少：
 
 ![ateat-17](assets/ateat-17.png)
 
@@ -277,7 +277,7 @@ AEM 的创作环境提供了各种可用于组织和编辑内容的机制. 可�
 * [编辑模板](/help/sites-authoring/templates.md);页面基于 [可编辑模板](/help/sites-authoring/templates.md#editable-and-static-templates)
 
 * [以发布的形式查看](/help/sites-authoring/editing-content.md#view-as-published)
-* [以管理员身份查看](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)
+* 在管理员中查看；在 [站点控制台](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)
 * [帮助](/help/sites-authoring/basic-handling.md#accessing-help)
 
 例如，在适当时， **页面信息** 还提供以下选项：
