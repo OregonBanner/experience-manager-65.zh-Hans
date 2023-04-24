@@ -1,10 +1,9 @@
 ---
 title: 技术要求
 description: Adobe Experience Manager支持的客户端和服务器平台列表。
-content-type: reference
 topic-tags: platform
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: 32af8ee1680bb0a357e64d614f22234ed331d314
+source-git-commit: fe9c77644daf3669df8cca18e65fb0f6918f853b
 workflow-type: tm+mt
 source-wordcount: '3513'
 ht-degree: 1%
@@ -100,7 +99,7 @@ Adobe Experience Manager使用以下版本的Java™虚拟机：
 | Azul Zulu OpenJDK 8 - 64位 | 答：支持 `[3]` |  |
 
 1. Oracle已转向OracleJava™ SE产品的“长期支持”(LTS)模型。 Java™ 9、Java™ 10和Java™ 12是按Oracle划分的非LTS版本(请参阅 [OracleJava™ SE支持路线图](https://www.oracle.com/technetwork/java/eol-135779.html))。 要在生产环境中部署AEM,Adobe仅支持LTS版本的Java™。 直接向所有使用OracleJava™ SE技术的AEM客户提供Adobe支持和分发OracleJava™ SE JDK，包括公共更新结束后所有LTS版本的维护更新。 请参阅 [适用于Adobe Experience Manager的Java™支持策略](assets/Java_Policy_for_Adobe_Experience_Manager.pdf).
-**重要：OracleJava™ 11至少支持到2026年9月。 正在准备支持OracleJava™ 17。**
+   **重要信息：OracleJava™ 11至少支持到2026年9月。 正在准备支持OracleJava™ 17。**
 
 1. IBM® JRE仅与WebSphere® Application Server一起受支持。
 
