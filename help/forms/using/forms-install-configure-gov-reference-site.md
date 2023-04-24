@@ -8,9 +8,9 @@ contentOwner: anujkapo
 discoiquuid: fe5da0aa-d3a8-4b77-a447-9e429fdc2816
 docset: aem65
 exl-id: 1fee474e-7da5-4ab2-881a-34b8e055aa29
-source-git-commit: ce6d24e53a27b64a5d0a9db2e4b6672bd77cf9ec
+source-git-commit: d0233ba5358f961339317bc1d63d51f1826d8c13
 workflow-type: tm+mt
-source-wordcount: '4677'
+source-wordcount: '4670'
 ht-degree: 3%
 
 ---
@@ -748,7 +748,7 @@ automated forms conversion服务包括 [最佳实践，已知的复杂模式](ht
 
 ### 启用辅助功能测试Chrome Add {#enable-chrome-add-on}
 
-要执行辅助功能测试，请安装找到的Chrome插件 [此处](https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb?hl=en). <!-- This URL is a 404. Please fix and update this topic. We ought not to be writing about third-party software that we have no control over to avoid these 404s. Consider making this topic entirely generic and leaving it up to the user to choose their own Accessibility Testing add-on. -->
+要执行辅助功能测试，请安装位于 `https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb?hl=en`. <!-- This URL is a 404. As such, please fix and update this entire topic. We ought not to be writing about third-party software that we have no control over to avoid these 404s. Consider making this topic entirely generic and leaving it up to the user to choose their own Accessibility Testing add-on. -->
 
 安装后，在Chrome浏览器中加载要测试的页面(注意：打开多个选项卡可能影响得分，最好只打开一个选项卡)。 加载页面后
 **右键单击** ，然后选择 **审核** 选项卡。 开发人员可以选择要由辅助功能插件执行的审核类型。 选择所有所需选项后，用户可以单击生成报表按钮。 这将生成一个PDF文档，其中显示整体无障碍评级以及可用于提高整体无障碍评级的内容。
