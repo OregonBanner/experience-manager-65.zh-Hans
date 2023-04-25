@@ -2,7 +2,7 @@
 title: AEM — 使用商务集成框架的商务集成常见问题解答
 description: AEM — 使用商务集成框架的商务集成常见问题解答
 exl-id: d541607f-c4c9-4dd5-aadf-64d4cb5f9f2a
-source-git-commit: 9defa6d1843007e9375d839f72f6993c691a37c0
+source-git-commit: c96f83b84ed1473aee0ddcca08a0e585ec088aa1
 workflow-type: tm+mt
 source-wordcount: '960'
 ht-degree: 0%
