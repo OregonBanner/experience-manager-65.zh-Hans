@@ -3,10 +3,10 @@ title: 用于内容片段的 AEM GraphQL API
 description: 了解如何将Adobe Experience Manager(AEM)中的内容片段与AEM GraphQL API结合使用来交付无头内容。
 feature: Content Fragments,GraphQL API
 exl-id: beae1f1f-0a76-4186-9e58-9cab8de4236d
-source-git-commit: cee709161100db6597bdb18ca03b3130d9e242f1
+source-git-commit: cf78742614fd2d35f59905895dfacb83190140cd
 workflow-type: tm+mt
-source-wordcount: '3225'
-ht-degree: 89%
+source-wordcount: '3250'
+ht-degree: 88%
 
 ---
 
@@ -239,7 +239,7 @@ Sites GraphQL 服务监听（在后台）对内容片段模型所作的任何更
 
 * 您生成的字段。
 
-   使用选择的一组[字段类型](#field-types)，根据您配置内容片段模型的方式来创建字段。字段名称获取自&#x200B;**数据类型**&#x200B;的&#x200B;**属性名称**&#x200B;字段。
+   使用选择的一组[数据类型](#data-types)，根据您配置内容片段模型的方式来创建字段。字段名称获取自&#x200B;**数据类型**&#x200B;的&#x200B;**属性名称**&#x200B;字段。
 
    * 其中还有&#x200B;**呈现为**&#x200B;属性需要考虑，因为用户可以配置特定数据类型；例如，作为单行文本或多行文本。
 
@@ -247,21 +247,23 @@ Sites GraphQL 服务监听（在后台）对内容片段模型所作的任何更
 
    这些用于标识内容片段，或者获取有关内容片段的更多信息。
 
-### 字段类型 {#field-types}
+### 数据类型 {#data-types}
 
 GraphQL for AEM 支持一个类型列表。所有支持的内容片段模型数据类型和对应的 GraphQL 类型呈现如下：
 
 | 内容片段模型 – 数据类型 | GraphQL 类型 | 描述 |
 |--- |--- |--- |
-| 单行文本 | 字符串，[字符串] | 用于简单字符串，例如作者姓名、位置名称等 |
-| 多行文本 | 字符串 | 用于输出文本，例如文章的正文 |
-| 数字 | 浮点，[浮点] | 用于显示浮点数和常规数字 |
-| 布尔型 |  布尔型 | 用于显示复选框 → 简单的 true/false 语句 |
-| 日期和时间 | 日程表 | 用于显示日期和时间，使用 ISO 8086 格式。根据选择的类型，有三种风格可用于 AEM GraphQL 中：`onlyDate`、`onlyTime`、`dateTime` |
-| 枚举 | 字符串 | 用于显示在模型创建时定义的选项列表中的选项 |
-| 标记 | [字符串] | 用于显示表示在 AEM 中所用标记的字符串列表 |
-| 内容引用 | 字符串 | 用于显示指向 AEM 中其他资源的路径 |
-| 片段引用 | *模型类型* | 用于引用特定模型类型的其他内容片段，在创建模型时定义 |
+| 单行文本 | `String`、`[String]` | 用于简单字符串，例如作者姓名、位置名称等 |
+| 多行文本 | `String` | 用于输出文本，例如文章的正文 |
+| 数字 |  `Float`, `[Float]` | 用于显示浮点数和常规数字 |
+| 布尔型 |  `Boolean` | 用于显示复选框 → 简单的 true/false 语句 |
+| 日期和时间 | `Calendar` | 用于显示日期和时间，使用 ISO 8086 格式。根据选择的类型，有三种风格可用于 AEM GraphQL 中：`onlyDate`、`onlyTime`、`dateTime` |
+| 枚举 |  `String` | 用于显示在模型创建时定义的选项列表中的选项 |
+| 标记 |  `[String]` | 用于显示表示在 AEM 中所用标记的字符串列表 |
+| 内容引用 |  `String` | 用于显示指向 AEM 中其他资源的路径 |
+| 片段引用 | *模型类型* <br><br>单个字段： `Model`  — 模型类型，直接引用 <br><br>多字段，具有一个引用类型： `[Model]`  — 类型数组 `Model`，直接从数组引用 <br><br>多字段，具有多个引用类型： `[AllFragmentModels]`  — 所有模型类型的数组，从具有并集类型的数组引用 |  用于引用在创建模型时定义的特定模型类型的一个或多个内容片段 |
+
+{style="table-layout:auto"}
 
 ### 帮助程序字段 {#helper-fields}
 
