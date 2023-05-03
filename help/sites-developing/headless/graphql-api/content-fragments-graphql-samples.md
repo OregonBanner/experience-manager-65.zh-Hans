@@ -3,10 +3,10 @@ title: 了解如何将 GraphQL 与 AEM 结合使用 – 示例内容和查询
 description: 通过探索示例内容和查询，了解如何将 GraphQL 与 AEM 结合使用，以 Headless 方式提供内容。
 feature: Content Fragments,GraphQL API
 exl-id: 91c5f61c-9c15-4d72-9b9b-0c23f31e7cdc
-source-git-commit: ad0f0bd8b0c230e002c734adca87da22bfa3a7cd
+source-git-commit: e773990c6bd32df65c7f62060f7eca5547b7b614
 workflow-type: tm+mt
-source-wordcount: '1530'
-ht-degree: 93%
+source-wordcount: '1586'
+ht-degree: 91%
 
 ---
 
@@ -1306,15 +1306,15 @@ query {
 
 **示例查询**
 
-```xml
+```graphql
 {
-  articleByPath (_path: "/content/dam/wknd/en/magazine/skitouring/skitouring") {
+  adventureByPath(_path: "/content/dam/wknd-shared/en/magazine/western-australia/western-australia-by-camper-van") {
     item {
+      _path
+      title
+      _model {
         _path
-        author
-        referencearticle {
-          _path
-          author
+        title
       }
     }
   }
@@ -1323,16 +1323,42 @@ query {
 
 ### 嵌套内容片段的示例查询 – 多个模型类型{#sample-wknd-nested-fragment-multiple-model}
 
+#### 单参照模型类型
+
 此查询查找：
 
 * 类型为 `bookmark` 的多个内容片段
-   * 带有对特定模型类型 `article` 和 `adventure` 的其他片段的片段引用
+   * 具有对特定模型类型的其他片段的片段引用 `article`
 
 >[!NOTE]
 >
->字段 `fragments` 具有数据类型 `fragment-reference`，并选择了模型 `Article`、`Adventure`。
+>字段 `fragments` 具有数据类型 `fragment-reference`，与模型一起使用 `Article` 选项。 查询传送 `fragments` 作为 `[Article]`.
 
-```xml
+```graphql
+{
+  bookmarkList {
+    items {
+        fragments {
+          _path
+          author
+        }
+     }
+  }
+}
+```
+
+#### 多个参照模型类型
+
+此查询查找：
+
+* 类型为 `bookmark` 的多个内容片段
+   * 带有对特定模型类型 `Article` 和 `Adventure` 的其他片段的片段引用
+
+>[!NOTE]
+>
+>字段 `fragments` 具有数据类型 `fragment-reference`，并选择了模型 `Article`、`Adventure`。查询传送 `fragments` 作为 `[AllFragmentModels]`，使用并集类型取消引用。
+
+```graphql
 {
   bookmarkList {
     items {
