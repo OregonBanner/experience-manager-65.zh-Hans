@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: f6112dea-a1eb-4fd6-84fb-f098476deab7
 exl-id: 95eae97c-01c2-4f5c-8068-f504eab7c49e
 feature: Security
-source-git-commit: 778987e69a23f81584f7a86db2fe24df64035919
+source-git-commit: 11db7c44853f95380fa5200efaf5691ad08b3729
 workflow-type: tm+mt
-source-wordcount: '1683'
+source-wordcount: '1677'
 ht-degree: 10%
 
 ---
@@ -30,57 +30,57 @@ ht-degree: 10%
 
 ## 简介 {#introduction}
 
-AEM 6.4.3.0引入 [!DNL Admin Console] 支持AEM实例和基于Adobe IMS(Identity Management System)的身份验证 **AEM Managed Services** 客户。
+AEM 6.4.3.0引入 [!DNL Admin Console] 支持AEM实例和基于Adobe IMS(Identity Management系统)的身份验证，以便 **AEM Managed Services** 客户。
 
-AEM入门 [!DNL Admin Console] 将允许AEM Managed Services客户在一个控制台中管理所有Experience Cloud用户。 可以将用户和组分配给与AEM实例关联的产品配置文件，以便他们登录到特定实例。
+AEM入门 [!DNL Admin Console] 将允许AEM Managed Services客户在一个控制台中管理所有Experience Cloud用户。 可以将用户分配到与AEM实例关联的产品配置文件，从而允许他们登录到特定实例。
 
 ## 主要亮点 {#key-highlights}
 
-* AEM IMS身份验证支持仅适用于AEM作者、管理员或开发人员，不适用于客户站点的外部最终用户，如站点访客
-* 此 [!DNL Admin Console] 会将AEM Managed Services客户表示为IMS组织，将其实例表示为产品上下文。 客户系统和产品管理员将能够管理对实例的访问
-* AEM Managed Services会将客户拓扑与 [!DNL Admin Console]. 中的每个实例将有一个AEM Managed Services产品上下文实例 [!DNL Admin Console].
-* 中的产品配置文件 [!DNL Admin Console] 将确定用户可以访问的实例
-* 支持使用客户自己的符合SAML 2的标识提供程序的联合身份验证
-* 仅支持Enterprise ID或Federated ID（适用于客户的单点登录），不支持个人AdobeID。
-* [!DNL User Management] (Adobe中) [!DNL Admin Console])将继续由客户管理员拥有。
+* AEM IMS身份验证支持仅适用于AEM作者、管理员或开发人员，而不适用于客户站点的外部最终用户（如站点访客）
+* 的 [!DNL Admin Console] 将AEM Managed Services客户表示为IMS组织，其实例表示为产品上下文。 客户系统和产品管理员将能够管理对实例的访问
+* AEM Managed Services将将客户拓扑与 [!DNL Admin Console]. 在 [!DNL Admin Console].
+* 中的产品配置文件 [!DNL Admin Console] 将确定用户可以访问哪些实例
+* 支持使用客户自己符合SAML 2规范的身份提供程序的联合身份验证
+* 仅支持Enterprise ID或Federated ID（用于客户单点登录），而不支持个人AdobeID。
+* [!DNL User Management] (在Adobe [!DNL Admin Console])将继续由客户管理员拥有。
 
 ## 架构 {#architecture}
 
 IMS身份验证通过在AEM和Adobe IMS端点之间使用OAuth协议来工作。 将用户添加到 IMS 并拥有 Adobe 身份后，他们便可以使用 IMS 凭证登录到 AEM Managed Services 实例。
 
-用户登录流程如下所示，用户将被重定向到IMS，并可以选择性地重定向到客户IDP进行SSO验证，然后重定向回AEM。
+下面显示了用户登录流程，用户将被重定向到IMS，并（可选）重定向到客户IDP以进行SSO验证，然后重定向回AEM。
 
 ![image2018-9-23_23-55-8](assets/image2018-9-23_23-55-8.png)
 
 ## 如何设置 {#how-to-set-up}
 
-### 将组织载入 [!DNL Admin Console] {#onboarding-organizations-to-admin-console}
+### 将组织载入到 [!DNL Admin Console] {#onboarding-organizations-to-admin-console}
 
-客户入门培训 [!DNL Admin Console] 是使用Adobe IMS进行AEM身份验证的先决条件。
+客户入门 [!DNL Admin Console] 是使用Adobe IMS进行AEM身份验证的先决条件。
 
-作为第一步，客户应在Adobe IMS中设置组织。 Adobe企业客户在中表示为IMS组织 [Adobe [!DNL Admin Console]](https://helpx.adobe.com/cn/enterprise/using/admin-console.html).
+第一步，客户应在Adobe IMS中设置组织。 Adobe企业客户在 [Adobe [!DNL Admin Console]](https://helpx.adobe.com/cn/enterprise/using/admin-console.html).
 
-AEM Managed Services客户应已配置组织，作为IMS配置的一部分，客户实例将以下列内容提供： [!DNL Admin Console] 用于管理用户权限和访问权限。
+AEM Managed Services客户应已设置组织，作为IMS设置的一部分，客户实例将在 [!DNL Admin Console] 用于管理用户权限和访问权限。
 
-迁移到IMS进行用户身份验证是AMS和客户共同努力的结果，每个客户都有自己的工作流程要完成。
+迁移到IMS以进行用户身份验证是AMS与客户共同努力的结果，每个客户都需要完成其工作流。
 
-一旦客户作为IMS组织存在，并且AMS完成为客户配置IMS后，以下是所需的配置工作流的摘要：
+客户作为IMS组织存在，并且AMS完成了为IMS配置客户的过程后，以下是所需配置工作流的摘要：
 
 ![image2018-9-23_23-33-25](assets/image2018-9-23_23-33-25.png)
 
-1. 指定的系统管理员会收到登录到 [!DNL Admin Console]
-1. 系统管理员声明域，用于确认域的所有权(在此示例中为acme.com)
+1. 指定的系统管理员将收到登录到 [!DNL Admin Console]
+1. 系统管理员声明域以确认域的所有权（在此示例中为acme.com）
 1. 系统管理员设置用户目录
-1. 系统管理员在配置身份提供程序(IDP) [!DNL Admin Console] 用于SSO设置。
-1. AEM管理员可以像往常一样管理本地组、权限和特权。 请参阅用户和组同步
+1. 系统管理员在 [!DNL Admin Console] ，用于SSO设置。
+1. AEM管理员可照常管理本地组、权限。 请参阅用户和组同步
 
 >[!NOTE]
 >
 >有关AdobeIdentity Management基础知识（包括IDP配置）的更多信息，请参阅文章 [此页面。](https://helpx.adobe.com/cn/enterprise/using/set-up-identity.html)
 >
->有关企业管理和 [!DNL Admin Console] 请参阅文章 [此页面](https://helpx.adobe.com/cn/enterprise/managing/user-guide.html).
+>有关企业管理和 [!DNL Admin Console] 请参阅文章 [本页](https://helpx.adobe.com/cn/enterprise/managing/user-guide.html).
 
-### 将用户载入 [!DNL Admin Console] {#onboarding-users-to-the-admin-console}
+### 将用户载入到 [!DNL Admin Console] {#onboarding-users-to-the-admin-console}
 
 根据客户的规模和偏好，可通过三种方式载入用户：
 
@@ -90,13 +90,13 @@ AEM Managed Services客户应已配置组织，作为IMS配置的一部分，客
 
 #### 手动添加至 [!DNL Admin Console] UI {#manual-addition-through-admin-console-ui}
 
-可以在中手动创建用户和组 [!DNL Admin Console] UI。 如果客户没有大量用户需要管理，则可以使用此方法。 例如，少于50个AEM用户的数量。
+可以在 [!DNL Admin Console] UI。 如果要管理的用户数量不多，则可以使用此方法。 例如，少于50个AEM用户。
 
-如果客户已在使用此方法管理其他Adobe产品(如Analytics、Target或Creative Cloud应用程序)，也可以手动创建用户。
+如果客户已使用此方法管理其他Adobe产品(如Analytics、Target或Creative Cloud应用程序)，则也可以手动创建用户。
 
 ![image2018-9-23_20-39-9](assets/image2018-9-23_20-39-9.png)
 
-#### 文件上传位置 [!DNL Admin Console] UI {#file-upload-in-the-admin-console-ui}
+#### 文件上传 [!DNL Admin Console] UI {#file-upload-in-the-admin-console-ui}
 
 为便于创建用户，可以上传CSV文件以批量添加用户：
 
@@ -104,23 +104,23 @@ AEM Managed Services客户应已配置组织，作为IMS配置的一部分，客
 
 #### 用户同步工具 {#user-sync-tool}
 
-用户同步工具（简称UST）使企业客户能够利用Active Directory或其他经过测试的OpenLDAP目录服务来创建或管理Adobe用户。 目标用户是IT身份管理员（企业目录和系统管理员），他们将能够安装和配置该工具。 开源工具是可自定义的，这样客户就可以让开发人员对其进行修改，以满足他们自己的特定要求。
+用户同步工具（简称UST）使企业客户能够利用Active Directory或其他经测试的OpenLDAP目录服务创建或管理Adobe用户。 目标用户是IT身份管理员（企业目录和系统管理员），他们将能够安装和配置该工具。 开源工具是可自定义的，以便客户可以让开发人员对其进行修改以符合他们自己的特定要求。
 
-当用户同步运行时，它会从组织的Active Directory（或任何其他兼容的数据源）中获取用户列表，并将其与 [!DNL Admin Console]. 然后调用Adobe [!DNL User Management] API以便 [!DNL Admin Console] 与组织的目录同步。 更改流程完全是单向的；在中进行的任何编辑 [!DNL Admin Console] 不要被推送到目录。
+当用户同步运行时，它会从组织的Active Directory（或任何其他兼容的数据源）中获取用户列表，并将其与 [!DNL Admin Console]. 然后调用Adobe [!DNL User Management] API，以便 [!DNL Admin Console] 与组织的目录同步。 变更流程完全是单向的；对 [!DNL Admin Console] 请勿被推送到目录。
 
-该工具允许系统管理员将客户目录中的用户组与中的产品配置和用户组进行映射 [!DNL Admin Console]，新的UST版本还允许在中动态创建用户组 [!DNL Admin Console].
+该工具允许系统管理员将客户目录中的用户组与 [!DNL Admin Console]，则新版UST还允许在 [!DNL Admin Console].
 
 要设置用户同步，组织需要创建一组凭据，其方式与使用 [[!DNL User Management] API](https://www.adobe.io/apis/cloudplatform/usermanagement/docs/setup.html).
 
 ![image2018-9-23_13-36-56](assets/image2018-9-23_13-36-56.png)
 
-User Sync通过AdobeGithub存储库分发到以下位置：
+用户同步通过位于以下位置的AdobeGithub存储库分发：
 
 [https://github.com/adobe-apiplatform/user-sync.py/releases/latest](https://github.com/adobe-apiplatform/user-sync.py/releases/latest)
 
-请注意，支持创建动态组的预发行版2.4RC1可供使用，该版本可以在此处找到： [https://github.com/adobe-apiplatform/user-sync.py/releases/tag/v2.4rc1](https://github.com/adobe-apiplatform/user-sync.py/releases/tag/v2.4rc1)
+请注意，支持创建动态组的预发行版本2.4RC1可用，该版本可在此处找到： [https://github.com/adobe-apiplatform/user-sync.py/releases/tag/v2.4rc1](https://github.com/adobe-apiplatform/user-sync.py/releases/tag/v2.4rc1)
 
-此版本的主要功能是，能够动态映射新的LDAP组以获得中的用户成员资格。 [!DNL Admin Console]以及动态用户组创建。
+此版本的主要功能是能够动态映射新的LDAP组，以在 [!DNL Admin Console]，以及动态用户组创建。
 
 有关新组功能的更多信息，请参阅此处：
 
@@ -128,25 +128,25 @@ User Sync通过AdobeGithub存储库分发到以下位置：
 
 >[!NOTE]
 >
->有关用户同步工具的更多信息，请参阅 [文档页面](https://adobe-apiplatform.github.io/user-sync.py/en/).
+>有关用户同步工具的详细信息，请参阅 [文档页面](https://adobe-apiplatform.github.io/user-sync.py/en/).
 >
 >
->User Sync Tool需要使用描述的过程注册为Adobe I/O客户端UMAPI [此处](https://adobe-apiplatform.github.io/umapi-documentation/en/UM_Authentication.html).
+>用户同步工具需要使用描述的过程注册为Adobe I/O客户端UMAPI [此处](https://adobe-apiplatform.github.io/umapi-documentation/en/UM_Authentication.html).
 >
 >可以找到Adobe I/O控制台文档 [此处](https://www.adobe.io/apis/cloudplatform/console.html).
 >
 >
->此 [!DNL User Management] 本课程介绍了用户同步工具使用的API [位置](https://www.adobe.io/apis/cloudplatform/umapi-new.html).
+>的 [!DNL User Management] 此处介绍了用户同步工具使用的API [位置](https://www.adobe.io/apis/cloudplatform/umapi-new.html).
 
 >[!NOTE]
 >
->AEM IMS配置将由Adobe Managed Services团队处理。 但是，客户管理员可以根据他们的要求（例如，自动组成员资格或组映射）对其进行修改。 您的Managed Services团队也将注册IMS客户端。
+>AEM IMS配置将由Adobe托管服务团队处理。 但是，客户管理员可以根据其要求（例如，自动组成员资格或组映射）对其进行修改。 IMS客户端也将由您的Managed Services团队进行注册。
 
 ## 使用方法 {#how-to-use}
 
 ### 在中管理产品和用户访问权限 [!DNL Admin Console] {#managing-products-and-user-access-in-admin-console}
 
-当客户产品管理员登录到 [!DNL Admin Console]，他们将看到AEM Managed Services产品上下文的多个实例，如下所示：
+客户产品管理员登录到 [!DNL Admin Console]，则他们将看到AEM Managed Services产品上下文的多个实例，如下所示：
 
 ![screen_shot_2018-09-17at105804pm](assets/screen_shot_2018-09-17at105804pm.png)
 
@@ -158,11 +158,11 @@ User Sync通过AdobeGithub存储库分发到以下位置：
 
 ![screen_shot_2018-09-17at105601pm](assets/screen_shot_2018-09-17at105601pm.png)
 
-在每个“产品上下文”实例下，都有一个关联的产品配置文件。 此产品配置文件用于为用户和组分配访问权限。
+在每个产品上下文实例下，将有一个关联的产品配置文件。 此产品用户档案用于为用户分配访问权限。
 
 ![image2018-9-18_7-48-50](assets/image2018-9-18_7-48-50.png)
 
-在此产品配置文件下添加的任何用户和组都将能够登录到该实例，如下例所示：
+在此产品配置文件下添加的任何用户都将能够登录到该实例，如以下示例所示：
 
 ![screen_shot_2018-09-17at105623pm](assets/screen_shot_2018-09-17at105623pm.png)
 
@@ -170,7 +170,7 @@ User Sync通过AdobeGithub存储库分发到以下位置：
 
 #### 本地管理员登录 {#local-admin-login}
 
-AEM可以继续支持管理员用户本地登录，因为登录屏幕具有本地登录选项：
+AEM可以继续支持管理员用户的本地登录，因为登录屏幕具有本地登录选项：
 
 ![screen_shot_2018-09-18at121056am](assets/screen_shot_2018-09-18at121056am.png)
 
@@ -180,13 +180,13 @@ AEM可以继续支持管理员用户本地登录，因为登录屏幕具有本�
 
 ![image2018-9-18_0-10-32](assets/image2018-9-18_0-10-32.png)
 
-然后，他们将被重定向到IMS登录屏幕并输入其凭据：
+随后，他们将被重定向到IMS登录屏幕并输入其凭据：
 
 ![screen_shot_2018-09-17at115629pm](assets/screen_shot_2018-09-17at115629pm.png)
 
-如果在初始期间配置了联合IDP [!DNL Admin Console] 然后，用户将被重定向到用于SSO的客户IDP。
+如果在初始期间配置了联合IDP [!DNL Admin Console] 设置后，用户将被重定向到用于SSO的客户IDP。
 
-在以下示例中，IDP是Okta：
+以下示例中的IDP为Okta:
 
 ![screen_shot_2018-09-17at115734pm](assets/screen_shot_2018-09-17at115734pm.png)
 
@@ -196,23 +196,23 @@ AEM可以继续支持管理员用户本地登录，因为登录屏幕具有本�
 
 ### 迁移现有用户 {#migrating-existing-users}
 
-对于使用其他身份验证方法并且现在正迁移到IMS的现有AEM实例，需要执行迁移步骤。
+对于使用其他身份验证方法且当前正在迁移到IMS的现有AEM实例，需要执行迁移步骤。
 
-AEM存储库中的现有用户（通过LDAP或SAML本地获取）可以使用用户迁移实用程序作为IDP迁移到指向IMS。
+可以使用用户迁移实用程序迁移AEM存储库（通过本地、LDAP或SAML）中的现有用户，以指向IMS作为IDP。
 
-此实用程序将作为IMS配置的一部分由您的AMS团队运行。
+此实用程序将由您的AMS团队作为IMS配置的一部分运行。
 
 ### 在AEM中管理权限和ACL {#managing-permissions-and-acls-in-aem}
 
-将继续在AEM中管理访问控制和权限，这可以通过将来自IMS的用户组(例如，以下示例中的AEM-GRP-008)与定义了权限和访问控制的本地组分离来实现。 可以将从IMS同步的用户组分配给本地组并继承权限。
+访问控制和权限将继续在AEM中进行管理，这可以通过将来自IMS的用户组(例如以下示例中的AEM-GRP-008)与定义权限和访问控制的本地组分离来实现。 可以将从IMS同步的用户组分配给本地组并继承权限。
 
 在以下示例中，我们将同步的组作为示例添加到本地 *Dam_Users* 组。
 
-在本例中，用户还被分配到了 [!DNL Admin Console]. (请注意，可以使用用户同步工具从LDAP同步用户和组，也可以本地创建，请参阅部分 **将用户载入[!DNL Admin Console]** （以上）。
+在此，还将用户分配到 [!DNL Admin Console]. (请注意，用户和组可以使用用户同步工具从LDAP同步，也可以在本地创建，请参阅部分 **将用户载入到[!DNL Admin Console]** )。
 
 >[!NOTE]
 >
->用户组仅在用户登录实例时同步。
+>只有当用户登录到实例时，才会同步用户组。
 
 ![screen_shot_2018-09-17at94207pm](assets/screen_shot_2018-09-17at94207pm.png)
 
@@ -224,10 +224,10 @@ AEM存储库中的现有用户（通过LDAP或SAML本地获取）可以使用用
 
 ![screen_shot_2018-09-17at94033pm](assets/screen_shot_2018-09-17at94033pm.png)
 
-在AEM中，可以将从IMS同步的用户组作为成员添加到现有的本地组，例如DAM用户。
+在AEM中，可以将从IMS同步的用户组作为成员添加到现有的本地组，如DAM用户。
 
 ![screen_shot_2018-09-17at95804pm](assets/screen_shot_2018-09-17at95804pm.png)
 
-如下所示，该组 *AEM-GRP_008* 继承DAM用户的权限和特权。 这是管理已同步组权限的有效方式，也常用于基于LDAP的身份验证方法。
+如下所示，组 *AEM-GRP_008* 会继承DAM用户的权限。 这是管理已同步组权限的有效方法，也常用于基于LDAP的身份验证方法。
 
 ![screen_shot_2018-09-17at110505pm](assets/screen_shot_2018-09-17at110505pm.png)
