@@ -10,9 +10,9 @@ topic-tags: process-reporting
 discoiquuid: 222daab8-4514-44a5-b5c9-c5510809c74e
 docset: aem65
 exl-id: 30720061-d0e5-453b-a334-6a3aa9ca4c87
-source-git-commit: fb9363a39ffc9d3929a31a3a19a124b806607ef4
+source-git-commit: bd33c0884be55b76ef526c8c938236e743dc3dc6
 workflow-type: tm+mt
-source-wordcount: '973'
+source-wordcount: '953'
 ht-degree: 8%
 
 ---
@@ -632,7 +632,7 @@ response.setCharacterEncoding("utf-8");
 
 ## 在现有流程报表UI中集成报表UI  {#integrating-report-ui-in-existing-process-reporting-ui-nbsp}
 
-创建单独的UI以显示结果的先决条件包括 [Sling基础知识](https://wem.help.adobe.com/enterprise/en_US/10-0/wem/developing/the_basics.html), [创建CRX节点](https://experienceleague.adobe.com/docs/experience-manager-64/developing/devtools/developing-with-crxde-lite.html?lang=en#creating-a-node) 提供适当的 [访问权限](https://experienceleague.adobe.com/docs/experience-manager-64/developing/devtools/developing-with-crxde-lite.html?lang=en#access-control).
+创建单独的UI以显示结果的先决条件包括 [Sling基础知识](https://wem.help.adobe.com/enterprise/en_US/10-0/wem/developing/the_basics.html), [创建CRX节点](/help/sites-developing/developing-with-crxde-lite.md#creating-a-node) 提供适当的 [访问权限](/help/sites-developing/developing-with-crxde-lite.md#access-control).
 
 1. 创建单独的UI。
 1. 创建子项 `nt:unstructured` 节点 `/content/process-reporting-runtime/custom-reports` 节点。

@@ -9,10 +9,10 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: ea70758f-6726-4634-bfb4-a957187baef0
 exl-id: 85981463-189c-4f50-9d21-1d2f734b960a
-source-git-commit: 9defa6d1843007e9375d839f72f6993c691a37c0
+source-git-commit: 3d713021ac410ca2925a282c5dfca98ed4e483ee
 workflow-type: tm+mt
-source-wordcount: '1474'
-ht-degree: 2%
+source-wordcount: '1465'
+ht-degree: 1%
 
 ---
 
@@ -90,7 +90,7 @@ AEM内部重新索引过程会收集存储库数据并将其存储在Oak索引�
 1. 为避免超出可接受的观察队列限制，建议执行以下操作：
 
    * 降低提交的恒定速率。 提交的短峰值是可以接受的，但应该降低恒定速率。
-   * 增加 `DiffCache` 如 [性能调整提示> Mongo Storage Tuning >文档缓存大小](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/configuring/configuring-performance.html?lang=zh-Hans).
+   * 增加 `DiffCache` 如 [性能调整提示> Mongo Storage Tuning >文档缓存大小](/help/sites-deploying/configuring-performance.md).
 
 ## 识别和修复停滞的重新索引过程 {#identifying-and-remediating-a-stuck-re-indexing-process}
 

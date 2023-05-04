@@ -8,9 +8,9 @@ topic-tags: process-reporting
 discoiquuid: 7c1fcde0-b983-4b24-bc19-fcee1d4f096b
 docset: aem65
 exl-id: 1272e854-fa64-4bfd-b073-8fbcf210e9b5
-source-git-commit: c47b4dcfd2fbdcb0b98ad815f5b04d8f593e4f64
+source-git-commit: 3d713021ac410ca2925a282c5dfca98ed4e483ee
 workflow-type: tm+mt
-source-wordcount: '1693'
+source-wordcount: '1673'
 ht-degree: 0%
 
 ---
@@ -29,11 +29,11 @@ ht-degree: 0%
 
 流程报表发布服务会发布数据库中当前可用的所有AEM Forms数据。 这意味着，如果数据库包含您不希望运行报告和查询的旧数据，则所有这些数据也将发布到存储库，即使在报告时不需要它。 建议您在运行服务之前清除此数据，以将数据发布到Process Reporting存储库。 这样做可以提高发布者服务和查询数据以进行报告的服务的性能。
 
-有关清除AEM Forms流程数据的详细信息，请参阅 [清除流程数据](https://experienceleague.adobe.com/docs/experience-manager-64/forms/administrator-help/maintain-aem-forms-database/purging-process-data.html?lang=en).
+有关清除AEM Forms流程数据的详细信息，请参阅 [清除流程数据](/help/forms/using/admin-help/purging-process-data.md).
 
 >[!NOTE]
 >
->有关清除实用程序的提示和技巧，请参阅Adobe Developer Connection上的 [清除流程和作业](https://experienceleague.adobe.com/docs/experience-manager-64/forms/administrator-help/maintain-aem-forms-database/purging-process-data.html?lang=en).
+>有关清除实用程序的提示和技巧，请参阅Adobe Developer Connection上的 [清除流程和作业](/help/forms/using/admin-help/purging-process-data.md).
 
 ## 配置Process Reporting服务 {#configuring-process-reporting-services}
 

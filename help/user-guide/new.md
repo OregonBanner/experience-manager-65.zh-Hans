@@ -4,10 +4,10 @@ seo-title: Resources for New AEM Users
 description: 面向初次使用AEM的用户的问题、答案和资源
 seo-description: Questions, answers, and resources for users new to AEM
 exl-id: a238954f-011c-416b-81af-6cdf78ddaf85
-source-git-commit: 30327950779337ce869b6ca376120bc09826be21
+source-git-commit: 3d713021ac410ca2925a282c5dfca98ed4e483ee
 workflow-type: tm+mt
-source-wordcount: '402'
-ht-degree: 29%
+source-wordcount: '298'
+ht-degree: 9%
 
 ---
 
@@ -34,23 +34,9 @@ Adobe Experience Manager(AEM)是基于Web的客户端 — 服务器系统，用�
 
 ## 其他版本的AEM的文档位于何处？ {#versions}
 
-您可以在合适的位置获取AEM 6.5的最新文档。
+您在适当的位置可以找到AEM 6.5文档。
 
-Adobe还提供了有关旧版Adobe Experience Manager的文档。 您可以在任何页面上使用版本组件在不同版本之间移动，或从此列表中进行选择。
-
-* [AEM 6.4](https://experienceleague.adobe.com/docs/experience-manager-64.html?lang=zh-Hans)
-* [AEM 6.3](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hans)
-* [AEM 6.2](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hans)**
-* [AEM 6.1](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hans)**
-* [AEM 6.0](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hans)**
-* [AEM 5.6.1](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hans)**
-* [AEM 5.6](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hans)**
-* [CQ 5.5](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hans)**
-* [CQ 5.4](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hans)**
-* [CQ 5.3](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hans)**
-* [CRX 2.3](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hans)**
-
-**表示不再受官方支持的版本Adobe。
+Adobe还提供了有关旧版Adobe Experience Manager的文档。 你可以看看 [旧版Adobe Experience Manager、CQ和CRX文档](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hans) 以了解更多信息。
 
 ## 在何处能找到AEM 6.5发行说明？ {#release-notes}
 

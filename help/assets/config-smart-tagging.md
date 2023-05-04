@@ -1,46 +1,46 @@
 ---
 title: 使用智能内容服务配置资产标记
-description: 了解如何在中配置智能标记和增强型智能标记 [!DNL Adobe Experience Manager]，使用智能内容服务。
+description: 了解如何在 [!DNL Adobe Experience Manager]，使用智能内容服务。
 contentOwner: AG
 role: Admin
 feature: Tagging,Smart Tags
 exl-id: 9f68804f-ba15-4f83-ab1b-c249424b1396
-source-git-commit: 83e9ab570fac686fd53c9c2594cbfb2c05a89a0c
+source-git-commit: 3d713021ac410ca2925a282c5dfca98ed4e483ee
 workflow-type: tm+mt
-source-wordcount: '2262'
+source-wordcount: '2245'
 ht-degree: 25%
 
 ---
 
 # 准备 [!DNL Assets] 用于智能标记 {#configure-asset-tagging-using-the-smart-content-service}
 
-在使用Smart Content Services开始标记资产之前，请集成 [!DNL Experience Manager Assets] 使用Adobe Developer控制台以利用的智能服务 [!DNL Adobe Sensei]. 配置完毕后，可使用一些图像和标记来训练服务。
+在开始使用智能内容服务标记资产之前，请先集成 [!DNL Experience Manager Assets] 与Adobe Developer Console一起使用 [!DNL Adobe Sensei]. 配置完毕后，可使用一些图像和标记来培训服务。
 
 >[!NOTE]
 >
->* Smart Content Services不再对新用户可用 [!DNL Experience Manager Assets] 内部部署客户。 已启用此功能的现有内部部署客户可以继续使用智能内容服务。
->* 智能内容服务可用于现有 [!DNL Experience Manager Assets] 已启用此功能的Managed Services客户。
->* 新 [!DNL Experience Manager Assets] Managed Services客户可以按照本文中所述的说明设置智能内容服务。
+>* 智能内容服务不再可用于新 [!DNL Experience Manager Assets] 内部部署客户。 已启用此功能的现有内部部署客户可以继续使用智能内容服务。
+>* 智能内容服务适用于现有 [!DNL Experience Manager Assets] 已启用此功能的Managed Services客户。
+>* 新建 [!DNL Experience Manager Assets] Managed Services客户可以按照本文中所述的说明来设置智能内容服务。
 
 
-在使用智能内容服务之前，请确保满足以下条件：
+在使用智能内容服务之前，请确保：
 
 * [使用 Adobe 开发人员控制台进行集成](#integrate-adobe-io).
 * [培训智能内容服务](#training-the-smart-content-service).
 
-* 安装最新的 [[!DNL Experience Manager] Service Pack](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html).
+* 安装最新 [[!DNL Experience Manager] Service Pack](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html).
 
 ## 使用 Adobe 开发人员控制台进行集成 {#integrate-adobe-io}
 
-与Adobe Developer控制台集成时， [!DNL Experience Manager] 在将请求转发到智能内容服务之前，服务器会使用Adobe Developer控制台网关验证您的服务凭据。 要集成，您需要一个对组织具有管理员权限的Adobe ID帐户，以及已为组织购买和启用的Smart Content Service许可证。
+当您与Adobe Developer控制台集成时， [!DNL Experience Manager] 服务器在将您的请求转发到智能内容服务之前，会使用Adobe Developer Console网关验证您的服务凭据。 要进行集成，您需要具有组织管理员权限的Adobe ID帐户，以及为贵组织购买并启用的智能内容服务许可证。
 
-要配置智能内容服务，请按照以下顶级步骤操作：
+要配置智能内容服务，请执行以下顶级步骤：
 
-1. 要生成公钥， [创建智能内容服务](#obtain-public-certificate) 中的配置 [!DNL Experience Manager]. 为 OAuth 集成[获取公共证书](#obtain-public-certificate)。
+1. 要生成公钥， [创建智能内容服务](#obtain-public-certificate) 配置 [!DNL Experience Manager]. 为 OAuth 集成[获取公共证书](#obtain-public-certificate)。
 
 1. [在 Adobe 开发人员控制台中创建集成](#create-adobe-i-o-integration)，并上传生成的公共密钥。
 
-1. [配置您的部署](#configure-smart-content-service) 使用Adobe Developer控制台中的API密钥和其他凭据。
+1. [配置部署](#configure-smart-content-service) 使用Adobe Developer Console中的API密钥和其他凭据。
 
 1. [测试配置](#validate-the-configuration)。
 
@@ -52,33 +52,33 @@ ht-degree: 25%
 
 1. 在 [!DNL Experience Manager] 用户界面，访问 **[!UICONTROL 工具]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL 旧版Cloud Services]**.
 
-1. 在“Cloud Services”页面中，单击 **[!UICONTROL 立即配置]** 下 **[!UICONTROL 资产智能标记]**.
+1. 在“Cloud Services”页面中，单击 **[!UICONTROL 立即配置]** 在 **[!UICONTROL 资产智能标记]**.
 
-1. 在 **[!UICONTROL 创建配置]** 对话框，请为智能标记配置指定标题和名称。 单击&#x200B;**[!UICONTROL 创建]**。
+1. 在 **[!UICONTROL 创建配置]** 对话框，为智能标记配置指定标题和名称。 单击&#x200B;**[!UICONTROL 创建]**。
 
-1. 在 **[!UICONTROL AEM智能内容服务]** 对话框，请使用以下值：
+1. 在 **[!UICONTROL AEM Smart Content Service]** 对话框，请使用以下值：
 
    **[!UICONTROL 服务 URL]**: `https://smartcontent.adobe.io/<region where your Experience Manager author instance is hosted>`
 
-   例如， `https://smartcontent.adobe.io/apac`. 您可以指定 `na`， `emea`，或， `apac` 作为托管Experience Manager创作实例的地区。
+   例如， `https://smartcontent.adobe.io/apac`. 您可以指定 `na`, `emea`，或 `apac` 作为托管Experience Manager创作实例的区域。
 
    >[!NOTE]
    >
-   >如果Experience Manager托管服务是在2022年9月1日之前配置的，请使用以下服务URL：
+   >如果Experience Manager托管服务是在2022年9月01日之前配置的，请使用以下服务URL:
    >`https://mc.adobe.io/marketingcloud/smartcontent`
 
    **[!UICONTROL 授权服务器]**: `https://ims-na1.adobelogin.com`
 
-   其他字段暂时留空（稍后提供）。 单击&#x200B;**[!UICONTROL 确定]**。
+   暂时将其他字段留空（稍后提供）。 单击&#x200B;**[!UICONTROL 确定]**。
 
-   ![用于提供Experience Manager服务URL的“智能内容服务”对话框](assets/aem_scs.png)
+   ![Experience Manager智能内容服务对话框，用于提供内容服务URL](assets/aem_scs.png)
 
 
-   *图：用于提供内容服务URL的“智能内容服务”对话框*
+   *图：用于提供内容服务URL的智能内容服务对话框*
 
    >[!NOTE]
    >
-   >提供的URL为 [!UICONTROL 服务URL] 无法通过浏览器访问，并生成404错误。 如果具有相同值的，则配置工作正常。 [!UICONTROL 服务URL] 参数。 有关总体服务状态和维护计划，请参阅 [https://status.adobe.com](https://status.adobe.com).
+   >提供的URL [!UICONTROL 服务URL] 无法通过浏览器访问，并生成404错误。 配置与 [!UICONTROL 服务URL] 参数。 有关整体服务状态和维护计划，请参阅 [https://status.adobe.com](https://status.adobe.com).
 
 1. 单击 **[!UICONTROL 下载用于OAuth集成的公共证书]**，并下载公共证书文件 `AEM-SmartTags.crt`.
 
@@ -87,7 +87,7 @@ ht-degree: 25%
 
    *图：智能标记服务的设置。*
 
-#### 证书过期时重新配置 {#certrenew}
+#### 证书过期后重新配置 {#certrenew}
 
 证书过期后，将不再受信任。 无法续订已过期的证书。要添加证书，请执行以下步骤。
 
@@ -100,17 +100,17 @@ ht-degree: 25%
    ![删除Keystore中的现有相似性搜索条目以添加安全证书](assets/smarttags_delete_similaritysearch_keystore.png)
 
 
-   *图：删除现有 `similaritysearch` 条目来添加安全证书。*
+   *图：删除现有 `similaritysearch` 密钥库中的条目，以添加安全证书。*
 
 1. 导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 云服务]** > **[!UICONTROL 旧版云服务]**。单击 **[!UICONTROL 资产智能标记]** >显 **[!UICONTROL 示配置]** >可 **[!UICONTROL 用配置]**。 单击所需的配置。
 
 1. 要下载公共证书，请单击 **[!UICONTROL 下载用于OAuth集成的公共证书]**.
 
-1. 访问 [https://console.adobe.io](https://console.adobe.io) 并导航到 **[!UICONTROL 集成]** 页面。 上传新证书。 有关更多信息，请参阅 [创建Adobe Developer控制台集成](#create-adobe-i-o-integration).
+1. 访问 [https://console.adobe.io](https://console.adobe.io) ，并导航到 **[!UICONTROL 集成]** 页面。 上传新证书。 有关更多信息，请参阅 [创建Adobe Developer控制台集成](#create-adobe-i-o-integration).
 
 ### 创建Adobe Developer控制台集成 {#create-adobe-i-o-integration}
 
-要使用Smart Content Service API，请在Adobe Developer控制台中创建集成以获取 [!UICONTROL API密钥] (生成于 [!UICONTROL 客户端ID] Adobe Developer字段)， [!UICONTROL 技术帐户ID]， [!UICONTROL 组织ID]、和 [!UICONTROL 客户端密码] 对象 [!UICONTROL 资产智能标记服务设置] 中的云配置 [!DNL Experience Manager].
+要使用智能内容服务API，请在Adobe Developer控制台中创建集成以获取 [!UICONTROL API密钥] (生成于 [!UICONTROL 客户端ID] 字段)、 [!UICONTROL 技术帐户ID], [!UICONTROL 组织ID]和 [!UICONTROL 客户端密钥] 表示 [!UICONTROL 资产智能标记服务设置] 云配置在 [!DNL Experience Manager].
 
 1. 在浏览器中访问 [https://console.adobe.io](https://console.adobe.io/)。选择相应的帐户并验证关联的组织角色是否为系统管理员。
 
@@ -120,13 +120,13 @@ ht-degree: 25%
 
 1. 选择&#x200B;**[!UICONTROL 上传您的公共密钥]**。提供从 [!DNL Experience Manager] 下载的证书文件。此时将显示“[!UICONTROL 公共密钥上传成功]”消息。单击&#x200B;**[!UICONTROL 下一步]**。
 
-   [!UICONTROL 创建新的服务帐户(JWT)凭据] 页显示服务帐户的公钥。
+   [!UICONTROL 创建新的服务帐户(JWT)凭据] 页面显示服务帐户的公共密钥。
 
 1. 单击&#x200B;**[!UICONTROL 下一步]**。
 
 1. 在&#x200B;**[!UICONTROL 选择产品配置文件]**&#x200B;页面上，选择&#x200B;**[!UICONTROL 智能内容服务]**。单击&#x200B;**[!UICONTROL 保存配置的 API]**。
 
-   页面会显示有关配置的更多信息。保持此页面处于打开状态，以复制这些值并将其添加到中 [!UICONTROL 资产智能标记服务设置] 中的云配置 [!DNL Experience Manager] 以配置智能标记。
+   页面会显示有关配置的更多信息。保持此页面处于打开状态，以复制这些值并将其添加到 [!UICONTROL 资产智能标记服务设置] 云配置在 [!DNL Experience Manager] 配置智能标记。
 
    ![在“概述”选项卡中，您可以查看为集成提供的信息。](assets/integration_details.png)
 
@@ -135,40 +135,40 @@ ht-degree: 25%
 
 ### 配置智能内容服务 {#configure-smart-content-service}
 
-要配置集成，请使用 [!UICONTROL 技术帐户ID]， [!UICONTROL 组织ID]， [!UICONTROL 客户端密码]、和 [!UICONTROL 客户端ID] Adobe Developer控制台集成中的字段。 创建智能标记云配置允许对来自的API请求进行身份验证 [!DNL Experience Manager] 部署。
+要配置集成，请使用 [!UICONTROL 技术帐户ID], [!UICONTROL 组织ID], [!UICONTROL 客户端密钥]和 [!UICONTROL 客户端ID] 字段。 创建智能标记云配置后，可以对 [!DNL Experience Manager] 部署。
 
-1. In [!DNL Experience Manager]，导航到 **[!UICONTROL 工具]** > **[!UICONTROL Cloud Service]** > **[!UICONTROL 旧版Cloud Services]** 以打开 [!UICONTROL Cloud Services] 控制台。
+1. 在 [!DNL Experience Manager]，导航到 **[!UICONTROL 工具]** > **[!UICONTROL Cloud Service]** > **[!UICONTROL 旧版Cloud Services]** 打开 [!UICONTROL Cloud Services] 控制台。
 
-1. 在 **[!UICONTROL 资产智能标记]**，打开上面创建的配置。 在服务设置页面上，单击 **[!UICONTROL 编辑]**.
+1. 在 **[!UICONTROL 资产智能标记]**，打开上面创建的配置。 在“服务设置”页面上，单击 **[!UICONTROL 编辑]**.
 
 1. 在 **[!UICONTROL AEM 智能内容服务]**&#x200B;对话框中，为&#x200B;**[!UICONTROL 服务 URL]** 和&#x200B;**[!UICONTROL 授权服务器]**&#x200B;字段使用预填充的值。
 
-1. 对于字段 [!UICONTROL Api密钥]， [!UICONTROL 技术帐户ID]， [!UICONTROL 组织ID]、和 [!UICONTROL 客户端密码]，复制并使用中生成的以下值 [Adobe Developer控制台集成](#create-adobe-i-o-integration).
+1. 对于字段 [!UICONTROL Api密钥], [!UICONTROL 技术帐户ID], [!UICONTROL 组织ID]和 [!UICONTROL 客户端密钥]，复制并使用在 [Adobe Developer控制台集成](#create-adobe-i-o-integration).
 
    | [!UICONTROL 资产智能标记服务设置] | [!DNL Adobe Developer Console] 集成字段 |
    |--- |--- |
    | [!UICONTROL API 键] | [!UICONTROL 客户端ID] |
    | [!UICONTROL 技术帐户 ID] | [!UICONTROL 技术帐户ID] |
    | [!UICONTROL 组织 ID] | [!UICONTROL 组织 ID] |
-   | [!UICONTROL 客户端密钥] | [!UICONTROL 客户端密码] |
+   | [!UICONTROL 客户端密钥] | [!UICONTROL 客户端密钥] |
 
 ### 验证配置 {#validate-the-configuration}
 
-完成配置后，可以使用JMX MBean来验证配置。 要验证，请执行以下步骤。
+完成配置后，可使用JMX MBean验证配置。 要验证，请执行以下步骤。
 
-1. 访问您的 [!DNL Experience Manager] 服务器位于 `https://[aem_server]:[port]`.
+1. 访问 [!DNL Experience Manager] 服务器位置 `https://[aem_server]:[port]`.
 
-1. 转到 **[!UICONTROL 工具]** > **[!UICONTROL 操作]** > **[!UICONTROL Web控制台]** 以打开OSGi控制台。 单击 **[!UICONTROL 主要] > [!UICONTROL JMX]**.
+1. 转到 **[!UICONTROL 工具]** > **[!UICONTROL 操作]** > **[!UICONTROL Web控制台]** 打开OSGi控制台。 单击 **[!UICONTROL 主要] > [!UICONTROL JMX]**.
 
-1. 单击 `com.day.cq.dam.similaritysearch.internal.impl`. 它会打开 **[!UICONTROL 相似性搜索杂项任务]**.
+1. 单击 `com.day.cq.dam.similaritysearch.internal.impl`. 随即会打开 **[!UICONTROL 相似性搜索其他任务]**.
 
 1. 单击 `validateConfigs()`. 在 **[!UICONTROL 验证配置]** 对话框，单击 **[!UICONTROL 调用]**.
 
-验证结果显示在同一对话框中。
+验证结果将显示在同一对话框中。
 
-### 在中启用智能标记 [!UICONTROL DAM更新资产] 工作流（可选） {#enable-smart-tagging-in-the-update-asset-workflow-optional}
+### 在 [!UICONTROL DAM更新资产] 工作流（可选） {#enable-smart-tagging-in-the-update-asset-workflow-optional}
 
-1. In [!DNL Experience Manager]，转到 **[!UICONTROL 工具]** > **[!UICONTROL 工作流]** > **[!UICONTROL 模型]**.
+1. 在 [!DNL Experience Manager]，转到 **[!UICONTROL 工具]** > **[!UICONTROL 工作流]** > **[!UICONTROL 模型]**.
 
 1. 在&#x200B;**[!UICONTROL 工作流模型]**&#x200B;页面上，选择 **[!UICONTROL DAM 更新资产]**&#x200B;工作流模式。
 
@@ -189,14 +189,14 @@ ht-degree: 25%
 
 1. 在&#x200B;**[!UICONTROL 参数]**&#x200B;选项卡中，如果希望完成工作流，请选择&#x200B;**[!UICONTROL 忽略错误]**，即使自动标记步骤失败也是如此。
 
-   ![配置DAM更新资产工作流以添加智能标记步骤并选择高级处理程序](assets/smart-tag-step-properties-workflow2.png)
+   ![配置DAM更新资产工作流以添加智能标记步骤并选择处理程序高级](assets/smart-tag-step-properties-workflow2.png)
 
 
-   *图：配置DAM更新资产工作流以添加智能标记步骤并选择高级处理程序*
+   *图：配置DAM更新资产工作流以添加智能标记步骤并选择处理程序高级*
 
    要在上传资产时标记资产，而不考虑是否对文件夹启用了智能标记，请选择&#x200B;**[!UICONTROL 忽略智能标记标志]**。
 
-   ![配置DAM更新资产工作流以添加智能标记步骤并选择忽略智能标记标记](assets/smart-tag-step-properties-workflow3.png)
+   ![配置DAM更新资产工作流以添加智能标记步骤，然后选择忽略智能标记标记](assets/smart-tag-step-properties-workflow3.png)
 
 
    *图：配置DAM更新资产工作流以添加智能标记步骤，然后选择忽略智能标记标记。*
@@ -205,9 +205,9 @@ ht-degree: 25%
 
 ## 培训智能内容服务 {#training-the-smart-content-service}
 
-为了使智能内容服务能够识别您的业务分类，请在一组已包含与您的业务相关的标记的资源上运行它。 为了有效地标记您的品牌图像，智能内容服务要求培训图像符合某些准则。 经过培训后，该服务可以对类似的一组资产应用相同的分类。
+为使智能内容服务能够识别您的业务分类，请在一组资产上运行该分类，这些资产已经包含与您的业务相关的标记。 为了有效地标记您的品牌图像，智能内容服务要求培训图像符合特定准则。 培训后，该服务可以对类似的资产集应用相同的分类。
 
-您可以对服务进行多次培训，以提高其应用相关标记的能力。 在每个培训周期后，运行标记工作流并检查资产标记是否正确。
+您可以对服务进行多次培训，以提高其应用相关标记的能力。 在每个培训周期后，运行标记工作流并检查您的资产是否进行了正确标记。
 
 您可以定期或根据需要培训智能内容服务。
 
@@ -217,88 +217,88 @@ ht-degree: 25%
 
 ### 培训准则 {#guidelines-for-training}
 
-为获得最佳效果，培训集中的图像符合以下准则：
+为获得最佳结果，培训集中的图像符合以下准则：
 
 **数量和大小：**&#x200B;每个标记至少 30 张图像。长边至少 500 像素。
 
-**一致性**：用于特定标记的图像在视觉上类似。
+**一致性**:用于特定标记的图像在视觉上相似。
 
-例如，将所有图像标记为 `my-party` （用于培训），因为它们在视觉上并不相似。
+例如，将所有这些图像标记为 `my-party` （用于培训），因为它们在视觉上并不相似。
 
-![示例图像，用于说明培训准则](/help/assets/assets/do-not-localize/coherence.png)
+![示例图像以说明培训准则](/help/assets/assets/do-not-localize/coherence.png)
 
-**覆盖率**：在训练中使用足够的图像变化。 我们的想法是提供一些相当多样化的示例，以便Experience Manager学习关注正确的事情。 如果您要在视觉上不同的图像上应用相同的标记，请至少包含每种类型的五个示例。
+**覆盖**:在培训中对图像使用足够的多样性。 其理念是提供几个但相当多样化的示例，以便Experience Manager学会专注于正确的事情。 如果您对视觉上不相似的图像应用相同的标记，请至少包含每种类型的五个示例。
 
-例如，对于标记 *模型向下姿态*，包含更多与下面高亮显示的图像类似的训练图像，以便该服务在标记期间更准确地识别相似图像。
+例如，对于标记 *模型 — 下姿态*，为服务包含更多与下面突出显示的图像类似的培训图像，以便在标记期间更准确地识别类似图像。
 
-![示例图像，用于说明培训准则](/help/assets/assets/do-not-localize/coverage_1.png)
+![示例图像以说明培训准则](/help/assets/assets/do-not-localize/coverage_1.png)
 
-**分心/阻塞**：此服务针对干扰较少的图像（突出的背景、不相关的伴侣，如具有主要主题的物体/人员）提供更好的培训。
+**干扰/阻碍**:该服务能够更好地训练分散注意力的图像（突出的背景、不相关的伴奏，如主题的物体/人）。
 
-例如，对于标记 *休闲鞋*，则第二幅图像不是合适的训练候选。
+例如，对于标记 *休闲鞋*&#x200B;第二张图像不是好的训练候选者。
 
-![示例图像，用于说明培训准则](/help/assets/assets/do-not-localize/distraction.png)
+![示例图像以说明培训准则](/help/assets/assets/do-not-localize/distraction.png)
 
 **完整性：**&#x200B;如果图像符合多个标记的条件，请在包含培训图像之前添加所有适用的标记。例如，对于 `raincoat` 和 `model-side-view` 等标记，在将其加入培训之前，在符合条件的资产上添加这两个标记。
 
-![示例图像，用于说明培训准则](/help/assets/assets/do-not-localize/completeness.png)
+![示例图像以说明培训准则](/help/assets/assets/do-not-localize/completeness.png)
 
 >[!NOTE]
 >
->智能内容服务根据您的标记进行培训并将其应用于其他图像的能力取决于您用于培训的图像质量。 为获得最佳效果，Adobe建议您使用视觉上相似的图像，为每个标签培训服务。
+>智能内容服务是否能够在您的标记上进行培训并将其应用于其他图像，取决于您用于培训的图像质量。 为获得最佳结果，Adobe建议您使用视觉上相似的图像来为每个标记培训服务。
 
 ### 定期培训 {#periodic-training}
 
-您可以使智能内容服务定期针对文件夹中的资源和关联标记进行培训。 打开 [!UICONTROL 属性] 页面上，选择 **[!UICONTROL 启用智能标记]** 在 **[!UICONTROL 详细信息]** 选项卡，并保存更改。
+您可以启用智能内容服务，以便对文件夹中的资产和关联的标记进行定期培训。 打开 [!UICONTROL 属性] 页面，选择 **[!UICONTROL 启用智能标记]** 下 **[!UICONTROL 详细信息]** ，然后保存更改。
 
 ![enable_smart_tags](assets/enable_smart_tags.png)
 
-为文件夹选择该选项后， [!DNL Experience Manager] 自动运行培训工作流，对文件夹资产及其标记上的智能内容服务进行培训。 默认情况下，培训工作流每周于星期六凌晨12:30运行。
+为文件夹选择此选项后， [!DNL Experience Manager] 自动运行培训工作流，以在文件夹资产及其标记上培训智能内容服务。 默认情况下，培训工作流每周在星期六凌晨12:30运行。
 
 ### 按需培训 {#on-demand-training}
 
-您可以根据需要从“工作流”控制台中培训智能内容服务。
+您可以根据需要从工作流控制台中培训智能内容服务。
 
-1. In [!DNL Experience Manager] 界面，转到 **[!UICONTROL 工具]** > **[!UICONTROL 工作流]** > **[!UICONTROL 模型]**.
-1. 从 **[!UICONTROL 工作流模型]** 页面上，选择 **[!UICONTROL 智能标记训练]** 工作流，然后单击 **[!UICONTROL 启动工作流]** 工具栏中。
-1. 在 **[!UICONTROL 运行工作流]** 对话框中，浏览到有效负荷文件夹，其中包含用于培训服务的已标记资产。
-1. 指定工作流的标题并添加评论。 然后，单击 **[!UICONTROL 运行]**. 提交资产和标记以进行培训。
+1. 在 [!DNL Experience Manager] 界面，转到 **[!UICONTROL 工具]** > **[!UICONTROL 工作流]** > **[!UICONTROL 模型]**.
+1. 从 **[!UICONTROL 工作流模型]** 页面，选择 **[!UICONTROL 智能标记培训]** 工作流，然后单击 **[!UICONTROL 启动工作流]** 中。
+1. 在 **[!UICONTROL 运行工作流]** 对话框中，浏览到包含标记资产的有效负荷文件夹，以培训服务。
+1. 指定工作流的标题并添加评论。 然后，单击 **[!UICONTROL 运行]**. 将提交资产和标记以供培训。
 
    ![workflow_dialog](assets/workflow_dialog.png)
 
 >[!NOTE]
 >
->一旦处理了文件夹中的资源以进行训练，则后续训练周期中只会处理经过修改的资源。
+>在处理文件夹中的资产以进行培训后，只会在后续培训周期中处理已修改的资产。
 
 ### 查看培训报告 {#viewing-training-reports}
 
-要检查智能内容服务是否针对培训资产集中的标记进行了培训，请从“报表”控制台中查看培训工作流报表。
+要检查是否在资产培训集中的标记上对智能内容服务进行了培训，请从报表控制台中查看培训工作流报表。
 
-1. In [!DNL Experience Manager] 界面，转到 **[!UICONTROL 工具]** > **[!UICONTROL 资产]** > **[!UICONTROL 报告]**.
+1. 在 [!DNL Experience Manager] 界面，转到 **[!UICONTROL 工具]** > **[!UICONTROL 资产]** > **[!UICONTROL 报表]**.
 1. 在 **[!UICONTROL 资产报表]** 页面，单击 **[!UICONTROL 创建]**.
-1. 选择 **[!UICONTROL 智能标记训练]** 报告，然后单击 **[!UICONTROL 下一个]** 工具栏中。
-1. 指定报表的标题和描述。在&#x200B;**[!UICONTROL 计划报告]**&#x200B;下，保持选中&#x200B;**[!UICONTROL 立即]**&#x200B;选项。如果要安排以后的计划报告，请选择&#x200B;**[!UICONTROL 稍后]**，然后指定日期和时间。然后，单击 **[!UICONTROL 创建]** 工具栏中。
-1. 在&#x200B;**[!UICONTROL 资产报表]**&#x200B;页面中，选择生成的报表。要查看报告，请单击 **[!UICONTROL 视图]** 工具栏中。
+1. 选择 **[!UICONTROL 智能标记培训]** 报表，然后单击 **[!UICONTROL 下一个]** 中。
+1. 指定报表的标题和描述。在&#x200B;**[!UICONTROL 计划报告]**&#x200B;下，保持选中&#x200B;**[!UICONTROL 立即]**&#x200B;选项。如果要安排以后的计划报告，请选择&#x200B;**[!UICONTROL 稍后]**，然后指定日期和时间。然后，单击 **[!UICONTROL 创建]** 中。
+1. 在&#x200B;**[!UICONTROL 资产报表]**&#x200B;页面中，选择生成的报表。要查看报表，请单击 **[!UICONTROL 查看]** 中。
 1. 查看报告的详细信息。
 
    报表显示您培训的标记的培训状态。**[!UICONTROL 培训状态]**&#x200B;列中的绿色表示已为标记培训“智能内容服务”。黄色表示服务未针对特定标记进行完整培训。在这种情况下，使用特定标记添加更多图像并运行培训工作流以在标签上完整地培训服务。
 
-   如果您未在此报表中看到您的标记，请再次运行这些标记的培训工作流。
+   如果在此报表中未看到标记，请再次为这些标记运行培训工作流。
 
-1. 要下载报表，请从列表中选择该报表，然后单击 **[!UICONTROL 下载]** 工具栏中。 报表将下载为Microsoft Excel电子表格。
+1. 要下载报表，请从列表中选择该报表，然后单击 **[!UICONTROL 下载]** 中。 报表将下载为Microsoft Excel电子表格。
 
 ## 限制 {#limitations}
 
-* 增强型智能标记基于图像及其标记的学习模型。 这些模型在识别标记方面并不总是完美的。 智能内容服务的当前版本具有以下限制：
+* 增强型智能标记基于图像及其标记的学习模型。 这些模型并非总能很好地识别标记。 智能内容服务的当前版本具有以下限制：
 
-   * 无法识别图像的细微差异。 例如，超薄衬衫和普通衬衫。
-   * 无法根据图像的微小模式/部分识别标记。 例如，T恤上的徽标。
-   * 在以下区域设置中支持标记 [!DNL Experience Manager] 中支持。 有关语言的列表，请参阅 [Smart Content Services发行说明](https://experienceleague.adobe.com/docs/experience-manager-64/release-notes/smart-content-service-release-notes.html).
+   * 无法识别图像中的细微差异。 例如，纤薄的衬衫与普通的衬衫。
+   * 无法根据图像的微小模式/部分来识别标记。 例如，T恤上的徽标。
+   * 区域设置支持标记 [!DNL Experience Manager] 支持。
 
 * 要搜索带有智能标记（常规或增强）的资产，请使用 [!DNL Assets] Omnisearch（全文搜索）。 智能标记没有单独的搜索谓词。
 
 >[!MORELIKETHIS]
 >
->* [概述以及如何培训智能标记](enhanced-smart-tags.md)
+>* [智能标记概述和如何培训智能标记](enhanced-smart-tags.md)
 >* [有关智能标记的视频教程](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/image-smart-tags.html)
 
