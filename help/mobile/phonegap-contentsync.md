@@ -9,9 +9,9 @@ topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: 923fc031-1a06-4a9d-94da-a2a4e82c54ee
 docset: aem65
 exl-id: 2cadd9c5-4335-48d0-8d1c-941fca717409
-source-git-commit: f4b6eb2ded17ec641f23a1fc3b977ce77169c8a1
+source-git-commit: 85d39e59b82fdfdcd310be61787a315668aebe38
 workflow-type: tm+mt
-source-wordcount: '2975'
+source-wordcount: '2977'
 ht-degree: 0%
 
 ---
@@ -263,7 +263,7 @@ Day CQ内容同步管理器服务控制对内容同步的访问。 配置此服�
 * `com.day.cq.contentsync.handler.ContentUpdateHandler`  — 所有更新处理程序都需要实施的接口
 * `com.day.cq.contentsync.handler.AbstractSlingResourceUpdateHandler`  — 使用Sling简化资源渲染的抽象类
 
-将类注册为OSGi组件工厂，并将其部署在包中的OSGi容器中。 可以使用 [Maven SCR插件](https://felix.apache.org/site/apache-felix-maven-scr-plugin.html) 使用JavaDoc标记或批注。 以下示例显示JavaDoc版本：
+将类注册为OSGi组件工厂，并将其部署在包中的OSGi容器中。 可以使用 [Maven SCR插件](https://felix.apache.org/documentation/subprojects/apache-felix-maven-scr-plugin/apache-felix-maven-scr-plugin-use.html) 使用JavaDoc标记或批注。 以下示例显示JavaDoc版本：
 
 ```java
 /*

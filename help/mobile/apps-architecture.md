@@ -8,9 +8,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-on-demand-services-app
 discoiquuid: cfc7ad16-965e-4075-bc4d-5630abeaba55
 exl-id: 397def36-45b2-47a7-b103-99ca22b6dae1
-source-git-commit: f4b6eb2ded17ec641f23a1fc3b977ce77169c8a1
+source-git-commit: 85d39e59b82fdfdcd310be61787a315668aebe38
 workflow-type: tm+mt
-source-wordcount: '2666'
+source-wordcount: '2671'
 ht-degree: 0%
 
 ---
@@ -55,7 +55,7 @@ ht-degree: 0%
 
 ### body.jsp {#body-jsp}
 
-angular页面的主体呈现方式不同，具体取决于是否检测到wcmMode(!= WCMMode.DISABLED)来确定页面是打开进行创作，还是作为已发布的页面进行打开。
+angular页面的主体呈现方式不同，具体取决于是否检测到wcmMode(!= WCMMode.DISABLED)来确定页面是打开进行创作，还是作为已发布的页面打开。
 
 **创作模式**
 
@@ -308,7 +308,7 @@ www/
 
 #### .cordova/hooks/ {#cordova-hooks}
 
-此目录包含 [CLI挂接](https://devgirl.org/2013/11/12/three-hooks-your-cordovaphonegap-project-needs/). 挂接目录中的文件夹包含node.js脚本，这些脚本在生成过程中的确切时间点执行。
+此目录包含 [CLI挂接](https://cordova.apache.org/docs/en/10.x/guide/appdev/hooks/). 挂接目录中的文件夹包含node.js脚本，这些脚本在生成过程中的确切时间点运行。
 
 #### .cordova/hooks/after_platform_add/ {#cordova-hooks-after-platform-add}
 
