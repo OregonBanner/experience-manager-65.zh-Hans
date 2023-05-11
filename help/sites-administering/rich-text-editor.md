@@ -3,10 +3,10 @@ title: 配置富文本编辑器以在Adobe Experience Manager中创作内容。
 description: 了解如何配置Adobe Experience Manager富文本编辑器以在Adobe Experience Manager中创作内容。
 contentOwner: AG
 exl-id: 2e7ec22f-0856-44c4-bb15-1086dae0b85a
-source-git-commit: fb9363a39ffc9d3929a31a3a19a124b806607ef4
+source-git-commit: 53a18ec48331f1c25c15e8f7a59bd57e95639895
 workflow-type: tm+mt
-source-wordcount: '3021'
-ht-degree: 0%
+source-wordcount: '2924'
+ht-degree: 1%
 
 ---
 
@@ -109,14 +109,14 @@ RTE的基本功能由的值激活或停用 `features` 属性。
 | 插件ID | 功能 | 描述 |
 |--- |--- |--- |
 | 编辑 | 剪切复制paste-default paste-plaintext paste-wordhtml | [剪切、复制和粘贴三种模式](/help/sites-administering/configure-rich-text-editor-plug-ins.md#textstyles). |
-| [findreplace](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.FindReplacePlugin) | 查找替换 | 查找并替换. |
-| [格式](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.FormatPlugin) | 粗斜体下划线 | [基本文本格式](/help/sites-administering/configure-rich-text-editor-plug-ins.md#textstyles). |
-| [图像](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.ImagePlugin) | 图像 | 基本图像支持（从内容或内容查找器中拖动）。 根据浏览器的不同，作者支持的行为各不相同 |
-| [键](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.KeyPlugin) |  | 要定义此值，请参阅 [选项卡大小](/help/sites-administering/configure-rich-text-editor-plug-ins.md#tabsize). |
-| [证明](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.JustifyPlugin) | justifleft justifcenter justifright | 段落对齐。 |
-| [链接](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.LinkPlugin) | modifylink取消链接锚点 | [超链接和锚点](/help/sites-administering/configure-rich-text-editor-plug-ins.md#linkstyles). |
-| [列表](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.ListPlugin) | 已排序的未排序缩进输出 | 此插件可同时控制 [缩进和列表](/help/sites-administering/configure-rich-text-editor-plug-ins.md#indentmargin);包括嵌套列表。 |
-| [misctools](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.MiscToolsPlugin) | specialchars sourceedit | 其他工具允许作者输入 [特殊字符](/help/sites-administering/configure-rich-text-editor-plug-ins.md#spchar) 或编辑HTML源。 此外，您还可以添加整体 [特殊字符范围](/help/sites-administering/configure-rich-text-editor-plug-ins.md#definerangechar) 要定义自己的列表。 |
+| findreplace | 查找替换 | 查找并替换. |
+| 格式 | 粗斜体下划线 | [基本文本格式](/help/sites-administering/configure-rich-text-editor-plug-ins.md#textstyles). |
+| 图像 | 图像 | 基本图像支持（从内容或内容查找器中拖动）。 根据浏览器的不同，作者支持的行为各不相同 |
+| 键 |  | 要定义此值，请参阅 [选项卡大小](/help/sites-administering/configure-rich-text-editor-plug-ins.md#tabsize). |
+| 证明 | justifleft justifcenter justifright | 段落对齐。 |
+| 链接 | modifylink取消链接锚点 | [超链接和锚点](/help/sites-administering/configure-rich-text-editor-plug-ins.md#linkstyles). |
+| 列表 | 已排序的未排序缩进输出 | 此插件可同时控制 [缩进和列表](/help/sites-administering/configure-rich-text-editor-plug-ins.md#indentmargin);包括嵌套列表。 |
+| misctools | specialchars sourceedit | 其他工具允许作者输入 [特殊字符](/help/sites-administering/configure-rich-text-editor-plug-ins.md#spchar) 或编辑HTML源。 此外，您还可以添加整体 [特殊字符范围](/help/sites-administering/configure-rich-text-editor-plug-ins.md#definerangechar) 要定义自己的列表。 |
 | 参数格式 | paraformat | 默认段落格式为“段落”、“标题1”、“标题2”和“标题3”(`<p>`, `<h1>`, `<h2>`和 `<h3>`)。 您可以 [添加更多段落格式](/help/sites-administering/configure-rich-text-editor-plug-ins.md#paraformats) 或扩展列表。 |
 | 拼写检查 | checktext | [语言感知拼写检查程序](/help/sites-administering/configure-rich-text-editor-plug-ins.md#adddict). |
 | 样式 | 样式 | 支持使用CSS类的样式。 [添加新的文本样式](/help/sites-administering/configure-rich-text-editor-plug-ins.md#textstyles) 如果您要添加（或扩展）自己的样式范围以与文本一起使用。 |
@@ -323,12 +323,12 @@ RTE流中从用户界面配置到内容策略的下游的可用选项。
 
 ## 更多信息 {#further-information}
 
-有关配置RTE的更多信息，请参阅 [AEM Widget API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.RichText) 引用。
+有关配置RTE的更多信息，请参阅 [AEM Widget API](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.form.RichText) 引用。
 
 特别是，要查看可用的插件和相关选项，请执行以下操作：
 
-* 的 [CQ.form.RichText](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.Plugin) 组件提供了用于编辑样式化文本信息（富文本）的表单字段。 要了解富文本表单的所有可用参数，请参阅配置选项。
-* 富文本组件提供了多种功能，其中使用了 [CQ.form.rte.plugins.Plugin](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.Plugin). 对于每个插件：
+* 的 [CQ.form.RichText](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.form.RichText) 组件提供了用于编辑样式化文本信息（富文本）的表单字段。 要了解富文本表单的所有可用参数，请参阅配置选项。
+* 富文本组件提供了多种功能，其中使用了 [CQ.form.rte.plugins.Plugin](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.form.rte.plugins.Plugin). 对于每个插件：
 
    * 有关可启用（或禁用）的功能的详细信息，请参阅功能
    * 有关相应插件的详细配置，请参阅配置选项以了解所有可用参数
