@@ -10,9 +10,9 @@ topic-tags: operations
 content-type: reference
 discoiquuid: 6466d7b8-e308-43c5-acdc-dec15f796f64
 exl-id: 918fcbbc-a78a-4fab-a933-f183ce6a907f
-source-git-commit: e803fde42cfb7b7c9d3fb6483ca661ce386d6464
+source-git-commit: 144fbe2d0efe20d848e9556f8d652a403d1835b2
 workflow-type: tm+mt
-source-wordcount: '2116'
+source-wordcount: '2019'
 ht-degree: 12%
 
 ---
@@ -150,57 +150,6 @@ This is an automatically generated message. Please do not reply.
 
    PageModified => /content/geometrixx/en/products
 
-### 论坛通知的电子邮件模板 {#email-templates-for-forum-notification}
-
-论坛通知的电子邮件模板位于：
-
-`/etc/notification/email/default/com.day.cq.collab.forum`
-
-默认的英语模板( `en.txt`)的定义如下：
-
-```xml
-subject=[CQ Forum Notification]
-
-header=-------------------------------------------------------------------------------------\n \
-Time: Time: ${time}\n \
-Forum Page Path: ${forum.path}\n \
--------------------------------------------------------------------------------------\n\n
-
-message=Page: ${host.prefix}${forum.path}.html\n
-
-footer=\n \
--------------------------------------------------------------------------------------\n \
-This is an automatically generated message. Please do not reply.
-```
-
-#### 为论坛通知自定义电子邮件模板 {#customizing-email-templates-for-forum-notification}
-
-要自定义论坛通知的英语电子邮件模板，请执行以下操作：
-
-1. 在CRXDE中，打开文件：
-
-   `/etc/notification/email/default/com.day.cq.collab.forum/en.txt`
-
-1. 根据需要修改文件。
-1. 保存更改。
-
-模板需要具有以下格式：
-
-```
- subject=<text_1>
- header=<text_2>
- message=<text_3>
- footer=<text_4>
-```
-
-其中 `<text_x>` 可以是静态文本和动态字符串变量的混合变量。
-
-在论坛通知的电子邮件模板中可以使用以下变量：
-
-* `${time}`，事件日期和时间。
-
-* `${forum.path}`，查看论坛页面的路径。
-
 ### 工作流通知的电子邮件模板 {#email-templates-for-workflow-notification}
 
 工作流通知的电子邮件模板（英文）位于：
@@ -293,7 +242,6 @@ subject=<text_1>
 1. 在CRXDE中，添加文件 `<language-code>.txt` 下面：
 
    * `/libs/settings/notification-templates/com.day.cq.wcm.core.page` :用于页面通知
-   * `/etc/notification/email/default/com.day.cq.collab.forum` :用于论坛通知
    * `/libs/settings/workflow/notification/email/default` :用于工作流通知
 
 1. 使文件适应语言。

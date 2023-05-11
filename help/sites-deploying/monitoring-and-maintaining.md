@@ -10,7 +10,7 @@ discoiquuid: 5d2364b7-4497-4f8b-85ef-6e780bfb8c36
 docset: aem65
 feature: Configuring
 exl-id: d3375935-090d-4052-8234-68ef4ddbab6a
-source-git-commit: e147605ff4d5c3d2403632285956559db235c084
+source-git-commit: bb27c7dfedd5a16728674f7584b0c462a92646e6
 workflow-type: tm+mt
 source-wordcount: '5934'
 ht-degree: 1%
@@ -247,9 +247,9 @@ AEM WCM记录详细日志。 在解包并启动快速入门后，您可以在中
 提供从 
 `com.day.compat.codeupgrade` 和 `com.adobe.cq.upgradesexecutor` 包。
 
-* `<cq-installation-dir>/crx-quickstart/repository`
+* `<cq-installation-dir>/crx-quickstart/repository/segmentstore`
 
-   * `revision.log`
+   * `journal.log`
 修订日志信息。
 
 >[!NOTE]
@@ -714,7 +714,7 @@ Adobe建议从 `request.log`，然后单独调整它们以获得更好的性能�
 此日志中每个请求或响应有一行：
 
 * 发出每个请求或响应的日期。
-* 请求的编号，用方括号括起来。 此数字与请求和响应的数字匹配。
+* 请求的编号，用方括号表示。 此数字与请求和响应的数字匹配。
 * 一个箭头，指示请求是请求（指向右侧的箭头）还是响应（向左的箭头）。
 * 对于请求，行包含：
 
