@@ -10,9 +10,9 @@ topic-tags: operations
 content-type: reference
 discoiquuid: d9c96e7f-9416-48e1-a6af-47384f7bee92
 exl-id: 90923d39-3ac5-4028-976c-d011f0404476
-source-git-commit: 1b57fca352457e973bd7395e060e3d0495a9d920
+source-git-commit: 25f7218355b7715949273c84eb72ddde3d6a0a65
 workflow-type: tm+mt
-source-wordcount: '1134'
+source-wordcount: '994'
 ht-degree: 84%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 84%
 
 >[!NOTE]
 >
->此 [JMX控制台](/help/sites-administering/jmx-console.md#workflow-maintenance) 提供其他工作流维护操作。
+>的 [JMX控制台](/help/sites-administering/jmx-console.md#workflow-maintenance) 提供了其他工作流维护操作。
 
 提供了一系列控制台来管理您的工作流。使用[全局导航](/help/sites-authoring/basic-handling.md#global-navigation)以打开&#x200B;**工具**&#x200B;窗格，然后选择&#x200B;**工作流**：
 
@@ -41,26 +41,27 @@ ht-degree: 84%
 
    ![wf-96](assets/wf-96.png)
 
+<!--
+## Search Workflow Instances {#search-workflow-instances}
 
-## 搜索工作流实例 {#search-workflow-instances}
-
-1. 使用“导航”，依次选择&#x200B;**工具**&#x200B;和&#x200B;**工作流**。
-1. 选择&#x200B;**实例**&#x200B;以显示当前正在进行的工作流实例的列表。在顶部边栏的左角，选择&#x200B;**过滤器**。或者，您可以按 alt+1 键。这将显示以下对话框：
+1. Using Navigation select **Tools**, then **Workflow**.
+1. Select **Instances** to display the list of workflow instances currently in progress. On the top rail, in the left corner, select **Filters**. Alternatively, you can use the keystrokes alt+1. The following dialog is displayed:
 
    ![wf-99-1](assets/wf-99-1.png)
 
-1. 在“过滤器”对话框中，选择工作流搜索条件。您可以基于这些输入进行搜索：
+1. In the Filter dialog, select the workflow search criteria. You can search based on these inputs:
 
-   * 有效负载路径：选择特定路径
-   * 工作流模型：选择工作流模型
-   * 被分派人：选择工作流被分派人
-   * 类型：任务、工作流项目或工作流失败
-   * 任务状态：活动、完成或已终止
-   * 我的角色：所有者和被分派人、仅所有者、仅被分派人
-   * 开始日期：指定日期之前或之后的开始日期
-   * 结束日期：指定日期之前或之后的结束日期
-   * 截止日期：指定日期之前或之后的截止日期
-   * 已更新日期：指定日期之前或之后的已更新日期
+   * Payload path: Select a specific path
+   * Workflow model: Select a workflow model
+   * Assignee: Select a workflow Assignee
+   * Type: Task, Workflow item, or Workflow Failure
+   * Task Status: Active, Complete, or Terminated
+   * Where I Am: Owner AND Assignee, Owner only, Assignee only
+   * Start Date: Start date before or after a specified date
+   * End Date: End date before or after a specified date
+   * Due Date: Due date before or after a specified date
+   * Updated Date: Updated date before or after a specified date
+-->
 
 ## 暂停、恢复和终止工作流实例 {#suspending-resuming-and-terminating-a-workflow-instance}
 
@@ -98,7 +99,7 @@ ht-degree: 84%
 
 * **故障详细信息**
 打开一个窗口以显示 
-**失败消息**， **步骤**、和 **失败栈栈**.
+**失败消息**, **步骤**&#x200B;和 **失败堆栈**.
 
 * **打开历史记录**
 显示工作流历史记录的详细信息。
@@ -119,11 +120,11 @@ ht-degree: 84%
 
 最大限度地减少工作流实例的数量可以提高工作流引擎的性能，因此，您可以定期从存储库中清除已完成或正在运行的工作流实例。
 
-配置 **AdobeGranite工作流清除配置** 要根据工作流实例的年龄和状态清除工作流实例，请执行以下操作： 您还可以清除所有模型或特定模型的工作流实例。
+配置 **AdobeGranite工作流清除配置** 根据工作流实例的年龄和状态清除工作流实例。 您还可以清除所有模型或特定模型的工作流实例。
 
 您还可以创建多个服务配置以清除满足不同条件的工作流实例。例如，创建一个配置，以便在特定工作流模型的实例的运行时间显著超出预期时间时清除这些实例。创建另一个配置，以便在一定天数后清除所有已完成的工作流，从而最大限度地减小存储库。
 
-要配置服务，您可以使用 [Web控制台](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) 或 [将OSGi配置添加到存储库](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository). 下表描述了任一方法所需的属性。
+要配置服务，您可以使用 [Web控制台](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) 或 [将OSGi配置添加到存储库](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository). 下表介绍了任一方法所需的属性。
 
 >[!NOTE]
 >
@@ -159,7 +160,7 @@ ht-degree: 84%
   <tr>
    <td>要清除的模型</td>
    <td>scheduledpurge.modelIds</td>
-   <td><p>要清除的工作流模型的 ID。ID是模型节点的路径，例如：<br /> /var/workflow/models/dam/update_asset<br /> </p> <p>要指定多个模型，请单击 Web 控制台中的 + 按钮。 </p> <p>不要指定任何值以清除所有工作流模型的实例。</p> </td>
+   <td><p>要清除的工作流模型的 ID。ID是模型节点的路径，例如：<br /> /var/workflow/models/dam/update_asset<br /> </p> <p>要指定多个模型，请单击 Web 控制台中的 + 按钮。 </p> <p>请勿指定任何值以清除所有工作流模型的实例。</p> </td>
   </tr>
   <tr>
    <td>工作流时限</td>
@@ -171,7 +172,7 @@ ht-degree: 84%
 
 ## 设置收件箱的最大大小 {#setting-the-maximum-size-of-the-inbox}
 
-您可以通过配置 **AdobeGranite工作流服务**，使用 [Web控制台](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) 或 [将OSGi配置添加到存储库](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository). 下表描述了为任一方法配置的属性。
+您可以通过配置 **AdobeGranite工作流服务**，使用 [Web控制台](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) 或 [将OSGi配置添加到存储库](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository). 下表介绍了为任一方法配置的属性。
 
 >[!NOTE]
 >
@@ -185,7 +186,7 @@ ht-degree: 84%
 
 ## 对客户拥有的数据存储使用工作流变量 {#using-workflow-variables-customer-datastore}
 
-工作流处理的数据存储在 Adobe 提供的存储 (JCR) 中。此类数据本质上可能是敏感的。您可能希望将所有用户定义的元数据/数据保存在您自己的托管存储中，而不是 Adobe 提供的存储中。以下各节将介绍如何为外部存储设置这些变量。
+工作流处理的数据存储在 Adobe 提供的存储 (JCR) 中。此类数据本质上可能是敏感的。您可能希望将所有用户定义的元数据/数据保存在您自己的托管存储中，而不是 Adobe 提供的存储中。这些部分介绍了如何为外部存储设置这些变量。
 
 ### 设置模型以使用元数据的外部存储 {#set-model-for-external-storage}
 
