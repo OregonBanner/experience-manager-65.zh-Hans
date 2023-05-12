@@ -5,7 +5,8 @@ contentOwner: AG
 role: Admin, Developer
 feature: Search
 exl-id: acaf46e6-ff70-4825-8922-ce8f82905a92
-source-git-commit: 3d713021ac410ca2925a282c5dfca98ed4e483ee
+hide: true
+source-git-commit: 3d5e9ad8ee19756b05e5a77a3f748bc647fcf734
 workflow-type: tm+mt
 source-wordcount: '2417'
 ht-degree: 17%
@@ -130,7 +131,7 @@ ht-degree: 17%
 
 ## 添加多值属性谓词 {#adding-a-multi-value-property-predicate}
 
-使用多值属性谓词，您可以搜索资产以查找多个值。 假设您在 [!DNL Assets] 并且每个图像的元数据都包含与产品关联的SKU编号。 您可以使用此谓词根据多个SKU编号搜索产品图像。
+使用多值属性谓词，您可以搜索资产以查找多个值。 假设您在 [!DNL Assets] 并且每个图像的元数据都包含与产品关联的SKU号。 您可以使用此谓词根据多个SKU编号搜索产品图像。
 
 1. 单击 [!DNL Experience Manager] 徽标，然后转到 **[!UICONTROL 工具]** > **[!UICONTROL 常规]** > **[!UICONTROL 搜索Forms]**.
 1. 在搜索Forms页面上，选择 **[!UICONTROL 资产管理搜索边栏]**，单击 **[!UICONTROL 编辑]** ![编辑图标](assets/do-not-localize/aemassets_edit.png).

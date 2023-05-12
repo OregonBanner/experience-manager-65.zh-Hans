@@ -4,7 +4,8 @@ description: 配置 [!DNL Workfront for Experience Manager enhanced connector]
 role: Admin
 feature: Integrations
 exl-id: 2660de7c-0281-4884-98d9-e78f20cf571c
-source-git-commit: 3d713021ac410ca2925a282c5dfca98ed4e483ee
+hide: true
+source-git-commit: 3d5e9ad8ee19756b05e5a77a3f748bc647fcf734
 workflow-type: tm+mt
 source-wordcount: '1737'
 ht-degree: 1%
@@ -87,7 +88,7 @@ Workfront项目和AEM文件夹之间的元数据映射是在AEM文件夹元数�
 
 ![元数据映射配置](/help/assets/assets/wf-metadata-mapping-config2.png)
 
-### 配置资产元数据映射 {#asset-metadata-mapping}
+### 配置资源元数据映射 {#asset-metadata-mapping}
 
 Adobe Workfront文档和资产之间的元数据映射是在AEM元数据架构中定义的。 应像往常一样在AEM中创建和配置元数据架构。 Workfront工具会将配置选项添加到每个元数据架构表单字段的设置配置选项卡。 利用这些选项，可指定每个AEM属性应映射到的Workfront字段。
 
