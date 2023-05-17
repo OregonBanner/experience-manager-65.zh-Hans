@@ -9,10 +9,10 @@ topic-tags: site-features
 discoiquuid: 4ec6b408-a165-4617-8d90-e89d8a415bb3
 legacypath: /content/docs/en/aem/6-0/author/site-page-features/launches
 exl-id: bc7897da-15f6-4de4-a9fd-9dd84e6c7eed
-source-git-commit: f4b6eb2ded17ec641f23a1fc3b977ce77169c8a1
+source-git-commit: 7f595bec8ea138d5a73a17d0548320a31544dcd1
 workflow-type: tm+mt
-source-wordcount: '986'
-ht-degree: 51%
+source-wordcount: '1018'
+ht-degree: 49%
 
 ---
 
@@ -66,6 +66,8 @@ ht-degree: 51%
    >要向启动项中添加页面和/或分支，这些页面和/或分支必须位于网站内；即在通用顶级根目录下。
    >
    >如果网站的语言根目录位于顶级以下，则启动项的页面和分支必须位于通用语言根目录下。
+   >
+   >如果您尝试在源路径中创建具有父页面或子页面的启动项，则该启动项将失败，并返回错误“目标在：path上已存在，指向该页面。”
 
 1. 对于每个条目，您可以指定是否：
 
