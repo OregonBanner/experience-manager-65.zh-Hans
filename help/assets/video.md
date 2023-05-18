@@ -12,9 +12,9 @@ docset: aem65
 feature: Asset Management
 role: User, Admin
 exl-id: 28cf9e39-cab4-4278-b6c9-e84cc31964db
-source-git-commit: c704397f08e163a58ee6ac1dbaefc3171298864e
+source-git-commit: a95255594ec03c152cd96df48597ced5fce4b315
 workflow-type: tm+mt
-source-wordcount: '8086'
+source-wordcount: '8066'
 ht-degree: 3%
 
 ---
@@ -155,8 +155,6 @@ Dynamic Media中的视频是一个端到端解决方案，它可以轻松发布�
 Dynamic Media支持为MP4 H.264视频播放移动设备视频。 您可以在以下位置找到支持此视频格式的BlackBerry®设备： [BlackBerry®上支持的视频格式](https://support.blackberry.com/kb/articleDetail?ArticleNumber=000005482).
 
 您可以在以下位置找到支持此视频格式的Windows设备： [Windows Phone 8支持的媒体编解码器](https://learn.microsoft.com/en-us/windows/uwp/audio-video-camera/supported-codecs)
-
-
 
 * 使用Dynamic Media视频查看器预设播放视频，包括以下内容：
 
@@ -442,10 +440,6 @@ DASH（HTTP上的数字自适应流播放）是视频流播放的国际标准，
 * 帮助让客户更易于访问视频交付。
 * 也可以通过API获取流URL。
 
-   >[!IMPORTANT]
-   >
-   >目前，在您的帐户上启用DASH仅在亚太和北美地区提供；即将在欧洲 — 中东 — 非洲推出。
-
 在您的帐户中启用DASH需要两个步骤：
 
 * 将Dynamic Media配置为使用DASH，您可以轻松自己执行该操作。
@@ -455,10 +449,10 @@ DASH（HTTP上的数字自适应流播放）是视频流播放的国际标准，
 
 1. **配置Dynamic Media**  — 在Experience Manager6.5的Dynamic Media中，导航到 [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr).
 1. 搜索 **AEM Assets Dynamic Media视频高级流** 功能标记。
-1. 选中此复选框可启用（打开）短划线。
+1. 要启用（打开）短划线，请选中复选框。
 1. 选择&#x200B;**[!UICONTROL 保存]**。
 1. **配置Experience Manager6.5** - [使用Admin Console开始创建新的支持案例](https://helpx.adobe.com/cn/enterprise/using/support-for-experience-cloud.html).
-1. 按照相关说明创建支持案例，同时确保提供以下信息：
+1. 要创建支持案例，请按照相关说明进行操作，同时确保提供以下信息：
 
    * 主要联系人姓名、电子邮件、电话。
    * 您的Dynamic Media帐户的名称。
@@ -720,7 +714,7 @@ Cost-efficient access to rapidly evolving technology.
 
 ## 关于Dynamic Media - Scene7模式中的视频缩略图 {#about-video-thumbnails-in-dynamic-media-scene-mode}
 
-视频缩略图是视频帧或向客户展示视频的图像资产的缩小版本。 缩略图可鼓励客户单击视频。
+视频缩略图是视频帧或向客户展示视频的图像资产的缩小版本。 缩略图可鼓励客户选择视频。
 
 Experience Manager中的所有视频都必须具有关联的缩略图；不替换缩略图，就无法删除缩略图。 默认情况下，当您将视频上传到Experience Manager时，第一帧将用作缩略图。 但是，您可以自定义缩略图以用于品牌策略或视觉搜索，例如。 自定义视频缩略图时，您可以播放视频并暂停要使用的帧。 或者，您也可以选择已上传的图像资产，并 *发布* 的子项。
 

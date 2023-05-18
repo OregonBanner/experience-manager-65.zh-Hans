@@ -12,9 +12,9 @@ legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/viewer
 feature: Viewer Presets
 role: User, Admin
 exl-id: 0899e497-88e9-4fc3-a6be-b3a149fb5b32
-source-git-commit: 3430897fc98aecbcf6cc7bf6bdc9b3df24e92366
+source-git-commit: a95255594ec03c152cd96df48597ced5fce4b315
 workflow-type: tm+mt
-source-wordcount: '4523'
+source-wordcount: '4519'
 ht-degree: 8%
 
 ---
@@ -60,7 +60,7 @@ ht-degree: 8%
 
 >[!NOTE]
 >
->请注意，在首次使用所有现成查看器之前，必须先发布这些查看器。
+>在首次使用之前发布所有现成的查看器。
 >请参阅 [发布查看器预设].(#publishing-viewer-presets)
 
 ### 查看器预设系统兼容性 {#viewer-preset-system-compatibility}
@@ -72,7 +72,7 @@ Dynamic Media附带的所有现成查看器预设都与以下系统完全兼容�
 * AppleiPad
 * Android™智能手机
 * Android™平板电脑
-* 对于视频，还提供了对MP4播放的其他支持 [BlackBerry®](https://developer.blackberry.com/devzone/develop/supported_media/bb_media_support_at_a_glance.html#kba1328730952678) 和 [Windows Phone](https://docs.microsoft.com/en-us/windows/uwp/audio-video-camera/supported-codecs).
+* 对于视频，还提供了对MP4播放的其他支持 [BlackBerry®](https://developer.blackberry.com/devzone/develop/supported_media/bb_media_support_at_a_glance.html#kba1328730952678) 和 [Windows Phone](https://learn.microsoft.com/en-us/windows/uwp/audio-video-camera/supported-codecs).
 
 ### 查看器预设的富媒体类型 {#rich-media-types-for-viewer-presets}
 
