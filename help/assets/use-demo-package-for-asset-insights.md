@@ -1,6 +1,6 @@
 ---
-title: 使用资产分析演示包
-description: 使用演示包启用Adobe资产分析，以从网页捕获数据并生成见解。
+title: 使用Assets Insights示範套件
+description: 使用示範套件來啟用Adobe資產分析，以擷取資料來源並為網頁產生分析。
 contentOwner: AG
 role: User, Admin
 feature: Asset Insights,Asset Reports
@@ -12,27 +12,27 @@ ht-degree: 2%
 
 ---
 
-# 使用资产分析演示包 {#using-demo-package-for-asset-insights}
+# 使用Assets Insights示範套件 {#using-demo-package-for-asset-insights}
 
-使用演示包，您可以启用AdobeAssets Insights以从中捕获数据并为示例网页生成见解。
+使用示範套件，您可以啟用Adobe資產前瞻分析，以擷取範例網頁的資料並產生前瞻分析。
 
-## [!DNL Use Experience Manager Assets] 带示例网页的洞察  {#using-aem-assets-insights-with-sample-web-page}
+## [!DNL Use Experience Manager Assets] 包含範例網頁的深入分析  {#using-aem-assets-insights-with-sample-web-page}
 
-1. 按照中的说明配置资产分析 [配置资产分析](configure-asset-insights.md).
-1. 从下面下载示例资源包，并从CRXDE包管理器安装包。
+1. 使用中的指示設定Assets Insights [設定資產分析](configure-asset-insights.md).
+1. 從下方下載範例資產套件，並從CRXDE套件管理器安裝套件。
 
 [获取文件](assets/insightsdemo.zip)
 
-1. 从下面下载包含示例网页的ZIP文件，并在本地文件系统上解压缩。
+1. 從下方下載包含範例網頁的ZIP檔案，並在您的本機檔案系統上解壓縮。
 
 [获取文件](assets/demosite.zip)
 
-1. 单击网页以在Web浏览器中将其打开。
+1. 按一下網頁以在網頁瀏覽器中開啟。
 
    >[!CAUTION]
    >
-   >网页配置为从本地主机服务器加载资产。 如果您的服务器正在运行，请在网页的HTML内容中将服务器地址从localhost更改为server address。
+   >網頁已設定為從localhost伺服器載入資產。 如果您的伺服器正在其他位置執行，請在網頁的HTML內容中，將伺服器位址從localhost變更為server address。
 
    >[!NOTE]
    >
-   >外部网页可以位于 [!DNL Experience Manager] 本身。
+   >外部網頁可以位於 [!DNL Experience Manager] 本身。

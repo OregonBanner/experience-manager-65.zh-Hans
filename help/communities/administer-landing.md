@@ -1,7 +1,7 @@
 ---
-title: 社区站点
+title: 社群網站
 seo-title: Communities Sites
-description: AEM Communities文档概述
+description: AEM Communities檔案概覽
 seo-description: Overview of the AEM Communities documentation
 uuid: 9842ce6c-1af8-4b27-b199-07410e797ab2
 contentOwner: Janice Kendall
@@ -18,32 +18,32 @@ ht-degree: 4%
 
 ---
 
-# 社区站点 {#communities-sites}
+# 社群網站 {#communities-sites}
 
-本节面向那些管理AEM Communities并熟悉AEM Communities功能的用户。
+本節適用於管理AEM Communities並假設熟悉AEM Communities功能的人。
 
 ## 概述 {#overview}
 
-有关概述和快速入门教程，请访问：
+如需概覽和快速入門教學課程，請造訪：
 
-* [AEM Communities概述](overview.md)
-* [开始使用AEM Communities](getting-started.md)
+* [AEM Communities概觀](overview.md)
+* [AEM Communities快速入門](getting-started.md)
 
-## 管理和配置主题 {#administration-and-configuration-topics}
+## 管理和設定主題 {#administration-and-configuration-topics}
 
-### 社区站点创建和管理 {#communities-site-creation-and-management}
+### 社群網站建立與管理 {#communities-site-creation-and-management}
 
-* 社区 [控制台](consoles.md)
+* Communities [主控台](consoles.md)
 
    * [Sites](sites-console.md)
 
-      * [组（子社区）](groups.md)
+      * [群組（子社群）](groups.md)
    * [审核](moderation.md)
-   * [成员和组管理](members.md)
+   * [成員與群組管理](members.md)
    * [报表](reports.md)
 
 
-* 社区 [*工具*](tools.md):
+* Communities [*工具*](tools.md)：
 
    * [站点模板](sites.md)
    * [组模板](tools-groups.md)
@@ -55,45 +55,45 @@ ht-degree: 4%
 
 ### 用户生成的内容 {#user-generated-content}
 
-AEM Communities的一项主要功能是，通过登录网站访客（成员）生成用户生成的内容(UGC)。 要了解有关使用UGC的更多信息，请访问：
+AEM Communities的主要功能是由登入的網站訪客（成員）產生使用者產生的內容(UGC)。 若要進一步瞭解如何使用UGC，請造訪：
 
-* [常用UGC存储](working-with-srp.md):UGC共享存储SRP的选择
-* [审核UGC](moderate-ugc.md):受信任的成员可以批量审核或在上下文中审核UGC
-* [标记UGC](tag-ugc.md):功能可配置为允许成员标记内容
-* [翻译UGC](translate-ugc.md):功能可配置为翻译所有UGC或允许成员翻译所选帖子
-* [Analytics配置](analytics.md):使Adobe Analytics能够报告与成员活动有关的各种量度
+* [通用UGC存放區](working-with-srp.md)：選擇SRP以共用儲存UGC
+* [稽核UGC](moderate-ugc.md)：受信任的成員可以大量或內容中稽核UGC
+* [標籤UGC](tag-ugc.md)：功能可設定為允許成員標籤內容
+* [轉譯UGC](translate-ugc.md)：功能可設定為翻譯所有UGC或允許成員翻譯選取的貼文
+* [Analytics設定](analytics.md)：啟用Adobe Analytics以報告有關成員活動的各種量度
 
 ### 社区成员 {#community-members}
 
-* [管理用户和用户组](users.md):社区成员和成员组（包括特权成员）的详细信息。
-* [贡献限制](limits.md):能够限制由新成员发布的内容。
-* [隧道服务](deploy-communities.md#tunnel-service-on-author):允许从创作环境访问发布端成员和成员组。
-* [“成员”和“组”控制台](members.md):允许从创作环境创建和管理发布端成员和成员组。
-* [用户同步](sync.md):用于在多个发布实例中同步成员和成员组。
-* [使用Facebook和Twitter进行社交登录](social-login.md):站点访客能够使用其Facebook或Twitter凭据成为社区成员。
-* [评分和徽章](implementing-scoring.md):能够分配徽章以识别成员的角色，以及通过成员参与社区获得徽章。
-* [通知](notifications.md):能够向成员发送其所关注活动的通知。
-* [订阅](subscriptions.md):允许成员使用外部电子邮件与社区交互。
-* [消息传送](messaging.md):让成员能够使用内部消息与社区交互。
+* [管理使用者和使用者群組](users.md)：社群成員和成員群組的詳細資訊，包括擁有特殊許可權的成員。
+* [貢獻限制](limits.md)：限制新成員張貼的功能。
+* [通道服務](deploy-communities.md#tunnel-service-on-author)：允許從作者環境存取發佈端成員和成員群組。
+* [成員和群組主控台](members.md)：允許從作者環境建立和管理發布端成員和成員群組。
+* [使用者同步](sync.md)：用於跨多個發佈執行個體同步成員與成員群組。
+* [使用Facebook和Twitter進行社交登入](social-login.md)：網站訪客可使用其Facebook或Twitter憑證成為社群成員。
+* [評分和預算](implementing-scoring.md)：可指派徽章以識別成員的角色，以及讓成員透過其參與社群來獲得徽章。
+* [通知](notifications.md)：可讓成員收到其所關注活動的通知。
+* [訂閱](subscriptions.md)：成員可使用外部電子郵件與社群互動。
+* [傳訊](messaging.md)：成員可使用內部訊息與社群互動。
 
 ### 部署 {#deployment}
 
-部署部分包含特定于AEM Communities的信息。
+部署區段包含AEM Communities的特定資訊。
 
-使用社区内容的性质会影响部署的结构：
+使用社群內容的性質會影響部署結構：
 
-* [推荐的社区拓扑](topologies.md)
+* [社群適用的建議拓撲](topologies.md)
 
-在AEM平台上安装最新的Communities版本很重要：
+請務必在AEM平台上安裝最新的Communities版本：
 
-* [最新社区功能包](deploy-communities.md#latestfeaturepack)
+* [最新Communities Feature Pack](deploy-communities.md#latestfeaturepack)
 
-有关其他特定于Communities的信息，请参阅部署页面，例如 [升级](upgrade.md), [Dispatcher](dispatcher.md) 和 [复制](deploy-communities.md#replication-agents-on-author).
+如需其他Communities特定資訊，請參閱部署頁面，例如 [升級](upgrade.md)， [Dispatcher](dispatcher.md) 和 [復寫](deploy-communities.md#replication-agents-on-author).
 
-## 相关社区文档 {#related-communities-documentation}
+## 相關Communities檔案 {#related-communities-documentation}
 
-* 访问 [部署社区](deploy-communities.md) 以了解建议的部署。
+* 造訪 [部署社群](deploy-communities.md) 以瞭解建議的部署。
 
-* 访问 [发展社区](communities.md) 了解社交组件框架(SCF)和自定义社区组件和功能。
+* 造訪 [開發社群](communities.md) 瞭解社交元件架構(SCF)和自訂Communities元件和功能。
 
-* 访问 [创作社区组件](author-communities.md) 了解如何使用和配置社区组件进行创作。
+* 造訪 [Authoring Communities元件](author-communities.md) 瞭解如何使用及設定Communities元件進行創作。

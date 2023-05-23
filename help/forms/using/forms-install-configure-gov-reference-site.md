@@ -1,7 +1,7 @@
 ---
-title: 设置和配置We.Gov和We.Finance参考网站
+title: 設定和設定We.Gov和We.Finance參考網站
 seo-title: Set up and configure We.Gov reference site
-description: 安装、配置和自定义AEM Forms演示包。
+description: 安裝、設定和自訂AEM Forms示範套件。
 seo-description: Install, configure, and customize an AEM Forms demo package.
 uuid: 0a6ad8f9-0d38-40c3-ad8d-e705edef55f8
 contentOwner: anujkapo
@@ -15,787 +15,787 @@ ht-degree: 3%
 
 ---
 
-# 设置和配置We.Gov和We.Finance参考网站 {#set-up-and-configure-we-gov-reference-site}
+# 設定和設定We.Gov和We.Finance參考網站 {#set-up-and-configure-we-gov-reference-site}
 
-## 演示包详细信息 {#demo-package-details}
+## 示範套件詳細資料 {#demo-package-details}
 
-### 安装先决条件 {#installation-prerequisites}
+### 安裝必備條件 {#installation-prerequisites}
 
-此包是为 **AEM Forms 6.4 OSGi作者**，已经过测试，因此在以下平台版本上受支持：
+此封裝是為以下專案建立的： **AEM Forms 6.4 OSGI作者**&#x200B;已經過測試，因此在以下平台版本上受到支援：
 
-| AEM版本 | AEM Forms.包版本 | 状态 |
+| AEM版本 | AEM Forms套件版本 | 状态 |
 |---|---|---|
 | 6.4 | 5.0.86 | **支持** |
 | 6.5 | 6.0.80 | **支持** |
 | 6.5.3 | 6.0.122 | **支持** |
 
-此包包含支持以下平台版本的云配置：
+此套件包含支援以下平台版本的雲端設定：
 
-| 云提供商 | 服务版本 | 状态 |
+| 雲端提供者 | 服務版本 | 状态 |
 |---|---|---|
 | Adobe Sign | v5 API | **支持** |
 | Microsoft Dynamics 365 | 1710 (9.1.0.3020) | **支持** |
 | Adobe Analytics | v1.4 Rest API | **支持** |
-**包安装注意事项：**
+**套件安裝考量事項：**
 
-* 预计该包将安装在干净的服务器上，不会安装其他演示包或较旧的演示包版本
-* 应将包安装在以创作模式运行的OSGi服务器上
+* 套件應安裝在乾淨的伺服器上，且不含其他示範套件或較舊的示範套件版本
+* 套件應安裝在OSGI伺服器上，以製作模式執行
 
-### 此包包含哪些内容 {#what-does-this-package-include}
+### 此套件包含哪些內容 {#what-does-this-package-include}
 
-的 [AEM Forms We.Gov演示包](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/we-gov-forms.pkg.all-2.0.2.zip) (**we-gov-forms.pkg.all-&lt;version>.zip**)作为包提供，其中包含其他多个子包和服务。 该包包含以下模块：
+此 [AEM Forms We.Gov示範套件](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/we-gov-forms.pkg.all-2.0.2.zip) (**we-gov-forms.pkg.all-&lt;version>.zip**)以套件形式提供，包含數個其他子套件和服務。 此套件包含下列模組：
 
-* **we-gov-forms.pkg.all-&lt;version>.zip** - *完整的演示包*
+* **we-gov-forms.pkg.all-&lt;version>.zip** - *完整示範套件*
 
-   * **we-gov-forms.ui.apps-&lt;version>.zip** *— 包含所有组件、客户端库、示例用户、工作流模型等。*
+   * **we-gov-forms.ui.apps-&lt;version>.zip** *— 包含所有元件、使用者端資料庫、範例使用者、工作流程模型等。*
 
-      * **we-gov-forms-core-&lt;version>.jar** - *包含所有OSGi服务、自定义工作流步骤实施等。*
+      * **we-gov-forms.core-&lt;version>.jar** - *包含所有OSGI服務、自訂工作流程步驟實作等。*
 
-      * **we-gov-forms-derby&lt;version>.jar** - *包含所有OSGi服务、数据库架构等。*
+      * **we-gov-forms.derby&lt;version>.jar** - *包含所有OSGI服務、資料庫結構描述等。*
 
-      * **core.wcm.components.all-2.0.4.zip** - *WCM组件示例的集合*
+      * **core.wcm.components.all-2.0.4.zip** - *範例WCM元件的集合*
 
-      * **grid-aem.ui.apps-1.0-SNAPSHOT.zip** - *AEM Sites站点页面列控件的网格布局包*
-   * **we-gov-forms.ui.content-&lt;version>.zip** - *包含所有内容、页面、图像、表单、交互式通信资产等。*
+      * **grid-aem.ui.apps-1.0-SNAPSHOT.zip** - *網站頁面欄控制項的AEM Sites網格版面配置套件*
+   * **we-gov-forms.ui.content-&lt;version>.zip** - *包含所有內容、頁面、影像、表單、互動式通訊資產等。*
 
-   * **we-gov-forms.ui.ananalytics-&lt;version>.zip** - *包含要存储在存储库中的所有We.Gov Forms Analytics数据。*
+   * **we-gov-forms.ui.analytics-&lt;version>.zip** - *包含所有要儲存在存放庫中的We.Gov Forms Analytics資料。*
 
-   * **we-gov-forms.config.public-&lt;version>.zip** - *包含所有默认配置节点，包括占位符云配置，以帮助避免表单数据模型和服务绑定问题。*
+   * **we-gov-forms.config.public-&lt;version>.zip** - *包含所有預設設定節點，包括預留位置雲端設定，以協助避免表單資料模型和服務繫結問題。*
 
 
-此资源包中包含的资产包括：
+此套件中包含的資產包括：
 
-* AEM包含可编辑模板的网站页面
-* AEM Forms自适应Forms
-* AEM Forms交互式通信（打印和Web渠道）
-* AEM Forms XDP备案文档
-* AEM Forms MS Dynamics Forms数据模型
-* Adobe Sign集成
-* AEM工作流模型
-* AEM Assets示例图像
-* 示例（内存中）Apache Derby数据库
-* Apache Derby数据源（与表单数据模型一起使用）
+* 包含可編輯範本的AEM網頁
+* AEM Forms最適化Forms
+* AEM Forms互動式通訊（列印和Web Channel）
+* AEM Forms XDP記錄檔案
+* AEM Forms MS Dynamics Forms資料模型
+* Adobe Sign整合
+* AEM工作流程模型
+* AEM Assets影像範例
+* 範例（記憶體內） Apache Derby資料庫
+* Apache Derby資料來源（用於表單資料模型）
 
-## 安装演示包 {#demo-package-installation}
+## 示範套件安裝 {#demo-package-installation}
 
-本节包含有关安装演示包的信息。
+本節包含安裝示範套件的相關資訊。
 
-### 从Software Distribution {#from-software-distribution}
+### 來自Software Distribution {#from-software-distribution}
 
 1. 打开 [Software Distribution](https://experience.adobe.com/downloads)。您需要 Adobe ID 才能登录 Software Distribution。
 1. 点按标题菜单中的 **[!UICONTROL Adobe Experience Manager]**。
-1. 在 **[!UICONTROL 过滤器]** 部分：
-   1. 选择 **[!UICONTROL Forms]** 从 **[!UICONTROL 解决方案]** 下拉列表。
-   2. 选择包的版本和类型。 您还可以使用 **[!UICONTROL 搜索下载]** 选项来筛选结果。
-1. 点按 **we-gov-forms.pkg.all-&lt;version>.zip** 包名称，选择 **[!UICONTROL 接受EULA条款]**，然后点按 **[!UICONTROL 下载]**.
+1. 在 **[!UICONTROL 篩選器]** 區段：
+   1. 選取 **[!UICONTROL Forms]** 從 **[!UICONTROL 解決方案]** 下拉式清單。
+   2. 選取套件的版本和型別。 您也可以使用 **[!UICONTROL 搜尋下載]** 篩選結果的選項。
+1. 點選 **we-gov-forms.pkg.all-&lt;version>.zip** 封裝名稱，選取 **[!UICONTROL 接受EULA條款]**，然後點選 **[!UICONTROL 下載]**.
 1. 打开[包管理器](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html)，并单击&#x200B;**[!UICONTROL 上传包]**&#x200B;以上传包。
-1. 选择包并单击 **[!UICONTROL 安装]**.
+1. 選取套件並按一下 **[!UICONTROL 安裝]**.
 
-   ![we gov表单包](assets/wegov_forms_package.jpg)
+   ![我們管理表單套件](assets/wegov_forms_package.jpg)
 
-1. 允许完成安装过程。
-1. 导航到 *https://&lt;aemserver>:&lt;port>/content/we-gov/home.html* 以确保安装成功。
+1. 允許安裝程式完成。
+1. 導覽至 *https://&lt;aemserver>：&lt;port>/content/we-gov/home.html？wcmmode=disabled* 以確保安裝成功。
 
-### 从本地ZIP文件 {#from-a-local-zip-file}
+### 從本機ZIP檔案 {#from-a-local-zip-file}
 
-1. 下载并找到 **we-gov-forms.pkg.all-&lt;version>.zip** 文件。
-1. 导航到 *https://&lt;aemserver>:&lt;port>/crx/packmgr/index.jsp*.
-1. 选择“上传包”选项。
+1. 下載並找到 **we-gov-forms.pkg.all-&lt;version>.zip** 檔案。
+1. 導覽至 *https://&lt;aemserver>：&lt;port>/crx/packmgr/index.jsp*.
+1. 選取「上傳套件」選項。
 
-   ![上载包选项](assets/upload_package.jpg)
+   ![上傳封裝選項](assets/upload_package.jpg)
 
-1. 使用文件浏览器导航到并选择下载的ZIP文件。
-1. 单击“打开”以上传。
-1. 上传后，选择“安装”选项以安装包。
+1. 使用檔案瀏覽器導覽並選取下載的ZIP檔案。
+1. 按一下「開啟」以上傳。
+1. 上傳後，選取「安裝」選項以安裝套件。
 
-   ![安装WeGov Forms包](assets/wegov_forms_package-1.jpg)
+   ![安裝WeGov Forms套件](assets/wegov_forms_package-1.jpg)
 
-1. 允许完成安装过程。
-1. 导航到 *https://&lt;aemserver>:&lt;port>/content/we-gov/home.html* 以确保安装成功。
+1. 允許安裝程式完成。
+1. 導覽至 *https://&lt;aemserver>：&lt;port>/content/we-gov/home.html？wcmmode=disabled* 以確保安裝成功。
 
-### 安装新包版本 {#installing-new-package-versions}
+### 安裝新套件版本 {#installing-new-package-versions}
 
-要安装新的软件包版本，请按照4.1和4.2中定义的步骤进行操作。可以在已安装其他旧软件包的情况下安装较新的软件包版本，但建议先卸载旧软件包版本。 为此，请执行以下步骤。
+若要安裝新的套件版本，請依照4.1和4.2中定義的步驟操作。雖然可以在已安裝其他較舊套件時安裝較新的套件版本，但建議先解除安裝較舊的套件版本。 若要這麼做，請遵循下列步驟。
 
-1. 导航到 *https://&lt;aemserver>:&lt;port>/crx/packmgr/index.jsp*
-1. 找到旧版 **we-gov-forms.pkg.all-&lt;version>.zip** 文件。
-1. 选择“更多”选项。
-1. 从下拉菜单中，选择“卸载”选项。
+1. 導覽至 *https://&lt;aemserver>：&lt;port>/crx/packmgr/index.jsp*
+1. 找出較舊的 **we-gov-forms.pkg.all-&lt;version>.zip** 檔案。
+1. 選取「更多」選項。
+1. 從下拉式清單中選取「解除安裝」選項。
 
-   ![卸载WeGov包](assets/uninstall_wegov_forms_package.jpg)
+   ![解除安裝WeGov套件](assets/uninstall_wegov_forms_package.jpg)
 
-1. 确认后，再次选择“卸载”，并允许完成卸载过程。
+1. 確認後，再次選取「解除安裝」，並允許解除安裝程式完成。
 
-## 演示包配置 {#demo-package-configuration}
+## 示範套件設定 {#demo-package-configuration}
 
-本节包含演示包部署后配置的详细信息和说明，然后再进行演示。
+本節包含簡報前示範套件的部署後設定的詳細資訊和指示。
 
-### 虚构用户配置 {#fictional-user-configuration}
+### 虛構的使用者設定 {#fictional-user-configuration}
 
-1. 导航到 *https://&lt;aemserver>:&lt;port>/libs/granite/security/content/groupadmin.html*
-1. 以管理员身份登录以执行以下任务。
-1. 向下滚动到页面末尾以加载所有用户组。
-1. 搜索“**工作流**&quot;
-1. 选择“**工作流用户**“组”，然后单击“属性”。
-1. 导航到“成员”选项卡。
-1. 键入 **wegov** 在“选择用户或群组”字段中。
-1. 从下拉菜单“**We.Gov Forms用户**&quot;
+1. 導覽至 *https://&lt;aemserver>：&lt;port>/libs/granite/security/content/groupadmin.html*
+1. 以管理員身分登入，以便執行下列工作。
+1. 向下捲動至頁面結尾以載入所有使用者群組。
+1. 搜尋&quot;**工作流程**「。
+1. 選取&quot;**workflow-users**」群組並按一下「屬性」。
+1. 導覽至「成員」標籤。
+1. 輸入 **wegov** 在「選取使用者或群組」欄位中。
+1. 從下拉式清單中選取&quot;**We.Gov Forms使用者**「。
 
-   ![编辑工作流用户的组设置](assets/edit_group_settings.jpg)
+   ![編輯工作流程使用者的群組設定](assets/edit_group_settings.jpg)
 
-1. 单击菜单栏中的“保存并关闭”。
-1. 通过搜索“**analytics**“ ”，选择“**Analytics管理员**&quot;组，并添加&quot;**We.Gov Forms用户**&quot;组作为成员。
-1. 通过搜索“**表单用户**“ ”，选择“**表单级用户**&quot;组，并添加&quot;**We.Gov Forms用户**&quot;组作为成员。
-1. 通过搜索“**表单用户**“ ”，选择“**表单用户**“ ”组，此时添加“ ”**We.Gov用户**&quot;组作为成员。
+1. 按一下功能表列中的「儲存並關閉」。
+1. 搜尋&quot;，重複步驟2至7 **分析**&quot;，選取&quot;**Analytics管理員**「群組，並新增「**We.Gov Forms使用者**&quot;群組作為成員。
+1. 搜尋&quot;，重複步驟2至7 **表單使用者**&quot;，選取&quot;**forms-power-users**「群組，並新增「**We.Gov Forms使用者**&quot;群組作為成員。
+1. 搜尋&quot;，重複步驟2至7 **forms-users**&quot;，選取&quot;**forms-users**「群組，這次新增「**We.Gov使用者**&quot;群組作為成員。
 
-### 电子邮件服务器配置 {#email-server-configuration}
+### 電子郵件伺服器設定 {#email-server-configuration}
 
-1. 查看设置文档 [配置电子邮件通知](/help/sites-administering/notification.md)
-1. 以管理员身份登录以执行此任务。
-1. 导航到 *https://&lt;aemserver>:&lt;port>/system/console/configMgr*
-1. 找到并单击 **Day CQ Mail Service** 服务。
+1. 檢閱設定檔案 [設定電子郵件通知](/help/sites-administering/notification.md)
+1. 以管理員身分登入以執行此工作。
+1. 導覽至 *https://&lt;aemserver>：&lt;port>/system/console/configMgr*
+1. 找到並按一下 **Day CQ郵件服務** 要設定的服務。
 
-   ![配置Day CQ Mail Service](assets/day_cq_mail_service.jpg)
+   ![設定Day CQ郵件服務](assets/day_cq_mail_service.jpg)
 
-1. 配置服务以连接到您选择的SMTP服务器：
+1. 設定服務以連線至您選擇的SMTP伺服器：
 
-   1. **SMTP服务器主机名**:例如(smtp.gmail.com)
-   1. **服务器端口**:例如(465)用于使用SSL的gmail
-   1. **SMTP用户：** 演示@ &lt;companyname> .com
-   1. **“发件人”地址**:aemformsdemo@adobe.com
+   1. **SMTP伺服器主機名稱**：例如(smtp.gmail.com)
+   1. **伺服器連線埠**：例如使用SSL的gmail (465)
+   1. **SMTP使用者：** demo@ &lt;companyname> .com
+   1. **「寄件者」地址**： aemformsdemo@adobe.com
 
-   ![配置SMTP](assets/configure_smtp.jpg)
+   ![設定SMTP](assets/configure_smtp.jpg)
 
-1. 单击“保存”以保存配置。
+1. 按一下「儲存」以儲存設定。
 
-### （可选）AEM SSL配置 {#aemsslconfig}
+### （選用） AEM SSL設定 {#aemsslconfig}
 
-本节包含有关在AEM实例上配置SSL以便能够配置Adobe Sign云配置的详细信息。
+本節包含在AEM執行個體上設定SSL，以便能夠設定Adobe Sign雲端設定的詳細資訊。
 
 **引用:**
 
-1. [默认情况下为SSL](/help/sites-administering/ssl-by-default.md)
+1. [SSL預設值](/help/sites-administering/ssl-by-default.md)
 
 **注释:**
 
-1. 导航到https://&lt;aemserver>:&lt;port>/aem/inbox ，您可以在其中完成上述参考文档链接中所述的过程。
-1. 的 `we-gov-forms.pkg.all-[version].zip` 包中包含一个示例SSL密钥和证书，可通过提取 `we-gov-forms.pkg.all-[version].zip/ssl` 文件夹（属于包的一部分）。
+1. 導覽至https://&lt;aemserver>：&lt;port>/aem/inbox，您可在此處完成上述參考檔案連結中說明的程式。
+1. 此 `we-gov-forms.pkg.all-[version].zip` 套件包含範例SSL金鑰和憑證，可透過擷取 `we-gov-forms.pkg.all-[version].zip/ssl` 屬於封裝一部分的資料夾。
 
-1. SSL证书和密钥详细信息：
+1. SSL憑證和金鑰詳細資料：
 
-   1. 颁发给&quot;CN=localhost&quot;
-   1. 有效期为10年
-   1. 密码值为“password”
-1. 私钥是 *localhostprivate.der*.
-1. 证书是 *localhost.crt*.
+   1. 核發給「CN=localhost」
+   1. 10年有效期
+   1. 「password」的密碼值
+1. 私密金鑰是 *localhostprivate.der*.
+1. 憑證是 *localhost.crt*.
 1. 单击下一步。
-1. HTTPS主机名应设置为 *localhost*.
-1. 端口应设置为系统已公开的端口。
+1. HTTPS主機名稱應設為 *localhost*.
+1. 連線埠應該設定為系統已公開的連線埠。
 
-### （可选）Adobe Sign云配置 {#adobe-sign-cloud-configuration}
+### （選用） Adobe Sign雲端設定 {#adobe-sign-cloud-configuration}
 
-本节包含有关Adobe Sign云配置的详细信息和说明。
+本節包含Adobe Sign雲端設定的詳細資訊和指示。
 
 **引用:**
 
-1. [将Adobe Sign与AEM Forms集成](adobe-sign-integration-adaptive-forms.md)
+1. [將Adobe Sign與AEM Forms整合](adobe-sign-integration-adaptive-forms.md)
 
-#### 云配置 {#cloud-configuration}
+#### 雲端設定 {#cloud-configuration}
 
-1. 查看先决条件。 请参阅 [AEM SSL配置](../../forms/using/forms-install-configure-gov-reference-site.md#aemsslconfig) 的SSL配置。
+1. 檢閱先決條件。 另請參閱 [AEM SSL設定](../../forms/using/forms-install-configure-gov-reference-site.md#aemsslconfig) 用於必要的SSL設定。
 1. 导航至：
 
-   *https://&lt;aemserver>:&lt;port>/libs/adobesign/cloudservices/adobesign.html/conf/we-gov*
+   *https://&lt;aemserver>：&lt;port>/libs/adobesign/cloudservices/adobesign.html/conf/we-gov*
 
    >[!NOTE]
    >
-   >用于访问AEM服务器的URL应与Adobe Sign OAuth重定向URI中配置的URL匹配，以避免出现配置问题(例如， *https://&lt;aemserver>:&lt;port>/mnt/overlay/adobesign/cloudservices/adobesign/properties.html*)
+   >用來存取AEM伺服器的URL應符合Adobe Sign OAuth重新導向URI中設定的URL，以避免設定問題(例如： *https://&lt;aemserver>：&lt;port>/mnt/overlay/adobesign/cloudservices/adobesign/properties.html*)
 
-1. 选择“We.gov Adobe Sign”配置。
-1. 单击“属性”。
-1. 导航到“设置”选项卡。
-1. 输入oAuth URL，例如： [https://secure.na1.echosign.com/public/oauth](https://secure.na1.echosign.com/public/oauth)
-1. 从已配置的Adobe Sign实例中提供已配置的客户端ID和客户端密钥。
-1. 单击“连接到Adobe Sign”。
-1. 成功连接后，单击“保存并关闭”以完成集成。
+1. 選取「We.gov Adobe Sign」設定。
+1. 按一下「屬性」。
+1. 導覽至「設定」標籤。
+1. 輸入oAuth URL，例如： [https://secure.na1.echosign.com/public/oauth](https://secure.na1.echosign.com/public/oauth)
+1. 提供已設定Adobe Sign執行個體中的已設定使用者端ID和使用者端密碼。
+1. 按一下「連線至Adobe Sign」。
+1. 成功連線後，按一下「儲存並關閉」以完成整合。
 
-### （可选）MS Dynamics云配置 {#ms-dynamics-cloud-configuration}
+### （選用） MS Dynamics雲端設定 {#ms-dynamics-cloud-configuration}
 
-本节包含有关MS Dynamics云配置的详细信息和说明。
+本節包含MS Dynamics雲端設定的詳細資訊和指示。
 
 **引用:**
 
-1. [Microsoft Dynamics OData配置](/help/forms/using/ms-dynamics-odata-configuration.md)
-1. [为Microsoft配置Dynamics](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/adaptive-forms/using-ms-dynamics-with-aem-forms.html)
+1. [Microsoft Dynamics OData設定](/help/forms/using/ms-dynamics-odata-configuration.md)
+1. [設定適用於AEM Forms的Microsoft Dynamics](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/adaptive-forms/using-ms-dynamics-with-aem-forms.html)
 
-#### MS Dynamics OData云服务 {#ms-dynamics-odata-cloud-service}
+#### MS Dynamics OData雲端服務 {#ms-dynamics-odata-cloud-service}
 
 1. 导航至：
 
-   https://&lt;aemserver>:&lt;port>/libs/fd/fdm/gui/components/admin/fdmcloudservice/fdm.html/conf/we-gov
+   https://&lt;aemserver>：&lt;port>/libs/fd/fdm/gui/components/admin/fdmcloudservice/fdm.html/conf/we-gov
 
-   1. 确保您使用在MS Dynamics应用程序注册中配置的相同重定向URL访问服务器。
+   1. 確定您使用的重新導向URL與MS Dynamics應用程式註冊中所設定的相同。
 
-1. 选择“Microsoft Dynamics ODataCloud Service”配置。
-1. 单击“属性”。
+1. 選取「Microsoft Dynamics ODataCloud Service」設定。
+1. 按一下「屬性」。
 
-   ![Microsoft ODataCloud Service的属性](assets/properties_odata_cloud_service.jpg)
+   ![Microsoft ODataCloud Service的屬性](assets/properties_odata_cloud_service.jpg)
 
-1. 导航到“身份验证设置”选项卡。
-1. 输入以下详细信息：
+1. 瀏覽至「驗證設定」標籤。
+1. 輸入下列詳細資料：
 
-   1. **服务根：** 例如 `https://msdynamicsserver.api.crm3.dynamics.com/api/data/v9.1/`
-   1. **身份验证类型：** OAuth 2.0
-   1. **身份验证设置** (请参阅 [MS Dynamics云配置设置](../../forms/using/forms-install-configure-gov-reference-site.md#dynamicsconfig) 要收集此信息):
+   1. **服務根目錄：** 例如 `https://msdynamicsserver.api.crm3.dynamics.com/api/data/v9.1/`
+   1. **驗證型別：** OAuth 2.0
+   1. **驗證設定** (請參閱 [MS Dynamics雲端組態設定](../../forms/using/forms-install-configure-gov-reference-site.md#dynamicsconfig) 收集此資訊)：
 
-      1. 客户端ID — 也称为应用程序ID
+      1. 使用者端ID — 也稱為應用程式ID
       1. 客户端密钥
       1. OAuth URL — 例如 [https://login.windows.net/common/oauth2/authorize](https://login.windows.net/common/oauth2/authorize)
-      1. 刷新令牌URL — 例如 [https://login.windows.net/common/oauth2/token](https://login.windows.net/common/oauth2/token)
-      1. 访问令牌URL — 例如 [https://login.windows.net/common/oauth2/token](https://login.windows.net/common/oauth2/token)
-      1. 授权范围 —  **openid**
-      1. 身份验证标头 —  **授权承载者**
-      1. 资源 — 例如 `https://msdynamicsserver.api.crm3.dynamics.com`
-   1. 单击“连接到OAuth”。
+      1. 重新整理記號URL — 例如 [https://login.windows.net/common/oauth2/token](https://login.windows.net/common/oauth2/token)
+      1. 存取權杖URL — 例如 [https://login.windows.net/common/oauth2/token](https://login.windows.net/common/oauth2/token)
+      1. 授權範圍 —  **openid**
+      1. 驗證標頭 —  **授權持有者**
+      1. 資源 — 例如 `https://msdynamicsserver.api.crm3.dynamics.com`
+   1. 按一下「連線至OAuth」。
 
 
-1. 成功验证后，单击“保存并关闭”以完成集成。
+1. 成功驗證後，按一下「儲存並關閉」以完成整合。
 
-#### MS Dynamics云配置设置 {#dynamicsconfig}
+#### MS Dynamics雲端組態設定 {#dynamicsconfig}
 
-本节中详细介绍的步骤旨在帮助您从MS Dynamics Cloud实例中查找客户端ID、客户端密钥和详细信息。
+本節詳述的步驟可協助您從MS Dynamics Cloud執行個體尋找使用者端ID、使用者端密碼和詳細資訊。
 
-1. 导航到 [https://portal.azure.com/](https://portal.azure.com/) 和登录。
-1. 从左侧菜单中选择“All Services”。
-1. 搜索或导航到“应用程序注册”。
-1. 创建或选择现有的应用程序注册。
-1. 复制 **应用程序ID** 用作OAuth **客户端Id** 在AEM云配置中
-1. 单击“设置”或“清单”以配置 **回复URL。**
+1. 導覽至 [https://portal.azure.com/](https://portal.azure.com/) 和登入。
+1. 從左側功能表選取「所有服務」。
+1. 搜尋或導覽至「應用程式註冊」。
+1. 建立或選取現有的應用程式註冊。
+1. 複製 **應用程式ID** 將用作OAuth **使用者端ID** AEM雲端設定中的
+1. 按一下「設定」或「資訊清單」以設定 **回覆URL。**
 
-   1. 此URL必须与配置OData服务时用于访问AEM服务器的URL匹配。
+   1. 設定OData服務時，此URL必須與用來存取您的AEM伺服器的URL相符。
 
-1. 在“设置”视图中，单击“密钥”以查看创建新密钥(这将用作AEM中的客户端密钥)。
+1. 在「設定」檢視中，按一下「金鑰」以檢視建立新金鑰(在AEM中會作為使用者端密碼)。
 
-   1. 确保保留密钥的副本，因为您以后将无法在Azure或AEM中查看该密钥。
+   1. 請務必保留金鑰的復本，因為您之後無法在Azure或AEM中檢視。
 
-1. 要找到资源URL/服务根URL，请导航到MS Dynamics实例功能板。
-1. 在顶部导航栏中，单击“销售”或您自己的实例类型，然后单击“选择设置”。
-1. 单击右下方附近的“自定义”和“开发人员资源”。
-1. 您将在此处找到服务根URL:例如
+1. 若要找到資源URL/服務根URL，請導覽至MS Dynamics執行個體控制面板。
+1. 在頂端導覽列中，按一下「銷售」或您自己的執行個體型別和「選取設定」。
+1. 按一下右下角附近的「自訂」和「開發人員資源」。
+1. 您會在此找到服務根URL：例如
 
    *`https://msdynamicsserver.api.crm3.dynamics.com/api/data/v9.1/`
 
-1. 有关刷新和访问令牌URL的详细信息，请访问此处：
+1. 有關重新整理和存取權杖URL的詳細資訊，請參閱此處：
 
    *[https://docs.microsoft.com/en-us/rest/api/datacatalog/authenticate-a-client-app](https://docs.microsoft.com/en-us/rest/api/datacatalog/authenticate-a-client-app)*
 
-#### 测试Forms数据模型(Dynamics) {#testing-the-form-data-model}
+#### 測試Forms資料模型(Dynamics) {#testing-the-form-data-model}
 
-云配置完成后，您可能需要测试表单数据模型。
+雲端設定完成後，您可能想要測試表單資料模型。
 
 1. 导航至
 
-   *https://&lt;aemserver>:&lt;port>/aem/forms.html/content/dam/formsanddocuments-fdm/we-gov*
+   *https://&lt;aemserver>：&lt;port>/aem/forms.html/content/dam/formsanddocuments-fdm/we-gov*
 
-1. 选择“We.gov Microsoft Dynamics CRM FDM”，然后选择“属性”。
+1. 選取「We.gov Microsoft Dynamics CRM FDM」並選取「屬性」。
 
-   ![Dynamics CRM FDM的属性](assets/properties_dynamics_crm.jpg)
+   ![Dynamics CRM FDM的屬性](assets/properties_dynamics_crm.jpg)
 
-1. 导航到“更新源”选项卡。
-1. 确保将“上下文感知配置”设置为“/conf/we-gov”，并且配置的数据源为“ms-dynamics-odata-cloud-service”。
+1. 切換作業選項至「更新來源」標籤。
+1. 請確定「內容感知設定」已設為「/conf/we-gov」，且設定的資料來源為「ms-dynamics-odata-cloud-service」。
 
-   ![配置的数据源](assets/configured_data_source.jpg)
+   ![已設定的資料來源](assets/configured_data_source.jpg)
 
-1. 编辑表单数据模型。
+1. 編輯表單資料模型。
 
-1. 测试服务以确保它们成功连接到配置的数据源。
-
-   >[!NOTE]
-   测试服务后，单击 **取消** 以确保非自愿更改不会传播到表单数据模型。
+1. 測試服務，確保它們成功連線到已設定的資料來源。
 
    >[!NOTE]
-   据报告，数据源需要重新启动AEM服务器才能成功绑定到FDM。
+   測試服務後，按一下 **取消** 以確保非自願的變更不會傳播至表單資料模型。
 
-#### 测试Forms数据模型(Derby) {#test-fdm-derby}
+   >[!NOTE]
+   據報導，AEM伺服器必須重新啟動，資料來源才能成功繫結至FDM。
 
-云配置完成后，您可能需要测试表单数据模型。
+#### 測試Forms資料模型(Derby) {#test-fdm-derby}
 
-1. 导航到 *https://&lt;aemserver>:&lt;port>/aem/forms.html/content/dam/formsanddocuments-fdm/we-gov*
+雲端設定完成後，您可能想要測試表單資料模型。
 
-1. 选择 **We.gov注册FDM** 选择 **属性**.
+1. 導覽至 *https://&lt;aemserver>：&lt;port>/aem/forms.html/content/dam/formsanddocuments-fdm/we-gov*
 
-   ![Dynamics CRM FDM的属性](assets/aftia-enrollment-fdm.jpg)
+1. 選取 **We.gov註冊FDM** 並選取 **屬性**.
 
-1. 导航到 **更新源** 选项卡。
+   ![Dynamics CRM FDM的屬性](assets/aftia-enrollment-fdm.jpg)
 
-1. 确保 **上下文感知配置** 设置为 `/conf/we-gov` 并且配置的数据源为 **We.Gov Derby DS**.
+1. 導覽至 **更新來源** 標籤。
 
-   ![Dynamics CRM FDM的属性](assets/aftia-update-data-source.jpg)
+1. 確保 **內容感知設定** 設為 `/conf/we-gov` 而且設定的資料來源為 **We.Gov Derby DS**.
 
-1. 单击 **保存并关闭**.
+   ![Dynamics CRM FDM的屬性](assets/aftia-update-data-source.jpg)
 
-1. [测试服务](work-with-form-data-model.md#test-data-model-objects-and-services) 以确保他们成功连接到配置的数据源
+1. 按一下 **儲存並關閉**.
 
-   * 要测试连接，请选择 **家庭抵押账户** 给它一份快递服务。 测试服务，系统管理员可以查看正在检索的数据。
+1. [測試服務](work-with-form-data-model.md#test-data-model-objects-and-services) 以確保他們成功連線到設定的資料來源
 
-### Adobe Analytics配置（可选） {#adobe-analytics-configuration}
+   * 若要測試連線，請選取 **HOMEMORTGAGEACCOUNT** 並提供get服務。 測試服務，系統管理員可以看到正在擷取的資料。
 
-本节包含有关Adobe Analytics Cloud配置的详细信息和说明。
+### Adobe Analytics設定（可選） {#adobe-analytics-configuration}
+
+本節包含Adobe Analytics Cloud設定的詳細資訊和指示。
 
 **引用:**
 
 * [与 Adobe Analytics 集成](../../sites-administering/adobeanalytics.md)
 
-* [连接到Adobe Analytics和创建框架](../../sites-administering/adobeanalytics-connect.md)
+* [連線到Adobe Analytics和建立框架](../../sites-administering/adobeanalytics-connect.md)
 
-* [查看页面分析数据](../../sites-authoring/pa-using.md)
+* [檢視頁面分析資料](../../sites-authoring/pa-using.md)
 
-* [配置分析和报表](configure-analytics-forms-documents.md)
+* [設定分析和報表](configure-analytics-forms-documents.md)
 
-* [查看和了解AEM Forms分析报表](view-understand-aem-forms-analytics-reports.md)
+* [檢視和瞭解AEM Forms analytics報表](view-understand-aem-forms-analytics-reports.md)
 
-### Adobe Analytics云服务配置 {#adobe-analytics-cloud-service-configuration}
+### Adobe Analytics雲端服務設定 {#adobe-analytics-cloud-service-configuration}
 
-此包已预配置为连接到Adobe Analytics。 下面提供了允许更新此配置的步骤。
+此套件已預先設定為連線至Adobe Analytics。 提供下列步驟以更新此設定。
 
-1. 导航到 *https://&lt;aemserver>:&lt;port>/libs/cq/core/content/tools/cloudservices.html*
-1. 找到Adobe Analytics部分，然后选择“显示配置”链接。
-1. 选择“We.Gov Adobe Analytics（Analytics配置）”配置。
+1. 導覽至 *https://&lt;aemserver>：&lt;port>/libs/cq/core/content/tools/cloudservices.html*
+1. 找出Adobe Analytics區段，然後選取「顯示設定」連結。
+1. 選取「We.Gov Adobe Analytics （Analytics設定）」設定。
 
-   ![Analytics云服务配置](assets/analytics_config.jpg)
+   ![Analytics雲端服務設定](assets/analytics_config.jpg)
 
-1. 单击“编辑”按钮以更新Adobe Analytics配置（您需要提供共享密钥）。 单击“连接到Analytics”以连接，单击“确定”以完成。
+1. 按一下「編輯」按鈕以更新Adobe Analytics設定（您需要提供共用機密）。 按一下「連線至Analytics」進行連線，按一下「確定」完成。
 
    ![We.Gov Adobe Analytics](assets/wegov_adobe_analytics.jpg)
 
-1. 如果要更新框架配置，请在同一页面中单击“We.Gov Adobe Analytics Framework(Analytics Framework)”(请参阅 [启用AEM创作](../../forms/using/forms-install-configure-gov-reference-site.md#enableauthoring) 启用创作)。
+1. 如果您想要更新框架設定，請從相同頁面按一下「We.Gov Adobe Analytics Framework (Analytics Framework)」(請參閱 [啟用AEM編寫](../../forms/using/forms-install-configure-gov-reference-site.md#enableauthoring) 以啟用編寫)。
 
-#### Adobe Analytics查找用户凭据 {#analytics-locating-user-credentials}
+#### Adobe Analytics正在尋找使用者認證 {#analytics-locating-user-credentials}
 
-要找到Adobe Analytics帐户的用户凭据，帐户管理员必须执行以下任务。
+若要找到Adobe Analytics帳戶的使用者認證，帳戶管理員必須執行下列工作。
 
-1. 导航到Adobe Experience Cloud门户。
-   * 使用管理员凭据登录
-1. 在主功能板中选择Adobe Analytics图标。
-   ![快速访问](assets/aftia-quick-access.jpg)
-1. 导航到“管理员”选项卡，然后选择“用户管理（旧版）”项目
+1. 導覽至Adobe Experience Cloud入口網站。
+   * 使用您的管理員憑證登入
+1. 在主控制面板中選取Adobe Analytics圖示。
+   ![快速存取](assets/aftia-quick-access.jpg)
+1. 導覽至「管理員」標籤，並選取「使用者管理（舊版）」專案
    ![报表](assets/aftia-reports.jpg)
-1. 选择 **用户** 选项卡。
+1. 選取 **使用者** 標籤。
    ![用户管理](assets/aftia-user-management.jpg)
-1. 从用户列表中选择所需的用户。
-1. 滚动到页面底部，用户身份验证信息将显示在页面底部。
-   ![管理访问权限](assets/aftia-admin-user-access.jpg)
-1. 用户名和共享密钥信息将显示在权限框的右侧。
-1. 请注意，用户名的名称中将有一个冒号，冒号左侧的所有信息都是用户名，冒号右侧的所有信息都是公司名称。
-   * 以下是一个示例： *用户名：公司名称*
+1. 從使用者清單中選取所需的使用者。
+1. 捲動至頁面底部，使用者驗證資訊將顯示在頁面底部。
+   ![管理存取權](assets/aftia-admin-user-access.jpg)
+1. 使用者名稱和共用機密資訊將顯示在許可權方塊的右側。
+1. 請注意，使用者名稱在名稱中會有冒號，冒號左側的所有資訊是使用者名稱，冒號右側的所有資訊是公司名稱。
+   * 範例如下： *使用者名稱：公司名稱*
 
-#### 在Adobe Analytics中设置用户身份验证 {#setup-user-authentication}
+#### 在Adobe Analytics中設定使用者驗證 {#setup-user-authentication}
 
-管理员可以通过执行以下操作，为用户提供AEM分析权限。
+管理員可以執行下列動作，為使用者提供AEM Analytics許可權。
 
-1. 导航到Adobe Admin Console。
+1. 導覽至Adobe Admin Console。
 
-1. 单击显示到Admin Console的Analytics实例。
+1. 按一下公開給Admin Console的Analytics執行個體。
 
-   * 它位于管理员页面的主页上。
+   * 此專案位於管理頁面的主要頁面。
 
-1. 选择Analytics完全管理员访问权限。
+1. 選取「Analytics完整管理員存取權」。
 
-1. 将用户添加到配置文件。
+1. 將使用者新增至設定檔。
 
-   ![Analytics完全管理员访问权限](assets/aftia-full-admin-access.jpg)
+   ![Analytics完整管理員存取權](assets/aftia-full-admin-access.jpg)
 
-1. 将用户ID映射到配置文件后，单击权限选项卡。
+1. 將使用者ID對應至設定檔後，按一下許可權索引標籤。
 
-1. 确保所有权限都已映射到配置文件。
+1. 請確定所有許可權都對應至設定檔。
 
    ![编辑权限](assets/aftia-admin-access-edit.jpg)
 
-1. 请注意，一旦权限映射到用户登录的功能，则可能需要几个小时。
+1. 請注意，一旦將許可權對應到使用者登入的能力上，則可能需要幾個小時的時間。
 
-### Adobe Analytics报告 {#adobe-analytics-reporting}
+### Adobe Analytics報告 {#adobe-analytics-reporting}
 
-#### 查看Adobe Analytics站点报表 {#view-adobe-analytics-sites-reporting}
+#### 檢視Adobe Analytics網站報告 {#view-adobe-analytics-sites-reporting}
 
 >[!NOTE]
-AEM Forms Analytics数据在离线时可用，或者如果 `we-gov-forms.ui.analytics-<version>.zip` 包已安装，但AEM Sites数据需要活动的云配置。
+AEM Forms Analytics資料可在離線時使用，或在不使用Adobe Analytics雲端設定的情況下使用，如果 `we-gov-forms.ui.analytics-<version>.zip` 已安裝套件，但AEM Sites資料需要主動式雲端設定。
 
-1. 导航到 *https://&lt;aemserver>:&lt;port>/sites.html/content*
-1. 选择“AEM Forms We.Gov网站”以查看网站页面。
-1. 选择一个网站页面（例如主页），然后选择“Analytics &amp; Recommendations”。
+1. 導覽至 *https://&lt;aemserver>：&lt;port>/sites.html/content*
+1. 選取「AEM Forms We.Gov網站」以檢視網站頁面。
+1. 選取其中一個網站頁面（例如「首頁」），然後選擇「Analytics &amp; Recommendations」。
 
-   ![分析和Recommendations](assets/analytics_recommendations.jpg)
+   ![Analysis和Recommendations](assets/analytics_recommendations.jpg)
 
-1. 在此页面上，您将看到从Adobe Analytics获取的与AEM Sites页面相关的信息(注意：通过设计，此信息会从Adobe Analytics定期刷新，且不会实时显示)。
+1. 在此頁面上，您會看到從Adobe Analytics擷取的與AEM Sites頁面相關的資訊(注意：透過設計，此資訊會定期從Adobe Analytics重新整理，不會即時顯示)。
 
    ![AEM Sites分析](assets/sites_analysis.jpg)
 
-1. 返回页面查看页面（在步骤3中访问）后，您还可以通过更改显示设置以在“列表视图”中查看项目来查看页面查看信息。
-1. 找到“视图”下拉菜单，然后选择“列表视图”。
+1. 回到頁面檢視頁面（在步驟3存取），您也可以變更顯示設定來檢視「清單檢視」中的專案，以檢視頁面檢視資訊。
+1. 找到「檢視」下拉式選單，然後選取「清單檢視」。
 
    ![列表视图](assets/list_view.jpg)
 
-1. 从同一菜单中，选择“查看设置”，然后从“Analytics”部分选择要显示的列。
+1. 從相同功能表選取「檢視設定」，然後從「Analytics」區段選取您要顯示的欄。
 
-   ![配置列](assets/configure_columns.jpg)
+   ![設定欄](assets/configure_columns.jpg)
 
-1. 单击“更新”以使新列可用。
+1. 按一下「更新」以使新欄可用。
 
-   ![显示新列](assets/new_columns_display.jpg)
+   ![顯示新欄](assets/new_columns_display.jpg)
 
-#### 查看Adobe Analytics表单报表 {#view-adobe-analytics-forms-reporting}
+#### 檢視Adobe Analytics表單報告 {#view-adobe-analytics-forms-reporting}
 
 >[!NOTE]
-AEM Forms Analytics数据在离线时可用，或者如果 `we-gov-forms.ui.analytics-<version>.zip` 包已安装，但AEM Sites数据需要活动的云配置。
+AEM Forms Analytics資料可在離線時使用，或在不使用Adobe Analytics雲端設定的情況下使用，如果 `we-gov-forms.ui.analytics-<version>.zip` 已安裝套件，但AEM Sites資料需要主動式雲端設定。
 
 1. 导航至
 
-   *https://&lt;aemserver>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/adobe-gov-forms*
+   *https://&lt;aemserver>：&lt;port>/aem/forms.html/content/dam/formsanddocuments/adobe-gov-forms*
 
-1. 选择“为健康福利申请注册”自适应表单，然后选择“Analytics报表”选项。
+1. 選取「健康權益註冊應用程式」最適化表單，然後選取「Analytics報表」選項。
 
-   ![Analytics报表](assets/analytics_report.jpg)
+   ![Analytics報表](assets/analytics_report.jpg)
 
-1. 等待页面加载，并查看Analytics报表数据。
+1. 等候頁面載入，並檢視Analytics報表資料。
 
-   ![查看Analytics报表数据](assets/analytics_report_data.jpg)
+   ![檢視Analytics報表資料](assets/analytics_report_data.jpg)
 
-### Adobe自动化Forms配置启用 {#automated-forms-enablement}
+### Adobe自動化Forms設定啟用 {#automated-forms-enablement}
 
-要使用AdobeForms安装和配置AEM Forms，转换工具用户必须具有以下功能。
+若要使用AdobeForms來安裝和設定AEM Forms，「轉換」工具的使用者必須具備下列條件。
 
-1. 访问Adobe I/O。
+1. 存取Adobe I/O。
 
-1. 有权创建与AdobeForms转换服务的集成。
+1. 建立與AdobeForms轉換服務整合的許可權。
 
-1. AdobeAEM 6.5以作为作者运行的最新Service Pack。
+1. Adobe以作者身分執行的最新AEM 6.5 Service Pack。
 
-在阅读进一步说明之前，请查看以下内容：
+閱讀進一步指示前，請先檢閱下列內容：
 
 * [配置自动化表单转换服务](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/configure-service.html)
 
-#### 创建IMS配置第1部分 {#creating-ims-config}
+#### 建立IMS設定第1部分 {#creating-ims-config}
 
-为了配置服务以与表单转换工具正确通信，用户必须配置Identity Management系统(IMS)服务以能够向Adobe I/O注册。
+若要設定服務以正確與表單轉換工具通訊，使用者必須設定Identity Management System (IMS)服務以註冊Adobe I/O。
 
-1. 导航到https://&lt;aemserver>:&lt;port> >单击左上角的Adobe Experience Manager >工具>安全> Adobe IMS配置。
+1. 導覽至https://&lt;aemserver>：&lt;port> >按一下左上方的Adobe Experience Manager >工具>安全性> Adobe IMS設定。
 
 1. 单击创建。
 
-1. 在下图中执行操作。
+1. 執行下列影像中的動作。
 
-   ![IMS技术帐户配置](assets/aftia-technical-account-configuration.jpg)
+   ![IMS技術帳戶設定](assets/aftia-technical-account-configuration.jpg)
 
-1. 确保下载证书。
+1. 請務必下載憑證。
 
-1. 请勿继续剩余的配置 — 审阅部分 [在Adobe I/O中创建集成](#create-integration-adobeio)
+1. 不要繼續進行設定的其餘部分 — 檢閱區段 [在Adobe I/O中建立整合](#create-integration-adobeio)
 
 >[!NOTE]
-在此部分中创建的证书将用于在Adobe I/O中创建集成服务。用户在集成服务中创建后，用户可以使用来自Adobe I/O的该信息完成配置。
+本節中建立的憑證將用於在Adobe I/O中建立整合服務。使用者在整合服務中建立後，使用者就可以使用Adobe I/O中的資訊完成設定。
 
-#### 在Adobe I/O中创建集成 {#create-integration-adobeio}
+#### 在Adobe I/O中建立整合 {#create-integration-adobeio}
 
-如果您没有联系系统管理员以便执行此操作，请确保能够在Adobe域中创建集成。
+如果您未連絡系統管理員以便建立整合，請確定您有能力在Adobe網域中建立整合。
 
-1. 导航到 [Adobe I/O控制台](https://console.adobe.io/).
+1. 導覽至 [Adobe I/O主控台](https://console.adobe.io/).
 
 1. 单击创建集成。
 
-1. 选择访问API。
+1. 選取「存取API」。
 
-1. 确保您位于正确的组（右上方的下拉列表）中。
+1. 確定您位於正確的群組（右上方的下拉式清單）。
 
-1. 在Experience Cloud部分中，选择Forms转换工具。
+1. 在Experience Cloud區段中，選取「Forms轉換工具」。
 
 1. 单击“继续”。
 
-1. 输入集成的名称和描述。
+1. 輸入整合的名稱和說明。
 
-1. 使用第2.1节中的公共密钥，将其放在密钥的集成中。
+1. 使用2.1節中的公開金鑰時，會將金鑰置於金鑰的整合中。
 
-1. 为您的automated forms conversion选择用户档案。
+1. 選取您automated forms conversion的設定檔。
 
-   ![创建新集成](assets/aftia-create-new-integration.jpg)
+   ![建立新整合](assets/aftia-create-new-integration.jpg)
 
-#### 创建IMS配置第2部分 {#create-ims-config-part-next}
+#### 建立IMS設定第2部分 {#create-ims-config-part-next}
 
-现在，您已创建集成，接下来我们将完成IMS配置的安装。
+現在您已建立整合，讓我們完成IMS設定的安裝。
 
-1. 单击Adobe I/O中的集成以显示连接详细信息。
+1. 按一下Adobe I/O中的整合，以公開連線詳細資料。
 
-1. 导航到AEM中的IMS配置（工具>安全> IMS）
+1. 在AEM中導覽至您的IMS設定（「工具>安全性> IMS」）
 
-1. 单击IMS配置屏幕上的下一步。
+1. 按一下IMS設定畫面上的「下一步」 。
 
-1. 输入授权服务器（屏幕截图中显示的值）。
+1. 輸入授權伺服器（熒幕擷取畫面中顯示的值）。
 
-1. 输入API密钥。
+1. 輸入API金鑰。
 
-1. 输入客户端密钥(必须单击Adobe I/O中集成的公开才能显示)。
+1. 輸入使用者端密碼(必須按一下「在Adobe I/O中公開」才會公開)。
 
-1. 单击Adobe I/O中的JWT选项卡，以获取JWT有效负载并将其粘贴到IMS配置的有效负载中。
+1. 按一下Adobe I/O中的「JWT」索引標籤以取得JWT裝載，並將其貼到IMS設定的裝載中。
 
-   ![负载IMS配置](assets/aftia-payload-ims-config.jpg)
+   ![裝載IMS設定](assets/aftia-payload-ims-config.jpg)
 
-1. 创建后，单击IMS配置并选择运行状况检查，用户应会看到以下结果。
+1. 建立後，按一下IMS設定並選取健康狀態檢查，使用者應該會看到以下結果。
 
-   ![健康确认](assets/aftia-health-confirmation.jpg)
+   ![健康狀態確認](assets/aftia-health-confirmation.jpg)
 
-#### 配置云配置（We.Gov AFC生产） {#configure-cloud-configuration}
+#### 設定雲端設定（We.Gov AFC生產） {#configure-cloud-configuration}
 
-完成IMS配置后，我们可以继续查看AEM中的云配置。 如果配置不存在，请按照以下步骤在AEM中创建云配置：
+IMS設定完成後，我們就可以繼續檢閱AEM中的雲端設定。 如果設定不存在，請使用以下步驟在AEM中建立雲端設定：
 
-1. 打开您的浏览器并导航到系统URL https://&lt;domain_name>:&lt;system_port>
+1. 開啟瀏覽器並導覽至系統URL https://&lt;domain_name>：&lt;system_port>
 
-1. 单击屏幕左上角的Adobe Experience Manager >工具>Cloud Services>自动Forms对话配置。
+1. 按一下畫面左上角的Adobe Experience Manager > 「工具>Cloud Services>自動Forms交談設定」。
 
-1. 选择要将配置放置到中的配置文件夹。
-
-1. 单击创建。
-
-1. 在下面的屏幕截图中输入信息。
-
-   ![AFC生产](assets/aftia-afc-production.jpg)
-
-1. 为配置提供标题和名称。
-
-1. 系统的服务URL设置为https://aemformsconversion.adobe.io/。
-
-1. 模板URL */conf/we-gov/settings/wcm/templates/we-gov-flamingo-template*.
-
-1. 主题URL: */content/dam/formsanddocuments-themes/adobe-gov-forms-themes/we-gov-theme*
-
-1. 单击下一步。
-
-1. 对于此配置，我们将两个复选框值留空。
-
-   * 要进一步了解这些选项，请参阅 [配置云服务](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/configure-service.html#configure-the-cloud-service).
-
-#### 配置云配置（We.Finance AFC生产） {#configure-cloud-configuration-wefinance}
-
-完成IMS配置后，我们可以继续在AEM中创建云配置。
-
-1. 打开您的浏览器并导航到系统URL https://&lt;domain_name>:&lt;system_port>
-
-1. 单击屏幕左上角的Adobe Experience Manager >工具>Cloud Services>自动Forms对话配置。
-
-1. 选择要将配置放置到中的配置文件夹。
+1. 選取您要放置設定的設定資料夾。
 
 1. 单击创建。
 
-1. 在下面的屏幕截图中输入信息。
+1. 在下方熒幕擷圖中輸入資訊。
 
-   ![We.金融AFC生产](assets/aftia-wefinance-afc-prod.jpg)
+   ![AFC生產](assets/aftia-afc-production.jpg)
 
-1. 为配置提供标题和名称。
+1. 為設定提供標題和名稱。
 
-1. 系统的服务URL设置为https://aemformsconversion.adobe.io/
+1. 系統的服務URL已設定為https://aemformsconversion.adobe.io/。
 
-1. 模板URL: */conf/we-finance/settings/wcm/templates/we-finance-adaptive-form*
+1. 範本URL */conf/we-gov/settings/wcm/templates/we-gov-flamingo-template*.
 
-1. 主题URL: */content/dam/formsanddocuments-themes/adobe-finance-forms-themes/we-finance-themes*
+1. 佈景主題URL： */content/dam/formsanddocuments-themes/adobe-gov-forms-themes/we-gov-theme*
 
 1. 单击下一步。
 
-1. 对于此配置，我们将两个复选框值留空。
+1. 對於此設定，我們將兩個核取方塊值留空。
 
-   * 要进一步了解这些选项，请参阅 [配置云服务](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/configure-service.html#configure-the-cloud-service).
+   * 若要進一步瞭解這些選項，請參閱 [設定雲端服務](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/configure-service.html#configure-the-cloud-service).
 
-#### 测试表单转换（We.Gov注册应用程序） {#test-forms-conversion}
+#### 設定雲端設定(We.Finance AFC Production) {#configure-cloud-configuration-wefinance}
 
-配置设置完毕后，用户可以通过上传PDF文档来测试配置。
+IMS設定完成後，我們就可以繼續在AEM中建立雲端設定。
 
-1. 导航到AEM系统https://&lt;domain_name>:&lt;system_port>
+1. 開啟瀏覽器並導覽至系統URL https://&lt;domain_name>：&lt;system_port>
 
-1. 单击Forms > Forms与文档> AEM Forms We.gov Forms > AFC。
+1. 按一下畫面左上角的Adobe Experience Manager > 「工具>Cloud Services>自動Forms交談設定」。
 
-1. 选择We.Gov注册应用程序PDF。
+1. 選取您要放置設定的設定資料夾。
 
-1. 单击 **开始自动化转化** 按钮。
+1. 单击创建。
 
-1. 用户应该能够看到如下所示的选项。
+1. 在下方熒幕擷圖中輸入資訊。
 
-   ![已转换的自适应表单](assets/aftia-converted-adaptive-form.jpg)
+   ![We.Finance AFC生產](assets/aftia-wefinance-afc-prod.jpg)
 
-1. 选择按钮后，将向用户显示以下选项
+1. 為設定提供標題和名稱。
 
-   * 确保用户选择 *We.Gov AFC生产* 配置
+1. 系統的服務URL已設定為https://aemformsconversion.adobe.io/
+
+1. 範本URL： */conf/we-finance/settings/wcm/templates/we-finance-adaptive-form*
+
+1. 佈景主題URL： */content/dam/formsanddocuments-themes/adobe-finance-forms-themes/we-finance-theme*
+
+1. 单击下一步。
+
+1. 對於此設定，我們將兩個核取方塊值留空。
+
+   * 若要進一步瞭解這些選項，請參閱 [設定雲端服務](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/configure-service.html#configure-the-cloud-service).
+
+#### 測試表單轉換（We.Gov註冊應用程式） {#test-forms-conversion}
+
+設定完成後，使用者可以上傳PDF檔案以進行測試。
+
+1. 導覽至AEM系統https://&lt;domain_name>：&lt;system_port>
+
+1. 按一下「Forms > Forms &amp; Documents > AEM Forms We.gov Forms > AFC」。
+
+1. 選取We.Gov註冊應用程式PDF。
+
+1. 按一下 **開始自動轉換** 按鈕。
+
+1. 使用者應該能夠看到如下所示的選項。
+
+   ![已轉換的最適化表單](assets/aftia-converted-adaptive-form.jpg)
+
+1. 選取按鈕後，使用者將看到以下選項
+
+   * 請確定使用者選取 *We.Gov AFC生產* 設定
 
    ![转换设置](assets/aftia-conversion-settings.jpg)
 
-   ![高级转换设置](assets/aftia-conversion-settings-2.jpg)
+   ![進階轉換設定](assets/aftia-conversion-settings-2.jpg)
 
-1. 在配置了要使用的所有选项后，选择开始转化。
+1. 設定好所有要使用的選項後，請選取開始轉換。
 
-1. 在转换过程开始时，用户应会看到以下屏幕：
+1. 當轉換程式開始時，使用者應該會看到以下畫面：
 
    ![转换设置](assets/aftia-conversion-in-progress.jpg)
 
-1. 转化完成后，用户将看到以下屏幕：
+1. 轉換完成後，使用者會看到下列畫面：
 
-   ![已转换的自适应表单](assets/aftia-converted-adaptive-form-2.jpg)
+   ![已轉換的最適化表單](assets/aftia-converted-adaptive-form-2.jpg)
 
-   单击 **输出** 文件夹来查看生成的自适应表单。
+   按一下 **輸出** 資料夾以檢視產生的自適應表單。
 
-#### 已知问题和说明 {#known-issues-notes}
+#### 已知問題和注意事項 {#known-issues-notes}
 
-automated forms conversion服务包括 [最佳实践，已知的复杂模式](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/styles-and-pattern-considerations-and-best-practices.html)和 [已知问题](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/known-issues.html). 在开始使用AEM FormsAutomated forms conversion服务之前，请查看这些内容。
+automated forms conversion服務包含 [最佳實務，已知的複雜模式](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/styles-and-pattern-considerations-and-best-practices.html)、和 [已知問題](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/known-issues.html). 開始使用AEM FormsAutomated forms conversion服務之前，請先檢閱這些內容。
 
-1. 如果要在转换后将表单绑定到FDM，请生成未启用数据绑定的生成自适应表单。
+1. 如果您想要在轉換後將表單繫結到FDM，請在未啟用資料繫結的情況下產生最適化表單來產生表單。
 
-1. 确保模板文件夹启用了jcr:read for everyone权限，否则服务用户将无法从存储库读取模板，并且转换将失败。
+1. 請確定範本資料夾已啟用每個人許可權的jcr：read ，否則服務使用者將無法從存放庫讀取範本，且轉換將失敗。
 
-## 演示包自定义 {#demo-package-customizations}
+## 示範套件自訂 {#demo-package-customizations}
 
-本节包含有关自定义演示的说明。
+本節包含示範自訂的相關指示。
 
-### 模板自定义 {#templates-customization}
+### 範本自訂 {#templates-customization}
 
-可编辑的模板可在以下位置找到：
+可在以下位置找到可編輯的範本：
 
-*https://&lt;aemserver>:&lt;port>/libs/wcm/core/content/sites/templates.html/conf/we-gov*
+*https://&lt;aemserver>：&lt;port>/libs/wcm/core/content/sites/templates.html/conf/we-gov*
 
-这些模板包括AEM站点、自适应表单和交互式通信模板，这些模板通过组件创建和组装，可在以下位置找到：
+這些範本包括AEM Site、最適化表單和互動式通訊範本，這些範本是使用元件建立和組裝，這些元件可在以下網址找到：
 
-*https://&lt;aemserver>:&lt;port>/crx/de/index.jsp#/apps/we-gov/components*
+*https://&lt;aemserver>：&lt;port>/crx/de/index.jsp#/apps/we-gov/components*
 
-#### 样式系统 {#customizetemplates}
+#### 樣式系統 {#customizetemplates}
 
-此网站还具有客户端库，其中一个库会导入Bootstrap4( [https://getbootstrap.com/](https://getbootstrap.com/) )。 此客户端库位于
+此網站也有使用者端程式庫，其中一個會匯入Bootstrap4 ( [https://getbootstrap.com/](https://getbootstrap.com/) )。 此使用者端程式庫位於
 
-*https://&lt;aemserver>:&lt;port>/crx/de/index.jsp#/apps/we-gov/clientlibs/clientlib/base/css/bootstrap*
+*https://&lt;aemserver>：&lt;port>/crx/de/index.jsp#/apps/we-gov/clientlibs/clientlib-base/css/bootstrap*
 
-此包中包含的可编辑模板还预配置了模板/页面策略，这些策略使用Bootstrap4 CSS类进行分页、设置样式等。 并非所有类都已添加到模板策略中，但Bootstrap4支持的任何类都可以添加到策略中。 有关可用类的列表，请参阅快速入门页面：
+此套件中包含的可編輯範本也預先設定了範本/頁面原則，這些原則使用Bootstrap4 CSS類別進行分頁、樣式設定等。 並非所有類別都已新增至範本原則，但可以將Bootstrap4支援的任何類別新增至原則。 如需可用類別的清單，請參閱「快速入門」頁面：
 
 [https://getbootstrap.com/docs/4.1/getting-started/introduction/](https://getbootstrap.com/docs/4.1/getting-started/introduction/)
 
-此包中包含的模板还支持样式系统：
+此套件中包含的範本也支援樣式系統：
 
 [样式系统](../../sites-authoring/style-system.md)
 
-#### 模板徽标 {#template-logos}
+#### 範本標誌 {#template-logos}
 
-项目DAM资产还包含We.Gov徽标和图像。 这些资产可在以下位置获取：
+專案DAM資產也包含We.Gov圖志和影像。 這些資產位於：
 
-*https://&lt;aemserver>:&lt;port>/assets.html/content/dam/we-gov*
+*https://&lt;aemserver>：&lt;port>/assets.html/content/dam/we-gov*
 
-编辑页面模板和表单模板时，您可以选择通过编辑导航和页脚组件来更新品牌徽标。 这些组件提供了可配置的品牌和徽标对话框，可用于更新徽标：
+編輯「頁面」和「表單範本」時，您可以選擇透過編輯「導覽」和「頁尾」元件來更新品牌標誌。 這些元件提供可設定的品牌和標誌對話方塊，可用於更新標誌：
 
-![模板徽标](assets/template_logos.jpg)
+![範本標誌](assets/template_logos.jpg)
 
-有关更多信息，请参阅编辑页面内容：
+如需詳細資訊，請參閱編輯頁面內容：
 
 [编辑页面内容](../../sites-authoring/editing-content.md)
 
-### 站点页面自定义 {#sites-pages-customization}
+### 網站頁面自訂 {#sites-pages-customization}
 
-所有网站页面均可从以下位置访问： *https://&lt;aemserver>:&lt;port>/sites.html/content/we-gov*
+所有網頁都可從下列網址取得： *https://&lt;aemserver>：&lt;port>/sites.html/content/we-gov*
 
-这些网站页面还利用AEM Grid包来控制一些组件的布局。
+這些網站頁面也使用AEM Grid套件來控制一些元件的版面。
 
-#### 样式系统 {#style-system}
+#### 樣式系統 {#style-system}
 
-此包中包含的页面还支持样式系统：
+此套件中包含的頁面也支援樣式系統：
 
 [样式系统](../../sites-authoring/style-system.md)
 
-您还可以参阅 [模板定制样式系统](../../forms/using/forms-install-configure-gov-reference-site.md#customizetemplates) 以获取有关受支持样式的文档。
+您也可以參閱 [範本自訂樣式系統](../../forms/using/forms-install-configure-gov-reference-site.md#customizetemplates) 以取得有關支援樣式的檔案。
 
-### 自适应表单自定义 {#adaptive-forms-customization}
+### 最適化表單自訂 {#adaptive-forms-customization}
 
-所有自适应表单均可从以下位置获取：
+所有最適化表單均可從以下網址取得：
 
-*https://&lt;aemserver>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/adobe-gov-forms*
+*https://&lt;aemserver>：&lt;port>/aem/forms.html/content/dam/formsanddocuments/adobe-gov-forms*
 
-可以自定义这些表单以适合某些用例。 请注意，不应修改某些字段和提交逻辑，以确保表单继续正常运行。 这包括：
+這些表單可自訂以符合特定使用案例。 請注意，某些欄位和提交邏輯不應修改以確保表單繼續正常運作。 这包括：
 
-**健康福利的注册申请：**
+**健康情況福利的註冊應用程式：**
 
-* contact_id — 用于在提交期间接收MS Dynamics联系人ID的隐藏字段
-* 提交 — 需要自定义提交按钮逻辑以支持回调。 虽然记录了自定义，但在通过Forms数据模型向MS Dynamics执行POST和GET操作时，需要一个大型脚本来提交表单。
-* 根面板 — 初始化事件用于以最不具侵入性的方式将MS Dynamics按钮添加到AEM收件箱，因为所有AEM收件箱Granite UI组件都不可修改。
+* contact_id — 在提交期間用來接收MS Dynamics聯絡人ID的隱藏欄位
+* 提交 — 提交按鈕邏輯需要自訂才能支援回呼。 已記錄自訂內容，但透過Forms資料模型對MS Dynamics執行POST和GET作業時，需要大型指令碼才能提交表單。
+* 根面板 — 「初始化」事件是用來以儘可能不造成干擾的方式將MS Dynamics按鈕新增到AEM收件匣，因為所有AEM收件匣Granite UI元件都不可修改。
 
-#### 自适应表单样式 {#adaptive-form-styling}
+#### 最適化表單樣式 {#adaptive-form-styling}
 
-自适应表单也可以使用样式编辑器或主题编辑器来设置样式：
+最適化表單也可以使用樣式編輯器或主題編輯器來設定樣式：
 
-* [自适应表单组件的内联样式](inline-style-adaptive-forms.md)
-* [创建和使用主题](themes.md)
+* [最適化表單元件的內嵌樣式](inline-style-adaptive-forms.md)
+* [建立和使用主題](themes.md)
 
-### 工作流自定义 {#workflow-customization}
+### 工作流程自訂 {#workflow-customization}
 
-注册自适应表单提交到OSGi工作流以进行处理。 此工作流可在 *https://&lt;aemserver>:&lt;port>/conf/we-gov/settings/models/we-gov-process.html*.
+註冊最適化表單提交至OSGI工作流程進行處理。 此工作流程可在以下網址找到： *https://&lt;aemserver>：&lt;port>/conf/we-gov/settings/models/we-gov-process.html*.
 
-由于某些限制，此工作流包含多个脚本和自定义OSGI工作流流程步骤。 这些工作流步骤创建为通用步骤，并且尚未使用配置对话框创建。 目前，工作流步骤的配置依赖于进程参数。
+由於某些限制，此工作流程包含數個指令碼和自訂OSGI工作流程處理步驟。 這些工作流程步驟是作為一般步驟建立的，且尚未使用設定對話方塊建立。 目前，工作流程步驟的設定依賴流程引數。
 
-所有工作流步骤Java代码都包含在 **we-gov-forms-core-&lt;version>.jar** 捆绑。
+所有工作流程步驟Java程式碼都包含在 **we-gov-forms.core-&lt;version>.jar** 套件組合。
 
-## 演示注意事项和已知问题 {#demo-considerations-and-known-issues}
+## 示範考量事項和已知問題 {#demo-considerations-and-known-issues}
 
-本节包含有关演示功能和设计决策的信息，在演示过程中可能需要特殊考虑因素。
+本節包含示範功能與設計決策的資訊，在示範過程中這些資訊可能需要特別考量。
 
-### 演示注意事项 {#demo-considerations}
+### 示範考量事項 {#demo-considerations}
 
-* 根据AGRS-159，请确保“注册自适应表单”中使用的联系人的姓名（第一、中间和最后）是唯一的。
-* 注册自适应表单将向表单电子邮件字段中指定的电子邮件发送Adobe Sign电子邮件。 该电子邮件地址不能与用于配置Adobe Sign云配置的电子邮件地址相同。
+* 根據AGRS-159，確保註冊最適化表單中使用的聯絡人名稱（名字、中間和姓氏）是唯一的。
+* 註冊最適化表單會將Adobe Sign電子郵件傳送至表單電子郵件欄位中指定的電子郵件。 該電子郵件地址不能與用來設定Adobe Sign雲端設定的電子郵件相同。
 
 ### 已知问题 {#known-issues}
 
-* (AGRS-120)“站点导航”组件当前不支持深度超过2级的嵌套子页面。
-* (AGRS-159)当前MS Dynamics FDM需要先执行2个操作，然后将注册自适应表单数据POST到Dynamics，然后获取用户记录以检索联系人ID。 在其当前状态下，如果Dynamics中存在两个以上同名用户，则获取联系人ID将失败，这将不允许提交注册自适应表单。
+* (AGRS-120)網站導覽元件目前不支援超過2層深的巢狀子頁面。
+* (AGRS-159)目前的MS Dynamics FDM需要執行2個操作，先將註冊最適化表單資料POST到Dynamics，然後擷取使用者記錄以擷取連絡人ID。 在目前的狀態下，如果Dynamics中出現兩個以上具有相同名稱的使用者，擷取連絡人ID將會失敗，不允許提交註冊最適化表單。
 
-## 配置辅助功能测试 {#configure-accessibility-testing}
+## 設定協助工具測試 {#configure-accessibility-testing}
 
-### 启用辅助功能测试Chrome Add {#enable-chrome-add-on}
+### 啟用協助工具測試Chrome附加元件 {#enable-chrome-add-on}
 
-要执行辅助功能测试，请安装位于 `https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb?hl=en`. <!-- This URL is a 404. As such, please fix and update this entire topic. We ought not to be writing about third-party software that we have no control over to avoid these 404s. Consider making this topic entirely generic and leaving it up to the user to choose their own Accessibility Testing add-on. -->
+若要執行協助工具測試，請安裝此處提供的Chrome外掛程式： `https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb?hl=en`. <!-- This URL is a 404. As such, please fix and update this entire topic. We ought not to be writing about third-party software that we have no control over to avoid these 404s. Consider making this topic entirely generic and leaving it up to the user to choose their own Accessibility Testing add-on. -->
 
-安装后，在Chrome浏览器中加载要测试的页面(注意：打开多个选项卡可能影响得分，最好只打开一个选项卡)。 加载页面后
-**右键单击** ，然后选择 **审核** 选项卡。 开发人员可以选择要由辅助功能插件执行的审核类型。 选择所有所需选项后，用户可以单击生成报表按钮。 这将生成一个PDF文档，其中显示整体无障碍评级以及可用于提高整体无障碍评级的内容。
+安裝後，在Chrome瀏覽器中載入您要測試的頁面（注意：開啟多個分頁可能會影響您的分數，最好只開啟一個分頁）。 載入頁面後
+**按一下右鍵** ，並選取 **稽核** 索引標籤。 開發人員可以選取協助工具外掛程式要執行的稽核型別。 選取所有需要的選項後，使用者可以按一下產生報告按鈕。 這會產生PDF檔案，顯示整體協助工具評等，以及可用來提升整體協助工具評等的專案。
 
-运行报表后，用户可能会看到以下信息：
+執行報表後，使用者可能會看到下列內容：
 
-![辅助功能报告](assets/aftia-accessibility.jpg)
+![協助工具報告](assets/aftia-accessibility.jpg)
 
-用户面前显示的数字是他们获得的总体无障碍评级。 还描述了在得分后如何计算该值。
+顯示在使用者前面的數字是他們已獲得的整體協助工具評等。 此外也提供在評分之後如何計算此值的說明。
 
-如果用户希望导出此插件，可以单击屏幕右侧的三个按钮，然后从插件提供的其他选项中进行选择。
+如果使用者想要匯出此內容，可以按一下畫面右側的三個按鈕，然後從外掛程式提供的其他選項中選取。
 
-![辅助功能报告](assets/aftia-accessibility-report.jpg)
+![協助工具報告](assets/aftia-accessibility-report.jpg)
 
-### 超海洋主题 {#ultramarine-theme}
+### 超海洋主題 {#ultramarine-theme}
 
-由Adobe维护的公开超级海洋主题内置于
-`we-gov-forms.pkg.all-<version>.zip` 可安装的ZIP文件。 使用CRX安装此包后。
+由Adobe維護的公開可用的Ultraminary主題內建在
+`we-gov-forms.pkg.all-<version>.zip` 可安裝的ZIP檔案。 使用CRX安裝此套件後。
 
-包管理器中，用户可以通过导航到 **Forms** > **主题** > **参考主题** > **超海洋无障碍**.
+Package Manager，使用者可透過導覽至「 」存取AEM Forms中的Ultramine主題 **Forms** > **主題** > **參考主題** > **超便攜無障礙**.
 
-![超海洋主题](assets/aftia-ultramarine-theme.jpg)
+![超海洋主題](assets/aftia-ultramarine-theme.jpg)
 
 ## 配置选项 {#configuration-options}
 
-用户能够配置各种工作流服务选项，这些选项包括：
+使用者可以設定各種工作流程服務選項，包括下列各項：
 
-1. Microsoft Dynamics Entry
+1. Microsoft Dynamics專案
 1. Adobe Sign
-1. AEM Custom Communication Management
+1. AEM自訂通訊管理
 1. Adobe Analytics
 
-要将配置为在工作流中启用，用户需要执行以下任务。
+若要將其設定為在工作流程中啟用，使用者需要執行下列任務。
 
-1. 导航到https://&#39;[服务器]:[端口]“/system/console/configMgr.
+1. 導覽至https://&#39;[伺服器]：[連線埠]&#39;/system/console/configMgr.
 
-1. 找到 *WeGov配置*.
+1. 找到 *WeGov設定*.
 
-1. 打开服务定义，并启用要在工作流中调用的选定服务。
+1. 開啟服務定義，並啟用在工作流程中叫用的選定服務。
 
    >[!NOTE]
-   正因为用户在配置管理器页面中启用了服务，用户仍需要设置服务配置才能与请求的外部服务通信。
+   僅僅因為使用者在Configuration Manager頁面中啟用服務，使用者仍需設定服務組態，才能與要求的外部服務通訊。
 
-   ![we gov表单包](assets/aftia-configuration-options.jpg)
+   ![我們管理表單套件](assets/aftia-configuration-options.jpg)
 
-1. 完成后，单击保存按钮以保存设置。
+1. 完成後，按一下「儲存」按鈕以儲存設定。
 
 ## 后续步骤 {#next-steps}
 
-现在，您已准备好浏览We.Gov引用站点。 有关We.Gov参考站点工作流和步骤的更多信息，请参阅 [We.Gov引用站点演练](../../forms/using/forms-gov-reference-site-user-demo.md).
+現在您已準備就緒，可探索We.Gov參考網站。 如需We.Gov參考網站工作流程和步驟的詳細資訊，請參閱 [We.Gov參考網站逐步說明](../../forms/using/forms-gov-reference-site-user-demo.md).

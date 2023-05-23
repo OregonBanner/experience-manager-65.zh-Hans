@@ -1,7 +1,7 @@
 ---
-title: 权限管理的主体视图
+title: 許可權管理的主體檢視
 seo-title: Principal View for Permissions Management
-description: 了解有助于权限管理的新Touch UI界面。
+description: 瞭解有助於許可權管理的新觸控式UI介面。
 seo-description: Learn about the new Touch UI interface that facilitates permissions management.
 uuid: 16c5889a-60dd-4b66-bbc4-74fbdb5fc32f
 contentOwner: sarchiz
@@ -18,121 +18,121 @@ ht-degree: 1%
 
 ---
 
-# 权限管理的主体视图{#principal-view-for-permissions-management}
+# 許可權管理的主體檢視{#principal-view-for-permissions-management}
 
 ## 概述 {#overview}
 
-AEM 6.5引入了用户和组的权限管理。 主要功能与经典UI相同，但更加用户友好和高效。
+AEM 6.5引進了使用者和群組的許可權管理。 主要功能與傳統UI相同，但更加方便使用者且更有效率。
 
 ## 使用方法 {#how-to-use}
 
-### 访问UI {#accessing-the-ui}
+### 存取UI {#accessing-the-ui}
 
-可通过“安全性”下的“权限”卡访问新的基于UI的权限管理，如下所示：
+透過「安全性」下的「許可權」卡存取新的UI型許可權管理，如下所示：
 
 ![](assets/screen_shot_2019-03-17at63333pm.png)
 
-通过新视图，可以更轻松地查看已明确授予权限的所有路径上给定主体的整个权限集和限制。 这样便无需转至
+新檢視可讓您更輕鬆地檢視所有已明確授予許可權的路徑中指定主體的整個許可權集和限制。 如此一來，您就不需要前往
 
-用于管理高级权限和限制的CRXDE。 该视图已合并到同一视图中。 该视图默认为组“everyone”。
+CRXDE可管理進階許可權和限制。 它已在相同檢視中合併。 該檢視預設為「每個人」群組。
 
 ![](assets/unu-1.png)
 
-有一个过滤器允许用户选择要查看的承担者类型 **用户**， **组**，或 **全部**&#x200B;并搜索任意主体&#x200B;**.**
+有一個篩選器可讓使用者選取要檢視的主體型別 **使用者**， **群組**，或 **全部**&#x200B;並搜尋任何主體&#x200B;**.**
 
 ![](assets/image2019-3-20_23-52-51.png)
 
-### 查看承担者的权限 {#viewing-permissions-for-a-principal}
+### 檢視主體許可權 {#viewing-permissions-for-a-principal}
 
-左侧的框架允许用户向下滚动以查找任何承担者或根据所选过滤器搜索组或用户，如下所示：
+左側框架可讓使用者向下捲動以尋找任何主參與者，或根據選取的篩選器搜尋「群組」或「使用者」，如下所示：
 
 ![](assets/doi-1.png)
 
-单击名称会在右侧显示分配的权限。 权限窗格显示特定路径上的访问控制条目列表以及配置的限制。
+按一下名稱會在右側顯示指派的許可權。 許可權窗格會顯示特定路徑上的存取控制專案清單以及設定的限制。
 
 ![](assets/trei-1.png)
 
-### 为主体添加新的访问控制条目 {#adding-new-access-control-entry-for-a-principal}
+### 新增主要專案的存取控制專案 {#adding-new-access-control-entry-for-a-principal}
 
-通过单击“添加ACE”按钮添加新的“访问控制条目”，可以添加新权限。
+按一下「新增ACE」按鈕，即可新增新的存取控制專案，以新增許可權。
 
 ![](assets/patru.png)
 
-此时将显示以下窗口，下一步是选择需要配置权限的路径。
+這會顯示以下視窗，下一步是選擇需要設定許可權的路徑。
 
 ![](assets/cinci-1.png)
 
-在此处，我们选择要为其配置权限的路径 **dam-users**：
+在此處，我們選取要設定許可權的路徑 **dam-users**：
 
 ![](assets/sase-1.png)
 
-选择路径后，工作流将返回此屏幕，用户随后可以从可用命名空间中选择一个或多个权限(例如 `jcr`， `rep` 或 `crx`)，如下所示。
+選取路徑後，工作流程會返回此畫面，使用者可在其中從可用名稱空間選取一或多個許可權(例如 `jcr`， `rep` 或 `crx`)，如下所示。
 
-可以通过使用文本字段进行搜索，然后从列表中选择来添加权限。
+您可以使用文字欄位進行搜尋，然後從清單中選取，以新增許可權。
 
 >[!NOTE]
 >
->有关权限和说明的完整列表，请参阅 [此页面](/help/sites-administering/user-group-ac-admin.md#access-right-management).
+>如需完整的許可權和說明清單，請參閱 [此頁面](/help/sites-administering/user-group-ac-admin.md#access-right-management).
 
 ![](assets/image2019-3-21_0-5-47.png) ![](assets/image2019-3-21_0-6-53.png)
 
-选择权限列表后，用户可以选择权限类型：拒绝或允许，如下所示。
+選取許可權清單後，使用者可以選擇許可權型別：拒絕或允許，如下所示。
 
 ![](assets/screen_shot_2019-03-17at63938pm.png) ![](assets/screen_shot_2019-03-17at63947pm.png)
 
 ### 使用限制 {#using-restrictions}
 
-除了给定路径上的权限列表和权限类型之外，此屏幕还允许为细粒度访问控制添加限制，如下所示：
+除了指定路徑上的許可權清單和許可權型別之外，此畫面還允許新增細粒度存取控制的限制，如下所示：
 
 ![](assets/image2019-3-21_1-4-14.png)
 
 >[!NOTE]
 >
->欲了解每种限制含义的更多信息，请查阅 [Jackrabbit Oak文档](https://jackrabbit.apache.org/oak/docs/security/authorization/restriction.html).
+>如需每個限制含義的詳細資訊，請參閱 [Jackrabbit Oak檔案](https://jackrabbit.apache.org/oak/docs/security/authorization/restriction.html).
 
-通过选择限制类型、输入值并点击 **+** 图标。
+您可以選取限制型別、輸入值並按一下 **+** 圖示。
 
 ![](assets/sapte-1.png) ![](assets/opt-1.png)
 
-新的ACE会反映在“访问控制列表”中，如下所示。 请注意 `jcr:write` 是聚合权限，包括 `jcr:removeNode` ，但未在下方显示为其在 `jcr:write`.
+新的ACE會反映在「存取控制清單」中，如下所示。 請注意 `jcr:write` 是包含下列專案的彙總許可權 `jcr:removeNode` 以上所新增，但並未在下方顯示為其涵蓋的內容 `jcr:write`.
 
-### 编辑ACE {#editing-aces}
+### 編輯ACE {#editing-aces}
 
-通过选择承担者并选择要编辑的ACE，可以编辑访问控制条目。
+選取主參與者並選擇您要編輯的ACE，即可編輯「存取控制專案」。
 
-例如，在此处，我们可以编辑以下条目 **dam-users** 单击右侧的铅笔图标：
+舉例來說，我們可以編輯以下專案 **dam-users** 按一下右側的鉛筆圖示：
 
-![添加限制](assets/image2019-3-21_0-35-39.png)
+![新增限制](assets/image2019-3-21_0-35-39.png)
 
-此时将显示编辑屏幕，其中预先选择了已配置的ACE，单击它们旁边的交叉图标可以删除它们，或者可以为给定路径添加新权限，如下所示。
+編輯畫面中會顯示預先選取的已設定ACE，按一下它們旁邊的交叉圖示可以刪除它們，或者可以為給定路徑新增許可權，如下所示。
 
-![编辑条目](assets/noua-1.png)
+![編輯專案](assets/noua-1.png)
 
-在此处，我们将添加 `addChildNodes` 的特权 **dam-users** 在给定路径上。
+在此處，我們將新增 `addChildNodes` 許可權： **dam-users** 在指定路徑上。
 
 ![](assets/image2019-3-21_0-45-35.png)
 
-通过单击 **保存** ，并且更改将反映在**dam-users的新权限中**如下所示：
+按一下「 」以儲存變更 **儲存** 按鈕，而變更將反映在**dam-users的新許可權中**如下所示：
 
 ![](assets/zece-1.png)
 
-### 删除ACE {#deleting-aces}
+### 刪除ACE {#deleting-aces}
 
-可以删除访问控制条目，以删除授予特定路径上承担者的所有权限。 可以使用ACE旁边的X图标将其删除，如下所示：
+可以刪除存取控制專案，以移除授予特定路徑上主要者的所有許可權。 ACE旁的X圖示可用來刪除它，如下所示：
 
 ![](assets/image2019-3-21_0-53-19.png) ![](assets/unspe.png)
 
-### 经典UI权限组合 {#classic-ui-privilege-combinations}
+### 傳統UI許可權組合 {#classic-ui-privilege-combinations}
 
-请注意，新权限UI明确使用基本权限集，而不是预定义的组合，这些组合不能真正反映所授予的确切基础权限。
+請注意，新許可權UI明確使用基本許可權集，而不是預先定義的組合，這些組合併未真正反映授與的確切基礎許可權。
 
-这会导致混淆，无法确定到底在配置什么内容。 下表列出了从经典UI到构成权限组合的实际权限之间的映射：
+這會導致混淆，無法確定確切的設定內容。 下表列出從傳統UI的許可權組合與組成這些組合的實際許可權之間的對應：
 
 <table>
  <tbody>
   <tr>
-   <th>经典UI权限组合</th>
-   <th>权限用户界面权限</th>
+   <th>傳統UI許可權組合</th>
+   <th>許可權UI許可權</th>
   </tr>
   <tr>
    <td>读取</td>

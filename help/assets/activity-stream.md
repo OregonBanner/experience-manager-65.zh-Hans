@@ -1,6 +1,6 @@
 ---
-title: 时间轴视图中数字资产的活动流
-description: 本文介绍了如何在时间轴上显示资产的活动日志。
+title: 時間軸檢視中的數位資產活動資料流
+description: 本文說明如何在時間軸上顯示資產的活動記錄。
 contentOwner: AG
 feature: Asset Management
 role: User, Admin
@@ -8,36 +8,36 @@ exl-id: 28dc0aa5-f2be-4e27-b7d8-415569b7ecd4
 source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '215'
-ht-degree: 34%
+ht-degree: 21%
 
 ---
 
-# 时间轴中的活动流 {#activity-stream-in-timeline}
+# 時間軸中的活動資料流 {#activity-stream-in-timeline}
 
-这项功能可将资产的活动日志显示在时间轴上。如果您在中执行以下任何与资产相关的操作 [!DNL Adobe Experience Manager Assets]，活动流功能会更新时间线以反映该活动。
+此功能會在時間軸上顯示資產的活動記錄。 如果您在中執行下列任何資產相關作業 [!DNL Adobe Experience Manager Assets]，活動資料流功能會更新時間軸以反映活動。
 
-活动流中记录了以下操作：
+活動資料流中會記錄下列作業：
 
 * 创建
 * 删除
-* 下载（包括演绎版）
+* 下載（包括轉譯）
 * 发布
 * 取消发布
 * 批准
 * 拒绝
 * 移动
 
-时间轴中显示的活动日志是从 CRX 中的 `/var/audit/com.day.cq.dam/content/dam` 位置获取的，日志文件就存储在该位置。此外，上传新资产或修改现有资产并签入时，会记录时间轴活动 [!DNL Experience Manager] via [Adobe资源链接](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/manage-assets-using-adobe-asset-link.ug.html) 或 [Experience Manager桌面应用程序](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/release-notes.html).
+时间轴中显示的活动日志是从 CRX 中的 `/var/audit/com.day.cq.dam/content/dam` 位置获取的，日志文件就存储在该位置。此外，上傳新資產或修改現有資產並簽入時，會記錄時間軸活動 [!DNL Experience Manager] 透過 [Adobe資產連結](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/manage-assets-using-adobe-asset-link.ug.html) 或 [Experience Manager案頭應用程式](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/release-notes.html).
 
 >[!NOTE]
 >
->临时工作流不会显示在时间轴中，因为不会保存这些工作流的历史记录信息。
+>暫時性工作流程不會顯示在時間軸中，因為沒有為這些工作流程儲存歷史記錄資訊。
 
-要查看活动流，请在资产上执行一个或多个操作，选择资产，然后选择 **[!UICONTROL 时间线]** 从GlobalNav列表中。
+若要檢視活動資料流，請在資產上執行一或多個作業、選取資產，然後選擇 **[!UICONTROL 時間表]** 從GlobalNav清單。
 
-![时间轴–2](assets/timeline-2.png)
+![時間軸–2](assets/timeline-2.png)
 
-时间轴显示您对资产所执行操作的活动流。
+時間軸會顯示您對資產執行之作業的活動資料流。
 
 ![activity_stream](assets/activity_stream.png)
 

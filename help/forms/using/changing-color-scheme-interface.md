@@ -1,7 +1,7 @@
 ---
-title: 更改界面的颜色方案
+title: 變更介面的色彩配置
 seo-title: Changing the color scheme of the interface
-description: 如何有选择地修改AEM Forms工作区用户界面部分的颜色方案。
+description: 如何選擇性地修改AEM Forms工作區使用者介面部分的色彩配置。
 seo-description: How to modify the color scheme of AEM Forms workspace user interface portions selectively.
 uuid: 32c32f7a-8271-4d2c-8a1f-ad5ab3c90b83
 contentOwner: robhagat
@@ -17,24 +17,24 @@ ht-degree: 3%
 
 ---
 
-# 更改界面的颜色方案 {#changing-the-color-scheme-of-the-interface}
+# 變更介面的色彩配置 {#changing-the-color-scheme-of-the-interface}
 
-您可以修改AEM Forms工作区用户界面部分的颜色方案，以符合您的要求。 以下是一些代表性颜色方案自定义的示例。 除了本文中讨论的步骤之外，请参阅 [AEM Forms工作区自定义的一般步骤](/help/forms/using/generic-steps-html-workspace-customization.md).
+您可以修改AEM Forms工作區使用者介面部分的色彩配置，以符合您的需求。 以下是一些代表性色彩配置自訂的範例。 除了本文章所述的步驟外，另請參閱 [AEM Forms工作區自訂的一般步驟](/help/forms/using/generic-steps-html-workspace-customization.md).
 
-## 顶部导航栏 {#top-navigation-bar}
+## 頂端導覽列 {#top-navigation-bar}
 
-### 使用背景图像 {#using-background-image}
+### 使用背景影像 {#using-background-image}
 
-更新位于AEM Forms工作区顶部的导航栏。
+更新AEM Forms工作區頂端的導覽列。
 
-1. 创建背景图像以更新颜色。 将文件命名为newBackground.jpg。
-1. 使用WebDAV客户端在/apps/ws/images文件夹中上传背景图像文件。
+1. 建立背景影像以更新顏色。 將檔案命名為newBackground.jpg。
+1. 使用WebDAV使用者端上傳/apps/ws/images資料夾中的背景影像檔案。
 
    >[!NOTE]
    >
-   >有关WebDAV访问的更多信息，请参阅 [https://dev.day.com/docs/en/crx/current/how_to/webdav_access.html](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hans).
+   >如需有關WebDAV存取的詳細資訊，請參閱 [https://dev.day.com/docs/en/crx/current/how_to/webdav_access.html](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hans).
 
-1. 通过添加以下样式，在/apps/ws/css/newStyle.css中引用新的背景图像。
+1. 新增下列樣式，以參照/apps/ws/css/newStyle.css中的新背景影像。
 
    ```css
    #header {
@@ -42,9 +42,9 @@ ht-degree: 3%
    }
    ```
 
-### 在CSS中使用颜色属性 {#using-color-property-in-css}
+### 在CSS中使用color屬性 {#using-color-property-in-css}
 
-1. 在/apps/ws/css的newStyle.css中添加以下样式
+1. 在/apps/ws/css的newStyle.css中新增以下樣式
 
    ```css
    #header {
@@ -53,10 +53,10 @@ ht-degree: 3%
    }
    ```
 
-## 类别组件 {#category-component}
+## 類別元件 {#category-component}
 
-类别组件在左侧面板中显示各种类别的任务。 要更改其颜色，请在 `.category` 元素。
+類別元件會在左側面板中顯示您工作的各種類別。 若要變更其顏色，請定義背景顏色 `.category` CSS檔案的元素。
 
-## 任务组件 {#task-component}
+## 任務元件 {#task-component}
 
-任务显示在名为TaskList组件的中间面板中。 要更改其颜色，请修改样式表中与.task选择器关联的样式。
+任務會顯示在稱為TaskList元件的中間面板中。 若要變更其顏色，請修改樣式表中與.task選取器關聯的樣式。

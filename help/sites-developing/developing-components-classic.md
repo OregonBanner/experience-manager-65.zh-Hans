@@ -1,7 +1,7 @@
 ---
-title: 开发AEM组件（经典UI）
+title: 開發AEM元件（傳統UI）
 seo-title: Developing AEM Components (Classic UI)
-description: 经典UI使用ExtJS创建提供组件外观的小部件。 HTL不是AEM推荐的脚本语言。
+description: 傳統UI會使用ExtJS建立提供元件外觀的Widget。 HTL不是AEM的建議指令碼語言。
 seo-description: The classic UI uses ExtJS to create widgets that provide the look-and-feel of the components. HTL is not the recommended scripting language for AEM.
 uuid: ed53d7c6-5996-4892-81a4-4ac30df85f04
 contentOwner: User
@@ -18,316 +18,316 @@ ht-degree: 1%
 
 ---
 
-# 开发AEM组件（经典UI）{#developing-aem-components-classic-ui}
+# 開發AEM元件（傳統UI）{#developing-aem-components-classic-ui}
 
-经典UI使用ExtJS创建提供组件外观的小部件。 由于这些构件的性质，组件与经典UI的交互方式与 [触屏优化UI](/help/sites-developing/developing-components.md).
-
->[!NOTE]
->
->组件开发的许多方面对于经典UI和触屏UI都是通用的，因此 **您必须阅读 [AEM组件 — 基础知识](/help/sites-developing/components-basics.md) 早于** 使用此页面，该页面介绍经典UI的详细信息。
+傳統UI會使用ExtJS建立提供元件外觀的Widget。 由於這些Widget的性質，元件與傳統UI的互動方式與 [觸控式UI](/help/sites-developing/developing-components.md).
 
 >[!NOTE]
 >
->虽然HTML模板语言(HTL)和JSP都可用于开发经典UI的组件，但此页说明了使用JSP进行开发。 这完全是因为在经典UI中使用JSP的历史记录。
+>元件開發的許多方面對於傳統UI和觸控式UI都是通用的，因此 **您必須閱讀 [AEM元件 — 基本知識](/help/sites-developing/components-basics.md) 早於** 此頁面會說明傳統UI的詳細資訊。
+
+>[!NOTE]
 >
->HTL现在是AEM推荐的脚本语言。 参见 [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html) 和 [开发AEM组件](/help/sites-developing/developing-components.md) 以比较方法。
+>雖然HTML範本語言(HTL)和JSP都可用於開發傳統UI的元件，此頁面說明了使用JSP進行開發。 這完全是因為在傳統UI中使用JSP的歷史記錄。
+>
+>HTL現在是AEM的建議指令碼語言。 另請參閱 [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html) 和 [開發AEM元件](/help/sites-developing/developing-components.md) 以比較方法。
 
 ## 结构 {#structure}
 
-页面上介绍了组件的基本结构 [AEM组件 — 基础知识](/help/sites-developing/components-basics.md#structure)，适用于触屏优化UI和经典UI。 即使您不需要在新组件中使用触屏UI的设置，也可以在继承现有组件时了解这些设置。
+頁面上會說明元件的基本結構 [AEM元件 — 基本知識](/help/sites-developing/components-basics.md#structure)，會同時套用觸控式UI和傳統UI。 即使您不需要在新元件中使用觸控式UI的設定，在繼承現有元件時瞭解這些設定也會有所幫助。
 
-## JSP脚本 {#jsp-scripts}
+## JSP指令碼 {#jsp-scripts}
 
-可以使用JSP脚本或Servlet渲染组件。 根据Sling的请求处理规则，默认脚本的名称是：
+JSP指令碼或Servlet可用於呈現元件。 根據Sling的請求處理規則，預設指令碼的名稱是：
 
 `<*componentname*>.jsp`
 
 ## global.jsp {#global-jsp}
 
-JSP脚本文件 `global.jsp` 用于提供对用于呈现组件的任何JSP脚本文件的快速访问（即访问内容）。
+JSP指令碼檔案 `global.jsp` 用於提供對用於呈現元件的任何JSP指令碼檔案的特定物件的快速存取（即存取內容）。
 
-因此 `global.jsp` 应包含在每个组件渲染JSP脚本中，其中提供的一个或多个对象 `global.jsp` 已使用。
+因此 `global.jsp` 應包含在每個元件轉譯JSP指令碼中，其中一個或多個物件提供於 `global.jsp` 已使用。
 
-默认的位置 `global.jsp` 为：
+預設的位置 `global.jsp` 為：
 
 `/libs/foundation/global.jsp`
 
 >[!NOTE]
 >
->路径 `/libs/wcm/global.jsp`CQ 5.3及更早版本使用的已过时。
+>路徑 `/libs/wcm/global.jsp`CQ 5.3及舊版所使用的，現已淘汰。
 
-### global.jsp、使用的API和Taglibs的功能 {#function-of-global-jsp-used-apis-and-taglibs}
+### global.jsp、used API和Taglibs的功能 {#function-of-global-jsp-used-apis-and-taglibs}
 
-下面列出了默认环境提供的最重要的对象 `global.jsp`：
+以下列出預設提供的最重要物件 `global.jsp`：
 
 摘要:
 
 * `<cq:defineObjects />`
 
-   * `slingRequest`  — 包装的请求对象( `SlingHttpServletRequest`)。
-   * `slingResponse`  — 包装的响应对象( `SlingHttpServletResponse`)。
-   * `resource` - Sling资源对象( `slingRequest.getResource();`)。
-   * `resourceResolver` - Sling资源解析程序对象( `slingRequest.getResoucreResolver();`)。
-   * `currentNode`  — 请求的已解析JCR节点。
-   * `log`  — 默认记录器()。
-   * `sling` - Sling脚本助手。
-   * `properties`  — 已寻址资源的属性( `resource.adaptTo(ValueMap.class);`)。
-   * `pageProperties`  — 已寻址资源的页面的属性。
-   * `pageManager`  — 用于访问AEM内容页面的页面管理器( `resourceResolver.adaptTo(PageManager.class);`)。
-   * `component`  — 当前AEM组件的组件对象。
-   * `designer`  — 用于检索设计信息的设计器对象( `resourceResolver.adaptTo(Designer.class);`)。
-   * `currentDesign`  — 寻址资源的设计。
-   * `currentStyle`  — 已寻址资源的样式。
+   * `slingRequest`  — 包裝的要求物件( `SlingHttpServletRequest`)。
+   * `slingResponse`  — 包裝的回應物件( `SlingHttpServletResponse`)。
+   * `resource` - Sling資源物件( `slingRequest.getResource();`)。
+   * `resourceResolver` - Sling資源解析器物件( `slingRequest.getResoucreResolver();`)。
+   * `currentNode`  — 請求的已解析JCR節點。
+   * `log`  — 預設記錄器()。
+   * `sling` - Sling指令碼協助程式。
+   * `properties`  — 已定址資源的屬性( `resource.adaptTo(ValueMap.class);`)。
+   * `pageProperties`  — 已定址資源的頁面屬性。
+   * `pageManager`  — 用於存取AEM內容頁面的頁面管理員( `resourceResolver.adaptTo(PageManager.class);`)。
+   * `component`  — 目前AEM元件的元件物件。
+   * `designer`  — 用於擷取設計資訊的設計器物件( `resourceResolver.adaptTo(Designer.class);`)。
+   * `currentDesign`  — 已定址資源的設計。
+   * `currentStyle`  — 已定址資源的樣式。
 
-### 访问内容 {#accessing-content}
+### 存取內容 {#accessing-content}
 
-有三种方法可访问AEM WCM中的内容：
+存取AEM WCM中的內容有三種方法：
 
-* 通过中引入的属性对象 `global.jsp`：
+* 透過中引入的屬性物件 `global.jsp`：
 
-   properties对象是ValueMap的实例(请参阅 [Sling API](https://sling.apache.org/apidocs/sling5/org/apache/sling/api/resource/ValueMap.html))并包含当前资源的所有属性。
+   properties物件是ValueMap的例項(請參閱 [Sling API](https://sling.apache.org/apidocs/sling5/org/apache/sling/api/resource/ValueMap.html))並包含目前資源的所有屬性。
 
-   示例： `String pageTitle = properties.get("jcr:title", "no title");` 在页面组件的渲染脚本中使用。
+   範例： `String pageTitle = properties.get("jcr:title", "no title");` 用於頁面元件的轉譯指令碼。
 
-   示例： `String paragraphTitle = properties.get("jcr:title", "no title");` 在标准段落组件的渲染脚本中使用。
+   範例： `String paragraphTitle = properties.get("jcr:title", "no title");` 用於標準段落元件的轉譯指令碼。
 
-* 通过 `currentPage` 引入的对象 `global.jsp`：
+* 透過 `currentPage` 在中引入的物件 `global.jsp`：
 
-   此 `currentPage` 对象是页面的实例(请参阅 [AEM API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/Page.mhtml))。 Page类提供了一些访问内容的方法。
+   此 `currentPage` 物件是頁面的例項(請參閱 [AEM API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/Page.mhtml))。 Page類別提供一些存取內容的方法。
 
    示例: `String pageTitle = currentPage.getTitle();`
 
-* Via `currentNode` 引入的对象 `global.jsp`：
+* Via `currentNode` 在中引入的物件 `global.jsp`：
 
-   此 `currentNode` 对象是节点的实例(请参阅 [JCR API](https://jackrabbit.apache.org/api/2.16/org/apache/jackrabbit/standalone/cli/core/CurrentNode.html))。 可以通过以下方式访问节点的属性 `getProperty()` 方法。
+   此 `currentNode` 物件是節點的執行個體(請參閱 [JCR API](https://jackrabbit.apache.org/api/2.16/org/apache/jackrabbit/standalone/cli/core/CurrentNode.html))。 節點屬性可透過以下方式存取： `getProperty()` 方法。
 
    示例: `String pageTitle = currentNode.getProperty("jcr:title");`
 
-## JSP标记库 {#jsp-tag-libraries}
+## JSP標籤庫 {#jsp-tag-libraries}
 
-通过CQ和Sling标记库，可访问在模板和组件的JSP脚本中使用的特定函数。
+CQ和Sling標籤庫可讓您存取特定函式，以便在範本和元件的JSP指令碼中使用。
 
-有关详细信息，请参阅文档 [标记库](/help/sites-developing/taglib.md).
+如需詳細資訊，請參閱檔案 [標籤庫](/help/sites-developing/taglib.md).
 
-## 使用客户端HTML库 {#using-client-side-html-libraries}
+## 使用使用者端HTML程式庫 {#using-client-side-html-libraries}
 
-现代网站在很大程度上依赖于由复杂的JavaScript和CSS代码驱动的客户端处理。 组织和优化此代码的服务可能是一个复杂的问题。
+現代網站非常依賴由複雜的JavaScript和CSS程式碼驅動的使用者端處理。 組織和最佳化此程式碼的伺服可能會是個複雜的問題。
 
-为帮助处理此问题，AEM提供了 **客户端库文件夹**，用于将客户端代码存储在存储库中，将其组织成不同类别，并定义何时以及如何向客户端提供每种类别的代码。 然后，客户端库系统负责在最终网页中产生正确的链接，以加载正确的代码。
+為協助處理此問題，AEM提供 **使用者端資料庫資料夾**，可將使用者端程式碼儲存在存放庫中，將其組織成類別，並定義每個類別程式碼何時及如何提供給使用者端。 然後，使用者端程式庫系統會負責在最終網頁中產生正確的連結，以載入正確的程式碼。
 
-查看文档 [使用客户端HTML库](/help/sites-developing/clientlibs.md) 了解更多信息。
+檢視檔案 [使用使用者端HTML程式庫](/help/sites-developing/clientlibs.md) 以取得詳細資訊。
 
 ## 对话框 {#dialog}
 
-您的组件需要一个对话框供作者添加和配置内容。
+您的元件需要對話方塊才能讓作者新增及設定內容。
 
-参见 [AEM组件 — 基础知识](/help/sites-developing/components-basics.md#dialogs) 了解更多详细信息。
+另請參閱 [AEM元件 — 基本知識](/help/sites-developing/components-basics.md#dialogs) 以取得更多詳細資料。
 
-## 配置编辑行为 {#configuring-the-edit-behavior}
+## 設定編輯行為 {#configuring-the-edit-behavior}
 
-您可以配置组件的编辑行为。 这包括各种属性，例如组件可用的操作、就地编辑器的特征以及与组件上的事件相关的侦听器。 尽管存在某些特定差异，但配置对于触屏优化UI和经典UI都是通用的。
+您可以設定元件的編輯行為。 這包括元件可用的動作、就地編輯器的特性，以及與元件上事件相關的接聽程式等屬性。 此設定對觸控式與傳統UI而言都是通用的，不過會有某些特定差異。
 
-此 [组件的编辑行为已配置](/help/sites-developing/components-basics.md#edit-behavior) 通过添加 `cq:editConfig` 类型节点 `cq:EditConfig` 在组件节点下(类型为 `cq:Component`)，并添加特定属性和子节点。
+此 [元件的編輯行為已設定](/help/sites-developing/components-basics.md#edit-behavior) 藉由新增 `cq:editConfig` 型別的節點 `cq:EditConfig` 元件節點下方(型別 `cq:Component`)，並新增特定屬性和子節點。
 
-## 使用和扩展ExtJS小组件 {#using-and-extending-extjs-widgets}
+## 使用和擴充ExtJS Widget {#using-and-extending-extjs-widgets}
 
-参见 [使用和扩展ExtJS小组件](/help/sites-developing/widgets.md) 了解更多详细信息。
+另請參閱 [使用和擴充ExtJS Widget](/help/sites-developing/widgets.md) 以取得更多詳細資料。
 
-## 为ExtJS构件使用xtype {#using-xtypes-for-extjs-widgets}
+## 對ExtJS Widget使用xtype {#using-xtypes-for-extjs-widgets}
 
-参见 [使用xtype](/help/sites-developing/xtypes.md) 了解更多详细信息。
+另請參閱 [使用xtypes](/help/sites-developing/xtypes.md) 以取得更多詳細資料。
 
-## 开发新组件 {#developing-new-components}
+## 開發新元件 {#developing-new-components}
 
-本节介绍如何创建自己的组件并将它们添加到段落系统中。
+本節說明如何建立您自己的元件，並將其新增至段落系統。
 
-快速入门方法是复制现有组件，然后进行所需的更改。
+快速入門方法是複製現有元件，然後進行您想要的變更。
 
-中详细描述了如何开发组件的示例 [扩展文本和图像组件 — 示例。](#extending-the-text-and-image-component-an-example)
+有關如何開發元件的範例詳細說明，請參閱 [擴充文字和影像元件 — 範例。](#extending-the-text-and-image-component-an-example)
 
-### 开发新组件（调整现有组件） {#develop-a-new-component-adapt-existing-component}
+### 開發新元件（調整現有元件） {#develop-a-new-component-adapt-existing-component}
 
-要基于现有组件为AEM开发新组件，您可以复制组件，为新组件创建一个javascript文件，并将其存储在AEM可访问的位置(另请参阅 [自定义组件和其他元素](/help/sites-developing/dev-guidelines-bestpractices.md#customizing-components-and-other-elements))：
+若要根據現有元件為AEM開發新元件，您可以複製元件、為新元件建立JavaScript檔案，並將其儲存在AEM可存取的位置(另請參閱 [自訂元件和其他元素](/help/sites-developing/dev-guidelines-bestpractices.md#customizing-components-and-other-elements))：
 
-1. 使用CRXDE Lite在下列位置创建新组件文件夹：
+1. 使用CRXDE Lite，在中建立新的元件資料夾：
 
    / `apps/<myProject>/components/<myComponent>`
 
-   按照库中的方式重新创建节点结构，然后复制现有组件（如文本组件）的定义。 例如，要自定义文本组件副本，请执行以下操作：
+   像在libs中一樣重新建立節點結構，然後複製現有元件（例如Text元件）的定義。 例如，若要自訂文字元件副本：
 
    * 从 `/libs/foundation/components/text`
    * 到 `/apps/myProject/components/text`
 
-1. 修改 `jcr:title` 以反映其新名称。
-1. 打开新的组件文件夹，并进行所需的更改。 另外，删除文件夹中的任何无关信息。
+1. 修改 `jcr:title` 以反映其新名稱。
+1. 開啟新的元件資料夾，並進行您需要的變更。 此外，請刪除資料夾中任何無關的資訊。
 
-   您可以进行如下更改：
+   您可以進行下列變更：
 
-   * 在对话框中添加新字段
+   * 在對話方塊中新增欄位
 
-      * `cq:dialog`  — 触屏UI的对话框
-      * `dialog`  — 经典UI的对话框
-   * 替换 `.jsp` 文件（将其命名为新组件的后缀）
-   * 或者完全重新工作整个组件（如果需要）
+      * `cq:dialog`  — 觸控式UI的對話方塊
+      * `dialog`  — 傳統UI的對話方塊
+   * 取代 `.jsp` 檔案（以新元件的名稱命名）
+   * 或完全重工整個元件（若您需要）
 
-   例如，如果您复制了标准文本组件，则可以在对话框中添加一个附加字段，然后更新 `.jsp` 以处理在那里输入的内容。
-
-   >[!NOTE]
-   >
-   >的组件：
-   >
-   >* 触屏优化UI使用 [Granite](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/index.html) 组件
-   >* 经典UI [ExtJS构件](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html)
-
+   例如，如果您取得標準「文字」元件的副本，則可以在對話方塊中新增一個額外的欄位，然後更新 `.jsp` 以處理在那裡輸入的內容。
 
    >[!NOTE]
    >
-   >为经典UI定义的对话框将在触屏UI中运行。
+   >的元件：
    >
-   >为触屏UI定义的对话框不会在经典UI中运行。
+   >* 觸控式UI使用 [Granite](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/index.html) 元件
+   >* 傳統UI使用 [ExtJS Widget](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html)
+
+
+   >[!NOTE]
    >
-   >根据您的实例和创作环境，您可能需要为组件定义这两种类型的对话框。
+   >為傳統UI定義的對話方塊將在觸控式UI中運作。
+   >
+   >為觸控式UI定義的對話方塊不會在傳統UI中運作。
+   >
+   >視您的執行個體和作者環境而定，您可能想要為元件定義這兩種型別的對話方塊。
 
-1. 应存在以下节点之一并正确初始化，以便新组件显示：
+1. 下列節點之一應存在且已正確初始化，新元件才能顯示：
 
-   * `cq:dialog`  — 触屏UI的对话框
-   * `dialog`  — 经典UI的对话框
-   * `cq:editConfig`  — 组件在编辑环境中的行为（例如拖放）
-   * `design_dialog`  — 用于设计模式的对话框（仅限经典UI）
+   * `cq:dialog`  — 觸控式UI的對話方塊
+   * `dialog`  — 傳統UI的對話方塊
+   * `cq:editConfig`  — 元件在編輯環境中的行為（例如拖放）
+   * `design_dialog`  — 設計模式對話方塊（僅限傳統UI）
 
-1. 通过以下任一方式激活段落系统中的新组件：
+1. 透過下列任一項在段落系統中啟動新元件：
 
-   * 使用CRXDE Lite添加值 `<path-to-component>` (例如， `/apps/geometrixx/components/myComponent`)到节点的属性组件 `/etc/designs/geometrixx/jcr:content/contentpage/par`
-   * 按照中的说明操作 [向段落系统添加新组件](#adding-a-new-component-to-the-paragraph-system-design-mode)
+   * 使用CRXDE Lite來新增值 `<path-to-component>` (例如， `/apps/geometrixx/components/myComponent`)至節點的屬性元件 `/etc/designs/geometrixx/jcr:content/contentpage/par`
+   * 依照中的指示操作 [新增元件至段落系統](#adding-a-new-component-to-the-paragraph-system-design-mode)
 
-1. 在AEM WCM中，打开网站中的页面，并插入您刚刚创建的类型的新段落，以确保组件正常工作。
+1. 在AEM WCM中，開啟網站中的頁面，並插入您剛才建立之型別的新段落，以確保元件正常運作。
 
 >[!NOTE]
 >
->要查看页面加载的时间统计信息，您可以使用Ctrl-Shift-U — 和 `?debugClientLibs=true` 在URL中设置。
+>若要檢視頁面載入的計時統計資料，您可以使用Ctrl-Shift-U — 搭配 `?debugClientLibs=true` 在URL中設定。
 
-### 向段落系统添加新组件（设计模式） {#adding-a-new-component-to-the-paragraph-system-design-mode}
+### 新增元件至段落系統（設計模式） {#adding-a-new-component-to-the-paragraph-system-design-mode}
 
-开发组件后，您可以将其添加到段落系统，这样作者就可以在编辑页面时选择和使用组件。
+開發元件後，您可以將其新增至段落系統，讓作者在編輯頁面時能夠選取和使用元件。
 
-1. 访问创作环境中使用段落系统的页面，例如 `<contentPath>/Test.html`.
-1. 通过以下任一方式切换到设计模式：
+1. 例如，存取編寫環境中使用段落系統的頁面 `<contentPath>/Test.html`.
+1. 透過以下任一方式切換到設計模式：
 
-   * 添加 `?wcmmode=design` 前往URL的末尾，然后再次访问，例如：
+   * 新增 `?wcmmode=design` 移至URL結尾並再次存取，例如：
 
       `<contextPath>/ Test.html?wcmmode=design`
 
-   * 单击Sidekick中的Design
+   * 按一下Sidekick中的「設計」
 
-   您现在处于设计模式，可以编辑段落系统。
+   您現在處於設計模式，可以編輯段落系統。
 
-1. 单击编辑。
+1. 按一下「編輯」。
 
-   此时将显示属于段落系统的组件列表。 新组件也会列出。
+   此時會顯示屬於段落系統的元件清單。 也會列出您的新元件。
 
-   可以激活（或停用）组件以确定在编辑页面时向作者提供哪些组件。
+   可以啟動（或停用）元件，以決定在編輯頁面時提供給作者的元件。
 
-1. 激活组件，然后返回到正常编辑模式以确认该组件可供使用。
+1. 啟動元件，然後返回正常編輯模式以確認元件可供使用。
 
-### 扩展文本和图像组件 — 示例 {#extending-the-text-and-image-component-an-example}
+### 擴充文字和影像元件 — 範例 {#extending-the-text-and-image-component-an-example}
 
-本节提供了一个示例，说明如何使用可配置的图像放置功能扩展广泛使用的文本和图像标准组件。
+本節提供如何使用可設定的影像放置功能來擴充廣泛使用的文字和影像標準元件的範例。
 
-文本和图像组件的扩展允许编辑器使用组件的所有现有功能，并有一个额外的选项来指定图像的放置：
+文字和影像元件的擴充功能可讓編輯器使用元件的所有現有功能，另外還有一個額外選項可指定影像的位置：
 
-* 在文本的左侧（当前行为和新的默认值）
-* 还有右手边
+* 在文字的左側（目前行為與新預設值）
+* 以及在右側
 
-扩展此元件后，可通过元件的对话框配置图像放置。
+延伸此元件後，您可以透過元件的對話方塊來設定影像位置。
 
-本练习将介绍以下技术：
+本練習將說明下列技巧：
 
-* 复制现有组件节点并修改其元数据
-* 修改组件的对话框，包括从父对话框继承构件
-* 修改组件的脚本以实施新功能
-
->[!NOTE]
->
->此示例针对经典UI。
+* 複製現有元件節點並修改其中繼資料
+* 修改元件的對話方塊，包括從父對話方塊繼承Widget
+* 修改元件的指令碼以實作新功能
 
 >[!NOTE]
 >
->此示例基于Geometrixx示例内容，该内容不再随AEM提供，已被We.Retail取代。 查看文档 [We.Retail参考实施](/help/sites-developing/we-retail.md#we-retail-geometrixx) 了解如何下载和安装Geometrixx。
+>此範例目標是傳統UI。
 
-#### 扩展现有文本时间组件 {#extending-the-existing-textimage-component}
+>[!NOTE]
+>
+>此範例是根據AEM不再隨附的Geometrixx範例內容，已由We.Retail取代。 檢視檔案 [We.Retail參考實作](/help/sites-developing/we-retail.md#we-retail-geometrixx) 瞭解如何下載和安裝Geometrixx。
 
-要创建新组件，我们使用标准文本组件作为基础并对其进行修改。 我们将新组件存储在GeometrixxAEM WCM示例应用程序中。
+#### 擴充現有的文字提示元件 {#extending-the-existing-textimage-component}
 
-1. 从以下位置复制标准文本页面组件 `/libs/foundation/components/textimage` 到Geometrixx组件文件夹中， `/apps/geometrixx/components`，使用textimage作为目标节点名称。 （导航到组件，右键单击并选择复制，然后浏览到目标目录来复制组件。）
+若要建立新元件，我們使用標準文字元件作為基礎並加以修改。 我們會將新元件儲存在GeometrixxAEM WCM範例應用程式中。
+
+1. 從以下位置複製標準文字元素： `/libs/foundation/components/textimage` 放入Geometrixx元件資料夾中， `/apps/geometrixx/components`，使用textimage作為目標節點名稱。 （瀏覽至元件、以滑鼠右鍵按一下並選取「複製」，然後瀏覽至目標目錄，以複製元件。）
 
    ![chlimage_1-59](assets/chlimage_1-59a.png)
 
-1. 要使此示例保持简单，请导航到您复制的组件，并删除新文本时间节点的所有子节点，以下子节点除外：
+1. 若要讓此範例維持簡單，請導覽至您複製的元件，並刪除新文位元組點的所有子節點（以下子節點除外）：
 
-   * 对话框定义： `textimage/dialog`
-   * 组件脚本： `textimage/textimage.jsp`
-   * 编辑配置节点（允许拖放资产）： `textimage/cq:editConfig`
+   * 對話方塊定義： `textimage/dialog`
+   * 元件指令碼： `textimage/textimage.jsp`
+   * 編輯設定節點（允許拖放資產）： `textimage/cq:editConfig`
 
    >[!NOTE]
    >
-   >对话框定义依赖于UI：
+   >對話方塊定義取決於UI：
    >
-   >* 触屏优化UI： `textimage/cq:dialog`
+   >* 觸控式UI： `textimage/cq:dialog`
    >* 经典 UI: `textimage/dialog`
 
 
-1. 编辑组件元数据：
+1. 編輯元件中繼資料：
 
-   * 组件名称
+   * 元件名稱
 
-      * 设置 `jcr:description` 到 `Text Image Component (Extended)`
-      * 设置 `jcr:title` 到 `Text Image (Extended)`
-   * 组，其中组件在sidekick中列出（保持原样）
+      * 設定 `jcr:description` 至 `Text Image Component (Extended)`
+      * 設定 `jcr:title` 至 `Text Image (Extended)`
+   * 群組，其中的元件列在Sidekick中（保持原樣）
 
-      * 离开 `componentGroup` 设置为 `General`
-   * 新组件的父组件（标准文本时间组件）
+      * 離開 `componentGroup` 設定為 `General`
+   * 新元件的父元件（標準文字元件）
 
-      * 设置 `sling:resourceSuperType` 到 `foundation/components/textimage`
+      * 設定 `sling:resourceSuperType` 至 `foundation/components/textimage`
 
-   在此步骤之后，组件节点如下所示：
+   在此步驟後，元件節點看起來像這樣：
 
    ![chlimage_1-60](assets/chlimage_1-60a.png)
 
-1. 更改 `sling:resourceType` 图像的edit configuration节点的属性(属性： `textimage/cq:editConfig/cq:dropTargets/image/parameters/sling:resourceType`)至 `geometrixx/components/textimage.`
+1. 變更 `sling:resourceType` 影像的編輯設定節點的屬性(屬性： `textimage/cq:editConfig/cq:dropTargets/image/parameters/sling:resourceType`)至 `geometrixx/components/textimage.`
 
-   这样，当图像放到页面上的组件时， `sling:resourceType` extended textimage组件的属性设置为： `geometrixx/components/textimage.`
+   如此一來，當影像放到頁面上的元件時， `sling:resourceType` 延伸文字功能元件的屬性已設定為： `geometrixx/components/textimage.`
 
-1. 修改组件的对话框以包含新选项。 新元件继承对话框中与原始元件相同的部分。 我们所做的唯一补充是扩展 **高级** 选项卡，添加 **图像位置** 下拉列表，带选项 **左侧** 和 **右**：
+1. 修改元件的對話方塊以包含新選項。 新元件會繼承對話方塊中與原始元件相同的零件。 我們所做的唯一新增是擴充 **進階** 標籤，新增 **影像位置** 下拉式清單，含選項 **左側** 和 **右**：
 
-   * 保留 `textimage/dialog`属性未更改。
+   * 離開 `textimage/dialog`屬性未變更。
 
-   请注意操作方法 `textimage/dialog/items` 具有四个子节点，即tab1到tab4，表示“文本时间”对话框的四个选项卡。
+   注意操作方式 `textimage/dialog/items` 有4個子節點，從tab1到tab4，代表「文字」對話方塊的四個標籤。
 
-   * 对于前两个选项卡（tab1和tab2）：
+   * 前兩個標籤（tab1和tab2）：
 
-      * 将xtype更改为cqinclude（继承自标准组件）。
-      * 添加带有值的路径属性 `/libs/foundation/components/textimage/dialog/items/tab1.infinity.json`和 `/libs/foundation/components/textimage/dialog/items/tab2.infinity.json`，则不会显示任何内容。
-      * 删除所有其他属性或子节点。
-   * 对于选项卡3：
+      * 將xtype變更為cqinclude （繼承自標準元件）。
+      * 使用值新增路徑屬性 `/libs/foundation/components/textimage/dialog/items/tab1.infinity.json`和 `/libs/foundation/components/textimage/dialog/items/tab2.infinity.json`（分別）。
+      * 移除所有其他屬性或子節點。
+   * 對於tab3：
 
-      * 不更改属性和子节点
-      * 将新的字段定义添加到 `tab3/items`，类型的节点位置 `cq:Widget`
-      * 为新的设置以下属性（字符串类型） `tab3/items/position`节点：
+      * 保留屬性和子節點而不變更
+      * 新增欄位定義至 `tab3/items`，型別的節點位置 `cq:Widget`
+      * 為新的設定以下屬性（字串型別） `tab3/items/position`節點：
 
          * `name`： `./imagePosition`
          * `xtype`: `selection`
          * `fieldLabel`: `Image Position`
          * `type`: `select`
-      * 添加子节点 `position/options` 类型 `cq:WidgetCollection` 表示两个图像放置选项，并在其下创建两个类型节点o1和o2 `nt:unstructured`.
-      * 用于节点 `position/options/o1` 设置属性： `text` 到 `Left` 和 `value` 到 `left.`
-      * 用于节点 `position/options/o2` 设置属性： `text` 到 `Right` 和 `value` 到 `right`.
-   * 删除选项卡4。
+      * 新增子節點 `position/options` 型別 `cq:WidgetCollection` 代表兩個影像放置選項，並在其下建立兩個節點，o1和o2型別 `nt:unstructured`.
+      * 針對節點 `position/options/o1` 設定屬性： `text` 至 `Left` 和 `value` 至 `left.`
+      * 針對節點 `position/options/o2` 設定屬性： `text` 至 `Right` 和 `value` 至 `right`.
+   * 刪除Tab4。
 
-   图像位置作为保留在内容中 `imagePosition`表示节点的属性 `textimage` 段落。 执行这些步骤后，“组件”对话框将如下所示：
+   影像位置會持續保留在內容中，做為 `imagePosition`節點的屬性，表示 `textimage` 段落。 執行這些步驟後，「元件」對話方塊看起來像這樣：
 
    ![chlimage_1-61](assets/chlimage_1-61a.png)
 
-1. 扩展组件脚本， `textimage.jsp`，并对新参数进行额外处理：
+1. 擴充元件指令碼， `textimage.jsp`，額外處理新引數：
 
    ```xml
    Image image = new Image(resource, "image");
@@ -336,7 +336,7 @@ JSP脚本文件 `global.jsp` 用于提供对用于呈现组件的任何JSP脚本
         image.loadStyleData(currentStyle);
    ```
 
-   我们将替换强调的代码片段 *%>&lt;div class=&quot;image&quot;>&lt;%* 新代码生成此标记的自定义样式。
+   我們將取代強調的程式碼片段 *%>&lt;div class=&quot;image&quot;>&lt;%* 新程式碼產生此標籤的自訂樣式。
 
    ```xml
    // todo: add new CSS class for the 'right image' instead of using
@@ -348,34 +348,34 @@ JSP脚本文件 `global.jsp` 用于提供对用于呈现组件的任何JSP脚本
         %><div <%= style %> class="image"><%
    ```
 
-1. 将组件保存到存储库。 组件已准备好进行测试。
+1. 將元件儲存至存放庫。 元件已準備好進行測試。
 
-#### 检查新组件 {#checking-the-new-component}
+#### 檢查新元件 {#checking-the-new-component}
 
-开发组件后，您可以将其添加到段落系统，这样作者就可以在编辑页面时选择和使用组件。 这些步骤允许您测试组件。
+開發元件後，您可以將其新增至段落系統，讓作者在編輯頁面時選取並使用元件。 這些步驟可讓您測試元件。
 
-1. 以Geometrixx（如英语/公司）打开页面。
-1. 通过单击Sidekick中的“设计”切换到设计模式。
-1. 通过单击页面中间段落系统上的编辑，编辑段落系统设计。 此时将显示可放置在段落系统中的组件列表，该列表应包含新开发的组件文本图像（扩展） 。 选择段落系统并单击确定，以将其激活。
-1. 切换回编辑模式。
-1. 将文本图像（扩展）段落添加到段落系统中，用示例内容初始化文本和图像。 保存更改。
-1. 打开文本和图像段落的对话框，将“高级”选项卡上的“图像位置”更改为“右” ，然后单击“确定”以保存更改。
-1. 段落在渲染时将使用右侧的图像。
-1. 该组件现已准备就绪，可使用。
+1. 以Geometrixx（例如英文/公司）開啟頁面。
+1. 按一下Sidekick中的「設計」切換至設計模式。
+1. 按一下頁面中間段落系統上的「編輯」，編輯段落系統設計。 隨即顯示可放置在段落系統中的元件清單，清單中應包含新開發的元件Text Image (Extended) 。 選取它並按一下確定，為段落系統啟動它。
+1. 切換回編輯模式。
+1. 將文字影像（延伸）段落新增至段落系統，以範例內容初始化文字和影像。 保存更改。
+1. 開啟文字和影像段落的對話方塊，並將「進階」標籤上的「影像位置」變更為「右側」，然後按一下「確定」以儲存變更。
+1. 段落會以右側的影像呈現。
+1. 元件現在已可供使用。
 
-组件将其内容存储在公司页面上的一个段落中。
+元件會將其內容儲存在公司頁面上的段落中。
 
-### 禁用图像组件的上传功能 {#disable-upload-capability-of-the-image-component}
+### 停用影像元件的上傳功能 {#disable-upload-capability-of-the-image-component}
 
-要禁用此功能，我们使用标准图像组件作为基础并对其进行修改。 我们将新组件存储在Geometrixx示例应用程序中。
+若要停用此功能，我們會使用標準影像元件作為基礎並加以修改。 我們會將新元件儲存在Geometrixx範例應用程式中。
 
-1. 从以下位置复制标准图像组件 `/libs/foundation/components/image` 到Geometrixx组件文件夹中， `/apps/geometrixx/components`，使用图像作为目标节点名称。
+1. 複製標準影像元件來源 `/libs/foundation/components/image` 放入Geometrixx元件資料夾中， `/apps/geometrixx/components`，使用影像作為目標節點名稱。
 
    ![chlimage_1-62](assets/chlimage_1-62a.png)
 
-1. 编辑组件元数据：
+1. 編輯元件中繼資料：
 
-   * 设置 **jcr：title** 到 `Image (Extended)`
+   * 設定 **jcr：title** 至 `Image (Extended)`
 
 1. 导航到 `/apps/geometrixx/components/image/dialog/items/image`。
 1. 添加新属性:
@@ -386,17 +386,17 @@ JSP脚本文件 `global.jsp` 用于提供对用于呈现组件的任何JSP脚本
 
    ![chlimage_1-63](assets/chlimage_1-63a.png)
 
-1. 单击 **全部保存**. 组件已准备好进行测试。
-1. 以Geometrixx（如英语/公司）打开页面。
-1. 切换到设计模式并激活图像（扩展）。
-1. 切换回编辑模式并将其添加到段落系统。 在下一张图片中，您可以看到原始图像组件与您刚刚创建的组件之间的差异。
+1. 按一下 **全部儲存**. 元件已準備好進行測試。
+1. 以Geometrixx（例如英文/公司）開啟頁面。
+1. 切換到設計模式並啟動影像（延伸）。
+1. 切換回編輯模式，並將其新增至段落系統。 在下一張圖片中，您可以看到原始影像元件與您剛剛建立的影像元件之間的差異。
 
-   原始图像组件：
+   原始影像元件：
 
    ![chlimage_1-64](assets/chlimage_1-64a.png)
 
-   您的新图像组件：
+   您的新影像元件：
 
    ![chlimage_1-65](assets/chlimage_1-65a.png)
 
-1. 该组件现已准备就绪，可使用。
+1. 元件現在已可供使用。

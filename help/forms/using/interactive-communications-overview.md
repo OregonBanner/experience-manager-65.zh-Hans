@@ -1,7 +1,7 @@
 ---
-title: 交互式通信概述
+title: 互動式通訊概述
 seo-title: Interactive Communications Overview
-description: 本文包括概述、示例用例、创建工作流以及交互式通信与信件之间的区别。
+description: 本文包括概述、範例使用案例、建立工作流程，以及互動式通訊與信函之間的差異。
 seo-description: Interactive Communication key capabilities, sample use cases, creation workflow, and differences between Interactive Communication and Correspondence Management
 uuid: a06b4ac7-ca20-4d6d-b2b7-87b21e2f5cf9
 contentOwner: gtalwar
@@ -17,61 +17,61 @@ ht-degree: 7%
 ---
 
 
-# 交互式通信概述 {#interactive-communications-overview}
+# 互動式通訊概述 {#interactive-communications-overview}
 
-本文包括概述、示例用例、创建工作流以及交互式通信与信件之间的区别。
+本文包括概述、範例使用案例、建立工作流程，以及互動式通訊與信函之間的差異。
 
 ![](do-not-localize/correspondence-management.png)
 
-交互式通信可以集中管理安全、个性化的交互式信函的创建、编排和交付，例如业务信函、文档、对帐单、福利通知、营销邮件、账单和欢迎资料包。
+互動式通訊可集中處理及管理安全、個人化與互動式通訊的建立、集合與傳遞，例如商務信函、檔案、對帳單、利益通知、行銷郵件、帳單和歡迎套件。
 
-## 主要功能 {#key-capabilities}
+## 重要功能 {#key-capabilities}
 
-以下是交互式通信的主要功能：
+以下是互動式通訊的主要功能：
 
-- 与表单数据模型的现成集成，使对后端数据库和其他CRM系统(如MS® Dynamics)的访问变得轻松而简化
-- 打印和Web渠道的集成创作界面，能够自动从打印渠道生成Web渠道
-- 以易于理解的可视格式在打印和Web中展示信息的图表
-- 文档片段支持规则编辑器和表单数据模型
-- 代理用户界面显示交互式通信的打印和Web预览
-- 拖放组件以快速构建打印和Web渠道
+- 與表單資料模型開箱即用的整合，讓您輕鬆且簡化存取後端資料庫和其他CRM系統，例如MS® Dynamics
+- 適用於列印與網頁頻道的整合式撰寫介面，可自動從列印頻道產生網頁頻道
+- 以易於理解的視覺格式在列印和網頁中顯示資訊的圖表
+- 檔案片段支援規則編輯器和表單資料模型
+- 代理使用者介面會顯示互動式通訊的列印與網頁預覽
+- 拖放元件以快速建構列印和網路頻道
 
-## 交互式通信创建 {#interactive-communication-creation}
+## 建立互動式通訊 {#interactive-communication-creation}
 
 ![interactive_communication-01](assets/interactive_communication-01.jpg)
 
 ### 工作流 {#workflow}
 
-要创建交互式通信，请 [构建基块](#buildingblocks) 准备交互式通信，然后完成以下步骤：
+若要建立互動式通訊，請 [建置區塊](#buildingblocks) 互動式通訊就緒，然後完成下列步驟：
 
-1. 选择以 [创建交互式通信](/help/forms/using/create-interactive-communication.md).
+1. 選擇以 [建立互動式通訊](/help/forms/using/create-interactive-communication.md).
 
-1. 指定 [表单数据模型](/help/forms/using/data-integration.md)，预填充服务，以及 [打印和Web渠道模板](/help/forms/using/web-channel-print-channel.md). 您可以选择从打印渠道生成Web渠道。
+1. 指定 [表單資料模型](/help/forms/using/data-integration.md)，預填服務，以及 [列印和Web Channel範本](/help/forms/using/web-channel-print-channel.md). 您可以選擇從列印管道產生Web Channel。
 
-1. 使用 [拖放界面](/help/forms/using/introduction-interactive-communication-authoring.md)，根据需要添加要打印的文档片段、图像、组件以及交互式通信的Web渠道。
-1. 为插入的组件配置属性，如下所示：
+1. 使用 [拖放介面](/help/forms/using/introduction-interactive-communication-authoring.md)，視需要新增檔案片段、影像、要列印的元件以及互動式通訊的Web頻道。
+1. 為插入的元件設定屬性，如下所示：
 
    1. [图像](/help/forms/using/create-interactive-communication.md#step2)
-   1. [表](/help/forms/using/create-interactive-communication.md#tables) （包括布局片段）
-   1. [图表](/help/forms/using/chart-component-interactive-communications.md)
-   1. [文档片段](/help/forms/using/create-interactive-communication.md#document-fragment-properties)
+   1. [表格](/help/forms/using/create-interactive-communication.md#tables) （包括佈局片段）
+   1. [圖表](/help/forms/using/chart-component-interactive-communications.md)
+   1. [檔案片段](/help/forms/using/create-interactive-communication.md#document-fragment-properties)
 
-1. 预览打印和Web渠道，并根据需要编辑交互式通信。
-1. 代理使用代理UI来 [准备交互式通信](/help/forms/using/prepare-send-interactive-communication.md) ，以发送给收件人/后处理。
+1. 預覽列印和Web通道，並視需要編輯互動式通訊。
+1. 代理程式會使用Agent UI來 [準備互動式通訊](/help/forms/using/prepare-send-interactive-communication.md) 以傳送給收件者/貼文程式。
 
 ### 构建基块 {#buildingblocks}
 
-以下是创建交互式通信所需的构建块：
+以下是建立互動式通訊所需的建置組塊：
 
-- [表单数据模型](/help/forms/using/data-integration.md)
-- [打印和Web渠道模板](/help/forms/using/web-channel-print-channel.md)
-- [文档片段](/help/forms/using/document-fragments.md)
+- [表單資料模型](/help/forms/using/data-integration.md)
+- [列印和Web Channel範本](/help/forms/using/web-channel-print-channel.md)
+- [檔案片段](/help/forms/using/document-fragments.md)
 - 图像
-- [主题](/help/forms/using/themes.md) 对于Web渠道
+- [主題](/help/forms/using/themes.md) 網路頻道
 
-## 交互式通信与通信管理 {#interactive-communications-vs-correspondence-management}
+## 互動式通訊與通訊管理 {#interactive-communications-vs-correspondence-management}
 
-交互式通信是创建客户通信的默认和推荐方法。 要继续使用在AEM 6.3 Forms和AEM 6.2 Forms中创建的字母，您需要 [安装兼容包](/help/forms/using/compatibility-package.md). 以下是交互式通信功能和信件功能的比较。
+互動式通訊是建立客戶通訊的預設和建議方法。 若要繼續使用在AEM 6.3 Forms和AEM 6.2 Forms中建立的字母，您需要 [安裝相容性套件](/help/forms/using/compatibility-package.md). 以下是互動式通訊與信函功能之間的比較。
 
 <table>
  <tbody>
@@ -82,42 +82,42 @@ ht-degree: 7%
   </tr>
   <tr>
    <td>输出</td>
-   <td>打印和Web</td>
+   <td>列印與網頁</td>
    <td>打印</td>
   </tr>
   <tr>
-   <td>架构</td>
-   <td>表单数据模型 </td>
-   <td>数据字典 </td>
+   <td>Schema</td>
+   <td>表單資料模型 </td>
+   <td>資料字典 </td>
   </tr>
   <tr>
    <td>本地化</td>
-   <td>表单数据模型不支持</td>
-   <td>在数据字典中受支持</td>
+   <td>不支援表單資料模型</td>
+   <td>在資料字典中支援</td>
   </tr>
   <tr>
-   <td>规则编辑器</td>
+   <td>規則編輯器</td>
    <td>
     <ul>
-     <li>用于创建内联条件的文本和条件支持规则编辑器</li>
-     <li>交互式通信编辑器支持在Web渠道的组件中应用规则</li>
+     <li>用於建立內嵌條件的文字和條件支援規則編輯器</li>
+     <li>互動式通訊編輯器支援在Web Channel的元件上套用規則</li>
     </ul> </td>
-   <td>没有用于创建条件表达式的UI</td>
+   <td>沒有用於建立條件運算式的UI</td>
   </tr>
   <tr>
    <td>创作</td>
-   <td>用于构建打印和Web渠道的拖放界面</td>
-   <td>无拖放机制 </td>
+   <td>用於建構列印和網頁通道的拖放介面</td>
+   <td>無拖放機制 </td>
   </tr>
   <tr>
-   <td>图表</td>
-   <td>打印和Web渠道中支持的图表</td>
+   <td>圖表</td>
+   <td>列印及Web Channel中支援的圖表</td>
    <td>不受支持</td>
   </tr>
   <tr>
    <td>主题</td>
-   <td>使用主题为Web渠道设置样式</td>
-   <td>不支持主题</td>
+   <td>使用主題來設定Web Channel的樣式</td>
+   <td>不支援主題</td>
   </tr>
    <tr>
    <td>草稿</td>
@@ -125,13 +125,13 @@ ht-degree: 7%
    <td>支持</td>
   </tr>
    <tr>
-   <td>提交内容</td>
+   <td>提交內容</td>
    <td>支持</td>
    <td>支持</td>
   </tr>
   <tr>
   <tr>
-   <td>审核</td>
+   <td>稽核</td>
    <td>不支持</td>
    <td>支持</td>
   </tr>
@@ -140,17 +140,17 @@ ht-degree: 7%
    <td>不支持</td>
    <td>支持</td>
   </tr>
-   <td>批处理</td>
+   <td>批次處理</td>
    <td>支持 </td>
    <td>支持</td>
   </tr>
   <tr>
-   <td>代理签名</td>
+   <td>代理程式簽章</td>
    <td>不受支持</td>
    <td>支持</td>
   </tr>
   <tr>
-   <td>远程功能</td>
+   <td>遠端功能</td>
    <td>不受支持</td>
    <td>支持</td>
   </tr>

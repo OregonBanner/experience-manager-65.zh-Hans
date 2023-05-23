@@ -1,6 +1,6 @@
 ---
 title: 使用带有 GraphQL 的内容片段的 Headless 内容投放
-description: 了解如何将AEM内容片段与GraphQL结合使用来交付无头内容。
+description: 瞭解如何搭配GraphQL使用AEM內容片段進行Headless內容傳送。
 feature: Content Fragments
 role: User
 exl-id: 2debd678-2d73-41f2-b33c-c29d661f6a6b
@@ -13,7 +13,7 @@ ht-degree: 89%
 
 # 使用带有 GraphQL 的内容片段的 Headless 内容投放 {#headless-content-delivery-using-content-fragments-with-graphQL}
 
-借助Adobe Experience Manager(AEM)，您可以使用内容片段和AEM GraphQL API(一种基于标准GraphQL的自定义实施)来无头地交付结构化内容，以供在您的应用程序中使用。 通过自定义单个 API 查询的功能，您可以检索和投放您想要/需要呈现的特定内容（作为对单个 API 查询的响应）。
+透過Adobe Experience Manager (AEM)，您可以使用內容片段和AEM GraphQL API (根據標準GraphQL的自訂實作)，無頭傳送結構化內容以用於您的應用程式。 通过自定义单个 API 查询的功能，您可以检索和投放您想要/需要呈现的特定内容（作为对单个 API 查询的响应）。
 
 <!--
 >[!NOTE]
@@ -23,7 +23,7 @@ ht-degree: 89%
 
 >[!NOTE]
 >
->GraphQL当前用于Adobe Experience Manager(AEM)的两个（单独）方案：
+>GraphQL目前用於Adobe Experience Manager (AEM)中的兩種（不同）情況：
 >
 >* [AEM Commerce 通过 GraphQL 使用来自 Commerce 平台的数据](/help/commerce/cif/integrating/magento.md)。
 >* [AEM 内容片段与 AEM GraphQL API（一种自定义实现，基于标准 GraphQL）配合使用，提供结构化内容用于您的应用程序](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md)。
@@ -55,7 +55,7 @@ GraphQL 是：
 
 ## AEM GraphQL API {#aem-graphql-api}
 
-对于Adobe Experience，已开发标准GraphQL API的自定义实施。 请参阅[用于内容片段的 AEM GraphQL API](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md) 以了解详细信息。
+針對Adobe Experience，我們已開發標準GraphQL API的自訂實作。 请参阅[用于内容片段的 AEM GraphQL API](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md) 以了解详细信息。
 
 AEM GraphQL API 实施基于 [GraphQL Java 库](https://graphql.org/code/#java)。
 

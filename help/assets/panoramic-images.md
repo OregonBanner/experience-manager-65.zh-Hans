@@ -1,6 +1,6 @@
 ---
 title: 全景图像
-description: 了解如何在Dynamic Media中使用全景图像。
+description: 瞭解如何在Dynamic Media中使用全景影像。
 uuid: ced3e5bd-93c8-4d5f-a397-1380d4d0a5e7
 contentOwner: Rick Brough
 topic-tags: dynamic-media
@@ -18,71 +18,71 @@ ht-degree: 0%
 
 ---
 
-# 全景图像{#panoramic-images}
+# 全景影像{#panoramic-images}
 
-本节介绍如何使用全景图像查看器渲染球面全景图像，以获得房间、属性、位置或横向的360°沉浸式观看体验。
+本節說明如何使用「全景影像」檢視器來轉譯球面全景影像，以獲得房間、屬性、位置或橫向的360度沈浸式檢視體驗。
 
-另请参阅 [管理查看器预设](/help/assets/managing-viewer-presets.md).
+另請參閱 [管理檢視器預設集](/help/assets/managing-viewer-presets.md).
 
 ![panoramic-image2](assets/panoramic-image2.png)
 
-## 上传用于全景图像查看器的资产 {#uploading-assets-for-use-with-the-panoramic-image-viewer}
+## 上傳資產以與全景影像檢視器搭配使用 {#uploading-assets-for-use-with-the-panoramic-image-viewer}
 
-要使上传的资产符合作为要与全景图像查看器一起使用的球面全景图像的条件，该资产必须具有以下一项或两项：
+若要讓上傳的資產符合您要與全景影像檢視器一起使用的球面全景影像資格，資產必須具備下列其中一項或兩項條件：
 
-* 长宽比为2。
-可在以下位置覆盖CRXDE Lite中的默认纵横比设置2：
+* 外觀比例為2。
+您可以在下列位置覆寫CRXDE Lite為2的預設外觀比例設定：
    `/conf/global/settings/cloudconfigs/dmscene7/jcr:content`
 
-* 已用关键字标记 `equirectangular`，或 `spherical`和 `panorama`，或 `spherical` 和 `panoramic`. 参见 [使用标记](/help/sites-authoring/tags.md).
+* 以關鍵字標籤 `equirectangular`，或 `spherical`和 `panorama`，或 `spherical` 和 `panoramic`. 另請參閱 [使用標籤](/help/sites-authoring/tags.md).
 
-纵横比和关键字条件都适用于资产详细信息页面和 `Panoramic Media` WCM组件。
+外觀比例和關鍵字條件都適用於資產詳細資訊頁面和 `Panoramic Media` wcm元件。
 
-要上传用于全景图像查看器的资产，请参阅 [上传资产](/help/assets/manage-assets.md#uploading-assets).
+若要上傳資產以與全景影像檢視器搭配使用，請參閱 [上傳資產](/help/assets/manage-assets.md#uploading-assets).
 
-## 配置Dynamic Media Classic {#configuring-dynamic-media-classic-scene}
+## 設定Dynamic Media Classic {#configuring-dynamic-media-classic-scene}
 
-要使全景图像查看器在Adobe Experience Manager中正常工作，请将全景图像查看器预设与Dynamic Media Classic和特定于Dynamic Media Classic的元数据同步，以便查看器预设在JCR中更新。 要完成此同步，请按照以下方式配置Dynamic Media Classic：
+為了讓「全景影像」檢視器在Adobe Experience Manager中正常運作，請將「全景影像」檢視器預設集與Dynamic Media Classic和Dynamic Media Classic專屬的中繼資料同步，以便在JCR中更新檢視器預設集。 若要完成此同步，請依照以下方式設定Dynamic Media Classic：
 
-1. 打开 [Dynamic Media Classic桌面应用程序](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)，然后登录到您的帐户。
+1. 開啟 [Dynamic Media Classic案頭應用程式](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)，然後登入您的帳戶。
 
-1. 在页面的右上角附近，选择 **[!UICONTROL 设置]** > **[!UICONTROL 应用程序设置]** > **[!UICONTROL 发布设置]** > **[!UICONTROL 图像服务器]**.
-1. 在“图像服务器发布”页面上，从 **[!UICONTROL 发布上下文]** 顶部附近的下拉菜单，选择 **[!UICONTROL 图像服务]**.
+1. 在頁面的右上角附近，選取 **[!UICONTROL 設定]** > **[!UICONTROL 應用程式設定]** > **[!UICONTROL 發佈設定]** > **[!UICONTROL 影像伺服器]**.
+1. 在「影像伺服器發佈」頁面上，從 **[!UICONTROL 發佈內容]** 頂端附近的下拉式功能表，選取 **[!UICONTROL 影像伺服]**.
 
-1. 在同一图像服务器发布页面上，找到标题 **[!UICONTROL 请求属性]**.
-1. 在请求属性标题下，找到 **[!UICONTROL 回复图像大小限制]**. 然后，在关联的“宽度”和“高度”字段中，增加全景图像的最大允许图像大小。
+1. 在相同「影像伺服器發佈」頁面上，找到標題 **[!UICONTROL 請求屬性]**.
+1. 在「請求屬性」標題下，找出 **[!UICONTROL 回覆影像大小限制]**. 然後，在關聯的「寬度」和「高度」欄位中，增加全景影像的最大允許影像大小。
 
-   Dynamic Media Classic具有25,000,000像素的限制。 对于宽高比为2:1的图像，允许的最大大小为7000 x 3500。 但是，对于典型的桌面屏幕，4096 x 2048像素就足够了。
+   Dynamic Media Classic有25,000,000畫素的限制。 2:1外觀比例的影像最大允許大小為7000 x 3500。 不過，若是典型的桌上型電腦熒幕，4096 x 2048畫素就足夠了。
 
    >[!NOTE]
    >
-   >仅支持在允许的最大图像大小范围内的图像。 对超过大小限制的图像的请求会导致403响应。
+   >僅支援在最大允許影像大小範圍內的影像。 對超過大小限制的影像的請求會產生403回應。
 
-1. 在“请求属性”标题下，执行以下操作：
+1. 在「請求屬性」標題下，執行下列動作：
 
-   * 将请求模糊处理模式设置为 **[!UICONTROL 已禁用]**.
-   * 将请求锁定模式设置为 **[!UICONTROL 已禁用]**.
+   * 將請求模糊化模式設定為 **[!UICONTROL 已停用]**.
+   * 將請求鎖定模式設定為 **[!UICONTROL 已停用]**.
 
-   这些设置对于使用 `Panoramic Media` WCM组件Experience Manager。
+   這些設定是使用 `Panoramic Media` WCM元件Experience Manager。
 
-1. 在“图像服务器发布”页面底部的左侧，选择 **[!UICONTROL 保存]**.
+1. 在「影像伺服器發佈」頁面底部，選取左側 **[!UICONTROL 儲存]**.
 
-1. 在右下角，选择 **[!UICONTROL 关闭]**.
+1. 在右下角，選取 **[!UICONTROL 關閉]**.
 
-### 全景媒体WCM组件故障诊断 {#troubleshooting-the-panoramic-media-wcm-component}
+### 疑難排解全景媒體WCM元件 {#troubleshooting-the-panoramic-media-wcm-component}
 
-如果将图像放入WCM的全景媒体组件中，并且组件占位符折叠，请解决以下问题：
+如果您將影像拖放到WCM的全景媒體元件中，且元件預留位置已收合，請疑難排解下列問題：
 
-* 如果您遇到403 Forbidden错误，可能是由于请求的图像大小过大。 查看 **[!UICONTROL 回复图像大小限制]** 中的设置 [配置Dynamic Media Classic](/help/assets/panoramic-images.md#configuring-dynamic-media-classic-scene).
+* 如果您遇到403 Forbidden錯誤，可能是因為要求的影像大小太大。 檢閱 **[!UICONTROL 回覆影像大小限制]** 中的設定 [設定Dynamic Media Classic](/help/assets/panoramic-images.md#configuring-dynamic-media-classic-scene).
 
-* 对于页面上显示的“资产锁无效”或“解析错误”，请选中请求模糊处理模式和请求锁定模式以确保禁用它们。
-* 对于污染的画布错误，请为先前对图像资产的请求设置规则集定义文件路径和使CTN无效。
-* 如果在大小超过支持的限制的图像请求后，图像质量变差，请检查 **[!UICONTROL JPEG编码属性>质量]** 设置不为空。 的典型设置 **[!UICONTROL 质量]** 字段为 `95`. 您可以在图像服务器发布页面中找到设置。 要访问该页面，请参阅 [配置Dynamic Media Classic](/help/assets/panoramic-images.md#configuring-dynamic-media-classic-scene).
+* 對於頁面上顯示的「資產鎖定無效」或「剖析錯誤」，請檢查「請求模糊化模式」和「請求鎖定模式」，以確保它們已停用。
+* 對於汙染的畫布錯誤，請為影像資產的先前請求設定規則集定義檔案路徑和CTN無效。
+* 如果影像請求後大小超過支援的限制時，影像品質變低，請檢查 **[!UICONTROL JPEG編碼屬性>品質]** 設定不是空的。 的典型設定 **[!UICONTROL 品質]** 欄位是 `95`. 您可以在「影像伺服器發佈」頁面上找到設定。 若要存取頁面，請參閱 [設定Dynamic Media Classic](/help/assets/panoramic-images.md#configuring-dynamic-media-classic-scene).
 
-## 预览全景图像 {#previewing-panoramic-images}
+## 預覽全景影像 {#previewing-panoramic-images}
 
-参见 [预览资源](/help/assets/previewing-assets.md).
+另請參閱 [預覽資產](/help/assets/previewing-assets.md).
 
-## 发布全景图像 {#publishing-panoramic-images}
+## 發佈全景影像 {#publishing-panoramic-images}
 
-参见 [发布资产](/help/assets/publishing-dynamicmedia-assets.md).
+另請參閱 [發佈資產](/help/assets/publishing-dynamicmedia-assets.md).

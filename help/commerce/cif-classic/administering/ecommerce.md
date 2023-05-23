@@ -1,6 +1,6 @@
 ---
-title: 电子商务集成框架
-description: AEM eCommerce可帮助营销人员在Web、移动和社交接触点中提供品牌化的个性化购物体验。
+title: 電子商務整合框架
+description: AEM eCommerce可協助行銷人員跨網路、行動及社交接觸點，提供品牌和個人化的購物體驗。
 topic-tags: e-commerce
 content-type: reference
 docset: aem65
@@ -17,181 +17,181 @@ ht-degree: 2%
 * [概念](/help/commerce/cif-classic/administering/concepts.md)
 * [管理（一般）](/help/commerce/cif-classic/administering/generic.md)
 
-Adobe提供了商务集成框架的两个版本：
+Adobe提供兩個版本的Commerce Integration Framework：
 
 <table>
  <tbody>
   <tr>
    <th><p> </p> </th>
-   <th><p>CIF上线</p> </th>
-   <th><p>CIF云</p> </th>
+   <th><p>CIF內部部署</p> </th>
+   <th><p>CIF Cloud</p> </th>
   </tr>
   <tr>
    <td><p>支持的 AEM 版本</p> </td>
-   <td><p>AEM on-prem或AMS 6.x</p> </td>
+   <td><p>AEM內部部署或AMS 6.x</p> </td>
    <td>AEM AMS 6.4和6.5</td>
   </tr>
   <tr>
-   <td><p>后端</p> </td>
+   <td><p>後端</p> </td>
    <td>
     <ul>
-     <li>AEM, Java</li>
-     <li>整体集成、预构建映射（模板）</li>
-     <li>JCR存储库</li>
+     <li>AEM， Java</li>
+     <li>整體整合、建置前對應（範本）</li>
+     <li>JCR存放庫</li>
     </ul> </td>
    <td>
     <ul>
      <li>Adobe Commerce</li>
      <li>Java和Javascript</li>
-     <li>未在JCR存储库中存储商务数据</li>
+     <li>JCR存放庫中未儲存商業資料</li>
     </ul> </td>
   </tr>
   <tr>
    <td><p>前端</p> </td>
-   <td><p>AEM服务器端渲染的页面</p> </td>
-   <td>混合页面应用程序（混合渲染）</td>
+   <td><p>AEM伺服器端轉譯頁面</p> </td>
+   <td>混合頁面應用程式（混合呈現）</td>
   </tr>
   <tr>
-   <td><p>产品目录</p> </td>
+   <td><p>產品目錄</p> </td>
    <td>
     <ul>
-     <li>产品导入器、编辑器、AEM中的缓存</li>
-     <li>包含AEM或代理页的常规目录</li>
+     <li>產品匯入工具、編輯器、AEM中的快取</li>
+     <li>具有AEM或Proxy頁面的一般目錄</li>
     </ul> </td>
    <td>
     <ul>
-     <li>无产品导入</li>
-     <li>通用模板</li>
-     <li>通过连接器的按需数据</li>
-    </ul> </td>
-  </tr>
-  <tr>
-   <td><p>可扩展性</p> </td>
-   <td>
-    <ul>
-     <li>最多可支持数百万个产品（取决于用例）</li>
-     <li>Dispatcher上的缓存</li>
-    </ul> </td>
-   <td>
-    <ul>
-     <li>无卷限制</li>
-     <li>Dispatcher或CDN上的缓存</li>
+     <li>無產品匯入</li>
+     <li>通用範本</li>
+     <li>透過聯結器的隨選資料</li>
     </ul> </td>
   </tr>
   <tr>
-   <td>标准化数据模型</td>
+   <td><p>擴充性</p> </td>
+   <td>
+    <ul>
+     <li>最多可支援數百萬種產品（視使用案例而定）</li>
+     <li>Dispatcher上的快取</li>
+    </ul> </td>
+   <td>
+    <ul>
+     <li>無音量限制</li>
+     <li>Dispatcher或CDN上的快取</li>
+    </ul> </td>
+  </tr>
+  <tr>
+   <td>標準化資料模型</td>
    <td>否</td>
-   <td>是，Adobe Commerce GraphQL架构</td>
+   <td>是，Adobe Commerce GraphQL結構描述</td>
   </tr>
   <tr>
    <td>可用性</td>
-   <td><p>是。SAPCommerce Cloud(扩展已更新以支持AEM 6.4和Hybris 5（默认），并维护与Hybris 4的兼容性</p> <p>SalesforceCommerce Cloud(连接器开源以支持AEM 6.4)</p> </td>
-   <td>是，可通过GitHub通过开源。 Adobe Commerce(支持2.3.2（默认）并与2.3.1兼容)。</td>
+   <td><p>是。SAPCommerce Cloud(擴充功能已更新，以支援AEM 6.4和Hybris 5 （預設），並保持與Hybris 4的相容性</p> <p>SalesforceCommerce Cloud(開放來源以支援AEM 6.4的聯結器)</p> </td>
+   <td>是，透過GitHub的開放原始碼。 Adobe Commerce (支援2.3.2 （預設）並與2.3.1相容)。</td>
   </tr>
   <tr>
    <td>何时使用</td>
-   <td>有限用例：例如，可能需要导入小型静态目录的情景</td>
-   <td>大多数用例中的首选解决方案</td>
+   <td>有限的使用案例：適用於可能需要匯入小型靜態目錄的情況</td>
+   <td>大多數使用案例中偏好的解決方案</td>
   </tr>
  </tbody>
 </table>
 
-电子商务与产品信息管理(PIM)一起处理网站的活动，重点是通过在线商店销售产品：
+電子商務與產品資訊管理(PIM)一起，透過線上商店處理專注於銷售產品的網站活動：
 
-* 产品的创建、生命周期和过期
-* 价格管理
+* 產品的建立、期限和淘汰
+* 價格管理
 * 交易管理
-* 管理整个目录
-* 实时和集中存储记录
-* Web界面
+* 管理整個目錄
+* 即時和集中式儲存記錄
+* 網頁介面
 
-AEM eCommerce可帮助营销人员在Web、移动和社交接触点中提供品牌化的个性化购物体验。 AEM创作环境允许您根据目标访客上下文和促销策略自定义页面和组件；例如：
+AEM eCommerce可協助行銷人員跨網路、行動及社交接觸點，提供品牌和個人化的購物體驗。 AEM製作環境可讓您根據目標訪客內容和銷售策略來自訂頁面和元件；例如：
 
 * 产品页面
-* 购物车组件
-* 结帐组件
+* 購物車元件
+* 簽出元件
 
-该实施允许实时访问产品信息。 这可用于强制执行：
+實作可讓您即時存取產品資訊。 這可用來強制執行：
 
-* 产品信息完整性
-* 定价
-* 库存库存
-* 购物车状态的变化
+* 產品資訊完整性
+* 定價
+* 庫存管理
+* 購物車狀態的變化
 
 >[!NOTE]
 >
->要将集成框架与外部电子商务提供程序结合使用，您首先需要安装所需的包。 有关更多信息，请参阅 [部署eCommerce](/help/commerce/cif-classic/deploying/ecommerce.md).
+>若要與外部電子商務提供者使用整合架構，您首先需要安裝所需的套件。 如需詳細資訊，請參閱 [部署電子商務](/help/commerce/cif-classic/deploying/ecommerce.md).
 >
->有关扩展电子商务功能的信息，请参阅 [发展电子商务](/help/commerce/cif-classic/developing/ecommerce.md).
+>如需擴充電子商務功能的相關資訊，請參閱 [開發電子商務](/help/commerce/cif-classic/developing/ecommerce.md).
 
 ## 主要功能 {#main-features}
 
-AEM电子商务提供：
+AEM eCommerce提供：
 
-* 数量 **开箱即用的AEM组件** 为了说明项目可以实现的目标：
+* 數量 **現成可用的AEM元件** 若要說明專案可達成的目的：
 
-   * 产品显示
-   * 购物车
-   * 结帐
-   * 最近查看的产品
+   * 產品顯示
+   * 購物車
+   * 簽出
+   * 最近檢視的產品
    * 优惠券
-   * 其他
+   * 和其他
 
    ![](/help/sites-administering/assets/chlimage_1-130.png)
 
    >[!NOTE]
    >
-   >AEM提供的集成框架还允许您为独立于特定电子商务引擎的商务功能构建其他AEM组件。
+   >AEM提供的整合架構也可讓您為商業功能建立其他AEM元件，不受特定電子商務引擎影響。
 
-* **搜索**  — 使用以下任一方法：
+* **搜尋**  — 使用：
 
-   * AEM搜索
-   * 电子商务系统的探索
-   * 第三方搜索
-   * 或两者的组合。
+   * AEM搜尋
+   * 電子商務系統的搜尋
+   * 第三方搜尋
+   * 或兩者的組合。
 
    ![](/help/sites-administering/assets/chlimage_1-131.png)
 
-* 使用AEM功能 **在多个渠道中展示内容**，可以是整个浏览器窗口或移动设备。 这会以访客所需的格式交付内容。
+* 使用AEM功能來 **在多個管道上顯示您的內容**、完整瀏覽器視窗或行動裝置。 如此一來，您的內容就會以訪客所需的格式傳送。
 
    ![](/help/sites-administering/assets/chlimage_1-132.png)
 
-* 能够 **根据 [AEM电子商务框架](#the-framework)**.
+* 能夠 **根據以下專案開發您自己的整合實作： [AEM電子商務架構](#the-framework)**.
 
-   当前可用的两个实施都基于相同的基础构建 — 基于常规API（框架）。 实施新集成仅涉及实施集成所需的功能。 前端组件可供任何新实施使用，因为它们使用的是接口（因此与实施无关）。
+   目前可用的兩個實作都是以相同的基礎建置 — 在一般API （框架）之上。 實作新整合只需要實作您整合所需的功能。 前端元件可供任何新實施使用，因為它們使用介面（因此獨立於實施）。
 
-* 发展的可能性 **基于购物者数据和活动的体验驱动型商务**. 这样，您就可以了解许多情景：
+* 開發的可能性 **根據購物者資料和活動的體驗導向型商務**. 這可讓您實現許多情境：
 
-   * 例如，当总订单超过特定金额时，可能会降低运输成本。
-   * 另一种方法可能允许您提供使用用户档案数据（例如位置）的季节性选件。 然后，可根据其他因素在必要时再次突出显示这些内容。
+   * 例如，當訂單總額超過特定金額時，可減少運費。
+   * 另一種方式可讓您提供使用設定檔資料的季節性優惠方案（例如位置）。 然後可反白這些內容，同樣視需要根據其他因素而定。
 
-   在以下示例中，显示了一个Teaser，因为购物车的内容小于$75:
+   在以下範例中，當購物車的內容少於$75美元時，顯示了一個Teaser：
 
    ![](/help/sites-administering/assets/chlimage_1-133.png)
 
-   当购物车内容超过$75时，可以更改此设置：
+   當購物車內容超過$75美元時，可以變更此設定：
 
    ![](/help/sites-administering/assets/chlimage_1-134.png)
 
-* 以及其他功能，包括：
+* 和其他功能包括：
 
-   * 会话期间保留的购物车内容
-   * 完整订单历史记录
-   * 快速目录更新
+   * 跨工作階段保留的購物車內容
+   * 完整訂單歷史記錄
+   * 快速目錄更新
 
 ## 框架 {#the-framework}
 
-的 [概念](/help/commerce/cif-classic/administering/concepts.md) 部分更详细地介绍了框架，但以下部分提供了框架的高级、高速视图：
+此 [概念](/help/commerce/cif-classic/administering/concepts.md) 一節會更詳細地涵蓋架構，但下列內容提供架構的高階高速檢視：
 
-### 什么？ {#what}
+### 什麼？ {#what}
 
-* 集成框架提供了API、一系列用于说明功能的组件以及多个用于提供连接方法示例的扩展。
-* 该框架提供了项目实施所需的基本结构。
-* 该框架是可扩展的。
-* 该框架不提供现成可用的站点。 要使框架符合您的规范，始终需要进行一定量的开发工作。
+* 整合框架提供API、一系列元件來說明功能，而數個擴充功能則提供連線方法的範例。
+* 此架構提供專案實作所需的基本結構。
+* 此框架可擴充。
+* 此架構不提供立即可用網站。 一律需要一定的開發工作，才能讓架構符合您的規格。
 
 ### 为什么？ {#why}
 
-* 提供快速实现自定义电子商务网站所需的基本机制。
-* Tp提供开发真实电子商务网站所需的灵活性。
-* 说明最佳实践。
+* 提供快速實現自訂電子商務網站所需的基本機制。
+* Tp提供開發實際電子商務網站所需的彈性。
+* 說明最佳做法。

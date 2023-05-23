@@ -1,6 +1,6 @@
 ---
-title: Digital Rights Management资产
-description: 了解如何在 [!DNL Experience Manager].
+title: 資產Digital Rights Management
+description: 瞭解如何在中管理已授權資產的資產到期狀態和資訊 [!DNL Experience Manager].
 contentOwner: AG
 role: User, Admin
 feature: DRM,Asset Management
@@ -15,114 +15,114 @@ ht-degree: 6%
 
 # 资源的 Digital Rights Management {#digital-rights-management-in-assets}
 
-| 版本 | 文章链接 |
+| 版本 | 文章連結 |
 | -------- | ---------------------------- |
 | AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/drm.html?lang=en) |
 | AEM 6.5 | 本文 |
 
-数字资产通常与指定使用条款和持续时间的许可证相关联。 因为 [!DNL Adobe Experience Manager Assets] 与 [!DNL Experience Manager] 平台中，您可以高效地管理资产到期信息和资产状态。 您还可以将授权信息与资产关联。
+數位資產通常與指定使用條款與期間的授權相關聯。 因為 [!DNL Adobe Experience Manager Assets] 已與 [!DNL Experience Manager] 平台，您可以有效率地管理資產到期資訊和資產狀態。 您也可以將授權資訊與資產建立關聯。
 
-## 资产过期 {#asset-expiration}
+## 資產有效期 {#asset-expiration}
 
-资产到期是强制执行资产许可证要求的有效方式。 它可确保已发布的资产在过期时取消发布，这样就不会发生任何许可证违规的情况。 没有管理员权限的用户无法编辑、复制、移动、发布和下载已过期的资产。
+資產到期是強制執行資產授權要求的有效方式。 它可確保已發佈的資產在過期時取消發佈，以避免任何授權違規的可能性。 沒有管理員許可權的使用者無法編輯、複製、移動、發佈和下載過期的資產。
 
-您可以在 [!DNL Assets] 控制台。
+您可以在以下位置檢視資產的到期狀態： [!DNL Assets] 在卡片檢視和清單檢視中，使用console 。
 
 ![expired_flag_list](assets/expired_flag_list.png)
 
-*图：在列表视图中， [!UICONTROL 状态] 列显示 [!UICONTROL 过期] 横幅。*
+*圖：在清單檢視中 [!UICONTROL 狀態] 欄顯示 [!UICONTROL 已過期] 橫幅。*
 
-您可以在 [!UICONTROL 时间轴] 在左边栏中。
+您可以在以下位置檢視資產的到期狀態： [!UICONTROL 時間表] 在左側邊欄中。
 
 ![chlimage_1-144](assets/chlimage_1-144.png)
 
 >[!NOTE]
 >
->对于处于不同时区的用户，资产的过期日期会以不同的方式显示。
+>對於不同時區的使用者，資產的到期日顯示方式不同。
 
-您还可以在 **[!UICONTROL 引用]** 边栏。 它可管理复合资产与引用的子资产、收藏集和项目之间的资产到期状态和关系。
+您也可以在「 」中檢視資產的到期狀態 **[!UICONTROL 引用]** 邊欄。 它可管理資產到期狀態以及複合資產和參照的子資產、集合和專案之間的關係。
 
-1. 导航到要查看其引用网页和复合资产的资产。
-1. 选择资产并打开 **[!UICONTROL 引用]** 在左边栏中。 对于已过期的资产， [!UICONTROL 引用] 边栏显示到期状态 **[!UICONTROL 资产已过期]** 在顶部。
+1. 導覽至您要檢視參照網頁和複合資產的資產。
+1. 選取資產並開啟 **[!UICONTROL 引用]** 在左側邊欄中。 對於已到期的資產， [!UICONTROL 引用] 邊欄顯示到期狀態 **[!UICONTROL 資產已過期]** 在頂端。
 
    ![chlimage_1-147](assets/chlimage_1-147.png)
 
-   如果资产已过期，则 [!UICONTROL 引用] 边栏显示状态 **[!UICONTROL 资产已过期子资产]**.
+   如果資產具有過期的子資產，則 [!UICONTROL 引用] 邊欄顯示狀態 **[!UICONTROL 資產已過期的子資產]**.
 
    ![chlimage_1-148](assets/chlimage_1-148.png)
 
-### 搜索已过期的资产 {#search-expired-assets}
+### 搜尋過期的資產 {#search-expired-assets}
 
-您可以在“搜索”面板中搜索过期的资产，包括过期的子资产。
+您可以在「搜尋」面板中搜尋過期的資產，包括過期的子資產。
 
-1. 在 [!DNL Assets] 控制台中，单击 **[!UICONTROL 搜索]** 在工具栏中显示Omnisearch框。
+1. 在 [!DNL Assets] 主控台，按一下 **[!UICONTROL 搜尋]** 工具列顯示Omnisearch方塊。
 
-1. 将光标置于Omnisearch框中，选择 `Enter` 键来显示搜索结果页面。
-1. 打开左边栏中的搜索面板。 单击 **[!UICONTROL 到期状态]** 选项来展开它。
+1. 將游標放在Omnisearch方塊中，選取 `Enter` 鍵以顯示搜尋結果頁面。
+1. 在左側邊欄中開啟搜尋面板。 按一下 **[!UICONTROL 到期狀態]** 選項以展開它。
 
    ![chlimage_1-152](assets/chlimage_1-152.png)
 
-1. 选择 **[!UICONTROL 过期]**. 过滤搜索结果后，只会显示已过期的资产。
+1. 選擇 **[!UICONTROL 已過期]**. 篩選搜尋結果後，只會顯示過期的資產。
 
-当您选择 **[!UICONTROL 过期]** 选项， [!DNL Assets] 控制台仅显示复合资产引用的已过期资产和子资产。 在子资产过期后，不会立即显示引用已过期子资产的复合资产。 而是会在 [!DNL Experience Manager] 检测下次计划程序运行时，它们是否引用过期的子资产。
+當您選擇 **[!UICONTROL 已過期]** 選項， [!DNL Assets] console只會顯示複合資產所參考的過期資產和子資產。 參考過期子資產的複合資產不會在子資產過期後立即顯示。 相反地，它們會在以下時間後顯示 [!DNL Experience Manager] 偵測到它們會在下次排程器執行時參考過期的子資產。
 
-如果您将已发布资产的过期日期修改为早于当前计划程序周期的日期，计划仍会在下次运行时将此资产检测为已过期资产，并相应地反映状态。
+如果您將已發佈資產的到期日修改為早於目前排程器週期的日期，排程仍會在下次執行時偵測此資產為已到期資產，並據此反映其狀態。
 
-此外，如果故障或错误阻止调度程序检测当前周期中的过期资产，则调度程序在下一个周期中重新检查这些资产并检测其过期状态。
+此外，如果問題或錯誤阻止排程器偵測到目前週期內的過期資產，排程器會在下一個週期內重新檢查這些資產，並偵測其過期狀態。
 
-启用 [!DNL Assets] 控制台以显示引用的复合资产以及过期的子资产，请配置 **[!UICONTROL Adobe CQ DAM到期通知]** 工作流 [!DNL Experience Manager] 配置管理器。
+若要啟用 [!DNL Assets] 主控台若要顯示參照的複合資產以及過期的子資產，請設定 **[!UICONTROL Adobe CQ DAM到期通知]** 中的工作流程 [!DNL Experience Manager] 組態管理員。
 
-1. 打开 [!DNL Experience Manager] 配置管理器。
-1. 选择 **[!UICONTROL Adobe CQ DAM到期通知]**. 默认情况下， **[!UICONTROL 基于时间的调度程序]** ，该设置会安排作业在特定时间检查资产是否已过期的子资产。 作业完成后，已过期的子资产和引用的资产会在搜索结果中显示为已过期。
+1. 開啟 [!DNL Experience Manager] 組態管理員。
+1. 選擇 **[!UICONTROL Adobe CQ DAM到期通知]**. 依預設， **[!UICONTROL 基於時間的排程器]** 選取，排程工作以在特定時間檢查資產是否已過期的子資產。 工作完成後，已過期的子資產和參考資產會在搜尋結果中顯示為已過期。
 
-1. 要定期运行该作业，请清除&#x200B;**[!UICONTROL 基于时间的计划程序规则]**&#x200B;字段，并在&#x200B;**[!UICONTROL 周期性计划程序]**&#x200B;字段中修改时间（以秒为单位）。例如，示例表达式 `0 0 0 * * ?` 会在00小时触发作业。
-1. 选择 **[!UICONTROL 发送电子邮件]** ，以在资产过期时接收电子邮件。
+1. 要定期运行该作业，请清除&#x200B;**[!UICONTROL 基于时间的计划程序规则]**&#x200B;字段，并在&#x200B;**[!UICONTROL 周期性计划程序]**&#x200B;字段中修改时间（以秒为单位）。例如，範例運算式 `0 0 0 * * ?` 會在00小時觸發工作。
+1. 選取 **[!UICONTROL 傳送電子郵件]** 以在資產過期時接收電子郵件。
 
    >[!NOTE]
    >
-   >仅资产创建者（将特定资产上传到的人员） [!DNL Assets])会在资产过期时收到一封电子邮件。 请参阅 [如何配置电子邮件通知](/help/sites-administering/notification.md) 有关在整个 [!DNL Experience Manager] 级别。
+   >僅限資產建立者（上傳特定資產至的人） [!DNL Assets])會在資產過期時收到電子郵件。 另請參閱 [如何設定電子郵件通知](/help/sites-administering/notification.md) 以取得關於設定整體電子郵件通知的其他詳細資訊 [!DNL Experience Manager] 層級。
 
-1. 在 **[!UICONTROL 以秒为单位的先前通知]** 字段，以秒为单位指定当您想要收到有关到期的通知时资产过期的时间。 资产创建者会在资产过期前收到一条消息，通知您资产将在指定的时间后过期。 资产过期后，您会收到另一则确认到期的通知。 此外，会停用已过期的资产。
+1. 在 **[!UICONTROL 事先通知（以秒為單位）]** 欄位，指定當您想要接收有關到期的通知時，資產到期之前的時間（以秒為單位）。 資產建立者會在資產到期之前收到訊息，通知您資產將在指定時間後到期。 資產過期後，您會收到另一則通知，確認過期。 此外，過期資產也會停用。
 
 1. 单击“**[!UICONTROL 保存]**”。
 
-## 资产状态 {#asset-states}
+## 資產狀態 {#asset-states}
 
-的 [!DNL Assets] 控制台可以显示资产的各种状态。 根据特定资产的当前状态，其卡片视图会显示一个用于描述其状态的标签，例如已过期、已发布、已批准、已拒绝等。
+此 [!DNL Assets] 主控台可顯示資產的各種狀態。 根據特定資產的目前狀態，其卡片檢視會顯示描述其狀態的標籤，例如，已過期、已發佈、已核准、已拒絕等。
 
-1. 在 [!DNL Assets] 用户界面中，选择一个资产。
-1. 单击 **[!UICONTROL 发布]** 中。 如果你看不到 **发布** 在工具栏上，单击 **[!UICONTROL 更多]** 在工具栏上并找到 **[!UICONTROL 发布]** ![发布选项](assets/do-not-localize/publish-globe.png) 选项。
-1. 选择 **[!UICONTROL 发布]** ，然后关闭确认对话框。
-1. 退出选择模式。 资产的发布状态显示在卡片视图中资产缩略图的底部。 在列表视图中，已发布列显示资产发布的时间。
+1. 在 [!DNL Assets] 使用者介面，選取資產。
+1. 按一下 **[!UICONTROL 發佈]** （從工具列）。 如果您沒有看見 **發佈** 在工具列上，按一下 **[!UICONTROL 更多]** 在工具列上並找到 **[!UICONTROL 發佈]** ![發佈選項](assets/do-not-localize/publish-globe.png) 選項。
+1. 選擇 **[!UICONTROL 發佈]** ，然後關閉確認對話方塊。
+1. 結束選取模式。 資產的發佈狀態會顯示在卡片檢視的資產縮圖底部。 在清單檢視中，「已發佈」欄會顯示資產的發佈時間。
 
    ![chlimage_1-157](assets/chlimage_1-157.png)
 
-1. 要显示其资产详细信息页面，请在 [!DNL Assets] 界面，选择资产并单击 **[!UICONTROL 属性]** ![查看属性](assets/do-not-localize/info-circle-icon.png).
+1. 若要顯示其資產詳細資訊頁面，請前往 [!DNL Assets] 介面，選取資產並按一下 **[!UICONTROL 屬性]** ![檢視屬性](assets/do-not-localize/info-circle-icon.png).
 
-1. 在 [!UICONTROL 高级] 选项卡，从 **[!UICONTROL 过期]** 字段。
+1. 在 [!UICONTROL 進階] 索引標籤中，設定資產的到期日 **[!UICONTROL 過期]** 欄位。
 
-   ![在“过期”字段中设置资产过期日期和时间](assets/asset-properties-advanced-tab.png)
+   ![在「過期」欄位中設定資產過期日期和時間](assets/asset-properties-advanced-tab.png)
 
-   *图： [!UICONTROL 高级] 选项卡 [!UICONTROL 属性] 页面来设置资产过期时间。*
+   *圖： [!UICONTROL 進階] 索引標籤在資產中 [!UICONTROL 屬性] 頁面以設定資產有效期。*
 
-1. 单击 **[!UICONTROL 保存]** 然后单击 **[!UICONTROL 关闭]** 以显示资产控制台。
-1. 资产的发布状态会在卡片视图中资产缩略图的底部显示过期状态。 在列表视图中，资产的状态显示为 **[!UICONTROL 过期]**.
+1. 按一下 **[!UICONTROL 儲存]** 然後按一下 **[!UICONTROL 關閉]** 以顯示「資產」主控台。
+1. 資產的發佈狀態會指出卡片檢視中資產縮圖底部的過期狀態。 在清單檢視中，資產狀態會顯示為 **[!UICONTROL 已過期]**.
 
    ![chlimage_1-160](assets/chlimage_1-160.png)
 
-1. 在 [!DNL Assets] 控制台中，选择文件夹并在文件夹上创建审核任务。
-1. 审核和批准/拒绝审核任务中的资产，然后单击 **[!UICONTROL 完成]**.
-1. 导航到创建审核任务的文件夹。 您批准/拒绝的资产状态将显示在卡片视图的底部。 在列表视图中，批准和到期状态会显示在相应的列中。
+1. 在 [!DNL Assets] 主控台，選取資料夾並在資料夾上建立稽核任務。
+1. 稽核及核准/拒絕稽核任務中的資產，然後按一下 **[!UICONTROL 完成]**.
+1. 導覽至您建立稽核任務的資料夾。 您核准/拒絕的資產狀態會顯示在卡片檢視的底部。 在清單檢視中，核准和到期狀態會顯示在適當的欄中。
 
    ![chlimage_1-161](assets/chlimage_1-161.png)
 
-1. 要根据资产的状态搜索资产，请单击 **[!UICONTROL 搜索]** ![搜索选项](assets/do-not-localize/search_icon.png) 以显示Omnisearch栏。
-1. 选择 `Return` 单击 [!DNL Experience Manager] 以显示搜索面板。
-1. 在搜索面板中，单击 **[!UICONTROL 发布状态]** 选择 **[!UICONTROL 已发布]** 要在 [!DNL Assets].
+1. 若要根據資產的狀態來搜尋資產，請按一下 **[!UICONTROL 搜尋]** ![搜尋選項](assets/do-not-localize/search_icon.png) 以顯示Omnisearch列。
+1. 選取 `Return` 並按一下 [!DNL Experience Manager] 以顯示「搜尋」面板。
+1. 在搜尋面板中，按一下 **[!UICONTROL 發佈狀態]** 並選取 **[!UICONTROL 已發佈]** 若要在中搜尋已發佈的資產 [!DNL Assets].
 
    ![chlimage_1-163](assets/chlimage_1-163.png)
 
-1. 单击 **[!UICONTROL 批准状态]** ，然后单击相应的选项以搜索已批准或已拒绝的资产。
+1. 按一下 **[!UICONTROL 核准狀態]** 並按一下適當的選項，以搜尋已核准或已拒絕的資產。
 
    ![chlimage_1-164](assets/chlimage_1-164.png)
 
@@ -130,39 +130,39 @@ ht-degree: 6%
 
    ![chlimage_1-165](assets/chlimage_1-165.png)
 
-1. 您还可以根据各种搜索彩块化下的状态组合来搜索资产。 例如，您可以通过在搜索彩块化中选择相应的选项，来搜索已在审核任务中批准且尚未过期的已发布资产。
+1. 您也可以根據各種搜尋Facet下的狀態組合來搜尋資產。 例如，您可以在搜尋Facet中選取適當的選項，以搜尋已在稽核任務中核准且尚未過期的已發佈資產。
 
    ![chlimage_1-166](assets/chlimage_1-166.png)
 
-## Digital Rights Management [!DNL Assets] {#digital-rights-management-in-assets-1}
+## Digital Rights Management於 [!DNL Assets] {#digital-rights-management-in-assets-1}
 
-此功能强制您在从下载授权资产之前接受许可协议 [!DNL Adobe Experience Manager Assets].
+此功能強制接受授權合約，您才能從下載授權資產 [!DNL Adobe Experience Manager Assets].
 
-如果您选择受保护的资产，并单击 **[!UICONTROL 下载]**&#x200B;时，系统会将您重定向到许可页面以接受许可协议。 如果您不接受许可协议， **[!UICONTROL 下载]** 选项不可用。
+如果您選取受保護的資產並按一下 **[!UICONTROL 下載]**，您會重新導向至授權頁面，以接受授權合約。 如果您不接受授權合約，則 **[!UICONTROL 下載]** 選項無法使用。
 
-如果选择的资产包含多个受保护的资产，请一次选择一个资产，接受许可协议，然后继续下载资产。
+如果選取範圍包含多個受保護的資產，請一次選取一個資產、接受授權合約，然後繼續下載資產。
 
-如果满足以下任一条件，则资产会被视为受保护：
+若符合下列任一條件，資產即視為受保護：
 
-* 资产元数据属性 `xmpRights:WebStatement` 指向包含资产许可协议的页面路径。
-* 资产元数据属性的值 `adobe_dam:restrictions` 是指定许可协议的原始HTML。
+* 資產中繼資料屬性 `xmpRights:WebStatement` 指向包含資產授權合約的頁面路徑。
+* 資產中繼資料屬性的值 `adobe_dam:restrictions` 是指定授權合約的原始HTML。
 
 >[!NOTE]
 >
->位置 `/etc/dam/drm/licenses` 用于在早期版本中存储许可证 [!DNL Experience Manager] 已弃用。
+>位置 `/etc/dam/drm/licenses` 用於儲存舊版中的授權 [!DNL Experience Manager] 已過時。
 >
->如果您创建或修改许可证页面，或将其从以前的页面导入 [!DNL Experience Manager] 版本，Adobe建议您将它们存储在 `/apps/settings/dam/drm/licenses` 或 `/conf/&ast;/settings/dam/drm/licenses`.
+>如果您建立或修改授權頁面，或將其從先前的授權頁面移轉 [!DNL Experience Manager] 版本，Adobe建議您將它們儲存在 `/apps/settings/dam/drm/licenses` 或 `/conf/&ast;/settings/dam/drm/licenses`.
 
-### 下载受DRM保护的资产 {#downloading-drm-assets}
+### 下載受DRM保護的資產 {#downloading-drm-assets}
 
-1. 在卡片视图中，选择要下载的资产，然后单击 **[!UICONTROL 下载]**.
+1. 在卡片檢視中，選取您要下載的資產，然後按一下 **[!UICONTROL 下載]**.
 1. 在&#x200B;**[!UICONTROL 版权管理]**&#x200B;页面，从列表中选择要下载的资产。
-1. 在 [!UICONTROL 许可证] 窗格，选择 **[!UICONTROL 同意]**. 资产旁边会显示一个复选标记。 单击 **[!UICONTROL 下载]** 选项。
+1. 在 [!UICONTROL 授權] 窗格，選擇 **[!UICONTROL 同意]**. 資產旁會出現核取標籤。 按一下 **[!UICONTROL 下載]** 選項。
 
    >[!NOTE]
    >
-   >的 **[!UICONTROL 下载]** 仅当您选择同意受保护资产的许可协议时，才会启用选项。 但是，如果您的选择包含受保护和不受保护的资产，则只有受保护的资产会列在窗格中，并且 **[!UICONTROL 下载]** 选项，可下载不受保护的资产。 要同时接受多个受保护资产的许可协议，请从列表中选择资产，然后选择“同 **[!UICONTROL 意”]**。
+   >此 **[!UICONTROL 下載]** 只有當您選擇同意受保護資產的授權合約時，才會啟用此選項。 但是，如果您的選擇同時包含受保護和不受保護的資產，則只有受保護的資產會列在窗格和 **[!UICONTROL 下載]** 選項已啟用，以下載未受保護的資產。 要同时接受多个受保护资产的许可协议，请从列表中选择资产，然后选择“同 **[!UICONTROL 意”]**。
 
    ![chlimage_1-167](assets/chlimage_1-167.png)
 
-1. 在对话框中，单击 **[!UICONTROL 下载]** 下载资产或其演绎版。
+1. 在對話方塊中，按一下 **[!UICONTROL 下載]** 以下載資產或其轉譯。

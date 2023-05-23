@@ -1,7 +1,7 @@
 ---
-title: HTML5表单快速入门
+title: HTML5表單快速入門
 seo-title: Getting started with HTML5 forms
-description: 要开始配置，请部署AEM Forms附加组件包，并将现有HTML5表单导入到AEM。
+description: 若要開始使用，請部署AEM Forms附加元件套件，並將現有HTML5表單匯入至AEM。
 seo-description: To get started, deploy AEM Forms add-on package and import existing HTML5 forms to AEM.
 uuid: e85e57ab-fe32-4b6f-819e-322047ae3240
 content-type: reference
@@ -17,18 +17,18 @@ ht-degree: 0%
 
 ---
 
-# HTML5表单快速入门 {#getting-started-with-html-forms}
+# HTML5表單快速入門 {#getting-started-with-html-forms}
 
-HTML5表单提供了许多适用于移动设备的功能。 它可帮助您通过HTML5浏览器将当前的解决方案和工作流程扩展到平板电脑或智能手机设备。 部分功能包括：
+HTML5表單提供多項適用於行動裝置的功能。 它可協助您透過HTML5瀏覽器將目前的解決方案和工作流程擴展至平板電腦或智慧型手機裝置。 部分功能包括：
 
-* **基于HTML5的XFA表单模板渲染：** 除了常规PDF forms之外，您现在还可以以HTML5格式渲染现有的基于XFA的表单。 它可帮助您将客户端平台扩展到支持HTML5且不支持使用XFA Forms的Adobe Reader的移动设备(Apple iPad、Android平板电脑、智能手机等)。 有关基于HTML5的渲染功能的详细信息，请参见 [HTML5表单简介](/help/forms/using/introduction.md).
+* **XFA表單範本的HTML5型轉譯：** 除了一般PDF forms之外，您現在還可以以HTML5格式轉譯現有的XFA型表單。 這可協助您將使用者端平台擴充至支援HTML5且不支援Adobe Reader的行動裝置(Apple iPad、Android平板電腦、智慧型手機等)，與XFA Forms搭配使用。 如需HTML5轉譯功能的詳細資訊，請參閱 [HTML5表單簡介](/help/forms/using/introduction.md).
 
-* **管理Forms：** 此外，AEM还包括一些新功能，可简化组织和管理表单的过程。 您可以激活、停用、发布和预览表单。 有关更多信息，请参阅 [管理表单简介](/help/forms/using/introduction-managing-forms.md).
+* **管理Forms：** 此外，AEM也包含新功能，可簡化組織和管理表單的程式。 您可以啟用、停用、發佈和預覽表單。 如需詳細資訊，請參閱 [管理表單簡介](/help/forms/using/introduction-managing-forms.md).
 
-## 安装HTML5表单 {#installing-html-forms}
+## 安裝HTML5表單 {#installing-html-forms}
 
-安装AEM后，执行以下步骤以将Mobile Forms导入AEM：
+安裝AEM後，請執行以下步驟，將Mobile Forms匯入至AEM：
 
-* **设置和部署AEM Forms附加组件包：** 安装AEM Forms附加组件包以启用Mobile Forms。 有关安装AEM Forms附加组件包的信息，请参阅 [安装和配置AEM Forms](/help/forms/using/installing-configuring-aem-forms-osgi.md).
+* **設定和部署AEM Forms附加元件套件：** 安裝AEM Forms附加元件套件以啟用行動Forms。 如需有關安裝AEM Forms附加元件套件的資訊，請參閱 [安裝和設定AEM Forms](/help/forms/using/installing-configuring-aem-forms-osgi.md).
 
-* **导入Mobile Forms：** 将表单从本地文件系统导入CRX存储库。 有关详细信息，请参阅 [在AEM Forms中获取XDP和PDF文档](/help/forms/using/get-xdp-pdf-documents-aem.md).
+* **匯入Mobile Forms：** 將表單從您的本機檔案系統匯入到CRX存放庫。 如需詳細資訊，請參閱 [在AEM Forms中取得XDP和PDF檔案](/help/forms/using/get-xdp-pdf-documents-aem.md).

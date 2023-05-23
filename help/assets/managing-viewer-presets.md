@@ -1,6 +1,6 @@
 ---
-title: 管理查看器预设
-description: 如何在Dynamic Media中创建、编辑和管理查看器预设。
+title: 管理檢視器預設集
+description: 如何在Dynamic Media中建立、編輯和管理檢視器預設集。
 uuid: 64fcf16a-7c4a-435b-bf1a-f27b8b39a715
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -19,181 +19,181 @@ ht-degree: 8%
 
 ---
 
-# 管理查看器预设{#managing-viewer-presets}
+# 管理檢視器預設集{#managing-viewer-presets}
 
-查看器预设是一组设置，用于确定用户在其计算机屏幕和移动设备上查看富媒体资产的方式。 如果您是管理员，则可以创建查看器预设。 设置适用于查看器配置选项数组。 例如，您可以更改查看器的显示大小或缩放行为。
+檢視器預設集是設定集合，可決定使用者在其電腦熒幕和行動裝置上檢視多媒體資產的方式。 如果您是管理員，可以建立檢視器預設集。 設定可供一系列檢視器組態選項使用。 例如，您可以變更檢視器顯示大小或縮放行為。
 
-有关创建和自定义您自己的HTML5查看器预设的说明，请参阅AdobeDynamic Media *HTML5查看器SDK API文档*. 该SDK位于嵌入在SDK中的IS发布服务器上。 每个库版本都包含其自己的SDK文档。
+如需建立和自訂您自己的HTML5檢視器預設集的指示，請參閱AdobeDynamic Media *HTML5檢視器SDK API檔案*. SDK內嵌於SDK本身的IS發佈伺服器上，可供使用。 每個程式庫版本都有各自的SDK檔案。
 
 路径: `<scene7_domain>/s7sdk/<library_version>/docs/jsdocs/index.html`.\
-例如，3.10 SDK: [https://s7d1.scene7.com/s7sdk/3.10/docs/jsdoc/index.html](https://s7d1.scene7.com/s7sdk/3.10/docs/jsdoc/index.html)
+例如，3.10 SDK： [https://s7d1.scene7.com/s7sdk/3.10/docs/jsdoc/index.html](https://s7d1.scene7.com/s7sdk/3.10/docs/jsdoc/index.html)
 
-另请参阅 [AdobeDynamic Media查看器参考指南](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources.html).
+另請參閱 [AdobeDynamic Media檢視器參考指南](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources.html).
 
-本节介绍如何创建、编辑和管理查看器预设。 无论您何时预览资产，都可以将查看器预设应用到资产。 请参阅 [应用查看器预设](#applying-a-viewer-preset-to-an-asset).
+本節說明如何建立、編輯及管理檢視器預設集。 您可以隨時將檢視器預設集套用至資產預覽。 另請參閱 [套用檢視器預設集](#applying-a-viewer-preset-to-an-asset).
 
 >[!NOTE]
 >
->编辑任意 *预定义的现成查看器预设* 不支持此方案。 如果您尝试编辑现成的查看器预设，系统会提示您使用新名称保存查看器预设。
+>編輯任何 *預先定義的現成檢視器預設集* 不是支援的情況。 如果您嘗試編輯現成的檢視器預設集，系統會提示您使用新名稱儲存檢視器預設集。
 
-## 查看器的键盘辅助功能 {#keyboard-accessibility-for-viewers}
+## 檢視器的鍵盤協助工具 {#keyboard-accessibility-for-viewers}
 
-所有现成的查看器都支持键盘辅助功能。
+所有開箱即用的檢視器都支援鍵盤協助功能。
 
-另请参阅 [键盘辅助功能和导航](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/c-keyboard-accessibility.html).
+另請參閱 [鍵盤協助工具與導覽](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/c-keyboard-accessibility.html).
 
-## 管理查看器预设 {#managing-viewer-presets-1}
+## 管理檢視器預設集 {#managing-viewer-presets-1}
 
-您可以通过点按在Adobe Experience Manager中添加、编辑、删除、发布、取消发布和预览查看器预设 **[!UICONTROL 工具]** （锤子图标）> **[!UICONTROL 资产]** > **[!UICONTROL 查看器预设]**.
+您可以點選，在Adobe Experience Manager中新增、編輯、刪除、發佈、取消發佈和預覽檢視器預設集 **[!UICONTROL 工具]** （槌子圖示） > **[!UICONTROL 資產]** > **[!UICONTROL 檢視器預設集]**.
 
 ![6_5_tools-assets-viewerpresets](assets/6_5_tools-assets-viewerpresets.png)
 
 >[!NOTE]
 >
->默认情况下，当您在资产的详细信息视图中选择查看器时，系统会显示15个查看器预设。 您可以提高此限制。请参阅[增加显示的查看器预设数量](#increasing-the-number-of-viewer-presets-that-display)。
+>依預設，當您在資產的詳細資料檢視中選取「檢視器」時，系統會顯示15個檢視器預設集。 您可以提高此限制。请参阅[增加显示的查看器预设数量](#increasing-the-number-of-viewer-presets-that-display)。
 
-### 查看器支持响应式设计的网页 {#viewer-support-for-responsive-designed-web-pages}
+### 回應式設計網頁的檢視器支援 {#viewer-support-for-responsive-designed-web-pages}
 
-不同的网页有不同的需求。 例如，有时您希望网页提供一个链接，以在单独的浏览器窗口中打开HTML5查看器。 在其他情况下，可能需要直接将HTML5查看器嵌入到托管页面。 在后一种情况下，网页可以具有静态布局。 或者，它可能是“响应式”的，并在不同设备上或针对不同浏览器窗口大小以不同方式显示。 为了满足这些需求，Dynamic Media附带的所有预定义开箱即用HTML5查看器都支持静态网页和响应式设计的网页。
+不同的網頁有不同的需求。 例如，有時您會想要一個網頁，提供可在個別瀏覽器視窗中開啟HTML5檢視器的連結。 在其他情況下，您可能需要直接將HTML5檢視器內嵌在託管頁面上。 在後一種情況下，網頁可能具有靜態配置。 或者，它可能會是「回應式」的，且在不同裝置或不同瀏覽器視窗大小中顯示的方式會有所不同。 為了滿足這些需求，Dynamic Media隨附的所有預先定義、現成可用的HTML5檢視器都支援靜態網頁和回應式設計的網頁。
 
-请参阅 [响应式图像库](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/responsive-static-image-library/c-about-responsive-static-image-library.html) 有关如何将响应式查看器嵌入网页的更多信息。
+另請參閱 [Responsive影像資料庫](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/responsive-static-image-library/c-about-responsive-static-image-library.html) 瞭解更多有關如何將回應式檢視器內嵌至網頁的資訊。
 
 >[!NOTE]
 >
->在首次使用之前发布所有现成的查看器。
->请参阅 [发布查看器预设].(#publishing-viewer-presets)
+>在第一次使用現成可用的檢視器之前，請先發佈這些檢視器。
+>另請參閱 [發佈檢視器預設集].(#publishing-viewer-presets)
 
-### 查看器预设系统兼容性 {#viewer-preset-system-compatibility}
+### 檢視器預設集系統相容性 {#viewer-preset-system-compatibility}
 
-Dynamic Media附带的所有现成查看器预设都与以下系统完全兼容：
+Dynamic Media隨附的所有現成可用的檢視器預設集都與下列系統完全相容：
 
-* 台式机
-* AppleiPhone
-* AppleiPad
-* Android™智能手机
-* Android™平板电脑
-* 对于视频，还提供了对MP4播放的其他支持 [BlackBerry®](https://developer.blackberry.com/devzone/develop/supported_media/bb_media_support_at_a_glance.html#kba1328730952678) 和 [Windows Phone](https://learn.microsoft.com/en-us/windows/uwp/audio-video-camera/supported-codecs).
+* 桌上型
+* Apple iPhone
+* Apple iPad
+* Android™智慧型手機
+* Android™平板電腦
+* 視訊額外支援MP4播放，適用於 [BlackBerry®](https://developer.blackberry.com/devzone/develop/supported_media/bb_media_support_at_a_glance.html#kba1328730952678) 和 [Windows Phone](https://learn.microsoft.com/en-us/windows/uwp/audio-video-camera/supported-codecs).
 
-### 查看器预设的富媒体类型 {#rich-media-types-for-viewer-presets}
+### 檢視器預設集的多媒體型別 {#rich-media-types-for-viewer-presets}
 
-管理员在创建查看器预设时，可以添加和自定义以下富媒体类型。
+建立檢視器預設集時，管理員可以新增和自訂以下多媒體型別。
 
 <table>
  <tbody>
   <tr>
    <td><strong>轮播集</strong><br /> </td>
-   <td><p>热点或图像映射，或两者都添加到两个或更多图像的系列中。 客户可以向左或向右平移图像，然后在图像上选择一个热点以获取更多详细信息，或直接从网站的类别、主页或登陆页面进行购买。</p> </td>
+   <td><p>熱點、影像地圖、或兩者都會新增至一連串的兩個或多個影像中。 客戶可以將影像向左或向右平移，然後在影像上選取熱點，以取得更多詳細資訊或直接從網站的類別、首頁或登陸頁面購買。</p> </td>
   </tr>
   <tr>
    <td><strong>尺寸</strong><br /> </td>
-   <td><p>显示可让您转动、平移、缩放或重新进入相机的3D场景。</p> </td>
+   <td><p>顯示可讓您旋轉、平移、縮放或重新置入相機的3D場景。</p> </td>
   </tr>
   <tr>
    <td><strong>弹出缩放</strong></td>
-   <td><p>在原始图像旁边显示缩放区域的第二个图像。 没有可使用的控件 — 用户将所选内容移动到要查看的区域上。</p> <p>在确定此查看器的完整带宽使用情况时，请考虑在查看器中同时提供主图像和弹出图像。 主图像大小（暂存宽度和暂存高度）和缩放因子决定弹出图像的大小。 要防止弹出文件过大，请平衡以下两个值：如果主图像较大，请降低缩放因子值。 （弹出宽度和弹出高度决定弹出窗口的大小，但不决定提供给查看器的弹出图像的大小。）</p> <p>例如，如果主图像的大小为350 x 350像素，缩放因子为3，则生成的弹出图像的大小为1050 x 1050像素。 如果主图像大小为300 x 300像素，缩放因子为4，则弹出图像的大小为1200 x 1200像素。 根据JPEG质量设置（建议的设置介于80到90之间），您可以显着减小文件大小。 推荐的缩放因子为2.5到4，具体取决于主图像的大小。</p> </td>
+   <td><p>在原始影像旁顯示縮放區域的第二個影像。 沒有要使用的控制項 — 使用者將選取範圍移動到他們想要檢視的區域。</p> <p>判斷此檢視器的完整頻寬使用量時，請考量檢視器中會同時提供主要影像和彈出式影像。 主要影像大小（「舞台寬度」和「高度」）和「縮放因數」會決定彈出式影像大小。 若要避免彈出式檔案變得太大，請平衡這兩個值：如果您有大的主要影像大小，請降低「縮放因數」值。 （「彈出式寬度」和「彈出式高度」會決定彈出式視窗的大小，但不會決定提供給檢視器的彈出式影像的大小。）</p> <p>例如，如果您的主要影像大小為350 x 350畫素，縮放係數為3，則產生的彈出式影像為1050 x 1050畫素。 如果您的主要影像大小為300 x 300畫素，縮放係數為4，則彈出式影像為1200 x 1200畫素。 根據JPEG品質設定（建議的設定介於80到90之間），您可以大幅減少檔案大小。 建議縮放因數為2.5至4，視您主影像的大小而定。</p> </td>
   </tr>
   <tr>
-   <td><strong>内联缩放</strong></td>
-   <td>在原始查看器中显示缩放区域的图像。 没有可使用的控件。 也就是说，用户会在要查看的区域上移动所做的选择。</td>
+   <td><strong>內嵌縮放</strong></td>
+   <td>在原始檢視器中顯示縮放區域的影像。 沒有要使用的控制項。 也就是說，使用者會將選取範圍移動到他們想要檢視的區域上。</td>
   </tr>
   <tr>
    <td><strong>图像集</strong></td>
-   <td>在图像集查看器中，用户可以通过选择缩略图来查看项目的不同视图或颜色变化。 此查看器还提供了用于仔细检查图像的缩放工具。</td>
+   <td>在「影像集」檢視器中，使用者可以透過選取縮圖影像來檢視專案的不同檢視或顏色變化。 此檢視器還提供縮放工具，以便更密切地檢查影像。</td>
   </tr>
   <tr>
    <td><strong>交互式图像</strong></td>
-   <td>热点会添加到图像的某些部分，客户随后可以选择这些部分以获取更多详细信息，或直接从网站的类别、主页或登陆页面购买。</td>
+   <td>連結區會新增至影像的某些部分，然後客戶可以選取這些部分以取得其他詳細資訊，或直接從網站的類別、首頁或登入頁面進行購買。</td>
   </tr>
   <tr>
    <td><strong>交互式视频</strong></td>
-   <td>缩略图会添加到视频中的时间轴区段，客户随后可以选择该区段以获取更多详细信息，或直接从网站的类别、主页或登陆页面购买。</td>
+   <td>縮圖會新增至影片中的時間軸區段，然後客戶可選取該區段以取得其他詳細資訊，或直接從網站的類別、首頁或登入頁面進行購買。</td>
   </tr>
   <tr>
    <td><strong>混合媒体</strong></td>
-   <td>在一个查看器中显示不同类型的媒体。 您可以包含旋转集、图像集、图像和视频。</td>
+   <td>在一個檢視器中顯示不同型別的媒體。 您可以包含迴轉集、影像集、影像和視訊。</td>
   </tr>
   <tr>
    <td><strong>全景图像</strong></td>
-   <td><p>全景图像和全景VR查看器可渲染球面全景图像，以让用户沉浸在房间、属性、位置或景观的360°观看体验中。</p> <p>要使上传的图像符合球面全景图的条件，该图像必须具有以下任一项或两项：</p>
+   <td><p>「全景影像」和「全景VR」檢視器可呈現球面全景影像，讓使用者沈浸在房間、屬性、位置或橫向的360度檢視體驗中。</p> <p>若要讓上傳的影像符合球面全景的條件，它必須具備下列其中一項或兩項條件：</p>
     <ul>
-     <li>宽高比为2:1。</li>
-     <li>使用关键词标记 <code>equirectangular</code>或 <code>spherical</code> 和 <code>panorama</code>或 <code>spherical </code>和 <code>panoramic</code>. 请参阅 <a href="/help/sites-authoring/tags.md">使用标记</a>.</li>
-    </ul> <p>纵横比和关键字条件都适用于资产详细信息页面和“全景媒体”WCM组件的全景资产。</p> <p><strong>重要信息</strong>:此查看器仅在Dynamic Media - Scene7模式下可用。</p> </td>
+     <li>外觀比例為2:1。</li>
+     <li>以關鍵字標籤 <code>equirectangular</code>，或 <code>spherical</code> 和 <code>panorama</code>，或 <code>spherical </code>和 <code>panoramic</code>. 另請參閱 <a href="/help/sites-authoring/tags.md">使用標籤</a>.</li>
+    </ul> <p>外觀比例和關鍵字條件都適用於資產詳細資訊頁面和「全景媒體」WCM元件的全景資產。</p> <p><strong>重要</strong>：此檢視器僅適用於Dynamic Media - Scene7模式。</p> </td>
   </tr>
   <tr>
    <td><strong>智能裁剪视频</strong><br /> </td>
-   <td><p>使用此查看器可自动检测任何视频中的焦点并将其裁剪到该焦点。</p> </td>
+   <td><p>使用此檢視器可自動偵測並裁切至任何視訊中的焦點。</p> </td>
   </tr>
   <tr>
    <td><strong>旋转集</strong></td>
-   <td>提供图像的多个视图，以便用户可以旋转对象以检查不同的侧边和角度。</td>
+   <td>提供影像的多個檢視，讓使用者可以轉動物件來檢查不同的側邊和角度。</td>
   </tr>
   <tr>
-   <td><strong>360视频</strong></td>
-   <td><p>使用360/VR视频查看器可渲染等长形视频，以体验房间、属性、位置、景观或医疗程序的沉浸式观看体验。</p> <p>在平面显示器上播放时，用户可以控制观看角度；移动设备上的播放通常应用其内置的陀螺仪控件。</p> <p>查看器包含对交付360个视频资产的本机支持。 默认情况下，查看或播放不需要任何其他配置。 您使用标准视频扩展名(如.mp4、.mkv和.mov)来交付360视频。 最常见的编解码器是H.264。</p> <p><strong>重要信息</strong>:此查看器仅在Dynamic Media - Scene7模式下可用。</p> </td>
+   <td><strong>360度影片</strong></td>
+   <td><p>使用360/VR視訊檢視器可呈現等矩形的視訊，以沈浸式地檢視房間、屬性、位置、橫向或醫療程式。</p> <p>在平面顯示器上播放期間，使用者可以控制視角；在行動裝置上播放通常會套用其內建的陀螺儀控制項。</p> <p>檢視器包含原生支援，可傳送360個視訊資產。 依預設，檢視或播放不需要額外的設定。 您會使用標準視訊副檔名（例如.mp4、.mkv和.mov）來傳送360視訊。 最常見的轉碼器是H.264。</p> <p><strong>重要</strong>：此檢視器僅適用於Dynamic Media - Scene7模式。</p> </td>
   </tr>
   <tr>
    <td><strong>视频</strong></td>
-   <td><p>使用渐进式比特率流或自适应比特率流播放视频。 自适应比特率流自动执行设备和带宽检测，以正确的格式提供正确质量的视频。</p> </td>
+   <td><p>使用漸進式或自我調整位元速率串流播放視訊。 最適化位元速率串流會自動執行裝置和頻寬偵測，以正確的格式提供正確的品質視訊。</p> </td>
   </tr>
   <tr>
-   <td><strong>垂直缩放</strong></td>
-   <td><p>通过垂直缩放查看器，您可以最大化产品图像查看体验，从而让用户更好地呈现产品。 色板的垂直位置可执行以下操作：</p>
+   <td><strong>垂直縮放</strong></td>
+   <td><p>垂直縮放檢視器可讓您最大化產品影像檢視體驗，讓使用者以最佳方式呈現產品。 色票的垂直位置會執行下列動作：</p>
     <ul>
-     <li>确保色板“位于折页上方”。<br/> 使用水平色板，根据用户的桌面屏幕大小，在用户向下滚动页面之前，这些色板不可见。 通过将色板垂直放置在查看器中，可确保无论用户的屏幕大小如何，都可以看到这些色板。</li>
-     <li>最大化主图像大小。<br /> 使用水平色板时，必须保留页面上的空间，以确保它们可见。 此定位缩小了主图像的大小。 但是，使用垂直色板布局时，您无需分配此空间。 因此，您可以最大化主图像大小。</li>
+     <li>確保色票「高於摺頁」。<br/> 對於水準色票，視使用者的案頭熒幕大小而定，直到使用者向下捲動頁面才會顯示。 將色票垂直放置在檢視器中，可確保無論使用者的熒幕大小如何，都能看到色票。</li>
+     <li>最大化主要影像大小。<br /> 使用水準色票時，必須在頁面上保留空間，以確保可看見色票。 此定位縮小了主要影像的大小。 不過，如果是垂直色票版面配置，則不需要配置此空間。 因此，您可以將主要影像大小最大化。</li>
     </ul> </td>
   </tr>
   <tr>
    <td><strong>缩放</strong></td>
-   <td>允许用户通过选择区域来放大该区域。 用户可以选择用于放大、缩小图像以及将图像重置为默认大小的控件。</td>
+   <td>可讓使用者透過選取區域來放大該區域。 使用者可以選取控制項來放大、縮小影像，以及將影像重設為預設大小。</td>
   </tr>
  </tbody>
 </table>
 
-### 现成查看器预设列表 {#list-of-out-of-the-box-viewer-presets}
+### 現成可用的檢視器預設集清單 {#list-of-out-of-the-box-viewer-presets}
 
-下表标识了Dynamic Media附带的所有预定义现成查看器预设。
+下表列出Dynamic Media隨附的所有預先定義、立即可用的檢視器預設集。
 
-另请参阅 [实时演示](https://landing.adobe.com/zh-Hans/na/dynamic-media/ctir-2755/live-demos.html).
+另請參閱 [即時示範](https://landing.adobe.com/zh-Hans/na/dynamic-media/ctir-2755/live-demos.html).
 
-有关查看器支持的Web浏览器和操作系统版本的信息，您可以查看查看器发行说明。
+如需有關檢視器支援的網頁瀏覽器和作業系統版本的資訊，您可以檢閱「檢視器發行說明」。
 
-请参阅 [查看器参考指南](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources.html).
+請參閱目錄中的「檢視器發行說明」。 [檢視器參考指南](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources.html).
 
 >[!NOTE]
 >
->Dynamic Media中所有现成的查看器预设均已激活（开启），但您必须发布它们。
->请参阅 [发布查看器预设](#publishing-viewer-presets).
+>Dynamic Media中的所有現成可用的檢視器預設集都已啟動（開啟），但您必須發佈它們。
+>另請參閱 [發佈檢視器預設集](#publishing-viewer-presets).
 >
->您创建和添加的任何新查看器预设都必须同时激活*和*已发布。
->请参阅 [激活或取消激活查看器预设](#activating-or-deactivating-viewer-presets) 和 [发布查看器预设](#publishing-viewer-presets).
+>您建立和新增的任何新檢視器預設集都必須啟動*和*已發佈。
+>另請參閱 [啟用或停用檢視器預設集](#activating-or-deactivating-viewer-presets) 和 [發佈檢視器預設集](#publishing-viewer-presets).
 
 <table>
  <tbody>
   <tr>
-   <td><strong>查看器预设标题</strong></td>
+   <td><strong>檢視器預設集標題</strong></td>
    <td><strong>类型</strong></td>
    <td><strong>CSS 文件名称</strong><br /> </td>
   </tr>
   <tr>
-   <td>轮播_点线_深色</td>
-   <td>轮播(_S)</td>
+   <td>Carousel_Dotted_dark</td>
+   <td>Carusel_Set</td>
    <td><code>html5_carouselviewer_dotted_dark.css</code></td>
   </tr>
   <tr>
-   <td>轮播_虚线_光</td>
-   <td>轮播(_S)</td>
+   <td>Carousel_Dotted_light</td>
+   <td>Carusel_Set</td>
    <td><code>html5_carouselviewer_dotted_light.css</code></td>
   </tr>
   <tr>
-   <td>轮播_数值_深色</td>
-   <td>轮播(_S)</td>
+   <td>Carousel_Numeric_dark</td>
+   <td>Carusel_Set</td>
    <td><code>html5_carouselviewer_numeric_dark.css</code></td>
   </tr>
   <tr>
-   <td>轮播_数值_光</td>
-   <td>轮播(_S)</td>
+   <td>Carousel_Numeric_light</td>
+   <td>Carusel_Set</td>
    <td><code>html5_carouselviewer_numeric_light.css</code></td>
   </tr>
   <tr>
@@ -202,7 +202,7 @@ Dynamic Media附带的所有现成查看器预设都与以下系统完全兼容�
    <td><code>html5_dimensionalviewer.css</code></td>
   </tr>
   <tr>
-   <td>弹出</td>
+   <td>彈出</td>
    <td>Flyout_Zoom</td>
    <td><code>html5_flyoutviewer.css</code></td>
   </tr>
@@ -218,12 +218,12 @@ Dynamic Media附带的所有现成查看器预设都与以下系统完全兼容�
   </tr>
   <tr>
    <td>InlineMixedMedia_dark</td>
-   <td>混合媒体</td>
+   <td>混合媒體</td>
    <td><code>html5_inlinemixedmediaviewer_dark.css</code></td>
   </tr>
   <tr>
    <td>InlineMixedMedia_light</td>
-   <td>混合媒体</td>
+   <td>混合媒體</td>
    <td><code>html5_inlinemixedmediaviewer_light.css</code></td>
   </tr>
   <tr>
@@ -233,22 +233,22 @@ Dynamic Media附带的所有现成查看器预设都与以下系统完全兼容�
   </tr>
   <tr>
    <td>MixedMedia_dark</td>
-   <td>混合媒体</td>
+   <td>混合媒體</td>
    <td><code>html5_mixedmediaviewer_dark.css</code></td>
   </tr>
   <tr>
    <td>MixedMedia_light</td>
-   <td>混合媒体</td>
+   <td>混合媒體</td>
    <td><code>html5_mixedmediaviewer_light.css</code></td>
   </tr>
   <tr>
-   <td>全景图像</td>
-   <td>全景图像(_I)</td>
+   <td>全景影像</td>
+   <td>Panoramic_Image</td>
    <td><code>html5_panoramicimage.css</code></td>
   </tr>
   <tr>
-   <td>全景图像VR</td>
-   <td>全景图像(_I)</td>
+   <td>PanoramicImageVR</td>
+   <td>Panoramic_Image</td>
    <td><code>html5_panoramicimage.css</code></td>
   </tr>
   <tr>
@@ -258,12 +258,12 @@ Dynamic Media附带的所有现成查看器预设都与以下系统完全兼容�
   </tr>
   <tr>
    <td>Shoppable_Video_dark</td>
-   <td>Interactive_Video</td>
+   <td>互動視訊</td>
    <td><code>html5_interactivevideoviewer_dark.css</code></td>
   </tr>
   <tr>
    <td>Shoppable_Video_light</td>
-   <td>Interactive_Video</td>
+   <td>互動視訊</td>
    <td><code>html5_interactivevideovewer_light.css</code></td>
   </tr>
   <tr>
@@ -278,31 +278,31 @@ Dynamic Media附带的所有现成查看器预设都与以下系统完全兼容�
   </tr>
   <tr>
    <td>SpinSet_dark</td>
-   <td>旋转集</td>
+   <td>迴轉集</td>
    <td><code>html5_spinviewer_dark.css</code></td>
   </tr>
   <tr>
    <td>SpinSet_light</td>
-   <td>旋转集</td>
+   <td>迴轉集</td>
    <td><code>html5_spinviewer_light.css</code></td>
   </tr>
   <tr>
-   <td><p>视频</p> <p>（包括对隐藏式字幕的支持）</p> </td>
+   <td><p>视频</p> <p>（包含隱藏式字幕支援）</p> </td>
    <td>视频</td>
    <td><code>html5_videoviewer.css</code></td>
   </tr>
   <tr>
-   <td><p>Video360_social</p> <p>（包括基本视频播放控件，视频渲染在立体模式下完成，手动视点控件关闭，但陀螺仪控件打开，且没有社交媒体功能）</p> </td>
+   <td><p>Video360_social</p> <p>（包括基本視訊播放控制、視訊演算在立體聲模式下完成、手動視點控制關閉但陀螺控制開啟，以及無社群媒體功能）</p> </td>
    <td>Video_360</td>
    <td><code>html5_video360viewersocial.css</code></td>
   </tr>
   <tr>
-   <td><p>Video360VR</p> <p>(专为使用虚拟现实眼镜的最终用户而设计。 包括基本视频播放控件和社交媒体功能)</p> </td>
+   <td><p>Video360VR</p> <p>(專為使用虛擬現實眼鏡的使用者所設計。 包含基本視訊播放控制項和社群媒體功能)</p> </td>
    <td>Video_360</td>
    <td><code>html5_video360viewer.css</code></td>
   </tr>
   <tr>
-   <td><p>Video_social</p> <p>（包括对隐藏式字幕和社交媒体的支持）</p> </td>
+   <td><p>Video_social</p> <p>（包括隱藏式字幕和社群媒體的支援）</p> </td>
    <td>视频</td>
    <td><code>html5_videoviewersocial.css</code></td>
   </tr>
@@ -318,187 +318,187 @@ Dynamic Media附带的所有现成查看器预设都与以下系统完全兼容�
   </tr>
   <tr>
    <td>ZoomVertical_dark<br /> </td>
-   <td>垂直缩放</td>
+   <td>Vertical_Zoom</td>
    <td><code>html5_zoomverticalviewer_dark.css</code></td>
   </tr>
   <tr>
    <td>ZoomVertical_light</td>
-   <td>垂直缩放</td>
+   <td>Vertical_Zoom</td>
    <td><code>html5_zoomverticalviewer_light.css</code></td>
   </tr>
  </tbody>
 </table>
 
-### 支持的移动查看器手势矩阵 {#supported-mobile-viewers-gestures-matrix}
+### 支援的行動檢視器手勢矩陣 {#supported-mobile-viewers-gestures-matrix}
 
-下表标识了iOS、Android™ 2.x和Android™ 3.x设备上支持的移动查看器手势。
+下表識別iOS、Android™ 2.x和Android™ 3.x裝置支援的行動檢視器手勢。
 
 <table>
  <tbody>
   <tr>
-   <td><strong>手势</strong></td>
+   <td><strong>手勢</strong></td>
    <td><strong>弹出缩放</strong></td>
    <td><strong>缩放</strong></td>
    <td><strong>旋转</strong></td>
   </tr>
   <tr>
-   <td><p><strong>拖动</strong></p> </td>
-   <td><p>平移</p> </td>
-   <td><p>平移</p> </td>
-   <td><p>平移</p> </td>
+   <td><p><strong>拖曳</strong></p> </td>
+   <td><p>Pans</p> </td>
+   <td><p>Pans</p> </td>
+   <td><p>Pans</p> </td>
   </tr>
   <tr>
    <td><p><strong>选择</strong></p> </td>
-   <td><p>显示弹出窗口</p> </td>
-   <td><p>显示或隐藏用户界面</p> </td>
-   <td><p>显示或隐藏用户界面</p> </td>
+   <td><p>顯示彈出式視窗</p> </td>
+   <td><p>顯示或隱藏使用者介面</p> </td>
+   <td><p>顯示或隱藏使用者介面</p> </td>
   </tr>
   <tr>
-   <td><p><strong>双击</strong></p> </td>
-   <td><p>不适用</p> </td>
-   <td><p>放大或重置</p> </td>
-   <td><p>放大或重置</p> </td>
+   <td><p><strong>點兩下</strong></p> </td>
+   <td><p>不適用</p> </td>
+   <td><p>放大或重設</p> </td>
+   <td><p>放大或重設</p> </td>
   </tr>
   <tr>
-   <td><p><strong>捏开</strong></p> </td>
-   <td><p>不适用</p> </td>
-   <td><p>放大(仅限iOS和Android™ 3x)</p> </td>
-   <td><p>放大(仅限iOS和Android™ 3x)</p> </td>
+   <td><p><strong>捏合開啟</strong></p> </td>
+   <td><p>不適用</p> </td>
+   <td><p>放大(僅限iOS和Android™ 3x)</p> </td>
+   <td><p>放大(僅限iOS和Android™ 3x)</p> </td>
   </tr>
   <tr>
-   <td><p><strong>捏合关闭</strong></p> </td>
-   <td><p>不适用</p> </td>
-   <td><p>缩小(仅限iOS和Android™ 3x)</p> </td>
-   <td><p>缩小(仅限iOS和Android™ 3x)</p> </td>
+   <td><p><strong>捏合關閉</strong></p> </td>
+   <td><p>不適用</p> </td>
+   <td><p>縮小顯示(僅限iOS和Android™ 3x)</p> </td>
+   <td><p>縮小顯示(僅限iOS和Android™ 3x)</p> </td>
   </tr>
   <tr>
    <td><p><strong>轻扫</strong></p> </td>
-   <td><p>滚动色板条</p> </td>
-   <td><p>滚动图像</p> </td>
-   <td><p>旋转</p> </td>
+   <td><p>捲動色票列</p> </td>
+   <td><p>捲動影像</p> </td>
+   <td><p>旋轉</p> </td>
   </tr>
   <tr>
-   <td><p><strong>弗里克</strong></p> </td>
-   <td><p>滚动色板条</p> </td>
-   <td><p>滚动图像</p> </td>
-   <td><p>旋转</p> </td>
+   <td><p><strong>輕觸</strong></p> </td>
+   <td><p>捲動色票列</p> </td>
+   <td><p>捲動影像</p> </td>
+   <td><p>旋轉</p> </td>
   </tr>
  </tbody>
 </table>
 
-## 增加显示的查看器预设数 {#increasing-the-number-of-viewer-presets-that-display}
+## 增加顯示的檢視器預設集數目 {#increasing-the-number-of-viewer-presets-that-display}
 
-Experience Manager在从以下位置查看资产时，会显示各种查看器预设 **[!UICONTROL 详细信息视图]** > **[!UICONTROL 查看器]**. 您可以增加或减少显示的查看器数量。
+Experience Manager在檢視資產時會顯示各種不同的檢視器預設集 **[!UICONTROL 詳細資料檢視]** > **[!UICONTROL 檢視者]**. 您可以增加或減少顯示的檢視器數量。
 
-**增加显示的查看器预设数：**
+**增加顯示的檢視器預設集數目：**
 
-1. 导航到CRXDE Lite([https://localhost:4502/crx/de](https://localhost:4502/crx/de))。
-1. 在以下位置导航到查看器预设列表节点：
+1. 導覽至CRXDE Lite([https://localhost:4502/crx/de](https://localhost:4502/crx/de))。
+1. 導覽至檢視器預設集清單節點，位置如下：
 
    `/libs/dam/gui/coral/content/commons/sidepanels/viewerpresets/viewerpresetslist`
 
    ![chlimage_1-221](assets/chlimage_1-221.png)
 
 1. 在 **[!UICONTROL limit]** 属性中，将默认设 **[!UICONTROL 置为15的Value]**（值）更改为所需的数字。
-1. 导航到位于的查看器预设数据源 `/libs/dam/gui/coral/content/commons/sidepanels/viewerpresets/viewerpresetslist/datasource`
+1. 導覽至檢視器預設集資料來源，網址為 `/libs/dam/gui/coral/content/commons/sidepanels/viewerpresets/viewerpresetslist/datasource`
 
    ![chlimage_1-222](assets/chlimage_1-222.png)
 
-1. 在limit属性中，将数字更改为所需的数字，例如 `{empty requestPathInfo.selectors[1] ? "20" : requestPathInfo.selectors[1]}`
-1. 选择 **[!UICONTROL 全部保存]**.
+1. 在limit屬性中，將數字變更為所需的數字，例如 `{empty requestPathInfo.selectors[1] ? "20" : requestPathInfo.selectors[1]}`
+1. 選取 **[!UICONTROL 全部儲存]**.
 
-## 创建查看器预设 {#creating-a-new-viewer-preset}
+## 建立檢視器預設集 {#creating-a-new-viewer-preset}
 
-通过创建查看器预设，您可以应用各种设置来查看资产并与之交互。 但是，您不需要创建查看器预设。 如果您愿意，可以使用AEM Assets附带的默认现成查看器预设。
+建立檢視器預設集可讓您套用各種設定來檢視資產並與之互動。 不過，您不需要建立檢視器預設集。 您也可以選擇使用AEM Assets隨附的預設現成檢視器預設集。
 
-如果选择创建查看器预设，则在保存该查看器预设后，查看器的状态将自动激活(设置为 **[!UICONTROL 开]**)。 此状态表示无论您何时预览图像或视频，都可以在Dynamic Media组件和交互式媒体组件中看到该图像或视频。
+如果您選擇建立檢視器預設集，在儲存後，檢視器的狀態會自動啟動(設為 **[!UICONTROL 開啟]**)。 此狀態表示只要您預覽影像或視訊，就能在Dynamic Media元件和互動式媒體元件中看到它。
 
-某些查看器预设具有可影响查看器的使用和整体行为的排他设置。 根据您创建的查看器预设，您可能需要注意这些特殊注意事项。
+有些檢視器預設集具有獨佔設定，可能會影響檢視器的使用方式和整體行為。 根據您建立的檢視器預設集，您可能會想要瞭解這些特殊考量。
 
-请参阅 [创建交互式查看器预设的特殊注意事项](#special-considerations-for-creating-an-interactive-viewer-preset).
+另請參閱 [建立互動式檢視器預設集的特殊考量事項](#special-considerations-for-creating-an-interactive-viewer-preset).
 
-请参阅 [创建轮播横幅查看器预设的特殊注意事项](#special-considerations-for-creating-a-carousel-banner-viewer-preset).
+另請參閱 [建立轉盤橫幅檢視器預設集的特殊考量事項](#special-considerations-for-creating-a-carousel-banner-viewer-preset).
 
-**要创建查看器预设，请执行以下操作：**
+**若要建立檢視器預設集：**
 
-1. 在Experience Manager的左上角，选择Experience Manager徽标，然后在左边栏中，选择 **[!UICONTROL 工具]** （锤子图标）> **[!UICONTROL 资产] > [!UICONTROL 查看器预设]**.
+1. 在Experience Manager的左上角，選取Experience Manager標誌，然後在左側邊欄中選取 **[!UICONTROL 工具]** （槌子圖示） > **[!UICONTROL 資產] > [!UICONTROL 檢視器預設集]**.
 
    ![6_5_viewerpresets](assets/6_5_viewerpresets.png)
 
-1. 在“查看器预设”页面的工具栏中，选择 **[!UICONTROL 创建]**.
-1. 在 **[!UICONTROL 新查看器预设]** 对话框中 **[!UICONTROL 预设名称]** 字段，输入新预设的名称。 请仔细选择名称 — 在您选择 **[!UICONTROL 创建]**.
+1. 在「檢視器預設集」頁面的工具列上，選取 **[!UICONTROL 建立]**.
+1. 在 **[!UICONTROL 新增檢視器預設集]** 對話方塊，在 **[!UICONTROL 預設集名稱]** 欄位中，輸入新預設集的名稱。 請謹慎選擇名稱 — 在您選取後，這些名稱將不可編輯 **[!UICONTROL 建立]**.
 
-   在稍后的这些步骤中保存预设时，“查看器预设”页面的“预设标题”列标题下会显示该名称。
+   當您稍後在這些步驟中儲存預設集時，該名稱會出現在「檢視器預設集」頁面的「預設集標題」欄標題下。
 
-1. 在富媒体类型下拉菜单中，选择要创建的查看器预设类型，然后在页面的右上角，选择 **[!UICONTROL 创建]**.
+1. 在「多媒體型別」下拉式功能表中，選取您要建立的檢視器預設集型別，然後在頁面的右上角選取 **[!UICONTROL 建立]**.
 
-   请参阅 [查看器预设的富媒体类型](#rich-media-types-for-viewer-presets).
+   另請參閱 [檢視器預設集的多媒體型別](#rich-media-types-for-viewer-presets).
 
-1. 在“查看器预设编辑器”页面上，选择 **[!UICONTROL 外观]** 选项卡。
+1. 在「檢視器預設集編輯器」頁面上，選取 **[!UICONTROL 外觀]** 標籤。
 1. 执行下列操作之一：
 
-   * 在 **[!UICONTROL 选定类型]** 下拉菜单中，选择要自定义其可视设计的组件。 或者，您也可以选择查看器中的任何可视化元素，以选择进行配置。
+   * 在 **[!UICONTROL 選取的型別]** 下拉式選單，選取您要自訂其視覺設計的元件。 或者，您可以在檢視器中選取任何視覺元素，以選取它進行設定。
 
-      通过可视编辑器，您可以查看特定属性对样式有何影响。 设置或调整任何属性，以便使用编辑器左侧的示例即时查看该属性对查看器有何影响。
+      視覺化編輯器可讓您檢視特定屬性對樣式有何影響。 使用編輯器左側的範例來設定或調整任何屬性，以立即檢視其對檢視器有何影響。
 
-      每种类型的查看器预设的CSS样式属性在“自定义”中有介绍 *`<viewer name>`* 查看者”帮助主题 [查看器参考指南](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources.html). 例如，如果您创建的是类型的查看器预设 `Mixed_Media`，请参阅 [自定义混合媒体查看器](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/mixed-media/customing-mixed-media/c-html5-mixedmedia-viewer-customizingviewer.html) ，以获取每个属性的列表和描述。
+      如需每種檢視器預設集型別的CSS樣式屬性，請參閱自訂 *`<viewer name>`* 檢視器」中的說明主題 [檢視器參考指南](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources.html). 例如，如果您要建立的檢視器預設集型別為 `Mixed_Media`，請參閱 [自訂混合媒體檢視器](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/mixed-media/customing-mixed-media/c-html5-mixedmedia-viewer-customizingviewer.html) 以取得每個屬性的清單和說明。
 
-   * 如果您在单独的CSS文件中定义了样式设置，则可以将CSS文件上传到AEM Assets。 选择 **[!UICONTROL 导入CSS]** 下面 **[!UICONTROL 选定类型]** 下拉菜单（如有必要，请向上滚动可视编辑器以查看它），以便您能够找到上传的CSS文件并将其与查看器预设关联。
+   * 如果您已在個別的CSS檔案中定義樣式設定，則可將CSS檔案上傳至AEM Assets。 選取 **[!UICONTROL 匯入CSS]** 在 **[!UICONTROL 選取的型別]** 下拉式選單（如有必要，請向上捲動視覺編輯器以檢視它），以便您可以找到上傳的CSS檔案並將其與檢視器預設集相關聯。
 
-      导入CSS文件时，可视编辑器会检查CSS是否使用正确的查看器标记。 例如，如果要创建缩放查看器，则必须使用其查看器类名称定义导入的所有CSS规则 `.s7mixedmediaviewer` 在父查看器元素上定义。
+      匯入CSS檔案時，視覺化編輯器會檢查CSS是否使用正確的檢視器標籤。 例如，如果您要建立縮放檢視器，則必須使用檢視器類別名稱來定義所有匯入的CSS規則 `.s7mixedmediaviewer` 定義於父檢視器元素上。
 
-      只要为给定查看器正确定义CSS标记，就可以导入任意手工CSS。 (CSS标记在任何“自定义” *&lt;viewer name=&quot;&quot;>* 查看者”帮助主题 [查看器参考指南](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources.html). 例如，如果要阅读有关缩放查看器的CSS标记，请参阅 [自定义缩放查看器](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/zoom/customizing-zoom/c-html5-20-zoom-viewer-customizingviewer.html).) 但是，可视编辑器可能无法理解某些CSS值。 在这种情况下，可视编辑器会尝试覆盖错误，以便CSS仍然可以工作。
+      您可以匯入任意的手工製作CSS，只要它為特定檢視器正確定義CSS標籤即可。 (CSS標籤在任何「自訂」一節中有說明。 *&lt;viewer name=&quot;&quot;>* 檢視器」中的說明主題 [檢視器參考指南](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources.html). 例如，如果您想閱讀縮放檢視器的CSS標籤，請參閱 [自訂縮放檢視器](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/zoom/customizing-zoom/c-html5-20-zoom-viewer-customizingviewer.html).) 不過，視覺化編輯器可能並不瞭解某些CSS值。 在這種情況下，視覺化編輯器會嘗試覆寫錯誤，讓CSS仍可運作。
    >[!NOTE]
    >
-   >如果您希望直接在其原始表单中编辑CSS，请选择 **[!UICONTROL 显示/隐藏CSS]** 在“选定类型”下拉菜单下（如有必要，向上滚动可视编辑器以查看）。
-   >与可视编辑器一样，当您直接在CSS中更改属性时，您会立即看到该属性对查看器示例有何影响。 而且，该同一属性会在可视化编辑器中同时自动更新。 因此，您可以使用原始CSS编辑器或可视编辑器，或者两者交替使用。
-
-   >[!NOTE]
-   >
-   >对于按钮图稿，选择2x图像并上传高分辨率艺术品。 使用交互式图像和购物横幅时，您还可以从各种现成的热点按钮中进行选择。
-
-1. （可选）在“编辑查看器预设”页面顶部附近，选择 **[!UICONTROL 桌面]**, **[!UICONTROL 平板电脑]**&#x200B;或 **[!UICONTROL 电话]** 用于为不同设备和屏幕类型唯一定义可视样式。
-1. 在“查看器预设编辑器”页面上，选择 **[!UICONTROL 行为]** 选项卡。 或者，您也可以选择查看器中的任何可视化元素，以选择进行配置。
-例如，对于 *VideoPlayer* 类型，下 **[!UICONTROL 修饰符]** > **[!UICONTROL 播放]**，则您可以从三个自适应比特率流选项之一进行选择：
-
-   * **[!UICONTROL 短划线]**  — 视频以短划线形式流。 但是，在Safari/iOS设备上，您必须选择 **[!UICONTROL hls]** 作为类型。
-   * **[!UICONTROL hls]**  — 视频流仅作为hls。
-   * **[!UICONTROL 自动]**  — 最佳实践。 DASH和HLS流的创建是存储优化的。 因此，Adobe建议您始终选择 **[!UICONTROL 自动]** 类型。 视频以短划线、hls或渐进方式流，如下面的播放顺序所示：
-      * 如果浏览器支持短划线，则首先使用短划线流。
-      * 如果浏览器不支持短划线，则使用HLS流，其次是。
-      * 如果浏览器不支持短划线或HLS，则最后使用渐进式播放。
+   >如果您偏好直接以原始格式編輯CSS，請選取「 」 **[!UICONTROL 顯示/隱藏CSS]** 在「選取型別」(Selected Type)下拉式選單下方（如有必要，請向上捲動視覺編輯器以檢視它）。
+   >如同視覺化編輯器，直接在CSS中變更屬性時，您會立即看到屬性對檢視器範例有何影響。 而且，在視覺化編輯器中，相同的屬性會同時自動更新。 因此，您可以使用原始CSS編輯器或視覺化編輯器，也可以交替使用兩者。
 
    >[!NOTE]
    >
-   >要查看和使用 **[!UICONTROL 短划线]** 选项，则必须首先由您帐户上的Adobe技术支持人员启用。 请参阅 [在您的帐户上启用短划线](/help/assets/video.md#enable-dash).
+   >對於按鈕圖稿，請選擇2x影像並上傳高解析度圖稿。 使用互動式影像和可購物橫幅時，您也可以選取各種現成的熱點按鈕。
+
+1. （可選）在「編輯檢視器預設集」頁面頂端附近，選取「 」 **[!UICONTROL 案頭]**， **[!UICONTROL 平板電腦]**，或 **[!UICONTROL 電話]** 為不同的裝置和熒幕型別唯一定義視覺樣式。
+1. 在「檢視器預設集編輯器」頁面上，選取 **[!UICONTROL 行為]** 標籤。 或者，您可以在檢視器中選取任何視覺元素，以選取它進行設定。
+例如，對於 *videoplayer* 型別，在下 **[!UICONTROL 修飾元]** > **[!UICONTROL 播放]**，您可以從三個最適化位元速率串流選項中選取：
+
+   * **[!UICONTROL 虛線]**  — 視訊資料流僅以短劃線顯示。 不過，在Safari/iOS裝置上，您必須選取 **[!UICONTROL hls]** 做為型別。
+   * **[!UICONTROL hls]**  — 視訊資料流僅以HLS形式。
+   * **[!UICONTROL 自動]**  — 最佳做法。 建立DASH和HLS資料流時，會最佳化儲存空間。 因此，Adobe建議您一律選取 **[!UICONTROL 自動]** 做為播放型別。 視訊串流為虛線、hls或漸進式，如下列播放順序所示：
+      * 如果瀏覽器支援DASH，則會先使用DASH串流。
+      * 如果瀏覽器不支援DASH，則會使用HLS資料流，第二個。
+      * 如果瀏覽器不支援DASH或HLS，則最後會使用漸進式播放。
+
+   >[!NOTE]
+   >
+   >若要檢視並使用 **[!UICONTROL 虛線]** 選項，必須先由您帳戶上的Adobe技術支援啟用。 另請參閱 [在您的帳戶上啟用DASH](/help/assets/video.md#enable-dash).
 
 1. 从&#x200B;**[!UICONTROL 选定类型]**&#x200B;下拉菜单中，选择要更改其行为的组件。
 
-   可视化编辑器中的许多组件都有与其关联的详细说明。 当您展开组件以显示其关联参数时，这些描述会显示在蓝色框中。
+   視覺化編輯器中的許多元件都有與其相關的詳細說明。 展開元件以顯示其相關引數時，這些說明會顯示在藍色方塊中。
 
    有些“查看器类型”具有的组件允许您在 **[!UICONTROL IS 命令]**&#x200B;文本字段中指定“图像提供”命令。有关可使用的命令列表，请参阅[图像提供 API 参考](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/c-is-home.html)。
 
    >[!NOTE]
    >
-   >**如果您使用的是触控设备，如手机或平板电脑……**
+   >**如果您使用觸控裝置，例如手機或平板電腦……**
    >
    >
-   >在文本字段中键入值后，请在用户界面的其他位置选择以提交更改并关闭虚拟键盘。 如果选择Enter，则不会执行任何操作。
+   >在文字欄位中輸入值後，選取使用者介面中的其他位置以提交變更並關閉虛擬鍵盤。 如果您選取Enter，則不會發生任何動作。
 
-1. 在页面的右上角附近，选择 **[!UICONTROL 保存]**.
-1. 发布新查看器预设，以便在您的网站上使用。
+1. 在頁面的右上角附近，選取 **[!UICONTROL 儲存]**.
+1. 發佈您的新檢視器預設集，以便用於您的網站。
 
-   请参阅 [发布查看器预设](#publishing-viewer-presets).
+   另請參閱 [發佈檢視器預設集](#publishing-viewer-presets).
 
    >[!IMPORTANT]
    >
-   >对于使用自适应比特率流配置文件的旧视频，URL会继续照常播放（与HLS流播放），直到您 [重新处理视频资产](/help/assets/processing-profiles.md#reprocessing-assets). 重新处理后，同一URL仍可继续使用，但现在与 *both* 已启用DASH和HLS流。
+   >對於使用最適化位元速率串流設定檔的舊影片，URL會持續如常播放（透過HLS串流），直到您離開 [重新處理視訊資產](/help/assets/processing-profiles.md#reprocessing-assets). 重新處理之後，相同的URL仍會繼續運作，但現在透過 *兩者* DASH和HLS串流已啟用。
 
-### 创建交互式查看器预设的特殊注意事项 {#special-considerations-for-creating-an-interactive-viewer-preset}
+### 建立互動式檢視器預設集的特殊考量事項 {#special-considerations-for-creating-an-interactive-viewer-preset}
 
-**关于面板中图像缩略图的显示模式**
+**關於面板中影像縮圖的顯示模式**
 
-创建或编辑交互式视频查看器预设时，可以选择在选择 `InteractiveSwatches` 从 **[!UICONTROL 选定的组件]** 菜单 **[!UICONTROL 行为]** 选项卡。 您选择的显示模式会影响视频播放时缩略图的显示方式和显示时间。 您可以选择 `segment`显示模式（默认）或 `continuous` 显示模式。
+當您建立或編輯互動式視訊檢視器預設集時，可以選擇在選取時使用的「顯示模式」設定 `InteractiveSwatches` 從 **[!UICONTROL 選取的元件]** 功能表下的 **[!UICONTROL 行為]** 標籤。 您選擇的顯示模式會影響縮圖在視訊播放時的顯示方式和時間。 您可以選擇 `segment`顯示模式（預設）或 `continuous` 顯示模式。
 
 <table>
  <tbody>
@@ -508,132 +508,132 @@ Experience Manager在从以下位置查看资产时，会显示各种查看器�
   </tr>
   <tr>
    <td>市场细分</td>
-   <td><p><code>Segment </code>是现成交互式视频查看器预设的默认显示模式 <code>Shoppable_Video_light</code> 和 <code>Shoppable_Video_dark</code> 以及您自己创建的任何交互式视频查看器预设。</p> <p>在此模式下，当分配给视频区段的缩略图数量少于显示面板中的可见点数时。 此外，来自下一个或上一个子区段的缩略图包括 <i>not </i>拉进来填充面板中的任何空白位置。 即，它保留分配给特定视频区段的色板的显示。</p> </td>
+   <td><p><code>Segment </code>是現成互動式視訊檢視器預設集的預設顯示模式 <code>Shoppable_Video_light</code> 和 <code>Shoppable_Video_dark</code> 以及您自行建立的任何互動式視訊檢視器預設集。</p> <p>在此模式中，當指派給視訊區段的縮圖數量少於顯示面板中的可見點數時。 此外，下一個或上一個子區段的縮圖也有 <i>not </i>拉入以填滿面板中的任何空白點。 也就是說，它可以保留指定給特定視訊區段的色票顯示。</p> </td>
   </tr>
   <tr>
-   <td>连续</td>
-   <td><p>在 <code>continuous </code>显示模式下，如果区段中的缩略图数量少于面板中可见的缩略图数量，则查看器将自动包含显示下一个区段的缩略图。 或者，如果显示了最后一个缩略图，查看器会自动包含上一个区段中缩略图的显示。</p> <p>的 <a href="/help/assets/interactive-videos.md">本主题中的视频</a> 是 <code>continuous </code>显示模式。</p> </td>
+   <td>連續</td>
+   <td><p>在 <code>continuous </code>顯示模式：如果區段中的縮圖數目少於面板中顯示的數目，則檢視器會自動包含顯示下一個區段的縮圖。 或者，檢視器會自動包含先前區段的縮圖顯示（若顯示的是最後一個縮圖）。</p> <p>此 <a href="/help/assets/interactive-videos.md">此主題中的影片</a> 是 <code>continuous </code>顯示模式。</p> </td>
   </tr>
  </tbody>
 </table>
 
-**关于交互式视频查看器中的自动滚动行为**
+**關於互動式視訊檢視器中的自動捲動行為**
 
-交互式视频查看器中缩略图的自动滚动行为与您选择的显示模式无关。
+互動式視訊檢視器中縮圖的自動捲動行為獨立於您選擇的顯示模式。
 
-创建或编辑交互式视频查看器预设时，您可以从“行为”选项卡访问“自动滚动”。在“行为”选项卡中，从 **[!UICONTROL 选定的组件]** 下拉菜单，选择 **[!UICONTROL InteractiveSwatches]**. “自动滚动”复选框列在“IS 命令”文本字段的下方。
+创建或编辑交互式视频查看器预设时，您可以从“行为”选项卡访问“自动滚动”。在行為標籤中，從 **[!UICONTROL 選取的元件]** 下拉式功能表，選取 **[!UICONTROL 互動色票]**. “自动滚动”复选框列在“IS 命令”文本字段的下方。
 
 如果在查看器预设中禁用&#x200B;**[!UICONTROL 自动滚动]**（清除复选框），则在用户播放视频时，该面板仅显示整个视频长度的第一个缩略图。但是，如果需要，用户可以使用向上和向下箭头图标手动滚动缩略图。
 
 在查看器预设中启用（选择）**[!UICONTROL 自动滚动]**&#x200B;后，在视频播放过程中，分配给视频区段的缩略图图像会在区段开始时滚动到视图中。但是，在某些情况下，区段内某些缩略图的显示时间是其之前或之后缩略图显示时间的两倍。发生此行为的原因是区段中缩略图的数量大于面板中可见缩略图的数量，且不可平均分割。
 
-为了说明这一点，假设您有一个30秒的视频区段。 此外，30秒内共显示9个缩略图。 您的浏览器的大小调整为显示面板中有四个可见的缩略图位置。 30秒视频时间段分为三个子段。 下表显示了在给定时间子区段中显示哪些缩略图的划分：
+舉例說明，假設您有一個30秒的視訊區段。 此外，在30秒內總共會顯示九個縮圖。 您瀏覽器的大小調整方式決定了顯示面板中有四個可見的縮圖位置。 30秒的視訊時間區段分為三個子區段。 下表顯示指定時間子區段所顯示縮圖的劃分：
 
-| **视频子区段** | **子区段时间（以秒为单位）** | **面板中可见的缩略图** |
+| **視訊子區段** | **子區段時間（以秒為單位）** | **面板中可見的縮圖** |
 |---|---|---|
 | 1 | 0-10 | 1, 2, 3, 4 |
 | 2 | 10-20 | 4, 5, 6, 7 |
 | 3 | 20-30 | 6, 7, 8, 9 |
 
-视频子区段3的扩展范围不超出分配给它的缩略图。 另请注意，缩略图4、6和7在面板中的显示时间是其他缩略图的两倍。
+視訊子區段3的延伸範圍不會超過指派給它的縮圖。 另外也請注意，在面板中顯示的縮圖4、6和7比其他縮圖長兩倍。
 
-查看器根据可用位置数量在面板中显示缩略图数量的逻辑如下：
+根據可用位置數量，檢視器用於面板中顯示縮圖數目的邏輯如下：
 
-* 子区段数量=舍入到下一个子区段（缩略图数量/缩略图面板中的可见版块数量，具体取决于浏览器窗口大小）。
-使用上表中的示例，9个缩略图/ 4个版块= 2.25;查看器逻辑会将其舍入为三个子区段。
+* 子區段數=向上舍入至下一個子區段（縮圖數/縮圖面板中的可見位置數，根據瀏覽器視窗大小而定）。
+以上表為例，9個縮圖/ 4個槽= 2.25；檢視器邏輯將其四捨五入為三個子區段。
 
-* 缩略图数量=舍入到下一个缩略图（缩略图数量/视频子区段数量）。
-使用上表中的示例，9个缩略图/ 3个视频子区段= 3个缩略图。
+* 縮圖數目=四捨五入至下一個縮圖（縮圖數目/視訊子區段數目）。
+以上表為例，9個縮圖/ 3個視訊子區段= 3個縮圖。
 
-* 子区段的持续时间=视频总持续时间/视频子区段的数量。
-使用上表中的示例， 30秒/ 3个视频子区段=每个视频子区段的10秒显示。
+* 子區段的持續時間=影片總持續時間/影片子區段數量。
+以上表範例為例，30秒/ 3視訊子區段=每個視訊子區段顯示10秒。
 
-#### 创建轮播横幅查看器预设的特殊注意事项 {#special-considerations-for-creating-a-carousel-banner-viewer-preset}
+#### 建立轉盤橫幅檢視器預設集的特殊考量事項 {#special-considerations-for-creating-a-carousel-banner-viewer-preset}
 
-创建轮播横幅查看器预设时，可以按如下方式访问更改热点样式：
+建立「轉盤橫幅」檢視器預設集時，可以依照以下步驟存取變更連結區樣式：
 
 |  | **描述** | **操作** |
 |---|---|---|
-| **[!UICONTROL 热点图标]** | 更改用于热点的图标 | 要更改热点图标图像，请在 **[!UICONTROL 外观]** 选项卡，在 **[!UICONTROL 选定的组件]**，选择 **[!UICONTROL ImageMapEffect]**. 在 **[!UICONTROL 图标]**，选择 **[!UICONTROL 背景]** 和 **[!UICONTROL 图像]** 字段，导航到所需的背景图像。 |
+| **[!UICONTROL 熱點圖示]** | 變更用於連結區的圖示 | 若要變更熱點圖示影像，請在以下位置輸入： **[!UICONTROL 外觀]** 標籤，在 **[!UICONTROL 選取的元件]**，選取 **[!UICONTROL ImageMapEffect]**. 下 **[!UICONTROL 圖示]**，選取 **[!UICONTROL 背景]** 和 **[!UICONTROL 影像]** 欄位導覽至您想要的背景影像。 |
 
-## 激活或停用查看器预设 {#activating-or-deactivating-viewer-presets}
+## 啟用或停用檢視器預設集 {#activating-or-deactivating-viewer-presets}
 
-用户界面中可用的查看器预设取决于哪些查看器预设在创作模式下处于活动状态。 默认情况下，查看器预设在创建后为“开启”。 如果关闭预设，则在“创作”模式下看不到该预设。 如果发布了预设，则无论是打开还是关闭预设，都会始终发布预设。 如果列表变得太笨重，或者您不希望某个查看器预设可供使用，则您可能需要停用查看器预设。
+使用者介面中可用的檢視器預設集取決於在作者模式下活動的檢視器預設集。 依預設，建立檢視器預設集後會變成「開啟」。 如果您關閉預設集，在「作者」模式中看不到。 如果預設集已發佈，則無論預設集是否已切換，都會發佈預設集。 如果清單變得太笨重，或者您不希望檢視器預設集可供使用，您可能會想要停用檢視器預設集。
 
-**要激活或停用查看器预设，请执行以下操作：**
+**若要啟用或停用檢視器預設集：**
 
-1. 在Experience Manager的左上角，选择Experience Manager徽标，然后在左边栏中，选择 **[!UICONTROL 工具]** （锤子图标）> **[!UICONTROL 资产]** > **[!UICONTROL 查看器预设]**.
-1. 在“查看器预设”页面的 **[!UICONTROL 州]** 列标题中，选择用于激活或停用查看器预设的切换开关。
+1. 在Experience Manager的左上角，選取Experience Manager標誌，然後在左側邊欄中選取 **[!UICONTROL 工具]** （槌子圖示） > **[!UICONTROL 資產]** > **[!UICONTROL 檢視器預設集]**.
+1. 在「檢視器預設集」頁面的 **[!UICONTROL 州]** 欄標題，選取切換即可啟用或停用檢視器預設集。
 
-   已激活的查看器预设在右侧蓝色框中显示切换开关；已停用的查看器预设的切换开关会显示在灰色浅框中的左侧。
+   已啟用的檢視器預設集會在右側內藍色方塊中顯示切換按鈕；已停用的檢視器預設集會在左側淺灰色方塊內顯示切換按鈕。
 
-## 发布查看器预设 {#publishing-viewer-presets}
+## 發佈檢視器預設集 {#publishing-viewer-presets}
 
-激活（或打开“打开”）查看器预设的状态意味着该查看器预设在Dynamic Media组件、交互式媒体组件以及您查看资产时均可见。
+啟用（或開啟「檢視器預設集」）狀態表示檢視器預設集會顯示在Dynamic Media元件、互動媒體元件中，以及您檢視資產時的狀態。
 
-但是， *交付* 对于具有查看器预设的资产，还必须发布查看器预设。 必须激活所有查看器预设 *和* 发布以获取资产的URL或嵌入代码。 确保激活并发布Dynamic Media附带的所有现成查看器预设。 您创建和添加的自定义查看器预设将自动激活，但也必须发布。
+但是，到 *deliver* 若資產具有檢視器預設集，則檢視器預設集也必須發佈。 必須啟用所有檢視器預設集 *和* 發佈以取得資產的URL或內嵌程式碼。 請務必啟動並發佈Dynamic Media隨附的所有現成可用的檢視器預設集。 您创建和添加的自定义查看器预设将自动激活，但也必须发布。
 
-请参阅 [激活或取消激活查看器预设](#activating-or-deactivating-viewer-presets).
+另請參閱 [啟用或停用檢視器預設集](#activating-or-deactivating-viewer-presets).
 
-另请参阅 [预览资产](/help/assets/previewing-assets.md).
+另請參閱 [預覽資產](/help/assets/previewing-assets.md).
 
-**要发布查看器预设，请执行以下操作：**
+**若要發佈檢視器預設集：**
 
-1. 在Experience Manager的左上角，选择Experience Manager徽标，然后在左边栏中，选择 **[!UICONTROL 工具]** （锤子图标）> **[!UICONTROL 资产]** > **[!UICONTROL 查看器预设]**.
-1. 选择要发布的一个或多个查看器预设。
-1. 在工具栏中，选择 **[!UICONTROL 发布]** 图标。
+1. 在Experience Manager的左上角，選取Experience Manager標誌，然後在左側邊欄中選取 **[!UICONTROL 工具]** （槌子圖示） > **[!UICONTROL 資產]** > **[!UICONTROL 檢視器預設集]**.
+1. 選取一或多個您要發佈的檢視器預設集。
+1. 在工具列上，選取 **[!UICONTROL 發佈]** 圖示。
 
-## 对查看器预设进行排序 {#sorting-viewer-presets}
+## 排序檢視器預設集 {#sorting-viewer-presets}
 
-1. 在Experience Manager的左上角，选择Experience Manager徽标，然后在左边栏中，选择 **[!UICONTROL 工具]** （锤子图标）> **[!UICONTROL 资产]** > **[!UICONTROL 查看器预设]**.
-1. 选择 **[!UICONTROL 预设标题]**, **[!UICONTROL 类型]**, **[!UICONTROL 已发布]**&#x200B;或 **[!UICONTROL 州]** 按列标题排序。 例如，选择 **[!UICONTROL 类型]**  按字母顺序或反向字母顺序对查看器预设类型进行排序。
+1. 在Experience Manager的左上角，選取Experience Manager標誌，然後在左側邊欄中選取 **[!UICONTROL 工具]** （槌子圖示） > **[!UICONTROL 資產]** > **[!UICONTROL 檢視器預設集]**.
+1. 選取 **[!UICONTROL 預設集標題]**， **[!UICONTROL 型別]**， **[!UICONTROL 已發佈]**，或 **[!UICONTROL 州]** 以依該欄標題排序。 例如，選取 **[!UICONTROL 型別]**  以字母或反向字母順序排序檢視器預設集型別。
 
-## 编辑查看器预设 {#editing-viewer-presets}
+## 編輯檢視器預設集 {#editing-viewer-presets}
 
-编辑任意 *预定义的现成查看器预设* 不支持此方案。 如果您编辑现成的查看器预设，系统会提示您使用新名称保存该查看器预设。
+編輯任何 *預先定義的現成檢視器預設集* 不是支援的情況。 如果您編輯現成的檢視器預設集，系統會提示您以新名稱儲存它。
 
-**要编辑查看器预设，请执行以下操作：**
+**若要編輯檢視器預設集：**
 
-1. 在Experience Manager的左上角，选择Experience Manager徽标，然后在左边栏中，选择 **[!UICONTROL 工具]** （锤子图标）> **[!UICONTROL 资产]** > **[!UICONTROL 查看器预设]**.
-1. 选中查看器预设标题左侧的框以选择预设。
-1. 在工具栏中，选择 **[!UICONTROL 编辑]**.
-1. 在 **[!UICONTROL 查看器预设编辑器]** ，可使用 **[!UICONTROL 外观]** 和 **[!UICONTROL 行为]** 选项卡。
+1. 在Experience Manager的左上角，選取Experience Manager標誌，然後在左側邊欄中選取 **[!UICONTROL 工具]** （槌子圖示） > **[!UICONTROL 資產]** > **[!UICONTROL 檢視器預設集]**.
+1. 勾選檢視器預設集標題左側的方塊，選取預設集。
+1. 在工具列上，選取 **[!UICONTROL 編輯]**.
+1. 於 **[!UICONTROL 檢視器預設集編輯器]** 頁面上，使用「 」選單中的選項，對檢視器預設集進行您想要的變更 **[!UICONTROL 外觀]** 和 **[!UICONTROL 行為]** 索引標籤。
 
-   从 **[!UICONTROL 外观]** ，在“查看器预设编辑器”页面的左上角附近，选择 **[!UICONTROL 桌面]**, **[!UICONTROL 平板电脑]**&#x200B;或 **[!UICONTROL 电话]** 更改资产的显示模式。
+   從 **[!UICONTROL 外觀]** 索引標籤中，在「檢視器預設集編輯器」頁面的左上角附近，選取 **[!UICONTROL 案頭]**， **[!UICONTROL 平板電腦]**，或 **[!UICONTROL 電話]** 以變更資產的簡報模式。
 
-1. 在页面的右上角附近，执行下列操作之一：
+1. 在頁面的右上角附近，執行下列任一項作業：
 
-   * 选择 **[!UICONTROL 保存]** ，以保存所做的更改并返回到“查看器预设”页面。
-   * 选择 **[!UICONTROL 取消]** 撤消您所做的任何更改并返回到“查看器预设”页面。
+   * 選取 **[!UICONTROL 儲存]** 以儲存您的變更並返回「檢視器預設集」頁面。
+   * 選取 **[!UICONTROL 取消]** 使所做的任何變更無效，並返回「檢視器預設集」頁面。
 
-## 删除自定义查看器预设 {#deleting-custom-viewer-presets}
+## 刪除自訂檢視器預設集 {#deleting-custom-viewer-presets}
 
-您可以删除已创建并添加到Dynamic Media的查看器预设。
+您可以刪除已建立並新增至Dynamic Media的檢視器預設集。
 
-**要删除自定义查看器预设，请执行以下操作：**
+**若要刪除自訂檢視器預設集：**
 
-1. 在Experience Manager的左上角，选择Experience Manager徽标，然后在左边栏中，选择 **[!UICONTROL 工具]** （锤子图标） **[!UICONTROL 资产]** > **[!UICONTROL 查看器预设]**.
-1. 在“查看器预设”页面上，选中预设标题，然后选择 **[!UICONTROL 垃圾]** 图标。
+1. 在Experience Manager的左上角，選取Experience Manager標誌，然後在左側邊欄中選取 **[!UICONTROL 工具]** （槌子圖示） **[!UICONTROL 資產]** > **[!UICONTROL 檢視器預設集]**.
+1. 在「檢視器預設集」頁面上，核取「預設集標題」，然後選取 **[!UICONTROL 垃圾桶]** 圖示。
 1. 选择&#x200B;**[!UICONTROL 删除]**。
 
-## 将查看器预设应用到资产 {#applying-a-viewer-preset-to-an-asset}
+## 將檢視器預設集套用至資產 {#applying-a-viewer-preset-to-an-asset}
 
 如果已发布资产和选定的查看器，则在选择查看器预设后 **[!UICONTROL 将显示]** “ **[!UICONTROL URL]** ”和“嵌入”按钮。
 
-**要将查看器预设应用到资产，请执行以下操作：**
+**若要將檢視器預設集套用至資產：**
 
-1. 打开资产，在页面的左上角附近，选择下拉菜单，然后选择 **[!UICONTROL 查看器]**.
+1. 開啟資產，並在頁面的左上角附近，選取下拉式功能表，然後選取 **[!UICONTROL 檢視者]**.
 
    >[!NOTE]
    >
    >如果已发布资产和选定的查看器，则在选择查看器预设后 **[!UICONTROL 将显示]** “ **[!UICONTROL URL]** ”和“嵌入”按钮。
 
-1. 从左窗格中选择一个查看器预设，以便将其应用到资产。
+1. 從左窗格選取檢視器預設集，以便將其套用至資產。
 
-   您可以 [复制要共享的URL](/help/assets/linking-urls-to-yourwebapplication.md) 其他用户。
+   您可以 [複製要共用的URL](/help/assets/linking-urls-to-yourwebapplication.md) 與其他使用者整合。
 
-## 使用查看器预设传送资产 {#delivering-assets-with-viewer-presets}
+## 使用檢視器預設集傳遞資產 {#delivering-assets-with-viewer-presets}
 
-要获取查看器预设的URL，请参阅 [将URL关联到您的Web应用程序](/help/assets/linking-urls-to-yourwebapplication.md). 另请参阅 [在网页上嵌入视频查看器](/help/assets/embed-code.md).
+若要取得檢視器預設集的URL，請參閱 [將URL連結至您的Web應用程式](/help/assets/linking-urls-to-yourwebapplication.md). 另請參閱 [將Video Viewer內嵌在網頁上](/help/assets/embed-code.md).
 
-如果您使用Experience Manager作为WCM，则可以直接在页面上使用查看器预设添加资产。 请参阅 [将Dynamic Media Assets添加到页面](/help/assets/adding-dynamic-media-assets-to-pages.md).
+如果您使用Experience Manager作為WCM，您可以直接在頁面上使用檢視器預設集新增資產。 另請參閱 [將Dynamic Media資產新增至頁面](/help/assets/adding-dynamic-media-assets-to-pages.md).

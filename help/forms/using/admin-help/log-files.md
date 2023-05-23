@@ -1,7 +1,7 @@
 ---
-title: 日志文件
+title: 記錄檔
 seo-title: Log files
-description: 运行时间或启动错误等事件将记录到应用程序服务器日志文件中，该文件可使用任何文本编辑器打开。
+description: 執行階段或啟動錯誤等事件會記錄到應用程式伺服器記錄檔中，這些記錄檔可使用任何文字編輯器開啟。
 seo-description: Events such as run-time or startup errors are recorded to the application server log files, which can be  opened using any text editor.
 uuid: 6ed9fdcd-ff02-4b35-893f-09261a6a557a
 contentOwner: admin
@@ -17,23 +17,23 @@ ht-degree: 0%
 
 ---
 
-# 日志文件 {#log-files}
+# 記錄檔 {#log-files}
 
-诸如运行时或启动错误等事件将记录到应用程序服务器日志文件中。 如果在部署到应用程序服务器时遇到任何问题，可以使用日志文件来帮助您找到问题。 您可以使用任何文本编辑器打开日志文件。
+執行階段或啟動錯誤等事件會記錄到應用程式伺服器記錄檔中。 如果您在部署至應用程式伺服器時發生任何問題，可以使用記錄檔來協助您找出問題。 您可以使用任何文字編輯器開啟記錄檔。
 
-(JBoss)以下日志文件位于 `[appserver root]/server/'server'/log` 目录：
+(JBoss)下列記錄檔位於 `[appserver root]/server/'server'/log` 目錄：
 
 * boot.log
 * server.log.*[yyyy-mm-dd]*
 * server.log
 
-(WebLogic)域日志文件位于 `[appserverdomain]` 目录和服务器日志文件位于 `[appserverdomain]/servers/[appserver name]/logs` 目录：
+(WebLogic)網域記錄檔位於 `[appserverdomain]` 目錄和伺服器記錄檔位於 `[appserverdomain]/servers/[appserver name]/logs` 目錄：
 
 * `access.log`
 * `[appserver name].log`
 * `[appserver name].out.[incremental number]`
 
-(WebSphere)以下日志文件位于 `[appserver root]/profiles/default/logs/[appserver name]` 目录：
+(WebSphere)下列記錄檔位於 `[appserver root]/profiles/default/logs/[appserver name]` 目錄：
 
 * SystemErr.log
 * SystemOut.log

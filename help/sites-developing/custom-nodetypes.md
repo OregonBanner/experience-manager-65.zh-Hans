@@ -1,7 +1,7 @@
 ---
-title: 自定义节点类型
+title: 自訂節點型別
 seo-title: Custom Node Types
-description: AEM基于Sling，使用JCR存储库以及两者提供的节点类型，但AEM也提供了一系列自定义节点类型
+description: AEM以Sling為基礎，並使用JCR存放庫以及兩者都提供的節點型別，但AEM也提供了一系列自訂節點型別
 seo-description: AEM is based on Sling and uses a JCR repository with node types offered by both, but AEM also provides a range of custom node types
 uuid: f2022504-e433-4b42-9cc1-eef41086483a
 contentOwner: Guillaume Carlino
@@ -17,22 +17,22 @@ ht-degree: 9%
 
 ---
 
-# 自定义节点类型{#custom-node-types}
+# 自訂節點型別{#custom-node-types}
 
-由于AEM基于Sling并使用JCR存储库，因此这两者提供的节点类型都可以使用：
+由於AEM以Sling為基礎，並使用JCR存放庫，因此這兩者提供的節點型別都可供使用：
 
-* [JCR节点类型](https://www.adobe.io/experience-manager/reference-materials/spec/jcr/2.0/3_Repository_Model.html#3.1.7-Node-Types)
-* [Sling节点类型](https://cwiki.apache.org/confluence/display/SLING/Sling+Node+Types)
+* [JCR節點型別](https://www.adobe.io/experience-manager/reference-materials/spec/jcr/2.0/3_Repository_Model.html#3.1.7-Node-Types)
+* [Sling節點型別](https://cwiki.apache.org/confluence/display/SLING/Sling+Node+Types)
 
-除此之外。 AEM提供了一系列自定义节点类型。
+除此之外， AEM提供一系列自訂節點型別。
 
-## 审核 {#audit}
+## 稽核 {#audit}
 
 ### cq：AuditEvent {#cq-auditevent}
 
 **描述**
 
-定义审核事件节点的节点类型。
+定義稽核事件節點的節點型別。
 
 * `@prop cq:time`
 * `@prop cq:userid`
@@ -60,7 +60,7 @@ ht-degree: 9%
 
 **描述**
 
-定义注释节点的节点类型。
+定義註解節點的節點型別。
 
 * `@prop userIdentifier`
 
@@ -79,7 +79,7 @@ ht-degree: 9%
 
 **描述**
 
-定义节点的类型 `commentattachment` 节点
+定義節點型別 `commentattachment` 節點
 
 **定义**
 
@@ -91,7 +91,7 @@ ht-degree: 9%
 
 **描述**
 
-定义评论内容节点的节点类型
+定義評論內容節點的節點型別
 
 **定义**
 
@@ -108,10 +108,10 @@ ht-degree: 9%
 
 **描述**
 
-定义以小数位数(DD)表示的地理位置的mixin
+以小數位數(DD)定義地理位置的mixin
 
-* `@prop latitude`  — 使用小数位数编码为双精度的latitude
-* `@prop longitude`  — 使用小数位数编码为双倍的经度
+* `@prop latitude`  — 使用小數位數編碼為雙精度的latitude
+* `@prop longitude`  — 經度（使用小數點後進位編碼為雙精度浮點數）
 
 **定义**
 
@@ -123,7 +123,7 @@ ht-degree: 9%
 
 **描述**
 
-定义引用通告节点的节点类型。
+定義引用通告節點的節點型別。
 
 **定义**
 
@@ -135,9 +135,9 @@ ht-degree: 9%
 
 **描述**
 
-定义默认CQ页面。
+定義預設CQ頁面。
 
-* `@node jcr:content`  — 页面的主要内容。
+* `@node jcr:content`  — 頁面的主要內容。
 
 **定义**
 
@@ -149,7 +149,7 @@ ht-degree: 9%
 
 **描述**
 
-定义将节点标记为伪页面的mixin类型。 这意味着它们可以适应页面和WCM编辑支持。
+定義將節點標示為虛擬頁面的mixin型別。 這表示它們可以調整為頁面和WCM編輯支援。
 
 **定义**
 
@@ -159,24 +159,24 @@ ht-degree: 9%
 
 **描述**
 
-定义页面内容的默认节点，具有WCM使用的最小属性。
+定義頁面內容的預設節點，具有WCM使用的最小屬性。
 
-* `@prop jcr:title`  — 页面标题。
-* `@prop jcr:description`  — 此页面的描述。
-* `@prop cq:template`  — 用于创建页面的模板的路径。
-* `@prop cq:allowedTemplates`  — 用于确定允许模板的路径的正则表达式列表。
-* `@prop pageTitle`  — 标题通常显示在 `<title>` 标记之前。
-* `@prop navTitle`  — 导航中通常使用的标题。
-* `@prop hideInNav`  — 指定是否应在导航中隐藏页面。
-* `@prop onTime`  — 此页面生效的时间。
-* `@prop offTime`  — 此页面失效的时间。
-* `@prop cq:lastModified`  — 上次修改页面（或其段落）的日期。
-* `@prop cq:lastModifiedBy`  — 最后一个更改页面（或其段落）的用户。
-* `@prop jcr:language`  — 页面内容的语言。
+* `@prop jcr:title`  — 頁面標題。
+* `@prop jcr:description`  — 此頁面的說明。
+* `@prop cq:template`  — 用來建立頁面的範本路徑。
+* `@prop cq:allowedTemplates`  — 用來決定允許範本之路徑的規則運算式清單。
+* `@prop pageTitle`  — 標題通常顯示在 `<title>` 標籤之間。
+* `@prop navTitle`  — 導覽中常用的標題。
+* `@prop hideInNav`  — 指定是否要在導覽中隱藏頁面。
+* `@prop onTime`  — 此頁面生效的時間。
+* `@prop offTime`  — 此頁面失效的時間。
+* `@prop cq:lastModified`  — 上次修改頁面（或其段落）的日期。
+* `@prop cq:lastModifiedBy`  — 最後一個變更頁面（或其段落）的使用者。
+* `@prop jcr:language`  — 頁面內容的語言。
 
 >[!NOTE]
 >
->页面内容不必使用此类型。
+>頁面內容不必使用此型別。
 
 **定义**
 * `[cq:PageContent] > nt:unstructured, mix:title, mix:created, cq:OwnerTaggable, sling:VanityPath, cq:ReplicationStatus, sling:Resource orderable`
@@ -196,19 +196,19 @@ ht-degree: 9%
 
 **描述**
 
-定义CQ模板。
+定義CQ範本。
 
-* `@node jcr:content`  — 新页面的默认内容。
-* `@node icon.png`  — 包含特征图标的文件。
-* `@node thumbnail.png`  — 包含特征缩略图图像的文件。
-* `@node workflows`  — 自动分配工作流配置。 配置将遵循以下结构：
+* `@node jcr:content`  — 新頁面的預設內容。
+* `@node icon.png`  — 包含特徵圖示的檔案。
+* `@node thumbnail.png`  — 儲存特徵縮圖影像的檔案。
+* `@node workflows`  — 自動指派工作流程設定。 設定將遵循以下結構：
    * `+ workflows`
       * `+ name1`
          * `- cq:path`
             * `- cq:workflowName`
-* `@prop allowedParents`  — 用于确定允许作为父模板的模板的路径的正则表达式模式。
-* `@prop allowedChildren`  — 用于确定允许作为子模板的模板的路径的正则表达式模式。
-* `@prop ranking`  — 在“创建页面”对话框的模板列表中的位置。
+* `@prop allowedParents`  — 規則運算式模式，可決定允許作為父範本的範本路徑。
+* `@prop allowedChildren`  — 規則運算式模式，可決定允許做為子範本的範本路徑。
+* `@prop ranking`  — 在建立頁面對話方塊的範本清單中定位。
 
 **定义**
 
@@ -228,26 +228,26 @@ ht-degree: 9%
 
 **描述**
 
-定义CQ组件。
+定義CQ元件。
 
-* `@prop jcr:title`  — 组件的标题。
-* `@prop jcr:description`  — 组件的描述。
-* `@node dialog`  — 主对话框。
-* `@prop dialogPath`  — 主对话框路径（对话框的替代方法）。
-* `@node design_dialog`  — “设计”对话框。
-* `@prop cq:cellName`  — 设计单元格的名称。
-* `@prop cq:isContainer`  — 指示这是否为容器组件。 这会强制使用子组件的单元格名称而不是路径名称。 例如， `parsys` 是一个容器组件。 如果未定义此值，则会根据是否存在 `cq:childEditConfig`.
-* `@prop cq:noDecoration`  — 如果为true，则无修饰 `div` 标记在包含此组件时绘制。
-* `@node cq:editConfig`  — 定义编辑栏参数的配置。
-* `@node cq:childEditConfig`  — 由子组件继承的编辑配置。
-* `@node cq:htmlTag`  — 定义添加到“周围”的其他标记属性 `div` 标记。
-* `@node icon.png` — 包含特征图标的文件。
-* `@node thumbnail.png`  — 包含特征缩略图图像的文件。
-* `@prop allowedParents`  — 用于确定允许作为父组件的组件的路径的正则表达式模式。
-* `@prop allowedChildren`  — 用于确定允许作为子组件的组件的组件的路径的正则表达式模式。
-* `@node virtual`  — 包含反映用于组件拖放的虚拟组件的子节点。
-* `@prop componentGroup`  — 组件组的名称，用于组件拖放。
-* `@node cq:infoProviders`  — 包含子节点，每个子节点都有一个属性 `className` 指的是 `PageInfoProvider`.
+* `@prop jcr:title`  — 元件的標題。
+* `@prop jcr:description`  — 元件的說明。
+* `@node dialog`  — 主要對話方塊。
+* `@prop dialogPath`  — 主要對話方塊路徑（對話方塊的替代方式）。
+* `@node design_dialog`  — 設計對話方塊。
+* `@prop cq:cellName`  — 設計儲存格的名稱。
+* `@prop cq:isContainer`  — 指出這是否為容器元件。 這會強制使用子元件的儲存格名稱，而非路徑名稱。 例如， `parsys` 是容器元件。 如果此值未定義，則會根據是否存在 `cq:childEditConfig`.
+* `@prop cq:noDecoration`  — 如果為true，則無裝飾 `div` 包含此元件時會繪製標籤。
+* `@node cq:editConfig`  — 定義編輯列引數的設定。
+* `@node cq:childEditConfig`  — 子元件繼承的編輯設定。
+* `@node cq:htmlTag`  — 定義新增至「周圍」的其他標籤屬性 `div` 標籤時一併刪除。
+* `@node icon.png` — 包含特徵圖示的檔案。
+* `@node thumbnail.png`  — 儲存特徵縮圖影像的檔案。
+* `@prop allowedParents`  — 規則運算式模式，可決定允許作為父元件的元件路徑。
+* `@prop allowedChildren`  — 規則運算式模式，用來決定允許做為子元件的元件路徑。
+* `@node virtual`  — 包含反映用於元件拖放之虛擬元件的子節點。
+* `@prop componentGroup`  — 元件群組的名稱，用於元件拖放。
+* `@node cq:infoProviders`  — 包含子節點，每個子節點都有屬性 `className` 這指的是 `PageInfoProvider`.
 
 **定义**
 
@@ -276,7 +276,7 @@ ht-degree: 9%
 
 **描述**
 
-将CQ组件定义为mixin类型。
+將CQ元件定義為mixin型別。
 
 **定义**
 
@@ -286,22 +286,22 @@ ht-degree: 9%
 
 **描述**
 
-定义“编辑栏”的配置。
+定義「編輯列」的設定。
 
-* `@prop cq:dialogMode`  — 对话框模式：
-   * `floating`  — 对于普通浮动对话框
-   * `inline`  — 内联编辑
-   * `auto`  — 自动检测（取决于可用空间）
-* `@node cq:inplaceEditing`  — 为此组件替换编辑配置。
-* `@prop cq:layout` — 编辑栏布局：
-   * `editbar`  — 编辑栏
-   * `rollover`  — 将鼠标指针置于框架之上
-   * `auto`  — 自动检测
-* `@node cq:formParameters` — 要添加到对话框表单的其他参数。
-* `@prop cq:actions` — 操作列表（编辑栏按钮或菜单项）。
-* `@node cq:actionConfigs`  — 用于编辑栏或菜单项的小组件配置。
-* `@prop cq:emptyText`  — 没有可视内容时显示的文本。
-* `@node cq:dropTargets`  — 收藏集 `{@link cq:DropTargetConfig}` 节点。
+* `@prop cq:dialogMode`  — 對話方塊的模式：
+   * `floating`  — 用於一般的浮動對話方塊
+   * `inline`  — 內嵌編輯
+   * `auto`  — 自動偵測（視可用空間而定）
+* `@node cq:inplaceEditing`  — 為此元件就地編輯設定。
+* `@prop cq:layout` — 編輯列的配置：
+   * `editbar`  — 編輯列
+   * `rollover`  — 滑鼠指向影格
+   * `auto`  — 自動偵測
+* `@node cq:formParameters` — 要新增至對話方塊表單的其他引數。
+* `@prop cq:actions` — 動作清單（編輯列按鈕或功能表專案）。
+* `@node cq:actionConfigs`  — 編輯列或功能表專案的Widget設定。
+* `@prop cq:emptyText`  — 沒有視覺內容時顯示的文字。
+* `@node cq:dropTargets`  — 集合 `{@link cq:DropTargetConfig}` 節點。
 
 **定义**
 
@@ -318,11 +318,11 @@ ht-degree: 9%
 
 **描述**
 
-配置组件的一个放置目标。 此节点的名称将用作拖放的ID。
+設定元件的一個放置目標。 此節點的名稱將用作拖放的ID。
 
-* `@prop accept`  — 此放置目标接受的MIME类型列表；例如 `["image/*"]`
-* `@prop groups`  — 接受源的拖放组列表。
-* `@prop propertyName`  — 用于存储引用的属性的名称。
+* `@prop accept`  — 此放置目標接受的MIME型別清單；例如 `["image/*"]`
+* `@prop groups`  — 接受來源的拖放群組清單。
+* `@prop propertyName`  — 用來儲存參考的屬性名稱。
 
 **定义**
 
@@ -336,17 +336,17 @@ ht-degree: 9%
 
 **描述**
 
-定义虚拟CQ组件。 它们当前仅用于新组件拖放向导。
+定義虛擬CQ元件。 這些目前僅用於新元件拖放精靈。
 
-* `@prop jcr:title`  — 此组件的标题。
-* `@prop jcr:description`  — 此组件的描述。
-* `@node cq:editConfig`  — 编辑定义编辑栏参数的配置。
-* `@node cq:childEditConfig` — 编辑由子组件继承的配置。
-* `@node icon.png`  — 包含特征图标的文件。
-* `@node thumbnail.png`  — 包含特征缩略图图像的文件。
-* `@prop allowedParents`  — 用于确定允许作为父组件的组件的路径的正则表达式模式。
-* `@prop allowedChildren`  — 用于确定允许作为子组件的组件的组件的路径的正则表达式模式。
-* `@prop componentGroup`  — 用于组件拖放的组件组的名称。
+* `@prop jcr:title`  — 此元件的標題。
+* `@prop jcr:description`  — 此元件的說明。
+* `@node cq:editConfig`  — 編輯定義編輯列引數的設定。
+* `@node cq:childEditConfig` — 編輯子元件繼承的設定。
+* `@node icon.png`  — 包含特徵圖示的檔案。
+* `@node thumbnail.png`  — 儲存特徵縮圖影像的檔案。
+* `@prop allowedParents`  — 規則運算式模式，用來決定允許做為父元件的元件路徑。
+* `@prop allowedChildren`  — 規則運算式模式，用來決定允許做為子元件的元件路徑。
+* `@prop componentGroup`  — 元件拖放的元件群組名稱。
 
 **定义**
 
@@ -365,18 +365,18 @@ ht-degree: 9%
 
 **描述**
 
-定义要在编辑事件上执行的（客户端）侦听器。 这些值必须引用有效的客户端侦听器函数或包含预定义的快捷方式：
+定義要在編輯事件上執行的（使用者端）監聽器。 值必須參考有效的使用者端接聽程式函式，或包含預先定義的捷徑：
 
 * `REFRESH_PAGE`
 * `REFRESH_SELF`
 * `REFRESH_PARENT`
 
-* `@prop aftercreate`  — 在创建组件后触发。
-* `@prop afteredit`  — 在编辑（修改）组件后触发。
-* `@prop afterdelete`  — 删除组件后触发。
-* `@prop afterinsert`  — 将组件添加到此容器后触发。
-* `@prop afterremove`  — 从容器中删除组件后触发。
-* `@prop aftermove`  — 在此容器中移动组件后触发。
+* `@prop aftercreate`  — 在建立元件後引發。
+* `@prop afteredit`  — 在編輯（修改）元件後引發。
+* `@prop afterdelete`  — 刪除元件後引發。
+* `@prop afterinsert`  — 將元件新增至此容器後引發。
+* `@prop afterremove`  — 從此容器移除元件後引發。
+* `@prop aftermove`  — 在此容器中移動元件後引發。
 
 **定义**
 
@@ -397,7 +397,7 @@ ht-degree: 9%
 
 **描述**
 
-DAM资源的内容。
+DAM資產的內容。
 
 **定义**
 
@@ -409,7 +409,7 @@ DAM资源的内容。
 
 **描述**
 
-DAM资产。
+DAM資產。
 
 **定义**
 
@@ -421,7 +421,7 @@ DAM资产。
 
 **描述**
 
-表示DAM资源的缩略图。
+表示DAM資產的縮圖。
 
 **定义**
 
@@ -429,31 +429,31 @@ DAM资产。
    * `mixin`
    * `+ dam:thumbnails (nt:folder)`
 
-## 交货容器列表 {#delivery-container-list}
+## 傳遞容器清單 {#delivery-container-list}
 
 ### cq：containerList {#cq-containerlist}
 
 **描述**
 
-容器列表。
+容器清單。
 
 **定义**
 
 * `[cq:containerList]`
    * `mixin`
 
-## 投放页面 {#delivery-page}
+## 傳遞頁面 {#delivery-page}
 
 ### cq：Cq4PageAttributes {#cq-cq-pageattributes}
 
 **描述**
 
-`cq:attributes` 是ContentBus版本标记的节点类型。 此节点只有一系列属性；其中三个属性是预定义的“created”、“csd”和“timestampe”。
+`cq:attributes` 是ContentBus版本標籤的節點型別。 此節點只有一系列屬性；其中三個是預先定義的「已建立」、「csd」和「時間戳記」。
 
-* `@prop created (long) mandatory copy`  — 创建版本信息的时间戳，通常是以前版本的签入时间或页面创建时间。
-* `@prop csd (string) mandatory copy` - csd标准属性，页面节点的cq：csd属性的副本
-* `@prop timestamp (long) mandatory copy`  — 上次版本修改的时间戳，通常为签入时间。
-* `@prop * (string) copy`  — 其他属性，使用父节点进行版本控制。
+* `@prop created (long) mandatory copy`  — 建立版本資訊的時間戳記，通常是前一個版本的入庫時間或建立頁面的時間。
+* `@prop csd (string) mandatory copy` - csd標準屬性，頁面節點的cq：csd屬性副本
+* `@prop timestamp (long) mandatory copy`  — 上次版本修改的時間戳記，通常為簽入時間。
+* `@prop * (string) copy`  — 其他屬性，以父節點建立版本。
 
 **定义**
 
@@ -467,13 +467,13 @@ DAM资产。
 
 **描述**
 
-节点类型 `cq:contentPage` 包含ContentBus内容页的属性和子节点定义。 仅当将此mixin类型添加到类型的节点时 `cq:page`，节点将变为ContentBus内容页。
+節點型別 `cq:contentPage` 包含ContentBus內容頁面的屬性和子節點定義。 只有當此mixin型別新增到型別的節點時 `cq:page`，節點會變成ContentBus內容頁面。
 
-中的项目 `cq:Cq4ContentPage` 为：
+中的專案 `cq:Cq4ContentPage` 為：
 
-* `@prop cq:csd`  — 页面的ContentBusCSD。
-* `@node cq:content`  — 页面的内容。 如果页面节点处于“Existing without content”或“Deleted”状态，则此子节点不存在。
-* `@node cq:attributes`  — 页面属性的列表，以前称为版本标记。 对于cq：contentPage类型，此节点是必需的。 当页面为节点进行版本控制时，将对“属性”节点进行版本控制。
+* `@prop cq:csd`  — 頁面的ContentBusCSD。
+* `@node cq:content`  — 頁面內容。 如果頁面節點處於「現有但不含內容」或「已刪除」狀態，則此子節點不存在。
+* `@node cq:attributes`  — 頁面屬性的清單，以前稱為版本標籤。 cq：contentPage型別必須有此節點。 當頁面為節點建立版本時，會建立屬性節點的版本。
 
 **定义**
 
@@ -487,12 +487,12 @@ DAM资产。
 
 **描述**
 
-轮询配置。
+輪詢設定。
 
-* `@prop source (String) mandatory`  — 数据源URI，这是必需项，不得为空
-* `@prop target (String)`  — 存储从数据源检索的数据的目标位置。 这是可选的，默认为cq：PollConfig节点。
-* `@prop interval (Long)`  — 轮询数据源中新数据或更新数据的时间间隔（以秒为单位）。 这是可选设置，默认为30分钟（1800秒）。
-* [为Adobe Experience Manager创建自定义数据导入器服务](https://helpx.adobe.com/experience-manager/using/polling.html)
+* `@prop source (String) mandatory`  — 資料來源URI，此為必要項，不得為空白
+* `@prop target (String)`  — 儲存從資料來源擷取之資料的目標位置。 這是選用專案，預設值為cq：PollConfig節點。
+* `@prop interval (Long)`  — 輪詢資料來源中新資料或更新資料的間隔（秒）。 這是選擇性的，預設值為30分鐘（1800秒）。
+* [建立Adobe Experience Manager的自訂資料匯入工具服務](https://helpx.adobe.com/experience-manager/using/polling.html)
 
 **定义**
 
@@ -506,7 +506,7 @@ DAM资产。
 
 **描述**
 
-方便创建轮询配置节点的主节点类型。
+方便主要節點型別輕鬆建立輪詢設定節點。
 
 **定义**
 
@@ -518,10 +518,10 @@ DAM资产。
 
 **描述**
 
-定义以小数度(DD)为单位的地理位置的mixin。
+以小數位數(DD)定義地理位置的mixin。
 
-* `@prop latitude`  — 使用小数位数编码为双精度的Latitude。
-* `@prop longitude`  — 使用小数位数编码为双倍的经度。
+* `@prop latitude`  — 使用小數位數編碼為雙精度的Latitude。
+* `@prop longitude`  — 使用小數位數編碼為雙倍的經度。
 
 **定义**
 
@@ -530,13 +530,13 @@ DAM资产。
    * `- latitude (double)`
    * `- longitude (double)`
 
-## 邮件程序 {#mailer}
+## 郵件程式 {#mailer}
 
 ### cq：mailerMessage {#cq-mailermessage}
 
 **描述**
 
-MailerService节点类型 邮件程序使用具有此mixin的节点作为消息定义的根节点。
+MailerService節點型別。 郵件程式會使用具有此mixin的節點作為訊息定義的根節點。
 
 **定义**
 
@@ -552,7 +552,7 @@ MailerService节点类型 邮件程序使用具有此mixin的节点作为消息�
 
 **描述**
 
-定义LiveRelationship mixin。 可通过LiveRelationship虚拟链接主源（控制）节点和Live Copy（控制）节点。
+定義LiveRelationship mixin。 主要來源（控制）節點和即時副本（控制）節點可透過LiveRelationship以虛擬方式連結。
 
 **定义**
 
@@ -565,12 +565,12 @@ MailerService节点类型 邮件程序使用具有此mixin的节点作为消息�
 
 **描述**
 
-定义LiveSync Mixin。 如果某个节点与主源（控制）节点和Live Copy（控制）节点的LiveRelationship有关，则该节点将标记为LiveSync。
+定義LiveSync Mixin。 如果節點與主要來源（控制）節點和即時副本（控制）節點有關聯，則會標示為LiveSync。
 
-* `@prop cq:master` - LiveRelationship的主源（控制）的路径。
-* `@prop cq:isDeep`  — 定义关系是否可用于子项。
-* `@prop cq:syncTrigger`  — 定义同步何时触发。
-* `@node * LiveSyncAction`  — 要在同步时执行的操作
+* `@prop cq:master` - LiveRelationship的主要來源（控制）的路徑。
+* `@prop cq:isDeep`  — 定義關係是否適用於子系。
+* `@prop cq:syncTrigger`  — 定義同步作業何時觸發。
+* `@node * LiveSyncAction`  — 要在同步時執行的動作
 
 **定义**
 
@@ -582,9 +582,9 @@ MailerService节点类型 邮件程序使用具有此mixin的节点作为消息�
 
 **描述**
 
-定义LiveSyncCanceled mixin。 取消LiveCopy（受控）节点的LiveSync行为，该节点可能因其父节点之一而包含在LiveRelationship中。
+定義LiveSyncCanceled mixin。 取消即時副本（受控）節點的LiveSync行為，該節點可能因其父項之一而包含在LiveRelationship中。
 
-* `@prop cq:isCancelledForChildren`  — 定义是否取消了LiveSync；也适用于子项。
+* `@prop cq:isCancelledForChildren`  — 定義是否取消LiveSync；也適用於子系。
 
 **定义**
 
@@ -595,10 +595,10 @@ MailerService节点类型 邮件程序使用具有此mixin的节点作为消息�
 
 **描述**
 
-定义附加到LiveSync的LiveSyncAction。
+定義附加至LiveSync的LiveSyncAction。
 
-* `@prop name`  — 操作名称
-* `@prop value`  — 操作值
+* `@prop name`  — 動作名稱
+* `@prop value`  — 動作值
 
 **定义**
 
@@ -608,7 +608,7 @@ MailerService节点类型 邮件程序使用具有此mixin的节点作为消息�
 
 **描述**
 
-实时同步配置。
+Live Sync設定。
 
 **定义**
 
@@ -617,7 +617,7 @@ MailerService节点类型 邮件程序使用具有此mixin的节点作为消息�
    * `- cq:isDeep (boolean)`
    * `- cq:trigger (string) /** deprecated **/`
 
-对于AEM 5.4，在列表末尾添加：
+若為AEM 5.4，請在清單結尾處新增：
 
 * `- cq:rolloutConfigs (string) multiple /** deprecated **/`
 
@@ -625,19 +625,19 @@ MailerService节点类型 邮件程序使用具有此mixin的节点作为消息�
 
 **描述**
 
-Blueprint操作
+Blueprint動作
 
 **定义**
 
 * `[cq:BlueprintAction] > nt:unstructured`
 
-## 平台 {#platform}
+## Platform {#platform}
 
 ### cq：Console {#cq-console}
 
 **描述**
 
-定义控制台节点的节点类型。
+定義主控台節點的節點型別。
 
 **定义**
 
@@ -650,14 +650,14 @@ Blueprint操作
 
 **描述**
 
-定义复制状态信息mixin。
+定義復寫狀態資訊mixin。
 
-* `@prop cq:lastPublished` — 上次发布页面（不再使用）的日期。
-* `@prop cq:lastPublishedBy` — 最后发布页面的用户（不再使用）。
-* `@prop cq:lastReplicated`  — 上次复制页面的日期。
-* `@prop cq:lastReplicatedBy`  — 最后复制页面的用户。
-* `@prop cq:lastReplicationAction`  — 复制操作：激活或停用。
-* `@prop cq:lastReplicationStatus`  — 复制状态（不再使用）。
+* `@prop cq:lastPublished` — 上次發佈頁面的日期（已停止使用）。
+* `@prop cq:lastPublishedBy` — 上次發佈頁面的使用者（不再使用）。
+* `@prop cq:lastReplicated`  — 上次復寫頁面的日期。
+* `@prop cq:lastReplicatedBy`  — 最後復寫頁面的使用者。
+* `@prop cq:lastReplicationAction`  — 復寫動作：啟動或停用。
+* `@prop cq:lastReplicationStatus`  — 復寫狀態（已不再使用）。
 
 **定义**
 
@@ -676,7 +676,7 @@ Blueprint操作
 
 **描述**
 
-定义应用程序权限。
+定義應用程式許可權。
 
 **定义**
 
@@ -686,7 +686,7 @@ Blueprint操作
 
 **描述**
 
-定义应用程序权限ACL。
+定義應用程式許可權ACL。
 
 * `@prop cq:isPathDependent`
 * `@node * ACEs`
@@ -701,7 +701,7 @@ Blueprint操作
 
 **描述**
 
-定义应用程序权限ACE。
+定義應用程式許可權ACE。
 
 * `@prop path`
 * `@prop deny`
@@ -716,7 +716,7 @@ Blueprint操作
 
 **描述**
 
-定义应用程序权限。
+定義應用程式許可權。
 
 **定义**
 
@@ -726,7 +726,7 @@ Blueprint操作
 
 **描述**
 
-定义应用程序权限ACL。
+定義應用程式許可權ACL。
 
 * `@prop cq:isPathDependent`
 * `@node * ACEs`
@@ -741,7 +741,7 @@ Blueprint操作
 
 **描述**
 
-定义应用程序权限ACE。
+定義應用程式許可權ACE。
 
 * `@prop path`
 * `@prop deny`
@@ -758,7 +758,7 @@ Blueprint操作
 
 **描述**
 
-定义一个mixin类型，用于标记可使用组件提取器打开的文件。
+定義一個mixin型別，用於標籤可使用元件提取器開啟的檔案。
 
 **定义**
 
@@ -770,7 +770,7 @@ Blueprint操作
 
 **描述**
 
-定义单个标记，但也可以包含标记，从而创建分类
+定義單一標籤，但也可以包含標籤，因此建立分類法
 
 **定义**
 
@@ -784,7 +784,7 @@ Blueprint操作
 
 **描述**
 
-可标记内容的抽象基本mixin。
+可標籤內容的抽象基底mixin。
 
 * `@node cq:tags`
 
@@ -797,7 +797,7 @@ Blueprint操作
 
 **描述**
 
-仅允许作者/所有者标记内容（审核/管理标记）。
+僅允許作者/擁有者標籤內容（稽核/管理的標籤）。
 
 **定义**
 
@@ -807,7 +807,7 @@ Blueprint操作
 
 **描述**
 
-任何用户/公共网站都可以标记内容（Web2.0样式），该内容在cq：userContent中使用。
+任何使用者/公用網站都可以標籤cq：userContent內使用的內容（Web2.0樣式）。
 
 **定义**
 
@@ -818,7 +818,7 @@ Blueprint操作
 
 **描述**
 
-添加 `cq:userContent` 可由用户修改的子节点。 每个用户都有自己的 `cq:userContent/<userid>` 子节点，通常具有mixin `cq:UserTaggable`.
+新增 `cq:userContent` 使用者可修改的子節點。 每個使用者都有自己的 `cq:userContent/<userid>` 子節點，通常具有mixin `cq:UserTaggable`.
 
 **定义**
 
@@ -826,7 +826,7 @@ Blueprint操作
    * `mixin`
    * `+ cq:userContent (nt:unstructured)`
 
-扩展变体，更明确地定义 `cq:userContent` 树
+延伸變體，更明確地定義 `cq:userContent` 樹狀
 
 * `[cq:AllowsUserContent]`
    * `mixin`
@@ -836,7 +836,7 @@ Blueprint操作
 
 **描述**
 
-可由用户修改。
+可由使用者修改。
 
 **定义**
 
@@ -850,19 +850,19 @@ Blueprint操作
 
 **描述**
 
-用户数据
+使用者資料
 
 **定义**
 
 * `[cq:UserData] > nt:unstructured, cq:UserTaggable`
 
-## 小组件 {#widgets}
+## Widget {#widgets}
 
 ### cq：ClientLibraryFolder {#cq-clientlibraryfolder}
 
 **描述**
 
-客户端库文件夹
+使用者端資料庫資料夾
 
 **定义**
 
@@ -888,7 +888,7 @@ Blueprint操作
 
 **描述**
 
-构件集合
+Widget集合
 
 **定义**
 
@@ -920,7 +920,7 @@ Blueprint操作
 
 **描述**
 
-选项卡面板
+索引標籤面板
 
 **定义**
 
@@ -940,13 +940,13 @@ Blueprint操作
    * `- value (string)`
    * `- ignoreData (boolean)`
 
-## 维客 {#wiki}
+## Wiki {#wiki}
 
-### wiki：主题 {#wiki-topic}
+### Wiki：主題 {#wiki-topic}
 
 **描述**
 
-Wiki主题
+Wiki主題
 
 **定义**
 
@@ -963,22 +963,22 @@ Wiki主题
    * `- wiki:logMessage (string)`
    * `- wiki:quietSave (boolean)`
 
-### wiki：用户 {#wiki-user}
+### wiki：User {#wiki-user}
 
 **描述**
 
-Wiki用户
+Wiki使用者
 
 **定义**
 
 * `[wiki:User] mixin`
    * `- wiki:subscriptions (string) multiple`
 
-### wiki：属性 {#wiki-properties}
+### wiki：屬性 {#wiki-properties}
 
 **描述**
 
-Wiki属性
+Wiki屬性
 
 **定义**
 
@@ -992,7 +992,7 @@ Wiki属性
 
 **描述**
 
-表示工作流实例。
+代表工作流程例項。
 
 **定义**
 
@@ -1017,7 +1017,7 @@ Wiki属性
 
 **描述**
 
-工作项。
+工作專案。
 
 **定义**
 
@@ -1052,7 +1052,7 @@ Wiki属性
 
 **描述**
 
-工作流数据
+工作流程資料
 
 **定义**
 
@@ -1066,7 +1066,7 @@ Wiki属性
 
 **描述**
 
-自动分配工作流配置。 配置将遵循以下结构：
+自動指派工作流程設定。 設定將遵循以下結構：
 * `workflows`
    * `+ name1`
       * `- cq:path`
@@ -1091,7 +1091,7 @@ Wiki属性
 
 **描述**
 
-工作流节点
+工作流程節點
 
 **定义**
 
@@ -1111,7 +1111,7 @@ Wiki属性
 
 **描述**
 
-工作流过渡
+工作流程轉變
 
 **定义**
 
@@ -1126,7 +1126,7 @@ Wiki属性
 
 **描述**
 
-或选项卡
+或索引標籤
 
 **定义**
 
@@ -1151,7 +1151,7 @@ Wiki属性
 
 **描述**
 
-工作流栈栈
+工作流程棧疊
 
 **定义**
 
@@ -1164,7 +1164,7 @@ Wiki属性
 
 **描述**
 
-进程栈栈
+程式棧疊
 
 **定义**
 
@@ -1178,7 +1178,7 @@ Wiki属性
 
 **描述**
 
-工作流启动器
+工作流程啟動器
 
 **定义**
 

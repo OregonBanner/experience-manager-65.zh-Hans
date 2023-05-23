@@ -1,7 +1,7 @@
 ---
-title: 安装和配置交互式通信
+title: 安裝及設定互動式通訊
 seo-title: Install and configure Interactive Communications
-description: 安装和配置AEM Forms交互式通信，以创建业务信函、文档、声明、福利通知、营销邮件、账单和欢迎工具包。
+description: 安裝並設定AEM Forms互動式通訊，以建立商務對應、檔案、對帳單、權益通知、行銷郵件、帳單和歡迎套件。
 seo-description: Install and configure AEM Forms Interactive Communications to create business correspondences, documents, statements, benefit notices, marketing mails, bills, and welcome kits.
 uuid: 8acb7f68-0b52-4acd-97e2-af31c9408e8d
 topic-tags: installing
@@ -16,53 +16,53 @@ ht-degree: 7%
 
 ---
 
-# 安装和配置交互式通信{#install-and-configure-interactive-communications}
+# 安裝及設定互動式通訊{#install-and-configure-interactive-communications}
 
 ## 简介 {#introduction}
 
-AEM Form能够集中创建、汇编、管理和交付安全的交互式文档，如业务信函、文档、报表、福利通知、营销邮件、账单和欢迎资料包。 此功能称为交互式通信。 该功能包含在AEM Forms附加组件包中。 附加组件包部署在AEM的创作或发布实例上。
+AEM Form可集中建立、組裝、管理及傳送安全且互動式的檔案，例如商業信函、檔案、對帳單、利益通知、行銷郵件、帳單和歡迎套件。 此功能稱為互動式通訊。 此功能包含在AEM Forms附加元件套件中。 附加元件套件部署在AEM的Author或Publish執行個體上。
 
-您可以使用交互式通信功能以多种格式生成通信。 例如，Web和PDF。 您可以将交互式通信与AEM工作流集成，以根据客户选择的渠道处理和交付组合的通信。 例如，通过电子邮件向最终用户发送通信。
+您可以使用互動式通訊功能，以多種格式產生通訊。 例如，網頁和PDF。 您可以將互動式通訊與AEM Workflow整合，以便透過客戶選擇的管道處理及傳送已組裝的通訊給客戶。 例如，透過電子郵件傳送通訊給一般使用者。
 
-如果您从以前的版本进行升级，并且已经在通信管理方面进行了投资，则可以安装 [兼容包](../../forms/using/installing-configuring-intreactive-communication-correspondence-management.md#install-compatibility-package) 继续使用通信管理。 有关交互式通信与通信管理之间差异的信息，请参阅 [交互式通信概述](/help/forms/using/interactive-communications-overview.md#interactive-communications-vs-correspondence-management).
+如果您要從舊版升級，而且已投資通訊管理，您可以安裝 [相容性套件](../../forms/using/installing-configuring-intreactive-communication-correspondence-management.md#install-compatibility-package) 以繼續使用通訊管理。 如需互動式通訊與通訊管理之間差異的相關資訊，請參閱 [互動式通訊概述](/help/forms/using/interactive-communications-overview.md#interactive-communications-vs-correspondence-management).
 
-AEM Forms是一个功能强大的企业级平台。 交互式通信只是AEM Forms的一项功能。 有关功能的完整列表，请参阅 [AEM Forms简介](../../forms/using/introduction-aem-forms.md).
+AEM Forms是功能強大的企業級平台。 互動式通訊只是AEM Forms的其中一項功能。 如需完整的功能清單，請參閱 [AEM Forms簡介](../../forms/using/introduction-aem-forms.md).
 
-## 部署拓扑 {#deployment-topology}
+## 部署拓撲 {#deployment-topology}
 
-AEM Forms附加组件包是部署在AEM上的应用程序。 要运行交互式通信功能，您至少需要一个AEM创作和处理实例。 以下拓扑是指示性拓扑，用于运行AEM Forms交互式通信、通信管理、AEM Forms数据捕获以及基于OSGi功能的以Forms为中心的工作流。 有关拓扑的详细信息，请参见 [AEM Forms的架构和部署拓扑](/help/forms/using/aem-forms-architecture-deployment.md).
+AEM Forms附加元件套件是部署至AEM的應用程式。 您至少只需要一個AEM製作和處理執行個體，即可執行互動式通訊功能。 下列拓撲可代表如何在OSGi功能上執行AEM Forms互動式通訊、通訊管理、AEM Forms資料擷取和以Forms為中心的工作流程。 如需拓撲的詳細資訊，請參閱 [AEM Forms的架構和部署拓撲](/help/forms/using/aem-forms-architecture-deployment.md).
 
-![推荐拓扑](assets/recommended-topology.png)
+![recommended-topology](assets/recommended-topology.png)
 
-AEM Forms交互式通信在AEM Forms的创作实例上运行管理、创作和代理用户界面。 Publish实例托管最终版本的交互式通信，最终用户可以使用这些通信。
+AEM Forms互動式通訊會在AEM Forms的製作執行個體上執行管理、製作和代理程式使用者介面。 Publish執行個體會託管互動式通訊的最終版本，以供一般使用者使用。
 
 ## 系统要求 {#system-requirements}
 
-在开始安装和配置AEM Forms的交互式通信和通信管理功能之前，请确保：
+開始安裝及設定AEM Forms的互動式通訊與通訊管理功能之前，請確定：
 
-* 硬件和软件基础架构已到位。 有关受支持硬件和软件的详细列表，请参阅 [技术要求](/help/sites-deploying/technical-requirements.md).
+* 硬體與軟體基礎架構已準備就緒。 如需支援的硬體和軟體詳細清單，請參閱 [技術需求](/help/sites-deploying/technical-requirements.md).
 
-* AEM实例的安装路径不包含空格。
-* AEM实例已启动且正在运行。 在AEM术语中，“实例”是在创作或发布模式下的服务器上运行的AEM的副本。 您至少需要一个AEM实例（创作或处理）才能运行AEM Forms交互式通信和通信管理功能：
+* AEM執行個體的安裝路徑未包含空格。
+* AEM執行個體已啟動且正在執行。 在AEM術語中，「例項」是在伺服器上以製作或發佈模式執行的AEM的副本。 您需要至少一個AEM執行個體（製作或處理）來執行AEM Forms互動式通訊和通訊管理功能：
 
-   * **作者**:用于创建、上传和编辑内容以及管理网站的AEM实例。 内容准备就绪后，即会复制到发布实例。
-   * **处理：** 处理实例是 [强化的AEM作者](/help/forms/using/hardening-securing-aem-forms-environment.md) 实例。 您可以设置一个创作实例，并在执行安装后对其进行硬化。
+   * **作者**：AEM執行個體，用來建立、上傳和編輯內容以及管理網站。 一旦內容準備好上線，就會將其復寫到發佈執行個體。
+   * **處理中：** 處理執行個體是 [強化的AEM Author](/help/forms/using/hardening-securing-aem-forms-environment.md) 執行個體。 您可以設定Author例項，並在執行安裝後加以強化。
 
-   * **发布**:通过Internet或内部网络向公众提供已发布内容的AEM实例。
+   * **發佈**：透過網際網路或內部網路，向公眾提供已發佈內容的AEM例項。
 
-* 满足内存要求。 AEM Forms附加组件包需要：
+* 符合記憶體需求。 AEM Forms附加元件套件需要：
 
-   * 基于Microsoft® Windows的安装需要15 GB的临时空间。
-   * 6 GB的临时空间，用于基于UNIX的安装。
+   * 15 GB的暫存空間，適用於Microsoft® Windows安裝。
+   * UNIX安裝需要6 GB的暫存空間。
 
-* 基于UNIX的系统的额外要求：如果使用基于UNIX的操作系统，请从相应操作系统的安装介质安装以下软件包。
+* UNIX系統的額外需求：如果您使用的是UNIX作業系統，請從個別作業系統的安裝媒體安裝下列套件。
 
 <table>
  <tbody>
   <tr>
-   <td>expat</td>
+   <td>外傳</td>
    <td>libxcb</td>
-   <td>自由类型</td>
+   <td>自由文字</td>
    <td>libXau</td>
   </tr>
   <tr>
@@ -86,104 +86,104 @@ AEM Forms交互式通信在AEM Forms的创作实例上运行管理、创作和�
  </tbody>
 </table>
 
-## 安装AEM Forms附加组件包 {#install-aem-forms-add-on-package}
+## 安裝AEM Forms附加元件套件 {#install-aem-forms-add-on-package}
 
-AEM Forms附加组件包是部署在AEM上的应用程序。 该包包含AEM Forms交互式通信、通信管理和其他功能。 请执行以下步骤以安装附加组件包：
+AEM Forms附加元件套件是部署至AEM的應用程式。 此套件包含AEM Forms互動式通訊、通訊管理和其他功能。 執行以下步驟來安裝附加元件套件：
 
 1. 打开 [Software Distribution](https://experience.adobe.com/downloads)。您需要 Adobe ID 才能登录 Software Distribution。
 1. 点按标题菜单中的 **[!UICONTROL Adobe Experience Manager]**。
-1. 在 **[!UICONTROL 过滤器]** 部分：
-   1. 选择 **[!UICONTROL Forms]** 从 **[!UICONTROL 解决方案]** 下拉列表。
-   2. 选择包的版本和类型。 您还可以使用 **[!UICONTROL 搜索下载]** 选项来筛选结果。
-1. 点按适用于您的操作系统的包名称，选择 **[!UICONTROL 接受EULA条款]**，然后点按 **[!UICONTROL 下载]**.
+1. 在 **[!UICONTROL 篩選器]** 區段：
+   1. 選取 **[!UICONTROL Forms]** 從 **[!UICONTROL 解決方案]** 下拉式清單。
+   2. 選取套件的版本和型別。 您也可以使用 **[!UICONTROL 搜尋下載]** 篩選結果的選項。
+1. 點選適用於您的作業系統的套件名稱，然後選取 **[!UICONTROL 接受EULA條款]**，然後點選 **[!UICONTROL 下載]**.
 1. 打开[包管理器](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html)，并单击&#x200B;**[!UICONTROL 上传包]**&#x200B;以上传包。
-1. 选择包并单击 **[!UICONTROL 安装]**.
+1. 選取套件並按一下 **[!UICONTROL 安裝]**.
 
-   您还可以通过 [AEM Forms版本](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=zh-Hans) 文章。
+   您也可以透過下列連結下載套件： [AEM Forms發行版本](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=zh-Hans) 文章。
 
-1. 安装包后，系统会提示您重新启动AEM实例。 **不要立即重新启动服务器。** 在停止AEM Forms服务器之前，请等待ServiceEvent REGISTERED和ServiceEvent UNREGISTERED消息停止出现在 [AEM-Installation-Directory]/crx-quickstart/logs/error.log文件和日志稳定。
-1. 对所有创作实例和发布实例重复步骤1-7。
+1. 安裝套件後，系統會提示您重新啟動AEM執行個體。 **不要立即重新啟動伺服器。** 在停止AEM Forms伺服器之前，請等待ServiceEvent REGISTERED和ServiceEvent UNREGISTERED訊息停止出現在 [AEM-Installation-Directory]/crx-quickstart/logs/error.log檔案且記錄穩定。
+1. 對所有Author和Publish執行個體重複步驟1至7。
 
-## 安装后配置 {#post-installation-configurations}
+## 安裝後設定 {#post-installation-configurations}
 
-AEM Forms有一些必选配置。 强制配置包括配置BouncyCastle库和序列化代理。 可选配置包括配置Dispatcher和Adobe Target。
+AEM Forms有一些必要和選用的設定。 強制設定包括設定BouncyCastle程式庫和序列化代理程式。 選擇性設定包括設定Dispatcher和Adobe Target。
 
-### 强制的安装后配置 {#mandatory-post-installation-configurations}
+### 強制安裝後設定 {#mandatory-post-installation-configurations}
 
-#### 配置RSA和BouncyCastle库  {#configure-rsa-and-bouncycastle-libraries}
+#### 設定RSA和BouncyCastle資料庫  {#configure-rsa-and-bouncycastle-libraries}
 
-对所有创作实例和发布实例执行以下步骤以引导委派库：
+在所有Author和Publish執行個體上執行下列步驟，以啟動委派程式庫：
 
-1. 停止基础AEM实例。
-1. 打开 [AEM安装目录]\crx-quickstart\conf\sling.properties文件进行编辑。
+1. 停止基礎AEM執行個體。
+1. 開啟 [AEM安裝目錄]\crx-quickstart\conf\sling.properties檔案進行編輯。
 
-   如果您使用 [AEM安装目录]\crx-quickstart\bin\start.bat以启动AEM，然后在 [AEM_root]\crx-quickstart\。
+   如果您使用 [AEM安裝目錄]\crx-quickstart\bin\start.bat以啟動AEM，然後編輯sling.properties，網址為 [AEM_root]\crx-quickstart\。
 
-1. 将以下属性添加到sling.properties文件：
+1. 將下列屬性新增至sling.properties檔案：
 
    ```shell
    sling.bootdelegation.class.com.rsa.jsafe.provider.JsafeJCE=com.rsa.*
    ```
 
-1. 保存并关闭文件，然后启动AEM实例。
-1. 对所有创作实例和发布实例重复步骤1-4。
+1. 儲存並關閉檔案，然後啟動AEM執行個體。
+1. 在所有Author和Publish執行個體上重複步驟1至4。
 
-#### 配置序列化代理 {#configure-the-serialization-agent}
+#### 設定序列化代理程式 {#configure-the-serialization-agent}
 
-对所有创作实例和发布实例执行以下步骤，将包添加到允许列表:
+對所有Author和Publish執行個體執行下列步驟，將套件新增至允許清單：
 
-1. 在浏览器窗口中打开AEM Configuration Manager。 默认URL为https://&#39;[服务器]:[端口]“/system/console/configMgr.
-1. 搜索并打开 **反序列化防火墙配置**.
-1. 添加 **sun.util.calendar** 包到 **允许列表** 字段。 单击“保存”。
-1. 对所有创作实例和发布实例重复步骤1-3。
+1. 在瀏覽器視窗中開啟AEM Configuration Manager。 預設URL為https://&#39;[伺服器]：[連線埠]&#39;/system/console/configMgr.
+1. 搜尋並開啟 **還原序列化防火牆設定**.
+1. 新增 **sun.util.calendar** 封裝到 **允許清單** 欄位。 单击“保存”。
+1. 在所有Author和Publish執行個體上重複步驟1至3。
 
-### 可选的安装后配置 {#optional-post-installation-configurations}
+### 選用的安裝後設定 {#optional-post-installation-configurations}
 
-#### 安装兼容包 {#install-compatibility-package}
+#### 安裝相容性套件 {#install-compatibility-package}
 
-在AEM 6.5 Forms中创建客户通信的默认方法是推荐的交互式通信方法。 如果您已从以前的版本升级或迁移，并计划继续使用信件（通信管理），请安装 [AEMFD兼容包](https://experienceleague.adobe.com/docs/experience-manager-65/forms/upgrade-aem-forms/aem-forms-osgi-upgrade/compatibility-package.html?lang=en).
+在AEM 6.5 Forms中，互動式通訊是建立客戶通訊的預設和建議方法。 如果您已從舊版升級或移轉，並計畫繼續使用信件（通訊管理），請安裝 [AEMFD相容性套件](https://experienceleague.adobe.com/docs/experience-manager-65/forms/upgrade-aem-forms/aem-forms-osgi-upgrade/compatibility-package.html?lang=en).
 
-AEMFD兼容包允许您在AEM 6.5 Forms上使用AEM 6.4 Forms、AEM 6.3 Forms和AEM 6.2 Forms中的以下资产：
+AEMFD相容性套件可讓您在AEM 6.5 Forms上使用AEM 6.4 Forms、AEM 6.3 Forms和AEM 6.2 Forms的下列資產：
 
-* 文档片段
+* 檔案片段
 * 书信
-* 数据字典
-* 自适应表单已弃用的模板和页面
+* 資料字典
+* 最適化表單已棄用的範本和頁面
 
 #### 配置 Dispatcher {#configure-dispatcher}
 
-Dispatcher 是 Adobe Experience Manager 与企业级 Web 服务器结合使用的缓存和负载平衡工具。如果您使用 [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hans)，然后为AEM Forms执行以下配置：
+Dispatcher 是 Adobe Experience Manager 与企业级 Web 服务器结合使用的缓存和负载平衡工具。如果您使用 [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hans)，然後針對AEM Forms執行下列設定：
 
-1. 配置对AEM Forms的访问：
+1. 設定AEM Forms的存取權：
 
-   打开dispatcher.any文件进行编辑。 导航到过滤器部分，并将以下过滤器添加到过滤器部分：
+   開啟dispatcher.any檔案以進行編輯。 導覽至篩選區段，並將下列篩選新增至篩選區段：
 
    `/0025 { /type "allow" /glob "* /bin/xfaforms/submitaction*" } # to enable AEM Forms submission`
 
-   保存并关闭文件。 有关过滤器的详细信息，请参阅 [Dispatcher文档](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hans).
+   儲存並關閉檔案。 如需篩選器的詳細資訊，請參閱 [Dispatcher檔案](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hans).
 
-1. 配置反向链接过滤器服务：
+1. 設定反向連結篩選服務：
 
-   以管理员身份登录到Apache Felix配置管理器。 配置管理器的默认URL是https://&#39;server&#39;:[port_number]/system/console/configMgr。 在 **配置** 菜单，选择 **Apache Sling反向链接过滤器** 选项。 在允许主机字段中，输入Dispatcher的主机名以允许它作为反向链接，然后单击 **保存**. 条目的格式为https://&#39;[服务器]:[端口]&#39;。
+   以管理員身分登入Apache Felix Configuration Manager。 設定管理員的預設URL為https://&#39;server&#39;：[連線埠號碼]/system/console/configMgr。 在 **設定** 功能表，選取 **Apache Sling查閱者篩選器** 選項。 在允許主機欄位中，輸入Dispatcher的主機名稱，以允許其作為反向連結，然後按一下 **儲存**. 專案的格式為https://&#39;[伺服器]：[連線埠]&#39;.
 
-#### 集成Adobe Target {#integrate-adobe-target}
+#### 整合Adobe Target {#integrate-adobe-target}
 
-如果您的客户交付的体验不具有吸引力，则客户可能会放弃交互式通信。 虽然这令客户感到沮丧，但也会提高贵组织的支持量和成本。 确定并提供正确的客户体验以提高转化率至关重要，而且具有挑战性。 AEM表单是此问题的关键。
+如果互動式通訊提供的體驗不吸引人，您的客戶可能會捨棄互動式通訊。 雖然讓客戶感到沮喪，但也提高了貴組織的支援數量和成本。 識別並提供適當的客戶體驗以提高轉換率，這既重要又具有挑戰性。 AEM forms保有此問題的關鍵。
 
-AEM forms与Adobe Experience Cloud解决方案Adobe Target集成，以跨多个数字渠道提供个性化且引人入胜的客户体验。 要使用Adobe Target个性化交互式通信， [将Adobe Target与AEM Forms集成](../../forms/using/ab-testing-adaptive-forms.md#setupandintegratetargetinaemforms).
+AEM forms與Adobe Target (一種Adobe Experience Cloud解決方案)整合，跨多個數位頻道提供個人化且吸引人的客戶體驗。 若要使用Adobe Target來個人化互動式通訊， [將Adobe Target與AEM Forms整合](../../forms/using/ab-testing-adaptive-forms.md#setupandintegratetargetinaemforms).
 
-#### 为表单数据模型配置SSL通信  {#configure-ssl-communcation-for-form-data-model}
+#### 設定表單資料模型的SSL通訊  {#configure-ssl-communcation-for-form-data-model}
 
-您可以为表单数据模型启用SSL通信。 要为表单数据模型启用SSL通信，请在启动任何AEM Forms实例之前，将证书添加到所有实例的Java™信任存储区。 您可以运行以下命令来添加证书：
+您可以為表單資料模型啟用SSL通訊。 若要為表單資料模型啟用SSL通訊，請在啟動任何AEM Forms執行個體之前，為所有執行個體的Java™信任存放區新增憑證。 您可以執行以下命令來新增憑證：
 
 `keytool -import -alias <alias-name> -file <pathTo .cer certificate file> -keystore <<pathToJRE>\lib\security\cacerts>`
 
 ## 后续步骤 {#next-steps}
 
-您已将环境配置为使用交互式通信和通信管理功能。 现在，使用该功能的步骤是：
+您已將環境設定為使用互動式通訊和通訊管理功能。 現在，使用功能的步驟如下：
 
-* [通信管理概述](/help/forms/using/interactive-communications-overview.md)
+* [通訊管理概觀](/help/forms/using/interactive-communications-overview.md)
 
-* [创建交互式通信](../../forms/using/create-interactive-communication.md)
+* [建立互動式通訊](../../forms/using/create-interactive-communication.md)
 
-* [创建通信管理信件](../../forms/using/create-letter.md)
+* [建立通訊管理信件](../../forms/using/create-letter.md)

@@ -1,7 +1,7 @@
 ---
-title: 防止CSRF攻击
+title: 防止CSRF攻擊
 seo-title: Preventing CSRF attacks
-description: 了解如何防止跨站点请求伪造(CSRF)攻击并保护用户数据不被泄露。
+description: 瞭解如何防止跨網站請求偽造(CSRF)攻擊，並保護使用者資料不被破壞。
 seo-description: Learn how to prevent Cross-site request forgery (CSRF) attacks and safeguard user data from being compromised.
 uuid: f3553826-f5eb-40ea-aeb7-90e4ad30598c
 contentOwner: admin
@@ -17,67 +17,67 @@ ht-degree: 0%
 
 ---
 
-# 防止CSRF攻击 {#preventing-csrf-attacks}
+# 防止CSRF攻擊 {#preventing-csrf-attacks}
 
-## CSRF攻击的工作原理 {#how-csrf-attacks-work}
+## CSRF攻擊的運作方式 {#how-csrf-attacks-work}
 
-跨站点请求伪造(CSRF)是一种网站漏洞，其中使用有效用户的浏览器可能通过iFrame发送恶意请求。 由于浏览器基于域发送Cookie，因此如果用户当前登录到应用程序，则用户的数据可能会受损。
+跨網站請求偽造(CSRF)是一種網站漏洞，其中使用有效使用者的瀏覽器來傳送惡意請求，可能會透過iFrame。 由於瀏覽器會根據網域傳送Cookie，因此如果使用者目前登入應用程式，可能會危及使用者的資料。
 
-例如，考虑您登录到浏览器中的管理控制台的情况。 您会收到一封包含链接的电子邮件。 单击该链接，将在浏览器中打开一个新选项卡。 您打开的页面包含一个隐藏的iFrame，它会使用经过身份验证的AEM表单会话中的Cookie向表单服务器发出恶意请求。 由于User Management会收到有效的Cookie，因此会传递请求。
+例如，假設您登入瀏覽器中的管理主控台。 您會收到包含連結的電子郵件訊息。 按一下連結，即可在瀏覽器中開啟新標籤。 您開啟的頁面包含隱藏的iFrame，會使用已驗證的AEM表單工作階段的Cookie向表單伺服器提出惡意請求。 由於「使用者管理」會收到有效的Cookie，因此會傳遞請求。
 
-## CSRF相关术语 {#csrf-related-terms}
+## CSRF相關辭彙 {#csrf-related-terms}
 
-**引用网站：** 发出请求的源页面的地址。 例如，site1.com上的网页包含指向site2.com的链接。 单击该链接会将请求发布到site2.com。 此请求的引用网站为site1.com，因为该请求是从源为site1.com的页面发出的。
+**推薦者：** 要求來源頁面的位址。 例如，site1.com上的網頁包含site2.com的連結。 按一下連結即可將要求張貼至site2.com。 此請求的參照網址為site1.com ，因為請求是從來源為site1.com的頁面發出的。
 
-**已列入允许列表的URI：** URI标识正在请求的表单服务器上的资源，例如/adminui或/contentspace。 某些资源可能允许请求从外部站点进入应用程序。 这些资源被视为已列入允许列表的URI。 列入允许列表表单服务器从不执行来自URI的引用检查。
+**加入允許清單的URI：** URI會識別表單伺服器上正在要求的資源，例如/adminui或/contentspace。 某些資源可能會允許請求從外部網站進入應用程式。 這些資源會視為已加入允許清單的URI。 表單伺服器絕不會從允許清單中的URI執行反向連結檢查。
 
-**Null引用：** 打开新的浏览器窗口或Tab键，然后键入地址并按Enter键时，引用为空。 该请求是全新请求，并非源自父网页；因此，不存在该请求的反向链接。 表单服务器可以从以下位置接收null引用：
+**Null查閱者：** 當您開啟新的瀏覽器視窗或Tab鍵，然後輸入地址並按Enter鍵時，引用為空。 此請求是全新請求，並非源自上層網頁；因此，此請求沒有反向連結。 表單伺服器可從下列位置接收Null參照：
 
-* 在Acrobat的SOAP或REST端点上发出的请求
-* 任何在AEM Forms SOAP或REST端点上发出HTTP请求的桌面客户端
-* 打开新的浏览器窗口并输入任何AEM forms web应用程序登录页的URL时
+* 在Acrobat的SOAP或REST端點上提出的請求
+* 在AEM Forms SOAP或REST端點上提出HTTP請求的任何案頭使用者端
+* 當開啟新的瀏覽器視窗並輸入任何AEM forms web應用程式登入頁面的URL時
 
-在SOAP和REST端点上允许空引用。 在所有URI登录页面（如/adminui和/contentspace）及其对应的映射资源上也允许空引用。 例如，/contentspace的映射servlet是/contentspace/faces/jsp/login.jsp ，它应该是null引用异常。 只有在为Web应用程序启用GET过滤时才需要此例外。 您的应用程序可以指定是否允许null引用。 请参阅中的“防止跨站点请求伪造攻击” [AEM表单的强化和安全性](https://help.adobe.com/en_US/livecycle/11.0/HardeningSecurity/index.html).
+在SOAP和REST端點上允許Null參照。 在所有URI登入頁面（例如/adminui和/contentspace）及其對應的對應資源上也允許null參照。 例如， /contentspace的對應servlet是/contentspace/faces/jsp/login.jsp，這應該是null參照例外狀況。 只有在啟用Web應用程式的GET篩選時，才需要此例外。 您的應用程式可以指定是否允許null反向連結。 請參閱以下主題中的「防範跨網站請求偽造攻擊」： [強化AEM表單及安全性](https://help.adobe.com/en_US/livecycle/11.0/HardeningSecurity/index.html).
 
-**允许的反向链接异常：** “允许的引用异常”是允许的引用列表的子列表，请求将从该子列表中阻止。 允许的“引用异常”是特定于Web应用程序的。 如果不允许允许的反向链接的子集调用特定的Web应用程序，则可以通过允许的反向链接例外阻止列表反向链接。 在应用程序的web.xml文件中指定了允许的引用程序异常。 (请参阅“帮助和Tutorials”页上的“强化AEM表单和增强其安全性”中的“防止跨站点请求伪造攻击”。)
+**允許的反向連結例外狀況：** Allowed Referer Exception是允許的反向連結清單的子清單，其中會封鎖要求。 允許的「參考例外」專屬於Web應用程式。 如果「允許的反向連結」的子集不允許呼叫特定的Web應用程式，您可以透過「允許的反向連結例外」將反向連結加入封鎖清單。 在web.xml檔案中為您的應用程式指定允許的Referer例外。 (請參閱說明和Tutorials頁面上的AEM表單強化和安全性中的「防止跨網站請求偽造攻擊」。)
 
-## 允许的反向链接的工作方式 {#how-allowed-referers-work}
+## 允許的反向連結如何運作 {#how-allowed-referers-work}
 
-AEM forms提供了引用筛选功能，有助于防止CSRF攻击。 以下是引用筛选的工作方式：
+AEM forms提供參照篩選功能，可協助防止CSRF攻擊。 以下為參照篩選的運作方式：
 
-1. 表单服务器会检查用于调用的HTTP方法：
+1. 表單伺服器會檢查用於叫用的HTTP方法：
 
-   * 如果POST，表单服务器将执行引用头检查。
-   * 如果是GET，则表单服务器将绕过引用检查，除非CSRF_CHECK_GETS设置为true，在这种情况下，它将执行引用标头检查。 CSRF_CHECK_GETS是在应用程序的web.xml文件中指定的。 （请参阅中的“防止跨站点请求伪造攻击”） [强化和安全指南](https://help.adobe.com/en_US/livecycle/11.0/HardeningSecurity/index.html).)
+   * 如果是POST，表單伺服器會執行反向連結標題檢查。
+   * 如果是GET，則表單伺服器會略過參考者檢查，除非CSRF_CHECK_GETS設定為true （在這種情況下，它會執行參考者標頭檢查）。 CSRF_CHECK_GETS是在應用程式的web.xml檔案中指定的。 (請參閱以下主題中的「保護免受跨網站請求偽造攻擊」： [強化與安全性指南](https://help.adobe.com/en_US/livecycle/11.0/HardeningSecurity/index.html).)
 
-1. 表单服务器检查请求的URI是否已列入允许列表：
+1. 表單伺服器會檢查請求的URI是否已加入允許清單：
 
-   * 列入允许列表如果URI，则服务器传递请求。
-   * 如果请求的URI未列入允许列表，则服务器将检索请求的引用服务器。
+   * 如果URI已加入允許清單，則伺服器會傳遞要求。
+   * 如果請求的URI未列入允許清單，則伺服器會擷取請求的參照器。
 
-1. 如果请求中存在引用，则服务器会检查它是否为允许的引用。 如果允许，服务器会检查引用异常：
+1. 如果請求中有反向連結，伺服器會檢查其是否允許為反向連結。 如果允許，伺服器會檢查參照者例外狀況：
 
-   * 如果出现异常，则请求被阻止。
-   * 如果不是例外，则会传递请求。
+   * 若為例外狀況，則要求會被封鎖。
+   * 如果不是例外，則會傳遞要求。
 
-1. 如果请求中没有引用，则服务器会检查是否允许使用null引用。
+1. 如果請求中沒有反向連結，則伺服器會檢查是否允許null反向連結。
 
-   * 如果允许null引用，则会传递请求。
-   * 如果不允许使用null引用，则服务器会检查请求的URI是否是null引用的异常，并相应地处理请求。
+   * 如果允許空值參照，則會傳遞請求。
+   * 如果不允許null參照器，則伺服器會檢查請求的URI是否是null參照器的例外，並據此處理請求。
 
-## 配置允许的引用 {#configure-allowed-referers}
+## 設定允許的查閱者 {#configure-allowed-referers}
 
-运行Configuration Manager时，默认主机和IP地址或表单服务器将添加到允许引用程序列表中。 您可以在管理控制台中编辑此列表。
+當您執行Configuration Manager時，預設主機和IP位址或表單伺服器會新增到允許的反向連結清單中。 您可以在管理控制檯中編輯此清單。
 
-1. 在管理控制台中，单击“设置”>“用户管理”>“配置”>“配置允许的引用URL”。允许的反向链接列表将显示在页面底部。
-1. 要添加允许的反向链接，请执行以下操作：
+1. 在管理控制檯中，按一下「設定>使用者管理>設定>設定允許的反向連結URL」。「允許的反向連結」清單會顯示在頁面底部。
+1. 若要新增允許的反向連結：
 
-   * 在“允许的反向链接”框中键入主机名或IP地址。 要一次添加多个允许的引用，请在新行上键入每个主机名或IP地址。
-   * 在“HTTP端口”和“HTTPS端口”框中，指定允许使用HTTP和/或HTTPS的端口。 如果将这些框留空，则使用默认端口（HTTP使用端口80，HTTPS使用端口443）。 如果您输入 `0` （零）在框中，该服务器上的所有端口都处于启用状态。 您还可以输入特定的端口号，以仅启用该端口。
-   * 单击添加。
+   * 在「允許的反向連結」方塊中輸入主機名稱或IP位址。 若要一次新增多個允許的查閱者，請在新行中輸入每個主機名稱或IP位址。
+   * 在「HTTP連線埠」和「HTTPS連線埠」方塊中，指定允許使用HTTP、HTTPS或兩者的連線埠。 如果您將這些方塊留空，則會使用預設連線埠（HTTP為連線埠80，HTTPS為連線埠443）。 如果您輸入 `0` （零）在方塊中，會啟用該伺服器上的所有連線埠。 您也可以輸入特定的連線埠號碼，以僅啟用該連線埠。
+   * 按一下「新增」。
 
-1. 要从“允许的反向链接”列表中删除条目，请从列表中选择该条目，然后单击“删除”。
+1. 若要從[允許的反向連結]清單中移除專案，請從清單中選取專案，然後按一下[刪除]。
 
-   如果“允许的引用者列表”为空，则CSRF功能将停止工作，系统变得不安全。
+   如果「允許的參照者清單」是空的，則CSRF功能會停止運作且系統變得不安全。
 
-1. 更改允许引用程序列表后，重新启动AEM表单服务器。
+1. 變更「允許的反向連結」清單後，重新啟動AEM表單伺服器。

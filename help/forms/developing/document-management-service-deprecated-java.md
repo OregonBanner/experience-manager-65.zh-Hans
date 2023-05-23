@@ -1,7 +1,7 @@
 ---
-title: 文档管理服务（已弃用）Java API快速入门(SOAP)
+title: 檔案管理服務（已棄用）Java API快速入門(SOAP)
 seo-title: Document Management Service (Deprecated)Java API Quick Start(SOAP)
-description: 文档管理服务（已弃用）Java API快速入门(SOAP)
+description: 檔案管理服務（已棄用）Java API快速入門(SOAP)
 uuid: 967c282a-ccde-4489-a4d5-53c6a1a0cac0
 contentOwner: admin
 content-type: reference
@@ -17,39 +17,39 @@ ht-degree: 0%
 
 ---
 
-# 文档管理服务（已弃用） Java API快速入门(SOAP) {#document-management-service-deprecated-java-api-quick-start-soap}
+# 檔案管理服務（已棄用） Java API快速入門(SOAP) {#document-management-service-deprecated-java-api-quick-start-soap}
 
-以下快速启动适用于Document Management服务（已弃用）。
-
->[!NOTE]
->
->自2011年8月5日起，Adobe开始将Content Services ES客户迁移到Adobe Digital Enterprise Platform Experience Services。 使用Content Services的客户的产品路线图是转向新的ADEP Experience Services - Core，其中包括基于现代、模块化CRX体系结构构建的本机内容存储库，该存储库在Adobe收购Day Software期间获得。
-
-[快速入门（SOAP模式）：使用Java API创建Content Services空间](document-management-service-deprecated-java.md#quick-start-soap-mode-create-content-services-spaces-using-the-java-api-deprecated)
-
-[快速入门（SOAP模式）：使用Java API删除Content Services内容](document-management-service-deprecated-java.md#quick-start-soap-mode-delete-content-services-content-using-the-java-api-deprecated)
-
-[快速入门（SOAP模式）：使用Java API将内容添加到内容服务](document-management-service-deprecated-java.md#quick-start-soap-mode-add-content-to-content-services-using-the-java-api-deprecated)
-
-[快速入门（SOAP模式）：使用Java API从Content Services检索内容](document-management-service-deprecated-java.md#quick-start-soap-mode-retrieve-content-from-content-services-using-the-java-api-deprecated)
-
-[快速入门（SOAP模式）：使用Java API移动Content Services内容](document-management-service-deprecated-java.md#quick-start-soap-mode-move-content-services-content-using-the-java-api-deprecated)
-
-[快速入门（SOAP模式）：使用Java API列出Content Services内容](document-management-service-deprecated-java.md#quick-start-soap-mode-list-content-services-content-using-the-java-api-deprecated)
-
-[快速入门（SOAP模式）：使用Java API搜索Content Services内容](document-management-service-deprecated-java.md#quick-start-soap-mode-search-content-services-content-using-the-java-api-deprecated)
-
-[快速入门（SOAP模式）：使用Java API设置内容服务权限](document-management-service-deprecated-java.md#quick-start-soap-mode-setting-content-services-permissions-using-the-java-api-deprecated)
-
-AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应设置为SOAP。
+以下快速入門適用於Document Management服務（已棄用）。
 
 >[!NOTE]
 >
->位于“使用AEM窗体编程”中的快速入门指南基于部署在JBoss和Windows操作系统上的Forms Server。 但是，如果您使用的是其他操作系统（如UNIX），请将特定于windows的路径替换为适用的操作系统支持的路径。 同样，如果您使用的是其他J2EE应用程序服务器，请确保指定有效的连接属性。 参见 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>自2011年8月5日起，Adobe正在將Content Services ES客戶移轉至Adobe Digital Enterprise Platform Experience Services。 使用內容服務的客戶適用的產品藍圖是改用新的ADEP Experience Services - Core，其中包括以現代、模組化CRX架構為基礎的原生內容存放庫，該架構是於Adobe收購Day Software期間所取得。
 
-## 快速入门（SOAP模式）：使用Java API创建Content Services空间（已弃用） {#quick-start-soap-mode-create-content-services-spaces-using-the-java-api-deprecated}
+[快速入門（SOAP模式）：使用Java API建立內容服務空間](document-management-service-deprecated-java.md#quick-start-soap-mode-create-content-services-spaces-using-the-java-api-deprecated)
 
-以下Java代码示例创建一个名为的新空间 *测试目录* 位于公司主页。 新空间的标识值将写入控制台。
+[快速入門（SOAP模式）：使用Java API刪除內容服務內容](document-management-service-deprecated-java.md#quick-start-soap-mode-delete-content-services-content-using-the-java-api-deprecated)
+
+[快速入門（SOAP模式）：使用Java API新增內容至內容服務](document-management-service-deprecated-java.md#quick-start-soap-mode-add-content-to-content-services-using-the-java-api-deprecated)
+
+[快速入門（SOAP模式）：使用Java API從Content Services擷取內容](document-management-service-deprecated-java.md#quick-start-soap-mode-retrieve-content-from-content-services-using-the-java-api-deprecated)
+
+[快速入門（SOAP模式）：使用Java API移動內容服務內容](document-management-service-deprecated-java.md#quick-start-soap-mode-move-content-services-content-using-the-java-api-deprecated)
+
+[快速入門（SOAP模式）：使用Java API列出內容服務內容](document-management-service-deprecated-java.md#quick-start-soap-mode-list-content-services-content-using-the-java-api-deprecated)
+
+[快速入門（SOAP模式）：使用Java API搜尋內容服務內容](document-management-service-deprecated-java.md#quick-start-soap-mode-search-content-services-content-using-the-java-api-deprecated)
+
+[快速入門（SOAP模式）：使用Java API設定內容服務許可權](document-management-service-deprecated-java.md#quick-start-soap-mode-setting-content-services-permissions-using-the-java-api-deprecated)
+
+AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定為SOAP。
+
+>[!NOTE]
+>
+>使用AEM表單進行程式設計中的快速入門是根據部署在JBoss和Windows作業系統上的Forms Server。 不過，如果您使用其他作業系統（例如UNIX），請以適用作業系統支援的路徑取代windows特定路徑。 同樣地，如果您使用其他J2EE應用程式伺服器，請務必指定有效的連線屬性。 另請參閱 [設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+
+## 快速入門（SOAP模式）：使用Java API建立內容服務空間（已棄用） {#quick-start-soap-mode-create-content-services-spaces-using-the-java-api-deprecated}
+
+以下Java程式碼範例會建立名為的新空間 *測試目錄* 位於公司首頁。 新空間的識別值會寫入主控台。
 
 ```java
  /*
@@ -143,9 +143,9 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
  
 ```
 
-## 快速入门（SOAP模式）：使用Java API删除Content Services内容（已弃用） {#quick-start-soap-mode-delete-content-services-content-using-the-java-api-deprecated}
+## 快速入門（SOAP模式）：使用Java API刪除內容服務內容（已棄用） {#quick-start-soap-mode-delete-content-services-content-using-the-java-api-deprecated}
 
-以下Java代码示例删除名为/Company Home/Test Directory的空间。
+以下Java程式碼範例會刪除名為/Company Home/Test Directory的空間。
 
 ```java
  /*
@@ -243,9 +243,9 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
  
 ```
 
-## 快速入门（SOAP模式）：使用Java API将内容添加到内容服务（已弃用） {#quick-start-soap-mode-add-content-to-content-services-using-the-java-api-deprecated}
+## 快速入門（SOAP模式）：使用Java API新增內容至內容服務（已棄用） {#quick-start-soap-mode-add-content-to-content-services-using-the-java-api-deprecated}
 
-以下Java代码示例添加了一个名为的PDF文件 *MortgageForm.pdf* 到名为/Company Home/Test Directory的文件夹。 设置创建者和描述属性。 新内容的标识值将写入控制台。
+以下Java程式碼範例新增名為的PDF檔案 *MortgageForm.pdf* 至名為/Company Home/Test Directory的資料夾。 建立者和說明屬性已設定。 新內容的識別值會寫入主控台。
 
 ```java
  /*
@@ -366,9 +366,9 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
  
 ```
 
-## 快速入门（SOAP模式）：使用Java API从Content Services检索内容（已弃用） {#quick-start-soap-mode-retrieve-content-from-content-services-using-the-java-api-deprecated}
+## 快速入門（SOAP模式）：使用Java API從內容服務擷取內容（已棄用） {#quick-start-soap-mode-retrieve-content-from-content-services-using-the-java-api-deprecated}
 
-以下Java代码示例检索名为的PDF文件 *MortgageForm.pdf* 从/Company Home. PDF文件将保存到本地文件系统，并命名为 *UpdatedMortgageForm.pdf*.
+以下Java程式碼範例會擷取名為的PDF檔案 *MortgageForm.pdf* 從/Company首頁。 PDF檔案會儲存至本機檔案系統，並命名為 *UpdatedMortgageForm.pdf*.
 
 ```java
  /*
@@ -472,9 +472,9 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
  
 ```
 
-## 快速入门（SOAP模式）：使用Java API移动Content Services内容（已弃用） {#quick-start-soap-mode-move-content-services-content-using-the-java-api-deprecated}
+## 快速入門（SOAP模式）：使用Java API移動內容服務內容（已棄用） {#quick-start-soap-mode-move-content-services-content-using-the-java-api-deprecated}
 
-以下Java代码示例移动一个名为的PDF文件 *MortgageForm.pdf* 从/Company Home/Test Directory到/Company Home。 移动内容的标识值将写入控制台。
+以下Java程式碼範例會移動名為的PDF檔案 *MortgageForm.pdf* 從/Company Home/Test Directory到/Company Home。 已移動內容的識別值會寫入主控台。
 
 ```java
  /*
@@ -573,9 +573,9 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
  
 ```
 
-## 快速入门（SOAP模式）：使用Java API列出Content Services内容（已弃用） {#quick-start-soap-mode-list-content-services-content-using-the-java-api-deprecated}
+## 快速入門（SOAP模式）：使用Java API列出Content Services內容（已過時） {#quick-start-soap-mode-list-content-services-content-using-the-java-api-deprecated}
 
-以下Java代码示例列出了位于/Company Home中的内容。 将显示每个节点类型和节点名称。
+以下Java程式碼範例列出位於/Company Home中的內容。 每個節點型別和節點名稱都會顯示。
 
 ```java
  /*
@@ -686,9 +686,9 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
  
 ```
 
-## 快速入门（SOAP模式）：使用Java API搜索Content Services内容（已弃用） {#quick-start-soap-mode-search-content-services-content-using-the-java-api-deprecated}
+## 快速入門（SOAP模式）：使用Java API搜尋內容服務內容（已棄用） {#quick-start-soap-mode-search-content-services-content-using-the-java-api-deprecated}
 
-以下Java代码在/公司主页中搜索包含文本MortgageForm的文档。 还会搜索子文件夹。
+下列Java程式碼在/Company Home中搜尋包含文字MortgageForm的檔案。 也會搜尋子資料夾。
 
 ```java
  /*
@@ -796,9 +796,9 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
  
 ```
 
-## 快速入门（SOAP模式）：使用Java API设置内容服务权限（已弃用） {#quick-start-soap-mode-setting-content-services-permissions-using-the-java-api-deprecated}
+## 快速入門（SOAP模式）：使用Java API設定內容服務許可權（已棄用） {#quick-start-soap-mode-setting-content-services-permissions-using-the-java-api-deprecated}
 
-以下Java代码示例为名为tony blue的用户设置权限。 指定的域是默认域。 指定使用者权限，节点为 `/Company Home/Test Directory`.
+以下Java程式碼範例會設定名為tony blue之使用者的許可權。 指定的網域是預設網域。 指定消費者許可權，且節點為 `/Company Home/Test Directory`.
 
 ```java
  /*
@@ -906,9 +906,9 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
  
 ```
 
-## 快速入门（SOAP模式）：使用Java API创建关联（已弃用） {#quick-start-soap-mode-creating-associations-using-the-java-api-deprecated}
+## 快速入門（SOAP模式）：使用Java API建立關聯（已棄用） {#quick-start-soap-mode-creating-associations-using-the-java-api-deprecated}
 
-以下Java代码创建XML数据文件与PDF表单的关联。 此类型的关联名为LinkedBy。PDF文档必须应用了外观链接。
+下列Java程式碼會建立XML資料檔案與PDF表單的關聯。 這種關聯型別名為LinkedBy。PDF檔案必須套用外觀可連結。
 
 ```java
  /*

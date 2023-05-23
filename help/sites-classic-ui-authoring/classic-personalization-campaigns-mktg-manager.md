@@ -1,7 +1,7 @@
 ---
-title: 使用营销活动管理器
+title: 使用行銷活動管理員
 seo-title: Working with the Marketing Campaign Manager
-description: 营销活动管理器 (MCM) 是一个控制台，可帮助您管理多渠道营销活动。使用此营销活动自动化软件，您可以管理您的所有品牌、营销活动和体验，以及相关的区段、列表、潜在客户和报表。
+description: 行銷活動管理員(MCM)主控台可協助您管理多管道行銷活動。 使用此行銷自動化軟體，您可以管理所有品牌、行銷活動和體驗，以及相關區段、清單、銷售機會和報表。
 seo-description: The Marketing Campaign Manager (MCM) is a console that helps you manage multi-channel campaigns. With this marketing automation software you can manage all your brands, campaigns and experiences together with the related segments, lists, leads, and reports.
 uuid: 63b817e4-34b9-42b8-845b-e0b7d9af3a96
 contentOwner: User
@@ -14,15 +14,15 @@ exl-id: 0e13112b-d9df-4ba6-bd73-431c87890b79
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1175'
-ht-degree: 96%
+ht-degree: 0%
 
 ---
 
-# 使用营销活动管理器{#working-with-the-marketing-campaign-manager}
+# 使用行銷活動管理員{#working-with-the-marketing-campaign-manager}
 
-在 AEM 中，营销活动管理器 (MCM) 是一个控制台，可帮助您管理多渠道营销活动。使用此营销活动自动化软件，您可以管理您的所有品牌、营销活动和体验，以及相关的区段、列表、潜在客户和报表。
+在AEM中，行銷活動管理員(MCM)是協助您管理多頻道行銷活動的主控台。 使用此行銷自動化軟體，您可以管理所有品牌、行銷活動和體驗，以及相關區段、清單、銷售機會和報表。
 
-可以从 AEM 中的多个位置访问 MCM；例如，通过欢迎屏幕、使用营销活动图标，或使用以下 URL：
+您可以從AEM中的不同位置存取MCM；例如，「歡迎」畫面，使用「促銷活動」圖示或URL：
 
 `https://<hostname>:<port>/libs/mcm/content/admin.html`
 
@@ -32,27 +32,40 @@ ht-degree: 96%
 
 ![screen_shot_2012-02-21at114636am](assets/screen_shot_2012-02-21at114636am.png)
 
-从 MCM 您可以访问：
+您可以從MCM存取：
 
-* **[功能板](#dashboard)**&#x200B;共分为四个窗格：
+* **[儀表板](#dashboard)**
+這分為四個窗格：
 
-   * [列表](#lists)此窗格显示您已创建的列表，以及该列表中的潜在客户数量。在此窗格中，您可以直接创建新列表或导入潜在客户来创建新列表。选择特定列表将转到[列表](#lists)部分，其中显示了列表的详细信息。
+   * [清單](#lists)
+此窗格會顯示您已建立的清單，以及該清單中的潛在客戶數量。 您可以從此窗格直接建立新清單，或匯入銷售機會以建立新清單。
+選取特定清單後，您將會前往 [清單](#lists) 區段會顯示您清單的詳細資訊。
 
-   * [区段](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#anoverviewofsegmentation)此窗格显示您已定义的区段。区段表示拥有某些相同特征的访客群。选择特定的区段将打开区段定义页面。
+   * [區段](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#anoverviewofsegmentation)
+此窗格會顯示您定義的區段。 區段可讓您為共用特定特徵的訪客集合設定特徵。
+選取特定區段將會開啟區段定義頁面。
 
-   * [报表](/help/sites-administering/reporting.md)AEM 提供了不同报表，以帮助您分析和监视实例的状态。此 MCM 窗格列出了相应报表。选择报表将打开报表页面。
+   * [報表](/help/sites-administering/reporting.md)
+AEM提供不同的報表，協助您分析和監控執行個體的狀態。 此MCM窗格會列出報表。
+選取報告會開啟報告頁面。
 
-   * [营销活动](#campaigns)此窗格列出了您的营销活动体验，例如[新闻稿](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#newsletters)和 [Teaser](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#teasers)。
+   * [行銷活動](#campaigns)
+此窗格會列出您的行銷活動體驗，例如 [電子報](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#newsletters) 和 [Teasers](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#teasers).
 
-* **[潜在客户](#leads)**&#x200B;您可以在此处管理潜在客户。您可以创建或导入潜在客户、编辑各个潜在客户的特定细节，或者在不再需要时删除。还可以将潜在客户放入称为“列表”的不同组中。**注意：** Adobe 不打算进一步增强此功能。Adobe 的建议是[利用 Adobe Campaign 以及将其与 AEM 集成](/help/sites-administering/campaign.md)。
+* **[銷售機會](#leads)**
+您可以在此處管理銷售機會。 您可以建立或匯入銷售機會、編輯個別銷售機會的特定詳細資訊，或在不再需要時刪除。 您也可以將潛在客戶放入不同的群組中，稱為「清單」。 **注意：** Adobe不打算進一步增強此功能。
+建議為 [善用Adobe Campaign以及與AEM的整合](/help/sites-administering/campaign.md).
 
-* **[列表](#lists)**&#x200B;您可以在此处管理（潜在客户）列表。**注意：** Adobe 不打算进一步增强此功能。Adobe 的建议是[利用 Adobe Campaign 以及将其与 AEM 集成](/help/sites-administering/campaign.md)。
+* **[清單](#lists)**
+您可以在此處管理您的（潛在客戶）清單。**注意：** Adobe不打算進一步增強此功能。
+建議為 [善用Adobe Campaign以及與AEM的整合](/help/sites-administering/campaign.md).
 
-* **[营销活动](#campaigns)**&#x200B;您可以在此处管理品牌、营销活动和体验。
+* **[行銷活動](#campaigns)**
+您可以在此處管理您的品牌、行銷活動和體驗。
 
 ## 仪表板 {#dashboard}
 
-功能板显示了四个窗格，分别为您提供了有关（潜在客户）列表、区段、报表和营销活动的概述。可以在此处访问这些内容的基本功能。
+儀表板會顯示四個窗格，為您提供清單（潛在客戶）、區段、報表和行銷活動的概覽。 您也可以在這裡存取這些的基本功能。
 
 ![mcm_dashboard](assets/mcm_dashboard.png)
 
@@ -60,16 +73,16 @@ ht-degree: 96%
 
 >[!NOTE]
 >
->Adobe 不打算进一步增强此功能（管理潜在客户）。
->Adobe 的建议是利用 [Adobe Campaign 以及将其与 AEM 集成](/help/sites-administering/campaign.md)。
+>Adobe不打算進一步增強此功能（管理銷售機會）。
+>建議善用 [Adobe Campaign與AEM的整合](/help/sites-administering/campaign.md).
 
-在 AEM MCM 中，您可以组织和添加潜在客户，方法是手动输入，或导入逗号分隔的列表（例如邮寄列表）。生成潜在客户的其他方法包括新闻稿注册或社区注册（经配置后，它们可触发生成潜在客户的工作流程）。潜在客户通常会进行分类，并被放入列表中，便于您后期对整个列表执行操作（例如，向特定列表发出自定义电子邮件）。
+在AEM MCM中，您可以手動輸入潛在客戶或匯入逗號分隔的清單（例如郵寄清單）來整理和新增潛在客戶。 產生潛在客戶的其他方式來自電子報註冊或社群註冊（如果設定，這些方式可能會觸發填入潛在客戶的工作流程）。 潛在客戶通常會分類並放入清單中，以便您稍後可以對整個清單執行動作；例如，傳送自訂電子郵件給特定清單。
 
-在左边窗格的&#x200B;**潜在客户**&#x200B;下方，您可以创建、导入、编辑和删除您的潜在客户，然后按需要对其进行激活或取消激活。您可以将潜在客户添加到列表中，或查看它已经属于哪些列表。
+下 **銷售機會** 在左窗格中，您可以建立、匯入、編輯和刪除銷售機會，然後視需要啟用或停用。 您可以將潛在客戶新增至清單，或檢視其已屬於哪些清單。
 
 >[!NOTE]
 >
->有关特定任务的详细信息，请参阅[使用潜在客户](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#workingwithleads)。
+>另請參閱 [使用銷售機會](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#workingwithleads) 以取得特定工作的詳細資訊。
 
 ![screen_shot_2012-02-21at114748am-1](assets/screen_shot_2012-02-21at114748am-1.png)
 
@@ -77,16 +90,16 @@ ht-degree: 96%
 
 >[!NOTE]
 >
->Adobe 不打算进一步增强此功能（管理列表）。
->Adobe 的建议是利用 [Adobe Campaign 以及将其与 AEM 集成](/help/sites-administering/campaign.md)。
+>Adobe不打算進一步增強此功能（管理清單）。
+>建議善用 [Adobe Campaign與AEM的整合](/help/sites-administering/campaign.md).
 
-使用列表可将您的潜在客户组织到组中。借助列表，可以将市场营销活动定向到所选客户组，例如，可以向列表发送目标新闻稿。
+清單可讓您將潛在客戶組織到群組中。 透過清單，您可以將行銷活動鎖定在特定人群中；例如，您可以將目標電子報傳送至清單。
 
-在&#x200B;**列表**&#x200B;下，您可以通过创建、导入、编辑、合并和删除列表来管理您的列表，然后可以按需要对其进行激活或取消激活。您还可以查看该列表中的潜在客户、了解该列表是不是其他列表的成员或查看描述。
+下 **清單**，您可以建立、匯入、編輯、合併及刪除清單，然後視需要啟用或停用這些清單，以管理您的清單。 您也可以檢視該清單中的銷售機會、檢視清單是否為其他清單的成員，或檢視說明。
 
 >[!NOTE]
 >
->有关特定任务的详细信息，请参阅[使用列表](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#workingwithlists)。
+>另請參閱 [使用清單](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#workingwithlists) 以取得特定工作的詳細資訊。
 
 ![screen_shot_2012-02-21at124828pm-1](assets/screen_shot_2012-02-21at124828pm-1.png)
 
@@ -94,92 +107,95 @@ ht-degree: 96%
 
 >[!NOTE]
 >
->有关特定任务的详细信息，请参阅 [Teaser 和战略](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#workingwithlists)、[设置您的营销活动](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#settingupyourcampaign)以及[新闻稿](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#newsletters)。
+>另請參閱 [Teaser和策略](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#workingwithlists)， [設定您的行銷活動](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#settingupyourcampaign) 和 [電子報](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#newsletters) 以取得特定工作的詳細資訊。
 
-要访问现有营销活动，请在 MCM 中单击&#x200B;**营销活动**。
+若要存取現有行銷活動，請在MCM中按一下 **行銷活動**.
 
 ![screen_shot_2012-02-21at11106pm](assets/screen_shot_2012-02-21at11106pm.png)
 
-* **在左侧窗格中**：列出了所有品牌和营销活动。单击一次品牌可以同时：
+* **在左窗格中**：此清單包含所有品牌和行銷活動。
+只要按一下品牌，就會同時完成以下兩個操作：
 
-   * 在左边窗格中展开列表显示所有相关的营销活动；此列表还会显示每个营销活动的体验数量。
-   * 在右侧窗格中打开品牌概述。
+   * 展開清單以在左側窗格中顯示所有相關行銷活動；此清單也會顯示每個行銷活動存在的體驗數量。
+   * 在右窗格中開啟品牌概觀。
 
-* **在右侧窗格中**：显示了每个品牌的图标（不会显示历史营销活动）。您可以双击这些图标打开品牌概述。
+* **在右窗格中**：每個品牌都會顯示圖示（不會顯示歷史行銷活動）。
+您可以按兩下這些以開啟品牌概觀。
 
-#### 品牌概述 {#brand-overview}
+#### 品牌概觀 {#brand-overview}
 
 ![mcm_brandoverview](assets/mcm_brandoverview.png)
 
-您可以在此处：
+從這裡，您可以：
 
-* 查看此品牌的营销活动和体验的数量（数量在左边窗格显示）。
-* 为此品牌&#x200B;**新建...**&#x200B;营销活动。
+* 檢視此品牌存在的行銷活動和體驗數量（顯示在左窗格中的數量）。
+* 建立 **新增……** 此品牌的行銷活動。
 
-* 更改要查看的时间跨度；选择&#x200B;**周**、**月**&#x200B;或&#x200B;**季度**，使用箭头选择具体时段或返回到&#x200B;**今天**。
+* 變更檢視的時間範圍；選取 **周**， **月** 或 **季度**，使用箭頭來選取特定期間或返回 **今天**.
 
-* （在右侧窗格中）选择一个营销活动可以：
+* 選取行銷活動（在右窗格中）以：
 
-   * 编辑&#x200B;**属性...**
-   * **删除**&#x200B;营销活动。
+   * 編輯 **屬性……**
+   * **刪除** 行銷活動。
 
-* 打开营销活动概述（在右侧窗格中双击某个营销活动，或在左侧窗格中单击一次）。
+* 開啟行銷活動概覽（在右側窗格中按兩下行銷活動，或在左側窗格中按一下滑鼠）。
 
-#### 营销活动概述 {#campaign-overview}
+#### 行銷活動概覽 {#campaign-overview}
 
-对于每个营销活动提供有两种视图：
+針對個別行銷活動，有兩個可用的檢視：
 
 1. **日历视图**
 
-   使用此图标：
+   使用圖示：
 
    ![](do-not-localize/mcm_iconcalendarview.png)
 
-   显示所有触点（灰色）列表，以及与此触点相关的体验（绿色）的水平时间表：
+   這會呈現所有接觸點（灰色）清單，以及連線至該接觸點的體驗水準時間範圍（綠色）：
 
    ![mcm_banner_calendarview](assets/mcm_banner_calendarview.png)
 
-   您可以在此处：
+   從這裡，您可以：
 
-   * 使用箭头更改您要查看的时间跨度，或返回到&#x200B;**今天**。
+   * 使用箭頭變更您檢視的時間範圍，或返回 **今天**.
 
-   * 使用&#x200B;**添加触点...**&#x200B;来为现有的体验添加新触点。
+   * 使用 **新增接觸點……** 為現有體驗新增接觸點。
 
-   * 单击（右侧窗格中）的 Teaser 以设置&#x200B;**开启时间**&#x200B;和&#x200B;**结束时间**。
+   * 按一下Teaser （在右窗格中）以設定 **準時** 和 **關閉時間**.
 
 1. **列表视图**
 
-   使用此图标：
+   使用圖示：
 
    ![](do-not-localize/mcm_icon_listview.png)
 
-   列出了所选营销活动的所有体验（如 teaser 和 newsletter）：
+   這會列出所選行銷活動的所有體驗（例如Teaser和電子報）：
 
    ![mcm_banner_listview](assets/mcm_banner_listview.png)
 
-   您可以在此处：
+   從這裡，您可以：
 
-   * 创建 **新建……** 体验；例如，Adobe Target优惠、Teaser和新闻稿。
-   * **编辑**&#x200B;特定的 Teaser 页面或新闻稿的详细信息（也可以使用双击）。
-   * 为特定的 Teaser 页面或新闻稿定义&#x200B;**属性...**。
-   * **模拟**&#x200B;体验（Teaser 页面或新闻稿）的外观。当模拟的页面打开时，您可以打开 sidekick 以切换到该页面的编辑模式。
+   * 建立 **新增……** 體驗；例如Adobe Target選件、Teaser和電子報。
+   * **編輯** 特定Teaser頁面或電子報的詳細資料（也可以使用按兩下）。
+   * 定義 **屬性……** 特定的Teaser頁面或電子報。
+   * **模擬** 體驗（Teaser頁面或電子報）的外觀和風格。
+當模擬頁面開啟時，您可以接著開啟Sidekick以切換到該頁面的編輯模式。
 
-   * **分析...**&#x200B;为页面生成的展示次数。
+   * **分析……** 為頁面產生的曝光次數。
 
-   * **删除**&#x200B;项目（当不再需要它们时）。
-   * **搜索**&#x200B;您的文本（将会搜索体验的“标题”字段）。
-   * 使用&#x200B;**高级**&#x200B;搜索来对搜索应用过滤器。
+   * **刪除** 不再需要的專案。
+   * **搜尋** （將會搜尋體驗的「標題」欄位）。
+   * 使用 **進階** 搜尋以將篩選器套用至搜尋。
 
-### 模拟您的营销活动体验 {#simulating-your-campaign-experiences}
+### 模擬您的Campaign體驗 {#simulating-your-campaign-experiences}
 
-在 MCM 中，单击&#x200B;**营销活动**。确保列表视图处于激活状态，然后选择所需的营销活动体验，并单击“**模拟**”。触点（Teaser 或新闻稿页面）将会打开，以显示您选择的体验 - 与访客将会看到的内容相同。
+在MCM中，按一下 **行銷活動**. 確定清單檢視為作用中，然後選取所需的行銷活動體驗並按一下 **模擬**. 接觸點（Teaser或Newsletter頁面）將開啟以顯示您選取的體驗，因為訪客會看到它。
 
 ![mcm_simulateexperience](assets/mcm_simulateexperience.png)
 
-您还可以在此处打开 Sidekick（单击小的向下箭头）更改到编辑模式，以便更新页面。
+您也可以從此開啟Sidekick （按一下小型向下箭頭）以變更為更新頁面的編輯模式。
 
-### 分析您的营销活动体验 {#analyzing-your-campaign-experiences}
+### 分析您的行銷活動體驗 {#analyzing-your-campaign-experiences}
 
-在 MCM 中，单击&#x200B;**营销活动**。确保列表视图处于激活状态，然后选择所需的营销活动体验，并选择&#x200B;**分析...**。将会显示一段时间内的页面展示图。
+在MCM中，按一下 **行銷活動**. 確定清單檢視為作用中，然後選取所需的行銷活動體驗並選取 **分析……**. 將會顯示一段時間的頁面印象圖表。
 
 ![mcm_campaignanalyze](assets/mcm_campaignanalyze.png)

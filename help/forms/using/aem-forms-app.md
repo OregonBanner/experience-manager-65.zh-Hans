@@ -1,7 +1,7 @@
 ---
-title: AEM Forms应用程序
+title: AEM Forms應用程式
 seo-title: AEM Forms app
-description: AEM Forms应用程序使您的字段工作人员能够在其移动设备上使用自适应表单。
+description: AEM Forms應用程式可讓您的欄位工作者在其行動裝置上使用最適化表單。
 seo-description: AEM Forms app enables your field workers to use adaptive forms on their mobile devices.
 uuid: fac976c8-b713-4492-b153-f567e7a11ceb
 contentOwner: sashanka
@@ -17,15 +17,15 @@ ht-degree: 2%
 
 ---
 
-# AEM Forms应用程序简介 {#aem-forms-app}
+# AEM Forms應用程式簡介 {#aem-forms-app}
 
 ## 概述 {#overview}
 
-AEM Forms应用程序支持根据您的服务器在移动设备上同步自适应表单、移动表单和表单集。 您可以定义以下工作流 [OSGi上以Forms为中心的工作流](/help/forms/using/aem-forms-workflow.md) 或JEE上的Forms工作流。 例如，您经营一家银行公司，并使用AEM Forms管理客户应用程序和通信。 您的客户填写并提交表单以进行验证。 如果您在移动设备上启用表单，则您的客户可以在AEM Forms应用程序中填写表单。 您还可以通过在移动设备上启用验证表单来管理验证工作流。 您的现场工作人员可以携带移动设备给客户、验证详细信息并提交表单。 AEM Forms应用程序与AEM Forms服务器同步，并获取为移动设备启用的表单。 如果应用程序处于离线状态，则会将数据存储在本地。
+AEM Forms應用程式可讓您根據伺服器，在行動裝置上同步最適化表單、行動表單和表單集。 您可以定義的工作流程為 [OSGi上的Forms中心工作流程](/help/forms/using/aem-forms-workflow.md) 或JEE上的Forms工作流程。 例如，您經營一間銀行公司，並使用AEM Forms來管理客戶應用程式和通訊。 您的客戶填寫表單並提交以進行驗證。 如果您在行動裝置上啟用表單，您的客戶可以在AEM Forms應用程式中填寫表單。 您也可以在行動裝置上啟用驗證表單，以管理驗證工作流程。 您的欄位工作者可以將行動裝置傳送給客戶、驗證詳細資料並提交表單。 AEM Forms應用程式會與AEM Forms伺服器同步，並擷取為行動裝置啟用的表單。 如果應用程式離線，則會將資料儲存在本機。
 
-客户可以通过Software Distribution获取AEM Forms应用程序的源代码。 Software Distribution中的源代码包提供如下： `adobe-aemfd-forms-app-src-pkg-<version>.zip`.
+客戶可透過Software Distribution取得AEM Forms應用程式的原始程式碼。 Software Distribution中的原始程式碼套件如下： `adobe-aemfd-forms-app-src-pkg-<version>.zip`.
 
-iOS、Android和Windows设备支持AEM Forms应用程序。 您可以从Google Play安装适用于Android的AEM Forms应用程序，从App Store安装iOS，并从Windows应用商店安装Windows。
+iOS、Android、Windows裝置支援AEM Forms應用程式。 您可以從Google Play安裝適用於Android的AEM Forms應用程式，從App Store安裝iOS，以及從Windows市集安裝Windows。
 
     [ ![google_play](assets/google_play.png)](https://play.google.com/store/apps/details?id=com.adobe.aem.forms)
     
@@ -33,189 +33,189 @@ iOS、Android和Windows设备支持AEM Forms应用程序。 您可以从Google P
     
     [ ！[microsoft-badge-icon](assets/microsoft-badge-icon.png)](https://www.microsoft.com/en-us/store/p/adobe-experience-manager-forms/9nd12rlxtgtt)
 
-要在iOS、Android或Windows设备上安装、自定义和分发应用程序，请参阅 [自定义、构建和分发AEM Forms应用程序](#customize-build-distribute).
+若要在iOS、Android或Windows裝置上安裝、自訂和發佈應用程式，請參閱 [自訂、建置和分發AEM Forms應用程式](#customize-build-distribute).
 
 ## 前提条件 {#prerequisites}
 
-AEM Forms应用程序需要AEM Forms服务器。 用户可以渲染您在AEM Forms服务器中创建的表单、填写表单、另存为草稿并提交表单。 应用程序会连接到服务器并从其中获取启用的表单。 AEM Forms应用程序与服务器同步，一旦在应用程序中加载了表单，用户就可以脱机工作。 如果应用程序处于离线状态，则数据会保存在设备上，并在应用程序处于在线状态时与服务器同步。
+AEM Forms應用程式需要AEM Forms伺服器。 使用者可以轉譯您在AEM Forms伺服器中所建立的表單、填寫表單、儲存為草稿並提交表單。 應用程式會連線至伺服器，並從伺服器擷取已啟用的表單。 AEM Forms應用程式會與伺服器同步，一旦在應用程式中載入表單，使用者就可以離線工作。 如果應用程式離線，資料會儲存在裝置上，並在應用程式上線時與伺服器同步。
 
-### 使用AEM Forms工作流的带服务器的AEM Forms应用程序 {#aem-forms-app-with-servers-using-aem-forms-workflow}
+### 搭配使用AEM Forms工作流程的伺服器的AEM Forms應用程式 {#aem-forms-app-with-servers-using-aem-forms-workflow}
 
-如果您有AEM Forms Workflow服务器，则可以在AEM Forms应用程序中将表单渲染为任务。 例如，您经营一家银行公司，客户填写申请表以使用您的服务。 应用程序是一个自适应表单，它接受来自客户的信息，并将其存储为提交以供审核。 管理员审查申请并将验证请求转发给现场工作人员。 转发的应用程序将启用现场工作人员应用程序中的验证表单作为任务。 您的现场工作人员将移动设备带给您的客户并验证详细信息。
+如果您有AEM Forms Workflow伺服器，則可在AEM Forms應用程式中將表單轉譯為任務。 例如，您經營一家銀行公司，而客戶填寫應用程式來使用您的服務。 應用程式是調適型表單，可接受客戶的資訊，並將其儲存為提交以供稽核。 管理員會檢閱應用程式，並將驗證請求轉寄給現場工作人員。 轉送的應用程式會在您的現場工作人員的應用程式中啟用驗證表單作為任務。 您的現場工作人員會將行動裝置帶給您的客戶，並驗證詳細資訊。
 
-### 在OSGi上使用以Forms为中心的工作流的带有服务器的AEM Forms应用程序 {#aem-forms-app-with-servers-using-forms-centric-workflow-on-osgi}
+### 在OSGi上使用以Forms為中心的工作流程的伺服器的AEM Forms應用程式 {#aem-forms-app-with-servers-using-forms-centric-workflow-on-osgi}
 
-如果您有AEM Forms服务器，则可以在AEM Forms应用程序中将Adaptive Forms渲染为AEM收件箱应用程序和任务。 例如，您经营一家银行公司，客户填写申请表以使用您的服务。 该应用程序与自适应表单相关联，该表单接受来自客户的信息，并将其存储为提交以供审核。 管理员审阅任务并批准现场工作人员的验证请求。 您的现场工作人员将移动设备带给您的客户并验证详细信息。
+如果您有AEM Forms伺服器，可以將最適化表單轉譯為AEM收件匣應用程式，以及轉譯AEM Forms應用程式中的工作。 例如，您經營一家銀行公司，而客戶填寫應用程式來使用您的服務。 應用程式與最適化表單相關聯，該表單接受來自客戶的資訊，並將其儲存為提交以供稽核。 管理員複查任務並核准現場工作人員的驗證請求。 您的現場工作人員會將行動裝置帶給您的客戶，並驗證詳細資訊。
 
-### 独立表单或带服务器的AEM Forms应用程序(无AEM Forms Workflow) {#standalone-forms-or-aem-forms-app-with-servers-without-aem-forms-workflow}
+### 獨立表單或AEM Forms應用程式(含無AEM Forms工作流程的伺服器) {#standalone-forms-or-aem-forms-app-with-servers-without-aem-forms-workflow}
 
-未使用AEM Forms Workflow的AEM Forms服务器是OSGi上的AEM Forms，或者是独立的移动表单或自适应表单。 AEM Forms应用程序可在以下位置与您的AEM Forms实施配合使用： [osgi](/help/sites-deploying/configuring-osgi.md). 您为AEM Forms应用程序启用和发布的Forms在应用程序中可用。
+未使用AEM Forms Workflow的AEM Forms伺服器是OSGi上的AEM Forms，或是獨立行動表單或最適化表單。 AEM Forms應用程式可搭配您的AEM Forms實作用於 [osgi](/help/sites-deploying/configuring-osgi.md). 您為AEM Forms應用程式啟用和發佈的Forms可在您的應用程式中使用。
 
-这些表单将在您的应用程序中下载，并可离线使用。 例如，您正在运行一家银行公司，客户在您的网站上填写申请。 应用程序是一个自适应表单，它接受来自客户的信息并将其存储以供审查。 管理员审阅表单，并在AEM创作实例中创建验证表单。 管理员可以启用表单与AEM Forms应用程序的同步功能，并将其发布。 如果AEM Forms应用程序中提供了验证表单，则您的字段代理可以使用移动设备来验证客户的详细信息。 移动设备将与服务器同步，并且验证表单将加载到应用程序中。 您的现场代理可以访问您的客户、验证详细信息、将数据另存为草稿或提交验证表。 只要应用程序处于联机状态，该表单就会与服务器同步。
+這些表單會從您的應用程式下載，並可離線使用。 例如，您正在執行銀行公司，而客戶在您的網站上填寫應用程式。 應用程式是調適型表單，可接受客戶的資訊，並將其儲存以供稽核。 管理員會稽核表單，並在AEM編寫執行個體中建立驗證表單。 管理員可讓表單與AEM Forms應用程式同步，並予以發佈。 如果AEM Forms應用程式中有驗證表單，您的欄位代理程式可使用行動裝置來驗證客戶的詳細資料。 行動裝置與伺服器同步，且驗證表單已載入應用程式中。 您的欄位代理可以造訪您的客戶、驗證詳細資訊、將資料儲存為草稿，或提交驗證表單。 只要應用程式上線，表單就會與伺服器同步。
 
-要在AEM Forms应用程序中同步表单，请执行以下操作：
+若要在AEM Forms應用程式中同步處理您的表單：
 
-1. 在创作实例中，选择一个表单，然后单击 **[!UICONTROL 查看属性]**.
+1. 在製作執行個體中，選取表單，然後按一下 **[!UICONTROL 檢視屬性]**.
 
-1. 在属性页面中，单击 **[!UICONTROL 高级]**.
-1. 在高级下，启用选项： **[!UICONTROL 与AEM Forms应用程序同步]** 并点按 **[!UICONTROL 保存]**.
+1. 在屬性頁面中，按一下 **[!UICONTROL 進階]**.
+1. 在進階下，啟用選項： **[!UICONTROL 與AEM Forms應用程式同步]** 並點選 **[!UICONTROL 儲存]**.
 
-发布表单后，应用程序会与服务器同步并提取表单。 要同步多个表单，请在创作实例中，选择表单管理器中的多个表单并点按 **[!UICONTROL 与AEM Forms应用程序同步]**.
+發佈表單時，應用程式會與伺服器同步並擷取表單。 若要同步處理多個表單，請在作者執行個體中，選取表單管理員中的多個表單，然後點選 **[!UICONTROL 與AEM Forms應用程式同步]**.
 
-## 移动设备支持 {#mobile-device-support}
+## 行動裝置支援 {#mobile-device-support}
 
-参见 [AEM Forms应用程序（以前称为移动工作区）](/help/forms/using/aem-forms-jee-supported-platforms.md#aem-forms-workspace-app)
+另請參閱 [AEM Forms應用程式（先前稱為行動工作區）](/help/forms/using/aem-forms-jee-supported-platforms.md#aem-forms-workspace-app)
 
-## AEM Forms应用程序的主要功能 {#key-features-of-aem-forms-app}
+## AEM Forms應用程式的主要功能 {#key-features-of-aem-forms-app}
 
-### AEM Forms应用程序与AEM Forms服务器 {#aem-forms-app-with-aem-forms-servers}
+### 具有AEM Forms伺服器的AEM Forms應用程式 {#aem-forms-app-with-aem-forms-servers}
 
-您可以将应用程序与AEM Forms服务器同步，并可以在移动设备上处理表单。
+您可以將應用程式與AEM Forms伺服器同步，並可在行動裝置上使用表單。
 
-使用AEM Forms Workflow Server，可以将表单与Workbench进程和AEM收件箱应用程序中的起点关联。 AEM收件箱应用程序可以具有与其关联的自适应表单。 起点可以具有自适应表单、HTML5表单或与其关联的表单集。 起点可以作为任务提交，也可以将任务另存为草稿。 有关AEM收件箱应用程序与起点之间差异的更多信息，请参阅 [OSGi和AEM Forms JEE工作流中以表单为中心的AEM工作流的操作和功能](capabilities-osgi-jee-workflows.md).
+使用AEM Forms Workflow伺服器時，表單可以與Workbench程式和AEM收件匣應用程式中的起點相關聯。 AEM收件匣應用程式可以有與其關聯的最適化表單。 起點可以有一個最適化表單、HTML5表單或與之關聯的表單集。 起點可作為任務提交，或任務可儲存為草稿。 如需AEM收件匣應用程式與起點之間差異的詳細資訊，請參閱 [表單中心AEM工作流程在OSGi和AEM Forms JEE工作流程上的動作和功能](capabilities-osgi-jee-workflows.md).
 
-对于不具有AEM Forms工作流的AEM Forms服务器，应用程序中启用同步的表单将在AEM Forms应用程序中渲染。 Forms在应用程序的Forms选项卡中可用，可以提交或另存为草稿。 应用程序支持自适应表单和移动表单。
+在沒有AEM Forms工作流程的AEM Forms伺服器上，啟用於應用程式中同步的表單會在AEM Forms應用程式中轉譯。 Forms可在應用程式的Forms標籤中使用，可提交或儲存為草稿。 應用程式支援最適化表單和行動表單。
 
-1. **将任务或表单另存为草稿**
+1. **將任務或表單儲存為草稿**
 
-   另存为草稿选项保存任务或表单的快照，以及相关表单中填写的数据和附加的文件。 草稿将保存到移动设备并与AEM Forms服务器同步，以供日后检索。
+   另存為草稿選項可儲存任務或表單的快照，以及相關表單中填寫的資料和附加的檔案。 草稿會儲存至行動裝置並與AEM Forms伺服器同步，以供稍後擷取。
 
-   参见 [将任务或表单另存为草稿](/help/forms/using/save-as-draft.md).
+   另請參閱 [將任務或表單儲存為草稿](/help/forms/using/save-as-draft.md).
 
-1. **将表单另存为模板**
+1. **將表單另存為範本**
 
-   有时，当用户填写表单时，对几个字段的输入将保持不变。 对于这种情况，您可以填写每个实例中需要相同值的字段，并将表单或草稿另存为模板。 现在，每次创建模板实例时，指定的字段都已填充了模板中指定的值。 这有助于节省填写表单所需的时间和精力。
+   有時，使用者填寫表單時，對幾個欄位的輸入會維持不變。 對於這類例項，您可以填寫每個例項中需要相同值的欄位，並將表單或草稿另存為範本。 現在，每次您建立範本的執行個體時，指定的欄位已填入範本中指定的值。 它有助於您節省填寫表單所需的時間和精力。
 
-   参见 [将表单另存为模板](/help/forms/using/save-forms-and-start-points-as-templates.md).
+   另請參閱 [將表單另存為範本](/help/forms/using/save-forms-and-start-points-as-templates.md).
 
-### 使用任务和表单 {#working-with-tasks-and-forms}
+### 使用任務和表單 {#working-with-tasks-and-forms}
 
-您可以将应用程序与AEM Forms Workflow服务器同步，并可以在移动设备上处理任务和表单。
+您可以將應用程式與AEM Forms Workflow伺服器同步，並可在行動裝置上處理任務和表單。
 
-移动设备上的任务包含自适应表单、HTML5表单或表单集，并且还可以包含附件和 [摘要URL](/help/forms/using/getting-task-variables-summary-url.md). 默认情况下，分配给您的任务将放在 **[!UICONTROL 任务]** 文件夹。 处理任务时，您可以更改任务并在AEM Forms服务器上保存任务的草稿副本。
+行動裝置上的任務包含最適化表單、HTML5表單或表單集，也可以包含附件和 [摘要URL](/help/forms/using/getting-task-variables-summary-url.md). 依預設，指派給您的任務會放在 **[!UICONTROL 任務]** 資料夾。 處理任務時，您可以變更任務並在AEM Forms伺服器上儲存任務的草稿副本。
 
-移动设备上的表单可以是自适应表单或移动表单。 Forms文件夹中提供了在表单应用程序中启用同步的Forms。 您可以同步在AEM Forms服务器中启用的表单，而无需使用AEM Forms工作流(OSGi上的AEM Forms)。
+行動裝置上的表單可以是最適化表單或行動表單。 Forms資料夾中提供已在表單應用程式中啟用同步的Forms。 您可以同步在AEM Forms伺服器中啟用的表單，而無需AEM Forms工作流程(OSGi上的AEM Forms)。
 
 请参阅：
 
-* [打开任务](/help/forms/using/open-task.md)
-* [使用表单](/help/forms/using/working-with-form.md)
+* [開啟任務](/help/forms/using/open-task.md)
+* [使用表單](/help/forms/using/working-with-form.md)
 
-### 脱机工作 {#working-offline}
+### 離線工作 {#working-offline}
 
-您可以在脱机模式下使用移动设备。 即使没有网络连接，您也可以登录到应用程序，并可以使用上次联机时与设备同步的所有表单。 有关如何同步表单的详细信息，请参阅 [同步应用程序](/help/forms/using/sync-app.md). 如果选择同步与表单关联的附件，则也可以在脱机模式下打开附件。 您可以在脱机模式下编辑表单、添加注释、提交或保存表单。 表单会在您下次联机时与AEM Forms服务器同步。
+您可以在離線模式下使用行動裝置。 即使沒有網路連線，您也可以登入應用程式，並可處理上次連線時與裝置同步處理的所有表單。 如需如何同步化表單的詳細資訊，請參閱 [同步應用程式](/help/forms/using/sync-app.md). 如果您選擇同步化與表單相關聯的附件，您也可以在離線模式下開啟附件。 您可以在離線模式中編輯表單、新增註解，以及提交或儲存表單。 下次您上線時，表單會與AEM Forms伺服器同步。
 
-有关详细信息，请参阅 [在脱机模式下工作](/help/forms/using/work-offline-mode.md).
+如需詳細資訊，請參閱 [在離線模式下工作](/help/forms/using/work-offline-mode.md).
 
-### 添加注释 {#adding-annotations}
+### 新增註解 {#adding-annotations}
 
-您可以将以下附件添加到移动设备上的表单中
+您可以將下列附件新增至行動裝置上的表單
 
-* **注释** — 可以使用注释功能在表单中添加手绘涂鸦或文本注释。 有关详细信息，请参阅 [添加注释](/help/forms/using/add-attachments.md#adding-a-note).
+* **附註** — 您可以使用「附註」功能，在表單中新增手繪塗鴉或文字附註。 如需詳細資訊，請參閱 [新增附註](/help/forms/using/add-attachments.md#adding-a-note).
 
-* **图片**- AEM Forms应用程序包含的一项功能使用了摄像头功能或移动设备的图片库。 使用照片附件，可以添加带有相关表单的照片。 有关详细信息，请参阅 [添加照片](/help/forms/using/add-attachments.md#adding-a-photograph).
+* **圖片**- AEM Forms應用程式包含的一項功能會使用相機功能或行動裝置的收藏館。 使用像片附件，您可以新增像片及相關的表單。 如需詳細資訊，請參閱 [新增像片](/help/forms/using/add-attachments.md#adding-a-photograph).
 
-### 自动保存 {#autosave}
+### 自動儲存 {#autosave}
 
-当用户在AEM Forms应用程序中输入数据时，自动保存功能会定期保存数据。 AEM Forms应用程序中的自动保存功能可帮助您避免因电池电量不足等原因导致应用程序关闭而造成的数据丢失。
+當使用者在AEM Forms應用程式中輸入資料時，自動儲存功能會定期儲存。 AEM Forms應用程式中的自動儲存功能可協助您避免因電池電量不足等狀況而關閉應用程式時造成資料遺失。
 
-参见 [在AEM Forms应用程序中使用自动保存](/help/forms/using/autosave-data-app.md).
+另請參閱 [在AEM Forms應用程式中使用自動儲存](/help/forms/using/autosave-data-app.md).
 
-## AEM收件箱和AEM Forms应用程序功能之间的差异 {#differences-between-aem-inbox-and-aem-forms-app-features}
+## AEM收件匣和AEM Forms應用程式功能之間的差異 {#differences-between-aem-inbox-and-aem-forms-app-features}
 
-启动以Forms为中心的工作流的两种主要方法是 [AEM收件箱](/help/forms/using/manage-applications-inbox.md) 和AEM Forms应用程序。 但是，AEM收件箱和AEM Forms应用程序的功能有所不同。 AEM收件箱仅适用于 [以Forms为中心的工作流](/help/forms/using/aem-forms-workflow.md) 而AEM Forms应用程序可同时使用以Forms为中心的工作流和流程管理。 有关AEM收件箱与AEM Forms应用程序功能之间差异的更多信息，请参阅 [OSGi和AEM Forms JEE工作流中以表单为中心的AEM工作流的操作和功能](capabilities-osgi-jee-workflows.md).
+啟動以Forms為中心的工作流程有兩個顯著的方法，就是 [AEM收件匣](/help/forms/using/manage-applications-inbox.md) 和AEM Forms應用程式。 但AEM收件匣和AEM Forms應用程式的功能有所不同。 AEM收件匣僅適用於 [以Forms為中心的工作流程](/help/forms/using/aem-forms-workflow.md) 而AEM Forms應用程式可搭配以Forms為中心的工作流程及程式管理運作。 如需AEM收件匣與AEM Forms應用程式功能之間差異的詳細資訊，請參閱 [表單中心AEM工作流程在OSGi和AEM Forms JEE工作流程上的動作和功能](capabilities-osgi-jee-workflows.md).
 
-## 支持的表单 {#supported-forms}
+## 支援的表單 {#supported-forms}
 
-AEM Forms应用程序中支持的表单类型：
+AEM Forms應用程式支援的表單型別：
 
 ### 自适应表单 {#adaptive-form}
 
-AEM Forms应用程序支持可动态适应用户输入的自适应表单。 还支持延迟加载的自适应表单。
+AEM Forms應用程式支援動態調整以符合使用者輸入的最適化表單。 也支援延遲載入的最適化表單。
 
-### 移动表单 {#mobile-form}
+### 行動表單 {#mobile-form}
 
-您可以在AEM Forms中为移动设备创建表单。 移动表单在根据显示设备调整的移动设备中呈现为HTML表单。
+您可以在AEM Forms中建立行動裝置的表單。 行動表單會在行動裝置中呈現為HTML表單，且會根據顯示裝置進行調整。
 
 ### 表单集 {#formset}
 
-使用表单集，可以分组与服务或流程相关的多个表单以自动化业务流程，并将它们呈现给最终用户。 在此类场景中，用户可以作为一个整体填写整个表单集，而无需文件、提交和跟踪单个表单或流程。
+使用表單集，可以分組與服務或流程相關的多個表單，以自動化業務流程並向終端使用者呈現。 在這種情況下，使用者可以完整填寫整個集合，而且不需要檔案、提交和追蹤個別表單或流程。
 
 >[!NOTE]
 >
 >需要AEM Forms工作流程(JEE上的AEM Forms)。
 
-## AEM Forms应用程序的工作原理 {#how-aem-forms-app-works}
+## AEM Forms應用程式的運作方式 {#how-aem-forms-app-works}
 
-AEM Forms应用程序为现场工作人员提供移动解决方案，以处理分配给他们的表单。 该应用程序从服务器缓存完整数据，并通过将所有工作保存在本地来提供高效的用户体验。 通过及时的同步更新将磁盘中的数据发送到服务器。
+AEM Forms應用程式為現場工作人員提供行動解決方案，以處理指派給他們的表單。 應用程式會從伺服器快取完整資料，並將所有工作儲存在本機，以提供有效率的使用者體驗。 磁碟中的資料會透過即時同步更新傳送至伺服器。
 
-AEM Forms应用程序是基于PhoneGap 5.0的应用程序，其中骨干模型可以有效地用于通过视图呈现存储在模型中的数据。 所有本机操作均通过PhoneGap插件执行。
+AEM Forms應用程式是以PhoneGap 5.0為基礎的應用程式，其中骨幹模式可透過檢視有效用於呈現儲存在模式中的資料。 所有原生作業都是透過PhoneGap外掛程式執行。
 
-## 自定义、构建和分发AEM Forms应用程序 {#customize-build-distribute}
+## 自訂、建置和分發AEM Forms應用程式 {#customize-build-distribute}
 
 >[!NOTE]
 >
->仅当您使用AEM Forms应用程序源代码构建应用程序时适用。
+>僅適用於使用AEM Forms應用程式原始碼來建立應用程式時。
 
-AEM Forms应用程序可轻松根据组织的特定需求进行自定义。 应用程序的源代码与AEM Forms一起提供。 您可以更改源代码并构建自己的移动工作人员解决方案。 您还可以使用自己的企业密钥对应用程序进行签名。
+AEM Forms應用程式可輕鬆根據組織特定需求自訂。 應用程式的原始碼會與AEM Forms一併提供。 您可以變更原始程式碼，並建立自己的行動工作者解決方案。 您也可以使用自己的企業金鑰簽署應用程式。
 
 ### 自定义 {#customize}
 
-您可以针对以下项目自定义您的应用程序：
+您可以針對下列專案自訂您的應用程式：
 
-**品牌化**：更改AEM Forms应用程序中的应用程序图标、应用程序名称、启动图像和页面。 您还可以更改文本以将应用程序本地化到特定区域。 有关品牌化AEM Forms应用程序的更多信息，请参阅 [品牌化自定义](/help/forms/using/branding-customization.md).
+**品牌化**：變更應用程式圖示、應用程式名稱、啟動影像和AEM Forms應用程式中的頁面。 您也可以變更文字，將特定地區的應用程式當地語系化。 如需品牌化AEM Forms應用程式的詳細資訊，請參閱 [品牌自訂](/help/forms/using/branding-customization.md).
 
-**主题**：在AEM Forms应用程序用户界面中更改颜色、字体和间距等样式。 有关更多信息，请参阅 [主题自定义](/help/forms/using/theme-customization.md).
+**主題**：在AEM Forms應用程式使用者介面中變更樣式，例如顏色、字型和間距。 如需詳細資訊，請參閱 [佈景主題自訂](/help/forms/using/theme-customization.md).
 
-**笔势**：更改AEM Forms应用程序用户界面中的手势，例如向右轻扫和向左轻扫。 有关更多信息，请参阅 [手势自定义](/help/forms/using/gesture-customization.md).
+**手勢**：變更手勢，例如在AEM Forms應用程式使用者介面中向右撥和向左撥動。 如需詳細資訊，請參閱 [手勢自訂](/help/forms/using/gesture-customization.md).
 
-有关设置AEM Forms应用程序项目以进行自定义的更多信息，请参阅：
+如需設定AEM Forms應用程式專案以進行自訂的詳細資訊，請參閱：
 
-* [为AEM Forms应用程序设置环境](/help/forms/using/setup-environment-mobile-workspace.md)
-* [设置Visual Studio项目并构建Windows应用程序](/help/forms/using/setup-visual-studio-project-build-installer.md)
-* [设置Xcode项目并构建iOS应用程序](/help/forms/using/setup-xcode-project-build-installer.md)
-* [设置Eclipse项目并构建Android应用程序](/help/forms/using/setup-eclipse-project-build-installer.md)
+* [設定AEM Forms應用程式的環境](/help/forms/using/setup-environment-mobile-workspace.md)
+* [設定Visual Studio專案並建置Windows應用程式](/help/forms/using/setup-visual-studio-project-build-installer.md)
+* [設定Xcode專案並建置iOS應用程式](/help/forms/using/setup-xcode-project-build-installer.md)
+* [設定Eclipse專案並建置Android應用程式](/help/forms/using/setup-eclipse-project-build-installer.md)
 
-### 构建和分发 {#build-and-distribute}
+### 建置和散佈 {#build-and-distribute}
 
-AEM Forms应用程序的源代码可从提取 `adobe-lc-mobileworkspace-src.zip` 它作为Software Distribution上AEM Forms应用程序源包的一部分提供。
+AEM Forms應用程式的原始程式碼可從 `adobe-lc-mobileworkspace-src.zip` 這可作為Software Distribution上AEM Forms應用程式來源套件的一部分。
 
-要获取AEM Forms应用程序源，请执行以下步骤：
+若要取得AEM Forms應用程式來源，請執行下列步驟：
 
 1. 打开 [Software Distribution](https://experience.adobe.com/downloads)。您需要 Adobe ID 才能登录 Software Distribution。
 1. 点按标题菜单中的 **[!UICONTROL Adobe Experience Manager]**。
-1. 在 **[!UICONTROL 筛选器]** 部分：
-   1. 选择 **[!UICONTROL Forms]** 从 **[!UICONTROL 解决方案]** 下拉列表。
-   2. 选择包的版本和类型。 您还可以使用 **[!UICONTROL 搜索下载]** 用于筛选结果的选项。
-1. 点按适用于您的操作系统的包名称，然后选择 **[!UICONTROL 接受EULA条款]**，然后点按 **[!UICONTROL 下载]**.
+1. 在 **[!UICONTROL 篩選器]** 區段：
+   1. 選取 **[!UICONTROL Forms]** 從 **[!UICONTROL 解決方案]** 下拉式清單。
+   2. 選取套件的版本和型別。 您也可以使用 **[!UICONTROL 搜尋下載]** 篩選結果的選項。
+1. 點選適用於您的作業系統的套件名稱，然後選取 **[!UICONTROL 接受EULA條款]**，然後點選 **[!UICONTROL 下載]**.
 1. 打开[包管理器](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html)，并单击&#x200B;**[!UICONTROL 上传包]**&#x200B;以上传包。
-1. 选择资源包并单击 **[!UICONTROL 安装]**.
+1. 選取套件並按一下 **[!UICONTROL 安裝]**.
 
-**对于iOS**：
+**適用於iOS**：
 
-有关如何创建iOS应用程序(.ipa)的详细信息，请参阅 [设置Xcode项目并构建iOS应用程序](/help/forms/using/setup-xcode-project-build-installer.md).
+如需如何建立iOS應用程式(.ipa)的詳細資訊，請參閱 [設定Xcode專案並建置iOS應用程式](/help/forms/using/setup-xcode-project-build-installer.md).
 
-有关如何使用配置配置文件对AEM Forms应用程序进行签名的详细信息，请参阅 [iOS代码签名设置、流程和故障排除](https://developer.apple.com/support/code-signing/).
+如需如何使用布建設定檔簽署AEM Forms應用程式的詳細資訊，請參閱 [iOS程式碼簽署設定、處理和疑難排解](https://developer.apple.com/support/code-signing/).
 
-**适用于Android**：
+**適用於Android**：
 
-有关如何创建Android应用程序(.apk)的详细信息，请参阅 [设置Eclipse项目并构建Android应用程序](/help/forms/using/setup-eclipse-project-build-installer.md).
+如需如何建立Android應用程式(.apk)的詳細資訊，請參閱 [設定Eclipse專案並建置Android應用程式](/help/forms/using/setup-eclipse-project-build-installer.md).
 
-有关如何对AEM Forms应用程序进行签名的详细信息，请参阅 [对应用程序进行签名](https://developer.android.com/tools/publishing/app-signing.html).
+如需如何簽署AEM Forms應用程式的詳細資訊，請參閱 [簽署您的應用程式](https://developer.android.com/tools/publishing/app-signing.html).
 
-**对于Windows**：
+**適用於Windows**：
 
-有关如何创建Windows应用程序(.appx)的详细信息，请参阅 [设置Visual Studio项目并构建Windows应用程序](/help/forms/using/setup-visual-studio-project-build-installer.md).
+如需有關如何建立Windows應用程式(.appx)的詳細資訊，請參閱 [設定Visual Studio專案並建置Windows應用程式](/help/forms/using/setup-visual-studio-project-build-installer.md).
 
-有关如何通过MDM分发应用程序的详细信息，请参阅 [分发AEM Forms应用程序](/help/forms/using/distribute-mobile-workspace-app.md). 通过MDM分发的应用程序仅适用于iOS和Android。
+如需如何透過MDM發佈應用程式的詳細資訊，請參閱 [發佈AEM Forms應用程式](/help/forms/using/distribute-mobile-workspace-app.md). 透過MDM發佈的應用程式僅適用於iOS和Android。
 
-## Recommendations将移动工作区升级到AEM Forms应用程序 {#recommendations-to-upgrade-mobile-workspace-to-aem-forms-app}
+## Recommendations可將Mobile Workspace升級至AEM Forms應用程式 {#recommendations-to-upgrade-mobile-workspace-to-aem-forms-app}
 
-如果您要升级到最新版本的AEM Forms应用程序，请确保您已阅读以下要点：
+如果您要升級至最新版AEM Forms應用程式，請務必詳閱下列要點：
 
-* **如果您从Android上的Play Store安装了应用程序的早期版本**
-您可以直接从Play Store升级应用程序。
+* **如果您從Android上的Play Store安裝舊版應用程式**
+您可以直接從Play Store升級應用程式。
 
-* **如果使用源代码构建和安装应用程序的早期版本(适用于iOS和Android)**：
+* **如果使用原始程式碼建置和安裝應用程式的舊版(適用於iOS和Android)**：
 
-   在安装新应用程序之前，请将所有数据与AEM Forms服务器同步。 数据同步后，请卸载应用程序的早期版本，然后安装新的应用程序。
+   安裝新應用程式之前，請先將所有資料與AEM Forms伺服器同步。 資料同步後，請解除安裝舊版應用程式，然後安裝新應用程式。

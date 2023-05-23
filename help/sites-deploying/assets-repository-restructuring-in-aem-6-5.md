@@ -1,7 +1,7 @@
 ---
-title: AEM 6.5中的Assets存储库重组
+title: AEM 6.5中的資產存放庫重組
 seo-title: Assets Repository Restructuring in AEM 6.5
-description: 了解如何进行必要的更改，以便迁移到AEM 6.5 for Assets中的新存储库结构。
+description: 瞭解如何進行必要的變更，以移轉至AEM 6.5 for Assets中的新存放庫結構。
 seo-description: Learn how to make the necessary changes in order to migrate to the new repository structure in AEM 6.5 for Assets.
 uuid: 0e3d8163-6274-4d1b-91c7-32ca927fb83c
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -17,33 +17,33 @@ ht-degree: 2%
 
 ---
 
-# AEM 6.5中的Assets存储库重组 {#assets-repository-restructuring-in-aem}
+# AEM 6.5中的資產存放庫重組 {#assets-repository-restructuring-in-aem}
 
-如父项中所述 [AEM 6.5中的存储库重组](/help/sites-deploying/repository-restructuring.md) 页面，升级到AEM 6.5的客户应使用此页面评估与影响AEM Assets解决方案的存储库更改相关的工作量。 在AEM 6.5升级过程中，有些更改需要您投入精力，而有些则可能会推迟到将来升级。
+如父項所述 [AEM 6.5中的存放庫重組](/help/sites-deploying/repository-restructuring.md) 頁面，升級至AEM 6.5的客戶應使用此頁面評估與影響AEM Assets解決方案的存放庫變更相關的工作量。 有些變更需要在AEM 6.5升級過程中投入精力，而其他變更則可能延遲到未來升級。
 
-**6.5版升级**
+**6.5版升級**
 
-* [杂项](/help/sites-deploying/assets-repository-restructuring-in-aem-6-5.md#misc)
+* [其他](/help/sites-deploying/assets-repository-restructuring-in-aem-6-5.md#misc)
 
-**在将来升级之前**
+**未來升級之前**
 
-* [资产/收藏集事件电子邮件通知模板](/help/sites-deploying/assets-repository-restructuring-in-aem-6-5.md#asset-collection-event-e-mail-notification-template)
-* [经典资产共享设计](/help/sites-deploying/assets-repository-restructuring-in-aem-6-5.md#classic-asset-share-designs)
-* [下载资源电子邮件通知模板](/help/sites-deploying/assets-repository-restructuring-in-aem-6-5.md#download-asset-e-mail-notification-template)
-* [示例DRM许可证](/help/sites-deploying/assets-repository-restructuring-in-aem-6-5.md#example-drm-licenses)
-* [链接共享电子邮件通知模板](/help/sites-deploying/assets-repository-restructuring-in-aem-6-5.md#link-share-e-mail-notification-template)
-* [InDesign工作流脚本](/help/sites-deploying/assets-repository-restructuring-in-aem-6-5.md#indesign-workflow-scripts)
-* [视频转码配置](/help/sites-deploying/assets-repository-restructuring-in-aem-6-5.md#video-transcoding-configurations)
-* [杂项](/help/sites-deploying/assets-repository-restructuring-in-aem-6-5.md#misc2)
+* [資產/集合事件電子郵件通知範本](/help/sites-deploying/assets-repository-restructuring-in-aem-6-5.md#asset-collection-event-e-mail-notification-template)
+* [傳統資產共用設計](/help/sites-deploying/assets-repository-restructuring-in-aem-6-5.md#classic-asset-share-designs)
+* [下載資產電子郵件通知範本](/help/sites-deploying/assets-repository-restructuring-in-aem-6-5.md#download-asset-e-mail-notification-template)
+* [範例DRM授權](/help/sites-deploying/assets-repository-restructuring-in-aem-6-5.md#example-drm-licenses)
+* [連結共用電子郵件通知範本](/help/sites-deploying/assets-repository-restructuring-in-aem-6-5.md#link-share-e-mail-notification-template)
+* [InDesign工作流程指令碼](/help/sites-deploying/assets-repository-restructuring-in-aem-6-5.md#indesign-workflow-scripts)
+* [視訊轉碼設定](/help/sites-deploying/assets-repository-restructuring-in-aem-6-5.md#video-transcoding-configurations)
+* [其他](/help/sites-deploying/assets-repository-restructuring-in-aem-6-5.md#misc2)
 
-## 6.5版升级 {#with-upgrade}
+## 6.5版升級 {#with-upgrade}
 
-### 杂项 {#misc}
+### 其他 {#misc}
 
 <table>
  <tbody>
   <tr>
-   <td><strong>上一个位置</strong></td>
+   <td><strong>上一個位置</strong></td>
    <td>/etc/dam/jobs</td>
   </tr>
   <tr>
@@ -51,8 +51,8 @@ ht-degree: 2%
    <td>/var/dam/jobs</td>
   </tr>
   <tr>
-   <td><strong>重构指南</strong></td>
-   <td><p>如果有任何自定义代码依赖于此位置(即 代码明确依赖于此路径)，然后必须在升级之前更新代码以使用新位置；理想情况下，使用Java API在可用时减少对JCR中任何特定路径的依赖性。</p> <p>保存zip文件以供客户端下载的临时位置。 客户端请求下载资产后，无需更新。 它将在新位置生成文件。</p> </td>
+   <td><strong>重組指引</strong></td>
+   <td><p>如果有任何自訂程式碼依存於此位置(即 程式碼明確依賴此路徑)，然後必須在升級前更新程式碼以使用新位置；理想情況下，當可用時使用Java API，以減少對JCR中任何特定路徑的依賴。</p> <p>用於儲存使用者端下載之zip檔案的暫存位置。 使用者端要求下載資產後，就不需要更新。 它會在新位置產生檔案。</p> </td>
   </tr>
   <tr>
    <td><strong>注释</strong></td>
@@ -61,14 +61,14 @@ ht-degree: 2%
  </tbody>
 </table>
 
-## 在将来升级之前 {#prior-to-upgrade}
+## 未來升級之前 {#prior-to-upgrade}
 
-### 资产/收藏集事件电子邮件通知模板 {#asset-collection-event-e-mail-notification-template}
+### 資產/集合事件電子郵件通知範本 {#asset-collection-event-e-mail-notification-template}
 
 <table>
  <tbody>
   <tr>
-   <td><strong>上一个位置</strong></td>
+   <td><strong>上一個位置</strong></td>
    <td><code>/etc/notification/email/default</code></td>
   </tr>
   <tr>
@@ -76,16 +76,16 @@ ht-degree: 2%
    <td><p><code>/libs/settings/dam/notification</code></p> <p><code>/apps/settings/dam/notification</code></p> </td>
   </tr>
   <tr>
-   <td><strong>重构指南</strong></td>
-   <td><p>如果客户修改了电子邮件模板，请执行以下操作以与新的存储库结构保持一致：</p>
+   <td><strong>重組指引</strong></td>
+   <td><p>如果客戶修改了電子郵件範本，則請執行下列動作以符合新的存放庫結構：</p>
     <ol>
-     <li>此 <code>/libs/settings/dam/notification</code> 电子邮件模板复制自 <strong><code>/etc/notification/email/default</code></strong> 到 <strong><code>/apps/settings/notification/email/default</code></strong>
+     <li>此 <code>/libs/settings/dam/notification</code> 電子郵件範本複製自 <strong><code>/etc/notification/email/default</code></strong> 至 <strong><code>/apps/settings/notification/email/default</code></strong>
       <ol>
-       <li>因为目标位于<strong> <code>/apps</code></strong> 此更改应保留在SCM中。</li>
+       <li>因為目的地位於<strong> <code>/apps</code></strong> 此變更應保留在SCM中。</li>
       </ol> </li>
-     <li>删除文件夹： <strong><code>/etc/dam/notification/email/default</code></strong> 中的电子邮件模板移动之后。<br />
+     <li>移除資料夾： <strong><code>/etc/dam/notification/email/default</code></strong> 移動內的電子郵件範本後。<br />
       <ol>
-       <li>如果未对下的电子邮件模板进行更新<strong> <code>/etc/notification/email/default</code></strong>，可删除该文件夹，因为下方存在原始电子邮件模板 <strong><code>/libs/settings/notification/email/default</code></strong> 作为AEM 4安装的一部分。</li>
+       <li>如果未更新下的電子郵件範本<strong> <code>/etc/notification/email/default</code></strong>，資料夾可以移除，因為原始電子郵件範本存在於 <strong><code>/libs/settings/notification/email/default</code></strong> 作為AEM 4安裝的一部分。</li>
       </ol> </li>
     </ol> </td>
   </tr>
@@ -96,12 +96,12 @@ ht-degree: 2%
  </tbody>
 </table>
 
-### 经典资产共享设计 {#classic-asset-share-designs}
+### 傳統資產共用設計 {#classic-asset-share-designs}
 
 <table>
  <tbody>
   <tr>
-   <td><strong>上一个位置</strong></td>
+   <td><strong>上一個位置</strong></td>
    <td><code>/etc/designs/assetshare</code></td>
   </tr>
   <tr>
@@ -109,15 +109,15 @@ ht-degree: 2%
    <td><p><code>/libs/settings/wcm/designs/assetshare</code></p> <p><code>/apps/settings/wcm/designs/assetshare</code></p> </td>
   </tr>
   <tr>
-   <td><strong>重构指南</strong></td>
-   <td><p>对于在SCM中管理并且未在运行时通过“设计”对话框写入的任何设计，请执行以下操作以与最新模型对齐：</p>
+   <td><strong>重組指引</strong></td>
+   <td><p>對於在SCM中管理且未在執行階段透過「設計」對話方塊寫入的任何設計，請執行下列動作以對齊最新模型：</p>
     <ol>
-     <li>将设计从“上一位置”复制到“下的新位置” <code>/apps</code>.</li>
-     <li>将设计中的任何CSS、JavaScript和静态资源转换为 <a href="/help/sites-developing/clientlibs.md#creating-client-library-folders" target="_blank">客户端库</a> 替换为 <code>allowProxy = true</code>.</li>
-     <li>更新对中先前位置的引用 <code>cq:designPath</code> 属性路径 <strong>AEM &gt; DAM管理员&gt;资产共享页面&gt;页面属性&gt;高级选项卡&gt;设计字段</strong>.</li>
-     <li>更新任何引用以前位置的页面以使用新的客户端库类别。 这需要更新页面实施代码。</li>
-     <li>更新Dispatcher规则以允许通过提供客户端库 <code>/etc.clientlibs/</code> 代理servlet。</li>
-    </ol> <p>对于未在SCM中管理并通过设计对话框修改运行时的任何设计，请勿将可创作设计移出 <code>/etc</code>.</p> </td>
+     <li>將設計從先前位置複製到下的新位置 <code>/apps</code>.</li>
+     <li>將設計中的任何CSS、JavaScript和靜態資源轉換為 <a href="/help/sites-developing/clientlibs.md#creating-client-library-folders" target="_blank">使用者端資源庫</a> 替換為 <code>allowProxy = true</code>.</li>
+     <li>更新中先前位置的參照 <code>cq:designPath</code> 屬性透過 <strong>AEM &gt; DAM管理員&gt;資產共用頁面&gt;頁面屬性&gt;進階標籤&gt;設計欄位</strong>.</li>
+     <li>更新任何參考先前位置的頁面，以使用新的使用者端資料庫類別。 這需要更新頁面實作程式碼。</li>
+     <li>更新Dispatcher規則，以允許透過提供使用者端程式庫 <code>/etc.clientlibs/</code> Proxy servlet。</li>
+    </ol> <p>對於任何未在SCM中管理的設計以及透過「設計」對話方塊修改的執行時間，請勿將可授權設計移出 <code>/etc</code>.</p> </td>
   </tr>
   <tr>
    <td><strong>注释</strong></td>
@@ -126,12 +126,12 @@ ht-degree: 2%
  </tbody>
 </table>
 
-### 下载资源电子邮件通知模板 {#download-asset-e-mail-notification-template}
+### 下載資產電子郵件通知範本 {#download-asset-e-mail-notification-template}
 
 <table>
  <tbody>
   <tr>
-   <td><strong>上一个位置</strong></td>
+   <td><strong>上一個位置</strong></td>
    <td><code>/etc/dam/workflow/notification/email/downloadasset</code></td>
   </tr>
   <tr>
@@ -139,40 +139,40 @@ ht-degree: 2%
    <td><p><code>/libs/settings/dam/workflownotification/email/downloadasset</code></p> <p><code>/apps/settings/dam/workflownotification/email/downloadasset</code></p> </td>
   </tr>
   <tr>
-   <td><strong>重构指南</strong></td>
-   <td><p>如果电子邮件模板(<strong>downloadasset</strong> 或 <strong>transientworkflowcompleted</strong>)，然后按照以下步骤操作以调整新结构：</p>
+   <td><strong>重組指引</strong></td>
+   <td><p>如果電子郵件範本(<strong>downloadasset</strong> 或 <strong>transientworkflowcompleted</strong>)，然後依照下列程式操作，以對齊新結構：</p>
     <ol>
-     <li>更新后的电子邮件模板应复制自 <strong><code>/etc/dam/workflow/notification/email/downloadasset</code></strong> 到 <strong><code>/apps/settings/dam/workflow/notification/email/downloadasset</code></strong>
+     <li>更新後的電子郵件範本應複製自 <strong><code>/etc/dam/workflow/notification/email/downloadasset</code></strong> 至 <strong><code>/apps/settings/dam/workflow/notification/email/downloadasset</code></strong>
       <ol>
-       <li>因为目标位于<strong> <code>/apps</code></strong> 此更改应保留在SCM中。</li>
+       <li>因為目的地位於<strong> <code>/apps</code></strong> 此變更應保留在SCM中。</li>
       </ol> </li>
-     <li>删除文件夹： <code>/etc/dam/workflow/notification/email/downloadasset </code>中的电子邮件模板移动之后。<br />
+     <li>移除資料夾： <code>/etc/dam/workflow/notification/email/downloadasset </code>移動內的電子郵件範本後。<br />
       <ol>
-       <li>如果未对下的电子邮件模板进行更新<strong> <code>/etc</code></strong>，可删除该文件夹，因为下存在原始电子邮件模板 <strong><code>/libs/settings/dam/workflownotification/email/downloadasset</code></strong> 作为AEM 6.4安装的一部分。</li>
+       <li>如果未更新下的電子郵件範本<strong> <code>/etc</code></strong>，資料夾可以移除，因為原始電子郵件範本存在於 <strong><code>/libs/settings/dam/workflownotification/email/downloadasset</code></strong> 作為AEM 6.4安裝的一部分。</li>
       </ol> </li>
     </ol> </td>
   </tr>
   <tr>
    <td><strong>注释</strong></td>
-   <td>While <code>/conf/global/settings/dam/workflownotification/email/downloadasset</code> 从技术上讲，支持查找(通过常规Sling CAConfig查找优先于/apps，但优先于 <code>/etc</code>)模板可以放在 <code>/conf/global/settings/dam/workflownotification/email/downloadasset</code>. 但是，不建议这样做，因为没有运行时UI来简化电子邮件模板的编辑。</td>
+   <td>當 <code>/conf/global/settings/dam/workflownotification/email/downloadasset</code> 技術上支援查詢(透過一般Sling CAConfig查詢優先於/apps，但於 <code>/etc</code>)範本可以放在 <code>/conf/global/settings/dam/workflownotification/email/downloadasset</code>. 不過，不建議這麼做，因為沒有執行階段UI可協助編輯電子郵件範本。</td>
   </tr>
  </tbody>
 </table>
 
-### 示例DRM许可证 {#example-drm-licenses}
+### 範例DRM授權 {#example-drm-licenses}
 
-| **上一个位置** | `/etc/dam/drm/licenses/` |
+| **上一個位置** | `/etc/dam/drm/licenses/` |
 |---|---|
 | **新位置** | `/libs/settings/dam/drm` |
-| **重构指南** | 不适用 |
+| **重組指引** | 不适用 |
 | **注释** | 不适用 |
 
-### 链接共享电子邮件通知模板 {#link-share-e-mail-notification-template}
+### 連結共用電子郵件通知範本 {#link-share-e-mail-notification-template}
 
 <table>
  <tbody>
   <tr>
-   <td><strong>上一个位置</strong></td>
+   <td><strong>上一個位置</strong></td>
    <td><code>/etc/dam/adhocassetshare</code></td>
   </tr>
   <tr>
@@ -180,32 +180,32 @@ ht-degree: 2%
    <td><p><code>/libs/settings/dam/adhocassetshare</code></p> <p><code>/apps/settings/dam/adhocassetshare</code></p> </td>
   </tr>
   <tr>
-   <td><strong>重构指南</strong></td>
-   <td><p>如果客户修改了电子邮件模板，则要与新的存储库结构保持一致，请执行以下操作：</p>
+   <td><strong>重組指引</strong></td>
+   <td><p>如果客戶修改了電子郵件範本，則若要與新的存放庫結構保持一致：</p>
     <ol>
-     <li>更新后的电子邮件模板应复制自 <strong><code>/etc/dam/adhocassetshare</code></strong> 到 <strong><code>/apps/settings/dam/adhocassetshare</code></strong>
+     <li>更新後的電子郵件範本應複製自 <strong><code>/etc/dam/adhocassetshare</code></strong> 至 <strong><code>/apps/settings/dam/adhocassetshare</code></strong>
       <ol>
-       <li>因为目标位于<strong> <code>/apps</code></strong> 此更改应保留在SCM中。</li>
+       <li>因為目的地位於<strong> <code>/apps</code></strong> 此變更應保留在SCM中。</li>
       </ol> </li>
-     <li>删除文件夹： <strong><code>/etc/dam/adhocassetshare</code></strong> 中的电子邮件模板移动之后。<br />
+     <li>移除資料夾： <strong><code>/etc/dam/adhocassetshare</code></strong> 移動內的電子郵件範本後。<br />
       <ol>
-       <li>如果未对下的电子邮件模板进行更新<strong> <code>/etc</code></strong>，可删除该文件夹，因为下方存在原始电子邮件模板 <strong><code>/libs/settings/dam/adhocassetshare</code></strong> 作为AEM 6.4安装的一部分。</li>
+       <li>如果未更新下的電子郵件範本<strong> <code>/etc</code></strong>，資料夾可以移除，因為原始電子郵件範本存在於 <strong><code>/libs/settings/dam/adhocassetshare</code></strong> 作為AEM 6.4安裝的一部分。</li>
       </ol> </li>
     </ol> </td>
   </tr>
   <tr>
    <td><strong>注释</strong></td>
-   <td>While <code>/conf/global/settings/dam/adhocassetshare</code> 技术上支持查找(优先于 <code>/apps</code> 通过常规Sling CAConfig查找，但之后 <code>/etc</code>)，模板可以放在 <code>/conf/global/settings/dam/adhocassetshare</code>. 但是，不建议这样做，因为没有运行时UI可简化电子邮件模板的编辑</td>
+   <td>當 <code>/conf/global/settings/dam/adhocassetshare</code> 技術上支援查詢(優先於 <code>/apps</code> 透過一般Sling CacOnfig查閱，但晚於 <code>/etc</code>)，則範本可放在 <code>/conf/global/settings/dam/adhocassetshare</code>. 不過，不建議這麼做，因為沒有執行階段UI可方便編輯電子郵件範本</td>
   </tr>
  </tbody>
 </table>
 
-### InDesign工作流脚本 {#indesign-workflow-scripts}
+### InDesign工作流程指令碼 {#indesign-workflow-scripts}
 
 <table>
  <tbody>
   <tr>
-   <td><strong>上一个位置</strong></td>
+   <td><strong>上一個位置</strong></td>
    <td><code>/etc/dam/indesign/scripts</code></td>
   </tr>
   <tr>
@@ -213,33 +213,33 @@ ht-degree: 2%
    <td><p><code>/libs/settings/dam/indesign</code></p> <p><code>/apps/settings/dam/indesign</code></p> </td>
   </tr>
   <tr>
-   <td><strong>重构指南</strong></td>
-   <td><p>要与新的存储库结构保持一致，请执行以下操作：</p>
+   <td><strong>重組指引</strong></td>
+   <td><p>欲與新的存放庫結構對齊：</p>
     <ol>
-     <li>从以下位置复制所有自定义脚本或修改的脚本 <strong><code>/etc/dam/indesign/scripts</code></strong> 到 <strong><code>/apps/settings/dam/indesign/scripts</code></strong><br />
+     <li>複製所有自訂或修改的指令碼來源 <strong><code>/etc/dam/indesign/scripts</code></strong> 至 <strong><code>/apps/settings/dam/indesign/scripts</code></strong><br />
       <ol>
-       <li>只有复制新脚本或修改的脚本才能使用，因为AEM提供的未修改的脚本将可通过以下方式使用 <strong><code>/libs/settings</code></strong> 在AEM 6.5中</li>
+       <li>只有複製新的或修改過的指令碼，才能使用AEM提供的未修改指令碼，方式為 <strong><code>/libs/settings</code></strong> AEM 6.5版</li>
       </ol> </li>
-     <li>找到所有使用媒体提取流程WF步骤的工作流模型并
+     <li>找到所有使用媒體提取程式WF步驟的工作流程模型，並
       <ol>
-       <li>对于工作流步骤的每个实例，更新config中的路径以明确指向下的正确脚本<strong> <code>/apps/settings/dam/indesign/scripts</code></strong> 或 <strong><code>/libs/settings/dam/indesign/scripts</code></strong> 视情况而定。</li>
+       <li>針對「工作流程步驟」的每個例項，更新config中的路徑，以明確指向下的適當指令碼<strong> <code>/apps/settings/dam/indesign/scripts</code></strong> 或 <strong><code>/libs/settings/dam/indesign/scripts</code></strong> 視情況而定。</li>
       </ol> </li>
-     <li>移除<strong> <code>/etc/dam/indesign/scripts</code></strong> 全部。</li>
+     <li>移除<strong> <code>/etc/dam/indesign/scripts</code></strong> 完整。</li>
     </ol> </td>
   </tr>
   <tr>
    <td><strong>注释</strong></td>
-   <td>建议将自定义脚本存储在 <code>/apps</code>，因为这是应存储代码的位置。</td>
+   <td>建議將自訂指令碼儲存在 <code>/apps</code>，因為這是應儲存程式碼的位置。</td>
   </tr>
  </tbody>
 </table>
 
-### 视频转码配置 {#video-transcoding-configurations}
+### 視訊轉碼設定 {#video-transcoding-configurations}
 
 <table>
  <tbody>
   <tr>
-   <td><strong>上一个位置</strong></td>
+   <td><strong>上一個位置</strong></td>
    <td><code>/etc/dam/video</code></td>
   </tr>
   <tr>
@@ -247,10 +247,10 @@ ht-degree: 2%
    <td><p><code>/libs/settings/dam/video</code></p> <p><code>/apps/settings/dam/video</code></p> </td>
   </tr>
   <tr>
-   <td><strong>重构指南</strong></td>
-   <td><p>需要剪切并粘贴在等效项下的项目级别自定义项 <code>/apps</code> 或 <code>/conf</code> 路径（如果适用）。</p> <p>要与AEM 6.4存储库结构保持一致，请执行以下操作：</p>
+   <td><strong>重組指引</strong></td>
+   <td><p>需要剪下專案層級的自訂內容，並貼在等效專案下 <code>/apps</code> 或 <code>/conf</code> 路徑是否適用。</p> <p>若要與AEM 6.4存放庫結構一致：</p>
     <ol>
-     <li>从复制任何修改的视频配置 <code>/etc/dam/video</code> 到 <code>/apps/settings/dam/video</code></li>
+     <li>複製任何修改過的視訊設定，從 <code>/etc/dam/video</code> 至 <code>/apps/settings/dam/video</code></li>
      <li>删除 <code>/etc/dam/video</code></li>
     </ol> </td>
   </tr>
@@ -261,12 +261,12 @@ ht-degree: 2%
  </tbody>
 </table>
 
-### 查看器预设配置 {#viewer-preset-configurations}
+### 檢視器預設集設定 {#viewer-preset-configurations}
 
 <table>
  <tbody>
   <tr>
-   <td><strong>上一个位置</strong></td>
+   <td><strong>上一個位置</strong></td>
    <td><code>/etc/dam/presets/viewer</code></td>
   </tr>
   <tr>
@@ -274,12 +274,12 @@ ht-degree: 2%
    <td><p><code>/libs/settings/dam/dm/presets/viewer</code></p> <p><code>/conf/global/settings/dam/dm/presets/viewer</code></p> </td>
   </tr>
   <tr>
-   <td><strong>重构指南</strong></td>
-   <td><p>对于开箱即用的查看器预设，它仅在新位置可用。</p> <p>对于自定义查看器预设：</p>
+   <td><strong>重組指引</strong></td>
+   <td><p>對於開箱即用的「檢視器預設集」，它僅適用於新位置。</p> <p>對於自訂檢視器預設集：</p>
     <ul>
-     <li>您必须运行迁移脚本才能将节点从 <code>/etc</code> 到 <code>/conf</code>. 脚本位于 <em>https://serveraddress:serverport/libs/settings/dam/dm/presets.migratedmcontent.json</em></li>
-     <li>或者，您可以编辑配置，它们将自动保存到新位置。</li>
-    </ul> <p>请注意，您不必调整其copyURL/嵌入代码以指向 <code>/conf</code>. 对的现有请求 <code>/etc</code> 将被重新路由到以下位置的正确内容： <code>/conf</code>.</p> </td>
+     <li>您必須執行移轉指令碼，才能將節點從 <code>/etc</code> 至 <code>/conf</code>. 指令碼位於 <em>https://serveraddress:serverport/libs/settings/dam/dm/presets.migratedmcontent.json</em></li>
+     <li>或者，您可以編輯設定，這些設定會自動儲存至新位置。</li>
+    </ul> <p>請注意，您不必調整其copyURL/內嵌程式碼以指向 <code>/conf</code>. 現有請求到 <code>/etc</code> 將重新路由至正確內容，從 <code>/conf</code>.</p> </td>
   </tr>
   <tr>
    <td><strong>注释</strong></td>
@@ -288,12 +288,12 @@ ht-degree: 2%
  </tbody>
 </table>
 
-### 杂项 {#misc2}
+### 其他 {#misc2}
 
 <table>
  <tbody>
   <tr>
-   <td><strong>上一个位置</strong></td>
+   <td><strong>上一個位置</strong></td>
    <td><p><code>/etc/clientlibs/foundation/asseteditor</code></p> <p><code>/etc/clientlibs/foundation/assetshare</code></p> <p><code>/etc/clientlibs/foundation/assetinsights</code></p> </td>
   </tr>
   <tr>
@@ -301,8 +301,8 @@ ht-degree: 2%
    <td><code>/libs/dam/clientlibs</code></td>
   </tr>
   <tr>
-   <td><strong>重构指南</strong></td>
-   <td><p>调整任何引用以指向下的新资源 <code>/libs</code> 使用 <code>/etc.clientlibs/</code> 允许代理前缀。</p> <p>最后，通过从删除已迁移的clientlibs的文件夹进行清理 <code>/etc/clientlibs/foundation/</code></p> </td>
+   <td><strong>重組指引</strong></td>
+   <td><p>調整任何參照以指向下的新資源 <code>/libs</code> 使用 <code>/etc.clientlibs/</code> 允許Proxy前置詞。</p> <p>最後，從移除已移轉clientlibs的資料夾以進行清理 <code>/etc/clientlibs/foundation/</code></p> </td>
   </tr>
   <tr>
    <td><strong>注释</strong></td>

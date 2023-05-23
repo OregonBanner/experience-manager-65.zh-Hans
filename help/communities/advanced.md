@@ -1,7 +1,7 @@
 ---
-title: 高级评分和徽章
+title: 進階評分和預算
 seo-title: Advanced Scoring and Badges
-description: 设置高级评分
+description: 設定進階評分
 seo-description: Setting up advanced scoring
 uuid: 48caca57-43d3-4f2f-adf3-257428ba54d5
 contentOwner: Janice Kendall
@@ -19,109 +19,109 @@ ht-degree: 1%
 
 ---
 
-# 高级评分和徽章{#advanced-scoring-and-badges}
+# 進階評分和預算{#advanced-scoring-and-badges}
 
 ## 概述 {#overview}
 
-高级评分允许授予徽章，将成员识别为专家。 高级评分根据数量分配分数 *和* 成员创建的内容的质量，而基本评分仅根据创建的内容量分配分数。
+進階評分可授予徽章，將成員識別為專家。 進階評分會根據數量指派分數 *和* 成員建立的內容品質，而基本評分只會根據建立的內容數量指派分數。
 
-此差异是由于用于计算得分的评分引擎造成的。 基本的评分引擎应用了简单的数学。 高级评分引擎是一种自适应算法，通过主题的自然语言处理(NLP)推断，对贡献有价值和相关内容的活跃成员进行奖励。
+此差異是由於用於計算分數的評分引擎所造成。 基本評分引擎會套用簡單的數學。 進階評分引擎是一種自我調整演演算法，可獎勵透過主題的自然語言處理(NLP)推斷出的有價值和相關內容的活躍成員。
 
-除了内容相关性之外，评分算法还会考虑成员活动，例如投票和回答百分比。 虽然基本评分包括量化评分，但高级评分会在算法上使用这些评分。
+除了內容關聯性之外，評分演演算法也會考量成員活動，例如投票和回答百分比。 雖然基本評分會以量化方式納入量度，但進階評分會以演演算法方式加以運用。
 
-因此，高级评分引擎需要足够的数据才能使分析具有意义。 随着算法不断根据创建的内容数量和质量进行调整，不断重新评估成为专家的成就门槛。 还有一个概念 *衰减* 成员较旧的帖子。 如果专家成员在某个预先确定的时间停止参与他们获得专家地位的主题事项(见 [评分引擎配置](#configurable-scoring-engine))他们可能会失去专家身份。
+因此，進階評分引擎需要足夠的資料，才能讓分析有意義。 當演演算法不斷調整以符合建立的內容數量和品質時，會不斷重新評估成為專家的成就門檻。 還有一個概念 *衰減* 成員的較舊貼文中。 如果專家成員在某個預先確定的時間點停止參與他們獲得專家地位的主題事項(請參閱 [評分引擎設定](#configurable-scoring-engine))可能失去專家身分。
 
-设置高级评分与基本评分几乎相同：
+設定進階評分與基本評分幾乎相同：
 
-* 基本和高级评分和徽章规则包括 [应用于内容](/help/communities/implementing-scoring.md#apply-rules-to-content) 以同样的方式进行。
+* 基本和進階評分與徽章規則為 [套用至內容](/help/communities/implementing-scoring.md#apply-rules-to-content) 以相同方式。
 
-   * 基本和高级评分和徽章规则可应用于相同的内容。
+   * 基本和進階評分和徽章規則可套用至相同的內容。
 
-* [启用组件的徽章](/help/communities/implementing-scoring.md#enable-badges-for-component) 通用。
+* [啟用元件的預算](/help/communities/implementing-scoring.md#enable-badges-for-component) 通用。
 
-设置评分和标记规则的区别在于：
+設定評分和徽章規則的差異如下：
 
-* 可配置的高级评分引擎
-* 高级评分规则：
+* 可設定的進階評分引擎
+* 進階評分規則：
 
-   * `scoringType` 设置为 `advanced`
+   * `scoringType` 設定為 `advanced`
    * 需要 `stopwords`
 
-* 高级徽章规则：
+* 進階徽章規則：
 
-   * `badgingType` 设置为 `advanced`
-   * `badgingLevels` 设置为 **要授奖的专家人数**
-   * 需要 `badgingPaths` 徽章数组而不是阈值数组将点映射到徽章。
+   * `badgingType` 設定為 `advanced`
+   * `badgingLevels` 設定為 **要授與的專家層級數目**
+   * 需要 `badgingPaths` 徽章陣列，而不是臨界值陣列對應點到徽章。
 
 >[!NOTE]
 >
->要使用高级评分和徽章功能，请安装 [专家识别包](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq610%2Fsocial%2Ffeaturepack%2Fcq-social-expert-identification-pkg).
+>若要使用進階評分和徽章功能，請安裝 [專家識別套件](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq610%2Fsocial%2Ffeaturepack%2Fcq-social-expert-identification-pkg).
 
-## 可配置的评分引擎 {#configurable-scoring-engine}
+## 可設定的評分引擎 {#configurable-scoring-engine}
 
-高级评分引擎为OSGi配置提供了影响高级评分算法的参数。
+進階評分引擎會提供OSGi設定，其中包含影響進階評分演演算法的引數。
 
-![高级评分引擎](assets/advanced-scoring-engine.png)
+![advanced-scoring-engine](assets/advanced-scoring-engine.png)
 
-* **评分权重**
+* **評分權重**
 
-   对于主题，请指定在计算得分时应获得最高优先级的动词。 可以输入一个或多个主题，但仅限于 **每个主题一个动词**. 参见 [主题和动词](/help/communities/implementing-scoring.md#topics-and-verbs).
-输入为 `topic,verb` 用逗号转义。 例如：
+   若是主題，請指定計算分數時優先順序最高的動詞。 可以輸入一個或多個主題，但限於 **每個主題一個動詞**. 另請參閱 [主題和動詞](/help/communities/implementing-scoring.md#topics-and-verbs).
+輸入為 `topic,verb` 並逸出逗號。 例如：
    `/social/forum/hbs/social/forum\,ADD`
-对于QnA和论坛组件，默认设置为ADD动词。
+QnA和論壇元件的預設值設定為ADD動詞。
 
-* **评分范围**
+* **評分範圍**
 
-   高级分数的范围由此值定义（最大可能分数）和0（最低可能分数）。
+   進階分數的範圍是由此值（最高可能分數）和0（最低可能分數）所定義。
 
-   默认值为100，因此评分范围为0-100。
+   預設值為100，因此評分範圍為0至100。
 
-* **实体衰减时间间隔**
+* **實體衰減時間間隔**
 
-   此参数表示所有实体得分在此小时数之后发生衰减。 这要求不再将旧内容包含在社区站点的分数中。
+   此引數代表所有實體分數會在此小時後失效。 這要求不再將舊內容納入社群網站的分數中。
 
-   默认值为216000小时（~24年）。
+   預設值為216000小時（~24年）。
 
-* **评分增长率**
-这会指定得分在0和评分范围之间，超过该得分后，增长会减慢以限制专家数量。
+* **評分成長率**
+這會指定介於0和評分範圍之間的分數，超過該分數後，成長就會放緩，以限制專家數量。
 
    默认值为 50。
 
-## 高级评分规则 {#advanced-scoring-rules}
+## 進階評分規則 {#advanced-scoring-rules}
 
-在基本评分中，获得徽章所需的数量是已知的。
+在基本評分中，獲得徽章所需的數量是已知的。
 
-在高级评分中，所需的数量会根据系统内的质量数据量不断调整。 评分会以类似钟形曲线的方式持续计算。
+在進階評分中，所需的數量會根據系統內的品質資料量持續調整。 評分會以類似鈴鐺曲線的方式持續計算。
 
-如果某位成员在某个不再活跃的主题上获得了专家徽章，则他们可能会由于随着时间的推移而腐烂而失去徽章。
+如果成員在已不活躍的主題上獲得專家徽章，則他們可能會因為隨著時間衰減而失去徽章。
 
-### 评分类型 {#scoringtype}
+### 評分型別 {#scoringtype}
 
-评分规则是一组评分子规则，每个子规则均声明 `scoringType`.
+評分規則是一組評分子規則，每個子規則都會宣告 `scoringType`.
 
-要调用高级评分引擎，请 `scoringType`应设置为 `advanced`.
+若要叫用進階評分引擎，請 `scoringType`應設為 `advanced`.
 
-参见 [评分子规则](/help/communities/implementing-scoring.md#scoring-sub-rules).
+另請參閱 [評分子規則](/help/communities/implementing-scoring.md#scoring-sub-rules).
 
 ![advanced-scoring-type](assets/advanced-scoring-type.png)
 
-### 停用词 {#stopwords}
+### 停用詞 {#stopwords}
 
-高级评分包将安装一个包含停用词文件的配置文件夹：
+進階評分套件會安裝包含停用字檔案的設定資料夾：
 
 * `/libs/settings/community/scoring/configuration/stopwords`
 
-高级评分算法使用非索引字文件中包含的词列表来识别在内容处理期间被忽略的常见英语词。
+進階評分演演算法會使用停用字詞檔案中包含的字詞清單，來識別在內容處理期間被忽略的常見英文字詞。
 
-不期望此文件会被修改。
+預期不會修改此檔案。
 
-如果缺少停用词文件，则高级评分引擎将引发错误。
+如果遺失stopwords檔案，進階評分引擎會擲回錯誤。
 
-## 高级徽章规则 {#advanced-badging-rules}
+## 進階徽章規則 {#advanced-badging-rules}
 
-高级标记规则属性与 [基本徽章规则属性](/help/communities/implementing-scoring.md#badging-rules).
+進階徽章規則屬性與 [基本徽章規則屬性](/help/communities/implementing-scoring.md#badging-rules).
 
-无需将点与徽章图像相关联，只需确定允许的专家人数以及要授予的徽章图像。
+不必將點與徽章影像相關聯，只需識別允許的專家人數以及要獎勵的徽章影像。
 
 ![advanced-badging-rules](assets/advanced-badging-rules.png)
 
@@ -130,57 +130,57 @@ ht-degree: 1%
   <tr>
    <th>属性</th>
    <th>类型</th>
-   <th>值描述</th>
+   <th>价值 描述</th>
   </tr>
   <tr>
-   <td>徽章路径</td>
+   <td>徽章路徑</td>
    <td>字符串[]</td>
-   <td><em>（必需）</em> 徽章图像的多值字符串，最大数量为badgingLevels。 徽章图像路径必须经过排序，才能将第一个图像路径授予最高级别的专家。 如果徽章数量少于badgingLevels所指示的数量，则数组中的最后一个徽章将填充数组的其余部分。 示例条目：<br /> <code>/libs/settings/community/badging/images/expert-badge/jcr:content/expert.png</code></td>
+   <td><em>（必要）</em> 徽章影像的多值字串，最多badgingLevels的數量。 徽章影像路徑必須經過排序，才能將第一個授予最高的專家。 如果徽章數量少於badgingLevels所指示的數量，則陣列中的最後一個徽章會填滿陣列的其餘部分。 範例專案：<br /> <code>/libs/settings/community/badging/images/expert-badge/jcr:content/expert.png</code></td>
   </tr>
   <tr>
    <td>badgingLevels</td>
    <td>长整型</td>
-   <td><em>（可选）</em> 指定要授予的专业知识水平。 例如，如果应该有一个 <code>expert </code>和 <code>almost expert</code> （两个徽章），则值应设置为2。 badgingLevel应与badgingPath属性中列出的与专家相关的徽章图像数量相对应。 默认值为1。</td>
+   <td><em>（可選）</em> 指定要授與的專業知識等級。 例如，如果應該有一個 <code>expert </code>和 <code>almost expert</code> （兩個徽章），則值應設為2。 badgingLevel應與badgingPath屬性所列的專家相關徽章影像數量相對應。 預設值為1。</td>
   </tr>
   <tr>
-   <td>徽章类型</td>
+   <td>徽章型別</td>
    <td>字符串</td>
-   <td><em>（必需）</em> 将评分引擎标识为“基本”或“高级”。 设置为“高级”，否则默认值为“基本”。</td>
+   <td><em>（必要）</em> 將評分引擎識別為「基本」或「進階」。 設為「進階」，否則預設為「基本」。</td>
   </tr>
   <tr>
-   <td>评分规则</td>
+   <td>scoringRules</td>
    <td>字符串[]</td>
-   <td><em>（可选）</em> 一个多值字符串，用于将标记规则限制为由列出的评分规则标识的评分事件。<br /> 示例条目：<br /> <code>/libs/settings/community/scoring/rules/adv-comments-scoring</code><br /> 默认值为无限制。</td>
+   <td><em>（可選）</em> 多值字串，用來將徽章規則限製為所列評分規則所識別的評分事件。<br /> 範例專案：<br /> <code>/libs/settings/community/scoring/rules/adv-comments-scoring</code><br /> 預設為無限制。</td>
   </tr>
  </tbody>
 </table>
 
-## 包含的规则和徽章 {#included-rules-and-badge}
+## 包含的規則和徽章 {#included-rules-and-badge}
 
 ### 包含的徽章 {#included-badge}
 
-此Beta版本中包含一个基于奖励的专家徽章：
+此Beta版包含一項以獎勵為基礎的專家徽章：
 
 * `expert`
 
    `/libs/settings/community/badging/images/expert-badge/jcr:content/expert.png`
 
-![专家徽章](assets/included-badge.png)
+![專家徽章](assets/included-badge.png)
 
-为了让专家徽章显示为对活动的奖励，请确保：
+為了讓專家徽章顯示為活動的獎勵，請確定：
 
-* `Badges` 为功能（如论坛或QnA组件）启用。
+* `Badges` 已啟用功能，例如論壇或QnA元件。
 
-* 高级评分和标记规则应用于放置组件的页面（或祖先）
+* 進階評分和徽章規則會套用至放置元件的頁面（或祖先）
 
-请参阅以下内容的基本信息：
+如需下列資訊，請參閱基本資訊：
 
-* [启用组件的徽章](/help/communities/implementing-scoring.md#enableforcomponent)
-* [应用规则](/help/communities/implementing-scoring.md#applytopage)
+* [啟用元件的徽章](/help/communities/implementing-scoring.md#enableforcomponent)
+* [套用規則](/help/communities/implementing-scoring.md#applytopage)
 
-### 包含评分规则和子规则 {#included-scoring-rules-and-sub-rules}
+### 包含評分規則和子規則 {#included-scoring-rules-and-sub-rules}
 
-测试版中包括的两个高级评分规则 [论坛功能](/help/communities/functions.md#forum-function) （论坛和评论各一个，属于论坛功能）：
+測試版包含兩個進階評分規則，適用於 [論壇功能](/help/communities/functions.md#forum-function) （論壇功能的論壇和評論元件各一個）：
 
 1. `/libs/settings/community/scoring/rules/adv-comments-scoring`
 
@@ -202,21 +202,21 @@ ht-degree: 1%
 
 **注释:**
 
-* 两者 `rules` 和 `sub-rules` 节点属于类型 `cq:Page`.
-* `subRules` 是字符串类型的属性`[]` 在规则的 `jcr:content` 节点。
-* `sub-rules` 可以在各种评分规则之间共享。
-* `rules` 应位于存储库位置，且每个人都具有读取权限。
-* 无论位置如何，规则名称都必须是唯一的。
+* 兩者 `rules` 和 `sub-rules` 節點屬於型別 `cq:Page`.
+* `subRules` 是String型別的屬性`[]` 在規則的 `jcr:content` 節點。
+* `sub-rules` 可以在各種評分規則之間共用。
+* `rules` 應位於具有所有人讀取許可權的存放庫位置。
+* 無論位置為何，規則名稱必須是唯一的。
 
-### 包含的徽章规则 {#included-badging-rules}
+### 包含的徽章規則 {#included-badging-rules}
 
-此版本中包含两个高级标记规则，它们与 [高级论坛和评论评分规则](#included-scoring-rules-and-sub-rules).
+此版本包含兩個進階徽章規則，分別對應至 [進階論壇和評論評分規則](#included-scoring-rules-and-sub-rules).
 
 * `/libs/settings/community/badging/rules/adv-comments-badging`
 * `/libs/settings/community/badging/rules/adv-forums-badging`
 
 **注释:**
 
-* `rules` 节点的类型为cq：Page。
-* `rules` 应位于存储库位置，且每个人都具有读取权限。
-* 无论位置如何，规则名称都必须是唯一的。
+* `rules` 節點的型別為cq：Page。
+* `rules` 應位於具有所有人讀取許可權的存放庫位置。
+* 無論位置為何，規則名稱必須是唯一的。

@@ -1,7 +1,7 @@
 ---
-title: AEM Forms简介
+title: AEM Forms簡介
 seo-title: Introduction to AEM Forms
-description: 借助Adobe Experience Manager Forms，商业用户可以将引人入胜、响应迅速的自适应表单集成到网站和移动站点中，从而简化数字注册流程并提高客户转化率。
+description: 透過Adobe Experience Manager Forms，商業使用者可以將吸引人、回應式且最適化表單整合至網站和行動網站，簡化數位註冊程式，並提高客戶轉換率。
 seo-description: With Adobe Experience Manager Forms, business users can integrate engaging, responsive, and adaptive forms into web and mobile sites, simplifying the digital enrollment process and increasing customer conversion rates.
 uuid: a6564997-4227-4d5d-b27d-47a55a386238
 content-type: reference
@@ -14,107 +14,107 @@ exl-id: e5533b4f-93b7-4ea9-a01d-fdf9528652c8
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '891'
-ht-degree: 13%
+ht-degree: 10%
 
 ---
 
-# AEM Forms简介{#introduction-to-aem-forms}
+# AEM Forms簡介{#introduction-to-aem-forms}
 
-有关AEM Forms中最新功能和增强功能的信息，请参阅 [AEM Forms的新增功能](../../forms/using/whats-new.md).
+如需AEM Forms最新功能和增強功能的相關資訊，請參閱 [AEM Forms的新功能](../../forms/using/whats-new.md).
 
-## 关于AEM Forms {#about-aem-forms}
+## 關於AEM Forms {#about-aem-forms}
 
-Adobe Experience Manager (AEM)提供了一个易于使用的解决方案，用于创建、管理、发布和更新复杂的数字表单，同时与后端流程、业务规则和数据集成。
+Adobe Experience Manager (AEM)提供易用的解決方案，可建立、管理、發佈和更新複雜的數位表格，同時與後端流程、商業規則和資料整合。
 
-AEM Forms 将表单创作、管理和发布与通信管理功能、文档安全性和集成分析相结合，从而打造极具吸引力的端到端体验。AEM Forms设计为跨Web和移动渠道工作，可以高效地集成到您的业务流程中，在提高效率的同时减少纸面流程和错误。
+AEM Forms結合表單編寫、管理和發佈，以及通訊管理功能、檔案安全性和整合式分析，以建立引人入勝的端對端體驗。 AEM Forms可跨網路和行動裝置管道運作，能有效整合至您的業務流程，減少紙張流程和錯誤，同時提升效率。
 
-在大型企业中，通常只创建表单一次，之后通过将它复制到内容管理系统中来进行重用。保持表单的大型数据库为最新版本并使其可发现是一项巨大的挑战。 AEM 提供了一个可自定义的 Forms Portal，确保客户能够通过 Web 和移动渠道找到并访问所需的表单。
+在大型企业中，通常只创建表单一次，之后通过将它复制到内容管理系统中来进行重用。讓大型的表單資料庫保持最新狀態，並讓這些表單可供探索，是一項相當艱鉅的挑戰。 AEM 提供了一个可自定义的 Forms Portal，确保客户能够通过 Web 和移动渠道找到并访问所需的表单。
 
-AEM Forms提供了表单管理工具，不仅允许您管理自适应表单，还可管理XFA表单、PDF forms和相关资源。 有关更多信息，请参阅 [管理表单简介](../../forms/using/introduction-managing-forms.md).
+AEM Forms提供的表單管理工具不僅可讓您管理最適化表單，還可管理XFA表單、PDF forms和相關資產。 如需詳細資訊，請參閱 [管理表單簡介](../../forms/using/introduction-managing-forms.md).
 
 ![](do-not-localize/4th-draft.gif)
 
-### 主要功能 {#key-capabilities}
+### 重要功能 {#key-capabilities}
 
-总之，AEM Forms提供了强大的表单管理功能（如以下功能），从而减少了手动操作流程并提高了客户满意度。
+總而言之，AEM Forms提供如以下的強大表單管理功能，可減少手動程式並提高客戶滿意度。
 
-* 集中式Forms Portal，用于设计和部署动态表单(包括PDF、HTML5和自适应表单)
-* 易于使用的图形用户界面，可让业务用户轻松导入、管理、预览和发布表单
-* 响应式表单目录，具有使用关键字、标记和元数据的强大搜索功能
-* 动态检测用户的设备和位置，以在Web和移动渠道中正确呈现表单
-* 与Adobe Analytics集成以有效衡量表单使用量度
-* 与Adobe Document Cloud eSign服务或Scribble集成，以电子方式签署包含机密信息的文档
-* 自动化表单发布功能，能够通过多个渠道提供及时、个性化和一致的通信
+* 集中式Forms入口網站，用於設計和部署動態表單，包括PDF、HTML5和調適型表單
+* 簡單易用的圖形使用者介面，可讓業務使用者輕鬆匯入、管理、預覽和發佈表單
+* 回應式表單目錄，具有使用關鍵字、標籤和中繼資料的強大搜尋功能
+* 動態偵測使用者的裝置和位置，以適當地在網頁和行動裝置頻道上呈現表單
+* 與Adobe Analytics整合，以有效測量表單使用量度
+* 與Adobe Document Cloud eSign服務或Scribble整合，以電子方式簽署包含機密資訊的檔案
+* 自動化表單發佈功能，以及透過多個管道提供及時、個人化且一致的溝通能力
 
-## AEM表单类型 {#aem-form-types}
+## AEM表單型別 {#aem-form-types}
 
-AEM Forms允许您扩展新表单和现有表单，以创建：
+AEM Forms可讓您擴充新表單和現有表單，以建立：
 
-* 像素完美、分页的HTML和看起来几乎像纸张的PDF forms，或者
-* 自动呈现用户设备和浏览器的自适应表单。
+* 完美的畫素、分頁HTML和看起來幾乎像紙張的PDF forms，或者
+* 自動為使用者裝置和瀏覽器轉譯的最適化表單。
 
 **PDF forms**
 
-PDF forms可以离线填写、本地保存，以及在下次联机时发送表单数据。 您可以使用2D条形码捕获表单数据，并使用数字签名验证用户的真实性。
+PDF forms可以離線填寫、儲存在本機，以及下次連線時傳送的表單資料。 您可以使用2D條碼來擷取表單資料，並使用數位簽名來驗證使用者的真實性。
 
-**HTML 表单**
+**HTML表單**
 
-基于HTML5浏览器的表单可以在移动设备和桌面浏览器中查看。 您可以使用Scribble或eSign服务以电子方式对HTML表单进行签名。
+HTML5瀏覽器型表單可在行動裝置和桌上型瀏覽器上檢視。 您可以使用Scribble或eSign服務，以電子方式簽署HTML表單。
 
-**自适应表单**
+**調適型表單**
 
-自适应表单可以根据需要通过添加或删除字段或部分来动态适应用户响应。 AEM允许您重用AdobeXML表单模板来创建自适应表单。
+調適型表單可依需要新增或移除欄位或區段，以動態調整以符合使用者回應。 AEM可讓您重複使用AdobeXML表單範本來建立調適型表單。
 
-### 支持的功能 {#supported-features}
+### 支援的功能 {#supported-features}
 
-所有表单类型都支持以下功能：
+所有表單型別都支援下列功能：
 
-* 动态布局
-* 表单字段验证
-* 上下文相关帮助
-* 脚本和XML数据处理
-* 辅助功能设计和检查
-* 能够在服务器端保存表单
-* 支持文件附件
-* 与HTML Workspace集成以进行数据捕获
+* 動態配置
+* 表單欄位驗證
+* 內容相關說明
+* 指令碼和XML資料處理
+* 協助工具設計與檢查
+* 可在伺服器端儲存表單
+* 支援檔案附件
+* 與HTML Workspace整合以進行資料擷取
 
-## 离线数据收集 {#offline-data-collection}
+## 離線資料收集 {#offline-data-collection}
 
-提交表单数据后，Adobe Experience Manager会将表单数据与现有系统、业务规则以及所需人员连接起来。
+提交表單資料後，Adobe Experience Manager會將表單資料與現有系統、商業規則和所需人員連結。
 
-AEM Forms提供了Forms Workspace，这是一个移动应用程序，可将您的数字业务流程扩展到移动设备。 使用Forms Workspace，您可以收集和记录数据，即使离线也是如此。 Forms Workspace可充分利用移动设备的功能，允许您捕获照片、视频并收集数据（如时间戳和其他信息）。 下次连接到网络时，可以同步收集的数据。
+AEM Forms提供Forms Workspace，此行動應用程式可將您的數位業務流程延伸到行動裝置。 使用Forms工作區，您甚至可以在離線時收集並記錄資料。 Forms工作區可運用行動裝置的功能，讓您擷取像片、視訊，並收集時間戳記和其他資訊等資料。 下次連線到網路時，您可以同步收集的資料。
 
-离线捕获数据并在下次联机时对其进行同步对现场人员尤其有用。 它提高了生产效率，减少了错误。
+離線擷取資料並在下次回線時加以同步處理對現場人員特別有幫助。 它可提升生產力並減少錯誤。
 
-**使用Forms Workspace进行离线数据收集的优势**
+**使用Forms Workspace進行離線資料收集的優點**
 
-* 易于使用的HTML工作区应用程序用于任务分配和跟踪
-* 拖放工作流设计环境
-* 企业内容管理连接器(ECM)
-* 开放标准支持，包括用于将表单数据与企业系统连接的XML和SOAP
-* 开箱即用的HTML报告可监控积压、工作队列和关键性能指标(KPI)
-* 可自定义的仪表板，用于实时洞察业务运营
-* 用于连接第三方报告工具的API
+* 易於使用的HTML工作區應用程式，用於任務指派和追蹤
+* 拖放式工作流程設計環境
+* 企業內容管理聯結器(ECM)
+* 開放式標準支援，包括XML和SOAP，可將表單資料與企業系統連線
+* 現成可用的HTML報告可監控積壓、工作佇列和關鍵績效指標(KPI)
+* 可自訂的儀表板，可即時深入分析業務營運
+* 用於連線協力廠商報告工具的API
 
 ![](do-not-localize/3rd-draft.gif)
 
-## 个性化通信 {#personalized-communication}
+## 個人化通訊 {#personalized-communication}
 
 高效自助服务数字体验的一个重要组成部分是，及时传达用户可以在任意位置通过任意设备访问的个性化信息。个性化和及时的通信可以提高转化率和用户满意度。
 
-借助AEM Forms，企业用户可通过自定义文档模板、整合来自后端流程的信息以及包括交互式组件，创造引人入胜的个性化用户体验。 直观的用户界面帮助非技术用户开发业务规则，该业务规则决定何时基于查询生成通信，或启动用户生成的响应。
+商業使用者可以使用AEM Forms自訂檔案範本、合併來自後端流程的資訊，並包含互動式元件，藉此建立引人入勝的個人化使用者體驗。 直覺式使用者介面可協助非技術使用者開發商業規則，以決定何時根據查詢產生通訊，或起始使用者產生的回應。
 
-个性化的文档，如收据、欢迎套件和声明可以轻松地跨多个渠道传送。 组织可以将流量引入个性化的 Web 门户，从而让受众注册或购买额外的服务。
+個人化檔案（例如，收據、歡迎套件和宣告）可以輕鬆地跨多個管道傳送。 组织可以将流量引入个性化的 Web 门户，从而让受众注册或购买额外的服务。
 
 **关键功能**
 
-* 通信创作环境，支持模板、内容块、业务规则等
-* 文档转换和组装
-* 支持通过多个渠道（包括Web、电子邮件和纸张）按需或批量文档交付
-* 具有更改历史记录的审核跟踪
-* 支持数字签名以验证内容完整性和签名者的身份
-* AEM Forms的Document Security附加组件，包括加密、使用策略、跟踪和审核
+* 通訊製作環境，支援範本、內容區塊、商業規則等
+* 檔案轉換和組裝
+* 支援透過多個管道（包括網路、電子郵件和紙張）隨選或批次檔案傳送
+* 具有變更記錄的稽核軌跡
+* 支援數位簽章，以驗證內容完整性和簽署者的身分
+* AEM Forms的Document Security附加元件，包括加密、使用原則、追蹤和稽核
 
 ![](do-not-localize/layout-02.png)
 
-优化的个性化通信工作流
+簡化的個人化通訊工作流程

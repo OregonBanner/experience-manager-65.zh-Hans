@@ -1,7 +1,7 @@
 ---
-title: 注释要点
+title: Comments Essentials
 seo-title: Comments Essentials
-description: 注释组件概述
+description: 註解元件概觀
 seo-description: Comments component overview
 uuid: 58b7bb58-f598-4bcb-93ae-b7795cab51cd
 contentOwner: Guillaume Carlino
@@ -17,13 +17,13 @@ ht-degree: 3%
 
 ---
 
-# 注释要点 {#comments-essentials}
+# Comments Essentials {#comments-essentials}
 
-此页面提供了使用评论系统（评论组件）的要点，以及管理用户在发表评论或回复时生成的内容(UGC)的选项。
+此頁面提供使用註解系統（註解元件）的要點，以及管理使用者產生的內容(UGC)的選項，該內容是在成員發表註解或回覆時產生的。
 
-评论部件建立一个评论系统，使得每个单独的帖子由一个评论部件（单数）表示。 它是包含在页面上的评论系统。 当调用时，注释系统将创建单个注释。
+註解元件建立註解系統，使得每個個別貼文都由註解元件（單數）表示。 它是包含在頁面上的註解系統。 呼叫註解系統時，將會建立個別註解。
 
-## 适用于客户端的Essentials {#essentials-for-client-side}
+## 適用於使用者端的Essentials {#essentials-for-client-side}
 
 <table>
  <tbody>
@@ -32,15 +32,15 @@ ht-degree: 3%
    <td> social/commons/components/hbs/comments</td>
   </tr>
   <tr>
-   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>可包含</strong></a></td>
-   <td>是 — 属性在中可编辑 <i>设计 </i>模式</td>
+   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>包含</strong></a></td>
+   <td>是 — 屬性可在下列位置編輯： <i>設計 </i>模式</td>
   </tr>
   <tr>
    <td> <a href="client-customize.md#clientlibs-for-scf"><strong>clientlibs</strong></a></td>
    <td>cq.ckeditor<br /> cq.social.hbs.comments<br /> cq.social.hbs.voting</td>
   </tr>
   <tr>
-   <td> <strong>模板</strong></td>
+   <td> <strong>範本</strong></td>
    <td> /libs/social/commons/components/hbs/comments/comments.hbs<br /> </td>
   </tr>
   <tr>
@@ -49,18 +49,18 @@ ht-degree: 3%
   </tr>
   <tr>
    <td><strong> 属性</strong></td>
-   <td> 参见 <a href="comments.md">使用注释</a></td>
+   <td> 另請參閱 <a href="comments.md">使用註解</a></td>
   </tr>
  </tbody>
 </table>
 
-[客户端自定义](client-customize.md)
+[使用者端自訂](client-customize.md)
 
-### 每页一个实例 {#one-instance-per-page}
+### 每頁一個執行個體 {#one-instance-per-page}
 
-分页以及将URL用于缓存和链接要求每个注释系统的URL必须是唯一的。 因此，每个页面只允许一个注释系统实例。
+分頁以及使用URL來快取和連結要求每個註解系統的URL必須是唯一的。 因此，每個頁面只允許一個註解系統例項。
 
-其他功能已经包括注释系统。 这四个关键原则分别是：
+其他功能已經包括註解系統。 这四个关键原则分别是：
 
 * [博客](blog-developer-basics.md)
 * [日程表](calendar-basics-for-developers.md)
@@ -69,34 +69,34 @@ ht-degree: 3%
 * [问题与解答](qna-essentials.md)
 * [审核](reviews-basics.md)
 
-### 标记原因列表 {#flag-reason-list}
+### 標幟原因清單 {#flag-reason-list}
 
-可以通过向应用程序添加flagreasonlist.hbs以覆盖中的内容来自定义标记原因列表
+標幟原因清單可透過將flagreasonlist.hbs新增至您的應用程式以覆寫中的內容來自訂
 
 * `/libs/social/commons/components/hbs/comments/comment/flagreasonlist.hbs`
 
-这适用于扩展注释系统的任何组件。
+這適用於延伸註解系統的任何元件。
 
-## 服务器端Essentials {#essentials-for-server-side}
+## 伺服器端的Essentials {#essentials-for-server-side}
 
-* [注释API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/commons/comments/api/package-summary.html)
+* [註解API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/commons/comments/api/package-summary.html)
 
-* [评论端点](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/commons/comments/endpoints/package-summary.html)
+* [評論端點](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/commons/comments/endpoints/package-summary.html)
 
-* [服务器端自定义](server-customize.md)
+* [伺服器端自訂](server-customize.md)
 
-### 访问发表的评论(UGC) {#accessing-posted-comments-ugc}
+### 存取發表的評論(UGC) {#accessing-posted-comments-ugc}
 
-UGC应使用标准审核方法之一进行审核。
-参见 [审核用户生成的内容](moderate-ugc.md).
+UGC應使用其中一個標準仲裁方法來仲裁。
+另請參閱 [稽核使用者產生的內容](moderate-ugc.md).
 
-自AEM 6.1社区起，使用 [公用存储](working-with-srp.md) for UGC包括对UGC的编程访问，而不管选择的存储选项（如ASRP、MSRP或JSRP）。
+自AEM 6.1 Communities起，使用 [公用存放區](working-with-srp.md) for UGC包含程式化存取UGC，無論選擇的儲存選項為何（例如ASRP、MSRP或JSRP）。
 
-**UGC在存储库中的位置和格式可能会发生更改，恕不发出警告**.
+**UGC在存放庫中的位置和格式可能會有所變更，恕不發出警告**.
 
 请参阅：
 
-* [存储资源提供程序概述](srp.md)  — 简介和存储库使用概述。
-* [SRP和UGC Essentials](srp-and-ugc.md) - SRP实用程序方法和示例。
-* [使用SRP访问UGC](accessing-ugc-with-srp.md)  — 编码准则。
-* [SocialUtils重构](socialutils.md)  — 将已弃用的实用程序方法映射到当前的SRP实用程序方法。
+* [儲存資源提供者概觀](srp.md)  — 簡介和存放庫使用概述。
+* [SRP和UGC Essentials](srp-and-ugc.md) - SRP公用程式方法與範例。
+* [使用SRP存取UGC](accessing-ugc-with-srp.md)  — 程式碼指南。
+* [SocialUtils重構](socialutils.md)  — 將已棄用的公用程式方法對應到目前的SRP公用程式方法。

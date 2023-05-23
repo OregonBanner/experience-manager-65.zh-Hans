@@ -1,7 +1,7 @@
 ---
-title: 安装时配置管理员密码
+title: 在安裝時設定管理員密碼
 seo-title: Configure the Admin Password on Installation
-description: 了解如何在AEM安装时更改管理员密码。
+description: 瞭解如何在AEM安裝時變更管理員密碼。
 seo-description: Learn how to change the Admin Password on AEM Installation.
 uuid: 06da9890-ed63-4fb6-88d5-fd0e16bc4ceb
 contentOwner: User
@@ -17,49 +17,49 @@ ht-degree: 0%
 
 ---
 
-# 安装时配置管理员密码{#configure-the-admin-password-on-installation}
+# 在安裝時設定管理員密碼{#configure-the-admin-password-on-installation}
 
 ## 概述 {#overview}
 
-自版本6.3起，AEM允许在安装新实例时使用命令行设置管理员密码。
+自6.3版開始，AEM可在安裝新執行個體時，使用命令列設定管理員密碼。
 
-在早期版本的AEM中，安装后必须更改管理员帐户的密码以及各种其他控制台的密码。
+使用舊版AEM時，在安裝後必須變更管理員帳戶的密碼以及各種其他主控台的密碼。
 
-此功能增加了在安装AEM实例期间为存储库和Servlet引擎设置新管理员密码的功能，从而无需以后手动执行此操作。
+此功能新增在安裝AEM執行個體期間為存放庫和Servlet引擎設定新管理員密碼的功能，因此不需要在之後手動進行。
 
 >[!CAUTION]
 >
->请注意，该功能不包括Felix控制台，需要手动更改其密码。 欲了解更多信息，请参见 [安全核对清单部分](/help/sites-administering/security-checklist.md#change-default-passwords-for-the-aem-and-osgi-console-admin-accounts).
+>請注意，功能未涵蓋Felix主控台，需要手動變更密碼。 如需詳細資訊，請參閱相關 [安全性檢查清單區段](/help/sites-administering/security-checklist.md#change-default-passwords-for-the-aem-and-osgi-console-admin-accounts).
 
 ## 如何使用它？ {#how-do-i-use-it}
 
-如果您选择通过命令行安装AEM，而不是从文件系统资源管理器中双击JAR，则会自动触发此功能。
+如果您選擇透過命令列安裝AEM，而不是從檔案系統總管連按兩下JAR，則會自動觸發此功能。
 
-从命令行运行AEM实例的常规语法为：
+從命令列執行AEM執行個體的一般語法為：
 
 ```shell
 java -jar aem6.3.jar
 ```
 
-从命令行运行实例时，将显示一个选项，用于在安装过程中更改管理员密码：
+從命令列執行執行個體時，您將會看到在安裝過程中變更管理員密碼的選項：
 
 ![chlimage_1-116](assets/chlimage_1-116a.png)
 
 >[!NOTE]
 >
->只有在安装新的AEM实例时，才会显示更改管理员密码的提示。
+>只有在安裝新的AEM執行個體時，才會出現變更管理員密碼的提示。
 
-## 使用 — nointeractive标志 {#using-the-nointeractive-flag}
+## 使用 — nointeractive旗標 {#using-the-nointeractive-flag}
 
-您还可以选择从属性文件指定口令。 这是通过使用 `-nointeractive` 标记与组合`-Dadmin.password.file` 系统属性。
+您也可以選擇從屬性檔案指定密碼。 這是透過使用 `-nointeractive` 與組合的標幟`-Dadmin.password.file` 系統屬性。
 
-下面是一个示例：
+範例如下：
 
 ```shell
 java -Dadmin.password.file =/path/to/passwordfile.properties -jar aem6.3.jar -nointeractive
 ```
 
-密码位于 `passwordfile.properties` 文件需要具有以下格式：
+內的密碼 `passwordfile.properties` 檔案的格式必須如下：
 
 ```xml
 admin.password = 12345678
@@ -67,4 +67,4 @@ admin.password = 12345678
 
 >[!NOTE]
 >
->如果您只使用 `-nointeractive` 参数不包含 `-Dadmin.password.file` 系统属性时，AEM将使用默认管理员密码而不要求您更改它，这实际上会复制早期版本的行为。 此非交互模式可用于在安装脚本中使用命令行进行自动安装。
+>如果您只使用 `-nointeractive` 引數不含 `-Dadmin.password.file` 系統屬性時，AEM會使用預設的管理密碼，而不會要求您進行變更，基本上會複製舊版的行為。 此非互動模式可用於在安裝指令碼中使用命令列的自動安裝。

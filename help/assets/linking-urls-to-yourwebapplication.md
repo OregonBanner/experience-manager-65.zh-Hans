@@ -1,6 +1,6 @@
 ---
 title: 将 URL 关联到您的 Web 应用程序
-description: 如何将URL链接到Dynamic Media中的Web应用程序
+description: 如何將URL連結至Dynamic Media中的網頁應用程式
 uuid: cf599e66-b1f9-40c0-b572-cea19f2e6793
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -13,196 +13,196 @@ feature: Configuration
 source-git-commit: 78aa7aac838dabc1c4f0329520092e4755541322
 workflow-type: tm+mt
 source-wordcount: '1279'
-ht-degree: 15%
+ht-degree: 6%
 
 ---
 
 # 将 URL 关联到您的 Web 应用程序 {#linking-urls-to-your-web-application}
 
-您的网站和应用程序通过URL调用访问Dynamic Media服务。 在您发布资产后，Dynamic Media 会激活引用该资产的 URL 字符串。您可以将这些 URL 粘贴到 Web 浏览器中以进行测试。
+您的網站和應用程式會透過URL呼叫來存取Dynamic Media服務。 發佈資產後，Dynamic Media會啟動參考該資產的URL字串。 您可以將這些URL貼到網頁瀏覽器以進行測試。
 
-仅当满足以下条件时，才可以链接到URL： *非* 将Experience Manager用作WCM。 当您希望将视频播放器作为弹出窗口或模式窗口交付时，可使用链接（而不是嵌入）。 如果您使用Experience Manager作为WCM， [直接在页面上添加资产](adding-dynamic-media-assets-to-pages.md).
+只有當您符合以下條件時，才可連結至URL： *not* 使用Experience Manager做為WCM。 當您想要以快顯視窗或強制回應視窗的形式傳送視訊播放器時，會使用連結（而非內嵌）。 如果您使用Experience Manager做為WCM， [您直接在頁面上新增資產](adding-dynamic-media-assets-to-pages.md).
 
-要将这些URL字符串放置在网页和应用程序中，请从Dynamic Media复制它们。
-
->[!NOTE]
->
->URL字符串仅适用于资产的动态演绎版。它们当前不可用于驻留在DAM而不是Dynamic Media服务器中的静态资产。对于静态的演绎版，不会显示URL按钮。
-
-另请参阅 [在网页上嵌入视频查看器或图像查看器](embed-code.md).
-
-另请参阅 [将YouTube URL链接到您的Web应用程序](video.md).
-
-另请参阅 [为响应式网站投放优化图像](responsive-site.md).
-
-另请参阅 [上传资产](manage-assets.md#uploading-assets).
-
-## 获取资产的URL {#obtaining-a-url-for-an-asset}
-
-您可以获取由图像预设或查看器预设生成的 URL 字符串。复制 URL 后，它会进入剪贴板，然后您可以视需要将其粘贴到网站或应用程序的页面中。
+若要將這些URL字串放入您的網頁和應用程式中，請從Dynamic Media複製它們。
 
 >[!NOTE]
 >
->只有在将选定的资产发布后，其 URL 才可供复制。此外，还必须发布查看器预设或图像预设。
->
->参见 [发布资产](publishing-dynamicmedia-assets.md).
->
->参见 [发布查看器预设](managing-viewer-presets.md#publishing-viewer-presets).
->
->参见 [发布图像预设](managing-image-presets.md#publishing-image-presets).
+>URL字串僅適用於資產的動態轉譯。 它們目前不適用於位於DAM而不是Dynamic Media伺服器的靜態資產。 靜態的轉譯不會顯示URL按鈕。
 
-有多种不同的方法可以获取 URL 字符串。但是，下面的步骤只介绍了一种可用的方法。
+另請參閱 [將視訊或影像檢視器內嵌在網頁上](embed-code.md).
 
-**要获取资产的URL，请执行以下操作：**
+另請參閱 [將YouTube URL連結至您的網頁應用程式](video.md).
 
-1. 导航到 *已发布* 要复制其图像预设URL或查看器预设URL的资产，然后选择要打开的资产。
+另請參閱 [為回應式網站傳送最佳化的影像](responsive-site.md).
+
+另請參閱 [上傳資產](manage-assets.md#uploading-assets).
+
+## 取得資產的URL {#obtaining-a-url-for-an-asset}
+
+您可以取得影像預設集或檢視器預設集產生的URL字串。 在您複製URL後，它會貼到「剪貼簿」，以便您視需要將其貼到網站或應用程式中的頁面。
+
+>[!NOTE]
+>
+>在您發佈選取的資產後，才能複製URL。 此外，您也必須發佈檢視器預設集或影像預設集。
+>
+>另請參閱 [發佈資產](publishing-dynamicmedia-assets.md).
+>
+>另請參閱 [發佈檢視器預設集](managing-viewer-presets.md#publishing-viewer-presets).
+>
+>另請參閱 [發佈影像預設集](managing-image-presets.md#publishing-image-presets).
+
+有數種不同的方式可以取得URL字串。 不過，下列步驟只顯示一個您可以使用的方法。
+
+**若要取得資產的URL：**
+
+1. 導覽至 *已發佈* 您要複製其影像預設集URL或檢視器預設集URL的資產，然後選取要開啟的資產。
 
    请注意，只有在首次&#x200B;*发布*&#x200B;资产&#x200B;*后*，才可复制 URL。此外，还必须发布查看器预设或图像预设。
 
-   参见 [发布资产](publishing-dynamicmedia-assets.md).
+   另請參閱 [發佈資產](publishing-dynamicmedia-assets.md).
 
-   参见 [发布查看器预设](managing-viewer-presets.md#publishing-viewer-presets).
+   另請參閱 [發佈檢視器預設集](managing-viewer-presets.md#publishing-viewer-presets).
 
-   参见 [发布图像预设](managing-image-presets.md#publishing-image-presets).
+   另請參閱 [發佈影像預設集](managing-image-presets.md#publishing-image-presets).
 
-1. 根据您选择的资产，执行以下操作之一：
+1. 根據您選取的資產，執行下列任一項作業：
 
-   * 如果您选择了图像，请在下拉菜单中选择 **[!UICONTROL 演绎版]**.
+   * 如果您已選取影像，請在下拉式選單中選取 **[!UICONTROL 轉譯]**.
 
-      在 **[!UICONTROL 动态]** 标题，选择预设名称以在右侧框架中查看其演绎版。 如有必要，请滚动“演绎版”列表以查看动态标题。
+      在 **[!UICONTROL 動態]** 標題中，選取預設集名稱，即可在右側框架中檢視其轉譯。 如有必要，請捲動「轉譯」清單以檢視動態標題。
 
-      在左边栏底部，选择 **[!UICONTROL URL]**.
+      在左側邊欄底部，選取 **[!UICONTROL URL]**.
 
       ![chlimage_1-270](assets/chlimage_1-270.png)
 
-   * 如果您在下拉菜单中选择了旋转集、图像集、轮播集或视频，请选择 **[!UICONTROL 查看器]**.
+   * 如果您在下拉式選單中選取了迴轉集、影像集、轉盤集或視訊，請選取 **[!UICONTROL 檢視者]**.
 
-      在左边栏中，选择一个查看器预设名称。 该集或视频的预览将在单独的页面中打开。
+      在左側欄中，選取檢視器預設集名稱。 集或視訊的預覽會在個別頁面中開啟。
 
-      在左边栏的底部，选择 **[!UICONTROL URL]**.
+      在左側欄的底部，選取 **[!UICONTROL URL]**.
 
       ![chlimage_1-271](assets/chlimage_1-271.png)
 
-1. 选择文本并将其复制到Web浏览器，以便预览资源或将其添加到Web内容页面。
+1. 選取文字並複製到網頁瀏覽器，以便預覽資產或將其新增至網頁內容頁面。
 
-   要退出URL窗口，请选择 **[!UICONTROL X]** 或选择 **[!UICONTROL 关闭]**.
+   若要結束URL視窗，請選取 **[!UICONTROL X]** 或選取 **[!UICONTROL 關閉]**.
 
-## 获取静态资源的URL {#obtaining-a-url-for-a-static-asset}
+## 取得靜態資產的URL {#obtaining-a-url-for-a-static-asset}
 
-Dynamic Media支持静态资源的交付，静态资源是除图像和视频之外的其他资源。 支持的静态资产交付格式包括：
+Dynamic Media支援靜態資產的傳送，這是影像和視訊以外的其他資產。 支援的靜態資產傳送格式包括：
 
-* 三维文件
-* 动画GIF
-* 音频文件
+* 3D檔案
+* 動畫GIF
+* 音訊檔案
 * CSS
-* JavaScript（当您的公司配置了自己的域时）
+* JavaScript （當您的公司設定有自己的網域時）
 * PDF
 * SVG
 * XML
 * ZIP
 
-**要获取静态资源的URL，请执行以下操作：**
+**若要取得靜態資產的URL：**
 
-1. 导航到 *已发布* 要复制其URL的静态资源，然后选择要打开的资源。
+1. 導覽至 *已發佈* 您要複製其URL的靜態資產，並選取要開啟的資產。
 
-   请记住，URL仅可供复制 *之后* 您拥有 *已发布* 静态资源。
+   請記住，URL僅供複製 *晚於* 您有 *已發佈* 靜態資產。
 
-   参见 [发布资产](publishing-dynamicmedia-assets.md).
+   另請參閱 [發佈資產](publishing-dynamicmedia-assets.md).
 
-1. 使用以下任意方法获取已发布的静态资源的URL：
+1. 使用下列任何方法取得已發佈靜態資產的URL：
 
    * `The URL of the published static is the following:`
 
       * `https://*<server_name>*/is/content/*<company_name>*/*<static_asset_filename>*.*<extension>*`
 
          例如：`https://aem.com/is/content/adobe/image.gif`。
-   * 选择 **[!UICONTROL 资产]** > **[!UICONTROL 动态演绎版]**，然后选择静态资源的动态演绎版并复制URL。
+   * 選取 **[!UICONTROL 資產]** > **[!UICONTROL 動態轉譯]**，然後選取靜態資產的動態轉譯並複製URL。
 
-      更改复制的URL以使用 `is/content` 路径中而不是 `is/image/`.
+      變更複製的URL以使用 `is/content` 路徑中而不是 `is/image/`.
 
 
-## 获取已发布视频演绎版的视频URL {#obtaining-a-video-url-for-a-published-video-rendition}
+## 取得已發佈影片轉譯的影片URL {#obtaining-a-video-url-for-a-published-video-rendition}
 
-1. 在Experience Manager中，导航到 **[!UICONTROL 工具]** > **[!UICONTROL 部署]** > **[!UICONTROL 云]** > **[!UICONTROL Cloud Services]**.
-1. 在 **[!UICONTROL Cloud Services]** 页面，向下滚动到 **[!UICONTROL Dynamic MediaCloud Services]** 标题，然后选择 **[!UICONTROL 显示配置]**.
-1. 下 **[!UICONTROL 可用配置]**，选择所需配置的名称。
+1. 在Experience Manager中，導覽至 **[!UICONTROL 工具]** > **[!UICONTROL 部署]** > **[!UICONTROL 雲端]** > **[!UICONTROL Cloud Services]**.
+1. 於 **[!UICONTROL Cloud Services]** 頁面，向下捲動至 **[!UICONTROL Dynamic MediaCloud Services]** 標題，然後選取 **[!UICONTROL 顯示設定]**.
+1. 下 **[!UICONTROL 可用的設定]**，選取您想要的設定名稱。
 
-1. 在 **[!UICONTROL Dynamic Media Cloud设置]** 页面，下 **[!UICONTROL 视频服务URL]**，向下复制整个URL路径。 稍后在步骤中，您需要使用复制的URL路径。
+1. 於 **[!UICONTROL Dynamic Media雲端設定]** 頁面，底下 **[!UICONTROL 視訊服務URL]**，向下複製整個URL路徑。 您稍後需要在步驟中複製的URL路徑。
 
-   例如，URL路径可能类似于以下内容：
+   例如，URL路徑可能如下所示：
 
    `https://s7athens.macromedia.com:9090/DMGateway/`
 
-   （以上路径只是一个示例；它不是您复制的实际路径。）
+   （以上路徑只是範例，並非您所複製的實際路徑。）
 
 1. 在&#x200B;**[!UICONTROL 注册 ID]** 下，复制 ID 最后一部分中的客户名称。
 
-   例如，如果注册ID为 `87654321|MyCompany`，则客户名称将为 `MyCompany`.
+   例如，如果註冊ID為 `87654321|MyCompany`，客戶名稱會是 `MyCompany`.
 
-1. 在页面的左上角附近，选择 **[!UICONTROL Cloud Services]**，然后选择Experience Manager徽标并导航到 **[!UICONTROL 常规]** > **[!UICONTROL CRXDE Lite]**.
-1. 从JCR (Java™内容存储库)中向下复制整个视频演绎版路径。
+1. 在頁面的左上角附近，選取 **[!UICONTROL Cloud Services]**，然後選取Experience Manager標誌並導覽至 **[!UICONTROL 一般]** > **[!UICONTROL CRXDE Lite]**.
+1. 從JCR (Java™內容存放庫)向下複製整個視訊轉譯路徑。
 
-   例如，视频的演绎版路径可能类似于以下内容：
+   例如，視訊的轉譯路徑可能如下所示：
 
    `/_renditions_/0bd/0bd28743-a616-4fe6-92aa-6eae7c2112f/avs/Momentum_1080-0x720-2600k.mp4`
 
-   （以上路径只是一个示例；它不是您复制的实际路径。）
+   （以上路徑只是範例，並非您所複製的實際路徑。）
 
-1. 按照以下顺序排列复制的信息，以使其形成完整的URL路径：
+1. 以下列順序排列複製的資訊，使其形成完整的URL路徑：
 
    `<Video_Service_URL>/public/<Customer_name_from_Registration_ID>/<Video_rendition_path>`
 
-   例如，使用上述步骤中的示例路径和示例客户名称，完整路径如下所示：
+   例如，使用上述步驟中的範例路徑和範例客戶名稱，完整路徑如下所示：
 
    `https://s7athens.macromedia.com:9090/DMGateway/public/MyCompany/_renditions_/0bd/0bd28743-a616-4fe6-92aa-6eae7c2112ff/avs/Momentum_1080-0x720-2600k.mp4`
 
-   此示例是已发布视频演绎版的完整视频URL。
+   此範例是已發佈影片轉譯的完整影片URL。
 
-## 获取用于自适应比特率流的视频URL（DASH或HLS） {#obtaining-a-video-url-for-adaptive-streaming-hls}
+## 取得最適化位元速率串流的視訊URL （DASH或HLS） {#obtaining-a-video-url-for-adaptive-streaming-hls}
 
-1. 在Experience Manager中，导航到 **[!UICONTROL 工具]** > **[!UICONTROL 部署]** > **[!UICONTROL 云]** > **[!UICONTROL Cloud Services]**.
-1. 在 **[!UICONTROL Cloud Services]** 页面，向下滚动到 **[!UICONTROL Dynamic MediaCloud Services]** 标题，然后选择 **[!UICONTROL 显示配置]**.
-1. 下 **[!UICONTROL 可用配置]**，选择所需配置的名称。
-1. 在 **[!UICONTROL Dynamic MediaCloud Services设置]** 页面，请执行以下操作：
+1. 在Experience Manager中，導覽至 **[!UICONTROL 工具]** > **[!UICONTROL 部署]** > **[!UICONTROL 雲端]** > **[!UICONTROL Cloud Services]**.
+1. 於 **[!UICONTROL Cloud Services]** 頁面，向下捲動至 **[!UICONTROL Dynamic MediaCloud Services]** 標題，然後選取 **[!UICONTROL 顯示設定]**.
+1. 下 **[!UICONTROL 可用的設定]**，選取您想要的設定名稱。
+1. 於 **[!UICONTROL Dynamic MediaCloud Services設定]** 頁面，請執行下列動作：
 
-   * 下 **[!UICONTROL 视频服务URL]**，复制整个URL路径。 在稍后这些步骤中，您需要复制的URL路径。 例如，URL路径可能类似于以下内容：
+   * 下 **[!UICONTROL 視訊服務URL]**，複製整個URL路徑。 您稍後需要在這些步驟中複製的URL路徑。 例如，URL路徑可能如下所示：
 
    `https://gateway-na.assetsadobe.com/DMGateway/`
 
-   （以上路径只是一个示例；它不是您复制的实际路径。）
+   （以上路徑只是範例，並非您所複製的實際路徑。）
 
-   * 在&#x200B;**[!UICONTROL 注册 ID]** 下，复制 ID 最后一部分中的客户名称。在稍后这些步骤中，您需要复制的客户名称。
+   * 在&#x200B;**[!UICONTROL 注册 ID]** 下，复制 ID 最后一部分中的客户名称。您稍後需要在這些步驟中複製的客戶名稱。
 
-      例如，如果注册ID为 `87654321|demoCo`，则您复制的客户名称为 `demoCo`.
+      例如，如果註冊ID為 `87654321|demoCo`，則您複製的客戶名稱為 `demoCo`.
 
 
-1. 根据您使用的视频交付协议，复制各自的协议选择器。 在稍后的这些步骤中，您需要复制的协议选择器。
+1. 根據您使用的視訊傳送通訊協定，複製各自的通訊協定選擇器。 您稍後需要在這些步驟中複製通訊協定選擇器。
 
-   | 您正在使用的视频投放协议 | 要使用的协议选择器 |
+   | 您使用的視訊傳送通訊協定 | 要使用的通訊協定選擇器 |
    |---|---|
-   | HTTP <br> 如果您使用的是HTTP（非安全视频交付），请确保在之前复制的视频服务URL值中将https更改为http。 | `public/` |
+   | HTTP <br> 如果您使用HTTP （不安全視訊傳送），請務必在先前複製的視訊服務URL值中將https變更為http。 | `public/` |
    | HTTPS | `public-ssl/` |
 
-1. 复制Experience Manager中的完整视频资源路径，由Dynamic Media处理。 在稍后这些步骤中，您需要此复制的视频资产路径。
+1. 複製Dynamic Media所處理之Experience Manager中的完整視訊資產路徑。 您稍後在這些步驟中需要此複製的視訊資產路徑。
 
    例如：
 
    `/content/dam/marketing/MyVideo.mp4`
 
-1. 合并您之前复制的所有片段，按以下顺序创建字符串：
+1. 合併您先前複製的所有片段，依下列順序建立字串：
 
    &lt; `video service URL`>&lt; `protocol selector`>&lt; `customer name`>&lt; `video asset path`>
 
-   例如，使用这些步骤中示例复制的信息，字符串将如下所示：
+   例如，使用這些步驟中範例的複製資訊，字串會顯示如下：
 
    `https://gateway-na.assetsadobe.com/DMGateway/public-ssl/demoCo/content/dam/marketing/MyVideo.mp4`
 
-1. 通过附加来完成URL `.m3u8` 到字符串的结尾。 例如，附加 `.m3u8` 对于上一步中的字符串，完整的URL路径如下所示：
+1. 透過附加來完成URL `.m3u8` 至字串結尾。 例如，附加 `.m3u8` 至上一步的字串，完整的URL路徑如下所示：
 
    `https://gateway-na.assetsadobe.com/DMGateway/public-ssl/demoCo/content/dam/marketing/MyVideo.mp4.m3u8`
 
-## 使用HTTP/2交付您的Dynamic Media资源 {#using-http-to-deliver-your-dynamic-media-assets}
+## 使用HTTP/2傳遞您的Dynamic Media資產 {#using-http-to-deliver-your-dynamic-media-assets}
 
-HTTP/2是新的、更新的Web协议，它改进了浏览器和服务器的通信方式。 它提供了更快的信息传输并减少了所需的处理能力。 Dynamic Media资源的交付现在可以通过HTTP/2进行，从而提供更好的响应和加载时间。
+HTTP/2是新的、更新的Web通訊協定，可改善瀏覽器和伺服器的通訊方式。 它提供更快速的資訊傳輸，並減少所需的處理能力。 Dynamic Media資產的傳送現在可透過HTTP/2進行，以提供更佳的回應和載入時間。
 
-参见 [HTTP2内容交付](http2.md) ，以了解有关开始将HTTP/2用于Dynamic Media帐户的完整详细信息。
+另請參閱 [HTTP2傳送內容](http2.md) 以取得開始使用HTTP/2與Dynamic Media帳戶的完整詳細資訊。

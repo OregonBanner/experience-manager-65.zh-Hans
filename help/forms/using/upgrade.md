@@ -1,7 +1,7 @@
 ---
 title: 升级到 AEM 6.5 Forms
 seo-title: Upgrade to AEM 6.5 Forms
-description: 您可以从AEM 6.3 Forms和AEM 6.4 Forms直接升级到AEM 6.5 Forms。
+description: 您可以從AEM 6.3 Forms和AEM 6.4 Forms直接升級至AEM 6.5 Forms。
 seo-description: You can perform a direct upgrade from AEM 6.3 Forms and AEM 6.4 Forms to AEM 6.5 Forms.
 uuid: 7a38cd72-2d01-4af7-b6a3-00dc34c4f02b
 content-type: reference
@@ -20,53 +20,53 @@ ht-degree: 2%
 
 # 升级到 AEM 6.5 Forms{#upgrade-to-aem-forms}
 
-AEM 6.5 Forms包含一些新增功能和增强功能，可简化表单和信函的创建、管理和用户体验。 要了解AEM 6.5 Forms的所有新增功能和增强功能，请参阅 [新增功能摘要文档](../../forms/using/whats-new.md).
+AEM 6.5 Forms包含數項新功能和增強功能，可簡化表單和交易的建立、管理和使用者體驗。 若要瞭解AEM 6.5 Forms的所有新功能和增強功能，請參閱 [新功能摘要檔案](../../forms/using/whats-new.md).
 
-您可以升级现有LiveCycle或AEM Forms安装，以获取AEM 6.5 Forms中提供的新功能和增强功能，同时保持现有数据、流程和资产完好无损。 升级时，还会保留元数据和进程状态。 您可以选择升级路径以开始升级。
+您可以升級現有的LiveCycle或AEM Forms安裝，以取得AEM 6.5 Forms中提供的新功能和增強功能，同時完整保留現有資料、流程和資產。 升級時，也會保留流程的中繼資料和狀態。 您可以選擇升級路徑以開始升級。
 
-下图显示了OSGi上AEM Forms的可用升级路径：
+下圖顯示OSGi上AEM Forms的可用升級路徑：
 
 ![](do-not-localize/osgi-upgrade-path.png)
 
-您可以从以下位置执行直接升级：
+您可以從下列位置執行直接升級：
 
 * OSGi上的AEM 6.3 Forms
-* AEM 6.4 Forms on OSGi
+* OSGi上的AEM 6.4 Forms
 
-您还可以从
+您也可以從以下位置執行多重躍點升級
 
 * OSGi上的AEM 6.0 Forms
 * OSGi上的AEM 6.1 Forms
-* AEM 6.2 Forms on OSGi
+* OSGi上的AEM 6.2 Forms
 
-下图显示了JEE上AEM Forms的可用升级路径：
+下圖顯示AEM Forms on JEE的可用升級路徑：
 
 ![](do-not-localize/jee-upgrade-6-5.png)
 
-您可以从以下位置执行直接升级：
+您可以從下列位置執行直接升級：
 
-* AEM 6.3 JEE上的Forms
-* AEM 6.4 JEE上的Forms
-* AEM 6.5.x.x JEE上的Forms
+* JEE版AEM 6.3 Forms
+* JEE版AEM 6.4 Forms
+* JEE版AEM 6.5.x.x Forms
 
-您还可以从
+您也可以從以下位置執行多重躍點升級
 
 * LiveCycleES2
 * LiveCycleES3
 * LiveCycleES4 SP1
-* AEM 6.0 Forms on JEE
-* AEM 6.1 Forms on JEE
-* AEM 6.2 JEE上的Forms
+* JEE版AEM 6.0 Forms
+* JEE版AEM 6.1 Forms
+* JEE版AEM 6.2 Forms
 
-AEM 6.5.12.0 Forms on JEE提供了两种类型的安装程序： [完整安装程序](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) 和 [修补程序安装程序](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html).
+JEE版AEM 6.5.12.0 Forms提供兩種型別的安裝程式： [完整安裝程式](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) 和 [修補程式安裝程式](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html).
 
-**完整安装程序**:您可以使用完整安装程序设置新的AEM Forms实例，或从JEE上的AEM 6.3 Forms、JEE上的AEM 6.4执行升级，以及从JEE上的AEM 6.5.x.x Forms到JEE上的AEM 6.5.12.0 Forms的就地升级。
+**完整安裝程式**：您可以使用完整安裝程式來設定全新AEM Forms執行個體，或從JEE上的AEM 6.3 Forms、JEE上的AEM 6.4，以及從JEE上的AEM 6.5.x.x Forms就地升級至JEE上的AEM 6.5.12.0 Forms。
 
-**修补程序安装程序**:修补程序安装程序适用于已在使用AEM 6.5.x.x版本的客户。 您可以使用修补程序安装程序升级到最新版本的AEM Forms。
+**修補程式安裝程式**：修補程式安裝程式適用於已使用AEM 6.5.x.x版本的客戶。 您可以使用修補程式安裝程式來升級至最新版AEM Forms。
 
-下图描述了使用完整和修补程序安装程序的传感器。
+以下影像說明使用完整版和修補程式安裝程式的情境。
 
-![完整安装程序和修补程序安装程序](/help/forms/using/assets/full-and-patch-installer.png)
+![完整安裝程式和修補程式安裝程式](/help/forms/using/assets/full-and-patch-installer.png)
 
 <!--
 [Work in Progress]

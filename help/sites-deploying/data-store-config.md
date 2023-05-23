@@ -1,6 +1,6 @@
 ---
-title: 在AEM 6中配置节点存储和数据存储
-description: 了解如何配置节点存储和数据存储，以及如何执行数据存储垃圾收集。
+title: 在AEM 6中設定節點存放區和資料存放區
+description: 瞭解如何設定節點存放區和資料存放區，以及如何執行資料存放區垃圾收集。
 content-type: reference
 topic-tags: deploying
 docset: aem65
@@ -13,59 +13,59 @@ ht-degree: 2%
 
 ---
 
-# 在AEM 6中配置节点存储和数据存储{#configuring-node-stores-and-data-stores-in-aem}
+# 在AEM 6中設定節點存放區和資料存放區{#configuring-node-stores-and-data-stores-in-aem}
 
 ## 简介 {#introduction}
 
-在Adobe Experience Manager(AEM)中，二进制数据可以独立于内容节点进行存储。 二进制数据存储在数据存储中，而内容节点存储在节点存储中。
+在Adobe Experience Manager (AEM)中，二進位資料可與內容節點分開儲存。 二進位資料儲存在資料存放區中，而內容節點則儲存在節點存放區中。
 
-可使用OSGi配置配置数据存储区和节点存储区。 每个OSGi配置都使用永久标识符(PID)进行引用。
+資料存放區和節點存放區都可使用OSGi設定進行設定。 每個OSGi設定都使用持續性識別碼(PID)參考。
 
-## 配置步骤 {#configuration-steps}
+## 設定步驟 {#configuration-steps}
 
-要同时配置节点存储和数据存储，请执行以下步骤：
+若要同時設定節點存放區和資料存放區，請執行下列步驟：
 
-1. 将AEM快速入门JAR文件复制到其安装目录。
-1. 创建文件夹 `crx-quickstart/install` 在安装目录中。
-1. 首先，通过创建一个配置文件来配置节点存储，该配置文件的名称是您要在 `crx-quickstart/install` 目录访问Advertising Cloud的帮助。
+1. 將AEM快速入門JAR檔案複製到其安裝目錄。
+1. 建立資料夾 `crx-quickstart/install` 安裝目錄中的。
+1. 首先，建立包含您要在中使用的節點存放區選項名稱的組態檔，以設定節點存放區。 `crx-quickstart/install` 目錄。
 
-   例如，文档节点存储(是AEM MongoMK实施的基础)使用文件 `org.apache.jackrabbit.oak.plugins.document.DocumentNodeStoreService.config`.
+   例如，檔案節點存放區(AEM MongoMK實作的基礎)會使用檔案 `org.apache.jackrabbit.oak.plugins.document.DocumentNodeStoreService.config`.
 
-1. 编辑文件，并设置配置选项。
-1. 使用您要使用的数据存储的PID创建配置文件。 编辑文件以设置配置选项。
+1. 編輯檔案，並設定組態選項。
+1. 以您要使用之資料存放區的PID建立設定檔。 編輯檔案以設定組態選項。
 
    >[!NOTE]
    >
-   >请参阅 [节点存储配置](#node-store-configurations) 和 [数据存储配置](#data-store-configurations) ，以了解配置选项。
+   >另請參閱 [節點存放區設定](#node-store-configurations) 和 [資料存放區設定](#data-store-configurations) 以取得設定選項。
 
-1. 启动AEM。
+1. 啟動AEM。
 
-## 节点存储配置 {#node-store-configurations}
-
->[!CAUTION]
->
->较新版本的Oak为OSGi配置文件采用了新的命名方案和格式。 新命名方案要求将配置文件命名为 **.config** 且新格式要求键入值，并且 [此处](https://sling.apache.org/documentation/development/slingstart.html#default-configuration-format).
->
->如果您从旧版Oak升级，请确保备份 `crx-quickstart/install`文件夹。 升级后，将文件夹的内容还原到升级后的安装，并修改 **.cfg** to **.config**.
->
->如果您正在阅读本文以准备从 **AEM 5.x** 安装时，请确保您查阅 [升级](https://experienceleague.adobe.com/docs/) 文档。
-
-### 区段节点存储 {#segment-node-store}
-
-区段节点存储是Adobe在AEM6中实施TarMK的基础。 它使用 `org.apache.jackrabbit.oak.segment.SegmentNodeStoreService` 用于配置的PID。
+## 節點存放區設定 {#node-store-configurations}
 
 >[!CAUTION]
 >
->区段节点存储的PID已从 `org.apache.jackrabbit.oak.plugins.segment.SegmentNodeStoreService in previous versions` AEM 6到 `org.apache.jackrabbit.oak.segment.SegmentNodeStoreService` 在AEM 6.3中。确保进行必要的配置调整以反映此更改。
+>較新版本的Oak對OSGi設定檔案採用新的命名方案和格式。 新的命名配置要求設定檔必須命名為 **.config** 而新格式需要輸入值，而且 [在此處記錄](https://sling.apache.org/documentation/development/slingstart.html#default-configuration-format).
+>
+>如果您從舊版Oak升級，請務必備份 `crx-quickstart/install`資料夾優先。 升級後，將資料夾內容還原至升級安裝，並從修改組態檔的副檔名 **.cfg** 至 **.config**.
+>
+>如果您正在閱讀本文章，為從升級做準備 **AEM 5.x** 安裝，請務必參閱 [升級](https://experienceleague.adobe.com/docs/) 說明檔案優先。
 
-您可以配置以下选项：
+### 區段節點存放區 {#segment-node-store}
 
-* `repository.home`:存储与存储库相关数据的存储库主页的路径。 默认情况下，区段文件存储在 `crx-quickstart/segmentstore` 目录访问Advertising Cloud的帮助。
+區段節點存放區是Adobe在AEM6中實施TarMK的基礎。 它會使用 `org.apache.jackrabbit.oak.segment.SegmentNodeStoreService` 設定的PID。
 
-* `tarmk.size`:区段的最大大小(MB)。 默认最大为256MB。
-* `customBlobStore`:布尔值，指示使用自定义数据存储。 对于AEM 6.3及更高版本，默认值为true。 在AEM 6.3之前，默认值为false。
+>[!CAUTION]
+>
+>區段節點存放區的PID已變更 `org.apache.jackrabbit.oak.plugins.segment.SegmentNodeStoreService in previous versions` / AEM 6至 `org.apache.jackrabbit.oak.segment.SegmentNodeStoreService` 在AEM 6.3中。請務必進行必要的設定調整以反映此變更。
 
-以下示例 `org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.config` 文件：
+您可以設定下列選項：
+
+* `repository.home`：存放庫相關資料儲存所在的存放庫首頁的路徑。 依預設，區段檔案儲存在 `crx-quickstart/segmentstore` 目錄。
+
+* `tarmk.size`：區段的大小上限（以MB為單位）。 預設最大為256MB。
+* `customBlobStore`：表示使用自訂資料存放區的布林值。 AEM 6.3及更高版本的預設值為true。 AEM 6.3之前的版本預設為false。
+
+以下是範例 `org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.config` 檔案：
 
 ```shell
 #Path to repo
@@ -78,21 +78,21 @@ tarmk.size=I"256"
 customBlobStore=B"true"
 ```
 
-#### 文档节点存储 {#document-node-store}
+#### 檔案節點存放區 {#document-node-store}
 
-文档节点存储是AEM MongoMK实施的基础。 它使用 `org.apache.jackrabbit.oak.plugins.document.DocumentNodeStoreService`* *PID。 以下配置选项可用：
+檔案節點存放區是AEM MongoMK實作的基礎。 它會使用 `org.apache.jackrabbit.oak.plugins.document.DocumentNodeStoreService`* *PID。 下列組態選項可供使用：
 
-* `mongouri`:的 [MongoURI](https://docs.mongodb.org/manual/reference/connection-string/) 连接到Mongo数据库时需要。 默认值为 `mongodb://localhost:27017`
+* `mongouri`：此 [MongoURI](https://docs.mongodb.org/manual/reference/connection-string/) 連線至Mongo資料庫時需要。 預設值為 `mongodb://localhost:27017`
 
-* `db`:Mongo数据库的名称。 默认值为 **Oak** ``. However, new AEM 6 installations use **aem-author** ``作为默认数据库名称。
+* `db`：Mongo資料庫的名稱。 預設值為 **Oak** ``. However, new AEM 6 installations use **aem-author** ``作為預設資料庫名稱。
 
-* `cache`:高速缓存大小(MB)。 它分布在DocumentNodeStore中使用的各种缓存中。 默认值为 `256`
+* `cache`：快取大小（以MB為單位）。 這會分散在DocumentNodeStore中使用的各種快取中。 預設值為 `256`
 
-* `changesSize`:Mongo中用于缓存差异输出的封闭集合的大小(MB)。 默认值为 `256`
+* `changesSize`：Mongo中用於快取差異輸出的限定集合大小（以MB為單位）。 預設值為 `256`
 
-* `customBlobStore`:布尔值，指示将使用自定义数据存储。 默认为 `false`。
+* `customBlobStore`：表示將使用自訂資料存放區的布林值。 默认为 `false`。
 
-以下示例 `org.apache.jackrabbit.oak.plugins.document.DocumentNodeStoreService.config` 文件：
+以下是範例 `org.apache.jackrabbit.oak.plugins.document.DocumentNodeStoreService.config` 檔案：
 
 ```shell
 #Mongo server details
@@ -105,68 +105,68 @@ db="aem-author"
 customBlobStore=B"false"
 ```
 
-## 数据存储配置 {#data-store-configurations}
+## 資料存放區設定 {#data-store-configurations}
 
-在处理大量二进制文件时，建议使用外部数据存储而不是默认的节点存储来最大化性能。
+在處理大量二進位檔時，建議使用外部資料存放區，而非預設節點存放區，以最大化效能。
 
-例如，如果您的项目需要许多媒体资产，则在文件或S3数据存储下存储这些资产比直接将它们存储在MongoDB中更便于访问。
+例如，如果您的專案需要許多媒體資產，將它們儲存在File或S3 Data Store底下，比直接將它們儲存在MongoDB中更快地進行存取。
 
-与MongoDB相比，文件数据存储提供了更好的性能，而且Mongo备份和还原操作在大量资产的情况下也更慢。
+File Data Store的效能比MongoDB更好，而且大量資產的Mongo備份和還原作業速度也較慢。
 
-有关不同数据存储和配置的详细信息如下所述。
+不同資料存放區和設定的詳細資訊如下所述。
 
 >[!NOTE]
 >
->要启用自定义数据存储，您必须确保 `customBlobStore` 设置为 `true` 在相应的节点存储配置文件([区段节点存储](/help/sites-deploying/data-store-config.md#segment-node-store) 或 [文档节点存储](/help/sites-deploying/data-store-config.md#document-node-store))。
+>若要啟用自訂資料存放區，您必須確定 `customBlobStore` 設為 `true` 在個別節點存放區設定檔案中([區段節點存放區](/help/sites-deploying/data-store-config.md#segment-node-store) 或 [檔案節點存放區](/help/sites-deploying/data-store-config.md#document-node-store))。
 
 ### 文件数据存储 {#file-data-store}
 
-这是 [FileDataStore](https://jackrabbit.apache.org/api/trunk/org/apache/jackrabbit/core/data/FileDataStore.html) 在杰克拉布特2号。 它提供了一种将二进制数据作为普通文件存储在文件系统上的方法。 它使用 `org.apache.jackrabbit.oak.plugins.blob.datastore.FileDataStore` PID。
+此為的實作 [FileDataStore](https://jackrabbit.apache.org/api/trunk/org/apache/jackrabbit/core/data/FileDataStore.html) 在Jackrabbit 2中出現。 它提供一種將二進位資料儲存為檔案系統上一般檔案的方法。 它會使用 `org.apache.jackrabbit.oak.plugins.blob.datastore.FileDataStore` PID。
 
-以下配置选项可用：
+這些設定選項可供使用：
 
-* `repository.home`:存储各种存储库相关数据的存储库主页的路径。 默认情况下，二进制文件将存储在 `crx-quickstart/repository/datastore` 目录
+* `repository.home`：儲存各種存放庫相關資料的存放庫首頁的路徑。 根據預設，二進位檔案會儲存在 `crx-quickstart/repository/datastore` 目錄
 
-* `path`:存储文件的目录的路径。 如果指定，则优先于 `repository.home` 值
+* `path`：儲存檔案的目錄路徑。 若指定，則優先於 `repository.home` 值
 
-* `minRecordLength`:数据存储中存储的文件的最小大小（以字节为单位）。 小于此值的二进制内容将内嵌。
-
->[!NOTE]
->
->使用NAS存储共享文件数据存储时，请确保仅使用高性能设备以避免性能问题。
-
-## Amazon S3数据存储 {#amazon-s-data-store}
-
-可以将AEM配置为在Amazon的简单存储服务(S3)中存储数据。 它使用 `org.apache.jackrabbit.oak.plugins.blob.datastore.S3DataStore.config` 用于配置的PID。
-
-要启用S3数据存储功能，必须下载并安装包含S3数据存储连接器的功能包。 转到 [Adobe存储库](https://repo1.maven.org/maven2/com/adobe/granite/com.adobe.granite.oak.s3connector/) 并从1.10.x版本的功能包下载最新版本(例如，com.adobe.granite.oak.s3connector-1.10.0.zip)。 此外，您还必须下载并安装上列出的最新AEM Service Pack [AEM 6.5发行说明](/help/release-notes/release-notes.md) 页面。
+* `minRecordLength`：儲存在資料存放區中的檔案大小下限（位元組）。 系統會內嵌小於此值的二進位內容。
 
 >[!NOTE]
 >
->将AEM与TarMK结合使用时，默认情况下，二进制文件将存储在 `FileDataStore`. 要将TarMK与S3数据存储结合使用，您必须使用 `crx3tar-nofds` 运行模式，例如：
+>使用NAS儲存共用檔案資料存放區時，請務必只使用高效能裝置以避免效能問題。
+
+## Amazon S3資料存放區 {#amazon-s-data-store}
+
+AEM可設定為將資料儲存在Amazon的Simple Storage Service (S3)。 它會使用 `org.apache.jackrabbit.oak.plugins.blob.datastore.S3DataStore.config` 設定的PID。
+
+若要啟用S3資料存放區功能，必須下載並安裝包含S3資料存放區聯結器的Feature Pack。 前往 [Adobe存放庫](https://repo1.maven.org/maven2/com/adobe/granite/com.adobe.granite.oak.s3connector/) 並從feature pack 1.10.x版（例如com.adobe.granite.oak.s3connector-1.10.0.zip）下載最新版本。 此外，您必須下載並安裝列於「 」的最新AEM Service Pack [AEM 6.5發行說明](/help/release-notes/release-notes.md) 頁面。
+
+>[!NOTE]
+>
+>搭配TarMK使用AEM時，二進位檔預設會儲存在 `FileDataStore`. AEM若要搭配S3資料存放區使用TarMK，您必須使用 `crx3tar-nofds` 執行模式，例如：
 
 ```shell
 java -jar <aem-jar-file>.jar -r crx3tar-nofds
 ```
 
-下载后，您可以按如下方式安装和配置S3连接器：
+下載後，您可以依照以下步驟安裝和設定S3 Connector：
 
-1. 将功能包zip文件的内容解压缩到临时文件夹中。
+1. 將Feature Pack zip檔案的內容解壓縮至暫存資料夾。
 
-1. 转到临时文件夹，然后导航到以下位置：
+1. 前往暫存資料夾，並導覽至下列位置：
 
    ```xml
    jcr_root/libs/system/install
    ```
 
-   将上述位置的所有内容复制到 `<aem-install>/crx-quickstart/install.`
+   將以上位置的所有內容複製到 `<aem-install>/crx-quickstart/install.`
 
-1. 如果AEM已配置为与Tar或MongoDB存储一起使用，请从***&lt;aem-install>***/*crx-quickstart*/*安装* 文件夹。 必须删除的文件包括：
+1. 如果AEM已設定為搭配Tar或MongoDB儲存體使用，請從***中移除任何現有的設定檔&lt;aem-install>***/*crx-quickstart*/*安裝* 資料夾，然後再繼續。 必須移除的檔案包括：
 
    * `For MongoMK: org.apache.jackrabbit.oak.plugins.document.DocumentNodeStoreService.config`
    * `For TarMK: org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.config`
 
-1. 返回到已提取功能包的临时位置，并复制以下文件夹的内容：
+1. 返回功能套件已擷取的暫存位置，並複製下列資料夾的內容：
 
    * `jcr_root/libs/system/config`
 
@@ -174,37 +174,37 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
 
    * `<aem-install>/crx-quickstart/install`
 
-   确保仅复制当前配置所需的配置文件。 对于专用数据存储和共享数据存储设置，请复制 `org.apache.jackrabbit.oak.plugins.blob.datastore.S3DataStore.config` 文件。
+   請確定您僅複製目前組態所需的組態檔。 對於專用資料存放區和共用資料存放區設定，請複製 `org.apache.jackrabbit.oak.plugins.blob.datastore.S3DataStore.config` 檔案。
 
    >[!NOTE]
    >
-   >在群集设置中，逐个对群集的所有节点执行上述步骤。 此外，请确保对所有节点使用相同的S3设置。
+   >在叢集設定中，請逐一在叢集的所有節點上執行上述步驟。 此外，請確定對所有節點使用相同的S3設定。
 
-1. 编辑文件并添加设置所需的配置选项。
-1. 启动AEM。
+1. 編輯檔案並新增您的設定所需的設定選項。
+1. 啟動AEM。
 
-## 升级到1.10.x S3 Connector的新版本 {#upgrading-to-a-new-version-of-the-s-connector}
+## 升級至新版1.10.x S3 Connector {#upgrading-to-a-new-version-of-the-s-connector}
 
-要升级到1.10.x S3连接器的新版本(例如，从1.10.0到1.10.4)，请执行以下步骤：
+若要升級至1.10.x S3聯結器的新版本（例如，從1.10.0到1.10.4），請遵循下列步驟：
 
-1. 停止AEM实例。
+1. 停止AEM執行個體。
 
-1. 导航到 `<aem-install>/crx-quickstart/install/15` ，并备份其内容。
-1. 备份后，通过删除 `<aem-install>/crx-quickstart/install/15` 文件夹，例如：
+1. 導覽至 `<aem-install>/crx-quickstart/install/15` AEM ，並備份其內容。
+1. 備份後，刪除S3 Connector的舊版本及其相依性，方法是刪除 `<aem-install>/crx-quickstart/install/15` 資料夾，例如：
 
    * **oak-blob-cloud-1.6.1.jar**
    * **aws-java-sdk-osgi-1.10.76.jar**
 
    >[!NOTE]
    >
-   >上述文件名仅用于说明目的。
+   >上述檔案名稱僅供說明之用。
 
-1. 从 [Adobe存储库](https://repo1.maven.org/maven2/com/adobe/granite/com.adobe.granite.oak.s3connector/).
-1. 将内容解压缩到单独的文件夹，然后导航到 `jcr_root/libs/system/install/15`.
-1. 将jar文件复制到 **&lt;aem-install>**/crx-quickstart/install/15(位于AEM安装文件夹中)。
-1. 启动AEM并检查连接器功能。
+1. 從下載1.10.x Feature Pack的最新版本 [Adobe存放庫](https://repo1.maven.org/maven2/com/adobe/granite/com.adobe.granite.oak.s3connector/).
+1. 將內容解壓縮至個別資料夾，然後導覽至 `jcr_root/libs/system/install/15`.
+1. 將jar檔案複製到 **&lt;aem-install>**/crx-quickstart/install/15在AEM安裝資料夾中。
+1. 啟動AEM並檢查聯結器功能。
 
-您可以使用包含以下详细选项的配置文件。
+您可以使用包含下列選項的設定檔案。
 
 <!--
 * accessKey: The AWS access key.
@@ -222,34 +222,34 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
 * stagingRetryInterval: The retry interval in seconds for failed uploads. The default value is **600** seconds (10 minutes).
 -->
 
-### S3连接器配置文件选项 {#s3-connector-configuration-file-options}
+### S3 Connector組態檔選項 {#s3-connector-configuration-file-options}
 
 >[!NOTE]
 >
->S3连接器支持IAM用户身份验证和IAM角色身份验证。 要使用IAM角色身份验证，请忽略 `accessKey` 和 `secretKey` 值。 然后，S3连接器将默认使用 [IAM角色](https://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/java-dg-roles.html) 分配给实例。
+>S3聯結器支援IAM使用者驗證和IAM角色驗證。 若要使用IAM角色驗證，請省略 `accessKey` 和 `secretKey` 設定檔案中的值。 然後S3聯結器會預設為 [IAM角色](https://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/java-dg-roles.html) 指派給執行個體。
 
 | 键 | 描述 | 默认 | 必填 |
 | --- | --- | --- | --- |
-| accessKey | 具有存储段访问权限的IAM用户的访问密钥ID。 |  | 是的，不使用IAM角色时。 |
-| secretKey | 具有存储段访问权限的IAM用户的密钥访问密钥。 |  | 是的，不使用IAM角色时。 |
-| cacheSize | 本地缓存的大小（以字节为单位）。 | 64GB | 否. |
-| connectionTimeout | 设置最初建立连接时超时前等待的时间（以毫秒为单位）。 | 10000 | 否. |
-| maxCachedBinarySize | 大小小于或等于此值的二进制文件（以字节为单位）存储在内存缓存中。 | 17408(17 KB) | 否. |
-| maxConnections | 设置允许打开的HTTP连接的最大数量。 | 50 | 否. |
-| maxErrorRetry | 设置失败（可检索）请求的最大重试尝试次数。 | 3 | 否. |
-| minRecordLength | 应存储在数据存储中的对象的最小大小（以字节为单位）。 | 16384 | 否. |
-| 路径 | AEM数据存储的本地路径。 | `crx-quickstart/repository/datastore` | 否. |
-| proxyHost | 设置客户端连接的可选代理主机。 |  | 否. |
-| proxyPort | 设置客户端连接的可选代理端口。 |  | 否. |
-| s3Bucket | S3存储段的名称。 |  | 是 |
-| s3EndPoint | S3 REST API端点。 |  | 否. |
-| s3Region | 存储段所在的区域。 请参阅 [页面](https://docs.aws.amazon.com/general/latest/gr/s3.html) 以了解更多详细信息。 | 运行AWS实例的区域。 | 否. |
-| socketTimeout | 设置在连接超时和关闭之前，通过已建立的打开连接传输数据的等待时间（以毫秒为单位）。 | 50000 | 否. |
-| stagingPurgeInterval | 从暂存缓存中清除已完成上载的间隔（以秒为单位）。 | 300 | 否. |
-| stagingRetryInterval | 重试上传失败的间隔（以秒为单位）。 | 600 | 否. |
-| stagingSplitPercentage | 百分比 `cacheSize` 用于暂存异步上传。 | 10 | 否. |
-| uploadThreads | 用于异步上传的上传线程数。 | 10 | 否. |
-| writeThreads | 用于通过S3传输管理器写入的并发线程数。 | 10 | 否. |
+| accessKey | 有權存取貯體的IAM使用者的存取金鑰ID。 |  | 是，不使用IAM角色時。 |
+| secretKey | 可存取貯體的IAM使用者機密存取金鑰。 |  | 是，不使用IAM角色時。 |
+| cacheSize | 本機快取的大小（位元組）。 | 64GB | 否. |
+| connectionTimeout | 設定初始建立連線時逾時前的等待時間（毫秒）。 | 10000 | 否. |
+| maxCachedBinarySize | 大小小於或等於此值（位元組）的二進位檔會儲存在記憶體快取中。 | 17408 (17 KB) | 否. |
+| maxConnections | 設定允許的開啟HTTP連線數目上限。 | 50 | 否. |
+| maxErrorRetry | 設定失敗（可重試）要求的重試次數上限。 | 3 | 否. |
+| minRecordLength | 應儲存在資料存放區中的物件大小下限（位元組）。 | 16384 | 否. |
+| 路径 | AEM資料存放區的本機路徑。 | `crx-quickstart/repository/datastore` | 否. |
+| proxyHost | 設定使用者端連線的選用代理主機。 |  | 否. |
+| proxyPort | 設定使用者端連線通過的可選Proxy連線埠。 |  | 否. |
+| s3Bucket | S3儲存貯體的名稱。 |  | 是 |
+| s3EndPoint | S3 REST API端點。 |  | 否. |
+| s3Region | 儲存貯體所在的區域。 檢視此 [頁面](https://docs.aws.amazon.com/general/latest/gr/s3.html) 以取得更多詳細資料。 | 執行AWS執行個體的區域。 | 否. |
+| socketTimeout | 設定在連線逾時及關閉之前，透過已建立且開啟的連線傳輸資料所需的等待時間（毫秒）。 | 50000 | 否. |
+| stagingPurgeInterval | 從暫存快取中清除已完成的上傳的時間間隔（以秒為單位）。 | 300 | 否. |
+| stagingRetryInterval | 重試失敗的上傳間隔（以秒為單位）。 | 600 | 否. |
+| stagingSplitPercentage | 的百分比 `cacheSize` 用於中繼非同步上傳。 | 10 | 否. |
+| uploadthreads | 用於非同步上傳的上傳執行緒數目。 | 10 | 否. |
+| writeThreads | 用於透過S3傳輸管理器寫入的並行執行緒數目。 | 10 | 否. |
 
 <!---
 ### Bucket region options {#bucket-region-options}
@@ -292,82 +292,82 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
 </table>
 -->
 
-### 数据存储缓存 {#data-store-caching}
+### DataStore快取 {#data-store-caching}
 
 >[!NOTE]
 >
->的DataStore实施 `S3DataStore`, `CachingFileDataStore` 和 `AzureDataStore` 支持本地文件系统缓存。 的 `CachingFileDataStore` 当数据存储在NFS（网络文件系统）上时，实施非常有用。
+>的DataStore實作 `S3DataStore`， `CachingFileDataStore` 和 `AzureDataStore` 支援本機檔案系統快取。 此 `CachingFileDataStore` 當DataStore位於NFS （網路檔案系統）上時，實作很有用。
 
-从旧版缓存实施（Oak 1.6之前）升级时，本地文件系统缓存目录的结构存在差异。 在旧缓存结构中，已下载和已上传的文件都直接放在缓存路径下。 新结构将下载和上传分开，并将它们存储在两个名为 `upload` 和 `download` 在缓存路径下。 升级过程应该是无缝的，任何挂起的上传都应计划上传，并且之前在缓存中下载的任何文件在初始化时都会放入缓存中。
+從舊版快取實作（Oak 1.6以前版本）升級時，本機檔案系統快取目錄的結構會有差異。 在舊的快取結構中，下載的檔案和上傳的檔案都直接放在快取路徑下。 新結構會將下載和上傳分開，並將它們儲存在名為的兩個目錄中 `upload` 和 `download` 快取路徑下。 升級程式應是順暢的，任何擱置的上傳都應排程進行上傳，且任何先前下載在快取中的檔案都會在初始化時放入快取中。
 
-您还可以使用 `datastorecacheupgrade` oak-run命令。 有关如何执行命令的详细信息，请检查 [readme](https://svn.apache.org/repos/asf/jackrabbit/oak/trunk/oak-run/README.md) 用于oak-run模块。
+您也可以使用，將快取離線升級。 `datastorecacheupgrade` oak-run的命令。 如需如何執行命令的詳細資訊，請檢查 [讀我檔案](https://svn.apache.org/repos/asf/jackrabbit/oak/trunk/oak-run/README.md) 用於oak-run模組。
 
-缓存具有大小限制，可使用cacheSize参数对其进行配置。
+快取具有大小限制，可以使用cacheSize引數加以設定。
 
 #### 下载 {#downloads}
 
-在从DataStore访问本地缓存之前，会检查所请求文件/blob的记录。 当缓存超出配置的限制时(请参阅 `cacheSize` 参数)，则为回收空间，会逐出某些文件。
+從DataStore存取要求檔案/blob之前，會先檢查本機快取是否有記錄。 當快取超過設定的限制時(請參閱 `cacheSize` 引數)時，某些檔案會被逐出，以回收空間。
 
-#### 异步上传 {#async-upload}
+#### 非同步上傳 {#async-upload}
 
-缓存支持异步上传到DataStore。 文件将在本地缓存中（在文件系统上）存放，异步作业开始上传文件。 异步上传的数量受暂存缓存大小的限制。 暂存缓存的大小通过使用 `stagingSplitPercentage` 参数。 此参数定义用于暂存缓存的缓存大小百分比。 此外，可下载的缓存百分比计算为 **(100 - `stagingSplitPercentage`) &#42;`cacheSize`**.
+快取支援非同步上傳至DataStore。 檔案會在本機暫存於快取中（在檔案系統上），而非同步工作會開始上傳檔案。 非同步上傳的數量受中繼快取大小限制。 使用設定暫存快取的大小 `stagingSplitPercentage` 引數。 此引數會定義用於暫存快取的快取大小百分比。 此外，下載可用的快取百分比計算如下 **(100 - `stagingSplitPercentage`) &#42;`cacheSize`**.
 
-异步上传是多线程的，且线程数量是使用 `uploadThreads` 参数。
+非同步上傳是多執行緒，並且執行緒數目是使用 `uploadThreads` 引數。
 
-上传完成后，文件将移至主下载缓存。 当暂存缓存大小超过其限制时，将同步将文件上传到DataStore，直到上一个异步上传完成，并且暂存缓存中的空间再次可用。 已上传的文件将由周期性作业从暂存区域中删除，该作业的间隔由 `stagingPurgeInterval` 参数。
+上傳完成後，檔案會移至主下載快取。 當中繼快取大小超過其限制時，檔案會同步上傳至DataStore，直到前一個非同步上傳完成且中繼快取中再次有可用空間為止。 上傳的檔案會透過週期性工作從臨時區域移除，其間隔是由 `stagingPurgeInterval` 引數。
 
-失败的上传（例如，由于网络中断）将被置于重试队列中并定期重试。 重试间隔通过使用 `stagingRetryInterval parameter`.
+失敗的上傳（例如，由於網路中斷）會置於重試佇列並定期重試。 重試間隔是透過以下方式設定的： `stagingRetryInterval parameter`.
 
-#### 使用Amazon S3配置无二进制复制 {#configuring-binaryless-replication-with-amazon-s}
+#### 使用Amazon S3設定無二進位檔復寫 {#configuring-binaryless-replication-with-amazon-s}
 
-要使用S3配置无二进制复制，需要执行以下步骤：
+若要使用S3設定無二進位檔復寫，必須執行下列步驟：
 
-1. 安装创作实例和发布实例，并确保正确启动它们。
-1. 通过打开 *https://localhost:4502/etc/replication/agents.author/publish.html*.
-1. 按 **编辑** 按钮 **设置** 中。
-1. 更改 **序列化** 将选项类型设为 **二进制减**.
+1. 安裝作者和發佈執行個體，並確定它們已正確啟動。
+1. 透過開啟以下頁面前往復寫代理程式設定： *https://localhost:4502/etc/replication/agents.author/publish.html*.
+1. 按下 **編輯** 中的按鈕 **設定** 區段。
+1. 變更 **序列化** 輸入選項至 **少二進位**.
 
-1. 添加参数“ `binaryless`= `true`&quot; 更改后，URI应类似于以下内容：
+1. 新增引數&quot; `binaryless`= `true`」在傳輸uri中。 變更後，URI看起來應該類似下列：
 
    *https://localhost:4503/bin/receive?sling:authRequestLogin=1&amp;binaryless=true*
 
-1. 重新启动所有创作和发布实例，以使更改生效。
+1. 重新啟動所有製作和發佈執行個體，讓變更生效。
 
-#### 使用S3和MongoDB创建群集 {#creating-a-cluster-using-s-and-mongodb}
+#### 使用S3和MongoDB建立叢集 {#creating-a-cluster-using-s-and-mongodb}
 
-1. 使用以下命令解包CQ快速启动：
+1. 使用以下命令解壓縮CQ快速入門：
 
    `java -jar cq-quickstart.jar -unpack`
 
-1. 解压缩AEM后，在安装目录内创建一个文件夹 *crx-quickstart*/*安装*.
+1. 解壓縮AEM後，在安裝目錄中建立一個資料夾 *crx-quickstart*/*安裝*.
 
-1. 在 `crx-quickstart` 文件夹：
+1. 在內建立這兩個檔案 `crx-quickstart` 資料夾：
 
    * *org.apache.jackrabbit.oak.plugins.document.DocumentNodeStoreService*.*config*
 
    * *org.apache.jackrabbit.oak.plugins.blob.datastore.S3DataStore*.*config*
 
-   创建文件后，根据需要添加配置选项。
+   建立檔案後，視需要新增設定選項。
 
-1. 按照上面所述，安装S3数据存储所需的两个包。
-1. 确保已安装MongoDB，且实例为 `mongod` 正在运行。
-1. 使用以下命令启动AEM:
+1. 如上所述，安裝S3資料存放區所需的兩個套件組合。
+1. 請確定已安裝MongoDB並且執行個體 `mongod` 執行中。
+1. 使用以下命令啟動AEM：
 
    `java -Xmx1024m -jar cq-quickstart.jar -r crx3,crx3mongo`
 
-1. 对第二个AEM实例重复步骤1至4。
-1. 启动第二个AEM实例。
+1. 對第二個AEM例項重複步驟1到4。
+1. 啟動第二個AEM執行個體。
 
-#### 配置共享数据存储 {#configuring-a-shared-data-store}
+#### 設定共用資料存放區 {#configuring-a-shared-data-store}
 
-1. 首先，在共享数据存储所需的每个实例上创建数据存储配置文件：
+1. 首先，在共用資料存放區所需的每個執行個體上建立資料存放區設定檔案：
 
-   * 如果您使用 `FileDataStore`，创建名为的文件 `org.apache.jackrabbit.oak.plugins.blob.datastore.FileDataStore.config` 然后放进去 `<aem-install>/crx-quickstart/install` 文件夹。
+   * 如果您使用 `FileDataStore`，建立名為的檔案 `org.apache.jackrabbit.oak.plugins.blob.datastore.FileDataStore.config` 並將其放入 `<aem-install>/crx-quickstart/install` 資料夾。
 
-   * 如果使用S3作为数据存储，请创建名为 `rg.apache.jackrabbit.oak.plugins.blob.datastore.S3DataStore.config` 在 `<aem-install>/crx-quickstart/install` 文件夹。
+   * 如果使用S3作為資料存放區，請建立名為的檔案o `rg.apache.jackrabbit.oak.plugins.blob.datastore.S3DataStore.config` 在 `<aem-install>/crx-quickstart/install` 資料夾如上所示。
 
-1. 在每个实例上修改数据存储配置文件，以便它们指向同一数据存储。 有关更多信息，请参阅 [本文](/help/sites-deploying/data-store-config.md#data-store-configurations).
-1. 如果实例已从现有服务器中克隆，则必须删除 `clusterId` 在存储库脱机时，使用最新的oak-run工具对新实例进行删除。 必须运行的命令是：
+1. 修改每個執行個體上的資料存放區組態檔，使其指向相同的資料存放區。 如需詳細資訊，請參閱 [本文](/help/sites-deploying/data-store-config.md#data-store-configurations).
+1. 如果執行個體是從現有伺服器複製而來，您必須移除 `clusterId` 存放庫離線時使用最新oak-run工具執行的新執行個體。 您必須執行的命令是：
 
    ```xml
    java -jar oak-run.jar resetclusterid < repository path | Mongo URI >
@@ -375,142 +375,142 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
 
    >[!NOTE]
    >
-   >如果配置了区段节点存储，则必须指定存储库路径。 默认情况下，路径为 `<aem-install-folder>/crx-quickstart/repository/segmentstore.` 如果配置了文档节点存储，则可以使用 [Mongo连接字符串URI](https://docs.mongodb.org/manual/reference/connection-string/).
+   >如果已設定區段節點存放區，則必須指定存放庫路徑。 依預設，路徑為 `<aem-install-folder>/crx-quickstart/repository/segmentstore.` 如果已設定Document節點存放區，您可以使用 [Mongo連線字串URI](https://docs.mongodb.org/manual/reference/connection-string/).
 
    >[!NOTE]
    >
-   >可以从以下位置下载Oak-run工具：
+   >Oak-run工具可從以下位置下載：
    >
    >
    >[https://mvnrepository.com/artifact/org.apache.jackrabbit/oak-run/](https://mvnrepository.com/artifact/org.apache.jackrabbit/oak-run/)
    >
    >
-   >必须根据您在AEM安装中使用的Oak版本来使用不同版本的工具。 使用该工具之前，请查看下面的版本要求列表：
+   >您必須根據您在AEM安裝中使用的Oak版本，使用不同版本的工具。 在使用工具之前，請檢視以下版本需求清單：
    >
    >
    >
-   >    * 对于Oak版本 **1.2.x** 使用Oak-run **1.2.12或更高版本**
-   >    * 对于Oak版本 **比上面更新**，请使用与AEM安装的Oak核心相匹配的Oak-run版本。
+   >    * 針對Oak版本 **1.2.x** 使用Oak-run **1.2.12或更新版本**
+   >    * 針對Oak版本 **比以上版本更新**，使用與AEM安裝的Oak核心相符的Oak-run版本。
 
 
-1. 最后，验证配置。 要验证，请查找每个共享该文件的存储库添加到数据存储的唯一文件。 文件的格式为 `repository-[UUID]`，其中UUID是每个单独存储库的唯一标识符。
+1. 最後，驗證設定。 若要驗證，請尋找由共用該檔案的每個存放庫新增到資料存放區的唯一檔案。 檔案的格式為 `repository-[UUID]`，其中UUID是每個個別存放庫的唯一識別碼。
 
-   因此，正确的配置应具有与共享数据存储的存储库相同数量的唯一文件。
+   因此，正確的設定應具有與共用資料存放區的存放庫相同數目的唯一檔案。
 
-   文件的存储方式各不相同，具体取决于数据存储：
+   根據資料存放區，檔案的儲存方式不同：
 
-   * 对于 `FileDataStore` 文件在数据存储文件夹的根路径下创建。
-   * 对于 `S3DataStore` 文件在配置的S3存储段下创建 `META` 文件夹。
+   * 對於 `FileDataStore` 這些檔案會在資料存放區資料夾的根路徑下建立。
+   * 對於 `S3DataStore` 這些檔案會建立在已設定的S3貯體中，位於 `META` 資料夾。
 
 ## Azure 数据存储 {#azure-data-store}
 
-可以将AEM配置为在Microsoft®的Azure存储服务中存储数据。 它使用 `org.apache.jackrabbit.oak.plugins.blob.datastore.AzureDataStore.config` 用于配置的PID。
+可以將AEM設定為將資料儲存在Microsoft®的Azure儲存體服務中。 它會使用 `org.apache.jackrabbit.oak.plugins.blob.datastore.AzureDataStore.config` 設定的PID。
 
-要启用Azure数据存储功能，必须下载并安装包含Azure连接器的功能包。 转到 [Adobe存储库](https://repo1.maven.org/maven2/com/adobe/granite/com.adobe.granite.oak.azureblobconnector/) 并从1.6.x版本的功能包下载最新版本（例如，com.adobe.granite.oak.azureblobconnector-1.6.3.zip）。
+若要啟用Azure資料存放區功能，必須下載並安裝包含Azure Connector的功能套件。 前往 [Adobe存放庫](https://repo1.maven.org/maven2/com/adobe/granite/com.adobe.granite.oak.azureblobconnector/) 並從feature pack 1.6.x版（例如com.adobe.granite.oak.azureblobconnector-1.6.3.zip）下載最新版本。
 
 >[!NOTE]
 >
->将AEM与TarMK结合使用时，默认情况下，二进制文件存储在FileDataStore中。 要将TarMK与Azure DataStore结合使用，您必须使用 `crx3tar-nofds` 运行模式，例如：
+>搭配TarMK使用AEM時，二進位檔案預設會儲存在FileDataStore中。 AEM若要搭配Azure DataStore使用TarMK，您必須使用 `crx3tar-nofds` 執行模式，例如：
 
 ```shell
 java -jar <aem-jar-file>.jar -r crx3tar-nofds
 ```
 
-下载后，您可以按如下方式安装和配置Azure连接器：
+下載後，您可以依照以下方式安裝和設定Azure聯結器：
 
-1. 将功能包zip文件的内容解压缩到临时文件夹中。
+1. 將Feature Pack zip檔案的內容解壓縮至暫存資料夾。
 
-1. 转到临时文件夹，并复制 `jcr_root/libs/system/install` 到 `<aem-install>crx-quickstart/install` 文件夹。
-1. 如果AEM已配置为与Tar或MongoDB存储一起使用，请从 `/crx-quickstart/install` 文件夹。 必须删除的文件包括：
+1. 移至暫存資料夾，並複製下列專案的內容： `jcr_root/libs/system/install` 至 `<aem-install>crx-quickstart/install` 資料夾。
+1. 如果AEM已設定為搭配Tar或MongoDB儲存體使用，請從 `/crx-quickstart/install` 資料夾，然後再繼續。 必須移除的檔案包括：
 
-   ForMongoMK:
+   ForMongoMK：
 
    `org.apache.jackrabbit.oak.plugins.document.DocumentNodeStoreService.config`
 
-   对于TarMK:
+   若為TarMK：
 
    `org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.config`
 
-1. 返回到已提取功能包的临时位置，并复制 `jcr_root/libs/system/config` 到 `<aem-install>/crx-quickstart/install` 文件夹。
-1. 编辑配置文件并添加安装程序所需的配置选项。
-1. 启动AEM。
+1. 返回功能套件已擷取的臨時位置，並複製的內容 `jcr_root/libs/system/config` 至 `<aem-install>/crx-quickstart/install` 資料夾。
+1. 編輯組態檔，並新增您的設定所需的組態選項。
+1. 啟動AEM。
 
-您可以使用以下选项来使用配置文件：
+您可以搭配下列選項使用組態檔：
 
-* azureSas=&quot;&quot;:在连接器的1.6.3版中，添加了Azure共享访问签名(SAS)支持。 **如果配置文件中同时存在SAS和存储凭据，则SAS具有优先级。** 有关SAS的详细信息，请参阅 [官方文档](https://learn.microsoft.com/en-us/azure/storage/common/storage-sas-overview). 确保对“=”字符进行转义，如“\=”。
+* azureSas=」：在聯結器的1.6.3版本中，新增了Azure共用存取簽名(SAS)支援。 **如果組態檔中同時存在SAS和儲存憑證，則SAS具有優先權。** 如需SAS的詳細資訊，請參閱 [正式檔案](https://learn.microsoft.com/en-us/azure/storage/common/storage-sas-overview). 請確定&#39;=&#39;字元已逸出，如&#39;\=&#39;。
 
-* azureBlobEndpoint=&quot;&quot;:Azure Blob端点。 例如， https://&lt;storage-account>.blob.core.windows.net 。
-* accessKey=&quot;&quot;:存储帐户名称。 有关Microsoft® Azure身份验证凭据的更多详细信息，请参阅 [官方文档](https://azure.microsoft.com/en-us/documentation/articles/storage-create-storage-account).
+* azureBlobEndpoint=&quot;： Azure Blob端點。 例如， https://&lt;storage-account>.blob.core.windows.net.
+* accessKey=&quot;：儲存體帳戶名稱。 如需Microsoft® Azure驗證認證的詳細資訊，請參閱 [正式檔案](https://azure.microsoft.com/en-us/documentation/articles/storage-create-storage-account).
 
-* secretKey=&quot;&quot;:存储访问密钥。 确保对“=”字符进行转义，如“\=”。
-* container=&quot;&quot;:Microsoft® Azure Blob存储容器名称。 容器是一组Blob的组。 有关更多详细信息，请阅读 [官方文档](https://learn.microsoft.com/en-us/rest/api/storageservices/Naming-and-Referencing-Containers--Blobs--and-Metadata?redirectedfrom=MSDN).
-* maxConnections=&quot;&quot;:每个操作并发请求数。 默认值为 1。
-* maxErrorRetry=&quot;&quot;:每个请求的重试次数。 默认值为 3。
-* socketTimeout=&quot;&quot;:请求使用的超时间隔（以毫秒为单位）。 默认值为5分钟。
+* secretKey=&quot;：儲存體存取金鑰。 請確定&#39;=&#39;字元已逸出，如&#39;\=&#39;。
+* container=&quot;： Microsoft® Azure Blob儲存體容器名稱。 容器是一組Blob。 如需其他詳細資訊，請閱讀 [正式檔案](https://learn.microsoft.com/en-us/rest/api/storageservices/Naming-and-Referencing-Containers--Blobs--and-Metadata?redirectedfrom=MSDN).
+* maxConnections=&quot;：每個作業同時發出的要求數目。 默认值为 1。
+* maxErrorRetry=&quot;&quot;：每個請求的重試次數。 默认值为 3。
+* socketTimeout=&quot;&quot;：要求所使用的逾時間隔（毫秒）。 預設值為5分鐘。
 
-除了上述设置外，还可以配置以下设置：
+除了上述設定外，您也可以設定下列設定：
 
-* 路径：数据存储的路径。 默认值为 `<aem-install>/repository/datastore.`
-* RecordLength:应存储在数据存储中的对象的最小大小。 默认为16 KB。
-* maxCachedBinarySize:大小小于或等于此大小的二进制文件存储在内存缓存中。 大小以字节为单位。 默认为17408(17 KB)。
-* cacheSize:缓存的大小。 值以字节为单位指定。 默认为64 GB。
-* 密码：仅在对共享数据存储设置使用无二进制复制时使用。
-* stagingSplitPercentage:配置为用于暂存异步上传的缓存大小的百分比。 默认值为 10。
-* uploadThreads:用于异步上传的上传线程数。 默认值为 10。
-* stagingPurgeInterval:从暂存缓存中清除已完成上载的间隔，以秒为单位。 默认值为300秒（5分钟）。
-* stagingRetryInterval:上传失败的重试间隔，以秒为单位。 默认值为600秒（10分钟）。
+* path：資料存放區的路徑。 預設值為 `<aem-install>/repository/datastore.`
+* RecordLength：應該儲存在資料存放區中的物件大小下限。 預設值為16 KB。
+* maxCachedBinarySize：大小小於或等於此大小的二進位檔儲存在記憶體快取中。 大小以位元組為單位。 預設值為17408 (17 KB)。
+* cacheSize：快取的大小。 此值是以位元組為單位指定的。 預設值為64 GB。
+* 密碼：僅在共用資料存放區設定中使用無二進位檔復寫時使用。
+* stagingSplitPercentage：設定為用於中繼非同步上傳的快取大小百分比。 默认值为 10。
+* uploadThreads：用於非同步上傳的上傳執行緒數目。 默认值为 10。
+* stagingPurgeInterval：從暫存快取中清除已完成的上傳的間隔（秒）。 預設值為300秒（5分鐘）。
+* stagingRetryInterval：失敗上傳的重試間隔（以秒為單位）。 預設值為600秒（10分鐘）。
 
 >[!NOTE]
 >
->所有设置都应带引号，例如：
+>所有設定都應放在引號之間，例如：
 
 ```shell
 accessKey="ASDASDERFAERAER"
 secretKey="28932hfjlkwdo8fufsdfas\=\="
 ```
 
-## 数据存储垃圾收集 {#data-store-garbage-collection}
+## 資料存放區垃圾收集 {#data-store-garbage-collection}
 
-数据存储垃圾收集过程用于删除数据存储中任何未使用的文件，从而释放该过程中有价值的磁盘空间。
+資料存放區廢棄專案收集程式可用來移除資料存放區中未使用的檔案，藉此在程式中釋放寶貴的磁碟空間。
 
-您可以通过以下方式运行数据存储垃圾收集：
+您可以透過以下方式執行資料存放區垃圾收集：
 
-1. 转到JMX控制台(位于 *https://&lt;serveraddress:port>/system/console/jmx*
-1. 搜索 **存储库管理。** 找到存储库管理器MBean后，单击它可显示可用选项。
-1. 滚动到页面的结尾，然后单击 **startDataStoreGC(boolean markOnly)** 链接。
-1. 在以下对话框中，输入 `false` 对于 `markOnly` 参数，然后单击 **调用**:
+1. 前往位於的JMX主控台 *https://&lt;serveraddress:port>/system/console/jmx*
+1. 正在搜尋 **存放庫管理。** 找到「存放庫管理員MBean」後，按一下它即可顯示可用的選項。
+1. 捲動至頁面結尾，然後按一下 **startDataStoreGC（布林值markOnly）** 連結。
+1. 在下列對話方塊中，輸入 `false` 的 `markOnly` 引數，然後按一下 **叫用**：
 
    ![chlimage_1-9](assets/chlimage_1-9.png)
 
    >[!NOTE]
    >
-   >的 `markOnly` 参数表示垃圾收集的扫描阶段是否运行。
+   >此 `markOnly` 參數列示垃圾收集掃描階段是否執行。
 
-## 共享数据存储的数据存储垃圾收集 {#data-store-garbage-collection-for-a-shared-data-store}
-
->[!NOTE]
->
->在群集或共享数据存储中执行垃圾收集时，设置（使用Mongo或Tar区段）日志可能会显示有关无法删除某些Blob ID的警告。 在以前的垃圾收集中删除的Blob ID被没有ID删除信息的其他群集或共享节点再次错误地引用。 因此，在执行垃圾收集时，当垃圾收集尝试删除在上次运行中已删除的ID时，它会记录一则警告。 此行为不会影响性能或功能。
+## 共用資料存放區的資料存放區垃圾收集 {#data-store-garbage-collection-for-a-shared-data-store}
 
 >[!NOTE]
 >
->如果您使用共享数据存储设置，并且数据存储垃圾收集被禁用，则运行Lucene Binary清理任务可能会突然增加所使用的磁盘空间。 请考虑通过执行以下操作，在所有创作实例和发布实例上禁用BlobTracker:
+>在叢集或共用資料存放區中執行垃圾收集時，設定（使用Mongo或Segment Tar）記錄可能會顯示無法刪除某些blob ID的警告。 其他沒有ID刪除相關資訊的叢集或共用節點，會再次錯誤地參考先前垃圾收藏集中刪除的Blob ID。 因此，當執行垃圾收集時，它會嘗試刪除在上次執行中已刪除的ID時記錄警告。 此行為不會影響效能或功能。
+
+>[!NOTE]
 >
->1. 停止AEM实例。
->2. 添加 `blobTrackSnapshotIntervalInSecs=L"0"` 参数 `crx-quickstart/install/org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.config` 文件。 此参数需要Oak 1.12.0、1.10.2或更高版本。
->3. 重新启动AEM实例。
+>如果您使用共用資料存放區設定，且資料存放區垃圾收集已停用，執行Lucene二進位清理工作可能會突然增加使用的磁碟空間。 請考慮執行下列動作，在所有作者和發佈執行個體上停用BlobTracker：
+>
+>1. 停止AEM執行個體。
+>2. 新增 `blobTrackSnapshotIntervalInSecs=L"0"` 中的引數 `crx-quickstart/install/org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.config` 檔案。 此引數需要Oak 1.12.0、1.10.2或更新版本。
+>3. 重新啟動AEM執行個體。
 
 
-使用较新版本的AEM，还可以在由多个存储库共享的数据存储上运行数据存储垃圾收集。 要能够在共享数据存储上运行数据存储垃圾收集，请执行以下步骤：
+使用較新版本的AEM，資料存放區垃圾收集也可以在多個存放庫共用的資料存放區上執行。 若要在共用資料存放區上執行資料存放區垃圾收集，請執行下列步驟：
 
-1. 确保在共享数据存储的所有存储库实例上禁用为数据存储垃圾收集配置的任何维护任务。
-1. 运行 [二进制垃圾收集](/help/sites-deploying/data-store-config.md#data-store-garbage-collection) 逐个 **全部** 共享数据存储的存储库实例。 但是，请确保输入 `true` 对于 `markOnly` 参数：
+1. 請確定在共用資料存放區的所有存放庫執行個體上，針對資料存放區垃圾收集設定的任何維護任務都已停用。
+1. 執行中所述的步驟 [二進位垃圾收集](/help/sites-deploying/data-store-config.md#data-store-garbage-collection) 個別開啟 **全部** 共用資料存放區的存放庫執行個體。 不過，請務必輸入 `true` 的 `markOnly` 按一下叫用按鈕之前的引數：
 
    ![chlimage_1-10](assets/chlimage_1-10.png)
 
-1. 在所有实例上完成上述过程后，再次从 **any** 实例数：
+1. 在所有執行個體上完成上述程式後，再次從執行資料存放區垃圾收集 **任何** 執行個體的：
 
-   1. 转到JMX控制台并选择“存储库管理器”Mbean。
-   1. 单击 **单击startDataStoreGC(boolean markOnly)** 链接。
-   1. 在以下对话框中，输入 `false` 对于 `markOnly` 参数。
-   找到的所有文件都使用之前使用的标记阶段进行整理，并从数据存储中删除未使用的其余文件。
+   1. 前往JMX主控台，然後選取「儲存區域管理員Mbean」。
+   1. 按一下 **按一下startDataStoreGC(boolean markOnly)** 連結。
+   1. 在下列對話方塊中，輸入 `false` 的 `markOnly` 引數重新輸入。
+   所有找到的檔案都使用之前使用的標籤階段進行整理，並從資料存放區中刪除未使用的其餘檔案。

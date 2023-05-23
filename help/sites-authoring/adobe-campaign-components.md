@@ -1,6 +1,6 @@
 ---
-title: 与Adobe Campaign组件集成
-description: 与Adobe Campaign集成后，在使用新闻稿和表单时，您会有可用的组件。
+title: 與Adobe Campaign元件整合
+description: 與Adobe Campaign整合時，您擁有可在使用電子報和表單時使用的元件。
 uuid: a858d5ca-aa6e-4bde-92db-a6dcd8b48ae6
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -16,21 +16,21 @@ ht-degree: 4%
 
 ---
 
-# Adobe Campaign组件{#adobe-campaign-components}
+# Adobe Campaign Components{#adobe-campaign-components}
 
-与Adobe Campaign集成后，在使用新闻稿和表单时，您会有可用的组件。 本文档对这两种方法进行了描述。
+與Adobe Campaign整合時，您擁有可在使用電子報和表單時使用的元件。 本檔案將說明這兩者。
 
 >[!CAUTION]
 >
->AEM电子邮件组件已弃用。 由于电子邮件的性质（将内容和样式合并在一起），AEM提供的现成电子邮件组件对客户的重复使用有限，因为需要在项目所需的任何组件中实施自定义样式。
+>已棄用AEM電子郵件元件。 由於電子郵件結合了內容和樣式，因此由AEM提供的現成可用電子郵件元件對於客戶的重複使用有限，因為需要將自訂樣式實作到專案所需的任何元件中。
 >
->电子邮件组件可以在项目级别实施，已弃用的AEM电子邮件组件说明了如何实现这一点。 但是，不应在项目中使用这些已弃用的组件。
+>電子郵件元件可在專案層級實作，而過時的AEM電子郵件元件會說明如何實作。 不過，這些已棄用的元件不應用於專案。
 
-## Adobe Campaign新闻稿组件 {#adobe-campaign-newsletter-components}
+## Adobe Campaign Newsletter元件 {#adobe-campaign-newsletter-components}
 
-所有营销活动组件都遵循 [电子邮件模板最佳实践](/help/sites-administering/best-practices-for-email-templates.md) 和基于Adobe标记语言 [HTL](https://helpx.adobe.com/cn/experience-manager/htl/using/overview.html).
+所有Campaign元件都遵循中概述的最佳實務 [電子郵件範本的最佳實務](/help/sites-administering/best-practices-for-email-templates.md) 且以Adobe標籤語言為基礎 [HTL](https://helpx.adobe.com/cn/experience-manager/htl/using/overview.html).
 
-当您打开配置为与Adobe Campaign集成的新闻稿/电子邮件时，您应会在 **Adobe Campaign新闻稿** 部分：
+當您開啟已設定為與Adobe Campaign整合的電子報/電子郵件時，您應該會在 **Adobe Campaign電子報** 區段：
 
 * 标题（营销活动）
 * 图像（营销活动）
@@ -40,238 +40,238 @@ ht-degree: 4%
 * 文本与图像（营销活动）
 * 文本与个性化（营销活动）
 
-以下部分介绍了这些组件。
+下一節將說明這些元件。
 
-这些组件如下所示：
+元件顯示如下：
 
 ![chlimage_1-43](assets/chlimage_1-43.png)
 
 ### 标题（营销活动） {#heading-campaign}
 
-标题组件可以：
+標題元件可以：
 
-* 通过将 **标题** 字段。
-* 显示您在 **标题** 字段。
+* 將頁面名稱保留在 **標題** 欄位空白。
+* 顯示您在「 」中指定的文字 **標題** 欄位。
 
-您可以编辑 **标题（营销活动）** 组件。 留空将使用页面标题。
+您編輯 **標題（行銷活動）** 元件直接輸入。 留空将使用页面标题。
 
 ![chlimage_1-44](assets/chlimage_1-44.png)
 
-您可以配置以下内容：
+您可以設定下列專案：
 
-* **标题**
-如果要使用页面标题以外的名称，请在此处输入该名称。
+* **標題**
+如果您想使用頁面標題以外的名稱，請在此處輸入名稱。
 
-* **标题级别(1、2、3、4)**
-基于HTML标题大小1-4的标题级别。
+* **標題層級(1、2、3、4)**
+標題層級以HTML標題大小1-4為基礎。
 
-以下示例显示正在显示的标题（营销活动）组件。
+下列範例顯示正在顯示的標題（行銷活動）元件。
 
 ![chlimage_1-45](assets/chlimage_1-45.png)
 
 ### 图像（营销活动） {#image-campaign}
 
-图像（营销活动）组件根据指定的参数显示图像和随附文本。
+影像（行銷活動）元件會根據指定的引數顯示影像和隨附文字。
 
-您可以上传图像，然后对其进行编辑和处理（例如，裁剪、旋转、添加链接/标题/文本）。
+您可以上傳影像，然後編輯和處理影像（例如，裁切、旋轉、新增連結/標題/文字）。
 
-您可以从 [资产浏览器](/help/sites-authoring/author-environment-tools.md#assetsbrowsertouchoptimizedui) 直接放到组件或其 [“配置”对话框](/help/sites-authoring/editing-content.md#editconfigurecopycutdeletepastetouchoptimizedui). 您还可以从“配置”对话框上传图像；此对话框还控制图像的所有定义和操作：
+您可以從「 」拖放影像 [資產瀏覽器](/help/sites-authoring/author-environment-tools.md#assetsbrowsertouchoptimizedui) 直接連結至元件或其 [設定對話方塊](/help/sites-authoring/editing-content.md#editconfigurecopycutdeletepastetouchoptimizedui). 您也可以從「設定」對話方塊上傳影像；此對話方塊也會控制影像的所有定義與操作：
 
 ![chlimage_1-46](assets/chlimage_1-46.png)
 
 >[!NOTE]
 >
->您必须在 **替换文本** 字段，或无法保存图像。
+>您必須在 **替代文字** 欄位，否則無法儲存影像。
 
-上传图像后（而非之前），您可以使用 [就地编辑](/help/sites-authoring/editing-content.md#editcontenttouchoptimizedui) 要根据需要裁剪/旋转图像，请执行以下操作：
+影像上傳後（而非上傳前），您可以使用 [就地編輯](/help/sites-authoring/editing-content.md#editcontenttouchoptimizedui) 若要視需要裁切/旋轉影像：
 
 ![](do-not-localize/chlimage_1-10.png)
 
 >[!NOTE]
 >
->就地编辑器在编辑时使用图像的原始大小和宽高比。 您还可以指定高度和宽度属性。 在保存编辑更改时，将应用属性中定义的任何大小和宽高比限制。
+>就地編輯器在編輯時會使用影像的原始大小和外觀比例。 您也可以指定高度和寬度屬性。 儲存編輯變更時，會套用屬性中定義的任何大小及外觀比例限制。
 >
->根据您的实例，可能还会对 [页面设计](/help/sites-developing/designer.md);这些是在项目实施期间制定的。
+>視您的執行個體而定，可能也會對您施加最小和最大限制 [頁面設計](/help/sites-developing/designer.md)；這些是在專案實作期間開發。
 
-在全屏编辑模式下，还有其他几个选项可供使用；例如，映射和缩放：
+全熒幕編輯模式中有數個其他選項可供使用；例如，地圖和縮放：
 
 ![](do-not-localize/chlimage_1-11.png)
 
-加载图像后，您可以配置以下内容：
+載入影像時，您可以設定下列專案：
 
-* **地图**
-要映射图像，请选择“映射”。 您可以指定创建图像映射的方式（矩形、多边形等）以及区域应指向的位置。
+* **地圖**
+若要對應影像，請選取「對應」。 您可以指定建立影像地圖的方式（矩形、多邊形等）以及區域應指向的位置。
 
 * **裁切**
-选择“裁剪”以裁剪图像。 使用鼠标裁剪图像。
+選取「裁切」以裁切影像。 使用滑鼠裁切影像。
 
-* **旋转**
-要旋转图像，请选择“旋转”。 反复使用，直到图像旋转到您想要的方式为止。
+* **旋轉**
+若要旋轉影像，請選取「旋轉」。 重複使用，直到影像以您想要的方式旋轉。
 
 * **清除**
-删除当前图像。
+移除目前的影像。
 
-* 缩放栏（仅限经典选项）要放大和缩小图像，请使用图像下方的滑动栏（在“确定”和“取消”按钮上方）
-* **标题**
-图像的标题。
+* 縮放列（僅限傳統版）若要放大和縮小影像，請使用影像下方的投影列（在「確定」和「取消」按鈕上方）
+* **標題**
+影像的標題。
 
-* **替换文本**
-用于创建辅助内容时使用的替换文本。
+* **替代文字**
+建立無障礙內容時使用的替代文字。
 
-* **链接到**
-创建指向资产或您网站中其他页面的链接。
+* **連結至**
+建立資產或網站內其他頁面的連結。
 
-* **描述**
-图像的描述。
+* **說明**
+影像的說明。
 
 * **大小**
-设置图像的高度和宽度。
+設定影像的高度和寬度。
 
 >[!NOTE]
 >
->您必须在 **替换文本** 字段 **高级** 选项卡，或者无法保存图像，并且会看到以下错误消息：
+>您必須在 **替代文字** 中的欄位 **進階** 標籤內，或影像無法儲存時，您會看到下列錯誤訊息：
 >
 >`Validation failed. Verify the values of the marked fields.`
 
-以下示例展示了所显示的图像（营销活动）组件。
+下列範例顯示正在顯示的影像（行銷活動）元件。
 
 ![chlimage_1-47](assets/chlimage_1-47.png)
 
 ### 链接 (营销活动) {#link-campaign}
 
-链接（营销活动）组件允许您添加指向新闻稿的链接。
+連結（行銷活動）元件可讓您新增新聞稿的連結。
 
-您可以在 **显示**, **URL信息**&#x200B;或 **高级** 选项卡：
+您可在以下位置設定下列專案： **顯示**， **URL資訊**，或 **進階** 索引標籤：
 
-* **链接标题**
-链接的描述。 这是用户看到的文本。
+* **連結標題**
+連結的標題。 這是使用者看到的文字。
 
-* **链接工具提示**
-添加有关如何使用链接的其他信息。
+* **連結工具提示**
+新增如何使用連結的其他資訊。
 
-* **LinkType**
-在下拉列表中，选择 
-**自定义URL** 和 **自适应文档**. 此字段为必填字段. 如果选择自定义URL，则可以提供链接URL。 如果选择“自适应文档”，则可以提供文档路径。
+* **連結型別**
+在下拉式清單中，選取 
+**自訂URL** 和 **最適化檔案**. 此字段为必填字段. 如果您選取「自訂URL」，可以提供連結URL。 如果您選取「最適化檔案」，則可以提供檔案路徑。
 
-* **其他URL参数**
-添加任何其他URL参数。 单击添加项目可添加多个项目。
+* **其他URL引數**
+新增任何其他URL引數。 按一下「新增專案」以新增多個專案。
 
 >[!NOTE]
 >
->您必须在 **链接类型** 字段 **URL信息** 选项卡，或者无法保存组件，并且会看到以下错误消息：
+>您必須在 **連結型別** 中的欄位 **URL資訊** 標籤，或元件無法儲存時，您會看到以下錯誤訊息：
 >
 >`Validation failed. Verify the values of the marked fields.`
 
-以下示例展示了所显示的链接（营销活动）组件。
+下列範例顯示正在顯示的連結（行銷活動）元件。
 
 ![chlimage_1-48](assets/chlimage_1-48.png)
 
-### Dynamic Media Classic(Scene7)图像模板（营销活动） {#scene-image-template-campaign}
+### Dynamic Media Classic (Scene7)影像範本（行銷活動） {#scene-image-template-campaign}
 
-Dynamic Media Classic(Scene7)图像模板是分层的图像文件，其中的内容和属性可以参数化以实现可变性。 的 **[!UICONTROL 图像模板]** 组件允许您在新闻稿中使用Scene7模板，并更改模板参数的值。 此外，您还可以在参数中使用Adobe Campaign元数据变量，以便每个用户以个性化方式体验图像。
+Dynamic Media Classic (Scene7)影像範本為圖層式影像檔案，其中的內容和屬性可以引數化為可變的。 此 **[!UICONTROL 影像範本]** 元件可讓您在電子報中使用Scene7範本，以及變更範本引數的值。 此外，您可以在引數內使用Adobe Campaign中繼資料變數，讓每位使用者都能透過個人化方式體驗影像。
 
 ![chlimage_1-49](assets/chlimage_1-49.png)
 
-单击 **编辑** 以配置组件。 您可以配置此部分中描述的设置。 此Scene7图像模板在 [Scene7图像模板组件](/help/assets/scene7.md#image-template).
+按一下 **編輯** 以設定元件。 您可以設定本節中所述的設定。 有關此Scene7影像範本的詳細說明，請參閱 [Scene7影像範本元件](/help/assets/scene7.md#image-template).
 
-此外，参数面板还列出了在Scene7中为模板定义的所有模板参数。 对于每个参数，您可以调整值、插入变量或将其重置为默认值。
+此外，「引數」面板會列出已在Scene7中為範本定義的所有範本引數。 對於這些引數中的每一個，您可以調整值、插入變數或將它們重設為預設值。
 
 ![chlimage_1-50](assets/chlimage_1-50.png)
 
 ### 目标引用（营销活动） {#targeted-reference-campaign}
 
-利用目标引用（营销活动）组件，可创建对目标段落的引用。
+目標引用（行銷活動）元件可讓您建立目標段落的引用。
 
-在此组件中，您导航到目标段落以将其选中。
+在此元件中，您可以導覽至目標段落以選取它。
 
-单击文件夹图标可导航到要引用的段落。 完成后，单击复选标记。
+按一下資料夾圖示以導覽至您要參考的段落。 完成後，按一下核取記號。
 
 ### 文本与图像（营销活动） {#text-image-campaign}
 
-文本与图像（营销活动）组件可添加文本块和图像。
+文字與影像（行銷活動）元件新增文字區塊和影像。
 
-单击以配置组件时，将选择文本或图像。
+按一下以設定元件時，選取「文字」或「影像」。
 
 ![chlimage_1-51](assets/chlimage_1-51.png)
 
-选择 **文本** 显示内嵌编辑器：
+選取 **文字** 顯示內嵌編輯器：
 
 ![](do-not-localize/chlimage_1-12.png)
 
-选择 **图像** 显示图像的就地编辑器：
+選取 **影像** 顯示影像的就地編輯器：
 
 ![](do-not-localize/chlimage_1-13.png)
 
-请参阅 [图像（营销活动）组件](#image-campaign) 以了解有关使用图像的更多信息。 请参阅 [文本与个性化（营销活动）组件](#text-personalization-campaign) 以了解有关使用文本的更多信息。
+另請參閱 [影像（行銷活動）元件](#image-campaign) 以取得有關使用影像的詳細資訊。 另請參閱 [文字和個人化（行銷活動）元件](#text-personalization-campaign) 以取得有關使用文字的詳細資訊。
 
-与文本与个性化（营销活动）和图像（营销活动）组件一样，您可以配置：
+和「文字與個人化」（行銷活動）和「影像」（行銷活動）元件一樣，您可以設定：
 
-* **文本**
-输入文本。 使用工具栏可修改格式、创建列表和添加链接。
+* **文字**
+輸入文字。 使用工具列來修改格式、建立清單及新增連結。
 
-* **图像**
-从内容查找器中拖动图像，或单击以浏览到图像。 根据需要裁剪或旋转。
+* **影像**
+從內容尋找器拖曳影像，或按一下以瀏覽影像。 視需要裁切或旋轉。
 
-* **图像属性** (**高级图像属性**)允许您指定以下内容：
+* **影像屬性** (**進階影像屬性**)可讓您指定下列專案：
 
-   * **标题**
-块的标题；将由鼠标悬停显示。
+   * **標題**
+區塊標題；將顯示於mouseover。
 
-   * **替换文本**
-无法显示图像时要显示的替换文本。
+   * **替代文字**
+影像無法顯示時所要顯示的替代文字。
 
-   * **链接到**
-创建指向资产或您网站中其他页面的链接。
+   * **連結至**
+建立資產或網站內其他頁面的連結。
 
-   * **描述**
-图像的描述。
+   * **說明**
+影像的說明。
 
    * **大小**
-设置图像的高度和宽度。
+設定影像的高度和寬度。
 
 >[!NOTE]
 >
->的 **替换文本** 字段 **高级** 选项卡，或者组件无法保存，并且您会看到以下错误消息：
+>此 **替代文字** 中的欄位 **進階** 索引標籤為必填，否則元件無法儲存，且您會看到以下錯誤訊息：
 >
 >`Validation failed. Verify the values of the marked fields.`
 
-以下示例展示了所显示的文本与图像（营销活动）组件。
+下列範例顯示正在顯示的文字與影像（行銷活動）元件。
 
 ![chlimage_1-52](assets/chlimage_1-52.png)
 
 ### 文本与个性化（营销活动） {#text-personalization-campaign}
 
-通过文本与个性化（营销活动）组件，您可以使用所见即所得(WYSIWYG)编辑器输入文本块，该编辑器的功能由 [富文本编辑器](/help/sites-authoring/rich-text-editor.md). 此外，此组件还允许您使用Adobe Campaign提供的上下文字段和个性化块；另请参阅 [插入个性化](/help/sites-authoring/campaign.md#inserting-personalization).
+文字與個人化（行銷活動）元件可讓您使用WYSIWYG編輯器輸入文字區塊，其功能由 [RTF編輯器](/help/sites-authoring/rich-text-editor.md). 此外，此元件可讓您使用Adobe Campaign中可用的內容欄位和個人化區塊；另請參閱 [插入個人化](/help/sites-authoring/campaign.md#inserting-personalization).
 
-利用所选图标，可设置文本格式，包括字体特性、对齐方式、链接、列表和缩进。 在 [两个UI](/help/sites-authoring/editing-content.md)，但外观不同：
+選取圖示可讓您設定文字的格式，包括字型特性、對齊、連結、清單和縮排。 中的功能基本相同 [兩個UI](/help/sites-authoring/editing-content.md)，但外觀與風格有所差異：
 
 ![chlimage_1-53](assets/chlimage_1-53.png)
 
-在就地编辑器中，您可以添加文本、更改对齐方式、添加和删除链接、添加上下文字段或个性化块，以及进入全屏模式。 添加完文本/个性化后，选择复选标记以保存更改（或选择x以取消）。 请参阅 [就地编辑](/help/sites-authoring/editing-content.md#editcontenttouchoptimizedui) 以了解更多信息。
+在就地編輯器中，您可以新增文字、變更對齊、新增和移除連結、新增內容欄位或個人化區塊，以及進入全熒幕模式。 新增完文字/個人化後，請選取核取記號以儲存變更（或x以取消）。 另請參閱 [就地編輯](/help/sites-authoring/editing-content.md#editcontenttouchoptimizedui) 以取得詳細資訊。
 
 >[!NOTE]
 >
->* 可用的个性化字段取决于您的新闻稿所链接到的Adobe Campaign模板。
->* 从ContextHub中选择角色后，个性化字段会自动替换为选定用户档案中的数据。
+>* 可用的個人化欄位取決於您電子報所連結的Adobe Campaign範本。
+>* 從ContextHub選取角色後，個人化欄位會自動取代為所選設定檔的資料。
 >
->请参阅 [插入个性化](/help/sites-authoring/campaign.md#inserting-personalization).
+>另請參閱 [插入個人化](/help/sites-authoring/campaign.md#inserting-personalization).
 
 ![chlimage_1-54](assets/chlimage_1-54.png)
 
 >[!NOTE]
 >
->仅在 **nms:seedMember** 架构或其某个扩展会被考虑在内。 链接到的表的属性 **nms:seedMember** 不可用。
+>僅中定義的欄位 **nms：seedMember** 結構描述或其其中一個擴充功能會列入考量。 連結至的表格屬性 **nms：seedMember** 無法使用。
 
-## Adobe Campaign表单组件 {#adobe-campaign-form-components}
+## Adobe Campaign表單元件 {#adobe-campaign-form-components}
 
-您可以使用Adobe Campaign组件创建用户填写的表单，以订阅新闻稿、取消订阅新闻稿，或更新其用户配置文件。 请参阅 [创建Adobe Campaign Forms](/help/sites-authoring/adobe-campaign-forms.md) 以了解更多信息。
+您可以使用Adobe Campaign元件建立表單，讓使用者填寫以訂閱電子報、取消訂閱電子報或更新其使用者設定檔。 另請參閱 [建立Adobe Campaign Forms](/help/sites-authoring/adobe-campaign-forms.md) 以取得詳細資訊。
 
-每个组件字段都可以链接到Adobe Campaign数据库字段。 可用字段因其包含的数据类型而异，如部分所述 [组件和数据类型](#components-and-data-type). 如果在Adobe Campaign中扩展收件人架构，则数据类型匹配的组件中将提供新字段。
+每個元件欄位都可以連結至Adobe Campaign資料庫欄位。 可用欄位會依其包含的資料型別而有所不同，如區段所述 [元件和資料型別](#components-and-data-type). 如果您在Adobe Campaign中擴充收件者綱要，則資料型別相符的元件中會有新欄位可用。
 
-当您打开配置为与Adobe Campaign集成的表单时，您会在 **Adobe Campaign** 部分：
+當您開啟已設定為與Adobe Campaign整合的表單時，您會在 **Adobe Campaign** 區段：
 
 * 复选框（营销活动）
-* 日期字段（营销活动）和日期字段/HTML5（营销活动）
+* 日期欄位（行銷活動）和日期欄位/HTML5 （行銷活動）
 * 已加密的主要密钥（营销活动）
 * 错误显示（营销活动）
 * 隐藏的对帐密钥（营销活动）
@@ -280,27 +280,27 @@ Dynamic Media Classic(Scene7)图像模板是分层的图像文件，其中的内
 * 订阅核对清单（营销活动）
 * 文本字段（营销活动）
 
-这些组件如下所示：
+元件顯示如下：
 
 ![chlimage_1-55](assets/chlimage_1-55.png)
 
-本节将详细介绍每个组件。
+本節詳細說明每個元件。
 
-### 组件和数据类型 {#components-and-data-type}
+### 元件和資料型別 {#components-and-data-type}
 
-下表介绍了可用于显示和修改Adobe Campaign配置文件数据的组件。 每个组件都可以映射到Adobe Campaign配置文件字段，以显示其值，并在提交表单时更新字段。 不同的组件只能匹配到相应数据类型的字段。
+下表說明可用於顯示和修改Adobe Campaign設定檔資料的元件。 每個元件都可對應至Adobe Campaign設定檔欄位，以顯示其值，並在提交表單時更新欄位。 不同的元件只能與適當資料型別的欄位相符。
 
 <table>
  <tbody>
   <tr>
    <td><p><strong>组件</strong></p> </td>
-   <td><p><strong>Adobe Campaign字段的数据类型</strong></p> </td>
-   <td><p><strong>示例字段</strong></p> </td>
+   <td><p><strong>Adobe Campaign欄位的資料型別</strong></p> </td>
+   <td><p><strong>範例欄位</strong></p> </td>
   </tr>
   <tr>
    <td><p>复选框（营销活动）</p> </td>
    <td><p>布尔型</p> </td>
-   <td><p>不再联系（通过任何渠道）</p> </td>
+   <td><p>不再聯絡（透過任何管道）</p> </td>
   </tr>
   <tr>
    <td><p>日期字段（营销活动）</p> <p>日期字段/HTML 5（营销活动）</p> </td>
@@ -309,12 +309,12 @@ Dynamic Media Classic(Scene7)图像模板是分层的图像文件，其中的内
   </tr>
   <tr>
    <td><p>数字字段（营销活动）</p> </td>
-   <td><p>数字（字节、短、长、双）</p> </td>
+   <td><p>數值（位元組、短、長、雙）</p> </td>
    <td><p>年龄</p> </td>
   </tr>
   <tr>
    <td><p>选项字段（营销活动）</p> </td>
-   <td><p>字节，关联值</p> </td>
+   <td><p>具有關聯值的位元組</p> </td>
    <td><p>性别</p> </td>
   </tr>
   <tr>
@@ -325,169 +325,169 @@ Dynamic Media Classic(Scene7)图像模板是分层的图像文件，其中的内
  </tbody>
 </table>
 
-### 大多数组件通用的设置 {#settings-common-to-most-components}
+### 大部分元件通用的設定 {#settings-common-to-most-components}
 
-Adobe Campaign组件具有所有组件（“已加密的主密钥”和“隐藏的对帐密钥”组件除外）中通用的设置。
+Adobe Campaign元件具有所有元件中通用的設定（加密的主要金鑰和隱藏的調解金鑰元件除外）。
 
-在大多数组件中，您可以配置以下各项：
+在大多數元件中，您可以設定下列專案：
 
 #### 标题与文本 {#title-and-text}
 
 ![chlimage_1-56](assets/chlimage_1-56.png)
 
-* **标题**
-如果要使用元素名称以外的名称，请在此处输入该名称。
+* **標題**
+如果您想使用元素名稱以外的名稱，請在此處輸入它。
 
-* **隐藏标题**
-如果您不希望显示标题，请选中此复选框。
+* **隱藏標題**
+如果您不想看到標題，請選取此核取方塊。
 
-* **描述**
-向字段添加描述，以为用户提供更多信息。
+* **說明**
+新增說明至欄位，為使用者提供詳細資訊。
 
-* **仅显示值**
-仅显示值（如果存在）
+* **僅顯示值**
+只顯示值（如果有）
 
 #### Adobe Campaign {#adobe-campaign}
 
-您可以配置以下内容：
+您可以設定下列專案：
 
-* **映射**
-选择Adobe Campaign个性化字段（如果适用）。
+* **對應**
+選取Adobe Campaign個人化欄位（如適用）。
 
-* **协调键值**
-如果此字段是协调键值的一部分，则选中此复选框。
+* **調解金鑰**
+如果此欄位是調解金鑰的一部分，請選取此核取方塊。
 
 ![chlimage_1-57](assets/chlimage_1-57.png)
 
 #### 约束 {#constraints}
 
-* **必需** 选中此复选框可使此组件成为必需组件；即用户必须输入一个值。
-* **必需消息** （可选）添加一条消息，说明字段为必填字段。
+* **必填** 選取此核取方塊即可讓此元件為必要元件；也就是說，使用者必須輸入值。
+* **必要訊息** 選擇性地新增訊息，說明欄位為必填。
 
 ![chlimage_1-58](assets/chlimage_1-58.png)
 
 #### 样式 {#styling}
 
 * **CSS**
-输入要用于此组件的CSS类。
+輸入您要用於此元件的CSS類別。
 
 ![chlimage_1-59](assets/chlimage_1-59.png)
 
 ### 复选框（营销活动） {#checkbox-campaign}
 
-通过复选框（营销活动）组件，用户可以修改具有布尔数据类型的Adobe Campaign配置文件字段。 例如，您可以有一个复选框（营销活动）组件，允许收件人指定不希望通过任何渠道联系他/她。
+核取方塊（行銷活動）元件可讓使用者修改布林值資料型別的Adobe Campaign設定檔欄位。 例如，您可以有核取方塊（行銷活動）元件，讓收件者指定不想透過任何頻道聯絡他/她。
 
-您可以 [配置大多数Adobe Campaign组件通用的设置](#settings-common-to-most-components) 复选框（营销活动）组件中。
+您可以 [設定大多數Adobe Campaign元件通用的設定](#settings-common-to-most-components) 核取方塊（行銷活動）元件中的。
 
-以下示例显示正在显示的复选框（营销活动）组件。
+下列範例顯示正在顯示的Checkbox (Campaign)元件。
 
 ![chlimage_1-60](assets/chlimage_1-60.png)
 
-### 日期字段（营销活动）和日期字段/HTML5（营销活动） {#date-field-campaign-and-date-field-html-campaign}
+### 日期欄位（行銷活動）和日期欄位/HTML5 （行銷活動） {#date-field-campaign-and-date-field-html-campaign}
 
-使用日期字段允许收件人指定日期；例如，您可能希望收件人指定其出生日期。 日期格式与Adobe Campaign实例中使用的格式匹配。
+使用日期欄位可允許收件者指定日期；例如，您可能希望收件者指定其出生日期。 日期格式符合您在Adobe Campaign執行個體中使用的格式。
 
-除 [大多数Adobe Campaign组件通用的设置](#settings-common-to-most-components)，您可以配置以下内容：
+除了 [大多數Adobe Campaign元件的通用設定](#settings-common-to-most-components)，您可以設定下列專案：
 
-* **约束 — 约束** 下拉列表您可以选择 —  **无** 或 **日期 —** 添加日期约束或不添加约束。 如果选择日期，则用户在字段中输入的答案必须采用日期格式。
+* **限制 — 限制** 下拉式清單您可以選取 —  **無** 或 **日期 —** 新增日期限制或無限制。 如果您選取日期，使用者在欄位中輸入的答案必須為日期格式。
 
-* **约束消息** 此外，您还可以添加约束消息，以便用户了解如何正确设置其答案的格式。
-* **样式 — 宽度** 通过单击或点按 **+** 和 **-** 图标或输入数字。
+* **限制訊息** 此外，您可以新增限制訊息，讓使用者知道如何正確格式化其答案。
+* **樣式 — 寬度** 按一下或點選「 」，調整欄位寬度 **+** 和 **-** 圖示或輸入數字。
 
-以下示例显示了显示调整了宽度的日期字段（营销活动）组件。
+下列範例顯示已調整寬度的日期欄位（行銷活動）元件。
 
 ![chlimage_1-61](assets/chlimage_1-61.png)
 
 ### 已加密的主要密钥（营销活动） {#encrypted-primary-key-campaign}
 
-此组件定义将包含Adobe Campaign配置文件标识符的URL参数的名称(**主资源标识符** 或 **已加密的主密钥** 在Adobe Campaign Standard和6.1中)。
+此元件會定義將包含Adobe Campaign設定檔識別碼的URL引數名稱(**主要資源識別碼** 或 **已加密的主要金鑰** (分別在Adobe Campaign Standard和6.1中)。
 
-显示和修改Adobe Campaign用户档案数据的每个表单 **必须** 包括已加密的主密钥组件。
+顯示和修改Adobe Campaign設定檔資料的每個表單 **必須** 包含加密的主要金鑰元件。
 
-您可以在已加密的主密钥（营销活动）组件中配置以下内容：
+您可以在加密的主要金鑰（行銷活動）元件中設定下列專案：
 
-* **标题和文本 — 元素名称** 默认为encryptedPK。 仅当元素名称与表单上其他元素的名称冲突时，才需要更改该元素名称。 没有两个表单字段可以具有相同的元素名称。
-* **Adobe Campaign - URL参数** 为EPK添加URL参数。 例如，您可以使用 **epk**.
+* **標題和文字 — 元素名稱** 預設為encryptedPK。 當元素名稱與表單上其他元素的名稱衝突時，您才需要變更元素名稱。 沒有兩個表單欄位可以有相同的元素名稱。
+* **Adobe Campaign - URL引數** 新增EPK的URL引數。 例如，您可以使用值 **epk**.
 
-以下示例显示正在显示的已加密的主密钥（营销活动）组件。
+以下範例顯示正在顯示的加密主要金鑰（行銷活動）元件。
 
 ![chlimage_1-62](assets/chlimage_1-62.png)
 
 ### 错误显示（营销活动） {#error-display-campaign}
 
-此组件允许您显示后端错误。 表单的错误处理需要设置为“转发”才能使组件正常工作。
+此元件可讓您顯示後端錯誤。 表單的錯誤處理必須設定為「轉寄」，元件才能正常運作。
 
-以下示例展示了所显示的错误显示（营销活动）组件。
+下列範例顯示正在顯示的錯誤顯示（行銷活動）元件。
 
 ![chlimage_1-63](assets/chlimage_1-63.png)
 
 ### 隐藏的对帐密钥（营销活动） {#hidden-reconciliation-key-campaign}
 
-隐藏的协调键值（营销活动）组件允许您将隐藏字段作为协调键值的一部分添加到表单。
+隱藏調解金鑰（行銷活動）元件可讓您將隱藏欄位新增為調解金鑰的一部分，到表單。
 
-您可以在隐藏的协调键值（营销活动）组件中配置以下内容：
+您可以在隱藏調解金鑰（行銷活動）元件中設定下列專案：
 
-* **标题和文本 — 元素名称** 默认为reconcilKey。 仅当元素名称与表单上其他元素的名称冲突时，才需要更改该元素名称。 没有两个表单字段可以具有相同的元素名称。
-* **Adobe Campaign — 映射** 映射到Adobe Campaign个性化字段。
+* **標題和文字 — 元素名稱** 預設為reconclKey。 當元素名稱與表單上其他元素的名稱衝突時，您才需要變更元素名稱。 沒有兩個表單欄位可以有相同的元素名稱。
+* **Adobe Campaign — 對應** 對應至Adobe Campaign個人化欄位。
 
-以下示例显示了所显示的隐藏的协调键值（营销活动）组件。
+下列範例顯示隱藏的調解金鑰（行銷活動）元件。
 
 ![chlimage_1-64](assets/chlimage_1-64.png)
 
 ### 数字字段（营销活动） {#numeric-field-campaign}
 
-使用数字字段允许收件人输入数字，例如其年龄。
+使用數值欄位可允許收件者輸入數字，例如年齡。
 
-除 [大多数Adobe Campaign组件通用的设置](#settings-common-to-most-components)，您可以配置以下内容：
+除了 [大多數Adobe Campaign元件的通用設定](#settings-common-to-most-components)，您可以設定下列專案：
 
-* **约束 — 约束** 下拉列表您可以选择 —  **无** 或 **数值 —** 添加数字约束或无约束。 如果选择数字，则用户在字段中输入的答案必须是数字。
+* **限制 — 限制** 下拉式清單您可以選取 —  **無** 或 **數值 —** 新增數值或無限制的限制。 如果您選取數字，使用者在欄位中輸入的答案必須是數字。
 
-* **约束消息** 此外，您还可以添加约束消息，以便用户了解如何正确设置其答案的格式。
-* **样式 — 宽度** 通过单击或点按 **+** 和 **-** 图标或输入数字。
+* **限制訊息** 此外，您可以新增限制訊息，讓使用者知道如何正確格式化其答案。
+* **樣式 — 寬度** 按一下或點選「 」，調整欄位寬度 **+** 和 **-** 圖示或輸入數字。
 
-以下示例显示了配置了显示宽度的数字字段（营销活动）组件。
+以下範例顯示已設定寬度的數值欄位（行銷活動）元件。
 
 ![chlimage_1-65](assets/chlimage_1-65.png)
 
 ### 选项字段（营销活动） {#option-field-campaign}
 
-此下拉列表允许您选择一个选项；例如，收件人的性别或地位。
+此下拉式清單可讓您選取選項；例如，收件者的性別或狀態。
 
-您可以 [配置大多数Adobe Campaign组件通用的设置](#settings-common-to-most-components) (在选项字段（营销活动）组件中)。 要填充下拉列表，请单击或点按Adobe Campaign个性化字段中的相应字段，然后导航到相应的字段。
+您可以 [設定大多數Adobe Campaign元件通用的設定](#settings-common-to-most-components) （行銷活動）元件中的。 若要填入下拉式清單，請按一下或點選Adobe Campaign符號，並導覽至欄位，在Adobe Campaign個人化欄位中選取適當的欄位。
 
 ![chlimage_1-66](assets/chlimage_1-66.png)
 
-以下示例展示了所显示的选项字段（营销活动）组件。
+下列範例顯示正在顯示的「選項欄位」 （行銷活動）元件。
 
 ![chlimage_1-67](assets/chlimage_1-67.png)
 
 ### 订阅核对清单（营销活动） {#subscriptions-checklist-campaign}
 
-使用 **订阅核对清单（营销活动）** 用于修改与Adobe Campaign配置文件关联的订阅的组件。
+使用 **訂閱檢查清單（行銷活動）** 元件，用於修改與Adobe Campaign設定檔相關聯的訂閱。
 
-添加到表单后，此组件会将所有可用的订阅显示为复选框，并允许用户选择所需的订阅。 用户提交表单时，此组件会根据表单操作类型(**Adobe Campaign:订阅服务** 或 **Adobe Campaign:取消订阅服务**)。
+新增至表單時，此元件會將所有可用的訂閱顯示為核取方塊，並允許使用者選取所需的訂閱。 使用者提交表單時，此元件會根據表單動作型別(**Adobe Campaign：訂閱服務** 或 **Adobe Campaign：取消訂閱服務**)。
 
 >[!NOTE]
 >
->该组件不会检查用户已订阅/退订的服务。
+>元件不會檢查使用者已訂閱/取消訂閱的服務。
 
-您可以 [配置大多数Adobe Campaign组件通用的设置](#settings-common-to-most-components) (在订阅核对清单（营销活动）组件中)。 (没有可用于此组件的Adobe Campaign配置。)
+您可以 [設定大多數Adobe Campaign元件通用的設定](#settings-common-to-most-components) （行銷活動）元件中的「訂閱檢查清單」(Subscriptions Checklist) 。 (此元件沒有可用的Adobe Campaign設定。)
 
-以下示例展示了所显示的订阅核对清单（营销活动）组件。
+以下範例顯示正在顯示的訂閱檢查清單（行銷活動）元件。
 
 ![chlimage_1-68](assets/chlimage_1-68.png)
 
 ### 文本字段（营销活动） {#text-field-campaign}
 
-用于输入字符串类型数据的文本字段（营销活动）组件，例如名字、姓氏、地址、电子邮件地址等。
+文字欄位（行銷活動）元件，可讓您輸入字串型別資料，例如名字、姓氏、地址、電子郵件地址等。
 
-除 [大多数Adobe Campaign组件通用的设置](#settings-common-to-most-components)，您可以配置以下内容：
+除了 [大多數Adobe Campaign元件的通用設定](#settings-common-to-most-components)，您可以設定下列專案：
 
-* **约束 — 约束** 下拉列表您可以选择 —  **无，** **电子邮件**&#x200B;或 **名称** （无变音） — 添加电子邮件地址、名称或无约束的约束。 如果选择电子邮件，则用户在字段中输入的答案必须是电子邮件地址。 如果选择名称，则必须是名称（不允许变音）。
+* **限制 — 限制** 下拉式清單您可以選取 —  **無，** **電子郵件**，或 **名稱** （無變音） — 新增電子郵件地址、名稱或無限制的限制。 如果您選取電子郵件，使用者在欄位中輸入的答案必須是電子郵件地址。 如果您選取名稱，則必須為名稱（不允許使用變音）。
 
-* **约束消息** 此外，您还可以添加约束消息，以便用户了解如何正确设置其答案的格式。
-* **样式 — 宽度** 通过单击或点按 **+** 和 **-** 图标或输入数字。
+* **限制訊息** 此外，您可以新增限制訊息，讓使用者知道如何正確格式化其答案。
+* **樣式 — 寬度** 按一下或點選「 」，調整欄位寬度 **+** 和 **-** 圖示或輸入數字。
 
-以下示例显示正在显示的文本字段（营销活动）组件。
+以下範例顯示正在顯示的文字欄位（行銷活動）元件。
 
 ![chlimage_1-69](assets/chlimage_1-69.png)

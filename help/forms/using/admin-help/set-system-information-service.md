@@ -1,7 +1,7 @@
 ---
-title: 设置系统信息服务
+title: 設定系統資訊服務
 seo-title: Set up the System information service
-description: 了解如何设置系统信息服务。
+description: 瞭解如何設定系統資訊服務。
 seo-description: Learn how to set up the System information service.
 uuid: 7639d683-1ed5-43e3-be4e-d9ae427e88ed
 contentOwner: admin
@@ -17,12 +17,12 @@ ht-degree: 0%
 
 ---
 
-# 设置系统信息服务 {#set-up-the-system-information-service}
+# 設定系統資訊服務 {#set-up-the-system-information-service}
 
-系统信息服务提供REST API来检索信息。 要使用系统信息服务，请从管理控制台启用REST端点。 执行以下步骤以启用REST端点：
+系統資訊服務提供可擷取資訊的REST API。 若要使用系統資訊服務，請從管理控制檯啟用REST端點。 執行以下步驟以啟用REST端點：
 
-1. 登录到管理控制台。 管理控制台的默认URL为 `https://[hostname]:'port'/adminui.`
-1. 导航到服务>应用程序和服务>服务管理。
-1. 在“服务管理”页上，单击 **系统信息** 服务。
-1. 在“端点”选项卡的列表中，选择REST，然后单击 **添加**.
-1. 在“添加REST端点”屏幕上，单击 **添加**.
+1. 登入管理主控台。 管理主控台的預設URL為 `https://[hostname]:'port'/adminui.`
+1. 導覽至「服務>應用程式和服務>服務管理」。
+1. 在「服務管理」頁面上，按一下 **系統資訊** 服務。
+1. 在「端點」標籤上的清單中，選取REST，然後按一下 **新增**.
+1. 在「新增REST端點」畫面上，按一下 **新增**.

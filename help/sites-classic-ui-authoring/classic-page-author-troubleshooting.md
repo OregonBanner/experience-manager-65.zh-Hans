@@ -1,5 +1,5 @@
 ---
-title: 解决AEM创作问题
+title: 疑難排解製作時的AEM
 description: 以下部分涵盖您在使用 AEM 时可能遇到的一些问题，以及有关如何解决这些问题的建议。
 uuid: eb95e5ba-1eed-4ffb-80c1-9b8468820c22
 contentOwner: Chris Bohnert
@@ -21,26 +21,26 @@ ht-degree: 29%
 
 >[!NOTE]
 >
->遇到问题时，也值得查看 [已知问题](/help/release-notes/release-notes.md) 例如，您的实例（版本和Service Pack）。
+>遇到問題時，也值得檢查 [已知問題](/help/release-notes/release-notes.md) （發行版本和Service Pack）。
 
 >[!NOTE]
 >
->具有管理员权限并想要解决AEM问题的用户可以使用 [AEM疑难解答（适用于管理员）](/help/sites-administering/troubleshoot.md). 如果您没有足够的权限，请与系统管理员联系，了解有关对AEM进行故障诊断的信息。
+>具有管理員許可權的使用者以及想要疑難排解AEM問題的使用者，可以使用中所述的疑難排解方法 [疑難排解AEM （適用於管理員）](/help/sites-administering/troubleshoot.md). 如果您沒有足夠的許可權，請向系統管理員洽詢AEM疑難排解的相關資訊。
 
 ## 发布站点上仍显示旧的页面版本 {#old-page-version-still-on-published-site}
 
 * **问题**：
 
-   * 您已对页面进行了更改并将页面复制到发布站点，但 *旧* 发布网站上仍显示页面版本。
+   * 您已對頁面進行變更，並將頁面復寫至發佈站台，但 *舊* 頁面版本仍會顯示在發佈網站上。
 
 * **原因**:
 
-   * 这可能有多种原因，通常是缓存（本地浏览器或调度程序），但有时可能是复制队列的问题。
+   * 這可能有多種原因，最常見的是快取（本機瀏覽器或Dispatcher），不過有時復寫佇列可能會出現問題。
 
 * **解决方案**：
 
-   * 这里有多种可能性：
-   * 确认页面已正确复制。 检查页面状态，如有必要，检查复制队列的状态。
+   * 這裡有多種可能性：
+   * 確認頁面已正確復寫。 檢查頁面狀態，並視需要檢查復寫佇列的狀態。
    * 清除本地浏览器中的缓存，然后再次访问页面。
    * 向页面 URL 的结尾处添加 `?`。例如：
 
@@ -50,29 +50,29 @@ ht-degree: 29%
 
    * 如果复制队列存在问题，请与系统管理员联系。
 
-## Sidekick不可见 {#sidekick-not-visible}
+## Sidekick不可見 {#sidekick-not-visible}
 
 * **问题**：
 
-   * 在创作环境中编辑内容页面时，Sidekick不可见。
+   * 在作者環境中編輯內容頁面時看不到Sidekick。
 
 * **原因**:
 
-   * 在极少数情况下，您可能已将Sidekick的标题放在当前窗口的范围之外。 这表示您无法重新调整其位置。
+   * 在極少數的情況下，您可能會將sidekick的標題放在目前視窗的範圍之外。 這表示您無法再次重新調整其位置。
 
 * **解决方案**:
 
-   * 从当前会话注销，然后重新登录。 Sidekick将返回到默认位置。
+   * 從目前的工作階段登出，然後重新登入。 Sidekick將返回預設位置。
 
-## 查找并替换 — 并非替换所有实例 {#find-replace-not-all-instances-are-replaced}
+## 尋找和取代 — 並非所有例項都會被取代 {#find-replace-not-all-instances-are-replaced}
 
 * **问题:**
 
-   * 使用 **查找和替换** 选项，并非所有实例 `find` 术语会在页面上替换。
+   * 使用時 **尋找和取代** 選項，並非所有的 `find` 字詞會替換在頁面上。
 
 * **原因**:
 
-   * 的 **查找和替换** 取决于内容的保存方式以及内容是否可搜索。 例如，博客文本存储在 `jcr:text` 未配置为搜索的属性。 查找和替换Servlet的默认范围涵盖以下属性：
+   * 的功能 **尋找和取代** 取決於內容的儲存方式以及是否可以搜尋內容。 例如，部落格文字儲存在 `jcr:text` 未設定為要搜尋的屬性。 尋找和取代servlet的預設範圍涵蓋下列屬性：
 
       * `jcr:title`
       * `jcr:description`
@@ -81,6 +81,6 @@ ht-degree: 29%
 
 * **解决方案**:
 
-   * 这些定义可通过 **Day CQ WCM查找替换Servlet** 使用 **Web控制台**;例如，在
+   * 這些定義可透過以下設定進行變更： **Day CQ WCM尋找取代Servlet** 使用 **網頁主控台**；例如，
 
       `http://localhost:4502/system/console/configMgr`

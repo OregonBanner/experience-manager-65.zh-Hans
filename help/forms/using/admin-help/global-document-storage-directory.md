@@ -1,7 +1,7 @@
 ---
-title: 全局文档存储目录
+title: 全域檔案儲存目錄
 seo-title: Global document storage directory
-description: 全局文档存储(GDS)目录是用于存储进程中使用的长期文件的目录。
+description: 全域檔案儲存(GDS)目錄是用來儲存處理序中使用的長期檔案的目錄。
 seo-description: The global document storage (GDS) directory is a directory used to store long-lived files that are used within a process.
 uuid: 7681672c-a0dc-4445-8004-1b1e2ed3d301
 contentOwner: admin
@@ -17,91 +17,91 @@ ht-degree: 1%
 
 ---
 
-# 全局文档存储目录{#global-document-storage-directory}
+# 全域檔案儲存目錄{#global-document-storage-directory}
 
-此 *全局文档存储(GDS)* directory是一个目录，用于存储进程中使用的长期文件。 这些文件包括PDF、策略和表单模板。 长期文件是许多AEM forms部署总体状态的关键部分。 如果某些或所有长期文档丢失或损坏，表单服务器可能会变得不稳定。 异步作业调用的输入文档也存储在GDS目录中，并且必须可用于处理请求。 务必考虑托管GDS目录的文件系统的可靠性。 根据您的质量和服务级别需求，使用独立磁盘冗余阵列(RAID)或其他技术。
+此 *全域檔案儲存(GDS)* directory是用來儲存處理序中使用的長期檔案的目錄。 這些檔案包括PDF、原則和表單範本。 長效檔案是許多AEM表單部署整體狀態的關鍵部分。 如果部分或所有長期檔案遺失或損毀，表單伺服器可能會變得不穩定。 非同步作業叫用的輸入檔案也儲存在GDS目錄中，並且必須可用於處理請求。 請務必考量裝載GDS目錄的檔案系統的可靠性。 使用獨立磁碟備援陣列(RAID)或其他技術，以因應您的品質和服務等級需求。
 
-长期文件可能包含敏感的用户信息。 使用AEM Forms API或用户界面访问此信息时，可能需要特殊凭据。 通过操作系统对GDS目录进行适当的保护非常重要。 只有用于运行应用服务器的管理员帐户才应具有对GDS目录的读/写访问权限。
+長效檔案可能包含敏感的使用者資訊。 使用AEM Forms API或使用者介面存取此資訊時，可能需要特殊認證。 務必透過作業系統正確保護GDS目錄。 只有用來執行應用程式伺服器的管理員帳戶才應該具有對GDS目錄的讀取/寫入存取權。
 
-除了为GDS选择安全、高可用性的目录之外，您还可以选择在数据库中启用文档存储。 请注意，即使使用AEM Forms数据库进行文档存储，AEM Forms仍需要GDS目录。 (请参阅 [数据库用于文档存储时的备份选项](/help/forms/using/admin-help/files-back-recover.md#backup-options-when-database-is-used-for-document-storage).)
+除了為GDS選取安全、高可用性的目錄之外，您也可以選擇啟用資料庫中的檔案儲存。 請注意，即使使用AEM Forms資料庫進行檔案儲存，AEM Forms仍需要GDS目錄。 (請參閱 [當資料庫用於檔案儲存時的備份選項](/help/forms/using/admin-help/files-back-recover.md#backup-options-when-database-is-used-for-document-storage).)
 
-AEM forms应用程序数据驻留在GDS目录和AEM forms数据库中。 下表介绍了数据及其位置。
+AEM forms應用程式資料位於GDS目錄和AEM forms資料庫中。 下表說明資料及其位置。
 
 <table>
  <thead>
   <tr>
-   <th><p>AEM表单数据</p></th>
+   <th><p>AEM表單資料</p></th>
    <th><p>数据库</p></th>
    <th><p>GDS</p></th>
   </tr>
  </thead>
  <tbody>
   <tr>
-   <td><p>应用程序数据（用户、角色、进程、策略、端点、事件等）</p></td>
+   <td><p>應用程式資料（使用者、角色、程式、原則、端點、事件等）。</p></td>
    <td><p>是</p></td>
    <td><p>否</p></td>
   </tr>
   <tr>
-   <td><p>已部署的服务容器</p></td>
+   <td><p>已部署的服務容器</p></td>
    <td><p>是</p></td>
    <td><p>否</p></td>
   </tr>
   <tr>
-   <td><p>文档管理器 </p></td>
+   <td><p>檔案管理員 </p></td>
    <td><p>否</p></td>
    <td><p>是</p></td>
   </tr>
   <tr>
-   <td><p>Forms存储库</p></td>
+   <td><p>Forms存放庫</p></td>
    <td><p>是</p></td>
    <td><p>否</p></td>
   </tr>
   <tr>
-   <td><p>系统配置</p></td>
+   <td><p>系統設定</p></td>
    <td><p>是</p></td>
    <td><p>否</p></td>
   </tr>
   <tr>
-   <td><p>观察文件夹</p></td>
+   <td><p>Watched資料夾</p></td>
    <td><p>否</p></td>
    <td><p>是</p></td>
   </tr>
  </tbody>
 </table>
 
-## 配置GDS目录 {#configuring-the-gds-directory}
+## 設定GDS目錄 {#configuring-the-gds-directory}
 
-在AEM Forms安装过程中，可以手动配置GDS目录的位置。 如果在安装期间位置设置保持为空，则该位置将默认位于应用程序服务器安装下的目录，如下所示：
+GDS目錄的位置可以在AEM表單安裝過程中手動設定。 如果在安裝期間位置設定保持空白，則該位置會預設為應用程式伺服器安裝下的目錄，如下所示：
 
 * (JBos) `[appserver root]/server/[type]/svcnative/DocumentStorage`
 * (WebLogic) `[appserverdomain]/'server'/adobe/DocumentServer/DocumentStorage`
 * (WebSphere) `[appserver root]/installedApps/adobe/'server'/DocumentStorage`
 
-## 更改默认GDS位置 {#change-the-default-gds-location}
+## 變更預設GDS位置 {#change-the-default-gds-location}
 
-安装AEM Forms后，您可以在管理控制台中更改GDS位置。 您必须手动重新定位数据才能完成该过程。
+AEM表單安裝完成後，您可以在管理主控台中變更GDS位置。 您必須手動重新定位資料，才能完成此程式。
 
 >[!NOTE]
 >
->请通过以下方式迁移数据，否则将会发生数据丢失。
+>請以下列方式移轉資料，否則資料將會遺失。
 
-1. 登录到管理控制台，然后单击设置>核心系统设置>配置。
-1. 在“全局文档存储目录”框中，输入新GDS目录的完整路径，然后单击“确定”。
-1. 立即关闭应用程序服务器。
-1. 将所有文件从旧GDS目录移到新位置，保留内部目录结构。
-1. 重新启动应用程序服务器。
+1. 登入管理主控台，然後按一下「設定>核心系統設定>設定」。
+1. 在「全域檔案儲存目錄」方塊中，輸入新GDS目錄的完整路徑，然後按一下「確定」。
+1. 立即關閉應用程式伺服器。
+1. 將所有檔案從舊的GDS目錄移至新的位置，保留內部目錄結構。
+1. 重新啟動應用程式伺服器。
 
-## 关于部署文件 {#about-deployment-files}
+## 關於部署檔案 {#about-deployment-files}
 
-AEM forms包含两种类型的部署文件：服务容器和Java 2 Platform， Enterprise Edition (J2EE) EAR文件。 EAR文件包含标准J2EE应用程序包，这些应用程序包包含AEM Forms的核心功能。 特定于应用程序服务器的EAR文件如下：
+AEM表單包含兩種型別的部署檔案：服務容器和Java 2 Platform， Enterprise Edition (J2EE) EAR檔案。 EAR檔案包含標準J2EE應用程式組合，其中包含AEM Forms的核心功能。 應用程式伺服器特定的EAR檔案如下：
 
 * adobe-core-*[appserver]*.ear
-* adobe-core-*[appserver]*-*[操作系统]*.ear
+* adobe-core-*[appserver]*-*[作業系統]*.ear
 
-实施AEM Forms包括将汇编的EAR文件和支持文件部署到您计划运行AEM Forms解决方案的应用程序服务器。 如果配置和装配了多个模块，可部署模块将封装在可部署EAR文件中。 要部署这些文件，请将它们复制到 *[appserver主页]*\server\all\deploy目录。
+實作AEM Forms包括將組裝的EAR檔案和支援檔案部署至您計畫執行AEM Forms解決方案的應用程式伺服器。 如果配置並組裝了多個模組，可部署的模組會封裝在可部署的EAR檔案中。 若要部署這些檔案，請將它們複製到 *[appserver首頁]*\server\all\deploy目錄。
 
-模块和AEM表单存档文件打包为JAR文件。 由于它们不是J2EE类型的文件，因此不会部署到应用程序服务器。 相反，它们会复制到GDS目录中，并且其位置的引用存储在AEM表单数据库中。 因此，必须在群集的所有节点之间共享GDS目录。 所有节点都必须有权访问DSC的中央存储目录。
+模組和AEM表單封存檔封裝為JAR檔案。 因為它們不是J2EE型別檔案，所以不會部署至應用程式伺服器。 相反地，它們會複製到GDS目錄中，並且其位置的參照會儲存在AEM表單資料庫中。 因此，必須在叢集的所有節點之間共用GDS目錄。 所有節點都必須可以存取DSC的中央儲存目錄。
 
 >[!NOTE]
 >
->在部署服务容器之前，请确保已创建和配置GDS目录。 (请参阅 [配置GDS目录](global-document-storage-directory.md#configuring-the-gds-directory))
+>在部署服務容器之前，請確定您已建立並設定GDS目錄。 (請參閱 [設定GDS目錄](global-document-storage-directory.md#configuring-the-gds-directory))

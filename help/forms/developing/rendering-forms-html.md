@@ -1,7 +1,7 @@
 ---
-title: 将Forms渲染为HTML
+title: 將Forms呈現為HTML
 seo-title: Rendering Forms as HTML
-description: 使用Forms服务将表单渲染为HTML，以响应来自Web浏览器的HTTP请求。 您可以使用Java API和Web服务API将表单渲染为HTML。
+description: 使用Forms服務將表單轉譯為HTML，以回應來自網頁瀏覽器的HTTP請求。 您可以使用Java API和Web服務API將表單轉譯為HTML。
 seo-description: Use the Forms service to render forms as HTML in response to an HTTP request from a web browser. You can use the Java API and Web Service API to render forms as HTML.
 uuid: bd8edb6f-333b-4ceb-9877-618f5377f56f
 contentOwner: admin
@@ -19,25 +19,25 @@ ht-degree: 0%
 
 ---
 
-# 将Forms渲染为HTML {#rendering-forms-as-html}
+# 將Forms呈現為HTML {#rendering-forms-as-html}
 
-**本文档中的示例和示例仅适用于AEM Forms on JEE环境。**
+**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms 。**
 
-Forms服务将表单渲染为HTML，以响应来自Web浏览器的HTTP请求。 将表单渲染为HTML的好处是，客户端Web浏览器所在的计算机不需要Adobe Reader、Acrobat或Flash Player(对于表单指南（已弃用）)。
+Forms服務會根據來自網頁瀏覽器的HTTP請求，將表單轉譯為HTML。 將表單轉譯為HTML的好處是，使用者端網頁瀏覽器所在的電腦不需要Adobe Reader、Acrobat或Flash Player (適用於表單指南（已棄用）)。
 
-要将表单渲染为HTML，必须将表单设计另存为XDP文件。 保存为PDF文件的表单设计无法呈现为HTML。 在Designer中开发将渲染为HTML的表单设计时，请考虑以下条件：
+若要將表單轉譯為HTML，表單設計必須儲存為XDP檔案。 儲存為PDF檔案的表單設計無法呈現為HTML。 在Designer中開發將轉譯為HTML的表單設計時，請考慮以下條件：
 
-* 请勿使用对象的边框属性在表单上绘制线条、框或网格。 某些浏览器可能不会将边框与预览中显示的边框完全对齐。 对象可能显示为分层或可能将其他对象推离其预期位置。
-* 可使用直线、矩形和圆定义背景。
-* 绘制文本的大小略大于容纳文本所需的大小。 某些Web浏览器无法清晰地显示文本。
+* 請勿使用物件的邊框屬性在表單上繪製線條、方塊或格點。 有些瀏覽器可能不會將邊界排列成與預覽中顯示的完全一致。 物件可能顯示為圖層狀，或可能將其他物件推離其預期位置。
+* 您可以使用直線、矩形和圓來定義背景。
+* 繪製的文字略大於容納文字所需的文字。 有些網頁瀏覽器無法清楚顯示文字。
 
 >[!NOTE]
 >
->在渲染包含TIFF图像的表单时，使用 `FormServiceClient` 对象的 `(Deprecated) renderHTMLForm` 和 `renderHTMLForm2` 方法，则TIFF图像在Internet Explorer或Mozilla Firefox浏览器中显示的渲染HTML表单中不可见。 这些浏览器不为TIFF图像提供本机支持。
+>呈現包含TIFF影像的表單時，使用 `FormServiceClient` 物件的 `(Deprecated) renderHTMLForm` 和 `renderHTMLForm2` 方法，在Internet Explorer或Mozilla Firefox瀏覽器中顯示的呈現HTML表單中，不會顯示TIFF影像。 這些瀏覽器不提供TIFF影像的原生支援。
 
-## HTML页面 {#html-pages}
+## HTML頁面 {#html-pages}
 
-当窗体设计呈现为HTML窗体时，每个二级子窗体呈现为HTML页（面板）。 可以在Designer中查看子表单的层次结构。 属于根子表单的子表单（根子表单的默认名称为form1）是面板子表单。 以下示例显示了表单设计的子表单。
+當表單設計呈現為HTML表單時，每個第二層級子表單會呈現為HTML頁面（面板）。 您可以在Designer中檢視子表單的階層。 屬於根子表單的子表單（根子表單的預設名稱為form1）是面板子表單。 下列範例顯示表單設計的子表單。
 
 ```java
      form1
@@ -53,56 +53,56 @@ Forms服务将表单渲染为HTML，以响应来自Web浏览器的HTTP请求。 
              TextEdit1
 ```
 
-将表单设计渲染为HTML表单时，面板不受任何特定页面大小的限制。 如果您有动态子表单，则应将它们嵌套在面板子表单中。 动态子表单能够扩展到无限数量的HTML页。
+當表單設計呈現為HTML表單時，面板不受任何特定頁面大小的限制。 如果您有動態子表單，應該將它們巢狀內嵌在面板子表單中。 動態子表單可擴充至無限數量的HTML頁面。
 
-当表单呈现为HTML表单时，页面大小(对呈现为PDF的表单进行分页所必需的)没有任何意义。 由于具有可流动布局的表单可展开至无限数量的HTML页，因此务必要避免主控页上的页脚。 主控页面上内容区域下方的页脚可能会覆盖流经页面边界的HTML内容。
+當表單呈現為HTML表單時，頁面大小(對呈現為PDF的表單進行分頁所必需)沒有意義。 由於具有可流動版面的表單可展開至無限數量的HTML頁面，請務必避免主版頁面上的頁尾。 主版頁面內容區域下方的頁尾可能會覆寫流經頁面邊界的HTML內容。
 
-您必须使用 `xfa.host.pageUp` 和 `xfa.host.pageDown` 方法。 您可以通过向Forms服务发送表单并让Forms服务将表单渲染回客户端设备（通常是Web浏览器）来更改页面。
-
->[!NOTE]
->
->将表单发送到Forms服务，然后让Forms服务将表单渲染回客户端设备的过程称为将数据轮跳到服务器。
+您必須使用，明確地在面板之間移動 `xfa.host.pageUp` 和 `xfa.host.pageDown` 方法。 您可以傳送表單至Forms服務，並讓Forms服務將表單轉譯回使用者端裝置（通常為網頁瀏覽器）來變更頁面。
 
 >[!NOTE]
 >
->如果要自定义HTML表单上“HTML数字签名”按钮的外观，则必须在fscdigsig.css文件（在adobe-forms-ds.ear > adobe-forms-ds.war文件中）中更改以下属性：
-
-**.fsc-ds-ssb**：此样式表适用于符号字段为空白的情况。
-
-**.fsc-ds-ssv**：此样式表适用于有效符号字段的情况。
-
-**.fsc-ds-ssc**：此样式表适用于符号字段有效但数据已更改的情况。
-
-**.fsc-ds-ssi**：此样式表适用于符号字段无效的情况。
-
-**.fsc-ds-popup-bg**：未使用此样式表属性。
-
-**.fsc-ds-popup-btn**：未使用此样式表属性。
-
-## 运行脚本 {#running-scripts}
-
-表单作者指定脚本是在服务器或客户端上执行。 Forms服务会创建一个分布式的事件处理环境，用于执行可通过使用的在客户端和服务器之间分发的表单智能 `runAt` 属性。 有关此属性或在表单设计中创建脚本的信息，请参阅 [Forms设计器](https://www.adobe.com/go/learn_aemforms_designer_63)
-
-Forms服务可以在渲染表单时执行脚本。 因此，您可以通过连接到数据库或连接到客户端上可能不可用的Web服务来预填充包含数据的表单。 您还可以设置按钮的 `Click` 事件在服务器上运行，以便客户端将数据往返到服务器。 这允许客户端在用户与表单交互时运行可能需要服务器资源的脚本，例如企业数据库。 对于HTML表单，formcalc脚本只能在服务器上执行。 因此，您必须标记这些脚本以在 `server` 或 `both`.
-
-您可以通过调用来设计在页面（面板）之间移动的表单 `xfa.host.pageUp` 和 `xfa.host.pageDown` 方法。 此脚本放置在按钮的 `Click` 事件和 `runAt` 属性设置为 `Both`. 您选择的原因 `Both` 是这样，Adobe Reader或Acrobat(适用于呈现为PDF的表单)无需转至服务器即可更改页面，而HTML表单可以通过向服务器舍入检索数据来更改页面。 也就是说，表单将发送到Forms服务，并且表单将呈现为HTML，同时显示新页面。
-
-建议不要为脚本变量和表单字段指定相同的名称，例如项目。 某些Web浏览器（如Internet Explorer）可能不会初始化与表单字段同名的变量，从而导致出现脚本错误。 为表单字段和脚本变量指定不同的名称是一种好的做法。
-
-在渲染包含页面导航功能和表单脚本的HTML表单时（例如，假设脚本在每次渲染表单时都从数据库中检索字段数据），请确保表单脚本位于form：calculate事件中，而不是form：readyevent中。
-
-位于form：ready事件中的表单脚本在表单的初始渲染期间只执行一次，而不会在后续页面检索中执行。 相反，对于渲染表单的每个页面导航执行form：calculate事件。
+>將表單傳送至Forms服務，然後讓Forms服務將表單轉譯回使用者端裝置的程式，稱為將資料四捨五入至伺服器。
 
 >[!NOTE]
-在多页面表单中，如果您移动到其他页面，JavaScript对页面所做的更改将不会保留。
+>
+>如果您想要自訂HTML表單上「HTML數位簽名」按鈕的外觀，您必須在fscdigsig.css檔案（在adobe-forms-ds.ear > adobe-forms-ds.war檔案中）中變更以下屬性：
 
-您可以在提交表单之前调用自定义脚本。 此功能在所有可用的浏览器上均可使用。 但是，它只能在用户渲染具有它的HTML表单时使用 `Output Type` 属性设置为 `Form Body`. 当 `Output Type` 是 `Full HTML`. 有关配置此功能的步骤，请参阅管理帮助中的配置表单。
+**.fsc-ds-ssb**：此樣式表適用於空白符號欄位的情況。
 
-必须先定义在提交表单之前调用的回调函数，该函数的名称为 `_user_onsubmit`. 假定函数不会引发任何异常，或者如果引发异常，则将忽略该异常。 建议将JavaScript函数放置在html的head部分中；但是，您可以在脚本标记的结尾之前的任何位置声明该函数，这些标记包括 `xfasubset.js`.
+**.fsc-ds-ssv**：此樣式表適用於有效符號欄位的情況。
 
-在表单服务器渲染包含下拉列表的XDP时，除了创建下拉列表之外，还会创建两个隐藏的文本字段。 这些文本字段存储下拉列表的数据（一个字段存储选项的显示名称，另一个字段存储选项的值）。 因此，每次用户提交表单时，都会提交下拉列表的整个数据。 假设您不希望每次都提交那么多的数据，则可以编写自定义脚本来禁用它。 例如：下拉列表的名称为 `drpOrderedByStateProv` 并将其包装在子表单标题下。 HTML输入元素的名称将为 `header[0].drpOrderedByStateProv[0]`. 存储和提交下拉列表数据的隐藏字段的名称具有以下名称： `header[0].drpOrderedByStateProv_DISPLAYITEMS_[0] header[0].drpOrderedByStateProv_VALUEITEMS_[0]`
+**.fsc-ds-ssc**：此樣式表適用於有效符號欄位但資料已變更的情況。
 
-如果不想发布数据，可以通过以下方式禁用这些输入元素。 `var __CUSTOM_SCRIPTS_VERSION = 1; //enabling the feature function _user_onsubmit() { var elems = document.getElementsByName("header[0].drpOrderedByStateProv_DISPLAYITEMS_[0]"); elems[0].disabled = true; elems = document.getElementsByName("header[0].drpOrderedByStateProv_VALUEITEMS_[0]"); elems[0].disabled = true; }`
+**.fsc-ds-ssi**：此樣式表適用於無效符號欄位的情況。
+
+**.fsc-ds-popup-bg**：未使用此樣式表屬性。
+
+**.fsc-ds-popup-btn**：未使用此樣式表屬性。
+
+## 執行指令碼 {#running-scripts}
+
+表單作者會指定指令碼是在伺服器上還是使用者端上執行。 Forms服務會建立分散式的事件處理環境，以執行可在使用者端與伺服器之間使用的表單情報。 `runAt` 屬性。 如需此屬性或在表單設計中建立指令碼的相關資訊，請參閱 [Forms設計工具](https://www.adobe.com/go/learn_aemforms_designer_63_cn)
+
+Forms服務可在表單轉譯時執行指令碼。 因此，您可以連線至資料庫或使用者端可能無法使用的Web服務，預先填入含有資料的表單。 您也可以設定按鈕的 `Click` 要在伺服器上執行的事件，讓使用者端往返資料至伺服器。 這可讓使用者端在使用者與表單互動時，執行可能需要伺服器資源的指令碼，例如企業資料庫。 對於HTML表單，formcalc指令碼只能在伺服器上執行。 因此，您必須標籤這些指令碼以在 `server` 或 `both`.
+
+您可以藉由呼叫「 」，設計可在頁面（面板）之間移動的表單 `xfa.host.pageUp` 和 `xfa.host.pageDown` 方法。 此指令碼會放置在按鈕的 `Click` 事件與 `runAt` 屬性已設定為 `Both`. 您選擇的原因 `Both` 如此，Adobe Reader或Acrobat (適用於呈現為PDF的表單)就能在不前往伺服器的情況下變更頁面，而HTML表單則可藉由將擷取資料舍入至伺服器來變更頁面。 也就是說，表單會傳送至Forms服務，而表單會呈現為HTML，並顯示新頁面。
+
+建議您不要將指令碼變數和表單欄位命名為相同的名稱，例如專案。 有些網頁瀏覽器（例如Internet Explorer）可能不會初始化與表單欄位同名的變數，進而導致指令碼錯誤。 為表單欄位和指令碼變數指定不同名稱是建議的做法。
+
+在呈現包含頁面導覽功能和表單指令碼的HTML表單時（例如，假設指令碼在每次呈現表單時都會從資料庫擷取欄位資料），請確定表單指令碼位於form：calculate事件中，而不是form：readyevent中。
+
+位於form：ready事件中的表單指令碼在表單的初始轉譯期間只會執行一次，而不會在後續的頁面擷取中執行。 相較之下，form：calculate事件會針對每個呈現表單的頁面導覽執行。
+
+>[!NOTE]
+在多頁表單中，如果您移至其他頁面，JavaScript對頁面所做的變更不會保留。
+
+您可以在提交表單前叫用自訂指令碼。 此功能適用於所有可用瀏覽器。 但是，它只能在使用者轉譯具有它的HTML表單時使用 `Output Type` 屬性設定為 `Form Body`. 當 `Output Type` 是 `Full HTML`. 如需設定此功能的步驟，請參閱管理說明中的設定表單。
+
+您必須先定義呼叫的回呼函式，才能提交表單，其中函式名稱為 `_user_onsubmit`. 我們假設函式不會擲回任何例外狀況，否則會忽略例外狀況。 建議將JavaScript函式放在html的head區段中；不過，您可以在指令碼標籤的結尾之前的任何位置宣告該函式，其中包括 `xfasubset.js`.
+
+表單伺服器轉譯包含下拉式清單的XDP時，除了建立下拉式清單外，還會建立兩個隱藏的文字欄位。 這些文字欄位會儲存下拉式清單的資料（其中一個儲存選項的顯示名稱，另一個儲存選項的值）。 因此，每次使用者提交表單時，都會提交下拉式清單的完整資料。 假設您不想每次都提交那麼多的資料，您可以撰寫自訂指令碼來停用它。 例如：下拉式清單的名稱為 `drpOrderedByStateProv` 並將其包裝在子表單標題下。 HTML輸入元素的名稱將為 `header[0].drpOrderedByStateProv[0]`. 儲存及提交下拉式清單資料的隱藏欄位名稱如下： `header[0].drpOrderedByStateProv_DISPLAYITEMS_[0] header[0].drpOrderedByStateProv_VALUEITEMS_[0]`
+
+如果您不想張貼資料，可以下列方式停用這些輸入元素。 `var __CUSTOM_SCRIPTS_VERSION = 1; //enabling the feature function _user_onsubmit() { var elems = document.getElementsByName("header[0].drpOrderedByStateProv_DISPLAYITEMS_[0]"); elems[0].disabled = true; elems = document.getElementsByName("header[0].drpOrderedByStateProv_VALUEITEMS_[0]"); elems[0].disabled = true; }`
 
 ```java
 header[0].drpOrderedByStateProv_DISPLAYITEMS_[0] header[0].drpOrderedByStateProv_VALUEITEMS_[0]
@@ -120,44 +120,44 @@ var __CUSTOM_SCRIPTS_VERSION = 1; //enabling the feature
 
 ## XFA子集 {#xfa-subsets}
 
-在创建要呈现为HTML的表单设计时，必须将脚本限制为JavaScript语言脚本的XFA子集。
+建立要呈現為HTML的表單設計時，您必須將指令碼限製為JavaScript語言指令碼的XFA子集。
 
-在客户端上运行或在客户端和服务器上运行的脚本必须写入XFA子集中。 在服务器上运行的脚本可以使用完整的XFA脚本模型，也可以使用FormCalc。 有关使用JavaScript的信息，请参见 [Forms设计器](https://www.adobe.com/go/learn_aemforms_designer_63).
+在使用者端上執行或在使用者端和伺服器上執行的指令碼必須寫入XFA子集中。 在伺服器上執行的指令碼可以使用完整的XFA指令碼模型，也可以使用FormCalc。 如需使用JavaScript的相關資訊，請參閱 [Forms設計工具](https://www.adobe.com/go/learn_aemforms_designer_63_cn).
 
-在客户端上运行脚本时，只有显示的当前面板可以使用脚本；例如，当显示面板B时，您无法针对面板A中的字段编写脚本。 在服务器上运行脚本时，可以访问所有面板。
+在使用者端上執行指令碼時，只有目前顯示的面板可以使用指令碼；例如，當顯示面板B時，您無法針對面板A中的欄位編寫指令碼。 在伺服器上執行指令碼時，可以存取所有面板。
 
-在客户端上运行的脚本中使用脚本对象模型(SOM)表达式时，也必须小心。 在客户端上运行的脚本仅支持SOM表达式的简化子集。
+在使用者端執行的指令碼中使用指令碼物件模型(SOM)運算式時，也必須小心。 在使用者端上執行的指令碼僅支援SOM運算式的簡化子集。
 
-## 事件计时 {#event-timing}
+## 事件計時 {#event-timing}
 
-XFA子集定义映射到HTML事件的XFA事件。 计算事件和验证事件的时间在行为上略有不同。 在Web浏览器中，退出字段时会执行完全计算事件。 当您对字段值做出更改时，计算事件不会自动执行。 您可以通过调用 `xfa.form.execCalculate` 方法。
+XFA子集會定義對應至HTML事件的XFA事件。 計算及驗證事件的時間在行為上稍有不同。 在網頁瀏覽器中，當您退出欄位時會執行完整的計算事件。 當您變更欄位值時，計算事件不會自動執行。 您可以藉由呼叫 `xfa.form.execCalculate` 方法。
 
-在Web浏览器中，仅在退出字段或提交表单时执行验证事件。 您可以使用强制验证事件 `xfa.form.execValidate` 方法。
+在網頁瀏覽器中，驗證事件僅在退出欄位或提交表單時執行。 您可以使用強制驗證事件 `xfa.form.execValidate` 方法。
 
-在Web浏览器中显示的Forms(与Adobe Reader或Acrobat不同)符合必填字段的XFA空值测试（错误或警告）。
+網頁瀏覽器中顯示的Forms (與Adobe Reader或Acrobat不同)符合必要欄位的XFA null測試（錯誤或警告）。
 
-* 如果空值测试产生错误，并且您退出字段时未指定值，则会显示一个消息框，您将在单击“确定”后重新定位到该字段。
-* 如果空值测试产生警告，并且您退出字段时未指定值，系统将提示您单击“确定”或“取消”，从而为您提供继续操作但不指定值或返回字段输入值的选项。
+* 如果Null測試產生錯誤，而您結束欄位時並未指定值，則會顯示訊息方塊，且您會在按一下「確定」後重新定位至欄位。
+* 如果Null測試產生警告，而您結束欄位時未指定值，系統會提示您按一下「確定」或「取消」，讓您選擇繼續但不指定值或返回欄位輸入值。
 
-有关null测试的详细信息，请参见 [Forms设计器](https://www.adobe.com/go/learn_aemforms_designer_63).
+如需Null測試的詳細資訊，請參閱 [Forms設計工具](https://www.adobe.com/go/learn_aemforms_designer_63_cn).
 
-## 表单按钮 {#form-buttons}
+## 表單按鈕 {#form-buttons}
 
-单击提交按钮可将表单数据发送到Forms服务，并代表表单处理的结束。 此 `preSubmit` 事件可以设置为在客户端或服务器上运行。 此 `preSubmit` 如果将事件配置为在客户端上运行，则该事件会在提交表单之前运行。 否则， `preSubmit` 事件在提交表单期间在服务器上运行。 欲知关于 `preSubmit` 事件，请参见 [Forms设计器](https://www.adobe.com/go/learn_aemforms_designer_63).
+按一下提交按鈕會將表單資料傳送至Forms服務，並代表表單處理的結尾。 此 `preSubmit` 事件可設定為在使用者端或伺服器上執行。 此 `preSubmit` 事件會在提交表單之前執行（如果設定為在使用者端上執行）。 否則， `preSubmit` 事件會在表單提交期間在伺服器上執行。 如需更多有關「 」的資訊， `preSubmit` 事件，請參閱 [Forms設計工具](https://www.adobe.com/go/learn_aemforms_designer_63_cn).
 
-如果按钮没有关联的客户端脚本，则会将数据提交到服务器，在服务器上执行计算，并重新生成HTML表单。 如果按钮包含客户端脚本，则不会将数据发送到服务器，并且客户端脚本会在Web浏览器中执行。
+如果按鈕沒有關聯的使用者端指令碼，則會將資料提交至伺服器、在伺服器上執行計算，並重新產生HTML表單。 如果按鈕包含使用者端指令碼，資料不會傳送至伺服器，而使用者端指令碼會在網頁瀏覽器中執行。
 
-## HTML4.0 Web浏览器 {#html-4-0-web-browser}
+## HTML4.0網頁瀏覽器 {#html-4-0-web-browser}
 
-仅支持HTML4.0的Web浏览器无法支持XFA子集客户端脚本模型。 在创建同时适用于HTML4.0和MSDHTML或CSS2HTML的表单设计时，标记为在客户端运行的脚本实际上将在服务器上运行。 例如，假设用户单击了位于HTML4.0 Web浏览器中显示的表单上的按钮。 在这种情况下，表单数据将发送到执行客户端脚本的服务器。
+僅支援HTML4.0的網頁瀏覽器無法支援XFA子集使用者端指令碼模型。 建立可在HTML4.0和MSDHTML或CSS2HTML中運作的表單設計時，標示為在使用者端執行的指令碼實際上將會在伺服器上執行。 例如，假設使用者按一下位於HTML4.0網頁瀏覽器中所顯示表單上的按鈕。 在此情況下，表單資料會傳送至執行使用者端指令碼的伺服器。
 
-建议您将表单逻辑放置在HTML4.0版本的服务器上运行的计算事件中，以及在MSDHTML或CSS2HTML的客户端上运行的计算事件中。
+建議您將表單邏輯置於計算事件中，這些計算事件會在HTML為4.0的伺服器上執行，並在MSDHTML或CSS2HTML的使用者端上執行。
 
-## 维护演示文稿更改 {#maintaining-presentation-changes}
+## 維護簡報變更 {#maintaining-presentation-changes}
 
-在HTML页面（面板）之间移动时，只会保留数据的状态。 不会维护背景颜色或必填字段设置等设置（如果与初始设置不同）。 要保持表示状态，您必须创建表示字段表示状态的字段（通常为隐藏字段）。 如果将脚本添加到字段的 `Calculate` 根据隐藏字段值更改演示文稿的事件，在HTML页面（面板）之间来回移动时，可以保留演示文稿状态。
+當您在HTML頁面（面板）之間移動時，只會保留資料的狀態。 不會維護背景顏色或強制欄位設定等設定（如果與初始設定不同）。 若要維持呈現狀態，您必須建立代表欄位呈現狀態的欄位（通常是隱藏的）。 如果您將指令碼新增至欄位的 `Calculate` 根據隱藏欄位值變更簡報的事件，您可以在HTML頁面（面板）之間來回移動時保留簡報狀態。
 
-以下脚本将维护 `fillColor` 基于的值的ID为 `hiddenField`. 假定此脚本位于字段的 `Calculate` 事件。
+以下指令碼會維護 `fillColor` 的欄位，其值基於 `hiddenField`. 假設此指令碼位於欄位的 `Calculate` 事件。
 
 ```java
      If (hiddenField.rawValue == 1)
@@ -167,208 +167,208 @@ XFA子集定义映射到HTML事件的XFA事件。 计算事件和验证事件的
 ```
 
 >[!NOTE]
-嵌套在表单元格内时，静态对象不会显示在渲染的HTML表单中。 例如，嵌套在表格单元格中的圆和矩形不会显示在渲染HTML表单中。 但是，当这些相同的静态对象位于表外部时，它们会正确显示。
+巢狀內嵌於表格儲存格時，靜態物件不會顯示在演算後的HTML表單中。 例如，巢狀在表格儲存格內的圓形和矩形不會顯示在轉譯HTML表單中。 不過，當這些相同的靜態物件位於表格外部時，會正確顯示。
 
-## 对HTML表单进行数字签名 {#digitally-signing-html-forms}
+## 數位簽署HTML表單 {#digitally-signing-html-forms}
 
-如果包含数字签名字段的HTML表单呈现为以下HTML转换之一，则无法对该表单进行签名：
+如果表單呈現為下列HTML轉換之一，則您無法簽署包含數位簽名欄位的HTML表單：
 
 * AHTML
 * HTML4
 * StaticHTML
 * NoScriptXHTML
 
-有关对文档进行数字签名的信息，请参见 [数字签名和认证文档](/help/forms/developing/digitally-signing-certifying-documents.md)
+如需以數位方式簽署檔案的相關資訊，請參閱 [數位簽署和認證檔案](/help/forms/developing/digitally-signing-certifying-documents.md)
 
-## 渲染符合辅助功能准则的XHTML表单 {#rendering-an-accessibility-guidelines-compliant-xhtml-form}
+## 呈現符合協助工具指南的XHTML表單 {#rendering-an-accessibility-guidelines-compliant-xhtml-form}
 
-您可以渲染符合无障碍准则的完整HTML表单。 也就是说，表单在完整HTML标签中呈现，而不是在body标签中呈现HTML表单(不是完整的HTML页面)。
+您可以呈現符合協助工具准則的完整HTML表單。 也就是說，表單會在完整HTML標籤中呈現，而不是在body標籤中呈現HTML表單(不是完整的HTML頁面)。
 
-## 验证表单数据 {#validating-form-data}
+## 驗證表單資料 {#validating-form-data}
 
-在将表单渲染为HTML表单时，建议您限制对表单字段使用验证规则。 HTML表单可能不支持某些验证规则。 例如，将MM-DD-YYYY验证模式应用于 `Date/Time` 字段位于呈现为HTML表单的表单设计中，即使正确键入了日期，该字段也无法正常工作。 但是，此验证模式适用于呈现为PDF的表单。
-
->[!NOTE]
-有关Forms服务的更多信息，请参阅 [AEM Forms的服务参考](https://www.adobe.com/go/learn_aemforms_services_63).
-
-## 步骤摘要 {#summary-of-steps}
-
-要渲染HTML表单，请执行以下步骤：
-
-1. 包括项目文件。
-1. 创建Forms客户端API对象。
-1. 设置HTML运行时选项。
-1. 渲染HTML表单。
-1. 将表单数据流写入客户端Web浏览器。
-
-**包括项目文件**
-
-在开发项目中包含必要的文件。 如果要使用Java创建客户端应用程序，请包含必要的JAR文件。 如果使用Web服务，请确保包含代理文件。
-
-**创建Forms客户端API对象**
-
-您必须先创建表单数据集成服务客户端，然后才能以编程方式将数据导入PDF表单客户端API。 创建服务客户端时，您可以定义调用服务所需的连接设置。
-
-**设置HTML运行时选项**
-
-在渲染HTML表单时，可以设置HTML运行时选项。 例如，您可以将工具栏添加到HTML表单，使用户能够选择位于客户端计算机上的文件附件，或检索使用HTML表单呈现的文件附件。 默认情况下，HTML工具栏处于禁用状态。 要将工具栏添加到HTML表单，必须以编程方式设置运行时选项。 默认情况下，HTML工具栏包含以下按钮：
-
-* `Home`：提供指向应用程序Web根目录的链接。
-* `Upload`：提供用户界面，以选择要附加到当前表单的文件。
-* `Download`：提供用于显示附加文件的用户界面。
-
-当HTML表单上出现HTML工具栏时，用户可以选择最多十个要与表单数据一起提交的文件。 提交文件后，Forms服务即可检索文件。
-
-将表单渲染为HTML时，您可以指定用户代理值。 用户代理值提供浏览器和系统信息。 这是一个可选值，您可以传递一个空字符串值。 “使用Java API渲染HTML表单”快速入门说明了如何获取用户代理值并将其用于将表单渲染为HTML。
-
-要向其中发布表单数据的HTTP URL，可以通过使用Forms服务客户端API设置目标URL来指定，也可以在XDP表单设计中包含的“提交”按钮中指定。 如果在表单设计中指定了目标URL，则请不要使用Forms服务客户端API设置值。
+在將表單轉譯為HTML表單時，建議您限制對表單欄位使用驗證規則。 HTML表單可能不支援某些驗證規則。 例如，將MM-DD-YYYY的驗證模式套用至 `Date/Time` 位於呈現為HTML表單之表單設計中的欄位，即使正確輸入日期，也無法正常運作。 不過，此驗證模式適用於轉譯為PDF的表單。
 
 >[!NOTE]
-使用工具栏呈现HTML表单是可选的。
+如需Forms服務的詳細資訊，請參閱 [AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
+
+## 步驟摘要 {#summary-of-steps}
+
+若要呈現HTML表單，請執行下列步驟：
+
+1. 包含專案檔案。
+1. 建立Forms使用者端API物件。
+1. 設定HTML執行階段選項。
+1. 呈現HTML表單。
+1. 將表單資料流寫入使用者端網頁瀏覽器。
+
+**包含專案檔案**
+
+將必要的檔案納入您的開發專案中。 如果您使用Java建立使用者端應用程式，請包含必要的JAR檔案。 如果您使用Web服務，請確定您包含Proxy檔案。
+
+**建立Forms使用者端API物件**
+
+您必須先建立表單資料整合服務使用者端，才能以程式設計方式將資料匯入PDF表單使用者端API。 建立服務使用者端時，您可以定義呼叫服務所需的連線設定。
+
+**設定HTML執行階段選項**
+
+呈現HTML表單時，您可以設定HTML執行階段選項。 例如，您可以將工具列新增至HTML表單，讓使用者能夠選取位於使用者端電腦上的檔案附件，或擷取以HTML表單呈現的檔案附件。 HTML工具列預設為停用。 若要將工具列新增至HTML表單，您必須以程式設計方式設定執行階段選項。 依預設，HTML工具列包含下列按鈕：
+
+* `Home`：提供應用程式網頁根目錄的連結。
+* `Upload`：提供使用者介面，以選取要附加至目前表單的檔案。
+* `Download`：提供顯示附加檔案的使用者介面。
+
+當HTML工具列出現在HTML表單上時，使用者可以選擇最多10個要與表單資料一起提交的檔案。 提交檔案後，Forms服務即可擷取檔案。
+
+將表單轉譯為HTML時，您可以指定使用者代理程式值。 使用者代理程式值提供瀏覽器和系統資訊。 這是選用值，您可以傳遞空字串值。 使用Java API快速入門呈現HTML表單會顯示如何取得使用者代理程式值，並使用它來將表單呈現為HTML。
+
+使用Forms服務使用者端API設定目標URL即可指定表單資料張貼處的HTTP URL，或可在XDP表單設計內含的提交按鈕中指定。 如果在表單設計中指定了目標URL，則請勿使用Forms服務使用者端API設定值。
 
 >[!NOTE]
-如果渲染AHTML表单，建议不要向表单添加工具栏。
+使用工具列呈現HTML表單為選用。
 
-**渲染HTML表单**
+>[!NOTE]
+如果您轉譯AHTML表單，建議您不要將工具列新增至表單。
 
-要呈现HTML表单，必须指定在Designer中创建并另存为XDP文件的表单设计。 还必须选择HTML转换类型。 例如，您可以指定用于渲染Internet Explorer 5.0或更高版本的动态HTML的HTML转换类型。
+**呈現HTML表單**
 
-呈现HTML表单还需要值，例如呈现其他表单类型所需的URI值。
+若要呈現HTML表單，您必須指定在Designer中建立並儲存為XDP檔案的表單設計。 您也必須選取HTML轉換型別。 例如，您可以指定轉譯Internet Explorer 5.0或更新版本之動態HTML的HTML轉換型別。
 
-**将表单数据流写入客户端Web浏览器**
+呈現HTML表單也需要值，例如呈現其他表單型別所需的URI值。
 
-当Forms服务渲染HTML表单时，它会返回您必须写入客户端Web浏览器的表单数据流。 在写入客户端Web浏览器时，用户可看到HTML表单。
+**將表單資料流寫入使用者端網頁瀏覽器**
+
+Forms服務轉譯HTML表單時，會傳回您必須寫入使用者端網頁瀏覽器的表單資料流。 寫入使用者端網頁瀏覽器時，使用者可看到HTML表單。
 
 **另请参阅**
 
-[使用Java API将表单渲染为HTML](#render-a-form-as-html-using-the-java-api)
+[使用Java API將表單轉譯為HTML](#render-a-form-as-html-using-the-java-api)
 
-[使用Web服务API将表单渲染为HTML](#render-a-form-as-html-using-the-web-service-api)
+[使用Web服務API將表單轉譯為HTML](#render-a-form-as-html-using-the-web-service-api)
 
-[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
-[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[Forms服务API快速启动](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)
+[Forms服務API快速入門](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)
 
-[渲染交互式PDF forms](/help/forms/developing/rendering-interactive-pdf-forms.md)
+[呈現互動式PDF forms](/help/forms/developing/rendering-interactive-pdf-forms.md)
 
-[使用自定义工具栏渲染HTMLForms](/help/forms/developing/rendering-html-forms-custom-toolbars.md)
+[使用自訂工具列呈現HTMLForms](/help/forms/developing/rendering-html-forms-custom-toolbars.md)
 
-[创建渲染Forms的Web应用程序](/help/forms/developing/creating-web-applications-renders-forms.md)
+[建立轉譯Forms的網頁應用程式](/help/forms/developing/creating-web-applications-renders-forms.md)
 
-## 使用Java API将表单渲染为HTML {#render-a-form-as-html-using-the-java-api}
+## 使用Java API將表單轉譯為HTML {#render-a-form-as-html-using-the-java-api}
 
-使用Forms API (Java)渲染HTML表单：
+使用Forms API (Java)轉譯HTML表單：
 
-1. 包括项目文件
+1. 包含專案檔案
 
-   在Java项目的类路径中包含客户端JAR文件，如adobe-forms-client.jar。
+   在您的Java專案的類別路徑中包含使用者端JAR檔案，例如adobe-forms-client.jar。
 
-1. 创建Forms客户端API对象
+1. 建立Forms使用者端API物件
 
-   * 创建 `ServiceClientFactory` 包含连接属性的对象。
-   * 创建 `FormsServiceClient` 对象，使用它的构造函数传递 `ServiceClientFactory` 对象。
+   * 建立 `ServiceClientFactory` 包含連線屬性的物件。
+   * 建立 `FormsServiceClient` 物件，使用它的建構函式並傳遞 `ServiceClientFactory` 物件。
 
-1. 设置HTML运行时选项
+1. 設定HTML執行階段選項
 
-   * 创建 `HTMLRenderSpec` 对象。
-   * 要使用工具栏渲染HTML表单，请调用 `HTMLRenderSpec` 对象的 `setHTMLToolbar` 方法和传递 `HTMLToolbar` 枚举值。 例如，要显示垂直HTML工具栏，请传递 `HTMLToolbar.Vertical`.
-   * 要设置HTML表单的区域设置值，请调用 `HTMLRenderSpec` 对象的 `setLocale` 方法，并传递一个指定区域设置值的字符串值。 （这是一个可选设置。）
-   * 要在完整HTML标签中呈现HTML表单，请调用 `HTMLRenderSpec` 对象的 `setOutputType` 方法和路径 `OutputType.FullHTMLTags`. （这是一个可选设置。）
+   * 建立 `HTMLRenderSpec` 物件（使用其建構函式）。
+   * 若要使用工具列呈現HTML表單，請叫用 `HTMLRenderSpec` 物件的 `setHTMLToolbar` 方法並傳遞 `HTMLToolbar` 列舉值。 例如，若要顯示垂直HTML工具列，請傳遞 `HTMLToolbar.Vertical`.
+   * 若要設定HTML表單的地區設定值，請叫用 `HTMLRenderSpec` 物件的 `setLocale` 方法並傳遞字串值，以指定地區設定值。 （此為選擇性設定）。
+   * 若要在完整HTML標籤內呈現HTML表單，請叫用 `HTMLRenderSpec` 物件的 `setOutputType` 方法與傳遞 `OutputType.FullHTMLTags`. （此為選擇性設定）。
 
    >[!NOTE]
-   当Forms处于以下状态时，无法在HTML中成功呈现 `StandAlone` 选项为 `true` 和 `ApplicationWebRoot` 引用除托管AEM Forms的J2EE应用程序服务器之外的其他服务器( `ApplicationWebRoot` 值是使用 `URLSpec` 传递到的对象 `FormsServiceClient` 对象的 `(Deprecated) renderHTMLForm` 方法)。 当 `ApplicationWebRoot` 是来自托管AEM Forms的服务器，管理控制台中的Web根URI值需要设置为表单的Web应用程序URI值。 要执行此操作，请登录到管理控制台，单击服务> Forms，然后将Web根URI设置为https://server-name:port/FormServer。 然后，保存您的设置。
+   Forms無法成功在HTML中呈現，當 `StandAlone` 選項為 `true` 和 `ApplicationWebRoot` 會參考裝載AEM Forms之J2EE應用程式伺服器以外的伺服器( `ApplicationWebRoot` 值是使用 `URLSpec` 傳遞至的物件 `FormsServiceClient` 物件的 `(Deprecated) renderHTMLForm` 方法)。 當 `ApplicationWebRoot` 是另一部託管AEM Forms的伺服器，管理控制檯中的Web根URI值需要設定為表單的Web應用程式URI值。 您可以登入管理主控台，按一下「服務> Forms」，然後將Web根URI設為https://server-name:port/FormServer，即可完成這項作業。 然後，儲存您的設定。
 
-1. 渲染HTML表单
+1. 呈現HTML表單
 
-   调用 `FormsServiceClient` 对象的 `(Deprecated) renderHTMLForm` 方法，并传递以下值：
+   叫用 `FormsServiceClient` 物件的 `(Deprecated) renderHTMLForm` 方法並傳遞下列值：
 
-   * 一个字符串值，它指定窗体设计名称，包括文件扩展名。 如果引用的表单设计是Forms应用程序的一部分，请确保指定完整路径，例如 `Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`.
-   * A `TransformTo` 指定HTML首选项类型的枚举值。 例如，要渲染与Internet Explorer 5.0或更高版本的动态HTML兼容的HTML表单，请指定 `TransformTo.MSDHTML`.
-   * A `com.adobe.idp.Document` 包含要与表单合并的数据的对象。 如果不想合并数据，请传递一个空值 `com.adobe.idp.Document` 对象。
-   * 此 `HTMLRenderSpec` 存储HTML运行时选项的对象。
-   * 一个字符串值，它指定 `HTTP_USER_AGENT` 标头值；例如， `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`.
-   * A `URLSpec` 存储呈现HTML表单所需的URI值的对象。
-   * A `java.util.HashMap` 存储文件附件的对象。 这是一个可选参数，您可以指定 `null` 如果您不想将文件附加到表单。
+   * 字串值，指定表單設計名稱，包括副檔名。 如果您參照的表單設計屬於Forms應用程式的一部分，請務必指定完整路徑，例如 `Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`.
+   * A `TransformTo` 指定HTML偏好設定型別的列舉值。 例如，若要呈現與Internet Explorer 5.0或更新版本的動態HTML相容的HTML表單，請指定 `TransformTo.MSDHTML`.
+   * A `com.adobe.idp.Document` 包含要與表單合併之資料的物件。 如果您不想合併資料，請傳遞空白 `com.adobe.idp.Document` 物件。
+   * 此 `HTMLRenderSpec` 儲存HTML執行階段選項的物件。
+   * 字串值，指定 `HTTP_USER_AGENT` 標頭值；例如， `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`.
+   * A `URLSpec` 儲存轉譯HTML表單所需的URI值的物件。
+   * A `java.util.HashMap` 儲存檔案附件的物件。 此為選用引數，您可以指定 `null` 如果您不想將檔案附加至表單。
 
-   此 `(Deprecated) renderHTMLForm` 方法返回 `FormsResult` 包含可写入客户端Web浏览器的表单数据流的对象。
+   此 `(Deprecated) renderHTMLForm` 方法傳回 `FormsResult` 包含可寫入使用者端網頁瀏覽器的表單資料流的物件。
 
-1. 将表单数据流写入客户端Web浏览器
+1. 將表單資料流寫入使用者端網頁瀏覽器
 
-   * 创建 `com.adobe.idp.Document` 对象 `FormsResult` 对象 `getOutputContent` 方法。
-   * 获取的内容类型 `com.adobe.idp.Document` 对象，调用其 `getContentType` 方法。
-   * 设置 `javax.servlet.http.HttpServletResponse` 对象的内容类型(通过调用其 `setContentType` 方法和传递的内容类型 `com.adobe.idp.Document` 对象。
-   * 创建 `javax.servlet.ServletOutputStream` 用于通过调用 `javax.servlet.http.HttpServletResponse` 对象的 `getOutputStream` 方法。
-   * 创建 `java.io.InputStream` 对象 `com.adobe.idp.Document` 对象的 `getInputStream` 方法。
-   * 创建一个字节数组，并通过调用 `InputStream` 对象的 `read` 方法，并将字节数组作为参数传递。
-   * 调用 `javax.servlet.ServletOutputStream` 对象的 `write` 方法将表单数据流发送到客户端Web浏览器。 将字节数组传递到 `write` 方法。
+   * 建立 `com.adobe.idp.Document` 物件(透過叫用 `FormsResult` 物件 `getOutputContent` 方法。
+   * 取得的內容型別 `com.adobe.idp.Document` 物件(透過叫用其 `getContentType` 方法。
+   * 設定 `javax.servlet.http.HttpServletResponse` 物件的內容型別，透過叫用其 `setContentType` 方法和傳遞的內容型別 `com.adobe.idp.Document` 物件。
+   * 建立 `javax.servlet.ServletOutputStream` 用來將表單資料流寫入使用者端網頁瀏覽器的物件，方法是叫用 `javax.servlet.http.HttpServletResponse` 物件的 `getOutputStream` 方法。
+   * 建立 `java.io.InputStream` 物件(透過叫用 `com.adobe.idp.Document` 物件的 `getInputStream` 方法。
+   * 建立位元組陣列，並叫用 `InputStream` 物件的 `read` 方法，並將位元組陣列作為引數傳遞。
+   * 叫用 `javax.servlet.ServletOutputStream` 物件的 `write` 將表單資料流傳送至使用者端Web瀏覽器的方法。 將位元組陣列傳遞至 `write` 方法。
 
 **另请参阅**
 
-[将Forms渲染为HTML](#rendering-forms-as-html)
+[將Forms呈現為HTML](#rendering-forms-as-html)
 
-[快速入门（SOAP模式）：使用Java API渲染HTML表单](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-an-html-form-using-the-java-api)
+[快速入門（SOAP模式）：使用Java API轉譯HTML表單](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-an-html-form-using-the-java-api)
 
-[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
-[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-## 使用Web服务API将表单渲染为HTML {#render-a-form-as-html-using-the-web-service-api}
+## 使用Web服務API將表單轉譯為HTML {#render-a-form-as-html-using-the-web-service-api}
 
-使用Forms API（Web服务）渲染HTML表单：
+使用Forms API （Web服務）轉譯HTML表單：
 
-1. 包括项目文件
+1. 包含專案檔案
 
-   * 创建使用Forms服务WSDL的Java代理类。
-   * 将Java代理类包含在类路径中。
+   * 建立使用Forms服務WSDL的Java Proxy類別。
+   * 將Java Proxy類別納入您的類別路徑中。
 
-1. 创建Forms客户端API对象
+1. 建立Forms使用者端API物件
 
-   创建 `FormsService` 对象并设置身份验证值。
+   建立 `FormsService` 物件並設定驗證值。
 
-1. 设置HTML运行时选项
+1. 設定HTML執行階段選項
 
-   * 创建 `HTMLRenderSpec` 对象。
-   * 要使用工具栏渲染HTML表单，请调用 `HTMLRenderSpec` 对象的 `setHTMLToolbar` 方法和传递 `HTMLToolbar` 枚举值。 例如，要显示垂直HTML工具栏，请传递 `HTMLToolbar.Vertical`.
-   * 要设置HTML表单的区域设置值，请调用 `HTMLRenderSpec` 对象的 `setLocale` 方法，并传递一个指定区域设置值的字符串值。 有关更多信息，请参阅 [AEM Forms API参考](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
-   * 要在完整HTML标签中呈现HTML表单，请调用 `HTMLRenderSpec` 对象的 `setOutputType` 方法和路径 `OutputType.FullHTMLTags`.
+   * 建立 `HTMLRenderSpec` 物件（使用其建構函式）。
+   * 若要使用工具列呈現HTML表單，請叫用 `HTMLRenderSpec` 物件的 `setHTMLToolbar` 方法並傳遞 `HTMLToolbar` 列舉值。 例如，若要顯示垂直HTML工具列，請傳遞 `HTMLToolbar.Vertical`.
+   * 若要設定HTML表單的地區設定值，請叫用 `HTMLRenderSpec` 物件的 `setLocale` 方法並傳遞字串值，以指定地區設定值。 如需詳細資訊，請參閱 [AEM Forms API參考](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
+   * 若要在完整HTML標籤內呈現HTML表單，請叫用 `HTMLRenderSpec` 物件的 `setOutputType` 方法與傳遞 `OutputType.FullHTMLTags`.
 
    >[!NOTE]
-   当Forms处于以下状态时，无法在HTML中成功呈现 `StandAlone` 选项为 `true` 和 `ApplicationWebRoot` 引用除托管AEM Forms的J2EE应用程序服务器之外的其他服务器( `ApplicationWebRoot` 值是使用 `URLSpec` 传递到的对象 `FormsServiceClient` 对象的 `(Deprecated) renderHTMLForm` 方法)。 当 `ApplicationWebRoot` 是来自托管AEM Forms的服务器，管理控制台中的Web根URI值需要设置为表单的Web应用程序URI值。 要执行此操作，请登录到管理控制台，单击服务> Forms，然后将Web根URI设置为https://server-name:port/FormServer。 然后，保存您的设置。
+   Forms無法成功在HTML中呈現，當 `StandAlone` 選項為 `true` 和 `ApplicationWebRoot` 會參考裝載AEM Forms之J2EE應用程式伺服器以外的伺服器( `ApplicationWebRoot` 值是使用 `URLSpec` 傳遞至的物件 `FormsServiceClient` 物件的 `(Deprecated) renderHTMLForm` 方法)。 當 `ApplicationWebRoot` 是另一部託管AEM Forms的伺服器，管理控制檯中的Web根URI值需要設定為表單的Web應用程式URI值。 您可以登入管理主控台，按一下「服務> Forms」，然後將Web根URI設為https://server-name:port/FormServer，即可完成這項作業。 然後，儲存您的設定。
 
-1. 渲染HTML表单
+1. 呈現HTML表單
 
-   调用 `FormsService` 对象的 `(Deprecated) renderHTMLForm` 方法，并传递以下值：
+   叫用 `FormsService` 物件的 `(Deprecated) renderHTMLForm` 方法並傳遞下列值：
 
-   * 一个字符串值，它指定窗体设计名称，包括文件扩展名。 如果引用的表单设计是Forms应用程序的一部分，请确保指定完整路径，例如 `Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`.
-   * A `TransformTo` 指定HTML首选项类型的枚举值。 例如，要渲染与Internet Explorer 5.0或更高版本的动态HTML兼容的HTML表单，请指定 `TransformTo.MSDHTML`.
-   * A `BLOB` 包含要与表单合并的数据的对象。 如果不想合并数据，请传递 `null`. (请参阅 [使用可流布局预填充Forms](/help/forms/developing/prepopulating-forms-flowable-layouts.md#prepopulating-forms-with-flowable-layouts).)
-   * 此 `HTMLRenderSpec` 存储HTML运行时选项的对象。
-   * 一个字符串值，它指定 `HTTP_USER_AGENT` 标头值；例如， `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`. 如果您不想设置此值，可以传递空字符串。
-   * A `URLSpec` 存储呈现HTML表单所需的URI值的对象。 (请参阅 [指定URI值](/help/forms/developing/rendering-interactive-pdf-forms.md).)
-   * A `java.util.HashMap` 存储文件附件的对象。 这是一个可选参数，您可以指定 `null` 如果您不想将文件附加到表单。 (请参阅 [将文件附加到表单](/help/forms/developing/rendering-interactive-pdf-forms.md).)
-   * 空 `com.adobe.idp.services.holders.BLOBHolder` 由方法填充的对象。 此参数值存储渲染的表单。
-   * 空 `com.adobe.idp.services.holders.BLOBHolder` 由方法填充的对象。 此参数将存储输出XML数据。
-   * 空 `javax.xml.rpc.holders.LongHolder` 由方法填充的对象。 此参数将存储表单中的页数。
-   * 空 `javax.xml.rpc.holders.StringHolder` 由方法填充的对象。 此参数将存储区域设置值。
-   * 空 `javax.xml.rpc.holders.StringHolder` 由方法填充的对象。 此参数将存储使用的HTML渲染值。
-   * 空 `com.adobe.idp.services.holders.FormsResultHolder` 将包含此操作结果的对象。
+   * 字串值，指定表單設計名稱，包括副檔名。 如果您參照的表單設計屬於Forms應用程式的一部分，請務必指定完整路徑，例如 `Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`.
+   * A `TransformTo` 指定HTML偏好設定型別的列舉值。 例如，若要呈現與Internet Explorer 5.0或更新版本的動態HTML相容的HTML表單，請指定 `TransformTo.MSDHTML`.
+   * A `BLOB` 包含要與表單合併之資料的物件。 如果您不想合併資料，請傳遞 `null`. (請參閱 [使用可流動版面預先填入Forms](/help/forms/developing/prepopulating-forms-flowable-layouts.md#prepopulating-forms-with-flowable-layouts).)
+   * 此 `HTMLRenderSpec` 儲存HTML執行階段選項的物件。
+   * 字串值，指定 `HTTP_USER_AGENT` 標頭值；例如， `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`. 如果您不想設定此值，可以傳遞空字串。
+   * A `URLSpec` 儲存轉譯HTML表單所需的URI值的物件。 (請參閱 [指定URI值](/help/forms/developing/rendering-interactive-pdf-forms.md).)
+   * A `java.util.HashMap` 儲存檔案附件的物件。 此為選用引數，您可以指定 `null` 如果您不想將檔案附加至表單。 (請參閱 [將檔案附加至表單](/help/forms/developing/rendering-interactive-pdf-forms.md).)
+   * 空白 `com.adobe.idp.services.holders.BLOBHolder` 方法填入的物件。 此引數值會儲存演算後的表單。
+   * 空白 `com.adobe.idp.services.holders.BLOBHolder` 方法填入的物件。 此引數會儲存輸出XML資料。
+   * 空白 `javax.xml.rpc.holders.LongHolder` 方法填入的物件。 此引數會儲存表單中的頁數。
+   * 空白 `javax.xml.rpc.holders.StringHolder` 方法填入的物件。 此引數將會儲存地區設定值。
+   * 空白 `javax.xml.rpc.holders.StringHolder` 方法填入的物件。 此引數將會儲存所使用的HTML演算值。
+   * 空白 `com.adobe.idp.services.holders.FormsResultHolder` 將包含此作業結果的物件。
 
-   此 `(Deprecated) renderHTMLForm` 方法填充 `com.adobe.idp.services.holders.FormsResultHolder` 作为最后一个参数值（具有必须写入客户端Web浏览器的表单数据流）传递的对象。
+   此 `(Deprecated) renderHTMLForm` 方法填入 `com.adobe.idp.services.holders.FormsResultHolder` 以表單資料流傳遞作為最後一個引數值的物件，必須寫入使用者端Web瀏覽器。
 
-1. 将表单数据流写入客户端Web浏览器
+1. 將表單資料流寫入使用者端網頁瀏覽器
 
-   * 创建 `FormResult` 对象，方法是获取 `com.adobe.idp.services.holders.FormsResultHolder` 对象的 `value` 数据成员。
-   * 创建 `BLOB` 通过调用 `FormsResult` 对象的 `getOutputContent` 方法。
-   * 获取的内容类型 `BLOB` 对象，调用其 `getContentType` 方法。
-   * 设置 `javax.servlet.http.HttpServletResponse` 对象的内容类型(通过调用其 `setContentType` 方法和传递的内容类型 `BLOB` 对象。
-   * 创建 `javax.servlet.ServletOutputStream` 用于通过调用 `javax.servlet.http.HttpServletResponse` 对象的 `getOutputStream` 方法。
-   * 创建一个字节数组，并通过调用 `BLOB` 对象的 `getBinaryData` 方法。 此任务分配 `FormsResult` 对象。
-   * 调用 `javax.servlet.http.HttpServletResponse` 对象的 `write` 方法将表单数据流发送到客户端Web浏览器。 将字节数组传递到 `write` 方法。
+   * 建立 `FormResult` 物件，方法是取得 `com.adobe.idp.services.holders.FormsResultHolder` 物件的 `value` 資料成員。
+   * 建立 `BLOB` 包含表單資料的物件(透過叫用 `FormsResult` 物件的 `getOutputContent` 方法。
+   * 取得的內容型別 `BLOB` 物件(透過叫用其 `getContentType` 方法。
+   * 設定 `javax.servlet.http.HttpServletResponse` 物件的內容型別，透過叫用其 `setContentType` 方法和傳遞的內容型別 `BLOB` 物件。
+   * 建立 `javax.servlet.ServletOutputStream` 用來將表單資料流寫入使用者端網頁瀏覽器的物件，方法是叫用 `javax.servlet.http.HttpServletResponse` 物件的 `getOutputStream` 方法。
+   * 建立位元組陣列，並透過叫用 `BLOB` 物件的 `getBinaryData` 方法。 此任務指派 `FormsResult` 物件至位元組陣列。
+   * 叫用 `javax.servlet.http.HttpServletResponse` 物件的 `write` 將表單資料流傳送至使用者端Web瀏覽器的方法。 將位元組陣列傳遞至 `write` 方法。
 
 **另请参阅**
 
-[将Forms渲染为HTML](#rendering-forms-as-html)
+[將Forms呈現為HTML](#rendering-forms-as-html)
 
-[使用Base64编码调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
+[使用Base64編碼叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)

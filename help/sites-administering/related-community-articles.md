@@ -1,7 +1,7 @@
 ---
 title: 相关社区文章
 seo-title: Related Community Articles
-description: 查找社区生成的关于Marketing Cloud与AEM集成的文章列表。
+description: 尋找社群產生的關於Marketing Cloud與AEM整合的文章清單。
 seo-description: Find a list of community generated articles about Marketing Cloud integrations with AEM.
 uuid: b1562a21-a6f5-4cd9-821f-f258b53a1d99
 contentOwner: Guillaume Carlino
@@ -19,10 +19,10 @@ ht-degree: 6%
 
 # 相关社区文章{#related-community-articles}
 
-AEM社区已生成一系列与Marketing Cloud与AEM的集成相关的文章。
+AEM社群已產生一系列與Marketing Cloud與AEM整合相關的文章。
 
-以下是可用内容的列表：
+以下是可用內容的清單：
 
-* [在Adobe Experience Manager网页中使用激活规则](https://helpx.adobe.com/experience-manager/using/dtm.html)
-* [使用DTM将AEM与Adobe Analytics和Target集成](https://helpx.adobe.com/experience-manager/using/integrate-digital-marketing-solutions.html)
-* [集成Adobe Experience Manager和Adobe Campaign Standard以创建Newletter](https://helpx.adobe.com/experience-manager/using/aem_campaign.html)
+* [在Adobe Experience Manager網頁中使用啟用規則](https://helpx.adobe.com/experience-manager/using/dtm.html)
+* [使用DTM整合AEM與Adobe Analytics和Target](https://helpx.adobe.com/experience-manager/using/integrate-digital-marketing-solutions.html)
+* [整合Adobe Experience Manager和Adobe Campaign Standard以建立Newletter](https://helpx.adobe.com/experience-manager/using/aem_campaign.html)

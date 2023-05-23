@@ -1,6 +1,6 @@
 ---
 title: 使用规则集转换 URL
-description: 您可以在Dynamic Media中部署规则集以转换URL。 规则集是以脚本语言（如JavaScript）编写的指令集，用于评估XML数据并在该数据满足特定条件时执行特定操作。
+description: 您可以在Dynamic Media中部署規則集來轉換URL。 規則集是以指令碼語言（例如JavaScript）撰寫的指令集，可評估XML資料，並在資料符合特定條件時採取特定動作。
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
@@ -15,72 +15,72 @@ ht-degree: 0%
 
 ---
 
-# 使用规则集转换URL {#using-rulesets-to-transform-urls}
+# 使用規則集轉換URL {#using-rulesets-to-transform-urls}
 
-您可以在Dynamic Media中部署规则集以转换URL。 规则集是以脚本语言（如JavaScript）编写的指令集，用于评估XML数据并在该数据满足特定条件时执行特定操作。 每个规则包括至少一个条件和至少一个操作。 规则根据条件评估XML数据，如果满足条件，则执行相应的操作。 规则集的示例包括：
+您可以在Dynamic Media中部署規則集來轉換URL。 規則集是以指令碼語言（例如JavaScript）撰寫的指令集，可評估XML資料，並在資料符合特定條件時採取特定動作。 每個規則都包含至少一個條件和至少一個動作。 規則會根據條件評估XML資料，如果符合條件，則會採取適當的動作。 規則集的範例包括：
 
-* 添加MIME类型后缀。 许多服务和网站都需要图像后缀，例如，添加 `.jpg` 到URL。
-* 创建指向URL的文件夹路径以用于SEO（搜索引擎优化）。
+* 新增MIME型別字尾。 許多服務和網站都需要影像尾碼，例如 `.jpg` 至URL。
+* 為SEO （搜尋引擎最佳化）目的建立URL的資料夾路徑。
 
-   参见 [Adobe Dynamic Media Classic如何支持SEO](/help/assets/assets/s7_seo.pdf).
+   另請參閱 [Adobe Dynamic Media Classic如何支援SEO](/help/assets/assets/s7_seo.pdf).
 
-* 向URL添加元数据以用于SEO（搜索引擎优化）。
+* 將中繼資料新增至URL以進行SEO （搜尋引擎最佳化）。
 
-   参见 [Adobe Dynamic Media Classic如何支持SEO](/help/assets/assets/s7_seo.pdf).
+   另請參閱 [Adobe Dynamic Media Classic如何支援SEO](/help/assets/assets/s7_seo.pdf).
 
-* 设置内容处置以触发下载。
-* 简化用于个性化的图像服务模板URL。 例如，翻转 `rgb{XX,YY,ZZ}` 进入RTF-ready `\redXX\greenYY\blueZZ`
+* 設定內容處置以觸發下載。
+* 簡化個人化的影像伺服範本URL。 例如，翻轉 `rgb{XX,YY,ZZ}` 進入RTF-ready `\redXX\greenYY\blueZZ`
 
-* 请求对某些字符进行编码，例如 `$`， `{`、和 `}`和某些要解码为ImageServer的字符。 例如，Facebook不能很好地处理包含特殊字符的URL。
+* 要求編碼特定字元，例如 `$`， `{`、和 `}`和某些要解碼為ImageServer的字元。 例如，Facebook無法順利處理包含特殊字元的URL。
 
-   参见 [从URL中删除特殊字符](https://helpx.adobe.com/experience-manager/scene7/kb/base/scene7-rulesets/remove-special-characters-urls.html).
+   另請參閱 [從URL中移除特殊字元](https://helpx.adobe.com/experience-manager/scene7/kb/base/scene7-rulesets/remove-special-characters-urls.html).
 
-在Dynamic Media的上下文中，使用基于XML的系统管理资产信息的网站可以将XML文件上传到Dynamic Media。 您可以将其中一个文件指定为用于提供Dynamic Media资源的预处理规则集文件。 此文件将重新构建标准URL协议格式，以满足与Dynamic Media集成系统的业务逻辑。 指定一个XML文件作为规则集定义文件路径。
+在Dynamic Media環境中，使用XML系統管理資產資訊的網站可將XML檔案上傳至Dynamic Media。 您可以將其中一個檔案指定為預先處理規則集檔案，以提供Dynamic Media資產。 此檔案會重新建構標準URL通訊協定格式，以符合與Dynamic Media整合之系統的商業邏輯。 您可以指定XML檔案做為規則集定義檔案路徑。
 
 >[!CAUTION]
 >
->使用规则集时请务必小心；规则集可能会阻止在您的网站上显示Dynamic Media内容。
+>使用規則集時請務必小心，因為規則集可能會導致Dynamic Media內容無法在您的網站上顯示。
 
-提供了一些示例规则集，可帮助您创建自己的规则集。
-参见 [规则集引用](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/rule-set-reference/c-rule-set-reference.html).
+有些範例規則集可協助您建立自己的規則集。
+另請參閱 [規則集參考](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/rule-set-reference/c-rule-set-reference.html).
 
-与创建所有规则集时一样，在使用xmlvalid等XML验证器程序上传XML文件之前，请确保该文件有效。
-另请参阅 [规则集疑难解答](https://helpx.adobe.com/experience-manager/scene7/kb/base/scene7-rulesets/scene7-ruleset-troubleshooting.html).
+與建立所有規則集時一樣，使用xmlvalid之類的XML驗證器程式，在上傳XML檔案之前，請確保XML檔案有效。
+另請參閱 [規則集疑難排解](https://helpx.adobe.com/experience-manager/scene7/kb/base/scene7-rulesets/scene7-ruleset-troubleshooting.html).
 
-此外，请确保首先在不影响实时生产环境的暂存环境中测试规则集。
-生产环境和暂存环境通常需要不同的登录。
+此外，請務必先在中繼環境中測試規則集，以免影響您的即時生產環境。
+生產環境和測試環境通常需要不同的登入。
 
-请参阅 [用于登录信息的Adobe Dynamic Media Classic桌面应用程序](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#sign-in-dmc-app).
+請參閱 [登入資訊的Adobe Dynamic Media Classic案頭應用程式](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#sign-in-dmc-app).
 
 <!-- OBSOLETE INFORMATION * **NA staging environment** login page: [https://s7sps1-staging.scene7.com/IpsWeb/](https://s7sps1-staging.scene7.com/IpsWeb/)
 * **EMEA staging environment** login page: [https://s7sps3-staging.scene7.com/IpsWeb/](https://s7sps3-staging.scene7.com/IpsWeb/)
 * **JAPAC staging environment** login page: [https://s7sps5-staging.scene7.com/IpsWeb/](https://s7sps5-staging.scene7.com/IpsWeb/) -->
 
-另请参阅 [在规则集中使用“asset”而不是“is”图像](https://helpx.adobe.com/experience-manager/scene7/kb/base/scene7-rulesets/ruleset-asset-instead-image.html).
+另請參閱 [在規則集中使用「asset」而不是「is」影像](https://helpx.adobe.com/experience-manager/scene7/kb/base/scene7-rulesets/ruleset-asset-instead-image.html).
 
-**要部署XML规则集，请执行以下操作：**
+**若要建置XML規則集，請執行下列動作：**
 
-1. 登录到您的 [Dynamic Media Classic桌面应用程序](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#sign-in-dmc-app).
+1. 登入您的 [Dynamic Media Classic案頭應用程式](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#sign-in-dmc-app).
 
-   Adobe在配置时提供了您的凭据和登录详细信息。 如果您没有此信息，请联系Adobe客户支持。
+   Adobe在布建時已提供您的認證和登入詳細資訊。 如果您沒有此資訊，請聯絡Adobe客戶支援。
 
-1. 通过执行以下操作上载规则集文件：
+1. 執行下列操作上傳規則集檔案：
 
-   * 在全局导航栏上，选择 **[!UICONTROL 上传]**.
-   * 在 **[!UICONTROL 上传]** 页面，左上角附近，选择 **[!UICONTROL 浏览]**.
-   * 在 **[!UICONTROL 打开]** 对话框，浏览到规则集文件(XML)。
-   * 选择文件，然后选择 **[!UICONTROL 打开]**.
-   * 在右侧 **[!UICONTROL 上传]** 页面，为规则集文件选择目标文件夹。
-   * 在页面底部附近，确保 **[!UICONTROL 上传后发布]** 已选中。
-   * 在页面的右下角，选择 **[!UICONTROL 提交上传]**.
-   * 在全局导航栏上，选择 **[!UICONTROL 作业]** 以检查上载作业的状态。 当 **[!UICONTROL 状态]** 上的列 **[!UICONTROL 作业]** 页面显示上传完成，请继续后续步骤。
+   * 在全域導覽列上，選取 **[!UICONTROL 上傳]**.
+   * 於 **[!UICONTROL 上傳]** 頁面，左上角附近，選取 **[!UICONTROL 瀏覽]**.
+   * 在 **[!UICONTROL 開啟]** 對話方塊中，瀏覽至規則集檔案(XML)。
+   * 選取檔案，然後選取 **[!UICONTROL 開啟]**.
+   * 在右側 **[!UICONTROL 上傳]** 頁面，選取規則集檔案的目標資料夾。
+   * 在頁面底部附近，確認 **[!UICONTROL 上傳後發佈]** 已勾選。
+   * 在頁面的右下角，選取 **[!UICONTROL 提交上傳]**.
+   * 在全域導覽列上，選取 **[!UICONTROL 工作]** 以檢查上傳工作的狀態。 當 **[!UICONTROL 狀態]** 上的欄 **[!UICONTROL 工作]** 頁面顯示上傳完成，繼續後續步驟。
 
-1. 在靠近页面顶部的导航栏上，选择 **[!UICONTROL 设置]** > **[!UICONTROL 应用程序设置]** > **[!UICONTROL 发布设置]** > **[!UICONTROL 图像服务器]**.
-1. 在 **[!UICONTROL 图像服务器发布]** 页面，在 **[!UICONTROL 目录管理]** 组，查找 **[!UICONTROL 规则集定义文件路径]**，然后选择 **[!UICONTROL 选择]**.
-1. 在 **[!UICONTROL 选择规则集定义文件(XML)]** 页面上，浏览到规则集文件，然后在页面的右下角选择 **[!UICONTROL 选择]**.
-1. 在“设置”页面的右下角，选择 **[!UICONTROL 关闭]**.
-1. 运行图像服务器发布作业。
+1. 在靠近頁面頂端的導覽列上，選取 **[!UICONTROL 設定]** > **[!UICONTROL 應用程式設定]** > **[!UICONTROL 發佈設定]** > **[!UICONTROL 影像伺服器]**.
+1. 於 **[!UICONTROL 影像伺服器發佈]** 頁面，在 **[!UICONTROL 目錄管理]** 群組，找出 **[!UICONTROL 規則集定義檔案路徑]**，然後選取 **[!UICONTROL 選取]**.
+1. 於 **[!UICONTROL 選取規則集定義檔案(XML)]** 頁面，瀏覽至規則集檔案，然後在頁面的右下角選取「 」 **[!UICONTROL 選取]**.
+1. 在「設定」頁面的右下角，選取 **[!UICONTROL 關閉]**.
+1. 執行影像伺服器發佈工作。
 
-   规则集条件将应用于对实时Dynamic Media图像服务器的请求。
+   規則集條件會套用至即時Dynamic Media影像伺服器的請求。
 
-   如果更改规则集文件，则在重新上传并重新发布更新的规则集文件时，将立即应用更改。
+   如果您變更規則集檔案，當您重新上傳並重新發佈更新的規則集檔案時，會立即套用變更。

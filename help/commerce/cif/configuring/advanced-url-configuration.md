@@ -1,6 +1,6 @@
 ---
-title: 高级URL配置
-description: 了解如何自定义产品和类别页面的URL。 这允许实施优化搜索引擎的URL并促进发现。
+title: 進階URL設定
+description: 瞭解如何自訂產品和類別頁面的URL。 這可讓實作將搜尋引擎的URL最佳化並促進探索。
 sub-product: Commerce
 doc-type: technical-video
 activity: setup
@@ -16,27 +16,27 @@ ht-degree: 6%
 
 ---
 
-# 高级URL配置 {#url}
+# 進階URL設定 {#url}
 
 >[!NOTE]
 >
->搜索引擎优化 (SEO) 已成为许多营销人员关注的重点。因此，需要解决许多AEM项目中的SEO问题。 请阅读 [seo和URL管理最佳实践](https://experienceleague.adobe.com/docs/experience-manager-65/managing/managing-further-reference/seo-and-url-management.html) 以获取其他信息。
+>搜索引擎优化 (SEO) 已成为许多营销人员关注的重点。因此，許多AEM專案需要解決SEO問題。 請閱讀 [SEO和URL管理最佳作法](https://experienceleague.adobe.com/docs/experience-manager-65/managing/managing-further-reference/seo-and-url-management.html) 以取得其他資訊。
 
-[AEM CIF核心组件](https://github.com/adobe/aem-core-cif-components) 提供高级配置以自定义产品和类别页面的URL。 许多实施将自定义这些URL以实现搜索引擎优化(SEO)。 以下视频详细介绍如何配置 `UrlProvider` 的服务和功能 [Sling映射](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html) 自定义产品和类别页面的URL。
+[AEM CIF Core Components](https://github.com/adobe/aem-core-cif-components) 提供進階設定，以便自訂產品和類別頁面的URL。 許多實施會針對搜尋引擎最佳化(SEO)目的自訂這些URL。 以下影片詳細說明如何設定 `UrlProvider` 的服務與功能 [Sling對應](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html) 自訂產品和類別頁面的URL。
 
 >[!VIDEO](https://video.tv.adobe.com/v/34350/?quality=12)
 
 ## 配置 {#configuration}
 
-要配置 `UrlProvider` 服务根据SEO要求和需求，项目必须提供“CIF URL提供程序配置”的OSGI配置。
+若要設定 `UrlProvider` 服務必須根據SEO需求和需求提供「CIF URL提供者設定」的OSGI設定。
 
 >[!NOTE]
 >
->自AEM CIF核心组件2.0.0版以来，“URL提供程序”配置仅提供预定义的URL格式，而不提供1.x版中的自由文本可配置格式。 此外，使用选择器在URL中传递数据的方法已替换为后缀。
+>自AEM CIF核心元件2.0.0版以來，「URL提供者」設定僅提供預先定義的url格式，而非1.x版所擁有的自由文字可設定格式。 此外，使用選取器在URL中傳遞資料的做法已更換為尾碼。
 
-### 产品页面URL格式 {#product}
+### 產品頁面URL格式 {#product}
 
-这会配置产品页面的URL，并支持以下选项：
+這會設定產品頁面的URL，並支援下列選項：
 
 * `{{page}}.html/{{sku}}.html#{{variant_sku}}`（默认）
 * `{{page}}.html/{{url_key}}.html#{{variant_sku}}`
@@ -44,69 +44,69 @@ ht-degree: 6%
 * `{{page}}.html/{{url_path}}.html#{{variant_sku}}`
 * `{{page}}.html/{{sku}}/{{url_path}}.html#{{variant_sku}}`
 
-对于 [Venia引用存储](https://github.com/adobe/aem-cif-guides-venia)：
+若為 [Venia參考存放區](https://github.com/adobe/aem-cif-guides-venia)：
 
-* `{{page}}` 将替换为 `/content/venia/us/en/products/product-page`
-* `{{sku}}` 将由产品的SKU替换，例如 `VP09`
-* `{{url_key}}` 将由产品的 `url_key` 属性，例如 `lenora-crochet-shorts`
-* `{{url_path}}` 将由产品的 `url_path`，例如 `venia-bottoms/venia-pants/lenora-crochet-shorts`
-* `{{variant_sku}}` 将由当前选定的变体替换，例如 `VP09-KH-S`
+* `{{page}}` 將取代為 `/content/venia/us/en/products/product-page`
+* `{{sku}}` 將由產品的sku取代，例如 `VP09`
+* `{{url_key}}` 將由產品的 `url_key` 屬性，例如 `lenora-crochet-shorts`
+* `{{url_path}}` 將由產品的 `url_path`，例如 `venia-bottoms/venia-pants/lenora-crochet-shorts`
+* `{{variant_sku}}` 將由目前選取的變體取代，例如 `VP09-KH-S`
 
-由于 `url_path` 已弃用，预定义的产品URL格式使用产品的 `url_rewrites` 并选取路径分段数最多的路径作为替代路径，如果 `url_path` 不可用。
+由於 `url_path` 已過時，預先定義的產品URL格式會使用產品的 `url_rewrites` 並挑選路徑分段最多的路徑作為替代路徑，如果 `url_path` 無法使用。
 
-对于上述示例数据，使用默认URL格式的产品变体URL将如下所示 `/content/venia/us/en/products/product-page.html/VP09.html#VP09-KH-S`.
+在上述範例資料中，使用預設URL格式的產品變體URL看起來會像 `/content/venia/us/en/products/product-page.html/VP09.html#VP09-KH-S`.
 
-### 类别页面URL格式 {#product-list}
+### 類別頁面URL格式 {#product-list}
 
-这将配置类别或产品列表页面的URL，并支持以下选项：
+這會設定類別或產品清單頁面的URL，並支援下列選項：
 
 * `{{page}}.html/{{url_path}}.html`（默认）
 * `{{page}}.html/{{url_key}}.html`
 
-对于 [Venia引用存储](https://github.com/adobe/aem-cif-guides-venia)：
+若為 [Venia參考存放區](https://github.com/adobe/aem-cif-guides-venia)：
 
-* `{{page}}` 将替换为 `/content/venia/us/en/products/category-page`
-* `{{url_key}}` 将被类别的 `url_key` 属性
-* `{{url_path}}` 将被类别的 `url_path`
+* `{{page}}` 將取代為 `/content/venia/us/en/products/category-page`
+* `{{url_key}}` 將由類別的 `url_key` 屬性
+* `{{url_path}}` 將由類別的 `url_path`
 
-对于上述示例数据，使用默认URL格式设置的类别页面URL如下所示 `/content/venia/us/en/products/category-page.html/venia-bottoms/venia-pants.html`.
+在上述範例資料中，使用預設URL格式化的類別頁面URL看起來會像 `/content/venia/us/en/products/category-page.html/venia-bottoms/venia-pants.html`.
 
 >[!NOTE]
 > 
->此 `url_path` 是以下项的连接： `url_keys` 产品或类别的祖先以及产品或类别的 `url_key` 分隔方式 `/` slash。
+>此 `url_path` 是以下專案的串連： `url_keys` 產品或類別的祖先以及產品或類別的 `url_key` 分隔方式 `/` slash。
 
-### 特定类别 — /产品页面 {#specific-pages}
+### 特定類別 — /產品頁面 {#specific-pages}
 
-可以创建 [多个类别和产品页面](multi-template-usage.md) 仅用于特定类别子集或目录产品。
+可以建立 [多個類別和產品頁面](multi-template-usage.md) 僅用於目錄的特定類別或產品子集。
 
-此 `UrlProvider` 已预配置为在创作层实例上生成指向此类页面的深层链接。 这对于编辑器非常有用，编辑器使用预览模式浏览网站，导航到特定产品或类别页面，然后切换回编辑模式以编辑页面。
+此 `UrlProvider` 已預先設定，可在作者層級例項上產生這些頁面的深層連結。 這對編輯者很有用，他們可使用預覽模式瀏覽網站、導覽至特定產品或類別頁面，然後切換回編輯模式以編輯頁面。
 
-另一方面，在发布层实例上，目录页面URL应保持稳定，以免在搜索引擎排名上失去优势。 因此，默认情况下，发布层实例不会呈现指向特定目录页面的深层链接。 要更改此行为，请 _特定于CIF URL提供程序的页面策略_ 可以配置为始终生成特定的页面url。
+另一方面，在發佈層級執行個體上，目錄頁面URL應保持穩定，以免失去搜尋引擎排名之類的評分。 因此，根據預設，發佈層執行個體不會轉譯特定目錄頁面的深層連結。 若要變更此行為， _CIF URL提供者特定頁面策略_ 可設定為一律產生特定頁面url。
 
-## 自定义URL格式 {#custom-url-format}
+## 自訂URL格式 {#custom-url-format}
 
-要提供自定义URL格式，项目可以实施 [`ProductUrlFormat`](https://javadoc.io/doc/com.adobe.commerce.cif/core-cif-components-core/latest/com/adobe/cq/commerce/core/components/services/urls/ProductUrlFormat.html) 或 [`CategoryUrlFormat`](https://javadoc.io/doc/com.adobe.commerce.cif/core-cif-components-core/latest/com/adobe/cq/commerce/core/components/services/urls/CategoryUrlFormat.html) 服务接口，并将实现注册为OSGI服务。 这些实施（如果可用）将替换已配置的预定义格式。 如果注册了多个实施，则服务排名较高的实施将替换服务排名较低的实施。
+若要提供自訂URL格式，專案可實作 [`ProductUrlFormat`](https://javadoc.io/doc/com.adobe.commerce.cif/core-cif-components-core/latest/com/adobe/cq/commerce/core/components/services/urls/ProductUrlFormat.html) 或 [`CategoryUrlFormat`](https://javadoc.io/doc/com.adobe.commerce.cif/core-cif-components-core/latest/com/adobe/cq/commerce/core/components/services/urls/CategoryUrlFormat.html) 服務介面，並將實作註冊為OSGI服務。 這些實施（如果可用）將取代已設定的預先定義格式。 如果註冊了多個實作，則服務排名較高的實作會取代服務排名較低的實作。
 
-自定义URL格式实施必须实施一对方法，以便从给定参数构建URL，并解析URL以分别返回相同的参数。
+自訂URL格式實作必須實作一組方法，以便從指定引數建立URL，並剖析URL以分別傳回相同的引數。
 
-## 与Sling映射组合 {#sling-mapping}
+## 與Sling對應結合 {#sling-mapping}
 
-除了 `UrlProvider`，也可以配置 [Sling映射](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html) 以重写和处理URL。 AEM原型项目还提供 [示例配置](https://github.com/adobe/aem-cif-project-archetype/tree/master/src/main/archetype/samplecontent/src/main/content/jcr_root/etc/map.publish) 为端口4503（发布）和80（调度程序）配置一些Sling映射。
+除了 `UrlProvider`，也可以設定 [Sling對應](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html) 以便重寫及處理URL。 AEM原型專案也提供 [設定範例](https://github.com/adobe/aem-cif-project-archetype/tree/master/src/main/archetype/samplecontent/src/main/content/jcr_root/etc/map.publish) 為連線埠4503 （發佈）和80 （排程程式）設定一些Sling對應。
 
-## 与AEM调度程序相结合 {#dispatcher}
+## 與AEM Dispatcher結合 {#dispatcher}
 
-也可以使用AEM Dispatcher HTTP服务器实现URL重写 `mod_rewrite` 模块。 此 [AEM项目原型](https://github.com/adobe/aem-project-archetype) 提供了参考AEM Dispatcher配置，其中已包含基本 [重写规则](https://github.com/adobe/aem-project-archetype/tree/master/src/main/archetype/dispatcher.cloud) 生成的大小。
+也可以使用AEM Dispatcher HTTP伺服器搭配 `mod_rewrite` 模組。 此 [AEM專案原型](https://github.com/adobe/aem-project-archetype) 提供已包含基本設定的AEM Dispatcher參考設定 [重寫規則](https://github.com/adobe/aem-project-archetype/tree/master/src/main/archetype/dispatcher.cloud) 所產生的大小。
 
 ## 示例
 
-此 [Venia引用存储](https://github.com/adobe/aem-cif-guides-venia) project包含示例配置，用于演示自定义URL在产品和类别页面中的用法。 这样，每个项目就可以根据其SEO需求，为产品和类别页面设置单独的URL模式。 CIF组合 `UrlProvider` 和如上所述的Sling映射一起使用。
+此 [Venia參考存放區](https://github.com/adobe/aem-cif-guides-venia) project包含示範產品和類別頁面使用自訂URL的設定範例。 這可讓每個專案根據其SEO需求，為產品和類別頁面設定個別URL模式。 CIF組合 `UrlProvider` 和Sling對應（如上所述）則會使用。
 
 >[!NOTE]
 >
->必须使用该项目使用的外部域调整此配置。 Sling映射基于主机名和域工作。 因此，此配置在默认情况下处于禁用状态，必须在部署之前启用。 为此，请重命名Sling映射 `hostname.adobeaemcloud.com` 文件夹位置 `ui.content/src/main/content/jcr_root/etc/map.publish/https` 根据使用的域名，并通过添加以下内容启用此配置 `resource.resolver.map.location="/etc/map.publish"` 到 `JcrResourceResolver` 项目的配置。
+>此設定必須使用專案使用的外部網域進行調整。 Sling對應是根據主機名稱和網域來運作。 因此，此設定預設為停用，必須在部署之前啟用。 若要這麼做，請重新命名Sling對應 `hostname.adobeaemcloud.com` 資料夾位於 `ui.content/src/main/content/jcr_root/etc/map.publish/https` 根據使用的網域名稱，並透過新增以啟用此設定 `resource.resolver.map.location="/etc/map.publish"` 至 `JcrResourceResolver` 專案的設定。
 
 ## 其他资源
 
-* [Venia引用存储](https://github.com/adobe/aem-cif-guides-venia)
-* [AEM资源映射](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/resource-mapping.html)
-* [Sling映射](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html)
+* [Venia參考存放區](https://github.com/adobe/aem-cif-guides-venia)
+* [AEM資源對應](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/resource-mapping.html)
+* [Sling對應](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html)

@@ -1,7 +1,7 @@
 ---
-title: 翻译用户生成的内容
+title: 翻譯使用者產生的內容
 seo-title: Translating User Generated Content
-description: 翻译功能的工作原理
+description: 翻譯功能的運作方式
 seo-description: How the translation feature works
 uuid: 7ee3242c-2aca-4787-a60d-b807161401ad
 contentOwner: Janice Kendall
@@ -18,147 +18,147 @@ ht-degree: 0%
 
 ---
 
-# 翻译用户生成的内容 {#translating-user-generated-content}
+# 翻譯使用者產生的內容 {#translating-user-generated-content}
 
-AEM Communities的翻译功能扩展了 [翻译页面内容](../../help/sites-administering/translation.md) 发布到社区站点的用户生成内容(UGC)，使用 [社交组件框架(SCF)组件](scf.md).
+AEM Communities的翻譯功能進一步擴展了 [翻譯頁面內容](../../help/sites-administering/translation.md) 發佈至社群網站的使用者產生內容(UGC)，使用 [社交元件架構(SCF)元件](scf.md).
 
-UGC的翻译使站点访客和成员能够通过消除语言障碍而体验全球社区。
+UGC的翻譯可讓網站訪客和成員移除語言障礙，體驗全球社群。
 
-例如，假设：
+例如，假設：
 
-* 一位来自法国的成员在一家跨国烹饪网站的社区论坛上发布了一份法文食谱。
-* 另一位日本成员使用该翻译功能触发将配方从法语翻译为日语。
-* 在阅读了日文的食谱后，这位日本成员随后用日文发表了评论。
-* 来自法国的成员使用翻译功能将日语评论翻译为法语。
-* 全球通信。
+* 一位來自法國的成員在多國烹飪網站的社群論壇中張貼法文食譜。
+* 來自日本的另一位成員使用該翻譯功能來觸發配方從法文翻譯成日文。
+* 在閱讀日文的食譜後，這位日本成員便發表日文的評論。
+* 來自法國的成員使用翻譯功能將日文註解翻譯成法文。
+* 全球通訊。
 
 ## 概述 {#overview}
 
-本文档的这一部分具体讨论了翻译服务如何与UGC配合使用，同时假定您了解如何将AEM连接到 [翻译服务提供商](../../help/sites-administering/translation.md#connectingtoatranslationserviceprovider) 并通过配置 [翻译集成框架](../../help/sites-administering/tc-tic.md).
+本檔案本節具體說明翻譯服務如何與UGC搭配運作，並假設您瞭解如何將AEM連線至 [翻譯服務提供者](../../help/sites-administering/translation.md#connectingtoatranslationserviceprovider) 並透過設定 [翻譯整合框架](../../help/sites-administering/tc-tic.md).
 
-当翻译服务提供商与站点关联时，站点的每个语言副本都维护其自身的通过SCF组件（如注释）发布的UGC线程。
+當翻譯服務提供者與網站相關聯時，網站的每個語言副本都會維護其透過SCF元件（例如註解）張貼的UGC對話串。
 
-当除了翻译服务提供商之外还配置翻译集成框架时，站点的每个语言副本可以共享单个UGC线程，从而提供跨语言副本的全局通信。 不是按语言分隔的讨论会话，而是配置的 [全局共享存储](#global-translation-of-ugc) 使整个线程可见，无论查看的是哪种语言副本。 此外，可以配置多个翻译集成配置，为诸如按区域的全局参与者的逻辑分组指定不同的全局共享存储。
+除了翻譯服務提供者之外，當設定翻譯整合框架時，網站的每個語言副本都可以共用單一UGC對話串，因此提供跨語言副本的全球通訊。 不是由語言分隔的討論對話串，而是設定的 [全域共用存放區](#global-translation-of-ugc) 無論檢視的是哪種語言副本，都能顯示整個對話串。 此外，可以設定多個翻譯整合設定，為全域參與者的邏輯分組（例如按區域）指定不同的全域共用存放區。
 
-## 默认翻译服务 {#the-default-translation-service}
+## 預設翻譯服務 {#the-default-translation-service}
 
-AEM Communities包含 [试用许可证](../../help/sites-administering/tc-msconf.md#microsoft-translator-trial-license) 对于 [默认翻译服务](../../help/sites-administering/tc-msconf.md) 已为多种语言启用。
+AEM Communities包含 [試用授權](../../help/sites-administering/tc-msconf.md#microsoft-translator-trial-license) 對於 [預設翻譯服務](../../help/sites-administering/tc-msconf.md) 已啟用多種語言。
 
-时间 [创建社区站点](sites-console.md)，则默认翻译服务在以下情况下启用： `Allow Machine Translation` 是从 [翻译](sites-console.md#translation) 子面板。
-
->[!CAUTION]
->
->默认翻译服务仅用于演示。
->
->对于生产系统，需要获得许可的翻译服务。 如果未获得许可，则默认翻译服务应为 [已关闭](../../help/sites-administering/tc-msconf.md#microsoft-translator-trial-license-geometrixx-outdoors).
-
-## UGC的全局翻译 {#global-translation-of-ugc}
-
-当网站有多个时 [语言副本](../../help/sites-administering/tc-prep.md)，则默认翻译服务不会识别一个站点上输入的UGC可能与另一个站点上输入的UGC相关，例如，当UGC基本上由同一组件（包含该组件的页面的语言副本）生成时。
-
-这类似于讨论一个话题的人群，他们不知道自己以外的小组正在发表评论，而同一个大小组中的每个人参加一个对话。
-
-如果需要“一个组对话”，则可以在具有多语言副本的网站中启用全局翻译，以便无论查看的是哪种语言副本，整个线程都可见。
-
-例如，如果在基本站点上建立了论坛，创建了语言副本，并启用了全局翻译，则使用一种语言副本发布到论坛的主题将显示在所有语言副本中。 无论从哪种语言副本输入回复，任何回复都同样如此。 结果是，无论从哪个语言副本查看主题，都可以看到该主题及其整个回复线程。
+時間 [建立社群網站](sites-console.md)，預設翻譯服務會在以下情況下啟用： `Allow Machine Translation` 「 」已勾選 [翻譯](sites-console.md#translation) 子面板。
 
 >[!CAUTION]
 >
->在全局翻译之前存在的任何UGC都不再可见。
+>預設翻譯服務僅供示範。
 >
->当UGC仍在 [公用存储](working-with-srp.md)，它位于特定语言的UGC位置下，而正在从全局共享存储位置检索在配置全局翻译后添加的新内容。
+>對於生產系統，需要授權的翻譯服務。 若未授權，預設翻譯服務應為 [關閉](../../help/sites-administering/tc-msconf.md#microsoft-translator-trial-license-geometrixx-outdoors).
+
+## UGC的全球翻譯 {#global-translation-of-ugc}
+
+當網站有多個時 [語言副本](../../help/sites-administering/tc-prep.md)，預設翻譯服務無法辨識一個網站上輸入的UGC是否可能與另一個網站上輸入的UGC有關，因為該UGC基本上是由相同元件（包含元件的頁面語言副本）產生。
+
+這類似於討論主題的人群，他們不知道自己以外的群組正在發表評論，而大型群組中的每個人都參與同一個對話。
+
+如果需要「一個群組對話」，則可以在具有多種語言副本的網站上啟用全域翻譯，以便檢視整個對話串，無論檢視的是哪種語言副本。
+
+例如，如果在基本網站上建立論壇、建立語言副本，並啟用全域翻譯，則以單一語言副本發佈到論壇的主題將顯示在所有語言副本中。 無論輸入回覆的語言副本為何，任何回覆亦然。 結果，無論檢視主題所用的語言副本為何，都會顯示主題及其整個回覆對話串。
+
+>[!CAUTION]
 >
->没有迁移工具可以将特定于语言的内容移动或合并到全局共享存储中。
+>全域翻譯之前存在的任何UGC都不再可見。
+>
+>當UGC仍然在 [公用存放區](working-with-srp.md)，而位於特定語言的UGC位置底下，同時從全域共用存放區位置擷取設定全域翻譯後新增的新內容。
+>
+>沒有移轉工具可將特定語言的內容移動或合併至全域共用存放區。
 
-### 翻译集成配置 {#translation-integration-configuration}
+### 翻譯整合設定 {#translation-integration-configuration}
 
-要创建新的翻译集成，它将翻译服务连接器与创作实例上的网站集成，请执行以下操作：
+若要建立新的翻譯整合，將翻譯服務聯結器與作者執行個體上的網站整合：
 
-* 以管理员身份登录
-* 从 [主菜单](http://localhost:4502/)
-* 选择 **[!UICONTROL 工具]**
-* 选择 **[!UICONTROL 操作]**
-* 选择 **[!UICONTROL 云]**
-* 选择 **[!UICONTROL Cloud Services]**
-* 向下滚动到 **[!UICONTROL 翻译集成]**
+* 以管理員身分登入
+* 從 [主功能表](http://localhost:4502/)
+* 選取 **[!UICONTROL 工具]**
+* 選取 **[!UICONTROL 作業]**
+* 選取 **[!UICONTROL 雲端]**
+* 選取 **[!UICONTROL Cloud Services]**
+* 向下捲動至 **[!UICONTROL 翻譯整合]**
 
    ![translation-integration](assets/translation-integration.png)
 
-* 选择 **[!UICONTROL 显示配置]**
+* 選取 **[!UICONTROL 顯示設定]**
 
-   ![显示配置](assets/translation-integration1.png)
+   ![show-configuration](assets/translation-integration1.png)
 
-* 选择 `[+]` 图标旁边 **[!UICONTROL 可用配置]** 创建新配置
+* 選取 `[+]` 圖示旁邊 **[!UICONTROL 可用的設定]** 以建立新組態
 
-#### “创建配置”对话框 {#create-configuration-dialog}
+#### 建立設定對話方塊 {#create-configuration-dialog}
 
-![create — 配置](assets/translation-integration2.png)
+![create-configuration](assets/translation-integration2.png)
 
 * **[!UICONTROL 父配置]**
 
-   （必需）通常保留为默认值。 默认为 `/etc/cloudservices/translation`.
+   （必要）通常會保留為預設值。 預設為 `/etc/cloudservices/translation`.
 
 * **[!UICONTROL 标题]**
 
-   （必需）输入您选择的显示标题。 无默认值。
+   （必要）輸入您選擇的顯示標題。 無預設值。
 
 * **[!UICONTROL 名称]**
 
-   （可选）输入配置的名称。 默认值是基于标题的节点名称。
+   （選擇性）輸入組態的名稱。 預設值是根據標題的節點名稱。
 
-* 选择 **[!UICONTROL 创建]**
+* 選取 **[!UICONTROL 建立]**
 
-#### 翻译配置对话框 {#translation-config-dialog}
+#### 翻譯設定對話方塊 {#translation-config-dialog}
 
-![配置 — 对话框](assets/translation-integration3.png)
+![configuration-dialog](assets/translation-integration3.png)
 
-有关详细说明，请访问 [创建翻译集成配置](../../help/sites-administering/tc-tic.md#creating-a-translation-integration-configuration)
+如需詳細指示，請造訪 [建立翻譯整合設定](../../help/sites-administering/tc-tic.md#creating-a-translation-integration-configuration)
 
-* **[!UICONTROL 站点]** 选项卡：可保留为默认值。
+* **[!UICONTROL 網站]** tab：可保留為預設值。
 
-* **[!UICONTROL Communities]** 选项卡：
-   * **[!UICONTROL 翻译提供商]**
-从下拉列表中选择翻译提供商。 默认为 
-`microsoft`，试用服务。
+* **[!UICONTROL Communities]** 標籤：
+   * **[!UICONTROL 翻譯提供者]**
+從下拉式清單中選取翻譯提供者。 預設為 
+`microsoft`，此為試用服務。
 
-   * **[!UICONTROL 内容类别]**
-选择描述正在翻译的内容的类别。 默认为 
+   * **[!UICONTROL 內容類別]**
+選取說明正在翻譯之內容的類別。 預設為 
 `General.`
 
-   * **[!UICONTROL 选择区域设置……]**
-（可选）通过选择存储UGC的区域设置，来自所有语言副本的帖子将显示在一个全局对话中。 按照惯例，选择 [基本语言](sites-console.md#translation) 用于网站。 选择 `No Common Store` 将禁用全局翻译。 默认情况下，全局翻译处于禁用状态。
+   * **[!UICONTROL 選擇地區……]**
+（選擇性）選取儲存UGC的語言環境，所有語言副本的貼文都會出現在同一個全域對話中。 依照慣例，選擇 [基本語言](sites-console.md#translation) 適用於網站。 選擇 `No Common Store` 將會停用全域翻譯。 預設會停用全域翻譯。
 
-* **[!UICONTROL 资产]** 选项卡：可保留为默认值。
-* 选择 **[!UICONTROL 确定]**
+* **[!UICONTROL 資產]** tab：可保留為預設值。
+* 選取 **[!UICONTROL 確定]**
 
 #### 激活 {#activation}
 
-需要将新的翻译集成云服务激活到发布环境。 与网站关联时，如果尚未激活，则激活工作流会在发布与其关联的页面时提示发布此云服务配置。
+發佈環境需要啟動新的翻譯整合雲端服務。 與網站建立關聯時，如果尚未啟動，則啟動工作流程會在發佈此雲端服務設定的關聯頁面時提示發佈此雲端服務設定。
 
-## 管理翻译设置 {#managing-translation-settings}
+## 管理翻譯設定 {#managing-translation-settings}
 
 >[!NOTE]
 >
->**首选语言**
+>**偏好語言**
 >
->为了检测帖子是否使用与首选语言不同的语言，必须建立站点访客的首选语言。
+>為了偵測貼文的語言是否與慣用語言不同，必須建立網站訪客的慣用語言。
 >
->首选语言是当网站访客登录并指定语言首选项时，用户配置文件中设置的语言首选项。
+>偏好語言是網站訪客登入且已指定語言偏好設定時，使用者設定檔中設定的語言偏好設定。
 >
->当网站访客匿名或未在其配置文件中指定语言首选项时，首选语言是页面模板的基本语言。
+>當網站訪客為匿名或未在其設定檔中指定語言偏好設定時，偏好的語言是頁面範本的基本語言。
 
-### 用户首选项 {#user-preference}
+### 使用者偏好設定 {#user-preference}
 
 #### 用户配置文件 {#user-profile}
 
-所有社区站点都提供一个用户配置文件，登录成员可以编辑该配置文件以在社区中标识他们自己并设置他们的首选项。
+所有社群網站都會提供使用者設定檔，登入的成員可以編輯此設定檔，以在社群中識別自己並設定其偏好設定。
 
-其中一项设置是是否始终以首选语言显示社区内容。 默认情况下，未设置该设置，它将默认为系统设置。 用户可以将该设置更改为“On（开）”或“Off（关）”，从而覆盖系统设置。
+其中一項設定是是否一律以偏好語言顯示社群內容。 預設不會設定此設定，而是預設為系統設定。 使用者可以將設定變更為開啟或關閉，藉此覆寫系統設定。
 
-当页面自动翻译成用户的首选语言时，仍可以使用用于显示原始文本和改进翻译的UI。
+當頁面自動翻譯成使用者偏好的語言時，仍提供用於顯示原始文字和改善翻譯的UI。
 
 ![user-profile](assets/translation-integration4.png)
 
-### 社区站点设置 {#community-site-setting}
+### 社群網站設定 {#community-site-setting}
 
-创建社区站点后，可以启用和配置翻译选项。 翻译设置对匿名网站访客可以查看的内容有效，但会被用户的配置文件设置覆盖。
+建立社群網站時，可啟用並設定翻譯選項。 此翻譯設定對匿名網站訪客可檢視的內容有效，但會被使用者的設定檔設定覆寫。

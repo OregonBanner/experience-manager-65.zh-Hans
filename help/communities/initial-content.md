@@ -1,5 +1,5 @@
 ---
-title: 初始沙盒内容
+title: 初始沙箱內容
 seo-title: Initial Sandbox Content
 description: 创建内容
 seo-description: Create content
@@ -13,98 +13,98 @@ exl-id: 068a0fff-ca48-4847-ba3f-d78416c97f6d
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '467'
-ht-degree: 4%
+ht-degree: 2%
 
 ---
 
-# 初始沙盒内容 {#initial-sandbox-content}
+# 初始沙箱內容 {#initial-sandbox-content}
 
-在此部分中，您将创建以下页面，这些页面都使用 [页面模板](initial-app.md#createthepagetemplate)：
+在本節中，您將建立以下頁面，這些頁面都使用 [頁面範本](initial-app.md#createthepagetemplate)：
 
-* SCF沙盒站点，该站点将重定向到主页的英语版本。
+* SCF沙箱網站，將重新導向至首頁面的英文版。
 
-   * SCF沙盒 — 站点的英文版本的主页。
+   * SCF沙箱 — 英文版網站的首頁。
 
-   * SCF播放 — 要播放的主页的子页面。
+   * SCF播放 — 要播放之首頁面的子頁面。
 
-尽管本教程并未深入探讨 [语言副本](../../help/sites-administering/tc-prep.md)，因此根页面可以通过HTML标题为用户实施首选语言检测，并重定向到该语言的相应主页。 约定是将两个字母的国家/地区代码用于页面的节点名称，例如“en”表示英语，“fr”表示法语等。
+雖然本教學課程並未深入探討 [語言副本](../../help/sites-administering/tc-prep.md)，其設計讓根頁面可透過HTML標頭為使用者實施偏好的語言偵測，並重新導向至該語言的適當首頁面。 慣例是將兩個字母的國家代碼用於頁面的節點名稱，例如「en」表示英文，「fr」表示法文等。
 
-## 创建第一页 {#create-first-pages}
+## 建立第一頁 {#create-first-pages}
 
-现在，有一个 [页面模板](initial-app.md#createthepagetemplate)，我们可在/content目录中建立网站的根页面。
+現在，有一個 [頁面範本](initial-app.md#createthepagetemplate)，我們可在/content目錄中建立網站的根頁面。
 
-1. 标准UI当前提供用于创建站点的蓝图。 由于本教程创建的是简单的站点，因此经典UI非常有用。
+1. 標準UI目前提供建立網站的藍圖。 由於本教學課程會建立簡單的網站，傳統UI會很實用。
 
-   要切换到经典UI，请选择全局导航，并将鼠标悬停在项目图标的右侧。 选择 *切换到经典UI* 图标，将显示：
+   若要切換至傳統UI，請選取全域導覽，並將滑鼠游標停留在「專案」圖示的右側。 選取 *切換至傳統UI* 圖示，隨即顯示：
 
-   ![经典ui](assets/classic-ui.png)
+   ![classic-ui](assets/classic-ui.png)
 
-   切换到经典UI的功能必须 [由管理员启用](../../help/sites-administering/enable-classic-ui.md).
+   切換至傳統UI的功能必須是 [由管理員啟用](../../help/sites-administering/enable-classic-ui.md).
 
-1. 从 [经典UI欢迎页面](http://localhost:4502/welcome.html)，选择 **[!UICONTROL 网站]**.
+1. 從 [傳統UI歡迎頁面](http://localhost:4502/welcome.html)，選取 **[!UICONTROL 網站]**.
 
    ![classic-ui-website](assets/classic-ui-website.png)
 
-   或者，通过浏览以直接访问网站的经典UI [/siteadmin.](http://localhost:4502/siteadmin)
+   或者，您可以瀏覽至以下網址直接存取網站的傳統UI： [/siteadmin。](http://localhost:4502/siteadmin)
 
-1. 在资源管理器窗格中，选择 **[!UICONTROL 网站]** 然后在工具栏中选择 **[!UICONTROL 新]** > **[!UICONTROL 新页面]**.
+1. 在總管窗格中，選取 **[!UICONTROL 網站]** 然後在工具列中選取 **[!UICONTROL 新增]** > **[!UICONTROL 新頁面]**.
 
-   在 **[!UICONTROL 创建页面]** 对话框，请输入以下内容：
+   在 **[!UICONTROL 建立頁面]** 對話方塊，輸入下列內容：
 
    * 标题: `SCF Sandbox Site`
    * 名称: `an-scf-sandbox`
-   * 选择 **[!UICONTROL SCF沙盒播放模板]**
-   * 单击 **[!UICONTROL 创建]**
+   * 選取 **[!UICONTROL SCF沙箱播放範本]**
+   * 按一下 **[!UICONTROL 建立]**
 
    ![classic-ui-create-page](assets/classic-ui-create-page.png)
 
-1. 在资源管理器窗格中，选择刚刚创建的页面， `/Websites/SCF Sandbox Site`，然后单击 **[!UICONTROL 新]** > **[!UICONTROL 新页面]**：
+1. 在總管窗格中，選取您剛建立的頁面， `/Websites/SCF Sandbox Site`，然後按一下 **[!UICONTROL 新增]** > **[!UICONTROL 新頁面]**：
 
    * 标题: `SCF Sandbox`
    * 名称: `en`
-   * 选择 **[!UICONTROL SCF沙盒播放模板]**
-   * 单击 **[!UICONTROL 创建]**
+   * 選取 **[!UICONTROL SCF沙箱播放範本]**
+   * 按一下 **[!UICONTROL 建立]**
 
-1. 在资源管理器窗格中，选择刚刚创建的页面， `/Websites/SCF Sandbox Site/SCF Sandbox`，然后单击 **[!UICONTROL 新]** > **[!UICONTROL 新页面]**
+1. 在總管窗格中，選取您剛建立的頁面， `/Websites/SCF Sandbox Site/SCF Sandbox`，然後按一下 **[!UICONTROL 新增]** > **[!UICONTROL 新頁面]**
 
    * 标题: `SCF Play`
    * 名称: `play`
-   * 选择 **[!UICONTROL SCF沙盒播放模板]**
-   * 单击 **[!UICONTROL 创建]**
+   * 選取 **[!UICONTROL SCF沙箱播放範本]**
+   * 按一下 **[!UICONTROL 建立]**
 
-1. 这就是网站现在在“网站”控制台中的显示方式。 请注意，在资源管理器窗格中选择的项目的子页面将显示在可以对其进行管理的右侧窗格中。
+1. 這是網站現在在「網站」主控台中的顯示方式。 請注意，在總管窗格中選取之專案的子頁面會顯示在可以管理這些頁面的右側窗格中。
 
    ![classic-ui-website-page](assets/classic-ui-website-page.png)
 
-   这是使用网站工具和模板创建的内容的存储库视图：
+   這是使用網站工具和範本建立的存放庫檢視：
 
    ![classic-ui-repository-view](assets/classic-ui-repository-view.png)
 
-## 添加设计路径 {#add-the-design-path}
+## 新增設計路徑 {#add-the-design-path}
 
-时间 ` [/etc/designs/an-scf-sandbox](setup-website.md#setupthedesigntreeetcdesigns)` 创建时使用“工具”控制台的“设计”部分，即属性“
+時間 ` [/etc/designs/an-scf-sandbox](setup-website.md#setupthedesigntreeetcdesigns)` 是使用「工具」主控台的「設計」區段建立的，屬性「
 
 * `cq:template="/libs/wcm/core/templates/designpage"`
 
-定义，这提供了在脚本中使用引用设计资源的可选功能 `currentDesign.getPath()`. 例如
+已定義，這可提供選擇性功能，讓您使用在指令碼中參照設計資產 `currentDesign.getPath()`. 例如
 
 * `% String favIcon = currentDesign.getPath() + "/favicon.ico"; %`
 
 
    * 名称: `cq:designPath`
    * 类型: `String`
-   * 值: `/etc/designs/an-scf-sandbox`
+   * 价值: `/etc/designs/an-scf-sandbox`
 
-* 单击绿色 `[+] Add`
+* 按一下綠色 `[+] Add`
 
-存储库应如下所示：
+存放庫應如下所示：
 
 ![classic-ui-repository-path](assets/classic-ui-repository-path.png)
 
-* 单击 **[!UICONTROL 全部保存]**
+* 按一下 **[!UICONTROL 全部儲存]**
 
-如果保存配置时出现任何问题，请重新登录并再次配置。
+如果儲存設定時發生任何問題，請重新登入並再次設定。
 
 >[!NOTE]
 >
->使用 `cq:designPath` 是可选的，并且与 [clientlibs的使用](develop-app.md#includeclientlibsintemplate)，这些组件在SCF组件使用时需要使用 [clientlibs](client-customize.md#clientlibs-for-scf) 以管理其JS和CSS。
+>使用 `cq:designPath` 是選用的，而且與 [clientlibs的使用](develop-app.md#includeclientlibsintemplate)，此專案為SCF元件使用時的主要必要專案 [clientlibs](client-customize.md#clientlibs-for-scf) 以管理其JS和CSS。

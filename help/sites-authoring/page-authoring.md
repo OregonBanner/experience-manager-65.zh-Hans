@@ -1,6 +1,6 @@
 ---
-title: 在AEM中创作内容页面
-description: 创作内容页面时涉及的任务。
+title: 在AEM中編寫內容頁面
+description: 編寫內容頁面時涉及的任務。
 uuid: 454d94aa-da27-45cb-bbb2-7bfcef103806
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -16,42 +16,42 @@ ht-degree: 0%
 
 ---
 
-# 创作页面{#authoring-pages}
+# 製作頁面{#authoring-pages}
 
-以下内容提供了使用AEM进行创作的两种类型的概述：
+以下提供兩種使用AEM撰寫的概觀：
 
-* [作者的首要步骤](/help/sites-authoring/first-steps.md)  — 新作者简介
+* [作者的首要步驟](/help/sites-authoring/first-steps.md)  — 新作者的簡介
 
-* [页面创作快速指南](/help/sites-authoring/qg-page-authoring.md)  — 主要操作的快速指南（高级）
+* [製作頁面的快速指南](/help/sites-authoring/qg-page-authoring.md)  — 主要動作的快速指南（高階說明）
 
 >[!NOTE]
 >
->本节介绍创作内容页面时涉及的任务。 还有许多与页面创作密切相关的其他功能，其他部分介绍了 [Authoring指南](/help/sites-authoring/home.md).
+>本節說明撰寫內容頁面時涉及的作業。 有許多與頁面製作密切相關的其他功能，請參閱 [Authoring指南](/help/sites-authoring/home.md).
 
-## 页面创作功能快速概述 {#quick-overview-of-features-used-for-authoring-pages}
+## 用於編寫頁面的功能的快速概覽 {#quick-overview-of-features-used-for-authoring-pages}
 
-为了在创作页面时帮助您，创作环境提供了以下功能：
+為協助您撰寫頁面，作者環境會提供下列功能：
 
 * **拖放**
-只需将组件（如文本、图像）和数字资产（如图像）拖放到所需位置，即可将它们放置到页面上。
+只要將元件（例如文字、影像）和數位資產（例如影像）拖放至所需位置，就能在頁面上放置元件。
 
-* **编辑**
-将组件放置到页面上后，可以打开一个特定于组件的对话框，以输入内容和/或配置该组件的特性（例如，图像大小）。
+* **編輯**
+一旦定位在頁面上，即可開啟元件專用對話方塊，以輸入內容及/或設定該元件的特性（例如影像大小）。
 
-* **就地编辑**
-文本和图像组件可以直接在网页上进行编辑，而无需打开对话框或明确的保存操作。
+* **就地編輯**
+可直接在網頁上編輯文字和影像元件，而不需開啟對話方塊或明確儲存動作。
 
-* **[组件浏览器](/help/sites-authoring/author-environment-tools.md#componentsbrowsertouchoptimizedui)**
-在可编辑页面的左侧，可打开滑动浏览器；可从此处将组件拖动到页面上，然后进行编辑。
+* **[元件瀏覽器](/help/sites-authoring/author-environment-tools.md#componentsbrowsertouchoptimizedui)**
+在可編輯頁面的左側，可以開啟滑動瀏覽器；您可以從此處將元件拖曳至頁面上，然後進行編輯。
 
-* **[资产浏览器](/help/sites-authoring/author-environment-tools.md#assetsbrowsertouchoptimizedui)**
-在可编辑页面的左侧，可打开滑动浏览器；可从此处将资产拖动到页面上；例如，放置资产或创建指向其他页面的链接。
+* **[資產瀏覽器](/help/sites-authoring/author-environment-tools.md#assetsbrowsertouchoptimizedui)**
+在可編輯頁面的左側，可以開啟滑動瀏覽器；可以從此處將資產拖曳至頁面；例如，放置資產或建立其他頁面的連結。
 
-* **组件工具栏**
-单击/点按或慢速双击/点按将显示相应的工具栏（单击显示就地编辑工具栏，慢速双击显示完整工具栏）。
+* **元件工具列**
+按一下或緩慢按兩下/點選都會顯示適當的工具列（按一下可放置就地編輯工具列，按一下緩慢按兩下可放置完整工具列）。
 
-* **[响应式布局](/help/sites-authoring/responsive-layout.md)**
-这提供了一个段落系统，允许您在响应式网格内放置组件。
+* **[回應式佈局](/help/sites-authoring/responsive-layout.md)**
+這提供了段落系統，可讓您在回應式格線中定位元件。
 
-* **在键入时搜索**
-在某些情况下（例如，编辑对话框中的路径选择），当您键入查询时，通过AEM界面搜索内容会显示动态匹配项。
+* **依輸入內容搜尋**
+在某些情況下（例如，編輯對話方塊中的路徑選擇），當您鍵入查詢時，透過AEM介面搜尋內容會顯示動態比對。

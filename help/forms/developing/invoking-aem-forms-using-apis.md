@@ -1,7 +1,7 @@
 ---
-title: 使用API调用AEM Forms
+title: 使用API叫用AEM Forms
 seo-title: Invoking AEM Forms using APIs
-description: 使用API调用AEM Forms
+description: 使用API叫用AEM Forms
 uuid: d100e106-e508-4d3c-ba8c-b5fe13c9e2d6
 contentOwner: admin
 content-type: reference
@@ -17,18 +17,18 @@ ht-degree: 0%
 
 ---
 
-# 使用API调用AEM Forms {#invoking-aem-forms-using-apis}
+# 使用API叫用AEM Forms {#invoking-aem-forms-using-apis}
 
-**本文档中的示例和示例仅适用于AEM Forms on JEE环境。**
+**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms 。**
 
-Adobe Experience Manager Forms是基于J2EE的企业软件，包含在共享基础架构中运行的服务。 服务操作通常使用或生成文档。 通过使用AEM Forms，您可以将表单工作流程与电子表单、文档安全和文档生成结合到一组集成且有凝聚力的服务中。 可以从防火墙内部和外部访问这些服务。
+Adobe Experience Manager Forms是以J2EE為基礎的企業軟體，包含在共用基礎架構中運作的服務。 服務作業通常會消耗或產生檔案。 使用AEM Forms，您可以將表單工作流程與電子錶單、檔案安全性及檔案產生結合在整合且具凝聚力的服務組合中。 這些服務可從防火牆內部和外部存取。
 
-客户端应用程序可以使用Java API、Web服务、远程处理和REST以编程方式调用AEM Forms服务。 使用管理控制台，您可以配置服务以通过编程方式调用来公开允许AEM Forms服务的端点。 默认情况下，大多数服务都预先配置为公开远程处理、Java和Web服务端点。
+使用者端應用程式可以使用Java API、網站服務、遠端處理和REST以程式設計方式叫用AEM Forms服務。 使用管理主控台，您可以設定服務以透過程式化叫用來公開讓AEM Forms服務的端點。 依預設，大部分服務都已預先設定為公開Remoting、Java和Web服務端點。
 
-您的业务要求决定了要使用的调用方法。 例如，使用Java API，您可以将AEM Forms功能集成到Java企业应用程序，如Java实体和消息Bean。 同样，您可以使用Web服务将AEM Forms功能集成到.NET项目（或使用支持Web服务标准的开发环境开发的其他项目）中。
+您的業務需求會決定要使用的叫用方法。 例如，使用Java API時，您可以將AEM Forms功能整合至Java企業應用程式，例如Java實體和訊息Bean。 同樣地，您可以使用Web服務將AEM Forms功能整合到.NET專案（或是使用支援Web服務標準的開發環境開發的其他專案）中。
 
-服务需要服务容器才能运行，这与Enterprise JavaBeans™ (EJB)需要J2EE容器类似。 AEM Forms仅包含一个服务容器实现。 服务容器负责管理服务的生命周期，包括部署服务并确保将所有请求发送到正确的服务。 它还管理服务使用或产生的文档。
+服務需要服務容器才能執行，類似於Enterprise JavaBeans™ (EJB)需要J2EE容器的方式。 AEM Forms僅包含服務容器的一個實作。 服務容器負責管理服務的存留期，包括部署服務及確保所有請求皆傳送至正確的服務。 它也會管理服務使用或產生的檔案。
 
 >[!NOTE]
 >
->使用AEM表单编程不包括有关如何使用Watched文件夹或电子邮件调用AEM Forms的信息。
+>使用AEM表單進行程式設計時，不會包含有關如何使用Watched資料夾或電子郵件叫用AEM Forms的資訊。

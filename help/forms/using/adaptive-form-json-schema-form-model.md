@@ -1,6 +1,6 @@
 ---
-title: 如何使用JSON架构创建自适应Forms？
-description: 了解如何使用JSON架构作为表单模型创建自适应表单。 您可以使用现有JSON架构创建自适应表单。 深入了解JSON模式示例、在JSON模式定义中预配置字段、限制自适应表单组件的可接受值并了解不受支持的结构。
+title: 如何使用JSON結構描述建立最適化Forms？
+description: 瞭解如何使用JSON結構描述作為表單模型來建立調適型表單。 您可以使用現有的JSON結構描述來建立最適化表單。 深入瞭解JSON結構描述範例、在JSON結構描述定義中預先設定欄位、限制最適化表單元件的可接受值，以及瞭解不支援的建構。
 feature: Adaptive Forms
 role: User, Developer
 level: Beginner, Intermediate
@@ -12,28 +12,28 @@ ht-degree: 5%
 
 ---
 
-# 使用JSON架构创建自适应表单 {#creating-adaptive-forms-using-json-schema}
+# 使用JSON結構描述建立調適型表單 {#creating-adaptive-forms-using-json-schema}
 
 ## 前提条件 {#prerequisites}
 
-使用JSON架构作为表单模型创作自适应表单需要基本了解JSON架构。 建议在阅读本文之前，通读以下内容。
+使用JSON結構描述作為表單模型來製作調適型表單需要基本瞭解JSON結構描述。 建議您先閱讀下列內容，再閱讀本文。
 
-* [创建自适应表单](creating-adaptive-form.md)
-* [JSON架构](https://json-schema.org/)
+* [建立最適化表單](creating-adaptive-form.md)
+* [JSON結構描述](https://json-schema.org/)
 
-## 使用JSON架构作为表单模型  {#using-a-json-schema-as-form-model}
+## 使用JSON結構描述作為表單模型  {#using-a-json-schema-as-form-model}
 
-[!DNL Adobe Experience Manager Forms] 支持使用现有JSON架构作为表单模型来创建自适应表单。 此JSON架构表示组织中的后端系统生成或使用数据的结构。 您使用的JSON架构应符合 [v4规范](https://json-schema.org/draft-04/schema).
+[!DNL Adobe Experience Manager Forms] 支援使用現有JSON結構描述作為表單模型來建立調適型表單。 此JSON結構描述代表組織中後端系統產生或使用資料的結構。 您使用的JSON結構描述應符合 [v4規格](https://json-schema.org/draft-04/schema).
 
-使用JSON架构的主要功能包括：
+使用JSON結構描述的主要功能包括：
 
-* 在自适应表单的创作模式下，JSON的结构在Content Finder选项卡中显示为树。 您可以将元素从JSON层次结构拖放到自适应表单中。
-* 您可以使用与相关架构兼容的JSON预填充表单。
-* 在提交时，用户输入的数据将作为JSON提交，与关联的架构一致。
+* 在最適化表單的製作模式下，JSON的結構會在「內容尋找器」標籤中顯示為樹狀結構。 您可以從JSON階層拖曳元素，並將其新增至調適型表單。
+* 您可以使用與相關結構描述相容的JSON預先填入表單。
+* 在提交時，使用者輸入的資料會以JSON形式提交，且符合相關聯的結構描述。
 
-JSON架构包含简单和复杂的元素类型。 元素具有向元素添加规则的属性。 将这些元素和属性拖动到自适应表单上时，会自动映射到相应的自适应表单组件。
+JSON結構描述包含簡單和複雜的元素型別。 元素具有將規則新增至元素的屬性。 將這些元素和屬性拖曳至最適化表單時，會自動對應至對應的最適化表單元件。
 
-JSON元素与自适应表单组件的映射如下所示：
+JSON元素與最適化表單元件的對應如下：
 
 ```json
 "birthDate": {
@@ -57,71 +57,71 @@ JSON元素与自适应表单组件的映射如下所示：
 <table>
  <tbody>
   <tr>
-   <th><strong>JSON元素、属性或属性</strong></th>
-   <th><strong>自适应表单组件</strong></th>
+   <th><strong>JSON元素、屬性或屬性</strong></th>
+   <th><strong>最適化表單元件</strong></th>
   </tr>
   <tr>
-   <td><p>具有enum和enumNames约束的字符串属性。</p> <p>语法，</p> <p> <code>{</code></p> <p><code>"type" : "string",</code></p> <p><code>"enum" : ["M", "F"]</code></p> <p><code>"enumNames" : ["Male", "Female"]</code></p> <p><code>}</code></p> <p> </p> </td>
-   <td><p>下拉组件：</p>
+   <td><p>具有enum和enumNames限制的字串屬性。</p> <p>語法，</p> <p> <code>{</code></p> <p><code>"type" : "string",</code></p> <p><code>"enum" : ["M", "F"]</code></p> <p><code>"enumNames" : ["Male", "Female"]</code></p> <p><code>}</code></p> <p> </p> </td>
+   <td><p>下拉式元件：</p>
     <ul>
-     <li>enumNames中列出的值将显示在拖放框中。</li>
-     <li>枚举中列出的值用于计算。</li>
+     <li>enumNames中列出的值會顯示在拖放方塊中。</li>
+     <li>列舉中列出的值會用於計算。</li>
     </ul> </td>
   </tr>
   <tr>
-   <td><p>带格式约束的字符串属性。 例如，电子邮件和日期。</p> <p>语法，</p> <p><code>{</code></p> <p><code>"type" : "string",</code></p> <p><code>"format" : "email"</code></p> <p><code>}</code></p> <p> </p> </td>
+   <td><p>具有格式限制的字串屬性。 例如，電子郵件和日期。</p> <p>語法，</p> <p><code>{</code></p> <p><code>"type" : "string",</code></p> <p><code>"format" : "email"</code></p> <p><code>}</code></p> <p> </p> </td>
    <td>
     <ul>
-     <li>当类型为字符串且格式为电子邮件时，将映射电子邮件组件。</li>
-     <li>当类型为字符串且格式为hostname时，将映射带验证的Textbox组件。</li>
+     <li>當型別為字串且格式為電子郵件時，會對映電子郵件元件。</li>
+     <li>當型別為字串且格式為主機名稱時，會對應具有驗證的Textbox元件。</li>
     </ul> </td>
   </tr>
   <tr>
    <td><p><code>{</code></p> <p><code>"type" : "string",</code></p> <p><code>}</code></p> </td>
-   <td><br /> <br /> 文本字段<br /> <br /> <br /> </td>
+   <td><br /> <br /> 文字欄位<br /> <br /> <br /> </td>
   </tr>
   <tr>
-   <td>数字属性<br /> </td>
-   <td>子类型设置为float的数字字段<br /> </td>
+   <td>數字屬性<br /> </td>
+   <td>子型別設定為浮點數的數值欄位<br /> </td>
   </tr>
   <tr>
-   <td>integer属性<br /> </td>
-   <td>子类型设置为整数的数字字段<br /> </td>
+   <td>integer屬性<br /> </td>
+   <td>子型別設定為整數的數值欄位<br /> </td>
   </tr>
   <tr>
-   <td>布尔属性<br /> </td>
+   <td>布林值屬性<br /> </td>
    <td>开关<br /> </td>
   </tr>
   <tr>
-   <td>对象属性<br /> </td>
+   <td>物件屬性<br /> </td>
    <td>面板<br /> </td>
   </tr>
   <tr>
-   <td>数组属性</td>
-   <td>最小值和最大值分别等于minItems和maxItems的可重复面板。 仅支持同质数组。 因此，项约束必须是一个对象，而不是数组。<br /> </td>
+   <td>陣列屬性</td>
+   <td>可重複面板，最小值和最大值分別等於minItems和maxItems。 僅支援同質陣列。 因此，專案限制必須是物件，而不是陣列。<br /> </td>
   </tr>
  </tbody>
 </table>
 
-### 通用架构属性 {#common-schema-properties}
+### 通用結構描述屬性 {#common-schema-properties}
 
-自适应表单使用JSON架构中可用的信息来映射每个生成的字段。 特别是：
+最適化表單會使用JSON結構描述中可用的資訊來對應每個產生的欄位。 尤其是：
 
-* 此 `title` 属性用作自适应表单组件的标签。
-* 此 `description` 属性设置为自适应表单组件的详细说明。
-* 此 `default` 属性用作自适应表单字段的初始值。
-* 此 `maxLength` 属性设置为 `maxlength` 文本字段组件的属性。
-* 此 `minimum`， `maximum`， `exclusiveMinimum`、和 `exclusiveMaximum` 属性用于数字框组件。
-* 要支持的范围，请执行以下操作 `DatePicker component` 其他JSON架构属性 `minDate` 和 `maxDate` 提供……
-* 此 `minItems` 和 `maxItems` 属性用于限制可以从面板组件中添加或删除的项目/字段的数量。
-* 此 `readOnly` 属性设置 `readonly` 自适应表单组件的属性。
-* 此 `required` 属性将自适应表单字段标记为必填字段，而在面板（其中type为object）中，最终提交的JSON数据包含与该对象对应的具有空值的字段。
-* 此 `pattern` 属性设置为自适应表单中的验证模式（正则表达式）。
-* JSON架构文件的扩展名必须保留为.schema.json。 例如， &lt;filename>.schema.json.
+* 此 `title` 屬性可作為最適化表單元件的標籤。
+* 此 `description` 屬性已設定為最適化表單元件的完整說明。
+* 此 `default` 屬性會作為最適化表單欄位的初始值。
+* 此 `maxLength` 屬性已設為 `maxlength` 文字欄位元件的屬性。
+* 此 `minimum`， `maximum`， `exclusiveMinimum`、和 `exclusiveMaximum` 屬性用於Numeric box元件。
+* 若要支援範圍 `DatePicker component` 其他JSON結構描述屬性 `minDate` 和 `maxDate` 提供……
+* 此 `minItems` 和 `maxItems` 屬性可用來限制可從面板元件新增或移除的專案/欄位數量。
+* 此 `readOnly` 屬性會設定 `readonly` 最適化表單元件的屬性。
+* 此 `required` 屬性會將最適化表單欄位標籤為必填欄位，而在面板（其中type為object欄位）中，最終提交的JSON資料中會有欄位具有對應於該物件的空白值。
+* 此 `pattern` 屬性已設定為最適化表單中的驗證模式（規則運算式）。
+* JSON結構描述檔案的副檔名必須保留為.schema.json。 例如， &lt;filename>.schema.json.
 
-## 示例JSON架构 {#sample-json-schema}
+## 範例JSON結構描述 {#sample-json-schema}
 
-以下是JSON架构的示例。
+以下是JSON結構描述的範例。
 
 ```json
 {
@@ -301,9 +301,9 @@ JSON元素与自适应表单组件的映射如下所示：
 }
 ```
 
-### 可重用架构定义 {#reusable-schema-definitions}
+### 可重複使用的結構描述定義 {#reusable-schema-definitions}
 
-定义键用于标识可重用的架构。 可重用架构定义用于创建片段。 它类似于在XSD中标识复杂类型。 下面给出了具有定义的示例JSON架构：
+定義索引鍵可用來識別可重複使用的結構描述。 可重複使用的結構描述定義用於建立片段。 這類似於在XSD中識別複雜型別。 具有定義的JSON結構描述範例如下：
 
 ```json
 {
@@ -330,11 +330,11 @@ JSON元素与自适应表单组件的映射如下所示：
 }
 ```
 
-上例定义了一个客户记录，其中每个客户都有一个送货地址和账单地址。 两个地址的结构相同（地址具有街道地址、城市和州/省），因此最好不要复制这些地址。 此外，将来进行任何更改时都可轻松添加和删除字段。
+上述範例會定義客戶記錄，其中每個客戶都有送貨和帳單地址。 兩個地址的結構相同（地址有街道地址、城市和州/省），因此最好不要複製地址。 此外，日後變更時也能輕鬆新增和刪除欄位。
 
-## 在JSON架构定义中预配置字段 {#pre-configuring-fields-in-json-schema-definition}
+## JSON結構描述定義中的預先設定欄位 {#pre-configuring-fields-in-json-schema-definition}
 
-您可以使用 **aem：afProperties** 属性，用于预配置JSON架构字段以映射到自定义自适应表单组件。 下面列出了一个示例：
+您可以使用 **aem：afProperties** 屬性來預先設定JSON結構描述欄位，以對應至自訂最適化表單元件。 範例如下：
 
 ```json
 {
@@ -354,11 +354,11 @@ JSON元素与自适应表单组件的映射如下所示：
 }
 ```
 
-## 为表单对象配置脚本或表达式  {#configure-scripts-or-expressions-for-form-objects}
+## 設定表單物件的指令碼或運算式  {#configure-scripts-or-expressions-for-form-objects}
 
-JavaScript是自适应表单的表达式语言。 所有表达式都是有效的JavaScript表达式，并且使用自适应表单脚本模型API。 您可以预配置表单对象，以 [计算表达式](adaptive-form-expressions.md) 在表单事件上。
+JavaScript是適用性表單的運算式語言。 所有運算式都是有效的JavaScript運算式，且使用適用性表單指令碼模型API。 您可以將表單物件預先設定為 [評估運算式](adaptive-form-expressions.md) 在表單事件上。
 
-使用aem：afproperties属性为自适应表单组件预配置自适应表单表达式或脚本。 例如，在触发初始化事件时，以下代码设置电话字段的值并将值打印到日志：
+使用aem：afproperties屬性預先設定最適化表單元件的最適化表單運算式或指令碼。 例如，觸發初始化事件時，下列程式碼會設定電話欄位的值，並將值列印至記錄檔：
 
 ```json
 "telephone": {
@@ -376,12 +376,12 @@ JavaScript是自适应表单的表达式语言。 所有表达式都是有效的
 }
 ```
 
-您应该是 [forms-power-user group](forms-groups-privileges-tasks.md) 为表单对象配置脚本或表达式。 下表列出了自适应表单组件支持的所有脚本事件。
+您應該是 [forms-power-user group](forms-groups-privileges-tasks.md) 設定表單物件的指令碼或運算式。 下表列出最適化表單元件支援的所有指令碼事件。
 
 <table>
  <tbody>
   <tr>
-   <th><strong></strong>组件\事件</th>
+   <th><strong></strong>元件\事件</th>
    <th>初始化 <br /> </th>
    <td>计算</td>
    <td>可见性</td>
@@ -403,7 +403,7 @@ JavaScript是自适应表单的表达式语言。 所有表达式都是有效的
    <td> </td>
   </tr>
   <tr>
-   <td>数值字段</td>
+   <td>數值欄位</td>
    <td><img alt="" src="assets/yes_tick.png" /></td>
    <td><img alt="" src="assets/yes_tick.png" /></td>
    <td><img alt="" src="assets/yes_tick.png" /></td>
@@ -581,11 +581,11 @@ JavaScript是自适应表单的表达式语言。 所有表达式都是有效的
  </tbody>
 </table>
 
-在JSON中使用事件的一些示例包括：在初始化事件上隐藏字段，以及在值提交事件上配置另一个字段的值。 有关为脚本事件创建表达式的详细信息，请参见 [自适应表单表达式](adaptive-form-expressions.md).
+在JSON中使用事件的一些範例是在初始化事件上隱藏欄位，以及在值認可事件上設定另一個欄位的值。 如需建立指令碼事件運算式的詳細資訊，請參閱 [最適化表單運算式](adaptive-form-expressions.md).
 
-以下是前面提到的示例的JSON代码示例。
+以下是上述範例的JSON程式碼範例。
 
-### 在初始化事件时隐藏字段 {#hiding-a-field-on-initialize-event}
+### 在初始化事件上隱藏欄位 {#hiding-a-field-on-initialize-event}
 
 ```json
 "name": {
@@ -598,7 +598,7 @@ JavaScript是自适应表单的表达式语言。 所有表达式都是有效的
 }
 ```
 
-#### 在值提交事件上配置另一个字段的值 {#configure-value-of-another-field-on-value-commit-event}
+#### 在值認可事件上設定另一個欄位的值 {#configure-value-of-another-field-on-value-commit-event}
 
 ```json
 "Income": {
@@ -622,14 +622,14 @@ JavaScript是自适应表单的表达式语言。 所有表达式都是有效的
 }
 ```
 
-## 限制自适应表单组件的可接受值 {#limit-acceptable-values-for-an-adaptive-form-component}
+## 限制最適化表單元件的可接受值 {#limit-acceptable-values-for-an-adaptive-form-component}
 
-您可以向JSON架构元素添加以下限制，以限制自适应表单组件可以接受的值：
+您可以將下列限制新增至JSON結構描述元素，以限制最適化表單元件可接受的值：
 
 <table>
  <tbody>
   <tr>
-   <td><p><strong> 架构属性</strong></p> </td>
+   <td><p><strong> 結構描述屬性</strong></p> </td>
    <td><p><strong>数据类型</strong></p> </td>
    <td><p><strong>描述</strong></p> </td>
    <td><p><strong>组件</strong></p> </td>
@@ -637,7 +637,7 @@ JavaScript是自适应表单的表达式语言。 所有表达式都是有效的
   <tr>
    <td><p><code>maximum</code></p> </td>
    <td><p>字符串</p> </td>
-   <td><p>指定数值和日期的上限。 默认情况下，包含最大值。</p> </td>
+   <td><p>指定數值和日期的上限。 依預設，會包含最大值。</p> </td>
    <td>
     <ul>
      <li>数值框</li>
@@ -648,7 +648,7 @@ JavaScript是自适应表单的表达式语言。 所有表达式都是有效的
   <tr>
    <td><p><code>minimum</code></p> </td>
    <td><p>字符串</p> </td>
-   <td><p>指定数字值和日期的下限。 默认情况下，包含最小值。</p> </td>
+   <td><p>指定數值和日期的下限。 依預設，會包含最小值。</p> </td>
    <td>
     <ul>
      <li>数值框</li>
@@ -659,7 +659,7 @@ JavaScript是自适应表单的表达式语言。 所有表达式都是有效的
   <tr>
    <td><p><code>exclusiveMaximum</code></p> </td>
    <td><p>布尔值</p> </td>
-   <td><p>如果为true，则表单组件中指定的数值或日期必须小于为maximum属性指定的数值或日期。</p> <p>如果为false，则表单组件中指定的数值或日期必须小于或等于为maximum属性指定的数值或日期。</p> </td>
+   <td><p>如果為true，則表單元件中指定的數值或日期必須小於為最大屬性指定的數值或日期。</p> <p>如果為false，則表單元件中指定的數值或日期必須小於或等於為最大屬性指定的數值或日期。</p> </td>
    <td>
     <ul>
      <li>数值框</li>
@@ -670,7 +670,7 @@ JavaScript是自适应表单的表达式语言。 所有表达式都是有效的
   <tr>
    <td><p><code>exclusiveMinimum</code></p> </td>
    <td><p>布尔值</p> </td>
-   <td><p>如果为true，则表单组件中指定的数值或日期必须大于为最小属性指定的数值或日期。</p> <p>如果为false，则表单组件中指定的数值或日期必须大于或等于为最小属性指定的数值或日期。</p> </td>
+   <td><p>如果為true，則表單元件中指定的數值或日期必須大於為最小屬性指定的數值或日期。</p> <p>如果為false，則表單元件中指定的數值或日期必須大於或等於為最小屬性指定的數值或日期。</p> </td>
    <td>
     <ul>
      <li>数值框</li>
@@ -681,7 +681,7 @@ JavaScript是自适应表单的表达式语言。 所有表达式都是有效的
   <tr>
    <td><p><code>minLength</code></p> </td>
    <td><p>字符串</p> </td>
-   <td><p>指定组件中允许的最小字符数。 最小长度必须等于或大于零。</p> </td>
+   <td><p>指定元件中允許的最小字元數。 最小長度必須等於或大於零。</p> </td>
    <td>
     <ul>
      <li>文本框</li>
@@ -690,7 +690,7 @@ JavaScript是自适应表单的表达式语言。 所有表达式都是有效的
   <tr>
    <td><code>maxLength</code></td>
    <td>字符串</td>
-   <td>指定组件中允许的最大字符数。 最大长度必须等于或大于零。</td>
+   <td>指定元件中允許的最大字元數。 最大長度必須等於或大於零。</td>
    <td>
     <ul>
      <li>文本框</li>
@@ -699,49 +699,49 @@ JavaScript是自适应表单的表达式语言。 所有表达式都是有效的
   <tr>
    <td><p><code>pattern</code></p> </td>
    <td><p>字符串</p> </td>
-   <td><p>指定字符的序列。 如果字符符合指定的模式，组件将接受这些字符。</p> <p>pattern属性映射到相应自适应表单组件的验证模式。</p> </td>
+   <td><p>指定字元順序。 如果字元符合指定的模式，元件會接受字元。</p> <p>pattern屬性對應至對應的最適化表單元件的驗證模式。</p> </td>
    <td>
     <ul>
-     <li>映射到XSD架构的所有自适应表单组件 </li>
+     <li>對應至XSD結構描述的所有調適型表單元件 </li>
     </ul> </td>
   </tr>
   <tr>
    <td><code>maxItems</code></td>
    <td>字符串</td>
-   <td>指定数组中的最大项数。 最大项数必须等于或大于零。</td>
+   <td>指定陣列中專案的最大數量。 最大專案數必須等於或大於零。</td>
    <td> </td>
   </tr>
   <tr>
    <td><code>minItems</code></td>
    <td>字符串</td>
-   <td>指定数组中的最小项数。 最小项数必须等于或大于零。</td>
+   <td>指定陣列中專案的最小數量。 最小專案數必須等於或大於零。</td>
    <td> </td>
   </tr>
  </tbody>
 </table>
 
-## 不受支持的结构  {#non-supported-constructs}
+## 不支援的結構  {#non-supported-constructs}
 
-自适应表单不支持以下JSON架构结构：
+調適型表單不支援下列JSON結構描述：
 
-* 空类型
-* 合并类型，例如any和
+* 空值型別
+* 聯合型別，例如any和
 * OneOf、AnyOf、AllOf和NOT
-* 仅支持同质数组。 因此，项约束必须是对象，而不是数组。
+* 僅支援同質陣列。 因此，專案限制必須是物件，而不是陣列。
 
 ## 常见问题 {#frequently-asked-questions}
 
-**为什么我无法为可重复的子表单（minOccours或maxOccurs值大于1）拖动子表单的单个元素（从任何复杂类型生成的结构）？**
+**為什麼我無法為可重複的子表單（minOccours或maxOccurs值大於1）拖曳子表單的個別元素（由任何複雜型別產生的結構）？**
 
-在可重复的子表单中，您必须使用完整的子表单。 如果只需要选择字段，请使用整个结构并删除不需要的字段。
+在可重複的子表單中，您必須使用完整的子表單。 如果您只想使用選擇性欄位，請使用整個結構並刪除不需要的結構。
 
-**我在内容查找器中有一个长且复杂的结构。 如何查找特定元素？**
+**我在內容尋找器中有個長而複雜的結構。 如何找到特定元素？**
 
-您有两个选项：
+您有兩個選項：
 
-* 滚动浏览树结构
-* 使用搜索框查找元素
+* 捲動瀏覽樹狀結構
+* 使用搜尋方塊來尋找元素
 
-**JSON架构文件的扩展名应该是什么？**
+**JSON結構描述檔案的副檔名應該為何？**
 
-JSON架构文件的扩展名必须是.schema.json。 例如， &lt;filename>.schema.json.
+JSON結構描述檔案的副檔名必須是.schema.json。 例如， &lt;filename>.schema.json.

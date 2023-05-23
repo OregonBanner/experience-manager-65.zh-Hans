@@ -1,7 +1,7 @@
 ---
-title: 使用起点
+title: 使用起點
 seo-title: Working with Startpoints
-description: 通过Workbench中定义的移动设备使用AEM Forms进程的步骤。
+description: 從Workbench中定義的行動裝置使用AEM Forms程式的步驟。
 seo-description: Steps to work with a AEM Forms process from your Mobile device defined in Workbench.
 uuid: 1c4b4c86-cbdb-4e72-b0eb-7f8a2f5dcdde
 content-type: reference
@@ -17,35 +17,35 @@ ht-degree: 0%
 
 ---
 
-# 使用起点{#working-with-startpoints}
+# 使用起點{#working-with-startpoints}
 
-起点调用在Workbench中创建的进程。 它与表单相关联，该表单在提交表单时调用该流程。
+起點會叫用在Workbench中建立的程式。 它與表單相關聯，在提交表單時會叫用流程。
 
 >[!NOTE]
 >
->在提及此概念时，术语起点、起始过程和形式可互换使用。
+>當提及此概念時，術語起點、開始過程和形式可互換使用。
 
-要从AEM Forms应用程序启动流程，您需要具有类型的起点 **工作区** 在您的流程中。 此外，您需要选择 **[!UICONTROL 移动工作区中的可见性]** 起始点选项。
+若要從AEM Forms應用程式起始程式，您必須有型別的起點 **Workspace** 在您的程式中。 此外，您必須選取 **[!UICONTROL 行動工作區中的可見性]** 起點的選項。
 
 ![mws_startpoint_select_option](assets/mws_startpoint_select_option.png)
 
-**要启动在Workbench中定义的流程，请执行以下操作**
+**若要啟動在「維護作業」中定義的處理，請執行下列步驟：**
 
-1. 要查看AEM Forms应用程序中可用的起点，请转到 [主屏幕](../../forms/using/home-screen.md).
-1. 在 **[!UICONTROL 主页]** 屏幕，默认情况下， **[!UICONTROL 所有Forms]** 将显示列表。
+1. 若要檢視AEM Forms應用程式中可用的起點，請前往 [主畫面](../../forms/using/home-screen.md).
+1. 於 **[!UICONTROL 首頁]** 畫面，預設情況下 **[!UICONTROL 所有Forms]** 清單隨即顯示。
 
-   起点与表单相关联。 点按列表中与表单关联的起点以将其打开。
+   起點與表單相關聯。 點選清單中與表單相關聯的起點以開啟。
 
-   与起点关联的表单打开。
+   與起點相關聯的表單隨即開啟。
 
-1. 请在以下位置输入详细信息 **[!UICONTROL 起点]** 表单。
+1. 在「 」中輸入詳細資料 **[!UICONTROL 起點]** 表單。
 
-   您可以使用将注释添加到此任务 [附件](../../forms/using/add-attachments.md) 按钮。
+   您可以使用將註解新增至此任務 [附件](../../forms/using/add-attachments.md) 按鈕。
 
-1. 填写表单后，点按 **[!UICONTROL 提交]** 按钮。
+1. 填妥表單後，點選 **[!UICONTROL 提交]** 按鈕。
 
-如果应用程序处于离线状态，则表单及其数据将保存在“发件箱”文件夹中。
+如果應用程式離線，表單及其資料會儲存在Outbox資料夾中。
 
-如果应用程序处于联机状态，则任务将与AEM Forms服务器同步，并分配给进程中指定的用户。
+如果應用程式上線，則會將工作與AEM Forms伺服器同步，並指派給程式中指定的使用者。
 
-要使用任务列表中的任务，请参阅 [打开任务](/help/forms/using/open-task.md).
+若要使用您任務清單中的任務，請參閱 [開啟任務](/help/forms/using/open-task.md).

@@ -1,7 +1,7 @@
 ---
-title: 使用注释
+title: 使用註解
 seo-title: Using Comments
-description: “评论”功能允许登录的网站访客分享其意见和知识
+description: 「註解」功能可讓登入的網站訪客分享他們的意見和知識
 seo-description: Comments feature lets signed-in site visitors share their opinions and knowledge
 uuid: 40acd962-846c-483c-b789-aab3a7d2b31b
 contentOwner: msm-service
@@ -18,192 +18,192 @@ ht-degree: 4%
 
 ---
 
-# 使用注释 {#using-comments}
+# 使用註解 {#using-comments}
 
 ## 简介 {#introduction}
 
-“评论”功能用于允许已登录的网站访客（成员）分享他们关于网站内容的意见和知识。 此功能通常已存在于其他功能中，但可以添加到任何网站。
+「註解」功能可讓登入的網站訪客（成員）分享他們對於網站內容的意見與知識。 此功能通常已存在於其他功能中，但可新增至任何網站。
 
-本文档描述了：
+本檔案說明：
 
-* 添加 `Comments` 到页面。
-* 的配置设置 `Comments` 组件。
+* 新增 `Comments` 至頁面。
+* 的組態設定 `Comments` 元件。
 
 >[!NOTE]
 >
->不支持匿名发布评论。 网站访客必须注册（成为会员）并登录才能参与。
+>不支援評論的匿名張貼。 網站訪客必須註冊（成為會員）並登入才能參與。
 
-### 向页面添加评论 {#adding-comments-to-a-page}
+### 新增註解至頁面 {#adding-comments-to-a-page}
 
-添加 `Comments` 组件添加到创作模式下的页面，请使用组件浏览器来查找
+若要新增 `Comments` 元件至作者模式下的頁面，請使用元件瀏覽器來尋找
 
 * `Communities / Comments`
 
-并将其拖动到页面上的适当位置，例如相对于供用户评论的功能的一个位置，或仅拖动到页面底部。
+並將其拖曳至頁面上的適當位置，例如與功能相關的位置以供使用者評論，或僅拖曳至頁面底部。
 
-有关必要信息，请访问 [社区组件基础知识](/help/communities/basics.md).
+如需必要資訊，請造訪 [Communities元件基本知識](/help/communities/basics.md).
 
-当 [所需的客户端库](/help/communities/essentials-comments.md#essentials-for-client-side) 包括，这就是 `Comments` 组件出现。
+當 [必要的使用者端程式庫](/help/communities/essentials-comments.md#essentials-for-client-side) 包含，這就是 `Comments` 元件出現。
 
 ![comments-component](assets/comments-component.png)
 
 >[!NOTE]
 >
->只有一个 `Comments` 组件可能存在于页面上。 请注意，多个Communities功能已经包含评论，例如博客、日历、论坛、问题与解答以及评论。
+>只有一個 `Comments` 元件可能存在於頁面上。 請注意，若干Communities功能已包含評論，例如部落格、行事曆、論壇、QnA和評論。
 
-### 配置评论 {#configuring-comments}
+### 設定註解 {#configuring-comments}
 
-选择已放置的 `Comments` 组件以访问和选择 `Configure` 图标，打开“编辑”对话框。
+選取已放置的 `Comments` 元件以存取及選取 `Configure` 圖示來開啟「編輯」對話方塊。
 
-![配置图标](assets/configure.png)
+![設定圖示](assets/configure.png)
 
-![注释设置](assets/commentssettings.png)
+![註解設定](assets/commentssettings.png)
 
-#### “评论”选项卡 {#comments-tab}
+#### 評論索引標籤 {#comments-tab}
 
-在 **评论** 选项卡，指定访客输入评论的方式。
+在 **註解** 索引標籤中，指定訪客輸入註解的方式。
 
 * **允许回复**
 
-   如果选中，则允许成员回复现有注释。 默认已取消选中。
+   如果勾選，則允許成員回覆現有註解。 「預設」已取消選取。
 
 * **每页的评论数**
 
-   限制每页显示的评论数和显示的回复数。 默认值为10。
+   限制每頁顯示的評論數和顯示的回複數。 預設值為10。
 
 * **允许文件上传**
 
-   如果选中，上载文件的选项将显示为文本输入框。 默认已取消选中。
+   如果勾選，上傳檔案的選項會顯示文字輸入方塊。 「預設」已取消選取。
 
 * **最大文件大小**
 
-   仅在选中允许文件上传时才相关。 此值限制上传的文件大小。 默认限制为10 MB。
+   只有在勾選「允許檔案上傳」時才相關。 此值會限制上傳的檔案大小。 預設限製為10 MB。
 
 * **最大消息长度**
 
-   文本框中可以输入的最大字符数。 默认值为4096个字符。
+   可在文字方塊中輸入的最大字元數。 預設為4096個字元。
 
 * **允许的文件类型**
 
-   仅在选中允许文件上传时才相关。 以“点”分隔符分隔的文件名扩展名列表。 例如： .jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定了任何文件类型，则不允许未指定的文件类型。 缺省值为none以便允许所有文件类型。
+   只有在勾選「允許檔案上傳」時才相關。 以「點」分隔符號分隔的副檔名清單（以逗號分隔）。 例如： .jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定了任何檔案型別，則不允許未指定的檔案型別。 預設為none，因此允許所有檔案型別。
 
 * **富文本编辑器**
 
-   如果选中，则输入注释时带有标记。 默认已取消选中。
+   如果勾選，註解會以標示輸入。 「預設」已取消選取。
 
 * **允许投票**
 
-   如果选中，则会显示文本输入框中的向上或向下投票选项。 默认已取消选中。
+   如果勾選，則向上或向下投票的選項會顯示文字輸入方塊。 「預設」已取消選取。
 
 * **允许关注**
 
-   如果选中，则允许成员关注注释。 默认已取消选中。
+   如果勾選，則允許成員關注註解。 「預設」已取消選取。
 
 * **显示徽章**
 
-   如果选中，则允许显示已获得和已授予的徽章。 默认已取消选中。
+   如果勾選，則允許顯示贏取和獎勵徽章。 「預設」已取消選取。
 
-#### “用户审核”选项卡 {#user-moderation-tab}
+#### 「使用者稽核」標籤 {#user-moderation-tab}
 
-在 **用户审核** 选项卡，指定如何管理已发布的评论。 有关更多信息，请参阅 [审核用户生成的内容](/help/communities/moderate-ugc.md).
+在 **使用者稽核** 索引標籤中，指定如何管理已發佈的評論。 如需詳細資訊，請參閱 [稽核使用者產生的內容](/help/communities/moderate-ugc.md).
 
 * **预审**
 
-   如果选中，评论必须先获得批准，然后才能显示在发布网站上。 默认已取消选中。
+   如果勾選，註解在發佈網站上出現之前必須先獲得核准。 「預設」已取消選取。
 
 * **删除评论**
 
-   如果选中，则为发布评论的成员提供删除评论的功能。 默认已取消选中。
+   如果勾選，發表評論的成員將獲得刪除評論的功能。 「預設」已取消選取。
 
-* **拒绝评论**
+* **拒絕評論**
 
-   如果选中，则允许审查方拒绝评论。 默认已取消选中。
+   如果勾選，則允許版主拒絕評論。 「預設」已取消選取。
 
-* **关闭/重新打开注释**
+* **關閉/重新開啟註解**
 
-   如果选中，则允许审查方关闭和重新打开注释。 默认已取消选中。
+   如果勾選，則允許版主關閉和重新開啟註解。 「預設」已取消選取。
 
-* **标记注释**
+* **標幟評論**
 
-   如果选中，则允许成员将评论标记为不适当。 默认已取消选中。
+   如果勾選，則允許成員將評論標幟為不適當。 「預設」已取消選取。
 
-* **标记原因列表**
+* **標幟原因清單**
 
-   如果选中，则允许成员从下拉列表中选择将评论标记为不适当的原因。 默认已取消选中。
+   如果勾選，則允許成員從下拉式清單中選擇將評論標籤為不適當的原因。 「預設」已取消選取。
 
-* **自定义标志原因**
+* **自訂標幟原因**
 
-   如果选中，则允许成员输入将评论标记为不适当的原因。 默认已取消选中。
+   如果勾選，則允許成員輸入將評論標籤為不適當的原因。 「預設」已取消選取。
 
-* **审核阈值**
+* **稽核臨界值**
 
-   输入在通知版主之前，评论必须由成员标记的次数。 默认值为一次(1)。
+   輸入在通知版主之前，評論必須由成員標幟的次數。 預設為一次(1)。
 
-* **标记限制**
+* **標幟限制**
 
-   输入在将评论从公开视图隐藏之前必须对其标记的次数。 此数字必须大于或等于 **审核阈值**. 默认值为5。
+   輸入在將評論從公開檢視隱藏之前必須將其標幟的次數。 此數字必須大於或等於 **稽核臨界值**. 預設值為5。
 
-#### “排序设置”选项卡 {#sort-settings-tab}
+#### 排序設定索引標籤 {#sort-settings-tab}
 
-在 **排序设置** 选项卡，指定在显示时如何对已发布的评论进行排序。
+在 **排序設定** 索引標籤中，指定張貼的評論在顯示時的排序方式。
 
 * **排序字段**
 
-   下拉以选择其中一项 `Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed`，或 `Most Liked`.
+   下拉以選取其中一項 `Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed`，或 `Most Liked`.
 
 * **排序顺序**
 
-   下拉以选择其中一项 `Ascending` 或 `Descending`.
+   下拉以選取其中一項 `Ascending` 或 `Descending`.
 
-### 更改为自定义评论类型 {#changing-to-a-custom-comment-type}
+### 變更為自訂註解型別 {#changing-to-a-custom-comment-type}
 
-通过更改注释资源类型，注释系统不再使用默认值生成注释的实例，而是生成由开发人员自定义（扩展）的实例。
+透過變更「註解資源型別」，註解系統不再使用預設值產生註解的執行個體，而是由開發人員自訂（擴充）的執行個體。
 
-在已知自定义资源类型后，输入 [设计模式](/help/sites-authoring/default-components-designmode.md) 并双击所放置的 `Comments` 组件打开带有额外选项卡的对话框。
+知道自訂資源型別後，請輸入 [設計模式](/help/sites-authoring/default-components-designmode.md) 然後按兩下置入的 `Comments` 元件以開啟具有額外索引標籤的對話方塊。
 
-在 **资源类型** 选项卡，为的新实例指定自定义资源类型 `Comments or Voting` 组件：
+在 **資源型別** 索引標籤中，為以下專案的新執行個體指定自訂resourceType `Comments or Voting` 元件：
 
 ![resource-type](assets/resource-type.png)
 
 * **评论资源类型**
 
-   导航到扩展的资源类型 `comment` /apps中的组件（单个注释）。 例如，`/apps/social/commons/components/hbs/comments/comment`
+   導覽至擴充功能的resourceType `comment` /apps中的元件（單一註釋）。 例如，`/apps/social/commons/components/hbs/comments/comment`
 
-   此资源标识访客发表评论时创建的UGC的resourceType。
+   此資源會識別訪客發表評論時建立的UGC的resourceType。
 
 * **投票资源类型**
 
-   导航到扩展的资源类型 `voting` /apps中的组件 例如，`/apps/social/components/hbs/voting`
+   導覽至擴充功能的resourceType `voting` /apps中的元件。 例如，`/apps/social/components/hbs/voting`
 
-   此资源标识访客发表投票时创建的UGC的资源类型。
+   此資源會識別訪客張貼投票時建立的UGC資源型別。
 
-* **评论系统资源类型**
+* **註解系統資源型別**
 
-   导航到扩展的资源类型 `comments`/apps中的组件（注释系统）。 除非页面模板，否则保留为空 [动态包括](/help/communities/scf.md#add-or-include-a-communities-component) 基础脚本中的注释系统，而不是作为资源（注释节点）添加到页面中。 通过阅读有关 [{{include}} 辅助函数](/help/communities/handlebars-helpers.md#include).
+   導覽至擴充功能的resourceType `comments`/apps中的元件（註解系統）。 除非頁面範本，否則保留空白 [動態包含](/help/communities/scf.md#add-or-include-a-communities-component) 基礎指令碼中的「註解系統」，而非以資源（註解節點）的形式新增至頁面。 閱讀以下內容以瞭解更多資訊： [{{include}} 協助程式](/help/communities/handlebars-helpers.md#include).
 
-### 网站访客体验 {#site-visitor-experience}
+### 網站訪客體驗 {#site-visitor-experience}
 
-#### 版主和管理员 {#moderators-and-administrators}
+#### 版主和管理員 {#moderators-and-administrators}
 
-当登录用户具有审阅人或管理员权限时，他们能够执行组件配置允许的审阅任务，无论评论的作者是谁。
+當登入的使用者具有版主或管理員許可權時，無論評論的作者是誰，他們都能執行元件設定所允許的版主任務。
 
 #### 成员 {#members}
 
-当站点访客登录时，根据配置，他们可能
+網站訪客登入時，根據設定，他們可能
 
-* 发布新评论
-* 编辑他们自己的评论
-* 删除他们自己的评论
-* 标记其他人的评论
+* 發表新評論
+* 編輯自己的評論
+* 刪除自己的評論
+* 標幟其他人的評論
 
 #### 匿名 {#anonymous}
 
-未登录的网站访客只能阅读已发布的评论，如果支持则进行翻译，但不得添加评论或标记其他人的评论。
+未登入的網站訪客只能讀取張貼的評論，並在支援時進行翻譯，但不得新增評論或標示其他人的評論。
 
 ### 附加信息 {#additional-information}
 
-欲知更多信息，请访问 [注释要点](/help/communities/essentials-comments.md) 适用于开发人员的页面。
+如需詳細資訊，請參閱 [Comments Essentials](/help/communities/essentials-comments.md) 適用於開發人員的頁面。
 
-有关审核已发布的评论，请参阅 [审核用户生成的内容](/help/communities/moderate-ugc.md).
+有關張貼的評論的稽核，請參閱 [稽核使用者產生的內容](/help/communities/moderate-ugc.md).
 
-有关已发布评论的翻译，请参阅 [翻译用户生成的内容](/help/communities/translate-ugc.md).
+如需已張貼評論的翻譯，請參閱 [翻譯使用者產生的內容](/help/communities/translate-ugc.md).

@@ -1,7 +1,7 @@
 ---
-title: 成员缴款限制
+title: 成員貢獻限制
 seo-title: Member Contribution Limits
-description: 通过贡献限制功能，您可以限制抵御垃圾邮件的贡献
+description: 貢獻限制功能可讓您限制防止垃圾訊息的貢獻
 seo-description: Contribution limits feature lets you limit the contributions to protect against spam
 uuid: 99b2a855-3f0d-41a0-9572-517a7f29af9f
 contentOwner: Janice Kendall
@@ -18,71 +18,71 @@ ht-degree: 1%
 
 ---
 
-# 成员缴款限制 {#member-contribution-limits}
+# 成員貢獻限制 {#member-contribution-limits}
 
 ## 概述 {#overview}
 
-贡献限制功能提供了限制社区成员贡献的功能，作为抵御垃圾邮件的一种方法。
+貢獻限制功能提供限制社群成員貢獻的功能，作為抵禦垃圾訊息的手段。
 
-当成员受限时，任何超出允许贡献数量的帖子都将导致超出限制的警报，并拒绝帖子。 随后，社区成员可以转到社区消息中心并联系社区经理，后者可以在适当时删除限制。
+當成員受到限制時，任何超出允許貢獻數量的貼文都會導致超出限制的警報，並拒絕貼文。 社群成員可以前往社群訊息中心，並聯絡社群管理員，以便移除限制（如適用）。
 
-贡献限制可以从 [成员控制台](members.md) 和/或配置为在网站访客成为新成员时自动启用。
+貢獻限制可透過以下網址個別啟用： [成員主控台](members.md) 和/或設定為當網站訪客成為新成員時自動啟用。
 
-使用“成员”控制台，社区管理员可以随时主动为成员删除贡献限制，或者在成员向发出此类请求的社区管理员发送消息时被动删除贡献限制。
+使用「成員」主控台，社群管理員可隨時主動移除成員的貢獻限制，或是在成員傳送訊息給提出此請求的社群管理員時被動移除。
 
-## AEM Communities用户生成的内容贡献限制配置 {#aem-communities-user-generated-content-contribution-limits-configuration}
+## AEM Communities使用者產生的內容貢獻限制設定 {#aem-communities-user-generated-content-contribution-limits-configuration}
 
-此OSGi配置：
+此OSGi設定：
 
-* 定义缴款限制的特征（一个时期内的员额数）。
-* 标识当达到限制时能够发送消息的成员。
-* 标识永远不需要限制的域。
+* 定義貢獻限制的特徵（一段時間內員額的數量）。
+* 識別達到限制時能夠傳送訊息的成員。
+* 識別永遠不需要限制的網域。
 
-要访问此OSGi配置，请执行以下操作：
+若要存取此OSGi設定：
 
-* 在主发布服务器上：
-* 使用管理员权限登录。
-* 访问 [Web控制台](../../help/sites-deploying/configuring-osgi.md).
+* 在主要發行者上：
+* 以管理員許可權登入。
+* 存取 [網頁主控台](../../help/sites-deploying/configuring-osgi.md).
 
    * 例如， [http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr)
 
-* 查找 `AEM Communities User Generated Content Contribution Limits Configuration`.
-* 选择编辑图标。
+* 尋找 `AEM Communities User Generated Content Contribution Limits Configuration`.
+* 選取編輯圖示。
 
 ![configure-limits](assets/configure-limits.png)
 
-* **[!UICONTROL 自动应用UGC贡献限制]**
+* **[!UICONTROL 自動套用UGC貢獻限制]**
 
-   如果选中，则在用户注册为社区成员时自动设置贡献限制。 这反映在社区成员的配置文件中，并可从启用/禁用 [成员控制台](members.md). 拥有域允许列表电子邮件地址的新成员绝不受限制。
+   如果勾選，當使用者註冊為社群成員時，會自動設定使用者的貢獻限制。 這會反映在社群成員的設定檔中，並可從 [成員主控台](members.md). 擁有網域允許清單中電子郵件地址的新成員永遠不會受到限制。
 
-   默认值为未选中。
+   預設為未勾選。
 
 * **[!UICONTROL UGC限制]**
 
-   最大贡献数量。
+   貢獻數量上限。
 
-   默认值为10个帖子。
+   預設為10個貼文。
 
-* **[!UICONTROL UGC限制频率]**
+* **[!UICONTROL UGC限制頻率]**
 
-   限制UGC限制的时间段。
+   限制UGC限制的時段。
 
-   默认值为60分钟。
+   預設值為60分鐘。
 
-* **[!UICONTROL 域]**
+* **[!UICONTROL 網域]**
 
-   一个或多个电子邮件域的允许列表列表。 选择+图标可生成其他条目。
+   一或多個電子郵件網域的允許清單。 選取+圖示以建立其他專案。
 
-   当自动应用UGC贡献限制时，域允许列表中具有电子邮件地址的用户不受影响。 例如，如果域 `mycompany.com` 添加到域列表，然后添加具有电子邮件地址的成员 `me@mycompany.com` 从未被限制过发帖。
+   當自動套用UGC貢獻限制時，擁有網域允許清單中電子郵件地址的使用者不受影響。 例如，如果網域 `mycompany.com` 會新增至網域清單，然後新增具有電子郵件地址的成員 `me@mycompany.com` 絕不會限制張貼。
 
-   默认值为空允许列表。
+   預設為空的允許清單。
 
-* **[!UICONTROL 消息收件人]**
+* **[!UICONTROL 訊息收件者]**
 
-   成员的一个或多个可授权ID的列表，这些ID能够修改成员的贡献限制。 选择+图标可生成其他条目。
+   成員的一或多個可授權的ID清單，這些成員可修改成員的貢獻限制。 選取+圖示以建立其他專案。
 
-   成员只能在达到其限制时联系指定的成员。
+   成員只能在達到限制時聯絡指定的成員。
 
-   默认为无消息收件人。
+   預設為無訊息收件者。
 
-注意：默认配置导致在1小时内的限制为10个帖子。
+注意：預設設定在一小時內會限制10個貼文。

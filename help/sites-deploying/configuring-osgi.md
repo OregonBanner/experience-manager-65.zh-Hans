@@ -1,7 +1,7 @@
 ---
-title: 配置OSGi
+title: 設定OSGi
 seo-title: Configuring OSGi
-description: OSGi是Adobe Experience Manager(AEM)技术堆栈中的一个基本元素。 它用于控制AEM的复合包及其配置。 本文详细介绍了如何管理此类包的配置设置。
+description: OSGi是Adobe Experience Manager (AEM)技術棧疊中的基本元素。 它可用來控制AEM的複合套件組合及其設定。 本文詳細說明如何管理這類套裝的組態設定。
 seo-description: OSGi is a fundamental element in the technology stack of Adobe Experience Manager (AEM). It is used to control the composite bundles of AEM and their configuration. This article details how you can manage the configuration settings for such bundles.
 uuid: b39059a5-dd61-486a-869a-0d7a732c3a47
 contentOwner: User
@@ -18,354 +18,354 @@ ht-degree: 0%
 
 ---
 
-# 配置OSGi{#configuring-osgi}
+# 設定OSGi{#configuring-osgi}
 
-[OSGi](https://www.osgi.org/) 是Adobe Experience Manager(AEM)技术堆栈中的一个基本元素。 它用于控制AEM的复合包及其配置。
+[osgi](https://www.osgi.org/) 是Adobe Experience Manager (AEM)技術棧疊中的基本元素。 它可用來控制AEM的複合套件組合及其設定。
 
-OSGi &quot;*提供标准化的基元，它允许应用程序从可重用的小组件和协作组件构建。 这些组件可以组合成应用程序并进行部署*&quot;
+OSGi 」*提供標準化的基本概念，讓應用程式可由小型、可重複使用的合作元件所建構。 這些元件可組成應用程式並部署*「。
 
-这样可以轻松管理包，因为可以单独停止、安装和启动包。 互依关系会自动处理。 每个OSGi组件(请参阅 [OSGi规范](https://docs.osgi.org/specification/))包含在各种包中的一个包中。
+如此一來，就能輕鬆地管理套件組合，因為套件組合可以個別停止、安裝和啟動。 系統會自動處理相依性。 每個OSGi元件(請參閱 [OSGi規格](https://docs.osgi.org/specification/))包含在多個套件組合之一中。
 
-您可以通过以下任一方式管理此类包的配置设置：
+您可以透過以下任一方式管理此類套裝的組態設定：
 
-* 使用 [Adobe CQ Web控制台](#osgi-configuration-with-the-web-console)
-* 使用 [配置文件](#osgi-configuration-with-configuration-files)
-* 配置 [内容节点( `sling:OsgiConfig`)](#osgi-configuration-in-the-repository)
+* 使用 [Adobe CQ Web主控台](#osgi-configuration-with-the-web-console)
+* 使用 [組態檔](#osgi-configuration-with-configuration-files)
+* 設定 [content-nodes ( `sling:OsgiConfig`)時，不會受到任何限制](#osgi-configuration-in-the-repository)
 
-虽然存在细微差异，但这两种方法均可使用，主要与 [运行模式](/help/sites-deploying/configure-runmodes.md):
+雖然有細微差異，但可以使用任一方法，主要與 [執行模式](/help/sites-deploying/configure-runmodes.md)：
 
-* [Adobe CQ Web控制台](#osgi-configuration-with-the-web-console)
+* [Adobe CQ Web主控台](#osgi-configuration-with-the-web-console)
 
-   * Web控制台是OSGi配置的标准界面。 它提供了用于编辑各种属性的UI，在这些属性中，可以从预定义列表中选择可能的值。
+   * Web主控台是OSGi設定的標準介面。 它提供用於編輯各種屬性的UI，其中可以從預先定義的清單中選擇可能的值。
 
-      因此，这是最简单的方法。
+      因此，這是最簡單的方法。
 
-   * 使用Web控制台进行的任何配置都将立即应用并适用于当前实例，而与当前运行模式无关，也与后续对运行模式所做的任何更改无关。
+   * 使用Web主控台進行的所有設定都會立即套用並適用於目前的執行個體，無論目前的執行模式或執行模式的任何後續變更為何。
 
-* [配置文件](#osgi-configuration-with-configuration-files)
+* [組態檔](#osgi-configuration-with-configuration-files)
 
-   * 包含在Web控制台中定义的设置。
-   * 可以包含在内容包中，以供在其他实例上使用。
+   * 包含在Web主控台中定義的設定。
+   * 可包含在內容套件中，以供在其他執行個體上使用。
 
-* [存储库中的内容节点(sling:osgiConfig)](#osgi-configuration-in-the-repository)
+* [存放庫中的content-nodes (sling：osgiConfig)](#osgi-configuration-in-the-repository)
 
-   * 需要使用CRXDE Lite进行手动配置。
-   * 由于 `sling:OsgiConfig` 节点，您可以将配置绑定到特定 [运行模式](/help/sites-deploying/configure-runmodes.md). 您甚至可以在同一存储库中保存多个运行模式的配置。
-   * 立即应用任何适当的配置（取决于运行模式）。
+   * 需要使用CRXDE Lite手動設定。
+   * 由於的命名慣例 `sling:OsgiConfig` 節點，您可以將設定連結至特定 [執行模式](/help/sites-deploying/configure-runmodes.md). 您甚至可以在同一個存放庫中儲存多個執行模式的設定。
+   * 任何適當的設定都會立即套用（取決於執行模式）。
 
-无论您使用哪种方法，所有这些配置方法：
+無論您使用哪種方法，這些設定方法皆有：
 
-* 确保复制或复制存储库内容会重新创建相同的配置。
-* 允许您将配置签出到FileVault或Subversion;安全或进一步更新。
-* 可以保存在包中，以便在设置其他实例时使用。
-* 允许您使用脚本执行配置转出以传播配置详细信息。
-
->[!NOTE]
->
->以下列出了某些重要设置的详细信息： [OSGi配置设置。](/help/sites-deploying/osgi-configuration-settings.md)
-
-## 使用Web控制台进行OSGi配置 {#osgi-configuration-with-the-web-console}
-
-的 [Web控制台](/help/sites-deploying/web-console.md) 在AEM中，提供了用于配置包的标准化界面。 的 **配置** 选项卡用于配置OSGi包，因此是配置AEM系统参数的基础机制。
-
-所做的任何更改都会立即应用于相关的OSGi配置，无需重新启动。
+* 請確定複製或復寫存放庫內容會重新建立相同的設定。
+* 可讓您將組態出庫至FileVault或Subversion；以取得安全性或進一步的更新。
+* 可儲存在套件中，以便在設定其他執行個體時使用。
+* 可讓您使用指令碼執行設定轉出，以傳播設定詳細資訊。
 
 >[!NOTE]
 >
->在Web控制台中所做的更改会保存在存储库中，如下所示 [配置文件](#osgi-configuration-with-configuration-files). 这些文件可以包含在内容包中，以供在进一步安装中重复使用。
+>某些重要設定的詳細資訊列於 [OSGi組態設定。](/help/sites-deploying/osgi-configuration-settings.md)
+
+## 使用Web主控台進行OSGi設定 {#osgi-configuration-with-the-web-console}
+
+此 [網頁主控台](/help/sites-deploying/web-console.md) AEM中提供標準化介面來設定組合。 此 **設定** tab可用來設定OSGi組合，因此是設定AEM系統引數的基礎。
+
+所做的任何變更都會立即套用至相關的OSGi設定，不需要重新啟動。
 
 >[!NOTE]
 >
->在Web控制台中，任何提及默认设置的描述都与Sling默认值相关。
+>在Web主控台中所做的變更會儲存在存放庫中，做為 [組態檔](#osgi-configuration-with-configuration-files). 這些檔案可包含在內容套件中，以供後續安裝重複使用。
+
+>[!NOTE]
 >
->Adobe Experience Manager有其自己的默认值，因此设置的默认值可能与控制台中记录的默认值有所不同。
+>在Web主控台上，提及預設設定的任何說明都與Sling預設值有關。
+>
+>Adobe Experience Manager有自己的預設值，因此設定的預設值可能與主控台上記錄的預設值不同。
 
-要使用Web控制台更新配置，请执行以下操作：
+若要使用Web主控台更新設定：
 
-1. 访问 **配置** 选项卡，方法是：
+1. 存取 **設定** Web Console的索引標籤，方法是：
 
-   * 从 **工具 — >操作** 菜单。 登录控制台后，您可以使用下拉菜单：
+   * 從上的連結開啟Web主控台 **工具 — >作業** 功能表。 登入主控台後，您可以使用下拉式功能表：
 
       **OSGi >**
 
-   * 直接URL;例如：
+   * 直接URL；例如：
 
       `http://localhost:4502/system/console/configMgr`
-   此时将显示一个列表。
+   隨即顯示清單。
 
-1. 通过以下任一方式选择要配置的包：
+1. 透過下列任一方式選取您要設定的組合：
 
-   * 单击 **编辑** 图标
-   * 单击 **名称** 包的
+   * 按一下 **編輯** 該套件組合圖示
+   * 按一下 **名稱** 束的
 
-1. 将打开一个对话框。 您可以在此处根据需要进行编辑。 例如，将 **日志级别** to `INFO`:
+1. 對話方塊開啟。 您可以在這裡視需要編輯。 例如，設定 **記錄層級** 至 `INFO`：
 
    ![chlimage_1-140](assets/chlimage_1-140.png)
 
    >[!NOTE]
    >
-   >更新在存储库中保存为 [配置文件](#osgi-configuration-with-configuration-files). 之后要找到这些文件以包含在内容包中以供在其他实例上使用，例如，请记下永久标识( `PID`)。
+   >更新會儲存在存放庫中，做為 [組態檔](#osgi-configuration-with-configuration-files). 例如，若要在之後找到這些檔案，以便包含在內容套件中以供其他執行個體使用，請記下永久性身分( `PID`)。
 
 1. 单击“**保存**”。
 
-   您所做的更改会立即应用于正在运行的系统的相关OSGi配置，无需重新启动。
+   您的變更會立即套用至執行中系統的相關OSGi設定，不需要重新啟動。
 
    >[!NOTE]
    >
-   >您现在可以找到相关 [配置文件](#osgi-configuration-with-configuration-files). 例如，要包含在内容包中以供在其他实例上使用。
+   >您現在可以找到相關的 [組態檔](#osgi-configuration-with-configuration-files). 例如，包含在內容套件中以供其他執行個體使用。
 
-## 包含配置文件的OSGi配置 {#osgi-configuration-with-configuration-files}
+## 具有組態檔的OSGi組態 {#osgi-configuration-with-configuration-files}
 
-使用Web控制台进行的配置更改将作为配置文件保留在存储库中( `.config`)下：
+使用Web主控台進行的組態變更會以組態檔的形式保留在存放庫中( `.config`)下：
 
 `/apps`
 
-这些文件可以包含在内容包中，并可在其他实例上重复使用。
+這些檔案可包含在內容套件中，並可在其他執行個體上重複使用。
 
 >[!NOTE]
 >
->配置文件的格式是特定的 — 请参阅 [Sling Apache文档](https://sling.apache.org/documentation/development/slingstart.html#default-configuration-format) 以了解完整详细信息。
+>組態檔的格式是特定的 — 請參閱 [Sling Apache檔案](https://sling.apache.org/documentation/development/slingstart.html#default-configuration-format) 以取得完整詳細資訊。
 >
->因此，建议通过在Web控制台中进行实际更改来创建和维护配置文件。
+>因此，建議您在Web主控台中進行實際變更，以建立和維護設定檔案。
 
-Web控制台不显示您的更改已保存在存储库中的位置，但可以轻松找到这些更改：
+Web主控台不會顯示存放庫中儲存變更的位置，但可以輕鬆找到它們：
 
-1. 创建配置文件的方式 [在web控制台中进行初始更改](#osgi-configuration-with-the-web-console).
-1. 打开CRXDE Lite。
-1. 在 **工具** 菜单，选择 **查询……** .
-1. 要搜索已更新配置的PID，请提交查询 **类型** `SQL`.
+1. 建立設定檔案的方式： [在Web主控台中進行初始變更](#osgi-configuration-with-the-web-console).
+1. 開啟CRXDE Lite。
+1. 在 **工具** 功能表，選取 **查詢……** .
+1. 若要搜尋已更新之設定的PID，請提交 **型別** `SQL`.
 
-   例如， **Apache Felix OSGi管理控制台** 具有以下项的永久标识(PID):
+   例如， **Apache Felix OSGi管理主控台** 具有下列專案的永久性身分(PID)：
 
    `org.apache.felix.webconsole.internal.servlet.OsgiManager`
 
-   因此SQL查询可以是：
+   因此，SQL查詢可以是：
 
    ```shell
    select * from nt:base where jcr:path like '/apps/%' and contains(*, 'org.apache.felix.webconsole.internal.servlet.OsgiManager')
    ```
 
-1. 此时将显示配置文件节点。
+1. 隨即顯示組態檔節點。
 
-   对于上例：
+   對於上述範例：
 
    `/apps/system/config/org.apache.felix.webconsole.internal.servlet.OsgiManager.config`
 
    >[!CAUTION]
    >
-   >您可以打开此文件以查看您所做的更改，但为避免键入错误，建议使用控制台进行实际更改。
+   >您可以開啟此檔案來檢視您的變更，但為避免輸入錯誤，建議使用主控台進行實際變更。
 
-1. 您现在可以构建包含此节点的内容包，并根据需要在其他实例中使用。
+1. 您現在可以建立包含此節點的內容套件，並視需要在其他執行個體上使用。
 
-## 存储库中的OSGi配置 {#osgi-configuration-in-the-repository}
+## 存放庫中的OSGi設定 {#osgi-configuration-in-the-repository}
 
-除了使用Web控制台之外，您还可以在存储库中定义配置详细信息。 这样，您可以轻松配置不同的运行模式。
+除了使用Web主控台，您也可以在存放庫中定義設定詳細資訊。 如此可讓您輕鬆設定不同的執行模式。
 
-这些配置是通过创建 `sling:OsgiConfig` 库中供系统引用的节点。 这些节点将镜像OSGi配置，并且会为它们形成用户界面。 要更新配置数据，请更新节点属性。
+這些設定是透過建立 `sling:OsgiConfig` 供系統參考的存放庫中的節點。 這些節點會反映OSGi設定，並在其中形成使用者介面。 若要更新設定資料，請更新節點屬性。
 
-如果修改存储库中的配置数据，则更改会立即应用于相关OSGi配置。 就好像更改是使用Web控制台进行的，并进行了相应的验证和一致性检查。 此工作流还适用于从中复制配置的操作 `/libs/` to `/apps/`.
+如果您修改存放庫中的設定資料，變更會立即套用至相關的OSGi設定。 就好像變更是使用Web主控台進行的，並附上適當的驗證和一致性檢查。 此工作流程也適用於複製設定的動作 `/libs/` 至 `/apps/`.
 
-由于同一配置参数位于多个位置，因此系统：
+由於相同的組態引數位於數個位置，因此系統：
 
-* 搜索所有类型的节点 `sling:OsgiConfig`
-* 根据服务名称过滤
-* 根据运行模式筛选
+* 搜尋型別為的所有節點 `sling:OsgiConfig`
+* 根據服務名稱篩選
+* 根據執行模式篩選
 
 >[!NOTE]
 >
->另请阅读 [如何仅为特定实例定义基于存储库的配置](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17500.html?lang=zh-Hans).
+>另請閱讀 [如何只為特定執行個體定義存放庫型設定](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17500.html?lang=zh-Hans).
 
-### 向存储库添加新配置 {#adding-a-new-configuration-to-the-repository}
+### 新增設定至存放庫 {#adding-a-new-configuration-to-the-repository}
 
-#### 您需要了解的信息 {#what-you-need-to-know}
+#### 您需要瞭解的事項 {#what-you-need-to-know}
 
-要向存储库添加配置，您必须知道以下信息：
+若要將設定新增至存放庫，您必須知道下列內容：
 
-1. 的 **永久标识** (PID)。
+1. 此 **持續性身分** (PID)的服務。
 
-   引用 **配置** 字段。 名称将显示在包名称后面的方括号中(或 **配置信息** )。
+   參考 **設定** 欄位。 該名稱會顯示在束名稱后的方括弧中(或在 **設定資訊** （朝向頁面底部）。
 
-   例如，创建节点 `com.day.cq.wcm.core.impl.VersionManagerImpl.` 配置 **AEM WCM版本管理器**.
+   例如，建立節點 `com.day.cq.wcm.core.impl.VersionManagerImpl.` 進行設定 **AEM WCM版本管理員**.
 
    ![chlimage_1-141](assets/chlimage_1-141.png)
 
-1. 是 [运行模式](/help/sites-deploying/configure-runmodes.md) 必需？ 创建文件夹：
+1. 為特定 [執行模式](/help/sites-deploying/configure-runmodes.md) 必填？ 建立資料夾：
 
-   * `config`  — 用于所有运行模式
-   * `config.author`  — 对于创作环境
-   * `config.publish`  — 对于发布环境
+   * `config`  — 適用於所有執行模式
+   * `config.author`  — 適用於作者環境
+   * `config.publish`  — 適用於發佈環境
    * `config.<run-mode>` - 酌情
 
-1. 是 **配置** 或 **工厂配置** 必要吗？
-1. 要配置的单个参数，包括必须重新创建的任何现有参数定义。
+1. 是 **設定** 或 **工廠設定** 需要？
+1. 要設定的個別引數，包括必須重新建立的任何現有引數定義。
 
-   在Web控制台中引用单个参数字段。 每个参数的名称都用方括号括起来。
+   參考Web主控台中的個別引數欄位。 每個引數的名稱都會以方括弧顯示。
 
-   例如，创建属性
-   `versionmanager.createVersionOnActivation` 配置 **激活时创建版本**.
+   例如，建立屬性
+   `versionmanager.createVersionOnActivation` 進行設定 **啟動時建立版本**.
 
    ![chlimage_1-142](assets/chlimage_1-142.png)
 
-1. 中是否存在配置 `/libs`? 要列出实例中的所有配置，请使用 **查询** 工具，用于提交以下SQL查询：
+1. 設定是否存在於 `/libs`？ 若要列出執行個體中的所有設定，請使用 **查詢** CRXDE Lite工具，可提交下列SQL查詢：
 
    `select * from sling:OsgiConfig`
 
-   如果是，则此配置可以复制到 ` /apps/<yourProject>/`，然后在新位置中自定义。
+   如果是這樣，此設定可複製到 ` /apps/<yourProject>/`，然後在新位置自訂。
 
-#### 在存储库中创建配置 {#creating-the-configuration-in-the-repository}
+#### 在存放庫中建立設定 {#creating-the-configuration-in-the-repository}
 
-要将新配置实际添加到存储库，请执行以下操作：
+若要將新設定實際新增至存放庫：
 
-1. 使用CRXDE Lite导航到：
+1. 使用CRXDE Lite來導覽至：
 
    ` /apps/<yourProject>`
 
-1. 如果不存在，请创建 `config` 文件夹( `sling:Folder`):
+1. 如果不存在，請建立 `config` 資料夾( `sling:Folder`)：
 
-   * `config`  — 适用于所有运行模式
-   * `config.<run-mode>`  — 特定于特定运行模式
+   * `config`  — 適用於所有執行模式
+   * `config.<run-mode>`  — 特定執行模式專用
 
-1. 在此文件夹下，创建一个节点：
+1. 在此資料夾下，建立節點：
 
    * 类型: `sling:OsgiConfig`
-   * 名称：持久身份(PID);
+   * 名稱：永久性身分(PID)；
 
-      例如，AEM Wcm Version Manager使用 `com.day.cq.wcm.core.impl.VersionManagerImpl`
+      例如，AEM WCM版本管理員使用 `com.day.cq.wcm.core.impl.VersionManagerImpl`
    >[!NOTE]
    >
-   >在附加工厂配置时 `-<identifier>` 名称。
+   >附加工廠組態時 `-<identifier>` 至名稱。
    >
-   >如下所示： `org.apache.sling.commons.log.LogManager.factory.config-<identifier>`
+   >如所示： `org.apache.sling.commons.log.LogManager.factory.config-<identifier>`
    >
-   >其中 `<identifier>` 替换为您（必须）输入以标识实例的自由文本（您不能忽略此信息）；例如：
+   >位置 `<identifier>` 會取代為您（必須）輸入以識別例證的自由文字（您無法省略此資訊）；例如：
    >
    >`org.apache.sling.commons.log.LogManager.factory.config-MINE`
 
-1. 对于要配置的每个参数，在此节点上创建一个属性：
+1. 針對您要設定的每個引數，在此節點上建立屬性：
 
-   * 名称：Web控制台中显示的参数名称；字段描述末尾的括号中显示该名称。 例如， `Create Version on Activation` use `versionmanager.createVersionOnActivation`
-   * 类型：酌情。
-   * 值：。
+   * 名稱：引數名稱，如Web主控台中所示；名稱會顯示在欄位說明結尾的方括弧中。 例如， `Create Version on Activation` use `versionmanager.createVersionOnActivation`
+   * 型別：視情況而定。
+   * 值：視需要。
 
-   您只能为要配置的参数创建属性，其他参数仍采用AEM设置的默认值。
+   您只能為您要設定的引數建立屬性，其他引數仍會採用AEM設定的預設值。
 
-1. 保存所有更改。
+1. 儲存所有變更。
 
-   当通过重新启动服务来更新节点时，将应用更改（与在Web控制台中所做的更改一样）。
-
->[!CAUTION]
->
->请勿在 `/libs` 路径。
+   透過重新啟動服務來更新節點時，會套用變更（如同在Web主控台中所做的變更）。
 
 >[!CAUTION]
 >
->配置的完整路径必须正确，才能在启动时读取。
+>請勿變更 `/libs` 路徑。
 
-## 配置详细信息 {#configuration-details}
+>[!CAUTION]
+>
+>設定的完整路徑必須正確，才能在啟動時讀取。
 
-### 启动时的分辨率顺序 {#resolution-order-at-startup}
+## 設定詳細資料 {#configuration-details}
 
-使用以下优先顺序：
+### 啟動時的解決順序 {#resolution-order-at-startup}
 
-1. 下的存储库节点 `/apps/*/config...`类型为 `sling:OsgiConfig` 或属性文件。
+使用下列優先順序：
 
-1. 具有类型的存储库节点 `sling:OsgiConfig` 在 `/libs/*/config...`. （现成定义）。
+1. 下的存放庫節點 `/apps/*/config...`.with type `sling:OsgiConfig` 或屬性檔案。
 
-1. 任意 `.config` 文件 `<*cq-installation-dir*>/crx-quickstart/launchpad/config/...`. 在本地文件系统上。
+1. 具有型別的存放庫節點 `sling:OsgiConfig` 在 `/libs/*/config...`. （現成定義）。
 
-中的通用配置 `/libs` 中的项目特定配置可能会掩盖 `/apps`.
+1. 任何 `.config` 檔案來源 `<*cq-installation-dir*>/crx-quickstart/launchpad/config/...`. 在本機檔案系統上。
 
-### 运行时的解决顺序 {#resolution-order-at-runtime}
+中的一般設定 `/libs` 可被中的專案特定設定遮罩 `/apps`.
 
-在系统运行时所做的配置更改会触发具有修改配置的重新加载。
+### 執行階段的解決順序 {#resolution-order-at-runtime}
 
-然后，将按以下优先顺序应用：
+系統執行時所做的設定變更會觸發使用修改後的設定重新載入。
 
-1. 在Web控制台中修改配置会立即生效，因为它在运行时具有优先权。
-1. 在中修改配置 `/apps` 立即生效。
-1. 在中修改配置 `/libs` 会立即生效，除非它被中的配置掩盖 `/apps`.
+然後套用下列優先順序：
 
-### 多运行模式的分辨率 {#resolution-of-multiple-run-modes}
+1. 在Web主控台中修改設定會立即生效，因為它在執行階段具有優先權。
+1. 修改中的設定 `/apps` 立即生效。
+1. 修改中的設定 `/libs` 立即生效，除非被中的設定遮罩 `/apps`.
 
-对于特定于运行模式的配置，可以组合多个运行模式。 例如，您可以按以下样式创建配置文件夹：
+### 多個執行模式的解析度 {#resolution-of-multiple-run-modes}
+
+對於執行模式特定的配置，可以組合多個執行模式。 例如，您可以建立以下樣式的組態資料夾：
 
 `/apps/*/config.<runmode1>.<runmode2>/`
 
-如果所有运行模式都与启动时定义的运行模式匹配，则会应用此类文件夹中的配置。
+如果所有執行模式都符合啟動時定義的執行模式，則會套用此類資料夾中的設定。
 
-例如，如果实例是以运行模式启动的 `author,dev,emea`，配置节点 `/apps/*/config.emea`, `/apps/*/config.author.dev/`和 `/apps/*/config.author.emea.dev/` ，而 `/apps/*/config.author.asean/` 和 `/config/author.dev.emea.noldap/` 未应用。
+例如，如果執行個體是以執行模式啟動 `author,dev,emea`，設定中的節點 `/apps/*/config.emea`， `/apps/*/config.author.dev/`、和 `/apps/*/config.author.emea.dev/` 套用，而設定節點位於 `/apps/*/config.author.asean/` 和 `/config/author.dev.emea.noldap/` 不會套用。
 
-如果同一PID的多个配置适用，则应用匹配运行模式数目最多的配置。
+如果適用於同一PID的多個設定，則會套用符合執行模式數量最多的設定。
 
-例如，如果实例是以运行模式启动的 `author,dev,emea`和 `/apps/*/config.author/` 和 `/apps/*/config.emea.author/` 为定义配置
-`com.day.cq.wcm.core.impl.VersionManagerImpl`，中的配置 `/apps/*/config.emea.author/` 的次数。
+例如，如果執行個體是以執行模式啟動 `author,dev,emea`，和二者 `/apps/*/config.author/` 和 `/apps/*/config.emea.author/` 定義設定
+`com.day.cq.wcm.core.impl.VersionManagerImpl`，中的設定 `/apps/*/config.emea.author/` 「 」已套用。
 
-此规则的粒度处于PID级别。
-您不能在 `/apps/*/config.author/` 更具体的 `/apps/*/config.emea.author/` 相同PID。
-具有最大匹配运行模式数的配置对整个PID是有效的。
+此規則的詳細程度為PID層級。
+您無法在中為相同的PID定義某些屬性 `/apps/*/config.author/` 以及中更具體的專案 `/apps/*/config.emea.author/` 相同PID的。
+符合執行模式數量最多的設定對整個PID有效。
 
-### 标准配置 {#standard-configurations}
+### 標準設定 {#standard-configurations}
 
-以下列表显示了存储库中可用配置的一小部分（在标准安装中）：
+下列清單顯示存放庫中提供的一小部分設定（在標準安裝中）：
 
-* 作者 — AEM WCM过滤器：
+* 作者 — AEM WCM篩選器：
 
    `libs/wcm/core/config.author/com.day.cq.wcm.core.WCMRequestFilter`
 
-* 发布 — AEM WCM过滤器：
+* 發佈 — AEM WCM篩選器：
 
    `libs/wcm/core/config.publish/com.day.cq.wcm.core.WCMRequestFilter`
 
-* 发布 — AEM WCM页面统计信息：
+* 發佈 — AEM WCM頁面統計資料：
 
    `libs/wcm/core/config.publish/com.day.cq.wcm.core.stats.PageViewStatistics`
 
 >[!NOTE]
 >
->由于这些配置位于 `/libs` 不得直接编辑，而是复制到您的应用程序区域( `/apps`)。
+>因為這些設定位於 `/libs` 不可直接編輯，但可複製到您的應用程式區域( `/apps`)。
 
-要列出实例中的所有配置节点，请使用 **查询** CRXDE Lite中用于提交以下SQL查询的功能：
+若要列出執行個體中的所有設定節點，請使用 **查詢** CRXDE Lite功能，可提交下列SQL查詢：
 
 `select * from sling:OsgiConfig`
 
-### 配置持久性 {#configuration-persistence}
+### 設定持續性 {#configuration-persistence}
 
-* 如果通过Web控制台更改配置，则该配置（通常）会写入存储库中，具体位置为：
+* 如果您透過Web主控台變更組態，該組態（通常）會寫入存放庫：
 
    `/apps/{somewhere}`
 
-   * 默认情况下 `{somewhere}` is `system/config` 这样配置就会写入
+   * 依預設 `{somewhere}` 是 `system/config` 因此設定會寫入
 
       `/apps/system/config`
 
-   * 但是，如果您正在编辑最初来自存储库其他位置的配置：例如：
+   * 不過，如果您要編輯的設定最初來自存放庫中的其他位置，例如：
 
       /libs/foo/config/someconfig
 
-      然后，将更新后的配置写在原始位置下；例如：
+      然後，更新的設定會寫入原始位置下；例如：
 
       `/apps/foo/config/someconfig`
 
-* 更改的设置 `admin` 保存在 `*.config` 文件位于：
+* 變更的設定 `admin` 儲存在 `*.config` 檔案位於：
 
    ```
       /crx-quickstart/launchpad/config
    ```
 
-   * 此区域是OSGi配置管理员的专用数据，并包含 `admin`，无论他们是如何进入系统的。
-   * 此区域是实施详细信息，您绝不能直接编辑此目录。
-   * 但是，了解这些配置文件的位置以便能够获取备份副本，或者多个安装，或者同时获取两者：
+   * 此區域是OSGi設定管理員的私人資料，並保留以下專案指定的所有設定詳細資訊： `admin`，無論使用者如何進入系統。
+   * 此區域是實作詳細資料，您絕不能直接編輯此目錄。
+   * 不過，瞭解這些組態檔的位置會很有用，這樣就可以擷取復本進行備份、進行多項安裝，或兩者兼而有之：
 
-      * Apache Felix OSGi管理控制台
+      * Apache Felix OSGi管理主控台
 
          `../crx/org/apache/felix/webconsole/internal/servlet/OsgiManager.config`
 
-      * CRX Sling客户端存储库
+      * CRX Sling使用者端存放庫
 
          `../com/day/crx/sling/client/impl/CRXSlingClientRepository/<pid-nr>.config`
 
 >[!CAUTION]
 >
->切勿在下面编辑文件夹或文件：
+>切勿編輯下列資料夾或檔案：
 >
 >`/crx-quickstart/launchpad/config`

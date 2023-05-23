@@ -1,7 +1,7 @@
 ---
 title: 站点模板
 seo-title: Site Templates
-description: 如何访问站点模板控制台
+description: 如何存取網站範本主控台
 seo-description: How to access the Site Templates console
 uuid: d2f7556e-7e43-424e-82f1-41790aeb2d98
 contentOwner: Janice Kendall
@@ -20,88 +20,88 @@ ht-degree: 4%
 
 # 站点模板 {#site-templates}
 
-站点模板控制台与 [组模板](tools-groups.md) 控制台，重点关注社区组感兴趣的功能。
+「網站範本」主控台與 [群組範本](tools-groups.md) 主控台，著重於社群群組感興趣的功能。
 
 >[!NOTE]
 >
->用于创建的控制台 [社区站点](sites-console.md)， [社区站点模板](sites.md)， [社区组模板](tools-groups.md) 和 [社区功能](functions.md) 仅用于创作环境。
+>用於建立的控制檯 [社群網站](sites-console.md)， [社群網站範本](sites.md)， [社群群組範本](tools-groups.md) 和 [社群功能](functions.md) 僅供作者環境使用。
 
-## 站点模板控制台 {#site-templates-console}
+## 網站範本主控台 {#site-templates-console}
 
-在创作环境中，要访问社区站点控制台，请执行以下操作：
+在作者環境中，若要存取社群網站主控台：
 
-* 从全局导航： **[!UICONTROL 工具>社区>站点模板]**
+* 從全域導覽： **[!UICONTROL 工具>社群>網站範本]**
 
-此控制台显示模板，其中 [社区站点](sites-console.md) 可以创建，并允许创建新站点模板。
+此主控台會顯示 [社群網站](sites-console.md) 可建立並允許建立新的網站範本。
 
 ![site-template](assets/site-template.png)
 
 ## 创建站点模板 {#create-site-template}
 
-要开始创建新站点模板，请选择 `Create`.
+若要開始建立新網站範本，請選取「 」 `Create`.
 
-这将显示站点编辑器面板，其中包含3个子面板：
+這會顯示包含3個子面板的網站編輯器面板：
 
-### 基本信息 {#basic-info}
+### 基本資訊 {#basic-info}
 
 ![site-template-basicinfo](assets/site-template-basicinfo.png)
 
-在“基本信息”面板上，配置了名称、说明以及模板是启用还是禁用：
+在「基本資訊」面板上，會設定名稱、說明以及範本是啟用還是停用：
 
 * **[!UICONTROL 社区站点模板名称]**
 
-   模板名称id。
+   範本名稱id。
 
 * **[!UICONTROL 社区站点模板描述]**
 
-   模板描述。
+   範本說明。
 
-* **[!UICONTROL 已禁用/已启用]**
+* **[!UICONTROL 已停用/已啟用]**
 
-   控制模板是否可引用的切换开关。
+   控制範本是否可參照的切換開關。
 
 ### 缩略图 {#thumbnail}
 
-![site-thumbnail](assets/site-thumbnail.png)
+![網站縮圖](assets/site-thumbnail.png)
 
-（可选）选择上传图像图标，以显示缩略图以及社区站点创建者的名称和描述。
+（可選）選取「上傳影像」圖示，以顯示縮圖以及社群網站建立者的名稱和說明。
 
 ### 结构 {#structure}
 
-![站点结构](assets/site-structure.png)
+![site-structure](assets/site-structure.png)
 
-要添加社区功能，请按站点菜单链接出现的顺序从右侧向左拖动。 样式将在创建站点期间应用于模板。
+若要新增社群功能，請從右側拖曳至左側，順序為網站功能表連結的顯示順序。 在建立網站期間，樣式將套用至範本。
 
-例如，如果您需要主页，请将页面函数从库拖放到模板生成器下。 这将导致打开页面配置对话框。 请参阅 [函数控制台](functions.md) 有关配置对话框的信息。
+例如，如果您想要首頁，請從資料庫拖曳Page函式，放置於範本產生器下方。 這會導致頁面設定對話方塊開啟。 請參閱 [函式主控台](functions.md) 以取得有關設定對話方塊的資訊。
 
-基于此模板，继续拖放社区站点所需的任何其他社区功能。
+根據此範本，繼續拖放社群網站所需的任何其他社群功能。
 
-page函数提供一个空页面。 “组”功能提供了在社区站点中创建组站点（子社区）的功能。
-
->[!CAUTION]
->
->组函数必须 *非* 是 *第一个也不是唯一的* 在站点结构中的函数。
->
->任何其他函数，例如 [页面函数](functions.md#page-function)必须先包含并列出。
-
-![站点编辑器](assets/site-editor.png)
-
-### 组模板用于组功能 {#group-templates-for-groups-function}
-
-在站点模板中包含组功能时，配置要求指定在发布环境中创建新组时允许的组模板选项。
+頁面函式會提供一個空白頁面。 群組功能提供在社群網站內建立群組網站（子社群）的功能。
 
 >[!CAUTION]
 >
->“组”功能必须 *非* 是 *第一个也不是唯一的* 在站点结构中的函数。
+>群組函式必須 *not* 成為 *第一個或唯一* 網站結構中的函式。
+>
+>任何其他函式，例如 [頁面函式](functions.md#page-function)，必須先包含並列出。
 
-![站点功能](assets/site-functions.png)
+![網站編輯器](assets/site-editor.png)
 
-通过选择两个或多个社区组模板，可在社区中实际创建新组时为组管理员提供一个选择。
+### 群組功能的群組範本 {#group-templates-for-groups-function}
 
-![站点功能](assets/site-functions1.png)
+在場地範本中加入群組功能時，設定需要當在發佈環境中建立新群組時允許群組範本選擇的規格。
+
+>[!CAUTION]
+>
+>群組功能必須 *not* 成為 *第一個或唯一* 網站結構中的函式。
+
+![網站函式](assets/site-functions.png)
+
+選取兩個或多個社群群組範本，可在社群中實際建立新群組時，為群組管理員提供選項。
+
+![網站功能](assets/site-functions1.png)
 
 ## 编辑站点模板 {#edit-site-template}
 
-在主视图中查看站点模板时 [站点模板控制台](#site-templates-console)中，可以选择现有站点模板进行编辑。
+在主要內容中檢視網站範本時 [網站範本主控台](#site-templates-console)，即可選取現有網站範本進行編輯。
 
-此流程提供的面板与 [创建站点模板](#create-site-template).
+此程式提供的面板與 [建立網站範本](#create-site-template).

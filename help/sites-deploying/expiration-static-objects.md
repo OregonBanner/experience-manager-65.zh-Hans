@@ -1,7 +1,7 @@
 ---
-title: 静态对象过期
+title: 靜態物件的到期日
 seo-title: Expiration of Static Objects
-description: 了解如何配置AEM以使静态对象在合理的时间内不过期。
+description: 瞭解如何設定AEM，讓靜態物件不會在合理時間內過期。
 seo-description: Learn how to configure AEM so that static objects do not expire (for a reasonable period of time).
 uuid: ee019a3d-4133-4d40-98ec-e0914b751fb3
 contentOwner: User
@@ -18,30 +18,30 @@ ht-degree: 0%
 
 ---
 
-# 静态对象过期{#expiration-of-static-objects}
+# 靜態物件的到期日{#expiration-of-static-objects}
 
-静态对象（例如图标）不会更改。 因此，系统应配置为它们不会过期（在合理的时间段内），从而减少不必要的流量。
+靜態物件（例如圖示）不會變更。 因此，系統應設定為不會過期（在合理的時間段內），並減少不必要的流量。
 
-这将产生以下影响：
+這會造成下列影響：
 
-* 从服务器基础架构卸载请求。
-* 提高页面加载的性能，因为浏览器会在浏览器缓存中缓存对象。
+* 從伺服器基礎結構解除安裝請求。
+* 當瀏覽器快取瀏覽器快取中的物件時，提高頁面載入的效能。
 
-过期时间由HTTP标准针对文件的“过期时间”指定(例如，请参阅以下文档的第14.21章： [RFC 2616](https://www.ietf.org/rfc/rfc2616.txt) “ Hypertext Transfer Protocol — HTTP 1.1”)。 此标准使用标头来允许客户端缓存对象，直到它们被视为过时；此类对象会缓存指定的时间量，而不会对原始服务器进行任何状态检查。
+到期日由HTTP標準所指定，內容與檔案的「到期日」有關(請參閱 [RFC 2616](https://www.ietf.org/rfc/rfc2616.txt) 「超文字傳輸通訊協定 — HTTP 1.1」)。 此標準會使用標頭來允許使用者端快取物件，直到它們被視為過時；此類物件會快取指定的時間量，而不會對原始伺服器進行任何狀態檢查。
 
 >[!NOTE]
 >
->此配置与Dispatcher完全不同（并且不起作用）。
+>此設定與Dispatcher完全不同（且無法運作）。
 >
->Dispatcher的用途是将数据缓存到AEM之前。
+>Dispatcher的用途是將資料快取到AEM前面。
 
-所有非动态且不会随时间变化的文件，都可以并且应该进行缓存。 Apache HTTPD服务器的配置可能类似于以下内容之一，具体取决于环境：
+所有非動態且不會隨著時間改變的檔案，都可以且應該快取。 Apache HTTPD伺服器的設定可能如下所示 — 視環境而定：
 
 >[!CAUTION]
 >
->在定义将对象视为最新对象的时段时，必须小心。 因为有 *在指定的时间段到期之前不检查*，客户端最终可能会从缓存中显示旧内容。
+>定義將物件視為最新的時段時，您必須小心。 如有 *在指定的時段到期之前不檢查*，使用者端最後可能會從快取中顯示舊內容。
 
-1. **对于创作实例：**
+1. **對於作者執行個體：**
 
    ```xml
    LoadModule expires_module modules/mod_expires.so
@@ -53,11 +53,11 @@ ht-degree: 0%
    </Location>
    ```
 
-   这允许中间缓存（例如浏览器缓存）将CSS、Javascript、PNG和GIF文件存储长达一个月，直到它们过期为止。 这意味着它们不需要从AEM或Web服务器请求，但可以保留在浏览器缓存中。
+   這可讓中繼快取（例如瀏覽器快取）將CSS、Javascript、PNG和GIF檔案儲存一個月，直到檔案過期為止。 這表示它們不需要從AEM或Web伺服器要求，但可以保留在瀏覽器快取中。
 
-   网站的其他部分不应缓存在创作实例上，因为它们随时可能更改。
+   網站的其他區段不應在製作執行個體上快取，因為它們隨時可能變更。
 
-1. **对于发布实例：**
+1. **對於發佈執行個體：**
 
    ```xml
    LoadModule expires_module modules/mod_expires.so
@@ -75,9 +75,9 @@ ht-degree: 0%
    </Location>
    ```
 
-   这允许中间缓存（例如浏览器缓存）将CSS、Javascript、PNG和GIF文件存储在客户端缓存中长达一天。 尽管此示例说明了以下所有内容的全局设置 `/content` 和 `/etc/designs`，您应该让它更细微。
+   這可讓中繼快取（例如瀏覽器快取）將CSS、Javascript、PNG和GIF檔案儲存在使用者端快取中最多一天。 雖然此範例說明以下所有專案的全域設定 `/content` 和 `/etc/designs`，您應該讓它更精細。
 
-   根据站点更新的频率，您还可以考虑缓存HTML页面。 一个合理的时间段是1小时：
+   根據網站更新的頻率，您也可以考慮快取HTML頁面。 一個合理的時間段是1小時：
 
    ```xml
    <Location /content>
@@ -85,4 +85,4 @@ ht-degree: 0%
    </Location>
    ```
 
-配置静态对象后，扫描 `request.log`，在选择包含此类对象的页面时，确认没有对静态对象发出任何（不必要的）请求。
+設定靜態物件後，請掃描 `request.log`，同時選取包含這類物件的頁面，以確認沒有對靜態物件發出任何（不必要的）請求。

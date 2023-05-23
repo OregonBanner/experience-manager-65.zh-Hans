@@ -1,7 +1,7 @@
 ---
 title: 表单服务
 seo-title: Forms Service
-description: 本文介绍Forms服务以及您可以使用Forms服务执行的与表单相关的任务。
+description: 本文說明Forms服務，以及您可以使用Forms服務執行的表單相關工作。
 seo-description: The article describes Forms service and the form-related tasks you can perform using Forms service.
 uuid: 3258d3c2-8755-4815-8c97-b2cfb9a9dfd4
 content-type: reference
@@ -20,40 +20,40 @@ ht-degree: 0%
 
 ## 概述 {#overview}
 
-Forms服务允许您创建交互式数据捕获客户端应用程序，以验证、处理、转换和交付通常在Designer中创建的表单。 Forms服务会将您开发的任何表单设计呈现为PDF文档。
+Forms服務可讓您建立互動式資料擷取使用者端應用程式，以驗證、處理、轉換及傳遞通常在Designer中建立的表單。 Forms服務會將您開發的任何表單設計呈現為PDF檔案。
 
-Forms服务还使企业能够通过部署电子表单作为AdobePDF来扩展其智能数据捕获流程。 您还可以使用该服务分别将数据导入和导出到现有PDF forms。
+Forms服務也可讓組織部署電子錶單作為AdobePDF，以擴充其智慧型資料擷取流程。 您也可以使用該服務來分別匯入及匯出現有PDF forms的資料。
 
-使用Forms服务执行以下操作：
+使用Forms服務來執行下列動作：
 
-* 根据PDF forms和XML数据渲染模板。
-* 启用表单数据集成，将数据导入和从PDF forms中提取数据。
-* 根据片段渲染表单。
+* 根據範本和XML資料呈現PDF forms。
+* 啟用表單資料整合，以將資料匯入和擷取PDF forms中的資料。
+* 根據片段轉譯表單。
 
-## 创建PDF forms  {#creating-pdf-forms-nbsp}
+## 建立PDF forms  {#creating-pdf-forms-nbsp}
 
-使用表单服务创建用于数据捕获的PDF forms。 通常，您会从AEM Forms Designer模板开始。 使用 `renderPDFForm` Forms （链接到Javadoc）操作，以将此模板转换为PDF表单。
+使用表單服務建立資料擷取的PDF forms。 通常先使用AEM Forms Designer範本。 使用 `renderPDFForm` Forms （Javadoc連結）操作，將此範本轉換為PDF表單。
 
-的第一个参数 `renderPDFForm` 操作是模板文件的名称(例如， `ExpenseClaim.xdp`)。 您可以将模板文件存储在本地文件系统、CRX存储库或HTTP或FTP位置。 您可以通过在以下位置设置内容根来指定模板文件的位置： `PDFFormRenderOptions` 的参数 `renderPDFForm` 操作。 有关可以为指定的其他选项的详细信息，请参阅Javadoc `PDFFormRenderOptions` 参数。
+的第一個引數 `renderPDFForm` operation是範本檔案的名稱(例如， `ExpenseClaim.xdp`)。 您可以將範本檔案儲存在本機檔案系統、CRX存放庫或HTTP或FTP位置。 您可以透過設定內容根目錄來指定範本檔案的位置 `PDFFormRenderOptions` 的引數 `renderPDFForm` 作業。 請參閱Javadoc以取得其他選項的詳細資訊，您可以為這些選項指定 `PDFFormRenderOptions` 引數。
 
-此 `renderPDFForm` 操作也可以接受XML数据。 在创建PDF表单时，XML数据会与模板合并，以便生成的PDF表单包含指定的数据。 的第二个参数 `renderPDFForm` 操作可以接受包含XML数据的文档(Javadoc)对象。
+此 `renderPDFForm` 作業也可以接受XML資料。 建立PDF表單時，會將XML資料與範本合併，使產生的PDF表單包含指定的資料。 的第二個引數 `renderPDFForm` 作業可以接受包含XML資料的Document (Javadoc)物件。
 
-## 从PDF forms提取数据  {#extracting-data-from-pdf-forms-nbsp}
+## 從PDF forms擷取資料  {#extracting-data-from-pdf-forms-nbsp}
 
-使用 `exportData` Forms服务从PDF表单中提取数据XML的(Javadoc)操作。 此操作接受文档作为其第一个参数。 可以将数据导出为XDP文档或XML文件。 如果将数据导出为XML文件，则导出的数据将删除XDP包络，并返回一个纯XML文件。 您可以使用第二个参数指定此排列。
+使用 `exportData` Forms服務的(Javadoc)作業，從PDF表單擷取資料XML。 此作業接受檔案作為其第一個引數。 您可以將資料匯出為XDP檔案或XML檔案。 如果將資料匯出為XML檔案，則匯出的資料會移除XDP包絡，並傳回純XML檔案。 您可以使用第二個引數來指定此配置。
 
-## 将数据导入PDF forms {#importing-data-into-pdf-forms}
+## 將資料匯入PDF forms {#importing-data-into-pdf-forms}
 
-FormsPDF服务还允许您合并使用AEM Forms Designer或 `renderPDFForm` XML数据操作。 此 `importData` Forms服务的(Javadoc)操作接受PDF表单和XML数据，并返回包含数据XML的PDF表单。
+FormsPDF服務也可讓您合併使用AEM Forms Designer或 `renderPDFForm` 使用XML資料執行作業。 此 `importData` Forms服務的(Javadoc)作業接受PDF表單和XML資料，並傳回含有資料XML的PDF表單。
 
-## 基于片段渲染表单 {#rendering-forms-based-on-fragments}
+## 根據片段呈現表單 {#rendering-forms-based-on-fragments}
 
-Forms服务可以渲染基于您使用AEM Forms Designer创建的片段的表单。 片段是表单中可重复使用的部分。 它另存为单独的XDP文件，可插入多个表单设计中。 例如，片段可以包含地址块或合法文本。
+Forms服務可以根據您使用AEM Forms Designer建立的片段轉譯表單。 片段是可重複使用的表單部分。 它會儲存為單獨的XDP檔案，可以插入多個表單設計中。 例如，片段可以包含位址區塊或合法文字。
 
-使用片段可简化并加速大量表单的创建和维护。 创建表单时，插入对片段在表单中显示的所需片段的引用。 片段引用包含指向物理XDP文件的子表单。
+使用片段可簡化並加速大量表單的建立與維護。 建立表單時，插入片段在表單中出現所需片段的參考。 片段參考包含指向實體XDP檔案的子表單。
 
-以下是使用片段的优点：
+使用片段的優點如下：
 
-* **内容重用**：您可以在多个表单设计中重用内容。 要在多个表单中快速重用相同内容的各个部分，请创建一个片段。 复制或重新创建内容需要较长时间。 使用片段还可以确保表单设计中经常使用的部分在所有引用表单中具有一致的内容和外观。
-* **全局更新**：在一个文件中只能对多个表单进行一次全局更改。 您可以更改片段中的内容、脚本对象、数据绑定、布局或样式。 引用片段的所有XDP表单都会反映更改。
-* **共享表单创建**：您可以在多个资源中共享表单的创建。 在AEM Forms Designer的脚本或其他高级功能方面拥有专业知识的表单开发人员可以开发和共享使用脚本和动态属性的片段。 窗体设计者可以使用片段设计窗体。 此外，他们可以使用片段来确保表单的所有部分在多个表单中具有一致的外观和功能。
+* **內容重複使用**：您可以在多個表單設計中重複使用內容。 若要在多個表單中快速重複使用相同內容的部分，請建立片段。 複製或重新建立內容需要較長時間。 使用片段也可確保表單設計中經常使用的部分在所有參考表單中都具有一致的內容和外觀。
+* **全域更新**：您只能在檔案中對多個表單進行一次全域變更。 您可以變更片段中的內容、指令碼物件、資料繫結、配置或樣式。 所有參照片段的XDP表單都會反映變更。
+* **共用表單建立**：您可以在數個資源之間共用表單的建立。 具備指令碼或AEM Forms Designer其他進階功能專業知識的表單開發人員可以開發和共用使用指令碼和動態屬性的片段。 表單設計人員可以使用片段來設計表單。 此外，他們可以使用片段來確保表單的所有部分在多個表單中都具有一致的外觀和功能。

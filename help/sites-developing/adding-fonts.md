@@ -1,7 +1,7 @@
 ---
-title: 为图形渲染添加字体
+title: 新增用於圖形演算的字型
 seo-title: Adding Fonts for Graphic-Rendering
-description: AEM允许您生成包含从内容中动态获取的文本的图形
+description: AEM可讓您產生結合動態擷取自內容之文字的圖形
 seo-description: AEM allows you to generate graphics incorporating text dynamically taken from your content
 uuid: 67d9b10f-e986-4d29-bde2-10e08075fe17
 contentOwner: Guillaume Carlino
@@ -17,35 +17,35 @@ ht-degree: 1%
 
 ---
 
-# 为图形渲染添加字体{#adding-fonts-for-graphic-rendering}
+# 新增用於圖形演算的字型{#adding-fonts-for-graphic-rendering}
 
-AEM允许您生成包含从内容中动态获取的文本的图形。
+AEM可讓您產生結合動態擷取自內容的文字的圖形。
 
-要执行此操作，您还可以加载和使用自己的字体。
+要執行此操作，您也可以載入並使用您自己的字型。
 
-当前所有实施的Java平台支持 [TrueType](https://en.wikipedia.org/wiki/Truetype) 字体。
+目前所有Java平台支援的實作 [TrueType](https://en.wikipedia.org/wiki/Truetype) 字型。
 
-1. 打开CRXDE Lite并导航到您的项目应用程序文件夹：
+1. 開啟CRXDE Lite並導覽至您的專案應用程式資料夾：
 
    `/apps/<your-project>/`
 
-1. 下 `/apps/<your-project>/` 创建新节点：
+1. 下 `/apps/<your-project>/` 建立新節點：
 
    * **名称**: `fonts`
    * **类型**: `sling:Folder`
 
-   保存所有更改。
+   儲存所有變更。
 
-1. 将字体文件复制到此文件夹中；例如，使用WebDAV。
+1. 將字型檔案複製到此資料夾；例如，使用WebDAV。
 
    >[!NOTE]
    >
-   >存储库中的字体文件必须具有后缀 `*.ttf` 或 `*.TTF`.
+   >存放庫中的字型檔案必須具有字尾 `*.ttf` 或 `*.TTF`.
 
-1. 更新 [OSGi配置](/help/sites-deploying/configuring-osgi.md) 之 [Day Commons GFX字体帮助程序](/help/sites-deploying/osgi-configuration-settings.md). 添加字体文件夹的路径；即 `/apps/<your-project>/fonts`.
+1. 更新 [OSGi設定](/help/sites-deploying/configuring-osgi.md) 之 [Day Commons GFX Font Helper](/help/sites-deploying/osgi-configuration-settings.md). 將路徑新增至字型資料夾；即 `/apps/<your-project>/fonts`.
 
-1. 返回CRXDE Lite。 您现在应该看到 `.fontlist` 文件夹中包含导入字体的名称的节点。
+1. 返回CRXDE Lite。 您現在應該會看到 `.fontlist` 節點（包含匯入字型名稱）。
 
-   这些字体现在可以在Java API中使用。
+   這些字型現已可在Java API中使用。
 
-有关如何将字体与Java API结合使用的完整详细信息，请参阅 [Java API的Font类的文档](https://download.oracle.com/javase/6/docs/api/java/awt/Font.html).
+如需如何搭配Java API使用字型的完整詳細資訊，請參閱 [Java API的字型類別檔案](https://download.oracle.com/javase/6/docs/api/java/awt/Font.html).

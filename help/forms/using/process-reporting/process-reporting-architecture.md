@@ -1,7 +1,7 @@
 ---
-title: 流程报告的工作原理
+title: 程式報告的運作方式
 seo-title: How Process Reporting Works
-description: 组成AEM Forms on JEE Process Reporting的服务描述和Process Reporting UI简介
+description: 構成AEM Forms on JEE Process Reporting的服務說明和Process Reporting UI的簡介
 seo-description: Description of the services that make up the AEM Forms on JEE Process Reporting and an introduction to the Process Reporting UI
 uuid: 37e31985-088a-4ef6-ba57-10a01597a873
 content-type: reference
@@ -17,64 +17,64 @@ ht-degree: 0%
 
 ---
 
-# 流程报告的工作原理{#how-process-reporting-works}
+# 程式報告的運作方式{#how-process-reporting-works}
 
-流程报表是AEM Forms on JEE的报表模块。
+程式報告是AEM Forms on JEE的報告模組。
 
-进程报告允许您运行有关AEM Forms进程和任务的报告。
+程式報告可讓您執行AEM Forms程式和工作的報告。
 
-Process Reporting使用嵌入的Process Reporting存储库发布Forms数据。 然后，它使用该数据来运行报表。
+Process Reporting使用內嵌的Process Reporting存放庫來發佈Forms資料。 然後使用該資料執行報表。
 
-进程报告包含以下模块：
+「程式報告」包含下列模組：
 
-* [ProcessDataPublisher服务](#processdatapublisher-service-br-p)
-* [ProcessDataStorage服务](#processdatastorageprovider-service-br-p)
-* [OSGi服务](#osgi-service-br-p)
-* [查询数据servlet](#querydataservlet-service-br-p)
-* [“进程报告”用户界面](#process-reporting-user-interface-br-p)
+* [ProcessDataPublisher服務](#processdatapublisher-service-br-p)
+* [ProcessDataStorage服務](#processdatastorageprovider-service-br-p)
+* [OSGi服務](#osgi-service-br-p)
+* [查詢資料servlet](#querydataservlet-service-br-p)
+* [程式報告使用者介面](#process-reporting-user-interface-br-p)
 
-## 流程报告体系结构 {#process-reporting-architecture-br}
+## 程式報告架構 {#process-reporting-architecture-br}
 
 ![processreportingarchitecture](assets/processreportingarchitecture.png)
 
-## 流程报告模块 {#process-reporting-modules}
+## 程式報告模組 {#process-reporting-modules}
 
-### ProcessDataPublisher服务 {#processdatapublisher-service-br}
+### ProcessDataPublisher服務 {#processdatapublisher-service-br}
 
-ProcessDataPublisher服务器定期在AEM Forms数据库上运行，并提取自上次运行服务以来更改的数据。 然后，它将数据发布到Process Data Storage服务。
+ProcessDataPublisher伺服器會定期在AEM Forms資料庫上執行，並擷取自上次執行服務後變更的資料。 然後會將資料發佈至Process Data Storage服務。
 
-有关配置服务的详细信息，请参阅 [配置ProcessDataPublisher服务](/help/forms/using/process-reporting/install-start-process-reporting.md#p-reportconfiguration-service-p).
+如需設定服務的詳細資訊，請參閱 [設定ProcessDataPublisher服務](/help/forms/using/process-reporting/install-start-process-reporting.md#p-reportconfiguration-service-p).
 
-### ProcessDataStorageProvider服务 {#processdatastorageprovider-service-br}
+### ProcessDataStorageProvider服務 {#processdatastorageprovider-service-br}
 
-ProcessDataStorageProvider服务从ProcessDataPublisher服务接收流程数据，并将该数据保存到Process Reporting存储库。
+ProcessDataStorageProvider服務會從ProcessDataPublisher服務接收程式資料，並將資料儲存到Process Reporting儲存庫。
 
-有关配置服务的详细信息，请参阅 [配置ProcessDataStorageProvider服务](/help/forms/using/process-reporting/install-start-process-reporting.md#p-to-configure-the-process-reporting-repository-locations-p).
+如需設定服務的詳細資訊，請參閱 [設定ProcessDataStorageProvider服務](/help/forms/using/process-reporting/install-start-process-reporting.md#p-to-configure-the-process-reporting-repository-locations-p).
 
-### OSGi服务 {#osgi-service-br}
+### OSGi服務 {#osgi-service-br}
 
-QueryDataServlet使用此服务从Process Reporting存储库获取报表数据。
+QueryDataServlet使用此服務從Process Reporting存放庫取得報表資料。
 
-### QueryDataServlet服务 {#querydataservlet-service-br}
+### QueryDataServlet服務 {#querydataservlet-service-br}
 
-QueryDataServlet服务接受来自进程报告用户界面的查询。
+QueryDataServlet服務接受來自程式報告使用者介面的查詢。
 
-然后，该服务使用OSGi服务获取相关报表数据，处理该数据，并将该数据返回到用户界面。
+然後，服務會使用OSGi服務來取得相關報表資料、處理資料，然後將資料傳回至使用者介面。
 
-### “进程报告”用户界面 {#process-reporting-user-interface-br}
+### 程式報告使用者介面 {#process-reporting-user-interface-br}
 
-进程报表用户界面是一个基于Web浏览器的界面。 您可以使用此界面查看从AEM Forms数据库发布的进程和任务信息。
+「程式報表」使用者介面是網頁瀏覽器介面。 您可以使用此介面來檢視從AEM Forms資料庫發佈的程式與工作資訊。
 
-有关“进程报告”用户界面的介绍，请参见 [“进程报告”用户界面](/help/forms/using/process-reporting/introduction-process-reporting.md).
+如需「程式報告」使用者介面的簡介，請參閱 [程式報告使用者介面](/help/forms/using/process-reporting/introduction-process-reporting.md).
 
-### QueryDataServlet服务 {#querydataservlet-service-br-1}
+### QueryDataServlet服務 {#querydataservlet-service-br-1}
 
-QueryDataServlet服务接受来自进程报告用户界面的查询。
+QueryDataServlet服務接受來自程式報告使用者介面的查詢。
 
-然后，该服务使用OSGi服务获取相关报表数据，处理该数据，并将该数据返回到用户界面。
+然後，服務會使用OSGi服務來取得相關報表資料、處理資料，然後將資料傳回至使用者介面。
 
-### 自定义报表 {#custom-reports-br}
+### 自訂報表 {#custom-reports-br}
 
-您可以创建自己的自定义报表，并在“流程报表”用户界面的“自定义报表”选项卡中显示这些报表。
+您可以建立自己的自訂報表，並在「程式報表」使用者介面的「自訂報表」標籤中顯示這些報表。
 
-有关创建自定义报表的步骤，请参阅文章中的创建自定义报表 [正在报告中的自定义报表](/help/forms/using/process-reporting/process-reporting-custom-reports.md).
+如需建立自訂報表的步驟，請參閱文章中的若要建立自訂報表 [自訂報告進行中報告](/help/forms/using/process-reporting/process-reporting-custom-reports.md).

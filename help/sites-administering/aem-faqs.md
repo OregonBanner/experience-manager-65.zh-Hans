@@ -1,7 +1,7 @@
 ---
-title: AEM常见问题解答
+title: AEM常見問題集
 seo-title: AEM 6.4 frequently asked questions
-description: 使用这些常见问题解答来了解、配置和解决AEM中的常见工作流或问题。
+description: 使用這些常見問題集來瞭解、設定和疑難排解AEM中的常見工作流程或問題。
 seo-description: Use these FAQs to understand, configure, and troubleshoot common workflows or issues in AEM.
 uuid: 17d34923-f1ce-463b-8e9d-a713edcce51b
 contentOwner: jsyal
@@ -15,116 +15,116 @@ ht-degree: 0%
 
 ---
 
-# AEM常见问题解答 {#aem-faqs}
+# AEM常見問題集 {#aem-faqs}
 
-了解一些AEM故障排除和配置问题的答案。
+瞭解部分AEM疑難排解和設定問題的解答。
 
 ## Sites {#sites}
 
-### 如何配置无二进制分发？ {#how-do-i-configure-binary-less-distribution}
+### 如何設定無二進位的分發？ {#how-do-i-configure-binary-less-distribution}
 
-无二进制分发支持通过共享数据存储进行部署，并且涉及利用基于保险库的分发包导出程序(工厂PID： `org.apache.sling.distribution.serialization.impl.vlt.VaultDistributionPackageBuilderFactory`)包生成器。
+無二進位散發支援透過共用資料存放區進行部署，並涉及利用儲存庫型散發套件匯出程式的代理程式(工廠PID： `org.apache.sling.distribution.serialization.impl.vlt.VaultDistributionPackageBuilderFactory`)封裝產生器。
 
-启用无二进制模式后，分发的内容包包含对二进制文件的引用，而不是实际的二进制文件。
+啟用無二進位模式後，發佈的內容套件會包含對二進位檔的參照，而不是實際的二進位檔。
 
-#### 如何启用无二进制分发？ {#how-do-i-enable-binary-less-distribution}
+#### 如何啟用無二進位的分發？ {#how-do-i-enable-binary-less-distribution}
 
-要启用无二进制分发，请使用共享blob存储进行部署。
-查看 `useBinaryReferences` OSGI配置中具有工厂PID的属性( `org.apache.sling.distribution.serialization.impl.vlt.VaultDistributionPackageBuilderFactory`*)* 你的探员正在使用的密码。
+若要啟用無二進位的分發，請使用共用的blob存放區進行部署。
+檢查 `useBinaryReferences` OSGI設定中的屬性，具有工廠PID ( `org.apache.sling.distribution.serialization.impl.vlt.VaultDistributionPackageBuilderFactory`*)* 您的代理程式正在使用的識別碼。
 
-#### 如何在AEM Sites控制台中导航页面层次结构时自定义错误消息？ {#how-can-i-customize-the-error-messages-while-navigating-page-hierarchy-in-aem-sites-console}
+#### 在AEM Sites主控台中導覽頁面階層時，如何自訂錯誤訊息？ {#how-can-i-customize-the-error-messages-while-navigating-page-hierarchy-in-aem-sites-console}
 
-检查（Chrome浏览器的）网络面板，其中个人设置（JS尚未缩小）。
+檢查（Chrome瀏覽器的）網路面板，其中個人設定（JS尚未縮制）。
 
-查看 `Initiator` 列来确定请求的发起者。 它提供从中进行AJAX调用的文件和行号。 之后，您可以跟踪错误处理函数，并根据需要更改错误消息。
+檢視 `Initiator` 欄，以判斷要求的發起者為何。 它提供進行AJAX呼叫的來源檔案和行號。 稍後，您可以追蹤錯誤處理函式，並根據需求變更錯誤訊息。
 
-#### 如何在AEM中为内容作者创建语言副本时启用权限？ {#how-to-enable-permissions-while-creating-language-copy-for-content-authors-in-aem}
+#### 如何在AEM中為內容作者建立語言副本時啟用許可權？ {#how-to-enable-permissions-while-creating-language-copy-for-content-authors-in-aem}
 
-要创建语言复制功能，内容作者需要拥有以下权限： `/content/projects` 位置。
+若要建立語言複製功能，內容作者需要下列許可權： `/content/projects` 位置。
 
-如果还需要作者管理项目，则解决方法是将作者添加到 `project-administrators` 组。
+如果要求作者也管理專案，解決方法是將作者新增到 `project-administrators` 群組。
 
-#### 在为项目创建语言副本时如何更改格式？ {#how-to-change-the-format-while-creating-language-copy-for-a-project}
+#### 在建立專案的語言副本時，如何變更格式？ {#how-to-change-the-format-while-creating-language-copy-for-a-project}
 
-在创建翻译项目之前，在根中创建语言根和语言副本。
+在建立翻譯專案之前，請先在根內建立語言根和語言副本。
 
-例如，创建语言根于 `/content/geometrixx` 名称为 `fr_LU` (其名称为法语（卢森堡）)。 随后，从“引用”面板创建页面的语言副本，并导航到 `Create structure only` 中的选项 `Create & Translate`. 最后，创建一个翻译项目，然后将语言副本添加到翻译作业。
+例如，建立語言根於 `/content/geometrixx` 名稱為 `fr_LU` (且標題為法文（盧森堡）)。 接著，從「參考」面板建立頁面的語言副本，並導覽至 `Create structure only` 中的選項 `Create & Translate`. 最後，建立翻譯專案，然後將語言副本新增至翻譯工作。
 
-有关详细信息，请参阅以下其他资源：
+如需詳細資訊，請參閱下列其他資源：
 
-* [准备内容以进行翻译](/help/sites-administering/tc-prep.md)
-* [管理翻译项目](/help/sites-administering/tc-manage.md)
+* [準備翻譯內容](/help/sites-administering/tc-prep.md)
+* [管理翻譯專案](/help/sites-administering/tc-manage.md)
 
-#### 如何审核AEM功能（如登录尝试和ACL或权限更改）？ {#how-to-audit-aem-capabilities-such-as-login-attempts-and-acl-or-permission-changes}
+#### 如何稽核AEM功能，例如，登入嘗試和ACL或許可權變更？ {#how-to-audit-aem-capabilities-such-as-login-attempts-and-acl-or-permission-changes}
 
-AEM引入了记录管理更改的功能，以便更好地进行故障排除和审核。 默认情况下，该信息记录在 `error.log` 文件。 为便于监视，建议将它们重定向到单独的日志文件。
-要将输出重定向到单独的日志文件，请参见 [如何在AEM中审核用户管理操作](/help/sites-administering/audit-user-management-operations.md).
+AEM已引入記錄管理變更的功能，以便進行更好的疑難排解和稽核。 依預設，資訊會記錄在 `error.log` 檔案。 為了更輕鬆地進行監視，建議將它們重新導向到單獨的記錄檔。
+若要將輸出重新導向至個別的記錄檔，請參閱 [如何在AEM中稽核使用者管理作業](/help/sites-administering/audit-user-management-operations.md).
 
-#### 如何默认启用SSL？ {#how-to-enable-ssl-by-default}
+#### 如何預設啟用SSL？ {#how-to-enable-ssl-by-default}
 
-Adobe Experience Manager (AEM) 6.4附带SSL向导，并提供用于配置Jetty和Granite Jetty SSL支持的用户界面。
+Adobe Experience Manager (AEM) 6.4隨SSL精靈提供，並提供設定Jetty和Granite Jetty SSL支援的使用者介面。
 
-要默认启用SSL，请参阅 [默认SSL](/help/sites-administering/ssl-by-default.md).
+若要預設啟用SSL，請參閱 [SSL預設值](/help/sites-administering/ssl-by-default.md).
 
-#### 从移动应用程序（最好是React Native）中使用AEM Content Services时，建议的架构是什么？ {#what-is-the-recommended-architecture-when-using-aem-s-content-services-from-a-mobile-app-ideally-react-native}
+#### 從行動應用程式（最好是React Native）使用AEM Content Services時，建議使用什麼架構？ {#what-is-the-recommended-architecture-when-using-aem-s-content-services-from-a-mobile-app-ideally-react-native}
 
-内容服务基于Sling模型，并且AEM开发人员必须为导出的每个组件提供Sling模型pojo。
+內容服務以Sling模型為基礎，AEM開發人員必須為匯出的每個元件提供Sling模型pojo。
 
-要了解如何从React应用程序使用AEM内容服务，请参阅 [AEM Content Services入门](https://helpx.adobe.com/experience-manager/kt/sites/using/content-services-tutorial-use.html) 教程。
+若要瞭解如何從React應用程式使用AEM內容服務，請參閱 [開始使用AEM內容服務](https://helpx.adobe.com/experience-manager/kt/sites/using/content-services-tutorial-use.html) 教學課程。
 
-此外，如果开发人员希望导出组件树，他们还可以实施 `ComponentExporter` 和 `ContainerExporter` 界面以及使用 `ModelFactory` 对子元件进行迭代并返回其模型表示。 请参阅以下资源：
+此外，如果開發人員想要匯出元件的樹狀結構，也可以實作 `ComponentExporter` 和 `ContainerExporter` 介面以及使用 `ModelFactory` 反複子元件並傳回其模型表示。 請參閱下列資源：
 
 [1] [Adobe-Marketing-Cloud/aem-core-wcm-components](https://github.com/Adobe-Marketing-Cloud/aem-core-wcm-components/blob/master/bundles/core/src/main/java/com/adobe/cq/wcm/core/components/internal/models/v1/PageImpl.java#L245)
 
 [2] [Apache Sling ：： Sling模型](https://sling.apache.org/documentation/bundles/models.html)
 
-#### 如何禁用AEM 6.4调查弹出窗口？ {#how-to-disable-aem-survey-pop-up}
+#### 如何停用AEM 6.4調查快顯視窗？ {#how-to-disable-aem-survey-pop-up}
 
-您可以使用Touch UI或Web控制台选择收集使用情况统计数据。 有关详细说明，请参阅 [选择收集汇总的使用情况统计数据](/help/sites-deploying/opt-in-aggregated-usage-statistics.md).
+您可以使用Touch UI或Web Console來選擇使用狀況統計資料的收集。 如需詳細指示，請參閱 [選擇加入彙總使用狀況統計資料的收集](/help/sites-deploying/opt-in-aggregated-usage-statistics.md).
 
-#### 是否有合适的资源重点介绍升级到AEM 6.4的主要功能？ {#is-there-a-good-resource-that-highlights-the-key-features-for-upgrading-to-aem}
+#### 是否有足夠的資源重點說明升級至AEM 6.4的主要功能？ {#is-there-a-good-resource-that-highlights-the-key-features-for-upgrading-to-aem}
 
-请参阅 [了解升级AEM的原因](https://helpx.adobe.com/experience-manager/kt/platform-repository/using/upgrade-aem-article-understand.html) 该指南为客户介绍了考虑升级到最新版Adobe Experience Manager的关键功能的概要划分。
+請參閱 [瞭解升級AEM的原因](https://helpx.adobe.com/experience-manager/kt/platform-repository/using/upgrade-aem-article-understand.html) 說明考慮升級至最新版Adobe Experience Manager之客戶的重要功能概要劃分。
 
 ## Assets {#assets}
 
-### 在上传MP4文件（例如，使用拖放方法）时，为何资产工作流会重复自身？ {#why-the-assets-workflow-repeats-itself-while-uploading-mp-files-for-example-using-drag-and-drop-method}
+### 為何上傳MP4檔案時（例如使用拖放方法）「資產」工作流程會自我重複？ {#why-the-assets-workflow-repeats-itself-while-uploading-mp-files-for-example-using-drag-and-drop-method}
 
-如果用户上传的电影文件在asset节点下没有删除权限，则删除块节点会失败，并且上传会重新启动。
+如果上傳影片檔案的使用者在asset節點下沒有刪除許可權，刪除區塊節點會失敗，且上傳會重新啟動。
 
-#### 创建语言副本时，OOTB配置的默认设置是什么？ {#what-are-the-default-settings-for-ootb-configurations-while-creating-language-copy}
+#### 建立語言副本時，OOTB設定的預設設定為何？ {#what-are-the-default-settings-for-ootb-configurations-while-creating-language-copy}
 
-通过Touch UI创建语言副本时(**引用** -> **更新语言副本**)，将在新语言下创建新的DAM文件夹，并从该文件夹中引用资产。
+當您透過Touch UI建立語言副本時(**引用** -> **更新語言副本**)，即會在新語言下建立新的DAM資料夾，並從該資料夾中參考資產。
 
-这是OOTB配置的默认设置。 您可以设置 **翻译页面资产** = **不翻译** 在翻译配置中。
-对于AEM 6.4， **工具** > **Cloud Services** > **翻译云服务**.
+這是OOTB設定的預設設定。 您可以設定 **翻譯頁面資產** = **不翻譯** 翻譯設定。
+若為AEM 6.4， **工具** > **Cloud Services** > **翻譯雲端服務**.
 
-#### 如何禁用会导致AEM SegmentStore (AEM 6.3.1.1)呈指数级增长的AEM组件？ {#how-to-disable-an-aem-component-causing-exponential-growth-for-the-aem-segmentstore-aem}
+#### 如何停用造成AEM SegmentStore (AEM 6.3.1.1)指數式增長的AEM元件？ {#how-to-disable-an-aem-component-causing-exponential-growth-for-the-aem-segmentstore-aem}
 
-您可以禁用OSGi组件禁用程序。 要使用此服务，请参阅 [OSGi组件禁用](https://adobe-consulting-services.github.io/acs-aem-commons/features/osgi-disablers/component-disabler/index.html).
+您可以停用OSGi元件停用程式。 若要使用此服務，請參閱 [OSGi元件停用器](https://adobe-consulting-services.github.io/acs-aem-commons/features/osgi-disablers/component-disabler/index.html).
 
-作为解决方法，您还可以通过UI或手动禁用组件 `curl` 命令（如下示例），在每次AEM重新启动后。
+作為因應措施，您也可以透過UI或透過 `curl` 命令（如下所示），在每次重新啟動AEM之後。
 
 `curl -u admin:$(pass CQ_Admin) 'https://localhost:4502/system/console/components/com.day.cq.analytics.sitecatalyst.impl.importer.ReportImporter' --data 'action=disable'`
 
-#### 如何自定义管理控制台？ {#how-to-customize-admin-consoles}
+#### 如何自訂管理主控台？ {#how-to-customize-admin-consoles}
 
-AEM提供了各种机制，使您能够自定义创作实例的控制台和页面创作功能。 要了解如何创建自定义控制台并自定义控制台的默认视图，请参阅 [自定义控制台](/help/sites-developing/customizing-consoles-touch.md).
+AEM提供各種機制，讓您能夠自訂編寫執行個體的主控台和頁面編寫功能。 若要瞭解如何建立自訂主控台及自訂主控台的預設檢視，請參閱 [自訂主控台](/help/sites-developing/customizing-consoles-touch.md).
 
-#### 基于CoralUI 2的组件与基于CoralUI 3的组件之间有何区别？ {#what-is-the-difference-between-coralui-and-coralui-based-components}
+#### CoralUI 2和CoralUI 3元件有何不同？ {#what-is-the-difference-between-coralui-and-coralui-based-components}
 
-为Coral3创建了一组新的Granite UI Foundation的Sling组件，该组件位于 [/libs/granite/ui/components/coral/foundation.](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/server.html) 其中一组用于基于CoralUI 2的组件，另一组用于基于CoralUI 3的组件。 新集将不仅仅是旧集的复制粘贴，而是将被清理（例如，精简、删除已弃用的功能）。 因此，建议页面仅使用基于CoralUI 3或基于CoralUI 2的集。
+已為Coral3建立一組新的Granite UI Foundation的Sling元件，位於 [/libs/granite/ui/components/coral/foundation.](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/server.html) 一組適用於CoralUI 2元件，另一組適用於CoralUI 3元件。 新集不會只是舊集的複製貼上，而是會加以清除（例如精簡、移除已棄用的功能）。 因此，建議頁面僅使用以CoralUI 3或CoralUI 2為基礎的組合。
 
-欲了解详情，请参阅 [基于CoralUI 3的迁移指南](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/components/legacy/coral2/migration.html).
+若要深入瞭解，請參閱 [CoralUI 3型移轉指南](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/components/legacy/coral2/migration.html).
 
-#### 如何在AEM Assets中自定义搜索组件？ {#how-to-customize-the-search-component-in-aem-assets}
+#### 如何在AEM Assets中自訂搜尋元件？ {#how-to-customize-the-search-component-in-aem-assets}
 
-要了解搜索提升/排名和进一步实施信息，请参阅 [简单搜索实施指南](https://helpx.adobe.com/experience-manager/kt/sites/using/search-tutorial-develop.html).
+若要瞭解搜尋提升/排名和進一步實作資訊，請參閱 [簡易搜尋實作指南](https://helpx.adobe.com/experience-manager/kt/sites/using/search-tutorial-develop.html).
 
-简单搜索实施来自2017 Summit实验室AEM Search Demystified的材料。
+簡單搜尋實作是來自2017 Summit lab AEM Search Demystified的資料。
 
-#### 是否可以为WordPress构建插件，以便客户访问Adobe资源选取器来选择图像？ {#is-it-possible-to-build-plugin-for-wordpress-that-allows-a-customer-to-access-adobe-asset-picker-to-select-images}
+#### 是否可能建立WordPress的外掛程式，讓客戶存取Adobe資產選擇器以選取影像？ {#is-it-possible-to-build-plugin-for-wordpress-that-allows-a-customer-to-access-adobe-asset-picker-to-select-images}
 
-是，使用WordPress的客户可以使用Adobe资产选取器从其AEM Assets服务器中选择图像，以添加到其WordPress网站上的帖子中。
+可以，使用WordPress的客戶可以使用Adobe資產選擇器，從其AEM Assets伺服器選取影像，以新增至其WordPress網站上的貼文。
 
-请参阅 [资源选择器](../assets/search-assets.md#assetpicker) 了解更多信息。
+請參閱 [資產選擇器](../assets/search-assets.md#assetpicker) 以取得詳細資訊。

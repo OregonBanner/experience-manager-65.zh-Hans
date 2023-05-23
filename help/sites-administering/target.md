@@ -1,7 +1,7 @@
 ---
 title: 与 Adobe Target 集成
 seo-title: Integrating with Adobe Target
-description: 了解AEM与Adobe Target的集成。
+description: 瞭解如何整合AEM與Adobe Target。
 seo-description: Learn about integrating AEM with Adobe Target.
 uuid: b90346e8-9757-4272-a870-bbe5e647303f
 contentOwner: Guillaume Carlino
@@ -19,7 +19,7 @@ ht-degree: 66%
 
 # 与 Adobe Target 集成{#integrating-with-adobe-target}
 
-作为 Adobe Marketing Cloud 的一部分，[Adobe Target](https://www.adobe.com/ro/solutions/testing-targeting/testandtarget.html) 允许您通过在所有渠道中进行定位和衡量来提高内容相关性。营销人员使用 Adobe Target 来设计和执行在线测试、创建动态受众区段（基于行为）以及自动定位内容和在线体验。AEM采用了Adobe Target Standard中使用的定位工作流。 如果使用Target，您将熟悉AEM中的定位编辑环境。
+作为 Adobe Marketing Cloud 的一部分，[Adobe Target](https://www.adobe.com/ro/solutions/testing-targeting/testandtarget.html) 允许您通过在所有渠道中进行定位和衡量来提高内容相关性。营销人员使用 Adobe Target 来设计和执行在线测试、创建动态受众区段（基于行为）以及自动定位内容和在线体验。AEM已採用Adobe Target Standard中使用的目標定位工作流程。 如果您使用Target，則會熟悉AEM中的目標定位編輯環境。
 
 将 AEM Sites 与 Adobe Target 集成以个性化页面中的内容：
 
@@ -30,18 +30,18 @@ ht-degree: 66%
 
 要与 Target 集成，请执行以下任务：
 
-1. [执行必备任务](/help/sites-administering/target-requirements.md)：向 Adobe Target 注册并配置 AEM 创作实例的某些方面。您的Adobe Target帐户必须至少具有**审批者**级别的权限。 此外，您必须保护发布节点上的活动设置，以便用户无法访问。
+1. [执行必备任务](/help/sites-administering/target-requirements.md)：向 Adobe Target 注册并配置 AEM 创作实例的某些方面。您的Adobe Target帳戶必須至少具有**核准者**層級的許可權。 此外，您必须保护发布节点上的活动设置，以便用户无法访问。
 
 1. 可以任选其一：
 
-   1. [选择加入Adobe Target](/help/sites-administering/opt-in.md)：选择加入向导会获取您的Target帐户信息，并创建Adobe Target云配置和Target框架。 该向导还会将您的站点与Target框架相关联。 如果向导无法连接到目标，请参阅 [连接故障排除](/help/sites-administering/target-configuring.md#troubleshooting-target-connection-problems) 部分。 然后，您可以 [修改默认云配置](/help/sites-administering/target-configuring.md#modifying-the-opt-in-wizard-configurations)：如有必要，请修改选择加入向导创建的云配置和框架。 例如，修改框架以将其他上下文数据发送到Target。 如果要使用Adobe Analytics作为Adobe Target的报表源，则需要修改云配置以指向A4T配置。
-   1. [手动与Adobe Target集成](/help/sites-administering/target-configuring.md#manually-integrating-with-adobe-target).
+   1. [選擇加入Adobe Target](/help/sites-administering/opt-in.md)：選擇加入精靈會考量您的Target帳戶資訊，並建立Adobe Target雲端設定和Target架構。 精靈也會將您的網站與Target架構建立關聯。 如果精靈無法連線到目標，請參閱 [連線故障診斷](/help/sites-administering/target-configuring.md#troubleshooting-target-connection-problems) 區段。 然後，您可以 [修改預設雲端設定](/help/sites-administering/target-configuring.md#modifying-the-opt-in-wizard-configurations)：如有必要，請修改選擇加入精靈建立的雲端設定和架構。 例如，修改架構以傳送其他內容資料至Target。 如果您想要使用Adobe Analytics做為Adobe Target的報表來源，您需要修改雲端設定以指向A4T設定。
+   1. [手動與Adobe Target整合](/help/sites-administering/target-configuring.md#manually-integrating-with-adobe-target).
 
 1. [配置活动](/help/sites-authoring/activitylib.md)：将您的活动与 Target 云配置相关联。
 
 >[!NOTE]
 >
->另请参阅 [使用DTM将AEM与Adobe Target和Adobe Analytics集成](https://helpx.adobe.com/experience-manager/using/integrate-digital-marketing-solutions.html).
+>另請參閱 [使用DTM整合AEM與Adobe Target和Adobe Analytics](https://helpx.adobe.com/experience-manager/using/integrate-digital-marketing-solutions.html).
 
 >[!NOTE]
 >
@@ -66,7 +66,7 @@ ht-degree: 66%
 
 ## 背景信息源 {#background-information-sources}
 
-将AEM与Adobe Target集成需要Adobe Target、AEM Activities管理和AEM Audiences管理的知识。 您应熟悉以下信息：
+將AEM與Adobe Target整合需要Adobe Target、AEM Activities管理和AEM Audiences管理的知識。 您应熟悉以下信息：
 
 * Adobe Target（请参阅 [Adobe Target 文档](https://experienceleague.adobe.com/docs/target/using/target-home.html)）。
 * AEM 活动控制台（请参阅[管理活动](/help/sites-authoring/activitylib.md)）。

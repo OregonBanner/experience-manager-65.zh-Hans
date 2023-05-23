@@ -1,7 +1,7 @@
 ---
-title: AEM Forms工作区自定义的一般步骤
+title: AEM Forms工作區自訂的一般步驟
 seo-title: Generic steps for AEM Forms workspace customization
-description: 如何开始自定义AEM Forms工作区用户界面。
+description: 如何開始自訂AEM Forms工作區使用者介面。
 seo-description: How to get started customizing AEM Forms workspace user interface.
 uuid: da6310b4-1c58-468d-85c6-975fd2c141f9
 contentOwner: robhagat
@@ -18,35 +18,35 @@ ht-degree: 1%
 
 ---
 
-# AEM Forms工作区自定义的一般步骤 {#generic-steps-for-aem-forms-workspace-customization}
+# AEM Forms工作區自訂的一般步驟 {#generic-steps-for-aem-forms-workspace-customization}
 
-执行任何自定义的常规步骤包括：
+執行任何自訂的一般步驟如下：
 
-1. 通过访问登录到CRXDE Lite `https://'[server]:[port]'/lc/crx/de/index.jsp`.
-1. 创建 `sling:Folder` 已命名的文件夹 `ws` 在 `/apps`，如果它不存在。 创建 `sling:Folder` 文件夹，右键单击 `apps` 文件夹并选择 **[!UICONTROL 创建]** > **[!UICONTROL 创建节点]**. 将名称指定为 `ws`，选择类型 `sling:Folder` 并单击 **[!UICONTROL 确定]**. 单击 **[!UICONTROL 全部保存]**.
-1. 浏览到 `/apps/ws`，并导航到 **[!UICONTROL 访问控制]** 选项卡。
-1. 选择 **[!UICONTROL 存储库]** 选项。 在 **[!UICONTROL 访问控制]** 列表，单击 **[!UICONTROL +]** 以添加新条目。 单击 **[!UICONTROL +]** 再来一次。
-1. 搜索并选择 **PERM_WORKSPACE_USER** 主体。
+1. 透過存取登入CRXDE Lite `https://'[server]:[port]'/lc/crx/de/index.jsp`.
+1. 建立 `sling:Folder` 資料夾已命名 `ws` 於 `/apps`，如果它不存在。 若要建立 `sling:Folder` 資料夾，用滑鼠右鍵按一下 `apps` 資料夾並選取 **[!UICONTROL 建立]** > **[!UICONTROL 建立節點]**. 將名稱指定為 `ws`，選取型別為 `sling:Folder` 並按一下 **[!UICONTROL 確定]**. 按一下 **[!UICONTROL 全部儲存]**.
+1. 瀏覽至 `/apps/ws`，並導覽至 **[!UICONTROL 存取控制]** 標籤。
+1. 選取 **[!UICONTROL 存放庫]** 選項。 在 **[!UICONTROL 存取控制]** 清單，按一下 **[!UICONTROL +]** 以新增專案。 按一下 **[!UICONTROL +]** 再來一次。
+1. 搜尋並選取 **PERM_WORKSPACE_USER** 主體。
 
-   ![选择PERM_WORKSPACE_USER主体作为自定义HTML工作区的常规步骤的一部分](assets/perm_workspace_user.png)
+   ![選取PERM_WORKSPACE_USER主體作為自訂HTML工作區的一般步驟的一部分](assets/perm_workspace_user.png)
 
-1. 授予 `jcr:read` 主体权限。
-1. 单击 **[!UICONTROL 全部保存]**.
-1. 复制 `GET.jsp`， `index`、和 `html.jsp` 文件来自 `/libs/ws` 文件夹到 `/apps/ws` 文件夹。
-1. 复制 `/libs/ws/locales` 中的文件夹 `/apps/ws` 文件夹。 单击 **[!UICONTROL 全部保存]**.
-1. 更新中的参照和相对路径 `GET.jsp` 文件，如下所示，然后单击 **[!UICONTROL 全部保存]**.
+1. 授予 `jcr:read` 主體許可權。
+1. 按一下 **[!UICONTROL 全部儲存]**.
+1. 複製 `GET.jsp`， `index`、和 `html.jsp` 檔案來自 `/libs/ws` 資料夾至 `/apps/ws` 資料夾。
+1. 複製 `/libs/ws/locales` 中的資料夾 `/apps/ws` 資料夾。 按一下 **[!UICONTROL 全部儲存]**.
+1. 更新中的參照和相對路徑 `GET.jsp` 檔案，如下所示，然後按一下 **[!UICONTROL 全部儲存]**.
 
    ```javascript
    <meta http-equiv="refresh" content="0;URL='/lc/apps/ws/index.html'" />
    ```
 
-1. 对CSS自定义项执行以下操作：
+1. 請針對CSS自訂執行下列動作：
 
-   1. 导航到 `/apps/ws` 文件夹并创建一个名为的新文件夹 `css`.
+   1. 導覽至 `/apps/ws` 資料夾並建立名為的新資料夾 `css`.
 
-   1. 在 `css` 文件夹，创建一个名为的新文件 `newStyle.css`.
+   1. 在 `css` 資料夾，建立名為的新檔案 `newStyle.css`.
 
-   1. 打开 `/apps/ws/html`.jsp和更改自
+   1. 開啟 `/apps/ws/html`.jsp和變更自
 
    ```javascript
    <link lang="en" rel="stylesheet" type="text/css" href="css/style.css" />
@@ -63,9 +63,9 @@ ht-degree: 1%
 
    >[!NOTE]
    >
-   >将用户定义CSS文件的条目放在style.css条目之后，如上所示。
+   >將使用者定義的CSS檔案專案放在style.css專案之後，如上所示。
 
-1. 在/apps/ws/html.jsp文件中，从
+1. 在/apps/ws/html.jsp檔案中，從
 
    ```jsp
    <script data-main="js/main" src="js/libs/require/require.js"></script>
@@ -79,22 +79,22 @@ ht-degree: 1%
 
 1. 执行以下操作：
 
-   1. 创建名为的文件夹 `js` 在 `/apps/ws`. 单击 **[!UICONTROL 全部保存]**.
+   1. 建立名為的資料夾 `js` 於 `/apps/ws`. 按一下 **[!UICONTROL 全部儲存]**.
 
-   1. 创建名为的文件夹 `libs` 在 `/apps/ws/js`. 单击 **[!UICONTROL 全部保存]**.
+   1. 建立名為的資料夾 `libs` 於 `/apps/ws/js`. 按一下 **[!UICONTROL 全部儲存]**.
 
-   1. 复制 `/libs/ws/js/libs/jqueryui` 文件夹到 `/apps/ws/js/libs`. 单击 **[!UICONTROL 全部保存]**.
+   1. 複製 `/libs/ws/js/libs/jqueryui` 資料夾至 `/apps/ws/js/libs`. 按一下 **[!UICONTROL 全部儲存]**.
 
-1. 对HTML自定义执行以下操作：
+1. 請針對HTML自訂執行下列動作：
 
-   1. 下 `/apps/ws/js`，创建一个名为的文件夹 `runtime`. 单击 **[!UICONTROL 全部保存]**.
+   1. 下 `/apps/ws/js`，建立名為的資料夾 `runtime`. 按一下 **[!UICONTROL 全部儲存]**.
 
-   1. 下 `/apps/ws/js/runtime`，创建一个名为的文件夹 `templates`. 单击 **[!UICONTROL 全部保存]**.
+   1. 下 `/apps/ws/js/runtime`，建立名為的資料夾 `templates`. 按一下 **[!UICONTROL 全部儲存]**.
 
-   1. 复制 `/libs/ws/js/main.js` 到 `/apps/ws/js/main.js`.
+   1. 複製 `/libs/ws/js/main.js` 至 `/apps/ws/js/main.js`.
 
-   1. 将/libs/ws/js/registry.js复制到 `/apps/ws/js/registry.js`.
+   1. 將/libs/ws/js/registry.js複製到 `/apps/ws/js/registry.js`.
 
-1. 单击 **[!UICONTROL 全部保存]**、清除缓存和刷新AEM Forms工作区。
+1. 按一下 **[!UICONTROL 全部儲存]**，清除快取，然後重新整理AEM Forms工作區。
 
-   访问URL `https://'[server]:[port]'/lc/ws` 并使用管理员/密码凭据登录。 浏览器重定向到 `https://'[server]:[port]'/lc/apps/ws/index.html`.
+   存取URL `https://'[server]:[port]'/lc/ws` 並使用管理員/密碼認證登入。 瀏覽器重新導向至 `https://'[server]:[port]'/lc/apps/ws/index.html`.

@@ -1,6 +1,6 @@
 ---
-title: 使用离线重新索引以减少升级期间的停机时间
-description: 了解如何使用离线重新索引方法以减少执行AEM升级时的系统停机时间。
+title: 使用離線重新索引以減少升級期間的停機時間
+description: 瞭解如何使用離線重新索引方法，以減少執行AEM升級時的系統停機時間。
 contentOwner: sarchiz
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: upgrading
@@ -14,46 +14,46 @@ ht-degree: 1%
 
 ---
 
-# 使用离线重新索引以减少升级期间的停机时间 {#offline-reindexing-to-reduce-downtime-during-upgrades}
+# 使用離線重新索引以減少升級期間的停機時間 {#offline-reindexing-to-reduce-downtime-during-upgrades}
 
 ## 简介 {#introduction}
 
-升级Adobe Experience Manager的主要挑战之一是执行就地升级时与创作环境相关的停机。 内容作者在升级期间将无法访问环境。 因此，最好将执行升级所需的时间减至最少。 对于大型存储库，特别是AEM Assets项目（通常具有大型数据存储和每小时高级别的资源上传），重新索引Oak索引占升级时间的显着百分比。
+升級Adobe Experience Manager的主要挑戰之一，是執行就地升級時與作者環境相關的停機時間。 內容作者在升級期間將無法存取環境。 因此，最好將執行升級所需的時間減至最少。 對於大型存放庫，尤其是AEM Assets專案，通常具有大型資料存放區和每小時高水準的資產上傳，重新索引Oak索引需要很大一部分升級時間。
 
-本节介绍如何使用Oak-run工具重新索引资料档案库 **早于** 执行升级，从而减少实际升级期间的停机时间。 所介绍的步骤适用于 [Lucene](https://jackrabbit.apache.org/oak/docs/query/lucene.html) 版本AEM 6.4及更高版本的索引。
+本節說明如何使用Oak-run工具來重新索引儲存區域 **早於** 執行升級，進而減少實際升級期間的停機時間。 顯示的步驟可套用至 [Lucene](https://jackrabbit.apache.org/oak/docs/query/lucene.html) AEM 6.4及更高版本的索引。
 
 ## 概述 {#overview}
 
-随着功能集的扩展，新版本的AEM引入了对Oak索引定义的更改。 对Oak索引所做的更改会在升级AEM实例时强制重新索引。 由于资产中的文本（例如PDF文件中的文本）被提取并编制索引，因此重新索引对于资产部署而言代价高昂。 使用MongoMK存储库，数据通过网络保留，进一步增加了重新索引所花费的时间。
+新版本的AEM會在功能集展開時引入Oak索引定義的變更。 Oak索引的變更會在升級AEM執行個體時強制重新索引。 由於資產中的文字（例如PDF檔案中的文字）會被擷取並編制索引，因此重新索引對於資產部署而言會很昂貴。 使用MongoMK存放庫時，資料會透過網路持續存在，進一步增加重新索引所需的時間。
 
-大多数客户在升级过程中面临的问题是缩短停机时间。 解决方案是 **跳过** 升级期间的重新索引活动。 这可以通过创造新的法令来实现 **优先** 执行升级，然后在升级期间直接导入它们。
+大多數客戶在升級期間面臨的問題是縮短停機時間。 解決方案是 **略過** 在升級期間重新索引活動。 這可以透過建立新索引來達成 **上一個** 以執行升級，然後在升級期間直接匯入它們。
 
-## 方法 {#approach}
+## 方針 {#approach}
 
 ![offline-reindexing-upgrade-text-extraction](assets/offline-reindexing-upgrade-process.png)
 
-建议是在升级之前使用，根据目标AEM版本的索引定义创建索引 [Oak-run](/help/sites-deploying/indexing-via-the-oak-run-jar.md) 工具。 上图显示了离线重新索引方法。
+其想法是在升級之前建立索引，以使用目標AEM版本的索引定義 [Oak-run](/help/sites-deploying/indexing-via-the-oak-run-jar.md) 工具。 上圖顯示離線重新索引方法。
 
-此外，这是方法中描述的步骤顺序：
+此外，這是步驟的順序，如方法所述：
 
-1. 首先提取二进制文件中的文本
-2. 目标索引定义已创建
-3. 已创建脱机索引
-4. 然后，在升级过程中导入索引
+1. 系統會先擷取二進位檔中的文字
+2. 目標索引定義已建立
+3. 已建立離線索引
+4. 然後在升級過程中匯入索引
 
 ### 文本提取 {#text-extraction}
 
-要在AEM中启用完全索引，将提取二进制文件(如PDF)中的文本并将其添加到索引中。 在索引过程中，这通常是代价高昂的步骤。 文本提取是一个优化步骤，尤其对于在资产存储库存储大量二进制文件时重新索引资产存储库而言。
+若要在AEM中啟用完整索引，會擷取二進位檔(例如PDF)的文字，並將其新增至索引。 在索引過程中，這通常是代價高昂的步驟。 文字擷取是提倡的最佳化步驟，特別是當資產存放庫儲存大量二進位檔時，建議重新索引資產存放庫。
 
 ![offline-reindexing-upgrade-text-extraction](assets/offline-reindexing-upgrade-text-extraction.png)
 
-使用带有tika库的oak-run工具，可以提取存储在系统中的二进制文件中的文本。 生产系统的克隆可以在升级前进行，并可用于此文本提取过程。 然后，此进程通过执行以下步骤来创建文本存储：
+使用包含Tika程式庫的Oak-run工具，可擷取儲存在系統中的二進位檔文字。 您可以在升級前複製生產系統，並可用於此文字擷取程式。 此程式接著會透過下列步驟建立文字存放區：
 
-**1. 遍历资料档案库并收集二进制文件的详细信息**
+**1. 周遊儲存區域並收集二進位檔的詳細資訊**
 
-此步骤会生成一个包含二进制文件的元组的CSV文件，其中包含一个路径和一个blob ID。
+此步驟會產生一個包含二進位檔案元組的CSV檔案，其中包含路徑和blob id。
 
-从要创建索引的目录执行以下命令。 以下示例假定存储库主目录。
+從要建立索引的目錄執行下列命令。 以下範例假設是存放庫主目錄。
 
 ```
 java java -jar oak-run.jar tika <nodestore path> --fds-path <datastore path> --data-file text-extraction/oak-binary-stats.csv --generate
@@ -61,13 +61,13 @@ java java -jar oak-run.jar tika <nodestore path> --fds-path <datastore path> --d
 
 位置 `nodestore path` 是 `mongo_ur` 或 `crx-quickstart/repository/segmentstore/`
 
-使用 `--fake-ds-path=temp` 参数而不是 `–fds-path` 以加快该过程。
+使用 `--fake-ds-path=temp` 引數而非 `–fds-path` 以加速處理作業。
 
-**2. 重用现有索引中可用的二进制文本存储**
+**2. 重複使用現有索引中可用的二進位文字存放區**
 
-从现有系统中转储索引数据并提取文本存储。
+從現有系統傾印索引資料並擷取文字存放區。
 
-可以使用以下命令转储现有索引数据：
+您可以使用以下命令傾印現有的索引資料：
 
 ```
 java -jar oak-run.jar index <nodestore path> --fds-path=<datastore path> --index-dump
@@ -75,51 +75,51 @@ java -jar oak-run.jar index <nodestore path> --fds-path=<datastore path> --index
 
 位置 `nodestore path` 是 `mongo_ur` 或 `crx-quickstart/repository/segmentstore/`
 
-然后，使用上述索引转储填充存储：
+然後，使用上述索引傾印來填入存放區：
 
 ```
 java -jar oak-run.jar tika --data-file text-extraction/oak-binary-stats.csv --store-path text-extraction/store --index-dir ./indexing-result/index-dumps/<oak-index-name>/data populate
 ```
 
-位置 `oak-index-name` 是全文索引的名称，例如“lucene”。
+位置 `oak-index-name` 是全文檢索索引的名稱，例如&quot;lucene&quot;。
 
-**3. 使用tika库为上述步骤中遗漏的二进制文件运行文本提取过程**
+**3. 針對上述步驟中遺漏的二進位檔案，使用Tika程式庫執行文字擷取程式**
 
 ```
 java -cp oak-run.jar:tika-app-1.21.jar org.apache.jackrabbit.oak.run.Main tika --data-file text-extraction/oak-binary-stats.csv --store-path text-extraction/store --fds-path <datastore path> extract
 ```
 
-位置 `datastore path` 是二进制数据存储的路径。
+位置 `datastore path` 是二進位資料存放區的路徑。
 
-创建的文本存储区可以更新，并可在将来重新索引方案。
+建立的文字存放區可以更新，並可在未來重新索引情境時使用。
 
-有关文本提取过程的更多详细信息，请参阅 [Oak-run文档](https://jackrabbit.apache.org/oak/docs/query/pre-extract-text.html).
+如需有關文字擷取程式的詳細資訊，請參閱 [Oak-run檔案](https://jackrabbit.apache.org/oak/docs/query/pre-extract-text.html).
 
-### 脱机重新索引 {#offline-reindexing}
+### 離線重新索引 {#offline-reindexing}
 
 ![offline-reindexing-upgrade-offline-reindexing](assets/offline-reindexing-upgrade-offline-reindexing.png)
 
-在升级前脱机创建Lucene索引。 如果使用MongoMK，建议直接在某个MongoMk节点上运行它，因为这可避免网络开销。
+在升級前離線建立Lucene索引。 若使用MongoMK，建議直接在其中一個MongoMk節點上執行，以避免網路負荷。
 
-为了脱机创建索引，请执行以下步骤：
+若要離線建立索引，請遵循下列步驟：
 
-**1. 为目标AEM版本生成Oak Lucene索引定义**
+**1. 產生目標AEM版本的Oak Lucene索引定義**
 
-转储现有索引定义。 发生更改的索引定义是使用AdobeAEM版本和oak-run的Granite存储库包生成的。
+傾印現有的索引定義。 發生變更的索引定義是使用目標AEM版本和Oak-run的AdobeGranite存放庫套件組合產生的。
 
-要从以下位置转储索引定义： **源** AEM实例，运行此命令：
+若要從傾印索引定義 **source** AEM執行個體，執行此命令：
 
 >[!NOTE]
 >
->有关转储索引定义的更多详细信息，请参阅 [Oak文档](https://jackrabbit.apache.org/oak/docs/query/oak-run-indexing.html#async-index-data).
+>如需有關轉儲索引定義的詳細資訊，請參閱 [Oak檔案](https://jackrabbit.apache.org/oak/docs/query/oak-run-indexing.html#async-index-data).
 
 ```
 java -jar oak-run.jar index --fds-path <datastore path> <nodestore path> --index-definitions
 ```
 
-位置 `datastore path` 和 `nodestore path` 来自 **源** AEM实例。
+位置 `datastore path` 和 `nodestore path` 來自 **source** AEM執行個體。
 
-然后，从生成索引定义 **目标** AEM版本（使用Target版本的Granite存储库包）。
+然後，從產生索引定義 **目標** 使用目標版本的Granite存放庫套件組合的AEM版本。
 
 ```
 java -cp oak-run.jar:bundle-com.adobe.granite.repository.jar org.apache.jackrabbit.oak.index.IndexDefinitionUpdater --in indexing-definitions_source.json --out merge-index-definitions_target.json --initializer com.adobe.granite.repository.impl.GraniteContent
@@ -127,27 +127,27 @@ java -cp oak-run.jar:bundle-com.adobe.granite.repository.jar org.apache.jackrabb
 
 >[!NOTE]
 >
->仅支持以上索引定义创建过程 `oak-run-1.12.0` 版本以后。 使用Granite存储库包进行定位 `com.adobe.granite.repository-x.x.xx.jar`.
+>上述索引定義建立程式僅支援來自 `oak-run-1.12.0` 版本以後。 目標定位可使用Granite存放庫套件組合完成 `com.adobe.granite.repository-x.x.xx.jar`.
 
-上述步骤会创建一个名为的JSON文件 `merge-index-definitions_target.json` 索引定义。
+上述步驟會建立名為的JSON檔案 `merge-index-definitions_target.json` 索引定義。
 
-**2. 在存储库中创建检查点**
+**2. 在存放庫中建立查核點**
 
-在生产中创建检查点 **源** 具有长生命周期的AEM实例。 此操作应在克隆存储库之前完成。
+在生產環境中建立查核點 **source** 具有長生命週期的AEM執行個體。 這應在複製存放庫之前完成。
 
-通过位于JMX控制台的 `http://serveraddress:serverport/system/console/jmx`，转到 `CheckpointMBean` 并创建一个具有足够长的生命周期（例如，200天）的检查点。 为此，调用 `CheckpointMBean#createCheckpoint` 替换为 `17280000000` 作为生命周期持续时间（以毫秒为单位）的参数。
+透過位於「 」的JMX主控台 `http://serveraddress:serverport/system/console/jmx`，前往 `CheckpointMBean` 並建立具有足夠長生命週期（例如200天）的查核點。 對此，呼叫 `CheckpointMBean#createCheckpoint` 替換為 `17280000000` 作為期限持續時間（毫秒）的引數。
 
-完成此操作后，复制新创建的检查点ID并使用JMX验证生命周期 `CheckpointMBean#listCheckpoints`.
+完成此操作後，複製新建立的查核點ID並使用JMX驗證存留期 `CheckpointMBean#listCheckpoints`.
 
 >[!NOTE]
 >
->稍后导入索引时，将删除此检查点。
+>稍後匯入索引時，會刪除此查核點。
 
-有关更多详细信息，请参阅 [检查点创建](https://jackrabbit.apache.org/oak/docs/query/oak-run-indexing.html#out-of-band-create-checkpoint) 来自Oak文档。
+如需詳細資訊，請參閱 [建立查核點](https://jackrabbit.apache.org/oak/docs/query/oak-run-indexing.html#out-of-band-create-checkpoint) 從Oak檔案。
 
-**为生成的索引定义执行脱机索引**
+**為產生的索引定義執行離線索引**
 
-可以使用oak-run离线完成Lucene重新索引。 此过程在下面的磁盘中创建索引数据 `indexing-result/indexes`. 确实如此 **非** 写入存储库，因此不需要停止正在运行的AEM实例。 创建的文本存储已馈送到此进程：
+可以使用oak-run離線完成Lucene重新索引。 此程式會在下方的磁碟中建立索引資料 `indexing-result/indexes`. 確實如此 **not** 寫入存放庫，因此不需要停止正在執行的AEM執行個體。 建立的文字存放區會饋送至此程式：
 
 ```
 java -Doak.indexer.memLimitInMB=500 -jar oak-run.jar index <nodestore path> --reindex --doc-traversal-mode --checkpoint <checkpoint> --fds-path <datastore path> --index-definitions-file merge-index-definitions_target.json --pre-extracted-text-dir text-extraction/store
@@ -158,30 +158,30 @@ Sample <checkpoint> looks like r16c85700008-0-8
 merge-index-definitions_target: JSON file having merged definitions for the target AEM instance. indexes in this file will be re-indexed.
 ```
 
-的使用情况 `--doc-traversal-mode` 使用MongoMK安装时，参数非常有用，因为它通过将存储库内容假脱机到本地平面文件来显着缩短重新索引时间。 但是，它需要的磁盘空间是存储库大小的两倍。
+的使用方式 `--doc-traversal-mode` 引數適用於MongoMK安裝，因為藉由將存放庫內容多工緩衝到本機一般檔案，可大幅改善重新索引時間。 不過，它需要儲存庫大小兩倍的額外磁碟空間。
 
-对于MongoMK，如果在更靠近MongoDB实例的实例中执行此步骤，则可以加快此进程。 如果在同一台计算机上运行，则可以避免网络开销。
+在MongoMK的案例中，如果這個步驟是在更接近MongoDB執行個體的執行個體中執行，則可以加速這個程式。 如果在同一台電腦上執行，可以避免網路負荷。
 
-欲知其他技术详情，请访问 [用于索引的oak-run文档](https://jackrabbit.apache.org/oak/docs/query/oak-run-indexing.html).
+如需其他技術詳細資訊，請參閱 [索引的Oak-run檔案](https://jackrabbit.apache.org/oak/docs/query/oak-run-indexing.html).
 
-### 导入索引 {#importing-indexes}
+### 匯入索引 {#importing-indexes}
 
-使用AEM 6.4及更高版本时，AEM具有按启动顺序从磁盘导入索引的内置功能。 文件夹 `<repository>/indexing-result/indexes` 启动期间将观察是否存在索引数据。 在2008年12月31日期间，您可以将预创建的索引复制到上述位置 [升级过程](in-place-upgrade.md#performing-the-upgrade) 在开始使用的新版本之前 **目标** AEM jar。 AEM会将其导入到存储库中，并从系统中删除相应的检查点。 因此，完全避免了重新索引。
+使用AEM 6.4及更新版本時，AEM具有在啟動順序從磁碟匯入索引的內建功能。 資料夾 `<repository>/indexing-result/indexes` 啟動期間會觀察索引資料是否存在。 您可以在「 」期間將預先建立的索引複製到上述位置 [升級程式](in-place-upgrade.md#performing-the-upgrade) 開始使用新版的 **目標** AEM jar。 AEM會將其匯入存放庫，並從系統中移除對應的查核點。 因此，完全避免重新索引。
 
-## 其他提示和疑难解答 {#troubleshooting}
+## 其他秘訣和疑難排解 {#troubleshooting}
 
-在下方，您将找到一些有用的提示和故障排除说明。
+在下方，您會找到一些實用的提示和疑難排解指示。
 
-### 减少对实时生产系统的影响 {#reduce-the-impact-on-the-live-production-system}
+### 減少對即時生產系統的影響 {#reduce-the-impact-on-the-live-production-system}
 
-建议克隆生产系统并使用克隆创建离线索引。 这消除了对生产系统的任何潜在影响。 但是，导入索引所需的检查点需要存在于生产系统中。 因此，在获取克隆之前创建检查点至关重要。
+建議複製生產系統，並使用複製建立離線索引。 如此可消除對生產系統的任何潛在影響。 不過，匯入索引所需的查核點必須存在於生產系統中。 因此，在複製前先建立查核點非常重要。
 
-### 准备Runbook并试运行 {#prepare-a-runbook-and-trial-run}
+### 準備Runbook並試用執行 {#prepare-a-runbook-and-trial-run}
 
-建议准备 [runbook](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/upgrading/upgrade-planning.html#building-the-upgrade-and-rollback-runbook) 并在生产环境中运行升级之前，执行一些试验。
+建議準備 [runbook](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/upgrading/upgrade-planning.html#building-the-upgrade-and-rollback-runbook) 並在生產環境執行升級之前，執行一些試驗。
 
-### 带脱机索引的文档遍历模式 {#doc-traversal-mode-with-offline-indexing}
+### 具有離線索引的檔案周遊模式 {#doc-traversal-mode-with-offline-indexing}
 
-离线索引需要遍历整个存储库。 使用MongoMK安装时，通过网络访问存储库，从而影响索引过程的性能。 一个选项是对MongoDB副本本身运行离线索引过程，这将消除网络开销。 另一个选项是使用文档遍历模式。
+離線索引需要遍歷整個存放庫。 透過MongoMK安裝，可透過網路存取存放庫，影響索引程式的效能。 一個選項是在MongoDB復本本身執行離線索引程式，這將消除網路負荷。 另一個選項是使用檔案周遊模式。
 
-可通过添加命令行参数来应用文档遍历模式 `—doc-traversal` 离线索引的oak-run命令。 此模式将本地磁盘中整个存储库的副本作为平面文件假脱机并使用它来运行索引。
+可以透過新增命令列引數來套用檔案周遊模式 `—doc-traversal` 至離線索引的oak-run命令。 此模式會將本機磁碟中整個存放庫的復本多工緩衝為平面檔案，並使用它來執行索引。

@@ -1,7 +1,7 @@
 ---
-title: 存储资源提供程序概述
+title: 儲存資源提供者概觀
 seo-title: Storage Resource Provider Overview
-description: 社区通用存储
+description: 適用於社群的通用儲存裝置
 seo-description: Common storage for Communities
 uuid: abdf4e5a-767b-428f-9aa4-0dc06819a26e
 contentOwner: Guillaume Carlino
@@ -17,139 +17,139 @@ ht-degree: 0%
 
 ---
 
-# 存储资源提供程序概述 {#storage-resource-provider-overview}
+# 儲存資源提供者概觀 {#storage-resource-provider-overview}
 
 ## 简介 {#introduction}
 
-从AEM Communities 6.1开始，社区内容(通常称为用户生成内容(UGC))存储在由提供的单个通用存储中。 [存储资源提供程序](working-with-srp.md) (SRP)。
+自AEM Communities 6.1起，社群內容(通常稱為使用者產生的內容(UGC))會儲存在由提供的單一通用存放區中， [儲存資源提供者](working-with-srp.md) (SRP)。
 
-有多个SRP选项，所有这些选项都可通过新的AEM Communities界面( [SocialResourceProvider API](srp-and-ugc.md) (SRP API)，包括所有创建、读取、更新和删除(CRUD)操作。
+有數個SRP選項，所有選項都可透過新的AEM Communities介面( [SocialResourceProvider API](srp-and-ugc.md) (SRP API)，包括所有建立、讀取、更新和刪除(CRUD)作業。
 
-所有SCF组件都是使用SRP API实现的，因此无需知道任何一个，即可开发代码 [底层拓扑](topologies.md) 或UGC的位置。
+所有SCF元件皆使用SRP API實作，因此程式碼可在不瞭解 [基礎拓撲](topologies.md) 或UGC的位置。
 
-***SocialResourceProvider API仅适用于AEM Communities的授权客户。***
+***SocialResourceProvider API僅適用於AEM Communities的授權客戶。***
 
 >[!NOTE]
 >
->**自定义组件**：对于AEM Communities的许可客户，自定义组件的开发人员可以使用SRP API访问UGC，而无需考虑底层拓扑。 参见 [SRP和UGC Essentials](srp-and-ugc.md).
+>**自訂元件**：對於AEM Communities的授權客戶，自訂元件的開發人員可將SRP API用於存取UGC，而不考慮基礎拓撲。 另請參閱 [SRP和UGC Essentials](srp-and-ugc.md).
 
 另请参阅：
 
-* [SRP和UGC Essentials](srp-and-ugc.md) - SRP实用程序方法和示例。
-* [使用SRP访问UGC](accessing-ugc-with-srp.md)  — 编码准则。
-* [SocialUtils重构](socialutils.md)  — 将已弃用的实用程序方法映射到当前的SRP实用程序方法。
+* [SRP和UGC Essentials](srp-and-ugc.md) - SRP公用程式方法與範例。
+* [使用SRP存取UGC](accessing-ugc-with-srp.md)  — 程式碼指南。
+* [SocialUtils重構](socialutils.md)  — 將已棄用的公用程式方法對應到目前的SRP公用程式方法。
 
-## 关于存储库 {#about-the-repository}
+## 關於存放庫 {#about-the-repository}
 
-要了解SRP，了解AEM存储库(OAK)在AEM社区站点中的角色很有帮助。
+若要瞭解SRP，瞭解AEM存放庫(OAK)在AEM社群網站中的角色會很有幫助。
 
-**Java内容存储库(JCR)**
-该标准定义了一个数据模型和应用程序编程接口([JCR API](https://jackrabbit.apache.org/jcr/jcr-api.html))对于内容存储库。 它结合了传统文件系统和关系数据库系统的特点，并增加了内容应用程序经常需要的一些附加功能。
+**Java內容存放庫(JCR)**
+此標準會定義資料模型和應用程式設計介面([JCR API](https://jackrabbit.apache.org/jcr/jcr-api.html))時，不會顯示任何額外資訊。 它結合了傳統檔案系統與關聯式資料庫的特性，並增加了內容應用程式經常需要的一些額外功能。
 
-JCR的一个实现是AEM存储库OAK。
+JCR的一個實作是AEM存放庫OAK。
 
 **Apache Jackrabbit Oak (OAK)**
-[OAK](../../help/sites-deploying/platform.md) 是JCR 2.0的一种实施，它是一个专为以内容为中心的应用程序而设计的数据存储系统。 它是一种针对非结构化和半结构化数据而设计的分层数据库。 存储库不仅存储面向用户的内容，还存储应用程序使用的所有代码、模板和内部数据。 用于访问内容的UI是 [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md).
+[OAK](../../help/sites-deploying/platform.md) 是JCR 2.0的實作，這是專為以內容為中心的應用程式而設計的資料儲存系統。 這是一種階層式資料庫，專為非結構化和半結構化的資料而設計。 存放庫不僅儲存面向使用者的內容，也儲存應用程式使用的所有程式碼、範本和內部資料。 用於存取內容的UI是 [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md).
 
-JCR和OAK通常用于引用AEM存储库。
+JCR和OAK通常用於表示AEM存放庫。
 
-在专用创作环境中开发站点内容后，必须将其复制到公共发布环境。 这通常通过名为的操作来完成 *[复制](deploy-communities.md#replication-agents-on-author)*. 此操作在作者/开发人员/管理员的控制下进行。
+在私人製作環境中開發網站內容後，必須將其複製至公開發佈環境。 這通常是透過名為的作業來完成 *[復寫](deploy-communities.md#replication-agents-on-author)*. 這會發生在作者/開發人員/管理員的控制下。
 
-对于UGC，内容由公共发布环境中的注册站点访客（社区成员）输入。 这是随机发生的。
+對於UGC，內容是由公共發佈環境中的註冊網站訪客（社群成員）輸入。 這是隨機發生的。
 
-对于管理和报告，从专用创作环境访问UGC很有用。 使用SRP时，从“创作”访问UGC更加一致，并且性能更高，因为无需从“发布”到“创作”进行反向复制。
+為了管理和報告，從私人作者環境存取UGC會很有用。 使用SRP時，由於不需要從發佈反向復寫至作者，因此從作者存取UGC會更一致，而且效能更高。
 
-## 关于SRP {#about-srp}
+## 關於SRP {#about-srp}
 
-将UGC保存到共享存储后，在大多数部署中，成员内容的单个实例既可以从创作环境也可以从发布环境访问。 无论SRP选项如何( MSRP 、 ASRP 、 JSRP )，所有选项都必须使用SRP API以编程方式访问。
+UGC儲存至共用儲存體時，在大部分部署中，成員內容的單一例項可同時從製作和發佈環境存取。 無論SRP選擇為何(MSRP、ASRP、JSRP)，所有選項都必須使用SRP API以程式設計方式存取。
 
 >[!NOTE]
 >
->参见 [SRP和UGC Essentials](srp-and-ugc.md) 示例代码和其他详细信息。
+>另請參閱 [SRP和UGC Essentials](srp-and-ugc.md) 以取得範常式式碼和其他詳細資訊。
 >
->参见 [使用SRP访问UGC](accessing-ugc-with-srp.md) 以了解编码时的最佳实践。
+>另請參閱 [使用SRP存取UGC](accessing-ugc-with-srp.md) 以取得編碼時的最佳實務。
 
 ### ASRP {#asrp}
 
-对于ASRP，UGC不会存储在JCR中，而是存储在由Adobe托管和管理的云服务中。 存储在ASRP中的UGC既不能使用CRXDE Lite查看，也不能使用JCR API访问。
+若是ASRP，UGC不會儲存在JCR中，而是儲存在由Adobe託管和管理的雲端服務中。 ASRP中儲存的UGC不可以CRXDE Lite檢視，也不可使用JCR API存取。
 
-参见 [ASRP -Adobe存储资源提供程序](asrp.md).
+另請參閱 [ASRP -Adobe儲存資源提供者](asrp.md).
 
-开发人员无法直接访问UGC。
+開發人員無法直接存取UGC。
 
-ASRP使用Adobe云进行查询。
+ASRP會使用Adobe雲端進行查詢。
 
 ### MSRP {#msrp}
 
-对于MSRP，UGC不存储在JCR中，而是存储在MongoDB中。 存储在MSRP中的UGC既不能使用CRXDE Lite查看，也不能使用JCR API访问。
+若是MSRP，UGC不會儲存在JCR中，而是儲存在MongoDB中。 儲存在MSRP中的UGC不能使用CRXDE Lite檢視，也不能使用JCR API存取。
 
-参见 [MSRP - MongoDB存储资源提供程序](msrp.md).
+另請參閱 [MSRP - MongoDB儲存資源提供者](msrp.md).
 
-虽然MSRP与ASRP相当，但由于所有AEM服务器实例都访问同一UGC，因此可以使用通用工具直接访问存储在MongoDB中的UGC。
+雖然MSRP可與ASRP相提並論，因為所有AEM伺服器執行個體都存取相同的UGC，所以可以使用通用工具直接存取儲存在MongoDB中的UGC。
 
-MSRP使用Solr进行查询。
+MSRP使用Solr進行查詢。
 
 ### JSRP {#jsrp}
 
-JSRP是访问单个AEM实例上的所有UGC的默认提供程序。 它提供了快速体验AEM Communities 6.1的能力，而无需设置MSRP或ASRP。
+JSRP是存取單一AEM執行個體上所有UGC的預設提供者。 它提供快速體驗AEM Communities 6.1的能力，而不需要設定MSRP或ASRP。
 
-参见 [JSRP - JCR存储资源提供程序](jsrp.md).
+另請參閱 [JSRP - JCR儲存資源提供者](jsrp.md).
 
-对于JSRP，虽然UGC存储在JCR中，并可通过CRXDE Lite和JCR API访问，但强烈建议不要使用JCR API执行此操作，否则未来的更改可能会影响自定义代码。
+若是JSRP，雖然UGC儲存在JCR中，並可透過CRXDE Lite和JCR API存取，但強烈建議不要使用JCR API這麼做，否則日後的變更可能會影響自訂程式碼。
 
-此外，不共享创作和发布环境的存储库。 虽然发布实例集群导致共享发布存储库，但在发布时输入的UGC在作者中不可见，因此无法从作者管理UGC。 UGC仅保留在输入它的实例的AEM存储库(JCR)中。
+此外，不會共用作者和發佈環境的存放庫。 雖然發佈執行個體的叢集會產生共用發佈存放庫，但在發佈時輸入的UGC將不會顯示在作者身上，因此無法管理來自作者的UGC。 UGC只會保留在輸入它的執行個體的AEM存放庫(JCR)中。
 
-JSRP使用Oak索引进行查询。
+JSRP會使用Oak索引進行查詢。
 
-## 关于JCR中的阴影节点 {#about-shadow-nodes-in-jcr}
+## 關於JCR中的陰影節點 {#about-shadow-nodes-in-jcr}
 
-模拟指向UGC的路径的影子节点存在于本地存储库中，用于两个目的：
+模擬指向UGC的路徑的陰影節點存在於本機存放庫中，有兩個用途：
 
-1. [访问控制(ACL)](#for-access-control-acls)
-1. [非现有资源(NER)](#for-non-existing-resources-ners)
+1. [存取控制(ACL](#for-access-control-acls)
+1. [非現有資源(NER)](#for-non-existing-resources-ners)
 
-不论SRP实施如何，实际的UGC都*不会*在与影子节点相同的位置可见。
+不論SRP實作為何，實際的UGC將*不會*在與陰影節點相同的位置可見。
 
-### 用于访问控制(ACL) {#for-access-control-acls}
+### 用於存取控制(ACL) {#for-access-control-acls}
 
-一些SRP实现（如ASRP和MSRP ）将社区内容存储在不提供ACL验证的数据库中。 影子节点提供本地存储库中可以应用ACL的位置。
+有些SRP實作（例如ASRP和MSRP）會將社群內容儲存在不提供ACL驗證的資料庫中。 陰影節點會提供本機存放庫中ACL可套用的位置。
 
-使用SRP API，所有SRP选项在所有CRUD操作之前对阴影位置执行相同的检查。
+使用SRP API時，所有SRP選項會在執行所有CRUD作業之前，對陰影位置執行相同的檢查。
 
-ACL检查使用实用程序方法，该方法返回适合检查应用于资源UGC的权限的路径。
+ACL檢查會使用公用程式方法，傳回適合檢查套用至資源UGC之許可權的路徑。
 
-参见 [SRP和UGC Essentials](srp-and-ugc.md) 以获取示例代码。
+另請參閱 [SRP和UGC Essentials](srp-and-ugc.md) 以取得範常式式碼。
 
-### 对于非现有资源(NER) {#for-non-existing-resources-ners}
+### 針對非現有資源(NER) {#for-non-existing-resources-ners}
 
-某些Communities组件可包含在脚本中，因此需要Sling可寻址节点来支持Communities功能。 [包含的组件](scf.md#add-or-include-a-communities-component) 称为非现有资源(NER)。
+部分Communities元件可包含在指令碼中，因此需要Sling可定址節點來支援Communities功能。 [包含的元件](scf.md#add-or-include-a-communities-component) 稱為非現有資源(NER)。
 
-影子节点在存储库中提供Sling可寻址位置。
+陰影節點在存放庫中提供Sling可定址位置。
 
 >[!CAUTION]
 >
->由于影子节点具有多种用途，因此影子节点的存在具有多种用途 *非* 暗示该组件是一个NER。
+>由於陰影節點有多重用途，陰影節點的存在會 *not* 表示該元件是NER。
 
-### 存储位置 {#storage-location}
+### 儲存位置 {#storage-location}
 
-以下是使用 [评论组件](http://localhost:4502/content/community-components/en/comments.html) 在 [社区组件指南](components-guide.md)：
+以下是陰影節點的範例，使用 [註解元件](http://localhost:4502/content/community-components/en/comments.html) 在 [社群元件指南](components-guide.md)：
 
-* 该组件存在于本地存储库中，位于：
+* 元件存在於本機存放庫中：
 
    `/content/community-components/en/comments/jcr:content/content/includable/comments`
 
-* 相应的影子节点存在于本地存储库中，位于：
+* 對應的陰影節點存在於本機存放庫中：
 
    `/content/usergenerated/content/community-components/en/comments/jcr:content/content/includable/comments`
 
-在影子节点下找不到UGC。
+在陰影節點下找不到UGC。
 
-默认行为是在发布实例上设置影子节点，只要相关子树被引用进行读取或写入。
+預設行為是在發佈執行個體上設定陰影節點，只要參照相關的子樹狀結構以進行讀取或寫入。
 
-例如，假设部署为 [MSRP](msrp.md) 使用TarMK发布场。
+例如，假設部署為 [MSRP](msrp.md) TarMK發佈伺服器陣列。
 
-当 [会员](users.md) 在pub1上发布UGC（存储在MongoDB中），在pub1上的JCR中创建影子节点。
+當 [會員](users.md) 在pub1上發佈UGC （儲存在MongoDB中），在pub1上的JCR中建立陰影節點。
 
-首次在pub2上读取UGC时，如果未设置任何内容，则默认行为是创建影子节点。
+第一次在pub2上讀取UGC時，如果未設定任何專案，預設行為是建立陰影節點。
 
-如果需要默认行为以外的其他行为，则必须在创作实例上设置该行为，并将其前滚到所有发布实例，这通常是手动过程。
+如果需要預設行為以外的其他行為，則必須在編寫執行個體上將其設定並前滾到所有發佈執行個體，這通常是手動過程。

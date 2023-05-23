@@ -1,6 +1,6 @@
 ---
-title: 批量迁移资产
-description: 介绍如何将资产引入 [!DNL Adobe Experience Manager]、应用元数据、生成演绎版并将其激活到发布实例。
+title: 大量移轉資產
+description: 說明如何將資產帶入 [!DNL Adobe Experience Manager]、套用中繼資料、產生轉譯，並將其啟動至發佈例項。
 contentOwner: AG
 role: Architect, Admin
 feature: Migration,Renditions,Asset Management
@@ -12,126 +12,126 @@ ht-degree: 8%
 
 ---
 
-# 如何批量迁移资产 {#assets-migration-guide}
+# 如何大量移轉資產 {#assets-migration-guide}
 
-将资产迁移到时 [!DNL Adobe Experience Manager]中，需要考虑以下几个步骤。 从当前主目录中提取资源和元数据不属于本文档的范围，因为不同实施中的资源和元数据差别很大，但本文档介绍了如何将这些资源提取到 [!DNL Experience Manager]、应用其元数据、生成演绎版并将其激活到发布实例。
+將資產移轉至 [!DNL Adobe Experience Manager]，需考慮幾個步驟。 從資產和中繼資料目前的首頁擷取資產，不在本檔案的涵蓋範圍內，因為不同實施之間的差異很大，但本檔案將說明如何將這些資產帶入 [!DNL Experience Manager]，套用其中繼資料、產生轉譯並將其啟動至發佈例項。
 
 ## 前提条件 {#prerequisites}
 
-在实际执行此方法中的任何步骤之前，请查看并实施 [资产性能调整提示](performance-tuning-guidelines.md). 通过配置最大并发作业等步骤，大大提高了服务器在负载下的稳定性和性能。 在系统加载资产后，其他步骤（如配置文件数据存储）的执行难度会大得多。
+在實際執行此方法中的任何步驟之前，請先檢閱並實作以下說明檔案： [資產效能調整秘訣](performance-tuning-guidelines.md). 設定最大並行作業等許多步驟，可大幅提升伺服器負載下的穩定性和效能。 在系統載入資產後，其他步驟（例如設定檔案資料存放區）的執行難度會大得多。
 
 >[!NOTE]
 >
->以下资源迁移工具未包含在中 [!DNL Experience Manager] Adobe不支持和：
+>下列資產移轉工具不屬於 [!DNL Experience Manager] Adobe不支援和：
 >
->* ACS AEM工具标记器
->* ACS AEM工具CSV资产导入程序
->* ACS Commons批量工作流管理器
->* ACS Commons快速操作管理器
->* 综合工作流
+>* ACS AEM工具標籤製作程式
+>* ACS AEM工具CSV資產匯入工具
+>* ACS Commons大量工作流程管理員
+>* ACS Commons快速動作管理員
+>* 綜合工作流程
 >
 >本软件是开放源软件，受 [Apache v2 许可证](https://adobe-consulting-services.github.io/pages/license.html)的保护。要提出问题或报告问题，请访问[针对 ACS AEM 工具的 GitHub 问题](https://github.com/Adobe-Consulting-Services/acs-aem-commons/issues)和 [ACS AEM Commons](https://github.com/Adobe-Consulting-Services/acs-aem-tools/issues)。
 
-## 迁移到 [!DNL Experience Manager] {#migrating-to-aem}
+## 移轉至 [!DNL Experience Manager] {#migrating-to-aem}
 
-将资产迁移到 [!DNL Experience Manager] 需要执行多个步骤，应视为一个分阶段执行的过程。 迁移的阶段如下：
+將資產移轉至 [!DNL Experience Manager] 需要數個步驟，應視為分階段流程。 移轉的階段如下：
 
-1. 禁用工作流。
-1. 加载标记。
-1. 引入资源。
-1. 处理演绎版。
-1. 激活资产。
-1. 启用工作流。
+1. 停用工作流程。
+1. 載入標籤。
+1. 擷取資產。
+1. 處理轉譯。
+1. 啟用資產。
+1. 啟用工作流程。
 
 ![chlimage_1-223](assets/chlimage_1-223.png)
 
-### 禁用工作流 {#disabling-workflows}
+### 停用工作流程 {#disabling-workflows}
 
-在开始迁移之前，请为禁用启动器 [!UICONTROL DAM更新资产] 工作流。 最好将所有资产摄取到系统中，然后批量运行工作流。 如果您已在迁移过程中处于活动状态，则可以安排这些活动在休息时间运行。
+開始移轉之前，請針對以下專案停用啟動器： [!UICONTROL DAM更新資產] 工作流程。 最好將所有資產擷取到系統中，然後批次執行工作流程。 如果您已在移轉進行時處於使用中狀態，您可以排程這些活動在非工作時間執行。
 
-### 加载标记 {#loading-tags}
+### 載入標籤 {#loading-tags}
 
-您可能已经有一个要应用于图像的标记分类。 而工具(如CSV资产导入程序和 [!DNL Experience Manager] 对元数据配置文件的支持可以自动将标记应用到资产的过程，标记需要加载到系统中。 此 [ACS AEM工具标记器](https://adobe-consulting-services.github.io/acs-aem-tools/features/tag-maker/index.html) 功能允许您使用加载到系统中的某个Microsoft Excel电子表格填充标记。
+您可能已具備要套用至影像的標籤分類法。 同時使用CSV Asset Importer和 [!DNL Experience Manager] 對中繼資料設定檔的支援可自動化將標籤套用至資產的程式，標籤需要載入到系統中。 此 [ACS AEM工具標籤製作程式](https://adobe-consulting-services.github.io/acs-aem-tools/features/tag-maker/index.html) 功能可讓您使用載入至系統的Microsoft Excel試算表填入標籤。
 
-### 引入资产 {#ingesting-assets}
+### 擷取資產 {#ingesting-assets}
 
-在将资产引入系统时，性能和稳定性是重要考虑事项。 由于您要将大量数据加载到系统中，因此希望确保系统运行得尽可能好，以最大限度地减少所需的时间并避免系统过载，这可能会导致系统崩溃，尤其是在已处于生产状态的系统中。
+將資產擷取至系統時，效能和穩定性是重要考量。 由於您要將大量資料載入系統，因此您想要確保系統儘可能發揮效能，將所需的時間減至最少，並避免系統超載，這可能會導致系統當機，尤其是在已處於生產階段的系統中。
 
-有两种将资产加载到系统中的方法：使用HTTP的基于推送的方法或使用JCR API的基于拉取的方法。
+將資產載入系統的方法有兩種：使用HTTP的推播式方法，或使用JCR API的拉取式方法。
 
-#### 通过HTTP发送 {#pushing-through-http}
+#### 透過HTTP傳送 {#pushing-through-http}
 
-Adobe的Managed Services团队使用名为Glutton的工具将数据加载到客户环境中。 Glutton是一个小型Java应用程序，可将一个目录中的所有资产加载到上的另一个目录中。 [!DNL Experience Manager] 部署。 您还可以使用Perl脚本等工具将资产发布到存储库中，而不是Glutton。
+Adobe的Managed Services團隊使用名為Glutton的工具將資料載入客戶環境。 Glutton是一種小型Java應用程式，可將一個目錄中的所有資產載入到上的另一個目錄中。 [!DNL Experience Manager] 部署。 您也可以使用Perl指令碼等工具，將資產發佈至存放庫，而不使用Glutton。
 
-使用https推送方法有两个主要缺点：
+使用https推送方法有兩個主要缺點：
 
-1. 资产需要通过HTTP传输到服务器。 这需要相当多的开销且耗时，因此会延长执行迁移所需的时间。
-1. 如果您必须将标记和自定义元数据应用于资源，则此方法需要运行第二个自定义过程，才能在导入资源后将此元数据应用于资源。
+1. 資產必須透過HTTP傳輸至伺服器。 這需要相當多的開銷且耗時，因此會延長執行移轉所需的時間。
+1. 如果您必須將標籤和自訂中繼資料套用至資產，此方法需要執行第二個自訂程式，才能在資產匯入後將此中繼資料套用至資產。
 
-摄取资产的另一种方法是从本地文件系统提取资产。 但是，如果不能将外部驱动器或网络共享装载到服务器以执行基于拉取的方法，则通过HTTP发布资源是最佳选择。
+擷取資產的另一種方法是從本機檔案系統提取資產。 不過，如果您無法讓外部磁碟機或網路共用裝載到伺服器來執行提取式方法，則最好透過HTTP張貼資產。
 
-#### 从本地文件系统获取 {#pulling-from-the-local-filesystem}
+#### 從本機檔案系統擷取 {#pulling-from-the-local-filesystem}
 
-此 [ACS AEM工具CSV资产导入程序](https://adobe-consulting-services.github.io/acs-aem-tools/features/csv-asset-importer/index.html) 从文件系统中提取资产，从CSV文件提取资产元数据以便导入资产。 Experience Manager资源管理器API用于将资源导入系统，并应用配置的元数据属性。 理想情况下，资产可通过网络文件装载或外部驱动器装载到服务器上。
+此 [ACS AEM工具CSV資產匯入工具](https://adobe-consulting-services.github.io/acs-aem-tools/features/csv-asset-importer/index.html) 從檔案系統提取資產，並從CSV檔案提取資產中繼資料，以匯入資產。 Experience ManagerAsset Manager API用於將資產匯入系統，並套用設定的中繼資料屬性。 理想情況下，資產會透過網路檔案掛載或外部磁碟機掛載在伺服器上。
 
-由于资产无需通过网络传输，因此整体性能会显着提升，通常认为此方法是将资产加载到存储库的最有效方法。 此外，由于该工具支持元数据摄取，因此您可以在单个步骤中导入所有资源和元数据，而不是同时创建第二个步骤来通过单独的工具应用元数据。
+因為資產不需要透過網路傳輸，所以整體效能會大幅提升，而且此方法通常被認為是將資產載入存放庫的最有效率方式。 此外，由於該工具支援中繼資料擷取，因此您可以在單一步驟中匯入所有資產和中繼資料，而不是同時建立第二個步驟，透過個別工具套用中繼資料。
 
-### 流程演绎版 {#processing-renditions}
+### 處理轉譯 {#processing-renditions}
 
-将资产加载到系统后，您需要通过 [!UICONTROL DAM更新资产] 此工作流用于提取元数据和生成演绎版。 在执行此步骤之前，您需要复制并修改 [!UICONTROL DAM更新资产] 工作流以满足您的需求。 这个现成的工作流包含许多您可能不需要的步骤，例如Dynamic Media PTIFF生成或 [!DNL InDesign Server] 集成。
+將資產載入系統後，您需要透過 [!UICONTROL DAM更新資產] 工作流程來擷取中繼資料並產生轉譯。 在執行此步驟之前，您需要複製並修改 [!UICONTROL DAM更新資產] 工作流程以符合您的需求。 現成的工作流程包含許多您可能不需要的步驟，例如Dynamic Media PTIFF產生或 [!DNL InDesign Server] 整合。
 
-根据需求配置工作流后，有两个选项可用于执行工作流：
+根據您的需求設定工作流程後，您有兩個選項可執行它：
 
-1. 最简单的方法是 [ACS Commons的批量工作流管理器](https://adobe-consulting-services.github.io/acs-aem-commons/features/bulk-workflow-manager.html). 此工具允许您执行查询，并通过工作流处理查询的结果。 此外，还有设置批量大小的选项。
-1. 您可以将 [ACS Commons Fast Action Manager与Synthetic Workflows一起使](https://adobe-consulting-services.github.io/acs-aem-commons/features/fast-action-manager.html) 用 [](https://adobe-consulting-services.github.io/acs-aem-commons/features/synthetic-workflow.html)。 虽然此方法涉及的范围更广，但它允许您删除 [!DNL Experience Manager] 工作流引擎，同时优化服务器资源的使用。 此外，Fast Action manager还通过动态监视服务器资源和限制系统上的负载来进一步提升性能。 ACS Commons功能页上提供了示例脚本。
+1. 最簡單的方法是 [ACS Commons的大量工作流程管理員](https://adobe-consulting-services.github.io/acs-aem-commons/features/bulk-workflow-manager.html). 此工具可讓您執行查詢，並透過工作流程處理查詢的結果。 也有設定批次大小的選項。
+1. 您可以将 [ACS Commons Fast Action Manager与Synthetic Workflows一起使](https://adobe-consulting-services.github.io/acs-aem-commons/features/fast-action-manager.html) 用 [](https://adobe-consulting-services.github.io/acs-aem-commons/features/synthetic-workflow.html)。 雖然此方法的參與度更高，但可讓您移除 [!DNL Experience Manager] 工作流程引擎，同時最佳化伺服器資源的使用。 此外，Fast Action manager还通过动态监视服务器资源和限制系统上的负载来进一步提升性能。 ACS Commons功能页上提供了示例脚本。
 
-### 激活资产 {#activating-assets}
+### 啟用資產 {#activating-assets}
 
-对于具有发布层的部署，您需要将资产激活到发布场。 虽然Adobe建议运行多个发布实例，但最有效的方法是将所有资源复制到单个发布实例，然后克隆该实例。 在激活大量资产时，触发树激活后，您可能需要介入。 原因如下：触发激活时，项目会添加到Sling作业/事件队列。 在此队列的大小开始超过约40,000个项目后，处理速度会显着减慢。 当此队列的大小超过100,000个项目后，系统稳定性开始受到影响。
+對於擁有發佈階層的部署，您需要將資產啟動至發佈伺服器陣列。 雖然Adobe建議執行多個發佈執行個體，但最有效率的做法是將所有資產復寫至單一發佈執行個體，然後複製該執行個體。 啟用大量資產時，觸發樹狀結構啟用後，您可能需要介入。 原因如下：觸發啟用時，專案會新增至Sling工作/事件佇列。 在此佇列大小開始超過約40,000個專案後，處理速度會大幅減慢。 當此佇列的大小超過100,000個專案後，系統穩定性就會開始受到影響。
 
-要解决此问题，您可以使用 [快速操作管理器](https://adobe-consulting-services.github.io/acs-aem-commons/features/fast-action-manager.html) 以管理资源复制。 此操作无需使用Sling队列，降低了开销，同时抑制了工作负载，以防止服务器过载。 该功能的文档页面上显示了使用FAM管理复制的示例。
+若要解決此問題，您可以使用 [快速動作管理員](https://adobe-consulting-services.github.io/acs-aem-commons/features/fast-action-manager.html) 以管理資產復寫。 這可在不使用Sling佇列的情況下運作，減少額外負荷，同時限制工作負荷以防止伺服器超載。 使用FAM管理復寫的範例會顯示在該功能的檔案頁面上。
 
-将资产转至发布场的其他选项包括使用 [vlt-rcp](https://jackrabbit.apache.org/filevault/rcp.html) 或 [oak-run](https://github.com/apache/jackrabbit-oak/tree/trunk/oak-run)，这些选项作为 Jackrabbit 中的工具提供。另一个选项是为使用开源工具 [!DNL Experience Manager] 已调用基础结构 [抓取位](https://github.com/TWCable/grabbit)，它声称比vlt的性能更快。
+将资产转至发布场的其他选项包括使用 [vlt-rcp](https://jackrabbit.apache.org/filevault/rcp.html) 或 [oak-run](https://github.com/apache/jackrabbit-oak/tree/trunk/oak-run)，这些选项作为 Jackrabbit 中的工具提供。另一個選項是針對以下專案使用開放原始碼工具： [!DNL Experience Manager] 已呼叫基礎結構 [Grabbit](https://github.com/TWCable/grabbit)，聲稱其效能比vlt更快。
 
-对于这些方法中的任一方法，需要注意的是，创作实例上的资产不会显示为已激活。 要处理以正确的激活状态标记这些资产的问题，您还需要运行脚本以将资产标记为已激活。
+對於這些方法中的任一方法，請注意創作執行個體上的資產未顯示為已啟動。 若要以正確的啟用狀態處理標幟這些資產，您也需要執行指令碼以將資產標示為已啟用。
 
 >[!NOTE]
 >
->Adobe不维护或支持Grabbit。
+>Adobe不維護或不支援Grabbit。
 
-### 克隆发布 {#cloning-publish}
+### 原地複製發佈 {#cloning-publish}
 
-在激活资产后，您可以克隆发布实例，以创建部署所需的任意数量的副本。 克隆服务器相当简单，但需要记住一些重要步骤。 要克隆发布，请执行以下操作：
+資產啟動後，您可以複製發佈執行個體，以建立部署所需數量的復本。 複製伺服器相當簡單明瞭，但有一些重要的步驟需要記住。 複製發佈：
 
-1. 备份源实例和数据存储。
-1. 将实例和数据存储的备份还原到目标位置。 以下步骤均引用此新实例。
-1. 在下执行文件系统搜索 `crx-quickstart/launchpad/felix` 对象 `sling.id`. 删除此文件。
-1. 在数据存储的根路径下，找到并删除任意 `repository-XXX` 文件。
-1. 编辑 `crx-quickstart/install/org.apache.jackrabbit.oak.plugins.blob.datastore.FileDataStore.config` 和 `crx-quickstart/launchpad/config/org/apache/jackrabbit/oak/plugins/blob/datastore/FileDataStore.config` 指向数据存储在新环境中的位置。
-1. 启动环境。
-1. 更新作者上任何复制代理的配置以指向正确的发布实例，或者更新新实例上的Dispatcher刷新代理以指向新环境的正确Dispatcher。
+1. 備份來源執行個體和資料存放區。
+1. 將執行個體和資料存放區的備份還原至目標位置。 以下步驟均參考此新執行個體。
+1. 在下方執行檔案系統搜尋 `crx-quickstart/launchpad/felix` 的 `sling.id`. 删除此文件。
+1. 在資料存放區的根路徑下，找到並刪除任何 `repository-XXX` 檔案。
+1. 編輯 `crx-quickstart/install/org.apache.jackrabbit.oak.plugins.blob.datastore.FileDataStore.config` 和 `crx-quickstart/launchpad/config/org/apache/jackrabbit/oak/plugins/blob/datastore/FileDataStore.config` 指向資料存放區在新環境中的位置。
+1. 啟動環境。
+1. 更新作者上任何復寫代理程式的設定，以指向正確的發佈執行個體，或新執行個體上的Dispatcher Flush代理程式，以指向新環境的正確Dispatcher。
 
-### 启用工作流 {#enabling-workflows}
+### 啟用工作流程 {#enabling-workflows}
 
-完成迁移后， [!UICONTROL DAM更新资产] 应重新启用工作流以支持演绎版生成和元数据提取，以便日常系统使用。
+完成移轉後， [!UICONTROL DAM更新資產] 應重新啟用工作流程，以支援轉譯產生和中繼資料擷取，以供日常系統使用。
 
-## 迁移范围 [!DNL Experience Manager] 部署 {#migrating-between-aem-instances}
+## 移轉範圍 [!DNL Experience Manager] 部署 {#migrating-between-aem-instances}
 
-虽然并非如此常见，但有时您需要从其中迁移大量数据 [!DNL Experience Manager] 部署到另一个环境；例如，执行 [!DNL Experience Manager] 升级、升级硬件或迁移到新数据中心，例如通过AMS迁移。
+雖然這幾乎不是很常見，但有時您需要將大量資料從一處移轉 [!DNL Experience Manager] 部署至其他位置；例如，當您執行 [!DNL Experience Manager] 升級、升級您的硬體，或移轉至新的資料中心，例如AMS移轉。
 
-在这种情况下，您的资源已填充了元数据，并且已生成演绎版。 您只需专注于将资产从一个实例移动到另一个实例即可。 在之间迁移时 [!DNL Experience Manager] 部署，请执行以下步骤：
+在此情況下，您的資產已填入中繼資料，且已產生轉譯。 您只需專注於將資產從一個例項移至另一個例項即可。 當移轉介於 [!DNL Experience Manager] 部署，請執行以下步驟：
 
-1. 禁用工作流：由于您要将演绎版与我们的资产一起迁移，因此要为禁用工作流启动器 [!UICONTROL DAM更新资产] 工作流。
+1. 停用工作流程：由於您要將轉譯與我們的資產一起移轉，因此您想要停用以下專案的工作流程啟動器： [!UICONTROL DAM更新資產] 工作流程。
 
-1. 迁移标记：因为源中已加载标记 [!DNL Experience Manager] 部署，则可以在内容包中构建它们，并在目标实例上安装该包。
+1. 移轉標籤：因為來源中已載入標籤 [!DNL Experience Manager] 部署，即可在內容套件中建置這些元件，並將套件安裝在目標執行個體上。
 
-1. 迁移资产：建议使用两种工具将资产从一种迁移出来 [!DNL Experience Manager] 部署到另一个：
+1. 移轉資產：建議使用兩種工具將資產從一種移出 [!DNL Experience Manager] 部署到另一個：
 
-   * **保险库远程拷贝** 或vlt rcp ，允许您跨网络使用vlt。 您可以指定源目录和目标目录，vlt从一个实例下载所有存储库数据并将其加载到另一个实例中。 Vlt rcp记录在 [https://jackrabbit.apache.org/filevault/rcp.html](https://jackrabbit.apache.org/filevault/rcp.html)
-   * **抓取位** 是一个开源内容同步工具，由时代华纳有线电视公司为其客户开发 [!DNL Experience Manager] 实现。 由于它使用连续的数据流，与vlt rcp相比，它具有更低的延迟，并且声称速度比vlt rcp快2到10倍。 Grabbit还仅支持增量内容的同步，这允许它在完成初始迁移后同步更改。
+   * **儲存庫遠端複製** 或vlt rcp，可讓您在網路上使用vlt。 您可以指定來源和目的地目錄，vlt會從某個執行個體下載所有存放庫資料，然後將其載入另一個執行個體。 Vlt rcp的記錄位於 [https://jackrabbit.apache.org/filevault/rcp.html](https://jackrabbit.apache.org/filevault/rcp.html)
+   * **Grabbit** 是由Time Warner Cable為其客戶開發的開放原始碼內容同步工具 [!DNL Experience Manager] 實作。 由於它使用連續資料流，與vlt rcp相比，它的延遲較低，而且速度比vlt rcp快2到10倍。 Grabbit也僅支援差異內容的同步處理，這使其可在完成初始移轉程式後同步處理變更。
 
-1. 激活资产：按照的说明操作 [正在激活资产](#activating-assets) 已记录初始迁移到 [!DNL Experience Manager].
+1. 啟用資產：請依照以下指示操作 [啟用資產](#activating-assets) 已記錄初始移轉至 [!DNL Experience Manager].
 
-1. 克隆发布：与新迁移一样，加载单个发布实例并进行克隆比在两个节点上激活内容更有效。 参见 [正在克隆发布。](#cloning-publish)
+1. 複製發佈：如同新的移轉，載入單一發佈執行個體並複製執行個體比同時啟動兩個節點上的內容更有效率。 另請參閱 [正在複製發佈。](#cloning-publish)
 
-1. 启用工作流：完成迁移后，为 [!UICONTROL DAM更新资产] 此工作流用于支持演绎版生成和元数据提取，以供日常系统使用。
+1. 啟用工作流程：完成移轉後，請重新啟用以下專案的啟動器： [!UICONTROL DAM更新資產] 此工作流程可支援節目產生和中繼資料擷取，以供日常系統使用。

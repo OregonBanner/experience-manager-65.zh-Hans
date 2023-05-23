@@ -1,7 +1,7 @@
 ---
-title: 自定义网站控制台（经典UI）
+title: 自訂網站主控台（傳統UI）
 seo-title: Customizing the Websites Console (Classic UI)
-description: 可以扩展网站管理控制台以显示自定义列
+description: 可以延伸網站管理主控台以顯示自訂欄
 seo-description: The Websites Administration console can be extended to display custom columns
 uuid: 9163fdff-5351-477d-b91c-8a74f8b41d34
 contentOwner: User
@@ -18,53 +18,53 @@ ht-degree: 0%
 
 ---
 
-# 自定义网站控制台（经典UI）{#customizing-the-websites-console-classic-ui}
+# 自訂網站主控台（傳統UI）{#customizing-the-websites-console-classic-ui}
 
-## 将自定义列添加到网站(siteadmin)控制台 {#adding-a-custom-column-to-the-websites-siteadmin-console}
+## 新增自訂欄到網站(siteadmin)主控台 {#adding-a-custom-column-to-the-websites-siteadmin-console}
 
-可以扩展网站管理控制台以显示自定义列。 控制台基于可通过创建用于实现的OSGI服务来扩展的JSON对象而构建 `ListInfoProvider` 界面。 此类服务会修改发送到客户端的JSON对象，以构建控制台。
+可以延伸網站管理主控台以顯示自訂欄。 主控台是根據JSON物件建立的，可透過建立實作的OSGI服務進行擴充。 `ListInfoProvider` 介面。 此服務會修改傳送至使用者端的JSON物件，以建置主控台。
 
-此分步教程介绍了如何通过实施 `ListInfoProvider` 界面。 它包含以下步骤：
+此逐步教學課程說明如何透過實作「 」，在「網站管理」控制檯中顯示新欄。 `ListInfoProvider` 介面。 它包含下列步驟：
 
-1. [创建OSGI服务](#creating-the-osgi-service) 并将包含它的包部署到AEM服务器。
-1. （可选） [测试新服务](#testing-the-new-service) 通过发出JSON调用来请求用于构建控制台的JSON对象。
-1. [显示新列](#displaying-the-new-column) 通过在存储库中扩展控制台的节点结构。
+1. [建立OSGI服務](#creating-the-osgi-service) 並將包含該檔案包的套件部署至AEM伺服器。
+1. （選擇性） [測試新服務](#testing-the-new-service) 藉由發出JSON呼叫來要求用來建置主控台的JSON物件。
+1. [顯示新欄](#displaying-the-new-column) 藉由擴充存放庫中主控台的節點結構。
 
 >[!NOTE]
 >
->本教程还可用于扩展以下管理控制台：
+>本教學課程也可用來擴充下列管理主控台：
 >
->* 数字资产控制台
->* 社区控制台
+>* 數位資產主控台
+>* 社群主控台
 >
 
 
-### 创建OSGI服务 {#creating-the-osgi-service}
+### 建立OSGI服務 {#creating-the-osgi-service}
 
-此 `ListInfoProvider` 接口定义了两种方法：
+此 `ListInfoProvider` 介面會定義兩種方法：
 
-* `updateListGlobalInfo`，更新列表的全局属性，
-* `updateListItemInfo`，以更新单个列表项。
+* `updateListGlobalInfo`，若要更新清單的全域屬性，
+* `updateListItemInfo`，以更新單一清單專案。
 
-这两种方法的参数为：
+這兩種方法的引數為：
 
-* `request`，关联的Sling HTTP请求对象，
-* `info`，要更新的JSON对象，它分别是全局列表或当前列表项，
-* `resource`，Sling资源。
+* `request`，相關聯的Sling HTTP要求物件，
+* `info`，此為要更新的JSON物件，分別為全域清單或目前清單專案，
+* `resource`，Sling資源。
 
-以下实施示例：
+以下實作範例：
 
-* 添加 *星形* 每个项目的属性，即 `true` 如果页面名称以 *e*、和 `false` 否则。
+* 新增 *已啟動* 每個專案的屬性，也就是 `true` 如果頁面名稱開頭為 *e*、和 `false` 否則。
 
-* 添加 *starredCount* 属性，该属性对列表是全局属性，包含星形列表项的数量。
+* 新增 *starredCount* 屬性，此屬性是清單的全域屬性，包含星狀清單專案的數量。
 
-要创建OSGI服务，请执行以下操作：
+若要建立OSGI服務：
 
-1. 在CRXDE Lite， [创建捆绑包](/help/sites-developing/developing-with-crxde-lite.md#managing-a-bundle).
-1. 在下方添加示例代码。
-1. 构建捆绑包。
+1. 在CRXDE Lite中， [建立組合](/help/sites-developing/developing-with-crxde-lite.md#managing-a-bundle).
+1. 在下方新增範常式式碼。
+1. 建置套件組合。
 
-新服务已启动并正在运行。
+新服務已啟動且正在執行。
 
 ```java
 package com.test;
@@ -108,75 +108,75 @@ public class StarredListInfoProvider implements ListInfoProvider {
 
 >[!CAUTION]
 >
->* 您的实施应根据提供的请求和/或资源决定是否应将该信息添加到JSON对象。
->* 如果您的 `ListInfoProvider` 实施定义了响应对象中已存在的属性，其值将由您提供的值覆盖。
+>* 您的實作應根據提供的請求和/或資源，決定是否應將資訊新增至JSON物件。
+>* 若您的 `ListInfoProvider` 實作會定義回應物件中已存在的屬性，其值將由您提供的值覆寫。
 >
->  您可以使用 [服务排名](https://www.osgi.org/javadoc/r2/org/osgi/framework/Constants.html#SERVICE_RANKING) 管理多个执行顺序 `ListInfoProvider` 实施。
+>  您可以使用 [服務排名](https://www.osgi.org/javadoc/r2/org/osgi/framework/Constants.html#SERVICE_RANKING) 管理多個專案的執行順序 `ListInfoProvider` 實作。
 
-### 测试新服务 {#testing-the-new-service}
+### 測試新服務 {#testing-the-new-service}
 
-当您打开网站管理控制台并浏览您的站点时，浏览器将发出ajax调用以获取用于构建控制台的JSON对象。 例如，当您浏览到 `/content/geometrixx` 文件夹，则会向AEM服务器发送以下请求以构建控制台：
+當您開啟網站管理主控台並瀏覽您的網站時，瀏覽器會發出ajax呼叫，以取得用於建立主控台的JSON物件。 例如，當您瀏覽至 `/content/geometrixx` 資料夾，則會傳送下列請求至AEM伺服器以建置主控台：
 
 [https://localhost:4502/content/geometrixx.pages.json?start=0&amp;limit=30&amp;predicate=siteadmin](https://localhost:4502/content/geometrixx.pages.json?start=0&amp;limit=30&amp;predicate=siteadmin)
 
-要确保新服务在部署包含它的捆绑包后正在运行，请执行以下操作：
+若要確保新服務在部署包含該服務的套件組合後仍在執行：
 
-1. 将浏览器指向以下URL：
+1. 將瀏覽器指向下列URL：
    [https://localhost:4502/content/geometrixx.pages.json?start=0&amp;limit=30&amp;predicate=siteadmin](https://localhost:4502/content/geometrixx.pages.json?start=0&amp;limit=30&amp;predicate=siteadmin)
 
-1. 响应应按如下方式显示新属性：
+1. 回應應依照以下方式顯示新屬性：
 
 ![screen_shot_2012-02-13at163046](assets/screen_shot_2012-02-13at163046.png)
 
-### 显示新列 {#displaying-the-new-column}
+### 顯示新欄 {#displaying-the-new-column}
 
-最后一步是调整网站管理控制台的节点结构，通过叠加来显示所有Geometrixx页面的新属性 `/libs/wcm/core/content/siteadmin`. 按照以下步骤操作：
+最後一個步驟包含調整網站管理主控台的節點結構，以透過覆蓋來顯示所有Geometrixx頁面的新屬性 `/libs/wcm/core/content/siteadmin`. 請依照下列步驟進行：
 
-1. 在CRXDE Lite中，创建节点结构 `/apps/wcm/core/content` 具有类型的节点 `sling:Folder` 以反映结构 `/libs/wcm/core/content`.
+1. 在CRXDE Lite中，建立節點結構 `/apps/wcm/core/content` 具有型別節點 `sling:Folder` 以反映結構 `/libs/wcm/core/content`.
 
-1. 复制节点 `/libs/wcm/core/content/siteadmin` 并粘贴到下方 `/apps/wcm/core/content`.
+1. 複製節點 `/libs/wcm/core/content/siteadmin` 並在下方貼上 `/apps/wcm/core/content`.
 
-1. 复制节点 `/apps/wcm/core/content/siteadmin/grid/assets` 到 `/apps/wcm/core/content/siteadmin/grid/geometrixx` 并更改其属性：
+1. 複製節點 `/apps/wcm/core/content/siteadmin/grid/assets` 至 `/apps/wcm/core/content/siteadmin/grid/geometrixx` 並變更其屬性：
 
    * 移除 **pageText**
 
-   * 设置 **pathRegex** 到 `/content/geometrixx(/.*)?`
-这将使所有geometrixx网站的网格配置处于活动状态。
+   * 設定 **pathRegex** 至 `/content/geometrixx(/.*)?`
+這會讓所有geometrixx網站的網格設定處於使用中狀態。
 
-   * 设置 **storeproxysuffix** 到 `.pages.json`
+   * 設定 **storeproxysuffix** 至 `.pages.json`
 
-   * 编辑 **storeReaderFields** 多值物业并加上 `starred` 值。
+   * 編輯 **storeReaderFields** 多值屬性並新增 `starred` 值。
 
-   * 要激活MSM功能，请将以下MSM参数添加到多字符串属性中 **storeReaderFields**：
+   * 若要啟用MSM功能，請將下列MSM引數新增至多字串屬性 **storeReaderFields**：
 
       * **msm：isSource**
       * **msm：isInBlueprint**
       * **msm：isLiveCopy**
 
-1. 添加 `starred` 节点（属于类型） **nt：unstructured**)下 `/apps/wcm/core/content/siteadmin/grid/geometrixx/columns` 具有以下属性：
+1. 新增 `starred` 節點（型別） **nt：unstructured**)下 `/apps/wcm/core/content/siteadmin/grid/geometrixx/columns` 具有以下屬性：
 
-   * **dataIndex**： `starred` 字符串类型
+   * **dataIndex**： `starred` 型別字串的
 
-   * **标头**： `Starred` 字符串类型
+   * **頁首**： `Starred` 型別字串的
 
-   * **xtype**： `gridcolumn` 字符串类型
+   * **xtype**： `gridcolumn` 型別字串的
 
-1. （可选）删除您不想显示的列 `/apps/wcm/core/content/siteadmin/grid/geometrixx/columns`
+1. （選擇性）拖放您不想要顯示的欄 `/apps/wcm/core/content/siteadmin/grid/geometrixx/columns`
 
-1. `/siteadmin` 是一个虚名路径，默认指向 `/libs/wcm/core/content/siteadmin`.
-要将此重定向到您在上的siteadmin版本，请执行以下操作 `/apps/wcm/core/content/siteadmin` 定义属性 `sling:vanityOrder` ，其值将高于在上定义的 `/libs/wcm/core/content/siteadmin`. 默认值为300，因此任何更高的值都适用。
+1. `/siteadmin` 是虛名路徑，預設會指向 `/libs/wcm/core/content/siteadmin`.
+若要將此重新導向至您在上的Siteadmin版本 `/apps/wcm/core/content/siteadmin` 定義屬性 `sling:vanityOrder` ，讓值高於在上定義的 `/libs/wcm/core/content/siteadmin`. 預設值為300，因此任何更高的值都適用。
 
-1. 转到网站管理控制台并导航到Geometrixx站点：
+1. 前往「網站管理」主控台，並導覽至Geometrixx網站：
    [https://localhost:4502/siteadmin#/content/geometrixx](https://localhost:4502/siteadmin#/content/geometrixx).
 
-1. 新列名为 **星形** 可用，按如下方式显示自定义信息：
+1. 名為的新欄 **星號** 可用，顯示自訂資訊如下：
 
 ![screen_shot_2012-02-14at104602](assets/screen_shot_2012-02-14at104602.png)
 
 >[!CAUTION]
 >
->如果多个网格配置与由定义的请求路径匹配 **pathRegex** 属性，将使用第一个属性，而不是最具体的属性，这意味着配置的顺序很重要。
+>如果多個格點設定符合由定義的請求路徑 **pathRegex** 屬性時，會使用第一個變數，而非最明確的變數，這表示設定的順序很重要。
 
-### 示例包 {#sample-package}
+### 範例套件 {#sample-package}
 
-本教程的结果可在 [自定义网站管理控制台](https://localhost:4502/crx/packageshare/index.html/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/helper/customizing-siteadmin) 包共享。
+本教學課程的結果可在以下網址取得： [自訂網站管理主控台](https://localhost:4502/crx/packageshare/index.html/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/helper/customizing-siteadmin) 封裝共用。

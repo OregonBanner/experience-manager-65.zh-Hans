@@ -1,7 +1,7 @@
 ---
-title: 编辑和转换现有域
+title: 編輯和轉換現有網域
 seo-title: Editing and converting existing domains
-description: 了解如何从“域管理”页面更改现有域的设置。 将现有企业域转换为混合域，反之亦然。
+description: 瞭解如何從「網域管理」頁面變更現有網域的設定。 將現有企業網域轉換為混合網域，反之亦然。
 seo-description: Learn how to change the settings for existing domains from the Domain Management page. Convert an existing enterprise domain to a hybrid domain or vice versa.
 uuid: 4cc9547e-b4ec-4588-b1cf-18720f06149a
 contentOwner: admin
@@ -17,35 +17,35 @@ ht-degree: 0%
 
 ---
 
-# 编辑和转换现有域{#editing-and-converting-existing-domains}
+# 編輯和轉換現有網域{#editing-and-converting-existing-domains}
 
-您可以从“域管理”页面更改现有域的设置。 您还可以将现有企业域转换为混合域。
+您可以從「網域管理」頁面變更現有網域的設定。 您也可以將現有的企業網域轉換為混合網域。
 
-## 编辑现有域 {#edit-an-existing-domain}
+## 編輯現有網域 {#edit-an-existing-domain}
 
-1. 在管理控制台中，单击设置>用户管理>域管理。
-1. 单击要编辑的域的名称。
-1. 要更改域名，请更改“名称”框中的文本。
-1. 要更改企业域或混合域的验证信息，请单击该页底部相应的验证名称。 在“编辑身份验证”页面上，根据需要更改设置。 (请参阅 [身份验证设置](/help/forms/using/admin-help/configuring-authentication-providers.md#authentication-settings).)
-1. 要更改企业域的目录信息，请单击该页底部的相应目录名。 在“编辑目录”页上，根据需要更改设置。 (请参阅 [添加目录或自定义SPI](/help/forms/using/admin-help/configuring-directories.md#adding-directories-or-custom-spis).)
-1. 完成更改后，单击“确定”。
+1. 在管理控制檯中，按一下「設定>使用者管理>網域管理」。
+1. 按一下要編輯的網域名稱。
+1. 若要變更網域名稱，請變更「名稱」方塊中的文字。
+1. 若要變更企業或混合式網域的驗證資訊，請按一下頁面底部適當的驗證名稱。 在「編輯驗證」頁面上，視需要變更設定。 (請參閱 [驗證設定](/help/forms/using/admin-help/configuring-authentication-providers.md#authentication-settings).)
+1. 若要變更企業網域的目錄資訊，請按一下頁面底部的適當目錄名稱。 在「編輯目錄」頁面上，視需要變更設定。 (請參閱 [新增目錄或自訂SPI](/help/forms/using/admin-help/configuring-directories.md#adding-directories-or-custom-spis).)
+1. 完成變更後，按一下「確定」。
 
-## 将企业域转换为混合域 {#convert-an-enterprise-domain-to-a-hybrid-domain}
+## 將企業網域轉換為混合網域 {#convert-an-enterprise-domain-to-a-hybrid-domain}
 
-1. 在管理控制台中，单击设置>用户管理>域管理。
-1. 单击要转换的企业域的名称。
-1. 单击转换为混合域。
-1. 查看显示的有关用户和组数据以及用户验证的信息，然后单击“确定”。
-1. 编辑混合域的设置，然后单击“确定”。
+1. 在管理控制檯中，按一下「設定>使用者管理>網域管理」。
+1. 按一下要轉換的企業網域名稱。
+1. 按一下「轉換為混合網域」。
+1. 檢閱顯示的關於使用者和群組資料以及使用者驗證的資訊，然後按一下「確定」。
+1. 編輯混合網域的設定，然後按一下「確定」。
 
 >[!NOTE]
 >
->如果要转换的企业域不包含目录设置，则任何LDAP身份验证设置都将丢失。
+>如果您要轉換的企業網域不包含目錄設定，則會遺失任何LDAP驗證設定。
 
-## 将混合域转换为企业域 {#convert-a-hybrid-domain-to-an-enterprise-domain}
+## 將混合網域轉換為企業網域 {#convert-a-hybrid-domain-to-an-enterprise-domain}
 
-1. 在管理控制台中，单击设置>用户管理>域管理。
-1. 单击要转换的混合域的名称。
-1. 单击转换为企业域。
-1. 查看显示的有关用户和组数据以及用户验证的信息，然后单击“确定”。
-1. 单击添加目录并配置所需的目录信息。 (请参阅 [添加目录或自定义SPI](/help/forms/using/admin-help/configuring-directories.md#adding-directories-or-custom-spis).)
+1. 在管理控制檯中，按一下「設定>使用者管理>網域管理」。
+1. 按一下要轉換的混合網域名稱。
+1. 按一下「轉換為企業網域」。
+1. 檢閱顯示的關於使用者和群組資料以及使用者驗證的資訊，然後按一下「確定」。
+1. 按一下「新增目錄」並設定所需的目錄資訊。 (請參閱 [新增目錄或自訂SPI](/help/forms/using/admin-help/configuring-directories.md#adding-directories-or-custom-spis).)

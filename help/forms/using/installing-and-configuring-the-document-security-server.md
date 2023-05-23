@@ -1,7 +1,7 @@
 ---
-title: 安装和配置Document Security服务器
+title: 安裝和設定Document Security伺服器
 seo-title: Installing and configuring the document security server
-description: 使用Document Security安全地分发您以支持的格式保存的任何信息。 只有授权用户才能访问受保护的文档。
+description: 使用Document Security安全地散發您已以支援格式儲存的任何資訊。 只有授權的使用者才能存取受保護的檔案。
 seo-description: Use document security to safely distribute any information that you have saved in a supported format. Only authorized users can access protected documents.
 uuid: 04c67a84-01ad-45b7-a590-822b1c067d52
 contentOwner: khsingh
@@ -15,53 +15,53 @@ ht-degree: 0%
 
 ---
 
-# 安装和配置Document Security服务器 {#installing-and-configuring-the-document-security-server}
+# 安裝和設定Document Security伺服器 {#installing-and-configuring-the-document-security-server}
 
-使用Document Security安全地分发您以支持的格式保存的任何信息。 只有授权用户才能访问受保护的文档。
+使用Document Security安全地散發您已以支援格式儲存的任何資訊。 只有授權的使用者才能存取受保護的檔案。
 
-Adobe Experience Manager Forms document security确保只有授权用户才能使用您的文档。 使用Document Security，您可以安全地分发以支持的格式保存的任何信息。 支持的文件格式包括Adobe可移植文档格式(PDF)以及Microsoft Word、Excel和PowerPoint文件。
+Adobe Experience Manager Forms document security可確保只有授權的使用者才能使用您的檔案。 使用Document Security，您可以安全地散發以支援格式儲存的任何資訊。 支援的檔案格式包括Adobe可攜式檔案格式(PDF)以及Microsoft Word、Excel和PowerPoint檔案。
 
-您可以使用策略保护文档。 您在策略中指定的机密性设置确定收件人如何使用您应用策略的文档。 例如，您可以指定收件人是否可以打印或复制文本、编辑文本，或者向受保护文档添加签名和注释。
+您可以使用原則來保護檔案。 您在原則中指定的機密性設定可決定收件者如何使用您套用原則的檔案。 例如，您可以指定收件者是否可以列印或複製文字、編輯文字，或將簽名和註解新增至受保護檔案。
 
-策略存储在Document Security服务器上；您可以通过客户端应用程序将策略应用到文档。 将策略应用到文档时，策略中指定的机密性设置保护文档包含的信息。 您可以将受策略保护的文档分发给策略授权的收件人。
+原則儲存在Document Security伺服器上；您可以透過使用者端應用程式將這些原則套用至檔案。 將原則套用至檔案時，原則中指定的機密性設定會保護檔案所包含的資訊。 您可以將受原則保護的檔案分發給受原則授權的收件者。
 
-Document Security还提供了客户端、查看者和索引器来保护文档、查看受保护的文档以及索引受保护的文档。 有关Document Security的详细信息，请参阅 [关于document security](/help/forms/using/admin-help/document-security.md).
+Document Security也提供使用者端、檢視者和索引器，以保護檔案、檢視受保護的檔案以及編制受保護檔案的索引。 如需Document Security的詳細資訊，請參閱 [關於document security](/help/forms/using/admin-help/document-security.md).
 
-## 部署拓扑  {#deployment-topology}
+## 部署拓撲  {#deployment-topology}
 
-文档安全功能仅在AEM Forms on JEE中可用。 您需要JEE上的单个AEM Forms实例。 如有必要，您还可以创建AEM Forms服务器的群集或场。 以下拓扑是运行Document Security功能的指示拓扑。 有关拓扑的详细信息，请参见 [AEM Forms的架构和部署拓扑](aem-forms-architecture-deployment.md).
+Document Security功能僅適用於AEM Forms on JEE。 您需要JEE上的單一AEM Forms執行個體。 如有需要，您也可以建立AEM Forms伺服器的叢集或陣列。 以下拓撲指示執行Document Security功能的拓撲。 如需拓撲的詳細資訊，請參閱 [AEM Forms的架構和部署拓撲](aem-forms-architecture-deployment.md).
 
 <!--fix above link-->
 
 ![](do-not-localize/document-security-server_topology.png)
 
-下图显示了AEM Forms Document Security的典型架构：
+下圖顯示AEM Forms Document Security的典型架構：
 
 ![](do-not-localize/document-security-typical-environment.png)
 
-## 在JEE上安装AEM Forms {#installing-aem-forms-on-jee}
+## 在JEE上安裝AEM Forms {#installing-aem-forms-on-jee}
 
-执行以下步骤以在JEE上安装和配置AEM Forms：
+執行以下步驟，在JEE上安裝和設定AEM Forms：
 
-1. 从下载AEM 6.5 Forms on JEE安装程序 [Adobe授权网站(LWS)](https://licensing.adobe.com/). 您需要有效的维护和支持合同才能下载安装程序。
-1. 阅读 [AEM Forms on JEE支持的平台文档](/help/forms/using/aem-forms-jee-supported-platforms.md) 并确保已准备好在JEE上安装AEM Forms的软件、硬件、操作系统、应用程序服务器、数据库、JDK和其他基础架构。
-1. （仅限非全包安装）阅读 [正在准备安装AEM Forms单服务器](https://www.adobe.com/go/learn_aemforms_prepareInstallsingle_64) 或 [正在准备安装AEM Forms服务器群集](https://www.adobe.com/go/learn_aemforms_prepareInstallcluster_64) 并使您的环境准备好在JEE上安装和配置AEM Forms。
-1. 根据您的环境和应用程序服务器，选择以下文档之一，然后按照说明完成安装
+1. 下載AEM 6.5 Forms on JEE安裝程式，網址為 [Adobe授權網站(LWS)](https://licensing.adobe.com/). 您需要有效的維護與支援合約才能下載安裝程式。
+1. 閱讀 [JEE支援平台上的AEM Forms檔案](/help/forms/using/aem-forms-jee-supported-platforms.md) 並確保軟體、硬體、作業系統、應用程式伺服器、資料庫、JDK和其他基礎架構已準備就緒，可在JEE上安裝AEM Forms。
+1. （僅限非全包式安裝）閱讀 [正在準備安裝AEM Forms單一伺服器](https://www.adobe.com/go/learn_aemforms_prepareInstallsingle_64) 或 [正在準備安裝AEM Forms伺服器叢集](https://www.adobe.com/go/learn_aemforms_prepareInstallcluster_64) 並準備好您的環境以在JEE上安裝和設定AEM Forms。
+1. 根據您的環境和應用程式伺服器，選擇下列其中一份檔案，然後依照指示完成安裝
 
-   * [使用JBoss全包在JEE上安装和部署AEM Forms](https://www.adobe.com/go/learn_aemforms_installTurnkey_64)
-   * [在JEE for JBoss上安装和部署AEM Forms](https://www.adobe.com/go/learn_aemforms_installJBoss_64)
-   * [在JEE for WebLogic上安装和部署AEM Forms](https://www.adobe.com/go/learn_aemforms_installWebLogic_64)
-   * [在JEE上安装和部署AEM Forms for WebSphere](https://www.adobe.com/go/learn_aemforms_installWebSphere_64)
-   * [在JBoss集群上的JEE上配置AEM Forms](https://www.adobe.com/go/learn_aemforms_clusterJBoss_64)
-   * [在WebLogic群集上的JEE上配置AEM Forms](https://www.adobe.com/go/learn_aemforms_clusterWebLogic_64)
-   * [在WebSphere群集上的JEE上配置AEM Forms](https://www.adobe.com/go/learn_aemforms_clusterWebSphere_64)
+   * [在JEE上使用JBoss全包安裝和部署AEM Forms](https://www.adobe.com/go/learn_aemforms_installTurnkey_64)
+   * [在JEE for JBoss上安裝和部署AEM Forms](https://www.adobe.com/go/learn_aemforms_installJBoss_64)
+   * [在JEE上安裝和部署AEM Forms for WebLogic](https://www.adobe.com/go/learn_aemforms_installWebLogic_64)
+   * [在JEE上安裝和部署AEM Forms for WebSphere](https://www.adobe.com/go/learn_aemforms_installWebSphere_64)
+   * [在JBoss叢集上的JEE上設定AEM Forms](https://www.adobe.com/go/learn_aemforms_clusterJBoss_64)
+   * [在WebLogic叢集上的JEE上設定AEM Forms](https://www.adobe.com/go/learn_aemforms_clusterWebLogic_64)
+   * [在WebSphere叢集的JEE上設定AEM Forms](https://www.adobe.com/go/learn_aemforms_clusterWebSphere_64)
 
    >[!NOTE]
    >
-   >在JEE Configuration Manager上AEM Forms的模块选择屏幕上，选择Document Security选项。 Document Security选项不需要选择任何其他模块。
+   >在JEE Configuration Manager上AEM Forms的模組選擇畫面上，選擇Document Security選項。 Document Security選項不需要選取任何其他模組。
 
 ## 后续步骤 {#next-steps}
 
-* [配置客户端和服务器选项](/help/forms/using/admin-help/configuring-client-server-options.md)
-* [创建和管理策略](/help/forms/using/admin-help/creating-policies.md)
-* [创建和管理策略集](/help/forms/using/admin-help/creating-policy-sets.md)
+* [設定使用者端和伺服器選項](/help/forms/using/admin-help/configuring-client-server-options.md)
+* [建立和管理原則](/help/forms/using/admin-help/creating-policies.md)
+* [建立和管理原則集](/help/forms/using/admin-help/creating-policy-sets.md)

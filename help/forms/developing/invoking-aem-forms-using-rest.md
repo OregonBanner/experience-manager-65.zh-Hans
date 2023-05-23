@@ -1,7 +1,7 @@
 ---
-title: 使用REST请求调用AEM Forms
+title: 使用REST要求叫用AEM Forms
 seo-title: Invoking AEM Forms using REST Requests
-description: 使用REST请求调用在Workbench中创建的进程。
+description: 使用REST要求叫用Workbench中建立的程式。
 seo-description: Invoke processes created in Workbench using REST requests.
 uuid: 3a19a296-f3fe-4e50-9143-b68aed37f9ef
 contentOwner: admin
@@ -18,59 +18,59 @@ ht-degree: 0%
 
 ---
 
-# 使用REST请求调用AEM Forms {#invoking-aem-forms-using-rest-requests}
+# 使用REST要求叫用AEM Forms {#invoking-aem-forms-using-rest-requests}
 
-**本文档中的示例和示例仅适用于AEM Forms on JEE环境。**
+**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms 。**
 
-可以配置在Workbench中创建的进程，以便您可以通过代表性状态传输(REST)请求来调用它们。 从HTML页发送REST请求。 即，您可以使用REST请求直接从网页调用Forms进程。 例如，您可以打开网页的新实例。 然后，您可以调用Forms进程，并加载渲染的PDF文档，其中包含HTTPPOST请求中发送的数据。
+在Workbench中建立的程式可以設定為透過代表性狀態轉移(REST)請求叫用它們。 從HTML頁面傳送REST要求。 也就是說，您可以使用REST要求，直接從網頁叫用Forms程式。 例如，您可以開啟網頁的新例項。 然後，您可以叫用Forms程式，並載入轉譯的PDF檔案，其中包含在HTTPPOST請求中傳送的資料。
 
-存在两种类型的HTML客户端。 第一个HTML客户端是使用JavaScript编写的AJAX客户端。 第二个客户端是包含提交按钮的HTML表单。 基于HTML的客户端应用程序不是唯一可能的REST客户端。 任何支持HTTP请求的客户端应用程序都可以使用REST调用来调用服务。 例如，您可以使用PDF表单中的REST调用来调用服务。 (请参阅 [从Acrobat调用MyApplication/EncryptDocument进程](#rest-invocation-examples).)
+有兩種型別的HTML使用者端。 第一個HTML使用者端是以JavaScript撰寫的AJAX使用者端。 第二個使用者端是包含提交按鈕的HTML表單。 以HTML為基礎的使用者端應用程式並非唯一可能的REST使用者端。 任何支援HTTP要求的使用者端應用程式都可以使用REST叫用來叫用服務。 例如，您可以使用PDF表單中的REST呼叫來呼叫服務。 (請參閱 [從Acrobat叫用MyApplication/EncryptDocument程式](#rest-invocation-examples).)
 
-在使用REST请求时，建议您不要直接调用Forms服务。 而是调用在Workbench中创建的流程。 在创建用于REST调用的进程时，请使用程序化起点。 在这种情况下，将自动添加REST端点。 有关在Workbench中创建流程的信息，请参阅 [使用Workbench](https://www.adobe.com/go/learn_aemforms_workbench_63).
+使用REST要求時，建議您不要直接叫用Forms服務。 而是叫用在Workbench中建立的程式。 當建立要用於REST呼叫的處理程式時，請使用程式化的起點。 在此情況下，REST端點會自動新增。 如需在Workbench中建立處理的相關資訊，請參閱 [使用Workbench](https://www.adobe.com/go/learn_aemforms_workbench_63).
 
-使用REST调用服务时，系统会提示您输入AEM表单用户名和密码。 但是，如果不想指定用户名和密码，则可以禁用服务安全性。
+當您使用REST叫用服務時，系統會提示您輸入AEM表單使用者名稱和密碼。 但是，如果您不想指定使用者名稱和密碼，則可以停用服務安全性。
 
-要使用REST调用Forms服务（流程在激活时变为服务），请配置REST端点。 （请参阅中的“管理端点”） [管理帮助](https://www.adobe.com/go/learn_aemforms_admin_63).)
+若要使用REST叫用Forms服務（流程啟動後會變成服務），請設定REST端點。 (請參閱下列「管理端點」： [管理說明](https://www.adobe.com/go/learn_aemforms_admin_63).)
 
-配置REST端点后，您可以使用HTTPGET方法或POST方法调用Forms服务。
+設定REST端點後，您可以使用HTTPGET方法或POST方法叫用Forms服務。
 
 ```java
  action="https://hiro-xp:8080/rest/services/[ServiceName]/[OperationName]:[ServiceVersion]" method="post" enctype="multipart/form-data"
 ```
 
-必需 `ServiceName` value是要调用的Forms服务的名称。 可选 `OperationName` value是服务操作的名称。 如果未指定此值，则此名称默认为 `invoke`，启动进程的操作名称。 可选 `ServiceVersion` value是以X.Y格式编码的版本。 如果未指定此值，则使用最新版本。 此 `enctype` 值也可为 `application/x-www-form-urlencoded`.
+強制 `ServiceName` value是要呼叫的Forms服務名稱。 選填 `OperationName` value是服務作業的名稱。 如果未指定此值，則此名稱會預設為 `invoke`，此名稱為啟動程式的作業名稱。 選填 `ServiceVersion` value是以X.Y格式編碼的版本。 如果未指定此值，則會使用最新版本。 此 `enctype` 值也可為 `application/x-www-form-urlencoded`.
 
-## 支持的数据类型 {#supported-data-types}
+## 支援的資料型別 {#supported-data-types}
 
-使用REST请求调用AEM Forms服务时，支持以下数据类型：
+使用REST請求叫用AEM Forms服務時，支援下列資料型別：
 
-* Java原始数据类型，例如字符串和整数
-* `com.adobe.idp.Document` 数据类型
-* XML数据类型，例如 `org.w3c.Document` 和 `org.w3c.Element`
-* 收藏集对象，例如 `java.util.List` 和 `java.util.Map`
+* Java基本資料型別，例如字串和整數
+* `com.adobe.idp.Document` 資料型別
+* XML資料型別，例如 `org.w3c.Document` 和 `org.w3c.Element`
+* 集合物件，例如 `java.util.List` 和 `java.util.Map`
 
-   通常接受将这些数据类型作为Workbench中创建进程的输入值。
+   這些資料型別通常被接受為Workbench中建立之程式的輸入值。
 
-   如果使用HTTPPOST方法调用Froms服务，则参数将在HTTP请求正文中传递。 如果AEM Forms服务的签名具有字符串输入参数，则请求正文可以包含输入参数的文本值。 如果服务的签名定义了多个字符串参数，则请求可以遵循HTTP的 `application/x-www-form-urlencoded` 带有用作表单字段名称的参数名称的表示法。
+   如果使用HTTPPOST方法叫用Froms服務，引數會在HTTP要求內文中傳遞。 如果AEM Forms服務的簽章有字串輸入引數，請求內文可包含輸入引數的文字值。 如果服務的簽章定義多個字串引數，請求可以遵循HTTP的 `application/x-www-form-urlencoded` 附有引數名稱的記號當作表單的欄位名稱。
 
-   如果Forms服务返回字符串参数，则结果为输出参数的文本表示形式。 如果服务返回多个字符串参数，则结果为XML文档，该文档按以下格式对输出参数进行编码：
+   如果Forms服務傳回字串引數，結果會是輸出引數的文字表示法。 如果服務傳回多個字串引數，則結果會是以下列格式編碼輸出引數的XML檔案：
    ` <result> <output-paramater1>output-parameter-value-as-string</output-paramater1> . . . <output-paramaterN>output-parameter-value-as-string</output-paramaterN> </result>`
 
    >[!NOTE]
    >
-   >此 `output-paramater1` value表示输出参数名称。
+   >此 `output-paramater1` value代表輸出引數名稱。
 
-   如果Forms服务需要 `com.adobe.idp.Document` 参数，则只能使用HTTPPOST方法调用该服务。 如果服务需要 `com.adobe.idp.Document` 参数，则HTTP请求正文将成为输入文档对象的内容。
+   如果Forms服務需要 `com.adobe.idp.Document` 引數，則只能使用HTTPPOST方法叫用服務。 如果服務需要 `com.adobe.idp.Document` 引數，HTTP要求內文會成為輸入Document物件的內容。
 
-   如果AEM Forms服务需要多个输入参数，则HTTP请求正文必须是RFC 1867定义的多部分MIME消息。 （RFC 1867是Web浏览器用于将文件上传到网站的标准。） 每个输入参数都必须作为多部分消息的单独部分发送，并编码在 `multipart/form-data` 格式。 每个部件的名称必须与参数的名称匹配。
+   如果AEM Forms服務需要多個輸入引數，HTTP要求內文必須是RFC 1867定義的多部分MIME訊息。 （RFC 1867是網頁瀏覽器用來將檔案上傳到網站的標準。） 每個輸入引數都必須以多部分訊息的獨立部分傳送，並編碼於 `multipart/form-data` 格式。 每個零件的名稱都必須與引數的名稱相符。
 
-   列表和映射也用作在Workbench中创建的AEM Forms进程的输入值。 因此，您可以在使用REST请求时使用这些数据类型。 不支持Java数组，因为它们未用作AEM Forms进程的输入值。
+   清單和地圖也會當作在Workbench中建立之AEM Forms程式的輸入值。 因此，您可以在使用REST請求時使用這些資料型別。 不支援Java陣列，因為它們未用作AEM Forms程式的輸入值。
 
-   如果输入参数是列表，则REST客户端可以通过多次指定该参数（为列表中的每个项目指定一次）来发送该参数。 例如，如果A是文档列表，则输入必须是由多个名为A的部分组成的多部分消息。在这种情况下，每个名为A的部件都会成为输入列表中的项。 如果B是字符串列表，则输入可以是 `application/x-www-form-urlencoded` 包含多个名为B的字段的消息。在这种情况下，每个名为B的表单字段都会成为输入列表中的项。
+   如果輸入引數是清單，REST使用者端可以多次指定引數來傳送它（針對清單中的每個專案指定一次）。 例如，如果A是檔案清單，則輸入內容必須是由多個名為A的部分組成的多部分訊息。在這種情況下，每個名為A的零件都會成為輸入清單中的專案。 如果B是字串清單，則輸入可以是 `application/x-www-form-urlencoded` 包含多個名為B欄位的訊息。在這種情況下，每個名為B的表單欄位都會成為輸入清單中的專案。
 
-   如果输入参数是映射，并且它是仅服务输入参数，则输入消息的每个部分/字段都会成为映射中的键/值记录。 每个部分/字段的名称将成为记录的键。 每个部分/字段的内容将成为记录的值。
+   如果輸入引數為對應，且為服務專用輸入引數，則輸入訊息的每個部分/欄位都會成為對映中的鍵/值記錄。 每個零件/欄位的名稱會成為記錄的鍵。 每個部分/欄位的內容會成為記錄的值。
 
-   如果输入映射不是仅服务输入参数，则属于该映射的每个键/值记录可以使用名为的参数发送，该参数作为参数名称和记录的键的串联。 例如，一个名为的输入映射 `attributes` 可随以下键/值对的列表发送：
+   如果輸入對應不是僅服務的輸入引數，則屬於對應的每個索引鍵/值記錄都可以使用名為的引數來傳送，該引數為引數名稱和記錄的索引鍵的串連。 例如，名為的輸入對應 `attributes` 可隨下列索引鍵/值配對的清單傳送：
 
    `attributesColor=red`
 
@@ -78,52 +78,52 @@ ht-degree: 0%
 
    `attributesWidth=5`
 
-   这将转换为包含三个记录的地图： `Color=red`， `Shape=box`、和 `Width=5`.
+   這會轉換為包含三個記錄的地圖： `Color=red`， `Shape=box`、和 `Width=5`.
 
-   列表和映射类型的输出参数会成为生成XML消息的一部分。 输出列表在XML中表示为一系列XML元素，列表中的每个项目都有一个元素。 每个元素都被赋予与输出列表参数相同的名称。 每个XML元素的值是以下两个值之一：
+   清單和對應型別的輸出引數會成為結果XML訊息的一部分。 輸出清單以XML表示，是一系列XML元素，清單中的每個專案都有一個元素。 每個元素都會獲得與輸出清單引數相同的名稱。 每個XML元素的值是下列兩個專案之一：
 
-* 列表中项目的文本表示形式（如果列表包含字符串类型）
-* 指向文档内容的URL(如果列表包含 `com.adobe.idp.Document` 对象)
+* 清單中專案的文字表示（如果清單包含字串型別）
+* 指向檔案內容的URL (如果清單包含 `com.adobe.idp.Document` 物件)
 
-   以下示例是由具有单个输出参数（名为）的服务返回的XML消息 *列表*，即整数的列表。
-   ` <result>   <list>12345</list>   . . .   <list>67890</list>  </result>`在生成的XML消息中，输出映射参数表示为一系列XML元素，并且映射中的每个记录都有一个元素。 每个元素的名称与映射记录的键相同。 每个元素的值是映射记录值的文本表示形式（如果映射包含具有字符串值的记录）或指向文档内容的URL（如果映射包含具有字符串值的记录）。 `com.adobe.idp.Document` 值)。 以下是由具有单个输出参数（名为）的服务返回的XML消息的示例 `map`. 此参数值是一个映射，其中包含与字母关联的记录 `com.adobe.idp.Document` 对象。
+   以下範例是服務傳回的XML訊息，其中包含名為的單一輸出引數 *清單*，此為整數清單。
+   ` <result>   <list>12345</list>   . . .   <list>67890</list>  </result>`輸出map引數在產生的XML訊息中呈現為一系列XML元素，對應中的每個記錄有一個元素。 每個元素都會獲得與對應記錄索引鍵相同的名稱。 每個元素的值是對應記錄值的文字表示（如果對應包含具有字串值的記錄）或指向檔案內容的URL (如果對應包含具有 `com.adobe.idp.Document` 值)。 以下是由具有單一輸出引數（名為）的服務傳回的XML訊息範例 `map`. 此引數值是由與字母關聯的記錄所組成的地圖 `com.adobe.idp.Document` 物件。
    ` <result>   http://localhost:8080/DocumentManager/docm123/4567   . . .   <Z>http://localhost:8080/DocumentManager/docm987/6543</Z>  </result>  `
 
-## 异步调用 {#asynchronous-invocations}
+## 非同步叫用 {#asynchronous-invocations}
 
-某些AEM Forms服务（例如以人为中心的长期流程）需要很长时间才能完成。 这些服务可以以非阻塞方式异步调用。 (请参阅 [调用以人为中心的长期进程](/help/forms/developing/invoking-human-centric-long-lived.md#invoking-human-centric-long-lived-processes).)
+有些AEM Forms服務（例如以人為中心的長期流程）需要很長時間才能完成。 這些服務可以非封鎖方式非同步叫用。 (請參閱 [叫用以人為中心的長期流程](/help/forms/developing/invoking-human-centric-long-lived.md#invoking-human-centric-long-lived-processes).)
 
-通过替换，可异步调用AEM Forms服务 `services` 替换为 `async_invoke` （在调用URL中），如以下示例所示。
+可透過取代以非同步方式叫用AEM Forms服務 `services` 替換為 `async_invoke` 引動URL中的，如下列範例所示。
 
 ```java
  http://localhost:8080/rest/async_invoke/SomeService. SomeOperation?integer_input_variable=123&string_input_variable=abc
 ```
 
-此URL返回负责此调用的作业的标识符值（采用“text/plain”格式）。
+此URL會傳回負責此叫用之工作的識別碼值（以「text/plain」格式）。
 
-可以通过以下方式使用调用URL来检索异步调用的状态 `services` 替换为 `async_status`. URL必须包含 `job_id` 指定与此调用关联的作业的标识符值的参数。 例如：
+非同步叫用的狀態可透過使用叫用URL來擷取 `services` 取代為 `async_status`. URL必須包含 `job_id` 指定與此呼叫相關之工作的識別碼值的引數。 例如：
 
 ```java
  http://localhost:8080/rest/async_status/SomeService.SomeOperation?job_id=2345353443366564
 ```
 
-此URL返回一个整数值（采用“文本/纯”格式），该值根据作业管理器的规范对作业状态进行编码（例如，2表示正在运行，3表示已完成，4表示失败，等等）。
+此URL會根據工作管理員的規格傳回對工作狀態進行編碼的整數值（如2表示正在執行、3表示已完成、4表示失敗等）。
 
-如果作业已完成，则URL将返回与同步调用服务时相同的结果。
+如果工作完成，則URL會傳回與同步叫用服務相同的結果。
 
-一旦作业完成并检索到结果，就可以通过使用调用URL处理作业 `services` 替换为 `async_dispose`. URL还应包含 `job_id` 指定作业的标识符值的参数。 例如：
+工作完成並擷取結果後，即可使用引發URL來處理工作，並附上 `services` 替換為 `async_dispose`. URL也應包含 `job_id` 指定工作識別碼值的引數。 例如：
 
 ```java
  http://localhost:8080/rest/async_dispose/SomeService.SomeOperation?job_id=2345353443366564
 ```
 
-如果作业处置成功，则此URL返回空消息。
+如果成功處置工作，此URL會傳回空白訊息。
 
-## 错误报告 {#error-reporting}
+## 錯誤報告 {#error-reporting}
 
-如果由于服务器上抛出异常而无法完成同步或异步调用请求，则该异常会报告为HTTP响应消息的一部分。 如果调用URL(或 `async_result` 异步调用中的URL)没有.xml后缀，REST提供程序会返回HTTP代码 `500 Internal Server Error` 后跟异常消息。
+如果因為伺服器上擲回例外狀況而無法完成同步或非同步呼叫要求，例外狀況會回報為HTTP回應訊息的一部分。 如果叫用URL (或 `async_result` URL （在非同步叫用的情況下）沒有.xml尾碼，REST提供者會傳回HTTP程式碼 `500 Internal Server Error` 後面接著例外狀況訊息。
 
-如果调用URL(或 `async_result` URL（在异步调用中）确实具有.xml后缀，则REST提供程序返回HTTP代码 `200 OK`后跟一个描述异常的XML文档，格式如下。
+如果叫用URL (或 `async_result` URL （在非同步叫用的情況下）確實有.xml尾碼，REST提供者會傳回HTTP程式碼 `200 OK`後面接著一個XML檔案，以下列格式說明例外狀況。
 
 ```xml
  <exception>
@@ -143,51 +143,51 @@ ht-degree: 0%
  </exception>
 ```
 
-此 `DSCError` 元素是可选的，并且仅当例外为的实例时才会出现 `com.adobe.idp.dsc.DSCException`.
+此 `DSCError` 元素為選用元素，且僅當例外狀況為的例項時才會出現 `com.adobe.idp.dsc.DSCException`.
 
-## 安全性和身份验证 {#security-and-authentication}
+## 安全性與驗證 {#security-and-authentication}
 
-要为REST调用提供安全传输，AEM Forms管理员可以在托管AEM Forms的J2EE应用程序服务器中启用HTTPS协议。 此配置特定于J2EE应用程序服务器；它不是forms服务器配置的一部分。
+為了提供REST呼叫的安全傳輸，AEM表單管理員可以在託管AEM Forms的J2EE應用程式伺服器上啟用HTTPS通訊協定。 此設定專屬於J2EE應用程式伺服器；它不是表單伺服器設定的一部分。
 
 >[!NOTE]
 >
->作为希望通过REST端点公开流程的Workbench开发人员，请记住XSS漏洞问题。 XSS漏洞可用于窃取或操纵Cookie、修改内容的呈现方式，以及危害机密信息。 如果XSS漏洞是一个问题，建议您使用其他输入和输出数据验证规则来扩展进程逻辑。
+>作為想要透過REST端點公開您的流程的Workbench開發人員，請記住XSS弱點問題。 XSS漏洞可用來竊取或操控Cookie、修改內容的呈現方式，以及危害機密資訊。 如果XSS弱點是個問題，建議您使用其他輸入和輸出資料驗證規則來擴充程式邏輯。
 
-## 支持REST调用的AEM Forms服务 {#aem-forms-services-that-support-rest-invocation}
+## 支援REST叫用的AEM Forms服務 {#aem-forms-services-that-support-rest-invocation}
 
-尽管建议您使用Workbench而不是直接服务来调用创建的进程，但有一些AEM Forms服务确实支持REST调用。 建议直接调用进程而不是服务的原因是，这样可以更高效地调用进程。 请考虑以下方案。 假定您要从REST客户端创建策略。 即，您希望REST客户端定义策略名称、离线租赁期等值。
+雖然建議您叫用使用Workbench而非直接服務建立的程式，但有些AEM Forms服務確實支援REST叫用。 建議您叫用處理程式而非直接叫用服務的原因，是因為叫用處理程式更有效率。 請考量下列情況。 假設您要從REST使用者端建立原則。 也就是說，您希望REST使用者端定義原則名稱、離線租期等值。
 
-要创建策略，您必须定义复杂的数据类型，例如 `PolicyEntry` 对象。 A `PolicyEntry` 对象定义属性，例如与策略关联的权限。 (请参阅 [创建策略](/help/forms/developing/protecting-documents-policies.md#creating-policies).)
+若要建立原則，您必須定義複雜的資料型別，例如 `PolicyEntry` 物件。 A `PolicyEntry` 物件會定義屬性，例如與原則關聯的許可權。 (請參閱 [建立原則](/help/forms/developing/protecting-documents-policies.md#creating-policies).)
 
-而不是发送REST请求来创建策略(这将包括定义复杂的数据类型，例如 `PolicyEntry` 对象)，创建使用Workbench创建策略的进程。 定义进程以接受基本输入变量，如定义进程名称的字符串值或定义离线租赁期的整数。
+不要傳送REST要求來建立原則(這將包括定義複雜的資料型別，例如 `PolicyEntry` 物件)，建立使用Workbench建立原則的程式。 定義程式以接受基本輸入變數，例如定義程式名稱的字串值，或定義離線租期的整數。
 
-这样，您就不必创建包含操作所需的复杂数据类型的REST调用请求。 该进程定义了复杂的数据类型，而您从REST客户端执行的所有操作都是调用该进程并传递基本数据类型。 有关使用REST调用进程的信息，请参见 [使用REST调用MyApplication/EncryptDocument进程](#rest-invocation-examples).
+如此一來，您就不必建立包含作業所需複雜資料型別的REST叫用要求。 程式會定義複雜的資料型別，而您從REST使用者端執行的所有操作就是叫用程式並傳遞基本資料型別。 如需有關使用REST叫用流程的資訊，請參閱 [使用REST叫用MyApplication/EncryptDocument程式](#rest-invocation-examples).
 
-以下列表指定了支持直接REST调用的AEM Forms服务。
+下列清單指定支援直接REST呼叫的AEM Forms服務。
 
-* Distiller服务
-* Rights Management服务
-* 生成PDF服务
-* 生成3dPDF服务
+* Distiller服務
+* Rights Management服務
+* GeneratePDF服務
+* Generate3dPDF服務
 * FormDataIntegration
 
-## REST调用示例 {#rest-invocation-examples}
+## REST叫用範例 {#rest-invocation-examples}
 
-提供了以下REST调用示例：
+提供下列REST呼叫範例：
 
-* 将布尔值传递给AEM Forms进程
-* 将日期值传递到AEM Forms进程
-* 将文档传递到AEM Forms进程
-* 将文档和文本值传递到AEM Forms进程
-* 将枚举值传递到AEM Forms进程
-* 使用REST调用MyApplication/EncryptDocument进程
-* 从Acrobat调用MyApplication/EncryptDocument进程
+* 將布林值傳遞至AEM Forms程式
+* 將日期值傳遞至AEM Forms程式
+* 將檔案傳遞至AEM Forms程式
+* 將檔案和文字值傳遞至AEM Forms程式
+* 將分項清單值傳遞至AEM Forms程式
+* 使用REST叫用MyApplication/EncryptDocument程式
+* 從Acrobat叫用MyApplication/EncryptDocument程式
 
-   每个示例都演示了向AEM Forms流程传递各种数据类型
+   每個範例都會示範如何將不同的資料型別傳遞至AEM Forms程式
 
-**将布尔值传递给进程**
+**傳遞布林值至程式**
 
-以下HTML示例传递了两个 `Boolean` 值到AEM Forms进程，名为 `RestTest2`. 调用方法的名称为 `invoke` 而版本为1.0。请注意，使用的是“HTML发布”方法。
+下列HTML範例會傳遞兩個 `Boolean` AEM Forms處理序的值命名為 `RestTest2`. 叫用方法的名稱為 `invoke` 而版本是1.0。請注意，已使用HTML Post方法。
 
 ```html
  <html>
@@ -205,9 +205,9 @@ ht-degree: 0%
  </html>
 ```
 
-**将日期值传递给进程**
+**將日期值傳遞至程式**
 
-以下HTML示例将一个日期值传递到名为的AEM Forms进程 `SOAPEchoService`. 调用方法的名称为 `echoCalendar`. 请注意，HTML `Post` 方法。
+以下HTML範例會將日期值傳遞至名為的AEM Forms程式 `SOAPEchoService`. 叫用方法的名稱為 `echoCalendar`. 請注意，HTML `Post` 方法使用。
 
 ```html
  <html>
@@ -224,9 +224,9 @@ ht-degree: 0%
  </html>
 ```
 
-**将文档传递到进程**
+**將檔案傳遞至程式**
 
-以下HTML示例调用一个名为的AEM Forms进程 `MyApplication/EncryptDocument` 需要PDF文件。 有关此过程的信息，请参见 [使用MTOM调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom).
+以下HTML範例會叫用名為的AEM Forms程式 `MyApplication/EncryptDocument` 需要PDF檔案。 如需此程式的相關資訊，請參閱 [使用MTOM叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom).
 
 ```html
  <html>
@@ -244,9 +244,9 @@ ht-degree: 0%
  </html>
 ```
 
-**将文档和文本值传递给进程**
+**傳遞檔案和文字值至程式**
 
-以下HTML示例调用一个名为的AEM Forms进程 `RestTest3` 需要一个文档和两个文本值。 请注意，使用的是“HTML发布”方法。
+以下HTML範例會叫用名為的AEM Forms程式 `RestTest3` 需要一份檔案和兩個文字值。 請注意，已使用HTML Post方法。
 
 ```html
  <html>
@@ -266,9 +266,9 @@ ht-degree: 0%
  </html>
 ```
 
-**将枚举值传递给进程**
+**將列舉值傳遞至程式**
 
-以下HTML示例调用一个名为的AEM Forms进程 `SOAPEchoService` 需要枚举值。 请注意，使用的是“HTML发布”方法。
+以下HTML範例會叫用名為的AEM Forms程式 `SOAPEchoService` 需要列舉值。 請注意，已使用HTML Post方法。
 
 ```html
  <html>
@@ -285,20 +285,20 @@ ht-degree: 0%
  </html>
 ```
 
-**使用REST调用MyApplication/EncryptDocument进程**
+**使用REST叫用MyApplication/EncryptDocument程式**
 
-您可以调用名为的AEM Forms短暂进程 *MyApplication/EncryptDocument* 使用REST。
+您可以叫用名為的AEM Forms短期程式 *MyApplication/EncryptDocument* 使用REST。
 
 >[!NOTE]
 >
->此流程并非基于现有的AEM Forms流程。 要遵循代码示例，请创建一个名为的进程 `MyApplication/EncryptDocument` 使用workbench。 (请参阅 [使用Workbench](https://www.adobe.com/go/learn_aemforms_workbench_63).)
+>此程式並非以現有AEM Forms程式為基礎。 若要與程式碼範例一起遵循，請建立名為的程式 `MyApplication/EncryptDocument` 使用workbench。 (請參閱 [使用Workbench](https://www.adobe.com/go/learn_aemforms_workbench_63).)
 
-调用此进程时，它将执行以下操作：
+叫用此程式時，會執行下列動作：
 
-1. 获取传递到进程的不安全PDF文档。 此操作基于 `SetValue` 操作。 此进程的输入参数为 `document` 进程变量已命名 `inDoc`.
-1. 使用密码加密PDF文档。 此操作基于 `PasswordEncryptPDF` 操作。 密码加密的PDF文档在名为的进程变量中返回 `outDoc`.
+1. 取得傳遞至程式的不安全PDF檔案。 此動作是根據 `SetValue` 作業。 此程式的輸入引數是 `document` 流程變數已命名 `inDoc`.
+1. 使用密碼加密PDF檔案。 此動作是根據 `PasswordEncryptPDF` 作業。 密碼加密的PDF檔案會在名為的程式變數中傳回 `outDoc`.
 
-   使用REST请求调用此进程时，加密的PDF文档会显示在Web浏览器中。 在查看PDF文档之前，请指定密码（除非禁用了安全保护）。 以下HTML代码表示对 `MyApplication/EncryptDocument` 进程。
+   使用REST要求叫用此程式時，加密的PDF檔案會顯示在網頁瀏覽器中。 在檢視PDF檔案之前，您必須指定密碼（除非已停用安全性）。 下列HTML程式碼代表對 `MyApplication/EncryptDocument` 程式。
 
    ```html
     <html>
@@ -315,14 +315,14 @@ ht-degree: 0%
     </body>
    ```
 
-**从Acrobat调用MyApplication/EncryptDocument进程** {#invoke-process-acrobat}
+**從Acrobat叫用MyApplication/EncryptDocument程式** {#invoke-process-acrobat}
 
-您可以使用REST请求从Acrobat调用Forms进程。 例如，您可以调用 *MyApplication/EncryptDocument* 进程。 要从Acrobat调用Forms进程，请在Designer内的XDP文件上放置一个提交按钮。 (请参阅 [Designer帮助](https://www.adobe.com/go/learn_aemforms_designer_63).)
+您可以使用REST要求，從Acrobat叫用Forms程式。 例如，您可以叫用 *MyApplication/EncryptDocument* 程式。 若要從Acrobat叫用Forms程式，請在Designer內的XDP檔案上放置提交按鈕。 (請參閱 [Designer說明](https://www.adobe.com/go/learn_aemforms_designer_63_cn).)
 
-指定在按钮的 *提交到URL* 字段，如下图所示。
+指定URL以在按鈕的 *提交至URL* 欄位，如下圖所示。
 
-用于调用进程的完整URL为https://hiro-xp:8080/rest/services/MyApplication/EncryptDocument。
+叫用處理程式的完整URL為https://hiro-xp:8080/rest/services/MyApplication/EncryptDocument。
 
-如果流程需要PDF文档作为输入值，请确保以PDF形式提交表单，如上图所示。 此外，要成功调用进程，该进程必须返回PDF文档。 否则，Acroabt无法处理返回值并出现错误。 不必指定输入进程变量的名称。 例如， *MyApplication/EncryptDocument* 进程具有名为的输入变量 `inDoc`. 只要将表单提交为PDF，就不必指定inDoc。
+如果程式需要PDF檔案作為輸入值，請確保您以PDF提交表單，如上圖所示。 此外，若要成功叫用程式，該程式必須傳回PDF檔案。 否則Acroabt無法處理傳回值，並發生錯誤。 您不必指定輸入程式變數的名稱。 例如， *MyApplication/EncryptDocument* 處理序具有名為的輸入變數 `inDoc`. 只要將表單提交為PDF，您就不必指定inDoc。
 
-您还可以将表单数据作为XML提交到Forms流程。要提交XML数据，请确保 `Submit As` 下拉列表指定XML。 由于进程的返回值必须是PDF文档，因此PDF文档会显示在Acrobat中。
+您也可以將表單資料以XML形式提交至Forms程式。若要提交XML資料，請確保 `Submit As` 下拉式清單指定XML。 由於流程的傳回值必須是PDF檔案，因此PDF檔案會顯示在Acrobat中。

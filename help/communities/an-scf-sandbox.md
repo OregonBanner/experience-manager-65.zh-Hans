@@ -1,7 +1,7 @@
 ---
-title: 创建SCF沙盒
+title: 建立SCF沙箱
 seo-title: Create An SCF Sandbox
-description: 本教程主要面向不熟悉AEM且有兴趣使用SCF组件的开发人员。  它介绍如何创建SCF沙盒站点
+description: 本教學課程主要供初次接觸AEM且有興趣使用SCF元件的開發人員使用。  它會逐步建立SCF沙箱網站
 seo-description: This tutorial is primarily for developers, new to AEM, who are interested in using SCF components.  It walks through the creation of An SCF Sandbox site
 uuid: ee52e670-e1e6-4bcd-9548-c963142e6704
 contentOwner: Guillaume Carlino
@@ -17,73 +17,73 @@ ht-degree: 0%
 
 ---
 
-# 创建SCF沙盒  {#create-an-scf-sandbox}
+# 建立SCF沙箱  {#create-an-scf-sandbox}
 
 
-从AEM 6.1 Communities开始，快速创建沙盒的最简单方法是创建社区站点。 参见 [AEM Communities快速入门](getting-started.md).
+自AEM 6.1社群起，快速建立沙箱最簡單的方式就是建立社群網站。 另請參閱 [AEM Communities快速入門](getting-started.md).
 
-对于开发人员来说，另一个有用的工具是 [社区组件指南](components-guide.md)，可以探索和快速构建Communities组件和功能的原型。
+另一個對開發人員有用的工具是 [社群元件指南](components-guide.md)，可讓您探索及快速建立Communities元件和功能的原型。
 
-创建网站的练习有助于了解AEM网站的结构（可能包括Communities功能），同时还提供了一些简单页面，可在其上探索如何使用 [社交组件框架(SCF)](scf.md).
+建立網站的練習有助於瞭解AEM網站的結構，其中可能包含Communities功能，同時也提供簡單頁面，讓您探索如何使用 [社交元件架構(SCF)](scf.md).
 
-本教程主要面向不熟悉AEM且有兴趣使用SCF组件的开发人员。 它介绍如何创建SCF沙盒站点，与的教程类似 [如何创建功能齐全的Internet网站](../../help/sites-developing/website.md) 它侧重于站点结构，例如导航、徽标、搜索、工具栏和列出子页面。
+本教學課程主要供初次接觸AEM且有興趣使用SCF元件的開發人員使用。 它會逐步建立SCF沙箱網站，類似於的教學課程 [如何建立功能齊全的網際網路網站](../../help/sites-developing/website.md) 其著重於網站結構，例如導覽、標誌、搜尋、工具列和列出子頁面。
 
-开发发生在作者实例上，而试验网站是在发布实例上最佳的。
+開發會在作者執行個體上進行，而實驗網站最適合在發佈執行個體上進行。
 
-本教程中的步骤包括：
+本教學課程中的步驟為：
 
-* [设置网站结构](setup-website.md)
-* [初始沙盒应用程序](initial-app.md)
-* [初始沙盒内容](initial-content.md)
-* [开发沙盒应用程序](develop-app.md)
-* [添加Clientlibs](add-clientlibs.md)
-* [开发沙盒内容](develop-content.md)
+* [設定網站結構](setup-website.md)
+* [初始沙箱應用程式](initial-app.md)
+* [初始沙箱內容](initial-content.md)
+* [開發沙箱應用程式](develop-app.md)
+* [新增Clientlibs](add-clientlibs.md)
+* [開發沙箱內容](develop-content.md)
 
 >[!CAUTION]
 >
->本教程不会使用创建的功能创建社区站点 [社区站点控制台](sites-console.md). 例如，本教程未介绍如何设置登录、自注册、 [社交登录](social-login.md)、消息传送、用户档案等。
+>本教學課程不會使用建立的功能來建立社群網站 [社群網站主控台](sites-console.md). 例如，本教學課程未說明如何設定登入、自我註冊、 [社交登入](social-login.md)、傳訊、設定檔等。
 >
->如果建议使用简单的社区站点，请按照 [创建示例页面](create-sample-page.md) 教程。
+>如果偏好使用簡單的社群網站，請遵循 [建立範例頁面](create-sample-page.md) 教學課程。
 
 ## 前提条件 {#prerequisites}
 
-本教程假设您安装了一个AEM作者和一个AEM发布实例，该实例具有 [最新版本](deploy-communities.md#latest-releases) 社区的。
+本教學課程假設您已安裝一個AEM作者和一個AEM發佈執行個體，該執行個體具有 [最新版本](deploy-communities.md#latest-releases) 社群的。
 
-以下是一些对于不熟悉AEM平台的开发人员有用的链接：
+以下是一些實用的連結，供不熟悉AEM平台的開發人員使用：
 
-* [快速入门](../../help/sites-deploying/deploy.md#getting-started)：用于部署AEM实例。
+* [快速入門](../../help/sites-deploying/deploy.md#getting-started)：用於部署AEM執行個體。
 
-   * [基础知识](../../help/sites-developing/the-basics.md)：适用于网站和功能的开发人员。
-   * [作者的首要步骤](../../help/sites-authoring/first-steps.md)：用于创作页面内容。
+   * [基本知識](../../help/sites-developing/the-basics.md)：適用於網站和功能的開發人員。
+   * [作者的首要步驟](../../help/sites-authoring/first-steps.md)：用於編寫頁面內容。
 
-## 使用CRXDE Lite开发环境 {#using-crxde-lite-development-environment}
+## 使用CRXDE Lite開發環境 {#using-crxde-lite-development-environment}
 
-AEM开发人员将大部分时间花在 [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md) 创作实例上的开发环境。 CRXDE Lite提供对CRX存储库的限制较少的访问。 经典UI工具和触屏优化UI控制台提供了对CRX存储库特定部分的更结构化访问。
+AEM開發人員的大部分時間都花在 [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md) 製作執行個體上的開發環境。 CRXDE Lite提供對CRX存放庫的較少限制存取。 傳統UI工具和觸控式UI主控台提供對CRX存放庫特定部分的更具結構化的存取。
 
-以管理权限登录后，可通过多种方式访问CRXDE Lite：
+以管理許可權登入後，有多種方式可存取CRXDE Lite：
 
-1. 在全局导航中，选择导航 **[!UICONTROL “工具”>“CRXDE Lite”]**.
+1. 在全域導覽中選取導覽 **[!UICONTROL 「工具」>「CRXDE Lite」]**.
 
    ![crxde-lite](assets/tools-crxde.png)
 
-2. 从 [经典UI欢迎页面](http://localhost:4502/welcome.html)，向下滚动并单击 **[!UICONTROL CRXDE Lite]** 在右侧面板中。
+2. 從 [傳統UI歡迎頁面](http://localhost:4502/welcome.html)，向下捲動並按一下 **[!UICONTROL CRXDE Lite]** 在右側面板中。
 
    ![classic-ui-crxde](assets/classic-ui-crxde.png)
 
-3. 直接浏览到 `CRXDE Lite`： `<server>:<port>/crx/de`
+3. 直接瀏覽至 `CRXDE Lite`： `<server>:<port>/crx/de`
 
-   例如，在本地创作实例上： [http://localhost:4502/crx/de](http://localhost:4502/crx/de)
+   例如，在本機作者執行個體上： [http://localhost:4502/crx/de](http://localhost:4502/crx/de)
 
-要使用CRXDE Lite功能，您必须使用开发人员或管理员权限登录。 对于默认的localhost实例，您可以使用
+若要使用CRXDE Lite，您必須使用開發人員或管理員許可權登入。 對於預設的localhost執行個體，您可以透過以下方式登入：
 
 * `username: admin`
 * `password: admin`
 
 
-**注意** 此登录将超时，您需要使用CRXDe Lite工具栏右端的下拉菜单定期重新登录。
+**注意** 此登入將會逾時，您需要使用CRXDe Lite工具列右端的下拉式功能表，定期重新登入。
 
-如果未登录，您将无法浏览JCR存储库或执行任何编辑/保存操作。
+如果未登入，您將無法導覽JCR存放庫或執行任何編輯/儲存操作。
 
-***如有疑问，请重新登录！***
+***如有疑問，請重新登入！***
 
-![重新登录](assets/relogin.png)
+![重新登入](assets/relogin.png)

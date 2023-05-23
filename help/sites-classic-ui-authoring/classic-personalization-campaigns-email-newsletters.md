@@ -1,7 +1,7 @@
 ---
-title: 将电子邮件发布到电子邮件服务提供商
+title: 發佈電子郵件給電子郵件服務提供者
 seo-title: Publishing an Email to Email Service Providers
-description: 您可以将新闻稿发布到电子邮件服务，如 ExactTarget 和 Silverpop Engage。
+description: 您可以將電子報發佈到電子郵件服務，例如ExactTarget和Silverpop Engage。
 seo-description: You can publish newsletters to e-mail services such as ExactTarget and Silverpop Engage.
 uuid: 1a7adcfe-8e52-49f4-9a00-99ac99881225
 contentOwner: User
@@ -13,163 +13,163 @@ exl-id: c07692f7-3618-4e8c-96d7-4db09f2d9896
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1108'
-ht-degree: 74%
+ht-degree: 3%
 
 ---
 
-# 将电子邮件发布到电子邮件服务提供商{#publishing-an-email-to-email-service-providers}
+# 發佈電子郵件給電子郵件服務提供者{#publishing-an-email-to-email-service-providers}
 
-您可以将新闻稿发布到电子邮件服务，如 ExactTarget 和 Silverpop Engage。本文档介绍如何配置 AEM 以将新闻稿发布到这些电子邮件服务。
-
->[!NOTE]
->
->您需要先配置服务提供商，然后才能创建和发布电子邮件。参见 [配置ExactTarget](/help/sites-administering/exacttarget.md) 和 [配置Silverpop Engage](/help/sites-administering/silverpop.md) 了解更多信息。
-
-要将您的电子邮件发布到电子邮件服务提供商，您需要执行以下步骤：
-
-1. 创建电子邮件。
-1. 将电子邮件服务配置应用到电子邮件。
-1. 发布电子邮件。
+您可以將電子報發佈到電子郵件服務，例如ExactTarget和Silverpop Engage。 本檔案說明如何設定AEM以將Newsletter發佈至這些電子郵件服務。
 
 >[!NOTE]
 >
->如果没有先将新闻稿发布到发布实例，或发布实例不可用，则以下操作将失败：更新电子邮件提供商、执行试运行，或发送新闻稿。请务必发布您的新闻稿，并确保发布实例已启动且正在运行。
+>您必須先設定服務提供者，才能建立及發佈電子郵件。 另請參閱 [設定ExactTarget](/help/sites-administering/exacttarget.md) 和 [設定Silverpop Engage](/help/sites-administering/silverpop.md) 以取得詳細資訊。
 
-## 创建电子邮件 {#creating-an-email}
+若要將電子郵件發佈至電子郵件服務提供者，您必須執行下列步驟：
 
-可以在营销策划下使用创建要发布到电子邮件服务的电子邮件或新闻稿 **Geometrixx新闻稿** 模板。 您也可以使用 **Geometrixx Outdoors 电子邮件**&#x200B;模板。基于的示例电子邮件/新闻稿 **Geometrixx Outdoors电子邮件** 模板位于 `https://<hostname>:<port>/cf#/content/campaigns/geometrixx-outdoors/e-mails.html`.
+1. 建立電子郵件。
+1. 將電子郵件服務設定套用至電子郵件。
+1. 發佈電子郵件。
 
-要创建发布到配置的电子邮件服务的新电子邮件，请执行以下操作：
+>[!NOTE]
+>
+>如果您更新電子郵件提供者、進行快速測試或傳送電子報，如果電子報未先發佈至發佈執行個體，或發佈執行個體無法使用，則這些作業會失敗。 請務必發佈您的Newsletter，並確保Publish執行個體已啟動且執行中。
 
-1. 转到 **网站** 然后 **营销活动**. 选择营销活动。
-1. 单击&#x200B;**新建**&#x200B;以打开&#x200B;**创建页面**&#x200B;窗口。
-1. 输入标题、名称，然后从可用模板列表中选择 **Geometrixx 新闻稿**&#x200B;模板。
+## 建立電子郵件 {#creating-an-email}
+
+您可以使用在行銷活動下建立您要發佈至電子郵件服務的電子郵件或電子報 **Geometrixx電子報** 範本。 您也可以使用 **Geometrixx Outdoors電子郵件** 範本。 電子郵件/電子報範例根據 **Geometrixx Outdoors電子郵件** 範本位於 `https://<hostname>:<port>/cf#/content/campaigns/geometrixx-outdoors/e-mails.html`.
+
+若要建立發佈至已設定電子郵件服務的新電子郵件：
+
+1. 前往 **網站** 然後 **行銷活動**. 選取行銷活動。
+1. 按一下 **新增** 以開啟 **建立頁面** 視窗。
+1. 輸入標題、名稱，然後選取 **Geometrixx電子報** 範本清單中的範本。
 1. 单击&#x200B;**创建**。
-1. 打开创建的电子邮件。
-1. 切换到设计模式以选择要在 Sidekick 中显示的组件。
-1. 切换到编辑模式，然后开始向电子邮件中添加内容（文本、图像、[电子邮件工具](#adding-exacttarget-email-tools-to-your-email)、[个性化变量](#adding-text-and-personalization-tool-to-your-e-mail)等）。
+1. 開啟已建立的電子郵件。
+1. 切換到設計模式以選取您要顯示在Sidekick中的元件。
+1. 切換到編輯模式並開始新增內容(文字、影像、 [電子郵件工具](#adding-exacttarget-email-tools-to-your-email)， [個人化變數](#adding-text-and-personalization-tool-to-your-e-mail)，等等)至您的電子郵件。
 
-### 将 ExactTarget 电子邮件工具添加到电子邮件 {#adding-exacttarget-email-tools-to-your-email}
+### 將ExactTarget電子郵件工具新增至您的電子郵件 {#adding-exacttarget-email-tools-to-your-email}
 
 >[!NOTE]
 >
->此部分内容针对的是 ExactTarget 服务。
+>本節專屬於ExactTarget服務。
 
-使用 ExactTarget 的&#x200B;**电子邮件工具**&#x200B;组件，可以向电子邮件/新闻稿中添加更多电子邮件功能。
+此 **電子郵件工具** ExactTarget的元件可為您的電子郵件/電子報新增更多電子郵件功能。
 
-1. 打开要发布到 ExactTarget 的电子邮件。
-1. 使用 Sidekick 将 **ET - 电子邮件工具**&#x200B;组件添加到您的页面。以编辑模式打开组件。
+1. 開啟電子郵件以發佈至ExactTarget。
+1. 新增元件 **ET — 電子郵件工具** 使用sidekick移至您的頁面。 在「編輯」模式中開啟元件。
 
    ![chlimage_1](assets/chlimage_1.gif)
 
-1. 从&#x200B;**选项**&#x200B;菜单中选择一个选项：
+1. 從「 」中選取選項 **選項** 功能表：
 
 <table>
  <tbody>
   <tr>
    <td>邮寄地址(必需)</td>
-   <td>此组件在电子邮件中插入贵组织的实际邮寄地址。</td>
+   <td>此元件會在您的電子郵件中插入貴組織的實體郵寄地址。</td>
   </tr>
   <tr>
    <td>个人资料中心(必需)</td>
-   <td>个人资料中心网页可供订阅者输入和维护您保存的与其有关的个人信息。</td>
+   <td>設定檔中心是一個網頁，訂閱者可以在這裡輸入和維護您保留的有關他們的個人資訊。</td>
   </tr>
   <tr>
    <td>以网页的形式查看电子邮件</td>
-   <td>此组件允许用户以网页的形式查看电子邮件。</td>
+   <td>此元件可讓使用者以網頁的形式檢視電子郵件。</td>
   </tr>
   <tr>
    <td>隐私政策</td>
-   <td>此组件在电子邮件中插入指向您的隐私策略的链接。<br /> </td>
+   <td>此元件會在電子郵件中插入隱私權原則的連結。<br /> </td>
   </tr>
   <tr>
    <td>取消订阅中心</td>
-   <td>为用户提供取消订阅邮寄列表的选项。</td>
+   <td>提供使用者取消訂閱郵寄清單的選項。</td>
   </tr>
   <tr>
    <td>订阅中心</td>
-   <td>订阅中心是一个网页，订阅者可以在其中控制从您的组织接收的消息。</td>
+   <td>訂閱中心是一個網頁，訂閱者可以在這裡控制從您的組織收到的訊息。</td>
   </tr>
   <tr>
    <td>跟踪电子邮件打开次数</td>
-   <td>一个允许您使用ExactTarget跟踪功能的隐藏组件。<br /> </td>
+   <td>可讓您使用ExactTarget追蹤功能的隱藏元件。<br /> </td>
   </tr>
  </tbody>
 </table>
 
 >[!NOTE]
 >
->只有对电子邮件应用了 ExactTarget 配置，才会填充&#x200B;**选项**&#x200B;下拉菜单。参见 [将电子邮件服务配置应用到电子邮件设置](#applying-e-mail-service-configuration-to-e-mail-settings) 了解更多信息。
+>此 **選項** 下拉式功能表只有在將ExactTarget設定套用至電子郵件時才會填入。 另請參閱 [套用電子郵件服務設定至電子郵件設定](#applying-e-mail-service-configuration-to-e-mail-settings) 以取得詳細資訊。
 
-1. 将电子邮件发布到 ExactTarget。
+1. 將電子郵件發佈至ExactTarget。
 
-   具有电子邮件工具的电子邮件可在已配置的 ExactTarget 帐户中使用。
+   包含電子郵件工具的電子郵件可用於已設定的ExactTarget帳戶。
 
 >[!NOTE]
 >
->* 仅当使用发送电子邮件时，电子邮件工具中的URL（在收到的电子邮件中）才会被替换为实际值 **简单发送** 或 **引导式发送** 但不是 **测试发送**.
+>* 只有當使用傳送電子郵件時，電子郵件工具中的URL才會被其實際值取代（在收到的電子郵件中） **簡單傳送** 或 **引導式傳送** 但不是 **測試傳送**.
 >
->* 以下两个电子邮件工具是必需的：**邮寄地址（必需）**&#x200B;和&#x200B;**个人资料中心（必需）**。如果将电子邮件发布到 ExactTarget，这两个电子邮件工具默认均会被添加到每封邮件的底部。
+>* 需要兩種電子郵件工具： **郵寄地址（必填）** 和 **設定檔中心（必要）**. 將電子郵件發佈至ExactTarget時，這兩個電子郵件工具會預設新增至每封郵件的底部。
 >
 
 
-### 将文本和个性化工具添加到电子邮件 {#adding-text-and-personalization-tool-to-your-e-mail}
+### 新增文字和個人化工具至您的電子郵件 {#adding-text-and-personalization-tool-to-your-e-mail}
 
-您可以通过将&#x200B;**文本与个性化**&#x200B;组件添加到页面，在电子邮件中添加个性化字段：
+您可以在電子郵件中新增個人化欄位，方法是新增 **文字和個人化** 元件至頁面：
 
-1. 打开要发布到电子邮件服务的电子邮件。
-1. 要从电子邮件服务中启用个性化字段，请在配置电子邮件服务时添加框架配置。参见 [配置Silverpop Engage](/help/sites-administering/silverpop.md) 和 [配置Exact Target](/help/sites-administering/exacttarget.md) 了解更多信息。
-1. 添加组件 **文本和个性化** 从副手手手手里。 此组件是新闻稿组的一部分。以编辑模式打开此组件。
+1. 開啟要發佈至電子郵件服務的電子郵件。
+1. 若要啟用電子郵件服務中的個人化欄位，請在設定電子郵件服務時新增框架設定。 另請參閱 [設定Silverpop Engage](/help/sites-administering/silverpop.md) 和 [設定精確目標](/help/sites-administering/exacttarget.md) 以取得詳細資訊。
+1. 新增元件 **文字與個人化** 從副手那裡。 此元件是Newsletter群組的一部分。 在編輯模式中開啟此元件。
 
    ![chlimage_1-110](assets/chlimage_1-110a.png)
 
-1. 通过从下拉菜单中选择字段并单击&#x200B;**插入**，将所需的个性化字段添加到文本中。
-1. 单击&#x200B;**确定**&#x200B;以完成。
+1. 從下拉式選單中選取欄位並按一下，以將所需的個人化欄位新增至文字 **插入**.
+1. 按一下 **確定** 完成。
 
-## 将电子邮件服务配置应用到电子邮件设置 {#applying-e-mail-service-configuration-to-e-mail-settings}
+## 套用電子郵件服務設定至電子郵件設定 {#applying-e-mail-service-configuration-to-e-mail-settings}
 
-要将电子邮件服务配置应用到新闻稿，请执行以下操作：
+若要將您的電子郵件服務設定套用至電子報：
 
-1. 创建电子邮件服务配置。
-1. 打开您的电子邮件/新闻稿。
-1. 通过单击以下任一按钮打开电子邮件/新闻稿设置 **设置** 或通过单击 **中的页面属性** 副手。
-1. 单击&#x200B;**云服务**&#x200B;选项卡中的&#x200B;**添加服务**。您将看到服务列表。从下拉列表的列表中选择所需的配置 - **ExactTarget** 或 **Silverpop**。
+1. 建立電子郵件服務設定。
+1. 開啟您的電子郵件/電子報。
+1. 按一下以開啟電子郵件/電子報設定 **設定** 或按一下 **中的頁面屬性** 副手。
+1. 按一下 **新增服務** 在 **Cloud Services** 標籤。 您會看到服務清單。 選取您需要的設定 —  **ExactTarget** 或 **Silverpop**  — 從下拉式清單中。
 
    ![chlimage_1-5](assets/chlimage_1-5a.jpeg)
 
 1. 单击&#x200B;**确定**。
 
-## 将电子邮件发布到电子邮件服务 {#publishing-emails-to-email-service}
+## 發佈電子郵件至電子郵件服務 {#publishing-emails-to-email-service}
 
-可以通过以下步骤将电子邮件/新闻稿发布到电子邮件服务：
+電子郵件/電子報可以依照下列步驟發佈至您的電子郵件服務：
 
-1. 打开电子邮件。
-1. 在发布电子邮件之前，请确保您已将正确的配置应用到电子邮件。
-1. 单击&#x200B;**发布**。此操作将打开&#x200B;**将新闻稿发布到电子邮件服务提供商**&#x200B;窗口。
-1. 填写&#x200B;**新闻稿名称**&#x200B;字段。系统会使用此名称将电子邮件/新闻稿发布到电子邮件服务提供商。如果未提供电子邮件名称，则会使用 AEM 中新闻稿的页面名称发布电子邮件。
+1. 開啟電子郵件。
+1. 發佈電子郵件之前，請確定您已套用正確的設定至電子郵件。
+1. 单击&#x200B;**发布**。如此將可開啟 **將Newsletter發佈到電子郵件服務提供者** 視窗。
+1. 填入 **Newsletter名稱** 欄位。 電子郵件/電子報會以此名稱發佈至電子郵件服務提供者。 如果未提供電子郵件名稱，則會使用AEM中電子報的頁面名稱來發佈電子郵件。
 1. 单击&#x200B;**发布**。
 
    ![chlimage_1-6](assets/chlimage_1-6.jpeg)
 
-   如果发布成功，AEM 会确认您可以在 ExactTarget 或 Silverpop Engage 中查看电子邮件。
+   如果成功，AEM會確認您可以在ExactTarget或Silverpop Engage中檢視電子郵件。
 
-   对于ExactTarget，可以通过单击 **查看已发布的电子邮件**. 这会将您直接转到ExactTarget中已发布的新闻稿([https://members.exacttarget.com/](https://members.exacttarget.com/).)。
+   若為ExactTarget，只要按一下「 」，即可檢視已發佈的電子郵件 **檢視已發佈的電子郵件**. 這會將您直接導向ExactTarget中發佈的Newsletter ([https://members.exacttarget.com/](https://members.exacttarget.com/).)。
 
 >[!NOTE]
 >
->如果发布的电子邮件/新闻稿与此前已发布的电子邮件/新闻稿名称相同，则早期的电子邮件/新闻稿不会被替换。系统而是会使用同一名称创建一个新的电子邮件/新闻稿（但这两个新闻稿的 ID 不同）。
+>如果電子郵件/電子報的發佈名稱與電子郵件/電子報的發佈名稱相同，則不會取代先前的電子郵件/電子報。 而是以相同名稱建立新的電子郵件/電子報（但兩個電子報的ID不同）。
 >
->将电子邮件/新闻稿发布到电子邮件服务提供商还会将电子邮件/新闻稿发布到 AEM 发布实例。
+>將電子郵件/電子報發佈到電子郵件服務提供者也會將電子郵件/電子報發佈到AEM發佈執行個體。
 
-### 更新发布的电子邮件 {#updating-a-published-e-mail}
+### 更新已發佈的電子郵件 {#updating-a-published-e-mail}
 
-此 **更新** 通过“发布”对话框上的按钮，您可以更新已发布到电子邮件服务提供商的新闻稿。 如果新闻稿尚未发布，而您单击了&#x200B;**更新**&#x200B;按钮，则会显示&#x200B;**新闻稿未发布**&#x200B;消息。
+此 **更新** 「發佈」對話方塊上的按鈕可讓您更新已發佈至電子郵件服務提供者的電子報。 如果電子報尚未發佈，而且 **更新** 已按一下按鈕，a **Newsletter未發佈** 訊息隨即顯示。
 
-要更新已发布的电子邮件，请执行以下操作：
+若要更新已發佈的電子郵件：
 
-1. 打开之前已发布到电子邮件服务提供商的电子邮件/新闻稿，您希望对该电子邮件/新闻稿进行更改，然后再重新发布。
-1. 单击&#x200B;**发布**。此 **将新闻稿发布到电子邮件服务提供商** 窗口随即显示。 单击&#x200B;**更新**。
+1. 開啟先前已發佈至電子郵件服務提供者的電子郵件/電子報，您要在變更電子郵件/電子報後重新發佈。
+1. 单击&#x200B;**发布**。此 **將Newsletter發佈至電子郵件服務提供者** 視窗隨即顯示。 单击&#x200B;**更新**。
 
-   要检查电子邮件/新闻稿是否已在ExactTarget上更新，请单击 **查看已发布的电子邮件**. 此操作会使您转到 ExactTarget 中的已发布电子邮件。
+   若要檢查電子郵件/電子報是否已在ExactTarget上更新，請按一下 **檢視已發佈的電子郵件**. 這會將您導向至ExactTarget中已發佈的電子郵件。
 
-   要检查 Silverpop 电子邮件服务中的电子邮件/新闻稿是否已更新，请访问 Silverpop Engage 站点。
+   若要檢查Silverpop電子郵件服務上的電子郵件/電子報是否已更新，請造訪Silverpop Engage網站。

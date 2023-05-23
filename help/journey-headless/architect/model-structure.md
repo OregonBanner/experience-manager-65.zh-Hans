@@ -39,7 +39,7 @@ At the very start you need to enable Content Fragment Models for your site, this
 
 ## 创建内容片段模型 {#creating-content-fragment-models}
 
-之后，可以创建内容片段模型并定义结构。这可以在“工具” — >“资产” — >“内容片段模型”下完成。
+之后，可以创建内容片段模型并定义结构。這可以在「工具 — >資產 — >內容片段模型」下完成。
 
 ![工具中的内容片段模型](assets/cfm-tools.png)
 
@@ -110,7 +110,7 @@ At the very start you need to enable Content Fragment Models for your site, this
 
 * [创作概念](/help/sites-authoring/author.md)
 
-* [基本处理](/help/sites-authoring/basic-handling.md)  — 此页面主要基于 **站点** 控制台，但许多/大多数功能也都与导航到和对执行操作有关， **内容片段模型** 在 **资产** 控制台。
+* [基本處理](/help/sites-authoring/basic-handling.md)  — 此頁面主要根據 **網站** 主控台，但許多/大多數功能也與導覽至和執行動作相關， **內容片段模型** 在 **資產** 主控台。
 
 * [使用内容片段](/help/assets/content-fragments/content-fragments.md)
 
@@ -132,4 +132,4 @@ At the very start you need to enable Content Fragment Models for your site, this
 
 * 快速入门指南
 
-   * [创建内容片段模型Headless快速入门指南](/help/sites-developing/headless/getting-started/create-content-model.md)
+   * [建立內容片段模型Headless快速入門手冊](/help/sites-developing/headless/getting-started/create-content-model.md)

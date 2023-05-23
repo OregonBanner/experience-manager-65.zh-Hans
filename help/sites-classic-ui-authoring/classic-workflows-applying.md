@@ -1,6 +1,6 @@
 ---
 title: 将工作流应用于页面
-description: 可以从“网站”控制台启动工作流，或在编辑页面时，也可以从Sidekick启动工作流。
+description: 工作流程可以從「網站」主控台啟動，或在編輯頁面時從Sidekick啟動。
 uuid: 55f6f1d7-da54-4732-b9ff-b7479622db51
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -17,42 +17,42 @@ ht-degree: 11%
 
 # 将工作流应用于页面{#applying-workflows-to-pages}
 
-应用工作流时，您可以指定以下信息：
+套用工作流程時，請指定下列資訊：
 
 * 要应用的工作流。
 
    您可以应用任何工作流（您有权访问，由 AEM 管理员分配）。
-* （可选）：
+* 選擇性：
 
-   * 提供有关启动工作流原因的注释。
-   * 可帮助在用户收件箱中识别工作流实例的标题。
+   * 提供啟動工作流程之原因相關資訊的註解。
+   * 有助於識別使用者收件匣中工作流程例項的標題。
 
 >[!NOTE]
 >
->AEM管理员可以使用 [其他方法](/help/sites-administering/workflows-starting.md).
+>AEM管理員可以使用以下專案開始工作流程： [其他幾個方法](/help/sites-administering/workflows-starting.md).
 
-## 应用工作流 {#applying-workflows}
+## 套用工作流程 {#applying-workflows}
 
-可以从“网站”控制台启动工作流，或在编辑页面时，也可以从Sidekick启动工作流。
+工作流程可以從「網站」主控台啟動，或在編輯頁面時從Sidekick啟動。
 
-的 **状态** 列 **网站** 控制台指示工作流是否已应用于页面：
+此 **狀態** 中的欄 **網站** console會指出工作流程是否已套用至頁面：
 
-![工作流状态](assets/workflowstatus.png)
+![workflowstatus](assets/workflowstatus.png)
 
-### 从网站控制台启动工作流 {#starting-a-workflow-from-the-websites-console}
+### 從網站主控台啟動工作流程 {#starting-a-workflow-from-the-websites-console}
 
-1. 打开网站控制台。 ([http://localhost:4502/siteadmin](http://localhost:4502/siteadmin))
-1. 在网站树中，选择要应用工作流的页面的父项。
-1. 在页面列表中，选择页面，然后单击工作流。
-1. 在启动工作流对话框中，选择要应用的工作流。 或者，输入评论和标题。 然后，单击“Start（开始）”。
+1. 開啟網站主控台。 ([http://localhost:4502/siteadmin](http://localhost:4502/siteadmin))
+1. 在網站樹狀結構中，選取您要套用工作流程的頁面的父頁面。
+1. 在頁面清單中，選取頁面，然後按一下「工作流程」。
+1. 在「開始工作流程」對話方塊中，選取要套用的工作流程。 或者，輸入評論和標題。 然後，按一下「開始」。
 
-### 使用Sidekick启动工作流 {#starting-a-workflow-using-sidekick}
+### 使用Sidekick啟動工作流程 {#starting-a-workflow-using-sidekick}
 
-1. 打开网站控制台。
-1. 打开所需的页面。
-1. 从Sidekick中选择工作流选项卡。
-1. 展开 **工作流** 对话框，允许您选择 **工作流** （可选）输入 **工作流标题** 和 **注释**.
+1. 開啟網站主控台。
+1. 開啟必要頁面。
+1. 從Sidekick中選取「工作流程」標籤。
+1. 展開 **工作流程** 對話方塊，讓您選取 **工作流程** 並選擇性地輸入 **工作流程標題** 和 **註解**.
 
    ![workflowstartsidekick](assets/workflowstartsidekick.png)
 
-1. 单击 **启动工作流** 以启动新的工作流实例，并将您配置的属性和当前页面作为有效负载。 现在，工作流正在运行。
+1. 按一下 **開始工作流程** 以啟動新的工作流程例項，其中包含您設定的屬性以及目前頁面作為裝載。 現在工作流程正在執行中。

@@ -1,7 +1,7 @@
 ---
-title: 配置AEM Forms以将表单数据提交到AEM Forms on JEE流程
+title: 設定AEM Forms將表單資料提交至AEM Forms on JEE程式
 seo-title: Configuring AEM Forms to submit form data to an AEM Forms on JEE process
-description: AEM Forms允许您将自适应表单与AEM Forms on JEE流程集成以处理表单数据。
+description: AEM Forms可讓您將最適化表單與AEM Forms on JEE程式整合，以處理表單資料。
 seo-description: AEM Forms allows you to integrate adaptive forms with AEM Forms on JEE processes for processing form data.
 uuid: 71a894d7-7c0a-43a6-afe5-40c4a15c66d6
 content-type: reference
@@ -18,35 +18,35 @@ ht-degree: 0%
 
 ---
 
-# 配置AEM Forms以将表单数据提交到AEM Forms on JEE流程{#configuring-aem-forms-to-submit-form-data-to-an-aem-forms-on-jee-process}
+# 設定AEM Forms將表單資料提交至AEM Forms on JEE程式{#configuring-aem-forms-to-submit-form-data-to-an-aem-forms-on-jee-process}
 
-自适应表单支持将数据提交到AEM Forms on JEE流程以进行进一步处理。 它允许您使用已提交表单中可用的数据触发AEM Forms on JEE流程。 执行以下步骤，使您的AEM Forms实例能够在JEE流程中向AEM Forms提交自适应表单：
+調適型表單支援將資料提交至AEM Forms on JEE程式以供進一步處理。 它可讓您使用已提交表單中的可用資料觸發JEE上的AEM Forms程式。 執行以下步驟，讓您的AEM Forms執行個體能夠在JEE程式上向AEM Forms提交最適化表單：
 
-## 配置AEM Forms服务器 {#configure-your-aem-forms-server}
+## 設定您的AEM Forms伺服器 {#configure-your-aem-forms-server}
 
-执行以下步骤，使您的AEM表单服务器能够将数据提交到JEE服务器上的AEM Forms：
+執行以下步驟，讓您的AEM表單伺服器將資料提交至JEE伺服器上的AEM Forms：
 
-1. 转到AEM Web配置控制台，网址为https://[*主机*]：[*端口*]/system/console/configMgr.
+1. 前往AEM Web設定主控台，網址為https://[*主機*]：[*連線埠*]/system/console/configMgr。
 
-1. 找到并单击 **AdobeLiveCycle客户端SDK配置** 组件。
-1. 单击以编辑JEE服务器上AEM Forms的配置服务器URL、用户名和密码。
-1. 查看设置并单击 **保存**.
+1. 找到並按一下 **AdobeLiveCycle使用者端SDK設定** 元件。
+1. 按一下以編輯JEE伺服器上AEM Forms的設定伺服器URL、使用者名稱和密碼。
+1. 檢閱設定並按一下 **儲存**.
 
-![AdobeLiveCycle客户端SDK配置](assets/clientsdkconfiguration.jpg)
+![AdobeLiveCycle使用者端SDK設定](assets/clientsdkconfiguration.jpg)
 
-## 使用流程字段映射数据 {#map-data-with-process-fields}
+## 將資料與程式欄位對應 {#map-data-with-process-fields}
 
-配置AEM Forms后，将提交表单中的数据XML和附件映射到AEM Forms on JEE流程中的字段。 要执行此操作：
+設定AEM Forms後，將提交表單中的資料XML和附件對應至AEM Forms on JEE程式中的欄位。 要执行此操作：
 
-1. 在AEM Web配置控制台中，单击以编辑 **指导LiveCycle流程定位器和调用程序** 配置。
-1. 指定以下参数：
+1. 在AEM Web設定主控台中，按一下以編輯 **指南LiveCycle處理定位器與呼叫器** 設定。
+1. 指定下列引數：
 
-   * **数据xml参数的名称** （必需）：指定需要处理提交的数据的AEM Forms on JEE进程的XML属性文件。 默认值为 **数据XML**.
+   * **資料xml引數的名稱** （必要）：指定需要處理提交資料之AEM Forms on JEE程式的XML屬性檔案。 預設值為 **資料XML**.
 
-   * **文件附件参数的名称** （可选）：指定AEM Forms on JEE进程需要处理的文档对象列表。 默认值为 **文件附件列表**.
+   * **檔案附件引數的名稱** （選用）：指定AEM Forms on JEE程式需要處理的檔案物件清單。 預設值為 **fileAttachmentsList**.
 
-1. 查看设置并单击 **保存**.
+1. 檢閱設定並按一下 **儲存**.
 
-![指导LiveCycle流程定位器和调用程序](assets/test3.jpg)
+![指南LiveCycle處理定位器與呼叫器](assets/test3.jpg)
 
-配置完毕后，提交到Forms Workflow提交操作会列出包含指定数据xml参数的JEE服务器进程上的AEM Forms。
+設定完成後，提交至Forms Workflow提交動作會列出JEE伺服器處理序（包含指定的資料xml引數）上的AEM Forms。

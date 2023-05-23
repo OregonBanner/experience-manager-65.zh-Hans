@@ -10,10 +10,10 @@ topic-tags: integration
 content-type: reference
 discoiquuid: b5ff918d-08ab-4307-a807-693468fc083b
 exl-id: ee5e8ebb-773f-4aa6-9c3e-2cc3bf4a3bbd
-source-git-commit: ce9969c8dd1961ebb2bef69559f8ee13864a90f5
+source-git-commit: d19b203ffe75a5628f350113d4d74a2916beffc8
 workflow-type: tm+mt
-source-wordcount: '118'
-ht-degree: 27%
+source-wordcount: '112'
+ht-degree: 28%
 
 ---
 
@@ -24,7 +24,6 @@ ht-degree: 27%
 * [Analytics與外部提供者](/help/sites-administering/external-providers.md)
 * [目錄製作者](/help/sites-administering/catalog-producer.md)
 * [SharePoint聯結器](/help/sites-administering/sharepoint-connector.md)
-* [瞭解、套用及組織智慧標籤](/help/assets/enhanced-smart-tags.md)
 
 下列為整合AEM與其他Adobe或協力廠商服務的相關資訊：
 

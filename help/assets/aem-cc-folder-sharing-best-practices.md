@@ -1,6 +1,6 @@
 ---
-title: 文件夹共享到 [!DNL Adobe Creative Cloud] 最佳实践
-description: 配置 [!DNL Adobe Experience Manager] 允许用户进入 [!DNL Experience Manager Assets] 以与Adobe Creative Cloud用户交换文件夹。
+title: 資料夾共用至 [!DNL Adobe Creative Cloud] 最佳實務
+description: 設定 [!DNL Adobe Experience Manager] 允許使用者進入 [!DNL Experience Manager Assets] 以與Adobe Creative Cloud使用者交換資料夾。
 contentOwner: AG
 role: User, Admin
 feature: Collaboration
@@ -12,64 +12,64 @@ ht-degree: 0%
 
 ---
 
-# [!DNL Adobe Experience Manager] 到 [!DNL Adobe Creative Cloud] 文件夹共享 {#aem-to-creative-cloud-folder-sharing-best-practices}
+# [!DNL Adobe Experience Manager] 至 [!DNL Adobe Creative Cloud] 資料夾共用 {#aem-to-creative-cloud-folder-sharing-best-practices}
 
 >[!CAUTION]
 >
->此 [!DNL Experience Manager] 到 [!DNL Creative Cloud] 已弃用文件夹共享功能。 Adobe强烈建议使用较新的功能，例如 [Adobe资源链接](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/adobe-asset-link.ug.html) 或 [Experience Manager桌面应用程序](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html). 了解详情，请参阅 [Experience Manager和Creative Cloud集成最佳实践](/help/assets/aem-cc-integration-best-practices.md).
+>此 [!DNL Experience Manager] 至 [!DNL Creative Cloud] 已棄用資料夾共用功能。 Adobe強烈建議使用較新的功能，例如 [Adobe資產連結](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/adobe-asset-link.ug.html) 或 [Experience Manager案頭應用程式](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html). 進一步瞭解 [Experience Manager與Creative Cloud整合最佳實務](/help/assets/aem-cc-integration-best-practices.md).
 
-[!DNL Adobe Experience Manager] 可配置为允许用户进入 [!DNL Assets] 要与的用户共享文件夹，请执行以下操作 [!DNL Adobe Creative Cloud] 应用程序，因此它们可用作中的共享文件夹 [!DNL Adobe Creative Cloud] assets服务。 该功能可用于在创意团队和团队之间交换文件 [!DNL Assets] 用户，尤其是创意用户无权访问 [!DNL Assets] 部署（它们不在企业网络上）。
+[!DNL Adobe Experience Manager] 可設定為允許使用者在 [!DNL Assets] 與的使用者共用資料夾 [!DNL Adobe Creative Cloud] 應用程式，因此可做為共用資料夾用於 [!DNL Adobe Creative Cloud] assets服務。 此功能可用於在創意團隊和之間交換檔案 [!DNL Assets] 使用者，尤其是當創意使用者無權存取 [!DNL Assets] 部署（不在企業網路上）。
 
-此类型的集成可用于以下用例，尤其是当使用无法直接访问的用户时 [!DNL Assets]：
+此類整合可用於以下使用案例，尤其是與無法直接存取的使用者合作時 [!DNL Assets]：
 
-* [!DNL Assets] 用户与的用户共享一组特定的数字资产 [!DNL Adobe Creative Cloud] 文件（例如，创意简介和一组批准用于新营销活动的设计资产）。
-* [!DNL Assets] 用户会收到由创建的新文件 [!DNL Adobe Creative Cloud] 应用程序用户。
+* [!DNL Assets] 使用者與的使用者共用一組特定的數位資產。 [!DNL Adobe Creative Cloud] 檔案（例如，創意摘要和一組已核准的資產，用於新行銷活動的設計工作）。
+* [!DNL Assets] 使用者會收到由建立的新檔案 [!DNL Adobe Creative Cloud] 應用程式使用者。
 
 >[!NOTE]
 >
->在阅读本文档之前，您可以查看整个 [Experience Manager和Creative Cloud集成最佳实践](/help/assets/aem-cc-integration-best-practices.md) 以了解集成的概述。
+>閱讀本檔案前，您可以檢閱整體的 [Experience Manager與Creative Cloud整合最佳實務](/help/assets/aem-cc-integration-best-practices.md) 以取得整合的概觀。
 
 ## 概述 {#overview}
 
-[!DNL Experience Manager] 到 [!DNL Creative Cloud] 文件夹共享依赖于在服务器端之间共享文件夹和文件 [!DNL Assets] 和 [!DNL Creative Cloud] 帐户。 使用 [!DNL Creative Cloud] 此外，他们桌面上的桌面应用程序还可以使用直接在其磁盘上提供共享文件夹 [!DNL Adobe CreativeSync] 技术。
+[!DNL Experience Manager] 至 [!DNL Creative Cloud] 資料夾共用需仰賴伺服器端在檔案夾之間共用資料夾 [!DNL Assets] 和 [!DNL Creative Cloud] 帳戶。 使用 [!DNL Creative Cloud] 案頭應用程式在他們的案頭上，另外還可以使用讓共用資料夾直接在他們的磁碟上使用 [!DNL Adobe CreativeSync] 技術。
 
-下图提供了集成的概述。
+下圖提供整合的概觀。
 
 ![chlimage_1-179](assets/chlimage_1-406.png)
 
-该集成包含以下元素：
+整合包含下列元素：
 
-* **[!DNL Experience Manager Assets]** 在企业网络（托管服务或内部部署）中部署：在此处启动文件夹共享。
-* **[!DNL Adobe Marketing Cloud Assets]核心服务**：充当以下两者之间的中介： [!DNL Experience Manager] 和 [!DNL Creative Cloud] 存储服务。 使用集成的组织管理员需要在Marketing Cloud组织与 [!DNL Assets] 部署。 他们还 [定义已批准的Creative Cloud协作者列表](https://experienceleague.adobe.com/docs/core-services/interface/assets/t-admin-add-cc-user.html)，即 [!DNL Assets] 为了增加安全性，用户也可以共享文件夹。
+* **[!DNL Experience Manager Assets]** 部署在企業網路（Managed Services或內部部署）中：在這裡會起始資料夾共用。
+* **[!DNL Adobe Marketing Cloud Assets]核心服務**：充當以下兩者之間的中介： [!DNL Experience Manager] 和 [!DNL Creative Cloud] 儲存服務。 使用整合之組織的管理員需要在Marketing Cloud組織與 [!DNL Assets] 部署。 它們也 [定義核准的Creative Cloud共同作業人員清單](https://experienceleague.adobe.com/docs/core-services/interface/assets/t-admin-add-cc-user.html)，那 [!DNL Assets] 為了增加安全性，使用者也可以共用資料夾。
 
-* **[!DNL Creative Cloud]Assets Web服务** (存储和 [!DNL Creative Cloud] 文件(Web UI)：这是特定Creative Cloud应用程序用户(这些用户具有 [!DNL Assets] 文件夹已共享，将能够接受邀请并在其Creative Cloud帐户存储中看到该文件夹。
-* **Creative Cloud桌面应用程序**：（可选）允许通过与同步，从创意用户的桌面直接访问共享文件夹/文件 [!DNL Creative Cloud] 资产存储。
+* **[!DNL Creative Cloud]Assets Web服務** (儲存和 [!DNL Creative Cloud] 檔案（網頁UI）：這是特定Creative Cloud應用程式使用者 [!DNL Assets] 資料夾已共用，將能夠接受邀請並在其Creative Cloud帳戶儲存空間中檢視該資料夾。
+* **Creative Cloud案頭應用程式**：（選用）可透過與同步，從創意使用者的案頭直接存取共用資料夾/檔案 [!DNL Creative Cloud] 資產儲存。
 
-## 特点和限制 {#characteristics-and-limitations}
+## 特性與限制 {#characteristics-and-limitations}
 
-* **更改的单向传播：** 文件更改仅在一个方向上传播 — 从系统([!DNL Experience Manager] 或 [!DNL Creative Cloud Assets])，资产最初创建（上传）的位置。 该集成不提供两个系统之间的完全自动化的双向同步。
+* **變更的單向傳輸：** 檔案變更只會沿一個方向傳播 — 從系統([!DNL Experience Manager] 或 [!DNL Creative Cloud Assets])，即資產最初建立（上傳）的位置。 整合不會提供兩個系統之間的完全自動化雙向同步。
 * **版本控制:**
 
-   * [!DNL Experience Manager] 仅当文件源自以下位置时，才会在更新时创建资源的版本 [!DNL Experience Manager] 并在该处进行了更新。
-   * [!DNL Creative Cloud] Assets提供自己的 [版本控制功能](https://helpx.adobe.com/creative-cloud/help/versioning-faq.html) 此更新旨在进行中的工作更新（基本上，可将更新存储最多10天）
+   * [!DNL Experience Manager] 只有在檔案源自以下來源時，才會更新時建立資產的版本： [!DNL Experience Manager] 並在該處更新。
+   * [!DNL Creative Cloud] Assets提供自己的 [版本設定功能](https://helpx.adobe.com/creative-cloud/help/versioning-faq.html) 此更新針對進行中工作更新（基本上會儲存更新最多10天）
 
-* **空间限制：** 交换的文件的大小和卷受特定的 [Creative Cloud资源配额](https://helpx.adobe.com/creative-cloud/kb/file-storage-quota.html) 对于创意用户（取决于订阅级别），最大文件大小限制为5 GB。 此外，空间还受到组织在Adobe Marketing Cloud Assets核心服务中拥有的资源配额的限制。
+* **空間限制：** 交換的檔案大小與磁碟區受特定的 [Creative Cloud資產配額](https://helpx.adobe.com/creative-cloud/kb/file-storage-quota.html) 適用於創意使用者（視訂閱層級而定），檔案大小上限為5 GB。 此外，空間受到組織在Adobe Marketing Cloud Assets核心服務中的資產配額限制。
 
-* **空间要求：** 共享文件夹中的文件还需要物理存储在 [!DNL Experience Manager] 然后在 [!DNL Creative Cloud] 帐户，具有缓存的副本 [!DNL Marketing Cloud Assets] 核心服务。
-* **网络和带宽：** 共享文件夹中的文件和所有更新需要通过网络在系统之间传输。 您应确保仅共享相关文件和更新。
-* **文件夹类型**：共享 [!DNL Assets] 类型的文件夹 `sling:OrderedFolder`中的共享上下文中不支持 [!DNL Adobe Marketing Cloud]. 如果要共享文件夹，请在中创建该文件夹时 [!DNL Assets]，请勿选择 [!UICONTROL 已排序] 选项。
+* **空間需求：** 共用資料夾中的檔案也需要實際儲存在 [!DNL Experience Manager] 然後在 [!DNL Creative Cloud] 帳戶，具有快取復本於 [!DNL Marketing Cloud Assets] 核心服務。
+* **網路與頻寬：** 共用資料夾中的檔案和所有更新需要透過網路在系統之間傳輸。 您應確保僅共用相關檔案和更新。
+* **資料夾型別**：共用 [!DNL Assets] 型別的資料夾 `sling:OrderedFolder`，不支援在中共用的內容 [!DNL Adobe Marketing Cloud]. 如果您想要共用資料夾，請在中建立資料夾時 [!DNL Assets]，請勿選取 [!UICONTROL 已訂購] 選項。
 
-## 最佳实践 {#best-practices}
+## 最佳實務 {#best-practices}
 
-利用的最佳实践 [!DNL Experience Manager] 到 [!DNL Creative Cloud] 文件夹共享包括：
+運用「 」的最佳實務 [!DNL Experience Manager] 至 [!DNL Creative Cloud] 資料夾共用包括：
 
-* **卷注意事项：** [!DNL Experience Manager] 和 [!DNL Creative Cloud] 文件夹共享可用于共享较少数量的文件，例如，与特定营销策划或活动相关的文件。 要共享更大的资产集（如组织中的所有已批准资产），请使用其他分配方法(例如， [!DNL Assets Brand Portal])或 [!DNL Experience Manager] 桌面应用程序。
-* **避免共享深层层次结构：** 共享以递归方式工作，不允许选择性取消共享。 通常，只应考虑没有子文件夹或具有非常浅层层次结构（如1个子文件夹级别）的文件夹进行共享。
-* **用于单向共享的单独文件夹：** 应使用单独的文件夹从共享最终资源 [!DNL Assets] 到 [!DNL Creative Cloud] 文件，并用于从共享创意就绪的资产 [!DNL Creative Cloud] 文件到 [!DNL Assets]. 再加上这些文件夹的良好命名约定，它为创建更易于理解的工作环境 [!DNL Assets] 和 [!DNL Creative Cloud] 用户都一样。
-* **避免在共享文件夹中使用WIP：** 共享文件夹不能用于进行中的工作 — 在Creative Cloud文件中使用单独的文件夹来执行需要经常更改文件的工作。
-* **在共享文件夹之外开始新工作：** 新设计（创意文件）应在Creative Cloud文件中的单独WIP文件夹中启动，并且当它们可以共享时 [!DNL Assets] 用户时，应将他们移动或保存到共享文件夹。
-* **简化共享结构：** 要获得更易于管理的操作设置，请考虑简化共享结构。 与其与所有创意用户共享， [!DNL Assets] 文件夹应仅与团队代表（如创意总监或团队经理）共享。 创意方面的经理将接收最终资产，决定工作分配，然后让设计人员在其自己的Creative Cloud帐户中工作。 他们可以使用Creative Cloud协作功能来协调工作，最后选择并放置要共享回的资源 [!DNL Assets] 放入其创意就绪的共享文件夹。
+* **磁碟區考量：** [!DNL Experience Manager] 和 [!DNL Creative Cloud] 「資料夾共用」應該用於共用較少量檔案，例如，與特定促銷活動或活動相關的檔案。 若要共用大型資產集（如組織中的所有已核准資產），請使用其他分配方法(例如 [!DNL Assets Brand Portal])或 [!DNL Experience Manager] 案頭應用程式。
+* **避免共用深層階層：** 共用會遞回運作，不允許選擇性取消共用。 通常，只有沒有子資料夾或具有非常淺層階層（如1個子資料夾層級）的資料夾才應該考慮共用。
+* **分開資料夾進行單向共用：** 應該使用個別資料夾來共用來自的最後資產 [!DNL Assets] 至 [!DNL Creative Cloud] 檔案，並用於從共用創意就緒資產 [!DNL Creative Cloud] 檔案至 [!DNL Assets]. 再加上這些資料夾的命名慣例，可為您建立更易於瞭解的工作環境 [!DNL Assets] 和 [!DNL Creative Cloud] 使用者相同。
+* **避免在共用資料夾中使用WIP：** 共用資料夾不應用於進行中的工作 — 在Creative Cloud檔案中使用單獨的資料夾來執行需要經常變更檔案的工作。
+* **在共用資料夾之外開始新工作：** 新設計（創意檔案）應在Creative Cloud檔案的個別WIP資料夾中開始，且當它們準備就緒可與共用時 [!DNL Assets] 使用者，應將他們移動或儲存至共用資料夾。
+* **簡化共用結構：** 若要更易於管理的作業設定，請考慮簡化共用結構。 與其與所有創意使用者共用， [!DNL Assets] 資料夾僅能和團隊代表共用，例如創意總監或團隊經理。 創意方面的經理將收到最終資產、決定工作指派，然後讓設計人員在其自己的Creative Cloud帳戶中處理WIP資產。 他們可以使用Creative Cloud共同作業功能來協調工作，最後選取並放置準備共用回的資產 [!DNL Assets] 至其創意就緒的共用資料夾。
 
-下图说明了用于根据中的现有最终资源创建新设计的示例配置 [!DNL Assets].
+下圖說明根據現有最終資產建立新設計的設定範例，該資產來自 [!DNL Assets].
 
 ![chlimage_1-180](assets/chlimage_1-407.png)

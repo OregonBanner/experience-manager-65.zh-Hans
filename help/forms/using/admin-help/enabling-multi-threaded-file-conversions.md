@@ -1,7 +1,7 @@
 ---
-title: 启用多线程文件转换
+title: 啟用多執行緒檔案轉換
 seo-title: Enabling multi-threaded file conversions
-description: 了解如何启用多线程文件转换。
+description: 瞭解如何啟用多執行緒檔案轉換。
 seo-description: Learn how to enable multi-threaded file conversions.
 uuid: 830c78aa-4f68-4e01-8b24-69a0275689c7
 contentOwner: admin
@@ -18,101 +18,101 @@ ht-degree: 0%
 
 ---
 
-# 启用多线程文件转换 {#enabling-multi-threaded-file-conversions}
+# 啟用多執行緒檔案轉換 {#enabling-multi-threaded-file-conversions}
 
-PDF生成器提供了为某些类型的文件启用多线程文件转换的功能。 多线程文件转换通过允许PDF生成器同时执行多个转换而提高了其性能。
+PDF產生器提供啟用特定檔案型別的多執行緒檔案轉換的功能。 多執行緒檔案轉換可讓PDF產生器同時執行多個轉換，進而提升系統效能。
 
-## 为OpenOffice、Word和PowerPoint文档启用多线程文件转换 {#enabling-multi-threaded-file-conversions-for-openoffice-word-and-powerpoint-documents}
+## 為OpenOffice、Word和PowerPoint檔案啟用多執行緒檔案轉換 {#enabling-multi-threaded-file-conversions-for-openoffice-word-and-powerpoint-documents}
 
-默认情况下，PDF生成器一次只能转换一个OpenOffice、Microsoft Word或PowerPoint文档。 如果启用多线程转换，则PDF生成器可以同时转换多个文档。 PDF生成器将启动多个OpenOffice或PDFMaker实例（用于执行Word和PowerPoint转换）。
-
->[!NOTE]
->
->Microsoft Word 2003和PowerPoint 2003不支持多线程文件转换。 要启用多线程文件转换，请升级到Microsoft Word 2007和PowerPoint 2007或Microsoft Word 2010和PowerPoint 2010。
+根據預設，PDF產生器一次只能轉換一個OpenOffice、Microsoft Word或PowerPoint檔案。 如果您啟用多執行緒轉換，PDF產生器可同時轉換多個檔案。 PDF產生器將啟動多個OpenOffice或PDFMaker例項（用來執行Word和PowerPoint轉換）。
 
 >[!NOTE]
 >
->Microsoft Excel、Microsoft Visio、Microsoft Project或Microsoft Publisher不支持多线程文件转换。
+>Microsoft Word 2003和PowerPoint 2003不支援多執行緒檔案轉換。 若要啟用多執行緒檔案轉換，請升級至Microsoft Word 2007和PowerPoint 2007或Microsoft Word 2010和PowerPoint 2010。
 
-每个OpenOffice或PDFMaker实例都使用单独的用户帐户启动。 您添加的每个用户帐户都必须是对Forms Server计算机具有管理权限的有效用户。 在群集环境中，同一组用户必须对群集的所有节点有效。
+>[!NOTE]
+>
+>Microsoft Excel、Microsoft Visio、Microsoft Project或Microsoft Publisher不支援多執行緒檔案轉換。
 
-在管理控制台的“用户帐户”页上，可以指定用于多线程文件转换的用户帐户。 您可以添加帐户、删除帐户或更改帐户密码。 如果您在Windows Server 2003或Windows Server 2008上运行PDF生成器，请至少添加三个具有管理员权限的用户帐户。
+每個OpenOffice或PDFMaker執行個體都是使用個別的使用者帳戶啟動。 您新增的每個使用者帳戶都必須是具有表單伺服器電腦系統管理許可權的有效使用者。 在叢集環境中，叢集的所有節點都必須有相同的使用者集。
 
-在Windows Server 2003或2008上添加OpenOffice、Microsoft Word或Microsoft PowerPoint的用户，或者在Linux或Sun™ Solaris™上添加OpenOffice的用户时，为所有用户关闭初始激活对话框。
+在管理控制檯的「使用者帳戶」頁面上，您可以指定要用於多執行緒檔案轉換的使用者帳戶。 您可以新增帳戶、刪除帳戶或變更帳戶密碼。 如果您正在Windows Server 2003或Windows Server 2008上執行PDF產生器，請至少新增三個具有系統管理員許可權的使用者帳戶。
 
-### 添加权限以替换进程级令牌 {#add-the-right-to-replace-the-process-level-token}
+在Windows Server 2003或2008上新增OpenOffice、Microsoft Word或Microsoft PowerPoint的使用者，或在Linux或Sun™ Solaris™上新增OpenOffice的使用者時，請為所有使用者關閉初始啟用對話方塊。
 
-在Windows操作系统上，用于PDF转换的管理员用户帐户（PDFG用户）需要替换进程级别的令牌权限。 您可以使用组策略编辑器添加此权限：
+### 新增取代程式層級權杖的權利 {#add-the-right-to-replace-the-process-level-token}
 
-1. 在Windows“开始”菜单中，单击“运行”，然后输入gpedit.msc。
-1. 单击本地计算机策略>计算机配置> Windows设置>安全设置>本地策略>用户权限分配。 编辑 *替换进程级别令牌* 策略以包含Administrators组。
-1. 将用户添加到“替换进程级令牌”条目。
+在Windows作業系統上，用於PDF轉換的管理員使用者帳戶（PDFG使用者）需要取代處理序層級權杖許可權。 您可以使用群組原則編輯器來新增此權利：
 
-### Windows Server 2008上的OpenOffice、Microsoft Word和Microsoft PowerPoint所需的其他配置 {#additional-configuration-required-for-openoffice-microsoft-word-and-microsoft-powerpoint-on-windows-server-2008}
+1. 在Windows「開始」功能表中，按一下「執行」，然後輸入gpedit.msc。
+1. 按一下[本機電腦原則] > [電腦組態] > [Windows設定] > [安全性設定] > [本機原則] > [使用者許可權指派]。 編輯 *取代程式層級權杖* 包含Administrators群組的原則。
+1. 將使用者新增至「取代程式層級權杖」專案。
 
-如果您在Windows Server 2008上运行OpenOffice、Microsoft Word或Microsoft PowerPoint，请为添加的每位用户禁用UAC。
+### Windows Server 2008上的OpenOffice、Microsoft Word和Microsoft PowerPoint需要其他設定 {#additional-configuration-required-for-openoffice-microsoft-word-and-microsoft-powerpoint-on-windows-server-2008}
 
-1. 单击“控制面板”>“用户帐户”>“打开或关闭用户帐户控制”。
-1. 取消选中“Use User Account Control (UAC) to help protect your computer(使用用户帐户控制(UAC)帮助保护计算机)”框，然后单击“OK（确定）”。
-1. 重新启动计算机以使设置生效。
+如果您在Windows Server 2008上執行OpenOffice、Microsoft Word或Microsoft PowerPoint，請為每個新增的使用者停用UAC。
 
-### Linux或Solaris上的OpenOffice所需的其他配置 {#additional-configuration-required-for-openoffice-on-linux-or-solaris}
+1. 按一下「控制面板>使用者帳戶>開啟或關閉使用者帳戶控制」。
+1. 取消選取「使用使用者帳戶控制(UAC)以協助保護您的電腦」方塊，然後按一下「確定」。
+1. 重新啟動電腦，讓設定生效。
 
-1. 添加用户帐户。 (请参阅 [添加用户帐户](enabling-multi-threaded-file-conversions.md#add-a-user-account).)
-1. 接下来，您将更改/etc/sudoers文件。 此文件的默认权限为440。 将此文件的权限更改为可写。
-1. 在/etc/sudoers文件中添加其他用户（除运行表单服务器的管理员之外）的条目。 例如，如果您以名为lcadm的用户和名为myhost的服务器的身份运行AEM forms，并且要模拟user1和user2，请将以下条目添加到/etc/sudoers：
+### Linux或Solaris上的OpenOffice所需的其他設定 {#additional-configuration-required-for-openoffice-on-linux-or-solaris}
+
+1. 新增使用者帳戶。 (請參閱 [新增使用者帳戶](enabling-multi-threaded-file-conversions.md#add-a-user-account).)
+1. 接下來，您將變更/etc/sudoers檔案。 此檔案的預設許可權為440。 將此檔案的許可權變更為可寫入。
+1. 在/etc/sudoers檔案中新增其他使用者（除了執行表單伺服器的管理員以外）的專案。 例如，如果您以名為lcadm的使用者和名為myhost的伺服器身分執行AEM表單，並且想要模擬user1和user2，請將下列專案新增到/etc/sudoers：
 
    ```shell
     lcadm myhost=(user1) NOPASSWD: ALL
     lcadm myhost=(user2) NOPASSWD: ALL
    ```
 
-   此配置使lcadm能够以“user1”或“user2”在主机“myhost”上运行任何命令而不提示输入密码。
+   此設定可讓lcadm以&#39;user1&#39;或&#39;user2&#39;在主機&#39;myhost&#39;上執行任何命令，而不需要提示輸入密碼。
 
    >[!NOTE]
    >
-   >确保已将系统用户和PDFG用户角色分配给“user1”和“user2” 。 要将PDFG角色分配给用户，请参阅 [添加用户帐户](enabling-multi-threaded-file-conversions.md#add-a-user-account)
+   >確保您已為「user1」和「user2」指派系統使用者和PDFG使用者角色。 若要將PDFG角色指派給使用者，請參閱 [新增使用者帳戶](enabling-multi-threaded-file-conversions.md#add-a-user-account)
 
-1. 此外，在/etc/sudoers文件中，通过在行首添加数字符号(#)来查找并注释掉此行：
+1. 同樣在/etc/sudoers檔案中，找到此行並在行首加上數字元號(#)，將其註解：
 
    ```shell
    Defaults requiretty
    ```
 
-   这使您能够添加Linux用户。
+   這可讓您新增Linux使用者。
 
-1. 将etc/sudoers文件的权限更改为440。
-1. 允许您通过添加的所有用户 [添加用户帐户](enabling-multi-threaded-file-conversions.md#add-a-user-account) 以连接表单服务器。 例如，要允许名为user1的本地用户连接到表单服务器，请使用以下命令
+1. 將etc/sudoers檔案的許可權變更回440。
+1. 允許您透過新增的所有使用者 [新增使用者帳戶](enabling-multi-threaded-file-conversions.md#add-a-user-account) 以連線至表單伺服器。 例如，若要讓名為user1的本機使用者擁有連線至表單伺服器的許可權，請使用下列命令
 
    `xhost +local:user1@`
 
-   有关更多详细信息，请参阅xhost命令文档。
+   如需詳細資訊，請參閱xhost命令檔案。
 
-1. 重新启动服务器。
+1. 重新啟動伺服器。
 
 >[!NOTE]
 >
->OpenOffice必须安装在所有PDFG用户可以访问的目录位置。 您可以通过以PDFG用户身份登录并检查是否可以在没有问题的情况下启动OpenOffice来验证这一点。
+>OpenOffice必須安裝在所有PDFG使用者都能存取的目錄位置。 您可以以PDFG使用者身分登入，並檢查您是否可以在沒有問題的情況下啟動OpenOffice，以確認這點。
 
-### 添加用户帐户 {#add-a-user-account}
+### 新增使用者帳戶 {#add-a-user-account}
 
-1. 在管理控制台中，单击服务>PDF生成器>用户帐户。
-1. 单击添加，然后输入对表单服务器具有管理权限的用户名和密码。 如果要为OpenOffice配置用户，请关闭初始OpenOffice激活对话框。
+1. 在管理主控台中，按一下「服務>PDF產生器>使用者帳戶」。
+1. 按一下新增，然後輸入在表單伺服器上擁有管理許可權的使用者的使用者名稱和密碼。 如果您正在設定OpenOffice的使用者，請關閉初始OpenOffice啟用對話方塊。
 
    >[!NOTE]
    >
-   >如果要为OpenOffice配置用户，OpenOffice的实例数不能大于此步骤中指定的用户帐户数。
+   >如果您正在設定OpenOffice的使用者，OpenOffice的執行個體數目不能大於此步驟中指定的使用者帳戶數目。
 
-1. 重新启动表单服务器。
+1. 重新啟動表單伺服器。
 
-### 从用于多线程文件转换的列表中删除用户 {#remove-a-user-from-the-list-used-for-multi-threaded-file-conversions}
+### 從用於多執行緒檔案轉換的清單中移除使用者 {#remove-a-user-from-the-list-used-for-multi-threaded-file-conversions}
 
-1. 在管理控制台中，单击服务>PDF生成器>用户帐户。
-1. 单击要删除的用户旁边的复选框，然后单击删除。
-1. 在确认页面上，单击删除。
-1. 重新启动表单服务器。
+1. 在管理主控台中，按一下「服務>PDF產生器>使用者帳戶」。
+1. 按一下您要移除的使用者旁的核取方塊，然後按一下刪除。
+1. 在確認頁面上，按一下刪除。
+1. 重新啟動表單伺服器。
 
-### 更改帐户的密码 {#change-the-password-for-an-account}
+### 變更帳戶的密碼 {#change-the-password-for-an-account}
 
-1. 在管理控制台中，单击服务>PDF生成器>用户帐户。
-1. 单击用户名，然后输入并确认新密码。 此密码必须与用户的系统密码匹配。
+1. 在管理主控台中，按一下「服務>PDF產生器>使用者帳戶」。
+1. 按一下使用者名稱，然後輸入並確認新密碼。 此密碼必須符合使用者的系統密碼。

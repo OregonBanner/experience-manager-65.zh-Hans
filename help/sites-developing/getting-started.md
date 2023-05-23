@@ -14,7 +14,7 @@ exl-id: 8314d7fe-0a46-453d-9592-f1bcd8c8f10a
 source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
 source-wordcount: '259'
-ht-degree: 78%
+ht-degree: 81%
 
 ---
 
@@ -42,8 +42,8 @@ ht-degree: 78%
 * [核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)
 * [可编辑模板](/help/sites-developing/page-templates-editable.md)
 
-在详细介绍上述概念之前，请先阅读本教程。
+在深入瞭解上述概念之前，請先完成本教學課程。
 
 ## 后续步骤 {#next-steps}
 
-一旦您完成 [教程](https://helpx.adobe.com/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop.html)，考虑查看文档 [AEM核心概念](/help/sites-developing/the-basics.md) 更好地了解AEM的一些底层技术和开发模式。
+當您完成 [教學課程](https://helpx.adobe.com/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop.html)，請考慮檢閱檔案 [AEM核心概念](/help/sites-developing/the-basics.md) 以更進一步瞭解AEM的一些基礎技術和開發範例。

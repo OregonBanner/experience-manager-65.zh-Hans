@@ -1,7 +1,7 @@
 ---
-title: AEM组件 — 基础知识
+title: AEM元件 — 基本知識
 seo-title: AEM Components - The Basics
-description: 在开始开发新组件时，您需要了解其结构和配置的基础知识
+description: 當您開始開發新元件時，您需要瞭解其結構和設定的基本知識
 seo-description: When you start to develop new components you need to understand the basics of their structure and configuration
 uuid: 0225b34d-5ac4-40c3-b226-0c9b24bdf782
 contentOwner: Chris Bohnert
@@ -18,224 +18,224 @@ ht-degree: 1%
 
 ---
 
-# AEM组件 — 基础知识{#aem-components-the-basics}
+# AEM元件 — 基本知識{#aem-components-the-basics}
 
-在开始开发新组件时，您需要了解其结构和配置的基础知识。
+當您開始開發新元件時，您需要瞭解其結構和設定的基本知識。
 
-此过程包括阅读相关理论，并查看标准AEM实例中的各种组件实施。 尽管AEM已转移到新的标准、现代、触屏优化UI，但它继续支持经典UI，这一事实使后一种方法稍微复杂一些。
+此程式包括閱讀理論，以及檢視標準AEM例項中的各種元件實作。 雖然AEM已改用新標準、現代且具備觸控功能的UI，但這種方法仍可繼續支援傳統UI，因此略顯複雜。
 
 ## 概述 {#overview}
 
-此部分涵盖关键概念和问题，并介绍开发您自己的组件时所需的详细信息。
+本節說明開發您自己的元件時所需詳細資訊的主要概念和問題。
 
 ### 规划 {#planning}
 
-在开始实际配置或编码组件之前，您应该询问：
+開始實際設定元件或為元件編寫程式碼之前，您應該先詢問：
 
-* 您到底需要新组件做什么？
-   * 明确的规范有助于开发、测试和移交的所有阶段。 详细信息可能会随着时间的推移而改变，但规范可以更新（尽管更改也应记录在案）。
-* 您是需要从头开始创建组件，还是可以从现有组件继承基础知识？
-   * 不需要重新发明轮子。
-   * AEM提供了多种机制，允许您从其他组件定义继承和扩展详细信息，包括覆盖、叠加和 [Sling资源合并器](/help/sites-developing/sling-resource-merger.md).
-* 您的组件是否需要逻辑来选择/处理内容？
-   * 逻辑应与用户界面层分开。 HTL旨在帮助确保实现此目的。
-* 您的组件是否需要CSS格式？
-   * CSS格式应与组件定义分开。 定义用于命名HTML元素的约定，以便您可以通过外部CSS文件修改这些约定。
-* 我应该考虑哪些安全方面？
-   * 参见 [安全核对清单 — 开发最佳实践](/help/sites-administering/security-checklist.md#development-best-practices) 了解更多详细信息。
+* 您到底需要新元件做什麼？
+   * 清楚的規格有助於所有開發、測試和移交階段。 詳細資訊可能會隨著時間而改變，但規格可以更新（但變更也應記錄在案）。
+* 您是否需要從頭開始建立元件，或是繼承現有元件的基本知識？
+   * 不需要重新發明輪子。
+   * AEM提供數個機制，可讓您從另一個元件定義繼承和擴充詳細資訊，包括覆寫、覆蓋和 [Sling資源合併](/help/sites-developing/sling-resource-merger.md).
+* 您的元件需要邏輯來選取/操作內容嗎？
+   * 邏輯應與使用者介面層分開。 HTL的設計目的是協助確保做到這一點。
+* 您的元件是否需要CSS格式？
+   * CSS格式應與元件定義分開。 定義命名您的HTML元素的慣例，以便您可以透過外部CSS檔案來修改它們。
+* 我該考慮哪些安全性方面？
+   * 另請參閱 [安全性檢查清單 — 開發最佳實務](/help/sites-administering/security-checklist.md#development-best-practices) 以取得更多詳細資料。
 
-### 触屏优化vs经典UI {#touch-enabled-vs-classic-ui}
+### 觸控式與傳統UI的比較 {#touch-enabled-vs-classic-ui}
 
-在就开发组件展开任何严肃讨论之前，您需要知道作者将使用哪种UI：
+在展開有關開發元件的任何嚴肅討論之前，您需要知道作者將使用哪種UI：
 
-* **触屏优化 UI**
-   [标准用户界面](/help/sites-developing/touch-ui-concepts.md) 基于Adobe Marketing Cloud的统一用户体验，使用以下底层技术： [Coral UI](/help/sites-developing/touch-ui-concepts.md#coral-ui) 和 [Granite UI](/help/sites-developing/touch-ui-concepts.md#granite-ui).
-* **经典Ui**
-基于ExtJS技术的用户界面，AEM 6.4已弃用。
+* **觸控式UI**
+   [標準使用者介面](/help/sites-developing/touch-ui-concepts.md) 是根據Adobe Marketing Cloud的統一使用者體驗，使用基礎技術 [Coral UI](/help/sites-developing/touch-ui-concepts.md#coral-ui) 和 [Granite UI](/help/sites-developing/touch-ui-concepts.md#granite-ui).
+* **傳統UI**
+以AEM 6.4取代的ExtJS技術為基礎的使用者介面。
 
-参见 [适用于客户的UI界面Recommendations](/help/sites-deploying/ui-recommendations.md) 了解更多详细信息。
+另請參閱 [適用於客戶的UI介面Recommendations](/help/sites-deploying/ui-recommendations.md) 以取得更多詳細資料。
 
-可以实施组件以支持触屏UI和/或经典UI。 在查看标准实例时，您还会看到最初为经典UI或触屏UI或两者而设计的现成组件。
+可以實作元件以支援觸控式UI和/或傳統UI。 檢視標準執行個體時，您也會看到原本為傳統UI或觸控式UI （或兩者）設計的現成元件。
 
-因此，在本页中，我们将介绍这两个规则的基本知识以及如何识别它们。
-
->[!NOTE]
->
->Adobe建议利用触屏优化UI来从最新技术中获益。 [AEM现代化工具](modernization-tools.md) 可以更轻松地迁移。
-
-### 内容逻辑和渲染标记  {#content-logic-and-rendering-markup}
-
-建议将负责标记和渲染的代码与控制用于选择组件内容的逻辑的代码分开。
-
-这一理念得到以下支持 [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)，一种模板化语言，专门用于确保使用真正的编程语言来定义底层业务逻辑。 此（可选）逻辑通过特定命令从HTL调用。 此机制会突出显示为给定视图调用的代码，如果需要，还允许为同一组件的不同视图使用特定逻辑。
-
-### HTL与JSP {#htl-vs-jsp}
-
-HTL是AEM 6.0中引入的一种HTML模板语言。
-
-关于是否使用的讨论 [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html) 或JSP (Java Server Pages)在开发您自己的组件时应该简单明了，因为HTL现在是AEM推荐的脚本语言。
-
-HTL和JSP都可用于为经典用户界面和触屏优化UI开发组件。 尽管可能会倾向于认为HTL仅适用于触屏UI和经典UI的JSP，但这是一种误解，并且更多是由于时间原因。 触摸式UI和HTL大约在同一时期内合并到AEM中。 由于HTL现在是推荐的语言，因此它被用于新组件，这些组件倾向于用于触屏优化UI。
+因此，在本頁中，我們將說明兩者的基本知識，以及如何識別它們。
 
 >[!NOTE]
 >
->Granite UI Foundation表单字段除外（在对话框中使用）。 这些仍需要使用JSP。
+>Adobe建議運用觸控式UI，以受益於最新技術。 [AEM現代化工具](modernization-tools.md) 更輕鬆地進行移轉。
 
-### 开发您自己的组件 {#developing-your-own-components}
+### 內容邏輯和演算標籤  {#content-logic-and-rendering-markup}
 
-要为相应的UI创建自己的组件，请参阅（阅读本页后）：
+建議將負責標籤和轉譯的程式碼，與控制用來選取元件內容的邏輯的程式碼分開。
 
-* [触屏UI的AEM组件](/help/sites-developing/developing-components.md)
-* [经典UI的AEM组件](/help/sites-developing/developing-components-classic.md)
+支援此理念的有 [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)，一種範本化語言，特意限制以確保使用真正的程式設計語言來定義基礎商業邏輯。 此（選用）邏輯會使用特定命令從HTL叫用。 此機制會反白標示為指定檢視呼叫的程式碼，並視需要為相同元件的不同檢視允許特定邏輯。
 
-快速入门方法是复制现有组件，然后进行所需的更改。 要了解如何创建自己的组件并将它们添加到段落系统，请参阅：
+### HTL與JSP比較 {#htl-vs-jsp}
 
-* [开发组件](/help/sites-developing/developing-components-samples.md) （侧重于触屏UI）
+HTL是AEM 6.0引進的HTML範本語言。
 
-### 将组件移动到发布实例 {#moving-components-to-the-publish-instance}
+關於是否使用的討論 [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html) 或JSP (Java Server Pages)開發自己的元件時應該要簡單明瞭，因為HTL現在是AEM的建議指令碼語言。
 
-呈现内容的组件必须部署在与内容相同的AEM实例上。 因此，必须在发布实例上部署用于创作和渲染创作实例上的页面的所有组件。 部署后，组件可用于渲染已激活的页面。
-
-使用以下工具将组件移动到发布实例：
-
-* [使用包管理器](/help/sites-administering/package-manager.md) 以将组件添加到资源包并将它们移动到另一个AEM实例。
-* [使用激活树复制工具](/help/sites-authoring/publishing-pages.md#manage-publication) 以复制组件。
+HTL和JSP都可用於開發傳統和觸控式UI的元件。 雖然我們可能會傾向於假設HTL僅適用於觸控式UI和適用於傳統UI的JSP，但這只是誤解，而且更多是受時機的影響。 觸控式UI和HTL大約在同一期間併入AEM。 由於HTL現在是建議的語言，因此將用於新元件，這些元件傾向於用於觸控式UI。
 
 >[!NOTE]
 >
->这些机制还可用于在其他实例之间传输组件，例如，从开发实例传输到测试实例。
+>例外情況是Granite UI Foundation表單欄位（在對話方塊中使用）。 這些仍需要使用JSP。
 
-### 从头开始要注意的组件 {#components-to-be-aware-of-from-the-start}
+### 開發您自己的元件 {#developing-your-own-components}
+
+若要為適當的UI建立您自己的元件，請參閱（閱讀本頁面後）：
+
+* [觸控式UI的AEM元件](/help/sites-developing/developing-components.md)
+* [傳統UI的AEM元件](/help/sites-developing/developing-components-classic.md)
+
+快速入門方法是複製現有元件，然後進行您想要的變更。 若要瞭解如何建立自己的元件，並將它們新增至段落系統，請參閱：
+
+* [開發元件](/help/sites-developing/developing-components-samples.md) （著重於觸控式UI）
+
+### 將元件移動至發佈例項 {#moving-components-to-the-publish-instance}
+
+呈現內容的元件必須部署在與內容相同的AEM執行個體上。 因此，用於編寫和轉譯作者執行個體上頁面的所有元件，都必須部署在發佈執行個體上。 部署後，元件可用於轉譯已啟動的頁面。
+
+使用下列工具將您的元件移至發佈執行個體：
+
+* [使用封裝管理員](/help/sites-administering/package-manager.md) 將您的元件新增至套件，並將它們移至另一個AEM執行個體。
+* [使用啟動樹狀結構復寫工具](/help/sites-authoring/publishing-pages.md#manage-publication) 以複製元件。
+
+>[!NOTE]
+>
+>這些機制也可用於在其他執行個體之間轉移元件，例如從您的開發到您的測試執行個體。
+
+### 從頭開始要注意的元件 {#components-to-be-aware-of-from-the-start}
 
 * 页面:
 
-   * AEM具有 *页面* 组件( `cq:Page`)。
-   * 这是特定类型的资源，对内容管理很重要。
-      * 页面对应于包含您网站内容的网页。
+   * AEM具有 *頁面* 元件( `cq:Page`)。
+   * 這是對內容管理很重要的特定資源型別。
+      * 頁面對應至包含您網站內容的網頁。
 
-* 段落系统：
+* 段落系統：
 
-   * 段落系统是网站的一个关键部分，因为它管理着段落列表。 它用于保存和构建包含实际内容的各个组件。
-   * 您可以在段落系统中创建、移动、复制和删除段落。
-   * 您还可以选择可在特定段落系统中使用的组件。
-   * 标准实例中有各种可用的段落系统(例如 `parsys`， ` [responsivegrid](/help/sites-authoring/responsive-layout.md)`)。
+   * 段落系統是網站的重要部分，因為它會管理段落清單。 它可用來儲存和建構包含實際內容的個別元件。
+   * 您可以在段落系統中建立、移動、複製和刪除段落。
+   * 您也可以選取可在特定段落系統中使用的元件。
+   * 標準例項中有各種可用的段落系統(例如 `parsys`， ` [responsivegrid](/help/sites-authoring/responsive-layout.md)`)。
 
 ## 结构 {#structure}
 
-AEM组件的结构强大而灵活，主要考虑因素包括：
+AEM元件的結構既強大又靈活，主要考量事項為：
 
 * 资源类型
-* 组件定义
-* 组件的属性和子节点
+* 元件定義
+* 元件的屬性和子節點
 * 对话框
-* 设计对话框
-* 组件可用性
-* 组件及其创建的内容
+* 設計對話方塊
+* 元件可用性
+* 元件及其建立的內容
 
 ### 资源类型 {#resource-type}
 
-结构的一个关键元素是资源类型。
+結構的一個關鍵元素是資源型別。
 
-* 内容结构声明意图。
-* 资源类型实施它们。
+* 內容結構會宣告意圖。
+* 資源型別實作這些變數。
 
-这是一个抽象，有助于确保即使当外观和感觉随时间变化时，意图仍会停留在时间上。
+這是一種抽象，有助於確保即使表觀和感覺隨著時間而改變，意圖仍會維持在時間上。
 
-### 组件定义 {#component-definition}
+### 元件定義 {#component-definition}
 
-#### 组件基础知识 {#component-basics}
+#### 元件基本知識 {#component-basics}
 
-组件的定义可细分如下：
+元件的定義可劃分如下：
 
-* AEM组件基于 [Sling](https://sling.apache.org/documentation.html).
-* AEM组件（通常）位于以下位置：
+* AEM元件是根據 [Sling](https://sling.apache.org/documentation.html).
+* AEM元件（通常）位於下列位置：
 
    * HTL: `/libs/wcm/foundation/components`
    * JSP： `/libs/foundation/components`
 
-* 项目/站点特定的组件（通常）位于以下位置：
+* 專案/網站特定元件（通常）位於下列位置：
 
    * `/apps/<myApp>/components`
 
-* AEM标准组件定义为 `cq:Component` 并具有关键元素：
+* AEM標準元件的定義為 `cq:Component` 並具備關鍵元素：
 
-   * jcr属性：
+   * jcr屬性：
 
-      jcr属性的列表；这些属性是变量的，有些可能是可选的，但组件节点的基本结构、其属性和子节点由定义。 `cq:Component` 定义
+      jcr屬性的清單；這些是變數，有些可能是選用的，但元件節點的基本結構、其屬性和子節點由定義 `cq:Component` 定義
 
    * 资源:
 
-      这些定义组件使用的静态元素。
+      這些會定義元件使用的靜態元素。
 
    * 脚本:
 
-   用于实施组件的结果实例的行为。
+   用於實作元件之結果例項的行為。
 
-* **根节点**：
+* **根節點**：
 
-   * `<mycomponent> (cq:Component)`  — 组件的层次结构节点。
+   * `<mycomponent> (cq:Component)`  — 元件的階層節點。
 
-* **重要属性**：
+* **重要屬性**：
 
-   * `jcr:title`  — 组件标题；例如，当组件在组件浏览器或Sidekick中列出时用作标签。
-   * `jcr:description`  — 组件的描述；可用作组件浏览器或Sidekick中的鼠标悬停提示。
-   * 经典 UI：
+   * `jcr:title`  — 元件標題；例如，當元件在元件瀏覽器或Sidekick中列出時，用作標籤。
+   * `jcr:description`  — 元件的說明；可用作元件瀏覽器或Sidekick中的滑鼠懸停提示。
+   * 经典 UI:
 
-      * `icon.png`  — 此组件的图标。
-      * `thumbnail.png`  — 如果此组件在段落系统中列出，则显示图像。
+      * `icon.png`  — 此元件的圖示。
+      * `thumbnail.png`  — 如果此元件列在段落系統中，則顯示影像。
    * 触屏 UI
 
-      * 请参阅部分 [触屏UI中的组件图标](/help/sites-developing/components-basics.md#component-icon-in-touch-ui) 了解详细信息。
+      * 請參閱區段 [觸控式UI中的元件圖示](/help/sites-developing/components-basics.md#component-icon-in-touch-ui) 以取得詳細資訊。
 
 
-* **重要子节点**：
+* **重要子節點**：
 
-   * `cq:editConfig (cq:EditConfig)`  — 定义组件的编辑属性，并使组件显示在组件浏览器或Sidekick中。
+   * `cq:editConfig (cq:EditConfig)`  — 定義元件的編輯屬性，並讓元件顯示在「元件」瀏覽器或Sidekick中。
 
-      注意：如果组件有对话框，它将自动显示在组件浏览器或Sidekick中，即使cq：editConfig不存在。
+      注意：如果元件有對話方塊，即使cq：editConfig不存在，它也會自動出現在「元件」瀏覽器或Sidekick中。
 
-   * `cq:childEditConfig (cq:EditConfig)`  — 控制子组件的创作UI方面，这些组件未定义自己的组件 `cq:editConfig`.
-   * 触屏优化 UI:
+   * `cq:childEditConfig (cq:EditConfig)`  — 控制未定義其本身的子元件的作者UI方面 `cq:editConfig`.
+   * 觸控式UI：
 
-      * `cq:dialog` ( `nt:unstructured`) — 此组件的对话框。 定义允许用户配置组件和/或编辑内容的界面。
-      * `cq:design_dialog` ( `nt:unstructured`) — 此组件的设计编辑
-   * 经典 UI：
+      * `cq:dialog` ( `nt:unstructured`) — 此元件的對話方塊。 定義允許使用者設定元件和/或編輯內容的介面。
+      * `cq:design_dialog` ( `nt:unstructured`) — 此元件的設計編輯
+   * 经典 UI:
 
-      * `dialog` ( `cq:Dialog`) — 此组件的对话框。 定义允许用户配置组件和/或编辑内容的界面。
-      * `design_dialog` ( `cq:Dialog`) — 此组件的设计编辑。
+      * `dialog` ( `cq:Dialog`) — 此元件的對話方塊。 定義允許使用者設定元件和/或編輯內容的介面。
+      * `design_dialog` ( `cq:Dialog`) — 為此元件進行設計編輯。
 
 
-#### 触屏UI中的组件图标 {#component-icon-in-touch-ui}
+#### 觸控式UI中的元件圖示 {#component-icon-in-touch-ui}
 
-组件的图标或缩写在开发人员创建组件时通过组件的JCR属性定义。 这些属性的计算顺序如下，并且使用找到的第一个有效属性。
+當開發人員建立元件時，元件的圖示或縮寫會透過元件的JCR屬性來定義。 系統會依下列順序評估這些屬性，並使用找到的第一個有效屬性。
 
-1. `cq:icon`  — 字符串属性，指向 [Coral UI库](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html) 在组件浏览器中显示
-   * 使用Coral图标的HTML属性的值。
-1. `abbreviation`  — 字符串属性，用于自定义组件浏览器中组件名称的缩写
-   * 缩写应限制为两个字符。
-   * 提供空字符串将构建 `jcr:title` 属性。
-      * 例如，“Im”表示“图像”
-      * 本地化的标题将用于构建缩写。
-   * 仅组件具有以下特征时，才会翻译缩写： `abbreviation_commentI18n` 属性，然后用作翻译提示。
-1. `cq:icon.png` 或 `cq:icon.svg`  — 此组件的图标，显示在组件浏览器中
-   * 20 x 20像素是标准组件的图标大小。
-      * 较大的图标将被缩小（客户端）。
-   * 推荐的颜色为rgb(112， 112， 112) > #707070
-   * 标准组件图标的背景透明。
-   * 仅 `.png` 和 `.svg` 文件受支持。
-   * 如果通过Eclipse插件从文件系统导入，则需要将文件名转义为 `_cq_icon.png` 或 `_cq_icon.svg` 例如。
-   * `.png` 让先例重演 `.svg` 如果两者都存在
+1. `cq:icon`  — 字串屬性，指向中的標準圖示 [Coral UI程式庫](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html) 以在元件瀏覽器中顯示
+   * 使用Coral圖示的HTML屬性值。
+1. `abbreviation`  — 字串屬性，用於自訂元件瀏覽器中元件名稱的縮寫
+   * 縮寫應限製為兩個字元。
+   * 提供空字串將會建置的前兩個字元中的縮寫 `jcr:title` 屬性。
+      * 例如，&quot;Im&quot;代表&quot;Image&quot;
+      * 當地語系化標題將用於建置縮寫。
+   * 只有元件具備以下條件時，才會轉譯縮寫： `abbreviation_commentI18n` 屬性，然後用作翻譯提示。
+1. `cq:icon.png` 或 `cq:icon.svg`  — 此元件的圖示，會顯示在元件瀏覽器中
+   * 20 x 20畫素是標準元件的圖示大小。
+      * 較大的圖示將會縮小（使用者端）。
+   * 建議的色彩為rgb(112， 112， 112) > #707070
+   * 標準元件圖示的背景是透明的。
+   * 僅限 `.png` 和 `.svg` 檔案受到支援。
+   * 如果透過Eclipse外掛程式從檔案系統匯入，檔案名稱需要逸出為 `_cq_icon.png` 或 `_cq_icon.svg` 例如。
+   * `.png` 先決條件優先 `.svg` 如果兩者都存在
 
-如果以上属性均不( `cq:icon`， `abbreviation`， `cq:icon.png` 或 `cq:icon.svg`)，具体情况如下：
+如果以上屬性均非( `cq:icon`， `abbreviation`， `cq:icon.png` 或 `cq:icon.svg`)可在此元件中找到：
 
-* 系统将在超级组件上搜索相同的属性，如下所示 `sling:resourceSuperType` 属性。
-* 如果在超级组件级别上未找到任何内容或发现空缩写，则系统将根据 `jcr:title` 当前组件的属性。
+* 系統會在超級元件上搜尋以下專案後的相同屬性 `sling:resourceSuperType` 屬性。
+* 如果在超級元件層級中找不到任何專案或空白縮寫，系統會從 `jcr:title` 目前元件的屬性。
 
-要取消从超级组件继承图标，请将设置为空 `abbreviation` 组件上的属性将还原为默认行为。
+若要取消從超級元件繼承圖示，請將設定為空白 `abbreviation` 元件上的屬性將恢復為預設行為。
 
-此 [组件控制台](/help/sites-authoring/default-components-console.md#component-details) 显示如何定义特定组件的图标。
+此 [元件主控台](/help/sites-authoring/default-components-console.md#component-details) 顯示如何定義特定元件的圖示。
 
-#### SVG图标示例 {#svg-icon-example}
+#### SVG圖示範例 {#svg-icon-example}
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -249,11 +249,11 @@ AEM组件的结构强大而灵活，主要考虑因素包括：
 </svg>
 ```
 
-### 组件的属性和子节点 {#properties-and-child-nodes-of-a-component}
+### 元件的屬性和子節點 {#properties-and-child-nodes-of-a-component}
 
-定义组件所需的许多节点/属性对这两个UI都是通用的，不同之处保持独立，以便您的组件可以在两个环境中工作。
+定義元件所需的許多節點/屬性對這兩個UI都是通用的，不同之處保持獨立，以便您的元件可在兩個環境中運作。
 
-组件是类型的节点 `cq:Component` 和具有以下属性和子节点：
+元件是型別的節點 `cq:Component` 和擁有下列屬性和子節點：
 
 <table>
  <tbody>
@@ -265,17 +265,17 @@ AEM组件的结构强大而灵活，主要考虑因素包括：
   <tr>
    <td>.<br /> </td>
    <td><code>cq:Component</code></td>
-   <td>当前组件. 组件属于节点类型 <code>cq:Component</code>.<br /> </td>
+   <td>当前组件. 元件屬於節點型別 <code>cq:Component</code>.<br /> </td>
   </tr>
   <tr>
    <td><code>componentGroup</code></td>
    <td><code>String</code></td>
-   <td>可以在组件浏览器（触屏UI）或Sidekick（经典UI）中选择组件的组。<br /> 值 <code>.hidden</code> 用于无法从UI中选择的组件，例如实际段落系统。</td>
+   <td>可在元件瀏覽器（觸控式UI）或Sidekick （傳統UI）中選取元件的群組。<br /> 值 <code>.hidden</code> 用於無法從UI選取的元件，例如實際段落系統。</td>
   </tr>
   <tr>
    <td><code>cq:isContainer</code></td>
    <td><code>Boolean</code></td>
-   <td>指示组件是否为容器组件，因此可以包含其他组件，例如段落系统。</td>
+   <td>指出元件是否為容器元件，因此可包含其他元件，例如段落系統。</td>
   </tr>
   <tr>
    <td> </td>
@@ -285,27 +285,27 @@ AEM组件的结构强大而灵活，主要考虑因素包括：
   <tr>
    <td><code>cq:dialog</code></td>
    <td><code>nt:unstructured</code> </td>
-   <td>触屏UI的“编辑”对话框的定义。</td>
+   <td>觸控式UI的編輯對話方塊定義。</td>
   </tr>
   <tr>
    <td><code>dialog</code></td>
    <td><code>cq:Dialog</code></td>
-   <td>经典UI的“编辑”对话框的定义。</td>
+   <td>傳統UI的編輯對話方塊定義。</td>
   </tr>
   <tr>
    <td><code>cq:design_dialog</code></td>
    <td><code>nt:unstructured</code></td>
-   <td>触屏UI的“设计”对话框的定义。</td>
+   <td>觸控式UI的設計對話方塊定義。</td>
   </tr>
   <tr>
    <td><code>design_dialog</code></td>
    <td><code>cq:Dialog </code></td>
-   <td>经典UI的“设计”对话框的定义。<br /> </td>
+   <td>傳統UI的設計對話方塊定義。<br /> </td>
   </tr>
   <tr>
    <td><code>dialogPath</code></td>
    <td><code>String</code></td>
-   <td>指向对话框的路径，以在组件没有对话框节点时覆盖这种情况。<br /> </td>
+   <td>元件沒有對話方塊節點時，涵蓋此情況的對話方塊路徑。<br /> </td>
   </tr>
   <tr>
    <td> </td>
@@ -315,82 +315,82 @@ AEM组件的结构强大而灵活，主要考虑因素包括：
   <tr>
    <td><code>cq:cellName</code></td>
    <td><code>String</code></td>
-   <td>如果设置，此属性将被视为单元格ID。 有关更多信息，请参阅知识库文章 <a href="https://helpx.adobe.com/experience-manager/kb/DesigneCellId.html">如何构建设计单元格ID</a>.<br /> </td>
+   <td>如果設定，此屬性會視為儲存格ID。 如需詳細資訊，請參閱知識庫文章 <a href="https://helpx.adobe.com/experience-manager/kb/DesigneCellId.html">如何建立設計儲存格ID</a>.<br /> </td>
   </tr>
   <tr>
    <td><code>cq:childEditConfig</code></td>
    <td><code>cq:EditConfig</code></td>
-   <td>当组件是容器时（例如，段落系统），这会驱动子节点的编辑配置。<br /> </td>
+   <td>當元件為容器時（例如段落系統），這會驅動子節點的編輯設定。<br /> </td>
   </tr>
   <tr>
    <td><code>cq:editConfig</code></td>
    <td><code>cq:EditConfig</code></td>
-   <td><a href="#edit-behavior">编辑组件的配置</a>.<br /> </td>
+   <td><a href="#edit-behavior">編輯元件的設定</a>.<br /> </td>
   </tr>
   <tr>
    <td><code>cq:htmlTag</code></td>
    <td><code>nt:unstructured </code></td>
-   <td>返回添加到周围html标记的其他标记属性。 允许向自动生成的div添加属性。</td>
+   <td>傳回新增至周圍html標籤的其他標籤屬性。 啟用向自動產生的div新增屬性。</td>
   </tr>
   <tr>
    <td><code>cq:noDecoration</code></td>
    <td><code>Boolean</code></td>
-   <td>如果为true，则组件不会使用自动生成的div和css类渲染。<br /> </td>
+   <td>如果為true，則元件不會使用自動產生的div和css類別轉譯。<br /> </td>
   </tr>
   <tr>
    <td><code>cq:template</code></td>
    <td><code>nt:unstructured</code></td>
-   <td>如果找到，则在从组件浏览器或Sidekick添加组件时，此节点将用作内容模板。</td>
+   <td>如果找到，從元件瀏覽器或Sidekick新增元件時，此節點將用作內容範本。</td>
   </tr>
   <tr>
    <td><code>cq:templatePath</code></td>
    <td><code>String</code></td>
-   <td>从组件浏览器或Sidekick添加组件时用作内容模板的节点的路径。 这必须是绝对路径，而不是相对于组件节点的路径。<br /> 除非您希望重新使用其他地方已有的内容，否则不需要这样做，并且 <code>cq:template</code> 足够（见下文）。</td>
+   <td>從「元件」瀏覽器或Sidekick新增元件時，作為內容範本使用的節點路徑。 這必須是絕對路徑，而不是相對於元件節點的路徑。<br /> 除非您想要重複使用其他地方已有的內容，否則不需要使用，並且 <code>cq:template</code> 足夠（請參閱下文）。</td>
   </tr>
   <tr>
    <td><code>jcr:created</code></td>
    <td><code>Date</code></td>
-   <td>创建组件的日期。<br /> </td>
+   <td>建立元件的日期。<br /> </td>
   </tr>
   <tr>
    <td><code>jcr:description</code></td>
    <td><code>String</code></td>
-   <td>组件的描述。<br /> </td>
+   <td>元件的說明。<br /> </td>
   </tr>
   <tr>
    <td><code>jcr:title</code></td>
    <td><code>String</code></td>
-   <td>组件的标题。<br /> </td>
+   <td>元件的標題。<br /> </td>
   </tr>
   <tr>
    <td><code>sling:resourceSuperType</code></td>
    <td><code>String</code></td>
-   <td>设置后，组件会继承此组件。<br /> </td>
+   <td>設定後，元件會繼承自此元件。<br /> </td>
   </tr>
   <tr>
    <td><code>virtual</code></td>
    <td><code>sling:Folder</code></td>
-   <td>允许创建虚拟组件。 要查看示例，请查看位于以下位置的联系人组件：<br /> <code>/libs/foundation/components/profile/form/contact</code></td>
+   <td>可建立虛擬元件。 若要檢視範例，請檢視聯絡人元件：<br /> <code>/libs/foundation/components/profile/form/contact</code></td>
   </tr>
   <tr>
    <td><code>&lt;breadcrumb.jsp&gt;</code></td>
    <td><code>nt:file</code> </td>
-   <td>脚本文件。<br /> </td>
+   <td>指令碼檔案。<br /> </td>
   </tr>
   <tr>
    <td><code>icon.png</code></td>
    <td><code>nt:file</code></td>
-   <td>组件的图标，显示在Sidekick中的标题旁边。<br /> </td>
+   <td>元件的圖示，顯示在Sidekick中的標題旁邊。<br /> </td>
   </tr>
   <tr>
    <td><code>thumbnail.png</code></td>
    <td><code>nt:file</code></td>
-   <td>将组件从Sidekick拖动到适当位置时显示的可选缩略图。<br /> </td>
+   <td>從Sidekick將元件拖曳到適當位置時顯示的可選縮圖。<br /> </td>
   </tr>
  </tbody>
 </table>
 
-如果我们查看 **文本** 组件（无论是哪个版本），我们可以看到以下元素：
+如果檢視 **文字** 元件（任一版本）中，我們可以看到以下元素：
 
 * HTL ( `/libs/wcm/foundation/components/text`)
 
@@ -400,106 +400,106 @@ AEM组件的结构强大而灵活，主要考虑因素包括：
 
    ![screen_shot_2012-02-13at60457pm](assets/screen_shot_2012-02-13at60457pm.png)
 
-特别感兴趣之物业包括：
+特別感興趣的屬性包括：
 
-* `jcr:title`  — 组件的标题；这可用于识别组件，例如，它显示在组件浏览器或sidekick内的组件列表中
-* `jcr:description`  — 组件的描述；可以用作sidekick中组件列表的鼠标悬停提示
-* `sling:resourceSuperType`：表示扩展组件时（通过覆盖定义）的继承路径
+* `jcr:title`  — 元件的標題；這可用來識別元件，例如，元件出現在元件瀏覽器或sidekick內的元件清單中
+* `jcr:description`  — 元件的說明；可以用作sidekick內元件清單中的滑鼠懸停提示
+* `sling:resourceSuperType`：這表示擴充元件時的繼承路徑（透過覆寫定義）
 
-特别感兴趣的子节点包括：
+特別感興趣的子節點包括：
 
-* `cq:editConfig` ( `cq:EditConfig`) — 此选项控制可视方面；例如，可以定义条形图或小部件的外观，或者可以添加自定义控件
-* `cq:childEditConfig` ( `cq:EditConfig`) — 这控制没有自己的定义的子组件的可视化方面
-* 触屏优化 UI:
-   * `cq:dialog` ( `nt:unstructured`) — 定义用于编辑此组件内容的对话框
-   * `cq:design_dialog` ( `nt:unstructured`) — 指定此组件的设计编辑选项
-* 经典 UI：
-   * `dialog` ( `cq:Dialog`) — 定义用于编辑此组件内容的对话框（特定于经典UI）
-   * `design_dialog` ( `cq:Dialog`) — 指定此组件的设计编辑选项
-   * `icon.png`  — 用作Sidekick中组件的图标的图形文件
-   * `thumbnail.png`  — 从Sidekick拖动组件时用作组件缩略图的图形文件
+* `cq:editConfig` ( `cq:EditConfig`) — 這可控制視覺方面；例如，它可以定義長條圖或Widget的外觀，或者可以新增自訂控制項
+* `cq:childEditConfig` ( `cq:EditConfig`) — 這會控制沒有自己的定義的子元件的視覺方面
+* 觸控式UI：
+   * `cq:dialog` ( `nt:unstructured`) — 定義用於編輯此元件內容的對話方塊
+   * `cq:design_dialog` ( `nt:unstructured`) — 指定此元件的設計編輯選項
+* 经典 UI:
+   * `dialog` ( `cq:Dialog`) — 定義用於編輯此元件內容的對話方塊（專用於傳統UI）
+   * `design_dialog` ( `cq:Dialog`) — 指定此元件的設計編輯選項
+   * `icon.png`  — 圖形檔案，用作Sidekick中元件的圖示
+   * `thumbnail.png`  — 從Sidekick拖曳元件時，做為元件縮圖的圖形檔案
 
 ### 对话框 {#dialogs}
 
-对话框是组件的关键元素，因为它们为作者提供了一个界面来配置该组件并提供输入。
+對話方塊是元件的關鍵元素，因為它們提供介面給作者來設定並提供該元件的輸入。
 
-根据组件的复杂性，您的对话框可能需要一个或多个选项卡 — 缩短对话框并对输入字段进行排序。
+根據元件的複雜性，您的對話方塊可能需要一個或多個標籤 — 保持對話方塊簡短並對輸入欄位進行排序。
 
-对话框定义特定于UI：
+對話方塊定義特定於UI：
 
 >[!NOTE]
 >
->* 为兼容起见，如果没有为触屏UI定义对话框，触屏UI可以使用经典UI对话框的定义。
->* 此 [AEM现代化工具](/help/sites-developing/modernization-tools.md) 此外，还帮助您扩展/转换仅具有为经典UI定义的对话框的组件。
+>* 為相容性目的，當尚未定義觸控式UI的對話方塊時，觸控式UI可以使用傳統UI對話方塊的定義。
+>* 此 [AEM現代化工具](/help/sites-developing/modernization-tools.md) 此外，也提供協助您延伸/轉換只有為傳統UI定義對話方塊的元件。
 >
 
 
-* 触屏优化 UI
-   * `cq:dialog` ( `nt:unstructured`)节点：
-      * 定义用于编辑此组件内容的对话框
-      * 特定于触屏UI
-      * 使用Granite UI组件定义
-      * 具有属性 `sling:resourceType`，作为标准Sling内容结构
-      * 可以具有属性 `helpPath` 定义在帮助图标(？ 图标)时，不会将鼠标指针置于“已更改”区域中。
-         * 对于开箱即用的组件，这通常会引用文档中的页面。
-         * 如果否 `helpPath` 指定时，将显示默认URL（文档概述页面）。
+* 觸控式UI
+   * `cq:dialog` ( `nt:unstructured`)節點：
+      * 定義用於編輯此元件內容的對話方塊
+      * 觸控式UI專用
+      * 使用Granite UI元件定義
+      * 具有屬性 `sling:resourceType`，作為標準Sling內容結構
+      * 可以有屬性 `helpPath` 定義在「說明」圖示(？ 圖示)已選取。
+         * 對於現成可用的元件，這通常會參考檔案中的頁面。
+         * 若否 `helpPath` 會指定預設的URL （檔案總覽頁面），則會顯示。
 
    ![chlimage_1-242](assets/chlimage_1-242.png)
 
-   在该对话框中，定义了各个字段：
+   在對話方塊中，會定義個別欄位：
 
    ![screen_shot_2012-02-13at60937pm](assets/screen_shot_2012-02-13at60937pm.png)
 
 * 经典 UI
-   * `dialog` ( `cq:Dialog`)节点
-      * 定义用于编辑此组件内容的对话框
-      * 特定于经典UI
-      * 使用ExtJS构件定义
-      * 具有属性 `xtype`，是指ExtJS
-      * 可以具有属性 `helpPath` 定义在下列情况下访问的上下文相关帮助资源：绝对路径或相对路径 **帮助** 按钮处于选中状态。
-         * 对于开箱即用的组件，这通常会引用文档中的页面。
-         * 如果否 `helpPath` 指定时，将显示默认URL（文档概述页面）。
+   * `dialog` ( `cq:Dialog`)節點
+      * 定義用於編輯此元件內容的對話方塊
+      * 傳統UI專用
+      * 使用ExtJS Widget定義
+      * 具有屬性 `xtype`，指ExtJS
+      * 可以有屬性 `helpPath` 定義在下列情況下存取的前後關聯相關說明資源（絕對或相對路徑）： **說明** 按鈕已選取。
+         * 對於現成可用的元件，這通常會參考檔案中的頁面。
+         * 若否 `helpPath` 會指定預設的URL （檔案總覽頁面），則會顯示。
 
    ![chlimage_1-243](assets/chlimage_1-243.png)
 
-   在该对话框中，定义了各个字段：
+   在對話方塊中，會定義個別欄位：
 
    ![chlimage_1-244](assets/chlimage_1-244.png)
 
-   在Classic对话框中：
+   在傳統對話方塊中：
 
-   * 您可以创建对话框为 `cq:Dialog`，这将提供单个选项卡 — 与文本组件中一样，或者如果您需要多个选项卡（与文本时间组件一样），则可以将该对话框定义为 `cq:TabPanel`.
-   * a `cq:WidgetCollection` ( `items`)为任一输入字段提供基础( `cq:Widget`)或其他选项卡( `cq:Widget`)。 此层次结构可以扩展。
+   * 您可以建立對話方塊為 `cq:Dialog`，這將提供單一索引標籤 — 如文字元件所示，或如果您需要多個索引標籤（如文字頁面元件），則可將此對話方塊定義為 `cq:TabPanel`.
+   * a `cq:WidgetCollection` ( `items`)用來提供任一輸入欄位的基底( `cq:Widget`)或其他索引標籤( `cq:Widget`)。 此階層可以延伸。
 
 
-### 设计对话框 {#design-dialogs}
+### 設計對話方塊 {#design-dialogs}
 
-“设计”对话框与用于编辑和配置内容的对话框非常相似，但它们为作者提供了配置该组件并提供其设计详细信息的界面。
+「設計」對話方塊與用來編輯和設定內容的對話方塊非常類似，但它們為作者提供了介面，以便為該元件設定和提供設計詳細資訊。
 
-[设计对话框在设计模式下可用](/help/sites-authoring/default-components-designmode.md)，尽管并非所有组件都需要它们，例如 **标题** 和 **图像** 两者都具有设计对话框，而 **文本** 不会。
+[設計對話方塊在設計模式下可用](/help/sites-authoring/default-components-designmode.md)，但並非所有元件都需要，例如 **標題** 和 **影像** 兩者都有設計對話方塊，而 **文字** 不會。
 
-段落系统的“设计”对话框（例如parsys）是一种特殊情况，因为它允许用户在页面上选择特定的其他组件（从组件浏览器或sidekick）。
+段落系統（例如parsys）的「設計」(design)對話方塊是一種特殊情況，因為它允許使用者在頁面上選取特定的其他元件（從元件瀏覽器或sidekick）。
 
-### 将组件添加到段落系统 {#adding-your-component-to-the-paragraph-system}
+### 將元件新增至段落系統 {#adding-your-component-to-the-paragraph-system}
 
-定义组件后，必须使其可用。 要使组件可用于段落系统，您可以：
+定義元件後，必須使其可供使用。 若要讓元件可用於段落系統，您可以：
 
-1. 打开 [设计模式](/help/sites-authoring/default-components-designmode.md) ，并启用所需的组件。
-1. 将所需的组件添加到 `components` 属性下的模板定义：
+1. 開啟 [設計模式](/help/sites-authoring/default-components-designmode.md) 並啟用必要元件。
+1. 將所需元件新增至 `components` 下範本定義的屬性：
 
    `/etc/designs/<*yourProject*>/jcr:content/<*yourTemplate*>/par`
 
-   例如，请参阅：
+   例如，請參閱：
 
    `/etc/designs/geometrixx/jcr:content/contentpage/par`
 
    ![chlimage_1-245](assets/chlimage_1-245.png)
 
-### 组件及其创建的内容 {#components-and-the-content-they-create}
+### 元件及其建立的內容 {#components-and-the-content-they-create}
 
-如果我们创建和配置 **标题** 页面上的组件： `<content-path>/Prototype.html`
+如果我們建立並設定的執行個體 **標題** 頁面上的元件： `<content-path>/Prototype.html`
 
-* 触屏优化 UI
+* 觸控式UI
 
    ![chlimage_1-246](assets/chlimage_1-246.png)
 
@@ -507,82 +507,82 @@ AEM组件的结构强大而灵活，主要考虑因素包括：
 
    ![screen_shot_2012-02-01at34257pm](assets/screen_shot_2012-02-01at34257pm.png)
 
-然后，我们可以查看在存储库中创建的内容的结构：
+然後我們就能檢視在存放庫中建立的內容結構：
 
 ![screen_shot_2012-02-13at61405pm](assets/screen_shot_2012-02-13at61405pm.png)
 
-特别是，如果您查看 **标题**：
+特別是，如果您檢視實際文字 **標題**：
 
-* 定义（适用于两个UI）具有属性 `name`= `./jcr:title`
+* 定義（適用於兩個UI）具有屬性 `name`= `./jcr:title`
 
    * `/libs/foundation/components/title/cq:dialog/content/items/column/items/title`
    * `/libs/foundation/components/title/dialog/items/title`
 
-* 在内容中，这将生成属性 `jcr:title` 保存作者的内容。
+* 在內容中，這會產生屬性 `jcr:title` 儲存作者的內容。
 
-定义的属性取决于各个定义。 尽管它们可能比上面更复杂，但它们仍然遵循同样的基本原则。
+定義的屬性取決於個別定義。 雖然這些規則可能比上述規則更複雜，但還是會遵循相同的基本原則。
 
-## 组件层次结构和继承 {#component-hierarchy-and-inheritance}
+## 元件階層與繼承 {#component-hierarchy-and-inheritance}
 
-AEM中的组件遵循3个不同的层次结构：
+AEM中的元件受3個不同階層的限制：
 
-* **资源类型层次结构**
+* **資源型別階層**
 
-   这用于使用属性扩展组件 `sling:resourceSuperType`. 这将使组件能够继承。 例如，文本组件将继承标准组件的各种属性。
+   這可用來使用屬性擴充元件 `sling:resourceSuperType`. 這可讓元件繼承。 例如，文字元件將會繼承標準元件的各種屬性。
 
-   * 脚本（由Sling解析）
-   * 对话框
-   * 描述（包括缩略图图像、图标等）
+   * 指令碼（由Sling解析）
+   * 對話方塊
+   * 說明（包括縮圖影像、圖示等）
 
-* **容器层次结构**
+* **容器階層**
 
-   这用于向子组件填充配置设置，并且最常用于parsys场景。
+   這可用來將組態設定填入至子元件，且最常用於parsys案例。
 
-   例如，可以在父组件上定义编辑栏按钮的配置设置、控件集布局（编辑栏、变换）、对话框布局（内联、浮动）并传播到子组件。
+   例如，可以在父元件上定義編輯列按鈕的組態設定、控制項集配置（編輯列、滑鼠指向效果）、對話方塊配置（內嵌、浮動）並傳播到子元件。
 
-   中的配置设置（与编辑功能相关） `cq:editConfig` 和 `cq:childEditConfig` 都会被传播。
+   中的組態設定（與編輯功能相關） `cq:editConfig` 和 `cq:childEditConfig` 都會傳播。
 
-* **包括层次结构**
+* **包含階層**
 
-   这是在运行时由include序列施加的。
+   這會在執行階段由include的順序強制執行。
 
-   设计器使用此层级，而此层级又用作呈现的各个设计方面的基础；包括布局信息、css信息、parsys中的可用组件等。
+   設計人員會使用此階層，而此階層又可作為呈現之各種設計層面的基礎；包括版面配置資訊、css資訊、parsys中的可用元件等。
 
-## 编辑行为 {#edit-behavior}
+## 編輯行為 {#edit-behavior}
 
-本节介绍如何配置组件的编辑行为。 这包括各种属性，例如组件可用的操作、就地编辑器的特征以及与组件上的事件相关的侦听器。
+本節說明如何設定元件的編輯行為。 這包括元件可用的動作、就地編輯器的特性，以及與元件事件相關的接聽程式等屬性。
 
-尽管存在某些特定差异，但配置对于触屏优化UI和经典UI都是通用的。
+此設定對觸控式與傳統UI而言都是通用的，但會有某些特定差異。
 
-组件的编辑行为可通过添加 `cq:editConfig` 类型节点 `cq:EditConfig` 在组件节点下(类型为 `cq:Component`)，并添加特定属性和子节点。 以下属性和子节点可用：
+元件的編輯行為可透過新增以下專案來設定： `cq:editConfig` 型別的節點 `cq:EditConfig` 元件節點下方(型別 `cq:Component`)，並新增特定屬性和子節點。 下列屬性和子節點可供使用：
 
-* [ `cq:editConfig` 节点属性](#configuring-with-cq-editconfig-properties)：
+* [ `cq:editConfig` 節點屬性](#configuring-with-cq-editconfig-properties)：
 
-   * `cq:actions` ( `String array`)：定义可以对组件执行的操作。
-   * `cq:layout` ( `String`)： ：定义如何在经典UI中编辑组件。
-   * `cq:dialogMode` ( `String`)：定义如何在经典UI中打开组件对话框
+   * `cq:actions` ( `String array`)：定義可對元件執行的動作。
+   * `cq:layout` ( `String`)： ：定義如何在傳統UI中編輯元件。
+   * `cq:dialogMode` ( `String`)：定義如何在傳統UI中開啟元件對話方塊
 
-      * 在触屏优化UI中，对话框在桌面模式下始终处于浮动状态，并在移动设备中自动作为全屏打开。
-   * `cq:emptyText` ( `String`)：定义不存在可视内容时显示的文本。
-   * `cq:inherit` ( `Boolean`)：定义缺少的值是否从它继承的组件继承。
-   * `dialogLayout` （字符串）：定义应如何打开对话框。
+      * 在觸控式UI中，對話方塊在案頭模式中一律為浮動狀態，並在行動裝置中以全熒幕模式自動開啟。
+   * `cq:emptyText` ( `String`)：定義沒有視覺內容時顯示的文字。
+   * `cq:inherit` ( `Boolean`)：定義缺少的值是否繼承自繼承自的元件。
+   * `dialogLayout` （字串）：定義對話方塊的開啟方式。
 
 
-* [ `cq:editConfig` 子节点](#configuring-with-cq-editconfig-child-nodes)：
+* [ `cq:editConfig` 子節點](#configuring-with-cq-editconfig-child-nodes)：
 
-   * `cq:dropTargets` (节点类型 `nt:unstructured`)：定义可以接受从内容查找器的资源进行放置的放置目标的列表
+   * `cq:dropTargets` (節點型別 `nt:unstructured`)：定義可以從內容尋找器的資產接受放置的放置目標清單
 
-      * 多个放置目标仅在经典UI中可用。
-      * 在触屏优化UI中，允许使用单个放置目标。
-   * `cq:actionConfigs` (节点类型 `nt:unstructured`)：定义附加到cq：actions列表的新操作的列表。
-   * `cq:formParameters` (节点类型 `nt:unstructured`)：定义添加到对话框表单的其他参数。
-   * `cq:inplaceEditing` (节点类型 `cq:InplaceEditingConfig`)：定义组件的就地编辑配置。
-   * `cq:listeners` (节点类型 `cq:EditListenersConfig`)：定义在组件上发生操作之前或之后发生的情况。
+      * 只有在傳統UI中才能使用多個放置目標。
+      * 觸控式UI中允許單一放置目標。
+   * `cq:actionConfigs` (節點型別 `nt:unstructured`)：定義附加至cq：actions清單的新動作清單。
+   * `cq:formParameters` (節點型別 `nt:unstructured`)：定義新增至對話方塊表單的其他引數。
+   * `cq:inplaceEditing` (節點型別 `cq:InplaceEditingConfig`)：定義元件的就地編輯設定。
+   * `cq:listeners` (節點型別 `cq:EditListenersConfig`)：定義在元件上發生動作之前或之後所發生的事情。
 
 
 >[!NOTE]
 >
->在此页中，节点（属性和子节点）表示为XML，如以下示例所示。
+>在此頁面中，節點（屬性和子節點）會以XML表示，如下列範例所示。
 
 ```
 <jcr:root xmlns:cq="https://www.day.com/jcr/cq/1.0" xmlns:jcr="https://www.jcp.org/jcr/1.0"
@@ -596,54 +596,54 @@ AEM中的组件遵循3个不同的层次结构：
 </jcr:root>
 ```
 
-存储库中有许多现有配置。 您可以轻松搜索特定属性或子节点：
+存放庫中有許多現有的設定。 您可以輕鬆搜尋特定屬性或子節點：
 
-* 要查找 `cq:editConfig` 节点，例如 `cq:actions`中，您可以使用查询工具 **CRXDE Lite** 和搜索以下XPath查询字符串：
+* 若要尋找 `cq:editConfig` 節點，例如 `cq:actions`，您便可以在以下位置使用查詢工具： **CRXDE Lite** 和搜尋下列XPath查詢字串：
 
    `//element(cq:editConfig, cq:EditConfig)[@cq:actions]`
 
-* 查找的子节点 `cq:editConfig`，例如，您可以搜索 `cq:dropTargets`，属于类型 `cq:DropTargetConfig`；您可以使用查询工具在**CRXDE Lite**和搜索中使用以下XPath查询字符串：
+* 若要尋找下列專案的子節點： `cq:editConfig`，例如，您可以搜尋 `cq:dropTargets`，屬於型別 `cq:DropTargetConfig`；您可以使用查詢工具在**CRXDE Lite**搜尋和使用以下XPath查詢字串：
 
    `//element(cq:dropTargets, cq:DropTargetConfig)`
 
-### 组件占位符 {#component-placeholders}
+### 元件預留位置 {#component-placeholders}
 
-组件必须始终呈现对作者可见的一些HTML，即使组件没有内容也是如此。 否则，它可能会从编辑器的界面中消失，从技术上讲，它会存在，但在页面和编辑器中不可见。 在这种情况下，作者将无法选择空组件并与之交互。
+元件必須一律呈現作者可見的一些HTML，即使元件沒有內容亦然。 否則，它可能會從編輯器的介面中消失，在技術上呈現，但在頁面和編輯器中不可見。 在這種情況下，作者將無法選取空白元件並與之互動。
 
-因此，组件应呈现占位符，前提是在页面编辑器中呈现页面时(当WCM模式为 `edit` 或 `preview`)。
-占位符的典型HTML标记如下：
+因此，元件應該呈現預留位置，前提是在頁面編輯器中呈現頁面時(當WCM模式為 `edit` 或 `preview`)。
+預留位置的典型HTML標籤如下：
 
 ```HTML
 <div class="cq-placeholder" data-emptytext="Component Name"></div>
 ```
 
-呈现上述占位符HTML的典型HTL脚本如下：
+轉譯上述預留位置HTML的典型HTL指令碼如下：
 
 ```HTML
 <div class="cq-placeholder" data-emptytext="${component.properties.jcr:title}"
      data-sly-test="${(wcmmode.edit || wcmmode.preview) && isEmpty}"></div>
 ```
 
-在上一个示例中， `isEmpty` 是一个变量，仅当组件没有内容并且作者不可见时为真。
+在上一個範例中， `isEmpty` 是一個變數，只有在元件沒有內容且作者看不到時才會成立。
 
-为避免重复，Adobe建议组件的实施者为这些占位符使用HTL模板， [类似于核心组件提供的插件。](https://github.com/adobe/aem-core-wcm-components/blob/master/content/src/content/jcr_root/apps/core/wcm/components/commons/v1/templates.html)
+為避免重複，Adobe建議元件的實作者對這些預留位置使用HTL範本， [如核心元件所提供的那種。](https://github.com/adobe/aem-core-wcm-components/blob/master/content/src/content/jcr_root/apps/core/wcm/components/commons/v1/templates.html)
 
-然后，使用下面一行HTL完成上一个链接中的模板使用：
+接著，使用先前連結中的範本並使用下列HTL行完成：
 
 ```HTML
 <sly data-sly-use.template="core/wcm/components/commons/v1/templates.html"
      data-sly-call="${template.placeholder @ isEmpty=!model.text}"></sly>
 ```
 
-在上一个示例中， `model.text` 是变量，仅当内容包含内容且可见时为真。
+在上一個範例中， `model.text` 是變數，只有在內容具有內容且可見時才會成立。
 
-可在核心组件中查看此模板的示例用法， [例如，在标题组件中。](https://github.com/adobe/aem-core-wcm-components/blob/master/content/src/content/jcr_root/apps/core/wcm/components/title/v2/title/title.html#L27)
+此範本的範例使用方式可在核心元件中檢視， [例如，在標題元件中。](https://github.com/adobe/aem-core-wcm-components/blob/master/content/src/content/jcr_root/apps/core/wcm/components/title/v2/title/title.html#L27)
 
-### 使用cq：EditConfig属性进行配置 {#configuring-with-cq-editconfig-properties}
+### 使用cq：EditConfig屬性進行設定 {#configuring-with-cq-editconfig-properties}
 
 ### cq：actions {#cq-actions}
 
-此 `cq:actions` 属性( `String array`)定义可以对组件执行的一个或多个操作。 以下值可用于配置：
+此 `cq:actions` 屬性( `String array`)會定義一個或多個可對元件執行的動作。 下列值可供設定：
 
 <table>
  <tbody>
@@ -653,36 +653,36 @@ AEM中的组件遵循3个不同的层次结构：
   </tr>
   <tr>
    <td><code>text:&lt;some text&gt;</code></td>
-   <td>显示静态文本值 &lt;some text=""&gt;<br /> 仅在经典UI中可见。 触屏优化UI不会在上下文菜单中显示操作，因此这不适用。</td>
+   <td>顯示靜態文字值 &lt;some text=""&gt;<br /> 僅顯示在傳統UI中。 觸控式UI不會在內容功能表中顯示動作，因此這不適用。</td>
   </tr>
   <tr>
    <td>-</td>
-   <td>添加分隔符。<br /> 仅在经典UI中可见。 触屏优化UI不会在上下文菜单中显示操作，因此这不适用。</td>
+   <td>新增分隔符號。<br /> 僅顯示在傳統UI中。 觸控式UI不會在內容功能表中顯示動作，因此這不適用。</td>
   </tr>
   <tr>
    <td><code>edit</code></td>
-   <td>添加按钮以编辑组件。</td>
+   <td>新增按鈕以編輯元件。</td>
   </tr>
       <tr>
     <td><code>editannotate</code></td>
-    <td>添加按钮以编辑组件并允许 <a href="/help/sites-authoring/annotations.md">批注</a>.</td>
+    <td>新增按鈕以編輯元件，並允許 <a href="/help/sites-authoring/annotations.md">註解</a>.</td>
    </tr>
   <tr>
    <td><code>delete</code></td>
-   <td>添加按钮以删除组件</td>
+   <td>新增按鈕以刪除元件</td>
   </tr>
   <tr>
    <td><code>insert</code></td>
-   <td>添加按钮以在当前组件之前插入新组件</td>
+   <td>新增按鈕以在目前元件之前插入新元件</td>
   </tr>
   <tr>
    <td><code>copymove</code></td>
-   <td>添加按钮以复制和剪切组件。</td>
+   <td>新增按鈕以複製和剪下元件。</td>
   </tr>
  </tbody>
 </table>
 
-以下配置向组件编辑栏中添加了编辑按钮、分隔符、删除和插入按钮：
+下列設定會將編輯按鈕、分隔符號、刪除和插入按鈕新增至元件編輯列：
 
 ```
 <jcr:root xmlns:cq="https://www.day.com/jcr/cq/1.0" xmlns:jcr="https://www.jcp.org/jcr/1.0"
@@ -691,7 +691,7 @@ AEM中的组件遵循3个不同的层次结构：
     jcr:primaryType="cq:EditConfig"/>
 ```
 
-以下配置将文本“从基本框架继承的配置”添加到组件编辑栏：
+下列設定會將「從基礎框架繼承的設定」文字新增至元件編輯列：
 
 ```
 <jcr:root xmlns:cq="https://www.day.com/jcr/cq/1.0" xmlns:jcr="https://www.jcp.org/jcr/1.0"
@@ -700,9 +700,9 @@ AEM中的组件遵循3个不同的层次结构：
     jcr:primaryType="cq:EditConfig"/>
 ```
 
-### cq：layout（仅限经典UI） {#cq-layout-classic-ui-only}
+### cq：layout （僅限傳統UI） {#cq-layout-classic-ui-only}
 
-此 `cq:layout` 属性( `String`)定义如何在经典UI中编辑组件。 可以使用以下值：
+此 `cq:layout` 屬性( `String`)定義如何在傳統UI中編輯元件。 可使用下列值：
 
 <table>
  <tbody>
@@ -712,24 +712,24 @@ AEM中的组件遵循3个不同的层次结构：
   </tr>
   <tr>
    <td><code>rollover</code></td>
-   <td>默认值。 组件版本可通过单击和/或上下文菜单“在鼠标悬停时”访问。<br /> 对于高级使用，请注意，相应的客户端对象为： <code>CQ.wcm.EditRollover</code>.</td>
+   <td>預設值。 元件版本可透過點按和/或快顯選單在「滑鼠懸停在上方」存取。<br /> 如需進階使用，請注意對應的使用者端物件為： <code>CQ.wcm.EditRollover</code>.</td>
   </tr>
   <tr>
    <td><code>editbar</code></td>
-   <td>组件版本可通过工具栏访问。<br /> 对于高级使用，请注意，相应的客户端对象为： <code>CQ.wcm.EditBar</code>.</td>
+   <td>元件版本可透過工具列存取。<br /> 如需進階使用，請注意對應的使用者端物件為： <code>CQ.wcm.EditBar</code>.</td>
   </tr>
   <tr>
    <td><code>auto</code></td>
-   <td>该选项将保留在客户端代码中。</td>
+   <td>選項會保留在使用者端程式碼中。</td>
   </tr>
  </tbody>
 </table>
 
 >[!NOTE]
 >
->变换和编辑栏的概念不适用于触屏UI。
+>滑鼠指向效果或編輯列的概念不適用於觸控式UI。
 
-以下配置会将编辑按钮添加到组件编辑栏：
+下列設定會將編輯按鈕新增至元件編輯列：
 
 ```
 <jcr:root xmlns:cq="https://www.day.com/jcr/cq/1.0" xmlns:jcr="https://www.jcp.org/jcr/1.0"
@@ -739,9 +739,9 @@ AEM中的组件遵循3个不同的层次结构：
 </jcr:root>
 ```
 
-### cq：dialogMode（仅限经典UI） {#cq-dialogmode-classic-ui-only}
+### cq：dialogMode （僅限傳統UI） {#cq-dialogmode-classic-ui-only}
 
-该组件可以链接到“编辑”对话框。 此 `cq:dialogMode` 属性( `String`)定义如何在经典UI中打开组件对话框。 可以使用以下值：
+元件可連結至編輯對話方塊。 此 `cq:dialogMode` 屬性( `String`)定義元件對話方塊在傳統UI中的開啟方式。 可使用下列值：
 
 <table>
  <tbody>
@@ -751,24 +751,24 @@ AEM中的组件遵循3个不同的层次结构：
   </tr>
   <tr>
    <td><code>floating</code></td>
-   <td>对话框浮动。<br /> </td>
+   <td>對話方塊浮動。<br /> </td>
   </tr>
   <tr>
    <td><code>inline</code></td>
-   <td>(默认值). 该对话框定位在组件上。<br /> </td>
+   <td>(默认值). 對話方塊錨定在元件上。<br /> </td>
   </tr>
   <tr>
    <td><code>auto</code></td>
-   <td>如果组件宽度小于客户端 <code>CQ.themes.wcm.EditBase.INLINE_MINIMUM_WIDTH</code> 值，则对话框处于浮动状态，否则对话框处于内联状态。</td>
+   <td>如果元件寬度小於使用者端 <code>CQ.themes.wcm.EditBase.INLINE_MINIMUM_WIDTH</code> 值，對話方塊會浮動，否則會內嵌。</td>
   </tr>
  </tbody>
 </table>
 
 >[!NOTE]
 >
->在触屏优化UI中，对话框在桌面模式下始终处于浮动状态，并在移动设备中自动作为全屏打开。
+>在觸控式UI中，對話方塊在案頭模式中一律為浮動狀態，並在行動裝置中以全熒幕模式自動開啟。
 
-以下配置定义了一个带有编辑按钮的编辑栏和一个浮动对话框：
+下列設定會定義具有編輯按鈕和浮動對話方塊的編輯列：
 
 ```
 <jcr:root xmlns:cq="https://www.day.com/jcr/cq/1.0" xmlns:jcr="https://www.jcp.org/jcr/1.0"
@@ -781,49 +781,49 @@ AEM中的组件遵循3个不同的层次结构：
 
 ### cq：emptyText {#cq-emptytext}
 
-此 `cq:emptyText` 属性( `String`)定义不存在可视内容时显示的文本。 默认为： `Drag components or assets here`.
+此 `cq:emptyText` 屬性( `String`)會定義沒有視覺內容時顯示的文字。 其預設值為： `Drag components or assets here`.
 
 ### cq：inherit {#cq-inherit}
 
-此 `cq:inherit` 属性( `boolean`)定义缺少的值是否从它继承的组件继承。 默认为 `false`.
+此 `cq:inherit` 屬性( `boolean`)定義缺少的值是否繼承自繼承自的元件。 其預設值為 `false`.
 
-### 对话框布局 {#dialoglayout}
+### dialogLayout {#dialoglayout}
 
-此 `dialogLayout` 属性定义默认情况下应如何打开对话框。
+此 `dialogLayout` 屬性會定義預設開啟對話方塊的方式。
 
-* 值 `fullscreen` 全屏打开对话框。
-* 如果属性为空值或缺失，则默认正常打开对话框。
-* 请注意，用户始终可以在对话框中切换全屏模式。
-* 不适用于经典UI
+* 值 `fullscreen` 以全熒幕開啟對話方塊。
+* 空白值或缺少屬性預設為正常開啟對話方塊。
+* 請注意，使用者一律可以在對話方塊中切換全熒幕模式。
+* 不適用於傳統UI。
 
-### 使用cq：EditConfig子节点进行配置 {#configuring-with-cq-editconfig-child-nodes}
+### 使用cq：EditConfig子節點進行設定 {#configuring-with-cq-editconfig-child-nodes}
 
 ### cq：dropTargets {#cq-droptargets}
 
-此 `cq:dropTargets` 节点（节点类型） `nt:unstructured`)定义一个放置目标列表，这些放置目标可以接受从内容查找器拖动的资产中的放置。 它用作类型节点的集合 `cq:DropTargetConfig`.
+此 `cq:dropTargets` 節點（節點型別） `nt:unstructured`)定義可以接受從內容尋找器拖曳之資產中的拖放的拖放目標清單。 它可作為型別節點的集合 `cq:DropTargetConfig`.
 
 >[!NOTE]
 >
->多个放置目标仅在经典UI中可用。
+>只有在傳統UI中才能使用多個放置目標。
 >
->在触屏优化UI中，将仅使用第一个目标。
+>在觸控式UI中，只會使用第一個目標。
 
-每个类型的子节点 `cq:DropTargetConfig` 在组件中定义放置目标。 节点名称非常重要，因为它必须在JSP中使用，如下所示，才能生成分配给作为有效放置目标的DOM元素的CSS类名称：
+每個型別的子節點 `cq:DropTargetConfig` 會在元件中定義放置目標。 節點名稱非常重要，因為它必須用於JSP中，才能產生指派給有效放置目標DOM元素的CSS類別名稱，如下所示：
 
 ```
 <drop target css class> = <drag and drop prefix> +
  <node name of the drop target in the edit configuration>
 ```
 
-此 `<drag and drop prefix>` 由Java属性定义：
+此 `<drag and drop prefix>` 由Java屬性定義：
 
 `com.day.cq.wcm.api.components.DropTarget.CSS_CLASS_PREFIX`。
 
-例如，类名在下载组件的JSP中定义如下( `/libs/foundation/components/download/download.jsp`)，其中 `file` 是下载组件的编辑配置中的放置目标的节点名称：
+例如，類別名稱的定義如下，在下載元件的JSP中( `/libs/foundation/components/download/download.jsp`)，其中 `file` 是下載元件編輯設定中的放置目標節點名稱：
 
 `String ddClassName = DropTarget.CSS_CLASS_PREFIX + "file";`
 
-类型的节点 `cq:DropTargetConfig` 需要具有以下属性：
+型別的節點 `cq:DropTargetConfig` 需要具備下列屬性：
 
 <table>
  <tbody>
@@ -833,20 +833,20 @@ AEM中的组件遵循3个不同的层次结构：
   </tr>
   <tr>
    <td><code>accept</code></td>
-   <td>应用于资源mime类型的正则表达式，以验证是否允许删除。</td>
+   <td>套用至資產MIME型別的規則運算式，以驗證是否允許卸除。</td>
   </tr>
   <tr>
    <td><code>groups</code></td>
-   <td>放置目标组的数组。 每个组必须匹配内容查找器扩展中定义的组类型以及附加到资产的组类型。</td>
+   <td>放置目標群組的陣列。 每個群組都必須符合內容尋找器擴充功能中定義且附加至資產的群組型別。</td>
   </tr>
   <tr>
    <td><code>propertyName</code></td>
-   <td>有效放置后将更新的属性的名称。</td>
+   <td>有效放置後要更新的屬性名稱。</td>
   </tr>
  </tbody>
 </table>
 
-以下配置是从下载组件中获取的。 它支持来自的任意资源（mime类型可以是任意字符串） `media` 组从内容查找器放入组件中。 放置后，组件属性 `fileReference` 正在更新：
+以下設定是從「下載」元件中取得。 它會啟用以下專案中的任何資產（mime型別可以是任何字串）： `media` 從內容尋找器放入元件的群組。 放置後，元件屬性 `fileReference` 正在更新：
 
 ```
     <cq:dropTargets jcr:primaryType="nt:unstructured">
@@ -858,18 +858,18 @@ AEM中的组件遵循3个不同的层次结构：
     </cq:dropTargets>
 ```
 
-### cq：actionConfigs（仅限经典UI） {#cq-actionconfigs-classic-ui-only}
+### cq：actionConfigs （僅限傳統UI） {#cq-actionconfigs-classic-ui-only}
 
-此 `cq:actionConfigs` 节点（节点类型） `nt:unstructured`)定义附加到由定义的列表的新操作列表。 `cq:actions` 属性。 的每个子节点 `cq:actionConfigs` 通过定义构件来定义新操作。
+此 `cq:actionConfigs` 節點（節點型別） `nt:unstructured`)會定義新動作的清單，這些動作會附加至由所定義的清單。 `cq:actions` 屬性。 的每個子節點 `cq:actionConfigs` 透過定義Widget來定義新動作。
 
-以下示例配置定义了一个新按钮（带有用于经典UI的分隔符）：
+以下設定範例會定義新按鈕（傳統UI會使用分隔符號）：
 
-* 分隔符，由xtype定义 `tbseparator`；
+* 分隔符號，由xtype定義 `tbseparator`；
 
-   * 此变量仅供经典UI使用。
-   * 触屏UI会忽略此定义，因为xtypes会被忽略（并且无需使用分隔符，因为操作工具栏在触屏UI中的结构不同）。
+   * 這僅供傳統UI使用。
+   * 觸控式UI會忽略此定義，因為xtype會遭到忽略（而且由於動作工具列在觸控式UI中的建構方式不同，因此沒有必要使用分隔符號）。
 
-* 名为的按钮 **管理评论** 运行handler函数的 `CQ_collab_forum_openCollabAdmin()`.
+* 名為的按鈕 **管理評論** 執行處理常式函式的處理常式 `CQ_collab_forum_openCollabAdmin()`.
 
 ```
 <jcr:root xmlns:cq="https://www.day.com/jcr/cq/1.0" xmlns:jcr="https://www.jcp.org/jcr/1.0" xmlns:nt="https://www.jcp.org/jcr/nt/1.0"
@@ -889,13 +889,13 @@ AEM中的组件遵循3个不同的层次结构：
 
 >[!NOTE]
 >
->参见 [将新操作添加到组件工具栏](/help/sites-developing/customizing-page-authoring-touch.md#add-new-action-to-a-component-toolbar) 作为触屏UI的示例。
+>另請參閱 [將動作新增至元件工具列](/help/sites-developing/customizing-page-authoring-touch.md#add-new-action-to-a-component-toolbar) 做為觸控式UI的範例。
 
 ### cq：formParameters {#cq-formparameters}
 
-此 `cq:formParameters` 节点（节点类型） `nt:unstructured`)定义添加到对话框表单的其他参数。 每个属性都映射到一个表单参数。
+此 `cq:formParameters` 節點（節點型別） `nt:unstructured`)會定義新增至對話方塊表單的其他引數。 每個屬性都會對應至一個表單引數。
 
-以下配置添加了一个名为的参数 `name`，使用值设置 `photos/primary` 到对话框窗体：
+下列設定會新增一個引數，稱為 `name`，以值設定 `photos/primary` 至對話方塊表單：
 
 ```
     <cq:formParameters
@@ -905,7 +905,7 @@ AEM中的组件遵循3个不同的层次结构：
 
 ### cq：inplaceEditing {#cq-inplaceediting}
 
-此 `cq:inplaceEditing` 节点（节点类型） `cq:InplaceEditingConfig`)为组件定义就地编辑配置。 它可以具有以下属性：
+此 `cq:inplaceEditing` 節點（節點型別） `cq:InplaceEditingConfig`)會為元件定義就地編輯設定。 它可以有以下屬性：
 
 <table>
  <tbody>
@@ -915,25 +915,25 @@ AEM中的组件遵循3个不同的层次结构：
   </tr>
   <tr>
    <td><code>active</code></td>
-   <td>(<code>boolean</code>) True以启用组件的就地编辑。</td>
+   <td>(<code>boolean</code>) True以啟用就地編輯元件。</td>
   </tr>
   <tr>
    <td><code>configPath</code></td>
-   <td>(<code>String</code>)编辑器配置的路径。 配置可以由配置节点指定。</td>
+   <td>(<code>String</code>)編輯器設定的路徑。 設定可由設定節點指定。</td>
   </tr>
   <tr>
    <td><code>editorType</code></td>
-   <td><p>(<code>String</code>)编辑器类型。 可用的类型包括：</p>
+   <td><p>(<code>String</code>)編輯器型別。 可用的型別包括：</p>
     <ul>
-     <li>纯文本：用于非HTML内容。<br /> </li>
-     <li>标题：是一种增强的纯文本编辑器，可在编辑开始之前将图形标题转换为纯文本。 由Geometrixx标题组件使用。<br /> </li>
-     <li>文本：用于HTML内容（使用富文本编辑器）。<br /> </li>
+     <li>純文字：用於非HTML內容。<br /> </li>
+     <li>title：是一種增強型純文字編輯器，可在編輯開始前將圖形標題轉換為純文字。 由Geometrixx標題元件使用。<br /> </li>
+     <li>text：用於HTML內容（使用RTF編輯器）。<br /> </li>
     </ul> </td>
   </tr>
  </tbody>
 </table>
 
-以下配置允许就地编辑组件并定义 `plaintext` 作为编辑器类型：
+以下設定可讓您就地編輯元件並定義 `plaintext` 作為編輯器型別：
 
 ```
     <cq:inplaceEditing
@@ -944,73 +944,73 @@ AEM中的组件遵循3个不同的层次结构：
 
 ### cq：listeners {#cq-listeners}
 
-此 `cq:listeners` 节点（节点类型） `cq:EditListenersConfig`)定义对组件执行操作之前或之后执行的操作。 下表定义了它可能的属性。
+此 `cq:listeners` 節點（節點型別） `cq:EditListenersConfig`)會定義在元件上執行動作之前或之後所發生的事情。 下表定義其可能的屬性。
 
 <table>
  <tbody>
   <tr>
    <td><strong>属性名称</strong></td>
    <td><strong>属性值<br /> </strong></td>
-   <td><p><strong>默认值</strong></p> <p>（仅限经典UI）</p> </td>
+   <td><p><strong>默认值</strong></p> <p>（僅限傳統UI）</p> </td>
   </tr>
   <tr>
    <td><code>beforedelete</code></td>
-   <td>该处理程序会在删除组件之前触发。<br /> </td>
+   <td>處理常式會在移除元件之前觸發。<br /> </td>
    <td> </td>
   </tr>
   <tr>
    <td><code>beforeedit</code></td>
-   <td>处理程序在编辑组件之前触发。</td>
+   <td>處理常式會在編輯元件之前觸發。</td>
    <td> </td>
   </tr>
   <tr>
    <td><code>beforecopy</code></td>
-   <td>该处理程序在复制组件之前触发。</td>
+   <td>處理常式會在複製元件之前觸發。</td>
    <td> </td>
   </tr>
   <tr>
    <td><code>beforemove</code></td>
-   <td>处理程序在组件移动之前触发。</td>
+   <td>處理常式會在移動元件之前觸發。</td>
    <td> </td>
   </tr>
   <tr>
    <td><code>beforeinsert</code></td>
-   <td>处理程序会在插入组件之前触发。<br /> 仅适用于触屏UI。</td>
+   <td>處理常式會在插入元件之前觸發。<br /> 僅適用於觸控式UI。</td>
    <td> </td>
   </tr>
   <tr>
    <td><code>beforechildinsert</code></td>
-   <td>处理程序会在将组件插入另一个组件（仅限容器）之前触发。</td>
+   <td>處理常式會在元件插入其他元件之前觸發（僅限容器）。</td>
    <td> </td>
   </tr>
   <tr>
    <td><code>afterdelete</code></td>
-   <td>在删除组件后，将触发处理程序。</td>
+   <td>處理常式會在移除元件後觸發。</td>
    <td><code>REFRESH_SELF</code></td>
   </tr>
   <tr>
    <td><code>afteredit</code></td>
-   <td>处理程序在编辑组件后触发。</td>
+   <td>處理常式會在編輯元件後觸發。</td>
    <td><code>REFRESH_SELF</code></td>
   </tr>
   <tr>
    <td><code>aftercopy</code></td>
-   <td>在复制组件后，将触发处理程序。</td>
+   <td>處理常式會在複製元件後觸發。</td>
    <td><code>REFRESH_SELF</code></td>
   </tr>
   <tr>
    <td><code>afterinsert</code></td>
-   <td>在插入组件后，将触发处理程序。</td>
+   <td>處理常式會在插入元件後觸發。</td>
    <td><code>REFRESH_INSERTED</code></td>
   </tr>
   <tr>
    <td><code>aftermove</code></td>
-   <td>在移动组件后，将触发处理程序。</td>
+   <td>處理常式會在元件移動後觸發。</td>
    <td><code>REFRESH_SELFMOVED</code></td>
   </tr>
   <tr>
    <td><code>afterchildinsert</code></td>
-   <td>将组件插入另一个组件（仅限容器）后，将触发处理程序。</td>
+   <td>將元件插入另一個元件（僅限容器）後，就會觸發處理常式。</td>
    <td> </td>
   </tr>
  </tbody>
@@ -1018,34 +1018,34 @@ AEM中的组件遵循3个不同的层次结构：
 
 >[!NOTE]
 >
->此 `REFRESH_INSERTED` 和 `REFRESH_SELFMOVED` 处理程序仅在经典UI中可用。
+>此 `REFRESH_INSERTED` 和 `REFRESH_SELFMOVED` 處理常式只能在傳統UI中使用。
 
 >[!NOTE]
 >
->监听器的默认值仅在经典UI中设置。
+>監聽器的預設值僅在傳統UI中設定。
 
 >[!NOTE]
 >
->对于嵌套组件，对定义为属性的 `cq:listeners` 节点：
+>對於巢狀元件，上定義為屬性的動作會有某些限制 `cq:listeners` 節點：
 >
->* 对于嵌套组件，以下属性的值 *必须* 是 `REFRESH_PAGE`： >
+>* 對於巢狀元件，下列屬性的值 *必須* 是 `REFRESH_PAGE`： >
 >  * `aftermove`
 >  * `aftercopy`
 
 
-事件处理程序可以通过自定义实施来实施。 例如(其中 `project.customerAction` 是静态方法)：
+事件處理常式可使用自訂實施來實施。 例如(其中 `project.customerAction` 是靜態方法)：
 
 `afteredit = "project.customerAction"`
 
-以下示例等效于 `REFRESH_INSERTED` 配置：
+以下範例等同於 `REFRESH_INSERTED` 設定：
 
 `afterinsert="function(path, definition) { this.refreshCreated(path, definition); }"`
 
 >[!NOTE]
 >
->对于经典UI，要查看哪些参数可以在处理程序中使用，请参阅 `before<action>` 和 `after<action>` 的事件部分 [ `CQ.wcm.EditBar`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.EditBar) 和 [ `CQ.wcm.EditRollover`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.EditRollover) 构件文档。
+>如需傳統UI的詳細資訊，瞭解哪些引數可用於處理常式，請參閱 `before<action>` 和 `after<action>` 的事件區段 [ `CQ.wcm.EditBar`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.EditBar) 和 [ `CQ.wcm.EditRollover`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.EditRollover) Widget檔案。
 
-使用下列配置，在删除、编辑、插入或移动组件后刷新页面：
+使用下列設定時，頁面會在刪除、編輯、插入或移動元件後重新整理：
 
 ```
     <cq:listeners

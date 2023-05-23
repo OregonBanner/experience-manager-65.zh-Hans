@@ -1,7 +1,7 @@
 ---
-title: 疑难解答流程报告
+title: 疑難排解程式報告
 seo-title: Troubleshooting Process Reporting
-description: 解决AEM Forms on JEE流程报表中的问题
+description: 疑難排解AEM Forms on JEE程式報告中的問題
 seo-description: Troubleshoot issues in AEM Forms on JEE Process Reporting
 page-status-flag: de-activated
 uuid: 1c1cc27c-fbed-4366-bffe-e1581d269a93
@@ -16,20 +16,20 @@ ht-degree: 0%
 
 ---
 
-# 疑难解答流程报告 {#troubleshooting-process-reporting}
+# 疑難排解程式報告 {#troubleshooting-process-reporting}
 
-## 在Microsoft Windows 7上的Internet Explorer 9上创建过滤器时遇到的问题 {#issues-faced-in-creating-filters-on-internet-explorer-on-microsoft-windows}
+## 在Microsoft Windows 7的Internet Explorer 9上建立篩選器時遇到的問題 {#issues-faced-in-creating-filters-on-internet-explorer-on-microsoft-windows}
 
-如果您为预定义报表创建过滤器，则以下问题会间歇性地出现在 **Internet Explorer 9** 对象 **Microsoft Windows 7** 环境：
+如果您為預先定義的報表建立篩選器，下列問題會間歇性地出現在 **Internet Explorer 9** 的 **Microsoft Windows 7** 環境：
 
-* 值字段中的下拉列表显示唯一标识符而不是值。
-* “值”字段中的“日历”控件显示日语字符。
-* 条件字段不显示。
-* “值”字段中的“日历”控件不显示。
+* 「值」欄位中的下拉式清單會顯示唯一識別碼，而非值。
+* 「值」欄位中的「行事曆」控制項會顯示日文字元。
+* 條件欄位未顯示。
+* 「值」欄位中的「行事曆」控制項不會顯示。
 
 ### 解决方法 {#resolution}
 
-当您仍登录到流程报告时：
+當您仍登入「程式報告」時：
 
-1. 清除浏览器缓存。
-1. 刷新浏览器屏幕。
+1. 清除瀏覽器快取。
+1. 重新整理瀏覽器畫面。

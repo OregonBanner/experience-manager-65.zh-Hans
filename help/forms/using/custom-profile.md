@@ -1,7 +1,7 @@
 ---
-title: 为HTML5表单创建自定义配置文件
+title: 建立HTML5表單的自訂設定檔
 seo-title: Creating a custom profile for HTML5 forms
-description: HTML5表单配置文件是Apache Sling中的资源节点。 它表示HTML5表单渲染服务的自定义版本。
+description: HTML5表單設定檔是Apache Sling中的資源節點。 它代表HTML5表單轉譯器服務的自訂版本。
 seo-description: A HTML5 forms profile is a resource node in Apache Sling. It represents a customized version of HTML5 forms Render service.
 uuid: b9938280-a92c-4dde-b465-04372db3ca8d
 content-type: reference
@@ -17,70 +17,70 @@ ht-degree: 0%
 
 ---
 
-# 为HTML5表单创建自定义配置文件 {#creating-a-custom-profile-for-html-forms}
+# 建立HTML5表單的自訂設定檔 {#creating-a-custom-profile-for-html-forms}
 
-配置文件是中的资源节点 [Apache Sling](https://sling.apache.org/). 它表示HTML5表单呈现服务的自定义版本。 您可以使用HTML5表单演绎版服务自定义HTML5表单的外观、行为和交互。 配置文件节点存在于 `/content` JCR存储库中的文件夹。 您可以将节点直接放置在 `/content` 文件夹或其任意子文件夹 `/content` 文件夹。
+設定檔是中的資源節點 [Apache Sling](https://sling.apache.org/). 它代表HTML5表單轉譯服務的自訂版本。 您可以使用HTML5表單轉譯服務來自訂HTML5表單的外觀、行為和互動。 設定檔節點存在於中 `/content` JCR存放庫中的資料夾。 您可以將節點直接放在 `/content` 資料夾或任何子資料夾 `/content` 資料夾。
 
-配置文件节点具有 **sling：resourceSuperType** 属性，默认值为 **xfaforms/profile**. 节点的渲染脚本位于/libs/xfaforms/profile。
+設定檔節點具有 **sling：resourceSuperType** 屬性且預設值為 **xfaforms/profile**. 節點的轉譯器指令碼位於/libs/xfaforms/profile。
 
-Sling脚本是JSP脚本。 这些JSP脚本用作容器，用于拼合所请求表单的HTML和所需的JS/CSS工件。 这些Sling脚本也称为 **配置文件渲染器脚本**. 配置文件渲染器调用Forms OSGi服务来渲染请求的表单。
+Sling指令碼是JSP指令碼。 這些JSP指令碼可當作容器，用來將請求表單的HTML與必要的JS/CSS成品放在一起。 這些Sling指令碼也稱為 **設定檔轉譯器指令碼**. 設定檔轉譯器會呼叫Forms OSGi服務來轉譯請求的表單。
 
-对于GET和POST请求，配置文件脚本位于html.jsp和html.POST.jsp中。 您可以复制和修改一个或多个文件以覆盖和添加自定义项。 不进行任何就地更改，修补程序更新将覆盖此类更改。
+針對GET和POST請求，設定檔指令碼位於html.jsp和html.POST.jsp中。 您可以複製和修改一個或多個檔案，以覆蓋和新增自訂。 不要進行任何就地變更，修補程式更新會覆寫此類變更。
 
-配置文件包含各种模块。 这些模块包括formRuntime.jsp、config.jsp、toolbar.jsp、formBody.jsp、nav_footer.jsp和footer.jsp。
+設定檔包含各種模組。 這些模組是formRuntime.jsp、config.jsp、toolbar.jsp、formBody.jsp、nav_footer.jsp和footer.jsp。
 
 ## formRuntime.jsp {#formruntime-jsp-br}
 
-formRuntime.jsp模块包含客户端库的引用。 它还描述了从请求中提取区域设置信息并在请求中包含本地化消息的方法。 您可以在formRuntime.jsp中包含自己的customJavaScript库或样式。
+formRuntime.jsp模組包含使用者端程式庫的參照。 此外也說明如何從要求擷取地區設定資訊，並在要求中包含當地語系化的訊息。 您可以在formRuntime.jsp中包含自己的customJavaScript程式庫或樣式。
 
 ## config.jsp {#config-jsp}
 
-config.jsp模块包含各种配置，例如日志记录、代理服务和行为版本。 您可以将自己的配置和构件定制添加到config.jsp模块。 您还可以将自定义构件注册等配置添加到config.jsp模块。
+config.jsp模組包含各種設定，例如記錄、Proxy服務和行為版本。 您可以將自己的設定和Widget自訂新增到config.jsp模組中。 您也可以將自訂Widget註冊等設定新增到config.jsp模組。
 
 ## toolbar.jsp {#toolbar-jsp}
 
-toolbar.jsp包含用于创建彩色工具栏的代码。 要删除工具栏，请从HTML.jsp中删除toolbar.jsp
+toolbar.jsp包含建立彩色工具列的程式碼。 若要移除工具列，請從HTML.jsp中移除toolbar.jsp
 
 ## formBody.jsp {#formbody-jsp}
 
-formBody.jsp模块用于XFA表单的HTML表示。
+formBody.jsp模組用於XFA表單的HTML表示。
 
 ## nav_footer.jsp {#nav-footer-jsp}
 
-最初，HTML5表单仅渲染表单的第一页。 当用户滚动表单时，将加载其余表单。 这样可加快加载体验。 nav_footer.jsp组件包含所有样式和必需的元素，以便利于在滚动时加载页面。
+最初，HTML5表單只會轉譯表單的第一頁。 當使用者捲動表單時，則會載入其餘表單。 這可讓載入體驗更快。 nav_footer.jsp元件包含所有樣式和必要元素，以便在捲動時載入頁面。
 
 ## footer.jsp {#footer-jsp}
 
-footer.jsp模块为空。 它允许您添加仅用于用户交互的脚本。
+footer.jsp模組是空的。 它可讓您新增僅用於使用者互動的指令碼。
 
-## 创建自定义配置文件 {#creating-custom-profiles}
+## 建立自訂設定檔 {#creating-custom-profiles}
 
-要创建自定义用户档案，请执行以下步骤：
+若要建立自訂設定檔，請執行下列步驟：
 
-### 创建配置文件节点 {#create-profile-node}
+### 建立設定檔節點 {#create-profile-node}
 
-1. 在URL处导航到CRX DE接口： `https://'[server]:[port]'/crx/de` 并使用管理员凭据登录到界面。
+1. 在URL導覽至CRX DE介面： `https://'[server]:[port]'/crx/de` 並使用管理員認證登入介面。
 
-1. 在左窗格中，导航到位置 */content/xfaforms/profiles*.
+1. 在左窗格中，導覽至該位置 */content/xfaforms/profiles*.
 
-1. 复制节点默认值，并将节点粘贴到其他文件夹中(*/content/profiles*)，其名称为 *hrform*.
+1. 複製節點預設值，並將節點貼到不同的資料夾(*/content/profiles*)，並加上名稱 *hrform*.
 
-1. 选择新节点， *hrform*，并添加一个字符串属性： *sling：resourceType* 值： *表单/演示*.
+1. 選取新節點， *hrform*，並新增字串屬性： *sling：resourceType* 含值： *表單/示範*.
 
-1. 单击工具栏菜单中的“全部保存”以保存更改。
+1. 按一下工具列選單中的「儲存全部」以儲存變更。
 
-### 创建配置文件渲染器脚本 {#create-the-profile-renderer-script}
+### 建立設定檔轉譯器指令碼 {#create-the-profile-renderer-script}
 
-创建自定义配置文件后，将渲染信息添加到此配置文件。 在收到对新配置文件的请求时，CRX验证要呈现的JSP页面的/apps文件夹是否存在。 在/apps文件夹中创建JSP页。
+建立自訂設定檔後，將轉譯資訊新增至此設定檔。 在收到新設定檔的請求時，CRX會驗證要轉譯的JSP頁面的/apps資料夾是否存在。 在/apps資料夾中建立JSP頁面。
 
-1. 在左窗格中，导航到 `/apps` 文件夹。
-1. 右键单击 `/apps` 文件夹并选择创建名为的文件夹 **hrform**.
-1. 内部人员 **hrform** 文件夹创建名为的文件夹 **演示**.
-1. 单击 **全部保存** 按钮。
-1. 导航到 `/libs/xfaforms/profile/html.jsp` 并复制节点 **html.jsp**.
-1. 粘贴 **html.jsp** 节点移入 `/apps/hrform/demo` 上面创建的具有相同名称的文件夹 **html.jsp** 并单击 **保存**.
-1. 如果您有配置文件脚本的任何其他组件，请按照步骤1-6复制/apps/hrform/demo文件夹中的组件。
+1. 在左窗格中，導覽至 `/apps` 資料夾。
+1. 以右鍵按一下 `/apps` 資料夾並選擇以名稱建立資料夾 **hrform**.
+1. 內部人員 **hrform** 資料夾建立名為的資料夾 **示範**.
+1. 按一下 **全部儲存** 按鈕。
+1. 導覽至 `/libs/xfaforms/profile/html.jsp` 並複製節點 **html.jsp**.
+1. 貼上 **html.jsp** 節點進入 `/apps/hrform/demo` 以上建立的相同名稱資料夾 **html.jsp** 並按一下 **儲存**.
+1. 如果您有設定檔指令碼的任何其他元件，請依照步驟1-6複製/apps/hrform/demo資料夾中的元件。
 
-1. 要验证是否已创建配置文件，请打开URL `https://'[server]:[port]'/content/xfaforms/profiles/hrform.html`
+1. 若要確認設定檔已建立，請開啟URL `https://'[server]:[port]'/content/xfaforms/profiles/hrform.html`
 
-要验证您的表单， [导入您的表单](/help/forms/using/get-xdp-pdf-documents-aem.md) 从本地文件系统到AEM Forms和 [预览表单](/help/forms/using/previewing-forms.md) 在AEM服务器创作实例上。
+若要驗證您的表單， [匯入您的表單](/help/forms/using/get-xdp-pdf-documents-aem.md) 從您的本機檔案系統移至AEM Forms和 [預覽表單](/help/forms/using/previewing-forms.md) 在AEM伺服器作者執行個體上。

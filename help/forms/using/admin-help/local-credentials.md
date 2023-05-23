@@ -1,7 +1,7 @@
 ---
-title: 管理本地凭据
+title: 管理本機認證
 seo-title: Managing local credentials
-description: 了解如何管理本地凭据。
+description: 瞭解如何管理本機認證。
 seo-description: Learn how to manage local credentials.
 uuid: 3c4358e0-aaff-4e94-a6b2-04b463fca260
 contentOwner: admin
@@ -17,57 +17,57 @@ ht-degree: 0%
 
 ---
 
-# 管理本地凭据 {#managing-local-credentials}
+# 管理本機認證 {#managing-local-credentials}
 
-本地凭据是在信任存储区管理中托管的私钥凭据。 A *本地凭据* 标识存储用户的DES凭据的位置。 使用信任存储区管理，您可以使用现有的PFX文件导入和管理本地凭据，以便可以导入、编辑和删除本地凭据。
+本機認證是在信任存放區管理中託管的私密金鑰認證。 A *本機認證* 識別儲存使用者DES認證的位置。 使用「信任存放區管理」，您可以使用現有的PFX檔案來匯入和管理本機認證，以便可以匯入、編輯和刪除本機認證。
 
-AEM forms支持标准PKCS12格式（.pfx和.p12文件）中最多4096位的RSA和DSA凭据。
+AEM forms支援標準PKCS12格式（.pfx和.p12檔案）中最多4096位元的RSA和DSA憑證。
 
-您可以导入和导出任意数量的凭据。 如果要使用相同的别名替换过期的凭据，请删除该凭据，然后使用相同的别名导入新凭据。
+您可以匯入和匯出任意數量的認證。 如果您想使用相同的別名來取代過期的認證，請刪除認證，然後使用相同的別名匯入新的認證。
 
-有关Acrobat Reader DC扩展的信息和说明，请参阅 [配置凭据以用于Acrobat Reader DC扩展](/help/forms/using/admin-help/configuring-credentials-acrobat-reader-dc.md#configuring-credentials-for-use-with-acrobat-reader-dc-extensions).
+如需Acrobat Reader DC擴充功能的相關資訊和指示，請參閱 [設定用於Acrobat Reader DC擴充功能的認證](/help/forms/using/admin-help/configuring-credentials-acrobat-reader-dc.md#configuring-credentials-for-use-with-acrobat-reader-dc-extensions).
 
-## 导入凭据 {#import-a-credential}
+## 匯入認證 {#import-a-credential}
 
-1. 在管理控制台中，单击“设置”>“信任存储区管理”>“本地凭据”。
-1. 单击导入。在“信任存储类型”下，选择以下选项之一：
+1. 在管理控制檯中，按一下「設定」>「信任存放區管理」>「本機認證」。
+1. 按一下「匯入」。 在「信任存放區型別」下，選取下列其中一個選項：
 
-   * **文档签名凭据：** 用于在文档上发布数字签名的凭据。
-   * **Acrobat Reader DC扩展凭据：** 特定于Acrobat Reader DC扩展的数字证书，允许在生成的PDF文档中激活Adobe Reader使用权限。
-   * **默认：** 指示这是要与Acrobat Reader DC扩展一起使用的默认凭据。
+   * **檔案簽署認證：** 用於在檔案上簽發數位簽章的認證。
+   * **Acrobat Reader DC擴充功能認證：** Acrobat Reader DC擴充功能專屬的數位憑證，可讓您在產生的PDF檔案中啟用Adobe Reader使用許可權。
+   * **預設：** 指出這是搭配Acrobat Reader DC擴充功能使用的預設認證。
 
-   有关获取凭据的信息，请参阅 [准备安装AEM表单](https://www.adobe.com/go/learn_aemforms_prepareInstallsingle_63).
+   如需取得認證的相關資訊，請參閱 [準備安裝AEM表單](https://www.adobe.com/go/learn_aemforms_prepareInstallsingle_63).
 
-1. 在“别名”框中，键入凭据的标识符。 此标识符用作Acrobat Reader DC扩展和签名服务中凭据的显示名称。 此别名还用于通过AEM Forms SDK以编程方式访问凭据。
+1. 在「別名」方塊中，輸入認證的識別碼。 此識別碼會用作Acrobat Reader DC擴充功能和Signature service中認證的顯示名稱。 此別名也可用來透過AEM Forms SDK以程式設計方式存取認證。
 
    >[!NOTE]
    >
-   >别名会自动转换为大写以便显示。 在进程中引用别名时，别名不区分大小写。
+   >別名會自動轉換為大寫，以便顯示。 您在程式中參考別名時，別名名稱不區分大小寫。
 
-1. 单击“浏览”以查找凭据，键入凭据的密码，然后单击“确定”。
+1. 按一下「瀏覽」以尋找證明資料，輸入證明資料的密碼，然後按一下「確定」。
 
-   如果出现错误消息“由于文件格式不正确或密码不正确而无法导入凭据”，请验证密码是否有效。
+   如果出現錯誤訊息「由於檔案格式不正確或密碼不正確而無法匯入認證」，請確認密碼有效。
 
-## 导出凭据 {#export-a-credential}
+## 匯出認證 {#export-a-credential}
 
-凭据将导出为PKCS#12格式的P12文件。
+認證會匯出為PKCS#12格式的P12檔案。
 
-1. 在管理控制台中，单击“设置”>“信任存储区管理”>“本地凭据”。
-1. 单击要导出的凭据的别名，然后单击导出。
-1. 在“密码”框中，键入密码。 此密码是新密码，用于加密导出的凭据。
-1. 单击导出，按照说明导出凭据，然后单击确定。
+1. 在管理控制檯中，按一下「設定」>「信任存放區管理」>「本機認證」。
+1. 按一下要匯出的認證的別名，然後按一下匯出。
+1. 在「密碼」方塊中，輸入密碼。 此密碼是新密碼，用於加密匯出的認證。
+1. 按一下「匯出」，依照指示匯出證明資料，然後按一下「確定」。
 
-## 编辑凭据的别名或信任存储类型 {#edit-a-credential-s-alias-or-trust-store-type}
+## 編輯認證的別名或信任存放區型別 {#edit-a-credential-s-alias-or-trust-store-type}
 
-导入凭据后，可以编辑其别名以及信任存储类型。
+匯入認證後，您可以編輯其別名名稱和信任存放區型別。
 
-1. 在管理控制台中，单击“设置”>“信任存储区管理”>“本地凭据”。
-1. 单击要编辑的凭据的别名。
-1. 单击更新凭据。
-1. 根据需要编辑别名及信任存储类型，然后单击“确定”。
+1. 在管理控制檯中，按一下「設定」>「信任存放區管理」>「本機認證」。
+1. 按一下您要編輯之認證的別名。
+1. 按一下「更新認證」。
+1. 視需要編輯別名名稱和信任存放區型別，然後按一下「確定」。
 
-## 删除凭据 {#delete-a-credential}
+## 刪除認證 {#delete-a-credential}
 
-1. 在管理控制台中，单击“设置”>“信任存储区管理”>“本地凭据”。
-1. 选中要删除的凭据对应的复选框。
-1. 单击“删除”，然后单击“确定”。
+1. 在管理控制檯中，按一下「設定」>「信任存放區管理」>「本機認證」。
+1. 選取要刪除的認證核取方塊。
+1. 按一下「刪除」，然後按一下「確定」。

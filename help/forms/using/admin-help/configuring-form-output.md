@@ -1,7 +1,7 @@
 ---
-title: 配置表单输出
+title: 設定表單輸出
 seo-title: Configuring form output
-description: 了解如何配置表单输出。
+description: 瞭解如何設定表單輸出。
 seo-description: Learn how to configure form output.
 uuid: 70aad14e-c845-4ef3-a751-ad8860d5d505
 contentOwner: admin
@@ -17,41 +17,41 @@ ht-degree: 1%
 
 ---
 
-# 配置表单输出{#configuring-form-output}
+# 設定表單輸出{#configuring-form-output}
 
-## 指定返回到Web浏览器的HTML输出的类型 {#specify-the-type-of-html-output-returned-to-the-web-browser}
+## 指定傳回至網頁瀏覽器的HTML輸出型別 {#specify-the-type-of-html-output-returned-to-the-web-browser}
 
-1. 在管理控制台中，单击服务>表单。
-1. 在“表单输出”下的“输出类型”列表中，选择以下选项之一：
+1. 在Administration Console中，按一下Services > forms。
+1. 在「表單輸出」下的「輸出型別」清單中，選取下列選項之一：
 
-   **完整HTML：** 在完整的HTML标签(完整的HTML页面)内呈现表单。 此值为默认值。
+   **完整HTML：** 呈現完整HTML標籤內的表單(完整的HTML頁面)。 此值為預設值。
 
-   **表单正文：** 在中呈现表单 `<BODY>` 标签(不是完整的HTML页面)。
-
-1. 单击“保存”。
-
-## 指定PDF内容的呈现位置 {#specify-the-location-where-pdf-content-is-rendered}
-
-1. 在“表单输出”下的“渲染位置”列表中，选择以下选项之一：
-
-   **客户端：** 在Adobe Acrobat或Adobe Reader中渲染PDF forms。 客户端渲染可提高AEM表单的性能，并且仅适用于PDFForm转换。
-
-   **服务器：** 在应用程序服务器上渲染PDF forms。
-
-   **自动：** 在指定的位置渲染PDF表单 `dynamicRender` xdp文件的配置值。 此值为默认值。
+   **表單內文：** 若要在內呈現表單 `<BODY>` 標籤(非完整的HTML頁面)。
 
 1. 单击“保存”。
 
-## 配置在表单提交前调用自定义脚本 {#configuring-invocation-of-custom-scripts-before-form-submit}
+## 指定PDF內容的呈現位置 {#specify-the-location-where-pdf-content-is-rendered}
 
-执行以下步骤以启用该功能：
+1. 在「表單輸出」下的「演算位置」清單中，選取下列選項之一：
 
-1. 登录到管理控制台。
-1. 转到 **服务** > **表单**.
-1. 将输出类型指定为表单主体。
-1. 保存设置。
-1. 在HTML代码的head部分中声明JavaScript变量__CUSTOM_SCRIPTS_VERSION，并将其值设置为1。
+   **使用者端：** 若要在Adobe Acrobat或Adobe Reader中呈現PDF forms。 使用者端轉譯可改善AEM表單的效能，且僅適用於PDFForm轉換。
+
+   **伺服器：** 在應用程式伺服器上呈現PDF forms的方式。
+
+   **自動：** 若要在指定的位置呈現PDF表單 `dynamicRender` xdp檔案的設定值。 此值為預設值。
+
+1. 单击“保存”。
+
+## 在表單提交前設定自訂指令碼的叫用 {#configuring-invocation-of-custom-scripts-before-form-submit}
+
+執行以下步驟來啟用此功能：
+
+1. 登入管理主控台。
+1. 前往 **服務** > **表單**.
+1. 將「輸出」型別指定為「表單主體」。
+1. 儲存設定。
+1. 在HTML程式碼的head區段中宣告JavaScript變數__CUSTOM_SCRIPTS_VERSION)，並將其值設為1。
 
    >[!NOTE]
    >
-   >*要禁用该功能，可以删除JavaScript变量或将其值设置为0。*
+   >*若要停用此功能，您可以移除JavaScript變數或將其值設為0。*

@@ -1,7 +1,7 @@
 ---
-title: 配置Cookie用法
+title: 設定Cookie使用方式
 seo-title: Configuring Cookie Usage
-description: AEM提供的服务允许您配置并控制Cookie在网页中的使用方式
+description: AEM提供的服務可讓您設定和控制Cookie在您的網頁中的使用方式
 seo-description: AEM provides a service that enables you to configure and control how cookies are used with your web pages
 uuid: 10d95176-0a56-41f1-9d36-01dbdac757d4
 contentOwner: Guillaume Carlino
@@ -17,41 +17,41 @@ ht-degree: 2%
 
 ---
 
-# 配置Cookie用法{#configuring-cookie-usage}
+# 設定Cookie使用方式{#configuring-cookie-usage}
 
-AEM提供的服务允许您配置并控制Cookie在网页中的使用方式：
+AEM提供的服務可讓您設定及控制如何將Cookie用於您的網頁：
 
-* 可配置的服务器端服务维护可用的Cookie列表。
-* Javascript API允许您的Javascript代码验证是否可以使用Cookie。
+* 可設定的伺服器端服務會維護可用的Cookie清單。
+* Javascript API可讓您的Javascript程式碼驗證Cookie是否可以使用。
 
-使用此功能可确保您的页面在有关Cookie使用方面符合用户的同意。
+使用此功能可確保您的頁面符合使用者對Cookie使用方式的同意。
 
-## 配置允许的Cookie {#configuring-allowed-cookies}
+## 設定允許的Cookie {#configuring-allowed-cookies}
 
-配置AdobeGranite选择退出服务，以指定在网页上使用Cookie的方式。 下表描述了可以配置的属性。
+設定AdobeGranite選擇退出服務，指定如何在您的網頁上使用Cookie。 下表說明您可以設定的特性。
 
-要配置服务，您可以使用 [Web控制台](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) 或 [将OSGi配置添加到存储库](/help/sites-deploying/configuring-osgi.md#adding-a-new-configuration-to-the-repository). 下表描述了任一方法所需的属性。 对于OSGi配置，服务PID为 `com.adobe.granite.optout`.
+若要設定服務，您可以使用 [網頁主控台](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) 或 [將OSGi設定新增至存放庫](/help/sites-deploying/configuring-osgi.md#adding-a-new-configuration-to-the-repository). 下表說明任一方法所需的屬性。 若為OSGi設定，服務PID為 `com.adobe.granite.optout`.
 
 | 属性名称（Web 控制台） | OSGi 属性名称 | 描述 |
 |---|---|---|
-| 选择退出Cookie | optout.cookies | Cookie的名称，指示当用户在设备上存在时，用户尚未同意使用Cookie。 |
-| 选择禁用HTTP标头 | optout.headers | 表示用户尚未同意使用Cookie的HTTP标头的名称（如果存在）。 |
-| 白名单Cookie | optout.whitelist.cookies | 对网站运行至关重要的且可以在未经用户同意的情况下使用的Cookie列表。 |
+| 選擇退出Cookie | optout.cookies | Cookie的名稱，當顯示在使用者的裝置上時，表示使用者尚未同意使用Cookie。 |
+| 選擇退出HTTP標頭 | optout.headers | 表示使用者尚未同意使用Cookie的HTTP標頭名稱（如果存在）。 |
+| 白名單Cookie | optout.whitelist.cookies | 此清單列出對網站運作而言不可或缺的Cookie，且可在未經使用者同意的情況下使用。 |
 
-## 验证Cookie使用情况 {#validating-cookie-usage}
+## 驗證Cookie使用方式 {#validating-cookie-usage}
 
-使用客户端javascript调用AdobeGranite选择退出服务以验证您是否可以使用Cookie。 使用Granite.OptOutUtil javascript对象执行以下任何任务：
+使用使用者端JavaScript來呼叫Adobe Granite選擇退出服務，以確認您可以使用Cookie。 使用Granite.OptOutUtil javascript物件來執行下列任何工作：
 
-* 获取Cookie名称列表，以表明用户不同意使用Cookie进行跟踪。
-* 获取可用的Cookie列表。
-* 确定Web浏览器是否包含指示用户不同意使用Cookie进行跟踪的Cookie。
-* 确定是否可以使用特定Cookie。
+* 取得Cookie名稱清單，該清單指出使用者不同意將Cookie用於追蹤目的。
+* 取得可用的Cookie清單。
+* 判斷網頁瀏覽器是否包含Cookie，指出使用者不同意使用Cookie進行追蹤。
+* 決定是否可使用特定Cookie。
 
-granite.utils [客户端库文件夹](/help/sites-developing/clientlibs.md#referencing-client-side-libraries) 提供Granite.OptOutUtil对象。 将以下代码添加到页头JSP以包含指向javascript库的链接：
+granite.utils [使用者端資料庫資料夾](/help/sites-developing/clientlibs.md#referencing-client-side-libraries) 提供Granite.OptOutUtil物件。 將下列程式碼新增至頁面標頭JSP以包含JavaScript程式庫的連結：
 
 `<ui:includeClientLib categories="granite.utils" />`
 
-例如，以下javascript函数决定在写入之前是否允许使用COOKIE_NAME Cookie：
+例如，下列javascript函式會先判斷是否允許使用COOKIE_NAME Cookie，再寫入至其中：
 
 ```
 function writeCookie(value){
@@ -64,54 +64,54 @@ function writeCookie(value){
 }
 ```
 
-## Granite.OptOutUtil Javascript对象 {#the-granite-optoututil-javascript-object}
+## Granite.OptOutUtil Javascript物件 {#the-granite-optoututil-javascript-object}
 
-Granite.OptOutUtil允许您确定是否允许使用Cookie。
+Granite.OptOutUtil可讓您判斷是否允許使用Cookie。
 
-### getCookieNames()函数 {#getcookienames-function}
+### getCookieNames()函式 {#getcookienames-function}
 
-返回Cookie的名称，如果存在，则表示用户未同意使用Cookie。
-
-**参数**
-
-无.
-
-**返回**
-
-Cookie名称数组。
-
-#### getWhitelistCookieNames()函数 {#getwhitelistcookienames-function}
-
-返回可在未经用户同意的情况下使用的Cookie的名称。
+傳回Cookie的名稱，當出現時，表示使用者未同意使用Cookie。
 
 **参数**
 
-无.
+无。
 
-**返回**
+**傳回**
 
-Cookie名称数组。
+Cookie名稱的陣列。
 
-#### isOptedOut()函数 {#isoptedout-function}
+#### getWhitelistCookieNames()函式 {#getwhitelistcookienames-function}
 
-确定用户的浏览器是否包含表明未同意使用Cookie的任何Cookie。
-
-**参数**
-
-无.
-
-**返回**
-
-布尔值 `true` 如果找到指示不同意的Cookie，并且值为 `false` 如果没有Cookie表示不同意。
-
-### maySetCookie(cookieName)函数 {#maysetcookie-cookiename-function}
-
-确定在用户浏览器上是否可以使用特定Cookie。 此函数等同于使用 `isOptedOut` 函数来确定是否将给定的Cookie包含在 `getWhitelistCookieNames` 函数返回。
+不論使用者是否同意，都會傳回可使用的Cookie名稱。
 
 **参数**
 
-* cookieName：字符串。 Cookie的名称。
+无。
 
-**返回**
+**傳回**
 
-布尔值 `true` 如果 `cookieName` 可使用，或值为 `false` 如果 `cookieName` 无法使用。
+Cookie名稱的陣列。
+
+#### isOptedOut()函式 {#isoptedout-function}
+
+判斷使用者的瀏覽器是否包含指出未同意使用Cookie的任何Cookie。
+
+**参数**
+
+无。
+
+**傳回**
+
+布林值 `true` 如果找到表示不同意的Cookie，且值為 `false` 如果沒有Cookie表示不同意。
+
+### maySetCookie(cookieName)函式 {#maysetcookie-cookiename-function}
+
+決定是否可在使用者的瀏覽器上使用特定Cookie。 此函式等同於使用 `isOptedOut` 與判斷特定Cookie是否包含在符合以下條件的清單中 `getWhitelistCookieNames` 函式傳回。
+
+**参数**
+
+* cookieName：字串。 Cookie的名稱。
+
+**傳回**
+
+布林值 `true` 如果 `cookieName` 可使用，或值為 `false` 如果 `cookieName` 無法使用。

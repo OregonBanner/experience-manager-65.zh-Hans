@@ -1,6 +1,6 @@
 ---
 title: PhoneGap
-description: 本页作为开发使用PhoneGap Enterprise与AEM的应用程序的起点。 AEM与PhoneGap集成，以便您能够使用AEM页面轻松创建应用程序。 PhoneGap允许用户创建实用工具应用程序，以便用户处理内容。
+description: 本頁面可作為透過AEM使用PhoneGap Enterprise開發應用程式的起點。 AEM與PhoneGap整合，因此您可以使用AEM頁面輕鬆建立應用程式。 PhoneGap可讓使用者建立公用程式應用程式，讓使用者使用內容。
 uuid: c6ac02fa-d41c-4b57-95d8-171a96540dd6
 contentOwner: User
 content-type: reference
@@ -18,33 +18,33 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->Adobe建议对需要基于单页应用程序框架的客户端渲染（例如React）的项目使用SPA编辑器。 [了解详情](/help/sites-developing/spa-overview.md).
+>Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）專案使用SPA編輯器。 [了解详情](/help/sites-developing/spa-overview.md).
 
-AEM与PhoneGap集成，以便您能够使用AEM页面轻松创建应用程序。 PhoneGap允许用户创建实用工具应用程序，以便用户处理内容。 通过内容同步，您可以创建页面的版本控制存档以与应用程序捆绑在一起。
+AEM與PhoneGap整合，因此您可以使用AEM頁面輕鬆建立應用程式。 PhoneGap可讓使用者建立公用程式應用程式，讓使用者使用內容。 內容同步可讓您建立頁面的版本化封存，以便與應用程式整合。
 
 >[!NOTE]
 >
->在开始使用AEM Mobile之前，请确保设置环境并开始使用 [AEM Mobile应用程序功能板](/help/mobile/phonegap-authoring-apps.md).
+>開始使用Adobe PhoneGap使用AEM Mobile之前，請務必設定您的環境並開始使用 [AEM Mobile應用程式控制面板](/help/mobile/phonegap-authoring-apps.md).
 
-以下资源将帮助您开始使用AEM Mobile Adobe PhoneGap:
+下列資源將協助您開始使用Adobe PhoneGap來使用AEM Mobile：
 
-* [在AEM中开发移动应用程序](/help/mobile/developing-mobile-applications.md)
-* [具有内容同步的移动设备](/help/mobile/phonegap-contentsync.md)
+* [在AEM中開發行動應用程式](/help/mobile/developing-mobile-applications.md)
+* [透過內容同步處理行動](/help/mobile/phonegap-contentsync.md)
 * [页面模板](/help/mobile/phonegap-apps-arch-page-templates.md)
 
-* [AEM Mobile内容服务：概述](/help/mobile/develop-content-as-a-service.md)
+* [AEM Mobile Content Services：概觀](/help/mobile/develop-content-as-a-service.md)
 
-   * 要启用内容服务和数据模型，请参阅 [管理内容服务](/help/mobile/developing-content-services.md)
-   * 要了解有关创建模型的信息，请参阅 [开发模型](/help/mobile/administer-mobile-apps.md)
-   * 要了解“渲染和交付”信息，请参阅 [内容服务的呈现和交付](/help/mobile/rendering-and-delivery.md)
+   * 若要啟用Content Services和資料模型，請參閱 [管理內容服務](/help/mobile/developing-content-services.md)
+   * 若要瞭解如何建立模型，請參閱 [開發模型](/help/mobile/administer-mobile-apps.md)
+   * 若要瞭解呈現和傳送，請參閱 [內容服務的呈現和傳遞](/help/mobile/rendering-and-delivery.md)
 
 >[!NOTE]
 >
->要在任何iOS或Android移动设备上运行AEM移动设备应用程序，请参阅 [使用AEM验证应用程序的移动设备快速启动](/help/mobile/phonegap-mobile-quickstart.md).
+>若要在任何iOS或Android行動裝置上執行AEM行動應用程式，請參閱 [使用AEM Verify應用程式的行動快速入門](/help/mobile/phonegap-mobile-quickstart.md).
 
-## 抢滩 {#getting-ahead}
+## 快速入門 {#getting-ahead}
 
-要了解管理员和开发人员的角色和职责，请参阅以下资源：
+若要瞭解管理員和開發人員的角色和責任，請參閱以下資源：
 
-* [使用AEM创作Adobe PhoneGap企业版](/help/mobile/phonegap.md)
-* [使用AEM管理Adobe PhoneGap Enterprise的内容](/help/mobile/administer-phonegap.md)
+* [使用AEM為Adobe PhoneGap Enterprise編寫](/help/mobile/phonegap.md)
+* [使用AEM管理Adobe PhoneGap Enterprise的內容](/help/mobile/administer-phonegap.md)

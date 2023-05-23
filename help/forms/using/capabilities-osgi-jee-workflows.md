@@ -1,6 +1,6 @@
 ---
-title: OSGi和AEM Forms JEE工作流中以表单为中心的AEM工作流的操作和功能
-description: OSGi和AEM Forms JEE工作流中以表单为中心的AEM工作流的操作和功能
+title: 表單中心AEM工作流程在OSGi和AEM Forms JEE工作流程上的動作和功能
+description: 表單中心AEM工作流程在OSGi和AEM Forms JEE工作流程上的動作和功能
 contentOwner: khsingh
 exl-id: 505b8988-b2b3-4222-b3cb-9b3c6259fdd2
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
@@ -10,102 +10,102 @@ ht-degree: 22%
 
 ---
 
-# OSGi和AEM Forms JEE工作流中以表单为中心的AEM工作流的操作和功能 {#actions-and-capabilities-of-form-centric-aem-workflows-on-osgi-and-aem-forms-jee-workflows}
+# 表單中心AEM工作流程在OSGi和AEM Forms JEE工作流程上的動作和功能 {#actions-and-capabilities-of-form-centric-aem-workflows-on-osgi-and-aem-forms-jee-workflows}
 
-## AEM收件箱和HTML工作区 {#aem-inbox-and-html-workspace}
+## AEM收件匣和HTML工作區 {#aem-inbox-and-html-workspace}
 
-您可以使用AEM收件箱在OSGi上运行和监视以Forms为中心的AEM Workflow。 而HTML工作区允许您运行和监控AEM Forms JEE Workflow。 下表可帮助您了解OSGi上以AEM为中心的Forms AEM Workflow的OSGi收件箱中以及AEM Forms JEE Workflow的HTML工作区中可用的各种重要操作。
+您可以使用AEM收件匣在OSGi上執行和監視以Forms為中心的AEM工作流程。 而HTML Workspace可讓您執行及監視AEM Forms JEE Workflow。 下表可協助您瞭解OSGi上Forms中心AEM工作流程的AEM收件匣以及AEM Forms JEE工作流程的HTML Workspace中可用的各種重要動作。
 
 <table>
  <tbody>
   <tr>
    <td>操作</td>
    <td>AEM 收件箱</td>
-   <td>HTML工作区</td>
+   <td>HTML工作區</td>
   </tr>
   <tr>
-   <td>启动流程、任务或表单应用程序<br /> </td>
-   <td>支持<br /> </td>
-   <td>支持<br /> </td>
-  </tr>
-  <tr>
-   <td>提交任务</td>
+   <td>啟動程式、任務或表單應用程式<br /> </td>
    <td>支持<br /> </td>
    <td>支持<br /> </td>
   </tr>
   <tr>
-   <td>将任务分配给组</td>
+   <td>提交任務</td>
    <td>支持<br /> </td>
    <td>支持<br /> </td>
   </tr>
   <tr>
-   <td>提交到多个路由</td>
+   <td>將任務指派給群組</td>
    <td>支持<br /> </td>
    <td>支持<br /> </td>
   </tr>
   <tr>
-   <td>跟踪任务历史记录和任务摘要</td>
+   <td>提交至多個路由</td>
    <td>支持<br /> </td>
    <td>支持<br /> </td>
   </tr>
   <tr>
-   <td>电子邮件通知</td>
+   <td>追蹤任務歷史記錄和任務摘要</td>
    <td>支持<br /> </td>
    <td>支持<br /> </td>
   </tr>
   <tr>
-   <td>重新分配任务</td>
+   <td>電子郵件通知</td>
+   <td>支持<br /> </td>
+   <td>支持<br /> </td>
+  </tr>
+  <tr>
+   <td>重新指派任務</td>
    <td>支持</td>
    <td>支持</td>
   </tr>
   <tr>
-   <td>自适应表单的字段级附件</td>
-   <td>支持</td>
-   <td>不支持</td>
-  </tr>
-  <tr>
-   <td>日历视图</td>
+   <td>適用性表單的欄位層級附件</td>
    <td>支持</td>
    <td>不支持</td>
   </tr>
   <tr>
-   <td>任务级别注释</td>
+   <td>行事曆檢視</td>
    <td>支持</td>
    <td>不支持</td>
   </tr>
   <tr>
-   <td>队列（共享的个人队列，队列中的报销申请任务）</td>
+   <td>任務層級註解</td>
+   <td>支持</td>
+   <td>不支持</td>
+  </tr>
+  <tr>
+   <td>佇列（共用的個人佇列、來自佇列的索賠工作）</td>
    <td>支持</td>
    <td>支持</td>
   </tr>
   <tr>
-   <td>外出通知</td>
+   <td>休假通知</td>
    <td>支持</td>
    <td>支持</td>
   </tr>
     <tr>
-   <td>自定义UI元素</td>
+   <td>自訂UI元素</td>
    <td>支持</td>
    <td>支持</td>
   </tr>
   <tr>
-   <td>将任务分配给多个用户</td>
+   <td>將任務指派給多個使用者</td>
    <td>不支持</td>
    <td>支持</td>
   </tr>
  </tbody>
 </table>
 
-## OSGi和AEM Forms JEE工作流中以表单为中心的AEM工作流 {#form-centric-aem-workflows-on-osgi-and-aem-forms-jee-workflows}
+## OSGi和AEM Forms JEE工作流程上的表單中心AEM工作流程 {#form-centric-aem-workflows-on-osgi-and-aem-forms-jee-workflows}
 
-OSGi和AEM Forms JEE Workflows上以表单为中心的AEM Workflow (AEM Forms on JEE Process Management)具有一组不同的功能。 下表可帮助您了解OSGi和AEM Forms on JEE Workflows中以表单为中心的AEM Workflow中可用的重要功能：
+OSGi和AEM Forms JEE Workflow (JEE流程管理的AEM Forms)以表單為中心的AEM Workflow有一組不同的功能。 下表可協助您瞭解OSGi和JEE工作流程的AEM Forms表單中心AEM工作流程中的重要功能：
 
 <table>
  <tbody>
   <tr>
    <td>功能</td>
-   <td>OSGi上以表单为中心的AEM工作流<br /> </td>
-   <td>AEM Forms JEE工作流</td>
+   <td>OSGi上的表單中心AEM工作流程<br /> </td>
+   <td>AEM Forms JEE工作流程</td>
   </tr>
   <tr>
    <td>自适应表单</td>
@@ -113,7 +113,7 @@ OSGi和AEM Forms JEE Workflows上以表单为中心的AEM Workflow (AEM Forms on
    <td>支持<br /> </td>
   </tr>
   <tr>
-   <td>与其他AEM解决方案集成</td>
+   <td>與其他AEM解決方案的整合</td>
    <td>支持</td>
    <td>支持</td>
   </tr>
@@ -123,87 +123,87 @@ OSGi和AEM Forms JEE Workflows上以表单为中心的AEM Workflow (AEM Forms on
    <td>支持<br /> </td>
   </tr>
   <tr>
-   <td>自定义电子邮件模板</td>
+   <td>自訂電子郵件範本</td>
    <td>支持</td>
    <td>支持<br /> </td>
   </tr>
   <tr>
-   <td>定义任务优先级</td>
+   <td>定義任務優先順序</td>
    <td>支持</td>
    <td>支持</td>
   </tr>
   <tr>
-   <td>任务在到期日期后超时</td>
+   <td>任務在到期日後逾時</td>
    <td>支持</td>
    <td>支持</td>
   </tr>
   <tr>
-   <td>工作流中的循环</td>
+   <td>工作流程中的回圈</td>
    <td>支持</td>
    <td>支持</td>
   </tr>
   <tr>
-   <td>动态选择被分派人 </td>
+   <td>動態選擇被指定者 </td>
    <td>支持</td>
    <td>支持</td>
   </tr>
   <tr>
-   <td>使用自定义元数据</td>
+   <td>使用自訂中繼資料</td>
    <td>支持</td>
    <td>支持</td>
   </tr>
   <tr>
-   <td>电子签名(Adobe Sign)</td>
-   <td>支持 <sup>[1]</sup></td>
-   <td>支持 <sup>[5]</sup></td>
+   <td>電子簽章(Adobe Sign)</td>
+   <td>支援 <sup>[1]</sup></td>
+   <td>支援 <sup>[5]</sup></td>
   </tr>
   <tr>
-   <td>管理任务和表单应用程序</td>
-   <td>支持 <sup>[2]</sup><br /> </td>
-   <td>支持 <sup>[2]</sup></td>
+   <td>管理任務和表單應用程式</td>
+   <td>支援 <sup>[2]</sup><br /> </td>
+   <td>支援 <sup>[2]</sup></td>
   </tr>
   <tr>
    <td>文档服务</td>
-   <td>支持 <sup>[3]</sup></td>
-   <td>支持 <sup>[3]</sup></td>
+   <td>支援 <sup>[3]</sup></td>
+   <td>支援 <sup>[3]</sup></td>
   </tr>
   <tr>
-   <td>将已完成的任务渲染为自适应表单或PDF文档</td>
+   <td>將已完成的任務演算為最適化表單或PDF檔案</td>
    <td>支持</td>
    <td>支持 [4]</td>
   </tr>
   <tr>
-   <td>与通信管理集成</td>
+   <td>與Correspondence Management整合</td>
    <td>支持</td>
    <td>支持</td>
   </tr>
    <tr>
-   <td>网关，不等待 </td>
+   <td>閘道，不等待 </td>
    <td>支持</td>
    <td>支持</td>
   </tr>
    <tr>
-   <td>用于存储数据的变量 </td>
+   <td>儲存資料的變數 </td>
    <td>支持</td>
    <td>支持</td>
   </tr>
   <tr>
-   <td>OR，AND拆分</td>
+   <td>OR和AND拆分</td>
    <td>支持</td>
    <td>支持</td>
   </tr>
   <tr>
-   <td>用户头像</td>
+   <td>使用者頭像</td>
    <td>支持</td>
    <td>支持</td>
   </tr>
   <tr>
-   <td>在工作流结束时发送电子邮件</td>
-   <td>支持 <sup>[7]</sup></td>
+   <td>在工作流程結束時傳送電子郵件</td>
+   <td>支援 <sup>[7]</sup></td>
    <td>支持</td>
   </tr>
   <tr>
-   <td>从工作流调用Web服务</td>
+   <td>從工作流程呼叫Web服務</td>
    <td>支持</td>
    <td>支持</td>
   </tr>
@@ -223,27 +223,27 @@ OSGi和AEM Forms JEE Workflows上以表单为中心的AEM Workflow (AEM Forms on
    <td>不支持</td>
   </tr>
   <tr>
-   <td>只读自适应表单</td>
+   <td>唯讀調適型表單</td>
    <td>支持</td>
    <td>不支持</td>
   </tr>
   <tr>
-   <td>隐藏默认保存按钮</td>
+   <td>隱藏預設儲存按鈕</td>
    <td>支持</td>
    <td>不支持</td>
   </tr>
   <tr>
-   <td>对工作流详细信息部分的精细控制</td>
+   <td>精細地控制工作流程詳細資訊區段</td>
    <td>支持</td>
    <td>不支持</td>
   </tr>
   <tr>
-   <td>轮询/计划服务</td>
-   <td>开箱即用</td>
-   <td>需要自定义实施</td>
+   <td>輪詢/排程服務</td>
+   <td>立即可用</td>
+   <td>需要自訂實施</td>
   </tr>
   <tr>
-   <td>自适应Forms应用程序</td>
+   <td>最適化Forms應用程式</td>
    <td>支持</td>
    <td>支持</td>
   </tr>
@@ -253,7 +253,7 @@ OSGi和AEM Forms JEE Workflows上以表单为中心的AEM Workflow (AEM Forms on
    <td>支持</td>
   </tr>
   <tr>
-   <td>PDF生成器服务</td>
+   <td>PDF產生器服務</td>
    <td>支持</td>
    <td>支持</td>
   </tr>
@@ -268,27 +268,27 @@ OSGi和AEM Forms JEE Workflows上以表单为中心的AEM Workflow (AEM Forms on
    <td>支持</td>
   </tr>
   <tr>
-   <td>文档保证</td>
+   <td>檔案保證</td>
    <td>支持</td>
    <td>支持 </td>
   </tr>
   <tr>
-   <td>执行脚本</td>
-   <td>支持ECMAScript</td>
-   <td>支持Java代码段</td>
+   <td>執行指令碼</td>
+   <td>支援ECMAScript</td>
+   <td>支援Java程式碼片段</td>
   </tr>
   <tr>
-   <td>汇编程序</td>
+   <td>組合器</td>
    <td>支持</td>
    <td>支持</td>
   </tr>  
   <tr>
-   <td>HTML5 Forms、交互式PDF forms、表单集</td>
+   <td>HTML5 Forms、互動式PDF forms、表單集</td>
    <td>不支持</td>
    <td>支持</td>
   </tr>
   <tr>
-   <td>进程报告</td>
+   <td>程式報告</td>
    <td>不支持</td>
    <td>支持</td>
   </tr>
@@ -298,32 +298,32 @@ OSGi和AEM Forms JEE Workflows上以表单为中心的AEM Workflow (AEM Forms on
    <td>支持</td>
   </tr>
   <tr>
-   <td>起点类别</td>
+   <td>起點類別</td>
    <td>不支持 </td>
    <td>支持 </td>
   </tr>
   <tr>
-   <td>批量任务审批 </td>
+   <td>大量任務核准 </td>
    <td>不支持 </td>
    <td>支持 </td>
   </tr>
   <tr>
-   <td>使用自定义名称保存草稿</td>
+   <td>使用自訂名稱儲存草稿</td>
    <td>不支持 </td>
    <td>支持 </td>
   </tr>
   <tr>
-   <td>使用现有流程数据启动流程<br /> </td>
+   <td>使用現有程式資料起始程式<br /> </td>
    <td>不支持</td>
    <td>支持 </td>
   </tr>
   <tr>
-   <td>将起点另存为草稿</td>
+   <td>將起點儲存為草稿</td>
    <td>不支持</td>
    <td>支持</td>
   </tr>
   <tr>
-   <td>经理视图</td>
+   <td>管理員檢視</td>
    <td>不支持</td>
    <td>支持<br /> </td>
   </tr>
@@ -333,72 +333,72 @@ OSGi和AEM Forms JEE Workflows上以表单为中心的AEM Workflow (AEM Forms on
    <td>支持<br /> </td>
   </tr>
   <tr>
-   <td>与第三方应用程序集成</td>
-   <td>不支持 <sup>[6]</sup></td>
+   <td>與協力廠商應用程式整合</td>
+   <td>不支援 <sup>[6]</sup></td>
    <td>支持</td>
   </tr>
   <tr>
-   <td>工作流应用程序或起点的任务级附件</td>
-   <td>不支持</td>
-   <td>支持</td>
-  </tr>
-  <tr>
-   <td>提醒电子邮件</td>
+   <td>工作流程應用程式或起點的任務層級附件</td>
    <td>不支持</td>
    <td>支持</td>
   </tr>
   <tr>
-   <td>在任务超时时更改标题</td>
+   <td>提醒電子郵件</td>
    <td>不支持</td>
    <td>支持</td>
   </tr>
   <tr>
-   <td>关于任务委派和任务声明的电子邮件</td>
+   <td>在任務逾時時變更標題</td>
    <td>不支持</td>
    <td>支持</td>
   </tr>
   <tr>
-   <td>不相交组之间的委派</td>
+   <td>關於任務委派和任務宣告的電子郵件</td>
    <td>不支持</td>
    <td>支持</td>
   </tr>
   <tr>
-   <td>XSLT变换</td>
+   <td>委託於不相交群組之間</td>
    <td>不支持</td>
    <td>支持</td>
   </tr>
   <tr>
-   <td>动态任务优先级</td>
+   <td>XSLT轉換</td>
+   <td>不支持</td>
+   <td>支持</td>
+  </tr>
+  <tr>
+   <td>動態任務優先順序</td>
    <td>不支持</td>
    <td>不支持</td>
   </tr>
   <tr>
-   <td>动态标题</td>
+   <td>動態標題</td>
    <td>不支持</td>
    <td>不支持</td>
   </tr>
     <tr>
-   <td>动态描述</td>
+   <td>動態說明</td>
    <td>不支持</td>
    <td>不支持</td>
   </tr>
  </tbody>
 </table>
 
-1. 您可以在OSGi上使用以表单为中心的AEM Workflows来签名已填写的自适应表单。 OSGi上以表单为中心的AEM Workflow支持表单签名以外的内容。 此 [表单内签名](../../forms/using/working-with-adobe-sign.md#create-in-form-signing-experience) 不支持体验。
+1. 您可以在OSGi上使用以表單為中心的AEM工作流程，以簽署已填妥的最適化表單。 OSGi上的表單中心AEM工作流程支援表單簽名以外的功能。 此 [表單內簽署](../../forms/using/working-with-adobe-sign.md#create-in-form-signing-experience) 不支援體驗。
 
-1. 您需要访问AEM收件箱才能在AEM Forms OSGi和HTML Workspace上运行和监控以表单为中心的工作流，从而运行和监控AEM Forms JEE Workflow。
-1. 本机AEM Forms文档服务适用于OSGi上的以表单为中心的AEM Workflow和JEE Workflow上的AEM Forms 。 AEM Workflow在OSGi和AEM Forms JEE （流程管理）工作流中使用本机文档服务执行以表单为中心的AEM Workflow。
-1. AEM Forms JEE工作流只能渲染自适应表单。 它不支持将自适应表单渲染为PDF文档。
-1. AEM forms JEE工作流没有适用于Adobe Sign的单独步骤。 您需要为AEM Forms JEE Workflows启用自适应表单Adobe Sign。 有关更多详细信息，请参阅 [Adobe Sign文档](../../forms/using/working-with-adobe-sign.md#add-and-configure-the-signature-step-component).
-1. 您可以使用 [调用表单数据模型服务](../../forms/using/aem-forms-workflow-step-reference.md#p-invoke-form-data-model-service-step-p) 用于调用Web服务以及发布或检索来自第三方应用程序的数据的步骤。
-1. 您可以使用 [发送电子邮件](../../forms/using/aem-forms-workflow-step-reference.md#send-email-step) 步骤以发送电子邮件。
+1. 您需要存取AEM收件匣，才能在AEM Forms OSGi和HTML Workspace上執行及監控以表單為中心的工作流程，以執行及監控AEM Forms JEE工作流程。
+1. 原生AEM Forms檔案服務適用於OSGi上的表單中心AEM工作流程和JEE上的AEM Forms工作流程。 AEM Workflow在OSGi和AEM Forms JEE （程式管理）工作流程中，使用原生檔案服務進行以表單為中心的AEM工作流程。
+1. AEM Forms JEE工作流程只能轉譯最適化表單。 不支援將最適化表單轉譯為PDF檔案。
+1. AEM forms JEE Workflow沒有適用於Adobe Sign的獨立步驟。 您需要啟用Adobe Sign的最適化表單以用於AEM Forms JEE Workflow。 如需詳細資訊，請參閱 [Adobe Sign檔案](../../forms/using/working-with-adobe-sign.md#add-and-configure-the-signature-step-component).
+1. 您可以使用 [啟動表單資料模型服務](../../forms/using/aem-forms-workflow-step-reference.md#p-invoke-form-data-model-service-step-p) 叫用Web服務並從協力廠商應用程式發佈或擷取資料的步驟。
+1. 您可以使用 [傳送電子郵件](../../forms/using/aem-forms-workflow-step-reference.md#send-email-step) 步驟以傳送電子郵件。
 
-## AEM收件箱和AEM Forms应用程序功能之间的差异 {#differences-between-aem-inbox-and-aem-forms-app-features}
+## AEM收件匣和AEM Forms應用程式功能之間的差異 {#differences-between-aem-inbox-and-aem-forms-app-features}
 
-启动以Forms为中心的工作流的两种主要方法是 [AEM收件箱](../../forms/using/manage-applications-inbox.md) 和AEM Forms应用程序。 但是，AEM收件箱和AEM Forms应用程序的功能有所不同。 AEM收件箱仅适用于 [以Forms为中心的工作流](../../forms/using/aem-forms-workflow.md) 而AEM Forms应用程序可同时使用以Forms为中心的工作流和流程管理。
+啟動以Forms為中心的工作流程有兩個顯著的方法，就是 [AEM收件匣](../../forms/using/manage-applications-inbox.md) 和AEM Forms應用程式。 但AEM收件匣和AEM Forms應用程式的功能有所不同。 AEM收件匣僅適用於 [以Forms為中心的工作流程](../../forms/using/aem-forms-workflow.md) 而AEM Forms應用程式可搭配以Forms為中心的工作流程及程式管理運作。
 
-下表列出了AEM收件箱和AEM Forms应用程序的功能：
+下表列出AEM收件匣和AEM Forms應用程式的功能：
 
 <table>
  <tbody>
@@ -408,47 +408,47 @@ OSGi和AEM Forms JEE Workflows上以表单为中心的AEM Workflow (AEM Forms on
    <td><p><strong>AEM Forms 应用程序</strong></p> </td>
   </tr>
   <tr>
-   <td><p>启动表单应用程序</p> </td>
+   <td><p>啟動表單應用程式</p> </td>
    <td><p>支持</p> </td>
    <td><p>支持</p> </td>
   </tr>
   <tr>
-   <td><p>提交任务</p> </td>
+   <td><p>提交任務</p> </td>
    <td><p>支持</p> </td>
    <td><p>支持</p> </td>
   </tr>
   <tr>
-   <td><p>委派任务</p> </td>
+   <td><p>委派任務</p> </td>
    <td><p>支持</p> </td>
    <td><p>不支持</p> </td>
   </tr>
   <tr>
-   <td><p>跟踪任务历史记录和任务摘要</p> </td>
+   <td><p>追蹤任務歷史記錄和任務摘要</p> </td>
    <td><p>支持</p> </td>
    <td><p>不支持</p> </td>
   </tr>
   <tr>
-   <td><p>添加任务层附件</p> </td>
+   <td><p>新增工作層級附件</p> </td>
    <td><p>支持</p> </td>
    <td><p>支持</p> </td>
   </tr>
   <tr>
-   <td><p>查看任务层附件</p> </td>
+   <td><p>檢視工作層次附件</p> </td>
    <td><p>支持</p> </td>
    <td><p>支持</p> </td>
   </tr>
   <tr>
-   <td><p>添加字段级附件</p> </td>
+   <td><p>新增欄位層級附件</p> </td>
    <td><p>支持</p> </td>
    <td><p>支持</p> </td>
   </tr>
   <tr>
-   <td><p>显示日历视图</p> </td>
+   <td><p>顯示行事曆檢視</p> </td>
    <td><p>支持</p> </td>
    <td><p>不支持</p> </td>
   </tr>
   <tr>
-   <td><p>添加注释</p> </td>
+   <td><p>新增註解</p> </td>
    <td><p>支持</p> </td>
    <td><p>支持</p> </td>
   </tr>

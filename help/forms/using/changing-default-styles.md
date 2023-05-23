@@ -1,7 +1,7 @@
 ---
-title: 更改HTML5表单的默认样式
+title: 變更HTML5表單的預設樣式
 seo-title: Changing default styles of HTML5 forms
-description: HTML5表单样式基于CSS。 您可以更改表单的默认样式。
+description: HTML5表單樣式是以CSS為基礎。 您可以變更表單的預設樣式。
 seo-description: HTML5 forms styling is based on CSS. You can change the default styles of the form.
 uuid: 5e23237d-42d8-4d29-b79e-4dc276ef65ff
 content-type: reference
@@ -18,43 +18,43 @@ ht-degree: 0%
 
 ---
 
-# 更改HTML5表单的默认样式{#changing-default-styles-of-html-forms}
+# 變更HTML5表單的預設樣式{#changing-default-styles-of-html-forms}
 
-HTML5表单使用HTML5功能渲染，渲染表单的样式使用CSS完成。 HTML5表单的默认外观类似于其PDF呈现版本。 开发人员可以使用自定义CSS更改HTML5表单的默认外观。
+HTML5表單會使用HTML5功能演算，演算後表單的樣式會使用CSS完成。 HTML5表單的預設外觀類似於其PDF轉譯。 開發人員可使用自訂CSS來變更HTML5表單的預設外觀。
 
-本文提供了更改HTML5表单样式的分步信息，并且 [样式简介](/help/forms/using/css-styles.md) 本文包含有关HTML5表单各个样式方面的详细信息。 在执行本文中提到的步骤之前，请确保已阅读样式简介一文。
+本文提供變更HTML5表單的樣式的逐步資訊，以及 [樣式簡介](/help/forms/using/css-styles.md) 本文包含有關HTML5表單各種樣式方面的詳細資訊。 在執行本文所述的步驟之前，請務必閱讀樣式簡介一文。
 
-以下两幅图像显示了默认样式和自定义样式之间的差异。
+下列兩個影像顯示預設樣式和自訂樣式之間的差異。
 
-![pictures-002-small](assets/pictures-002-small.png)
+![圖片–002 — 小](assets/pictures-002-small.png)
 
-## 设置表单样式 {#style-your-forms}
+## 設定表單樣式 {#style-your-forms}
 
-1. **选择配置文件以添加自定义样式**
+1. **選擇設定檔以新增自訂樣式**
 
-   访问CRX DE接口，网址为： **https://&lt;server>：&lt;port>/crx/de** 和创建配置文件或选择现有配置文件。 要了解如何创建用户档案，请参阅 [创建新配置文件](/help/forms/using/custom-profile.md)
+   在URL存取CRX DE介面： **https://&lt;server>：&lt;port>/crx/de** 和建立設定檔，或選擇現有的設定檔。 若要瞭解如何建立設定檔，請參閱 [建立新的設定檔](/help/forms/using/custom-profile.md)
 
-1. **创建CSS样式表以设置HTML5表单的样式**
+1. **建立CSS樣式表來設定HTML5表單的樣式**
 
-   导航到已在其中创建配置文件渲染器的文件夹，然后创建CSS样式表文件。 要遵循的步骤有
+   導覽至您建立設定檔轉譯器的資料夾，並建立CSS樣式表檔案。 請遵循下列步驟
 
-   1. 右键单击文件夹并选择 **创建** > **创建文件** 从菜单
+   1. 以滑鼠右鍵按一下資料夾並選取 **建立** > **建立檔案** 從功能表
 
-   1. 在“创建文件”对话框中，输入样式表的名称。 确保使用.css扩展名（例如stylesheet.css）
-   1. 从导航窗格中，打开已创建的CSS文件。
-   1. 定义要为其设置样式的组件的CSS类，并在这些类中添加样式。
+   1. 在建立檔案對話方塊中，輸入樣式表的名稱。 請務必使用.css副檔名（例如stylesheet.css）
+   1. 從導覽窗格中，開啟您已建立的CSS檔案。
+   1. 定義您要樣式化之元件的CSS類別，並在這些類別中新增樣式。
 
-   要了解要为HTML5表单中的特定组件创建哪些CSS类，请参阅 [样式简介](/help/forms/using/css-styles.md).
+   若要瞭解要為HTML5表單中的特定元件建立哪些CSS類別，請參閱 [樣式簡介](/help/forms/using/css-styles.md).
 
-1. **在配置文件渲染器中包含样式表**
+1. **在設定檔轉譯器中包含樣式表**
 
-   在CRX DE中打开“配置文件渲染器”页面（jsp文件），并将CSS文件包含在XFA客户端库正下方的页面中。 执行这些步骤可在配置文件中包含CSS文件。
+   在CRX DE中開啟「設定檔轉譯器」頁面（jsp檔案），並將CSS檔案包含在XFA使用者端程式庫正下方的頁面中。 執行這些步驟，將CSS檔案包含在設定檔中。
 
-   1. 在渲染器页面中搜索以下行：
+   1. 在轉譯器頁面中搜尋下列行：
 
       &lt;cq:includeClientLib categories=&quot;xfaforms.profile&quot; />
 
-   1. 在上面的行下面插入以下内容以包含样式表：
+   1. 在上方的行下方插入下列內容，以包含樣式表：
 
       &lt;link href=&quot;/path/to/stylesheet&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;/>
 

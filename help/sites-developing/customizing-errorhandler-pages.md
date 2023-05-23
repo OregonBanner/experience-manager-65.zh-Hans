@@ -1,7 +1,7 @@
 ---
-title: 自定义错误处理程序显示的页面
+title: 自訂錯誤處理常式顯示的頁面
 seo-title: Customizing Pages shown by the Error Handler
-description: AEM附带了用于处理HTTP错误的标准错误处理程序
+description: AEM隨附處理HTTP錯誤的標準錯誤處理常式
 seo-description: AEM comes with a standard error handler for handling HTTP errors
 uuid: aaf940fd-e428-4c7c-af7f-88b1d02c17c6
 contentOwner: Guillaume Carlino
@@ -17,82 +17,82 @@ ht-degree: 2%
 
 ---
 
-# 自定义错误处理程序显示的页面{#customizing-pages-shown-by-the-error-handler}
+# 自訂錯誤處理常式顯示的頁面{#customizing-pages-shown-by-the-error-handler}
 
-AEM附带了用于处理HTTP错误的标准错误处理程序；例如，通过显示：
+AEM隨附處理HTTP錯誤的標準錯誤處理常式；例如，顯示：
 
 ![chlimage_1-67](assets/chlimage_1-67a.png)
 
-系统提供的脚本存在(在 `/libs/sling/servlet/errorhandler`)以响应错误代码，默认情况下，标准CQ实例中提供了以下内容：
+系統提供的指令碼存在(在 `/libs/sling/servlet/errorhandler`)以回應錯誤代碼，標準CQ例項預設提供下列內容：
 
 * 403.jsp
 * 404.jsp
 
 >[!NOTE]
 >
->AEM基于Apache Sling，因此请参见 [https://sling.apache.org/site/errorhandling.html](https://sling.apache.org/site/errorhandling.html) 以了解有关Sling错误处理的详细信息。
+>AEM是以Apache Sling為基礎，所以請參閱 [https://sling.apache.org/site/errorhandling.html](https://sling.apache.org/site/errorhandling.html) 以取得有關Sling錯誤處理的詳細資訊。
 
 >[!NOTE]
 >
->在创作实例上， [CQ WCM调试过滤器](/help/sites-deploying/osgi-configuration-settings.md) 默认情况下处于启用状态。 这始终导致响应代码200。 默认错误处理程序通过向响应写入完整栈栈跟踪进行响应。
+>在作者執行個體上， [CQ WCM偵錯篩選器](/help/sites-deploying/osgi-configuration-settings.md) 預設為啟用。 這會一律產生回應代碼200。 預設錯誤處理常式會透過將完整棧疊追蹤寫入回應來回應。
 >
->在发布实例上，CQ WCM调试过滤器为 *始终* 已禁用（即使配置为已启用）。
+>在發佈執行個體上，CQ WCM偵錯篩選器為 *一律* 停用（即使設定為已啟用）。
 
-## 如何自定义错误处理程序显示的页面 {#how-to-customize-pages-shown-by-the-error-handler}
+## 如何自訂錯誤處理常式顯示的頁面 {#how-to-customize-pages-shown-by-the-error-handler}
 
-您可以开发自己的脚本，以自定义遇到错误时错误处理程序显示的页面。 您的自定义页面将创建于 `/apps` 和覆盖默认页面（位于页面下方） `/libs`)。
+您可以開發自己的指令碼，以便在發生錯誤時自訂錯誤處理常式顯示的頁面。 您的自訂頁面將會建立在 `/apps` 和覆蓋預設頁面(位於 `/libs`)。
 
 >[!NOTE]
 >
->参见 [使用叠加](/help/sites-developing/overlays.md) 了解更多详细信息。
+>另請參閱 [使用覆蓋](/help/sites-developing/overlays.md) 以取得更多詳細資料。
 
-1. 在存储库中，复制默认脚本：
+1. 在存放庫中，複製預設指令碼：
 
    * 从 `/libs/sling/servlet/errorhandler/`
    * 到 `/apps/sling/servlet/errorhandler/`
 
-   由于目标路径在默认情况下不存在，因此，在首次执行此操作时，您将需要创建该路径。
+   由於目的地路徑預設不存在，因此在第一次執行此動作時，您將需要建立它。
 
-1. 导航到 `/apps/sling/servlet/errorhandler`。在此，您可以：
+1. 导航到 `/apps/sling/servlet/errorhandler`。您可以：
 
-   * 编辑相应的现有脚本以提供所需的信息。
-   * 为所需代码创建和编辑新脚本。
+   * 編輯適當的現有指令碼，以提供所需的資訊。
+   * 建立和編輯所需程式碼的新指令碼。
 
-1. 保存更改并进行测试。
-
->[!CAUTION]
->
->404.jsp和403.jsp处理程序经过专门设计，以满足CQ5身份验证的要求；特别是允许在这些错误发生时进行系统登录。
->
->因此，应谨慎地更换这两个处理程序。
-
-### 自定义对HTTP 500错误的响应 {#customizing-the-response-to-http-errors}
-
-HTTP 500错误是由服务器端异常引起的。
-
-* **[500内部服务器错误](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)**
-服务器遇到意外情况，无法完成请求。
-
-当请求处理导致异常时，Apache Sling框架(AEM构建于之上)：
-
-* 记录异常
-* 返回：
-
-   * HTTP响应代码500
-   * 异常栈栈跟踪
-
-   在响应正文中。
-
-按 [自定义错误处理程序显示的页面](#how-to-customize-pages-shown-by-the-error-handler) a `500.jsp` 可创建脚本。 但是，它仅在以下情况下使用 `HttpServletResponse.sendError(500)` 显式执行；即从异常捕获器中执行。
-
-否则，响应代码将设置为500，但 `500.jsp` 脚本未执行。
-
-要处理500个错误，错误处理程序脚本的文件名必须与exception类（或超类）相同。 要处理所有此类例外，您可以创建一个脚本 `/apps/sling/servlet/errorhandler/Throwable.js`p或 `/apps/sling/servlet/errorhandler/Exception.jsp`.
+1. 儲存變更並測試。
 
 >[!CAUTION]
 >
->在创作实例上， [CQ WCM调试过滤器](/help/sites-deploying/osgi-configuration-settings.md) 默认情况下处于启用状态。 这始终导致响应代码200。 默认错误处理程序通过向响应写入完整栈栈跟踪进行响应。
+>404.jsp和403.jsp處理常式是專為滿足CQ5驗證而設計，尤其是在發生這些錯誤時允許系統登入。
 >
->对于自定义错误处理程序，需要代码为500的响应，因此 [需要禁用CQ WCM调试过滤器](/help/sites-deploying/osgi-configuration-settings.md). 这样可确保返回响应代码500，这反过来会触发正确的Sling错误处理程序。
+>因此，取代這兩個處理常式時應格外小心。
+
+### 自訂HTTP 500錯誤的回應 {#customizing-the-response-to-http-errors}
+
+HTTP 500錯誤是由伺服器端例外狀況所造成。
+
+* **[500內部伺服器錯誤](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)**
+伺服器發生未預期的情況，無法完成要求。
+
+當請求處理導致例外狀況時，Apache Sling架構(AEM建置在其上)：
+
+* 記錄例外狀況
+* 傳回：
+
+   * HTTP回應代碼500
+   * 例外狀況棧疊追蹤
+
+   在回應內文中。
+
+作者： [自訂錯誤處理常式顯示的頁面](#how-to-customize-pages-shown-by-the-error-handler) a `500.jsp` 可建立指令碼。 但是，它僅用於 `HttpServletResponse.sendError(500)` 明確地執行，即從例外狀況收集器。
+
+否則，回應代碼會設為500，但 `500.jsp` 指令碼未執行。
+
+若要處理500個錯誤，錯誤處理常式指令碼的檔案名稱必須與exception類別（或超類別）相同。 若要處理所有此類例外，您可以建立指令碼 `/apps/sling/servlet/errorhandler/Throwable.js`p或 `/apps/sling/servlet/errorhandler/Exception.jsp`.
+
+>[!CAUTION]
 >
->在发布实例上，CQ WCM调试过滤器为 *始终* 已禁用（即使配置为已启用）。
+>在作者執行個體上， [CQ WCM偵錯篩選器](/help/sites-deploying/osgi-configuration-settings.md) 預設為啟用。 這會一律產生回應代碼200。 預設錯誤處理常式會透過將完整棧疊追蹤寫入回應來回應。
+>
+>對於自訂錯誤處理常式，需要程式碼為500的回應，因此 [需要停用CQ WCM偵錯篩選器](/help/sites-deploying/osgi-configuration-settings.md). 如此可確保傳回回應代碼500，而這會觸發正確的Sling錯誤處理常式。
+>
+>在發佈執行個體上，CQ WCM偵錯篩選器為 *一律* 停用（即使設定為已啟用）。

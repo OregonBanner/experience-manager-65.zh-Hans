@@ -1,7 +1,7 @@
 ---
-title: 连接到Adobe Analytics和创建框架
+title: 連線到Adobe Analytics和建立框架
 seo-title: Connecting to Adobe Analytics and Creating Frameworks
-description: 了解如何将AEM连接到SiteCatalyst并创建框架。
+description: 瞭解如何將AEM連線至SiteCatalyst和建立架構。
 seo-description: Learn about connecting AEM to SiteCatalyst and creating frameworks.
 uuid: 3820dd24-4193-42ea-aef2-4669ebfeaa9d
 contentOwner: User
@@ -18,45 +18,45 @@ ht-degree: 6%
 
 ---
 
-# 连接到Adobe Analytics和创建框架 {#connecting-to-adobe-analytics-and-creating-frameworks}
+# 連線到Adobe Analytics和建立框架 {#connecting-to-adobe-analytics-and-creating-frameworks}
 
-要在Adobe Analytics中跟踪来自AEM页面的Web数据，请创建Adobe Analytics Cloud服务配置和Adobe Analytics框架：
+若要從Adobe Analytics中的AEM頁面追蹤網頁資料，請建立Adobe Analytics Cloud Services設定和Adobe Analytics架構：
 
-* **Adobe Analytics配置：** 有关您的Adobe Analytics帐户的信息。 Adobe Analytics配置允许AEM连接到Adobe Analytics。 为您使用的每个帐户创建Adobe Analytics配置。
-* **Adobe Analytics框架：** Adobe Analytics报表包属性与CQ变量之间的映射集。 使用框架配置网站数据填充Adobe Analytics报表的方式。 框架与Adobe Analytics配置关联。 您可以为每个配置创建多个框架。
+* **Adobe Analytics設定：** 有關您的Adobe Analytics帳戶的資訊。 Adobe Analytics設定可讓AEM連線至Adobe Analytics。 為您使用的每個帳戶建立Adobe Analytics設定。
+* **Adobe Analytics架構：** Adobe Analytics報表套裝屬性和CQ變數之間的一組對應。 使用架構來設定網站資料如何填入Adobe Analytics報表。 架構與Adobe Analytics設定相關聯。 您可以為每個設定建立多個架構。
 
-将网页与框架关联后，框架将执行该页面及该页面子项的跟踪。 然后，可以从Adobe Analytics中检索页面查看次数，并在站点控制台中显示这些查看次数。
+將網頁與框架建立關聯時，框架會對該頁面以及該頁面的子系執行追蹤。 然後可以從Adobe Analytics擷取頁面檢視，並顯示在Sites主控台中。
 
 ## 前提条件 {#prerequisites}
 
-### Adobe Analytics帐户 {#adobe-analytics-account}
+### Adobe Analytics帳戶 {#adobe-analytics-account}
 
-要在Adobe Analytics中跟踪AEM数据，您必须拥有有效的Adobe Experience Cloud Adobe Analytics帐户。
+若要在Adobe Analytics中追蹤AEM資料，您必須具備有效的Adobe Experience Cloud Adobe Analytics帳戶。
 
-Adobe Analytics帐户必须：
+Adobe Analytics帳戶必須：
 
-* 拥有 **管理员** 权限
-* 已分配给 **Web服务访问** 用户组。
+* 具有 **管理員** 許可權
+* 指派給 **Web服務存取** 使用者群組。
 
 >[!CAUTION]
 >
->提供 **管理员** 权限(在Adobe Analytics内)不足以允许用户从AEM连接到Adobe Analytics。 帐户还必须具有 **Web服务访问** 权限。
+>提供 **管理員** 許可權(在Adobe Analytics內)不足以讓使用者從AEM連線至Adobe Analytics。 帳戶還必須具有 **Web服務存取** 許可權。
 
 ![chlimage_1-67](assets/chlimage_1-67.png)
 
-在继续之前，请确保您的凭据允许您登录Adobe Analytics。 通过以下方式之一：
+繼續之前，請確定您的憑證可讓您登入Adobe Analytics。 藉由下列其中一種方式：
 
-* [Adobe Experience Cloud登录](https://experience.adobe.com/#/@login/home)
+* [Adobe Experience Cloud登入](https://experience.adobe.com/#/@login/home)
 
-* [Adobe Analytics登录](https://sc.omniture.com/login/)
+* [Adobe Analytics登入](https://sc.omniture.com/login/)
 
-### 配置AEM以使用Adobe Analytics数据中心 {#configuring-aem-to-use-your-adobe-analytics-data-centers}
+### 設定AEM以使用您的Adobe Analytics資料中心 {#configuring-aem-to-use-your-adobe-analytics-data-centers}
 
-Adobe Analytics [数据中心](https://experienceleague.adobe.com/docs/analytics/analyze/reports-analytics/reporting-interface/overview-data-collection.html?lang=en) 收集、处理和存储与Adobe Analytics报表包关联的数据。 配置AEM以使用托管Adobe Analytics报表包的数据中心。 您的合同中提到了数据中心。 有关此信息，请联系贵组织的管理员。
+Adobe Analytics [資料中心](https://experienceleague.adobe.com/docs/analytics/analyze/reports-analytics/reporting-interface/overview-data-collection.html?lang=en) 收集、處理和儲存與您的Adobe Analytics報表套裝相關聯的資料。 設定AEM以使用託管Adobe Analytics報表套裝的資料中心。 您的合約中提到了資料中心。 如需此資訊，請聯絡貴組織的管理員。
 
-如有必要，请使用以下内容路由到正确的数据中心： `https://api.omniture.com/`.
+如有必要，請使用下列專案來路由至正確的資料中心： `https://api.omniture.com/`.
 
-如果贵组织需要从特定数据中心收集或检索数据，请使用以下方法：
+如果您的組織需要從特定資料中心收集或擷取資料，請使用下列專案：
 
 | 数据中心 | URL |
 |---|---|
@@ -64,154 +64,154 @@ Adobe Analytics [数据中心](https://experienceleague.adobe.com/docs/analytics
 | 新加坡 | `https://api4.omniture.com/` |
 | 俄勒冈州 | `https://api5.omniture.com/` |
 
-使用 [用于配置OSGi包的Web控制台](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) **AdobeAEM Analytics HTTP客户端**. 添加 **数据中心URL** 适用于托管您的AEM页面为其收集数据的报表包的数据中心。
+使用 [設定OSGi套件組合的Web主控台](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) **AdobeAEM Analytics HTTP使用者端**. 新增 **資料中心URL** 適用於託管報表套裝(您的AEM頁面會收集該套裝的資料)的資料中心。
 
 ![aa-07](assets/aa-07.png)
 
-1. 在Web浏览器中打开Web控制台。 ([https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr))
-1. 要访问控制台，请输入您的凭据。
+1. 在網頁瀏覽器中開啟Web主控台。 ([https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr))
+1. 若要存取主控台，請輸入您的認證。
 
    >[!NOTE]
    >
-   >要了解您是否有权访问此控制台，请与您的站点管理员联系。
+   >若要瞭解您是否有此主控台的存取權，請連絡您的網站管理員。
 
-1. 选择名为的配置项 **AdobeAEM Analytics HTTP客户端**.
-1. 要添加数据中心的URL，请按 **数据中心URL** ，然后在框中键入URL。
+1. 選取名為的組態專案 **AdobeAEM Analytics HTTP使用者端**.
+1. 若要新增資料中心的URL，請按資料中心旁的+按鈕。 **資料中心URL** 清單，並在方塊中輸入URL。
 
-1. 要从列表中删除URL，请单击URL旁边的 — 按钮。
+1. 若要從清單中移除URL，請按一下URL旁邊的 — 按鈕。
 1. 单击“保存”。
 
-## 配置与Adobe Analytics的连接 {#configuring-the-connection-to-adobe-analytics}
+## 設定與Adobe Analytics的連線 {#configuring-the-connection-to-adobe-analytics}
 
 >[!CAUTION]
 >
 >由于 Adobe Analytics API 中的安全性更改，无法再使用 AEM 中包含的 Activity Map 版本。
 >
->的 [ActivityMap插件由Adobe Analytics提供](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html) 现在应使用。
+>此 [Adobe Analytics提供的ActivityMap外掛程式](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html) 現在應該使用。
 
-## 为Activity Map配置 {#configuring-for-the-activity-map}
+## 為Activity Map設定 {#configuring-for-the-activity-map}
 
 >[!CAUTION]
 >
 >由于 Adobe Analytics API 中的安全性更改，无法再使用 AEM 中包含的 Activity Map 版本。
 >
->的 [ActivityMap插件由Adobe Analytics提供](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html) 现在应使用。
+>此 [Adobe Analytics提供的ActivityMap外掛程式](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html) 現在應該使用。
 
-## 创建Adobe Analytics框架 {#creating-a-adobe-analytics-framework}
+## 建立Adobe Analytics架構 {#creating-a-adobe-analytics-framework}
 
-对于您使用的报表包ID(RSID)，您可以控制哪些服务器实例（创作、发布或两者）向报表包贡献数据：
+對於您正在使用的報表套裝ID (RSID)，您可以控制哪些伺服器執行個體（製作、發佈或兩者）會將資料貢獻至報表套裝：
 
-* **全部**:作者和发布实例中的信息会填充报表包。
-* **作者**:只有来自创作实例的信息会填充报表包。
-* **发布**:只有来自发布实例的信息才会填充报表包。
+* **全部**：來自作者和發佈執行個體的資訊會填入報表套裝。
+* **作者**：只有來自作者執行個體的資訊會填入報表套裝。
+* **發佈**：只有發佈執行個體的資訊會填入報表套裝。
 
 >[!NOTE]
 >
->选择服务器实例类型不会限制对Adobe Analytics的调用，它只会控制包含RSID的调用。
+>選取伺服器執行個體的型別不會限制對Adobe Analytics的呼叫，它只會控制哪些呼叫包含RSID。
 >
->例如，框架配置为使用 *diweretail* 报表包和作者是选定的服务器实例。 当页面与框架一起发布时，仍会对Adobe Analytics发起调用，但这些调用不包含RSID。 只有来自创作实例的调用包含RSID。
+>例如，某個框架設定為使用 *diiweretail* 報表套裝和作者是選取的伺服器執行個體。 當頁面與框架一起發佈時，仍會對Adobe Analytics發出呼叫，但這些呼叫不包含RSID。 只有來自作者執行個體的呼叫包含RSID。
 
-1. 使用 **导航**，选择 **工具**, **Cloud Services**，则 **旧版Cloud Services**.
-1. 滚动到 **Adobe Analytics** 选择 **显示配置**.
-1. 单击 **[+]** 链接到Adobe Analytics配置旁边。
+1. 使用 **導覽**，選取 **工具**， **Cloud Services**，則 **舊版Cloud Services**.
+1. 捲動至 **Adobe Analytics** 並選取 **顯示設定**.
+1. 按一下 **[+]** Adobe Analytics設定旁的連結。
 
-1. 在 **创建框架** 对话框：
+1. 在 **建立框架** 對話方塊：
 
    * 指定&#x200B;**标题**。
-   * （可选）您可以指定 **名称**，用于在存储库中存储框架详细信息的节点。
-   * 选择 **Adobe Analytics框架**
+   * 您可選擇指定 **名稱**，適用於將架構詳細資料儲存在存放庫中的節點。
+   * 選取 **Adobe Analytics框架**
 
-   然后单击 **创建**.
+   然後按一下 **建立**.
 
-   随即会打开框架进行编辑。
+   框架隨即開啟以進行編輯。
 
-1. 在 **报表包** 单击侧面板的部分（主面板的右侧） **添加项目**. 然后，使用下拉列表选择报表包ID(例如， `geometrixxauth`)进行交互。
+1. 在 **報表套裝** 側Pod的區段（主面板的右側），按一下 **新增專案**. 然後使用下拉式清單來選取報表套裝ID (例如 `geometrixxauth`)進行互動。
 
    >[!NOTE]
    >
-   >当您选择报表包ID时，左侧的内容查找器中会填充Adobe Analytics变量(SiteCatalyst变量)。
+   >當您選取報表套裝ID時，左側的「內容尋找器」會填入Adobe Analytics變數(SiteCatalyst變數)。
 
-1. 要选择要向报表包发送信息的服务器实例，请使用 **运行模式** 下拉列表（位于报表包ID旁边）。
+1. 若要選取您要傳送資訊至報表套裝的伺服器執行個體，請使用 **執行模式** 下拉式清單（位於報表套裝ID旁）。
 
    ![aa-framework-01](assets/aa-framework-01.png)
 
-1. 要使框架在网站的发布实例上可用，请在 **页面** 选项卡，单击 **激活框架。**
+1. 若要讓架構可用於網站的發佈執行個體，請前往 **頁面** 索引標籤，按一下 **啟動框架。**
 
-### 为Adobe Analytics配置服务器设置 {#configuring-server-settings-for-adobe-analytics}
+### 正在設定Adobe Analytics的伺服器設定 {#configuring-server-settings-for-adobe-analytics}
 
-框架系统允许您更改每个Adobe Analytics框架中的服务器设置。
+框架系統可讓您變更每個Adobe Analytics框架中的伺服器設定。
 
 >[!CAUTION]
 >
->这些设置可确定数据的发送位置和发送方式，因此您必须 *不要篡改这些设置* 让Adobe Analytics代表来设置。
+>這些設定會決定傳送資料的位置和方式，因此您必須執行下列動作 *請勿竄改這些設定* 並讓Adobe Analytics代表自行設定。
 
-首先打开面板。 按旁边的向下箭头 **服务器**:
+從開啟面板開始。 按下旁邊的向下箭頭 **伺服器**：
 
 ![server_001](assets/server_001.png)
 
 * **跟踪服务器**
 
-   * 包含用于发送Adobe Analytics调用的URL
+   * 包含用來傳送Adobe Analytics呼叫的URL
 
-      * `cname`  — 默认为Adobe Analytics帐户的 *公司名称*
-      * `d1`  — 对应于将信息发送到的数据中心( `d1`, `d2`或 `d3`)
-      * `sc.omtrdc.net`  — 域名
+      * `cname`  — 預設為Adobe Analytics帳戶的 *公司名稱*
+      * `d1`  — 對應至傳送資訊的資料中心（以下任一項之一） `d1`， `d2`，或 `d3`)
+      * `sc.omtrdc.net`  — 網域名稱
 
 * **安全跟踪服务器**
 
-   * 与跟踪服务器具有相同的区段
-   * 用于从安全页面发送数据(`https://`)
+   * 具有與追蹤伺服器相同的區段
+   * 用於從安全頁面傳送資料(`https://`)
 
 * **访客命名空间**
 
-   * 命名空间会确定跟踪URL的第一部分。
-   * 例如，将命名空间更改为 **CNAME** 使向Adobe Analytics发出的电话看起来像 **CNAME.d1.omtrdc.net** 而不是默认设置。
+   * 名稱空間會決定追蹤URL的第一部分。
+   * 例如，將名稱空間變更為 **CNAME** 導致向Adobe Analytics發出的呼叫看起來像 **CNAME.d1.omtrdc.net** 而不是預設值。
 
-## 将页面与Adobe Analytics框架关联 {#associating-a-page-with-a-adobe-analytics-framework}
+## 將頁面與Adobe Analytics架構建立關聯 {#associating-a-page-with-a-adobe-analytics-framework}
 
-当页面与Adobe Analytics框架关联时，页面在加载时会向Adobe Analytics发送数据。 页面填充的变量会从框架中的Adobe Analytics变量进行映射和检索。 例如，页面查看次数是从Adobe Analytics中检索的。
+當頁面與Adobe Analytics框架相關聯時，頁面會在載入時傳送資料至Adobe Analytics。 頁面填入的變數會從框架中的Adobe Analytics變數對應及擷取。 例如，頁面檢視是從Adobe Analytics中擷取。
 
-页面的后代将继承与框架的关联。 例如，将站点的根页面与框架关联时，站点的所有页面都与该框架关联。
+頁面的下階會繼承與架構的關聯。 例如，將網站的根頁面與框架建立關聯時，網站的所有頁面都會與框架建立關聯。
 
-1. 从 **站点** 控制台中，选择要设置跟踪的页面。
-1. 打开 **[页面属性](/help/sites-authoring/editing-page-properties.md)**，可直接从控制台或页面编辑器中执行。
-1. 打开**Cloud Services**选项卡。
+1. 從 **網站** 主控台，選取您要設定追蹤的頁面。
+1. 開啟 **[頁面屬性](/help/sites-authoring/editing-page-properties.md)**，直接來自主控台或頁面編輯器。
+1. 開啟**Cloud Services**標籤。
 
-1. 使用 **添加配置** 下拉框选择 **Adobe Analytics** 中。 如果放置了继承，请在选择器可用之前禁用该继承。
+1. 使用 **新增設定** 下拉式清單以選取 **Adobe Analytics** 從可用選項中選取。 如果已設定繼承，請在選取器可供使用之前停用繼承。
 
-1. 的下拉选择器 **Adobe Analytics** 会附加到可用选项。 选择所需的框架配置。
+1. 的下拉式選取器 **Adobe Analytics** 會附加至可用的選項。 選取所需的架構設定。
 
-1. 选择 **保存并关闭**.
-1. 要激活页面和任何连接的配置/文件， **[发布](/help/sites-authoring/publishing-pages.md)** 页面。
-1. 最后一步是访问发布实例上的页面，并使用 **搜索** 组件。
-1. 然后，您可以使用适当的工具检查对Adobe Analytics发出的调用；例如， [Adobe Experience Cloud Debugger](https://experienceleague.adobe.com/docs/experience-platform/debugger/home.html).
-1. 使用提供的示例，调用应包含eVar7中输入的值（即茄子），事件列表应包含event3。
+1. 選取 **儲存並關閉**.
+1. 若要啟動頁面及任何連線的組態/檔案， **[發佈](/help/sites-authoring/publishing-pages.md)** 頁面。
+1. 最後一個步驟是造訪發佈執行個體上的頁面，並使用搜尋關鍵字（例如eggplant） **搜尋** 元件。
+1. 您可以使用適當的工具來檢查對Adobe Analytics發出的呼叫；例如， [Adobe Experience Cloud Debugger](https://experienceleague.adobe.com/docs/experience-platform/debugger/home.html).
+1. 根據提供的範例，呼叫應包含在eVar7中輸入的值（即eggplant），而事件清單應包含event3。
 
 ### 页面视图 {#page-views}
 
-当页面与Adobe Analytics框架关联时，“站点”控制台的“列表”视图中会显示页面查看次数。
+當頁面與Adobe Analytics架構相關聯時，頁面檢視次數會顯示在Sites主控台的「清單」檢視中。
 
-请参阅 [查看页面分析数据](/help/sites-authoring/page-analytics-using.md) 以了解更多详细信息。
+另請參閱 [檢視頁面分析資料](/help/sites-authoring/page-analytics-using.md) 以取得更多詳細資料。
 
-### 配置导入间隔 {#configuring-the-import-interval}
+### 設定匯入間隔 {#configuring-the-import-interval}
 
-配置相应的 **AdobeAEM Managed轮询配置** 服务：
+設定適當的執行個體 **AdobeAEM Managed Polling設定** 服務：
 
-* **轮询间隔**:服务从Adobe Analytics中检索页面查看数据的间隔，以秒为单位。
-默认间隔为43200000毫秒（12小时）。
+* **輪詢間隔**：服務從Adobe Analytics擷取頁面檢視資料的間隔，以秒為單位。
+預設間隔為43200000毫秒（12小時）。
 
-* **启用**:启用或禁用服务。 默认情况下，服务处于启用状态。
+* **啟用**：啟用或停用服務。 依預設，服務已啟用。
 
-要配置此OSGi服务，您可以使用 [Web控制台](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) 或 [存储库中的osgiConfig节点](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository) (服务PID为 `com.day.cq.polling.importer.impl.ManagedPollConfigImpl`)。
+若要設定此OSGi服務，您可以使用 [網頁主控台](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) 或 [存放庫中的osgiConfig節點](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository) (服務PID為 `com.day.cq.polling.importer.impl.ManagedPollConfigImpl`)。
 
-## 编辑Adobe Analytics配置和/或框架 {#editing-adobe-analytics-configurations-and-or-frameworks}
+## 編輯Adobe Analytics設定和/或架構 {#editing-adobe-analytics-configurations-and-or-frameworks}
 
-与创建Adobe Analytics配置或框架时一样，导航到（旧版） **Cloud Services** 屏幕。 选择 **显示配置**，然后单击指向要更新的特定配置的链接。
+建立Adobe Analytics設定或框架時，請導覽至（舊版） **Cloud Services** 畫面。 選取 **顯示設定**，然後按一下您要更新之特定設定的連結。
 
-编辑Adobe Analytics配置时，按 **编辑** 在配置页面本身上打开 **编辑组件** 对话框。
+編輯Adobe Analytics設定時，按下 **編輯** 在設定頁面上時，開啟 **編輯元件** 對話方塊。
 
-## 删除Adobe Analytics框架 {#deleting-adobe-analytics-frameworks}
+## 刪除Adobe Analytics框架 {#deleting-adobe-analytics-frameworks}
 
-要删除Adobe Analytics框架，请首先 [打开以进行编辑](#editing-adobe-analytics-configurations-and-or-frameworks).
+若要刪除Adobe Analytics架構，請先 [開啟以進行編輯](#editing-adobe-analytics-configurations-and-or-frameworks).
 
-然后选择 **删除框架** 从 **页面** 选项卡。
+然後選取 **刪除框架** 從 **頁面** 索引標籤。

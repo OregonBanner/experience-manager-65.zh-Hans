@@ -1,6 +1,6 @@
 ---
-title: Java内容存储库中节点的命名约定
-description: 存储库中的节点受Java内容存储库的命名约定的约束
+title: Jave內容存放庫中節點的命名慣例
+description: 存放庫中的節點須遵守Java內容存放庫的命名慣例
 uuid: 0515c5c5-3e93-4710-983f-c08c146467fc
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -17,59 +17,59 @@ ht-degree: 7%
 
 # 命名约定{#naming-conventions}
 
-存储库中的节点受 [Java内容存储库](/help/sites-developing/the-basics.md#java-content-repository). 但是，AEM对页面节点的名称作了进一步的约定。
+存放庫中的節點受限於的命名慣例 [Java內容存放庫](/help/sites-developing/the-basics.md#java-content-repository). 不過，AEM對頁面節點名稱施加了進一步的慣例。
 
-## 页面的命名约定 {#naming-conventions-for-pages}
+## 頁面的命名慣例 {#naming-conventions-for-pages}
 
-这些命名约定在不同级别实施：
+這些命名慣例會在不同的層級實作：
 
-* JcrUtil:的AEM实施 [JCR实用程序](#jcr-utilities).
-* PageManager:the [页面管理器](#page-manager) 提供页面级操作的方法。
-* 根据使用的UI:
+* JcrUtil：的AEM實施 [JCR公用程式](#jcr-utilities).
+* PageManager： [頁面管理員](#page-manager) 提供頁面層級作業的方法。
+* 根據使用的UI：
 
-   * [标准触屏UI](#standard-ui)
+   * [標準、觸控式UI](#standard-ui)
    * [经典 UI](#classic-ui)
 
-### JCR实用程序 {#jcr-utilities}
+### JCR公用程式 {#jcr-utilities}
 
-[JcrUtil](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/index.html?com/day/cq/commons/jcr/JcrUtil.html) 是JCR实用程序的AEM实施。 验证名称时特别需要注意的是它所控制的字符映射和以下验证：
+[JcrUtil](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/index.html?com/day/cq/commons/jcr/JcrUtil.html) 是JCR公用程式的AEM實作。 驗證名稱特別感興趣的是它控制的字元對應和以下驗證：
 
 * `isValidName`
 
-   * 检查名称是否不为空，并且只包含有效字符。
-   * 可用于检查建议的名称是否有效。
+   * 檢查名稱是否非空白且僅包含有效字元。
+   * 可用來檢查建議的名稱是否有效。
 
 * `createValidName`
 
-   * 这会从任意字符串中创建有效标签。
-   * 它可用于从标题创建名称。
+   * 這會以任意字串建立有效的標籤。
+   * 它可用來從標題建立名稱。
 
-### 页面管理器 {#page-manager}
+### 頁面管理員 {#page-manager}
 
-[PageManager](https://helpx.adobe.com/cn/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/PageManager.html) 提供页面级别操作的方法，具体依据 [JCRUtil](#jcr-utilities).
+[PageManager](https://helpx.adobe.com/cn/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/PageManager.html) 提供頁面層級作業的方法，根據 [JCRUtil](#jcr-utilities).
 
 ### 标准 UI {#standard-ui}
 
-标准触屏UI:
+標準的觸控式UI：
 
-* 在以下任一情况下，根据PageManager施加的限制验证名称：
+* 符合下列任一情況時，請根據PageManager的限制來驗證名稱：
 
-   * 提供页面标题以转换为节点名称
-   * 提供了显式节点名称
+   * 提供頁面標題，以轉換為節點名稱
+   * 提供了明確的節點名稱
 
 ### 经典 UI {#classic-ui}
 
-经典UI施加了更严格的限制：
+傳統UI施加了更嚴格的限制：
 
-* 在以下任一情况下验证显式节点名称时的名称：
+* 當明確節點名稱滿足以下條件時驗證名稱：
 
-   * 提供页面标题以转换为节点名称
-   * 提供了显式节点名称
+   * 提供頁面標題，以轉換為節點名稱
+   * 提供了明確的節點名稱
 
-* 有效字符(在经典UI中创建页面时，即使在 `PageManagerImpl` 允许添加其他字符):
+* 有效字元(從傳統UI中建立頁面時，即使是 `PageManagerImpl` 可允許其他字元)：
 
-   * “a”到“z”
-   * “A”到“Z”
-   * “0”到“9”
-   * _（下划线）
-   * `-` （短划线/减号）
+   * &#39;a&#39;至&#39;z&#39;
+   * &#39;A&#39;至&#39;Z&#39;
+   * &#39;0&#39;到&#39;9&#39;
+   * _ （底線）
+   * `-` （破折號/減號）

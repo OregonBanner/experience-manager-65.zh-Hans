@@ -1,6 +1,6 @@
 ---
-title: 全面搜索
-description: 通过全面的搜索，更快地查找内容。
+title: 完整搜尋
+description: 透過全面搜尋，更快找到您的內容。
 uuid: 21605b96-b467-4d01-9a64-9d0648d539f1
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -22,7 +22,7 @@ AEM 的创作环境提供了多种内容搜索机制，具体取决于资源类�
 
 >[!NOTE]
 >
->在创作环境之外，还可以使用其他机制进行搜索，例如 [查询生成器](/help/sites-developing/querybuilder-api.md) 和 [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md).
+>在製作環境外，也可使用其他機制進行搜尋，例如 [查詢產生器](/help/sites-developing/querybuilder-api.md) 和 [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md).
 
 ## 搜索基础知识 {#search-basics}
 
@@ -44,7 +44,7 @@ AEM 的创作环境提供了多种内容搜索机制，具体取决于资源类�
 
 要搜索和筛选您的资源，请执行以下操作：
 
-1. 打开 **搜索** （带有工具栏中的放大镜）并输入搜索词。 将会提出建议，并且可以选择：
+1. 開啟 **搜尋** （使用工具列中的放大鏡）並輸入搜尋字詞。 將會提出建議並可加以選取：
 
    ![s-01](assets/s-01.png)
 
@@ -53,70 +53,70 @@ AEM 的创作环境提供了多种内容搜索机制，具体取决于资源类�
    ![screen_shot_2018-03-23at101445](assets/screen_shot_2018-03-23at101445.png)
 
 1. 如果需要，您可以删除位置过滤器（选中要删除的过滤器上的 **X**），以在所有控制台/资源类型之间进行筛选。
-1. 将显示结果，并根据控制台和相关资源类型进行分组。
+1. 將顯示結果，並根據控制檯和相關資源型別分組。
 
    您可以选择一种特定的资源（用于未来操作），或通过选择所需的资源类型向下展开；例如&#x200B;**查看全部站点**：
 
-   ![screenshot_2019-03-05at101900](assets/screen-shot_2019-03-05at101900.png)
+   ![screen-shot_2019-03-05at101900](assets/screen-shot_2019-03-05at101900.png)
 
 1. 如果您需要进一步向下展开，请选择“边栏”符号（左上方）以打开侧面板&#x200B;**过滤器和选项**。
 
    ![](do-not-localize/screen_shot_2018-03-23at101542.png)
 
-   根据资源类型，搜索将显示预定义的搜索/筛选条件选择。
+   根據資源型別，搜尋將顯示預先定義的搜尋/篩選條件選擇。
 
-   侧面板允许您选择：
+   側面板可讓您選取：
 
    * 保存的搜索
-   * 搜索目录
+   * 搜尋目錄
    * 标记
-   * 搜索条件；例如，修改日期、发布状态、LiveCopy状态。
+   * 搜尋條件；例如，修改日期、發佈狀態、即時副本狀態。
 
    >[!NOTE]
    >
-   >搜索条件可能会有所不同：
+   >搜尋條件可能有所不同：
    >
    >
    >
-   >    * 根据您选择的资源类型；例如，资产和社区标准显然是专用的。
-   >    * 您的实例作为 [搜索Forms](/help/sites-administering/search-forms.md) 可以自定义(对应于AEM中的位置)。
+   >    * 根據您選取的資源型別，例如Assets和Communities條件具有專業化是可以理解的。
+   >    * 您的執行個體為 [搜尋Forms](/help/sites-administering/search-forms.md) 可自訂(適用於AEM內的位置)。
 
 
-   ![screenshot_2019-03-05at102509](assets/screen-shot_2019-03-05at102509.png)
+   ![screen-shot_2019-03-05at102509](assets/screen-shot_2019-03-05at102509.png)
 
-1. 您还可以添加其他搜索词：
+1. 您也可以新增其他搜尋詞：
 
-   ![screenshot_2019-03-05at102613](assets/screen-shot_2019-03-05at102613.png)
+   ![screen-shot_2019-03-05at102613](assets/screen-shot_2019-03-05at102613.png)
 
 1. 使用 **X**（右上方）关闭&#x200B;**搜索**。
 
 >[!NOTE]
 >
->在搜索结果中选择项目时，搜索条件会被保留。
+>在搜尋結果中選取專案時，搜尋條件會持續存在。
 >
 >当您在搜索结果页面上选择某个项目时，如果使用浏览器后退按钮返回到搜索页面，则搜索条件仍将存在。
 
 ## 保存的搜索 {#saved-searches}
 
-除了按各种方面进行搜索之外，您还可以保存特定的搜索配置以供在以后的阶段检索和使用：
+除了依各種Facet進行搜尋外，您也可以儲存特定的搜尋設定以供擷取，並用於後續階段：
 
-1. 定义搜索标准并选择 **保存**.
+1. 定義搜尋條件並選取 **儲存**.
 
-   ![screenshot_2019-03-05at102613-1](assets/screen-shot_2019-03-05at102613-1.png)
+   ![screen-shot_2019-03-05at102613-1](assets/screen-shot_2019-03-05at102613-1.png)
 
 1. 指定名称，然后使用&#x200B;**保存**&#x200B;进行确认。
 
-   ![screenshot_2019-03-05at102725](assets/screen-shot_2019-03-05at102725.png)
+   ![screen-shot_2019-03-05at102725](assets/screen-shot_2019-03-05at102725.png)
 
 1. 在下次访问搜索面板时，您可以从选择器中选择保存的搜索：
 
-   ![screenshot_2019-03-05at102927](assets/screen-shot_2019-03-05at102927.png)
+   ![screen-shot_2019-03-05at102927](assets/screen-shot_2019-03-05at102927.png)
 
-1. 保存后，您可以：
+1. 儲存後，您可以：
 
-   * 使用 **x** （根据保存的搜索的名称）以启动新查询（保存的搜索本身将不会被删除）。
-   * **编辑保存的搜索**，更改搜索条件，然后 **保存** 再次。
+   * 使用 **x** （針對已儲存搜尋的名稱）以開始新查詢（不會刪除已儲存搜尋本身）。
+   * **編輯已儲存的搜尋**，變更搜尋條件，然後 **儲存** 再來一次。
 
 通过选择保存的搜索并单击搜索面板底部的&#x200B;**编辑保存的搜索**，可以修改保存的搜索。
 
-![screenshot_2019-03-05at103010](assets/screen-shot_2019-03-05at103010.png)
+![screen-shot_2019-03-05at103010](assets/screen-shot_2019-03-05at103010.png)

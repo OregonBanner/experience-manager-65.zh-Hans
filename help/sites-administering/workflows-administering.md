@@ -1,7 +1,7 @@
 ---
 title: 管理工作流实例
 seo-title: Administering Workflow Instances
-description: 了解如何管理工作流实例。
+description: 瞭解如何管理工作流程例項。
 seo-description: Lear how to administer Workflow Instances.
 uuid: 81e53ef5-fe62-4ed4-b2d4-132aa986d5aa
 contentOwner: User
@@ -23,7 +23,7 @@ ht-degree: 84%
 
 >[!NOTE]
 >
->的 [JMX控制台](/help/sites-administering/jmx-console.md#workflow-maintenance) 提供了其他工作流维护操作。
+>此 [JMX主控台](/help/sites-administering/jmx-console.md#workflow-maintenance) 提供其他工作流程維護操作。
 
 提供了一系列控制台来管理您的工作流。使用[全局导航](/help/sites-authoring/basic-handling.md#global-navigation)以打开&#x200B;**工具**&#x200B;窗格，然后选择&#x200B;**工作流**：
 
@@ -99,7 +99,7 @@ ht-degree: 84%
 
 * **故障详细信息**
 打开一个窗口以显示 
-**失败消息**, **步骤**&#x200B;和 **失败堆栈**.
+**失敗訊息**， **步驟**、和 **失敗棧疊**.
 
 * **打开历史记录**
 显示工作流历史记录的详细信息。
@@ -120,11 +120,11 @@ ht-degree: 84%
 
 最大限度地减少工作流实例的数量可以提高工作流引擎的性能，因此，您可以定期从存储库中清除已完成或正在运行的工作流实例。
 
-配置 **AdobeGranite工作流清除配置** 根据工作流实例的年龄和状态清除工作流实例。 您还可以清除所有模型或特定模型的工作流实例。
+設定 **AdobeGranite工作流程清除設定** 若要根據工作流程執行個體的年齡和狀態來永久刪除工作流程執行個體，請執行下列步驟： 您还可以清除所有模型或特定模型的工作流实例。
 
 您还可以创建多个服务配置以清除满足不同条件的工作流实例。例如，创建一个配置，以便在特定工作流模型的实例的运行时间显著超出预期时间时清除这些实例。创建另一个配置，以便在一定天数后清除所有已完成的工作流，从而最大限度地减小存储库。
 
-要配置服务，您可以使用 [Web控制台](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) 或 [将OSGi配置添加到存储库](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository). 下表介绍了任一方法所需的属性。
+若要設定服務，您可以使用 [網頁主控台](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) 或 [將OSGi設定新增至存放庫](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository). 下表說明任一方法所需的屬性。
 
 >[!NOTE]
 >
@@ -160,7 +160,7 @@ ht-degree: 84%
   <tr>
    <td>要清除的模型</td>
    <td>scheduledpurge.modelIds</td>
-   <td><p>要清除的工作流模型的 ID。ID是模型节点的路径，例如：<br /> /var/workflow/models/dam/update_asset<br /> </p> <p>要指定多个模型，请单击 Web 控制台中的 + 按钮。 </p> <p>请勿指定任何值以清除所有工作流模型的实例。</p> </td>
+   <td><p>要清除的工作流模型的 ID。ID是模型節點的路徑，例如：<br /> /var/workflow/models/dam/update_asset<br /> </p> <p>要指定多个模型，请单击 Web 控制台中的 + 按钮。 </p> <p>請勿指定任何值以清除所有工作流程模型的執行個體。</p> </td>
   </tr>
   <tr>
    <td>工作流时限</td>
@@ -172,7 +172,7 @@ ht-degree: 84%
 
 ## 设置收件箱的最大大小 {#setting-the-maximum-size-of-the-inbox}
 
-您可以通过配置 **AdobeGranite工作流服务**，使用 [Web控制台](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) 或 [将OSGi配置添加到存储库](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository). 下表介绍了为任一方法配置的属性。
+您可以透過設定 **AdobeGranite工作流程服務**，使用 [網頁主控台](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) 或 [將OSGi設定新增至存放庫](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository). 下表說明您為任一方法設定的屬性。
 
 >[!NOTE]
 >
@@ -186,7 +186,7 @@ ht-degree: 84%
 
 ## 对客户拥有的数据存储使用工作流变量 {#using-workflow-variables-customer-datastore}
 
-工作流处理的数据存储在 Adobe 提供的存储 (JCR) 中。此类数据本质上可能是敏感的。您可能希望将所有用户定义的元数据/数据保存在您自己的托管存储中，而不是 Adobe 提供的存储中。这些部分介绍了如何为外部存储设置这些变量。
+工作流处理的数据存储在 Adobe 提供的存储 (JCR) 中。此类数据本质上可能是敏感的。您可能希望将所有用户定义的元数据/数据保存在您自己的托管存储中，而不是 Adobe 提供的存储中。以下各節說明如何為外部儲存設定這些變數。
 
 ### 设置模型以使用元数据的外部存储 {#set-model-for-external-storage}
 
@@ -194,7 +194,7 @@ ht-degree: 84%
 
 属性 *userMetadataPersistenceEnabled* 将存储在工作流模型的 *jcr:content 节点*&#x200B;上。此标志将作为 *cq:userMetaDataCustomPersistenceEnabled* 保留在工作流元数据中。
 
-下图显示了如何在工作流中设置标记。
+下圖顯示如何在工作流程上設定標幟。
 
 ![workflow-externalize-config](assets/workflow-externalize-config.png)
 

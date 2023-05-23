@@ -1,7 +1,7 @@
 ---
-title: 添加Clientlibs
+title: 新增Clientlibs
 seo-title: Add Clientlibs
-description: 添加ClientLibraryFolder
+description: 新增ClientLibraryFolder
 seo-description: Add a ClientLibraryFolder
 uuid: 2944923d-caca-4607-81a4-4122a2ce8e41
 contentOwner: User
@@ -18,54 +18,54 @@ ht-degree: 1%
 
 ---
 
-# 添加Clientlibs {#add-clientlibs}
+# 新增Clientlibs {#add-clientlibs}
 
-## 添加ClientLibraryFolder (clientlibs) {#add-a-clientlibraryfolder-clientlibs}
+## 新增ClientLibraryFolder (clientlibs) {#add-a-clientlibraryfolder-clientlibs}
 
-创建名为的ClientLibraryFolder `clientlibs` 其中将包含用于呈现网站页面的JS和CSS。
+建立名為的ClientLibraryFolder `clientlibs` 其中將包含用於呈現網站頁面的JS和CSS。
 
-此 `categories` 为此客户端库指定的属性值是用于直接从内容页面包含此clientlib或将其嵌入其他clientlib的标识符。
+此 `categories` 指定給此使用者端程式庫的屬性值是用來直接從內容頁面包含此clientlib或將其嵌入其他clientlibs的識別碼。
 
-1. 使用 **CRXDE Lite**，展开 `/etc/designs`
+1. 使用 **CRXDE Lite**，展開 `/etc/designs`
 
-1. 右键单击 `an-scf-sandbox` 并选择 `Create Node`
+1. 按一下右鍵 `an-scf-sandbox` 並選取 `Create Node`
 
    * 名称 : `clientlibs`
    * 类型 : `cq:ClientLibraryFolder`
 
-1. 单击 **确定**
+1. 按一下 **確定**
 
 ![add-client-library](assets/add-client-library.png)
 
-在 **属性** 选项卡中的新 `clientlibs` 节点，输入 **类别** 属性：
+在 **屬性** 索引標籤以取得新的 `clientlibs` 節點，輸入 **類別** 屬性：
 
-* 名称： **类别**
-* 类型： **字符串**
+* 名稱： **類別**
+* 型別： **字串**
 * 值： **apps.an-scf-sandbox**
-* 单击 **添加**
-* 单击 **全部保存**
+* 按一下 **新增**
+* 按一下 **全部儲存**
 
-注意：在类别值前面加上“apps”。 是一个约定，用于将“拥有的应用程序”标识为/apps文件夹中的内容，而不是/libs中的内容。  重要信息：添加占位符 `js.tx`t和 **`css.txt`** 文件。 （正式来说，它不是cq：ClientLibraryFolder，没有它们。）
+注意：在類別值前面加上「apps」。 是用於將「擁有的應用程式」識別為/apps資料夾中的慣例，而非/libs。  重要：新增預留位置 `js.tx`t和 **`css.txt`** 檔案。 （官方上並不是cq：ClientLibraryFolder沒有它們。）
 
-1. 右键单击 **`/etc/designs/an-scf-sandbox/clientlibs`**
-1. 选择 **创建文件……**
-1. 输入 **名称：** `css.txt`
-1. 选择 **创建文件……**
-1. 输入 **名称：** `js.txt`
-1. 单击 **全部保存**
+1. 按一下右鍵 **`/etc/designs/an-scf-sandbox/clientlibs`**
+1. 選取 **建立檔案……**
+1. 輸入 **名稱：** `css.txt`
+1. 選取 **建立檔案……**
+1. 輸入 **名稱：** `js.txt`
+1. 按一下 **全部儲存**
 
 ![clientlibs-css](assets/clientlibs-css.png)
 
-css.txt和js.txt的第一行标识了找到以下文件列表的基本位置。
+css.txt和js.txt的第一行會識別要找到下列檔案清單的基本位置。
 
-尝试将css.txt的内容设置为
+嘗試將css.txt的內容設定為
 
 ```
 #base=.
  style.css
 ```
 
-然后，在clientlibs下创建一个名为style.css的文件，并将内容设置为
+然後在clientlibs下建立名為style.css的檔案，並將內容設定為
 
 `body {`
 
@@ -73,24 +73,24 @@ css.txt和js.txt的第一行标识了找到以下文件列表的基本位置。
 
 `}`
 
-### 嵌入SCF Clientlibs {#embed-scf-clientlibs}
+### 內嵌SCF Clientlibs {#embed-scf-clientlibs}
 
-在 **属性** 选项卡 `clientlibs` 节点，输入多值字符串属性 **嵌入**. 这嵌入了必需的 [用于SCF组件的客户端库(clientlibs)](/help/communities/client-customize.md#clientlibs-for-scf). 在本教程中，添加了社区组件所需的许多clientlibs。
+在 **屬性** 的索引標籤 `clientlibs` 節點，輸入多值字串屬性 **內嵌**. 這會嵌入必要的 [適用於SCF元件的使用者端程式庫(clientlibs)](/help/communities/client-customize.md#clientlibs-for-scf). 在本教學課程中，我們將新增Communities元件所需的許多clientlibs。
 
-**注释** 由于需要考虑便利性与针对每个页面下载的clientlibs的大小/速度，因此这不一定是生产站点所需的使用方法。
+**注意** 這可能是或不可能是用於生產網站的理想方法，因為需要考量便利性與每個頁面下載的clientlibs大小/速度。
 
-如果仅在一个页面上使用一个功能，则可以直接在页面上包括该功能的完整clientlib，例如，
+如果僅在一個頁面上使用一個功能，您可以直接在頁面上包含該功能的完整clientlib，例如
 
 `% ui:includeClientLib categories=cq.social.hbs.forum" %`
 
-在本例中，包括所有这些库以及更基本的SCF clientlibs（创作库的clientlibs）：
+在此情況下，請將它們全部納入，以偏好使用作者clientlibs中最基本的SCF clientlibs：
 
 * 名称 : **`embed`**
 * 类型 : **`String`**
 * 单击 **`Multi`**
-* 值: **`cq.social.scf`**
+* 价值: **`cq.social.scf`**
 
-   * 此时会弹出一个对话框，单击 **`+`** 在每个条目之后添加以下clientlib类别：
+   * 它會彈出一個對話方塊，按一下 **`+`** 在每個專案之後新增下列clientlib類別：
 
       * **`cq.ckeditor`**
       * **`cq.social.author.hbs.comments`**
@@ -98,42 +98,42 @@ css.txt和js.txt的第一行标识了找到以下文件列表的基本位置。
       * **`cq.social.author.hbs.rating`**
       * **`cq.social.author.hbs.reviews`**
       * **`cq.social.author.hbs.voting`**
-      * 单击 **确定**
+      * 按一下 **確定**
 
-* 单击 **全部保存**
+* 按一下 **全部儲存**
 
 ![scf-clientlibs](assets/scf-clientlibs.png)
 
-这是如何 `/etc/designs/an-scf-sandbox/clientlibs` 现在应显示在存储库中：
+這是如何進行 `/etc/designs/an-scf-sandbox/clientlibs` 現在應該會出現在存放庫中：
 
 ![scf-clientlibs-view](assets/scf-clientlibs1.png)
 
-### 在播放页面模板中包含Clientlibs {#include-clientlibs-in-playpage-template}
+### 在PlayPage範本中包含Clientlibs {#include-clientlibs-in-playpage-template}
 
-不包括 `apps.an-scf-sandbox` ClientLibraryFolder类别中，由于必需的Javascript和样式将不可用，因此SCF组件将无法正常工作或设置样式。
+不包括 `apps.an-scf-sandbox` ClientLibraryFolder類別時，SCF元件將無法正常運作，也無法設定樣式，因為無法取得必要的Javascript和樣式。
 
-例如，如果不包含clientlibs，SCF注释组件将无样式显示：
+例如，若不包含clientlibs，SCF註解元件會以無樣式顯示：
 
 ![clientlibs-comment](assets/clientlibs-comment.png)
 
-包含apps.an-scf-sandbox clientlibs后，SCF注释组件显示为已设置样式：
+納入apps.an-scf-sandbox clientlibs後，SCF comments元件會以樣式顯示：
 
 ![clientlibs-comment-styled](assets/clientlibs-comment1.png)
 
-include语句属于 `head` 部分 `html` 脚本。 默认 **`foundation head.jsp`** 包含一个可以覆盖的脚本： **`headlibs.jsp`**.
+include陳述式屬於 `head` 部分 `html` 指令碼。 預設 **`foundation head.jsp`** 包含可覆蓋的指令碼： **`headlibs.jsp`**.
 
-**复制headlibs.jsp并包含clientlibs：**
+**複製headlibs.jsp並包含clientlibs：**
 
-1. 使用 **CRXDE Lite**，选择 **`/libs/foundation/components/page/headlibs.jsp`**
+1. 使用 **CRXDE Lite**，選取 **`/libs/foundation/components/page/headlibs.jsp`**
 
-1. 右键单击并选择 **复制** （或从工具栏中选择复制）
+1. 按一下右鍵並選取 **複製** （或從工具列選取「複製」）
 1. 选择 **`/apps/an-scf-sandbox/components/playpage`**
-1. 右键单击并选择 **粘贴** （或从工具栏中选择粘贴）
-1. 双击 **`headlibs.jsp`** 以打开它
-1. 将以下行附加到文件的末尾
+1. 按一下右鍵並選取 **貼上** （或從工具列選取「貼上」）
+1. 按兩下 **`headlibs.jsp`** 以開啟
+1. 將下列行附加至檔案結尾
    **`<ui:includeClientLib categories="apps.an-scf-sandbox"/>`**
 
-1. 单击 **全部保存**
+1. 按一下 **全部儲存**
 
 ```xml
 <%@ page session="false" %><%
@@ -145,44 +145,44 @@ include语句属于 `head` 部分 `html` 脚本。 默认 **`foundation head.jsp
 <ui:includeClientLib categories="apps.an-scf-sandbox"/>
 ```
 
-在浏览器中加载您的网站，然后查看背景是否不是蓝色阴影。
+在瀏覽器中載入您的網站，並檢視背景是否不是藍色陰影。
 
 [https://localhost:4502/content/an-scf-sandbox/en/play.html](https://localhost:4502/content/an-scf-sandbox/en/play.html)
 
-![社区播放](assets/community-play.png)
+![社群互動](assets/community-play.png)
 
-### 目前保存您的工作 {#saving-your-work-so-far}
+### 目前為止正在儲存您的工作 {#saving-your-work-so-far}
 
-此时，存在一个极简沙盒，可能值得另存为包，这样在播放时，如果您的存储库损坏并且您想要重新开始，则可以关闭服务器，重命名或删除文件夹crx-quickstart/ ，打开服务器，上载并安装此保存的包，而不必重复这些最基本的步骤。
+此時，存在一個極簡沙箱，並且可能值得另存為套件，以便在播放時，如果您的存放庫損壞並且您想要重新開始，您可以關閉伺服器、重新命名或刪除資料夾crx-quickstart/、開啟伺服器、上傳和安裝此儲存的套件，並且不必重複這些最基本的步驟。
 
-此包已存在于 [创建示例页面](/help/communities/create-sample-page.md) 教程适用于迫不及待地想跳进来开始玩游戏的人！...
+此套件存在於 [建立範例頁面](/help/communities/create-sample-page.md) 教學課程適用於迫不及待想跳進來開始播放的人！...
 
-要创建资源包，请执行以下操作：
+若要建立套件：
 
-* 在CRXDE Lite中，单击 [包图标](https://localhost:4502/crx/packmgr/)
-* 单击 **创建包**
+* 從CRXDE Lite按一下 [封裝圖示](https://localhost:4502/crx/packmgr/)
+* 按一下 **建立封裝**
 
-   * 包名称： an-scf-sandbox-minimal-pkg
-   * 版本：0.1
+   * 套件名稱： an-scf-sandbox-minimal-pkg
+   * 版本： 0.1
    * 组: `leave as default`
-   * 单击 **确定**
+   * 按一下 **確定**
 
-* 单击 **编辑**
+* 按一下 **編輯**
 
-   * 选择 **筛选器** 选项卡
+   * 選取 **篩選器** 標籤
 
-      * 单击 **添加筛选器**
-      * 根路径：浏览到 `/apps/an-scf-sandbox`
-      * 单击 **完成**
-      * 单击 **添加筛选器**
-      * 根路径：浏览到 `/etc/designs/an-scf-sandbox`
-      * 单击 **完成**
-      * 单击 **添加筛选器**
-      * 根路径：浏览到 `/content/an-scf-sandbox**`
-      * 单击 **完成**
-   * 单击 **保存**
+      * 按一下 **新增篩選器**
+      * 根路徑：瀏覽至 `/apps/an-scf-sandbox`
+      * 按一下 **完成**
+      * 按一下 **新增篩選器**
+      * 根路徑：瀏覽至 `/etc/designs/an-scf-sandbox`
+      * 按一下 **完成**
+      * 按一下 **新增篩選器**
+      * 根路徑：瀏覽至 `/content/an-scf-sandbox**`
+      * 按一下 **完成**
+   * 按一下 **儲存**
 
 
-* 单击 **生成**
+* 按一下 **建置**
 
-现在，您可以选择 **下载** 将其保存到磁盘，并 **上传包** 其他位置，以及选择 **更多>复制** 以将沙盒推送到本地主机发布实例以扩展沙盒的领域。
+現在您可以選取 **下載** 以儲存至磁碟及 **上傳套裝** 其他位置，以及選取 **更多>復寫** 以便將沙箱推送至localhost發佈執行個體，以擴展沙箱的範圍。

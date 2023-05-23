@@ -1,6 +1,6 @@
 ---
 title: 使用 Dynamic Media
-description: 了解如何使用Dynamic Media投放资源以供在Web、移动和社交网站上使用。
+description: 瞭解如何使用Dynamic Media傳送資產，以便在網路、行動裝置和社交網站上使用。
 uuid: 4dc0f436-d20e-4e8b-aeff-5515380fa44d
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -13,25 +13,25 @@ feature: Collaboration,Asset Management
 source-git-commit: f4b7566abfa0a8dbb490baa0e849de6c355a3f06
 workflow-type: tm+mt
 source-wordcount: '419'
-ht-degree: 32%
+ht-degree: 8%
 
 ---
 
 # 使用 Dynamic Media {#working-with-dynamic-media}
 
-[Dynamic Media 有助于按需提供丰富的产品销售和市场营销可视资产，还能根据 Web、移动设备、社交网站等不同销售渠道的各种需求自动调整资产供应情况。](https://business.adobe.com/products/experience-manager/assets/dynamic-media.html)Dynamic Media使用一组主要源资源，通过其可扩展、性能优化的全球网络实时生成和提供多种多样的丰富内容。
+[Dynamic Media](https://business.adobe.com/products/experience-manager/assets/dynamic-media.html) 協助提供豐富的視覺化銷售和行銷資產（隨選提供），可自動調整規模，以因應網路、行動裝置和社交網站的使用需求。 Dynamic Media使用一組主要來源資產，透過其全球性、可擴充、效能最佳化的網路，即時產生並傳送多種多樣的豐富內容。
 
-Dynamic Media提供交互式查看体验，包括缩放、360度旋转和视频。Dynamic Media独特地整合了Adobe Experience Manager数字资产管理(Assets)解决方案的工作流，以简化和简化数字营销活动管理流程。
+Dynamic Media提供互動式檢視體驗，包括縮放、360度旋轉和視訊。 Dynamic Media以獨特方式整合Adobe Experience Manager數位資產管理(Assets)解決方案的工作流程，以簡化及簡化數位行銷活動管理流程。
 
 <!-- >ARTICLE IS MISSING. GIVES 404 [!NOTE]
 >
 >A Community article is available on [Working with Adobe Experience Manager and Dynamic Media](https://helpx.adobe.com/experience-manager/using/aem_dynamic_media.html). -->
 
-## Dynamic Media 的功能 {#what-you-can-do-with-dynamic-media}
+## 您可以使用Dynamic Media做什麼 {#what-you-can-do-with-dynamic-media}
 
-通过 Dynamic Media，您可以在发布资产前对其进行管理。中详细介绍了如何使用一般资产 [使用数字资产](manage-assets.md). 一般主题包括上传、下载、编辑和发布资产；查看和编辑属性，以及搜索资产。
+Dynamic Media可讓您在發佈資產之前先管理資產。 中會詳細說明如何使用一般資產 [使用數位資產](manage-assets.md). 一般主題包括上傳、下載、編輯和發佈資產；檢視和編輯屬性，以及搜尋資產。
 
-仅限Dynamic Media的功能包括：
+僅限Dynamic Media的功能包括下列專案：
 
 * [传送横幅](carousel-banners.md)
 * [图像集](image-sets.md)
@@ -46,46 +46,46 @@ Dynamic Media提供交互式查看体验，包括缩放、360度旋转和视频�
 * [管理资源](managing-assets.md)
 * [使用 Quickview 创建自定义弹出窗口](custom-pop-ups.md)
 
-另请参阅 [设置Dynamic Media](administering-dynamic-media.md).
+另請參閱 [設定Dynamic Media](administering-dynamic-media.md).
 
 >[!NOTE]
 >
->要了解使用Dynamic Media与将Dynamic Media Classic与Adobe Experience Manager集成之间的区别，请参阅 [Dynamic Media Classic集成与Dynamic Media](/help/sites-administering/scene7.md#aem-scene-integration-versus-dynamic-media).
+>若要瞭解使用Dynamic Media與將Dynamic Media Classic與Adobe Experience Manager整合之間的差異，請參閱 [Dynamic Media Classic整合與Dynamic Media](/help/sites-administering/scene7.md#aem-scene-integration-versus-dynamic-media).
 
-## 启用Dynamic Media与禁用Dynamic Media {#dynamic-media-on-versus-dynamic-media-off}
+## 啟用Dynamic Media與停用Dynamic Media {#dynamic-media-on-versus-dynamic-media-off}
 
-您可以通过以下特征来判断是否已启用（打开）Dynamic Media：
+您可以透過下列特性來判斷是否已啟用（開啟） Dynamic Media：
 
-* 下载或预览资源时，可以使用动态演绎版。
-* 图像集、旋转集和混合媒体集均可用。
-* 创建了 PTIFF 演绎版。
+* 下載或預覽資產時，可使用動態轉譯。
+* 影像集、迴轉集、混合媒體集可供使用。
+* 已建立PTIFF轉譯。
 
-当您选择图像资源时，资源的视图与Dynamic Media不同 [已启用](config-dynamic.md#enabling-dynamic-media). Dynamic Media使用按需HTML5查看器。
+當您選取影像資產時，資產的檢視會與Dynamic Media不同 [已啟用](config-dynamic.md#enabling-dynamic-media). Dynamic Media使用隨選HTML5檢視器。
 
-### 动态演绎版 {#dynamic-renditions}
+### 動態轉譯 {#dynamic-renditions}
 
-当 Dynamic Media 处于启用状态时，可以使用图像和查看器预设等动态演绎版（在&#x200B;**[!UICONTROL 动态]**&#x200B;下）。
+動態轉譯，例如影像和檢視器預設集(在 **[!UICONTROL 動態]**)在啟用Dynamic Media時可供使用。
 
 ![chlimage_1-358](assets/chlimage_1-358.png)
 
-### 图像集、旋转集和混合媒体集 {#image-sets-spins-sets-mixed-media-sets}
+### 影像集、旋轉集、混合媒體集 {#image-sets-spins-sets-mixed-media-sets}
 
-当 Dynamic Media 处于启用状态时，可以使用图像集、旋转集和混合媒体集。
+如果啟用Dynamic Media，則可使用影像集、迴轉集和混合媒體集。
 
 ![chlimage_1-359](assets/chlimage_1-359.png)
 
-### PTIFF演绎版 {#ptiff-renditions}
+### PTIFF轉譯 {#ptiff-renditions}
 
-启用了Dynamic Media的资源包括 `pyramid.tiffs`.
+Dynamic Media啟用的資產包括 `pyramid.tiffs`.
 
 ![chlimage_1-360](assets/chlimage_1-360.png)
 
-### 资产视图更改 {#asset-views-change}
+### 資產檢視變更 {#asset-views-change}
 
-启用Dynamic Media后，您可以通过单击 `+` 和 `-` 按钮。您还可以单击/点按以放大特定区域。还原会将您带到原始版本，您可以通过单击对角线箭头使图像变为全屏。已启用Dynamic Media看起来像这样：
+啟用Dynamic Media後，您可以按一下 `+` 和 `-` 按鈕。 您也可以按一下/點選以放大特定區域。 「回覆」會將您帶至原始版本，您可以按一下對角線箭頭，使影像變成全熒幕。 已啟用Dynamic Media看起來像這樣：
 
 ![chlimage_1-361](assets/chlimage_1-361.png)
 
-禁用Dynamic Media后，您可以放大、缩小并恢复到原始大小：
+停用Dynamic Media後，您可以放大和縮小並還原為原始大小：
 
 ![chlimage_1-362](assets/chlimage_1-362.png)

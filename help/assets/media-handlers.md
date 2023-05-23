@@ -1,6 +1,6 @@
 ---
-title: 使用媒体处理程序和工作流处理资源
-description: 了解媒体处理程序以及如何使用工作流对您的数字资产执行任务。
+title: 使用媒體處理常式和工作流程處理資產
+description: 瞭解媒體處理常式，以及如何使用工作流程對您的數位資產執行任務。
 mini-toc-levels: 1
 contentOwner: AG
 role: User
@@ -13,31 +13,31 @@ ht-degree: 3%
 
 ---
 
-# 使用媒体处理程序和工作流处理资源 {#processing-assets-using-media-handlers-and-workflows}
+# 使用媒體處理常式和工作流程處理資產 {#processing-assets-using-media-handlers-and-workflows}
 
-[!DNL Adobe Experience Manager Assets] 附带了一组用于处理资产的默认工作流和媒体处理程序。 工作流定义要在资产上执行的任务，然后将特定任务委派给媒体处理程序，例如缩略图生成或元数据提取。
+[!DNL Adobe Experience Manager Assets] 隨附一組預設工作流程和媒體處理常式，以處理資產。 工作流程會定義要在資產上執行的任務，然後將特定任務委派給媒體處理常式，例如縮圖產生或中繼資料擷取。
 
-可以将工作流配置为在上传特定MIME类型的资产时自动执行。 处理步骤由一系列步骤定义 [!DNL Assets] 媒体处理程序。 [!DNL Experience Manager] 提供了一些 [内置处理程序，](#default-media-handlers) 其他选项可以是 [已开发自定义](#creating-a-new-media-handler) 或通过将该流程委派给 [命令行工具](#command-line-based-media-handler).
+您可以將工作流程設定為在上傳特定MIME型別的資產時自動執行。 處理步驟的定義如下 [!DNL Assets] 媒體處理常式。 [!DNL Experience Manager] 提供一些 [內建處理常式，](#default-media-handlers) 其他選項可能是 [自訂開發](#creating-a-new-media-handler) 或透過將程式委派給 [命令列工具](#command-line-based-media-handler).
 
-媒体处理程序是中的服务 [!DNL Assets] 对资产执行特定操作的属性。 例如，将MP3音频文件上传到时 [!DNL Experience Manager]，工作流会触发提取元数据并生成缩略图的MP3处理程序。 媒体处理程序通常与工作流结合使用。 中支持的最常见的MIME类型 [!DNL Experience Manager]. 可以通过扩展/创建工作流、扩展/创建媒体处理程序或禁用/启用媒体处理程序对资产执行特定任务。
+媒體處理常式是中的服務 [!DNL Assets] 對資產執行特定動作的使用者。 例如，將MP3音訊檔案上傳至時 [!DNL Experience Manager]，工作流程會觸發擷取中繼資料並產生縮圖的MP3處理常式。 媒體處理常式通常會與工作流程搭配使用。 最常見的MIME型別支援於 [!DNL Experience Manager]. 您可以透過延伸/建立工作流程、延伸/建立媒體處理常式或停用/啟用媒體處理常式，在資產上執行特定工作。
 
 >[!NOTE]
 >
->请参阅 [资源支持的格式](assets-formats.md) 页面，了解支持的所有格式的说明 [!DNL Assets] 以及每种格式支持的功能。
+>請參閱 [資產支援的格式](assets-formats.md) 頁面，以取得支援的所有格式的說明 [!DNL Assets] 以及每種格式支援的功能。
 
-## 默认媒体处理程序 {#default-media-handlers}
+## 預設媒體處理常式 {#default-media-handlers}
 
-以下媒体处理程序在中可用 [!DNL Assets] 并处理最常见的MIME类型：
+下列媒體處理常式可在 [!DNL Assets] 並處理最常見的MIME型別：
 
 <!-- TBD: Java versions shouldn't be set to 1.5. Must be updated.
 -->
 
-| 处理程序名称 | 服务名称（在系统控制台中） | 支持的MIME类型 |
+| 處理常式名稱 | 服務名稱（在系統主控台中） | 支援的MIME型別 |
 |--------------|--------------------------------------|----------------------|
-| [!UICONTROL 文本处理程序] | com.day.cq.dam.core.impl.handler.TextHandler | text/plain |
+| [!UICONTROL TextHandler] | com.day.cq.dam.core.impl.handler.TextHandler | text/plain |
 | [!UICONTROL PdfHandler] | com.day.cq.dam.handler.standard.pdf.PdfHandler | <ul><li>application/pdf</li><li>application/illustrator</li></ul> |
 | [!UICONTROL JpegHandler] | com.day.cq.dam.core.impl.handler.JpegHandler | image/jpeg |
-| [!UICONTROL Mp3Handler] | com.day.cq.dam.handler.standard.mp3.Mp3Handler | audio/mpeg<br><b>重要</b>  — 上传MP3文件时，它是 [使用第三方库处理](https://www.zxdr.it/programmi/SistEvolBDD/LibJava/doc/de/vdheide/mp3/MP3File.html). 如果MP3具有可变比特率(VBR)，则库会计算不准确的近似长度。 |
+| [!UICONTROL Mp3Handler] | com.day.cq.dam.handler.standard.mp3.Mp3Handler | audio/mpeg<br><b>重要</b>  — 上傳MP3檔案時，它會 [使用協力廠商程式庫處理](https://www.zxdr.it/programmi/SistEvolBDD/LibJava/doc/de/vdheide/mp3/MP3File.html). 如果MP3有可變位元速率(VBR)，程式庫會計算不精確的近似長度。 |
 | [!UICONTROL ZipHandler] | com.day.cq.dam.handler.standard.zip.ZipHandler | <ul><li>application/java-archive </li><li> application/zip</li></ul> |
 | [!UICONTROL PictHandler] | com.day.cq.dam.handler.standard.pict.PictHandler | image/pict |
 | [!UICONTROL StandardImageHandler] | com.day.cq.dam.core.impl.handler.StandardImageHandler | <ul><li>image/gif </li><li> image/png </li> <li>application/photoshop </li> <li>image/jpeg </li><li> image/tiff </li> <li>image/x-ms-bmp </li><li> image/bmp</li></ul> |
@@ -45,127 +45,127 @@ ht-degree: 3%
 | [!UICONTROL MSPowerPointHandler] | com.day.cq.dam.handler.standard.msoffice.MSPowerPointHandler | application/vnd.ms-powerpoint |
 | [!UICONTROL OpenOfficeHandler] | com.day.cq.dam.handler.standard.ooxml.OpenOfficeHandler | <ul><li>application/vnd.openxmlformats-officedocument.wordprocessingml.document</li><li> application/vnd.openxmlformats-officedocument.spreadsheetml.sheet</li><li> application/vnd.openxmlformats-officedocument.presentationml.presentation</li></ul> |
 | [!UICONTROL EPubHandler] | com.day.cq.dam.handler.standard.epub.EPubHandler | application/epub+zip |
-| [!UICONTROL GenericAssetHandler] | com.day.cq.dam.core.impl.handler.GenericAssetHandler | 如果未找到其他处理程序来从资产中提取数据，则进行回退 |
+| [!UICONTROL GenericAssetHandler] | com.day.cq.dam.core.impl.handler.GenericAssetHandler | 找不到其他處理常式來從資產擷取資料時備援 |
 
 {style="table-layout:auto"}
 
-所有处理程序都会执行以下任务：
+所有處理常式都會執行下列工作：
 
-* 从资源中提取所有可用的元数据。
-* 创建资源的缩略图图像。
+* 從資產擷取所有可用的中繼資料。
+* 建立資產的縮圖影像。
 
-要查看活动媒体处理程序，请执行以下操作：
+若要檢視作用中的媒體處理常式：
 
-1. 在浏览器中，导航到 `https://localhost:4502/system/console/components`.
+1. 在您的瀏覽器中，導覽至 `https://localhost:4502/system/console/components`.
 1. 单击 `com.day.cq.dam.core.impl.store.AssetStoreImpl`.
-1. 将显示包含所有活动媒体处理程序的列表。 例如：
+1. 會顯示包含所有使用中媒體處理常式的清單。 例如：
 
 ![chlimage_1-437](assets/chlimage_1-437.png)
 
-## 在工作流中使用媒体处理程序对资产执行任务 {#using-media-handlers-in-workflows-to-perform-tasks-on-assets}
+## 在工作流程中使用媒體處理常式來執行資產上的工作 {#using-media-handlers-in-workflows-to-perform-tasks-on-assets}
 
-媒体处理程序是与工作流结合使用的服务。
+媒體處理常式是常與工作流程搭配使用的服務。
 
-[!DNL Experience Manager] 有一些用于处理资产的默认工作流。 要查看这些工作流，请打开“工作流”控制台，然后单击 **[!UICONTROL 模型]** 选项卡：以开头的工作流标题 [!DNL Assets] 是特定于资产的受众。
+[!DNL Experience Manager] 有一些處理資產的預設工作流程。 若要檢視，請開啟「工作流程」主控台，然後按一下 **[!UICONTROL 模型]** 索引標籤：開頭為的工作流程標題 [!DNL Assets] 是資產特定專案。
 
-可以扩展现有工作流，也可以创建新工作流，以根据特定要求处理资产。
+您可以擴充現有的工作流程，並建立新的工作流程，以根據特定需求處理資產。
 
 以下示例演示如何增强 **[!UICONTROL AEM Assets 同步工作流]**，以便为除 PDF 文档外的所有资产生成子资产。
 
-### 禁用或启用媒体处理程序 {#disabling-enabling-a-media-handler}
+### 停用或啟用媒體處理常式 {#disabling-enabling-a-media-handler}
 
-可以通过Apache Felix Web管理控制台禁用或启用媒体处理程序。 禁用媒体处理程序时，不会对资产执行其任务。
+您可以透過Apache Felix Web Management Console停用或啟用媒體處理常式。 停用媒體處理常式時，不會對資產執行其工作。
 
-启用/禁用媒体处理程序：
+若要啟用/停用媒體處理常式：
 
-1. 在浏览器中，导航到 `https://<host>:<port>/system/console/components`.
-1. 单击 **[!UICONTROL 禁用]** 位于媒体处理程序名称旁边。 例如：`com.day.cq.dam.handler.standard.mp3.Mp3Handler`。
-1. 刷新页面：媒体处理程序旁边会显示一个图标，指示该页面已禁用。
-1. 要启用媒体处理程序，请单击 **[!UICONTROL 启用]** 位于媒体处理程序名称旁边。
+1. 在您的瀏覽器中，導覽至 `https://<host>:<port>/system/console/components`.
+1. 按一下 **[!UICONTROL 停用]** 位於媒體處理常式名稱旁。 例如：`com.day.cq.dam.handler.standard.mp3.Mp3Handler`。
+1. 重新整理頁面：媒體處理常式旁會顯示一個圖示，指出頁面已停用。
+1. 若要啟用媒體處理常式，請按一下 **[!UICONTROL 啟用]** 位於媒體處理常式名稱旁。
 
-### 创建新的媒体处理程序 {#creating-a-new-media-handler}
+### 建立新的媒體處理常式 {#creating-a-new-media-handler}
 
-要支持新媒体类型或对资产执行特定任务，需要创建新的媒体处理程序。 本节介绍如何继续。
+若要支援新媒體型別或在資產上執行特定工作，必須建立新的媒體處理常式。 本節說明如何繼續。
 
-#### 重要类和接口 {#important-classes-and-interfaces}
+#### 重要類別和介面 {#important-classes-and-interfaces}
 
-开始实施的最佳方法是继承所提供的抽象实施，该实施会处理大多数事务并提供合理的默认行为： `com.day.cq.dam.core.AbstractAssetHandler` 类。
+開始實作的最佳方式是繼承自提供的抽象實作，該實作會處理大多數事情並提供合理的預設行為： `com.day.cq.dam.core.AbstractAssetHandler` 類別。
 
-此类已提供抽象服务描述符。 因此，如果您继承自此类并使用maven-sling-plugin，请确保将继承标记设置为 `true`.
+此類別已經提供抽象服務描述元。 因此，如果您繼承自此類別並使用maven-sling-plugin，請務必將inherit標幟設為 `true`.
 
-实施以下方法：
+實作下列方法：
 
-* `extractMetadata()`：提取所有可用的元数据。
-* `getThumbnailImage()`：根据传递的资源创建缩略图图像。
-* `getMimeTypes()`：返回资源MIME类型。
+* `extractMetadata()`：擷取所有可用的中繼資料。
+* `getThumbnailImage()`：以傳遞的資產建立縮圖影像。
+* `getMimeTypes()`：傳回資產MIME型別。
 
-以下是示例模板：
+範例範本如下：
 
 ```Java
 package my.own.stuff; /** * @scr.component inherit="true" * @scr.service */ public class MyMediaHandler extends com.day.cq.dam.core.AbstractAssetHandler { // implement the relevant parts }
 ```
 
-接口和类包括：
+介面和類別包括：
 
-* `com.day.cq.dam.api.handler.AssetHandler` 接口：此接口描述添加了对特定MIME类型的支持的服务。 添加新的MIME类型需要实现此接口。 该界面包含用于导入和导出特定文档、创建缩略图和提取元数据的方法。
-* `com.day.cq.dam.core.AbstractAssetHandler` 类：此类用作所有其他资产处理程序实现的基础，并提供常用功能。
+* `com.day.cq.dam.api.handler.AssetHandler` 介面：此介面說明新增特定MIME型別支援的服務。 新增新的MIME型別需要實作此介面。 介麵包含匯入和匯出特定檔案的方法、建立縮圖和擷取中繼資料的方法。
+* `com.day.cq.dam.core.AbstractAssetHandler` 類別：此類別可作為所有其他資產處理常式實作的基礎，並提供常用的功能。
 * `com.day.cq.dam.core.AbstractSubAssetHandler` class:
-   * 此类用作所有其他资产处理程序实施的基础，并为子资产提取提供常用功能以及常用功能。
-   * 开始实施的最佳方法是继承所提供的抽象实施，该实施会处理大多数事务并提供合理的默认行为：com.day.cq.dam.core.AbstractAssetHandler类。
-   * 此类已提供抽象服务描述符。 因此，如果您继承自此类并使用maven-sling-plugin，请确保将继承标记设置为true。
+   * 此類別可作為所有其他資產處理常式實作的基礎，並提供常用功能以及子資產擷取的常用功能。
+   * 開始實作的最佳方式是繼承自提供的抽象實作，該實作會處理大多數事情並提供合理的預設行為： com.day.cq.dam.core.AbstractAssetHandler類別。
+   * 此類別已經提供抽象服務描述元。 因此，如果您繼承自此類別並使用maven-sling-plugin，請務必將inherit標幟設為true。
 
-需要实施以下方法：
+需要實作下列方法：
 
-* `extractMetadata()`：此方法提取所有可用的元数据。
-* `getThumbnailImage()`：此方法根据传递的资源创建缩略图图像。
-* `getMimeTypes()`：此方法返回资产MIME类型。
+* `extractMetadata()`：此方法會擷取所有可用的中繼資料。
+* `getThumbnailImage()`：此方法會使用通過資產建立縮圖影像。
+* `getMimeTypes()`：此方法會傳回資產MIME型別。
 
-以下是示例模板：
+範例範本如下：
 
-包my.own.stuff； /&amp;ast；&amp;ast； &amp;ast； @scr.component inherit=&quot;true&quot; &amp;ast； @scr.service &amp;ast；/公共类MyMediaHandler扩展com.day.cq.dam.core.AbstractAssetHandler { //实现相关部分}
+封裝my.own.stuff； /&amp;ast；&amp;ast； &amp;ast； @scr.component inherit=&quot;true&quot; &amp;ast； @scr.service &amp;ast；/公用類別MyMediaHandler擴充com.day.cq.dam.core.AbstractAssetHandler { //實作相關部分}
 
-接口和类包括：
+介面和類別包括：
 
-* `com.day.cq.dam.api.handler.AssetHandler` 接口：此接口描述添加了对特定MIME类型的支持的服务。 添加新的MIME类型需要实现此接口。 该界面包含用于导入和导出特定文档、创建缩略图和提取元数据的方法。
-* `com.day.cq.dam.core.AbstractAssetHandler` 类：此类用作所有其他资产处理程序实现的基础，并提供常用功能。
-* `com.day.cq.dam.core.AbstractSubAssetHandler` 类：此类用作所有其他资产处理程序实施的基础，并为子资产提取提供常用功能以及常用功能。
+* `com.day.cq.dam.api.handler.AssetHandler` 介面：此介面說明新增特定MIME型別支援的服務。 新增新的MIME型別需要實作此介面。 介麵包含匯入和匯出特定檔案的方法、建立縮圖和擷取中繼資料的方法。
+* `com.day.cq.dam.core.AbstractAssetHandler` 類別：此類別可作為所有其他資產處理常式實作的基礎，並提供常用的功能。
+* `com.day.cq.dam.core.AbstractSubAssetHandler` 類別：此類別可作為所有其他資產處理常式實作的基礎，並提供常用功能以及子資產擷取的常用功能。
 
-#### 示例：创建特定的文本处理程序 {#example-create-a-specific-text-handler}
+#### 範例：建立特定的文書處理常式 {#example-create-a-specific-text-handler}
 
-在此部分中，您将创建一个特定的文本处理程序，用于生成带有水印的缩略图。
+在本節中，您將建立特定文書處理常式，以產生包含浮水印的縮圖。
 
-按照以下步骤操作：
+請依照下列步驟進行：
 
-请参阅 [开发工具](../sites-developing/dev-tools.md) 要安装和设置Eclipse，请使用 [!DNL Maven] 插件和来设置所需的依赖项 [!DNL Maven] 项目。
+請參閱 [開發工具](../sites-developing/dev-tools.md) 以安裝和設定Eclipse [!DNL Maven] 外掛程式和，用於設定所需的相依性 [!DNL Maven] 專案。
 
-执行以下步骤后，将TXT文件上传到 [!DNL Experience Manager]时，将提取文件的元数据，并生成两个带水印的缩略图。
+執行以下程式後，當您上傳TXT檔案到 [!DNL Experience Manager]，則會擷取檔案的中繼資料並產生兩個含有浮水印的縮圖。
 
-1. 在Eclipse中，创建 `myBundle` [!DNL Maven] 项目：
+1. 在Eclipse中，建立 `myBundle` [!DNL Maven] 專案：
 
-   1. 在菜单栏中，单击 **[!UICONTROL 文件]** > **[!UICONTROL 新]** > **[!UICONTROL 其他]**.
-   1. 在对话框中，展开 [!DNL Maven] 文件夹，选择 [!DNL Maven] 项目并单击 **[!UICONTROL 下一个]**.
-   1. 选中创建简单项目框和使用默认工作区位置框，然后单击 **[!UICONTROL 下一个]**.
-   1. 定义 [!DNL Maven] 项目：
+   1. 在功能表列中，按一下 **[!UICONTROL 檔案]** > **[!UICONTROL 新增]** > **[!UICONTROL 其他]**.
+   1. 在對話方塊中，展開 [!DNL Maven] 資料夾，選取 [!DNL Maven] 專案並按一下 **[!UICONTROL 下一個]**.
+   1. 勾選「建立簡單專案」方塊和「使用預設工作區位置」方塊，然後按一下 **[!UICONTROL 下一個]**.
+   1. 定義 [!DNL Maven] 專案：
 
-      * 组ID： `com.day.cq5.myhandler`.
-      * 工件Id：myBundle。
-      * 名称：我的 [!DNL Experience Manager] 捆绑。
-      * 描述：这是我的 [!DNL Experience Manager] 捆绑。
-   1. 单击 **[!UICONTROL 完成]**.
-
-
-1. 设置 [!DNL Java] 编译器到版本1.5：
-
-   1. 右键单击 `myBundle` 项目，选择 [!UICONTROL 属性].
-   1. 选择 [!UICONTROL Java编译器] 并将以下属性设置为1.5：
-
-      * 编译器符合性级别
-      * 生成的.class文件兼容性
-      * 源兼容性
-   1. 单击&#x200B;**[!UICONTROL 确定]**。在对话框窗口中，单击 **[!UICONTROL 是]**.
+      * 群組ID： `com.day.cq5.myhandler`.
+      * 成品ID： myBundle。
+      * 名稱：我的 [!DNL Experience Manager] 套件組合。
+      * 說明：這是我的 [!DNL Experience Manager] 套件組合。
+   1. 按一下 **[!UICONTROL 完成]**.
 
 
-1. 在中替换代码 `pom.xml` 文件，代码如下：
+1. 設定 [!DNL Java] 編譯器至1.5版：
+
+   1. 以滑鼠右鍵按一下 `myBundle` 專案，選取 [!UICONTROL 屬性].
+   1. 選取 [!UICONTROL Java編譯器] 並將下列屬性設定為1.5：
+
+      * 編譯器相容性層級
+      * 產生的.class檔案相容性
+      * 來源相容性
+   1. 单击&#x200B;**[!UICONTROL 确定]**。在對話方塊視窗中，按一下 **[!UICONTROL 是]**.
+
+
+1. 在中取代程式碼 `pom.xml` 檔案，其程式碼如下：
 
    ```xml
    <project xmlns="https://maven.apache.org/POM/4.0.0" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
@@ -282,16 +282,16 @@ package my.own.stuff; /** * @scr.component inherit="true" * @scr.service */ publ
     </dependencies>
    ```
 
-1. 创建包 `com.day.cq5.myhandler` 包含 [!DNL Java] 下的类 `myBundle/src/main/java`：
+1. 建立套件 `com.day.cq5.myhandler` 包含 [!DNL Java] 類別位於 `myBundle/src/main/java`：
 
-   1. 在myBundle下，右键单击 `src/main/java`，选择新建，然后选择包。
-   1. 将其命名 `com.day.cq5.myhandler` ，然后单击“完成”。
+   1. 在myBundle下，按一下滑鼠右鍵 `src/main/java`，選取新增，然後選取封裝。
+   1. 將其命名 `com.day.cq5.myhandler` 並按一下「完成」。
 
-1. 创建 [!DNL Java] 类 `MyHandler`：
+1. 建立 [!DNL Java] 類別 `MyHandler`：
 
-   1. In [!DNL Eclipse]，下 `myBundle/src/main/java`，右键单击 `com.day.cq5.myhandler` 包。 选择 [!UICONTROL 新]，则 [!UICONTROL 类].
-   1. 在对话框窗口中，命名 [!DNL Java] 类 `MyHandler` 并单击 [!UICONTROL 完成]. [!DNL Eclipse] 创建并打开文件 `MyHandler.java`.
-   1. In `MyHandler.java` 使用以下内容替换现有代码，然后保存更改：
+   1. 在 [!DNL Eclipse]，下 `myBundle/src/main/java`，以滑鼠右鍵按一下 `com.day.cq5.myhandler` 封裝。 選取 [!UICONTROL 新增]，則 [!UICONTROL 類別].
+   1. 在對話方塊視窗中，將 [!DNL Java] 類別 `MyHandler` 並按一下 [!UICONTROL 完成]. [!DNL Eclipse] 建立並開啟檔案 `MyHandler.java`.
+   1. 在 `MyHandler.java` 以下列專案取代現有程式碼，然後儲存變更：
 
    ```java
    package com.day.cq5.myhandler;
@@ -433,101 +433,101 @@ package my.own.stuff; /** * @scr.component inherit="true" * @scr.service */ publ
    }
    ```
 
-1. 编译 [!DNL Java] 类并创建捆绑包：
+1. 編譯 [!DNL Java] 類別並建立組合：
 
-   1. 右键单击 `myBundle` 项目，选择 **[!UICONTROL 运行方式]**，则 **[!UICONTROL Maven安装]**.
-   1. 捆绑包 `myBundle-0.0.1-SNAPSHOT.jar` （包含编译的类）创建于 `myBundle/target`.
+   1. 以滑鼠右鍵按一下 `myBundle` 專案，選取 **[!UICONTROL 執行身分]**，則 **[!UICONTROL Maven安裝]**.
+   1. 組合 `myBundle-0.0.1-SNAPSHOT.jar` （包含編譯的類別）建立於 `myBundle/target`.
 
-1. 在CRX资源管理器中，在 `/apps/myApp`. 名称= `install`，类型= `nt:folder`.
-1. 复制捆绑包 `myBundle-0.0.1-SNAPSHOT.jar` 并将其存储在 `/apps/myApp/install` （例如，使用WebDAV）。 新的文本处理程序现在在中处于活动状态 [!DNL Experience Manager].
-1. 在浏览器中，打开 [!UICONTROL Apache Felix Web管理控制台]. 选择 [!UICONTROL 组件] 制表符并禁用默认文本处理程序 `com.day.cq.dam.core.impl.handler.TextHandler`.
+1. 在CRX Explorer中，在下建立新節點 `/apps/myApp`. 名稱= `install`，型別= `nt:folder`.
+1. 複製組合 `myBundle-0.0.1-SNAPSHOT.jar` 並將其儲存在 `/apps/myApp/install` （例如WebDAV）。 新的文書處理常式現在於 [!DNL Experience Manager].
+1. 在您的瀏覽器中，開啟 [!UICONTROL Apache Felix Web管理主控台]. 選取 [!UICONTROL 元件] 定位並停用預設文書處理常式 `com.day.cq.dam.core.impl.handler.TextHandler`.
 
-## 基于命令行的媒体处理程序 {#command-line-based-media-handler}
+## 以命令列為基礎的媒體處理常式 {#command-line-based-media-handler}
 
-[!DNL Experience Manager] 允许您在工作流中运行任何命令行工具来转换资产(例如 [!DNL ImageMagick])，并将新演绎版添加到资源。 您只需在托管的磁盘上安装命令行工具 [!DNL Experience Manager] ，向工作流添加并配置流程步骤。 调用的进程，称为 `CommandLineProcess`，还可以根据特定的MIME类型进行筛选，以及根据新演绎版创建多个缩略图。
+[!DNL Experience Manager] 可讓您在工作流程中執行任何命令列工具來轉換資產(例如 [!DNL ImageMagick])，並將新轉譯新增至資產。 您只需在託管的磁碟上安裝命令列工具 [!DNL Experience Manager] ，以將流程步驟新增及設定至工作流程。 叫用的程式，稱為 `CommandLineProcess`，也能根據特定的MIME型別進行篩選，以及根據新轉譯建立多個縮圖。
 
-以下转化可以自动运行并存储于 [!DNL Assets]：
+下列轉換可自動執行並儲存在 [!DNL Assets]：
 
-* EPS和AI转换使用 [ImageMagick](https://www.imagemagick.org/script/index.php) 和 [Ghostscript](https://www.ghostscript.com/).
-* 使用的FLV视频转码 [FFmpeg](https://ffmpeg.org/).
-* 使用的MP3编码 [LAME](https://lame.sourceforge.io/).
-* 音频处理，使用 [SOX](https://sox.sourceforge.io/).
+* EPS和AI轉換，使用 [ImageMagick](https://www.imagemagick.org/script/index.php) 和 [Ghostscript](https://www.ghostscript.com/).
+* 使用的FLV視訊轉碼 [FFmpeg](https://ffmpeg.org/).
+* 使用的MP3編碼 [LAME](https://lame.sourceforge.io/).
+* 音訊處理使用 [SOX](https://sox.sourceforge.io/).
 
 >[!NOTE]
 >
->在非Windows系统上，FFmpeg工具在为文件名中包含单引号(&#39;)的视频资源生成演绎版时返回错误。 如果您的视频文件的名称包含单引号，请先将其删除然后再上传到 [!DNL Experience Manager].
+>在非Windows系統上，FFmpeg工具在為檔案名稱中包含單引號(&#39;)的視訊資產產生轉譯時傳回錯誤。 如果您的視訊檔案名稱包含單引號，請先將其移除，然後再上傳至 [!DNL Experience Manager].
 
-此 `CommandLineProcess` 进程会按列出的顺序执行以下操作：
+此 `CommandLineProcess` 處理會依照列出的順序執行下列操作：
 
-* 根据特定的MIME类型筛选文件（如果指定）。
-* 在托管的磁盘上创建临时目录 [!DNL Experience Manager] 服务器。
-* 将原始文件流式传输到临时目录。
-* 执行由步骤的参数定义的命令。 该命令正在临时目录中执行，并拥有正在运行的用户的权限 [!DNL Experience Manager].
-* 将结果流式传输回的节目文件夹。 [!DNL Experience Manager] 服务器。
-* 删除临时目录。
-* 如果指定，则基于这些演绎版创建缩略图。 缩略图的数量和尺寸由步骤的参数定义。
+* 根據特定的MIME型別篩選檔案（如果指定）。
+* 在託管的磁碟上建立暫存目錄 [!DNL Experience Manager] 伺服器。
+* 將原始檔案串流至暫存目錄。
+* 執行由步驟的引數定義的命令。 命令正在暫存目錄中執行，且執行中的使用者有許可權 [!DNL Experience Manager].
+* 將結果串流回的轉譯資料夾 [!DNL Experience Manager] 伺服器。
+* 刪除暫存目錄。
+* 如果指定，會根據這些轉譯建立縮圖。 縮圖的編號和尺寸由步驟的引數定義。
 
-### 使用的示例 [!DNL ImageMagick] {#an-example-using-imagemagick}
+### 使用的範例 [!DNL ImageMagick] {#an-example-using-imagemagick}
 
-以下示例说明如何设置命令行流程步骤，以便每次将具有miMIME e类型GIF或TIFF的资源添加到时 `/content/dam` 在 [!DNL Experience Manager] 服务器，将创建原件的翻转图像以及三个其他缩略图（140x100、48x48和10x250）。
+下列範例說明如何設定命令列處理步驟，以便每次將具有miMIME e-typeGIF或TIFF的資產新增到時 `/content/dam` 於 [!DNL Experience Manager] 「伺服器」(Server)會建立原始的翻轉影像，連同三個額外的縮圖（140x100、48x48和10x250）。
 
-要执行此操作，请使用 [!DNL ImageMagick]. [!DNL ImageMagick] 是一个自由命令行软件，用于创建、编辑和合成位图图像。
+若要這麼做，請使用 [!DNL ImageMagick]. [!DNL ImageMagick] 是用來建立、編輯及撰寫點陣圖影像的自由命令列軟體。
 
-安装 [!DNL ImageMagick] 在托管的磁盘上 [!DNL Experience Manager] 服务器：
+安裝 [!DNL ImageMagick] 在託管的磁碟上 [!DNL Experience Manager] 伺服器：
 
-1. 安装 [!DNL ImageMagick]：请参阅 [ImageMagick文档](https://www.imagemagick.org/script/download.php).
-1. 设置该工具，以便在命令行中运行convert。
-1. 要查看工具是否正确安装，请运行以下命令 `convert -h` 在命令行上。
+1. 安裝 [!DNL ImageMagick]：請參閱 [ImageMagick檔案](https://www.imagemagick.org/script/download.php).
+1. 設定工具，以便在命令列上執行轉換。
+1. 若要檢視工具是否已正確安裝，請執行以下命令 `convert -h` 在命令列上。
 
-   它会显示一个帮助屏幕，其中包含转换工具的所有可能选项。
+   它會顯示說明畫面，其中包含轉換工具的所有可能選項。
 
    >[!NOTE]
    >
-   >在Windows的某些版本中，转换命令可能无法运行，因为它与所属的本机转换实用程序冲突 [!DNL Windows] 安装。 在这种情况下，请提及 [!DNL ImageMagick] 用于将图像文件转换为缩略图的软件。 例如：`"C:\Program Files\ImageMagick-6.8.9-Q16\convert.exe" -define jpeg:size=319x319 ${filename} -thumbnail 319x319 cq5dam.thumbnail.319.319.png`。
+   >在某些Windows版本中，轉換命令可能會無法執行，因為它與所屬的原生轉換公用程式衝突 [!DNL Windows] 安裝。 在此情況下，請提及 [!DNL ImageMagick] 用於將影像檔案轉換為縮圖的軟體。 例如：`"C:\Program Files\ImageMagick-6.8.9-Q16\convert.exe" -define jpeg:size=319x319 ${filename} -thumbnail 319x319 cq5dam.thumbnail.319.319.png`。
 
-1. 要查看该工具是否正常运行，请将JPG映像添加到工作目录并运行命令convert `<image-name>.jpg -flip <image-name>-flipped.jpg` 在命令行上。 将翻转的图像添加到目录中。 然后，将命令行流程步骤添加到 **[!UICONTROL DAM更新资产]** 工作流。
-1. 转到 **[!UICONTROL 工作流]** 控制台。
-1. 在 **[!UICONTROL 模型]** 选项卡，编辑 **[!UICONTROL DAM更新资产]** 型号。
-1. 更改 [!UICONTROL 参数] 的 **[!UICONTROL 启用Web的演绎版]** 步骤至： `mime:image/gif,mime:image/tiff,tn:140:100,tn:48:48,tn:10:250,cmd:convert ${directory}/${filename} -flip ${directory}/${basename}.flipped.jpg`.
-1. 保存工作流。
+1. 若要檢視工具是否正確執行，請將JPG影像新增至工作目錄，然後執行convert指令 `<image-name>.jpg -flip <image-name>-flipped.jpg` 在命令列上。 翻轉的影像會新增至目錄。 然後，將命令列處理步驟新增至 **[!UICONTROL DAM更新資產]** 工作流程。
+1. 前往 **[!UICONTROL 工作流程]** 主控台。
+1. 在 **[!UICONTROL 模型]** 標籤，編輯 **[!UICONTROL DAM更新資產]** 模型。
+1. 變更 [!UICONTROL 引數] 的 **[!UICONTROL 啟用Web的轉譯]** 步驟至： `mime:image/gif,mime:image/tiff,tn:140:100,tn:48:48,tn:10:250,cmd:convert ${directory}/${filename} -flip ${directory}/${basename}.flipped.jpg`.
+1. 儲存工作流程。
 
-要测试修改后的工作流，请将资源添加到 `/content/dam`.
+若要測試修改的工作流程，請將資產新增至 `/content/dam`.
 
-1. 在文件系统中，获取您选择的TIFF映像。 将其重命名为 `myImage.tiff` 并将其复制到 `/content/dam`，例如通过使用WebDAV。
-1. 转到 **[!UICONTROL CQ5 DAM]** 控制台，例如 `https://localhost:4502/libs/wcm/core/content/damadmin.html`.
-1. 打开资产 **[!UICONTROL myImage.tiff]** 并验证是否创建了翻转的图像和三个缩略图。
+1. 在檔案系統中，取得您選擇的TIFF影像。 將其重新命名為 `myImage.tiff` 並將其複製到 `/content/dam`，例如使用WebDAV。
+1. 前往 **[!UICONTROL CQ5 DAM]** 例如主控台 `https://localhost:4502/libs/wcm/core/content/damadmin.html`.
+1. 開啟資產 **[!UICONTROL myImage.tiff]** 並確認已建立翻轉的影像和三個縮圖。
 
-#### 配置CommandLineProcess进程步骤 {#configuring-the-commandlineprocess-process-step}
+#### 設定CommandLineProcess程式步驟 {#configuring-the-commandlineprocess-process-step}
 
 本节介绍如何设置 [!UICONTROL CommandLineProcess] 的[!UICONTROL 进程参数]。
 
-分隔值 [!UICONTROL 进程参数] 逗号，且请勿以空格开头。
+將下列專案的值分開： [!UICONTROL 程式引數] 逗號，且請勿以空格開頭。
 
-| 参数 — 格式 | 描述 |
+| 引數 — 格式 | 描述 |
 |---|---|
-| MIME：&lt;mime-type> | 可选参数。 如果资产的MIME类型与参数的类型相同，则会应用该流程。 <br>可以定义多个MIME类型。 |
-| 吨：&lt;width>：&lt;height> | 可选参数。 该过程会使用参数中定义的维度创建一个缩略图。 <br>可以定义多个缩略图。 |
-| cmd： &lt;command> | 定义执行的命令。 语法取决于命令行工具。 只能定义一个命令。 <br>以下变量可用于创建命令：<br>`${filename}`：输入文件的名称，例如original.jpg <br> `${file}`：输入文件的完整路径名称，例如 `/tmp/cqdam0816.tmp/original.jpg` <br> `${directory}`：输入文件的目录，例如 `/tmp/cqdam0816.tmp` <br>`${basename}`：不带扩展名的输入文件的名称，例如原始文件 <br>`${extension}`：输入文件的扩展名，例如JPG。 |
+| mime：&lt;mime-type> | 選用引數。 如果資產的MIME型別與引數的MIME型別相同，則會套用程式。 <br>可以定義數種MIME型別。 |
+| tn：&lt;width>：&lt;height> | 選用引數。 此程式會使用引數中定義的維度建立縮圖。 <br>可以定義數個縮圖。 |
+| cmd： &lt;command> | 定義執行的命令。 語法取決於命令列工具。 只能定義一個指令。 <br>下列變數可用來建立命令：<br>`${filename}`：輸入檔案的名稱，例如original.jpg <br> `${file}`：輸入檔案的完整路徑名稱，例如 `/tmp/cqdam0816.tmp/original.jpg` <br> `${directory}`：輸入檔案的目錄，例如 `/tmp/cqdam0816.tmp` <br>`${basename}`：無副檔名的輸入檔案名稱，例如原始檔案 <br>`${extension}`：輸入檔案的副檔名，例如JPG。 |
 
-例如，如果 [!DNL ImageMagick] 安装在托管的磁盘上 [!DNL Experience Manager] 创建流程步骤时，使用 [!UICONTROL 命令行进程] 作为实施，以下值作为 [!UICONTROL 进程参数]：
+例如，如果 [!DNL ImageMagick] 安裝在託管的磁碟上 [!DNL Experience Manager] 伺服器和如果您建立程式步驟，請使用 [!UICONTROL 命令列程式] as實作，以及下列值 [!UICONTROL 程式引數]：
 
 `mime:image/gif,mime:image/tiff,tn:140:100,tn:48:48,tn:10:250,cmd:convert ${directory}/${filename} -flip ${directory}/${basename}.flipped.jpg`
 
-然后，当工作流运行时，该步骤仅适用于具有 `image/gif` 或 `mime:image/tiff` 作为 `mime-types`，它会创建原始图像的翻转图像，将其转换为JPG，并创建三个尺寸为：140x100、48x48和10x250的缩略图。
+然後，當工作流程執行時，步驟僅適用於具有 `image/gif` 或 `mime:image/tiff` 作為 `mime-types`，它會建立原始影像的翻轉影像、將其轉換為JPG並建立三個尺寸縮圖：140x100、48x48和10x250。
 
-使用以下内容 [!UICONTROL 进程参数] 要创建三个标准缩略图，请使用 [!DNL ImageMagick]：
+使用下列專案 [!UICONTROL 程式引數] 若要使用建立三個標準縮圖 [!DNL ImageMagick]：
 
 `mime:image/tiff,mime:image/png,mime:image/bmp,mime:image/gif,mime:image/jpeg,cmd:convert ${filename} -define jpeg:size=319x319 -thumbnail "319x319>" -background transparent -gravity center -extent 319x319 -write png:cq5dam.thumbnail.319.319.png -thumbnail "140x100>" -background transparent -gravity center -extent 140x100 -write cq5dam.thumbnail.140.100.png -thumbnail "48x48>" -background transparent -gravity center -extent 48x48 cq5dam.thumbnail.48.48.png`
 
-使用以下内容 [!UICONTROL 进程参数] 要创建启用Web的演绎版，请使用 [!DNL ImageMagick]：
+使用下列專案 [!UICONTROL 程式引數] 若要使用建立可支援Web的轉譯 [!DNL ImageMagick]：
 
 `mime:image/tiff,mime:image/png,mime:image/bmp,mime:image/gif,mime:image/jpeg,cmd:convert ${filename} -define jpeg:size=1280x1280 -thumbnail "1280x1280>" cq5dam.web.1280.1280.jpeg`
 
 >[!NOTE]
 >
->此 [!UICONTROL 命令行进程] 步骤仅适用于资源（类型的节点） `dam:Asset`)或资源的子项。
+>此 [!UICONTROL 命令列程式] 步驟僅適用於資產（型別的節點） `dam:Asset`)或資產的子代。
 
 >[!MORELIKETHIS]
 >
->* [处理资产](assets-workflow.md)
+>* [處理資產](assets-workflow.md)
 

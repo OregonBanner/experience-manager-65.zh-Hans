@@ -1,7 +1,7 @@
 ---
-title: 内容处置过滤器
+title: 內容處置篩選
 seo-title: Content Disposition Filter
-description: 了解如何使用内容处置过滤器来防御XSS攻击。
+description: 瞭解如何使用內容處置篩選器來防止XSS攻擊。
 seo-description: Learn how to use the Content Disposition Filter to prevent XSS attacks.
 uuid: 145a88e0-9fa8-42db-b189-eda507c33049
 contentOwner: trushton
@@ -17,20 +17,20 @@ ht-degree: 0%
 
 ---
 
-# 内容处置过滤器 {#content-disposition-filter}
+# 內容處置篩選 {#content-disposition-filter}
 
-内容处置过滤器是一种针对SVG文件的XSS攻击的安全功能。
+內容處置篩選器是抵禦SVG檔案XSS攻擊的安全功能。
 
-安装筛选器后，该筛选器将阻止对所有资源的访问。 例如，您无法联机查看PDF。 本节介绍如何根据需要配置过滤器。
+安裝後，篩選器會封鎖對所有資產的存取。 例如，您無法線上上檢視PDF。 本節說明如何根據您的需求設定篩選器。
 
-## 配置内容处置过滤器 {#configure-content-disposition-filter}
+## 設定內容處置篩選 {#configure-content-disposition-filter}
 
-您可以查看 [GitHub中的Apache Sling内容处置过滤器](https://github.com/apache/sling-org-apache-sling-security/blob/master/src/main/java/org/apache/sling/security/impl/ContentDispositionFilterConfiguration.java).
+您可以檢視 [GitHub中的Apache Sling內容處置篩選器](https://github.com/apache/sling-org-apache-sling-security/blob/master/src/main/java/org/apache/sling/security/impl/ContentDispositionFilterConfiguration.java).
 
-“内容处置过滤器”选项提供了以下功能：
+「內容處置篩選」選項提供下列功能：
 
-* **内容处置路径：** 将应用过滤器的路径列表，后跟在该路径上要排除的mime类型列表。此路径必须是绝对路径，并且可以包含通配符(`*`)，以匹配每个具有给定路径前缀的资源路径。 例如： `/content/*:image/jpeg,image/svg+xml` 将过滤器应用于中的每个节点 `/content?` 除了jpg和svg图像
+* **內容處置路徑：** 將套用篩選的路徑清單，後跟在該路徑上要排除的mime型別清單。此路徑必須是絕對路徑，並且可以包含萬用字元(`*`)結尾處的「 」，以將每個資源路徑與給定的路徑前置詞相符。 例如： `/content/*:image/jpeg,image/svg+xml` 會將篩選器套用至中的每個節點 `/content?` jpg和svg影像除外
 
-* **排除的资源路径：** 排除的资源的列表，每个资源路径都必须作为绝对和完全限定的路径提供。 不支持前缀匹配/通配符。
+* **排除的資源路徑：** 排除的資源的清單，每個資源路徑都必須提供為絕對和完整路徑。 不支援字首比對/萬用字元。
 
-* **为所有资源路径启用：** 此标记控制是否为所有路径启用此过滤器，排除资源路径定义的排除路径除外。 将此项设置为“true”会导致忽略内容处置路径。 与配置无关，只覆盖包含名为的属性的资源路径 `jcr:data` 或 `jcr:content/jcr:data`.
+* **為所有資源路徑啟用：** 此旗標可控制是否針對所有路徑（排除的資源路徑所定義的排除路徑除外）啟用此篩選。 將此項設為「true」會導致忽略內容處置路徑。 與設定無關，只涵蓋包含下列屬性的資源路徑： `jcr:data` 或 `jcr:content/jcr:data`.

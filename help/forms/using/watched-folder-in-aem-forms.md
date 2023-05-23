@@ -1,7 +1,7 @@
 ---
-title: AEM Forms中的Watched文件夹
+title: AEM Forms中的Watched資料夾
 seo-title: Watched folder in AEM Forms
-description: 管理员可以将文件夹置于监视状态，并在文件置于监视的文件夹中时启动工作流、服务或脚本操作。
+description: 管理員可將資料夾置於監看狀態，並在檔案置於監看資料夾中時啟動工作流程、服務或指令碼作業。
 seo-description: An administrator can put a folder on watch and start a workflow, service, or script operation when a file is placed in the folder being watched.
 uuid: 39eac0fd-8212-46ff-b75d-8b4320d448a9
 content-type: reference
@@ -17,62 +17,62 @@ ht-degree: 0%
 
 ---
 
-# AEM Forms中的Watched文件夹{#watched-folder-in-aem-forms}
+# AEM Forms中的Watched資料夾{#watched-folder-in-aem-forms}
 
-管理员可以配置网络文件夹（称为Watched文件夹），以便当用户将文件(如PDF文件)放入Watched文件夹时，可以启动预配置的工作流、服务或脚本操作来处理添加的文件。 服务执行指定的操作后，将结果文件保存在指定的输出文件夹中。 有关工作流、服务和脚本的详细信息，请参见 [处理文件的各种方法](#variousmethodsforprocessingfiles).
+管理員可以設定網路資料夾（稱為Watched資料夾），以便在使用者將檔案(例如PDF檔案)放入Watched資料夾時，會啟動預先設定的工作流程、服務或指令碼操作，以處理新增的檔案。 服務執行指定的操作後，會將結果檔案儲存在指定的輸出資料夾中。 如需工作流程、服務和指令碼的詳細資訊，請參閱 [處理檔案的各種方法](#variousmethodsforprocessingfiles).
 
-## 创建观察文件夹 {#create-a-watched-folder}
+## 建立Watched資料夾 {#create-a-watched-folder}
 
-您可以使用以下方法之一在文件系统上创建Watched文件夹：
+您可以使用下列其中一種方法，在檔案系統上建立Watched資料夾：
 
-* 在配置Watched Folder配置节点的属性时，在folderPath属性中键入父目录的完整路径，并附加要创建的Watched Folder的名称，如以下示例所示： `C:/MyPDFs/MyWatchedFolder`
+* 設定Watched資料夾設定節點的屬性時，請在folderPath屬性中輸入父目錄的完整路徑，並附加要建立的Watched資料夾名稱，如下列範例所示： `C:/MyPDFs/MyWatchedFolder`
 此 
-`MyWatchedFolder`文件夹不存在，AEM Forms会尝试在指定的路径创建文件夹。
+`MyWatchedFolder`資料夾不存在，AEM Forms會嘗試在指定的路徑建立資料夾。
 
-* 在配置Watched Folder端点之前，在文件系统上创建文件夹，然后在folderPath属性中提供完整路径。 有关folderPath属性的详细信息，请参见 [观察文件夹属性](#watchedfolderproperties).
+* 在設定Watched資料夾端點之前，先在檔案系統上建立資料夾，然後在folderPath屬性中提供完整路徑。 如需folderPath屬性的詳細資訊，請參閱 [Watched資料夾屬性](#watchedfolderproperties).
 
 >[!NOTE]
 >
->在群集环境中，用作观察文件夹的文件夹必须在文件系统或网络上可访问、可写和共享。 群集的每个应用程序服务器实例都必须有权访问同一共享文件夹。 在Windows上，在所有服务器上创建一个映射的网络驱动器，并在folderPath属性中指定映射的网络驱动器的路径。
+>在叢集環境中，用來作為Watched資料夾的資料夾必須在檔案系統或網路上可存取、可寫入和共用。 叢集的每個應用程式伺服器執行個體都必須擁有相同共用資料夾的存取權。 在Windows上，在所有伺服器上建立對應的網路磁碟機，並在folderPath屬性中指定對應網路磁碟機的路徑。
 
-## 创建Watched文件夹配置节点 {#create-watched-folder-configuration-node}
+## 建立Watched資料夾設定節點 {#create-watched-folder-configuration-node}
 
-要配置Watched文件夹，请创建Watched文件夹配置节点。 执行以下步骤来创建配置节点：
+若要設定Watched資料夾，請建立Watched資料夾設定節點。 執行以下步驟來建立設定節點：
 
-1. 以管理员身份登录到CRX-DE Lite并导航到/etc/fd/watchfolder/config文件夹。
+1. 以管理員身分登入CRX-DE Lite，並導覽至/etc/fd/watchfolder/config資料夾。
 
-1. 创建节点类型 `nt:unstructured`. 例如， watchedfolder
+1. 建立型別的節點 `nt:unstructured`. 例如， watchedfolder
 
    >[!NOTE]
    >
-   >观察文件夹节点名称不能包含空格和特殊字符。
+   >Watched Folder節點名稱不能包含空格和特殊字元。
 
-1. 将以下属性添加到节点：
+1. 將下列屬性新增至節點：
 
    * `folderPath`
    * `inputProcessorType`
    * `inputProcessorId`
    * `outputFilePattern`
 
-   有关支持的属性的完整列表，请参阅 [观察文件夹属性](#watchedfolderproperties).
+   如需支援屬性的完整清單，請參閱 [Watched資料夾屬性](#watchedfolderproperties).
 
-1. 单击 **全部保存**. 创建节点并保存属性后。 此 `input`， `result`， `failure`， `preserve`、和 `stage`文件夹是在指定的路径下创建的 `folderPath` 属性。
+1. 按一下 **全部儲存**. 建立節點並儲存屬性後。 此 `input`， `result`， `failure`， `preserve`、和 `stage`資料夾是在 `folderPath` 屬性。
 
-   扫描作业以定义的时间间隔开始扫描Watched文件夹。
+   掃描作業會以定義的時間間隔開始掃描Watched資料夾。
 
-## 观察文件夹属性 {#watchedfolderproperties}
+## Watched資料夾屬性 {#watchedfolderproperties}
 
-您可以为Watched文件夹配置以下属性。
+您可以為Watched資料夾設定下列屬性。
 
-* **folderPath （字符串）**：在定义的时间间隔内扫描的文件夹的路径。 对于群集环境，文件夹必须位于共享位置，并且所有服务器都具有服务器的完全访问权限。 它是必需属性。
-* **inputProcessorType（字符串）**：要启动的进程类型。 您可以指定工作流、脚本或服务。 它是必需属性。
-* **inputProcessorId（字符串）**：inputProcessorId属性的行为基于为inputProcessorType属性指定的值。 它是必需属性。 以下列表详细列出了inputProcessorType属性的所有可能值以及inputProcessorType属性的相应先决条件：
+* **folderPath （字串）**：在定義的時間間隔掃描的資料夾路徑。 對於叢集環境，資料夾必須位於共用位置，且所有伺服器都可完整存取伺服器。 這是強制屬性。
+* **inputProcessorType （字串）**：要啟動的程式型別。 您可以指定工作流程、指令碼或服務。 這是強制屬性。
+* **inputProcessorId （字串）**：inputProcessorId屬性的行為是根據inputProcessorType屬性指定的值。 這是強制屬性。 下列清單詳細說明了inputProcessorType屬性的所有可能值以及inputProcessorType屬性的對應必要條件：
 
-   * 对于工作流，请指定要执行的工作流模型。 例如，/etc/workflow/models/&lt;workflow_name>/jcr：content/model
-   * 对于脚本，请指定要执行的脚本的JCR路径。 例如， /etc/fd/watchfolder/test/testScript.ecma
-   * 对于服务，指定用于查找OSGi服务的过滤器。 该服务已注册为com.adobe.aemfd.watchfolder.service.api.ContentProcessor Interface的实现。
+   * 對於工作流程，請指定要執行的工作流程模型。 例如，/etc/workflow/models/&lt;workflow_name>/jcr：content/model
+   * 對於指令碼，指定要執行的指令碼的JCR路徑。 例如， /etc/fd/watchfolder/test/testScript.ecma
+   * 針對服務，指定用於找到OSGi服務的篩選器。 此服務註冊為com.adobe.aemfd.watchfolder.service.api.ContentProcessor Interface的實作。
 
-* **runModes（字符串）**：工作流执行所允许的运行模式列表（以逗号分隔）。 一些示例包括：
+* **runModes （字串）**：以逗號分隔的工作流程執行允許的執行模式清單。 以下是幾個範例：
 
    * 作者
 
@@ -80,161 +80,161 @@ ht-degree: 0%
 
    * 作者，发布
 
-   * 发布，作者
+   * 發佈，作者
 
 >[!NOTE]
 >
->如果托管Watched文件夹的服务器没有任何指定的运行模式，则Watched文件夹始终激活，而不管服务器上的运行模式如何。
+>如果裝載Watched資料夾的伺服器沒有任何指定的執行模式，則無論伺服器上的執行模式為何，Watched資料夾一律會啟動。
 
-* **outputFilePattern（字符串）**：输出文件的模式。 可以指定文件夹或文件模式。 如果指定了文件夹模式，则输出文件的名称将如工作流中所述。 如果指定了文件模式，则输出文件的名称如文件模式中所述。 [文件和文件夹模式](../../forms/using/watched-folder-in-aem-forms.md#p-file-and-folder-patterns-p) 还可以为输出文件指定目录结构。 它是必需属性。
+* **outputFilePattern （字串）**：輸出檔案的模式。 您可以指定資料夾或檔案模式。 如果指定資料夾模式，則輸出檔案的名稱會如工作流程中所述。 如果指定了檔案模式，則輸出檔案的名稱如檔案模式中所述。 [檔案和資料夾模式](../../forms/using/watched-folder-in-aem-forms.md#p-file-and-folder-patterns-p) 也可以指定輸出檔案的目錄結構。 這是強制屬性。
 
-* **stageFileExpirationDuration （长，默认为–1）**：对于已选取以进行处理的输入文件/文件夹，应将其视为已超时并标记为失败，在此之前等待的秒数。 仅当此属性的值为正数时，此到期机制才会激活。
+* **stageFileExpirationDuration （長，預設–1）**：已擷取以供處理的輸入檔案/資料夾應被視為已逾時並標籤為失敗之前，所等待的秒數。 只有當這個屬性的值是正數時，這個到期機制才會啟動。
 
 >[!NOTE]
 >
->即使使用此机制将输入标记为已超时，它仍可能在后台处理，但只是花费的时间比预期要长。 如果在超时机制被引入之前消耗了输入内容，处理甚至可能稍后继续完成，并将输出转储到结果文件夹中。 如果在超时之前未使用内容，则在稍后尝试使用内容时，处理很可能会出错，并且此错误也将记录到同一输入的失败文件夹中。 另一方面，如果对输入的处理由于间歇性工作/工作流误触发而从未激活（这是到期机制旨在解决的情况），则当然这两个事件都不会发生。 因此，对于失败文件夹中由于超时而被标记为失败的任何条目（查找“经过很长时间后未处理文件，标记为失败”形式的消息！） 在失败日志中)，建议扫描结果文件夹（以及失败文件夹本身，以获取相同输入的另一个条目），以检查之前描述的任何事件是否实际发生。
+>即使使用此機制將輸入標籤為已逾時，它仍可能在背景中處理，但所花的時間比預期多。 如果輸入內容在逾時機制啟動之前被使用，處理甚至可能稍後繼續完成，輸出將被傾印到結果資料夾中。 如果內容在逾時之前未使用，處理很可能在稍後嘗試使用內容時失敗，而且此錯誤也會記錄到相同輸入的失敗資料夾中。 另一方面，如果因間歇性工作/工作流程誤觸發（這是到期機制所針對的情況）而從未啟動輸入的處理，則當然不會發生這兩個事件。 因此，對於失敗資料夾中因逾時而被標籤為失敗的任何專案(尋找形式為「檔案經過長時間後未處理，標籤為失敗！」的訊息。 在失敗記錄檔中)，建議您掃描結果資料夾（以及失敗資料夾本身，以尋找相同輸入的其他專案），以檢查先前所述的任何事件是否實際發生。
 
-* **deleteExpiredStageFileOnlyWhenThrottled (Boolean， default true)：** 过期机制是否应该仅在监视文件夹被限制时激活。 该机制与节流监视文件夹更相关，因为少量文件在未处理状态下滞留（由于间歇性作业/工作流错误触发），可能会在启用节流时阻塞整个批次的处理。 如果此属性保持为true（默认），则将不会为不受限制的监视文件夹激活过期机制。 如果属性保留为false，则只要stageFileExpirationDuration属性为正数，机制将始终激活。
+* **deleteExpiredStageFileOnlyWhenThrottled （布林值，預設為true）：** 到期機制是否應該只在監視資料夾已節流時啟動。 此機制與節流監視資料夾的關聯性較高，因為啟用節流時，少量以未處理狀態延遲的檔案（由於間歇性工作/工作流程錯誤引發）可能會阻塞整個批次的處理作業。 如果此屬性保持為true （預設值），則不會為未節流的Watch資料夾啟用到期機制。 如果屬性保留為false，則只要stageFileExpirationDuration屬性是正數，機制就會一律啟動。
 
-* **pollInterval （长）**：扫描观察文件夹以进行输入的间隔，以秒为单位。 除非启用Throttle设置，否则poll Interval应比处理平均作业的时间长；否则，系统可能会过载。 默认值为 5。有关其他信息，请参阅批次大小的说明。 轮询间隔的值必须大于或等于1。
-* **excludeFilePattern（字符串）**：分号(；)分隔的模式列表，Watched Folder使用该列表来确定要扫描和选取的文件和文件夹。 不会扫描任何具有此模式的文件或文件夹以进行处理。 当输入是具有多个文件的文件夹时，此设置很有用。 可以将文件夹的内容复制到一个名称由Watched文件夹选取的文件夹中。 这样可防止Watched文件夹在文件夹完全复制到输入文件夹之前拾取要处理的文件夹。 默认值为null。
-您可以使用 [文件模式](../../forms/using/watched-folder-in-aem-forms.md#p-file-and-folder-patterns-p) 要排除：
+* **pollInterval （長）**：掃描Watched資料夾以進行輸入的間隔（以秒為單位）。 除非啟用「限制」設定，否則「輪詢間隔」應比處理平均作業的時間長；否則，系統可能會變得超載。 默认值为 5。如需詳細資訊，請參閱「批次大小」的說明。 輪詢間隔的值必須大於或等於1。
+* **excludeFilePattern （字串）**：分號(；)分隔的模式清單，Watched資料夾會使用這個清單來決定要掃描和擷取的檔案和資料夾。 不會掃描任何具有此模式的檔案或資料夾以進行處理。 當輸入是具有多個檔案的資料夾時，此設定會很有用。 資料夾的內容可以複製到一個資料夾中，其名稱由Watched資料夾擷取。 這可防止Watched資料夾在資料夾完全複製到輸入資料夾之前擷取資料夾進行處理。 預設值為null。
+您可以使用 [檔案模式](../../forms/using/watched-folder-in-aem-forms.md#p-file-and-folder-patterns-p) 若要排除：
 
-   * 具有特定文件扩展名的文件；例如， &#42;.dat， &#42;.xml、.pdf、 &#42;.&#42;
-   * 具有特定名称的文件；例如，数据&#42; 将排除名为data1、data2等的文件和文件夹。
-   * 名称和扩展名中包含复合表达式的文件，如以下示例所示：
+   * 具有特定副檔名的檔案；例如， &#42;.dat， &#42;.xml， .pdf， &#42;.&#42;
+   * 具有特定名稱的檔案；例如，資料&#42; 會排除名為data1、data2等的檔案和資料夾。
+   * 在名稱和副檔名中有複合運算式的檔案，如下列範例所示：
 
-      * 数据[0-9][0-9][0-9].[dD][aA]&#39;端口&#39;
-      * &#42;。[dD][Aa]&#39;端口&#39;
-      * &#42;。[Xx][Mm][Ll]
+      * 資料[0-9][0-9][0-9].[dD][aA]&#39;連線埠&#39;
+      * &#42;。[dD][Aa]&#39;連線埠&#39;
+      * &#42;。[Xx][公厘][Ll]
 
-有关文件模式的详细信息，请参见 [关于文件模式](../../forms/using/watched-folder-in-aem-forms.md#p-file-and-folder-patterns-p).
+如需檔案模式的詳細資訊，請參閱 [關於檔案模式](../../forms/using/watched-folder-in-aem-forms.md#p-file-and-folder-patterns-p).
 
-* **includeFilePattern（字符串）**：分号(；)分隔的模式列表，Watched Folder使用该列表来确定要扫描和选取的文件夹和文件。 例如，如果输入了IncludeFilePattern&#42;，与输入匹配的所有文件和文件夹&#42; 被捡起来了。 这包括名为input1、input2等的文件和文件夹。 默认值为 &#42; 和指示所有文件和文件夹。 您可以使用文件模式来包括：
+* **includeFilePattern （字串）**：分號(；)分隔的模式清單，Watched資料夾會使用這個清單來決定要掃描和擷取的資料夾和檔案。 例如，如果輸入IncludeFilePattern&#42;，所有符合輸入的檔案和資料夾&#42; 已選取。 這包括名為input1、input2等的檔案和資料夾。 預設值為 &#42; 和會指出所有檔案和資料夾。 您可以使用檔案模式來包含：
 
-   * 具有特定文件扩展名的文件；例如， &#42;.dat， &#42;.xml、.pdf、 &#42;.&#42;
-   * 具有特定名称的文件；例如，数据。&#42; 将包括名为data1、data2等的文件和文件夹。
+   * 具有特定副檔名的檔案；例如， &#42;.dat， &#42;.xml， .pdf， &#42;.&#42;
+   * 具有特定名稱的檔案；例如，資料。&#42; 會包含名為data1、data2等的檔案和資料夾。
 
-* 名称和扩展名中包含复合表达式的文件，如以下示例所示：
+* 在名稱和副檔名中有複合運算式的檔案，如下列範例所示：
 
-   * 数据[0-9][0-9][0-9].[dD][aA]&#39;端口&#39;
+   * 資料[0-9][0-9][0-9].[dD][aA]&#39;連線埠&#39;
 
-      * &#42;。[dD][Aa]&#39;端口&#39;
-      * &#42;。[Xx][Mm][Ll]
+      * &#42;。[dD][Aa]&#39;連線埠&#39;
+      * &#42;。[Xx][公厘][Ll]
 
-有关文件模式的详细信息，请参见 [关于文件模式](../../forms/using/watched-folder-in-aem-forms.md#p-file-and-folder-patterns-p)
+如需檔案模式的詳細資訊，請參閱 [關於檔案模式](../../forms/using/watched-folder-in-aem-forms.md#p-file-and-folder-patterns-p)
 
-* **waitTime（长）**：创建文件夹或文件后扫描文件夹或文件前等待的时间，以毫秒为单位。 例如，如果等待时间为3,600,000毫秒（1小时），文件是在一分钟前创建的，则将在59分钟或更长时间后提取此文件。 默认值为 0。此设置对于确保文件或文件夹完全复制到输入文件夹非常有用。 例如，如果您要处理一个大文件，并且下载该文件需要10分钟，则将等待时间设置为10&#42;60 &#42;1000毫秒。 这样可防止Watched Folder在文件不是十分钟之前扫描文件。
-* **purgeDuration（长）**：当结果文件夹中的文件和文件夹早于此值时，将清除它们。 此值以天为单位。 此设置有助于确保结果文件夹不会变满。 值为–1天表示从不删除结果文件夹。 缺省值为–1。
-* **resultFolderName（字符串）**：存储所保存结果的文件夹。 如果结果未出现在此文件夹中，请检查故障文件夹。 只读文件不会被处理并保存在故障文件夹中。 此值可以是具有以下文件模式的绝对路径或相对路径：
+* **waitTime （長）**：建立資料夾或檔案後，在掃描資料夾或檔案之前等待的時間（以毫秒為單位）。 例如，如果等待時間為3,600,000毫秒（一小時），且檔案是在一分鐘前建立的，則系統會在59分鐘或更長時間後擷取此檔案。 默认值为 0。此設定對於確保檔案或資料夾完全複製到輸入資料夾非常有用。 例如，如果您有大型檔案要處理，而檔案下載需要10分鐘，請將等待時間設定為10&#42;60 &#42;1000毫秒。 這可防止Watched資料夾在檔案不是十分鐘之前掃描檔案。
+* **purgeDuration （長）**：結果資料夾中的檔案和資料夾早於此值時會遭清除。 此值以天為單位。 此設定對於確保結果資料夾未填滿非常有用。 值–1天表示從不刪除結果資料夾。 預設值為–1。
+* **resultFolderName （字串）**：儲儲存存結果的資料夾。 如果結果未出現在此資料夾中，請檢查失敗資料夾。 唯讀檔案不會處理並儲存在失敗資料夾中。 此值可以是具有下列檔案模式的絕對或相對路徑：
 
-   * %F =文件名前缀
-   * %E =文件扩展名
+   * %F =檔案名稱前置詞
+   * %E =副檔名
    * %Y =年（完整）
-   * %y =年（后两位数）
+   * %y =年（最後兩位數）
    * %M =月
    * %D =日期
-   * %d =一年中的第几天
-   * %H =小时（24小时制）
-   * %h =小时（12小时制）
-   * %m =分钟
+   * %d =一年中的第幾天
+   * %H =小時（24小時時鐘）
+   * %h =小時（12小時時鐘）
+   * %m =分鐘
    * %s =秒
    * %l =毫秒
-   * %R =随机数（介于0和9之间）
-   * %P =进程或作业标识
+   * %R =隨機數字（介於0到9之間）
+   * %P =處理程式或工作識別碼
 
-   例如，如果在2009年7月17日晚上8点，并且您指定了C：/Test/WF0/failure/%Y/%M/%D/%H/，则结果文件夹为C：/Test/WF0/failure/2009/07/17/20
+   例如，如果是2009年7月17日晚上8點，而您指定C：/Test/WF0/failure/%Y/%M/%D/%H/，則結果資料夾是C：/Test/WF0/failure/2009/07/17/20
 
-   如果路径不是绝对路径而是相对路径，则将在Watched文件夹内创建该文件夹。 默认值为result/%Y/%M/%D/，它是Watched文件夹内的Result文件夹。 有关文件模式的详细信息，请参见 [关于文件模式](../../forms/using/watched-folder-in-aem-forms.md#p-file-and-folder-patterns-p).
-
->[!NOTE]
->
->结果文件夹的大小越小，Watched Folder的性能就越好。 例如，如果监视文件夹的预计负载为每小时1000个文件，请尝试使用result/%Y%M%D%H之类的模式，以便每小时创建一个新子文件夹。 如果负载较小（例如，每天1000个文件），则可以使用诸如result/%Y%M%D之类的模式。
-
-* **failureFolderName（字符串）**：保存失败文件的文件夹。 此位置始终相对于Watched文件夹。 您可以使用文件模式，如“结果文件夹”中所述。 只读文件不会被处理并保存在故障文件夹中。 默认值为failure/%Y/%M/%D/。
-* **preserveFolderName（字符串）：** 成功处理文件后存储文件的位置。 路径可以是绝对、相对或null目录路径。 您可以使用文件模式，如“结果文件夹”中所述。 默认值为preserve/%Y/%M/%D/。
-* **batchSize (Long)**：每次扫描要提取的文件或文件夹数。 使用可防止系统过载；一次扫描太多文件可能会导致崩溃。 默认值为 2。
-
-   “轮询间隔”和“批处理大小”设置决定“观察文件夹”在每次扫描中选取的文件数。 Watched Folder使用Quartz线程池扫描输入文件夹。 线程池与其他服务共享。 如果扫描间隔很小，线程会经常扫描输入文件夹。 如果文件经常被放入Watched Folder中，则应该保持较小的扫描间隔。 如果文件不经常被丢弃，请使用较大的扫描间隔，以便其他服务可以使用线程。
-
-   如果正在丢弃大量文件，请将批次大小设置为大。 例如，如果Watched Folder端点启动的服务每分钟可以处理700个文件，并且用户以相同的速率将文件放入输入文件夹，则将“批处理大小”设置为350，将“轮询间隔”设置为30秒，可帮助实现Watched Folder的性能，而不会产生过于频繁地扫描Watched Folder的成本。
-
-   当文件被拖放到Watched文件夹中时，它会列出输入中的文件，如果每秒扫描一次，则可能会降低性能。 增加扫描间隔可以提高性能。 如果正在删除的文件量很小，请相应地调整批处理大小和轮询间隔。 例如，如果每秒删除10个文件，请尝试将pollInterval设置为1秒，将Batch Size设置为10
-
-* **throttleOn（布尔值）**：选择此选项时，将限制AEM Forms在任何给定时间处理的监视文件夹作业数。 最大作业数由“批次大小”值决定。 默认值为true。 (请参阅 [关于限制](../../forms/using/watched-folder-in-aem-forms.md#p-about-throttling-p).)
-
-* **overwriteDuplicateFilename（布尔值）**：设置为True时，将覆盖结果文件夹和保留文件夹中的文件。 当设置为False时，使用具有数字索引后缀的文件和文件夹作为名称。 默认值为False。
-* **preserveOnFailure（布尔值）**：如果无法对服务执行操作，则保留输入文件。 默认值为true。
-* **inputFilePattern（字符串）**：指定Watched文件夹的输入文件模式。 创建文件的允许列表。
-* **异步（布尔值）**：将调用类型标识为异步或同步。 默认值为true（异步）。 文件处理是一项消耗资源的任务，请将异步标志的值保持为true以防止阻塞扫描作业的主线程。 在群集环境中，将标志保持为true对于启用正在可用服务器上处理的文件的负载平衡至关重要。 如果标志为false，则扫描作业将尝试在其自己的线程中按顺序对每个顶级文件/文件夹执行处理。 如果没有特定原因（例如，在单服务器设置上基于工作流的处理），请勿将标记设置为false。
+   如果路徑不是絕對路徑而是相對路徑，則會在Watched資料夾內建立資料夾。 預設值為result/%Y/%M/%D/，這是Watched資料夾內的Result資料夾。 如需檔案模式的詳細資訊，請參閱 [關於檔案模式](../../forms/using/watched-folder-in-aem-forms.md#p-file-and-folder-patterns-p).
 
 >[!NOTE]
 >
->根据设计，工作流是异步的。 即使将该值设置为false，工作流也会以异步模式启动。
+>結果資料夾的大小越小，Watched資料夾的執行效能就越好。 例如，如果Watched資料夾的估計負載為每小時1000個檔案，請嘗試如result/%Y%M%D%H的模式，以便每小時建立新的子資料夾。 如果負載較小（例如，每天1000個檔案），您可以使用如result/%Y%M%D的模式。
 
-* **enabled（布尔值）**：停用和激活对Watched文件夹的扫描。 将enabled设置为true ，以开始扫描Watched文件夹。 默认值为true。
-* **payloadMapperFilter：** 当文件夹配置为watched文件夹时，将在watched文件夹内创建一个文件夹结构。 该结构具有文件夹，用于提供输入、接收输出（结果）、保存失败数据、保存长期过程的数据以及保存各个阶段的数据。 Watched文件夹的文件夹结构可用作以Forms为中心的工作流的负载。 有效负载映射器允许您定义有效负载的结构，该有效负载使用Watched文件夹进行输入、输出和处理。 例如，如果使用默认映射器，它将通过映射监视文件夹的内容 [有效负荷]\输入和 [有效负荷]\output文件夹 提供了两种现成的有效负载映射器实施。 如果您没有 [自定义实施](../../forms/using/watched-folder-in-aem-forms.md#creating-a-custom-payload-mapper-filter)，请使用以下现成的实施之一：
+* **failureFolderName （字串）**：儲存失敗檔案的資料夾。 此位置永遠是相對於Watched資料夾。 您可以使用檔案模式，如「結果資料夾」中所述。 唯讀檔案不會處理並儲存在失敗資料夾中。 預設值為failure/%Y/%M/%D/。
+* **preserveFolderName （字串）：** 成功處理後儲存檔案的位置。 路徑可以是絕對、相對或Null目錄路徑。 您可以使用檔案模式，如「結果資料夾」中所述。 預設值為preserve/%Y/%M/%D/。
+* **batchSize （長）**：每次掃描要擷取的檔案或資料夾數目。 用於防止系統過載；一次掃描太多檔案可能會導致當機。 默认值为 2。
 
-   * **默认映射器：** 使用默认有效负荷映射器将watched文件夹的输入和输出内容保留在有效负荷的单独输入和输出文件夹中。 此外，在工作流的有效负荷路径中，使用 [有效负荷]/input/和 [有效负荷]/output路径以检索和保存内容。
+   「輪詢間隔」和「批次大小」設定會決定Watched Folder在每次掃描中擷取多少檔案。 Watched資料夾使用Quartz執行緒集區來掃描輸入資料夾。 執行緒集區會與其他服務共用。 如果掃描間隔很小，執行緒會經常掃描輸入資料夾。 如果檔案經常被拖放到Watched資料夾中，則您應該將掃描間隔維持在較小的範圍內。 如果檔案不常被捨棄，請使用較大的掃描間隔，讓其他服務可以使用執行緒。
 
-   * **基于文件的简单有效负载映射器：** 使用基于简单文件的负载映射器，将输入和输出内容直接保留在负载文件夹中。 它不会创建任何额外的层次结构，如默认映射器。
+   如果捨棄了大量的檔案，請讓批次大小變大。 例如，如果Watched Folder端點啟動的服務每分鐘可以處理700個檔案，且使用者以相同速率將檔案放入輸入資料夾，則將「批次大小」設定為350，並將「輪詢間隔」設定為30秒，可協助Watched Folder發揮效能，而不會產生經常掃描Watched Folder的成本。
 
-### 自定义配置参数 {#custom-configuration-parameters}
+   當檔案被放入Watched資料夾時，它會列出輸入中的檔案，如果每秒都進行掃描，可能會降低效能。 增加掃描間隔可以改善效能。 如果捨棄的檔案量很小，請相應地調整「批次大小」和「輪詢間隔」。 例如，如果每秒丟棄10個檔案，請嘗試將pollInterval設定為1秒，並將Batch Size設定為10
 
-除了上面列出的Watched Folder配置属性外，您还可以指定自定义配置参数。 自定义参数将传递到文件处理代码。 它允许代码根据参数的值更改其行为。 要指定参数，请执行以下操作：
+* **throttleOn （布林值）**：選取此選項時，會限制AEM Forms在任何指定時間處理的Watched資料夾工作數目。 最大工作數量由「批次大小」值決定。 預設值為true。 (請參閱 [關於節流](../../forms/using/watched-folder-in-aem-forms.md#p-about-throttling-p).)
 
-1. 登录到CRXDE-Lite并导航到Watched Folder配置节点。
-1. 添加属性参数。&lt;property_name> 到Watched Folder配置节点。 属性的类型只能是Boolean、Date、Decimal、Double、Long和String。 您可以指定单值和多值属性。
+* **overwriteDuplicateFilename （布林值）**：設為True時，會覆寫結果資料夾和保留資料夾中的檔案。 設定為False時，名稱會使用具有數值索引尾碼的檔案和資料夾。 預設值為False。
+* **preserveOnFailure （布林值）**：保留輸入檔案，以防無法對服務執行操作。 預設值為true。
+* **inputFilePattern （字串）**：指定Watched資料夾的輸入檔案模式。 建立檔案的允許清單。
+* **非同步（布林值）**：將呼叫型別識別為非同步或同步。 預設值為true （非同步）。 檔案處理是一項耗用資源的工作，請將非同步標幟的值保持為true以避免阻塞掃描工作的主要執行緒。 在叢集環境中，保持標幟為true對於啟用跨可用伺服器處理之檔案的負載平衡至關重要。 如果標幟為false，則掃描作業會嘗試在其自己的執行緒內依序對每個頂層檔案/資料夾執行處理。 若無特定原因（例如單一伺服器設定上的工作流程處理），請勿將標幟設為false 。
 
 >[!NOTE]
 >
->如果属性的数据类型是Double，则在此类属性的值中指定小数点。 对于所有属性（其中数据类型是Double ，且值中未指定小数点），类型将转换为Long。
+>依設計，工作流程會非同步。 即使您將值設為false，工作流程也會以非同步模式啟動。
 
-这些属性作为Map类型的不可变映射传递&lt;string object=&quot;&quot;> 到处理代码。 处理代码可以是ECMAScript、工作流或服务。 为属性提供的值可用作映射中的键值对。 键是属性的名称，值是属性的值。 有关自定义配置参数的更多信息，请参阅以下图像：
+* **已啟用（布林值）**：停用及啟用Watched資料夾的掃描。 將enabled設為true，以開始掃描Watched資料夾。 預設值為true。
+* **payloadMapperFilter：** 當資料夾設定為watched資料夾時，會在watched資料夾中建立資料夾結構。 此結構有資料夾來提供輸入、接收輸出（結果）、儲存失敗資料、保留資料供長期程式使用，以及儲存資料供不同階段使用。 Watched資料夾的資料夾結構可作為以Forms為中心的工作流程裝載。 裝載對應程式可讓您定義裝載的結構，該裝載使用Watched資料夾進行輸入、輸出和處理。 例如，如果您使用預設對應程式，它會將Watched資料夾的內容對應 [裝載]\輸入和 [裝載]\output資料夾。 提供兩種現成的裝載對應程式實作。 如果您沒有 [自訂實施](../../forms/using/watched-folder-in-aem-forms.md#creating-a-custom-payload-mapper-filter)，使用其中一種現成可用的實作：
 
-![具有强制属性、一些可选属性和一些配置参数的示例监视文件夹配置节点](assets/custom-configuration-parameters.png)
+   * **預設對應程式：** 使用預設的裝載對應程式，將watched資料夾的輸入和輸出內容保留在裝載中的個別輸入和輸出資料夾中。 此外，在工作流程的裝載路徑中，使用 [裝載]/input/和 [裝載]/output路徑以擷取和儲存內容。
 
-具有强制属性、一些可选属性和一些配置参数的示例监视文件夹配置节点。
+   * **簡單的檔案型裝載對應程式：** 使用簡單檔案型裝載對應程式，將輸入和輸出內容直接保留在裝載資料夾中。 它不會建立任何額外的階層，例如預設對應程式。
+
+### 自訂設定引數 {#custom-configuration-parameters}
+
+除了上面列出的Watched資料夾組態屬性之外，您也可以指定自訂組態引數。 自訂引數會傳遞至檔案處理程式碼。 它可讓程式碼根據引數的值變更其行為。 若要指定引數，請執行下列動作：
+
+1. 登入CRXDE-Lite並瀏覽至Watched Folder設定節點。
+1. 新增屬性引數。&lt;property_name> 至Watched Folder設定節點。 屬性的型別只能是布林值、日期、小數、雙精度浮點數、長數字和字串。 您可以指定單一和多值屬性。
+
+>[!NOTE]
+>
+>如果屬性的資料型別為Double，則在此類屬性的值中指定小數點。 對於資料型別為Double且值中未指定小數點的所有屬性，型別會轉換為Long。
+
+這些屬性會以Map型別的不可變對應形式傳遞&lt;string object=&quot;&quot;> 至處理程式碼。 處理程式碼可以是ECMAScript、工作流程或服務。 為屬性提供的值在對應中作為索引鍵/值組提供。 索引鍵是屬性的名稱，值是屬性的值。 如需自訂組態引數的詳細資訊，請參閱下列影像：
+
+![具有強制屬性、一些選擇性屬性、一些設定引數的監看資料夾設定節點範例](assets/custom-configuration-parameters.png)
+
+具有強制屬性、一些選擇性屬性、一些設定引數的監看資料夾設定節點範例。
 
 #### 工作流程的可变变量 {#mutable-variables-for-workflows}
 
-您可以为基于工作流的文件处理方法创建可变变量。 这些变量用作工作流各个步骤之间流动的数据的容器。 要创建此类变量，请执行以下操作：
+您可以為工作流程型檔案處理方法建立可變變數。 這些變數可當作在工作流程步驟之間流動的資料的容器。 若要建立這類變數：
 
-1. 登录到CRXDE-Lite并导航到Watched Folder配置节点。
+1. 登入CRXDE-Lite並瀏覽至Watched Folder設定節點。
 
-1. 添加属性workflow.var。&lt;variable_name> 到Watched Folder配置节点。
+1. 新增屬性workflow.var。&lt;variable_name> 至Watched Folder設定節點。
 
-   属性的类型只能是Boolean、Date、Decimal、Double、Long和String。 还支持多值属性。 对于多值属性，工作流步骤可用的值是指定类型的数组。
+   屬性的型別只能是布林值、日期、小數、雙精度浮點數、長數字和字串。 也支援多值屬性。 對於多值屬性，工作流程步驟可用的值是指定型別的陣列。
 
    >[!NOTE]
    >
-   >如果属性的数据类型是Double，则在此类属性的值中指定小数点。 对于所有属性（其中数据类型是Double ，且值中未指定小数点），类型将转换为Long。
+   >如果屬性的資料型別為Double，則在此類屬性的值中指定小數點。 對於資料型別為Double且值中未指定小數點的所有屬性，型別會轉換為Long。
 
 >[!NOTE]
 >
->JCR规范规定了属性的默认值。 默认值可用于工作流的步骤以进行处理。 因此，请指定正确的默认值。
+>JCR規格強制預設屬性值。 預設值可用於工作流程的步驟以進行處理。 因此，請指定適當的預設值。
 
 ![custom-configuration-parameters2](assets/custom-configuration-parameters2.png)
 
-## 处理文件的各种方法 {#variousmethodsforprocessingfiles}
+## 處理檔案的各種方法 {#variousmethodsforprocessingfiles}
 
-您可以启动工作流、服务或脚本来处理监视文件夹中的文档位置。
+您可以啟動工作流程、服務或指令碼，以處理監看資料夾中的檔案位置。
 
-### 使用服务处理Watched文件夹的文件   {#using-a-service-to-process-files-of-a-watched-folder-nbsp}
+### 使用服務處理Watched資料夾的檔案   {#using-a-service-to-process-files-of-a-watched-folder-nbsp}
 
-服务是的自定义实施 `com.adobe.aemfd.watchfolder.service.api.ContentProcessor` 界面。 它通过OSGi以及一些自定义属性进行注册。 实施的自定义属性使其具有唯一性，并有助于识别实施。
+服務是自訂的 `com.adobe.aemfd.watchfolder.service.api.ContentProcessor` 介面。 它會向OSGi註冊以及一些自訂屬性。 實作的自訂屬性使其獨特，並有助於識別實作。
 
-#### ContentProcessor界面的自定义实施 {#custom-implementation-of-the-contentprocessor-interface}
+#### ContentProcessor介面的自訂實作 {#custom-implementation-of-the-contentprocessor-interface}
 
-自定义实施接受处理上下文（com.adobe.aemfd.watchfolder.service.api.ProcessorContext类型的对象），从上下文读取输入文档和配置参数，处理输入，并将输出添加回上下文。 ProcessorContext具有以下API：
+自訂實作接受處理內容（com.adobe.aemfd.watchfolder.service.api.ProcessorContext型別的物件）、從內容讀取輸入檔案和設定引數、處理輸入，以及將輸出新增回內容。 ProcessorContext具有下列API：
 
-* **getWatchFolderId**：返回观察文件夹的ID。
-* **getInputMap**：返回映射类型的映射。 映射的键是输入文件的文件名和包含文件内容的文档对象。 使用getinputMap API读取输入文件。
-* **getConfigParameters**：返回映射类型的不可变映射。 映射包含Watched文件夹的配置参数。
+* **getWatchFolderId**：傳回監看資料夾的ID。
+* **getInputMap**：傳回「對應」型別的對應。 對映的鍵是輸入檔案的檔案名稱以及包含檔案內容的檔案物件。 使用getinputMap API讀取輸入檔案。
+* **getConfigParameters**：傳回Map型別的不可變對應。 對應包含Watched資料夾的設定引數。
 
-* **setResult**：ContentProcessor实施使用API将输出文档写入结果文件夹。 您可以为setResult API的输出文件提供一个名称。 API可能会根据指定的输出文件夹/文件模式选择使用或忽略提供的文件。 如果指定了文件夹模式，则输出文件的名称将如工作流中所述。 如果指定了文件模式，则输出文件的名称如文件模式中所述。
+* **setResult**： ContentProcessor實作會使用API將輸出檔案寫入結果資料夾。 您可以為setResult API的輸出檔案提供名稱。 API可能會根據指定的輸出資料夾/檔案模式，選擇使用或忽略提供的檔案。 如果指定資料夾模式，則輸出檔案的名稱會如工作流程中所述。 如果指定了檔案模式，則輸出檔案的名稱如檔案模式中所述。
 
-例如，以下代码是具有custom foo=bar属性的ContentProcessor界面的自定义实现。
+例如，下列程式碼是具有custom foo=bar屬性的ContentProcessor介面的自訂實作。
 
 ```java
 @Component(metatype = true, immediate = true, label = "WF Test Service", description = "WF Test Service")
@@ -243,9 +243,9 @@ ht-degree: 0%
 public class OutputWriter implements ContentProcessor {
 ```
 
-While [配置Watched文件夹](../../forms/using/watched-folder-in-aem-forms.md#p-create-watched-folder-configuration-node-p)，如果您将inputProcessorId属性指定为(foo=bar)，将inputProcessorType属性指定为Service ，则使用上述服务（自定义实施）处理Watched文件夹的输入文件。
+當 [設定Watched資料夾](../../forms/using/watched-folder-in-aem-forms.md#p-create-watched-folder-configuration-node-p)，如果您將inputProcessorId屬性指定為(foo=bar)，將inputProcessorType屬性指定為Service，則上述服務（自訂實作）將用於處理Watched資料夾的輸入檔案。
 
-以下示例也是ContentProcessor界面的自定义实施。 在示例中，服务接受输入文件，将文件复制到临时位置，并返回包含文件内容的文档对象。 文档对象的内容将保存到结果文件夹中。 结果文件夹的物理路径配置于 [观察文件夹配置节点](../../forms/using/watched-folder-in-aem-forms.md#p-create-watched-folder-configuration-node-p).
+以下範例也是ContentProcessor介面的自訂實作。 在此範例中，服務接受輸入檔案，將檔案複製到暫存位置，然後傳回包含檔案內容的檔案物件。 檔案物件的內容會儲存到結果資料夾。 結果資料夾的實體路徑設定於 [Watched資料夾設定節點](../../forms/using/watched-folder-in-aem-forms.md#p-create-watched-folder-configuration-node-p).
 
 ```java
 @Component(immediate = true)
@@ -263,20 +263,20 @@ public class TestContentProcessor1 implements ContentProcessor {
 }
 ```
 
-### 使用脚本处理Watched文件夹的文件 {#using-scripts-to-process-files-of-a-watched-folder}
+### 使用指令碼處理Watched資料夾的檔案 {#using-scripts-to-process-files-of-a-watched-folder}
 
-脚本是写入的ECMAScript投诉自定义代码，用于处理放置在Watched文件夹中的文档。 脚本表示为JCR节点。 除了标准ECMAScript变量（log、sling等）之外，该脚本还有一个变量processorContext。 变量的类型为ProcessorContext。 ProcessorContext具有以下API：
+指令碼是寫入到處理放置在Watched資料夾中的檔案的ECMAScript投訴自訂程式碼。 指令碼會以JCR節點表示。 除了標準ECMAScript變數（記錄、sling等）之外，指令碼還有變數processorContext。 變數的型別為ProcessorContext。 ProcessorContext具有下列API：
 
-* **getWatchFolderId**：返回观察文件夹的ID。
-* **getInputMap**：返回映射类型的映射。 映射的键是输入文件的文件名和包含文件内容的文档对象。 使用getinputMap API读取输入文件。
-* **getConfigParameters**：返回映射类型的不可变映射。 映射包含Watched文件夹的配置参数。
-* **setResult**：ContentProcessor实施使用API将输出文档写入结果文件夹。 您可以为setResult API的输出文件提供一个名称。 API可能会根据指定的输出文件夹/文件模式选择使用或忽略提供的文件。 如果指定了文件夹模式，则输出文件的名称将如工作流中所述。 如果指定了文件模式，则输出文件的名称如文件模式中所述。
+* **getWatchFolderId**：傳回監看資料夾的ID。
+* **getInputMap**：傳回「對應」型別的對應。 對映的鍵是輸入檔案的檔案名稱以及包含檔案內容的檔案物件。 使用getinputMap API讀取輸入檔案。
+* **getConfigParameters**：傳回Map型別的不可變對應。 對應包含Watched資料夾的設定引數。
+* **setResult**： ContentProcessor實作會使用API將輸出檔案寫入結果資料夾。 您可以為setResult API的輸出檔案提供名稱。 API可能會根據指定的輸出資料夾/檔案模式，選擇使用或忽略提供的檔案。 如果指定資料夾模式，則輸出檔案的名稱會如工作流程中所述。 如果指定了檔案模式，則輸出檔案的名稱如檔案模式中所述。
 
-以下代码是一个示例ECMAScript。 它接受输入文件，将文件复制到临时位置，并返回一个包含文件内容的文档对象。 文档对象的内容将保存到结果文件夹中。 结果文件夹的物理路径配置于 [观察文件夹配置节点](../../forms/using/watched-folder-in-aem-forms.md#p-create-watched-folder-configuration-node-p).
+下列程式碼為ECMAScript範例。 它接受輸入檔案，將檔案複製到暫存位置，並傳回檔案物件與檔案內容。 檔案物件的內容會儲存到結果資料夾。 結果資料夾的實體路徑設定於 [Watched資料夾設定節點](../../forms/using/watched-folder-in-aem-forms.md#p-create-watched-folder-configuration-node-p).
 
 >[!NOTE]
 >
->输出文件夹和文件名前缀是根据Watched Folder配置参数确定的。
+>輸出資料夾和檔案名稱首碼是根據Watched Folder組態引數來決定。
 
 ```java
 var inputMap = processorContext.getInputMap();
@@ -287,77 +287,77 @@ entry.getValue().copyToFile(tempFile);
 processorContext.setResult(tempFile.getName(), new Packages.com.adobe.aemfd.docmanager.Document(tempFile, true));
 ```
 
-#### 脚本的位置和安全注意事项 {#location-of-scripts-and-security-considerations}
+#### 指令碼的位置和安全性考量 {#location-of-scripts-and-security-considerations}
 
-默认情况下，提供了一个容器文件夹(/etc/fd/watchfolder/scripts)，客户可以在其中放置其脚本，并且watch-folder框架使用的默认service-user具有从该位置读取脚本的必要权限。
+依預設，會提供一個容器資料夾(/etc/fd/watchfolder/scripts)，客戶可以在其中放置其指令碼，而watch-folder架構使用的預設service-user具有從此位置讀取指令碼的必要許可權。
 
-如果您计划将脚本放在自定义位置，则默认服务用户可能没有对自定义位置的读取权限。 对于这种情况，请执行以下步骤，以提供对自定义位置的必要权限：
+如果您計畫將指令碼放在自訂位置，則預設服務使用者可能沒有自訂位置的讀取許可權。 對於這種情況，請執行以下步驟，為自訂位置提供必要許可權：
 
-1. 以编程方式或通过控制台https://&#39;创建系统用户[服务器]：[端口]“/crx/explorer”。 您也可以使用现有系统用户。 请务必在此处使用系统用户，而不是普通用户。
-1. 在存储脚本的自定义位置，为新创建或现有系统用户提供读取权限。 您可以有多个自定义位置。 至少为所有自定义位置提供读取权限。
-1. 在Felix配置控制台(/system/console/configMgr)中，找到监视文件夹的服务用户映射。 此映射类似于“映射：adobe-aemds-core-watch-folder=...”。
-1. 单击映射。 对于“adobe-aemds-core-watch-folder：scripts=fd-service”条目，请将fd-service更改为自定义系统用户的ID。 单击“保存”。
+1. 以程式設計方式或透過主控台https://&#39;建立系統使用者[伺服器]：[連線埠]&#39;/crx/explorer. 您也可以使用現有系統使用者。 請務必在此與系統使用者合作，而非與一般使用者合作。
+1. 在儲存指令碼的自訂位置上，為新建立或現有系統使用者提供讀取許可權。 您可以有多個自訂位置。 至少為所有自訂位置提供讀取許可權。
+1. 在Felix設定主控台(/system/console/configMgr)中，找到監視資料夾的服務使用者對應。 此對應類似於「對應： adobe-aemds-core-watch-folder=...」。
+1. 按一下對應。 對於「adobe-aemds-core-watch-folder：scripts=fd-service」專案，請將fd-service變更為自訂系統使用者的ID。 单击“保存”。
 
-现在，您可以使用配置的自定义位置来保存脚本。
+現在，您可以使用已設定的自訂位置來儲存指令碼。
 
-### 使用工作流处理Watched文件夹的文件 {#using-a-workflow-to-process-files-of-a-watched-folder}
+### 使用工作流程處理Watched資料夾的檔案 {#using-a-workflow-to-process-files-of-a-watched-folder}
 
-通过工作流，您可以自动Experience Manager活动。 工作流包含一系列按特定顺序执行的步骤。 每个步骤都执行不同的活动，例如激活页面或发送电子邮件。 工作流可以与存储库中的资源、用户帐户和Experience Manager服务进行交互。 因此，工作流可以协调复杂。
+工作流程可讓您自動化Experience Manager活動。 工作流程包含一系列以特定順序執行的步驟。 每個步驟都會執行不同的活動，例如啟動頁面或傳送電子郵件訊息。 工作流程可以與存放庫中的資產、使用者帳戶和Experience Manager服務互動。 因此，工作流程可能會協調複雜。
 
-* 在创建工作流之前，请考虑以下几点：
-* 步骤的输出必须可用于所有后续步骤。
-这些步骤必须能够更新（甚至删除）由先前步骤生成的现有输出。
-* 可变变量用于在步骤之间传输自定义动态数据。
+* 建立「工作流程」之前，請先考慮下列幾點：
+* 步驟的輸出必須可用於所有後續步驟。
+步驟必須能夠更新（甚至刪除）由先前步驟產生的現有輸出。
+* 可變變數可用來在步驟之間流轉自訂動態資料。
 
-执行以下步骤以使用工作流处理文件：
+執行以下步驟，使用工作流程處理檔案：
 
-1. 创建实施 `com.adobe.aemfd.watchfolder.workflow.api.WorkflowContextProcessor` 界面。 它类似于为服务创建的实施。
+1. 建立實作 `com.adobe.aemfd.watchfolder.workflow.api.WorkflowContextProcessor` 介面。 它類似於為服務建立的實作。
 
    >[!NOTE]
    >
-   >您可以在ECMAScript中完全创建完整的实施。
+   >您可以完全在ECMAScript中建立完整的實作。
 
-1. 在工作流的一个步骤中，找到类型为com.adobe.aemfd.watchfolder.workflow.api.WorkflowContextService的OSGi服务，并使用以下参数调用该服务的execute()方法。
+1. 在Workflow的步驟中，找到型別為com.adobe.aemfd.watchfolder.workflow.api.WorkflowContextService的OSGi服務，並使用以下引數呼叫服務的execute()方法。
 
-   * WorkflowContextProcessor界面的自定义实施
-   * 工作项
+   * 您的WorkflowContextProcessor介面的自訂實作
+   * 工作專案
    * workflowsession
    * 元数据
 
-如果使用Java编程语言实施工作流，则AEM工作流引擎会为workItem、workflowSession和元数据变量提供值。 这些变量将作为参数传递给自定义WorkflowProcess实施的execute()方法。
+如果您使用Java程式設計語言來實作工作流程，AEM工作流程引擎會為workItem、workflowSession和中繼資料變數提供值。 這些變數會以引數的形式傳遞至自訂WorkflowProcess實作的execute()方法。
 
-如果使用ECMAScript实施工作流，则AEM工作流引擎会为graniteWorkItem、graniteWorkflowSession和元数据变量提供值。 这些变量作为参数传递到WorkflowContextService.execute()方法。
+如果您使用ECMAScript來實作工作流程，AEM工作流程引擎會提供graniteWorkItem、graniteWorkflowSession和中繼資料變數的值。 這些變數會作為引數傳遞至WorkflowContextService.execute()方法。
 
-processWorkflowContext()的参数是com.adobe.aemfd.watchfolder.workflow.api.WorkflowContext类型的对象。 WorkflowContext接口具有以下API，以便于执行上述特定于工作流的注意事项：
+processWorkflowContext()的引數是com.adobe.aemfd.watchfolder.workflow.api.WorkflowContext型別的物件。 WorkflowContext介面具有下列API，可促進上述工作流程特定考量事項：
 
-* getWorkItem：返回WorkItem变量的值。 变量将传递到WorkflowContextService.execute()方法。
-* getWorkflowSession：返回WorkflowSession变量的值。 变量将传递到WorkflowContextService.execute()方法。
-* getMetadata：返回元数据变量的值。 变量将传递到WorkflowContextService.execute()方法。
-* getCommittedVariables：返回表示由先前步骤设置的变量的只读对象映射。 如果变量未在前面的任何步骤中修改，则会返回在配置Watched文件夹时指定的默认值。
-* getCommittedResults：返回只读文档映射。 该映射表示通过上述步骤生成的输出文件。
-* setVariable： WorkflowContextProcessor实施使用变量来操作变量，这些变量表示在步骤之间流动的自定义动态数据。 变量的名称和类型与期间指定的变量的名称相同。 [配置Watched文件夹](../../forms/using/watched-folder-in-aem-forms.md#p-configure-the-watched-folder-p). 要更改变量的值，请使用非null值调用setVariable API。 要删除变量，请使用null值调用setVariable()。
+* getWorkItem：傳回WorkItem變數值。 變數會傳遞至WorkflowContextService.execute()方法。
+* getWorkflowSession：傳回WorkflowSession變數值。 變數會傳遞至WorkflowContextService.execute()方法。
+* getMetadata：傳回中繼資料變數的值。 變數會傳遞至WorkflowContextService.execute()方法。
+* getCommittedVariables：傳回代表先前步驟所設定變數的唯讀物件對應。 如果變數未在前面的任何步驟中修改，則會傳回在設定Watched資料夾時指定的預設值。
+* getCommittedResults：傳回唯讀檔案對應。 對應代表先前步驟產生的輸出檔案。
+* setVariable： WorkflowContextProcessor實作會使用變數來操作變數，這些變數代表在步驟之間流動的自訂動態資料。 變數的名稱和型別與期間指定的變數名稱相同 [設定Watched資料夾](../../forms/using/watched-folder-in-aem-forms.md#p-configure-the-watched-folder-p). 若要變更變數的值，請使用非null值呼叫setVariable API。 若要移除變數，請使用null值呼叫setVariable()。
 
-也可以使用以下ProcessorContext API：
+也可以使用下列ProcessorContext API：
 
-* getWatchFolderId：返回观察文件夹的ID。
-* getInputMap：返回映射类型的映射&lt;string document=&quot;&quot;>. 映射的键是输入文件的文件名和包含文件内容的文档对象。 使用getinputMap API读取输入文件。
-* getConfigParameters：返回映射类型的不可变映射&lt;string object=&quot;&quot;>. 映射包含Watched文件夹的配置参数。
-* setResult： ContentProcessor实施使用API将输出文档写入结果文件夹。 您可以为setResult API的输出文件提供一个名称。 API可能会根据指定的输出文件夹/文件模式选择使用或忽略提供的文件。 如果指定了文件夹模式，则输出文件的名称将如工作流中所述。 如果指定了文件模式，则输出文件的名称如文件模式中所述
+* getWatchFolderId：傳回監看資料夾的ID。
+* getInputMap：傳回Map型別的對應&lt;string document=&quot;&quot;>. 對映的鍵是輸入檔案的檔案名稱以及包含檔案內容的檔案物件。 使用getinputMap API讀取輸入檔案。
+* getConfigParameters：傳回Map型別的不可變對應&lt;string object=&quot;&quot;>. 對應包含Watched資料夾的設定引數。
+* setResult： ContentProcessor實作會使用API將輸出檔案寫入結果資料夾。 您可以為setResult API的輸出檔案提供名稱。 API可能會根據指定的輸出資料夾/檔案模式，選擇使用或忽略提供的檔案。 如果指定資料夾模式，則輸出檔案的名稱會如工作流程中所述。 如果指定了檔案模式，則輸出檔案的名稱如檔案模式中所述
 
-在工作流中使用setResult API时的注意事项：
+setResult API用於工作流程時的考量事項：
 
-* 要添加有助于整体工作流输出的新输出文档，请使用任何先前步骤均未用作输出文件名的文件名调用setResult API。
-* 要更新上一步骤生成的输出，请使用上一步已使用的文件名调用setResult API。
-* 要删除上一步骤生成的输出，请调用setResult，其文件名已由上一步使用，内容为null。
+* 若要新增有助於整體工作流程輸出的輸出檔案，請使用先前步驟未用作輸出檔案名稱的檔案名稱來呼叫setResult API。
+* 若要更新先前步驟產生的輸出，請使用先前步驟已使用的檔案名稱呼叫setResult API。
+* 若要刪除上一步驟產生的輸出，請以上一個步驟已使用的檔案名稱呼叫setResult，並以空值作為內容。
 
 >[!NOTE]
 >
->在任何其他情况下调用包含null内容的setResult API都将导致错误。
+>在任何其他情況下呼叫具有null內容的setResult API會導致錯誤。
 
-以下示例作为工作流步骤实施。 在此示例中，ECMAscript使用变量stepCount来跟踪在当前工作流实例中调用步骤的次数。
-输出文件夹的名称是当前步骤编号、原始文件名和outPrefix参数中指定的前缀的组合。
+下列範例已實作為工作流程步驟。 在此範例中，ECMAscript會使用變數stepCount來追蹤在目前工作流程例項中呼叫步驟的次數。
+輸出資料夾的名稱是目前步驟編號、原始檔案名稱和outPrefix引數中指定的前置詞的組合。
 
-ECMAScript获取工作流上下文服务的引用，并创建WorkflowContextProcessor接口的实现。 WorkflowContextProcessor实现接受输入文件，将文件复制到临时位置，并返回表示所复制文件的文档。 根据布尔变量purgePrevious的值，当前步骤将删除当前工作流实例中启动该步骤时由同一步骤上次生成的输出。 最后，调用wfSvc.execute方法以执行WorkflowContextProcessor实现。 输出文档的内容将保存到Watched Folder配置节点中提到的物理路径上的结果文件夹。
+ECMAScript會取得工作流程內容服務的參考，並建立WorkflowContextProcessor介面的實作。 WorkflowContextProcessor實作接受輸入檔案、將檔案複製到暫存位置，並傳回代表所複製檔案的檔案。 根據布林值變數purgePrevious的值，目前步驟會刪除與目前工作流程例項中啟動步驟時相同的步驟上次產生的輸出。 最後，會叫用wfSvc.execute方法執行WorkflowContextProcessor實作。 輸出檔案的內容會儲存在Watched Folder設定節點中提及的實體路徑的結果資料夾中。
 
 ```javascript
 log.error("Watch-folder workflow script called for step: " + graniteWorkItem.getNode().getTitle());
@@ -393,23 +393,23 @@ wfSvc.execute(impl, graniteWorkItem, graniteWorkflowSession, metaData);
 log.info("Exiting workflow script!")
 ```
 
-### 创建有效负荷映射器筛选器以将watched文件夹的结构映射到工作流的有效负荷 {#create-payload-mapper-filter-to-map-structure-of-a-watched-folder-to-the-payload-of-a-workflow}
+### 建立裝載對應程式篩選器，將Watched資料夾的結構對應至工作流程的裝載 {#create-payload-mapper-filter-to-map-structure-of-a-watched-folder-to-the-payload-of-a-workflow}
 
-创建watched文件夹时，会在被监视的文件夹内创建一个文件夹结构。 文件夹结构具有阶段、结果、保留、输入和失败文件夹。 文件夹结构可用作工作流的输入有效负荷并接受工作流的输出。 它还可以列出故障点（如果有）。
+當您建立watched資料夾時，它會在被監視的資料夾中建立資料夾結構。 資料夾結構有階段、結果、保留、輸入和失敗資料夾。 資料夾結構可作為工作流程的輸入裝載，並接受來自工作流程的輸出。 它也可以列出失敗點（如果有）。
 
-如果有效负荷的结构与watched文件夹的结构不同，您可以编写自定义脚本来将watched文件夹的结构映射到有效负荷。 此类脚本称为有效负载映射器过滤器。 AEM Forms开箱即用地提供有效负荷映射器过滤器，以将watched文件夹的结构映射到有效负荷。
+如果有效負載的結構與watched資料夾的結構不同，您可以撰寫自訂指令碼，將watched資料夾的結構對應至有效負載。 此類指令碼稱為裝載對應程式篩選器。 AEM Forms提供立即可用的裝載對應程式篩選器，將watched資料夾的結構對應至裝載。
 
-#### 创建自定义有效负载映射器过滤器 {#creating-a-custom-payload-mapper-filter}
+#### 建立自訂裝載對應程式篩選器 {#creating-a-custom-payload-mapper-filter}
 
-1. 下载 [Adobe客户端SDK](https://repo1.maven.org/maven2/com/adobe/aemfd/aemfd-client-sdk/).
-1. 在基于maven的项目的构建路径中设置客户端SDK。 要开始配置，您可以在所选的IDE中下载并打开以下基于maven的项目。
-1. 编辑示例捆绑包中可用的有效负载映射器过滤器代码以满足您的要求。
-1. 使用maven创建自定义有效负载映射器筛选器的捆绑包。
-1. 使用 [AEM包控制台](https://localhost:4502/system/console/bundles) 以安装捆绑包。
+1. 下載 [Adobe使用者端SDK](https://repo1.maven.org/maven2/com/adobe/aemfd/aemfd-client-sdk/).
+1. 在Maven型專案的建置路徑中設定使用者端SDK。 若要開始使用，您可以下載並在您選擇的IDE中開啟以下maven型專案。
+1. 編輯範例套件中可用的裝載對應程式篩選程式程式碼以符合您的需求。
+1. 使用maven建立自訂裝載對應程式篩選器的套件。
+1. 使用 [AEM套件組合主控台](https://localhost:4502/system/console/bundles) 以安裝套件組合。
 
-   现在，AEM Watched文件夹UI中列出了自定义有效负载映射器筛选器。 您可以将其用于工作流。
+   現在，自訂裝載對應程式篩選器列在AEM Watched資料夾UI中。 您可以將其用於工作流程。
 
-   以下示例代码为相对于有效负载保存的文件实施一个简单的基于文件的映射器。 你可以用它开始。
+   以下範常式式碼會針對相對於承載儲存的檔案，實作簡單的檔案型對應程式。 您可以使用它來開始。
 
    ```java
    package com.adobe.aemfd.watchfolder.workflow;
@@ -485,132 +485,132 @@ log.info("Exiting workflow script!")
    }
    ```
 
-## 用户如何与Watched文件夹交互 {#how-users-interact-with-a-watched-folder}
+## 使用者如何與Watched資料夾互動 {#how-users-interact-with-a-watched-folder}
 
-对于Watched Folder端点，用户可以通过将输入文件或文件夹从其桌面复制或拖到Watched Folder来开始文件处理操作。 文件按到达顺序进行处理。
+對於Watched資料夾端點，使用者可以透過複製輸入檔案或資料夾從其案頭拖曳到Watched資料夾來開始檔案處理作業。 檔案會依到達順序進行處理。
 
-对于Watched Folder端点，如果作业只需要一个输入文件，则用户可以将该文件复制到Watched Folder的根目录。
+對於Watched資料夾端點，如果作業只需要一個輸入檔案，使用者可以將該檔案複製到Watched資料夾的根目錄。
 
-如果作业包含多个输入文件，则用户必须在Watched Folder层次结构之外创建一个包含所有必需文件的文件夹。 此新文件夹应包含输入文件（如果需要，还可以包含一个DDX文件）。 构建作业文件夹后，用户将其复制到Watched Folder的输入文件夹中。
-
->[!NOTE]
->
->确保应用程序服务器已删除对Watched文件夹中文件的访问权限。 如果AEM Forms在扫描文件后无法从输入文件夹中删除这些文件，则关联的进程将无限期启动。
-
-## 有关Watched文件夹的其他信息 {#additional-information-about-the-watched-folders}
-
-### 关于限制 {#about-throttling}
-
-为监视文件夹端点启用限制后，它会限制在任何给定时间处理的监视文件夹作业数。 作业的最大数量由批处理大小值决定，该值也可以在Watched Folder端点中配置。 当达到限制限制限制时，不会轮询Watched文件夹的输入目录中的传入文档。 该文档还保留在输入目录中，直到完成其他监视文件夹作业并再次尝试轮询为止。 对于同步处理，即使作业在单个线程中连续处理，单个轮询中处理的所有作业都将计入限制限制范围内。
+如果作業包含多個輸入檔案，使用者必須在Watched資料夾階層之外建立包含所有必要檔案的資料夾。 這個新資料夾應該包含輸入檔案(以及選擇性包含的DDX檔案（如果處理序需要）)。 在建構工作資料夾後，使用者將其複製到Watched資料夾的輸入資料夾中。
 
 >[!NOTE]
 >
->限制无法随群集扩展。 启用限制后，群集作为一个整体处理作业的数量不会超过任何给定时间在批处理大小中指定的作业数量。 此限制是群集范围的，并非特定于群集中的每个节点。 例如，当批次大小为2时，单个节点处理两个作业即可达到限制限制，并且直到其中一个作业完成为止，没有其他节点会轮询输入目录。
+>確定應用程式伺服器已刪除Watched資料夾中檔案的存取權。 如果AEM Forms在掃描檔案後無法從輸入資料夾中刪除這些檔案，則關聯的程式將無限期啟動。
 
-#### 限制的工作原理 {#how-throttling-works}
+## 關於Watched資料夾的其他資訊 {#additional-information-about-the-watched-folders}
 
-Watched Folder在每个pollInterval扫描输入文件夹，选取批处理大小中指定的文件数，并为每个文件调用目标服务。 例如，如果Batch Size为4，则每次扫描时，Watched Folder会选取四个文件，创建四个调用请求，然后调用目标服务。 在完成这些请求之前，如果调用Watched Folder，则无论前四个作业是否完成，它都会再次启动四个作业。
+### 關於節流 {#about-throttling}
 
-限制功能可防止Watched Folder在前面的作业未完成时调用新作业。 观察文件夹检测正在进行的作业，并根据批处理大小减去正在进行的作业来处理新作业。 例如，在第二次调用中，如果完成的作业数只有三个，并且一个作业仍在进行中，则Watched Folder将仅调用另外三个作业。
+為監看資料夾端點啟用節流時，會限制在任何指定時間處理的Watched資料夾工作數目。 作業的最大數量由「批次大小」值決定，此值也可以在Watched資料夾端點中設定。 當達到節流限制時，不會輪詢Watched資料夾輸入目錄中的傳入檔案。 檔案也會保留在輸入目錄中，直到其他Watched Folder工作完成並嘗試輪詢為止。 對於同步處理，即使作業在單一執行緒中連續處理，在單一輪詢中處理的所有作業都會計入節流限制內。
 
-* 观察文件夹依赖于暂存文件夹中存在的文件数来确定正在处理的作业数。 如果文件在暂存文件夹中保持未处理状态，则Watched Folder不再调用任何作业。 例如，如果批处理大小为4个且已停止三个作业，则Watched Folder在后续调用中仅调用一个作业。 有多个情况可能会导致文件在stage文件夹中保持未处理状态。 当作业停止时，管理员可以在“进程管理”管理页面上终止进程，以便Watched Folder将文件移出暂存文件夹。
-* 如果AEM Forms服务器在Watched Folder调用作业之前关闭，管理员可以将文件移出stage文件夹。 有关信息，请参阅 [故障点和恢复](../../forms/using/watched-folder-in-aem-forms.md#p-failure-points-and-recoveryfailure-points-and-recovery-p).
-* 如果AEM Forms服务器正在运行，但在作业管理器服务回调时监视文件夹未运行（当服务未按顺序启动时会发生此情况），则管理员可以将文件移出暂存文件夹。 有关信息，请参阅 [故障点和恢复](../../forms/using/watched-folder-in-aem-forms.md#p-failure-points-and-recoveryfailure-points-and-recovery-p).
+>[!NOTE]
+>
+>節流不會隨叢集縮放。 啟用節流時，叢集作為一個整體不會在任何指定時間處理超過批次大小中指定的作業數。 此限制是整個叢集，並非叢集中的每個節點所特有。 例如，當批次大小為2時，單一節點處理兩個作業即可達到節流限制，而其中一個作業完成前，沒有其他節點會輪詢輸入目錄。
 
-### 故障点和恢复故障点和恢复 {#failure-points-and-recoveryfailure-points-and-recovery}
+#### 節流如何運作 {#how-throttling-works}
 
-在每个轮询事件中， Watched Folder锁定输入文件夹，将匹配包含文件模式的文件移动到舞台文件夹，然后解除锁定输入文件夹。 需要锁定，以便两个线程不会拾取同一组文件并对其进行两次处理。 当pollInterval较小而批处理大小较大时，发生此情况的几率会增加。 将文件移到stage文件夹后，输入文件夹将被解锁，以便其他线程可以扫描该文件夹。 此步骤有助于提供高吞吐量，因为其他线程可以在一个线程处理文件时进行扫描。
+Watched Folder會以每個pollInterval掃描輸入資料夾、擷取「批次大小」中指定的檔案數目，並叫用每個檔案的目標服務。 例如，如果「批次大小」為4，則每次掃描時，Watched Folder會挑選四個檔案、建立四個叫用請求，然後叫用目標服務。 在完成這些要求之前，如果叫用Watched Folder，就會再次啟動四個工作，無論前四個工作是否完成。
 
-将文件移动到暂存文件夹后，将为每个文件创建调用请求，并调用目标服务。 在某些情况下，Watched Folder可能无法恢复stage文件夹中的文件：
+節流功能可防止Watched資料夾在先前工作未完成時叫用新工作。 Watched資料夾會偵測進行中的工作，並根據批次大小減去進行中的工作來處理新工作。 例如，在第二個叫用中，如果完成的工作數目只有三個，而一個工作仍在進行中，則Watched Folder只會叫用另外三個工作。
 
-* 如果服务器在Watched Folder可以创建调用请求之前关闭，则暂存文件夹中的文件将保留在stage文件夹中，并且不会恢复。
+* Watched資料夾取決於Stage資料夾中存在的檔案數量，以找出有多少工作正在進行中。 如果Stage資料夾中的檔案仍未處理，Watched Folder就不會叫用任何其他工作。 例如，如果批次大小為四且有三個工作已停止，「監看資料夾」在後續的叫用中只會叫用一個工作。 有多個情況可能會導致Stage資料夾中的檔案保持未處理狀態。 當工作停止時，管理員可以在「程式管理」管理頁面上終止程式，以便Watched Folder將檔案移出Stage資料夾。
+* 如果AEM Forms伺服器在Watched Folder叫用工作之前關閉，管理員可以將檔案移出stage資料夾。 如需詳細資訊，請參閱 [失敗點和復原](../../forms/using/watched-folder-in-aem-forms.md#p-failure-points-and-recoveryfailure-points-and-recovery-p).
+* 如果AEM Forms伺服器正在執行，但工作管理員服務回撥時Watched Folder並未執行（當服務未依順序啟動時就會發生），管理員可以將檔案移出stage資料夾。 如需詳細資訊，請參閱 [失敗點和復原](../../forms/using/watched-folder-in-aem-forms.md#p-failure-points-and-recoveryfailure-points-and-recovery-p).
 
-* 如果Watched Folder已成功为stage文件夹中的每个文件创建调用请求，并且服务器崩溃，则根据调用类型，有两种行为：
+### 失敗點和復原失敗點和復原 {#failure-points-and-recoveryfailure-points-and-recovery}
 
-   * **同步**：如果将Watched文件夹配置为同步调用服务，则stage文件夹中的所有文件在stage文件夹中保持未处理状态。
-   * **异步**：在这种情况下，Watched文件夹依赖作业管理器服务。 如果Job Manager服务回调Watched Folder，则根据调用的结果，将暂存文件夹中的文件移到preserve或failure文件夹。 如果作业管理器服务没有回调Watched Folder ，文件在stage文件夹中仍保持未处理状态。 当Watched Folder未在作业管理器回调时运行时，会发生此情况。
+在每個輪詢事件中，Watched Folder會鎖定輸入資料夾、將符合包含檔案模式的檔案移動到舞台資料夾，然後解除鎖定輸入資料夾。 需要鎖定，這樣兩個執行緒就不會擷取同一組檔案並處理它們兩次。 小pollInterval和大的批次大小會增加發生此情況的機率。 檔案移至stage資料夾後，輸入資料夾會解除鎖定，以便其他執行緒可以掃描該資料夾。 此步驟有助於提供高輸送量，因為其他執行緒可以在一個執行緒處理檔案時進行掃描。
 
-#### 恢复暂存文件夹中未处理的源文件 {#recover-unprocessed-source-files-in-the-stage-folder}
+檔案移至Stage資料夾後，系統會為每個檔案建立叫用請求，並叫用目標服務。 Watched Folder可能無法復原Stage資料夾中的檔案：
 
-当Watched Folder无法处理暂存文件夹中的源文件时，您可以恢复未处理的文件。
+* 如果伺服器在Watched Folder建立啟動請求之前關閉，stage資料夾中的檔案會保留在stage資料夾中，且不會復原。
 
-1. 重新启动应用程序服务器或节点。
+* 如果Watched Folder已順利為stage資料夾中的每個檔案建立叫用要求，且伺服器當機，則根據叫用型別有兩種行為：
 
-1. 停止Watched Folder处理新的输入文件。 如果跳过此步骤，将更难确定在暂存文件夹中哪些文件未处理。 要阻止Watched Folder处理新的输入文件，请执行以下任务之一：
+   * **同步**：如果Watched資料夾設定為同步叫用服務，stage資料夾中的所有檔案在stage資料夾中仍維持未處理狀態。
+   * **非同步**：在此情況下，Watched資料夾會仰賴Job Manager服務。 如果「工作管理員服務」回撥Watched資料夾，系統會根據叫用的結果，將stage資料夾中的檔案移至preserve或failure資料夾。 如果「工作管理員」服務沒有回撥Watched資料夾，檔案在Stage資料夾中仍會保持未處理狀態。 當「工作管理員」回撥時，Watched資料夾未執行，就會發生這種情況。
 
-   * 将Watched文件夹的includeFilePattern属性更改为与任何新输入文件都不匹配的属性（例如，输入NOMATCH）。
-   * 暂停正在创建新输入文件的进程。
+#### 復原stage資料夾中未處理的來源檔案 {#recover-unprocessed-source-files-in-the-stage-folder}
 
-   等待AEM Forms恢复并处理所有文件。 大多数文件应恢复，任何新输入文件都应正确处理。 您等待Watched Folder恢复和处理文件的时间长短将取决于要调用的操作的长度和要恢复的文件数。
+當Watched Folder無法處理階段資料夾中的來源檔案時，您可以復原未處理的檔案。
 
-1. 确定无法处理哪些文件。 如果等待了适当的时间并且已完成上一步，并且暂存文件夹中仍存在未处理的文件，请转到下一步。
+1. 重新啟動應用程式伺服器或節點。
+
+1. 停止Watched資料夾處理新的輸入檔案。 如果您略過此步驟，將更難判斷哪些檔案在Stage資料夾中未處理。 若要防止Watched資料夾處理新的輸入檔案，請執行下列其中一項工作：
+
+   * 將Watched資料夾的includeFilePattern屬性變更為不符合任何新輸入檔案的內容（例如，輸入NOMATCH）。
+   * 暫停建立新輸入檔案的程式。
+
+   等候AEM Forms復原並處理所有檔案。 大多數檔案應該會復原，任何新輸入檔案都會正確處理。 您等待Watched資料夾復原及處理檔案的時間長度將取決於要叫用的作業長度和要復原的檔案數目。
+
+1. 判斷哪些檔案無法處理。 如果您已等待適當的時間且已完成上一步驟，但舞台資料夾中仍存在未處理的檔案，請前往下一個步驟。
 
    >[!NOTE]
    >
-   >您可以在暂存目录中查看文件的日期和时间戳。 根据文件数量和正常处理时间，您可以确定哪些文件已足够旧，可以认为已停滞。
+   >您可以檢視階段目錄中檔案的日期和時間戳記。 根據檔案數量和正常處理時間，您可以確定哪些檔案的年齡足以被視為卡住。
 
-1. 将未处理的文件从stage目录复制到输入目录。
+1. 將未處理的檔案從stage目錄複製到輸入目錄。
 
-1. 如果在步骤2中阻止Watched Folder处理新输入文件，请将“Include File Pattern”（包含文件模式）更改为先前的值，或重新启用已禁用的进程。
+1. 如果您在步驟2中阻止Watched資料夾處理新的輸入檔案，請將「包含檔案模式」變更為先前的值，或重新啟用您停用的程式。
 
-### 将Watched文件夹链接在一起 {#chain-watched-folders-together}
+### 將Watched資料夾連結在一起 {#chain-watched-folders-together}
 
-Watched文件夹可以链接在一起，因此一个Watched文件夹的结果文档是下一个Watched文件夹的输入文档。 每个Watched文件夹都可以调用不同的服务。 通过以这种方式配置Watched文件夹，可以调用多个服务。 例如，一个Watched文件夹可以将PDF文件转换为Adobe PostScript®另一个Watched文件夹可以将PostScript文件转换为PDF/A格式。 要执行此操作，只需将您第一个端点定义的Watched文件夹的结果文件夹设置为指向您第二个端点定义的Watched文件夹的输入文件夹。
+Watched資料夾可以鏈結在一起，因此一個Watched資料夾的結果檔案是下一個Watched資料夾的輸入檔案。 每個Watched資料夾都可以叫用不同的服務。 透過以這種方式設定Watched資料夾，可以叫用多項服務。 例如，一個Watched資料夾可以將PDF檔案轉換為Adobe PostScript®另一個Watched資料夾可以將PostScript檔案轉換為PDF/A格式。 若要這麼做，只要將您第一個端點定義的Watched資料夾的結果資料夾設定為指向您第二個端點定義的Watched資料夾的輸入資料夾。
 
-第一次转换的输出将转到\path\result。 第二次转换的输入是\path\result，第二次转换的输出将转到\path\result\result （或您在第二次转换的结果文件夹框中定义的目录）。
+第一次轉換的輸出會變成\path\result。 第二個轉換的輸入為\path\result，而第二個轉換的輸出會移至\path\result\result （或您在第二個轉換的「結果資料夾」方塊中定義的目錄）。
 
-### 文件和文件夹模式 {#file-and-folder-patterns}
+### 檔案和資料夾模式 {#file-and-folder-patterns}
 
-管理员可以指定可以调用服务的文件类型。 可以为每个Watched文件夹建立多个文件模式。 文件模式可以是以下文件属性之一：
+管理員可以指定可以叫用服務的檔案型別。 可以為每個Watched資料夾建立多個檔案模式。 檔案模式可以是下列其中一個檔案屬性：
 
-* 具有特定文件扩展名的文件；例如， &#42;.dat， &#42;.xml、.pdf、 &#42;.&#42;
-* 具有特定名称的文件；例如，数据。&#42;
-* 名称和扩展名中包含复合表达式的文件，如以下示例所示：
+* 具有特定副檔名的檔案；例如， &#42;.dat， &#42;.xml， .pdf， &#42;.&#42;
+* 具有特定名稱的檔案；例如，資料。&#42;
+* 在名稱和副檔名中有複合運算式的檔案，如下列範例所示：
 
-   * 数据[0-9][0-9][0-9].[dD][aA]&#39;端口&#39;
-   * &#42;。[dD][Aa]&#39;端口&#39;
-   * &#42;。[Xx][Mm][Ll]
+   * 資料[0-9][0-9][0-9].[dD][aA]&#39;連線埠&#39;
+   * &#42;。[dD][Aa]&#39;連線埠&#39;
+   * &#42;。[Xx][公厘][Ll]
 
-* 管理员可以定义用于存储结果的输出文件夹的文件模式。 对于输出文件夹（结果、保留和失败），管理员可以指定以下任何文件模式：
+* 管理員可以定義儲存結果的輸出資料夾的檔案模式。 對於輸出資料夾（結果、保留和失敗），管理員可以指定以下任何檔案模式：
 * %Y =年（完整）
-* %y =年（后两位数）
+* %y =年（最後兩位數）
 * %M =月，
 * %D =日期，
-* %d =一年中的第几天，
-* %h =小时，
-* %m =分钟，
+* %d =一年中的第幾天，
+* %h =小時，
+* %m =分鐘，
 * %s =秒，
-* %R =介于0到9之间的随机数
-* %J =作业名称
+* %R =介於0到9之間的隨機數
+* %J =工作名稱
 
-例如，结果文件夹的路径可以是C:\Adobe\AdobeLiveCycleES4\BarcodedForms\%y\%m\%d。
+例如，結果資料夾的路徑可能是C:\Adobe\AdobeLiveCycleES4\BarcodedForms\%y\%m\%d。
 
-输出参数映射还可以指定其他模式，例如：
+輸出引數對應也可以指定其他模式，例如：
 
-* %F =源文件名
-* %E =源文件扩展名
+* %F =來源檔案名稱
+* %E =來源副檔名
 
-如果输出参数映射模式以“File.separator”（路径分隔符）结尾，则会创建一个文件夹，并将内容复制到该文件夹中。 如果模式不以“File.separator”结尾，则会使用该名称创建内容（结果文件或文件夹）。
+如果輸出引數對應模式以「File.separator」（即路徑分隔符號）結尾，則會建立資料夾並將內容複製到該資料夾。 如果模式不是以「File.separator」結尾，則會以該名稱建立內容（結果檔案或資料夾）。
 
-## 将PDF生成器与Watched文件夹一起使用 {#using-pdf-generator-with-a-watched-folder}
+## 搭配Watched資料夾使用PDF產生器 {#using-pdf-generator-with-a-watched-folder}
 
-您可以配置Watched文件夹以启动工作流、服务或脚本来处理输入文件。 在以下部分中，我们将配置一个Watched文件夹以启动ECMAScript。 ECMAScript将使用PDF生成器将Microsoft Word (.docx)文档转换为PDF文档。
+您可以設定Watched資料夾，以啟動工作流程、服務或指令碼來處理輸入檔案。 在下一節中，我們將設定Watched資料夾以起始ECMAScript。 ECMAScript會使用PDF產生器將Microsoft Word (.docx)檔案轉換為PDF檔案。
 
-执行以下步骤以使用PDF生成器配置Watched文件夹：
+執行以下步驟，使用PDF產生器設定Watched資料夾：
 
-1. [创建ECMAScript](../../forms/using/watched-folder-in-aem-forms.md#p-create-an-ecmascript-p)
-1. [创建工作流](../../forms/using/watched-folder-in-aem-forms.md#p-create-a-workflow-p)
-1. [配置Watched文件夹](../../forms/using/watched-folder-in-aem-forms.md#p-configure-the-watched-folder-p)
+1. [建立ECMAScript](../../forms/using/watched-folder-in-aem-forms.md#p-create-an-ecmascript-p)
+1. [建立工作流程](../../forms/using/watched-folder-in-aem-forms.md#p-create-a-workflow-p)
+1. [設定Watched資料夾](../../forms/using/watched-folder-in-aem-forms.md#p-configure-the-watched-folder-p)
 
-### 创建ECMAScript {#create-an-ecmascript}
+### 建立ECMAScript {#create-an-ecmascript}
 
-ECMAScript将使用PDF生成器的createPDF API将Microsoft Word (.docx)文档转换为PDF文档。 执行以下步骤以创建脚本：
+ECMAScript會使用PDF產生器的createPDF API將Microsoft Word (.docx)檔案轉換為PDF檔案。 執行以下步驟來建立指令碼：
 
-1. 在浏览器窗口中打开CRXDE Lite。 URL为https://&#39;[服务器]：[端口]&#39;/crx/de.
+1. 在瀏覽器視窗中開啟CRXDE Lite。 URL為https://&#39;[伺服器]：[連線埠]&#39;/crx/de.
 
-1. 导航到/etc/workflow/scripts并创建一个名为PDFG的文件夹。
+1. 導覽至/etc/workflow/scripts並建立名為PDFG的資料夾。
 
-1. 在PDFG文件夹中，创建一个名为pdfg-openOffice-sample.ecma的文件，并将以下代码添加到该文件中：
+1. 在PDFG資料夾中，建立名為pdfg-openOffice-sample.ecma的檔案，並將下列程式碼新增至該檔案：
 
    ```javascript
    var wfSvc = sling.getService(Packages.com.adobe.aemfd.watchfolder.workflow.api.WorkflowContextService);
@@ -635,47 +635,47 @@ ECMAScript将使用PDF生成器的createPDF API将Microsoft Word (.docx)文档�
    wfSvc.execute(impl, graniteWorkItem, graniteWorkflowSession, metaData);
    ```
 
-1. 保存并关闭文件。
+1. 儲存並關閉檔案。
 
-### 创建工作流 {#create-a-workflow}
+### 建立工作流程 {#create-a-workflow}
 
-1. 在浏览器窗口中打开AEM Workflow UI。
-   <https://[servername>]：&#39;端口&#39;/工作流
+1. 在瀏覽器視窗中開啟AEM Workflow UI。
+   <https://[servername>]：&#39;port&#39;/workflow
 
-1. 在“模型”视图中，单击 **新**. 在“新建工作流”对话框中，指定 **标题**，然后单击 **确定**.
+1. 在「模型」檢視中，按一下 **新增**. 在新工作流程對話方塊中，指定 **標題**，然後按一下 **確定**.
 
    ![create-a-workflow-pdf](assets/create-a-workflow-pdf.png)
 
-1. 选择新创建的工作流，然后单击 **编辑**. 工作流将在新窗口中打开。
+1. 選取新建立的工作流程並按一下 **編輯**. 工作流程會在新視窗中開啟。
 
-1. 删除默认工作流步骤。 将“流程步骤”从Sidekick拖放到工作流中。
+1. 刪除預設的工作流程步驟。 將「流程步驟」從Sidekick拖放到「工作流程」。
 
    ![create-a-workflow-pdf2](assets/create-a-workflow-pdf2.png)
 
-1. 右键单击流程步骤并选择 **编辑**. 出现“Step Properties（步骤属性）”窗口。
+1. 以滑鼠右鍵按一下「處理步驟」並選取 **編輯**. 「步驟屬性」視窗即會出現。
 
-1. 在“流程”选项卡中，选择ECMAScript。 例如，在中创建的pdfg-openOffice-sample.ecma脚本 [创建ECMAScript](#p-create-an-ecmascript-p). 启用 **处理程序前进** 选项并单击 **确定**.
+1. 在「處理」標籤中，選取ECMAScript。 例如，在中建立的pdfg-openOffice-sample.ecma指令碼 [建立ECMAScript](#p-create-an-ecmascript-p). 啟用 **處理常式前進** 選項並按一下 **確定**.
 
    ![create-a-workflow3-pdf](assets/create-a-workflow3-pdf.png)
 
-### 配置Watched文件夹 {#configure-the-watched-folder}
+### 設定Watched資料夾 {#configure-the-watched-folder}
 
-1. 在浏览器窗口中打开CRXDE Lite。 https://&#39;[服务器]：[端口]&#39;/crx/de/
+1. 在瀏覽器視窗中開啟CRXDE Lite。 https://&#39;[伺服器]：[連線埠]&#39;/crx/de/
 
-1. 导航到/etc/fd/watchfolder/config/文件夹，并创建一个类型为nt：unstructured的节点。
+1. 導覽至/etc/fd/watchfolder/config/資料夾，並建立nt：unstructured型別的節點。
 
    ![configure-the-watched-folder-pdf](assets/configure-the-watched-folder-pdf.png)
 
-1. 将以下属性添加到节点：
+1. 將下列屬性新增至節點：
 
-   * folderPath （字符串）：在定义的时间间隔内扫描的文件夹的路径。 文件夹必须位于共享位置，且所有服务器均对服务器具有完全访问权限。
-inputProcessorType （字符串）：要启动的进程的类型。 在本教程中，指定工作流。
+   * folderPath （字串）：在定義的時間間隔掃描的資料夾路徑。 資料夾必須位於共用位置，且所有伺服器都必須具備伺服器的完整存取權。
+inputProcessorType （字串）：要啟動的程式型別。 在本教學課程中，指定工作流程。
 
-   * inputProcessorId （字符串）： inputProcessorId属性的行为基于为inputProcessorType属性指定的值。 在此示例中，inputProcessorType属性的值为workflow。 因此，对于inputProcessorId属性，请指定PDFG工作流的以下路径：/etc/workflow/models/pdfg/jcr：content/model
+   * inputProcessorId （字串）： inputProcessorId屬性的行為是根據為inputProcessorType屬性指定的值。 在此範例中，inputProcessorType屬性的值為workflow。 因此，針對inputProcessorId屬性指定PDFG工作流程的以下路徑： /etc/workflow/models/pdfg/jcr：content/model
 
-   * outputFilePattern （字符串）：输出文件的模式。 可以指定文件夹或文件模式。 如果指定了文件夹模式，则输出文件的名称将如工作流中所述。 如果指定了文件模式，则输出文件的名称如文件模式中所述。
-   除了上述必需的属性外，Watched文件夹还支持一些可选属性。 有关可选属性的完整列表和说明，请参阅 [观察文件夹属性](#watchedfolderproperties).
+   * outputFilePattern （字串）：輸出檔案的模式。 您可以指定資料夾或檔案模式。 如果指定資料夾模式，則輸出檔案的名稱會如工作流程中所述。 如果指定了檔案模式，則輸出檔案的名稱如檔案模式中所述。
+   除了上述的強制屬性以外，Watched資料夾也支援一些選擇性屬性。 如需選擇性屬性的完整清單和說明，請參閱 [Watched資料夾屬性](#watchedfolderproperties).
 
 ## 已知问题 {#watched-folder-known-issues}
 
-在JEE上启动AEM 6.5 Forms时，文件在JBoss完全启动之前开始处理，并且文件无法处理。 为避免出现此情况，请在启动JBoss之前，清除所有Watched文件夹。
+在JEE上啟動AEM 6.5 Forms時，系統會在JBoss完全啟動且檔案無法處理之前開始處理檔案。 為避免此情況，請在啟動JBoss之前，清除所有Watched資料夾。

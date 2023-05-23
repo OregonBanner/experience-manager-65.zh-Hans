@@ -36,7 +36,7 @@ ht-degree: 96%
 
 您需要通过一种方式来定位特定的内容，选择所需内容并将其返回到您的应用程序以供进一步处理。
 
-借助Adobe Experience Manager(AEM)，您可以使用AEM GraphQL API有选择地访问内容片段，以仅返回所需的内容。 这意味着您可以实施结构化内容的 Headless 交付以便在您的应用程序中使用。
+透過Adobe Experience Manager (AEM)，您可以使用AEM GraphQL API選擇性地存取您的內容片段，以僅傳回您需要的內容。 这意味着您可以实施结构化内容的 Headless 交付以便在您的应用程序中使用。
 
 >[!NOTE]
 >
@@ -242,11 +242,11 @@ It provides features such as syntax-highlighting, auto-complete, auto-suggest, t
 在开始查询您的内容之前，您需要：
 
 * 启用端点
-   * 使用工具 — > Assets -> GraphQL
+   * 使用工具 — >資產 — > GraphQL
    * [启用 GraphQL 端点](/help/sites-developing/headless/graphql-api/graphql-endpoint.md#enabling-graphql-endpoint)
 
-* 访问GraphiQL（如果需要）
-   * [AEM GraphiQL接口](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#graphiql-interface)
+* 存取GraphiQL （如有需要）
+   * [AEM GraphiQL介面](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#graphiql-interface)
 
 ### 示例结构 {#sample-structure}
 
@@ -269,7 +269,7 @@ It provides features such as syntax-highlighting, auto-complete, auto-suggest, t
 
 ### 用于测试查询的位置 {#where-to-test-your-queries}
 
-查询可以在 [GraphiQL接口](/help/sites-developing/headless/graphql-api/graphiql-ide.md)，例如：
+查詢可在 [GraphiQL介面](/help/sites-developing/headless/graphql-api/graphiql-ide.md)，例如：
 
 * `http://localhost:4502/aem/graphiql.html`
 

@@ -1,7 +1,7 @@
 ---
-title: “IBM DB2数据库：运行命令以进行常规维护”
+title: 「IBM DB2資料庫：執行命令以進行定期維護」
 seo-title: "IBM DB2 database: Running commands for regular maintenance"
-description: 本文档列出了建议用于定期维护AEM表单数据库的IBM DB2命令。
+description: 本檔案列出AEM表單資料庫定期維護所建議的IBM DB2命令。
 seo-description: This document lists IBM DB2 commands that are recommended for regular maintenance of your AEM forms database.
 uuid: 235d59df-b9b9-4770-8b7d-00713701c3c2
 contentOwner: admin
@@ -17,33 +17,33 @@ ht-degree: 0%
 
 ---
 
-# IBM DB2数据库：运行命令以进行常规维护 {#ibm-db-database-running-commands-for-regular-maintenance}
+# IBM DB2資料庫：執行命令以進行定期維護 {#ibm-db-database-running-commands-for-regular-maintenance}
 
-建议使用以下IBM DB2命令来定期维护AEM表单数据库。 有关DB2数据库的维护和性能调优的详细信息，请参见 *IBM DB2 Administration指南*.
+建議您使用下列IBM DB2命令來定期維護AEM表單資料庫。 如需有關DB2資料庫維護與效能調整的詳細資訊，請參閱 *IBM DB2 Administration指南*.
 
-* **运行数据：** 此命令更新描述数据库表物理特性的统计信息及其关联的索引。 由AEM Forms生成的动态SQL语句会自动使用这些更新的统计信息，但构建在数据库中的静态SQL语句需要 `db2rbind` 命令也可以运行。
-* **db2rbind：** 此命令重新绑定数据库中的所有程序包。 在运行 `runstats` 用于重新验证数据库中所有包的实用程序。
-* **重组表或索引：** 此命令检查是否需要重组某些表和索引。
+* **runstats：** 這個命令會更新描述資料庫表格實體特性的統計資料，以及其關聯的索引。 AEM表單產生的動態SQL敘述句會自動使用這些更新的統計資料，但建置在資料庫中的靜態SQL敘述句需要 `db2rbind` 命令也可以執行。
+* **db2rbind：** 這個命令會重新繫結資料庫中的所有套裝程式。 執行後，請使用此命令 `runstats` 用來重新驗證資料庫中所有套件的公用程式。
+* **重組資料表或索引：** 此命令會檢查是否需要重新整理某些表格和索引。
 
-   随着数据库的增长和变化，重新计算表统计信息对于提高数据库性能至关重要，应定期进行。 这些命令可以使用脚本或使用cron作业手动运行。
-
->[!NOTE]
->
->运行之前 `runstats` 命令，数据库必须包含数据，并且必须至少执行了一个目录同步。
-
-对于小型数据库（如10,000个用户或2,500个组），调用 `runstats` 命令来缩短同步时间。
-
-对于较大的数据库（如100,000个用户或10,000个组），请运行 `reorg` 命令。 `runstats` 命令。
-
-## 在AEM表单数据库上使用runstats命令 {#use-the-runstats-command-on-your-aem-forms-database}
-
-运行 `runstats` 命令来修改以下AEM forms数据库表和索引。
+   隨著資料庫的成長與變更，重新計算表格統計資料對於改善資料庫效能至關重要，應定期進行。 這些命令可以使用指令碼手動執行，也可以使用cron作業手動執行。
 
 >[!NOTE]
 >
->此 `runstats` 命令只需要在第一次数据库同步期间运行。 但是，在该过程中必须运行两次：一次是在用户和组同步期间，另一次是在组成员同步期间。 确保每次运行脚本时脚本都会完全执行。
+>在您執行 `runstats` 命令，資料庫必須包含資料，而且至少必須已執行一個目錄同步處理。
 
-有关正确的语法和用法，请参阅数据库制造商的文档。 下， `<schema>` 用于表示与您的DB2用户名关联的架构。 如果您有一个简单的默认DB2安装，则这是数据库架构名称。
+若是小型資料庫（例如10,000位使用者或2,500個群組），只要叫用 `runstats` 減少同步時間計時的指令。
+
+若是大型資料庫（例如100,000位使用者或10,000個群組），請執行 `reorg` 命令。 `runstats` 命令。
+
+## 在您的AEM表單資料庫上使用runstats命令 {#use-the-runstats-command-on-your-aem-forms-database}
+
+執行 `runstats` 命令來建立下列AEM forms資料庫表格和索引。
+
+>[!NOTE]
+>
+>此 `runstats` 命令只需要在第一次資料庫同步處理期間執行。 不過，該程式必須執行兩次：一次是在使用者與群組同步化期間，另一次是在群組成員同步化期間。 請確定每次執行指令碼時，該指令碼都會完全執行。
+
+如需正確語法和用法，請參閱資料庫製造商的檔案。 下， `<schema>` 用於表示與您的DB2使用者名稱相關聯的結構描述。 如果您有簡單的預設DB2安裝，這就是資料庫架構名稱。
 
 ```sql
      TABLE <schema>.EDCPRINCIPALGROUPENTITY
@@ -67,9 +67,9 @@ ht-degree: 0%
      TABLE <schema>.EDCPRINCIPALGRPCTMNTENTITY FOR INDEXES ALL
 ```
 
-## 在AEM forms数据库上运行reorg命令 {#run-the-reorg-command-on-your-aem-forms-database}
+## 在您的AEM表單資料庫上執行reorg命令 {#run-the-reorg-command-on-your-aem-forms-database}
 
-运行 `reorg` 命令来修改以下AEM forms数据库表和索引。 有关正确的语法和用法，请参阅数据库制造商的文档。
+執行 `reorg` 命令來建立下列AEM forms資料庫表格和索引。 如需正確語法和用法，請參閱資料庫製造商的檔案。
 
 ```sql
      TABLE <schema>.EDCPRINCIPALGROUPENTITY

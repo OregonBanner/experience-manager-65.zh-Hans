@@ -1,7 +1,7 @@
 ---
-title: 将PDF转换为Postscript和图像文件
+title: 將PDF轉換為Postscript和Image檔案
 seo-title: Converting PDF to Postscript andImage Files
-description: 使用Java API和Web服务API，使用转换PDF服务将PDF文档转换为PostScript和多种图像格式(JPEG、JPEG2000、PNG和TIFF)。
+description: 使用Java API和Web服務API，使用轉換PDF服務將PDF檔案轉換為PostScript和多種影像格式(JPEG、JPEG2000、PNG和TIFF)。
 seo-description: Use the Convert PDF service to convert PDF documents to PostScript and to a number of image formats (JPEG, JPEG 2000, PNG, and TIFF) using the Java API and Web Service API.
 uuid: 07da0391-7180-4197-aaa6-ae753d753b84
 contentOwner: admin
@@ -18,354 +18,354 @@ ht-degree: 0%
 
 ---
 
-# 将PDF转换为Postscript和图像文件 {#converting-pdf-to-postscript-andimage-files}
+# 將PDF轉換為Postscript和影像檔案 {#converting-pdf-to-postscript-andimage-files}
 
-**本文档中的示例和示例仅适用于AEM Forms on JEE环境。**
+**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms 。**
 
-**关于ConvertPDF服务**
+**關於轉換PDF服務**
 
-“转换PDF”服务将PDF文档转换为PostScript和多种图像格式(JPEG、JPEG2000、PNG和TIFF)。 将PDF文档转换为PostScript对于任何PostScript打印机上基于服务器的无人值守打印很有用。 在不支持PDF文档的内容管理系统中归档文档时，将PDF文档转换为多页TIFF文件是一种可行的做法。
+「轉換PDF」服務會將PDF檔案轉換為PostScript和多種影像格式(JPEG、JPEG2000、PNG和TIFF)。 將PDF檔案轉換為PostScript對於任何PostScript印表機上的自動伺服器式列印都很有用。 在不支援PDF檔案的內容管理系統中封存檔案時，將PDF檔案轉換為多頁TIFF檔案是可行的。
 
-您可以使用ConvertPDF服务完成这些任务：
+您可以使用轉換PDF服務完成這些工作：
 
-* 将PDF文档转换为PostScript。
-* 将PDF文档转换为图像格式。
-
->[!NOTE]
->
->有关ConvertPDF服务的详细信息，请参见 [AEM Forms的服务参考](https://www.adobe.com/go/learn_aemforms_services_63).
-
-## 将PDF文档转换为PostScript {#converting-pdf-documents-to-postscript}
-
-本主题介绍如何使用转换PDF服务API（Java和Web服务）以编程方式将PDF文档转换为PostScript文件。 转换为PostScript文件的PDF文档必须是非交互式PDF文档。 也就是说，如果尝试将交互式PDF文档转换为PostScript文件，则会引发异常。
+* 將PDF檔案轉換為PostScript。
+* 將PDF檔案轉換為影像格式。
 
 >[!NOTE]
 >
->有关ConvertPDF服务的详细信息，请参见 [AEM Forms的服务参考](https://www.adobe.com/go/learn_aemforms_services_63).
+>如需有關轉換PDF服務的詳細資訊，請參閱 [AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
 
-### 步骤摘要 {#summary-of-steps}
+## 將PDF檔案轉換為PostScript {#converting-pdf-documents-to-postscript}
 
-要将PDF文档转换为PostScript文件，请执行以下步骤：
-
-1. 包括项目文件。
-1. 创建转换PDF服务客户端。
-1. 引用要转换为PostScript文件的PDF文档。
-1. 设置转换运行时选项。
-1. 将PDF文档转换为PostScript文件。
-1. 保存PostScript文件。
-
-**包括项目文件**
-
-将必要的文件包含到开发项目中。 如果要使用Java创建客户端应用程序，请包含必要的JAR文件。 如果使用Web服务，请确保包含代理文件。
-
-**创建ConvertPDF客户端**
-
-必须先创建转换PDF服务客户端，然后才能以编程方式执行转换PDF服务操作。 如果您使用的是Java API，请创建 `ConvertPdfServiceClient` 对象。 如果您使用的是Web服务API，请创建 `ConvertPDFServiceService` 对象。
-
-本节使用AEM Forms中引入的Web服务功能。 要访问新功能，您必须使用 `lc_version` 属性。 （请参阅中的“使用Web服务访问新功能”） [使用Web服务调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-web-services).)
-
-**引用要转换为PostScript文件的PDF文档**
-
-引用要转换为PostScript文件的PDF文档。 如本主题前面所述，PDF文档必须是非交互式PDF文档。 如果尝试将交互式PDF文档转换为PostScript文件，则会引发异常。
-
-**设置转换运行时选项**
-
-将PDF文档转换为PostScript文件时，您可以定义运行时选项，以指定创建的PostScript类型。 例如，您可以定义一个级别3的PostScript文件。
-
-通常，生成的PostScript文件将反映输入PDF文档的大小。 如果您选择 `ShrinkToFit` 选项（缩小PostScript文件的输出以适合页面），您将看不到输入PDF文档与生成的PostScript文件之间的差异。 此 `ShrinkToFit` 仅当选择在比输入PDF文档小的页码上打印时，选项才生效。 要选择较小的页面大小，请定义 `PageSize` 选项。 此外，建议您将 `RotateAndCenter` 选项至 `true` 以获取正确的PostScript输出。
-
-同样，如果您选择 `ExpandToFit` 选项（可展开PostScript文件的输出以适合页面），仅当选择在比输入PDF文档更大的页大小上打印时才生效。 要选择较大的页面大小，请定义 `PageSize` 选项。 此外，建议您将 `RotateAndCenter` 选项至 `true` 以获取正确的PostScript输出。
+本主題說明如何使用轉換PDF服務API （Java和Web服務），以程式設計方式將PDF檔案轉換為PostScript檔案。 轉換為PostScript檔案的PDF檔案必須是非互動式PDF檔案。 也就是說，如果您嘗試將互動式PDF檔案轉換為PostScript檔案，則會擲回例外狀況。
 
 >[!NOTE]
 >
->有关可设置的运行时值的信息，请参见 `ToPSOptionsSpec` 中的类引用 [AEM Forms API参考](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
+>如需有關轉換PDF服務的詳細資訊，請參閱 [AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
 
-**将PDF文档转换为PostScript文件**
+### 步驟摘要 {#summary-of-steps}
 
-创建服务客户端并设置运行时选项后，可以调用PostScript转换操作。 此操作将需要有关要转换的文档的信息，包括目标文档的首选PostScript级别。
+若要將PDF檔案轉換為PostScript檔案，請執行下列步驟：
 
-**保存PostScript文件**
+1. 包含專案檔案。
+1. 建立轉換PDF服務使用者端。
+1. 參照要轉換成PostScript檔案的PDF檔案。
+1. 設定轉換執行階段選項。
+1. 將PDF檔案轉換為PostScript檔案。
+1. 儲存PostScript檔案。
 
-将PDF文档转换为PostScript后，可以将输出保存为PostScript文件。
+**包含專案檔案**
 
-**另请参阅**
+將必要的檔案納入您的開發專案中。 如果您使用Java建立使用者端應用程式，請包含必要的JAR檔案。 如果您使用Web服務，請務必包含Proxy檔案。
 
-[使用Java API将PDF文档转换为PS](converting-pdf-postscript-image-files.md#convert-a-pdf-document-to-ps-using-the-java-api)
+**建立轉換PDF使用者端**
 
-[使用Web服务API将PDF文档转换为PS](converting-pdf-postscript-image-files.md#convert-a-pdf-document-to-ps-using-the-web-service-api)
+您必須先建立轉換PDF服務使用者端，才能以程式設計方式執行轉換PDF服務作業。 如果您使用Java API，請建立 `ConvertPdfServiceClient` 物件。 如果您使用Web服務API，請建立 `ConvertPDFServiceService` 物件。
 
-[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+本節使用AEM Forms中介紹的Web服務功能。 若要存取新功能，您必須使用 `lc_version` 屬性。 (請參閱下列「使用Web服務存取新功能」： [使用Web服務叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-web-services).)
 
-[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+**參照要轉換成PostScript檔案的PDF檔案**
 
-[转换PDF服务API快速启动](/help/forms/developing/convert-pdf-service-java-api.md#convert-pdf-service-java-api-quick-start-soap)
+參照您要轉換成PostScript檔案的PDF檔案。 如本主題先前所述，PDF檔案必須是非互動式PDF檔案。 如果您嘗試將互動式PDF檔案轉換為PostScript檔案，則會擲回例外狀況。
 
-### 使用Java API将PDF文档转换为PS {#convert-a-pdf-document-to-ps-using-the-java-api}
+**設定轉換執行階段選項**
 
-使用转换PDF服务API (Java)将PDF文档转换为PostScript：
+將PDF檔案轉換為PostScript檔案時，您可以定義執行階段選項，以指定所建立的PostScript型別。 例如，您可以定義第3級PostScript檔案。
 
-1. 包括项目文件。
+一般而言，產生的PostScript檔案會反映輸入PDF檔案的大小。 如果您選取 `ShrinkToFit` 選項（縮減PostScript檔案的輸出以符合頁面），您不會看到輸入PDF檔案與產生的PostScript檔案之間的差異。 此 `ShrinkToFit` 只有當您選擇在小於輸入PDF檔案的頁面大小上列印時，選項才會生效。 若要選取較小的頁面大小，請定義 `PageSize` 選項。 此外，建議您將 `RotateAndCenter` 選項至 `true` 以取得正確的PostScript輸出。
 
-   在Java项目的类路径中包含客户端JAR文件，例如adobe-convertpdf-client.jar。
-
-1. 创建转换PDF客户端。
-
-   * 创建 `ServiceClientFactory` 包含连接属性的对象。
-   * 创建 `ConvertPdfServiceClient` 对象，使用它的构造函数传递 `ServiceClientFactory` 对象。
-
-1. 引用要转换为PostScript文件的PDF文档。
-
-   * 创建 `java.io.FileInputStream` 对象，并传递一个字符串值，该值指定要转换的PDF文档的位置。
-   * 创建 `com.adobe.idp.Document` 使用存储PDF文档的对象 `com.adobe.idp.Document` 构造函数。 传递 `java.io.FileInputStream` 包含PDF文档的对象。
-
-1. 设置转换运行时选项。
-
-   * 创建 `ToPSOptionsSpec` 对象。
-   * 通过调用属于 `ToPSOptionsSpec` 对象。 例如，要定义创建的PostScript级别，请调用 `ToPSOptionsSpec` 对象的 `setPsLevel` 方法和传递 `PSLevel` 指定PostScript级别的枚举值。 有关可设置的所有运行时值的信息，请参见 `ToPSOptionsSpec` 中的类引用 [AEM Forms API参考](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
-
-1. 将PDF文档转换为PostScript文件。
-
-   调用 `ConvertPdfServiceClient`对象的 `toPS2` 方法，并传递以下值：
-
-   * A `com.adobe.idp.Document` 表示要转换为PostScript文件的PDF文档的对象。
-   * A `ToPSOptionsSpec` 对象指定PostScript运行时选项。
-
-   此 `toPS2` 方法返回 `Document` 包含新PostScript文档的对象。
-
-1. 保存PostScript文件。
-
-   * 创建 `java.io.File` 对象并确保文件扩展名为.ps。
-   * 调用 `Document` 对象的 `copyToFile` 用于复制目录内容的方法 `Document` 对象(确保您使用 `Document` 返回的对象 `toPS2` 方法)。
-
-**另请参阅**
-
-[步骤摘要](converting-pdf-postscript-image-files.md#summary-of-steps)
-
-[快速入门（SOAP模式）：使用Java API将PDF文档转换为PostScript](/help/forms/developing/convert-pdf-service-java-api.md#quick-start-soap-mode-converting-a-pdf-document-to-postscript-using-the-java-api)
-
-[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
-
-[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
-
-### 使用Web服务API将PDF文档转换为PS {#convert-a-pdf-document-to-ps-using-the-web-service-api}
-
-使用转换PDF服务API（Web服务）将PDF文档转换为PostScript：
-
-1. 包括项目文件。
-
-   创建使用MTOM的Microsoft .NET项目。 确保使用以下WSDL定义： `http://localhost:8080/soap/services/ConvertPDFService?WSDL&lc_version=9.0.1`.
-
-   >[!NOTE]
-   >
-   >Replace `localhost` 包含托管AEM Forms的服务器的IP地址。
-
-1. 创建转换PDF客户端。
-
-   * 创建 `ConvertPdfServiceClient` 对象。
-   * 创建 `ConvertPdfServiceClient.Endpoint.Address` 对象 `System.ServiceModel.EndpointAddress` 构造函数。 将指定WSDL的字符串值传递给AEM Forms服务(例如， `http://localhost:8080/soap/services/ConvertPDFService?blob=mtom`.) 您无需使用 `lc_version` 属性。 但是，请指定 `?blob=mtom`.
-   * 创建 `System.ServiceModel.BasicHttpBinding` 对象，方法是获取 `ConvertPdfServiceClient.Endpoint.Binding` 字段。 将返回值强制转换为 `BasicHttpBinding`.
-   * 设置 `System.ServiceModel.BasicHttpBinding` 对象的 `MessageEncoding` 字段至 `WSMessageEncoding.Mtom`. 此值可确保使用MTOM。
-   * 通过执行以下任务启用基本HTTP身份验证：
-
-      * 将AEM表单用户名分配给字段 `ConvertPdfServiceClient.ClientCredentials.UserName.UserName`.
-      * 将相应的密码值分配给字段 `ConvertPdfServiceClient.ClientCredentials.UserName.Password`.
-      * 分配常量值 `HttpClientCredentialType.Basic` 到字段 `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
-      * 分配常量值 `BasicHttpSecurityMode.TransportCredentialOnly` 到字段 `BasicHttpBindingSecurity.Security.Mode`.
-
-1. 引用要转换为PostScript文件的PDF文档。
-
-   * 创建 `BLOB` 对象。 此 `BLOB` 对象用于存储转换为PostScript文件的PDF文档。
-   * 创建 `System.IO.FileStream` 对象，方法是调用其构造函数并传递一个字符串值，该字符串值表示要转换的PDF文档的文件位置和打开文件的模式。
-   * 创建一个字节数组，用于存储 `System.IO.FileStream` 对象。 您可以通过获取 `System.IO.FileStream` 对象的 `Length` 属性。
-   * 通过调用 `System.IO.FileStream` 对象的 `Read` 方法，并传递字节数组、起始位置和流长度以读取。
-   * 填充 `BLOB` 对象(通过指定其 `MTOM` 包含字节数组内容的字段。
-
-1. 设置转换运行时选项。
-
-   * 创建 `ToPSOptionsSpec` 对象。
-   * 通过将值分配给 `ToPSOptionsSpec` 对象的数据成员。 例如，要定义创建的PostScript级别，请分配 `PSLevel` 的枚举值 `ToPSOptionsSpec` 对象的 `psLevel` 数据成员。
-
-1. 将PDF文档转换为PostScript文件。
-
-   调用 `GeneratePDFServiceService` 对象的 `toPS2` 方法，并传递以下值：
-
-   * A `BLOB` 表示要转换为PostScript文件的PDF文档的对象
-   * A `ToPSOptionsSpec` 指定运行时选项的对象
-
-   转换完成后，通过访问代表PostScript文档的二进制数据 `BLOB` 对象的 `MTOM` 属性。 这会返回一个字节数组，您可以将其写出到PostScript文件。
-
-1. 保存PostScript文件。
-
-   * 创建 `System.IO.FileStream` 对象。 传递一个表示PS文件位置的字符串值。
-   * 创建一个字节数组，用于存储 `BLOB` 返回的对象 `encryptPDFUsingPassword` 方法。 通过获取的值填充字节数组 `BLOB` 对象的 `MTOM` 字段。
-   * 创建 `System.IO.BinaryWriter` 对象，方法是调用其构造函数 `System.IO.FileStream` 对象。
-   * 通过调用 `System.IO.BinaryWriter` 对象的 `Write` 方法和传递字节数组。
-
-**另请参阅**
-
-[步骤摘要](converting-pdf-postscript-image-files.md#summary-of-steps)
-
-[使用MTOM调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
-
-[使用SwaRef调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
-
-## 将PDF文档转换为图像格式 {#converting-pdf-documents-to-image-formats}
-
-您可以使用转换PDF服务以编程方式将PDF文档转换为图像格式，包括JPEG、JPEG2000、TIFF和PNG。 通过将PDF文档转换为图像文件，可以将PDF文档用作图像文件。 例如，您可以将映像放入企业内容管理系统进行存储。
-
-将PDF文档转换为图像时，转换PDF服务会为文档中的每一页创建单独的图像。 也就是说，如果文档有20页，则ConvertPDF服务将创建20个图像文件。 将PDF文档转换为图像格式时，您可以为PDF文档内的每页创建单个图像，或者为整个PDF文档创建单个图像文件。
+同樣地，如果您選取 `ExpandToFit` 選項（會展開PostScript檔案的輸出以符合頁面），但只有在您選取在比輸入PDF檔案更大的頁面大小上列印時，它才會生效。 若要選取較大的頁面大小，請定義 `PageSize` 選項。 此外，建議您將 `RotateAndCenter` 選項至 `true` 以取得正確的PostScript輸出。
 
 >[!NOTE]
 >
->有关ConvertPDF服务的详细信息，请参见 [AEM Forms的服务参考](https://www.adobe.com/go/learn_aemforms_services_63).
+>如需您可以設定的執行階段值相關資訊，請參閱 `ToPSOptionsSpec` 中的類別參考 [AEM Forms API參考](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
 
-### 步骤摘要 {#summary_of_steps-1}
+**將PDF檔案轉換為PostScript檔案**
 
-要将PDF文档转换为任何支持的类型，请执行以下步骤：
+建立服務使用者端並設定執行階段選項後，您可以叫用PostScript轉換作業。 此操作將需要轉換檔案的相關資訊，包括目標檔案的偏好PostScript層級。
 
-1. 包括项目文件。
-1. 创建转换PDF服务客户端。
-1. 检索要转换的PDF文档。
-1. 设置运行时选项。
-1. 将PDF转换为图像。
-1. 从收藏集中检索图像文件。
+**儲存PostScript檔案**
 
-**包括项目文件**
-
-将必要的文件包含到开发项目中。 如果要使用Java创建客户端应用程序，请包含必要的JAR文件。 如果使用Web服务，请确保包含代理文件。
-
-**创建ConvertPDF客户端**
-
-必须先创建转换PDF服务客户端，然后才能以编程方式执行转换PDF服务操作。 如果您使用的是Java API，请创建 `ConvertPdfServiceClient` 对象。 如果您使用的是Web服务API，请创建 `ConvertPDFServiceService` 对象。
-
-**检索要转换的PDF文档**
-
-必须检索PDF文档以转换为图像。 无法将交互式PDF文档转换为图像。 如果尝试这样做，则会引发异常。 要将交互式PDF文档转换为图像文件，必须先拼合PDF文档，然后才能将其转换。 (请参阅 [拼合PDF文档](/help/forms/developing/creating-document-output-streams.md#flattening-pdf-documents).)
-
-**设置运行时选项**
-
-必须设置运行时选项，如图像格式和分辨率值。 有关运行时值的信息，请参见 `ToImageOptionsSpec` 中的类引用 [AEM Forms API参考](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
-
-**将PDF转换为图像**
-
-创建服务客户端并设置运行时选项后，可以将PDF文档转换为图像。 返回包含图像的集合对象。
-
-**从收藏集中检索图像文件**
-
-您可以从ConvertPDF服务返回的集合对象中检索图像文件。 集合中的每个元素都是 `com.adobe.idp.Document` 实例(或 `BLOB` （例如，如果您使用的是Web服务）可以另存为图像文件(如JPG文件)的实例。
-
-图像文件的格式取决于 `ImageConvertFormat` 运行时选项。 也就是说，如果将 `ImageConvertFormat` 运行时选项 `ImageConvertFormat.JPEG`，可将图像文件另存为JPG文件。
+將PDF檔案轉換為PostScript後，您可以將輸出儲存為PostScript檔案。
 
 **另请参阅**
 
-[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[使用Java API將PDF檔案轉換為PS](converting-pdf-postscript-image-files.md#convert-a-pdf-document-to-ps-using-the-java-api)
 
-[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+[使用網站服務API將PDF檔案轉換為PS](converting-pdf-postscript-image-files.md#convert-a-pdf-document-to-ps-using-the-web-service-api)
 
-[转换PDF服务API快速启动](/help/forms/developing/convert-pdf-service-java-api.md#convert-pdf-service-java-api-quick-start-soap)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
-### 使用Java API将PDF文档转换为图像文件 {#convert-a-pdf-document-to-image-files-using-the-java-api}
+[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-使用转换PDF服务API (Java)将PDF文档转换为图像格式：
+[轉換PDF服務API快速啟動](/help/forms/developing/convert-pdf-service-java-api.md#convert-pdf-service-java-api-quick-start-soap)
 
-1. 包括项目文件。
+### 使用Java API將PDF檔案轉換為PS {#convert-a-pdf-document-to-ps-using-the-java-api}
 
-   在Java项目的类路径中包含客户端JAR文件，例如adobe-convertpdf-client.jar。
+使用轉換PDF服務API (Java)將PDF檔案轉換為PostScript：
 
-1. 创建转换PDF客户端。
+1. 包含專案檔案。
 
-   * 创建 `ServiceClientFactory` 包含连接属性的对象。
-   * 创建 `ConvertPdfServiceClient` 对象，使用它的构造函数传递 `ServiceClientFactory` 对象。
+   在您的Java專案的類別路徑中包含使用者端JAR檔案，例如adobe-convertpdf-client.jar。
 
-1. 检索要转换的PDF文档。
+1. 建立轉換PDF使用者端。
 
-   * 创建 `java.io.FileInputStream` 表示要转换的PDF文档的对象，转换方法为使用其构造函数并传递一个指定PDF文档位置的字符串值。
-   * 创建 `com.adobe.idp.Document` 对象，使用它的构造函数传递 `java.io.FileInputStream` 对象。
+   * 建立 `ServiceClientFactory` 包含連線屬性的物件。
+   * 建立 `ConvertPdfServiceClient` 物件，使用它的建構函式並傳遞 `ServiceClientFactory` 物件。
 
-1. 设置运行时选项。
+1. 參照要轉換成PostScript檔案的PDF檔案。
 
-   * 创建 `ToImageOptionsSpec` 对象。
-   * 根据需要调用属于此对象的方法。 例如，通过调用 `setImageConvertFormat` 方法和传递 `ImageConvertFormat` 指定格式类型的枚举值。
+   * 建立 `java.io.FileInputStream` 物件，使用它的建構函式並傳遞字串值，以指定要轉換的PDF檔案位置。
+   * 建立 `com.adobe.idp.Document` 使用儲存PDF檔案的物件 `com.adobe.idp.Document` 建構函式。 傳遞 `java.io.FileInputStream` 包含PDF檔案的物件。
 
-   >[!NOTE]
-   >
-   >设置 `ImageConvertFormat` 枚举值是必需的。
+1. 設定轉換執行階段選項。
 
-1. 将PDF转换为图像。
+   * 建立 `ToPSOptionsSpec` 物件（透過叫用其建構函式）。
+   * 叫用屬於下列專案的適當方法來設定執行階段選項： `ToPSOptionsSpec` 物件。 例如，若要定義建立的PostScript層級，請叫用 `ToPSOptionsSpec` 物件的 `setPsLevel` 方法並傳遞 `PSLevel` 指定PostScript層級的列舉值。 如需您可以設定的所有執行階段值的相關資訊，請參閱 `ToPSOptionsSpec` 中的類別參考 [AEM Forms API參考](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
 
-   调用 `ConvertPdfServiceClient` 对象的 `toImage2` 方法，并传递以下值：
+1. 將PDF檔案轉換為PostScript檔案。
 
-   * A `com.adobe.idp.Document` 表示要转换的PDF文件的对象。
-   * A `com.adobe.livecycle.converpdfservice.client.ToImageOptionsSpec` 包含有关目标图像格式的各种首选项的对象。
+   叫用 `ConvertPdfServiceClient`物件的 `toPS2` 方法並傳遞下列值：
 
-   此 `toImage2` 方法返回 `java.util.List` 包含图像的对象。 集合中的每个元素都是 `com.adobe.idp.Document` 实例。
+   * A `com.adobe.idp.Document` 物件，代表要轉換成PostScript檔案的PDF檔案。
+   * A `ToPSOptionsSpec` 物件，指定PostScript執行階段選項。
 
-1. 从收藏集中检索图像文件。
+   此 `toPS2` 方法傳回 `Document` 包含新PostScript檔案的物件。
 
-   循环访问 `java.util.List` 用于确定图像是否存在的对象。 每个元素都是一个 `com.adobe.idp.Document` 实例。 通过调用 `com.adobe.idp.Document` 对象的 `copyToFile` 方法和传递 `java.io.File` 对象。
+1. 儲存PostScript檔案。
 
-**另请参阅**
-
-[快速入门（SOAP模式）：使用Java API将PDF文档转换为JPEG文件](/help/forms/developing/convert-pdf-service-java-api.md#quick-start-soap-mode-converting-a-pdf-document-to-jpeg-files-using-the-java-api)
-
-### 使用Web服务API将PDF文档转换为图像文件 {#convert-a-pdf-document-to-image-files-using-the-web-service-api}
-
-使用转换PDF服务API（Web服务）将PDF文档转换为图像格式：
-
-1. 包括项目文件。
-
-   创建使用MTOM的Microsoft .NET项目。 确保使用以下WSDL定义： `http://localhost:8080/soap/services/ConvertPDFService?WSDL&lc_version=9.0.1`.
-
-   >[!NOTE]
-   >
-   >Replace `localhost` 包含托管AEM Forms的服务器的IP地址。
-
-1. 创建转换PDF客户端。
-
-   * 创建 `ConvertPdfServiceClient` 对象。
-   * 创建 `ConvertPdfServiceClient.Endpoint.Address` 对象 `System.ServiceModel.EndpointAddress` 构造函数。 将指定WSDL的字符串值传递给AEM Forms服务(例如， `http://localhost:8080/soap/services/ConvertPDFService?blob=mtom`.) 您无需使用 `lc_version` 属性。 但是，请指定 `?blob=mtom`.
-   * 创建 `System.ServiceModel.BasicHttpBinding` 对象，方法是获取 `ConvertPdfServiceClient.Endpoint.Binding` 字段。 将返回值强制转换为 `BasicHttpBinding`.
-   * 设置 `System.ServiceModel.BasicHttpBinding` 对象的 `MessageEncoding` 字段至 `WSMessageEncoding.Mtom`. 此值可确保使用MTOM。
-   * 通过执行以下任务启用基本HTTP身份验证：
-
-      * 将AEM表单用户名分配给字段 `ConvertPdfServiceClient.ClientCredentials.UserName.UserName`.
-      * 将相应的密码值分配给字段 `ConvertPdfServiceClient.ClientCredentials.UserName.Password`.
-      * 分配常量值 `HttpClientCredentialType.Basic` 到字段 `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
-      * 分配常量值 `BasicHttpSecurityMode.TransportCredentialOnly` 到字段 `BasicHttpBindingSecurity.Security.Mode`.
-
-1. 检索要转换的PDF文档。
-
-   * 创建 `BLOB` 对象。 此 `BLOB` 对象用于存储PDF表单。
-   * 创建 `System.IO.FileStream` 对象。 传递一个字符串值，该值指定PDF表单的位置和打开文件的模式。
-   * 创建一个字节数组，用于存储 `System.IO.FileStream` 对象。 通过获取 `System.IO.FileStream` 对象的 `Length` 属性。
-   * 通过调用 `System.IO.FileStream` 对象的 `Read` 方法。 传递字节数组、起始位置和要读取的流长度。
-   * 填充 `BLOB` 对象(通过指定其 `MTOM` 包含字节数组内容的字段。
-
-1. 设置运行时选项。
-
-   * 创建 `ToImageOptionsSpec` 对象。
-   * 根据需要调用属于此对象的方法。 例如，通过调用 `setImageConvertFormat` 方法和传递 `ImageConvertFormat` 指定格式类型的枚举值。
-
-   >[!NOTE]
-   >
-   >设置 `ImageConvertFormat` 枚举值是必需的。
-
-1. 将PDF转换为图像。
-
-   调用 `ConvertPDFServiceService` 对象的 `toImage2` 方法，并传递以下值：
-
-   * A `BLOB` 表示要转换的文件的对象
-   * A `ToImageOptionsSpec` 包含有关目标图像格式的各种首选项的对象
-
-   此 `toImage2` 方法返回 `MyArrayOfBLOB` 包含新创建的图像文件的对象。
-
-1. 从收藏集中检索图像文件。
-
-   * 确定 `MyArrayOfBLOB` 对象，方法是获取其 `Count` 字段。 每个元素都是一个 `BLOB` 包含图像的对象。
-   * 循环访问 `MyArrayOfBLOB` 对象并保存每个图像文件。
+   * 建立 `java.io.File` 物件，並確認副檔名為.ps。
+   * 叫用 `Document` 物件的 `copyToFile` 複製目錄內容的方法 `Document` 物件放入檔案(請確定您使用 `Document` 物件，由 `toPS2` 方法)。
 
 **另请参阅**
 
-[使用MTOM调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[步驟摘要](converting-pdf-postscript-image-files.md#summary-of-steps)
 
-[使用SwaRef调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[快速入門（SOAP模式）：使用Java API將PDF檔案轉換為PostScript](/help/forms/developing/convert-pdf-service-java-api.md#quick-start-soap-mode-converting-a-pdf-document-to-postscript-using-the-java-api)
+
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+
+[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+
+### 使用網站服務API將PDF檔案轉換為PS {#convert-a-pdf-document-to-ps-using-the-web-service-api}
+
+使用轉換PDF服務API （Web服務）將PDF檔案轉換為PostScript：
+
+1. 包含專案檔案。
+
+   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/ConvertPDFService?WSDL&lc_version=9.0.1`.
+
+   >[!NOTE]
+   >
+   >Replace `localhost` 搭配裝載AEM Forms之伺服器的IP位址。
+
+1. 建立轉換PDF使用者端。
+
+   * 建立 `ConvertPdfServiceClient` 物件（使用其預設建構函式）。
+   * 建立 `ConvertPdfServiceClient.Endpoint.Address` 物件，使用 `System.ServiceModel.EndpointAddress` 建構函式。 將指定WSDL的字串值傳遞至AEM Forms服務(例如， `http://localhost:8080/soap/services/ConvertPDFService?blob=mtom`.) 您不需要使用 `lc_version` 屬性。 不過，請指定 `?blob=mtom`.
+   * 建立 `System.ServiceModel.BasicHttpBinding` 物件，方法是取得 `ConvertPdfServiceClient.Endpoint.Binding` 欄位。 將傳回值轉換為 `BasicHttpBinding`.
+   * 設定 `System.ServiceModel.BasicHttpBinding` 物件的 `MessageEncoding` 欄位至 `WSMessageEncoding.Mtom`. 此值可確保使用MTOM。
+   * 執行下列工作來啟用基本HTTP驗證：
+
+      * 將AEM表單使用者名稱指派給欄位 `ConvertPdfServiceClient.ClientCredentials.UserName.UserName`.
+      * 將對應的密碼值指派給欄位 `ConvertPdfServiceClient.ClientCredentials.UserName.Password`.
+      * 指派常數值 `HttpClientCredentialType.Basic` 至欄位 `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
+      * 指派常數值 `BasicHttpSecurityMode.TransportCredentialOnly` 至欄位 `BasicHttpBindingSecurity.Security.Mode`.
+
+1. 參照要轉換成PostScript檔案的PDF檔案。
+
+   * 建立 `BLOB` 物件（使用其建構函式）。 此 `BLOB` 物件可用來儲存轉換成PostScript檔案的PDF檔案。
+   * 建立 `System.IO.FileStream` 物件，方法是叫用其建構函式，並傳遞代表要轉換之PDF檔案的檔案位置以及開啟檔案的模式的字串值。
+   * 建立位元組陣列，儲存 `System.IO.FileStream` 物件。 您可以取得 `System.IO.FileStream` 物件的 `Length` 屬性。
+   * 叫用 `System.IO.FileStream` 物件的 `Read` 方法，並傳遞位元組陣列、起始位置和串流長度以讀取。
+   * 填入 `BLOB` 物件，透過指派其 `MTOM` 包含位元組陣列內容的欄位。
+
+1. 設定轉換執行階段選項。
+
+   * 建立 `ToPSOptionsSpec` 物件（透過叫用其建構函式）。
+   * 將值指派給，設定執行階段選項 `ToPSOptionsSpec` 物件的資料成員。 例如，若要定義已建立的PostScript層級，請指派 `PSLevel` 列舉值至 `ToPSOptionsSpec` 物件的 `psLevel` 資料成員。
+
+1. 將PDF檔案轉換為PostScript檔案。
+
+   叫用 `GeneratePDFServiceService` 物件的 `toPS2` 方法並傳遞下列值：
+
+   * A `BLOB` 物件，代表要轉換成PostScript檔案的PDF檔案
+   * A `ToPSOptionsSpec` 指定執行階段選項的物件
+
+   轉換完成後，存取代表PostScript檔案的二進位資料 `BLOB` 物件的 `MTOM` 屬性。 這會傳回您可以寫出至PostScript檔案的位元組陣列。
+
+1. 儲存PostScript檔案。
+
+   * 建立 `System.IO.FileStream` 物件（透過叫用其建構函式）。 傳遞代表PS檔案之檔案位置的字串值。
+   * 建立位元組陣列，儲存 `BLOB` 物件，由 `encryptPDFUsingPassword` 方法。 透過取得 `BLOB` 物件的 `MTOM` 欄位。
+   * 建立 `System.IO.BinaryWriter` 物件，方法是叫用其建構函式並傳遞 `System.IO.FileStream` 物件。
+   * 透過叫用 `System.IO.BinaryWriter` 物件的 `Write` 方法並傳遞位元組陣列。
+
+**另请参阅**
+
+[步驟摘要](converting-pdf-postscript-image-files.md#summary-of-steps)
+
+[使用MTOM叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+
+[使用SwaRef叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+
+## 將PDF檔案轉換為影像格式 {#converting-pdf-documents-to-image-formats}
+
+您可以使用「轉換PDF」服務，以程式設計方式將PDF檔案轉換為影像格式，包括JPEG、JPEG2000、TIFF和PNG。 將PDF檔案轉換為影像檔案後，您就可以將PDF檔案當成影像檔案使用。 例如，您可以將影像放入企業內容管理系統進行儲存。
+
+將PDF檔案轉換為影像時，轉換PDF服務會為檔案中的每個頁面建立個別的影像。 也就是說，如果檔案有20頁，則「轉換PDF」服務會建立20個影像檔案。 將PDF檔案轉換為影像格式時，您可以為PDF檔案中的每個頁面建立個別影像，或為整個PDF檔案建立單一影像檔案。
+
+>[!NOTE]
+>
+>如需有關轉換PDF服務的詳細資訊，請參閱 [AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
+
+### 步驟摘要 {#summary_of_steps-1}
+
+若要將PDF檔案轉換為任何支援的型別，請執行下列步驟：
+
+1. 包含專案檔案。
+1. 建立轉換PDF服務使用者端。
+1. 擷取要轉換的PDF檔案。
+1. 設定執行階段選項。
+1. 將PDF轉換為影像。
+1. 從集合中擷取影像檔案。
+
+**包含專案檔案**
+
+將必要的檔案納入您的開發專案中。 如果您使用Java建立使用者端應用程式，請包含必要的JAR檔案。 如果您使用Web服務，請務必包含Proxy檔案。
+
+**建立轉換PDF使用者端**
+
+您必須先建立轉換PDF服務使用者端，才能以程式設計方式執行轉換PDF服務作業。 如果您使用Java API，請建立 `ConvertPdfServiceClient` 物件。 如果您使用Web服務API，請建立 `ConvertPDFServiceService` 物件。
+
+**擷取要轉換的PDF檔案**
+
+您必須擷取PDF檔案才能轉換為影像。 您無法將互動式PDF檔案轉換為影像。 如果您嘗試這麼做，則會擲回例外狀況。 若要將互動式PDF檔案轉換為影像檔案，您必須先將PDF檔案平面化，才能進行轉換。 (請參閱 [平面化PDF檔案](/help/forms/developing/creating-document-output-streams.md#flattening-pdf-documents).)
+
+**設定執行階段選項**
+
+您必須設定執行階段選項，例如影像格式和解析度值。 如需有關執行階段值的資訊，請參閱 `ToImageOptionsSpec` 中的類別參考 [AEM Forms API參考](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
+
+**將PDF轉換為影像**
+
+建立服務使用者端並設定執行階段選項後，您可以將PDF檔案轉換為影像。 會傳回包含影像的集合物件。
+
+**從集合中擷取影像檔案**
+
+您可以從ConvertPDF服務傳回的集合物件擷取影像檔案。 集合中的每個元素都是 `com.adobe.idp.Document` 執行個體(或 `BLOB` 例項（如果您使用Web服務），則可儲存為影像檔案，例如JPG檔案。
+
+影像檔案的格式取決於 `ImageConvertFormat` 執行階段選項。 也就是說，如果您將 `ImageConvertFormat` 執行階段選項 `ImageConvertFormat.JPEG`，您可以將影像檔案儲存為JPG檔案。
+
+**另请参阅**
+
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+
+[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+
+[轉換PDF服務API快速啟動](/help/forms/developing/convert-pdf-service-java-api.md#convert-pdf-service-java-api-quick-start-soap)
+
+### 使用Java API將PDF檔案轉換為影像檔案 {#convert-a-pdf-document-to-image-files-using-the-java-api}
+
+使用轉換PDF服務API (Java)將PDF檔案轉換為影像格式：
+
+1. 包含專案檔案。
+
+   在您的Java專案的類別路徑中包含使用者端JAR檔案，例如adobe-convertpdf-client.jar。
+
+1. 建立轉換PDF使用者端。
+
+   * 建立 `ServiceClientFactory` 包含連線屬性的物件。
+   * 建立 `ConvertPdfServiceClient` 物件，使用它的建構函式並傳遞 `ServiceClientFactory` 物件。
+
+1. 擷取要轉換的PDF檔案。
+
+   * 建立 `java.io.FileInputStream` 物件，代表要轉換的PDF檔案，方法是使用其建構函式，並傳遞指定PDF檔案位置的字串值。
+   * 建立 `com.adobe.idp.Document` 物件，使用它的建構函式並傳遞 `java.io.FileInputStream` 物件。
+
+1. 設定執行階段選項。
+
+   * 建立 `ToImageOptionsSpec` 物件（使用其建構函式）。
+   * 視需要叫用屬於此物件的方法。 例如，透過叫用 `setImageConvertFormat` 方法和傳遞 `ImageConvertFormat` 指定格式型別的列舉值。
+
+   >[!NOTE]
+   >
+   >設定 `ImageConvertFormat` 列舉值是必要的。
+
+1. 將PDF轉換為影像。
+
+   叫用 `ConvertPdfServiceClient` 物件的 `toImage2` 方法並傳遞下列值：
+
+   * A `com.adobe.idp.Document` 代表要轉換之PDF檔案的物件。
+   * A `com.adobe.livecycle.converpdfservice.client.ToImageOptionsSpec` 物件，其中包含有關目標影像格式的各種偏好設定。
+
+   此 `toImage2` 方法傳回 `java.util.List` 包含影像的物件。 集合中的每個元素都是 `com.adobe.idp.Document` 執行個體。
+
+1. 從集合中擷取影像檔案。
+
+   循環瀏覽 `java.util.List` 物件來判斷影像是否存在。 每個元素都是 `com.adobe.idp.Document` 執行個體。 透過叫用 `com.adobe.idp.Document` 物件的 `copyToFile` 方法和傳遞 `java.io.File` 物件。
+
+**另请参阅**
+
+[快速入門（SOAP模式）：使用Java API將PDF檔案轉換為JPEG檔案](/help/forms/developing/convert-pdf-service-java-api.md#quick-start-soap-mode-converting-a-pdf-document-to-jpeg-files-using-the-java-api)
+
+### 使用Web服務API將PDF檔案轉換為影像檔案 {#convert-a-pdf-document-to-image-files-using-the-web-service-api}
+
+使用轉換PDF服務API （Web服務）將PDF檔案轉換為影像格式：
+
+1. 包含專案檔案。
+
+   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/ConvertPDFService?WSDL&lc_version=9.0.1`.
+
+   >[!NOTE]
+   >
+   >Replace `localhost` 搭配裝載AEM Forms之伺服器的IP位址。
+
+1. 建立轉換PDF使用者端。
+
+   * 建立 `ConvertPdfServiceClient` 物件（使用其預設建構函式）。
+   * 建立 `ConvertPdfServiceClient.Endpoint.Address` 物件，使用 `System.ServiceModel.EndpointAddress` 建構函式。 將指定WSDL的字串值傳遞至AEM Forms服務(例如， `http://localhost:8080/soap/services/ConvertPDFService?blob=mtom`.) 您不需要使用 `lc_version` 屬性。 不過，請指定 `?blob=mtom`.
+   * 建立 `System.ServiceModel.BasicHttpBinding` 物件，方法是取得 `ConvertPdfServiceClient.Endpoint.Binding` 欄位。 將傳回值轉換為 `BasicHttpBinding`.
+   * 設定 `System.ServiceModel.BasicHttpBinding` 物件的 `MessageEncoding` 欄位至 `WSMessageEncoding.Mtom`. 此值可確保使用MTOM。
+   * 執行下列工作來啟用基本HTTP驗證：
+
+      * 將AEM表單使用者名稱指派給欄位 `ConvertPdfServiceClient.ClientCredentials.UserName.UserName`.
+      * 將對應的密碼值指派給欄位 `ConvertPdfServiceClient.ClientCredentials.UserName.Password`.
+      * 指派常數值 `HttpClientCredentialType.Basic` 至欄位 `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
+      * 指派常數值 `BasicHttpSecurityMode.TransportCredentialOnly` 至欄位 `BasicHttpBindingSecurity.Security.Mode`.
+
+1. 擷取要轉換的PDF檔案。
+
+   * 建立 `BLOB` 物件（使用其建構函式）。 此 `BLOB` 物件可用來儲存PDF表單。
+   * 建立 `System.IO.FileStream` 物件（透過叫用其建構函式）。 傳遞字串值，指定PDF表單的位置和開啟檔案的模式。
+   * 建立位元組陣列，儲存 `System.IO.FileStream` 物件。 透過取得 `System.IO.FileStream` 物件的 `Length` 屬性。
+   * 叫用 `System.IO.FileStream` 物件的 `Read` 方法。 傳遞位元組陣列、起始位置以及要讀取的資料流長度。
+   * 填入 `BLOB` 物件，透過指派其 `MTOM` 包含位元組陣列內容的欄位。
+
+1. 設定執行階段選項。
+
+   * 建立 `ToImageOptionsSpec` 物件（使用其建構函式）。
+   * 視需要叫用屬於此物件的方法。 例如，透過叫用 `setImageConvertFormat` 方法和傳遞 `ImageConvertFormat` 指定格式型別的列舉值。
+
+   >[!NOTE]
+   >
+   >設定 `ImageConvertFormat` 列舉值是必要的。
+
+1. 將PDF轉換為影像。
+
+   叫用 `ConvertPDFServiceService` 物件的 `toImage2` 方法並傳遞下列值：
+
+   * A `BLOB` 物件，代表要轉換的檔案
+   * A `ToImageOptionsSpec` 包含目標影像格式各種偏好設定的物件
+
+   此 `toImage2` 方法傳回 `MyArrayOfBLOB` 包含新建立之影像檔案的物件。
+
+1. 從集合中擷取影像檔案。
+
+   * 決定中的元素數量 `MyArrayOfBLOB` 物件，方法是取得其 `Count` 欄位。 每個元素都是 `BLOB` 包含影像的物件。
+   * 循環瀏覽 `MyArrayOfBLOB` 物件並儲存每個影像檔案。
+
+**另请参阅**
+
+[使用MTOM叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+
+[使用SwaRef叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)

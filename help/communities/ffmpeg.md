@@ -1,7 +1,7 @@
 ---
-title: 适用于社区的FFmpeg
+title: 適用於社群的FFmpeg
 seo-title: FFmpeg for Communities
-description: 如何安装和配置用于社区的FFmpeg
+description: 如何為社群安裝和設定FFmpeg
 seo-description: How to install and configure FFmpeg for Communities
 uuid: ef2f821c-70e9-4889-a8d7-a93b10a1d428
 contentOwner: Janice Kendall
@@ -18,51 +18,51 @@ ht-degree: 1%
 
 ---
 
-# 适用于社区的FFmpeg {#ffmpeg-for-communities}
+# 適用於社群的FFmpeg {#ffmpeg-for-communities}
 
 ## 概述 {#overview}
 
-FFmpeg是一种用于转换和流式传输音频和视频的解决方案，安装后可用于对 [视频资产](../../help/sites-authoring/default-components-foundation.md#video).
+FFmpeg是一種轉換和串流音訊與視訊的解決方案，安裝後可用於正確的轉碼 [視訊資產](../../help/sites-authoring/default-components-foundation.md#video).
 
-## 安装FFmpeg {#installing-ffmpeg}
+## 安裝FFmpeg {#installing-ffmpeg}
 
-应在托管AEM的服务器上安装FFmpeg *作者* 实例。
+FFmpeg應安裝在託管AEM的伺服器上 *作者* 執行個體。
 
-1. 转到 [https://www.ffmpeg.org](https://www.ffmpeg.org/).
-1. 下载适用于您的特定环境（Macintosh、Windows或Linux）的FFmpeg最新版本。
+1. 前往 [https://www.ffmpeg.org](https://www.ffmpeg.org/).
+1. 下載適用於您特定環境（Macintosh、Windows或Linux）的最新版FFmpeg。
 
-   * 由于旧版本中存在安全漏洞，因此务必保持FFmpeg为最新。
+   * 由於舊版中的安全性弱點，請務必保持FFmpeg最新狀態。
 
-1. 按照操作系统的说明安装FFmpeg。
+1. 依照作業系統的指示安裝FFmpeg。
 
-1. 确保在系统路径中设置了FFmpeg可执行文件。
+1. 請確定已在系統路徑中設定FFmpeg可執行檔。
 
-   您应该能够从系统中的任何目录运行FFmpeg。
+   您應該可以從系統中的任何目錄執行FFmpeg。
 
    * 例如：`ffmpeg -version`。
 
-## 配置FFmpeg转码服务 {#configure-ffmpeg-transcoding-service}
+## 設定FFmpeg轉碼服務 {#configure-ffmpeg-transcoding-service}
 
-默认情况下，安装FFmpeg后，会根据 [!UICONTROL DAM更新资产] 工作流定义。
+依預設，安裝FFmpeg時，會根據 [!UICONTROL DAM更新資產] 工作流程定義。
 
-由于转码占用大量CPU，因此建议修改目标演绎版列表。 在大多数情况下，无需转码。
+由於轉碼耗用大量CPU，因此建議修改目標轉譯清單。 在大多數情況下，不需要轉碼。
 
-修改 [!UICONTROL DAM更新资产] 工作流，在本例中，要关闭转码，请执行以下操作：
+若要修改 [!UICONTROL DAM更新資產] 工作流程，在此範例中，若要關閉轉碼：
 
-* 使用管理权限登录到创作实例。
-* 从全局导航中，导航到 **[!UICONTROL 工具]** > **[!UICONTROL 工作流]** > **[!UICONTROL 模型]**.
-* 定位 **[!UICONTROL DAM更新资产]**.
-* 双击以打开要在经典UI中编辑的工作流。
+* 使用管理許可權登入作者執行個體。
+* 從全域導覽，導覽至 **[!UICONTROL 工具]** > **[!UICONTROL 工作流程]** > **[!UICONTROL 模型]**.
+* 尋找 **[!UICONTROL DAM更新資產]**.
+* 連按兩下以開啟工作流程，以便在傳統UI中編輯。
 
-   生成位置： [http://localhost:4502/cf#/etc/workflow/models/dam/update_asset.html](http://localhost:4502/cf#/etc/workflow/models/dam/update_asset.html)
+   產生的位置： [http://localhost:4502/cf#/etc/workflow/models/dam/update_asset.html](http://localhost:4502/cf#/etc/workflow/models/dam/update_asset.html)
 
-* 双击 **[!UICONTROL FFmpeg转码]** 步骤以访问“步骤属性”对话框。
-* 在 **[!UICONTROL 进程]** 选项卡：
+* 連按兩下 **[!UICONTROL FFmpeg轉碼]** 步驟以存取「步驟屬性」對話方塊。
+* 在 **[!UICONTROL 程式]** 標籤：
 
-   * **[!UICONTROL 项目]**:清除所有条目以禁用转码默认值： `profile:format_ogg,profile:format_aac,profile:format_flv,profile:format_aac_ie`
+   * **[!UICONTROL 引數]**：清除所有專案以停用轉碼預設值： `profile:format_ogg,profile:format_aac,profile:format_flv,profile:format_aac_ie`
 
    ![configure-ffmpeg](assets/configure-ffmpeg.png)
 
-* 选择 **[!UICONTROL 确定]** 关闭 `Step Properties` 对话框。
+* 選取 **[!UICONTROL 確定]** 以關閉 `Step Properties` 對話方塊。
 
-* 选择 **[!UICONTROL 保存]** 保存 `DAM Update Asset` 工作流。
+* 選取 **[!UICONTROL 儲存]** 儲存 `DAM Update Asset` 工作流程。

@@ -1,6 +1,6 @@
 ---
-title: 禁用适用于JEE和OSGI的PDFG配置的UAC
-description: 为PDFG配置禁用UAC的步骤
+title: 停用適用於JEE和OSGI之PDFG設定的UAC
+description: 針對PDFG設定停用UAC的步驟
 exl-id: 785b7bb4-7158-45ea-a1e5-eebf3dc3ebc3
 source-git-commit: 2e9b9c40f54aa54a946e4320341ed4a760c56fd1
 workflow-type: tm+mt
@@ -9,32 +9,32 @@ ht-degree: 3%
 
 ---
 
-# 无法在Windows Server上将Word或Excel文件转换为PDF {#unable-to-convert-word-excel-files-PDF}
+# 無法在Windows Server上將Word或Excel檔案轉換為PDF {#unable-to-convert-word-excel-files-PDF}
 
-## 带有 OS 剪贴板 {#issue}
+## 问题 {#issue}
 
-当用户尝试在Microsoft Windows Server上将Word或Excel文件转换为PDF时，遇到以下错误：
+當使用者嘗試在Microsoft Windows Server上將Word或Excel檔案轉換為PDF時，會遇到以下錯誤：
 
-*来自主转换器的错误消息： ALC-PDG-015-003 — 系统无法打开输入文件。 请再次提交文件或联系系统管理员。*
+*來自主要轉換器的錯誤訊息：ALC-PDG-015-003 — 系統無法開啟輸入檔案。 請再次提交您的檔案或連絡您的系統管理員。*
 
 
 ## 解决方案 {#solution}
 
-执行以下步骤来解决问题：
-1. 要访问系统配置实用程序，请转到 **[!UICONTROL “开始”>“运行”]** 然后输入 **[!UICONTROL MSCONFIG]**.
-1. 单击 **[!UICONTROL 工具]** 制表符，向下滚动并选择 **[!UICONTROL 更改UAC设置]**. 单击 **[!UICONTROL Launch]** 在新窗口中运行命令。
-1. 将滑块调整为从不通知级别。 完成后，关闭命令窗口并关闭“System Configuration（系统配置）”窗口。
-1. 验证UAC的注册表设置是否设置为0（零）。 执行以下步骤进行验证：
+執行以下步驟以解決問題：
+1. 若要存取系統組態公用程式，請前往 **[!UICONTROL 開始>執行]** 然後輸入 **[!UICONTROL MSCONFIG]**.
+1. 按一下 **[!UICONTROL 工具]** Tab鍵並向下捲動並選取 **[!UICONTROL 變更UAC設定]**. 按一下 **[!UICONTROL Launch]** 在新視窗中執行指令。
+1. 將滑桿調整至永不通知層級。 完成後，關閉命令視窗並關閉「系統組態」視窗。
+1. 確認UAC的登入設定設為0 （零）。 執行以下步驟以進行驗證：
 
-   1. Microsoft®建议在修改注册表之前对其进行备份。 有关详细步骤，请参阅 [如何在Windows中备份和还原注册表](https://support.microsoft.com/en-us/help/322756).
-   1. 打开Microsoft® Windows注册表编辑器。 要打开注册表编辑器，请转到“开始”>“运行”，键入regedit ，然后单击“确定”。
-   1. 导航到 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\policies\system\`。确保EnableLUA的值设置为0 （零）。
-   1. 确保值 **EnableLUA** 设置为0（零）。 如果值不为0，则将值更改为0。 关闭注册表编辑器。
+   1. Microsoft®建議您在修改登入之前先備份登入。 如需詳細步驟，請參閱 [如何在Windows中備份及還原登入](https://support.microsoft.com/en-us/help/322756).
+   1. 開啟Microsoft® Windows登入編輯器。 若要開啟登入編輯程式，請前往「開始>執行」，輸入regedit，然後按一下「確定」。
+   1. 导航到 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\policies\system\`。請確定EnableLUA的值設為0 （零）。
+   1. 確保值 **EnableLUA** 設為0 （零）。 如果值不是0，請將值變更為0。 关闭注册表编辑器。
 
-1. 重新启动计算机。
+1. 重新啟動電腦。
 
-## 应用于 {#appliesto}
+## 套用至 {#appliesto}
 
-此解决方案适用于以下内容：
-* JEE服务器上的AEM Forms
-* OSGi服务器上的AEM Forms
+此解決方案適用於下列專案：
+* JEE伺服器上的AEM Forms
+* OSGi伺服器上的AEM Forms

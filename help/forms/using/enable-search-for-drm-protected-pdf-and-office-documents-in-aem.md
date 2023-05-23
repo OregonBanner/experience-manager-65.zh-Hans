@@ -1,7 +1,7 @@
 ---
-title: 启用AEM以搜索受Document Security保护的PDF和Microsoft Office文档
+title: 啟用AEM以搜尋受Document Security保護的PDF和Microsoft Office檔案
 seo-title: Enable AEM to search document security protected PDF and Microsoft Office documents
-description: 了解如何启用本机AEM搜索以对受DRM保护的PDF文档执行全文搜索。
+description: 瞭解如何啟用原生AEM搜尋，以在受DRM保護的PDF檔案上執行全文搜尋。
 seo-description: Learn how to enable native AEM search to perform full-text search on DRM protected PDF documents.
 uuid: dba882f8-bad4-4122-a0df-03cf087afb23
 content-type: reference
@@ -18,54 +18,54 @@ ht-degree: 1%
 
 ---
 
-# 启用AEM以搜索受Document Security保护的PDF和Microsoft Office文档{#enable-aem-to-search-document-security-protected-pdf-and-microsoft-office-documents}
+# 啟用AEM以搜尋受Document Security保護的PDF和Microsoft Office檔案{#enable-aem-to-search-document-security-protected-pdf-and-microsoft-office-documents}
 
-Adobe Experience Manager提供了一个用户界面，用于搜索和查找存储在AEM中的各种资源。 本机搜索能够搜索和定位AEM资源，并对各种常用的文档格式(如纯文本文件、Microsoft Office文档和PDF文档)执行文本搜索。 您还可以扩展和启用本机搜索，以对受DRM保护的PDF和Microsoft Office文档执行全文搜索。
+Adobe Experience Manager提供使用者介面，可搜尋和找出儲存在AEM中的各種資產。 原生搜尋可搜尋和找到AEM資產，並對各種常用的檔案格式(例如純文字檔、Microsoft Office檔案和PDF檔案)執行文字搜尋。 您也可以擴充及啟用原生搜尋，以對受DRM保護的PDF和Microsoft Office檔案執行全文搜尋。
 
-执行以下步骤以使AEM能够搜索受Document Security保护的PDF和Microsoft Office文档：
+執行以下步驟，讓AEM搜尋受Document Security保護的PDF和Microsoft Office檔案：
 
 ## 开始之前 {#before-you-start}
 
-* 安装和配置AEM Forms document security。
-* 允许列表将软件包sun.util.calendar添加到 **反序列化防火墙配置。** 该配置列在 `https://'[server]:[port]'/system/console/configMgr`.
-* 确保所有AEM捆绑包都已启动并正在运行。 这些捆绑包将列在 `https://'[server]:[port]'/system/console/bundles`. 如果所有捆绑包都未处于活动状态，请稍等片刻，然后在几分钟后检查捆绑包的状态。
+* 安裝及設定AEM Forms檔案安全性。
+* 將套裝軟體sun.util.calendar新增至 **還原序列化防火牆設定。** 此設定列於 `https://'[server]:[port]'/system/console/configMgr`.
+* 確認所有AEM套件組合皆已啟動且執行中。 套件組合列於 `https://'[server]:[port]'/system/console/bundles`. 如果所有套件組合並非作用中，請稍候片刻，然後檢查套件組合的狀態，並持續幾分鐘。
 
-## 在AEM Forms工作流程(JEE上的AEM Forms)中建立安全连接 {#establish-a-secure-connection-within-aem-forms-workflow-aem-forms-on-jee}
+## 在AEM Forms工作流程中建立安全連線(JEE上的AEM Forms) {#establish-a-secure-connection-within-aem-forms-workflow-aem-forms-on-jee}
 
-通过安全连接，可在JEE上的AEM Forms与同一服务器上运行的OSGi服务之间无缝地传输信息。 使用以下方法之一建立安全连接：
+安全連線可讓資訊在JEE上的AEM Forms與相同伺服器上執行的OSGi服務之間順暢流動。 使用下列其中一種方法來建立安全連線：
 
-* 使用AEM Forms通过JEE管理员凭据配置AEM Forms客户端SDK包
-* 使用相互身份验证配置AEM Forms客户端SDK捆绑包
+* 在JEE管理員憑證上使用AEM Forms設定AEM Forms使用者端SDK套件組合
+* 使用相互驗證設定AEM Forms使用者端SDK套件組合
 
-### 使用AEM Forms通过JEE管理员凭据配置AEM Forms客户端SDK包 {#configure-aem-forms-client-sdk-bundle-with-aem-forms-on-jee-admin-credentials}
+### 在JEE管理員憑證上使用AEM Forms設定AEM Forms使用者端SDK套件組合 {#configure-aem-forms-client-sdk-bundle-with-aem-forms-on-jee-admin-credentials}
 
-1. 打开AEM配置管理器并以管理员身份登录。 默认URL为https://&lt;servername>：&lt;port>/lc/system/console/configMgr.
-1. 搜索并打开AEM Forms客户端SDK捆绑包。 指定以下属性的值：
+1. 開啟AEM設定管理員並以管理員身分登入。 預設URL為https://&lt;servername>：&lt;port>/lc/system/console/configMgr。
+1. 搜尋並開啟AEM Forms使用者端SDK套件組合。 指定下列屬性的值：
 
-   * **服务器URL：** 指定JEE服务器上AEM Forms的HTTP URL。 要通过https启用通信，请使用-Djavax.net.ssl.trustStore=重新启动JEE服务器上的AEM Forms&lt;path of=&quot;&quot; aem=&quot;&quot; forms=&quot;&quot; on=&quot;&quot; jee=&quot;&quot; keystore=&quot;&quot; file=&quot;&quot;> 参数。
-   * **服务名称**：将RightsManagementService添加到指定服务的列表。
-   * **用户名：** 指定AEM Forms on JEE帐户的用户名，用于从JEE服务器上的AEM Forms启动调用。 指定的帐户必须具有在JEE服务器的AEM Forms上调用Document Services的权限。
-   * **密码**：指定用户名字段中提到的AEM Forms on JEE帐户的密码。
+   * **伺服器URL：** 指定JEE伺服器上AEM Forms的HTTP URL。 若要啟用透過https的通訊，請使用-Djavax.net.ssl.trustStore=重新啟動JEE伺服器上的AEM Forms&lt;path of=&quot;&quot; aem=&quot;&quot; forms=&quot;&quot; on=&quot;&quot; jee=&quot;&quot; keystore=&quot;&quot; file=&quot;&quot;> 引數。
+   * **服務名稱**：將RightsManagementService新增至指定服務的清單。
+   * **使用者名稱：** 指定JEE上AEM Forms帳戶的使用者名稱，以用於從JEE伺服器上的AEM Forms起始呼叫。 指定的帳戶必須具有在JEE伺服器上的AEM Forms上叫用Document Services的許可權。
+   * **密碼**：指定使用者名稱欄位中提及的AEM Forms on JEE帳戶密碼。
 
-   单击“**保存**”。启用AEM以搜索受Document Security保护的PDF和Microsoft Office文档。
+   单击“**保存**”。啟用AEM以搜尋受Document Security保護的PDF和Microsoft Office檔案。
 
-### 使用相互身份验证配置AEM Forms客户端SDK捆绑包 {#configure-aem-forms-client-sdk-bundle-using-mutual-authentication}
+### 使用相互驗證設定AEM Forms使用者端SDK套件組合 {#configure-aem-forms-client-sdk-bundle-using-mutual-authentication}
 
-1. 为JEE上的AEM Forms启用相互身份验证。 有关详细信息，请参阅 [CAC和双向身份验证](https://helpx.adobe.com/livecycle/kb/cac-mutual-authentication.html).
-1. 打开AEM配置管理器并以管理员身份登录。 默认URL为https://&lt;servername>：&lt;port>/lc/system/console/configMgr.
-1. 搜索并打开AEM Forms客户端SDK捆绑包。 指定以下属性的值：
+1. 為JEE上的AEM Forms啟用相互驗證。 如需詳細資訊，請參閱 [CAC和相互驗證](https://helpx.adobe.com/livecycle/kb/cac-mutual-authentication.html).
+1. 開啟AEM設定管理員並以管理員身分登入。 預設URL為https://&lt;servername>：&lt;port>/lc/system/console/configMgr。
+1. 搜尋並開啟AEM Forms使用者端SDK套件組合。 指定下列屬性的值：
 
-   * **服务器URL：** 指定JEE服务器上AEM Forms的HTTPS URL。 要通过https启用通信，请使用-Djavax.net.ssl.trustStore=重新启动JEE服务器上的AEM Forms&lt;path of=&quot;&quot; aem=&quot;&quot; forms=&quot;&quot; on=&quot;&quot; jee=&quot;&quot; keystore=&quot;&quot; file=&quot;&quot;> 参数。
-   * **启用双向SSL**：启用启用双向SSL选项。
-   * **密钥库文件URL**：指定密钥库文件的URL。
-   * **TrustStore文件URL**：指定truststore文件的URL。
-   * **KeyStore密码**：指定keystore文件的密码。
-   * **Truststorepassword**：指定truststore文件的密码。
-   * **服务名称**：将RightsManagementService添加到指定服务的列表。
+   * **伺服器URL：** 指定JEE伺服器上AEM Forms的HTTPS URL。 若要啟用透過https的通訊，請使用-Djavax.net.ssl.trustStore=重新啟動JEE伺服器上的AEM Forms&lt;path of=&quot;&quot; aem=&quot;&quot; forms=&quot;&quot; on=&quot;&quot; jee=&quot;&quot; keystore=&quot;&quot; file=&quot;&quot;> 引數。
+   * **啟用雙向SSL**：啟用「啟用雙向SSL」選項。
+   * **KeyStore檔案URL**：指定金鑰庫檔案的URL。
+   * **TrustStore檔案網址**：指定Truststore檔案的URL。
+   * **KeyStore密碼**：指定Keystore檔案的密碼。
+   * **TrustStorePsword**：指定truststore檔案的密碼。
+   * **服務名稱**：將RightsManagementService新增至指定服務的清單。
 
-   单击“**保存**”。启用AEM以搜索受Document Security保护的PDF和Microsoft Office文档
+   单击“**保存**”。啟用AEM以搜尋受Document Security保護的PDF和Microsoft Office檔案
 
-## 为受策略保护的示例PDF或Microsoft Office文档编制索引 {#index-a-sample-policy-protected-pdf-or-microsoft-office-document}
+## 為受原則保護的範例PDF或Microsoft Office檔案建立索引 {#index-a-sample-policy-protected-pdf-or-microsoft-office-document}
 
-1. 以管理员身份登录AEM Assets。
-1. 在AEM Digital Asset Manager中创建文件夹，并将受策略保护的PDF或Microsoft Office文档上传到新创建的文件夹。 现在，使用AEM搜索功能搜索受策略保护文档的内容。 必须返回包含搜索文本的文档。
+1. 以管理員身分登入AEM Assets。
+1. 在AEM Digital Asset Manager中建立資料夾，並將受原則保護的PDF或Microsoft Office檔案上傳到新建立的資料夾。 現在，使用AEM搜尋來搜尋受原則保護檔案的內容。 它必須傳回包含搜尋文字的檔案。

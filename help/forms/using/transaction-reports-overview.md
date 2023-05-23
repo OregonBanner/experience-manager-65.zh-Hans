@@ -1,7 +1,7 @@
 ---
-title: 事务处理报表概览
+title: 交易報表概觀
 seo-title: Transaction Reports Overview
-description: 记录已提交的所有表单、已渲染的交互式通信、已转换为一种格式的文档以及更多内容的计数
+description: 保持提交的所有表單、演算的互動式通訊、轉換為另一種格式的檔案等內容的計數
 seo-description: Keep a count of all the forms submitted, interactive communication rendered, Documents converted to one format to another, and more
 uuid: 2c3dc1f3-5bbf-4aab-aa84-7aef5aabadf6
 topic-tags: forms-manager
@@ -16,50 +16,50 @@ ht-degree: 0%
 
 ---
 
-# 事务处理报表概览{#transaction-reports-overview}
+# 交易報表概觀{#transaction-reports-overview}
 
 ## 简介 {#introduction}
 
-利用AEM Forms中的交易报告，可计数自AEM Forms部署上的指定日期以来发生的所有交易。 目标是提供有关产品使用情况的信息，并帮助业务利益相关者了解其数字处理量。 事务示例包括：
+AEM Forms中的交易報告可讓您保留自AEM Forms部署上的指定日期以來發生的所有交易的計數。 目的是提供有關產品使用的資訊，並幫助業務利害關係人瞭解其數位處理量。 交易的範例包括：
 
-* 提交自适应表单、HTML5表单或表单集
-* 交互式通信的打印或Web版本的演绎版
-* 文档从一种文件格式转换为另一种文件格式
+* 提交最適化表單、HTML5表單或表單集
+* 互動式通訊的列印或網頁版本轉譯
+* 將檔案從一種檔案格式轉換為另一種檔案格式
 
-有关什么是事务的详细信息，请参见 [可记帐API](../../forms/using/transaction-reports-billable-apis.md).
+如需被視為交易的專案的詳細資訊，請參閱 [可記帳API](../../forms/using/transaction-reports-billable-apis.md).
 
-默认情况下禁用事务记录。 您可以 [启用交易记录录制](../../forms/using/viewing-and-understanding-transaction-reports.md#setting-up-transaction-reports) 从AEM Web控制台。 您可以查看有关创作、处理或发布实例的事务报告。 查看有关所有事务处理的汇总总和的创作或处理实例的事务报告。 查看发布实例上的事务报告，了解仅在该发布实例上发生的所有事务的计数，该报告来自该发布实例。
+交易記錄預設為停用。 您可以 [啟用交易記錄](../../forms/using/viewing-and-understanding-transaction-reports.md#setting-up-transaction-reports) 從AEM Web主控台。 您可以檢視關於作者、處理或發佈執行個體的交易報告。 檢視所有交易彙總的作者或處理執行個體的交易報告。 檢視發佈執行個體的交易報告，瞭解僅在該發佈執行個體上發生的所有交易的計數，該報告執行於此處。
 
-请勿在同一AEM实例上创作内容（创建自适应表单、交互式通信、主题和其他创作活动）和处理文档（使用工作流、文档服务和其他处理活动）。 对于用于创作内容的AEM Forms服务器，请保持禁用事务录制。 为用于处理文档的AEM Forms服务器保持启用事务记录。
+請勿在同一AEM例項上製作內容（建立最適化表單、互動式通訊、主題和其他製作活動）和程式檔案（使用工作流程、檔案服務和其他處理活動）。 讓用來製作內容的AEM Forms伺服器停用交易記錄。 讓用來處理檔案的AEM Forms伺服器保持啟用交易記錄。
 
 ![sample-transaction-report-author-1](assets/sample-transaction-report-author-1.png)
 
-事务在缓冲区中保留指定的时间段（刷新缓冲区时间+反向复制时间）。 默认情况下，事务计数大约需要90秒才能反映在事务报告中。
+交易會在緩衝區中保留指定的期間（排清緩衝區時間+反向復寫時間）。 依預設，交易計數大約需要90秒才會反映在交易報告中。
 
-提交PDF表单、使用代理UI预览交互式通信或使用非标准表单提交方法等操作不会计为交易。 AEM Forms提供了一个API来记录此类交易。 从自定义实施中调用API以记录交易。
+提交PDF表單、使用代理程式UI預覽互動式通訊或使用非標準表單提交方法等動作不會計為交易。 AEM Forms提供API來記錄這類交易。 從您的自訂實作呼叫API以記錄交易。
 
-## 支持的拓扑 {#supported-topology}
+## 支援的拓撲 {#supported-topology}
 
-交易报告仅在OSGi环境的AEM Forms上可用。 它支持author-publish 、 author-processing-publish ，并且仅支持处理拓扑。 有关拓扑示例，请参见 [AEM Forms的架构和部署拓扑](../../forms/using/transaction-reports-overview.md).
+交易報告僅可在OSGi環境的AEM Forms上取得。 它支援author-publish、author-processing-publish，且僅支援處理拓撲。 如需拓撲範例，請參閱 [AEM Forms的架構和部署拓撲](../../forms/using/transaction-reports-overview.md).
 
-将事务计数从发布实例反向复制到创作或处理实例。 下面显示了指示性创作 — 发布拓扑：
+交易計數會從發佈執行個體反向復寫到製作或處理執行個體。 指示性的作者 — 發佈拓撲顯示如下：
 
 ![simple-author-publish-topology](assets/simple-author-publish-topology.png)
 
 >[!NOTE]
 >
->AEM Forms事务报表不支持仅包含发布实例的拓扑。
+>AEM Forms交易報表不支援僅包含發佈例項的拓撲。
 
-### 使用交易报告的准则 {#guidelines-for-using-transaction-reports}
+### 使用交易報告的准則 {#guidelines-for-using-transaction-reports}
 
-* 禁用所有创作实例的事务报表，因为创作实例的报表包括在创作活动期间注册的事务。
-* 启用 **仅显示来自发布的事务** 作者实例上的选项，用于查看所有发布实例的累积事务。 您还可以查看每个发布实例的事务报告，以仅查看该特定发布实例上的实际事务。
-* 请勿使用创作实例来运行工作流和处理文档。
-* 在使用事务报告之前，如果您有带发布服务器的拓扑，请确保为所有发布实例启用了反向复制。
-* 事务数据仅从发布实例反向复制到相应的创作或处理实例。 创作或处理实例无法进一步将数据复制到另一个实例。 例如，如果您有author-processing-publish拓扑，则聚合的事务数据将仅复制到处理实例。
+* 停用所有編寫執行個體的交易報告，因為編寫執行個體的報告包含在編寫活動期間註冊的交易。
+* 啟用 **僅顯示來自發佈的交易** 作者執行個體上的選項，用來檢視來自所有發佈執行個體的累計交易。 您也可以只檢視特定發佈執行個體上實際交易的每個發佈執行個體的交易報告。
+* 請勿使用作者執行個體來執行工作流程和處理檔案。
+* 在使用交易報告之前，如果您擁有發佈伺服器的拓撲，請確定所有發佈執行個體都啟用了反向復寫。
+* 交易資料會從發佈執行個體反向復寫至僅對應的製作或處理執行個體。 作者或處理執行個體無法進一步將資料復寫至其他執行個體。 例如，如果您有author-processing-publish拓撲，則彙總的交易資料只會復寫到處理執行個體。
 
 ## 相关文章 {#related-articles}
 
-* [查看和了解事务处理报表](../../forms/using/viewing-and-understanding-transaction-reports.md)
-* [交易报告可记帐API](../../forms/using/transaction-reports-billable-apis.md)
-* [记录自定义实施的交易](/help/forms/using/record-transaction-custom-implementation.md)
+* [檢視與瞭解交易報表](../../forms/using/viewing-and-understanding-transaction-reports.md)
+* [交易報表可記帳API](../../forms/using/transaction-reports-billable-apis.md)
+* [記錄自訂實作的交易](/help/forms/using/record-transaction-custom-implementation.md)

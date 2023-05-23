@@ -1,7 +1,7 @@
 ---
-title: 更改外观
+title: 變更外觀
 seo-title: Alter the Appearance
-description: 修改脚本
+description: 修改指令碼
 seo-description: Modify the script
 uuid: 30555b9f-da29-4115-9ed5-25f80a247bd6
 contentOwner: User
@@ -18,33 +18,33 @@ ht-degree: 0%
 
 ---
 
-# 更改外观 {#alter-the-appearance}
+# 變更外觀 {#alter-the-appearance}
 
-## 修改脚本 {#modify-the-script}
+## 修改指令碼 {#modify-the-script}
 
-comment.hbs脚本负责为每个评论创建整体HTML。
+comment.hbs指令碼負責為每個評論建立整體HTML。
 
-不显示每个已发布评论旁的头像：
+不顯示每個張貼的評論旁的頭像：
 
-1. 复制 `comment.hbs`起始日期 `libs`到 `apps`
+1. 複製 `comment.hbs`從 `libs`至 `apps`
 
    1. 选择 `/libs/social/commons/components/hbs/comments/comment/comment.hbs`
-   1. 选择 **[!UICONTROL 复制]**
+   1. 選取 **[!UICONTROL 複製]**
    1. 选择 `/apps/social/commons/components/hbs/comments/comment`
-   1. 选择 **[!UICONTROL 粘贴]**
+   1. 選取 **[!UICONTROL 貼上]**
 
-1. 打开覆盖的 `comment.hbs`
+1. 開啟覆蓋的 `comment.hbs`
 
-   * 双击节点 `comment.hbs` 在 `/apps/social/commons/components/hbs/comments/comment folder`
+   * 連按兩下節點 `comment.hbs` 在 `/apps/social/commons/components/hbs/comments/comment folder`
 
-1. 查找以下行，然后删除它们或将其注释掉：
+1. 尋找下列行，然後刪除或註解它們：
 
 ```xml
   <aside class="scf-comment-author">
         <img class="scf-comment-avatar {{#if topLevel}}withTopLevel{{/if}}" src="{{author.avatarUrl}}"></img>
 ```
 
-删除这些行，或者用以下内容将它们围起来 `<!--` 和 `-->` 让他们置之不理。 此外，字符“xxx”将被添加为显示头像位置的可视指示器。
+請刪除線段或將其周圍加上 `<!--` 和 `-->` 以取消註解。 此外，字元「xxx」也會新增為顯示頭像位置的視覺指標。
 
 ```xml
    xxx
@@ -53,24 +53,24 @@ comment.hbs脚本负责为每个评论创建整体HTML。
         <img class="scf-comment-avatar {{#if topLevel}}withTopLevel{{/if}}" src="{{author.avatarUrl}}"></img>
 ```
 
-### 复制叠加 {#replicate-the-overlay}
+### 復寫覆蓋 {#replicate-the-overlay}
 
-使用复制工具将覆盖的注释组件推送到发布实例。
+使用復寫工具將覆蓋的註解元件推送至發佈例項。
 
 >[!NOTE]
 >
->更可靠的复制形式是在包管理器中创建包，并且 [激活](/help/sites-administering/package-manager.md#replicating-packages) 它。 可以导出和存档资源包。
+>更強大的復寫形式是在封裝管理員中建立封裝，並且 [啟用](/help/sites-administering/package-manager.md#replicating-packages) it. 套件可以匯出和封存。
 
-在全局导航中，选择 **[!UICONTROL 工具]** > **[!UICONTROL 部署]** > **[!UICONTROL 复制]** 并单击 **[!UICONTROL 激活树]**.
+在全域導覽中選取 **[!UICONTROL 工具]** > **[!UICONTROL 部署]** > **[!UICONTROL 復寫]** 並按一下 **[!UICONTROL 啟動樹狀結構]**.
 
-对于“起始路径”，输入 `/apps/social/commons` 并选择 **[!UICONTROL 激活]**.
+開始路徑請輸入 `/apps/social/commons` 並選取 **[!UICONTROL 啟動]**.
 
 ![verify-content-template](assets/verify-content-template.png)
 
-### 查看结果 {#view-results}
+### 檢視結果 {#view-results}
 
-如果您以管理员身份(例如，以admin/admin身份登录https://localhost:4503/crx/de )登录到发布实例，则可以验证是否存在覆盖的组件。
+如果您以管理員身分(例如https://localhost:4503/crx/de )登入發佈執行個體（例如，以管理員/管理員身分），您可以驗證覆蓋的元件是否存在。
 
-如果您注销并重新登录为 `aaron.mcdonald@mailinator.com/password` 并刷新页面，您会发现发布的评论不再显示头像，而是显示一个简单的“xxx”。
+如果您登出後重新登入， `aaron.mcdonald@mailinator.com/password` 和重新整理頁面，您會發現貼出的評論不再以頭像顯示，而是顯示簡單的「xxx」。
 
 ![create-template-component](assets/create-template-component.png)

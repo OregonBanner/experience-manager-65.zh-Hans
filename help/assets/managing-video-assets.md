@@ -1,6 +1,6 @@
 ---
 title: 管理视频资源
-description: 在 [!DNL Adobe Experience Manager].
+description: 上傳、預覽、註釋和發佈視訊資產 [!DNL Adobe Experience Manager].
 contentOwner: AG
 role: User
 feature: Asset Management
@@ -15,498 +15,498 @@ ht-degree: 8%
 
 # 管理视频资源 {#manage-video-assets}
 
-| 版本 | 文章链接 |
+| 版本 | 文章連結 |
 | -------- | ---------------------------- |
 | AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/manage-video-assets.html?lang=en) |
 | AEM 6.5 | 本文 |
 
-视频格式是组织中数字资产的关键部分。 [!DNL Adobe Experience Manager] 提供了成熟的产品和功能，用于在视频资产创建后管理其整个生命周期。
+視訊格式是組織數位資產的重要部分。 [!DNL Adobe Experience Manager] 提供成熟的產品和功能，可管理視訊資產建立後的整個生命週期。
 
-了解如何在 [!DNL Adobe Experience Manager Assets]. 使用 [!DNL Dynamic Media] 集成。
+瞭解如何在中管理和編輯視訊資產 [!DNL Adobe Experience Manager Assets]. 視訊編碼和轉碼（例如FFmpeg轉碼）可使用 [!DNL Dynamic Media] 整合。
 
-## 上传和预览视频资产 {#upload-and-preview-video-assets}
+## 上傳和預覽視訊資產 {#upload-and-preview-video-assets}
 
-[!DNL Adobe Experience Manager Assets] 为扩展名为MP4的视频资产生成预览。 如果资产的格式不是MP4，请安装FFmpeg包以生成预览。 FFmpeg创建OGG和MP4类型的视频演绎版。 您可以在 [!DNL Assets] 用户界面。
+[!DNL Adobe Experience Manager Assets] 產生擴充功能為MP4之視訊資產的預覽。 如果資產的格式不是MP4，請安裝FFmpeg套件以產生預覽。 FFmpeg會建立OGG和MP4型別的視訊轉譯。 您可以在中預覽轉譯 [!DNL Assets] 使用者介面。
 
-1. 在数字资产文件夹或子文件夹中，导航到要添加数字资产的位置。
-1. 要上传资产，请单击 **[!UICONTROL 创建]** 从工具栏中选择 **[!UICONTROL 文件]**. 或者，在用户界面上拖动文件。 请参阅 [上传资产](manage-assets.md#uploading-assets) 以了解详细信息。
-1. 要在卡片视图中预览视频，请单击 **[!UICONTROL 播放]** ![播放选项](assets/do-not-localize/play.png) 选项。 您只能在卡片视图中暂停或播放视频。 的 [!UICONTROL 播放] 和 [!UICONTROL 暂停] 选项在列表视图中不可用。
+1. 在數位資產資料夾或子資料夾中，導覽至您要新增數位資產的位置。
+1. 若要上傳資產，請按一下 **[!UICONTROL 建立]** 從工具列中選擇 **[!UICONTROL 檔案]**. 或者，在使用者介面上拖曳檔案。 另請參閱 [上傳資產](manage-assets.md#uploading-assets) 以取得詳細資訊。
+1. 若要在「卡片」檢視中預覽視訊，請按一下 **[!UICONTROL 播放]** ![播放選項](assets/do-not-localize/play.png) 視訊資產選項。 您只能在卡片檢視中暫停或播放視訊。 此 [!UICONTROL 播放] 和 [!UICONTROL 暫停] 選項在清單檢視中無法使用。
 
-1. 要在资产详细信息页面中预览视频，请单击 **[!UICONTROL 编辑]** 在卡上。 视频在浏览器的本机视频播放器中播放。 您可以播放、暂停、控制音量，以及将视频放大到全屏。
+1. 若要在資產詳細資訊頁面中預覽影片，請按一下 **[!UICONTROL 編輯]** 在卡片上。 視訊會在瀏覽器的原生視訊播放器中播放。 您可以播放、暫停、控制音量，以及將視訊縮放至全熒幕。
 
-   ![视频播放控件](assets/video-playback-controls.png)
+   ![視訊播放控制項](assets/video-playback-controls.png)
 
-## 上传大于2 GB的资产的配置 {#configuration-to-upload-assets-that-are-larger-than-gb}
+## 上傳大於2 GB之資產的設定 {#configuration-to-upload-assets-that-are-larger-than-gb}
 
-默认情况下， [!DNL Assets] 由于文件大小限制，您不会上传任何大于2 GB的资产。 但是，您可以进入CRXDE Lite并在 `/apps` 目录访问Advertising Cloud的帮助。 节点必须具有相同的节点名称、目录结构和类似的节点顺序属性。
+依預設， [!DNL Assets] 不允許您上傳任何因為檔案大小限制而大於2 GB的資產。 不過，您可以進入CRXDE Lite並在下建立節點來覆寫此限制 `/apps` 目錄。 節點必須具有相同的節點名稱、目錄結構和順序的可比較節點屬性。
 
-除 [!DNL Assets] 配置中，请更改以下配置以上传大型资产：
+除了 [!DNL Assets] 設定，變更以下設定以上傳大型資產：
 
-* 增加令牌过期时间。 请参阅 [!UICONTROL AdobeGranite CSRF Servlet] 在Web控制台中( `https://[aem_server]:[port]/system/console/configMgr`. 有关更多信息，请参阅 [CSRF保护](/help/sites-developing/csrf-protection.md).
-* 增加 `receiveTimeout` 在Dispatcher配置中。 有关更多信息，请参阅 [Experience ManagerDispatcher配置](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#renders-options).
+* 增加權杖到期時間。 另請參閱 [!UICONTROL AdobeGranite CSRF Servlet] 在Web主控台中： `https://[aem_server]:[port]/system/console/configMgr`. 如需詳細資訊，請參閱 [CSRF保護](/help/sites-developing/csrf-protection.md).
+* 增加 `receiveTimeout` 在Dispatcher設定中。 如需詳細資訊，請參閱 [Experience ManagerDispatcher設定](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#renders-options).
 
 >[!NOTE]
 >
->的 [!DNL Experience Manager] 经典用户界面没有2-GB文件大小限制。 此外，大型视频的端对端工作流不完全支持。
+>此 [!DNL Experience Manager] 傳統使用者介面沒有2 GB檔案大小限制。 此外，也不完全支援大型視訊的端對端工作流程。
 
-要配置更高的文件大小限制，请在 `/apps` 目录访问Advertising Cloud的帮助。
+若要設定較高的檔案大小限制，請在 `/apps` 目錄。
 
-1. 在 [!DNL Experience Manager]，单击 **[!UICONTROL 工具]** > **[!UICONTROL 常规]** > **[!UICONTROL CRXDE Lite]**.
-1. 在CRXDE Lite中，导航到 `/libs/dam/gui/content/assets/jcr:content/actions/secondary/create/items/fileupload`. 要查看目录窗口，请单击 `>>`.
-1. 在工具栏中，单击 **[!UICONTROL 覆盖节点]**. 或者，从上下文菜单中选择&#x200B;**[!UICONTROL 覆盖节点]**。
-1. 在 **[!UICONTROL 覆盖节点]** 对话框，单击 **[!UICONTROL 确定]**.
+1. 在 [!DNL Experience Manager]，按一下 **[!UICONTROL 工具]** > **[!UICONTROL 一般]** > **[!UICONTROL CRXDE Lite]**.
+1. 在CRXDE Lite中，導覽至 `/libs/dam/gui/content/assets/jcr:content/actions/secondary/create/items/fileupload`. 若要檢視目錄視窗，請按一下 `>>`.
+1. 在工具列中，按一下 **[!UICONTROL 覆蓋節點]**. 或者，从上下文菜单中选择&#x200B;**[!UICONTROL 覆盖节点]**。
+1. 在 **[!UICONTROL 覆蓋節點]** 對話方塊，按一下 **[!UICONTROL 確定]**.
 
-   ![覆盖节点](assets/overlay-node-path.png)
+   ![覆蓋節點](assets/overlay-node-path.png)
 
-1. 刷新浏览器。 覆盖节点 `/apps/dam/gui/content/assets/jcr:content/actions/secondary/create/items/fileupload` 中。
-1. 在 **[!UICONTROL 属性]** 选项卡，输入相应的字节值，以将大小限制增加到所需大小。 例如，要将大小限制增加到30 GB，请输入 `32212254720` 值。
+1. 重新整理瀏覽器。 覆蓋節點 `/apps/dam/gui/content/assets/jcr:content/actions/secondary/create/items/fileupload` 「 」已選取。
+1. 在 **[!UICONTROL 屬性]** 索引標籤中，以位元組為單位輸入適當的值，將大小限制增加到所需的大小。 例如，若要將大小限制增加到30 GB，請輸入 `32212254720` 值。
 
-1. 在工具栏中，单击 **[!UICONTROL 全部保存]**.
-1. 在 [!DNL Experience Manager]，单击 **[!UICONTROL 工具]** > **[!UICONTROL 操作]** > **[!UICONTROL Web控制台]**.
-1. 在 [!DNL Adobe Experience Manager] [!UICONTROL Web控制台包] 页面，在表的“名称”列下找到并单击 **[!UICONTROL AdobeGranite工作流外部进程作业处理程序]**.
-1. 在 [!UICONTROL AdobeGranite工作流外部进程作业处理程序] 页面时，为 **[!UICONTROL 默认超时]** 和 **[!UICONTROL 最大超时]** 字段 `18000` （五小时）。 单击“**[!UICONTROL 保存]**”。
-1. 在 [!DNL Experience Manager]，单击 **[!UICONTROL 工具]** > **[!UICONTROL 工作流]** > **[!UICONTROL 模型]**.
-1. 在工作流模型页面上，选择 **[!UICONTROL Dynamic Media编码视频]**，然后单击 **[!UICONTROL 编辑]**.
-1. 在工作流页面上，双击 **[!UICONTROL Dynamic Media视频服务流程]** 组件。
+1. 在工具列中按一下 **[!UICONTROL 全部儲存]**.
+1. 在 [!DNL Experience Manager]，按一下 **[!UICONTROL 工具]** > **[!UICONTROL 作業]** > **[!UICONTROL 網頁主控台]**.
+1. 於 [!DNL Adobe Experience Manager] [!UICONTROL Web控制檯套裝] 頁面，在表格的「名稱」欄下，找出並按一下 **[!UICONTROL AdobeGranite工作流程外部程式工作處理常式]**.
+1. 於 [!UICONTROL AdobeGranite工作流程外部程式工作處理常式] 頁面，為兩者設定秒數 **[!UICONTROL 預設逾時]** 和 **[!UICONTROL 最大逾時]** 欄位至 `18000` （5小時）。 单击“**[!UICONTROL 保存]**”。
+1. 在 [!DNL Experience Manager]，按一下 **[!UICONTROL 工具]** > **[!UICONTROL 工作流程]** > **[!UICONTROL 模型]**.
+1. 在「工作流程模型」頁面上，選擇 **[!UICONTROL Dynamic Media編碼影片]**，然後按一下 **[!UICONTROL 編輯]**.
+1. 在工作流程頁面上，按兩下 **[!UICONTROL Dynamic Media視訊服務程式]** 元件。
 1. 在[!UICONTROL 步骤属性]对话框的&#x200B;**[!UICONTROL 常用]**&#x200B;选项卡下，展开&#x200B;**高级设置**。
-1. 在 **[!UICONTROL 超时]** 字段，指定 `18000`，然后单击 **[!UICONTROL 确定]** 返回 **[!UICONTROL Dynamic Media编码视频]** 工作流页面。
-1. 在页面顶部附近，在 [!UICONTROL Dynamic Media编码视频] 页面标题，单击 **[!UICONTROL 保存]**.
+1. 在 **[!UICONTROL 逾時]** 欄位，指定值 `18000`，然後按一下 **[!UICONTROL 確定]** 以返回 **[!UICONTROL Dynamic Media編碼影片]** 工作流程頁面。
+1. 靠近頁面頂端、下方的 [!UICONTROL Dynamic Media編碼影片] 頁面標題，按一下 **[!UICONTROL 儲存]**.
 
-## 发布视频资产 {#publish-video-assets}
+## 發佈視訊資產 {#publish-video-assets}
 
-发布后，您可以将视频资产作为URL包含在网页中，或直接嵌入资产。 有关详细信息，请参阅 [发布Dynamic Media资产](/help/assets/publishing-dynamicmedia-assets.md).
+發佈後，您可以將視訊資產以URL形式納入網頁中，或直接內嵌資產。 如需詳細資訊，請參閱 [發佈Dynamic Media資產](/help/assets/publishing-dynamicmedia-assets.md).
 
-## 将视频发布到YouTube {#publishing-videos-to-youtube}
+## 將視訊發佈至YouTube {#publishing-videos-to-youtube}
 
-您可以将内部部署Experience Manager视频资产直接发布到之前创建的YouTube渠道。
+您可以將內部部署Experience Manager視訊資產直接發佈至您先前建立的YouTube頻道。
 
-要将视频资产发布到YouTube，您需要使用标记设置Experience Manager Assets。 将这些标记与YouTube渠道相关联。 如果视频资产的标记与YouTube渠道的标记匹配，则该视频会发布到YouTube。 只要使用关联的标记，发布到YouTube时，也会与视频的正常发布一起发生。
+若要將視訊資產發佈至YouTube，請使用標籤設定Experience Manager Assets。 您可以將這些標籤與YouTube頻道建立關聯。 如果影片資產的標籤符合YouTube頻道的標籤，則影片會發佈至YouTube。 只要使用關聯的標籤，發佈至YouTube就會伴隨著視訊的正常發佈。
 
-YouTube自行编码。 因此，上传到Experience Manager的原始视频文件会发布到YouTube，而不是Dynamic Media编码创建的任何视频演绎版。 虽然使用Dynamic Media无需处理视频，但在播放需要查看器预设时，应该会这样做。
+YouTube會自行編碼。 因此，上傳至Experience Manager的原始視訊檔案會發佈至YouTube，而不是Dynamic Media的編碼建立的任何視訊轉譯。 雖然您不需要使用Dynamic Media處理影片，但預計他們會在需要檢視器預設集進行播放時這樣做。
 
-绕过视频处理配置文件并直接发布到YouTube时，这仅意味着Experience Manager资产中的视频资产没有可查看的缩略图。 这也意味着，如果你 `dynamicmedia` 或 `dynamicmedia_scene7` 运行模式时，未编码的视频不适用于任何Dynamic Media资产类型。
+當您略過視訊處理設定檔並直接發佈至YouTube時，這僅僅表示您在Experience Manager資產中的視訊資產沒有取得可檢視的縮圖。 這也表示如果您執行 `dynamicmedia` 或 `dynamicmedia_scene7` 執行模式，未編碼的視訊不適用於任何Dynamic Media資產型別。
 
-将视频资产发布到YouTube服务器涉及完成以下任务，以确保使用YouTube进行安全的服务器到服务器身份验证：
+將視訊資產發佈至YouTube伺服器時，需完成下列工作，以確保使用YouTube進行伺服器對伺服器驗證時安全無虞：
 
-1. [配置Google Cloud设置](#configuring-google-cloud-settings)
-1. [创建YouTube渠道](#creating-a-youtube-channel)
-1. [添加标记以进行发布](#adding-tags-for-publishing)
-1. [启用YouTube Publish Replication Agent](#enabling-the-youtube-publish-replication-agent)
-1. [在Experience Manager中设置YouTube](#setting-up-youtube-in-aem)
-1. [（可选）自动设置已上传视频的默认YouTube属性](#optional-automating-the-setting-of-default-youtube-properties-for-your-uploaded-videos)
-1. [将视频发布到YouTube渠道](#publishing-videos-to-your-youtube-channel)
-1. [（可选）验证已发布到YouTube上的视频](/help/assets/video.md#optional-verifying-the-published-video-on-youtube)
-1. [将YouTube URL关联到您的Web应用程序](#linking-youtube-urls-to-your-web-application)
+1. [配置Google雲端設定](#configuring-google-cloud-settings)
+1. [建立YouTube頻道](#creating-a-youtube-channel)
+1. [新增標籤以進行發佈](#adding-tags-for-publishing)
+1. [啟用YouTube發佈復寫代理程式](#enabling-the-youtube-publish-replication-agent)
+1. [在Experience Manager中設定YouTube](#setting-up-youtube-in-aem)
+1. [（可選）自動為您上傳的視訊設定預設YouTube屬性](#optional-automating-the-setting-of-default-youtube-properties-for-your-uploaded-videos)
+1. [將影片發佈至您的YouTube頻道](#publishing-videos-to-your-youtube-channel)
+1. [（可選）驗證YouTube上發佈的影片](/help/assets/video.md#optional-verifying-the-published-video-on-youtube)
+1. [將YouTube URL連結至您的網頁應用程式](#linking-youtube-urls-to-your-web-application)
 
-您还可以 [取消发布视频以将其从YouTube中删除](#unpublishing-videos-to-remove-them-from-youtube).
+您也可以 [取消發佈視訊以從YouTube中將其移除](#unpublishing-videos-to-remove-them-from-youtube).
 
-### 配置Google Cloud设置 {#configuring-google-cloud-settings}
+### 配置Google雲端設定 {#configuring-google-cloud-settings}
 
-要发布到YouTube，您需要Google帐户。 如果你有Gmail账户，那么你已经有Google账户；如果您没有Google帐户，则可以轻松创建一个帐户。 您需要该帐户，因为您需要凭据才能将视频资产发布到YouTube。 如果已创建帐户，请跳过此任务并直接转到 [创建YouTube渠道](#creating-a-youtube-channel).
+若要發佈至YouTube，您需要Google帳戶。 如果您有GMAIL帳戶，表示您已擁有Google帳戶；如果您沒有Google帳戶，可以輕鬆建立帳戶。 您需要帳戶，因為您需要憑證才能將視訊資產發佈到YouTube。 如果您已建立帳戶，請略過此任務並直接繼續至 [建立YouTube頻道](#creating-a-youtube-channel).
 
-与Google Cloud一起使用的帐户和用于YouTube的Google帐户不必相同。
+Google Cloud使用的帳戶和用於YouTube的Google帳戶不需要相同。
 
-Google会定期更改其用户界面。 因此，将视频发布到YouTube的步骤可能与下面介绍的步骤略有不同。 当您尝试检查视频是否上传到YouTube时，此注意事项也适用。
+Google會定期變更其使用者介面。 因此，將視訊發佈至YouTube的步驟可能會與以下說明稍有不同。 當您嘗試檢查影片是否已上傳到YouTube時，此警告同樣適用。
 
 >[!NOTE]
 >
->编写本文时，以下步骤是准确的。 但是，Google会定期更新其网站，恕不另行通知。 因此，这些步骤可能略有不同。
+>在撰寫本文時，下列步驟是正確的。 不過，Google會定期更新其網站，恕不另行通知。 因此，這些步驟可能稍有不同。
 
-要配置Google Cloud设置，请执行以下操作：
+若要設定Google Cloud設定：
 
-1. 创建Google帐户。
+1. 建立Google帳戶。
    [https://accounts.google.com/SignUp?service=mail](https://accounts.google.com/SignUp?service=mail)
 
-   如果您已经拥有Google帐户，请跳到下一步。
+   如果您已有Google帳戶，請跳至下一個步驟。
 
-1. 转到 [https://cloud.google.com/](https://cloud.google.com/).
+1. 前往 [https://cloud.google.com/](https://cloud.google.com/).
 1. 在Google cloud页面的右上角附近，单击控制 **[!UICONTROL 台]**。
 
-   如有必要， **[!UICONTROL 登录]** 使用您的Google帐户凭据查看 **[!UICONTROL 控制台]** 选项。
+   如有需要， **[!UICONTROL 登入]** 使用您的Google帳戶認證來檢視 **[!UICONTROL 主控台]** 選項。
 
-1. 在功能板页面的右侧， **[!UICONTROL Google Cloud平台]**，单击项目下拉列表以打开选择项目对话框。
-1. 在选择项目对话框中，点按 **[!UICONTROL 新建项目]**.
+1. 在「控制面板」頁面的 **[!UICONTROL Google Cloud Platform]**，按一下「專案」下拉式清單以開啟「選取專案」對話方塊。
+1. 在「選取專案」對話方塊中，點選 **[!UICONTROL 新增專案]**.
 
-   ![6_5_googleaccount-newproject](assets/6_5_googleaccount-newproject.png)
+   ![6_5_google帳戶 — 新專案](assets/6_5_googleaccount-newproject.png)
 
-1. 在新建项目对话框的项目名称字段中，键入新项目的名称。
+1. 在「新專案」對話方塊的「專案名稱」欄位中，輸入新專案的名稱。
 
-   您的项目ID基于您的项目名称。 因此，请仔细选择项目名称；创建后无法更改。 此外，以后在Experience Manager中设置YouTube时，必须再次输入相同的项目ID;考虑把它写下来。
+   您的專案ID是以專案名稱為基礎。 因此，請謹慎選擇專案名稱；專案建立後即無法變更。 此外，當您稍後在Experience Manager中設定YouTube時，必須再次輸入相同的專案ID；請考慮將其寫下來。
 
 1. 单击&#x200B;**[!UICONTROL 创建]**。
 
-1. 执行以下任一操作：
+1. 執行下列任一項作業：
 
-   * 在项目的功能板中，在快速入门卡片中，点按 **[!UICONTROL 探索并启用API]**.
-   * 在项目的功能板的API卡中，点按 **[!UICONTROL 转到API概述]**.
+   * 在您的專案控制面板上，在「快速入門」卡片中，點選「 」 **[!UICONTROL 探索及啟用API]**.
+   * 在您的專案的「控制面板」上，在API卡片中，點選 **[!UICONTROL 前往API概述]**.
 
    ![6_5_googleaccount-apis-enable2](assets/6_5_googleaccount-apis-enable2.png)
 
-1. 在API和服务页面顶部附近，点按 **[!UICONTROL 启用API和服务]**.
-1. 在API库页面的左侧，下 **[!UICONTROL 类别]**，点按 **[!UICONTROL YouTube]**. 在页面的右侧，点按 **[!UICONTROL YouTube Data API]**.
-1. 在YouTube Data API v3页面上，点按 **[!UICONTROL 启用]**.
+1. 在「API和服務」頁面頂端附近，點選 **[!UICONTROL 啟用API和服務]**.
+1. 在「API程式庫」頁面的左側下方 **[!UICONTROL 類別]**，點選 **[!UICONTROL YouTube]**. 在頁面右側，點選 **[!UICONTROL YouTube資料API]**.
+1. 在YouTube Data API v3頁面上，點選 **[!UICONTROL 啟用]**.
 
    ![6_5_googleaccount-apis-enable3](assets/6_5_googleaccount-apis-enable3.png)
 
-1. 要使用API，您需要凭据。 如有必要，请单击 **[!UICONTROL 创建凭据]**.
+1. 若要使用API，您需要憑證。 如有必要，請按一下 **[!UICONTROL 建立認證]**.
 
-   ![6_5_googleaccount-apis-createcredentials](assets/6_5_googleaccount-apis-createcredentials.png)
+   ![6_5_googleaccount-apis-creategrecredentials](assets/6_5_googleaccount-apis-createcredentials.png)
 
-1. 在 **[!UICONTROL 将凭据添加到项目]** 页面，步骤1，执行以下操作：
+1. 於 **[!UICONTROL 新增認證至您的專案]** 第頁，步驟1，執行下列動作：
 
-   * 从 **[!UICONTROL 您使用的是哪个API?]** 下拉列表中，选择 **[!UICONTROL YouTube Data API v3]**.
+   * 從 **[!UICONTROL 您使用哪個API？]** 下拉式清單，選取 **[!UICONTROL YouTube Data API v3]**.
 
-   * 从 **[!UICONTROL 从何处调用API?]** 下拉列表中，选择 **[!UICONTROL Web服务器（例如node.js、Tomcat）]**
+   * 從 **[!UICONTROL 您從哪裡呼叫API？]** 下拉式清單，選取 **[!UICONTROL 網頁伺服器（例如node.js、Tomcat）]**
 
-   * 从 **[!UICONTROL 您正在访问哪些数据？]** 下拉列表中，点按 **[!UICONTROL 用户数据]**.
+   * 從 **[!UICONTROL 您正在存取哪些資料？]** 下拉式清單，點選 **[!UICONTROL 使用者資料]**.
 
    ![6_5_googleaccount-apis-createcredentials2](assets/6_5_googleaccount-apis-createcredentials2.png)
 
-1. 点按 **[!UICONTROL 我需要什么凭据？]**
+1. 點選 **[!UICONTROL 我需要什麼認證？]**
 1. 在&#x200B;**[!UICONTROL 将凭据添加到项目]**&#x200B;页面中步骤 2 的&#x200B;**[!UICONTROL 创建 OAuth 2.0 客户端 ID]** 标题下，根据需要在“名称”字段中输入唯一名称。或者，您也可以使用 Google 指定的默认名称。
-1. 在 **[!UICONTROL 授权的JavaScript源]** 标题，在文本字段中输入以下路径，在路径中替换您自己的域和端口号，然后按 **[!UICONTROL 输入]** 要添加列表路径，请执行以下操作：
+1. 在 **[!UICONTROL 授權的JavaScript來源]** 標題，在文字欄位中輸入以下路徑，在路徑中取代您自己的網域和連線埠號碼，然後按下 **[!UICONTROL 輸入]** 若要將路徑新增至清單：
 
    `https://<servername.domain>:<port_number>`
 
    例如，`https://1a2b3c.mycompany.com:4321`
 
-   **注意**:上述路径示例仅用于演示目的。
+   **注意**：上述路徑範例僅供示範之用。
 
    ![6_5_googleaccount-apis-createcredentials-oauth](assets/6_5_googleaccount-apis-createcredentials-oauth.png)
 
-1. 在 **[!UICONTROL 授权的重定向URI]** 标题，在文本字段中输入以下路径，在路径中替换您自己的域和端口号，然后按 **[!UICONTROL 输入]** 要添加列表路径，请执行以下操作：
+1. 在 **[!UICONTROL 授權的重新導向URI]** 標題，在文字欄位中輸入以下路徑，在路徑中取代您自己的網域和連線埠號碼，然後按下 **[!UICONTROL 輸入]** 若要將路徑新增至清單：
 
    `https://<servername.domain>:<port_number>/etc/cloudservices/youtube.youtubecredentialcallback.json`
 
    例如，`https://1a2b3c.mycompany.com:4321/etc/cloudservices/youtube.youtubecredentialcallback.json`
 
-   **注意**:上述路径示例仅用于演示目的。
+   **注意**：上述路徑範例僅供示範之用。
 
-1. 单击 **[!UICONTROL 创建OAuth客户端ID]**.
+1. 按一下 **[!UICONTROL 建立OAuth使用者端ID]**.
 1. 在&#x200B;**[!UICONTROL 向项目添加凭据]**&#x200B;页面的步骤 3 中，在&#x200B;**[!UICONTROL 设置 OAuth 2.0 许可屏幕]**&#x200B;标题下，选择您当前使用的 Gmail 电子邮件地址。
 
-   ![6_5_googleaccount-apis-createcredentials-ancornontscreen](assets/6_5_googleaccount-apis-createcredentials-consentscreen.png)
+   ![6_5_googleaccount-apis-createcredentials-consentscreen](assets/6_5_googleaccount-apis-createcredentials-consentscreen.png)
 
-1. 在 **[!UICONTROL 向用户显示的产品名称]** 标题，在文本字段中，输入要在同意屏幕上显示的内容。
+1. 在 **[!UICONTROL 向使用者顯示的產品名稱]** 標題，在文字欄位中，輸入您要在同意畫面上顯示的內容。
 
-   当Experience Manager管理员对YouTube进行身份验证时，会向用户显示同意屏幕；Experience Manager联系YouTube以获取权限。
+   當Experience Manager管理員對YouTube進行驗證時，會顯示同意畫面；Experience Manager會聯絡YouTube以取得許可權。
 
 1. 单击&#x200B;**[!UICONTROL “继续”]**。
 1. 在将凭据添加到项目页面的步骤4中，在“下载凭据 **[!UICONTROL ”标题下]** ，点按 **[!UICONTROL 下载]**。
 
    ![6_5_googleaccount-apis-createcredentials-downloadcredentials](assets/6_5_googleaccount-apis-createcredentials-downloadcredentials.png)
 
-1. 保存 `client_id.json` 文件。
+1. 儲存 `client_id.json` 檔案。
 
-   稍后在Adobe Experience Manager中设置YouTube时，您需要此下载的json文件。
+   稍後在Adobe Experience Manager中設定YouTube時，您需要此下載的json檔案。
 
-1. 单击 **[!UICONTROL 完成]**.
+1. 按一下 **[!UICONTROL 完成]**.
 
-   从Google帐户注销。 现在，创建YouTube渠道。
+   登出您的Google帳戶。 現在建立YouTube頻道。
 
-### 创建YouTube渠道 {#creating-a-youtube-channel}
+### 建立YouTube頻道 {#creating-a-youtube-channel}
 
-将视频发布到YouTube要求您拥有一个或多个渠道。 如果已创建YouTube渠道，则可以跳过此任务并转到 [添加标记以进行发布](/help/assets/video.md#adding-tags-for-publishing).
+將影片發佈至YouTube需要您有一或多個管道。 如果您已建立YouTube頻道，您可以略過此任務並前往 [新增標籤以進行發佈](/help/assets/video.md#adding-tags-for-publishing).
 
 >[!WARNING]
 >
->确保您已在YouTube中设置一个或多个渠道 *之前* 您可以在的YouTube设置下添加Experience Manager(请参阅 [在Experience Manager中设置YouTube](#setting-up-youtube-in-aem) )。 如果您未能设置一个或多个渠道，则系统不会警告您不存在渠道。 但是，在添加渠道时，仍会进行Google身份验证，但是没有选项可选择发送视频的渠道。
+>請確定您已在YouTube中設定一或多個管道 *早於* 您在「Experience Manager中的YouTube設定」下新增管道(請參閱 [在Experience Manager中設定YouTube](#setting-up-youtube-in-aem) 下)。 如果您無法設定一或多個管道，系統不會警告您管道不存在。 不過，當您新增頻道時，Google驗證仍會發生，但無法選擇傳送視訊的頻道。
 
-**要创建YouTube渠道，请执行以下操作：**
+**若要建立YouTube頻道：**
 
-1. 转到 [https://www.youtube.com](https://www.youtube.com/) 并使用您的Google帐户凭据登录。
-1. 在YouTube页面的右上角，单击您的配置文件图片（也可以在彩色圆圈中显示为信件），然后单击 **[!UICONTROL YouTube设置]** （圆齿轮图标）。
-1. 在概述页面的其他功能标题下，单击 **[!UICONTROL 查看我的所有渠道或创建渠道]**.
-1. 在渠道页面上，单击 **[!UICONTROL 创建新渠道]**.
-1. 在品牌帐户页面的品牌帐户名称字段中，输入业务名称或您选择的要在其中发布视频资产的任何其他渠道名称，然后单击 **[!UICONTROL 创建]**.
+1. 前往 [https://www.youtube.com](https://www.youtube.com/) 並使用您的Google帳戶憑證登入。
+1. 在YouTube頁面的右上角，按一下您的個人資料圖片（也可以顯示為實色圓圈內的字母），然後按一下 **[!UICONTROL YouTube設定]** （圓形齒輪圖示）。
+1. 在「概述」頁面的「其他功能」標題下，按一下 **[!UICONTROL 檢視我的所有管道或建立管道]**.
+1. 在管道頁面上，按一下 **[!UICONTROL 建立新管道]**.
+1. 在「品牌帳戶」頁面的「品牌帳戶名稱」欄位中，輸入您要發佈視訊資產的位置之企業名稱或任何其他管道名稱，然後按一下 **[!UICONTROL 建立]**.
 
-   请记住您在此处输入的名称，因为在Experience Manager中设置YouTube时，必须再次输入该名称。
+   請記住您在這裡輸入的名稱，因為當您在Experience Manager中設定YouTube時，必須再次輸入此名稱。
 
-1. （可选）根据需要，添加更多渠道。
+1. （選用）如有必要，請新增更多管道。
 
-   现在，添加标记以进行发布。
+   現在新增標籤以進行發佈。
 
-### 添加标记以进行发布 {#adding-tags-for-publishing}
+### 新增標籤以進行發佈 {#adding-tags-for-publishing}
 
-要将视频发布到YouTube,Experience Manager会将标记关联到一个或多个YouTube渠道。 要添加用于发布的标记，请参阅 [管理标记](/help/sites-administering/tags.md).
+若要將影片發佈至YouTube，Experience Manager會將標籤與一或多個YouTube管道建立關聯。 若要新增標籤以進行發佈，請參閱 [管理標籤](/help/sites-administering/tags.md).
 
-或者，如果您打算在Experience Manager中使用默认标记，则可以跳过此任务并转到 [启用YouTube Publish复制代理](#enabling-the-youtube-publish-replication-agent).
+或者，如果您想在Experience Manager中使用預設標籤，您可以略過此任務並前往 [啟用YouTube發佈復寫代理程式](#enabling-the-youtube-publish-replication-agent).
 
-### 启用YouTube Publish复制代理 {#enabling-the-youtube-publish-replication-agent}
+### 啟用YouTube發佈復寫代理程式 {#enabling-the-youtube-publish-replication-agent}
 
-启用YouTube发布复制代理后，如果要测试与Google云帐户的连接，请点按 **[!UICONTROL 测试连接]**. 浏览器选项卡会显示连接结果。 如果已添加YouTube渠道，则会在测试中显示其列表。
+啟用YouTube發佈復寫代理程式後，如果要測試與Google Cloud帳戶的連線，請點選 **[!UICONTROL 測試連線]**. 瀏覽器標籤會顯示連線結果。 如果您已新增YouTube管道，測試過程中會顯示管道清單。
 
-1. 在Experience Manager的左上角，单击Experience Manager徽标，然后在左边栏中，单击 **[!UICONTROL 工具]** > **[!UICONTROL 部署]** > **[!UICONTROL 复制]** > **[!UICONTROL 作者代理]**.
-1. 在“创作代理”页面上，单击 **[!UICONTROL YouTube Publish]**.
-1. 在工具栏的“设置”右侧，单击 **[!UICONTROL 编辑]**.
-1. 选择 **[!UICONTROL 已启用]** 复选框，以便您可以打开复制代理。
+1. 在Experience Manager的左上角，按一下Experience Manager標誌，然後在左側邊欄中按一下 **[!UICONTROL 工具]** > **[!UICONTROL 部署]** > **[!UICONTROL 復寫]** > **[!UICONTROL 作者上的代理]**.
+1. 在「作者代理程式」頁面上，按一下 **[!UICONTROL YouTube發佈]**.
+1. 在工具列的「設定」右側，按一下 **[!UICONTROL 編輯]**.
+1. 選取 **[!UICONTROL 已啟用]** 核取方塊，讓您可以開啟復寫代理。
 1. 单击&#x200B;**[!UICONTROL 确定]**。
 
-   现在在YouTube中设置Experience Manager。
+   現在在Experience Manager中設定YouTube。
 
-### 在Experience Manager中设置YouTube {#setting-up-youtube-in-aem}
+### 在Experience Manager中設定YouTube {#setting-up-youtube-in-aem}
 
-从Experience Manager6.4开始，引入了新的触屏用户界面方法，以在Experience Manager中设置YouTube发布。 根据您所使用的Experience Manager的已安装实例，执行以下操作之一：
+從Experience Manager6.4開始，引進了新的觸控使用者介面方法，以在Experience Manager中設定YouTube發佈。 根據您所使用的Experience Manager安裝例項，執行下列任一項作業：
 
-* 要在6.4之前的Experience Manager中配置YouTube，请参阅 [在6.4之前的Experience Manager中设置YouTube](/help/assets/video.md#setting-up-youtube-in-aem-before).
-* 要在Experience Manager6.4或更高版本中配置YouTube，请参阅 [在Experience Manager6.4及更高版本中设置YouTube](#setting-up-youtube-in-aem-and-later).
+* 若要在6.4之前的Experience Manager中設定YouTube，請參閱 [在6.4之前的Experience Manager中設定YouTube](/help/assets/video.md#setting-up-youtube-in-aem-before).
+* 若要在Experience Manager6.4或更新版本中設定YouTube，請參閱 [在Experience Manager6.4和更新版本中設定YouTube](#setting-up-youtube-in-aem-and-later).
 
-#### 在Experience Manager6.4及更高版本中设置YouTube {#setting-up-youtube-in-aem-and-later}
+#### 在Experience Manager6.4和更新版本中設定YouTube {#setting-up-youtube-in-aem-and-later}
 
-1. 请确保以管理员身份登录Dynamic Media实例。
-1. 点按左上角的Experience Manager徽标，然后点按左边栏中的 **[!UICONTROL 工具]**（锤子图标）> **[!UICONTROL Cloud Services]** > **[!UICONTROL YouTube发布配置]**.
-1. 点按 **[!UICONTROL 全球]** （请勿选择它）。
+1. 請確定您以管理員身分登入您的Dynamic Media執行個體。
+1. 在左上角，點選Experience Manager標誌，然後在左側導軌中，點選 **[!UICONTROL 工具]**（槌子圖示） > **[!UICONTROL Cloud Services]** > **[!UICONTROL YouTube發佈設定]**.
+1. 點選 **[!UICONTROL 全域]** （請勿選取）。
 
-1. 在全局页面的右上角附近，点按 **[!UICONTROL 创建]**.
+1. 在全域頁面的右上角附近，點選 **[!UICONTROL 建立]**.
 1. 在“创建 YouTube 配置”页面的“Google Cloud Platform 设置”下的&#x200B;**[!UICONTROL 应用程序名称]**&#x200B;字段中，输入 Google 项目 ID。
 
-   您在之前最初配置Google Cloud设置时指定了项目ID。
-保持打开创建YouTube配置页面；稍后，你将返回到它。
+   您已在先前初始設定Google Cloud設定時指定專案ID。
+「建立YouTube設定」頁面保持開啟；稍後您將返回。
 
    ![6_5_youtubepublish-createyoutubeconfiguration](assets/6_5_youtubepublish-createyoutubeconfiguration.png)
 
-1. 使用纯文本编辑器，打开您之前在任务中下载并保存的JSON文件 [配置Google Cloud设置](/help/assets/video.md#configuring-google-cloud-settings).
-1. 选择并复制整个JSON文本。
+1. 使用純文字編輯器，開啟您先前在工作中下載並儲存的JSON檔案 [配置Google雲端設定](/help/assets/video.md#configuring-google-cloud-settings).
+1. 選取並複製整個JSON文字。
 1. 返回至“YouTube 帐户设置”对话框。在 **[!UICONTROL JSON 配置]**&#x200B;字段中，粘贴 JSON 文本。
-1. 在页面的右上角附近，点按 **[!UICONTROL 保存]**.
+1. 在頁面的右上角附近，點選 **[!UICONTROL 儲存]**.
 
-   现在，在YouTube中设置Experience Manager。
+   現在在Experience Manager中設定YouTube管道。
 
-1. 点按 **[!UICONTROL 添加渠道]**.
-1. 在渠道名称字段中，输入您在任务中创建的渠道名称 **[!UICONTROL 向YouTube添加一个或多个渠道]** 早期。
+1. 點選 **[!UICONTROL 新增頻道]**.
+1. 在管道名稱欄位中，輸入您在任務中建立的管道名稱 **[!UICONTROL 新增一或多個管道至YouTube]** 較早。
 
-   您可以根据需要选择添加描述。
+   如有需要，您可以選擇新增說明。
 
-1. 点按 **[!UICONTROL 添加]**.
-1. YouTube/Google身份验证显示。 如果您尚未登录Google Cloud帐户，请跳过此步骤。
+1. 點選 **[!UICONTROL 新增]**.
+1. 隨即顯示YouTube/Google驗證。 如果您尚未登入Google Cloud帳戶，請略過此步驟。
 
-   * 输入与Google项目ID和上述JSON文本关联的Google用户名和密码。
-   * 根据您的帐户中有多少个渠道，您会看到两个或更多项目。 选择渠道。 不要选择电子邮件地址；它不是频道。
-   * 在下一页，点按 **[!UICONTROL 接受]** 以允许访问此渠道。
+   * 輸入與Google專案ID關聯的Google使用者名稱和密碼，以及上述JSON文字。
+   * 根據您的帳戶有多少個管道，您會看到兩個或多個專案。 選取頻道。 不要選取電子郵件地址；它不是頻道。
+   * 在下一頁，點選 **[!UICONTROL Accept]** 以允許存取此頻道。
 
-1. 点按 **[!UICONTROL 允许]**.
+1. 點選 **[!UICONTROL 允許]**.
 
-   现在，设置用于发布的标记。
+   現在設定標籤以進行發佈。
 
-1. **[!UICONTROL 设置用于发布的标记]**  — 在“Cloud Services”>“YouTube”页面上，点按铅笔图标，以编辑要使用的标记列表。
-1. 点按下拉列表图标（倒置尖角），以便在Experience Manager中显示可用标记列表。
-1. 点按一个或多个标记，以便添加它们。
+1. **[!UICONTROL 設定標籤以供發佈]**  — 在「Cloud Services> YouTube」頁面上，點選鉛筆圖示以編輯您要使用的標籤清單。
+1. 點選下拉式清單圖示（上下顛倒插入號），以便以Experience Manager顯示可用標籤清單。
+1. 點選一或多個標籤，以便新增這些標籤。
 
-   要删除已添加的标记，请选择该标记，然后点按 **[!UICONTROL X]**.
+   若要刪除您新增的標籤，請選取標籤，然後點選 **[!UICONTROL X]**.
 
-1. 添加完所需的标记后，点按 **[!UICONTROL 保存]**.
+1. 完成新增所需標籤後，點選 **[!UICONTROL 儲存]**.
 
-   现在，您将视频发布到YouTube渠道。
+   現在您可將影片發佈至YouTube頻道。
 
-#### 在6.4之前的Experience Manager中设置YouTube {#setting-up-youtube-in-aem-before}
+#### 在6.4之前的Experience Manager中設定YouTube {#setting-up-youtube-in-aem-before}
 
-1. 请确保以管理员身份登录Dynamic Media实例。
+1. 請確定您以管理員身分登入您的Dynamic Media執行個體。
 
-1. 点按左上角的Experience Manager徽标，然后点按左边栏中的 **[!UICONTROL 工具]** （锤子图标）> **[!UICONTROL 部署]** > **[!UICONTROL Cloud Services]**.
-1. 在第三方服务标题下的YouTube下，点按 **[!UICONTROL 立即配置]**.
-1. 在“创建配置”对话框的相应字段中输入标题（必填）和名称（可选）。
-1. 点按 **[!UICONTROL 创建]**.
+1. 在左上角，點選Experience Manager標誌，然後在左側導軌中，點選 **[!UICONTROL 工具]** （槌子圖示） > **[!UICONTROL 部署]** > **[!UICONTROL Cloud Services]**.
+1. 在「協力廠商服務」標題下方的YouTube下方，點選 **[!UICONTROL 立即設定]**.
+1. 在「建立組態」對話方塊中，在個別欄位中輸入標題（必要）和名稱（選用）。
+1. 點選 **[!UICONTROL 建立]**.
 1. 在“YouTube 帐户设置”对话框的&#x200B;**[!UICONTROL 应用程序名称]**&#x200B;字段中，输入 Google 项目 ID。
 
-   您最初在 [配置的Google Cloud设置](/help/assets/video.md#configuring-google-cloud-settings) 早期。
-保持打开YouTube帐户设置对话框；你马上就会重新开始。
+   您最初指定專案ID時 [已設定Google雲端設定](/help/assets/video.md#configuring-google-cloud-settings) 較早。
+保留「YouTube帳戶設定」對話方塊開啟；您稍後將返回該對話方塊。
 
-1. 使用纯文本编辑器，打开您之前在配置Google Cloud设置任务中下载并保存的JSON文件。
-1. 选择并复制整个JSON文本。
+1. 使用純文字編輯器，開啟您先前在「設定Google雲端設定」工作中下載並儲存的JSON檔案。
+1. 選取並複製整個JSON文字。
 1. 返回至“YouTube 帐户设置”对话框。在 **[!UICONTROL JSON 配置]**&#x200B;字段中，粘贴 JSON 文本。
-1. 点按 **[!UICONTROL 确定]**.
+1. 點選 **[!UICONTROL 確定]**.
 
-   现在，在YouTube中设置Experience Manager。
+   現在在Experience Manager中設定YouTube管道。
 
 1. 在&#x200B;**[!UICONTROL 可用渠道]**&#x200B;右侧，点按 **+**（加号图标）。
 1. 在“YouTube频道设置”对话框的“标题”字段中，输入您在之前向YouTube添加一个或多个频道任务中创建的频道 **[!UICONTROL 名称]** 。
 
-   您可以根据需要选择添加描述。
+   如有需要，您可以選擇新增說明。
 
-1. 点按 **[!UICONTROL 确定]**.
-1. YouTube/Google身份验证显示。 如果您尚未登录Google Cloud帐户，请跳过此步骤。
+1. 點選 **[!UICONTROL 確定]**.
+1. 隨即顯示YouTube/Google驗證。 如果您尚未登入Google Cloud帳戶，請略過此步驟。
 
-   * 输入与Google项目ID和上述JSON文本关联的Google用户名和密码。
-   * 根据您的帐户中有多少个渠道，您会看到两个或更多项目。 选择渠道。 不要选择电子邮件地址；它不是频道。
-   * 在下一页，点按 **[!UICONTROL 接受]** 以允许访问此渠道。
+   * 輸入與Google專案ID關聯的Google使用者名稱和密碼，以及上述JSON文字。
+   * 根據您的帳戶有多少個管道，您會看到兩個或多個專案。 選取頻道。 不要選取電子郵件地址；它不是頻道。
+   * 在下一頁，點選 **[!UICONTROL Accept]** 以允許存取此頻道。
 
-1. 点按 **[!UICONTROL 允许]**.
+1. 點選 **[!UICONTROL 允許]**.
 
-   现在，设置用于发布的标记。
+   現在設定標籤以進行發佈。
 
-1. **[!UICONTROL 设置用于发布的标记]**  — 在“Cloud Services”>“YouTube”页面上，点按铅笔图标，以编辑要使用的标记列表。
-1. 点按下拉列表图标（倒置尖角），以便在Experience Manager中显示可用标记列表。
-1. 点按一个或多个标记，以便添加它们。
+1. **[!UICONTROL 設定標籤以供發佈]**  — 在「Cloud Services> YouTube」頁面上，點選鉛筆圖示以編輯您要使用的標籤清單。
+1. 點選下拉式清單圖示（上下顛倒插入號），以便以Experience Manager顯示可用標籤清單。
+1. 點選一或多個標籤，以便新增這些標籤。
 
-   要删除已添加的标记，请选择该标记，然后点按 **X**.
+   若要刪除您新增的標籤，請選取標籤，然後點選 **X**.
 
-1. 添加完所需的标记后，点按 **[!UICONTROL 确定]**.
+1. 完成新增所需標籤後，點選 **[!UICONTROL 確定]**.
 
-   现在，您将视频发布到YouTube渠道。
+   現在您可將影片發佈至YouTube頻道。
 
-### （可选）自动设置已上传视频的默认YouTube属性 {#optional-automating-the-setting-of-default-youtube-properties-for-your-uploaded-videos}
+### （可選）自動為您上傳的視訊設定預設YouTube屬性 {#optional-automating-the-setting-of-default-youtube-properties-for-your-uploaded-videos}
 
-您可以选择在YouTube中创建元数据处理配置文件，以在上传视频时自动设置Experience Manager属性。
+您可以選擇在Experience Manager中建立中繼資料處理設定檔，在上傳視訊時自動設定YouTube屬性。
 
-要创建元数据处理配置文件，您首先需要从&#x200B;**[!UICONTROL 字段标签]**、**[!UICONTROL 映射到属性]**&#x200B;和&#x200B;**[!UICONTROL 选择]**&#x200B;字段中复制值，所有这些字段均位于视频的元数据架构中。然后，您可以通过将这些值添加到YouTube视频元数据处理配置文件来构建该配置文件。
+要创建元数据处理配置文件，您首先需要从&#x200B;**[!UICONTROL 字段标签]**、**[!UICONTROL 映射到属性]**&#x200B;和&#x200B;**[!UICONTROL 选择]**&#x200B;字段中复制值，所有这些字段均位于视频的元数据架构中。然後，您可以新增這些值，以建立您的YouTube視訊中繼資料處理設定檔。
 
-要自动设置已上传视频的默认YouTube属性，请执行以下操作：
+若要自動為您上傳的視訊設定預設YouTube屬性：
 
-1. 点按左上角的Experience Manager徽标，然后单击左边栏中的 **[!UICONTROL 工具]** （锤子图标）> **[!UICONTROL 资产]** > **[!UICONTROL 元数据架构]**.
-1. 单击 **[!UICONTROL 默认]**. （请勿在“默认”左侧的选择框中添加复选标记。）
-1. 在 **[!UICONTROL 默认]** 页面左侧的复选框 **[!UICONTROL 视频]**，然后点按 **[!UICONTROL 编辑]**.
-1. 在元数据架构编辑器页面上，点按 **[!UICONTROL 高级]** 选项卡。
+1. 在左上角，點選Experience Manager標誌，然後在左側導軌中，按一下 **[!UICONTROL 工具]** （槌子圖示） > **[!UICONTROL 資產]** > **[!UICONTROL 中繼資料結構]**.
+1. 按一下 **[!UICONTROL 預設]**. （請勿在「預設」左側的選取方塊中新增核取記號。）
+1. 於 **[!UICONTROL 預設]** 頁面，勾選左側的方塊 **[!UICONTROL 視訊]**，然後點選 **[!UICONTROL 編輯]**.
+1. 在「中繼資料結構編輯器」頁面上，點選 **[!UICONTROL 進階]** 標籤。
 1. 在“YouTube 发布”标题下，单击 **[!UICONTROL YouTube 类别]**。
-1. 在页面右侧的 **[!UICONTROL 设置]** 选项卡，请执行以下操作：
+1. 在頁面右側的 **[!UICONTROL 設定]** 索引標籤中，執行下列動作：
 
-   * 在 **[!UICONTROL 映射到属性]** 文本字段中，选择并复制值。
-将复制的值粘贴到打开文本编辑器中。 您稍后在创建元数据处理配置文件时将需要此值。 保持文本编辑器处于打开状态。
+   * 在 **[!UICONTROL 對應至屬性]** 文字欄位，選取並複製值。
+將複製的值貼到開啟的文字編輯器中。 稍後當您建立中繼資料處理設定檔時，將需要此值。 讓文字編輯器保持開啟。
 
-   * 在 **[!UICONTROL 选择]**，选择并复制您要使用的默认值（如“人员和博客”或“科学与技术”）。
-将复制的值粘贴到打开文本编辑器中。 您稍后在创建元数据处理配置文件时将需要此值。 保持文本编辑器处于打开状态。
+   * 下 **[!UICONTROL 選擇]**，選取並複製您要使用的預設值（例如People &amp; Blogs或Science &amp; Technology）。
+將複製的值貼到開啟的文字編輯器中。 稍後當您建立中繼資料處理設定檔時，將需要此值。 讓文字編輯器保持開啟。
 
-1. 在YouTube发布标题下，点按 **[!UICONTROL YouTube Privacy]**.
-1. 在页面右侧的 **[!UICONTROL 设置]** 选项卡，请执行以下操作：
+1. 在「YouTube發佈」標題下，點選 **[!UICONTROL YouTube隱私權]**.
+1. 在頁面右側的 **[!UICONTROL 設定]** 索引標籤中，執行下列動作：
 
-   * 在 **[!UICONTROL 映射到属性]** 文本字段中，选择并复制值。
-将复制的值粘贴到打开文本编辑器中。 您稍后在创建元数据处理配置文件时将需要此值。 保持文本编辑器处于打开状态。
+   * 在 **[!UICONTROL 對應至屬性]** 文字欄位，選取並複製值。
+將複製的值貼到開啟的文字編輯器中。 稍後當您建立中繼資料處理設定檔時，將需要此值。 讓文字編輯器保持開啟。
 
-   * 在 **[!UICONTROL 选择]**，选择并复制您要使用的默认值。 请注意，选项分为两对。 对中的底部字段是要复制的默认值，如公共、未列出或私有。
-将复制的值粘贴到打开文本编辑器中。 您稍后在创建元数据处理配置文件时将需要此值。 保持文本编辑器处于打开状态。
+   * 下 **[!UICONTROL 選擇]**，選取並複製您要使用的預設值。 請注意，「選擇」會分成兩組。 配對中的底部欄位是您要複製的預設值，例如public、unlisted或private。
+將複製的值貼到開啟的文字編輯器中。 稍後當您建立中繼資料處理設定檔時，將需要此值。 讓文字編輯器保持開啟。
 
-1. 在元数据架构编辑器页面的右上角附近，单击 **[!UICONTROL 取消]**.
-1. 点按Experience Manager左上角的Experience Manager徽标，然后在左边栏中单击 **[!UICONTROL 工具]** （锤子图标）> **[!UICONTROL 资产]** > **[!UICONTROL 元数据配置文件]**.
+1. 在「中繼資料結構編輯器」頁面的右上角附近，按一下 **[!UICONTROL 取消]**.
+1. 在Experience Manager的左上角，點選Experience Manager標誌，然後在左側導軌中，按一下 **[!UICONTROL 工具]** （槌子圖示） > **[!UICONTROL 資產]** > **[!UICONTROL 中繼資料設定檔]**.
 
-1. 在元数据配置文件页面的页面右上角附近，单击 **[!UICONTROL 创建]**.
+1. 在「中繼資料描述檔」頁面的右上角，按一下 **[!UICONTROL 建立]**.
 1. 在“添加元数据配置文件”对话框的&#x200B;**[!UICONTROL 配置文件]**&#x200B;文本字段中，输入名称 `YouTube Video`，然后单击&#x200B;**[!UICONTROL 创建]**。
-1. 在元数据配置文件编辑器页面上，单击 **[!UICONTROL 高级]** 选项卡。
-1. 通过执行以下操作，将复制的YouTube Publishing值添加到配置文件：
+1. 在「中繼資料設定檔編輯器」頁面上，按一下 **[!UICONTROL 前進]** 標籤。
+1. 執行下列動作，將複製的YouTube發佈值新增至設定檔：
 
-   * 在页面右侧，单击 **[!UICONTROL 构建表单]** 选项卡。
-   * （可选）拖动已标记为 **[!UICONTROL 节标题]** 并将其放入表单区域。
-   * （可选）单击 **[!UICONTROL 字段标签]** 来选择组件。
-   * （可选）在页面右侧的设置选项卡的字段标签文本字段中，输入 `YouTube Publishing`.
-   * 单击 **[!UICONTROL 构建表单]** 选项卡，然后拖动标有的组件 **[!UICONTROL 多值文本]** 然后把它放下 **[!UICONTROL YouTube发布]** 标题。
+   * 在頁面的右側，按一下 **[!UICONTROL 建置表單]** 標籤。
+   * （可選）拖曳標示為 **[!UICONTROL 區段標題]** 左側，並將它放置在表單區域中。
+   * （可選）按一下 **[!UICONTROL 欄位標籤]** 以選取元件。
+   * （可選）在頁面右側的「設定」標籤下方，在「欄位標籤」文字欄位中輸入 `YouTube Publishing`.
+   * 按一下 **[!UICONTROL 建置表單]** 標籤，然後拖曳標示為 **[!UICONTROL 多值文字]** 並將它拖放到 **[!UICONTROL YouTube發佈]** 您建立的標題。
 
-   * 单击 **[!UICONTROL 字段标签]** 以便选择组件。
-   * 在页面右侧的设置选项卡下，将您之前复制的YouTube发布值（字段标签值和映射到属性值）粘贴到表单中的相应字段中。 将选项值粘贴到默认值字段中。
+   * 按一下 **[!UICONTROL 欄位標籤]** 因此會選取元件。
+   * 在頁面的右側，在「設定」標籤下方，將您先前複製的「YouTube發佈」值（「欄位標籤」值和「對應至屬性值」）貼到表單上各自的欄位中。 將「選擇」值貼到「預設值」欄位中。
 
-1. 通过执行以下操作，将复制的YouTube隐私值添加到配置文件：
+1. 執行下列動作，將複製的YouTube隱私權值新增至設定檔：
 
-   * 在页面右侧，单击 **[!UICONTROL 构建表单]** 选项卡。
-   * （可选）拖动已标记为 **[!UICONTROL 节标题]** 并将其放入表单区域。
-   * （可选）单击 **[!UICONTROL 字段标签]** 来选择组件。
-   * （可选）在页面右侧的设置选项卡的字段标签文本字段中，输入 `YouTube Privacy`.
-   * 单击 **[!UICONTROL 构建表单]** 选项卡，然后拖动标有的组件 **[!UICONTROL 多值文本]** 然后把它放下 **[!UICONTROL YouTube Privacy]** 标题。
+   * 在頁面的右側，按一下 **[!UICONTROL 建置表單]** 標籤。
+   * （可選）拖曳標示為 **[!UICONTROL 區段標題]** 左側，並將它放置在表單區域中。
+   * （可選）按一下 **[!UICONTROL 欄位標籤]** 以選取元件。
+   * （可選）在頁面右側的「設定」標籤下方，在「欄位標籤」文字欄位中輸入 `YouTube Privacy`.
+   * 按一下 **[!UICONTROL 建置表單]** 標籤，然後拖曳標示為 **[!UICONTROL 多值文字]** 並將它拖放到 **[!UICONTROL YouTube隱私權]** 您建立的標題。
 
-   * 单击 **[!UICONTROL 字段标签]** 以便选择组件。
-   * 在页面右侧的设置选项卡下，将您之前复制的YouTube发布值（字段标签值和映射到属性值）粘贴到表单中的相应字段中。 将选项值粘贴到默认值字段中。
+   * 按一下 **[!UICONTROL 欄位標籤]** 因此會選取元件。
+   * 在頁面的右側，在「設定」標籤下方，將您先前複製的「YouTube發佈」值（「欄位標籤」值和「對應至屬性值」）貼到表單上各自的欄位中。 將「選擇」值貼到「預設值」欄位中。
 
 1. 在页面的右上角附近，单击&#x200B;**[!UICONTROL 保存]**。
-1. 将YouTube发布元数据配置文件应用到您要上传视频的文件夹。 您必须同时设置元数据配置文件和视频配置文件。
+1. 將YouTube發佈中繼資料設定檔套用至您要上傳影片的資料夾。 您必須同時設定中繼資料設定檔和視訊設定檔。
 
    请参阅 [元数据配置文件](/help/assets/metadata-config.md#metadata-profiles) 和视 [频配置文件](/help/assets/video-profiles.md)。
 
-### 将视频发布到YouTube渠道 {#publishing-videos-to-your-youtube-channel}
+### 將影片發佈至您的YouTube頻道 {#publishing-videos-to-your-youtube-channel}
 
-现在，您可以将之前添加的标记与视频资产相关联。 此过程可让Experience Manager知道要将哪些资产发布到您的YouTube渠道。
-
->[!NOTE]
->
->在Dynamic Media - Scene7模式下运行时，“立即发布”不会自动发布到YouTube。 设置Dynamic Media - Scene7模式时，有两个发布选项可供选择： **[!UICONTROL 立即]** 或 **[!UICONTROL 激活时]**.
->
->**[!UICONTROL 立即发布]** 意味着上传的资产（在与IPS同步后）会自动发布到交付系统。 虽然Dynamic Media是如此，但YouTube并非如此。 要发布到YouTube，您必须通过Experience Manager作者方式发布。
+現在，您可將先前新增的標籤與影片資產建立關聯。 此程式可讓Experience Manager知道要將哪些資產發佈至您的YouTube頻道。
 
 >[!NOTE]
 >
->要从YouTube发布内容，Experience Manager会使用 **[!UICONTROL 发布到YouTube]** 工作流，可让您监视进度并查看任何故障信息。
+>在Dynamic Media - Scene7模式下執行時，不會立即發佈自動發佈至YouTube。 設定Dynamic Media - Scene7模式時，有兩個發佈選項可供選擇： **[!UICONTROL 立即]** 或 **[!UICONTROL 啟動時]**.
 >
->请参阅 [监控视频编码和YouTube发布进度](#monitoring-video-encoding-and-youtube-publishing-progress).
->
->有关更详细的进度信息，您可以在复制下监视YouTube日志。 但请注意，此类监控需要管理员访问权限。
-
-**要将视频发布到您的YouTube渠道，请执行以下操作：**
-
-1. 在Experience Manager中，导航到要发布到YouTube渠道的视频资产。
-1. 选择视频资产（自适应视频集）。
-1. 在工具栏中，单击 **[!UICONTROL 属性]**.
-1. 在基本选项卡的元数据标题下，单击 **[!UICONTROL 打开选择对话框]** 标记字段的右侧。
-1. 在“选择标记”页面上，导航到要使用的标记，然后选择一个或多个标记。
-
-   请记住，标记必须与YouTube渠道关联。
-
-1. 在页面的右上角，单击 **[!UICONTROL 选择]**.
-1. 在视频属性页面的右上角，单击 **[!UICONTROL 保存并关闭]**.
-1. 在工具栏中，单击 **[!UICONTROL 快速发布]**.
-
-   另请参阅 [将发布管理与Experience Manager Sites结合使用](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/publication-management-feature-video-use.html).
-
-   您可以选择验证已在YouTube渠道上发布的视频。
-
-### （可选）验证已发布到YouTube上的视频 {#optional-verifying-the-published-video-on-youtube}
-
-您可以选择监控YouTube发布（或取消发布）的进度。
-
-请参阅 [监控视频编码和YouTube发布进度](#monitoring-video-encoding-and-youtube-publishing-progress).
-
-发布时间可能会因多种因素而有很大不同，这些因素包括主源视频的格式、文件大小和上传流量。 发布过程可能需要几分钟到几小时不等的时间。 此外，分辨率更高的格式呈现速度要慢得多。 例如，720p和1080p的显示时间比480p要长。
-
-八小时后，如果您仍看到一条状态消息，其中显示 **[!UICONTROL 已上传（正在处理，请稍候）]**，请尝试从Adobe的网站中删除视频，然后重新上传。
-
-### 将YouTube URL关联到您的Web应用程序 {#linking-youtube-urls-to-your-web-application}
-
-您可以获取由Dynamic Media在发布视频后生成的YouTube URL字符串。 复制YouTube URL时，它会登陆到剪贴板，以便您可以根据需要将其粘贴到网站或应用程序中的页面。
+>**[!UICONTROL 立即發佈]** 這表示上傳的資產（與IPS同步後）會自動發佈至傳送系統。 雖然這對Dynamic Media來說是真的，但對YouTube不是這樣。 若要發佈至YouTube，您必須透過Experience Manager Author發佈。
 
 >[!NOTE]
 >
->在将视频资产发布到YouTube之前，无法复制YouTube URL。
+>若要從YouTube發佈內容，Experience Manager會使用 **[!UICONTROL 發佈至YouTube]** 工作流程，可讓您監視進度並檢視任何失敗資訊。
+>
+>另請參閱 [監視視訊編碼和YouTube發佈進度](#monitoring-video-encoding-and-youtube-publishing-progress).
+>
+>如需詳細進度資訊，您可以監視復寫下的YouTube記錄。 但是，請注意，此類監視需要管理員存取權。
 
-**要将YouTube URL关联到您的Web应用程序，请执行以下操作：**
+**若要將視訊發佈至您的YouTube頻道：**
 
-1. 导航到 *YouTube发布* 要复制其URL的视频资产，然后将其选中。
+1. 在Experience Manager中，導覽至您要發佈至YouTube頻道的視訊資產。
+1. 選取視訊資產（最適化視訊集）。
+1. 在工具列上，按一下 **[!UICONTROL 屬性]**.
+1. 在基本索引標籤的中繼資料標題下方，按一下 **[!UICONTROL 開啟選取範圍對話方塊]** 標籤欄位右側。
+1. 在「選取標籤」頁面上，導覽至您要使用的標籤，然後選取一或多個標籤。
 
-   请记住，YouTube URL只能复制 *after* 您首先 *发布* 视频资产到YouTube。
+   請記住，標籤必須與YouTube管道相關聯。
 
-1. 在工具栏中，单击 **[!UICONTROL 属性]**.
-1. 单击 **[!UICONTROL 高级]** 选项卡。
-1. 在YouTube发布标题的YouTube URL列表下，选择URL文本，并将其复制到Web浏览器，以预览资产或将其添加到您的Web内容页面。
+1. 在頁面的右上角，按一下 **[!UICONTROL 選取]**.
+1. 在視訊屬性頁面的右上角，按一下 **[!UICONTROL 儲存並關閉]**.
+1. 在工具列上，按一下 **[!UICONTROL 快速發佈]**.
 
-### 取消发布视频，以便从YouTube中删除它们 {#unpublishing-videos-to-remove-them-from-youtube}
+   另請參閱 [搭配Experience Manager Sites使用發佈管理](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/publication-management-feature-video-use.html).
 
-在Experience Manager中取消发布视频资产时，该视频将从YouTube中删除。
+   您可以選擇在YouTube頻道上驗證發佈的影片。
+
+### （可選）驗證YouTube上發佈的影片 {#optional-verifying-the-published-video-on-youtube}
+
+您可以選擇監視YouTube發佈（或取消發佈）的進度。
+
+另請參閱 [監視視訊編碼和YouTube發佈進度](#monitoring-video-encoding-and-youtube-publishing-progress).
+
+發佈時間會因多項因素而有很大的差異，包括主要來源視訊格式、檔案大小和上傳流量。 發佈程式可能需要幾分鐘到幾小時的時間。 此外，更高解析度的格式呈現得也慢得多。 例如，720p和1080p的出現時間會比480p長。
+
+8小時後，如果您仍然看到顯示以下訊息的狀態訊息 **[!UICONTROL 已上傳（正在處理，請稍候）]**，請嘗試從Adobe的網站移除視訊並重新上傳。
+
+### 將YouTube URL連結至您的網頁應用程式 {#linking-youtube-urls-to-your-web-application}
+
+您可以取得Dynamic Media在發佈影片後產生的YouTube URL字串。 當您複製YouTube URL時，它會貼到剪貼簿，以便您視需要將其貼到網站或應用程式中的頁面。
+
+>[!NOTE]
+>
+>您必須先將視訊資產發佈至YouTube，才能複製YouTube URL。
+
+**若要將YouTube URL連結至您的Web應用程式：**
+
+1. 導覽至 *YouTube已發佈* 您要複製其URL的視訊資產，然後選取它。
+
+   請記住，YouTube URL僅供複製 *晚於* 您有 *已發佈* 將影片資產轉移到YouTube。
+
+1. 在工具列上，按一下 **[!UICONTROL 屬性]**.
+1. 按一下 **[!UICONTROL 進階]** 標籤。
+1. 在「YouTube發佈」標題下方的「YouTube URL清單」中，選取URL文字，然後複製URL文字至網頁瀏覽器，以預覽資產或新增至網頁內容頁面。
+
+### 取消發佈影片，以便從YouTube中將其移除 {#unpublishing-videos-to-remove-them-from-youtube}
+
+當您在Experience Manager中取消發佈視訊資產時，該視訊會從YouTube中移除。
 
 >[!CAUTION]
 >
->如果您直接从YouTube中删除视频，则Experience Manager不知道该视频，并会继续其行为，如同该视频仍然发布到YouTube一样。 始终通过Experience Manager方式从YouTube取消发布视频资产。
+>如果您直接從YouTube中移除視訊，Experience Manager不會察覺，並會繼續採取行動，彷彿視訊仍發佈至YouTube。 一律透過Experience Manager從YouTube取消發佈視訊資產。
 
 >[!NOTE]
 >
->要从YouTube中删除内容，Experience Manager会使用 **[!UICONTROL 从YouTube取消发布]** 工作流，可让您监视进度并查看任何故障信息。
+>若要從YouTube移除內容，Experience Manager會使用 **[!UICONTROL 從YouTube取消發佈]** 工作流程，可讓您監視進度並檢視任何失敗資訊。
 >
->请参阅 [监控视频编码和YouTube发布进度](#monitoring-video-encoding-and-youtube-publishing-progress).
+>另請參閱 [監視視訊編碼和YouTube發佈進度](#monitoring-video-encoding-and-youtube-publishing-progress).
 
-**要取消发布视频以将其从YouTube中删除，请执行以下操作：**
+**若要取消發佈視訊以從YouTube中將其移除：**
 
-1. 导航到要从YouTube渠道中取消发布的视频资产。
-1. 在资产选择模式下，选择一个或多个已发布的视频资产。
-1. 在工具栏中，单击 **[!UICONTROL 管理发布]**. 点按三个圆点图标(...) 工具栏上，这样 **[!UICONTROL 管理发布]** 打开。
-1. 在管理发布页面上，点按 **[!UICONTROL 取消发布]**.
-1. 在页面的右上角，点按 **[!UICONTROL 下一个]**.
-1. 在页面的右上角，点按 **[!UICONTROL 取消发布]**.
+1. 導覽至您要從YouTube頻道取消發佈的視訊資產。
+1. 在資產選擇模式中，選取一或多個已發佈的視訊資產。
+1. 在工具列上，按一下 **[!UICONTROL 管理發布]**. 點選三點圖示(...) 在工具列上，因此 **[!UICONTROL 管理發布]** 隨即開啟。
+1. 在管理出版物頁面上，點選 **[!UICONTROL 取消發佈]**.
+1. 在頁面的右上角，點選 **[!UICONTROL 下一個]**.
+1. 在頁面的右上角，點選 **[!UICONTROL 取消發佈]**.
 
-## 监控视频编码和YouTube发布进度 {#monitoring-video-encoding-and-youtube-publishing-progress}
+## 監視視訊編碼和YouTube發佈進度 {#monitoring-video-encoding-and-youtube-publishing-progress}
 
-当您将新视频上传到应用了视频编码的文件夹，或将视频发布到YouTube时，可以监控视频编码/Youtube发布的进展情况。 实际的YouTube发布进度仅通过日志提供。 但是，其失败或成功将以下过程中描述的其他方式列出。 此外，当YouTube发布工作流或视频编码完成或中断时，您还会收到电子邮件通知。
+當您將新視訊上傳至已套用視訊編碼的資料夾，或將視訊發佈至YouTube時，您可以監視視訊編碼/Youtube發佈的進度。 實際的YouTube發佈進度只能透過記錄檔取得。 不過，失敗或成功會以其他方式列出，如下列程式所述。 此外，當YouTube發佈工作流程或視訊編碼完成或中斷時，您會收到電子郵件通知。
 
-### 监控进度 {#monitoring-progress}
+### 監視進度 {#monitoring-progress}
 
-1. 在资产文件夹中查看视频编码进度：
+1. 在資產資料夾中檢視視訊編碼進度：
 
-   * 在卡片视图中，视频编码进度按百分比显示在资产上。 如果出现错误，此信息也会显示在资产上。
+   * 在卡片檢視中，視訊編碼進度會依百分比顯示在資產上。 如果出現錯誤，資產上也會顯示此資訊。
 
    ![chlimage_1-429](assets/chlimage_1-429.png)
 
-   * 在列表视图中，视频编码进度显示在 **[!UICONTROL 处理状态]** 列。 如果出现错误，则同一列中将显示此消息。
+   * 在清單檢視中，視訊編碼進度會顯示在 **[!UICONTROL 處理狀態]** 欄。 如果出现错误，则同一列中将显示此消息。
 
    ![chlimage_1-430](assets/chlimage_1-430.png)
 
@@ -514,130 +514,130 @@ Google会定期更改其用户界面。 因此，将视频发布到YouTube的步
 
    ![chlimage_1-431](assets/chlimage_1-431.png)
 
-1. 查看资产详细信息的进度。 点按或单击资产时，打开下拉菜单并选择 **[!UICONTROL 时间轴]**. 要将其缩小到编码或YouTube发布等工作流活动，请选择 **[!UICONTROL 工作流]**.
+1. 在資產詳細資訊中檢視進度。 點選或按一下資產時，請開啟下拉式功能表並選取 **[!UICONTROL 時間表]**. 若要將其縮小至編碼或YouTube發佈等工作流程活動，請選取「 」 **[!UICONTROL 工作流程]**.
 
    ![chlimage_1-432](assets/chlimage_1-432.png)
 
-   任何工作流信息（如编码）都会显示在时间轴中。 对于YouTube发布，工作流时间轴还包含YouTube渠道的名称和YouTube视频URL。 此外，发布完成后，您会在工作流时间轴中看到任何失败通知。
+   任何工作流程資訊（例如編碼）都會顯示在時間軸中。 對於YouTube發佈，工作流程時間軸也包含YouTube頻道名稱和YouTube影片URL。 此外，發佈完成後，您會在工作流程時間軸中看到任何失敗通知。
 
    >[!NOTE]
    >
-   >由于上有多个工作流配置，最终记录失败/错误消息可能需要较长时间 **[!UICONTROL 重试]**, **[!UICONTROL 重试延迟]**&#x200B;和 **[!UICONTROL 超时]** 从 [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)，例如：
+   >由於上的多個工作流程設定，最終記錄失敗/錯誤訊息可能需要很長時間 **[!UICONTROL 重試]**， **[!UICONTROL 重試延遲]**、和 **[!UICONTROL 逾時]** 從 [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)例如：
    >
-   >    * Apache Sling作业队列配置
-   >    * AdobeGranite工作流外部进程作业处理程序
-   >    * Granite工作流超时队列
+   >    * Apache Sling工作佇列設定
+   >    * AdobeGranite工作流程外部程式工作處理常式
+   >    * Granite工作流程逾時佇列
 
    >
-   >您可以调整 **[!UICONTROL 重试]**, **[!UICONTROL 重试延迟]**&#x200B;和 **[!UICONTROL 超时]** 属性。
+   >您可以調整 **[!UICONTROL 重試]**， **[!UICONTROL 重試延遲]**、和 **[!UICONTROL 逾時]** 這些設定中的屬性。
 
 1. 有关进行中的工作流，请参阅“工具”>“工作流” **[!UICONTROL >“实例”中提供的“工作流实例]** ” **[!UICONTROL (Workflow]** ) **[!UICONTROL >“]**&#x200B;实例”。
 
    >[!NOTE]
    >
-   >您需要管理权限才能访问 **[!UICONTROL 工具]** 菜单。
+   >您需要管理許可權才能存取 **[!UICONTROL 工具]** 功能表。
 
    ![chlimage_1-433](assets/chlimage_1-433.png)
 
-   选择实例并点按 **[!UICONTROL 打开历史记录]**.
+   選取執行個體並點選 **[!UICONTROL 開啟歷史記錄]**.
 
    ![chlimage_1-434](assets/chlimage_1-434.png)
 
-   在“工作流实例”区域中，您还可以暂停、终止或重命名工作流。 请参阅 [管理工作流](/help/sites-administering/workflows-administering.md) 以了解更多信息。
+   您也可以從「工作流程例證」區域暫停、終止或重新命名工作流程。 另請參閱 [管理工作流程](/help/sites-administering/workflows-administering.md) 以取得詳細資訊。
 
 1. 有关失败的作业，请参阅&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 工作流]** > **[!UICONTROL 失败]**&#x200B;中显示的“工作流失败”。**[!UICONTROL 工作流失败]**&#x200B;列出所有失败的工作流活动。
 
    >[!NOTE]
    >
-   >您需要管理权限才能访问 **[!UICONTROL 工具]** 菜单。
+   >您需要管理許可權才能存取 **[!UICONTROL 工具]** 功能表。
 
    ![chlimage_1-435](assets/chlimage_1-435.png)
 
    >[!NOTE]
    >
-   >由于上存在多个工作流配置，最终记录错误消息会花费较长时间 **[!UICONTROL 重试]**, **[!UICONTROL 重试延迟]**&#x200B;和 **[!UICONTROL 超时]** 从 [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)，例如：
+   >由於上的多個工作流程設定，最終記錄錯誤訊息可能需要很長時間 **[!UICONTROL 重試]**， **[!UICONTROL 重試延遲]**、和 **[!UICONTROL 逾時]** 從 [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)例如：
    >
    >
    >
-   >    * Apache Sling作业队列配置
-   >    * AdobeGranite工作流外部进程作业处理程序
-   >    * Granite工作流超时队列
+   >    * Apache Sling工作佇列設定
+   >    * AdobeGranite工作流程外部程式工作處理常式
+   >    * Granite工作流程逾時佇列
 
    >
    >
-   >您可以调整 **[!UICONTROL 重试]**, **[!UICONTROL 重试延迟]**&#x200B;和 **[!UICONTROL 超时]** 属性。
+   >您可以調整 **[!UICONTROL 重試]**， **[!UICONTROL 重試延遲]**、和 **[!UICONTROL 逾時]** 這些設定中的屬性。
 
 1. 有关已完成的工作流，请参阅&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 工作流]** > **[!UICONTROL 存档]**&#x200B;中的可用工作流存档。**[!UICONTROL 工作流存档]**&#x200B;列出了所有已完成的工作流活动。
 
    >[!NOTE]
    >
-   >您需要管理权限才能访问 **[!UICONTROL 工具]** 菜单。
+   >您需要管理許可權才能存取 **[!UICONTROL 工具]** 功能表。
 
    ![chlimage_1-436](assets/chlimage_1-436.png)
 
-1. 您会收到有关工作流作业中止或失败的电子邮件通知。 管理员可配置这些电子邮件通知。 请参阅 [配置电子邮件通知](#configuring-e-mail-notifications).
+1. 您會收到有關已中止或失敗的工作流程作業的電子郵件通知。 管理員可設定這些電子郵件通知。 另請參閱 [設定電子郵件通知](#configuring-e-mail-notifications).
 
-#### 配置电子邮件通知 {#configuring-e-mail-notifications}
+#### 設定電子郵件通知 {#configuring-e-mail-notifications}
 
 >[!NOTE]
 >
->您需要管理权限才能访问 **[!UICONTROL 工具]** 菜单。
+>您需要管理許可權才能存取 **[!UICONTROL 工具]** 功能表。
 
-如何配置通知取决于您是希望接收编码作业通知还是YouTube发布作业通知：
+通知的設定方式取決於您是要接收編碼作業還是YouTube發佈作業的通知：
 
-* 对于编码作业，您可以访问所有Experience Manager工作流电子邮件通知的配置页面： **[!UICONTROL 工具]** > **[!UICONTROL 操作]** > **[!UICONTROL Web控制台]** 通过搜索 **[!UICONTROL Day CQ工作流电子邮件通知服务]**. 请参阅 [在中配置电子邮件通知Experience Manager](/help/sites-administering/notification.md). 您可以选中或清除 **[!UICONTROL 中止时通知]** 或 **[!UICONTROL 完成时通知]** 因此。
+* 對於編碼工作，您可以存取所有Experience Manager工作流程電子郵件通知的設定頁面： **[!UICONTROL 工具]** > **[!UICONTROL 作業]** > **[!UICONTROL 網頁主控台]** 並透過搜尋 **[!UICONTROL Day CQ工作流程電子郵件通知服務]**. 另請參閱 [在Experience Manager中設定電子郵件通知](/help/sites-administering/notification.md). 您可以選取或清除核取方塊 **[!UICONTROL 中止時通知]** 或 **[!UICONTROL 完成時通知]** 因此，
 
-* 对于YouTube发布作业，请执行以下操作：
+* 若為YouTube發佈工作，請執行以下作業：
 
-1. 在Experience Manager中，点按 **[!UICONTROL 工具]** > **[!UICONTROL 工作流]** > **[!UICONTROL 模型]**.
-1. 在工作流模型页面上，选择 **[!UICONTROL 发布到YouTube]**，然后点按 **[!UICONTROL 编辑]** 中。
-1. 在发布到YouTube工作流页面的右上角附近，点按 **[!UICONTROL 编辑]**.
-1. 将鼠标指针悬停在YouTube上传组件上，然后点按一次以显示内联工具栏。
+1. 在Experience Manager中，點選 **[!UICONTROL 工具]** > **[!UICONTROL 工作流程]** > **[!UICONTROL 模型]**.
+1. 在「工作流程模型」頁面上，選擇 **[!UICONTROL 發佈至YouTube]**，然後點選 **[!UICONTROL 編輯]** （在工具列上）。
+1. 在「發佈至YouTube」工作流程頁面的右上角附近，點選 **[!UICONTROL 編輯]**.
+1. 將滑鼠指標暫留在YouTube上傳元件上，然後點選一次以顯示內嵌工具列。
 
    ![6_5_publishtoyoutubeworkflow](assets/6_5_publishtoyoutubeworkflow.png)
 
-1. 在内联工具栏中，点按“配置”图标（扳手）。 单击 **[!UICONTROL 参数]** 选项卡。
+1. 在內嵌工具列上，點選「設定」圖示（扳手）。 按一下 **[!UICONTROL 引數]** 標籤。
 
    ![6_5_publishtoyoutubeworkflow-configurationicon](assets/6_5_publishtoyoutubeworkflow-configurationicon.png)
 
-1. 在YouTube上传流程 — 步骤属性对话框中，点按 **[!UICONTROL 参数]** 选项卡。
+1. 在「YouTube上傳程式 — 步驟屬性」對話方塊中，點選 **[!UICONTROL 引數]** 標籤。
 
    ![6_5_publishtoyoutubeworkflow-arguments-tab](assets/6_5_publishtoyoutubeworkflow-arguments-tab.png)
 
-1. 您可以选中或清除以下复选框：
+1. 您可以選取或清除下列核取方塊：
 
    * 发布开始
    * 发布失败
-   * 发布完成 — 包含有关渠道和URL的信息
+   * 發佈完成 — 包含頻道和URL的相關資訊
 
-   清除复选框表示您不会从YouTube发布工作流中收到指定的电子邮件通知。
+   清除核取方塊表示您不會從YouTube發佈工作流程收到指定的電子郵件通知。
 
    >[!NOTE]
    >
-   >这些电子邮件是特定于YouTube的，是通用工作流电子邮件通知的补充。 因此，您可以收到两组电子邮件通知 — 在 **[!UICONTROL Day CQ工作流电子邮件通知服务]** 和特定于YouTube的配置，具体取决于您的配置设置。
+   >這些電子郵件是YouTube專屬的，並且是一般工作流程電子郵件通知的補充。 因此，您可以收到兩套電子郵件通知 — 中提供的通用通知 **[!UICONTROL Day CQ工作流程電子郵件通知服務]** 以及特定於YouTube的一個專案，端視您的組態設定而定。
 
-1. 完成后，在对话框的右上角附近，点按 **[!UICONTROL 完成]** 图标（复选标记）。
-1. 在发布到YouTube工作流页面的右上角附近，点按 **[!UICONTROL 同步]**.
+1. 完成後，在對話方塊的右上角附近，點選 **[!UICONTROL 完成]** 圖示（勾號）。
+1. 在「發佈至YouTube」工作流程頁面的右上角，點選 **[!UICONTROL 同步]**.
 
-## 在视频资产中添加批注 {#annotate-video-assets}
+## 為視訊資產加上註釋 {#annotate-video-assets}
 
-1. 从 [!DNL Assets] 控制台，选择 **[!UICONTROL 编辑]** ，以显示资产详细信息页面。
-1. 要播放视频，请单击 **[!UICONTROL 预览]**.
-1. 要在视频中添加批注，请单击 **[!UICONTROL 注释]**. 注释会在视频中的特定时间（帧）添加。 在添加注释时，您可以在画布上绘制图形，并在绘图中包含注释。 注释会自动保存。 要退出注释向导，请单击 **[!UICONTROL 关闭]**.
+1. 從 [!DNL Assets] 主控台，選取 **[!UICONTROL 編輯]** 以顯示「資產詳細資訊」頁面。
+1. 若要播放視訊，請按一下 **[!UICONTROL 預覽]**.
+1. 若要為視訊加上註釋，請按一下 **[!UICONTROL 註釋]**. 註解會在視訊中的特定時間（影格）新增。 在註釋時，您可以在畫布上繪圖，並在繪圖中包含註解。 註解會自動儲存。 若要結束註解精靈，請按一下 **[!UICONTROL 關閉]**.
 
-   ![在视频帧上绘制和注释](assets/annotate-video.png)
+   ![在視訊影格上繪製和註釋](assets/annotate-video.png)
 
 1. 搜索到视频中的特定点，在&#x200B;**文本**&#x200B;字段中指定时间（以秒为单位），然后单击&#x200B;**跳转**。例如，要跳过视频的前 20 秒，请在文本字段中输入 20。
 
-   ![搜索到视频中要跳过的时间（指定秒）](assets/seek-in-video.png)
+   ![搜尋視訊中的時間，以略過指定的秒數](assets/seek-in-video.png)
 
-1. 要在时间轴中查看它，请单击注释。 要从时间轴中删除注释，请单击 **[!UICONTROL 删除]**.
+1. 若要在時間軸中檢視它，請按一下註釋。 若要從時間軸刪除註釋，請按一下 **[!UICONTROL 刪除]**.
 
-   ![在时间轴中查看批注和详细信息](assets/timeline-view-annotation.png)
+   ![在時間軸中檢視註解和詳細資訊](assets/timeline-view-annotation.png)
 
 >[!MORELIKETHIS]
 >
->* [在Experience Manager Assets中管理数字资产](/help/assets/manage-assets.md)
->* [在Experience Manager Assets中管理收藏集](/help/assets/manage-collections.md)
->* [Dynamic Media视频文档](/help/assets/video.md).
+>* [在Experience Manager Assets中管理數位資產](/help/assets/manage-assets.md)
+>* [在Experience Manager Assets中管理集合](/help/assets/manage-collections.md)
+>* [Dynamic Media影片檔案](/help/assets/video.md).
 

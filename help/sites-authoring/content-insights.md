@@ -1,7 +1,7 @@
 ---
 title: 内容分析
 seo-title: Content Insight
-description: 内容分析使用 Web 分析和 SEO 推荐提供有关页面性能的信息
+description: 內容深入分析會使用網頁分析和SEO建議來提供頁面效能的相關資訊
 seo-description: Content Insight provides information about page performance using web analytics and SEO recommendation
 uuid: 32f5b37c-2a82-462a-9f0a-c19bed46e198
 contentOwner: Guillaume Carlino
@@ -13,88 +13,88 @@ exl-id: 187f3cde-a0db-4c02-9e8b-08272987a67d
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '521'
-ht-degree: 96%
+ht-degree: 0%
 
 ---
 
 # 内容分析{#content-insight}
 
-内容分析使用 Web 分析和 SEO 推荐提供有关页面性能的信息。使用内容分析可决定如何修改页面，或了解以前所做的更改使性能发生何种变化。对于您创作的每个页面，您都可以打开内容分析来分析页面。
+「內容分析」會使用網頁分析和SEO建議來提供頁面效能的相關資訊。 使用「內容分析」來決定如何修改頁面，或瞭解先前的變更如何改變效能。 對於您編寫的每個頁面，您可以開啟「內容分析」來分析頁面。
 
 ![chlimage_1-311](assets/chlimage_1-311.png)
 
-“内容分析”页面的布局会根据您所用设备的屏幕尺寸和方向进行相应更改。
+「內容分析」頁面的版面會隨著您使用之裝置的熒幕維度和方向而改變。
 
-## 报表数据
+## 報表資料
 
-“内容分析”页面包含使用 Adobe SiteCatalyst、Adobe Target、Adobe Social 和 BrightEdge 数据的报表：
+「內容分析」頁面包含使用Adobe SiteCatalyst、Adobe Target、Adobe Social和BrightEdge資料的報表：
 
-* SiteCatalyst：提供以下量度的报表：
+* SiteCatalyst：提供下列量度的報表：
 
-   * 页面查看次数
-   * 页面平均逗留时间
+   * 頁面檢視
+   * 頁面平均逗留時間
    * 源
 
-* Target：关于您的页面包含其选件的营销活动的报表。
-* BrightEdge：关于可提高页面对搜索引擎的可见性的页面功能，以及应当实施的推荐功能的报表。
+* Target：您的頁面包含選件的促銷活動報表。
+* BrightEdge：報告可改善搜尋引擎對頁面可見度的頁面功能，並建議應實作的功能。
 
-请参阅[打开页面的分析和推荐](/help/sites-authoring/ci-analyze.md#opening-analytics-and-recommendations-for-a-page)。
+另請參閱 [開啟頁面的Analytics和Recommendations](/help/sites-authoring/ci-analyze.md#opening-analytics-and-recommendations-for-a-page).
 
-## 报表时间段
+## 報告期間
 
-报表会显示您控制的一段时间的数据。调整报表时间段时，报表会自动使用该时间段的数据进行刷新。可视提示会指示页面版本的更改时间，以便您可以比较每个版本的性能。
+報表會顯示您所控制的一段時間的資料。 當您調整報告時段時，報表會自動重新整理該時段的資料。 視覺提示會指出頁面版本變更的時間，讓您能夠比較每個版本的效能。
 
-您还可以指定报表数据的粒度，例如您可以查看每日、每周、每月或每年的数据。
+您也可以指定報告資料的詳細程度，例如，您可以檢視每日、每週、每月或每年的資料。
 
-请参阅[更改报表时间段](/help/sites-authoring/ci-analyze.md#changing-the-reporting-period)。
+另請參閱 [變更報告期間](/help/sites-authoring/ci-analyze.md#changing-the-reporting-period).
 
 >[!NOTE]
 >
->内容分析报表要求您的管理员将 AEM 与 SiteCatalyst、Target 和 BrightEdge 集成在一起。参见 [与SightCatalyst集成](/help/sites-administering/adobeanalytics.md)， [与Adobe Target集成](/help/sites-administering/target.md)、和 [与BrightEdge集成](/help/sites-administering/brightedge.md).
+>內容深入分析報表要求您的管理員已將AEM與SiteCatalyst、Target和BrightEdge整合。 另請參閱 [與SightCatalyst整合](/help/sites-administering/adobeanalytics.md)， [與Adobe Target整合](/help/sites-administering/target.md)、和 [與BrightEdge整合](/help/sites-administering/brightedge.md).
 
-## “查看次数”报表 {#the-views-report}
+## 檢視報告 {#the-views-report}
 
-“查看次数”报表包含以下用于评估页面流量的功能：
+「檢視」報表包含下列評估頁面流量的功能：
 
-* 报表时间段内页面的总查看次数。
-* 报表时间段内查看次数的图表：
+* 報告期間頁面檢視的總數。
+* 報告期間檢視次數的圖表：
 
-   * 总查看次数。
-   * 独特访客数。
+   * 檢視總數。
+   * 不重複訪客。
 
 ![chlimage_1-312](assets/chlimage_1-312.png)
 
-## “页面平均参与”报表 {#the-page-average-engaged-report}
+## 頁面平均參與報表 {#the-page-average-engaged-report}
 
-“页面平均参与”报表包含以下用于评估页面有效性的功能：
+「頁面平均參與」報表包含下列功能，可用來評估頁面成效：
 
-* 页面在整个报表时间段内保持打开的平均时间。
-* 报表时间段内页面查看平均时长的图表。
+* 整個報告期間保持頁面開啟的平均時間。
+* 整個報告期間頁面檢視的平均長度圖表。
 
 ![chlimage_1-313](assets/chlimage_1-313.png)
 
-## “源”报表 {#the-sources-report}
+## 來源報表 {#the-sources-report}
 
-“源”报表指示用户导航到页面的方式，例如从搜索引擎结果或使用已知的 URL 进行导航。
+「來源」報表指出使用者如何導覽至頁面，例如從搜尋引擎結果或使用已知URL。
 
 ![chlimage_1-314](assets/chlimage_1-314.png)
 
-## “跳出次数”报表 {#the-bounces-report}
+## 彈回報表 {#the-bounces-report}
 
-“跳出次数”报表包含一个图表，显示在选定报表时间段内页面发生的跳出次数。
+「跳出數」報表包含圖形，顯示所選報告期間某個頁面發生的跳出數。
 
 ![chlimage_1-315](assets/chlimage_1-315.png)
 
-## “&lt;营销活动名称> 活动”报表 {#the-campaign-activity-report}
+## 行銷活動報表 {#the-campaign-activity-report}
 
-对于页面处于激活状态的每个营销活动，均会显示一个名为“*&lt;营销活动名称>* 活动”的报表。该报表显示了为其提供选件的每个区段的页面展示次数和转化次数。
+對於頁面有效的每個行銷活動，都會顯示一個報表，並命名為 *行銷活動名稱* 活動。 報表會顯示提供選件的每個區段的頁面曝光次數和轉換次數。
 
 ![chlimage_1-316](assets/chlimage_1-316.png)
 
-## “SEO 推荐”报表 {#the-seo-recommendations-report}
+## SEO Recommendations報表 {#the-seo-recommendations-report}
 
-“SEO 推荐”报表包含页面的 BrightEdge 分析结果。该报表是页面功能的核对清单，用于指示页面包含和未包含的哪些功能可最大限度地提高使用搜索引擎的可查找性。
+SEO Recommendations報表包含頁面BrightEdge分析的結果。 該報告是頁面功能的檢查清單，指出頁面包含和不包含哪些功能，以使用搜尋引擎最大化發現能力。
 
-该报表使您能够创建任务，以便做出改进来提高页面可查找性。推荐指示已创建相关任务来实施推荐。请参阅[为 SEO 推荐分配任务](/help/sites-authoring/ci-analyze.md#assigning-tasks-for-seo-recommendations)。
+報表可讓您建立任務，以便進行改善以改善頁面可發現性。 Recommendations會指出已建立實施建議的工作。 另請參閱 [指派SEO Recommendations的任務](/help/sites-authoring/ci-analyze.md#assigning-tasks-for-seo-recommendations).
 
 ![chlimage_1-317](assets/chlimage_1-317.png)

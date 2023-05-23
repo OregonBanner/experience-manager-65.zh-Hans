@@ -1,6 +1,6 @@
 ---
-title: 在JEE自定义DSC中使用AEM Forms压缩和解压缩文件
-description: 了解如何在JEE Custom DSC中使用AEM Forms压缩和解压缩文件
+title: 使用JEE自訂DSC上的AEM Forms壓縮和解壓縮檔案
+description: 瞭解如何在JEE自訂DSC上使用AEM Forms壓縮和解壓縮檔案
 exl-id: 1b950d8f-6b54-452a-831b-f5644370691d
 source-git-commit: a2fd3c0c1892ac648c87ca0dec440e22144c37a2
 workflow-type: tm+mt
@@ -9,33 +9,33 @@ ht-degree: 0%
 
 ---
 
-# 在JEE自定义DSC中使用AEM Forms压缩和解压缩文件 {#compressing-decompressing-files}
+# 在JEE自訂DSC上使用AEM Forms壓縮和解壓縮檔案 {#compressing-decompressing-files}
 
-## 先决知识 {#prerequisites}
+## 必備條件知識 {#prerequisites}
 
-在JEE流程管理、基本Java编程和创建自定义组件方面的AEM Forms经验。
+AEM Forms在JEE程式管理、基本Java程式設計和建立自訂元件方面的使用體驗。
 
-**其他必需的产品**
+**其他必要的其他產品**
 
-Java编辑器，例如 [Eclipse](https://www.eclipse.org/) 或 [Netbeans IDE](https://netbeans.apache.org/)
+Java編輯器，例如 [Eclipse](https://www.eclipse.org/) 或 [Netbeans IDE](https://netbeans.apache.org/)
 
-## 用户级别 {#user-level}
+## 使用者層級 {#user-level}
 
-中间
+中級
 
-AEM Forms on JEE使开发人员能够创建自定义DSC（文档服务容器），以创建富集的开箱即用功能。 创建此类组件可插入到JEE运行时环境上的AEM Forms，并且可达到预期目的。 本文介绍如何创建自定义ZIP服务，该服务可用于将文件列表压缩为.zip文件，并将.zip解压缩到文档列表。
+JEE上的AEM Forms可讓開發人員建立自訂DSC （檔案服務容器），以建立豐富的現成功能。 建立這類元件可插入JEE執行階段環境的AEM Forms，並達到預期目的。 本文說明如何建立自訂ZIP服務，其可用於將檔案清單壓縮成.zip檔案，並將.zip解壓縮成檔案清單。
 
-## 创建自定义DSC组件 {#create-custom-dsc-component}
+## 建立自訂DSC元件 {#create-custom-dsc-component}
 
-使用两个服务操作创建自定义DSC组件以压缩和解压缩文档列表。 此组件使用java.util.zip包进行压缩和解压缩。 按照以下步骤创建自定义组件：
+使用兩個服務操作建立自訂DSC元件，以壓縮和解壓縮檔案清單。 此元件使用java.util.zip套件進行壓縮和解壓縮。 請依照下列步驟建立自訂元件：
 
-1. 将adobe-livecycle-client.jar文件添加到库中
-1. 添加所需的图标
-1. 创建公共类
-1. 创建两个名为UnzipDocument &amp; ZipDocuments的公共方法
-1. 编写压缩和解压缩的逻辑
+1. 將adobe-livecycle-client.jar檔案新增至程式庫
+1. 新增必要的圖示
+1. 建立公用類別
+1. 建立兩個名為UnzipDocument和ZipDocuments的公用方法
+1. 撰寫壓縮和解壓縮的邏輯
 
-代码可在此处找到：
+您可在此處找到代碼：
 
 ```java
 /*
@@ -120,11 +120,11 @@ public class ZIPService {
 }
 ```
 
-## 创建Component.XML文件 {#create-component-xml-file}
+## 建立Component.XML檔案 {#create-component-xml-file}
 
-必须在定义服务操作及其参数的包的根文件夹中创建component.xml文件。
+必須在定義服務操作及其引數的封裝的根資料夾中建立component.xml檔案。
 
-component.xml文件如下所示：
+component.xml檔案如下所示：
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -185,38 +185,38 @@ component.xml文件如下所示：
 </component>
 ```
 
-## 打包和部署组件 {#packaging-deploying-component}
+## 封裝及部署元件 {#packaging-deploying-component}
 
-1. 编译Java项目并创建.JAR文件。
-1. 通过Workbench将组件（.JAR文件）部署到JEE运行时的AEM Forms。
-1. 从Workbench启动服务（请参阅下图）。
+1. 編譯Java專案並建立.JAR檔案。
+1. 透過Workbench在JEE執行階段將元件（.JAR檔案）部署到AEM Forms。
+1. 從Workbench啟動服務（請參閱下圖）。
 
-![流程设计](assets/process-design.jpg)
+![程式設計](assets/process-design.jpg)
 
-## 在工作流中使用ZIP服务 {#using-zip-service-in-workflows}
+## 在工作流程中使用壓縮服務 {#using-zip-service-in-workflows}
 
-自定义服务的UnzipDocument操作现在可以接受文档变量作为输入，并返回文档变量列表作为输出。
+自訂服務的UnzipDocument操作現在可以接受檔案變數作為輸入，並傳回檔案變數清單作為輸出。
 
-![解压缩文档](assets/unzip-doc.jpg)
+![解壓縮檔案](assets/unzip-doc.jpg)
 
-同样，自定义组件的ZipDocuments操作也可以接受文档列表作为输入，将其压缩为zip文件，并返回压缩的文档。
+同樣地，自訂元件的ZipDocuments作業可接受檔案清單作為輸入，將其壓縮為zip檔案並傳回壓縮後的檔案。
 
-![邮政编码文档](assets/zip-doc.jpg)
+![Zip檔案](assets/zip-doc.jpg)
 
-以下工作流编排展示了如何解压缩给定的ZIP文件，将其压缩回另一个ZIP文件，并返回输出（请参阅下图）。
+下列工作流程協調流程說明如何解壓縮指定的ZIP檔案、將其壓縮回另一個ZIP檔案並傳回輸出（請參閱下圖）。
 
-![解压缩Zip工作流](assets/unzip-zip-process.jpg)
+![解壓縮Zip工作流程](assets/unzip-zip-process.jpg)
 
-## 一些业务用例 {#business-use-cases}
+## 部分業務使用案例 {#business-use-cases}
 
-您可以将此ZIP服务用于以下用例：
+您可將此ZIP服務用於下列使用案例：
 
-* 在给定文件夹中查找所有文件，并将文件作为压缩文档返回。
+* 尋找指定資料夾中的所有檔案，並將檔案以壓縮檔案格式傳回。
 
-* 提供包含大量PDF文档的ZIP文件，在解压缩后，这些文档可供读取器扩展。 这需要JEEReader扩展模块上的AEM Forms。
+* 提供包含若干PDF檔案的ZIP檔案，解壓縮後可延伸這些檔案的讀取器。 這需要AEM Forms on JEEReader擴充功能模組。
 
-* 提供包含异构类型文档的ZIP文件，此类文档可以通过“生成PDF”服务解压缩并转换为PDF文档。
+* 提供包含異質性檔案型別的ZIP檔案，可使用「產生PDF」服務將其解壓縮並轉換為PDF檔案。
 
-* 策略可保护文档列表并以ZIP文件形式返回。
+* 原則會保護檔案清單，並傳回ZIP檔案。
 
-* 允许用户将流程实例的所有附件下载为单个ZIP文件。
+* 允許使用者以單一ZIP檔案下載程式執行個體的所有附件。

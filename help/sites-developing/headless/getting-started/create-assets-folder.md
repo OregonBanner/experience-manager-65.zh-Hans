@@ -1,5 +1,5 @@
 ---
-title: 创建Assets文件夹无标题快速入门指南
+title: 建立資產資料夾Headless快速入門手冊
 description: 使用 AEM 内容片段模型定义内容片段的结构，也就是 Headless 内容的基础。
 exl-id: 8d913056-fcfa-4cdd-b40a-771f13dfd0f4
 source-git-commit: 7355c149500f9e5044c9ff78af208d36ee681f56
@@ -9,7 +9,7 @@ ht-degree: 87%
 
 ---
 
-# 创建Assets文件夹无标题快速入门指南 {#creating-an-assets-folder}
+# 建立資產資料夾Headless快速入門手冊 {#creating-an-assets-folder}
 
 使用 AEM 内容片段模型定义内容片段的结构，也就是 Headless 内容的基础。然后，将内容片段存储在资源文件夹中。
 
@@ -25,7 +25,7 @@ ht-degree: 87%
 
 管理员只需要偶尔创建文件夹，在创建内容时用于组织内容。对于本指南快速入门，我们只需要创建一个文件夹。
 
-1. 登录AEM，然后从主菜单中选择 **导航 — >资产 — >文件**.
+1. 登入AEM，並從主功能表選取 **導覽 — >資產 — >檔案**.
 1. 点按或单击&#x200B;**创建 -> 文件夹**。
 1. 提供文件夹的&#x200B;**标题**&#x200B;和&#x200B;**名称**。
    * **标题**&#x200B;应为描述性的。
@@ -34,7 +34,7 @@ ht-degree: 87%
       * 如有必要可以调整。
 
    ![创建文件夹](assets/assets-folder-create.png)
-1. 选择之前创建的文件夹，然后选择 **属性** (或使用 `p` [键盘快捷键。](/help/sites-authoring/keyboard-shortcuts.md))
+1. 選取您剛建立的資料夾，然後選取 **屬性** (或使用 `p` [鍵盤快速鍵。](/help/sites-authoring/keyboard-shortcuts.md))
 1. 在&#x200B;**属性**&#x200B;窗口中，选择 **Cloud Services** 选项卡。
 1. 对于&#x200B;**云配置**，选择[您之前创建的配置。](create-configuration.md)
 

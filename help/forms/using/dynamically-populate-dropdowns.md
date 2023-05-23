@@ -1,7 +1,7 @@
 ---
-title: 动态填充下拉列表
+title: 動態填入下拉式清單
 seo-title: Dynamically populating drop-down lists
-description: 根据某些逻辑动态填充下拉列表的步骤
+description: 根據某些邏輯動態填入下拉式清單的程式
 seo-description: Procedure to dynamically populate drop-down lists based on some logic
 uuid: b3408aee-ac24-43af-a380-a5892abf0248
 content-type: reference
@@ -17,25 +17,25 @@ ht-degree: 0%
 
 ---
 
-# 动态填充下拉列表 {#dynamically-populating-drop-down-lists}
+# 動態填入下拉式清單 {#dynamically-populating-drop-down-lists}
 
 ## 前提条件 {#prerequisites}
 
-* [创建OSGi包](https://helpx.adobe.com/experience-manager/using/creating-osgi-bundles-digital-marketing.html)
-* [开发AEM组件](/help/sites-developing/components.md)
-* [创建自适应表单](../../forms/using/creating-adaptive-form.md)
-* [创作自适应表单](../../forms/using/introduction-forms-authoring.md)
+* [建立OSGI套件組合](https://helpx.adobe.com/experience-manager/using/creating-osgi-bundles-digital-marketing.html)
+* [開發AEM元件](/help/sites-developing/components.md)
+* [建立最適化表單](../../forms/using/creating-adaptive-form.md)
+* [製作最適化表單](../../forms/using/introduction-forms-authoring.md)
 
-## 动态填充下拉列表的过程 {#procedure-to-dynamically-populate-drop-down-lists}
+## 動態填入下拉式清單的程式 {#procedure-to-dynamically-populate-drop-down-lists}
 
-假设您想在场景中填充 **状态** 下拉列表中选定的值 **国家/地区** 下拉列表。 如果您在 **国家/地区** 下拉列表， **状态** 下拉列表显示澳大利亚境内的州。 以下过程介绍了如何完成此任务。
+請考量您希望填入 **州** 下拉式清單的下拉式清單中，您所選取的 **國家** 下拉式清單。 如果您在「 」中選取「澳洲」 **國家** 下拉式清單、 **州** 下拉式清單會顯示澳洲境內的州。 下列程式說明如何完成此工作。
 
-1. 创建包含以下模块的项目：
+1. 建立專案並搭配下列模組：
 
-   * 包含用于填充下拉列表的逻辑的包，在本例中为servlet。
-   * 内容，其中嵌入了.jar文件并具有下拉资源。 servlet指向此资源。
+   * 包含用來填入下拉式清單之邏輯的套件組合，在此例中為servlet。
+   * 內嵌.jar檔案且具有下拉式資源的內容。 此servlet指向此資源。
 
-1. 编写基于请求参数Country的servlet，该参数返回一个数组，其中包含国家/地区内的州名。
+1. 根據請求引數Country編寫servlet，這會傳回包含國家/地區內州名的陣列。
 
    ```java
    @Component(metatype = false)
@@ -146,16 +146,16 @@ ht-degree: 0%
    }
    ```
 
-1. 在应用程序中的特定文件夹层次结构下创建一个下拉节点（例如，在/apps/myfolder/demo下创建一个节点）。 确保 `sling:resourceType` 节点的参数与servlet指向的参数相同(/apps/populatedropdown)。
+1. 在應用程式中的特定資料夾階層下建立下拉式節點（例如，在/apps/myfolder/demo下建立節點）。 確保 `sling:resourceType` 節點的引數與servlet所指向的引數相同(/apps/populatedropdown)。
 
-   ![创建下拉节点](assets/dropdown-node.png)
+   ![建立下拉式節點](assets/dropdown-node.png)
 
-1. 将内容节点打包，并将.jar文件嵌入到特定位置（例如/apps/myfolder/demo/install/）。 在服务器上部署相同的文件。
-1. 创建一个自适应表单，并在其中添加两个下拉列表：国家/地区和州/省。 国家/地区列表可包含国家/地区的名称。 “州”列表可动态填充您在第一个列表中选择的国家/地区的州名。
+1. 封裝內容節點並將.jar檔案內嵌於特定位置（例如/apps/myfolder/demo/install/）。 在伺服器上部署相同的檔案。
+1. 建立最適化表單，並在其中新增兩個下拉式清單：國家/地區和州。 國家/地區清單可包含國家/地區的名稱。 「州」清單可動態填入您在第一個清單中所選國家/地區的州名。
 
-   添加要在“国家/地区”列表中显示的国家/地区名称。 在“州”列表中，添加一个脚本，以根据“国家/地区”列表中的国家/地区名称填充该脚本。
+   新增要在「國家/地區」清單中顯示的國家/地區名稱。 在「州」清單中，新增指令碼，以根據「國家/地區」清單中的國家/地區名稱填入。
 
-   ![添加国家/地区名称](assets/country-dropdown.png) ![添加脚本以填充状态名称](assets/state-dropdown.png) ![要收集的“国家/地区”和“州/省”下拉列表](assets/2dropdowns.png)
+   ![新增國家/地區名稱](assets/country-dropdown.png) ![新增指令碼以填入狀態名稱](assets/state-dropdown.png) ![收集國家/地區和州別下拉式清單](assets/2dropdowns.png)
 
    ```javascript
    JSON.parse(
@@ -173,6 +173,6 @@ ht-degree: 0%
    .responseText);
    ```
 
-内容包，其中包含实施了上述代码的自适应表单示例（演示/AFdemo）。
+內容套件，其中包含已實作上述程式碼的範例最適化表單（示範/AFdemo）。
 
 [获取文件](assets/dropdown-demo-content-1.0.1-snapshot.zip)

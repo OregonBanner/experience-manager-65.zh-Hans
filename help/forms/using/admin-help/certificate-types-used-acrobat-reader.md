@@ -1,7 +1,7 @@
 ---
-title: Acrobat Reader DC扩展使用的证书类型
+title: Acrobat Reader DC擴充功能使用的憑證型別
 seo-title: Certificate types used by Acrobat Reader DC extensions
-description: 了解Acrobat Reader DC扩展使用的证书类型。
+description: 瞭解Acrobat Reader DC擴充功能使用的憑證型別。
 seo-description: Learn about the certificate types used by Acrobat Reader DC extensions.
 uuid: 93c02abc-2d5a-44ed-b93c-981afbd0553d
 contentOwner: admin
@@ -17,92 +17,92 @@ ht-degree: 4%
 
 ---
 
-# Acrobat Reader DC扩展使用的证书类型 {#certificate-types-used-by-acrobat-reader-dc-extensions}
+# Acrobat Reader DC擴充功能使用的憑證型別 {#certificate-types-used-by-acrobat-reader-dc-extensions}
 
-证书查看器提供有关证书的以下信息：
+憑證檢視器提供下列憑證相關資訊：
 
-* 证书“友好”名称
-* 证书配置文件
+* 憑證「易記」名稱
+* 憑證設定檔
 * 有效期
-* Acrobat Reader DC扩展使用权限
+* Acrobat Reader DC擴充功能使用許可權
 
-## 证书“友好”名称 {#certificate-friendly-name}
+## 憑證「易記」名稱 {#certificate-friendly-name}
 
-Acrobat Reader DC扩展证书的“友好”名称是一个描述证书属性的字符串，如以下示例所示：
+Acrobat Reader DC擴充功能憑證的「易記」名稱是說明憑證屬性的字串，如下列範例所示：
 
-ARE 2D条形码完整生产V6.1 P8 0002054
+是2D條碼完整生產V6.1 P8 0002054
 
-该字符串包含以下元素：
+字串包含以下元素：
 
-**证书类型：** 描述证书激活的AEM表单模块以及激活级别，例如“ARE 2D条形码已满”。 有关可用的证书类型列表，请参阅证书配置文件部分的表中的类型列。
+**憑證型別：** 說明憑證啟用的AEM表單模組，以及啟用的層級，例如「ARE 2D條碼已滿」。 如需可用憑證型別的清單，請參閱憑證設定檔區段表格中的型別欄。
 
-**部署类型：** 指示证书的预期用途，如生产。 该值可以是“评估”或“生产”。 有关与每种证书类型关联的部署类型列表，请参阅证书配置文件部分的表中的部署类型列。
+**部署型別：** 表示憑證的預期用途，例如生產。 該值可以是「評估」或「生產」。 如需與每個憑證型別相關聯的部署型別清單，請參閱憑證設定檔區段表格中的部署型別欄。
 
-**使用权限版本：** 描述证书可用于的使用权限算法的版本，例如V6.1。此版本不表示Acrobat或Acrobat Reader DC扩展的版本。
+**使用許可權版本：** 說明憑證可以使用的使用許可權演演算法版本，例如V6.1。此版本不表示Acrobat或Acrobat Reader DC擴充功能的版本。
 
-**配置文件代码：** 配置文件代码是完整证书属性的简短描述，例如P8。 有关与每种文件类型关联的配置文件代码的列表，请参阅证书配置文件部分表中配置文件代码列。
+**設定檔代碼：** 設定檔程式碼是完整憑證屬性的簡短說明，例如P8。 如需與每種檔案型別相關聯的設定檔代碼清單，請參閱「憑證設定檔」區段表格中的設定檔代碼欄。
 
-**序列号：** 序列号将分配给Adobe颁发的每个证书，例如0002054。 Adobe企业支持或Adobe企业客户代表可以使用此序列号来跟踪到特定产品订单或OEM关系的证书。
+**序號：** 會為Adobe核發的每個憑證(例如0002054)指派序號。 Adobe企業支援或Adobe企業客戶代表可以使用此序號來追蹤憑證至特定產品訂單或OEM關係。
 
-## 证书配置文件 {#certificate-profiles}
+## 憑證設定檔 {#certificate-profiles}
 
-下表列出了在分析Acrobat Reader DC扩展证书时可能遇到的证书配置文件。
+下表列出您在分析Acrobat Reader DC擴充功能憑證時可能會遇到的憑證設定檔。
 
 <table>
  <thead>
   <tr>
-   <th><p>配置文件代码</p></th>
+   <th><p>設定檔代碼</p></th>
    <th><p>类型</p></th>
    <th><p>有效期</p></th>
-   <th><p>部署类型</p></th>
+   <th><p>部署型別</p></th>
   </tr>
  </thead>
  <tbody>
   <tr>
    <td><p>P1</p></td>
-   <td><p>SAP生产</p></td>
+   <td><p>SAP生產</p></td>
    <td><p>Max</p></td>
    <td><p>生产</p></td>
   </tr>
   <tr>
    <td><p>P2</p></td>
-   <td><p>SAP内部测试</p></td>
+   <td><p>SAP內部測試</p></td>
    <td><p>2年</p></td>
-   <td><p>评估和测试</p></td>
+   <td><p>評估與測試</p></td>
   </tr>
   <tr>
    <td><p>P3</p></td>
-   <td><p>Acrobat Reader DC扩展，生产</p></td>
+   <td><p>Acrobat Reader DC擴充功能，生產</p></td>
    <td><p>Max</p></td>
    <td><p>生产</p></td>
   </tr>
   <tr>
    <td><p>P4</p></td>
-   <td><p>Acrobat Reader DC扩展，内部Adobe使用</p></td>
+   <td><p>Acrobat Reader DC擴充功能，內部Adobe使用</p></td>
    <td><p>2年</p></td>
    <td><p>生产</p></td>
   </tr>
   <tr>
    <td><p>P5</p></td>
-   <td><p>Acrobat Reader DC扩展，合作伙伴集成</p></td>
+   <td><p>Acrobat Reader DC擴充功能，合作夥伴整合</p></td>
    <td><p>2年</p></td>
-   <td><p>评估和测试</p></td>
+   <td><p>評估與測試</p></td>
   </tr>
   <tr>
    <td><p>P6</p></td>
-   <td><p>Acrobat Reader DC扩展，评估</p></td>
+   <td><p>Acrobat Reader DC擴充功能，評估</p></td>
    <td><p>60 天</p></td>
    <td><p>评估</p></td>
   </tr>
   <tr>
    <td><p>P8</p></td>
-   <td><p>Forms，生产</p></td>
+   <td><p>Forms，生產</p></td>
    <td><p>Max</p></td>
    <td><p>生产</p></td>
   </tr>
   <tr>
    <td><p>P9</p></td>
-   <td><p>Adobe Acrobat 7.x，生产</p></td>
+   <td><p>Adobe Acrobat 7.x，生產</p></td>
    <td><p>Max</p></td>
    <td><p>生产</p></td>
   </tr>
@@ -110,118 +110,118 @@ ARE 2D条形码完整生产V6.1 P8 0002054
    <td><p>I10</p></td>
    <td><p>Forms；可供OEM使用</p></td>
    <td><p>Max</p></td>
-   <td><p>生产和评估</p></td>
+   <td><p>生產與評估</p></td>
   </tr>
   <tr>
    <td><p>I11</p></td>
    <td><p>Forms；可供OEM使用</p></td>
    <td><p>Max</p></td>
-   <td><p>生产和评估</p></td>
+   <td><p>生產與評估</p></td>
   </tr>
   <tr>
    <td><p>I12</p></td>
-   <td><p>仅签名；可由OEM使用</p></td>
+   <td><p>僅供簽章；可供OEM使用</p></td>
    <td><p>Max</p></td>
-   <td><p>生产和评估</p></td>
+   <td><p>生產與評估</p></td>
   </tr>
   <tr>
    <td><p>I13</p></td>
-   <td><p>仅离线注释；可由OEM使用</p></td>
+   <td><p>僅限離線註解；OEM可使用</p></td>
    <td><p>Max</p></td>
-   <td><p>生产和评估</p></td>
+   <td><p>生產與評估</p></td>
   </tr>
   <tr>
    <td><p>I14</p></td>
-   <td><p>仅注释；可由OEM使用</p></td>
+   <td><p>僅提供註解；可供OEM使用</p></td>
    <td><p>Max</p></td>
-   <td><p>生产和评估</p></td>
+   <td><p>生產與評估</p></td>
   </tr>
   <tr>
    <td><p>I15</p></td>
-   <td><p>完全权限；可由OEM使用</p></td>
+   <td><p>完整許可權；可供OEM使用</p></td>
    <td><p>Max</p></td>
-   <td><p>生产和评估</p></td>
+   <td><p>生產與評估</p></td>
   </tr>
  </tbody>
 </table>
 
 ## 有效期 {#validity-period}
 
-向客户和开发人员颁发评估证书，以便他们能够评估和开发产品的示例应用程序。 这些证书的有效期为60至90天。 它们会在发布数据后的第二个月结束时过期。
+評估憑證會核發給客戶和開發人員，以便他們能夠評估並開發產品的範例應用程式。 這些憑證的有效期介於60到90天之間。 它們會在問題資料之後的第二個月結束時到期。
 
-合作伙伴集成证书将颁发给Adobe业务合作伙伴，以支持软件开发、集成、原型制作和演示。 这些证书自签发之日起有效期为两年。
+合作夥伴整合憑證會核發給Adobe業務合作夥伴，以支援軟體開發、整合、建立原型和示範。 這些憑證的有效期為發行日期起兩年。
 
-Adobe内部使用证书用于Adobe，以支持软件开发、集成、原型制作和演示。 这些证书自签发之日起有效期为两年。
+Adobe內部使用憑證是用於Adobe，以支援軟體開發、整合、建立原型和示範。 這些憑證的有效期為發行日期起兩年。
 
-生产证书将颁发给购买了Acrobat Reader DC扩展的客户。 这些证书在证书颁发机构(CA)允许的最长有效期内有效，如下所示 *最大值* 在“证书配置文件”表格中。
+生產憑證會核發給購買Acrobat Reader DC擴充功能的客戶。 這些憑證在憑證授權單位(CA)允許的最大期間內有效，如下所示 *最大* 在「憑證設定檔」表格中。
 
-## Acrobat Reader DC扩展使用权限 {#acrobat-reader-dc-extensions-usage-rights}
+## Acrobat Reader DC擴充功能使用許可權 {#acrobat-reader-dc-extensions-usage-rights}
 
-在证书查看器中检查Acrobat Reader DC扩展证书时，您可以从详细信息选项卡（如果已配置）中选择使用权限项，以查看证书可以启用的Adobe Reader使用权限的逐项列表。 在特定文档上启用的使用权限可以是证书启用的使用权限的子集。
+在Certificate Viewer中檢查Acrobat Reader DC擴充功能憑證時，您可以從「詳細資訊」標籤（如果已設定）中選取使用許可權專案，以檢視憑證可啟用的Adobe Reader使用許可權詳細清單。 在特定檔案上啟用的使用許可權可能是憑證啟用的使用許可權的子集。
 
-如果在非协作环境中需要在线评论，请联系Adobe支持部门以获取更多信息。 Mode属性与部署类型匹配，可以为 *生产* 或 *评估*.
+如果在非合作環境中需要線上註解，請聯絡Adobe支援以取得更多資訊。 Mode屬性符合部署型別，並且是 *生產* 或 *評估*.
 
-允许的Acrobat Reader DC扩展使用权限由一个或多个特定元素组成。 这些元素以不同的组合使用，以实现各种许可的产品功能。
+允許的Acrobat Reader DC擴充功能使用許可權包含一或多個特定元素。 這些元素會以不同的組合使用，以獲得各種授權產品功能。
 
 <table>
  <thead>
   <tr>
-   <th><p>使用权限元素</p></th>
-   <th><p>查看启用了权限的PDF文档时在Adobe Reader中启用的功能</p></th>
+   <th><p>使用許可權元素</p></th>
+   <th><p>檢視啟用許可權的PDF檔案時，Adobe Reader中會啟用此功能</p></th>
   </tr>
  </thead>
  <tbody>
   <tr>
    <td><p>FormFillInAndSave</p></td>
-   <td><p>填写表单字段并在本地保存文件。</p></td>
+   <td><p>填寫表單欄位並在本機儲存檔案。</p></td>
   </tr>
   <tr>
    <td><p>FormImportExport</p></td>
-   <td><p>将表单数据导入和导出为FDF、XFDF、XML和XDP文件。</p></td>
+   <td><p>將表單資料匯入和匯出為FDF、XFDF、XML和XDP檔案。</p></td>
   </tr>
   <tr>
    <td><p>FormAddDelete</p></td>
-   <td><p>在PDF表单上添加、更改或删除字段和字段属性。</p></td>
+   <td><p>新增、變更或刪除PDF表單上的欄位和欄位屬性。</p></td>
   </tr>
   <tr>
    <td><p>SubmitStandalone</p></td>
-   <td><p>当数据不在浏览器会话中运行时，通过电子邮件或脱机将其提交到服务器。</p></td>
+   <td><p>當資料不在瀏覽器工作階段中執行時，透過電子郵件或離線方式將其提交至伺服器。</p></td>
   </tr>
   <tr>
    <td><p>SpawnTemplate</p></td>
-   <td><p>从同一PDF表单中的模板页面创建页面。</p></td>
+   <td><p>從相同PDF表單中的範本頁面建立頁面。</p></td>
   </tr>
   <tr>
-   <td><p>签名</p></td>
-   <td><p>数字签名和保存PDF文档，并清除数字签名。</p></td>
+   <td><p>簽署</p></td>
+   <td><p>數位簽署和儲存PDF檔案，並清除數位簽名。</p></td>
   </tr>
   <tr>
    <td><p>AnnotModify</p></td>
-   <td><p>创建和修改文档注释（如注释）。</p></td>
+   <td><p>建立和修改檔案註釋，例如註釋。</p></td>
   </tr>
   <tr>
    <td><p>AnnotImportExport</p></td>
-   <td><p>将注释（如注释）保存在单独的数据文件中，并从文件中加载注释。</p></td>
+   <td><p>將註釋（例如註釋）儲存在單獨的資料檔案中，並從檔案載入註釋。</p></td>
   </tr>
   <tr>
-   <td><p>条形码纯文本</p></td>
-   <td><p>打印文档，其中表单数据以不需要许可服务器软件解码的未加密表单进行条形码。</p></td>
+   <td><p>條碼純文字</p></td>
+   <td><p>以不需要授權伺服器軟體進行解碼的未加密表單，列印含有條碼化表單資料的檔案。</p></td>
   </tr>
   <tr>
    <td><p>AnnotOnline</p></td>
-   <td><p>将注释（例如注释）上载到联机文档审阅和注释服务器或从联机文档审阅和注释服务器下载注释。</p></td>
+   <td><p>上傳和下載註解，例如到線上檔案檢閱和註解伺服器的註解，以及從線上檔案檢閱和註解伺服器下載註解。</p></td>
   </tr>
   <tr>
    <td><p>FormOnline</p></td>
-   <td><p>连接到PDF表单中定义的Web服务或数据库。</p></td>
+   <td><p>連線到PDF表單中定義的Web服務或資料庫。</p></td>
   </tr>
   <tr>
    <td><p>EFModif</p></td>
-   <td><p>修改与PDF文档关联的嵌入文件对象。</p></td>
+   <td><p>修改與PDF檔案相關的內嵌檔案物件。</p></td>
   </tr>
  </tbody>
 </table>
 
 >[!NOTE]
 >
->Acrobat Reader DC扩展使用权限只能通过可协同工作的某些组合从Adobe获得许可。 无法单独许可这些功能。 有关可用的使用权限组合的信息，请联系AEM Forms客户代表。
+>Acrobat Reader DC擴充功能使用許可權只能從Adobe以共同運作的特定組合授權。 無法單獨授權這些功能。 如需使用許可權可用組合的相關資訊，請聯絡AEM Forms客戶代表。

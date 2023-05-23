@@ -1,7 +1,7 @@
 ---
-title: 构建AEM Forms Android应用程序
+title: 建置AEM Forms Android應用程式
 seo-title: Build the AEM Forms Android app
-description: 设置Android Studio项目和为Android版AEM Forms应用程序构建.apk文件的步骤
+description: 設定Android Studio專案和建置適用於Android的AEM Forms應用程式的.apk檔案的步驟
 seo-description: Steps to set up the Android Studio project and build the .apk file for the AEM Forms app for Android
 uuid: 2e140aaf-5be5-4d5d-9941-9d1f4bf2debd
 content-type: reference
@@ -16,91 +16,91 @@ ht-degree: 6%
 
 ---
 
-# 构建AEM Forms Android应用程序 {#build-the-aem-forms-android-app}
+# 建置AEM Forms Android應用程式 {#build-the-aem-forms-android-app}
 
-按照建议的顺序执行以下步骤，构建适用于AEM Forms的Android应用程序。
+以建議的順序執行下列步驟，建置適用於AEM Forms的Android應用程式。
 
-1. [下载AEM Forms应用程序源代码包](#download-android-zip)
-1. [设置环境变量](#set-environment-variable-android)
-1. [构建标准AEM Forms应用程序](#set-up-the-xcode-project)
+1. [下載AEM Forms應用程式原始碼套件](#download-android-zip)
+1. [設定環境變數](#set-environment-variable-android)
+1. [建置標準AEM Forms應用程式](#set-up-the-xcode-project)
 
-## 下载AEM Forms应用程序源代码包 {#download-android-zip}
+## 下載AEM Forms應用程式原始碼套件 {#download-android-zip}
 
-AEM Forms应用程序源代码包是指 `adobe-lc-mobileworkspace-src-<version>.zip` 存档。 此存档包含构建自定义AEM Forms应用程序所需的源代码。 存档包含在 `adobe-aemfd-forms-app-src-pkg-<version>.zip`软件包位于Software Distribution。
+AEM Forms應用程式原始碼套件是指 `adobe-lc-mobileworkspace-src-<version>.zip` 封存。 此封存包含建置自訂AEM Forms應用程式所需的原始程式碼。 封存包含在 `adobe-aemfd-forms-app-src-pkg-<version>.zip`軟體發佈上可用的套件。
 
-执行以下步骤下载 `adobe-aemfd-forms-app-src-pkg-<version>.zip` 文件：
+執行以下步驟以下載 `adobe-aemfd-forms-app-src-pkg-<version>.zip` 檔案：
 
 1. 打开 [Software Distribution](https://experience.adobe.com/downloads)。您需要 Adobe ID 才能登录 Software Distribution。
 1. 点按标题菜单中的 **[!UICONTROL Adobe Experience Manager]**。
-1. 在 **[!UICONTROL 筛选器]** 部分：
-   1. 选择 **[!UICONTROL Forms]** 从 **[!UICONTROL 解决方案]** 下拉列表。
-   2. 选择包的版本和类型。 您还可以使用 **[!UICONTROL 搜索下载]** 用于筛选结果的选项。
-1. 点按适用于您的操作系统的包名称，然后选择 **[!UICONTROL 接受EULA条款]**，然后点按 **[!UICONTROL 下载]**.
+1. 在 **[!UICONTROL 篩選器]** 區段：
+   1. 選取 **[!UICONTROL Forms]** 從 **[!UICONTROL 解決方案]** 下拉式清單。
+   2. 選取套件的版本和型別。 您也可以使用 **[!UICONTROL 搜尋下載]** 篩選結果的選項。
+1. 點選適用於您的作業系統的套件名稱，然後選取 **[!UICONTROL 接受EULA條款]**，然後點選 **[!UICONTROL 下載]**.
 1. 打开[包管理器](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html)，并单击&#x200B;**[!UICONTROL 上传包]**&#x200B;以上传包。
-1. 选择资源包并单击 **[!UICONTROL 安装]**.
-1. 要下载源代码存档，请打开 **https://&lt;server>：&lt;port>/crx/de/content/forms/mobileapps/src/adobe-lc-mobileworkspace-src-&lt;version>.zip** 在浏览器中。 将在您的设备上下载Android应用程序.zip文件。
-1. 将.zip文件的内容解压缩到本地文件系统中的文件夹中。 例如， *C:\&lt;folder structure=&quot;&quot;>\adobe-lc-mobileworkspace-src-2.4.20*
+1. 選取套件並按一下 **[!UICONTROL 安裝]**.
+1. 若要下載原始程式碼封存，請開啟 **https://&lt;server>：&lt;port>/crx/de/content/forms/mobileapps/src/adobe-lc-mobileworkspace-src-&lt;version>.zip** 在您的瀏覽器中。 Android應用程式.zip檔案會下載到您的裝置上。
+1. 將.zip檔案的內容解壓縮至本機檔案系統上的資料夾。 例如， *C:\&lt;folder structure=&quot;&quot;>\adobe-lc-mobileworkspace-src-2.4.20*
 
-下图显示了 `adobe-lc-mobileworkspace-src-<version>.zip\android`文件夹。
+下列影像顯示 `adobe-lc-mobileworkspace-src-<version>.zip\android`資料夾。
 
 ![zip_android_folder_structure](assets/zip_android_folder_structure.png)
 
-## 设置环境变量 {#set-environment-variable-android}
+## 設定環境變數 {#set-environment-variable-android}
 
-在启动AEM Forms应用程序的构建过程之前，请设置以下环境变量：
+在開始AEM Forms應用程式的建置程式之前，請設定下列環境變數：
 
-* 将JAVA_HOME环境变量设置为本地文件系统上JDK软件的位置。 例如，C:\Program Files\Java\jdk1.8.0_181
-* 设置 `ANDROID_SDK_ROOT` 将系统环境变量更改为Android的SDK位置。 例如，C:\Users\&amp;lt；username>\AppData\Local\Android\Sdk
-* 设置 `Path` 系统环境变量，以包含Android的平台工具和工具文件夹位置。 例如，C:\Users\&amp;lt；username>\AppData\Local\Android\Sdk\platform-tools和C:\Users\&amp;lt；username>\AppData\Local\Android\Sdk\tools。
+* 將JAVA_HOME環境變數設定為本機檔案系統上JDK軟體的位置。 例如，C:\Program Files\Java\jdk1.8.0_181
+* 設定 `ANDROID_SDK_ROOT` 系統環境變數重新命名為Android的SDK位置。 例如， C:\Users\&amp;lt；username>\AppData\Local\Android\Sdk
+* 設定 `Path` 系統環境變數，以包含Android適用的平台工具和工具資料夾位置。 例如，C:\Users\&amp;lt；username>\AppData\Local\Android\Sdk\platform-tools和C:\Users\&amp;lt；username>\AppData\Local\Android\Sdk\tools。
 
-## 构建标准AEM Forms应用程序 {#set-up-the-xcode-project}
+## 建置標準AEM Forms應用程式 {#set-up-the-xcode-project}
 
-保存adobe-lc-mobileworkspace-src后&lt;version>.zip文件并设置环境变量，使用以下任意选项构建标准AEM Forms Android应用程序：
+儲存adobe-lc-mobileworkspace-src後&lt;version>.zip檔案並設定環境變數，請使用下列任一選項建置標準AEM Forms Android應用程式：
 
-* [使用Android Studio构建AEM Forms应用程序](#using-android-studio)
-* [使用Android Studio生成.apk文件](#generate-apk-android-studio)
+* [使用Android Studio建置AEM Forms應用程式](#using-android-studio)
+* [使用Android Studio產生.apk檔案](#generate-apk-android-studio)
 
-### 使用Android Studio构建AEM Forms应用程序 {#using-android-studio}
+### 使用Android Studio建置AEM Forms應用程式 {#using-android-studio}
 
-执行以下步骤，使用Android Studio构建AEM Forms应用程序：
+執行以下步驟，使用Android Studio建置AEM Forms應用程式：
 
-1. 在计算机上启动Android Studio应用程序。
-1. 单击 **打开现有的Android Studio项目**. 如果用于打开现有项目的对话框未自动显示，请选择 **文件** > **打开**.
-1. 导航到 *adobe-lc-mobileworkspace-src-&lt;version>.zip/android* ，然后单击 **确定**.
+1. 在您的電腦上啟動Android Studio應用程式。
+1. 按一下 **開啟現有的Android Studio專案**. 如果開啟現有專案的對話方塊未自動顯示，請選取 **檔案** > **開啟**.
+1. 導覽至 *adobe-lc-mobileworkspace-src-&lt;version>.zip/android* ，然後按一下 **確定**.
 
-   此 **android** 选项将显示在左窗格中。
+   此 **android** 選項會顯示在左窗格中。
 
    ![android_folder_studio](assets/android_folder_studio.png)
 
-1. 选择 **android** 从左窗格中单击 **运行** > **运行&#39;android&#39;**.
-1. 从选择部署目标对话框上的连接的设备部分中选择Android设备，然后单击确定。
+1. 選取 **android** 從左窗格按一下 **執行** > **執行&#39;android&#39;**.
+1. 從選取部署目標對話方塊上的連線裝置區段中選取Android裝置，然後按一下確定。
 
-   成功构建开发环境后，您现在可以在应用程序上应用自定义设置。 使用以下文章可自定义应用程序：
+   成功建立開發環境後，您現在可以在應用程式上套用自訂。 使用下列文章來自訂應用程式：
 
    * [品牌化自定义](/help/forms/using/branding-customization.md)
-   * [主题自定义](/help/forms/using/theme-customization.md)
-   * [手势自定义](/help/forms/using/gesture-customization.md)
+   * [佈景主題自訂](/help/forms/using/theme-customization.md)
+   * [手勢自訂](/help/forms/using/gesture-customization.md)
 
-   在对应用程序应用适当的自定义设置后，您可以生成.apk文件以进行分发。
+   將適當的自訂套用至應用程式後，您可以產生.apk檔案以供發佈。
 
-### 使用Android Studio生成.apk文件 {#generate-apk-android-studio}
+### 使用Android Studio產生.apk檔案 {#generate-apk-android-studio}
 
-执行以下步骤，使用Android Studio生成.apk文件：
+執行以下步驟，使用Android Studio產生.apk檔案：
 
-1. 在计算机上启动Android Studio应用程序。
-1. 选择 **打开现有的Android Studio项目**. 如果用于打开现有项目的对话框未自动显示，请选择 **文件** > **打开**.
-1. 导航到 *adobe-lc-mobileworkspace-src-&lt;version>.zip/android* ，然后单击 **确定**.
+1. 在您的電腦上啟動Android Studio應用程式。
+1. 選取 **開啟現有的Android Studio專案**. 如果開啟現有專案的對話方塊未自動顯示，請選取 **檔案** > **開啟**.
+1. 導覽至 *adobe-lc-mobileworkspace-src-&lt;version>.zip/android* ，然後按一下 **確定**.
 
-   Android选项将显示在左窗格中。
+   Android選項會顯示在左窗格中。
 
-1. 选择 **生成** > **构建APK** 生成.apk文件。
+1. 選取 **建置** > **建置APK** 以產生.apk檔案。
 
-   （可选）选择 **生成** > **生成已签名的APK** 生成 [已签名版本](https://developer.android.com/studio/publish/app-signing) .apk文件中的。
+   選擇性地選取 **建置** > **產生已簽署的APK** 產生 [已簽署的版本](https://developer.android.com/studio/publish/app-signing) （.apk檔案）。
 
 ## 使用Android Debug Bridge {#build-android-debug-bridge}
 
-生成.apk文件后，使用以下命令在Android设备上安装应用程序 [Android Debug Bridge](https://developer.android.com/tools/help/adb.html).
+產生.apk檔案後，請使用執行以下命令，在Android裝置上安裝應用程式 [Android Debug Bridge](https://developer.android.com/tools/help/adb.html).
 
-**Windows用户：** `adb install %HOMEPATH%\Projects\[your-project]\adobe-lc-mobileworkspace-src-[version]\android\build\outputs\apk\android-debug.apk`
+**Windows使用者：** `adb install %HOMEPATH%\Projects\[your-project]\adobe-lc-mobileworkspace-src-[version]\android\build\outputs\apk\android-debug.apk`
 
-**Mac用户：** `adb install [User_Home]/Projects/[your-project]/adobe-lc-mobileworkspace-src-[version]/android/build/outputs/apk/android-debug.apk`
+**Mac使用者：** `adb install [User_Home]/Projects/[your-project]/adobe-lc-mobileworkspace-src-[version]/android/build/outputs/apk/android-debug.apk`

@@ -1,7 +1,7 @@
 ---
-title: 为AEM应用程序配置
+title: 為AEM應用程式進行設定
 seo-title: Configuring for AEM Apps
-description: 了解如何配置AEM应用程序。
+description: 瞭解如何設定AEM應用程式。
 seo-description: Learn how to configure AEM Apps.
 uuid: ab9acd93-da7f-4bb7-8d26-224044899068
 contentOwner: Guillaume Carlino
@@ -17,21 +17,21 @@ ht-degree: 0%
 
 ---
 
-# 为AEM应用程序配置{#configuring-for-aem-apps}
+# 為AEM應用程式進行設定{#configuring-for-aem-apps}
 
-Adobe Experience Manager Apps提供通过空中更新应用程序内容(OTA)的功能。 更新的内容存储在发布实例上。 要允许设备上的应用程序连接到发布实例并检查更新，需要将发布实例配置为允许空的反向链接标头。
+Adobe Experience Manager應用程式可讓您透過無線方式更新應用程式的內容(OTA)。 更新的內容會儲存在發佈執行個體上。 若要允許裝置上的應用程式連線至發佈執行個體並檢查更新，需要將發佈執行個體設定為允許空的反向連結標頭。
 
-## 配置空反向链接标题 {#configuring-empty-referrer-header}
+## 設定空的反向連結標頭 {#configuring-empty-referrer-header}
 
-配置反向链接筛选服务：
+若要設定反向連結篩選服務：
 
-* 打开Apache Felix控制台(**配置**)：
+* 開啟Apache Felix主控台(**設定**)於：
 * https://&lt;server>：&lt;port_number>/system/console/configMgr
-* 以管理员身份登录。
-* 在 **配置** 菜单，选择： *Apache Sling引用过滤器*
-* 选中允许空字段，以允许为空/缺少反向链接标头。
-* 单击 **保存** 以保存更改。
+* 以管理員身分登入。
+* 在 **設定** 功能表，選取： *Apache Sling查閱者篩選器*
+* 勾選「允許空白」欄位，以允許空白/缺少反向連結標題。
+* 按一下 **儲存** 以儲存變更。
 
 ![chlimage_1-58](assets/chlimage_1-58a.png)
 
-请参阅 [OSGI配置设置](/help/sites-deploying/osgi-configuration-settings.md) 和 [安全核对清单 — 跨站点请求伪造问题](/help/sites-administering/security-checklist.md#protect-against-cross-site-request-forgery) 了解更多详细信息。
+請參閱 [OSGI組態設定](/help/sites-deploying/osgi-configuration-settings.md) 和 [安全性檢查清單 — 跨網站請求偽造問題](/help/sites-administering/security-checklist.md#protect-against-cross-site-request-forgery) 以取得更多詳細資料。

@@ -1,7 +1,7 @@
 ---
-title: 搜索用户或组
+title: 搜尋使用者或群組
 seo-title: Search for a user or group
-description: 了解如何使用管理控制台中的用户管理设置搜索用户或组。
+description: 瞭解如何使用管理控制檯中的使用者管理設定來搜尋使用者或群組。
 seo-description: Learn how to search for a user or group using the User Management settings in the administration console.
 uuid: 8d85e1af-9977-489d-9969-c4d2661b38c3
 contentOwner: admin
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 ---
 
-# 搜索用户或组 {#search-for-a-user-or-group}
+# 搜尋使用者或群組 {#search-for-a-user-or-group}
 
-1. 在管理控制台中，单击设置>用户管理>用户和群组。
-1. 指定信息以缩小搜索范围，然后单击“查找”。 搜索结果将列在页面底部。 您可以通过单击任意列标题对列表进行排序。 最多返回1000个结果。
+1. 在管理控制檯中，按一下「設定>使用者管理>使用者和群組」。
+1. 指定資訊以縮小搜尋範圍，然後按一下「尋找」。 搜尋結果會列在頁面底部。 您可以按一下任何欄標題來排序清單。 最多會傳回1000個結果。

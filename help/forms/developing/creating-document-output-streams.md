@@ -1,7 +1,7 @@
 ---
-title: 创建文档输出流
+title: 建立檔案輸出資料流
 seo-title: Creating Document Output Streams
-description: 使用Output服务将文档转换为PDF(包括PDF/A文档)、PostScript、Printer Control Language (PCL)和Zebra - ZPL、Intermec - IPL、Datamax - DPL和TecToshiba - TPCL标签格式。
+description: 使用Output服務將檔案轉換為PDF(包括PDF/A檔案)、PostScript、印表機控制語言(PCL)和Zebra - ZPL、Intermec - IPL、Datamax - DPL和TecToshiba - TPCL標籤格式。
 seo-description: Use the Output service to convert documents as PDF (including PDF/A documents), PostScript, Printer Control Language (PCL), and Zebra - ZPL, Intermec - IPL, Datamax - DPL, and TecToshiba - TPCL label formats.
 uuid: 80c28efa-35ce-4073-9ca6-2d93bcd67fdd
 contentOwner: admin
@@ -18,112 +18,112 @@ ht-degree: 0%
 
 ---
 
-# 创建文档输出流  {#creating-document-output-streams}
+# 建立檔案輸出資料流  {#creating-document-output-streams}
 
-**本文档中的示例和示例仅适用于AEM Forms on JEE环境。**
+**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms 。**
 
-**关于输出服务**
+**關於輸出服務**
 
-Output服务允许您以PDF(包括PDF/A文档)、PostScript、打印机控制语言(PCL)和以下标签格式输出文档：
+「輸出」服務可讓您將檔案輸出為PDF(包括PDF/A檔案)、PostScript、印表機控制語言(PCL)和以下標籤格式：
 
-* 斑马 — ZPL
+* 斑馬 — ZPL
 * Intermec - IPL
 * Datamax - DPL
 * TecToshiba - TPCL
 
-使用Output服务，可以将XML表单数据与表单设计合并，并将文档输出到网络打印机或文件。
+使用「輸出」服務，您可以將XML表單資料與表單設計合併，並將檔案輸出到網路印表機或檔案。
 
-可通过两种方式将表单设计（XDP文件）传递到Output服务。 您可以传递 `com.adobe.idp.Document` 包含窗体设计到Output服务的实例。 或者，您可以传递一个指定表单设计位置的URI值。 这两种方法在 *使用AEM表单编程*.
-
->[!NOTE]
->
->Output服务不支持包含应用程序对象特定脚本的AcroformPDF文档。 包含应用程序对象特定脚本的AcroformPDF文档不会渲染。
-
-以下部分说明如何使用URI值将表单设计传递到Output服务：
-
-* [创建PDF文档](creating-document-output-streams.md#creating-pdf-documents)
-* [创建PDF/A文档](creating-document-output-streams.md#creating-pdf-a-documents)
-
-以下部分说明如何在中传递表单设计 `com.adobe.idp.Document` 实例：
-
-* [将位于Content Services（已弃用）中的文档传递到输出服务](creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service)
-* [使用片段创建PDF文档](creating-document-output-streams.md#creating-pdf-documents-using-fragments)
-
-在决定使用哪种技术时，需要考虑的一个事项是，如果您从其他AEM Forms服务获得表单设计，然后在中传递它 `com.adobe.idp.Document` 实例。 两者都是 *将文档传递到Output服务* 和 *使用片段创建PDF文档* 部分说明如何从其他AEM Forms服务获取表单设计。 第一部分从Content Services检索表单设计（已弃用）。 第二部分从Assembler服务检索表单设计。
-
-如果您从固定位置（如文件系统）获取窗体设计，则可以使用任一方法。 也就是说，您可以为XDP文件指定URI值，或者使用 `com.adobe.idp.Document` 实例。
-
-要在创建PDF文档时传递指定表单设计位置的URI值，请使用 `generatePDFOutput` 方法。 同样，要传递 `com.adobe.idp.Document` 创建PDF文档时，使用 `generatePDFOutput2` 方法。
-
-在将输出流发送到网络打印机时，也可以使用任一技术。 要通过传递输出流到打印机，请执行以下操作 `com.adobe.idp.Document` 包含表单设计的实例，请使用 `sendToPrinter2`方法。 要通过传递URI值将输出流发送到打印机，请使用 `sendToPrinter`方法。 此 *将打印流发送到打印机* 部分使用 `sendToPrinter` 方法。
-
-您可以使用Output服务完成这些任务：
-
-* [创建PDF文档](creating-document-output-streams.md#creating-pdf-documents)
-* [创建PDF/A文档](creating-document-output-streams.md#creating-pdf-a-documents)
-* [将位于Content Services（已弃用）中的文档传递到输出服务](creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service)
-* [使用片段创建PDF文档](creating-document-output-streams.md#creating-pdf-documents-using-fragments)
-* [打印到文件](creating-document-output-streams.md#printing-to-files)
-* [将打印流发送到打印机](creating-document-output-streams.md#sending-print-streams-to-printers)
-* [创建多个输出文件](creating-document-output-streams.md#creating-multiple-output-files)
-* [创建搜索规则](creating-document-output-streams.md#creating-search-rules)
-* [拼合PDF文档](creating-document-output-streams.md#flattening-pdf-documents)
+有兩種方式可以將表單設計（XDP檔案）傳遞到Output服務。 您可以傳遞 `com.adobe.idp.Document` 包含表單設計至Output服務的例項。 或者，您可以傳遞指定表單設計位置的URI值。 這兩種方法的討論位置如下： *使用AEM表單程式設計*.
 
 >[!NOTE]
 >
->有关输出服务的详细信息，请参见 [AEM Forms的服务参考](https://www.adobe.com/go/learn_aemforms_services_63).
+>Output服務不支援包含應用程式物件特定指令碼的AcroformPDF檔案。 包含應用程式物件特定指令碼的AcroformPDF檔案不會轉譯。
 
-## 创建PDF文档 {#creating-pdf-documents}
+以下小節說明如何使用URI值將表單設計傳遞到Output服務：
 
-您可以使用Output服务创建基于表单设计和您提供的XML表单数据的PDF文档。 Output服务创建的PDF文档不是交互式PDF文档；用户无法输入或修改表单数据。
+* [建立PDF檔案](creating-document-output-streams.md#creating-pdf-documents)
+* [建立PDF/A檔案](creating-document-output-streams.md#creating-pdf-a-documents)
 
-如果要创建用于长期存储的PDF文档，建议您创建一个PDF/A文档。 (请参阅 [创建PDF/A文档](creating-document-output-streams.md#creating-pdf-a-documents).)
+以下小節說明如何在中傳遞表單設計 `com.adobe.idp.Document` 例項：
 
-要创建可让用户输入数据的交互式PDF表单，请使用Forms服务。 (请参阅 [渲染交互式PDF forms](/help/forms/developing/rendering-forms.md#rendering-interactive-pdf-forms).)
+* [將位於Content Services （已棄用）中的檔案傳遞至Output Service](creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service)
+* [使用片段建立PDF檔案](creating-document-output-streams.md#creating-pdf-documents-using-fragments)
+
+決定使用哪種技術時，其中一個考量事項是您是否從其他AEM Forms服務取得表單設計，然後在內傳遞它 `com.adobe.idp.Document` 執行個體。 兩者皆有 *將檔案傳遞至Output Service* 和 *使用片段建立PDF檔案* 部分說明如何從其他AEM Forms服務取得表單設計。 第一節　從Content Services （已棄用）擷取表單設計。 第二區段會從Assembler服務擷取表單設計。
+
+如果您從固定位置（例如檔案系統）取得表單設計，則可以使用任一技術。 也就是說，您可以指定XDP檔案的URI值或使用 `com.adobe.idp.Document` 執行個體。
+
+若要傳遞在建立PDF檔案時指定表單設計位置的URI值，請使用 `generatePDFOutput` 方法。 同樣地，若要傳遞 `com.adobe.idp.Document` 建立PDF檔案時，執行Output服務的例項，使用 `generatePDFOutput2` 方法。
+
+將輸出資料流傳送至網路印表機時，您也可以使用其中一種技術。 若要傳送輸出資料流至印表機，請傳遞 `com.adobe.idp.Document` 包含表單設計的例項，請使用 `sendToPrinter2`方法。 若要傳遞URI值以傳送輸出資料流至印表機，請使用 `sendToPrinter`方法。 此 *傳送列印資料流至印表機* 區段使用 `sendToPrinter` 方法。
+
+您可以使用Output服務完成這些工作：
+
+* [建立PDF檔案](creating-document-output-streams.md#creating-pdf-documents)
+* [建立PDF/A檔案](creating-document-output-streams.md#creating-pdf-a-documents)
+* [將位於Content Services （已棄用）中的檔案傳遞至Output Service](creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service)
+* [使用片段建立PDF檔案](creating-document-output-streams.md#creating-pdf-documents-using-fragments)
+* [列印至檔案](creating-document-output-streams.md#printing-to-files)
+* [傳送列印資料流至印表機](creating-document-output-streams.md#sending-print-streams-to-printers)
+* [建立多個輸出檔案](creating-document-output-streams.md#creating-multiple-output-files)
+* [建立搜尋規則](creating-document-output-streams.md#creating-search-rules)
+* [平面化PDF檔案](creating-document-output-streams.md#flattening-pdf-documents)
 
 >[!NOTE]
 >
->有关输出服务的详细信息，请参见 [AEM Forms的服务参考](https://www.adobe.com/go/learn_aemforms_services_63).
+>如需Output服務的詳細資訊，請參閱 [AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
 
-### 步骤摘要 {#summary-of-steps}
+## 建立PDF檔案 {#creating-pdf-documents}
 
-要创建PDF文档，请执行以下步骤：
+您可以使用Output服務來建立以您提供的表單設計和XML表單資料為基礎的PDF檔案。 Output服務建立的PDF檔案不是互動式PDF檔案；使用者無法輸入或修改表單資料。
 
-1. 包括项目文件。
-1. 创建输出客户端对象。
-1. 引用XML数据源。
-1. 设置PDF运行时选项。
-1. 设置渲染运行时选项。
-1. 生成PDF文档。
-1. 检索操作的结果。
+如果要建立用於長期儲存的PDF檔案，建議您建立PDF/A檔案。 (請參閱 [建立PDF/A檔案](creating-document-output-streams.md#creating-pdf-a-documents).)
 
-**包括项目文件**
+若要建立可讓使用者輸入資料的互動式PDF表單，請使用Forms服務。 (請參閱 [呈現互動式PDF forms](/help/forms/developing/rendering-forms.md#rendering-interactive-pdf-forms).)
 
-在开发项目中包含必要的文件。 如果要使用Java创建客户端应用程序，请包含必要的JAR文件。 如果使用Web服务，请确保包含代理文件。
+>[!NOTE]
+>
+>如需Output服務的詳細資訊，請參閱 [AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
 
-必须将以下JAR文件添加到项目的类路径中：
+### 步驟摘要 {#summary-of-steps}
+
+若要建立PDF檔案，請執行下列步驟：
+
+1. 包含專案檔案。
+1. 建立輸出使用者端物件。
+1. 參照XML資料來源。
+1. 設定PDF執行階段選項。
+1. 設定演算執行階段選項。
+1. 產生PDF檔案。
+1. 擷取作業的結果。
+
+**包含專案檔案**
+
+在您的開發專案中包含必要的檔案。 如果您使用Java建立使用者端應用程式，請包含必要的JAR檔案。 如果您使用Web服務，請務必包含Proxy檔案。
+
+下列JAR檔案必須新增到專案的類別路徑中：
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-output-client.jar
-* adobe-utilities.jar(如果将AEM Forms部署在JBoss上，则此为必需字段)
-* jbossall-client.jar(如果在JBoss上部署了AEM Forms，则此为必填字段)
+* adobe-utilities.jar (如果AEM Forms部署在JBoss上，則為必要)
+* jbossall-client.jar (如果AEM Forms部署在JBoss上，則為必要)
 
-如果将AEM Forms部署在非JBoss的受支持J2EE应用程序服务器上，则需要将adobe-utilities.jar和jbossall-client.jar文件替换为特定于部署AEM Forms的J2EE应用程序服务器的JAR文件。
+如果將AEM Forms部署在非JBoss的支援J2EE應用程式伺服器上，您需要將adobe-utilities.jar和jbossall-client.jar檔案取代為部署AEM Forms之J2EE應用程式伺服器專屬的JAR檔案。
 
-**创建输出客户端对象**
+**建立輸出使用者端物件**
 
-必须先创建输出服务客户端对象，然后才能以编程方式执行输出服务操作。 如果您使用的是Java API，请创建 `OutputClient` 对象。 如果您使用的是Output Web service API，请创建 `OutputServiceService` 对象。
+您必須先建立輸出服務使用者端物件，才能以程式設計方式執行輸出服務作業。 如果您使用Java API，請建立 `OutputClient` 物件。 如果您使用輸出Web服務API，請建立 `OutputServiceService` 物件。
 
-**引用XML数据源**
+**參考XML資料來源**
 
-要将数据与表单设计合并，必须引用包含数据的XML数据源。 您计划使用数据填充的每个表单字段都必须存在XML元素。 XML元素名称必须与字段名称匹配。 如果XML元素与表单字段不对应，或者如果XML元素名称与字段名称不匹配，则会忽略该元素。 如果指定了所有XML元素，则不必匹配XML元素的显示顺序。
+若要將資料與表單設計合併，您必須參照包含資料的XML資料來源。 您計畫填入資料的每個表單欄位都必須有XML元素。 XML元素名稱必須符合欄位名稱。 如果XML元素未對應至表單欄位，或XML元素名稱不符合欄位名稱，則會忽略該元素。 如果已指定所有XML元素，則不必比對XML元素的顯示順序。
 
-请考虑以下示例贷款申请表。
+請考量下列範例貸款申請表。
 
 ![cp_cp_loanformdata](assets/cp_cp_loanformdata.png)
 
-要将数据合并到此表单设计中，必须创建与表单相对应的XML数据源。 以下XML表示与示例抵押应用程序表单相对应的XDP XML数据源。
+若要將資料合併至此表單設計，您必須建立與表單相對應的XML資料來源。 下列XML代表與範例抵押應用程式表單對應的XDP XML資料來源。
 
 ```xml
  <?xml version="1.0" encoding="UTF-8" ?>
@@ -156,1500 +156,1500 @@ Output服务允许您以PDF(包括PDF/A文档)、PostScript、打印机控制语
  </xfa:datasets>
 ```
 
-**设置PDF运行时选项**
+**設定PDF執行階段選項**
 
-在创建PDF文档时设置文件URI选项。 此选项指定Output服务生成的PDF文件的名称和位置。
-
->[!NOTE]
->
->您可以用编程方式从输出服务返回的复杂数据类型中检索PDF文档，而不是设置文件URI运行时选项。 但是，通过设置文件URI运行时选项，您无需创建以编程方式检索PDF文档的应用程序逻辑。
-
-**设置渲染运行时选项**
-
-您可以在创建PDF文档时设置渲染运行时选项。 虽然这些选项不是必需的(与必需的PDF运行时选项不同)，但您可以执行各种任务，例如提高Output服务的性能。 例如，您可以缓存Output服务使用的表单设计以提高其性能。
-
-如果您使用已标记的Acrobat表单作为输入，则无法使用输出服务Java或Web服务API来关闭已标记的设置。 如果您尝试以编程方式将此选项设置为 `false`，则结果PDF文档仍被标记。
+建立PDF檔案時設定檔案URI選項。 此選項會指定Output服務產生的PDF檔案的名稱和位置。
 
 >[!NOTE]
 >
->如果未指定渲染运行时选项，则使用默认值。 有关渲染运行时选项的信息，请参见 `RenderOptionsSpec` 类引用。 (请参阅 [AEM Forms API参考](https://www.adobe.com/go/learn_aemforms_javadocs_63_en))。
+>除了設定檔案URI執行階段選項之外，您還可以以程式設計方式從輸出服務傳回的複雜資料型別中擷取PDF檔案。 不過，透過設定檔案URI執行階段選項，您不需要建立以程式擷取PDF檔案的應用程式邏輯。
 
-**生成PDF文档**
+**設定演算執行階段選項**
 
-在引用包含表单数据的有效XML数据源并设置运行时选项后，可以调用Output服务，从而生成PDF文档。
+建立PDF檔案時，您可以設定演算執行階段選項。 雖然這些選項並非必要(不同於必要的PDF執行階段選項)，但您可以執行工作，例如改善Output服務的效能。 例如，您可以快取Output服務使用的表單設計以提高其效能。
 
-在生成PDF文档时，您可以指定Output服务创建PDF文档所需的URI值。 窗体设计可以存储在服务器文件系统等位置或作为AEM Forms应用程序的一部分。 可以使用内容根URI值引用作为Forms应用程序一部分的表单设计（或其他资源，例如图像文件） `repository:///`. 例如，考虑以下名为的表单设计 *Loan.xdp* 位于名为的Forms应用程序中 *Applications/FormsApplication*：
+如果您使用已標籤的Acrobat表單作為輸入，則無法使用輸出服務Java或Web服務API來關閉已標籤的設定。 如果您嘗試以程式設計方式將此選項設為 `false`，仍會標籤結果PDF檔案。
+
+>[!NOTE]
+>
+>如果您未指定演算執行階段選項，則會使用預設值。 如需有關演算執行階段選項的資訊，請參閱 `RenderOptionsSpec` 類別參考。 (請參閱 [AEM Forms API參考](https://www.adobe.com/go/learn_aemforms_javadocs_63_en))。
+
+**產生PDF檔案**
+
+在參照包含表單資料的有效XML資料來源並設定執行階段選項後，您可以叫用Output服務，這會產生一個PDF檔案。
+
+產生PDF檔案時，您可以指定Output服務建立PDF檔案所需的URI值。 表單設計可儲存在伺服器檔案系統等位置或作為AEM Forms應用程式的一部分。 若表單設計（或其他資源，例如影像檔案）屬於Forms應用程式的一部分，則可使用內容根URI值加以參照 `repository:///`. 例如，考慮以下名為的表單設計 *Loan.xdp* 位在名為的Forms應用程式中 *應用程式/表單應用程式*：
 
 ![cp_cp_formrepository](assets/cp_cp_formrepository.png)
 
-要访问上图所示的Loan.xdp文件，请指定 `repository:///Applications/FormsApplication/1.0/FormsFolder/` 作为第三个参数传递给 `OutputClient` 对象的 `generatePDFOutput` 方法。 指定表单名称(*Loan.xdp*)作为传递给的第二个参数 `OutputClient` 对象的 `generatePDFOutput` 方法。
+若要存取上圖所示的Loan.xdp檔案，請指定 `repository:///Applications/FormsApplication/1.0/FormsFolder/` 作為第三個引數傳遞至 `OutputClient` 物件的 `generatePDFOutput` 方法。 指定表單名稱(*Loan.xdp*)作為第二個引數傳遞至 `OutputClient` 物件的 `generatePDFOutput` 方法。
 
-如果XDP文件包含图像（或其他资源，如片段），请将资源放在与XDP文件相同的应用程序文件夹中。 AEM Forms使用内容根URI作为基本路径来解析对图像的引用。 例如，如果Loan.xdp文件包含图像，请确保将该图像放在 `Applications/FormsApplication/1.0/FormsFolder/`.
-
->[!NOTE]
->
->Forms在调用 `OutputClient` 对象的 `generatePDFOutput` 或 `generatePrintedOutput` 方法。
+如果XDP檔案包含影像（或其他資源，例如片段），請將資源放在與XDP檔案相同的應用程式資料夾中。 AEM Forms使用內容根URI作為基本路徑，以解析對影像的參照。 例如，如果Loan.xdp檔案包含影像，請確定您將該影像放在 `Applications/FormsApplication/1.0/FormsFolder/`.
 
 >[!NOTE]
 >
->要查看通过引用Forms应用程序中的XDP来创建PDF文档的完整快速入门，请参阅 [快速入门（EJB模式）：使用Java API基于应用程序XDP文件创建PDF文档](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-document-based-on-an-application-xdp-file-using-the-java-api).
+>叫用時，您可以參考Forms應用程式URI `OutputClient` 物件的 `generatePDFOutput` 或 `generatePrintedOutput` 方法。
 
-**检索操作的结果**
+>[!NOTE]
+>
+>若要檢視透過參考Forms應用程式中的XDP來建立PDF檔案的完整快速入門，請參閱 [快速入門（EJB模式）：使用Java API根據應用程式XDP檔案建立PDF檔案](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-document-based-on-an-application-xdp-file-using-the-java-api).
 
-在Output服务执行操作之后，它返回各种数据项，如指定操作是否成功的状态XML数据。
+**擷取作業的結果**
 
-**另请参阅**
-
-[使用Java API创建PDF文档](creating-document-output-streams.md#create-a-pdf-document-using-the-java-api)
-
-[使用Web服务API创建PDF文档](creating-document-output-streams.md#create-a-pdf-document-using-the-web-service-api)
-
-[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
-
-[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
-
-[输出服务API快速启动](/help/forms/developing/output-service-java-api-quick.md#output-service-java-api-quick-start-soap)
-
-### 使用Java API创建PDF文档 {#create-a-pdf-document-using-the-java-api}
-
-使用输出API (Java)创建PDF文档：
-
-1. 包括项目文件。
-
-   在Java项目的类路径中包含客户端JAR文件，如adobe-output-client.jar。
-
-1. 创建输出客户端对象。
-
-   * 创建 `ServiceClientFactory` 包含连接属性的对象。
-   * 创建 `OutputClient` 对象，使用它的构造函数传递 `ServiceClientFactory` 对象。
-
-1. 引用XML数据源。
-
-   * 创建 `java.io.FileInputStream` 对象，表示用于填充PDF文档的XML数据源，该数据源使用其构造函数并传递指定XML文件位置的字符串值。
-   * 创建 `com.adobe.idp.Document` 对象。 传递 `java.io.FileInputStream` 对象。
-
-1. 设置PDF运行时选项。
-
-   * 创建 `PDFOutputOptionsSpec` 对象。
-   * 通过调用 `PDFOutputOptionsSpec` 对象的 `setFileURI` 方法。 传递一个字符串值，该值指定Output服务生成的PDF文件的位置。 文件URI选项相对于托管AEM Forms的J2EE应用程序服务器，而不是客户端计算机。
-
-1. 设置渲染运行时选项。
-
-   * 创建 `RenderOptionsSpec` 对象。
-   * 缓存表单设计以通过调用 `RenderOptionsSpec` 对象的 `setCacheEnabled` 和传递 `true`.
-
-   >[!NOTE]
-   >
-   >不能使用设置PDF文档的版本 `RenderOptionsSpec` 对象的 `setPdfVersion` 方法：输入文档是Acrobat表单(在Acrobat中创建的表单)或已签名或认证的XFA文档。 输出PDF文档保留原始PDF版本。 Adobe PDF同样，您也不能通过调用 `RenderOptionsSpec` 对象的 `setTaggedPDF` 方法(如果输入文档是Acrobat表单或已签名或认证的XFA文档)。
-
-   >[!NOTE]
-   >
-   >不能使用来设置线性PDF选项 `RenderOptionsSpec` 对象的 `setLinearizedPDF` 方法：输入的PDF文件经过认证或数字签名。 (请参阅 [对PDF文档进行数字签名&#x200B;](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-pdf-documents)*.)*
-
-1. 生成PDF文档。
-
-   PDF通过调用 `OutputClient` 对象的 `generatePDFOutput` 方法，并传递以下值：
-
-   * A `TransformationFormat` 枚举值。 要生成PDF单据，请指定 `TransformationFormat.PDF`.
-   * 一个字符串值，它指定表单设计的名称。
-   * 一个字符串值，它指定表单设计所在的内容根。
-   * A `PDFOutputOptionsSpec` 包含PDF运行时选项的对象。
-   * A `RenderOptionsSpec` 包含渲染运行时选项的对象。
-   * 此 `com.adobe.idp.Document` 包含要与表单设计合并的数据的XML数据源的对象。
-
-   此 `generatePDFOutput` 方法返回 `OutputResult` 包含操作结果的对象。
-
-   >[!NOTE]
-   >
-   >PDF通过调用 `generatePDFOutput` 方法，请注意，您无法将数据与已签名或认证的XFAPDF表单合并。 (请参阅 [数字签名和认证文档&#x200B;](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-and-certifying-documents)*.)*
-
-   >[!NOTE]
-   >
-   >此 `OutputResult` 对象的 `getRecordLevelMetaDataList` 方法返回 `null`*.*
-
-   >[!NOTE]
-   >
-   >PDF您还可以通过调用 `OutputClient` 对象的 `generatePDFOutput2` 方法。 (请参阅 [将位于Content Services（已弃用）中的文档传递到输出服务&#x200B;](creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service)*.)*
-
-1. 检索操作的结果。
-
-   * 检索 `com.adobe.idp.Document` 表示以下对象的状态的对象： `generatePDFOutput` 操作，方法是调用 `OutputResult` 对象的 `getStatusDoc` 方法。 此方法返回指定操作是否成功的状态XML数据。
-   * 创建 `java.io.File` 包含操作结果的对象。 确保文件扩展名为.xml。
-   * 调用 `com.adobe.idp.Document` 对象的 `copyToFile` 用于复制目录内容的方法 `com.adobe.idp.Document` 对象(确保您使用 `com.adobe.idp.Document` 返回的对象 `getStatusDoc` 方法)。
-
-   尽管Output服务将PDF文档写入由传递到的参数指定的位置 `PDFOutputOptionsSpec` 对象的 `setFileURI` PDF方法，您可以通过调用 `OutputResult` 对象的 `getGeneratedDoc` 方法。
+Output服務執行作業之後，會傳回各種資料專案，例如指定作業是否成功的狀態XML資料。
 
 **另请参阅**
 
-[步骤摘要](creating-document-output-streams.md#summary-of-steps)
+[使用Java API建立PDF檔案](creating-document-output-streams.md#create-a-pdf-document-using-the-java-api)
 
-[快速入门（EJB模式）：使用Java API创建PDF文档](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-document-using-the-java-api)
+[使用Web服務API建立PDF檔案](creating-document-output-streams.md#create-a-pdf-document-using-the-web-service-api)
 
-[快速入门（SOAP模式）：使用Java API创建PDF文档](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-document-using-the-java-api)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
-[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+[Output Service API快速啟動](/help/forms/developing/output-service-java-api-quick.md#output-service-java-api-quick-start-soap)
 
-### 使用Web服务API创建PDF文档 {#create-a-pdf-document-using-the-web-service-api}
+### 使用Java API建立PDF檔案 {#create-a-pdf-document-using-the-java-api}
 
-使用输出API（Web服务）创建PDF文档：
+使用Output API (Java)建立PDF檔案：
 
-1. 包括项目文件。
+1. 包含專案檔案。
 
-   创建使用MTOM的Microsoft .NET项目。 确保使用以下WSDL定义： `http://localhost:8080/soap/services/OutputService?WSDL&lc_version=9.0.1`.
+   在您的Java專案的類別路徑中包含使用者端JAR檔案，例如adobe-output-client.jar。
 
-   >[!NOTE]
-   >
-   >Replace `localhost` 包含托管AEM Forms的服务器的IP地址。
+1. 建立輸出使用者端物件。
 
-1. 创建输出客户端对象。
+   * 建立 `ServiceClientFactory` 包含連線屬性的物件。
+   * 建立 `OutputClient` 物件，使用它的建構函式並傳遞 `ServiceClientFactory` 物件。
 
-   * 创建 `OutputServiceClient` 对象。
-   * 创建 `OutputServiceClient.Endpoint.Address` 对象 `System.ServiceModel.EndpointAddress` 构造函数。 将指定WSDL的字符串值传递给AEM Forms服务(例如， `http://localhost:8080/soap/services/OutputService?blob=mtom`.) 您无需使用 `lc_version` 属性。 创建服务引用时使用此属性。 但是，请指定 `?blob=mtom` 使用MTOM。
-   * 创建 `System.ServiceModel.BasicHttpBinding` 对象，方法是获取 `OutputServiceClient.Endpoint.Binding` 字段。 将返回值强制转换为 `BasicHttpBinding`.
-   * 设置 `System.ServiceModel.BasicHttpBinding` 对象的 `MessageEncoding` 字段至 `WSMessageEncoding.Mtom`. 此值可确保使用MTOM。
-   * 通过执行以下任务启用基本HTTP身份验证：
+1. 參照XML資料來源。
 
-      * 将AEM表单用户名分配给字段 `OutputServiceClient.ClientCredentials.UserName.UserName`.
-      * 将相应的密码值分配给字段 `OutputServiceClient.ClientCredentials.UserName.Password`.
-      * 分配常量值 `HttpClientCredentialType.Basic` 到字段 `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
-      * 分配常量值 `BasicHttpSecurityMode.TransportCredentialOnly` 到字段 `BasicHttpBindingSecurity.Security.Mode`.
+   * 建立 `java.io.FileInputStream` 物件，代表使用建構函式並傳遞指定XML檔案位置的字串值來填入PDF檔案的XML資料來源。
+   * 建立 `com.adobe.idp.Document` 物件（使用其建構函式）。 傳遞 `java.io.FileInputStream` 物件。
 
-1. 引用XML数据源。
+1. 設定PDF執行階段選項。
 
-   * 创建 `BLOB` 对象。 此 `BLOB` 对象用于存储将与PDF文档合并的XML数据。
-   * 创建 `System.IO.FileStream` 对象，方法是调用其构造函数并传递一个字符串值，该值表示包含表单数据的XML文件的文件位置。
-   * 创建一个字节数组，用于存储 `System.IO.FileStream` 对象。 您可以通过获取 `System.IO.FileStream` 对象的 `Length` 属性。
-   * 通过调用 `System.IO.FileStream` 对象的 `Read` 方法，并传递字节数组、起始位置和要读取的流长度。
-   * 填充 `BLOB` 对象(通过指定其 `MTOM` 包含字节数组内容的字段。
+   * 建立 `PDFOutputOptionsSpec` 物件（使用其建構函式）。
+   * 透過叫用 `PDFOutputOptionsSpec` 物件的 `setFileURI` 方法。 傳遞字串值，指定輸出服務產生的PDF檔案位置。 檔案URI選項是相對於裝載AEM Forms的J2EE應用程式伺服器，而不是使用者端電腦。
 
-1. 设置PDF运行时选项
+1. 設定演算執行階段選項。
 
-   * 创建 `PDFOutputOptionsSpec` 对象。
-   * 通过指定一个字符串值来设置文件URI选项，该字符串值指定输出服务生成的PDF文件的位置。 `PDFOutputOptionsSpec` 对象的 `fileURI` 数据成员。 文件URI选项相对于托管AEM Forms的J2EE应用程序服务器，而不是客户端计算机。
-
-1. 设置渲染运行时选项。
-
-   * 创建 `RenderOptionsSpec` 对象。
-   * 缓存表单设计以通过分配值提高Output服务的性能 `true` 到 `RenderOptionsSpec` 对象的 `cacheEnabled` 数据成员。
+   * 建立 `RenderOptionsSpec` 物件（使用其建構函式）。
+   * 快取表單設計以透過叫用 `RenderOptionsSpec` 物件的 `setCacheEnabled` 和傳遞 `true`.
 
    >[!NOTE]
    >
-   >不能使用设置PDF文档的版本 `RenderOptionsSpec` 对象的 `setPdfVersion` 方法：输入文档是Acrobat表单(在Acrobat中创建的表单)或已签名或认证的XFA文档。 输出PDF文档保留原始PDF版本。 Adobe PDF同样，您也不能通过调用 `RenderOptionsSpec` 对象的 `setTaggedPDF`*方法(如果输入文档是Acrobat表单或已签名或认证的XFA文档)。*
+   >您無法使用設定PDF檔案的版本 `RenderOptionsSpec` 物件的 `setPdfVersion` 方法：輸入檔案是Acrobat表單(在Acrobat中建立的表單)或已簽署或認證的XFA檔案。 輸出PDF檔案會保留原始PDF版本。 Adobe PDF同樣地，您無法透過叫用 `RenderOptionsSpec` 物件的 `setTaggedPDF` 方法(如果輸入檔案是Acrobat表單或已簽署或已認證的XFA檔案)。
 
    >[!NOTE]
    >
-   >不能使用来设置线性PDF选项 `RenderOptionsSpec` 对象的 `linearizedPDF` 如果输入PDF文档经过验证或数字签名，则为成员。 (请参阅 [对PDF文档进行数字签名&#x200B;](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-pdf-documents)*.)*
+   >您無法透過以下方式設定線性PDF選項： `RenderOptionsSpec` 物件的 `setLinearizedPDF` 方法(如果輸入PDF檔案經過認證或數位簽署)。 (請參閱 [數位簽署PDF檔案&#x200B;](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-pdf-documents)*.)*
 
-1. 生成PDF文档。
+1. 產生PDF檔案。
 
-   PDF通过调用 `OutputServiceService` 对象的 `generatePDFOutput`方法，并传递以下值：
+   透過叫用建立PDF檔案 `OutputClient` 物件的 `generatePDFOutput` 並傳遞下列值：
 
-   * A `TransformationFormat` 枚举值。 要生成PDF单据，请指定 `TransformationFormat.PDF`.
-   * 一个字符串值，它指定表单设计的名称。
-   * 一个字符串值，它指定表单设计所在的内容根。
-   * A `PDFOutputOptionsSpec` 包含PDF运行时选项的对象。
-   * A `RenderOptionsSpec` 包含渲染运行时选项的对象。
-   * 此 `BLOB` 包含要与表单设计合并的数据的XML数据源的对象。
-   * A `BLOB` 由填充的对象 `generatePDFOutput` 方法。 此 `generatePDFOutput` 方法使用生成的描述文档的元数据填充此对象。 （只有Web服务调用才需要此参数值）。
-   * A `BLOB` 由填充的对象 `generatePDFOutput` 方法。 此 `generatePDFOutput` 方法使用结果数据填充此对象。 （只有Web服务调用才需要此参数值）。
-   * An `OutputResult` 包含操作结果的对象。 （只有Web服务调用才需要此参数值）。
+   * A `TransformationFormat` 列舉值。 若要產生PDF檔案，請指定 `TransformationFormat.PDF`.
+   * 字串值，指定表單設計的名稱。
+   * 字串值，指定表單設計所在的內容根。
+   * A `PDFOutputOptionsSpec` 包含PDF執行階段選項的物件。
+   * A `RenderOptionsSpec` 包含演算執行階段選項的物件。
+   * 此 `com.adobe.idp.Document` 包含要與表單設計合併之資料之XML資料來源的物件。
 
-   >[!NOTE]
-   >
-   >PDF通过调用 `generatePDFOutput` 方法，请注意，您无法将数据与已签名或认证的XFAPDF表单合并。 (请参阅 [数字签名和认证文档&#x200B;](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-and-certifying-documents)*.)*
+   此 `generatePDFOutput` 方法傳回 `OutputResult` 包含作業結果的物件。
 
    >[!NOTE]
    >
-   >PDF您还可以通过调用 `OutputClient` 对象的 `generatePDFOutput2` 方法。 (请参阅 [将位于Content Services（已弃用）中的文档传递到输出服务&#x200B;](creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service)*.)*
+   >PDF當透過叫用 `generatePDFOutput` 方法，請注意，您無法將資料與已簽署或認證的XFAPDF表單合併。 (請參閱 [數位簽署和認證檔案&#x200B;](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-and-certifying-documents)*.)*
 
-1. 检索操作的结果。
+   >[!NOTE]
+   >
+   >此 `OutputResult` 物件的 `getRecordLevelMetaDataList` 方法傳回 `null`*.*
 
-   * 创建 `System.IO.FileStream` 对象，方法是调用其构造函数并传递一个字符串值，该值表示包含结果数据的XML文件位置。 确保文件扩展名为.xml。
-   * 创建一个字节数组，用于存储 `BLOB` 使用结果数据填充的对象 `OutputServiceService` 对象的 `generatePDFOutput` 方法（第八个参数）。 通过获取的值填充字节数组 `BLOB` 对象的 `MTOM` `field`.
-   * 创建 `System.IO.BinaryWriter` 对象，方法是调用其构造函数 `System.IO.FileStream` 对象。
-   * 通过调用 `System.IO.BinaryWriter` 对象的 `Write` 方法和传递字节数组。
+   >[!NOTE]
+   >
+   >PDF您也可以透過叫用 `OutputClient` 物件的 `generatePDFOutput2` 方法。 (請參閱 [將位於Content Services （已棄用）中的檔案傳遞至Output Service ](creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service)*.)*
+
+1. 擷取作業的結果。
+
+   * 擷取 `com.adobe.idp.Document` 代表「 」狀態的物件 `generatePDFOutput` 操作方式：叫用 `OutputResult` 物件的 `getStatusDoc` 方法。 此方法會傳回指定作業是否成功的狀態XML資料。
+   * 建立 `java.io.File` 包含作業結果的物件。 確認副檔名為.xml。
+   * 叫用 `com.adobe.idp.Document` 物件的 `copyToFile` 複製目錄內容的方法 `com.adobe.idp.Document` 物件放入檔案(請確定您使用 `com.adobe.idp.Document` 物件，由 `getStatusDoc` 方法)。
+
+   雖然Output服務會將PDF檔案寫入傳遞至的引數所指定的位置 `PDFOutputOptionsSpec` 物件的 `setFileURI` PDF方法，您可以透過叫用 `OutputResult` 物件的 `getGeneratedDoc` 方法。
+
+**另请参阅**
+
+[步驟摘要](creating-document-output-streams.md#summary-of-steps)
+
+[快速入門（EJB模式）：使用Java API建立PDF檔案](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-document-using-the-java-api)
+
+[快速入門（SOAP模式）：使用Java API建立PDF檔案](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-document-using-the-java-api)
+
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+
+[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+
+### 使用Web服務API建立PDF檔案 {#create-a-pdf-document-using-the-web-service-api}
+
+使用Output API （Web服務）建立PDF檔案：
+
+1. 包含專案檔案。
+
+   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/OutputService?WSDL&lc_version=9.0.1`.
+
+   >[!NOTE]
+   >
+   >Replace `localhost` 搭配裝載AEM Forms之伺服器的IP位址。
+
+1. 建立輸出使用者端物件。
+
+   * 建立 `OutputServiceClient` 物件（使用其預設建構函式）。
+   * 建立 `OutputServiceClient.Endpoint.Address` 物件，使用 `System.ServiceModel.EndpointAddress` 建構函式。 將指定WSDL的字串值傳遞至AEM Forms服務(例如， `http://localhost:8080/soap/services/OutputService?blob=mtom`.) 您不需要使用 `lc_version` 屬性。 當您建立服務參考時，會使用此屬性。 不過，請指定 `?blob=mtom` 以使用MTOM。
+   * 建立 `System.ServiceModel.BasicHttpBinding` 物件，方法是取得 `OutputServiceClient.Endpoint.Binding` 欄位。 將傳回值轉換為 `BasicHttpBinding`.
+   * 設定 `System.ServiceModel.BasicHttpBinding` 物件的 `MessageEncoding` 欄位至 `WSMessageEncoding.Mtom`. 此值可確保使用MTOM。
+   * 執行下列工作來啟用基本HTTP驗證：
+
+      * 將AEM表單使用者名稱指派給欄位 `OutputServiceClient.ClientCredentials.UserName.UserName`.
+      * 將對應的密碼值指派給欄位 `OutputServiceClient.ClientCredentials.UserName.Password`.
+      * 指派常數值 `HttpClientCredentialType.Basic` 至欄位 `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
+      * 指派常數值 `BasicHttpSecurityMode.TransportCredentialOnly` 至欄位 `BasicHttpBindingSecurity.Security.Mode`.
+
+1. 參照XML資料來源。
+
+   * 建立 `BLOB` 物件（使用其建構函式）。 此 `BLOB` 物件是用來儲存將與PDF檔案合併的XML資料。
+   * 建立 `System.IO.FileStream` 物件，方法是叫用其建構函式，並傳遞代表包含表單資料之XML檔案的檔案位置的字串值。
+   * 建立位元組陣列，儲存 `System.IO.FileStream` 物件。 您可以取得 `System.IO.FileStream` 物件的 `Length` 屬性。
+   * 叫用 `System.IO.FileStream` 物件的 `Read` 方法，並傳遞位元組陣列、起始位置以及要讀取的資料流長度。
+   * 填入 `BLOB` 物件，透過指派其 `MTOM` 包含位元組陣列內容的欄位。
+
+1. 設定PDF執行階段選項
+
+   * 建立 `PDFOutputOptionsSpec` 物件（使用其建構函式）。
+   * 透過指派字串值來設定檔案URI選項，該字串值指定輸出服務產生的PDF檔案的位置 `PDFOutputOptionsSpec` 物件的 `fileURI` 資料成員。 檔案URI選項是相對於裝載AEM Forms的J2EE應用程式伺服器，而不是使用者端電腦。
+
+1. 設定演算執行階段選項。
+
+   * 建立 `RenderOptionsSpec` 物件（使用其建構函式）。
+   * 快取表單設計以指派值來改善Output服務的效能 `true` 至 `RenderOptionsSpec` 物件的 `cacheEnabled` 資料成員。
+
+   >[!NOTE]
+   >
+   >您無法使用設定PDF檔案的版本 `RenderOptionsSpec` 物件的 `setPdfVersion` 方法：輸入檔案是Acrobat表單(在Acrobat中建立的表單)或已簽署或認證的XFA檔案。 輸出PDF檔案會保留原始PDF版本。 Adobe PDF同樣地，您無法透過叫用 `RenderOptionsSpec` 物件的 `setTaggedPDF`*方法(如果輸入檔案是Acrobat表單或已簽署或已認證的XFA檔案)。*
+
+   >[!NOTE]
+   >
+   >您無法透過以下方式設定線性PDF選項： `RenderOptionsSpec` 物件的 `linearizedPDF` 如果輸入PDF檔案經過認證或數位簽署，則為成員。 (請參閱 [數位簽署PDF檔案&#x200B;](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-pdf-documents)*.)*
+
+1. 產生PDF檔案。
+
+   透過叫用建立PDF檔案 `OutputServiceService` 物件的 `generatePDFOutput`並傳遞下列值：
+
+   * A `TransformationFormat` 列舉值。 若要產生PDF檔案，請指定 `TransformationFormat.PDF`.
+   * 字串值，指定表單設計的名稱。
+   * 字串值，指定表單設計所在的內容根。
+   * A `PDFOutputOptionsSpec` 包含PDF執行階段選項的物件。
+   * A `RenderOptionsSpec` 包含演算執行階段選項的物件。
+   * 此 `BLOB` 包含要與表單設計合併之資料之XML資料來源的物件。
+   * A `BLOB` 由填入的物件 `generatePDFOutput` 方法。 此 `generatePDFOutput` 方法會使用產生的描述檔案的中繼資料填入此物件。 （只有Web服務呼叫需要此引數值）。
+   * A `BLOB` 由填入的物件 `generatePDFOutput` 方法。 此 `generatePDFOutput` 方法會將結果資料填入此物件中。 （只有Web服務呼叫需要此引數值）。
+   * 一個 `OutputResult` 包含作業結果的物件。 （只有Web服務呼叫需要此引數值）。
+
+   >[!NOTE]
+   >
+   >PDF當透過叫用 `generatePDFOutput` 方法，請注意，您無法將資料與已簽署或認證的XFAPDF表單合併。 (請參閱 [數位簽署和認證檔案&#x200B;](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-and-certifying-documents)*.)*
+
+   >[!NOTE]
+   >
+   >PDF您也可以透過叫用 `OutputClient` 物件的 `generatePDFOutput2` 方法。 (請參閱 [將位於Content Services （已棄用）中的檔案傳遞至Output Service ](creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service)*.)*
+
+1. 擷取作業的結果。
+
+   * 建立 `System.IO.FileStream` 物件，方法是叫用其建構函式，並傳遞代表包含結果資料之XML檔案位置的字串值。 確認副檔名為.xml。
+   * 建立位元組陣列，儲存 `BLOB` 填入結果資料的物件 `OutputServiceService` 物件的 `generatePDFOutput` 方法（第八個引數）。 透過取得 `BLOB` 物件的 `MTOM` `field`.
+   * 建立 `System.IO.BinaryWriter` 物件，方法是叫用其建構函式並傳遞 `System.IO.FileStream` 物件。
+   * 透過叫用 `System.IO.BinaryWriter` 物件的 `Write` 方法並傳遞位元組陣列。
 
    另请参阅
 
-[步骤摘要](creating-document-output-streams.md#summary-of-steps)
+[步驟摘要](creating-document-output-streams.md#summary-of-steps)
 
-[使用MTOM调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[使用MTOM叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[使用SwaRef调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[使用SwaRef叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
    >[!NOTE]
    >
-   >此 `OutputServiceService` 对象的 `generateOutput` 方法已弃用。
+   >此 `OutputServiceService` 物件的 `generateOutput` 方法已過時。
 
-## 创建PDF/A文档 {#creating-pdf-a-documents}
+## 建立PDF/A檔案 {#creating-pdf-a-documents}
 
-您可以使用Output服务创建PDF/A文档。 由于PDF/A是用于长期保存文档内容的存档格式，因此所有字体都将嵌入，并且文件是未压缩的。 因此，PDF/A 文档通常比标准 PDF 文档大。此外，PDF/A文档不包含音频和视频内容。 与其他“输出”服务任务一样，您可以同时提供表单设计和数据，以便与表单设计合并创建PDF/文档。
+您可以使用Output服務來建立PDF/A檔案。 由於PDF/A是用於長期儲存檔案內容的封存格式，因此所有字型都會嵌入，且檔案會解壓縮。 因此，PDF/A 文档通常比标准 PDF 文档大。此外，PDF/檔案不包含音訊和視訊內容。 如同其他Output服務工作，您提供表單設計和資料以與表單設計合併，以建立PDF/A檔案。
 
-PDF/A-1规范包含两个一致性级别，即a和b。两者之间主要区别在于逻辑结构（辅助功能）支持，这是符合级别b所不需要的。无论符合性级别如何，PDF/A-1都指示所有字体都嵌入到生成的PDF/A文档中。
+PDF/A-1規格包含兩個一致性層級，即a和b。兩者之間的主要差異在於邏輯結構（協助工具）支援，這是符合性層級b所不需要的。無論一致性等級為何，PDF/A-1會指定所有字型都內嵌在產生的PDF/A檔案中。
 
-尽管PDF/A是归档PDF文档的标准，但是如果标准PDF文档满足公司的需要，则不强制使用PDF/A进行归档。 PDF/A标准的目的是建立一个PDF文件，它可以长期存储，并且满足文档保存要求。 例如，无法将URL嵌入到PDF/A中，因为随着时间的推移，该URL可能会变得无效。
+雖然PDF/A是封存PDF檔案的標準，但如果標準PDF檔案符合貴公司的需求，則不強制使用PDF/A進行封存。 PDF/A標準的目的是建立可長期儲存的PDF檔案，並符合檔案儲存要求。 例如，URL無法內嵌於PDF/A中，因為隨著時間推移，URL可能會變得無效。
 
-您的组织必须评估自己的需求、您打算保留文档的时间长度、文件大小考虑因素，并确定自己的归档策略。 您可以使用DocConverter服务以编程方式确定PDF文档是否符合PDF/A标准。 (请参阅 [以编程方式确定PDF/合规性](/help/forms/developing/pdf-a-documents.md#programmatically-determining-pdf-a-compliancy).)
+您的組織必須評估其自身需求、您打算保留檔案的時間長度、檔案大小考量，並決定您自己的封存策略。 您可以使用DocConverter服務，以程式設計方式判斷PDF檔案是否符合PDF/A規範。 (請參閱 [以程式設計方式決定PDF/合規性](/help/forms/developing/pdf-a-documents.md#programmatically-determining-pdf-a-compliancy).)
 
-PDF/文档必须使用在表单设计中指定的字体，且不能替换字体。 因此，如果位于PDF文档中的字体在主机操作系统(OS)上不可用，则会发生异常。
+PDF/A檔案必須使用在表單設計中指定的字型，且字型不能被取代。 因此，如果PDF檔案內的字型在主機作業系統(OS)上無法使用，則會發生例外狀況。
 
-在Acrobat中打开PDF/A文档时，将显示一条确认该文档为PDF/A文档的消息，如下图所示。
+在Acrobat中開啟PDF/A檔案時，會顯示一則訊息，確認檔案為PDF/A檔案，如下圖所示。
 
 ![cp_cp_pdfamessage](assets/cp_cp_pdfamessage.png)
 
 >[!NOTE]
 >
->AIIM网站中有一个PDF/常见问题解答部分，您可以在以下位置访问该部分 [https://www.loc.gov/preservation/digital/formats/fdd/fdd000125.shtml](https://www.loc.gov/preservation/digital/formats/fdd/fdd000125.shtml).
+>AIIM網站有一個PDF/常見問題集區段，您可以在此存取 [https://www.loc.gov/preservation/digital/formats/fdd/fdd000125.shtml](https://www.loc.gov/preservation/digital/formats/fdd/fdd000125.shtml).
 
 >[!NOTE]
 >
->有关输出服务的详细信息，请参见 [AEM Forms的服务参考](https://www.adobe.com/go/learn_aemforms_services_65).
+>如需Output服務的詳細資訊，請參閱 [AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_65).
 
-### 步骤摘要 {#summary_of_steps-1}
+### 步驟摘要 {#summary_of_steps-1}
 
-要创建PDF/A文档，请执行以下步骤：
+若要建立PDF/A檔案，請執行下列步驟：
 
-1. 包括项目文件。
-1. 创建输出客户端对象。
-1. 引用XML数据源。
-1. 设置PDF/A运行时选项。
-1. 设置渲染运行时选项。
-1. 生成PDF/文档。
-1. 检索操作的结果。
+1. 包含專案檔案。
+1. 建立輸出使用者端物件。
+1. 參照XML資料來源。
+1. 設定PDF/執行階段選項。
+1. 設定演算執行階段選項。
+1. 產生PDF/檔案。
+1. 擷取作業的結果。
 
-**包括项目文件**
+**包含專案檔案**
 
-在开发项目中包含必要的文件。 如果要使用Java创建自定义应用程序，请包含必要的JAR文件。 如果使用Web服务，请确保包含代理文件。
+在您的開發專案中包含必要的檔案。 如果您使用Java建立自訂應用程式，請包含必要的JAR檔案。 如果您使用Web服務，請務必包含Proxy檔案。
 
-必须将以下JAR文件添加到项目的类路径中：
+必須將以下JAR檔案新增到專案的類別路徑中：
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-output-client.jar
-* adobe-utilities.jar(如果将AEM Forms部署在JBoss上，则此为必需字段)
-* jbossall-client.jar(如果在JBoss上部署了AEM Forms，则此为必填字段)
+* adobe-utilities.jar (如果AEM Forms部署在JBoss上，則為必要)
+* jbossall-client.jar (如果AEM Forms部署在JBoss上，則為必要)
 
-如果将AEM Forms部署在非JBoss的受支持J2EE应用程序服务器上，则需要将adobe-utilities.jar和jbossall-client.jar文件替换为特定于部署AEM Forms的J2EE应用程序服务器的JAR文件。
+如果將AEM Forms部署在非JBoss的支援J2EE應用程式伺服器上，您需要將adobe-utilities.jar和jbossall-client.jar檔案取代為部署AEM Forms之J2EE應用程式伺服器專屬的JAR檔案。
 
-**创建输出客户端对象**
+**建立輸出使用者端物件**
 
-必须先创建输出服务客户端对象，然后才能以编程方式执行输出服务操作。 如果您使用的是Java API，请创建 `OutputClient` 对象。 如果您使用的是Output Web service API，请创建 `OutputServiceService` 对象。
+您必須先建立輸出服務使用者端物件，才能以程式設計方式執行輸出服務作業。 如果您使用Java API，請建立 `OutputClient` 物件。 如果您使用輸出Web服務API，請建立 `OutputServiceService` 物件。
 
-**引用XML数据源**
+**參考XML資料來源**
 
-要将数据与表单设计合并，必须引用包含数据的XML数据源。 要使用数据填充的每个表单字段都必须存在XML元素。 XML元素名称必须与字段名称匹配。 如果XML元素与表单字段不对应，或者如果XML元素名称与字段名称不匹配，则会忽略该元素。 如果指定了所有XML元素，则不必匹配XML元素的显示顺序。
+若要將資料與表單設計合併，您必須參照包含資料的XML資料來源。 每個要填入資料的表單欄位都必須有XML元素。 XML元素名稱必須符合欄位名稱。 如果XML元素未對應至表單欄位，或XML元素名稱不符合欄位名稱，則會忽略該元素。 如果已指定所有XML元素，則不必比對XML元素的顯示順序。
 
-**设置PDF/A运行时选项**
+**設定PDF/執行階段選項**
 
-创建PDF/A文档时，可以设置“文件URI”选项。 URI相对于托管AEM Forms的J2EE应用程序服务器。 也就是说，如果设置C:\Adobe ，文件将写入服务器上的文件夹，而不是客户端计算机。 URI指定Output服务生成的PDF/A文件的名称和位置。
+建立PDF/A檔案時，您可以設定「檔案URI」選項。 URI是相對於裝載AEM Forms的J2EE應用程式伺服器。 也就是說，如果您設定C:\Adobe，檔案會寫入伺服器上的資料夾，而非使用者端電腦。 URI會指定輸出服務產生的PDF/A檔案的名稱和位置。
 
-**设置渲染运行时选项**
+**設定演算執行階段選項**
 
-在创建PDF/A文档时，可以设置渲染运行时选项。 可以设置的两个PDF/A相关选项是 `PDFAConformance` 和 `PDFARevisionNumber` 值。 此 `PDFAConformance` 值指的是PDF文档如何遵守规定长期保留电子文档的要求。 此选项的有效值为 `A` 和 `B`. PDF有关a级和b级合规性的信息，请参阅标题为 *ISO 19005-1文档管理*.
+建立PDF/A檔案時，您可以設定演算執行階段選項。 您可以設定的兩個PDF/A相關選項為 `PDFAConformance` 和 `PDFARevisionNumber` 值。 此 `PDFAConformance` 值是指PDF檔案如何遵循指定如何保留長期電子檔案的要求。 此選項的有效值為 `A` 和 `B`. 如需有關層級a和b相容性的資訊，請參閱標題為PDF/A-1 ISO規格 *ISO 19005-1檔案管理*.
 
-此 `PDFARevisionNumber` 值指PDF/A文档的修订版本号。 有关PDF/A文档的修订版本号的信息，请参阅标题为PDF/A-1 ISO规范 *ISO 19005-1文档管理*.
+此 `PDFARevisionNumber` 值是指PDF/A檔案的修訂版本編號。 如需PDF/A檔案修訂版本的資訊，請參閱標題為PDF/A-1 ISO規格 *ISO 19005-1檔案管理*.
 
 >[!NOTE]
 >
->不能将已标记的Adobe PDF选项设置为 `false` 创建PDF/A 1A文档时。 PDF/A 1A将始终是标记的PDF文档。 此外，您无法将已标记的Adobe PDF选项设置为 `true` 创建PDF/A 1B文档时。 PDF/A 1B将始终是未标记的PDF文档。
+>您無法將標籤的Adobe PDF選項設為 `false` 建立PDF/A 1A檔案時。 PDF/A 1A將永遠是標籤的PDF檔案。 此外，您無法將標籤的Adobe PDF選項設為 `true` 建立PDF/A 1B檔案時。 PDF/A 1B將永遠是未標籤的PDF檔案。
 
-**生成PDF/文档**
+**產生PDF/檔案**
 
-在引用包含表单数据的有效XML数据源并设置运行时选项后，可以调用输出服务，使其生成PDF/A文档。
+在您參照包含表單資料的有效XML資料來源並設定執行階段選項後，可以叫用Output服務，使其產生PDF/A檔案。
 
-**检索操作的结果**
+**擷取作業的結果**
 
-在Output服务执行操作后，它返回各种数据项，如指定操作是否成功的XML数据。
-
-**另请参阅**
-
-[使用Java API创建PDF/文档](creating-document-output-streams.md#create-a-pdf-a-document-using-the-java-api)
-
-[使用Web服务API创建PDF/文档](creating-document-output-streams.md#create-a-pdf-a-document-using-the-web-service-api)
-
-[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
-
-[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
-
-[输出服务API快速启动](/help/forms/developing/output-service-java-api-quick.md#output-service-java-api-quick-start-soap)
-
-### 使用Java API创建PDF/文档 {#create-a-pdf-a-document-using-the-java-api}
-
-使用输出API (Java)创建PDF/文档：
-
-1. 包括项目文件。
-
-   在Java项目的类路径中包含客户端JAR文件，如adobe-output-client.jar。
-
-1. 创建输出客户端对象。
-
-   * 创建 `ServiceClientFactory` 包含连接属性的对象。
-   * 创建 `OutputClient` 对象，使用它的构造函数传递 `ServiceClientFactory` 对象。
-
-1. 引用XML数据源。
-
-   * 创建 `java.io.FileInputStream` 对象，表示用于填充PDF/A文档的XML数据源，该数据源使用其构造函数并传递指定XML文件位置的字符串值。
-   * 创建 `com.adobe.idp.Document` 对象，使用它的构造函数传递 `java.io.FileInputStream` 对象。
-
-1. 设置PDF/A运行时选项。
-
-   * 创建 `PDFOutputOptionsSpec` 对象。
-   * 通过调用 `PDFOutputOptionsSpec` 对象的 `setFileURI` 方法。 传递一个字符串值，该值指定Output服务生成的PDF文件的位置。 文件URI选项相对于托管AEM Forms的J2EE应用程序服务器，而不是客户端计算机。
-
-1. 设置渲染运行时选项。
-
-   * 创建 `RenderOptionsSpec` 对象。
-   * 设置 `PDFAConformance` 值(通过调用 `RenderOptionsSpec` 对象的 `setPDFAConformance` 方法和传递 `PDFAConformance` 指定一致性级别的枚举值。 例如，要指定一致性级别A，请通过 `PDFAConformance.A`.
-   * 设置 `PDFARevisionNumber` 值(通过调用 `RenderOptionsSpec` 对象的 `setPDFARevisionNumber` 方法和传递 `PDFARevisionNumber.Revision_1`.
-
-   >[!NOTE]
-   >
-   >PDF/A文档的PDF版本是1.4，无论您为指定的值是什么 `RenderOptionsSpec` 对象的 `setPdfVersion`*方法。*
-
-1. 生成PDF/文档。
-
-   PDF通过调用 `OutputClient` 对象的 `generatePDFOutput` 方法，并传递以下值：
-
-   * A `TransformationFormat` 枚举值。 要生成PDF/文档，请指定 `TransformationFormat.PDFA`.
-   * 一个字符串值，它指定表单设计的名称。
-   * 一个字符串值，它指定表单设计所在的内容根。
-   * A `PDFOutputOptionsSpec` 包含PDF运行时选项的对象。
-   * A `RenderOptionsSpec` 包含渲染运行时选项的对象。
-   * 此 `com.adobe.idp.Document` 包含要与表单设计合并的数据的XML数据源的对象。
-
-   此 `generatePDFOutput` 方法返回 `OutputResult` 包含操作结果的对象。
-
-   >[!NOTE]
-   >
-   >此 `OutputResult` 对象的 `getRecordLevelMetaDataList` 方法返回 `null`.
-
-   >[!NOTE]
-   >
-   >PDF您还可以通过调用 `OutputClient` 对象的 `generatePDFOutput`2方法。 (请参阅 [将位于Content Services（已弃用）中的文档传递到输出服务](creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service).)
-
-1. 检索操作的结果。
-
-   * 创建 `com.adobe.idp.Document` 表示以下对象的状态的对象： `generatePDFOutput` 方法调用 `OutputResult` 对象的 `getStatusDoc` 方法。
-   * 创建 `java.io.File` 将包含操作结果的对象。 确保文件扩展名为.xml。
-   * 调用 `com.adobe.idp.Document` 对象的 `copyToFile` 用于复制目录内容的方法 `com.adobe.idp.Document` 对象(确保您使用 `com.adobe.idp.Document` 返回的对象 `getStatusDoc` 方法)。
-
-   >[!NOTE]
-   >
-   >尽管Output服务将PDF/A文档写入由传递到的参数指定的位置 `PDFOutputOptionsSpec` 对象的 `setFileURI` PDF方法，您可以通过调用 `OutputResult` 对象的 `getGeneratedDoc` 方法。
+Output服務執行作業之後，會傳回各種資料專案，例如XML資料，指定作業是否成功。
 
 **另请参阅**
 
-[步骤摘要](creating-document-output-streams.md#summary-of-steps)
+[使用Java API建立PDF/檔案](creating-document-output-streams.md#create-a-pdf-a-document-using-the-java-api)
 
-[快速入门（SOAP模式）：使用Java API创建PDF/A文档](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-a-document-using-the-java-api)
+[使用Web服務API建立PDF/檔案](creating-document-output-streams.md#create-a-pdf-a-document-using-the-web-service-api)
 
-[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
-[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### 使用Web服务API创建PDF/文档 {#create-a-pdf-a-document-using-the-web-service-api}
+[Output Service API快速啟動](/help/forms/developing/output-service-java-api-quick.md#output-service-java-api-quick-start-soap)
 
-使用输出API（Web服务）创建PDF/A文档：
+### 使用Java API建立PDF/檔案 {#create-a-pdf-a-document-using-the-java-api}
 
-1. 包括项目文件。
+使用Output API (Java)建立PDF/檔案：
 
-   创建使用MTOM的Microsoft .NET项目。 确保使用以下WSDL定义： `http://localhost:8080/soap/services/OutputService?WSDL&lc_version=9.0.1`.
+1. 包含專案檔案。
 
-   >[!NOTE]
-   >
-   >Replace `localhost` 包含托管AEM Forms的服务器的IP地址。
+   在您的Java專案的類別路徑中包含使用者端JAR檔案，例如adobe-output-client.jar。
 
-1. 创建输出客户端对象。
+1. 建立輸出使用者端物件。
 
-   * 创建 `OutputServiceClient` 对象。
-   * 创建 `OutputServiceClient.Endpoint.Address` 对象 `System.ServiceModel.EndpointAddress` 构造函数。 将指定WSDL的字符串值传递给AEM Forms服务(例如， `http://localhost:8080/soap/services/OutputService?blob=mtom`.) 您无需使用 `lc_version` 属性。 创建服务引用时使用此属性。 但是，请指定 `?blob=mtom` 使用MTOM。
-   * 创建 `System.ServiceModel.BasicHttpBinding` 对象，方法是获取 `OutputServiceClient.Endpoint.Binding` 字段。 将返回值强制转换为 `BasicHttpBinding`.
-   * 设置 `System.ServiceModel.BasicHttpBinding` 对象的 `MessageEncoding` 字段至 `WSMessageEncoding.Mtom`. 此值可确保使用MTOM。
-   * 通过执行以下任务启用基本HTTP身份验证：
+   * 建立 `ServiceClientFactory` 包含連線屬性的物件。
+   * 建立 `OutputClient` 物件，使用它的建構函式並傳遞 `ServiceClientFactory` 物件。
 
-      * 将AEM表单用户名分配给字段 `OutputServiceClient.ClientCredentials.UserName.UserName`.
-      * 将相应的密码值分配给字段 `OutputServiceClient.ClientCredentials.UserName.Password`.
-      * 分配常量值 `HttpClientCredentialType.Basic` 到字段 `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
-      * 分配常量值 `BasicHttpSecurityMode.TransportCredentialOnly` 到字段 `BasicHttpBindingSecurity.Security.Mode`.
+1. 參照XML資料來源。
 
-1. 引用XML数据源。
+   * 建立 `java.io.FileInputStream` 物件，代表使用建構函式並傳遞指定XML檔案位置的字串值來填入PDF/A檔案的XML資料來源。
+   * 建立 `com.adobe.idp.Document` 物件，使用它的建構函式並傳遞 `java.io.FileInputStream` 物件。
 
-   * 创建 `BLOB` 对象。 此 `BLOB` 对象用于存储将与PDF/A文档合并的数据。
-   * 创建 `System.IO.FileStream` 对象，方法是调用其构造函数并传递一个字符串值，该字符串值表示要加密的PDF文档的文件位置以及打开文件的模式。
-   * 创建一个字节数组，用于存储 `System.IO.FileStream` 对象。 您可以通过获取 `System.IO.FileStream` 对象的 `Length` 属性。
-   * 通过调用 `System.IO.FileStream` 对象的 `Read` 方法，并传递字节数组、起始位置和要读取的流长度。
-   * 填充 `BLOB` 对象(通过指定其 `MTOM` 包含字节数组内容的字段。
+1. 設定PDF/執行階段選項。
 
-1. 设置PDF/A运行时选项。
+   * 建立 `PDFOutputOptionsSpec` 物件（使用其建構函式）。
+   * 透過叫用 `PDFOutputOptionsSpec` 物件的 `setFileURI` 方法。 傳遞字串值，指定輸出服務產生的PDF檔案位置。 檔案URI選項是相對於裝載AEM Forms的J2EE應用程式伺服器，而不是使用者端電腦。
 
-   * 创建 `PDFOutputOptionsSpec` 对象。
-   * 通过指定一个字符串值来设置文件URI选项，该字符串值指定输出服务生成的PDF文件的位置。 `PDFOutputOptionsSpec` 对象的 `fileURI` 数据成员。 文件URI选项相对于托管AEM Forms的J2EE应用程序服务器，而不是客户端计算机
+1. 設定演算執行階段選項。
 
-1. 设置渲染运行时选项。
-
-   * 创建 `RenderOptionsSpec` 对象。
-   * 设置 `PDFAConformance` 值（通过分配） `PDFAConformance` 的枚举值 `RenderOptionsSpec` 对象的 `PDFAConformance` 数据成员。 例如，要指定一致性级别A，请指定 `PDFAConformance.A` 至此数据成员。
-   * 设置 `PDFARevisionNumber` 值（通过分配） `PDFARevisionNumber` 的枚举值 `RenderOptionsSpec` 对象的 `PDFARevisionNumber` 数据成员。 分配 `PDFARevisionNumber.Revision_1` 至此数据成员。
+   * 建立 `RenderOptionsSpec` 物件（使用其建構函式）。
+   * 設定 `PDFAConformance` 值(透過叫用 `RenderOptionsSpec` 物件的 `setPDFAConformance` 方法和傳遞 `PDFAConformance` 指定一致性層級的列舉值。 例如，若要指定一致性層級A，請通過 `PDFAConformance.A`.
+   * 設定 `PDFARevisionNumber` 值(透過叫用 `RenderOptionsSpec` 物件的 `setPDFARevisionNumber` 方法與傳遞 `PDFARevisionNumber.Revision_1`.
 
    >[!NOTE]
    >
-   >无论您指定哪个值，PDF/A文档的PDF版本均为1.4。
+   >PDF/A檔案的PDF版本是1.4，無論您為哪個值指定 `RenderOptionsSpec` 物件的 `setPdfVersion`*方法。*
 
-1. 生成PDF/文档。
+1. 產生PDF/檔案。
 
-   PDF通过调用 `OutputServiceService` 对象的 `generatePDFOutput`方法，并传递以下值：
+   透過叫用建立PDF/檔案 `OutputClient` 物件的 `generatePDFOutput` 並傳遞下列值：
 
-   * TransformationFormat枚举值。 要生成PDF单据，请指定 `TransformationFormat.PDFA`.
-   * 一个字符串值，它指定表单设计的名称。
-   * 一个字符串值，它指定表单设计所在的内容根。
-   * A `PDFOutputOptionsSpec` 包含PDF运行时选项的对象。
-   * A `RenderOptionsSpec` 包含渲染运行时选项的对象。
-   * 此 `BLOB` 包含要与表单设计合并的数据的XML数据源的对象。
-   * A `BLOB` 由填充的对象 `generatePDFOutput` 方法。 此 `generatePDFOutput` 方法使用生成的描述文档的元数据填充此对象。 （只有Web服务调用才需要此参数值。）
-   * A `BLOB` 由填充的对象 `generatePDFOutput` 方法。 此 `generatePDFOutput` 方法使用结果数据填充此对象。 （只有Web服务调用才需要此参数值。）
-   * An `OutputResult` 包含操作结果的对象。 （只有Web服务调用才需要此参数值。）
+   * A `TransformationFormat` 列舉值。 若要產生PDF/A檔案，請指定 `TransformationFormat.PDFA`.
+   * 字串值，指定表單設計的名稱。
+   * 字串值，指定表單設計所在的內容根。
+   * A `PDFOutputOptionsSpec` 包含PDF執行階段選項的物件。
+   * A `RenderOptionsSpec` 包含演算執行階段選項的物件。
+   * 此 `com.adobe.idp.Document` 包含要與表單設計合併之資料之XML資料來源的物件。
+
+   此 `generatePDFOutput` 方法傳回 `OutputResult` 包含作業結果的物件。
 
    >[!NOTE]
    >
-   >PDF您还可以通过调用 `OutputClient` 对象的 `generatePDFOutput`2方法。 (请参阅 [将位于Content Services（已弃用）中的文档传递到输出服务](creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service).)
+   >此 `OutputResult` 物件的 `getRecordLevelMetaDataList` 方法傳回 `null`.
 
-1. 检索操作的结果。
+   >[!NOTE]
+   >
+   >PDF您也可以叫用 `OutputClient` 物件的 `generatePDFOutput`2個方法。 (請參閱 [將位於Content Services （已棄用）中的檔案傳遞至Output Service](creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service).)
 
-   * 创建 `System.IO.FileStream` 对象，方法是调用其构造函数并传递一个字符串值，该值表示包含结果数据的XML文件位置。 确保文件扩展名为.xml。
-   * 创建一个字节数组，用于存储 `BLOB` 使用结果数据填充的对象 `OutputServiceService` 对象的 `generatePDFOutput` 方法（第八个参数）。 通过获取的值填充字节数组 `BLOB` 对象的 `MTOM` 字段。
-   * 创建 `System.IO.BinaryWriter` 对象，方法是调用其构造函数 `System.IO.FileStream` 对象。
-   * 通过调用 `System.IO.BinaryWriter` 对象的 `Write` 方法和传递字节数组。
+1. 擷取作業的結果。
+
+   * 建立 `com.adobe.idp.Document` 代表「 」狀態的物件 `generatePDFOutput` 方法，方法是叫用 `OutputResult` 物件的 `getStatusDoc` 方法。
+   * 建立 `java.io.File` 將包含作業結果的物件。 確認副檔名為.xml。
+   * 叫用 `com.adobe.idp.Document` 物件的 `copyToFile` 複製目錄內容的方法 `com.adobe.idp.Document` 物件放入檔案(請確定您使用 `com.adobe.idp.Document` 物件，由 `getStatusDoc` 方法)。
+
+   >[!NOTE]
+   >
+   >雖然Output服務會將PDF/A檔案寫入傳遞至的引數所指定的位置 `PDFOutputOptionsSpec` 物件的 `setFileURI` PDF方法，您可以透過叫用 `OutputResult` 物件的 `getGeneratedDoc` 方法。
 
 **另请参阅**
 
-[步骤摘要](creating-document-output-streams.md#summary-of-steps)
+[步驟摘要](creating-document-output-streams.md#summary-of-steps)
 
-[使用MTOM调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[快速入門（SOAP模式）：使用Java API建立PDF/檔案](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-a-document-using-the-java-api)
 
-[使用SwaRef调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
-## 将位于Content Services（已弃用）中的文档传递到输出服务 {#passing-documents-located-in-content-services-deprecated-to-the-output-service}
+[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
-Output服务渲染基于表单设计的非交互式PDF表单，该表单通常保存为XDP文件并在Designer中创建。 您可以传递 `com.adobe.idp.Document` 包含表单设计到Output服务的对象。 然后，Output服务渲染位于 `com.adobe.idp.Document` 对象。
+### 使用Web服務API建立PDF/檔案 {#create-a-pdf-a-document-using-the-web-service-api}
 
-通过A的优点是 `com.adobe.idp.Document` object to the Output service是其他AEM Forms服务操作返回 `com.adobe.idp.Document` 实例。 那就是，你可以得到一个 `com.adobe.idp.Document` 来自另一个服务操作的实例并渲染它。 例如，假设XDP文件存储在名为的Content Services（已弃用）节点中 `/Company Home/Form Designs`，如下图所示。
+使用Output API （Web服務）建立PDF/A檔案：
 
-您可以以编程方式从内容服务中检索Loan.xdp（已弃用），并将XDP文件传递到中的输出服务 `com.adobe.idp.Document` 对象。
+1. 包含專案檔案。
+
+   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/OutputService?WSDL&lc_version=9.0.1`.
+
+   >[!NOTE]
+   >
+   >Replace `localhost` 搭配裝載AEM Forms之伺服器的IP位址。
+
+1. 建立輸出使用者端物件。
+
+   * 建立 `OutputServiceClient` 物件（使用其預設建構函式）。
+   * 建立 `OutputServiceClient.Endpoint.Address` 物件，使用 `System.ServiceModel.EndpointAddress` 建構函式。 將指定WSDL的字串值傳遞至AEM Forms服務(例如， `http://localhost:8080/soap/services/OutputService?blob=mtom`.) 您不需要使用 `lc_version` 屬性。 當您建立服務參考時，會使用此屬性。 不過，請指定 `?blob=mtom` 以使用MTOM。
+   * 建立 `System.ServiceModel.BasicHttpBinding` 物件，方法是取得 `OutputServiceClient.Endpoint.Binding` 欄位。 將傳回值轉換為 `BasicHttpBinding`.
+   * 設定 `System.ServiceModel.BasicHttpBinding` 物件的 `MessageEncoding` 欄位至 `WSMessageEncoding.Mtom`. 此值可確保使用MTOM。
+   * 執行下列工作來啟用基本HTTP驗證：
+
+      * 將AEM表單使用者名稱指派給欄位 `OutputServiceClient.ClientCredentials.UserName.UserName`.
+      * 將對應的密碼值指派給欄位 `OutputServiceClient.ClientCredentials.UserName.Password`.
+      * 指派常數值 `HttpClientCredentialType.Basic` 至欄位 `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
+      * 指派常數值 `BasicHttpSecurityMode.TransportCredentialOnly` 至欄位 `BasicHttpBindingSecurity.Security.Mode`.
+
+1. 參照XML資料來源。
+
+   * 建立 `BLOB` 物件（使用其建構函式）。 此 `BLOB` 物件可用來儲存將與PDF/A檔案合併的資料。
+   * 建立 `System.IO.FileStream` 物件，方法是叫用其建構函式，並傳遞代表要加密之PDF檔案的檔案位置，以及開啟檔案的模式的字串值。
+   * 建立位元組陣列，儲存 `System.IO.FileStream` 物件。 您可以取得 `System.IO.FileStream` 物件的 `Length` 屬性。
+   * 叫用 `System.IO.FileStream` 物件的 `Read` 方法，並傳遞位元組陣列、起始位置以及要讀取的資料流長度。
+   * 填入 `BLOB` 物件，透過指派其 `MTOM` 包含位元組陣列內容的欄位。
+
+1. 設定PDF/執行階段選項。
+
+   * 建立 `PDFOutputOptionsSpec` 物件（使用其建構函式）。
+   * 透過指派字串值來設定檔案URI選項，該字串值指定輸出服務產生的PDF檔案的位置 `PDFOutputOptionsSpec` 物件的 `fileURI` 資料成員。 檔案URI選項是相對於主控AEM Forms的J2EE應用程式伺服器，而不是使用者端電腦
+
+1. 設定演算執行階段選項。
+
+   * 建立 `RenderOptionsSpec` 物件（使用其建構函式）。
+   * 設定 `PDFAConformance` 值（透過指派） `PDFAConformance` 列舉值至 `RenderOptionsSpec` 物件的 `PDFAConformance` 資料成員。 例如，若要指定一致性層級A，請指派 `PDFAConformance.A` 至此資料成員。
+   * 設定 `PDFARevisionNumber` 值（透過指派） `PDFARevisionNumber` 列舉值至 `RenderOptionsSpec` 物件的 `PDFARevisionNumber` 資料成員。 指派 `PDFARevisionNumber.Revision_1` 至此資料成員。
+
+   >[!NOTE]
+   >
+   >PDF/A檔案的PDF版本是1.4，無論您指定哪個值。
+
+1. 產生PDF/檔案。
+
+   透過叫用建立PDF檔案 `OutputServiceService` 物件的 `generatePDFOutput`並傳遞下列值：
+
+   * TransformationFormat列舉值。 若要產生PDF檔案，請指定 `TransformationFormat.PDFA`.
+   * 字串值，指定表單設計的名稱。
+   * 字串值，指定表單設計所在的內容根。
+   * A `PDFOutputOptionsSpec` 包含PDF執行階段選項的物件。
+   * A `RenderOptionsSpec` 包含演算執行階段選項的物件。
+   * 此 `BLOB` 包含要與表單設計合併之資料之XML資料來源的物件。
+   * A `BLOB` 由填入的物件 `generatePDFOutput` 方法。 此 `generatePDFOutput` 方法會使用產生的描述檔案的中繼資料填入此物件。 （只有Web服務呼叫需要此引數值。）
+   * A `BLOB` 由填入的物件 `generatePDFOutput` 方法。 此 `generatePDFOutput` 方法會將結果資料填入此物件中。 （只有Web服務呼叫需要此引數值。）
+   * 一個 `OutputResult` 包含作業結果的物件。 （只有Web服務呼叫需要此引數值。）
+
+   >[!NOTE]
+   >
+   >PDF您也可以叫用 `OutputClient` 物件的 `generatePDFOutput`2個方法。 (請參閱 [將位於Content Services （已棄用）中的檔案傳遞至Output Service](creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service).)
+
+1. 擷取作業的結果。
+
+   * 建立 `System.IO.FileStream` 物件，方法是叫用其建構函式，並傳遞代表包含結果資料之XML檔案位置的字串值。 確認副檔名為.xml。
+   * 建立位元組陣列，儲存 `BLOB` 填入結果資料的物件 `OutputServiceService` 物件的 `generatePDFOutput` 方法（第八個引數）。 透過取得 `BLOB` 物件的 `MTOM` 欄位。
+   * 建立 `System.IO.BinaryWriter` 物件，方法是叫用其建構函式並傳遞 `System.IO.FileStream` 物件。
+   * 透過叫用 `System.IO.BinaryWriter` 物件的 `Write` 方法並傳遞位元組陣列。
+
+**另请参阅**
+
+[步驟摘要](creating-document-output-streams.md#summary-of-steps)
+
+[使用MTOM叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+
+[使用SwaRef叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+
+## 將位於Content Services （已棄用）中的檔案傳遞至Output Service {#passing-documents-located-in-content-services-deprecated-to-the-output-service}
+
+Output服務會根據通常儲存為XDP檔案並在Designer中建立的表單設計來轉譯非互動式PDF表單。 您可以傳遞 `com.adobe.idp.Document` 包含表單設計至Output服務的物件。 然後Output服務會轉譯位於 `com.adobe.idp.Document` 物件。
+
+傳遞的優點 `com.adobe.idp.Document` object to the Output service是其他AEM Forms服務作業會傳回 `com.adobe.idp.Document` 執行個體。 也就是說，您可以取得 `com.adobe.idp.Document` 執行個體，並加以轉譯。 例如，假設XDP檔案儲存在名為的內容服務（已棄用）節點中 `/Company Home/Form Designs`，如下圖所示。
+
+您可以程式設計方式從內容服務（已棄用）擷取Loan.xdp，並將XDP檔案傳遞至中的輸出服務 `com.adobe.idp.Document` 物件。
 
 >[!NOTE]
 >
->有关Forms服务的更多信息，请参阅 [AEM Forms的服务参考](https://www.adobe.com/go/learn_aemforms_services_63).
+>如需Forms服務的詳細資訊，請參閱 [AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
 
-### 步骤摘要 {#summary_of_steps-2}
+### 步驟摘要 {#summary_of_steps-2}
 
-要将从Content Services（已弃用）获得的文档传递到输出服务，请执行以下任务：
+若要將從Content Services （已棄用）取得的檔案傳遞至Output服務，請執行下列工作：
 
-1. 包括项目文件。
-1. 创建输出和文档管理客户端API对象。
-1. 从Content Services检索表单设计（已弃用）。
-1. 渲染非交互式PDF表单。
-1. 对数据流执行操作。
+1. 包含專案檔案。
+1. 建立輸出和Document Management使用者端API物件。
+1. 從內容服務擷取表單設計（已棄用）。
+1. 演算非互動式PDF表單。
+1. 使用資料串流執行動作。
 
-**包括项目文件**
+**包含專案檔案**
 
-将必要的文件包含到开发项目中。 如果要使用Java创建客户端应用程序，请包含必要的JAR文件。 如果使用Web服务，请包含代理文件。
+將必要的檔案納入您的開發專案。 如果您使用Java建立使用者端應用程式，請包含必要的JAR檔案。 如果您使用Web服務，請包含Proxy檔案。
 
-**创建输出和文档管理客户端API对象**
+**建立輸出和Document Management使用者端API物件**
 
-在以编程方式执行输出服务API操作之前，请先创建输出客户端API对象。 此外，由于此工作流从内容服务中检索XDP文件（已弃用），因此请创建文档管理API对象。
+以程式設計方式執行輸出服務API操作之前，請先建立輸出使用者端API物件。 此外，由於此工作流程會從內容服務中擷取XDP檔案（已棄用），請建立檔案管理API物件。
 
-**从Content Services检索表单设计（已弃用）**
+**從內容服務擷取表單設計（已棄用）**
 
-使用Java或Web服务API从内容服务中检索XDP文件（已弃用）。 XDP文件返回于 `com.adobe.idp.Document` 实例(或 `BLOB` 实例（如果您使用Web服务）。 然后，您可以传递 `com.adobe.idp.Document` 实例到输出服务。
+使用Java或Web服務API從內容服務擷取XDP檔案（已棄用）。 XDP檔案會傳回 `com.adobe.idp.Document` 執行個體(或 `BLOB` 例項（若您使用網站服務）。 然後，您可以傳遞 `com.adobe.idp.Document` 執行個體到輸出服務。
 
-**渲染非交互式PDF表单**
+**演算非互動式PDF表單**
 
-要渲染非交互式表单，请传递 `com.adobe.idp.Document` 从Content Services（已弃用）返回到输出服务的实例。
+若要呈現非互動式表單，請傳遞 `com.adobe.idp.Document` 從Content Services （已棄用）傳回至輸出服務的例項。
 
 >[!NOTE]
 >
->两个名为的新方法 `generatePDFOutput2`和g `eneratePrintedOutput2`接受 `com.adobe.idp.Document` 包含表单设计的对象。 您也可以传递 `com.adobe.idp.Document`该模板包含向网络打印机发送打印流时输出服务的表单设计。
+>兩個命名的新方法 `generatePDFOutput2`和g `eneratePrintedOutput2`接受 `com.adobe.idp.Document` 包含表單設計的物件。 您也可以傳遞 `com.adobe.idp.Document`將列印資料流傳送至網路印表機時，包含輸出服務的表單設計。
 
-**对表单数据流执行操作**
+**使用表單資料流執行動作**
 
-您可以将非交互式表单另存为PDF文件。 该表单可在Adobe Reader或Acrobat中查看。
-
-**另请参阅**
-
-[使用Java API将文档传递到输出服务](creating-document-output-streams.md#pass-documents-to-the-output-service-using-the-java-api)
-
-[使用Web服务API将文档传递到输出服务](creating-document-output-streams.md#pass-documents-to-the-output-service-using-the-web-service-api)
-
-[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
-
-[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
-
-[输出服务API快速启动](/help/forms/developing/output-service-java-api-quick.md#output-service-java-api-quick-start-soap)
-
-[使用片段创建PDF文档](creating-document-output-streams.md#creating-pdf-documents-using-fragments)
-
-### 使用Java API将文档传递到输出服务 {#pass-documents-to-the-output-service-using-the-java-api}
-
-使用输出服务和内容服务（已弃用）API (Java)传递从Content Services（已弃用）检索的文档：
-
-1. 包括项目文件。
-
-   在Java项目的类路径中包含客户端JAR文件，如adobe-output-client.jar和adobe-contentservices-client.jar。
-
-1. 创建输出和文档管理客户端API对象。
-
-   * 创建 `ServiceClientFactory` 包含连接属性的对象。 (请参阅 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).)
-   * 创建 `OutputClient` 对象，使用它的构造函数传递 `ServiceClientFactory` 对象。
-   * 创建 `DocumentManagementServiceClientImpl` 对象，使用它的构造函数传递 `ServiceClientFactory` 对象。
-
-1. 从Content Services检索表单设计（已弃用）。
-
-   调用 `DocumentManagementServiceClientImpl` 对象的 `retrieveContent` 方法，并传递以下值：
-
-   * 一个字符串值，它指定添加内容的存储。 默认存储为 `SpacesStore`. 此值是必需参数。
-   * 一个字符串值，它指定要检索的内容的完全限定路径(例如， `/Company Home/Form Designs/Loan.xdp`)。 此值是必需参数。
-   * 指定版本的字符串值。 此值是一个可选参数，您可以传递空字符串。 在这种情况下，将检索最新版本。
-
-   此 `retrieveContent` 方法返回 `CRCResult` 包含XDP文件的对象。 检索 `com.adobe.idp.Document` 通过调用 `CRCResult` 对象的 `getDocument` 方法。
-
-1. 渲染非交互式PDF表单。
-
-   调用 `OutputClient` 对象的 `generatePDFOutput2` 方法，并传递以下值：
-
-   * A `TransformationFormat` 枚举值。 要生成PDF单据，请指定 `TransformationFormat.PDF`.
-   * 一个字符串值，它指定其他资源（如图像）所在的内容根。
-   * A `com.adobe.idp.Document` 表示表单设计的对象(使用返回的实例 `CRCResult` 对象的 `getDocument` 方法)。
-   * A `PDFOutputOptionsSpec` 包含PDF运行时选项的对象。
-   * A `RenderOptionsSpec` 包含渲染运行时选项的对象。
-   * 此 `com.adobe.idp.Document` 包含要与表单设计合并的数据的XML数据源的对象。
-
-   此 `generatePDFOutput2` 方法返回 `OutputResult` 包含操作结果的对象。
-
-1. 对表单数据流执行操作。
-
-   * 检索 `com.adobe.idp.Document` 通过调用 `OutputResult` 对象的 `getGeneratedDoc` 方法。
-   * 创建 `java.io.File` 包含操作结果的对象。 确保文件扩展名为.pdf。
-   * 调用 `com.adobe.idp.Document` 对象的 `copyToFile` 用于复制目录内容的方法 `com.adobe.idp.Document` 对象(确保您使用 `com.adobe.idp.Document` 返回的对象 `getGeneratedDoc` 方法)。
+您可以將非互動式表單儲存為PDF檔案。 此表單可在Adobe Reader或Acrobat中檢視。
 
 **另请参阅**
 
-[步骤摘要](creating-document-output-streams.md#summary-of-steps)
+[使用Java API將檔案傳遞到Output Service](creating-document-output-streams.md#pass-documents-to-the-output-service-using-the-java-api)
 
-[快速启动（EJB模式）：使用Java API将文档传递到Output Service](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-passing-documents-to-the-output-service-using-the-java-api)
+[使用Web服務API將檔案傳遞到Output Service](creating-document-output-streams.md#pass-documents-to-the-output-service-using-the-web-service-api)
 
-[快速入门（SOAP模式）：使用Java API将文档传递到输出服务](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-passing-documents-to-the-output-service-using-the-java-api)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
-[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+[Output Service API快速啟動](/help/forms/developing/output-service-java-api-quick.md#output-service-java-api-quick-start-soap)
 
-### 使用Web服务API将文档传递到输出服务 {#pass-documents-to-the-output-service-using-the-web-service-api}
+[使用片段建立PDF檔案](creating-document-output-streams.md#creating-pdf-documents-using-fragments)
 
-使用输出服务和内容服务（已弃用）API（Web服务）传递从Content Services（已弃用）检索的文档：
+### 使用Java API將檔案傳遞到Output Service {#pass-documents-to-the-output-service-using-the-java-api}
 
-1. 包括项目文件。
+使用輸出服務和內容服務（已棄用） API (Java)傳遞從內容服務（已棄用）擷取的檔案：
 
-   创建使用MTOM的Microsoft .NET项目。 由于此客户端应用程序调用两个AEM Forms服务，因此请创建两个服务引用。 为与Output服务关联的服务引用使用以下WSDL定义： `http://localhost:8080/soap/services/OutputService?WSDL&lc_version=9.0.1`.
+1. 包含專案檔案。
 
-   为与Document Management服务关联的服务引用使用以下WSDL定义： `http://localhost:8080/soap/services/DocumentManagementService?WSDL&lc_version=9.0.1`.
+   在您的Java專案的類別路徑中包含使用者端JAR檔案，例如adobe-output-client.jar和adobe-contentservices-client.jar。
 
-   因为 `BLOB` 数据类型对两个服务引用都是通用的，完全限定 `BLOB` 数据类型。 在相应的Web服务快速启动中，所有 `BLOB` 实例是完全限定的。
+1. 建立輸出和Document Management使用者端API物件。
+
+   * 建立 `ServiceClientFactory` 包含連線屬性的物件。 (請參閱 [設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).)
+   * 建立 `OutputClient` 物件，使用它的建構函式並傳遞 `ServiceClientFactory` 物件。
+   * 建立 `DocumentManagementServiceClientImpl` 物件，使用它的建構函式並傳遞 `ServiceClientFactory` 物件。
+
+1. 從內容服務擷取表單設計（已棄用）。
+
+   叫用 `DocumentManagementServiceClientImpl` 物件的 `retrieveContent` 方法並傳遞下列值：
+
+   * 字串值，指定新增內容的存放區。 預設存放區為 `SpacesStore`. 此值為必要引數。
+   * 字串值，指定要擷取之內容的完整路徑(例如 `/Company Home/Form Designs/Loan.xdp`)。 此值為必要引數。
+   * 字串值，指定版本。 此值是選用引數，您可以傳遞空字串。 在此情況下，會擷取最新版本。
+
+   此 `retrieveContent` 方法傳回 `CRCResult` 包含XDP檔案的物件。 擷取 `com.adobe.idp.Document` 執行個體(透過叫用 `CRCResult` 物件的 `getDocument` 方法。
+
+1. 演算非互動式PDF表單。
+
+   叫用 `OutputClient` 物件的 `generatePDFOutput2` 方法並傳遞下列值：
+
+   * A `TransformationFormat` 列舉值。 若要產生PDF檔案，請指定 `TransformationFormat.PDF`.
+   * 字串值，指定影像等其他資源所在的內容根。
+   * A `com.adobe.idp.Document` 代表表單設計的物件(使用 `CRCResult` 物件的 `getDocument` 方法)。
+   * A `PDFOutputOptionsSpec` 包含PDF執行階段選項的物件。
+   * A `RenderOptionsSpec` 包含演算執行階段選項的物件。
+   * 此 `com.adobe.idp.Document` 包含要與表單設計合併之資料之XML資料來源的物件。
+
+   此 `generatePDFOutput2` 方法傳回 `OutputResult` 包含作業結果的物件。
+
+1. 使用表單資料流執行動作。
+
+   * 擷取 `com.adobe.idp.Document` 代表非互動式表單的物件。 `OutputResult` 物件的 `getGeneratedDoc` 方法。
+   * 建立 `java.io.File` 包含作業結果的物件。 確認副檔名為.pdf。
+   * 叫用 `com.adobe.idp.Document` 物件的 `copyToFile` 複製目錄內容的方法 `com.adobe.idp.Document` 物件放入檔案(請確定您使用 `com.adobe.idp.Document` 物件，由 `getGeneratedDoc` 方法)。
+
+**另请参阅**
+
+[步驟摘要](creating-document-output-streams.md#summary-of-steps)
+
+[快速入門（EJB模式）：使用Java API將檔案傳遞到「輸出服務」](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-passing-documents-to-the-output-service-using-the-java-api)
+
+[快速入門（SOAP模式）：使用Java API將檔案傳遞至輸出服務](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-passing-documents-to-the-output-service-using-the-java-api)
+
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+
+[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+
+### 使用Web服務API將檔案傳遞到Output Service {#pass-documents-to-the-output-service-using-the-web-service-api}
+
+使用輸出服務和內容服務（已棄用） API （網頁服務），傳遞從內容服務（已棄用）擷取的檔案：
+
+1. 包含專案檔案。
+
+   建立使用MTOM的Microsoft .NET專案。 由於此使用者端應用程式會叫用兩個AEM Forms服務，請建立兩個服務參考。 對與Output服務相關聯的服務參考使用下列WSDL定義： `http://localhost:8080/soap/services/OutputService?WSDL&lc_version=9.0.1`.
+
+   使用下列WSDL定義作為與Document Management服務相關聯的服務參考： `http://localhost:8080/soap/services/DocumentManagementService?WSDL&lc_version=9.0.1`.
+
+   因為 `BLOB` 資料型別對兩個服務參考都是通用的，完全限定 `BLOB` 使用時的資料型別。 在對應的Web服務快速入門中，全部 `BLOB` 執行個體已完整合格。
 
    >[!NOTE]
    >
-   >Replace `localhost` 包含托管AEM Forms的服务器的IP地址。
+   >Replace `localhost` 搭配裝載AEM Forms之伺服器的IP位址。
 
-1. 创建输出和文档管理客户端API对象。
+1. 建立輸出和Document Management使用者端API物件。
 
-   * 创建 `OutputServiceClient` 对象。
-   * 创建 `OutputServiceClient.Endpoint.Address` 对象 `System.ServiceModel.EndpointAddress` 构造函数。 将指定WSDL的字符串值传递给Forms服务(例如， `http://localhost:8080/soap/services/OutputService?blob=mtom`)。 您无需使用 `lc_version` 属性。 创建服务引用时使用此属性。)
-   * 创建 `System.ServiceModel.BasicHttpBinding` 对象，方法是获取 `OutputServiceClient.Endpoint.Binding` 字段。 将返回值强制转换为 `BasicHttpBinding`.
-   * 设置 `System.ServiceModel.BasicHttpBinding` 对象的 `MessageEncoding` 字段至 `WSMessageEncoding.Mtom`. 此值可确保使用MTOM。
-   * 通过执行以下任务启用基本HTTP身份验证：
+   * 建立 `OutputServiceClient` 物件（使用其預設建構函式）。
+   * 建立 `OutputServiceClient.Endpoint.Address` 物件，使用 `System.ServiceModel.EndpointAddress` 建構函式。 將指定WSDL的字串值傳遞至Forms服務(例如， `http://localhost:8080/soap/services/OutputService?blob=mtom`)。 您不需要使用 `lc_version` 屬性。 當您建立服務參考時，會使用此屬性。)
+   * 建立 `System.ServiceModel.BasicHttpBinding` 物件，方法是取得 `OutputServiceClient.Endpoint.Binding` 欄位。 將傳回值轉換為 `BasicHttpBinding`.
+   * 設定 `System.ServiceModel.BasicHttpBinding` 物件的 `MessageEncoding` 欄位至 `WSMessageEncoding.Mtom`. 此值可確保使用MTOM。
+   * 執行下列工作來啟用基本HTTP驗證：
 
-      * 将AEM表单用户名分配给字段 `OutputServiceClient.ClientCredentials.UserName.UserName`.
-      * 将相应的密码值分配给字段 `OutputServiceClient.ClientCredentials.UserName.Password`.
-      * 分配常量值 `HttpClientCredentialType.Basic` 到字段 `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
-   * 分配常量值 `BasicHttpSecurityMode.TransportCredentialOnly` 到字段 `BasicHttpBindingSecurity.Security.Mode`.
+      * 將AEM表單使用者名稱指派給欄位 `OutputServiceClient.ClientCredentials.UserName.UserName`.
+      * 將對應的密碼值指派給欄位 `OutputServiceClient.ClientCredentials.UserName.Password`.
+      * 指派常數值 `HttpClientCredentialType.Basic` 至欄位 `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
+   * 指派常數值 `BasicHttpSecurityMode.TransportCredentialOnly` 至欄位 `BasicHttpBindingSecurity.Security.Mode`.
 
    >[!NOTE]
    >
-   >对重复这些步骤 `DocumentManagementServiceClient`服务客户端。
+   >對重複這些步驟 `DocumentManagementServiceClient`服務使用者端。
 
-1. 从Content Services检索表单设计（已弃用）。
+1. 從內容服務擷取表單設計（已棄用）。
 
-   通过调用 `DocumentManagementServiceClient` 对象的 `retrieveContent` 方法，并传递以下值：
+   透過叫用擷取內容 `DocumentManagementServiceClient` 物件的 `retrieveContent` 並傳遞下列值：
 
-   * 一个字符串值，它指定添加内容的存储。 默认存储为 `SpacesStore`. 此值是必需参数。
-   * 一个字符串值，它指定要检索的内容的完全限定路径(例如， `/Company Home/Form Designs/Loan.xdp`)。 此值是必需参数。
-   * 指定版本的字符串值。 此值是一个可选参数，您可以传递空字符串。 在这种情况下，将检索最新版本。
-   * 存储浏览链接值的字符串输出参数。
-   * A `BLOB` 存储内容的输出参数。 您可以使用此输出参数检索内容。
-   * A `ServiceReference1.MyMapOf_xsd_string_To_xsd_anyType` 存储内容属性的输出参数。
-   * A `CRCResult` 输出参数。 除了使用此对象之外，您还可以使用 `BLOB` 用于检索内容的输出参数。
+   * 字串值，指定新增內容的存放區。 預設存放區為 `SpacesStore`. 此值為必要引數。
+   * 字串值，指定要擷取之內容的完整路徑(例如 `/Company Home/Form Designs/Loan.xdp`)。 此值為必要引數。
+   * 字串值，指定版本。 此值是選用引數，您可以傳遞空字串。 在此情況下，會擷取最新版本。
+   * 儲存瀏覽連結值的字串輸出引數。
+   * A `BLOB` 儲存內容的輸出引數。 您可以使用此輸出引數來擷取內容。
+   * A `ServiceReference1.MyMapOf_xsd_string_To_xsd_anyType` 儲存內容屬性的輸出引數。
+   * A `CRCResult` 輸出引數。 除了使用此物件外，您還可以使用 `BLOB` 擷取內容的輸出引數。
 
-1. 渲染非交互式PDF表单。
+1. 演算非互動式PDF表單。
 
-   调用 `OutputServiceClient` 对象的 `generatePDFOutput2` 方法，并传递以下值：
+   叫用 `OutputServiceClient` 物件的 `generatePDFOutput2` 方法並傳遞下列值：
 
-   * A `TransformationFormat` 枚举值。 要生成PDF单据，请指定 `TransformationFormat.PDF`.
-   * 一个字符串值，它指定其他资源（如图像）所在的内容根。
-   * A `BLOB` 表示表单设计的对象(使用 `BLOB` 由Content Services返回的实例（已弃用）。
-   * A `PDFOutputOptionsSpec` 包含PDF运行时选项的对象。
-   * A `RenderOptionsSpec` 包含渲染运行时选项的对象。
-   * 此 `BLOB` 包含要与表单设计合并的数据的XML数据源的对象。
-   * 输出 `BLOB` 由填充的对象 `generatePDFOutput2` 方法。 此 `generatePDFOutput2` 方法使用生成的描述文档的元数据填充此对象。 （只有Web服务调用才需要此参数值）。
-   * 输出 `OutputResult` 包含操作结果的对象。 （只有Web服务调用才需要此参数值）。
+   * A `TransformationFormat` 列舉值。 若要產生PDF檔案，請指定 `TransformationFormat.PDF`.
+   * 字串值，指定影像等其他資源所在的內容根。
+   * A `BLOB` 代表表單設計的物件(使用 `BLOB` 內容服務傳回的例項（已棄用）。
+   * A `PDFOutputOptionsSpec` 包含PDF執行階段選項的物件。
+   * A `RenderOptionsSpec` 包含演算執行階段選項的物件。
+   * 此 `BLOB` 包含要與表單設計合併之資料之XML資料來源的物件。
+   * 輸出 `BLOB` 由填入的物件 `generatePDFOutput2` 方法。 此 `generatePDFOutput2` 方法會使用產生的描述檔案的中繼資料填入此物件。 （只有Web服務呼叫需要此引數值）。
+   * 輸出 `OutputResult` 包含作業結果的物件。 （只有Web服務呼叫需要此引數值）。
 
-   此 `generatePDFOutput2` 方法返回 `BLOB` 包含非交互式PDF表单的对象。
+   此 `generatePDFOutput2` 方法傳回 `BLOB` 包含非互動式PDF表單的物件。
 
-1. 对表单数据流执行操作。
+1. 使用表單資料流執行動作。
 
-   * 创建 `System.IO.FileStream` 对象。 传递一个字符串值，该值表示交互式PDF文档的文件位置和打开文件的模式。
-   * 创建一个字节数组，用于存储 `BLOB` 对象检索自 `generatePDFOutput2` 方法。 通过获取的值填充字节数组 `BLOB` 对象的 `MTOM` 数据成员。
-   * 创建 `System.IO.BinaryWriter` 对象，方法是调用其构造函数 `System.IO.FileStream` 对象。
-   * PDF通过调用 `System.IO.BinaryWriter` 对象的 `Write` 方法和传递字节数组。
+   * 建立 `System.IO.FileStream` 物件（透過叫用其建構函式）。 傳遞字串值，該值代表互動式PDF檔案的檔案位置以及開啟檔案的模式。
+   * 建立位元組陣列，儲存 `BLOB` 物件擷取自 `generatePDFOutput2` 方法。 透過取得 `BLOB` 物件的 `MTOM` 資料成員。
+   * 建立 `System.IO.BinaryWriter` 物件，方法是叫用其建構函式並傳遞 `System.IO.FileStream` 物件。
+   * PDF透過叫用 `System.IO.BinaryWriter` 物件的 `Write` 方法並傳遞位元組陣列。
 
 **另请参阅**
 
-[步骤摘要](creating-document-output-streams.md#summary-of-steps)
+[步驟摘要](creating-document-output-streams.md#summary-of-steps)
 
-[使用MTOM调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[使用MTOM叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-## 将存储库中的文档传递到输出服务 {#passing-documents-located-in-the-repository-to-the-output-service}
+## 將存放庫中的檔案傳遞至輸出服務 {#passing-documents-located-in-the-repository-to-the-output-service}
 
-Output服务渲染基于表单设计的非交互式PDF表单，该表单通常保存为XDP文件并在Designer中创建。 您可以传递 `com.adobe.idp.Document` 包含表单设计到Output服务的对象。 然后，Output服务渲染位于 `com.adobe.idp.Document` 对象。
+Output服務會根據通常儲存為XDP檔案並在Designer中建立的表單設計來轉譯非互動式PDF表單。 您可以傳遞 `com.adobe.idp.Document` 包含表單設計至Output服務的物件。 然後Output服務會轉譯位於 `com.adobe.idp.Document` 物件。
 
-通过A的优点是 `com.adobe.idp.Document` object to the Output service是其他AEM Forms服务操作返回 `com.adobe.idp.Document` 实例。 那就是，你可以得到一个 `com.adobe.idp.Document` 来自另一个服务操作的实例并渲染它。 例如，假设XDP文件存储在AEM Forms存储库中，如下图所示。
+傳遞的優點 `com.adobe.idp.Document` object to the Output service是其他AEM Forms服務作業會傳回 `com.adobe.idp.Document` 執行個體。 也就是說，您可以取得 `com.adobe.idp.Document` 執行個體，並加以轉譯。 例如，假設XDP檔案儲存在AEM Forms存放庫中，如下圖所示。
 
 ![pd_pd_formrepository](assets/pd_pd_formrepository.png)
 
-此 *FormsFolder* 文件夹是AEM Forms存储库中的用户定义的位置（此位置就是一个示例，默认情况下不存在）。 在此示例中，名为Loan.xdp的表单设计位于此文件夹中。 除了表单设计之外，还可以将其他表单宣传品（如图像）存储在此位置。 位于AEM Forms存储库中的资源的路径为：
+此 *FormsFolder* 資料夾是AEM Forms存放庫中的使用者定義位置（此位置為範例，預設不存在）。 在此範例中，名為Loan.xdp的表單設計位於此資料夾中。 除了表單設計之外，其他表單附屬資料（例如影像）也可以儲存在此位置。 位於AEM Forms存放庫中的資源路徑為：
 
 `Applications/Application-name/Application-version/Folder.../Filename`
 
-您可以以编程方式从AEM Forms存储库中检索Loan.xdp，并将其传递到中的输出服务 `com.adobe.idp.Document` 对象。
+您可以利用程式設計方式從AEM Forms存放庫擷取Loan.xdp，並將其傳遞至內的輸出服務。 `com.adobe.idp.Document` 物件。
 
-您可以使用以下两种方法之一，基于存储库中的XDP文件创建PDF。 您可以按引用传递XDP位置，也可以以编程方式从存储库检索XDP并将其传递到XDP文件中的Output服务。
+您可以使用兩種方式之一，根據存放庫中的XDP檔案建立PDF。 您可以參考傳遞XDP位置，或以程式設計方式從存放庫擷取XDP，並將其傳遞到XDP檔案中的輸出服務。
 
-[快速入门（EJB模式）：使用Java API基于应用程序XDP文件创建PDF文档](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-document-based-on-an-application-xdp-file-using-the-java-api) （显示如何通过引用传递XDP文件的位置）。
+[快速入門（EJB模式）：使用Java API根據應用程式XDP檔案建立PDF檔案](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-document-based-on-an-application-xdp-file-using-the-java-api) （顯示如何透過參考傳遞XDP檔案的位置）。
 
-[快速入门（EJB模式）：使用Java API将位于AEM Forms存储库中的文档传递到Output服务](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-passing-a-document-located-in-the-repository-to-the-output-service-using-the-java-api) (演示如何以编程方式从AEM Forms存储库检索XDP文件，并将其传递到中的输出服务 `com.adobe.idp.Document` 实例)。 （本节讨论如何执行此任务）
-
->[!NOTE]
->
->有关Forms服务的更多信息，请参阅 [AEM Forms的服务参考](https://www.adobe.com/go/learn_aemforms_services_63).
-
-### 步骤摘要 {#summary_of_steps-3}
-
-要将从AEM Forms存储库获得的文档传递到输出服务，请执行以下步骤：
-
-1. 包括项目文件。
-1. 创建输出和文档管理客户端API对象。
-1. 从AEM Forms存储库检索表单设计。
-1. 渲染非交互式PDF表单。
-1. 对数据流执行操作。
-
-**包括项目文件**
-
-将必要的文件包含到开发项目中。 如果要使用Java创建客户端应用程序，请包含必要的JAR文件。 如果使用Web服务，请包含代理文件。
-
-**创建输出和文档管理客户端API对象**
-
-在以编程方式执行输出服务API操作之前，请先创建输出客户端API对象。 此外，由于此工作流从内容服务中检索XDP文件（已弃用），因此请创建文档管理API对象。
-
-**从AEM Forms存储库检索表单设计**
-
-使用存储库API从AEM Forms存储库中检索XDP文件。 (请参阅 [正在读取资源](/help/forms/developing/aem-forms-repository.md#reading-resources).)
-
-XDP文件返回于 `com.adobe.idp.Document` 实例(或 `BLOB` 实例（如果您使用Web服务）。 然后，您可以传递 `com.adobe.idp.Document` Output服务的实例。
-
-**渲染非交互式PDF表单**
-
-要渲染非交互式表单，请传递 `com.adobe.idp.Document` 使用AEM Forms存储库API返回的实例。
+[快速入門（EJB模式）：使用Java API將位於AEM Forms儲存庫中的檔案傳遞到Output服務](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-passing-a-document-located-in-the-repository-to-the-output-service-using-the-java-api) (說明如何以程式設計方式從AEM Forms存放庫擷取XDP檔案，並將其傳遞至內的輸出服務) `com.adobe.idp.Document` 執行個體)。 （本節討論如何執行此工作）
 
 >[!NOTE]
 >
->两个名为的新方法 `generatePDFOutput2`和 `generatePrintedOutput2`接受 `com.adobe.idp.Document`包含表单设计的对象。 您也可以传递 `com.adobe.idp.Document` 该模板包含向网络打印机发送打印流时输出服务的表单设计。
+>如需Forms服務的詳細資訊，請參閱 [AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
 
-**对表单数据流执行操作**
+### 步驟摘要 {#summary_of_steps-3}
 
-您可以将非交互式表单另存为PDF文件。 该表单可在Adobe Reader或Acrobat中查看。
+若要將從AEM Forms存放庫取得的檔案傳遞至輸出服務，請執行下列工作：
 
-**另请参阅**
+1. 包含專案檔案。
+1. 建立輸出和Document Management使用者端API物件。
+1. 從AEM Forms存放庫擷取表單設計。
+1. 演算非互動式PDF表單。
+1. 使用資料串流執行動作。
 
-[使用Java API将存储库中的文档传递到输出服务](creating-document-output-streams.md#pass-documents-located-in-the-repository-to-the-output-service-using-the-java-api)
+**包含專案檔案**
 
-[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+將必要的檔案納入您的開發專案。 如果您使用Java建立使用者端應用程式，請包含必要的JAR檔案。 如果您使用Web服務，請包含Proxy檔案。
 
-[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+**建立輸出和Document Management使用者端API物件**
 
-[输出服务API快速启动](/help/forms/developing/output-service-java-api-quick.md#output-service-java-api-quick-start-soap)
+以程式設計方式執行輸出服務API操作之前，請先建立輸出使用者端API物件。 此外，由於此工作流程會從內容服務中擷取XDP檔案（已棄用），請建立檔案管理API物件。
 
-ResourceRepositoryClient
+**從AEM Forms存放庫擷取表單設計**
 
-### 使用Java API将存储库中的文档传递到输出服务 {#pass-documents-located-in-the-repository-to-the-output-service-using-the-java-api}
+使用存放庫API從AEM Forms存放庫擷取XDP檔案。 (請參閱 [正在讀取資源](/help/forms/developing/aem-forms-repository.md#reading-resources).)
 
-使用输出服务和存储库API (Java)传递从存储库检索到的文档：
+XDP檔案會傳回 `com.adobe.idp.Document` 執行個體(或 `BLOB` 例項（若您使用網站服務）。 然後，您可以傳遞 `com.adobe.idp.Document` Output服務的例項。
 
-1. 包括项目文件。
+**演算非互動式PDF表單**
 
-   在Java项目的类路径中包含客户端JAR文件，例如adobe-output-client.jar和adobe-repository-client.jar。
+若要呈現非互動式表單，請傳遞 `com.adobe.idp.Document` 使用AEM Forms Repository API傳回的執行個體。
 
-1. 创建输出和文档管理客户端API对象。
+>[!NOTE]
+>
+>兩個命名的新方法 `generatePDFOutput2`和 `generatePrintedOutput2`接受 `com.adobe.idp.Document`包含表單設計的物件。 您也可以傳遞 `com.adobe.idp.Document` 將列印資料流傳送至網路印表機時，包含輸出服務的表單設計。
 
-   * 创建 `ServiceClientFactory` 包含连接属性的对象。 (请参阅 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).)
-   * 创建 `OutputClient` 对象，使用它的构造函数传递 `ServiceClientFactory` 对象。
-   * 创建 `DocumentManagementServiceClientImpl` 对象，使用它的构造函数传递 `ServiceClientFactory` 对象。
+**使用表單資料流執行動作**
 
-1. 从AEM Forms存储库检索表单设计。
-
-   调用 `ResourceRepositoryClient` 对象的 `readResourceContent` 方法，并将指定URI位置的字符串值传递给XDP文件。 例如， `/Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`. 此值是必需的。 此方法会返回 `com.adobe.idp.Document` 表示XDP文件的实例。
-
-1. 渲染非交互式PDF表单。
-
-   调用 `OutputClient` 对象的 `generatePDFOutput2` 方法，并传递以下值：
-
-   * A `TransformationFormat` 枚举值。 要生成PDF单据，请指定 `TransformationFormat.PDF`.
-   * 一个字符串值，它指定其他资源（如图像）所在的内容根。 例如：`repository:///Applications/FormsApplication/1.0/FormsFolder/`。
-   * A `com.adobe.idp.Document` 表示表单设计的对象(使用返回的实例 `ResourceRepositoryClient` 对象的 `readResourceContent` 方法)。
-   * A `PDFOutputOptionsSpec` 包含PDF运行时选项的对象。
-   * A `RenderOptionsSpec` 包含渲染运行时选项的对象。
-   * 此 `com.adobe.idp.Document` 包含要与表单设计合并的数据的XML数据源的对象。
-
-   此 `generatePDFOutput2` 方法返回 `OutputResult` 包含操作结果的对象。
-
-1. 对表单数据流执行操作。
-
-   * 检索 `com.adobe.idp.Document` 通过调用 `OutputResult` 对象的 `getGeneratedDoc` 方法。
-   * 创建 `java.io.File` 包含操作结果的对象。 确保文件扩展名为.pdf。
-   * 调用 `com.adobe.idp.Document` 对象的 `copyToFile` 用于复制目录内容的方法 `com.adobe.idp.Document` 对象(确保您使用 `com.adobe.idp.Document` 返回的对象 `getGeneratedDoc` 方法)。
+您可以將非互動式表單儲存為PDF檔案。 此表單可在Adobe Reader或Acrobat中檢視。
 
 **另请参阅**
 
-[步骤摘要](creating-document-output-streams.md#summary-of-steps)
+[使用Java API將存放庫中的檔案傳遞至輸出服務](creating-document-output-streams.md#pass-documents-located-in-the-repository-to-the-output-service-using-the-java-api)
 
-[快速入门（EJB模式）：使用Java API将位于AEM Forms存储库中的文档传递到Output服务](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-passing-a-document-located-in-the-repository-to-the-output-service-using-the-java-api)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
-[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+[Output Service API快速啟動](/help/forms/developing/output-service-java-api-quick.md#output-service-java-api-quick-start-soap)
 
-## 使用片段创建PDF文档 {#creating-pdf-documents-using-fragments}
+資源存放庫使用者端
 
-您可以使用Output和Assembler服务创建基于片段的输出流，例如PDF文档。 Assembler服务基于位于多个XDP文件中的片段来组合XDP文档。 组装的XDP文档被传递到Output服务，该服务将创建一个PDF文档。 尽管此工作流显示正在生成的PDF文档，但Output服务可以为此工作流生成其他输出类型，如ZPL。 PDF文档仅用于讨论目的。
+### 使用Java API將存放庫中的檔案傳遞至輸出服務 {#pass-documents-located-in-the-repository-to-the-output-service-using-the-java-api}
 
-下图显示了此工作流。
+使用輸出服務和存放庫API (Java)傳遞從存放庫擷取的檔案：
+
+1. 包含專案檔案。
+
+   在您的Java專案的類別路徑中包含使用者端JAR檔案，例如adobe-output-client.jar和adobe-repository-client.jar。
+
+1. 建立輸出和Document Management使用者端API物件。
+
+   * 建立 `ServiceClientFactory` 包含連線屬性的物件。 (請參閱 [設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).)
+   * 建立 `OutputClient` 物件，使用它的建構函式並傳遞 `ServiceClientFactory` 物件。
+   * 建立 `DocumentManagementServiceClientImpl` 物件，使用它的建構函式並傳遞 `ServiceClientFactory` 物件。
+
+1. 從AEM Forms存放庫擷取表單設計。
+
+   叫用 `ResourceRepositoryClient` 物件的 `readResourceContent` 方法，並將指定URI位置的字串值傳遞至XDP檔案。 例如， `/Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`. 此值為必要值。 此方法會傳回 `com.adobe.idp.Document` 代表XDP檔案的例項。
+
+1. 演算非互動式PDF表單。
+
+   叫用 `OutputClient` 物件的 `generatePDFOutput2` 方法並傳遞下列值：
+
+   * A `TransformationFormat` 列舉值。 若要產生PDF檔案，請指定 `TransformationFormat.PDF`.
+   * 字串值，指定影像等其他資源所在的內容根。 例如：`repository:///Applications/FormsApplication/1.0/FormsFolder/`。
+   * A `com.adobe.idp.Document` 代表表單設計的物件(使用 `ResourceRepositoryClient` 物件的 `readResourceContent` 方法)。
+   * A `PDFOutputOptionsSpec` 包含PDF執行階段選項的物件。
+   * A `RenderOptionsSpec` 包含演算執行階段選項的物件。
+   * 此 `com.adobe.idp.Document` 包含要與表單設計合併之資料之XML資料來源的物件。
+
+   此 `generatePDFOutput2` 方法傳回 `OutputResult` 包含作業結果的物件。
+
+1. 使用表單資料流執行動作。
+
+   * 擷取 `com.adobe.idp.Document` 代表非互動式表單的物件。 `OutputResult` 物件的 `getGeneratedDoc` 方法。
+   * 建立 `java.io.File` 包含作業結果的物件。 確認副檔名為.pdf。
+   * 叫用 `com.adobe.idp.Document` 物件的 `copyToFile` 複製目錄內容的方法 `com.adobe.idp.Document` 物件放入檔案(請確定您使用 `com.adobe.idp.Document` 物件，由 `getGeneratedDoc` 方法)。
+
+**另请参阅**
+
+[步驟摘要](creating-document-output-streams.md#summary-of-steps)
+
+[快速入門（EJB模式）：使用Java API將位於AEM Forms儲存庫中的檔案傳遞到Output服務](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-passing-a-document-located-in-the-repository-to-the-output-service-using-the-java-api)
+
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+
+[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+
+## 使用片段建立PDF檔案 {#creating-pdf-documents-using-fragments}
+
+您可以使用輸出和組合器服務來建立以片段為基礎的輸出資料流，例如PDF檔案。 Assembler服務會根據位於多個XDP檔案中的片段來組合XDP檔案。 組裝的XDP檔案會傳遞到Output服務，該服務會建立PDF檔案。 雖然此工作流程顯示正在產生的PDF檔案，但「輸出」服務可以為此工作流程產生其他輸出型別，例如ZPL。 PDF檔案僅供討論之用。
+
+下圖顯示此工作流程。
 
 ![cp_cp_outputassemblegments](assets/cp_cp_outputassemblefragments.png)
 
-阅读前 *使用片段创建PDF文档*，建议您熟悉使用Assembler服务来汇编多个XDP文档。 (请参阅 [组装多个XDP片段](/help/forms/developing/assembling-pdf-documents.md#assembling-multiple-xdp-fragments).)
+閱讀前 *使用片段建立PDF檔案*，建議您熟悉如何使用組合器服務來組合多個XDP檔案。 (請參閱 [組合多個XDP片段](/help/forms/developing/assembling-pdf-documents.md#assembling-multiple-xdp-fragments).)
 
 >[!NOTE]
 >
->您还可以将由Assembler服务组装的表单设计传递到Forms服务，而不是Output服务。 Output服务和Forms服务的主要区别在于Forms服务生成交互式PDF文档，而Output服务生成非交互式PDF文档。 此外，Forms服务无法生成基于打印机的输出流（如ZPL）。
+>您也可以將由Assembler服務組裝的表單設計傳遞至Forms服務，而非Output服務。 Output服務與Forms服務的主要差異在於Forms服務會產生互動式PDF檔案，而Output服務會產生非互動式PDF檔案。 此外，Forms服務無法產生ZPL等印表機輸出資料流。
 
 >[!NOTE]
 >
->有关输出服务的详细信息，请参见 [AEM Forms的服务参考](https://www.adobe.com/go/learn_aemforms_services_63).
+>如需Output服務的詳細資訊，請參閱 [AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
 
-### 步骤摘要 {#summary_of_steps-4}
+### 步驟摘要 {#summary_of_steps-4}
 
-要基于片段创建PDF文档，请执行以下步骤：
+若要根據片段建立PDF檔案，請執行下列步驟：
 
-1. 包括项目文件。
-1. 创建输出和汇编程序客户端对象。
-1. 使用Assembler服务生成表单设计。
-1. 使用Output服务生成PDF文档。
-1. 将PDF文档另存为PDF文件。
+1. 包含專案檔案。
+1. 建立輸出和組合器使用者端物件。
+1. 使用Assembler服務產生表單設計。
+1. 使用Output服務產生PDF檔案。
+1. 將PDF檔案儲存為PDF檔案。
 
-**包括项目文件**
+**包含專案檔案**
 
-在开发项目中包含必要的文件。 如果要使用Java创建客户端应用程序，请包含必要的JAR文件。 如果使用Web服务，请确保包含代理文件。
+在您的開發專案中包含必要的檔案。 如果您使用Java建立使用者端應用程式，請包含必要的JAR檔案。 如果您使用Web服務，請務必包含Proxy檔案。
 
-**创建输出和汇编程序客户端对象**
+**建立輸出和組合器使用者端物件**
 
-在以编程方式执行输出服务API操作之前，请先创建输出客户端API对象。 此外，由于此工作流调用Assembler服务来创建表单设计，因此请创建一个Assembler客户端API对象。
+以程式設計方式執行輸出服務API操作之前，請先建立輸出使用者端API物件。 此外，由於此工作流程會叫用Assembler服務來建立表單設計，因此請建立Assembler使用者端API物件。
 
-**使用汇编程序服务生成表单设计**
+**使用Assembler服務產生表單設計**
 
-使用Assembler服务生成使用片段的表单设计。 汇编程序服务返回 `com.adobe.idp.Document` 包含窗体设计的实例。
+使用Assembler服務產生使用片段的表單設計。 組合器服務傳回 `com.adobe.idp.Document` 包含表單設計的例項。
 
-**使用Output服务生成PDF文档**
+**使用Output服務產生PDF檔案**
 
-您可以使用Output服务通过Assembler服务创建的表单设计生成PDF文档。 传递 `com.adobe.idp.Document` 汇编程序服务返回到Output服务的实例。
+您可以使用Output服務，使用Assembler服務建立的表單設計來產生PDF檔案。 傳遞 `com.adobe.idp.Document` 組合器服務傳回至輸出服務的執行個體。
 
-**将PDF文档另存为PDF文件**
+**將PDF檔案儲存為PDF檔案**
 
-在Output服务生成PDF文档后，您可以将其另存为PDF文件。
-
-**另请参阅**
-
-[使用Java API基于片段创建PDF文档](creating-document-output-streams.md#create-a-pdf-document-based-on-fragments-using-the-java-api)
-
-[使用Web服务API基于片段创建PDF文档](creating-document-output-streams.md#create-a-pdf-document-based-on-fragments-using-the-web-service-api)
-
-[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
-
-[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
-
-[输出服务API快速启动](/help/forms/developing/output-service-java-api-quick.md#output-service-java-api-quick-start-soap)
-
-[组装多个XDP片段](/help/forms/developing/assembling-pdf-documents.md#assembling-multiple-xdp-fragments)
-
-[创建PDF文档](creating-document-output-streams.md#creating-pdf-documents)
-
-### 使用Java API基于片段创建PDF文档 {#create-a-pdf-document-based-on-fragments-using-the-java-api}
-
-使用输出服务API和汇编程序服务API (Java)基于片段创建PDF文档：
-
-1. 包括项目文件。
-
-   在Java项目的类路径中包含客户端JAR文件，如adobe-output-client.jar。
-
-1. 创建输出和汇编程序客户端对象。
-
-   * 创建 `ServiceClientFactory` 包含连接属性的对象。
-   * 创建 `OutputClient` 对象，使用它的构造函数传递 `ServiceClientFactory` 对象。
-   * 创建 `AssemblerServiceClient` 对象，使用它的构造函数传递 `ServiceClientFactory` 对象。
-
-1. 使用Assembler服务生成表单设计。
-
-   调用 `AssemblerServiceClient` 对象的 `invokeDDX` 方法，并传递以下必需值：
-
-   * A `com.adobe.idp.Document` 表示要使用的DDX文档的对象。
-   * A `java.util.Map` 包含输入XDP文件的对象。
-   * A `com.adobe.livecycle.assembler.client.AssemblerOptionSpec` 指定运行时选项（包括默认字体和作业日志级别）的对象。
-
-   此 `invokeDDX` 方法返回 `com.adobe.livecycle.assembler.client.AssemblerResult` 包含已装配XDP文档的对象。 要检索装配的XDP文档，请执行下列操作：
-
-   * 调用 `AssemblerResult` 对象的 `getDocuments` 方法。 此方法会返回 `java.util.Map` 对象。
-   * 循环访问 `java.util.Map` 对象，直到找到结果 `com.adobe.idp.Document` 对象。
-   * 调用 `com.adobe.idp.Document` 对象的 `copyToFile` 提取已装配XDP文档的方法。
-
-
-1. 使用Output服务生成PDF文档。
-
-   调用 `OutputClient` 对象的 `generatePDFOutput2` 方法，并传递以下值：
-
-   * A `TransformationFormat` 枚举值。 要生成PDF单据，请指定 `TransformationFormat.PDF`
-   * 一个字符串值，它指定其他资源（如图像）所在的内容根
-   * A `com.adobe.idp.Document` 表示表单设计的对象（使用Assembler服务返回的实例）
-   * A `PDFOutputOptionsSpec` 包含PDF运行时选项的对象
-   * A `RenderOptionsSpec` 包含渲染运行时选项的对象
-   * 此 `com.adobe.idp.Document` 包含要与表单设计合并的数据的XML数据源的对象
-
-   此 `generatePDFOutput2` 方法返回 `OutputResult` 包含操作结果的对象
-
-1. 将PDF文档另存为PDF文件。
-
-   * 检索 `com.adobe.idp.Document` PDF通过调用 `OutputResult` 对象的 `getGeneratedDoc` 方法。
-   * 创建 `java.io.File` 包含操作结果的对象。 确保文件扩展名为.pdf。
-   * 调用 `com.adobe.idp.Document` 对象的 `copyToFile` 用于复制目录内容的方法 `com.adobe.idp.Document` 对象到文件。 (确保您使用 `com.adobe.idp.Document` 对象 `getGeneratedDoc` 方法已返回。)。
+在Output服務產生PDF檔案後，您可以將其儲存為PDF檔案。
 
 **另请参阅**
 
-[步骤摘要](creating-document-output-streams.md#summary-of-steps)
+[使用Java API根據片段建立PDF檔案](creating-document-output-streams.md#create-a-pdf-document-based-on-fragments-using-the-java-api)
 
-[快速入门（EJB模式）：使用Java API基于片段创建PDF文档](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-document-based-on-fragments-using-the-java-api)
+[使用Web服務API根據片段建立PDF檔案](creating-document-output-streams.md#create-a-pdf-document-based-on-fragments-using-the-web-service-api)
 
-[快速入门（SOAP模式）：使用Java API基于片段创建PDF文档](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-document-based-on-fragments-using-the-java-api)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
-[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+[Output Service API快速啟動](/help/forms/developing/output-service-java-api-quick.md#output-service-java-api-quick-start-soap)
 
-### 使用Web服务API基于片段创建PDF文档 {#create-a-pdf-document-based-on-fragments-using-the-web-service-api}
+[組合多個XDP片段](/help/forms/developing/assembling-pdf-documents.md#assembling-multiple-xdp-fragments)
 
-使用输出服务API和汇编程序服务API（Web服务）基于片段创建PDF文档：
+[建立PDF檔案](creating-document-output-streams.md#creating-pdf-documents)
 
-1. 包括项目文件。
+### 使用Java API根據片段建立PDF檔案 {#create-a-pdf-document-based-on-fragments-using-the-java-api}
 
-   创建使用MTOM的Microsoft .NET项目。 为与Output服务关联的服务引用使用以下WSDL定义：
+使用輸出服務API和組合器服務API (Java)，根據片段建立PDF檔案：
+
+1. 包含專案檔案。
+
+   在您的Java專案的類別路徑中包含使用者端JAR檔案，例如adobe-output-client.jar。
+
+1. 建立輸出和組合器使用者端物件。
+
+   * 建立 `ServiceClientFactory` 包含連線屬性的物件。
+   * 建立 `OutputClient` 物件，使用它的建構函式並傳遞 `ServiceClientFactory` 物件。
+   * 建立 `AssemblerServiceClient` 物件，使用它的建構函式並傳遞 `ServiceClientFactory` 物件。
+
+1. 使用Assembler服務產生表單設計。
+
+   叫用 `AssemblerServiceClient` 物件的 `invokeDDX` 方法並傳遞下列必要值：
+
+   * A `com.adobe.idp.Document` 代表要使用的DDX檔案的物件。
+   * A `java.util.Map` 包含輸入XDP檔案的物件。
+   * A `com.adobe.livecycle.assembler.client.AssemblerOptionSpec` 物件，指定執行階段選項，包括預設字型和作業記錄層級。
+
+   此 `invokeDDX` 方法傳回 `com.adobe.livecycle.assembler.client.AssemblerResult` 包含組合XDP檔案的物件。 若要擷取組裝的XDP檔案，請執行下列動作：
+
+   * 叫用 `AssemblerResult` 物件的 `getDocuments` 方法。 此方法會傳回 `java.util.Map` 物件。
+   * 循環瀏覽 `java.util.Map` 物件，直到您找到結果為止 `com.adobe.idp.Document` 物件。
+   * 叫用 `com.adobe.idp.Document` 物件的 `copyToFile` 擷取組合XDP檔案的方法。
+
+
+1. 使用Output服務產生PDF檔案。
+
+   叫用 `OutputClient` 物件的 `generatePDFOutput2` 方法並傳遞下列值：
+
+   * A `TransformationFormat` 列舉值。 若要產生PDF檔案，請指定 `TransformationFormat.PDF`
+   * 字串值，指定其他資源（例如影像）所在的內容根
+   * A `com.adobe.idp.Document` 代表表單設計的物件（使用Assembler服務傳回的例項）
+   * A `PDFOutputOptionsSpec` 包含PDF執行階段選項的物件
+   * A `RenderOptionsSpec` 包含演算執行階段選項的物件
+   * 此 `com.adobe.idp.Document` 包含要與表單設計合併之資料之XML資料來源的物件
+
+   此 `generatePDFOutput2` 方法傳回 `OutputResult` 包含作業結果的物件
+
+1. 將PDF檔案儲存為PDF檔案。
+
+   * 擷取 `com.adobe.idp.Document` 代表PDF檔案的物件(透過叫用 `OutputResult` 物件的 `getGeneratedDoc` 方法。
+   * 建立 `java.io.File` 包含作業結果的物件。 請確認副檔名為.pdf。
+   * 叫用 `com.adobe.idp.Document` 物件的 `copyToFile` 複製目錄內容的方法 `com.adobe.idp.Document` 物件至檔案。 (請確定您使用 `com.adobe.idp.Document` 物件， `getGeneratedDoc` 方法已傳回。)。
+
+**另请参阅**
+
+[步驟摘要](creating-document-output-streams.md#summary-of-steps)
+
+[快速入門（EJB模式）：使用Java API根據片段建立PDF檔案](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-document-based-on-fragments-using-the-java-api)
+
+[快速入門（SOAP模式）：使用Java API根據片段建立PDF檔案](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-document-based-on-fragments-using-the-java-api)
+
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+
+[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+
+### 使用Web服務API根據片段建立PDF檔案 {#create-a-pdf-document-based-on-fragments-using-the-web-service-api}
+
+使用輸出服務API和組合器服務API （Web服務），根據片段建立PDF檔案：
+
+1. 包含專案檔案。
+
+   建立使用MTOM的Microsoft .NET專案。 對與Output服務相關聯的服務參考使用下列WSDL定義：
 
    ```java
     http://localhost:8080/soap/services/OutputService?WSDL&lc_version=9.0.1.
    ```
 
-   对与Assembler服务关联的服务引用使用以下WSDL定义：
+   針對與Assembler服務相關聯的服務參考使用下列WSDL定義：
 
    ```java
     http://localhost:8080/soap/services/AssemblerService?WSDL&lc_version=9.0.1.
    ```
 
-   因为 `BLOB` 数据类型对两个服务引用都是通用的，完全限定 `BLOB` 数据类型。 在相应的Web服务快速启动中，所有 `BLOB` 实例是完全限定的。
+   因為 `BLOB` 資料型別對兩個服務參考都是通用的，完全限定 `BLOB` 使用時的資料型別。 在對應的Web服務快速入門中，全部 `BLOB` 執行個體已完整合格。
 
    >[!NOTE]
    >
-   >Replace `localhost` 包含托管AEM Forms的服务器的IP地址。
+   >Replace `localhost` 搭配裝載AEM Forms之伺服器的IP位址。
 
-1. 创建输出和汇编程序客户端对象。
+1. 建立輸出和組合器使用者端物件。
 
-   * 创建 `OutputServiceClient` 对象。
-   * 创建 `OutputServiceClient.Endpoint.Address` 对象 `System.ServiceModel.EndpointAddress` 构造函数。 将指定WSDL的字符串值传递给AEM Forms服务(例如， `http://localhost:8080/soap/services/OutputService?blob=mtom`.) 您无需使用 `lc_version` 属性。 创建服务引用时使用此属性。 但是，请指定 `?blob=mtom` 使用MTOM。
-   * 创建 `System.ServiceModel.BasicHttpBinding` 对象，方法是获取 `OutputServiceClient.Endpoint.Binding` 字段。 将返回值强制转换为 `BasicHttpBinding`.
-   * 设置 `System.ServiceModel.BasicHttpBinding` 对象的 `MessageEncoding` 字段至 `WSMessageEncoding.Mtom`. 此值可确保使用MTOM。
-   * 通过执行以下任务启用基本HTTP身份验证：
+   * 建立 `OutputServiceClient` 物件（使用其預設建構函式）。
+   * 建立 `OutputServiceClient.Endpoint.Address` 物件，使用 `System.ServiceModel.EndpointAddress` 建構函式。 將指定WSDL的字串值傳遞至AEM Forms服務(例如， `http://localhost:8080/soap/services/OutputService?blob=mtom`.) 您不需要使用 `lc_version` 屬性。 當您建立服務參考時，會使用此屬性。 不過，請指定 `?blob=mtom` 以使用MTOM。
+   * 建立 `System.ServiceModel.BasicHttpBinding` 物件，方法是取得 `OutputServiceClient.Endpoint.Binding` 欄位。 將傳回值轉換為 `BasicHttpBinding`.
+   * 設定 `System.ServiceModel.BasicHttpBinding` 物件的 `MessageEncoding` 欄位至 `WSMessageEncoding.Mtom`. 此值可確保使用MTOM。
+   * 執行下列工作來啟用基本HTTP驗證：
 
-      * 将AEM表单用户名分配给 `OutputServiceClient.ClientCredentials.UserName.UserName`字段。
-      * 将相应的密码值分配给 `OutputServiceClient.ClientCredentials.UserName.Password`字段。
-      * 分配常量值 `HttpClientCredentialType.Basic` 到 `BasicHttpBindingSecurity.Transport.ClientCredentialType`字段。
-   * 分配 `BasicHttpSecurityMode.TransportCredentialOnly` 的常量值 `BasicHttpBindingSecurity.Security.Mode`字段。
+      * 將AEM表單使用者名稱指派給 `OutputServiceClient.ClientCredentials.UserName.UserName`欄位。
+      * 將對應的密碼值指派給 `OutputServiceClient.ClientCredentials.UserName.Password`欄位。
+      * 指派常數值 `HttpClientCredentialType.Basic` 至 `BasicHttpBindingSecurity.Transport.ClientCredentialType`欄位。
+   * 指派 `BasicHttpSecurityMode.TransportCredentialOnly` 的常數值 `BasicHttpBindingSecurity.Security.Mode`欄位。
 
    >[!NOTE]
    >
-   >对重复这些步骤 `AssemblerServiceClient`对象。
+   >對重複這些步驟 `AssemblerServiceClient`物件。
 
-1. 使用Assembler服务生成表单设计。
+1. 使用Assembler服務產生表單設計。
 
-   调用 `AssemblerServiceClient` 对象的 `invokeDDX` 方法，并传递以下值：
+   叫用 `AssemblerServiceClient` 物件的 `invokeDDX` 方法並傳遞下列值：
 
-   * A `BLOB` 表示DDX文档的对象
-   * 此 `MyMapOf_xsd_string_To_xsd_anyType` 包含所需文件的对象
-   * An `AssemblerOptionSpec` 指定运行时选项的对象
+   * A `BLOB` 代表DDX檔案的物件
+   * 此 `MyMapOf_xsd_string_To_xsd_anyType` 包含必要檔案的物件
+   * 一個 `AssemblerOptionSpec` 指定執行階段選項的物件
 
-   此 `invokeDDX` 方法返回 `AssemblerResult` 包含作业结果和发生的任何异常的对象。 要获取新创建的XDP文档，请执行以下步骤：
+   此 `invokeDDX` 方法傳回 `AssemblerResult` 包含工作結果和發生之任何例外狀況的物件。 若要取得新建立的XDP檔案，請執行下列動作：
 
-   * 访问 `AssemblerResult` 对象的 `documents` 字段，即 `Map` 包含生成PDF文档的对象。
-   * 循环访问 `Map` 对象以检索装配后的表单设计。 转换该数组成员的 `value` 到 `BLOB`. 传递此 `BLOB` 实例到输出服务。
+   * 存取 `AssemblerResult` 物件的 `documents` 欄位，即 `Map` 包含結果PDF檔案的物件。
+   * 循環瀏覽 `Map` 物件，以擷取組裝的表單設計。 轉換該陣列成員的 `value` 至 `BLOB`. 傳遞此 `BLOB` 執行個體到輸出服務。
 
 
-1. 使用Output服务生成PDF文档。
+1. 使用Output服務產生PDF檔案。
 
-   调用 `OutputServiceClient` 对象的 `generatePDFOutput2` 方法，并传递以下值：
+   叫用 `OutputServiceClient` 物件的 `generatePDFOutput2` 方法並傳遞下列值：
 
-   * A `TransformationFormat` 枚举值。 要生成PDF单据，请指定 `TransformationFormat.PDF`.
-   * 一个字符串值，它指定其他资源（如图像）所在的内容根。
-   * A `BLOB` 表示表单设计的对象(使用 `BLOB` 由Assembler服务返回的实例)。
-   * A `PDFOutputOptionsSpec` 包含PDF运行时选项的对象。
-   * A `RenderOptionsSpec` 包含渲染运行时选项的对象。
-   * 此 `BLOB` 包含要与表单设计合并的数据的XML数据源的对象。
-   * 输出 `BLOB` 对象 `generatePDFOutput2` 方法将填充。 此 `generatePDFOutput2` 方法使用生成的描述文档的元数据填充此对象。 （只有Web服务调用才需要此参数值）。
-   * 输出 `OutputResult` 包含操作结果的对象。 （只有Web服务调用才需要此参数值）。
+   * A `TransformationFormat` 列舉值。 若要產生PDF檔案，請指定 `TransformationFormat.PDF`.
+   * 字串值，指定其他資源（例如影像）所在的內容根。
+   * A `BLOB` 代表表單設計的物件(使用 `BLOB` 執行個體（由組合器服務傳回）。
+   * A `PDFOutputOptionsSpec` 包含PDF執行階段選項的物件。
+   * A `RenderOptionsSpec` 包含演算執行階段選項的物件。
+   * 此 `BLOB` 包含要與表單設計合併之資料之XML資料來源的物件。
+   * 輸出 `BLOB` 物件， `generatePDFOutput2` 方法會填入。 此 `generatePDFOutput2` 方法會使用產生的描述檔案的中繼資料填入此物件。 （只有Web服務呼叫需要此引數值）。
+   * 輸出 `OutputResult` 包含作業結果的物件。 （只有Web服務呼叫需要此引數值）。
 
-   此 `generatePDFOutput2` 方法返回 `BLOB` 包含非交互式PDF表单的对象。
+   此 `generatePDFOutput2` 方法傳回 `BLOB` 包含非互動式PDF表單的物件。
 
-1. 将PDF文档另存为PDF文件。
+1. 將PDF檔案儲存為PDF檔案。
 
-   * 创建 `System.IO.FileStream` 对象。 传递一个字符串值，该值表示交互式PDF文档的文件位置和打开文件的模式。
-   * 创建一个字节数组，用于存储 `BLOB` 对象检索自 `generatePDFOutput2` 方法。 通过获取的值填充字节数组 `BLOB` 对象的 `MTOM` 数据成员。
-   * 创建 `System.IO.BinaryWriter` 对象，方法是调用其构造函数 `System.IO.FileStream` 对象。
-   * PDF通过调用 `System.IO.BinaryWriter` 对象的 `Write` 方法和传递字节数组。
+   * 建立 `System.IO.FileStream` 物件（透過叫用其建構函式）。 傳遞字串值，該值代表互動式PDF檔案的檔案位置以及開啟檔案的模式。
+   * 建立位元組陣列，儲存 `BLOB` 物件擷取自 `generatePDFOutput2` 方法。 透過取得 `BLOB` 物件的 `MTOM` 資料成員。
+   * 建立 `System.IO.BinaryWriter` 物件，方法是叫用其建構函式並傳遞 `System.IO.FileStream` 物件。
+   * PDF透過叫用 `System.IO.BinaryWriter` 物件的 `Write` 方法並傳遞位元組陣列。
 
 **另请参阅**
 
-[步骤摘要](creating-document-output-streams.md#summary-of-steps)
+[步驟摘要](creating-document-output-streams.md#summary-of-steps)
 
-[使用MTOM调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[使用MTOM叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-## 打印到文件 {#printing-to-files}
+## 列印至檔案 {#printing-to-files}
 
-可以使用Output服务将诸如PostScript、打印机控制语言(PCL)之类的流或以下标签格式打印到文件：
+您可以使用Output服務將如PostScript、印表機控制語言(PCL)或下列標籤格式等串流列印到檔案中：
 
-* 斑马 — ZPL
+* 斑馬 — ZPL
 * Intermec - IPL
 * Datamax - DPL
 * TecToshiba - TPCL
 
-使用Output服务，可以将XML数据与表单设计合并，并将表单打印到文件。 下图显示了Output服务创建激光和标签文件。
+使用Output服務，您可以將XML資料與表單設計合併，並將表單列印到檔案中。 下圖顯示建立雷射和標籤檔案的Output服務。
 
 >[!NOTE]
 >
->有关将打印流发送到打印机的信息，请参见 [将打印流发送到打印机](creating-document-output-streams.md#sending-print-streams-to-printers).
+>如需傳送列印資料流至印表機的詳細資訊，請參閱 [傳送列印資料流至印表機](creating-document-output-streams.md#sending-print-streams-to-printers).
 
 >[!NOTE]
 >
->有关输出服务的详细信息，请参见 [AEM Forms的服务参考](https://www.adobe.com/go/learn_aemforms_services_63).
+>如需Output服務的詳細資訊，請參閱 [AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
 
-### 步骤摘要 {#summary_of_steps-5}
+### 步驟摘要 {#summary_of_steps-5}
 
-要打印到文件，请执行以下步骤：
+若要列印至檔案，請執行下列步驟：
 
-1. 包括项目文件。
-1. 创建输出客户端对象。
-1. 引用XML数据源。
-1. 设置打印到文件所需的打印运行时选项。
-1. 将打印流打印到文件。
-1. 检索操作的结果。
+1. 包含專案檔案。
+1. 建立輸出使用者端物件。
+1. 參照XML資料來源。
+1. 設定列印至檔案所需的列印執行階段選項。
+1. 將列印資料流列印到檔案。
+1. 擷取作業的結果。
 
-**包括项目文件**
+**包含專案檔案**
 
-在开发项目中包含必要的文件。 如果要使用Java创建客户端应用程序，请包含必要的JAR文件。 如果使用Web服务，请确保包含代理文件。
+在您的開發專案中包含必要的檔案。 如果您使用Java建立使用者端應用程式，請包含必要的JAR檔案。 如果您使用Web服務，請務必包含Proxy檔案。
 
-必须将以下JAR文件添加到项目的类路径中：
+必須將以下JAR檔案新增到專案的類別路徑中：
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-output-client.jar
-* adobe-utilities.jar(如果在JBoss上部署了AEM Forms，则此为必填字段)
-* jbossall-client.jar(如果在JBoss上部署了AEM Forms，则此为必填字段)
+* adobe-utilities.jar (如果AEM Forms部署在JBoss上，則為必要)
+* jbossall-client.jar (如果AEM Forms部署在JBoss上，則為必要)
 
-如果将AEM Forms部署在非JBoss的受支持J2EE应用程序服务器上，则需要将adobe-utilities.jar和jbossall-client.jar文件替换为特定于部署AEM Forms的J2EE应用程序服务器的JAR文件。 (请参阅 [包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).)
+如果將AEM Forms部署在非JBoss的支援J2EE應用程式伺服器上，您需要將adobe-utilities.jar和jbossall-client.jar檔案取代為部署AEM Forms之J2EE應用程式伺服器專屬的JAR檔案。 (請參閱 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).)
 
-**创建输出客户端对象**
+**建立輸出使用者端物件**
 
-必须先创建输出服务客户端对象，然后才能以编程方式执行输出服务操作。 如果您使用的是Java API，请创建 `OutputClient` 对象。 如果您使用的是Output Web service API，请创建 `OutputServiceService` 对象。
+您必須先建立輸出服務使用者端物件，才能以程式設計方式執行輸出服務作業。 如果您使用Java API，請建立 `OutputClient` 物件。 如果您使用輸出Web服務API，請建立 `OutputServiceService` 物件。
 
-**引用XML数据源**
+**參考XML資料來源**
 
-要打印包含数据的文档，您必须为要填充数据的每个表单字段引用包含XML元素的XML数据源。 XML元素名称必须与字段名称匹配。 如果XML元素与表单字段不对应，或者如果XML元素名称与字段名称不匹配，则会忽略该元素。 如果指定了所有XML元素，则不必匹配XML元素的显示顺序。
+若要列印包含資料的檔案，您必須針對每個要填入資料的表單欄位，參考包含XML元素的XML資料來源。 XML元素名稱必須符合欄位名稱。 如果XML元素未對應至表單欄位，或XML元素名稱不符合欄位名稱，則會忽略該元素。 如果已指定所有XML元素，則不必比對XML元素的顯示順序。
 
-**设置打印到文件所需的打印运行时选项**
+**設定列印至檔案所需的列印執行階段選項**
 
-要打印到文件，必须通过指定Output服务打印到的文件的位置和名称来设置文件URI运行时选项。 例如，指示Output服务打印名为的PostScript文件 *MortgageForm.ps* 至C:\Adobe，请指定C:\Adobe\MortgageForm.ps。
+若要列印至檔案，您必須指定Output服務列印的檔案位置和名稱，以設定File URI執行階段選項。 例如，指示Output服務列印名為的PostScript檔案 *MortgageForm.ps* 若要C:\Adobe，請指定C:\Adobe\MortgageForm.ps。
 
 >[!NOTE]
 >
->您可以定义可选的运行时选项。 有关可设置的所有选项的信息，请参见 `PrintedOutputOptionsSpec` 中的类引用 [AEM Forms API参考](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
+>您可以選擇定義執行階段選項。 如需可設定之所有選項的相關資訊，請參閱 `PrintedOutputOptionsSpec` 中的類別參考 [AEM Forms API參考](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
 
-**将打印流打印到文件**
+**將列印資料流列印到檔案**
 
-在引用包含表单数据的有效XML数据源并设置打印运行时选项后，可以调用Output服务，使其打印文件。
+在參照包含表單資料的有效XML資料來源並設定列印執行階段選項後，您可以叫用Output服務，使其列印檔案。
 
-**检索操作的结果**
+**擷取作業的結果**
 
-在Output服务执行操作之后，它返回指定操作是否成功的各种数据项，如XML数据。
+Output服務執行作業之後，會傳回指定作業是否成功的各種資料專案，例如XML資料。
 
 **另请参阅**
 
-[使用Java API打印到文件](creating-document-output-streams.md#print-to-files-using-the-java-api)
+[使用Java API列印至檔案](creating-document-output-streams.md#print-to-files-using-the-java-api)
 
-[使用Web服务API打印到文件](creating-document-output-streams.md#print-to-files-using-the-web-service-api)
+[使用Web服務API列印至檔案](creating-document-output-streams.md#print-to-files-using-the-web-service-api)
 
-[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
-[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[输出服务API快速启动](/help/forms/developing/output-service-java-api-quick.md#output-service-java-api-quick-start-soap)
+[Output Service API快速啟動](/help/forms/developing/output-service-java-api-quick.md#output-service-java-api-quick-start-soap)
 
-### 使用Java API打印到文件 {#print-to-files-using-the-java-api}
+### 使用Java API列印至檔案 {#print-to-files-using-the-java-api}
 
-使用Output API (Java)打印到文件：
+使用Output API (Java)列印至檔案：
 
-1. 包括项目文件。
+1. 包含專案檔案。
 
-   在Java项目的类路径中包含客户端JAR文件，例如adobe-output-client.jar。
+   在您的Java專案的類別路徑中包含使用者端JAR檔案，例如adobe-output-client.jar。
 
-1. 创建输出客户端对象。
+1. 建立輸出使用者端物件。
 
-   * 创建 `ServiceClientFactory` 包含连接属性的对象。
-   * 创建 `OutputClient` 对象，使用它的构造函数传递 `ServiceClientFactory` 对象。
+   * 建立 `ServiceClientFactory` 包含連線屬性的物件。
+   * 建立 `OutputClient` 物件，使用它的建構函式並傳遞 `ServiceClientFactory` 物件。
 
-1. 引用XML数据源。
+1. 參照XML資料來源。
 
-   * 创建 `java.io.FileInputStream` 对象，表示用于填充文档的XML数据源，它使用其构造函数并传递指定XML文件位置的字符串值。
-   * 创建 `com.adobe.idp.Document` 对象，使用它的构造函数传递 `java.io.FileInputStream` 对象。
+   * 建立 `java.io.FileInputStream` 物件，代表XML資料來源，透過其建構函式並傳遞指定XML檔案位置的字串值，用來填入檔案。
+   * 建立 `com.adobe.idp.Document` 物件，使用它的建構函式並傳遞 `java.io.FileInputStream` 物件。
 
-1. 设置打印到文件所需的打印运行时选项。
+1. 設定列印至檔案所需的列印執行階段選項。
 
-   * 创建 `PrintedOutputOptionsSpec` 对象。
-   * 通过调用PrintedOutputOptionsSpec对象的 `setFileURI` 方法，并传递一个表示文件名称和位置的字符串值。 例如，如果您希望Output服务打印到位于C:\Adobe中的名为MortgageForm.ps的PostScript文件，请指定C:\\Adobe\MortgageForm.ps。
-   * 通过调用 `PrintedOutputOptionsSpec` 对象的 `setCopies` 方法，并传递一个表示副本数的整数值。
+   * 建立 `PrintedOutputOptionsSpec` 物件（使用其建構函式）。
+   * 透過叫用PrintedOutputOptionsSpec物件的 `setFileURI` 方法，並傳遞代表檔案名稱和位置的字串值。 例如，如果您希望Output服務列印到位於C:\Adobe中名為MortgageForm.ps的PostScript檔案，請指定C:\\Adobe\MortgageForm.ps。
+   * 透過叫用「 」，指定要列印的份數 `PrintedOutputOptionsSpec` 物件的 `setCopies` 方法，並傳遞代表份數的整數值。
 
-1. 将打印流打印到文件。
+1. 將列印資料流列印到檔案。
 
-   通过调用 `OutputClient` 对象的 `generatePrintedOutput` 方法，并传递以下值：
+   透過叫用 `OutputClient` 物件的 `generatePrintedOutput` 並傳遞下列值：
 
-   * A `PrintFormat` 枚举值，指定要创建的打印流格式。 例如，要创建PostScript打印流，请传递 `PrintFormat.PostScript`.
-   * 一个字符串值，它指定表单设计的名称。
-   * 一个字符串值，它指定相关附属文件（如图像文件）的位置。
-   * 一个字符串值，它指定要使用的XDC文件的位置(您可以传递 `null` 如果您通过使用 `PrintedOutputOptionsSpec` 对象)。
-   * 此 `PrintedOutputOptionsSpec` 包含打印到文件所需的运行时选项的对象。
-   * 此 `com.adobe.idp.Document` 包含包含表单数据的XML数据源的对象。
+   * A `PrintFormat` 列舉值，指定要建立的列印資料流格式。 例如，若要建立PostScript列印資料流，請傳遞 `PrintFormat.PostScript`.
+   * 字串值，指定表單設計的名稱。
+   * 字串值，指定相關附屬檔案（例如影像檔案）的位置。
+   * 字串值，指定要使用的XDC檔案位置(您可以傳遞 `null` 如果您透過使用 `PrintedOutputOptionsSpec` 物件)。
+   * 此 `PrintedOutputOptionsSpec` 包含列印至檔案所需的執行階段選項的物件。
+   * 此 `com.adobe.idp.Document` 包含包含表單資料之XML資料來源的物件。
 
-   此 `generatePrintedOutput` 方法返回 `OutputResult` 包含操作结果的对象。
+   此 `generatePrintedOutput` 方法傳回 `OutputResult` 包含作業結果的物件。
 
    >[!NOTE]
    >
-   >此 `OutputResult` 对象的 `getRecordLevelMetaDataList` 方法返回 `null`.
+   >此 `OutputResult` 物件的 `getRecordLevelMetaDataList` 方法傳回 `null`.
 
-1. 检索操作的结果。
+1. 擷取作業的結果。
 
-   * 创建 `com.adobe.idp.Document` 表示以下对象的状态的对象： `generatePrintedOutput` 方法调用 `OutputResult` 对象的 `getStatusDoc` 方法 `OutputResult` 对象由 `generatePrintedOutput` 方法)。
-   * 创建 `java.io.File` 将包含操作结果的对象。 确保文件扩展名为XML。
-   * 调用 `com.adobe.idp.Document` 对象的 `copyToFile` 用于复制目录内容的方法 `com.adobe.idp.Document` 对象(确保您使用 `com.adobe.idp.Document` 返回的对象 `getStatusDoc` 方法)。
+   * 建立 `com.adobe.idp.Document` 代表「 」狀態的物件 `generatePrintedOutput` 方法，方法是叫用 `OutputResult` 物件的 `getStatusDoc` 方法 `OutputResult` 物件由 `generatePrintedOutput` 方法)。
+   * 建立 `java.io.File` 將包含作業結果的物件。 確定副檔名為XML。
+   * 叫用 `com.adobe.idp.Document` 物件的 `copyToFile` 複製目錄內容的方法 `com.adobe.idp.Document` 物件放入檔案(請確定您使用 `com.adobe.idp.Document` 物件，由 `getStatusDoc` 方法)。
 
 **另请参阅**
 
-[步骤摘要](creating-document-output-streams.md#summary-of-steps)
+[步驟摘要](creating-document-output-streams.md#summary-of-steps)
 
-[快速入门（SOAP模式）：使用Java API打印到文件](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-printing-to-a-file-using-the-java-api)
+[快速入門（SOAP模式）：使用Java API列印至檔案](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-printing-to-a-file-using-the-java-api)
 
-[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
-[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
-### 使用Web服务API打印到文件 {#print-to-files-using-the-web-service-api}
+### 使用Web服務API列印至檔案 {#print-to-files-using-the-web-service-api}
 
-使用输出API（Web服务）打印到文件：
+使用Output API （Web服務）列印至檔案：
 
-1. 包括项目文件。
+1. 包含專案檔案。
 
-   创建使用MTOM的Microsoft .NET项目。 确保使用以下WSDL定义： `http://localhost:8080/soap/services/OutputService?WSDL&lc_version=9.0.1`.
+   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/OutputService?WSDL&lc_version=9.0.1`.
 
    >[!NOTE]
    >
-   >Replace `localhost` 包含托管AEM Forms的服务器的IP地址。
+   >Replace `localhost` 搭配裝載AEM Forms之伺服器的IP位址。
 
-1. 创建输出客户端对象。
+1. 建立輸出使用者端物件。
 
-   * 创建 `OutputServiceClient` 对象。
-   * 创建 `OutputServiceClient.Endpoint.Address` 对象 `System.ServiceModel.EndpointAddress` 构造函数。 将指定WSDL的字符串值传递给AEM Forms服务(例如， `http://localhost:8080/soap/services/OutputService?blob=mtom`.) 您无需使用 `lc_version` 属性。 创建服务引用时使用此属性。 但是，请指定 `?blob=mtom` 使用MTOM。
-   * 创建 `System.ServiceModel.BasicHttpBinding` 对象，方法是获取 `OutputServiceClient.Endpoint.Binding` 字段。 将返回值强制转换为 `BasicHttpBinding`.
-   * 设置 `System.ServiceModel.BasicHttpBinding` 对象的 `MessageEncoding` 字段至 `WSMessageEncoding.Mtom`. 此值可确保使用MTOM。
-   * 通过执行以下任务启用基本HTTP身份验证：
+   * 建立 `OutputServiceClient` 物件（使用其預設建構函式）。
+   * 建立 `OutputServiceClient.Endpoint.Address` 物件，使用 `System.ServiceModel.EndpointAddress` 建構函式。 將指定WSDL的字串值傳遞至AEM Forms服務(例如， `http://localhost:8080/soap/services/OutputService?blob=mtom`.) 您不需要使用 `lc_version` 屬性。 當您建立服務參考時，會使用此屬性。 不過，請指定 `?blob=mtom` 以使用MTOM。
+   * 建立 `System.ServiceModel.BasicHttpBinding` 物件，方法是取得 `OutputServiceClient.Endpoint.Binding` 欄位。 將傳回值轉換為 `BasicHttpBinding`.
+   * 設定 `System.ServiceModel.BasicHttpBinding` 物件的 `MessageEncoding` 欄位至 `WSMessageEncoding.Mtom`. 此值可確保使用MTOM。
+   * 執行下列工作來啟用基本HTTP驗證：
 
-      * 将AEM表单用户名分配给字段 `OutputServiceClient.ClientCredentials.UserName.UserName`.
-      * 将相应的密码值分配给字段 `OutputServiceClient.ClientCredentials.UserName.Password`.
-      * 分配常量值 `HttpClientCredentialType.Basic` 到字段 `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
-      * 分配常量值 `BasicHttpSecurityMode.TransportCredentialOnly` 到字段 `BasicHttpBindingSecurity.Security.Mode`.
+      * 將AEM表單使用者名稱指派給欄位 `OutputServiceClient.ClientCredentials.UserName.UserName`.
+      * 將對應的密碼值指派給欄位 `OutputServiceClient.ClientCredentials.UserName.Password`.
+      * 指派常數值 `HttpClientCredentialType.Basic` 至欄位 `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
+      * 指派常數值 `BasicHttpSecurityMode.TransportCredentialOnly` 至欄位 `BasicHttpBindingSecurity.Security.Mode`.
 
-1. 引用XML数据源。
+1. 參照XML資料來源。
 
-   * 创建 `BLOB` 对象。 此 `BLOB` 对象用于存储表单数据。
-   * 创建 `System.IO.FileStream` 对象，方法是调用其构造函数并传递一个字符串值，该值指定包含表单数据的XML文件的位置。
-   * 创建一个字节数组，用于存储 `System.IO.FileStream` 对象。 您可以通过获取 `System.IO.FileStream` 对象的 `Length` 属性。
-   * 通过调用 `System.IO.FileStream` 对象的 `Read` 方法，并传递字节数组、起始位置和要读取的流长度。
-   * 填充 `BLOB` 对象(通过指定其 `binaryData` 属性与字节数组的内容。
+   * 建立 `BLOB` 物件（使用其建構函式）。 此 `BLOB` 物件是用來儲存表單資料。
+   * 建立 `System.IO.FileStream` 物件，方法是叫用其建構函式，並傳遞字串值，指定包含表單資料的XML檔案位置。
+   * 建立位元組陣列，儲存 `System.IO.FileStream` 物件。 您可以取得 `System.IO.FileStream` 物件的 `Length` 屬性。
+   * 叫用 `System.IO.FileStream` 物件的 `Read` 方法，並傳遞位元組陣列、起始位置以及要讀取的資料流長度。
+   * 填入 `BLOB` 物件，透過指派其 `binaryData` 具有位元組陣列內容的屬性。
 
-1. 设置打印到文件所需的打印运行时选项。
+1. 設定列印至檔案所需的列印執行階段選項。
 
-   * 创建 `PrintedOutputOptionsSpec` 对象。
-   * 通过指定一个字符串值来指定文件，该值表示文件的位置和名称 `PrintedOutputOptionsSpec` 对象的 `fileURI` 数据成员。 例如，如果您希望Output服务打印到名为的PostScript文件 *MortgageForm.ps* 在C:\Adobe中，指定C:\\Adobe\MortgageForm.ps。
-   * 通过指定一个整数值来指定要打印的份数，该值表示要打印的份数。 `PrintedOutputOptionsSpec` 对象的 `copies` 数据成员。
+   * 建立 `PrintedOutputOptionsSpec` 物件（使用其建構函式）。
+   * 指定字串值來指定檔案，該字串值代表檔案的位置和名稱 `PrintedOutputOptionsSpec` 物件的 `fileURI` 資料成員。 例如，如果您希望Output服務列印至名為的PostScript檔案 *MortgageForm.ps* 位於C:\Adobe，請指定C:\\Adobe\MortgageForm.ps。
+   * 指定整數值，代表列印的份數，以指定要列印的份數。 `PrintedOutputOptionsSpec` 物件的 `copies` 資料成員。
 
-1. 将打印流打印到文件。
+1. 將列印資料流列印到檔案。
 
-   通过调用 `OutputServiceService` 对象的 `generatePrintedOutput` 方法，并传递以下值：
+   透過叫用 `OutputServiceService` 物件的 `generatePrintedOutput` 並傳遞下列值：
 
-   * A `PrintFormat` 枚举值，指定要创建的打印流格式。 例如，要创建PostScript打印流，请传递 `PrintFormat.PostScript`.
-   * 一个字符串值，它指定表单设计的名称。
-   * 一个字符串值，它指定相关附属文件（如图像文件）的位置。
-   * 一个字符串值，它指定要使用的XDC文件的位置(您可以传递 `null` 如果您通过使用 `PrintedOutputOptionsSpec` 对象)。
-   * 此 `PrintedOutputOptionsSpec` 包含打印到文件所需的打印运行时选项的对象。
-   * 此 `BLOB` 包含包含表单数据的XML数据源的对象。
-   * A `BLOB` 由填充的对象 `generatePDFOutput` 方法。 此 `generatePDFOutput` 方法使用生成的描述文档的元数据填充此对象。 （只有Web服务调用才需要此参数值。）
-   * A `BLOB` 由填充的对象 `generatePDFOutput` 方法。 此 `generatePDFOutput` 方法使用结果数据填充此对象。 （只有Web服务调用才需要此参数值。）
-   * An `OutputResult` 包含操作结果的对象。 （只有Web服务调用才需要此参数值。）
+   * A `PrintFormat` 列舉值，指定要建立的列印資料流格式。 例如，若要建立PostScript列印資料流，請傳遞 `PrintFormat.PostScript`.
+   * 字串值，指定表單設計的名稱。
+   * 字串值，指定相關附屬檔案（例如影像檔案）的位置。
+   * 字串值，指定要使用的XDC檔案位置(您可以傳遞 `null` 如果您透過使用 `PrintedOutputOptionsSpec` 物件)。
+   * 此 `PrintedOutputOptionsSpec` 包含列印至檔案所需的列印執行階段選項的物件。
+   * 此 `BLOB` 包含表單資料之XML資料來源的物件。
+   * A `BLOB` 由填入的物件 `generatePDFOutput` 方法。 此 `generatePDFOutput` 方法會使用產生的描述檔案的中繼資料填入此物件。 （只有Web服務呼叫需要此引數值。）
+   * A `BLOB` 由填入的物件 `generatePDFOutput` 方法。 此 `generatePDFOutput` 方法會將結果資料填入此物件中。 （只有Web服務呼叫需要此引數值。）
+   * 一個 `OutputResult` 包含作業結果的物件。 （只有Web服務呼叫需要此引數值。）
 
-1. 检索操作的结果。
+1. 擷取作業的結果。
 
-   * 创建 `System.IO.FileStream` 对象，方法是调用其构造函数并传递一个字符串值，该值表示包含结果数据的XML文件位置。 确保文件扩展名为XML。
-   * 创建一个字节数组，用于存储 `BLOB` 使用结果数据填充的对象 `OutputServiceService` 对象的 `generatePDFOutput` 方法（第八个参数）。 通过获取的值填充字节数组 `BLOB` 对象的 `MTOM` 数据成员。
-   * 创建 `System.IO.BinaryWriter` 对象，方法是调用其构造函数 `System.IO.FileStream` 对象。
-   * 通过调用 `System.IO.BinaryWriter` 对象的 `Write` 方法和传递字节数组。
+   * 建立 `System.IO.FileStream` 物件，方法是叫用其建構函式，並傳遞代表包含結果資料之XML檔案位置的字串值。 確定副檔名為XML。
+   * 建立位元組陣列，儲存 `BLOB` 填入結果資料的物件 `OutputServiceService` 物件的 `generatePDFOutput` 方法（第八個引數）。 透過取得 `BLOB` 物件的 `MTOM` 資料成員。
+   * 建立 `System.IO.BinaryWriter` 物件，方法是叫用其建構函式並傳遞 `System.IO.FileStream` 物件。
+   * 透過叫用 `System.IO.BinaryWriter` 物件的 `Write` 方法並傳遞位元組陣列。
 
 **另请参阅**
 
-[步骤摘要](creating-document-output-streams.md#summary-of-steps)
+[步驟摘要](creating-document-output-streams.md#summary-of-steps)
 
-[使用MTOM调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[使用MTOM叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[使用SwaRef调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[使用SwaRef叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
-## 将打印流发送到打印机 {#sending-print-streams-to-printers}
+## 傳送列印資料流至印表機 {#sending-print-streams-to-printers}
 
-您可以使用Output服务将打印流(如PostScript、打印机控制语言(PCL))或以下标签格式发送到网络打印机：
+您可以使用Output服務將列印資料流(例如PostScript、印表機控制語言(PCL))或下列標籤格式傳送至網路印表機：
 
-* 斑马 — ZPL
+* 斑馬 — ZPL
 * Intermec - IPL
 * Datamax - DPL
 * TecToshiba - TPCL
 
-使用Output服务，您可以将XML数据与表单设计合并，并将表单输出为打印流。 例如，您可以创建PostScript打印流并将其发送到网络打印机。 下图显示了Output服务将打印流发送到网络打印机。
+使用Output服務，您可以將XML資料與表單設計合併，並將表單輸出為列印資料流。 例如，您可以建立PostScript列印資料流，並將其傳送至網路印表機。 下圖顯示Output服務傳送列印資料流至網路印表機。
 
 >[!NOTE]
 >
->为了演示如何将打印流发送到网络打印机，本节使用SharedPrinter打印机协议将PostScript打印流发送到网络打印机。
+>為了示範如何將列印資料流傳送至網路印表機，本節使用SharedPrinter印表機通訊協定，將PostScript列印資料流傳送至網路印表機。
 
 >[!NOTE]
 >
->有关输出服务的详细信息，请参见 [AEM Forms的服务参考](https://www.adobe.com/go/learn_aemforms_services_63).
+>如需Output服務的詳細資訊，請參閱 [AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
 
-### 步骤摘要 {#summary_of_steps-6}
+### 步驟摘要 {#summary_of_steps-6}
 
-要将打印流发送到网络打印机，请执行以下步骤：
+若要將列印資料流傳送至網路印表機，請執行下列步驟：
 
-1. 包括项目文件。
-1. 创建输出客户端对象。
-1. 引用XML数据源。
-1. 设置打印运行时选项
-1. 检索要打印的文档。
-1. 将文档发送到网络打印机。
+1. 包含專案檔案。
+1. 建立輸出使用者端物件。
+1. 參照XML資料來源。
+1. 設定列印執行階段選項
+1. 擷取要列印的檔案。
+1. 將檔案傳送至網路印表機。
 
-**包括项目文件**
+**包含專案檔案**
 
-在开发项目中包含必要的文件。 如果要使用Java创建客户端应用程序，请包含必要的JAR文件。 如果使用Web服务，请确保包含代理文件。
+在您的開發專案中包含必要的檔案。 如果您使用Java建立使用者端應用程式，請包含必要的JAR檔案。 如果您使用Web服務，請務必包含Proxy檔案。
 
-必须将以下JAR文件添加到项目的类路径中：
+必須將以下JAR檔案新增到專案的類別路徑中：
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-output-client.jar
-* adobe-utilities.jar(如果将AEM Forms部署在JBoss上，则此为必需字段)
-* jbossall-client.jar(如果在JBoss上部署了AEM Forms，则此为必填字段)
+* adobe-utilities.jar (如果AEM Forms部署在JBoss上，則為必要)
+* jbossall-client.jar (如果AEM Forms部署在JBoss上，則為必要)
 
-如果将AEM Forms部署在非JBoss的受支持J2EE应用程序服务器上，则需要将adobe-utilities.jar和jbossall-client.jar文件替换为特定于部署AEM Forms的J2EE应用程序服务器的JAR文件。
+如果將AEM Forms部署在非JBoss的支援J2EE應用程式伺服器上，您需要將adobe-utilities.jar和jbossall-client.jar檔案取代為部署AEM Forms之J2EE應用程式伺服器專屬的JAR檔案。
 
-**创建输出客户端对象**
+**建立輸出使用者端物件**
 
-在以编程方式执行输出服务操作之前，请先创建输出服务客户端对象。 如果您使用的是Java API，请创建 `OutputClient` 对象。 如果您使用的是Output Web service API，请创建 `OutputServiceClient` 对象。
+以程式設計方式執行輸出服務作業之前，請先建立輸出服務使用者端物件。 如果您使用Java API，請建立 `OutputClient` 物件。 如果您使用輸出Web服務API，請建立 `OutputServiceClient` 物件。
 
-**引用XML数据源**
+**參考XML資料來源**
 
-要打印包含数据的文档，您必须为要填充数据的每个表单字段引用包含XML元素的XML数据源。 XML元素名称必须与字段名称匹配。 如果XML元素与表单字段不对应，或者如果XML元素名称与字段名称不匹配，则会忽略该元素。 如果指定了所有XML元素，则不必匹配XML元素的显示顺序。
+若要列印包含資料的檔案，您必須針對每個要填入資料的表單欄位，參考包含XML元素的XML資料來源。 XML元素名稱必須符合欄位名稱。 如果XML元素未對應至表單欄位，或XML元素名稱不符合欄位名稱，則會忽略該元素。 如果已指定所有XML元素，則不必比對XML元素的顯示順序。
 
-**设置打印运行时选项**
+**設定列印執行階段選項**
 
-在向打印机发送打印流时，可以设置运行时选项，包括以下选项：
+當傳送列印資料流至印表機時，您可以設定執行階段選項，包括下列選項：
 
-* **副本**：指定发送到打印机的副本数。 默认值为 1。
-* **装订**：使用装订器时会设置XCI选项。 此选项可以由装订元素在配置模型中指定，并且仅用于PS和PCL打印机。
-* **OutputJog**：当输出页面需要慢跑（在输出托盘中实际移动）时，会设置XCI选项。 此选项仅适用于PS和PCL打印机。
-* **输出纸盒**：用于使打印驱动程序选择相应输出纸盒的XCI值。
+* **份數**：指定要傳送至印表機的復本數。 默认值为 1。
+* **裝訂**：使用裝訂器時會設定XCI選項。 此選項可由裝訂元素在組態模型中指定，且僅用於PS和PCL印表機。
+* **OutputJog**：XCI選項是在輸出頁面應慢跑（在輸出匣中實際移動）時設定。 此選項僅適用於PS和PCL印表機。
+* **輸出紙匣**：用來讓列印驅動程式選取適當輸出紙匣的XCI值。
 
 >[!NOTE]
 >
->有关可设置的所有运行时选项的信息，请参见 `PrintedOutputOptionsSpec` 类引用。
+>如需您可以設定的所有執行階段選項的詳細資訊，請參閱 `PrintedOutputOptionsSpec` 類別參考。
 
-**检索要打印的文档**
+**擷取要列印的檔案**
 
-检索要发送到打印机的打印流。 例如，您可以检索PostScript文件并将其发送到打印机。
+擷取要傳送至印表機的列印資料流。 例如，您可以擷取PostScript檔案並將其傳送至印表機。
 
-如果您的打印机支持PDF，则可以选择发送PDF文件。 但是，向打印机发送PDF文档的问题是每个打印机制造商对PDF解释器的实现方式不同。 也就是说，一些打印制造商使用Adobe PDF的解释，但具体取决于打印机。 其他打印机有自己的PDF解释器。 因此，打印结果可能会有所不同。
+如果您的印表機支援PDF，您可以選擇傳送PDF檔案。 不過，將PDF檔案傳送至印表機的問題是每個印表機製造商都有不同的PDF解譯器實作。 也就是說，有些列印製造商會使用Adobe PDF的解讀，但這取決於印表機。 其他印表機有自己的PDF解譯器。 因此，列印結果可能會有所不同。
 
-将PDF文档发送到打印机的另一个限制是它只能打印；它不能访问双面、纸盒选择和装订，除非通过打印机上的设置。
+傳送PDF檔案至印表機的另一個限制是它只會列印；除了透過印表機的設定，它不能存取雙面列印、紙匣選擇和裝訂。
 
-要检索要打印的文档，请使用 `generatePrintedOutput` 方法。 下表指定在使用时为给定打印流设置的内容类型 `generatePrintedOutput` 方法。
+若要擷取要列印的檔案，請使用 `generatePrintedOutput` 方法。 下表指定在使用時，為指定列印資料流設定的內容型別 `generatePrintedOutput` 方法。
 
 <table>
  <thead>
   <tr>
-   <th><p>打印格式 </p></th>
+   <th><p>列印格式 </p></th>
    <th><p>描述</p></th>
   </tr>
  </thead>
  <tbody>
   <tr>
    <td><p>DPL </p></td>
-   <td><p>默认或自定义xdc输出流创建dpl203.xdc。</p></td>
+   <td><p>依預設或自訂xdc輸出串流建立dpl203.xdc。</p></td>
   </tr>
   <tr>
    <td><p>DPL 300 DPI </p></td>
-   <td><p>创建DPL 300 DPI输出流。</p></td>
+   <td><p>建立DPL 300 DPI輸出資料流。</p></td>
   </tr>
   <tr>
    <td><p>DPL 406 DPI </p></td>
-   <td><p>创建DPL 400 DPI输出流。</p></td>
+   <td><p>建立DPL 400 DPI輸出資料流。</p></td>
   </tr>
   <tr>
    <td><p>DPL 600 DPI </p></td>
-   <td><p>创建DPL 600 DPI输出流。</p></td>
+   <td><p>建立DPL 600 DPI輸出資料流。</p></td>
   </tr>
   <tr>
    <td><p>GenericColorPCL </p></td>
-   <td><p>创建通用颜色PCL (5c)输出流。</p></td>
+   <td><p>建立一般色彩PCL (5c)輸出資料流。</p></td>
   </tr>
   <tr>
    <td><p>GenericPSLevel3 </p></td>
-   <td><p>创建通用PostScript 3级输出流。</p></td>
+   <td><p>建立一般PostScript Level 3輸出資料流。</p></td>
   </tr>
   <tr>
    <td><p>IPL </p></td>
-   <td><p>创建自定义IPL输出流。</p></td>
+   <td><p>建立自訂IPL輸出資料流。</p></td>
   </tr>
   <tr>
    <td><p>IPL 300 DPI </p></td>
-   <td><p>创建IPL 300 DPI输出流。</p></td>
+   <td><p>建立IPL 300 DPI輸出資料流。</p></td>
   </tr>
   <tr>
    <td><p>IPL 400 DPI </p></td>
-   <td><p>创建IPL 400 DPI输出流。</p></td>
+   <td><p>建立IPL 400 DPI輸出資料流。</p></td>
   </tr>
   <tr>
    <td><p>PCL </p></td>
-   <td><p>创建通用单色PCL (5e)输出流。</p></td>
+   <td><p>建立一般單色PCL (5e)輸出資料流。</p></td>
   </tr>
   <tr>
    <td><p>PostScript </p></td>
-   <td><p>创建通用PostScript 2级输出流。</p></td>
+   <td><p>建立一般PostScript Level 2輸出資料流。</p></td>
   </tr>
   <tr>
    <td><p>TPCL </p></td>
-   <td><p>创建自定义TPCL输出流。</p></td>
+   <td><p>建立自訂TPCL輸出資料流。</p></td>
   </tr>
   <tr>
    <td><p>TPCL 305 DPI </p></td>
-   <td><p>创建TPCL 305 DPI输出流。</p></td>
+   <td><p>建立TPCL 305 DPI輸出資料流。</p></td>
   </tr>
   <tr>
    <td><p>TPCL 600 DPI </p></td>
-   <td><p>创建TPCL 600 DPI输出流。</p></td>
+   <td><p>建立TPCL 600 DPI輸出資料流。</p></td>
   </tr>
   <tr>
    <td><p>ZPL </p></td>
-   <td><p>创建ZPL 203 DPI输出流。</p></td>
+   <td><p>建立ZPL 203 DPI輸出資料流。</p></td>
   </tr>
   <tr>
    <td><p>ZPL 300 DPI </p></td>
-   <td><p>创建ZPL 300 DPI输出流。</p></td>
+   <td><p>建立ZPL 300 DPI輸出資料流。</p></td>
   </tr>
  </tbody>
 </table>
 
 >[!NOTE]
 >
->您还可以使用将打印流发送到打印机 `generatePrintedOutput2` 方法。 但是，与“将打印流发送到打印机”部分关联的快速启动使用 `generatePrintedOutput` 方法。
+>您也可以使用將列印資料流傳送到印表機 `generatePrintedOutput2` 方法。 不過，與「傳送列印資料流至印表機」段落相關的快速啟動會使用 `generatePrintedOutput` 方法。
 
-**将打印流发送到网络打印机**
+**傳送列印資料流至網路印表機**
 
-检索要打印的文档后，可以调用Output服务，使其将打印流发送到网络打印机。 要使Output服务成功找到打印机，必须指定打印服务器和打印机名称。 此外，还必须指定打印协议。
-
->[!NOTE]
->
->如果PDFG安装在表单服务器上，并且服务器在Windows Server 2008上运行，则无法使用SharedPrinter属性。 在这种情况下，请使用不同的打印机协议。
+擷取要列印的檔案後，您可以叫用Output服務，使其將列印資料流傳送至網路印表機。 若要讓「輸出」服務成功找到印表機，您必須同時指定列印伺服器和印表機名稱。 此外，您也必須指定列印通訊協定。
 
 >[!NOTE]
 >
->如果您使用的是网络打印机，并且访问机制为SharedPrinter，则需要指定打印机的完整网络路径。使用Java API将打印流发送到网络打印机
+>如果PDFG安裝在表單伺服器上，且伺服器在Windows Server 2008上執行，則無法使用SharedPrinter屬性。 在此情況下，請使用不同的印表機通訊協定。
 
-使用输出API (Java)将打印流发送到网络打印机：
+>[!NOTE]
+>
+>如果您使用網路印表機，且存取機製為SharedPrinter，則需要指定印表機的完整網路路徑。使用Java API將列印資料流傳送至網路印表機
 
-1. 包括项目文件。
+使用輸出API (Java)將列印資料流傳送至網路印表機：
 
-   在Java项目的类路径中包含客户端JAR文件，例如adobe-output-client.jar。
+1. 包含專案檔案。
 
-1. 创建输出客户端对象
+   在您的Java專案的類別路徑中包含使用者端JAR檔案，例如adobe-output-client.jar。
 
-   * 创建 `ServiceClientFactory` 包含连接属性的对象。
-   * 创建 `OutputClient` 对象，使用它的构造函数传递 `ServiceClientFactory` 对象。
+1. 建立輸出使用者端物件
 
-1. 引用XML数据源
+   * 建立 `ServiceClientFactory` 包含連線屬性的物件。
+   * 建立 `OutputClient` 物件，使用它的建構函式並傳遞 `ServiceClientFactory` 物件。
 
-   * 创建 `java.io.FileInputStream` 对象，表示用于填充文档的XML数据源，它使用其构造函数并传递指定XML文件位置的字符串值。
-   * 创建 `com.adobe.idp.Document` 对象，使用它的构造函数传递 `java.io.FileInputStream` 对象。
+1. 參考XML資料來源
 
-1. 设置打印运行时选项
+   * 建立 `java.io.FileInputStream` 物件，代表XML資料來源，透過其建構函式並傳遞指定XML檔案位置的字串值，用來填入檔案。
+   * 建立 `com.adobe.idp.Document` 物件，使用它的建構函式並傳遞 `java.io.FileInputStream` 物件。
 
-   创建 `PrintedOutputOptionsSpec` 表示打印运行时选项的对象。 例如，您可以通过调用 `PrintedOutputOptionsSpec` 对象的 `setCopies` 方法。
+1. 設定列印執行階段選項
 
-   >[!NOTE]
-   >
-   >不能使用设置分页值 `PrintedOutputOptionsSpec` 对象的 `setPagination` 方法（如果要生成ZPL打印流）。 同样，不能为ZPL打印流设置以下选项：OutputJog、PageOffset和Staple。 此 `setPagination` 方法对于PostScript生成无效。 它仅对PCL生成有效。
-
-1. 检索要打印的文档
-
-   * 通过调用 `OutputClient` 对象的 `generatePrintedOutput` 方法，并传递以下值：
-
-      * A `PrintFormat` 指定打印流的枚举值。 例如，要创建PostScript打印流，请传递 `PrintFormat.PostScript`.
-      * 一个字符串值，它指定表单设计的名称。
-      * 一个字符串值，它指定相关附属文件（如图像文件）的位置。
-      * 一个字符串值，它指定要使用的XDC文件的位置。
-      * 此 `PrintedOutputOptionsSpec` 包含打印到文件所需的运行时选项的对象。
-      * 此 `com.adobe.idp.Document` 表示包含要与表单设计合并的表单数据的XML数据源的对象。
-
-      此方法会返回 `OutputResult` 包含操作结果的对象。
-
-   * 创建 `com.adobe.idp.Document` 对象通过调用 `OutputResult` 对象 `getGeneratedDoc` 方法。 此方法会返回 `com.adobe.idp.Document` 对象。
-
-
-1. 将打印流发送到网络打印机
-
-   通过调用 `OutputClient` 对象的 `sendToPrinter` 方法，并传递以下值：
-
-   * A `com.adobe.idp.Document` 表示要发送到打印机的打印流的对象。
-   * A `PrinterProtocol` 指定要使用的打印机协议的枚举值。 例如，要指定SharedPrinter协议，请传递 `PrinterProtocol.SharedPrinter`.
-   * 一个字符串值，它指定打印服务器的名称。 例如，假定打印服务器的名称为PrintSever1，请通过 `\\\PrintSever1`.
-   * 指定打印机名称的字符串值。 例如，假定打印机的名称为Printer1，请通过 `\\\PrintSever1\Printer1`.
+   建立 `PrintedOutputOptionsSpec` 代表列印執行階段選項的物件。 例如，您可以透過叫用 `PrintedOutputOptionsSpec` 物件的 `setCopies` 方法。
 
    >[!NOTE]
    >
-   >此 `sendToPrinter` 方法已添加到8.2.1版的AEM Forms API中。
+   >您無法透過以下方式設定分頁值： `PrintedOutputOptionsSpec` 物件的 `setPagination` 方法（如果您要產生ZPL列印資料流）。 同樣地，您無法為ZPL列印資料流設定下列選項：OutputJog、PageOffset和Staple。 此 `setPagination` 方法對於PostScript產生無效。 它只適用於PCL產生。
 
-### 使用Web服务API将打印流发送到打印机 {#send-a-print-stream-to-a-printer-using-the-web-service-api}
+1. 擷取要列印的檔案
 
-使用输出API（Web服务）将打印流发送到网络打印机：
+   * 透過叫用來擷取要列印的檔案 `OutputClient` 物件的 `generatePrintedOutput` 並傳遞下列值：
 
-1. 包括项目文件。
+      * A `PrintFormat` 指定列印資料流的列舉值。 例如，若要建立PostScript列印資料流，請傳遞 `PrintFormat.PostScript`.
+      * 字串值，指定表單設計的名稱。
+      * 字串值，指定相關附屬檔案（例如影像檔案）的位置。
+      * 字串值，指定要使用的XDC檔案位置。
+      * 此 `PrintedOutputOptionsSpec` 包含列印至檔案所需之執行階段選項的物件。
+      * 此 `com.adobe.idp.Document` 物件，代表包含要與表單設計合併之表單資料的XML資料來源。
 
-   创建使用MTOM的Microsoft .NET项目。 确保使用以下WSDL定义： `http://localhost:8080/soap/services/OutputService?WSDL&lc_version=9.0.1`.
+      此方法會傳回 `OutputResult` 包含作業結果的物件。
 
-   >[!NOTE]
-   >
-   >Replace `localhost` 包含托管AEM Forms的服务器的IP地址。
+   * 建立 `com.adobe.idp.Document` 要透過叫用至印表機的物件 `OutputResult` 物件 `getGeneratedDoc` 方法。 此方法會傳回 `com.adobe.idp.Document` 物件。
 
-1. 创建输出客户端对象。
 
-   * 创建 `OutputServiceClient` 对象。
-   * 创建 `OutputServiceClient.Endpoint.Address` 对象 `System.ServiceModel.EndpointAddress` 构造函数。 将指定WSDL的字符串值传递给AEM Forms服务(例如， `http://localhost:8080/soap/services/OutputService?blob=mtom`.) 您无需使用 `lc_version` 属性。 创建服务引用时使用此属性。 但是，请指定 `?blob=mtom` 使用MTOM。
-   * 创建 `System.ServiceModel.BasicHttpBinding` 对象，方法是获取 `OutputServiceClient.Endpoint.Binding` 字段。 将返回值强制转换为 `BasicHttpBinding`.
-   * 设置 `System.ServiceModel.BasicHttpBinding` 对象的 `MessageEncoding` 字段至 `WSMessageEncoding.Mtom`. 此值可确保使用MTOM。
-   * 通过执行以下任务启用基本HTTP身份验证：
+1. 傳送列印資料流至網路印表機
 
-      * 将AEM表单用户名分配给字段 `OutputServiceClient.ClientCredentials.UserName.UserName`.
-      * 将相应的密码值分配给字段 `OutputServiceClient.ClientCredentials.UserName.Password`.
-      * 分配常量值 `HttpClientCredentialType.Basic` 到字段 `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
-      * 分配常量值 `BasicHttpSecurityMode.TransportCredentialOnly` 到字段 `BasicHttpBindingSecurity.Security.Mode`.
+   透過叫用將列印資料流傳送到網路印表機 `OutputClient` 物件的 `sendToPrinter` 並傳遞下列值：
 
-1. 引用XML数据源。
-
-   * 创建 `BLOB` 对象。 此 `BLOB` 对象用于存储表单数据。
-   * 创建 `System.IO.FileStream` 对象。 传递一个字符串值，该值指定包含表单数据的XML文件的位置。
-   * 创建一个字节数组，用于存储 `System.IO.FileStream` 对象。 通过获取 `System.IO.FileStream` 对象的 `Length` 属性。
-   * 通过调用 `System.IO.FileStream` 对象的 `Read` 方法，并传递字节数组、起始位置和要读取的流长度。
-   * 填充 `BLOB` 对象(通过指定其 `MTOM` 包含字节数组内容的字段。
-
-1. 设置打印运行时选项。
-
-   创建 `PrintedOutputOptionsSpec` 对象。 例如，通过指定一个整数值来指定要打印的份数，该值表示要打印的份数。 `PrintedOutputOptionsSpec` 对象的 `copies` 数据成员。
+   * A `com.adobe.idp.Document` 代表要傳送至印表機的列印資料流的物件。
+   * A `PrinterProtocol` 列舉值，指定要使用的印表機通訊協定。 例如，若要指定SharedPrinter通訊協定，請傳遞 `PrinterProtocol.SharedPrinter`.
+   * 指定列印伺服器名稱的字串值。 例如，假設列印伺服器的名稱為PrintSever1，請通過 `\\\PrintSever1`.
+   * 字串值，指定印表機的名稱。 例如，假設印表機的名稱為Printer1，請通過 `\\\PrintSever1\Printer1`.
 
    >[!NOTE]
    >
-   >不能使用设置分页值 `PrintedOutputOptionsSpec` 对象的 `pagination` 数据成员（如果要生成ZPL打印流）。 同样，不能为ZPL打印流设置以下选项：OutputJog、PageOffset和Staple。 此 `pagination` 数据成员对于PostScript生成无效。 它仅对PCL生成有效。
+   >此 `sendToPrinter` 方法已新增至8.2.1版的AEM Forms API。
 
-1. 检索要打印的文档。
+### 使用網站服務API傳送列印資料流至印表機 {#send-a-print-stream-to-a-printer-using-the-web-service-api}
 
-   * 通过调用 `OutputServiceService` 对象的 `generatePrintedOutput` 方法，并传递以下值：
+使用Output API （Web服務）將列印資料流傳送至網路印表機：
 
-      * A `PrintFormat` 指定打印流的枚举值。 例如，要创建PostScript打印流，请传递 `PrintFormat.PostScript`.
-      * 一个字符串值，它指定表单设计的名称。
-      * 一个字符串值，它指定相关附属文件（如图像文件）的位置。
-      * 一个字符串值，它指定要使用的XDC文件的位置。
-      * 此 `PrintedOutputOptionsSpec` 包含向网络打印机发送打印流时使用的打印运行时选项的对象。
-      * 此 `BLOB` 包含包含表单数据的XML数据源的对象。
-      * A `BLOB` 由填充的对象 `generatePrintedOutput` 方法。 此 `generatePrintedOutput` 方法使用生成的描述文档的元数据填充此对象。 （只有Web服务调用才需要此参数值。）
-      * A `BLOB` 由填充的对象 `generatePrintedOutput` 方法。 此 `generatePrintedOutput` 方法使用结果数据填充此对象。 （只有Web服务调用才需要此参数值。）
-      * An `OutputResult` 包含操作结果的对象。 （只有Web服务调用才需要此参数值。）
-   * 创建 `BLOB` 要通过获取的值，发送到打印机的对象 `OutputResult` 对象 `generatedDoc` 方法。 此方法会返回 `BLOB` 包含由返回的PostScript数据的对象 `generatePrintedOutput` 方法。
+1. 包含專案檔案。
 
-
-1. 将打印流发送到网络打印机。
-
-   通过调用 `OutputClient` 对象的 `sendToPrinter` 方法，并传递以下值：
-
-   * A `BLOB` 表示要发送到打印机的打印流的对象。
-   * A `PrinterProtocol` 指定要使用的打印机协议的枚举值。 例如，要指定SharedPrinter协议，请传递 `PrinterProtocol.SharedPrinter`.
-   * A `bool` 指定是否使用上一个参数值的值。 传递值 `true`. （只有Web服务调用才需要此参数值。）
-   * 一个字符串值，它指定打印服务器的名称。 例如，假定打印服务器的名称为PrintSever1，请通过 `\\\PrintSever1`.
-   * 指定打印机名称的字符串值。 例如，假定打印机的名称为Printer1，请通过 `\\\PrintSever1\Printer1`.
+   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/OutputService?WSDL&lc_version=9.0.1`.
 
    >[!NOTE]
    >
-   >此 `sendToPrinter` 方法已添加到8.2.1版的AEM Forms API中。
+   >Replace `localhost` 搭配裝載AEM Forms之伺服器的IP位址。
 
-## 创建多个输出文件 {#creating-multiple-output-files}
+1. 建立輸出使用者端物件。
 
-Output服务可以为XML数据源内的每个记录创建单独的文档，也可以为包含所有记录的单个文件创建单独的文档（此功能是默认设置）。 例如，假设有10条记录位于XML数据源中，并且您指示输出服务使用输出服务API为每个记录创建单独的PDF文档（或其他类型的输出）。 因此，Output服务将生成十份PDF文档。 （您可以将多个打印流发送到打印机，而不是创建文档。）
+   * 建立 `OutputServiceClient` 物件（使用其預設建構函式）。
+   * 建立 `OutputServiceClient.Endpoint.Address` 物件，使用 `System.ServiceModel.EndpointAddress` 建構函式。 將指定WSDL的字串值傳遞至AEM Forms服務(例如， `http://localhost:8080/soap/services/OutputService?blob=mtom`.) 您不需要使用 `lc_version` 屬性。 當您建立服務參考時，會使用此屬性。 不過，請指定 `?blob=mtom` 以使用MTOM。
+   * 建立 `System.ServiceModel.BasicHttpBinding` 物件，方法是取得 `OutputServiceClient.Endpoint.Binding` 欄位。 將傳回值轉換為 `BasicHttpBinding`.
+   * 設定 `System.ServiceModel.BasicHttpBinding` 物件的 `MessageEncoding` 欄位至 `WSMessageEncoding.Mtom`. 此值可確保使用MTOM。
+   * 執行下列工作來啟用基本HTTP驗證：
 
-下图还显示了处理包含多个记录的XML数据文件的Output服务。 但是，假定您指示Output服务创建包含所有数据记录的单个PDF文档。 在这种情况下，Output服务会生成一个包含所有记录的文档。
+      * 將AEM表單使用者名稱指派給欄位 `OutputServiceClient.ClientCredentials.UserName.UserName`.
+      * 將對應的密碼值指派給欄位 `OutputServiceClient.ClientCredentials.UserName.Password`.
+      * 指派常數值 `HttpClientCredentialType.Basic` 至欄位 `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
+      * 指派常數值 `BasicHttpSecurityMode.TransportCredentialOnly` 至欄位 `BasicHttpBindingSecurity.Security.Mode`.
 
-下图显示了处理包含多个记录的XML数据文件的Output服务。 假设您指示Output服务为每个数据记录创建一个单独的PDF文档。 在这种情况下，Output服务将为每个数据记录生成单独的PDF文档。
+1. 參照XML資料來源。
+
+   * 建立 `BLOB` 物件（使用其建構函式）。 此 `BLOB` 物件是用來儲存表單資料。
+   * 建立 `System.IO.FileStream` 物件（透過叫用其建構函式）。 傳遞字串值，指定包含表單資料之XML檔案的位置。
+   * 建立位元組陣列，儲存 `System.IO.FileStream` 物件。 透過取得 `System.IO.FileStream` 物件的 `Length` 屬性。
+   * 叫用 `System.IO.FileStream` 物件的 `Read` 方法，並傳遞位元組陣列、起始位置以及要讀取的資料流長度。
+   * 填入 `BLOB` 物件，透過指派其 `MTOM` 包含位元組陣列內容的欄位。
+
+1. 設定列印執行階段選項。
+
+   建立 `PrintedOutputOptionsSpec` 物件（使用其建構函式）。 例如，您可以指定整數值，代表要列印的份數。 `PrintedOutputOptionsSpec` 物件的 `copies` 資料成員。
+
+   >[!NOTE]
+   >
+   >您無法透過以下方式設定分頁值： `PrintedOutputOptionsSpec` 物件的 `pagination` 資料成員（如果您要產生ZPL列印資料流）。 同樣地，您無法為ZPL列印資料流設定下列選項：OutputJog、PageOffset和Staple。 此 `pagination` 資料成員對PostScript產生無效。 它只適用於PCL產生。
+
+1. 擷取要列印的檔案。
+
+   * 透過叫用來擷取要列印的檔案 `OutputServiceService` 物件的 `generatePrintedOutput` 並傳遞下列值：
+
+      * A `PrintFormat` 指定列印資料流的列舉值。 例如，若要建立PostScript列印資料流，請傳遞 `PrintFormat.PostScript`.
+      * 字串值，指定表單設計的名稱。
+      * 字串值，指定相關附屬檔案（例如影像檔案）的位置。
+      * 字串值，指定要使用的XDC檔案位置。
+      * 此 `PrintedOutputOptionsSpec` 包含列印執行時間選項的物件，在傳送列印資料流至網路印表機時使用。
+      * 此 `BLOB` 包含表單資料之XML資料來源的物件。
+      * A `BLOB` 由填入的物件 `generatePrintedOutput` 方法。 此 `generatePrintedOutput` 方法會使用產生的描述檔案的中繼資料填入此物件。 （只有Web服務呼叫需要此引數值。）
+      * A `BLOB` 由填入的物件 `generatePrintedOutput` 方法。 此 `generatePrintedOutput` 方法會將結果資料填入此物件中。 （只有Web服務呼叫需要此引數值。）
+      * 一個 `OutputResult` 包含作業結果的物件。 （只有Web服務呼叫需要此引數值。）
+   * 建立 `BLOB` 要傳送至印表機的物件，方法是取得 `OutputResult` 物件 `generatedDoc` 方法。 此方法會傳回 `BLOB` 包含由傳回之PostScript資料的物件 `generatePrintedOutput` 方法。
+
+
+1. 將列印資料流傳送至網路印表機。
+
+   透過叫用將列印資料流傳送到網路印表機 `OutputClient` 物件的 `sendToPrinter` 並傳遞下列值：
+
+   * A `BLOB` 代表要傳送至印表機的列印資料流的物件。
+   * A `PrinterProtocol` 列舉值，指定要使用的印表機通訊協定。 例如，若要指定SharedPrinter通訊協定，請傳遞 `PrinterProtocol.SharedPrinter`.
+   * A `bool` 指定是否要使用先前引數值的值。 傳遞值 `true`. （只有Web服務呼叫需要此引數值。）
+   * 指定列印伺服器名稱的字串值。 例如，假設列印伺服器的名稱為PrintSever1，請通過 `\\\PrintSever1`.
+   * 字串值，指定印表機的名稱。 例如，假設印表機的名稱為Printer1，請通過 `\\\PrintSever1\Printer1`.
+
+   >[!NOTE]
+   >
+   >此 `sendToPrinter` 方法已新增至8.2.1版的AEM Forms API。
+
+## 建立多個輸出檔案 {#creating-multiple-output-files}
+
+Output服務可以為XML資料來源內的每個記錄建立個別的檔案，或是包含所有記錄的單一檔案（此功能為預設值）。 例如，假設有10筆記錄位於XML資料來源中，而您指示輸出服務使用輸出服務API，為每個記錄建立個別的PDF檔案（或其他型別的輸出）。 因此，Output服務會產生十份PDF檔案。 （您可以將多個列印資料流傳送至印表機，而不建立檔案。）
+
+下圖也顯示處理包含多個記錄之XML資料檔案的Output服務。 不過，假設您指示Output服務建立包含所有資料記錄的單一PDF檔案。 在這種情況下，Output服務會產生一個包含所有記錄的檔案。
+
+下圖顯示處理包含多個記錄之XML資料檔案的Output服務。 假設您指示Output服務為每個資料記錄建立單獨的PDF檔案。 在這種情況下，Output服務會為每個資料記錄產生個別的PDF檔案。
 
 ![cm_outputbatchmany](assets/cm_outputbatchmany.png)
 
-以下XML数据显示了包含三个数据记录的数据文件的示例。
+下列XML資料顯示包含三個資料記錄的資料檔案範例。
 
 ```xml
  <?xml version="1.0" encoding="UTF-8"?>
@@ -1702,71 +1702,71 @@ Output服务可以为XML数据源内的每个记录创建单独的文档，也�
  </batch>
 ```
 
-请注意，每个数据记录的开始和结束的XML元素为 `LoanRecord`. 此XML元素由生成多个文件的应用程序逻辑引用。
+請注意，每個資料記錄開始和結束的XML元素為 `LoanRecord`. 產生多個檔案的應用程式邏輯會參考此XML元素。
 
 >[!NOTE]
 >
->有关输出服务的详细信息，请参见 [AEM Forms的服务参考](https://www.adobe.com/go/learn_aemforms_services_63).
+>如需Output服務的詳細資訊，請參閱 [AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
 
-### 步骤摘要 {#summary_of_steps-7}
+### 步驟摘要 {#summary_of_steps-7}
 
-要基于XML数据源创建多个PDF文件，请执行以下步骤：
+若要根據XML資料來源建立多個PDF檔案，請執行下列步驟：
 
-1. 包括项目文件。
-1. 创建输出客户端对象。
-1. 引用XML数据源。
-1. 设置PDF运行时选项。
-1. 设置渲染运行时选项。
-1. 生成多个PDF文件。
-1. 检索操作的结果。
+1. 包含專案檔案。
+1. 建立輸出使用者端物件。
+1. 參照XML資料來源。
+1. 設定PDF執行階段選項。
+1. 設定演算執行階段選項。
+1. 產生多個PDF檔案。
+1. 擷取作業的結果。
 
-**包括项目文件**
+**包含專案檔案**
 
-在开发项目中包含必要的文件。 如果要使用Java创建客户端应用程序，请包含必要的JAR文件。 如果使用Web服务，请确保包含代理文件。
+在您的開發專案中包含必要的檔案。 如果您使用Java建立使用者端應用程式，請包含必要的JAR檔案。 如果您使用Web服務，請務必包含Proxy檔案。
 
-必须将以下JAR文件添加到项目的类路径中：
+必須將以下JAR檔案新增到專案的類別路徑中：
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-output-client.jar
-* adobe-utilities.jar(如果在JBoss上部署了AEM Forms，则此为必填字段)
-* jbossall-client.jar(如果在JBoss上部署了AEM Forms，则此为必填字段)
+* adobe-utilities.jar (如果AEM Forms部署在JBoss上，則為必要)
+* jbossall-client.jar (如果AEM Forms部署在JBoss上，則為必要)
 
-如果将AEM Forms部署在非JBoss的受支持J2EE应用程序服务器上，则需要将adobe-utilities.jar和jbossall-client.jar文件替换为特定于部署AEM Forms的J2EE应用程序服务器的JAR文件。
+如果將AEM Forms部署在非JBoss的支援J2EE應用程式伺服器上，您需要將adobe-utilities.jar和jbossall-client.jar檔案取代為部署AEM Forms之J2EE應用程式伺服器專屬的JAR檔案。
 
-**创建输出客户端对象**
+**建立輸出使用者端物件**
 
-必须先创建输出服务客户端对象，然后才能以编程方式执行输出服务操作。 如果您使用的是Java API，请创建 `OutputClient` 对象。 如果您使用的是Output Web service API，请创建 `OutputServiceService` 对象。
+您必須先建立輸出服務使用者端物件，才能以程式設計方式執行輸出服務作業。 如果您使用Java API，請建立 `OutputClient` 物件。 如果您使用輸出Web服務API，請建立 `OutputServiceService` 物件。
 
-**引用XML数据源**
+**參考XML資料來源**
 
-引用包含多个记录的XML数据源。 必须使用XML元素来分隔数据记录。 例如，在本节前面显示的示例XML数据源中，用于分隔数据记录的XML元素被命名为 `LoanRecord`.
+參考包含多個記錄的XML資料來源。 必須使用XML元素來分隔資料記錄。 例如，在本節前面顯示的範例XML資料來源中，分隔資料記錄的XML元素命名為 `LoanRecord`.
 
-要使用数据填充的每个表单字段都必须存在XML元素。 XML元素名称必须与字段名称匹配。 如果XML元素与表单字段不对应，或者如果XML元素名称与字段名称不匹配，则会忽略该元素。 如果指定了所有XML元素，则不必匹配XML元素的显示顺序。
+每個要填入資料的表單欄位都必須有XML元素。 XML元素名稱必須符合欄位名稱。 如果XML元素未對應至表單欄位，或XML元素名稱不符合欄位名稱，則會忽略該元素。 如果已指定所有XML元素，則不必比對XML元素的顯示順序。
 
-**设置PDF运行时选项**
+**設定PDF執行階段選項**
 
-必须设置以下运行时选项，Output服务才能基于XML数据源成功创建多个文件：
+您必須為輸出服務設定下列執行階段選項，才能根據XML資料來源成功建立多個檔案：
 
-* **许多文件**：指定Output服务是创建单个文档还是多个文档。 您可以指定true或false。 要为XML数据源中的每个数据记录创建单独的文档，请指定true。
-* **文件URI**：指定Output服务生成的文件的位置。 例如，假设您指定了C:\\Adobe\forms\Loan.pdf。 在这种情况下，Output服务会创建一个名为Loan.pdf的文件，并将该文件放在C:\\Adobe\forms文件夹中。 当有多个文件时，其文件名为Loan0001.pdf、Loan0002.pdf、Loan0003.pdf等。 如果指定文件位置，则文件将放在服务器上，而不是客户端计算机上。
-* **记录名称**：指定数据源中用于分隔数据记录的XML元素名称。 例如，在本节前面显示的示例XML数据源中，将调用用于分隔数据记录的XML元素 `LoanRecord`. (不必设置“记录名称”运行时选项，而是可以通过为记录级别分配一个数字值来设置记录级别，该值指示包含数据记录的元素级别。 但是，您只能设置“记录名称”或“记录级别”。 不能同时设置这两个值。)
+* **許多檔案**：指定Output服務是建立單一檔案還是多個檔案。 您可以指定true或false。 若要為XML資料來源中的每個資料記錄建立個別的檔案，請指定true。
+* **檔案URI**：指定輸出服務產生之檔案的位置。 例如，假設您指定C:\\Adobe\forms\Loan.pdf。 在此情況下，Output服務會建立名為Loan.pdf的檔案，並將該檔案放在C:\\Adobe\forms資料夾中。 有多個檔案時，檔案名稱為Loan0001.pdf、Loan0002.pdf、Loan0003.pdf等。 如果您指定檔案位置，檔案會放在伺服器上，而不是使用者端電腦上。
+* **記錄名稱**：指定資料來源中用於分隔資料記錄的XML元素名稱。 例如，在本節先前顯示的範例XML資料來源中，會呼叫分隔資料記錄的XML元素 `LoanRecord`. (您不必設定「記錄名稱」執行階段選項，而是可以將「記錄層級」指派為數字值，指出包含資料記錄的元素層級，以設定「記錄層級」。 不過，您只能設定「記錄名稱」或「記錄層次」。 您無法同時設定這兩個值。)
 
-**设置渲染运行时选项**
+**設定演算執行階段選項**
 
-您可以在创建多个文件时设置渲染运行时选项。 虽然这些选项不是必需的（与所需的输出运行时选项不同），但您可以执行诸如提高输出服务性能的任务。 例如，您可以缓存Output服务使用的表单设计以提高性能。
+您可以在建立多個檔案時設定演算執行階段選項。 雖然這些選項並非必要（不同於必要的輸出執行階段選項），但您可以執行工作，例如改善Output服務的效能。 例如，您可以快取Output服務使用的表單設計以提高效能。
 
-当Output服务处理批处理记录时，它以增量方式读取包含多个记录的数据。 也就是说，Output服务将数据读入内存并在处理一批记录时释放数据。 当设置两个运行时选项之一时，输出服务以增量方式加载数据。 如果设置“记录名称”运行时选项，Output服务将以增量方式读取数据。 同样，如果将“记录级别”运行时选项设置为2或更大，Output服务将以增量方式读取数据。
+Output服務處理批次記錄時，會以累加方式讀取包含多個記錄的資料。 也就是說，Output服務會將資料讀入記憶體，並在批次記錄處理時釋出資料。 設定兩個執行階段選項之一時，Output服務會以累加方式載入資料。 如果您設定「記錄名稱」執行階段選項，Output服務會以累加方式讀取資料。 同樣地，如果您將「記錄層級」執行時間選項設為2或更大，Output服務會以累加方式讀取資料。
 
-您可以使用来控制输出服务是否执行增量加载 `PDFOutputOptionsSpec` 或 `PrintedOutputOptionSpec` 对象的 `setLazyLoading` 方法。 您可以传递值 `false` 更改为此方法，这将关闭增量加载。
+您可以使用「 」控制Output服務是否執行增量載入 `PDFOutputOptionsSpec` 或 `PrintedOutputOptionSpec` 物件的 `setLazyLoading` 方法。 您可以傳遞值 `false` 關閉增量載入的這個方法。
 
-**生成多个PDF文件**
+**產生多個PDF檔案**
 
-在引用包含多个数据记录的有效XML数据源并设置运行时选项后，可以调用Output服务，这会使其生成多个文件。 在生成多个记录时， `OutputResult` 对象的 `getGeneratedDoc` 方法返回 `null`.
+在參照包含多個資料記錄並設定執行階段選項的有效XML資料來源後，您可以叫用Output服務，使其產生多個檔案。 產生多個記錄時， `OutputResult` 物件的 `getGeneratedDoc` 方法傳回 `null`.
 
-**检索操作的结果**
+**擷取作業的結果**
 
-在Output服务执行操作后，它会返回用于指定操作是否成功的XML数据。 Output服务返回以下XML。 在这种情况下，Output服务产生了42份文件。
+Output服務執行作業之後，會傳回指定作業是否成功的XML資料。 下列XML由Output服務傳回。 在此情況下，Output服務會產生42份檔案。
 
 ```xml
  <?xml version="1.0" encoding="UTF-8"?>
@@ -1799,576 +1799,576 @@ Output服务可以为XML数据源内的每个记录创建单独的文档，也�
 
 **另请参阅**
 
-[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
-[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[输出服务API快速启动](/help/forms/developing/output-service-java-api-quick.md#output-service-java-api-quick-start-soap)
+[Output Service API快速啟動](/help/forms/developing/output-service-java-api-quick.md#output-service-java-api-quick-start-soap)
 
-### 使用Java API创建多个PDF文件 {#create-multiple-pdf-files-using-the-java-api}
+### 使用Java API建立多個PDF檔案 {#create-multiple-pdf-files-using-the-java-api}
 
-使用输出API (Java)创建多个PDF文件：
+使用Output API (Java)建立多個PDF檔案：
 
-1. 包括项目文件”
+1. 包含專案檔案」
 
-   在Java项目的类路径中包含客户端JAR文件，如adobe-output-client.jar。.
+   在您的Java專案的類別路徑中包含使用者端JAR檔案，例如adobe-output-client.jar。.
 
-1. 创建输出客户端对象
+1. 建立輸出使用者端物件
 
-   * 创建 `ServiceClientFactory` 包含连接属性的对象。
-   * 创建 `OutputClient` 对象，使用它的构造函数传递 `ServiceClientFactory` 对象。
+   * 建立 `ServiceClientFactory` 包含連線屬性的物件。
+   * 建立 `OutputClient` 物件，使用它的建構函式並傳遞 `ServiceClientFactory` 物件。
 
-1. 引用XML数据源
+1. 參考XML資料來源
 
-   * 创建 `java.io.FileInputStream` 对象，通过使用其构造函数并传递指定XML文件位置的字符串值，来表示包含多个记录的XML数据源。
-   * 创建 `com.adobe.idp.Document` 对象，使用它的构造函数传递 `java.io.FileInputStream` 对象。
+   * 建立 `java.io.FileInputStream` 物件，代表包含多個記錄的XML資料來源，方法是使用其建構函式，並傳遞指定XML檔案位置的字串值。
+   * 建立 `com.adobe.idp.Document` 物件，使用它的建構函式並傳遞 `java.io.FileInputStream` 物件。
 
-1. 设置PDF运行时选项
+1. 設定PDF執行階段選項
 
-   * 创建 `PDFOutputOptionsSpec` 对象。
-   * 通过调用 `PDFOutputOptionsSpec` 对象的 `setGenerateManyFiles` 方法。 例如，传递值 `true` 指示Output服务为XML数据源中的每个记录创建单独的PDF文件。 (如果通过 `false`，Output服务会生成一个包含所有记录的PDF文档)。
-   * 通过调用 `PDFOutputOptionsSpec` 对象的 `setFileUri` 方法和传递一个字符串值，该值指定输出服务生成的文件的位置。 文件URI选项相对于托管AEM Forms的J2EE应用程序服务器，而不是客户端计算机。
-   * 通过调用 `OutputOptionsSpec` 对象的 `setRecordName` 方法，并传递一个字符串值，该值指定分隔数据记录的数据源中的XML元素名称。 (例如，请考虑本节前面显示的XML数据源。 用于分隔数据记录的XML元素的名称为LoanRecord)。
+   * 建立 `PDFOutputOptionsSpec` 物件（使用其建構函式）。
+   * 透過叫用 `PDFOutputOptionsSpec` 物件的 `setGenerateManyFiles` 方法。 例如，傳遞值 `true` 指示Output服務為XML資料來源中的每個記錄建立個別的PDF檔案。 (如果通過 `false`，輸出服務會產生包含所有記錄的單一PDF檔案)。
+   * 透過叫用 `PDFOutputOptionsSpec` 物件的 `setFileUri` 和傳遞字串值，該值指定輸出服務產生之檔案的位置。 檔案URI選項是相對於裝載AEM Forms的J2EE應用程式伺服器，而不是使用者端電腦。
+   * 透過叫用 `OutputOptionsSpec` 物件的 `setRecordName` 方法並傳遞字串值，該值會指定資料來源中，用於分隔資料記錄的XML元素名稱。 (例如，請考量本節前面所示的XML資料來源。 分隔資料記錄的XML元素名稱為LoanRecord)。
 
-1. 设置渲染运行时选项
+1. 設定演算執行階段選項
 
-   * 创建 `RenderOptionsSpec` 对象。
-   * 缓存表单设计以通过调用 `RenderOptionsSpec` 对象的 `setCacheEnabled` 并传递 `Boolean` 值 `true`.
+   * 建立 `RenderOptionsSpec` 物件（使用其建構函式）。
+   * 快取表單設計以透過叫用 `RenderOptionsSpec` 物件的 `setCacheEnabled` 並傳遞 `Boolean` 值 `true`.
 
-1. 生成多个PDF文件
+1. 產生多個PDF檔案
 
-   PDF通过调用 `OutputClient` 对象的 `generatePDFOutput` 方法，并传递以下值：
+   透過叫用多個PDF檔案 `OutputClient` 物件的 `generatePDFOutput` 並傳遞下列值：
 
-   * A `TransformationFormat` 枚举值。 要生成PDF单据，请指定 `TransformationFormat.PDF`.
-   * 一个字符串值，它指定表单设计的名称。
-   * 一个字符串值，它指定表单设计所在的内容根。
-   * A `PDFOutputOptionsSpec` 包含PDF运行时选项的对象。
-   * A `RenderOptionsSpec` 包含渲染运行时选项的对象。
-   * 此 `com.adobe.idp.Document` 包含要与表单设计合并的数据的XML数据源的对象。
+   * A `TransformationFormat` 列舉值。 若要產生PDF檔案，請指定 `TransformationFormat.PDF`.
+   * 字串值，指定表單設計的名稱。
+   * 字串值，指定表單設計所在的內容根。
+   * A `PDFOutputOptionsSpec` 包含PDF執行階段選項的物件。
+   * A `RenderOptionsSpec` 包含演算執行階段選項的物件。
+   * 此 `com.adobe.idp.Document` 包含要與表單設計合併之資料之XML資料來源的物件。
 
-   此 `generatePDFOutput` 方法返回 `OutputResult` 包含操作结果的对象。
+   此 `generatePDFOutput` 方法傳回 `OutputResult` 包含作業結果的物件。
 
-1. 检索操作的结果
+1. 擷取作業的結果
 
-   * 创建 `java.io.File` 表示包含结果的XML文件的对象。 `generatePDFOutput` 方法。 确保文件扩展名为.xml。
-   * 调用 `com.adobe.idp.Document` 对象的 `copyToFile` 用于复制目录内容的方法 `com.adobe.idp.Document` 对象(确保您使用 `com.adobe.idp.Document` 返回的对象 `applyUsageRights` 方法)。
+   * 建立 `java.io.File` 物件，代表將包含結果的XML檔案 `generatePDFOutput` 方法。 確認副檔名為.xml。
+   * 叫用 `com.adobe.idp.Document` 物件的 `copyToFile` 複製目錄內容的方法 `com.adobe.idp.Document` 物件放入檔案(請確定您使用 `com.adobe.idp.Document` 物件，由 `applyUsageRights` 方法)。
 
 **另请参阅**
 
-[步骤摘要](creating-document-output-streams.md#summary-of-steps)
+[步驟摘要](creating-document-output-streams.md#summary-of-steps)
 
-[快速入门（EJB模式）：使用Java API创建多个PDF文件](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-multiple-pdf-files-using-the-java-api)
+[快速入門（EJB模式）：使用Java API建立多個PDF檔案](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-multiple-pdf-files-using-the-java-api)
 
-[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
-[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### 使用Web服务API创建多个PDF文件 {#create-multiple-pdf-files-using-the-web-service-api}
+### 使用Web服務API建立多個PDF檔案 {#create-multiple-pdf-files-using-the-web-service-api}
 
-使用输出API（Web服务）创建多个PDF文件：
+使用Output API （Web服務）建立多個PDF檔案：
 
-1. 包括项目文件。
+1. 包含專案檔案。
 
-   创建使用MTOM的Microsoft .NET项目。 确保使用以下WSDL定义： `http://localhost:8080/soap/services/OutputService?WSDL&lc_version=9.0.1`.
+   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/OutputService?WSDL&lc_version=9.0.1`.
 
    >[!NOTE]
    >
-   >Replace `localhost` 包含托管AEM Forms的服务器的IP地址。
+   >Replace `localhost` 搭配裝載AEM Forms之伺服器的IP位址。
 
-1. 创建输出客户端对象。
+1. 建立輸出使用者端物件。
 
-   * 创建 `OutputServiceClient` 对象。
-   * 创建 `OutputServiceClient.Endpoint.Address` 对象 `System.ServiceModel.EndpointAddress` 构造函数。 将指定WSDL的字符串值传递给AEM Forms服务(例如， `http://localhost:8080/soap/services/OutputService?blob=mtom`.) 您无需使用 `lc_version` 属性。 创建服务引用时使用此属性。 但是，请指定 `?blob=mtom` 使用MTOM。
-   * 创建 `System.ServiceModel.BasicHttpBinding` 对象，方法是获取 `OutputServiceClient.Endpoint.Binding` 字段。 将返回值强制转换为 `BasicHttpBinding`.
-   * 设置 `System.ServiceModel.BasicHttpBinding` 对象的 `MessageEncoding` 字段至 `WSMessageEncoding.Mtom`. 此值可确保使用MTOM。
-   * 通过执行以下任务启用基本HTTP身份验证：
+   * 建立 `OutputServiceClient` 物件（使用其預設建構函式）。
+   * 建立 `OutputServiceClient.Endpoint.Address` 物件，使用 `System.ServiceModel.EndpointAddress` 建構函式。 將指定WSDL的字串值傳遞至AEM Forms服務(例如， `http://localhost:8080/soap/services/OutputService?blob=mtom`.) 您不需要使用 `lc_version` 屬性。 當您建立服務參考時，會使用此屬性。 不過，請指定 `?blob=mtom` 以使用MTOM。
+   * 建立 `System.ServiceModel.BasicHttpBinding` 物件，方法是取得 `OutputServiceClient.Endpoint.Binding` 欄位。 將傳回值轉換為 `BasicHttpBinding`.
+   * 設定 `System.ServiceModel.BasicHttpBinding` 物件的 `MessageEncoding` 欄位至 `WSMessageEncoding.Mtom`. 此值可確保使用MTOM。
+   * 執行下列工作來啟用基本HTTP驗證：
 
-      * 将AEM表单用户名分配给字段 `OutputServiceClient.ClientCredentials.UserName.UserName`.
-      * 将相应的密码值分配给字段 `OutputServiceClient.ClientCredentials.UserName.Password`.
-      * 分配常量值 `HttpClientCredentialType.Basic` 到字段 `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
-      * 分配常量值 `BasicHttpSecurityMode.TransportCredentialOnly` 到字段 `BasicHttpBindingSecurity.Security.Mode`.
+      * 將AEM表單使用者名稱指派給欄位 `OutputServiceClient.ClientCredentials.UserName.UserName`.
+      * 將對應的密碼值指派給欄位 `OutputServiceClient.ClientCredentials.UserName.Password`.
+      * 指派常數值 `HttpClientCredentialType.Basic` 至欄位 `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
+      * 指派常數值 `BasicHttpSecurityMode.TransportCredentialOnly` 至欄位 `BasicHttpBindingSecurity.Security.Mode`.
 
-1. 引用XML数据源。
+1. 參照XML資料來源。
 
-   * 创建 `BLOB` 对象。 此 `BLOB` 对象用于存储包含多个记录的表单数据。
-   * 创建 `System.IO.FileStream` 对象。 传递一个字符串值，该值表示包含多个记录的XML文件的文件位置。
-   * 创建一个字节数组，用于存储 `System.IO.FileStream` 对象。 您可以通过获取 `System.IO.FileStream` 对象的 `Length` 属性。
-   * 通过调用 `System.IO.FileStream` 对象的 `Read` 方法，并传递字节数组、起始位置和要读取的流长度。
-   * 填充 `BLOB` 对象(通过指定其 `MTOM` 包含字节数组内容的字段。
+   * 建立 `BLOB` 物件（使用其建構函式）。 此 `BLOB` 物件是用來儲存包含多個記錄的表單資料。
+   * 建立 `System.IO.FileStream` 物件（透過叫用其建構函式）。 傳遞代表包含多個記錄之XML檔案的檔案位置的字串值。
+   * 建立位元組陣列，儲存 `System.IO.FileStream` 物件。 您可以取得 `System.IO.FileStream` 物件的 `Length` 屬性。
+   * 叫用 `System.IO.FileStream` 物件的 `Read` 方法，並傳遞位元組陣列、起始位置以及要讀取的資料流長度。
+   * 填入 `BLOB` 物件，透過指派其 `MTOM` 包含位元組陣列內容的欄位。
 
-1. 设置PDF运行时选项。
+1. 設定PDF執行階段選項。
 
-   * 创建 `PDFOutputOptionsSpec` 对象。
-   * 通过为指定一个布尔值来设置“多个文件”选项 `OutputOptionsSpec` 对象的 `generateManyFiles` 数据成员。 例如，分配值 `true` 指示输出服务为XML数据源中的每个记录创建单独的PDF文件。 (如果分配 `false` 之后，Output服务将生成一个包含所有记录的PDF。
-   * 通过指定一个字符串值来设置文件URI选项，该字符串值指定输出服务生成的文件的位置。 `OutputOptionsSpec` 对象的 `fileURI` 数据成员。 文件URI选项相对于托管AEM Forms的J2EE应用程序服务器，而不是客户端计算机。
-   * 通过指定一个字符串值来设置记录名称选项，该字符串值指定数据源中的XML元素名称，该数据源将数据记录分隔到 `OutputOptionsSpec` 对象的 `recordName` 数据成员。
-   * 通过指定一个整数值来设置copies选项，该值指定输出服务生成到的副本数 `OutputOptionsSpec` 对象的 `copies` 数据成员。
+   * 建立 `PDFOutputOptionsSpec` 物件（使用其建構函式）。
+   * 將布林值指派給，以設定「多個檔案」選項 `OutputOptionsSpec` 物件的 `generateManyFiles` 資料成員。 例如，指派值 `true` 指示輸出服務為XML資料來源中的每個記錄建立個別的PDF檔案。 (如果您指派 `false` 之後，Output服務會產生包含所有記錄的單一PDF)。
+   * 透過指派字串值來設定檔案URI選項，該字串值指定輸出服務產生給的檔案位置。 `OutputOptionsSpec` 物件的 `fileURI` 資料成員。 檔案URI選項是相對於裝載AEM Forms的J2EE應用程式伺服器，而不是使用者端電腦。
+   * 藉由指定字串值來設定記錄名稱選項，該字串值指定資料來源中的XML元素名稱，該資料來源會將資料記錄分隔至 `OutputOptionsSpec` 物件的 `recordName` 資料成員。
+   * 透過指定整數值來設定複製選項，整數值會指定輸出服務產生給 `OutputOptionsSpec` 物件的 `copies` 資料成員。
 
-1. 设置渲染运行时选项。
+1. 設定演算執行階段選項。
 
-   * 创建 `RenderOptionsSpec` 对象。
-   * 缓存表单设计以通过分配值提高Output服务的性能 `true` 到 `RenderOptionsSpec` 对象的 `cacheEnabled` 数据成员。
+   * 建立 `RenderOptionsSpec` 物件（使用其建構函式）。
+   * 快取表單設計以指派值來改善Output服務的效能 `true` 至 `RenderOptionsSpec` 物件的 `cacheEnabled` 資料成員。
 
-1. 生成多个PDF文件。
+1. 產生多個PDF檔案。
 
-   PDF通过调用 `OutputServiceService` 对象的 `generatePDFOutput`方法，并传递以下值：
+   透過叫用多個PDF檔案 `OutputServiceService` 物件的 `generatePDFOutput`並傳遞下列值：
 
-   * TransformationFormat枚举值。 要生成PDF单据，请指定 `TransformationFormat.PDF`.
-   * 一个字符串值，它指定表单设计的名称。
-   * 一个字符串值，它指定表单设计所在的内容根。
-   * A `PDFOutputOptionsSpec` 包含PDF运行时选项的对象。
-   * A `RenderOptionsSpec` 包含渲染运行时选项的对象。
-   * 此 `BLOB` 包含要与表单设计合并的数据的XML数据源的对象。
-   * A `BLOB` 由填充的对象 `generatePDFOutput` 方法。 此 `generatePDFOutput` 方法使用生成的描述文档的元数据填充此对象。
-   * A `BLOB` 由填充的对象 `generatePDFOutput` 方法。 此 `generatePDFOutput` 方法使用结果数据填充此对象。
-   * An `OutputResult` 包含操作结果的对象。
+   * TransformationFormat列舉值。 若要產生PDF檔案，請指定 `TransformationFormat.PDF`.
+   * 字串值，指定表單設計的名稱。
+   * 字串值，指定表單設計所在的內容根。
+   * A `PDFOutputOptionsSpec` 包含PDF執行階段選項的物件。
+   * A `RenderOptionsSpec` 包含演算執行階段選項的物件。
+   * 此 `BLOB` 包含要與表單設計合併之資料之XML資料來源的物件。
+   * A `BLOB` 由填入的物件 `generatePDFOutput` 方法。 此 `generatePDFOutput` 方法會使用產生的描述檔案的中繼資料填入此物件。
+   * A `BLOB` 由填入的物件 `generatePDFOutput` 方法。 此 `generatePDFOutput` 方法會將結果資料填入此物件中。
+   * 一個 `OutputResult` 包含作業結果的物件。
 
-1. 检索操作的结果
+1. 擷取作業的結果
 
-   * 创建 `System.IO.FileStream` 对象，方法是调用其构造函数并传递一个字符串值，该值表示包含结果数据的XML文件位置。 确保文件扩展名为.xml。
-   * 创建一个字节数组，用于存储 `BLOB` 使用结果数据填充的对象 `OutputServiceService` 对象的 `generatePDFOutput` 方法（第八个参数）。 通过获取的值填充字节数组 `BLOB` 对象的 `binaryData` 数据成员。
-   * 创建 `System.IO.BinaryWriter` 对象，方法是调用其构造函数 `System.IO.FileStream` 对象。
-   * 通过调用 `System.IO.BinaryWriter` 对象的 `Write` 方法和传递字节数组。
+   * 建立 `System.IO.FileStream` 物件，方法是叫用其建構函式，並傳遞代表包含結果資料之XML檔案位置的字串值。 確認副檔名為.xml。
+   * 建立位元組陣列，儲存 `BLOB` 填入結果資料的物件 `OutputServiceService` 物件的 `generatePDFOutput` 方法（第八個引數）。 透過取得 `BLOB` 物件的 `binaryData` 資料成員。
+   * 建立 `System.IO.BinaryWriter` 物件，方法是叫用其建構函式並傳遞 `System.IO.FileStream` 物件。
+   * 透過叫用 `System.IO.BinaryWriter` 物件的 `Write` 方法並傳遞位元組陣列。
 
 **另请参阅**
 
-[步骤摘要](creating-document-output-streams.md#summary-of-steps)
+[步驟摘要](creating-document-output-streams.md#summary-of-steps)
 
-[使用MTOM调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[使用MTOM叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[使用SwaRef调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[使用SwaRef叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
-## 创建搜索规则 {#creating-search-rules}
+## 建立搜尋規則 {#creating-search-rules}
 
-您可以创建搜索规则，以导致Output服务检查输入数据并根据数据内容使用不同的表单设计来生成输出。 例如，如果文本 *按揭* 位于输入数据内，则Output服务可以使用名为Mortgage.xdp的表单设计。 同样，如果文本 *汽车* 位于输入数据中，则Output服务可以使用保存为AutomobileLoan.xdp的表单设计。 尽管Output服务可以生成不同的输出类型，但本节假定Output服务生成一个PDF文件。 下图显示了Output服务，该服务通过处理XML数据文件并使用多种表单设计之一来生成PDF文件。
+您可以建立搜尋規則，讓Output服務檢查輸入資料，並根據資料內容使用不同的表單設計來產生輸出。 例如，如果文字 *按揭* 位在輸入資料中，則Output服務可使用名為Mortgage.xdp的表單設計。 同樣地，如果文字 *汽車* 位於輸入資料中，則Output服務可使用儲存為AutomobileLoan.xdp的表單設計。 雖然Output服務可以產生不同的輸出型別，但本節假設了Output服務會產生PDF檔案。 下圖顯示Output服務透過處理XML資料檔案並使用多種表單設計之一來產生PDF檔案。
 
-此外，输出服务能够生成文档包，其中在数据集中提供了多个记录，并且每个记录与表单设计匹配，并且由多个表单设计生成单个文档。
+此外，Output服務能夠產生檔案套件，其中資料集中提供了多個記錄，每個記錄都與一個表單設計相符，並且由多個表單設計產生單個檔案。
 
 ![cs_outputbatchmanyformdesigns2](assets/cs_outputbatchmanyformdesigns2.png)
 
 >[!NOTE]
 >
->有关输出服务的详细信息，请参见 [AEM Forms的服务参考](https://www.adobe.com/go/learn_aemforms_services_63).
+>如需Output服務的詳細資訊，請參閱 [AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
 
-### 步骤摘要 {#summary_of_steps-8}
+### 步驟摘要 {#summary_of_steps-8}
 
-要指示Output服务在生成文档时使用搜索规则，请执行以下步骤：
+若要指示Output服務在產生檔案時使用搜尋規則，請執行下列步驟：
 
-1. 包括项目文件。
-1. 创建输出客户端对象。
-1. 引用XML数据源。
-1. 定义搜索规则。
-1. 设置PDF运行时选项。
-1. 设置渲染运行时选项。
-1. 生成PDF文档。
-1. 检索操作的结果。
+1. 包含專案檔案。
+1. 建立輸出使用者端物件。
+1. 參照XML資料來源。
+1. 定義搜尋規則。
+1. 設定PDF執行階段選項。
+1. 設定演算執行階段選項。
+1. 產生PDF檔案。
+1. 擷取作業的結果。
 
-**包括项目文件**
+**包含專案檔案**
 
-在开发项目中包含必要的文件。 如果要使用Java创建客户端应用程序，则包含必要的JAR文件。 如果您使用的是Web服务，请确保包含代理文件。
+在您的開發專案中包含必要的檔案。 如果您使用Java建立使用者端應用程式，請包含必要的JAR檔案。 如果您使用Web服務，請務必包含Proxy檔案。
 
-必须将以下JAR文件添加到项目的类路径中：
+下列JAR檔案必須新增到專案的類別路徑中：
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-output-client.jar
-* adobe-utilities.jar(如果将AEM Forms部署在JBoss上，则此为必需字段)
-* jbossall-client.jar(如果在JBoss上部署了AEM Forms，则此为必填字段)
+* adobe-utilities.jar (如果AEM Forms部署在JBoss上，則為必要)
+* jbossall-client.jar (如果AEM Forms部署在JBoss上，則為必要)
 
-如果AEM Forms部署在支持的J2EE应用程序服务器（不是JBoss）上，则需要将adobe-utilities.jar和jbossall-client.jar替换为特定于部署AEM Forms的J2EE应用程序服务器的JAR文件。
+如果將AEM Forms部署在非JBoss的支援J2EE應用程式伺服器上，則您需要將adobe-utilities.jar和jbossall-client.jar取代為部署AEM Forms之J2EE應用程式伺服器專屬的JAR檔案。
 
-**创建输出客户端对象**
+**建立輸出使用者端物件**
 
-必须先创建输出服务客户端对象，然后才能以编程方式执行输出服务操作。
+您必須先建立輸出服務使用者端物件，才能以程式設計方式執行輸出服務作業。
 
-**引用XML数据源**
+**參考XML資料來源**
 
-要使用数据填充的每个表单字段都必须存在XML元素。 XML元素名称必须与字段名称匹配。 如果XML元素与表单字段不对应，或者如果XML元素名称与字段名称不匹配，则会忽略该元素。 只要指定了所有XML元素，就不必匹配XML元素的显示顺序。
+每個要填入資料的表單欄位都必須有XML元素。 XML元素名稱必須符合欄位名稱。 如果XML元素未對應至表單欄位，或XML元素名稱不符合欄位名稱，則會忽略該元素。 只要已指定所有XML元素，就不需要比對XML元素的顯示順序。
 
-**定义搜索规则**
+**定義搜尋規則**
 
-要定义搜索规则，可定义Output服务在输入数据中搜索的一个或多个文本模式。 对于您定义的每个文本模式，指定在找到文本模式时所使用的相应表单设计。 如果找到文本模式，则Output服务将使用相应的表单设计生成输出。 文本模式的一个示例是 *按揭*.
+若要定義搜尋規則，您可以定義「輸出」服務在輸入資料中搜尋的一或多個文字模式。 對於您定義的每個文字模式，指定在文字模式所在位置所使用的對應表單設計。 如果找到文字模式，則Output服務會使用對應的表單設計來產生輸出。 文字模式的範例為 *按揭*.
 
 >[!NOTE]
 >
->如果找不到文本模式，则使用默认表单。 确保您使用的所有表单设计都位于内容根中。
+>如果找不到文字圖樣，則會使用預設的表單。 請確定您使用的所有表單設計都位於內容根目錄中。
 
-**设置PDF运行时选项**
+**設定PDF執行階段選項**
 
-设置以下PDF运行时选项，以便Output服务根据多个表单设计成功创建PDF文档：
+設定下列PDF執行階段選項，讓Output服務根據多個表單設計成功建立PDF檔案：
 
-* **文件URI**：指定输出服务生成的PDF文件的名称和位置。
-* **规则**：指定您定义的规则。
-* **LookAhead**：指定从输入数据文件的开头开始要用于扫描所定义的文本模式的字节数。 缺省值为500字节。
+* **檔案URI**：指定Output服務產生的PDF檔案名稱和位置。
+* **規則**：指定您定義的規則。
+* **LookAhead**：指定從輸入資料檔案開頭起要用於掃描已定義文字模式的位元組數。 預設值為500位元組。
 
-**设置渲染运行时选项**
+**設定演算執行階段選項**
 
-您可以在创建PDF文件时设置渲染运行时选项。 虽然这些选项不是必需的(与PDF运行时选项不同)，但您可以执行各种任务，如提高Output服务的性能。 例如，您可以缓存Output服务使用的表单设计以提高性能。
+您可以在建立PDF檔案時設定演算執行階段選項。 雖然這些選項不是必要選項(不同於PDF執行階段選項)，但您可以執行工作，例如改善Output服務的效能。 例如，您可以快取Output服務使用的表單設計以提高效能。
 
-**生成PDF文档**
+**產生PDF檔案**
 
-在引用有效的XML数据源并设置运行时选项后，可以调用Output服务，从而生成PDF文档。 如果Output服务在输入数据中找到指定的文本模式，则它使用相应的表单设计。 如果未使用文本模式，则Output服务将使用默认表单设计。
+參照有效的XML資料來源並設定執行階段選項後，您可以叫用Output服務，使其產生PDF檔案。 如果Output服務在輸入資料中找到指定的文字模式，則會使用對應的表單設計。 如果未使用文字模式，則Output服務會使用預設的表單設計。
 
-**检索操作的结果**
+**擷取作業的結果**
 
-在Output服务执行操作后，它会返回用于指定操作是否成功的XML数据。
-
-**另请参阅**
-
-[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
-
-[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
-
-[输出服务API快速启动](/help/forms/developing/output-service-java-api-quick.md#output-service-java-api-quick-start-soap)
-
-### 使用Java API创建搜索规则 {#create-search-rules-using-the-java-api}
-
-使用输出API (Java)创建搜索规则：
-
-1. 包括项目文件。
-
-   在Java项目的类路径中包含客户端JAR文件，如adobe-output-client.jar。
-
-1. 创建输出客户端对象。
-
-   * 创建 `ServiceClientFactory` 包含连接属性的对象。
-   * 创建 `OutputClient` 对象，使用它的构造函数传递 `ServiceClientFactory` 对象。
-
-1. 引用XML数据源。
-
-   * 创建 `java.io.FileInputStream` 对象，表示用于填充PDF文档的XML数据源，该数据源使用其构造函数并传递指定XML文件位置的字符串值。
-   * 创建 `com.adobe.idp.Document` 对象，使用它的构造函数传递 `java.io.FileInputStream` 对象。
-
-1. 定义搜索规则。
-
-   * 创建 `Rule` 对象。
-   * 通过调用 `Rule` 对象的 `setPattern` 和传递指定文本模式的字符串值。
-   * 通过调用 `Rule` 对象的 `setForm` 方法。 传递一个指定表单设计名称的字符串值。
-
-   >[!NOTE]
-   >
-   >对于要定义的每个文本模式，重复前三个子步骤。
-
-   * 创建 `java.util.List` 对象，使用 `java.util.ArrayList` 构造函数。
-   * 针对每个 `Rule` 创建的对象，调用 `java.util.List` 对象的 `add` 方法并传递 `Rule` 对象。
-
-
-1. 设置PDF运行时选项。
-
-   * 创建 `PDFOutputOptionsSpec` 对象。
-   * PDF指定Output服务通过调用 `PDFOutputOptionsSpec` 对象的 `setFileURI` 方法。 传递一个指定PDF文件位置的字符串值。 文件URI选项相对于托管AEM Forms的J2EE应用程序服务器，而不是客户端计算机。
-   * 通过调用 `PDFOutputOptionsSpec` 对象的 `setRules` 方法。 传递 `java.util.List` 包含 `Rule` 对象。
-   * 通过调用 `PDFOutputOptionsSpec` 对象的 `setLookAhead` 方法。 传递一个表示字节数的整数值。
-
-1. 设置渲染运行时选项。
-
-   * 创建 `RenderOptionsSpec` 对象。
-   * 缓存表单设计，以便通过调用 `RenderOptionsSpec` 对象的 `setCacheEnabled` 和传递 `true`.
-
-1. 生成PDF文档。
-
-   PDF通过调用 `OutputClient` 对象的 `generatePDFOutput` 方法，并传递以下值：
-
-   * A `TransformationFormat` 枚举值。 要生成PDF单据，请指定 `TransformationFormat.PDF`.
-   * 一个字符串值，它指定默认表单设计的名称。 即，在找不到文本模式时所使用的窗体设计。
-   * 一个字符串值，它指定表单设计所在的内容根。
-   * A `PDFOutputOptionsSpec` 包含PDF运行时选项的对象。
-   * A `RenderOptionsSpec` 包含渲染运行时选项的对象。
-   * 此 `com.adobe.idp.Document` 包含表单数据的对象，由Output服务针对定义的文本模式进行搜索。
-
-   此 `generatePDFOutput` 方法返回 `OutputResult` 包含操作结果的对象。
-
-1. 检索操作的结果。
-
-   * 创建 `com.adobe.idp.Document` 表示以下对象的状态的对象： `generatePDFOutput` 方法调用 `OutputResult` 对象的 `getStatusDoc` 方法。
-   * 创建 `java.io.File` 将包含操作结果的对象。 确保文件扩展名为.xml。
-   * 调用 `com.adobe.idp.Document` 对象的 `copyToFile` 用于复制目录内容的方法 `com.adobe.idp.Document` 对象(确保您使用 `com.adobe.idp.Document` 返回的对象 `getStatusDoc` 方法)。
+Output服務執行作業之後，會傳回指定作業是否成功的XML資料。
 
 **另请参阅**
 
-[步骤摘要](creating-document-output-streams.md#summary-of-steps)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
-[快速入门（EJB模式）：使用Java API创建搜索规则](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-search-rules-using-the-java-api)
+[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[快速入门（SOAP模式）：使用Java API创建搜索规则](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-search-rules-using-the-java-api)
+[Output Service API快速啟動](/help/forms/developing/output-service-java-api-quick.md#output-service-java-api-quick-start-soap)
 
-[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+### 使用Java API建立搜尋規則 {#create-search-rules-using-the-java-api}
 
-[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+使用Output API (Java)建立搜尋規則：
 
-### 使用Web服务API创建搜索规则 {#create-search-rules-using-the-web-service-api}
+1. 包含專案檔案。
 
-使用输出API（Web服务）创建搜索规则：
+   在您的Java專案的類別路徑中包含使用者端JAR檔案，例如adobe-output-client.jar。
 
-1. 包括项目文件。
+1. 建立輸出使用者端物件。
 
-   创建使用MTOM的Microsoft .NET项目。 确保使用以下WSDL定义： `http://localhost:8080/soap/services/OutputService?WSDL&lc_version=9.0.1`.
+   * 建立 `ServiceClientFactory` 包含連線屬性的物件。
+   * 建立 `OutputClient` 物件，使用它的建構函式並傳遞 `ServiceClientFactory` 物件。
 
-   >[!NOTE]
-   >
-   >Replace `localhost` 包含托管AEM Forms的服务器的IP地址。
+1. 參照XML資料來源。
 
-1. 创建输出客户端对象。
+   * 建立 `java.io.FileInputStream` 物件，代表使用建構函式並傳遞指定XML檔案位置的字串值來填入PDF檔案的XML資料來源。
+   * 建立 `com.adobe.idp.Document` 物件，使用它的建構函式並傳遞 `java.io.FileInputStream` 物件。
 
-   * 创建 `OutputServiceClient` 对象。
-   * 创建 `OutputServiceClient.Endpoint.Address` 对象 `System.ServiceModel.EndpointAddress` 构造函数。 将指定WSDL的字符串值传递给AEM Forms服务(例如， `http://localhost:8080/soap/services/OutputService?blob=mtom`.) 您无需使用 `lc_version` 属性。 创建服务引用时使用此属性。 但是，请指定 `?blob=mtom` 使用MTOM。
-   * 创建 `System.ServiceModel.BasicHttpBinding` 对象，方法是获取 `OutputServiceClient.Endpoint.Binding` 字段。 将返回值强制转换为 `BasicHttpBinding`.
-   * 设置 `System.ServiceModel.BasicHttpBinding` 对象的 `MessageEncoding` 字段至 `WSMessageEncoding.Mtom`. 此值可确保使用MTOM。
-   * 通过执行以下任务启用基本HTTP身份验证：
+1. 定義搜尋規則。
 
-      * 将AEM表单用户名分配给字段 `OutputServiceClient.ClientCredentials.UserName.UserName`.
-      * 将相应的密码值分配给字段 `OutputServiceClient.ClientCredentials.UserName.Password`.
-      * 分配常量值 `HttpClientCredentialType.Basic` 到字段 `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
-      * 分配常量值 `BasicHttpSecurityMode.TransportCredentialOnly` 到字段 `BasicHttpBindingSecurity.Security.Mode`.
-
-1. 引用XML数据源。
-
-   * 创建 `BLOB` 对象。 此 `BLOB` 对象用于存储将与PDF文档合并的数据。
-   * 创建 `System.IO.FileStream` 对象，方法是调用其构造函数并传递一个字符串值，该字符串值表示要加密的PDF文档的文件位置以及打开文件的模式。
-   * 创建一个字节数组，用于存储 `System.IO.FileStream` 对象。 您可以通过获取 `System.IO.FileStream` 对象的 `Length` 属性。
-   * 通过调用 `System.IO.FileStream` 对象的 `Read` 方法，并传递字节数组、起始位置和要读取的流长度。
-   * 填充 `BLOB` 对象(通过指定其 `MTOM` 包含字节数组内容的字段。
-
-1. 定义搜索规则。
-
-   * 创建 `Rule` 对象。
-   * 通过指定指定指定文本模式的字符串值来定义文本模式 `Rule` 对象的 `pattern` 数据成员。
-   * 通过指定一个字符串值来定义相应的表单设计，该值将表单设计指定给 `Rule` 对象的 `form` 数据成员。
+   * 建立 `Rule` 物件（使用其建構函式）。
+   * 透過叫用定義文字模式 `Rule` 物件的 `setPattern` 和傳遞指定文字模式的字串值。
+   * 透過叫用 `Rule` 物件的 `setForm` 方法。 傳遞指定表單設計名稱的字串值。
 
    >[!NOTE]
    >
-   >对于要定义的每个文本模式，重复前三个子步骤。
+   >針對您要定義的每個文字模式，重複前三個子步驟。
 
-   * 创建 `MyArrayOf_xsd_anyType` 存储规则的对象。
-   * 分配每个 `Rule` 对象到元素 `MyArrayOf_xsd_anyType` 数组。 调用 `MyArrayOf_xsd_anyType` 对象的 `Add` 方法（每种） `Rule` 对象。
+   * 建立 `java.util.List` 物件(使用 `java.util.ArrayList` 建構函式。
+   * 針對每個 `Rule` 您建立的物件，呼叫 `java.util.List` 物件的 `add` 方法並傳遞 `Rule` 物件。
 
 
-1. 设置PDF运行时选项
+1. 設定PDF執行階段選項。
 
-   * 创建 `PDFOutputOptionsSpec` 对象。
-   * 通过指定一个字符串值来设置文件URI选项，该字符串值指定输出服务生成的PDF文件的位置。 `PDFOutputOptionsSpec` 对象的 `fileURI` 数据成员。 文件URI选项相对于托管AEM Forms的J2EE应用程序服务器，而不是客户端计算机。
-   * 通过指定一个整数值来设置copies选项，该值指定输出服务生成到的副本数 `PDFOutputOptionsSpec` 对象的 `copies` 数据成员。
-   * 通过分配 `MyArrayOf_xsd_anyType` 将规则存储到的对象 `PDFOutputOptionsSpec` 对象的 `rules` 数据成员。
-   * 通过指定一个整数值来设置要扫描的字节数，该值表示要扫描的字节数。 `PDFOutputOptionsSpec` 对象的 `lookAhead` 数据方法。
+   * 建立 `PDFOutputOptionsSpec` 物件（使用其建構函式）。
+   * PDF指定Output服務透過叫用 `PDFOutputOptionsSpec` 物件的 `setFileURI` 方法。 傳遞字串值，指定PDF檔案的位置。 檔案URI選項是相對於裝載AEM Forms的J2EE應用程式伺服器，而不是使用者端電腦。
+   * 透過叫用 `PDFOutputOptionsSpec` 物件的 `setRules` 方法。 傳遞 `java.util.List` 包含 `Rule` 物件。
+   * 透過叫用「 」，設定要掃描已定義文字模式的位元組數 `PDFOutputOptionsSpec` 物件的 `setLookAhead` 方法。 傳遞代表位元組數的整數值。
 
-1. 设置渲染运行时选项
+1. 設定演算執行階段選項。
 
-   * 创建 `RenderOptionsSpec` 对象。
-   * 缓存表单设计，以便通过分配值来提高输出服务的性能 `true` 到 `RenderOptionsSpec` 对象的 `cacheEnabled` 数据成员。
+   * 建立 `RenderOptionsSpec` 物件（使用其建構函式）。
+   * 快取表單設計，以透過叫用 `RenderOptionsSpec` 物件的 `setCacheEnabled` 和傳遞 `true`.
 
-   >[!NOTE]
-   >
-   >不能使用设置PDF文档的版本 `RenderOptionsSpec` 对象的 `pdfVersion` 成员(如果输入文档是Acrobat表单)。 输出PDF文档保留Acrobat表单的PDF版本。 同样，不能使用设置标记的PDF选项 `RenderOptionsSpec` 对象的 `taggedPDF` 方法(如果输入文档是Acrobat表单)。
+1. 產生PDF檔案。
 
-   >[!NOTE]
-   >
-   >不能使用来设置线性PDF选项 `RenderOptionsSpec` 对象的 `linearizedPDF` 如果输入PDF文档经过验证或数字签名，则为成员。 有关信息，请参阅 [对PDF文档进行数字签名](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-pdf-documents).
+   透過叫用，產生以多個表單設計為基礎的PDF檔案 `OutputClient` 物件的 `generatePDFOutput` 並傳遞下列值：
 
-1. 生成PDF文档
+   * A `TransformationFormat` 列舉值。 若要產生PDF檔案，請指定 `TransformationFormat.PDF`.
+   * 字串值，指定預設表單設計的名稱。 亦即，在找不到文字模式時所使用的表單設計。
+   * 字串值，指定表單設計所在的內容根。
+   * A `PDFOutputOptionsSpec` 包含PDF執行階段選項的物件。
+   * A `RenderOptionsSpec` 包含演算執行階段選項的物件。
+   * 此 `com.adobe.idp.Document` 包含表單資料的物件，由Output服務針對定義的文字模式進行搜尋。
 
-   PDF通过调用 `OutputServiceService` 对象的 `generatePDFOutput`方法，并传递以下值：
+   此 `generatePDFOutput` 方法傳回 `OutputResult` 包含作業結果的物件。
 
-   * A `TransformationFormat` 枚举值。 要生成PDF单据，请指定 `TransformationFormat.PDF`.
-   * 一个字符串值，它指定表单设计的名称。
-   * 一个字符串值，它指定表单设计所在的内容根。
-   * A `PDFOutputOptionsSpec` 包含PDF运行时选项的对象。
-   * A `RenderOptionsSpec` 包含渲染运行时选项的对象。
-   * 此 `BLOB` 包含要与表单设计合并的数据的XML数据源的对象。
-   * A `BLOB` 由填充的对象 `generatePDFOutput` 方法。 此 `generatePDFOutput` 方法使用生成的描述文档的元数据填充此对象。 （只有Web服务调用才需要此参数值）。
-   * A `BLOB` 由填充的对象 `generatePDFOutput` 方法。 此 `generatePDFOutput` 方法使用结果数据填充此对象。 （只有Web服务调用才需要此参数值）。
-   * An `OutputResult` 包含操作结果的对象。 （只有Web服务调用才需要此参数值）。
+1. 擷取作業的結果。
 
-   >[!NOTE]
-   >
-   >PDF通过调用 `generatePDFOutput` 方法，请注意，您无法将数据与已签名、已验证或包含使用权限的XFAPDF表单合并。 有关使用权限的信息，请参阅 [对PDF文档应用使用权限](/help/forms/developing/assigning-usage-rights.md#applying-usage-rights-to-pdf-documents).
-
-1. 检索操作的结果
-
-   * 创建 `System.IO.FileStream` 对象，方法是调用其构造函数并传递一个字符串值，该值表示包含结果数据的XML文件位置。 确保文件扩展名为XML。
-   * 创建一个字节数组，用于存储 `BLOB` 使用结果数据填充的对象 `OutputServiceService` 对象的 `generatePDFOutput` 方法（第八个参数）。 通过获取的值填充字节数组 `BLOB` 对象的 `MTOM` 数据成员。
-   * 创建 `System.IO.BinaryWriter` 对象，方法是调用其构造函数 `System.IO.FileStream` 对象。
-   * 通过调用 `System.IO.BinaryWriter` 对象的 `Write` 方法和传递字节数组。
+   * 建立 `com.adobe.idp.Document` 代表「 」狀態的物件 `generatePDFOutput` 方法，方法是叫用 `OutputResult` 物件的 `getStatusDoc` 方法。
+   * 建立 `java.io.File` 將包含作業結果的物件。 確認副檔名為.xml。
+   * 叫用 `com.adobe.idp.Document` 物件的 `copyToFile` 複製目錄內容的方法 `com.adobe.idp.Document` 物件放入檔案(請確定您使用 `com.adobe.idp.Document` 物件，由 `getStatusDoc` 方法)。
 
 **另请参阅**
 
-[步骤摘要](creating-document-output-streams.md#summary-of-steps)
+[步驟摘要](creating-document-output-streams.md#summary-of-steps)
 
-[使用MTOM调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[快速入門（EJB模式）：使用Java API建立搜尋規則](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-search-rules-using-the-java-api)
 
-[使用SwaRef调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[快速入門（SOAP模式）：使用Java API建立搜尋規則](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-search-rules-using-the-java-api)
 
-## 拼合PDF文档 {#flattening-pdf-documents}
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
-可以使用Output服务将交互式PDF文档转换为非交互式PDF。 交互式PDF文档允许用户输入或修改PDF文档字段中的数据。 将交互式PDF文档转换为非交互式PDF文档的过程称为 *平面化*. 当PDF文档被拼合时，用户无法修改文档字段中的数据。 拼合PDF文档的一个原因是确保无法修改数据。
+[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-您可以拼合以下类型的PDF文档：
+### 使用Web服務API建立搜尋規則 {#create-search-rules-using-the-web-service-api}
 
-* 交互式XFAPDF文档
+使用Output API （Web服務）建立搜尋規則：
+
+1. 包含專案檔案。
+
+   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/OutputService?WSDL&lc_version=9.0.1`.
+
+   >[!NOTE]
+   >
+   >Replace `localhost` 搭配裝載AEM Forms之伺服器的IP位址。
+
+1. 建立輸出使用者端物件。
+
+   * 建立 `OutputServiceClient` 物件（使用其預設建構函式）。
+   * 建立 `OutputServiceClient.Endpoint.Address` 物件，使用 `System.ServiceModel.EndpointAddress` 建構函式。 將指定WSDL的字串值傳遞至AEM Forms服務(例如， `http://localhost:8080/soap/services/OutputService?blob=mtom`.) 您不需要使用 `lc_version` 屬性。 當您建立服務參考時，會使用此屬性。 不過，請指定 `?blob=mtom` 以使用MTOM。
+   * 建立 `System.ServiceModel.BasicHttpBinding` 物件，方法是取得 `OutputServiceClient.Endpoint.Binding` 欄位。 將傳回值轉換為 `BasicHttpBinding`.
+   * 設定 `System.ServiceModel.BasicHttpBinding` 物件的 `MessageEncoding` 欄位至 `WSMessageEncoding.Mtom`. 此值可確保使用MTOM。
+   * 執行下列工作來啟用基本HTTP驗證：
+
+      * 將AEM表單使用者名稱指派給欄位 `OutputServiceClient.ClientCredentials.UserName.UserName`.
+      * 將對應的密碼值指派給欄位 `OutputServiceClient.ClientCredentials.UserName.Password`.
+      * 指派常數值 `HttpClientCredentialType.Basic` 至欄位 `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
+      * 指派常數值 `BasicHttpSecurityMode.TransportCredentialOnly` 至欄位 `BasicHttpBindingSecurity.Security.Mode`.
+
+1. 參照XML資料來源。
+
+   * 建立 `BLOB` 物件（使用其建構函式）。 此 `BLOB` 物件可用來儲存將與PDF檔案合併的資料。
+   * 建立 `System.IO.FileStream` 物件，方法是叫用其建構函式，並傳遞代表要加密之PDF檔案的檔案位置，以及開啟檔案的模式的字串值。
+   * 建立位元組陣列，儲存 `System.IO.FileStream` 物件。 您可以取得 `System.IO.FileStream` 物件的 `Length` 屬性。
+   * 叫用 `System.IO.FileStream` 物件的 `Read` 方法，並傳遞位元組陣列、起始位置以及要讀取的資料流長度。
+   * 填入 `BLOB` 物件，透過指派其 `MTOM` 包含位元組陣列內容的欄位。
+
+1. 定義搜尋規則。
+
+   * 建立 `Rule` 物件（使用其建構函式）。
+   * 藉由指定字串值來定義文字模式，該字串值會指定文字模式 `Rule` 物件的 `pattern` 資料成員。
+   * 藉由指派字串值來定義對應的表單設計，該字串值會指定表單設計給 `Rule` 物件的 `form` 資料成員。
+
+   >[!NOTE]
+   >
+   >針對您要定義的每個文字模式，重複前三個子步驟。
+
+   * 建立 `MyArrayOf_xsd_anyType` 儲存規則的物件。
+   * 指派每一個 `Rule` 物件至的元素 `MyArrayOf_xsd_anyType` 陣列。 叫用 `MyArrayOf_xsd_anyType` 物件的 `Add` 每個專案的方法 `Rule` 物件。
+
+
+1. 設定PDF執行階段選項
+
+   * 建立 `PDFOutputOptionsSpec` 物件（使用其建構函式）。
+   * 透過指派字串值來設定檔案URI選項，該字串值會指定Output服務產生的PDF檔案的位置 `PDFOutputOptionsSpec` 物件的 `fileURI` 資料成員。 檔案URI選項是相對於裝載AEM Forms的J2EE應用程式伺服器，而不是使用者端電腦。
+   * 透過指定整數值來設定複製選項，整數值會指定輸出服務產生給 `PDFOutputOptionsSpec` 物件的 `copies` 資料成員。
+   * 設定您透過指派 `MyArrayOf_xsd_anyType` 將規則儲存到的物件 `PDFOutputOptionsSpec` 物件的 `rules` 資料成員。
+   * 將代表要掃描位元組數的整數值指派給，以設定要掃描已定義文字模式的位元組數。 `PDFOutputOptionsSpec` 物件的 `lookAhead` 資料方法。
+
+1. 設定演算執行階段選項
+
+   * 建立 `RenderOptionsSpec` 物件（使用其建構函式）。
+   * 快取表單設計，以便透過指派值來改善Output服務的效能 `true` 至 `RenderOptionsSpec` 物件的 `cacheEnabled` 資料成員。
+
+   >[!NOTE]
+   >
+   >您無法使用設定PDF檔案的版本 `RenderOptionsSpec` 物件的 `pdfVersion` 成員(如果輸入檔案是Acrobat表單)。 輸出PDF檔案會保留Acrobat表單的PDF版本。 同樣地，您無法透過以下方式設定標籤PDF選項： `RenderOptionsSpec` 物件的 `taggedPDF` 方法(如果輸入檔案是Acrobat表單)。
+
+   >[!NOTE]
+   >
+   >您無法透過以下方式設定線性PDF選項： `RenderOptionsSpec` 物件的 `linearizedPDF` 如果輸入PDF檔案經過認證或數位簽署，則為成員。 如需詳細資訊，請參閱 [數位簽署PDF檔案](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-pdf-documents).
+
+1. 產生PDF檔案
+
+   透過叫用建立PDF檔案 `OutputServiceService` 物件的 `generatePDFOutput`並傳遞下列值：
+
+   * A `TransformationFormat` 列舉值。 若要產生PDF檔案，請指定 `TransformationFormat.PDF`.
+   * 字串值，指定表單設計的名稱。
+   * 字串值，指定表單設計所在的內容根。
+   * A `PDFOutputOptionsSpec` 包含PDF執行階段選項的物件。
+   * A `RenderOptionsSpec` 包含演算執行階段選項的物件。
+   * 此 `BLOB` 包含要與表單設計合併之資料之XML資料來源的物件。
+   * A `BLOB` 由填入的物件 `generatePDFOutput` 方法。 此 `generatePDFOutput` 方法會使用產生的描述檔案的中繼資料填入此物件。 （只有Web服務呼叫需要此引數值）。
+   * A `BLOB` 由填入的物件 `generatePDFOutput` 方法。 此 `generatePDFOutput` 方法會將結果資料填入此物件中。 （只有Web服務呼叫需要此引數值）。
+   * 一個 `OutputResult` 包含作業結果的物件。 （只有Web服務呼叫需要此引數值）。
+
+   >[!NOTE]
+   >
+   >PDF當透過叫用 `generatePDFOutput` 方法，請注意，您無法將資料與已簽署、已驗證或包含使用許可權的XFAPDF表單合併。 如需使用許可權的詳細資訊，請參閱 [將使用許可權套用至PDF檔案](/help/forms/developing/assigning-usage-rights.md#applying-usage-rights-to-pdf-documents).
+
+1. 擷取作業的結果
+
+   * 建立 `System.IO.FileStream` 物件，方法是叫用其建構函式，並傳遞代表包含結果資料之XML檔案位置的字串值。 確定副檔名為XML。
+   * 建立位元組陣列，儲存 `BLOB` 填入結果資料的物件 `OutputServiceService` 物件的 `generatePDFOutput` 方法（第八個引數）。 透過取得 `BLOB` 物件的 `MTOM` 資料成員。
+   * 建立 `System.IO.BinaryWriter` 物件，方法是叫用其建構函式並傳遞 `System.IO.FileStream` 物件。
+   * 透過叫用 `System.IO.BinaryWriter` 物件的 `Write` 方法並傳遞位元組陣列。
+
+**另请参阅**
+
+[步驟摘要](creating-document-output-streams.md#summary-of-steps)
+
+[使用MTOM叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+
+[使用SwaRef叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+
+## 平面化PDF檔案 {#flattening-pdf-documents}
+
+您可以使用Output服務將互動式PDF檔案轉換為非互動式PDF。 互動式PDF檔案可讓使用者輸入或修改PDF檔案欄位中的資料。 將互動式PDF檔案轉換為非互動式PDF檔案的程式稱為 *平面化*. 當PDF檔案平面化時，使用者無法修改檔案欄位中的資料。 平面化PDF檔案的一個原因是為了確保無法修改資料。
+
+您可以平面化下列PDF檔案型別：
+
+* 互動式XFAPDF檔案
 * Acrobat Forms
 
-尝试拼合非交互式PDFPDF会导致异常。
+嘗試平面化非互動式PDF檔案的PDF會產生例外狀況。
 
 >[!NOTE]
 >
->有关输出服务的详细信息，请参见 [AEM Forms的服务参考](https://www.adobe.com/go/learn_aemforms_services_63).
+>如需Output服務的詳細資訊，請參閱 [AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
 
-### 步骤摘要 {#summary_of_steps-9}
+### 步驟摘要 {#summary_of_steps-9}
 
-要将交互式PDF文档拼合为非交互式PDF文档，请执行以下步骤：
+若要將互動式PDF檔案平面化為非互動式PDF檔案，請執行下列步驟：
 
-1. 包括项目文件。
-1. 创建输出客户端对象。
-1. 检索交互式PDF文档。
-1. 转换PDF文档。
-1. 将非交互式PDF文档另存为PDF文件。
+1. 包含專案檔案。
+1. 建立輸出使用者端物件。
+1. 擷取互動式PDF檔案。
+1. 轉換PDF檔案。
+1. 將非互動式PDF檔案儲存為PDF檔案。
 
-**包括项目文件**
+**包含專案檔案**
 
-在开发项目中包含必要的文件。 如果要使用Java创建客户端应用程序，请包含必要的JAR文件。 如果您使用Web服务，请确保包含代理文件。
+在您的開發專案中包含必要的檔案。 如果您使用Java建立使用者端應用程式，請包含必要的JAR檔案。 如果您是使用Web服務，請務必包含Proxy檔案。
 
-必须将以下JAR文件添加到项目的类路径中：
+必須將以下JAR檔案新增到專案的類別路徑中：
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-output-client.jar
-* adobe-utilities.jar(如果在JBoss上部署了AEM Forms，则此为必填字段)
-* jbossall-client.jar(如果在JBoss上部署了AEM Forms，则此为必填字段)
+* adobe-utilities.jar (如果AEM Forms部署在JBoss上，則為必要)
+* jbossall-client.jar (如果AEM Forms部署在JBoss上，則為必要)
 
-如果将AEM Forms部署在非JBoss的受支持J2EE应用程序服务器上，则需要将adobe-utilities.jar和jbossall-client.jar文件替换为特定于部署AEM Forms的J2EE应用程序服务器的JAR文件。 有关所有AEM Forms JAR文件位置的信息，请参见 [包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
+如果將AEM Forms部署在非JBoss的支援J2EE應用程式伺服器上，您需要將adobe-utilities.jar和jbossall-client.jar檔案取代為部署AEM Forms之J2EE應用程式伺服器專屬的JAR檔案。 如需有關所有AEM Forms JAR檔案位置的資訊，請參閱 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
 
-**创建输出客户端对象**
+**建立輸出使用者端物件**
 
-必须先创建输出服务客户端对象，然后才能以编程方式执行输出服务操作。 如果您使用的是Java API，请创建 `OutputClient` 对象。 如果您使用的是Output Web service API，请创建 `OutputServiceService` 对象。
+您必須先建立輸出服務使用者端物件，才能以程式設計方式執行輸出服務作業。 如果您使用Java API，請建立 `OutputClient` 物件。 如果您使用輸出Web服務API，請建立 `OutputServiceService` 物件。
 
-**检索交互式PDF文档**
+**擷取互動式PDF檔案**
 
-检索要转换为非交互式PDF文档的交互式PDF文档。 尝试转换非交互式PDF文档会导致异常。
+擷取您想要轉換為非互動式PDF檔案的互動式PDF檔案。 嘗試轉換非互動式PDF檔案會產生例外狀況。
 
-**转换PDF文档**
+**轉換PDF檔案**
 
-检索交互式PDF文档后，可将其转换为非交互式PDF文档。 Output服务返回非交互式PDF文档。
+擷取互動式PDF檔案後，可將其轉換為非互動式PDF檔案。 Output服務會傳回非互動式PDF檔案。
 
-**将非交互式PDF文档另存为PDF文件**
+**將非互動式PDF檔案儲存為PDF檔案**
 
-您可以将非交互式PDF文档另存为PDF文件。
-
-**另请参阅**
-
-[使用Java API拼合PDF文档](creating-document-output-streams.md#flatten-a-pdf-document-using-the-java-api)
-
-[使用Web服务API拼合PDF文档](creating-document-output-streams.md#flatten-a-pdf-document-using-the-web-service-api)
-
-[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
-
-[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
-
-[输出服务API快速启动](/help/forms/developing/output-service-java-api-quick.md#output-service-java-api-quick-start-soap)
-
-### 使用Java API拼合PDF文档 {#flatten-a-pdf-document-using-the-java-api}
-
-使用输出API (Java)将交互式PDF文档拼合到非交互式PDF文档：
-
-1. 包括项目文件。
-
-   在Java项目的类路径中包含客户端JAR文件，如adobe-output-client.jar。
-
-1. 创建输出客户端对象。
-
-   * 创建 `ServiceClientFactory` 包含连接属性的对象。
-   * 创建 `OutputClient` 对象，使用它的构造函数传递 `ServiceClientFactory` 对象。
-
-1. 检索交互式PDF文档。
-
-   * 创建 `java.io.FileInputStream` 对象，表示要转换的交互式PDF文档，转换的方法为使用其构造函数并传递一个指定交互式PDF文件位置的字符串值。
-   * 创建 `com.adobe.idp.Document` 对象，使用它的构造函数传递 `java.io.FileInputStream` 对象。
-
-1. 转换PDF文档。
-
-   通过调用，将交互PDF文档转换为非交互式PDF文档 `OutputServiceService` 对象的 `transformPDF` 方法，并传递以下值：
-
-   * 此 `com.adobe.idp.Document` 包含交互式PDF文档的对象。
-   * A `TransformationFormat` 枚举值。 要生成非交互式PDF，请指定 `TransformationFormat.PDF`.
-   * A `PDFARevisionNumber` 指定修订版号的枚举值。 由于此参数适用于PDF/文档，因此您可以指定 `null`.
-   * 一个字符串值，表示修订编号和年份，以冒号分隔。 由于此参数适用于PDF/文档，因此您可以指定 `null`.
-   * A `PDFAConformance` 表示PDF/A一致性级别的枚举值。 由于此参数适用于PDF/文档，因此您可以指定 `null`.
-
-   此 `transformPDF` 方法返回 `com.adobe.idp.Document` 包含非交互式PDF文档的对象。
-
-1. 将非交互式PDF文档另存为PDF文件。
-
-   * 创建 `java.io.File` 对象并确保文件扩展名为.pdf。
-   * 调用 `Document` 对象的 `copyToFile` 用于复制目录内容的方法 `Document` 对象(确保您使用 `Document` 返回的对象 `transformPDF` 方法)。
+您可以將非互動式PDF檔案儲存為PDF檔案。
 
 **另请参阅**
 
-[步骤摘要](creating-document-output-streams.md#summary-of-steps)
+[使用Java API平面化PDF檔案](creating-document-output-streams.md#flatten-a-pdf-document-using-the-java-api)
 
-[快速入门（EJB模式）：使用Java API转换PDF文档](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-transforming-a-pdf-document-using-the-java-api)
+[使用Web服務API平面化PDF檔案](creating-document-output-streams.md#flatten-a-pdf-document-using-the-web-service-api)
 
-[快速入门（SOAP模式）：使用Java API转换PDF文档](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-transforming-a-pdf-document-using-the-java-api)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
-[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+[Output Service API快速啟動](/help/forms/developing/output-service-java-api-quick.md#output-service-java-api-quick-start-soap)
 
-### 使用Web服务API拼合PDF文档 {#flatten-a-pdf-document-using-the-web-service-api}
+### 使用Java API平面化PDF檔案 {#flatten-a-pdf-document-using-the-java-api}
 
-使用输出API（Web服务）将交互式PDF文档拼合到非交互式PDF文档：
+使用Output API (Java)將互動式PDF檔案平面化為非互動式PDF檔案：
 
-1. 包括项目文件。
+1. 包含專案檔案。
 
-   创建使用MTOM的Microsoft .NET项目。 确保使用以下WSDL定义： `http://localhost:8080/soap/services/OutputService?WSDL&lc_version=9.0.1`.
+   在您的Java專案的類別路徑中包含使用者端JAR檔案，例如adobe-output-client.jar。
+
+1. 建立輸出使用者端物件。
+
+   * 建立 `ServiceClientFactory` 包含連線屬性的物件。
+   * 建立 `OutputClient` 物件，使用它的建構函式並傳遞 `ServiceClientFactory` 物件。
+
+1. 擷取互動式PDF檔案。
+
+   * 建立 `java.io.FileInputStream` 物件，代表要轉換的互動式PDF檔案，使用它的建構函式，並傳遞字串值，指定互動式PDF檔案的位置。
+   * 建立 `com.adobe.idp.Document` 物件，使用它的建構函式並傳遞 `java.io.FileInputStream` 物件。
+
+1. 轉換PDF檔案。
+
+   透過叫用「 」，將互動PDF檔案轉換為非互動PDF檔案 `OutputServiceService` 物件的 `transformPDF` 並傳遞下列值：
+
+   * 此 `com.adobe.idp.Document` 包含互動式PDF檔案的物件。
+   * A `TransformationFormat` 列舉值。 若要產生非互動式PDF檔案，請指定 `TransformationFormat.PDF`.
+   * A `PDFARevisionNumber` 指定修訂版本編號的列舉值。 由於此引數適用於PDF/A檔案，因此您可以指定 `null`.
+   * 代表修訂編號和年份的字串值，以冒號分隔。 由於此引數適用於PDF/A檔案，因此您可以指定 `null`.
+   * A `PDFAConformance` 代表PDF/A一致性層級的列舉值。 由於此引數適用於PDF/A檔案，因此您可以指定 `null`.
+
+   此 `transformPDF` 方法傳回 `com.adobe.idp.Document` 包含非互動式PDF檔案的物件。
+
+1. 將非互動式PDF檔案儲存為PDF檔案。
+
+   * 建立 `java.io.File` 物件並確保副檔名為.pdf。
+   * 叫用 `Document` 物件的 `copyToFile` 複製目錄內容的方法 `Document` 物件放入檔案(請確定您使用 `Document` 物件，由 `transformPDF` 方法)。
+
+**另请参阅**
+
+[步驟摘要](creating-document-output-streams.md#summary-of-steps)
+
+[快速入門（EJB模式）：使用Java API轉換PDF檔案](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-transforming-a-pdf-document-using-the-java-api)
+
+[快速入門（SOAP模式）：使用Java API轉換PDF檔案](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-transforming-a-pdf-document-using-the-java-api)
+
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+
+[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+
+### 使用Web服務API平面化PDF檔案 {#flatten-a-pdf-document-using-the-web-service-api}
+
+使用Output API （Web服務）將互動式PDF檔案平面化為非互動式PDF檔案：
+
+1. 包含專案檔案。
+
+   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/OutputService?WSDL&lc_version=9.0.1`.
 
    >[!NOTE]
    >
-   >Replace `localhost` 包含托管AEM Forms的服务器的IP地址。
+   >Replace `localhost` 搭配裝載AEM Forms之伺服器的IP位址。
 
-1. 创建输出客户端对象。
+1. 建立輸出使用者端物件。
 
-   * 创建 `OutputServiceClient` 对象。
-   * 创建 `OutputServiceClient.Endpoint.Address` 对象 `System.ServiceModel.EndpointAddress` 构造函数。 将指定WSDL的字符串值传递给AEM Forms服务(例如， `http://localhost:8080/soap/services/OutputService?blob=mtom`.) 您无需使用 `lc_version` 属性。 创建服务引用时使用此属性。 但是，请指定 `?blob=mtom` 使用MTOM。
-   * 创建 `System.ServiceModel.BasicHttpBinding` 对象，方法是获取 `OutputServiceClient.Endpoint.Binding` 字段。 将返回值强制转换为 `BasicHttpBinding`.
-   * 设置 `System.ServiceModel.BasicHttpBinding` 对象的 `MessageEncoding` 字段至 `WSMessageEncoding.Mtom`. 此值可确保使用MTOM。
-   * 通过执行以下任务启用基本HTTP身份验证：
+   * 建立 `OutputServiceClient` 物件（使用其預設建構函式）。
+   * 建立 `OutputServiceClient.Endpoint.Address` 物件，使用 `System.ServiceModel.EndpointAddress` 建構函式。 將指定WSDL的字串值傳遞至AEM Forms服務(例如， `http://localhost:8080/soap/services/OutputService?blob=mtom`.) 您不需要使用 `lc_version` 屬性。 當您建立服務參考時，會使用此屬性。 不過，請指定 `?blob=mtom` 以使用MTOM。
+   * 建立 `System.ServiceModel.BasicHttpBinding` 物件，方法是取得 `OutputServiceClient.Endpoint.Binding` 欄位。 將傳回值轉換為 `BasicHttpBinding`.
+   * 設定 `System.ServiceModel.BasicHttpBinding` 物件的 `MessageEncoding` 欄位至 `WSMessageEncoding.Mtom`. 此值可確保使用MTOM。
+   * 執行下列工作來啟用基本HTTP驗證：
 
-      * 将AEM表单用户名分配给字段 `OutputServiceClient.ClientCredentials.UserName.UserName`.
-      * 将相应的密码值分配给字段 `OutputServiceClient.ClientCredentials.UserName.Password`.
-      * 分配常量值 `HttpClientCredentialType.Basic` 到字段 `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
-      * 分配常量值 `BasicHttpSecurityMode.TransportCredentialOnly` 到字段 `BasicHttpBindingSecurity.Security.Mode`.
+      * 將AEM表單使用者名稱指派給欄位 `OutputServiceClient.ClientCredentials.UserName.UserName`.
+      * 將對應的密碼值指派給欄位 `OutputServiceClient.ClientCredentials.UserName.Password`.
+      * 指派常數值 `HttpClientCredentialType.Basic` 至欄位 `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
+      * 指派常數值 `BasicHttpSecurityMode.TransportCredentialOnly` 至欄位 `BasicHttpBindingSecurity.Security.Mode`.
 
-1. 检索交互式PDF文档。
+1. 擷取互動式PDF檔案。
 
-   * 创建 `BLOB` 对象。 此 `BLOB` 对象用于存储交互式PDF文档。
-   * 创建 `System.IO.FileStream` 对象，方法是调用其构造函数并传递表示交互式PDF文档的文件位置的字符串值。
-   * 创建一个字节数组，用于存储 `System.IO.FileStream` 对象。 您可以通过获取 `System.IO.FileStream` 对象的 `Length` 属性。
-   * 通过调用 `System.IO.FileStream` 对象的 `Read` 方法，并传递字节数组、起始位置和要读取的流长度。
-   * 填充 `BLOB` 对象(通过指定其 `MTOM` 属性与字节数组的内容。
+   * 建立 `BLOB` 物件（使用其建構函式）。 此 `BLOB` 物件是用來儲存互動式PDF檔案。
+   * 建立 `System.IO.FileStream` 物件，方法是叫用其建構函式，並傳遞代表互動式PDF檔案檔案位置的字串值。
+   * 建立位元組陣列，儲存 `System.IO.FileStream` 物件。 您可以取得 `System.IO.FileStream` 物件的 `Length` 屬性。
+   * 叫用 `System.IO.FileStream` 物件的 `Read` 方法，並傳遞位元組陣列、起始位置以及要讀取的資料流長度。
+   * 填入 `BLOB` 物件，透過指派其 `MTOM` 具有位元組陣列內容的屬性。
 
-1. 转换PDF文档。
+1. 轉換PDF檔案。
 
-   通过调用，将交互PDF文档转换为非交互式PDF文档 `OutputClient` 对象的 `transformPDF` 方法，并传递以下值：
+   透過叫用「 」，將互動PDF檔案轉換為非互動PDF檔案 `OutputClient` 物件的 `transformPDF` 並傳遞下列值：
 
-   * A `BLOB` 包含交互式PDF文档的对象。
-   * A `TransformationFormat` 枚举值。 要生成非交互式PDF，请指定 `TransformationFormat.PDF`.
-   * A `PDFARevisionNumber` 指定修订版号的枚举值。
-   * 一个布尔值，它指定 `PDFARevisionNumber` 使用枚举值。 由于此参数适用于PDF/文档，因此您可以指定 `false`.
-   * 一个字符串值，表示修订编号和年份，以冒号分隔。 由于此参数适用于PDF/文档，因此您可以指定 `null`.
-   * A `PDFAConformance` 表示PDF/A一致性级别的枚举值。
-   * 布尔值，指定 `PDFAConformance` 使用枚举值。 由于此参数适用于PDF/文档，因此您可以指定 `false`.
+   * A `BLOB` 包含互動式PDF檔案的物件。
+   * A `TransformationFormat` 列舉值。 若要產生非互動式PDF檔案，請指定 `TransformationFormat.PDF`.
+   * A `PDFARevisionNumber` 指定修訂版本編號的列舉值。
+   * Boolean值，指定 `PDFARevisionNumber` 使用列舉值。 由於此引數適用於PDF/A檔案，因此您可以指定 `false`.
+   * 代表修訂編號和年份的字串值，以冒號分隔。 由於此引數適用於PDF/A檔案，因此您可以指定 `null`.
+   * A `PDFAConformance` 代表PDF/A一致性層級的列舉值。
+   * 布林值，指定 `PDFAConformance` 使用列舉值。 由於此引數適用於PDF/A檔案，因此您可以指定 `false`.
 
-   此 `transformPDF` 方法返回 `BLOB` 包含非交互式PDF文档的对象。
+   此 `transformPDF` 方法傳回 `BLOB` 包含非互動式PDF檔案的物件。
 
-1. 将非交互式PDF文档另存为PDF文件。
+1. 將非互動式PDF檔案儲存為PDF檔案。
 
-   * 创建 `System.IO.FileStream` 对象，方法是调用其构造函数并传递表示非交互式PDF文档的文件位置的字符串值。
-   * 创建一个字节数组，用于存储 `BLOB` 返回的对象 `transformPDF` 方法。 通过获取的值填充字节数组 `BLOB` 对象的 `MTOM` 数据成员。
-   * 创建 `System.IO.BinaryWriter` 对象，方法是调用其构造函数 `System.IO.FileStream` 对象。
-   * PDF通过调用 `System.IO.BinaryWriter` 对象的 `Write` 方法和传递字节数组。
+   * 建立 `System.IO.FileStream` 物件，方法是叫用其建構函式，並傳遞代表非互動式PDF檔案檔案位置的字串值。
+   * 建立位元組陣列，儲存 `BLOB` 物件，由 `transformPDF` 方法。 透過取得 `BLOB` 物件的 `MTOM` 資料成員。
+   * 建立 `System.IO.BinaryWriter` 物件，方法是叫用其建構函式並傳遞 `System.IO.FileStream` 物件。
+   * PDF透過叫用 `System.IO.BinaryWriter` 物件的 `Write` 方法並傳遞位元組陣列。
 
 **另请参阅**
 
-[步骤摘要](creating-document-output-streams.md#summary-of-steps)
+[步驟摘要](creating-document-output-streams.md#summary-of-steps)
 
-[使用MTOM调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[使用MTOM叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[使用SwaRef调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[使用SwaRef叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)

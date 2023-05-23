@@ -1,6 +1,6 @@
 ---
-title: 资产模板
-description: 在中了解资产模板 [!DNL Adobe Experience Manager Assets] 以及如何使用资产模板创建营销宣传品。
+title: 資產範本
+description: 瞭解中的資產範本 [!DNL Adobe Experience Manager Assets] 以及如何使用資產範本建立行銷宣傳品。
 contentOwner: AG
 role: User
 feature: Asset Management,Developer Tools
@@ -12,170 +12,170 @@ ht-degree: 0%
 
 ---
 
-# 资产模板 {#asset-templates}
+# 資產範本 {#asset-templates}
 
-资产模板是一类特殊的资产，可帮助快速将具有丰富视觉效果的内容重新用于数字和印刷媒体。 资产模板包括固定消息部分和可编辑部分两部分。 固定消息部分可以包含专有内容，例如品牌徽标和禁止编辑的版权信息。 可编辑部分可以在可编辑以自定义消息传递的字段中包含可视和文本内容。
+資產範本是一種特殊型別的資產，可促進將視覺豐富的內容快速重新用於數位和印刷媒體。 資產範本包含固定傳訊區段及可編輯區段兩個部分。 固定傳訊區段可包含專有內容，例如品牌標誌和已停用編輯的版權資訊。 可編輯區段可在欄位中包含視覺和文字內容，您可編輯這些欄位來自訂訊息。
 
-在确保全球标牌的同时进行有限编辑的灵活性使资产模板成为快速内容调整和分发的理想构建基块，可作为各种功能的内容构件。 重新调整内容用途有助于降低管理打印和数字渠道的成本，并在这些渠道中提供全面一致的体验。
+在確保全球招牌的同時進行有限編輯的彈性，使資產範本成為快速內容改寫和發佈的理想建置區塊，成為各種功能的內容成品。 重新調整內容用途有助於降低管理列印和數位頻道的成本，並在這些頻道中提供整體且一致的體驗。
 
-作为营销人员，您可以在中存储和管理模板 [!DNL Experience Manager Assets] 并使用单个基本模板轻松创建多种个性化打印体验。 您可以创建各种类型的营销宣传资料，包括宣传册、传单、明信片、名片等，以便向客户清楚地传达您的营销信息。 也可以从现有打印输出或新打印输出组合多页打印输出。 最重要的是，您可以轻松地同时提供数字和打印体验，从而为用户提供一致的集成体验。
+身為行銷人員，您可以透過以下方式儲存和管理範本： [!DNL Experience Manager Assets] 並使用單一基本範本，輕鬆建立多種個人化列印體驗。 您可以建立各種型別的行銷宣傳品，包括小冊子、傳單、明信片、名片等，以便向客戶清楚傳達行銷訊息。 您也可以組合現有或新列印輸出的多頁列印輸出。 最重要的是，您可以同時輕鬆提供數位和列印體驗，為使用者提供一致的整合式體驗。
 
-虽然资产模板主要是 [!DNL Adobe InDesign] 文件，熟练掌握 [!DNL Adobe InDesign] 并不是制造星光人工物的障碍。 您无需映射 [!DNL Adobe InDesign] 模板以及创建目录时所需的产品字段。 可直接在Web界面上以WYSIWYG模式编辑模板。 但是，对于 [!DNL Adobe InDesign] 要处理编辑更改，您必须先配置 [!DNL Experience Manager Assets] 要与集成 [!DNL Adobe InDesign Server].
+雖然資產範本多半是 [!DNL Adobe InDesign] 檔案，熟練掌握 [!DNL Adobe InDesign] 不會成為製造光彩照人的障礙。 您不需要對應 [!DNL Adobe InDesign] 範本以及您在建立目錄時所需的產品欄位。 您可以直接在Web介面上以WYSIWYG模式編輯範本。 但是，對於 [!DNL Adobe InDesign] 若要處理您的編輯變更，您必須先設定 [!DNL Experience Manager Assets] 若要與整合 [!DNL Adobe InDesign Server].
 
-编辑功能 [!DNL Adobe InDesign] Web界面中的模板有助于促进创意人员和营销人员之间更好地协作。 内容速度的提高缩短了营销抵押品的上市时间。
+編輯功能 [!DNL Adobe InDesign] 網頁介面的範本有助於促進創意和行銷人員之間的更大合作。 提升的內容速度可縮短行銷宣傳品的上市時間。
 
-您可以使用资源模板实现以下目标：
+您可以使用資產範本達成下列目標：
 
-* 从Web界面修改可编辑的模板字段。
-* 控制文本的基本样式，例如标签级别的字体大小、样式和文字。
-* 使用内容选取器更改模板中的图像。
-* 预览模板编辑。
-* 合并多个模板文件以创建多页构件。
+* 從網頁介面修改可編輯的範本欄位。
+* 控制文字的基本樣式，例如標籤層級的字型大小、樣式和文字。
+* 使用內容選擇器變更範本中的影像。
+* 預覽範本編輯。
+* 合併多個範本檔案以建立多頁成品。
 
-当您为宣传材料选择模板时， [!DNL Experience Manager Assets] 创建可编辑的模板副本。 原始模板将保留，从而确保您的全局标牌保持不变，并且可重复使用以强制实施品牌一致性。
+當您選擇附屬資料的範本時， [!DNL Experience Manager Assets] 建立您可編輯的範本復本。 原始範本會保留，以確保您的全域招牌保持不變，並可重複使用以強制執行品牌一致性。
 
-您可以以INDD、PDF或JPG格式导出父文件夹中的更新文件。 您还可以将这些格式的输出下载到本地文件系统。
+您可以在父資料夾中以INDD、PDF或JPG格式匯出更新的檔案。 您也可以將這些格式的輸出下載到您的本機檔案系統。
 
-## 创建宣传品 {#creating-a-collateral}
+## 建立附屬資料 {#creating-a-collateral}
 
-考虑以下情景：您希望为即将到来的营销活动创建数字可打印的宣传品（例如宣传册、传单和广告），并在全球范围内与折扣商店共享。 基于模板创建宣传品有助于跨渠道提供统一的客户体验。 设计人员可以使用创意解决方案（例如）创建营销活动模板（单页或多页） [!DNL InDesign] 并将模板上传到 [!DNL Experience Manager Assets] 为了你。 在创建宣传品之前，请上传一个或多个INDD模板并在以下位置提供 [!DNL Experience Manager] 事前准备。
+假設您要建立數位可列印的宣傳品（例如手冊、傳單，以及即將推出的行銷活動的廣告），並與全球折扣商店分享。 根據範本建立宣傳品有助於跨管道提供統一的客戶體驗。 設計人員可使用創意解決方案（例如）建立行銷活動範本（單頁或多頁） [!DNL InDesign] 並將範本上傳至 [!DNL Experience Manager Assets] 敬請參考使用。 在建立宣傳品之前，請先上傳一或多個INDD範本，並可在以下位置使用： [!DNL Experience Manager] 事前準備。
 
-1. In [!DNL Experience Manager] 界面点击 [!UICONTROL 资产].
+1. 在 [!DNL Experience Manager] 介面點按 [!UICONTROL 資產].
 
-1. 从选项中，选择 **[!UICONTROL 模板]**.
+1. 從選項中選擇 **[!UICONTROL 範本]**.
 
    ![chlimage_1-101](assets/chlimage_1-306.png)
 
-1. 单击 **[!UICONTROL 创建]**，然后从菜单中选择您要创建的宣传品。 例如，选择 **[!UICONTROL 宣传册]**.
+1. 按一下 **[!UICONTROL 建立]**，然後從功能表中選擇您要建立的附屬資料。 例如，選擇 **[!UICONTROL 手冊]**.
 
    ![chlimage_1-102](assets/chlimage_1-307.png)
 
-1. 上传了一个或多个INDD模板并在以下位置提供 [!DNL Experience Manager] 事前准备。 选择手册的模板，然后单击 **[!UICONTROL 下一个]**.
-1. 指定宣传册的名称和可选描述。
+1. 上傳一個或多個INDD範本並在以下位置提供： [!DNL Experience Manager] 事前準備。 選擇手冊的範本，然後按一下 **[!UICONTROL 下一個]**.
+1. 指定手冊的名稱和說明（選用）。
 
    ![chlimage_1-104](assets/chlimage_1-309.png)
 
-1. （可选）单击 **[!UICONTROL 标记]** 并为宣传册选择一个或多个标记。 单击 **[!UICONTROL 确认]** 以确认您的选择。
-1. 单击&#x200B;**[!UICONTROL 创建]**。出现一个对话框，确认已创建新宣传册。 单击 **[!UICONTROL 打开]** 以在编辑模式下打开宣传册。
+1. （可選）按一下 **[!UICONTROL 標籤]** 並選取手冊的一或多個標籤。 按一下 **[!UICONTROL 確認]** 以確認您的選取。
+1. 单击&#x200B;**[!UICONTROL 创建]**。對話方塊會確認已建立新手冊。 按一下 **[!UICONTROL 開啟]** ，以在編輯模式中開啟手冊。
 
    <!--![chlimage_1-106](assets/.png) -->
 
-   或者，关闭对话框并导航到开始使用的“模板”页面中的文件夹，以查看您创建的宣传册。 宣传品的类型将显示在卡片视图的缩略图上。 例如，在本例中， [!UICONTROL 宣传册] 在缩略图上显示。
+   或者，您也可以關閉對話方塊，並導覽至您開始使用的「範本」頁面中的資料夾，以檢視您建立的手冊。 宣傳品的型別會顯示在卡片檢視的縮圖上。 例如，在此案例中， [!UICONTROL 手冊] 都會顯示在縮圖上。
 
    ![chlimage_1-107](assets/chlimage_1-312.png)
 
-## 编辑宣传品 {#editing-a-collateral}
+## 編輯宣傳品 {#editing-a-collateral}
 
-您可以在创建宣传品后立即对其进行编辑。 或者，从 [!UICONTROL 模板] 页面或资产页面。
+您可以在建立附屬資料後立即加以編輯。 或者，您也可從 [!UICONTROL 範本] 頁面或資產頁面。
 
-1. 要打开宣传品进行编辑，请执行下列操作之一：
+1. 若要開啟要編輯的附屬資料，請執行下列任一項作業：
 
-   * 打开您在的步骤7中创建的宣传品（在本例中是宣传册）， [创建宣传品](/help/assets/asset-templates.md#creating-a-collateral).
-   * 在“模板”页面中，导航到创建宣传品的文件夹，然后单击 [!UICONTROL 编辑] 在宣传品的缩略图上快速操作。
-   * 在抵押资产的资产页面中，单击 **[!UICONTROL 编辑]** 工具栏中。
-   * 选择宣传品并单击 **[!UICONTROL 编辑]** 工具栏中。
+   * 開啟您在步驟7中建立的宣傳品（在此案例中是宣傳冊）， [建立附屬資料](/help/assets/asset-templates.md#creating-a-collateral).
+   * 從「範本」頁面，瀏覽至您建立附屬資料的資料夾，然後按一下 [!UICONTROL 編輯] 在附屬資料的縮圖上快速動作。
+   * 在附屬資產的頁面中，按一下 **[!UICONTROL 編輯]** （從工具列）。
+   * 選取附屬資料，然後按一下 **[!UICONTROL 編輯]** （從工具列）。
 
    <!--![chlimage_1-108](assets/chlimage_1-313.png) -->
 
-   资产查找器和文本编辑器将显示在页面左侧。 默认情况下，文本编辑器处于打开状态。
+   資產尋找器和文字編輯器會顯示在頁面左側。 文字編輯器預設為開啟。
 
-   您可以使用文本编辑器修改要在文本字段中显示的文本。 您可以在标记级别修改字体大小、样式、颜色和文字。
+   您可以使用文字編輯器來修改要顯示在文字欄位中的文字。 您可以在標籤層級修改字型大小、樣式、顏色和文字。
 
-   使用资源查找器，您可以浏览或搜索以下位置的图像： [!DNL Experience Manager Assets] 和将模板中的可编辑图像替换为您选择的图像。
+   使用資產尋找器，您可以瀏覽或搜尋內的影像 [!DNL Experience Manager Assets] 和將範本中可編輯的影像取代為您選擇的影像。
 
    ![chlimage_1-109](assets/chlimage_1-314.png)
 
-   可编辑内容显示在右侧。 对于要在中编辑的字段 [!DNL Experience Manager Assets]，模板中的相应字段必须标记 [!DNL InDesign]. 换句话说，它们应该在中标记为可编辑 [!DNL InDesign].
+   可編輯內容會顯示在右側。 讓欄位可以在中編輯 [!DNL Experience Manager Assets]，範本中對應的欄位必須標籤 [!DNL InDesign]. 換言之，它們應該在中標籤為可編輯 [!DNL InDesign].
 
    >[!NOTE]
    >
-   >确保您的 [!DNL Experience Manager] 部署与集成 [!DNL InDesign Server] 以启用 [!DNL Experience Manager Assets] 以从提取数据 [!DNL InDesign] 并使其可用于编辑。 有关详细信息，请参阅 [将Experience Manager Assets与InDesign Server集成](/help/assets/indesign.md).
+   >確保您的 [!DNL Experience Manager] 部署已與 [!DNL InDesign Server] 以啟用 [!DNL Experience Manager Assets] 以從擷取資料 [!DNL InDesign] 範本並使其可用於編輯。 如需詳細資訊，請參閱 [將Experience Manager Assets與InDesign Server整合](/help/assets/indesign.md).
 
-1. 要修改可编辑字段中的文本，请单击可编辑字段列表中的文本字段，然后编辑该字段中的文本。
+1. 若要修改可編輯欄位中的文字，請從可編輯欄位清單中按一下文字欄位，然後編輯欄位中的文字。
 
    ![chlimage_1-111](assets/chlimage_1-316.png)
 
-   可以使用提供的选项编辑文本属性，例如字体样式、颜色和大小。
+   您可以使用提供的選項來編輯文字屬性，例如字型樣式、顏色和大小。
 
-1. 单击 **[!UICONTROL 预览]** 以预览文本更改。
+1. 按一下 **[!UICONTROL 預覽]** 以預覽文字變更。
 
-1. 要交换图像，请单击 **[!UICONTROL 资产查找器]** ![chlimage_1-113](assets/chlimage_1-318.png).
+1. 若要交換影像，請按一下 **[!UICONTROL 資產尋找器]** ![chlimage_1-113](assets/chlimage_1-318.png).
 
-1. 从可编辑字段列表中选择图像字段，然后将所需图像从资产选择器拖到可编辑字段中。
+1. 從可編輯欄位清單中選取影像欄位，然後將所需的影像從資產選擇器拖曳至可編輯欄位。
 
    ![chlimage_1-114](assets/chlimage_1-319.png)
 
-   您还可以使用关键字、标记并根据其发布状态搜索图像。 您可以浏览 [!DNL Experience Manager Assets] 并导航到所需图像的位置。
+   您也可以使用關鍵字、標籤，並根據其發佈狀態來搜尋影像。 您可以瀏覽 [!DNL Experience Manager Assets] 存放庫並導覽至所需影像的位置。
 
    ![chlimage_1-115](assets/chlimage_1-320.png)
 
-1. 单击 **[!UICONTROL 预览]** 以预览图像。
-1. 要编辑多页宣传资料中的特定页面，请使用底部的页面导航器。
+1. 按一下 **[!UICONTROL 預覽]** 以預覽影像。
+1. 若要編輯多頁附屬資料中的特定頁面，請使用底部的頁面導覽器。
 
-1. 单击 **[!UICONTROL 预览]** 以预览所有更改。 单击 **[!UICONTROL 完成]** 以保存对宣传品的编辑更改。
+1. 按一下 **[!UICONTROL 預覽]** 以預覽所有變更。 按一下 **[!UICONTROL 完成]** 以儲存對附屬資料的編輯變更。
 
    >[!NOTE]
    >
-   >仅当宣传品中的可编辑图像字段没有任何缺少图标时，才会启用“预览”和“完成”选项。 如果您的宣传资料中缺少图标，原因如下 [!DNL Experience Manager] 无法解析中的图像 [!DNL InDesign] 模板。 通常， [!DNL Experience Manager] 在以下情况下无法解析图像：
+   >只有當附屬資料內的可編輯影像欄位沒有任何遺漏圖示時，才會啟用「預覽」和「完成」選項。 如果您的附屬資料中缺少圖示，原因如下 [!DNL Experience Manager] 無法解析中的影像 [!DNL InDesign] 範本。 通常 [!DNL Experience Manager] 無法解析下列情況的影像：
    >
-   >* 图像未嵌入到底层中 [!DNL InDesign] 模板。
-   >* 从本地文件系统链接图像。
+   >* 影像未內嵌在基礎中 [!DNL InDesign] 範本。
+   >* 從本機檔案系統連結影像。
 
    >
-   >启用 [!DNL Experience Manager] 要解析图像，请执行以下操作：
+   >若要啟用 [!DNL Experience Manager] 若要解析影像，請執行下列動作：
    >
-   >* 创建时嵌入图像 [!DNL InDesign] 模板(请参阅 [关于链接和嵌入式图形](https://helpx.adobe.com/indesign/using/graphics-links.html))。
-   >* 装载 [!DNL Experience Manager] 到您的本地文件系统，然后将缺少的图标映射到中的现有资源 [!DNL Experience Manager].
+   >* 建立時內嵌影像 [!DNL InDesign] 範本(請參閱 [關於連結與內嵌圖形](https://helpx.adobe.com/indesign/using/graphics-links.html))。
+   >* 掛載 [!DNL Experience Manager] 至您的本機檔案系統，然後將遺失的圖示與中的現有資產對應 [!DNL Experience Manager].
 
    >
-   >有关使用的更多信息 [!DNL InDesign] 文档，请参阅 [使用Experience Manager中InDesign文档的最佳实践](https://helpx.adobe.com/experience-manager/kb/best-practices-idd-docs-aem.html).
+   >如需有關使用的詳細資訊 [!DNL InDesign] 檔案，請參閱 [使用Experience Manager中InDesign檔案的最佳實務](https://helpx.adobe.com/experience-manager/kb/best-practices-idd-docs-aem.html).
 
-1. 要为宣传册生成PDF演绎版，请选择对话框中的Acrobat选项，然后单击 **[!UICONTROL 继续]**.
-1. 宣传品在您开始使用的文件夹中创建。 要查看演绎版，请打开宣传品并选择 **[!UICONTROL 演绎版]** 从GlobalNav列表中。
+1. 若要產生手冊的PDF轉譯，請在對話方塊中選取Acrobat選項，然後按一下 **[!UICONTROL 繼續]**.
+1. 附屬資料會在您開始使用的資料夾中建立。 若要檢視轉譯，請開啟宣傳品並選擇 **[!UICONTROL 轉譯]** 從GlobalNav清單。
 
    ![chlimage_1-118](assets/chlimage_1-323.png)
 
-1. 单击格式副本列表中的PDF格式副本以下载PDF文件。 打开PDF文件以查看宣传品。
+1. 按一下轉譯清單中的PDF轉譯，即可下載PDF檔案。 開啟PDF檔案以檢閱附屬資料。
 
    ![chlimage_1-119](assets/chlimage_1-324.png)
 
-## 合并宣传品 {#merge-collateral}
+## 合併附屬資料 {#merge-collateral}
 
-1. 在 [!DNL Experience Manager] 界面点击 [!UICONTROL 资产] 在导航页面上。
+1. 在 [!DNL Experience Manager] 介面點按 [!UICONTROL 資產] （位於導覽頁面）。
 
-1. 从选项中，选择 **[!UICONTROL 模板]**.
+1. 從選項中選擇 **[!UICONTROL 範本]**.
 
-1. 单击 **[!UICONTROL 创建]** 和选择 **[!UICONTROL Merge]** 从菜单中。
+1. 按一下 **[!UICONTROL 建立]** 和選擇 **[!UICONTROL 合併]** 功能表中的。
 
    ![chlimage_1-120](assets/chlimage_1-325.png)
 
-1. 从 [!UICONTROL 模板合并] 页面，单击 **[!UICONTROL Merge]** ![添加资产](assets/do-not-localize/assets_add_icon.png).
+1. 從 [!UICONTROL 範本合併] 頁面，按一下 **[!UICONTROL 合併]** ![新增資產](assets/do-not-localize/assets_add_icon.png).
 
-1. 导航到要合并的宣传品的位置，单击要合并的宣传品的缩略图以选择它们。
+1. 切換作業選項至您要合併的附屬資產位置，按一下您要合併之附屬資產的縮圖，以選取它們。
 
    ![chlimage_1-122](assets/chlimage_1-327.png)
 
-   您还可以从Omnisearch框中搜索模板。
+   您也可以從Omnisearch方塊搜尋範本。
 
-   您可以浏览 [!DNL Experience Manager Assets] 存储库，然后导航到所需模板的位置，然后选择要合并的模板。
+   您可以瀏覽 [!DNL Experience Manager Assets] 存放庫或集合，然後導覽至所需範本的位置，然後選取它們以合併。
 
-   您可以应用各种筛选器来搜索所需的模板。 例如，您可以根据文件类型或标记搜索模板。
+   您可以套用各種篩選器來搜尋所需的範本。 例如，您可以根據檔案型別或標籤來搜尋範本。
 
-1. 单击 **[!UICONTROL 下一个]** 工具栏中。
-1. 在 **[!UICONTROL 预览和重新排序]** 屏幕，根据需要重新排列模板并预览要合并的模板选择。 然后，单击 **[!UICONTROL 下一个]** 工具栏中。
+1. 按一下 **[!UICONTROL 下一個]** （從工具列）。
+1. 在 **[!UICONTROL 預覽與重新排序]** 視需要重新排列範本，並預覽要合併的範本選擇。 然後，按一下 **[!UICONTROL 下一個]** （從工具列）。
 
    ![chlimage_1-126](assets/chlimage_1-331.png)
 
-1. 在 [!UICONTROL 配置模板] 屏幕中，指定宣传品的名称。 （可选）指定您认为合适的任何标记。 如果要以PDF格式导出输出，请选择 **[!UICONTROL Acrobat (.PDF)]**. 默认情况下，宣传品以JPG导出，并且 [!DNL InDesign] 格式。 要更改多页宣传品的显示缩略图，请单击 **[!UICONTROL 更改缩略图]**.
+1. 在 [!UICONTROL 設定範本] 畫面，指定附屬資料的名稱。 選擇性地指定您認為合適的任何標籤。 如果要以PDF格式匯出輸出，請選取 **[!UICONTROL Acrobat (.PDF)]**. 依預設，附屬品會以JPG匯出，並且 [!DNL InDesign] 格式。 若要變更多頁附屬資料的顯示縮圖，請按一下 **[!UICONTROL 變更縮圖]**.
 
    ![chlimage_1-127](assets/chlimage_1-332.png)
 
-1. 单击 **[!UICONTROL 保存]** 然后单击 **[!UICONTROL 确定]** ，以关闭对话框。 多页宣传品是在您开始使用的文件夹中创建的。
+1. 按一下 **[!UICONTROL 儲存]** 然後按一下 **[!UICONTROL 確定]** 以關閉對話方塊。 多頁附屬資料會在您開始使用的資料夾中建立。
 
    >[!NOTE]
    >
-   >您以后不能编辑合并的宣传品，也不能使用它来创建其他宣传品。
+   >您稍後無法編輯合併的宣傳品，也無法使用它來建立其他宣傳品。
 
-## 最佳实践和限制 {#best-practices-limitations-tips}
+## 最佳作法和限制 {#best-practices-limitations-tips}
 
-* 此 [!DNL InDesign] 编辑者 [!DNL Experience Manager] 在标记级别工作，单个标记下的所有文本被视为单个实体。 要在编辑时保留文本格式和样式，请单独标记每个段落（或使用不同样式的文本）。
+* 此 [!DNL InDesign] 中的編輯器 [!DNL Experience Manager] 適用於標籤層級，且單一標籤下的所有文字都視為單一實體。 若要在編輯時保留文字格式和樣式，請分別標籤每個段落（或使用不同樣式的文字）。

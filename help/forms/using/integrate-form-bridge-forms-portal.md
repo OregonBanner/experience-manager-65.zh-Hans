@@ -1,7 +1,7 @@
 ---
-title: 将Form Bridge与HTML5表单的自定义门户集成
+title: 針對HTML5表單整合Form Bridge與自訂入口網站
 seo-title: Integrating Form Bridge with custom portal for HTML5 forms
-description: 您可以使用FormBridge API从“HTML”页获取或设置表单字段的值并提交表单。
+description: 您可以使用FormBridge API從HTML頁面取得或設定表單欄位的值，並提交表單。
 seo-description: You can use the FormBridge API to get or set the values of form fields from the HTML page and submit the form.
 uuid: c8911f82-1a25-47a5-9a06-19b5dce74a2c
 content-type: reference
@@ -18,29 +18,29 @@ ht-degree: 0%
 
 ---
 
-# 将Form Bridge与HTML5表单的自定义门户集成{#integrating-form-bridge-with-custom-portal-for-html-forms}
+# 針對HTML5表單整合Form Bridge與自訂入口網站{#integrating-form-bridge-with-custom-portal-for-html-forms}
 
-FormBridge是一个HTML5 forms bridge API，它允许您与表单交互。 有关FormBridge API参考，请参阅 [FormBridge API参考](/help/forms/using/form-bridge-apis.md).
+FormBridge是HTML5 forms bridge API，可讓您與表單互動。 如需FormBridge API的參考資料，請參閱 [FormBridge API參考](/help/forms/using/form-bridge-apis.md).
 
-您可以使用FormBridge API从“HTML”页获取或设置表单字段的值并提交表单。 例如，您可以使用API构建类似于向导的体验。
+您可以使用FormBridge API從HTML頁面取得或設定表單欄位的值，並提交表單。 例如，您可以使用API來建置精靈般的體驗。
 
-现有的HTML应用程序可利用FormBridge API与表单交互并将其嵌入到HTML页面中。 您可以使用以下步骤通过Form Bridge API设置字段的值。
+現有的HTML應用程式可運用FormBridge API與表單互動，並將其內嵌於HTML頁面中。 您可以使用下列步驟，透過Form Bridge API設定欄位的值。
 
-## 将HTML5表单集成到网页 {#integrating-html-forms-to-a-web-page}
+## 將HTML5表單整合至網頁 {#integrating-html-forms-to-a-web-page}
 
-1. **选择配置文件或创建配置文件**
+1. **選擇設定檔或建立設定檔**
 
-   1. 在CRX DE界面中，导航到： `https://'[server]:[port]'/crx/de`.
-   1. 使用管理员凭据登录。
-   1. 创建配置文件或选择现有配置文件。
+   1. 在CRX DE介面中，導覽至： `https://'[server]:[port]'/crx/de`.
+   1. 使用管理員認證登入。
+   1. 建立設定檔或選擇現有的設定檔。
 
-      有关如何创建配置文件的详细信息，请参阅 [创建新配置文件](/help/forms/using/custom-profile.md).
+      如需如何建立設定檔的詳細資訊，請參閱 [建立新的設定檔](/help/forms/using/custom-profile.md).
 
-1. **修改HTML配置文件**
+1. **修改HTML設定檔**
 
-   在配置文件渲染器中包含XFA运行时、XFA区域设置库和XFA表单HTML片段，设计您的网页，并将表单放入网页中。
+   在設定檔轉譯器中包含XFA執行階段、XFA地區設定程式庫和XFA表單HTML程式碼片段、設計您的網頁，並將表單放入網頁中。
 
-   例如，使用以下代码片断，创建一个带有两个输入字段的应用程序，并创建一个表单来演示表单与外部应用程序之间的交互。
+   例如，使用以下程式碼片段，建立包含兩個輸入欄位的應用程式，以及示範表單與外部應用程式之間互動的表單。
 
    ```xml
    <%@ page session="false"
@@ -76,24 +76,24 @@ FormBridge是一个HTML5 forms bridge API，它允许您与表单交互。 有�
 
    >[!NOTE]
    >
-   >此 **9号线**，包含用于设计CSS样式和JavaScript文件的其他JSP引用。
+   >此 **第9行**，包含其他CSS樣式的JSP參考和用來設計頁面的JavaScript檔案。
    >
    >
-   >此 &lt;div id=&quot;rightdiv&quot;> 标记于 **第18行** 包含XFA表单的HTML片段。
-   页面将设置为两个容器： **left** 和 **右**. 正确的容器具有表单。 左侧容器包含两个输入字段和一个外部HTML页的一部分。
-   以下屏幕抓图显示了表单在浏览器中的显示方式。
+   >此 &lt;div id=&quot;rightdiv&quot;> 標籤於 **第18行** 包含XFA表單的HTML片段。
+   頁面會設定為兩個容器的樣式： **left** 和 **右側**. 正確的容器有表單。 左側容器有兩個輸入欄位和部分外部HTML頁面。
+   以下熒幕擷圖顯示表單在瀏覽器中的顯示方式。
 
-   ![门户](assets/portal.jpg)
+   ![入口網站](assets/portal.jpg)
 
-   左侧是 **HTML页面**. 包含字段的右侧是 **xfa表单**.
+   左側是 **HTML頁面**. 包含欄位的右側是 **xfa表單**.
 
-1. **从页面访问表单字段**
+1. **從頁面存取表單欄位**
 
-   下面是一个示例脚本，您可以添加该脚本以在表单字段中设置值。
+   以下是範例指令碼，您可以新增此指令碼以在表單欄位中設定值。
 
-   例如，如果要设置 **员工姓名** 使用字段中的值 **名字** 和 **姓氏**，调用 **window.formBridge.setFieldValue** 函数。
+   例如，如果您想要設定 **員工姓名** 使用欄位中的值 **名字** 和 **姓氏**，呼叫 **window.formBridge.setFieldValue** 函式。
 
-   同样，您可以通过调用 **window.formBridge.getFieldValue** API。
+   同樣地，您可以呼叫以讀取值 **window.formBridge.getFieldValue** API。
 
    ```javascript
    $(function() {

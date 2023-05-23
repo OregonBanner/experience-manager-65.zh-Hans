@@ -1,7 +1,7 @@
 ---
-title: 移动 Web
+title: 行動網頁
 seo-title: Mobile Web
-description: AEM提供了多种工具，使您能够为移动设备开发站点并将您的内容集成到移动设备应用程序中
+description: AEM提供數種工具，可讓您為行動裝置開發網站，並將您的內容整合到行動應用程式中
 seo-description: AEM provides several tools that enable you to develop sites for mobile devices and to integrate your content into mobile applications
 uuid: 283667fa-1891-4a93-b074-792a8e15efc1
 contentOwner: Guillaume Carlino
@@ -14,29 +14,29 @@ exl-id: 309d256b-c67c-4df9-8851-b1ee3faa55ed
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '203'
-ht-degree: 3%
+ht-degree: 1%
 
 ---
 
-# 移动 Web{#mobile-web}
+# 行動網頁{#mobile-web}
 
 >[!NOTE]
 >
->Adobe建议对需要基于单页应用程序框架的客户端渲染（例如React）的项目使用SPA编辑器。 [了解更多](/help/sites-developing/spa-overview.md)。
+>Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）專案使用SPA編輯器。 [了解详情](/help/sites-developing/spa-overview.md).
 
-AEM提供了多种工具，使您能够为移动设备开发站点并将您的内容集成到移动设备应用程序中。
+AEM提供數種工具，可讓您開發行動裝置的網站，以及將您的內容整合到行動應用程式中。
 
-本页应与 [面向作者的移动页面](/help/sites-authoring/mobile.md).
+本頁應結合 [作者的行動裝置頁面](/help/sites-authoring/mobile.md).
 
-## 开发移动网站 {#developing-web-sites-for-mobile}
+## 為行動裝置開發網站 {#developing-web-sites-for-mobile}
 
-开发针对使用移动设备查看进行了优化的页面模板和组件。 开发使用可适应多种屏幕大小的响应式布局的页面，或开发针对特定屏幕大小进行优化的页面。 使用AEM提供的设备模拟器或创建自己的模拟器以进行WSYWIG创作和预览：
+開發針對使用行動裝置檢視而最佳化的頁面範本和元件。 開發使用回應式版面來調整多個熒幕大小的頁面，或開發針對特定熒幕大小最佳化的頁面。 使用AEM提供的裝置模擬器或建立您自己的模擬器，以進行WSYWIG製作和預覽：
 
-* [创建设备组筛选器](/help/sites-developing/groupfilters.md)
-* [网页的响应式设计](/help/sites-developing/responsive.md)
-* [为移动设备创建站点](/help/sites-developing/mobile.md)
+* [建立裝置群組篩選器](/help/sites-developing/groupfilters.md)
+* [網頁的回應式設計](/help/sites-developing/responsive.md)
+* [建立行動裝置的網站](/help/sites-developing/mobile.md)
 * [模拟器](/help/sites-developing/emulators.md)
 
-## 开发移动应用程序 {#developing-mobile-apps}
+## 開發行動應用程式 {#developing-mobile-apps}
 
-开发使用AEM页面作为应用程序界面的移动应用程序。 AEM与PhoneGap集成，以便您可以使用AEM页面轻松创建应用程序。 内容同步允许您创建页面的版本化存档，以便与应用程序捆绑在一起。 要了解有关内容同步的更多信息，请单击 [此处](/help/mobile/phonegap-contentsync.md).
+開發使用AEM頁面作為應用程式介面的行動應用程式。 AEM與PhoneGap整合，因此您可以使用AEM頁面輕鬆建立應用程式。 內容同步可讓您建立頁面的版本化封存，以便與應用程式整合。 若要進一步瞭解Content Sync，請按一下 [此處](/help/mobile/phonegap-contentsync.md).

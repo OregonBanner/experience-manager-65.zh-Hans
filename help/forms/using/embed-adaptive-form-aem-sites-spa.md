@@ -1,7 +1,7 @@
 ---
-title: 在AEM Sites单页应用程序中嵌入自适应表单或交互式通信
+title: 在AEM Sites單頁應用程式中內嵌最適化表單或互動式通訊
 seo-title: Embed adaptive forms or Interactive Communications in AEM Sites pages
-description: 在AEM Sites页面中嵌入自适应表单或交互式通信。 用户无需离开站点页面即可填写和提交表单。
+description: 在AEM Sites頁面中內嵌最適化表單或互動式通訊。 使用者無需離開Sites頁面即可填寫及提交表單。
 seo-description: You can embed adaptive forms or Interactive Communication in AEM Sites pages. Users can fill and submit forms without leaving the Sites page.
 uuid: 4c75494e-e9d2-43b9-bbae-562e0eda8abb
 topic-tags: author, interactive-communications
@@ -17,90 +17,90 @@ ht-degree: 0%
 
 ---
 
-# 在AEM Sites单页应用程序中嵌入自适应表单或交互式通信{#embed-an-adaptive-form-or-interactive-communication-in-aem-sites-single-page-application}
+# 在AEM Sites單頁應用程式中內嵌最適化表單或互動式通訊{#embed-an-adaptive-form-or-interactive-communication-in-aem-sites-single-page-application}
 
 ## 概述 {#overview}
 
-AEM Forms允许表单开发人员将自适应表单和交互式通信无缝嵌入到AEM Sites单页应用程序(SPA)中。 嵌入式自适应表单和交互式通信功能完善，用户无需离开页面即可填写和提交表单。 它有助于用户停留在网页上其他元素的上下文中，并同时与自适应表单或交互式通信交互。
+AEM Forms可讓表單開發人員在AEM Sites單頁應用程式(SPA)中順暢地內嵌最適化表單和互動式通訊。 內嵌的最適化表單和互動式通訊功能齊全，使用者無需離開頁面即可填寫和提交表單。 它有助於使用者停留在網頁上其他元素的上下文中，並同時與最適化表單或互動式通訊互動。
 
-在AEM Sites单页应用程序中，您可以使用添加自适应表单或交互式通信 [AEM Forms SPA Container组件](../../forms/using/embed-adaptive-form-aem-sites-spa.md#af-component)[.](../../forms/using/embed-adaptive-form-aem-sites-spa.md#af-component) 它是AEM Sites SPA的AEM Forms组件，您可以将其添加到站点页面。
+在AEM Sites單頁應用程式中，您可以使用新增最適化表單或互動式通訊 [AEM Forms SPA容器元件](../../forms/using/embed-adaptive-form-aem-sites-spa.md#af-component)[.](../../forms/using/embed-adaptive-form-aem-sites-spa.md#af-component) 它是AEM Sites SPA的AEM Forms元件，可新增至您的網站頁面。
 
-有关在非SPA AEM Sites中嵌入自适应表单的信息，请参阅 [在AEM Sites页面中嵌入自适应表单或交互式通信](/help/forms/using/embed-adaptive-form-aem-sites.md).
+如需在非SPA AEM Sites中內嵌最適化表單的相關資訊，請參閱 [在AEM Sites頁面中內嵌最適化表單或互動式通訊](/help/forms/using/embed-adaptive-form-aem-sites.md).
 
 ## 前提条件 {#prerequisites}
 
-要使用AEM Forms SPA Container组件在AEM Sites SPA中嵌入自适应表单或交互式通信，请确保您已安装：
+若要使用AEM Forms SPA Container元件在AEM Sites SPA中內嵌最適化表單或互動式通訊，請確定您已安裝：
 
-* Java SE Development Kit 8或更高版本
-* Apache Maven 3.3.1或更高版本
-* AEM创作实例
-* [AEM Forms 6.4.2附加组件包](https://helpx.adobe.com/cn/aem-forms/kb/aem-forms-releases.html) 在创作实例上
+* Java SE開發套件8或更新版本
+* Apache Maven 3.3.1或更新版本
+* AEM作者執行個體
+* [AEM Forms 6.4.2附加元件套件](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) 在作者執行個體上
 
-## 安装AEM Forms SPA Container组件 {#install-aem-forms-spa-container-component}
+## 安裝AEM Forms SPA容器元件 {#install-aem-forms-spa-container-component}
 
-执行以下步骤，安装AEM Forms SPA Container组件：
+執行以下步驟，安裝AEM Forms SPA Container元件：
 
-1. [克隆或下载适用于SPA的AEM Forms组件](https://github.com/Adobe-Marketing-Cloud/aem-forms/tree/master/forms-spa).
-1. 安装适用于SPA的AEM Forms组件。 有关安装该组件的说明，请参见 [README.md](https://github.com/Adobe-Marketing-Cloud/aem-forms/tree/master/forms-spa#aem-form-component) 文件。
+1. [複製或下載適用於SPA的AEM Forms元件](https://github.com/Adobe-Marketing-Cloud/aem-forms/tree/master/forms-spa).
+1. 安裝適用於SPA的AEM Forms元件。 有關安裝元件的指示，請參閱 [README.md](https://github.com/Adobe-Marketing-Cloud/aem-forms/tree/master/forms-spa#aem-form-component) 檔案。
 
-   该组件包括 [示例React组件](https://github.com/Adobe-Marketing-Cloud/aem-forms/tree/master/forms-spa/react-component) ，可用于将SPA容器组件与基于React的SPA项目集成。
+   元件包含 [範例React元件](https://github.com/Adobe-Marketing-Cloud/aem-forms/tree/master/forms-spa/react-component) ，可用來整合SPA容器元件與React型SPA專案。
 
-1. [克隆或下载基于React的SPA项目](https://github.com/adobe/aem-sample-we-retail-journal).
-1. 使用SPA中提供的说明将SPA容器组件与基于React的项目集成 [README.md](https://github.com/Adobe-Marketing-Cloud/aem-forms/tree/master/forms-spa/react-component#aem-form-react-component-for-spa---editor) 文件。
+1. [複製或下載以React為基礎的SPA專案](https://github.com/adobe/aem-sample-we-retail-journal).
+1. 使用「 」中提供的指示，將SPA容器元件與React型SPA專案整合 [README.md](https://github.com/Adobe-Marketing-Cloud/aem-forms/tree/master/forms-spa/react-component#aem-form-react-component-for-spa---editor) 檔案。
 
-   安装AEM Forms SPA容器组件并将该组件与基于React的SPA项目集成后，您可以在AEM Sites页面中嵌入自适应表单和交互式通信。
+   安裝AEM Forms SPA Container元件並將該元件與React型SPA專案整合後，您可以在AEM Sites頁面中內嵌最適化表單和互動式通訊。
 
-## 嵌入自适应表单或交互式通信 {#af-component}
+## 內嵌最適化表單或互動式通訊 {#af-component}
 
-要使用AEM Forms for SPA容器组件嵌入自适应表单或交互式通信，请执行以下操作：
+若要使用AEM Forms for SPA Container元件內嵌最適化表單或互動式通訊：
 
-1. 在编辑模式下打开AEM sites页面，您要在其中嵌入自适应表单或交互式通信。
-1. 插入 **SPA的AEM表单** 组件，可使用以下任一选项：
+1. 以編輯模式開啟AEM sites頁面，您要在其中內嵌最適化表單或互動式通訊。
+1. 插入 **SPA適用的AEM表單** 元件時，可使用下列任一選項：
 
-   * 点按“站点”页面上的布局容器，然后点按 **+** 并选择 **SPA的AEM表单** 组件。
+   * 點選「網站」頁面上的版面容器，然後點選 **+** 並選取 **SPA適用的AEM表單** 元件。
 
-   * 在组件浏览器面板中，拖放 **SPA的AEM表单** 组件。
-   * 在Assets浏览器中搜索自适应表单或交互式通信，并将其拖放到Sites页面上。 它将表单嵌入到AEM Forms for SPA组件容器中。
+   * 在元件瀏覽器面板中，拖放 **SPA適用的AEM表單** 元件時。
+   * 在Assets瀏覽器中搜尋最適化表單或互動式通訊，並將其拖放至Sites頁面。 它會將表單內嵌在SPA元件容器的AEM Forms中。
 
    >[!NOTE]
    >
-   >不支持在页面上渲染多个AEM Forms SPA Container组件。 您可以在一个页面上有多个AEM Forms SPA Container，但一次只能呈现一个组件。 确保页面上只显示一个组件，以避免出现差异。
+   >不支援在頁面上呈現多個AEM Forms SPA Container元件。 一個頁面上可以有多個AEM Forms SPA Container，但一次只能轉譯一個元件。 請確定頁面上只顯示一個元件，以避免差異。
 
-1. 点按站点页面中嵌入的AEM Forms SPA容器组件，然后点按 ![settings_icon](assets/settings_icon.png) 在操作栏上。 此 **编辑AEM Forms SPA容器** 对话框打开。
-1. 在 **编辑AEM Forms容器** 对话框，请指定以下内容：
+1. 點選網站頁面中的內嵌AEM Forms SPA容器元件，然後點選 ![settings_icon](assets/settings_icon.png) 在動作列上。 此 **編輯AEM Forms SPA容器** 對話方塊開啟。
+1. 在 **編輯AEM Forms容器** 對話方塊中，指定下列專案：
 
-   * **资源类型：** 选择要嵌入的资源类型。 选项包括 **自适应表单** 和 **交互式通信**
+   * **資產型別：** 選取要內嵌的資產型別。 選項包括 **最適化表單** 和 **互動式通訊**
 
-   * **资源路径**：浏览并选择要嵌入的自适应表单或交互式通信。 如果使用Assets浏览器插入自适应表单或交互式通信，则会自动填充字段。
-   * **渠道** （仅限交互式通信）：选择要嵌入的交互式渠道类型。 选项包括 **Web渠道** 和 **打印渠道**.
+   * **資產路徑**：瀏覽並選取要內嵌的最適化表單或互動式通訊。 如果使用Assets瀏覽器插入最適化表單或互動式通訊，則會自動填入欄位。
+   * **頻道** （僅限互動式通訊）：選取要內嵌的互動式頻道型別。 選項包括 **網路頻道** 和 **Print Channel**.
 
-   * **主题**：选择为自适应表单或交互式通信组件定义样式的主题。 样式设置包括外观属性，如字体样式、背景颜色、尺寸和对齐方式。
+   * **主題**：選取定義最適化表單或互動式通訊元件樣式的主題。 樣式包含外觀屬性，例如字型樣式、背景顏色、尺寸和對齊方式。
 
-1. 点按 ![done_icon](assets/done_icon.png) 以保存设置。 自适应表单或交互式通信现已嵌入到页面中。
+1. 點選 ![done_icon](assets/done_icon.png) 以儲存設定。 最適化表單或互動式通訊現在內嵌在頁面中。
 
-## 发布嵌入式自适应表单和交互式通信 {#publish-embedded-adaptive-form-and-interactive-communication}
+## 發佈內嵌式最適化表單和互動式通訊 {#publish-embedded-adaptive-form-and-interactive-communication}
 
-请考虑以下在AEM Sites页面上发布嵌入资产（自适应表单或交互式通信）的情景：
+在AEM Sites頁面上發佈內嵌資產（最適化表單或互動式通訊）時，請考量下列情況：
 
-* 如果您是首次发布AEM Sites页面，并且该页面包含嵌入的自适应表单或交互式通信，请发布Sites页面和嵌入的资源。
-* 如果在已发布的Sites页面中仅修改了嵌入的自适应表单或交互式通信，请发布原始资产，所做的更改会反映在已发布的Sites页面中。 已发布的站点页面包含对资产的引用，无需重新发布页面。
-* 如果修改了Sites页面和嵌入的自适应表单或交互式通信，请重新发布Sites页面和嵌入的资产。
+* 如果您是第一次發佈AEM Sites頁面，且其中包含內嵌的最適化表單或互動式通訊，請發佈Sites頁面和內嵌資產。
+* 如果您在已發佈的Sites頁面中僅修改內嵌的最適化表單或互動式通訊，請發佈原始資產，而變更會反映在已發佈的Sites頁面中。 已發佈的Sites頁面包含資產的參考，不需要重新發佈頁面。
+* 如果您修改了Sites頁面和內嵌的最適化表單或互動式通訊，請重新發佈Sites頁面和內嵌資產。
 
-## 修改嵌入式自适应表单和交互式通信 {#modify-embedded-adaptive-form-and-interactive-communication}
+## 修改內嵌的最適化表單和互動式通訊 {#modify-embedded-adaptive-form-and-interactive-communication}
 
-AEM sites页在AEM Forms容器中维护对自适应表单和交互式通信的引用。 因此，在原始自适应表单和交互式通信中配置的所有配置和属性（如主题、样式和提交操作）都将保留在嵌入式自适应表单和交互式通信中。
+AEM sites頁面會維護AEM Forms容器中適用性表單和互動式通訊的參考。 因此，在原始最適化表單和互動式通訊中設定的所有設定和屬性（例如主題、樣式和提交動作）都會保留在內嵌的最適化表單和互動式通訊中。
 
-要修改嵌入式自适应表单和交互式通信的任何配置或属性，请执行下列操作之一。
+若要修改內嵌式最適化表單和互動式通訊的任何設定或屬性，請執行下列任一項作業。
 
-* 在相应编辑器中打开自适应表单或交互式通信中的原始表单，并修改它们。
-* 在编辑模式下，从“站点”页面中点按自适应表单或交互式通信，然后点按 **在新窗口中编辑**. 原始表单在编辑模式下打开。
+* 在各自的編輯器中以最適化表單或互動式通訊開啟原始表單並加以修改。
+* 在編輯模式下，從Sites頁面內點選最適化表單或互動式通訊，然後點選 **在新視窗中編輯**. 原始表單會在編輯模式下開啟。
 
-## 注意事项和最佳实践 {#considerations-and-best-practices}
+## 考量事項和最佳作法 {#considerations-and-best-practices}
 
-在AEM Sites页面中嵌入自适应表单时，请记住以下几点：
+將調適型表單內嵌於AEM網站頁面時，請記住下列幾點：
 
-* 原始表单中的页眉和页脚未包含在嵌入表单中。
-* 支持用户草稿和嵌入式表单的提交，并可在Forms Portal上的“草稿”和“已提交的Forms”选项卡中看到这些内容。
-* 在原始表单上配置的提交操作将保留在嵌入表单中。
-* 在原始表单上配置的体验定位和A/B测试在嵌入表单中不起作用。 但是，您可以使用“站点”页面上的体验定位功能，根据用户配置文件显示不同的表单。
-* 如果您已为原始表单配置Adobe Analytics，则会在Adobe Analytics中捕获嵌入表单的Analytics数据。 但是，它在Forms Analytics报表中不可用。
+* 內嵌表單中不包含原始表單的頁首和頁尾。
+* 使用者草稿和嵌入式表單的提交受到支援，並可在Forms入口網站上的「草稿」和「已提交的Forms」標籤中看到。
+* 在原始表單上設定的提交動作會保留在內嵌表單中。
+* 在原始表單上設定的體驗鎖定目標和A/B測試在內嵌表單中無法運作。 不過，您可以使用Sites頁面上的體驗鎖定目標，根據使用者設定檔顯示不同的表單。
+* 如果您已針對原始表單設定Adobe Analytics，則會在Adobe Analytics中擷取內嵌表單的分析資料。 但是，它不會出現在Forms Analytics報表中。

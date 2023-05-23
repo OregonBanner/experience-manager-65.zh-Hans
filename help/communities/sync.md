@@ -1,7 +1,7 @@
 ---
-title: Communities用户同步
+title: Communities使用者同步
 seo-title: Communities User Synchronization
-description: 用户同步的工作方式
+description: 使用者同步化的運作方式
 seo-description: How user synchronization works
 uuid: 772b82bd-a66c-4c1d-b80b-dcff77c873a3
 contentOwner: Janice Kendall
@@ -19,230 +19,230 @@ ht-degree: 2%
 
 ---
 
-# Communities用户同步 {#communities-user-synchronization}
+# Communities使用者同步 {#communities-user-synchronization}
 
 ## 简介 {#introduction}
 
-在AEM Communities中，从发布环境（取决于配置的权限）， *网站访客* 可能会变成 *成员*，创建 *用户组*，并编辑其 *成员配置文件* .
+在AEM Communities中，從發佈環境（取決於設定的許可權）， *網站訪客* 可能會變成 *成員*，建立 *使用者群組*，並編輯其 *成員設定檔* .
 
-*用户数据* 是一个术语，用来指代 *用户*， *用户配置文件* 和 *用户组*.
+*使用者資料* 是用來指稱的術語 *使用者*， *使用者設定檔* 和 *使用者群組*.
 
-*成员* 是一个术语，用来指代 *用户* 在发布环境中注册的用户，与在创作环境中注册的用户不同。
+*成員* 是用來指稱的術語 *使用者* 在發佈環境中註冊，與在作者環境中註冊的使用者不同。
 
-有关用户数据的更多信息，请访问 [管理用户和用户组](/help/communities/users.md).
+如需使用者資料的詳細資訊，請造訪 [管理使用者和使用者群組](/help/communities/users.md).
 
-## 在发布场中同步用户 {#synchronizing-users-across-a-publish-farm}
+## 在發佈伺服器陣列間同步使用者 {#synchronizing-users-across-a-publish-farm}
 
-根据设计，在发布环境中创建的用户数据不会显示在创作环境中。
+根據設計，在發佈環境中建立的使用者資料不會出現在製作環境中。
 
-在创作环境中创建的大多数用户数据旨在保留在创作环境中，不会同步或复制到发布实例。
+在製作環境中建立的大多數使用者資料旨在保留在製作環境中，不會同步或複製到發佈執行個體。
 
-当 [拓扑](/help/communities/topologies.md) 是 [发布场](/help/sites-deploying/recommended-deploys.md#tarmk-farm)，对一个发布实例所做的注册和修改需要与其他发布实例同步。 成员需要能够登录并在任何发布节点上查看其数据。
+當 [拓撲](/help/communities/topologies.md) 是 [發佈陣列](/help/sites-deploying/recommended-deploys.md#tarmk-farm)，對一個發佈執行個體進行的註冊和修改需要與其他發佈執行個體同步。 成員必須能夠登入並在任何發佈節點上檢視其資料。
 
-启用用户同步后，将在场中的发布实例之间自动同步用户数据。
+啟用使用者同步時，系統會自動在伺服器陣列中的發佈執行個體之間同步使用者資料。
 
-### 用户同步设置说明 {#user-sync-setup-instructions}
+### 使用者同步設定指示 {#user-sync-setup-instructions}
 
-有关如何跨发布场启用同步的详细分步说明，请参阅：
+如需如何跨發佈伺服器陣列啟用同步化的詳細逐步指示，請參閱：
 
-* [用户同步](/help/sites-administering/sync.md)
+* [使用者同步](/help/sites-administering/sync.md)
 
-## 后台用户同步  {#user-sync-in-the-background}
+## 使用者在背景同步  {#user-sync-in-the-background}
 
 ![sling-dist-workflow](assets/sling-dist-workflow.png)
 
-* **vlt包**
+* **vlt封裝**
 
-   它是一个zip文件，其中包含对发布者所做的所有更改，这些更改需要跨发布者分发。 发布服务器的更改会生成由更改事件侦听器挑选的事件。 这将创建一个包含所有更改的vlt包。
+   這是包含發佈商上完成的所有變更的zip檔案，這些變更需要跨發佈商分發。 發行者上的變更會產生由變更事件接聽程式挑選的事件。 這會建立包含所有變更的vlt套裝程式。
 
-* **分发包**
+* **發佈套件**
 
-   它包含Sling的分发信息。 这是有关内容需要分发到何处以及最后分发时间的信息。
+   它包含Sling的分發資訊。 這是需要發佈內容的地點以及上次發佈時間的相關資訊。
 
-## 当……出现以下情况时会发生什么情况： {#what-happens-when}
+## 當……發生什麼情況？ {#what-happens-when}
 
-### 从社区站点控制台发布站点 {#publish-site-from-communities-sites-console}
+### 從社群網站主控台發佈網站 {#publish-site-from-communities-sites-console}
 
-对于作者，当从发布社区站点时 [社区站点控制台](/help/communities/sites-console.md)，效果为 [复制](/help/sites-deploying/configuring.md#replication-reverse-replication-and-replication-agents) 关联的页面和Sling会分发动态创建的社区用户组，包括其成员资格。
+對作者而言，當社群網站從以下來源發佈時： [社群網站主控台](/help/communities/sites-console.md)，效果為 [復寫](/help/sites-deploying/configuring.md#replication-reverse-replication-and-replication-agents) 相關頁面和Sling會分配動態建立的社群使用者群組，包括其成員資格。
 
-### 发布时创建或编辑用户配置文件 {#user-is-created-or-edits-profile-on-publish}
+### 發佈時已建立或編輯使用者設定檔 {#user-is-created-or-edits-profile-on-publish}
 
-根据设计，在发布环境中创建的用户和配置文件（例如通过自助注册、社交登录、LDAP身份验证）不会显示在创作环境中。
+依設計，在發佈環境中建立的使用者和設定檔（例如透過自我註冊、社交登入、LDAP驗證）不會出現在製作環境中。
 
-当拓扑为 [发布场](/help/communities/topologies.md) 和用户同步配置正确， *用户* 和 *用户配置文件* 使用Sling分发跨发布场同步。
+當拓撲為 [發佈陣列](/help/communities/topologies.md) 且使用者同步已正確設定， *使用者* 和 *使用者設定檔* 會使用Sling發佈跨發佈伺服器陣列進行同步。
 
-### 发布时创建新社区组 {#new-community-group-is-created-on-publish}
+### 發佈時建立新的社群群組 {#new-community-group-is-created-on-publish}
 
-尽管社区组创建是从发布实例启动的，但实际上是在创作实例上发生的，这会产生新的站点页面和一个新的用户组。
+雖然社群群組的建立是從發佈執行個體開始的，但實際上會在作者執行個體上發生，這會產生新的網站頁面和新使用者群組。
 
-作为该过程的一部分，新站点页面将被复制到所有发布实例。 动态创建的社区用户组及其成员资格将分发到所有发布实例。
+在程式中，新網站頁面會復寫至所有發佈執行個體。 動態建立的社群使用者群組及其成員資格會由Sling散發至所有發佈執行個體。
 
-### 用户或用户组是使用安全控制台创建的 {#users-or-user-groups-are-created-using-security-console}
+### 使用者或使用者群組是使用安全性主控台建立 {#users-or-user-groups-are-created-using-security-console}
 
-根据设计，在发布环境中创建的用户数据不会显示在创作环境中，反之亦然。
+根據設計，在發佈環境中建立的使用者資料不會出現在製作環境中，反之亦然。
 
-当 [用户管理和安全性](/help/sites-administering/security.md) console用于在发布环境中添加新用户，如有必要，用户同步会将新用户及其组成员资格同步到其他发布实例。 用户同步还将同步通过安全控制台创建的用户组。
+當 [使用者管理與安全性](/help/sites-administering/security.md) console用於在發佈環境中新增使用者，使用者同步會在必要時同步新使用者及其群組成員資格到其他發佈執行個體。 使用者同步也會同步透過安全性主控台建立的使用者群組。
 
-### 用户发布内容时发布 {#user-posts-content-on-publish}
+### 使用者發佈內容時貼文 {#user-posts-content-on-publish}
 
-对于用户生成的内容(UGC)，可通过访问在发布实例上输入的数据 [配置的SRP](/help/communities/srp-config.md).
+針對使用者產生的內容(UGC)，透過以下存取方式存取在發佈執行個體上輸入的資料： [已設定的SRP](/help/communities/srp-config.md).
 
-## 最佳实践 {#bestpractices}
+## 最佳實務 {#bestpractices}
 
-默认情况下，用户同步为 **已禁用**. 启用用户同步涉及修改 *现有* osgi配置。 启用用户同步后，不应添加任何新配置。
+依預設，使用者同步為 **已停用**. 啟用使用者同步涉及修改 *現有* OSGi設定。 啟用使用者同步處理後，不應新增任何設定。
 
-用户同步依赖作者环境管理用户数据分发，即使用户数据不是基于作者创建的。
+即使使用者資料並非建立於作者，使用者同步仍仰賴作者環境管理使用者資料分佈。
 
 **前提条件**
 
-1. 如果已在一个发布服务器上创建了用户和用户组，则建议执行以下操作 [手动同步](/help/sites-administering/sync.md#manually-syncing-users-and-user-groups) 配置并启用用户同步之前，将用户数据发送到所有发布者。
+1. 如果使用者和使用者群組已在一個發佈者上建立，建議您 [手動同步](/help/sites-administering/sync.md#manually-syncing-users-and-user-groups) 設定和啟用使用者同步之前，將使用者資料傳送給所有發行者。
 
-   启用用户同步后，将仅同步新创建的用户和组。
+   啟用使用者同步後，只會同步新建立的使用者和群組。
 
-1. 确保安装了最新的代码：
+1. 確保已安裝最新的程式碼：
 
    * [AEM平台更新](https://helpx.adobe.com/cn/experience-manager/kb/aem62-available-hotfixes.html)
    * [AEM Communities更新](/help/communities/deploy-communities.md#latestfeaturepack)
 
-需要以下配置才能在AEM Communities上启用用户同步。 确保这些配置正确，以防止sling内容分发失败。
+若要在AEM Communities上啟用使用者同步化，需進行下列設定。 確保這些設定正確無誤，以避免Sling內容發佈失敗。
 
-### Apache Sling分发代理 — 同步代理工厂 {#apache-sling-distribution-agent-sync-agents-factory}
+### Apache Sling散發代理程式 — 同步代理程式工廠 {#apache-sling-distribution-agent-sync-agents-factory}
 
-此配置会获取要在发布服务器之间同步的内容。 该配置位于创作实例上。 作者必须跟踪所有存在的发布者以及在何处同步所有信息。
+此設定會擷取要在發佈商之間同步的內容。 設定位於作者執行個體上。 作者必須追蹤所有存在的發行者以及同步所有資訊的位置。
 
-配置中的默认值用于单个发布实例。 由于用户同步对于同步多个发布实例很有用（例如对于发布场），因此需要向配置中添加其他发布实例。
+設定中的預設值適用於單一發佈執行個體。 由於使用者同步對於同步多個發佈執行個體很有用（例如發佈伺服器陣列），因此需要向設定新增其他發佈執行個體。
 
-**内容如何同步？**
+**內容如何同步？**
 
-创作实例ping发布服务器的导出程序终结点。 每当在特定发布者(n)上创建用户或更新用户时，作者都会从其导出程序端点获取内容，并且 [推送内容](/help/communities/sync.md#main-pars-image-1413756164) 其他发布者（n-1，不同于从中获取内容的发布者）。
+製作執行個體ping發行者的匯出工具端點。 每當在特定發行者(n)上建立或更新使用者時，作者都會從其匯出工具端點取得內容，並且 [推送內容](/help/communities/sync.md#main-pars-image-1413756164) 至其他發佈者（n-1，與從中擷取內容的發佈者不同）。
 
-要配置Apache Sling同步代理配置，请执行以下操作：
+若要設定Apache Sling同步代理程式設定：
 
-1. 使用管理员权限登录到AEM创作实例。
-1. 访问 [Web控制台](/help/sites-deploying/configuring-osgi.md). 例如， [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr).
-1. 查找 **Apache Sling分发代理 — 同步代理工厂**.
+1. 以管理員許可權登入您的AEM編寫執行個體。
+1. 存取 [網頁主控台](/help/sites-deploying/configuring-osgi.md). 例如， [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr).
+1. 尋找 **Apache Sling散發代理程式 — 同步代理程式工廠**.
 
-   * 选择要打开的现有配置以进行编辑（铅笔图标）。
+   * 選取要開啟以進行編輯的現有設定（鉛筆圖示）。
 
-      验证名称： **socialpubsync。**
+      驗證名稱： **socialpubsync。**
 
    * 选中&#x200B;**启用**&#x200B;复选框。
-   * 选择 **使用多个队列。**
-   * 指定 **导出程序端点** 和 **导入程序端点** （您可以添加更多导出程序和导入程序端点）。
+   * 選取 **使用多個佇列。**
+   * 指定 **匯出工具端點** 和 **匯入工具端點** （您可以新增更多匯出工具與匯入工具端點）。
 
-      这些端点定义要从何处获取内容以及要将内容推送到何处。 作者从指定的导出程序终结点获取内容，并将内容推送到发布者（而不是从中获取内容的发布者）。
+      這些端點會定義您要從何處取得內容，以及您要推送內容的位置。 作者會從指定的匯出工具端點擷取內容，並將內容推送至發行者（而非從中擷取內容的發行者）。
    ![sync-agent-fact](assets/sync-agent-fact.png)
 
-### AdobeGranite分发 — 加密的密码传输密钥提供程序 {#adobe-granite-distribution-encrypted-password-transport-secret-provider}
+### AdobeGranite發佈 — 加密的密碼傳輸機密提供者 {#adobe-granite-distribution-encrypted-password-transport-secret-provider}
 
-它使作者能够识别具有将用户数据从作者同步到发布的权限的授权用户。
+它可讓作者識別授權的使用者，因為具有從作者同步使用者資料到發佈的許可權。
 
-此 [已创建授权用户](/help/sites-administering/sync.md#createauthuser) 在所有发布实例上帮助发布者与作者连接并在作者上配置Sling分发。 此授权用户拥有所有必需的 [ACL](/help/sites-administering/sync.md#howtoaddacl).
+此 [已建立授權使用者](/help/sites-administering/sync.md#createauthuser) 在所有發佈執行個體上協助發佈者與作者連線並在作者上設定Sling發佈。 此授權使用者擁有所有必要條件 [ACL](/help/sites-administering/sync.md#howtoaddacl).
 
-无论何时要在发布服务器上安装数据或从发布服务器上获取数据，作者都将使用此配置中设置的凭据（用户名和密码）与发布服务器连接。
+每當要在發行者上安裝或從發行者擷取資料時，作者就會使用此設定中設定的認證（使用者名稱和密碼）與發行者連線。
 
-要使用授权用户将作者与发布者连接，请执行以下操作：
+若要使用授權使用者將作者與發佈者連線：
 
-1. 使用管理员权限登录到AEM创作实例。
-1. 访问 [Web控制台](/help/sites-deploying/configuring-osgi.md).
+1. 以管理員許可權登入您的AEM編寫執行個體。
+1. 存取 [網頁主控台](/help/sites-deploying/configuring-osgi.md).
 
    例如， [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr).
-1. 查找 **AdobeGranite分发 — 加密的密码传输密钥提供程序。**
-1. 选择要打开的现有配置以进行编辑（铅笔图标）。
+1. 尋找 **AdobeGranite發佈 — 加密的密碼傳輸機密提供者。**
+1. 選取要開啟以進行編輯的現有設定（鉛筆圖示）。
 
-   验证属性 **socialpubsync** - **publishUser。**
+   驗證屬性 **socialpubsync** - **publishUser。**
 
-1. 将用户名和密码设置为 [授权用户](/help/sites-administering/sync.md#createauthorizeduser).
+1. 將使用者名稱和密碼設定為 [授權使用者](/help/sites-administering/sync.md#createauthorizeduser).
 
-   例如， **usersync — 管理员**
+   例如， **usersync — 管理員**
 
-![granite-paswrd-trans](assets/granite-paswrd-trans.png)
+![granite-passwrd-trans](assets/granite-paswrd-trans.png)
 
-### Apache Sling分发代理 — 队列代理工厂 {#apache-sling-distribution-agent-queue-agents-factory}
+### Apache Sling散發代理程式 — 佇列代理程式工廠 {#apache-sling-distribution-agent-queue-agents-factory}
 
-此配置用于配置要在发布者之间同步的数据。 在指定的路径中创建/更新数据时 **允许的根**，将会激活“var/community/distribution/diff”，并且创建的复制程序会从发布服务器获取数据，并将其安装到其他发布服务器。
+此設定用於設定您要跨發行者同步的資料。 在指定的路徑中建立/更新資料時 **允許的根**，會啟動「var/community/distribution/diff」，而建立的復寫器會從發行者擷取資料，並安裝在其他發行者上。
 
-要配置要同步的数据（节点路径），请执行以下操作：
+若要設定要同步的資料（節點路徑）：
 
-1. 使用发布实例上的管理员权限登录。
-1. 访问 [Web控制台](/help/sites-deploying/configuring-osgi.md).
+1. 以管理員許可權登入您的發佈執行個體。
+1. 存取 [網頁主控台](/help/sites-deploying/configuring-osgi.md).
 
    例如， [https://localhost:4503/system/console/configMgr](https://localhost:4503/system/console/configMgr).
 
-1. 查找 **Apache Sling分发代理 — 队列代理工厂**.
-1. 选择要打开的现有配置以进行编辑（铅笔图标）。
+1. 尋找 **Apache Sling散發代理程式 — 佇列代理程式工廠**.
+1. 選取要開啟以進行編輯的現有設定（鉛筆圖示）。
 
-   验证名称： **socialpubsync -reverse**
+   驗證名稱： **socialpubsync -reverse**
 
-1. 选择 **已启用** 复选框，然后保存。
-1. 指定要复制到的节点路径 **允许的根**.
-1. 重复执行每个 **发布** 实例。
+1. 選取 **已啟用** 核取方塊並儲存。
+1. 指定要復寫的節點路徑 **允許的根**.
+1. 針對每個專案重複 **發佈** 執行個體。
 
    ![queue-agents-fact](assets/queue-agents-fact.png)
 
-### AdobeGranite分发 — 观察者工厂差异 {#adobe-granite-distribution-diff-observer-factory}
+### AdobeGranite發佈 — 觀察者工廠差異 {#adobe-granite-distribution-diff-observer-factory}
 
-此配置可同步发布者之间的组成员资格。
-如果更改一个发布者中组的成员资格时没有更新其他发布者的成员资格，请确保 **ref ：members** 已添加至 **查找的属性名称**.
+此設定會同步發佈者之間的群組成員資格。
+如果變更一個發行者中群組的成員資格，並不會更新其他發行者的成員資格，請確定 **ref ：members** 新增至 **已檢視的屬性名稱**.
 
-要确保成员同步，请执行以下操作：
+若要確保成員同步化：
 
-1. 使用发布实例上的管理员权限登录。
-1. 访问 [Web控制台](/help/sites-deploying/configuring-osgi.md).
+1. 以管理員許可權登入您的發佈執行個體。
+1. 存取 [網頁主控台](/help/sites-deploying/configuring-osgi.md).
 
    例如， [https://localhost:4503/system/console/configMgr](https://localhost:4503/system/console/configMgr).
 
-1. 查找 **AdobeGranite分发 — 观察者工厂差异**.
-1. 选择要打开的现有配置以进行编辑（铅笔图标）。
+1. 尋找 **AdobeGranite發佈 — 觀察者工廠差異**.
+1. 選取要開啟以進行編輯的現有設定（鉛筆圖示）。
 
-   验证 **代理名称： socialpubsync -reverse**.
+   驗證 **代理程式名稱： socialpubsync -reverse**.
 
 1. 选中&#x200B;**启用**&#x200B;复选框。
-1. 指定 **rep：members** 作为中的propertyName的说明 **查找的属性名称**，并保存。
+1. 指定 **rep：members** 作為propertyName的說明，在 **已檢視的屬性名稱**，並儲存。
 
    ![diff-obs](assets/diff-obs.png)
 
-### Apache Sling Distribution Trigger — 计划触发器工厂 {#apache-sling-distribution-trigger-scheduled-triggers-factory}
+### Apache Sling散發觸發程式 — 排程觸發程式Factory {#apache-sling-distribution-trigger-scheduled-triggers-factory}
 
-通过此配置，您可以配置轮询间隔（在此间隔后，发布者将执行pinging操作，而作者将执行拉取更改操作），以便在发布者之间同步更改。
+此設定可讓您設定輪詢間隔（之後發佈者會被釘選且作者會提取變更），以便在發佈者之間同步變更。
 
-作者每30秒轮询发布者（默认）。 如果文件夹中存在任何包 `/var/sling/distribution/packages/  socialpubsync -  vlt /shared`，然后它会获取这些包并将其安装在其他发布服务器上。
+作者每30秒輪詢發佈者（預設）。 如果資料夾中存在任何套件 `/var/sling/distribution/packages/  socialpubsync -  vlt /shared`，然後它會擷取這些套件，並安裝在其他發行者上。
 
-更改轮询间隔：
+變更輪詢間隔：
 
-1. 使用管理员权限登录到AEM创作实例。
-1. 访问 [Web控制台](/help/sites-deploying/configuring-osgi.md)例如， [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)
-1. 查找 **Apache Sling Distribution Trigger — 计划触发器工厂**
+1. 以管理員許可權登入您的AEM編寫執行個體。
+1. 存取 [網頁主控台](/help/sites-deploying/configuring-osgi.md)例如， [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)
+1. 尋找 **Apache Sling散發觸發程式 — 排程觸發程式Factory**
 
-   * 选择要打开的现有配置以进行编辑（铅笔图标）。
+   * 選取要開啟以進行編輯的現有設定（鉛筆圖示）。
 
-      验证 **socialpubsync -scheduled-trigger**
+      驗證 **socialpubsync -scheduled-trigger**
 
-   * 将“Interval in Seconds（间隔）”设置为所需的间隔，然后保存。
+   * 將「間隔」（以秒為單位）設定為所需的間隔，然後儲存。
 
-   ![scheduled-trigger](assets/scheduled-trigger.png)
+   ![排程觸發程式](assets/scheduled-trigger.png)
 
-### AEM Communities用户同步侦听器 {#aem-communities-user-sync-listener}
+### AEM Communities使用者同步接聽程式 {#aem-communities-user-sync-listener}
 
-对于在Sling分发中订阅和所关注内容不一致的问题，请检查以下属性是否位于 **AEM Communities用户同步侦听器** 已设置配置：
+針對Sling發佈中訂閱和所關注內容不一致的問題，檢查中是否有下列屬性 **AEM Communities使用者同步接聽程式** 設定已設定：
 
-* 节点类型
-* 可忽略的属性
-* 可忽略节点
-* 分布式文件夹
+* 節點型別
+* Ignorableproperties
+* IgnorableNodes
+* DistributedFolders
 
-同步订阅、关注和通知
+若要同步訂閱、追蹤和通知
 
-在每个AEM发布实例上：
+在每個AEM發佈執行個體上：
 
-1. 使用管理员权限登录。
-1. 访问 [Web控制台](/help/sites-deploying/configuring-osgi.md). 例如， [https://localhost:4503/system/console/configMgr](https://localhost:4503/system/console/configMgr).
-1. 查找 **AEM Communities用户同步侦听器**.
-1. 选择要打开的现有配置以进行编辑（铅笔图标）
+1. 以管理員許可權登入。
+1. 存取 [網頁主控台](/help/sites-deploying/configuring-osgi.md). 例如， [https://localhost:4503/system/console/configMgr](https://localhost:4503/system/console/configMgr).
+1. 尋找 **AEM Communities使用者同步接聽程式**.
+1. 選取現有設定以開啟以進行編輯（鉛筆圖示）
 
-   验证名称： **socialpubsync -scheduled-trigger**
+   驗證名稱： **socialpubsync -scheduled-trigger**
 
-1. 设置以下内容 **节点类型**：
+1. 設定下列專案 **節點型別**：
 
    `rep:User`
 
@@ -256,9 +256,9 @@ ht-degree: 2%
 
    `sling:OrderedFolder`
 
-   此属性中指定的节点类型将同步，并且通知信息（遵循的博客和配置）在不同发布者之间同步。
+   此屬性中指定的節點型別將會同步，而且通知資訊（後續的部落格和設定）會在不同的發行者之間同步。
 
-1. 添加要同步的所有文件夹 **分布式文件夹**. 例如，
+1. 新增要在其中同步處理的所有資料夾 **DistributedFolders**. 例如，
 
    `segments/scoring`
 
@@ -266,105 +266,105 @@ ht-degree: 2%
 
    `activities`
 
-1. 设置 **ignorablenodes** 到：
+1. 設定 **ignorablenodes** 至：
 
    `.tokens`
 
    `system`
 
-   `rep:cache` （由于我们使用粘性会话，因此不需要将此节点同步到不同的发布者）。
+   `rep:cache` （由於我們使用粘性工作階段，因此不需要將此節點同步至不同的發佈者）。
 
    ![user-sync-listner](assets/user-sync-listner.png)
 
-### 唯一Sling ID {#unique-sling-id}
+### 唯一的Sling ID {#unique-sling-id}
 
-AEM创作实例使用Sling ID来识别数据的来源以及需要（或不需要）将包发送回的发布者。
+AEM作者執行個體會使用Sling ID來識別資料的來源以及需要（或不需要）將套件傳回到的發行者。
 
-确保发布场中的所有发布者都具有唯一的Sling ID。 如果发布场中的多个发布实例的Sling ID相同，则用户同步将失败。 由于作者不知道从何处获取软件包，也不知道在何处安装软件包。
+請確定發佈伺服器陣列中的所有發佈者都有唯一的Sling ID。 如果發佈伺服器陣列中多個發佈執行個體的Sling ID相同，則使用者同步將會失敗。 由於作者不知道從何處擷取套件以及在何處安裝套件。
 
-要确保发布场中发布者的唯一Sling ID，请在每个发布实例上：
+若要確保發佈伺服器陣列中發佈者的唯一Sling ID，請在每個發佈執行個體上：
 
-1. 浏览到 [https://_host：port_/system/console/status-slingsettings](https://localhost:4503/system/console/status-slingsettings).
-1. 检查值 **Sling ID**.
+1. 瀏覽至 [https://_host：port_/system/console/status-slingsettings](https://localhost:4503/system/console/status-slingsettings).
+1. 檢查值 **Sling ID**.
 
    ![slingid](assets/slingid.png)
 
-   如果发布实例的Sling ID与任何其他发布实例的Sling ID匹配，则：
+   如果發佈執行個體的Sling ID符合任何其他發佈執行個體的Sling ID，則：
 
-1. 停止具有匹配Sling ID的其中一个发布实例。
-1. 在 `crx-quickstart/launchpad/felix` 目录，搜索并删除名为的文件 *sling.id.file.*
+1. 停止具有相符的Sling ID的其中一個發佈執行個體。
+1. 在 `crx-quickstart/launchpad/felix` 目錄，搜尋並刪除名為的檔案 *sling.id.file.*
 
-   例如，在Linux系统上：
+   例如，在Linux系統上：
 
    `rm -i $(find . -type f -name sling.id.file)`
 
-   例如，在Windows系统上：
+   例如，在Windows系統上：
 
-   使用Windows资源管理器并搜索 `sling.id.file`
+   使用Windows檔案總管並搜尋 `sling.id.file`
 
-1. 启动发布实例。 启动时，将为它分配一个新的Sling ID。
-1. 验证 **Sling ID** 现在是唯一的。
+1. 啟動發佈執行個體。 啟動時，系統會為其指派新的Sling ID。
+1. 驗證 **Sling ID** 現在是唯一的。
 
-重复这些步骤，直到所有发布实例都具有唯一的Sling ID。
+重複這些步驟，直到所有發佈執行個體都具備唯一的Sling ID為止。
 
-### 保险库包生成器工厂 {#vault-package-builder-factory}
+### Vault Package Builder工廠 {#vault-package-builder-factory}
 
-要使更新正确同步，需要修改用于用户同步的Vault包生成器。
-In `/home/users`， a `*/rep:cache` 节点已创建。 它是一种缓存，用来发现如果我们查询节点的主体名称，则可以直接使用此缓存。
+若要正確同步更新，必須修改儲存庫封裝產生器以方便使用者同步。
+在 `/home/users`， a `*/rep:cache` 節點已建立。 它是快取，用來尋找如果我們查詢節點的主體名稱，則可以直接使用此快取。
 
-在以下情况下，可以停止用户同步： `rep :cache` 节点在发布者之间同步。
+若發生下列情況，使用者同步處理可以停止： `rep :cache` 節點會在發佈者之間同步。
 
-要确保更新在发布者之间正确同步，请在每个AEM发布实例上：
+若要確保跨發行者正確同步更新，請在每個AEM發佈執行個體上：
 
-1. 访问 [Web控制台](/help/sites-deploying/configuring-osgi.md)
+1. 存取 [網頁主控台](/help/sites-deploying/configuring-osgi.md)
 
    例如， [https://localhost:4503/system/console/configMgr](https://localhost:4503/system/console/configMgr).
-1. 找到 **Apache Sling分发打包 — Vault Package Builder Factory**
+1. 找到 **Apache Sling Distribution Packaging - Vault Package Builder Factory**
 
-   生成器名称：socialpubsync-vlt。
+   產生器名稱： socialpubsync-vlt。
 
-1. 选择编辑图标。
-1. 添加两个包节点筛选器：
+1. 選取編輯圖示。
+1. 新增兩個套件節點篩選器：
    * `/home/users|-.*/.tokens`
    * `/home/users|-.*/rep:cache`
-1. 策略处理
-   * 要使用新节点覆盖现有rep ：policy节点，请添加第三个包过滤器： `/home/users|+.*/rep:policy`
-   * 要防止策略被分发，请设置： `Acl Handling: IGNORE`
+1. 原則處理
+   * 若要以新節點覆寫現有的rep ：policy節點，請新增第三個套件篩選器： `/home/users|+.*/rep:policy`
+   * 若要防止散佈原則，請設定： `Acl Handling: IGNORE`
 
-   ![Vault包生成器工厂](assets/vault-package-builder-factory.png)
+   ![Vault封裝產生器原廠](assets/vault-package-builder-factory.png)
 
-## AEM Communities中的Sling分发疑难解答 {#troubleshoot-sling-distribution-in-aem-communities}
+## 疑難排解AEM Communities中的Sling發佈 {#troubleshoot-sling-distribution-in-aem-communities}
 
-如果Sling分发失败，请尝试以下调试步骤：
+如果Sling發佈失敗，請嘗試以下偵錯步驟：
 
-1. **检查 [未正确添加配置](/help/sites-administering/sync.md#improperconfig)**
+1. **檢查 [不適當地新增設定](/help/sites-administering/sync.md#improperconfig)**
 
-   确保未添加或编辑多个配置，而是应编辑现有的默认配置。
-1. **检查配置**
+   確保未新增或編輯多個設定，而是應編輯現有的預設設定。
+1. **檢查設定**
 
-   确保所有 [配置](/help/communities/sync.md#bestpractices) 已在AEM创作实例中正确设置，如中所述 [最佳实践](/help/communities/sync.md#main-pars-header-863110628).
+   確定所有 [設定](/help/communities/sync.md#bestpractices) 已在您的AEM Author例項中適當設定，如 [最佳實務](/help/communities/sync.md#main-pars-header-863110628).
 
-1. **检查授权用户权限**
+1. **檢查授權的使用者許可權**
 
-   如果软件包安装不正确，请检查 [授权用户](/help/sites-administering/sync.md#createauthuser) 在第一个发布实例中创建的，具有正确的ACL。
+   如果套件未正確安裝，請檢查 [授權使用者](/help/sites-administering/sync.md#createauthuser) 在第一個發佈執行個體中建立的ACL是正確的。
 
-   要验证此内容，而不是 [已创建授权用户](/help/sites-administering/sync.md#createauthuser) 更改 [AdobeGranite分发 — 加密的密码传输密钥提供程序](/help/sites-administering/sync.md#adobegraniteencpasswrd) 使用管理员用户凭据的创作实例配置。 现在，请尝试再次安装包。 如果用户同步与管理员凭据配合使用，则意味着创建的发布用户没有适当的ACL。
+   若要驗證此專案，請避免驗證 [已建立授權使用者](/help/sites-administering/sync.md#createauthuser) 變更 [AdobeGranite發佈 — 加密的密碼傳輸機密提供者](/help/sites-administering/sync.md#adobegraniteencpasswrd) 作者執行個體的設定，以使用管理員使用者認證。 現在，請嘗試重新安裝套件。 如果使用者同步處理可順利與管理員憑證搭配使用，則表示已建立的發佈使用者沒有適當的ACL。
 
-1. **检查Diff Observer Factory配置**
+1. **檢查Diff Observer Factory設定**
 
-   如果仅特定节点未跨发布场同步（例如，组成员未同步），则应确保 [AdobeGranite分发 — 观察者工厂差异](/help/sites-administering/sync.md#diffobserver) 配置已启用，并且 **rep：成员** 在中设置 **查找的属性名称**.
+   如果只有特定節點未跨發佈伺服器陣列同步（例如，群組成員未同步），則請確定 [AdobeGranite發佈 — 觀察者工廠差異](/help/sites-administering/sync.md#diffobserver) 設定已啟用且 **rep： members** 設定於 **已檢視的屬性名稱**.
 
-1. **检查AEM Communities用户同步侦听器配置。** 如果创建的用户已同步，但订阅和以下订阅不起作用，请确保AEM Communities用户同步侦听器配置具有：
+1. **檢查AEM Communities使用者同步接聽程式設定。** 如果建立的使用者已同步，但訂閱和後續內容無法運作，請確定AEM Communities使用者同步接聽程式設定已：
 
-   * 节点类型 — 设置为 **rep：User， nt：unstructured**， **nt ：resource**， **rep：ACL**， **sling：Folder**、和 **sling：OrderedFolder**.
-   * 可忽略的节点 — 设置为 **.tokens**， **系统**、和 **rep ：cache**.
-   * 分布式文件夹 — 设置为要分发的文件夹。
+   * 節點型別 — 設為 **rep：User， nt：unstructured**， **nt：resource**， **rep：ACL**， **sling：Folder**、和 **sling：OrderedFolder**.
+   * 可忽略的節點 — 設為 **.tokens**， **系統**、和 **rep：cache**.
+   * 分散式資料夾 — 設定為您要分散式資料夾。
 
-1. **检查在发布实例上创建用户时生成的日志**
+1. **檢查在發佈執行個體上建立使用者時產生的記錄**
 
-   如果上述配置已正确设置，但用户同步不起作用，请检查创建用户时生成的日志。
+   如果上述設定已適當設定，但使用者同步無法運作，請檢查使用者建立時產生的記錄。
 
-   检查日志的顺序是否相同，如下所示：
+   檢查記錄檔的順序是否相同，如下所示：
 
    ```shell
    15.05.2016 18:33:01.523 *INFO* [sling-oak-observation-7422] com.adobe.cq.social.sync.impl.PublisherSyncServiceImpl Handing these paths to the distribution subsystem: [/home/users/C, /home/users/C/Cw-5avWqilmqsNn5hCvK]
@@ -378,22 +378,22 @@ In `/home/users`， a `*/rep:cache` 节点已创建。 它是一种缓存，用�
    15.05.2016 18:33:02.273 *INFO* [sling-oak-observation-7430] org.apache.jackrabbit.vault.packaging.impl.JcrPackageDefinitionImpl unwrapping package sling/distribution:socialpubsync-vlt_1463337182039_f34f4fa6-10b9-42eb-8740-4da9d4d38f99:0.0.1
    ```
 
-要调试，请执行以下操作：
+若要偵錯：
 
-1. 禁用用户同步：
-1. 在AEM创作实例上，使用管理员权限登录。
+1. 停用使用者同步化：
+1. 在AEM編寫執行個體上，使用管理員許可權登入。
 
-   1. 访问 [Web控制台](/help/sites-deploying/configuring-osgi.md). 例如， [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr).
-   1. 找到配置 **Apache Sling分发代理 — 同步代理工厂**.
-   1. 取消选择 **已启用** 复选框。
+   1. 存取 [網頁主控台](/help/sites-deploying/configuring-osgi.md). 例如， [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr).
+   1. 找到設定 **Apache Sling散發代理程式 — 同步代理程式工廠**.
+   1. 取消選取 **已啟用** 核取方塊。
 
-      在创作实例上禁用用户同步时，（导出器和导入器）端点被禁用，并且创作实例是静态的。 此 **vlt** 作者不会ping或获取包。
+      在製作執行個體上停用使用者同步時，（匯出工具和匯入工具）端點會停用，而且製作執行個體是靜態的。 此 **vlt** 作者不會擷取或擷取套件。
 
-      现在，如果在发布实例上创建用户，则 **vlt** 包创建于 */var/sling/distribution/packages/ socialpubsync - vlt /data* 节点。 以及作者是否将这些包推送到其他服务。 您可以下载并提取此数据，以检查哪些所有属性都推送到其他服务。
+      現在，如果在發佈執行個體上建立使用者， **vlt** 封裝建立於 */var/sling/distribution/packages/ socialpubsync - vlt /data* 節點。 以及作者是否將這些套件推送至其他服務。 您可以下載並解壓縮此資料，以檢查所有屬性推送至其他服務的內容。
 
-1. 转到发布者，并在发布者上创建用户。 因此，会创建事件。
-1. 查看 [日志的顺序](/help/communities/sync.md#troubleshoot-sling-distribution-in-aem-communities)，创建用户时创建。
-1. 检查是否 **vlt** 包创建于 **/var/sling/distribution/packages/socialpubsync-vlt/data**.
-1. 现在，在AEM创作实例上启用用户同步。
-1. 在发布服务器上，更改中的导出程序或导入程序端点 **Apache Sling分发代理 — 同步代理工厂**.
-我们可以下载并提取包数据，以检查哪些所有属性都推送到其他发布者，以及哪些数据丢失。
+1. 前往發行者，並在發行者上建立使用者。 因此，會建立事件。
+1. 檢查 [記錄順序](/help/communities/sync.md#troubleshoot-sling-distribution-in-aem-communities)，於使用者建立時建立。
+1. 檢查是否 **vlt** 套件建立於 **/var/sling/distribution/packages/socialpubsync-vlt/data**.
+1. 現在，請在AEM編寫執行個體上啟用使用者同步。
+1. 在發佈者上，變更中的匯出工具或匯入工具端點 **Apache Sling散發代理程式 — 同步代理程式工廠**.
+我們可以下載並擷取套件資料，以檢查哪些所有屬性已推送至其他發佈者，以及哪些資料會遺失。

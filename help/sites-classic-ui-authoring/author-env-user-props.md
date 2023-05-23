@@ -14,7 +14,7 @@ exl-id: 9abdaa6d-79ee-448e-a23f-d216433591f8
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '224'
-ht-degree: 75%
+ht-degree: 26%
 
 ---
 
@@ -22,28 +22,31 @@ ht-degree: 75%
 
 AEM 提供了配置帐户和创作环境某些方面的功能。
 
-使用[帐户设置](#account-settings)和[用户首选项](#user-preferences)，可以定义以下选项和首选项：
+使用 [帳戶設定](#account-settings) 和 [使用者偏好設定](#user-preferences) 可以定義下列選項和偏好設定：
 
-* **编辑工具栏** 选择是否要使用全局编辑工具栏。此工具栏显示在浏览器窗口的顶部，可以为您提供 
-**复制**， **剪切**， **粘贴**， **删除** 用于与该页面上的段落组件一起使用的按钮：
+* **編輯工具列**
+選取是否要全域編輯工具列。 此工具列會顯示在瀏覽器視窗上方，供您使用 
+**複製**， **剪下**， **貼上**， **刪除** 用於搭配該頁面上的段落元件使用的按鈕：
 
    * 需要时显示（默认）
    * 始终显示
-   * 保持隐藏
+   * 保持隱藏
 
-* **模拟为** 借助[模拟为](/help/sites-administering/security.md#impersonating-another-user)功能，用户可以代表其他用户工作。
+* **模擬為**
+使用 [模擬為](/help/sites-administering/security.md#impersonating-another-user) 使用者可以代表其他使用者工作的功能。
 
-* **语言**
-用于创作环境UI的语言。从可用列表中选择所需的语言。
+* **語言**
+用於編寫環境UI的語言。 從可用清單中選取所需的語言。
 
-* **窗口管理** 选择下列任何一项：
+* **視窗管理**
+選取：
 
-   * 多窗口（默认） 页面将在新窗口中打开。
-   * 单一窗口 页面将在当前窗口中打开。
+   * 將在新視窗中開啟多個Windows （預設）頁面。
+   * 單一視窗頁面將在目前視窗中開啟。
 
 ## 帐户设置 {#account-settings}
 
-用户图标允许您访问以下各种选项：
+使用者圖示可讓您存取下列各種選項：
 
 * 注销
 * [模拟为](/help/sites-administering/security.md#impersonating-another-user)
@@ -54,10 +57,10 @@ AEM 提供了配置帐户和创作环境某些方面的功能。
 
 ### 用户首选项 {#user-preferences}
 
-每位用户均可为自己设置某些属性。可从控制台右上角的&#x200B;**首选项**&#x200B;对话框中执行此操作。
+每個使用者都可以為自己設定某些屬性。 您可從以下位置取得此資訊： **偏好設定** 對話方塊。
 
 ![screen_shot_2012-02-08at105033am](assets/screen_shot_2012-02-08at105033am.png)
 
-该对话框提供以下选项：
+此對話方塊提供下列選項：
 
 ![chlimage_1-123](assets/chlimage_1-123.png)

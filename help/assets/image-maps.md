@@ -1,6 +1,6 @@
 ---
-title: 添加带有超链接的图像映射
-description: 了解如何将带有超链接的图像映射添加到图像。
+title: 新增含有超連結的影像地圖
+description: 瞭解如何將含有超連結的影像地圖新增至影像。
 contentOwner: AG
 role: User, Admin
 feature: Asset Management
@@ -12,36 +12,36 @@ ht-degree: 0%
 
 ---
 
-# 添加图像映射 {#adding-image-maps}
+# 新增影像地圖 {#adding-image-maps}
 
-图像映射允许您添加一个或多个与其他超链接功能相同的超链接区域。
+影像地圖可讓您新增一或多個功能與其他超連結相同的超連結區域。
 
-1. 执行以下任一操作以打开 **[!UICONTROL 就地图像编辑器]**：
+1. 執行下列任一項動作以開啟 **[!UICONTROL 就地影像編輯器]**：
 
-   * 使用快速操作，单击 **[!UICONTROL 编辑]** 显示在中的资产上 **[!UICONTROL 信息卡]** 视图。 在列表视图中，选择资源并单击 **[!UICONTROL 编辑]** 选项。
+   * 使用快速動作，按一下 **[!UICONTROL 編輯]** 顯示在中某個資產上 **[!UICONTROL 卡片]** 檢視。 在「清單」檢視中，選取資產並按一下 **[!UICONTROL 編輯]** 工具列中的選項。
 
       >[!NOTE]
       >
-      >快速操作在中不可用 **[!UICONTROL 列表]** 视图。
+      >快速動作不適用於 **[!UICONTROL 清單]** 檢視。
 
-   * 在 **[!UICONTROL 信息卡]** 或 **[!UICONTROL 列表]** 视图，选择资源并单击 **[!UICONTROL 编辑]** 工具栏上。
-   * 单击 **[!UICONTROL 编辑]** 资产页面中。
+   * 在 **[!UICONTROL 卡片]** 或 **[!UICONTROL 清單]** 檢視、選取資產並按一下 **[!UICONTROL 編輯]** （在工具列上）。
+   * 按一下 **[!UICONTROL 編輯]** 從資產頁面。
 
-1. 要插入图像映射，请单击 **[!UICONTROL 启动映射]** ![图像映射](assets/do-not-localize/image-map-icon.png) 工具栏中。
-1. 选择图像映射的形状。 所选形状的热点将放置在图像上。
+1. 若要插入影像地圖，請按一下 **[!UICONTROL 啟動地圖]** ![影像地圖](assets/do-not-localize/image-map-icon.png) （從工具列）。
+1. 選取影像地圖的形狀。 選取形狀的熱點會放置在影像上。
 
    ![chlimage_1-422](assets/chlimage_1-422.png)
 
-1. 单击热点，然后输入URL和Alt文本。 从 **[!UICONTROL Target]** 列表，指定希望图像映射显示的位置，例如同一选项卡、新选项卡或iFrame。 例如，输入 `https://www.adobe.com` 作为URL， `Adobe website` 作为替换文本，并指定 **[!UICONTROL 新建选项卡]** 从 **[!UICONTROL Target]** 要在新选项卡中打开的图像映射的列表。
+1. 按一下連結區，然後輸入URL和Alt文字。 從 **[!UICONTROL Target]** 清單，指定您要顯示影像地圖的位置，例如相同的標籤、新標籤或iFrame。 例如，輸入 `https://www.adobe.com` 作為URL， `Adobe website` 作為Alt文字，並指定 **[!UICONTROL 新標籤]** 從 **[!UICONTROL Target]** 要在新標籤中開啟的影像地圖清單。
 
    ![chlimage_1-423](assets/chlimage_1-423.png)
 
-1. 单击 **[!UICONTROL 确认]** 然后单击 **[!UICONTROL 完成]** ![选择检查完成](assets/do-not-localize/check-ok-done-icon.png) 以保存更改。
+1. 按一下 **[!UICONTROL 確認]** 然後按一下 **[!UICONTROL 完成]** ![選取「檢查完成」](assets/do-not-localize/check-ok-done-icon.png) 以儲存變更。
 
-   要删除图像映射，请单击热点，然后单击 **[!UICONTROL 删除]** ![delete](assets/do-not-localize/delete-solid-line.png).
+   若要刪除影像地圖，請按一下連結區並按一下 **[!UICONTROL 刪除]** ![刪除](assets/do-not-localize/delete-solid-line.png).
 
-1. 要查看图像映射，请导航到资源详细信息页面，并将光标悬停在图像上。
+1. 若要檢視影像地圖，請導覽至資產詳細資訊頁面，並將游標暫留在影像上。
 
    ![chlimage_1-426](assets/chlimage_1-426.png)
 
-   如果已启用Dynamic Media选项，请导航到资产编辑器并单击 **[!UICONTROL 映射]** 查看所有应用的图像映射。
+   如果已啟用Dynamic Media選項，請導覽至Asset Editor並按一下 **[!UICONTROL 地圖]** 以檢視所有套用的影像地圖。

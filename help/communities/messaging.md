@@ -1,7 +1,7 @@
 ---
-title: 配置消息传送
+title: 設定傳訊
 seo-title: Configuring Messaging
-description: Communities消息
+description: Communities傳訊
 seo-description: Communities messaging
 uuid: 159dcf9d-7948-4a3d-9f51-a5b4d03e172b
 contentOwner: Janice Kendall
@@ -19,141 +19,141 @@ ht-degree: 1%
 
 ---
 
-# 配置消息传送 {#configure-messaging}
+# 設定傳訊 {#configure-messaging}
 
 ## 概述 {#overview}
 
-AEM Communities的消息传送功能使已登录的站点访客（成员）能够向彼此发送消息，这些消息在登录站点时可供访问。
+AEM Communities的傳訊功能可讓登入的網站訪客（成員）傳送訊息，讓彼此在登入網站時可存取。
 
-社区站点的消息传送功能可通过以下操作期间选中相应复选框来启用： [社区站点创建](/help/communities/sites-console.md).
+透過以下步驟勾選方塊，為社群網站啟用傳訊： [社群網站建立](/help/communities/sites-console.md).
 
-本页包含有关默认配置和可能调整的信息。
+此頁面包含預設設定和可能調整的相關資訊。
 
-有关开发人员的更多信息，请参阅 [消息传送Essentials](/help/communities/essentials-messaging.md).
+如需開發人員的其他資訊，請參閱 [傳訊要點](/help/communities/essentials-messaging.md).
 
-## 消息传送操作服务 {#messaging-operations-service}
+## 傳訊操作服務 {#messaging-operations-service}
 
-配置 [AEM Communities消息传送操作服务](https://localhost:4502/system/console/configMgr/com.adobe.cq.social.messaging.client.endpoints.impl.MessagingOperationsServiceImpl) 标识处理消息相关请求的端点、服务应用于存储消息的文件夹，以及如果消息可能包含文件附件，则允许的文件类型。
+設定 [AEM Communities傳訊操作服務](https://localhost:4502/system/console/configMgr/com.adobe.cq.social.messaging.client.endpoints.impl.MessagingOperationsServiceImpl) 會識別處理傳訊相關請求的端點、服務應用來儲存郵件的資料夾，以及如果郵件可能包含檔案附件，則允許哪些檔案型別。
 
-对于使用创建的社区站点 `Communities Sites console`，服务的实例已存在，收件箱设置为 `/mail/inbox`.
+針對使用建立的社群網站 `Communities Sites console`，服務的執行個體已存在，且收件匣設為 `/mail/inbox`.
 
-### 社区消息传送运营服务 {#community-messaging-operations-service}
+### 社群傳訊操作服務 {#community-messaging-operations-service}
 
-如下所示，使用创建的站点存在服务的配置 [站点创建向导](/help/communities/sites-console.md). 通过选择配置旁边的铅笔图标，可以查看或编辑配置。
+如下所示，使用建立的網站有此服務的設定 [網站建立精靈](/help/communities/sites-console.md). 選取設定旁邊的鉛筆圖示，即可檢視或編輯設定。
 
-![消息传送 — 操作](assets/messaging-operations.png)
+![傳訊作業](assets/messaging-operations.png)
 
 ### 添加新的配置 {#add-new-configuration}
 
-要添加新配置，请选择加号&#39;**+**&#x200B;服务名称旁边的“ ”图标：
+若要新增設定，請選取加號&#39;**+**&#39;服務名稱旁的圖示：
 
-* **消息字段允许列表**
+* **訊息欄位允許清單**
 
-   指定用户可以编辑并保留的撰写消息组件属性。 如果添加了新表单元素，则需要添加元素ID（如果需要存储在SRP中）。 默认值为两个条目： *主题* 和 *内容*.
+   指定使用者可編輯及保留的撰寫訊息元件屬性。 如果新增了新表單元素，那麼如果需要儲存於SRP，則需要新增元素ID。 預設為兩個專案： *主旨* 和 *內容*.
 
-* **消息框大小限制**
+* **訊息方塊大小限制**
 
-   每个用户的消息框中的最大字节数。 默认为 *1073741824* (1 GB)。
+   每位使用者訊息方塊中的最大位元組數。 預設為 *1073741824* (1 GB)。
 
-* **消息计数限制**
+* **訊息計數限制**
 
-   每个用户允许的消息总数。 值为–1表示允许的消息数量不受限制，但受消息框大小限制。 默认为 *10000* (10k)。
+   每個使用者允許的訊息總數。 值–1表示允許無限數量的訊息，受訊息方塊大小限制。 預設為 *10000* (10k)。
 
-* **通知投放失败**
+* **通知傳遞失敗**
 
-   如果选中，则在邮件发送给某些收件人失败时通知发件人。 默认为 *已选中*.
+   如果勾選，則在郵件傳遞給某些收件者失敗時通知寄件者。 預設為 *已核取*.
 
-* **失败投放发件人ID**
+* **失敗傳遞寄件者ID**
 
-   投放失败消息中显示的发件人名称。 默认为 *failureNotifier*.
+   顯示在傳送失敗訊息中的寄件者名稱。 預設為 *failureNotifier*.
 
-* **失败消息模板路径**
+* **失敗訊息範本路徑**
 
-   投放失败消息模板根的绝对路径。 默认为 */etc/notification/messaging/default*.
+   傳遞失敗訊息範本根的絕對路徑。 預設為 */etc/notification/messaging/default*.
 
-* **重试次数**
+* **重試次數**
 
-   尝试重新发送无法传递的消息的次数。 默认为 *3*.
+   嘗試重新傳送無法傳遞的訊息的次數。 預設為 *3*.
 
-* **重试之间等待**
+* **重試之間等待**
 
-   在发送失败时尝试重新发送消息之间等待的秒数。 默认为 *100* （秒）。
+   在傳送失敗時嘗試重新傳送訊息之間等待的秒數。 預設為 *100* （秒）。
 
-* **更新池大小计数**
+* **計算更新集區大小**
 
-   用于计数更新的并发线程数。 默认为 *10*.
+   用於計數更新的並行執行緒數目。 預設為 *10*.
 
-* **收件箱路径**
+* **收件匣路徑**
 
-   (*必需*)相对于用户节点的路径(/home/users/*用户名*)，以用于 `inbox` 文件夹。 路径不能以尾随正斜杠“/”结尾。 默认为 */mail/inbox*.
+   (*必填*)相對於使用者節點(/home/users/)的路徑&#x200B;*使用者名稱*)，以用於 `inbox` 資料夾。 路徑不能以尾端正斜線&#39;/&#39;結尾。 預設為 */mail/inbox*.
 
-* **已发送项目路径**
+* **已傳送專案路徑**
 
-   (*必需*)相对于用户节点的路径(/home/users/*用户名*)，以用于 `sent items` 文件夹。 路径不能以尾随正斜杠“/”结尾。 默认为 */mail/sentitems* .
+   (*必填*)相對於使用者節點(/home/users/)的路徑&#x200B;*使用者名稱*)，以用於 `sent items` 資料夾。 路徑不能以尾端正斜線&#39;/&#39;結尾。 預設為 */mail/sentitems* .
 
-* **支持附件**
+* **支援附件**
 
-   如果选中，用户将能够向其邮件添加附件。 默认为 *已选中*.
+   如果勾選，使用者可以將附件新增至其郵件。 預設為 *已核取*.
 
-* **启用组消息传递**
+* **啟用群組訊息**
 
-   如果选定此选项，则注册的用户可以向一组成员发送批量消息。 默认为 *已取消选择*.
+   如果選取，註冊的使用者可以傳送大量訊息給一組成員。 預設為 *已取消選取*.
 
-* **最大数量 收件人总数**
+* **最大數量 收件者總數**
 
-   如果启用了组消息，请指定一次可以向其发送组消息的最大收件人数量。 默认为 *100*.
+   如果已啟用群組訊息，請指定一次可傳送群組訊息的最大收件者數量。 預設為 *100*.
 
 * **批量大小**
 
-   发送给大量收件人时要批处理在一起进行发送的消息数。 默认为 *100*.
+   傳送給大量收件者時，要一起批次傳送的訊息數。 預設為 *100*.
 
-* **附件总大小**
+* **附件總大小**
 
-   如果选中了supportAttachments ，此值指定所有附件允许的最大总大小（以字节为单位）。 默认为 *104857600* (100 MB)。
+   如果勾選supportAttachments，此值會指定所有附件允許的總大小上限（以位元組為單位）。 預設為 *104857600* (100 MB)。
 
-* **附件类型阻止列表**
+* **附件型別封鎖清單**
 
-   文件扩展名阻止列表，以“**.**&#39;，这将被系统拒绝。 如果未列入阻止列表，则允许该扩展。 可以使用“**+**&#39;和&#39;**-**&#39;图标。
+   副檔名的封鎖清單，前置詞為「**.**&#39;，系統將會拒絕該專案。 如果未列入封鎖清單，則允許該擴充功能。 擴充功能可使用「**+**&#39;和&#39;**-**&#39;圖示。
 
-* **允许的附件类型**
+* **允許的附件型別**
 
-   **(*需要操作*)** 文件扩展名的允许列表 阻止列表，与相反。 要允许除列入阻止列表文件以外的所有文件扩展名，请使用&#39;**-**”图标，以删除单个空条目。
+   **(*需要動作*)** 副檔名的允許清單，與封鎖清單相反。 若要允許所有副檔名（已列入封鎖清單者除外），請使用「**-**&#39;圖示可移除單一空白專案。
 
 * **服务选择器**
 
-   (*必需*)通过它调用服务（虚拟资源）的绝对路径（端点）。 所选路径的根必须包含在 *执行路径* OSGi配置的配置设置 [ `Apache Sling Servlet/Script Resolver and Error Handler`](https://localhost:4502/system/console/configMgr/org.apache.sling.servlets.resolver.SlingServletResolver)，例如 `/bin/`， `/apps/`、和 `/services/`. 要为站点的消息传送功能选择此配置，此端点提供为 **`Service selector`** 的值 `Message List and Compose Message components` (请参阅 [消息功能](/help/communities/configure-messaging.md))。
+   (*必填*)呼叫服務時所使用的絕對路徑（端點） （虛擬資源）。 所選路徑的根必須包含在 *執行路徑* OSGi設定的組態設定 [ `Apache Sling Servlet/Script Resolver and Error Handler`](https://localhost:4502/system/console/configMgr/org.apache.sling.servlets.resolver.SlingServletResolver)，例如 `/bin/`， `/apps/`、和 `/services/`. 若要為網站的訊息功能選取此設定，此端點會提供為 **`Service selector`** 的值 `Message List and Compose Message components` (請參閱 [訊息功能](/help/communities/configure-messaging.md))。
 
-   默认为 */bin/messaging* .
+   預設值為 */bin/messaging* .
 
-* **字段允许列表**
+* **欄位允許清單**
 
-   使用 **消息字段允许列表**.
+   使用 **訊息欄位允許清單**.
 
 >[!CAUTION]
 >
->每次 `Messaging Operations Service` 如果符合以下条件，将打开配置进行编辑 `allowedAttachmentTypes.name` ，则会重新添加一个空条目以使属性可配置。 单个空条目可以有效地禁用文件附件。
+>每次 `Messaging Operations Service` 設定已開啟以供編輯，如果 `allowedAttachmentTypes.name` 已移除，則會重新新增空白專案，讓屬性可供設定。 單一空白專案會有效停用檔案附件。
 >
->要允许除列入阻止列表文件以外的所有文件扩展名，请使用&#39;**-**”图标，以（再次）在单击之前删除单个空条目 **保存**.
+>若要允許所有副檔名（已列入封鎖清單者除外），請使用「**-**&#39;圖示以（再次）在按一下前移除單一空白專案 **儲存**.
 
-## 组消息 {#group-messaging}
+## 群組訊息 {#group-messaging}
 
-要允许注册用户将私信批量发送到用户组，请确保 **启用组消息传递** 在以下两个实例中 **消息传送操作服务** 配置：
+若要允許註冊的使用者大量傳送直接訊息給使用者群組，請確定 **啟用群組訊息** 在以下兩個例項中 **傳訊操作服務** 設定：
 
 * `com.adobe.cq.social.messaging.client.endpoints.impl.MessagingOperationsServiceImpl~social-console`
 * `com.adobe.cq.social.messaging.client.endpoints.impl.MessagingOperationsServiceImpl~social-messaging`
 
-**消息传送操作服务：社交控制台**
+**訊息操作服務：社交主控台**
 
 ![social-console-op-service](assets/social-console-op-service.png)
 
-**消息传送操作服务：社交消息**
+**訊息操作服務：社交訊息**
 
 ![social-message-op-service](assets/social-message-op-service.png)
 
 ## 疑难解答 {#troubleshooting}
 
-解决问题的一种方法是启用 [调试日志中的消息。](/help/sites-administering/troubleshooting.md)
+疑難排解的一種方法是啟用 [偵錯記錄檔中的訊息。](/help/sites-administering/troubleshooting.md)
 
-另请参阅 [用于单独服务的记录器和写入程序](/help/sites-deploying/configure-logging.md#loggers-and-writers-for-individual-services).
+另請參閱 [個別服務的記錄器及寫入器](/help/sites-deploying/configure-logging.md#loggers-and-writers-for-individual-services).
 
-要监视的包为 `com.adobe.cq.social.messaging`.
+要監視的套件是 `com.adobe.cq.social.messaging`.

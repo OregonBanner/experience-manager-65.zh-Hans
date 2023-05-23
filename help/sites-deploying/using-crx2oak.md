@@ -1,7 +1,7 @@
 ---
-title: 使用CRX2Oak迁移工具
+title: 使用CRX2Oak移轉工具
 seo-title: Using the CRX2Oak Migration Tool
-description: 了解如何使用CRX2Oak迁移工具。
+description: 瞭解如何使用CRX2Oak移轉工具。
 seo-description: Learn how to use the CRX2Oak migration tool.
 uuid: 9b788981-4ef0-446e-81f0-c327cdd3214b
 contentOwner: User
@@ -18,56 +18,56 @@ ht-degree: 0%
 
 ---
 
-# 使用CRX2Oak迁移工具{#using-the-crx-oak-migration-tool}
+# 使用CRX2Oak移轉工具{#using-the-crx-oak-migration-tool}
 
 ## 简介 {#introduction}
 
-CRX2Oak是一款用于在不同存储库之间迁移数据的工具。
+CRX2Oak是一種工具，專為在不同存放庫之間遷移資料而設計。
 
-它可用于将基于Apache Jackrabbit 2的旧版CQ数据迁移到Oak，还可用于在Oak存储库之间复制数据。
+它可用來將資料從以Apache Jackrabbit 2為基礎的舊CQ版本移轉至Oak，也可用來在Oak存放庫之間複製資料。
 
-您可以从以下位置的公共Adobe存储库下载最新版本的crx2oak:
+您可以從公共Adobe存放庫下載最新版本的crx2oak，網址為：
 [https://repo1.maven.org/maven2/com/adobe/granite/crx2oak/](https://repo1.maven.org/maven2/com/adobe/granite/crx2oak/)
 
 >[!NOTE]
 >
->有关Apache Oak和AEM持久性的主要概念的更多信息，请参阅 [AEM平台简介](/help/sites-deploying/platform.md).
+>如需Apache Oak和AEM持續性的重要概念的詳細資訊，請參閱 [AEM平台簡介](/help/sites-deploying/platform.md).
 
-## 迁移用例 {#migration-use-cases}
+## 移轉使用案例 {#migration-use-cases}
 
-该工具可用于：
+此工具可用於：
 
-* 从旧版CQ 5迁移到AEM 6
-* 在多个Oak存储库之间复制数据
-* 在不同Oak MicroKernel实施之间转换数据。
+* 從較舊的CQ 5版本移轉至AEM 6
+* 在多個Oak存放庫之間複製資料
+* 在不同的Oak MicroKernel實作之間轉換資料。
 
-以不同的组合提供了对使用外部Blob存储区（通常称为数据存储区）迁移存储库的支持。 一个可能的迁移路径来自使用外部存储库的CRX2存储库 `FileDataStore` 使用 `S3DataStore`.
+對於使用外部Blob存放區（通常稱為資料存放區）移轉存放庫的支援以不同的組合提供。 一個可能的移轉路徑來自使用外部的CRX2存放庫 `FileDataStore` 使用至Oak存放庫 `S3DataStore`.
 
-下图说明了CRX2Oak支持的所有可能迁移组合：
+下圖說明CRX2Oak支援的所有可能移轉組合：
 
 ![chlimage_1-151](assets/chlimage_1-151.png)
 
 ## 功能 {#features}
 
-在AEM升级期间，会调用CRX2Oak，用户可以在该方式中指定一个预定义的迁移配置文件，以自动重新配置持久性模式。 这称为快速启动模式。
+CRX2Oak是在AEM升級期間以使用者可以指定預先定義的移轉設定檔的方式來呼叫，以自動重新設定持續性模式。 這稱為快速入門模式。
 
-它还可以单独运行，以防需要更多自定义。 但是，请注意，在此模式下，仅对存储库进行更改，需要手动执行AEM的任何其他重新配置。 这称为独立模式。
+如果需要更多自訂，也可以單獨執行。 不過，請注意，在此模式中，變更只會針對存放庫進行，而且需要手動執行任何額外的AEM重新配置。 這稱為獨立模式。
 
-另一点需要注意的是，在独立模式下使用默认设置时，将只迁移节点存储，并且新存储库将重新使用旧的二进制存储。
+另外需要注意的是，若使用獨立模式中的預設設定，則只會移轉節點存放區，而新的存放庫會重複使用舊的二進位存放區。
 
-### 自动快速启动模式 {#automated-quickstart-mode}
+### 自動快速入門模式 {#automated-quickstart-mode}
 
-自AEM 6.3起，CRX2Oak能够处理用户定义的迁移配置文件，这些迁移配置文件可以配置所有已可用的迁移选项。 这样既具有更高的灵活性，又能够自动配置AEM，这些功能在独立模式下使用时不可用。
+自AEM 6.3起，CRX2Oak就能夠處理使用者定義的移轉設定檔，這些設定檔可設定所有可用的移轉選項。 這樣既可擁有更高的靈活性，又可自動設定AEM，這些功能在獨立模式下使用工具時不可用。
 
-要将CRX2Oak切换为快速启动模式，您需要通过以下操作系统环境变量定义AEM安装目录中crx-quickstart文件夹的路径：
+若要將CRX2Oak切換為快速啟動模式，您需要透過此作業系統環境變數在AEM安裝目錄中定義crx-quickstart資料夾的路徑：
 
-**对于基于UNIX的系统和macOS:**
+**對於基於UNIX的系統和macOS：**
 
 ```shell
 export SLING_HOME="/path/to/crx-quickstart"
 ```
 
-**对于Windows:**
+**對於Windows：**
 
 ```shell
 SET "SLING_HOME=/path/to/crx-quickstart"
@@ -75,118 +75,118 @@ SET "SLING_HOME=/path/to/crx-quickstart"
 
 #### 恢复支持 {#resume-support}
 
-迁移可以随时中断，随后可以恢复。
+移轉作業可隨時中斷，之後可繼續進行。
 
-#### 可自定义的升级逻辑 {#customizable-upgrade-logic}
+#### 可自訂的升級邏輯 {#customizable-upgrade-logic}
 
-自定义Java逻辑，并且还可使用 `CommitHooks`. 自定义 `RepositoryInitializer` 可以实施类以使用自定义值初始化存储库。
+自訂Java邏輯也可以使用來實作 `CommitHooks`. 自訂 `RepositoryInitializer` 類別可以實作，以便使用自訂值初始化存放庫。
 
-#### 支持内存映射操作 {#support-for-memory-mapped-operations}
+#### 支援記憶體對應作業 {#support-for-memory-mapped-operations}
 
-默认情况下，CRX2Oak还支持内存映射操作。 内存映射可显着提高性能，应尽可能使用。
+CRX2Oak預設也支援記憶體對應作業。 記憶體對應可大幅提升效能，應儘可能使用。
 
 >[!CAUTION]
 >
->但请注意，Windows平台不支持内存映射操作。 因此，建议将 **—disable-mmap** 参数。
+>但是請注意，Windows平台不支援記憶體對應作業。 因此，建議新增 **—disable-mmap** 在Windows上執行移轉時的引數。
 
-#### 内容的选择性迁移 {#selective-migration-of-content}
+#### 選擇性移轉內容 {#selective-migration-of-content}
 
-默认情况下，该工具会在 `"/"` 路径。 但是，您可以完全控制应迁移的内容。
+依預設，工具會移轉以下專案下的整個存放庫 `"/"` 路徑。 不過，您可以完全控制應該移轉哪些內容。
 
-如果内容中有任何部分不是新实例所必需的，则可以使用 `--exclude-path` 参数来排除内容并优化升级过程。
+如果新執行個體上有不需要的內容任何部分，您可以使用 `--exclude-path` 用於排除內容並最佳化升級程式的引數。
 
-#### 路径合并 {#path-merging}
+#### 路徑合併 {#path-merging}
 
-如果需要在两个存储库之间复制数据，并且这两个存储库的内容路径不同，则可以在 `--merge-path` 参数。 完成此操作后，CRX2Oak将仅将新节点复制到目标存储库，并保留旧节点。
+如果需要在兩個存放庫之間複製資料，且您的內容路徑在兩個執行個體上不同，您可以在以下位置定義該資料： `--merge-path` 引數。 完成後，CRX2Oak只會將新節點複製到目的地存放庫，並保留舊節點。
 
 ![chlimage_1-152](assets/chlimage_1-152.png)
 
-#### 版本支持 {#version-support}
+#### 版本支援 {#version-support}
 
-默认情况下，AEM将创建每个被修改的节点或页面的版本，并将其存储在存储库中。 然后，可以使用这些版本将页面恢复到较早状态。
+依預設，AEM會建立每個要修改的節點或頁面的版本，並將其儲存在存放庫中。 然後可以使用版本將頁面還原到先前的狀態。
 
-但是，即使删除了原始页面，这些版本也永远不会被清除。 在处理已运行很长时间的存储库时，迁移可能需要处理由孤立版本导致的大量冗余数据。
+不過，即使刪除原始頁面，系統也不會清除這些版本。 處理已運作很久的存放庫時，移轉可能需要處理大量由孤立版本造成的重複資料。
 
-对于这些类型的情况，一个有用的功能是 `--copy-versions` 参数。 它可用于在迁移或复制存储库期间跳过版本节点。
+對於這些型別的情況來說，一個有用的功能是新增 `--copy-versions` 引數。 它可用來在移轉或存放庫複製期間略過版本節點。
 
-您还可以通过添加 `--copy-orphaned-versions=true`.
+您也可以選擇是否要透過新增來複製孤立版本 `--copy-orphaned-versions=true`.
 
-这两个参数还支持 `YYYY-MM-DD` 日期格式，以防您要在特定日期之前复制版本。
+這兩個引數也支援 `YYYY-MM-DD` 日期格式，以備您在不遲於特定日期復製版本時使用。
 
 ![chlimage_1-153](assets/chlimage_1-153.png)
 
-#### 开源版本 {#open-source-version}
+#### 開放原始碼版本 {#open-source-version}
 
-CRX2Oak的开源版本以oak-upgrade的形式提供。 它支持除以下项之外的所有功能：
+CRX2Oak的開放原始碼版本以Oak-upgrade的形式提供。 除了以下功能外，支援其他所有功能：
 
-* CRX2支持
-* 迁移配置文件支持
-* 支持自动重新配置AEM
+* CRX2支援
+* 移轉設定檔支援
+* 支援自動化AEM重新配置
 
-请参阅 [Apache文档](https://jackrabbit.apache.org/oak/docs/migration.html) 以了解更多信息。
+請參閱 [Apache檔案](https://jackrabbit.apache.org/oak/docs/migration.html) 以取得詳細資訊。
 
 ## 参数 {#parameters}
 
-### 节点存储选项 {#node-store-options}
+### 節點存放區選項 {#node-store-options}
 
-* `--cache`:高速缓存大小(MB)(默认为 `256`)
+* `--cache`：快取大小（預設為MB） `256`)
 
-* `--mmap`:为区段存储启用内存映射的文件访问
-* `--src-password:` 源RDB数据库的密码
+* `--mmap`：啟用區段存放區的記憶體對應檔案存取
+* `--src-password:` 來源RDB資料庫密碼
 
-* `--src-user:` 源RDB的用户
+* `--src-user:` 來源RDB的使用者
 
-* `--user`:目标RDB的用户
+* `--user`：目標RDB的使用者
 
-* `--password`:目标RDB的密码。
+* `--password`：目標RDB的密碼。
 
-### 迁移选项 {#migration-options}
+### 移轉選項 {#migration-options}
 
-* `--early-shutdown`:在复制节点后和应用提交挂接之前关闭源JCR2存储库
-* `--fail-on-error`:如果无法从源存储库读取节点，则强制执行迁移失败。
-* `--ldap`:将LDAP用户从CQ 5.x实例迁移到基于Oak的实例。 要使其正常工作，Oak配置中的身份提供程序需要命名为ldap。 有关更多信息，请参阅 [LDAP文档](/help/sites-administering/ldap-config.md).
+* `--early-shutdown`：在複製節點後和套用認可掛接前關閉來源JCR2存放庫
+* `--fail-on-error`：如果無法從來源存放庫讀取節點，則強制移轉失敗。
+* `--ldap`：將LDAP使用者從CQ 5.x執行個體移轉至Oak型執行個體。 為了讓此功能發揮作用，Oak設定中的身分提供者必須命名為ldap。 如需詳細資訊，請參閱 [LDAP檔案](/help/sites-administering/ldap-config.md).
 
-* `--ldap-config:` 结合使用 `--ldap` 参数。 您可以使用它指向CQ 5.x `ldap_login.conf` 或 `jaas.conf` 配置文件。 格式为 `--ldapconfig=path/to/ldap_login.conf`.
+* `--ldap-config:` 請將此與 `--ldap` 使用多個LDAP伺服器進行驗證的CQ 5.x存放庫引數。 您可以使用它指向CQ 5.x `ldap_login.conf` 或 `jaas.conf` 組態檔。 格式為 `--ldapconfig=path/to/ldap_login.conf`.
 
-### 版本存储选项 {#version-store-options}
+### 版本存放區選項 {#version-store-options}
 
-* `--copy-orphaned-versions`:跳过复制孤立版本。 支持的参数包括： `true`, `false` 和 `yyyy-mm-dd`. 默认为 `true`.
+* `--copy-orphaned-versions`：略過複製孤立版本。 支援的引數包括： `true`， `false` 和 `yyyy-mm-dd`. 默认为 `true`.
 
-* `--copy-versions:` 复制版本存储。 参数： `true`, `false`, `yyyy-mm-dd`. 默认为 `true`.
+* `--copy-versions:` 復製版本儲存空間。 引數： `true`， `false`， `yyyy-mm-dd`. 默认为 `true`.
 
-#### 路径选项 {#path-options}
+#### 路徑選項 {#path-options}
 
-* `--include-paths:` 在复制过程中要包含的路径列表（以逗号分隔）
-* `--merge-paths`:复制过程中要合并的路径列表（以逗号分隔）
-* `--exclude-paths:` 在复制过程中要排除的路径列表（以逗号分隔）。
+* `--include-paths:` 複製期間要包含的以逗號分隔的路徑清單
+* `--merge-paths`：複製期間要合併的逗號分隔路徑清單
+* `--exclude-paths:` 複製期間要排除的逗號分隔路徑清單。
 
-### 源Blob存储选项 {#source-blob-store-options}
+### 來源Blob存放區選項 {#source-blob-store-options}
 
-* `--src-datastore:` 用作源的数据存储目录 `FileDataStore`
+* `--src-datastore:` 要作為來源使用的資料存放區目錄 `FileDataStore`
 
-* `--src-fileblobstore`:用作源的数据存储目录 `FileBlobStore`
+* `--src-fileblobstore`：要當作來源使用的資料存放區目錄 `FileBlobStore`
 
-* `--src-s3datastore`:要用于源的数据存储目录 `S3DataStore`
+* `--src-s3datastore`：要用於來源的資料存放區目錄 `S3DataStore`
 
-* `--src-s3config`:源的配置文件 `S3DataStore`.
+* `--src-s3config`：來源的設定檔 `S3DataStore`.
 
-### 目标BlobStore选项 {#destination-blobstore-options}
+### 目的地BlobStore選項 {#destination-blobstore-options}
 
-* `--datastore:` 用作目标的数据存储目录 `FileDataStore`
+* `--datastore:` 用作目標的資料存放區目錄 `FileDataStore`
 
-* `--fileblobstore:` 用作目标的数据存储目录 `FileBlobStore`
+* `--fileblobstore:` 用作目標的資料存放區目錄 `FileBlobStore`
 
-* `--s3datastore`:用于目标的数据存储目录 `S3DataStore`
+* `--s3datastore`：用於目標的資料存放區目錄 `S3DataStore`
 
-* `--s3config`:目标的配置文件 `S3DataStore`.
+* `--s3config`：目標的設定檔案 `S3DataStore`.
 
-### 帮助选项 {#help-options}
+### 說明選項 {#help-options}
 
-* `-?, -h, --help:` 显示帮助信息。
+* `-?, -h, --help:` 顯示說明資訊。
 
 ## 调试 {#debugging}
 
-您还可以为迁移过程启用调试信息，以便对可能在该过程中出现的任何问题进行故障诊断。 根据您希望在以下位置运行工具的模式，您可以以不同方式执行此操作：
+您也可以啟用移轉程式的偵錯資訊，以便疑難排解程式期間可能出現的任何問題。 您可以根據您想要在其中執行工具的模式來採取不同的做法：
 
 <table>
  <tbody>
@@ -195,21 +195,21 @@ CRX2Oak的开源版本以oak-upgrade的形式提供。 它支持除以下项之�
    <td><strong>操作</strong></td>
   </tr>
   <tr>
-   <td>快速启动模式</td>
-   <td>您可以将 <strong> — 日志级TRACE</strong> 或 <strong> — 日志级别调试 </strong>选项。 在此模式下，日志会自动重定向到 <strong>升级日志文件</strong>.</td>
+   <td>快速入門模式</td>
+   <td>您可以新增 <strong> — 記錄層級TRACE</strong> 或 <strong> — 記錄層級DEBUG </strong>執行CRX2Oak時命令列的選項。 在此模式中，記錄檔會自動重新導向至 <strong>upgrade.log檔案</strong>.</td>
   </tr>
   <tr>
-   <td>独立模式</td>
-   <td><p>添加 <strong>—trace</strong> CRX2Oak命令行选项来在标准输出中显示TRACE事件(您需要使用重定向字符自行重定向日志：“&gt;”或“tee”命令以供以后检查)。</p> </td>
+   <td>獨立模式</td>
+   <td><p>新增 <strong>—trace</strong> CRX2Oak命令列的選項，以在標準輸出上顯示TRACE事件（您需要使用重新導向字元：'&gt;'或'tee'命令自行重新導向記錄，以供稍後檢查）。</p> </td>
   </tr>
  </tbody>
 </table>
 
-## 其他注意事项 {#other-considerations}
+## 其他考量 {#other-considerations}
 
-迁移到MongoDB复制副本集时，请确保设置 `WriteConcern` 参数 `2` 所有与Mongo数据库的连接。
+移轉至MongoDB復本集時，請務必將 `WriteConcern` 引數至 `2` 與Mongo資料庫的所有連線。
 
-为此，您可以通过添加 `w=2` 参数，如下所示：
+您可以新增 `w=2` 連線字串結尾的引數，如下所示：
 
 ```xml
 java -Xmx4092m -jar crx2oak.jar crx-quickstart/repository/ mongodb://localhost:27017/aem-author?replicaset=replica1&w=2
@@ -217,4 +217,4 @@ java -Xmx4092m -jar crx2oak.jar crx-quickstart/repository/ mongodb://localhost:2
 
 >[!NOTE]
 >
->有关更多信息，请参阅 [写入注意事项](https://docs.mongodb.org/manual/reference/connection-string/#write-concern-options).
+>如需詳細資訊，請參閱MongoDB連線字串檔案，網址為 [撰寫關注事項](https://docs.mongodb.org/manual/reference/connection-string/#write-concern-options).

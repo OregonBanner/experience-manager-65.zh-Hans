@@ -1,6 +1,6 @@
 ---
-title: 用于共享资产的专用文件夹
-description: 了解如何在 [!DNL Adobe Experience Manager Assets] 并与其他用户共享，并为其分配各种权限。
+title: 共用資產的私人資料夾
+description: 瞭解如何在中建立私人資料夾 [!DNL Adobe Experience Manager Assets] 並與其他使用者共用，且指派各種許可權給他們。
 contentOwner: AG
 role: User
 feature: Collaboration
@@ -13,81 +13,81 @@ ht-degree: 2%
 
 ---
 
-# 中的专用文件夹 [!DNL Adobe Experience Manager Assets] {#private-folder}
+# 中的私人資料夾 [!DNL Adobe Experience Manager Assets] {#private-folder}
 
-| 版本 | 文章链接 |
+| 版本 | 文章連結 |
 | -------- | ---------------------------- |
 | AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/private-folder.html?lang=en) |
 | AEM 6.5 | 本文 |
 
-您可以在 [!DNL Adobe Experience Manager Assets] 专门供您使用的用户界面。 您可以将此专用文件夹共享给其他用户，并为其分配各种权限。 根据您分配的权限级别，用户可以在文件夹中执行各种任务，例如查看文件夹中的资产或编辑资产。
+您可以在中建立私人資料夾 [!DNL Adobe Experience Manager Assets] 您專屬的使用者介面。 您可以與其他使用者共用此私人資料夾，並為其指派各種許可權。 根據您指派的許可權層級，使用者可以在資料夾上執行各種工作，例如檢視資料夾內的資產或編輯資產。
 
 >[!NOTE]
 >
->专用文件夹至少具有一个具有“所有者”角色的成员。
+>私人資料夾至少有一個成員具有擁有者角色。
 
-## 创建和共享专用文件夹 {#create-share-private-folder}
+## 私人資料夾的建立和共用 {#create-share-private-folder}
 
-要创建和共享专用文件夹，请执行以下操作：
+若要建立和共用私人資料夾：
 
-1. 在 [!DNL Assets] 控制台，单击 **[!UICONTROL 创建]** ，然后选择 **[!UICONTROL 文件夹]** 中。
+1. 在 [!DNL Assets] 主控台，按一下 **[!UICONTROL 建立]** 從工具列中，然後選擇 **[!UICONTROL 資料夾]** 功能表中的。
 
-   ![创建资产文件夹](assets/Create-folder.png)
+   ![建立資產資料夾](assets/Create-folder.png)
 
-1. 在 **[!UICONTROL 创建文件夹]** 对话框，输入文件夹的标题和名称（可选），然后选择 **[!UICONTROL 私有]** 选项。
+1. 在 **[!UICONTROL 建立資料夾]** 對話方塊，輸入資料夾的標題和名稱（選擇性），然後選取 **[!UICONTROL 私人]** 選項。
 
-1. 单击&#x200B;**[!UICONTROL 创建]**。将创建专用文件夹。
+1. 单击&#x200B;**[!UICONTROL 创建]**。已建立私人資料夾。
 
    ![chlimage_1-413](assets/chlimage_1-413.png)
 
-1. 要与其他用户共享文件夹并为其分配权限，请选择该文件夹，然后单击 **[!UICONTROL 属性]** 中。
+1. 若要與其他使用者共用資料夾以及為其指派許可權，請選取該資料夾，然後按一下 **[!UICONTROL 屬性]** （從工具列）。
 
-   ![信息选项](assets/do-not-localize/info-circle-icon.png)
+   ![資訊選項](assets/do-not-localize/info-circle-icon.png)
 
    >[!NOTE]
    >
-   >在您共享文件夹之前，任何其他用户都看不到该文件夹。
+   >在您共用資料夾之前，其他使用者看不到該資料夾。
 
-1. 在 **[!UICONTROL 文件夹属性]** ，从 **[!UICONTROL 添加用户]** 列表，在您的专用文件夹上为用户分配角色，然后单击 **[!UICONTROL 添加]**.
+1. 在 **[!UICONTROL 資料夾屬性]** 頁面，從中選擇使用者 **[!UICONTROL 新增使用者]** 清單、指派角色給私人資料夾中的使用者，然後按一下 **[!UICONTROL 新增]**.
 
    ![chlimage_1-415](assets/chlimage_1-415.png)
 
    >[!NOTE]
    >
-   >您可以分配各种角色，例如 `Editor`, `Owner`或 `Viewer` 共享文件夹的用户。 如果您为 `Owner` 角色，则用户具有 `Editor` 文件夹的权限。 此外，用户还可以与他人共享该文件夹。 如果您为 `Editor` 角色，用户可以编辑您专用文件夹中的资产。 如果您为用户分配了查看者角色，则用户只能查看您专用文件夹中的资产。
+   >您可以指派各種角色，例如 `Editor`， `Owner`，或 `Viewer` 共用資料夾的使用者。 如果您指派 `Owner` 角色至使用者，使用者具有 `Editor` 檔案夾的許可權。 此外，使用者可以與其他人共用資料夾。 如果您指派 `Editor` 角色，則使用者可編輯您私人資料夾中的資產。 如果您指派檢視器角色，則使用者只能檢視您私人資料夾中的資產。
 
    >[!NOTE]
    >
-   >专用文件夹至少具有一个成员，其中 `Owner` 角色。 因此，管理员无法从专用文件夹中删除所有所有者成员。 但是，要从专用文件夹中删除现有所有者（以及管理员本身），管理员必须将其他用户添加为所有者。
+   >私人資料夾至少有一個成員具有 `Owner` 角色。 因此，管理員無法從私人資料夾中移除所有擁有者成員。 但是，若要從私人資料夾中移除現有的擁有者（以及管理員本身），管理員必須新增另一個使用者作為擁有者。
 
-1. 单击“**[!UICONTROL 保存]**”。根据您分配的角色，用户在登录到时，会为您的专用文件夹分配一组权限 [!DNL Assets].
-1. 单击 **[!UICONTROL 确定]** 以关闭确认消息。
-1. 与您共享文件夹的用户会收到共享通知。 登录到 [!DNL Assets] 具有用于查看通知的用户凭据。
+1. 单击“**[!UICONTROL 保存]**”。根據您指派的角色，當使用者登入時，會指派一組許可權給使用者您的私人資料夾 [!DNL Assets].
+1. 按一下 **[!UICONTROL 確定]** 以關閉確認訊息。
+1. 共用資料夾的使用者會收到共用通知。 登入 [!DNL Assets] 具有檢視通知的使用者認證。
 
    ![chlimage_1-416](assets/chlimage_1-416.png)
 
-1. 单击 [!UICONTROL 通知] 打开通知列表。
+1. 按一下 [!UICONTROL 通知] 以開啟通知清單。
 
-   ![通知列表](assets/Assets-Notification.png)
+   ![通知清單](assets/Assets-Notification.png)
 
-1. 单击管理员共享的专用文件夹的条目以打开该文件夹。
+1. 按一下管理員共用的私人資料夾專案，開啟該資料夾。
 
 >[!NOTE]
 >
->要创建专用文件夹，您需要读取并修改 [访问控制权限](/help/sites-administering/security.md#permissions-in-aem) 在要创建专用文件夹的父文件夹上。 如果您不是管理员，则在 `/content/dam`. 在这种情况下，请先获取用户ID/组的这些权限，然后再尝试创建专用文件夹。
+>若要建立私人資料夾，您需要讀取和修改 [存取控制許可權](/help/sites-administering/security.md#permissions-in-aem) 建立私人資料夾的父資料夾上。 如果您不是管理員，預設不會在上為您啟用這些許可權。 `/content/dam`. 在這種情況下，請先取得這些使用者ID/群組的許可權，然後再嘗試建立私人資料夾。
 
-## 删除专用文件夹 {#delete-private-folder}
+## 私人資料夾刪除 {#delete-private-folder}
 
-您可以通过选择文件夹并选择 [!UICONTROL 删除] 选项，或者使用键盘上的Backspace键。
+您可以選取資料夾並選取「 」，刪除資料夾 [!UICONTROL 刪除] 選項，或使用鍵盤上的退格鍵。
 
-![顶部菜单中的删除选项](assets/delete-option.png)
+![刪除頂端選單中的選項](assets/delete-option.png)
 
 >[!CAUTION]
 >
->如果从CRXDE Lite中删除专用文件夹，则存储库中会保留冗余用户组。
+>如果您從CRXDE Lite中刪除私人資料夾，則多餘的使用者群組會留在存放庫中。
 
 >[!NOTE]
 >
->如果使用上述方法从用户界面中删除文件夹，则关联的用户组也会被删除。
+>如果您使用上述方法從使用者介面中刪除資料夾，則相關聯的使用者群組也會被刪除。
 >
->但是，可以使用从存储库中删除冗余、未使用和自动生成的现有用户组 `clean` 方法(`http://[server]:[port]/system/console/jmx/com.day.cq.dam.core.impl.team%3Atype%3DClean+redundant+groups+for+Assets`)。
+>但是，現有的備援、未使用和自動產生的使用者群組可以使用從存放庫中移除 `clean` 編寫執行個體中的JMX方法(`http://[server]:[port]/system/console/jmx/com.day.cq.dam.core.impl.team%3Atype%3DClean+redundant+groups+for+Assets`)。

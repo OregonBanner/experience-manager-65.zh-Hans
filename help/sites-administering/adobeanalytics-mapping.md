@@ -1,7 +1,7 @@
 ---
 title: 建立组件数据与 Adobe Analytics 属性的映射
 seo-title: Mapping Component Data with Adobe Analytics Properties
-description: 了解如何使用SiteCatalyst属性映射组件数据。
+description: 瞭解如何使用SiteCatalyst屬性對應元件資料。
 seo-description: Learn how to map component data with SiteCatalyst properties.
 uuid: b08ab37f-ad58-4c04-978f-8e21a3823ae8
 contentOwner: User
@@ -20,189 +20,189 @@ ht-degree: 1%
 
 # 建立组件数据与 Adobe Analytics 属性的映射{#mapping-component-data-with-adobe-analytics-properties}
 
-将组件添加到框架中以收集要发送到Adobe Analytics的数据。 用于收集Analytics数据的组件会将数据存储到适当的 **CQ变量**. 当您将此类组件添加到框架时，该框架会显示CQ变量列表，以便您可以将每个变量添加到相应的变量中 **Analytics变量**.
+將元件新增至框架，收集要傳送至Adobe Analytics的資料。 收集Analytics資料而設計的元件，會將資料儲存在適當的位置 **CQ變數**. 當您將這類元件新增到框架時，框架會顯示CQ變數清單，以便您將每個變數新增到適當的 **Analytics變數**.
 
 ![aa-11](assets/aa-11.png)
 
-当 **AEM视图** 打开，则Analytics变量会显示在内容查找器中。
+當 **AEM檢視** 開啟，Analytics變數會出現在內容尋找器中。
 
 ![aa-12](assets/aa-12.png)
 
-您可以使用相同的 **CQ变量**.
+您可以使用相同對應多個Analytics變數 **CQ變數**.
 
 ![chlimage_1-68](assets/chlimage_1-68.png)
 
-当页面加载并满足以下条件时，映射的数据将被发送到Adobe Analytics：
+當頁面載入且符合下列條件時，對應的資料會傳送至Adobe Analytics：
 
-* 该页面与框架关联。
-* 该页面使用添加到框架中的组件。
+* 頁面與框架相關聯。
+* 頁面會使用新增至框架的元件。
 
-使用以下过程可将CQ组件变量与Adobe Analytics报表属性进行映射。
+使用以下程式，將CQ元件變數與Adobe Analytics報表屬性對應。
 
-1. 在 **AEM视图**，将跟踪组件从sidekick拖动到框架上。 例如，拖动 **页面** 组件组件来自 **常规** 类别。
+1. 在 **AEM檢視**，將追蹤元件從sidekick拖曳至架構上。 例如，拖曳 **頁面** 元件元件來自 **一般** 類別。
 
    ![aa-13](assets/aa-13.png)
 
-   有几个默认的组件组： **常规**， **商务**， **Communities**、和 **其他**. 您的AEM实例可以配置为显示不同的组和组件。
+   有多個預設元件群組： **一般**， **商務**， **Communities**、和 **其他**. 您的AEM執行個體可設定為顯示不同的群組和元件。
 
-1. 要将Adobe Analytics变量与组件中定义的变量进行映射，请拖动 **Analytics变量** 从内容查找器转到跟踪组件上的字段。 例如，拖动 `Page Name (pageName)` 到 `pagedata.title`.
+1. 若要使用元件中定義的變數對應Adobe Analytics變數，請拖曳 **Analytics變數** 從內容尋找器移至追蹤元件上的欄位。 例如，拖曳 `Page Name (pageName)` 至 `pagedata.title`.
 
    ![aa-14](assets/aa-14.png)
 
    >[!NOTE]
    >
-   >为框架选择的报表包ID (RSID)决定了显示在内容查找器中的Adobe Analytics变量。
+   >為架構選取的報表套裝ID (RSID)會決定出現在內容尋找器中的Adobe Analytics變數。
 
-1. 对其他组件和变量重复前两个步骤。
+1. 對其他元件和變數重複前兩個步驟。
 
    >[!NOTE]
    >
-   >您可以映射多个Analytics变量(例如， `props`， `eVars`， `events`)到同一CQ变量(例如， `pagedata.title`)
+   >您可以對應多個Analytics變數(例如 `props`， `eVars`， `events`)至相同的CQ變數(例如： `pagedata.title`)
 
    >[!CAUTION]
    >
-   >强烈建议：
+   >強烈建議：
    >
-   >* `eVars` 和 `props` 映射到以以下任一开头的CQ变量： `pagedata.X` 或 `eventdata.X`
-   >* 而事件应映射到以开头的变量 `eventdata.events.X`
+   >* `eVars` 和 `props` 都會對應至開頭為以下列任一專案的CQ變數： `pagedata.X` 或 `eventdata.X`
+   >* 而事件應對應至變數，開頭為 `eventdata.events.X`
 
 
-1. 要使框架在网站的发布实例上可用，请打开 **页面** 选项卡，然后单击 **激活框架。**
+1. 若要讓架構可用於網站的發佈執行個體，請開啟 **頁面** 索引標籤，然後按一下 **啟動框架。**
 
-## 映射产品相关的变量 {#mapping-product-related-variables}
+## 對應產品相關變數 {#mapping-product-related-variables}
 
-AEM使用约定来命名与产品相关的变量和事件，这些变量和事件旨在映射到Adobe Analytics产品相关的属性：
+AEM使用慣例來命名產品相關變數和事件，這些變數和事件會對應至Adobe Analytics產品相關屬性：
 
-| CQ变量 | Analytics变量 | 描述 |
+| CQ變數 | 分析變數 | 描述 |
 |--- |--- |--- |
-| `product.category` | `product.category` （转化变量） | 产品类别。 |
-| `product.sku` | `product.sku` （转化变量） | 产品sku。 |
-| `product.quantity` | `product.quantity` （转化变量） | 正在购买的产品数。 |
-| `product.price` | `product.price` （转化变量） | 产品价格。 |
-| `product.events.<eventName>` | 要与报表中的产品关联的成功事件。 | `product.events` 是命名事件的前缀 *eventName。* |
-| `product.evars.<eVarName>` | 转化变量( `eVar`)，以关联产品。 | `product.evars` 是名为的eVar变量的前缀 *eVarName。* |
+| `product.category` | `product.category` （轉換變數） | 產品類別。 |
+| `product.sku` | `product.sku` （轉換變數） | 產品sku。 |
+| `product.quantity` | `product.quantity` （轉換變數） | 正在購買的產品數量。 |
+| `product.price` | `product.price` （轉換變數） | 產品價格。 |
+| `product.events.<eventName>` | 與報表中的產品建立關聯的成功事件。 | `product.events` 是事件的前置詞，命名為 *eventName。* |
+| `product.evars.<eVarName>` | 轉換變數( `eVar`)以與產品建立關聯。 | `product.evars` 是以下名稱的eVar變數的前置詞： *eVarName。* |
 
-多个AEM Commerce组件使用这些变量名称。
+有幾個AEM Commerce元件會使用這些變數名稱。
 
 >[!NOTE]
 >
->请勿将Adobe Analytics Products资产映射到CQ变量。 如表中所述配置产品相关映射实际上等同于映射Products变量。
+>請勿將Adobe Analytics產品屬性對應至CQ變數。 依照表格所述設定產品相關對應實際上等同於對應產品變數。
 
-### 检查Adobe Analytics上的报告 {#checking-reports-on-adobe-analytics}
+### 在Adobe Analytics上檢查報告 {#checking-reports-on-adobe-analytics}
 
-1. 使用提供给AEM的相同凭据登录Adobe Analytics网站。
-1. 确保选定的RSID是前面步骤中使用的RSID。
-1. In **报告** （在页面的左侧）选择 **自定义转换**，则 **自定义转换1-10** 并选择对应的变量 `eVar7`
+1. 使用提供給AEM的相同憑證登入Adobe Analytics網站。
+1. 請確定選取的RSID是先前步驟中所使用的RSID。
+1. 在 **報表** （在頁面左側）選取 **自訂轉換**，則 **自訂轉換1-10** 並選取對應的變數 `eVar7`
 
-1. 根据您使用的Adobe Analytics版本，您平均需要等待45分钟，以便使用使用的搜索词更新报告；例如，示例中的茄子
+1. 根據您使用的Adobe Analytics版本，您平均需要等待45分鐘，以便報表更新所用的搜尋字詞；例如，範例中的茄子
 
-## 在Adobe Analytics框架中使用内容查找器(cf#) {#using-the-content-finder-cf-with-adobe-analytics-frameworks}
+## 搭配Adobe Analytics架構使用內容尋找器(cf#) {#using-the-content-finder-cf-with-adobe-analytics-frameworks}
 
-最初，在打开Adobe Analytics框架时，内容查找器在下包含预定义的Analytics变量：
+最初，當您開啟Adobe Analytics架構時，內容尋找器會包含以下預先定義的Analytics變數：
 
 * 流量
 * 转化
 * 事件
 
-选择RSID后，属于该RSID的所有变量都会添加到列表中。\
-此 `cf#` 需要将Analytics变量映射到不同跟踪组件上存在的CQ变量。 请参阅为基本跟踪设置框架。
+選取RSID時，屬於該RSID的所有變數都會新增到清單中。\
+此 `cf#` 需要將Analytics變數對應到出現在不同追蹤元件上的CQ變數。 請參閱設定基本追蹤的框架。
 
-根据为框架选择的视图，内容查找器将由Analytics变量(在AEM视图中)或CQ变量（在Analytics视图中）填充。
+根據為框架選取的檢視，內容尋找器將由Analytics變數(在AEM檢視中)或CQ變數（在Analytics檢視中）填入。
 
-可通过以下方式操作列表：
+清單可透過下列方式操作：
 
-1. 时间 **AEM视图**&#x200B;之后，可以根据使用3个过滤器按钮选择的变量类型对列表进行过滤：
+1. 當在 **AEM檢視**，您可根據使用3個篩選按鈕選取的變數型別來篩選清單：
 
-   * 如果 *无按钮* 选中时，列表会显示完整列表。
-   * 如果 **流量** 按钮时，列表将仅显示属于流量部分的变量。
-   * 如果 **转化** 按钮时，列表将仅显示属于转化部分的变量。
-   * 如果 **事件** 按钮时，列表将仅显示属于事件部分的变量。
+   * 若 *無按鈕* 選取時，清單會顯示完整清單。
+   * 如果 **流量** 按鈕時，清單只會顯示屬於流量區段的變數。
+   * 如果 **轉換** 按鈕時，清單只會顯示屬於轉換區段的變數。
+   * 如果 **事件** 按鈕時，清單只會顯示屬於事件區段的變數。
 
    >[!NOTE]
    >
-   >一次只能激活一个筛选器按钮。
+   >一次只能啟用一個篩選按鈕。
 
-   1. 列表还具有搜索功能，该功能根据在搜索字段中输入的文本筛选元素。
-   1. 如果在搜索列表中的元素时激活了筛选器选项，则显示的结果也将根据活动按钮进行筛选。
-   1. 可以使用“旋转箭头”按钮随时重新加载列表。
-   1. 如果在框架中选择了多个RSID，则列表中的所有变量将使用选定RSID内使用的所有标签显示。
+   1. 清單也有搜尋功能，可依據在搜尋欄位中輸入的文字篩選元素。
+   1. 如果在搜尋清單中的元素時啟用了篩選選項，則顯示的結果也會根據活動按鈕進行篩選。
+   1. 清單可隨時使用旋轉箭頭按鈕重新載入。
+   1. 如果在架構上選取了多個RSID，清單中的所有變數都會使用選取的RSID內使用的所有標籤來顯示。
 
 
-1. 在Adobe Analytics视图中时，内容查找器显示属于在CQ视图中拖动的跟踪组件的所有CQ变量。
+1. 在Adobe Analytics檢視中，內容尋找器會顯示屬於CQ檢視中拖曳之追蹤元件的所有CQ變數。
 
-   * 例如，如果 **下载组件** 是 *只有一个拖动* 在CQ视图（具有两个可映射变量）中 *eventdata.downloadLink* 和 *eventdata.events.startDownload*)，则当切换到Adobe Analytics视图时，内容查找器将如下所示：
+   * 例如，如果 **下載元件** 是 *僅拖曳一個* 在CQ檢視中（其中包含兩個可對應的變數） *eventdata.downloadLink* 和 *eventdata.events.startDownload*)，則內容尋找器切換至Adobe Analytics檢視時看起來會像這樣：
 
    ![aa-22](assets/aa-22.png)
 
-   * 可以将变量拖放到属于以下三个变量部分之一的任何Adobe Analytics变量上(**流量**， **转化** 和 **事件**)。
+   * 這些變數可拖放至屬於3個變數區段之一的任何Adobe Analytics變數上(**流量**， **轉換** 和 **事件**)。
 
-   * 在CQ视图中将新跟踪组件拖动到框架上时，属于该组件的CQ变量会自动添加到Adobe Analytics视图中的内容查找器(cf#)。
+   * 將新的追蹤元件拖曳至CQ檢視中的框架時，屬於該元件的CQ變數會自動新增至Adobe Analytics檢視中的內容尋找器(cf#)。
    >[!NOTE]
    >
-   >在任意给定时间，只能将一个CQ变量映射到Adobe Analytics变量。
+   >在任何指定時間，只能將一個CQ變數對應至Adobe Analytics變數。
 
-## 使用AEM视图和Analytics视图 {#using-aem-view-and-analytics-view}
+## 使用AEM檢視和Analytics檢視 {#using-aem-view-and-analytics-view}
 
-在任何给定时间，用户都可选择在框架页面上以两种方式查看Adobe Analytics映射。 从2个不同的角度来看，这2个视图更好地概述了框架中的映射。
+在任何指定時間，使用者可以選擇在框架頁面上切換檢視Adobe Analytics對應的兩種方式。 從2個不同的角度來看，這2個檢視可提供架構內對應的更佳概述。
 
-### AEM视图 {#aem-view}
+### AEM檢視 {#aem-view}
 
 ![aa-23](assets/aa-23.png)
 
-以上图为例， **AEM视图** 具有以下属性：
+以上圖為例， **AEM檢視** 具有以下屬性：
 
-1. 这是框架打开时的默认视图。
-1. 左侧：内容查找器(cf#)由基于所选RSID的Adobe Analytics变量填充。
-1. 选项卡标题(**AEM视图** 和 **Analytics视图**)：使用这些选项可在两个视图之间切换。
+1. 這是框架開啟時的預設檢視。
+1. 左側：內容尋找器(cf#)會根據所選RSID由Adobe Analytics變數填入。
+1. 索引標籤標題(**AEM檢視** 和 **Analytics檢視**)：使用這些選項可在兩個檢視之間切換。
 
-1. **AEM视图**：
+1. **AEM檢視**：
 
-   1. 如果框架具有从其父框架继承的组件，则在此处列出这些组件，以及映射到这些组件的变量。
+   1. 如果框架具有從其父項繼承的元件，則會在此處列出這些元件，以及對應到元件的變數。
 
-      1. 继承的组件将被锁定。
-      1. 要解锁继承的组件，只需双击组件名称旁边的挂锁
-      1. 为了恢复继承，您必须删除已解锁的组件；之后，该组件将重新获得其锁定状态。
-   1. **将组件拖动到此处以包含在分析框架中**：组件可以从Sidekick拖放到此处。
-   1. 您可以找到当前包含在分析框架中的所有组件：
+      1. 繼承的元件已鎖定。
+      1. 若要解除鎖定繼承的元件，只要按兩下元件名稱旁的掛鎖即可
+      1. 為了恢復繼承，您必須刪除已解鎖的元件；之後它將重新獲得其鎖定狀態。
+   1. **將元件拖曳到此處以包含在分析框架中**：元件可從Sidekick拖曳並放置在這裡。
+   1. 您可以找到目前包含在分析框架中的所有元件：
 
-      1. 要添加组件，请从Sidekick的“组件”选项卡中拖动一个组件
-      1. 要删除组件及其所有映射，请从组件的上下文菜单中选择删除，然后在确认对话框上接受删除。
-      1. 请记住，组件只能从在其中创建的框架中删除，而不能从传统意义上的子框架中删除（它们只能被覆盖）。
+      1. 若要新增元件，請從sidekick的「元件」標籤中拖曳一個元件
+      1. 若要刪除元件及其所有對映，請從元件的快顯選單中選取「刪除」，然後在確認對話方塊上接受刪除。
+      1. 請記住，元件只能從建立該元件的架構中刪除，且無法從傳統意義上的子架構中刪除（只能覆寫）。
 
 
-### Analytics视图 {#analytics-view}
+### 分析檢視 {#analytics-view}
 
 ![aa-24](assets/aa-24.png)
 
-1. 通过切换到 **Analytics视图** 选项卡。
-1. 左侧：由CQ变量填充的内容查找器(cf#)基于在CQ视图中拖动到框架上的组件。
-1. 选项卡标题(**AEM视图** 和 **Analytics视图**)：使用这些选项可在两个视图之间切换。
+1. 您可以透過切換至 **Analytics檢視** 索引標籤進行編輯。
+1. 左側：內容尋找器(cf#)由CQ變數填入，根據在CQ檢視中拖曳到框架上的元件。
+1. 索引標籤標題(**AEM檢視** 和 **Analytics檢視**)：使用這些選項可在兩個檢視之間切換。
 
-1. 三个表（流量、转化、事件）列出了所有可用的Adobe Analytics变量。 属于选定的RSID。 此处显示的映射应该与AEM视图中的映射相同：
+1. 三個表格（流量、轉換、事件）列出所有可用的Adobe Analytics變數。 屬於所選RSID。 此處顯示的對應應與AEM檢視中的對應相同：
 
    * **流量**:
 
-      * 流量变量( `prop1`)映射到CQ变量( `eventdata.downloadLink`)
+      * 流量變數( `prop1`)對應至CQ變數( `eventdata.downloadLink`)
 
-      * 当组件旁边有挂锁时，这意味着该组件继承自父框架，因此无法编辑
+      * 當元件旁邊有掛鎖時，這表示它繼承自父框架，因此無法編輯
    * **转化**:
 
-      * 转化变量( `eVar1`)映射到CQ变量( `pagedata.title`)
+      * 轉換變數( `eVar1`)對應至CQ變數( `pagedata.title`)
 
-      * 转化变量( `eVar3`)，通过双击CQ变量字段并手动输入代码，映射到内联添加的javascript表达式
+      * 轉換變數( `eVar3`)對應至內嵌新增的javascript運算式，方法是按兩下CQ變數欄位，然後手動輸入程式碼
    * **Event**:
 
-      * 事件变量( `event1`)映射到CQ事件( `eventdata.events.pageView`)
+      * 事件變數( `event1`)對應至CQ事件( `eventdata.events.pageView`)
 
 
 
 >[!NOTE]
 >
->任何表的CQ变量列也可以内联填充，方法是双击该字段并向其添加文本。 这些字段接受javascript作为输入。
+>您也可以內嵌填入任何表格的CQ變數欄，方法是按兩下該欄位並新增文字。 這些欄位接受javascript作為輸入。
 >
->例如，在 `prop3` 您可以添加：
+>例如，旁邊的 `prop3` 您可以新增：
 >     `'`* `Adobe:'+pagedata.title+':'+pagedata.sitesection`\
-发送 *标题* 与其连接的页面的 *sitesection* 使用 *：* （冒号）和前缀 *Adobe* 作为 `prop3`
+以傳送 *標題* 與其串連的頁面的 *sitesection* 使用 *：* （冒號）和前置詞 *Adobe* 作為 `prop3`
 
 >[!CAUTION]
-在任意给定时间，只能将一个CQ变量映射到Adobe Analytics变量。
+在任何指定時間，只能將一個CQ變數對應至Adobe Analytics變數。

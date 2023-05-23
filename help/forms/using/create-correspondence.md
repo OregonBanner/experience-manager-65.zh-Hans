@@ -1,7 +1,7 @@
 ---
-title: 创建通信
+title: 建立對應
 seo-title: Create Correspondence
-description: 创建信件模板后，可以使用该模板在AEM Forms中通过管理数据、内容和附件来创建通信。
+description: 建立信函範本後，您可以透過管理資料、內容和附件，使用它在AEM Forms中建立通訊。
 seo-description: After you have created a letter template, you can use it to create correspondence in AEM Forms by managing data, content, and attachments.
 uuid: 48cf2b26-c9b4-4127-9ea0-1b36addbff60
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -17,372 +17,372 @@ ht-degree: 0%
 
 ---
 
-# 创建通信{#create-correspondence}
+# 建立對應{#create-correspondence}
 
-## 在创建通信用户界面中创建通信 {#create-correspondence-in-the-create-correspondence-user-interface}
+## 在「建立通訊」使用者介面中建立通訊 {#create-correspondence-in-the-create-correspondence-user-interface}
 
-在 [信件模板在通信管理中创建](../../forms/using/create-letter.md)，最终用户/代理/声明调整器可以在“创建通信”用户界面中打开信件，并通过输入数据、设置内容和管理附件来创建通信。 最后，理赔员或代理人可以在预览模式下管理内容并提交信件。
+晚於 [信函範本是在「通訊管理」中建立](../../forms/using/create-letter.md)，一般使用者/代理程式/索賠理算師可以在「建立通訊」使用者介面中開啟信件，並透過輸入資料、設定內容和管理附件來建立通訊。 最後，索賠理算師或代理商可以在預覽模式下管理內容並提交信件。
 
-### 预览通信 {#preview-a-correspondence}
+### 預覽通訊 {#preview-a-correspondence}
 
-使用以下步骤选择要预览的信件：
+使用以下步驟選取要預覽的字母：
 
-1. 在“信件”页面上，点按 **选择**.
-1. 点按相应的信件以选择相应的信件。
+1. 在「字母」頁面上，點選 **選取**.
+1. 點選適當的字母以選取它。
 
-   ![选择信件](assets/1_selectletter.png)
+   ![選取字母](assets/1_selectletter.png)
 
-   选择信件
+   選取字母
 
-1. 对于基于数据字典的信件，请选择 **预览** > **预览**. 或者，对于不基于数据字典的信件，请选择 **预览**. 您还可以将鼠标悬停在信件上（未选择该信件），然后点按信件预览图标以预览该信件。
-
-   >[!NOTE]
-   >
-   >如果数据字典与信件未关联，则会打开信件预览。 否则，如果信件基于数据字典，则“通信管理”会在“预览”菜单中显示“预览”和“自定义”选项，您可以选择两个选项之一。 您还可以将测试数据与数据字典相关联。 当 [数据字典具有关联的测试数据](../../forms/using/data-dictionary.md#p-working-with-test-data-p)，然后选择预览选项时，将打开常规预览，并填充测试数据。
-
-1. 要在预览通信时渲染通信，您应是管理员或以下任一组的成员：
-
-   * 表单用户（在创作实例上预览）
-   * cm-agent-users（用于发布实例上的演绎版）
-
-   如果您没有所需的权限，请请求管理员获得相应的访问权限。 有关创建用户并将其添加到群组的更多信息，请参阅 [将用户或组添加到组](/help/sites-administering/security.md). 如果您尝试在没有相应权限的情况下渲染通信，则会显示404错误页面。
-
-1. 如果您已选择 **预览** > **自定义**，将打开一个对话框。 在对话框中，选择与数据字典对应的数据文件，以预览字母，然后选择 **预览**. 根据特定信件的数据字典创建数据文件。 有关数据文件的更多信息，请参阅 [数据字典](../../forms/using/data-dictionary.md#p-working-with-test-data-p).
-
-   ![预览信件](assets/8_previewcustomdatafile.png)
-
-1. 默认情况下，将打开信件HTML预览（移动设备表单预览），其中焦点是“数据”选项卡。
-
-   有关移动表单及其支持的功能的更多信息，请参阅 [Mobile Forms与PDF forms之间的功能区别](https://helpx.adobe.com/livecycle/help/mobile-forms/feature-differentiation-mobile-forms-pdf.html).
-
-   有三个选项卡：数据、内容和附件。 如果没有数据元素（占位符变量和布局字段），则在中直接打开信件，并显示“内容”选项卡。 仅当存在附件或启用了库访问时，“附件”选项卡才可用。
+1. 對於資料字典型信件，請選取 **預覽** > **預覽**. 或者，若是非資料字典型信件，請選取 **預覽**. 您也可以將滑鼠指標暫留在信函上（無需選取信函），然後點選「信函預覽」圖示以預覽。
 
    >[!NOTE]
    >
-   >有关在信件预览的HTML或PDF呈现模式之间切换的更多信息，请参阅 [更改信件的呈现模式](#changerenditionmode). 有关通信管理和AEM中PDF支持的更多信息，请参阅 [NPAPI浏览器插件的停用及其影响](https://helpx.adobe.com/acrobat/kb/change-in-support-for-acrobat-and-reader-plug-ins-in-modern-web-.html). <!-- and [PDF Forms to HTML5 Forms](https://helpx.adobe.com/aem-forms/kb/pdf-forms-to-html5-forms.html). THIS URL IS A 404 AND NO SUITABLE REPLACEMENT TOPIC WAS FOUND. CONSIDER DELETING OR ADDING NEW LINK. COMMENTING OUT SO USERS DON'T CLICK IT. -->
+   >如果資料字典未與信函相關聯，信函預覽會開啟。 否則，如果信函是以資料字典為基礎，「通訊管理」會在「預覽」選單中顯示「預覽」和「自訂」選項，您可以選取兩個選項之一。 您也可以將測試資料與資料字典建立關聯。 當 [資料字典有相關的測試資料](../../forms/using/data-dictionary.md#p-working-with-test-data-p)，然後選取預覽選項時，一般預覽會開啟，並填入測試資料。
 
-### 输入数据 {#enterdata}
+1. 若要在預覽信函時呈現信函，您必須是管理員或屬於下列群組：
 
-在“数据”选项卡中，填充可用的布局字段和占位符。
+   * forms-users （在作者執行個體上預覽）
+   * cm-agent-users （用於發佈執行個體上的轉譯）
 
-1. 根据需要在字段中输入数据和内容变量。 填写标有星号(&#42;)以启用 **提交** 按钮。
+   如果您沒有所需的許可權，請要求管理員提供適當的存取許可權。 如需建立使用者並將其新增至群組的詳細資訊，請參閱 [新增使用者或群組至群組](/help/sites-administering/security.md). 如果您在沒有適當許可權的情況下嘗試轉譯通訊，則會出現404錯誤頁面。
 
-   点按HTML信预览中的数据字段值，以在“数据”选项卡中突出显示相应的数据字段。
+1. 如果您已選取 **預覽** > **自訂**，對話方塊隨即開啟。 在對話方塊中，選取與資料字典對應的資料檔案以預覽字母，然後選取 **預覽**. 系統會根據特定字母的資料字典建立資料檔案。 如需資料檔案的詳細資訊，請參閱 [資料字典](../../forms/using/data-dictionary.md#p-working-with-test-data-p).
 
-   ![在信件中输入数据](assets/2_enterdata.png) ![2_1_enterdata](assets/2_1_enterdata.png)
+   ![預覽字母](assets/8_previewcustomdatafile.png)
+
+1. 信件HTML預覽（行動表單預覽）依預設會開啟，其中的「資料」索引標籤會成為焦點。
+
+   如需行動表單及其支援功能的詳細資訊，請參閱 [行動Forms和PDF forms之間的功能差異](https://helpx.adobe.com/livecycle/help/mobile-forms/feature-differentiation-mobile-forms-pdf.html).
+
+   有三個標籤：資料、內容和附件。 如果沒有資料元素（預留位置變數和版面配置欄位），信函會直接在中開啟，並顯示「內容」索引標籤。 附件標籤僅在附件存在或資料庫存取權啟用時才能使用。
+
+   >[!NOTE]
+   >
+   >如需在信函預覽的HTML或PDF轉譯模式之間切換的詳細資訊，請參閱 [變更信件的轉譯模式](#changerenditionmode). 如需在Correspondence Management和AEM中支援PDF的詳細資訊，請參閱 [終止NPAPI瀏覽器外掛程式及其影響](https://helpx.adobe.com/acrobat/kb/change-in-support-for-acrobat-and-reader-plug-ins-in-modern-web-.html). <!-- and [PDF Forms to HTML5 Forms](https://helpx.adobe.com/aem-forms/kb/pdf-forms-to-html5-forms.html). THIS URL IS A 404 AND NO SUITABLE REPLACEMENT TOPIC WAS FOUND. CONSIDER DELETING OR ADDING NEW LINK. COMMENTING OUT SO USERS DON'T CLICK IT. -->
+
+### 輸入資料 {#enterdata}
+
+在「資料」索引標籤中，填入可用的版面配置欄位和預留位置。
+
+1. 視需要在欄位中輸入資料和內容變數。 填寫所有標示星號(&#42;)以啟用 **提交** 按鈕。
+
+   點選HTML信函預覽中的資料欄位值，以反白顯示「資料」索引標籤中的對應資料欄位。
+
+   ![在信函中輸入資料](assets/2_enterdata.png) ![2_1_enterdata](assets/2_1_enterdata.png)
 
 ### 管理内容 {#managecontent}
 
-在内容选项卡中，管理信件中的内容，如文档片段和内容变量。
+在內容索引標籤中，管理檔案片段和信件內容變數等內容。
 
-1. 选择 **内容**. 通信管理显示信件的内容选项卡。
+1. 選取 **內容**. 「通訊管理」會顯示信函的內容標籤。
 
-   ![“内容”选项卡 — 突出显示内容中的模块](assets/3_content.png)
+   ![內容標籤 — 內容中的反白顯示模組](assets/3_content.png)
 
-1. 根据需要，在内容选项卡中编辑内容模块。 要集中查看内容层次结构中的相关内容模块，您可以点按信件预览中的相关行或段落，也可以直接点按内容层次结构中的内容模块。
+1. 視需要在「內容」標籤中編輯內容模組。 若要將焦點置於內容階層中的相關內容模組，您可以點選信函預覽中的相關行或段落，或直接點選內容階層中的內容模組。
 
-   例如，在下图中选择了“我们已审阅……”一行，并在“内容”选项卡中选择了相关的内容模块。
+   例如，在下圖中選擇了「我們已檢閱…… 」一行，並在「內容」標籤中選取了相關的內容模組。
 
    ![4_highlightmoduleincontent](assets/4_highlightmoduleincontent.png)
 
-   在“内容”或“数据”选项卡中，点按高亮显示选定的模块( ![highlightselectedmodulesincontentccr](assets/highlightselectedmodulesincontentccr.png))在HTML信件预览的左上角，当在信件预览中选择相关文本、段落或数据字段时，您可以禁用或启用功能以转到内容/数据模块。
+   在「內容」或「資料」標籤中，點選「反白選取的模組」 ( ![highlightselectedmodulesincontentccr](assets/highlightselectedmodulesincontentccr.png))，您可以停用或啟用在信函預覽中選取相關文字、段落或資料欄位時，前往內容/資料模組的功能。HTML信函預覽左上角
 
-   有关“创建通信”用户界面中各个模块可用的操作的更多信息，请参阅 [“创建通信”用户界面中可用的操作和信息](#actions-and-info-available-in-the-create-correspondence-content-tab).
+   如需建立通訊使用者介面中各種模組可用的動作的詳細資訊，請參閱 [建立通訊使用者介面中可用的動作和資訊](#actions-and-info-available-in-the-create-correspondence-content-tab).
 
-1. 要查找内容模块，请使用“查找”字段。 输入内容模块的完整或部分名称或标题，以在通信中搜索内容模块。
-1. 点按显示图标( ![显示](assets/display.png))，以在信件中显示或隐藏该内容。
-1. 要编辑内嵌或可编辑的文本模块，请点按 **编辑** 图标( ![edittextmodule](assets/edittextmodule.png))或在信件预览中双击相关文本模块。
+1. 若要尋找內容模組，請使用「尋找」欄位。 輸入內容模組的完整或部分名稱或標題，以在通訊中搜尋它。
+1. 點選「顯示」圖示( ![顯示](assets/display.png))、文字、條件或目標區域前方的「 」，以在字母中顯示或隱藏它。
+1. 若要編輯內嵌或可編輯的文字模組，請點選相關的 **編輯** 圖示( ![edittextmodule](assets/edittextmodule.png))或在信函預覽中連按兩下相關的文字模組。
 
-   系统会显示文本编辑器以编辑文本并设置其格式。
+   系統會顯示文字編輯器以編輯文字並設定其格式。
 
-   浏览器中的默认拼写检查程序在文本编辑器中检查拼写。 要管理拼写和语法检查，您可以编辑浏览器的拼写检查设置或安装浏览器插件/插件以检查拼写和语法。
+   瀏覽器中的預設拼字檢查程式會檢查文字編輯器中的拼字。 若要管理拼字和文法檢查，您可以編輯瀏覽器的拼字檢查程式設定，或安裝瀏覽器外掛程式/附加元件來檢查拼字和文法。
 
-   您还可以使用文本编辑器中的各种键盘快捷键来管理、编辑和设置文本格式。 有关 [文本编辑器](/help/forms/using/keyboard-shortcuts.md#correspondence-management) 通信管理键盘快捷键中的键盘快捷键。
+   您也可以在文字編輯器中使用各種鍵盤快速鍵來管理、編輯文字及設定文字格式。 如需詳細資訊，請參閱 [文字編輯器](/help/forms/using/keyboard-shortcuts.md#correspondence-management) 通訊管理鍵盤快速鍵中的鍵盤快速鍵。
 
    ![5_edittextmodule](assets/5_edittextmodule.png)
 
-   您可能希望重复使用另一个文档应用程序中存在的多个文本段落之一。 您可以直接复制并粘贴文本，例如从MS Word、HTML页面或任何其他应用程序复制并粘贴文本。
+   您可能想要重複使用存在於另一個檔案應用程式中的多個文欄位落。 您可以直接複製並貼上文字，例如從MS Word、HTML頁面或任何其他應用程式中複製。
 
-   您可以在可编辑的文本模块中复制并粘贴一个或多个文本段落。 例如，您可能有一个MS Word文档，其中包含可接受居住证明的项目符号列表，如下所示：
+   您可以在可編輯的文字模組中複製並貼上文字的一或多個段落。 例如，您可能有MS Word檔案，其中包含可接受的居住證明專案符號清單，如下所示：
 
-   ![pastetextword](assets/pastetextmsword.png)
+   ![pastetextmsword](assets/pastetextmsword.png)
 
-   您可以直接将MS Word文档中的文本复制并粘贴到可编辑的文本模块中。 文本模块中会保留格式（如项目符号列表、字体和文本颜色）。
+   您可以直接將MS Word檔案中的文字複製並貼上至可編輯的文字模組。 專案符號清單、字型和文字顏色等格式會保留在文字模組中。
 
    ![pastetexteditablemodule](assets/pastetexteditablemodule.png)
 
    >[!NOTE]
    >
-   >但是，粘贴文本的格式有一些 [限制](https://helpx.adobe.com/aem-forms/kb/cm-copy-paste-text-limitations.html).
+   >不過，貼上文字的格式有些 [限制](https://helpx.adobe.com/aem-forms/kb/cm-copy-paste-text-limitations.html).
 
-   您可以使用Tab键缩进信件中的文本和数字。 例如，可以使用Tab键将列表中的多列文本对齐为表格格式。
+   您可以使用Tab鍵縮排信函中的文字和數字。 例如，您可以使用Tab鍵將清單中的多欄文字對齊為表格格式。
 
-   ![tabspaces](assets/tabspaces.png)
+   ![Tabspace](assets/tabspaces.png)
 
-   示例：使用Tab键将多列文本对齐为表格格式
+   範例：使用Tab鍵將多欄文字對齊為表格格式
 
    >[!NOTE]
    >
-   >有关为文本模块和字母设置制表符间距的详细信息，请参阅 [有关使用制表符间距排列文本的详细信息](https://helpx.adobe.com/aem-forms/kb/cm-tab-spacing-limitations.html).
+   >有關設定文字模組和字母的定位點間距的詳細資訊，請參閱 [有關使用定位點間距來排列文字的更多資訊](https://helpx.adobe.com/aem-forms/kb/cm-tab-spacing-limitations.html).
 
-1. 如果需要，在通信中插入特殊字符。 例如，您可以使用“特殊字符”面板插入：
+1. 如有需要，請在通訊中插入特殊字元。 例如，您可以使用「特殊字元」浮動視窗來插入：
 
-   * 货币符号，如€、¥和£
-   * 数学符号，如∑、√、∂和^
-   * 标点符号，如&quot;和&quot;
+   * 幣別符號，例如€、¥和£
+   * 數學符號，例如∑、√、∂和^
+   * 標點符號，例如&quot;和&quot;
 
-   ![特殊字符](assets/specialcharacters.png)
+   ![特殊字元](assets/specialcharacters.png)
 
-   通信管理内置了210个特殊字符。 管理员可以 [通过自定义添加对更多/自定义特殊字符的支持](../../forms/using/custom-special-characters.md).
+   Correspondence Management已內建支援210個特殊字元。 管理員可以 [透過自訂新增對更多/自訂特殊字元的支援](../../forms/using/custom-special-characters.md).
 
-1. 要在可编辑的内嵌模块中突出显示\强调部分文本，请选择该文本，然后点按“高亮显示颜色”。
+1. 若要反白顯示\強調可編輯內嵌模組中的部分文字，請選取文字並點選「反白顯示色彩」。
 
-   ![背景颜色](assets/letterbackgroundcolor.png)
+   ![letterbackgroundcolor](assets/letterbackgroundcolor.png)
 
-   您可以直接点按基本颜色 `**[A]**` 在“基本颜色”调板中显示或点按 **选择** 使用滑块后 `**[B]**` 来选择相应的颜色阴影。
+   您可以直接點選基本顏色 `**[A]**` 出現在「基本色彩」調色盤中或點選 **選取** 使用滑桿之後 `**[B]**` 以選擇適當的顏色陰影。
 
-   或者，您也可以转到“高级”选项卡以选择相应的“色相”、“明度”和“饱和度” `**[C]**` 创建精确颜色，然后点按选择 `**[D]**` 以应用颜色来突出显示文本。
+   或者，您也可以移至「進階」標籤，選取適當的色相、明亮度和飽和度 `**[C]**` 以建立精確顏色，然後點選「選取」 `**[D]**` 以套用顏色來反白顯示文字。
 
    ![textbackgroundcolor](assets/textbackgroundcolor.png)
 
-1. 进行相应的内容和格式更改并点按 **保存**. 点按( ![editnextmoduleccr](assets/editnextmoduleccr.png))可在可编辑的文本模块之间移动，或点按 **保存并下一步** 以保存更改并移至下一个可编辑的文本模块。
-1. 系统还会显示每个分支的未填充变量。 当没有未填充的变量时，未填充的变量将显示为0。 如果存在未填充的变量，您可以点按分支以展开该变量，然后找到未填充的变量。 使用内容工具栏可删除内容、增加/减少内容缩进，以及在内容之前/之后插入分页符。
+1. 進行適當的內容和格式變更，然後點選 **儲存**. 點選( ![editnextmoduleccr](assets/editnextmoduleccr.png))以在可編輯文字模組之間移動，或點選 **儲存並下一步** 儲存變更並移至下一個可編輯的文字模組。
+1. 系統也會顯示每個分支的未填變數。 當沒有未填變數時，未填變數會顯示為0。 如果存在未填滿的變數，您可以點選分支以展開該分支，然後找到未填滿的變數。 使用內容工具列來刪除內容、增加/減少內容的縮排，以及在內容之前/之後插入分頁符號。
 
-   您可以在数据模块的上方和下方插入分页符，即使这些分页符是列表和条件的一部分也是如此。
+   您可以在資料模組上方或下方插入分頁符號，即使它們屬於清單和條件的一部分亦然。
 
-1. 点按打开/关闭内容变量( ![opencontentvariables](assets/opencontentvariables.png))以打开内容变量并相应地进行填充。
-1. 正确填充未填充的变量后，未填充变量的计数将设置为0。
+1. 點選「開啟/關閉內容變數」 ( ![opencontentvariables](assets/opencontentvariables.png))以開啟內容變數並適當地填入。
+1. 正確填入未填入的變數後，未填入的變數計數會設為0。
 
-   在“创建通信”用户界面中，未填充的变量计数显示在任何包含至少一个变量的模块层次结构的每个级别。 如果模块包含未填充的变量，则计数将显示在变量、模块、目标区域和信件模板级别。
+   在「建立通訊」使用者介面中，未填入的變數計數會顯示在包含至少一個變數之任何模組階層的每個層級。 如果模組包含未填變數，則計數會顯示在變數、模組、目標區域和信函範本層級。
 
-   未填充的变量计数包括：
+   未填寫的變數計數包括：
 
-   * 仅不受保护的数据字典和占位符变量。 变量计数不包括布局或受保护的数据字典变量。
-   * 必填字段。
-   * 布局字段（如果为必填字段），且已绑定到用户。
-   * 仅独特变量实例。 如果模块、目标区域或信件模板包含同一变量的两个或多个实例，则计数将显示为1(1)。 但是，对于每个实例，计数显示为1。
+   * 僅限未受保護的資料字典和預留位置變數。 變數計數不包含配置或受保護的資料字典變數。
+   * 必填欄位。
+   * 配置欄位（如果欄位是必填欄位且已繫結至使用者）。
+   * 僅限不重複變數例項。 如果模組、目標區域或信函範本包含兩個或多個相同變數的例項，則計數會顯示為1 （一）。 但是，對於每個執行個體，計數會顯示為1。
 
-   未填充的变量计数不包括已取消选择的模块。 如果某个模块包含在信件模板中，但不在信件中，则不会显示此模块中未填充变量的计数。
+   未填入的變數計數不包括已取消選取的模組。 如果信函範本中包含但信函中未包含模組，則此模組中的未填變數計數不會顯示。
 
-   对于目标区域、模块和变量，计数显示在信件模板中每个对象的右侧。 但是，对于完整模板，计数显示在创建通信状态栏中。
+   對於目標區域、模組和變數，計數會顯示在信函範本中每個物件的右側。 但是，對於完整範本，計數會顯示在「建立通訊」狀態列中。
 
-   信件模板中的模块显示未填充的变量计数，如下所述：
+   信函範本中的模組會顯示未填入的變數計數，如下所述：
 
-   * **文本** 显示文本模块中包含的唯一未填充占位符变量和数据字典元素的总和。
-   * **条件** 显示条件中包含的唯一未填充条件变量和生成模块中包含的变量的总和。
-   * **列表** 显示分配给列表的模块中包含的所有唯一未填充变量的总和。
-   * **目标区域** 显示分配给目标区域的模块中包含的所有唯一未填充变量的总和。
+   * **文字** 顯示文字模組中所包含的不重複未填入預留位置變數和資料字典元素的總和。
+   * **條件** 顯示條件中所包含的不重複未填入條件變數與結果模組中所包含變數的總和。
+   * **清單** 顯示指派給清單之模組中所包含的所有不重複未填入變數的總和。
+   * **目標區域** 顯示指派給目標區域的模組中所包含的所有不重複未填入變數的總和。
 
-   请注意以下有关具有默认值的变量的信息：
+   關於具有預設值的變數，請注意下列事項：
 
-   * 布尔变量字段默认为 *false*. 但是，该变量会被视为未填充。 这意味着变量计数包含所有具有值的布尔变量字段 *false*.
+   * 布林值變數欄位預設為 *false*. 不過，變數會視為未填入。 這表示變數計數包含所有布林值變數欄位 *false*.
 
-   * 数值变量字段默认为 *0（零）*. 但是，该变量会被视为未填充。 这意味着变量计数包含所有具有值的数值变量字段 *0（零）*.
+   * 數值變數欄位預設為 *0 （零）*. 不過，變數會視為未填入。 這表示變數計數包含所有具有值的數值變數欄位 *0 （零）*.
 
 
 
-#### “创建通信内容”选项卡中提供的操作和信息 {#actions-and-info-available-in-the-create-correspondence-content-tab}
+#### 「建立通訊內容」標籤中可用的動作和資訊 {#actions-and-info-available-in-the-create-correspondence-content-tab}
 
 **目标区域**
 
-* 插入空行：插入新的空行。
-* 插入内联文本：插入新文本模块。
-* 订单锁定（信息）：表示内容的顺序无法更改。
-* 未填充的值（信息）：指示目标区域中未填充变量的数量。
+* 插入空白行：插入新的空白行。
+* 插入內嵌文字：插入新文字模組。
+* 順序鎖定（資訊）：表示無法變更內容的順序。
+* 未填滿的值（資訊）：指出目標區域中未填滿的變數數目。
 
 **模块**
 
-* 选择（眼睛图标）：包含\排除信件中的模块。
-* 跳过项目符号（适用于列表模块及其子模块）：跳过特定模块中的项目符号。
-* 之前的分页符（适用于目标区域的子模块）：在模块之前插入分页符。
-* 之后的分页符（适用于目标区域的子模块）：在模块之前插入分页符。
-* 未填充的值（信息）：指示目标区域中未填充变量的数量。
-* 编辑（仅限文本模块）：打开富文本编辑器以编辑文本模块。
-* 数据面板（文本和条件模块）：打开模块的所有变量。
+* 選擇（眼睛圖示）：包含\排除字母中的模組。
+* 略過專案符號（適用於清單模組及其子模組）：略過特定模組中的專案符號。
+* 在之前分頁（適用於目標區域的子模組）：在模組之前插入分頁。
+* 之後的分頁符號（適用於目標區域的子模組）：在模組之前插入分頁符號。
+* 未填滿的值（資訊）：指出目標區域中未填滿的變數數目。
+* 編輯（僅限文字模組）：開啟RTF編輯器以編輯文字模組。
+* 資料面板（文字和條件模組）：開啟模組的所有變數。
 
-**列表模块**
+**清單模組**
 
-* 插入空行：插入新的空行。
-* 内容库：打开内容库以将模块添加到列表。
-* 列表设置（仅嵌套列表）：
-* 订单锁定（信息）：表示无法更改列表项的顺序。
+* 插入空白行：插入新的空白行。
+* 內容庫：開啟內容庫以將模組新增至清單。
+* 清單設定（僅限巢狀清單）：
+* 順序鎖定（資訊）：表示無法變更清單專案的順序。
 
 ### 管理附件 {#manage-attachments}
 
-1. 选择 **附件**. 通信管理按照创建信件模板时的设置显示可用附件。
-1. 您可以通过点按视图图标，选择不随信件一起提交附件，然后点按附件中的十字，以将其从信件中删除。 对于指定的附件，在创建信件模板时，视图和删除图标将作为“必填”禁用。
-1. 点按库访问( ![库访问](assets/libraryaccess.png))图标以访问内容库，以将DAM资产作为附件插入。
+1. 選取 **附件**. 「通訊管理」會依照建立信函範本時的設定，顯示可用的附件。
+1. 點選檢檢視示可選擇不隨信件提交附件，點選附件中的十字可從信件中刪除。 對於指定的附件，在建立信函範本時，若為「必要」，「檢視」和「刪除」圖示會停用。
+1. 點選「資料庫存取」 ( ![程式庫存取](assets/libraryaccess.png))圖示以存取「內容資料庫」，將DAM資產插入為附件。
 
    >[!NOTE]
    >
-   >“库访问”图标仅在创作信件时启用库访问。
+   >「資料庫存取」圖示僅在編寫信函時啟用資料庫存取權才可用。
 
-1. 如果在创建通信时附件的顺序未锁定，则可以通过选择附件并点按向下和向上箭头来重新排序附件。
+1. 如果在建立通訊時未鎖定附件的順序，您可以選取附件並點選向下和向上箭頭來重新排序附件。
 
-   有关更多信息，请参阅 [附件投放](#attachmentdelivery).
+   如需詳細資訊，請參閱 [附件傳遞](#attachmentdelivery).
 
-### 在预览中管理内容并提交信件 {#manage-content-in-preview-and-submit-the-letter}
+### 在預覽中管理內容並提交信件 {#manage-content-in-preview-and-submit-the-letter}
 
-您可以进行布局和内容相关更改，以确保信件按您预期的方式显示并提交到各种帖子流程。
+您可以進行版面配置和內容相關變更，以確保信件看起來如您所願，並將信件提交給各種發佈程式。
 
-1. 要突出显示信件中的所有可编辑内容，请点按 **突出显示可编辑的部分**.
+1. 若要反白顯示信函中的所有可編輯內容，請點選 **反白可編輯區段**.
 
-   信件的可编辑内容以灰色背景突出显示。
+   字母的可編輯內容會以灰色背景反白顯示。
 
-   ![突出显示可编辑的内容](assets/4_highlightmoduleincontent-1.png)
+   ![反白可編輯內容](assets/4_highlightmoduleincontent-1.png)
 
-1. 根据需要，在内容选项卡中编辑内容模块。 要集中查看内容层次结构中的相关内容模块，您可以点按信件预览中的相关行或段落，也可以直接点按内容层次结构中的内容模块。
+1. 視需要在「內容」標籤中編輯內容模組。 若要將焦點置於內容階層中的相關內容模組，您可以點選信函預覽中的相關行或段落，或直接點選內容階層中的內容模組。
 
-   例如，行“允许我们访问……” 将在下图中进行选择，并在“内容”选项卡中选择相应的内容模块。
+   例如，在下圖中選取「允許我們存取……」一行，並在「內容」標籤中選取對應的內容模組。
 
-   通过点按内容中的突出显示选定模块( ![highlightselectedmodulesincontentccr](assets/highlightselectedmodulesincontentccr.png))，则在信件预览中点按相关文本、段落或数据字段时，您可以禁用或启用“内容”选项卡中的内容模块突出显示功能。
+   點選內容中的反白選取模組( ![highlightselectedmodulesincontentccr](assets/highlightselectedmodulesincontentccr.png))，您可以停用或啟用在信函預覽中點選相關文字、段落或資料欄位時，在「內容」標籤中反白標示內容模組的功能。
 
-   有关“创建通信”用户界面中各个模块可用的操作的更多信息，请参阅 [“创建通信”用户界面中可用的操作和信息](#actions-and-info-available-in-the-create-correspondence-content-tab).
+   如需建立通訊使用者介面中各種模組可用的動作的詳細資訊，請參閱 [建立通訊使用者介面中可用的動作和資訊](#actions-and-info-available-in-the-create-correspondence-content-tab).
 
-1. 要向信件中添加分页符，请点按要插入分页符的位置，然后选择在之前或之后分页符( ![pagebreakbeforeforeafter](assets/pagebreakbeforeafter.png))。
+1. 若要在信函中新增分頁符號，請點選您要插入分頁符號的位置，然後選取「在之前分頁符號」或「在之後分頁符號」 ( ![pagebreakbeforeafter](assets/pagebreakbeforeafter.png))。
 
-   在信件中插入显式分页符占位符。 要查看显式分页符对信件的影响，请参阅扁平化PDF预览。
+   信函中會插入明確的分頁符號預留位置。 若要檢視明確的分頁符號如何影響字母，請參閱平面化PDF預覽。
 
    >[!NOTE]
    >
-   >由于移动设备表单不支持分页，因此页眉和页脚只显示一次。 但是，您可以在布局（每页）中显式设置页眉和页脚，以在移动设备表单预览中显示。 此外，信件中的空白页面（如果有）不会显示在移动设备表单预览中。
+   >由於行動表單不支援分頁符號，頁首和頁尾只會出現一次。 不過，您可以在版面中明確設定頁首和頁尾（每頁），以顯示於行動表單預覽中。 此外，信函中的空白頁面（如果有的話）不會出現在行動表單預覽中。
 
-   ![显式分页符](assets/8_pagebreak.png)
+   ![明確的分頁符號](assets/8_pagebreak.png)
 
-1. 要将信件另存为草稿（稍后可继续处理），请点按另存为草稿。 要使用此选项，您的信件需要 [发布](../../forms/using/publishing-unpublishing-forms.md#publishanasset). 有关更多信息，请参阅 [保存草稿并提交信件实例](#savingdrafts).
+1. 若要將信函另存為草稿（稍後可繼續處理），請點選「另存為草稿」。 若要使用此選項，您的信件必須是 [已發佈](../../forms/using/publishing-unpublishing-forms.md#publishanasset). 如需詳細資訊，請參閱下的草稿例項 [儲存草稿並提交信件例項](#savingdrafts).
 
    ![saveasdraft](assets/saveasdraft.png)
 
-   将出现“起草信件名称”对话框，其中包含信件实例ID。 您可以选择编辑此ID。 记下信件ID，然后点按 **完成**. 您稍后可以将此ID用于 [重新加载草稿信件](submit-letter-topostprocess.md#reloaddraft).
+   草稿字母名稱對話方塊會出現，其中包含字母例項ID。 您可以選擇編輯此ID。 記下字母ID，然後點選 **完成**. 您稍後可以使用此識別碼來 [重新載入草稿字母](submit-letter-topostprocess.md#reloaddraft).
 
-1. 要将信件作为扁平化PDF预览，并在提交时准确显示布局和分页符，请点按( ![预览](assets/preview.png))预览。
+1. 若要以平面化PDF預覽信函，並在提交時具有完全相同的版面配置和分頁符號，請點選( ![預覽](assets/preview.png))預覽。
 
-   信件显示为扁平PDF。 扁平化PDF是信件的确切表示形式，因为它将使用正确的字体、断点和信件布局提交。
+   信件會顯示為平面化PDF。 平面化PDF是字母的精確表示，因為會以正確的字型、分行符號和字母版面配置來提交。
 
    >[!NOTE]
    >
-   >如果您使用的是Mozilla Firefox和HTML呈现类型，则要将信件预览为扁平PDF，请确保使用本机浏览器插件，而不是Acrobat插件。 要选择本机浏览器插件，请转到Mozilla Firefox的设置，并对于内容类型PDF，选择在Firefox中预览。
+   >如果您使用Mozilla Firefox和HTML轉譯型別，若要將信函預覽為平面化PDF，請務必使用原生瀏覽器外掛程式，而不是Acrobat外掛程式。 若要選取原生瀏覽器外掛程式，請前往Mozilla Firefox的設定，若要進行內容型別PDF，請選取「在Firefox中預覽」。
 
-1. 如果您发现扁平化PDF预览效果令人满意，请点按 **提交** 提交信。 或者，要更改信件，请点按 **退出预览** 返回到信件的“创建通信”UI预览以更改信件。 点按提交后，如果发布实例上启用了管理信件实例配置，则会生成提交信件实例。
+1. 如果您認為平面化PDF預覽令人滿意，請點選 **提交** 以提交信件。 或者，若要變更信件，請點選 **退出預覽** 返回信函的建立通訊UI預覽，以在信函中進行變更。 點選「提交」時，如果「發佈」執行個體上啟用了「管理信件執行個體」設定，則會產生提交信件執行個體。
 
-   有关更多信息，请参阅保存草稿和提交信件实例下的草稿实例。
+   如需詳細資訊，請參閱「儲存草稿與提交信件例項」下的「草稿例項」。
 
-   您还可以将信件另存为草稿，以便稍后更改信件。
+   您也可以將信函另存為草稿，以便稍後對信函進行變更。
 
-   进行所需更改后，您可以从HTML5预览提交信件，或再次点按预览以查看扁平化PDF输出。
+   進行必要的變更後，您可以從HTML5預覽提交信件，或再次點選「預覽」以檢閱平面化的PDF輸出。
 
-   有关HTML5表单与PDF forms之间差异的信息，请参阅 [HTML5表单和PDF forms之间的功能区别](../../forms/using/feature-differentiation-html5-forms-pdf-forms.md).
+   如需HTML5表單與PDF forms之間差異的詳細資訊，請參閱 [HTML5表單與PDF forms之間的功能差異](../../forms/using/feature-differentiation-html5-forms-pdf-forms.md).
 
-## 保存草稿并提交信件实例 {#savingdrafts}
+## 儲存草稿並提交信件例項 {#savingdrafts}
 
-在创建通信用户界面中呈现信件后，您可以将该信件保存为已查看。
+在「建立通訊」使用者介面中轉譯信函時，您可以將信函儲存為正在檢視。
 
-可以保存两种类型的信件实例：草稿实例和提交实例。
+有兩種型別的信件例項可以儲存：草稿例項和提交例項。
 
-* **草稿实例**:草稿实例会捕获您正在预览的信件的当前状态。 要保存草稿实例，请首先确保信件和信件引用的所有资产处于“已发布”状态。 有关发布信件的信息，请参阅 [发布资产](../../forms/using/publishing-unpublishing-forms.md#publishanasset). 您需要先发布信件，然后才能将其另存为草稿，因为当您发布信件时，会创建该信件、其从属资产和数据的版本。 信件的已发布版本无法由您或其他用户编辑，并且以后可以恢复，而不会与已发布版本出现任何意外差异。 您稍后可以返回到此实例，并从您离开的位置继续操作。
+* **草稿例項**：草稿例項會擷取您正在預覽的信件的目前狀態。 若要儲存草稿執行個體，請先確定信函及其引用的所有資產都處於「已發佈」狀態。 如需發佈信件的詳細資訊，請參閱 [發佈資產](../../forms/using/publishing-unpublishing-forms.md#publishanasset). 您必須先發佈信件，才能將其儲存為草稿，因為當您發佈信件時，會在該時間點建立信件的版本、其相依資產和資料。 您或其他使用者無法編輯信函的已發佈版本，且稍後可以還原，而不會與已發佈版本有任何非預期的差異。 您可以稍後返回此執行個體，並從您離開的地方繼續。
 
-* **提交实例**:提交实例会在提交时捕获信件的状态。 提交实例在信件实例经过后处理后，连同用户在“创建通信”用户界面中输入的数据一起存储该信件实例的PDF状态。
+* **提交執行個體**：提交執行個體會在提交時擷取字母的狀態。 提交執行個體會在信件執行個體經過後處理後，連同使用者在「建立通訊」使用者介面中輸入的資料一起，儲存信件執行個體的PDF狀態。
 
-只有在发布实例上查看信件时，才能保存此类实例。 默认情况下，“保存实例”处于关闭状态。 要启用信件实例的保存，请执行以下步骤。
+只有正在發佈執行個體上檢視信函時，才能儲存這類執行個體。 依預設，在執行個體上儲存是關閉的。 若要啟用儲存信件例項，請執行下列步驟。
 
-1. 在AEM中，使用以下URL为您的服务器打开Adobe Experience Manager Web控制台配置：https://&lt;server>:&lt;port>/&lt;contextpath>/system/console/configMgr
-1. 定位 **[!UICONTROL 通信管理配置]** 然后单击它。
-1. 检查 **[!UICONTROL 在发布时管理信件实例]** 配置，然后单击 **[!UICONTROL 保存]**.
+1. 在AEM中，使用下列URL開啟伺服器的Adobe Experience Manager Web Console設定： https://&lt;server>：&lt;port>/&lt;contextpath>/system/console/configMgr
+1. 尋找 **[!UICONTROL 通訊管理設定]** 並按一下。
+1. Check **[!UICONTROL 管理發布時的信件例項]** 設定，然後按一下 **[!UICONTROL 儲存]**.
 
-### 启用保存草稿功能 {#enable-save-draft-feature}
+### 啟用儲存草稿功能 {#enable-save-draft-feature}
 
-在发布信件或在发布实例上保存草稿之前，对创作和发布实例执行以下步骤以启用另存为草稿功能：
+在發佈執行個體上發佈信件或儲存草稿之前，請在作者和發佈執行個體上執行以下步驟，以啟用「另存為草稿」功能：
 
-的 *cq:lastReplicationAction*, *cq:lastreplaced* 和 *cq:lastReplicatedBy* 默认情况下，属性不会传递到发布实例。 为了继续 *cq:lastReplicationAction*, *cq:lastreplaced* 和 *cq:lastReplicatedBy* 要发布实例的属性，请禁用 [!UICONTROL com.day.cq.replication.impl.ReplicationPropertiesFilterFactory] 组件。 禁用组件：
+此 *cq：lastReplicationAction*， *cq：lastreplicated* 和 *cq：lastReplicatedBy* 依預設，屬性不會移轉至發佈執行個體。 為了結轉 *cq：lastReplicationAction*， *cq：lastreplicated* 和 *cq：lastReplicatedBy* 屬性以發佈執行個體，停用 [!UICONTROL com.day.cq.replication.impl.ReplicationPropertiesFilterFactory] 元件。 若要停用元件：
 
-1. 在创作实例中，打开Adobe Experience Manager Web控制台组件控制台。 默认URL为 `http://author-server:port/system/console/components`
+1. 在作者執行個體上，開啟Adobe Experience Manager Web主控台元件主控台。 預設URL為 `http://author-server:port/system/console/components`
 
-1. 搜索 **[!UICONTROL com.day.cq.replication.impl.ReplicationPropertiesFilterFactory]** 组件。
+1. 搜尋 **[!UICONTROL com.day.cq.replication.impl.ReplicationPropertiesFilterFactory]** 元件。
 
-1. 单击 ![“禁用”按钮](/help/forms/using/assets/enablebutton.png) 图标禁用 [!UICONTROL com.day.cq.replication.impl.ReplicationPropertiesFilterFactory] 组件。
+1. 按一下 ![停用按鈕](/help/forms/using/assets/enablebutton.png) 圖示以停用 [!UICONTROL com.day.cq.replication.impl.ReplicationPropertiesFilterFactory] 元件。
 
-![创作实例](/help/forms/using/assets/replicationproperties.png)
+![作者執行個體](/help/forms/using/assets/replicationproperties.png)
 
-要启用另存为草稿功能，请将现有URL替换为 [!UICONTROL VersionRestoreManager创作URL] 和创作实例的URL。 要替换URL，请执行以下操作：
+若要啟用另存為草稿功能，請在以下位置取代現有URL： [!UICONTROL VersionRestoreManager作者URL] ，並使用作者例項的URL。 取代URL：
 
-1. 在发布实例上，打开 [!UICONTROL Adode Manager Web控制台配置]. 默认URL为 `https://publish-server:port/system/console/configMgr`
+1. 在發佈執行個體上，開啟 [!UICONTROL Adode Manager Web主控台設定]. 預設URL為 `https://publish-server:port/system/console/configMgr`
 
-1. 搜索并打开 **[!UICONTROL 通信管理 — 创作实例版本还原配置]** 组件。
+1. 搜尋並開啟 **[!UICONTROL 通訊管理 — 作者執行個體版本還原設定]** 元件。
 
-1. 找到 **[!UICONTROL VersionRestoreManager创作URL]** 字段，并指定创作实例的URL。
+1. 找到 **[!UICONTROL VersionRestoreManager作者URL]** 欄位並指定作者例項的URL。
 
 1. 单击“保存”。
 
 ![发布实例](/help/forms/using/assets/correspondencemanagement.png)
 
-打开信件实例的保存时，您可以选择在何处保存信件实例。 保存信件实例有两个选项：本地保存或远程保存。
+開啟儲存信函例項時，您可以選擇儲存信函例項的位置。 儲存信件例項有兩個選項：本機儲存或遠端儲存。
 
-### 本地保存 {#local-save}
+### 本機儲存 {#local-save}
 
-信件实例保存在发布实例上，并在创作实例上反向复制。
+信件執行個體會儲存在發佈執行個體上，並在製作執行個體上反向復寫。
 
-### 远程保存 {#remote-save}
+### 遠端儲存 {#remote-save}
 
-如果用户担心在发布实例上保存用户数据，则他们可以使用此选项，通常情况下，该选项会位于公司防火墙之外。 打开远程保存后，信件实例不会保存在发布实例上，而是会在通过LiveCycle客户端SDK配置指定的处理作者上远程保存。
+此選項適用於擔心在發佈執行個體上儲存使用者資料的人，這些執行個體通常位於公司防火牆之外。 開啟遠端儲存時，信件執行個體不會儲存在發佈執行個體上，但會遠端儲存在透過LiveCycle使用者端SDK設定指定的處理作者上。
 
-#### 启用远程保存 {#enable-remote-save}
+#### 啟用遠端儲存 {#enable-remote-save}
 
-1. 在AEM中，使用以下URL为您的服务器打开Adobe Experience Manager Web控制台配置： `https://<server>:<port>/<contextpath>/system/console/configMgr`
-1. 搜索 **[!UICONTROL 通信管理配置]** 然后单击它。
-1. 找到 **[!UICONTROL 远程保存]** 配置，检查它，然后单击 **[!UICONTROL 保存]**.
+1. 在AEM中，使用下列URL開啟伺服器的Adobe Experience Manager Web主控台設定： `https://<server>:<port>/<contextpath>/system/console/configMgr`
+1. 搜尋 **[!UICONTROL 通訊管理設定]** 並按一下。
+1. 找到 **[!UICONTROL 遠端儲存]** 設定、檢查並點按 **[!UICONTROL 儲存]**.
 
-#### 指定处理创作设置 {#specify-processing-author-settings}
+#### 指定處理作者設定 {#specify-processing-author-settings}
 
-1. 在AEM中，使用以下URL为您的服务器打开Adobe Experience Manager Web控制台配置： `https://<server>:<port>/system/console/configMgr`
+1. 在AEM中，使用下列URL開啟伺服器的Adobe Experience Manager Web主控台設定： `https://<server>:<port>/system/console/configMgr`
 
-   ![Adobe Experience Manager Web控制台配置](assets/2configmanager.png)
+   ![Adobe Experience Manager Web主控台設定](assets/2configmanager.png)
 
-1. 在此页面中，找到AdobeLiveCycle客户端SDK配置，并单击以将其展开。
+1. 在此頁面中，找到AdobeLiveCycle使用者端SDK設定，然後按一下以展開它。
 
-1. 在处理服务器URL中，输入LiveCycle服务器的名称，提供登录信息，然后单击 **保存**.
+1. 在處理伺服器URL中，輸入LiveCycle伺服器的名稱、提供登入資訊，然後按一下 **儲存**.
 
-   ![输入LiveCycle服务器的名称和登录信息](assets/3configmanager.png)
+   ![輸入LiveCycle伺服器的名稱和登入資訊](assets/3configmanager.png)
 
-1. 如有必要，请设置您要用来访问服务器的用户名和密码。
+1. 必要時，請設定您要用來存取伺服器的使用者名稱和密碼。
 
-#### 附件投放 {#attachmentdelivery}
+#### 附件傳遞 {#attachmentdelivery}
 
-* 信件附件在PDF中是可用的后处理流程，该流程在信件提交后创建。
-* 当使用服务器端API作为交互式或非交互式PDF呈现信件时，呈现的PDF包含附件作为PDF附件。
-* 当使用“创建通信”用户界面将与信件模板关联的后处理作为“提交”或“完成通信”操作的一部分加载时，附件将作为“列表”传递&lt;com.adobe.idp.document> 在AttachmentDocs参数中。
-* 即装即用的投放机制（如电子邮件和打印）也会发送附件，并PDF生成的通信。
+* 信函附件可在PDF中後處理，在信函提交後建立。
+* 使用伺服器端API以互動式或非互動式PDF轉譯信函時，轉譯的PDF會包含附件作為PDF附件。
+* 當使用「建立通訊」使用者介面將與信件範本相關聯的貼文處理載入為「提交」或「完成通訊」操作的一部分時，附件會作為「清單」傳遞&lt;com.adobe.idp.document> 在AttachmentDocs引數中。
+* 現成可用的傳遞機制（例如電子郵件和列印）也會傳遞附件以及產生的信件的PDF。
 
-## 信件预览的呈现模式：移动设备表单预览和PDF预览 {#rendition-modes-of-letter-preview-mobile-forms-preview-and-pdf-preview}
+## 信件預覽的轉譯模式：行動表單預覽和PDF預覽 {#rendition-modes-of-letter-preview-mobile-forms-preview-and-pdf-preview}
 
-AEM Forms通信管理在创建通信UI中将信件显示为HTML。 但是，通信管理仍支持还原到PDF预览，而不是HTML预览。 有关在HTML模式和预览模式之间切换的更多信息，请参阅 [更改信件的呈现模式](#changerenditionmode).
+AEM Forms Correspondence Management在建立通訊UI中將信件顯示為HTML。 不過，「通訊管理」仍支援恢復為PDF預覽，而不是HTML預覽。 如需有關在預覽的HTML和PDF模式之間切換的詳細資訊，請參閱 [變更信件的轉譯模式](#changerenditionmode).
 
-以下是HTML和PDF预览中提供的优势和功能。
+以下是HTML和PDF預覽中可用的優點和功能。
 
-**移动表单/HTML预览的好处**
+**行動表單/HTML預覽的優點**
 
-* **点按数据字段值以突出显示相应的数据字段**:在创建通信用户界面中，您可以点按信件中的数据字段值，以在“数据”选项卡中突出显示相应的数据字段。 有关更多信息，请参阅 [输入数据](#enterdata).
+* **點選資料欄位值以反白顯示對應的資料欄位**：在建立通訊使用者介面中，您可以點選信函中的資料欄位值，以反白顯示「資料」索引標籤中的對應資料欄位。 如需詳細資訊，請參閱 [輸入資料](#enterdata).
 
-* **浏览器支持**:浏览器逐渐取消对NPAPI的支持，这会影响信件的PDF预览。 HTML/移动设备表单信件预览不受此影响。
-* **突出显示信件中的可编辑内容**:在“创建通信”用户界面中，您可以点按高亮显示可编辑内容，以灰色突出显示信件中的所有可编辑内容。 有关更多信息，请参阅 [管理内容](#managecontent).
+* **瀏覽器支援**：瀏覽器會逐步撤銷對NPAPI的支援，而這會影響信件的PDF預覽。 信件的HTML/行動表單預覽不受此影響。
+* **反白顯示字母中的可編輯內容**：在「建立通訊」使用者介面中，您可以點選「反白可編輯內容」 ，以灰色反白信函中的所有可編輯內容。 如需詳細資訊，請參閱 [管理內容](#managecontent).
 
 `<li>` `<li>Benefits of HTML preview  <ul>   <li>Right to left</li>   <li>NPAPI</li>   <li>Highlight Editable Content</li>  </ul> </li>` `<li>Benefits of PDF preview  <ul>   <li>Page Break</li>   <li>Final Preview</li>  </ul> </li>`
-`<li>` `<li>Benefits of HTML preview  <ul>   <li>Right to left</li>   <li>NPAPI</li>   <li>Highlight Editable Content</li>  </ul> </li>` `<li>Benefits of PDF preview  <ul>   <li>Page Break</li>   <li>Final Preview</li>  </ul> </li>`  **PDF预览的好处**
+`<li>` `<li>Benefits of HTML preview  <ul>   <li>Right to left</li>   <li>NPAPI</li>   <li>Highlight Editable Content</li>  </ul> </li>` `<li>Benefits of PDF preview  <ul>   <li>Page Break</li>   <li>Final Preview</li>  </ul> </li>`  **PDF預覽的優點**
 
-* **分页符**:在PDF预览中，您可以准确查看信件中分页对其输出的影响。
-* **最终预览**:在PDF预览中，您可以查看信件在其输出中显示的确切格式和外观。
+* **分頁符號**：在PDF預覽中，您可以檢視分頁字母對其輸出的確切影響。
+* **最終預覽**：在PDF預覽中，您可以檢視字母的確切格式和外觀，因為字母會出現在輸出中。
 
-有关PDF forms中脚本支持的信息，请参阅 [脚本支持](https://help.adobe.com/en_US/livecycle/11.0/ScriptingSupport/index.html).
+如需PDF forms中指令碼支援的相關資訊，請參閱 [指令碼支援](https://help.adobe.com/en_US/livecycle/11.0/ScriptingSupport/index.html).
 
-有关HTML5表单中脚本支持的更多信息，请参阅 [HTML5表单的脚本支持](/help/forms/using/scripting-support.md).
+如需HTML5表單中指令碼支援的詳細資訊，請參閱 [HTML5表單的指令碼支援](/help/forms/using/scripting-support.md).
 
-### 更改信件的呈现模式 {#changerenditionmode}
+### 變更信件的轉譯模式 {#changerenditionmode}
 
-默认情况下，创建通信UI使用HTML或移动表单来渲染信件预览。 移动设备表单预览在任何浏览器中呈现时均无问题，因为它使用浏览器的本机插件，并且不需要任何其他插件。 您可以将信件预览模式更改为PDF。 但是，浏览器限制可能会为信件的交互式PDF预览的不同功能产生问题。
+依預設，建立通訊UI使用HTML或行動表單來呈現信件預覽。 行動表單預覽不會在任何瀏覽器中呈現問題，因為它使用瀏覽器的原生外掛程式，不需要其他外掛程式。 您可以將字母預覽模式變更為PDF。 但是，瀏覽器限制可能會造成信函的互動PDF預覽的不同功能問題。
 
-有关与信件预览兼容的浏览器的更多信息，请参阅 [NPAPI浏览器插件的停用及其影响](https://helpx.adobe.com/acrobat/kb/change-in-support-for-acrobat-and-reader-plug-ins-in-modern-web-.html).
+如需瀏覽器與信函預覽相容性的詳細資訊，請參閱 [終止NPAPI瀏覽器外掛程式及其影響](https://helpx.adobe.com/acrobat/kb/change-in-support-for-acrobat-and-reader-plug-ins-in-modern-web-.html).
 
-要更改信件的预览模式，请完成以下步骤：
+若要變更信函的預覽模式，請完成下列步驟：
 
-1. 转到 `https://[system]:'port'/system/console/configMgr` 并且（如有必要）以管理员身份登录。
-1. 转到 **[!UICONTROL 通信管理配置]** > **[!UICONTROL 演绎版类型]** 选择 **HTML呈现** （默认）或 **PDF呈现**.
+1. 前往 `https://[system]:'port'/system/console/configMgr` 並視需要以管理員身分登入。
+1. 前往 **[!UICONTROL 通訊管理設定]** > **[!UICONTROL 轉譯型別]** 並選取 **HTML轉譯** （預設）或 **PDF轉譯**.
 1. 单击“**[!UICONTROL 保存]**”。

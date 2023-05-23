@@ -1,7 +1,7 @@
 ---
-title: 应用程序模板和组件
+title: 應用程式範本和元件
 seo-title: App Templates and Components
-description: 关注此页面，了解应用程序模板和组件。 它提供有关模板结构的详细信息。
+description: 請依照本頁面的說明了解應用程式範本和元件。 它提供有關範本結構的詳細資訊。
 seo-description: Follow this page to learn about App Templates and Components. It provides detailed information on the structure of templates.
 uuid: ba2fd91b-de5a-4f39-a976-5455f9983669
 contentOwner: User
@@ -17,64 +17,64 @@ ht-degree: 1%
 
 ---
 
-# 应用程序模板和组件{#app-templates-and-components}
+# 應用程式範本和元件{#app-templates-and-components}
 
 >[!NOTE]
 >
->Adobe建议对需要基于单页应用程序框架的客户端渲染（例如React）的项目使用SPA编辑器。 [了解更多](/help/sites-developing/spa-overview.md)。
+>Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）專案使用SPA編輯器。 [了解详情](/help/sites-developing/spa-overview.md).
 
-模板用于创建页面，并定义可以在所选范围内使用的组件。 模板是一种节点层次结构，其结构与要创建页面的结构相同，但没有任何实际内容。
+範本可用來建立頁面，並定義可在所選範圍內使用的元件。 範本是節點的階層，其結構與要建立的頁面相同，但沒有任何實際內容。
 
-每个模板都会为您提供一系列可供使用的组件。
+每個範本都會提供您一系列可供使用的元件。
 
-* 模板由以下项构建： [组件](/help/sites-developing/components.md)；
-* 组件使用和允许对构件的访问，构件和构件用于呈现内容。
-
->[!NOTE]
->
->要了解如何使用CRXDE Lite开发AEM应用程序，请参阅 [使用CRXDE Lite进行开发](/help/sites-developing/developing-with-crxde-lite.md).
-
-模板是页面的基础。
-
-要创建页面，必须复制模板（节点树） **/apps/&lt;myapp>/templates/&lt;mytemplate>**)中的相应位置：如果使用以下方式创建页面，则会发生这种情况 **网站** 选项卡。
-
-此复制操作还会为页面提供其初始内容（通常为顶级内容）和属性sling：resourceType，用于呈现页面的页面组件的路径（子节点jcr：content中的所有内容）。
-
-## 模板的结构 {#structure-of-a-template}
-
-需要考虑两个方面：
-
-* 模板本身的结构
-* 使用模板时生成的内容的结构
-
-在类型节点下创建模板 **cq：Template**.
-
-可以设置各种属性，特别是：
-
-* **jcr：title**  — 模板的标题；在创建页面时显示在对话框中。
-* **jcr：description**  — 模板的描述；在创建页面时显示在对话框中。
-
-此节点包含 *jcr：content (cq：PageContent)* 用作结果页面的内容节点基础的节点；此参考使用 *sling：resourceType*，用于呈现新页面的实际内容的组件。
+* 範本的建置方式 [元件](/help/sites-developing/components.md)；
+* 元件會使用並允許存取Widget，而這些元件會用於轉譯內容。
 
 >[!NOTE]
 >
->要了解AEM中模板和组件的基础知识，请参阅以下资源：
+>若要瞭解如何使用CRXDE Lite開發您的AEM應用程式，請參閱 [使用CRXDE Lite開發](/help/sites-developing/developing-with-crxde-lite.md).
+
+範本是頁面的基礎。
+
+若要建立頁面，必須複製範本（節點樹） **/apps/&lt;myapp>/templates/&lt;mytemplate>**)中的對應位置：如果頁面是使用 **網站** 標籤。
+
+此複製動作也會提供頁面的初始內容（通常是僅限頂層內容）和屬性sling：resourceType，也就是用來轉譯頁面的頁面元件路徑（子節點jcr：content中的所有專案）。
+
+## 範本的結構 {#structure-of-a-template}
+
+需要考慮兩個方面：
+
+* 範本本身的結構
+* 使用範本時產生的內容結構
+
+範本會在型別的節點下建立 **cq：Template**.
+
+您可以設定各種屬性，特別是：
+
+* **jcr：title**  — 範本的標題；建立頁面時顯示在對話方塊中。
+* **jcr：description**  — 範本的說明；建立頁面時顯示在對話方塊中。
+
+此節點包含 *jcr：content (cq：PageContent)* 用作結果頁面內容節點基礎的節點；此參考使用 *sling：resourceType*，此元件用於呈現新頁面的實際內容。
+
+>[!NOTE]
+>
+>若要瞭解AEM範本和元件的基本知識，請參閱下列資源：
 >
 >* [模板](/help/sites-developing/templates.md)
 >* [组件](/help/sites-developing/components.md)
 >
 
 
-在基本了解模板和组件后，请参阅以下资源：
+在您對「範本」和「元件」有了基本瞭解後，請參閱下列資源：
 
-* [创建和添加模板和组件](/help/mobile/mobile-ondemand-app-templates.md)
-* [使用内容属性导出内容](/help/mobile/on-demand-content-properties-exporting.md)
+* [建立和新增範本和元件](/help/mobile/mobile-ondemand-app-templates.md)
+* [使用內容屬性匯出內容](/help/mobile/on-demand-content-properties-exporting.md)
 * [最佳实践](/help/mobile/best-practices-aem-mobile.md)
-* [开发AEM Mobile内容服务](/help/mobile/developing-content-services.md)
+* [開發AEM Mobile內容服務](/help/mobile/developing-content-services.md)
 
 ### 其他资源 {#additional-resources}
 
-要了解有关移动应用程序的其他主题，请参阅以下链接：
+若要瞭解行動應用程式的其他主題，請參閱下列連結：
 
-* [通过内容同步移动设备](/help/mobile/mobile-ondemand-contentsync.md)
-* [测试移动应用程序](/help/mobile/develop-mobile-apps-testing.md)
+* [透過內容同步處理行動](/help/mobile/mobile-ondemand-contentsync.md)
+* [測試行動應用程式](/help/mobile/develop-mobile-apps-testing.md)

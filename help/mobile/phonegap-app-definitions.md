@@ -1,7 +1,7 @@
 ---
-title: 应用程序定义
+title: 應用程式定義
 seo-title: App definitions
-description: 按照本页面了解应用程序定义，通过应用程序定义，可以确定哪些空间和其他配置适合应用程序。 应用程序定义允许用户添加空间，而无需重新编译应用程序。
+description: 請依照本頁面的說明了解應用程式定義，此定義是識別哪些空間和其他設定適合應用程式的方法。 應用程式定義可讓使用者新增空間，而不需重新編譯應用程式。
 seo-description: Follow this page to learn about app definitions, that are a way to identify what spaces and other configurations are appropriate for the app. App definitions allows the user to add space, without having to recompile the app.
 uuid: bdb4063b-1597-47e2-96d4-c4cc7c78c3d7
 contentOwner: User
@@ -17,41 +17,41 @@ ht-degree: 3%
 
 ---
 
-# 应用程序定义{#app-definitions}
+# 應用程式定義{#app-definitions}
 
 >[!NOTE]
 >
->Adobe建议对需要基于单页应用程序框架的客户端渲染（例如React）的项目使用SPA编辑器。 [了解更多](/help/sites-developing/spa-overview.md)。
+>Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）專案使用SPA編輯器。 [了解详情](/help/sites-developing/spa-overview.md).
 
-应用程序定义是一种确定哪些空间和其他配置适合应用程序的方法。 应用程序定义允许用户添加空间，而无需重新编译应用程序。 应用程序定义已更新，它将包含任何新空间的信息。
+應用程式定義可讓您識別哪些空間和其他設定適合應用程式。 應用程式定義可讓使用者新增空間，而不需重新編譯應用程式。 應用程式定義已更新，其中會包含任何新空間的資訊。
 
 >[!NOTE]
 >
->应用程序定义绑定到应用程序，因此需要在AEM Mobile应用程序控制台中创建应用程序。
+>應用程式定義會繫結至應用程式，因此需要在AEM Mobile應用程式主控台中建立應用程式。
 
-## 创建新应用程序定义 {#creating-a-new-app-definition}
+## 建立新的應用程式定義 {#creating-a-new-app-definition}
 
-1. 选择 **移动设备** 从AEM导航控制台中。
+1. 選擇 **行動** 從AEM導覽主控台。
 
    ![chlimage_1-170](assets/chlimage_1-170.png)
 
-1. 选择 **应用程序** 起始日期 **移动设备** 并单击 **创建。**
+1. 選擇 **應用程式** 從 **行動** 並按一下 **建立。**
 
-   选择 **应用程序** ，并输入详细信息以创建新应用程序。
+   選擇 **應用程式** 並輸入詳細資訊，以建立您的新應用程式。
 
    ![chlimage_1-11](assets/chlimage_1-11.gif)
 
 ### 后续步骤 {#the-next-steps}
 
-在您熟悉“应用程序定义”后，可以进一步了解以下创作资源：
+在您熟悉「應用程式定義」後，可進一步瞭解下列撰寫資源：
 
-* [导入现有的混合应用程序](/help/mobile/phonegap-adding-content-to-imported-app.md)
-* [使用创建应用程序向导创建新应用程序](/help/mobile/phonegap-create-new-app.md)
+* [匯入現有的混合式應用程式](/help/mobile/phonegap-adding-content-to-imported-app.md)
+* [使用建立應用程式精靈建立新應用程式](/help/mobile/phonegap-create-new-app.md)
 * [Content Services](/help/mobile/develop-content-as-a-service.md)
 
 ## 其他资源 {#additional-resources}
 
-要了解管理员和开发人员的角色和职责，请参阅以下资源：
+若要瞭解管理員和開發人員的角色和責任，請參閱下列資源：
 
-* [使用AEM开发Adobe PhoneGap Enterprise](/help/mobile/developing-in-phonegap.md)
-* [使用AEM管理Adobe PhoneGap Enterprise的内容](/help/mobile/administer-phonegap.md)
+* [使用AEM為Adobe PhoneGap Enterprise開發](/help/mobile/developing-in-phonegap.md)
+* [使用AEM管理Adobe PhoneGap Enterprise的內容](/help/mobile/administer-phonegap.md)

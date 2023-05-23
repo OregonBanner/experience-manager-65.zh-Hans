@@ -1,7 +1,7 @@
 ---
-title: 处理AEM Foundation的GDPR请求
+title: 處理AEM Foundation的GDPR請求
 seo-title: Handling GDPR Requests for the AEM Foundation
-description: 处理AEM Foundation的GDPR请求
+description: 處理AEM Foundation的GDPR請求
 seo-description: null
 uuid: d470061c-bbcf-4d86-9ce3-6f24a764ca39
 contentOwner: sarchiz
@@ -14,21 +14,21 @@ ht-degree: 53%
 
 ---
 
-# 处理AEM Foundation的GDPR请求{#handling-gdpr-requests-for-the-aem-foundation}
+# 處理AEM Foundation的GDPR請求{#handling-gdpr-requests-for-the-aem-foundation}
 
 >[!IMPORTANT]
 >
->以下部分使用GDPR作为示例，但所涵盖的详细信息适用于所有数据保护和隐私法规；例如GDPR、CCPA等。
+>以下各節以GDPR為例，但說明的詳細資料適用於所有資料保護和隱私權法規，例如GDPR、CCPA等。
 
-## AEM Foundation GDPR支持 {#aem-foundation-gdpr-support}
+## AEM Foundation GDPR支援 {#aem-foundation-gdpr-support}
 
-在AEM Foundation级别，存储的个人数据是用户配置文件。 因此，本文中的信息主要介绍如何访问和删除用户配置文件，以及分别处理GDPR访问和删除请求。
+在AEM Foundation層級，儲存的個人資料是使用者設定檔。 因此，本文資訊主要說明如何存取和刪除使用者設定檔，以及分別處理GDPR存取和刪除請求。
 
 ## 访客用户配置文件 {#accessing-a-user-profile}
 
 ### 手动步骤 {#manual-steps}
 
-1. 通过浏览至，打开用户管理控制台 **[!UICONTROL 设置 — 安全 — 用户]** 或直接浏览到 `https://<serveraddress>:<serverport>/libs/granite/security/content/useradmin.html`
+1. 瀏覽至，開啟「使用者管理」主控台 **[!UICONTROL 設定 — 安全性 — 使用者]** 或直接瀏覽至 `https://<serveraddress>:<serverport>/libs/granite/security/content/useradmin.html`
 
    ![useradmin2](assets/useradmin2.png)
 
@@ -59,7 +59,7 @@ curl -g -u user:password 'http://localhost:4502/libs/granite/security/search/aut
      {"authorizables":[{"type":"user","authorizableId_xss":"cavery","authorizableId":"cavery","name_xss":"Carlene Avery","name":"Carlene Avery","home":"/home/users/we-retail/DSCP-athB1NYLBXvdTuN"}],"total":1}
 ```
 
-*正在检索用户数据*
+*正在擷取使用者資料*
 
 使用从上述命令返回的 JSON 负载的 home 属性中的节点路径：
 
@@ -82,28 +82,28 @@ curl -u user:password  'http://localhost:4502/home/users/we-retail/DSCP-athB1NYL
 
    ![userdisable](assets/userdisable.png)
 
-1. 最后，确认操作：
+1. 最後，確認動作：
 
    ![image2018-2-6_1-40-58](assets/image2018-2-6_1-40-58.png)
 
-   然后，用户界面将通过灰显配置文件卡并添加锁定来指示用户已被停用：
+   然後，使用者介面將變成灰色並在設定檔卡新增鎖定，以指出使用者已停用：
 
    ![disableduser](assets/disableduser.png)
 
 ### 删除用户配置文件信息 {#delete-user-profile-information}
 
-1. 登录到CRXDE Lite，然后搜索 `[!UICONTROL userId]`：
+1. 登入CRXDE Lite，然後搜尋 `[!UICONTROL userId]`：
 
    ![image2018-2-6_1-57-11](assets/image2018-2-6_1-57-11.png)
 
-1. 打开位于下的用户节点 `[!UICONTROL /home/users]` 默认情况下：
+1. 開啟位於下的使用者節點 `[!UICONTROL /home/users]` 依預設：
 
    ![image2018-2-6_1-58-25](assets/image2018-2-6_1-58-25.png)
 
-1. 删除配置文件节点及其所有子节点。 配置文件节点有两种格式，具体取决于AEM版本：
+1. 刪除設定檔節點及其所有子節點。 設定檔節點有兩種格式，取決於AEM版本：
 
-   1. 下的默认专用配置文件 `[!UICONTROL /profile]`
-   1. `[!UICONTROL /profiles]`，适用于使用AEM 6.5创建的新配置文件。
+   1. 下的預設私人設定檔 `[!UICONTROL /profile]`
+   1. `[!UICONTROL /profiles]`，適用於使用AEM 6.5建立的新設定檔。
 
    ![image2018-2-6_2-0-4](assets/image2018-2-6_2-0-4.png)
 
@@ -111,14 +111,14 @@ curl -u user:password  'http://localhost:4502/home/users/we-retail/DSCP-athB1NYL
 
 以下过程使用 `curl` 命令行工具说明如何使用 **[!UICONTROL cavery]** `userId` 禁用用户，并删除默认位置提供的配置文件。
 
-* *发现用户主页*
+* *探索使用者首頁*
 
 ```shell
 curl -g -u user:password 'http://localhost:4502/libs/granite/security/search/authorizables.json?query={"condition":[{"named":"cavery"}]}'
      {"authorizables":[{"type":"user","authorizableId_xss":"cavery","authorizableId":"cavery","name_xss":"Carlene Avery","name":"Carlene Avery","home":"/home/users/we-retail/DSCP-athB1NYLBXvdTuN"}],"total":1}
 ```
 
-* *禁用用户*
+* *停用使用者*
 
 使用从上述命令返回的 JSON 负载的 home 属性中的节点路径：
 

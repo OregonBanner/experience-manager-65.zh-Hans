@@ -1,7 +1,7 @@
 ---
-title: 使用Document Security网页
+title: 使用Document Security網頁
 seo-title: Using the document security webpages
-description: 了解如何登录、导航和使用Document Security网页。
+description: 瞭解如何登入、瀏覽及使用Document Security網頁。
 seo-description: Learn how you can login, navigate and use the document security web pages.
 uuid: b4863343-cda5-474a-a101-a20e39b1f8c7
 contentOwner: admin
@@ -18,91 +18,91 @@ ht-degree: 0%
 
 ---
 
-# 使用Document Security网页 {#using-the-document-security-webpages}
+# 使用Document Security網頁 {#using-the-document-security-webpages}
 
-用户和管理员可使用Document Security网页创建和管理策略、管理受策略保护的文档以及监控与受策略保护文档关联的事件。 管理员还可以使用这些网页创建策略集和指定策略集协调器，配置Document Security默认设置，管理受邀的用户注册和帐户，以及监视和管理服务器、策略、用户和文档相关的事件。
-
->[!NOTE]
->
->您还可以使用您的用户登录帐户通过Acrobat和其他客户端应用程序登录到Document Security。 (请参阅 [设置从客户端应用程序访问Document Security](using-document-security-web-pages.md#setting-up-access-to-document-security-from-client-applications).)
-
-要打开网页，您需要一个浏览器以及URL和您的登录信息，以确保Document Security。 用户的URL与管理员的URL不同。
-
-由于Document Security引用您组织的现有目录以获取用户信息，因此Document Security登录信息可能与您用于登录网络和其他应用程序的信息相同。 有关帐户信息，请咨询您的系统管理员或管理员。
-
-要以管理员身份登录，您需要为您分配管理员角色。 您可以使用在安装过程中创建的默认超级管理员帐户。
-
-## 登录网页 {#log-in-to-the-web-pages}
-
-要使用浏览器登录到网页，您需要具有Document Security URL和帐户。 用户的URL与管理员的URL不同。 管理员还可以登录到用户页面以创建策略。
-
-如果您有权访问多个document security安装，则需要要访问的document security实例的URL。 如果您没有此信息，请咨询您的管理员。 用户页面的默认URL为 `https://[host]:[port]/edc`. 在某些情况下，可能不需要端口号。 请咨询您的管理员以了解详细信息。
-
-管理员的默认URL为 `https://[host]:[port]/adminui`.
-
-对于管理员，会在安装期间创建默认的超级管理员帐户。 您可以使用此帐户在首次安装Document Security时登录。
+使用者和管理員可使用Document Security網頁來建立和管理原則、管理受原則保護的檔案，以及監控與受原則保護檔案相關聯的事件。 管理員也可以使用這些網頁來建立原則集並指定原則集協調員、設定Document Security預設設定、管理受邀使用者註冊和帳戶，以及監視和管理伺服器、原則、使用者和檔案相關事件。
 
 >[!NOTE]
 >
->您还可以从Acrobat和其他客户端应用程序访问网页。 有关详细信息，请参阅Acrobat帮助或相应的Acrobat Reader DC扩展帮助。
+>您也可以使用您的使用者登入帳戶，透過Acrobat和其他使用者端應用程式登入Document Security。 (請參閱 [從使用者端應用程式設定檔案安全性的存取權](using-document-security-web-pages.md#setting-up-access-to-document-security-from-client-applications).)
 
-1. 在浏览器中键入URL：
+若要開啟網頁，您需要瀏覽器和URL以及您的Document Security登入資訊。 使用者的URL與管理員的URL不同。
 
-   文档安全URL： `https://[host]:[port]/edc`
+由於Document Security會參考您組織的現有目錄以取得使用者資訊，因此您的Document Security登入資訊可能與您用來登入網路和其他應用程式的資訊相同。 請洽詢您的系統管理員或管理員，以取得您的帳戶資訊。
 
-   或管理控制台URL： `https://[host]:[port]/adminui`
+若要以管理員身分登入，您必須擁有指派給您的管理員角色。 您可以使用在安裝過程中建立的預設超級管理員帳戶。
 
-1. 在登录窗口中，键入用户名和密码，然后单击“确定”。
-1. 在Administration Console中，单击服务> Document Security。
+## 登入網頁 {#log-in-to-the-web-pages}
 
->[!NOTE]
->
->使用网页时，请避免使用浏览器按钮（如“返回”按钮、“刷新”按钮以及“后退”和“前进”箭头），因为此操作可能会导致意外的数据捕获和数据显示问题。
+若要使用瀏覽器登入網頁，您需要Document Security URL和帳戶。 使用者的URL與管理員的URL不同。 管理員也可以登入使用者頁面來建立原則。
 
-## 浏览网页 {#navigating-the-web-pages}
+如果您有權存取一個以上的Document Security安裝，則需要您要存取的Document Security執行個體的URL。 如果您沒有此資訊，請洽詢您的管理員。 使用者頁面的預設URL為 `https://[host]:[port]/edc`. 某些情況下可能不需要連線埠號碼。 請向您的管理員要求詳細資料。
 
-登录用户网页时，您将看到指向“策略”、“文档”和“事件”用户页面的链接。
+管理員的預設URL為 `https://[host]:[port]/adminui`.
 
-在登录到管理控制台并导航到Document Security主页时，您还可能会看到一个或多个其他链接，一个用于“配置”页面，一个用于“受邀用户”和“本地用户”页面。 只有在启用了受邀用户注册的情况下，才会显示“受邀用户和本地用户”页面。
-
-使用这些链接可访问各种页面，您可以在其中创建和管理策略和受策略保护的文档。
-
-**显示页面**
-
-1. 单击页面的名称；例如，单击“策略”。
-
-**返回上一页**
-
-1. 单击要返回到的页面的页面顶部的导航链接。
-
-**刷新页面上的数据列表**
-
-1. 在主页上，单击要刷新页面的链接。
+對於管理員，會在安裝期間建立預設的超級管理員帳戶。 首次安裝Document Security時，您可以使用此帳戶登入。
 
 >[!NOTE]
 >
->处理网页时，请避免使用浏览器按钮（如“返回”按钮、“刷新”按钮以及“后退”和“前进”箭头），因为此操作可能会导致不必要的数据捕获和数据显示问题。
+>您也可以從Acrobat和其他使用者端應用程式存取網頁。 如需詳細資訊，請參閱Acrobat說明或適當的Acrobat Reader DC擴充功能說明。
 
-## 设置从客户端应用程序访问Document Security {#setting-up-access-to-document-security-from-client-applications}
+1. 在瀏覽器中輸入URL：
 
-客户端应用程序必须设置为连接到Document Security以保护文档，打开受策略保护的文档，并连接到Document Security网页。 参见 *Acrobat帮助* 或相应的 *RightsManagementExtension帮助* 有关在客户端应用程序中配置连接的信息。
+   Document Security URL： `https://[host]:[port]/edc`
 
-文档安全通过安全套接字层(SSL)访问。 您必须在证书存储中安装网站的证书，以便可以通过客户端应用程序访问Document Security。
+   或管理主控台URL： `https://[host]:[port]/adminui`
+
+1. 在登入視窗中，輸入您的使用者名稱和密碼，然後按一下「確定」。
+1. 在「管理主控台」中，按一下「服務> Document Security」。
+
+>[!NOTE]
+>
+>使用網頁時，請避免使用瀏覽器按鈕（例如「上一步」按鈕、「重新整理」按鈕以及後退和前進箭頭），因為此動作可能會導致不必要的資料擷取和資料顯示問題。
+
+## 瀏覽網頁 {#navigating-the-web-pages}
+
+當您登入使用者網頁時，您將會看到指向「原則」、「檔案」和「事件」使用者頁面的連結。
+
+當您登入管理控制檯並導覽至Document Security首頁面時，您也可能看到一或兩個其他連結，一個用於「設定」頁面，另一個用於「受邀的使用者」和「本機使用者」頁面。 只有啟用受邀使用者註冊時，才會顯示「受邀和本機使用者」頁面。
+
+使用這些連結來存取各種頁面，您可以在其中建立和管理原則及受原則保護的檔案。
+
+**顯示頁面**
+
+1. 按一下頁面的名稱，例如按一下「原則」。
+
+**返回上一頁**
+
+1. 按一下頁面頂端的導覽連結，即可前往您要回溯的頁面。
+
+**重新整理頁面上的資料清單**
+
+1. 在首頁面上，按一下您要重新整理之頁面的連結。
+
+>[!NOTE]
+>
+>使用網頁時，請避免使用瀏覽器按鈕（例如「上一步」按鈕、「重新整理」按鈕以及「後退」和「前進」箭頭），因為此動作可能會導致不必要的資料擷取和資料顯示問題。
+
+## 從使用者端應用程式設定檔案安全性的存取權 {#setting-up-access-to-document-security-from-client-applications}
+
+使用者端應用程式必須設定為連線至Document Security以保護檔案、開啟受原則保護的檔案，以及連線至Document Security網頁。 另請參閱 *Acrobat說明* 或適當的 *RightsManagement Extension說明* 以取得有關在使用者端應用程式內設定連線的資訊。
+
+透過安全通訊端層(SSL)存取Document Security。 您必須在憑證存放區中安裝網站的憑證，以便透過使用者端應用程式存取Document Security。
 
 <!-- Fix broken link See Configuring SSL for information on SSL.-->
 
-这些说明特定于Internet Explorer，但您可以使用任何支持的Web浏览器安装证书。 有关更多信息，请参阅浏览器的帮助。
+這些指示特定於Internet Explorer，但您可以使用任何支援的網頁瀏覽器來安裝憑證。 如需詳細資訊，請參閱瀏覽器的說明。
 
-**使用Internet Explorer安装服务器证书**
+**使用Internet Explorer安裝伺服器憑證**
 
-1. 打开Web浏览器，然后在“地址”框中键入文档安全的基本URL。 例如，键入 `https://[host]:[port]`. 出现“Security Alert（安全警报）”对话框。
-1. 单击查看证书，然后单击安装证书并选择默认安装选项。 证书需要安装在受信任的根证书颁发机构中。
-1. 关闭浏览器会话。
-1. 打开另一个浏览器窗口，然后在地址框中键入相同的URL。 不应显示“安全警报”对话框。 此测试用于确认证书是否正确安装。
+1. 開啟網頁瀏覽器，並在「位址」方塊中輸入Document Security的基本URL。 例如，輸入 `https://[host]:[port]`. 「安全性警示」對話方塊隨即顯示。
+1. 按一下「檢視憑證」，然後按一下「安裝憑證」，並選取安裝的預設值。 憑證需要安裝在受信任的根憑證授權單位中。
+1. 關閉您的瀏覽器工作階段。
+1. 開啟另一個瀏覽器視窗，並在「位址」方塊中輸入相同的URL。 不應出現安全性警示對話方塊。 此測試會確認憑證已正確安裝。
 
-## 从网页注销 {#log-out-of-the-web-pages}
+## 登出網頁 {#log-out-of-the-web-pages}
 
-使用完网页后注销，这样您便可以安全地将Web浏览器用于其他目的。 根据Document Security的配置方式，您可能需要关闭浏览器才能完全注销。
+使用完網頁後登出，這樣您就可以安全地使用網頁瀏覽器進行其他用途。 根據Document Security的設定方式，您可能需要關閉瀏覽器才能完全登出。
 
-1. 单击页面右上角的“注销”。
-1. 如果“注销”页上显示一条消息，请关闭浏览器窗口以完全注销。 否则，您可以继续将浏览器用于其他目的。
+1. 在頁面的右上角，按一下「登出」。
+1. 如果「登出」頁面上出現訊息，請關閉瀏覽器視窗以完全登出。 否則，您可以繼續將瀏覽器用於其他目的。

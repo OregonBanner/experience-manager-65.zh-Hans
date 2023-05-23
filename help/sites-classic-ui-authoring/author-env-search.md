@@ -22,76 +22,76 @@ AEM 的创作环境提供了多种内容搜索机制，具体取决于资源类�
 
 >[!NOTE]
 >
->在创作环境之外，还可以使用其他机制进行搜索，例如 [查询生成器](/help/sites-developing/querybuilder-api.md) 和 [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md).
+>在製作環境外，也可使用其他機制進行搜尋，例如 [查詢產生器](/help/sites-developing/querybuilder-api.md) 和 [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md).
 
 ## 搜索基础知识 {#search-basics}
 
-要访问搜索面板，请单击 **搜索** 选项卡。
+若要存取搜尋面板，請按一下 **搜尋** 標籤顯示在適當主控台的左窗格頂端。
 
 ![chlimage_1-101](assets/chlimage_1-101.png)
 
-通过搜索面板，您可以在所有网站页面中进行搜索。 它包含用于以下内容的字段和小组件：
+搜尋面板可讓您搜尋所有網站頁面。 它包含下列欄位和Widget：
 
-* **全文**:搜索指定的文本
-* **修改时间：之后/之前**:仅搜索在特定日期之间更改的页面
-* **模板**:仅根据指定的模板搜索这些页面
-* **标记**:仅搜索具有指定标记的页面
+* **全文**：搜尋指定的文字
+* **修改於以下日期之後/之前**：僅搜尋在特定日期之間變更的頁面
+* **範本**：僅搜尋根據指定範本的頁面
+* **標籤**：僅搜尋具有指定標籤的頁面
 
 >[!NOTE]
 >
->在为 [Lucene搜索](/help/sites-deploying/queries-and-indexing.md) 您可以在 **全文**:
+>當您的執行個體設定為 [Lucene搜尋](/help/sites-deploying/queries-and-indexing.md) 您可在以下位置使用 **全文**：
 >
->* [通配符](https://lucene.apache.org/core/5_3_1/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#Wildcard_Searches)
->* [布尔运算符](https://lucene.apache.org/core/5_3_1/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#Boolean_operators)
+>* [萬用字元](https://lucene.apache.org/core/5_3_1/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#Wildcard_Searches)
+>* [布林值運運算元](https://lucene.apache.org/core/5_3_1/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#Boolean_operators)
 >
 >* [正则表达式](https://lucene.apache.org/core/5_3_1/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#Regexp_Searches)
->* [字段分组](https://lucene.apache.org/core/5_3_1/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#Field_Grouping)
->* [提升](https://lucene.apache.org/core/5_3_1/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#Boosting_a_Term)
+>* [欄位分組](https://lucene.apache.org/core/5_3_1/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#Field_Grouping)
+>* [升冪](https://lucene.apache.org/core/5_3_1/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#Boosting_a_Term)
 >
 
 
-通过单击 **搜索** 在窗格底部。 单击 **重置** 以清除搜索标准。
+按一下以執行搜尋 **搜尋** 位於窗格底部。 按一下 **重設** 以清除搜尋條件。
 
 ## 过滤器 {#filter}
 
-在不同位置，可以设置（并清除）过滤器，以细化和优化视图：
+您可以在不同的位置設定（和清除）篩選器，以向下鑽研並調整您的檢視：
 
 ![chlimage_1-102](assets/chlimage_1-102.png)
 
-## 查找和替换 {#find-and-replace}
+## 尋找和取代 {#find-and-replace}
 
-在 **网站** 控制台 **查找和替换** 菜单选项，可在网站的某个部分中搜索并替换字符串的多个实例。
+在 **網站** 主控台a **尋找和取代** 功能表選項可讓您在網站的某個區段中搜尋和取代字串的多個執行個體。
 
-1. 选择要执行查找和替换操作的根页面或文件夹。
-1. 选择 **工具** then **查找和替换**:
+1. 選取您要執行尋找和取代動作的根頁面或資料夾。
+1. 選取 **工具** 則 **尋找和取代**：
 
    ![screen_shot_2012-02-15at120346pm](assets/screen_shot_2012-02-15at120346pm.png)
 
-1. 的 **查找和替换** 对话框会执行以下操作：
+1. 此 **尋找和取代** 對話方塊會執行下列動作：
 
-   * 确认查找操作应开始的根路径
-   * 定义要查找的术语
-   * 定义应替换该词的词
-   * 指示搜索是否应区分大小写
-   * 指示是否只应找到整个字（否则，还会找到子字符串）
+   * 確認尋找動作應該開始的根路徑
+   * 定義要尋找的字詞
+   * 定義應取代它的字詞
+   * 指出搜尋是否應區分大小寫
+   * 指示是否只應找到整字（否則也會找到子字串）
 
-   单击 **预览** 列出已找到术语的位置。 您可以选择/清除要替换的特定实例：
+   按一下 **預覽** 列出已找到辭彙的位置。 您可以選取/清除要取代的特定執行個體：
 
    ![screen_shot_2012-02-15at120719pm](assets/screen_shot_2012-02-15at120719pm.png)
 
-1. 单击 **替换** 来替换所有实例。 系统将要求您确认该操作。
+1. 按一下 **Replace** 以實際取代所有例證。 系统将要求您确认该操作。
 
-查找和替换Servlet的默认范围涵盖以下属性：
+尋找和取代servlet的預設範圍涵蓋下列屬性：
 
 * `jcr:title`
 * `jcr:description`
 * `jcr:text`
 * `text`
 
-使用Apache Felix Web管理控制台(例如， `https://localhost:4502/system/console/configMgr`)。 选择 `CQ WCM Find Replace Servlet (com.day.cq.wcm.core.impl.servlets.FindReplaceServlet)` 并根据需要配置范围。
+可使用Apache Felix Web Management Console變更範圍(例如 `https://localhost:4502/system/console/configMgr`)。 選取 `CQ WCM Find Replace Servlet (com.day.cq.wcm.core.impl.servlets.FindReplaceServlet)` 並視需要設定範圍。
 
 >[!NOTE]
 >
->在标准AEM安装中，查找和替换使用Lucene实现搜索功能。
+>在標準AEM安裝中，「尋找和取代」使用Lucene進行搜尋功能。
 >
->Lucene可索引长度高达16k的字符串属性。 将不会搜索超过此值的字符串。
+>Lucene索引長度最多16k的字串屬性。 超過此值的字串將不會被搜尋。

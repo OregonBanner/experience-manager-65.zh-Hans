@@ -1,7 +1,7 @@
 ---
-title: 交互式通信配置属性
+title: 互動式通訊設定屬性
 seo-title: Interactive Communication configuration properties
-description: 编辑交互式通信的默认配置属性
+description: 編輯互動式通訊的預設設定屬性
 seo-description: Edit default configuration properties for Interactive Communications
 uuid: 4030078f-64a3-40bb-9892-49e22a8da561
 contentOwner: anujkapo
@@ -19,24 +19,24 @@ ht-degree: 7%
 
 ---
 
-# 交互式通信配置属性{#interactive-communications-configuration-properties}
+# 互動式通訊設定屬性{#interactive-communications-configuration-properties}
 
-交互式通信包括在安装之后自动配置的属性 [AEM Forms加载项](../../forms/using/installing-configuring-aem-forms-osgi.md) 包。 交互式通信作者可以使用编辑这些默认配置属性 **Adobe Experience Manager Web控制台配置** 页面。
+互動式通訊包含安裝後自動設定的屬性 [AEM Forms附加元件](../../forms/using/installing-configuring-aem-forms-osgi.md) 封裝。 互動式通訊作者可以使用以下工具編輯這些預設設定屬性： **Adobe Experience Manager Web主控台設定** 頁面。
 
-打开 **Adobe Experience Manager Web控制台配置** 使用以下URL的页面：
+開啟 **Adobe Experience Manager Web主控台設定** 頁面使用下列URL：
 
 `https:/[server]:[port]/<contextPath>/system/console/configMgr`
 
-配置属性包括：
+設定屬性包括：
 
-* [文档片段配置](#document-fragments-configuration)
-* [创建对应配置](#create-correspondence-configuration)
-* [自适应表单和交互式通信Web渠道配置](#adaptive-form-and-interactive-communication-web-channel-configuration)
-* [自适应表单和交互式通信Web渠道主题配置](#adaptive-form-and-interactive-communication-web-channel-theme-configuration)
+* [檔案片段設定](#document-fragments-configuration)
+* [建立對應設定](#create-correspondence-configuration)
+* [最適化表單和互動式通訊Web頻道設定](#adaptive-form-and-interactive-communication-web-channel-configuration)
+* [最適化表單和互動式通訊Web Channel主題設定](#adaptive-form-and-interactive-communication-web-channel-theme-configuration)
 
-## 文档片段配置 {#document-fragments-configuration}
+## 檔案片段設定 {#document-fragments-configuration}
 
-点按 **文档片段配置** 在 **Adobe Experience Manager Web控制台配置** 页面以查看文档片段的配置属性。
+點選 **檔案片段設定** 於 **Adobe Experience Manager Web主控台設定** 頁面以檢視檔案片段的設定屬性。
 
 <table>
  <tbody> 
@@ -44,11 +44,11 @@ ht-degree: 7%
    <td>属性</td> 
    <td>描述</td> 
    <td>默认</td> 
-   <td>可接受值</td> 
+   <td>可接受的值</td> 
   </tr> 
   <tr> 
-   <td>数据显示格式</td> 
-   <td>为打印和Web渠道创建交互式通信时，可用的字段、变量和表单数据模型元素的特定于区域设置的显示格式。</td> 
+   <td>資料顯示格式</td> 
+   <td>為列印和Web頻道建立互動式通訊時，可用的欄位、變數和表單資料模型元素的區域設定特定顯示格式。</td> 
    <td> 
     <ul> 
      <li>locale = en_US， de_DE， fr_FR和ja_JP</li> 
@@ -61,28 +61,28 @@ ht-degree: 7%
   </tr> 
   <tr> 
    <td>缩进</td> 
-   <td>应用于列表文档片段中文本的单缩进单位宽度。</td> 
+   <td>套用至清單檔案片段中文字的單一縮排單位寬度。</td> 
    <td>12.7mm</td> 
    <td>数字</td> 
   </tr> 
   <tr> 
-   <td>罗马数字最小宽度</td> 
-   <td>在列表文档片段中使用罗马数字时，应用于项目符号或数字字段的最小宽度。 </td> 
+   <td>羅馬數字最小寬度</td> 
+   <td>在清單檔案片段中使用羅馬數字時，套用至專案符號或數字欄位的最小寬度。 </td> 
    <td>12.7mm</td> 
    <td>数字</td> 
   </tr> 
   <tr> 
-   <td>数字最小宽度</td> 
-   <td>在列表文档片段中使用除罗马数字之外的编号列表时，应用于项目符号或数字字段的最小宽度。</td> 
+   <td>數字最小寬度</td> 
+   <td>在清單檔案片段中使用羅馬數字以外的編號清單時，套用至專案符號或數字欄位的最小寬度。</td> 
    <td>8.0mm</td> 
    <td>数字</td> 
   </tr> 
  </tbody> 
 </table>
 
-## 创建对应配置 {#create-correspondence-configuration}
+## 建立對應設定 {#create-correspondence-configuration}
 
-点按 **创建对应配置** 在 **Adobe Experience Manager Web控制台配置** 页面查看Agent UI的配置属性。
+點選 **建立對應設定** 於 **Adobe Experience Manager Web主控台設定** 頁面以檢視Agent UI的組態特性。
 
 <table>
  <tbody> 
@@ -90,42 +90,42 @@ ht-degree: 7%
    <td>属性</td> 
    <td>描述</td> 
    <td>默认</td> 
-   <td>可接受值</td> 
+   <td>可接受的值</td> 
   </tr> 
   <tr> 
-   <td>显示已解析的内容以进行编辑</td> 
-   <td>选中该复选框以在代理UI上编辑文本模块时显示已解析的内容（实际值而不是占位符）。</td> 
-   <td>未选择</td> 
+   <td>顯示已解析的內容以進行編輯</td> 
+   <td>在代理程式UI上編輯文字模組時，選取核取方塊以顯示已解析的內容（實際值而不是預留位置）。</td> 
+   <td>未選取</td> 
    <td>不适用</td> 
   </tr> 
   <tr> 
-   <td>在预览期间应用水印</td> 
-   <td>选中此复选框可将水印应用于预览模式下交互式通信的打印渠道。</td> 
-   <td>未选择</td> 
+   <td>在預覽期間套用浮水印</td> 
+   <td>選取核取方塊，在預覽模式下將浮水印套用至互動式通訊的列印頻道。</td> 
+   <td>未選取</td> 
    <td>不适用</td> 
   </tr> 
   <tr> 
-   <td>在PDF中启用字体嵌入</td> 
-   <td><p>选中此复选框可在PDF文档中启用嵌入字体。 选择此选项后，您可以在使用Agent UI生成或预览PDF文档后嵌入新字体。 使用交互式通信的打印渠道生成和预览PDF文档。</p> <p>如果在用于生成PDF的计算机上字体可用，而在访问PDF的客户端计算机上字体不可用，则在PDF中嵌入字体会很有用。</p> <p>有关嵌入字体的更多信息，请参阅 <a href="../../forms/using/customize-text-editor.md" target="_blank">自定义文本编辑器</a>.</p> </td> 
-   <td>未选择</td> 
+   <td>在PDF中啟用字型內嵌</td> 
+   <td><p>選取核取方塊以啟用在PDF檔案中嵌入字型。 選取此選項後，您可在使用Agent UI產生或預覽PDF檔案後內嵌新字型。 使用互動式通訊的Print channel來產生和預覽PDF檔案。</p> <p>如果用來產生PDF的電腦上有可用的字型，而存取PDF的使用者端電腦上沒有可用的字型，則在PDF檔案中嵌入字型會很有用。</p> <p>如需內嵌字型的詳細資訊，請參閱 <a href="../../forms/using/customize-text-editor.md" target="_blank">自訂文字編輯器</a>.</p> </td> 
+   <td>未選取</td> 
    <td>不适用</td> 
   </tr> 
  </tbody> 
 </table>
 
-## 自适应表单和交互式通信Web渠道配置 {#adaptive-form-and-interactive-communication-web-channel-configuration}
+## 最適化表單和互動式通訊Web頻道設定 {#adaptive-form-and-interactive-communication-web-channel-configuration}
 
-点按 **自适应表单和交互式通信Web渠道配置** 在 **Adobe Experience Manager Web控制台配置** 页面以查看自适应Forms和交互式通信Web渠道的配置属性。 下表描述了与交互式通信相关的属性：
+點選 **最適化表單和互動式通訊Web頻道設定** 於 **Adobe Experience Manager Web主控台設定** 頁面以檢視Adaptive Forms和互動式通訊Web channel的設定屬性。 下表說明互動式通訊的相關特性：
 
-| 属性 | 描述 | 默认 | 可接受值 |
+| 属性 | 描述 | 默认 | 可接受的值 |
 |---|---|---|---|
-| 显示占位符 | 选中此复选框可启用显示自适应表单和交互式通信中包含的字段的占位符。 | 已选定 | 不适用 |
-| 最大缓存条目数 | 设置可使用缓存检索的自适应表单和交互式通信的最大数目。 | 100 | 数字 |
-| 使文件名唯一 | 选中此复选框可使Adaptive Forms和交互式通信中包含的文件具有唯一的名称。 | 未选择 | 不适用 |
+| 顯示預留位置 | 選取核取方塊以啟用顯示最適化表單和互動式通訊中所包含欄位的預留位置。 | 已选定 | 不适用 |
+| 快取專案上限 | 設定可使用快取記憶體擷取的最適化表單和互動式通訊數目上限。 | 100 | 数字 |
+| 將檔案名稱設為唯一 | 選取此核取方塊，可為Adaptive Forms和互動式通訊中作為附件包含的檔案指定唯一名稱。 | 未選取 | 不适用 |
 
-## 自适应表单和交互式通信Web渠道主题配置 {#adaptive-form-and-interactive-communication-web-channel-theme-configuration}
+## 最適化表單和互動式通訊Web Channel主題設定 {#adaptive-form-and-interactive-communication-web-channel-theme-configuration}
 
-点按 **自适应表单和交互式通信Web渠道主题配置** 在 **Adobe Experience Manager Web控制台配置** 页面以查看自适应Forms和交互式通信Web渠道主题的配置属性。
+點選 **最適化表單和互動式通訊Web Channel主題設定** 於 **Adobe Experience Manager Web主控台設定** 頁面以檢視最適化Forms和互動式通訊Web頻道主題的設定屬性。
 
 <table>
  <tbody> 
@@ -133,13 +133,13 @@ ht-degree: 7%
    <td>属性</td> 
    <td>描述</td> 
    <td>默认</td> 
-   <td>可接受值</td> 
+   <td>可接受的值</td> 
   </tr> 
   <tr> 
-   <td>字体列表名称</td> 
-   <td>创建自适应Forms和交互式通信时可用的字体列表。</td> 
+   <td>字型清單名稱</td> 
+   <td>建立最適化Forms和互動式通訊時可用的字型清單。</td> 
    <td><p>格鲁吉亚</p> <p>Book Antiqua</p> <p>Times New Roman</p> <p>Arial</p> <p>Arial Black</p> <p>影响</p> <p>Palatino Linotype</p> </td> 
-   <td>所有有效的Adobe服务器字体</td> 
+   <td>所有有效的Adobe伺服器字型</td> 
   </tr> 
  </tbody> 
 </table>

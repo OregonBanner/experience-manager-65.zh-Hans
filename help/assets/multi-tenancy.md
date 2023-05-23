@@ -1,6 +1,6 @@
 ---
-title: 收藏集、代码片段和代码片段模板的多租户
-description: 了解多租户功能如何让您根据客户组织分离CRX存储库中的内容，以防止未经授权的访问。
+title: 收藏集、代碼片段和代碼片段範本的多重租用
+description: 瞭解多租使用者功能如何讓您根據客戶組織來隔離CRX存放庫中的內容，以防止未經授權的存取。
 contentOwner: AG
 role: Architect, Admin, Leader
 feature: Collections
@@ -8,27 +8,27 @@ exl-id: f95560c9-f1b9-4e86-94a7-70347d268d8f
 source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '220'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
-# 收藏集、代码片段和代码片段模板的多租户 {#multi-tenancy-for-collections-snippets-and-snippet-templates}
+# 收藏集、代碼片段和代碼片段範本的多重租用 {#multi-tenancy-for-collections-snippets-and-snippet-templates}
 
-多租户功能允许您根据组织前缀和组织ID在CRX中分隔内容，以保护内容不被其他组织的用户未经授权访问。
+多租使用者功能可讓您根據組織首碼和組織ID在CRX中分隔內容，以防止其他組織的使用者未經授權存取內容。
 
-[!DNL Adobe Experience Manager Assets] 以不同的路径存储每个组织的数据。 每个特定于组织的路径由组织前缀和组织ID标识，组织ID包含在传统位置，其中不同类型的资产存储在CRX中。
+[!DNL Adobe Experience Manager Assets] 會以不同路徑儲存每個組織的資料。 每個組織特定的路徑都由組織首碼和組織ID識別，這些組織首碼和組織ID包含在傳統位置，而不同型別的資產會儲存在CRX中。
 
-例如，如果您创建一个名为的文件夹， `Demo`， [!DNL Experience Manager] 资产通常将文件夹存储在 `../content/dam/Demo`. 启用多租户后，您现在可以将数据存储在 `../content/dam/<organization prefix>/<organization id>Demo`
+例如，如果您建立的資料夾名為 `Demo`， [!DNL Experience Manager] 資產傳統上會將資料夾儲存在 `../content/dam/Demo`. 啟用多租戶後，您現在可以將資料儲存在 `../content/dam/<organization prefix>/<organization id>Demo`
 
-例如，如果 [!DNL Adobe Marketing Cloud] 用户 [!DNL Assets] （按需）已分配至 `aodpremium` 组织，则可以使用多租户功能来配置 `../content/dam/<mac>/<aodpremium>Demo` 用于分隔其内容的路径。 在此示例中， `mac` 是组织前缀和 `aodpremium` 是组织ID。
+例如，如果 [!DNL Adobe Marketing Cloud] 使用者 [!DNL Assets] （隨選）指派給 `aodpremium` 組織，您可以使用多租使用者功能來設定 `../content/dam/<mac>/<aodpremium>Demo` 分隔其內容的路徑。 在此範例中， `mac` 是組織首碼，且 `aodpremium` 是組織ID。
 
-根据用户的组织和ID，此限定路径将显示在 [!DNL Assets] 界面和各种向导，包括用于实施隔离的移动和代码片段创建向导。
+根據使用者的組織和ID，此合格路徑會顯示在 [!DNL Assets] 介面和各種精靈，包括用來強制隔離的「移動」和「程式碼片段」建立精靈。
 
-多租户功能允许您分隔以下类型的资源和组件：
+多租使用者功能可讓您分隔下列資產和元件型別：
 
 * 收藏集
-* 公共收藏集
-* 目录（包括“添加/选择页面”向导）
+* 公開集合
+* 目錄（包括「新增/選取頁面」精靈）
 * 模板
-* 代码片段模板
+* 程式碼片段範本
 * Lightbox

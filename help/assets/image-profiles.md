@@ -1,6 +1,6 @@
 ---
 title: Dynamic Media 图像配置文件
-description: 创建包含USM锐化设置、智能裁剪或智能色板设置（或同时包含这两种设置）的图像配置文件，然后将该配置文件应用到图像资产的文件夹。
+description: 建立包含遮色片銳利化調整設定和/或智慧型裁切或智慧型色票設定的影像設定檔，然後將設定檔套用至影像資產的資料夾。
 uuid: 9049fab9-d2be-4118-8684-ce58f3c8c16a
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -19,39 +19,39 @@ ht-degree: 6%
 
 # Dynamic Media 图像配置文件 {#image-profiles}
 
-上传图像时，您可以通过将图像配置文件应用到文件夹，在上传时自动裁剪图像。
+上傳影像時，您可以套用影像設定檔至資料夾，在上傳時自動裁切影像。
 
 >[!IMPORTANT]
 >
->·智能裁剪仅在Dynamic Media - Scene7模式下可用。
-·图像配置文件不适用于PDF、动画GIF或INDD(Adobe InDesign)文件。
+>·智慧型裁切僅適用於Dynamic Media - Scene7模式。
+·影像設定檔不適用於PDF、動畫GIF或INDD (Adobe InDesign)檔案。
 
 ## 裁切选项 {#crop-options}
 
-在图像上实施智能裁剪时，Adobe建议采用以下最佳实践并强制实施以下限制：
+當您在影像上實作智慧型裁切時，Adobe會建議下列最佳作法並強制實行下列限制：
 
-| 限制类型 | 最佳实践 | 规定的限制 |
+| 限制型別 | 最佳實務 | 強制限制 |
 | --- | --- | --- |
-| 每个图像的智能作物数量 | 5 | 100 |
+| 每個影像的智慧型裁切數目 | 5 | 100 |
 
-另请参阅 [Dynamic Media限制](/help/assets/limitations.md).
+另請參閱 [Dynamic Media限制](/help/assets/limitations.md).
 
 <!-- CQDOC-16069 for paragraph directly below -->
 
-智能裁切坐标取决于宽高比。 对于图像配置文件中的各种智能裁剪设置，如果图像配置文件中添加的维度的宽高比相同，则会将相同的宽高比发送到Dynamic Media。 Adobe建议您使用相同的裁剪区域。 这样做可确保对图像配置文件中使用的不同维度不会产生任何影响。
+智慧型裁切座標會根據外觀比例而定。 針對「影像設定檔」中的各種智慧型裁切設定，如果「影像設定檔」中新增維度的外觀比例相同，則會將相同的外觀比例傳送至Dynamic Media。 Adobe建議您使用相同的裁切區域。 這麼做可確保不會對「影像設定檔」中使用的不同尺寸造成影響。
 
-您创建的每个智能裁剪生成都需要额外的处理。 例如，添加五个以上的智能裁剪长宽比可能会导致资产摄取速度缓慢。 它还会增加系统的负载。 由于您可以在文件夹级别应用智能裁剪，因此Adobe建议您在文件夹上使用智能裁剪 *仅* 需要的地方。
+您建立的每個「智慧型裁切」層代都需要額外的處理。 例如，新增五個以上的智慧型裁切外觀比例可能會導致資產擷取速度緩慢。 它也會造成系統負載增加。 由於您可以在資料夾層級套用智慧型裁切，Adobe建議您將其用於資料夾 *僅限* 在需要的位置。
 
-**在图像配置文件中定义智能裁剪的准则**
-为了控制智能裁剪的使用情况，并优化农作物的加工时间和存储，Adobe建议遵循以下准则和提示：
+**定義影像設定檔中智慧型裁切的准則**
+為了控制智慧型裁切的使用，並最佳化裁切的處理時間和儲存，Adobe建議下列准則和秘訣：
 
-* 避免创建宽度和高度值相同的重复智能裁剪配置文件。
-* 根据裁剪尺寸而不是最终使用情况来命名智能裁剪。 这样做有助于优化在多个页面上使用单个维度的重复项。
-* 为特定文件夹和子文件夹创建按页面/资产类型的图像配置文件，而不是应用到所有文件夹或所有资产的通用智能裁剪配置文件。
-* 应用到子文件夹的图像配置文件会覆盖应用到该文件夹的图像配置文件。
-* 为特定文件夹和子文件夹创建按页面/资产类型的图像配置文件，而不是应用到所有文件夹或所有资产的通用智能裁剪配置文件。
-* 您应用到子文件夹的图像配置文件会覆盖应用到该文件夹的图像配置文件。
-* 理想情况下，每张图像拥有10-15种智能作物，以优化屏幕比例和处理时间。
+* 請避免建立具有相同寬度和高度值的重複智慧型裁切設定檔。
+* 根據裁切維度而非最終使用量，為智慧型裁切命名。 這麼做有助於最佳化在多個頁面上使用單一維度的重複專案。
+* 為特定資料夾和子資料夾建立頁面/資產型別的影像設定檔，而非套用至所有資料夾或所有資產的通用智慧型裁切設定檔。
+* 套用至子資料夾的影像設定檔會覆寫套用至資料夾的影像設定檔。
+* 為特定資料夾和子資料夾建立頁面/資產型別的影像設定檔，而非套用至所有資料夾或所有資產的通用智慧型裁切設定檔。
+* 套用至子資料夾的影像設定檔會覆寫套用至資料夾的影像設定檔。
+* 理想情況下，每個影像可裁切10至15顆智慧型影像，以最佳化熒幕比例和處理時間。
 
 <!--
 * Image assets that are going to have a smart crop applied to them must be a minimum of 50 x 50 pixels or larger. CQDOC-20087
@@ -63,228 +63,228 @@ ht-degree: 6%
 <!-- * Avoid creating duplicate smart crop profiles that have the same width and height values. 
 * Name smart crops based on crop dimensions, not on end usage. Doing so helps to optimize for duplicates where a single dimension is used on multiple pages. -->
 
-您有两个图像裁剪选项可供您选择：像素裁剪或智能裁剪。 您还可以选择自动创建颜色和图像色板。
+您有兩個影像裁切選項可供選擇：「畫素裁切」或「智慧型裁切」。 您也可以選擇自動建立顏色和影像色票。
 
 >[!IMPORTANT]
-·Adobe建议您查看任何生成的作物和色板，以确保它们与您的品牌和价值相关且适当。
-·智能裁剪不支持CMYK图像格式。
+·Adobe建議您檢閱任何產生的裁切和色票，以確保其適當且與您的品牌和價值相關。
+·智慧型裁切不支援CMYK影像格式。
 
 | 选项 | 何时使用 | 描述 |
 | --- | --- | --- |
-| 像素裁剪 | 仅基于维度批量裁剪图像。 | 要使用此选项，请选择 **[!UICONTROL 像素裁剪]** 从“裁剪选项”下拉列表中。<br><br>要从图像的侧边进行裁剪，请输入要从图像的任意侧边或每侧进行裁剪的像素数。 裁剪图像的多少取决于图像文件中的ppi（像素/英寸）设置。<br><br>图像配置文件像素裁切按以下方式呈现：<br>·值包括顶部、底部、左侧和右侧。<br>·考虑左上角 `0,0` 像素裁切就从此计算。<br>·裁剪起点：左为X，上为Y<br>·水平计算：原始图像的水平像素尺寸减去“左”后减去“右”。<br>·垂直计算：垂直像素高度减去“顶部”，然后减去“底部”。<br><br>例如，假定您的图像为4000 x 3000像素。 您使用以下值：顶=250，底=500，左=300，右=700。<br><br>从左上角(300,250)使用填充空间(4000-300-700、3000-250-500或3000,2250)进行裁剪。 |
-| 智能裁剪 | 根据图像的可视焦点批量裁剪图像。 | Smart Crop利用Adobe Sensei中人工智能的强大功能，快速批量自动裁剪图像。 智能裁剪可自动检测并裁剪到任何图像中的焦点以捕获预期的目标点，而无论屏幕大小如何。</p> <p>要使用智能裁剪，请选择 **[!UICONTROL 智能裁剪]** 从“裁剪选项”下拉列表中，然后在响应式图像裁剪的右侧，启用（打开）该功能。</p> <p>“大”、“中”和“小”的默认断点大小通常涵盖大多数图像在移动和平板电脑设备、台式机和横幅上使用的所有大小。 如果需要，您可以编辑默认名称“大”、“中”和“小”。</p> <p>要添加更多断点，请选择 **[!UICONTROL 添加裁剪]** 要删除裁剪，请选择垃圾箱图标。 |
-| 颜色和图像样本 | 批量会为每个图像生成一个图像样本。 | **注意**:Dynamic Media Classic不支持智能色板。<br><br>自动从显示颜色或纹理的产品图像中定位并生成高质量样本。<br><br>要使用颜色和图像色板，请选择 **[!UICONTROL 智能裁剪]** 从“裁剪选项”下拉列表中，然后在“颜色”和“图像色板”的右侧，启用（打开）该功能。 在“宽度”和“高度”文本框中输入像素值。<br><br>虽然所有图像裁剪都可以从演绎版边栏中获取，但样本仅通过复制URL功能来使用。 使用您自己的查看组件在网站上渲染色板。 (此规则的例外是传送横幅。 Dynamic Media为轮播横幅中使用的色板提供查看组件。)<br><br>**使用图像色板**<br>&#x200B;图像样本的URL非常简单。 是：<br><br>`/is/image/company/&lt;asset_name&gt;:Swatch`<br>where `:Swatch` 会附加到资产请求中。<br><br>**使用颜色色板**<br>&#x200B;要使用颜色色板，请 `req=userdata` 请求，其中包含以下内容：<br>`/is/image/&lt;company_name&gt;/&lt;swatch_asset_name&gt;:Swatch?req=userdata`<br><br>例如，以下是Dynamic Media Classic中的色板资产：<br>`https://my.company.com:8080/is/image/DemoCo/Sleek:Swatch`<br>下面是色板资产的相应 `req=userdata` URL:<br>`https://my.company.com:8080/is/image/DemoCo/Sleek:Swatch?req=userdata`<br><br>的 `req=userdata` 响应如下：<br>`SmartCropDef=Swatch SmartCropHeight=200.0`<br>`SmartCropRect=0.421671,0.389815,0.0848564,0.0592593,200,200`<br>`SmartCropType=Swatch`<br>`SmartCropWidth=200.0`<br>`SmartSwatchColor=0xA56DB2`<br><br>您还可以请求 `req=userdata` XML或JSON格式的响应，如以下各个URL示例所示：<br>`https://my.company.com:8080/is/image/DemoCo/Sleek:Swatch?req=userdata,json`<br>`https://my.company.com:8080/is/image/DemoCo/Sleek:Swatch?req=userdata,xml`<br><br>**注意：** 创建您自己的WCM组件以请求颜色样本并解析 `SmartSwatchColor` 属性，由24位RGB十六进制值表示。<br><br>另请参阅 [`userdata` （在查看器参考指南中）](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/req/r-userdata.html). |
+| 像素裁剪 | 僅根據尺寸大量裁切影像。 | 若要使用此選項，請選取 **[!UICONTROL 畫素裁切]** 從「裁切選項」下拉式清單。<br><br>若要從影像側面裁切，請輸入要從影像任何側面或每側面裁切的畫素數量。 裁切多少影像取決於影像檔案中的ppi （每英吋畫素）設定。<br><br>「影像設定檔」畫素裁切會以下列方式呈現：<br>·值為Top、Bottom、Left和Right。<br>·考慮左上角 `0,0` 並從此處計算畫素裁切。<br>·裁切起點：左邊是X，上邊是Y<br>·水準計算：原始影像的水準畫素尺寸減去「左」再減去「右」。<br>·垂直計算：垂直畫素高度減去「頂端」，然後減去「底部」。<br><br>例如，假設您有4000 x 3000畫素影像。 您使用下列值：Top=250、Bottom=500、Left=300、Right=700。<br><br>從左上方(300,250)裁切，使用填色空間（4000-300-700、3000-250-500或3000,2250）。 |
+| 智能裁剪 | 根據視覺焦點批次裁切影像。 | 智慧型裁切利用Adobe Sensei中人工智慧的強大功能，快速大量自動裁切影像。 智慧型裁切會自動偵測並裁切至任何影像中的焦點，以擷取預期的興趣點，無論熒幕大小為何。</p> <p>若要使用智慧型裁切，請選取 **[!UICONTROL 智慧型裁切]** 從「裁切選項」下拉式清單，然後在回應式影像裁切的右側，啟用（開啟）功能。</p> <p>大型、中型和小型的預設中斷點大小通常涵蓋行動和平板電腦裝置、桌上型電腦和橫幅上大部分影像使用的完整大小範圍。 如有需要，您可以編輯「大」、「中」和「小」的預設名稱。</p> <p>若要新增更多中斷點，請選取 **[!UICONTROL 新增裁切]** 若要刪除裁切，請選取垃圾桶圖示。 |
+| 颜色和图像样本 | 大量產生每個影像的影像色票。 | **注意**： Dynamic Media Classic不支援智慧色票。<br><br>從顯示顏色或紋理的產品影像中自動尋找並產生高品質色票。<br><br>若要使用顏色和影像色票，請選取 **[!UICONTROL 智慧型裁切]** 從「裁切選項」下拉式清單，然後在「顏色」和「影像色票」的右側，啟用（開啟）功能。 在「寬度」和「高度」文字方塊中輸入畫素值。<br><br>雖然所有影像裁切都可從「轉譯」邊欄取得，但色票只能透過「複製URL」功能使用。 使用您自己的檢視元件來轉譯網站上的色票。 (此規則的例外是輪播橫幅。 Dynamic Media為輪播橫幅中使用的色票提供檢視元件。)<br><br>**使用影像色票**<br>&#x200B;影像色票的URL很簡單。 它是：<br><br>`/is/image/company/&lt;asset_name&gt;:Swatch`<br>位置 `:Swatch` 會附加至資產請求。<br><br>**使用色票**<br>&#x200B;若要使用色票，請建立 `req=userdata` 以下列專案請求：<br>`/is/image/&lt;company_name&gt;/&lt;swatch_asset_name&gt;:Swatch?req=userdata`<br><br>例如，以下是Dynamic Media Classic中的色票資產：<br>`https://my.company.com:8080/is/image/DemoCo/Sleek:Swatch`<br>以下是色票資產的對應 `req=userdata` URL：<br>`https://my.company.com:8080/is/image/DemoCo/Sleek:Swatch?req=userdata`<br><br>此 `req=userdata` 回應如下：<br>`SmartCropDef=Swatch SmartCropHeight=200.0`<br>`SmartCropRect=0.421671,0.389815,0.0848564,0.0592593,200,200`<br>`SmartCropType=Swatch`<br>`SmartCropWidth=200.0`<br>`SmartSwatchColor=0xA56DB2`<br><br>您也可以請求 `req=userdata` XML或JSON格式的回應，如下列個別URL範例所示：<br>`https://my.company.com:8080/is/image/DemoCo/Sleek:Swatch?req=userdata,json`<br>`https://my.company.com:8080/is/image/DemoCo/Sleek:Swatch?req=userdata,xml`<br><br>**注意：** 建立您自己的WCM元件以請求色票並剖析 `SmartSwatchColor` 屬性，以24位元RGB的十六進位值表示。<br><br>另請參閱 [`userdata` 在檢視器參考指南中](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/req/r-userdata.html). |
 
 ## USM 锐化 {#unsharp-mask}
 
-使用&#x200B;**[!UICONTROL 钝化蒙版]**&#x200B;对最终取样缩小的图像微调锐化滤镜效果。您可以控制效果的强度、效果的半径（以像素为单位）以及被忽略的对比度阈值。 此效果使用的选项与Adobe Photoshop的 *钝化蒙版* 过滤器。
+使用&#x200B;**[!UICONTROL 钝化蒙版]**&#x200B;对最终取样缩小的图像微调锐化滤镜效果。您可以控制效果的強度、效果半徑（以畫素測量），以及忽略的對比度臨界值。 此效果使用與Adobe Photoshop相同的選項 *不銳利化遮色片* 篩選。
 
 >[!NOTE]
-USM锐化仅应用于PTIFF（金字塔tiff）中缩减采样率超过50%的缩小演绎版。 这意味着ptiff中最大大小的演绎版不会受到USM锐化的影响，而较小的演绎版（如缩略图）会发生更改（并显示USM锐化）。
+「不銳利化遮色片」只適用於PTIFF （金字塔tiff）內縮減取樣率超過50%的縮減量轉譯。 這表示ptiff中最大大小的轉譯不會受到不銳利化遮色片的影響，而較小大小的轉譯（例如縮圖）則會改變（並顯示不銳利化遮色片）。
 
-在 **[!UICONTROL 钝化蒙版]**，则具有以下筛选选项：
+在 **[!UICONTROL 不銳利化遮色片]**，則您有以下篩選選項：
 
 | 选项 | 描述 |
 | --- | --- |
-| 数量 | 控制应用于边缘像素的对比度量。 默认值为1.75。对于高分辨率图像，最高可将其增加到5。 将“数量”视为过滤强度的度量。 范围为0-5。 |
-| 半径 | 确定边缘像素周围影响锐化的像素数量。对于高分辨率图像，输入 1 到 2。低值仅锐化边缘像素；高值锐化较宽范围的像素。正确的值取决于图像大小。默认值为0.2。范围为0-250。 |
-| 阈值 | 确定在应用USM锐化滤镜时要忽略的对比度范围。换句话说，此选项确定锐化的像素与周围区域必须有多大的不同，才会被视为边缘像素并进行锐化。 为避免引入杂色，请尝试使用0到255之间的值。 |
+| 数量 | 控制套用至邊緣畫素的對比量。 預設值為1.75。若是高解析度影像，最高可增加至5。 將「數量」視為濾鏡強度的量度。 範圍為0到5。 |
+| 半径 | 确定边缘像素周围影响锐化的像素数量。对于高分辨率图像，输入 1 到 2。低值仅锐化边缘像素；高值锐化较宽范围的像素。正确的值取决于图像大小。預設值為0.2。範圍為0到250。 |
+| 阈值 | 決定套用遮色片銳利化調整濾鏡時要忽略的對比範圍。換言之，此選項會決定銳利化的畫素與周圍區域必須有多大的差異，才會被視為邊緣畫素並予以銳利化。 為避免引入雜訊，請嘗試使用0到255之間的值。 |
 
-有关锐化的描述，请参阅 [锐化图像](/help/assets/assets/sharpening_images.pdf).
+銳利化的說明請參閱 [銳利化影像](/help/assets/assets/sharpening_images.pdf).
 
-## 创建Dynamic Media图像配置文件 {#creating-image-profiles}
+## 建立Dynamic Media影像設定檔 {#creating-image-profiles}
 
-要为其他资产类型定义高级处理参数，请参阅 [配置资产处理](config-dms7.md#configuring-asset-processing).
+若要定義其他資產型態的進階處理引數，請參閱 [設定資產處理](config-dms7.md#configuring-asset-processing).
 
-请参阅 [用于处理元数据、图像和视频的配置文件](processing-profiles.md).
+另請參閱 [用於處理中繼資料、影像和影片的設定檔](processing-profiles.md).
 
-另请参阅 [组织数字资产以使用处理配置文件的最佳实践](/help/assets/organize-assets.md).
+另請參閱 [組織數位資產以使用處理設定檔的最佳實務](/help/assets/organize-assets.md).
 
-**要创建Dynamic Media图像配置文件，请执行以下操作：**
+**若要建立Dynamic Media影像設定檔：**
 
-1. 选择Adobe Experience Manager徽标并导航到 **[!UICONTROL 工具]** > **[!UICONTROL 资产]** > **[!UICONTROL 图像配置文件]**.
-1. 选择 **[!UICONTROL 创建]** 以便您添加图像配置文件。
-1. 输入USM锐化、裁切或色板的配置文件名称和值，或同时输入两者。
+1. 選取Adobe Experience Manager標誌並導覽至 **[!UICONTROL 工具]** > **[!UICONTROL 資產]** > **[!UICONTROL 影像設定檔]**.
+1. 選取 **[!UICONTROL 建立]** 以便新增影像設定檔。
+1. 輸入輪廓名稱，以及遮色片銳利化調整、裁切或色票（或兩者）的值。
 
-   使用特定于其预期目的的配置文件名称。 例如，如果您要创建仅生成色板的配置文件 — 即，禁用（关闭）智能裁剪，启用（打开）颜色和图像色板 — 使用配置文件名称“智能色板”。
+   使用專屬於其預期用途的設定檔名稱。 例如，如果您想建立只產生色票的設定檔(亦即，停用智慧型裁切（關閉），並啟用顏色和影像色票（開啟）)，請使用設定檔名稱「智慧型色票」。
 
    另请参阅[智能裁切和智能色板选项](#crop-options)和[钝化蒙版](#unsharp-mask)。
 
-   ![农作物](assets/crop.png)
+   ![裁切](assets/crop.png)
 
-1. 选择&#x200B;**[!UICONTROL 保存]**。新创建的用户档案将显示在可用用户档案列表中。
+1. 选择&#x200B;**[!UICONTROL 保存]**。新建立的設定檔會顯示在可用設定檔清單中。
 
-## 编辑或删除Dynamic Media图像配置文件 {#editing-or-deleting-image-profiles}
+## 編輯或刪除Dynamic Media影像設定檔 {#editing-or-deleting-image-profiles}
 
-1. 选择Experience Manager徽标并导航到 **[!UICONTROL 工具]** > **[!UICONTROL 资产]** > **[!UICONTROL 图像配置文件]**.
-1. 选择要编辑或删除的图像配置文件。 要编辑它，请选择 **[!UICONTROL 编辑图像配置文件]**. 要删除它，请选择 **[!UICONTROL 删除图像配置文件]**.
+1. 選取Experience Manager標誌並導覽至 **[!UICONTROL 工具]** > **[!UICONTROL 資產]** > **[!UICONTROL 影像設定檔]**.
+1. 選取您要編輯或移除的影像設定檔。 若要編輯，請選取 **[!UICONTROL 編輯影像設定檔]**. 若要移除它，請選取 **[!UICONTROL 刪除影像設定檔]**.
 
    ![chlimage_1-254](assets/chlimage_1-254.png)
 
-1. 如果进行编辑，请保存更改。 如果删除，请确认您要删除该用户档案。
+1. 如果編輯，請儲存變更。 如果刪除，請確認您要移除設定檔。
 
-## 将Dynamic Media图像配置文件应用到文件夹 {#applying-an-image-profile-to-folders}
+## 將Dynamic Media影像設定檔套用至資料夾 {#applying-an-image-profile-to-folders}
 
-当您将图像配置文件分配给文件夹后，该文件夹中的所有子文件夹都会自动继承父文件夹的配置文件。 此工作流意味着您只能向文件夹分配一个图像配置文件。 因此，请仔细考虑上传、存储、使用和存档资产所在的文件夹结构。
+當您將「影像描述檔」指派給資料夾時，任何子資料夾都會自動從其父資料夾繼承描述檔。 此工作流程表示您只能將一個影像設定檔指派給資料夾。 因此，請仔細考慮您上傳、儲存、使用和封存資產的資料夾結構。
 
-如果您为文件夹分配了其他图像配置文件，则新配置文件会覆盖之前的配置文件。 以前存在的文件夹资产将保持不变。 新配置文件会应用于稍后添加到文件夹的资产。
+如果您將不同的影像設定檔指派給資料夾，則新的設定檔會覆寫先前的設定檔。 先前現有的資料夾資產保持不變。 新設定檔會套用至稍後新增至資料夾的資產。
 
-在用户界面中，如果文件夹分配了配置文件，则会使用卡中显示的配置文件名称来指示该文件夹。
+指派了設定檔的資料夾會使用卡片中顯示的設定檔名稱在使用者介面中指明。
 
 <!-- When you add smart crop to an existing Image Profile, you need to re-trigger the [DAM Update Asset workflow](assets-workflow.md) if you want to generate crops for existing assets in your asset repository. -->
 
-您可以将图像配置文件应用到特定文件夹或全局应用到所有资产。
+您可以將影像設定檔套用至特定資料夾，或全域套用至所有資產。
 
-您可以重新处理文件夹中的资产，该文件夹中已有您稍后更改的图像配置文件。 请参阅 [编辑文件夹中的资产处理配置文件后，会重新处理该文件夹中的资产](processing-profiles.md#reprocessing-assets).
+若資料夾中已有您之後加以變更的現有影像設定檔，您可以重新處理該資料夾中的資產。 另請參閱 [編輯資料夾中資產的處理設定檔後，重新處理該資料夾中的資產](processing-profiles.md#reprocessing-assets).
 
-### 将Dynamic Media图像配置文件应用到特定文件夹 {#applying-image-profiles-to-specific-folders}
+### 將Dynamic Media影像設定檔套用至特定資料夾 {#applying-image-profiles-to-specific-folders}
 
-您可以在 **[!UICONTROL 工具]** 菜单，或者如果您在文件夹中， **[!UICONTROL 属性]**. 本节将介绍这两种将图像配置文件应用到文件夹的方法。
+您可以將「影像設定檔」套用至資料夾(從 **[!UICONTROL 工具]** 功能表，或者如果您在資料夾中，請從 **[!UICONTROL 屬性]**. 本節說明如何以兩種方式將「影像設定檔」套用至資料夾。
 
 如果文件夹已经分配了配置文件，则文件夹名称正下方会显示配置文件的名称。
 
-您可以重新处理文件夹中已有视频配置文件且稍后进行了更改的资产。 请参阅 [编辑文件夹中的资产处理配置文件后，会重新处理该文件夹中的资产](processing-profiles.md#reprocessing-assets).
+若資料夾中已有您之後加以變更的現有視訊設定檔，您可以重新處理該資料夾中的資產。 另請參閱 [編輯資料夾中資產的處理設定檔後，重新處理該資料夾中的資產](processing-profiles.md#reprocessing-assets).
 
-#### 将Dynamic Media图像配置文件从配置文件用户界面应用到文件夹 {#applying-image-profiles-to-folders-from-profiles-user-interface}
+#### 從「設定檔」使用者介面將Dynamic Media影像設定檔套用至資料夾 {#applying-image-profiles-to-folders-from-profiles-user-interface}
 
-1. 选择Experience Manager徽标并导航到 **[!UICONTROL 工具]** > **[!UICONTROL 资产]** > **[!UICONTROL 图像配置文件]**.
-1. 选择要应用于一个或多个文件夹的图像配置文件。
+1. 選取Experience Manager標誌並導覽至 **[!UICONTROL 工具]** > **[!UICONTROL 資產]** > **[!UICONTROL 影像設定檔]**.
+1. 選取您要套用至一個資料夾或多個資料夾的影像設定檔。
 
    ![chlimage_1-255](assets/chlimage_1-255.png)
 
-1. 选择 **[!UICONTROL 将处理配置文件应用到文件夹]** ，然后选择一个或多个用于接收新上传资产的文件夹，然后选择 **[!UICONTROL 应用]**. 如果文件夹已经分配了配置文件，则文件夹名称正下方会显示配置文件的名称。
+1. 選取 **[!UICONTROL 將處理設定檔套用至資料夾]** 並選取您要用來接收新上傳資產的資料夾或多個資料夾，然後選取 **[!UICONTROL 套用]**. 如果文件夹已经分配了配置文件，则文件夹名称正下方会显示配置文件的名称。
 
-#### 将Dynamic Media图像配置文件从属性应用到文件夹 {#applying-image-profiles-to-folders-from-properties}
+#### 從「屬性」將Dynamic Media影像設定檔套用至資料夾 {#applying-image-profiles-to-folders-from-properties}
 
-1. 选择Experience League徽标并导航到 **[!UICONTROL 资产]**. 然后，导航到要将图像配置文件应用到的文件夹的父文件夹。
-1. 在文件夹中，选择复选标记以将其选中，然后选择 **[!UICONTROL 属性]**.
-1. 选择 **[!UICONTROL 图像配置文件]** 选项卡。 从 **[!UICONTROL 配置文件名称]** 下拉列表中，选择用户档案，然后选择 **[!UICONTROL 保存并关闭]**. 如果文件夹已经分配了配置文件，则文件夹名称正下方会显示配置文件的名称。
+1. 選取Experience League標誌並導覽至 **[!UICONTROL 資產]**. 然後導覽至您要套用影像設定檔之資料夾的父資料夾。
+1. 在資料夾中，選取核取記號以選取資料夾，然後選取 **[!UICONTROL 屬性]**.
+1. 選取 **[!UICONTROL 影像設定檔]** 標籤。 從 **[!UICONTROL 設定檔名稱]** 下拉式清單，選取設定檔，然後選取 **[!UICONTROL 儲存並關閉]**. 如果文件夹已经分配了配置文件，则文件夹名称正下方会显示配置文件的名称。
 
    ![chlimage_1-256](assets/chlimage_1-256.png)
 
-### 全局应用Dynamic Media图像配置文件 {#applying-an-image-profile-globally}
+### 全域套用Dynamic Media影像設定檔 {#applying-an-image-profile-globally}
 
-除了将配置文件应用到文件夹之外，您还可以全局应用一个配置文件，以便任何文件夹中上传到Experience Manager资产的任何内容都会应用选定的配置文件。
+除了將設定檔套用至資料夾外，您還可以全域套用設定檔，以便上傳到任何資料夾中Experience Manager資產的任何內容都會套用選取的設定檔。
 
-您可以重新处理文件夹中已有视频配置文件且稍后进行了更改的资产。 请参阅 [编辑文件夹中的处理配置文件后，重新处理该文件夹中的资产](processing-profiles.md#reprocessing-assets).
+若資料夾中已有您之後加以變更的現有視訊設定檔，您可以重新處理該資料夾中的資產。 另請參閱 [編輯資料夾中資產的處理設定檔後，重新處理該資料夾中的資產](processing-profiles.md#reprocessing-assets).
 
-**要全局应用Dynamic Media图像配置文件，请执行以下操作：**
+**若要全域套用Dynamic Media影像設定檔：**
 
 1. 执行下列操作之一：
 
-   * 导航到 `https://&lt;AEM server&gt;/mnt/overlay/dam/gui/content/assets/foldersharewizard.html/content/dam` ，然后应用相应的用户档案并选择 **[!UICONTROL 保存]**.
+   * 導覽至 `https://&lt;AEM server&gt;/mnt/overlay/dam/gui/content/assets/foldersharewizard.html/content/dam` 並套用適當的設定檔，然後選取 **[!UICONTROL 儲存]**.
 
       ![chlimage_1-257](assets/chlimage_1-257.png)
 
-   * 导航到CRXDE Lite到以下节点： `/content/dam/jcr:content`.
+   * 導覽至CRXDE Lite至下列節點： `/content/dam/jcr:content`.
 
-      添加属性 `imageProfile:/conf/global/settings/dam/adminui-extension/imageprofile/<name of image profile>` 选择 **[!UICONTROL 全部保存]**.
+      新增屬性 `imageProfile:/conf/global/settings/dam/adminui-extension/imageprofile/<name of image profile>` 並選取 **[!UICONTROL 全部儲存]**.
 
       ![configure_image_profiles](assets/configure_image_profiles.png)
 
-## 编辑单个图像的智能裁剪或智能色板 {#editing-the-smart-crop-or-smart-swatch-of-a-single-image}
+## 編輯單一影像的智慧型裁切或智慧型色票 {#editing-the-smart-crop-or-smart-swatch-of-a-single-image}
 
 >[!IMPORTANT]
-·智能裁剪仅在Dynamic Media - Scene7模式下可用。
+·智慧型裁切僅適用於Dynamic Media - Scene7模式。
 
-您可以手动重新调整图像的智能裁剪窗口大小或调整其大小，以进一步优化其焦点。
+您可以手動重新對齊影像的智慧型裁切視窗或調整其大小，以進一步調整其焦點。
 
-编辑智能裁剪并保存后，所做的更改会传播到您对特定图像使用裁剪的所有位置。
+在您編輯智慧型裁切並儲存之後，此變更會傳播到您針對特定影像使用裁切的任何地方。
 
-如有必要，您可以重新运行智能裁剪以再次生成其他裁剪。
+如有必要，您可以重新執行智慧型裁切以再次產生其他裁切。
 
-另请参阅 [编辑多幅图像的智能裁切或智能色板](#editing-the-smart-crop-or-smart-swatch-of-multiple-images).
+另請參閱 [編輯多個影像的智慧型裁切或智慧型色票](#editing-the-smart-crop-or-smart-swatch-of-multiple-images).
 
-**要编辑单个图像的智能裁切或智能色板，请执行以下操作：**
+**若要編輯單一影像的智慧型裁切或智慧型色票：**
 
-1. 选择Experience Manager徽标并导航到 **[!UICONTROL 资产]**，然后转到应用了智能裁剪或智能色板图像配置文件的文件夹。
+1. 選取Experience Manager標誌並導覽至 **[!UICONTROL 資產]**，然後移至已套用智慧型裁切或智慧型色票影像設定檔的資料夾。
 
-1. 选择文件夹，以便打开其内容。
-1. 选择要调整其智能裁剪或智能色板的图像。
-1. 在工具栏中，选择 **[!UICONTROL 智能裁剪]**.
+1. 選取資料夾，以便開啟其內容。
+1. 選取您要調整其智慧型裁切或智慧型色票的影像。
+1. 在工具列中，選取 **[!UICONTROL 智慧型裁切]**.
 
-1. 执行以下任一操作：
+1. 執行下列任一項作業：
 
-   * 在页面的右上角附近，向左或向右拖动滑块条以分别增加或减少图像显示。
-   * 在图像上，拖动角手柄以调整裁剪或色板可查看区域的大小。
-   * 在图像上，将框/色板拖到新位置。 您只能编辑图像色板；颜色色板是静态的。
-   * 在图像上方，选择  **[!UICONTROL 还原]** 撤消所有编辑并恢复原始裁剪或色板。
+   * 在頁面的右上角附近，向左或向右拖曳滑桿可分別增加或減少影像顯示。
+   * 在影像上，拖曳角落控點以調整裁切或色票的可檢視區域大小。
+   * 在影像上，將方塊/色票拖曳至新位置。 您只能編輯影像色票；色票為靜態。
+   * 在影像上方，選取  **[!UICONTROL 回覆]** 還原所有編輯並還原原始裁切或色票。
 
-1. 在页面的右上角附近，选择 **[!UICONTROL 保存]**，然后选择 **[!UICONTROL 关闭]** ，以返回到资产文件夹。
+1. 在頁面的右上角附近，選取 **[!UICONTROL 儲存]**，然後選取 **[!UICONTROL 關閉]** 以返回資產的資料夾。
 
-## 编辑多幅图像的智能裁切或智能色板 {#editing-the-smart-crop-or-smart-swatch-of-multiple-images}
+## 編輯多個影像的智慧型裁切或智慧型色票 {#editing-the-smart-crop-or-smart-swatch-of-multiple-images}
 
 >[!IMPORTANT]
-·智能裁剪仅在Dynamic Media - Scene7模式下可用。
+·智慧型裁切僅適用於Dynamic Media - Scene7模式。
 
-将包含智能裁剪的图像配置文件应用到文件夹后，该文件夹中的所有图像都会对其应用裁剪。 如果需要，您可以 *手动* 重新调整多幅图像中智能裁剪窗口的大小或调整其大小，以进一步优化其焦点。
+將包含智慧型裁切的影像設定檔套用至資料夾後，該資料夾中的所有影像都會套用裁切。 如有需要，您可以 *手動* 在多個影像中重新對齊智慧型裁切視窗或調整其大小，以進一步調整其焦點。
 
-编辑智能裁剪并保存后，所做的更改会传播到您对特定图像使用裁剪的所有位置。
+在您編輯智慧型裁切並儲存之後，此變更會傳播到您針對特定影像使用裁切的任何地方。
 
-如有必要，您可以重新运行智能裁剪以再次生成其他裁剪。
+如有必要，您可以重新執行智慧型裁切以再次產生其他裁切。
 
-**要编辑多幅图像的智能裁切或智能色板，请执行以下操作：**
+**若要編輯多個影像的智慧型裁切或智慧型色票：**
 
-1. 选择Experience Manager徽标并导航到 **[!UICONTROL 资产]**，然后转到应用了智能裁剪或智能色板图像配置文件的文件夹。
-1. 在文件夹中，选择 **[!UICONTROL 更多操作]** (...)图标，然后选择 **[!UICONTROL 智能裁剪]**.
+1. 選取Experience Manager標誌並導覽至 **[!UICONTROL 資產]**，然後移至已套用智慧型裁切或智慧型色票影像設定檔的資料夾。
+1. 在資料夾中，選取 **[!UICONTROL 更多動作]** (...)圖示，然後選取 **[!UICONTROL 智慧型裁切]**.
 
-1. 在 **[!UICONTROL 编辑智能裁剪]** ，请执行以下任一操作：
+1. 於 **[!UICONTROL 編輯智慧型裁切]** 頁面，執行下列任一項作業：
 
-   * 调整页面上图像的查看大小。
+   * 調整頁面上影像的檢視大小。
 
-      在断点名称下拉列表的右侧，向左或向右拖动滑块以更改可查看图像显示的大小。
+      在中斷點名稱下拉式清單的右側，向左或向右拖曳滑桿以變更可檢視影像顯示的大小。
 
-      ![edit_smart_crobs_sliderbar](assets/edit_smart_crops-sliderbar.png)
+      ![edit_smart_ranks-sliderbar](assets/edit_smart_crops-sliderbar.png)
 
-   * 根据断点名称过滤可查看图像的列表。 在以下示例中，图像是在断点名称“Medium”上过滤的。
+   * 根據中斷點名稱篩選可檢視影像清單。 在下列範例中，會在中斷點名稱「中」上篩選影像。
 
-      在页面的右上角附近，从下拉列表中，选择一个断点名称以过滤您看到的图像。 （请参阅上图。）
+      在頁面的右上角附近，從下拉式清單中選取中斷點名稱，以篩選您看到的影像。 （請參閱上圖。）
 
-      ![edit_smart_crobs_dropdownlist](assets/edit_smart_crops-dropdownlist.png)
+      ![edit_smart_ranks-dropdownlist](assets/edit_smart_crops-dropdownlist.png)
 
-   * 调整智能裁剪框的大小。 执行以下任一操作：
+   * 調整智慧型裁切方塊的大小。 執行下列任一項作業：
 
-      * 如果图像仅具有智能裁切或智能色板，则在图像上，拖动裁切框的角手柄以调整裁切可查看区域的大小。
-      * 如果图像同时具有智能裁切和智能色板，则在图像上，拖动裁切框的角手柄以调整裁切可查看区域的大小。 或者，选择图像下方的智能色板（颜色色板为静态色板），然后拖动裁剪框的角手柄以调整色板可查看区域的大小。
+      * 如果影像隻有智慧型裁切或智慧型色票，請在影像上拖曳裁切方塊的角落控點，以調整裁切的可檢視區域大小。
+      * 如果影像同時具有智慧型裁切和智慧型色票，請在影像上拖曳裁切方塊的角落控點，以調整裁切的可檢視區域大小。 或者，選取影像下方的智慧型色票（色票為靜態），然後拖曳裁切方塊的轉角操作框，以調整色票可檢視區域的大小。
 
-      ![调整图像的智能裁剪大小](assets/edit_smart_crops-resize.png)
+      ![調整影像的智慧型裁切大小](assets/edit_smart_crops-resize.png)
 
-   * 移动智能裁剪框。 执行以下任一操作：
+   * 移動智慧型裁切方塊。 執行下列任一項作業：
 
-      * 如果图像仅具有智能裁剪或智能色板，则在图像上将裁剪框拖到新位置。
-      * 如果图像同时具有智能裁切和智能色板，则在图像上，将智能裁切框拖到新位置。 或者，选择图像下方的智能色板（颜色色板为静态色板），然后将智能色板裁剪框拖到新位置。
+      * 如果影像隻有智慧型裁切或智慧型色票，請在影像上，將裁切方塊拖曳至新位置。
+      * 如果影像同時具有智慧型裁切和智慧型色票，請在影像上，將智慧型裁切方塊拖曳至新位置。 或者，選取影像下方的智慧型色票（色票為靜態），然後將智慧型色票裁切方塊拖曳至新位置。
 
-      ![edit_smart_crobs_move](assets/edit_smart_crops-move.png)
+      ![edit_smart_rapes-move](assets/edit_smart_crops-move.png)
 
-   * 撤消所有编辑并恢复原始智能裁剪或智能色板（仅适用于当前编辑会话）。
+   * 復原所有編輯並還原原始的智慧型裁切或智慧型色票（僅適用於目前的編輯工作階段）。
 
-      选择 **[!UICONTROL 还原]** 图像上方。
+      選取 **[!UICONTROL 回覆]** 影像上方。
 
-      ![edit_smart_crobs_revert](assets/edit_smart_crops-revert.png)
+      ![edit_smart_rances-revert](assets/edit_smart_crops-revert.png)
 
 
 
-1. 在页面的右上角附近，选择 **[!UICONTROL 保存]**，然后选择 **[!UICONTROL 关闭]** ，以返回到资产文件夹。
+1. 在頁面的右上角附近，選取 **[!UICONTROL 儲存]**，然後選取 **[!UICONTROL 關閉]** 以返回資產的資料夾。
 
-## 将Dynamic Media图像配置文件从文件夹删除 {#removing-an-image-profile-from-folders}
+## 從資料夾中移除Dynamic Media影像設定檔 {#removing-an-image-profile-from-folders}
 
-当您将图像配置文件从文件夹删除后，该文件夹中的所有子文件夹都会自动删除从父文件夹继承的配置文件。 但是，对文件夹中已发生的文件的任何处理均将保持不变。
+當您從資料夾中移除影像設定檔時，任何子資料夾都會自動繼承從其父資料夾中移除的設定檔。 不過，在資料夾內發生的任何檔案處理作業都會維持不變。
 
-您可以从 **[!UICONTROL 工具]** 菜单，或者如果您在文件夹中， **[!UICONTROL 属性]**. 本节将介绍这两种将图像配置文件从文件夹删除的方法。
+您可以從「 」內的資料夾中移除影像配置檔案。 **[!UICONTROL 工具]** 功能表，或者如果您在資料夾中，請從 **[!UICONTROL 屬性]**. 本節說明如何以兩種方式從資料夾中移除「影像設定檔」。
 
-### 通过Profiles用户界面将Dynamic Media图像配置文件从文件夹删除 {#removing-image-profiles-from-folders-via-profiles-user-interface}
+### 透過「設定檔」使用者介面，從資料夾中移除Dynamic Media影像設定檔 {#removing-image-profiles-from-folders-via-profiles-user-interface}
 
-1. 选择Experience Manager徽标并导航到 **[!UICONTROL 工具]** > **[!UICONTROL 资产]** > **[!UICONTROL 图像配置文件]**.
-1. 选择要从一个或多个文件夹中删除的图像配置文件。
-1. 选择 **[!UICONTROL 从文件夹删除处理配置文件]** ，然后选择一个或多个要从中删除配置文件的文件夹，然后选择 **[!UICONTROL 删除]**.
+1. 選取Experience Manager標誌並導覽至 **[!UICONTROL 工具]** > **[!UICONTROL 資產]** > **[!UICONTROL 影像設定檔]**.
+1. 選取您要從資料夾或多個資料夾中移除的影像設定檔。
+1. 選取 **[!UICONTROL 從資料夾中移除處理設定檔]** 並選取您要用來從中移除設定檔的一個或多個資料夾，然後選取 **[!UICONTROL 移除]**.
 
-   您可以确认图像配置文件不再应用于文件夹，因为文件夹名称的下方不再显示该名称。
+   您可以確認「影像設定檔」不再套用至資料夾，因為資料夾名稱下方不再有該名稱。
 
-### 通过属性将Dynamic Media图像配置文件从文件夹删除 {#removing-image-profiles-from-folders-via-properties}
+### 透過「屬性」從資料夾中移除Dynamic Media影像設定檔 {#removing-image-profiles-from-folders-via-properties}
 
-1. 选择Experience Manager徽标并导航 **[!UICONTROL 资产]** ，然后转到要从中删除图像配置文件的文件夹。
-1. 在文件夹中，选择复选标记以将其选中，然后选择 **[!UICONTROL 属性]**.
-1. 选择 **[!UICONTROL 图像配置文件]** 选项卡。
-1. 从 **[!UICONTROL 配置文件名称]** 下拉列表中，选择 **[!UICONTROL 无]**，然后选择 **[!UICONTROL 保存并关闭]**.
+1. 選取Experience Manager標誌並導覽 **[!UICONTROL 資產]** 然後移至您要從中移除影像設定檔的資料夾。
+1. 在資料夾中，選取核取記號以選取資料夾，然後選取 **[!UICONTROL 屬性]**.
+1. 選取 **[!UICONTROL 影像設定檔]** 標籤。
+1. 從 **[!UICONTROL 設定檔名稱]** 下拉式清單，選取 **[!UICONTROL 無]**，然後選取 **[!UICONTROL 儲存並關閉]**.
 
    如果文件夹已经分配了配置文件，则文件夹名称正下方会显示配置文件的名称。

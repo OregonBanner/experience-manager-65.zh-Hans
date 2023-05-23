@@ -1,7 +1,7 @@
 ---
-title: DocConverter服务Java API快速启动(SOAP)
+title: DocConverter服務Java API快速入門(SOAP)
 seo-title: DocConverter Service Java API QuickStart(SOAP)
-description: DocConverter服务Java API快速启动(SOAP)
+description: DocConverter服務Java API快速入門(SOAP)
 uuid: a02e13a5-4557-4c8a-a4be-e8d017127128
 contentOwner: admin
 content-type: reference
@@ -17,23 +17,23 @@ ht-degree: 0%
 
 ---
 
-# DocConverter服务Java API快速入门(SOAP) {#docconverter-service-java-api-quickstart-soap}
+# DocConverter服務Java API快速入門(SOAP) {#docconverter-service-java-api-quickstart-soap}
 
-Java API快速入门(SOAP)可用于DocConverter服务。
+Java API快速入門(SOAP)適用於DocConverter服務。
 
-[快速入门（SOAP模式）：使用Java API确定PDF/A合规性](docconverter-service-java-api-quick.md#quick-start-soap-mode-determining-pdf-a-compliancy-using-the-java-api)
+[快速入門（SOAP模式）：使用Java API判斷PDF/A合規性](docconverter-service-java-api-quick.md#quick-start-soap-mode-determining-pdf-a-compliancy-using-the-java-api)
 
-[快速入门（SOAP模式）：使用Java API将文档转换为PDF/文档](docconverter-service-java-api-quick.md#quick-start-soap-mode-converting-a-document-to-a-pdf-a-document-using-the-java-api)
+[快速入門（SOAP模式）：使用Java API將檔案轉換為PDF/A檔案](docconverter-service-java-api-quick.md#quick-start-soap-mode-converting-a-document-to-a-pdf-a-document-using-the-java-api)
 
-AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应设置为SOAP。
+AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定為SOAP。
 
 >[!NOTE]
 >
->位于“使用AEM窗体编程”中的“快速入门”基于部署在JBoss Application Server和Microsoft Windows操作系统上的Forms Server。 但是，如果您使用的是其他操作系统（如UNIX），请将特定于Windows的路径替换为适用的操作系统支持的路径。 同样，如果您使用的是其他J2EE应用程序服务器，请确保指定有效的连接属性。 参见 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>「使用AEM表單進行程式設計」中的「快速入門」是根據部署在JBoss Application Server和Microsoft Windows作業系統上的Forms Server所建立。 不過，如果您使用其他作業系統（例如UNIX），請以適用的作業系統支援的路徑取代Windows特定路徑。 同樣地，如果您使用其他J2EE應用程式伺服器，請務必指定有效的連線屬性。 另請參閱 [設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
-## 快速入门（SOAP模式）：使用Java API将文档转换为PDF/文档 {#quick-start-soap-mode-converting-a-document-to-a-pdf-a-document-using-the-java-api}
+## 快速入門（SOAP模式）：使用Java API將檔案轉換為PDF/A檔案 {#quick-start-soap-mode-converting-a-document-to-a-pdf-a-document-using-the-java-api}
 
-以下Java代码示例转换一个名为的PDF文档 *Loan.pdf* 保存为名为的PDF文件的PDF/文档 *LoanArchive.pdf*. (请参阅 [将文档转换为PDF/A文档](/help/forms/developing/pdf-a-documents.md#converting-documents-to-pdf-a-documents).)
+以下Java程式碼範例會轉換名為的PDF檔案 *Loan.pdf* 儲存為名為的PDF檔案的PDF/檔案 *LoanArchive.pdf*. (請參閱 [將檔案轉換為PDF/A檔案](/help/forms/developing/pdf-a-documents.md#converting-documents-to-pdf-a-documents).)
 
 ```java
  /*
@@ -134,9 +134,9 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
  }
 ```
 
-## 快速入门（SOAP模式）：使用Java API确定PDF/A合规性 {#quick-start-soap-mode-determining-pdf-a-compliancy-using-the-java-api}
+## 快速入門（SOAP模式）：使用Java API判斷PDF/A合規性 {#quick-start-soap-mode-determining-pdf-a-compliancy-using-the-java-api}
 
-以下Java代码示例确定输入PDF文档是否符合PDF/A。 将命名传递到DocConverter服务的输入PDF文档 *LoanArchive.pdf*. 验证结果将写入一个名为的XML文件 *ValidationResults.xml*. (请参阅 [以编程方式确定PDF/合规性](/help/forms/developing/pdf-a-documents.md#programmatically-determining-pdf-a-compliancy).)
+以下Java程式碼範例會判斷輸入PDF檔案是否符合PDF/A規範。 傳遞至DocConverter服務的輸入PDF檔案已命名 *LoanArchive.pdf*. 驗證結果會寫入名為的XML檔案 *ValidationResults.xml*. (請參閱 [以程式設計方式決定PDF/合規性](/help/forms/developing/pdf-a-documents.md#programmatically-determining-pdf-a-compliancy).)
 
 ```java
  /*

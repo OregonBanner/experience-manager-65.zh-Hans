@@ -1,7 +1,7 @@
 ---
-title: 创建已关闭的用户组
+title: 建立已關閉的使用者群組
 seo-title: Creating a Closed User Group
-description: 了解如何创建“已关闭的用户组”。
+description: 瞭解如何建立封閉式使用者群組。
 seo-description: Learn how to create a Closed User Group.
 uuid: dc3c7dbd-2e86-43f9-9377-3b75053203b3
 contentOwner: msm-service
@@ -18,113 +18,113 @@ ht-degree: 1%
 
 ---
 
-# 创建已关闭的用户组{#creating-a-closed-user-group}
+# 建立已關閉的使用者群組{#creating-a-closed-user-group}
 
-封闭用户组(CUG)用于限制对已发布Internet站点中特定页面的访问。 此类页面要求分配的成员登录并提供安全凭据。
+封閉式使用者群組(CUG)可用來限制對已發佈網際網路網站中特定頁面的存取。 這類頁面需要指派的成員登入並提供安全性認證。
 
-要在网站中配置此类区域，您可以：
+若要在您的網站中設定這類區域，請：
 
-* [创建实际已关闭的用户组并分配成员](#creating-the-user-group-to-be-used).
+* [建立實際已關閉的使用者群組並指派成員](#creating-the-user-group-to-be-used).
 
-* [将此组应用到所需的页面](#applying-your-closed-user-group-to-content-pages) 并选择（或创建）登录页面以供CUG成员使用；将CUG应用于内容页面时也会指定。
+* [將此群組套用至所需的頁面](#applying-your-closed-user-group-to-content-pages) 並選取（或建立）登入頁面，以供CUG的成員使用；也會在將CUG套用至內容頁面時指定。
 
-* [创建某种形式的链接，至少指向保护区内的一个页面](#linking-to-the-cug-pages)，否则它将不可见。
+* [建立連結，以某種形式至少連結到保護區內的一個頁面](#linking-to-the-cug-pages)，否則不會顯示。
 
-* [配置调度程序](#configure-dispatcher-for-cugs) 如果正在使用中。
+* [設定Dispatcher](#configure-dispatcher-for-cugs) 若正在使用中。
 
 >[!CAUTION]
 >
->创建封闭用户组(CUG)时应当始终考虑性能。
+>在建立封閉式使用者群組(CUG)時，應一律考慮效能。
 >
->尽管CUG中的用户和组数量不受限制，但页面上的CUG数量过高可能会降低渲染性能。
+>雖然CUG中的使用者和群組數量沒有限制，但頁面上大量的CUG可能會減慢轉譯效能。
 >
->在进行性能测试时，应始终考虑CUG的影响。
+>進行效能測試時，應一律考量CUG的影響。
 
-## 创建要使用的用户组 {#creating-the-user-group-to-be-used}
+## 建立要使用的使用者群組 {#creating-the-user-group-to-be-used}
 
-要创建封闭用户组，请执行以下操作：
+若要建立已關閉的使用者群組，請執行下列動作：
 
-1. 转到 **工具 — 安全性** 从AEM主屏幕上。
+1. 前往 **工具 — 安全性** 從AEM homescreen取得。
 
    >[!NOTE]
    >
-   >参见 [管理用户和组](/help/sites-administering/security.md#managing-users-and-groups) 有关创建和配置用户和组的完整信息。
+   >另請參閱 [管理使用者和群組](/help/sites-administering/security.md#managing-users-and-groups) 以取得建立和設定使用者和群組的完整資訊。
 
-1. 选择 **组** 下一屏幕中的信息卡。
+1. 選取 **群組** 卡片。
 
    ![screenshot_2018-10-30at145502](assets/screenshot_2018-10-30at145502.png)
 
-1. 按 **创建** 按钮，以创建新组。
-1. 命名新组；例如， `cug_access`.
+1. 按下 **建立** 按鈕來建立新群組。
+1. 命名您的新群組；例如， `cug_access`.
 
    ![screenshot_2018-10-30at151459](assets/screenshot_2018-10-30at151459.png)
 
-1. 转到 **成员** 选项卡，并将所需的用户分配给此组。
+1. 前往 **成員** 標籤並將所需的使用者指派給此群組。
 
    ![screenshot_2018-10-30at151808](assets/screenshot_2018-10-30at151808.png)
 
-1. 激活您分配给CUG的任何用户；在这种情况下，激活所有成员 `cug_access`.
-1. 激活封闭用户组，使其在发布环境中可用；在本例中， `cug_access`.
+1. 啟動您指派給您的CUG的任何使用者；在此情況下，則是 `cug_access`.
+1. 啟動封閉式使用者群組，使其可在發佈環境中使用；在此範例中， `cug_access`.
 
-## 将封闭用户组应用于内容页面 {#applying-your-closed-user-group-to-content-pages}
+## 將封閉式使用者群組套用至內容頁面 {#applying-your-closed-user-group-to-content-pages}
 
-要将CUG应用于一个或多个页面，请执行以下操作：
+若要將CUG套用至一或多個頁面，請執行下列動作：
 
-1. 导航到要分配给CUG的受限制部分的根页面。
-1. 单击页面的缩略图，然后选择 **属性** 工具栏中。
+1. 導覽至您要指派給CUG之受限制區段的根頁面。
+1. 按一下頁面的縮圖，然後選取 **屬性** 在頂端工具列上。
 
    ![screenshot_2018-10-30at162632](assets/screenshot_2018-10-30at162632.png)
 
-1. 在以下窗口中，打开 **高级** 选项卡。
+1. 在下列視窗中，開啟 **進階** 標籤。
 
-1. 向下滚动到 **身份验证要求** 部分。
+1. 向下捲動至 **驗證需求** 區段。
 
-   1. 激活 **启用** 勾选框。
+   1. 啟動 **啟用** 勾選方塊。
 
-   1. 将路径添加到 **登录页面**.
-这是可选的，如果留空，将使用标准登录页面。
+   1. 將路徑新增至 **登入頁面**.
+這是選擇性的，如果保留為空白，將會使用標準登入頁面。
 
-   ![已添加CUG](assets/cug-authentication-requirement.png)
+   ![已新增CUG](assets/cug-authentication-requirement.png)
 
-1. 接下来，转到 **权限** 选项卡并选择 **编辑已关闭的用户组**.
+1. 接下來，前往 **許可權** 標籤並選取 **編輯已關閉的使用者群組**.
 
    ![screenshot_2018-10-30at163003](assets/screenshot_2018-10-30at163003.png)
 
    >[!NOTE]
    >
-   >权限选项卡中的CUG无法从Blueprint转出到Live Copies。 请在配置 Live Copy 时对此进行规划。
+   >「許可權」標籤中的CUG無法從Blueprint轉出至即時副本。 请在配置 Live Copy 时对此进行规划。
    >
-   >有关更多信息，请参阅 [此页面](closed-user-groups.md#aem-livecopy).
+   >如需詳細資訊，請參閱 [此頁面](closed-user-groups.md#aem-livecopy).
 
-1. 此 **编辑已关闭的用户组** 此时将打开对话框。 在此处，您可以搜索并选择您的CUG，然后使用确认组选择 **保存**.
+1. 此 **編輯已關閉的使用者群組** 對話方塊將會開啟。 您可以在此處搜尋並選取您的CUG，然後確認群組選取範圍 **儲存**.
 
-   该组将被添加到列表中；例如，组 **cug_access**.
+   群組將被新增至清單中；例如，群組 **cug_access**.
 
-   ![已添加CUG](assets/cug-added.png)
+   ![已新增CUG](assets/cug-added.png)
 
-1. 通过确认更改 **保存并关闭**.
+1. 確認變更，透過 **儲存並關閉**.
 
 >[!NOTE]
 >
->参见 [Identity Management](/help/sites-administering/identity-management.md) 有关发布环境中的用户档案以及提供用于登录和注销的表单的信息。
+>另請參閱 [Identity Management](/help/sites-administering/identity-management.md) 瞭解發佈環境中的設定檔以及提供登入和登出表單的相關資訊。
 
-## 链接到CUG页面 {#linking-to-the-cug-pages}
+## 連結至CUG頁面 {#linking-to-the-cug-pages}
 
-由于指向CUG页面的任何链接的目标对匿名用户不可见，因此linkchecker将删除此类链接。
+由於匿名使用者看不到任何連至CUG頁面的連結目標，因此linkchecker會移除這類連結。
 
-要避免出现这种情况，建议您创建指向CUG区域中页面的非受保护重定向页面。 然后呈现导航条目，而不会导致linkchecker出现任何问题。 仅当实际访问重定向页面时，用户才会在CUG区域中被重定向 — 在成功提供其登录凭据后。
+若要避免此問題，建議您建立指向CUG區域中頁面的非受保護重新導向頁面。 然後轉譯導覽專案，而不會導致linkchecker任何問題。 只有在實際存取重新導向頁面時，使用者才會在CUG區域中重新導向 — 在成功提供其登入認證後。
 
-## 为CUG配置Dispatcher {#configure-dispatcher-for-cugs}
+## 設定CUG的Dispatcher {#configure-dispatcher-for-cugs}
 
-如果您使用的是Dispatcher，则需要使用以下属性定义Dispatcher场：
+如果您使用Dispatcher，則需要使用以下屬性定義Dispatcher陣列：
 
-* [virtualhost](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#identifying-virtual-hosts-virtualhosts)：将路径与CUG应用的页面匹配。
-* \sessionmanagement：请参见下文。
-* [缓存](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#configuring-the-dispatcher-cache-cache)：专用于CUG应用到的文件的缓存目录。
+* [virtualhost](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#identifying-virtual-hosts-virtualhosts)：比對CUG套用至的頁面路徑。
+* \sessionmanagement：請參閱下文。
+* [快取](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#configuring-the-dispatcher-cache-cache)：專屬於CUG套用之檔案的快取目錄。
 
-### 为CUG配置Dispatcher会话管理 {#configuring-dispatcher-session-management-for-cugs}
+### 為CUG設定Dispatcher工作階段管理 {#configuring-dispatcher-session-management-for-cugs}
 
-配置 [dispatcher.any文件中的会话管理](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#enabling-secure-sessions-sessionmanagement) CUG的。 在请求访问CUG页面时使用的身份验证处理程序决定了如何配置会话管理。
+設定 [dispatcher.any檔案中的工作階段管理](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#enabling-secure-sessions-sessionmanagement) 用於CUG。 要求CUG頁面的存取權時使用的驗證處理常式，會決定您設定工作階段管理的方式。
 
 ```xml
 /sessionmanagement
@@ -135,10 +135,10 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->当Dispatcher场启用了会话管理时，不会缓存场处理的所有页面。 要缓存超出CUG的页面，请在dispatcher.any中创建第二个场
->处理非CUG页面。
+>當Dispatcher陣列啟用工作階段管理時，不會快取陣列處理的所有頁面。 若要快取CUG以外的頁面，請在dispatcher.any中建立第二個陣列
+>可處理非CUG頁面。
 
-1. 配置 [/sessionmanagement](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#enabling-secure-sessions-sessionmanagement) 通过定义 `/directory`；例如：
+1. 設定 [/sessionmanagement](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#enabling-secure-sessions-sessionmanagement) 透過定義 `/directory`；例如：
 
    ```xml
    /sessionmanagement
@@ -148,4 +148,4 @@ ht-degree: 1%
      }
    ```
 
-1. 设置 [/allowAuthorized](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#caching-when-authentication-is-used) 到 `0`.
+1. 設定 [/allowAuthorized](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#caching-when-authentication-is-used) 至 `0`.

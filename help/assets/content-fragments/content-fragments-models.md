@@ -1,6 +1,6 @@
 ---
 title: 内容片段模型
-description: 了解内容片段模型如何作为AEM中Headless内容的基础，以及如何使用结构化内容创建内容片段。
+description: 瞭解內容片段模型如何作為AEM中Headless內容的基礎，以及如何使用結構化內容建立內容片段。
 feature: Content Fragments
 role: User
 exl-id: 6fd1fdb2-d1d3-4f97-b119-ecfddcccec9e
@@ -13,7 +13,7 @@ ht-degree: 95%
 
 # 内容片段模型 {#content-fragment-models}
 
-AEM中的内容片段模型为您的定义了内容结构 [内容片段，](/help/assets/content-fragments/content-fragments.md) 作为Headless内容的基础。
+AEM中的內容片段模型為您的定義了內容結構 [內容片段，](/help/assets/content-fragments/content-fragments.md) 作為Headless內容的基礎。
 
 要使用内容片段模型，您可以：
 
@@ -24,8 +24,8 @@ AEM中的内容片段模型为您的定义了内容结构 [内容片段，](/hel
 
 ## 创建内容片段模型 {#creating-a-content-fragment-model}
 
-1. 导航到 **工具**， **资产**，然后打开 **内容片段模型**.
-1. 导航到适合您的文件夹 [配置](/help/assets/content-fragments/content-fragments-configuration-browser.md).
+1. 導覽至 **工具**， **資產**，然後開啟 **內容片段模型**.
+1. 導覽至適合您的檔案夾 [設定](/help/assets/content-fragments/content-fragments-configuration-browser.md).
 1. 使用&#x200B;**“创建”**&#x200B;打开向导。
 
    >[!CAUTION]
@@ -46,7 +46,7 @@ AEM中的内容片段模型为您的定义了内容结构 [内容片段，](/hel
 >
 >编辑现有内容片段模型可能会影响从属片段。
 
-1. 导航到 **工具**， **资产**，然后打开 **内容片段模型**.
+1. 導覽至 **工具**， **資產**，然後開啟 **內容片段模型**.
 
 1. 导航到包含内容片段模型的文件夹。
 
@@ -393,7 +393,7 @@ type CompanyModel {
 
 要删除内容片段模型，请执行以下操作：
 
-1. 导航到 **工具**， **资产**，然后打开 **内容片段模型**.
+1. 導覽至 **工具**， **資產**，然後開啟 **內容片段模型**.
 
 1. 导航到包含内容片段模型的文件夹。
 1. 选择您的模型，然后从工具栏中&#x200B;**删除**。
@@ -408,7 +408,7 @@ type CompanyModel {
 
 要发布内容片段模型，请执行以下操作：
 
-1. 导航到 **工具**， **资产**，然后打开 **内容片段模型**.
+1. 導覽至 **工具**， **資產**，然後開啟 **內容片段模型**.
 
 1. 导航到包含内容片段模型的文件夹。
 1. 选择您的模型，然后从工具栏中&#x200B;**“发布”**。
@@ -424,7 +424,7 @@ type CompanyModel {
 
 要取消发布内容片段模型，请执行以下操作：
 
-1. 导航到 **工具**， **资产**，然后打开 **内容片段模型**.
+1. 導覽至 **工具**， **資產**，然後開啟 **內容片段模型**.
 
 1. 导航到包含内容片段模型的文件夹。
 1. 选择您的模型，然后从工具栏中&#x200B;**“取消发布”**。

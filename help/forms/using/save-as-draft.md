@@ -1,7 +1,7 @@
 ---
-title: 将任务或表单另存为草稿
+title: 將任務或表單儲存為草稿
 seo-title: Saving a task or form as a draft
-description: 在AEM Forms应用程序中保存任务或表单的草稿副本的步骤
+description: 在AEM Forms應用程式中儲存任務或表單草稿副本的步驟
 seo-description: Steps to save a draft copy of a task or a form in the AEM Forms app
 uuid: 1192d2c2-05a4-4a96-9015-e56111aa2646
 content-type: reference
@@ -16,32 +16,32 @@ ht-degree: 0%
 
 ---
 
-# 将任务或表单另存为草稿 {#saving-a-task-or-form-as-a-draft}
+# 將任務或表單儲存為草稿 {#saving-a-task-or-form-as-a-draft}
 
-另存为草稿选项可保存任务或表单的快照以及在相关表单中填写的数据。 您也可以从模板创建草稿。 草稿将保存在移动设备中，并与Adobe Experience Manager Forms服务器同步，以供日后检索。
+另存為草稿選項可儲存任務或表單的快照以及已填入相關表單的資料。 您也可以從範本建立草稿。 草稿會儲存在行動裝置內，並與Adobe Experience Manager Forms伺服器同步，以供稍後擷取。
 
-您可以 [更新表单](/help/forms/using/working-with-form.md)， [对其进行注释](/help/forms/using/add-attachments.md) 照片和涂鸦笔记。 在继续更新表单时，建议将其另存为草稿。 对于您决定稍后提交已填写表单的情况，将其另存为草稿会很有帮助。
+您可以 [更新表單](/help/forms/using/working-with-form.md)， [為其加上註釋](/help/forms/using/add-attachments.md) 包括像片和塗鴉筆記。 當您繼續更新表單時，建議將其另存為草稿。 若您決定稍後再提交填寫好的表格，將表格儲存為草稿會很有幫助。
 
-要为表单门户上保存的表单启用另存为草稿功能，请参阅 [将HTML5表单另存为草稿](/help/forms/using/saving-html5-form-draft.md).
-要配置自适应表单的提交，请参阅 [草稿和提交组件](/help/forms/using/draft-submission-component.md). (对于与AEM Forms JEE服务器同步的表单无效。)
+若要為儲存在表單入口網站上的表單啟用另存為草稿功能，請參閱 [將HTML5表單儲存為草稿](/help/forms/using/saving-html5-form-draft.md).
+若要設定最適化表單的提交，請參閱 [草稿和提交元件](/help/forms/using/draft-submission-component.md). (對與AEM Forms JEE伺服器同步的表單無效。)
 
-要创建草稿，请打开表单并点按 **另存为草稿** ![另存为草稿](assets/save-as-draft.png). 提供草稿的名称并点按 **保存**. 草稿将保存在“草稿”文件夹中，并与服务器同步。 如果应用程序处于离线状态，则该文件夹会保存在Outbox文件夹中。
+若要建立草稿，請開啟表單並點選 **另存為草稿** ![另存為草稿](assets/save-as-draft.png). 提供草稿的名稱並點選 **儲存**. 草稿會儲存在「草稿」資料夾中，並與伺服器同步。 如果應用程式離線，則會儲存至Outbox資料夾。
 
-如果以后更新相应的表单，更改会立即反映出来。 将AEM Forms应用程序与AEM Forms服务器同步时，草稿会上传到AEM Forms服务器。 此外，草稿会从“发件箱”移至“任务”或“草稿”文件夹。 其旁边会显示一个编辑图标。
+如果您在之後更新對應的表單，變更會立即反映出來。 將AEM Forms應用程式與AEM Forms伺服器同步時，草稿會上傳至AEM Forms伺服器。 此外，草稿會從「寄件匣」移至「任務」或「草稿」資料夾。 旁邊會出現編輯圖示。
 
-当您继续处理多个任务和起点并保存它们时，草稿将被保存。 每次将应用程序与AEM Forms服务器同步时，草稿都会保存到服务器上。 它确保您随时可以根据上次保存的日期和时间恢复草稿。 例如，如果您重新安装应用程序或更改移动设备，则可以从服务器下载草稿。
+當您繼續處理多個任務和起點並儲存它們時，草稿就會儲存。 每次您的應用程式與AEM Forms伺服器同步時，草稿都會儲存至伺服器。 它確保您隨時可以根據上次儲存的日期和時間復原草稿。 例如，如果您重新安裝應用程式或變更行動裝置，則可以從伺服器下載草稿。
 
-## 删除草稿 {#delete-a-draft}
+## 刪除草稿 {#delete-a-draft}
 
-草稿文件夹列出了所有草稿。 您可以使用“删除草稿”选项从移动设备和服务器永久删除草稿。
+草稿資料夾會列出所有草稿。 您可以使用「刪除草稿」選項，從行動裝置和伺服器永久刪除草稿。
 
-删除从任务创建的草稿的选项不可用。 删除从任务创建的草稿时，任务将被放弃。
+無法使用刪除從任務建立的草稿的選項。 刪除從任務建立的草稿時，該任務會放棄。
 
-您可以在脱机模式和联机模式下放弃草稿。 在脱机模式下放弃草稿时，仅当与服务器的连接恢复时，草稿才会从服务器中删除。
+您可以在離線和線上模式中捨棄草稿。 在離線模式下捨棄草稿時，僅當與伺服器的連線恢復時，草稿才會從伺服器中刪除。
 
-执行以下步骤可删除草稿：
+執行以下步驟來刪除草稿：
 
-1. 在AEM Forms应用程序中，导航到 **Forms。**
-1. 选择 **草稿** 从“搜索”旁边的下拉菜单中。
-1. 带有编辑图标的表单 ![edit-draft-app](assets/edit-draft-app.png) 表示草稿。 点按草稿旁边的水平省略号。
-1. 在点按水平省略号时显示的选项中，点按 **删除草稿**.
+1. 在AEM Forms應用程式中，導覽至 **Forms。**
+1. 選取 **草稿** 從「搜尋」旁的下拉式清單中選取。
+1. 具有編輯圖示的表單 ![edit-draft-app](assets/edit-draft-app.png) 表示草稿。 點選草稿旁邊的水準省略符號。
+1. 在您點選水準省略符號時顯示的選項中，點選 **刪除草稿**.

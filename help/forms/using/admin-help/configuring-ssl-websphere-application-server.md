@@ -1,7 +1,7 @@
 ---
-title: 为WebSphere应用程序服务器配置SSL
+title: 為WebSphere Application Server設定SSL
 seo-title: Configuring SSL for WebSphere Application Server
-description: 了解如何为WebSphere应用程序服务器配置SSL。
+description: 瞭解如何設定WebSphere Application Server的SSL。
 seo-description: Learn how to configure SSL for WebSphere Application Server.
 uuid: f939a806-346e-41e0-b2c0-6d0ba83f8f6f
 contentOwner: admin
@@ -17,165 +17,165 @@ ht-degree: 0%
 
 ---
 
-# 为WebSphere应用程序服务器配置SSL {#configuring-ssl-for-websphere-application-server}
+# 為WebSphere Application Server設定SSL {#configuring-ssl-for-websphere-application-server}
 
-此部分包含使用IBM WebSphere应用程序服务器配置SSL的以下步骤。
+本節包含使用IBM WebSphere Application Server設定SSL的下列步驟。
 
-## 在WebSphere中创建本地用户帐户 {#creating-a-local-user-account-on-websphere}
+## 在WebSphere上建立本機使用者帳戶 {#creating-a-local-user-account-on-websphere}
 
-要启用SSL，WebSphere需要访问本地操作系统用户注册表中有权管理系统的用户帐户：
+若要啟用SSL，WebSphere需要存取本機作業系統使用者登入中具有系統管理許可權的使用者帳戶：
 
-* (Windows)创建新的Windows用户，该用户属于管理员组，并且有权作为操作系统的一部分进行操作。 (请参阅 [为WebSphere创建Windows用户](configuring-ssl-websphere-application-server.md#create-a-windows-user-for-websphere).)
-* (Linux、UNIX)用户可以是超级用户或具有root权限的其他用户。 在WebSphere上启用SSL时，请使用此用户的服务器标识和密码。
+* (Windows)建立新的Windows使用者，使其隸屬於Administrators群組，並擁有作為作業系統一部分的許可權。 (請參閱 [為WebSphere建立Windows使用者](configuring-ssl-websphere-application-server.md#create-a-windows-user-for-websphere).)
+* (Linux、UNIX)使用者可以是root使用者或其他具有root許可權的使用者。 當您在WebSphere上啟用SSL時，請使用此使用者的伺服器識別碼和密碼。
 
-### 为WebSphere创建Linux或UNIX用户 {#create-a-linux-or-unix-user-for-websphere}
+### 為WebSphere建立Linux或UNIX使用者 {#create-a-linux-or-unix-user-for-websphere}
 
-1. 以root用户身份登录。
-1. 通过在命令提示符中输入以下命令来创建用户：
+1. 以root使用者身分登入。
+1. 在命令提示字元中輸入下列命令以建立使用者：
 
    * （Linux和Sun Solaris） `useradd`
    * (IBM AIX) `mkuser`
 
-1. 通过输入来设置新用户的密码 `passwd` 在命令提示符下。
-1. （Linux和Solaris）通过输入 `pwconv` （不带参数）。
+1. 輸入以設定新使用者的密碼 `passwd` 在命令提示字元中。
+1. （Linux和Solaris）輸入以建立陰影密碼檔案 `pwconv` （沒有引數）。
 
    >[!NOTE]
    >
-   >（Linux和Solaris）要使WebSphere Application Server本地OS安全注册表正常工作，必须存在卷影密码文件。 卷影密码文件通常名为 **/etc/shadow** 和基于/etc/passwd文件。 如果卷影密码文件不存在，则在启用全局安全性并将用户注册表配置为本地操作系统后会发生错误。
+   >（Linux和Solaris）若要讓WebSphere Application Server本機作業系統安全性登入正常運作，陰影密碼檔案必須存在。 陰影密碼檔案通常命名為 **/etc/shadow** 和是根據/etc/passwd檔案。 如果陰影密碼檔案不存在，則在啟用全域安全性並將使用者登入設定為本機作業系統之後會發生錯誤。
 
-1. 在文本编辑器中从/etc目录打开组文件。
-1. 将您在步骤2中创建的用户添加到 `root` 组。
-1. 保存并关闭文件。
-1. （启用SSL的UNIX）以root用户身份启动和停止WebSphere。
+1. 在文字編輯器中從/etc目錄開啟群組檔案。
+1. 將您在步驟2中建立的使用者新增至 `root` 群組。
+1. 儲存並關閉檔案。
+1. （啟用SSL的UNIX）以root使用者身分啟動和停止WebSphere。
 
-### 为WebSphere创建Windows用户 {#create-a-windows-user-for-websphere}
+### 為WebSphere建立Windows使用者 {#create-a-windows-user-for-websphere}
 
-1. 使用管理员用户帐户登录到Windows。
-1. 选择 **“开始” > “控制面板” > “管理工具” > “计算机管理” > “本地用户和组”**.
-1. 右键单击“用户”并选择 **新用户**.
-1. 在相应的框中键入用户名和密码，并在其余框中键入所需的任何其他信息。
-1. 取消选择 **用户必须在下次登录时更改密码**，单击 **创建**，然后单击 **关闭**.
-1. 单击 **用户**，右键单击刚刚创建的用户并选择 **属性**.
-1. 单击 **成员** 选项卡，然后单击 **添加**.
-1. 在“输入要选择的对象名称”框中，键入 `Administrators`，单击检查名称以确保组名称正确。
-1. 单击 **确定** 然后单击 **确定** 再来一次。
-1. 选择 **“开始” > “控制面板” > “管理工具” > “本地安全策略” > “本地策略”**.
-1. 单击用户权限分配，然后右键单击作为操作系统的一部分操作，并选择属性。
-1. 单击 **添加用户或组**.
-1. 在输入要选择的对象名称框中，键入您在步骤4中创建的用户的名称，然后单击 **检查名称** 以确保名称正确，然后单击 **确定**.
-1. 单击 **确定** 关闭Act As A Operating System属性对话框。
+1. 使用系統管理員使用者帳戶登入Windows。
+1. 選取 **「開始」 > 「控制檯」 > 「管理工具」 > 「電腦管理」 > 「本機使用者和群組」**.
+1. 以滑鼠右鍵按一下「使用者」並選取 **新使用者**.
+1. 在適當的方塊中輸入使用者名稱和密碼，並在其他方塊中輸入您需要的任何其他資訊。
+1. 取消選取 **使用者必須在下次登入時變更密碼**，按一下 **建立**，然後按一下 **關閉**.
+1. 按一下 **使用者**，以滑鼠右鍵按一下您剛建立的使用者並選取 **屬性**.
+1. 按一下 **成員隸屬於** 標籤，然後按一下 **新增**.
+1. 在「輸入要選取的物件名稱」方塊中，鍵入 `Administrators`，按一下「檢查名稱」以確保群組名稱正確。
+1. 按一下 **確定** 然後按一下 **確定** 再來一次。
+1. 選取 **「開始」 > 「控制面板」 > 「管理工具」 > 「本機安全性原則」 > 「本機原則」**.
+1. 按一下「使用者許可權指派」，然後以滑鼠右鍵按一下「作為作業系統的一部分」，並選取「屬性」。
+1. 按一下 **新增使用者或群組**.
+1. 在「輸入要選取的物件名稱」方塊中，輸入您在步驟4中建立的使用者名稱，然後按一下 **檢查名稱** 以確保名稱正確，然後按一下 **確定**.
+1. 按一下 **確定** 關閉Act As A Operating System屬性對話方塊的一部分。
 
-### 配置WebSphere以使用新创建的用户作为管理员 {#configure-websphere-to-use-the-newly-created-user-as-administrator}
+### 設定WebSphere以使用新建立的使用者作為管理員 {#configure-websphere-to-use-the-newly-created-user-as-administrator}
 
-1. 确保WebSphere正在运行。
-1. 在WebSphere管理控制台中，选择 **安全>全局安全**.
-1. 在管理安全下，选择 **管理用户角色**.
-1. 单击添加，然后执行以下操作：
+1. 請確定WebSphere正在執行。
+1. 在WebSphere管理主控台中，選取 **安全性>全域安全性**.
+1. 在「管理安全性」下，選取 **管理使用者角色**.
+1. 按一下「新增」並執行下列動作：
 
-   1. 类型 **&amp;ast；** ，然后单击搜索。
-   1. 单击 **管理员** 在“角色”下。
-   1. 将新创建的用户添加到映射到角色，并将其映射到管理员。
+   1. 型別 **&amp;ast；** ，然後按一下「搜尋」。
+   1. 按一下 **管理員** 在「角色」底下。
+   1. 將新建立的使用者新增至對應至角色，並將其對應至管理員。
 
-1. 单击 **确定** 并保存更改。
-1. 重新启动WebSphere配置文件。
+1. 按一下 **確定** 並儲存您的變更。
+1. 重新啟動WebSphere設定檔。
 
-## 启用管理安全性 {#enable-administrative-security}
+## 啟用管理安全性 {#enable-administrative-security}
 
-1. 在WebSphere管理控制台中，选择 **安全>全局安全**.
-1. 单击 **安全配置向导**.
-1. 确保 **启用应用程序安全性** 复选框已启用。 单击&#x200B;**下一步**。
-1. 选择 **联合存储库** 并单击 **下一个**.
-1. 指定要设置的凭据，然后单击 **下一个**.
-1. 单击 **完成**.
-1. 重新启动WebSphere配置文件。
+1. 在WebSphere管理主控台中，選取 **安全性>全域安全性**.
+1. 按一下 **安全性設定精靈**.
+1. 確定 **啟用應用程式安全性** 核取方塊已啟用。 单击&#x200B;**下一步**。
+1. 選取 **同盟存放庫** 並按一下 **下一個**.
+1. 指定您要設定的認證，然後按一下 **下一個**.
+1. 按一下 **完成**.
+1. 重新啟動WebSphere設定檔。
 
-   WebSphere将开始使用默认的keystore和truststore。
+   WebSphere將開始使用預設金鑰存放區和信任存放區。
 
-## 启用SSL（自定义密钥和信任库） {#enable-ssl-custom-key-and-truststore}
+## 啟用SSL （自訂金鑰和信任庫） {#enable-ssl-custom-key-and-truststore}
 
-可以使用ikeyman实用程序或Admin Console创建信任库和密钥库。 要使ikeyman正常工作，请确保WebSphere安装路径不包含括号。
+信任存放區和金鑰存放區可以使用ikeyman公用程式或Admin Console來建立。 若要讓ikeyman正常運作，請確保WebSphere安裝路徑不包含括弧。
 
-1. 在WebSphere管理控制台中，选择 **安全> SSL证书和密钥管理**.
-1. 单击 **密钥库和证书** 在“相关项目”下。
-1. 在 **密钥存储使用情况** 下拉列表，确保 **SSL密钥库** 已选中。 单击&#x200B;**新建**。
-1. 键入逻辑名称和描述。
-1. 指定要创建密钥库的路径。 如果已通过ikeyman创建密钥库，请指定密钥库文件的路径。
-1. 指定并确认密码。
-1. 选择密钥库类型并单击 **应用**.
-1. 保存主控配置。
-1. 单击 **个人证书**.
-1. 如果您添加了已使用ikeyman创建的密钥库，则会显示您的证书。 否则，您需要通过执行以下步骤来添加新的自签名证书：
+1. 在WebSphere管理主控台中，選取 **安全性> SSL憑證和金鑰管理**.
+1. 按一下 **金鑰存放區和憑證** 在「相關專案」下。
+1. 在 **金鑰存放區使用情形** 下拉式清單，確認 **SSL金鑰存放區** 「 」已選取。 按一下 **新增**.
+1. 輸入邏輯名稱和說明。
+1. 指定您要建立金鑰存放區的路徑。 如果您已透過ikeyman建立金鑰存放區，請指定金鑰存放區檔案的路徑。
+1. 指定並確認密碼。
+1. 選擇金鑰庫型別並按一下 **套用**.
+1. 儲存主組態。
+1. 按一下 **個人憑證**.
+1. 如果您已新增使用ikeyman建立的金鑰存放區，則會顯示您的憑證。 否則，您需要透過執行以下步驟來新增自我簽署憑證：
 
-   1. 选择 **创建>自签名证书**.
-   1. 在证书表单上指定适当的值。 确保将别名和公用名保留为计算机的完全限定域名。
-   1. 单击 **应用**.
+   1. 選取 **建立>自我簽署憑證**.
+   1. 在憑證表單上指定適當的值。 請確定您保留別名與通用名稱做為電腦的完整網域名稱。
+   1. 按一下 **套用**.
 
-1. 重复步骤2至10以创建信任库。
+1. 重複步驟2到10以建立信任存放區。
 
-## 将自定义密钥库和信任库应用到服务器 {#apply-custom-keystore-and-truststore-to-the-server}
+## 將自訂金鑰存放區和信任存放區套用至伺服器 {#apply-custom-keystore-and-truststore-to-the-server}
 
-1. 在WebSphere管理控制台中，选择 **安全> SSL证书和密钥管理**.
-1. 单击 **管理端点安全配置**. 本地拓扑图打开。
-1. 在入站下，选择节点的直接子节点。
-1. 在相关项目下，选择 **SSL配置**.
-1. 选择 **NodeDefaultSSLSetting**.
-1. 从信任库名称和密钥库名称下拉列表中，选择您创建的自定义信任库和密钥库。
-1. 单击 **应用**.
-1. 保存主控配置。
-1. 重新启动WebSphere配置文件。
+1. 在WebSphere管理主控台中，選取 **安全性> SSL憑證和金鑰管理**.
+1. 按一下 **管理端點安全性設定**. 本機拓撲對應隨即開啟。
+1. 在輸入下，選取節點的直接子項。
+1. 在「相關專案」下，選取 **SSL設定**.
+1. 選取 **NodeDefaultSSLSetting**.
+1. 從信任庫名稱和金鑰庫名稱下拉式清單中，選取您建立的自訂信任庫和金鑰庫。
+1. 按一下 **套用**.
+1. 儲存主組態。
+1. 重新啟動WebSphere設定檔。
 
-   现在，您的配置文件会在自定义SSL设置和证书上运行。
+   您的設定檔現在會在自訂SSL設定和您的憑證上執行。
 
-## 启用对AEM表单本地语的支持 {#enabling-support-for-aem-forms-natives}
+## 啟用AEM表單原生支援 {#enabling-support-for-aem-forms-natives}
 
-1. 在WebSphere管理控制台中，选择 **安全>全局安全**.
-1. 在身份验证部分，展开 **RMI/IIOP安全** 并单击 **CSIv2入站通信**.
-1. 确保 **支持SSL** 在传输下拉列表中选择。
-1. 重新启动WebSphere配置文件。
+1. 在WebSphere管理主控台中，選取 **安全性>全域安全性**.
+1. 在驗證區段中，展開 **RMI/IIOP安全性** 並按一下 **CSIv2傳入通訊**.
+1. 確定 **支援SSL** 在「傳輸」下拉式清單中選取。
+1. 重新啟動WebSphere設定檔。
 
-## 配置WebSphere以转换以https开头的URL {#configuring-websphere-to-convert-urls-that-begins-with-https}
+## 設定WebSphere以轉換以https開頭的URL {#configuring-websphere-to-convert-urls-that-begins-with-https}
 
-要转换以https开头的URL，请将该URL的签名者证书添加到WebSphere服务器。
+若要轉換以https開頭的URL，請將該URL的簽署者憑證新增至WebSphere伺服器。
 
-**为启用https的站点创建签名者证书**
+**為啟用https的網站建立簽署者憑證**
 
-1. 确保WebSphere正在运行。
-1. 在WebSphere管理控制台中，导航到签名者证书，然后单击安全> SSL证书和密钥管理>密钥存储和证书> NodeDefaultTrustStore >签名者证书。
-1. 单击从端口检索并执行以下任务：
+1. 請確定WebSphere正在執行。
+1. 在WebSphere管理主控台中，瀏覽至簽署者憑證，然後按一下「安全性> SSL憑證和金鑰管理>金鑰存放區和憑證> NodeDefaultTrustStore >簽署者憑證」。
+1. 按一下從連線埠擷取，然後執行下列工作：
 
-   * 在主机框中，键入URL。 例如，键入 `www.paypal.com`.
-   * 在“端口”框中，键入 `443`. 此端口是默认的SSL端口。
-   * 在“别名”框中，键入别名。
+   * 在「主機」方塊中，輸入URL。 例如，輸入 `www.paypal.com`.
+   * 在「連線埠」方塊中，輸入 `443`. 此連線埠是預設的SSL連線埠。
+   * 在「別名」方塊中，鍵入別名。
 
-1. 单击“检索签名者信息”，然后验证是否检索了信息。
-1. 单击应用，然后单击保存。
+1. 按一下「擷取簽署者資訊」，然後確認已擷取資訊。
+1. 按一下套用，然後按一下儲存。
 
-现在，从已添加其证书的站点HTML到PDF的转换将在生成PDF服务中起作用。
+從已新增憑證的網站進行HTML至PDF轉換後，現在可在產生PDF服務中運作。
 
 >[!NOTE]
 >
->对于从WebSphere内部连接到SSL站点的应用程序，需要签名者证书。 它由Java安全套接字扩展(JSSE)用来验证在SSL握手期间发送的连接的远程端的证书。
+>應用程式若要從WebSphere內部連線到SSL網站，需要簽署者憑證。 Java Secure Socket Extensions (JSSE)會用它來驗證連線的遠端端在SSL交握期間傳送的憑證。
 
-## 配置动态端口 {#configuring-dynamic-ports}
+## 設定動態連線埠 {#configuring-dynamic-ports}
 
-启用全局安全后，IBM WebSphere不允许对ORB.init()进行多次调用。 您可以在https://www-01.ibm.com/support/docview.wss?uid=swg1PK58704上阅读有关永久限制的信息。
+啟用全域安全性時，IBM WebSphere不允許對ORB.init()進行多次呼叫。 如需永久限制的相關資訊，請參閱https://www-01.ibm.com/support/docview.wss?uid=swg1PK58704。
 
-执行以下步骤以将端口设置为动态并解决此问题：
+執行以下步驟，將連線埠設定為動態並解決問題：
 
-1. 在WebSphere管理控制台中，选择 **服务器** > **服务器类型** > **WebSphere应用程序服务器**.
-1. 在“首选项”部分，选择您的服务器。
-1. 在 **配置** 选项卡，下 **通信** 部分，展开 **端口**，然后单击 **详细信息**.
-1. 单击以下端口名称，更改 **端口号** 更改为0，然后单击 **确定**.
+1. 在WebSphere管理主控台中，選取 **伺服器** > **伺服器型別** > **WebSphere應用程式伺服器**.
+1. 在偏好設定區段中，選取您的伺服器。
+1. 在 **設定** 標籤，底下 **通訊** 區段，展開 **連線埠**，然後按一下 **詳細資料**.
+1. 按一下下列連線埠名稱，變更 **連線埠號碼** 設為0，然後按一下 **確定**.
 
    * `ORB_LISTENER_ADDRESS`
    * `SAS_SSL_SERVERAUTH_LISTENER_ADDRESS`
    * `CSIV2_SSL_SERVERAUTH_LISTENER_ADDRESS`
    * `CSIV2_SSL_MUTUALAUTH_LISTENER_ADDRESS`
 
-## 配置sling.properties文件 {#configure-the-sling-properties-file}
+## 設定sling.properties檔案 {#configure-the-sling-properties-file}
 
-1. 打开 `[aem-forms_root]`\crx-repository\launchpad\sling.properties文件进行编辑。
-1. 找到 `sling.bootdelegation.ibm` 属性和添加 `com.ibm.websphere.ssl.*`到其值字段。 更新的字段如下所示：
+1. 開啟 `[aem-forms_root]`\crx-repository\launchpad\sling.properties檔案進行編輯。
+1. 找到 `sling.bootdelegation.ibm` 屬性和新增 `com.ibm.websphere.ssl.*`至其值欄位。 更新後的欄位如下所示：
 
    ```shell
    sling.bootdelegation.ibm=com.ibm.xml.*, com.ibm.websphere.ssl.*

@@ -6,7 +6,7 @@ exl-id: 91c5f61c-9c15-4d72-9b9b-0c23f31e7cdc
 source-git-commit: 85f8da2a30e1bb5b78cbb36cd9b79939dd913251
 workflow-type: tm+mt
 source-wordcount: '1586'
-ht-degree: 91%
+ht-degree: 94%
 
 ---
 
@@ -356,14 +356,14 @@ query {
 }
 ```
 
-### 示例查询 – 所有城市的名称 标记为城市中断 {#sample-names-all-cities-tagged-city-breaks}
+### 示例查询 – 所有城市的名称 已標籤為分行符號 {#sample-names-all-cities-tagged-city-breaks}
 
 如果您：
 
-* 创建各种标记，名为 `Tourism` : `Business`, `City Break`, `Holiday`
-* 并将它们分配给 `City` 实例
+* 建立各種標籤，已命名 `Tourism` ： `Business`， `City Break`， `Holiday`
+* 並將它們指派給各種變數的主變數 `City` 執行個體
 
-然后，您可以使用查询返回 `name` 和 `tags`在 `city`架构。
+然後，您可以使用查詢來傳回 `name` 和 `tags`中所有標示為「城市分隔符號」的專案 `city`結構描述。
 
 **示例查询**
 
@@ -1323,16 +1323,16 @@ query {
 
 ### 嵌套内容片段的示例查询 – 多个模型类型{#sample-wknd-nested-fragment-multiple-model}
 
-#### 单参照模型类型
+#### 单一引用模型类型
 
 此查询查找：
 
 * 类型为 `bookmark` 的多个内容片段
-   * 具有对特定模型类型的其他片段的片段引用 `Article`
+   * 带有对特定模型类型 `Article` 的其他片段的片段引用
 
 >[!NOTE]
 >
->字段 `fragments` 具有数据类型 `fragment-reference`，与模型一起使用 `Article` 选项。 查询传送 `fragments` 作为 `[Article]`.
+>字段 `fragments` 具有数据类型 `fragment-reference`，并选择了模型 `Article`。查询以 `fragments` 数组形式传递 `[Article]`。
 
 ```graphql
 {
@@ -1347,7 +1347,7 @@ query {
 }
 ```
 
-#### 多个参照模型类型
+#### 多个引用模型类型
 
 此查询查找：
 
@@ -1356,7 +1356,7 @@ query {
 
 >[!NOTE]
 >
->字段 `fragments` 具有数据类型 `fragment-reference`，并选择了模型 `Article`、`Adventure`。查询传送 `fragments` 作为 `[AllFragmentModels]`，使用并集类型取消引用。
+>字段 `fragments` 具有数据类型 `fragment-reference`，并选择了模型 `Article`、`Adventure`。查询以 `[AllFragmentModels]` 数组形式传递 `fragments`，该数组通过联合类型解除引用。
 
 ```graphql
 {
@@ -1561,11 +1561,11 @@ query {
 }
 ```
 
-### 给定模型的多个内容片段及其变体的示例查询 {#sample-wknd-multiple-fragment-variations-given-model}
+### 給定模型的多個內容片段及其變體的範例查詢 {#sample-wknd-multiple-fragment-variations-given-model}
 
 此查询查找：
 
-* （对于类型的内容片段） `article` 所有变量
+* 型別為的內容片段 `article` 和所有變數
 
 **示例查询**
 
@@ -1588,11 +1588,11 @@ query {
 }
 ```
 
-### 附加了特定标记的给定模型的内容片段变量查询示例{#sample-wknd-fragment-variations-given-model-specific-tag}
+### 附加特定標籤之指定模型的內容片段變體範例查詢{#sample-wknd-fragment-variations-given-model-specific-tag}
 
 此查询查找：
 
-* （对于类型的内容片段） `article` 具有标记的一个或多个变体 `WKND : Activity / Hiking`
+* 型別為的內容片段 `article` 一或多個具有標籤的變數 `WKND : Activity / Hiking`
 
 **示例查询**
 

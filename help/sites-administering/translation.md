@@ -1,7 +1,7 @@
 ---
 title: 翻译多语言站点的内容
 seo-title: Translating Content for Multilingual Sites
-description: 了解如何翻译多语言站点的内容。
+description: 瞭解如何翻譯多語言網站的內容。
 seo-description: Learn how to translate content for multilingual sites.
 uuid: 69b3e3a9-6773-4759-8178-aaa612e4c170
 contentOwner: Guillaume Carlino
@@ -22,7 +22,7 @@ ht-degree: 83%
 
 # 翻译多语言站点的内容 {#translating-content-for-multilingual-sites}
 
-自动翻译页面内容、资产和用户生成的内容，以创建和维护多语言网站。 要自动化翻译工作流，您可以将翻译服务提供商与 AEM 集成并创建项目以将内容翻译成多种语言。AEM 支持人工翻译工作流和机器翻译工作流。
+自動翻譯頁面內容、資產和使用者產生的內容，以建立和維護多語言網站。 要自动化翻译工作流，您可以将翻译服务提供商与 AEM 集成并创建项目以将内容翻译成多种语言。AEM 支持人工翻译工作流和机器翻译工作流。
 
 * 人工翻译：内容将发送给您的翻译提供商并由专业翻译人员进行翻译。完成后，将返回翻译的内容并将其导入 AEM。当您的翻译提供商与 AEM 集成时，内容会在 AEM 和翻译提供商之间自动发送。
 * 机器翻译：机器翻译服务将立即翻译您的内容。
@@ -40,7 +40,7 @@ ht-degree: 83%
 
 >[!NOTE]
 >
->您的用户必须是项目管理员组的成员才能使用语言复制功能。
+>您的使用者必須是專案管理員群組的成員，才能使用語言複製功能。
 
 ## 最佳实践 {#best-practices}
 

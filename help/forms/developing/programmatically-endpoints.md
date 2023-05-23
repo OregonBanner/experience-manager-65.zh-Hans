@@ -1,7 +1,7 @@
 ---
-title: 以编程方式管理端点
+title: 以程式管理端點
 seo-title: Programmatically Managing Endpoints
-description: 使用“端点注册”服务可以添加EJB端点、添加SOAP端点、添加Watched Folder端点、添加电子邮件端点、添加远程处理端点、添加任务管理器端点、修改端点、删除端点以及检索端点连接器信息。
+description: 使用「端點登入」服務來新增EJB端點、新增SOAP端點、新增Watched Folder端點、新增電子郵件端點、新增遠端端點、新增工作管理員端點、修改端點、移除端點，以及擷取端點聯結器資訊。
 seo-description: Use the Endpoint Registry service to add EJB endpoints, add SOAP endpoint, add Watched Folder endpoints, add Email endpoints, add  Remoting endpoints, add Task Manager endpoints, modify endpoints, remove endpoints, and retrieve endpoint connector information.
 uuid: 5dc50946-3323-4c5d-a43b-31c1c980bd04
 contentOwner: admin
@@ -18,454 +18,454 @@ ht-degree: 1%
 
 ---
 
-# 以编程方式管理端点 {#programmatically-managing-endpoints}
+# 以程式管理端點 {#programmatically-managing-endpoints}
 
-**本文档中的示例和示例仅适用于AEM Forms on JEE环境。**
+**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms 。**
 
-**关于终结点注册表服务**
+**關於端點登入服務**
 
-Endpoint Registry服务提供了以编程方式管理端点的功能。 例如，您可以将以下类型的端点添加到服务：
+Endpoint Registry服務提供以程式設計方式管理端點的功能。 例如，您可以將下列型別的端點新增至服務：
 
 * EJB
 * SOAP
-* 观察文件夹
+* 觀察資料夾
 * 电子邮件
-* (对于AEM表单已弃用)远程处理
-* 任务管理器
+* (AEM Forms已棄用)遠端
+* 任務管理員
 
 >[!NOTE]
 >
->SOAP、EJB和(对于JEE上的AEM Forms已弃用)远程处理端点是为每个激活的服务自动创建的。 SOAP和EJB端点为所有服务操作启用SOAP和EJB。
+>SOAP、EJB和(JEE上的AEM Forms已棄用)遠端端點會自動為每個啟用的服務建立。 SOAP和EJB端點為所有服務作業啟用SOAP和EJB。
 
-远程端点使Flex客户端能够调用对端点所添加到的AEM Forms服务的操作。 将创建与端点同名的Flex目标，并且Flex客户端可以创建指向此目标的RemoteObjects以调用对相关服务的操作。
+遠端端點可讓Flex使用者端叫用新增端點的AEM Forms服務上的操作。 會建立與端點同名的Flex目的地，且Flex使用者端可建立指向此目的地的RemoteObjects，以叫用相關服務的作業。
 
-电子邮件、任务管理器和Watched Folder端点仅公开服务的特定操作。 添加这些端点需要执行第二个配置步骤，以选择要调用的方法、设置配置参数以及指定输入和输出参数映射。
+電子郵件、工作管理員和Watched Folder端點只會公開服務的特定操作。 新增這些端點需要第二個設定步驟，以選取要呼叫的方法、設定設定引數，以及指定輸入和輸出引數對應。
 
-您可以将TaskManager端点组织成组，称为 *类别*. 然后，这些类别将通过TaskManager向Workspace公开，最终用户在分类时看到TaskManager端点。 在Workspace中，最终用户可在导航窗格中看到这些类别。 每个类别中的端点在Workspace的“启动进程”页面上显示为进程卡。
+您可以將TaskManager端點組織成群組，稱為 *類別*. 然後這些類別會透過TaskManager向工作區公開，使用者在分類時可看到TaskManager端點。 在Workspace中，一般使用者可在導覽窗格中看到這些類別。 每個類別中的端點在Workspace的「開始程式」頁面上會顯示為程式卡。
 
-您可以使用Endpoint Registry服务完成以下任务：
+您可以使用Endpoint Registry服務完成這些工作：
 
-* 添加EJB端点。 (请参阅 [添加EJB端点](programmatically-endpoints.md#adding-ejb-endpoints).)
-* 添加SOAP端点。 (请参阅 [添加SOAP端点](programmatically-endpoints.md#adding-soap-endpoints).)
-* 添加Watched文件夹端点(请参阅 [添加观察文件夹端点](programmatically-endpoints.md#adding-watched-folder-endpoints).)
-* 添加电子邮件端点。 (请参阅 [添加电子邮件端点](programmatically-endpoints.md#adding-email-endpoints).)
-* 添加远程处理端点。 (请参阅 [添加远程端点](programmatically-endpoints.md#adding-remoting-endpoints).)
-* 添加任务管理器端点(请参阅 [添加TaskManager端点](programmatically-endpoints.md#adding-taskmanager-endpoints).)
-* 修改端点(请参阅 [修改端点](programmatically-endpoints.md#modifying-endpoints).)
-* 删除端点(请参阅 [删除端点](programmatically-endpoints.md#removing-endpoints).)
-* 检索终结点连接器信息(请参阅 [正在检索终结点连接器信息](programmatically-endpoints.md#retrieving-endpoint-connector-information).)
+* 新增EJB端點。 (請參閱 [新增EJB端點](programmatically-endpoints.md#adding-ejb-endpoints).)
+* 新增SOAP端點。 (請參閱 [新增SOAP端點](programmatically-endpoints.md#adding-soap-endpoints).)
+* 新增監看資料夾端點(請參閱 [新增Watched資料夾端點](programmatically-endpoints.md#adding-watched-folder-endpoints).)
+* 新增電子郵件端點。 (請參閱 [新增電子郵件端點](programmatically-endpoints.md#adding-email-endpoints).)
+* 新增遠端端點。 (請參閱 [新增遠端端點](programmatically-endpoints.md#adding-remoting-endpoints).)
+* 新增TaskManager端點(請參閱 [新增TaskManager端點](programmatically-endpoints.md#adding-taskmanager-endpoints).)
+* 修改端點(請參閱 [修改端點](programmatically-endpoints.md#modifying-endpoints).)
+* 移除端點(請參閱 [移除端點](programmatically-endpoints.md#removing-endpoints).)
+* 擷取端點聯結器資訊(請參閱 [正在擷取端點聯結器資訊](programmatically-endpoints.md#retrieving-endpoint-connector-information).)
 
-## 添加EJB端点 {#adding-ejb-endpoints}
+## 新增EJB端點 {#adding-ejb-endpoints}
 
-您可以使用AEM Forms Java API以编程方式将EJB端点添加到服务。 通过将EJB端点添加到服务，可以使客户机应用程序使用EJB模式调用该服务。 也就是说，在设置调用AEM Forms所需的连接属性时，可以选择EJB模式。 (请参阅 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).)
-
->[!NOTE]
->
->无法使用Web服务添加EJB端点。
+您可以使用AEM Forms Java API，以程式設計方式將EJB端點新增至服務。 藉由將EJB端點加入服務，即可讓從屬端應用程式使用EJB模式來呼叫服務。 也就是說，在設定呼叫AEM Forms所需的連線屬性時，您可以選取EJB模式。 (請參閱 [設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).)
 
 >[!NOTE]
 >
->通常，默认情况下会将EJB端点添加到服务中。但是，可以将EJB端点添加到以编程方式部署的进程中，或者在删除了EJB端点且必须再次添加时，可以将EJB端点添加到进程中。
+>您無法使用Web服務新增EJB端點。
 
-### 步骤摘要 {#summary-of-steps}
+>[!NOTE]
+>
+>一般而言，EJB端點會依預設新增至服務。不過，EJB端點可以新增至以程式設計方式建置的處理，或是移除EJB端點而必須再次新增的處理程式。
 
-要向服务添加EJB端点，请执行以下任务：
+### 步驟摘要 {#summary-of-steps}
 
-1. 包括项目文件。
-1. 创建 `EndpointRegistry Client` 对象。
-1. 设置EJB终结点属性。
-1. 创建EJB端点。
-1. 启用端点。
+若要將EJB端點新增至服務，請執行下列工作：
 
-**包括项目文件**
+1. 包含專案檔案。
+1. 建立 `EndpointRegistry Client` 物件。
+1. 設定EJB端點屬性。
+1. 建立EJB端點。
+1. 啟用端點。
 
-在开发项目中包含必要的文件。 必须将以下JAR文件添加到项目的类路径中：
+**包含專案檔案**
+
+在您的開發專案中包含必要的檔案。 必須將以下JAR檔案新增到專案的類別路徑中：
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
-* adobe-utilities.jar(如果将AEM Forms部署在JBoss Application Server上，则此为必需字段)
-* jbossall-client.jar(如果将AEM Forms部署在JBoss Application Server上，则此为必需字段)
+* adobe-utilities.jar (如果將AEM Forms部署在JBoss Application Server上，則為必要)
+* jbossall-client.jar (如果AEM Forms部署在JBoss Application Server上，則為必要)
 
-有关这些JAR文件位置的信息，请参见 [包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
+有關這些JAR檔案位置的資訊，請參見 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
 
-**创建EndpointRegistry客户端对象**
+**建立EndpointRegistry使用者端物件**
 
-必须先创建一个 `EndpointRegistryClient` 对象。
+您必須先建立 `EndpointRegistryClient` 物件。
 
-**设置EJB终结点属性**
+**設定EJB端點屬性**
 
-要为服务创建EJB端点，请指定以下值：
+若要建立服務的EJB端點，請指定下列值：
 
-* **连接器标识符**：指定要创建的终结点的类型。 要创建EJB端点，请指定 `EJB`.
-* **描述**：指定终结点描述。
-* **名称**：指定端点的名称。
-* **服务标识符**：指定终结点所属的服务。
-* **操作名称**：指定使用端点调用的操作的名称。 创建EJB端点时，请指定通配符( `*`)。 但是，如果要指定特定操作而不是调用所有服务操作，请指定操作名称，而不是使用通配符( `*`)。
+* **聯結器識別碼**：指定要建立的端點型別。 若要建立EJB端點，請指定 `EJB`.
+* **說明**：指定端點說明。
+* **名稱**：指定端點的名稱。
+* **服務識別碼**：指定端點所屬的服務。
+* **作業名稱**：指定使用端點叫用的作業名稱。 建立EJB端點時，請指定萬用字元( `*`)。 不過，如果您想要指定特定作業而不是叫用所有服務作業，請指定作業的名稱，而不是使用萬用字元( `*`)。
 
-**创建EJB端点**
+**建立EJB端點**
 
-设置EJB终结点属性后，可以为服务创建EJB终结点。
+設定EJB端點屬性後，即可建立服務的EJB端點。
 
-**启用端点**
+**啟用端點**
 
-创建新端点后，必须启用它。 启用端点后，便可用于调用服务。 启用该端点后，您可以在管理控制台中查看它。
-
-**另请参阅**
-
-[使用Java API添加EJB端点](programmatically-endpoints.md#adding-an-ejb-endpoint-using-the-java-api)
-
-[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
-
-[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
-
-### 使用Java API添加EJB端点 {#adding-an-ejb-endpoint-using-the-java-api}
-
-使用Java API添加EJB端点：
-
-1. 包括项目文件。
-
-   在Java项目的类路径中包含客户端JAR文件，例如adobe-livecycle-client.jar。 （
-
-1. 创建EndpointRegistry客户端对象。
-
-   * 创建 `ServiceClientFactory` 包含连接属性的对象。
-   * 创建 `EndpointRegistryClient` 对象，使用它的构造函数传递 `ServiceClientFactory` 对象。
-
-1. 设置EJB终结点属性。
-
-   * 创建 `CreateEndpointInfo` 对象。
-   * 通过调用 `CreateEndpointInfo` 对象的 `setConnectorId` 方法和传递字符串值 `EJB`.
-   * 通过调用 `CreateEndpointInfo` 对象的 `setDescription` 方法和传递描述端点的字符串值。
-   * 通过调用 `CreateEndpointInfo` 对象的 `setName` 方法，并传递一个指定名称的字符串值。
-   * 通过调用 `CreateEndpointInfo` 对象的 `setServiceId` 方法，并传递一个指定服务名称的字符串值。
-   * 指定通过调用 `CreateEndpointInfo` 对象的 `setOperationName` 方法，并传递一个指定操作名称的字符串值。 对于SOAP和EJB端点，请指定通配符( `*`)，这表示所有操作。
-
-1. 创建EJB端点。
-
-   通过调用 `EndpointRegistryClient` 对象的 `createEndpoint` 方法和传递 `CreateEndpointInfo` 对象。 此方法会返回 `Endpoint` 表示新EJB端点的对象。
-
-1. 启用端点。
-
-   通过调用 `EndpointRegistryClient` 对象的enable方法和传递 `Endpoint` 返回的对象 `createEndpoint` 方法。
+建立新端點後，您必須啟用它。 啟用端點後，即可用來叫用服務。 啟用端點後，即可在管理主控台中檢視它。
 
 **另请参阅**
 
-[步骤摘要](programmatically-endpoints.md#summary-of-steps)
+[使用Java API新增EJB端點](programmatically-endpoints.md#adding-an-ejb-endpoint-using-the-java-api)
 
-[快速入门：使用Java API添加EJB端点](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-adding-an-ejb-endpoint-using-the-java-api)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
-[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+### 使用Java API新增EJB端點 {#adding-an-ejb-endpoint-using-the-java-api}
 
-## 添加SOAP端点 {#adding-soap-endpoints}
+使用Java API新增EJB端點：
 
-您可以使用AEM Forms Java API以编程方式将SOAP端点添加到服务。 通过添加SOAP端点，可以使客户端应用程序使用SOAP模式调用该服务。 也就是说，在设置调用AEM Forms所需的连接属性时，可以选择SOAP模式。
+1. 包含專案檔案。
+
+   在您的Java專案的類別路徑中包含使用者端JAR檔案，例如adobe-livecycle-client.jar。 （
+
+1. 建立EndpointRegistry使用者端物件。
+
+   * 建立 `ServiceClientFactory` 包含連線屬性的物件。
+   * 建立 `EndpointRegistryClient` 物件，使用它的建構函式並傳遞 `ServiceClientFactory` 物件。
+
+1. 設定EJB端點屬性。
+
+   * 建立 `CreateEndpointInfo` 物件（使用其建構函式）。
+   * 透過叫用「 」來指定聯結器識別碼值 `CreateEndpointInfo` 物件的 `setConnectorId` 方法和傳遞字串值 `EJB`.
+   * 透過叫用端點來指定端點的說明 `CreateEndpointInfo` 物件的 `setDescription` 方法和傳遞描述端點的字串值。
+   * 透過叫用端點來指定端點的名稱 `CreateEndpointInfo` 物件的 `setName` 並傳遞指定名稱的字串值。
+   * 透過叫用「 」，指定端點所屬的服務 `CreateEndpointInfo` 物件的 `setServiceId` 方法並傳遞指定服務名稱的字串值。
+   * 指定透過叫用呼叫的作業 `CreateEndpointInfo` 物件的 `setOperationName` 方法，並傳遞指定作業名稱的字串值。 對於SOAP和EJB端點，請指定萬用字元( `*`)，這表示所有作業。
+
+1. 建立EJB端點。
+
+   透過叫用端點來建立端點 `EndpointRegistryClient` 物件的 `createEndpoint` 方法和傳遞 `CreateEndpointInfo` 物件。 此方法會傳回 `Endpoint` 代表新EJB端點的物件。
+
+1. 啟用端點。
+
+   透過叫用啟用端點 `EndpointRegistryClient` 物件的enable方法並傳遞 `Endpoint` 物件，由 `createEndpoint` 方法。
+
+**另请参阅**
+
+[步驟摘要](programmatically-endpoints.md#summary-of-steps)
+
+[快速入門：使用Java API新增EJB端點](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-adding-an-ejb-endpoint-using-the-java-api)
+
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+
+[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+
+## 新增SOAP端點 {#adding-soap-endpoints}
+
+您可以使用AEM Forms Java API，以程式設計方式將SOAP端點新增至服務。 透過新增SOAP端點，您可以讓使用者端應用程式使用SOAP模式來叫用服務。 也就是說，在設定呼叫AEM Forms所需的連線屬性時，您可以選取SOAP模式。
 
 >[!NOTE]
 >
->无法使用Web服务添加SOAP端点。
+>您無法使用Web服務新增SOAP端點。
 
 >[!NOTE]
 >
->通常，默认情况下会向服务添加SOAP端点。但是，可以将SOAP端点添加到以编程方式部署的进程，或者在删除了SOAP端点且必须再次添加时。
+>通常，SOAP端點會預設新增到服務。但是，SOAP端點可以新增到以程式設計方式部署的流程中，或者在移除SOAP端點且必須再次新增時。
 
-### 步骤摘要 {#summary_of_steps-1}
+### 步驟摘要 {#summary_of_steps-1}
 
-要向服务添加SOAP端点，请执行以下任务：
+若要將SOAP端點新增至服務，請執行下列工作：
 
-1. 包括项目文件。
-1. 创建 `EndpointRegistryClient` 对象。
-1. 设置SOAP端点属性。
-1. 创建SOAP端点。
-1. 启用端点。
+1. 包含專案檔案。
+1. 建立 `EndpointRegistryClient` 物件。
+1. 設定SOAP端點屬性。
+1. 建立SOAP端點。
+1. 啟用端點。
 
-**包括项目文件**
+**包含專案檔案**
 
-在开发项目中包含必要的文件。 如果要使用Java创建客户端应用程序，请包含必要的JAR文件。 如果使用Web服务，请确保包含代理文件。
+在您的開發專案中包含必要的檔案。 如果您使用Java建立使用者端應用程式，請包含必要的JAR檔案。 如果您使用Web服務，請務必包含Proxy檔案。
 
-必须将以下JAR文件添加到项目的类路径中：
+必須將以下JAR檔案新增到專案的類別路徑中：
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
-* adobe-utilities.jar(如果将AEM Forms部署在JBoss Application Server上，则此为必需字段)
-* jbossall-client.jar(如果将AEM Forms部署在JBoss Application Server上，则此为必需字段)
+* adobe-utilities.jar (如果將AEM Forms部署在JBoss Application Server上，則為必要)
+* jbossall-client.jar (如果AEM Forms部署在JBoss Application Server上，則為必要)
 
-创建SOAP端点需要这些JAR文件。 但是，如果使用SOAP端点调用服务，则需要添加JAR文件。 有关AEM Forms JAR文件的信息，请参见 [包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
+建立SOAP端點需要這些JAR檔案。 不過，如果您使用SOAP端點來叫用服務，則需要額外的JAR檔案。 如需AEM Forms JAR檔案的相關資訊，請參閱 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
 
-**创建EndpointRegistry客户端对象**
+**建立EndpointRegistry使用者端物件**
 
-要以编程方式将SOAP端点添加到服务，您必须创建 `EndpointRegistryClient` 对象。
+若要以程式設計方式將SOAP端點新增至服務，您必須建立 `EndpointRegistryClient` 物件。
 
-**设置SOAP端点属性**
+**設定SOAP端點屬性**
 
-要向服务添加SOAP端点，请指定以下值：
+若要將SOAP端點新增至服務，請指定下列值：
 
-* **连接器标识符值**：指定要创建的终结点的类型。 要创建SOAP端点，请指定 `SOAP`.
-* **描述**：指定终结点描述。
-* **名称**：指定终结点名称。
-* **服务标识符值**：指定终结点所属的服务。
-* **操作名称**：指定使用端点调用的操作的名称。 创建SOAP端点时，指定通配符( `*`)。 但是，如果要指定特定操作而不是调用所有服务操作，请指定操作名称，而不是使用通配符( `*`)。
+* **聯結器識別碼值**：指定要建立的端點型別。 若要建立SOAP端點，請指定 `SOAP`.
+* **說明**：指定端點說明。
+* **名稱**：指定端點名稱。
+* **服務識別碼值**：指定端點所屬的服務。
+* **作業名稱**：指定使用端點叫用的作業名稱。 建立SOAP端點時，請指定萬用字元( `*`)。 不過，如果您想要指定特定作業而不是叫用所有服務作業，請指定作業的名稱，而不是使用萬用字元( `*`)。
 
-**创建SOAP端点**
+**建立SOAP端點**
 
-设置SOAP端点属性后，可以创建SOAP端点。
+設定SOAP端點屬性後，您可以建立SOAP端點。
 
-**启用端点**
+**啟用端點**
 
-创建新端点后，必须启用它。 启用端点后，可用于调用服务。 启用该端点后，您可以在管理控制台中查看它。
-
-**另请参阅**
-
-[使用Java API添加SOAP端点](programmatically-endpoints.md#add-a-soap-endpoint-using-the-java-api)
-
-[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
-
-[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
-
-### 使用Java API添加SOAP端点 {#add-a-soap-endpoint-using-the-java-api}
-
-使用Java API向服务添加SOAP端点：
-
-1. 包括项目文件。
-
-   在Java项目的类路径中包含客户端JAR文件，例如adobe-livecycle-client.jar。
-
-1. 创建EndpointRegistry客户端对象。
-
-   * 创建 `ServiceClientFactory` 包含连接属性的对象。
-   * 创建 `EndpointRegistryClient` 对象，使用它的构造函数传递 `ServiceClientFactory` 对象。
-
-1. 设置SOAP端点属性。
-
-   * 创建 `CreateEndpointInfo` 对象。
-   * 通过调用 `CreateEndpointInfo` 对象的 `setConnectorId` 方法和传递字符串值 `SOAP`.
-   * 通过调用 `CreateEndpointInfo` 对象的 `setDescription` 方法和传递描述端点的字符串值。
-   * 通过调用 `CreateEndpointInfo` 对象的 `setName` 方法，并传递一个指定名称的字符串值。
-   * 通过调用 `CreateEndpointInfo` 对象的 `setServiceId` 方法，并传递一个指定服务名称的字符串值。
-   * 指定通过调用 `CreateEndpointInfo` 对象的 `setOperationName` 方法，并传递一个指定操作名称的字符串值。 对于SOAP和EJB端点，请指定通配符( `*`)，这表示所有操作。
-
-1. 创建SOAP端点。
-
-   通过调用 `EndpointRegistryClient` 对象的 `createEndpoint` 方法和传递 `CreateEndpointInfo` 对象。 此方法会返回 `Endpoint` 表示新SOAP端点的对象。
-
-1. 启用端点。
-
-   通过调用 `EndpointRegistryClient` 对象的enable方法并传递 `Endpoint` 返回的对象 `createEndpoint` 方法。
+建立新端點後，您必須啟用它。 端點啟用時，可用於叫用服務。 啟用端點後，您可以在管理主控台中檢視它。
 
 **另请参阅**
 
-[步骤摘要](programmatically-endpoints.md#summary-of-steps)
+[使用Java API新增SOAP端點](programmatically-endpoints.md#add-a-soap-endpoint-using-the-java-api)
 
-[快速入门：使用Java API添加SOAP端点](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-adding-a-soap-endpoint-using-the-java-api)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
-[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+### 使用Java API新增SOAP端點 {#add-a-soap-endpoint-using-the-java-api}
 
-## 添加观察文件夹端点 {#adding-watched-folder-endpoints}
+使用Java API將SOAP端點新增至服務：
 
-您可以使用AEM Forms Java API以编程方式将Watched Folder端点添加到服务。 通过添加Watched Folder端点，您可以使用户能够将文件(如PDF文件)放置在文件夹中。 将文件放在文件夹中后，将调用配置的服务并操作文件。 服务执行指定的操作后，会将修改的文件保存在指定的输出文件夹中。 观察文件夹配置为按固定速率间隔或按cron时间表进行扫描，例如每个星期一、星期三和星期五中午。
+1. 包含專案檔案。
 
-为了以编程方式将Watched Folder端点添加到服务，请考虑以下命名的短暂过程 *EncryDocument*. (请参阅 [了解AEM Forms流程](/help/forms/developing/aem-forms-processes.md#understanding-aem-forms-processes).)
+   在您的Java專案的類別路徑中包含使用者端JAR檔案，例如adobe-livecycle-client.jar。
+
+1. 建立EndpointRegistry使用者端物件。
+
+   * 建立 `ServiceClientFactory` 包含連線屬性的物件。
+   * 建立 `EndpointRegistryClient` 物件，使用它的建構函式並傳遞 `ServiceClientFactory` 物件。
+
+1. 設定SOAP端點屬性。
+
+   * 建立 `CreateEndpointInfo` 物件（使用其建構函式）。
+   * 透過叫用「 」來指定聯結器識別碼值 `CreateEndpointInfo` 物件的 `setConnectorId` 方法和傳遞字串值 `SOAP`.
+   * 透過叫用端點來指定端點的說明 `CreateEndpointInfo` 物件的 `setDescription` 方法和傳遞描述端點的字串值。
+   * 透過叫用端點來指定端點的名稱 `CreateEndpointInfo` 物件的 `setName` 並傳遞指定名稱的字串值。
+   * 透過叫用「 」，指定端點所屬的服務 `CreateEndpointInfo` 物件的 `setServiceId` 方法並傳遞指定服務名稱的字串值。
+   * 指定透過叫用呼叫的作業 `CreateEndpointInfo` 物件的 `setOperationName` 方法並傳遞指定作業名稱的字串值。 對於SOAP和EJB端點，請指定萬用字元( `*`)，這表示所有作業。
+
+1. 建立SOAP端點。
+
+   透過叫用端點來建立端點 `EndpointRegistryClient` 物件的 `createEndpoint` 方法和傳遞 `CreateEndpointInfo` 物件。 此方法會傳回 `Endpoint` 代表新SOAP端點的物件。
+
+1. 啟用端點。
+
+   透過叫用啟用端點 `EndpointRegistryClient` 物件的enable方法並傳遞 `Endpoint` 物件，由 `createEndpoint` 方法。
+
+**另请参阅**
+
+[步驟摘要](programmatically-endpoints.md#summary-of-steps)
+
+[快速入門：使用Java API新增SOAP端點](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-adding-a-soap-endpoint-using-the-java-api)
+
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+
+[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+
+## 新增Watched資料夾端點 {#adding-watched-folder-endpoints}
+
+您可以使用AEM Forms Java API，以程式設計方式將Watched資料夾端點新增至服務。 透過新增Watched資料夾端點，您可以讓使用者將檔案(例如PDF檔案)放在資料夾中。 將檔案放在資料夾中時，會叫用已設定的服務並操作檔案。 服務執行指定的操作後，會將修改的檔案儲存在指定的輸出資料夾中。 監看資料夾已設定為以固定速率間隔或以cron排程掃描，例如每個星期一、星期三和星期五中午。
+
+為了以程式設計方式將Watched資料夾端點新增至服務，請考慮以下名為的短期程式 *EncryDocument*. (請參閱 [瞭解AEM Forms程式](/help/forms/developing/aem-forms-processes.md#understanding-aem-forms-processes).)
 
 ![aw_aw_encryptdocumentprocess](assets/aw_aw_encryptdocumentprocess.png)
 
-此流程接受不安全的PDF文档作为输入值，然后将不安全的PDF文档传递到加密服务的 `EncryptPDFUsingPassword` 操作。 PDF文档使用密码进行加密，密码加密的PDF文档是此过程的输出值。 输入值(无保护PDF文档)的名称为 `InDoc` 并且数据类型是 `com.adobe.idp.Document`. 输出值(口令加密的PDF文档)的名称为 `SecuredDoc` 并且数据类型是 `com.adobe.idp.Document`.
+此程式接受不安全的PDF檔案作為輸入值，然後將不安全的PDF檔案傳遞至加密服務的 `EncryptPDFUsingPassword` 作業。 PDF檔案使用密碼加密，而密碼加密的PDF檔案是此程式的輸出值。 輸入值的名稱(無保護PDF檔案)為 `InDoc` 而且資料型別為 `com.adobe.idp.Document`. 輸出值的名稱(密碼加密的PDF檔案)為 `SecuredDoc` 而且資料型別為 `com.adobe.idp.Document`.
 
 >[!NOTE]
 >
->无法使用Web服务添加Watched Folder端点。
+>您無法使用Web服務新增Watched資料夾端點。
 
-### 步骤摘要 {#summary_of_steps-2}
+### 步驟摘要 {#summary_of_steps-2}
 
-要向服务添加Watched Folder端点，请执行以下任务：
+若要將Watched資料夾端點新增至服務，請執行下列工作：
 
-1. 包括项目文件。
-1. 创建 `EndpointRegistryClient` 对象。
-1. 设置Watched Folder端点属性。
-1. 指定配置值。
-1. 定义输入参数值。
-1. 定义输出参数值。
-1. 创建Watched文件夹端点。
-1. 启用端点。
+1. 包含專案檔案。
+1. 建立 `EndpointRegistryClient` 物件。
+1. 設定Watched資料夾端點屬性。
+1. 指定設定值。
+1. 定義輸入引數值。
+1. 定義輸出引數值。
+1. 建立監看資料夾端點。
+1. 啟用端點。
 
-**包括项目文件**
+**包含專案檔案**
 
-在开发项目中包含必要的文件。 如果要使用Java创建客户端应用程序，请包含必要的JAR文件。 如果使用Web服务，请确保包含代理文件。
+在您的開發專案中包含必要的檔案。 如果您使用Java建立使用者端應用程式，請包含必要的JAR檔案。 如果您使用Web服務，請務必包含Proxy檔案。
 
-必须将以下JAR文件添加到项目的类路径中：
+必須將以下JAR檔案新增到專案的類別路徑中：
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
-* adobe-utilities.jar(如果将AEM Forms部署在JBoss Application Server上，则此为必需字段)
-* jbossall-client.jar(如果将AEM Forms部署在JBoss Application Server上，则此为必需字段)
+* adobe-utilities.jar (如果將AEM Forms部署在JBoss Application Server上，則為必要)
+* jbossall-client.jar (如果AEM Forms部署在JBoss Application Server上，則為必要)
 
-有关这些JAR文件位置的信息，请参见 [包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
+有關這些JAR檔案位置的資訊，請參見 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
 
-**创建EndpointRegistry客户端对象**
+**建立EndpointRegistry使用者端物件**
 
-要以编程方式添加观察文件夹端点，您必须创建 `EndpointRegistryClient` 对象。
+若要以程式設計方式新增Watched資料夾端點，您必須建立 `EndpointRegistryClient` 物件。
 
-**设置Watched文件夹端点属性**
+**設定Watched資料夾端點屬性**
 
-要为服务创建Watched Folder端点，请指定以下值：
+若要為服務建立Watched資料夾端點，請指定下列值：
 
-* **连接器标识符**：指定创建的端点的类型。 要创建Watched文件夹端点，请指定 `WatchedFolder`.
-* **描述**：指定端点的描述。
-* **名称**：指定端点的名称。
-* **服务标识符**：指定终结点所属的服务。 例如，要将Watched文件夹端点添加到此部分中介绍的进程（使用Workbench激活进程时，该进程将成为服务），请指定 `EncryptDocument`.
-* **操作名称**：指定使用端点调用的操作的名称。 通常，在为源自于Workbench中创建的进程的服务创建Watched文件夹端点时，操作的名称为 `invoke`.
+* **聯結器識別碼**：指定已建立的端點型別。 若要建立Watched資料夾端點，請指定 `WatchedFolder`.
+* **說明**：指定端點的說明。
+* **名稱**：指定端點的名稱。
+* **服務識別碼**：指定端點所屬的服務。 例如，若要將Watched資料夾端點新增至本節中介紹的流程（使用Workbench啟動流程時，流程會變成服務），請指定 `EncryptDocument`.
+* **作業名稱**：指定使用端點叫用的作業名稱。 通常，在為源自於Workbench中建立的程式之服務建立Watched資料夾端點時，操作的名稱為 `invoke`.
 
-**指定配置值**
+**指定設定值**
 
-以编程方式将Watched文件夹端点添加到服务时，必须指定Watched文件夹端点的配置值。 如果使用管理控制台添加了Watched文件夹端点，则这些配置值由管理员指定。
+以程式設計方式將Watched資料夾端點新增至服務時，您必須指定Watched資料夾端點的設定值。 如果使用Administration Console新增Watched資料夾端點，則管理員會指定這些設定值。
 
-以下列表指定以编程方式将Watched文件夹端点添加到服务时设置的配置值：
+下列清單指定以程式設計方式將Watched資料夾端點新增至服務時所設定的設定值：
 
-* **url**：指定Watched文件夹位置。 在群集环境中，此值必须指向可从群集中的每台计算机访问的共享网络文件夹。
-* **异步**：将调用类型标识为异步或同步。 只能同步调用瞬态和同步进程。 默认值为true。 建议使用异步。
-* **cronExpression**：由Quartz用来安排对输入目录的轮询。
-* **purgeDuration**：这是一个必需属性。 当结果文件夹中的文件和文件夹早于此值时，将清除这些文件和文件夹。 此值以天为单位。 此属性对于确保结果文件夹不会填满非常有用。 值为–1天表示从不删除结果文件夹。 缺省值为–1。
-* **repeateinterval**：扫描Watched文件夹以进行输入的间隔，以秒为单位。 除非启用了限制，否则该值应比处理平均作业的时间长；否则，系统可能会过载。 默认值为 5。
-* **repeatcount**：观察文件夹扫描文件夹或目录的次数。 值–1表示无限扫描。 缺省值为–1。
-* **throttleOn**：限制可在任何给定时间处理的Watched Folder作业数。 最大作业数由batchSize值决定。
-* **用户名**：从Watched文件夹调用目标服务时使用的用户名。 此值是必需的。 默认值为SuperAdmin。
-* **域名**：用户的域。 此值是必需的。 默认值为DefaultDom。
-* **batchSize**：每次扫描要提取的文件或文件夹数。 使用此值可防止系统过载；一次扫描太多文件可能会导致崩溃。 默认值为 2。
-* **waitetime**：创建文件夹或文件后等待扫描的时间，以毫秒为单位。 例如，如果等待时间为36,000,000毫秒（1小时），文件是在一分钟前创建的，则将在59分钟或更长时间后提取此文件。 此属性对于确保文件或文件夹完全复制到输入文件夹非常有用。 例如，如果处理一个大文件，而下载该文件需要10分钟，则将等待时间设置为10&amp;ast；60 &amp;ast；1000毫秒。 此设置可防止观察文件夹在等待10分钟后扫描文件。 默认值为 0。
-* **excludeFilePattern**：观察文件夹用于确定要扫描和选取的文件和文件夹的模式。 不会扫描任何具有此模式的文件或文件夹以进行处理。 当输入是包含多个文件的文件夹时，此设置很有用。 可以将文件夹的内容复制到一个名称为的文件夹中，该名称将由watched文件夹提取。 此步骤可防止watched文件夹在文件夹完全复制到输入文件夹之前拾取要处理的文件夹。 例如，如果excludeFilePattern值为 `data*`，所有匹配的文件和文件夹 `data*` 不会被接听。 这包括名为的文件和文件夹 `data1`， `data2`，等等。 此外，还可以使用通配符模式对模式进行补充，以指定文件模式。 观察文件夹修改正则表达式以支持通配符模式，例如 `*.*` 和 `*.pdf`. 正则表达式不支持这些通配符模式。
-* **includeFilePattern**：观察文件夹用于确定要扫描和选取的文件夹和文件的模式。 例如，如果此值为 `*`，所有匹配的文件和文件夹 `input*` 被捡起来了。 这包括名为的文件和文件夹 `input1`， `input2`，等等。 默认值为 `*`。此值表示所有文件和文件夹。 此外，还可以使用通配符模式对模式进行补充，以指定文件模式。 观察文件夹修改正则表达式以支持通配符模式，例如 `*.*` 和 `*.pdf`. 正则表达式不支持这些通配符模式。 此值是必需的。
-* **resultFolderName**：存储所保存结果的文件夹。 此位置可以是绝对或相对目录路径。 如果结果未出现在此文件夹中，请检查故障文件夹。 不处理只读文件，这些文件将保存在故障文件夹中。 默认值为 `result/%Y/%M/%D/`。这是watched文件夹中的结果文件夹。
-* **preserveFolderName**：成功扫描和提取后存储文件的位置。 此位置可以是绝对、相对或空目录路径。 默认值为 `preserve/%Y/%M/%D/`。
-* **failureFolderName**：保存失败文件的文件夹。 此位置始终相对于观察文件夹。 不处理只读文件，这些文件将保存在故障文件夹中。 默认值为 `failure/%Y/%M/%D/`。
-* **preserveOnFailure**：如果无法对服务执行操作，则保留输入文件。 默认值为true。
-* **overwriteDuplicateFilename**：设置为true时，将覆盖结果文件夹和保留文件夹中的文件。 当设置为false时，使用具有数字索引后缀的文件和文件夹作为名称。 默认值为false。
+* **url**：指定watched資料夾位置。 在叢集環境中，此值必須指向可從叢集中的每台電腦存取的共用網路資料夾。
+* **非同步**：將呼叫型別識別為非同步或同步。 暫時和同步程式只能同步叫用。 預設值為true。 建議使用非同步。
+* **cronExpression**：由Quartz用來排程輸入目錄的輪詢。
+* **purgeDuration**：此為必要屬性。 當結果資料夾中的檔案和資料夾早於此值時，就會清除這些檔案和資料夾。 此值以天為單位。 此屬性有助於確保結果資料夾不會填滿。 值–1天表示從不刪除結果資料夾。 預設值為–1。
+* **repeatInterval**：掃描Watched資料夾以進行輸入的間隔，以秒為單位。 除非啟用節流，否則此值應比處理平均作業的時間長；否則，系統可能會變得超載。 默认值为 5。
+* **repeatcount**：Watched資料夾掃描資料夾或目錄的次數。 值–1表示無限掃描。 預設值為–1。
+* **throttleOn**：限制可在任何指定時間處理的Watched資料夾工作數目。 最大作業數由batchSize值決定。
+* **userName**：從Watched資料夾叫用目標服務時使用的使用者名稱。 此值為必填。 預設值為SuperAdmin。
+* **domainName**：使用者的網域。 此值為必填。 預設值為DefaultDom。
+* **batchSize**：每次掃描要擷取的檔案或資料夾數目。 使用此值可防止系統過載；一次掃描太多檔案可能會導致當機。 默认值为 2。
+* **等待時間**：建立資料夾或檔案後，掃描資料夾或檔案前的等待時間（以毫秒為單位）。 例如，如果等待時間為36,000,000毫秒（一小時），且檔案是在一分鐘前建立的，則系統會在59分鐘或更長時間後擷取此檔案。 此屬性對於確保檔案或資料夾完全複製到輸入資料夾非常有用。 例如，如果您有大型檔案要處理，且檔案下載需要10分鐘，請將等待時間設定為10&amp;ast；60 &amp;ast；1000毫秒。 此設定可防止watched資料夾在等待10分鐘後掃描檔案。 默认值为 0。
+* **excludefilepattern**：監看資料夾用來判斷要掃描和擷取的檔案和資料夾的模式。 任何具有此模式的檔案或資料夾都不會掃描以進行處理。 當輸入是包含多個檔案的資料夾時，此設定很有用。 資料夾的內容可以複製到一個資料夾中，該資料夾的名稱將由watched資料夾擷取。 此步驟可防止watched資料夾在資料夾完全複製到輸入資料夾之前擷取資料夾進行處理。 例如，如果excludeFilePattern值為 `data*`，所有相符的檔案和資料夾 `data*` 未選取。 這包括名為的檔案和資料夾 `data1`， `data2`、等等。 此外，該模式可以附加萬用字元模式來指定檔案模式。 Watched資料夾會修改規則運算式，以支援萬用字元模式，例如 `*.*` 和 `*.pdf`. 規則運算式不支援這些萬用字元模式。
+* **includefilePattern**：watched資料夾用來判斷要掃描和擷取哪些資料夾和檔案的模式。 例如，如果此值為 `*`，所有相符的檔案和資料夾 `input*` 已選取。 這包括名為的檔案和資料夾 `input1`， `input2`、等等。 默认值为 `*`。此值表示所有檔案和資料夾。 此外，該模式可以附加萬用字元模式來指定檔案模式。 Watched資料夾會修改規則運算式，以支援萬用字元模式，例如 `*.*` 和 `*.pdf`. 規則運算式不支援這些萬用字元模式。 此值為必要值。
+* **resultFolderName**：儲儲存存結果的資料夾。 此位置可以是絕對或相對目錄路徑。 如果結果未出現在此資料夾中，請檢查失敗資料夾。 唯讀檔案不會處理，且會儲存在失敗資料夾中。 默认值为 `result/%Y/%M/%D/`。這是watched資料夾中的結果資料夾。
+* **preserveFolderName**：成功掃描和提取後，檔案的儲存位置。 此位置可以是絕對、相對或Null目錄路徑。 默认值为 `preserve/%Y/%M/%D/`。
+* **failureFolderName**：儲存失敗檔案的資料夾。 此位置永遠是相對於watched資料夾。 唯讀檔案不會處理，且會儲存在失敗資料夾中。 默认值为 `failure/%Y/%M/%D/`。
+* **preserveOnFailure**：保留輸入檔案，以防無法對服務執行操作。 預設值為true。
+* **overwriteDuplicateFilename**：設為true時，會覆寫結果資料夾和保留資料夾中的檔案。 設定為false時，名稱會使用具有數值索引尾碼的檔案和資料夾。 預設值為false。
 
-**定义输入参数值**
+**定義輸入引數值**
 
-创建Watched文件夹端点时，必须定义输入参数值。 也就是说，必须描述传递给watched文件夹调用的操作的输入值。 例如，请考虑本主题中引入的过程。 它具有一个名为的输入值 `InDoc` 并且它的数据类型为 `com.adobe.idp.Document`. 为此进程创建Watched文件夹端点时（激活进程后，该进程将成为服务），必须定义输入参数值。
+建立Watched資料夾端點時，您必須定義輸入引數值。 也就是說，您必須說明傳遞至watched資料夾所叫用之作業的輸入值。 例如，請考量本主題中介紹的程式。 它有一個輸入值，名為 `InDoc` 且其資料型別為 `com.adobe.idp.Document`. 為此程式建立Watched資料夾端點時（在程式啟動後，它會變成服務），您必須定義輸入引數值。
 
-要定义Watched Folder端点所需的输入参数值，请指定以下值：
+若要定義Watched資料夾端點所需的輸入引數值，請指定下列值：
 
-**输入参数名称**：输入参数的名称。 在Workbench中为进程指定输入值的名称。 如果输入值属于服务操作（不是在Workbench中创建的进程的服务），则在component.xml文件中指定输入名称。 例如，本节介绍的进程的输入参数的名称为 `InDoc`.
+**輸入引數名稱**：輸入引數的名稱。 在Workbench中為處理指定輸入值的名稱。 如果輸入值屬於服務作業（不是在Workbench中建立的處理作業）的服務，則在component.xml檔案中指定輸入名稱。 例如，本節介紹之流程的輸入引數名稱是 `InDoc`.
 
-**映射类型**：用于配置调用服务操作所需的输入值。 有两种类型的映射类型：
+**對應型別**：用於設定呼叫服務作業所需的輸入值。 對應型別有兩種：
 
-* `Literal`：观察文件夹端点使用在显示的字段中输入的值。 支持所有基本Java类型。 例如，如果API使用字符串、long、int和Boolean等输入，则字符串将转换为正确类型并调用服务。
-* `Variable`：输入的值是watched文件夹用来选取输入的文件模式。 例如，如果为映射类型选择“变量”，并且输入文档必须是PDF文件，则可以指定 `*.pdf`作为映射值。
+* `Literal`： Watched資料夾端點使用顯示的欄位中輸入的值。 支援所有基本Java型別。 例如，如果API使用字串、long、int和Boolean等輸入，則字串會轉換為適當型別並叫用服務。
+* `Variable`：輸入的值是watched資料夾用來挑選輸入的檔案模式。 例如，如果您為對應型別選取「變數」，且輸入檔案必須是PDF檔案，則可以指定 `*.pdf`作為對應值。
 
-**映射值**：指定映射类型的值。 例如，如果您选择 `Variable` 映射类型，您可以指定 `*.pdf` 作为文件模式。
+**對應值**：指定對應型別的值。 例如，如果您選取 `Variable` 對應型別，您可以指定 `*.pdf` 作為檔案模式。
 
-**数据类型**：指定输入值的数据类型。 例如，本节介绍的进程的输入值的数据类型为 `com.adobe.idp.Document`.
+**資料型別**：指定輸入值的資料型別。 例如，本節介紹之程式的輸入值的資料型別為 `com.adobe.idp.Document`.
 
-**定义输出参数值**
+**定義輸出引數值**
 
-创建Watched文件夹端点时，必须定义一个输出参数值。 也就是说，必须描述由Watched Folder端点调用的服务返回的输出值。 例如，请考虑本主题中引入的过程。 它有一个输出值，名为 `SecuredDoc` 并且它的数据类型为 `com.adobe.idp.Document`. 为此进程创建Watched文件夹端点时（激活进程后，该进程将成为服务），必须定义输出参数值。
+建立Watched資料夾端點時，您必須定義輸出引數值。 也就是說，您必須說明由Watched資料夾端點叫用的服務所傳回的輸出值。 例如，請考量本主題中介紹的程式。 它有一個輸出值，名為 `SecuredDoc` 且其資料型別為 `com.adobe.idp.Document`. 為此程式建立Watched資料夾端點時（在程式啟動後，它會變成服務），您必須定義輸出引數值。
 
-要定义Watched Folder端点所需的输出参数值，请指定以下值：
+若要定義Watched資料夾端點所需的輸出引數值，請指定下列值：
 
-**输出参数名称**：输出参数的名称。 进程输出值的名称在Workbench中指定。 如果输出值属于服务操作（不是在Workbench中创建的流程的服务），则输出名称在component.xml文件中指定。 例如，本节介绍的进程的输出参数的名称为 `SecuredDoc`.
+**輸出引數名稱**：輸出引數的名稱。 在Workbench中指定處理序輸出值的名稱。 如果輸出值屬於服務作業（不是在Workbench中建立的處理作業），則在component.xml檔案中指定輸出名稱。 例如，本節介紹之程式的輸出引數名稱是 `SecuredDoc`.
 
-**映射类型**：用于配置服务和操作的输出。 以下选项可供选择：
+**對應型別**：用於設定服務和操作的輸出。 以下选项可供选择：
 
-* 如果服务返回单个对象（单个文档），则模式为 `%F.pdf` 源目标是sourcefilename.pdf。 例如，本节介绍的流程会返回单个文档。 因此，映射类型可以定义为 `%F.pdf` ( `%F` 表示使用给定的文件名)。 模式 `%E` 指定输入文档的扩展名。
-* 如果服务返回列表，则模式为 `Result\%F\`，源目标是Result\sourcefilename\source1 （输出1）和Result\sourcefilename\source2 （输出2）。
-* 如果服务返回映射，则模式为 `Result\%F\`，源目标是Result\sourcefilename\file1和Result\sourcefilename\file2。 如果地图有多个对象，则模式为 `Result\%F.pdf` 源目标为Result\sourcefilename1.pdf （输出1）、Result\sourcefilenam2.pdf （输出2）等。
+* 如果服務傳回單一物件（單一檔案），則模式為 `%F.pdf` 來源目的地為sourcefilename.pdf。 例如，本節介紹的程式會傳回單一檔案。 因此，可將對應型別定義為 `%F.pdf` ( `%F` 表示使用指定的檔案名稱)。 模式 `%E` 指定輸入檔案的副檔名。
+* 如果服務傳回清單，則模式為 `Result\%F\`，而來源目的地為Result\sourcefilename\source1 （輸出1）和Result\sourcefilename\source2 （輸出2）。
+* 如果服務傳回地圖，模式為 `Result\%F\`，而來源目的地為Result\sourcefilename\file1和Result\sourcefilename\file2。 如果地圖有多個物件，則模式為 `Result\%F.pdf` 來源目的地為Result\sourcefilename1.pdf （輸出1）、Result\sourcefilenam2.pdf （輸出2）等。
 
-**数据类型**：指定返回值的数据类型。 例如，本节介绍的进程的返回值的数据类型为 `com.adobe.idp.Document`.
+**資料型別**：指定傳回值的資料型別。 例如，本節介紹之程式的傳回值資料型別為 `com.adobe.idp.Document`.
 
-**创建Watched文件夹端点**
+**建立Watched資料夾端點**
 
-在设置端点的属性、配置值以及定义输入和输出参数值后，必须创建Watched Folder端点。
+在您設定端點的屬性、設定值以及定義輸入和輸出引數值之後，您必須建立Watched資料夾端點。
 
-**启用端点**
+**啟用端點**
 
-创建Watched Folder端点后，必须启用它。 启用端点后，可用于调用服务。 启用该端点后，您可以在管理控制台中查看它。
-
-**另请参阅**
-
-[使用Java API添加Watched文件夹端点](programmatically-endpoints.md#add-a-watched-folder-endpoint-using-the-java-api)
-
-[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
-
-[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
-
-### 使用Java API添加Watched文件夹端点 {#add-a-watched-folder-endpoint-using-the-java-api}
-
-使用AEM Forms Java API添加Watched文件夹端点：
-
-1. 包括项目文件。
-
-   在Java项目的类路径中包含客户端JAR文件，例如adobe-livecycle-client.jar。
-
-1. 创建EndpointRegistry客户端对象。
-
-   * 创建 `ServiceClientFactory` 包含连接属性的对象。
-   * 创建 `EndpointRegistryClient` 对象，使用它的构造函数传递 `ServiceClientFactory` 对象。
-
-1. 设置Watched Folder端点属性。
-
-   * 创建 `CreateEndpointInfo` 对象。
-   * 通过调用 `CreateEndpointInfo` 对象的 `setConnectorId` 方法和传递字符串值 `WatchedFolder`.
-   * 通过调用 `CreateEndpointInfo` 对象的 `setDescription` 方法和传递描述端点的字符串值。
-   * 通过调用 `CreateEndpointInfo` 对象的 `setName` 方法，并传递一个指定名称的字符串值。
-   * 通过调用 `CreateEndpointInfo` 对象的 `setServiceId` 方法，并传递一个指定服务名称的字符串值。
-   * 指定通过调用 `CreateEndpointInfo` 对象的 `setOperationName` 方法，并传递一个指定操作名称的字符串值。 通常，在为源自于Workbench中创建的进程的服务创建Watched文件夹端点时，会调用操作的名称。
-
-1. 指定配置值。
-
-   对于要为Watched文件夹端点设置的每个配置值，您必须调用 `CreateEndpointInfo` 对象的 `setConfigParameterAsText` 方法。 例如，要设置 `url` 配置值，调用 `CreateEndpointInfo` 对象的 `setConfigParameterAsText` 方法，并传递以下字符串值：
-
-   * 一个字符串值，它指定配置值的名称。 设置时 `url` 配置值，指定 `url`.
-   * 指定配置值值的字符串值。 设置时 `url` 配置值，指定watched文件夹位置。
-
-   >[!NOTE]
-   >
-   >要查看EncryptDocument服务设置的所有配置值，请参阅位于以下位置的Java代码示例： [快速启动：使用Java API添加Watched文件夹端点](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-adding-a-watched-folder-endpoint-using-the-java-api).
-
-1. 定义输入参数值。
-
-   通过调用 `CreateEndpointInfo` 对象的 `setInputParameterMapping` 方法，并传递以下值：
-
-   * 一个字符串值，它指定输入参数的名称。 例如，EncryptDocument服务的输入参数的名称为 `InDoc`.
-   * 指定输入参数的数据类型的字符串值。 例如，以下类型的数据类型 `InDoc` 输入参数为 `com.adobe.idp.Document`.
-   * 指定映射类型的字符串值。 例如，您可以指定 `variable`.
-   * 一个字符串值，它指定映射类型值。 例如，您可以指定&amp;ast；.pdf作为文件模式。
-
-   >[!NOTE]
-   >
-   >调用 `setInputParameterMapping` 用于定义每个输入参数值的方法。 由于EncryptDocument进程只有一个输入参数，因此您需要调用此方法一次。
-
-1. 定义输出参数值。
-
-   通过调用 `CreateEndpointInfo` 对象的 `setOutputParameterMapping` 方法，并传递以下值：
-
-   * 一个字符串值，它指定输出参数的名称。 例如，EncryptDocument服务的输出参数的名称为 `SecuredDoc`.
-   * 指定输出参数的数据类型的字符串值。 例如，以下类型的数据类型 `SecuredDoc` 输出参数为 `com.adobe.idp.Document`.
-   * 指定映射类型的字符串值。 例如，您可以指定 `%F.pdf`.
-
-1. 创建Watched文件夹端点。
-
-   通过调用 `EndpointRegistryClient` 对象的 `createEndpoint` 方法和传递 `CreateEndpointInfo` 对象。 此方法会返回 `Endpoint` 表示Watched文件夹端点的对象。
-
-1. 启用端点。
-
-   通过调用 `EndpointRegistryClient` 对象的 `enable` 方法和传递 `Endpoint` 返回的对象 `createEndpoint` 方法。
+建立Watched資料夾端點後，您必須啟用它。 端點啟用時，可用於叫用服務。 啟用端點後，即可在管理主控台中檢視它。
 
 **另请参阅**
 
-[步骤摘要](programmatically-endpoints.md#summary-of-steps)
+[使用Java API新增Watched資料夾端點](programmatically-endpoints.md#add-a-watched-folder-endpoint-using-the-java-api)
 
-[快速启动：使用Java API添加Watched文件夹端点](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-adding-a-watched-folder-endpoint-using-the-java-api)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
-[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+### 使用Java API新增Watched資料夾端點 {#add-a-watched-folder-endpoint-using-the-java-api}
 
-### 观察文件夹配置值常量文件 {#watched-folder-configuration-values-constant-file}
+使用AEM Forms Java API新增Watched資料夾端點：
 
-此 [快速启动：使用Java API添加Watched文件夹端点](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-adding-a-watched-folder-endpoint-using-the-java-api) 使用一个必须是Java项目一部分的常量文件来编译快速入门。 此常量文件表示添加Watched文件夹端点时必须设置的配置值。 以下Java代码表示常量文件。
+1. 包含專案檔案。
+
+   在您的Java專案的類別路徑中包含使用者端JAR檔案，例如adobe-livecycle-client.jar。
+
+1. 建立EndpointRegistry使用者端物件。
+
+   * 建立 `ServiceClientFactory` 包含連線屬性的物件。
+   * 建立 `EndpointRegistryClient` 物件，使用它的建構函式並傳遞 `ServiceClientFactory` 物件。
+
+1. 設定Watched資料夾端點屬性。
+
+   * 建立 `CreateEndpointInfo` 物件（使用其建構函式）。
+   * 透過叫用「 」來指定聯結器識別碼值 `CreateEndpointInfo` 物件的 `setConnectorId` 方法和傳遞字串值 `WatchedFolder`.
+   * 透過叫用端點來指定端點的說明 `CreateEndpointInfo` 物件的 `setDescription` 方法和傳遞描述端點的字串值。
+   * 透過叫用端點來指定端點的名稱 `CreateEndpointInfo` 物件的 `setName` 並傳遞指定名稱的字串值。
+   * 透過叫用「 」，指定端點所屬的服務 `CreateEndpointInfo` 物件的 `setServiceId` 方法並傳遞指定服務名稱的字串值。
+   * 指定透過叫用呼叫的作業 `CreateEndpointInfo` 物件的 `setOperationName` 方法並傳遞指定作業名稱的字串值。 通常，在為源自於Workbench中建立之程式的服務建立Watched資料夾端點時，會叫用操作的名稱。
+
+1. 指定設定值。
+
+   您必須針對要為Watched資料夾端點設定的每個設定值，叫用 `CreateEndpointInfo` 物件的 `setConfigParameterAsText` 方法。 例如，若要設定 `url` 設定值，叫用 `CreateEndpointInfo` 物件的 `setConfigParameterAsText` 方法並傳遞下列字串值：
+
+   * 字串值，指定設定值的名稱。 設定時 `url` 設定值，指定 `url`.
+   * 字串值，指定設定值的值。 設定時 `url` 設定值，指定watched資料夾位置。
+
+   >[!NOTE]
+   >
+   >若要檢視為EncryptDocument服務設定的所有設定值，請參閱位於 [快速入門：使用Java API新增Watched資料夾端點](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-adding-a-watched-folder-endpoint-using-the-java-api).
+
+1. 定義輸入引數值。
+
+   透過叫用 `CreateEndpointInfo` 物件的 `setInputParameterMapping` 方法並傳遞下列值：
+
+   * 字串值，指定輸入引數的名稱。 例如，EncryptDocument服務的輸入引數名稱是 `InDoc`.
+   * 字串值，指定輸入引數的資料型別。 例如，資料型別 `InDoc` 輸入引數為 `com.adobe.idp.Document`.
+   * 字串值，指定對應型別。 例如，您可以指定 `variable`.
+   * 字串值，指定對應型別值。 例如，您可以指定&amp;ast；.pdf作為檔案模式。
+
+   >[!NOTE]
+   >
+   >叫用 `setInputParameterMapping` 每個要定義的輸入引數值的方法。 由於EncryptDocument程式只有一個輸入引數，因此您需要叫用此方法一次。
+
+1. 定義輸出引數值。
+
+   透過叫用 `CreateEndpointInfo` 物件的 `setOutputParameterMapping` 方法並傳遞下列值：
+
+   * 字串值，指定輸出引數的名稱。 例如，EncryptDocument服務的輸出引數名稱是 `SecuredDoc`.
+   * 字串值，指定輸出引數的資料型別。 例如，資料型別 `SecuredDoc` 輸出引數為 `com.adobe.idp.Document`.
+   * 字串值，指定對應型別。 例如，您可以指定 `%F.pdf`.
+
+1. 建立監看資料夾端點。
+
+   透過叫用端點來建立端點 `EndpointRegistryClient` 物件的 `createEndpoint` 方法和傳遞 `CreateEndpointInfo` 物件。 此方法會傳回 `Endpoint` 代表Watched資料夾端點的物件。
+
+1. 啟用端點。
+
+   透過叫用啟用端點 `EndpointRegistryClient` 物件的 `enable` 方法和傳遞 `Endpoint` 物件，由 `createEndpoint` 方法。
+
+**另请参阅**
+
+[步驟摘要](programmatically-endpoints.md#summary-of-steps)
+
+[快速入門：使用Java API新增Watched資料夾端點](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-adding-a-watched-folder-endpoint-using-the-java-api)
+
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+
+[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+
+### 觀察資料夾組態值常數檔案 {#watched-folder-configuration-values-constant-file}
+
+此 [快速入門：使用Java API新增Watched資料夾端點](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-adding-a-watched-folder-endpoint-using-the-java-api) 會使用必須屬於Java專案一部分的常數檔案，以便編譯快速入門。 此常數檔案代表新增Watched資料夾端點時必須設定的設定值。 以下Java程式碼代表常數檔案。
 
 ```java
  /**
@@ -496,221 +496,221 @@ Endpoint Registry服务提供了以编程方式管理端点的功能。 例如�
         }
 ```
 
-## 添加电子邮件端点 {#adding-email-endpoints}
+## 新增電子郵件端點 {#adding-email-endpoints}
 
-您可以使用AEM Forms Java API以编程方式将电子邮件端点添加到服务。 通过添加电子邮件端点，可让用户将包含一个或多个文件附件的电子邮件发送到指定的电子邮件帐户。 然后调用配置服务操作并操作文件。 服务执行指定的操作后，会向发件人发送一封电子邮件，其中包含作为文件附件的修改文件。
+您可以使用AEM Forms Java API，以程式設計方式將電子郵件端點新增至服務。 透過新增電子郵件端點，您可以讓使用者將包含一個或多個檔案附件的電子郵件訊息傳送至指定的電子郵件帳戶。 然後叫用設定服務操作並操作檔案。 服務執行指定的操作後，會傳送電子郵件訊息給寄件者，其中包含修改後的檔案作為檔案附件。
 
-为了以编程方式将电子邮件端点添加到服务，请考虑以下命名的短暂过程 *MyApplication\EncryDocument*. 有关短暂进程的信息，请参见 [了解AEM Forms流程](/help/forms/developing/aem-forms-processes.md#understanding-aem-forms-processes).
+為了以程式設計方式將電子郵件端點新增至服務，請考慮以下名為的短期程式 *MyApplication\EncryptDocument*. 如需有關短期程式的資訊，請參閱 [瞭解AEM Forms程式](/help/forms/developing/aem-forms-processes.md#understanding-aem-forms-processes).
 
 ![ae_ae_encryptdocumentprocess](assets/ae_ae_encryptdocumentprocess.png)
 
-此流程接受不安全的PDF文档作为输入值，然后将不安全的PDF文档传递到加密服务的 `EncryptPDFUsingPassword` 操作。 此过程使用密码对PDF文档进行加密，并将经过密码加密的PDF文档作为输出值返回。 输入值(无保护PDF文档)的名称为 `InDoc` 并且数据类型是 `com.adobe.idp.Document`. 输出值(口令加密的PDF文档)的名称为 `SecuredDoc` 并且数据类型是 `com.adobe.idp.Document`.
+此程式接受不安全的PDF檔案作為輸入值，然後將不安全的PDF檔案傳遞至加密服務的 `EncryptPDFUsingPassword` 作業。 此程式會使用密碼加密PDF檔案，並傳回密碼加密的PDF檔案作為輸出值。 輸入值的名稱(無保護PDF檔案)為 `InDoc` 而且資料型別為 `com.adobe.idp.Document`. 輸出值的名稱(密碼加密的PDF檔案)為 `SecuredDoc` 而且資料型別為 `com.adobe.idp.Document`.
 
 >[!NOTE]
 >
->无法使用Web服务添加电子邮件端点。
+>您無法使用Web服務新增電子郵件端點。
 
-### 步骤摘要 {#summary_of_steps-3}
+### 步驟摘要 {#summary_of_steps-3}
 
-要将电子邮件端点添加到服务，请执行以下步骤：
+若要將電子郵件端點新增至服務，請執行下列工作：
 
-1. 包括项目文件。
-1. 创建 `EndpointRegistryClient` 对象。
-1. 设置电子邮件端点属性。
-1. 指定配置值。
-1. 定义输入参数值。
-1. 定义输出参数值。
-1. 创建电子邮件端点。
-1. 启用端点。
+1. 包含專案檔案。
+1. 建立 `EndpointRegistryClient` 物件。
+1. 設定電子郵件端點屬性。
+1. 指定設定值。
+1. 定義輸入引數值。
+1. 定義輸出引數值。
+1. 建立電子郵件端點。
+1. 啟用端點。
 
-**包括项目文件**
+**包含專案檔案**
 
-在开发项目中包含必要的文件。 如果要使用Java创建客户端应用程序，请包含必要的JAR文件。 如果使用Web服务，请确保包含代理文件。
+在您的開發專案中包含必要的檔案。 如果您使用Java建立使用者端應用程式，請包含必要的JAR檔案。 如果您使用Web服務，請務必包含Proxy檔案。
 
-必须将以下JAR文件添加到项目的类路径中：
+必須將以下JAR檔案新增到專案的類別路徑中：
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
-* adobe-utilities.jar(如果将AEM Forms部署在JBoss Application Server上，则此为必需字段)
-* jbossall-client.jar(如果将AEM Forms部署在JBoss Application Server上，则此为必需字段)
+* adobe-utilities.jar (如果將AEM Forms部署在JBoss Application Server上，則為必要)
+* jbossall-client.jar (如果AEM Forms部署在JBoss Application Server上，則為必要)
 
-有关这些JAR文件位置的信息，请参见 [包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
+有關這些JAR檔案位置的資訊，請參見 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
 
-**创建EndpointRegistry客户端对象**
+**建立EndpointRegistry使用者端物件**
 
-在以编程方式添加电子邮件端点之前，您必须创建 `EndpointRegistryClient` 对象。
+您必須先建立「 」，才能以程式設計方式新增電子郵件端點 `EndpointRegistryClient` 物件。
 
-**设置电子邮件端点属性**
+**設定電子郵件端點屬性**
 
-要为服务创建电子邮件端点，请指定以下值：
+若要建立服務的電子郵件端點，請指定下列值：
 
-* **连接器标识符值**：指定创建的端点的类型。 要创建电子邮件端点，请指定 `Email`.
-* **描述**：指定端点的描述。
-* **名称**：指定端点的名称。
-* **服务标识符值**：指定终结点所属的服务。 例如，要将电子邮件端点添加到此部分中介绍的流程（使用Workbench激活流程时，流程会变成服务），请指定 `EncryptDocument`.
-* **操作名称**：指定使用端点调用的操作的名称。 通常，在为源自于Workbench中创建的流程的服务创建电子邮件端点时，操作的名称为 `invoke`.
+* **聯結器識別碼值**：指定已建立的端點型別。 若要建立電子郵件端點，請指定 `Email`.
+* **說明**：指定端點的說明。
+* **名稱**：指定端點的名稱。
+* **服務識別碼值**：指定端點所屬的服務。 例如，若要將電子郵件端點新增至本節中介紹的流程（使用Workbench啟動流程時即成為服務），請指定 `EncryptDocument`.
+* **作業名稱**：指定使用端點叫用的作業名稱。 一般而言，為源自於Workbench中建立之程式的服務建立電子郵件端點時，作業名稱為 `invoke`.
 
-**指定配置值**
+**指定設定值**
 
-以编程方式将电子邮件端点添加到服务时，必须指定电子邮件端点的配置值。 如果使用管理控制台添加电子邮件端点，则这些配置值由管理员指定。
+以程式設計方式將電子郵件端點新增至服務時，您必須指定電子郵件端點的設定值。 如果使用管理主控台新增電子郵件端點，則管理員會指定這些設定值。
 
 >[!NOTE]
 >
->受监视的电子邮件帐户是仅用于电子邮件端点的特殊帐户。 此帐户不是常规用户的电子邮件帐户。 不能将常规用户的电子邮件帐户配置为电子邮件提供商使用的帐户，因为电子邮件提供商在完成邮件的处理之后会从收件箱中删除电子邮件。
+>受監控的電子郵件帳戶是僅用於電子郵件端點的特殊帳戶。 此帳戶不是一般使用者的電子郵件帳戶。 一般使用者的電子郵件帳戶不可設定為電子郵件提供者使用的帳戶，因為電子郵件提供者會在完成訊息處理之後，從收件匣中刪除電子郵件訊息。
 
-以编程方式将电子邮件端点添加到服务时，会设置以下配置值：
+以程式設計方式將電子郵件端點新增至服務時，會設定下列設定值：
 
-* **cronExpression**：如果必须使用cron表达式计划电子邮件，则为cron表达式。
-* **repeatcount**：电子邮件端点扫描文件夹或目录的次数。 值–1表示无限扫描。 缺省值为–1。
-* **repeateinterval**：接收方用于检查传入邮件的扫描速率（以秒为单位）。 默认值为 10。
-* **startDelay**：计划程序启动后等待扫描的时间。 默认时间为0。
-* **batchSize**：为了优化性能，接收者每次扫描处理的电子邮件数量。 值为–1表示所有电子邮件。 默认值为 2。
-* **用户名**：从电子邮件调用目标服务时使用的用户名。 默认值为 `SuperAdmin`。
-* **域名**：必需的配置值。 默认值为 `DefaultDom`。
-* **域模式**：指定提供程序接受的传入电子邮件的域模式。 例如，如果 `adobe.com` 使用，仅处理来自adobe.com的电子邮件，而忽略来自其他域的电子邮件。
-* **filePattern**：指定提供程序接受的传入文件附件模式。 这包括具有特定文件扩展名(&amp;ast；.dat、&amp;ast；.xml)的文件、具有特定名称（数据）的文件以及具有组合表达式名称和扩展名(&amp;ast；)的文件。[dD][aA]&#39;端口&#39;)。 默认值为 `*`。
-* **recipientSuccessfulJob**：发送消息以指示作业成功的电子邮件地址。 默认情况下，成功的工作消息始终发送给发件人。 如果您键入 `sender`，将电子邮件结果发送给发件人。 支持最多100个收件人。 使用电子邮件地址指定其他收件人，每个收件人之间用逗号分隔。 要关闭此选项，请将此值留空。 在某些情况下，您可能希望触发一个进程，而不希望通过电子邮件通知结果。 默认值为 `sender`。
-* **recipientFailedJob**：发送消息以指示失败的作业的电子邮件地址。 默认情况下，始终向发件人发送失败的作业消息。 如果您键入 `sender`，将电子邮件结果发送给发件人。 支持最多100个收件人。 使用电子邮件地址指定其他收件人，每个收件人之间用逗号分隔。 要关闭此选项，请将此值留空。 默认值为 `sender`。
-* **inboxHost**：要扫描的电子邮件提供程序的收件箱主机名或IP地址。
-* **inboxPort**：电子邮件服务器使用的端口。 POP3的默认值为110，IMAP的默认值为143。 如果启用了SSL，则POP3的默认值为995，而IMAP的默认值为993。
-* **inboxProtocol**：用于扫描收件箱的电子邮件端点的电子邮件协议。 选项包括 `IMAP` 或 `POP3`. 收件箱主机邮件服务器必须支持这些协议。
-* **收件箱超时**：电子邮件提供商等待收件箱响应的超时（以秒为单位）。 默认值为 60。
-* **inboxUser**：登录电子邮件帐户所需的用户名。 根据电子邮件服务器和配置，这可能是电子邮件的用户名部分，也可能是完整的电子邮件地址。
-* **inboxPassword**：收件箱用户的密码。
-* **inboxSSLEnabled**：设置此值可强制电子邮件提供商在发送结果或错误的通知消息时使用SSL。 确保IMAP或POP3主机支持SSL。
-* **smtpHost**：电子邮件提供商向其发送结果和错误消息的邮件服务器的主机名。
-* **smtpPort**：SMTP端口的默认值为25。
-* **smtuser**：电子邮件提供商在发送有关结果和错误的电子邮件通知时使用的用户帐户。
-* **smtpPassword**：SMTP帐户的密码。 某些邮件服务器不需要SMTP密码。
-* **charSet**：电子邮件提供商使用的字符集。 默认值为 `UTF-8`。
-* **smtpSSLEnabled**：设置此值可强制电子邮件提供商在发送结果或错误的通知消息时使用SSL。 确保SMTP主机支持SSL。
-* **failedJobFolder**：指定当SMTP邮件服务器不工作时，用于存储结果的目录。
-* **异步**：当设置为synchronous时，将处理所有输入文档并返回单个响应。 当设置为异步时，将为处理的每个输入文档发送响应。 例如，为本主题中介绍的流程创建了一个电子邮件端点，并会向端点的收件箱发送一封包含多个不安全的PDF文档的电子邮件。 当所有PDF文档都使用密码加密时，如果端点配置为同步，则会发送一条响应电子邮件，并附上所有安全的PDF文档。 如果端点配置为异步，则会为每个安全PDF文档发送单独的响应电子邮件消息。 每封电子邮件都包含一个PDF文档作为附件。 默认值为asynchronous。
+* **cronExpression**：如果電子郵件必須使用cron運算式排程，則為cron運算式。
+* **repeatcount**：電子郵件端點掃描資料夾或目錄的次數。 值–1表示無限掃描。 預設值為–1。
+* **repeatInterval**：接收者用於檢查傳入郵件的掃描速率（以秒為單位）。 默认值为 10。
+* **startDelay**：排程器啟動後等待掃描的時間。 預設時間為0。
+* **batchSize**：接收者為了最佳化效能而每次掃描處理的電子郵件訊息數。 值–1表示所有電子郵件。 默认值为 2。
+* **userName**：從電子郵件叫用目標服務時使用的使用者名稱。 默认值为 `SuperAdmin`。
+* **domainName**：強制設定值。 默认值为 `DefaultDom`。
+* **domainPattern**：指定提供者接受的傳入電子郵件的網域模式。 例如，如果 `adobe.com` 會使用，只會處理來自adobe.com的電子郵件，而忽略來自其他網域的電子郵件。
+* **檔案圖樣**：指定提供者接受的傳入檔案附件模式。 這包括具有特定副檔名(&amp;ast；.dat、&amp;ast；.xml)的檔案、具有特定名稱（資料）的檔案，以及具有名稱與副檔名複合運算式(&amp;ast；)的檔案。[dD][aA]&#39;連線埠&#39;)。 默认值为 `*`。
+* **recipientSuccessfulJob**：傳送訊息以指出成功作業的電子郵件地址。 依預設，成功的工作訊息一律會傳送給寄件者。 如果您輸入 `sender`，電子郵件結果會傳送給寄件者。 最多可支援100個收件者。 使用電子郵件地址指定其他收件者，每個收件者之間以逗號分隔。 若要關閉此選項，請將此值留空。 某些情況下，您可能會想要觸發程式，而不想收到結果的電子郵件通知。 默认值为 `sender`。
+* **recipientFailedJob**：傳送訊息以指出作業失敗的電子郵件地址。 依預設，失敗的工作訊息一律會傳送給傳送者。 如果您輸入 `sender`，電子郵件結果會傳送給寄件者。 最多可支援100個收件者。 使用電子郵件地址指定其他收件者，每個收件者之間以逗號分隔。 若要關閉此選項，請將此值留空。 默认值为 `sender`。
+* **inboxHost**：要掃描的電子郵件提供者的收件匣主機名稱或IP位址。
+* **inboxPort**：電子郵件伺服器使用的連線埠。 POP3的預設值為110，IMAP的預設值為143。 如果啟用SSL，POP3的預設值為995，IMAP的預設值為993。
+* **inboxProtocol**：用於掃描收件匣之電子郵件端點的電子郵件通訊協定。 選項包括 `IMAP` 或 `POP3`. 收件匣主機郵件伺服器必須支援這些通訊協定。
+* **收件匣逾時**：電子郵件提供者等候收件匣回應的逾時（以秒為單位）。 默认值为 60。
+* **inboxUser**：登入電子郵件帳戶所需的使用者名稱。 視電子郵件伺服器和設定而定，這可能是電子郵件的使用者名稱部分，也可能是完整的電子郵件地址。
+* **inboxPassword**：收件匣使用者的密碼。
+* **inboxSSLEnabled**：設定此值，以強制電子郵件提供者在傳送結果或錯誤的通知訊息時使用SSL。 確定IMAP或POP3主機支援SSL。
+* **smtpHost**：電子郵件提供者傳送結果和錯誤訊息的目標郵件伺服器的主機名稱。
+* **smtpPort**：SMTP連線埠的預設值為25。
+* **smtpUser**：電子郵件提供者在傳送結果和錯誤的電子郵件通知時要使用的使用者帳戶。
+* **smtpPassword**：SMTP帳戶的密碼。 有些郵件伺服器不需要SMTP密碼。
+* **charSet**：電子郵件提供者使用的字元集。 默认值为 `UTF-8`。
+* **smtpSSLEnabled**：設定此值，以強制電子郵件提供者在傳送結果或錯誤的通知訊息時使用SSL。 請確定SMTP主機支援SSL。
+* **failedJobFolder**：指定當SMTP郵件伺服器無法運作時，要儲存結果的目錄。
+* **非同步**：設定為synchronous時，會處理所有輸入檔案並傳回單一回應。 設為非同步時，系統會針對每個已處理的輸入檔案傳送回應。 例如，會針對本主題中介紹的流程建立電子郵件端點，並傳送電子郵件訊息至端點的收件匣，其中包含多個不安全的PDF檔案。 使用密碼加密所有PDF檔案時，如果端點設定為同步，則會傳送包含所有安全PDF檔案的單一回應電子郵件訊息。 如果端點設定為非同步，則會為每個安全PDF檔案傳送個別的回應電子郵件訊息。 每封電子郵件都包含單一PDF檔案作為附件。 預設值為非同步。
 
-**定义输入参数值**
+**定義輸入引數值**
 
-创建电子邮件端点时，必须定义输入参数值。 即，必须描述传递到电子邮件端点调用的操作的输入值。 例如，请考虑本主题中引入的过程。 它具有一个名为的输入值 `InDoc` 并且它的数据类型为 `com.adobe.idp.Document`. 为此流程创建电子邮件端点时（激活流程后，该流程将成为服务），必须定义输入参数值。
+建立電子郵件端點時，您必須定義輸入引數值。 也就是說，您必須說明傳遞至電子郵件端點所叫用之作業的輸入值。 例如，請考量本主題中介紹的程式。 它有一個輸入值，名為 `InDoc` 且其資料型別為 `com.adobe.idp.Document`. 為此程式建立電子郵件端點時（程式啟動後，它會變成服務），您必須定義輸入引數值。
 
-要定义电子邮件端点所需的输入参数值，请指定以下值：
+若要定義電子郵件端點所需的輸入引數值，請指定下列值：
 
-**输入参数名称**：输入参数的名称。 在Workbench中为进程指定输入值的名称。 如果输入值属于服务操作(不是在Workbench中创建的进程的Forms服务)，则在component.xml文件中指定输入名称。 例如，本节介绍的进程的输入参数的名称为 `InDoc`.
+**輸入引數名稱**：輸入引數的名稱。 在Workbench中為處理指定輸入值的名稱。 如果輸入值屬於服務作業(不是在Workbench中建立之程式的Forms服務)，則輸入名稱會在component.xml檔案中指定。 例如，本節介紹之流程的輸入引數名稱是 `InDoc`.
 
-**映射类型**：用于配置调用服务操作所需的输入值。 有两种类型的映射类型，如下所示：
+**對應型別**：用於設定呼叫服務作業所需的輸入值。 兩種對應型別如下：
 
-* `Literal`：电子邮件端点使用在显示的字段中输入的值。 支持所有基本Java类型。 例如，如果API使用字符串、long、int和Boolean等输入，则字符串将转换为正确的类型并调用服务。
-* `Variable`：输入的值是电子邮件端点用来选取输入的文件模式。 例如，如果为映射类型选择“变量”，并且输入文档必须是PDF文件，则可以指定 `*.pdf` 作为映射值。
+* `Literal`：電子郵件端點使用在顯示的欄位中輸入的值。 支援所有基本Java型別。 例如，如果API使用字串、long、int和Boolean等輸入，則字串會轉換為適當型別並叫用服務。
+* `Variable`：輸入的值是電子郵件端點用來挑選輸入的檔案模式。 例如，如果您為對應型別選取「變數」，且輸入檔案必須是PDF檔案，則可以指定 `*.pdf` 作為對應值。
 
-**映射值**：指定映射类型的值。 例如，如果选择“变量”映射类型，则可以指定 `*.pdf` 作为文件模式。
+**對應值**：指定對應型別的值。 例如，如果您選取「變數」對應型別，則可以指定 `*.pdf` 作為檔案模式。
 
-**数据类型**：指定输入值的数据类型。 例如，本节介绍的进程的输入值的数据类型是com.adobe.idp.Document。
+**資料型別**：指定輸入值的資料型別。 例如，本節介紹之程式的輸入值的資料型別為com.adobe.idp.Document。
 
-**定义输出参数值**
+**定義輸出引數值**
 
-创建电子邮件端点时，必须定义输出参数值。 即，必须描述由电子邮件端点调用的服务返回的输出值。 例如，请考虑本主题中引入的过程。 它有一个输出值，名为 `SecuredDoc` 并且它的数据类型为 `com.adobe.idp.Document`. 为此流程创建电子邮件端点时（激活流程后，该流程将成为服务），必须定义输出参数值。
+建立電子郵件端點時，您必須定義輸出引數值。 也就是說，您必須說明由電子郵件端點叫用的服務所傳回的輸出值。 例如，請考量本主題中介紹的程式。 它有一個輸出值，名為 `SecuredDoc` 且其資料型別為 `com.adobe.idp.Document`. 為此程式建立電子郵件端點時（程式啟動後，它會變成服務），您必須定義輸出引數值。
 
-要定义电子邮件端点所需的输出参数值，请指定以下值：
+若要定義電子郵件端點所需的輸出引數值，請指定下列值：
 
-**输出参数名称**：输出参数的名称。 进程输出值的名称在Workbench中指定。 如果输出值属于服务操作（不是在Workbench中创建的流程的服务），则输出名称在component.xml文件中指定。 例如，本节介绍的进程的输出参数的名称为 `SecuredDoc`.
+**輸出引數名稱**：輸出引數的名稱。 在Workbench中指定處理序輸出值的名稱。 如果輸出值屬於服務作業（不是在Workbench中建立的處理作業），則在component.xml檔案中指定輸出名稱。 例如，本節介紹之程式的輸出引數名稱是 `SecuredDoc`.
 
-**映射类型**：用于配置服务和操作的输出。 以下选项可供选择：
+**對應型別**：用於設定服務和操作的輸出。 以下选项可供选择：
 
-* 如果服务返回单个对象（单个文档），则模式为 `%F.pdf` 源目标是sourcefilename.pdf。 例如，本节介绍的流程会返回单个文档。 因此，映射类型可以定义为 `%F.pdf` ( `%F` 表示使用给定的文件名)。 模式 `%E` 指定输入文档的扩展名。
-* 如果服务返回列表，则模式为 `Result\%F\`，源目标是Result\sourcefilename\source1 （输出1）和Result\sourcefilename\source2 （输出2）。
-* 如果服务返回映射，则模式为 `Result\%F\`，源目标是Result\sourcefilename\file1和Result\sourcefilename\file2。 如果地图有多个对象，则模式为 `Result\%F.pdf` 源目标为Result\sourcefilename1.pdf （输出1）、Result\sourcefilenam2.pdf （输出2）等。
+* 如果服務傳回單一物件（單一檔案），則模式為 `%F.pdf` 來源目的地為sourcefilename.pdf。 例如，本節介紹的程式會傳回單一檔案。 因此，可將對應型別定義為 `%F.pdf` ( `%F` 表示使用指定的檔案名稱)。 模式 `%E` 指定輸入檔案的副檔名。
+* 如果服務傳回清單，則模式為 `Result\%F\`，而來源目的地為Result\sourcefilename\source1 （輸出1）和Result\sourcefilename\source2 （輸出2）。
+* 如果服務傳回地圖，模式為 `Result\%F\`，而來源目的地為Result\sourcefilename\file1和Result\sourcefilename\file2。 如果地圖有多個物件，則模式為 `Result\%F.pdf` 來源目的地為Result\sourcefilename1.pdf （輸出1）、Result\sourcefilenam2.pdf （輸出2）等。
 
-**数据类型**：指定返回值的数据类型。 例如，本节介绍的进程的返回值的数据类型为 `com.adobe.idp.Document`.
+**資料型別**：指定傳回值的資料型別。 例如，本節介紹之程式的傳回值資料型別為 `com.adobe.idp.Document`.
 
-**创建电子邮件端点**
+**建立電子郵件端點**
 
-在设置电子邮件端点属性和配置值并定义输入和输出参数值后，必须创建电子邮件端点。
+設定電子郵件端點屬性和設定值，並定義輸入和輸出引數值後，您必須建立電子郵件端點。
 
-**启用端点**
+**啟用端點**
 
-创建电子邮件端点后，必须启用它。 启用端点后，可用于调用服务。 启用该端点后，您可以在管理控制台中查看它。
-
-**另请参阅**
-
-[使用Java API添加电子邮件端点](programmatically-endpoints.md#add-an-email-endpoint-using-the-java-api)
-
-[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
-
-[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
-
-### 使用Java API添加电子邮件端点 {#add-an-email-endpoint-using-the-java-api}
-
-使用Java API添加电子邮件端点：
-
-1. 包括项目文件。
-
-   在Java项目的类路径中包含客户端JAR文件，例如adobe-livecycle-client.jar。
-
-1. 创建EndpointRegistry客户端对象。
-
-   * 创建 `ServiceClientFactory` 包含连接属性的对象。
-   * 创建 `EndpointRegistryClient` 对象，使用它的构造函数传递 `ServiceClientFactory` 对象。
-
-1. 设置电子邮件端点属性。
-
-   * 创建 `CreateEndpointInfo` 对象。
-   * 通过调用 `CreateEndpointInfo` 对象的 `setConnectorId` 方法和传递字符串值 `Email`.
-   * 通过调用 `CreateEndpointInfo` 对象的 `setDescription` 方法和传递描述端点的字符串值。
-   * 通过调用 `CreateEndpointInfo` 对象的 `setName` 方法，并传递一个指定名称的字符串值。
-   * 通过调用 `CreateEndpointInfo` 对象的 `setServiceId` 方法，并传递一个指定服务名称的字符串值。
-   * 指定通过调用 `CreateEndpointInfo` 对象的 `setOperationName` 方法，并传递一个指定操作名称的字符串值。 通常，在为源自于Workbench中创建的流程的服务创建电子邮件端点时，会调用操作的名称。
-
-1. 指定配置值。
-
-   对于要为电子邮件端点设置的每个配置值，您必须调用 `CreateEndpointInfo` 对象的 `setConfigParameterAsText` 方法。 例如，要设置 `smtpHost` 配置值，调用 `CreateEndpointInfo` 对象的 `setConfigParameterAsText` 方法，并传递以下值：
-
-   * 一个字符串值，它指定配置值的名称。 设置时 `smtpHost` 配置值，指定 `smtpHost`.
-   * 指定配置值值的字符串值。 设置时 `smtpHost` 配置值，指定指定SMTP服务器名称的字符串值。
-
-   >[!NOTE]
-   >
-   >要查看本节中引入的EncryptDocument服务的所有配置值集，请参阅位于以下位置的Java代码示例： [快速入门：使用Java API添加电子邮件端点](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-adding-an-email-endpoint-using-the-java-api).
-
-1. 定义输入参数值。
-
-   通过调用 `CreateEndpointInfo` 对象的 `setInputParameterMapping` 方法，并传递以下值：
-
-   * 一个字符串值，它指定输入参数的名称。 例如，EncryptDocument服务的输入参数的名称为 `InDoc`.
-   * 指定输入参数的数据类型的字符串值。 例如，以下类型的数据类型 `InDoc` 输入参数为 `com.adobe.idp.Document`.
-   * 指定映射类型的字符串值。 例如，您可以指定 `variable`.
-   * 一个字符串值，它指定映射类型值。 例如，您可以指定&amp;ast；.pdf作为文件模式。
-
-   >[!NOTE]
-   >
-   >调用 `setInputParameterMapping` 用于定义每个输入参数值的方法。 由于EncryptDocument进程只有一个输入参数，因此您需要调用此方法一次。
-
-1. 定义输出参数值。
-
-   通过调用 `CreateEndpointInfo` 对象的 `setOutputParameterMapping` 方法，并传递以下值：
-
-   * 一个字符串值，它指定输出参数的名称。 例如，EncryptDocument服务的输出参数的名称为 `SecuredDoc`.
-   * 指定输出参数的数据类型的字符串值。 例如，以下类型的数据类型 `SecuredDoc` 输出参数为 `com.adobe.idp.Document`.
-   * 指定映射类型的字符串值。 例如，您可以指定 `%F.pdf`.
-
-1. 创建电子邮件端点。
-
-   通过调用 `EndpointRegistryClient` 对象的 `createEndpoint` 方法和传递 `CreateEndpointInfo` 对象。 此方法会返回 `Endpoint` 表示电子邮件端点的对象。
-
-1. 启用端点。
-
-   通过调用 `EndpointRegistryClient` 对象的 `enable` 方法和传递 `Endpoint` 返回的对象 `createEndpoint` 方法。
+建立電子郵件端點後，您必須啟用它。 端點啟用時，可用於叫用服務。 啟用端點後，即可在管理主控台中檢視它。
 
 **另请参阅**
 
-[步骤摘要](programmatically-endpoints.md#summary-of-steps)
+[使用Java API新增電子郵件端點](programmatically-endpoints.md#add-an-email-endpoint-using-the-java-api)
 
-[快速启动：使用Java API添加Watched文件夹端点](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-adding-a-watched-folder-endpoint-using-the-java-api)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
-[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+### 使用Java API新增電子郵件端點 {#add-an-email-endpoint-using-the-java-api}
 
-### 电子邮件配置值常量文件 {#email-configuration-values-constant-file}
+使用Java API新增電子郵件端點：
 
-此 [快速入门：使用Java API添加电子邮件端点](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-adding-an-email-endpoint-using-the-java-api) 使用一个必须是Java项目一部分的常量文件来编译快速入门。 此常量文件表示添加电子邮件端点时必须设置的配置值。 以下Java代码表示常量文件。
+1. 包含專案檔案。
+
+   在您的Java專案的類別路徑中包含使用者端JAR檔案，例如adobe-livecycle-client.jar。
+
+1. 建立EndpointRegistry使用者端物件。
+
+   * 建立 `ServiceClientFactory` 包含連線屬性的物件。
+   * 建立 `EndpointRegistryClient` 物件，使用它的建構函式並傳遞 `ServiceClientFactory` 物件。
+
+1. 設定電子郵件端點屬性。
+
+   * 建立 `CreateEndpointInfo` 物件（使用其建構函式）。
+   * 透過叫用「 」來指定聯結器識別碼值 `CreateEndpointInfo` 物件的 `setConnectorId` 方法和傳遞字串值 `Email`.
+   * 透過叫用端點來指定端點的說明 `CreateEndpointInfo` 物件的 `setDescription` 方法和傳遞描述端點的字串值。
+   * 透過叫用端點來指定端點的名稱 `CreateEndpointInfo` 物件的 `setName` 並傳遞指定名稱的字串值。
+   * 透過叫用「 」，指定端點所屬的服務 `CreateEndpointInfo` 物件的 `setServiceId` 方法並傳遞指定服務名稱的字串值。
+   * 指定透過叫用呼叫的作業 `CreateEndpointInfo` 物件的 `setOperationName` 方法並傳遞指定作業名稱的字串值。 通常，在為源自於Workbench中建立之程式的服務建立電子郵件端點時，會叫用操作的名稱。
+
+1. 指定設定值。
+
+   針對要設定電子郵件端點的每個設定值，您必須叫用 `CreateEndpointInfo` 物件的 `setConfigParameterAsText` 方法。 例如，若要設定 `smtpHost` 設定值，叫用 `CreateEndpointInfo` 物件的 `setConfigParameterAsText` 方法並傳遞下列值：
+
+   * 字串值，指定設定值的名稱。 設定時 `smtpHost` 設定值，指定 `smtpHost`.
+   * 字串值，指定設定值的值。 設定時 `smtpHost` 設定值，指定字串值，指定SMTP伺服器的名稱。
+
+   >[!NOTE]
+   >
+   >若要檢視本節中介紹的EncryptDocument服務的所有設定值，請參閱位於以下位置的Java程式碼範例： [快速入門：使用Java API新增電子郵件端點](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-adding-an-email-endpoint-using-the-java-api).
+
+1. 定義輸入引數值。
+
+   透過叫用 `CreateEndpointInfo` 物件的 `setInputParameterMapping` 方法並傳遞下列值：
+
+   * 字串值，指定輸入引數的名稱。 例如，EncryptDocument服務的輸入引數名稱是 `InDoc`.
+   * 字串值，指定輸入引數的資料型別。 例如，資料型別 `InDoc` 輸入引數為 `com.adobe.idp.Document`.
+   * 字串值，指定對應型別。 例如，您可以指定 `variable`.
+   * 字串值，指定對應型別值。 例如，您可以指定&amp;ast；.pdf作為檔案模式。
+
+   >[!NOTE]
+   >
+   >叫用 `setInputParameterMapping` 每個要定義的輸入引數值的方法。 由於EncryptDocument程式只有一個輸入引數，因此您需要叫用此方法一次。
+
+1. 定義輸出引數值。
+
+   透過叫用 `CreateEndpointInfo` 物件的 `setOutputParameterMapping` 並傳遞下列值：
+
+   * 字串值，指定輸出引數的名稱。 例如，EncryptDocument服務的輸出引數名稱是 `SecuredDoc`.
+   * 字串值，指定輸出引數的資料型別。 例如，資料型別 `SecuredDoc` 輸出引數為 `com.adobe.idp.Document`.
+   * 字串值，指定對應型別。 例如，您可以指定 `%F.pdf`.
+
+1. 建立電子郵件端點。
+
+   透過叫用端點來建立端點 `EndpointRegistryClient` 物件的 `createEndpoint` 方法和傳遞 `CreateEndpointInfo` 物件。 此方法會傳回 `Endpoint` 代表電子郵件端點的物件。
+
+1. 啟用端點。
+
+   透過叫用啟用端點 `EndpointRegistryClient` 物件的 `enable` 方法和傳遞 `Endpoint` 物件，由 `createEndpoint` 方法。
+
+**另请参阅**
+
+[步驟摘要](programmatically-endpoints.md#summary-of-steps)
+
+[快速入門：使用Java API新增Watched資料夾端點](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-adding-a-watched-folder-endpoint-using-the-java-api)
+
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+
+[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+
+### 電子郵件設定值常數檔案 {#email-configuration-values-constant-file}
+
+此 [快速入門：使用Java API新增電子郵件端點](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-adding-an-email-endpoint-using-the-java-api) 會使用必須屬於Java專案一部分的常數檔案，以便編譯快速入門。 此常數檔案代表新增電子郵件端點時必須設定的設定值。 以下Java程式碼代表常數檔案。
 
 ```java
  /**
@@ -748,521 +748,521 @@ Endpoint Registry服务提供了以编程方式管理端点的功能。 例如�
  }
 ```
 
-## 添加远程端点 {#adding-remoting-endpoints}
+## 新增遠端端點 {#adding-remoting-endpoints}
 
 >[!NOTE]
 >
->JEE上的AEM表单弃用LiveCycle RemotingAPI。
+>JEE版的AEM表單已棄用LiveCycle RemotingAPI。
 
-您可以使用AEM Forms Java API以编程方式将远程端点添加到服务。 通过添加远程处理端点，您可以使Flex应用程序能够使用远程处理来调用服务。 (请参阅 [使用AEM Forms调用(已为AEM表单弃用) AEM Forms远程处理](/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting).)
+您可以使用AEM Forms Java API，以程式設計方式將遠端端點新增至服務。 透過新增Remoting端點，您可以讓Flex應用程式使用遠端來叫用服務。 (請參閱 [使用AEM Forms叫用(AEM表單已棄用) AEM Forms Remoting](/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting).)
 
-为了以编程方式将远程处理端点添加到服务，请考虑以下命名的短暂过程 *EncryDocument*.
+為了以程式設計方式將遠端端點新增至服務，請考慮以下名為的短期程式 *EncryDocument*.
 
 ![ar_ar_encryptdocumentprocess](assets/ar_ar_encryptdocumentprocess.png)
 
-此流程接受不安全的PDF文档作为输入值，然后将不安全的PDF文档传递到加密服务的 `EncryptPDFUsingPassword` 操作。 PDF文档使用密码进行加密，密码加密的PDF文档是此过程的输出值。 输入值(无保护PDF文档)的名称为 `InDoc` 并且数据类型是 `com.adobe.idp.Document`. 输出值(口令加密的PDF文档)的名称为 `SecuredDoc` 并且数据类型是 `com.adobe.idp.Document`.
+此程式接受不安全的PDF檔案作為輸入值，然後將不安全的PDF檔案傳遞至加密服務的 `EncryptPDFUsingPassword` 作業。 PDF檔案使用密碼加密，而密碼加密的PDF檔案是此程式的輸出值。 輸入值的名稱(無保護PDF檔案)為 `InDoc` 而且資料型別為 `com.adobe.idp.Document`. 輸出值的名稱(密碼加密的PDF檔案)為 `SecuredDoc` 而且資料型別為 `com.adobe.idp.Document`.
 
-为了演示如何将Remoting端点添加到服务，本节将Remoting端点添加到名为EncryptDocument的服务。
+為了示範如何將Remoting端點新增至服務，本節將Remoting端點新增至名為EncryptDocument的服務。
 
 >[!NOTE]
 >
->无法使用Web服务添加远程端点。
+>您無法使用網站服務來新增遠端端點。
 
-### 步骤摘要 {#summary_of_steps-4}
+### 步驟摘要 {#summary_of_steps-4}
 
-要从服务中删除端点，请执行以下任务：
+若要從服務移除端點，請執行下列工作：
 
-1. 包括项目文件。
-1. 创建 `EndpointRegistryClient` 对象。
-1. 设置远程端点属性。
-1. 创建远程端点。
-1. 启用端点。
+1. 包含專案檔案。
+1. 建立 `EndpointRegistryClient` 物件。
+1. 設定遠端端點屬性。
+1. 建立遠端端點。
+1. 啟用端點。
 
-**包括项目文件**
+**包含專案檔案**
 
-在开发项目中包含必要的文件。 如果要使用Java创建客户端应用程序，请包含必要的JAR文件。 如果使用Web服务，请确保包含代理文件。
+在您的開發專案中包含必要的檔案。 如果您使用Java建立使用者端應用程式，請包含必要的JAR檔案。 如果您使用Web服務，請務必包含Proxy檔案。
 
-必须将以下JAR文件添加到项目的类路径中：
+必須將以下JAR檔案新增到專案的類別路徑中：
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
-* adobe-utilities.jar(如果将AEM Forms部署在JBoss Application Server上，则此为必需字段)
-* jbossall-client.jar(如果将AEM Forms部署在JBoss Application Server上，则此为必需字段)
+* adobe-utilities.jar (如果將AEM Forms部署在JBoss Application Server上，則為必要)
+* jbossall-client.jar (如果AEM Forms部署在JBoss Application Server上，則為必要)
 
-有关这些JAR文件位置的信息，请参见 [包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
+有關這些JAR檔案位置的資訊，請參見 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
 
-**创建EndpointRegistry客户端对象**
+**建立EndpointRegistry使用者端物件**
 
-要以编程方式添加远程端点，您必须创建 `EndpointRegistryClient` 对象。
+若要以程式設計方式新增遠端端點，您必須建立 `EndpointRegistryClient` 物件。
 
-**设置远程端点属性**
+**設定遠端端點屬性**
 
-要为服务创建远程端点，请指定以下值：
+若要建立服務的Remoting端點，請指定下列值：
 
-* **连接器标识符值**：指定创建的端点的类型。 要创建远程处理端点，请指定 `Remoting`.
-* **描述**：指定端点的描述。
-* **名称**：指定端点的名称。
-* **服务标识符值**：指定终结点所属的服务。 例如，要将Remoting端点添加到此部分中介绍的进程（在Workbench中激活某个进程时，该进程将成为服务），请指定 `EncryptDocument`.
-* **操作名称**：指定使用端点调用的操作的名称。 创建远程处理端点时，请指定通配符(&amp;ast；)。
+* **聯結器識別碼值**：指定已建立的端點型別。 若要建立遠端端點，請指定 `Remoting`.
+* **說明**：指定端點的說明。
+* **名稱**：指定端點的名稱。
+* **服務識別碼值**：指定端點所屬的服務。 例如，若要將Remoting端點新增至本節中介紹的流程（流程在Workbench中啟動時會變成服務），請指定 `EncryptDocument`.
+* **作業名稱**：指定使用端點叫用的作業名稱。 建立遠端端點時，請指定萬用字元(&amp;ast；)。
 
-**创建远程端点**
+**建立遠端端點**
 
-设置远程端点属性后，可以为服务创建远程端点。
+設定Remoting端點屬性後，您可以為服務建立Remoting端點。
 
-**启用端点**
+**啟用端點**
 
-创建新端点后，必须启用它。 启用远程处理端点后，Flex客户端将能够调用该服务。
-
-**另请参阅**
-
-[使用Java API添加远程端点](programmatically-endpoints.md#add-a-remoting-endpoint-using-the-java-api)
-
-[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
-
-[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
-
-### 使用Java API添加远程端点 {#add-a-remoting-endpoint-using-the-java-api}
-
-使用Java API添加远程端点：
-
-1. 包括项目文件。
-
-   在Java项目的类路径中包含客户端JAR文件，例如adobe-livecycle-client.jar。
-
-1. 创建EndpointRegistry客户端对象。
-
-   * 创建 `ServiceClientFactory` 包含连接属性的对象。
-   * 创建 `EndpointRegistryClient` 对象，使用它的构造函数传递 `ServiceClientFactory` 对象。
-
-1. 设置远程端点属性。
-
-   * 创建 `CreateEndpointInfo` 对象。
-   * 通过调用 `CreateEndpointInfo` 对象的 `setConnectorId` 方法和传递字符串值 `Remoting`.
-   * 通过调用 `CreateEndpointInfo` 对象的 `setDescription` 方法和传递描述端点的字符串值。
-   * 通过调用 `CreateEndpointInfo` 对象的 `setName` 方法，并传递一个指定名称的字符串值。
-   * 通过调用 `CreateEndpointInfo` 对象的 `setServiceId` 方法，并传递一个指定服务名称的字符串值。
-   * 指定调用操作 `CreateEndpointInfo` 对象的 `setOperationName` 方法，并传递一个指定操作名称的字符串值。 对于远程处理端点，请指定通配符(&amp;ast；)。
-
-1. 创建远程端点。
-
-   通过调用 `EndpointRegistryClient` 对象的 `createEndpoint` 方法和传递 `CreateEndpointInfo` 对象。 此方法会返回 `Endpoint` 表示新远程处理端点的对象。
-
-1. 启用端点。
-
-   通过调用 `EndpointRegistryClient` 对象的 `enable` 方法和传递 `Endpoint` 返回的对象 `createEndpoint` 方法。
+建立新端點後，您必須啟用它。 遠端端點啟用時，可讓Flex使用者端叫用服務。
 
 **另请参阅**
 
-[步骤摘要](programmatically-endpoints.md#summary-of-steps)
+[使用Java API新增遠端端點](programmatically-endpoints.md#add-a-remoting-endpoint-using-the-java-api)
 
-[快速入门：使用Java API添加远程端点](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-adding-a-remoting-endpoint-using-the-java-api)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
-[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+### 使用Java API新增遠端端點 {#add-a-remoting-endpoint-using-the-java-api}
 
-## 添加TaskManager端点 {#adding-taskmanager-endpoints}
+使用Java API新增Remoting端點：
 
-您可以使用AEM Forms Java API以编程方式将TaskManager端点添加到服务。 通过将TaskManager端点添加到服务，可以使Workspace用户能够调用该服务。 也就是说，在Workspace中工作的用户可以调用具有相应TaskManager端点的进程。
+1. 包含專案檔案。
+
+   在您的Java專案的類別路徑中包含使用者端JAR檔案，例如adobe-livecycle-client.jar。
+
+1. 建立EndpointRegistry使用者端物件。
+
+   * 建立 `ServiceClientFactory` 包含連線屬性的物件。
+   * 建立 `EndpointRegistryClient` 物件，使用它的建構函式並傳遞 `ServiceClientFactory` 物件。
+
+1. 設定遠端端點屬性。
+
+   * 建立 `CreateEndpointInfo` 物件（使用其建構函式）。
+   * 透過叫用「 」來指定聯結器識別碼值 `CreateEndpointInfo` 物件的 `setConnectorId` 方法和傳遞字串值 `Remoting`.
+   * 透過叫用端點來指定端點的說明 `CreateEndpointInfo` 物件的 `setDescription` 方法和傳遞描述端點的字串值。
+   * 透過叫用端點來指定端點的名稱 `CreateEndpointInfo` 物件的 `setName` 並傳遞指定名稱的字串值。
+   * 透過叫用「 」，指定端點所屬的服務 `CreateEndpointInfo` 物件的 `setServiceId` 方法並傳遞指定服務名稱的字串值。
+   * 指定呼叫的作業 `CreateEndpointInfo` 物件的 `setOperationName` 方法並傳遞指定作業名稱的字串值。 對於遠端端點，請指定萬用字元(&amp;ast；)。
+
+1. 建立遠端端點。
+
+   透過叫用端點來建立端點 `EndpointRegistryClient` 物件的 `createEndpoint` 方法和傳遞 `CreateEndpointInfo` 物件。 此方法會傳回 `Endpoint` 代表新遠端端點的物件。
+
+1. 啟用端點。
+
+   透過叫用啟用端點 `EndpointRegistryClient` 物件的 `enable` 方法和傳遞 `Endpoint` 物件，由 `createEndpoint` 方法。
+
+**另请参阅**
+
+[步驟摘要](programmatically-endpoints.md#summary-of-steps)
+
+[快速入門：使用Java API新增遠端端點](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-adding-a-remoting-endpoint-using-the-java-api)
+
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+
+[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+
+## 新增TaskManager端點 {#adding-taskmanager-endpoints}
+
+您可以使用AEM Forms Java API，以程式設計方式將TaskManager端點新增至服務。 透過將TaskManager端點新增至服務，您可以讓Workspace使用者叫用該服務。 也就是說，在Workspace中工作的使用者可以叫用具有對應TaskManager端點的程式。
 
 >[!NOTE]
 >
->无法使用Web服务添加TaskManager端点。
+>您無法使用Web服務新增TaskManager端點。
 
-### 步骤摘要 {#summary_of_steps-5}
+### 步驟摘要 {#summary_of_steps-5}
 
-要向服务添加TaskManager端点，请执行以下任务：
+若要將TaskManager端點新增至服務，請執行下列工作：
 
-1. 包括项目文件。
-1. 创建 `EndpointRegistryClient` 对象。
-1. 为端点创建类别。
-1. 设置TaskManager端点属性。
-1. 创建TaskManager端点。
-1. 启用端点。
+1. 包含專案檔案。
+1. 建立 `EndpointRegistryClient` 物件。
+1. 為端點建立類別。
+1. 設定TaskManager端點屬性。
+1. 建立TaskManager端點。
+1. 啟用端點。
 
-**包括项目文件**
+**包含專案檔案**
 
-在开发项目中包含必要的文件。 如果要使用Java创建客户端应用程序，请包含必要的JAR文件。 如果使用Web服务，请确保包含代理文件。
+在您的開發專案中包含必要的檔案。 如果您使用Java建立使用者端應用程式，請包含必要的JAR檔案。 如果您使用Web服務，請務必包含Proxy檔案。
 
-必须将以下JAR文件添加到项目的类路径中：
+必須將以下JAR檔案新增到專案的類別路徑中：
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
-* adobe-utilities.jar(如果将AEM Forms部署在JBoss Application Server上，则此为必需字段)
-* jbossall-client.jar(如果将AEM Forms部署在JBoss Application Server上，则此为必需字段)
+* adobe-utilities.jar (如果將AEM Forms部署在JBoss Application Server上，則為必要)
+* jbossall-client.jar (如果AEM Forms部署在JBoss Application Server上，則為必要)
 
-有关这些JAR文件位置的信息，请参见 [包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
+有關這些JAR檔案位置的資訊，請參見 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
 
-**创建EndpointRegistry客户端对象**
+**建立EndpointRegistry使用者端物件**
 
-您必须先创建 `EndpointRegistryClient` 对象。
+您必須先建立TaskManager端點，才能以程式設計方式新增 `EndpointRegistryClient` 物件。
 
-**为端点创建类别**
+**為端點建立類別**
 
-类别用于在工作区中组织服务。 也就是说，Workspace用户可以通过在Workspace中选择类别来调用具有TaskManager端点的服务。 创建TaskManager端点时，您可以引用现有类别或以编程方式创建新类别。
-
->[!NOTE]
->
->此部分在将TaskManager端点添加到服务时创建新类别。
-
-**设置TaskManager端点属性**
-
-要为服务创建TaskManager端点，请指定以下值：
-
-* **连接器标识符**：指定创建的端点的类型。 要创建TaskManager端点，请指定 `TaskManagerConnector`.
-* **描述**：指定端点的描述。
-* **名称**：指定端点的名称。
-* **服务标识符**：指定终结点所属的服务。
-* **类别**：指定与TaskManager端点关联的类别标识符值。
-* **操作名称**：通常，在为源自于Workbench中创建的进程的服务创建任务管理器端点时，操作的名称为 `invoke`.
-
-**创建TaskManager端点**
-
-设置TaskManager端点属性后，可以为服务创建TaskManager端点。
-
-**启用端点**
-
-创建新端点后，必须启用它。 启用该端点后，可用于从Workspace中调用服务。 启用该端点后，您可以在管理控制台中查看它。
-
-**另请参阅**
-
-[使用Java API添加TaskManager端点](programmatically-endpoints.md#add-a-taskmanager-endpoint-using-the-java-api)
-
-[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
-
-[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
-
-### 使用Java API添加TaskManager端点 {#add-a-taskmanager-endpoint-using-the-java-api}
-
-使用Java API添加TaskManager端点：
-
-1. 包括项目文件。
-
-   在Java项目的类路径中包含客户端JAR文件，例如adobe-livecycle-client.jar。
-
-1. 创建EndpointRegistry客户端对象。
-
-   * 创建 `ServiceClientFactory` 包含连接属性的对象。
-   * 创建 `EndpointRegistryClient` 对象，使用它的构造函数传递 `ServiceClientFactory` 对象。
-
-1. 为端点创建类别。
-
-   * 创建 `CreateEndpointCategoryInfo` 对象，方法是：使用其构造函数并传递以下值：
-
-      * 一个字符串值，它指定类别的标识符值
-      * 指定类别说明的字符串值
-   * 通过调用 `EndpointRegistryClient` 对象的 `createEndpointCategory` 方法和传递 `CreateEndpointCategoryInfo` 对象。 此方法会返回 `EndpointCategory` 表示新类别的对象。
-
-
-1. 设置TaskManager端点属性。
-
-   * 创建 `CreateEndpointInfo` 对象。
-   * 通过调用 `CreateEndpointInfo` 对象的 `setConnectorId` 方法和传递字符串值 `TaskManagerConnector`.
-   * 通过调用 `CreateEndpointInfo` 对象的 `setDescription` 方法和传递描述端点的字符串值。
-   * 通过调用 `CreateEndpointInfo` 对象的 `setName` 方法，并传递一个指定名称的字符串值。
-   * 通过调用 `CreateEndpointInfo` 对象的 `setServiceId` 方法，并传递一个指定服务名称的字符串值。
-   * 通过调用 `CreateEndpointInfo` 对象的 `setCategoryId` 和传递指定类别标识符值的字符串值。 您可以调用 `EndpointCategory` 对象的 `getId` 用于获取此类别的标识符值的方法。
-   * 指定通过调用 `CreateEndpointInfo` 对象的 `setOperationName` 方法，并传递一个指定操作名称的字符串值。 通常，在创建 `TaskManager` 源自在Workbench中创建的进程的服务的端点，该操作的名称为 `invoke`.
-
-1. 创建TaskManager端点。
-
-   通过调用 `EndpointRegistryClient` 对象的 `createEndpoint` 方法和传递 `CreateEndpointInfo` 对象。 此方法会返回 `Endpoint` 表示新TaskManager端点的对象。
-
-1. 启用端点。
-
-   通过调用 `EndpointRegistryClient` 对象的 `enable` 方法和传递 `Endpoint` 返回的对象 `createEndpoint` 方法。
-
-**另请参阅**
-
-[步骤摘要](programmatically-endpoints.md#summary-of-steps)
-
-[快速入门：使用Java API添加TaskManager端点](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-adding-a-taskmanager-endpoint-using-the-java-api)
-
-[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
-
-[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
-
-## 修改端点 {#modifying-endpoints}
-
-您可以使用AEM Forms Java API以编程方式修改现有端点。 通过修改端点，可以更改端点的行为。 例如，假定一个Watched文件夹端点，它指定用作Watched文件夹的文件夹。 您可以通过编程方式修改属于Watched文件夹端点的配置值，从而让另一个文件夹充当Watched文件夹。 有关属于观察文件夹端点的配置值的信息，请参见 [添加观察文件夹端点](programmatically-endpoints.md#adding-watched-folder-endpoints).
-
-为了演示如何修改端点，本节通过更改作为Watched文件夹的文件夹来修改Watched文件夹端点。
+類別是用來在工作區中組織服務。 也就是說，Workspace使用者可以透過在Workspace中選取類別來叫用具有TaskManager端點的服務。 建立TaskManager端點時，您可以參照現有類別或以程式設計方式建立新類別。
 
 >[!NOTE]
 >
->无法使用Web服务修改端点。
+>本節會在將TaskManager端點新增至服務時，建立新類別。
 
-### 步骤摘要 {#summary_of_steps-6}
+**設定TaskManager端點屬性**
 
-要修改端点，请执行以下任务：
+若要為服務建立TaskManager端點，請指定下列值：
 
-1. 包括项目文件。
-1. 创建 `EndpointRegistryClient` 对象。
-1. 检索端点。
-1. 指定新的配置值。
+* **聯結器識別碼**：指定已建立的端點型別。 若要建立TaskManager端點，請指定 `TaskManagerConnector`.
+* **說明**：指定端點的說明。
+* **名稱**：指定端點的名稱。
+* **服務識別碼**：指定端點所屬的服務。
+* **類別**：指定與TaskManager端點相關聯的類別識別碼值。
+* **作業名稱**：一般而言，為源自於Workbench中建立之處理序的服務建立TaskManager端點時，作業名稱為 `invoke`.
 
-**包括项目文件**
+**建立TaskManager端點**
 
-在开发项目中包含必要的文件。 如果要使用Java创建客户端应用程序，请包含必要的JAR文件。 如果使用Web服务，请确保包含代理文件。
+設定TaskManager端點屬性後，即可為服務建立TaskManager端點。
 
-必须将以下JAR文件添加到项目的类路径中：
+**啟用端點**
+
+建立新端點後，您必須啟用它。 端點啟用時，可用來從Workspace內叫用服務。 啟用端點後，即可在管理主控台中檢視它。
+
+**另请参阅**
+
+[使用Java API新增TaskManager端點](programmatically-endpoints.md#add-a-taskmanager-endpoint-using-the-java-api)
+
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+
+[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+
+### 使用Java API新增TaskManager端點 {#add-a-taskmanager-endpoint-using-the-java-api}
+
+使用Java API新增TaskManager端點：
+
+1. 包含專案檔案。
+
+   在您的Java專案的類別路徑中包含使用者端JAR檔案，例如adobe-livecycle-client.jar。
+
+1. 建立EndpointRegistry使用者端物件。
+
+   * 建立 `ServiceClientFactory` 包含連線屬性的物件。
+   * 建立 `EndpointRegistryClient` 物件，使用它的建構函式並傳遞 `ServiceClientFactory` 物件。
+
+1. 為端點建立類別。
+
+   * 建立 `CreateEndpointCategoryInfo` 物件，使用它的建構函式並傳遞下列值：
+
+      * 字串值，指定類別的識別碼值
+      * 字串值，指定類別的說明
+   * 透過叫用 `EndpointRegistryClient` 物件的 `createEndpointCategory` 方法和傳遞 `CreateEndpointCategoryInfo` 物件。 此方法會傳回 `EndpointCategory` 代表新類別的物件。
+
+
+1. 設定TaskManager端點屬性。
+
+   * 建立 `CreateEndpointInfo` 物件（使用其建構函式）。
+   * 透過叫用「 」來指定聯結器識別碼值 `CreateEndpointInfo` 物件的 `setConnectorId` 方法和傳遞字串值 `TaskManagerConnector`.
+   * 透過叫用端點來指定端點的說明 `CreateEndpointInfo` 物件的 `setDescription` 方法和傳遞描述端點的字串值。
+   * 透過叫用端點來指定端點的名稱 `CreateEndpointInfo` 物件的 `setName` 並傳遞指定名稱的字串值。
+   * 透過叫用「 」，指定端點所屬的服務 `CreateEndpointInfo` 物件的 `setServiceId` 方法並傳遞指定服務名稱的字串值。
+   * 叫用「 」，指定端點所屬的類別。 `CreateEndpointInfo` 物件的 `setCategoryId` 並傳遞指定類別識別碼值的字串值。 您可以叫用 `EndpointCategory` 物件的 `getId` 取得此類別識別碼值的方法。
+   * 指定透過叫用呼叫的作業 `CreateEndpointInfo` 物件的 `setOperationName` 方法並傳遞指定作業名稱的字串值。 通常，建立 `TaskManager` 源自於Workbench中建立之處理序的服務端點，作業名稱為 `invoke`.
+
+1. 建立TaskManager端點。
+
+   透過叫用端點來建立端點 `EndpointRegistryClient` 物件的 `createEndpoint` 方法和傳遞 `CreateEndpointInfo` 物件。 此方法會傳回 `Endpoint` 代表新TaskManager端點的物件。
+
+1. 啟用端點。
+
+   透過叫用啟用端點 `EndpointRegistryClient` 物件的 `enable` 方法和傳遞 `Endpoint` 物件，由 `createEndpoint` 方法。
+
+**另请参阅**
+
+[步驟摘要](programmatically-endpoints.md#summary-of-steps)
+
+[快速入門：使用Java API新增TaskManager端點](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-adding-a-taskmanager-endpoint-using-the-java-api)
+
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+
+[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+
+## 修改端點 {#modifying-endpoints}
+
+您可以使用AEM Forms Java API以程式設計方式修改現有端點。 透過修改端點，您可以變更端點的行為。 例如，假設有一個Watched資料夾端點，它指定用來作為watched資料夾的資料夾。 您可以以程式設計方式修改屬於Watched資料夾端點的設定值，導致另一個資料夾充當Watched資料夾。 如需屬於Watched資料夾端點的設定值相關資訊，請參閱 [新增Watched資料夾端點](programmatically-endpoints.md#adding-watched-folder-endpoints).
+
+為了示範如何修改端點，本節透過變更作為Watched資料夾的資料夾來修改Watched資料夾端點。
+
+>[!NOTE]
+>
+>您不能使用Web服務來修改端點。
+
+### 步驟摘要 {#summary_of_steps-6}
+
+若要修改端點，請執行下列工作：
+
+1. 包含專案檔案。
+1. 建立 `EndpointRegistryClient` 物件。
+1. 擷取端點。
+1. 指定新的設定值。
+
+**包含專案檔案**
+
+在您的開發專案中包含必要的檔案。 如果您使用Java建立使用者端應用程式，請包含必要的JAR檔案。 如果您使用Web服務，請務必包含Proxy檔案。
+
+必須將以下JAR檔案新增到專案的類別路徑中：
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
-* adobe-utilities.jar(如果将AEM Forms部署在JBoss Application Server上，则此为必需字段)
-* jbossall-client.jar(如果将AEM Forms部署在JBoss Application Server上，则此为必需字段)
+* adobe-utilities.jar (如果將AEM Forms部署在JBoss Application Server上，則為必要)
+* jbossall-client.jar (如果AEM Forms部署在JBoss Application Server上，則為必要)
 
-有关这些JAR文件位置的信息，请参见 [包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
+有關這些JAR檔案位置的資訊，請參見 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
 
-**创建EndpointRegistry客户端对象**
+**建立EndpointRegistry使用者端物件**
 
-要以编程方式修改端点，您必须创建 `EndpointRegistryClient` 对象。
+若要以程式設計方式修改端點，您必須建立 `EndpointRegistryClient` 物件。
 
-**检索要修改的端点**
+**擷取端點以進行修改**
 
-必须先检索端点，然后才能修改端点。 要检索端点，您必须以能够访问端点的用户身份连接。 建议您以管理员身份连接。 (请参阅 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties))。
+您必須先擷取端點，然後才能修改端點。 若要擷取端點，您必須以可存取端點的使用者身分連線。 建議您以管理員身分連線。 (請參閱 [設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties))。
 
-您可以通过检索端点列表来检索端点。 然后，您可以遍历列表，搜索要删除的特定端点。 例如，您可以通过确定与端点对应的服务和端点类型来定位端点。 找到端点后，可以对其进行修改。
+您可以透過擷取端點清單來擷取端點。 然後您可以逐一檢視清單，搜尋要移除的特定端點。 例如，您可以判斷與端點對應的服務以及端點的型別，以找出端點。 當您找到端點時，可以修改它。
 
-**指定新的配置值**
+**指定新的設定值**
 
-修改端点时，请指定新的配置值。 例如，要修改Watched Folder端点，请重置所有Watched Folder端点配置值，而不仅仅是要修改的值。 有关属于观察文件夹端点的配置值的信息，请参见 [添加观察文件夹端点](programmatically-endpoints.md#adding-watched-folder-endpoints).
-
->[!NOTE]
->
->有关属于电子邮件端点的配置值的信息，请参阅 [添加电子邮件端点](programmatically-endpoints.md#adding-email-endpoints).
+修改端點時，請指定新的設定值。 例如，若要修改Watched資料夾端點，請重設所有Watched資料夾端點設定值，而不只是您要修改的設定值。 如需屬於Watched資料夾端點的設定值相關資訊，請參閱 [新增Watched資料夾端點](programmatically-endpoints.md#adding-watched-folder-endpoints).
 
 >[!NOTE]
 >
->您无法修改终结点调用的服务。 如果尝试修改服务，则会引发异常。 要修改与给定端点关联的服务，请删除端点并创建新端点。 (请参阅 [删除端点](programmatically-endpoints.md#removing-endpoints).)
+>如需屬於電子郵件端點的設定值相關資訊，請參閱 [新增電子郵件端點](programmatically-endpoints.md#adding-email-endpoints).
+
+>[!NOTE]
+>
+>您無法修改端點叫用的服務。 如果您嘗試修改服務，則會擲回例外狀況。 若要修改與指定端點關聯的服務，請移除端點並建立新端點。 (請參閱 [移除端點](programmatically-endpoints.md#removing-endpoints).)
 
 **另请参阅**
 
-[使用Java API修改端点](programmatically-endpoints.md#modifying-an-endpoint-using-the-java-api)
+[使用Java API修改端點](programmatically-endpoints.md#modifying-an-endpoint-using-the-java-api)
 
-[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
-[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### 使用Java API修改端点 {#modifying-an-endpoint-using-the-java-api}
+### 使用Java API修改端點 {#modifying-an-endpoint-using-the-java-api}
 
-使用Java API修改端点：
+使用Java API修改端點：
 
-1. 包括项目文件。
+1. 包含專案檔案。
 
-   在Java项目的类路径中包含客户端JAR文件，例如adobe-livecycle-client.jar。
+   在您的Java專案的類別路徑中包含使用者端JAR檔案，例如adobe-livecycle-client.jar。
 
-1. 创建EndpointRegistry客户端对象。
+1. 建立EndpointRegistry使用者端物件。
 
-   * 创建 `ServiceClientFactory` 包含连接属性的对象。
-   * 创建 `EndpointRegistryClient` 对象，使用它的构造函数传递 `ServiceClientFactory` 对象。
+   * 建立 `ServiceClientFactory` 包含連線屬性的物件。
+   * 建立 `EndpointRegistryClient` 物件，使用它的建構函式並傳遞 `ServiceClientFactory` 物件。
 
-1. 检索要修改的端点。
+1. 擷取要修改的端點。
 
-   * 通过调用，检索当前用户（在连接属性中指定）可以访问的所有端点的列表 `EndpointRegistryClient` 对象的 `getEndpoints` 方法和传递 `PagingFilter` 用作过滤器的对象。 您可以传递 `(PagingFilter)null` 值返回所有端点。 此方法会返回 `java.util.List` 对象，其中每个元素为 `Endpoint` 对象。 有关的信息 `PagingFilter` 对象，请参见 [AEM Forms API参考](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
-   * 循环访问 `java.util.List` 对象以确定它是否具有端点。 如果存在端点，则每个元素都是一个 `EndPoint` 实例。
-   * 通过调用 `EndPoint` 对象的 `getServiceId` 方法。 此方法返回一个指定服务名称的字符串值。
-   * 通过调用 `EndPoint` 对象的 `getConnectorId` 方法。 此方法返回一个指定终结点类型的字符串值。 例如，如果端点是Watched Folder端点，则此方法将返回 `WatchedFolder`.
+   * 擷取目前使用者（在連線屬性中指定）可以存取的所有端點清單，方法是叫用 `EndpointRegistryClient` 物件的 `getEndpoints` 方法和傳遞 `PagingFilter` 做為濾鏡的物件。 您可以傳遞 `(PagingFilter)null` 值以傳回所有端點。 此方法會傳回 `java.util.List` 物件，其中每個元素為 `Endpoint` 物件。 如需關於的資訊 `PagingFilter` 物件，請參閱 [AEM Forms API參考](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
+   * 循環瀏覽 `java.util.List` 物件來判斷它是否有端點。 如果端點存在，則每個元素都為 `EndPoint` 執行個體。
+   * 透過叫用 `EndPoint` 物件的 `getServiceId` 方法。 此方法會傳回指定服務名稱的字串值。
+   * 透過叫用來判斷端點的型別 `EndPoint` 物件的 `getConnectorId` 方法。 此方法會傳回指定端點型別的字串值。 例如，如果端點是Watched資料夾端點，則此方法會傳回 `WatchedFolder`.
 
-1. 指定新的配置值。
+1. 指定新的設定值。
 
-   * 创建 `ModifyEndpointInfo` 对象。
-   * 对于要设置的每个配置值，调用 `ModifyEndpointInfo` 对象的 `setConfigParameterAsText` 方法。 例如，要设置url配置值，请调用 `ModifyEndpointInfo` 对象的 `setConfigParameterAsText` 方法，并传递以下值：
+   * 建立 `ModifyEndpointInfo` 物件（透過叫用其建構函式）。
+   * 對於每個要設定的設定值，叫用 `ModifyEndpointInfo` 物件的 `setConfigParameterAsText` 方法。 例如，若要設定url設定值，請叫用 `ModifyEndpointInfo` 物件的 `setConfigParameterAsText` 方法並傳遞下列值：
 
-      * 一个字符串值，它指定配置值的名称。 例如，要设置 `url` 配置值，指定 `url`.
-      * 指定配置值值的字符串值。 要定义 `url` 配置值，指定watched文件夹位置。
-   * 调用 `EndpointRegistryClient` 对象的 `modifyEndpoint` 方法并传递 `ModifyEndpointInfo` 对象。
+      * 字串值，指定設定值的名稱。 例如，若要設定 `url` 設定值，指定 `url`.
+      * 字串值，指定設定值的值。 若要定義 `url` 設定值，指定watched資料夾位置。
+   * 叫用 `EndpointRegistryClient` 物件的 `modifyEndpoint` 方法並傳遞 `ModifyEndpointInfo` 物件。
 
 
 **另请参阅**
 
-[步骤摘要](programmatically-endpoints.md#summary-of-steps)
+[步驟摘要](programmatically-endpoints.md#summary-of-steps)
 
-[快速入门：使用Java API修改端点](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-modifying-an-endpoint-using-the-java-api)
+[快速入門：使用Java API修改端點](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-modifying-an-endpoint-using-the-java-api)
 
-[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
-[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-## 删除端点 {#removing-endpoints}
+## 移除端點 {#removing-endpoints}
 
-您可以使用AEM Forms Java API以编程方式从服务中删除端点。 删除终结点后，无法使用终结点启用的调用方法调用该服务。 例如，如果从服务中删除SOAP端点，则无法使用SOAP模式调用该服务。
+您可以使用AEM Forms Java API以程式設計方式從服務中移除端點。 移除端點後，無法使用啟用端點的叫用方法來叫用服務。 例如，如果您從服務中移除SOAP端點，則無法使用SOAP模式叫用該服務。
 
-要演示如何从服务中删除端点，本节从名为的服务中删除EJB端点 *EncryDocument*.
+若要示範如何從服務移除端點，本節會從名為的服務移除EJB端點 *EncryDocument*.
 
 >[!NOTE]
 >
->无法使用Web服务删除端点。
+>您無法使用網站服務移除端點。
 
-### 步骤摘要 {#summary_of_steps-7}
+### 步驟摘要 {#summary_of_steps-7}
 
-要从服务中删除端点，请执行以下任务：
+若要從服務移除端點，請執行下列工作：
 
-1. 包括项目文件。
-1. 创建 `EndpointRegistryClient` 对象。
-1. 检索端点。
-1. 删除端点。
+1. 包含專案檔案。
+1. 建立 `EndpointRegistryClient` 物件。
+1. 擷取端點。
+1. 移除端點。
 
-**包括项目文件**
+**包含專案檔案**
 
-将必要的文件包含到开发项目中。 如果要使用Java创建客户端应用程序，请包含必要的JAR文件。 如果使用Web服务，请确保包含代理文件。
+將必要的檔案納入您的開發專案中。 如果您使用Java建立使用者端應用程式，請包含必要的JAR檔案。 如果您使用Web服務，請務必包含Proxy檔案。
 
-必须将以下JAR文件添加到项目的类路径中：
+必須將以下JAR檔案新增到專案的類別路徑中：
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
-* adobe-utilities.jar(如果将AEM Forms部署在JBoss Application Server上，则此为必需字段)
-* jbossall-client.jar(如果将AEM Forms部署在JBoss Application Server上，则此为必需字段)
+* adobe-utilities.jar (如果將AEM Forms部署在JBoss Application Server上，則為必要)
+* jbossall-client.jar (如果AEM Forms部署在JBoss Application Server上，則為必要)
 
-有关这些JAR文件位置的信息，请参见 [包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
+有關這些JAR檔案位置的資訊，請參見 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
 
-**创建EndpointRegistry客户端对象**
+**建立EndpointRegistry使用者端物件**
 
-要以编程方式删除端点，您必须创建 `EndpointRegistryClient` 对象。
+若要以程式設計方式移除端點，您必須建立 `EndpointRegistryClient` 物件。
 
-**检索要删除的端点**
+**擷取要移除的端點**
 
-必须先检索端点，然后才能删除端点。 要检索端点，您必须以能够访问端点的用户身份连接。 建议您以管理员身份连接。 (请参阅 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties))。
+您必須先擷取端點，才能移除端點。 若要擷取端點，您必須以可存取端點的使用者身分連線。 建議您以管理員身分連線。 (請參閱 [設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties))。
 
-您可以通过检索端点列表来检索端点。 然后，您可以遍历列表，搜索要删除的特定端点。 例如，您可以通过确定与端点对应的服务和端点类型来定位端点。 找到端点后，可以将其删除。
+您可以透過擷取端點清單來擷取端點。 然後您可以逐一檢視清單，搜尋要移除的特定端點。 例如，您可以判斷與端點對應的服務以及端點的型別，以找出端點。 當您找到端點時，可以將其移除。
 
-**删除端点**
+**移除端點**
 
-创建新端点后，必须启用它。 启用端点后，可用于调用服务。 启用该端点后，您可以在管理控制台中查看它。
-
-**另请参阅**
-
-[使用Java API删除端点](programmatically-endpoints.md#removing-an-endpoint-using-the-java-api)
-
-[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
-
-[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
-
-### 使用Java API删除端点 {#removing-an-endpoint-using-the-java-api}
-
-使用Java API删除端点：
-
-1. 包括项目文件。
-
-   在Java项目的类路径中包含客户端JAR文件，例如adobe-livecycle-client.jar。
-
-1. 创建EndpointRegistry客户端对象。
-
-   * 创建 `ServiceClientFactory` 包含连接属性的对象。
-   * 创建 `EndpointRegistryClient` 对象，使用它的构造函数传递 `ServiceClientFactory` 对象。
-
-1. 检索要删除的端点。
-
-   * 通过调用，检索当前用户（在连接属性中指定）有权访问的所有端点的列表 `EndpointRegistryClient` 对象的 `getEndpoints` 方法和传递 `PagingFilter` 用作过滤器的对象。 你可以通过 `(PagingFilter)null` 以返回所有端点。 此方法会返回 `java.util.List` 对象，其中每个元素为 `Endpoint` 对象。
-   * 循环访问 `java.util.List` 对象以确定它是否具有端点。 如果存在端点，则每个元素都为 `EndPoint` 实例。
-   * 通过调用 `EndPoint` 对象的 `getServiceId` 方法。 此方法返回一个指定服务名称的字符串值。
-   * 通过调用 `EndPoint` 对象的 `getConnectorId` 方法。 此方法返回一个指定终结点类型的字符串值。 例如，如果端点是EJB端点，则此方法将返回 `EJB`.
-
-1. 删除端点。
-
-   通过调用 `EndpointRegistryClient` 对象的 `remove` 方法和传递 `EndPoint` 表示要删除的端点的对象。
+建立新端點後，您必須啟用它。 端點啟用時，可用於叫用服務。 啟用端點後，即可在管理主控台中檢視它。
 
 **另请参阅**
 
-[步骤摘要](programmatically-endpoints.md#summary-of-steps)
+[使用Java API移除端點](programmatically-endpoints.md#removing-an-endpoint-using-the-java-api)
 
-[快速启动：使用Java API删除端点](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-removing-an-endpoint-using-the-java-api)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
-[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+### 使用Java API移除端點 {#removing-an-endpoint-using-the-java-api}
 
-## 正在检索终结点连接器信息 {#retrieving-endpoint-connector-information}
+使用Java API移除端點：
 
-您可以使用AEM Forms API以编程方式检索有关端点连接器的信息。 连接器使端点能够使用各种调用方法调用服务。 例如，Watched文件夹连接器允许端点使用watched文件夹调用服务。 通过以编程方式检索有关端点连接器的信息，可以检索与连接器关联的配置值，例如哪些配置值是必需的以及哪些是可选的。
+1. 包含專案檔案。
 
-要演示如何检索有关端点连接器的信息，本节将检索有关Watched Folder连接器的信息。 (请参阅 [添加观察文件夹端点](programmatically-endpoints.md#adding-watched-folder-endpoints).)
+   在您的Java專案的類別路徑中包含使用者端JAR檔案，例如adobe-livecycle-client.jar。
+
+1. 建立EndpointRegistry使用者端物件。
+
+   * 建立 `ServiceClientFactory` 包含連線屬性的物件。
+   * 建立 `EndpointRegistryClient` 物件，使用它的建構函式並傳遞 `ServiceClientFactory` 物件。
+
+1. 擷取端點以移除。
+
+   * 擷取目前使用者（在連線屬性中指定）有權存取的所有端點清單，方法是叫用 `EndpointRegistryClient` 物件的 `getEndpoints` 方法和傳遞 `PagingFilter` 做為濾鏡的物件。 您可以通過 `(PagingFilter)null` 以傳回所有端點。 此方法會傳回 `java.util.List` 物件，其中每個元素為 `Endpoint` 物件。
+   * 循環瀏覽 `java.util.List` 物件來判斷它是否有端點。 如果端點存在，則每個元素都為 `EndPoint` 執行個體。
+   * 透過叫用 `EndPoint` 物件的 `getServiceId` 方法。 此方法會傳回指定服務名稱的字串值。
+   * 透過叫用來判斷端點的型別 `EndPoint` 物件的 `getConnectorId` 方法。 此方法會傳回指定端點型別的字串值。 例如，如果端點是EJB端點，則此方法會傳回 `EJB`.
+
+1. 移除端點。
+
+   透過叫用來移除端點 `EndpointRegistryClient` 物件的 `remove` 方法和傳遞 `EndPoint` 代表要移除之端點的物件。
+
+**另请参阅**
+
+[步驟摘要](programmatically-endpoints.md#summary-of-steps)
+
+[快速入門：使用Java API移除端點](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-removing-an-endpoint-using-the-java-api)
+
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+
+[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+
+## 正在擷取端點聯結器資訊 {#retrieving-endpoint-connector-information}
+
+您可以使用AEM Forms API以程式設計方式擷取端點聯結器的相關資訊。 聯結器可讓端點使用各種叫用方法叫用服務。 例如，Watched資料夾聯結器可讓端點使用watched資料夾叫用服務。 透過以程式擷取端點聯結器的相關資訊，您可以擷取與聯結器相關的組態值，例如需要哪些組態值以及哪些是選用值。
+
+若要示範如何擷取端點聯結器的相關資訊，本節會擷取Watched資料夾聯結器的相關資訊。 (請參閱 [新增Watched資料夾端點](programmatically-endpoints.md#adding-watched-folder-endpoints).)
 
 >[!NOTE]
 >
->无法使用Web服务检索有关终结点的信息。
+>您無法使用Web服務擷取端點的相關資訊。
 
 >[!NOTE]
 >
->本主题使用 `ConnectorRegistryClient` 用于检索有关端点连接器信息的API。 (请参阅 [AEM Forms API参考](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).)
+>本主題使用 `ConnectorRegistryClient` 用於擷取端點聯結器相關資訊的API。 (請參閱 [AEM Forms API參考](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).)
 
-### 步骤摘要 {#summary_of_steps-8}
+### 步驟摘要 {#summary_of_steps-8}
 
-要检索终结点连接器信息，请执行以下任务：
+若要擷取端點聯結器資訊，請執行下列工作：
 
-1. 包括项目文件。
-1. 创建 `ConnectorRegistryClient` 对象。
-1. 指定连接器类型。
-1. 检索配置值。
+1. 包含專案檔案。
+1. 建立 `ConnectorRegistryClient` 物件。
+1. 指定聯結器型別。
+1. 擷取設定值。
 
-**包括项目文件**
+**包含專案檔案**
 
-将必要的文件包含到开发项目中。 如果要使用Java创建客户端应用程序，请包含必要的JAR文件。 如果使用Web服务，请确保包含代理文件。
+將必要的檔案納入您的開發專案中。 如果您使用Java建立使用者端應用程式，請包含必要的JAR檔案。 如果您使用Web服務，請務必包含Proxy檔案。
 
-必须将以下JAR文件添加到项目的类路径中：
+必須將以下JAR檔案新增到專案的類別路徑中：
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
-* adobe-utilities.jar(如果将AEM Forms部署在JBoss Application Server上，则此为必需字段)
-* jbossall-client.jar(如果将AEM Forms部署在JBoss Application Server上，则此为必需字段)
+* adobe-utilities.jar (如果將AEM Forms部署在JBoss Application Server上，則為必要)
+* jbossall-client.jar (如果AEM Forms部署在JBoss Application Server上，則為必要)
 
-如果AEM Forms部署在支持的J2EE应用程序服务器（不是JBoss）上，请将adobe-utilities.jar和jbossall-client.jar替换为特定于部署AEM Forms的J2EE应用程序服务器的JAR文件。 有关所有AEM Forms JAR文件位置的信息，请参见 [包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
+如果將AEM Forms部署在非JBoss的支援J2EE應用程式伺服器上，則將adobe-utilities.jar和jbossall-client.jar取代為部署AEM Forms之J2EE應用程式伺服器專屬的JAR檔案。 如需有關所有AEM Forms JAR檔案位置的資訊，請參閱 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
 
-**创建ConnectorRegistry客户端对象**
+**建立ConnectorRegistry使用者端物件**
 
-要以编程方式检索端点连接器信息，请创建 `ConnectorRegistryClient` 对象。
+若要以程式設計方式擷取端點聯結器資訊，請建立 `ConnectorRegistryClient` 物件。
 
-**指定连接器类型**
+**指定聯結器型別**
 
-指定要从中检索信息的连接器的类型。 存在以下类型的连接器：
+指定要從中擷取資訊的聯結器型別。 存在下列型別的聯結器：
 
-* **EJB**：使客户端应用程序能够使用EJB模式调用服务。
-* **SOAP**：使客户端应用程序能够使用SOAP模式调用服务。
-* **观察文件夹**：启用Watched文件夹以调用服务。
-* **电子邮件**：启用电子邮件以调用服务。
-* **远程处理**：使Flex客户端应用程序能够调用服务。
-* **任务管理器连接器**：允许Workspace用户从Workspace中调用服务。
+* **EJB**：讓使用者端應用程式能夠使用EJB模式叫用服務。
+* **SOAP**：讓使用者端應用程式能夠使用SOAP模式叫用服務。
+* **觀察資料夾**：啟用watched資料夾以叫用服務。
+* **電子郵件**：啟用電子郵件訊息以叫用服務。
+* **遠端**：讓Flex使用者端應用程式能夠叫用服務。
+* **TaskmanagerConnector**：可讓Workspace使用者從Workspace內叫用服務。
 
-**检索配置值**
+**擷取設定值**
 
-指定连接器类型后，可以检索有关连接器的信息，如支持的配置值。 例如，对于任何连接器，您可以确定哪些配置值是必需的，哪些是可选的。
-
-**另请参阅**
-
-[使用Java API检索端点连接器信息](programmatically-endpoints.md#retrieve-endpoint-connector-information-using-the-java-api)
-
-[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
-
-[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
-
-### 使用Java API检索端点连接器信息 {#retrieve-endpoint-connector-information-using-the-java-api}
-
-使用Java API检索端点连接器信息：
-
-1. 包括项目文件。.
-
-   在Java项目的类路径中包含客户端JAR文件，例如adobe-livecycle-client.jar。
-
-1. 创建ConnectorRegistry客户端对象。
-
-   * 创建 `ServiceClientFactory` 包含连接属性的对象。
-   * 创建 `ConnectorRegistryClient` 对象，使用它的构造函数传递 `ServiceClientFactory` 对象。
-
-1. 指定连接器类型。
-
-   通过调用 `ConnectorRegistryClient` 对象的 `getEndpointDefinition` 方法，并传递一个指定连接器类型的字符串值。 例如，要指定Watched Folder连接器类型，请传递字符串值 `WatchedFolder`. 此方法会返回 `Endpoint` 对应于连接器类型的对象。
-
-1. 检索配置值。
-
-   * 通过调用 `Endpoint` 对象的 `getConfigParameters` 方法。 此方法返回一个数组 `ConfigParameter` 对象。
-   * 通过检索数组中的每个元素来检索有关每个配置值的信息。 每个元素都是一个 `ConfigParameter` 对象。 例如，您可以通过调用 `ConfigParameter` 对象的 `isRequired` 方法。 如果需要配置值，则此方法将返回 `true`.
+指定聯結器型別後，您可以擷取有關聯結器的資訊，例如支援的組態值。 例如，對於任何聯結器，您可以決定哪些組態值是必要值，哪些是選用值。
 
 **另请参阅**
 
-[步骤摘要](programmatically-endpoints.md#summary-of-steps)
+[使用Java API擷取端點聯結器資訊](programmatically-endpoints.md#retrieve-endpoint-connector-information-using-the-java-api)
 
-[快速启动：使用Java API检索端点连接器信息](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-retrieving-endpoint-connector-information-using-the-java-api)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
-[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+### 使用Java API擷取端點聯結器資訊 {#retrieve-endpoint-connector-information-using-the-java-api}
+
+使用Java API擷取端點聯結器資訊：
+
+1. 包含專案檔案。.
+
+   在您的Java專案的類別路徑中包含使用者端JAR檔案，例如adobe-livecycle-client.jar。
+
+1. 建立ConnectorRegistry使用者端物件。
+
+   * 建立 `ServiceClientFactory` 包含連線屬性的物件。
+   * 建立 `ConnectorRegistryClient` 物件，使用它的建構函式並傳遞 `ServiceClientFactory` 物件。
+
+1. 指定聯結器型別。
+
+   透過叫用指定聯結器型別 `ConnectorRegistryClient` 物件的 `getEndpointDefinition` 方法並傳遞指定聯結器型別的字串值。 例如，若要指定Watched資料夾聯結器型別，請傳遞字串值 `WatchedFolder`. 此方法會傳回 `Endpoint` 與聯結器型別對應的物件。
+
+1. 擷取設定值。
+
+   * 透過叫用 `Endpoint` 物件的 `getConfigParameters` 方法。 此方法傳回陣列 `ConfigParameter` 物件。
+   * 擷取陣列中的每個元素，以擷取有關每個設定值的資訊。 每個元素都是 `ConfigParameter` 物件。 例如，您可以叫用 `ConfigParameter` 物件的 `isRequired` 方法。 如果需要設定值，則此方法會傳回 `true`.
+
+**另请参阅**
+
+[步驟摘要](programmatically-endpoints.md#summary-of-steps)
+
+[快速入門：使用Java API擷取端點聯結器資訊](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-retrieving-endpoint-connector-information-using-the-java-api)
+
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+
+[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)

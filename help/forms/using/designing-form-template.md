@@ -1,7 +1,7 @@
 ---
-title: 为HTML5表单设计表单模板
+title: 為HTML5表單設計表單範本
 seo-title: Designing form templates for HTML5 forms
-description: AEM Forms提供将XFA表单模板渲染为HTML5格式。 窗体设计人员可以使用Designer设计窗体HTML并使用Template5呈现功能。
+description: AEM Forms提供轉譯XFA表單範本為HTML5格式的功能。 表單設計人員可以使用Designer設計表單範本，並使用HTML5轉譯功能。
 seo-description: AEM Forms offers rendering XFA form template to HTML5 format. Form designers can design form templates using Designer and use the HTML5 rendition capability.
 uuid: 4f6b7231-4479-400a-adcd-c68064f06b4e
 content-type: reference
@@ -14,34 +14,34 @@ exl-id: 7c8d501f-c953-495e-8bac-1f66fd99c783
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '485'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
-# 为HTML5表单设计表单模板{#designing-form-templates-for-html-forms}
+# 為HTML5表單設計表單範本{#designing-form-templates-for-html-forms}
 
-AEM中的HTML5表单组件提供将XFA表单模板渲染为HTML5格式。 表单设计人员可以使用以下工具设计表单模板 [Forms设计器](https://www.adobe.com/go/learn_aemforms_designer_63) 和使用HTML5呈现版本功能。 这些表单模板及其资产可以驻留在AEM存储库、文件系统中，或通过http公开。 但是，如果您计划使用Forms Manager管理表单，则模板和资产应驻留在AEM存储库中。
+AEM中的HTML5表單元件提供將XFA表單範本轉譯為HTML5格式。 表單設計人員可使用以下專案設計表單範本： [Forms設計工具](https://www.adobe.com/go/learn_aemforms_designer_63_cn) 和使用HTML5轉譯功能。 這些表單範本及其資產可以存放在AEM存放庫、檔案系統中，或透過http公開。 不過，如果您打算使用Forms Manager管理表單，範本和資產應存放在AEM存放庫中。
 
-虽然HTML5表单在很大程度上与PDF forms的行为相匹配，但两种格式都存在一些不适用于其他格式的特征。 例如，Adobe Reader中对PDF表单应用条形码的方式与移动设备表单有所不同，表单的数字签名方式也因格式而异。 有关此类变体的更多信息，请参阅 [HTML5表单和PDF forms之间的功能区别](../../forms/using/feature-differentiation-html5-forms-pdf-forms.md).
+雖然HTML5表單在很大程度上符合PDF forms的行為，但兩種格式都有某些功能不適用於其他格式。 例如，在Adobe Reader中，在PDF表單上套用條碼的方式，會因行動表單而異，或是表單經過數位簽署的方式，也會因格式而異。 如需這類變異的詳細資訊，請參閱 [HTML5表單與PDF forms之間的功能差異](../../forms/using/feature-differentiation-html5-forms-pdf-forms.md).
 
-有关常见XFA功能，请参阅以下最佳实践和准则来设计可同时用于两种格式的表单。
+如需常見XFA功能，請參閱下列最佳實務和指導方針，以設計可同時使用兩種格式的表單。
 
-## 最佳实践 {#best-practices}
+## 最佳實務 {#best-practices}
 
-设计表单模板的大多数步骤（如架构绑定或编写表单逻辑）都是相同的。 但是，由于大型客户端(如Adobe Reader)的渲染引擎和脚本编写引擎与基于浏览器的表单存在固有差异，因此中介绍了一些建议 [最佳实践](/help/forms/using/design-accessible-html5-forms.md) 文章。 这些最佳实践可帮助您设计可在两种格式中按预期使用的表单模板。
+設計表單範本的大部分步驟（例如結構描述繫結或撰寫表單邏輯）都相同。 不過，由於Adobe Reader等厚型使用者端的轉譯和指令碼引擎與瀏覽器型表單之間固有的差異，因此中介紹了一些建議 [最佳實務](/help/forms/using/design-accessible-html5-forms.md) 文章。 這些最佳實務可協助您設計表單範本，使其在兩種格式中都能如預期般運作。
 
-### 适用于HTML5 Forms的AEM Forms Designer中的功能 {#capabilities-in-aem-forms-designer-for-html-forms}
+### 適用於HTML5 Forms的AEM Forms Designer功能 {#capabilities-in-aem-forms-designer-for-html-forms}
 
-#### 预览HTML {#preview-html}
+#### 預覽HTML {#preview-html}
 
-“预览HTML”选项卡会添加到“设计”模式中，以供表单设计者在设计过程中以HTML5格式预览表单。 有关如何在AEM Forms Designer中启用和配置此功能的详细信息，请参阅 [预览HTML](../../forms/using/preview-xdp-forms-html.md).
+「預覽HTML」標籤會新增至「設計」模式，供表單設計人員在設計過程中以HTML5格式預覽表單。 如需如何在AEM Forms Designer中啟用和設定此功能的詳細資訊，請參閱 [預覽HTML](../../forms/using/preview-xdp-forms-html.md).
 
 #### 连笔签名 {#scribble-signature}
 
-HTML5表单的主要目标是触摸设备。 因此，在AEM Forms Designer中添加了新的涂写签名控件。 您可以单击或拖放表单模板上的涂写签名控件并对其进行配置。 它在HTML5呈现中呈现为涂写字段，可用于在触控设备上涂写签名。 在桌面计算机上，它可以使用鼠标控制作为涂写字段。 有关如何使用此功能的更多信息，请参阅 [XFA涂写字段](../../forms/using/scribble-signature.md).
+HTML5表單的主要目標是觸控裝置。 因此，在AEM Forms Designer中新增了塗鴉簽名控制項。 您可以按一下或拖放表單範本上的手寫簽名控制項並進行設定。 它在HTML5轉譯中呈現為手寫欄位，並可用於觸控裝置上的手寫簽名。 在桌上型電腦上，它可以使用滑鼠控制項做為塗鴉欄位。 如需如何使用此功能的詳細資訊，請參閱 [XFA手寫欄位](../../forms/using/scribble-signature.md).
 
 ![4](assets/4.png)
 
-#### 富文本格式 {#rich-text-format}
+#### RTF格式 {#rich-text-format}
 
-您可以将文本字段转换为富文本字段。 它向文本字段添加一个格式设置选项列表。 要转换，请打开Forms Designer，点按中的文本字段 **[!UICONTROL 设计视图]**. 在 **[!UICONTROL 字段]** 选项卡，选择 **[!UICONTROL 富文本]** 从 **[!UICONTROL 字段格式]** 下拉列表。 现在，当XFA表单呈现为HTML5表单时，该字段呈现为富文本字段。 点按 ![最大化](assets/maximize_icon.svg) 查看其他格式选项。
+您可以將文字欄位轉換為RTF文字欄位。 它會將格式選項清單新增至文字欄位。 若要轉換，請開啟Forms Designer，然後點選中的文字欄位 **[!UICONTROL 設計檢視]**. 在 **[!UICONTROL 欄位]** 索引標籤，選取 **[!UICONTROL RTF文字]** 從 **[!UICONTROL 欄位格式]** 下拉式清單。 現在，當XFA表單呈現為HTML5表單時，欄位會呈現為RTF文字欄位。 點選 ![最大化](assets/maximize_icon.svg) 以檢視其他格式選項。

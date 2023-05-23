@@ -1,7 +1,7 @@
 ---
-title: 配置服务设置
+title: 設定服務設定
 seo-title: Configure service settings
-description: 了解如何配置服务设置。
+description: 瞭解如何設定服務設定。
 seo-description: Learn how to configure service settings.
 uuid: e95425a4-62f6-473e-b21b-d081c432e02d
 contentOwner: admin
@@ -17,344 +17,344 @@ ht-degree: 0%
 
 ---
 
-# 配置服务设置 {#configure-service-settings}
+# 設定服務設定 {#configure-service-settings}
 
-您可以使用“服务管理”页为AEM表单中的每项服务配置设置。 可用设置因所配置的服务而异。
+您可以使用「服務管理」頁面來設定AEM表單中每個服務的設定值。 可用的設定會依所設定的服務而有所不同。
 
-1. 在管理控制台中，单击服务>应用程序和服务>服务管理。
-1. 在更改服务之前停止该服务。 (请参阅 [启动和停止服务](/help/forms/using/admin-help/starting-stopping-services.md#starting-and-stopping-services).)
-1. 单击要配置的服务的名称。
-1. 如果服务具有“配置”选项卡，请使用该选项卡更改服务的设置。 有关详细信息，请参阅下面的链接列表。
+1. 在Administration Console中，按一下「服務>應用程式和服務>服務管理」。
+1. 在變更服務之前先停止服務。 (請參閱 [啟動和停止服務](/help/forms/using/admin-help/starting-stopping-services.md#starting-and-stopping-services).)
+1. 按一下您要設定的服務名稱。
+1. 如果服務有組態標籤，請使用該標籤來變更服務的設定。 如需詳細資訊，請參閱下列連結清單。
 
    >[!NOTE]
    >
-   >并非所有列在“服务管理”页上的服务都有“配置”选项卡。 对于已创建的流程，仅当在Workbench中为流程添加了配置参数时，才会显示“配置”选项卡。 (请参阅“ ”中的“配置参数” [Workbench帮助](https://www.adobe.com/go/learn_aemforms_workbench_63) .)
+   >並非所有列在「服務管理」頁面上的服務都有組態頁簽。 針對您已建立的處理，只有在您已新增組態引數至Workbench的處理時，才會顯示「組態」標籤。 (請參閱 [Workbench說明](https://www.adobe.com/go/learn_aemforms_workbench_63) .)
 
 
-1. 单击“安全”选项卡，并设置服务的安全设置。 参见 [修改服务的安全设置](configure-service-settings.md#modifying-security-settings-for-a-service).
-1. 如果服务具有“端点”选项卡，请使用该选项卡更改端点设置。 参见 [管理端点](/help/forms/using/admin-help/adding-enabling-modifying-or-removing.md).
-1. 单击“池”选项卡并设置池设置。 参见 [为服务配置池](configure-service-settings.md#configuring-pooling-for-a-service).
-1. 单击“保存”以保存更改，或单击“取消”以放弃更改。
-1. 选中服务名旁边的复选框，然后单击“启动”以重新启动服务。
+1. 按一下「安全性」標籤，然後設定服務的安全性設定。 另請參閱 [修改服務的安全性設定](configure-service-settings.md#modifying-security-settings-for-a-service).
+1. 如果服務有「端點」標籤，請使用它來變更端點設定。 另請參閱 [管理端點](/help/forms/using/admin-help/adding-enabling-modifying-or-removing.md).
+1. 按一下「共用」標籤並設定共用設定。 另請參閱 [為服務設定集區](configure-service-settings.md#configuring-pooling-for-a-service).
+1. 按一下[儲存]儲存變更，或按一下[取消]捨棄變更。
+1. 選取服務名稱旁的核取方塊，然後按一下啟動以重新啟動服務。
 
-## 审核工作流服务设置 {#audit-workflow-service-settings}
+## 稽核工作流程服務設定 {#audit-workflow-service-settings}
 
-Workbench提供了在运行时记录进程实例并播放这些实例以观察进程行为的功能。 (请参阅 [Workbench帮助](https://www.adobe.com/go/learn_aemforms_workbench_63).) 要节省表单服务器文件系统上的空间，您可以限制存储的进程记录数据量。 您可以配置Audit Workflow Service的以下属性( `AuditWorkflowService`)：
+Workbench提供在執行階段執行處理序執行個體時加以記錄，然後播放執行個體，以觀察處理序行為的功能。 (請參閱 [Workbench說明](https://www.adobe.com/go/learn_aemforms_workbench_63).) 若要節省表單伺服器檔案系統上的空間，您可以限制儲存的處理程式記錄資料量。 您可以設定「稽核工作流程服務」的下列屬性( `AuditWorkflowService`)：
 
-**maxNumberOfRecordingInstances：** 存储的最大录制数。 当存储最大记录数时，创建新记录时将从文件系统中删除最早的记录。 如果您倾向于创建许多录制并且希望自动删除旧录制，则此属性非常有用。 默认值为 50。
+**maxNumberOfRecordingInstances：** 儲存的錄製數上限。 當儲存最大記錄數時，建立新記錄時將從檔案系統中移除最舊的記錄。 如果您想要建立許多錄製，而且想要自動移除舊錄製，此屬性就十分實用。 默认值为 50。
 
-**MaxNumberOfRecordingEntries：** 每个记录可以存储的最大数据条目数。 数据条目是有关流程中操作的信息。 对于每个操作的执行，存储多个条目，例如操作是否开始、操作是否完成、以及导致该操作的路由是否完成。 当进程可以包含许多操作执行时（例如，遇到无限循环时），此属性很有用。 默认值为 50。
+**MaxNumberOfRecordingEntries：** 可針對每個記錄儲存的最大資料專案數。 資料專案是處理程式中作業的相關資訊。 每個作業執行都會儲存數個專案，例如作業是否開始、作業是否完成，以及導致作業的路由是否完成。 當處理程式可以包含許多操作執行時（例如，遇到無盡回圈時），此屬性很有用。 默认值为 50。
 
-## 条形码表单服务设置 {#barcoded-forms-service-settings}
+## 條碼式表單服務設定 {#barcoded-forms-service-settings}
 
-条形码表单服务 `(BarcodedFormsService)` 从扫描的图像中提取条形码数据。 该服务接受条形码形式(TIFF或PDF)作为输入，并提取由条形码编码的数据的机器表示形式。
+條碼式表單服務 `(BarcodedFormsService)` 會從掃描的影像中擷取條碼資料。 此服務接受條碼表單(TIFF或PDF)作為輸入，並擷取由條碼編碼的資料的電腦表示法。
 
-条形码表单服务可使用以下设置。
+條碼式表單服務可使用下列設定。
 
-**左读：** 选中后，将从右到左水平扫描条形码图像。
+**向左讀取：** 選取時，條碼影像會從右至左水準掃描。
 
-**读取权限：** 选中后，将从左到右水平扫描条形码图像。
+**向右讀取：** 選取時，條碼影像會由左至右水準掃描。
 
-**通读：** 选中后，将从下到上垂直扫描条形码图像。
+**向上讀取：** 選取時，條碼影像會從下到上垂直掃描。
 
-**向下读取：** 选中后，将从上到下垂直扫描条形码图像。
+**向下閱讀：** 選取時，條碼影像會從上到下垂直掃描。
 
 >[!NOTE]
 >
->默认情况下，将选择所有选项。 只有在您确定表单上不会出现以这种方式显示的条形码时，才取消选择选项。
+>依預設，會選取所有選項。 只有在您確定表單上沒有以這種方式顯示的條碼時，才取消選取選項。
 
-**基本文件路径：** 用于解析“运行XML文件作业”和“运行平面文件作业”操作的批处理输入和输出文件参数的相对文件路径。 在群集配置中，基本文件路径必须是所有群集节点都具有读/写访问权限的共享文件系统位置。
+**基本檔案路徑：** 用來解析「執行XML檔案工作」與「執行一般檔案工作」作業之批次輸入與輸出檔案引數的檔案路徑。 在叢集設定中，基本檔案路徑必須是所有叢集節點都具備讀取/寫入存取權的共用檔案系統位置。
 
-**数据源名称：** 用于维护有关批处理作业的状态和历史记录信息的数据源名称。 指定的数据源必须支持全局(XA)事务。
+**資料來源名稱：** 用來維護批次處理作業之狀態與歷史記錄資訊的資料來源名稱。 指定的資料來源必須支援全域(XA)交易。
 
-## 中央迁移桥服务（已弃用）设置 {#central-migration-bridge-service-settings}
+## Central Migration Bridge服務（已過時）設定 {#central-migration-bridge-service-settings}
 
-Central Migration Bridge服务( `CentralMigrationBridge`)调用Adobe Central Pro Output Server（中心）功能的子集，包括JFMERGE、JFTRANS和XMLIMPORT命令。 Central Migration Bridge服务操作允许您在AEM表单中重用以下中央资源：
+中央移轉橋服務( `CentralMigrationBridge`)叫用Adobe Central Pro Output Server （中央）功能的子集，包括JFMERGE、JFTRANS和XMLIMPORT命令。 Central Migration Bridge服務作業可讓您在AEM表單中重複使用下列中央資產：
 
-* 模板设计(&amp;ast；.ifd)
-* 输出模板(&amp;ast；.mdf)
-* 数据文件（&amp;ast；.dat文件）
-* 前导码文件（&amp;ast；.pre文件）
-* 数据定义文件(&amp;ast；.tdf)
+* 範本設計(&amp;ast；.ifd)
+* 輸出範本(&amp;ast；.mdf)
+* 資料檔案（&amp;ast；.dat檔案）
+* 序言檔案（&amp;ast；.pre檔案）
+* 資料定義檔案(&amp;ast；.tdf)
 
-以下设置适用于中央迁移桥服务。
+下列設定適用於Central Migration Bridge服務。
 
-**中央安装目录：** 安装Adobe中心5.7的目录。
+**中央安裝目錄：** 安裝Adobe Central 5.7的目錄。
 
-## Content Repository Connector for EMC Documentum服务设置 {#content-repository-connector-for-emc-documentum-service-settings}
+## EMC Documentum服務設定的Content Repository Connector {#content-repository-connector-for-emc-documentum-service-settings}
 
-Content Repository Connector for EMC Documentum服务( `EMCDocumentumContentRepositoryConnector`)，使您能够创建与存储在Documentum存储库中的内容交互的流程。
+Content Repository Connector for EMC Documentum服務( `EMCDocumentumContentRepositoryConnector`)可讓您建立與儲存在Documentum存放庫中的內容互動的程式。
 
-以下设置适用于Content Repository Connector for EMC Documentum服务。
+以下設定適用於EMC Documentum服務的Content Repository Connector。
 
-**Asset Link对象默认路径：** Documentum存储库中用于存储Asset Link对象的路径的默认部分。 实际路径由默认路径和表单模板在AEM表单存储库中的位置组成。
+**資產連結物件預設路徑：** Documentum存放庫中用於儲存Asset Link物件的路徑預設部分。 實際路徑包含預設路徑和AEM表單存放庫中表單範本的位置。
 
-例如，如果默认路径设置为 `/LiveCycleES/ConnectorforEMCDocumentum/AssetLinkObjects`，并且表单模板存储在文件夹中 `/Docbase/forms/`，则Asset Link对象存储在以下位置：
+例如，如果預設路徑設定為 `/LiveCycleES/ConnectorforEMCDocumentum/AssetLinkObjects`，而表單範本儲存在資料夾中 `/Docbase/forms/`，則Asset Link物件會儲存在下列位置：
 
 `/LiveCycleES/ConnectorforEMCDocumentum/AssetLinkObjects/Docbase/forms/`
 
-此设置的默认值为 `/LiveCycleES/ConnectorforEMCDocumentum/AssetLinkObjects`.
+此設定的預設值為 `/LiveCycleES/ConnectorforEMCDocumentum/AssetLinkObjects`.
 
-## IBM FileNet服务设置的内容存储库连接器 {#content-repository-connector-for-ibm-filenet-service-settings}
+## IBM FileNet服務設定的內容存放庫聯結器 {#content-repository-connector-for-ibm-filenet-service-settings}
 
-IBM FileNet的Content Repository Connector允许您创建与存储在IBM FileNet存储库中的内容交互的流程。
+IBM FileNet的內容存放庫聯結器可讓您建立與儲存在IBM FileNet存放庫中的內容互動的流程。
 
-以下设置适用于IBM FileNet服务的Content Repository Connector。
+下列設定適用於IBM FileNet服務的內容存放庫聯結器。
 
-**Asset Link对象默认路径：** IBM FileNet存储库中用于存储Asset Link对象的默认路径部分。 实际路径由默认路径和表单模板在AEM表单存储库中的位置组成。
+**資產連結物件預設路徑：** IBM FileNet存放庫中路徑的預設部分，用於儲存Asset Link物件。 實際路徑包含預設路徑和AEM表單存放庫中表單範本的位置。
 
-例如，如果默认路径设置为 `/LiveCycleES/ConnectorforIBMFileNet/AssetLinkObjects`，并且表单模板存储在文件夹中 `/Docbase/forms/`，则Asset Link对象存储在以下位置：
+例如，如果預設路徑設定為 `/LiveCycleES/ConnectorforIBMFileNet/AssetLinkObjects`，而表單範本儲存在資料夾中 `/Docbase/forms/`，則Asset Link物件會儲存在下列位置：
 
 `/LiveCycleES/ConnectorforIBMFileNet/AssetLinkObjects/Docbase/forms/`
 
-此设置的默认值为 `/LiveCycleES/ConnectorforIBMFileNet/AssetLinkObjects`.
+此設定的預設值為 `/LiveCycleES/ConnectorforIBMFileNet/AssetLinkObjects`.
 
-## 转换PDF服务设置 {#convert-pdf-service-settings}
+## 轉換PDF服務設定 {#convert-pdf-service-settings}
 
-转换PDF服务( `ConvertPdfService`)将PDF文档转换为PostScript和多种图像格式(JPEG、JPEG2000、PNG和TIFF)。 将PDF文档转换为PostScript对于任何PostScript打印机上基于服务器的无人值守打印很有用。 在不支持PDF文档的内容管理系统中归档文档时，将PDF文档转换为多页TIFF文件是一种可行的做法。
+轉換PDF服務( `ConvertPdfService`)會將PDF檔案轉換為PostScript和多種影像格式(JPEG、JPEG2000、PNG和TIFF)。 將PDF檔案轉換為PostScript對於任何PostScript印表機上的自動伺服器式列印都很有用。 在不支援PDF檔案的內容管理系統中封存檔案時，將PDF檔案轉換為多頁TIFF檔案是可行的。
 
-以下设置适用于ConvertPDF服务。
+以下設定適用於轉換PDF服務。
 
-**事务处理类型：** 指定应将事务上下文传播到操作的方式。
+**交易型別：** 指定交易內容應如何傳播至作業。
 
-**必需：** 支持事务上下文（如果存在）；否则，将创建新的事务上下文。 这是默认值。
+**必填：** 如果交易內容存在，則支援交易內容；否則，會建立新的交易內容。 这是默认值。
 
-**需要新的：** 始终创建新的事务处理上下文。 如果存在活动事务上下文，则将其挂起。
+**需要新的：** 一律建立新的交易內容。 如果作用中交易內容存在，則將其暫停。
 
-**事务超时（以秒为单位）：** 在回滚正在包装此操作的事务之前，基础事务提供程序应等待的秒数。 如果传播了现有的事务上下文，则忽略此值。 默认值为 180。
+**交易逾時（以秒為單位）：** 基礎交易提供者在復原正在包裝此作業的交易之前應等待的秒數。 如果傳播了現有的交易內容，則會忽略此值。 默认值为 180。
 
-**平滑的阈值分辨率（以dpi表示）：** 在以下图像分辨率下对文本、线条图和图像应用平滑（或消除锯齿），如果您为这些元素选择了“将平滑应用于”选项。
+**平滑的臨界值解析度（以dpi表示）：** 如果您已針對這些元素選取「將平滑化套用至」選項，則平滑（或消除鋸齒）套用至文字、線條圖及影像的影像解析度會低於此值。
 
-**对文本应用平滑：** 控制文本消除锯齿。 要禁用文本平滑功能，并使用屏幕放大镜使文本更锐利更易于阅读，请清除此复选框。
+**對文字套用平滑化：** 控制文字的消除鋸齒。 若要停用文字平滑化，並使用熒幕放大鏡讓文字更銳利且更容易閱讀，請清除此核取方塊。
 
-**对线条图应用平滑：** 应用平滑以去除直线中的突变角度。
+**將平滑套用至線條圖：** 套用平滑來移除直線中的突變角度。
 
-**对图像应用平滑：** 应用平滑以最大限度地减少图像中的意外变化。
+**將平滑套用至影像：** 套用平滑化以將影像中的突然變更最小化。
 
-## Distiller服务设置 {#distiller-service-settings}
+## Distiller服務設定 {#distiller-service-settings}
 
-Distiller服务( `DistillerService`)将PostScript、Encapsulated PostScript (EPS)和PRN文件转换为网络上的PDF文件。
+Distiller服務( `DistillerService`)會透過網路將PostScript、Encapsulated PostScript (EPS)和PRN檔案轉換為PDF檔案。
 
-以下设置可用于Distiller服务。
+下列設定適用於Distiller服務。
 
-**Adobe PDF设置：** 以下预配置的设置将应用于生成的PDF：
+**Adobe PDF設定：** 下列預先設定的設定會套用至產生的PDF：
 
-* 高品质打印
-* 超大页面
+* 高品質列印
+* 超大頁面
 * PDFA1b 2005 CMYK
 * PDFA1b 2005RGB
 * PDFX1a 2001
 * PDFX3 2002
-* 新闻质量
-* 最小文件大小
+* 新聞品質
+* 最小檔案大小
 * 标准
 
-可以通过PDF生成器用户界面创建新设置。
+可透過PDF產生器使用者介面建立新設定。
 
-**安全设置：** 预配置的安全设置，应用于生成的PDF文档。 默认值为No Security。 您必须使用PDF生成器创建安全设置，然后在此处输入设置。
+**安全性設定：** 預先設定的安全性設定，適用於產生的PDF檔案。 預設值為No Security。 您必須使用PDF產生器建立安全性設定，然後在這裡輸入設定。
 
-**池大小：** 池的初始大小。 在部署Distiller服务时，此数字用于确定已创建并分配给等待调用请求的空闲池的服务实施实例数。 然后，服务容器可以立即响应调用请求，而不必首先初始化服务实例。
+**集區大小：** 集區的初始大小。 部署Distiller服務時，此數字可用來決定已建立並配置給等待呼叫要求的可用集區的服務實作執行個體數目。 然後，服務容器可以立即回應呼叫要求，而不需要先初始化服務執行個體。
 
-## 文档管理服务设置 {#document-management-service-settings}
-
->[!NOTE]
->
->Adobe®LiveCycle®内容服务ES（已弃用）是随LiveCycle一起安装的内容管理系统。 它使用户能够设计、管理、监控和优化以人为中心的流程。 内容服务（已弃用）支持于2014年12月31日终止。 参见 [Adobe产品生命周期文档](https://www.adobe.com/support/products/enterprise/eol/eol_matrix.html).
-
-文档管理服务( `DocumentManagementService`)使流程能够使用Content Services提供的内容管理功能（已弃用）。 文档管理操作提供了在内容管理系统中维护空间和内容所需的基本任务。 例如，复制、删除、移动、检索和存储内容、创建空间和关联，以及获取和设置内容属性。
-
-以下设置适用于Document Management服务。
-
-**存储方案：** 内容所在的商店方案。 默认值为workspace。
-
-**HTTP端口：** 用于访问内容服务的端口（已弃用）。 默认值为 8080。
-
-## 电子邮件服务设置 {#email-service-settings}
-
-电子邮件通常用于在自动化过程中分发内容或提供状态信息。 电子邮件服务( `EmailService`)使进程能够从POP3或IMAP服务器接收电子邮件，并将电子邮件发送到SMTP服务器。
-
-例如，某个进程使用电子邮件服务发送带有PDF表单附件的电子邮件。 电子邮件服务连接到SMTP服务器以发送带有附件的电子邮件。 PDF表单旨在让收件人完成表单后单击“提交”。 该操作将表单作为附件返回到指定的电子邮件服务器。 电子邮件服务检索返回的电子邮件并将完成的表单存储在流程数据表单变量中。
-
-以下设置适用于电子邮件服务。
-
-**SMTP主机：** 用于发送电子邮件的SMTP服务器的IP地址或URL。
-
-**SMTP端口号：** 用于连接到SMTP服务器的端口。
-
-**SMTP身份验证：** 选择是否需要用户身份验证才能连接到SMTP服务器。
-
-**SMTP用户：** 用于登录到SMTP服务器的用户帐户的用户名。
-
-**SMTP密码：** 与SMTP用户帐户关联的密码。
-
-**SMTP传输安全性：** 用于连接到SMTP服务器的安全协议：
-
-* 如果不使用协议，则选择无（数据以明文发送）
-* 如果使用Secure Sockets Layer协议，请选择SSL。
-* 如果使用“传输层安全性”，请选择TLS。
-
-**POP3/IMAP主机：** 用于发送电子邮件的POP3或IMAP服务器的IP地址或URL。
-
-**POP3/IMAP用户名：** 用于登录到POP3或IMAP服务器的用户帐户的用户名。
-
-**POP3/IMAP密码：** 与POP3或IMAP用户帐户关联的密码。
-
-**POP3/IMAP端口号：** 用于连接到POP3或IMAP服务器的端口。
-
-**POP3/IMAP：** 用于发送和接收电子邮件的协议。
-
-**接收传输安全性：** 用于连接到SMTP服务器的安全协议：
-
-* 如果不使用协议，则选择无（数据以明文发送）。
-* 如果使用Secure Sockets Layer协议，请选择SSL。
-* 如果使用“传输层安全性”，请选择TLS。
-
-## 加密服务设置 {#encryption-service-settings}
-
-加密服务( `EncryptionService`)可让您加密和解密文档。 文档加密后，其内容变得不可读。 授权用户可以解密文档以获得对内容的访问权限。 如果使用密码对PDF文档进行加密，则用户必须先指定打开密码，然后才能在Adobe Reader或Adobe Acrobat中查看文档。 同样，如果使用证书加密PDF文档，则用户必须使用与用于加密PDF文档的证书（私钥）相对应的公钥对PDF文档进行解密。
-
-加密服务可使用以下设置。
-
-**要连接的默认LDAP服务器：** 用于检索文档加密证书的LDAP服务器的主机名。
-
-**要连接的默认LDAP端口：** LDAP服务器的端口号。
-
-**默认LDAP用户名：** 如果LDAP服务器要求身份验证，请指定用于连接到LDAP服务器的用户名。
-
-**默认LDAP密码：** 如果LDAP服务器要求身份验证，请指定与用于连接到LDAP服务器的用户名对应的密码。
+## 檔案管理服務設定 {#document-management-service-settings}
 
 >[!NOTE]
 >
->仅在通过SSL（使用LDAPS）保护连接时才使用简单身份验证（用户名和密码）。
+>Adobe® LiveCycle® Content Services ES （已棄用）是隨LiveCycle安裝的內容管理系統。 它可讓使用者設計、管理、監控及最佳化以人為中心的流程。 內容服務（已棄用）支援將於2014年12月31日終止。 另請參閱 [Adobe產品生命週期檔案](https://www.adobe.com/support/products/enterprise/eol/eol_matrix.html).
 
-**兼容模式：**
+檔案管理服務( `DocumentManagementService`)讓程式能使用內容服務提供的內容管理功能（已棄用）。 檔案管理作業提供在內容管理系統中維護空間和內容所需的基本工作。 這類工作的範例包括複製、刪除、移動、擷取和儲存內容、建立空間和關聯，以及取得和設定內容屬性。
 
-## FTP服务设置 {#ftp-service-settings}
+檔案管理服務可使用下列設定。
 
-FTP服务( `FTP`)使进程能够与FTP服务器进行交互。 FTP服务操作可以从FTP服务器中检索文件、将文件放在FTP服务器上，以及从FTP服务器中删除文件。 例如，可以将文档（如从进程生成的报表）存储在FTP服务器上进行分发。 或者，外部系统可能会根据流程中先前的步骤生成某些文件。 在该过程的后续步骤中，可以将文件传输到远程位置。
+**存放區配置：** 內容所在的存放區配置。 預設值為workspace。
 
-以下设置可用于FTP服务。
+**HTTP連線埠：** 用來存取Content Services的連線埠（已棄用）。 默认值为 8080。
 
-**默认主机：** FTP服务器的IP地址或URL。
+## 電子郵件服務設定 {#email-service-settings}
 
-**默认端口：** 用于连接到FTP服务器的端口。 默认值为 21。
+電子郵件常用於發佈內容或提供自動化程式中的狀態資訊。 電子郵件服務( `EmailService`)可讓處理程式從POP3或IMAP伺服器接收電子郵件訊息，並傳送電子郵件訊息至SMTP伺服器。
 
-**默认用户名：** 可用于访问FTP服务器的用户帐户的名称。 用户帐户必须具有足够的权限才能执行此服务所需的FTP操作。
+例如，某個程式使用電子郵件服務來傳送包含PDF表單附件的電子郵件訊息。 電子郵件服務會連線至SMTP伺服器，以傳送包含附件的電子郵件訊息。 PDF表單的設計可讓收件者在完成表單後按一下「提交」。 動作會導致表單以附件形式傳回至指定的電子郵件伺服器。 電子郵件服務會擷取傳回的電子郵件訊息，並將完成的表單儲存在流程資料表單變數中。
 
-**默认密码：** 用于指定用户名以向FTP服务器进行身份验证的密码。
+電子郵件服務可使用下列設定。
 
-## 生成PDF服务设置 {#generate-pdf-service-settings}
+**SMTP主機：** 用於傳送電子郵件之SMTP伺服器的IP位址或URL。
 
-生成PDF服务( `GeneratePDFService`)将各种本机格式的文件转换为PDF文档，并将PDF文档转换为多种文件格式。
+**SMTP連線埠號碼：** 用來連線到SMTP伺服器的連線埠。
 
-以下设置可用于生成PDF服务。
+**SMTP驗證：** 選取是否需要使用者驗證才能連線到SMTP伺服器。
 
-**Adobe PDF设置：** 要应用于转化作业的预配置Adobe PDF设置的名称（如果这些设置未作为API调用参数的一部分指定）。 可通过单击“服务”>“PDF生成器”>“Adobe PDF设置”，在管理控制台中配置Adobe PDF设置。 这些设置仅适用于基于PDFMaker的转换。
+**SMTP使用者：** 用來登入SMTP伺服器之使用者帳戶的使用者名稱。
 
-**安全设置：** 要应用于转化作业的预配置安全设置的名称（如果这些设置未作为API调用参数的一部分指定）。 可通过单击“服务”>“PDF生成器”>“安全设置”，在管理控制台中配置安全设置。
+**SMTP密碼：** 與SMTP使用者帳戶相關聯的密碼。
 
-**文件类型设置：** 要应用于转换作业的预配置文件类型设置的名称（如果这些设置未作为API调用参数的一部分指定）。 通过单击“服务”>“PDF生成器”>“文件类型设置”，可在管理控制台中配置文件类型设置。
+**SMTP傳輸安全性：** 用於連線至SMTP伺服器的安全性通訊協定：
 
-**使用Acrobat WebCapture（仅限Windows）：** 当此设置为true时，生成PDF服务会使用Acrobat X Pro进行所有HTML到PDF的转换。 虽然性能可能会稍有降低，但这可以提高HTML生成的PDF文件的质量。 默认值为false。
+* 若未使用通訊協定，則選取「無」（資料會以純文字傳送）
+* 若使用安全通訊端層通訊協定，請選取SSL。
+* 若使用傳輸層安全性，請選取TLS。
 
-**使用Acrobat映像转换（仅限Windows）：** 当此设置为true时，生成PDF服务会使用Acrobat X Pro进行所有图像到PDF的转换。 仅当默认的纯Java转换机制无法成功转换大部分输入图像时，此设置才有用。 默认值为false。
+**POP3/IMAP主機：** 用於傳送電子郵件之POP3或IMAP伺服器的IP位址或URL。
 
-**启用基于Acrobat的AutoCAD转换（仅限Windows）：** 当此设置为true时，“生成PDF”服务会使用Acrobat X Pro进行所有DWG的PDF转换。 仅当服务器上未安装AutoCAD或AutoCAD转换机制无法成功转换文件时，此设置才有用。
+**POP3/IMAP使用者名稱：** 用來登入POP3或IMAP伺服器的使用者帳戶使用者名稱。
 
-**用于查找用户名中禁止使用的特殊字符的正则表达式（仅限Windows）：** 指定当字符出现在用户名中时干扰Export PDF和Optimize PDF操作的字符。
+**POP3/IMAP密碼：** 與POP3或IMAP使用者帳戶相關聯的密碼。
 
-**ImageToPDF池大小：** 生成PDF服务中默认（纯Java）图像到PDF转换器的池大小。 此设置控制生成PDF服务可以执行的最大同时图像到PDF转换。 此设置的默认值（建议用于单处理器系统）为3，在多处理器系统上可以增加此值。
+**POP3/IMAP連線埠號碼：** 用來連線至POP3或IMAP伺服器的連線埠。
 
-**PDF池的HTML大小：** 生成PDF服务中HTML到PDF转换器的池大小。 此设置控制生成PDF服务可以执行的最大并发HTML到PDF转化。 此设置的默认值（建议用于单处理器系统）为3，在多处理器系统上可以增加此值。
+**POP3/IMAP：** 用於傳送和接收電子郵件的通訊協定。
 
-**OCR池大小：** PDF生成器用于OCR的PaperCaptureService的池大小。 此设置的默认值（建议用于单处理器系统）为3，在多处理器系统上可以增加此值。 此设置仅在Windows系统上有效。
+**接收傳輸安全性：** 用於連線至SMTP伺服器的安全性通訊協定：
 
-**HTML到PDF转换的回退字体系列：** 当AEM Forms服务器无法使用原始HTML中使用的字体时，PDF文档中使用的字体系列的名称。 如果要转换使用不可用字体的HTML页，请指定字体系列。 例如，使用区域语言创作的页面可能使用不可用的字体。
+* 如果沒有使用通訊協定，請選取「無」（資料會以純文字傳送）。
+* 若使用安全通訊端層通訊協定，請選取SSL。
+* 若使用傳輸層安全性，請選取TLS。
 
-**重试本机转换逻辑** 管理PDF生成重试次数（如果第一次尝试转换失败）：
+## 加密服務設定 {#encryption-service-settings}
+
+加密服務( `EncryptionService`)可讓您加密和解密檔案。 檔案加密後，其內容會變得無法讀取。 授權的使用者可以解密檔案以取得內容的存取權。 如果PDF檔案已使用密碼加密，使用者必須先指定開啟的密碼，才能在Adobe Reader或Adobe Acrobat中檢視該檔案。 同樣地，如果PDF檔案已使用憑證加密，使用者必須使用與用於加密PDF檔案的憑證（私密金鑰）相對應的公開金鑰來解密PDF檔案。
+
+加密服務可使用下列設定。
+
+**要連線的預設LDAP伺服器：** 用於擷取憑證以進行檔案加密的LDAP伺服器的主機名稱。
+
+**要連線的預設LDAP連線埠：** LDAP伺服器的連線埠號碼。
+
+**預設LDAP使用者名稱：** 如果LDAP伺服器需要驗證，請指定用來連線到LDAP伺服器的使用者名稱。
+
+**預設LDAP密碼：** 如果LDAP伺服器需要驗證，請指定與用來連線至LDAP伺服器的使用者名稱對應的密碼。
+
+>[!NOTE]
+>
+>只有在透過SSL （使用LDAPS）保護連線時，才使用簡單驗證（使用者名稱和密碼）。
+
+**相容性模式：**
+
+## FTP服務設定 {#ftp-service-settings}
+
+FTP服務( `FTP`)讓處理程式與FTP伺服器互動。 FTP服務作業可以從FTP伺服器擷取檔案、將檔案放在FTP伺服器上，以及從FTP伺服器刪除檔案。 例如，從程式產生的報告等檔案可能會儲存在FTP伺服器上以分發。 或者，外部系統可能會根據流程中先前的步驟產生某些檔案。 在程式中的後續步驟中，可將檔案傳輸到遠端位置。
+
+FTP服務可使用下列設定。
+
+**預設主機：** FTP伺服器的IP位址或URL。
+
+**預設連線埠：** 用來連線至FTP伺服器的連線埠。 默认值为 21。
+
+**預設使用者名稱：** 可用於存取FTP伺服器的使用者帳戶名稱。 使用者帳戶必須擁有足夠的許可權，才能執行此服務所需的FTP作業。
+
+**預設密碼：** 與指定的使用者名稱搭配使用以透過FTP伺服器驗證的密碼。
+
+## 產生PDF服務設定 {#generate-pdf-service-settings}
+
+產生PDF服務( `GeneratePDFService`)會將各種原生格式的檔案轉換為PDF檔案，並將PDF檔案轉換為多種檔案格式。
+
+產生PDF服務可使用下列設定。
+
+**Adobe PDF設定：** 要套用至轉換作業的預先設定Adobe PDF設定的名稱（如果這些設定未指定為API叫用引數的一部分）。 Adobe PDF設定是透過按一下「服務>PDF產生器> Adobe PDF設定」在管理控制檯中設定。 這些設定僅適用於PDFMaker型轉換。
+
+**安全性設定：** 要套用至轉換作業的預先設定安全性設定的名稱（如果這些設定沒有指定為API叫用引數的一部分）。 安全性設定是透過按一下「服務>PDF產生器>安全性設定」在管理控制檯中設定。
+
+**檔案型別設定：** 要套用至轉換作業的預先設定檔案型別設定名稱（如果這些設定未指定為API叫用引數的一部分）。 檔案型別設定是透過按一下「服務>PDF產生器>檔案型別設定」在管理控制檯中設定的。
+
+**使用Acrobat WebCapture （僅限Windows）：** 當此設定為true時，產生PDF服務會使用Acrobat X Pro執行所有HTML至PDF的轉換。 這可改善從HTML產生的PDF檔案的品質，但效能可能會稍微降低。 預設值為false。
+
+**使用Acrobat影像轉換（僅限Windows）：** 當此設定為true時，產生PDF服務會使用Acrobat X Pro來處理所有影像到PDF的轉換。 只有當預設的純Java轉換機制無法成功轉換大部分的輸入影像時，此設定才有用。 預設值為false。
+
+**啟用以Acrobat為基礎的AutoCAD轉換（僅限Windows）：** 當此設定為true時，「產生PDF」服務會對所有DWG使用Acrobat X Pro來PDF轉換。 此設定只有在伺服器上未安裝AutoCAD或AutoCAD轉換機制無法成功轉換檔案時才有用。
+
+**尋找使用者名稱中禁止的特殊字元的規則運算式（僅限Windows）：** 指定當字元出現在使用者名稱中時，會妨礙Export PDF和Optimize PDF作業的字元。
+
+**ImageToPDF集區大小：** 「產生PDF」服務中預設（純Java）影像至PDF轉換器的集區大小。 此設定可控制「產生PDF」服務可同時執行的最大影像到PDF轉換。 此設定的預設值（建議用於單處理器系統）為3，您可以在多處理器系統上增加此值。
+
+**PDF集區大小的HTML：** 產生PDF服務中HTML至PDF轉換器的集區大小。 此設定可控制「產生HTML」服務可執行的最大併發PDF對PDF轉換。 此設定的預設值（建議用於單處理器系統）為3，您可以在多處理器系統上增加此值。
+
+**OCR集區大小：** PDF產生器用於OCR的PaperCaptureService集區大小。 此設定的預設值（建議用於單處理器系統）為3，您可以在多處理器系統上增加此值。 此設定僅在Windows系統上有效。
+
+**HTML到PDF轉換的遞補字型系列：** 當AEM表單伺服器無法使用原始HTML中使用的字型時，用於PDF檔案的字型系列名稱。 如果要轉換使用不可用字型的HTML頁面，請指定字型系列。 例如，以地區語言撰寫的頁面可能會使用無法使用的字型。
+
+**重試原生轉換的邏輯** 如果第一次嘗試轉換失敗，則管理PDF產生重試：
 
 **不重试**
 
-如果首次转换尝试失败，请勿重试PDF转换
+如果首次轉換嘗試失敗，請勿重試PDF轉換
 
 **重试**
 
-无论是否已达到超时阈值，都重试PDF转换。 第一次尝试的默认超时持续时间为270秒。
+不論是否已達到逾時臨界值，都請重試PDF轉換。 第一次嘗試的預設逾時期間為270秒。
 
 **如果时间允许，重试**
 
-如果首次转换尝试所花费的时间小于指定的超时持续时间，请重试PDF转换。 例如，如果超时持续时间为270秒，而第一次尝试耗时200秒，则PDF生成器将重新尝试转换。 如果第一次尝试本身用了270秒，则不会重试转换。
+如果第一次轉換嘗試所花費的時間少於指定的逾時期間，請重試PDF轉換。 例如，如果逾時期間為270秒，而第一次嘗試耗用200秒，則PDF產生器會重新嘗試轉換。 如果第一次嘗試本身耗用270秒，則不會重試轉換。
 
-## 指南ES4实用程序服务设置 {#guides-es4-utilities-service-settings}
+## 指南ES4公用程式服務設定 {#guides-es4-utilities-service-settings}
 
-创建指南时，指南中会嵌入一些资源，例如指南定义。 资源还可以作为引用存在，以引用本地或AEM Forms服务器上存储的应用程序资产。 该指南不包含数据，并且提交位置和输入的值并非适用于所有外部环境。
+建立指南時，指南中會嵌入一些資源，例如指南定義。 資源也可以作為儲存在本機或AEM表單伺服器上的應用程式資產的參考而存在。 指南不包含資料，且提交位置和輸入的值不適合所有外部環境。
 
-在大多数情况下，默认的Guides渲染服务足以准备指南，以供在工作区或其他外部环境中使用。 (在“服务”视图的Workbench中，默认服务是“指南（系统）/进程/渲染指南 — 1.0”。) 指南实用工具服务( `GuidesUtility`)允许您创建呈现指南的自定义流程（如有必要）。
+在大多數情況下，預設的Guides轉譯服務足以準備要用於Workspace或其他外部環境的指南。 (在「服務」檢視的Workbench中，預設服務為「參考線（系統）/程式/轉譯器參考線 — 1.0」。) 指南公用程式服務( `GuidesUtility`)可讓您建立呈現指南的自訂程式（如有必要）。
 
-使用指南实用程序操作可将以下指南渲染任务添加到进程中：
+「參考線公用程式」操作可讓您將下列「參考線」演算任務新增至處理序：
 
-* 确定数据是否可用于填充指南
-* 嵌入指南数据或将其转换为链接
-* 将引用的内容转换为外部可访问的URL
-* 替换HTML文档或其他包装中的值，或将它们转换为外部可访问的URL
-* 设置提交位置
-* 指定输入值
-* 创建参数以表示引用的内容
-* 如果变体可用，则设置变体
+* 判斷是否有資料可用來將指南填入
+* 內嵌指南資料或將其轉換為連結
+* 將參照的內容轉換為可從外部存取的URL
+* 取代HTML檔案或其他包裝函式中的值，或將其轉換為可從外部存取的URL
+* 設定提交位置
+* 指定輸入值
+* 建立引數以代表參考的內容
+* 如果有變數，請設定變數
 
-“指南实用工具”服务的默认值支持大多数用例。 但是，如有必要，可以更改以下值。
+「指南公用程式」服務的預設值支援大部分的使用案例。 不過，如有需要，您可以變更下列值。
 
-**publicPaths：** 此选项已弃用。 请勿在AEM表单中使用此选项。
+**publicPaths：** 此選項已過時。 請勿在AEM表單中使用此選項。
 
-**pathInfoExpiryInSeconds：** 客户端对路径信息的请求过期的间隔。 默认值为1。
+**pathInfoExpiryInSeconds：** 使用者端路徑資訊要求到期的間隔。 預設值為1。
 
-**collateralExpiryInSeconds：** 客户端抵押资产请求过期的间隔。 默认值为315576000。
+**collateralExpiryInSeconds：** 使用者端附屬資料要求過期的間隔。 預設值為315576000。
 
-**mismatchExpiryInSeconds：** 当eTag（实体标记）不匹配时，客户端的宣传品请求过期的间隔。 （eTag是HTTP响应标头。） 默认值为1。
+**mismatchExpiryInSeconds：** 當eTag （實體標籤）不符時，使用者端附屬品要求過期的間隔。 （eTag是HTTP回應標頭。） 預設值為1。
 
-**guideContext：** Guides Web应用程序的上下文根目录。 匹配使用Guides Web应用程序设置的值。 默认值为/Guides/。
+**guideContext：** Guides Web應用程式的內容根目錄。 符合使用Guides網頁應用程式設定的值。 預設值為/Guides/。
 
-**secureRandomAlgorithm：** 生成密钥和标识符时使用的算法。 此值将传递到SecureRandom Java类的getInstance方法。 默认值为SHA1PRNG。
+**secureRandomAlgorithm：** 產生金鑰和識別碼時使用的演演算法。 此值會傳遞至SecureRandom Java類別的getInstance方法。 預設為SHA1PRNG。
 
-**idBytes：** 用作密钥标识符的随机字节数。 默认值为6。
+**idBytes：** 用於金鑰識別碼的隨機位元組數目。 預設值為6。
 
-**macAlgorithm：** 用于附属机构URL验证的MAC（报文验证码）算法。 此方法将传递到Mac类的getInstance方法。 默认值为HmacSHA1。
+**mac演演算法：** 用於附屬專案URL驗證的MAC （訊息驗證碼）演演算法。 此方法會傳遞至Mac類別的getInstance方法。 預設為HmacSHA1。
 
-**macRefreshIntervalInMinutes：** 键处于活动状态的时长。 当密钥在此间隔内处于活动状态时，将生成新密钥。 新键将变为活动键。 以前的活动密钥会保留10%的刷新间隔。 此行为允许使用旧键生成的URL在键开关中继续工作。 默认值为144000。
+**macRefreshIntervalInMinutes：** 金鑰作用中的時間量。 當此間隔的金鑰處於作用中狀態時，就會產生新的金鑰。 新金鑰會成為使用中金鑰。 先前作用中的金鑰會保留10%的重新整理間隔。 此行為可讓使用舊索引鍵產生的URL在索引鍵切換器上繼續運作。 預設值為144000。
 
-**macOverlapIntervalInMinutes：** 生成新密钥后，上一个密钥保持有效的时间长度。 默认值为1440分钟（1天）。
+**macOverlapIntervalInMinutes：** 產生新金鑰後，上一個金鑰保持有效的時間長度。 預設值為1440分鐘（1天）。
 
-**macKeySeed：** 用于生成安全URL的种子值。 如果此选项为此选项，则从不刷新键。 在不同服务器上设置相同的种子将导致这些服务器生成兼容的安全URL。 如果在负载平衡器后使用多个表单服务器，这可能会很有用。 输入字符和数字的随机序列作为种子。
+**macKeySeed：** 產生安全URL的種子值。 當此選項時，索引鍵永遠不會重新整理。 在不同的伺服器上設定相同的種子將會導致這些伺服器產生相容的安全URL。 如果在負載平衡器後使用多個表單伺服器，這可能會很有用。 輸入字元和數字的隨機序列作為種子。
 
-### 在服务器群集中使用指南 {#using-guides-in-a-server-cluster}
+### 在伺服器叢集中使用參考線 {#using-guides-in-a-server-cluster}
 
-在不使用粘性会话的服务器群集中呈现指南时失败并出现NullPointerException。 Guides请求利用了安全URL，默认情况下，这些URL对于生成它们的服务器是唯一的。 在使用粘性会话的集群中，当请求命中集群中的节点后，该会话或用户的所有后续请求都将专门路由到该服务器，一切正常。 在不使用粘性会话的集群中，后续请求可能会命中集群中的任何服务器。 如果请求点击的服务器不是原始服务器，则它们无法解析安全URL。
+在不使用粘性工作階段的伺服器叢集中轉譯指南時失敗並出現NullPointerException。 Guides請求會利用安全URL，這些URL在預設情況下在其產生所在的伺服器中是唯一的。 在使用粘性工作階段的叢集中，當請求點選叢集中的節點後，該工作階段或使用者的所有後續請求都只路由到該伺服器，一切正常。 在不使用粘性工作階段的叢集中，後續請求可能會點選叢集中的任何伺服器。 如果請求點選的伺服器不是原始伺服器，則無法解析安全URL。
 
-如果您在不使用粘性会话的服务器群集中使用Guides，请为GuidesUtility服务设置macKeySeed值，然后停止并启动群集。
+如果您在不使用粘性工作階段的伺服器叢集中使用Guides，請設定GuidesUtility服務的macKeySeed值，然後停止並啟動叢集。
 
-macKeySeed值是用于生成安全URL的随机数生成器的种子。 设置此值会导致每个群集节点以相同的方式初始化随机数生成器，并访问相同的安全URL。 您可以对此种子值使用任意随机字符串。
+macKeySeed值是用於產生安全URL的隨機數產生器的種子。 設定此值會讓每個叢集節點以相同的方式初始化隨機數字產生器，並存取相同的安全URL。 您可以對此種子值使用任何隨機字串。
 
-需要刷新安全URL时更改macKeySeed值。 刷新安全URL取决于您的安全策略，类似于更改服务器的主控根密码的刷新策略。 macSeedValue类似于安全URL的主控密码，因为它用于生成新的唯一随机数，以用于安全URL的生成和检索。
+需要重新整理安全URL時，請變更macKeySeed值。 重新整理安全URL取決於您的安全性原則，類似於變更伺服器主根密碼的重新整理原則。 macSeedValue類似於安全URL的主密碼，因為它用於產生新的唯一隨機數，以用於安全URL的產生和擷取。
 
-必须重新启动群集，因为macSeedValue在系统启动时是只读的。 所有节点都需要重新启动以读取该值，因为它们使用种子值独立地初始化其内部随机数。
+您必須重新啟動叢集，因為macSeedValue在系統啟動時是唯讀的。 所有節點都需要重新啟動才能讀取值，因為它們會單獨使用這個值，以種子值初始化其內部隨機數。
 
-## JDBC服务设置 {#jdbc-service-settings}
+## JDBC服務設定 {#jdbc-service-settings}
 
-JDBC服务( `JdbcService`)使进程能够与数据库交互。
+JDBC服務( `JdbcService`)讓處理程式能與資料庫互動。
 
-以下设置适用于JDBC服务。
+下列設定適用於JDBC服務。
 
-**数据源名称：** 一个字符串值，表示用于连接到数据库服务器的数据源的JNDI名称。 必须在承载表单服务器的应用程序服务器上定义数据源。 默认值是AEM forms数据库的数据源的JNDI名称。
+**資料來源名稱：** 字串值，代表用來連線至資料庫伺服器的資料來源的JNDI名稱。 資料來源必須在裝載表單伺服器的應用程式伺服器上定義。 預設值是AEM Forms資料庫資料來源的JNDI名稱。
 
-## JMS服务设置 {#jms-service-settings}
+## JMS服務設定 {#jms-service-settings}
 
-JMS服务( `JMS`)支持与同时实现点对点消息传递和发布/订阅消息传递的Java Messaging System (JMS)提供商的交互。
+JMS服務( `JMS`)可與Java Messaging System (JMS)提供者互動，這些提供者會實作點對點訊息和發佈/訂閱訊息。
 
-使用默认属性配置JMS服务，以便服务操作可以连接JMS提供程序和关联的JNDI服务并与之交互。 服务属性的值根据JBoss应用程序服务器设置为默认值。 如果您使用其他应用程序服务器来托管AEM表单，请更改这些值。
+使用預設屬性設定JMS服務，以便服務作業可以連線並與JMS提供者和關聯的JNDI服務互動。 服務屬性的值會根據JBoss Application Server設定為預設值。 如果您使用不同的應用程式伺服器來託管AEM表單，請變更這些值。
 
-以下设置适用于JMS服务。
+JMS服務可使用下列設定。
 
-**提供程序URL：** JNDI服务提供程序的URL。 默认值基于JBoss Application Server。 以下URL是AEM Forms支持的应用程序服务器的默认值：
+**提供者URL：** JNDI服務提供者的URL。 預設值以JBoss Application Server為基礎。 下列URL是AEM Forms支援的應用程式伺服器的預設值：
 
 **JBoss：** `<server name>:1099`
 
@@ -362,11 +362,11 @@ JMS服务( `JMS`)支持与同时实现点对点消息传递和发布/订阅消�
 
 **WebSphere：** `<server name>:2809`
 
-**JNDI用户名：** 用于向用于查找队列和主题名称的JNDI服务提供程序进行身份验证的帐户的用户名。 默认值为guest。
+**JNDI使用者名稱：** 用於向用於查詢佇列和主題名稱的JNDI服務提供者進行驗證的帳戶使用者名稱。 預設值為guest。
 
-**JNDI密码：** 与为JNDI用户名指定的用户名关联的口令。 默认值为guest。
+**JNDI密碼：** 與為JNDI使用者名稱指定的使用者名稱相關聯的密碼。 預設值為guest。
 
-**初始上下文工厂：** 用作初始上下文工厂的Java类。 JMS服务使用此类来创建初始上下文，这是解析主题和队列名称的起点。 默认值是JBoss上JMS服务的初始上下文工厂。 以下类是AEM forms支持的应用程序服务器的初始上下文工厂：
+**初始前後關聯處理站：** 用作初始前後關聯處理站的Java類別。 JMS服務會使用此類別來建立初始內容，這是解析主題和佇列名稱的起點。 預設值是JBoss上JMS服務的初始前後關聯處理站。 下列類別是AEM Forms支援之應用程式伺服器的初始前後關聯處理站：
 
 **JBoss：** org.jnp.interfaces.NamingContextFactory
 
@@ -374,500 +374,500 @@ JMS服务( `JMS`)支持与同时实现点对点消息传递和发布/订阅消�
 
 **WebSphere：** com.ibm.websphere.naming.WsnInitialContextFactory
 
-**连接用户名：** 与为连接用户名指定的用户名关联的密码。 默认值为guest。
+**連線使用者名稱：** 與為「連線使用者名稱」指定的使用者名稱相關聯的密碼。 預設值為guest。
 
-**连接密码：** 与为连接用户名指定的用户名关联的密码。 默认值为guest。
+**連線密碼：** 與為「連線使用者名稱」指定的使用者名稱相關聯的密碼。 預設值為guest。
 
-**其他属性：** 可传递给JNDI服务提供程序的属性名称和值对。 这些属性取决于您所使用的提供程序的实施和配置。
+**其他屬性：** 您可以傳遞至JNDI服務提供者的屬性名稱和值組。 這些屬性取決於您使用的提供者的實作和設定。
 
-属性名称和值对使用分号分隔 **；**. 例如，以下文本显示将为名为name1和name2的两个属性指定的值，其值分别为value1和value2：
+屬性名稱和值配對以分號分隔 **；**. 例如，下列文字顯示將針對名為name1和name2的兩個屬性指定的值，其值分別為value1和value2：
 
 `name1=value1;name2=value2`
 
-## LDAP服务设置 {#ldap-service-settings}
+## LDAP服務設定 {#ldap-service-settings}
 
-LDAP服务( `LDAPService`)提供查询LDAP目录的操作。 LDAP目录通常用于存储组织中人员、组和服务的信息。
+LDAP服務( `LDAPService`)提供查詢LDAP目錄的操作。 LDAP目錄通常用來儲存組織中人員、群組和服務之相關資訊。
 
-以下设置可用于LDAP服务。
+下列設定適用於LDAP服務。
 
-**初始上下文工厂：** 用作上下文工厂的Java类。 此类用于创建与LDAP服务器的连接。 缺省值为com.sun.jndi.ldap.LdapCtxFactory，该值适用于大多数LDAP服务器。
+**初始前後關聯處理站：** 用作前後關聯處理站的Java類別。 此類別用於建立與LDAP伺服器的連線。 預設值為com.sun.jndi.ldap.LdapCtxFactory，適用於大部分的LDAP伺服器。
 
-**提供程序URL：** 用于连接到LDAP服务的URL。 值的格式为 `ldap://server name:port`
+**提供者URL：** 用來連線至LDAP服務的URL。 值的格式為 `ldap://server name:port`
 
-*服务器名称* 是承载LDAP服务器的计算机的名称
+*伺服器名稱* 是裝載LDAP伺服器的電腦名稱
 
-*端口* 是LDAP服务使用的通信端口。 默认值为389，这是用于LDAP连接的标准端口。
+*連線埠* 是LDAP服務使用的通訊連線埠。 預設值為389，這是用於LDAP連線的標準連線埠。
 
-**用户名：** 用于登录到LDAP服务器的用户帐户的用户名。 用户帐户需要具有连接到服务器的权限并读取LDAP目录中的信息。
+**使用者名稱：** 用來登入LDAP伺服器的使用者帳戶使用者名稱。 使用者帳戶需要擁有許可權才能連線到伺服器並讀取LDAP目錄中的資訊。
 
-根据LDAP服务器的不同，用户名可能是一个简单的用户名，例如 `myname` 或DN，例如 `cn=myname,cn=users,dc=myorg`.
+視LDAP伺服器而定，使用者名稱可能是簡單的使用者名稱，例如 `myname` 或DN，例如 `cn=myname,cn=users,dc=myorg`.
 
-**密码：** 与为Username设置提供的用户名对应的密码。
+**密碼：** 與使用者名稱設定對應的密碼。
 
-**其他属性：** 一个字符串值，它表示可以向LDAP服务器提供的其他属性及其相应值。 该值采用以下格式：
+**其他屬性：** 字串值，代表您可以提供給LDAP伺服器的其他屬性及其對應值。 該值為以下格式：
 
 `property=value;property=value;...`
 
-## Microsoft SharePoint配置服务设置 {#microsoft-sharepoint-configuration-service-settings}
+## Microsoft SharePoint組態服務設定 {#microsoft-sharepoint-configuration-service-settings}
 
-Microsoft SharePoint配置服务 `(MSSharePointConfigService)`允许您为具有模拟权限的AEM forms用户指定凭据。 有关模拟权限的信息，请参阅 [配置Microsoft SharePoint的连接器](https://help.adobe.com/en_US/AEMForms/6.1/SharePointConfig/index.html).
+Microsoft SharePoint設定服務 `(MSSharePointConfigService)`可讓您為具有模擬許可權的AEM forms使用者指定認證。 如需模擬許可權的相關資訊，請參閱 [設定Microsoft SharePoint的聯結器](https://help.adobe.com/en_US/AEMForms/6.1/SharePointConfig/index.html).
 
-Microsoft SharePoint配置服务可使用以下设置：
+Microsoft SharePoint組態服務可使用下列設定：
 
-* 具有模拟权限的用户用户名
-* 上述用户的密码
+* 具有模擬許可權的使用者使用者名稱
+* 上述使用者的密碼
 
-**启用SSL (HTTPS)：**
+**啟用SSL (HTTPS)：**
 
-**生存时间：** 此配置配置文件在客户端上有效并缓存的时间长度（以秒为单位）。 默认值为86400（24小时）。 当客户端应用程序与服务器同步且经过了指定的时间量时，客户端应用程序会向服务器请求新的设置配置文件。
+**存留時間：** 此布建設定檔在使用者端上有效及快取的時間長度（以秒為單位）。 預設值為86400 （24小時）。 當使用者端應用程式與伺服器同步且經過指定的時間量時，使用者端應用程式會向伺服器要求新的布建設定檔。
 
-**加密：** 指定是否加密存储在移动设备上的数据。
+**加密：** 指定是否要加密儲存在行動裝置上的資料。
 
-**Forms应用程序：** 在移动客户端应用程序中启用Forms功能。 选择此选项后，用户可以从其移动设备打开表单并启动流程。
+**Forms應用程式：** 在行動使用者端應用程式中啟用Forms功能。 選取此選項時，使用者可以從行動裝置開啟表單並起始程式。
 
-**任务应用程序：** 在移动客户端应用程序中启用Tasks功能。 选择此选项后，用户可以从其移动设备访问其任务列表并完成任务。
+**工作應用程式：** 啟用行動使用者端應用程式中的工作功能。 選取此選項時，使用者可以從行動裝置存取其工作清單並完成工作。
 
-**Content Services应用程序：** 在移动客户端应用程序中启用“内容服务”功能。 此功能仅适用于iOS。 选择此选项后，iPhone和iPad用户可以访问存储在您组织的WebDAV服务器中的文件。
+**Content Services應用程式：** 啟用行動使用者端應用程式中的內容服務功能。 此功能僅適用於iOS。 選取此選項後，iPhone和iPad使用者即可存取您組織WebDAV伺服器中所儲存的檔案。
 
-**脱机支持：** 使用户能够继续使用移动客户端应用程序，即使他们未连接到服务器也是如此（例如，当他们超出单元格范围或处于飞行模式时）。 用户还必须在其移动设备上启用离线支持设置。 此功能适用于Android和iOS设备。 默认情况下，此功能处于关闭状态。
+**離線支援：** 即使使用者沒有連線至伺服器（例如，當他們超出儲存格範圍或處於飛航模式），也可以讓使用者繼續使用行動使用者端應用程式。 使用者也必須在其行動裝置上啟用離線支援設定。 此功能適用於Android和iOS裝置。 此功能預設為關閉。
 
 >[!NOTE]
 >
->如果已启用离线支持，然后又禁用它，则会立即更新用户的设置配置文件，或者在用户联机时更新。 如果用户一直在脱机工作，则所有待处理任务都将返回到其“任务”列表，并且其队列中的所有项目（包括待处理表单、任务以及包含验证错误的表单）都将从队列中删除。
+>如果已啟用離線支援，然後您將其停用，則會立即更新使用者的布建設定檔，或在使用者上線後立即更新。 如果使用者一直在離線工作，所有擱置的任務都會傳回至其「任務」清單，而其「佇列」中的所有專案（包括擱置的表單、任務以及包含驗證錯誤的表單）都會從「佇列」中刪除。
 
-**Android：** 允许Android设备连接到服务器。
+**Android：** 允許Android裝置連線至伺服器。
 
-**Apple iOS：** 允许iPhone和iPad连接到服务器。
+**Apple iOS：** 允許iPhone和iPad連線至伺服器。
 
-**AIR：** 允许运行基于Adobe AIR®的应用程序的设备连接到服务器。
+**AIR：** 允許執行以Adobe AIR®為基礎之應用程式的裝置連線至伺服器。
 
-**黑莓：** 允许BlackBerry设备连接到服务器。
+**BlackBerry：** 允許BlackBerry裝置連線至伺服器。
 
-**需要Android Microsoft Exchange ActiveSync：** 指定是否必须在Android设备上安装并激活Microsoft Exchange ActiveSync策略管理器(EA)。 选择此选项时，必须在Android设备上实施EA。 如果未选择此选项，则不会执行检查，但会强制实施其他要求。
+**需要Android Microsoft Exchange ActiveSync：** 指定Android裝置上是否必須安裝並啟用Microsoft Exchange ActiveSync原則管理員(EA)。 選取此選項時，必須在Android裝置上強制執行EA。 未選取此選項時，不會執行任何檢查，但會強制執行其他需求。
 
-**Android最小PIN长度：** Android设备必须具有全局设置，以强制使PIN或密码至少具有此长度。 仅具有指定长度的PIN是不够的。 系统必须强制执行PIN长度，以便用户以后无法删除或缩短PIN。 默认值为 4。
+**Android最小PIN長度：** Android裝置必須具有全域設定，以強制使PIN或密碼至少為此長度。 僅具有指定長度的PIN是不夠的。 系統必須強制執行PIN長度，以便使用者之後無法移除或縮短PIN。 默认值为 4。
 
-**擦除前的Android最大密码重试次数：** Android设备具有全局设置，可在尝试使用指定次数的无效密码后清除系统。 此全局设置已启用，并且等于或小于此处指定的值。 默认值为 5。
+**擦除前Android密碼重試次數上限：** Android裝置具有全域設定，可在指定的無效密碼嘗試次數後清除系統。 此全域設定已啟用且等於或低於此處指定的值。 默认值为 5。
 
-**删除时擦除Android：** 指定当Android设备上发生策略冲突时会发生什么情况。 选择此选项时，帐户将被删除。 未选择此选项时，将删除存储的帐户密码和缓存的数据。 在用户修复策略违规之前，不会再尝试同步。
+**Android移除時擦除：** 指定當Android裝置上發生原則違規時會發生什麼情況。 選取此選項時，會刪除帳戶。 未選取此選項時，會刪除儲存的帳戶密碼和快取資料。 除非使用者修正原則違規，否則不會再嘗試同步處理。
 
-## 输出服务设置 {#output-service-settings}
+## 輸出服務設定 {#output-service-settings}
 
-输出服务 `(OutputService)`允许您将XML表单数据与AEM Forms Designer中创建的表单设计合并，以创建以下格式之一的文档输出流：
+輸出服務 `(OutputService)`可讓您將XML表單資料與AEM Forms Designer中建立的表單設計合併，以以下列格式之一建立檔案輸出資料流：
 
-* PDF或PDF/文档输出流。
-* Adobe PostScript输出流。
-* 打印机控制语言(PCL)输出流。
-* 一种斑马编程语言(Zebra Programming Language，ZPL)输出流。
+* PDF或PDF/A檔案輸出資料流。
+* Adobe PostScript輸出資料流。
+* 印表機控制語言(PCL)輸出資料流。
+* Zebra程式設計語言(ZPL)輸出資料流。
 
-输出流可以发送到网络打印机、本地打印机或磁盘文件。 在流程中使用Output服务时，您还可以将输出流作为文件附件发送给电子邮件收件人。
+輸出資料流可以傳送至網路印表機、本機印表機或磁碟檔案。 當您使用Output服務作為程式的一部分時，也可以將輸出資料流作為檔案附件傳送給電子郵件收件者。
 
-以下设置可用于Output服务。
+下列設定可用於Output服務。
 
-**事务处理类型：** 指定应将事务上下文传播到操作的方式：
+**交易型別：** 指定交易內容應如何傳播至作業：
 
-**必需：** 如果事务上下文已存在，则支持该上下文；否则，将创建新的事务上下文。 这是默认值。
+**必填：** 如果交易內容已存在，則支援交易內容；否則，會建立新的交易內容。 这是默认值。
 
-**需要新的：** 始终创建新的事务处理上下文。 如果存在活动事务上下文，则将其挂起。
+**需要新的：** 一律建立新的交易內容。 如果作用中交易內容存在，則將其暫停。
 
-**事务超时（以秒为单位）：** 基础事务提供程序在回滚正在包装此操作的事务之前等待的秒数。 如果传播了现有的事务处理上下文，则忽略此值。
+**交易逾時（以秒為單位）：** 在復原正在包裝此作業的交易之前，基礎交易提供者等待的秒數。 如果傳播了現有的交易內容，則會忽略此值。
 
-在处理大型数据文件或在繁忙的服务器上运行时，可能需要增加Output服务超时。 要更改超时值，请确保硬件服务器具有足够的内存并且内存可供Java应用程序服务器栈使用。 默认值为 `180`。
+處理大型資料檔案或在忙碌的伺服器上操作時，可能需要增加Output服務逾時。 若要變更逾時值，請確定硬體伺服器有足夠的記憶體，而且記憶體可供Java Application Server棧積使用。 默认值为 `180`。
 
-## PDFG配置服务设置 {#pdfg-config-service-settings}
+## PDFG組態服務設定 {#pdfg-config-service-settings}
 
-以下设置可用于PDFG配置服务( `PDFGConfigService`)。
+下列設定適用於PDFG設定服務( `PDFGConfigService`)。
 
-**用户作业选项目录：** C服务写入Acrobat Pro Extended可访问作业选项文件的文件系统文件夹的路径。 默认值为 [用户主页]/Application Data/Adobe/Adobe PDF/Settings.
+**使用者工作選專案錄：** C服務寫入Acrobat Pro Extended可存取之作業選項檔案的檔案系統資料夾路徑。 預設值為 [user.home]/Application Data/Adobe/Adobe PDF/Settings.
 
-**PS启动目录：** 保存了Adobe Acrobat Distiller所需的启动文件的文件系统文件夹的路径。 默认值为 [用户主页]/Application Data/Adobe/Adobe PDF/Distiller/Startup.
+**PS啟動目錄：** 儲存了Adobe Acrobat Distiller所需的啟動檔案的檔案系統資料夾路徑。 預設值為 [user.home]/Application Data/Adobe/Adobe PDF/Distiller/Startup.
 
-**PS启动文件：** Adobe Acrobat Distiller所需的启动文件的名称。 默认值为example.ps。
+**PS啟動檔案：** Adobe Acrobat Distiller所需的啟動檔案名稱。 預設值為example.ps。
 
-**服务器转换超时：** 生成PDF服务和Distiller服务的最大作业转换超时（以秒为单位）。 此设置限制可以在config.xml文件和PDF生成器的管理控制台页中指定的最大转换超时。 默认值为 270。
+**伺服器轉換逾時：** 「產生PDF」服務和Distiller服務的最大作業轉換逾時（以秒為單位）。 此設定會限制config.xml檔案和PDF產生器的管理主控台頁面中可指定的最大轉換逾時。 默认值为 270。
 
-**服务器全局超时：** 在执行PDF转换时，表单服务器会考虑超时限制。 配置超时值以解决该问题。
+**伺服器全域逾時：** 執行PDF轉換時，表單伺服器會考慮逾時限制。 設定逾時值以解決問題。
 
-**作业选项前缀：** 生成PDF服务使用的前缀，用于在临时创建的作业选项文件的前面附加一个短字符串，以供Acrobat Distiller使用。 默认值为pdfg。
+**工作選項首碼：** 「產生PDF」服務用來在暫時建立以供Acrobat Distiller使用的工作選項檔案前面附加短字串的前置詞。 預設值為pdfg。
 
-**非Unicode应用程序：** 已知不适用于Unicode的应用程序名称列表（以逗号分隔）。 此列表预先填充了多个应用程序的名称，在PDF生成器中预先配置了对这些应用程序的支持。 如果您选择添加对通过其他不具有Unicode功能的第三方应用程序进行的PDF转换的支持，则必须将这些应用程序添加到此列表中。 默认值为Autocad、Excel、PowerPoint、Project、Publisher、Visio、Word、WordPerfect。
+**非Unicode應用程式：** 以逗號分隔的應用程式名稱清單，已知不含Unicode。 此清單已預先填入數個應用程式的名稱，支援已在PDF產生器中預先設定。 如果您選擇透過其他不支援Unicode的協力廠商應用程式新增對PDF轉換的支援，則必須將其新增到此清單中。 預設值為Autocad、Excel、PowerPoint、Project、Publisher、Visio、Word、WordPerfect。
 
-**服务器线程池计数：** 控制生成PDF服务在内部使用的线程池的大小，用于为涉及爬网(转换可从主页访问的链接PDF)的HTML到转换请求提供服务。 默认值为 20。
+**伺服器執行緒集區計數：** 控制產生PDF服務在內部使用的執行緒集區的大小，以服務涉及串流的HTML對PDF轉換請求（轉換可從首頁面存取的連結頁面）。 默认值为 20。
 
-**PDFG清理扫描秒数：** 有关详细信息，请参阅作业过期秒数。
+**PDFG清理掃描秒數：** 如需詳細資訊，請參閱工作到期秒數區段。
 
-**作业过期秒数：** 生成PDF服务会在转换输入文件后立即删除这些文件。 它临时存储输出文件，存储时间长度由“PDFG清理扫描秒数”和“作业过期秒数”设置决定。
+**工作到期秒數：** 「產生PDF」服務會在轉換輸入檔案後立即將其刪除。 它會暫時儲存輸出檔案，儲存時間長度由「PDFG清理掃描秒數」和「作業過期秒數」設定決定。
 
-作业过期秒数设置指定文件或空文件夹在符合删除条件之前必须达到的年龄。 PDFG Cleanup Scan Seconds设置指定清理线程扫描临时文件夹以查找可删除文件的频率。
+工作到期秒數設定會指定檔案或空白資料夾在符合刪除資格之前必須達到的年齡。 「PDFG清理掃描秒數」設定可指定清理執行緒掃描暫存資料夾以找出可刪除檔案的頻率。
 
-例如，如果作业过期秒数设置为100，而PDFG清理扫描秒数设置为200，则清理线程每200秒运行一次，并删除100秒或更早的文件。
+例如，如果「工作到期秒數」設為100，而「PDFG清除掃描秒數」設為200，則清除執行緒會每隔200秒執行一次，並刪除100秒或更早的檔案。
 
-“PDFG清理扫描秒数”的默认值为 `43200` （12小时）。 “作业过期秒数”的默认值为 `86400` （24小时）。
+PDFG清除掃描秒數的預設值為 `43200` （12小時）。 「工作到期秒數」的預設值為 `86400` （24小時）。
 
-**默认区域设置：** 用于覆盖部署生成PDF服务的服务器的默认区域设置（国家/地区+语言）。 如果未指定此参数，则根据部署服务的操作系统确定默认区域设置。 此参数控制将错误消息返回到API所用的语言。
+**預設地區設定：** 用於覆寫部署產生PDF服務之伺服器的預設地區設定（國家/地區+語言）。 如果未指定此引數，則會從部署服務的作業系統決定預設地區設定。 此引數會控制將錯誤訊息傳回API所用的語言。
 
-## 表单工作流数据服务服务设置 {#forms-workflow-data-services-service-settings}
+## 表單工作流程資料服務服務設定 {#forms-workflow-data-services-service-settings}
 
-以下服务扩展数据服务并公开Workspace用来与服务器通信的汇编程序。 请勿更改这些服务的配置选项，除非Adobe支持人员指示您进行更改。 这些服务不适用于直接访问：
+下列服務可擴充資料服務，並公開Workspace用來與伺服器對話的組合器。 請勿變更這些服務的設定選項，除非Adobe支援指示您這麼做。 這些服務不適用直接存取：
 
 * `ProcessManagementLcdsAttachmentService`
 * `ProcessManagementLcdsPropertyService`
 * `ProcessManagementLcdsTaskService`
 
-## 远程服务设置 {#remoting-service-settings}
+## 遠端服務設定 {#remoting-service-settings}
 
-大多数服务都已配置完成，因此您可以通过(对于AEM表单已弃用) AEM Forms远程处理来访问它们。 有关(已为AEM表单弃用) AEM表单远程处理的信息，请参阅 [使用AEM表单编程](https://adobe.com/go/learn_aemforms_programming_63).
+大部分服務都已設定完成，因此您可以透過(AEM表單已棄用) AEM Forms Remoting存取這些服務。 如需(不適用於AEM表單) AEM表單遠端處理的相關資訊，請參閱 [使用AEM表單程式設計](https://adobe.com/go/learn_aemforms_programming_63).
 
-以下设置适用于远程处理服务。
+下列設定適用於遠端服務。
 
-**Flex客户端身份验证方法：** 确定在调用的服务启用了安全性、调用的操作不支持匿名调用、客户端未传递凭据或凭据无效时，服务器发送回客户端的响应类型。 从“自定义”或“基本”中选择。 默认值为Basic。
+**Flex使用者端驗證方法：** 決定當叫用的服務已啟用安全性、叫用的操作不支援匿名叫用，而且使用者端傳入沒有或無效的認證時，伺服器傳回給使用者端的回應型別。 從「自訂」或「基本」中選擇。 預設值為「基本」。
 
-**允许序列化不可序列化的类：** 大多数AEM表单端点只允许使用可序列化类进行调用。 在旧版本中，远程端点允许使用不可序列化的类从基于Flex的客户端进行调用。 为了防止APS11-15中描述的安全漏洞，已更改此设置。 如果要继续将不可序列化的类与Flex远程端点一起使用，请选中此复选框。
+**允許非序列化類別的序列化：** 大多數AEM表單端點只允許使用可序列化類別進行叫用。 在舊版中，Remoting端點允許非序列化類別用於從Flex使用者端叫用。 為了防止APS11-15中說明的安全性弱點，已變更此設定。 如果您想要繼續搭配Flex遠端端點使用不可序列化的類別，請選取此核取方塊。
 
-## 存储库服务设置 {#repository-service-settings}
+## 存放庫服務設定 {#repository-service-settings}
 
-存储库服务( `RepositoryService`)为AEM forms提供资源存储和管理服务。 当开发人员创建应用程序时，他们可以在存储库中部署资产，而不是在文件系统上部署。 这些资源可以包括任何类型的宣传资料，包括XML表单、PDF forms(包括Acrobat表单)、表单片段、图像、配置文件、策略、SWF文件、DDX文件、XML架构、WSDL文件和测试数据。
+存放庫服務( `RepositoryService`)為AEM表單提供資源儲存和管理服務。 開發人員建立應用程式時，可以將資產部署在存放庫中，而不是部署在檔案系統上。 資產可包含任何型別的附屬資料，包括XML表單、PDF forms(包括Acrobat表單)、表單片段、影像、設定檔、原則、SWF檔案、DDX檔案、XML結構描述、WSDL檔案和測試資料。
 
-您可以使用AEM表单中包含的默认存储库，也可以使用第三方存储库( EMC Documentum Content Server 、 IBM FileNet Content Manager或IBM Content Manager )。
+您可以使用AEM表單隨附的預設存放庫，或使用協力廠商存放庫(EMC Documentum Content Server、IBM FileNet Content Manager或IBM Content Manager)。
 
-存储库提供方服务是一个服务委托，充当提供方服务的接口。 这允许您连接到通用API，而不必知道哪个提供商服务正在实现存储功能。 存储库提供程序服务为存储库服务资源提供数据库存储。
+存放庫提供者服務是一種服務委派，充當提供者服務的介面。 這可讓您連線到通用API，而不需要知道哪個提供者服務正在實作儲存功能。 儲存區域提供者服務提供儲存區域服務資源的資料庫儲存空間。
 
-以下设置适用于Repository服务。
+以下設定適用於存放庫服務。
 
-**提供程序服务：** 用作存储提供程序的服务的名称。 默认值为RepositoryProviderService。
+**提供者服務：** 用作儲存提供者的服務名稱。 預設值為RepositoryProviderService。
 
-## 签名服务设置 {#signature-service-settings}
+## 簽章服務設定 {#signature-service-settings}
 
-签名服务( `SignatureService`)使贵组织能够保护其分发和接收的Adobe PDF文档的安全性和隐私。 本服务使用数字签名和认证来确保文档不被更改。 更改文档会破坏其签名。 由于安全功能应用于文档本身，因此文档在其整个生命周期内都保持安全和受控制；在防火墙之外，当文档离线下载时，以及当它提交回您的组织时。
+簽名服務( `SignatureService`)可讓貴組織保護所散發及接收的Adobe PDF檔案之安全性與隱私權。 本服務使用數位簽名和認證，以確保檔案不會遭到更改。 變更檔案會破壞其簽名。 因為安全性功能會套用至檔案本身，所以檔案在其整個生命週期內都保持安全和受控制；在防火牆之外，當檔案離線下載時，以及當檔案被提交回您的組織時。
 
-以下设置可用于签名服务。
+下列設定可供簽名服務使用。
 
-**远程HSM SPI服务的名称：** 在远程计算机上安装HSM时，可使用此选项。 当AEM表单安装在64位Windows上并且您使用HSM设备进行签名时，指定此选项。
+**遠端HSM SPI服務的名稱：** 此選項適用於將HSM安裝在遠端電腦上。 當AEM表單安裝在64位元Windows上且您使用HSM裝置進行簽署時，請指定此選項。
 
-**远程HSM Web服务的URL：** 当AEM表单安装在64位Windows上并且您使用HSM设备进行签名时，指定此选项。
+**遠端HSM Web服務的URL：** 當AEM表單安裝在64位元Windows上且您使用HSM裝置進行簽署時，請指定此選項。
 
-**认证以包括表单加载更改：** 选择此选项时，除了XFA模板之外，还会验证XFA表单状态。 请注意，启用此选项可能会对性能产生负面影响。 默认值为true。
+**包含表單載入變更的認證：** 選取此選項時，除了XFA範本之外，還會驗證XFA表單狀態。 請注意，啟用此選項可能會對效能產生負面影響。 預設值為true。
 
-**执行文档JavaScript脚本：** 指定在签名操作期间是否执行Document JavaScript脚本。 默认值为false。
+**執行檔案JavaScript指令碼：** 指定在簽名操作期間是否執行Document JavaScript指令碼。 預設值為false。
 
-**与Acrobat 9兼容的处理文档：** 指定是否启用Acrobat 9兼容性。 例如，选择此选项时，将启用动态PDF中的可见认证。 默认值为false。
+**處理與Acrobat 9相容的檔案：** 指定是否啟用Acrobat 9相容性。 例如，選取此選項時，會啟用動態PDF中的可見認證。 預設值為false。
 
-**签名时嵌入吊销信息：** 指定签名PDF文档时是否嵌入吊销信息。 默认值为false。
+**簽署時內嵌撤銷資訊：** 指定簽署PDF檔案時是否嵌入撤銷資訊。 預設值為false。
 
-**在认证时嵌入吊销信息：** 指定验证PDF文档时是否嵌入吊销信息。 默认值为false。
+**認證時內嵌撤銷資訊：** 指定在認證PDF檔案時，是否嵌入撤銷資訊。 預設值為false。
 
-**在签名/认证期间强制嵌入所有证书的吊销信息：** 指定如果未嵌入所有证书的有效吊销信息，签名或证书操作是否失败。 请注意，如果证书不包含任何CRL或OCSP信息，则即使未检索到吊销信息，该证书也被视为有效。 默认值为false。
+**在簽署/憑證期間，強制嵌入所有憑證的撤銷資訊：** 指定如果未嵌入所有憑證的有效撤銷資訊，簽署或憑證作業是否失敗。 請注意，如果憑證未包含任何CRL或OCSP資訊，即使未擷取任何撤銷資訊，該憑證也會被視為有效。 預設值為false。
 
-**吊销检查顺序：** 指定可通过证书吊销列表(CRL)和联机证书状态协议(OCSP)机制进行检查时的吊销检查顺序。 默认值为OCSPFirst。
+**撤銷檢查順序：** 指定當可透過憑證撤銷清單(CRL)和線上憑證狀態通訊協定(OCSP)機制進行檢查時，撤銷檢查的順序。 預設值為OCSPFirst。
 
-**吊销存档信息的最大大小：** 吊销存档信息的最大大小（以KB为单位）。 AEM forms会尝试在不超出限制的情况下存储尽可能多的吊销信息。 默认值为10 KB。
+**撤銷封存資訊的大小上限：** 撤銷封存資訊的大小上限（以KB為單位）。 AEM forms會嘗試儲存儘可能多的撤銷資訊，而不會超過限制。 預設值為10 KB。
 
-**支持从Adobe产品的预发行版本创建的签名：** 选择此选项后，使用Adobe产品的预发行版本创建的签名将正确验证。 默认值为false。
+**支援從Adobe產品的發行前版本編號建立的簽名：** 選取此選項時，使用Adobe產品的發行前版本建立的簽名將正確驗證。 預設值為false。
 
-**验证时间选项：** 指定签名者证书的验证时间。 默认值为Secure Time Else Current Time。
+**驗證時間選項：** 指定簽署者憑證的驗證時間。 預設值為安全時間或目前時間。
 
-**使用验证期间存档在签名中的吊销信息：** 指定使用签名存档的吊销信息是否用于吊销检查。 默认值为true。
+**使用驗證期間存檔於簽章中的撤銷資訊：** 指定使用簽章封存的撤銷資訊是否用於撤銷檢查。 預設值為true。
 
-**使用文档中存储的验证信息来验证签名：** 选择此选项时，文档中嵌入的验证信息（包括吊销和时间戳信息）将用于验证签名。 默认值为true。
+**使用儲存在檔案中的驗證資訊來驗證簽名：** 選取此選項時，會使用檔案中內嵌的驗證資訊（包括撤銷和時間戳記資訊）來驗證簽名。 預設值為true。
 
-**允许的最大嵌套验证会话数：** 允许的最大嵌套验证会话数。 如果未正确设置OCSP或CRL证书，AEM Forms在验证OCSP或CRL签名者证书时使用此值防止无限循环。 默认值为 10。
+**允許的最大巢狀驗證工作階段：** 允許的最大巢狀驗證工作階段數量。 當OCSP或CRL憑證未正確設定時，AEM Forms會在驗證OCSP或CRL簽署者憑證時使用此值來防止無限回圈。 默认值为 10。
 
-**验证的最大时钟偏差：** 签名时间可在验证时间之后的最长时间（以分钟为单位）。 如果时钟偏差大于此值，则签名将无效。 默认值为65分钟。
+**驗證時脈歪斜上限：** 簽署時間可在驗證時間之後的最長時間（以分鐘為單位）。 如果時鐘歪斜大於此值，則簽章將無效。 預設值為65分鐘。
 
-**证书生命周期缓存：** 证书在缓存中的生命周期（在线检索或通过其他方式检索）。 默认值为1天。
+**憑證期限快取：** 線上或透過其他方法擷取之憑證在快取中的存留期。 預設值為1天。
 
-### 传输选项 {#transport-options}
+### 傳輸選項 {#transport-options}
 
-**代理主机：** 代理主机的URL。 仅在提供了某些有效值时使用。 无默认值。
+**Proxy主機：** 代理主機的URL。 僅在提供某些有效值時使用。 無預設值。
 
-**代理端口：** 代理端口。 键入从0到65535的任何有效端口号。 默认值为 80。
+**Proxy連線埠：** Proxy連線埠。 輸入從0到65535的任何有效連線埠號碼。 默认值为 80。
 
-**代理登录用户名：** 代理登录用户名。 仅当为代理主机和代理端口提供了有效值时才使用。 无默认值。
+**Proxy登入使用者名稱：** 代理登入使用者名稱。 只有在為Proxy主機和Proxy連線埠提供某些有效值時才使用。 無預設值。
 
-**代理登录密码：** 代理登录密码。 仅当为代理主机、代理端口和代理登录用户名提供了有效值时才使用。 无默认值。
+**Proxy登入密碼：** 代理主機登入密碼。 只有在為Proxy主機、Proxy連線埠和Proxy登入使用者名稱提供某些有效值時才使用。 無預設值。
 
-**最大下载限制：** 每个连接可以接收的最大数据量（以MB为单位）。 最小值为1 MB，最大值为1024 MB。 默认值为16 MB。
+**最大下載限制：** 每個連線可接收的最大資料量（以MB為單位）。 最小值為1 MB，最大值為1024 MB。 預設值為16 MB。
 
-**连接超时：** 建立新连接的最长等待时间（以秒为单位）。 最小值为1，最大值为300。 默认值为 5。
+**連線逾時：** 建立新連線的最長等待時間（以秒為單位）。 最小值為1，最大值為300。 默认值为 5。
 
-**套接字超时：** 发生套接字超时（等待数据传输时）之前的最长等待时间（以秒为单位）。 最小值为1，最大值为3600。 默认值为 30。
+**通訊端逾時：** 通訊端逾時（等待資料傳輸時）前的等待時間上限（以秒為單位）。 最小值為1，最大值為3600。 默认值为 30。
 
-### 路径验证选项 {#path-validation-options}
+### 路徑驗證選項 {#path-validation-options}
 
-**需要明确的策略：** 指定路径是否必须对至少一个与签名者证书的信任锚点关联的证书策略有效。 默认值为false。
+**需要明確的原則：** 指定路徑是否必須對至少一個與簽署者憑證的信任錨點關聯的憑證原則有效。 預設值為false。
 
-**禁止任何策略：** 指定如果策略对象标识符(OID)包含在证书中，是否应对其进行处理。 默认值为false。
+**禁止任何原則：** 指定如果原則物件識別碼(OID)包含在憑證中，是否應對其進行處理。 預設值為false。
 
-**禁止策略映射：** 指定证书路径中是否允许策略映射。 默认值为false。
+**禁止原則對應：** 指定憑證路徑中是否允許原則對應。 預設值為false。
 
-**检查所有路径：** 指定是应验证所有路径，还是应在找到第一个有效路径后停止验证。 选择true或false。 默认值为false。
+**檢查所有路徑：** 指定是否應該驗證所有路徑，或是否在找到第一個有效路徑後停止驗證。 選取「真」或「假」。 預設值為false。
 
-**LDAP服务器：** 用于查找证书以进行路径验证的LDAP服务器。 无默认值。
+**LDAP伺服器：** 用來查詢憑證以進行路徑驗證的LDAP伺服器。 無預設值。
 
-**遵循证书AIA中的URI：** 指定在路径发现期间是否处理证书AIA中的统一资源标识符(URI)。 默认值为false。
+**遵循Certificate AIA中的URI：** 指定在路徑探索期間是否處理憑證AIA中的統一資源識別碼(URI)。 預設值為false。
 
-**CA证书中所需的基本约束扩展：** 指定CA证书是否必须存在证书颁发机构(CA)基本约束证书扩展。 一些早期的德国认证根证书（7及更早版本）不符合RFC 3280，并且不包含基本约束扩展。 如果已知用户的EE证书链会链接到这样一个德语根，请取消选中此复选框。 默认值为true。
+**CA憑證中所需的基本限制延伸：** 指定CA憑證是否必須有憑證授權單位(CA)基本條件約束憑證延伸存在。 某些早期的德國認證根憑證（7及更早版本）不符合RFC 3280，並且不包含基本限制延伸。 如果已知使用者的EE憑證鏈結到這樣的德文根，請取消選取此核取方塊。 預設值為true。
 
-**链构建期间需要有效的证书签名：** 指定链生成器是否要求对用于生成链的证书进行有效的签名。 选中此复选框后，链生成器将不会生成证书上具有无效RSA签名的链。 考虑链CA > ICA > EE ，其中CA在ICA上的签名无效。 如果此设置为true，则链构建将在ICA处停止，并且CA将不会包含在链中。 如果此设置为false，则会生成完整的3证书链。 此设置不会影响DSA签名。 默认值为false。
+**鏈結建立期間需要有效的憑證簽章：** 指定鏈結產生器是否需要對用於建立鏈結的憑證進行有效的簽章。 如果選取此核取方塊，鏈產生器將不會在憑證上建立具有無效RSA簽章的鏈。 考慮鏈結CA > ICA > EE，其中CA在ICA上的簽名無效。 如果此設定為true，則鏈結建立將停止在ICA，並且CA將不會包含在鏈結中。 如果此設定為false，則會產生完整的3憑證鏈結。 此設定不會影響DSA簽章。 預設值為false。
 
-### 时间戳提供程序选项 {#timestamp-provider-options}
+### 時間戳記提供者選項 {#timestamp-provider-options}
 
-**TSP服务器URL：** 默认时间戳提供程序的URL。 仅在提供了某些有效值时使用。 无默认值。
+**TSP伺服器URL：** 預設時間戳記提供者的URL。 僅在提供某些有效值時使用。 無預設值。
 
-**TSP服务器用户名：** 时间戳提供方要求的用户名。 仅当为URL提供了某些有效值时才使用。 无默认值。
+**TSP伺服器使用者名稱：** 使用者名稱（如果時間戳記提供者需要）。 只有在為URL提供某些有效值時才使用。 無預設值。
 
-**TSP服务器密码：** 上述用户名的密码（如果时间戳提供程序要求）。 仅当为URL和用户名提供了有效值时才使用。 无默认值。
+**TSP伺服器密碼：** 上述使用者名稱的密碼（如果時間戳記提供者要求）。 只有在URL和使用者名稱有提供某些有效值時才使用。 無預設值。
 
-**请求哈希算法：** 指定在创建时间戳提供程序的请求时要使用的哈希算法。 默认值为SHA1。
+**要求雜湊演演算法：** 指定在建立時間戳記提供者的要求時要使用的雜湊演演算法。 預設值為SHA1。
 
-**吊销检查样式：** 指定吊销检查样式，用于从时间戳提供程序的证书观察到的吊销状态中确定该证书的信任状态。 默认值为BestEffort。
+**撤銷檢查樣式：** 指定撤銷檢查樣式，用於從時間戳記提供者的憑證觀察到的撤銷狀態中判斷其信任狀態。 預設值為BestEffort。
 
-**发送随机数：** 指定是否随时间戳提供程序请求发送nonce。 Nonce可以是时间戳、网页上的访问计数器或旨在限制或防止未经授权重放或重现文件的特殊标记。 默认值为true。
+**傳送Nonce：** 指定是否隨時間戳記提供者要求傳送Nonce。 Nonce可以是時間戳記、網頁上的造訪計數器，或是用來限制或防止未經授權重播或重製檔案的特殊標籤。 預設值為true。
 
-**在验证期间使用过期的时间戳：** 选择此选项时，可以使用过期的时间戳来检索签名的验证时间。 默认值为true。
+**在驗證期間使用過期的時間戳記：** 選取此選項時，可使用過期的時間戳記來擷取簽章的驗證時間。 預設值為true。
 
-**TSP响应大小：** TSP响应的估计大小（字节）。 此值应表示配置的时间戳提供程序可以返回的时间戳响应的最大大小。 除非您非常确定，否则请勿更改此设置。 最小值为60B，最大值为10240B。 默认值为4096B。
+**TSP回應大小：** TSP回應的預估大小（位元組）。 此值應代表設定的時間戳記提供者可傳回的時間戳記回應大小上限。 除非您非常確定，否則請勿變更此設定。 最小值為60B，最大值為10240B。 預設值為4096B。
 
-**忽略时间戳服务器扩展**：选择 **忽略时间戳服务器扩展** 用于停止AEM Forms服务器联系指定的时间戳服务器的选项。 选择选项有助于避免由于AEM Forms与时间戳服务器之间的连接超时而发生的进程失败。
+**忽略時間戳記伺服器延伸模組**：選取 **忽略時間戳記伺服器延伸模組** 選項可停止AEM Forms伺服器連絡指定的時間戳記伺服器。 選取選項有助於避免由於AEM Forms與時間戳記伺服器之間的連線逾時而發生的處理作業失敗。
 
-### 证书吊销列表选项 {#certificate-revocation-list-options}
+### 憑證撤銷清單選項 {#certificate-revocation-list-options}
 
-**首先查阅本地URI：** 指定对于吊销检查而言，与证书中指定的任何位置相比，是否应优先于在本地URI或CRL查找中提供的CRL位置。 默认值为false。
+**請先查閱本機URI：** 指定對於撤銷檢查而言，在本機URI或CRL查詢中提供的CRL位置，應優先於憑證中指定的任何位置。 預設值為false。
 
-**用于CRL查找的本地URI：** 本地CRL提供程序的URL。 仅当“咨询本地URI优先”设置设置为true时，才查阅此值。 无默认值。
+**CRL查閱的本機URI：** 本機CRL提供者的URL。 只有當「諮詢本機URI優先」設定設為true時，才會參考此值。 無預設值。
 
-**吊销检查样式：** 指定吊销检查样式，用于从观察到的吊销状态中确定CRL提供程序的证书的信任状态。 默认值为BestEffort。
+**撤銷檢查樣式：** 指定撤銷檢查樣式，用於從觀察到的撤銷狀態判斷CRL提供者憑證的信任狀態。 預設值為BestEffort。
 
-**用于CRL查找的LDAP服务器：** 用于获取CRL的LDAP服务器(如www.ldap.com)。 CRL的所有基于DN的查询都将定向到此服务器。 无默认值。
+**CRL查閱的LDAP伺服器：** 用來取得CRL的LDAP伺服器(如www.ldap.com)。 CRL的所有DN型查詢都將導向此伺服器。 無預設值。
 
-**联机：** 指定是否联机以获取CRL。 如果为false，则仅查看缓存的CRL（在本地磁盘上或嵌入签名的CRL）。 默认值为true。
+**上線：** 指定是否要上線以擷取CRL。 若為false，則只會查閱快取的CRL （在本機磁碟上或內嵌簽名的CRL）。 預設值為true。
 
-**忽略有效日期：** 指定是否忽略响应的thisUpdate和nextUpdate时间，以防止这些时间对响应有效性产生负面影响。 默认值为false。
+**忽略有效日期：** 指定是否忽略回應的thisUpdate和nextUpdate時間，以免這些時間對回應有效性產生負面影響。 預設值為false。
 
-**需要CRL中的AKI扩展：** 指定授权密钥标识符扩展是否必须包含在CRL中。 默认值为false。
+**需要CRL中的AKI延伸：** 指定授權金鑰識別碼延伸是否必須包含在CRL中。 預設值為false。
 
-### 联机证书状态协议选项 {#online-certificate-status-protocol-options}
+### 線上憑證狀態通訊協定選項 {#online-certificate-status-protocol-options}
 
-**OCSP服务器URL：** 默认OCSP服务器的URL。 是否使用通过此URL指定的OCSP服务器取决于URL咨询选项设置。 无默认值。
+**OCSP伺服器URL：** 預設OCSP伺服器的URL。 是否使用透過此URL指定的OCSP伺服器取決於「諮詢選項」的URL設定。 無預設值。
 
-**查阅选项的URL：** 控制用于执行状态检查的OCSP服务器的列表和顺序。 默认值为UseAIAInCert。
+**查閱選項的URL：** 控制用於執行狀態檢查的OCSP伺服器清單和順序。 預設值為UseAIAInCert。
 
-**吊销检查样式：** 指定验证OCSP服务器的证书时使用的吊销检查样式。 默认值为CheckIfAvailable。
+**撤銷檢查樣式：** 指定驗證OCSP伺服器憑證時所使用的撤銷檢查樣式。 預設值為CheckIfAvailable。
 
-**发送随机数：** 指定是否随OCSP请求发送nonce。 Nonce可以是时间戳、网页上的访问计数器或旨在限制或防止未经授权重放或重现文件的特殊标记。 默认值为true。
+**傳送Nonce：** 指定Nonce是否隨OCSP要求傳送。 Nonce可以是時間戳記、網頁上的造訪計數器，或是用來限制或防止未經授權重播或重製檔案的特殊標籤。 預設值為true。
 
-**最大时钟歪斜时间：** 响应时间和本地时间之间允许的最大偏差（以分钟为单位）。 最小值为0，最大值为2147483647m。 默认值为5m。
+**最大時鐘歪斜時間：** 回應時間和本機時間之間允許的最大偏差（分鐘）。 最小值為0，最大值為2147483647m。 預設值為5m。
 
-**响应刷新时间：** 预构建OCSP响应被视为有效的最长时间（以分钟为单位）。 最小值为1m，允许的最大值为2147483647。 默认值为525600（一年）。
+**回應時效性時間：** 預先建構的OCSP回應被視為有效的最長時間（分鐘）。 最小值為1m，允許的最大值為2147483647。 預設值為525600 （一年）。
 
-**签署OCSP请求：** 指定是否应对OCSP请求进行签名。 默认值为false。
+**簽署OCSP要求：** 指定是否應簽署OCSP要求。 預設值為false。
 
-**请求签名者凭据别名：** 指定在启用签名的情况下用于签署OCSP请求的凭据别名。 仅在启用OCSP请求签名时使用。 无默认值。
+**要求簽署者認證別名：** 指定在啟用簽署時用於簽署OCSP要求的認證別名。 僅在啟用OCSP要求簽署時使用。 無預設值。
 
-**联机：** 指定是否联机以执行吊销检查。 默认值为true。
+**上線：** 指定是否要上線以執行撤銷檢查。 預設值為true。
 
-**忽略响应的thisUpdate和nextUpdate时间：** 指定是否忽略响应的thisUpdate和nextUpdate时间，以防止这些时间对响应有效性产生负面影响。 默认值为false。
+**忽略回應的thisUpdate和nextUpdate時間：** 指定是否忽略回應的thisUpdate和nextUpdate時間，以免這些時間對回應有效性產生負面影響。 預設值為false。
 
-**允许OCSPNoCheck扩展：** 指定响应签名证书中是否允许OCSPNoCheck扩展。 默认值为true。
+**允許OCSPNoCheck延伸：** 指定回應簽署憑證中是否允許OCSPNoCheck延伸模組。 預設值為true。
 
-**需要OCSP ISIS-MTT CertHash扩展：** 指定是否必须将证书公钥哈希扩展包含在OCSP响应中。 默认值为false。
+**需要OCSP ISIS-MTT CertHash擴充功能：** 指定憑證公開金鑰雜湊延伸是否必須包含在OCSP回應中。 預設值為false。
 
-### 用于调试的错误处理选项 {#error-handling-options-for-debugging}
+### 偵錯的錯誤處理選項 {#error-handling-options-for-debugging}
 
-**下次API调用时清除证书缓存：** 指定在调用下一个签名服务操作时是否清除证书缓存。 调用该操作后，此选项将设置为false。 默认值为false。
+**下次API呼叫時清除憑證快取：** 指定是否要在呼叫下一個簽章服務作業時清除憑證快取。 呼叫作業後，此選項會設回false。 預設值為false。
 
-**下次API调用时清除CRL缓存：** 指定在调用下一个签名服务操作时是否清除CRL缓存。 调用该操作后，此选项将设置为false。 默认值为false。
+**下次API呼叫時清除CRL快取：** 指定是否要在呼叫下一個簽章服務作業時清除CRL快取。 呼叫作業後，此選項會設回false。 預設值為false。
 
-**下次API调用时清除OCSP缓存：** 指定在调用下一个签名服务操作时是否清除OCSP缓存。 调用该操作后，此选项将设置为false。 默认值为false。
+**下次API呼叫時清除OCSP快取：** 指定是否要在呼叫下一個簽章服務作業時清除OCSP快取。 呼叫作業後，此選項會設回false。 預設值為false。
 
-## 观察文件夹服务设置 {#watched-folder-service-settings}
+## Watched資料夾服務設定 {#watched-folder-service-settings}
 
-Watched文件夹服务( `WatchedFolder`)配置所有watched文件夹端点的通用属性。 它还提供监视文件夹端点的默认值。 (请参阅 [配置观察文件夹端点](/help/forms/using/admin-help/configuring-watched-folder-endpoints.md#configuring-watched-folder-endpoints).) 它不会被外部客户端应用程序调用，也不会在Workbench中创建的进程中使用。
+Watched資料夾服務( `WatchedFolder`)會設定所有watched資料夾端點的共同屬性。 它也會提供watched資料夾端點的預設值。 (請參閱 [正在設定watched資料夾端點](/help/forms/using/admin-help/configuring-watched-folder-endpoints.md#configuring-watched-folder-endpoints).) 外部使用者端應用程式不會叫用它，也不會用於Workbench中建立的程式。
 
-以下设置可用于Watched Folder服务。
+下列設定適用於Watched資料夾服務。
 
-**Cron表达式：** Quartz用来安排对输入目录进行轮询的cron表达式。
+**Cron運算式：** Quartz用來排程輸入目錄輪詢的cron運算式。
 
-**重复计数：** 轮询输入目录的次数。 如果未在终结点配置中指定此值，则使用默认重复计数。 值为–1表示无限扫描目录。 缺省值为–1。
+**重複計數：** 輪詢輸入目錄的次數。 如果未在端點設定中指定此值，則使用預設重複計數。 值–1表示無限掃描目錄。 預設值為–1。
 
-**重复间隔：** 每个轮询之间的默认秒数。 除非在watched文件夹终结点配置中指定了不同的值，否则此值将用作重复间隔。 默认值为 5。有关其他信息，请参阅“批量大小”设置的说明。
+**重複間隔：** 每個輪詢之間的預設秒數。 除非在watched資料夾端點設定中指定不同的值，否則此值會用作重複間隔。 默认值为 5。如需詳細資訊，請參閱「批次大小」設定的說明。
 
-**异步：** 将调用类型标识为异步或同步。 只能同步调用瞬态和同步进程。 默认值为asynchronous。
+**非同步：** 將呼叫型別識別為非同步或同步。 暫時和同步程式只能同步叫用。 預設值為非同步。
 
-**等待时间：** 时间的默认值（以秒为单位），在此之后将从输入文件夹中检索文件。 如果文件或文件夹早于等待时间中指定的时间，则会提取它以进行处理。 默认值为 0。
+**等待時間：** 預設時間值（以秒為單位），之後會從輸入資料夾中擷取檔案。 如果檔案或資料夾早於等待時間中指定的時間，則會擷取該檔案或資料夾進行處理。 默认值为 0。
 
-**批次大小：** 每次扫描处理的文件或文件夹数的默认值。 默认值为 2。
+**批次大小：** 每次掃描處理的檔案或資料夾數目的預設值。 默认值为 2。
 
-“重复间隔”和“批量大小”设置确定监视文件夹在每次扫描中选取的文件数。 Watched Folder使用Quartz线程池扫描输入文件夹。 线程池与其他服务共享。 如果扫描间隔很小，线程会经常扫描输入文件夹。 如果文件经常被拖放到观察文件夹中，请将扫描间隔保持较小。 如果文件不经常被丢弃，请使用较大的扫描间隔，以便其他服务可以使用线程。
+「重複間隔」和「批次大小」設定決定Watched Folder在每次掃描中擷取多少檔案。 Watched資料夾使用Quartz執行緒集區來掃描輸入資料夾。 執行緒集區會與其他服務共用。 如果掃描間隔很小，執行緒會經常掃描輸入資料夾。 如果檔案經常被拖放到watched資料夾中，請將掃描間隔保持較小。 如果檔案不常被捨棄，請使用較大的掃描間隔，讓其他服務可以使用執行緒。
 
-如果正在丢弃大量文件，请将批次大小设置为大。 例如，如果监视文件夹端点调用的服务每分钟可以处理700个文件，并且用户以相同的速率将文件放入输入文件夹，则将“批处理大小”设置为350，将“重复间隔”设置为30秒将有助于提高监视文件夹的性能，而不会产生过于频繁扫描监视文件夹的成本。
+如果捨棄了大量的檔案，請讓批次大小變大。 例如，如果watched資料夾端點叫用的服務每分鐘可以處理700個檔案，且使用者以相同速率將檔案放入輸入資料夾，則將「批次大小」設定為350秒，並將「重複間隔」設定為30秒，可協助Watched資料夾發揮效能，而不會產生經常掃描watched資料夾的成本。
 
-当文件被拖放到watched文件夹中时，它会列出输入中的文件，如果每秒扫描一次，则可能会降低性能。 增加扫描间隔可以提高性能。 如果正在删除的文件量很小，请相应地调整“批次大小”和“重复间隔”。 例如，如果每秒删除10个文件，请尝试将“重复间隔”设置为1秒，将“批次大小”设置为10。
+當檔案被拖放到watched資料夾中時，它會列出輸入中的檔案，如果每秒都進行掃描，可能會降低效能。 增加掃描間隔可以改善效能。 如果要刪除的檔案量很小，請相應地調整「批次大小」和「重複間隔」。 例如，如果每秒丟棄10個檔案，請嘗試將「重複間隔」設定為1秒，並將「批次大小」設定為10。
 
-在群集配置中，观察文件夹端点的批处理大小不会扩展到多个群集节点。 例如，如果将批次大小设置为 `2` 对于双节点群集，并且选择了Throttle选项，节点以两个为批次共同处理文件，而不是每个节点一次处理两个文件。
+在叢集設定中，觀察資料夾端點的批次大小不會縮放到多個叢集節點。 例如，如果批次大小設定為 `2` 對於雙節點叢集且已選取「限制」選項時，節點會以兩個批次處理檔案的方式共同處理檔案，而不是每個節點一次處理兩個檔案。
 
-**覆盖重复的文件名：** 一个布尔字符串，它指定监视文件夹是否覆盖重复的结果文件名，以及是否应覆盖保留的同名文档。
+**覆寫重複的檔案名稱：** 一個布林字串，指定監視資料夾是否覆寫重複的結果檔案名稱，以及是否應覆寫保留的同名檔案。
 
-**保留文件夹：** 保留文件夹的默认值。 此文件夹用于将源文件复制到中，以防成功处理输入。 此值可以是具有文件模式的空、相对或绝对路径，如结果文件夹设置中所述。
+**保留資料夾：** 保留資料夾的預設值。 此資料夾用於將來源檔案複製到中，以防成功處理輸入。 此值可以是具有檔案模式的空白、相對或絕對路徑，如「結果資料夾」設定所述。
 
-**失败文件夹：** 复制失败文件的文件夹的名称。 此值可以是具有文件模式的空、相对或绝对路径，如结果文件夹设置中所述。
+**失敗資料夾：** 複製失敗檔案的資料夾名稱。 此值可以是具有檔案模式的空白、相對或絕對路徑，如「結果資料夾」設定所述。
 
-**结果文件夹：** 结果文件夹的缺省名称。 此文件夹用于将结果文件复制到中。 此值可以是具有以下文件模式的空路径、相对路径或绝对路径。
+**結果資料夾：** 結果資料夾的預設名稱。 此資料夾用於將結果檔案複製到中。 此值可以是具有下列檔案模式的空白、相對或絕對路徑。
 
-* %F =文件名前缀
-* %E =文件扩展名
+* %F =檔案名稱前置詞
+* %E =副檔名
 * %Y =年（完整）
-* %y =年（后两位数）
+* %y =年（最後兩位數）
 * %M =月
 * %D =日期
-* %d =一年中的第几天
-* %H =小时（24小时制）
-* %h =小时（12小时制）
-* %m =分钟
+* %d =一年中的第幾天
+* %H =小時（24小時時鐘）
+* %h =小時（12小時時鐘）
+* %m =分鐘
 * %s =秒
 * %l =毫秒
-* %R =随机数（从0到9）
-* %P =进程或作业标识
+* %R =隨機數字（從0到9）
+* %P =處理程式或工作識別碼
 
-例如，如果是2009年7月17日晚上8点，并且您指定 `C:/Test/WF0/failure/%Y/%M/%D/%H/`，结果文件夹为 `C:/Test/WF0/failure/2009/07/17/20`.
+例如，如果是2009年7月17日晚上8點，而您指定 `C:/Test/WF0/failure/%Y/%M/%D/%H/`，結果資料夾為 `C:/Test/WF0/failure/2009/07/17/20`.
 
-如果路径不是绝对路径而是相对路径，则会在观察文件夹内创建文件夹。 有关文件模式的详细信息，请参见 [关于文件模式](/help/forms/using/admin-help/configuring-watched-folder-endpoints.md#about-file-patterns).
+如果路徑不是絕對路徑而是相對路徑，則會在watched資料夾內建立資料夾。 如需檔案模式的詳細資訊，請參閱 [關於檔案模式](/help/forms/using/admin-help/configuring-watched-folder-endpoints.md#about-file-patterns).
 
 >[!NOTE]
 >
->结果文件夹的大小越小，Watched Folder性能就越好。 例如，如果观察文件夹的预计负载为每小时1000个文件，请尝试以下模式 `result/%Y%M%D%H` 以便每小时创建一个新的子文件夹。 如果负载较小（例如，每天1000个文件），您可以使用以下模式 `result/%Y%M%D`.
+>結果資料夾大小越小，Watched資料夾的效能就越好。 例如，如果watched資料夾的估計負載為每小時1000個檔案，請嘗試以下模式 `result/%Y%M%D%H` 因此每小時會建立一個新的子資料夾。 如果負載較小（例如，每天1000個檔案），您可以使用以下模式 `result/%Y%M%D`.
 
-**暂存文件夹：** 观察文件夹中舞台文件夹的默认名称。
+**階段資料夾：** 觀察資料夾內舞台資料夾的預設名稱。
 
-**输入文件夹：** 观察文件夹内输入文件夹的缺省名称。
+**輸入資料夾：** 監看資料夾內輸入資料夾的預設名稱。
 
-**失败时保留：** 如果为true，则在出现故障时会将原始文件保留在故障文件夹中。
+**失敗時保留：** 如果為true，則在失敗時會將原始檔案保留在失敗資料夾中。
 
-**限制：** 选中此选项后，它会限制AEM Forms在任何给定时间处理的观察文件夹作业数。 批量大小值确定最大作业数（请参阅关于限制）。
+**節流：** 選取此選項時，會限制AEM表單在任何指定時間處理的監看資料夾工作數目。 「批次大小」值決定作業的最大數量（請參閱關於節流）。
 
-## Web服务设置 {#web-service-service-settings}
+## Web服務設定 {#web-service-service-settings}
 
-Web服务( `WebService`)使进程能够调用Web服务操作。
+Web服務( `WebService`)讓處理程式能夠叫用Web服務作業。
 
-Web服务使进程能够调用Web服务操作。 例如，组织可能希望通过调用服务提供商公开的Web服务来集成存储和检索联系人和帐户详细信息等信息的进程。 Web服务调用指定的Web服务并传递其每个参数的值。 然后，它将操作返回的值保存到进程中的指定变量中。
+Web服務可讓處理序呼叫Web服務作業。 例如，組織可能想要整合程式，以透過叫用服務提供者公開的Web服務來儲存和擷取聯絡人和帳戶詳細資料等資訊。 Web服務會叫用指定的Web服務，並傳遞其每個引數的值。 然後，它會將操作的傳回值儲存到流程內的指定變數中。
 
-Web服务通过发送和接收SOAP消息与Web服务进行交互。 该服务还支持使用WS-Attachment协议通过SOAP消息发送MIME、MTOM和SwaRef附件。 Web服务交互与SAP系统和.NET Web服务兼容。
+Web服務會透過傳送和接收SOAP訊息與Web服務互動。 此服務也支援使用WS-Attachment通訊協定，以SOAP訊息傳送MIME、MTOM和SwaRef附件。 Web服務互動與SAP系統和.NET Web服務相容。
 
-以下设置可用于Web服务。
+Web服務可使用下列設定。
 
-**密钥存储：** 包含用于身份验证的私钥的密钥库文件的完整路径。 表单服务器必须能够访问文件。
+**金鑰存放區：** 包含用於驗證的私密金鑰的金鑰庫檔案的完整路徑。 表單伺服器必須能夠存取檔案。
 
-**密钥存储密码：** 密钥库文件的密码。
+**金鑰庫密碼：** keystore檔案的密碼。
 
-**密钥存储类型：** 密钥库的类型。 不提供值以使用为运行表单服务器的JVM配置的默认密钥库类型。 否则，请提供以下值之一：
-
-* jks
-* pkcs12
-* cms
-* jceks
-
-**信任存储区：** 包含Web服务服务器公钥的信任存储文件的完整路径。
-
-**信任存储区密码：** truststore文件的密码。
-
-**信任存储类型：** 信任库的类型。 不提供值以使用为运行表单服务器的JVM配置的默认密钥库类型。 否则，请提供以下值之一：
+**金鑰存放區型別：** 金鑰庫的型別。 不提供使用預設金鑰存放區型別的值，此預設金鑰存放區型別是為執行表單伺服器的JVM所設定。 否則，請提供下列其中一個值：
 
 * jks
 * pkcs12
 * cms
 * jceks
 
-## XSLT转换服务设置 {#xslt-transformation-service-settings}
+**信任存放區：** 包含Web服務伺服器公開金鑰的信任存放區檔案的完整路徑。
 
-XSLT转换服务( `XSLTService`)使进程能够对XML文档应用可扩展样式表语言转换(XSLT)。
+**信任存放區密碼：** 信任庫檔案的密碼。
 
-以下设置适用于XSLT转换服务。
+**信任存放區型別：** 信任庫的型別。 不提供使用預設金鑰存放區型別的值，此預設金鑰存放區型別是為執行表單伺服器的JVM所設定。 否則，請提供下列其中一個值：
 
-**工厂名称：** 用于执行XSLT转换的Java类的完全限定名称。 如果未指定值，则使用运行表单服务器的Java虚拟机中配置的默认工厂。
+* jks
+* pkcs12
+* cms
+* jceks
 
-## 修改服务的安全设置 {#modifying-security-settings-for-a-service}
+## XSLT轉換服務設定 {#xslt-transformation-service-settings}
 
-通过forms服务器，您可以为每个服务配置安全设置，从而按服务级别配置细粒度访问控制。
+XSLT轉換服務( `XSLTService`)可讓程式在XML檔案上套用可延伸樣式表語言轉換(XSLT)。
 
-安装默认安全配置文件，然后可以根据您的系统需求对其进行配置。 每个安全配置文件都有一个关联的域，并在用户级别或组级别创建。
+下列設定適用於XSLT轉換服務。
 
-### 修改服务的安全设置 {#modify-security-settings-for-a-service}
+**工廠名稱：** 用於執行XSLT轉換的Java類別的完整名稱。 如果未指定任何值，則會使用執行表單伺服器的Java虛擬機器器中設定的預設處理站。
 
-1. 在管理控制台中，单击服务>应用程序和服务>服务管理。
-1. 在“服务管理”页上，单击要配置的服务。
-1. 单击“Security（安全）”选项卡。
-1. 在需要呼叫者进行身份验证列表中，选择是或否，以指定是否可以使用凭据调用服务。
+## 修改服務的安全性設定 {#modifying-security-settings-for-a-service}
 
-   如果选择“是”，则必须对服务的调用者进行身份验证，并且必须授权该调用者的用户主体调用该服务；否则，将拒绝调用尝试。
+forms伺服器可讓您為每個服務設定安全性設定，讓您依服務層級設定精細的存取控制。
 
-   如果选择“否”，则服务的调用方可能进行身份验证，也可能不进行身份验证。 由于没有授权检查，因此服务的调用将始终成功。
+已安裝預設安全性設定檔，然後可加以設定以符合您的系統需求。 每個安全性設定檔都有一個關聯的網域，並在使用者層級或群組層級建立。
 
-1. 对于包含标记为匿名访问的一个或多个操作的服务，选择或取消选择允许匿名访问。 启用匿名访问后，系统内的任何用户都可以调用对服务的操作。 如果禁用匿名访问，则必须授予用户调用服务和调用操作的权限。 用户可以直接获得这些权限，也可以作为拥有这些权限的组的一部分获得这些权限。
-1. 对于某些服务，执行操作的用户帐户会影响结果。 例如，在Content Services（已弃用）中，存储内容的用户将成为内容的所有者，这会影响谁以后可以访问该内容。 如果您使用进程来存储内容，请考虑使用哪个用户来执行Document Management服务，因为该用户将拥有存储的内容。
+### 修改服務的安全性設定 {#modify-security-settings-for-a-service}
 
-   要指定服务用于执行操作的运行时标识，请选择指定运行方式，从关联的列表中选择一个选项，然后单击保存。 从以下选项中选择：
+1. 在Administration Console中，按一下「服務>應用程式和服務>服務管理」。
+1. 在「服務管理」頁面上，按一下要設定的服務。
+1. 按一下「安全性」標籤。
+1. 在需要呼叫者驗證清單中，選取是或否，以指定是否可使用認證叫用服務。
 
-   **调用程序：** 使用与调用服务的用户相同的标识。
+   如果您選取[是]，必須驗證服務的呼叫者，而且該呼叫者的使用者主體必須有權呼叫服務；否則，將會拒絕呼叫嘗試。
 
-   **系统：** 使用系统用户以完全权限运行服务。
+   如果您選取[否]，則服務的呼叫者可能會驗證或不會驗證。 因為沒有授權檢查，所以服務的呼叫一律會成功。
 
-   **指定用户：** 使您能够以特定用户身份运行服务。 选择此选项时，单击选择用户以显示“选择承担者”页，您可以在此页搜索和选择用户。
+1. 對於包含一或多個標籤為匿名存取之操作的服務，請選取或取消選取「允許匿名存取」。 啟用匿名存取時，系統內的任何使用者都可以叫用對服務的操作。 如果停用匿名存取，則必須授予使用者呼叫服務及叫用作業的許可權。 使用者可直接獲得這些許可權，或作為擁有此類許可權的群組的一部分獲得。
+1. 對於某些服務，執行作業的使用者帳戶會影響結果。 例如，在Content Services （已棄用）中，儲存內容的使用者會成為內容的所有者，而這會影響誰稍後可以存取內容。 如果您使用程式來儲存內容，請考慮使用哪個使用者來執行Document Management服務，因為該使用者將擁有儲存的內容。
 
-   如果不选择指定运行方式，则使用缺省行为。
+   若要指定服務執行作業所使用的執行階段識別，請選取指定執行身分，從相關清單中選取選項，然後按一下儲存。 從下列選項中選擇：
+
+   **叫用者：** 使用與叫用服務的使用者相同的身分。
+
+   **系統：** 使用System使用者以完整許可權執行服務。
+
+   **已命名的使用者：** 可讓您以特定使用者的身分執行服務。 選取此選項時，按一下「選取使用者」以顯示「選取主參與者」頁面，您可以在此頁面搜尋和選取使用者。
+
+   如果您未選取「指定執行身分」，則會使用預設行為。
 
    >[!NOTE]
    >
-   >与xfaForm、文档表单和表单变量一起使用的渲染和提交服务始终使用系统用户帐户执行。
+   >與xfaForm、Document Form和Form變數一起使用的轉譯和提交服務一律使用系統使用者帳戶執行。
 
-1. 单击“添加承担者”以指定用户和组对此服务具有的权限。
-1. “选择承担者”屏幕显示在“用户管理”中配置的用户和组。 如果未显示所需的用户或组，请使用搜索功能查找该用户或组。 单击用户或组名。
-1. 在添加权限屏幕上，选择要分配给此服务的用户或组的权限：
+1. 按一下「新增主體」 ，指定使用者和群組對此服務擁有的許可權。
+1. 「選取主參與者」畫面會顯示在「使用者管理」中設定的使用者和群組。 如果未顯示您想要的使用者或群組，請使用搜尋功能來尋找它。 按一下使用者或群組名稱。
+1. 在新增許可權畫面上，選取要指派給此服務之使用者或群組的許可權：
 
-   * **调用_PERM：** 调用服务上的所有操作
-   * **MODIFY_CONFIG_PERM：** 修改服务的配置
-   * **主管_PERM：** 查看从流程创建的服务的流程实例数据
-   * **START_STOP_PERM：** 启动和停止服务
-   * **ADD_REMOVE_ENDPOINTS_PERM：** 添加、删除和修改服务的端点
-   * **CREATE_VERSION_PERM：** 创建新版本的服务
-   * **DELETE版本PERM：** 删除服务的版本
-   * **MODIFY_VERSION_PERM：** 修改服务的版本
-   * **读取_PERM：** 查看服务
-   * **PROCESS_OWNER_PERM：** 用于AEM Forms的未来版本。 请勿使用此权限。
-   * **SERVICE_MANAGER_PERM：** 用于AEM Forms的未来版本。 请勿使用此权限。
-   * **SERVICE_AGENT_PERM：** 用于AEM Forms的未来版本。 请勿使用此权限。
+   * **INVOKE_PERM：** 啟動服務上的所有作業
+   * **MODIFY_CONFIG_PERM：** 修改服務的組態
+   * **監督員_PERM：** 若要檢視從處理建立之服務的處理序執行處理資料
+   * **START_STOP_PERM：** 啟動和停止服務的方式
+   * **ADD_REMOVE_ENDPOINTS_PERM：** 新增、移除和修改服務的端點
+   * **CREATE_VERSION_PERM：** 建立新版服務的方式
+   * **DELETE_版本_PERM：** 刪除服務版本的方式
+   * **MODIFY_VERSION_PERM：** 修改服務版本的方式
+   * **讀取_PERM：** 檢視服務的方式
+   * **PROCESS_OWNER_PERM：** 用於未來版本的AEM Forms。 請勿使用此許可權。
+   * **SERVICE_MANAGER_PERM：** 用於未來版本的AEM Forms。 請勿使用此許可權。
+   * **SERVICE_AGENT_PERM：** 用於未來版本的AEM Forms。 請勿使用此許可權。
 
-1. 单击添加。
+1. 按一下「新增」。
 
-### 从安全配置文件中删除主体 {#remove-the-principal-from-a-security-profile}
+### 從安全性設定檔移除主體 {#remove-the-principal-from-a-security-profile}
 
-1. 在“服务管理”页上，选择要配置的服务。
-1. 单击 **安全性** 选项卡，选择要删除的安全配置文件，然后单击 **移除**.
+1. 在「服務管理」頁面上，選取要設定的服務。
+1. 按一下 **安全性** 標籤，選取要移除的安全性設定檔，然後按一下 **移除**.
 
-## 为服务配置池 {#configuring-pooling-for-a-service}
+## 為服務設定集區 {#configuring-pooling-for-a-service}
 
-每个服务都可利用池功能来处理传入的调用请求。 使用服务池可以确保服务实例由单个线程一次调用，并在调用请求间重复使用，这可以提高性能。 您还可以使用池指定“最大异步服务实例数”选项，该选项允许服务限制并行处理的请求数。
+每項服務都可運用集區功能來處理傳入的叫用要求。 使用服務集區可確保單一執行緒一次叫用服務執行個體，並在叫用請求間重複使用，進而改善效能。 您也可以使用集區來指定「最大非同步服務執行個體數」選項，此選項可讓服務限制並行處理的要求數目。
 
-### 启用池 {#enable-pooling}
+### 啟用集區 {#enable-pooling}
 
-1. 在管理控制台中，单击服务>应用程序和服务>服务管理。
-1. 在“服务管理”页上，单击要配置的服务。
-1. 单击“Pooling（池）”选项卡。
-1. 在“请求处理策略”列表中，为所有请求选择池化实例。
-1. 在“初始服务实例池大小”框中，输入池的初始大小。 在部署服务时，此数字用于确定已创建并分配给空闲池、等待调用请求的服务实施实例数。 这使服务容器能够立即响应调用请求，而无需首先初始化服务实例。
-1. 在“最大服务实例池大小”框中，输入给定服务的池中的最大实例数。 该设置控制可以在给定时间执行给定服务的线程数。 默认值为0，这将导致池大小不受限制。
-1. 在“最大异步服务实例数”框中，输入池中可用于在任意给定时间为异步请求提供服务的最大实例数。 此设置允许服务限制其可并行处理的请求数。
-1. 在调用等待超时框中，输入等待服务可用于调用请求的毫秒数。 如果不为此设置指定值，则缺省值为0，这会导致无等待时间。
+1. 在Administration Console中，按一下「服務>應用程式和服務>服務管理」。
+1. 在「服務管理」頁面上，按一下要設定的服務。
+1. 按一下「共用」標籤。
+1. 在「請求處理策略」清單中，為所有請求選取「集區執行個體」 。
+1. 在「初始服務執行處理集區大小」方塊中，輸入集區的初始大小。 部署服務時，此數字可用來決定已建立並配置給可用集區、等待呼叫要求的服務實作執行個體數目。 這可讓服務容器立即回應呼叫要求，而不需要先初始化服務執行個體。
+1. 在「服務執行處理集區大小上限」方塊中，輸入指定服務的集區中執行處理數目上限。 此設定控制可在指定時間執行指定服務的執行緒數目。 預設值為0，這會造成無限制的集區大小。
+1. 在「非同步服務執行處理數目上限」方塊中，輸入可在任何指定時間用來服務非同步要求的集區中的執行處理數目上限。 此設定可讓服務限制可並行處理的請求數。
+1. 在呼叫等待逾時方塊中，輸入等候服務可供呼叫要求使用的毫秒數。 如果您未指定此設定的值，預設值為0，因此不會產生等候時間。
 1. 单击“保存”。
 
-### 删除池 {#remove-pooling}
+### 移除集區 {#remove-pooling}
 
-1. 在管理控制台中，单击服务>应用程序和服务>服务管理。
-1. 在“服务管理”页上，单击要配置的服务。
-1. 单击“Pooling（池）”选项卡。
-1. 在“请求处理策略”列表中，为每个请求选择“新实例”，或为所有请求选择“单个实例”。
+1. 在Administration Console中，按一下「服務>應用程式和服務>服務管理」。
+1. 在「服務管理」頁面上，按一下要設定的服務。
+1. 按一下「共用」標籤。
+1. 在「請求處理策略」清單中，為每個請求選取「新執行個體」，或為所有請求選取單一執行個體。
 
-   **所有请求的单个实例：** 当第一个请求进入容器时，将创建并缓存服务实例。 该请求之后的每个请求都使用相同的服务实例来处理该请求。
+   **所有請求的單一執行個體：** 當第一個請求進入容器時，會建立並快取服務執行個體。 請求之後的每個請求都使用相同的服務執行個體來處理請求。
 
-   **每个请求的新实例：** 为收到的每个调用创建一个新的服务实例。
+   **每個請求的新執行個體：** 系統會為收到的每個叫用建立新的服務執行個體。
 
 1. 单击“保存”。

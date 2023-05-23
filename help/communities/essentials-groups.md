@@ -1,7 +1,7 @@
 ---
-title: 社区组要点
+title: 社群群組Essentials
 seo-title: Community Group Essentials
-description: 动态创建社区站点
+description: 動態建立社群網站
 seo-description: Creating community sites dynamically
 uuid: 168e7aeb-6e9a-468d-8ac4-274007cea252
 contentOwner: Guillaume Carlino
@@ -17,15 +17,15 @@ ht-degree: 1%
 
 ---
 
-# 社区组要点  {#community-group-essentials}
+# 社群群組Essentials  {#community-group-essentials}
 
-社区组功能允许发布和创作环境中的授权用户在社区站点中动态创建子社区。
+社群群組功能可讓發佈和作者環境中的授權使用者在社群網站中動態建立子社群。
 
-截至社区 [功能包1](deploy-communities.md#latestfeaturepack)时，组可以嵌套在其他组中
+截至社群 [feature pack 1](deploy-communities.md#latestfeaturepack)，群組可巢狀內嵌於其他群組中
 
-## 适用于客户端的Essentials {#essentials-for-client-side}
+## 適用於使用者端的Essentials {#essentials-for-client-side}
 
-### 社区组成员列表 {#community-groups-member-list}
+### 社群群組成員清單 {#community-groups-member-list}
 
 <table>
  <tbody>
@@ -38,7 +38,7 @@ ht-degree: 1%
    <td>cq.social.hbs.communitygroups</td>
   </tr>
   <tr>
-   <td> <strong>模板</strong></td>
+   <td> <strong>範本</strong></td>
    <td> /libs/social/group/components/hbs/communitygroupmemberlist/communitygroupmemberlist.hbs<br /> </td>
   </tr>
   <tr>
@@ -47,7 +47,7 @@ ht-degree: 1%
   </tr>
   <tr>
    <td><strong>属性</strong></td>
-   <td>参见 <a href="creating-groups.md">社区组</a></td>
+   <td>另請參閱 <a href="creating-groups.md">社群群組</a></td>
   </tr>
  </tbody>
 </table>
@@ -65,7 +65,7 @@ ht-degree: 1%
    <td>cq.social.hbs.communitygroups</td>
   </tr>
   <tr>
-   <td> <strong>模板</strong></td>
+   <td> <strong>範本</strong></td>
    <td> /libs/social/group/components/hbs/communitygroups/communitygroups.hbs<br /> </td>
   </tr>
   <tr>
@@ -75,39 +75,39 @@ ht-degree: 1%
  </tbody>
 </table>
 
-* [客户端自定义](client-customize.md)
+* [使用者端自訂](client-customize.md)
 
-## 服务器端Essentials {#essentials-for-server-side}
+## 伺服器端的Essentials {#essentials-for-server-side}
 
-* [社区组API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/group/client/api/package-summary.html)
+* [社群群組API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/group/client/api/package-summary.html)
 
-* [社区组端点](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/group/client/endpoints/package-summary.html)
+* [社群群組端點](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/group/client/endpoints/package-summary.html)
 
-* [服务器端自定义](server-customize.md)
+* [伺服器端自訂](server-customize.md)
 
-### 组功能 {#groups-function}
+### 群組功能 {#groups-function}
 
-社区站点结构包括 [组功能](functions.md#groups-function) 将支持创建新的 `community groups` 发布和创作环境中的。 创建的社区组将包括 `community groups member list` 将列出组成员的成员。
+社群網站結構包含 [群組功能](functions.md#groups-function) 將支援建立新的 `community groups` 從發佈和作者環境。 建立的社群群組將包含 `community groups member list` 列出群組成員的元件。
 
-一个或多个 [社区组模板](tools-groups.md)（提供社区组页面设计），可以在将函数添加到时为组函数进行配置 [社区站点模板](sites.md) 或嵌套在社区组模板中。
+一或多個 [社群群組範本](tools-groups.md)（提供社群群組頁面設計），可在將函式新增至時為「群組」函式進行設定 [社群網站範本](sites.md) 或巢狀內嵌在社群群組範本中。
 
-包括多个社区组模板将导致在为社区站点创建新社区组时向授权用户呈现设计选择，如上部分所示 [社区组](creating-groups.md) 供作者使用。
+納入多個社群群組範本後，授權使用者可選擇在為社群網站建立新社群群組時看到的設計，如以下章節所示： [社群群組](creating-groups.md) 適用於作者。
 
-### 嵌套组 {#nested-groups}
+### 巢狀群組 {#nested-groups}
 
-截至社区 [FP1](deploy-communities.md#latestfeaturepack)，组模板中可以包含组函数，从而允许嵌套的组（子社区）。
+截至社群 [FP1](deploy-communities.md#latestfeaturepack)，群組功能可包含在群組範本中，以便巢狀群組（子社群）。
 
-当社区站点或组模板包含组功能时，可以：
+當社群網站或群組範本包含「群組」功能時，可以：
 
-* 在创作环境中创建子社区。
+* 在作者環境中建立子社群。
 
-* 配置允许后，在发布环境中创建组。
+* 設定為允許時，在發佈環境中建立群組。
 
-在创作环境中创建组时，必须首先发布社区站点，然后发布组。 发布社区站点将发布组的页面，而不创建设置了ACL的子社区的成员组。 因此，在显式发布某个受限（机密）组之前，该组可能一直可见。
+在作者環境中建立群組時，必須先發佈社群網站，然後再發佈群組。 發佈社群網站將會發佈群組的頁面，而不會建立子社群的成員群組（ACL已設定至這些群組）。 因此，在群組明確發佈之前，受限制的（秘密）群組可能一直可見。
 
-## 链接和相关信息 {#links-and-related-information}
+## 連結和相關資訊 {#links-and-related-information}
 
-* [管理用户和用户组](users.md)
-* [社区组控制台](groups.md)
-* [组功能](functions.md#groups-function)
+* [管理使用者和使用者群組](users.md)
+* [社群群組主控台](groups.md)
+* [群組功能](functions.md#groups-function)
 * [组模板](tools-groups.md)

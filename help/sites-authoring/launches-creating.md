@@ -1,6 +1,6 @@
 ---
-title: 创建启动项
-description: 您可以创建启动项，以允许更新现有网页的新版本，以便将来激活。
+title: 建立啟動
+description: 您可以建立啟動，以更新現有網頁的新版本，以供日後啟用。
 uuid: c1a32710-8189-4a2e-bf2f-428ab30d48c8
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -16,35 +16,35 @@ ht-degree: 49%
 
 ---
 
-# 创建启动项{#creating-launches}
+# 建立啟動{#creating-launches}
 
-创建启动项，以允许更新现有网页的新版本，以供将来激活。 在创建启动项时，需要指定标题和源页面：
+建立啟動項，以更新現有網頁的新版本，以供日後啟用。 在创建启动项时，需要指定标题和源页面：
 
 * 标题会显示在[“引用”](/help/sites-authoring/author-environment-tools.md#references)边栏中，作者可以从中访问启动项，从而对其进行处理。
-* 默认情况下，源页面的子页面会包含在启动项中。 如果需要，您只能使用源页面。
-* 默认情况下， [Live Copy](/help/sites-administering/msm.md) 源页面发生更改时，会自动更新启动页面。 您可以指定创建静态副本以防止自动更改。
+* 來源頁面的子頁面預設會包含在啟動中。 您可以視需要只使用來源頁面。
+* 依預設， [即時副本](/help/sites-administering/msm.md) 當來源頁面變更時，會自動更新啟動頁面。 您可以指定建立靜態副本以防止自動變更。
 
 （可选）您可以指定启 **动日期** （和时间）以定义何时提升和激活启动页面。 但是，启 **动日期仅与生产就绪标** 志结合使用(请 **参阅编辑启动配置**[](/help/sites-authoring/launches-editing.md#editing-a-launch-configuration));要使动作实际自动发生，必须同时设置这两个操作。
 
-## 创建启动项 {#creating-a-launch}
+## 建立啟動 {#creating-a-launch}
 
-您可以从站点或启动项控制台创建启动项：
+您可以從「網站」或「啟動」主控台建立啟動：
 
 1. 打开&#x200B;**“站点”**&#x200B;或&#x200B;**“启动项”**&#x200B;控制台。
 
    >[!NOTE]
    >
-   >使用 **站点** 控制台通常导航到源页面的位置，但这不是强制的，因为您可以在选择 **启动源** 中。
+   >使用時 **網站** console通常是導覽至來源頁面的位置，但這並非必要操作，因為您可以選取 **啟動來源** 在精靈中。
 
-1. 根据您所使用的控制台：
+1. 根據您使用的主控台：
 
    * **启动项**：
 
-      1. 选择 **创建启动项** 从工具栏中打开向导。
+      1. 選取 **建立啟動項** 以開啟精靈。
    * **站点**：
 
       1. 从工具栏中选择&#x200B;**“创建”**&#x200B;以打开选择框。
-      1. 从此选择 **创建启动项** 打开向导。
+      1. 從此選取 **建立啟動項** 以開啟精靈。
 
    >[!NOTE]
    >
@@ -55,7 +55,7 @@ ht-degree: 49%
 1. 在&#x200B;**“选择源”**&#x200B;步骤中，您需要&#x200B;**“添加页面”**。您可以通过指定每个页面的路径来选择多个页面：
 
    * 导航到所需的位置。
-   * 选择源页面并确认（复选标记）。
+   * 選取來源頁面並確認（核取記號）。
 
    根据需要重复执行上述步骤。
 
@@ -63,13 +63,13 @@ ht-degree: 49%
 
    >[!NOTE]
    >
-   >要向启动项中添加页面和/或分支，这些页面和/或分支必须位于网站内；即在通用顶级根目录下。
+   >若要將頁面和/或分支新增至啟動項，這些頁面和/或分支必須位於網站內，即位於通用頂層根目錄下。
    >
-   >如果网站的语言根目录位于顶级以下，则启动项的页面和分支必须位于通用语言根目录下。
+   >如果網站在頂層之下包含語言根，則啟動項的頁面和分支必須在共同語言根之下。
    >
-   >如果您尝试在源路径中创建具有父页面或子页面的启动项，则该启动项将失败，并返回错误“目标在：path上已存在，指向该页面。”
+   >如果您嘗試在來源路徑中使用父頁面或子頁面來建立啟動，則會失敗並傳回錯誤「目標已存在於：path中的頁面。」
 
-1. 对于每个条目，您可以指定是否：
+1. 對於每個專案，您可以指定是否：
 
    * **包括子页面**:
 
@@ -81,27 +81,27 @@ ht-degree: 49%
 
 1. 在向导的&#x200B;**“属性”**&#x200B;步骤中，您可以指定：
 
-   * **启动项标题**:启动项的名称。 该名称应当对作者有意义。
+   * **啟動項標題**：啟動項的名稱。 此名稱對作者應有意義。
    * **包含现有内容**：将使用原始内容创建启动项。
    * **使用新模板替换页面**：有关更多详细信息，请参阅[使用新模板创建启动项](#create-launch-with-new-template)。
-   * **继承源页面活动数据**：选中此选项，可在源页面发生更改时自动更新启动页面的内容。此选项通过将启动项设为 [live copy](/help/sites-administering/msm.md).
+   * **继承源页面活动数据**：选中此选项，可在源页面发生更改时自动更新启动页面的内容。此選項可讓啟動成為 [即時副本](/help/sites-administering/msm.md).
 
-      默认情况下，此选项处于选中状态。
+      依預設，會選取此選項。
 
    * **启动日期**：激活启动副本的日期和时间（取决于&#x200B;**生产就绪**&#x200B;标记；请参阅[启动项 – 事件的顺序](/help/sites-authoring/launches.md#launches-the-order-of-events)）。
 
    ![chlimage_1-227](assets/chlimage_1-227.png)
 
-1. 使用&#x200B;**“创建”**&#x200B;完成该过程并创建新启动项。确认对话框将询问您是否要立即打开启动项。
+1. 使用&#x200B;**“创建”**&#x200B;完成该过程并创建新启动项。確認對話方塊會詢問您是否要立即開啟啟動項。
 
-   如果您返回控制台( **完成**)，您可以通过以下任一方式查看（并访问）您的启动项：
+   如果您傳回主控台(包含 **完成**)您可以透過以下任一方式檢視（和存取）您的啟動項：
 
-   * the [**启动项** 控制台](/help/sites-authoring/launches.md#the-launches-console)
-   * the [**引用** 在 **站点** 控制台](/help/sites-authoring/launches.md#launches-in-references-sites-console)
+   * 此 [**啟動** 主控台](/help/sites-authoring/launches.md#the-launches-console)
+   * 此 [**引用** 在 **網站** 主控台](/help/sites-authoring/launches.md#launches-in-references-sites-console)
 
 ### 使用新模板创建启动项 {#create-launch-with-new-template}
 
-When [创建启动项](/help/sites-authoring/launches-creating.md#create-launch-with-new-template) 您可以选择是否使用新模板：
+時間 [建立啟動](/help/sites-authoring/launches-creating.md#create-launch-with-new-template) 您可以選取是否使用新範本：
 
 **使用新模板替换页面**
 
@@ -113,20 +113,20 @@ When [创建启动项](/help/sites-authoring/launches-creating.md#create-launch-
 
 如果选中此选项，则将会：
 
-* 更新其他可用选项，
-* 包括一个新步骤，您可以在其中选择所需的模板。
+* 更新其他可用選項，
+* 包括一個新步驟，您可在其中選取所需的範本。
 
 ![chlimage_1-229](assets/chlimage_1-229.png)
 
 >[!CAUTION]
 >
->当使用其他模板时，新页面将为空。 由于页面结构不同，不会复制任何内容。
+>當使用不同的範本時，新頁面將是空的。 由於頁面結構不同，將不會複製任何內容。
 >
->此机制可用于更改 [现有页面](/help/sites-authoring/managing-pages.md#creating-a-new-page)  — 但必须考虑内容丢失。
+>此機制可用於變更 [現有頁面](/help/sites-authoring/managing-pages.md#creating-a-new-page)  — 雖然必須考量內容遺失。
 
-### 创建嵌套启动项 {#creating-a-nested-launch}
+### 建立巢狀啟動 {#creating-a-nested-launch}
 
-通过创建嵌套启动项（启动项内的启动项），您能够从现有启动项创建启动项，以便作者可以利用已做出的更改，而无需对每个启动项多次进行相同的更改。
+建立巢狀啟動（在啟動中啟動）可讓您從現有啟動建立啟動，讓作者能夠利用已進行的變更，而不必針對每個啟動多次進行相同的變更。
 
 >[!NOTE]
 >
@@ -141,7 +141,7 @@ When [创建启动项](/help/sites-authoring/launches-creating.md#create-launch-
 
    ![chlimage_1-230](assets/chlimage_1-230.png)
 
-1. 继续 **下一个** 并完成 **属性** 与任何其他启动项一样。
+1. 繼續進行 **下一個** 並完成 **屬性** 和任何其他啟動項一樣。
 
    ![chlimage_1-231](assets/chlimage_1-231.png)
 
@@ -154,17 +154,17 @@ When [创建启动项](/help/sites-authoring/launches-creating.md#create-launch-
 
 1. 输入&#x200B;**“启动项标题”**&#x200B;和任何其他所需的详细信息（与常规启动项一样）。
 
-1. 使用&#x200B;**“创建”**&#x200B;完成该过程并创建新启动项。确认对话框将询问您是否要立即打开启动项。
+1. 使用&#x200B;**“创建”**&#x200B;完成该过程并创建新启动项。確認對話方塊會詢問您是否要立即開啟啟動項。
 
    如果选择&#x200B;**“完成”**，您将返回到&#x200B;**站点**&#x200B;控制台的&#x200B;**引用**&#x200B;边栏，如果您选择了相应的页面，则会显示新的启动项。
 
-### 删除启动项 {#deleting-a-launch}
+### 刪除啟動項 {#deleting-a-launch}
 
-您可以从 [启动控制台](/help/sites-authoring/launches.md#the-launches-console):
+您可以從以下位置刪除啟動： [啟動主控台](/help/sites-authoring/launches.md#the-launches-console)：
 
-* 通过点按/单击缩略图来选择启动项。
-* 将显示工具栏 — 选择删除。
-* 确认操作。
+* 點選/按一下縮圖，以選取啟動。
+* 工具列隨即顯示 — 選取「刪除」。
+* 確認動作。
 
 >[!CAUTION]
 >

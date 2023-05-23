@@ -1,7 +1,7 @@
 ---
-title: AEM Forms工作流中的变量
+title: AEM Forms工作流程中的變數
 seo-title: Variables in AEM Forms Workflows
-description: 创建变量，为变量设置值，然后在AEM Forms工作流步骤中使用该变量。
+description: 建立變數、設定變數的值，並在AEM Forms工作流程步驟中使用它。
 seo-description: Create a variable, set a value for the variable, and use it in AEM Forms workflow steps.
 uuid: 634a75c4-4899-478f-9e5d-a870f5efa583
 contentOwner: khsingh
@@ -17,210 +17,210 @@ ht-degree: 0%
 
 ---
 
-# AEM Forms工作流中的变量{#variables-in-aem-forms-workflows}
+# AEM Forms工作流程中的變數{#variables-in-aem-forms-workflows}
 
-工作流模型中的变量是一种根据值的数据类型来存储值的方法。 然后，您可以在任何工作流步骤中使用变量的名称来检索存储在变量中的值。 您还可以使用变量名称定义用于做出路由决策的表达式。
+工作流程模型中的變數是根據其資料型別儲存值的方法。 然後，您就可以在任何工作流程步驟中使用變數的名稱，來擷取儲存在變數中的值。 您也可以使用變數名稱來定義用於進行路由決定的運算式。
 
-在AEM工作流模型中，您可以：
+在AEM工作流程模型中，您可以：
 
-* [创建变量](../../forms/using/variable-in-aem-workflows.md#create-a-variable) 数据类型的值。
-* [为变量设置值](../../forms/using/variable-in-aem-workflows.md#set-a-variable) 使用设置变量工作流步骤。
-* [使用变量](../../forms/using/variable-in-aem-workflows.md#use-a-variable) 在所有AEM Forms工作流步骤中检索存储的值，在或拆分和跳转步骤中定义路由表达式。
+* [建立變數](../../forms/using/variable-in-aem-workflows.md#create-a-variable) 根據您想要儲存在其中的資訊型別而建立的資料型別。
+* [設定變數的值](../../forms/using/variable-in-aem-workflows.md#set-a-variable) 使用「設定變數」工作流程步驟。
+* [使用變數](../../forms/using/variable-in-aem-workflows.md#use-a-variable) 在所有AEM Forms Workflow步驟中擷取儲存的值，並在OR Split和Goto步驟中定義路由運算式。
 
-以下视频演示了如何在AEM工作流模型中创建、设置和使用变量：
+以下影片示範如何在AEM工作流程模型中建立、設定和使用變數：
 
 <!-- FUTURE ERROR: YouTube and mp4 videos are not supported -->
 
 >[!VIDEO](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/using/variables_introduction_1_1.mp4)
 
-变量是现有 [MetaDataMap](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html) 界面。 您可以使用 [MetaDataMap](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html) 用于访问使用变量保存的元数据。
+變數是現有 [中繼資料對應](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html) 介面。 您可以使用 [中繼資料對應](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html) 以存取使用變數儲存的中繼資料。
 
-## 创建变量 {#create-a-variable}
+## 建立變數 {#create-a-variable}
 
-您可以使用工作流模型Sidekick中提供的“变量”部分创建变量。 AEM工作流变量支持以下数据类型：
+您可以使用工作流程模型Sidekick中可用的變數區段來建立變數。 AEM工作流程變數支援下列資料型別：
 
-* **基元数据类型**:Long、Double、Boolean、Date和String
-* **复杂数据类型**: [文档](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/aemfd/docmanager/Document.html), [XML](https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Document.html), [JSON](https://static.javadoc.io/com.google.code.gson/gson/2.3/com/google/gson/JsonObject.html)、和表单数据模型实例。
+* **基本資料型別**：長、雙、布林值、日期和字串
+* **複雜的資料型別**： [檔案](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/aemfd/docmanager/Document.html)， [XML](https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Document.html)， [JSON](https://static.javadoc.io/com.google.code.gson/gson/2.3/com/google/gson/JsonObject.html)和表單資料模型例項。
 
 >[!NOTE]
 >
->工作流仅支持ISO8601格式的日期类型变量。
+>工作流程僅支援日期型別變數的ISO8601格式。
 
-您需要 [AEM Forms附加组件包](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) （针对文档和表单数据模型数据类型）。  使用ArrayList数据类型创建变量集合。 您可以为所有基元和复杂数据类型创建ArrayList变量。 例如，创建一个ArrayList变量并选择字符串作为子类型，以使用该变量存储多个字符串值。
+您需要 [AEM Forms附加元件套件](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) （檔案和表單資料模型）資料型別。  使用ArrayList資料型別建立變數集合。 您可以為所有基本和複雜資料型別建立ArrayList變數。 例如，建立ArrayList變數並選取String作為子型別，以使用變數儲存多個字串值。
 
-执行以下步骤以创建变量：
+執行以下步驟來建立變數：
 
-1. 在AEM实例上，导航到“工具” ![](/help/forms/using/assets/hammer.png) >工作流>模型。
-1. 点按 **[!UICONTROL 创建]** 并为工作流模型指定标题和可选名称。 选择模型并点按 **[!UICONTROL 编辑]**.
-1. 点按工作流模型的Sidekick中提供的变量图标，然后点按 **[!UICONTROL 添加变量]**.
+1. 在AEM執行個體上，導覽至工具 ![](/help/forms/using/assets/hammer.png) >工作流程>模型。
+1. 點選 **[!UICONTROL 建立]** 和指定工作流程模型的標題和選用名稱。 選取模型並點選 **[!UICONTROL 編輯]**.
+1. 點選工作流程模型Sidekick中可用的變數圖示，然後點選 **[!UICONTROL 新增變數]**.
 
    ![添加变量](assets/variables_add_variable_new.png)
 
-1. 在添加变量对话框中，指定名称并选择变量的类型。
-1. 从 **[!UICONTROL 类型]** 下拉列表，并指定以下值：
+1. 在新增變數對話方塊中，指定名稱並選取變數的型別。
+1. 從中選擇資料型別 **[!UICONTROL 型別]** 下拉式清單，並指定下列值：
 
-   * 基元数据类型 — 为变量指定可选的默认值。
-   * JSON或XML — 指定可选的JSON或XML架构路径。 当将此模式中可用的属性映射到另一个变量并将其存储到另一个变量时，系统将验证模式路径。
-   * 表单数据模型 — 指定表单数据模型路径。
-   * ArrayList — 为集合指定子类型。
+   * 基本資料型別 — 指定變數的選用預設值。
+   * JSON或XML — 指定選用的JSON或XML結構描述路徑。 當對應並儲存此結構描述中可用的屬性至另一個變數時，系統會驗證結構描述路徑。
+   * 表單資料模型 — 指定表單資料模型路徑。
+   * ArrayList — 指定集合的子型別。
 
-1. 为变量指定可选描述，然后点按 ![done_icon](assets/done_icon.png) 以保存更改。 变量显示在左侧窗格的可用列表中。
+1. 指定變數的說明（選用），然後點選 ![done_icon](assets/done_icon.png) 以儲存變更。 變數會顯示在左窗格中的可用清單中。
 
-在创建变量时，请考虑以下实践：
+建立變數時，請考量下列作法：
 
-* 根据工作流的需要创建任意数量的变量。 但是，为了节省数据库资源，请尽可能使用所需变量的最少数量，并重用变量。
-* 变量区分大小写。 确保在工作流中使用相同的大小写引用变量。
-* 避免在变量名称中使用特殊字符
+* 建立工作流程所需數量的變數。 不過，為了節省資料庫資源，請使用最少數目的必要變數，並儘可能重複使用變數。
+* 變數會區分大小寫。 確保您在工作流程中使用相同大小寫參考變數。
+* 避免在變數的名稱中使用特殊字元
 
-## 设置变量 {#set-a-variable}
+## 設定變數 {#set-a-variable}
 
-您可以使用设置变量步骤来设置变量的值并定义值的设置顺序。 变量按变量映射在设置变量步骤中列出的顺序进行设置。
+您可以使用「設定變數」步驟來設定變數的值，並定義設定值的順序。 變數的設定順序，是變數對應在設定變數步驟中列出的順序。
 
-变量值的更改仅影响发生更改的流程实例。 例如，当启动工作流并更改变量数据时，所做的更改仅会影响该工作流实例。 这些更改不会影响之前启动或随后启动的工作流的其他实例。
+變數值的變更只會影響變更發生的程式例項。 例如，啟動工作流程並變更變數資料時，變更只會影響該工作流程例項。 變更不會影響先前已起始或之後已起始之工作流程的其他執行個體。
 
-根据变量的数据类型，您可以使用以下选项设置变量的值：
+根據變數的資料型別，您可以使用下列選項來設定變數的值：
 
-* **文字：** 当您知道要指定的确切值时，请使用选项。
+* **常值：** 知道要指定的確切值時使用選項。
 
-* **表达式：** 根据表达式计算要使用的值时，请使用选项。 表达式在提供的表达式编辑器中创建。
+* **運算式：** 根據運算式計算要使用的值時，請使用選項。 運算式會在提供的運算式編輯器中建立。
 
-* **JSON点表示法：** 使用选项从JSON或FDM类型变量中检索值。
-* **XPATH:** 使用选项从XML类型变量中检索值。
+* **JSON點標籤法：** 使用選項從JSON或FDM型別變數擷取值。
+* **XPATH：** 使用選項從XML型別變數擷取值。
 
-* **相对于有效负载：** 当要保存到变量的值在相对于有效负载的路径上可用时，请使用选项。
+* **相對於裝載：** 當要儲存至變數的值可在相對於承載的路徑取得時，請使用選項。
 
-* **绝对路径：** 当要保存到变量的值在绝对路径中可用时，请使用选项。
+* **絕對路徑：** 當要儲存至變數的值可在絕對路徑取得時，請使用選項。
 
-您还可以使用JSON点表示法或XPATH表示法来更新JSON或XML类型变量的特定元素。
+您也可以使用JSON點標籤法或XPATH標籤法來更新JSON或XML型別變數的特定元素。
 
-### 添加变量之间的映射 {#add-mapping-between-variables}
+### 新增變數之間的對應 {#add-mapping-between-variables}
 
-执行以下步骤以添加变量之间的映射：
+執行以下步驟來新增變數之間的對應：
 
-1. 在工作流编辑页面上，点按工作流模型Sidekick中可用的步骤图标。
-1. 拖放 **设置变量** 步骤至工作流编辑器，点按该步骤并选择 ![configure_icon](assets/configure_icon.png) （配置）。
-1. 在设置变量对话框中，选择 **[!UICONTROL 映射]** > **[!UICONTROL 添加映射]**.
-1. 在 **映射变量** 部分，选择要存储数据的变量，选择映射模式，并指定要存储在变量中的值。 映射模式因变量类型而异。
-1. 映射更多变量以生成有意义的表达式。 点按 ![done_icon](assets/done_icon.png) 以保存更改。
+1. 在工作流程編輯頁面上，點選工作流程模型Sidekick中可用的「步驟」圖示。
+1. 拖放 **設定變數** 步驟至工作流程編輯器，點選步驟並選取 ![configure_icon](assets/configure_icon.png) （設定）。
+1. 在「設定變數」對話方塊中，選取 **[!UICONTROL 對應]** > **[!UICONTROL 新增對應]**.
+1. 在 **對應變數** 區段，選取要儲存資料的變數、選取對應模式，然後指定要儲存在變數中的值。 對應模式會因變數型別而異。
+1. 對應更多變數，以產生有意義的運算式。 點選 ![done_icon](assets/done_icon.png) 以儲存變更。
 
-### 示例1:查询XML变量以设置字符串变量的值 {#example-query-an-xml-variable-to-set-value-for-a-string-variable}
+### 範例1：查詢XML變數以設定字串變數的值 {#example-query-an-xml-variable-to-set-value-for-a-string-variable}
 
-选择XML类型的变量以存储XML文件。 查询XML变量，为XML文件中可用的属性设置字符串变量的值。 使用 **为XML变量指定XPATH** 字段来定义要存储在字符串变量中的属性。
+選取XML型別的變數來儲存XML檔案。 查詢XML變數，為XML檔案中可用的屬性設定字串變數的值。 使用 **指定XML變數的XPATH** 欄位，定義要儲存在字串變數中的屬性。
 
-在本例中，选择 **格式数据** 用于存储 **cc-app.xml** 文件。 查询 **格式数据** 变量来设置 **emailaddress** 用于存储 **emailAddress** 属性 **cc-app.xml** 文件。
+在此範例中，選取 **formdata** 要儲存的XML變數 **cc-app.xml** 檔案。 查詢 **formdata** 變數來設定 **電子郵件地址** 字串變數來儲存的值 **電子郵件地址** 中可用的屬性 **cc-app.xml** 檔案。
 
->[!VIDEO](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/using/set_variable_example1.mp4 "设置变量值")
+>[!VIDEO](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/using/set_variable_example1.mp4 "設定變數的值")
 
-### 示例2:使用表达式根据其他变量存储值 {#example2}
+### 範例2：使用運算式來儲存根據其他變數的值 {#example2}
 
-使用表达式计算变量的总和并将结果存储到变量中。
+使用運算式來計算變數的總和，並將結果儲存在變數中。
 
-在此示例中，使用表达式编辑器定义表达式以计算 **资产成本** 和 **余额** 变量并将结果存储在 **totalvalue** 变量。
+在此範例中，使用運算式編輯器來定義運算式，以計算 **assetscost** 和 **balanceamount** 變數並儲存結果 **totalvalue** 變數。
 
 <!-- FUTURE ERROR: YouTube and mp4 videos are not supported -->
 
 >[!VIDEO](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/using/variables_expression.mp4)
 
-## 使用表达式编辑器 {#use-expression-editor}
+## 使用運算式編輯器 {#use-expression-editor}
 
-您还可以使用表达式在运行时计算变量的值。 变量提供用于定义表达式的表达式编辑器。
+您也可以在執行階段使用運算式來計算變數的值。 變數提供運算式編輯器來定義運算式。
 
-使用表达式编辑器可执行以下操作：
+使用運算式編輯器可以：
 
-* 使用其他工作流变量、数字或数学表达式设置变量的值。
-* 在数学表达式中使用工作流变量、字符串、数字或表达式
-* 添加条件以设置变量值。
-* 在条件之间添加运算符。
+* 使用其他工作流程變數、數字或數學運算式設定變數值。
+* 在數學運算式中使用工作流程變數、字串、數字或運算式
+* 新增條件以設定變數的值。
+* 在條件之間新增運運算元。
 
 ![表达式编辑器](assets/variables_expression_editor_new.png)
 
-它基于自适应表单规则编辑器，并进行了以下更改。 变量中的规则编辑器：
+它以適用性表單規則編輯器為基礎，有下列變更。 變數中的規則編輯器：
 
-* 不支持函数。
-* 不提供用于查看规则摘要的UI
-* 没有代码编辑器。
-* 不支持启用和禁用对象的值。
-* 不支持对象的设置属性。
-* 不支持调用Web服务。
+* 不支援函式。
+* 不提供UI來檢視規則摘要
+* 沒有程式碼編輯器。
+* 不支援啟用和停用物件的值。
+* 不支援設定物件的屬性。
+* 不支援呼叫網站服務。
 
-有关更多信息，请参阅 [自适应表单规则编辑器](../../forms/using/rule-editor.md).
+如需詳細資訊，請參閱 [調適型表單規則編輯器](../../forms/using/rule-editor.md).
 
-## 使用变量 {#use-a-variable}
+## 使用變數 {#use-a-variable}
 
-您可以使用变量检索输入和输出或保存步骤结果。 工作流编辑器提供了两种类型的工作流步骤：
+您可以使用變數來擷取輸入和輸出，或儲存步驟的結果。 工作流程編輯器提供兩種型別的工作流程步驟：
 
-* 支持变量的工作流步骤
-* 不支持变量的工作流步骤
+* 支援變數的工作流程步驟
+* 不支援變數的工作流程步驟
 
-### 支持变量的工作流步骤 {#workflow-steps-with-support-for-variables}
+### 支援變數的工作流程步驟 {#workflow-steps-with-support-for-variables}
 
-“转到”步骤或“拆分”步骤以及所有AEM Forms工作流步骤都支持变量。
+「跳至」步驟、「OR分割」步驟以及所有AEM Forms工作流程步驟都支援變數。
 
-#### 或拆分步骤 {#or-split-step}
+#### OR分割步驟 {#or-split-step}
 
-“或拆分”(OR Split)在工作流中创建一个拆分，在该拆分之后，只有一个分支处于活动状态。 通过此步骤，您可以在工作流中引入条件处理路径。 您可以根据需要向每个分支添加工作流步骤。
+「OR分割」會在工作流程中建立分割，之後只有一個分支處於作用中狀態。 此步驟可讓您在工作流程中匯入條件式處理路徑。 您可視需要將工作流程步驟新增至每個分支。
 
-您可以使用规则定义、ECMA脚本或外部脚本为分支定义路由表达式。
+您可以使用規則定義、ECMA指令集或外部指令集來定義分支的路由表示式。
 
-您可以使用变量通过表达式编辑器定义路由表达式。 有关在“或拆分”步骤中使用路由表达式的详细信息，请参阅 [或拆分步骤](/help/sites-developing/workflows-step-ref.md#or-split).
+您可以使用變數來定義使用運算式編輯器的路由運算式。 如需在「OR分割」步驟中使用路由運算式的詳細資訊，請參閱 [OR分割步驟](/help/sites-developing/workflows-step-ref.md#or-split).
 
-在本例中，在定义路由表达式之前，请使用 [示例2](../../forms/using/variable-in-aem-workflows.md#example2) 为 **totalvalue** 变量。 如果 **totalvalue** 变量大于50000。 同样，您可以定义一个规则，以在 **totalvalue** 变量小于50000。
+在此範例中，在定義路由運算式之前，請使用 [範例2](../../forms/using/variable-in-aem-workflows.md#example2) 設定 **totalvalue** 變數。 如果下列專案的值，則分支1處於活動狀態： **totalvalue** 變數大於50000。 同樣地，您可以定義一個規則，使「分支2」成為活動狀態，如果 **totalvalue** 變數小於50000。
 
 <!-- FUTURE ERROR: YouTube and mp4 videos are not supported -->
 
 >[!VIDEO](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/using/variables_orsplit_example.mp4)
 
-同样，选择外部脚本路径或指定路由表达式的ECMA脚本以计算活动分支。 点按 **[!UICONTROL 重命名分支]** 指定分支的替代名称。
+同樣地，選取外部指令碼路徑，或指定路由運算式的ECMA指令碼以評估作用中分支。 點選 **[!UICONTROL 重新命名分支]** 指定分支的替代名稱。
 
-有关更多示例，请参阅 [创建工作流模型](../../forms/using/aem-forms-workflow.md#create-a-workflow-model).
+如需更多範例，請參閱 [建立工作流程模型](../../forms/using/aem-forms-workflow.md#create-a-workflow-model).
 
-#### 转至步骤 {#go-to-step}
+#### 前往步驟 {#go-to-step}
 
-的 **跳转步骤** 允许您根据路由表达式的结果，指定要执行的工作流模型中的下一步。
+此 **移至步驟** 可讓您根據路由運算式的結果，指定工作流程模型中要執行的下一個步驟。
 
-与“或拆分”步骤类似，您可以使用规则定义、ECMA脚本或外部脚本定义跳转步骤的路由表达式。
+與「OR分割」步驟類似，您可以使用規則定義、ECMA指令集或外部指令集來定義「轉至」步驟的路由表示式。
 
-您可以使用变量通过表达式编辑器定义路由表达式。 有关在跳转步骤中使用路由表达式的详细信息，请参阅 [跳转步骤](/help/sites-developing/workflows-step-ref.md#goto-step).
+您可以使用變數來定義使用運算式編輯器的路由運算式。 如需在「跳至」步驟中使用路由運算式的詳細資訊，請參閱 [移至步驟](/help/sites-developing/workflows-step-ref.md#goto-step).
 
-![跳转规则](assets/variables_goto_rule1_new.png)
+![移至規則](assets/variables_goto_rule1_new.png)
 
-在此示例中，跳转步骤指定复查信用卡应用程序，如果 **actioncaped** 变量等于 **需要更多信息**.
+在此範例中，如果「 」的值為「 」，則「轉至」步驟會將「複查信用卡應用程式」指定為下一個步驟。 **已執行動作** 變數等於 **需要更多資訊**.
 
-有关在跳转步骤中使用规则定义的更多示例，请参阅 [模拟For环](/help/sites-developing/workflows-step-ref.md#simulateforloop).
+如需在「跳至」步驟中使用規則定義的更多範例，請參閱 [模擬For循環](/help/sites-developing/workflows-step-ref.md#simulateforloop).
 
-#### 以Forms工作流为中心的工作流步骤 {#forms-workflow-centric-workflow-steps}
+#### 以Forms工作流程為中心的工作流程步驟 {#forms-workflow-centric-workflow-steps}
 
-所有AEM Forms工作流步骤都支持变量。 有关更多信息，请参阅 [基于OSGi的以Forms为中心的工作流](../../forms/using/aem-forms-workflow-step-reference.md).
+所有AEM Forms工作流程步驟都支援變數。 如需詳細資訊，請參閱 [OSGi上以Forms為中心的工作流程](../../forms/using/aem-forms-workflow-step-reference.md).
 
-### 不支持变量的工作流步骤 {#workflow-steps-without-support-for-variables}
+### 不支援變數的工作流程步驟 {#workflow-steps-without-support-for-variables}
 
-您可以使用 [MetaDataMap](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html) 用于访问不支持变量的工作流步骤中的变量的界面。
+您可以使用 [中繼資料對應](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html) 介面以存取工作流程步驟中不支援變數的變數。
 
-#### 检索变量值 {#retrieve-the-variable-value}
+#### 擷取變數值 {#retrieve-the-variable-value}
 
-在ECMA脚本中使用以下API来根据数据类型检索现有变量的值：
+在ECMA指令碼中使用下列API，根據資料型別擷取現有變數的值：
 
-| 变量数据类型 | API |
+| 變數資料型別 | API |
 |---|---|
-| 基元（长、双精度、布尔、日期和字符串） | workItem.getWorkflowData()。getMetaDataMap()。get(variableName， type) |
-| 文档 | Packages.com.adobe.aemfd.docmanager.Document doc = workItem.getWorkflowData()。getMetaDataMap()。get(&quot;docVar&quot;, Packages.com.adobe.aemfd.docmanager.Document.class); |
-| XML | Packages.org.w3c.dom.Document xmlObject = workItem.getWorkflowData()。getMetaDataMap()。get(variableName， Packages.org.w3c.dom.Document.class); |
-| 表单数据模型 | Packages.com.adobe.aem.dermis.api.FormDataModelInstanceFdmObject = workItem.getWorkflowData()。getMetaDataMap()。get(variableName， Packages.com.adobe.aem.dermis.api.FormDataModelInstance.class); |
-| JSON | Packages.com.google.gson.JsonObject jsonObject = workItem.getWorkflowData()。getMetaDataMap()。get(variableName， Packages.com.google.gson.JsonObject.class); |
+| 基本（長、雙、布林、日期和字串） | workItem.getWorkflowData()。getMetaDataMap()。get(variableName， type) |
+| 文档 | Packages.com.adobe.aemfd.docmanager.Document doc = workItem.getWorkflowData()。getMetaDataMap()。get(&quot;docVar&quot;， Packages.com.adobe.aemfd.docmanager.Document.class)； |
+| XML | Packages.org.w3c.dom.Document xmlObject = workItem.getWorkflowData()。getMetaDataMap()。get(variableName， Packages.org.w3c.dom.Document.class)； |
+| 表单数据模型 | Packages.com.adobe.aem.dermis.api.FormDataModelInstance fdmObject = workItem.getWorkflowData()。getMetaDataMap()。get(variableName， Packages.com.adobe.aem.dermis.api.FormDataModelInstance.class)； |
+| JSON | Packages.com.google.gson.JsonObject jsonObject = workItem.getWorkflowData()。getMetaDataMap()。get(variableName， Packages.com.google.gson.JsonObject.class)； |
 
-您需要 [AEM Forms附加组件包](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) （适用于文档和表单数据模型变量数据类型）。
+您需要 [AEM Forms附加元件套件](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) （檔案和表單資料模型變數）資料型別。
 
 **示例**
 
-使用以下API检索字符串数据类型的值：
+使用下列API擷取字串資料型別的值：
 
 ```javascript
 workItem.getWorkflowData().getMetaDataMap().get(accname, Packages.java.lang.String)
 ```
 
-#### 更新变量值 {#update-the-variable-value}
+#### 更新變數值 {#update-the-variable-value}
 
-在ECMA脚本中使用以下API来更新变量的值：
+在ECMA指令碼中使用以下API來更新變數的值：
 
 ```javascript
 workItem.getWorkflowData().getMetaDataMap().put(variableName, value)
@@ -232,15 +232,15 @@ workItem.getWorkflowData().getMetaDataMap().put(variableName, value)
 workItem.getWorkflowData().getMetaDataMap().put(salary, 50000)
 ```
 
-更新 **薪金** 变量50000。
+更新以下專案的值： **薪資** 變數50000。
 
-### 设置变量以调用工作流 {#apiinvokeworkflow}
+### 設定變數以叫用工作流程 {#apiinvokeworkflow}
 
-您可以使用API设置变量并传递它们以调用工作流实例。
+您可以使用API來設定變數，並傳遞它們以叫用工作流程例項。
 
-[workflowSession.startWorkflow](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/WorkflowSession.html#startWorkflow-com.adobe.granite.workflow.model.WorkflowModel-com.adobe.granite.workflow.exec.WorkflowData-java.util.Map-) 使用model、wfData和metaData作为参数。 使用MetaDataMap为变量设置值。
+[workflowSession.startWorkflow](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/WorkflowSession.html#startWorkflow-com.adobe.granite.workflow.model.WorkflowModel-com.adobe.granite.workflow.exec.WorkflowData-java.util.Map-) 使用model、wfData和metaData作為引數。 使用MetaDataMap設定變數的值。
 
-在此API中， **variableName** 变量设置为 **值** 使用metaData.put(variableName， value);
+在此API中， **variablename** 變數設為 **值** 使用metaData.put(variableName， value)；
 
 ```javascript
 import com.adobe.granite.workflow.model.WorkflowModel;
@@ -257,7 +257,7 @@ workflowSession.startWorkflow(model, wfData, metaData);
 
 **示例**
 
-初始化 **doc** 文档对象指向路径(“a/b/c”)，并设置 **docVar** 变量。
+初始化 **檔案** 檔案物件至路徑(&quot;a/b/c&quot;)，並設定 **docVar** 變數至儲存在檔案物件中的路徑。
 
 ```javascript
 import com.adobe.granite.workflow.WorkflowSession;
@@ -275,27 +275,27 @@ WorkflowModel model = workflowSession.getModel(modelId);
 workflowSession.startWorkflow(model, wfData, metaData);
 ```
 
-### 使用工作流变量在JCR外存储敏感用户数据 {#jcr-independent-persistance}
+### 使用工作流程變數將敏感使用者資料儲存在JCR以外 {#jcr-independent-persistance}
 
-使用Forms Workflow处理的数据可以包含敏感的用户数据，如个人身份信息和敏感的个人信息。 企业可以选择将各种工作流步骤（使用工作流变量传递）处理的数据从JCR存储中存储到由它们拥有和管理的外部数据存储中。 要了解有关在外部存储中保留工作流数据的更多信息，请参阅 [为客户拥有的数据存储使用工作流变量](/help/sites-administering/workflows-administering.md#using-workflow-variables-customer-datastore).
-[!DNL Adobe Experience Manager] 提供工作流API [UserMetaDataPersistenceProvider](https://github.com/adobe/workflow-variable-externalizer) 将工作流变量存储在外部Azure Blob存储中。 有关使用API的详细信息，请参阅 [使用工作流变量参数化敏感数据并将其存储在外部数据存储中](/help/forms/using/aem-forms-workflow.md#externalize-wf-variables).
+使用Forms Workflow處理的資料可能包含敏感的使用者資料，例如個人識別資訊和敏感個人資訊。 企業可以選擇將資料從JCR儲存空間儲存到由他們擁有並管理的外部資料存放區，由各種工作流程步驟處理（並使用工作流程變數傳遞）。 若要進一步瞭解如何在外部儲存空間中儲存工作流程資料，請參閱 [對客戶擁有的資料存放區使用工作流程變數](/help/sites-administering/workflows-administering.md#using-workflow-variables-customer-datastore).
+[!DNL Adobe Experience Manager] 提供工作流程API [UserMetaDataPersistenceProvider](https://github.com/adobe/workflow-variable-externalizer) 以將工作流程變數儲存在外部Azure blob儲存體中。 如需有關使用API的詳細資訊，請參閱 [使用工作流程變數將敏感資料引數化，並儲存在外部資料存放區中](/help/forms/using/aem-forms-workflow.md#externalize-wf-variables).
 
-## 编辑变量 {#edit-a-variable}
+## 編輯變數 {#edit-a-variable}
 
-1. 在编辑工作流页面上，点按工作流模型Sidekick中可用的变量图标。 左窗格中的“变量”部分显示所有现有变量。
-1. 点按 ![编辑](assets/edit.png) （编辑）图标。
-1. 编辑变量信息并点按 ![done_icon](assets/done_icon.png) 以保存更改。 您无法编辑 **[!UICONTROL 名称]** 和 **[!UICONTROL 类型]** 字段。
+1. 在編輯工作流程頁面上，點選工作流程模型Sidekick中可用的「變數」圖示。 左窗格中的變數區段會顯示所有現有的變數。
+1. 點選 ![編輯](assets/edit.png) （編輯）圖示加以選取，並位於您要編輯的變數名稱旁。
+1. 編輯變數資訊並點選 ![done_icon](assets/done_icon.png) 以儲存變更。 您無法編輯 **[!UICONTROL 名稱]** 和 **[!UICONTROL 型別]** 變數的欄位。
 
-## 删除变量 {#delete-a-variable}
+## 刪除變數 {#delete-a-variable}
 
-在删除变量之前，请从工作流中删除该变量的所有引用。 确保未在工作流中使用变量。
+在刪除變數之前，請從工作流程中移除變數的所有參考。 確認工作流程中未使用變數。
 
-执行以下步骤以删除变量：
+執行以下步驟來刪除變數：
 
-1. 在编辑工作流页面上，点按工作流模型Sidekick中可用的变量图标。 左窗格中的“变量”部分显示所有现有变量。
-1. 点按要删除的变量名称旁边的删除图标。
-1. 点按 ![done_icon](assets/done_icon.png) 以确认和删除变量。
+1. 在編輯工作流程頁面上，點選工作流程模型Sidekick中可用的「變數」圖示。 左窗格中的變數區段會顯示所有現有的變數。
+1. 點選要刪除的變數名稱旁的「刪除」圖示。
+1. 點選 ![done_icon](assets/done_icon.png) 以確認和刪除變數。
 
 ## 引用 {#references}
 
-有关在AEM Forms工作流步骤中使用变量的更多示例，请参阅 [AEM工作流中的变量](https://helpx.adobe.com/experience-manager/kt/forms/using/authoring_variables_in_aem_forms-workflow1.html).
+如需在AEM Forms工作流程步驟中使用變數的更多範例，請參閱 [AEM工作流程中的變數](https://helpx.adobe.com/experience-manager/kt/forms/using/authoring_variables_in_aem_forms-workflow1.html).

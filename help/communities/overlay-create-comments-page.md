@@ -1,7 +1,7 @@
 ---
-title: “创建评论”页
+title: 建立註解頁面
 seo-title: Create Comments Page
-description: “查看评论”页
+description: 檢視註解頁面
 seo-description: View Comments page
 uuid: 1f043133-51c6-41e8-bbdb-d9fd7780136b
 contentOwner: User
@@ -17,18 +17,18 @@ ht-degree: 1%
 
 ---
 
-# “创建评论”页 {#create-comments-page}
+# 建立註解頁面 {#create-comments-page}
 
-**[⇐覆盖注释组件](overlay-comments.md) [创建节点⇒](overlay-create-nodes.md)**
+**[顯⇐覆蓋註解元件](overlay-comments.md) [建立節點⇒](overlay-create-nodes.md)**
 
-## 评论页面 {#comments-page}
+## 評論頁面 {#comments-page}
 
-此 [社区组件指南](components-guide.md) 提供轻松地体验叠加注释组件的功能。
+此 [社群元件指南](components-guide.md) 提供輕鬆體驗覆蓋註解元件的功能。
 
-在创作实例上查看页面：
+在作者執行個體上檢視頁面：
 
 * [http://localhost:4502/editor.html/content/community-components/en/comments.html](http://localhost:4502/editor.html/content/community-components/en/comments.html)
 
 ![个评论](assets/comments.png)
 
-**[⇐覆盖注释组件](overlay-comments.md) [创建节点⇒](overlay-create-nodes.md)**
+**[顯⇐覆蓋註解元件](overlay-comments.md) [建立節點⇒](overlay-create-nodes.md)**

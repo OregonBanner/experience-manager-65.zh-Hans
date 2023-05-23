@@ -71,7 +71,7 @@ ht-degree: 97%
    ![管理发布选项](assets/manage-publication-options.png)
 1. 在下一个&#x200B;**管理发布**&#x200B;窗口中，确认已选择一条或多条适当的路径。点按或单击&#x200B;**发布**。
    ![管理发布范围](assets/manage-publication-scope.png)
-1. AEM通过屏幕顶部的弹出消息确认发布操作。
+1. AEM會在熒幕上方顯示快顯訊息，確認發佈動作。
    ![资源发布横幅](assets/resources-published-message.png)
 
 您的翻译的 Headless 内容现已发布！它现在可以由 Headless 服务访问和使用。
@@ -110,7 +110,7 @@ ht-degree: 97%
 1. 点按或单击刚刚更新的项目。
 1. 点按或单击该语言或已更新的某种语言。
 
-您会看到新作业信息卡已根据需要添加到项目中。
+您會看到新工作卡片已適當地新增至專案。
 
 <!--
 You see that a new job card was added to the project. In this example, another Spanish translation was added.

@@ -1,7 +1,7 @@
 ---
-title: 为草稿和提交配置存储服务
+title: 設定草稿和提交的儲存服務
 seo-title: Configuring storage services for drafts and submissions
-description: 了解如何为草稿和提交配置存储
+description: 瞭解如何設定草稿和提交的儲存空間
 seo-description: Learn how to configure storage for drafts and submissions
 uuid: 2f4efc07-312c-4908-8c91-84f4e6c5ad25
 topic-tags: publish
@@ -16,96 +16,96 @@ ht-degree: 0%
 
 ---
 
-# 为草稿和提交配置存储服务 {#configuring-storage-services-for-drafts-and-submissions}
+# 設定草稿和提交的儲存服務 {#configuring-storage-services-for-drafts-and-submissions}
 
 ## 概述 {#overview}
 
-借助AEM Forms，您可以存储：
+透過AEM Forms，您可以儲存：
 
-* **草稿**：最终用户正在填写并保存以供以后提交的工作表单。
+* **草稿**：一般使用者正在填寫並儲存以供稍後提交的工作中表單。
 
-* **提交内容**：已提交的表单，其中包含用户提供的数据。
+* **提交內容**：提交的表單，包含使用者提供的資料。
 
-AEM Forms Portal数据和元数据服务为草稿和提交提供支持。 默认情况下，数据存储在发布实例中，然后反向复制到配置的创作实例，以供渗透到其他发布实例。
+AEM Forms Portal資料和中繼資料服務提供草稿和提交內容的支援。 依預設，資料會儲存在發佈執行個體中，然後反向復寫至已設定的製作執行個體，以供滲透至其他發佈執行個體。
 
-现有的开箱即用方法关心的是将所有数据存储在发布实例上，包括可以是个人身份信息(PII)的数据。
+現有現成方法的疑慮在於，這會儲存發佈執行個體上的所有資料，包括可以是個人識別資訊(PII)的資料。
 
-除了上述默认方法之外，还有另一种实施方法可用于直接将表单数据推送到处理区，而不是保存在本地。 担心在发布实例上存储潜在敏感数据的客户可以选择将数据发送到处理服务器的替代实施。 由于处理发生在创作实例上，因此它通常保留在安全区域中。
+除了上述預設方法外，還有另一種實施方法可用來直接將表單資料推送至處理，而非儲存於本機。 擔心發佈執行個體上儲存潛在敏感資料的客戶，可選擇將資料傳送至處理伺服器的替代實作。 由於處理作業會在作者執行個體上進行，因此通常會保留在安全區域中。
 
 >[!NOTE]
 >
->当您使用Forms Portal提交操作或启用自适应表单中的在表单门户中存储数据选项时，表单数据存储在AEM存储库中。 在生产环境中，建议不要将草稿或已提交的表单数据存储在AEM存储库中。 相反，您必须将草稿和提交组件与企业数据库等安全存储集成，以存储草稿和提交的表单数据。
+>當您使用Forms Portal提交動作或啟用最適化表單中的將資料儲存在表單入口網站選項時，表單資料會儲存在AEM存放庫中。 在生產環境中，建議不要將草稿或已提交的表單資料儲存在AEM存放庫中。 相反地，您必須將草稿和提交元件與安全的儲存體（例如企業資料庫）整合，以儲存草稿和提交的表單資料。
 >
->有关更多信息，请参阅 [将草稿和提交组件与数据库集成的示例](/help/forms/using/integrate-draft-submission-database.md).
+>如需詳細資訊，請參閱 [將草稿和提交元件與資料庫整合的範例](/help/forms/using/integrate-draft-submission-database.md).
 
-## 配置Forms Portal草稿和提交服务 {#configuring-forms-portal-drafts-and-submissions-services}
+## 設定Forms Portal草稿和提交服務 {#configuring-forms-portal-drafts-and-submissions-services}
 
-在AEM Web控制台配置中( `https://[host]:'port'/system/console/configMgr`)，单击以打开 **Forms Portal草稿和提交配置** 在编辑模式下。
+在AEM Web主控台設定中( `https://[host]:'port'/system/console/configMgr`)，按一下以開啟 **Forms入口網站草稿和提交設定** 在編輯模式中。
 
-根据您的要求指定属性的值，如下所示：
+根據您的需求指定屬性的值，如下所述：
 
-### 开箱即用的服务，用于在发布实例上存储数据 {#out-of-the-box-services-to-store-data-on-publish-instance}
+### 開箱即用的服務，用於儲存發佈執行個體上的資料 {#out-of-the-box-services-to-store-data-on-publish-instance}
 
-将数据反向复制到配置的创作实例。
+將資料反向復寫至設定的製作執行個體。
 
 <table>
  <tbody>
   <tr>
    <th>属性</th>
-   <th>值</th>
+   <th>价值</th>
   </tr>
   <tr>
-   <td>Forms Portal草稿数据服务(草稿数据服务的标识符(<strong>draft.data.service</strong>))</td>
+   <td>Forms入口網站草稿資料服務(草稿資料服務的識別碼(<strong>draft.data.service</strong>))</td>
    <td>com.adobe.fd.fp.service.impl.DraftDataServiceImpl<br /> </td>
   </tr>
   <tr>
-   <td>Forms Portal元数据服务草稿(元数据服务草稿的标识符(<strong>draft.metadata.service</strong>))</td>
+   <td>Forms入口網站草稿中繼資料服務(草稿中繼資料服務的識別碼(<strong>draft.metadata.service</strong>))</td>
    <td>com.adobe.fd.fp.service.impl.DraftMetadataServiceImpl<br /> </td>
   </tr>
   <tr>
-   <td>Forms Portal提交数据服务(提交数据服务的标识符(<strong>submit.data.service</strong>))</td>
+   <td>Forms入口網站提交資料服務(提交資料服務的識別碼(<strong>submit.data.service</strong>))</td>
    <td>com.adobe.fd.fp.service.impl.SubmitDataServiceImpl<br /> </td>
   </tr>
   <tr>
-   <td>Forms门户提交元数据服务(提交元数据服务的标识符(<strong>submit.metadata.service</strong>))</td>
+   <td>Forms入口網站提交中繼資料服務(提交中繼資料服務的識別碼(<strong>submit.metadata.service</strong>))</td>
    <td>com.adobe.fd.fp.service.impl.SubmitMetadataServiceImpl<br /> </td>
   </tr>
  </tbody>
 </table>
 
-### 开箱即用的服务，用于在远程处理实例上存储数据 {#out-of-the-box-services-to-store-data-on-remote-processing-instance}
+### 立即可用的服務，可將資料儲存在遠端處理執行個體上 {#out-of-the-box-services-to-store-data-on-remote-processing-instance}
 
-数据直接推送到配置的远程实例
+資料會直接推送至已設定的遠端執行個體
 
 <table>
  <tbody>
   <tr>
    <th>属性</th>
-   <th>值</th>
+   <th>价值</th>
   </tr>
   <tr>
-   <td>Forms Portal草稿数据服务(草稿数据服务的标识符(<strong>draft.data.service</strong>))</td>
+   <td>Forms入口網站草稿資料服務(草稿資料服務的識別碼(<strong>draft.data.service</strong>))</td>
    <td>com.adobe.fd.fp.service.impl.DraftDataServiceRemoteImpl<br /> </td>
   </tr>
   <tr>
-   <td>Forms Portal元数据服务草稿(元数据服务草稿的标识符(<strong>draft.metadata.service</strong>))</td>
+   <td>Forms入口網站草稿中繼資料服務(草稿中繼資料服務的識別碼(<strong>draft.metadata.service</strong>))</td>
    <td>com.adobe.fd.fp.service.impl.DraftMetadataServiceRemoteImpl<br /> </td>
   </tr>
   <tr>
-   <td>Forms Portal提交数据服务(提交数据服务的标识符(<strong>submit.data.service</strong>))</td>
+   <td>Forms入口網站提交資料服務(提交資料服務的識別碼(<strong>submit.data.service</strong>))</td>
    <td>com.adobe.fd.fp.service.impl.SubmitDataServiceRemoteImpl<br /> </td>
   </tr>
   <tr>
-   <td>Forms门户提交元数据服务(提交元数据服务的标识符(<strong>submit.metadata.service</strong>))</td>
+   <td>Forms入口網站提交中繼資料服務(提交中繼資料服務的識別碼(<strong>submit.metadata.service</strong>))</td>
    <td>com.adobe.fd.fp.service.impl.SubmitMetadataServiceRemoteImpl<br /> </td>
   </tr>
  </tbody>
 </table>
 
-除了以上指定的配置之外，请提供有关已配置的远程处理实例的信息。
+除了上述指定的設定之外，請提供已設定遠端處理執行個體的相關資訊。
 
-在AEM Web控制台配置中( `https://[host]:'port'/system/console/configMgr`)，单击以打开 **AEM DS设置服务** 在编辑模式下。 在“AEM DS设置服务”对话框中，提供有关处理服务器URL、处理服务器用户名和密码的信息。
+在AEM Web主控台設定中( `https://[host]:'port'/system/console/configMgr`)，按一下以開啟 **AEM DS設定服務** 在編輯模式中。 在AEM DS設定服務對話方塊中，提供有關處理伺服器URL、處理伺服器使用者名稱和密碼的資訊。
 
 >[!NOTE]
 >
->还提供了一种用于在数据库中存储用户数据的示例实现。 要了解如何配置数据和元数据服务以将用户数据存储在外部数据库中，请参阅 [将草稿和提交组件与数据库集成的示例](/help/forms/using/integrate-draft-submission-database.md).
+>也提供將使用者資料儲存在資料庫中的範例實作。 若要瞭解如何設定資料和中繼資料服務，以將使用者資料儲存在外部資料庫中，請參閱 [將草稿和提交元件與資料庫整合的範例](/help/forms/using/integrate-draft-submission-database.md).

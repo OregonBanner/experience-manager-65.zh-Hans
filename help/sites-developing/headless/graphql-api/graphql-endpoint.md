@@ -1,6 +1,6 @@
 ---
 title: 在 AEM 中管理 GraphQL 端点
-description: 了解如何在Adobe Experience Manager中管理GraphQL端点以进行无头内容交付。
+description: 瞭解如何在Adobe Experience Manager中管理GraphQL端點，以進行Headless內容傳送。
 exl-id: a59a5e50-0787-4c1c-a83d-bb3eac1479a8
 source-git-commit: a8616b3b30ac04ea24c4a869cabd47518af1a35f
 workflow-type: tm+mt

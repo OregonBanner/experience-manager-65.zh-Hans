@@ -1,7 +1,7 @@
 ---
-title: 组件侧载
+title: 元件側載
 seo-title: Component Sideloading
-description: 当网页设计为简单的单页面应用程序时，Communities组件旁载会非常有用，该应用程序会根据网站访客选择的内容动态更改显示的内容
+description: 當網頁設計成簡單的單頁應用程式時，Communities元件旁載會很有用，該應用程式會根據網站訪客的選取內容動態地變更顯示的內容
 seo-description: Communities component sideloading is useful when a web page is designed as a simple, single page app that dynamically alters what is displayed depending on what is selected by the site visitor
 uuid: 8c9a5fde-26a3-4610-bc14-f8b665059015
 contentOwner: msm-service
@@ -17,50 +17,50 @@ ht-degree: 0%
 
 ---
 
-# 组件侧载 {#component-sideloading}
+# 元件側載 {#component-sideloading}
 
 ## 概述 {#overview}
 
-当网页设计为简单的单页面应用程序时，Communities组件旁载会非常有用，该应用程序会根据网站访客选择的内容动态更改显示的内容。
+當網頁設計成簡單的單頁應用程式時，Communities元件旁載會很有用，該應用程式會根據網站訪客的選取內容動態地變更顯示內容。
 
-当Communities组件在页面模板中不存在，而是根据网站访客的选择动态添加时，即可实现此目的。
+當Communities元件不存在於頁面範本中，而是隨著網站訪客的選擇而動態新增時，即可完成這項工作。
 
-由于社交组件框架(SCF)存在轻量级，因此只注册在初始页面加载时存在的SCF组件。 对于要在页面加载后注册的动态添加SCF组件，必须调用SCF来“侧加载”该组件。
+由於社交元件架構(SCF)具有輕量型存在，因此只會註冊初始頁面載入時存在的SCF元件。 若要在頁面載入後註冊動態新增的SCF元件，必須叫用SCF來「側載」元件。
 
-当页面设计为侧载Communities组件时，可以缓存整个页面。
+當頁面設計為側載Communities元件時，可以快取整個頁面。
 
-动态添加SCF组件的步骤如下：
+動態新增SCF元件的步驟如下：
 
-1. [将组件添加到DOM](#dynamically-add-component-to-dom)
+1. [將元件新增至DOM](#dynamically-add-component-to-dom)
 
-1. [侧载组件](#sideload-by-invoking-scf) 使用以下两种方法之一：
+1. [側載元件](#sideload-by-invoking-scf) 使用下列兩種方法之一：
 
-* [动态包含](#dynamic-inclusion)
-   * 引导所有动态添加的组件
-* [动态加载](#dynamic-loading)
-   * 按需添加一个特定组件
+* [動態包含](#dynamic-inclusion)
+   * 啟動所有動態新增的元件
+* [動態載入](#dynamic-loading)
+   * 隨選新增一個特定元件
 
 >[!NOTE]
 >
->侧载 [非现有资源](scf.md#add-or-include-a-communities-component) 不受支持。
+>側載 [非現有資源](scf.md#add-or-include-a-communities-component) 不受支援。
 
-## 将组件动态添加到DOM {#dynamically-add-component-to-dom}
+## 動態新增元件至DOM {#dynamically-add-component-to-dom}
 
-无论组件是动态包含还是动态加载，都必须首先将其添加到DOM中。
+無論元件是以動態方式包含還是以動態方式載入，都必須先將其新增至DOM。
 
-添加SCF组件时，最常用的标记是DIV标记，但也可以使用其他标记。 由于SCF仅在最初加载页面时检查DOM，因此在显式调用SCF之前，不会注意到对DOM的此添加。
+新增SCF元件時，最常使用的標籤是DIV標籤，但也可能使用其他標籤。 因為SCF只會在頁面初次載入時檢查DOM，所以在明確叫用SCF之前，不會注意到DOM的這項新增。
 
-无论使用什么标记，元素必须至少符合常规SCF根元素模式，方法是包含这两个属性：
+無論使用何種標籤，元素至少都必須包含下列兩個屬性，以符合一般的SCF根元素模式：
 
 * **data-component-id**
 
-   所添加组件的有效路径。
+   新增元件的有效路徑。
 
 * **data-scf-component**
 
-   组件的resourceType。
+   元件的resourceType。
 
-以下是添加的comments组件示例：
+以下是新增註解元件的一個範例：
 
 ```xml
 <div
@@ -71,22 +71,22 @@ ht-degree: 0%
 </div>
 ```
 
-## 通过调用SCF进行侧载 {#sideload-by-invoking-scf}
+## 透過叫用SCF進行側載 {#sideload-by-invoking-scf}
 
-### 动态包含 {#dynamic-inclusion}
+### 動態包含 {#dynamic-inclusion}
 
-动态包含使用引导请求，该请求会导致SCF检查DOM并引导页面上的所有SCF组件。
+動態包含使用啟動載入要求，該要求會導致SCF檢查DOM並啟動載入頁面上找到的所有SCF元件。
 
-要在页面加载后随时初始化SCF组件，只需触发如下所示的JQuery事件：
+若要在頁面載入後隨時初始化SCF元件，只需引發JQuery事件，如下所示：
 
 `$(document).trigger(SCF.events.BOOTSTRAP_REQUEST);`
 
-### 动态加载 {#dynamic-loading}
+### 動態載入 {#dynamic-loading}
 
-动态加载提供对SCF组件加载的控制。
+動態載入可讓您控制如何載入SCF元件。
 
-可以使用以下JavaScript方法指定要加载的特定SCF组件，而不是引导在DOM中找到的所有SCF组件：
+您可以使用JavaScript方法指定特定SCF元件來載入，而不需啟動載入在DOM中找到的所有SCF元件：
 
 `SCF.addComponent(document.getElementById(*someId*));`
 
-位置 `someId` 是的值 `data-component-id` 属性。
+位置 `someId` 是 `data-component-id` 屬性。

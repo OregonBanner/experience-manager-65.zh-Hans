@@ -1,7 +1,7 @@
 ---
-title: 优化HTML5表单
+title: 最佳化HTML5表單
 seo-title: Optimizing HTML5 forms
-description: 可以优化HTML5表单的输出大小。
+description: 您可以最佳化HTML5表單的輸出大小。
 seo-description: You can optimize the output size of the HTML5 forms.
 uuid: 959f0b6a-9e4d-478a-afa8-4c39011fdf7a
 content-type: reference
@@ -17,25 +17,25 @@ ht-degree: 0%
 
 ---
 
-# 优化HTML5表单 {#optimizing-html-forms}
+# 最佳化HTML5表單 {#optimizing-html-forms}
 
-HTML5表单以HTML5格式呈现表单。 根据窗体大小和窗体中的图像等因素，生成的输出可能会很大。 为了优化数据传输，建议的方法是使用为HTML提供服务的Web服务器来压缩请求响应。 此方法可减少响应大小、网络流量以及在服务器和客户端计算机之间流式传输数据所需的时间。
+HTML5表單會以HTML5格式轉譯表單。 結果輸出可能會很大，具體取決於表單大小和表單中的影像等因素。 為了最佳化資料傳輸，建議使用提供請求的Web伺服器來壓縮HTML回應。 此方法可減少回應大小、網路流量，以及伺服器與使用者端電腦之間串流資料所需的時間。
 
-本文介绍了使用JBoss为Apache Web Server 2.0 32位启用压缩所需的步骤。
+本文說明使用JBoss為Apache Web Server 2.0 32位元啟用壓縮的必要步驟。
 
 >[!NOTE]
 >
->以下说明不适用于32位Apache Web Server 2.0以外的服务器。
+>下列指示不適用於Apache Web Server 2.0 32位元以外的伺服器。
 
-获取适用于您的操作系统的Apache Web Server软件：
+取得適用於您作業系統的Apache Web Server軟體：
 
-* 对于Windows，请从Apache HTTP Server项目站点下载Apache Web Server。
-* 对于Solaris 64位，请从Sunfreeware for Solaris网站下载Apache Web Server。
-* 对于Linux，Apache Web Server预安装在Linux系统上。
+* 若是Windows，請從Apache HTTP Server Project網站下載Apache Web Server。
+* 若使用Solaris 64位元，請從Sunfreeware for Solaris網站下載Apache Web Server。
+* 若是Linux，Apache Web Server會預先安裝在Linux系統上。
 
-Apache可以使用HTTP或AJP协议与JBoss通信。
+Apache可以使用HTTP或AJP通訊協定與JBoss通訊。
 
-1. 取消注释中的以下模块配置 *APACHE_HOME/conf/httpd.conf* 文件。
+1. 取消註解中的下列模組設定 *APACHE_HOME/conf/httpd.conf* 檔案。
 
    ```java
    LoadModule proxy_balancer_module modules/mod_proxy.so
@@ -45,11 +45,11 @@ Apache可以使用HTTP或AJP协议与JBoss通信。
 
    >[!NOTE]
    >
-   >对于Linux，默认的APACHE_HOME目录为/etc/httpd/。
+   >若是Linux，預設的APACHE_HOME目錄為/etc/httpd/。
 
-1. 在JBoss的端口8080上配置代理。
+1. 在JBoss的連線埠8080上設定Proxy。
 
-   将以下配置添加到 *APACHE_HOME/conf/httpd.conf* 配置文件。
+   將下列設定新增至 *APACHE_HOME/conf/httpd.conf* 設定檔。
 
    ```java
    ProxyPass / https://<server_Name>:8080/
@@ -58,16 +58,16 @@ Apache可以使用HTTP或AJP协议与JBoss通信。
 
    >[!NOTE]
    >
-   >使用代理时，需要以下配置更改：
+   >當您使用Proxy時，需要變更下列設定：
    >
-   >* 访问： *https://&lt;server>：&lt;port>/system/console/configMgr*
-   * 编辑Apache Sling引用筛选器的配置
-   * 在允许主机中，添加代理服务器的条目
+   >* 存取： *https://&lt;server>：&lt;port>/system/console/configMgr*
+   * 編輯Apache Sling查閱者篩選器的設定
+   * 在允許主機中，新增Proxy伺服器的專案
 
 
-1. 启用压缩。
+1. 啟用壓縮。
 
-   将以下配置添加到 *APACHE_HOME/conf/httpd.conf* 配置文件。
+   將下列設定新增至 *APACHE_HOME/conf/httpd.conf* 設定檔。
 
    ```xml
    <Location /content/xfaforms>
@@ -85,4 +85,4 @@ Apache可以使用HTTP或AJP协议与JBoss通信。
    </Location>
    ```
 
-1. 要访问AEM服务器，请使用https://[Apache_server]：80.
+1. 若要存取AEM伺服器，請使用https://[Apache_server]：80。

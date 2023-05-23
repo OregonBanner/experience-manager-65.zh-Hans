@@ -1,7 +1,7 @@
 ---
-title: 发布取消发布内容
+title: 發佈取消發佈內容
 seo-title: Publish UnPublish Content
-description: 熟悉文章、横幅和收藏集的内容管理操作后，请按照此页面了解如何发布内容。 您还可以取消发布内容。
+description: 熟悉文章、橫幅和集合上的內容管理動作後，請依照本頁面的說明了解如何發佈內容。 您也可以取消發佈內容。
 seo-description: Once you are familiar with content management actions on articles, banners, and collections, follow this page to learn about how you can publish your content. Also you can unpublish your content.
 uuid: 75179aa8-022c-4876-9664-6dd2b826174c
 contentOwner: User
@@ -17,33 +17,33 @@ ht-degree: 1%
 
 ---
 
-# 发布取消发布内容{#publish-unpublish-content}
+# 發佈取消發佈內容{#publish-unpublish-content}
 
 >[!NOTE]
 >
->Adobe建议对需要基于单页应用程序框架的客户端渲染（例如React）的项目使用SPA编辑器。 [了解更多](/help/sites-developing/spa-overview.md)。
+>Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）專案使用SPA編輯器。 [了解详情](/help/sites-developing/spa-overview.md).
 
-熟悉文章、横幅和收藏集的内容管理操作后，即可发布内容。 您还可以取消发布内容。
-
->[!NOTE]
->
->要详细了解AEM Mobile应用程序的设计注意事项，请参阅 [AEM Mobile应用程序的设计注意事项](https://helpx.adobe.com/digital-publishing-solution/help/design-app.html) 在线帮助中。
-
-## 发布/取消发布内容 {#publishing-unpublishing-the-content}
-
-这与“AEM发布”不同。 我们不会将内容推送到AEM发布服务器实例以使内容可公开查看。 在本例中，我们将通知Mobile On-Demand，选定的内容应在实时Mobile On-Demand应用程序中公开。
+熟悉文章、橫幅和集合上的內容管理動作後，您就可以發佈內容。 您也可以取消發佈內容。
 
 >[!NOTE]
 >
->内容必须先上传到Mobile On-Demand，然后才能发布。
+>若要深入瞭解AEM Mobile應用程式的設計考量事項，請參閱 [AEM Mobile應用程式的設計考量事項](https://helpx.adobe.com/digital-publishing-solution/help/design-app.html) 在「線上說明」中。
 
-发布/取消发布文章的常规工作流：
+## 發佈/取消發佈內容 {#publishing-unpublishing-the-content}
 
-1. 从Mobile中，从目录中选择您的Mobile On-Demand应用程序。
-1. 选择文章。
-1. 如果需要，可从列表视图添加其他文章。
-1. 从操作栏中选择发布。 片刻后，您的文章将公开。
-1. 使用上述相同步骤取消发布文章。
+這與「AEM發佈」不同。 我們不會將內容推送至AEM Publish伺服器執行個體，以使其可公開檢視。 在此，我們通知Mobile On-Demand選取的內容應在即時Mobile On-Demand應用程式中公開。
+
+>[!NOTE]
+>
+>內容必須先上傳至Mobile On-Demand，才能發佈。
+
+發佈/取消發佈文章的一般工作流程：
+
+1. 在Mobile中，從目錄中選擇您的Mobile On-Demand應用程式。
+1. 選取文章。
+1. 如有需要，可從清單檢視新增其他文章。
+1. 從動作列選取「發佈」。 過了一會兒，您的文章就會公開發佈。
+1. 使用上述相同步驟來取消發佈文章。
 
 <!-- FAIL >>[!NOTE]
 >
@@ -53,11 +53,11 @@ ht-degree: 1%
 
 ### 后续步骤 {#the-next-steps}
 
-了解如何创建和发布内容后，请参阅
+瞭解如何建立和發佈內容後，請參閱
 
-* [为AEM Mobile On-demand Services开发AEM内容](/help/mobile/aem-mobile-on-demand.md)
-* [管理内容以使用AEM Mobile On-demand Services](/help/mobile/aem-mobile.md)
+* [針對AEM Mobile On-demand Services開發AEM內容](/help/mobile/aem-mobile-on-demand.md)
+* [管理內容以使用AEM Mobile On-demand Services](/help/mobile/aem-mobile.md)
 
-或者，您仍需要了解创作主题，请参阅
+或者，您仍需瞭解撰寫主題，請參閱
 
-[为AEM Mobile On-demand Services应用程序创作AEM内容](/help/mobile/mobile-apps-ondemand.md)
+[為AEM Mobile On-demand Services應用程式編寫AEM內容](/help/mobile/mobile-apps-ondemand.md)

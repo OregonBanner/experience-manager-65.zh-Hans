@@ -1,6 +1,6 @@
 ---
-title: 具有内容同步的移动设备
-description: 请阅读本页以了解有关内容同步的信息。 在AEM中创作的页面可用作应用程序内容，即使设备处于离线状态也是如此。 此外，由于AEM页面基于Web标准，因此它们可以跨平台工作，从而可以将它们嵌入到任何本机包装器中。 此策略可减少开发工作，并让您能够轻松更新应用程序内容。
+title: 透過內容同步處理行動
+description: 請依照本頁瞭解Content Sync。 在AEM中編寫的頁面可作為應用程式內容，即使裝置離線亦然。 此外，由於AEM頁面是根據網頁標準，因此可跨平台運作，讓您將其內嵌在任何原生包裝函式中。 此策略可減少開發工作量，並可讓您輕鬆更新應用程式內容。
 uuid: 11f74cc5-99a5-4186-9b60-b19351305432
 contentOwner: User
 content-type: reference
@@ -15,169 +15,169 @@ ht-degree: 0%
 
 ---
 
-# 具有内容同步的移动设备{#mobile-with-content-sync}
+# 透過內容同步處理行動{#mobile-with-content-sync}
 
 >[!NOTE]
 >
->Adobe建议对需要基于单页应用程序框架的客户端渲染（例如React）的项目使用SPA编辑器。 [了解详情](/help/sites-developing/spa-overview.md).
+>Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）專案使用SPA編輯器。 [了解详情](/help/sites-developing/spa-overview.md).
 
-使用内容同步来打包内容，以便将其用在本机移动设备应用程序中。 在AEM中创作的页面可用作应用程序内容，即使设备处于离线状态也是如此。 此外，由于AEM页面基于Web标准，因此它们可以跨平台工作，从而可以将它们嵌入到任何本机包装器中。 此策略可减少开发工作，并让您能够轻松更新应用程序内容。
+使用Content Sync來封裝內容，以便在原生行動應用程式中使用。 在AEM中編寫的頁面可作為應用程式內容，即使裝置離線亦然。 此外，由於AEM頁面是根據網頁標準，因此可跨平台運作，讓您將其內嵌在任何原生包裝函式中。 此策略可減少開發工作量，並可讓您輕鬆更新應用程式內容。
 
-内容同步框架会创建一个包含Web内容的存档文件。 内容可以是简单页面、图像和PDF文件或整个Web应用程序中的任何内容。 内容同步API允许从移动设备应用程序或构建流程中访问存档文件，以便能够检索内容并将其包含在应用程序中。
+Content Sync架構會建立包含網頁內容的封存檔案。 內容可以是簡單頁面、影像和PDF檔案的任何內容，或是整個網頁應用程式。 內容同步API提供從行動應用程式或建置程式存取封存檔案的許可權，以便內容可擷取並包含在應用程式中。
 
-以下步骤顺序说明了内容同步的典型用例：
+下列步驟順序說明了Content Sync的典型使用案例：
 
-1. AEM开发人员创建内容同步配置，以指定要包含的内容。
-1. 内容同步框架会收集和缓存内容。
-1. 在移动设备上，启动移动应用程序并从服务器请求内容，该内容以ZIP文件形式交付。
-1. 客户端将ZIP内容解包到本地文件系统。 ZIP文件中的文件夹结构模拟客户端（例如浏览器）通常从服务器请求的路径。
-1. 客户端在嵌入式浏览器中打开内容，或以其他方式使用内容。
-1. 之后，客户端从服务器请求更新内容。 内容同步框架提供了增量更新以减小下载大小和时间，由于带宽或数据卷有限，这对于移动设备可能非常重要。
+1. AEM開發人員會建立Content Sync設定，指定要包含的內容。
+1. 內容同步架構會收集並快取內容。
+1. 在行動裝置上，行動應用程式會啟動，並從伺服器要求內容（以ZIP檔案傳送）。
+1. 使用者端會將ZIP內容解壓縮至本機檔案系統。 ZIP檔案中的資料夾結構會模擬使用者端（例如瀏覽器）一般會從伺服器要求的路徑。
+1. 使用者端會在內嵌瀏覽器中開啟內容，或以其他方式使用內容。
+1. 稍後，使用者端會向伺服器要求更新內容。 內容同步架構提供漸進式更新，以減少下載大小與時間，由於頻寬或資料量有限，這對於行動裝置而言可能很重要。
 
-## 开发内容同步处理程序 {#developing-the-content-sync-handlers}
+## 開發內容同步處理常式 {#developing-the-content-sync-handlers}
 
-开发内容同步处理程序的一些准则如下：
+開發「內容同步處理常式」的部分准則如下：
 
-* 处理程序必须实施 *com.day.cq.contentsync.handler.ContentUpdateHandler* （直接或扩展的类）
-* 处理程序可以扩展 *com.adobe.cq.mobile.platform.impl.contentsync.handler.AbstractSlingResourceUpdateHandler*
-* 仅当处理程序更新ContentSync缓存时，它们必须报告true。 如果错误地报告为true，则当更新实际上未发生时，AEM会创建更新。
-* 仅当内容实际发生更改时，处理程序才应更新缓存。 如果不需要白色，请勿写入缓存。 这会导致创建不必要的更新。
-
->[!NOTE]
->
->启用 *ContentSync调试日志记录* 通过包上的OSGi日志记录器配置 *com.day.cq.contentsync*. 这允许跟踪运行的处理程序以及它们是否更新了缓存并报告了更新缓存。
-
-## 配置内容同步内容 {#configuring-the-content-sync-content}
-
-创建内容同步配置，以指定要交付给客户端的ZIP文件的内容。 您可以创建任意数量的内容同步配置。 每个配置都有一个用于标识的名称。
-
-要创建内容同步配置，请添加 `cq:ContentSyncConfig` 节点到存储库， `sling:resourceType` 属性设置为 `contentsync/config`. 的 `cq:ContentSyncConfig` 节点可以位于存储库中的任意位置，但AEM发布实例上的用户必须可以访问该节点。 因此，您应将节点添加到下面 `/content`.
-
-要指定内容同步ZIP文件的内容，请将子节点添加到cq:ContentSyncConfig节点。 每个子节点的以下属性标识要包含的内容项目以及添加该内容项目时如何处理该内容项目：
-
-* `path`:内容的位置。
-* `type`:用于处理内容的配置类型的名称。 提供了几种类型，有关这些类型的介绍，请参见一节 *配置类型*.
-
-请参阅 *内容同步配置示例* 以了解更多信息。
-
-创建内容同步配置后，该配置会显示在内容同步控制台中。
+* 處理常式必須實施 *com.day.cq.contentsync.handler.ContentUpdateHandler* （直接或擴充具有下列功能的類別）
+* 處理常式可以擴充 *com.adobe.cq.mobile.platform.impl.contentsync.handler.AbstractSlingResourceUpdateHandler*
+* 處理常式只有在更新ContentSync快取時，才能報告true。 若誤報true，AEM會在實際並未發生更新時建立更新。
+* 只有在內容實際變更時，處理常式才能更新快取。 如果不需要白色，請勿寫入快取。 這會導致建立不必要的更新。
 
 >[!NOTE]
 >
->内容同步框架不会检查内容同步包中是否包含资产和与设计相关的文件的依赖项。 确保在ZIP文件中包含所有必需的文件。
+>啟用 *ContentSync偵錯記錄* 透過封裝上的OSGI記錄器設定 *com.day.cq.contentsync*. 這允許追蹤哪些處理常式已執行，以及它們是否更新快取並報告更新快取。
 
-### 配置对内容同步下载的访问 {#configuring-access-to-content-sync-downloads}
+## 設定內容同步內容 {#configuring-the-content-sync-content}
 
-指定可从内容同步下载的用户或组。 您可以配置默认用户或组，以从所有内容同步缓存中下载该用户或组，并且可以覆盖默认用户或组，并配置对特定内容同步配置的访问权限。
+建立Content Sync設定，以指定傳送至使用者端的ZIP檔案內容。 您可以建立任意數量的Content Sync設定。 每個設定都有名稱用於識別。
 
-安装AEM后，管理员组的成员默认可以从内容同步下载。
+若要建立Content Sync設定，請新增 `cq:ContentSyncConfig` 節點到存放庫，使用 `sling:resourceType` 屬性設定為 `contentsync/config`. 此 `cq:ContentSyncConfig` 節點可以位於存放庫中的任何位置，但AEM發佈執行個體上的使用者必須可以存取該節點。 因此，您應該在下方新增節點 `/content`.
 
-#### 设置内容同步下载的默认访问权限 {#setting-the-default-access-for-content-sync-downloads}
+若要指定Content Sync ZIP檔案的內容，請將子節點新增至cq：ContentSyncConfig節點。 每個子節點的下列屬性會識別要包含的內容專案，以及新增時如何處理該專案：
 
-Day CQ内容同步管理器服务控制对内容同步的访问。 配置此服务以指定默认可从内容同步下载的用户或组。
+* `path`：內容的位置。
+* `type`：用於處理內容的設定型別名稱。 有數種型別可供使用，並在一節中加以說明 *設定型別*.
 
-如果您 [使用Web控制台配置服务](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)，键入用户或组的名称作为回退缓存可授权属性的值。
+另請參閱 *內容同步設定範例* 以取得詳細資訊。
 
-如果您 [在存储库中配置](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository)，请使用有关服务的以下信息：
+建立Content Sync設定後，該設定會顯示在Content Sync主控台中。
 
-* PID:com.day.cq.contentsync.impl.ContentSyncManagerImpl
-* 属性名称：contentsync.fallback.authorizable
+>[!NOTE]
+>
+>內容同步架構不會檢查資產與設計相關檔案的相依性是否包含在內容同步套件中。 請確定在ZIP檔案中包含所有必要的檔案。
 
-#### 覆盖内容同步缓存的下载访问 {#overriding-download-access-for-a-content-sync-cache}
+### 設定Content Sync下載的存取權 {#configuring-access-to-content-sync-downloads}
 
-要为特定内容同步配置配置下载访问权限，请将以下属性添加到 `cq:ContentSyncConfig` 节点：
+指定可從Content Sync下載的使用者或群組。 您可以設定可從所有Content Sync快取下載的預設使用者或群組，也可以覆寫特定Content Sync設定的預設並設定存取權。
 
-* 名称：可授权
-* 类型：字符串
-* 值：可下载的用户或组的名称。
+安裝AEM後，管理員群組的成員預設可從Content Sync下載。
 
-例如，您的应用程序允许用户直接从内容同步安装更新。 要使所有用户能够下载更新，请将可授权属性的值设置为 `everyone`.
+#### 設定Content Sync下載的預設存取權 {#setting-the-default-access-for-content-sync-downloads}
 
-如果 `cq:ContentSyncConfig` 节点没有可授权属性，为Day CQ内容同步管理器服务的回退缓存可授权属性配置的默认用户或组将决定可以下载的人员。
+Day CQ Content Sync Manager服務可控制Content Sync的存取權。 設定此服務以指定預設可從Content Sync下載的使用者或群組。
 
-### 配置用户以更新内容同步缓存 {#configuring-the-user-for-updating-a-content-sync-cache}
+如果您是 [使用Web主控台設定服務](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)，輸入使用者或群組的名稱，作為「可授權的遞補快取」屬性的值。
 
-当用户对内容同步缓存执行更新时，特定用户帐户代表用户执行该操作。 默认情况下，匿名用户会更新所有内容同步缓存。
+如果您是 [在存放庫中設定](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository)，使用下列服務相關資訊：
 
-您可以覆盖默认用户并指定更新特定内容同步缓存的用户或组。
+* PID： com.day.cq.contentsync.impl.ContentSyncManagerImpl
+* 屬性名稱： contentsync.fallback.authorizable
 
-要覆盖默认用户，请通过向cq:ContentSyncConfig节点添加以下属性来指定执行特定内容同步配置更新的用户或组：
+#### 覆寫內容同步快取的下載存取權 {#overriding-download-access-for-a-content-sync-cache}
+
+若要設定特定內容同步設定的下載存取權，請將下列屬性新增至 `cq:ContentSyncConfig` 節點：
+
+* 名稱：可授權
+* 型別：字串
+* 值：可下載的使用者或群組名稱。
+
+例如，您的應用程式可讓使用者直接從Content Sync安裝更新。 若要讓所有使用者都能下載更新，您可以將可授權屬性的值設為 `everyone`.
+
+如果 `cq:ContentSyncConfig` 節點沒有可授權屬性，為Day CQ Content Sync Manager服務的Fallback Cache Authorizable屬性設定的預設使用者或群組會決定誰可以下載。
+
+### 設定使用者以更新內容同步快取 {#configuring-the-user-for-updating-a-content-sync-cache}
+
+當使用者執行內容同步快取的更新時，特定使用者帳戶會代表使用者執行動作。 匿名使用者預設會更新所有Content Sync快取。
+
+您可以覆寫預設使用者，並指定使用者或群組來更新特定的Content Sync快取。
+
+若要覆寫預設使用者，請指定使用者或群組，將下列屬性新增至cq：ContentSyncConfig節點，以針對特定Content Sync設定執行更新：
 
 * 名称: `updateuser`
 * 类型: `String`
-* 值：可执行更新的用户或组的名称。
+* 值：可執行更新的使用者或群組名稱。
 
-如果 `cq:ContentSyncConfig` 节点没有 `updateuser` 属性，默认 `anonymous` 用户更新缓存。
+如果 `cq:ContentSyncConfig` 節點沒有 `updateuser` 屬性，預設 `anonymous` 使用者更新快取。
 
-### 配置类型 {#configuration-types}
+### 設定型別 {#configuration-types}
 
-处理过程可能包括渲染简单的JSON，以及完全渲染页面（包括其引用的资产）。 本节列出了可用的配置类型及其特定参数：
+處理範圍包括從呈現簡單的JSON到完全呈現頁面（包括其參考資產）。 本節列出可用的組態型別及其特定引數：
 
-**复制** 只需复制文件和文件夹即可。
+**複製** 只要複製檔案和資料夾即可。
 
-* **路径**  — 如果路径指向单个文件，则仅复制文件。 如果指向文件夹（其中包括页面节点），则将复制下面的所有文件和文件夹。
+* **路徑**  — 如果路徑指向單一檔案，則只會複製該檔案。 如果它指向資料夾（這包含頁面節點），則會複製下面的所有檔案和資料夾。
 
-**内容** 使用标准渲染内容 [Sling请求处理](/help/sites-developing/the-basics.md#sling-request-processing).
+**內容** 使用標準呈現內容 [Sling請求處理](/help/sites-developing/the-basics.md#sling-request-processing).
 
-* **路径**  — 应输出的资源路径。
-* **扩展**  — 请求中应使用的扩展。 常见示例包括 *html* 和 *json*，但可以使用任何其他扩展。
+* **路徑**  — 應輸出的資源路徑。
+* **擴充功能**  — 請求中應使用的擴充功能。 常見範例為 *html* 和 *json*，但任何其他擴充功能皆可使用。
 
-* **选择器**  — 可选选择器，以圆点分隔。 常见示例包括 *触控* 用于呈现页面或 *无限* （对于JSON输出）。
+* **選擇器**  — 選用的選取器，以點分隔。 常見範例為 *觸控* 用於呈現頁面的行動版本或 *無限* 用於JSON輸出。
 
-**clientlib** 打包Javascript或CSS客户端库。
+**clientlib** 封裝Javascript或CSS使用者端程式庫。
 
-* **路径**  — 客户端库的根路径。
-* **扩展**  — 客户端库的类型。 此值应设置为 *js* 或 *css* 现在。
+* **路徑**  — 使用者端資料庫根的路徑。
+* **擴充功能**  — 使用者端資料庫的型別。 這應該設定為 *js* 或 *css* 目前。
 
-**资产**
+**資產**
 
-收集资产的原始演绎版。
+收集資產的原始轉譯。
 
-* **路径** - /content/dam下资产文件夹的路径。
+* **路徑** - /content/dam下方的資產資料夾路徑。
 
-**图像** 收集图像。
+**影像** 收集影像。
 
-* **路径**  — 图像资源的路径。
+* **路徑**  — 影像資源的路徑。
 
-图像类型用于在zip文件中包含We Retail徽标。
+影像型別用於在zip檔案中包含We Retail標誌。
 
-**页面** 呈现AEM页面并收集引用的资产。
+**頁面** 轉譯AEM頁面並收集引用的資產。
 
-* **路径**  — 页面路径。
-* **扩展**  — 请求中应使用的扩展。 对于页面，这几乎总是 *html*&#x200B;但其他仍有可能。
+* **路徑**  — 頁面的路徑。
+* **擴充功能**  — 請求中應使用的擴充功能。 對於頁面，這幾乎永遠都是 *html*，但仍可使用其他選項。
 
-* **选择器**  — 可选选择器，以圆点分隔。 常见示例包括 *触控* ，用于渲染页面的移动版本。
+* **選擇器**  — 選用的選取器，以點分隔。 常見範例為 *觸控* 用於轉譯頁面的行動版本。
 
-* **深层**  — 确定是否应包含子页面的可选布尔属性。 默认值为 *真的。*
+* **深入**  — 決定是否應包含子頁面的選用布林屬性。 預設值為 *true。*
 
-* **includeImages**  — 确定是否应包含图像的可选布尔属性。 默认值为 *true*.
+* **includeImage**  — 決定是否應包含影像的選用布林屬性。 預設值為 *true*.
 
-   默认情况下，仅考虑包含资源类型为foundation/components/image的图像组件。 您可以通过配置 **Day CQ WCM页面更新处理程序** 中。
+   依預設，只會考慮包含資源型別為foundation/components/image的影像元件。 您可以透過設定 **Day CQ WCM頁面更新處理常式** 在Web主控台中。
 
-**重写** 重写节点定义链接在导出的页面中的重写方式。 重写的链接可以指向zip文件中包含的文件，也可以指向服务器上的资源。
+**重寫** rewrite節點會定義如何在匯出的頁面中重新寫入連結。 重寫的連結可以指向zip檔案中包含的檔案，也可以指向伺服器上的資源。
 
-的 `rewrite` 节点需要位于 `page` 节点。
+此 `rewrite` 節點必須位於 `page` 節點。
 
-的 `rewrite` 节点可以具有以下一个或多个属性：
+此 `rewrite` 節點可以具有下列一或多個屬性：
 
-* `clientlibs`:重写clientlibs路径。
+* `clientlibs`：重寫clientlibs路徑。
 
-* `images`:重写图像路径。
-* `links`:重写链接路径。
+* `images`：重寫影像路徑。
+* `links`：重寫連結路徑。
 
-每个属性可以具有以下值之一：
+每個屬性可以有下列其中一個值：
 
-* `REWRITE_RELATIVE`:用相对于文件系统上的page .html文件的位置重写路径。
+* `REWRITE_RELATIVE`：以檔案系統上頁面.html檔案的相對位置重寫路徑。
 
-* `REWRITE_EXTERNAL`:使用AEM通过指向服务器上的资源重写路径 [外部器服务](/help/sites-developing/externalizer.md).
+* `REWRITE_EXTERNAL`：使用AEM指向伺服器上的資源來重寫路徑 [外部化器服務](/help/sites-developing/externalizer.md).
 
-名为的AEM服务 **PathRewriterTransformerFactory** 用于配置将被重写的特定html属性。 该服务可以在Web控制台中配置，并且为 `rewrite` 节点： `clientlibs`, `images` 和 `links`.
+AEM服務已呼叫 **PathRewriterTransformerFactory** 可讓您設定將重寫的特定html屬性。 此服務可在Web主控台中設定，並且每個屬性的設定都為 `rewrite` 節點： `clientlibs`， `images` 和 `links`.
 
-此功能已在AEM 5.5中添加。
+AEM 5.5已新增此功能。
 
-### 内容同步配置示例 {#example-content-sync-configuration}
+### 內容同步設定範例 {#example-content-sync-configuration}
 
-下面列出了内容同步的示例配置。
+以下清單顯示Content Sync的設定範例。
 
 ```xml
 + weretail_go [cq:ContentSyncConfig]
@@ -213,32 +213,32 @@ Day CQ内容同步管理器服务控制对内容同步的访问。 配置此服�
   + ...
 ```
 
-**etc.designs.default等.designs.mobile** 配置的前两个条目应该非常明显。 由于我们将包含许多移动页面，因此需要/etc/designs下的相关设计文件。 由于不需要额外处理，因此复制就足够了。
+**etc.designs.default和etc.designs.mobile** 設定的前兩個專案應該相當明顯。 由於我們將包含許多行動頁面，因此我們需要/etc/designs底下的相關設計檔案。 而且由於不需要額外處理，因此只需複製即可。
 
-**events.plist** 这个条目有点特别。 如导言中所述，应用程序应提供包含事件位置标记的地图视图。 我们将以PLIST格式作为单独的文件提供必要的位置信息。 要使其正常工作，在索引页上使用的事件列表组件具有一个名为plist.jsp的脚本。 当使用.plist扩展名请求组件的资源时，将执行此脚本。 与往常一样，组件路径在path属性中给定，类型设置为content，因为我们想要利用 [Sling请求处理](/help/sites-developing/the-basics.md#sling-request-processing).
+**events.plist** 此專案有些特殊。 如簡介中所述，應用程式應提供包含事件位置標籤的地圖檢視。 我們將以PLIST格式的個別檔案形式提供必要的位置資訊。 為了讓此功能發揮作用，索引頁面上使用的事件清單元件有一個名為plist.jsp的指令碼。 當以.plist副檔名請求元件的資源時，執行此指令碼。 像往常一樣，元件路徑在path屬性中給出，而型別設定為content，因為我們想要運用 [Sling請求處理](/help/sites-developing/the-basics.md#sling-request-processing).
 
-**events.touch.html** 接下来是应用程序中将显示的实际页面。 路径属性将设置为事件的根页面。 该页面下的所有事件页面也将包含在内，因为深层属性默认为true。 我们将页面用作配置类型，以便包含可能从页面上的图像或下载组件引用的任何图像或其他文件。 此外，设置触屏选择器还为我们提供了页面的移动版本。 功能包中的配置包含更多此类条目，但为方便起见，此处未列出这些条目。
+**events.touch.html** 接下來是將顯示在應用程式中的實際頁面。 path屬性會設定為事件的根頁面。 該頁面下方的所有事件頁面也會包括在內，因為深層屬性預設為true。 我們使用頁面作為設定型別，因此其中會包含任何可從頁面上的影像或下載元件參照的影像或其他檔案。 此外，設定觸控選擇器可提供頁面的行動版本。 Feature Pack中的設定包含更多此類專案，但為了簡單起見，這裡未予列出。
 
-**徽标** 目前尚未提到徽标配置类型，并且它不是内置类型。 但是，内容同步框架在一定程度上是可扩展的，这是一个示例，将在下一节中介绍。
+**標誌** 目前尚未提及標誌設定型別，而且不屬於任何內建型別。 不過，內容同步架構在某種程度上可以擴展，以下章節將介紹相關範例。
 
-**清单** 通常需要在zip文件中包含某种类型的元数据，例如内容的开始页面。 但是，对此类信息进行硬编码会阻止您稍后轻松更改该信息。 内容同步框架通过在配置中查找清单节点来支持此用例，清单节点仅通过名称进行标识，不需要配置类型。 在该特定节点上定义的每个属性都会添加到文件中，该文件也称为清单，并位于zip文件的根中。
+**資訊清單** 在zip檔案中通常最好包含某種中繼資料，例如內容的起始頁面。 不過，以硬式編碼撰寫這類資訊，可防止您日後輕易加以變更。 內容同步架構可在設定中尋找資訊清單節點，以支援此使用案例，資訊清單節點僅由名稱識別，不需要設定型別。 在該特定節點上定義的每個屬性都會新增至檔案（也稱為manifest），並位於zip檔案的根目錄中。
 
-在示例中，事件列表页面应为初始页面。 此信息在 **indexPage** 属性，因此可以随时轻松更改。 第二个属性定义 *events.plist* 文件。 正如我们稍后将看到的，客户端应用程序现在可以读取清单并根据清单执行操作。
+在此範例中，事件清單頁面應該是初始頁面。 此資訊提供於 **indexPage** 屬性，因此隨時都能輕鬆變更。 第二個屬性會定義 *events.plist* 檔案。 如我們稍後所見，使用者端應用程式現在可以讀取資訊清單並根據資訊清單採取行動。
 
-设置配置后，可以使用浏览器或任何其他HTTP客户端下载内容，或者，如果您正在为iOS进行开发，则可以使用专用的WAppKitSync客户端库。 下载位置由配置的路径和 *.zip* 扩展，例如使用本地AEM实例时： *http://localhost:4502/content/weretail_go.zip*
+設定好設定後，您就可以使用瀏覽器或任何其他HTTP使用者端下載內容，或者，如果您正在針對iOS開發，則可以使用專用的WAppKitSync使用者端程式庫。 下載位置由設定的路徑和 *.zip* 擴充功能(例如，使用本機AEM例項時)： *http://localhost:4502/content/weretail_go.zip*
 
-### 内容同步控制台 {#the-content-sync-console}
+### 內容同步主控台 {#the-content-sync-console}
 
-“内容同步”控制台列出了存储库中的所有“内容同步”配置（所有类型的节点） `cq:ContentSyncConfig`)，并且对于每个配置，您可以执行以下操作：
+Content Sync主控台會列出存放庫中的所有Content Sync設定（所有型別的節點） `cq:ContentSyncConfig`)並針對每個設定，允許您進行以下操作：
 
-* 更新缓存。
-* 清除缓存。
-* 下载完整的zip文件。
-* 下载现在与特定日期和时间之间的差异zip文件。
+* 更新快取。
+* 清除快取。
+* 下載完整的壓縮檔。
+* 下載現在與特定日期和時間的壓縮檔。
 
-它可用于开发和疑难解答。
+這對於開發和疑難排解非常有用。
 
-控制台可从以下位置访问：
+可在以下位置存取主控台：
 
 `http://localhost:4502/libs/cq/contentsync/content/console.html`
 
@@ -246,16 +246,16 @@ Day CQ内容同步管理器服务控制对内容同步的访问。 配置此服�
 
 ![chlimage_1-50](assets/chlimage_1-50.png)
 
-### 扩展内容同步框架 {#extending-the-content-sync-framework}
+### 擴充內容同步架構 {#extending-the-content-sync-framework}
 
-尽管配置选项的数量已经非常多，但它可能并不涵盖特定用例的所有要求。 本节介绍内容同步框架的扩展点以及如何创建自定义配置类型。
+雖然設定選項的數量已經相當龐大，但可能無法涵蓋您特定使用案例的所有需求。 本節說明Content Sync架構的擴充功能點，以及如何建立自訂設定型別。
 
-对于每种配置类型，都有 *内容更新处理程序*，这是为该特定类型注册的OSGi组件工厂。 这些处理程序会收集内容、处理内容并将其添加到由内容同步框架维护的缓存中。 实现以下接口或抽象基类：
+每種設定型別都有 *內容更新處理常式*，此元件工廠是為該特定型別註冊的OSGi元件工廠。 這些處理常式會收集和處理內容，然後將其新增至由Content Sync架構維護的快取。 實作下列介面或抽象基底類別：
 
-* `com.day.cq.contentsync.handler.ContentUpdateHandler`  — 所有更新处理程序都需要实施的接口
-* `com.day.cq.contentsync.handler.AbstractSlingResourceUpdateHandler`  — 使用Sling简化资源渲染的抽象类
+* `com.day.cq.contentsync.handler.ContentUpdateHandler`  — 所有更新處理常式都需要實作的介面
+* `com.day.cq.contentsync.handler.AbstractSlingResourceUpdateHandler`  — 抽象類別，使用Sling簡化資源的呈現
 
-将类注册为OSGi组件工厂，并将其部署在包中的OSGi容器中。 可以使用 [Maven SCR插件](https://felix.apache.org/documentation/subprojects/apache-felix-maven-scr-plugin/apache-felix-maven-scr-plugin-use.html) 使用JavaDoc标记或批注。 以下示例显示JavaDoc版本：
+將類別註冊為OSGi元件工廠，並將其部署在套件組合的OSGi容器中。 這可以透過以下方式完成： [Maven SCR外掛程式](https://felix.apache.org/documentation/subprojects/apache-felix-maven-scr-plugin/apache-felix-maven-scr-plugin-use.html) 使用JavaDoc標籤或註解。 下列範例顯示JavaDoc版本：
 
 ```java
 /*
@@ -275,15 +275,15 @@ public class OtherTypeUpdateHandler extends AbstractSlingResourceUpdateHandler {
 }
 ```
 
-请注意， *工厂* 定义包含通用界面和以斜杠分隔的自定义类型。 此策略使内容同步框架能够查找和创建自定义类的实例，因为它识别配置条目中的自定义类型。 下一节提供了自定义更新处理程序的具体示例。
+請注意 *工廠* 定義包含通用介面和以斜線分隔的自訂型別。 此策略可讓內容同步架構在辨識設定專案中的自訂型別時，尋找和建立自訂類別的執行個體。 下一節提供自訂更新處理常式的具體範例。
 
 >[!CAUTION]
 >
->在基于AbstractSlingResourceUpdateHandler基类构建时，必须添加 *继承* 定义。 否则，OSGi容器将不会设置在基类中声明的必需引用。
+>以AbstractSlingResourceUpdateHandler基底類別建置時，您必須新增 *繼承* 定義。 否則，OSGi容器不會設定在基底類別中宣告的必要參考。
 
-### 实施自定义更新处理程序 {#implementing-a-custom-update-handler}
+### 實作自訂更新處理常式 {#implementing-a-custom-update-handler}
 
-当然，每个We.Retail Mobile页面的左上角都包含一个要包含在zip文件中的徽标。 但是，对于缓存优化， AEM不会引用图像文件在存储库中的实际位置，这会阻止我们仅使用 **复制** 配置类型。 相反，我们需要做的是提供我们自己的 **徽标** 使图像在AEM请求的位置可用的配置类型。 以下代码列表显示了徽标更新处理程序的完整实施：
+每個We.Retail Mobile頁面左上角都有標誌，當然是我們要加到zip檔案中。 不過，針對快取最佳化，AEM不會參考影像檔案在存放庫中的實際位置，這可防止我們單純使用 **複製** 設定型別。 反之，我們需要做的是提供我們自己的 **標誌** 在AEM要求的位置提供影像的設定型別。 下列程式碼清單顯示完整的標誌更新處理常式實作：
 
 #### LogoUpdateHandler.java {#logoupdatehandler-java}
 
@@ -349,39 +349,39 @@ public class LogoUpdateHandler implements ContentUpdateHandler {
 }
 ```
 
-的 `LogoUpdateHandler` 类实现 `ContentUpdateHandler` 界面 `updateCacheEntry(ConfigEntry, Long, String, Session, Session)` 方法，它采用多个参数：
+此 `LogoUpdateHandler` 類別實作 `ContentUpdateHandler` 介面的 `updateCacheEntry(ConfigEntry, Long, String, Session, Session)` 方法，會採用多個引數：
 
-* A `ConfigEntry` 提供对为其调用此处理程序的配置条目及其属性的访问权限的实例。
-* A `lastUpdated` 时间戳，指示内容同步上次更新其缓存的时间。 处理程序不应更新在该时间戳后未修改的内容。
-* A `configCacheRoot` 指定缓存根路径的参数。 所有更新的文件都必须存储在此路径下方，才能添加到zip文件中。
-* 应用于所有缓存相关存储库操作的管理会话。
-* 一种用户会话，可用于在特定用户的上下文中更新内容，从而提供一种个性化内容。
+* A `ConfigEntry` 提供設定專案（其處理常式為之）及其屬性的存取權的執行個體。
+* A `lastUpdated` 時間戳記，指出Content Sync上次更新其快取的時間。 處理常式不應更新在該時間戳記之後未修改的內容。
+* A `configCacheRoot` 指定快取根路徑的引數。 所有更新的檔案都必須儲存在此路徑下方，才能新增至zip檔案。
+* 用於所有快取相關存放庫操作的管理工作階段。
+* 可用於更新特定使用者內容中的內容並因此提供某種個人化內容的使用者工作階段。
 
-要实施自定义处理程序，请首先根据配置条目中给定的资源创建Image类的实例。 这基本上与我们页面上实际的徽标组件执行的操作过程相同。 它可确保图像的目标路径与从页面引用的路径相同。
+若要實作自訂處理常式，請先根據設定專案中指定的資源建立Image類別的執行個體。 此程式基本上與頁面上實際的標誌元件所執行的程式相同。 它可確保影像的目標路徑與頁面所參照的路徑相同。
 
-接下来，检查自上次更新后是否修改了资源。 自定义实施应避免对缓存进行不必要的更新，并在没有发生任何更改时返回false。 如果资源已修改，请将图像复制到与缓存根目录相关的预期目标位置。 最后， `true` 返回，以向框架指示缓存已更新。
+接下來，檢查自上次更新後是否修改了資源。 自訂實施應避免快取不必要的更新，若沒有變更則傳回false。 如果資源已修改，請將影像複製到相對於快取根目錄的預期目標位置。 最後， `true` 會傳回，以向架構指出快取已更新。
 
-## 在客户端上使用内容 {#using-the-content-on-the-client}
+## 在使用者端上使用內容 {#using-the-content-on-the-client}
 
-要在内容同步提供的移动设备应用程序中使用内容，您需要通过HTTP或HTTPS连接请求内容。 因此，可以提取检索到的内容（打包成ZIP文件）并将其存储在移动设备上的本地。 请注意，内容不仅指数据，还指逻辑，即完整的Web应用程序；从而使得移动用户即使在没有网络连接的情况下也能执行检索到的web应用和相应的数据。
+若要在Content Sync提供的行動應用程式中使用內容，您需要透過HTTP或HTTPS連線要求內容。 因此，擷取的內容（封裝在ZIP檔案中）可以擷取並儲存在行動裝置本機。 請注意，內容不僅是指資料，也指邏輯，即完整的網頁應用程式，因此即使沒有網路連線，行動使用者也能執行擷取的Web應用程式和對應資料。
 
-内容同步以智能方式交付内容：只传送自上次成功数据同步以来的数据更改，从而减少数据传输所需的时间。 自1970年1月1日起，在首次运行应用程序时请求数据更改，随后只请求自上次成功同步以来更改的数据。 AEM利用iOS的客户端通信框架来简化数据通信和传输，从而需要最少量的本机代码才能启用基于iOS的web应用程序。
+Content Sync會以智慧型方式提供內容：只會提供自上次成功資料同步處理以來的資料變更，藉此減少資料傳輸所需的時間。 自1970年1月1日起，首次執行應用程式資料變更時，系統就會要求變更，但隨後只會要求上次成功同步後變更的資料。 AEM利用iOS的使用者端通訊架構來簡化資料通訊和傳輸，因此只需極少數的原生程式碼，即可啟用以iOS為基礎的網頁應用程式。
 
-所有传输的数据都可以提取到同一目录结构中，因此在提取数据时无需执行其他步骤（如依赖项检查）。 对于iOS，所有数据都存储在iOS应用程序Documents文件夹的子文件夹中。
+所有傳輸的資料都可擷取到相同的目錄結構中，擷取資料時不需要執行額外的步驟（例如相依性檢查）。 若是iOS，所有資料都會儲存在iOS應用程式「檔案」資料夾內的子資料夾中。
 
-基于iOS的AEM Mobile应用程序的典型执行路径：
+iOS型AEM Mobile應用程式的典型執行路徑：
 
-* 用户在iOS设备上启动应用程序。
-* 应用程序会尝试连接到AEM后端，并请求自上次运行以来的数据更改。
-* 服务器会检索相关数据，并将其压缩到文件中。
-* 数据将返回到客户端设备，并将其提取到文档文件夹中。
-* UIWebView组件启动/刷新。
+* 使用者在iOS裝置上啟動應用程式。
+* 應用程式會嘗試連線至AEM後端，並請求自上次執行以來的資料變更。
+* 伺服器會擷取有問題的資料，並將其壓縮到檔案中。
+* 資料會傳回至使用者端裝置，並擷取至檔案資料夾。
+* UIWebView元件開始/重新整理。
 
-如果无法建立连接，则会显示之前下载的数据。
+如果無法建立連線，將顯示先前下載的資料。
 
 ### 其他资源 {#additional-resources}
 
-要了解管理员和作者的角色和职责，请参阅以下资源：
+若要瞭解管理員和作者的角色和責任，請參閱以下資源：
 
-* [为AEM Mobile On-demand Services创作AEM内容](/help/mobile/mobile-apps-ondemand.md)
-* [管理内容以使用AEM Mobile On-demand Services](/help/mobile/aem-mobile.md)
+* [為AEM Mobile On-demand Services編寫AEM內容](/help/mobile/mobile-apps-ondemand.md)
+* [管理內容以使用AEM Mobile On-demand Services](/help/mobile/aem-mobile.md)

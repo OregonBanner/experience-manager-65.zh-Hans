@@ -1,7 +1,7 @@
 ---
-title: AEM Communities 6.4中的存储库重组
+title: AEM Communities 6.4的存放庫重組
 seo-title: Repository Restructuring for AEM Communities in 6.4
-description: 了解如何进行必要的更改，以迁移到AEM 6.4 for Communities中的新存储库结构。
+description: 瞭解如何進行必要的變更，以移轉至適用於社群的AEM 6.4中的新存放庫結構。
 seo-description: Learn how to make the necessary changes in order to migrate to the new repository structure in AEM 6.4 for Communities.
 uuid: d161655f-4074-44a7-8d69-38e80934c58b
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -17,35 +17,35 @@ ht-degree: 3%
 
 ---
 
-# AEM Communities 6.5中的存储库重组 {#repository-restructuring-for-aem-communities-in}
+# AEM Communities 6.5的存放庫重組 {#repository-restructuring-for-aem-communities-in}
 
-如父项中所述 [AEM 6.4中的存储库重组](/help/sites-deploying/repository-restructuring.md) 页面，升级到AEM 6.5的客户应使用此页面评估与影响AEM Communities解决方案的存储库更改相关的工作量。 在AEM 6.5升级过程中，有些更改需要您投入精力，而有些则可能会推迟到将来升级。
+如父項所述 [AEM 6.4中的存放庫重組](/help/sites-deploying/repository-restructuring.md) 頁面，升級至AEM 6.5的客戶應使用此頁面評估與影響AEM Communities解決方案的存放庫變更相關的工作量。 有些變更需要在AEM 6.5升級過程中投入精力，而其他變更則可能延遲到未來升級。
 
-**6.5版升级**
+**6.5版升級**
 
-* [电子邮件通知模板](/help/sites-deploying/communities-repository-restructuring-in-aem-6-5.md#e-mail-notification-templates)
-* [订阅配置](/help/sites-deploying/communities-repository-restructuring-in-aem-6-5.md#subscription-configurations)
+* [電子郵件通知範本](/help/sites-deploying/communities-repository-restructuring-in-aem-6-5.md#e-mail-notification-templates)
+* [訂閱設定](/help/sites-deploying/communities-repository-restructuring-in-aem-6-5.md#subscription-configurations)
 
-**在将来升级之前**
+**未來升級之前**
 
-* [徽章配置](/help/sites-deploying/communities-repository-restructuring-in-aem-6-5.md#badging-configurations)
-* [经典社区控制台设计](/help/sites-deploying/communities-repository-restructuring-in-aem-6-5.md#classic-communities-console-designs)
-* [facebook社交登录配置](/help/sites-deploying/communities-repository-restructuring-in-aem-6-5.md#facebook-social-login-configurations)
-* [语言选项配置](/help/sites-deploying/communities-repository-restructuring-in-aem-6-5.md#language-options-configurations)
+* [徽章設定](/help/sites-deploying/communities-repository-restructuring-in-aem-6-5.md#badging-configurations)
+* [Classic Communities主控台設計](/help/sites-deploying/communities-repository-restructuring-in-aem-6-5.md#classic-communities-console-designs)
+* [facebook社交登入設定](/help/sites-deploying/communities-repository-restructuring-in-aem-6-5.md#facebook-social-login-configurations)
+* [語言選項設定](/help/sites-deploying/communities-repository-restructuring-in-aem-6-5.md#language-options-configurations)
 
-* [pinterest社交登录配置](/help/sites-deploying/communities-repository-restructuring-in-aem-6-5.md#pinterest-social-login-configurations)
-* [评分配置](/help/sites-deploying/communities-repository-restructuring-in-aem-6-5.md#scoring-configurations)
-* [twitter社交登录配置](/help/sites-deploying/communities-repository-restructuring-in-aem-6-5.md#twitter-social-login-configurations)
-* [杂项](/help/sites-deploying/communities-repository-restructuring-in-aem-6-5.md#misc)
+* [pinterest社交登入設定](/help/sites-deploying/communities-repository-restructuring-in-aem-6-5.md#pinterest-social-login-configurations)
+* [評分設定](/help/sites-deploying/communities-repository-restructuring-in-aem-6-5.md#scoring-configurations)
+* [twitter社交登入設定](/help/sites-deploying/communities-repository-restructuring-in-aem-6-5.md#twitter-social-login-configurations)
+* [其他](/help/sites-deploying/communities-repository-restructuring-in-aem-6-5.md#misc)
 
-## 6.5版升级 {#with-upgrade}
+## 6.5版升級 {#with-upgrade}
 
-### 电子邮件通知模板 {#e-mail-notification-templates}
+### 電子郵件通知範本 {#e-mail-notification-templates}
 
 <table>
  <tbody>
   <tr>
-   <td><strong>上一个位置</strong></td>
+   <td><strong>上一個位置</strong></td>
    <td><code>/etc/community/notifications</code></td>
   </tr>
   <tr>
@@ -53,8 +53,8 @@ ht-degree: 3%
    <td><code>/libs/settings/community/notifications</code></td>
   </tr>
   <tr>
-   <td><strong>重构指南</strong></td>
-   <td><p>如果要移至“ ”下的新路径，则需要手动迁移<code>/apps/settings</code>“。 您可以使用Granite Configuration Manager执行迁移。</p> <p>您可以通过设置属性来执行迁移 <code>mergeList</code> 到 <code>true</code> 在"<code>/libs/settings/community/subscriptions</code>”节点并添加 <code>nt:unstructured</code> 子节点。</p> </td>
+   <td><strong>重組指引</strong></td>
+   <td><p>如果您想要移至「 」下的新路徑，則需要手動移轉<code>/apps/settings</code>「。 您可以使用Granite Configuration Manager來執行移轉。</p> <p>您可以設定屬性來執行移轉 <code>mergeList</code> 至 <code>true</code> 於"<code>/libs/settings/community/subscriptions</code>「節點並新增 <code>nt:unstructured</code> 子節點。</p> </td>
   </tr>
   <tr>
    <td><strong>注释</strong></td>
@@ -63,12 +63,12 @@ ht-degree: 3%
  </tbody>
 </table>
 
-### 订阅配置 {#subscription-configurations}
+### 訂閱設定 {#subscription-configurations}
 
 <table>
  <tbody>
   <tr>
-   <td><strong>上一个位置</strong></td>
+   <td><strong>上一個位置</strong></td>
    <td><code>/etc/community/subscriptions</code></td>
   </tr>
   <tr>
@@ -76,8 +76,8 @@ ht-degree: 3%
    <td><code>/libs/settings/community/subscriptions</code></td>
   </tr>
   <tr>
-   <td><strong>重构指南</strong></td>
-   <td><p>如果要移至“ ”下的新路径，则需要手动迁移<code>/apps/settings</code>“。 您可以使用Granite Configuration Manager执行迁移。</p> <p>您可以通过设置属性来执行迁移 <code>mergeList</code> 到 <code>true</code> 在"<code>/libs/settings/community/subscriptions</code>”节点并添加 <code>nt:unstructured</code> 子节点。</p> </td>
+   <td><strong>重組指引</strong></td>
+   <td><p>如果您想要移至「 」下的新路徑，則需要手動移轉<code>/apps/settings</code>「。 您可以使用Granite Configuration Manager來執行移轉。</p> <p>您可以設定屬性來執行移轉 <code>mergeList</code> 至 <code>true</code> 於"<code>/libs/settings/community/subscriptions</code>「節點並新增 <code>nt:unstructured</code> 子節點。</p> </td>
   </tr>
   <tr>
    <td><strong>注释</strong></td>
@@ -86,12 +86,12 @@ ht-degree: 3%
  </tbody>
 </table>
 
-### 标语配置 {#watchwords-configurations}
+### 關注字詞設定 {#watchwords-configurations}
 
 <table>
  <tbody>
   <tr>
-   <td><strong>上一个位置</strong></td>
+   <td><strong>上一個位置</strong></td>
    <td>/etc/watchwords</td>
   </tr>
   <tr>
@@ -99,8 +99,8 @@ ht-degree: 3%
    <td>/libs/community/watchwords</td>
   </tr>
   <tr>
-   <td><strong>重构指南</strong></td>
-   <td>延迟迁移任务可用于清理Communities配置。<br /> <p>Task将标语从 <code>/etc/watchwords</code> 到 <code>/conf/global/settings/community/watchwords</code>.</p> <p>如果自定义标语存储在SCM中，则应将其部署到 <code>/apps/settings/...</code> 而且你必须确保没有覆盖 <code>/conf/global/settings/...</code> 优先的配置。</p> <p>迁移任务已删除 <code>/etc</code> 位置。</p> </td>
+   <td><strong>重組指引</strong></td>
+   <td>延遲移轉工作可用於清除Communities設定。<br /> <p>「任務」會將關注字詞從 <code>/etc/watchwords</code> 至 <code>/conf/global/settings/community/watchwords</code>.</p> <p>如果自訂標語儲存在SCM中，則應將其部署到 <code>/apps/settings/...</code> 而且您必須確保沒有覆蓋 <code>/conf/global/settings/...</code> 優先的設定。</p> <p>移轉任務已移除 <code>/etc</code> 位置。</p> </td>
   </tr>
   <tr>
    <td><strong>注释</strong></td>
@@ -109,34 +109,34 @@ ht-degree: 3%
  </tbody>
 </table>
 
-## 在将来升级之前 {#prior-to-upgrade}
+## 未來升級之前 {#prior-to-upgrade}
 
-### 徽章配置 {#badging-configurations}
+### 徽章設定 {#badging-configurations}
 
 <table>
  <tbody>
   <tr>
-   <td><strong>上一个位置</strong></td>
+   <td><strong>上一個位置</strong></td>
    <td><code>/etc/community/badging</code></td>
   </tr>
   <tr>
    <td><strong>新位置</strong></td>
-   <td><p><strong>徽章规则：</strong></p> <p><code>/libs/settings/community/badging</code></p> <p><strong>徽章图像：</strong></p> <p>对于默认图像： <code>/etc/community/badging/images are moved to /libs/community/badging/images</code></p> <p>对于自定义图像： <code>/content/community/badging/images</code></p> <p> </p> </td>
+   <td><p><strong>徽章規則：</strong></p> <p><code>/libs/settings/community/badging</code></p> <p><strong>徽章影像：</strong></p> <p>對於預設影像： <code>/etc/community/badging/images are moved to /libs/community/badging/images</code></p> <p>對於自訂影像： <code>/content/community/badging/images</code></p> <p> </p> </td>
   </tr>
   <tr>
-   <td><strong>重构指南</strong></td>
-   <td><p>需要手动迁移。</p> <p>如果您的实例自定义了徽章/评分规则，则没有自动方式将所有规则放入存储段下。 需要客户输入您希望用于站点的配置存储段（全局或特定于站点）。</p> <p>没有可用于为站点配置徽章和评分的UI。</p> <p>要与新的存储库结构保持一致，请执行以下操作：</p>
+   <td><strong>重組指引</strong></td>
+   <td><p>需要手動移轉。</p> <p>如果您的執行個體已自訂徽章/評分規則，則沒有自動化方式可將所有規則放在貯體下。 需要客戶輸入您要用於您網站的conf bucket （全域或網站特定）。</p> <p>沒有可用於設定網站徽章和評分的UI。</p> <p>若要與新的存放庫結構保持一致：</p>
     <ol>
-     <li>使用以下方式创建站点上下文存储段 <strong>配置浏览器</strong> 下 <strong>工具</strong></li>
-     <li>转到站点根目录</li>
-     <li>设置 <code>cq:confproperty</code> 到要存储所有设置的存储段路径。 可以通过网站设置相同的设置 <strong>编辑向导 — 设置云配置输入</strong>.</li>
-     <li>将相关徽章规则和评分规则从 <code>/etc/community/*</code> 到在上一步中创建的站点上下文存储段。</li>
-     <li>调整站点根目录中的徽章规则和评分规则属性，使其具有对新规则位置的相对引用。
+     <li>使用建立網站內容貯體 <strong>設定瀏覽器</strong> 在 <strong>工具</strong></li>
+     <li>前往網站根目錄</li>
+     <li>設定 <code>cq:confproperty</code> 儲存貯體路徑，您想在此儲存所有設定。 可透過網站進行相同設定 <strong>編輯精靈 — 設定雲端設定輸入</strong>.</li>
+     <li>移動相關徽章規則和評分規則 <code>/etc/community/*</code> 至上一步中建立的網站內容貯體。</li>
+     <li>調整網站根目錄上的徽章規則和評分規則屬性，使其具有新規則位置的相對參照。
       <ol>
-       <li>例如，如果属性 <code>cq:conf = /conf/we-retail</code>，则 <code>badgingRules [] = community/badging/rules</code> 如果规则现在移至此新存储桶。</li>
+       <li>例如，如果屬性 <code>cq:conf = /conf/we-retail</code>，則 <code>badgingRules [] = community/badging/rules</code> 如果規則現在移至此新貯體。</li>
       </ol> </li>
-     <li>同样，调整徽章规则节点中评分规则的引用，使其具有相对路径。</li>
-    </ol> <p> </p> <p>最后，通过删除资源进行清理 <code>/etc/community/badging</code></p> </td>
+     <li>同樣地，調整徽章規則節點中評分規則的參考，以擁有相對路徑。</li>
+    </ol> <p> </p> <p>最後，移除資源以清除 <code>/etc/community/badging</code></p> </td>
   </tr>
   <tr>
    <td><strong>注释</strong></td>
@@ -145,12 +145,12 @@ ht-degree: 3%
  </tbody>
 </table>
 
-### 经典社区控制台设计 {#classic-communities-console-designs}
+### Classic Communities主控台設計 {#classic-communities-console-designs}
 
 <table>
  <tbody>
   <tr>
-   <td><strong>上一个位置</strong></td>
+   <td><strong>上一個位置</strong></td>
    <td><code>/etc/designs/social/console</code></td>
   </tr>
   <tr>
@@ -158,7 +158,7 @@ ht-degree: 3%
    <td><p><code>/libs/settings/wcm/designs/social/console</code></p> <p><code>/apps/settings/wcm/designs/social/console</code></p> </td>
   </tr>
   <tr>
-   <td><strong>重构指南</strong></td>
+   <td><strong>重組指引</strong></td>
    <td>不适用</td>
   </tr>
   <tr>
@@ -168,12 +168,12 @@ ht-degree: 3%
  </tbody>
 </table>
 
-### facebook社交登录配置 {#facebook-social-login-configurations}
+### facebook社交登入設定 {#facebook-social-login-configurations}
 
 <table>
  <tbody>
   <tr>
-   <td><strong>上一个位置</strong></td>
+   <td><strong>上一個位置</strong></td>
    <td><code>/etc/cloudservices/facebookconnect</code></td>
   </tr>
   <tr>
@@ -182,16 +182,16 @@ ht-degree: 3%
        </code></p> <p><code>/conf/&lt;tenant&gt;/settings/cloudconfigs/facebookconnect</code></p> <p> </p> </td>
   </tr>
   <tr>
-   <td><strong>重构指南</strong></td>
-   <td><p>任何新的Facebook云配置都必须迁移到新位置。</p>
+   <td><strong>重組指引</strong></td>
+   <td><p>任何新的Facebook雲端設定都必須移轉至新位置。</p>
     <ol>
-     <li>将以前位置中的现有配置迁移到新位置。
+     <li>將先前位置中的現有設定移轉到新位置。
       <ol>
-       <li>通过AEM创作UI手动重新创建新的Facebook社交登录配置，网址为 <strong>“工具”&gt;“Cloud Services”&gt;“Facebook社交登录配置”</strong>.<br /> 或 <br /> </li>
-       <li>将任何新的Facebook云配置从上一个位置复制到下面相应的新位置 <code>/conf/global or /conf/&lt;tenant&gt;</code>.</li>
+       <li>透過AEM編寫UI手動重新建立新的Facebook社交登入設定，網址為 <strong>「工具&gt;Cloud Services&gt; Facebook社交登入設定」</strong>.<br /> 或 <br /> </li>
+       <li>將任何新的Facebook雲端設定從先前位置複製到適當的新位置，位於 <code>/conf/global or /conf/&lt;tenant&gt;</code>.</li>
       </ol> </li>
-     <li>通过设置，更新任何AEM Communities站点根以引用新的Facebook社交登录配置 <code>[cq:Page]/jcr:content@cq:conf</code> 属性到新位置中的绝对路径。</li>
-     <li>取消旧版Facebook ConnectCloud Service与任何更新为引用新位置的AEM Communities站点根的关联。</li>
+     <li>更新任何AEM CommunitiesFacebook網站根目錄，透過設定 <code>[cq:Page]/jcr:content@cq:conf</code> 屬性至新建位置的絕對路徑。</li>
+     <li>解除舊版Facebook ConnectCloud Service與任何更新以參照新位置的AEM Communities網站根的關聯。</li>
     </ol> </td>
   </tr>
   <tr>
@@ -201,12 +201,12 @@ ht-degree: 3%
  </tbody>
 </table>
 
-### 语言选项配置 {#language-options-configurations}
+### 語言選項設定 {#language-options-configurations}
 
 <table>
  <tbody>
   <tr>
-   <td><strong>上一个位置</strong></td>
+   <td><strong>上一個位置</strong></td>
    <td><code>/etc/social/config/languageOpts</code></td>
   </tr>
   <tr>
@@ -214,7 +214,7 @@ ht-degree: 3%
    <td><code>/libs/social/translation/languageOpts</code></td>
   </tr>
   <tr>
-   <td><strong>重构指南</strong></td>
+   <td><strong>重組指引</strong></td>
    <td>不适用<br /> </td>
   </tr>
   <tr>
@@ -224,12 +224,12 @@ ht-degree: 3%
  </tbody>
 </table>
 
-### pinterest社交登录配置 {#pinterest-social-login-configurations}
+### pinterest社交登入設定 {#pinterest-social-login-configurations}
 
 <table>
  <tbody>
   <tr>
-   <td><strong>上一个位置</strong></td>
+   <td><strong>上一個位置</strong></td>
    <td><code>/etc/cloudservices/pinterestconnect</code></td>
   </tr>
   <tr>
@@ -238,16 +238,16 @@ ht-degree: 3%
        </code></p> <p><code>/conf/&lt;tenant&gt;/settings/cloudconfigs/pinterestconnect</code></p> <p> </p> </td>
   </tr>
   <tr>
-   <td><strong>重构指南</strong></td>
-   <td><p>任何新的Pinterest云配置都必须迁移到新位置。</p>
+   <td><strong>重組指引</strong></td>
+   <td><p>任何新的Pinterest雲端設定都必須移轉至新位置。</p>
     <ol>
-     <li>将以前位置中的现有配置迁移到新位置。
+     <li>將先前位置中的現有設定移轉到新位置。
       <ol>
-       <li>通过AEM创作UI手动重新创建新的Pinterest社交登录配置，网址为 <strong>“工具”&gt;“Cloud Services”&gt;“Pinterest社交登录配置”</strong>.<br /> 或</li>
-       <li>将任何新的Pinterest云配置从上一个位置复制到下的相应新位置 <code>/conf/global or /conf/&lt;tenant&gt;</code>.</li>
+       <li>透過AEM編寫UI手動重新建立新的Pinterest社交登入設定，網址為 <strong>「工具&gt;Cloud Services&gt; Pinterest社交登入設定」</strong>.<br /> 或</li>
+       <li>將任何新的Pinterest雲端設定從先前的位置複製到下的適當新位置 <code>/conf/global or /conf/&lt;tenant&gt;</code>.</li>
       </ol> </li>
-     <li>通过设置更新任何AEM Communities站点根以引用新的Pinterest社交登录配置 <code>[cq:Page]/jcr:content@cq:conf</code> 属性到新位置中的绝对路径。</li>
-     <li>取消旧版Pinterest ConnectCloud Service与任何更新为引用新位置的AEM Communities站点根的关联。</li>
+     <li>更新任何AEM Communities網站根目錄，透過設定參考新的Pinterest社交登入設定。 <code>[cq:Page]/jcr:content@cq:conf</code> 屬性至新建位置的絕對路徑。</li>
+     <li>解除舊版Pinterest ConnectCloud Service與任何更新以參照新位置的AEM Communities網站根的關聯。</li>
     </ol> </td>
   </tr>
   <tr>
@@ -257,12 +257,12 @@ ht-degree: 3%
  </tbody>
 </table>
 
-### 评分配置 {#scoring-configurations}
+### 評分設定 {#scoring-configurations}
 
 <table>
  <tbody>
   <tr>
-   <td><strong>上一个位置</strong></td>
+   <td><strong>上一個位置</strong></td>
    <td><code>/etc/community/scoring</code></td>
   </tr>
   <tr>
@@ -270,18 +270,18 @@ ht-degree: 3%
    <td><code>/libs/settings/community/scoring</code></td>
   </tr>
   <tr>
-   <td><strong>重构指南</strong></td>
-   <td><p>为了与新的存储库结构保持一致，评分规则可以存储在 <code>/apps/settings/</code> 或/<code>conf/.../settings</code></p>
+   <td><strong>重組指引</strong></td>
+   <td><p>為了與新的存放庫結構保持一致，評分規則可以儲存在 <code>/apps/settings/</code> 或/<code>conf/.../settings</code></p>
     <ol>
-     <li>对象 <code>/apps/settings</code>，这将充当SCM中管理的全局或默认规则。</li>
-    </ol> <p>在中创建上下文感知配置 <code>/conf/</code> 通过使用CRXDELite：</p>
+     <li>對象 <code>/apps/settings</code>，這會當作在SCM中管理的全域或預設規則。</li>
+    </ol> <p>在中建立內容感知設定 <code>/conf/</code> 使用CRXDELite：</p>
     <ol>
-     <li>在所需中创建配置 <code>/conf/.../settings</code> 位置<br /> </li>
-     <li>社区站点必须具有 <code>cq:conf </code>属性属性集。
+     <li>建立所需設定 <code>/conf/.../settings</code> 位置<br /> </li>
+     <li>社群網站必須具備 <code>cq:conf </code>屬性屬性集。
       <ol>
-       <li>如果否 <code>cq:conf</code> 设置，则将从属性的给定路径中直接读取评分规则'<code>scoringRules</code>'例如，位于站点的根节点处： <code>/content/we-retail/us/en/community/jcr:content</code></li>
+       <li>若否 <code>cq:conf</code> 已設定，評分規則會直接從屬性的指定路徑讀取'<code>scoringRules</code>'位於網站的根節點，例如： <code>/content/we-retail/us/en/community/jcr:content</code></li>
       </ol> </li>
-    </ol> <p>清理：删除资源 <code>/etc/community/scoring</code></p> </td>
+    </ol> <p>清除：移除資源 <code>/etc/community/scoring</code></p> </td>
   </tr>
   <tr>
    <td><strong>注释</strong></td>
@@ -290,12 +290,12 @@ ht-degree: 3%
  </tbody>
 </table>
 
-### twitter社交登录配置 {#twitter-social-login-configurations}
+### twitter社交登入設定 {#twitter-social-login-configurations}
 
 <table>
  <tbody>
   <tr>
-   <td><strong>上一个位置</strong></td>
+   <td><strong>上一個位置</strong></td>
    <td><code>/etc/cloudservices/twitterconnect</code></td>
   </tr>
   <tr>
@@ -304,16 +304,16 @@ ht-degree: 3%
        </code></p> <p><code>/conf/&lt;tenant&gt;/settings/cloudconfigs/twitterconnect</code></p> <p> </p> </td>
   </tr>
   <tr>
-   <td><strong>重构指南</strong></td>
-   <td><p>任何新的Twitter云配置都必须迁移到新位置。</p>
+   <td><strong>重組指引</strong></td>
+   <td><p>任何新的Twitter雲端設定都必須移轉至新位置。</p>
     <ol>
-     <li>将以前位置中的现有配置迁移到新位置。
+     <li>將先前位置中的現有設定移轉到新位置。
       <ol>
-       <li>通过AEM创作UI手动重新创建新的Twitter社交登录配置，网址为 <strong>“工具”&gt;“Cloud Services”&gt;“Twitter社交登录配置”</strong>.<br /> 或 <br /> </li>
-       <li>将任何新的Twitter云配置从上一个位置复制到下面相应的新位置 <code>/conf/global or /conf/&lt;tenant&gt;</code>.</li>
+       <li>透過AEM編寫UI手動重新建立新的Twitter社交登入設定，網址為 <strong>「工具&gt;Cloud Services&gt; Twitter社交登入設定」</strong>.<br /> 或 <br /> </li>
+       <li>將任何新的Twitter雲端設定從先前位置複製到適當的新位置，位於 <code>/conf/global or /conf/&lt;tenant&gt;</code>.</li>
       </ol> </li>
-     <li>通过设置，更新任何AEM Communities站点根以引用新的Twitter社交登录配置 <code>[cq:Page]/jcr:content@cq:conf</code> 属性到新位置中的绝对路径。</li>
-     <li>取消旧版Twitter ConnectCloud Service与任何更新为引用新位置的AEM Communities站点根的关联。</li>
+     <li>更新任何AEM CommunitiesTwitter網站根目錄，透過設定 <code>[cq:Page]/jcr:content@cq:conf</code> 屬性至新建位置的絕對路徑。</li>
+     <li>解除舊版Twitter ConnectCloud Service與任何更新以參照新位置的AEM Communities網站根的關聯。</li>
     </ol> </td>
   </tr>
   <tr>
@@ -323,12 +323,12 @@ ht-degree: 3%
  </tbody>
 </table>
 
-### 杂项 {#misc}
+### 其他 {#misc}
 
 <table>
  <tbody>
   <tr>
-   <td><strong>上一个位置</strong></td>
+   <td><strong>上一個位置</strong></td>
    <td><code>/etc/community/templates</code></td>
   </tr>
   <tr>
@@ -336,12 +336,12 @@ ht-degree: 3%
    <td><code>/libs/settings/community/templates</code></td>
   </tr>
   <tr>
-   <td><strong>重构指南</strong></td>
-   <td><p>Adobe在以下位置提供了迁移实用程序：</p> <p><a href="https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration/tree/master/bundles/communities-template-migration">https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration/tree/master/bundles/communities-template-migration</a></p> </td>
+   <td><strong>重組指引</strong></td>
+   <td><p>Adobe已在以下位置提供移轉公用程式：</p> <p><a href="https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration/tree/master/bundles/communities-template-migration">https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration/tree/master/bundles/communities-template-migration</a></p> </td>
   </tr>
   <tr>
    <td><strong>注释</strong></td>
-   <td>现有自定义模板将移至 <code>/conf/global/settings/community/template/&lt;groups/sites/functions&gt;</code></td>
+   <td>現有的自訂範本將移至 <code>/conf/global/settings/community/template/&lt;groups/sites/functions&gt;</code></td>
   </tr>
  </tbody>
 </table>

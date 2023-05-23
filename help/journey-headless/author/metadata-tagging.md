@@ -4,8 +4,8 @@ description: 了解如何为内容片段定义元数据和标记
 exl-id: b4cc1311-1ef7-409a-bd41-0456519b3436
 source-git-commit: d33abafa0478de1f7b637a14df6d2b7712000c03
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '259'
+ht-degree: 91%
 
 ---
 
@@ -28,11 +28,11 @@ ht-degree: 0%
 
 可以使用三种方法来添加元数据和标记：
 
-* 首次创建片段时：
+* 首次建立片段時：
 
    ![创建内容片段 – 提供名称](/help/journey-headless/author/assets/headless-journey-author-content-fragment-03.png)
 
-* 的 **变体** 内容片段编辑器的选项卡允许您添加预定义的 **标记** 从您的项目中：
+* 此 **變數** 內容片段編輯器的索引標籤可讓您新增預先定義的 **標籤** 從您的專案：
 
    ![内容片段编辑器 – 阿拉斯加烈酒](/help/journey-headless/author/assets/headless-journey-author-content-fragment-05.png)
 

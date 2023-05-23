@@ -1,7 +1,7 @@
 ---
-title: 启用PDF/A支持
+title: 啟用PDF/A支援
 seo-title: Enable PDF/A support
-description: 了解如何启用PDF支持。 可以从Microsoft Excel、Microsoft PowerPoint和Microsoft Word文件创建符合PDF/A标准的文件。
+description: 瞭解如何啟用PDF/A支援。 您可以從Microsoft Excel、Microsoft PowerPoint和Microsoft Word檔案建立符合PDF/A規範的檔案。
 seo-description: Learn how to enable PDF/A support. PDF/A-compliant files can be created from Microsoft Excel, Microsoft PowerPoint, and Microsoft Word files.
 uuid: 663bc89d-9d8b-4178-9a88-6d2d5daac477
 contentOwner: admin
@@ -18,11 +18,11 @@ ht-degree: 0%
 
 ---
 
-# 启用PDF/A支持 {#enable-pdf-a-support}
+# 啟用PDF/A支援 {#enable-pdf-a-support}
 
-PDF生成器支持从Microsoft Excel、Microsoft PowerPoint和Microsoft Word文件创建符合PDF/A标准的文件。
+PDF產生器支援從Microsoft Excel、Microsoft PowerPoint和Microsoft Word檔案建立符合PDF/A規範的檔案。
 
-1. 在管理控制台中，单击“服务”>“PDF生成器”>“文件类型设置”。
-1. 单击“新建”或选择现有文件类型设置。
-1. 单击Microsoft Excel、Microsoft PowerPoint或Microsoft Word，然后选择创建PDF/A-1a兼容文件并保存更改。
-1. 在本机应用程序(例如Microsoft Word)中，单击Adobe PDF >更改转换设置，然后选择PDF/A-1b。
+1. 在Administration Console中，按一下「服務>PDF產生器>檔案型別設定」。
+1. 按一下「新增」或選取現有的檔案型別設定。
+1. 按一下Microsoft Excel、Microsoft PowerPoint或Microsoft Word，然後選取「建立PDF/A-1a相容檔案」並儲存變更。
+1. 在原生應用程式(例如Microsoft Word)中，按一下「Adobe PDF >變更轉換設定」，然後選取「PDF/A-1b」。

@@ -1,7 +1,7 @@
 ---
 title: 为 SPA 实施 React 组件
 seo-title: Implementing a React Component for SPA
-description: 本文介绍了如何调整简单的现有React组件以用于AEM SPA编辑器的示例。
+description: 本文介紹如何改寫簡單的現有React元件以與AEM SPA編輯器搭配使用的範例。
 seo-description: This article presents an example of how to adapt a simple, existing React component to work with the AEM SPA Editor.
 uuid: ae6a0a6f-0c3c-4820-9b58-c2a85a9f5291
 contentOwner: bohnert
@@ -20,63 +20,63 @@ ht-degree: 11%
 
 # 为 SPA 实施 React 组件{#implementing-a-react-component-for-spa}
 
-单页应用程序 (SPA) 可以为网站用户提供引人入胜的良好体验。开发人员希望能够使用SPA框架构建站点，而作者希望能够在AEM中无缝编辑使用SPA框架构建的站点的内容。
+单页应用程序 (SPA) 可以为网站用户提供引人入胜的良好体验。開發人員希望能夠使用SPA架構建立網站，而作者則希望能夠順暢地編輯使用SPA架構建立之網站的AEM內容。
 
-SPA创作功能提供了一个全面的解决方案，用于在AEM中支持SPA。 本文介绍了如何调整简单的现有React组件以用于AEM SPA编辑器的示例。
+SPA製作功能提供全方位的解決方案，可支援AEM中的SPA。 本文介紹如何改寫簡單的現有React元件以與AEM SPA編輯器搭配使用的範例。
 
 >[!NOTE]
 >
->对于需要基于SPA框架的客户端渲染(例如React或Angular)的项目，建议使用SPA编辑器。
+>SPA編輯器是建議解決方案，適用於需要SPA架構使用者端轉譯的專案(例如React或Angular)。
 
 ## 简介 {#introduction}
 
-由于AEM需要并在SPA和SPA编辑器之间建立简单且轻量的合同，采用现有Javascript应用程序并将其调整为用于AEM中的SPA是一件简单的事情。
+有了AEM所需的簡單且輕量型的合約，以及SPA與SPA編輯器之間的建立合約，直接了當要採用現有的Javascript應用程式，並將其調整為與AEM中的SPA搭配使用時，就很簡單了。
 
-本文说明了We.Retail Journal示例SPA上的天气组件示例。
+本文說明We.Retail Journal範例SPA上的天氣元件範例。
 
-您应熟悉 [适用于AEM的SPA应用程序的结构](/help/sites-developing/spa-getting-started-react.md) ，然后再阅读本文。
+您應熟悉 [適用於AEM的SPA應用程式結構](/help/sites-developing/spa-getting-started-react.md) 閱讀本文之前。
 
 >[!CAUTION]
->本文档使用 [We.Retail日志应用程序](https://github.com/adobe/aem-sample-we-retail-journal) 仅供演示之用。 不应将它用于任何项目工作。
+>本檔案使用 [We.Retail日誌應用程式](https://github.com/adobe/aem-sample-we-retail-journal) 僅供展示之用。 不应将它用于任何项目工作。
 >
 >任何 AEM 项目都应使用 [AEM 项目原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)，它支持使用 React 或 Angular 的 SPA 项目并利用 SPA SDK。
 
-## 天气组件 {#the-weather-component}
+## 天氣元件 {#the-weather-component}
 
-可在We.Retail Journal应用程序的左上角找到天气组件。 它显示定义位置的当前天气，动态提取天气数据。
+氣象元件可在We.Retail Journal應用程式的左上角找到。 它會顯示定義位置的目前氣象，以動態方式提取天氣資料。
 
-### 使用天气小组件 {#using-the-weather-widget}
+### 使用天氣Widget {#using-the-weather-widget}
 
 ![screen_shot_2018-06-08at143224](assets/screen_shot_2018-06-08at143224.png)
 
-在SPA编辑器中创作SPA的内容时，天气组件显示为任何其他AEM组件，包含一个工具栏并且可编辑。
+在SPA編輯器中編寫SPA的內容時，天氣元件會以任何其他AEM元件的形式出現、使用工具列完成並可編輯。
 
 ![screen_shot_2018-06-08at143304](assets/screen_shot_2018-06-08at143304.png)
 
-城市可在对话框中更新，就像任何其他AEM组件一样。
+城市可在對話方塊中更新，就像任何其他AEM元件一樣。
 
 ![screen_shot_2018-06-08at143446](assets/screen_shot_2018-06-08at143446.png)
 
-更改将持续存在，并且组件会自动使用新天气数据更新。
+此變更會持續存在，而元件會自動以新天氣資料更新。
 
 ![screen_shot_2018-06-08at143524](assets/screen_shot_2018-06-08at143524.png)
 
-### 天气组件实施 {#weather-component-implementation}
+### 天氣元件實作 {#weather-component-implementation}
 
-天气组件实际上基于公开可用的React组件，称为 [React开放天气](https://www.npmjs.com/package/react-open-weather)，它已被修改为可在We.Retail Journal示例SPA应用程序中用作组件。
+天氣元件實際上是根據公開可用的React元件，稱為 [React Open Weather](https://www.npmjs.com/package/react-open-weather)，此元件已改編為We.Retail Journal範例SPA應用程式中的元件。
 
-以下是React Open Weather组件用法的NPM文档片段。
+以下是使用React Open Weather元件的NPM檔案片段。
 
 ![screen_shot_2018-06-08at144723](assets/screen_shot_2018-06-08at144723.png) ![screen_shot_2018-06-08at144215](assets/screen_shot_2018-06-08at144215.png)
 
-查看自定义天气组件的代码( `Weather.js`)，该页面位于We.Retail日志应用程序中：
+檢閱自訂天氣元件的程式碼( `Weather.js`)在We.Retail日誌應用程式中：
 
-* **16号线**：根据需要加载React Open Weather构件。
-* **46号线**：此 `MapTo` 函数将此React组件与相应的AEM组件相关联，以便可以在SPA编辑器中编辑它。
+* **第16行**：React Open Weather Widget會視需要載入。
+* **第46行**：此 `MapTo` 函式將此React元件與對應的AEM元件建立關聯，以便在SPA編輯器中編輯它。
 
-* **第22-29行**：此 `EditConfig` 定义，检查是否已填充城市，如果为空，则定义值。
+* **第22-29行**：此 `EditConfig` 會定義，檢查是否已填入城市，如果為空，則會定義值。
 
-* **第31-44行**：天气组件扩展 `Component` 类，并按照NPM使用文档中为React Open Weather组件定义的方式提供所需数据，然后呈现组件。
+* **第31-44行**：天氣元件會延伸 `Component` 類別，並根據NPM使用檔案中的定義，為React Open Weather元件提供必要資料，以及呈現元件。
 
 ```javascript
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -127,8 +127,8 @@ class Weather extends Component {
 MapTo('we-retail-journal/global/components/weather')(Weather, WeatherEditConfig);
 ```
 
-尽管后端组件必须已存在，但前端开发人员可以使用We.Retail Journal SPA中的React Open Weather组件，只需很少的编码。
+雖然後端元件必須已存在，但前端開發人員可以在We.Retail Journal SPA中善用React Open Weather元件，且只需很少的程式碼。
 
 ## 后续步骤 {#next-step}
 
-有关为AEM开发SPA的更多信息，请参阅文章 [开发SPA for AEM](/help/sites-developing/spa-architecture.md).
+如需針對AEM開發SPA的詳細資訊，請參閱文章 [針對AEM開發SPA](/help/sites-developing/spa-architecture.md).

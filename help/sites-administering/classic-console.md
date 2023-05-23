@@ -1,7 +1,7 @@
 ---
-title: 经典UI标记控制台
+title: 傳統UI標籤控制檯
 seo-title: Classic UI Tagging Console
-description: 了解经典UI标记控制台。
+description: 瞭解傳統UI標籤控制檯。
 seo-description: Learn about the Classic UI Tagging Console.
 uuid: 51e29422-f967-424b-a7fd-4ca2ddc6b8a3
 contentOwner: Chiradeep Majumdar
@@ -14,173 +14,173 @@ exl-id: 8c6ba22f-5555-4e3c-998a-9353bd44715b
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '860'
-ht-degree: 37%
+ht-degree: 0%
 
 ---
 
-# 经典UI标记控制台{#classic-ui-tagging-console}
+# 傳統UI標籤控制檯{#classic-ui-tagging-console}
 
-本节适用于经典UI标记控制台。
+本節內容適用於Classic UI標籤控制檯。
 
-触屏优化UI标记控制台是 [此处](/help/sites-administering/tags.md#tagging-console).
+觸控最佳化的UI標籤控制檯是 [此處](/help/sites-administering/tags.md#tagging-console).
 
-要访问经典UI标记控制台，请执行以下操作：
+若要存取Classic UI標籤控制檯：
 
-* 在作者上
-* 使用管理权限登录
-* 浏览到控制台，例如， [https://localhost:4502/tagging](https://localhost:4502/tagging)
+* 於作者
+* 以管理許可權登入
+* 瀏覽至主控台，例如， [https://localhost:4502/tagging](https://localhost:4502/tagging)
 
 ![](assets/managing_tags_usingthetagasministrationconsole.png)
 
-## 创建标记和名称空间 {#creating-tags-and-namespaces}
+## 建立標籤和名稱空間 {#creating-tags-and-namespaces}
 
-1. 根据您的起始级别，您可以使用“**新建**”创建标记或命名空间：
+1. 根據您開始的層級，您可以使用以下專案建立標籤或名稱空間： **新增**：
 
-   如果选择“**标记**”，则可以创建一个命名空间：
+   如果您選取 **標籤** 您可以建立名稱空間：
 
    ![](assets/creating_tags_andnamespaces.png)
 
-   如果选择一个命名空间（例如&#x200B;**演示**），则可以在该命名空间内创建一个标记：
+   如果您選取名稱空間(例如 **示範**)您可以在該名稱空間中建立標籤：
 
    ![](assets/creating_tags_andnamespacesinnewnamespace.png)
 
-1. 在这两种情况下，请输入
+1. 在這兩種情況下，請輸入
 
    * **标题**
 (
-*必需*)标记的显示标题。 虽然可以输入任何字符，但建议不要使用以下特殊字符：
+*必填*)標籤的顯示標題。 雖然可以輸入任何字元，但建議您不要使用這些特殊字元：
 
-      * `colon (:)`  — 命名空间分隔符
-      * `forward slash (/)`  — 子标记分隔符
+      * `colon (:)`  — 名稱空間分隔符號
+      * `forward slash (/)`  — 子標籤分隔符號
 
-      如果输入，将不显示这些字符。
+      如果輸入，這些字元將不會顯示。
 
    * **名称**
 (
-*必需*)标记的节点名称。
+*必填*)標籤的節點名稱。
 
    * **描述**
 (
-*可选*)标记的描述。
+*可選*)標籤的說明。
 
-   * 选择 **创建**
+   * 選取 **建立**
 
 
-## 编辑标记 {#editing-tags}
+## 編輯標籤 {#editing-tags}
 
-1. 在右侧窗格中，选择要编辑的标记。
-1. 单击&#x200B;**编辑**。
-1. 您可以修改&#x200B;**标题**&#x200B;和&#x200B;**说明**。
-1. 单击&#x200B;**保存**&#x200B;以关闭对话框。
+1. 在右側窗格中，選取您要編輯的標籤。
+1. 按一下 **編輯**.
+1. 您可以修改 **標題** 和 **說明**.
+1. 按一下 **儲存** 以關閉對話方塊。
 
-## 删除标记 {#deleting-tags}
+## 刪除標籤 {#deleting-tags}
 
-1. 在右侧窗格中，选择要删除的标记。
+1. 在右窗格中，選取您要刪除的標籤。
 1. 单击&#x200B;**删除**。
-1. 单击 **是** 以关闭对话框。
+1. 按一下 **是** 以關閉對話方塊。
 
-   标记不应再列出。
+   標籤不應再列出。
 
-## 激活和取消激活标记 {#activating-and-deactivating-tags}
+## 啟用和停用標籤 {#activating-and-deactivating-tags}
 
-1. 在右侧窗格中，选择要激活（发布）或停用（取消发布）的命名空间或标记。
-1. 根据需要单击“**激活**”或“**取消激活**”。
+1. 在右側窗格中，選取您要啟用（發佈）或停用（取消發佈）的名稱空間或標籤。
+1. 按一下 **啟動** 或 **停用** 視需要。
 
-## 列表 - 显示引用标记的位置 {#list-showing-where-tags-are-referenced}
+## 清單 — 顯示參照標籤的位置 {#list-showing-where-tags-are-referenced}
 
-**列表**&#x200B;会打开一个新窗口，使用突出显示的标记显示所有页面的路径：
+**清單** 開啟新視窗，顯示使用反白標籤的所有頁面的路徑：
 
 ![](assets/list_showing_wheretagsarereferenced.png)
 
-## 移动标记 {#moving-tags}
+## 移動標籤 {#moving-tags}
 
-为帮助标记管理员和开发人员清理分类或重命名标记ID，可以将标记移动到新位置：
+為協助標籤管理員和開發人員清理分類或重新命名標籤ID，可以將標籤移動到新位置：
 
-1. 打开 **Tagging** 控制台。
-1. 选择标记并在顶部工具栏（或上下文菜单）中单击“**移动...**”。
-1. 在“**移动标记**”对话框中，定义：
+1. 開啟 **標籤** 主控台。
+1. 選取標籤並按一下 **移動……** 在頂端工具列中（或前後關聯功能表中）。
+1. 在 **移動標籤** 對話方塊，定義：
 
-   * **目标位置**，目标节点。
-   * **重命名为**，新的节点名称。
+   * **至**，目的地節點。
+   * **重新命名為**，即新節點名稱。
 
-1. 单击“**移动**”。
+1. 按一下 **移動**.
 
-“**移动标记**”对话框如下所示：
+此 **移動標籤** 對話方塊如下所示：
 
 ![](assets/move_tag.png)
 
 >[!NOTE]
 >
->作者不应移动标记或重命名标记ID。 必要时，作者只应 [更改标记标题](#editing-tags).
+>作者不應移動標籤或重新命名標籤ID。 必要時，作者只應 [變更標籤標題](#editing-tags).
 
-## 合并标记 {#merging-tags}
+## 合併標籤 {#merging-tags}
 
-当有重复的分类时，可以使用合并标记。当标记 A 合并到标记 B 时，所有使用标记 A 标记的页面都将使用标记 B 标记，并且标记 A 不再可供作者使用。
+分類法有重複專案時，可使用合併標籤。 當標籤A合併到標籤B時，所有使用標籤A的頁面都將使用標籤B標籤，並且標籤A不再可供作者使用。
 
-将一个标记合并到另一个标记：
+若要將標籤合併至另一個標籤：
 
-1. 打开 **Tagging** 控制台。
-1. 选择标记并在顶部工具栏（或上下文菜单）中单击“**合并...**”。
-1. 在“**合并标记**”对话框中，定义：
+1. 開啟 **標籤** 主控台。
+1. 選取標籤並按一下 **合併……** 在頂端工具列中（或前後關聯功能表中）。
+1. 在 **合併標籤** 對話方塊，定義：
 
-   * **目标标记**，目标节点。
+   * **到**，目的地節點。
 
-1. 单击“**合并**”。
+1. 按一下 **合併**.
 
-此 **合并标记** 对话框如下所示：
+此 **合併標籤** 對話方塊如下所示：
 
 ![](assets/mergetag.png)
 
-## 对标记的使用进行计数 {#counting-usage-of-tags}
+## 計算標籤的使用量 {#counting-usage-of-tags}
 
-查看标记的已使用次数：
+若要檢視某個標籤的使用次數：
 
-1. 打开 **Tagging** 控制台。
-1. 在顶部工具栏中单击“**计数用法**”：“计数”列会显示结果。
+1. 開啟 **標籤** 主控台。
+1. 按一下 **計數使用情況** 在頂端工具列中：計數欄會顯示結果。
 
-## 管理不同语言的标记 {#managing-tags-in-different-languages}
+## 管理不同語言的標籤 {#managing-tags-in-different-languages}
 
-可选 `title`标记属性可以翻译成多种语言。 标记 `titles` 然后可以根据用户语言或页面语言进行显示。
+選填 `title`標籤的屬性可翻譯成多種語言。 標籤 `titles` 然後可以根據使用者語言或頁面語言顯示。
 
-### 用多种语言定义标记标题 {#defining-tag-titles-in-multiple-languages}
+### 定義多種語言的標籤標題 {#defining-tag-titles-in-multiple-languages}
 
-以下过程说明如何翻译 `title`标记的 **动物** 英语、德语和法语：
+下列程式說明如何翻譯 `title`標籤的 **動物** 英文、德文和法文：
 
-1. 转到 **标记** 控制台。
-1. 编辑标记 **动物** 以下 **标记** > **Stock摄影**.
-1. 添加以下语言的翻译：
+1. 前往 **標籤** 主控台。
+1. 編輯標籤 **動物** 以下 **標籤** > **Stock Photography**.
+1. 新增以下語言的翻譯：
 
-   * **英语**：Animals
-   * **德语**：Tiere
-   * **法语**：Animaux
+   * **英文**：動物
+   * **德文**：地標
+   * **法文**：Animaux
 
 1. 保存更改。
 
-对话框如下所示：
+對話方塊如下所示：
 
 ![](assets/edit_tag.png)
 
-“标记”控制台使用用户语言设置，因此对于Animal标记，对于在用户属性中将语言设置为“法语”的用户，将显示“Animaux”。
+「標籤」控制檯會使用使用者語言設定，因此對於Animal標籤，會針對在使用者屬性中將語言設定為法文的使用者顯示「Animaux」。
 
-要向对话框添加新语言，请参阅一节 [向“编辑标记”对话框添加新语言](/help/sites-developing/building.md#adding-a-new-language-to-the-edit-tag-dialog) 在 **为开发人员添加标记** 部分。
+若要新增語言至對話方塊，請參閱區段 [新增語言至編輯標籤對話方塊](/help/sites-developing/building.md#adding-a-new-language-to-the-edit-tag-dialog) 在 **為開發人員加上標籤** 區段。
 
-### 以指定语言在页面属性中显示标记标题 {#displaying-tag-titles-in-page-properties-in-a-specified-language}
+### 以指定語言在頁面屬性中顯示標籤標題 {#displaying-tag-titles-in-page-properties-in-a-specified-language}
 
-默认情况下，标记 `titles`在中，页面属性以页面语言显示。 页面属性中的标记对话框有一个可显示标记的语言字段 `titles`换了语言。 以下过程介绍了如何显示标记 `titles`法语：
+依預設，標籤 `titles`在中，頁面屬性會以頁面語言顯示。 頁面屬性中的標籤對話方塊有一個可顯示標籤的語言欄位 `titles`使用不同語言。 下列程式說明如何顯示標籤 `titles`法文：
 
-1. 请参阅上一节以将法语翻译添加到 **动物** 以下 **标记** > **Stock摄影**.
-1. 打开英语分支的 **Geometrixx** 站点中的&#x200B;**产品**&#x200B;页面的页面属性。
-1. 打开 **标记/关键字** 对话框（通过选择“标记”/“关键字”显示区域右侧的下拉菜单），然后选择 **法语** 从右下角的下拉菜单中选取语言。
-1. 使用左右箭头滚动，直到能够选择 **Stock摄影** 选项卡
+1. 請參閱上一節，將法文翻譯新增至 **動物** 以下 **標籤** > **Stock Photography**.
+1. 開啟的頁面屬性 **產品** 的英文分支中的頁面 **Geometrixx** 網站。
+1. 開啟 **標籤/關鍵字** 對話方塊（選取「標籤/關鍵字」顯示區域右側的下拉式功能表），然後選取 **法文** 從右下角的下拉式選單中選取語言。
+1. 使用左右箭頭捲動，直到能夠選取 **Stock Photography** 標籤
 
-   选择 **动物** (**阿尼莫**)，然后选择对话框外部以将其关闭并将标记添加到页面属性。
+   選取 **動物** (**Animaux**)，並選取對話方塊外部以關閉它，並將標籤新增至頁面屬性。
 
    ![](assets/french_tag.png)
 
-默认情况下，“页面属性”对话框会显示标记 `titles`根据页面语言。
+依預設，「頁面屬性」對話方塊會顯示標籤 `titles`根據頁面語言。
 
-通常，如果页面语言可用，则从页面语言中获取标记的语言。 当 [ `tag` 构件](/help/sites-developing/building.md#tagging-on-the-client-side) 在其他情况下（例如在表单或对话框中）使用，标记语言取决于上下文。
+一般而言，如果頁面語言可用，則會從頁面語言取得標籤的語言。 當 [ `tag` Widget](/help/sites-developing/building.md#tagging-on-the-client-side) 在其他情況下使用（例如在表單或對話方塊中），標籤語言取決於上下文。
 
 >[!NOTE]
 >
->标准页面组件中的标记云和元关键字使用本地化的标记 `titles`基于页面语言（如果可用）。
+>標準頁面元件中的標籤雲和中繼關鍵字會使用當地語系化的標籤 `titles`根據頁面語言（如果可用）。

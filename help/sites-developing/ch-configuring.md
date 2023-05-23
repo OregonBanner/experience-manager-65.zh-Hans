@@ -1,7 +1,7 @@
 ---
 title: 配置 ContextHub
 seo-title: Configuring ContextHub
-description: 了解如何配置ContextHub。
+description: 瞭解如何設定Context中心。
 seo-description: Learn how to configure Context Hub.
 uuid: f2988bb9-6878-42a2-bb51-c3f8683248c5
 contentOwner: msm-service
@@ -18,13 +18,13 @@ ht-degree: 1%
 
 # 配置 ContextHub {#configuring-contexthub}
 
-ContextHub是用于存储、处理和呈现上下文数据的框架。 有关ContextHub的更多详细信息，请参阅 [开发人员文档](/help/sites-developing/contexthub.md). ContextHub取代 [Client Context](/help/sites-administering/client-context.md) 在触屏UI中。
+ContextHub是一種用於儲存、操控和呈現內容資料的架構。 如需ContextHub的詳細資訊，請參閱 [開發人員檔案](/help/sites-developing/contexthub.md). ContextHub取代 [使用者端內容](/help/sites-administering/client-context.md) 在觸控式UI中。
 
-配置 [ContextHub](/help/sites-developing/contexthub.md) 工具栏来控制它是否在“预览”模式下显示、创建ContextHub存储区，以及使用触屏优化UI添加UI模块。
+設定 [ContextHub](/help/sites-developing/contexthub.md) 工具列可控制它是否出現在預覽模式中、建立ContextHub存放區，以及使用觸控最佳化UI新增UI模組。
 
-## 禁用ContextHub {#disabling-contexthub}
+## 停用ContextHub {#disabling-contexthub}
 
-默认情况下，AEM安装中已启用ContextHub。 可以禁用ContextHub以阻止加载js/css并初始化。
+預設情況下，AEM安裝會啟用ContextHub。 可以停用ContextHub以防止其載入js/css和初始化。
 
 <!--
 There are two options to disable ContextHub:
@@ -39,144 +39,144 @@ There are two options to disable ContextHub:
 or
 -->
 
-* 使用CRXDE Lite设置属性 `disabled` to **true** 在 `/libs/settings/cloudsettings/legacy/contexthub`
+* 使用CRXDE Lite設定屬性 `disabled` 至 **true** 在 `/libs/settings/cloudsettings/legacy/contexthub`
 
 >[!NOTE]
 >
->[由于AEM 6.4中的存储库重组，](/help/sites-deploying/repository-restructuring.md) ContextHub配置的位置已从 `/etc/cloudsettings` 至：
+>[由於AEM 6.4中的存放庫重組，](/help/sites-deploying/repository-restructuring.md) ContextHub設定的位置已從變更 `/etc/cloudsettings` 至：
 >
 >* `/libs/settings/cloudsettings`
 >* `/conf/global/settings/cloudsettings`
 >* `/conf/<tenant>/settings/cloudsettings`
 
 
-## 显示和隐藏ContextHub UI {#showing-and-hiding-the-contexthub-ui}
+## 顯示和隱藏ContextHub UI {#showing-and-hiding-the-contexthub-ui}
 
-配置AdobeGranite ContextHub OSGi服务以显示或隐藏 [ContextHub UI](/help/sites-authoring/ch-previewing.md) 在您的页面上。 此服务的PID是 `com.adobe.granite.contexthub.impl.ContextHubImpl.`
+設定AdobeGranite ContextHub OSGi服務以顯示或隱藏 [ContextHub UI](/help/sites-authoring/ch-previewing.md) （在您的頁面上）。 此服務的PID為 `com.adobe.granite.contexthub.impl.ContextHubImpl.`
 
-要配置服务，您可以使用 [Web控制台](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) 或使用 [存储库中的JCR节点](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository):
+若要設定服務，您可以使用 [網頁主控台](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) 或使用 [存放庫中的JCR節點](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository)：
 
-* **Web控制台：** 要显示UI，请选择显示UI属性。 要隐藏UI，请清除隐藏UI属性。
-* **JCR节点：** 要显示UI，请设置布尔值 `com.adobe.granite.contexthub.show_ui` 属性 `true`. 要隐藏UI，请将属性设置为 `false`.
+* **Web主控台：** 若要顯示UI，請選取「顯示UI」屬性。 若要隱藏UI，請清除「隱藏UI」屬性。
+* **JCR節點：** 若要顯示UI，請設定布林值 `com.adobe.granite.contexthub.show_ui` 屬性至 `true`. 若要隱藏UI，請將屬性設定為 `false`.
 
-显示ContextHub UI时，它仅在AEM创作实例的页面上显示。 UI不会显示在发布实例的页面上。
+顯示ContextHub UI時，它只會顯示在AEM作者執行個體的頁面上。 UI未出現在發佈執行個體的頁面上。
 
-## 添加ContextHub UI模式和模块 {#adding-contexthub-ui-modes-and-modules}
+## 新增ContextHub UI模式和模組 {#adding-contexthub-ui-modes-and-modules}
 
-在“预览”模式下，配置ContextHub工具栏中显示的UI模式和模块：
+設定在「預覽」模式下顯示在ContextHub工具列中的UI模式和模組：
 
-* UI模式：相关模块组
-* 模块：用于从存储中公开上下文数据并允许作者处理上下文的小组件
+* UI模式：相關模組群組
+* 模組：從存放區公開內容資料並允許作者操作內容的Widget
 
-UI模式在工具栏左侧显示为一系列图标。 选择后，UI模式的模块将显示在右侧。
+UI模式會在工具列左側顯示為一系列圖示。 選取後，UI模式的模組會顯示在右側。
 
 ![chlimage_1-319](assets/chlimage_1-319.png)
 
-图标是 [Coral UI图标库](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html#availableIcons).
+圖示是來自的參照 [Coral UI圖示程式庫](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html#availableIcons).
 
-### 添加UI模式 {#adding-a-ui-mode}
+### 新增UI模式 {#adding-a-ui-mode}
 
-添加UI模式以对相关ContextHub模块进行分组。 创建UI模式时，您会提供ContextHub工具栏中显示的标题和图标。
+新增UI模式至群組相關的ContextHub模組。 建立UI模式時，您會提供顯示在ContextHub工具列中的標題和圖示。
 
-1. 在Experience Manager边栏中，单击或点按工具>站点> Context Hub。
-1. 单击或点按默认的配置容器。
-1. 单击或点按Context Hub配置。
-1. 单击或点按创建按钮，然后单击或点按ContextHub UI模式。
+1. 在Experience Manager邊欄上，按一下或點選「工具>網站>內容中心」。
+1. 按一下或點選預設的設定容器。
+1. 按一下或點選「Context Hub設定」。
+1. 按一下或點選「建立」按鈕，然後按一下或點選「Context Hub UI模式」。
 
    ![chlimage_1-320](assets/chlimage_1-320.png)
 
-1. 为以下属性提供值：
+1. 提供下列屬性的值：
 
-   * UI模式标题：标识UI模式的标题
-   * 模式图标：选择器 [Coral用户界面图标](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html#availableIcons) 例如 `coral-Icon--user`
-   * 已启用：选择以在ContextHub工具栏中显示UI模式
+   * UI模式標題：識別UI模式的標題
+   * 模式圖示：的選取器 [Coral UI圖示](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html#availableIcons) 使用，例如 `coral-Icon--user`
+   * 啟用：選取此選項可在ContextHub工具列中顯示UI模式
 
-1. 单击或点按保存。
+1. 按一下或點選「儲存」。
 
-### 添加UI模块 {#adding-a-ui-module}
+### 新增使用者介面模組 {#adding-a-ui-module}
 
-将ContextHub UI模块添加到UI模式，以便该模块显示在ContextHub工具栏中，用于预览页面内容。 添加UI模块时，您将创建一个在ContextHub中注册的模块类型实例。 要添加UI模块，您必须知道关联模块类型的名称。
+將ContextHub UI模組新增至UI模式，使其顯示在ContextHub工具列中以預覽頁面內容。 新增UI模組時，您會建立已向ContextHub註冊的模組型別例項。 若要新增UI模組，您必須知道關聯模組型別的名稱。
 
-AEM提供了基本UI模块类型以及几个示例UI模块类型，您可以在这些类型上为UI模块提供基础。 下表简要描述了每个报表包。 有关开发自定义UI模块的信息，请参阅 [创建ContextHub UI模块](/help/sites-developing/ch-extend.md#creating-contexthub-ui-module-types).
+AEM提供基礎UI模組型別以及數個範例UI模組型別，您可以據此建立UI模組。 下表提供每個專案的簡短說明。 如需有關開發自訂UI模組的資訊，請參閱 [建立ContextHub UI模組](/help/sites-developing/ch-extend.md#creating-contexthub-ui-module-types).
 
-UI模块属性包括详细配置，您可以在其中为特定于模块的属性提供值。 您以JSON格式提供详细配置。 表中的“模块类型”列提供了有关每个UI模块类型所需的JSON代码信息的链接。
+UI模組屬性包含詳細設定，您可以在其中提供模組特定屬性的值。 您可以提供JSON格式的詳細設定。 表格中的模組型別欄提供每個UI模組型別所需JSON程式碼相關資訊的連結。
 
-| 模块类型 | 描述 | 存储 |
+| 模組型別 | 描述 | 存储 |
 |---|---|---|
-| [contexthub.base](/help/sites-developing/ch-samplemodules.md#contexthub-base-ui-module-type) | 通用UI模块类型 | 在UI模块属性中配置 |
-| [contexthub.browserinfo](/help/sites-developing/ch-samplemodules.md#contexthub-browserinfo-ui-module-type) | 显示有关浏览器的信息 | surferinfo |
-| [contexthub.datetime](/help/sites-developing/ch-samplemodules.md#contexthub-datetime-ui-module-type) | 显示日期和时间信息 | date |
-| [contexthub.device](/help/sites-developing/ch-samplemodules.md#contexthub-device-ui-module-type) | 显示客户端设备 | 模拟器 |
-| [contexthub.location](/help/sites-developing/ch-samplemodules.md#contexthub-location-ui-module-type) | 显示客户端的纬度和经度，以及地图上的位置。 允许您更改位置。 | 地理位置 |
-| [contexthub.screen-orientation](/help/sites-developing/ch-samplemodules.md#contexthub-screen-orientation-ui-module-type) | 显示设备的屏幕方向（横向或纵向） | 模拟器 |
-| [contexthub.tagcloud](/help/sites-developing/ch-samplemodules.md#contexthub-tagcloud-ui-module-type) | 显示有关页面标记的统计信息 | tagcloud |
-| [granite.profile](/help/sites-developing/ch-samplemodules.md#granite-profile-ui-module-type) | 显示当前用户的配置文件信息，包括authorizableID、displayName和familyName。 可以更改displayName和familyName的值。 | 侧面像 |
+| [contexthub.base](/help/sites-developing/ch-samplemodules.md#contexthub-base-ui-module-type) | 通用UI模組型別 | 在UI模組屬性中設定 |
+| [contexthub.browserinfo](/help/sites-developing/ch-samplemodules.md#contexthub-browserinfo-ui-module-type) | 顯示瀏覽器的相關資訊 | surferinfo |
+| [contexthub.datetime](/help/sites-developing/ch-samplemodules.md#contexthub-datetime-ui-module-type) | 顯示日期和時間資訊 | 日期時間 |
+| [contexthub.device](/help/sites-developing/ch-samplemodules.md#contexthub-device-ui-module-type) | 顯示使用者端裝置 | 模擬器 |
+| [contexthub.location](/help/sites-developing/ch-samplemodules.md#contexthub-location-ui-module-type) | 顯示使用者端的經緯度，以及地圖上的位置。 可讓您變更位置。 | 地理位置 |
+| [contexthub.screen-orientation](/help/sites-developing/ch-samplemodules.md#contexthub-screen-orientation-ui-module-type) | 顯示裝置的熒幕方向（橫向或縱向） | 模擬器 |
+| [contexthub.tagcloud](/help/sites-developing/ch-samplemodules.md#contexthub-tagcloud-ui-module-type) | 顯示頁面標籤的相關統計資料 | tagcloud |
+| [granite.profile](/help/sites-developing/ch-samplemodules.md#granite-profile-ui-module-type) | 顯示目前使用者的設定檔資訊，包括authorizableID、displayName和familyName。 您可以變更displayName和familyName的值。 | 侧面像 |
 
-1. 在Experience Manager边栏上，单击或点按工具>站点> ContextHub。
-1. 单击或点按要向其添加UI模块的配置容器。
-1. 单击或键入要将UI模块添加到的ContextHub配置。
-1. 单击或点按要将UI模块添加到的UI模式。
-1. 单击或点按创建按钮，然后单击或点按ContextHub UI模块（通用）。
+1. 在Experience Manager邊欄上，按一下或點選「工具>網站> ContextHub」。
+1. 按一下或點選您要新增UI模組的設定容器。
+1. 按一下或輸入您要新增UI模組的ContextHub設定。
+1. 按一下或點選您要新增UI模組的UI模式。
+1. 按一下或點選「建立」按鈕，然後按一下或點選「ContextHub UI模組（一般）」。
 
    ![chlimage_1-321](assets/chlimage_1-321.png)
 
-1. 为以下属性提供值：
+1. 提供下列屬性的值：
 
-   * UI模块标题：标识UI模块的标题
-   * 模块类型：模块类型
-   * 已启用：选择以在ContextHub工具栏中显示UI模块
+   * UI模組標題：識別UI模組的標題
+   * 模組型別：模組型別
+   * 啟用：選取此選項可在ContextHub工具列中顯示UI模組
 
-1. （可选）要覆盖默认的存储配置，请输入JSON对象以配置UI模块。
-1. 单击或点按保存。
+1. （選用）若要覆寫預設存放區設定，請輸入JSON物件以設定UI模組。
+1. 按一下或點選「儲存」。
 
-## 创建ContextHub存储 {#creating-a-contexthub-store}
+## 建立ContextHub存放區 {#creating-a-contexthub-store}
 
-创建ContextHub存储以保留用户数据并根据需要访问数据。 ContextHub存储基于注册的存储候选。 创建存储时，需要注册存储候选项的storeType值。 (请参阅 [创建自定义商店候选项](/help/sites-developing/ch-extend.md#creating-custom-store-candidates).)
+建立Context Hub存放區以儲存使用者資料，並視需要存取資料。 ContextHub存放區是根據已註冊的存放區候選者。 建立存放區時，您需要存放區候選註冊所在的storeType值。 (請參閱 [建立自訂商店候選者](/help/sites-developing/ch-extend.md#creating-custom-store-candidates).)
 
-### 详细的存储配置 {#detailed-store-configuration}
+### 詳細存放區設定 {#detailed-store-configuration}
 
-在配置存储时， Detail Configuration属性允许您为特定于存储的属性提供值。 值基于 `config` 存储的参数 `init` 函数。 因此，是否需要提供此值以及值的格式取决于存储。
+當您設定存放區時，Detail Configuration屬性可讓您提供存放區特定屬性的值。 此值是根據 `config` 商店的引數 `init` 函式。 因此，您是否需要提供此值和值的格式取決於存放區。
 
-Detail Configuration属性的值是 `config` 对象。
+「詳細資料設定」屬性的值為 `config` JSON格式的物件。
 
 ### 示例存储候选 {#sample-store-candidates}
 
-AEM提供了以下示例存储候选项，您可以在这些候选项上创建存储。
+AEM提供下列可供您作為存放區基礎的範例存放區候選項。
 
-| 存储类型 | 描述 |
+| 存放區型別 | 描述 |
 |---|---|
-| [aem.segmentation](/help/sites-developing/ch-samplestores.md#aem-segmentation-sample-store-candidate) | 存储已解析和未解析的ContextHub区段。 自动从ContextHub SegmentManager中检索区段 |
-| [aem.resolvedsegments](/help/sites-developing/ch-samplestores.md#aem-resolvedsegments-sample-store-candidate) | 存储当前解析的区段。 监听ContextHub SegmentManager服务以自动更新存储 |
-| [contexthub.geolocation](/help/sites-developing/ch-samplestores.md#contexthub-geolocation-sample-store-candidate) | 存储浏览器位置的经度和纬度。 |
-| [contexthub.datetime](/help/sites-developing/ch-samplestores.md#contexthub-datetime-sample-store-candidate) | 存储浏览器位置的当前日期、时间和季度 |
-| [granite.emulators](/help/sites-developing/ch-samplestores.md#granite-emulators-sample-store-candidate) | 为多个设备定义属性和功能，并检测当前客户端设备 |
-| [contexthub.generic-jsonp](/help/sites-developing/ch-samplestores.md#contexthub-generic-jsonp-sample-store-candidate) | 检索并存储JSONP服务中的数据 |
-| [granite.profile](/help/sites-developing/ch-samplestores.md#granite-profile-sample-store-candidate) | 存储当前用户的配置文件数据 |
-| [contexthub.surferinfo](/help/sites-developing/ch-samplestores.md#contexthub-surferinfo-sample-store-candidate) | 存储有关客户端的信息，如设备信息、浏览器类型和窗口方向 |
-| [contexthub.tagcloud](/help/sites-developing/ch-samplestores.md#contexthub-tagcloud-sample-data-store) | 存储页面标记和标记计数 |
+| [aem.segmentation](/help/sites-developing/ch-samplestores.md#aem-segmentation-sample-store-candidate) | 儲存已解析和未解析的ContextHub區段。 自動從ContextHub SegmentManager擷取區段 |
+| [aem.resolvedsegments](/help/sites-developing/ch-samplestores.md#aem-resolvedsegments-sample-store-candidate) | 儲存目前解析的區段。 偵聽ContextHub SegmentManager服務以自動更新存放區 |
+| [contexthub.geolocation](/help/sites-developing/ch-samplestores.md#contexthub-geolocation-sample-store-candidate) | 儲存瀏覽器位置的經緯度。 |
+| [contexthub.datetime](/help/sites-developing/ch-samplestores.md#contexthub-datetime-sample-store-candidate) | 儲存瀏覽器位置的目前日期、時間和季節 |
+| [granite.emulators](/help/sites-developing/ch-samplestores.md#granite-emulators-sample-store-candidate) | 定義許多裝置的屬性和功能，並偵測目前的使用者端裝置 |
+| [contexthub.generic-jsonp](/help/sites-developing/ch-samplestores.md#contexthub-generic-jsonp-sample-store-candidate) | 從JSONP服務擷取並儲存資料 |
+| [granite.profile](/help/sites-developing/ch-samplestores.md#granite-profile-sample-store-candidate) | 儲存目前使用者的設定檔資料 |
+| [contexthub.surferinfo](/help/sites-developing/ch-samplestores.md#contexthub-surferinfo-sample-store-candidate) | 儲存使用者端的相關資訊，例如裝置資訊、瀏覽器型別和視窗方向 |
+| [contexthub.tagcloud](/help/sites-developing/ch-samplestores.md#contexthub-tagcloud-sample-data-store) | 儲存頁面標籤和標籤計數 |
 
-1. 在Experience Manager边栏上，单击或点按工具>站点> ContextHub。
-1. 单击或点按默认配置容器。
-1. 单击或点按Contexthub配置
-1. 要添加商店，请单击或点按创建图标，然后单击或点按ContexHub商店配置。
+1. 在Experience Manager邊欄上，按一下或點選「工具>網站> ContextHub」。
+1. 按一下或點選預設設定容器。
+1. 按一下或點選「 Contexthub設定」
+1. 若要新增商店，請按一下或點選「建立」圖示，然後按一下或點選「 ContexHub商店設定」。
 
    ![chlimage_1-322](assets/chlimage_1-322.png)
 
-1. 提供基本配置属性的值，然后单击或点按下一步：
+1. 提供基本設定屬性的值，然後按一下或點選「下一步」：
 
-   * **配置标题：** 标识商店的标题
-   * **存储类型：** 作为存储基础的存储候选项的storeType属性的值
-   * **必需：** 选择
-   * **已启用：** 选择以启用存储
+   * **設定標題：** 識別商店的標題
+   * **存放區型別：** 存放區所依據之存放區候選專案的storeType屬性值
+   * **必填：** 選取
+   * **已啟用：** 選取以啟用存放區
 
-1. （可选）要覆盖默认的存储配置，请在详细配置(JSON)框中输入JSON对象。
-1. 单击或点按保存。
+1. （可選）若要覆寫預設存放區設定，請在「詳細資料設定(JSON)」方塊中輸入JSON物件。
+1. 按一下或點選「儲存」。
 
-## 示例：使用JSONP服务  {#example-using-a-jsonp-service}
+## 範例：使用JSONP服務  {#example-using-a-jsonp-service}
 
-此示例说明了如何在UI模块中配置存储和显示数据。 在此示例中，jsontest.com站点的MD5服务用作存储的数据源。 该服务会以JSON格式返回给定字符串的MD5哈希代码。
+此範例說明如何設定存放區以及在UI模組中顯示資料。 在此範例中，jsontest.com網站的MD5服務會作為存放區的資料來源。 此服務會傳回指定字串的MD5雜湊代碼，格式為JSON。
 
-配置了contexthub.generic-jsonp存储，以便存储服务调用的数据 `https://md5.jsontest.com/?text=%22text%20to%20md5%22`. 该服务会返回在UI模块中显示的以下数据：
+contexthub.generic-jsonp存放區已設定為儲存服務呼叫的資料 `https://md5.jsontest.com/?text=%22text%20to%20md5%22`. 此服務會傳回以下資料，這些資料會顯示在UI模組中：
 
 ```xml
 {
@@ -185,18 +185,18 @@ AEM提供了以下示例存储候选项，您可以在这些候选项上创建�
 }
 ```
 
-### 创建contexthub.generic-jsonp存储 {#creating-a-contexthub-generic-jsonp-store}
+### 建立contexthub.generic-jsonp存放區 {#creating-a-contexthub-generic-jsonp-store}
 
-contexthub.generic-jsonp示例存储候选项允许您从JSONP服务或返回JSON数据的Web服务中检索数据。 对于此存储候选项，请使用存储配置来提供有关要使用的JSONP服务的详细信息。
+contexthub.generic-jsonp範例存放區候選可讓您從JSONP服務或傳回JSON資料的Web服務擷取資料。 對於此存放區候選者，請使用存放區設定來提供要使用的JSONP服務的詳細資訊。
 
-的 [init](/help/sites-developing/contexthub-api.md#init-name-config) 函数 `ContextHub.Store.JSONPStore` Javascript类定义 `config` 初始化此存储候选项的对象。 的 `config` 对象包含 `service` 包含有关JSONP服务的详细信息的对象。 要配置存储，请提供 `service` 对象，作为Detail Configuration属性的值。
+此 [init](/help/sites-developing/contexthub-api.md#init-name-config) 的功能 `ContextHub.Store.JSONPStore` Javascript類別會定義 `config` 初始化此存放區候選的物件。 此 `config` 物件包含 `service` 物件，其中包含有關JSONP服務的詳細資訊。 若要設定商店，請提供 `service` JSON格式的物件，作為Detail Configuration屬性值。
 
-要保存jsontest.com站点的MD5服务中的数据，请使用 [创建ContextHub存储](/help/sites-developing/ch-configuring.md#creating-a-contexthub-store) 使用以下属性：
+若要儲存jsontest.com網站MD5服務的資料，請遵循下列程式： [建立ContextHub存放區](/help/sites-developing/ch-configuring.md#creating-a-contexthub-store) 使用下列屬性：
 
-* **配置标题：** md5
-* **存储类型：** contexthub.generic-jsonp
-* **必需：** 选择
-* **已启用：** 选择
+* **設定標題：** md5
+* **存放區型別：** contexthub.generic-jsonp
+* **必填：** 選取
+* **已啟用：** 選取
 * **详细配置 (JSON):**
 
    ```xml
@@ -215,16 +215,16 @@ contexthub.generic-jsonp示例存储候选项允许您从JSONP服务或返回JSO
     }
    ```
 
-### 为md5数据添加UI模块 {#adding-a-ui-module-for-the-md-data}
+### 新增md5資料的UI模組 {#adding-a-ui-module-for-the-md-data}
 
-将UI模块添加到ContextHub工具栏以显示存储在示例md5存储区中的数据。 在此示例中，contexthub.base模块用于生成以下UI模块：
+將UI模組新增至ContextHub工具列，以顯示儲存在範例md5存放區中的資料。 在此範例中，contexthub.base模組用於產生下列UI模組：
 
 ![chlimage_1-323](assets/chlimage_1-323.png)
 
-在中使用该过程 [添加UI模块](#adding-a-ui-module) 将UI模块添加到现有UI模式，例如示例的Perona UI模式。 对于UI模块，请使用以下属性值：
+請遵循下列步驟： [新增使用者介面模組](#adding-a-ui-module) 將UI模組新增至現有的UI模式，例如範例Perona UI模式。 對於UI模組，請使用以下屬性值：
 
-* **UI模块标题：** MD5
-* **模块类型：** contexthub.base
+* **UI模組標題：** MD5
+* **模組型別：** contexthub.base
 * **详细配置 (JSON):**
 
    ```xml
@@ -237,58 +237,58 @@ contexthub.generic-jsonp示例存储候选项允许您从JSONP服务或返回JSO
    }
    ```
 
-## 调试ContextHub {#debugging-contexthub}
+## 偵錯ContextHub {#debugging-contexthub}
 
-可以启用ContextHub的调试模式，以便进行故障排除。 可以通过ContextHub配置或通过CRXDE启用调试模式。
+可以啟用ContextHub的偵錯模式以進行疑難排解。 偵錯模式可以透過ContextHub設定或透過CRXDE啟用。
 
-### 通过配置 {#via-the-configuration}
+### 透過設定 {#via-the-configuration}
 
-编辑ContextHub的配置并选中选项 **调试**
+編輯ContextHub的設定並核取選項 **偵錯**
 
-1. 在边栏中，单击或点按 **“工具”>“站点”>“ContextHub”**
-1. 单击或点按默认设置 **配置容器**
-1. 选择 **ContextHub配置** 单击或点按 **编辑所选元素**
-1. 单击或点按 **调试** 单击或点按 **保存**
+1. 在導軌中，按一下或點選 **「工具」>「網站」>「ContextHub」**
+1. 按一下或點選預設值 **設定容器**
+1. 選取 **ContextHub設定** 並按一下或點選 **編輯選取的元素**
+1. 按一下或點選 **偵錯** 並按一下或點選 **儲存**
 
-### 通过CRXDE {#via-crxde}
+### 透過CRXDE {#via-crxde}
 
-使用CRXDE Lite设置属性 `debug` to **true** 下：
+使用CRXDE Lite設定屬性 `debug` 至 **true** 在：
 
 * `/conf/global/settings/cloudsettings` 或
 * `/conf/<tenant>/settings/cloudsettings`
 
 >[!NOTE]
 >
->对于仍位于其旧版路径下的ContextHub配置，可在 `debug property` 表示 `/libs/settings/cloudsettings/legacy/contexthub`.
+>對於仍位於其舊有路徑下方的ContextHub設定，設定 `debug property` 是 `/libs/settings/cloudsettings/legacy/contexthub`.
 
-### 静默模式 {#silent-mode}
+### 靜音模式 {#silent-mode}
 
-静默模式禁止所有调试信息。 与可单独为每个ContextHub配置设置的常规调试选项不同，静默模式是全局设置，它优先于ContextHub配置级别上的任何调试设置。
+無訊息模式會隱藏所有偵錯資訊。 與一般偵錯選項不同（可為每個ContextHub設定單獨設定），無訊息模式是全域設定，其優先於ContextHub設定層級的任何偵錯設定。
 
-这对于您根本不希望获得任何调试信息的发布实例非常有用。 由于它是全局设置，因此通过OSGi启用。
+這對於您根本不想要任何偵錯資訊的發佈執行個體非常有用。 由於這是全域設定，因此可透過OSGi啟用。
 
-1. 打开 **Adobe Experience Manager Web控制台配置** at `http://<host>:<port>/system/console/configMgr`
-1. 搜索 **AdobeGranite ContextHub**
-1. 单击配置 **AdobeGranite ContextHub** 编辑其属性
-1. 选中选项 **静默模式** 单击 **保存**
+1. 開啟 **Adobe Experience Manager Web主控台設定** 於 `http://<host>:<port>/system/console/configMgr`
+1. 搜尋 **AdobeGranite ContextHub**
+1. 按一下設定 **AdobeGranite ContextHub** 編輯其屬性
+1. 核取選項 **靜音模式** 並按一下 **儲存**
 
-## 升级后恢复ContextHub配置 {#recovering-contexthub-configurations-after-upgrading}
+## 升級後復原ContextHub設定 {#recovering-contexthub-configurations-after-upgrading}
 
-当 [升级到AEM](/help/sites-deploying/upgrade.md) 执行时，将备份ContextHub配置并将其存储在一个安全位置。 升级期间，将安装默认的ContextHub配置，替换现有配置。 需要备份才能保留您所做的任何更改或添加内容。
+當 [升級至AEM](/help/sites-deploying/upgrade.md) 會執行，ContextHub設定會備份並儲存在安全位置。 在升級期間，會安裝預設ContextHub設定，取代現有設定。 您必須進行備份，才能保留您所做的任何變更或新增。
 
-ContextHub配置存储在名为 `contexthub` 在以下节点下：
+ContextHub設定儲存在名為的資料夾中 `contexthub` 在下列節點下：
 
 * `/conf/global/settings/cloudsettings`
 * `/conf/<tenant>/settings/cloudsettings`
 
-升级后，备份将存储在名为 `contexthub` 在名为的节点下：
+升級後，備份會儲存在名為的資料夾中 `contexthub` 在名為的節點底下：
 
 `/conf/global/settings/cloudsettings/default-pre-upgrade_yyyymmdd_xxxxxxx` 或
 `/conf/<tenant>/settings/cloudsettings/default-pre-upgrade_yyyymmdd_xxxxxxx`
 
-的 `yyyymmdd` 节点名称的一部分是执行升级的日期。
+此 `yyyymmdd` 節點名稱的一部分是執行升級的日期。
 
-要恢复ContextHub配置，请使用CRXDE Lite从 `default-pre-upgrade_yyyymmdd_xxxxxx` 节点到以下位置：
+若要復原您的ContextHub設定，請使用CRXDE Lite從以下複製代表您的存放區、UI模式和UI模組的節點 `default-pre-upgrade_yyyymmdd_xxxxxx` 節點變更為以下：
 
 * `/conf/global/settings/cloudsettings` 或
 * `/conf/<tenant>/settings/cloudsettings`

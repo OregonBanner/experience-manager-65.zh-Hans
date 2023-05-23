@@ -1,7 +1,7 @@
 ---
-title: Oak索引疑难解答
+title: 疑難排解Oak索引
 seo-title: Troubleshooting Oak Indexes
-description: 如何检测和修复慢速重新索引。
+description: 如何偵測並修正緩慢的重新索引。
 uuid: 6567ddae-128c-4302-b7e8-8befa66b1f43
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -16,158 +16,158 @@ ht-degree: 1%
 
 ---
 
-# Oak索引疑难解答{#troubleshooting-oak-indexes}
+# 疑難排解Oak索引{#troubleshooting-oak-indexes}
 
-## 慢速重新索引  {#slow-re-indexing}
+## 重新索引緩慢  {#slow-re-indexing}
 
-AEM内部重新索引过程会收集存储库数据并将其存储在Oak索引中，以支持对内容的性能查询。 在特殊情况下，该过程可能会变得缓慢甚至停滞。 本页作为疑难解答指南，可帮助确定索引速度是否慢、查找原因并解决问题。
+AEM內部重新索引程式會收集存放庫資料並將其儲存在Oak索引中，以支援內容的效能查詢。 在特殊情況下，流程可能會變得緩慢甚至停滯。 本頁提供疑難排解指南，協助您識別索引速度是否緩慢、找出原因並解決問題。
 
-区分需要不适当长时间的重新索引和需要很长时间的重新索引是很重要的，因为它正在索引大量的内容。 例如，索引内容所需的时间会随内容量而扩展，因此大型生产存储库重新索引的时间要比小型开发存储库花费的时间长。
+請務必區分需要花費不適當長時間重新索引與需要長時間重新索引的重新索引，因為這會索引大量內容。 例如，為內容建立索引所需的時間會隨著內容量而調整，因此大型生產存放庫重新建立索引所需的時間會比小型開發存放庫長。
 
-请参阅 [有关查询和索引的最佳实践](/help/sites-deploying/best-practices-for-queries-and-indexing.md) 有关何时以及如何重新索引内容的其他信息。
+請參閱 [關於查詢和索引的最佳實務](/help/sites-deploying/best-practices-for-queries-and-indexing.md) 以取得何時及如何重新索引內容的詳細資訊。
 
-## 初始检测 {#initial-detection}
+## 初始偵測 {#initial-detection}
 
-初始检测慢速索引需要检查 `IndexStats` JMX MBean。 在受影响的AEM实例上，执行以下操作：
+初始偵測緩慢索引需要檢閱 `IndexStats` JMX MBean。 在受影響的AEM執行個體上，執行下列動作：
 
-1. 打开Web控制台，然后单击JMX选项卡或转到https://&lt;host>:&lt;port>/system/console/jmx(例如， [http://localhost:4502/system/console/jmx](http://localhost:4502/system/console/jmx))。
-1. 导航到 `IndexStats` 姆班斯。
-1. 打开 `IndexStats` “”的MBean `async`&quot;和&quot; `fulltext-async`&quot;
+1. 開啟Web主控台，然後按一下JMX標籤或前往https://&lt;host>：&lt;port>/system/console/jmx (例如， [http://localhost:4502/system/console/jmx](http://localhost:4502/system/console/jmx))。
+1. 導覽至 `IndexStats` Mbeans。
+1. 開啟 `IndexStats` 「 」的MBean `async`「和」 `fulltext-async`「。
 
-1. 对于这两个MBean，检查 **完成** 时间戳和 **LastIndexTime** 时间戳距当前时间不到45分钟。
+1. 對於兩個MBean，檢查 **完成** 時間戳記和 **LastIndexTime** 時間戳記距離目前時間少於45分鐘。
 
-1. 对于任一MBean，如果时间值(**完成** 或 **LastIndexedTime**)从当前时间开始超过45分钟，则索引作业会失败或用时过长。 此问题会导致异步索引失效。
+1. 對於任一MBean，如果時間值(**完成** 或 **LastIndexTime**)的時間超過目前時間的45分鐘，則索引作業會失敗或花費太長時間。 此問題會導致非同步索引過時。
 
-## 强制关闭后，索引暂停 {#indexing-is-paused-after-a-forced-shutdown}
+## 在強制關機後暫停索引 {#indexing-is-paused-after-a-forced-shutdown}
 
-强制关闭会导致AEM在重新启动后将异步索引挂起长达30分钟。 而且，通常还需要15分钟才能完成第一个重新索引传递，总共大约45分钟(与 [初始检测](/help/sites-deploying/troubleshooting-oak-indexes.md#initial-detection) 45分钟)。 如果在强制关闭后暂停索引：
+強制關機導致AEM在重新啟動後暫停非同步索引達30分鐘。 此外，通常需要15分鐘才能完成第一個重新索引階段，總共約為45分鐘(連結回 [初始偵測](/help/sites-deploying/troubleshooting-oak-indexes.md#initial-detection) 45分鐘的時間範圍)。 如果索引在強制關閉後暫停：
 
-1. 首先，确定AEM实例是否以强制方式关闭(AEM进程被强制终止，或电源故障发生)，然后重新启动。
+1. 首先，判斷該AEM執行個體是否以強制方式關閉(強制終止AEM程式，或發生電源故障)，然後重新啟動。
 
-   * [AEM日志记录](/help/sites-deploying/configure-logging.md) 可以为此目的进行审核。
+   * [AEM記錄](/help/sites-deploying/configure-logging.md) 可檢閱以達成此目的。
 
-1. 如果发生强制关闭，则在重新启动时，AEM会自动暂停重新索引长达30分钟。
-1. 大约需要等待45分钟，AEM才能恢复正常的异步索引操作。
+1. 如果發生強制關閉，重新啟動時，AEM會自動暫停重新索引達30分鐘。
+1. 請等候約45分鐘，讓AEM繼續正常的非同步編制索引作業。
 
-## 线程池重载 {#thread-pool-overloaded}
+## 執行緒集區超載 {#thread-pool-overloaded}
 
 >[!NOTE]
 >
->对于AEM 6.1，请确保 [AEM 6.1 CFP 11](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hans) 已安装。
+>對於AEM 6.1，請確保 [AEM 6.1 CFP 11](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hans) 已安裝。
 
-在特殊情况下，用于管理异步索引的线程池可能会变得过载。 为了隔离索引过程，可以配置线程池来防止其他AEM工作干扰Oak及时索引内容的能力。 在这种情况下，请执行以下操作：
+在特殊情況下，用來管理非同步索引的對話串池可能會變得超載。 若要隔離索引過程，可以設定對話串集區，以防止其他AEM工作干擾Oak及時索引內容的能力。 在這種情況下，請執行以下作業：
 
-1. 为Apache Sling调度程序定义一个用于异步索引的新的独立线程池：
+1. 定義新的獨立執行緒集區，以供Apache Sling Scheduler用於非同步索引：
 
-   * 在受影响的AEM实例上，导航到AEM OSGi Web Console > OSGi >配置>Apache Sling调度程序或转到https://&lt;host>:&lt;port>/system/console/configMgr(例如， [http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr))
-   * 在“允许的线程池”字段中添加一个值为“oak”的条目。
-   * 要保存更改，请单击 **保存** 在右下方。
+   * 在受影響的AEM執行個體上，導覽至AEM OSGi Web Console>OSGi>設定>Apache Sling排程器，或前往https://&lt;host>：&lt;port>/system/console/configMgr (例如， [http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr))
+   * 將專案新增至「允許的執行緒集區」欄位，其值為「oak」。
+   * 若要儲存變更，請按一下 **儲存** 右下角。
 
    ![chlimage_1-119](assets/chlimage_1-119.png)
 
-1. 确认已注册新的Apache Sling调度程序线程池，并在Apache Sling调度程序状态Web控制台中显示该线程池。
+1. 確認新的Apache Sling排程器執行緒集區已註冊，並顯示在Apache Sling排程器狀態Web主控台中。
 
-   * 导航到AEM OSGi Web控制台>状态> Sling调度程序，或转到https://&lt;host>:&lt;port>/system/console/status-slischeduler(例如， [http://localhost:4502/system/console/status-slingscheduler](http://localhost:4502/system/console/status-slingscheduler))
-   * 确认存在以下池条目：
+   * 導覽至「AEM OSGi Web主控台」>「狀態」>「Sling排程器」，或前往https://&lt;host>：&lt;port>/system/console/status-slingscheduler (例如， [http://localhost:4502/system/console/status-slingscheduler](http://localhost:4502/system/console/status-slingscheduler))
+   * 確認下列集區專案存在：
 
-      * 阿帕奇斯林戈阿克
+      * ApacheSlingoak
       * ApacheSlingdefault
 
    ![chlimage_1-120](assets/chlimage_1-120.png)
 
-## 观察队已满 {#observation-queue-is-full}
+## 觀察佇列已滿 {#observation-queue-is-full}
 
-如果在短时间内对存储库进行了太多更改和提交，则索引可能会因完整观察队列而延迟。 首先，确定观察队列是否已满：
+如果在短時間內對存放庫進行了太多變更和認可，則索引可能會由於完整的觀察佇列而延遲。 首先，判斷觀察佇列是否已滿：
 
-1. 转到Web控制台并单击JMX选项卡或转到https://&lt;host>:&lt;port>/system/console/jmx(例如， [http://localhost:4502/system/console/jmx](http://localhost:4502/system/console/jmx))
-1. 打开Oak存储库统计信息MBean并确定是否有 `ObservationQueueMaxLength` 值大于10,000。
+1. 前往Web主控台，然後按一下JMX標籤或前往https://&lt;host>：&lt;port>/system/console/jmx (例如， [http://localhost:4502/system/console/jmx](http://localhost:4502/system/console/jmx))
+1. 開啟Oak存放庫統計資料MBean並判斷是否有 `ObservationQueueMaxLength` 值大於10,000。
 
-   * 在正常操作中，此最大值必须始终减小到零(尤其是在 `per second` 部分)，以验证 `ObservationQueueMaxLength`秒量度为0。
-   * 如果值为10,000或更大，并且持续增加，则表示在发生新更改（提交）时，至少一个（可能更多）队列无法像快速处理一样快。
-   * 每个观察队列都有一个限制（默认为10,000），如果队列达到该限制，其处理会降低。
-   * 使用MongoMK时，随着队列长度增大，内部Oak缓存性能降低。 这种关联可以通过 `missRate` 对于 `DocChildren` 缓存 `Consolidated Cache` 统计信息MBean。
+   * 在一般作業中，此最大值最終必須減少至零(尤其是在 `per second` 部分)，因此確認 `ObservationQueueMaxLength`的秒數量度是0。
+   * 如果值為10,000或更多，並且穩定增加，則表示至少一個（可能更多）佇列無法以新變更（認可）發生時的速度處理。
+   * 每個觀察佇列都有一個限制（預設為10,000），如果佇列點選了這個限制，它的處理會降級。
+   * 使用MongoMK時，隨著佇列長度增加，內部Oak快取效能會降低。 此關聯性可從增加中看出 `missRate` 的 `DocChildren` 中的快取 `Consolidated Cache` 統計MBean。
 
-1. 为避免超出可接受的观察队列限制，建议执行以下操作：
+1. 為避免超過可接受的觀察佇列限制，建議執行以下操作：
 
-   * 降低提交的恒定速率。 提交的短峰值是可以接受的，但应该降低恒定速率。
-   * 增加 `DiffCache` 如 [性能调整提示> Mongo Storage Tuning >文档缓存大小](/help/sites-deploying/configuring-performance.md).
+   * 降低認可固定速率。 認可中的短尖峰是可接受的，但固定速率應降低。
+   * 增加的大小 `DiffCache` 如所述 [效能調整秘訣> Mongo儲存調整>檔案快取大小](/help/sites-deploying/configuring-performance.md).
 
-## 识别和修复停滞的重新索引过程 {#identifying-and-remediating-a-stuck-re-indexing-process}
+## 識別並修正停滯的重新索引程式 {#identifying-and-remediating-a-stuck-re-indexing-process}
 
-在以下两种情况下，重新编制索引可以被视为“完全停滞”：
+在以下兩種情況下，重新索引可被視為「完全卡住」：
 
-* 重新索引的速度很慢，到日志文件中没有报告有关已遍历的节点数的显着进度为止。
+* 重新索引速度很慢，以至於記錄檔案中並未報告有關已遍及節點數的顯著進度。
 
-   * 例如，如果在一小时内没有消息，或者进度太慢，需要一周或更长时间才能完成。
+   * 例如，如果一小時內沒有訊息，或進度太慢，需要一週或更多時間才能完成。
 
-* 如果日志文件中出现重复的异常，则重新索引会陷入无休止循环(例如， `OutOfMemoryException`)。 在日志中重复出现一个或多个相同的例外，表明Oak尝试重复对同一内容进行索引，但在同一问题上失败。
+* 如果記錄檔案中出現重複的例外狀況(例如， `OutOfMemoryException`)。 記錄中重複出現一或多個相同的例外狀況，表示Oak嘗試重複索引相同專案，但因相同問題而失敗。
 
-要识别并修复卡住的重新索引过程，请执行以下操作：
+若要識別並修正停滯的重新索引程式，請執行下列動作：
 
-1. 要确定索引卡住的原因，必须收集以下信息：
+1. 若要找出索引卡住的原因，必須收集下列資訊：
 
-   * 收集5分钟线程转储，每2秒收集一个线程转储。
-   * [为附加器设置DEBUG级别和日志](/help/sites-deploying/configure-logging.md).
+   * 收集5分鐘的執行緒傾印，每2秒傾印一次。
+   * [設定附加器的DEBUG層級和記錄](/help/sites-deploying/configure-logging.md).
 
-      * *org.apache.jackrabbit.oak.plugins.index.asyncIndexUpdate*
+      * *org.apache.jackrabbit.oak.plugins.index.AsyncIndexUpdate*
       * *org.apache.jackrabbit.oak.plugins.index.IndexUpdate*
-   * 从异步收集数据 `IndexStats` MBean:
+   * 從非同步處理收集資料 `IndexStats` MBean：
 
-      * 导航至AEM OSGi Web控制台>主>JMX > IndexStat >异步
+      * 導覽至AEM OSGi Web Console>Main>JMX>IndexStat>async
 
-         或转到 [http://localhost:4502/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3Dasync%2Ctype%3DIndexStats](http://localhost:4502/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3Dasync%2Ctype%3DIndexStats)
-   * 使用 [oak-run.jar的控制台模式](https://github.com/apache/jackrabbit-oak/tree/trunk/oak-run) 收集* `/:async`*节点。
-   * 使用 `CheckpointManager` MBean:
+         或前往 [http://localhost:4502/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3Dasync%2Ctype%3DIndexStats](http://localhost:4502/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3Dasync%2Ctype%3DIndexStats)
+   * 使用 [oak-run.jar的主控台模式](https://github.com/apache/jackrabbit-oak/tree/trunk/oak-run) 以收集底下存在的詳細資訊* `/:async`*節點。
+   * 使用收集存放庫查核點清單 `CheckpointManager` MBean：
 
-      * AEM OSGi Web Console > Main>JMX >CheckpointManager >listCheckpoints()
+      * AEM OSGi Web Console>Main>JMX>CheckpointManager>listCheckpoints()
 
-         或转到 [http://localhost:4502/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3DSegment+node+store+checkpoint+management%2Ctype%3DCheckpointManager](http://localhost:4502/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3DSegment+node+store+checkpoint+management%2Ctype%3DCheckpointManager)
+         或前往 [http://localhost:4502/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3DSegment+node+store+checkpoint+management%2Ctype%3DCheckpointManager](http://localhost:4502/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3DSegment+node+store+checkpoint+management%2Ctype%3DCheckpointManager)
 
 
 
-1. 在收集步骤1中列出的所有信息后，重新启动AEM。
+1. 收集步驟1中概述的所有資訊後，請重新啟動AEM。
 
-   * 如果并发负载较高（观察队列溢出或类似情况），则重新启动AEM可能会解决此问题。
-   * 如果重新启动无法解决问题，请打开 [Adobe客户关怀](https://experienceleague.adobe.com/?support-solution=General&amp;support-tab=home#support) 并提供步骤1中收集的所有信息。
+   * 如果同時有高負載（觀察佇列溢位或類似情況），重新啟動AEM即可解決問題。
+   * 如果重新啟動無法解決問題，請開啟問題 [Adobe客戶服務](https://experienceleague.adobe.com/?support-solution=General&amp;support-tab=home#support) 並提供在步驟1中收集的所有資訊。
 
-## 安全中止异步重新索引 {#safely-aborting-asynchronous-re-indexing}
+## 安全地中止非同步重新索引 {#safely-aborting-asynchronous-re-indexing}
 
-可以通过 `async, async-reindex`和f `ulltext-async` 索引通道( `IndexStats` Mbean)。 有关更多信息，另请参阅 [如何中止重新索引](https://jackrabbit.apache.org/oak/docs/query/indexing.html#abort-reindex). 此外，请考虑以下事项：
+可透過以下方式安全地中止重新索引（在完成之前停止） `async, async-reindex`和f `ulltext-async` 索引通道( `IndexStats` Mbean)。 如需詳細資訊，另請參閱上的Apache Oak檔案 [如何中止重新索引](https://jackrabbit.apache.org/oak/docs/query/indexing.html#abort-reindex). 此外，請考量下列事項：
 
-* Lucene和Lucene属性索引的重新索引可能会中止，因为它们是自然异步的。
-* 只有通过 `PropertyIndexAsyncReindexMBean`.
+* Lucene和Lucene屬性索引的重新索引可以中止，因為它們自然非同步。
+* 只有透過啟動重新索引，才能中止Oak屬性索引的重新索引。 `PropertyIndexAsyncReindexMBean`.
 
-要安全中止重新索引，请执行以下步骤：
+若要安全地中止重新索引，請執行下列步驟：
 
-1. 识别控制必须停止的重新索引通道的IndexStats MBean。
+1. 識別控制必須停止的重新索引通道的IndexStats MBean。
 
-   * 通过JMX控制台导航到相应的IndexStats MBean，方法是转到AEM OSGi Web控制台>主>JMX或https://&lt;host>:&lt;port>/system/console/jmx(例如， [http://localhost:4502/system/console/jmx](http://localhost:4502/system/console/jmx))
-   * 根据要停止的重新索引通道( `async`, `async-reindex`或 `fulltext-async`)
+   * 請前往AEM OSGi Web Console>Main>JMX或https:// ，透過JMX主控台導覽至適當的IndexStats MBean&lt;host>：&lt;port>/system/console/jmx (例如， [http://localhost:4502/system/console/jmx](http://localhost:4502/system/console/jmx))
+   * 根據您想要停止的重新索引路線開啟IndexStats MBean ( `async`， `async-reindex`，或 `fulltext-async`)
 
-      * 要识别相应的通道以及IndexStats MBean实例，请查看Oak索引“异步”属性。 “async”属性包含车道名称： `async`, `async-reindex`或 `fulltext-async`.
-      * 通过访问“异步”列中的AEM Index Manager，也可以访问通道。 要访问索引管理器，请导航至操作>诊断>索引管理器。
+      * 若要識別適當的通道，並藉此識別IndexStats MBean執行個體，請檢視Oak索引「非同步」屬性。 「非同步」屬性包含通道名稱： `async`， `async-reindex`，或 `fulltext-async`.
+      * 您也可以存取「非同步」欄中的AEM Index Manager來存取通道。 若要存取「索引管理員」，請瀏覽至「作業」>「診斷」>「索引管理員」。
 
    ![chlimage_1-121](assets/chlimage_1-121.png)
 
-1. 调用 `abortAndPause()` 命令 `IndexStats` MBean。
-1. 正确标记Oak索引定义，以防止在索引通道恢复时恢复重新索引。
+1. 叫用 `abortAndPause()` 命令於適當的 `IndexStats` MBean。
+1. 適當地標籤Oak索引定義，以防止在索引通道恢復時恢復重新索引。
 
-   * 重新索引 **现有** index，请将reindex属性设置为false
+   * 重新索引時 **現有** 索引，將重新索引屬性設定為false
 
       * `/oak:index/someExistingIndex@reindex=false`
-   * 或者，对于 **新建** 索引：
+   * 否則，針對 **新** 索引：
 
-      * 将type属性设置为disabled
+      * 將type屬性設定為disabled
 
          * `/oak:index/someNewIndex@type=disabled`
-      * 或完全删除索引定义
+      * 或完全移除索引定義
 
-   完成后，将更改提交到存储库。
+   完成時將變更提交至存放庫。
 
-1. 最后，在已中止的索引通道上恢复异步索引。
+1. 最後，繼續對中止的索引通道進行非同步索引。
 
-   * 在 `IndexStats` 发出 `abortAndPause()` 命令，调用 `resume()`命令。
+   * 在 `IndexStats` 發出 `abortAndPause()` 命令時，請叫用 `resume()`命令。
 
-## 防止慢速重新索引 {#preventing-slow-re-indexing}
+## 防止緩慢重新索引 {#preventing-slow-re-indexing}
 
-最好在静默时段（例如，不是在大内容摄取期间）重新编入索引，最好在已知并控制AEM加载的维护时段重新编入索引。 另外，请确保在其他维护活动期间不进行重新索引。
+最好在靜默期（例如，不在大型內容擷取期間）重新索引，最好在已知並控制AEM載入的維護期間重新索引。 此外，請確定重新索引不會在其他維護活動期間發生。

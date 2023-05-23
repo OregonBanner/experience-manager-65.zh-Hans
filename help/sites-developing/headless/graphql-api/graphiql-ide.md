@@ -1,7 +1,8 @@
 ---
 title: 在 AEM 中使用 GraphiQL IDE
 description: 了解如何在 Adobe Experience Manager 中使用 GraphiQL IDE。
-source-git-commit: ad0f0bd8b0c230e002c734adca87da22bfa3a7cd
+exl-id: d4b01485-658b-4245-b2e6-04be8abc8ecf
+source-git-commit: b8c9e5cd3192b51954091b677d700c51617c9460
 workflow-type: tm+mt
 source-wordcount: '792'
 ht-degree: 94%
@@ -10,7 +11,7 @@ ht-degree: 94%
 
 # 使用 GraphiQL IDE {#graphiql-ide}
 
-标准的实施 [GraphiQL](https://graphql.org/learn/serving-over-http/#graphiql) IDE可与Adobe Experience Manager的GraphQL API(AEM)一起使用。
+標準的實作 [GraphiQL](https://graphql.org/learn/serving-over-http/#graphiql) IDE可與Adobe Experience Manager (AEM)的GraphQL API搭配使用。
 
 >[!NOTE]
 >
@@ -131,7 +132,7 @@ Using GraphQL you can configure the HTTP Cache Headers  to control these paramet
 
 ## 正在发布持久查询 {#publishing-persisted-queries}
 
-选择 [持久化查询](/help/sites-developing/headless/graphql-api/persisted-queries.md) 在列表（左侧面板）中，您可以使用 **发布** 和 **取消发布** 操作。 这会将它们激活到您的发布环境（例如，`dev-publish`），以便您的应用程序在测试时轻松访问。
+一旦您選取 [持久查詢](/help/sites-developing/headless/graphql-api/persisted-queries.md) 從清單（左側面板），您可以使用 **發佈** 和 **取消發佈** 動作。 这会将它们激活到您的发布环境（例如，`dev-publish`），以便您的应用程序在测试时轻松访问。
 
 >[!NOTE]
 >

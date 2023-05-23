@@ -1,7 +1,7 @@
 ---
-title: JavaScript文件缩小
+title: JavaScript檔案的縮制
 seo-title: Minification of the JavaScript files
-description: 有关在AEM Forms工作区自定义以优化Web版JS文件后生成缩小的代码的说明。
+description: AEM Forms工作區自訂後，產生縮製程式碼的指示，以最佳化網頁的JS檔案。
 seo-description: Instructions to generate minified code after AEM Forms workspace customizations to optimize the JS files for the web.
 uuid: ad91e380-a988-4740-9534-e09657e0322a
 contentOwner: robhagat
@@ -17,21 +17,21 @@ ht-degree: 1%
 
 ---
 
-# JavaScript文件缩小 {#minification-of-the-javascript-files}
+# JavaScript檔案的縮制 {#minification-of-the-javascript-files}
 
-缩小会从源代码中删除多余的字符，如空格、换行符和注释。 这通过减小代码的大小改进了性能。 虽然缩小不会影响功能，但它会降低代码的可读性。
+縮制會從原始程式碼中移除多餘的字元，例如空白字元、換行字元和註解。 這會藉由減少程式碼大小來改善效能。 雖然縮制不會影響功能，但會降低程式碼的可讀性。
 
-要生成用于语义更改的缩小代码，请执行以下步骤。
+若要產生語意變更的縮製程式碼，請依照下列步驟操作。
 
-1. 复制 `client-html/src/main/webapp/js` 文件系统上的src-package。
+1. 複製 `client-html/src/main/webapp/js` 檔案系統上的src-package。
 
    >[!NOTE]
    >
-   >参见 [自定义AEM Forms工作区简介](/help/forms/using/introduction-customizing-html-workspace.md) 以了解有关包的更多详细信息。
+   >另請參閱 [自訂AEM Forms工作區簡介](/help/forms/using/introduction-customizing-html-workspace.md) 以取得有關套件的詳細資訊。
 
-1. 更新中的路径 `main.js` 位于client-html/src/main/webapp/js下，用于添加/更新的模型/视图。
+1. 更新中的路徑 `main.js` 位於client-html/src/main/webapp/js下方，用於新增/更新的模型/檢視。
 
-   例如，添加新的Sharequeue模型（如mySharequeue）后，会更改：
+   例如，新增新的Sharequeue模型（例如mySharequeue）後，會變更：
 
    ```javascript
    sharequeuemodel : pathprefix + 'runtime/models/sharequeue',
@@ -43,9 +43,9 @@ ht-degree: 1%
    sharequeuemodel : pathprefix + 'runtime/myModels/mySharequeue',
    ```
 
-1. 更新 `registry-config.xml, located at client-html/src/main/webapp/js/resource_generator,` 如果中别名发生了更改/添加 `main.js`.
+1. 更新 `registry-config.xml, located at client-html/src/main/webapp/js/resource_generator,` 萬一中別名變更/增加 `main.js`.
 
-   例如，添加新的Sharequeue模型（如mySharequeue）后，会更改：
+   例如，新增新的Sharequeue模型（例如mySharequeue）後，會變更：
 
    ```xml
    <sharequeue
@@ -63,18 +63,18 @@ ht-degree: 1%
                service="service"/>
    ```
 
-1. 在client-html/src/main/webapp/js/minifier上，运行命令：
+1. 在client-html/src/main/webapp/js/minifier，執行命令：
 
    ```shell
    mvn clean install
    ```
 
-   它生成一个文件夹缩小文件，位于client-html/src/main/webapp/js下，其中包含缩小的main.js和registry.js。
+   它會在client-html/src/main/webapp/js下產生一個資料夾縮制檔案，其中包含縮制的main.js和registry.js。
 
 >[!NOTE]
 >
->缩小操作仅适用于64位JVM。
+>縮制僅適用於64位元JVM。
 
 >[!NOTE]
 >
->如果缩小，则升级会受到影响。
+>若您縮制，升級會受到影響。

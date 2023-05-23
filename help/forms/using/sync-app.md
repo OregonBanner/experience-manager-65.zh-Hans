@@ -1,7 +1,7 @@
 ---
-title: 同步应用程序
+title: 同步應用程式
 seo-title: Synchronizing the app
-description: 将移动设备上的AEM Forms应用程序与AEM Forms服务器同步。
+description: 將行動裝置上的AEM Forms應用程式與AEM Forms伺服器同步。
 seo-description: Synchronize the AEM Forms app on your mobile device with the AEM Forms server.
 uuid: 3a6fb2d5-2ec4-4f78-a42a-fc921b66238e
 contentOwner: robhagat
@@ -18,33 +18,33 @@ ht-degree: 0%
 
 ---
 
-# 同步应用程序{#synchronizing-the-app}
+# 同步應用程式{#synchronizing-the-app}
 
-## 同步应用程序 {#synchronizing-the-app-1}
+## 同步應用程式 {#synchronizing-the-app-1}
 
-从AEM Forms服务器下载应用程序中的表单。 这些表单下载到“任务”和“Forms”选项卡下。 从表单创建的草稿将下载到草稿选项卡中，从任务创建的草稿将下载到任务选项卡中。 对于OSGi服务器上的独立表单，表单和草稿分别在Forms和草稿选项卡中下载。
+應用程式中的表單會從AEM Forms伺服器下載。 表單下載至「任務」和「Forms」標籤下方。 從表單建立的草稿會下載到草稿索引標籤中，而從任務建立的草稿則會下載到任務索引標籤中。 若為OSGi伺服器上的獨立表單，表單和草稿會分別在Forms和草稿索引標籤中下載。
 
-完成并提交表单后，如果应用程序处于在线状态，则表单会立即上传回AEM Forms服务器。 应用程序同步时，将从服务器获取表单。 但是，如果应用程序联机，草稿会立即与服务器同步。
+完成並提交表單後，如果應用程式上線，表單會立即上傳回AEM Forms伺服器。 應用程式同步處理時，會從伺服器擷取表單。 不過，如果應用程式上線，草稿會立即與伺服器同步。
 
-使用AEM Forms服务器联机时，默认情况下，您的应用程序每15分钟同步一次。 但是，您可以选择更改同步频率。 或者，您可以随时手动同步应用程序。
+使用AEM Forms伺服器上線時，應用程式預設會每15分鐘同步處理一次。 不過，您可以選擇變更同步化頻率。 或者，您也可以隨時手動同步應用程式。
 
-**手动同步应用程序**
+**手動同步應用程式**
 
-点按同步按钮 ![同步应用程序](assets/sync-app.png) 位于主屏幕的右下角。
+點選「同步」按鈕 ![同步應用程式](assets/sync-app.png) 位於首頁畫面的右下角。
 
-**更改同步频率**
+**變更同步處理頻率**
 
-1. 要转到“设置”屏幕，请点按“主页”屏幕左上角的菜单按钮，然后点按 **设置**.
-1. 在设置屏幕中，点按常规选项卡。
+1. 若要移至「設定」畫面，請點選「首頁」畫面左上角的功能表按鈕，然後點選 **設定**.
+1. 在「設定」畫面中，點選「一般」標籤。
 
-   ![“常规设置”窗口中的“同步频率”设置](assets/gen-settings-2.png)
+   ![「一般設定」視窗中的同步頻率設定](assets/gen-settings-2.png)
 
-1. 在同步频率选项上，点按同步频率右侧的值。
-1. 在下拉列表中，选择新的同步频率。
+1. 在「同步頻率」選項上，點選「同步頻率」右邊的值。
+1. 在下拉式清單中，選取新的同步化頻率。
 
-### 技术规范 {#technical-specifications}
+### 技術規格 {#technical-specifications}
 
-* 将离线应用程序数据提交到AEM Forms服务器的主要逻辑包含在runtime/offline/util/offline.js中。
-* 在.js中，对processOfflineSubmittedSavedTasks(...)函数的调用将已保存/已提交的任务发送到服务器。 它还可以处理同步过程中的任何错误或冲突。 如果任务提交失败，应用程序上的任务将标记为失败。 此外，任务仍保留在“发件箱”中。
-* syncSubmittedTask()和syncSavedTask()函数对各个任务执行操作。
-* 在用户选择将脱机状态同步到服务器或由后台线程自动同步后，任务列表组件会启动对processOfflineSubmittedSavedTasks()函数的调用。
+* 將離線應用程式資料提交至AEM Forms伺服器的主要邏輯包含在runtime/offline/util/offline.js中。
+* 在.js中，對processOfflineSubmittedSavedTasks(...)函式的呼叫會將已儲存/已提交的工作傳送至伺服器。 它也會處理同步處理過程中的任何錯誤或衝突。 如果任務提交失敗，應用程式上的任務會標示為失敗。 此外，任務仍會保留在寄件匣中。
+* syncSubmittedTask()和syncSavedTask()函式會針對個別工作執行作業。
+* 在使用者選擇同步處理伺服器的離線狀態或背景執行緒自動同步之後，工作清單元件會起始對processOfflineSubmittedSavedTasks()函式的呼叫。

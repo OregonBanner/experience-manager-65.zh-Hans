@@ -1,7 +1,7 @@
 ---
-title: 将Adobe Analytics添加到移动应用程序
+title: 將Adobe Analytics新增至您的行動應用程式
 seo-title: Add Adobe Analytics to your Mobile Application
-description: 请阅读本页，了解如何通过与AEM Mobile Services集成，在Analytics应用程序中使用Mobile App Analytics。
+description: 請詳閱本頁面，瞭解如何透過與Analytics Mobile Services整合，在AEM應用程式中使用行動應用程式Adobe。
 seo-description: Follow this page to learn about how you can use Mobile App Analytics in your AEM Apps by integrating with Adobe Mobile Services.
 uuid: d3ff6f9b-0467-4abe-9a59-b3495a6af0f8
 contentOwner: User
@@ -17,41 +17,41 @@ ht-degree: 0%
 
 ---
 
-# 将Adobe Analytics添加到移动应用程序{#add-adobe-analytics-to-your-mobile-application}
+# 將Adobe Analytics新增至您的行動應用程式{#add-adobe-analytics-to-your-mobile-application}
 
 >[!NOTE]
 >
->Adobe建议对需要基于单页应用程序框架的客户端渲染（例如React）的项目使用SPA编辑器。 [了解详情](/help/sites-developing/spa-overview.md).
+>Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）專案使用SPA編輯器。 [了解详情](/help/sites-developing/spa-overview.md).
 
-想要为您的移动应用程序用户构建引人入胜的相关体验？ 如果您没有使用Mobile Services SDK来监控和测量应用程序生命周期和使用情况，那么您的决策依据是什么？ 您最忠诚的客户在哪里？ 如何确保保持相关性并优化转化？
+想要為您的行動應用程式使用者建立吸引人且相關的體驗嗎？ 如果您沒有使用AdobeMobile Services SDK來監控和測量應用程式的生命週期和使用量，那麼您的決策依據是什麼？ 您最忠實的客戶在何處？ 如何確保您保持相關度並最佳化轉換？
 
-您的用户是否访问了所有内容？ 他们会放弃应用吗？如果是，会在哪里？ 他们在应用程序中停留的频率是多久？他们回来使用该应用程序的频率是多久？ 您可以引入哪些更改，然后测量这些更改会提高保留率？ 那么崩溃率呢，您的应用程序是否会对用户造成崩溃？
+您的使用者是否存取所有內容？ 他們是否正在放棄應用程式？如果是，在哪裡放棄？ 他們會在應用程式中停留多久，以及回訪使用應用程式的頻率？ 您可以引入哪些變更，然後測量增加保留率的程度？ 當機率怎麼樣，您的應用程式對使用者而言是否當機？
 
-利用 [移动设备应用程序分析](https://www.adobe.com/ca/solutions/digital-analytics/mobile-web-apps-analytics.html) 通过与 [AdobeMobile Services](https://www.adobe.com/marketing-cloud/mobile-marketing.html).
+充分利用 [行動應用程式分析](https://www.adobe.com/ca/solutions/digital-analytics/mobile-web-apps-analytics.html) 在您的AEM應用程式中，透過與整合 [Adobe行動服務](https://www.adobe.com/marketing-cloud/mobile-marketing.html).
 
-利用AEM应用程序，可跟踪、报告和了解用户如何与您的移动设备应用程序和内容交互，以及如何测量关键生命周期量度，如启动次数、应用程序内时间和崩溃率。
+檢測您的AEM應用程式，以追蹤、報告並瞭解您的使用者如何與您的行動應用程式和內容互動，並測量關鍵生命週期量度，例如啟動次數、應用程式使用時間和當機率。
 
-本节介绍AEM *开发人员* 可以：
+本節說明AEM如何運作 *開發人員* 可以：
 
-* 将Mobile Analytics集成到移动设备应用程序中
-* 使用Bloodhound测试分析跟踪
+* 將行動分析整合至您的行動應用程式
+* 使用Bloodhound測試您的分析追蹤
 
-## 先决条件 {#prerequisties}
+## 先決條件 {#prerequisties}
 
-AEM Mobile需要Adobe Analytics帐户才能收集和报告应用程序中的跟踪数据。 作为配置的一部分，AEM *管理员* 将首先需要：
+AEM Mobile需要Adobe Analytics帳戶，才能在您的應用程式中收集和報告追蹤資料。 在設定中， AEM *管理員* 將首先需要：
 
-* 在Mobile Services中设置Adobe Analytics帐户并为您的应用程序创建报表包。
-* 在Adobe Experience Manager(AEM)中配置AMSCloud Service。
+* 設定Adobe Analytics帳戶，並在Mobile Services中為您的應用程式建立報表套裝。
+* 在Adobe Experience Manager (AEM)中設定AMSCloud Service。
 
-## 对于开发人员 — 将Mobile Analytics集成到您的应用程序中 {#for-developers-integrate-mobile-analytics-into-your-app}
+## 適用於開發人員 — 將Mobile Analytics整合至您的應用程式 {#for-developers-integrate-mobile-analytics-into-your-app}
 
-### 配置ContentSync以提取配置文件 {#configure-contentsync-to-pull-in-configuration-file}
+### 設定ContentSync以提取設定檔案 {#configure-contentsync-to-pull-in-configuration-file}
 
-设置Analytics帐户后，您将需要创建内容同步配置，以将内容提取到您的移动设备应用程序中。
+設定Analytics帳戶後，您需要建立Content Sync設定，以將內容拉入您的行動應用程式。
 
-有关其他详细信息，请参阅配置内容同步内容。 配置将需要指示内容同步将ADBMobileConfig放入/www目录中。 例如，在Geometrixx Outdoors应用程序中，内容同步配置位于： */content/phonegap/geometrixx-outdoors/shell/jcr:content/pge-app/app-config/ams-ADBMobileConfig*. 还有开发配置；但是，它与Geometrixx Outdoors中的非开发配置相同。
+如需其他詳細資訊，請參閱設定內容同步內容。 設定需要指示Content Sync將ADBMobileConfig放入/www目錄。 例如，在Geometrixx Outdoors應用程式中， Content Sync設定位於： */content/phonegap/geometrixx-outdoors/shell/jcr：content/pge-app/app-config/ams-ADBMobileConfig*. 也有可供開發的設定；但是，在Geometrixx Outdoors的情況下它與非開發設定相同。
 
-有关如何从Mobile Application AEM应用程序功能板下载ADBMobileConfig的更多详细信息，请参阅Analytics - Mobile Services -AdobeMobile Services SDK配置文件。
+如需進一步瞭解如何從行動應用程式AEM應用程式儀表板下載ADBMobileConfig，請參閱Analytics - Mobile Services -AdobeMobile Services SDK設定檔案。
 
 ```xml
 <jcr:root xmlns:jcr="https://www.jcp.org/jcr/1.0" xmlns:nt="https://www.jcp.org/jcr/nt/1.0"
@@ -63,11 +63,11 @@ AEM Mobile需要Adobe Analytics帐户才能收集和报告应用程序中的跟�
     type="mobileADBMobileConfigJSON"/>
 ```
 
-每个平台都要求将ADBMobileConfig复制到特定位置。
+每個平台都需要將ADBMobileConfig複製到特定位置。
 
-如果使用PhoneGap CLI进行构建，则可以使用cordova构建挂接脚本来完成此操作。 这可在Geometrixx Outdoors应用程序中查看，网址为：*content/phonegap/geometrixx-outdoors/shell/_jcr_content/pge-app/app-content/phonegap/scripts/restore_plugins.js。*
+如果使用PhoneGap CLI建置，則可使用cordova建置掛接指令碼來完成。 您可在Geometrixx Outdoors應用程式中檢視以下資訊：*content/phonegap/geometrixx-outdoors/shell/_jcr_content/pge-app/app-content/phonegap/scripts/restore_plugins.js.*
 
-对于iOS，需要将文件复制到Xcode项目的 **资源** 目录(例如 &quot;platforms/ios/Geometrixx/Resources/ADBMobileConfig.json&quot;)。 如果针对Android定位了应用程序，则复制到的路径为“platforms/android/assets/ADBMobileConfig.json”。 有关在PhoneGap CLI构建期间使用挂钩的更多详细信息，请参阅 [三个挂钩，可满足您的Cordova/PhoneGap项目需求](https://gist.github.com/jlcarvalho/22402d013bc72f795d45a01836ce735c).
+若為iOS，檔案需要複製到Xcode專案的 **資源** 目錄(例如 &quot;platforms/ios/Geometrixx/Resources/ADBMobileConfig.json&quot;)。 如果應用程式目標為Android，則複製的目的地路徑為「platforms/android/assets/ADBMobileConfig.json」。 有關在PhoneGap CLI建置期間使用鉤點的更多詳細資訊，請參閱 [勾選您的Cordova/PhoneGap專案需求](https://gist.github.com/jlcarvalho/22402d013bc72f795d45a01836ce735c).
 
 ```xml
 ///////////////////////////
@@ -88,9 +88,9 @@ AEM Mobile需要Adobe Analytics帐户才能收集和报告应用程序中的跟�
     ]
 ```
 
-### 在应用程序中添加AMS插件 {#add-the-ams-plugin-in-the-app}
+### 在應用程式中新增AMS外掛程式 {#add-the-ams-plugin-in-the-app}
 
-AdobeMobile Services(AMS)插件需要作为应用程序的一部分包含，才能让应用程序收集数据。 通过将插件作为功能包含在应用程序config.xml中，另一个Cordova挂接可用于在PhoneGap构建过程中自动添加插件。
+應用程式若要收集資料，必須將AdobeMobile Services (AMS)外掛程式納入應用程式中。 將外掛程式加入為應用程式的config.xml中的功能，就能在PhoneGap Build程式期間，使用另一個Cordova鉤點來自動新增外掛程式。
 
 ```xml
 <feature name="ADBMobile">
@@ -98,29 +98,29 @@ AdobeMobile Services(AMS)插件需要作为应用程序的一部分包含，才�
 </feature>
 ```
 
-Geometrixx Outdoors应用程序config.xml位于 */content/phonegap/geometrixx-outdoors/shell/jcr/content/pge-app/app-content/phonegap/www/config.xml*. 以上示例通过在插件URL后添加“#”和标记值，请求使用插件的特定版本。 这是一种良好的做法，可确保在内部版本期间添加未经测试的插件时，不会出现意料之外的问题。
+Geometrixx Outdoors App config.xml位於 */content/phonegap/geometrixx-outdoors/shell/jcr：content/pge-app/app-content/phonegap/www/config.xml*. 上述範例要求使用特定版本的外掛程式，方法是先新增「#」，接著在外掛程式URL後面加上標籤值。 這是一個良好的做法，可確保在建置期間新增未經測試的外掛程式時，不會出現未預期的問題。
 
-执行这些步骤后，您的应用程序将被启用以报告由Adobe Analytics提供的所有生命周期量度。 这包括启动次数、崩溃次数和安装次数等数据。 如果这是您唯一关心的数据，那么您就完成了。 如果要收集自定义数据，则需要设置代码。
+執行這些步驟後，您的應用程式將可報告Adobe Analytics提供的所有生命週期量度。 這包括啟動、當機和安裝等資料。 如果這是您唯一在意的資料，則表示您已完成。 如果您想要收集自訂資料，則需要檢測您的程式碼。
 
-### 设置代码以进行完整的应用程序跟踪 {#instrument-your-code-for-full-app-tracking}
+### 檢測您的程式碼以進行完整應用程式追蹤 {#instrument-your-code-for-full-app-tracking}
 
-中提供了多个跟踪API [AMS Phonegap插件API。](https://experienceleague.adobe.com/docs/mobile-services/ios/phonegap-ios/phonegap-methods.html)
+中提供數個追蹤API [AMS Phonegap外掛程式API。](https://experienceleague.adobe.com/docs/mobile-services/ios/phonegap-ios/phonegap-methods.html)
 
-这些功能允许您跟踪状态和操作，例如用户在应用程序中导航到的页面位置（最常使用的控件）。 使用应用程序进行跟踪的最简单方法是利用AMS插件提供的Analytics API。
+這些功能可讓您追蹤狀態和動作，例如使用者在應用程式中導覽至的頁面、最常使用哪些控制項。 要偵測應用程式以進行追蹤，最簡單的方式是使用AMS外掛程式提供的Analytics API。
 
 * ADB.trackState()
 * ADB.trackAction()
 
-要获取参考，您可以查看Geometrixx Outdoors应用程序中的代码。 在Geometrixx Outdoors应用程序中，使用ADB.trackState()方法跟踪所有页面导航。 有关更多详细信息，请参阅/libs/mobileapps/components/angular/ng-page/clientlibs/app-navigation.js的源代码
+如需參考資訊，您可以在Geometrixx Outdoors應用程式中檢視程式碼。 在Geometrixx Outdoors應用程式中，所有頁面導覽都使用ADB.trackState()方法進行追蹤。 如需詳細資訊，請檢視/libs/mobileapps/components/angular/ng-page/clientlibs/app-navigation.js的原始程式碼
 
-通过使用这些方法调用检测源代码，您可以针对应用程序收集完整量度。
+透過使用這些方法呼叫來檢測您的原始程式碼，您就可以收集應用程式的完整量度。
 
-#### 连接到AMS的属性 {#properties-for-connecting-to-ams}
+#### 連線至AMS的屬性 {#properties-for-connecting-to-ams}
 
-*com.adobe.cq.mobile.mobileservices.impl.service.MobileServicesHttpClientImp* l公开了以下用于连接到AMS的属性：
+*com.adobe.cq.mobile.mobileservices.impl.service.MobileServicesHttpClientImp* l會公開下列屬性以連線至AMS：
 
 | **标签** | **描述** | **默认** |
 |---|---|---|
-| API端点 | AdobeMobile Services HTTP API的基本URL | https://api.omniture.com |
-| 配置端点 | 用于检索给定报表包ID的ADB移动配置的URL | /ams/1.0/app/config/ |
-| Mobile Service应用程序 | 获取用户公司中的应用程序列表 | /ams/1.0/apps |
+| API端點 | AdobeMobile Services HTTP API的基本URL | https://api.omniture.com |
+| 設定端點 | 用於擷取給定報表套裝ID的ADB行動設定的URL | /ams/1.0/app/config/ |
+| 行動服務應用程式 | 取得使用者公司內的應用程式清單 | /ams/1.0/apps |

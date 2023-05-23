@@ -1,6 +1,6 @@
 ---
 title: SPA WKND 教程
-description: 通过此多部分教程，您可以沉浸在SPA开发中。 实施您自己的SPA，引导您完成项目设置、组件映射、前端开发工具和应用程序路由。
+description: 透過此多部分教學課程，沈浸在SPA開發中。 實作您自己的SPA，引導您完成專案設定、元件對應、前端開發工具和應用程式路由。
 uuid: f57be84b-a037-4c76-856e-afb0275c1a0f
 contentOwner: bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -17,13 +17,13 @@ ht-degree: 17%
 
 # SPA WKND 教程{#spa-wknd-tutorial}
 
-通过此多部分教程，您可以沉浸在SPA开发中。 实施您自己的SPA，引导您完成项目设置、组件映射、前端开发工具和应用程序路由。
+透過此多部分教學課程，沈浸在SPA開發中。 實作您自己的SPA，引導您完成專案設定、元件對應、前端開發工具和應用程式路由。
 
 ## 教程 {#tutorials}
 
-有关构建您自己的单页应用程序的端到端示例(该示例可在AEM通过应用程序路由从项目设置开始进行编辑)，请参阅WKND SPATutorials:
+如需建立您自己的單頁應用程式的端對端範例，這些應用程式可透過AEM從專案設定開始透過應用程式路由編輯，請參閱WKND SPATutorials：
 
 * [AEM SPA Editor 和 Angular 快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/angular/overview.html?lang=en)
 * [AEM SPA Editor 和 React 快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html)
 
-但是，在开始您自己的AEMSPA项目之前，请务必查看 [开发SPA for AEM](/help/sites-developing/spa-architecture.md) 文档。
+不過，在您開始自己的AEM SPA專案之前，請務必檢閱 [針對AEM開發SPA](/help/sites-developing/spa-architecture.md) 檔案。

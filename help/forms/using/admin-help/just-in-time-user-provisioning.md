@@ -1,7 +1,7 @@
 ---
-title: 实时用户配置
+title: 即時使用者布建
 seo-title: Just-in-time user provisioning
-description: 在成功进行身份验证后，使用及时配置将用户添加到“用户管理”，并动态地将相关角色和组分配给新用户。
+description: 在成功驗證後，使用即時布建來將使用者新增至「使用者管理」，並動態地將相關角色和群組指派給新使用者。
 seo-description: Use just-in-time provisioning to add users to User Management after successfull authentication and dynamically assign relevant roles and groups to the new user.
 uuid: a5ad4698-70bb-487b-a069-7133e2f420c2
 contentOwner: admin
@@ -17,34 +17,34 @@ ht-degree: 0%
 
 ---
 
-# 实时用户配置 {#just-in-time-user-provisioning}
+# 即時使用者布建 {#just-in-time-user-provisioning}
 
-AEM Forms支持及时预配User Management中尚不存在的用户。 通过及时配置，在成功验证用户的凭据后，用户会自动添加到用户管理中。 此外，相关的角色和组会动态分配给新用户。
+AEM Forms支援「使用者管理」中尚未存在的使用者即時布建。 透過即時布建，使用者在成功驗證其認證後，就會自動新增到「使用者管理」。 此外，相關的角色和群組會動態指派給新使用者。
 
-## 需要及时配置用户 {#need-for-just-in-time-user-provisioning}
+## 需要即時使用者布建 {#need-for-just-in-time-user-provisioning}
 
-这就是传统身份验证的工作方式：
+這就是傳統驗證的工作方式：
 
-1. 当用户尝试登录AEM表单时，用户管理会按顺序将用户的凭据传递给所有可用的身份验证提供程序。 （登录凭据包括用户名/密码组合、Kerberos票证、PKCS7签名等。）
-1. 身份验证提供程序验证凭据。
-1. 然后，验证提供程序会检查用户是否存在于用户管理数据库中。 可能会产生以下结果：
+1. 當使用者嘗試登入AEM表單時，「使用者管理」會依序將使用者的認證傳遞給所有可用的驗證服務提供者。 （登入憑證包括使用者名稱/密碼組合、Kerberos票證、PKCS7簽名等。）
+1. 驗證提供者會驗證認證。
+1. 驗證提供者接著會檢查使用者是否存在於使用者管理資料庫中。 可能會出現以下結果：
 
-   **存在：** 如果用户是当前用户且已解锁，则“用户管理”返回身份验证成功。 但是，如果用户不是最新用户或被锁定，则“用户管理”返回身份验证失败。
+   **存在：** 如果使用者為最新狀態且已解除鎖定，「使用者管理」會傳回驗證成功。 但是，如果使用者不是最新使用者或已鎖定，「使用者管理」會傳回驗證失敗。
 
-   **不存在：** 用户管理返回身份验证失败。
+   **不存在：** User Management傳回驗證失敗。
 
-   **无效：** 用户管理返回身份验证失败。
+   **無效：** User Management傳回驗證失敗。
 
-1. 将评估身份验证提供程序返回的结果。 如果身份验证提供程序返回身份验证成功，则允许用户登录。 否则，“用户管理”会检查下一个身份验证提供程序（步骤2-3）。
-1. 如果没有可用的身份验证提供程序验证用户凭据，则返回身份验证失败。
+1. 會評估驗證提供者傳回的結果。 如果驗證提供者傳回驗證成功，則允許使用者登入。 否則，「使用者管理」會檢查下一個驗證提供者（步驟2-3）。
+1. 如果沒有可用的驗證提供者驗證使用者認證，則會傳回驗證失敗。
 
-实施实时设置时，如果其中一个身份验证提供程序验证用户的凭据，则将在“用户管理”中动态创建一个新用户。 （在传统的身份验证过程中执行步骤3之后，如上所述。）
+實作即時布建時，如果其中一個驗證提供者驗證使用者的認證，則會在「使用者管理」中動態建立新使用者。 （上述傳統驗證程式中的步驟3之後。）
 
-## 实施及时用户配置 {#implement-just-in-time-user-provisioning}
+## 實作即時使用者布建 {#implement-just-in-time-user-provisioning}
 
-### 用于及时资源调配的API {#apis-for-just-in-time-provisioning}
+### 適用於即時布建的API {#apis-for-just-in-time-provisioning}
 
-AEM forms提供了以下API用于及时资源调配：
+AEM forms提供下列API用於即時布建：
 
 ```java
 package com.adobe.idp.um.spi.authentication  ;
@@ -81,33 +81,33 @@ public Boolean assign(User user);
 }
 ```
 
-### 创建及时启用的域时的注意事项 {#considerations-while-creating-a-just-in-time-enabled-domain}
+### 建立即時啟用網域時的考量事項 {#considerations-while-creating-a-just-in-time-enabled-domain}
 
-* 创建自定义时 `IdentityCreator` 对于混合域，请确保为本地用户指定了虚拟口令。 请勿将此密码字段留空。
-* 建议：使用 `DomainSpecificAuthentication` 验证特定域的用户凭据。
+* 建立自訂時 `IdentityCreator` 對於混合網域，請確保為本機使用者指定了虛擬密碼。 請勿將此密碼欄位留空。
+* 建議：使用 `DomainSpecificAuthentication` 驗證特定網域的使用者認證。
 
-### 创建及时启用的域 {#create-a-just-in-time-enabled-domain}
+### 建立即時啟用的網域 {#create-a-just-in-time-enabled-domain}
 
-1. 在“用于及时资源调配的API”部分编写一个实施API的DSC。
-1. 将DSC部署到表单服务器。
-1. 创建及时启用的域：
+1. 在「即時布建的API」一節中撰寫實作API的DSC。
+1. 將DSC部署至表單伺服器。
+1. 建立即時啟用的網域：
 
-   * 在Administration Console中，单击设置>用户管理>域管理>新建企业域。
-   * 配置域并选择启用及时预配。 <!--Fix broken link (See Setting up and managing domains).-->
-   * 添加身份验证提供程序。 添加身份验证提供程序时，在“新建身份验证”屏幕上，选择已注册的身份创建者和分配提供程序。
+   * 在Administration Console中，按一下「設定>使用者管理>網域管理>新增企業網域」。
+   * 設定網域，然後選取「啟用即時(Just In Time)布建」。 <!--Fix broken link (See Setting up and managing domains).-->
+   * 新增驗證服務提供者。 新增驗證提供者時，請在[新增驗證]畫面上，選取已註冊的[身分建立者]和[指派提供者]。
 
-1. 保存新域。
+1. 儲存新網域。
 
-## 幕后 {#behind-the-scenes}
+## 幕後 {#behind-the-scenes}
 
-假设用户正在尝试登录AEM表单，并且身份验证提供程序接受其用户凭据。 如果用户尚不存在于“用户管理”数据库中，则用户的身份检查将失败。 AEM forms现在执行以下操作：
+假設使用者正在嘗試登入AEM表單，而驗證提供者接受其使用者認證。 如果使用者尚未存在於「使用者管理」資料庫中，則使用者的身分檢查會失敗。 AEM forms現在會執行下列動作：
 
-1. 创建 `UserProvisioningBO` 对象，并将其放入凭据映射中。
-1. 基于返回的域信息 `UserProvisioningBO`，获取并调用已注册的 `IdentityCreator` 和 `AssignmentProvider` 对于域。
-1. 调用 `IdentityCreator`. 如果返回成功 `AuthResponse`，提取 `UserInfo` 从凭据映射中。 将其传递给 `AssignmentProvider` 用于组/角色分配，以及创建用户后的任何其他后处理。
-1. 如果已成功创建用户，则将用户的登录尝试作为成功操作返回。
-1. 对于混合域，从提供给身份验证提供程序的身份验证数据中提取用户信息。 如果成功获取此信息，请动态创建用户。
+1. 建立 `UserProvisioningBO` 物件，並將它放置在認證對應中。
+1. 根據傳回的網域資訊 `UserProvisioningBO`，擷取並叫用註冊的 `IdentityCreator` 和 `AssignmentProvider` 用於網域。
+1. 叫用 `IdentityCreator`. 如果它傳回成功 `AuthResponse`，擷取 `UserInfo` 從認證對應。 將其傳遞給 `AssignmentProvider` 用於群組/角色指派，以及建立使用者後的任何其他後處理。
+1. 如果已成功建立使用者，請將使用者的登入嘗試傳回為成功。
+1. 對於混合網域，從提供給驗證提供者的驗證資料提取使用者資訊。 如果成功擷取此資訊，請立即建立使用者。
 
 >[!NOTE]
 >
->即时配置功能附带默认实施 `IdentityCreator` 可用来动态创建用户的属性。 创建用户时将与域中的目录相关联的信息。
+>即時布建功能隨附預設實作 `IdentityCreator` 可用來以動態方式建立使用者的資訊。 使用者是以與網域中目錄相關聯的資訊建立的。

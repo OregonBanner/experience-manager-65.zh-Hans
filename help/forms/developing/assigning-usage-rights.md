@@ -1,7 +1,7 @@
 ---
-title: 分配使用权限
+title: 指派使用許可權
 seo-title: Assigning Usage Rights
-description: 使用Acrobat Reader DC扩展Java客户端API和Web服务API来应用和删除PDF文档中的使用权限。
+description: 使用Acrobat Reader DC擴充功能Java使用者端API和Web服務API ，套用並移除PDF檔案中的使用許可權。
 seo-description: Use the Acrobat Reader DC extensions Java Client API and Web Service API to apply and remove usage rights from PDF documents.
 uuid: 8c2020df-ea3c-49fa-916f-38a458f40d2b
 contentOwner: admin
@@ -18,474 +18,474 @@ ht-degree: 0%
 
 ---
 
-# 分配使用权限 {#assigning-usage-rights}
+# 指派使用許可權 {#assigning-usage-rights}
 
-**本文档中的示例和示例仅适用于AEM Forms on JEE环境。**
+**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms 。**
 
-## 关于Acrobat Reader DC扩展服务 {#about-the-acrobat-reader-dc-extensions-service}
+## 關於Acrobat Reader DC擴充功能服務 {#about-the-acrobat-reader-dc-extensions-service}
 
-Acrobat Reader DC扩展服务通过扩展Adobe Reader的功能，使您的组织能够轻松共享交互式PDF文档。 Acrobat Reader DC扩展服务完全支持任何PDF文档，最多支持PDF1.7（含该文档）。它适用于Adobe Reader 7.0及更高版本。 该服务会向PDF文档添加使用权限，激活在使用Adobe Reader打开PDF文档时通常不可用的功能。 第三方用户无需其他软件或插件即可使用启用了权限的文档。
+Acrobat Reader DC擴充功能服務可擴充Adobe Reader的功能，讓您的組織輕鬆共用互動式PDF檔案。 Acrobat Reader DC擴充功能服務完全支援任何PDF檔案，最高支援（包括）PDF1.7。它可搭配Adobe Reader 7.0和更新版本使用。 此服務會將使用許可權新增至PDF檔案，並啟動使用Adobe Reader開啟PDF檔案時通常無法使用的功能。 協力廠商使用者不需要其他軟體或外掛程式即可使用啟用許可權的檔案。
 
-您可以使用Acrobat Reader DC扩展服务完成这些任务：
+您可以使用Acrobat Reader DC擴充功能服務完成這些工作：
 
-* 将使用权限应用于PDF文档。 有关信息，请参阅 [对PDF文档应用使用权限](assigning-usage-rights.md#applying-usage-rights-to-pdf-documents).
-* 从PDF文档中删除使用权限。 有关信息，请参阅 [从PDF文档中删除使用权限](assigning-usage-rights.md#removing-usage-rights-from-pdf-documents).
-* 检索凭据详细信息。 有关信息，请参阅 [正在检索凭据信息](assigning-usage-rights.md#retrieving-credential-information).
-
->[!NOTE]
->
->有关Acrobat Reader DC扩展服务的更多信息，请参阅 [AEM Forms的服务参考](https://www.adobe.com/go/learn_aemforms_services_63).
-
-## 对PDF文档应用使用权限 {#applying-usage-rights-to-pdf-documents}
-
-您可以使用Acrobat Reader DC扩展Java客户端API和Web服务将使用权限应用于PDF文档。 使用权限与Acrobat中默认提供的功能有关，但在Adobe Reader中不可用，例如向表单添加注释或填写表单字段并保存表单的功能。 已应用使用权限的PDF文档称为启用权限的文档。 在Adobe Reader中打开启用了权限的文档的用户可以执行为该特定文档启用的操作。
+* 套用使用許可權至PDF檔案。 如需詳細資訊，請參閱 [將使用許可權套用至PDF檔案](assigning-usage-rights.md#applying-usage-rights-to-pdf-documents).
+* 從PDF檔案中移除使用許可權。 如需詳細資訊，請參閱 [從PDF檔案中移除使用許可權](assigning-usage-rights.md#removing-usage-rights-from-pdf-documents).
+* 擷取認證詳細資料。 如需詳細資訊，請參閱 [正在擷取認證資訊](assigning-usage-rights.md#retrieving-credential-information).
 
 >[!NOTE]
 >
->使用对PDF文档应用使用权限时 `applyUsageRights` 方法是Java API的一部分，您可以设置 `isModeFinal` 的参数 `ReaderExtensionsOptionSpec` 对象对象 `false`. 这会导致表单处理的计数器未更新且性能提高。 如果您不担心更新已处理表单的计数器，建议您设置 `isModeFinal` 参数至 `false`.
+>如需Acrobat Reader DC擴充功能服務的詳細資訊，請參閱 [AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
+
+## 將使用許可權套用至PDF檔案 {#applying-usage-rights-to-pdf-documents}
+
+您可以使用Acrobat Reader DC擴充功能Java使用者端API和Web服務，將使用許可權套用至PDF檔案。 使用許可權與Acrobat中預設提供但Adobe Reader中預設不提供的功能相關，例如新增註解至表單或填寫表單欄位及儲存表單的功能。 已套用使用許可權的PDF檔案稱為許可權啟用檔案。 在Adobe Reader中開啟許可權啟用檔案的使用者可以執行為該特定檔案啟用的操作。
 
 >[!NOTE]
 >
->有关Acrobat Reader DC扩展服务的更多信息，请参阅 [AEM Forms的服务参考](https://www.adobe.com/go/learn_aemforms_services_63).
-
-### 步骤摘要 {#summary-of-steps}
-
-要对PDF文档应用使用权限，请执行以下步骤：
-
-1. 包括项目文件。
-1. 创建Acrobat Reader DC扩展客户端对象。
-1. 检索PDF文档。
-1. 指定要应用的使用权限。
-1. 对PDF文档应用使用权限。
-1. 保存启用权限的PDF文档。
-
-**包括项目文件**
-
-在开发项目中包含必要的文件。 如果要使用Java创建客户端应用程序，则包含必要的JAR文件。 如果您使用的是Web服务，请确保包含代理文件。
-
-**创建Acrobat Reader DC扩展客户端对象**
-
-要以编程方式执行Acrobat Reader DC扩展服务操作，您必须创建Acrobat Reader DC扩展服务客户端对象。 如果您使用的是Acrobat Reader DC扩展Java API，请创建 `ReaderExtensionsServiceClient` 对象。 如果您使用的是Acrobat Reader DC扩展Web服务API，请创建 `ReaderExtensionsServiceService` 对象。
-
-**检索PDF文档**
-
-您必须检索PDF文档才能应用使用权限。 启用权限的PDF文档包含使用权限词典。 当Adobe Reader打开包含此类词典的文档时，它仅启用词典中为该文档指定的使用权限。 如果文档不包含使用权限词典，则Acrobat Reader DC扩展服务会创建一个使用权限词典。 如果它已经包含字典，则Acrobat Reader DC扩展服务会使用您指定的使用权限覆盖现有使用权限。 词典指定已启用哪些使用权限。 当用户在Adobe Reader中打开文档时，仅允许词典中指定的使用权限。
-
-**指定要应用的使用权限**
-
-您可以设置的使用权限由您从Adobe Systems Incorporated购买的凭据决定。 凭据通常提供设置一组相关使用权限的权限，例如与交互式表单相关的权限。 每个凭据都提供了创建特定数量的启用权限的PDF文档的权利。 评估凭据授权创建无限数量的草稿文档。
+>使用將使用許可權套用至PDF檔案時 `applyUsageRights` 方法，是Java API的一部分，您可以設定 `isModeFinal` 的引數 `ReaderExtensionsOptionSpec` 物件至 `false`. 這會導致已處理表單的計數器未更新且效能提高。 如果您不介意更新已處理的表單計數器，建議您將 `isModeFinal` 引數至 `false`.
 
 >[!NOTE]
 >
->如果尝试分配凭据不允许的使用权限，则会导致异常。
+>如需Acrobat Reader DC擴充功能服務的詳細資訊，請參閱 [AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
 
-**对PDF文档应用使用权限**
+### 步驟摘要 {#summary-of-steps}
 
-要对PDF文档应用使用权限，请引用用于应用使用权限的凭据的别名(凭据通常在安装AEM Forms期间安装)。 此外，还必须指定应用了使用权限的PDF文档。 有关配置凭据的信息，请参阅应用程序服务器的安装和部署指南。
+若要將使用許可權套用至PDF檔案，請執行下列步驟：
 
-**保存启用权限的PDF文档**
+1. 包含專案檔案。
+1. 建立Acrobat Reader DC擴充功能使用者端物件。
+1. 擷取PDF檔案。
+1. 指定要套用的使用許可權。
+1. 將使用許可權套用至PDF檔案。
+1. 儲存啟用許可權的PDF檔案。
 
-在Acrobat Reader DC扩展服务将使用权限应用于PDF文档后，您可以将启用权限的PDF文档另存为PDF文件。
+**包含專案檔案**
+
+將必要的檔案納入您的開發專案中。 如果您使用Java建立使用者端應用程式，請包含必要的JAR檔案。 如果您使用Web服務，請務必包含Proxy檔案。
+
+**建立Acrobat Reader DC擴充功能使用者端物件**
+
+若要以程式設計方式執行Acrobat Reader DC擴充功能服務作業，您必須建立Acrobat Reader DC擴充功能服務使用者端物件。 如果您使用Acrobat Reader DC擴充功能Java API，請建立 `ReaderExtensionsServiceClient` 物件。 如果您使用Acrobat Reader DC擴充功能Web服務API，請建立 `ReaderExtensionsServiceService` 物件。
+
+**擷取PDF檔案**
+
+您必須擷取PDF檔案才能套用使用許可權。 啟用許可權的PDF檔案包含使用許可權字典。 當Adobe Reader開啟包含這類字典的檔案時，它只會啟用字典中為該檔案指定的使用許可權。 如果檔案未包含使用許可權字典，Acrobat Reader DC擴充功能服務會建立一個使用許可權字典。 如果其中已包含字典，Acrobat Reader DC擴充功能服務會以您指定的使用許可權覆寫現有使用許可權。 字典會指定已啟用哪些使用許可權。 當使用者在Adobe Reader中開啟檔案時，僅允許字典中指定的使用許可權。
+
+**指定要套用的使用許可權**
+
+您可以設定的使用許可權取決於您從Adobe Systems Incorporated購買的認證。 憑證通常會提供許可權來設定一組相關的使用許可權，例如與互動式表單相關的使用許可權。 每個認證都提供建立特定數量已啟用許可權的PDF檔案的權利。 評估認證可讓您建立不限數量的草稿檔案。
+
+>[!NOTE]
+>
+>如果您嘗試指派認證不允許的使用許可權，則會造成例外狀況。
+
+**將使用許可權套用至PDF檔案**
+
+若要將使用許可權套用至PDF檔案，請參考您用來套用使用許可權的認證別名(認證通常會在安裝AEM Forms期間安裝)。 您也必須指定套用使用許可權的PDF檔案。 如需設定認證的相關資訊，請參閱應用程式伺服器的安裝和部署指南。
+
+**儲存啟用許可權的PDF檔案**
+
+Acrobat Reader DC擴充功能服務將使用許可權套用至PDF檔案後，您可以將啟用許可權的PDF檔案儲存為PDF檔案。
 
 **另请参阅**
 
-[使用Java API应用使用权限](assigning-usage-rights.md#apply-usage-rights-using-the-java-api)
+[使用Java API套用使用許可權](assigning-usage-rights.md#apply-usage-rights-using-the-java-api)
 
-[使用Web服务API应用使用权限](assigning-usage-rights.md#apply-usage-rights-using-the-web-service-api)
+[使用網站服務API套用使用許可權](assigning-usage-rights.md#apply-usage-rights-using-the-web-service-api)
 
-[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
-[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[Acrobat Reader DC扩展服务API快速启动](/help/forms/developing/acrobat-reader-dc-extensions-service.md#acrobat-reader-dc-extensions-service-java-api-quick-start-soap)
+[Acrobat Reader DC擴充功能服務API快速入門](/help/forms/developing/acrobat-reader-dc-extensions-service.md#acrobat-reader-dc-extensions-service-java-api-quick-start-soap)
 
-### 使用Java API应用使用权限 {#apply-usage-rights-using-the-java-api}
+### 使用Java API套用使用許可權 {#apply-usage-rights-using-the-java-api}
 
-使用Acrobat Reader DC Extensions API (Java)对PDF文档应用使用权限：
+使用Acrobat Reader DC擴充功能API (Java)套用使用許可權至PDF檔案：
 
-1. 包括项目文件
+1. 包含專案檔案
 
-   在Java项目的类路径中包含客户端JAR文件，如adobe-reader-extensions-client.jar。
+   在您的Java專案的類別路徑中包含使用者端JAR檔案，例如adobe-reader-extensions-client.jar。
 
-1. 创建Acrobat Reader DC扩展客户端对象。
+1. 建立Acrobat Reader DC擴充功能使用者端物件。
 
-   * 创建 `ServiceClientFactory` 包含连接属性的对象。
-   * 创建 `ReaderExtensionsServiceClient` 对象，使用它的构造函数传递 `ServiceClientFactory` 对象。
+   * 建立 `ServiceClientFactory` 包含連線屬性的物件。
+   * 建立 `ReaderExtensionsServiceClient` 物件，使用它的建構函式並傳遞 `ServiceClientFactory` 物件。
 
-1. 检索PDF文档。
+1. 擷取PDF檔案。
 
-   * 创建 `java.io.FileInputStream` 对象，通过使用其构造函数并传递指定PDF文档位置的字符串值来表示PDF文档。
-   * 创建 `com.adobe.idp.Document` 对象，使用它的构造函数传递 `java.io.FileInputStream` 对象。
+   * 建立 `java.io.FileInputStream` 物件，使用它的建構函式並傳遞字串值來表示PDF檔案，該字串值指定PDF檔案的位置。
+   * 建立 `com.adobe.idp.Document` 物件，使用它的建構函式並傳遞 `java.io.FileInputStream` 物件。
 
-1. 指定要应用的使用权限。
+1. 指定要套用的使用許可權。
 
-   * 创建 `UsageRights` 通过其构造函数表示使用权限的对象。
-   * 对于要应用的每个使用权限，调用属于 `UsageRights` 对象。 例如，要添加 `enableFormFillIn` 使用权限，调用 `UsageRights` 对象的 `enableFormFillIn` 方法和路径 `true`. （对要应用的每个使用权限重复此步骤）。
+   * 建立 `UsageRights` 使用物件建構函式表示使用許可權的物件。
+   * 對於要套用的每個使用權利，叫用屬於的對應方法 `UsageRights` 物件。 例如，若要新增 `enableFormFillIn` 使用許可權，叫用 `UsageRights` 物件的 `enableFormFillIn` 方法與傳遞 `true`. （對要套用的每個使用許可權重複此步驟）。
 
-1. 对PDF文档应用使用权限。
+1. 將使用許可權套用至PDF檔案。
 
-   * 创建 `ReaderExtensionsOptionSpec` 对象。 此对象包含Acrobat Reader DC扩展服务所需的运行时选项。 调用此构造函数时，必须指定以下值：
+   * 建立 `ReaderExtensionsOptionSpec` 物件（使用其建構函式）。 此物件包含Acrobat Reader DC擴充功能服務所需的執行階段選項。 叫用此建構函式時，您必須指定下列值：
 
-      * 此 `UsageRights` 包含应用于文档的使用权限的对象。
-      * 一个字符串值，指定在Adobe Reader 7.x中打开启用了权限的PDF文档时，用户会看到一条消息。Adobe Reader 8.0中未显示此消息。
-   * PDF通过调用 `ReaderExtensionsServiceClient` 对象的 `applyUsageRights` 方法，并传递以下值：
+      * 此 `UsageRights` 包含要套用至檔案之使用許可權的物件。
+      * 字串值，指定在Adobe Reader 7.x中開啟啟用許可權的PDF檔案時，使用者看到的訊息。Adobe Reader 8.0中未顯示此訊息。
+   * PDF透過叫用 `ReaderExtensionsServiceClient` 物件的 `applyUsageRights` 並傳遞下列值：
 
-      * 此 `com.adobe.idp.Document` 包含应用了使用权限的PDF文档的对象。
-      * 一个字符串值，它指定可让您应用使用权限的凭据别名。
-      * 指定相应密码值的字符串值。 (当前忽略此参数。 你可以通过 `null`.)
-   * 此 `ReaderExtensionsOptionSpec` 包含运行时选项的对象。
+      * 此 `com.adobe.idp.Document` 包含套用使用許可權之PDF檔案的物件。
+      * 字串值，指定可讓您套用使用許可權的認證別名。
+      * 字串值，指定對應的密碼值。 (目前會忽略此引數。 您可以通過 `null`.)
+   * 此 `ReaderExtensionsOptionSpec` 包含執行階段選項的物件。
 
-   此 `applyUsageRights` 方法返回 `com.adobe.idp.Document` 包含启用权限的PDF文档的对象。
+   此 `applyUsageRights` 方法傳回 `com.adobe.idp.Document` 包含已啟用許可權的PDF檔案的物件。
 
-1. 保存启用权限的PDF文档。
+1. 儲存啟用許可權的PDF檔案。
 
-   * 创建 `java.io.File` 对象并确保文件扩展名为.pdf。
-   * 调用 `com.adobe.idp.Document` 对象的 `copyToFile` 用于复制目录内容的方法 `com.adobe.idp.Document` 对象(确保您使用 `com.adobe.idp.Document` 返回的对象 `applyUsageRights` 方法)。
+   * 建立 `java.io.File` 物件，並確認副檔名為.pdf。
+   * 叫用 `com.adobe.idp.Document` 物件的 `copyToFile` 複製目錄內容的方法 `com.adobe.idp.Document` 物件放入檔案(請確定您使用 `com.adobe.idp.Document` 物件，由 `applyUsageRights` 方法)。
 
 **另请参阅**
 
-[对PDF文档应用使用权限](assigning-usage-rights.md#applying-usage-rights-to-pdf-documents)
+[將使用許可權套用至PDF檔案](assigning-usage-rights.md#applying-usage-rights-to-pdf-documents)
 
-[快速入门（SOAP模式）：使用Java API应用使用权限](/help/forms/developing/acrobat-reader-dc-extensions-service.md#quick-start-soap-mode-applying-usage-rights-using-the-java-api)
+[快速入門（SOAP模式）：使用Java API套用使用許可權](/help/forms/developing/acrobat-reader-dc-extensions-service.md#quick-start-soap-mode-applying-usage-rights-using-the-java-api)
 
-[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
-[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### 使用Web服务API应用使用权限 {#apply-usage-rights-using-the-web-service-api}
+### 使用網站服務API套用使用許可權 {#apply-usage-rights-using-the-web-service-api}
 
-使用Acrobat Reader DC扩展API（Web服务）对PDF文档应用使用权限：
+使用Acrobat Reader DC擴充功能API （Web服務）套用使用許可權至PDF檔案：
 
-1. 包括项目文件。
+1. 包含專案檔案。
 
-   创建使用MTOM的Microsoft .NET项目。 确保使用以下WSDL定义： `http://localhost:8080/soap/services/ReaderExtensionsService?WSDL&lc_version=9.0.1`.
+   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/ReaderExtensionsService?WSDL&lc_version=9.0.1`.
 
    >[!NOTE]
    >
-   >Replace `localhost` 包含托管AEM Forms的服务器的IP地址。
+   >Replace `localhost` 搭配裝載AEM Forms之伺服器的IP位址。
 
-1. 创建Acrobat Reader DC扩展客户端对象。
+1. 建立Acrobat Reader DC擴充功能使用者端物件。
 
-   * 创建 `ReaderExtensionsServiceClient` 对象。
-   * 创建 `ReaderExtensionsServiceClient.Endpoint.Address` 对象 `System.ServiceModel.EndpointAddress` 构造函数。 将指定WSDL的字符串值传递给AEM Forms服务(例如， `http://localhost:8080/soap/services/ReaderExtensionsService?blob=mtom`. 确保指定 `?blob=mtom`.)
-   * 创建 `System.ServiceModel.BasicHttpBinding` 对象，方法是获取 `ReaderExtensionsServiceClient.Endpoint.Binding` 字段。 将返回值强制转换为 `BasicHttpBinding`.
-   * 设置 `System.ServiceModel.BasicHttpBinding` 对象的 `MessageEncoding` 字段至 `WSMessageEncoding.Mtom`. 此值可确保使用MTOM。
-   * 通过执行以下任务启用基本HTTP身份验证：
+   * 建立 `ReaderExtensionsServiceClient` 物件（使用其預設建構函式）。
+   * 建立 `ReaderExtensionsServiceClient.Endpoint.Address` 物件，使用 `System.ServiceModel.EndpointAddress` 建構函式。 將指定WSDL的字串值傳遞至AEM Forms服務(例如， `http://localhost:8080/soap/services/ReaderExtensionsService?blob=mtom`. 請務必指定 `?blob=mtom`.)
+   * 建立 `System.ServiceModel.BasicHttpBinding` 物件，方法是取得 `ReaderExtensionsServiceClient.Endpoint.Binding` 欄位。 將傳回值轉換為 `BasicHttpBinding`.
+   * 設定 `System.ServiceModel.BasicHttpBinding` 物件的 `MessageEncoding` 欄位至 `WSMessageEncoding.Mtom`. 此值可確保使用MTOM。
+   * 執行下列工作來啟用基本HTTP驗證：
 
-      * 将AEM表单用户名分配给字段 `ReaderExtensionsServiceClient.ClientCredentials.UserName.UserName`.
-      * 将相应的密码值分配给字段 `ReaderExtensionsServiceClient.ClientCredentials.UserName.Password`.
-      * 分配常量值 `HttpClientCredentialType.Basic` 到字段 `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
-      * 分配常量值 `BasicHttpSecurityMode.TransportCredentialOnly` 到字段 `BasicHttpBindingSecurity.Security.Mode`.
+      * 將AEM表單使用者名稱指派給欄位 `ReaderExtensionsServiceClient.ClientCredentials.UserName.UserName`.
+      * 將對應的密碼值指派給欄位 `ReaderExtensionsServiceClient.ClientCredentials.UserName.Password`.
+      * 指派常數值 `HttpClientCredentialType.Basic` 至欄位 `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
+      * 指派常數值 `BasicHttpSecurityMode.TransportCredentialOnly` 至欄位 `BasicHttpBindingSecurity.Security.Mode`.
 
-1. 检索PDF文档。
+1. 擷取PDF檔案。
 
-   * 创建 `BLOB` 对象。 此 `BLOB` 对象用于存储应用了使用权限的PDF文档。
-   * 创建 `System.IO.FileStream` 对象，方法是调用其构造函数并传递一个字符串值，该字符串值表示PDF文档的文件位置和打开文件的模式。
-   * 创建一个字节数组，用于存储 `System.IO.FileStream` 对象。 您可以通过获取 `System.IO.FileStream` 对象的 `Length` 属性。
-   * 通过调用 `System.IO.FileStream` 对象的 `Read` 方法。 传递字节数组、起始位置和要读取的流长度。
-   * 填充 `BLOB` 对象(通过指定其 `MTOM` 属性与字节数组的内容。
+   * 建立 `BLOB` 物件（使用其建構函式）。 此 `BLOB` 物件是用來儲存已套用使用許可權的PDF檔案。
+   * 建立 `System.IO.FileStream` 物件，方法是叫用其建構函式，並傳遞代表PDF檔案的檔案位置和開啟檔案的模式的字串值。
+   * 建立位元組陣列，儲存 `System.IO.FileStream` 物件。 您可以取得 `System.IO.FileStream` 物件的 `Length` 屬性。
+   * 叫用 `System.IO.FileStream` 物件的 `Read` 方法。 傳遞位元組陣列、起始位置以及要讀取的資料流長度。
+   * 填入 `BLOB` 物件，透過指派其 `MTOM` 具有位元組陣列內容的屬性。
 
-1. 指定要应用的使用权限。
+1. 指定要套用的使用許可權。
 
-   * 创建 `UsageRights` 通过其构造函数表示使用权限的对象。
-   * 对于要应用的每个使用权限，分配值 `true` 属于的相应数据成员 `UsageRights` 对象。 例如，要添加 `enableFormFillIn` 使用权限，分配 `true` 到 `UsageRights` 对象的 `enableFormFillIn` 数据成员。 （对要应用的每个使用权限重复此步骤）。
+   * 建立 `UsageRights` 使用物件建構函式表示使用許可權的物件。
+   * 對於要套用的每個使用權利，指派值 `true` 至屬於的對應資料成員 `UsageRights` 物件。 例如，若要新增 `enableFormFillIn` 使用許可權，指派 `true` 至 `UsageRights` 物件的 `enableFormFillIn` 資料成員。 （對要套用的每個使用許可權重複此步驟）。
 
-1. 对PDF文档应用使用权限。
+1. 將使用許可權套用至PDF檔案。
 
-   * 创建 `ReaderExtensionsOptionSpec` 对象。 此对象包含Acrobat Reader DC扩展服务所需的运行时选项。
-   * 分配 `UsageRights` 对象 `ReaderExtensionsOptionSpec` 对象的 `usageRights` 数据成员。
-   * 指定一个字符串值，该值指定在Adobe Reader中打开启用了权限的PDF文档时用户看到的消息 `ReaderExtensionsOptionSpec` 对象的 `message` 数据成员。
-   * PDF通过调用 `ReaderExtensionsServiceClient` 对象的 `applyUsageRights` 方法，并传递以下值：
+   * 建立 `ReaderExtensionsOptionSpec` 物件（使用其建構函式）。 此物件包含Acrobat Reader DC擴充功能服務所需的執行階段選項。
+   * 指派 `UsageRights` 物件至 `ReaderExtensionsOptionSpec` 物件的 `usageRights` 資料成員。
+   * 將字串值指派給，指定當在Adobe Reader中開啟啟用許可權的PDF檔案時，使用者看到的訊息 `ReaderExtensionsOptionSpec` 物件的 `message` 資料成員。
+   * PDF透過叫用 `ReaderExtensionsServiceClient` 物件的 `applyUsageRights` 並傳遞下列值：
 
-      * 此 `BLOB` 包含应用了使用权限的PDF文档的对象。
-      * 一个字符串值，它指定可让您应用使用权限的凭据别名。
-      * 指定相应密码值的字符串值。 (当前忽略此参数。 你可以通过 `null`.)
-   * 此 `ReaderExtensionsOptionSpec` 包含运行时选项的对象。
+      * 此 `BLOB` 包含套用使用許可權之PDF檔案的物件。
+      * 字串值，指定可讓您套用使用許可權的認證別名。
+      * 字串值，指定對應的密碼值。 (目前會忽略此引數。 您可以通過 `null`.)
+   * 此 `ReaderExtensionsOptionSpec` 包含執行階段選項的物件。
 
-   此 `applyUsageRights` 方法返回 `BLOB` 包含启用权限的PDF文档的对象。
+   此 `applyUsageRights` 方法傳回 `BLOB` 包含已啟用許可權的PDF檔案的物件。
 
-1. 保存启用权限的PDF文档。
+1. 儲存啟用許可權的PDF檔案。
 
-   * 创建 `System.IO.FileStream` 对象。 传递一个字符串值，该值表示启用权限的PDF文档的文件位置。
-   * 创建一个字节数组，用于存储 `BLOB` 返回的对象 `applyUsageRights` 方法。 通过获取的值填充字节数组 `BLOB` 对象的 `MTOM` 数据成员。
-   * 创建 `System.IO.BinaryWriter` 对象，方法是调用其构造函数 `System.IO.FileStream` 对象。
-   * PDF通过调用 `System.IO.BinaryWriter` 对象的 `Write` 方法和传递字节数组。
+   * 建立 `System.IO.FileStream` 物件（透過叫用其建構函式）。 傳遞代表已啟用許可權之PDF檔案之檔案位置的字串值。
+   * 建立位元組陣列，儲存 `BLOB` 物件，由 `applyUsageRights` 方法。 透過取得 `BLOB` 物件的 `MTOM` 資料成員。
+   * 建立 `System.IO.BinaryWriter` 物件，方法是叫用其建構函式並傳遞 `System.IO.FileStream` 物件。
+   * PDF透過叫用 `System.IO.BinaryWriter` 物件的 `Write` 方法並傳遞位元組陣列。
 
 **另请参阅**
 
-[对PDF文档应用使用权限](assigning-usage-rights.md#applying-usage-rights-to-pdf-documents)
+[將使用許可權套用至PDF檔案](assigning-usage-rights.md#applying-usage-rights-to-pdf-documents)
 
-[使用MTOM调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[使用MTOM叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[使用SwaRef调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[使用SwaRef叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
-## 从PDF文档中删除使用权限 {#removing-usage-rights-from-pdf-documents}
+## 從PDF檔案中移除使用許可權 {#removing-usage-rights-from-pdf-documents}
 
-您可以从启用了权限的文档中删除使用权限。 从启用了权限的PDF文档中删除使用权限对于对其执行其他AEM Forms操作也是必要的。 例如，在设置使用权限之前，您必须对PDF文档进行数字签名（或认证）。 因此，如果要对启用权限的文档执行操作，必须从PDF文档中删除使用权限，执行其他操作，如对文档进行数字签名，然后重新将使用权限应用到文档。
+您可以從啟用許可權的檔案中移除使用許可權。 若要在啟用許可權的PDF檔案上執行其他AEM Forms作業，也需要移除其使用許可權。 例如，您必須先數位簽署（或認證）PDF檔案，才能設定使用許可權。 因此，如果您要對啟用許可權的檔案執行操作，您必須從PDF檔案中移除使用許可權，執行其他操作，例如以數位方式簽署檔案，然後重新將使用許可權套用至檔案。
 
 >[!NOTE]
 >
->有关Acrobat Reader DC扩展服务的更多信息，请参阅 [AEM Forms的服务参考](https://www.adobe.com/go/learn_aemforms_services_63).
+>如需Acrobat Reader DC擴充功能服務的詳細資訊，請參閱 [AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
 
-### 步骤摘要 {#summary_of_steps-1}
+### 步驟摘要 {#summary_of_steps-1}
 
-要从启用权限的PDF文档中删除使用权限，请执行以下步骤：
+若要從啟用許可權的PDF檔案中移除使用許可權，請執行下列步驟：
 
-1. 包括项目文件。
-1. 创建Acrobat Reader DC扩展客户端对象。
-1. 检索启用权限的PDF文档。
-1. 从PDF文档中删除使用权限。
-1. 保存PDF文档。
+1. 包含專案檔案。
+1. 建立Acrobat Reader DC擴充功能使用者端物件。
+1. 擷取已啟用許可權的PDF檔案。
+1. 從PDF檔案中移除使用許可權。
+1. 儲存PDF檔案。
 
-**包括项目文件**
+**包含專案檔案**
 
-在开发项目中包含必要的文件。 如果要使用Java创建客户端应用程序，则包含必要的JAR文件。 如果您使用的是Web服务，请确保包含代理文件。
+將必要的檔案納入您的開發專案中。 如果您使用Java建立使用者端應用程式，請包含必要的JAR檔案。 如果您使用Web服務，請務必包含Proxy檔案。
 
-**创建Acrobat Reader DC扩展客户端对象**
+**建立Acrobat Reader DC擴充功能使用者端物件**
 
-在以编程方式执行Acrobat Reader DC扩展服务操作之前，必须创建Acrobat Reader DC扩展服务客户端对象。 如果您使用的是Java API，请创建 `ReaderExtensionsServiceClient` 对象。 如果您使用的是Acrobat Reader DC扩展Web服务API，请创建 `ReaderExtensionsServiceService` 对象。
+您必須先建立Acrobat Reader DC擴充功能服務使用者端物件，才能以程式設計方式執行Acrobat Reader DC擴充功能服務作業。 如果您使用Java API，請建立 `ReaderExtensionsServiceClient` 物件。 如果您使用Acrobat Reader DC擴充功能Web服務API，請建立 `ReaderExtensionsServiceService` 物件。
 
-**检索启用权限的PDF文档**
+**擷取啟用許可權的PDF檔案**
 
-检索启用了权限的PDF文档以删除使用权限。
+擷取已啟用許可權的PDF檔案，以移除使用許可權。
 
-**从PDF文档中删除使用权限**
+**從PDF檔案中移除使用許可權**
 
-检索启用了权限的PDF文档后，可以删除使用权限。 删除使用权限后，在Adobe Reader中查看PDF文档时，该文档将没有任何其他功能。
+擷取啟用許可權的PDF檔案後，您可以移除使用許可權。 移除使用許可權後，在Adobe Reader中檢視PDF檔案時，不會有任何額外的功能。
 
-**保存PDF文档**
+**儲存PDF檔案**
 
-您可以将不再包含使用权限的PDF文档保存为PDF文件。 另存为PDF文件后，即可在Adobe Reader或Acrobat中查看PDF文档。
-
-**另请参阅**
-
-[使用Java API删除使用权限](assigning-usage-rights.md#remove-usage-rights-using-the-java-api)
-
-[使用Web服务API删除使用权限](assigning-usage-rights.md#remove-usage-rights-using-the-web-service-api)
-
-[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
-
-[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
-
-[Acrobat Reader DC扩展服务API快速启动](/help/forms/developing/acrobat-reader-dc-extensions-service.md#acrobat-reader-dc-extensions-service-java-api-quick-start-soap)
-
-[对PDF文档应用使用权限](assigning-usage-rights.md#applying-usage-rights-to-pdf-documents)
-
-### 使用Java API删除使用权限 {#remove-usage-rights-using-the-java-api}
-
-使用Acrobat Reader DC扩展API (Java)从启用了权限的PDF文档中删除使用权限：
-
-1. 包括项目文件。
-
-   在Java项目的类路径中包含客户端JAR文件，如adobe-reader-extensions-client.jar。
-
-1. 创建Acrobat Reader DC扩展客户端对象。
-
-   创建 `ReaderExtensionsServiceClient` 对象通过使用该对象的构造函数传递 `ServiceClientFactory` 包含连接属性的对象。
-
-1. 检索PDF文档。
-
-   * 创建 `java.io.FileInputStream` 对象，通过使用其构造函数并传递指定PDF文档位置的字符串值来表示启用权限的PDF文档。
-   * 创建 `com.adobe.idp.Document` 对象，使用它的构造函数传递 `java.io.FileInputStream` 对象。
-
-1. 从PDF文档中删除使用权限。
-
-   通过调用，从PDF文档中删除使用权限 `ReaderExtensionsServiceClient` 对象的 `removeUsageRights` 方法和传递 `com.adobe.idp.Document` 包含启用权限的PDF文档的对象。 此方法会返回 `com.adobe.idp.Document` 包含无使用权限的PDF文档的对象。
-
-1. 对PDF文档应用使用权限。
-
-   * 创建 `java.io.File` 对象并确保文件扩展名为。PDF。
-   * 调用 `Document` 对象的 `copyToFile` 用于复制目录内容的方法 `Document` 对象(确保您使用 `Document` 返回的对象 `removeUsageRights` 方法)。
+您可以將不再包含使用許可權的PDF檔案儲存為PDF檔案。 儲存為PDF檔案後，即可在Adobe Reader或Acrobat中檢視PDF檔案。
 
 **另请参阅**
 
-[从PDF文档中删除使用权限](assigning-usage-rights.md#removing-usage-rights-from-pdf-documents)
+[使用Java API移除使用許可權](assigning-usage-rights.md#remove-usage-rights-using-the-java-api)
 
-[快速入门（SOAP模式）：使用Java API从PDF文档中删除使用权限](/help/forms/developing/acrobat-reader-dc-extensions-service.md#quick-start-soap-mode-removing-usage-rights-from-a-pdf-document-using-the-java-api)
+[使用Web服務API移除使用許可權](assigning-usage-rights.md#remove-usage-rights-using-the-web-service-api)
 
-[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
-[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### 使用Web服务API删除使用权限 {#remove-usage-rights-using-the-web-service-api}
+[Acrobat Reader DC擴充功能服務API快速入門](/help/forms/developing/acrobat-reader-dc-extensions-service.md#acrobat-reader-dc-extensions-service-java-api-quick-start-soap)
 
-使用Acrobat Reader DC扩展API（Web服务），从启用了权限的PDF文档中删除使用权限：
+[將使用許可權套用至PDF檔案](assigning-usage-rights.md#applying-usage-rights-to-pdf-documents)
 
-1. 包括项目文件。
+### 使用Java API移除使用許可權 {#remove-usage-rights-using-the-java-api}
 
-   创建使用MTOM的Microsoft .NET项目。 确保使用以下WSDL定义： `http://localhost:8080/soap/services/ReaderExtensionsService?WSDL&lc_version=9.0.1`.
+使用Acrobat Reader DC擴充功能API (Java)，從啟用許可權的PDF檔案中移除使用許可權：
+
+1. 包含專案檔案。
+
+   在您的Java專案的類別路徑中包含使用者端JAR檔案，例如adobe-reader-extensions-client.jar。
+
+1. 建立Acrobat Reader DC擴充功能使用者端物件。
+
+   建立 `ReaderExtensionsServiceClient` 物件，使用它的建構函式並傳遞 `ServiceClientFactory` 包含連線屬性的物件。
+
+1. 擷取PDF檔案。
+
+   * 建立 `java.io.FileInputStream` 物件，使用物件的建構函式並傳遞字串值(指定PDF檔案的位置)來表示啟用許可權的PDF檔案。
+   * 建立 `com.adobe.idp.Document` 物件，使用它的建構函式並傳遞 `java.io.FileInputStream` 物件。
+
+1. 從PDF檔案中移除使用許可權。
+
+   叫用「 」，從PDF檔案中移除使用許可權 `ReaderExtensionsServiceClient` 物件的 `removeUsageRights` 方法和傳遞 `com.adobe.idp.Document` 包含已啟用許可權的PDF檔案的物件。 此方法會傳回 `com.adobe.idp.Document` 包含沒有使用許可權之PDF檔案的物件。
+
+1. 將使用許可權套用至PDF檔案。
+
+   * 建立 `java.io.File` 物件，並確認副檔名為。PDF。
+   * 叫用 `Document` 物件的 `copyToFile` 複製目錄內容的方法 `Document` 物件放入檔案(請確定您使用 `Document` 物件，由 `removeUsageRights` 方法)。
+
+**另请参阅**
+
+[從PDF檔案中移除使用許可權](assigning-usage-rights.md#removing-usage-rights-from-pdf-documents)
+
+[快速入門（SOAP模式）：使用Java API從PDF檔案中移除使用許可權](/help/forms/developing/acrobat-reader-dc-extensions-service.md#quick-start-soap-mode-removing-usage-rights-from-a-pdf-document-using-the-java-api)
+
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+
+[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+
+### 使用Web服務API移除使用許可權 {#remove-usage-rights-using-the-web-service-api}
+
+使用Acrobat Reader DC擴充功能API （Web服務），從啟用許可權的PDF檔案中移除使用許可權：
+
+1. 包含專案檔案。
+
+   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/ReaderExtensionsService?WSDL&lc_version=9.0.1`.
 
    >[!NOTE]
    >
-   >Replace `localhost` 包含托管AEM Forms的服务器的IP地址。
+   >Replace `localhost` 搭配裝載AEM Forms之伺服器的IP位址。
 
-1. 创建Acrobat Reader DC扩展客户端对象。
+1. 建立Acrobat Reader DC擴充功能使用者端物件。
 
-   * 创建 `ReaderExtensionsServiceClient` 对象。
-   * 创建 `ReaderExtensionsServiceClient.Endpoint.Address` 对象 `System.ServiceModel.EndpointAddress` 构造函数。 将指定WSDL的字符串值传递给AEM Forms服务(例如， `http://localhost:8080/soap/services/ReaderExtensionsService?blob=mtom`. 确保指定 `?blob=mtom`.)
-   * 创建 `System.ServiceModel.BasicHttpBinding` 对象，方法是获取 `ReaderExtensionsServiceClient.Endpoint.Binding` 字段。 将返回值强制转换为 `BasicHttpBinding`.
-   * 设置 `System.ServiceModel.BasicHttpBinding` 对象的 `MessageEncoding` 字段至 `WSMessageEncoding.Mtom`. 此值可确保使用MTOM。
-   * 通过执行以下任务启用基本HTTP身份验证：
+   * 建立 `ReaderExtensionsServiceClient` 物件（使用其預設建構函式）。
+   * 建立 `ReaderExtensionsServiceClient.Endpoint.Address` 物件，使用 `System.ServiceModel.EndpointAddress` 建構函式。 將指定WSDL的字串值傳遞至AEM Forms服務(例如， `http://localhost:8080/soap/services/ReaderExtensionsService?blob=mtom`. 請務必指定 `?blob=mtom`.)
+   * 建立 `System.ServiceModel.BasicHttpBinding` 物件，方法是取得 `ReaderExtensionsServiceClient.Endpoint.Binding` 欄位。 將傳回值轉換為 `BasicHttpBinding`.
+   * 設定 `System.ServiceModel.BasicHttpBinding` 物件的 `MessageEncoding` 欄位至 `WSMessageEncoding.Mtom`. 此值可確保使用MTOM。
+   * 執行下列工作來啟用基本HTTP驗證：
 
-      * 将AEM表单用户名分配给字段 `ReaderExtensionsServiceClient.ClientCredentials.UserName.UserName`.
-      * 将相应的密码值分配给字段 `ReaderExtensionsServiceClient.ClientCredentials.UserName.Password`.
-      * 分配常量值 `HttpClientCredentialType.Basic` 到字段 `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
-      * 分配常量值 `BasicHttpSecurityMode.TransportCredentialOnly` 到字段 `BasicHttpBindingSecurity.Security.Mode`.
+      * 將AEM表單使用者名稱指派給欄位 `ReaderExtensionsServiceClient.ClientCredentials.UserName.UserName`.
+      * 將對應的密碼值指派給欄位 `ReaderExtensionsServiceClient.ClientCredentials.UserName.Password`.
+      * 指派常數值 `HttpClientCredentialType.Basic` 至欄位 `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
+      * 指派常數值 `BasicHttpSecurityMode.TransportCredentialOnly` 至欄位 `BasicHttpBindingSecurity.Security.Mode`.
 
-1. 检索PDF文档。
+1. 擷取PDF檔案。
 
-   * 创建 `BLOB` 对象。 此 `BLOB` 对象用于存储启用权限的PDF文档，使用权限将从该文档中删除。
-   * 创建 `System.IO.FileStream` 对象，方法是调用其构造函数并传递一个字符串值，该字符串值表示PDF文档的文件位置和打开文件的模式。
-   * 创建一个字节数组，用于存储 `System.IO.FileStream` 对象。 您可以通过获取 `System.IO.FileStream` 对象的 `Length` 属性。
-   * 通过调用 `System.IO.FileStream` 对象的 `Read` 方法，并传递字节数组、起始位置和要读取的流长度。
-   * 填充 `BLOB` 对象(通过指定其 `MTOM` 属性与字节数组的内容。
+   * 建立 `BLOB` 物件（使用其建構函式）。 此 `BLOB` 物件是用來儲存啟用許可權的PDF檔案，使用許可權會從中移除。
+   * 建立 `System.IO.FileStream` 物件，方法是叫用其建構函式，並傳遞代表PDF檔案的檔案位置和開啟檔案的模式的字串值。
+   * 建立位元組陣列，儲存 `System.IO.FileStream` 物件。 您可以取得 `System.IO.FileStream` 物件的 `Length` 屬性。
+   * 叫用 `System.IO.FileStream` 物件的 `Read` 方法，並傳遞位元組陣列、起始位置以及要讀取的資料流長度。
+   * 填入 `BLOB` 物件，透過指派其 `MTOM` 具有位元組陣列內容的屬性。
 
-1. 从PDF文档中删除使用权限。
+1. 從PDF檔案中移除使用許可權。
 
-   通过调用，从PDF文档中删除使用权限 `ReaderExtensionsServiceClient` 对象的 `removeUsageRights` 方法和传递 `BLOB` 包含启用权限的PDF文档的对象。 此方法会返回 `BLOB` 包含无使用权限的PDF文档的对象。
+   叫用「 」，從PDF檔案中移除使用許可權 `ReaderExtensionsServiceClient` 物件的 `removeUsageRights` 方法和傳遞 `BLOB` 包含已啟用許可權的PDF檔案的物件。 此方法會傳回 `BLOB` 包含沒有使用許可權之PDF檔案的物件。
 
-1. 对PDF文档应用使用权限。
+1. 將使用許可權套用至PDF檔案。
 
-   * 创建 `System.IO.FileStream` 对象，方法是调用其构造函数并传递表示PDF文件位置的字符串值。
-   * 创建一个字节数组，用于存储 `BLOB` 返回的对象 `removeUsageRights` 方法。 通过获取的值填充字节数组 `BLOB` 对象的 `MTOM` 数据成员。
-   * 创建 `System.IO.BinaryWriter` 对象，方法是调用其构造函数 `System.IO.FileStream` 对象。
+   * 建立 `System.IO.FileStream` 物件，方法是叫用其建構函式，並傳遞代表PDF檔案位置的字串值。
+   * 建立位元組陣列，儲存 `BLOB` 物件，由 `removeUsageRights` 方法。 透過取得 `BLOB` 物件的 `MTOM` 資料成員。
+   * 建立 `System.IO.BinaryWriter` 物件，方法是叫用其建構函式並傳遞 `System.IO.FileStream` 物件。
 
 **另请参阅**
 
-[从PDF文档中删除使用权限](assigning-usage-rights.md#removing-usage-rights-from-pdf-documents)
+[從PDF檔案中移除使用許可權](assigning-usage-rights.md#removing-usage-rights-from-pdf-documents)
 
-[使用MTOM调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[使用MTOM叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[使用SwaRef调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[使用SwaRef叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
-## 正在检索凭据信息 {#retrieving-credential-information}
+## 正在擷取認證資訊 {#retrieving-credential-information}
 
-您可以检索用于向启用权限的PDF文档应用使用权限的凭据的相关信息。 通过检索有关凭据的信息，您可以获取信息，例如证书不再有效的日期。
+您可以擷取用來將使用許可權套用至啟用許可權的PDF檔案的認證相關資訊。 透過擷取認證的相關資訊，您可以取得憑證不再有效的日期等資訊。
 
 >[!NOTE]
 >
->有关Acrobat Reader DC扩展服务的更多信息，请参阅 [AEM Forms的服务参考](https://www.adobe.com/go/learn_aemforms_services_63).
+>如需Acrobat Reader DC擴充功能服務的詳細資訊，請參閱 [AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
 
-### 步骤摘要 {#summary_of_steps-2}
+### 步驟摘要 {#summary_of_steps-2}
 
-要检索有关用于向PDF文档应用使用权限的凭据的信息，请执行以下步骤：
+若要擷取用於套用使用許可權至PDF檔案的認證相關資訊，請執行下列步驟：
 
-1. 包括项目文件。
-1. 创建Acrobat Reader DC扩展客户端对象。
-1. 检索启用权限的PDF文档。
-1. 检索有关凭据的信息。
+1. 包含專案檔案。
+1. 建立Acrobat Reader DC擴充功能使用者端物件。
+1. 擷取已啟用許可權的PDF檔案。
+1. 擷取認證的相關資訊。
 
-**包括项目文件**
+**包含專案檔案**
 
-在开发项目中包含必要的文件。 如果要使用Java创建客户端应用程序，则包含必要的JAR文件。 如果您使用的是Web服务，请确保包含代理文件。
+將必要的檔案納入您的開發專案中。 如果您使用Java建立使用者端應用程式，請包含必要的JAR檔案。 如果您使用Web服務，請務必包含Proxy檔案。
 
-**创建Acrobat Reader DC扩展客户端对象**
+**建立Acrobat Reader DC擴充功能使用者端物件**
 
-在以编程方式执行Acrobat Reader DC扩展服务操作之前，必须创建Acrobat Reader DC扩展服务客户端对象。 如果您使用的是Java API，请创建 `ReaderExtensionsServiceClient` 对象。 如果您使用的是Acrobat Reader DC扩展Web服务API，请创建 `ReaderExtensionsServiceService` 对象。
+您必須先建立Acrobat Reader DC擴充功能服務使用者端物件，才能以程式設計方式執行Acrobat Reader DC擴充功能服務作業。 如果您使用Java API，請建立 `ReaderExtensionsServiceClient` 物件。 如果您使用Acrobat Reader DC擴充功能Web服務API，請建立 `ReaderExtensionsServiceService` 物件。
 
-**检索启用权限的PDF文档**
+**擷取啟用許可權的PDF檔案**
 
-必须检索启用了权限的PDF文档，才能检索有关凭据的信息。 您还可以通过指定凭据的别名来检索有关凭据的信息；但是，如果要检索有关凭据的信息，该凭据用于将使用权限应用于启用了特定权限的PDF文档，则必须检索该文档。
+您必須擷取已啟用許可權的PDF檔案，才能擷取關於認證的資訊。 您也可以透過指定認證的別名來擷取其相關資訊；不過，如果您要擷取用於套用使用許可權至特定啟用許可權的PDF檔案的認證相關資訊，則必須擷取該檔案。
 
-**检索有关凭据的信息**
+**擷取認證的相關資訊**
 
-检索启用了权限的PDF文档后，您可以获取有关用于对其应用使用权限的凭据的信息。 您可以获取有关凭据的以下信息：
+擷取啟用許可權的PDF檔案後，您可以取得用來套用使用許可權的認證相關資訊。 您可以取得下列關於認證的資訊：
 
-* 打开启用了权限的PDF文档时，Adobe Reader中显示的消息。
-* 凭据不再有效的日期。
-* 凭据无效的日期。
-* 为此启用权限的PDF文档设置的使用权限。
-* 凭据已使用的次数。
-
-**另请参阅**
-
-[使用Java API删除使用权限](assigning-usage-rights.md#remove-usage-rights-using-the-java-api)
-
-[使用Web服务API删除使用权限](assigning-usage-rights.md#remove-usage-rights-using-the-web-service-api)
-
-[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
-
-[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
-
-[Acrobat Reader DC扩展服务API快速启动](/help/forms/developing/acrobat-reader-dc-extensions-service.md#acrobat-reader-dc-extensions-service-java-api-quick-start-soap)
-
-### 使用Java API检索凭据信息 {#retrieve-credential-information-using-the-java-api}
-
-使用Acrobat Reader DC扩展API (Java)检索凭据信息：
-
-1. 包括项目文件。
-
-   在Java项目的类路径中包含客户端JAR文件，如adobe-reader-extensions-client.jar。
-
-1. 创建Acrobat Reader DC扩展客户端对象。
-
-   创建 `ReaderExtensionsServiceClient` 对象通过使用该对象的构造函数传递 `ServiceClientFactory` 包含连接属性的对象。
-
-1. 检索PDF文档。
-
-   * 创建 `java.io.FileInputStream` 对象，通过使用其构造函数并传递指定启用权限的PDF文档位置的字符串值，来表示启用权限的PDF文档。
-   * 创建 `com.adobe.idp.Document` 对象，使用它的构造函数传递 `java.io.FileInputStream` 对象。
-
-1. 从PDF文档中删除使用权限。
-
-   * PDF通过调用 `ReaderExtensionsServiceClient` 对象的 `getDocumentUsageRights` 方法和传递 `com.adobe.idp.Document` 包含启用权限的PDF文档的对象。 此方法返回 `GetUsageRightsResult` 包含凭据信息的对象。
-   * 通过调用 `GetUsageRightsResult` 对象的 `getNotAfter` 方法。 此方法会返回 `java.util.Date` 表示凭据不再有效的日期的对象。
-   * Adobe Reader PDF通过调用 `GetUsageRightsResult` 对象的 `getMessage` 方法。 此方法返回表示消息的字符串值。
+* 當啟用許可權的PDF檔案開啟時，Adobe Reader中顯示的訊息。
+* 認證不再有效的日期。
+* 認證無效的日期。
+* 為此許可權啟用的PDF檔案設定的使用許可權。
+* 已使用認證的次數。
 
 **另请参阅**
 
-[正在检索凭据信息](assigning-usage-rights.md#retrieving-credential-information)
+[使用Java API移除使用許可權](assigning-usage-rights.md#remove-usage-rights-using-the-java-api)
 
-[快速入门（SOAP模式）：使用Java API检索凭据信息](/help/forms/developing/acrobat-reader-dc-extensions-service.md#quick-start-soap-mode-retrieving-credential-information-using-the-java-api)
+[使用Web服務API移除使用許可權](assigning-usage-rights.md#remove-usage-rights-using-the-web-service-api)
 
-[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
-[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### 使用Web服务API检索凭据信息 {#retrieve-credential-information-using-the-web-service-api}
+[Acrobat Reader DC擴充功能服務API快速入門](/help/forms/developing/acrobat-reader-dc-extensions-service.md#acrobat-reader-dc-extensions-service-java-api-quick-start-soap)
 
-使用Acrobat Reader DC扩展API（Web服务）检索凭据信息：
+### 使用Java API擷取認證資訊 {#retrieve-credential-information-using-the-java-api}
 
-1. 包括项目文件。
+使用Acrobat Reader DC擴充功能API (Java)擷取認證資訊：
 
-   创建使用MTOM的Microsoft .NET项目。 确保使用以下WSDL定义： `http://localhost:8080/soap/services/ReaderExtensionsService?WSDL&lc_version=9.0.1`.
+1. 包含專案檔案。
+
+   在您的Java專案的類別路徑中包含使用者端JAR檔案，例如adobe-reader-extensions-client.jar。
+
+1. 建立Acrobat Reader DC擴充功能使用者端物件。
+
+   建立 `ReaderExtensionsServiceClient` 物件，使用它的建構函式並傳遞 `ServiceClientFactory` 包含連線屬性的物件。
+
+1. 擷取PDF檔案。
+
+   * 建立 `java.io.FileInputStream` 物件，使用許可權啟用PDF檔案的建構函式，並傳遞字串值(指定許可權啟用PDF檔案的位置)來代表許可權啟用檔案。
+   * 建立 `com.adobe.idp.Document` 物件，使用它的建構函式並傳遞 `java.io.FileInputStream` 物件。
+
+1. 從PDF檔案中移除使用許可權。
+
+   * 透過叫用，擷取用於套用使用許可權至PDF檔案的認證相關資訊 `ReaderExtensionsServiceClient` 物件的 `getDocumentUsageRights` 方法和傳遞 `com.adobe.idp.Document` 包含已啟用許可權的PDF檔案的物件。 此方法會傳回 `GetUsageRightsResult` 包含認證資訊的物件。
+   * 透過叫用 `GetUsageRightsResult` 物件的 `getNotAfter` 方法。 此方法會傳回 `java.util.Date` 物件，代表認證不再有效的日期。
+   * 透過叫用「 」，擷取在啟用許可權的PDF檔案開啟時在Adobe Reader中顯示的訊息 `GetUsageRightsResult` 物件的 `getMessage` 方法。 此方法會傳回代表訊息的字串值。
+
+**另请参阅**
+
+[正在擷取認證資訊](assigning-usage-rights.md#retrieving-credential-information)
+
+[快速入門（SOAP模式）：使用Java API擷取認證資訊](/help/forms/developing/acrobat-reader-dc-extensions-service.md#quick-start-soap-mode-retrieving-credential-information-using-the-java-api)
+
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+
+[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+
+### 使用Web服務API擷取認證資訊 {#retrieve-credential-information-using-the-web-service-api}
+
+使用Acrobat Reader DC擴充功能API （Web服務）擷取認證資訊：
+
+1. 包含專案檔案。
+
+   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/ReaderExtensionsService?WSDL&lc_version=9.0.1`.
 
    >[!NOTE]
    >
-   >Replace `localhost` 包含托管AEM Forms的服务器的IP地址。
+   >Replace `localhost` 搭配裝載AEM Forms之伺服器的IP位址。
 
-1. 创建Acrobat Reader DC扩展客户端对象。
+1. 建立Acrobat Reader DC擴充功能使用者端物件。
 
-   * 创建 `ReaderExtensionsServiceClient` 对象。
-   * 创建 `ReaderExtensionsServiceClient.Endpoint.Address` 对象 `System.ServiceModel.EndpointAddress` 构造函数。 将指定WSDL的字符串值传递给AEM Forms服务(例如， `http://localhost:8080/soap/services/ReaderExtensionsService?blob=mtom`. 确保指定 `?blob=mtom`.)
-   * 创建 `System.ServiceModel.BasicHttpBinding` 对象，方法是获取 `ReaderExtensionsServiceClient.Endpoint.Binding` 字段。 将返回值强制转换为 `BasicHttpBinding`.
-   * 设置 `System.ServiceModel.BasicHttpBinding` 对象的 `MessageEncoding` 字段至 `WSMessageEncoding.Mtom`. 此值可确保使用MTOM。
-   * 通过执行以下任务启用基本HTTP身份验证：
+   * 建立 `ReaderExtensionsServiceClient` 物件（使用其預設建構函式）。
+   * 建立 `ReaderExtensionsServiceClient.Endpoint.Address` 物件，使用 `System.ServiceModel.EndpointAddress` 建構函式。 將指定WSDL的字串值傳遞至AEM Forms服務(例如， `http://localhost:8080/soap/services/ReaderExtensionsService?blob=mtom`. 請務必指定 `?blob=mtom`.)
+   * 建立 `System.ServiceModel.BasicHttpBinding` 物件，方法是取得 `ReaderExtensionsServiceClient.Endpoint.Binding` 欄位。 將傳回值轉換為 `BasicHttpBinding`.
+   * 設定 `System.ServiceModel.BasicHttpBinding` 物件的 `MessageEncoding` 欄位至 `WSMessageEncoding.Mtom`. 此值可確保使用MTOM。
+   * 執行下列工作來啟用基本HTTP驗證：
 
-      * 将AEM表单用户名分配给字段 `ReaderExtensionsServiceClient.ClientCredentials.UserName.UserName`.
-      * 将相应的密码值分配给字段 `ReaderExtensionsServiceClient.ClientCredentials.UserName.Password`.
-      * 分配常量值 `HttpClientCredentialType.Basic` 到字段 `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
-      * 分配常量值 `BasicHttpSecurityMode.TransportCredentialOnly` 到字段 `BasicHttpBindingSecurity.Security.Mode`.
+      * 將AEM表單使用者名稱指派給欄位 `ReaderExtensionsServiceClient.ClientCredentials.UserName.UserName`.
+      * 將對應的密碼值指派給欄位 `ReaderExtensionsServiceClient.ClientCredentials.UserName.Password`.
+      * 指派常數值 `HttpClientCredentialType.Basic` 至欄位 `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
+      * 指派常數值 `BasicHttpSecurityMode.TransportCredentialOnly` 至欄位 `BasicHttpBindingSecurity.Security.Mode`.
 
-1. 检索PDF文档。
+1. 擷取PDF檔案。
 
-   * 创建 `BLOB` 对象。 此 `BLOB` 对象用于存储启用权限的PDF文档。
-   * 创建 `System.IO.FileStream` 对象，方法是调用其构造函数并传递一个字符串值，该字符串值表示启用权限的PDF文档的文件位置以及打开文件的模式。
-   * 创建一个字节数组，用于存储 `System.IO.FileStream` 对象。 您可以通过获取 `System.IO.FileStream` 对象的 `Length` 属性。
-   * 通过调用 `System.IO.FileStream` 对象的 `Read` 方法，并传递字节数组、起始位置和要读取的流长度。
-   * 填充 `BLOB` 对象(通过指定其 `MTOM` 属性与字节数组的内容。
+   * 建立 `BLOB` 物件（使用其建構函式）。 此 `BLOB` 物件可用來儲存啟用許可權的PDF檔案。
+   * 建立 `System.IO.FileStream` 物件，方法是叫用其建構函式，並傳遞代表已啟用rights之PDF檔案的檔案位置以及開啟檔案的模式的字串值。
+   * 建立位元組陣列，儲存 `System.IO.FileStream` 物件。 您可以取得 `System.IO.FileStream` 物件的 `Length` 屬性。
+   * 叫用 `System.IO.FileStream` 物件的 `Read` 方法，並傳遞位元組陣列、起始位置以及要讀取的資料流長度。
+   * 填入 `BLOB` 物件，透過指派其 `MTOM` 具有位元組陣列內容的屬性。
 
-1. 从PDF文档中删除使用权限。
+1. 從PDF檔案中移除使用許可權。
 
-   * PDF通过调用 `ReaderExtensionsServiceClient` 对象的 `getDocumentUsageRights` 方法和传递 `com.adobe.idp.Document` 包含启用权限的PDF文档的对象。 此方法会返回 `GetUsageRightsResult` 包含凭据信息的对象。
-   * 通过获取的值，检索凭据不再有效的日期 `GetUsageRightsResult` 对象的 `notAfter` 数据成员。 此数据成员的数据类型为 `System.DateTime`.
-   * 通过获取的值，检索在Adobe Reader中打开启用了权限的PDF文档时显示的消息。 `GetUsageRightsResult` 对象的 `message` 数据成员。 此数据成员的数据类型是一个字符串。
-   * 通过获取值，检索凭据的使用次数 `GetUsageRightsResult` 对象的 `useCount` 数据成员。 此数据成员的数据类型是一个整数。
+   * 透過叫用，擷取用於套用使用許可權至PDF檔案的認證相關資訊 `ReaderExtensionsServiceClient` 物件的 `getDocumentUsageRights` 方法和傳遞 `com.adobe.idp.Document` 包含已啟用許可權的PDF檔案的物件。 此方法會傳回 `GetUsageRightsResult` 包含認證資訊的物件。
+   * 透過取得「 」的值，擷取認證不再有效的日期 `GetUsageRightsResult` 物件的 `notAfter` 資料成員。 此資料成員的資料型別為 `System.DateTime`.
+   * 透過取得「 」的值，擷取在Adobe Reader中開啟啟用許可權的PDF檔案時顯示的訊息 `GetUsageRightsResult` 物件的 `message` 資料成員。 此資料成員的資料型別為字串。
+   * 透過取得「 」的值，擷取使用認證的次數 `GetUsageRightsResult` 物件的 `useCount` 資料成員。 此資料成員的資料型別是整數。
 
 **另请参阅**
 
-[正在检索凭据信息](assigning-usage-rights.md#retrieving-credential-information)
+[正在擷取認證資訊](assigning-usage-rights.md#retrieving-credential-information)
 
-[使用MTOM调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[使用MTOM叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[使用SwaRef调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[使用SwaRef叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)

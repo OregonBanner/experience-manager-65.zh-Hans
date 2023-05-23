@@ -1,7 +1,7 @@
 ---
-title: 为社区配置Dispatcher
+title: 為社群設定Dispatcher
 seo-title: Configuring Dispatcher for Communities
-description: 为AEM Communities配置调度程序
+description: 設定AEM Communities的Dispatcher
 seo-description: Configure the dispatcher for AEM Communities
 uuid: c17daca9-3244-4b10-9d4e-2e95df633dd9
 contentOwner: msm-service
@@ -17,83 +17,83 @@ ht-degree: 11%
 
 ---
 
-# 为社区配置Dispatcher {#configuring-dispatcher-for-communities}
+# 為社群設定Dispatcher {#configuring-dispatcher-for-communities}
 
 ## AEM Communities {#aem-communities}
 
-对于AEM Communities，需要配置Dispatcher以确保 [社区站点](overview.md#community-sites). 在包含社交登录等功能时，需要额外配置。
+對於AEM Communities，必須設定Dispatcher以確保的正常運作 [社群網站](overview.md#community-sites). 包含社交登入等功能時，需要其他設定。
 
-了解特定部署和站点设计所需的内容
+瞭解您的特定部署和網站設計所需的專案
 
 * 联系[客户关怀团队](https://helpx.adobe.com/cn/marketing-cloud/contact-support.html)
 
-另请参阅 [Dispatcher文档](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html).
+另請參閱主要 [Dispatcher檔案](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html).
 
-## 调度程序缓存 {#dispatcher-caching}
+## Dispatcher快取 {#dispatcher-caching}
 
 ### 概述 {#overview}
 
-AEM Communities的调度程序缓存是指调度程序能够提供社区网站页面的完全缓存版本。
+AEM Communities的Dispatcher快取可讓Dispatcher提供社群網站頁面的完整快取版本。
 
-目前，仅支持匿名网站访客（例如浏览社区网站或因搜索而登陆社区页面的用户）以及为页面编制索引的搜索引擎。 其好处是匿名用户和搜索引擎将体验到改进的性能。
+目前，它僅支援匿名網站訪客，例如瀏覽社群網站或因搜尋而登陸社群頁面的使用者，以及索引頁面的搜尋引擎。 其好處是匿名使用者和搜尋引擎將會體驗到效能的改善。
 
-对于已登录的成员，调度程序绕过缓存，直接将请求转发给发布者，以便所有页面都是动态生成和交付的。
+對於已登入的成員，Dispatcher會略過快取，直接將請求轉送給發佈者，以便動態產生並傳送所有頁面。
 
-当配置为支持调度程序缓存时，将在标头中添加基于TTL的“最大页面”过期时间，以确保调度程序缓存的页面是最新的。
+設定為支援Dispatcher快取時，會將TTL型「最大期限」到期日新增到標頭，以確保Dispatcher快取頁面為最新版本。
 
 ### 要求 {#requirements}
 
-* Dispatcher版本4.1.2或更高版本(请参阅 [安装Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-install.html) )
-* [ACS AEM Commons包](https://adobe-consulting-services.github.io/acs-aem-commons/)
+* Dispatcher版本4.1.2或更新版本(請參閱 [安裝Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-install.html) （最新版本）
+* [ACS AEM Commons套件](https://adobe-consulting-services.github.io/acs-aem-commons/)
 
-   * 版本3.3.2或更高版本
-   * `ACS AEM Commons - Dispatcher Cache Control Header - Max Age` OSGi配置
+   * 版本3.3.2或更新版本
+   * `ACS AEM Commons - Dispatcher Cache Control Header - Max Age` OSGi設定
 
 ### 配置 {#configuration}
 
-OSGi配置 **ACS AEM Commons — 调度程序缓存控制标头 — 最大年龄** 设置在指定路径下显示的缓存页面的过期时间。
+OSGi設定 **ACS AEM Commons - Dispatcher快取控制標頭 — Max Age** 設定出現在指定路徑下的快取頁面的到期日。
 
-* 从 [Web控制台](../../help/sites-deploying/configuring-osgi.md)
+* 從 [網頁主控台](../../help/sites-deploying/configuring-osgi.md)
 
    * 例如， [http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr)
 
-* 定位 `ACS AEM Commons - Dispatcher Cache Control Header - Max Age`
-* 选择“+”图标以创建新连接配置
+* 尋找 `ACS AEM Commons - Dispatcher Cache Control Header - Max Age`
+* 選取「+」圖示以建立新的連線設定
 
    ![dispatcher](assets/dispatcher.png)
 
-* **筛选模式**
+* **篩選模式**
 
-   *（必需）* 一个或多个到社区页面的路径。 例如：`/content/sites/engage/(.*)`。
+   *（必要）* 社群頁面的一或多個路徑。 例如：`/content/sites/engage/(.*)`。
 
-* **Cache-Control Max Age（缓存控制最大年龄）**
+* **Cache-Control Max Age**
 
-   *（必需）* 要添加到缓存控制标头的最大页面（以秒为单位）。 值必须大于零(0)。
+   *（必要）* 要新增至「快取控制」標頭的最長存留時間（以秒為單位）。 值必須大於零(0)。
 
-## 调度程序过滤器 {#dispatcher-filters}
+## Dispatcher篩選器 {#dispatcher-filters}
 
-的/filter部分 `dispatcher.any` 文件记录在 [配置对内容的访问 — /filter](https://helpx.adobe.com/cn/experience-manager/dispatcher/using/dispatcher-configuration.html#filter).
+的/filter區段 `dispatcher.any` 檔案記錄於 [設定對內容的存取權 — /filter](https://helpx.adobe.com/cn/experience-manager/dispatcher/using/dispatcher-configuration.html#filter).
 
-本节介绍社区功能正常运行可能需要的条目。
+本節說明Communities功能正常運作可能需要的專案。
 
-过滤器属性名称遵循使用四位数字来指示应用过滤器模式的顺序的惯例。 对一个请求应用了多个筛选模式时，最后一个应用的筛选模式生效。因此，第一过滤模式通常用于拒绝所有内容，使得以下模式用于以受控方式恢复访问。
+篩選屬性名稱會遵循使用四位數字來指示套用篩選模式的順序的慣例。 对一个请求应用了多个筛选模式时，最后一个应用的筛选模式生效。因此，第一個篩選模式通常用於拒絕所有內容，使得以下模式用於以受控方式恢復存取。
 
-以下示例使用的属性名称，该属性名称可能需要进行修改以适合任何特定的dispatcher.any文件。
+以下範例使用屬性名稱，這些名稱可能需要修改以適合任何特定的dispatcher.any檔案。
 
 另请参阅：
 
-* [调度程序安全检查列表](https://helpx.adobe.com/cn/experience-manager/dispatcher/using/security-checklist.html)
+* [Dispatcher安全性檢查清單](https://helpx.adobe.com/cn/experience-manager/dispatcher/using/security-checklist.html)
 
 >[!NOTE]
 >
->**属性名称示例**
->显示的所有属性名称，如 **/0050** 和 **/0170**，应调整为适合现有dispatcher.any配置文件。
+>**屬性名稱範例**
+>所有顯示的屬性名稱，例如 **/0050** 和 **/0170**，應進行調整，以符合現有的dispatcher.any設定檔案。
 
 >[!CAUTION]
 >
->请参阅 [Dispatcher 安全检查清单](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/security-checklist.html)以了解使用 Dispatcher 限制访问时的更多注意事项。此外，请阅读 [AEM安全检查列表](https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/security-checklist.html) 有关AEM安装的其他安全详细信息。
+>请参阅 [Dispatcher 安全检查清单](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/security-checklist.html)以了解使用 Dispatcher 限制访问时的更多注意事项。此外，請閱讀 [AEM安全性檢查清單](https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/security-checklist.html) 以取得關於您的AEM安裝的其他安全性詳細資訊。
 
-应将以下条目添加到/filter部分的末尾，特别是所有拒绝条目之后。
+下列專案應新增至/filter區段的結尾，尤其是在所有拒絕專案之後。
 
 <!-- New code wrt CQDOC-16081, changed by Vishabh on 10 Dec 2020.
 -->
@@ -223,9 +223,9 @@ OSGi配置 **ACS AEM Commons — 调度程序缓存控制标头 — 最大年龄
 ```
 -->
 
-## 调度程序规则 {#dispatcher-rules}
+## Dispatcher規則 {#dispatcher-rules}
 
-的规则部分 `dispatcher.any` 定义应根据请求的URL缓存哪些响应。 对于社区，使用规则部分定义不应缓存的内容。
+的規則區段 `dispatcher.any` 根據請求的URL定義應該快取哪些回應。 對於Communities，規則區段用於定義絕不應快取的內容。
 
 <!-- New code wrt CQDOC-16081, changed by Vishabh on 10 Dec 2020.
 -->
@@ -273,13 +273,13 @@ OSGi配置 **ACS AEM Commons — 调度程序缓存控制标头 — 最大年龄
 
 ## 疑难解答 {#troubleshooting}
 
-导致问题的一个主要原因是插入过滤器规则时不会注意对早期规则的影响，尤其是在添加规则以拒绝访问时。
+問題的一個主要來源是在未留意對舊版規則的影響的情況下插入篩選規則，尤其是在新增拒絕存取的規則時。
 
-第一个过滤器模式通常用于拒绝所有内容，以便后续过滤器以受控方式恢复访问。 当多个过滤器应用于一个请求时，应用的最后一个过滤器即是生效的过滤器。
+第一個篩選模式通常用於拒絕所有內容，以便以下列篩選恢復以受控方式存取。 當一個請求套用多個篩選器時，最後一個套用的篩選器是生效的篩選器。
 
-## Dispatcher.any示例 {#sample-dispatcher-any}
+## 範例dispatcher.any {#sample-dispatcher-any}
 
-以下示例 `dispatcher.any` 包含Communities /filters和/rules的文件。
+以下是範例 `dispatcher.any` 包含Communities /filters和/rules的檔案。
 
 <!-- New code wrt CQDOC-16081, changed by Vishabh on 10 Dec 2020.
 -->

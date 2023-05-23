@@ -1,7 +1,7 @@
 ---
-title: 创建新文件夹以对表单进行分类
+title: 建立新資料夾以將表單分類
 seo-title: Create new folders to categorize forms
-description: 使用文件夹组织表单模板、PDF、资源和自适应表单。
+description: 使用資料夾來組織您的表單範本、PDF、資源和調適型表單。
 seo-description: Use folders to organize your form templates, PDFs, resources, and adaptive forms.
 uuid: 63fcb807-c9cf-49ae-ad69-6b1187543470
 content-type: reference
@@ -17,42 +17,42 @@ ht-degree: 0%
 
 ---
 
-# 创建新文件夹以对表单进行分类 {#create-new-folders-to-categorize-forms}
+# 建立新資料夾以將表單分類 {#create-new-folders-to-categorize-forms}
 
-您可以使用文件夹更好地组织资源。 由于AEM Forms支持多种类型的资源(包含各种元数据的表单模板、PDF、文档、资源和自适应表单)，因此您可以使用文件夹根据所需的标准对表单进行分类。
+您可以使用資料夾更妥善地組織您的資產。 由於AEM Forms支援多種型別的資產(表單範本、PDF、檔案、資源和調適型表單)以及各種中繼資料，因此您可以使用資料夾根據所需的條件將表單分類。
 
-AEM Forms允许您更改文件夹的标题。 标题与存储库中存储文件夹的节点名称不同。 相反，标题将保留为文件夹的元数据。 如果更改文件夹的标题，则文件夹中存在的任何资源的路径都不会受到影响。
+AEM Forms可讓您變更資料夾的標題。 標題與存放庫中儲存資料夾的節點名稱不同。 而是保留標題作為資料夾的中繼資料。 如果您變更資料夾的標題，資料夾中存在的任何資產的路徑都不會受到影響。
 
-## 创建文件夹 {#create-a-folder}
+## 建立資料夾 {#create-a-folder}
 
-您可以通过以下方式之一在AEM Forms中创建文件夹：
+您可以透過下列其中一種方式，在AEM Forms中建立資料夾：
 
-* 上传包含所需文件夹结构中的资产的ZIP文件(请参阅 [在AEM Forms中获取XDP和PDF文档](/help/forms/using/get-xdp-pdf-documents-aem.md))
+* 上傳包含所需資料夾結構中的資產的ZIP檔案(請參閱 [在AEM Forms中取得XDP和PDF檔案](/help/forms/using/get-xdp-pdf-documents-aem.md))
 
-* 创建新的空文件夹
+* 建立新的空白資料夾
 
-1. 登录到AEM Forms用户界面，网址为 `https://<server>:<port>/aem/forms.html`.
-1. 导航到要创建文件夹的位置。
-1. 单击 ![aem6forms_add](assets/aem6forms_add.png) 图标，然后选择 **[!UICONTROL 创建文件夹]**.
+1. 登入AEM Forms使用者介面，網址為 `https://<server>:<port>/aem/forms.html`.
+1. 導覽至您要建立資料夾的位置。
+1. 按一下 ![aem6forms_add](assets/aem6forms_add.png) 圖示並選取「 」 **[!UICONTROL 建立資料夾]**.
 
-1. 输入以下详细信息：
+1. 輸入下列詳細資料：
 
-   * **标题：** 文件夹的显示名称
-   * **名称：** *（必需）* 要在存储库中存储文件夹的节点名称
+   * **標題：** 資料夾的顯示名稱
+   * **名稱：** *（必要）* 要在存放庫中儲存資料夾的節點名稱
 
    >[!NOTE]
    >
-   >默认情况下，“名称”字段的值会自动从标题中填充。 名称只能包含字母数字字符，或连字符(-)和下划线(_)特殊字符。 在标题中输入的任何其他特殊字符都会自动替换为连字符，并提示您确认新名称。 您可以选择继续使用建议的名称或进一步编辑它。
+   >依預設，名稱欄位的值會自動從標題中填入。 名稱只能包含英數字元，或連字型大小(-)和底線(_)特殊字元。 在標題中輸入的任何其他特殊字元都會自動取代為連字型大小，並提示您確認新名稱。 您可以選擇繼續使用建議的名稱或進一步編輯。
 
-1. 单击 **[!UICONTROL 提交].**
+1. 按一下 **[!UICONTROL 提交].**
 
-   带有您定义标题的新文件夹将显示在资产列表中的当前位置。
+   具有您定義標題的新資料夾會顯示在資產清單中的目前位置。
 
-   如果存在具有指定名称的文件夹，提交会失败并出现错误。 您可以将鼠标悬停在该错误上来查看错误消息 ![aem6forms_error_alert](assets/aem6forms_error_alert.png) 图标显示在名称字段旁。
+   如果存在具有指定名稱的資料夾，提交會失敗並出現錯誤。 您可以將滑鼠懸停在錯誤上，檢視錯誤訊息 ![aem6forms_error_alert](assets/aem6forms_error_alert.png) 圖示顯示在名稱欄位旁。
 
-### 编辑文件夹标题 {#edit-the-folder-title-br}
+### 編輯資料夾標題 {#edit-the-folder-title-br}
 
-1. 选择要编辑其标题的文件夹。
-1. 单击编辑 ![aem6forms_edit](assets/aem6forms_edit.png) 图标。
-1. 输入新标题。 该文本字段已预填充了文件夹标题的当前值。 您可以将其更改为新值。
-1. 单击 **[!UICONTROL 提交].**
+1. 選取您要編輯其標題的資料夾。
+1. 按一下編輯 ![aem6forms_edit](assets/aem6forms_edit.png) 圖示加以檢視。
+1. 輸入新標題。 文字欄位會預先填入資料夾標題的目前值。 您可以將其變更為新值。
+1. 按一下 **[!UICONTROL 提交].**

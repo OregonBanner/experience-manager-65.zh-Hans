@@ -1,7 +1,7 @@
 ---
 title: 查询生成器 API
 seo-title: Query Builder API
-description: 资产共享查询生成器的功能通过Java API和REST API公开。
+description: Asset Share Query Builder的功能會透過Java API和REST API公開。
 seo-description: The functionality of the Asset Share Query Builder is exposed through a Java API and a REST API.
 uuid: 6928c3e9-96a1-44ad-9785-350d95f1869a
 contentOwner: msm-service
@@ -21,49 +21,49 @@ ht-degree: 0%
 
 # 查询生成器 API{#query-builder-api}
 
-的功能 [资产共享查询生成器](/help/assets/assets-finder-editor.md) 通过Java API和REST API公开。 本节介绍了这些API。
+的功能 [資產共用查詢產生器](/help/assets/assets-finder-editor.md) 會透過Java API和REST API公開。 本節將說明這些API。
 
-服务器端查询生成器( [`QueryBuilder`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/QueryBuilder.html))将接受查询描述，创建并运行XPath查询，可以选择筛选结果集，并根据需要提取Facet。
+伺服器端查詢產生器( [`QueryBuilder`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/QueryBuilder.html))將接受查詢說明、建立並執行XPath查詢、選擇性地篩選結果集，以及視需要擷取Facet。
 
-查询描述只是一组谓词([`Predicate`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/Predicate.html))。 示例包括一个全文谓词，该谓词对应于 `jcr:contains()` 函数。
+查詢說明只是一組述詞([`Predicate`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/Predicate.html))。 範例包括全文檢索述詞，其對應至 `jcr:contains()` XPath中的函式。
 
-对于每个谓词类型，都有一个计算器组件([`PredicateEvaluator`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/eval/PredicateEvaluator.html))，知道如何处理XPath、筛选和Facet提取的特定谓词。 创建自定义评估器非常简单，这些评估器通过OSGi组件运行时插入。
+對於每個述詞型別，都有一個求值器元件([`PredicateEvaluator`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/eval/PredicateEvaluator.html))，知道如何處理XPath、篩選和Facet擷取的特定述詞。 建立自訂評估器非常容易，可透過OSGi元件執行階段插入。
 
-REST API通过HTTP提供对完全相同的功能的访问，响应以JSON发送。
-
->[!NOTE]
->
->QueryBuilder API是使用JCR API构建的。 您还可以使用OSGi捆绑包中的JCR API查询Adobe Experience Manager JCR。 有关信息，请参阅 [使用JCR API的Adobe Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/access-jcr.html?lang=en).
-
-## Gem会话 {#gem-session}
-
-[AEM Gems](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/overview.html) 是Adobe专家对Adobe Experience Manager进行的一系列深入技术探讨。 此专门用于查询生成器的会话对于概述和使用工具非常有用。
+REST API可讓您透過HTTP存取完全相同的功能，且回應會以JSON傳送。
 
 >[!NOTE]
 >
->请参阅AEM Gem会话 [使用AEM查询生成器轻松搜索表单](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2017/aem-search-forms-using-querybuilder.html) 有关查询生成器的详细概述。
+>QueryBuilder API是使用JCR API建置。 您也可以使用OSGi套件中的JCR API來查詢Adobe Experience Manager JCR。 如需詳細資訊，請參閱 [使用JCR API的Adobe Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/access-jcr.html?lang=en).
 
-## 示例查询 {#sample-queries}
+## Gem講座 {#gem-session}
 
-这些示例以Java属性样式表示法提供。 要将其与Java API结合使用，请使用Java `HashMap` 与下面的API示例中一样。
+[AEM Gems](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/overview.html) 是Adobe專家為Adobe Experience Manager提供的一系列深入技術探討。 此查詢產生器專用的工作階段對於工具的概述和使用非常有用。
 
-对于 `QueryBuilder` JSON Servlet，每个示例都包含一个指向您的本地CQ安装的链接(位于默认位置， `http://localhost:4502`)。 请注意，您必须先登录CQ实例，然后才能使用这些链接。
+>[!NOTE]
+>
+>請參閱AEM Gem研討會 [使用AEM查詢建立器輕鬆搜尋表單](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2017/aem-search-forms-using-querybuilder.html) 以取得查詢產生器的詳細概觀。
+
+## 範例查詢 {#sample-queries}
+
+這些範例以Java屬性樣式標籤法提供。 若要搭配Java API使用，請使用Java `HashMap` 與下列API範例相同。
+
+對於 `QueryBuilder` JSON Servlet，每個範例都包含本機CQ安裝的連結(在預設位置， `http://localhost:4502`)。 請注意，您必須先登入您的CQ執行個體，才能使用這些連結。
 
 >[!CAUTION]
 >
->默认情况下，查询生成器json servlet最多显示10次点击。
+>依預設，查詢產生器json servlet最多可顯示10次點選。
 >
->添加以下参数可让servlet显示所有查询结果：
+>新增以下引數可讓servlet顯示所有查詢結果：
 >
 >**`p.limit=-1`**
 
 >[!NOTE]
 >
->要在浏览器中查看返回的JSON数据，您可能要使用诸如JSONView for Firefox之类的插件。
+>若要在瀏覽器中檢視傳回的JSON資料，您可能會想要使用外掛程式，例如Firefox適用的JSONView。
 
-### 返回所有结果 {#returning-all-results}
+### 傳回所有結果 {#returning-all-results}
 
-以下查询将 **返回十个结果** （精确地说，最多为10个），但通知您 **点击次数：** 实际可用的URL路径：
+下列查詢將 **傳回10個結果** （精確地說，最多為10個），但通知您 **點選次數：** 實際可用的：
 
 `http://localhost:4502/bin/querybuilder.json?path=/content&1_property=sling:resourceType&1_property.value=foundation/components/text&1_property.operation=like&orderby=path`
 
@@ -75,7 +75,7 @@ path=/content
 orderby=path
 ```
 
-相同查询（使用参数） `p.limit=-1`)将 **返回所有结果** （根据您的实例，此数字可能会很高）：
+相同查詢（使用引數） `p.limit=-1`)會 **傳回所有結果** （根據您的執行個體，此數字可能會很高）：
 
 `http://localhost:4502/bin/querybuilder.json?path=/content&1_property=sling:resourceType&1_property.value=foundation/components/text&1_property.operation=like&p.limit=-1&orderby=path`
 
@@ -88,13 +88,13 @@ p.limit=-1
 orderby=path
 ```
 
-### 使用p.guessTotal返回结果 {#using-p-guesstotal-to-return-the-results}
+### 使用p.guessTotal傳回結果 {#using-p-guesstotal-to-return-the-results}
 
-目的 `p.guessTotal` 参数是返回通过组合最小可行偏移和p限制值可以显示的适当数量的结果。 使用该参数的优点是改善了性能，且结果集大。 这样可避免计算完整总计(例如，调用result.getSize())和读取整个结果集，从而可优化一直到OAK引擎和索引。 当执行时间和内存使用量都有10万个结果时，这可能存在显着差异。
+目的 `p.guessTotal` 引數為傳回適當數目的結果，可藉由結合最小可行p.offset和p.limit值來顯示。 使用此引數的優點是在大型結果集中改善效能。 這樣可以避免計算完整總計(例如呼叫result.getSize())和讀取整個結果集，一直最佳化到OAK引擎和索引。 當執行時間和記憶體使用量都有10萬個結果時，這可能是一個顯著的差異。
 
-该参数的缺点是用户看不到确切的总数。 但您可以设置一个最小值，如p.guessTotal=1000，以便它始终可读取多达1000个结果，这样您便可获得较小结果集的精确总计，但是如果大于此值，则只能显示“和更多”。
+此引數的缺點是使用者看不到確切的總數。 但是您可以設定最小值，例如p.guessTotal=1000，這樣它就會一直讀取到1000，所以您可以得到較小結果集的精確總計，但是如果超過此值，您只能顯示「等等」。
 
-添加 `p.guessTotal=true` ，以了解其工作原理：
+新增 `p.guessTotal=true` 若要檢視其運作方式，請執行下列動作：
 
 `http://localhost:4502/bin/querybuilder.json?path=/content&1_property=sling:resourceType&1_property.value=foundation/components/text&1_property.operation=like&p.guessTotal=true&orderby=path`
 
@@ -107,7 +107,7 @@ p.guessTotal=true
 orderby=path
 ```
 
-查询将返回 `p.limit` 默认 `10` 结果带有 `0` 偏移：
+查詢會傳回 `p.limit` 預設 `10` 結果包含 `0` offset：
 
 ```xml
 "success": true,
@@ -117,11 +117,11 @@ orderby=path
 "offset": 0,
 ```
 
-从AEM 6.0 SP2开始，您还可以使用数字值进行计数，以自定义最大结果数。 使用与上述相同的查询，但更改 `p.guessTotal` 到 `50`：
+自AEM 6.0 SP2起，您也可以使用數值來計數至自訂的最大結果數量。 使用與上述相同的查詢，但變更值 `p.guessTotal` 至 `50`：
 
 `http://localhost:4502/bin/querybuilder.json?path=/content&1_property=sling:resourceType&1_property.value=foundation/components/text&1_property.operation=like&p.guessTotal=50&orderby=path`
 
-它将返回一个数字，该数字与10个结果的默认限制相同，偏移量为0，但最多只显示50个结果：
+它會傳回一個數字，預設限製為10個結果，位移為0，但最多只會顯示50個結果：
 
 ```xml
 "success": true,
@@ -131,23 +131,23 @@ orderby=path
 "offset": 0,
 ```
 
-### 实施分页 {#implementing-pagination}
+### 實作分頁 {#implementing-pagination}
 
-默认情况下，查询生成器还会提供点击量。 根据结果大小，这可能需要较长时间，因为确定准确计数涉及检查每个结果的访问控制。 通常，总计用于对最终用户UI实现分页。 由于确定确切计数可能会很慢，因此建议使用guessTotal功能实施分页。
+依預設，查詢產生器也會提供點選次數。 根據結果大小，這可能需要很長的時間，因為要判斷準確的計數，需要檢查存取控制的每個結果。 總計主要用於為一般使用者UI實作分頁。 由於判斷確切計數可能會變慢，建議使用guessTotal功能來實作分頁。
 
-例如，UI可以调整以下方法：
+例如，UI可以調整以下方法：
 
-* 获取并显示总点击量的准确计数([SearchResult.getTotalMatches()](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/result/SearchResult.html#gettotalmatches) Querybuilder.json响应中的或total)小于或等于100；
-* 设置 `guessTotal` 调用查询生成器时为100。
+* 取得並顯示點選總數的精確計數([SearchResult.getTotalMatches()](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/result/SearchResult.html#gettotalmatches) 或total （在querybuilder.json回應中）小於或等於100；
+* 設定 `guessTotal` 至100，同時呼叫查詢產生器。
 
-* 响应可能会产生以下结果：
+* 回應可能會產生下列結果：
 
-   * `total=43`， `more=false`  — 表示点击总数为43。 UI可以在第一个页面中显示最多十个结果，并为接下来的三个页面提供分页。 您还可以使用此实施来显示描述性文本，如 **“找到43个结果”**.
-   * `total=100`， `more=true`  — 表示点击总数大于100，但确切计数未知。 UI最多可以显示10个作为第一页的一部分，并为接下来的10个页面提供分页。 您还可以使用此选项来显示文本，例如 **“找到100个以上的结果”**. 当用户转到下一页时，调用查询生成器将增加限制 `guessTotal` 以及 `offset` 和 `limit` 参数。
+   * `total=43`， `more=false`  — 表示點選總數為43。 UI可以在第一個頁面中顯示最多十個結果，並為接下來的三個頁面提供分頁。 您也可以使用此實作來顯示描述性文字，例如 **「找到43個結果」**.
+   * `total=100`， `more=true`  — 表示點選總數大於100，但不確定確切計數。 UI最多可顯示10個做為第一頁的一部分，並為接下來的10個頁面提供分頁。 您也可以使用此選項來顯示文字，例如 **「找到100個以上的結果」**. 當使用者前往下一頁時，對查詢產生器的呼叫將增加限制 `guessTotal` 以及 `offset` 和 `limit` 引數。
 
-`guessTotal` 在UI需要使用无限滚动的情况下也应使用，以避免Query Builder确定确切的点击计数。
+`guessTotal` 當UI需要使用無限捲動時，也應使用，以避免Query Builder判斷確切的點選計數。
 
-### 查找jar文件并对其进行排序，最新的先排序 {#find-jar-files-and-order-them-newest-first}
+### 尋找jar檔案並排序，最新的先排序 {#find-jar-files-and-order-them-newest-first}
 
 `http://localhost:4502/bin/querybuilder.json?type=nt:file&nodename=*.jar&orderby=@jcr:content/jcr:lastModified&orderby.sort=desc`
 
@@ -158,7 +158,7 @@ orderby=@jcr:content/jcr:lastModified
 orderby.sort=desc
 ```
 
-### 查找所有页面并按上次修改时间对页面进行排序 {#find-all-pages-and-order-them-by-last-modified}
+### 尋找所有頁面，並按上次修改時間排序 {#find-all-pages-and-order-them-by-last-modified}
 
 `http://localhost:4502/bin/querybuilder.json?type=cq:Page&orderby=@jcr:content/cq:lastModified`
 
@@ -167,7 +167,7 @@ type=cq:Page
 orderby=@jcr:content/cq:lastModified
 ```
 
-### 查找所有页面并按上次修改时间对页面进行排序，但降序 {#find-all-pages-and-order-them-by-last-modified-but-descending}
+### 尋找所有頁面，並按上次修改時間降序排序 {#find-all-pages-and-order-them-by-last-modified-but-descending}
 
 `http://localhost:4502/bin/querybuilder.json?type=cq:Page&orderby=@jcr:content/cq:lastModified&orderby.sort=desc]`
 
@@ -177,7 +177,7 @@ orderby=@jcr:content/cq:lastModified
 orderby.sort=desc
 ```
 
-### 全文搜索，按得分排序 {#fulltext-search-ordered-by-score}
+### 全文檢索搜尋，依分數排序 {#fulltext-search-ordered-by-score}
 
 `http://localhost:4502/bin/querybuilder.json?fulltext=Management&orderby=@jcr:score&orderby.sort=desc`
 
@@ -187,7 +187,7 @@ orderby=@jcr:score
 orderby.sort=desc
 ```
 
-### 搜索使用特定标记进行标记的页面 {#search-for-pages-tagged-with-a-certain-tag}
+### 搜尋以特定標籤標籤的頁面 {#search-for-pages-tagged-with-a-certain-tag}
 
 `http://localhost:4502/bin/querybuilder.json?type=cq:Page&tagid=marketing:interest/product&tagid.property=jcr:content/cq:tags`
 
@@ -197,13 +197,13 @@ tagid=marketing:interest/product
 tagid.property=jcr:content/cq:tags
 ```
 
-使用 `tagid` 谓词（如示例中所示），前提是您知道显式标记ID。
+使用 `tagid` 如果您知道明確的標籤ID，請依照此範例使用述詞。
 
-使用 `tag` 标记标题路径的谓词（不含空格）。
+使用 `tag` 標籤標題路徑的述詞（不含空格）。
 
-因为在上一个示例中，您正在搜索页面( `cq:Page` 节点)，则需要使用该节点的相对路径 `tagid.property` 谓词，即 `jcr:content/cq:tags`. 默认情况下， `tagid.property` 就只是 `cq:tags`.
+因為在上一個範例中，您搜尋的頁面( `cq:Page` 節點)，則您需要使用該節點的相對路徑 `tagid.property` 述詞，即 `jcr:content/cq:tags`. 根據預設， `tagid.property` 將只是 `cq:tags`.
 
-### 在多个路径下搜索（使用组） {#search-under-multiple-paths-using-groups}
+### 在多個路徑下搜尋（使用群組） {#search-under-multiple-paths-using-groups}
 
 `http://localhost:4502/bin/querybuilder.json?fulltext=Management&group.1_path=/content/geometrixx/en/company/management&group.2_path=/content/geometrixx/en/company/bod&group.p.or=true`
 
@@ -214,23 +214,23 @@ group.1_path=/content/geometrixx/en/company/management
 group.2_path=/content/geometrixx/en/company/bod
 ```
 
-此查询使用 *群组* (已命名&quot; `group`“)，它用于在查询中分隔子表达式，就像括号在更标准的符号中一样。 例如，上一个查询可能以更熟悉的样式表示，如：
+此查詢使用 *群組* (已命名&quot; `group`&quot;)，其作用是在查詢中分隔子運算式，就像括弧在較標準符號中的作用一樣。 例如，先前的查詢可能會以更熟悉的樣式表示，例如：
 
 `"Management" and ("/content/geometrixx/en/company/management" or "/content/geometrixx/en/company/bod")`
 
-在示例中的组内， `path` 谓词使用多次。 要区分谓词的两个实例并对其进行排序（某些谓词需要排序），必须在谓词的前缀中添加 *N* `_ where`*N* 是排序索引。 在上一个示例中，生成的谓词是 `1_path` 和 `2_path`.
+在範例的群組內， `path` 述詞使用多次。 若要區分和排序述詞的兩個執行個體（某些述詞需要排序），您必須為述詞加上前置詞 *N* `_ where`*N* 是排序索引。 在上一個範例中，產生的述詞是 `1_path` 和 `2_path`.
 
-此 `p` 在 `p.or` 是一个特殊分隔符，指示随后出现的内容(在本例中为 `or`)是 *参数* 组的一个子谓词，例如 `1_path`.
+此 `p` 在 `p.or` 是一個特殊分隔符號，指示接續的內容(在此例中為 `or`)是 *引數* 群組的，而不是群組的子述詞，例如 `1_path`.
 
-如果否 `p.or` 然后对所有谓词进行AND运算，即每个结果必须满足所有谓词。
+若否 `p.or` 然後所有述詞一起進行AND運算，也就是說，每個結果都必須滿足所有述詞。
 
 >[!NOTE]
 >
->不能在一个查询中使用相同的数字前缀，即使对于不同的谓词也是如此。
+>您無法在一個查詢中使用相同的數值首碼，即使對於不同的述詞亦然。
 
-### 搜索属性 {#search-for-properties}
+### 搜尋屬性 {#search-for-properties}
 
-在此，您将使用 `cq:template` 属性：
+您在這裡使用 `cq:template` 屬性：
 
 `http://localhost:4502/bin/querybuilder.json?property=cq%3atemplate&property.value=%2fapps%2fgeometrixx%2ftemplates%2fhomepage&type=cq%3aPageContent`
 
@@ -240,7 +240,7 @@ property=cq:template
 property.value=/apps/geometrixx/templates/homepage
 ```
 
-这有一个缺点 `jcr:content` 返回的是页面的节点，而不是页面本身。 要解决此问题，您可以按相对路径搜索：
+其缺點在於 `jcr:content` 會傳回頁面的節點，而非頁面本身。 若要解決此問題，您可以依相對路徑搜尋：
 
 `http://localhost:4502/bin/querybuilder.json?property=jcr%3acontent%2fcq%3atemplate&property.value=%2fapps%2fgeometrixx%2ftemplates%2fhomepage&type=cq%3aPage`
 
@@ -250,9 +250,9 @@ property=jcr:content/cq:template
 property.value=/apps/geometrixx/templates/homepage
 ```
 
-### 搜索多个属性 {#search-for-multiple-properties}
+### 搜尋多個屬性 {#search-for-multiple-properties}
 
-多次使用属性谓词时，必须再次添加数字前缀：
+多次使用屬性述詞時，您必須再次新增數字首碼：
 
 `http://localhost:4502/bin/querybuilder.json?1_property=jcr%3acontent%2fcq%3atemplate&1_property.value=%2fapps%2fgeometrixx%2ftemplates%2fhomepage&2_property=jcr%3acontent%2fjcr%3atitle&2_property.value=English&type=cq%3aPage`
 
@@ -264,9 +264,9 @@ type=cq:Page
 2_property.value=English
 ```
 
-### 搜索多个属性值 {#search-for-multiple-property-values}
+### 搜尋多個屬性值 {#search-for-multiple-property-values}
 
-要在搜索属性的多个值时避免大型组( `"A" or "B" or "C"`)，则可以为提供多个值 `property` 谓词：
+若要在搜尋屬性的多個值時避免大型群組( `"A" or "B" or "C"`)，則可以將多個值提供給 `property` 述詞：
 
 `http://localhost:4502/bin/querybuilder.json?property=jcr%3atitle&property.1_value=Products&property.2_value=Square&property.3_value=Events`
 
@@ -277,7 +277,7 @@ property.2_value=Square
 property.3_value=Events
 ```
 
-对于多值属性，您还可以要求多个值匹配( `"A" and "B" and "C"`)：
+針對多值屬性，您也可以要求多個值相符( `"A" and "B" and "C"`)：
 
 `http://localhost:4502/bin/querybuilder.json?property=jcr%3atitle&property.and=true&property.1_value=test&property.2_value=foo&property.3_value=bar`
 
@@ -289,9 +289,9 @@ property.2_value=foo
 property.3_value=bar
 ```
 
-## 优化返回的内容 {#refining-what-is-returned}
+## 精簡傳回的專案 {#refining-what-is-returned}
 
-默认情况下，QueryBuilder JSON Servlet将返回搜索结果中每个节点的默认属性集（例如路径、名称、标题等）。 要获得对返回哪些属性的控制权，您可以执行以下操作之一：
+依預設，QueryBuilder JSON Servlet會傳回搜尋結果中每個節點的預設屬性集（例如路徑、名稱、標題等）。 若要取得傳回哪些屬性的控制權，您可以執行下列任一項作業：
 
 指定
 
@@ -299,7 +299,7 @@ property.3_value=bar
 p.hits=full
 ```
 
-在这种情况下，将包含每个节点的所有属性：
+在這種情況下，每個節點都將包含所有屬性：
 
 `http://localhost:4502/bin/querybuilder.json?p.hits=full&property=jcr%3atitle&property.value=Triangle`
 
@@ -315,7 +315,7 @@ p.hits=full
 p.hits=selective
 ```
 
-并指定要获取的属性
+並指定要加入的屬性
 
 ```
 p.properties
@@ -334,13 +334,13 @@ p.hits=selective
 p.properties=sling:resourceType jcr:primaryType
 ```
 
-另一种做法是在QueryBuilder响应中包含子节点。 为此，您需要指定
+另一個您可以做的就是在QueryBuilder回應中包含子節點。 若要這麼做，您需要指定
 
 ```
 p.nodedepth=n
 ```
 
-位置 `n` 是您希望查询返回的级别数。 请注意，为了返回子节点，它必须由属性选择器指定
+位置 `n` 是您希望查詢傳回的層級數。 請注意，若要傳回子節點，它必須由屬性選取器指定
 
 ```
 p.hits=full
@@ -357,17 +357,17 @@ p.hits=full
 p.nodedepth=5
 ```
 
-## 更多谓词 {#morepredicates}
+## 更多述詞 {#morepredicates}
 
-有关更多谓词，请参见 [查询生成器谓词引用页](/help/sites-developing/querybuilder-predicate-reference.md).
+如需更多述詞，請參閱 [查詢產生器述詞參考頁面](/help/sites-developing/querybuilder-predicate-reference.md).
 
-您还可以检查 [的Javadoc `PredicateEvaluator` 类](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/eval/PredicateEvaluator.html). 这些类的Javadoc包含您可以使用的属性列表。
+您也可以檢查 [的Javadoc `PredicateEvaluator` 類別](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/eval/PredicateEvaluator.html). 這些類別的Javadoc包含您可以使用的屬性清單。
 
-类名的前缀(例如， ” `similar`中的“” [`SimilarityPredicateEvaluator`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/eval/SimilarityPredicateEvaluator.html))是 *主体属性* 是班级的。 此属性也是要在查询中使用的谓词名称（小写）。
+類別名稱的前置詞(例如&quot; `similar`中的「」 [`SimilarityPredicateEvaluator`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/eval/SimilarityPredicateEvaluator.html))是 *主體屬性* 類別的。 此屬性也是要在查詢中使用的述詞名稱（小寫）。
 
-对于此类主体属性，您可以缩短查询并使用“ `similar=/content/en`“而不是完全限定的变体” `similar.similar=/content/en`“。 类的所有非主体属性都必须使用完全限定的表单。
+對於這類主體屬性，您可以縮短查詢並使用「 `similar=/content/en`「而非完整變體」 `similar.similar=/content/en`「。 類別的所有非主要屬性都必須使用完整表單。
 
-## 示例查询生成器API用法 {#example-query-builder-api-usage}
+## 查詢產生器API使用範例 {#example-query-builder-api-usage}
 
 ```java
    String fulltextSearchTerm = "Geometrixx";
@@ -425,114 +425,114 @@ p.nodedepth=5
 
 >[!NOTE]
 >
->要了解如何构建使用QueryBuilder API并在Adobe Experience Manager应用程序中使用该OSGi包的OSGi包，请参阅 [创建使用查询生成器AP的Adobe CQ OSGi包](https://helpx.adobe.com/experience-manager/using/using-query-builder-api.html)我。
+>若要瞭解如何建立使用QueryBuilder API的OSGi套件組合，並在Adobe Experience Manager應用程式中使用該OSGi套件組合，請參閱 [建立使用查詢產生器AP的Adobe CQ OSGi套件組合](https://helpx.adobe.com/experience-manager/using/using-query-builder-api.html)I.
 
-使用查询生成器(JSON) Servlet通过HTTP执行的相同查询：
+使用查詢產生器(JSON) Servlet透過HTTP執行的相同查詢：
 
 `http://localhost:4502/bin/querybuilder.json?path=/content&type=cq:Page&group.p.or=true&group.1_fulltext=Geometrixx&group.1_fulltext.relPath=jcr:content&group.2_fulltext=Geometrixx&group.2_fulltext.relPath=jcr:content/@cq:tags&p.offset=0&p.limit=20`
 
-## 存储和加载查询 {#storing-and-loading-queries}
+## 儲存和載入查詢 {#storing-and-loading-queries}
 
-查询可以存储在存储库中，以便您以后使用。 此 `QueryBuilder` 提供&quot; `storeQuery` 具有以下签名的方法：
+查詢可以儲存在存放庫中，以便您稍後使用。 此 `QueryBuilder` 提供&quot; `storeQuery` 具有下列簽章的方法：
 
 ```java
 void storeQuery(Query query, String path, boolean createFile, Session session) throws RepositoryException, IOException;
 ```
 
-使用时 [ `QueryBuilder#storeQuery`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/QueryBuilder.html#storequerycomdaycqsearchqueryjavalangstringbooleanjavaxjcrsession) 方法，给定 `Query` 作为文件或属性存储在存储库中，具体情况如下： `createFile` 参数值。 以下示例说明如何保存 `Query` 到路径 `/mypath/getfiles` 作为文件：
+使用時 [ `QueryBuilder#storeQuery`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/QueryBuilder.html#storequerycomdaycqsearchqueryjavalangstringbooleanjavaxjcrsession) 方法，給定 `Query` 會根據「 」以檔案或屬性的形式儲存至存放庫 `createFile` 引數值。 以下範例說明如何儲存 `Query` 至路徑 `/mypath/getfiles` 以檔案形式：
 
 ```java
 builder.storeQuery(query, "/mypath/getfiles", true, session);
 ```
 
-任何之前存储的查询都可以使用从存储库中加载 [`QueryBuilder#loadQuery`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/QueryBuilder.html#loadqueryjavalangstringjavaxjcrsession) 方法：
+任何先前儲存的查詢都可使用從存放庫載入 [`QueryBuilder#loadQuery`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/QueryBuilder.html#loadqueryjavalangstringjavaxjcrsession) 方法：
 
 ```java
 Query loadQuery(String path, Session session) throws RepositoryException, IOException
 ```
 
-例如， `Query` 存储到路径 `/mypath/getfiles` 可以由以下代码片段加载：
+例如， `Query` 儲存至路徑 `/mypath/getfiles` 可透過下列程式碼片段載入：
 
 ```java
 Query loadedQuery = builder.loadQuery("/mypath/getfiles", session);
 ```
 
-## 测试和调试 {#testing-and-debugging}
+## 測試和偵錯 {#testing-and-debugging}
 
-要绕过并调试QueryBuilder查询，您可以使用QueryBuilder调试器控制台，网址为
+若要解決和偵錯QueryBuilder查詢，您可以使用QueryBuilder Debugger主控台：
 
 `http://localhost:4502/libs/cq/search/content/querydebug.html`
 
-或者查询生成器json servlet位于
+或選擇位於的querybuilder json servlet
 
 `http://localhost:4502/bin/querybuilder.json?path=/tmp`
 
-( `path=/tmp` 只是一个示例)。
+( `path=/tmp` 只是一個範例)。
 
-### 常规调试Recommendations {#general-debugging-recommendations}
+### Recommendations一般偵錯 {#general-debugging-recommendations}
 
-### 通过日志记录获取可解释的XPath {#obtain-explain-able-xpath-via-logging}
+### 透過記錄取得可說明的XPath {#obtain-explain-able-xpath-via-logging}
 
-说明 **所有** 在开发周期期间针对目标索引集进行查询。
+說明 **全部** 在開發週期期間針對目標索引集進行查詢。
 
-* 为QueryBuilder启用DEBUG日志，以获取基础、可解释的XPath查询
+* 啟用QueryBuilder的DEBUG記錄檔，以取得基礎、可解釋的XPath查詢
 
-   * 导航到https://&lt;serveraddress>：&lt;serverport>/system/console/slinglog. 为创建新的记录器 `com.day.cq.search.impl.builder.QueryImpl` 在 **调试**.
+   * 導覽至https://&lt;serveraddress>：&lt;serverport>/system/console/slinglog。 建立新的記錄器 `com.day.cq.search.impl.builder.QueryImpl` 於 **偵錯**.
 
-* 为上述类启用DEBUG后，日志将显示查询生成器生成的XPath。
-* 从关联的QueryBuilder查询的日志条目中复制XPath查询，例如：
-
-   * `com.day.cq.search.impl.builder.QueryImpl XPath query: /jcr:root/content//element(*, cq:Page)[(jcr:contains(jcr:content, "Geometrixx") or jcr:contains(jcr:content/@cq:tags, "Geometrixx"))]`
-
-* 将XPath查询粘贴到 [说明查询](/help/sites-administering/operations-dashboard.md#explain-query) 作为XPath以获取查询计划
-
-### 通过Query Builder调试器获取可解释的XPath {#obtain-explain-able-xpath-via-the-query-builder-debugger}
-
-* 使用AEM QueryBuilder调试器生成可解释的XPath查询：
-
-说明 **所有** 在开发周期期间针对目标索引集进行查询。
-
-**通过日志记录获取可解释的XPath**
-
-* 为QueryBuilder启用DEBUG日志，以获取基础、可解释的XPath查询
-
-   * 导航到https://&lt;serveraddress>：&lt;serverport>/system/console/slinglog. 为创建新的记录器 `com.day.cq.search.impl.builder.QueryImpl` 在 **调试**.
-
-* 为上述类启用DEBUG后，日志将显示查询生成器生成的XPath。
-* 从关联的QueryBuilder查询的日志条目中复制XPath查询，例如：
+* 為上述類別啟用DEBUG後，記錄會顯示Query Builder產生的XPath。
+* 從相關QueryBuilder查詢的記錄專案複製XPath查詢，例如：
 
    * `com.day.cq.search.impl.builder.QueryImpl XPath query: /jcr:root/content//element(*, cq:Page)[(jcr:contains(jcr:content, "Geometrixx") or jcr:contains(jcr:content/@cq:tags, "Geometrixx"))]`
 
-* 将XPath查询粘贴到 [说明查询](/help/sites-administering/operations-dashboard.md#explain-query) 作为XPath以获取查询计划
+* 將XPath查詢貼入 [說明查詢](/help/sites-administering/operations-dashboard.md#explain-query) 作為XPath以取得查詢計畫
 
-**通过Query Builder调试器获取可解释的XPath**
+### 透過Query Builder Debugger取得可說明的XPath {#obtain-explain-able-xpath-via-the-query-builder-debugger}
 
-* 使用AEM QueryBuilder调试器生成可解释的XPath查询：
+* 使用AEM QueryBuilder Debugger產生可解釋的XPath查詢：
+
+說明 **全部** 在開發週期期間針對目標索引集進行查詢。
+
+**透過記錄取得可說明的XPath**
+
+* 啟用QueryBuilder的DEBUG記錄檔，以取得基礎、可解釋的XPath查詢
+
+   * 導覽至https://&lt;serveraddress>：&lt;serverport>/system/console/slinglog。 建立新的記錄器 `com.day.cq.search.impl.builder.QueryImpl` 於 **偵錯**.
+
+* 為上述類別啟用DEBUG後，記錄會顯示Query Builder產生的XPath。
+* 從相關QueryBuilder查詢的記錄專案複製XPath查詢，例如：
+
+   * `com.day.cq.search.impl.builder.QueryImpl XPath query: /jcr:root/content//element(*, cq:Page)[(jcr:contains(jcr:content, "Geometrixx") or jcr:contains(jcr:content/@cq:tags, "Geometrixx"))]`
+
+* 將XPath查詢貼入 [說明查詢](/help/sites-administering/operations-dashboard.md#explain-query) 作為XPath以取得查詢計畫
+
+**透過Query Builder Debugger取得可說明的XPath**
+
+* 使用AEM QueryBuilder Debugger產生可解釋的XPath查詢：
 
 ![chlimage_1-66](assets/chlimage_1-66a.png)
 
-1. 在Query Builder Debugger中提供Query Builder查询
-1. 执行搜索
-1. 获取生成的XPath
-1. 将XPath查询粘贴到Explain Query中作为XPath以获取查询计划
+1. 在Query Builder Debugger中提供查詢產生器查詢
+1. 執行搜尋
+1. 取得產生的XPath
+1. 將XPath查詢貼入Explain Query做為XPath以取得查詢計畫
 
 >[!NOTE]
 >
->可以直接提供非查询生成器查询(XPath、JCR-SQL2)来解释查询。
+>非Querybuilder查詢(XPath、JCR-SQL2)可直接提供給Explain Query。
 
-有关如何使用QueryBuilder调试查询的下拉列表，请参阅以下视频。
+如需有關如何使用QueryBuilder偵錯查詢的下拉式清單，請參閱以下影片。
 
 >[!NOTE]
 >
 >[https://www.youtube.com/watch?v=BnyXjhRKYKc](https://www.youtube.com/watch?v=BnyXjhRKYKc)
 
-## 使用日志记录调试查询 {#debugging-queries-with-logging}
+## 使用記錄功能偵錯查詢 {#debugging-queries-with-logging}
 
 >[!NOTE]
 >
->记录器的配置在部分中描述 [创建自己的记录器和作者](/help/sites-deploying/configure-logging.md#creating-your-own-loggers-and-writers).
+>區段中會說明記錄器的設定 [建立自己的記錄器和寫入器](/help/sites-deploying/configure-logging.md#creating-your-own-loggers-and-writers).
 
-执行测试和调试中描述的查询时，查询生成器实施的日志输出（INFO级别）：
+執行測試和偵錯中所述的查詢時，查詢產生器實作的記錄輸出（INFO層級）：
 
 ```xml
 com.day.cq.search.impl.builder.QueryImpl executing query (predicate tree):
@@ -549,7 +549,7 @@ com.day.cq.search.impl.builder.QueryImpl no filtering predicates
 com.day.cq.search.impl.builder.QueryImpl query execution took 69 ms
 ```
 
-如果您有一个使用谓词计算器的查询，该计算器过滤或使用按比较器排序的自定义顺序，这也会在查询中记录：
+如果您的查詢使用述詞評估器，這些評估器會篩選或使用自訂的比較順序，這也會在查詢中記錄：
 
 ```xml
 com.day.cq.search.impl.builder.QueryImpl executing query (predicate tree):
@@ -564,14 +564,14 @@ com.day.cq.search.impl.builder.QueryImpl filtering predicates: {nodename=nodenam
 com.day.cq.search.impl.builder.QueryImpl query execution took 272 ms
 ```
 
-## Javadoc链接 {#javadoc-links}
+## Javadoc連結 {#javadoc-links}
 
 | **Javadoc** | **描述** |
 |---|---|
-| [com.day.cq.search](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/package-summary.html) | 基本QueryBuilder和查询API |
-| [com.day.cq.search.result](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/result/package-summary.html) | 结果API |
+| [com.day.cq.search](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/package-summary.html) | 基本QueryBuilder和查詢API |
+| [com.day.cq.search.result](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/result/package-summary.html) | 結果API |
 | [com.day.cq.search.facets](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/facets/package-summary.html) | Facet |
-| [com.day.cq.search.facets.buckets](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/facets/buckets/package-summary.html) | 分段（包含在Facet中） |
-| [com.day.cq.search.eval](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/eval/package-summary.html) | 谓词求值器 |
-| [com.day.cq.search.facets.extractors](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/facets/extractors/package-summary.html) | Facet提取器（用于评估器） |
-| [com.day.cq.search.writer](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/writer/package-summary.html) | 适用于Querybuilder servlet的JSON结果点击编写器(/bin/querybuilder.json) |
+| [com.day.cq.search.facets.buckets](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/facets/buckets/package-summary.html) | 值區（包含在Facet中） |
+| [com.day.cq.search.eval](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/eval/package-summary.html) | 述詞評估器 |
+| [com.day.cq.search.facets.extractors](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/facets/extractors/package-summary.html) | Facet擷取器（適用於評估器） |
+| [com.day.cq.search.writer](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/writer/package-summary.html) | Querybuilder servlet的JSON結果點選撰寫器(/bin/querybuilder.json) |

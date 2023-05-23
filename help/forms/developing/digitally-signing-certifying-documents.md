@@ -1,7 +1,7 @@
 ---
-title: 数字签名和认证文档
+title: 數位簽署和認證檔案
 seo-title: Digitally Signing and Certifying Documents
-description: 使用签名服务向PDF文档添加和删除数字签名字段、检索位于PDF文档中的签名字段的名称、修改签名字段、对PDF文档进行数字签名、验证PDF文档中的数字签名、验证PDF文档中的所有数字签名、以及从PDF文档中删除数字签名。
+description: 使用簽名服務來新增和刪除數位簽名欄位到PDF檔案、擷取位於PDF檔案中的簽名欄位名稱、修改簽名欄位、數位簽署PDF檔案、驗證PDF檔案中的數位簽名、驗證PDFPDF檔案中的所有數位簽名，以及從簽名欄位中移除數位簽名。
 seo-description: Use the Signature service to add and delete digital signature fields to a PDF document, retrieve the names of signature fields located in a PDF document, modify signature fields, digitally sign PDF documents, certify PDF documents, validate digital signatures located in a PDF document, validate all digital signatures located in a PDF document, and remove a digital signature from a signature field.
 uuid: 6331de8a-2a9c-45bf-89d2-29f1ad5cc856
 contentOwner: admin
@@ -18,1867 +18,1867 @@ ht-degree: 0%
 
 ---
 
-# 数字签名和认证文档 {#digitally-signing-and-certifying-documents}
+# 數位簽署和認證檔案 {#digitally-signing-and-certifying-documents}
 
-**本文档中的示例和示例仅适用于AEM Forms on JEE环境。**
+**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms 。**
 
-**关于签名服务**
+**關於簽名服務**
 
-签名服务允许贵组织保护其分发和接收的Adobe PDF文档的安全性和隐私。 此服务使用数字签名和认证，确保只有目标收件人才能更改文档。 由于安全功能应用于文档本身，因此文档在整个生命周期中保持安全和受控制。 在防火墙之外，当文档离线下载以及将文档提交回您的组织时，文档将保持安全。
-
->[!NOTE]
->
->您可以为签名服务创建自定义签名处理程序，在调用某些操作(如签署PDF文档)时调用该签名服务。
-
-**签名字段名称**
-
-某些签名服务操作要求您指定执行操作的签名字段的名称。 例如，在签署PDF文档时，您可以指定要签名的签名字段的名称。 假定签名字段的全名是 `form1[0].Form1[0].SignatureField1[0]`. 您可以指定 `SignatureField1[0]` 而不是 `form1[0].Form1[0].SignatureField1[0]`.
-
-有时，冲突会导致签名服务签署（或执行其他需要签名字段名称的操作）错误的字段。 此冲突是名称的结果 `SignatureField1[0]` 出现在同一PDF文档中的两个或多个位置。 例如，假定一个PDF文档包含两个名为的签名字段 `form1[0].Form1[0].SignatureField1[0]` 和 `form1[0].Form1[0].SubForm1[0].SignatureField1[0]` 并且您指定 `SignatureField1[0]`. 在这种情况下，签名服务在遍历文档中的所有签名字段时对其找到的第一个签名字段进行签名。
-
-如果PDF文档中有多个签名字段，建议您指定签名字段的全名。 即，指定 `form1[0].Form1[0].SignatureField1[0]`而不是 `SignatureField1[0]`.
-
-您可以使用Signature服务完成这些任务：
-
-* 向PDF文档添加和删除数字签名字段。 (请参阅 [添加签名字段](digitally-signing-certifying-documents.md#adding-signature-fields).)
-* 检索位于PDF文档中的签名字段的名称。 (请参阅 [正在检索签名字段名称](digitally-signing-certifying-documents.md#retrieving-signature-field-names).)
-* 修改签名字段。 (请参阅 [修改签名字段](digitally-signing-certifying-documents.md#modifying-signature-fields).)
-* 对PDF文档进行数字签名。 (请参阅 [对PDF文档进行数字签名](digitally-signing-certifying-documents.md#digitally-signing-pdf-documents).)
-* 认证PDF文档。 (请参阅 [认证PDF文档](digitally-signing-certifying-documents.md#certifying-pdf-documents).)
-* 验证位于PDF文档中的数字签名。 (请参阅 [验证数字签名](digitally-signing-certifying-documents.md#verifying-digital-signatures).)
-* 验证PDF文档中的所有数字签名。 (请参阅 [验证多个数字签名](digitally-signing-certifying-documents.md#verifying-digital-signatures).)
-* 从签名字段中删除数字签名。 (请参阅 [删除数字签名](digitally-signing-certifying-documents.md#removing-digital-signatures).)
+簽名服務可讓貴組織保護所散發及接收的Adobe PDF檔案之安全性與隱私權。 此服務使用數位簽名和認證，以確保只有預期的收件者才能變更檔案。 由於安全性功能會套用至檔案本身，因此檔案在其整個生命週期中都會保持安全和受控。 當檔案離線下載以及將檔案送回您的組織時，防火牆外仍會保持安全。
 
 >[!NOTE]
 >
->有关Signature服务的详细信息，请参见 [AEM Forms的服务参考](https://www.adobe.com/go/learn_aemforms_services_63)..
+>您可以為叫用某些作業(例如簽署PDF檔案)時所叫用的簽名服務建立自訂簽名處理常式。
 
-## 添加签名字段 {#adding-signature-fields}
+**簽章欄位名稱**
 
-数字签名出现在签名字段中，这些签名字段是包含签名的图形表示的表单字段。 签名字段可以是可见的，也可以不可见。 签名者可以使用预先存在的签名字段，也可以以编程方式添加签名字段。 无论哪种情况，签名字段都必须存在，然后才能对PDF文档进行签名。
+某些簽章服務作業需要您指定執行作業的簽章欄位名稱。 例如，在簽署PDF檔案時，您可以指定要簽署的簽名欄位名稱。 假設簽名欄位的完整名稱是 `form1[0].Form1[0].SignatureField1[0]`. 您可以指定 `SignatureField1[0]` 而非 `form1[0].Form1[0].SignatureField1[0]`.
 
-您可以使用签名服务Java API或签名Web服务API以编程方式添加签名字段。 您可以将多个签名字段添加到PDF文档；但是，每个签名字段名称必须是唯一的。
+有時衝突會導致簽名服務簽署（或執行另一個需要簽名欄位名稱的操作）錯誤的欄位。 此衝突是名稱的結果 `SignatureField1[0]` 出現在同一PDF檔案中的兩個或多個位置。 例如，假設一個PDF檔案包含兩個名為的簽名欄位 `form1[0].Form1[0].SignatureField1[0]` 和 `form1[0].Form1[0].SubForm1[0].SignatureField1[0]` 並且您指定 `SignatureField1[0]`. 在這種情況下，簽名服務會在重複檔案中的所有簽名欄位時找到第一個簽名欄位進行簽名。
+
+如果PDF檔案中有多個簽名欄位，建議您指定簽名欄位的完整名稱。 也就是說，指定 `form1[0].Form1[0].SignatureField1[0]`而非 `SignatureField1[0]`.
+
+您可以使用「簽名」服務完成這些工作：
+
+* 新增和刪除數位簽名欄位至PDF檔案。 (請參閱 [新增簽名欄位](digitally-signing-certifying-documents.md#adding-signature-fields).)
+* 擷取位於PDF檔案中的簽名欄位名稱。 (請參閱 [正在擷取簽章欄位名稱](digitally-signing-certifying-documents.md#retrieving-signature-field-names).)
+* 修改簽名欄位。 (請參閱 [修改簽章欄位](digitally-signing-certifying-documents.md#modifying-signature-fields).)
+* 數位簽署PDF檔案。 (請參閱 [數位簽署PDF檔案](digitally-signing-certifying-documents.md#digitally-signing-pdf-documents).)
+* 認證PDF檔案。 (請參閱 [認證PDF檔案](digitally-signing-certifying-documents.md#certifying-pdf-documents).)
+* 驗證PDF檔案中的數位簽名。 (請參閱 [驗證數位簽名](digitally-signing-certifying-documents.md#verifying-digital-signatures).)
+* 驗證PDF檔案中的所有數位簽名。 (請參閱 [驗證多個數位簽名](digitally-signing-certifying-documents.md#verifying-digital-signatures).)
+* 從簽名欄位中移除數位簽名。 (請參閱 [移除數位簽名](digitally-signing-certifying-documents.md#removing-digital-signatures).)
 
 >[!NOTE]
 >
->某些PDF文档类型不允许您以编程方式添加签名字段。 有关Signature服务和添加签名字段的详细信息，请参见 [AEM Forms的服务参考](https://www.adobe.com/go/learn_aemforms_services_63).
+>如需Signature服務的詳細資訊，請參閱 [AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)..
 
-### 步骤摘要 {#summary-of-steps}
+## 新增簽名欄位 {#adding-signature-fields}
 
-要将签名字段添加到PDF文档，请执行以下任务：
+數位簽章會出現在簽章欄位中，這些欄位是包含簽章圖形表示的表單欄位。 簽名欄位可以顯示或隱藏。 簽名者可以使用預先存在的簽名欄位，也可以以程式設計方式新增簽名欄位。 在任何一種情況下，簽章欄位都必須存在，才能簽署PDF檔案。
 
-1. 包括项目文件。
-1. 创建签名客户端。
-1. 获取添加了签名字段的PDF文档。
-1. 添加签名字段。
-1. 将PDF文档另存为PDF文件。
+您可以使用簽名服務Java API或簽名Web服務API，以程式設計方式新增簽名欄位。 您可以將多個簽章欄位新增至PDF檔案，但每個簽章欄位名稱必須是唯一的。
 
-**包括项目文件**
+>[!NOTE]
+>
+>有些PDF檔案型別不允許您以程式設計方式新增簽名欄位。 如需有關簽名服務和新增簽名欄位的詳細資訊，請參閱 [AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
 
-在开发项目中包含必要的文件。 如果要使用Java创建客户端应用程序，请包含必要的JAR文件。 如果使用Web服务，请确保包含代理文件。
+### 步驟摘要 {#summary-of-steps}
 
-必须将以下JAR文件添加到项目的类路径中：
+若要將簽名欄位新增至PDF檔案，請執行下列工作：
+
+1. 包含專案檔案。
+1. 建立簽章使用者端。
+1. 取得新增簽名欄位的PDF檔案。
+1. 新增簽名欄位。
+1. 將PDF檔案儲存為PDF檔案。
+
+**包含專案檔案**
+
+將必要的檔案納入您的開發專案中。 如果您使用Java建立使用者端應用程式，請包含必要的JAR檔案。 如果您使用Web服務，請確定您包含Proxy檔案。
+
+下列JAR檔案必須新增到專案的類別路徑中：
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-signatures-client.jar
-* adobe-utilities.jar(如果在JBoss上部署了AEM Forms，则此为必填字段)
-* jbossall-client.jar(如果在JBoss上部署了AEM Forms，则此为必填字段)
+* adobe-utilities.jar (如果AEM Forms部署在JBoss上，則為必要)
+* jbossall-client.jar (如果AEM Forms部署在JBoss上，則為必要)
 
-**创建签名客户端**
+**建立簽名使用者端**
 
-必须先创建签名服务客户端，然后才能以编程方式执行签名服务操作。
+您必須先建立簽名服務使用者端，才能以程式設計方式執行簽名服務作業。
 
-**获取添加了签名字段的PDF文档**
+**取得新增簽名欄位的PDF檔案**
 
-您必须获取添加签名字段的PDF文档。
+您必須取得新增簽名欄位的PDF檔案。
 
-**添加签名字段**
+**新增簽名欄位**
 
-要成功地将签名字段添加到PDF文档，请指定标识签名字段位置的坐标值。 （如果添加不可见的签名字段，则不需要这些值。） 此外，您还可以指定在将签名应用于签名字段后，PDF文档中的哪些字段被锁定。
+若要成功將簽名欄位新增到PDF檔案中，請指定可識別簽名欄位位置的座標值。 （如果您新增隱藏的簽章欄位，這些值不是必要值。） 此外，您也可以指定在將簽章套用至簽章欄位後，要鎖定PDF檔案中的哪些欄位。
 
-**将PDF文档另存为PDF文件**
+**將PDF檔案儲存為PDF檔案**
 
-签名服务向PDF文档添加签名字段后，您可以将文档另存为PDF文件，以便用户在Acrobat或Adobe Reader中打开它。
+簽名服務將簽名欄位新增到PDF檔案後，您可以將檔案儲存為PDF檔案，以便使用者在Acrobat或Adobe Reader中開啟它。
 
 **另请参阅**
 
-[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
-[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[对PDF文档进行数字签名](digitally-signing-certifying-documents.md#digitally-signing-pdf-documents)
+[數位簽署PDF檔案](digitally-signing-certifying-documents.md#digitally-signing-pdf-documents)
 
-### 使用Java API添加签名字段 {#add-signature-fields-using-the-java-api}
+### 使用Java API新增簽名欄位 {#add-signature-fields-using-the-java-api}
 
-使用签名API (Java)添加签名字段：
+使用Signature API (Java)新增簽名欄位：
 
-1. 包括项目文件
+1. 包含專案檔案
 
-   将客户端JAR文件（如adobe-signatures-client.jar）包含在Java项目的类路径中。
+   在您的Java專案的類別路徑中包含使用者端JAR檔案，例如adobe-signatures-client.jar。
 
-1. 创建签名客户端
+1. 建立簽名使用者端
 
-   * 创建 `ServiceClientFactory` 包含连接属性的对象。
-   * 创建 `SignatureServiceClient` 对象，使用它的构造函数传递 `ServiceClientFactory` 对象。
+   * 建立 `ServiceClientFactory` 包含連線屬性的物件。
+   * 建立 `SignatureServiceClient` 物件，使用它的建構函式並傳遞 `ServiceClientFactory` 物件。
 
-1. 获取添加了签名字段的PDF文档
+1. 取得新增簽名欄位的PDF檔案
 
-   * 创建 `java.io.FileInputStream` 表示签名字段添加到的PDF文档的对象，方法是使用其构造函数并传递指定PDF文档位置的字符串值。
-   * 创建 `com.adobe.idp.Document` 对象，使用它的构造函数传递 `java.io.FileInputStream` 对象。
+   * 建立 `java.io.FileInputStream` 物件，代表簽名欄位新增至的PDF檔案，方法是使用其建構函式，並傳遞字串值，以指定PDF檔案的位置。
+   * 建立 `com.adobe.idp.Document` 物件，使用它的建構函式並傳遞 `java.io.FileInputStream` 物件。
 
-1. 添加签名字段
+1. 新增簽名欄位
 
-   * 创建 `PositionRectangle` 使用构造函数指定签名字段位置的对象。 在构造函数中，指定坐标值。
-   * 如果需要，可创建 `FieldMDPOptions` 指定在将数字签名应用于签名字段时锁定的字段的对象。
-   * PDF通过调用 `SignatureServiceClient` 对象的 `addSignatureField` 方法，并传递以下值：
+   * 建立 `PositionRectangle` 物件，使用其建構函式來指定簽章欄位位置。 在建構函式中，指定座標值。
+   * 如有需要，請建立 `FieldMDPOptions` 物件，指定將數位簽章套用至簽章欄位時鎖定的欄位。
+   * 透過叫用「 」將簽名欄位新增到PDF檔案 `SignatureServiceClient` 物件的 `addSignatureField` 並傳遞下列值：
 
-      * A `com.adobe.idp`. `Document` 表示已向其添加签名字段的PDF文档的对象。
-      * 一个字符串值，它指定签名字段的名称。
-      * A `java.lang.Integer` 表示向其添加签名字段的页码的值。
-      * A `PositionRectangle` 指定签名字段位置的对象。
-      * A `FieldMDPOptions` 指定在将数字签名应用于签名字段后锁定的PDF文档中的字段的对象。 此参数值是可选的，您可以传递 `null`.
-   * A `PDFSeedValueOptions` 指定各种运行时值的对象。 此参数值是可选的，您可以传递 `null`.
+      * A `com.adobe.idp`. `Document` 物件，代表新增簽名欄位的PDF檔案。
+      * 字串值，指定簽名欄位的名稱。
+      * A `java.lang.Integer` 代表新增簽名欄位的頁碼值。
+      * A `PositionRectangle` 指定簽名欄位位置的物件。
+      * A `FieldMDPOptions` 物件，指定PDF檔案中數位簽章套用至簽章欄位後鎖定的欄位。 此引數值為選用，您可以傳遞 `null`.
+   * A `PDFSeedValueOptions` 指定各種執行階段值的物件。 此引數值為選用，您可以傳遞 `null`.
 
-      此 `addSignatureField` 方法返回 `com.adobe.idp`. `Document` 表示包含签名字段的PDF文档的对象。
+      此 `addSignatureField` 方法傳回 `com.adobe.idp`. `Document` 物件，代表包含簽名欄位的PDF檔案。
    >[!NOTE]
    >
-   >您可以调用 `SignatureServiceClient` 对象的 `addInvisibleSignatureField` 方法以添加不可见的签名字段。
+   >您可以叫用 `SignatureServiceClient` 物件的 `addInvisibleSignatureField` 方法以新增不可見的簽章欄位。
 
-1. 将PDF文档另存为PDF文件
+1. 將PDF檔案儲存為PDF檔案
 
-   * 创建 `java.io.File` 对象并确保文件扩展名为.pdf。
-   * 调用 `com.adobe.idp`. `Document` 对象的 `copyToFile` 用于复制目录内容的方法 `Document` 对象到文件。 确保您使用 `com.adobe.idp`. `Document` 返回的对象 `addSignatureField` 方法。
+   * 建立 `java.io.File` 物件，並確認副檔名為.pdf。
+   * 叫用 `com.adobe.idp`. `Document` 物件的 `copyToFile` 複製目錄內容的方法 `Document` 物件至檔案。 確保您使用 `com.adobe.idp`. `Document` 物件，由 `addSignatureField` 方法。
 
 **另请参阅**
 
-[签名服务API快速启动](/help/forms/developing/signature-service-java-api-quick.md#signature-service-java-api-quick-start-soap)
+[簽名服務API快速啟動](/help/forms/developing/signature-service-java-api-quick.md#signature-service-java-api-quick-start-soap)
 
-### 使用Web服务API添加签名字段 {#add-signature-fields-using-the-web-service-api}
+### 使用Web服務API新增簽名欄位 {#add-signature-fields-using-the-web-service-api}
 
-要使用签名API（Web服务）添加签名字段，请执行以下操作：
+若要使用Signature API （Web服務）新增簽名欄位：
 
-1. 包括项目文件
+1. 包含專案檔案
 
-   创建使用MTOM的Microsoft .NET项目。 确保使用以下WSDL定义： `http://localhost:8080/soap/services/SignatureService?WSDL&lc_version=9.0.1`.
+   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/SignatureService?WSDL&lc_version=9.0.1`.
 
    >[!NOTE]
    >
-   >Replace `localhost` 包含托管AEM Forms的服务器的IP地址。
+   >Replace `localhost` 搭配裝載AEM Forms之伺服器的IP位址。
 
-1. 创建签名客户端
+1. 建立簽名使用者端
 
-   * 创建 `SignatureServiceClient` 对象。
-   * 创建 `SignatureServiceClient.Endpoint.Address` 对象 `System.ServiceModel.EndpointAddress` 构造函数。 将指定WSDL的字符串值传递给AEM Forms服务(例如， `http://localhost:8080/soap/services/SignatureService?WSDL`)。 您无需使用 `lc_version` 属性。 创建服务引用时使用此属性。)
-   * 创建 `System.ServiceModel.BasicHttpBinding` 对象，方法是获取 `SignatureServiceClient.Endpoint.Binding` 字段。 将返回值强制转换为 `BasicHttpBinding`.
-   * 设置 `System.ServiceModel.BasicHttpBinding` 对象的 `MessageEncoding` 字段至 `WSMessageEncoding.Mtom`. 此值可确保使用MTOM。
-   * 通过执行以下任务启用基本HTTP身份验证：
+   * 建立 `SignatureServiceClient` 物件（使用其預設建構函式）。
+   * 建立 `SignatureServiceClient.Endpoint.Address` 物件，使用 `System.ServiceModel.EndpointAddress` 建構函式。 將指定WSDL的字串值傳遞至AEM Forms服務(例如， `http://localhost:8080/soap/services/SignatureService?WSDL`)。 您不需要使用 `lc_version` 屬性。 當您建立服務參考時，會使用此屬性。)
+   * 建立 `System.ServiceModel.BasicHttpBinding` 物件，方法是取得 `SignatureServiceClient.Endpoint.Binding` 欄位。 將傳回值轉換為 `BasicHttpBinding`.
+   * 設定 `System.ServiceModel.BasicHttpBinding` 物件的 `MessageEncoding` 欄位至 `WSMessageEncoding.Mtom`. 此值可確保使用MTOM。
+   * 執行下列工作來啟用基本HTTP驗證：
 
-      * 将AEM表单用户名分配给字段 `SignatureServiceClient.ClientCredentials.UserName.UserName`.
-      * 将相应的密码值分配给字段 `SignatureServiceClient.ClientCredentials.UserName.Password`.
-      * 分配常量值 `HttpClientCredentialType.Basic` 到字段 `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
-      * 分配常量值 `BasicHttpSecurityMode.TransportCredentialOnly` 到字段 `BasicHttpBindingSecurity.Security.Mode`.
+      * 將AEM表單使用者名稱指派給欄位 `SignatureServiceClient.ClientCredentials.UserName.UserName`.
+      * 將對應的密碼值指派給欄位 `SignatureServiceClient.ClientCredentials.UserName.Password`.
+      * 指派常數值 `HttpClientCredentialType.Basic` 至欄位 `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
+      * 指派常數值 `BasicHttpSecurityMode.TransportCredentialOnly` 至欄位 `BasicHttpBindingSecurity.Security.Mode`.
 
-1. 获取添加了签名字段的PDF文档
+1. 取得新增簽名欄位的PDF檔案
 
-   * 创建 `BLOB` 对象。 此 `BLOB` 对象用于存储将包含签名字段的PDF文档。
-   * 创建 `System.IO.FileStream` 对象，方法是调用其构造函数并传递一个字符串值，该字符串值表示PDF文档的文件位置和打开文件的模式。
-   * 创建一个字节数组，用于存储 `System.IO.FileStream` 对象。 您可以通过获取 `System.IO.FileStream` 对象的 `Length` 属性。
-   * 通过调用 `System.IO.FileStream` 对象的 `Read` 方法，并传递字节数组、起始位置和要读取的流长度。
-   * 填充 `BLOB` 对象(通过指定其 `MTOM` 属性与字节数组的内容。
+   * 建立 `BLOB` 物件（使用其建構函式）。 此 `BLOB` 物件是用來儲存將包含簽名欄位的PDF檔案。
+   * 建立 `System.IO.FileStream` 物件，方法是叫用其建構函式，並傳遞代表PDF檔案的檔案位置和開啟檔案的模式的字串值。
+   * 建立位元組陣列，儲存 `System.IO.FileStream` 物件。 您可以取得 `System.IO.FileStream` 物件的 `Length` 屬性。
+   * 叫用 `System.IO.FileStream` 物件的 `Read` 方法，並傳遞位元組陣列、起始位置以及要讀取的資料流長度。
+   * 填入 `BLOB` 物件，透過指派其 `MTOM` 具有位元組陣列內容的屬性。
 
-1. 添加签名字段
+1. 新增簽名欄位
 
-   PDF通过调用 `SignatureServiceClient` 对象的 `addSignatureField` 方法，并传递以下值：
+   透過叫用「 」，將簽名欄位新增到PDF檔案 `SignatureServiceClient` 物件的 `addSignatureField` 並傳遞下列值：
 
-   * A `BLOB` 表示已向其添加签名字段的PDF文档的对象。
-   * 指定签名字段名称的字符串值。
-   * 一个整数值，表示向其中添加签名字段的页码。
-   * A `PositionRect` 指定签名字段位置的对象。
-   * A `FieldMDPOptions` 指定在将数字签名应用于签名字段后锁定的PDF文档中的字段的对象。 此参数值是可选的，您可以传递 `null`.
-   * A `PDFSeedValueOptions` 指定各种运行时值的对象。 此参数值是可选的，您可以传递 `null`.
+   * A `BLOB` 物件，代表新增簽名欄位的PDF檔案。
+   * 字串值，指定簽名欄位名稱。
+   * 整數值，代表要新增簽名欄位的頁碼。
+   * A `PositionRect` 指定簽名欄位位置的物件。
+   * A `FieldMDPOptions` 物件，指定PDF檔案中數位簽章套用至簽章欄位後鎖定的欄位。 此引數值為選用，您可以傳遞 `null`.
+   * A `PDFSeedValueOptions` 指定各種執行階段值的物件。 此引數值為選用，您可以傳遞 `null`.
 
-   此 `addSignatureField` 方法返回 `BLOB` 表示包含签名字段的PDF文档的对象。
+   此 `addSignatureField` 方法傳回 `BLOB` 物件，代表包含簽名欄位的PDF檔案。
 
-1. 将PDF文档另存为PDF文件
+1. 將PDF檔案儲存為PDF檔案
 
-   * 创建 `System.IO.FileStream` 对象，方法是调用其构造函数并传递一个字符串值，该字符串值表示PDF文档的文件位置，其中将包含签名字段和打开文件的模式。
-   * 创建一个字节数组，用于存储 `BLOB` 返回的对象 `addSignatureField` 方法。 通过获取的值填充字节数组 `BLOB` 对象的 `binaryData` 数据成员。
-   * 创建 `System.IO.BinaryWriter` 对象，方法是调用其构造函数 `System.IO.FileStream` 对象。
-   * PDF通过调用 `System.IO.BinaryWriter` 对象的 `Write` 方法和传递字节数组。
+   * 建立 `System.IO.FileStream` 物件，方法是叫用其建構函式，並傳遞字串值，該值代表PDF檔案的檔案位置，其中將包含簽名欄位和開啟檔案的模式。
+   * 建立位元組陣列，儲存 `BLOB` 物件，由 `addSignatureField` 方法。 透過取得 `BLOB` 物件的 `binaryData` 資料成員。
+   * 建立 `System.IO.BinaryWriter` 物件，方法是叫用其建構函式並傳遞 `System.IO.FileStream` 物件。
+   * PDF透過叫用 `System.IO.BinaryWriter` 物件的 `Write` 方法並傳遞位元組陣列。
 
 **另请参阅**
 
-[使用MTOM调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[使用MTOM叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[使用SwaRef调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[使用SwaRef叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
-## 正在检索签名字段名称 {#retrieving-signature-field-names}
+## 正在擷取簽章欄位名稱 {#retrieving-signature-field-names}
 
-您可以检索位于要签名或认证的PDF文档中的所有签名字段的名称。 如果不确定位于PDF文档中的签名字段名称，或者要验证该名称，则可以通过编程方式检索它们。 Signature服务返回签名字段的完全限定名称，例如 `form1[0].grantApplication[0].page1[0].SignatureField1[0]`.
+您可以擷取位於要簽署或認證之PDF檔案中的所有簽名欄位名稱。 如果您不確定位於PDF檔案中的簽名欄位名稱，或者您想要驗證這些名稱，則可以使用程式擷取它們。 Signature服務會傳回簽名欄位的完整名稱，例如 `form1[0].grantApplication[0].page1[0].SignatureField1[0]`.
 
 >[!NOTE]
 >
->有关Signature服务的详细信息，请参见 [AEM Forms的服务参考](https://www.adobe.com/go/learn_aemforms_services_63)
+>如需Signature服務的詳細資訊，請參閱 [AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)
 
-### 步骤摘要 {#summary_of_steps-1}
+### 步驟摘要 {#summary_of_steps-1}
 
-要检索签名字段名称，请执行以下任务：
+若要擷取簽章欄位名稱，請執行下列工作：
 
-1. 包括项目文件。
-1. 创建签名客户端。
-1. 获取包含签名字段的PDF文档。
-1. 检索签名字段名称。
+1. 包含專案檔案。
+1. 建立簽章使用者端。
+1. 取得包含簽名欄位的PDF檔案。
+1. 擷取簽名欄位名稱。
 
-**包括项目文件**
+**包含專案檔案**
 
-在开发项目中包含必要的文件。 如果要使用Java创建客户端应用程序，请包含必要的JAR文件。 如果使用Web服务，请确保包含代理文件。
+將必要的檔案納入您的開發專案中。 如果您使用Java建立使用者端應用程式，請包含必要的JAR檔案。 如果您使用Web服務，請確定您包含Proxy檔案。
 
-必须将以下JAR文件添加到项目的类路径中：
+下列JAR檔案必須新增到專案的類別路徑中：
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-signatures-client.jar
-* adobe-utilities.jar(如果在JBoss上部署了AEM Forms，则此为必填字段)
-* jbossall-client.jar(如果在JBoss上部署了AEM Forms，则此为必填字段)
+* adobe-utilities.jar (如果AEM Forms部署在JBoss上，則為必要)
+* jbossall-client.jar (如果AEM Forms部署在JBoss上，則為必要)
 
-有关这些JAR文件位置的信息，请参见 [包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
+有關這些JAR檔案位置的資訊，請參見 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
 
-**创建签名客户端**
+**建立簽名使用者端**
 
-必须先创建签名服务客户端，然后才能以编程方式执行签名服务操作。
+您必須先建立簽名服務使用者端，才能以程式設計方式執行簽名服務作業。
 
-**获取包含签名字段的PDF文档**
+**取得包含簽名欄位的PDF檔案**
 
-检索包含签名字段的PDF文档。
+擷取包含簽名欄位的PDF檔案。
 
-**检索签名字段名称**
+**擷取簽名欄位名稱**
 
-在检索包含一个或多个签名字段的PDF文档后，可以检索签名字段名称。
-
-**另请参阅**
-
-[使用Java API检索签名字段名称](digitally-signing-certifying-documents.md#retrieve-signature-field-names-using-the-java-api)
-
-[使用Web服务API检索签名字段](digitally-signing-certifying-documents.md#retrieve-signature-field-using-the-web-service-api)
-
-[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
-
-[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
-
-[添加签名字段](digitally-signing-certifying-documents.md#adding-signature-fields)
-
-### 使用Java API检索签名字段名称 {#retrieve-signature-field-names-using-the-java-api}
-
-使用签名API (Java)检索签名字段名称：
-
-1. 包括项目文件
-
-   将客户端JAR文件（如adobe-signatures-client.jar）包含在Java项目的类路径中。
-
-1. 创建签名客户端
-
-   * 创建 `ServiceClientFactory` 包含连接属性的对象。
-   * 创建 `SignatureServiceClient` 对象，使用它的构造函数传递 `ServiceClientFactory` 对象。
-
-1. 获取包含签名字段的PDF文档
-
-   * 创建 `java.io.FileInputStream` 表示包含签名字段的PDF文档的对象，方法是使用其构造函数并传递指定PDF文档位置的字符串值。
-   * 创建 `com.adobe.idp.Document` 对象，使用它的构造函数传递 `java.io.FileInputStream` 对象。
-
-1. 检索签名字段名称
-
-   * 通过调用 `SignatureServiceClient` 对象的 `getSignatureFieldList` 方法和传递 `com.adobe.idp.Document` 包含包含签名字段的PDF文档的对象。 此方法会返回 `java.util.List` 对象，其中每个元素包含 `PDFSignatureField` 对象。 使用此对象，您可以获取有关签名字段的其他信息，如它是否可见。
-   * 循环访问 `java.util.List` 确定是否存在签名字段名称的对象。 对于PDF文档中的每个签名字段，您可以获取单独的 `PDFSignatureField` 对象。 要获取签名字段的名称，请调用 `PDFSignatureField` 对象的 `getName` 方法。 此方法返回一个指定签名字段名称的字符串值。
+在擷取包含一個或多個簽名欄位的PDF檔案後，您可以擷取簽名欄位名稱。
 
 **另请参阅**
 
-[正在检索签名字段名称](digitally-signing-certifying-documents.md#retrieving-signature-field-names)
+[使用Java API擷取簽名欄位名稱](digitally-signing-certifying-documents.md#retrieve-signature-field-names-using-the-java-api)
 
-[快速入门（SOAP模式）：使用Java API检索签名字段名称](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-retrieving-signature-field-names-using-the-java-api)
+[使用Web服務API擷取簽名欄位](digitally-signing-certifying-documents.md#retrieve-signature-field-using-the-web-service-api)
 
-[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
-[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### 使用Web服务API检索签名字段 {#retrieve-signature-field-using-the-web-service-api}
+[新增簽名欄位](digitally-signing-certifying-documents.md#adding-signature-fields)
 
-使用签名API（Web服务）检索签名字段名称：
+### 使用Java API擷取簽名欄位名稱 {#retrieve-signature-field-names-using-the-java-api}
 
-1. 包括项目文件
+使用簽名API (Java)擷取簽名欄位名稱：
 
-   创建使用MTOM的Microsoft .NET项目。 确保使用以下WSDL定义： `http://localhost:8080/soap/services/SignatureService?WSDL&lc_version=9.0.1`.
+1. 包含專案檔案
+
+   在您的Java專案的類別路徑中包含使用者端JAR檔案，例如adobe-signatures-client.jar。
+
+1. 建立簽名使用者端
+
+   * 建立 `ServiceClientFactory` 包含連線屬性的物件。
+   * 建立 `SignatureServiceClient` 物件，使用它的建構函式並傳遞 `ServiceClientFactory` 物件。
+
+1. 取得包含簽名欄位的PDF檔案
+
+   * 建立 `java.io.FileInputStream` 物件，代表包含簽名欄位的PDF檔案，方法是使用其建構函式並傳遞指定PDF檔案位置的字串值。
+   * 建立 `com.adobe.idp.Document` 物件，使用它的建構函式並傳遞 `java.io.FileInputStream` 物件。
+
+1. 擷取簽名欄位名稱
+
+   * 透過叫用擷取簽名欄位名稱 `SignatureServiceClient` 物件的 `getSignatureFieldList` 方法和傳遞 `com.adobe.idp.Document` 包含包含簽名欄位之PDF檔案的物件。 此方法會傳回 `java.util.List` 物件，其中每個元素都包含 `PDFSignatureField` 物件。 使用此物件，您可以取得有關簽名欄位的額外資訊，例如它是否可見。
+   * 循環瀏覽 `java.util.List` 物件來判斷是否有簽名欄位名稱。 對於PDF檔案中的每個簽名欄位，您可以取得單獨的 `PDFSignatureField` 物件。 若要取得簽名欄位的名稱，請叫用 `PDFSignatureField` 物件的 `getName` 方法。 此方法會傳回指定簽名欄位名稱的字串值。
+
+**另请参阅**
+
+[正在擷取簽章欄位名稱](digitally-signing-certifying-documents.md#retrieving-signature-field-names)
+
+[快速入門（SOAP模式）：使用Java API擷取簽名欄位名稱](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-retrieving-signature-field-names-using-the-java-api)
+
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+
+[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+
+### 使用Web服務API擷取簽名欄位 {#retrieve-signature-field-using-the-web-service-api}
+
+使用簽名API （Web服務）擷取簽名欄位名稱：
+
+1. 包含專案檔案
+
+   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/SignatureService?WSDL&lc_version=9.0.1`.
 
    >[!NOTE]
    >
-   >Replace `localhost` 包含托管AEM Forms的服务器的IP地址。
+   >Replace `localhost` 搭配裝載AEM Forms之伺服器的IP位址。
 
-1. 创建签名客户端
+1. 建立簽名使用者端
 
-   * 创建 `SignatureServiceClient` 对象。
-   * 创建 `SignatureServiceClient.Endpoint.Address` 对象 `System.ServiceModel.EndpointAddress` 构造函数。 将指定WSDL的字符串值传递给AEM Forms服务(例如， `http://localhost:8080/soap/services/SignatureService?WSDL`)。 您无需使用 `lc_version` 属性。 创建服务引用时使用此属性。)
-   * 创建 `System.ServiceModel.BasicHttpBinding` 对象，方法是获取 `SignatureServiceClient.Endpoint.Binding` 字段。 将返回值强制转换为 `BasicHttpBinding`.
-   * 设置 `System.ServiceModel.BasicHttpBinding` 对象的 `MessageEncoding` 字段至 `WSMessageEncoding.Mtom`. 此值可确保使用MTOM。
-   * 通过执行以下任务启用基本HTTP身份验证：
+   * 建立 `SignatureServiceClient` 物件（使用其預設建構函式）。
+   * 建立 `SignatureServiceClient.Endpoint.Address` 物件，使用 `System.ServiceModel.EndpointAddress` 建構函式。 將指定WSDL的字串值傳遞至AEM Forms服務(例如， `http://localhost:8080/soap/services/SignatureService?WSDL`)。 您不需要使用 `lc_version` 屬性。 當您建立服務參考時，會使用此屬性。)
+   * 建立 `System.ServiceModel.BasicHttpBinding` 物件，方法是取得 `SignatureServiceClient.Endpoint.Binding` 欄位。 將傳回值轉換為 `BasicHttpBinding`.
+   * 設定 `System.ServiceModel.BasicHttpBinding` 物件的 `MessageEncoding` 欄位至 `WSMessageEncoding.Mtom`. 此值可確保使用MTOM。
+   * 執行下列工作來啟用基本HTTP驗證：
 
-      * 将AEM表单用户名分配给字段 `SignatureServiceClient.ClientCredentials.UserName.UserName`.
-      * 将相应的密码值分配给字段 `SignatureServiceClient.ClientCredentials.UserName.Password`.
-      * 分配常量值 `HttpClientCredentialType.Basic` 到字段 `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
-      * 分配常量值 `BasicHttpSecurityMode.TransportCredentialOnly` 到字段 `BasicHttpBindingSecurity.Security.Mode`.
+      * 將AEM表單使用者名稱指派給欄位 `SignatureServiceClient.ClientCredentials.UserName.UserName`.
+      * 將對應的密碼值指派給欄位 `SignatureServiceClient.ClientCredentials.UserName.Password`.
+      * 指派常數值 `HttpClientCredentialType.Basic` 至欄位 `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
+      * 指派常數值 `BasicHttpSecurityMode.TransportCredentialOnly` 至欄位 `BasicHttpBindingSecurity.Security.Mode`.
 
-1. 获取包含签名字段的PDF文档
+1. 取得包含簽名欄位的PDF檔案
 
-   * 创建 `BLOB` 对象。 此 `BLOB` 对象用于存储包含签名字段的PDF文档。
-   * 创建 `System.IO.FileStream` 对象，方法是调用其构造函数并传递一个字符串值，该字符串值表示PDF文档的文件位置和打开文件的模式。
-   * 创建一个字节数组，用于存储 `System.IO.FileStream` 对象。 您可以通过获取 `System.IO.FileStream` 对象的 `Length` 属性。
-   * 通过调用 `System.IO.FileStream` 对象的 `Read` 方法，并传递字节数组、起始位置和要读取的流长度。
-   * 填充 `BLOB` 对象(通过指定其 `MTOM` 字段字节数组内容。
+   * 建立 `BLOB` 物件（使用其建構函式）。 此 `BLOB` 物件是用來儲存包含簽名欄位的PDF檔案。
+   * 建立 `System.IO.FileStream` 物件，方法是叫用其建構函式，並傳遞代表PDF檔案的檔案位置和開啟檔案的模式的字串值。
+   * 建立位元組陣列，儲存 `System.IO.FileStream` 物件。 您可以取得 `System.IO.FileStream` 物件的 `Length` 屬性。
+   * 叫用 `System.IO.FileStream` 物件的 `Read` 方法，並傳遞位元組陣列、起始位置以及要讀取的資料流長度。
+   * 填入 `BLOB` 物件，透過指派其 `MTOM` 欄位位位元組陣列內容。
 
-1. 检索签名字段名称
+1. 擷取簽名欄位名稱
 
-   * 通过调用检索签名字段名称 `SignatureServiceClient` 对象的 `getSignatureFieldList` 方法和传递 `BLOB` 包含包含签名字段的PDF文档的对象。 此方法会返回 `MyArrayOfPDFSignatureField` 集合对象，其中每个元素包含 `PDFSignatureField` 对象。
-   * 循环访问 `MyArrayOfPDFSignatureField` 用于确定是否存在签名字段名称的对象。 对于PDF文档中的每个签名字段，您可以获取 `PDFSignatureField` 对象。 要获取签名字段的名称，请调用 `PDFSignatureField` 对象的 `getName` 方法。 此方法返回一个指定签名字段名称的字符串值。
+   * 透過叫用擷取簽名欄位名稱 `SignatureServiceClient` 物件的 `getSignatureFieldList` 方法和傳遞 `BLOB` 包含包含簽名欄位之PDF檔案的物件。 此方法會傳回 `MyArrayOfPDFSignatureField` 集合物件，其中每個元素包含 `PDFSignatureField` 物件。
+   * 循環瀏覽 `MyArrayOfPDFSignatureField` 物件來判斷是否有簽名欄位名稱。 對於PDF檔案中的每個簽名欄位，您可以取得 `PDFSignatureField` 物件。 若要取得簽名欄位的名稱，請叫用 `PDFSignatureField` 物件的 `getName` 方法。 此方法會傳回指定簽名欄位名稱的字串值。
 
 **另请参阅**
 
-[正在检索签名字段名称](digitally-signing-certifying-documents.md#retrieving-signature-field-names)
+[正在擷取簽章欄位名稱](digitally-signing-certifying-documents.md#retrieving-signature-field-names)
 
-[使用MTOM调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[使用MTOM叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[使用SwaRef调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[使用SwaRef叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
-## 修改签名字段 {#modifying-signature-fields}
+## 修改簽章欄位 {#modifying-signature-fields}
 
-您可以使用Java API和Web服务API修改位于PDF文档中的签名字段。 修改签名字段涉及处理其签名字段锁定字典值或种子值字典值。
+您可以使用Java API和Web服務API來修改位於PDF檔案中的簽名欄位。 修改簽章欄位涉及處理其簽章欄位鎖定字典值或種子值字典值。
 
-A *字段锁定词典* 指定签名字段签名时锁定的字段列表。 锁定的字段可阻止用户对该字段进行更改。 A *种子值字典* 包含应用签名时使用的约束信息。 例如，您可以更改在不使签名失效的情况下控制可能发生的操作的权限。
+A *欄位鎖定字典* 指定簽名欄位簽署時鎖定的欄位清單。 鎖定的欄位可防止使用者變更欄位。 A *種子值字典* 包含套用簽章時使用的限制資訊。 例如，您可以變更在不使簽名失效的情況下控制可能發生的動作的許可權。
 
-通过修改现有签名字段，可以更改PDF文档以反映不断变化的业务要求。 例如，新的业务要求可能要求在签署文档后锁定所有文档字段。
+透過修改現有的簽名欄位，您可以變更PDF檔案，以反映不斷變化的業務需求。 例如，新的業務需求可能需要在簽署檔案後鎖定所有檔案欄位。
 
-本节说明如何通过修改字段锁定字典和种子值字典值来修改签名字段。 对签名字段锁定字典所做的更改导致签名字段签名时PDF文档中的所有字段被锁定。 对种子值词典所做的更改禁止对文档进行特定类型的更改。
+本節說明如何修改欄位鎖定字典和種子值字典值，以修改簽名欄位。 簽名欄位簽署時，對簽名欄位鎖定字典所做的變更會導致PDF檔案中的所有欄位被鎖定。 對種子值字典所做的變更會禁止對檔案進行特定型別的變更。
 
 >[!NOTE]
 >
->有关Signature服务和修改签名字段的详细信息，请参见 [AEM Forms的服务参考](https://www.adobe.com/go/learn_aemforms_services_63).
+>如需有關簽名服務和修改簽名欄位的詳細資訊，請參閱 [AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
 
-### 步骤摘要 {#summary_of_steps-2}
+### 步驟摘要 {#summary_of_steps-2}
 
-要修改位于PDF文档中的签名字段，请执行以下任务：
+若要修改位於PDF檔案中的簽名欄位，請執行下列工作：
 
-1. 包括项目文件。
-1. 创建签名客户端。
-1. 获取包含要修改的签名字段的PDF文档。
-1. 设置字典值。
-1. 修改签名字段。
-1. 将PDF文档另存为PDF文件。
+1. 包含專案檔案。
+1. 建立簽章使用者端。
+1. 取得包含要修改之簽名欄位的PDF檔案。
+1. 設定字典值。
+1. 修改簽名欄位。
+1. 將PDF檔案儲存為PDF檔案。
 
-**包括项目文件**
+**包含專案檔案**
 
-在开发项目中包含必要的文件。 如果要使用Java创建客户端应用程序，请包含必要的JAR文件。 如果使用Web服务，请确保包含代理文件。
+在您的開發專案中包含必要的檔案。 如果您使用Java建立使用者端應用程式，請包含必要的JAR檔案。 如果您使用Web服務，請確定您包含Proxy檔案。
 
-必须将以下JAR文件添加到项目的类路径中：
+下列JAR檔案必須新增到專案的類別路徑中：
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-signatures-client.jar
-* adobe-utilities.jar(如果在JBoss上部署了AEM Forms，则此为必填字段)
-* jbossall-client.jar(如果在JBoss上部署了AEM Forms，则此为必填字段)
+* adobe-utilities.jar (如果AEM Forms部署在JBoss上，則為必要)
+* jbossall-client.jar (如果AEM Forms部署在JBoss上，則為必要)
 
-有关这些JAR文件位置的信息，请参见 [包含LiveCycleJava库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
+有關這些JAR檔案位置的資訊，請參見 [包含LiveCycleJava程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
 
-**创建签名客户端**
+**建立簽名使用者端**
 
-必须先创建签名服务客户端，然后才能以编程方式执行签名服务操作。
+您必須先建立簽名服務使用者端，才能以程式設計方式執行簽名服務作業。
 
-**获取包含要修改的签名字段的PDF文档**
+**取得包含要修改之簽名欄位的PDF檔案**
 
-检索包含要修改的签名字段的PDF文档。
+擷取包含要修改之簽名欄位的PDF檔案。
 
-**设置字典值**
+**設定字典值**
 
-要修改签名字段，请为其字段锁定字典或种子值字典指定值。 指定签名字段锁定字典值涉及指定签名字段签名时锁定的PDF文档字段。 （本节讨论如何锁定所有字段。）
+若要修改簽章欄位，請將值指派給其欄位鎖定字典或種子值字典。 指定簽名欄位鎖定字典值涉及指定簽名欄位簽署時鎖定的PDF檔案欄位。 （本節討論如何鎖定所有欄位。）
 
-可以设置以下种子值字典值：
+可以設定以下種子值字典值：
 
-* **修订检查**：指定在将签名应用于签名字段时是否执行吊销检查。
-* **证书选项**：将值分配给证书种子值字典。 在指定证书选项之前，建议您熟悉证书种子值词典。 (请参阅 [PDF引用](https://www.adobe.com/devnet/acrobat/pdfs/pdf_reference_1-7.pdf).)
-* **摘要选项**：分配用于签名的摘要算法。 有效值为SHA1、SHA256、SHA384、SHA512和RIPEMD160。
-* **筛选条件**：指定与签名字段一起使用的过滤器。 例如，您可以使用Adobe.PPKLite过滤器。 (请参阅 [PDF引用](https://www.adobe.com/devnet/acrobat/pdfs/pdf_reference_1-7.pdf).)
-* **标记选项**：指定与此签名字段关联的标志值。 值为1表示签名者必须仅使用条目指定的值。 值为0表示允许使用其他值。 以下是Bit位置：
+* **修訂檢查**：指定簽章套用至簽章欄位時是否執行撤銷檢查。
+* **憑證選項**：將值指派給憑證種子值字典。 在指定憑證選項之前，建議您先熟悉憑證種子值字典。 (請參閱 [PDF參考](https://www.adobe.com/devnet/acrobat/pdfs/pdf_reference_1-7.pdf).)
+* **摘要選項**：指派用於簽署的摘要演演算法。 有效值為SHA1、SHA256、SHA384、SHA512和RIPEMD160。
+* **篩選**：指定與簽章欄位搭配使用的篩選器。 例如，您可以使用Adobe.PPKLite篩選器。 (請參閱 [PDF參考](https://www.adobe.com/devnet/acrobat/pdfs/pdf_reference_1-7.pdf).)
+* **標幟選項**：指定與此簽章欄位關聯的旗標值。 值1表示簽署者只能使用專案的指定值。 值0表示允許其他值。 以下是Bit位置：
 
-   * **1（过滤器）：** 用于对签名字段签名的签名处理程序
-   * **2（子过滤器）：** 一个名称数组，指示签名时要使用的可接受编码
-   * **3 (V)**：用于对签名字段签名的签名处理程序的最低要求版本号
-   * **4（原因）：** 一个字符串数组，指定签署文档的可能原因
-   * **5 (PDFLegalWarnings)：** 一个字符串数组，用于指定可能的法律证明
+   * **1 （篩選）：** 用於簽署簽名欄位的簽名處理常式
+   * **2 (SubFilter)：** 一個名稱陣列，指示簽署時要使用的可接受編碼
+   * **3 (V)**：簽署簽名欄位所使用的簽名處理常式的最低版本號碼
+   * **4 （原因）：** 指定簽署檔案可能原因的字串陣列
+   * **5 (PDFLegalWarnings)：** 字串陣列，指定可能合法的證明
 
-* **法律证明**：当文档经过认证时，将自动扫描特定类型的内容，这些内容可能会使文档的可见内容含糊或误导用户。 例如，注释可能会模糊文本，而这些文本对于了解所认证的内容非常重要。 扫描过程会生成指示存在此类内容的警告。 它还提供了可能生成警告的内容的其他解释。
-* **权限**：指定可用于文档而不使签名失效的PDF的权限。
-* **原因**：指定必须对此文档签名的原因。
-* **时间戳**：指定时间戳选项。 例如，您可以设置所使用时间戳服务器的URL。
-* **版本**：指定用于对签名字段签名的签名处理程序的最小版本号。
+* **法律證明**：當檔案通過驗證時，會自動掃描特定型別的內容，這會使檔案的可見內容含糊或誤導使用者。 例如，註解可能會模糊文字，而這些文字對於瞭解認證內容非常重要。 掃描程式會產生警告，指出存在此型別的內容。 此外，也會針對可能產生警告的內容提供額外說明。
+* **許可權**：指定可用於不會使簽名失效的PDF檔案的許可權。
+* **原因**：指定必須簽署此檔案的原因。
+* **時間戳記**：指定時間戳記選項。 例如，您可以設定所用時間戳記伺服器的URL。
+* **版本**：指定用於簽署簽名欄位的簽名處理常式的最小版本號碼。
 
-**修改签名字段**
+**修改簽名欄位**
 
-创建签名服务客户端后，检索包含要修改的签名字段的PDF文档，并设置字典值，可以指示Signature service修改签名字段。 然后，签名服务返回包含修改后的签名字段的PDF文档。 原始PDF文档不受影响。
+建立「簽名」服務使用者端、擷取包含要修改之簽名欄位的PDF檔案並設定說明值之後，您可以指示「簽名」服務修改簽名欄位。 然後Signature service會傳回包含修改過之簽章欄位的PDF檔案。 原始PDF檔案不受影響。
 
-**将PDF文档另存为PDF文件**
+**將PDF檔案儲存為PDF檔案**
 
-将包含修改后的签名字段的PDF文档保存为PDF文件，以便用户可以在Acrobat或Adobe Reader中打开该文档。
-
-**另请参阅**
-
-[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
-
-[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
-
-[签名服务API快速启动](/help/forms/developing/signature-service-java-api-quick.md#signature-service-java-api-quick-start-soap)
-
-[对PDF文档进行数字签名](digitally-signing-certifying-documents.md#digitally-signing-pdf-documents)
-
-### 使用Java API修改签名字段 {#modify-signature-fields-using-the-java-api}
-
-使用签名API (Java)修改签名字段：
-
-1. 包括项目文件
-
-   在Java项目的类路径中包含客户端JAR文件，例如adobe-signatures-client.jar。
-
-1. 创建签名客户端
-
-   * 创建 `ServiceClientFactory` 包含连接属性的对象。
-   * 创建 `SignatureServiceClient` 对象，使用它的构造函数传递 `ServiceClientFactory` 对象。
-
-1. 获取包含要修改的签名字段的PDF文档
-
-   * 创建 `java.io.FileInputStream` 表示包含签名字段的PDF文档的对象，可通过使用其构造函数并传递指定PDF文档位置的字符串值来修改该文档。
-   * 创建 `com.adobe.idp.Document` 对象，使用它的构造函数传递 `java.io.FileInputStream` 对象。
-
-1. 设置字典值
-
-   * 创建 `PDFSignatureFieldProperties` 对象。 A `PDFSignatureFieldProperties` 对象存储签名字段锁定字典和种子值字典信息。
-   * 创建 `PDFSeedValueOptionSpec` 对象。 此对象允许您设置种子值字典值。
-   * PDF通过调用 `PDFSeedValueOptionSpec` 对象的 `setMdpValue` 方法和传递 `MDPPermissions.NoChanges` 枚举值。
-   * 创建 `FieldMDPOptionSpec` 对象。 此对象允许您设置签名字段锁定字典值。
-   * PDF通过调用 `FieldMDPOptionSpec` 对象的 `setMdpValue` 方法和传递 `FieldMDPAction.ALL` 枚举值。
-   * 通过调用 `PDFSignatureFieldProperties` 对象的 `setSeedValue` 方法和传递 `PDFSeedValueOptionSpec` 对象。
-   * 通过调用 `PDFSignatureFieldProperties`对象的 `setFieldMDP` 方法和传递 `FieldMDPOptionSpec` 对象。
-
-   >[!NOTE]
-   >
-   >要查看可以设置的所有种子值字典值，请参阅 `PDFSeedValueOptionSpec` 类引用。 (请参阅 [AEM Forms API参考](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).)
-
-1. 修改签名字段
-
-   通过调用 `SignatureServiceClient` 对象的 `modifySignatureField` 方法，并传递以下值：
-
-   * 此 `com.adobe.idp.Document` 存储包含要修改的签名字段的PDF文档的对象
-   * 指定签名字段名称的字符串值
-   * 此 `PDFSignatureFieldProperties` 存储签名字段锁定字典和种子值字典信息的对象
-
-   此 `modifySignatureField` 方法返回 `com.adobe.idp.Document` 存储包含修改后的签名字段的PDF文档的对象。
-
-1. 将PDF文档另存为PDF文件
-
-   * 创建 `java.io.File` 对象并确保文件扩展名为.pdf。
-   * 调用 `com.adobe.idp.Document` 对象的 `copyToFile` 用于复制目录内容的方法 `com.adobe.idp.Document` 对象到文件。 确保您使用 `com.adobe.idp.Document` 对象 `modifySignatureField` 方法已返回。
-
-### 使用Web服务API修改签名字段 {#modify-signature-fields-using-the-web-service-api}
-
-使用签名API（Web服务）修改签名字段：
-
-1. 包括项目文件
-
-   创建使用MTOM的Microsoft .NET项目。 确保使用以下WSDL定义： `http://localhost:8080/soap/services/SignatureService?WSDL&lc_version=9.0.1`.
-
-   >[!NOTE]
-   >
-   >Replace `localhost` 包含托管AEM Forms的服务器的IP地址。
-
-1. 创建签名客户端
-
-   * 创建 `SignatureServiceClient` 对象。
-   * 创建 `SignatureServiceClient.Endpoint.Address` 对象 `System.ServiceModel.EndpointAddress` 构造函数。 将指定WSDL的字符串值传递给AEM Forms服务(例如， `http://localhost:8080/soap/services/SignatureService?WSDL`)。 您无需使用 `lc_version` 属性。 创建服务引用时使用此属性。)
-   * 创建 `System.ServiceModel.BasicHttpBinding` 对象，方法是获取 `SignatureServiceClient.Endpoint.Binding` 字段。 将返回值强制转换为 `BasicHttpBinding`.
-   * 设置 `System.ServiceModel.BasicHttpBinding` 对象的 `MessageEncoding` 字段至 `WSMessageEncoding.Mtom`. 此值可确保使用MTOM。
-   * 通过执行以下任务启用基本HTTP身份验证：
-
-      * 将AEM表单用户名分配给字段 `SignatureServiceClient.ClientCredentials.UserName.UserName`.
-      * 将相应的密码值分配给字段 `SignatureServiceClient.ClientCredentials.UserName.Password`.
-      * 分配常量值 `HttpClientCredentialType.Basic` 到字段 `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
-      * 分配常量值 `BasicHttpSecurityMode.TransportCredentialOnly` 到字段 `BasicHttpBindingSecurity.Security.Mode`.
-
-1. 获取包含要修改的签名字段的PDF文档
-
-   * 创建 `BLOB` 对象。 此 `BLOB` 对象用于存储包含要修改的签名字段的PDF文档。
-   * 创建 `System.IO.FileStream` 对象，方法是调用其构造函数并传递一个字符串值，该字符串值表示PDF文档的文件位置和打开文件的模式。
-   * 创建一个字节数组，用于存储 `System.IO.FileStream` 对象。 您可以通过获取 `System.IO.FileStream` 对象的 `Length` 属性。
-   * 通过调用 `System.IO.FileStream` 对象的 `Read` 方法，并传递字节数组、起始位置和要读取的流长度。
-   * 填充 `BLOB` 对象(通过指定其 `MTOM` 属性字节数组的内容。
-
-1. 设置字典值
-
-   * 创建 `PDFSignatureFieldProperties` 对象。 此对象存储签名字段锁定字典和种子值字典信息。
-   * 创建 `PDFSeedValueOptionSpec` 对象。 此对象允许您设置种子值字典值。
-   * 通过分配PDF文档来禁止对其进行更改 `MDPPermissions.NoChanges` 的枚举值 `PDFSeedValueOptionSpec` 对象的 `mdpValue` 数据成员。
-   * 创建 `FieldMDPOptionSpec` 对象。 此对象允许您设置签名字段锁定字典值。
-   * 通过分配PDF文档中的所有字段 `FieldMDPAction.ALL` 的枚举值 `FieldMDPOptionSpec` 对象的 `mdpValue` 数据成员。
-   * 通过分配 `PDFSeedValueOptionSpec` 对象 `PDFSignatureFieldProperties` 对象的 `seedValue` 数据成员。
-   * 通过分配 `FieldMDPOptionSpec` 对象 `PDFSignatureFieldProperties` 对象的 `fieldMDP` 数据成员。
-
-   >[!NOTE]
-   >
-   >要查看可以设置的所有种子值字典值，请参阅 `PDFSeedValueOptionSpec` 类引用。 (请参阅 [AEM Forms API参考](https://www.adobe.com/go/learn_aemforms_javadocs_63_en))。
-
-1. 修改签名字段
-
-   通过调用 `SignatureServiceClient` 对象的 `modifySignatureField` 方法，并传递以下值：
-
-   * 此 `BLOB` 存储包含要修改的签名字段的PDF文档的对象
-   * 指定签名字段名称的字符串值
-   * 此 `PDFSignatureFieldProperties` 存储签名字段锁定字典和种子值字典信息的对象
-
-   此 `modifySignatureField` 方法返回 `BLOB` 存储包含修改后的签名字段的PDF文档的对象。
-
-1. 将PDF文档另存为PDF文件
-
-   * 创建 `System.IO.FileStream` 对象，方法是调用其构造函数并传递一个字符串值，该字符串值表示将包含签名字段的PDF文档的文件位置以及打开文件的模式。
-   * 创建一个字节数组，用于存储 `BLOB` 对象 `addSignatureField` 方法会返回。 通过获取的值填充字节数组 `BLOB` 对象的 `MTOM` 数据成员。
-   * 创建 `System.IO.BinaryWriter` 对象，方法是调用其构造函数 `System.IO.FileStream` 对象。
-   * PDF通过调用 `System.IO.BinaryWriter` 对象的 `Write` 方法和传递字节数组。
+將包含已修改簽名欄位的PDF檔案儲存為PDF檔案，以便使用者可以在Acrobat或Adobe Reader中將其開啟。
 
 **另请参阅**
 
-[使用MTOM调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
-[使用SwaRef调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-## 对PDF文档进行数字签名 {#digitally-signing-pdf-documents}
+[簽名服務API快速啟動](/help/forms/developing/signature-service-java-api-quick.md#signature-service-java-api-quick-start-soap)
 
-可以将数字签名应用于PDF文档，以提供一定程度的安全性。 数字签名（如手写签名）提供了一种方法，签名者通过它来标识自己并就文档发表声明。 用于对文档进行数字签名的技术，有助于确保签名者和收件人都清楚已签署的内容，并且确信文档自签署以来未发生更改。
+[數位簽署PDF檔案](digitally-signing-certifying-documents.md#digitally-signing-pdf-documents)
 
-PDF文件采用公钥技术签名。 签名者有两个密钥：公钥和私钥。 私钥存储在用户的凭据中，该凭据在签名时必须可用。 公钥存储在用户的证书中，收件人必须可以使用它来验证签名。 证书吊销列表(CRL)和由证书颁发机构(CA)分发的联机证书状态协议(OCSP)响应中可以找到有关吊销证书的信息。 签名时间可以从称为时间戳颁发机构的受信任源获得。
+### 使用Java API修改簽名欄位 {#modify-signature-fields-using-the-java-api}
+
+使用簽名API (Java)修改簽名欄位：
+
+1. 包含專案檔案
+
+   在您的Java專案的類別路徑中包含使用者端JAR檔案，例如adobe-signatures-client.jar。
+
+1. 建立簽名使用者端
+
+   * 建立 `ServiceClientFactory` 包含連線屬性的物件。
+   * 建立 `SignatureServiceClient` 物件，使用它的建構函式並傳遞 `ServiceClientFactory` 物件。
+
+1. 取得包含要修改之簽名欄位的PDF檔案
+
+   * 建立 `java.io.FileInputStream` 物件，代表包含簽名欄位的PDF檔案，可透過使用其建構函式並傳遞指定PDF檔案位置的字串值來修改。
+   * 建立 `com.adobe.idp.Document` 物件，使用它的建構函式並傳遞 `java.io.FileInputStream` 物件。
+
+1. 設定字典值
+
+   * 建立 `PDFSignatureFieldProperties` 物件（使用其建構函式）。 A `PDFSignatureFieldProperties` 物件儲存簽章欄位鎖定字典和種子值字典資訊。
+   * 建立 `PDFSeedValueOptionSpec` 物件（使用其建構函式）。 此物件可讓您設定種子值字典值。
+   * 透過叫用「 」，不允許變更PDF檔案 `PDFSeedValueOptionSpec` 物件的 `setMdpValue` 方法和傳遞 `MDPPermissions.NoChanges` 列舉值。
+   * 建立 `FieldMDPOptionSpec` 物件（使用其建構函式）。 此物件可讓您設定簽章欄位鎖定字典值。
+   * 叫用「 」，鎖定PDF檔案中的所有欄位 `FieldMDPOptionSpec` 物件的 `setMdpValue` 方法和傳遞 `FieldMDPAction.ALL` 列舉值。
+   * 透過叫用設定種子值字典資訊 `PDFSignatureFieldProperties` 物件的 `setSeedValue` 方法和傳遞 `PDFSeedValueOptionSpec` 物件。
+   * 透過叫用設定簽章欄位鎖定字典資訊 `PDFSignatureFieldProperties`物件的 `setFieldMDP` 方法和傳遞 `FieldMDPOptionSpec` 物件。
+
+   >[!NOTE]
+   >
+   >若要檢視所有可設定的種子值字典值，請參閱 `PDFSeedValueOptionSpec` 類別參考。 (請參閱 [AEM Forms API參考](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).)
+
+1. 修改簽名欄位
+
+   透過叫用 `SignatureServiceClient` 物件的 `modifySignatureField` 並傳遞下列值：
+
+   * 此 `com.adobe.idp.Document` 儲存包含要修改之簽名欄位的PDF檔案的物件
+   * 字串值，指定簽名欄位的名稱
+   * 此 `PDFSignatureFieldProperties` 儲存簽章欄位鎖定字典和種子值字典資訊的物件
+
+   此 `modifySignatureField` 方法傳回 `com.adobe.idp.Document` 物件，用來儲存包含已修改簽名欄位的PDF檔案。
+
+1. 將PDF檔案儲存為PDF檔案
+
+   * 建立 `java.io.File` 物件並確保副檔名為.pdf。
+   * 叫用 `com.adobe.idp.Document` 物件的 `copyToFile` 複製目錄內容的方法 `com.adobe.idp.Document` 物件至檔案。 確保您使用 `com.adobe.idp.Document` 物件， `modifySignatureField` 方法已傳回。
+
+### 使用Web服務API修改簽名欄位 {#modify-signature-fields-using-the-web-service-api}
+
+使用Signature API （Web服務）修改簽名欄位：
+
+1. 包含專案檔案
+
+   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/SignatureService?WSDL&lc_version=9.0.1`.
+
+   >[!NOTE]
+   >
+   >Replace `localhost` 搭配裝載AEM Forms之伺服器的IP位址。
+
+1. 建立簽名使用者端
+
+   * 建立 `SignatureServiceClient` 物件（使用其預設建構函式）。
+   * 建立 `SignatureServiceClient.Endpoint.Address` 物件，使用 `System.ServiceModel.EndpointAddress` 建構函式。 將指定WSDL的字串值傳遞至AEM Forms服務(例如， `http://localhost:8080/soap/services/SignatureService?WSDL`)。 您不需要使用 `lc_version` 屬性。 當您建立服務參考時，會使用此屬性。)
+   * 建立 `System.ServiceModel.BasicHttpBinding` 物件，方法是取得 `SignatureServiceClient.Endpoint.Binding` 欄位。 將傳回值轉換為 `BasicHttpBinding`.
+   * 設定 `System.ServiceModel.BasicHttpBinding` 物件的 `MessageEncoding` 欄位至 `WSMessageEncoding.Mtom`. 此值可確保使用MTOM。
+   * 執行下列工作來啟用基本HTTP驗證：
+
+      * 將AEM表單使用者名稱指派給欄位 `SignatureServiceClient.ClientCredentials.UserName.UserName`.
+      * 將對應的密碼值指派給欄位 `SignatureServiceClient.ClientCredentials.UserName.Password`.
+      * 指派常數值 `HttpClientCredentialType.Basic` 至欄位 `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
+      * 指派常數值 `BasicHttpSecurityMode.TransportCredentialOnly` 至欄位 `BasicHttpBindingSecurity.Security.Mode`.
+
+1. 取得包含要修改之簽名欄位的PDF檔案
+
+   * 建立 `BLOB` 物件（使用其建構函式）。 此 `BLOB` 物件是用來儲存包含要修改之簽名欄位的PDF檔案。
+   * 建立 `System.IO.FileStream` 物件，方法是叫用其建構函式，並傳遞代表PDF檔案的檔案位置和開啟檔案的模式的字串值。
+   * 建立位元組陣列，儲存 `System.IO.FileStream` 物件。 您可以取得 `System.IO.FileStream` 物件的 `Length` 屬性。
+   * 叫用 `System.IO.FileStream` 物件的 `Read` 方法，並傳遞位元組陣列、起始位置以及要讀取的資料流長度。
+   * 填入 `BLOB` 物件，透過指派其 `MTOM` 屬性位元組陣列的內容。
+
+1. 設定字典值
+
+   * 建立 `PDFSignatureFieldProperties` 物件（使用其建構函式）。 此物件儲存簽章欄位鎖定字典和種子值字典資訊。
+   * 建立 `PDFSeedValueOptionSpec` 物件（使用其建構函式）。 此物件可讓您設定種子值字典值。
+   * 透過指派「 」來禁止對PDF檔案進行變更 `MDPPermissions.NoChanges` 列舉值至 `PDFSeedValueOptionSpec` 物件的 `mdpValue` 資料成員。
+   * 建立 `FieldMDPOptionSpec` 物件（使用其建構函式）。 此物件可讓您設定簽章欄位鎖定字典值。
+   * 透過指派以下專案來鎖定PDF檔案中的所有欄位： `FieldMDPAction.ALL` 列舉值至 `FieldMDPOptionSpec` 物件的 `mdpValue` 資料成員。
+   * 透過指派以下專案設定種子值字典資訊： `PDFSeedValueOptionSpec` 物件至 `PDFSignatureFieldProperties` 物件的 `seedValue` 資料成員。
+   * 透過指派以下專案來設定簽章欄位鎖定字典資訊 `FieldMDPOptionSpec` 物件至 `PDFSignatureFieldProperties` 物件的 `fieldMDP` 資料成員。
+
+   >[!NOTE]
+   >
+   >若要檢視所有可設定的種子值字典值，請參閱 `PDFSeedValueOptionSpec` 類別參考。 (請參閱 [AEM Forms API參考](https://www.adobe.com/go/learn_aemforms_javadocs_63_en))。
+
+1. 修改簽名欄位
+
+   透過叫用 `SignatureServiceClient` 物件的 `modifySignatureField` 並傳遞下列值：
+
+   * 此 `BLOB` 儲存包含要修改之簽名欄位的PDF檔案的物件
+   * 字串值，指定簽名欄位的名稱
+   * 此 `PDFSignatureFieldProperties` 儲存簽章欄位鎖定字典和種子值字典資訊的物件
+
+   此 `modifySignatureField` 方法傳回 `BLOB` 物件，用來儲存包含已修改簽名欄位的PDF檔案。
+
+1. 將PDF檔案儲存為PDF檔案
+
+   * 建立 `System.IO.FileStream` 物件，方法是叫用其建構函式並傳遞字串值，該字串值代表將包含簽名欄位的PDF檔案的檔案位置，以及開啟檔案的模式。
+   * 建立位元組陣列，儲存 `BLOB` 物件， `addSignatureField` 方法會傳回。 透過取得 `BLOB` 物件的 `MTOM` 資料成員。
+   * 建立 `System.IO.BinaryWriter` 物件，方法是叫用其建構函式並傳遞 `System.IO.FileStream` 物件。
+   * PDF透過叫用 `System.IO.BinaryWriter` 物件的 `Write` 方法並傳遞位元組陣列。
+
+**另请参阅**
+
+[使用MTOM叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+
+[使用SwaRef叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+
+## 數位簽署PDF檔案 {#digitally-signing-pdf-documents}
+
+數位簽章可套用至PDF檔案，以提供安全等級。 數位簽章（例如手寫簽章）提供簽署者識別自己並對檔案發表宣告的方法。 用於數位簽署檔案的技術有助於確保簽署者和收件者都清楚已簽署的內容，並且確信檔案在簽署後未曾變更。
+
+PDF檔案是以公開金鑰技術簽署。 簽署者有兩個金鑰：公開金鑰和私密金鑰。 私密金鑰會儲存在使用者的認證中，在簽署時必須可供使用。 公開金鑰儲存在使用者的憑證中，收件人必須可以使用它來驗證簽名。 憑證撤銷清單(CRL)和線上憑證狀態通訊協定(OCSP)回應(由憑證授權單位(CA)發佈)中會提供關於撤銷憑證的資訊。 簽署時間可從稱為時間戳記授權單位的可信來源取得。
 
 >[!NOTE]
 >
->在对PDF文档进行数字签名之前，必须确保将证书添加到AEM Forms。 使用管理控制台或以编程方式使用信任管理器API添加证书。 (请参阅 [使用信任管理器API导入凭据](/help/forms/developing/credentials.md#importing-credentials-by-using-the-trust-manager-api).)
+>您必須確定將憑證新增至AEM Forms，才能數位簽署PDF檔案。 憑證是使用管理控制檯或使用Trust Manager API以程式設計方式新增。 (請參閱 [使用信任管理員API匯入認證](/help/forms/developing/credentials.md#importing-credentials-by-using-the-trust-manager-api).)
 
-您可以以编程方式对PDF文档进行数字签名。 对PDF文档进行数字签名时，必须引用AEM Forms中存在的安全凭据。 凭据是用于签名的私钥。
+您可以以程式設計方式數位簽署PDF檔案。 數位簽署PDF檔案時，您必須參考AEM Forms中存在的安全性認證。 認證是用於簽署的私密金鑰。
 
-签名服务在签署PDF文档时执行以下步骤：
+簽章服務會在簽署PDF檔案時執行下列步驟：
 
-1. 签名服务通过传递请求中指定的别名从Truststore检索凭据。
-1. Truststore搜索指定的凭据。
-1. 凭据将返回到Signature服务，并用于签署文档。 此外，还会根据别名缓存凭据，以供将来请求使用。
+1. Signature service會傳遞要求中指定的別名，從Truststore擷取認證。
+1. 信任庫會搜尋指定的認證。
+1. 認證會傳回至簽章服務，並用來簽署檔案。 也會針對別名快取認證，以供日後請求使用。
 
-有关处理安全凭据的信息，请参阅 *安装和部署AEM Forms* 应用程序服务器的指南。
-
->[!NOTE]
->
->签名和认证文档之间存在差异。 (请参阅 [认证PDF文档](digitally-signing-certifying-documents.md#certifying-pdf-documents).)
+如需有關處理安全性認證的資訊，請參閱 *安裝和部署AEM Forms* 應用程式伺服器的指南。
 
 >[!NOTE]
 >
->并非所有PDF文档都支持签名。 有关Signature服务和数字签名文档的更多信息，请参阅 [AEM Forms的服务参考](https://www.adobe.com/go/learn_aemforms_services_63).
+>簽署和認證檔案之間存在差異。 (請參閱 [認證PDF檔案](digitally-signing-certifying-documents.md#certifying-pdf-documents).)
 
 >[!NOTE]
 >
->签名服务不支持将PDF数据嵌入到操作输入的XDP文件，例如证书文档。 此操作导致签名服务抛出 `PDFOperationException`. 要解决此问题，请使用PDF实用程序服务将XDP文件转换为PDF文件，然后将转换后的PDF文件传递给签名服务操作。 (请参阅 [使用PDF实用程序](/help/forms/developing/pdf-utilities.md#working-with-pdf-utilities).)
+>並非所有PDF檔案都支援簽署。 如需有關簽名服務和數位簽署檔案的詳細資訊，請參閱 [AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
 
-**nCipher nShield HSM凭据**
+>[!NOTE]
+>
+>Signature服務不支援內嵌PDF資料的XDP檔案作為作業的輸入，例如證明檔案。 此動作會導致簽名服務擲回 `PDFOperationException`. 若要解決此問題，請使用PDF公用程式服務，將XDP檔案轉換為PDF檔案，然後將轉換的PDF檔案傳遞至簽名服務作業。 (請參閱 [使用PDF公用程式](/help/forms/developing/pdf-utilities.md#working-with-pdf-utilities).)
 
-使用nCipher nShield HSM凭据签名或认证PDF文档时，只有在重新启动部署AEM Forms的J2EE应用程序服务器后，才能使用新凭据。 但是，您可以设置配置值，从而无需重新启动J2EE应用程序服务器即可执行签名或认证操作。
+**nCipher nShield HSM認證**
 
-可以在cknfastrc文件中添加以下配置值，该文件位于/opt/nfast/cknfastrc （或c：\nfast\cknfastrc）：
+使用nCipher nShield HSM認證簽署或認證PDF檔案時，必須重新啟動AEM Forms部署所在的J2EE應用程式伺服器，才能使用新的認證。 不過，您可以設定組態值，使簽署或認證作業正常運作，而不需重新啟動J2EE應用程式伺服器。
+
+您可以在cknfastrc檔案中新增下列設定值，該檔案位於/opt/nfast/cknfastrc （或c：\nfast\cknfastrc）：
 
 ```shell
     CKNFAST_ASSUME_SINGLE_PROCESS=0
 ```
 
-将此配置值添加到cknfastrc文件后，无需重新启动J2EE应用程序服务器即可使用新凭据。
+將此組態值新增至cknfastrc檔案之後，您就可以使用新的認證，而不需重新啟動J2EE應用程式伺服器。
 
-**签名不受信任**
+**簽章不受信任**
 
-在对同一PDF文档进行认证和签名时，如果认证签名不可信，则在Acrobat或Adobe Reader中打开PDF文档时，第一个签名旁边会出现一个黄色三角形。 为了避免这种情况，认证签名必须可信。
+當認證和簽署相同的PDF檔案時，如果認證簽名不受信任，則在Acrobat或Adobe Reader中開啟PDF檔案時，第一個簽名旁邊會出現一個黃色三角形。 必須信任憑證簽章才能避免這種情況。
 
-**签署基于XFA的表单**
+**簽署以XFA為基礎的表格**
 
-如果您尝试使用签名服务API对基于XFA的表单进行签名，则可能缺少 `View` `Signed` `Version` (位于Acrobat)。 例如，请考虑以下工作流：
+如果您嘗試使用簽名服務API簽署以XFA為基礎的表單，則可能遺漏以下專案中的資料： `View` `Signed` `Version` 位於Acrobat。 例如，請考量下列工作流程：
 
-* 通过使用设计器创建的XDP文件，可以合并包含签名字段的表单设计和包含表单数据的XML数据。 您可以使用Forms服务生成交互式PDF文档。
-* 您可使用签名服务API对PDF文档进行签名。
+* 使用使用Designer建立的XDP檔案，合併包含簽名欄位的表單設計以及包含表單資料的XML資料。 您可以使用Forms服務產生互動式PDF檔案。
+* 您可以使用Signature service API簽署PDF檔案。
 
-### 步骤摘要 {#summary_of_steps-3}
+### 步驟摘要 {#summary_of_steps-3}
 
-要对PDF文档进行数字签名，请执行以下任务：
+若要數位簽署PDF檔案，請執行下列工作：
 
-1. 包括项目文件。
-1. 创建签名服务客户端。
-1. 获取要签名的PDF文档。
-1. 签署PDF文档。
-1. 将已签名的PDF文件另存为PDF文件。
+1. 包含專案檔案。
+1. 建立簽章服務使用者端。
+1. 取得要簽署的PDF檔案。
+1. 簽署PDF檔案。
+1. 將已簽署的PDF檔案儲存為PDF檔案。
 
-**包括项目文件**
+**包含專案檔案**
 
-在开发项目中包含必要的文件。 如果要使用Java创建客户端应用程序，请包含必要的JAR文件。 如果使用Web服务，请确保包含代理文件。
+將必要的檔案納入您的開發專案中。 如果您使用Java建立使用者端應用程式，請包含必要的JAR檔案。 如果您使用Web服務，請確定您包含Proxy檔案。
 
-必须将以下JAR文件添加到项目的类路径中：
+下列JAR檔案必須新增到專案的類別路徑中：
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-signatures-client.jar
-* adobe-utilities.jar(如果在JBoss上部署了AEM Forms，则此为必填字段)
-* jbossall-client.jar(如果在JBoss上部署了AEM Forms，则此为必填字段)
+* adobe-utilities.jar (如果AEM Forms部署在JBoss上，則為必要)
+* jbossall-client.jar (如果AEM Forms部署在JBoss上，則為必要)
 
-**创建签名客户端**
+**建立簽名使用者端**
 
-必须先创建签名服务客户端，然后才能以编程方式执行签名服务操作。
+您必須先建立簽名服務使用者端，才能以程式設計方式執行簽名服務作業。
 
-**获取要签名的PDF文档**
+**取得要簽署的PDF檔案**
 
-要对PDF文档进行签名，必须获取包含签名字段的PDF文档。 如果PDF文档不包含签名字段，则无法对其进行签名。 签名字段可以通过使用设计器或以编程方式添加。
+若要簽署PDF檔案，您必須取得包含簽名欄位的PDF檔案。 如果PDF檔案不包含簽名欄位，則無法簽名。 簽名欄位可透過使用設計工具或以程式設計方式新增。
 
-**签署PDF文档**
+**簽署PDF檔案**
 
-签名PDF文档时，您可以设置签名服务使用的运行时选项。 您可以设置以下选项：
+簽署PDF檔案時，您可以設定簽名服務使用的執行階段選項。 您可以設定下列選項：
 
-* 外观选项
-* 吊销检查
-* 时间戳值
+* 外觀選項
+* 撤銷檢查
+* 時間戳記值
 
-可以使用 `PDFSignatureAppearanceOptionSpec` 对象。 例如，您可以通过调用 `PDFSignatureAppearanceOptionSpec` 对象的 `setShowDate` 方法和传递 `true`.
+您可使用 `PDFSignatureAppearanceOptionSpec` 物件。 例如，您可以透過叫用 `PDFSignatureAppearanceOptionSpec` 物件的 `setShowDate` 方法與傳遞 `true`.
 
-您还可以指定是否执行吊销检查，以确定用于对PDF文档进行数字签名的证书是否已吊销。 要执行吊销检查，可以指定以下值之一：
+您也可以指定是否要執行撤銷檢查，以判斷用於數位簽署PDF檔案的憑證是否已撤銷。 若要執行撤銷檢查，您可以指定下列其中一個值：
 
-* **NoCheck**：不执行吊销检查。
-* **BestEfort**：始终尝试检查链中所有证书的吊销情况。 如果在检查时出现任何问题，则假定吊销有效。 如果发生任何故障，则假定证书未被吊销。
-* **CheckIfAvailable：** 如果撤销信息可用，请检查链中所有证书的撤销。 如果在检查时出现任何问题，则假定吊销无效。 如果发生任何故障，则假定证书被吊销且无效。 （这是默认值。）
-* **AlwaysCheck**：检查是否撤销链中的所有证书。 如果任何证书中不存在吊销信息，则假定吊销无效。
+* **NoCheck**：不執行撤銷檢查。
+* **BestEfort**：一律嘗試檢查鏈結中所有憑證的撤銷。 如果檢查時發生任何問題，系統會假設撤銷有效。 如果發生任何失敗，則假設憑證未被撤銷。
+* **CheckIfAvailable：** 如果有可用的撤銷資訊，則檢查鏈結中所有憑證的撤銷。 如果檢查時發生任何問題，則會假設撤銷無效。 如果發生任何失敗，假設憑證被撤銷且無效。 （這是預設值。）
+* **AlwaysCheck**：檢查鏈結中所有憑證的撤銷。 如果任何憑證中都沒有撤銷資訊，則會假設撤銷無效。
 
-要对证书执行吊销检查，可以使用指定到证书吊销列表(CRL)服务器的URL `CRLOptionSpec` 对象。 但是，如果要执行吊销检查，但未指定CRL服务器的URL，则签名服务将从证书中获取该URL。
+若要對憑證執行撤銷檢查，您可以使用 `CRLOptionSpec` 物件。 不過，如果您要執行撤銷檢查但未指定CRL伺服器的URL，則簽章服務會從憑證取得該URL。
 
-在执行吊销检查时，可以使用联机证书状态协议(OCSP)服务器，而不是使用CRL服务器。 通常，在使用OCSP服务器而不是CRL服务器时，执行吊销检查的速度会更快。 (请参阅“在线证书状态协议”，网址为 [https://tools.ietf.org/html/rfc2560](https://tools.ietf.org/html/rfc2560).)
+執行撤銷檢查時，您可以使用線上憑證狀態通訊協定(OCSP)伺服器，而不使用CRL伺服器。 通常，當使用OCSP伺服器而不是CRL伺服器時，撤銷檢查的執行速度會更快。 (請參閱「線上憑證狀態通訊協定」，網址為 [https://tools.ietf.org/html/rfc2560](https://tools.ietf.org/html/rfc2560).)
 
-您可以使用Adobe应用程序和服务设置签名服务使用的CRL和OCSP服务器顺序。 例如，如果首先在Adobe应用程序和服务中设置了OCSP服务器，则会检查OCSP服务器，然后检查CRL服务器。 （请参阅AAC帮助中的“使用信任存储区管理证书和凭据”）。
+您可以使用Adobe應用程式和服務來設定Signature服務使用的CRL和OCSP伺服器順序。 例如，如果先在Adobe應用程式和服務中設定OCSP伺服器，則會檢查OCSP伺服器，然後檢查CRL伺服器。 （請參閱AAC說明中的「使用信任存放區管理憑證和認證」）。
 
-如果您指定不执行吊销检查，则签名服务不会检查用于签名或证明文档的证书是否已吊销。 即，忽略CRL和OCSP服务器信息。
-
->[!NOTE]
->
->虽然可以在证书中指定CRL或OCSP服务器，但可以使用覆盖证书中指定的URL `CRLOptionSpec` 和 `OCSPOptionSpec` 对象。 例如，要覆盖CRL服务器，您可以调用 `CRLOptionSpec` 对象的 `setLocalURI` 方法。
-
-时间戳是指跟踪已签署或已验证文档修改时间的过程。 文档一旦签署，即不应对其进行修改，即使文档所有者也不应进行修改。 时间戳有助于强制实施已签署或已认证文档的有效性。 可以使用设置时间戳选项 `TSPOptionSpec` 对象。 例如，您可以指定时间戳提供程序(TSP)服务器的URL。
+如果您指定不執行撤銷檢查，則Signature service不會檢查用於簽署或證明檔案的憑證是否已撤銷。 也就是說，會忽略CRL和OCSP伺服器資訊。
 
 >[!NOTE]
 >
->在Java和Web服务浏览部分以及相应的快速启动中，使用吊销检查。 由于未指定CRL或OCSP服务器信息，因此服务器信息是从用于对PDF文档进行数字签名的证书中获取的。
+>雖然您可以在憑證中指定CRL或OCSP伺服器，但您可以使用 `CRLOptionSpec` 和 `OCSPOptionSpec` 物件。 例如，若要覆寫CRL伺服器，您可以叫用 `CRLOptionSpec` 物件的 `setLocalURI` 方法。
 
-要成功签署PDF文档，您可以指定包含数字签名的签名字段的完全限定名称，例如 `form1[0].#subform[1].SignatureField3[3]`. 在使用XFA表单字段时，还可以使用签名字段的部分名称： `SignatureField3[3]`.
+時間戳記是指追蹤已簽署或已驗證檔案修改時間的程式。 檔案簽署後即不應修改，即使檔案擁有者亦然。 時間戳記有助於強制實施已簽署或已驗證檔案的有效性。 您可以使用設定時間戳記選項 `TSPOptionSpec` 物件。 例如，您可以指定時間戳記提供者(TSP)伺服器的URL。
 
-您还必须引用安全凭据才能对PDF文档进行数字签名。 要引用安全凭据，请指定别名。 别名是对PKCS#12文件（扩展名为.pfx）或硬件安全模块(HSM)中实际凭据的引用。 有关安全凭据的信息，请参阅 *安装和部署AEM Forms* 应用程序服务器的指南。
+>[!NOTE]
+>
+>在Java和Web服務逐步瀏覽區段及對應的快速啟動中，會使用撤銷檢查。 因為未指定CRL或OCSP伺服器資訊，所以伺服器資訊會從用來數位簽署PDF檔案的憑證取得。
 
-**保存已签名的PDF文档**
+若要成功簽署PDF檔案，您可以指定包含數位簽章之簽章欄位的完整名稱，例如 `form1[0].#subform[1].SignatureField3[3]`. 使用XFA表單欄位時，也可使用簽名欄位的部分名稱： `SignatureField3[3]`.
 
-签名服务对PDF文档进行数字签名后，您可以将其另存为PDF文件，以便用户在Acrobat或Adobe Reader中打开文档。
+您也必須參考安全性認證，才能數位簽署PDF檔案。 若要參照安全性認證，請指定別名。 別名是實際認證的參考，可能位於PKCS#12檔案（具有.pfx副檔名）或硬體安全模組(HSM)中。 如需安全性認證的相關資訊，請參閱 *安裝和部署AEM Forms* 應用程式伺服器的指南。
 
-**另请参阅**
+**儲存已簽署的PDF檔案**
 
-[使用Java API对PDF文档进行数字签名](digitally-signing-certifying-documents.md#digitally-sign-pdf-documents-using-the-java-api)
-
-[使用Web服务API对PDF文档进行数字签名](digitally-signing-certifying-documents.md#digitally-signing-pdf-documents-using-the-web-service-api)
-
-[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
-
-[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
-
-[添加签名字段](digitally-signing-certifying-documents.md#adding-signature-fields)
-
-[正在检索签名字段名称](digitally-signing-certifying-documents.md#retrieving-signature-field-names)
-
-### 使用Java API对PDF文档进行数字签名 {#digitally-sign-pdf-documents-using-the-java-api}
-
-使用签名API (Java)对PDF文档进行数字签名：
-
-1. 包括项目文件
-
-   将客户端JAR文件（如adobe-signatures-client.jar）包含在Java项目的类路径中。
-
-1. 创建签名客户端
-
-   * 创建 `ServiceClientFactory` 包含连接属性的对象。
-   * 创建 `SignatureServiceClient` 对象，使用它的构造函数传递 `ServiceClientFactory` 对象。
-
-1. 获取要签名的PDF文档
-
-   * 创建 `java.io.FileInputStream` 表示要数字签名的PDF文档的对象，方法是使用其构造函数并传递一个指定PDF文档位置的字符串值。
-   * 创建 `com.adobe.idp.Document` 对象，使用它的构造函数传递 `java.io.FileInputStream` 对象。
-
-1. 签署PDF文档
-
-   PDF通过调用 `SignatureServiceClient` 对象的 `sign` 方法，并传递以下值：
-
-   * A `com.adobe.idp.Document` 表示要签名的PDF文档的对象。
-   * 一个字符串值，表示将包含数字签名的签名字段的名称。
-   * A `Credential` 表示用于对PDF文档进行数字签名的凭据的对象。 创建 `Credential` 对象 `Credential` 对象的静态 `getInstance` 方法和传递一个字符串值，该值指定与安全凭据对应的别名值。
-   * A `HashAlgorithm` 指定静态数据成员的对象，该成员表示用于摘要PDF文档的哈希算法。 例如，您可以指定 `HashAlgorithm.SHA1` 以使用SHA1算法。
-   * 一个字符串值，表示PDF文档被数字签名的原因。
-   * 表示签名者联系信息的字符串值。
-   * A `PDFSignatureAppearanceOptions` 控制数字签名外观的对象。 例如，您可以使用此对象向数字签名添加自定义徽标。
-   * A `java.lang.Boolean` 指定是否对签名者的证书执行吊销检查的对象。
-   * An `OCSPOptionSpec` 存储联机证书状态协议(OCSP)支持的首选项的对象。 如果未完成吊销检查，则不会使用此参数，您可以指定 `null`.
-   * A `CRLPreferences` 存储证书吊销列表(CRL)首选项的对象。 如果未完成吊销检查，则不会使用此参数，您可以指定 `null`.
-   * A `TSPPreferences` 存储时间戳提供程序(TSP)支持的首选项的对象。 此参数是可选的，可以是 `null`. 有关更多信息，请参阅 [AEM Forms API参考](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
-
-   此 `sign` 方法返回 `com.adobe.idp.Document` 表示已签署PDF文档的对象。
-
-1. 保存已签名的PDF文档
-
-   * 创建 `java.io.File` 对象并确保文件扩展名为.pdf。
-   * 调用 `com.adobe.idp.Document` 对象的 `copyToFile` 方法和路径 `java.io.File`以复制 `Document` 对象到文件。 确保您使用 `com.adobe.idp.Document` 返回的对象 `sign` 方法。
+簽名服務以數位方式簽署PDF檔案後，您可以將檔案儲存為PDF檔案，讓使用者可在Acrobat或Adobe Reader中開啟檔案。
 
 **另请参阅**
 
-[对PDF文档进行数字签名](digitally-signing-certifying-documents.md#digitally-signing-pdf-documents)
+[使用Java API數位簽署PDF檔案](digitally-signing-certifying-documents.md#digitally-sign-pdf-documents-using-the-java-api)
 
-[快速入门（SOAP模式）：使用Java API对PDF文档进行数字签名](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-digitally-signing-a-pdf-document-using-the-java-api)
+[使用Web服務API數位簽署PDF檔案](digitally-signing-certifying-documents.md#digitally-signing-pdf-documents-using-the-web-service-api)
 
-[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
-[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### 使用Web服务API对PDF文档进行数字签名 {#digitally-signing-pdf-documents-using-the-web-service-api}
+[新增簽名欄位](digitally-signing-certifying-documents.md#adding-signature-fields)
 
-要使用签名API（Web服务）对PDF文档进行数字签名，请执行以下操作：
+[正在擷取簽章欄位名稱](digitally-signing-certifying-documents.md#retrieving-signature-field-names)
 
-1. 包括项目文件
+### 使用Java API數位簽署PDF檔案 {#digitally-sign-pdf-documents-using-the-java-api}
 
-   创建使用MTOM的Microsoft .NET项目。 确保使用以下WSDL定义： `http://localhost:8080/soap/services/SignatureService?WSDL&lc_version=9.0.1`.
+使用簽名API (Java)數位簽署PDF檔案：
+
+1. 包含專案檔案
+
+   在您的Java專案的類別路徑中包含使用者端JAR檔案，例如adobe-signatures-client.jar。
+
+1. 建立簽名使用者端
+
+   * 建立 `ServiceClientFactory` 包含連線屬性的物件。
+   * 建立 `SignatureServiceClient` 物件，使用它的建構函式並傳遞 `ServiceClientFactory` 物件。
+
+1. 取得要簽署的PDF檔案
+
+   * 建立 `java.io.FileInputStream` 物件，代表要數位簽名的PDF檔案，使用它的建構函式並傳遞字串值，指定PDF檔案的位置。
+   * 建立 `com.adobe.idp.Document` 物件，使用它的建構函式並傳遞 `java.io.FileInputStream` 物件。
+
+1. 簽署PDF檔案
+
+   叫用PDF檔案以簽署 `SignatureServiceClient` 物件的 `sign` 並傳遞下列值：
+
+   * A `com.adobe.idp.Document` 代表要簽署之PDF檔案的物件。
+   * 字串值，代表將包含數位簽章之簽章欄位的名稱。
+   * A `Credential` 物件，代表用來數位簽署PDF檔案的認證。 建立 `Credential` 物件(透過叫用 `Credential` 物件的靜態 `getInstance` 和傳遞字串值，字串值會指定對應至安全性認證的別名值。
+   * A `HashAlgorithm` 指定靜態資料成員的物件，代表用來摘要PDF檔案的雜湊演演算法。 例如，您可以指定 `HashAlgorithm.SHA1` 以使用SHA1演演算法。
+   * 字串值，代表PDF檔案經過數位簽署的原因。
+   * 代表簽署者聯絡資訊的字串值。
+   * A `PDFSignatureAppearanceOptions` 控制數位簽章外觀的物件。 例如，您可以使用此物件將自訂標誌新增至數位簽名。
+   * A `java.lang.Boolean` 指定是否對簽署者的憑證執行撤銷檢查的物件。
+   * 一個 `OCSPOptionSpec` 儲存線上憑證狀態通訊協定(OCSP)支援偏好設定的物件。 如果未完成撤銷檢查，則不會使用此引數，而且您可以指定 `null`.
+   * A `CRLPreferences` 儲存憑證撤銷清單(CRL)偏好設定的物件。 如果未完成撤銷檢查，則不會使用此引數，而且您可以指定 `null`.
+   * A `TSPPreferences` 儲存時間戳記提供者(TSP)支援之偏好設定的物件。 此引數為選用引數，可以是 `null`. 如需詳細資訊，請參閱 [AEM Forms API參考](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
+
+   此 `sign` 方法傳回 `com.adobe.idp.Document` 代表已簽署PDF檔案的物件。
+
+1. 儲存已簽署的PDF檔案
+
+   * 建立 `java.io.File` 物件，並確認副檔名為.pdf。
+   * 叫用 `com.adobe.idp.Document` 物件的 `copyToFile` 方法與傳遞 `java.io.File`以複製 `Document` 物件至檔案。 確保您使用 `com.adobe.idp.Document` 物件，由 `sign` 方法。
+
+**另请参阅**
+
+[數位簽署PDF檔案](digitally-signing-certifying-documents.md#digitally-signing-pdf-documents)
+
+[快速入門（SOAP模式）：使用Java API數位簽署PDF檔案](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-digitally-signing-a-pdf-document-using-the-java-api)
+
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+
+[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+
+### 使用Web服務API數位簽署PDF檔案 {#digitally-signing-pdf-documents-using-the-web-service-api}
+
+若要使用Signature API （Web服務）數位簽署PDF檔案：
+
+1. 包含專案檔案
+
+   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/SignatureService?WSDL&lc_version=9.0.1`.
 
    >[!NOTE]
    >
-   >Replace `localhost` 包含托管AEM Forms的服务器的IP地址。
+   >Replace `localhost` 搭配裝載AEM Forms之伺服器的IP位址。
 
-1. 创建签名客户端
+1. 建立簽名使用者端
 
-   * 创建 `SignatureServiceClient` 对象。
-   * 创建 `SignatureServiceClient.Endpoint.Address` 对象 `System.ServiceModel.EndpointAddress` 构造函数。 将指定WSDL的字符串值传递给AEM Forms服务(例如， `http://localhost:8080/soap/services/SignatureService?WSDL`)。 您无需使用 `lc_version` 属性。 创建服务引用时使用此属性。)
-   * 创建 `System.ServiceModel.BasicHttpBinding` 对象，方法是获取 `SignatureServiceClient.Endpoint.Binding` 字段。 将返回值强制转换为 `BasicHttpBinding`.
-   * 设置 `System.ServiceModel.BasicHttpBinding` 对象的 `MessageEncoding` 字段至 `WSMessageEncoding.Mtom`. 此值可确保使用MTOM。
-   * 通过执行以下任务启用基本HTTP身份验证：
+   * 建立 `SignatureServiceClient` 物件（使用其預設建構函式）。
+   * 建立 `SignatureServiceClient.Endpoint.Address` 物件，使用 `System.ServiceModel.EndpointAddress` 建構函式。 將指定WSDL的字串值傳遞至AEM Forms服務(例如， `http://localhost:8080/soap/services/SignatureService?WSDL`)。 您不需要使用 `lc_version` 屬性。 當您建立服務參考時，會使用此屬性。)
+   * 建立 `System.ServiceModel.BasicHttpBinding` 物件，方法是取得 `SignatureServiceClient.Endpoint.Binding` 欄位。 將傳回值轉換為 `BasicHttpBinding`.
+   * 設定 `System.ServiceModel.BasicHttpBinding` 物件的 `MessageEncoding` 欄位至 `WSMessageEncoding.Mtom`. 此值可確保使用MTOM。
+   * 執行下列工作來啟用基本HTTP驗證：
 
-      * 将AEM表单用户名分配给字段 `SignatureServiceClient.ClientCredentials.UserName.UserName`.
-      * 将相应的密码值分配给字段 `SignatureServiceClient.ClientCredentials.UserName.Password`.
-      * 分配常量值 `HttpClientCredentialType.Basic` 到字段 `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
-      * 分配常量值 `BasicHttpSecurityMode.TransportCredentialOnly` 到字段 `BasicHttpBindingSecurity.Security.Mode`.
+      * 將AEM表單使用者名稱指派給欄位 `SignatureServiceClient.ClientCredentials.UserName.UserName`.
+      * 將對應的密碼值指派給欄位 `SignatureServiceClient.ClientCredentials.UserName.Password`.
+      * 指派常數值 `HttpClientCredentialType.Basic` 至欄位 `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
+      * 指派常數值 `BasicHttpSecurityMode.TransportCredentialOnly` 至欄位 `BasicHttpBindingSecurity.Security.Mode`.
 
-1. 获取要签名的PDF文档
+1. 取得要簽署的PDF檔案
 
-   * 创建 `BLOB` 对象。 此 `BLOB` 对象用于存储已签名的PDF文档。
-   * 创建 `System.IO.FileStream` 对象，方法是调用其构造函数并传递一个字符串值，该字符串值表示要签名的PDF文档的文件位置以及打开文件的模式。
-   * 创建一个字节数组，用于存储 `System.IO.FileStream` 对象。 您可以通过获取 `System.IO.FileStream` 对象的 `Length` 属性。
-   * 通过调用 `System.IO.FileStream` 对象的 `Read` 方法，并传递字节数组、起始位置和要读取的流长度。
-   * 填充 `BLOB` 对象(通过指定其 `MTOM` 属性字节数组的内容。
+   * 建立 `BLOB` 物件（使用其建構函式）。 此 `BLOB` 物件是用來儲存已簽署的PDF檔案。
+   * 建立 `System.IO.FileStream` 物件，方法是叫用其建構函式，並傳遞代表要簽署之PDF檔案的檔案位置，以及開啟檔案的模式的字串值。
+   * 建立位元組陣列，儲存 `System.IO.FileStream` 物件。 您可以取得 `System.IO.FileStream` 物件的 `Length` 屬性。
+   * 叫用 `System.IO.FileStream` 物件的 `Read` 方法，並傳遞位元組陣列、起始位置以及要讀取的資料流長度。
+   * 填入 `BLOB` 物件，透過指派其 `MTOM` 屬性位元組陣列的內容。
 
-1. 签署PDF文档
+1. 簽署PDF檔案
 
-   PDF通过调用 `SignatureServiceClient` 对象的 `sign` 方法，并传递以下值：
+   叫用PDF檔案以簽署 `SignatureServiceClient` 物件的 `sign` 並傳遞下列值：
 
-   * A `BLOB` 表示要签名的PDF文档的对象。
-   * 一个字符串值，表示将包含数字签名的签名字段的名称。
-   * A `Credential` 表示用于对PDF文档进行数字签名的凭据的对象。 创建 `Credential` 对象，并通过将值指定给 `Credential` 对象的 `alias` 属性。
-   * A `HashAlgorithm` 指定静态数据成员的对象，该成员表示用于摘要PDF文档的哈希算法。 例如，您可以指定 `HashAlgorithm.SHA1` 以使用SHA1算法。
-   * 一个布尔值，指定是否使用哈希算法。
-   * 一个字符串值，表示PDF文档被数字签名的原因。
-   * 表示签名者位置的字符串值。
-   * 表示签名者联系信息的字符串值。
-   * A `PDFSignatureAppearanceOptions` 控制数字签名外观的对象。 例如，您可以使用此对象向数字签名添加自定义徽标。
-   * A `System.Boolean` 指定是否对签名者的证书执行吊销检查的对象。 如果完成此吊销检查，则会将其嵌入签名中。 默认为 `false`。
-   * An `OCSPOptionSpec` 存储联机证书状态协议(OCSP)支持的首选项的对象。 如果未完成吊销检查，则不会使用此参数，您可以指定 `null`. 有关此对象的信息，请参见 [AEM Forms API参考](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
-   * A `CRLPreferences` 存储证书吊销列表(CRL)首选项的对象。 如果未完成吊销检查，则不会使用此参数，您可以指定 `null`.
-   * A `TSPPreferences` 存储时间戳提供程序(TSP)支持的首选项的对象。 此参数是可选的，可以是 `null`.
+   * A `BLOB` 代表要簽署之PDF檔案的物件。
+   * 字串值，代表將包含數位簽章之簽章欄位的名稱。
+   * A `Credential` 物件，代表用來數位簽署PDF檔案的認證。 建立 `Credential` 物件，使用它的建構函式，並透過指派值給 `Credential` 物件的 `alias` 屬性。
+   * A `HashAlgorithm` 指定靜態資料成員的物件，代表用來摘要PDF檔案的雜湊演演算法。 例如，您可以指定 `HashAlgorithm.SHA1` 以使用SHA1演演算法。
+   * Boolean值，指定是否使用雜湊演演算法。
+   * 字串值，代表PDF檔案經過數位簽署的原因。
+   * 代表簽署者位置的字串值。
+   * 代表簽署者聯絡資訊的字串值。
+   * A `PDFSignatureAppearanceOptions` 控制數位簽章外觀的物件。 例如，您可以使用此物件將自訂標誌新增至數位簽名。
+   * A `System.Boolean` 指定是否對簽署者的憑證執行撤銷檢查的物件。 如果完成此撤銷檢查，則會嵌入簽名中。 默认为 `false`。
+   * 一個 `OCSPOptionSpec` 儲存線上憑證狀態通訊協定(OCSP)支援偏好設定的物件。 如果未完成撤銷檢查，則不會使用此引數，而且您可以指定 `null`. 如需此物件的相關資訊，請參閱 [AEM Forms API參考](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
+   * A `CRLPreferences` 儲存憑證撤銷清單(CRL)偏好設定的物件。 如果未完成撤銷檢查，則不會使用此引數，而且您可以指定 `null`.
+   * A `TSPPreferences` 儲存時間戳記提供者(TSP)支援之偏好設定的物件。 此引數為選用引數，可以是 `null`.
 
-   此 `sign` 方法返回 `BLOB` 表示已签署PDF文档的对象。
+   此 `sign` 方法傳回 `BLOB` 代表已簽署PDF檔案的物件。
 
-1. 保存已签名的PDF文档
+1. 儲存已簽署的PDF檔案
 
-   * 创建 `System.IO.FileStream` 对象。 传递一个字符串值，该值表示已签名PDF文档的文件位置和打开文件的模式。
-   * 创建一个字节数组，用于存储 `BLOB` 返回的对象 `sign` 方法。 通过获取的值填充字节数组 `BLOB` 对象的 `MTOM` 数据成员。
-   * 创建 `System.IO.BinaryWriter` 对象，方法是调用其构造函数 `System.IO.FileStream` 对象。
-   * PDF通过调用 `System.IO.BinaryWriter` 对象的 `Write` 方法和传递字节数组。
+   * 建立 `System.IO.FileStream` 物件（透過叫用其建構函式）。 傳遞代表已簽署PDF檔案的檔案位置和開啟檔案的模式的字串值。
+   * 建立位元組陣列，儲存 `BLOB` 物件，由 `sign` 方法。 透過取得 `BLOB` 物件的 `MTOM` 資料成員。
+   * 建立 `System.IO.BinaryWriter` 物件，方法是叫用其建構函式並傳遞 `System.IO.FileStream` 物件。
+   * PDF透過叫用 `System.IO.BinaryWriter` 物件的 `Write` 方法並傳遞位元組陣列。
 
 **另请参阅**
 
-[对PDF文档进行数字签名](digitally-signing-certifying-documents.md#digitally-signing-pdf-documents)
+[數位簽署PDF檔案](digitally-signing-certifying-documents.md#digitally-signing-pdf-documents)
 
-[使用MTOM调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[使用MTOM叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[使用SwaRef调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[使用SwaRef叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
-## 对交互式Forms进行数字签名 {#digitally-signing-interactive-forms}
+## 數位簽署互動式Forms {#digitally-signing-interactive-forms}
 
-您可以对Forms服务创建的交互式表单进行签名。 例如，请考虑以下工作流：
+您可以簽署Forms服務建立的互動式表單。 例如，請考量下列工作流程：
 
-* 您可以合并使用设计器创建的基于XFA的PDF表单，并使用Forms服务合并位于XML文档中的表单数据。 Forms服务器渲染交互式表单。
-* 您可使用签名服务API对交互式表单进行签名。
+* 您可以使用Designer建立的XFAPDF表單，與使用Forms服務位於XML檔案中的表單資料合併。 Forms伺服器會轉譯互動式表單。
+* 您可以使用Signature service API簽署互動式表單。
 
-结果是一个经过数字签名的交互式PDF表单。 在签署基于XFA表单的PDF表单时，请确保将PDF文件另存为Adobe静态PDF表单。 如果尝试对另存为“PDF动态PDF”表单的Adobe表单进行签名，则会发生异常。 由于您正在对从Forms服务返回的表单进行签名，因此请确保该表单包含签名字段。
-
->[!NOTE]
->
->在对交互式表单进行数字签名之前，必须确保将证书添加到AEM Forms。 使用管理控制台或以编程方式使用信任管理器API添加证书。 (请参阅 [使用信任管理器API导入凭据](/help/forms/developing/credentials.md#importing-credentials-by-using-the-trust-manager-api).)
-
-使用Forms服务API时，将 `GenerateServerAppearance` 运行时选项 `true`. 此运行时选项可确保在Acrobat或Adobe Reader中打开时，服务器上生成的表单外观保持有效。 在使用Forms API生成要签名的交互式表单时，建议您设置此运行时选项。
+結果會是數位簽署的互動式PDF表單。 在簽署以XFA表單為基礎的PDF表單時，請確定您將PDF檔案儲存為Adobe靜態PDF表單。 如果您嘗試簽署儲存為PDF動態PDF表單的Adobe表單，則會發生例外狀況。 由於您簽署的是從Forms服務傳回的表單，因此請確保表單包含簽名欄位。
 
 >[!NOTE]
 >
->在阅读数字签名交互式Forms之前，建议您熟悉签名PDF文档。 (请参阅 [对PDF文档进行数字签名](digitally-signing-certifying-documents.md#digitally-signing-pdf-documents).)
+>您必須確定將憑證新增至AEM Forms，才能以數位方式簽署互動式表單。 憑證是使用管理控制檯或使用Trust Manager API以程式設計方式新增。 (請參閱 [使用信任管理員API匯入認證](/help/forms/developing/credentials.md#importing-credentials-by-using-the-trust-manager-api).)
 
-### 步骤摘要 {#summary_of_steps-4}
+使用Forms Service API時，請將 `GenerateServerAppearance` 執行階段選項 `true`. 此執行階段選項可確保伺服器上產生的表單外觀在Acrobat或Adobe Reader中開啟時保持有效。 產生互動式表單以使用Forms API簽署時，建議您設定此執行階段選項。
 
-要对Forms服务返回的交互式表单进行数字签名，请执行以下任务：
+>[!NOTE]
+>
+>閱讀數位簽署互動式Forms之前，建議您先熟悉簽署PDF檔案。 (請參閱 [數位簽署PDF檔案](digitally-signing-certifying-documents.md#digitally-signing-pdf-documents).)
 
-1. 包括项目文件。
-1. 创建Forms和签名客户端。
-1. 使用Forms服务获取交互式表单。
-1. 对交互式表单进行签名。
-1. 将已签名的PDF文件另存为PDF文件。
+### 步驟摘要 {#summary_of_steps-4}
 
-**包括项目文件**
+若要數位簽署Forms服務傳回的互動式表單，請執行下列工作：
 
-在开发项目中包含必要的文件。 如果要使用Java创建客户端应用程序，请包含必要的JAR文件。 如果使用Web服务，请确保包含代理文件。
+1. 包含專案檔案。
+1. 建立Forms和簽名使用者端。
+1. 使用Forms服務取得互動式表單。
+1. 簽署互動式表單。
+1. 將已簽署的PDF檔案儲存為PDF檔案。
 
-必须将以下JAR文件添加到项目的类路径中：
+**包含專案檔案**
+
+將必要的檔案納入您的開發專案中。 如果您使用Java建立使用者端應用程式，請包含必要的JAR檔案。 如果您使用Web服務，請確定您包含Proxy檔案。
+
+下列JAR檔案必須新增到專案的類別路徑中：
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-signatures-client.jar
 * adobe-forms-client.jar
-* adobe-utilities.jar(如果在JBoss上部署了AEM Forms，则此为必填字段)
-* jbossall-client.jar(如果在JBoss上部署了AEM Forms，则此为必填字段)
+* adobe-utilities.jar (如果AEM Forms部署在JBoss上，則為必要)
+* jbossall-client.jar (如果AEM Forms部署在JBoss上，則為必要)
 
-有关这些JAR文件位置的信息，请参见 [包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
+有關這些JAR檔案位置的資訊，請參見 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
 
-**创建Forms和签名客户端**
+**建立Forms和簽名使用者端**
 
-由于此工作流会同时调用Forms和签名服务，因此请创建Forms服务客户端和签名服务客户端。
+由於此工作流程會同時叫用Forms和簽名服務，因此請建立Forms服務使用者端和簽名服務使用者端。
 
-**使用Forms服务获取交互式表单**
+**使用Forms服務取得互動式表單**
 
-您可以使用Forms服务获取要签名的交互式PDF表单。 从AEM Forms开始，您可以传递 `com.adobe.idp.Document` 包含要呈现的表单的Forms服务的对象。 此方法的名称为 `renderPDFForm2`. 此方法会返回 `com.adobe.idp.Document` 包含要签名的表单的对象。 您可以传递此 `com.adobe.idp.Document` 实例到Signature service。
+您可以使用Forms服務來取得要簽署的互動式PDF表單。 自AEM Forms起，您可以傳遞 `com.adobe.idp.Document` 物件重新命名為Forms服務，其中包含要轉譯的表單。 此方法的名稱為 `renderPDFForm2`. 此方法會傳回 `com.adobe.idp.Document` 包含要簽署的表單的物件。 您可以傳遞此 `com.adobe.idp.Document` 簽章服務的執行個體。
 
-同样，如果您使用的是Web服务，则可以传递 `BLOB` Forms服务返回到Signature服务的实例。
+同樣地，如果您使用Web服務，您可以傳遞 `BLOB` Forms服務傳回至簽名服務的執行個體。
 
 >[!NOTE]
 >
->与“数字签名交互式Forms”部分关联的快速入门将调用 `renderPDFForm2` 方法。
+>與「數位簽署互動式Forms」區段相關的快速入門會叫用 `renderPDFForm2` 方法。
 
-**签署交互式表单**
+**簽署互動式表單**
 
-签名PDF文档时，您可以设置签名服务使用的运行时选项。 您可以设置以下选项：
+簽署PDF檔案時，您可以設定Signature service使用的執行階段選項。 您可以設定下列選項：
 
-* 外观选项
-* 吊销检查
-* 时间戳值
+* 外觀選項
+* 撤銷檢查
+* 時間戳記值
 
-可以使用 `PDFSignatureAppearanceOptionSpec` 对象。 例如，您可以通过调用 `PDFSignatureAppearanceOptionSpec` 对象的 `setShowDate` 方法和传递 `true`.
+您可使用 `PDFSignatureAppearanceOptionSpec` 物件。 例如，您可以透過叫用 `PDFSignatureAppearanceOptionSpec` 物件的 `setShowDate` 方法與傳遞 `true`.
 
-**保存已签名的PDF文档**
+**儲存已簽署的PDF檔案**
 
-签名服务对PDF文档进行数字签名后，您可以将其另存为PDF文件。 PDF文件可在Acrobat或Adobe Reader中打开。
-
-**另请参阅**
-
-[使用Java API对交互式表单进行数字签名](digitally-signing-certifying-documents.md#digitally-sign-an-interactive-form-using-the-java-api)
-
-[使用Web服务API对交互式表单进行数字签名](digitally-signing-certifying-documents.md#digitally-sign-an-interactive-form-using-the-web-service-api)
-
-[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
-
-[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
-
-[对PDF文档进行数字签名](digitally-signing-certifying-documents.md#digitally-signing-pdf-documents)
-
-[渲染交互式PDF forms](/help/forms/developing/rendering-forms.md#rendering-interactive-pdf-forms)
-
-### 使用Java API对交互式表单进行数字签名 {#digitally-sign-an-interactive-form-using-the-java-api}
-
-使用Forms和签名API (Java)对交互式表单进行数字签名：
-
-1. 包括项目文件
-
-   将客户端JAR文件（如adobe-signatures-client.jar和adobe-forms-client.jar）包含在Java项目的类路径中。
-
-1. 创建Forms和签名客户端
-
-   * 创建 `ServiceClientFactory` 包含连接属性的对象。
-   * 创建 `SignatureServiceClient` 对象，使用它的构造函数传递 `ServiceClientFactory` 对象。
-   * 创建 `FormsServiceClient` 对象，使用它的构造函数传递 `ServiceClientFactory` 对象。
-
-1. 使用Forms服务获取交互式表单
-
-   * 创建 `java.io.FileInputStream` 表示要使用构造函数传递到Forms服务的PDF文档的对象。 传递一个指定PDF文档位置的字符串值。
-   * 创建 `com.adobe.idp.Document` 对象，使用它的构造函数传递 `java.io.FileInputStream` 对象。
-   * 创建 `java.io.FileInputStream` 表示包含表单数据的XML文档的对象，将使用该文档的构造函数传递到Forms服务。 传递一个指定XML文件位置的字符串值。
-   * 创建 `com.adobe.idp.Document` 对象，使用它的构造函数传递 `java.io.FileInputStream` 对象。
-   * 创建 `PDFFormRenderSpec` 用于设置运行时选项的对象。 调用 `PDFFormRenderSpec` 对象的 `setGenerateServerAppearance` 方法和路径 `true`.
-   * 调用 `FormsServiceClient` 对象的 `renderPDFForm2` 方法，并传递以下值：
-
-      * A `com.adobe.idp.Document` 包含要渲染的PDF表单的对象。
-      * A `com.adobe.idp.Document` 包含要与表单合并的数据的对象。
-      * A `PDFFormRenderSpec` 存储运行时选项的对象。
-      * A `URLSpec` 包含Forms服务所需的URI值的对象。 您可以指定 `null` 参数值。
-      * A `java.util.HashMap` 存储文件附件的对象。 这是一个可选参数，您可以指定 `null` 如果您不想将文件附加到表单。
-
-      此 `renderPDFForm2` 方法返回 `FormsResult` 包含表单数据流的对象
-
-   * PDF通过调用 `FormsResult` 对象的 `getOutputContent` 方法。 此方法会返回 `com.adobe.idp.Document` 表示交互式表单的对象。
-
-
-1. 签署交互式表单
-
-   PDF通过调用 `SignatureServiceClient` 对象的 `sign` 方法，并传递以下值：
-
-   * A `com.adobe.idp.Document` 表示要签名的PDF文档的对象。 确保此对象是 `com.adobe.idp.Document` 从Forms服务获得的对象。
-   * 一个字符串值，表示已签名的签名字段的名称。
-   * A `Credential` 表示用于对PDF文档进行数字签名的凭据的对象。 创建 `Credential` 对象 `Credential` 对象的静态 `getInstance` 方法。 传递一个字符串值，该值指定与安全凭据对应的别名值。
-   * A `HashAlgorithm` 指定静态数据成员的对象，该成员表示用于摘要PDF文档的哈希算法。 例如，您可以指定 `HashAlgorithm.SHA1` 以使用SHA1算法。
-   * 一个字符串值，表示PDF文档被数字签名的原因。
-   * 表示签名者联系信息的字符串值。
-   * A `PDFSignatureAppearanceOptions` 控制数字签名外观的对象。 例如，您可以使用此对象向数字签名添加自定义徽标。
-   * A `java.lang.Boolean` 指定是否对签名者的证书执行吊销检查的对象。
-   * An `OCSPPreferences` 存储联机证书状态协议(OCSP)支持的首选项的对象。 如果未完成吊销检查，则不会使用此参数，您可以指定 `null`.
-   * A `CRLPreferences` 存储证书吊销列表(CRL)首选项的对象。 如果未完成吊销检查，则不会使用此参数，您可以指定 `null`.
-   * A `TSPPreferences` 存储时间戳提供程序(TSP)支持的首选项的对象。 此参数是可选的，可以是 `null`.
-
-   此 `sign` 方法返回 `com.adobe.idp.Document` 表示已签署PDF文档的对象。
-
-1. 保存已签名的PDF文档
-
-   * 创建 `java.io.File` 对象并确保文件扩展名为.pdf。
-   * 调用 `com.adobe.idp.Document` 对象的 `copyToFile` 方法和路径 `java.io.File`以复制 `Document` 对象到文件。 确保您使用 `com.adobe.idp.Document` 对象 `sign` 方法已返回。
+簽名服務以數位方式簽署PDF檔案後，您可以將其儲存為PDF檔案。 PDF檔案可在Acrobat或Adobe Reader中開啟。
 
 **另请参阅**
 
-[对交互式Forms进行数字签名](digitally-signing-certifying-documents.md#digitally-signing-interactive-forms)
+[使用Java API數位簽署互動式表單](digitally-signing-certifying-documents.md#digitally-sign-an-interactive-form-using-the-java-api)
 
-[快速入门（SOAP模式）：使用Java API对PDF文档进行数字签名](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-digitally-signing-a-pdf-document-using-the-java-api)
+[使用Web服務API數位簽署互動式表單](digitally-signing-certifying-documents.md#digitally-sign-an-interactive-form-using-the-web-service-api)
 
-[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
-[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### 使用Web服务API对交互式表单进行数字签名 {#digitally-sign-an-interactive-form-using-the-web-service-api}
+[數位簽署PDF檔案](digitally-signing-certifying-documents.md#digitally-signing-pdf-documents)
 
-使用Forms和签名API（Web服务）对交互式表单进行数字签名：
+[呈現互動式PDF forms](/help/forms/developing/rendering-forms.md#rendering-interactive-pdf-forms)
 
-1. 包括项目文件
+### 使用Java API數位簽署互動式表單 {#digitally-sign-an-interactive-form-using-the-java-api}
 
-   创建使用MTOM的Microsoft .NET项目。 由于此客户端应用程序调用两个AEM Forms服务，因此请创建两个服务引用。 为与Signature服务关联的服务引用使用以下WSDL定义： `http://localhost:8080/soap/services/SignatureService?WSDL&lc_version=9.0.1`.
+使用Forms和簽名API (Java)數位簽署互動式表單：
 
-   对与Forms服务关联的服务引用使用以下WSDL定义： `http://localhost:8080/soap/services/FormsService?WSDL&lc_version=9.0.1`.
+1. 包含專案檔案
 
-   因为 `BLOB` 数据类型对两个服务引用都是通用的，完全限定 `BLOB` 数据类型。 在相应的Web服务快速启动中，所有 `BLOB` 实例是完全限定的。
+   在您的Java專案的類別路徑中包含使用者端JAR檔案，例如adobe-signatures-client.jar和adobe-forms-client.jar。
+
+1. 建立Forms和簽名使用者端
+
+   * 建立 `ServiceClientFactory` 包含連線屬性的物件。
+   * 建立 `SignatureServiceClient` 物件，使用它的建構函式並傳遞 `ServiceClientFactory` 物件。
+   * 建立 `FormsServiceClient` 物件，使用它的建構函式並傳遞 `ServiceClientFactory` 物件。
+
+1. 使用Forms服務取得互動式表單
+
+   * 建立 `java.io.FileInputStream` 物件，代表要透過其建構函式傳遞至Forms服務的PDF檔案。 傳遞字串值，指定PDF檔案的位置。
+   * 建立 `com.adobe.idp.Document` 物件，使用它的建構函式並傳遞 `java.io.FileInputStream` 物件。
+   * 建立 `java.io.FileInputStream` 物件，代表包含表單資料的XML檔案，以使用它的建構函式傳遞至Forms服務。 傳遞指定XML檔案位置的字串值。
+   * 建立 `com.adobe.idp.Document` 物件，使用它的建構函式並傳遞 `java.io.FileInputStream` 物件。
+   * 建立 `PDFFormRenderSpec` 用來設定執行階段選項的物件。 叫用 `PDFFormRenderSpec` 物件的 `setGenerateServerAppearance` 方法與傳遞 `true`.
+   * 叫用 `FormsServiceClient` 物件的 `renderPDFForm2` 方法並傳遞下列值：
+
+      * A `com.adobe.idp.Document` 包含要呈現之PDF表單的物件。
+      * A `com.adobe.idp.Document` 包含要與表單合併之資料的物件。
+      * A `PDFFormRenderSpec` 儲存執行階段選項的物件。
+      * A `URLSpec` 包含Forms服務所需URI值的物件。 您可以指定 `null` （此引數值）。
+      * A `java.util.HashMap` 儲存檔案附件的物件。 此為選用引數，您可以指定 `null` 如果您不想將檔案附加至表單。
+
+      此 `renderPDFForm2` 方法傳回 `FormsResult` 包含表單資料流的物件
+
+   * 透過叫用「 」擷取PDF表單 `FormsResult` 物件的 `getOutputContent` 方法。 此方法會傳回 `com.adobe.idp.Document` 代表互動式表單的物件。
+
+
+1. 簽署互動式表單
+
+   叫用PDF檔案以簽署 `SignatureServiceClient` 物件的 `sign` 並傳遞下列值：
+
+   * A `com.adobe.idp.Document` 代表要簽署之PDF檔案的物件。 確定此物件為 `com.adobe.idp.Document` 物件(從Forms服務取得)。
+   * 代表已簽署之簽名欄位名稱的字串值。
+   * A `Credential` 物件，代表用來數位簽署PDF檔案的認證。 建立 `Credential` 物件(透過叫用 `Credential` 物件的靜態 `getInstance` 方法。 傳遞字串值，指定與安全性認證對應的別名值。
+   * A `HashAlgorithm` 指定靜態資料成員的物件，代表用來摘要PDF檔案的雜湊演演算法。 例如，您可以指定 `HashAlgorithm.SHA1` 以使用SHA1演演算法。
+   * 字串值，代表PDF檔案經過數位簽署的原因。
+   * 代表簽署者聯絡資訊的字串值。
+   * A `PDFSignatureAppearanceOptions` 控制數位簽章外觀的物件。 例如，您可以使用此物件將自訂標誌新增至數位簽名。
+   * A `java.lang.Boolean` 指定是否對簽署者的憑證執行撤銷檢查的物件。
+   * 一個 `OCSPPreferences` 儲存線上憑證狀態通訊協定(OCSP)支援偏好設定的物件。 如果未完成撤銷檢查，則不會使用此引數，而且您可以指定 `null`.
+   * A `CRLPreferences` 儲存憑證撤銷清單(CRL)偏好設定的物件。 如果未完成撤銷檢查，則不會使用此引數，而且您可以指定 `null`.
+   * A `TSPPreferences` 儲存時間戳記提供者(TSP)支援之偏好設定的物件。 此引數為選用引數，可以是 `null`.
+
+   此 `sign` 方法傳回 `com.adobe.idp.Document` 代表已簽署PDF檔案的物件。
+
+1. 儲存已簽署的PDF檔案
+
+   * 建立 `java.io.File` 物件，並確認副檔名為.pdf。
+   * 叫用 `com.adobe.idp.Document` 物件的 `copyToFile` 方法與傳遞 `java.io.File`以複製 `Document` 物件至檔案。 確保您使用 `com.adobe.idp.Document` 物件， `sign` 方法已傳回。
+
+**另请参阅**
+
+[數位簽署互動式Forms](digitally-signing-certifying-documents.md#digitally-signing-interactive-forms)
+
+[快速入門（SOAP模式）：使用Java API數位簽署PDF檔案](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-digitally-signing-a-pdf-document-using-the-java-api)
+
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+
+[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+
+### 使用Web服務API數位簽署互動式表單 {#digitally-sign-an-interactive-form-using-the-web-service-api}
+
+使用Forms和簽名API （Web服務）數位簽署互動式表單：
+
+1. 包含專案檔案
+
+   建立使用MTOM的Microsoft .NET專案。 由於此使用者端應用程式會叫用兩個AEM Forms服務，請建立兩個服務參考。 對與Signature服務相關聯的服務參照使用下列WSDL定義： `http://localhost:8080/soap/services/SignatureService?WSDL&lc_version=9.0.1`.
+
+   使用下列WSDL定義作為與Forms服務相關聯的服務參考： `http://localhost:8080/soap/services/FormsService?WSDL&lc_version=9.0.1`.
+
+   因為 `BLOB` 資料型別對兩個服務參考都是通用的，完全限定 `BLOB` 使用時的資料型別。 在對應的Web服務快速入門中，全部 `BLOB` 執行個體已完整合格。
 
    >[!NOTE]
    >
-   >Replace `localhost` 包含托管AEM Forms的服务器的IP地址。
+   >Replace `localhost` 搭配裝載AEM Forms之伺服器的IP位址。
 
-1. 创建Forms和签名客户端
+1. 建立Forms和簽名使用者端
 
-   * 创建 `SignatureServiceClient` 对象。
-   * 创建 `SignatureServiceClient.Endpoint.Address` 对象 `System.ServiceModel.EndpointAddress` 构造函数。 将指定WSDL的字符串值传递给AEM Forms服务(例如， `http://localhost:8080/soap/services/SignatureService?WSDL`)。 您无需使用 `lc_version` 属性。 创建服务引用时使用此属性。)
-   * 创建 `System.ServiceModel.BasicHttpBinding` 对象，方法是获取 `SignatureServiceClient.Endpoint.Binding` 字段。 将返回值强制转换为 `BasicHttpBinding`.
-   * 设置 `System.ServiceModel.BasicHttpBinding` 对象的 `MessageEncoding` 字段至 `WSMessageEncoding.Mtom`. 此值可确保使用MTOM。
-   * 通过执行以下任务启用基本HTTP身份验证：
+   * 建立 `SignatureServiceClient` 物件（使用其預設建構函式）。
+   * 建立 `SignatureServiceClient.Endpoint.Address` 物件，使用 `System.ServiceModel.EndpointAddress` 建構函式。 將指定WSDL的字串值傳遞至AEM Forms服務(例如， `http://localhost:8080/soap/services/SignatureService?WSDL`)。 您不需要使用 `lc_version` 屬性。 當您建立服務參考時，會使用此屬性。)
+   * 建立 `System.ServiceModel.BasicHttpBinding` 物件，方法是取得 `SignatureServiceClient.Endpoint.Binding` 欄位。 將傳回值轉換為 `BasicHttpBinding`.
+   * 設定 `System.ServiceModel.BasicHttpBinding` 物件的 `MessageEncoding` 欄位至 `WSMessageEncoding.Mtom`. 此值可確保使用MTOM。
+   * 執行下列工作來啟用基本HTTP驗證：
 
-      * 将AEM表单用户名分配给字段 `SignatureServiceClient.ClientCredentials.UserName.UserName`.
-      * 将相应的密码值分配给字段 `SignatureServiceClient.ClientCredentials.UserName.Password`.
-      * 分配常量值 `HttpClientCredentialType.Basic` 到字段 `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
-   * 分配常量值 `BasicHttpSecurityMode.TransportCredentialOnly` 到字段 `BasicHttpBindingSecurity.Security.Mode`.
+      * 將AEM表單使用者名稱指派給欄位 `SignatureServiceClient.ClientCredentials.UserName.UserName`.
+      * 將對應的密碼值指派給欄位 `SignatureServiceClient.ClientCredentials.UserName.Password`.
+      * 指派常數值 `HttpClientCredentialType.Basic` 至欄位 `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
+   * 指派常數值 `BasicHttpSecurityMode.TransportCredentialOnly` 至欄位 `BasicHttpBindingSecurity.Security.Mode`.
 
    >[!NOTE]
    >
-   >对Forms服务客户端重复这些步骤。
+   >對Forms服務使用者端重複這些步驟。
 
-1. 使用Forms服务获取交互式表单
+1. 使用Forms服務取得互動式表單
 
-   * 创建 `BLOB` 对象。 此 `BLOB` 对象用于存储已签名的PDF文档。
-   * 创建 `System.IO.FileStream` 对象，方法是调用其构造函数并传递一个字符串值，该字符串值表示要签名的PDF文档的文件位置以及打开文件的模式。
-   * 创建一个字节数组，用于存储 `System.IO.FileStream` 对象。 您可以通过获取 `System.IO.FileStream` 对象的 `Length` 属性。
-   * 通过调用 `System.IO.FileStream` 对象的 `Read` 方法，并传递字节数组、起始位置和要读取的流长度。
-   * 填充 `BLOB` 对象(通过指定其 `MTOM` 属性字节数组的内容。
-   * 创建 `BLOB` 对象。 此 `BLOB` 对象用于存储表单数据。
-   * 创建 `System.IO.FileStream` 对象，方法是调用其构造函数并传递一个字符串值，该字符串值表示包含表单数据的XML文件的文件位置以及打开文件的模式。
-   * 创建一个字节数组，用于存储 `System.IO.FileStream` 对象。 您可以通过获取 `System.IO.FileStream` 对象的 `Length` 属性。
-   * 通过调用 `System.IO.FileStream` 对象的 `Read` 方法，并传递字节数组、起始位置和要读取的流长度。
-   * 填充 `BLOB` 对象(通过指定其 `MTOM` 属性字节数组的内容。
-   * 创建 `PDFFormRenderSpec` 用于设置运行时选项的对象。 分配值 `true` 到 `PDFFormRenderSpec` 对象的 `generateServerAppearance` 字段。
-   * 调用 `FormsServiceClient` 对象的 `renderPDFForm2` 方法，并传递以下值：
+   * 建立 `BLOB` 物件（使用其建構函式）。 此 `BLOB` 物件是用來儲存已簽署的PDF檔案。
+   * 建立 `System.IO.FileStream` 物件，方法是叫用其建構函式，並傳遞代表要簽署之PDF檔案的檔案位置，以及開啟檔案的模式的字串值。
+   * 建立位元組陣列，儲存 `System.IO.FileStream` 物件。 您可以取得 `System.IO.FileStream` 物件的 `Length` 屬性。
+   * 叫用 `System.IO.FileStream` 物件的 `Read` 方法，並傳遞位元組陣列、起始位置以及要讀取的資料流長度。
+   * 填入 `BLOB` 物件，透過指派其 `MTOM` 屬性位元組陣列的內容。
+   * 建立 `BLOB` 物件（使用其建構函式）。 此 `BLOB` 物件是用來儲存表單資料。
+   * 建立 `System.IO.FileStream` 物件，方法是叫用其建構函式，並傳遞代表包含表單資料之XML檔案的檔案位置以及開啟檔案的模式的字串值。
+   * 建立位元組陣列，儲存 `System.IO.FileStream` 物件。 您可以取得 `System.IO.FileStream` 物件的 `Length` 屬性。
+   * 叫用 `System.IO.FileStream` 物件的 `Read` 方法，並傳遞位元組陣列、起始位置以及要讀取的資料流長度。
+   * 填入 `BLOB` 物件，透過指派其 `MTOM` 屬性位元組陣列的內容。
+   * 建立 `PDFFormRenderSpec` 用來設定執行階段選項的物件。 指派值 `true` 至 `PDFFormRenderSpec` 物件的 `generateServerAppearance` 欄位。
+   * 叫用 `FormsServiceClient` 物件的 `renderPDFForm2` 方法並傳遞下列值：
 
-      * A `BLOB` 包含要渲染的PDF表单的对象。
-      * A `BLOB` 包含要与表单合并的数据的对象。
-      * A `PDFFormRenderSpec` 存储运行时选项的对象。
-      * A `URLSpec` 包含Forms服务所需的URI值的对象。 您可以指定 `null` 参数值。
-      * A `java.util.HashMap` 存储文件附件的对象。 这是一个可选参数，您可以指定 `null` 如果您不想将文件附加到表单。
-      * 长输出参数，用于存储表单中的页数。
-      * 用于区域设置值的字符串输出参数。
-      * A `FormResult` 用于存储交互式表单的输出参数。
-   * PDF通过调用 `FormsResult` 对象的 `outputContent` 字段。 此字段存储 `BLOB` 表示交互式表单的对象。
+      * A `BLOB` 包含要呈現之PDF表單的物件。
+      * A `BLOB` 包含要與表單合併之資料的物件。
+      * A `PDFFormRenderSpec` 儲存執行階段選項的物件。
+      * A `URLSpec` 包含Forms服務所需URI值的物件。 您可以指定 `null` （此引數值）。
+      * A `java.util.HashMap` 儲存檔案附件的物件。 此為選用引數，您可以指定 `null` 如果您不想將檔案附加至表單。
+      * 用於儲存表單中頁數的長輸出引數。
+      * 用於地區設定值的字串輸出引數。
+      * A `FormResult` 用來儲存互動式表單的輸出引數值。
+   * 叫用「 」以擷取PDF表單 `FormsResult` 物件的 `outputContent` 欄位。 此欄位會儲存 `BLOB` 代表互動式表單的物件。
 
 
-1. 签署交互式表单
+1. 簽署互動式表單
 
-   PDF通过调用 `SignatureServiceClient` 对象的 `sign` 方法，并传递以下值：
+   叫用PDF檔案以簽署 `SignatureServiceClient` 物件的 `sign` 並傳遞下列值：
 
-   * A `BLOB` 表示要签名的PDF文档的对象。 使用 `BLOB` Forms服务返回的实例。
-   * 一个字符串值，表示已签名的签名字段的名称。
-   * A `Credential` 表示用于对PDF文档进行数字签名的凭据的对象。 创建 `Credential` 对象，并通过将值指定给 `Credential` 对象的 `alias` 属性。
-   * A `HashAlgorithm` 指定静态数据成员的对象，该成员表示用于摘要PDF文档的哈希算法。 例如，您可以指定 `HashAlgorithm.SHA1` 以使用SHA1算法。
-   * 一个布尔值，指定是否使用哈希算法。
-   * 一个字符串值，表示PDF文档被数字签名的原因。
-   * 表示签名者位置的字符串值。
-   * 表示签名者联系信息的字符串值。
-   * A `PDFSignatureAppearanceOptions` 控制数字签名外观的对象。 例如，您可以使用此对象向数字签名添加自定义徽标。
-   * A `System.Boolean` 指定是否对签名者的证书执行吊销检查的对象。 如果完成此吊销检查，则会将其嵌入签名中。 默认为 `false`。
-   * An `OCSPPreferences` 存储联机证书状态协议(OCSP)支持的首选项的对象。 如果未完成吊销检查，则不会使用此参数，您可以指定 `null`. 有关此对象的信息，请参见 [AEM Forms API参考](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
-   * A `CRLPreferences` 存储证书吊销列表(CRL)首选项的对象。 如果未完成吊销检查，则不会使用此参数，您可以指定 `null`.
-   * A `TSPPreferences` 存储时间戳提供程序(TSP)支持的首选项的对象。 此参数是可选的，可以是 `null`.
+   * A `BLOB` 代表要簽署之PDF檔案的物件。 使用 `BLOB` Forms服務傳回的執行個體。
+   * 代表已簽署之簽名欄位名稱的字串值。
+   * A `Credential` 物件，代表用來數位簽署PDF檔案的認證。 建立 `Credential` 物件，使用它的建構函式，並透過指派值給 `Credential` 物件的 `alias` 屬性。
+   * A `HashAlgorithm` 指定靜態資料成員的物件，代表用來摘要PDF檔案的雜湊演演算法。 例如，您可以指定 `HashAlgorithm.SHA1` 以使用SHA1演演算法。
+   * Boolean值，指定是否使用雜湊演演算法。
+   * 字串值，代表PDF檔案經過數位簽署的原因。
+   * 代表簽署者位置的字串值。
+   * 代表簽署者聯絡資訊的字串值。
+   * A `PDFSignatureAppearanceOptions` 控制數位簽章外觀的物件。 例如，您可以使用此物件將自訂標誌新增至數位簽名。
+   * A `System.Boolean` 指定是否對簽署者的憑證執行撤銷檢查的物件。 如果完成此撤銷檢查，則會嵌入簽名中。 默认为 `false`。
+   * 一個 `OCSPPreferences` 儲存線上憑證狀態通訊協定(OCSP)支援偏好設定的物件。 如果未完成撤銷檢查，則不會使用此引數，而且您可以指定 `null`. 如需此物件的相關資訊，請參閱 [AEM Forms API參考](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
+   * A `CRLPreferences` 儲存憑證撤銷清單(CRL)偏好設定的物件。 如果未完成撤銷檢查，則不會使用此引數，而且您可以指定 `null`.
+   * A `TSPPreferences` 儲存時間戳記提供者(TSP)支援之偏好設定的物件。 此引數為選用引數，可以是 `null`.
 
-   此 `sign` 方法返回 `BLOB` 表示已签署PDF文档的对象。
+   此 `sign` 方法傳回 `BLOB` 代表已簽署PDF檔案的物件。
 
-1. 保存已签名的PDF文档
+1. 儲存已簽署的PDF檔案
 
-   * 创建 `System.IO.FileStream` 对象。 传递一个字符串值，该值表示已签名PDF文档的文件位置和打开文件的模式。
-   * 创建一个字节数组，用于存储 `BLOB` 返回的对象 `sign` 方法。 通过获取的值填充字节数组 `BLOB` 对象的 `MTOM` 数据成员。
-   * 创建 `System.IO.BinaryWriter` 对象，方法是调用其构造函数 `System.IO.FileStream` 对象。
-   * PDF通过调用 `System.IO.BinaryWriter` 对象的 `Write` 方法和传递字节数组。
+   * 建立 `System.IO.FileStream` 物件（透過叫用其建構函式）。 傳遞代表已簽署PDF檔案的檔案位置和開啟檔案的模式的字串值。
+   * 建立位元組陣列，儲存 `BLOB` 物件，由 `sign` 方法。 透過取得 `BLOB` 物件的 `MTOM` 資料成員。
+   * 建立 `System.IO.BinaryWriter` 物件，方法是叫用其建構函式並傳遞 `System.IO.FileStream` 物件。
+   * PDF透過叫用 `System.IO.BinaryWriter` 物件的 `Write` 方法並傳遞位元組陣列。
 
 **另请参阅**
 
-[对交互式Forms进行数字签名](digitally-signing-certifying-documents.md#digitally-signing-interactive-forms)
+[數位簽署互動式Forms](digitally-signing-certifying-documents.md#digitally-signing-interactive-forms)
 
-[使用MTOM调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[使用MTOM叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-## 认证PDF文档 {#certifying-pdf-documents}
+## 認證PDF檔案 {#certifying-pdf-documents}
 
-您可以通过使用称为认证签名的特定签名类型来认证PDF文档来保护文档。 认证签名与数字签名的区别如下：
+您可以使用稱為認證簽名的特定簽名型別來認證PDF檔案，以保護檔案安全。 認證簽名與數位簽名的區別如下：
 
-* 它必须是应用于PDF文件的第一个签名；也就是说，在应用认证签名时，文件中的任何其他签名字段都必须未签名。 PDF文档中只允许一个认证签名。 如果要签署和认证PDF文档，则必须在签署之前对其进行认证。 在认证PDF文档后，您可以对附加签名字段进行数字签名。
-* 文档的作者或创建者可以指定以特定方式修改文档，而不会使已验证签名失效。 例如，文档可能允许填写表单或添加注释。 如果作者指定不允许进行某些修改，则Acrobat会限制用户以这种方式修改文档。 如果进行了此类修改，例如使用其他应用程序，则认证签名无效，Acrobat会在用户打开文档时发出警告。 （对于未验证的签名，不会阻止修改，并且正常的编辑操作不会使原始签名失效。）
-* 在签署时，将扫描文档以查找可能会使文档内容不明确或误导性的特定内容类型。 例如，注释可能会遮盖页面上的某些文本，而这些文本对于了解正在验证的内容非常重要。 可以就此类内容提供解释（法律证明）。
+* 它必須是套用至PDF檔案的第一個簽章；也就是說，在套用已驗證簽章時，檔案中的任何其他簽章欄位都必須未簽署。 PDF檔案中只允許一個已驗證的簽章。 如果您想要簽署和認證PDF檔案，您必須在簽署之前先認證它。 在您認證PDF檔案後，您可以數位簽署其他簽名欄位。
+* 檔案的作者或建立者可以指定檔案可以特定方式修改，而不會使已驗證的簽名失效。 例如，檔案可能允許填寫表單或新增註釋。 如果作者指定不允許特定修改，Acrobat會限制使用者不得以這種方式修改檔案。 如果已進行此類修改（例如使用其他應用程式），則認證簽名無效，且Acrobat會在使用者開啟檔案時發出警告。 （使用未經認證的簽名，不會阻止修改，正常的編輯操作也不會使原始簽名失效。）
+* 簽署時，會掃描檔案以找出可能使檔案內容含糊或誤導的特定內容型別。 例如，註解可能會遮蔽頁面上的一些文字，而這些文字對瞭解正在認證的內容非常重要。 可提供此類內容的說明（法律證明）。
 
-您可以使用签名服务Java API或签名Web服务API以编程方式认证PDF文档。 在认证PDF文档时，必须引用凭据服务中存在的安全凭据。 有关安全凭据的信息，请参阅 *安装和部署AEM Forms* 应用程序服务器的指南。
-
->[!NOTE]
->
->在对同一PDF文档进行认证和签名时，如果认证签名不可信，则当您在Acrobat或Adobe Reader中打开PDF文档时，第一个签名签名旁边会出现一个黄色三角形。 验证签名必须可信以避免这种情况。
+您可以使用簽名服務Java API或簽名Web服務API，以程式設計方式認證PDF檔案。 在認證PDF檔案時，您必須參考存在於認證服務中的安全性認證。 如需安全性認證的相關資訊，請參閱 *安裝和部署AEM Forms* 應用程式伺服器的指南。
 
 >[!NOTE]
 >
->使用nCipher nShield HSM凭据签署或认证PDF文档时，只有在重新启动部署AEM Forms的J2EE应用程序服务器后，才能使用新凭据。 但是，您可以设置配置值，从而无需重新启动J2EE应用程序服务器即可执行签名或认证操作。
+>當認證和簽署相同的PDF檔案時，如果認證簽名不受信任，當您在Acrobat或Adobe Reader中開啟PDF檔案時，第一個簽名簽名旁邊會出現一個黃色三角形。 必須信任認證簽章以避免這種情況。
 
-可以在cknfastrc文件中添加以下配置值，该文件位于/opt/nfast/cknfastrc （或c：\nfast\cknfastrc）：
+>[!NOTE]
+>
+>使用nCipher nShield HSM認證來簽署或認證PDF檔案時，必須重新啟動部署AEM Forms的J2EE應用程式伺服器，才能使用新的認證。 不過，您可以設定組態值，使簽署或認證作業正常運作，而不需重新啟動J2EE應用程式伺服器。
+
+您可以在cknfastrc檔案中新增下列設定值，該檔案位於/opt/nfast/cknfastrc （或c：\nfast\cknfastrc）：
 
 ```shell
     CKNFAST_ASSUME_SINGLE_PROCESS=0
 ```
 
-将此配置值添加到cknfastrc文件后，无需重新启动J2EE应用程序服务器即可使用新凭据。
+將此組態值新增至cknfastrc檔案之後，您就可以使用新的認證，而不需重新啟動J2EE應用程式伺服器。
 
 >[!NOTE]
 >
->有关Signature服务和证明文档的更多信息，请参见 [AEM Forms的服务参考](https://www.adobe.com/go/learn_aemforms_services_63).
+>如需有關簽名服務與證明檔案的詳細資訊，請參閱 [AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
 
-### 步骤摘要 {#summary_of_steps-5}
+### 步驟摘要 {#summary_of_steps-5}
 
-要认证PDF文档，请执行下列任务：
+若要認證PDF檔案，請執行下列工作：
 
-1. 包括项目文件。
-1. 创建签名客户端。
-1. 获取要认证的PDF文档。
-1. 认证PDF文档。
-1. 将认证的PDF文档另存为PDF文件。
+1. 包含專案檔案。
+1. 建立簽章使用者端。
+1. 取得要認證的PDF檔案。
+1. 認證PDF檔案。
+1. 將認證的PDF檔案儲存為PDF檔案。
 
-**包括项目文件**
+**包含專案檔案**
 
-在开发项目中包含必要的文件。 如果要使用Java创建客户端应用程序，请包含必要的JAR文件。 如果使用Web服务，请确保包含代理文件。
+將必要的檔案納入您的開發專案中。 如果您使用Java建立使用者端應用程式，請包含必要的JAR檔案。 如果您使用Web服務，請確定您包含Proxy檔案。
 
-必须将以下JAR文件添加到项目的类路径中：
+下列JAR檔案必須新增到專案的類別路徑中：
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-signatures-client.jar
-* adobe-utilities.jar(如果在JBoss上部署了AEM Forms，则此为必填字段)
-* jbossall-client.jar(如果在JBoss上部署了AEM Forms，则此为必填字段)
+* adobe-utilities.jar (如果AEM Forms部署在JBoss上，則為必要)
+* jbossall-client.jar (如果AEM Forms部署在JBoss上，則為必要)
 
-有关这些JAR文件位置的信息，请参见 [包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
+有關這些JAR檔案位置的資訊，請參見 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
 
-**创建签名客户端**
+**建立簽名使用者端**
 
-必须先创建签名客户端，然后才能以编程方式执行签名操作。
+您必須先建立簽名使用者端，才能以程式設計方式執行簽名作業。
 
-**获取要认证的PDF文档**
+**取得PDF檔案以認證**
 
-要认证PDF文档，必须获得包含签名字段的PDF文档。 如果PDF文档不包含签名字段，则无法对其进行认证。 签名字段可以通过使用设计器或以编程方式添加。 有关以编程方式添加签名字段的信息，请参见 [添加签名字段](digitally-signing-certifying-documents.md#adding-signature-fields).
+若要認證PDF檔案，您必須取得包含簽名欄位的PDF檔案。 如果PDF檔案不包含簽名欄位，則無法認證。 簽名欄位可透過使用設計工具或以程式設計方式新增。 如需以程式設計方式新增簽名欄位的資訊，請參閱 [新增簽名欄位](digitally-signing-certifying-documents.md#adding-signature-fields).
 
-**认证PDF文档**
+**認證PDF檔案**
 
-要成功认证PDF单据，您需要以下输入值，签名服务使用这些值来认证PDF单据：
+若要成功認證PDF檔案，您需要下列輸入值，這些值由簽名服務用來認證PDF檔案：
 
-* **PDF文档**：包含签名字段的PDF文档，签名字段是包含已验证签名的图形表示的表单字段。 PDF文档必须包含签名字段，然后才能进行认证。 签名字段可以通过使用设计器或以编程方式添加。 (请参阅 [添加签名字段](digitally-signing-certifying-documents.md#adding-signature-fields).)
-* **签名字段名称**：已验证的签名字段的完全限定名称。 以下值是一个示例： `form1[0].#subform[1].SignatureField3[3]`. 在使用XFA表单字段时，还可以使用签名字段的部分名称： `SignatureField3[3]`. 如果为字段名称传递了null值，则会动态创建并验证不可见的签名字段。
-* **安全凭据**：用于验证PDF文档的凭据。 此安全凭据包含密码和别名，它们必须与Credential服务内凭据中显示的别名匹配。 别名是对PKCS#12文件（扩展名为.pfx）或硬件安全模块(HSM)中实际凭据的引用。
-* **哈希算法**：用于摘要PDF文档的哈希算法。
-* **签名原因**：在Acrobat或Adobe Reader中显示的值，以便其他用户知道PDF文档获得认证的原因。
-* **签名者的位置**：凭据指定的签名者的位置。
-* **联系信息**：签名者的联系信息，如地址和电话号码。
-* **权限信息**：控制最终用户可以对文档执行的操作而不导致已验证签名无效的权限。 例如，您可以设置权限，以便对PDF文档所做的任何更改都会导致认证签名无效。
-* **法律解释**：当文档经过验证时，将自动扫描其特定类型的内容，这可能会使文档的内容不明确或产生误导。 例如，注释可能会遮盖页面上的某些文本，而这些文本对于了解正在验证的内容非常重要。 扫描过程会生成有关这些类型内容的警告。 此值提供了对可能生成警告的内容的附加说明。
-* **外观选项**：控制已验证签名外观的选项。 例如，已验证的签名可以显示日期信息。
-* **吊销检查**：此值指定是否对签名者的证书进行吊销检查。 默认设置 `false` 表示不执行吊销检查。
-* **OCSP设置**：联机证书状态协议(OCSP)支持的设置，它提供有关用于验证PDF文档的凭据状态的信息。 例如，您可以指定服务器的URL，该服务器提供有关用于登录到PDF文档的凭据的信息。
-* **CRL设置**：如果已完成吊销检查，则设置证书吊销列表(CRL)首选项。 例如，您可以指定始终检查凭据是否被吊销。
-* **时间戳**：定义应用于已验证签名的时间戳信息的设置。 时间戳表示特定数据在特定时间之前建立。 这些知识有助于在签名者和验证者之间建立信任关系。
+* **PDF檔案**：包含簽名欄位的PDF檔案，簽名欄位是包含已驗證簽名的圖形表示的表單欄位。 PDF檔案必須先包含簽名欄位，才能進行認證。 簽名欄位可透過使用設計工具或以程式設計方式新增。 (請參閱 [新增簽名欄位](digitally-signing-certifying-documents.md#adding-signature-fields).)
+* **簽章欄位名稱**：已驗證的簽名欄位的完整名稱。 以下值為範例： `form1[0].#subform[1].SignatureField3[3]`. 使用XFA表單欄位時，也可使用簽名欄位的部分名稱： `SignatureField3[3]`. 如果為欄位名稱傳遞null值，則會動態建立並驗證不可見的簽章欄位。
+* **安全性認證**：用於認證PDF檔案的認證。 此安全性認證包含密碼和別名，必須與Credential服務內認證中顯示的別名相符。 別名是實際認證的參考，可能位於PKCS#12檔案（具有.pfx副檔名）或硬體安全模組(HSM)中。
+* **雜湊演演算法**：用於摘要PDF檔案的雜湊演演算法。
+* **簽署原因**：顯示在Acrobat或Adobe Reader中的值，讓其他使用者知道PDF檔案獲得認證的原因。
+* **簽署者的位置**：認證所指定的簽署者位置。
+* **連絡資訊**：簽署者的聯絡資訊，例如地址和電話號碼。
+* **許可權資訊**：控制一般使用者可在檔案上執行的動作，而不會導致已驗證簽名無效的許可權。 例如，您可以設定許可權，以便對PDF檔案所做的任何變更都會導致認證簽名無效。
+* **法律說明**：當檔案通過驗證時，會自動掃描特定型別的內容，這可能會使檔案的內容含糊或誤導使用者。 例如，註解可能會遮蔽頁面上的一些文字，而這些文字對瞭解正在認證的內容非常重要。 掃描程式會產生有關這些內容型別的警告。 此值提供可能產生警告之內容的額外說明。
+* **外觀選項**：控制已驗證簽章外觀的選項。 例如，已驗證的簽章可顯示日期資訊。
+* **撤銷檢查**：此值會指定是否對簽署者的憑證執行撤銷檢查。 的預設設定 `false` 表示尚未執行撤銷檢查。
+* **OCSP設定**：線上憑證狀態通訊協定(OCSP)支援的設定，此設定提供有關用於認證PDF檔案的認證狀態的資訊。 例如，您可以指定伺服器的URL，以提供您用來登入PDF檔案的認證相關資訊。
+* **CRL設定**：憑證撤銷清單(CRL)偏好設定的設定（如果已執行撤銷檢查）。 例如，您可以指定一律檢查認證是否被撤銷。
+* **時間戳記**：定義套用至已驗證簽章的時間戳記資訊的設定。 時間戳記表示特定資料是在特定時間之前建立的。 此知識有助於在簽署者和驗證者之間建立信任關係。
 
-**将认证的PDF文档另存为PDF文件**
+**將認證的PDF檔案儲存為PDF檔案**
 
-签名服务验证PDF文档后，您可以将其保存为PDF文件，以便用户在Acrobat或Adobe Reader中打开文档。
-
-**另请参阅**
-
-[使用Java API认证PDF文档](digitally-signing-certifying-documents.md#certify-pdf-documents-using-the-java-api)
-
-[使用Web服务API认证PDF文档](digitally-signing-certifying-documents.md#certify-pdf-documents-using-the-web-service-api)
-
-[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
-
-[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
-
-[添加签名字段](digitally-signing-certifying-documents.md#adding-signature-fields)
-
-### 使用Java API认证PDF文档 {#certify-pdf-documents-using-the-java-api}
-
-使用签名API (Java)认证PDF文档：
-
-1. 包括项目文件
-
-   在Java项目的类路径中包含客户端JAR文件，如adobe-signatures-client.jar。
-
-1. 创建签名客户端
-
-   * 创建 `ServiceClientFactory` 包含连接属性的对象。
-   * 创建 `SignatureServiceClient` 对象，使用它的构造函数传递 `ServiceClientFactory` 对象。
-
-1. 获取要认证的PDF文档
-
-   * 创建 `java.io.FileInputStream` 表示要验证的PDF文档的对象，验证方法是使用其构造函数并传递一个指定PDF文档位置的字符串值。
-   * 创建 `com.adobe.idp.Document` 对象，使用它的构造函数传递 `java.io.FileInputStream` 对象。
-
-1. 认证PDF文档
-
-   PDF通过调用 `SignatureServiceClient` 对象的 `certify` 方法，并传递以下值：
-
-   * 此 `com.adobe.idp.Document` 表示要认证的PDF文档的对象。
-   * 一个字符串值，表示将包含该签名的签名字段的名称。
-   * A `Credential` 表示用于验证PDF文档的凭据的对象。 创建 `Credential` 对象 `Credential` 对象的静态 `getInstance` 方法和传递一个字符串值，该值指定与安全凭据对应的别名值。
-   * A `HashAlgorithm` 指定静态数据成员的对象，表示用于摘要PDF文档的哈希算法。 例如，您可以指定 `HashAlgorithm.SHA1` 以使用SHA1算法。
-   * 一个字符串值，它表示PDF文档获得认证的原因。
-   * 表示签名者联系信息的字符串值。
-   * A `MDPPermissions` 指定可以对使签名失效的PDF文档执行的操作的对象。
-   * A `PDFSignatureAppearanceOptions` 控制认证签名外观的对象。 如果需要，可通过调用方法修改签名的外观，例如 `setShowDate`.
-   * 一个字符串值，它说明使签名失效的操作。
-   * A `java.lang.Boolean` 指定是否对签名者的证书执行吊销检查的对象。 如果完成此吊销检查，则会将其嵌入签名中。 默认为 `false`。
-   * A `java.lang.Boolean` 指定验证的签名字段是否锁定的对象。 如果该字段已锁定，则签名字段将标记为只读，其属性无法修改，不具有所需权限的任何人都无法清除该字段。 默认为 `false`。
-   * An `OCSPPreferences` 存储联机证书状态协议(OCSP)支持的首选项的对象。 如果未完成吊销检查，则不会使用此参数，您可以指定 `null`. 有关此对象的信息，请参见 [AEM Forms API参考](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
-   * A `CRLPreferences` 存储证书吊销列表(CRL)首选项的对象。 如果未完成吊销检查，则不会使用此参数，您可以指定 `null`.
-   * A `TSPPreferences` 存储时间戳提供程序(TSP)支持的首选项的对象。 例如，在您创建 `TSPPreferences` 对象，您可以通过调用 `TSPPreferences` 对象的 `setTspServerURL` 方法。 此参数是可选的，可以是 `null`. 有关更多信息，请参阅 [AEM Forms的服务参考](https://www.adobe.com/go/learn_aemforms_services_63).
-
-   此 `certify` 方法返回 `com.adobe.idp.Document` 表示已验证PDF文档的对象。
-
-1. 将认证的PDF文档另存为PDF文件
-
-   * 创建 `java.io.File` 对象并确保文件扩展名为.pdf。
-   * 调用 `com.adobe.idp.Document` 对象的 `copyToFile` 用于复制目录内容的方法 `com.adobe.idp.Document` 对象到文件。
+簽名服務驗證PDF檔案後，您可以將其儲存為PDF檔案，以便使用者可以在Acrobat或Adobe Reader中開啟它。
 
 **另请参阅**
 
-[认证PDF文档](digitally-signing-certifying-documents.md#certifying-pdf-documents)
+[使用Java API認證PDF檔案](digitally-signing-certifying-documents.md#certify-pdf-documents-using-the-java-api)
 
-[快速入门（SOAP模式）：使用Java API认证PDF文档](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-certifying-a-pdf-document-using-the-java-api)
+[使用Web服務API認證PDF檔案](digitally-signing-certifying-documents.md#certify-pdf-documents-using-the-web-service-api)
 
-[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
-[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### 使用Web服务API认证PDF文档 {#certify-pdf-documents-using-the-web-service-api}
+[新增簽名欄位](digitally-signing-certifying-documents.md#adding-signature-fields)
 
-使用签名API（Web服务）认证PDF文档：
+### 使用Java API認證PDF檔案 {#certify-pdf-documents-using-the-java-api}
 
-1. 包括项目文件
+使用簽名API (Java)認證PDF檔案：
 
-   创建使用MTOM的Microsoft .NET项目。 确保使用以下WSDL定义： `http://localhost:8080/soap/services/SignatureService?WSDL&lc_version=9.0.1`.
+1. 包含專案檔案
+
+   在您的Java專案的類別路徑中包含使用者端JAR檔案，例如adobe-signatures-client.jar。
+
+1. 建立簽名使用者端
+
+   * 建立 `ServiceClientFactory` 包含連線屬性的物件。
+   * 建立 `SignatureServiceClient` 物件，使用它的建構函式並傳遞 `ServiceClientFactory` 物件。
+
+1. 取得PDF檔案以認證
+
+   * 建立 `java.io.FileInputStream` 物件，代表要透過使用其建構函式並傳遞指定PDF檔案位置的字串值來認證的PDF檔案。
+   * 建立 `com.adobe.idp.Document` 物件，使用它的建構函式並傳遞 `java.io.FileInputStream` 物件。
+
+1. 認證PDF檔案
+
+   PDF透過叫用 `SignatureServiceClient` 物件的 `certify` 並傳遞下列值：
+
+   * 此 `com.adobe.idp.Document` 代表要認證之PDF檔案的物件。
+   * 字串值，代表將包含簽章的簽章欄位名稱。
+   * A `Credential` 物件，代表用來認證PDF檔案的認證。 建立 `Credential` 物件(透過叫用 `Credential` 物件的靜態 `getInstance` 和傳遞字串值，字串值會指定對應至安全性認證的別名值。
+   * A `HashAlgorithm` 指定靜態資料成員的物件，代表用於摘要PDF檔案的雜湊演演算法。 例如，您可以指定 `HashAlgorithm.SHA1` 以使用SHA1演演算法。
+   * 代表PDF檔案獲得認證之原因的字串值。
+   * 代表簽署者聯絡資訊的字串值。
+   * A `MDPPermissions` 物件，指定可在使簽章失效的PDF檔案上執行的動作。
+   * A `PDFSignatureAppearanceOptions` 控制認證簽名外觀的物件。 如有需要，請叫用方法修改簽章的外觀，例如 `setShowDate`.
+   * 字串值，說明哪些動作會使簽章失效。
+   * A `java.lang.Boolean` 指定是否對簽署者的憑證執行撤銷檢查的物件。 如果完成此撤銷檢查，則會嵌入簽名中。 默认为 `false`。
+   * A `java.lang.Boolean` 指定正在驗證的簽章欄位是否已鎖定的物件。 如果欄位已鎖定，則簽章欄位會標示為唯讀，其屬性無法修改，且沒有必要許可權的任何人都無法清除。 默认为 `false`。
+   * 一個 `OCSPPreferences` 儲存線上憑證狀態通訊協定(OCSP)支援偏好設定的物件。 如果未完成撤銷檢查，則不會使用此引數，而且您可以指定 `null`. 如需此物件的相關資訊，請參閱 [AEM Forms API參考](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
+   * A `CRLPreferences` 儲存憑證撤銷清單(CRL)偏好設定的物件。 如果未完成撤銷檢查，則不會使用此引數，而且您可以指定 `null`.
+   * A `TSPPreferences` 儲存時間戳記提供者(TSP)支援之偏好設定的物件。 例如，在您建立 `TSPPreferences` 物件，您可以呼叫 `TSPPreferences` 物件的 `setTspServerURL` 方法。 此引數為選用引數，可以是 `null`. 如需詳細資訊，請參閱 [AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
+
+   此 `certify` 方法傳回 `com.adobe.idp.Document` 代表已驗證PDF檔案的物件。
+
+1. 將認證的PDF檔案儲存為PDF檔案
+
+   * 建立 `java.io.File` 物件，並確認副檔名為.pdf。
+   * 叫用 `com.adobe.idp.Document` 物件的 `copyToFile` 複製目錄內容的方法 `com.adobe.idp.Document` 物件至檔案。
+
+**另请参阅**
+
+[認證PDF檔案](digitally-signing-certifying-documents.md#certifying-pdf-documents)
+
+[快速入門（SOAP模式）：使用Java API認證PDF檔案](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-certifying-a-pdf-document-using-the-java-api)
+
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+
+[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+
+### 使用Web服務API認證PDF檔案 {#certify-pdf-documents-using-the-web-service-api}
+
+使用簽名API （Web服務）認證PDF檔案：
+
+1. 包含專案檔案
+
+   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/SignatureService?WSDL&lc_version=9.0.1`.
 
    >[!NOTE]
    >
-   >Replace `localhost` 包含托管AEM Forms的服务器的IP地址。
+   >Replace `localhost` 搭配裝載AEM Forms之伺服器的IP位址。
 
-1. 创建签名客户端
+1. 建立簽名使用者端
 
-   * 创建 `SignatureServiceClient` 对象。
-   * 创建 `SignatureServiceClient.Endpoint.Address` 对象 `System.ServiceModel.EndpointAddress` 构造函数。 将指定WSDL的字符串值传递给AEM Forms服务(例如， `http://localhost:8080/soap/services/SignatureService?WSDL`)。 您无需使用 `lc_version` 属性。 创建服务引用时使用此属性。)
-   * 创建 `System.ServiceModel.BasicHttpBinding` 对象，方法是获取 `SignatureServiceClient.Endpoint.Binding` 字段。 将返回值强制转换为 `BasicHttpBinding`.
-   * 设置 `System.ServiceModel.BasicHttpBinding` 对象的 `MessageEncoding` 字段至 `WSMessageEncoding.Mtom`. 此值可确保使用MTOM。
-   * 通过执行以下任务启用基本HTTP身份验证：
+   * 建立 `SignatureServiceClient` 物件（使用其預設建構函式）。
+   * 建立 `SignatureServiceClient.Endpoint.Address` 物件，使用 `System.ServiceModel.EndpointAddress` 建構函式。 將指定WSDL的字串值傳遞至AEM Forms服務(例如， `http://localhost:8080/soap/services/SignatureService?WSDL`)。 您不需要使用 `lc_version` 屬性。 當您建立服務參考時，會使用此屬性。)
+   * 建立 `System.ServiceModel.BasicHttpBinding` 物件，方法是取得 `SignatureServiceClient.Endpoint.Binding` 欄位。 將傳回值轉換為 `BasicHttpBinding`.
+   * 設定 `System.ServiceModel.BasicHttpBinding` 物件的 `MessageEncoding` 欄位至 `WSMessageEncoding.Mtom`. 此值可確保使用MTOM。
+   * 執行下列工作來啟用基本HTTP驗證：
 
-      * 将AEM表单用户名分配给字段 `SignatureServiceClient.ClientCredentials.UserName.UserName`.
-      * 将相应的密码值分配给字段 `SignatureServiceClient.ClientCredentials.UserName.Password`.
-      * 分配常量值 `HttpClientCredentialType.Basic` 到字段 `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
-      * 分配常量值 `BasicHttpSecurityMode.TransportCredentialOnly` 到字段 `BasicHttpBindingSecurity.Security.Mode`.
+      * 將AEM表單使用者名稱指派給欄位 `SignatureServiceClient.ClientCredentials.UserName.UserName`.
+      * 將對應的密碼值指派給欄位 `SignatureServiceClient.ClientCredentials.UserName.Password`.
+      * 指派常數值 `HttpClientCredentialType.Basic` 至欄位 `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
+      * 指派常數值 `BasicHttpSecurityMode.TransportCredentialOnly` 至欄位 `BasicHttpBindingSecurity.Security.Mode`.
 
-1. 获取要认证的PDF文档
+1. 取得PDF檔案以認證
 
-   * 创建 `BLOB` 对象。 此 `BLOB` 对象用于存储已验证的PDF文档。
-   * 创建 `System.IO.FileStream` 对象，方法是调用其构造函数并传递一个字符串值，该字符串值表示要认证的PDF文档的文件位置和打开文件的模式。
-   * 创建一个字节数组，用于存储 `System.IO.FileStream` 对象。 您可以通过获取 `System.IO.FileStream` 对象的 `Length` 属性。
-   * 通过调用 `System.IO.FileStream` 对象的 `Read` 方法，并传递字节数组、起始位置和要读取的流长度。
-   * 填充 `BLOB` 对象(通过指定其 `MTOM` 数据成员字节数组的内容。
+   * 建立 `BLOB` 物件（使用其建構函式）。 此 `BLOB` 物件是用來儲存已驗證的PDF檔案。
+   * 建立 `System.IO.FileStream` 物件，方法是叫用其建構函式並傳遞字串值，該字串值代表PDF檔案要認證的檔案位置，以及開啟檔案的模式。
+   * 建立位元組陣列，儲存 `System.IO.FileStream` 物件。 您可以取得 `System.IO.FileStream` 物件的 `Length` 屬性。
+   * 叫用 `System.IO.FileStream` 物件的 `Read` 方法，並傳遞位元組陣列、起始位置以及要讀取的資料流長度。
+   * 填入 `BLOB` 物件，透過指派其 `MTOM` 資料成員位元組陣列的內容。
 
-1. 认证PDF文档
+1. 認證PDF檔案
 
-   PDF通过调用 `SignatureServiceClient` 对象的 `certify` 方法，并传递以下值：
+   PDF透過叫用 `SignatureServiceClient` 物件的 `certify` 並傳遞下列值：
 
-   * 此 `BLOB` 表示要认证的PDF文档的对象。
-   * 一个字符串值，表示将包含该签名的签名字段的名称。
-   * A `Credential` 表示用于验证PDF文档的凭据的对象。 创建 `Credential` 对象，并通过将值指定给 `Credential` 对象的 `alias` 属性。
-   * A `HashAlgorithm` 指定静态数据成员的对象，表示用于摘要PDF文档的哈希算法。 例如，您可以指定 `HashAlgorithm.SHA1` 以使用SHA1算法。
-   * 一个布尔值，指定是否使用哈希算法。
-   * 一个字符串值，它表示PDF文档获得认证的原因。
-   * 表示签名者位置的字符串值。
-   * 表示签名者联系信息的字符串值。
-   * An `MDPPermissions` 对象的静态数据成员，指定可以对使签名失效的PDF文档执行的操作。
-   * 一个布尔值，指定是否使用 `MDPPermissions` 作为上一个参数值传递的对象。
-   * 一个字符串值，它说明使签名失效的操作。
-   * A `PDFSignatureAppearanceOptions` 控制认证签名外观的对象。 创建 `PDFSignatureAppearanceOptions` 对象。 可以通过设置特征码的一个数据成员来修改特征码的外观。
-   * A `System.Boolean` 指定是否对签名者的证书执行吊销检查的对象。 如果完成此吊销检查，则会将其嵌入签名中。 默认为 `false`。
-   * A `System.Boolean` 指定验证的签名字段是否锁定的对象。 如果该字段已锁定，则签名字段将标记为只读，其属性无法修改，不具有所需权限的任何人都无法清除该字段。 默认为 `false`。
-   * A `System.Boolean` 指定签名字段是否锁定的对象。 也就是说，如果你通过 `true` 到上一个参数，然后传递 `true` 至此参数。
-   * An `OCSPPreferences` 存储联机证书状态协议(OCSP)支持首选项的对象，提供用于验证PDF文档的凭据的状态信息。 如果未完成吊销检查，则不会使用此参数，您可以指定 `null`.
-   * A `CRLPreferences` 存储证书吊销列表(CRL)首选项的对象。 如果未完成吊销检查，则不会使用此参数，您可以指定 `null`.
-   * A `TSPPreferences` 存储时间戳提供程序(TSP)支持的首选项的对象。 例如，在您创建 `TSPPreferences` 对象，您可以通过设置 `TSPPreferences` 对象的 `tspServerURL` 数据成员。 此参数是可选的，可以是 `null`.
+   * 此 `BLOB` 代表要認證之PDF檔案的物件。
+   * 字串值，代表將包含簽章的簽章欄位名稱。
+   * A `Credential` 物件，代表用來認證PDF檔案的認證。 建立 `Credential` 物件，並透過指派值給 `Credential` 物件的 `alias` 屬性。
+   * A `HashAlgorithm` 指定靜態資料成員的物件，代表用於摘要PDF檔案的雜湊演演算法。 例如，您可以指定 `HashAlgorithm.SHA1` 以使用SHA1演演算法。
+   * Boolean值，指定是否使用雜湊演演算法。
+   * 代表PDF檔案獲得認證之原因的字串值。
+   * 代表簽署者位置的字串值。
+   * 代表簽署者聯絡資訊的字串值。
+   * 一個 `MDPPermissions` 物件的靜態資料成員，指定可在PDF檔案上執行的使簽名失效的動作。
+   * Boolean值，指定是否使用 `MDPPermissions` 作為上一個引數值傳遞的物件。
+   * 字串值，說明哪些動作會使簽章失效。
+   * A `PDFSignatureAppearanceOptions` 控制認證簽名外觀的物件。 建立 `PDFSignatureAppearanceOptions` 物件（使用其建構函式）。 您可以藉由設定特徵碼的其中一個資料成員來修改特徵碼的外觀。
+   * A `System.Boolean` 指定是否對簽署者的憑證執行撤銷檢查的物件。 如果完成此撤銷檢查，則會嵌入簽名中。 默认为 `false`。
+   * A `System.Boolean` 指定正在驗證的簽章欄位是否已鎖定的物件。 如果欄位已鎖定，則簽章欄位會標示為唯讀，其屬性無法修改，且沒有必要許可權的任何人都無法清除。 默认为 `false`。
+   * A `System.Boolean` 指定簽章欄位是否鎖定的物件。 也就是說，如果您通過 `true` 至上一個引數，然後傳遞 `true` 至此引數。
+   * 一個 `OCSPPreferences` 此物件儲存線上憑證狀態通訊協定(OCSP)支援的偏好設定，可提供用於認證PDF檔案的認證狀態相關資訊。 如果未完成撤銷檢查，則不會使用此引數，而且您可以指定 `null`.
+   * A `CRLPreferences` 儲存憑證撤銷清單(CRL)偏好設定的物件。 如果未完成撤銷檢查，則不會使用此引數，而且您可以指定 `null`.
+   * A `TSPPreferences` 儲存時間戳記提供者(TSP)支援之偏好設定的物件。 例如，在您建立 `TSPPreferences` 物件，您可以設定TSP的URL `TSPPreferences` 物件的 `tspServerURL` 資料成員。 此引數為選用引數，可以是 `null`.
 
-   此 `certify` 方法返回 `BLOB` 表示已验证PDF文档的对象。
+   此 `certify` 方法傳回 `BLOB` 代表已驗證PDF檔案的物件。
 
-1. 将认证的PDF文档另存为PDF文件
+1. 將認證的PDF檔案儲存為PDF檔案
 
-   * 创建 `System.IO.FileStream` 对象，方法是调用其构造函数并传递一个字符串值，该字符串值表示将包含已验证PDF文档的PDF文档的文件位置以及打开文件的模式。
-   * 创建一个字节数组，用于存储 `BLOB` 返回的对象 `certify` 方法。 通过获取的值填充字节数组 `BLOB` 对象的 `binaryData` 数据成员。
-   * 创建 `System.IO.BinaryWriter` 对象，方法是调用其构造函数 `System.IO.FileStream` 对象。
-   * PDF通过调用 `System.IO.BinaryWriter` 对象的 `Write` 方法和传递字节数组。
+   * 建立 `System.IO.FileStream` 物件，方法是叫用其建構函式並傳遞字串值，該字串值代表將包含已驗證PDF檔案的PDF檔案的檔案位置，以及開啟檔案的模式。
+   * 建立位元組陣列，儲存 `BLOB` 物件，由 `certify` 方法。 透過取得 `BLOB` 物件的 `binaryData` 資料成員。
+   * 建立 `System.IO.BinaryWriter` 物件，方法是叫用其建構函式並傳遞 `System.IO.FileStream` 物件。
+   * PDF透過叫用 `System.IO.BinaryWriter` 物件的 `Write` 方法並傳遞位元組陣列。
 
 **另请参阅**
 
-[认证PDF文档](digitally-signing-certifying-documents.md#certifying-pdf-documents)
+[認證PDF檔案](digitally-signing-certifying-documents.md#certifying-pdf-documents)
 
-[使用MTOM调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[使用MTOM叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[使用SwaRef调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[使用SwaRef叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
-## 验证数字签名 {#verifying-digital-signatures}
+## 驗證數位簽名 {#verifying-digital-signatures}
 
-可以验证数字签名，以确保已签名的PDF文档未被修改并且数字签名有效。 验证数字签名时，您可以检查签名的状态和签名的属性，如签名者的身份。 在信任数字签名之前，建议您对其进行验证。 验证数字签名时，引用包含数字签名的PDF文档。
+可以驗證數位簽章，以確保已簽署的PDF檔案未被修改且數位簽章有效。 驗證數位簽章時，您可以檢查簽章的狀態和簽章的屬性，例如簽署者的身分。 在信任數位簽名之前，建議您先驗證它。 驗證數位簽名時，請參考包含數位簽名的PDF檔案。
 
-假定签名者的身份未知。 在Acrobat中打开PDF文档时，将显示一条警告消息，指出签名者的身份未知，如下图所示。
+假設簽署者的身分不明。 當您在Acrobat中開啟PDF檔案時，會出現一則警告訊息，指出簽署者的身分不明，如下圖所示。
 
 ![vd_vd_verifysig](assets/vd_vd_verifysig.png)
 
-同样，当您以编程方式验证数字签名时，可以确定签名者的身份状态。 例如，如果您验证上图所示文档中的数字签名，则结果会是签名者的身份未知。
+同樣地，當您以程式設計方式驗證數位簽名時，您可以判斷簽名者的身分狀態。 例如，如果您驗證上圖所示檔案中的數位簽名，結果會是簽名者的身分不明。
 
 >[!NOTE]
 >
->有关签名服务和验证数字签名的更多信息，请参阅 [AEM Forms的服务参考](https://www.adobe.com/go/learn_aemforms_services_63).
+>如需有關簽名服務和驗證數位簽名的詳細資訊，請參閱 [AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
 
-### 步骤摘要 {#summary_of_steps-6}
+### 步驟摘要 {#summary_of_steps-6}
 
-要验证数字签名，请执行以下任务：
+若要驗證數位簽名，請執行下列工作：
 
-1. 包括项目文件。
-1. 创建签名客户端。
-1. 获取包含要验证的签名的PDF文档。
-1. 设置PKI运行时选项。
-1. 验证数字签名。
-1. 确定签名的状态。
-1. 确定签名者的身份。
+1. 包含專案檔案。
+1. 建立簽章使用者端。
+1. 取得包含要驗證之簽名的PDF檔案。
+1. 設定PKI執行階段選項。
+1. 驗證數位簽名。
+1. 判斷簽章的狀態。
+1. 判斷簽署者的身分。
 
-**包括项目文件**
+**包含專案檔案**
 
-在开发项目中包含必要的文件。 如果要使用Java创建客户端应用程序，请包含必要的JAR文件。 如果使用Web服务，请包含代理文件。
+在您的開發專案中包含必要的檔案。 如果您使用Java建立使用者端應用程式，請包含必要的JAR檔案。 如果您使用Web服務，請包含Proxy檔案。
 
-必须将以下JAR文件添加到项目的类路径中：
+下列JAR檔案必須新增到專案的類別路徑中：
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-signatures-client.jar
-* adobe-utilities.jar(如果在JBoss上部署了AEM Forms，则此为必填字段)
-* jbossall-client.jar(如果在JBoss上部署了AEM Forms，则此为必填字段)
+* adobe-utilities.jar (如果AEM Forms部署在JBoss上，則為必要)
+* jbossall-client.jar (如果AEM Forms部署在JBoss上，則為必要)
 
-有关这些JAR文件位置的信息，请参见 [包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
+有關這些JAR檔案位置的資訊，請參見 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
 
-**创建签名客户端**
+**建立簽名使用者端**
 
-以编程方式执行签名服务操作之前，请先创建签名服务客户端。
+以程式設計方式執行簽名服務操作之前，請先建立簽名服務使用者端。
 
-**获取包含要验证的签名的PDF文档**
+**取得包含要驗證之簽名的PDF檔案**
 
-要验证用于数字签名或认证PDF文档的签名，请获取包含签名的PDF文档。
+若要驗證用於數位簽署或認證PDF檔案的簽名，請取得包含簽名的PDF檔案。
 
-**设置PKI运行时选项**
+**設定PKI執行階段選項**
 
-设置签名服务在PDF文档中验证签名时使用的PKI运行时选项：
+設定Signature service在PDF檔案中驗證簽名時所使用的PKI執行階段選項：
 
-* 验证时间
-* 吊销检查
-* 时间戳值
+* 驗證時間
+* 撤銷檢查
+* 時間戳記值
 
-在设置这些选项时，您可以指定验证时间。 例如，您可以选择当前时间（验证器计算机上的时间），以指示使用当前时间。 有关不同时间值的信息，请参见 `VerificationTime` 中的枚举值 [AEM Forms API参考](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
+在設定這些選項時，您可以指定驗證時間。 例如，您可以選取目前時間（驗證器電腦上的時間），以指出要使用目前時間。 如需不同時間值的詳細資訊，請參閱 `VerificationTime` 列舉值於 [AEM Forms API參考](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
 
-您还可以指定是否在验证过程中执行吊销检查。 例如，您可以执行吊销检查以确定证书是否被吊销。 有关吊销检查选项的信息，请参见 `RevocationCheckStyle` 中的枚举值 [AEM Forms API参考](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
+您也可以指定是否在驗證程式中執行撤銷檢查。 例如，您可以執行撤銷檢查來決定是否撤銷憑證。 有關撤銷檢查選項的資訊，請參閱 `RevocationCheckStyle` 列舉值於 [AEM Forms API參考](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
 
-要对证书执行吊销检查，请使用 `CRLOptionSpec` 对象。 但是，如果您没有指定CRL服务器的URL，则签名服务会从证书中获取该URL。
+若要對憑證執行撤銷檢查，請使用 `CRLOptionSpec` 物件。 不過，如果您未指定CRL伺服器的URL，則簽章服務會從憑證中取得該URL。
 
-在执行吊销检查时，可以使用联机证书状态协议(OCSP)服务器，而不是使用CRL服务器。 通常，在使用OCSP服务器而不是CRL服务器时，吊销检查的执行速度会更快。 (请参阅 [联机证书状态协议](https://tools.ietf.org/html/rfc2560).)
+執行撤銷檢查時，您可以使用線上憑證狀態通訊協定(OCSP)伺服器，而不使用CRL伺服器。 通常，當使用OCSP伺服器而不是CRL伺服器時，撤銷檢查的執行速度會更快。 (請參閱 [線上憑證狀態通訊協定](https://tools.ietf.org/html/rfc2560).)
 
-您可以使用Adobe应用程序和服务来设置签名服务使用的CRL和OCSP服务器顺序。 例如，如果首先在Adobe应用程序和服务中设置了OCSP服务器，则会检查OCSP服务器，然后检查CRL服务器。
+您可以使用Adobe應用程式和服務來設定Signature服務使用的CRL和OCSP伺服器順序。 例如，如果先在Adobe應用程式和服務中設定OCSP伺服器，則會檢查OCSP伺服器，然後檢查CRL伺服器。
 
-如果不执行吊销检查，签名服务将不会检查证书是否被吊销。 即，忽略CRL和OCSP服务器信息。
-
->[!NOTE]
->
->您可以使用覆盖证书中指定的URL `CRLOptionSpec` 和 `OCSPOptionSpec` 对象。 例如，要覆盖CRL服务器，您可以调用 `CRLOptionSpec` 对象的 `setLocalURI` 方法。
-
-时间戳是指跟踪已签署或已验证文档修改时间的过程。 文档签署后，任何人都无法对其进行修改。 时间戳有助于强制实施已签署或已认证文档的有效性。 可以使用设置时间戳选项 `TSPOptionSpec` 对象。 例如，您可以指定时间戳提供程序(TSP)服务器的URL。
+如果您未執行撤銷檢查，Signature service就不會檢查憑證是否被撤銷。 也就是說，會忽略CRL和OCSP伺服器資訊。
 
 >[!NOTE]
 >
->在Java和Web服务快速启动中，验证时间设置为 `VerificationTime.CURRENT_TIME` 吊销检查设置为 `RevocationCheckStyle.BestEffort`. 由于未指定CRL或OCSP服务器信息，因此将从证书中获取服务器信息。
+>您可以使用覆寫憑證中指定的URL `CRLOptionSpec` 和 `OCSPOptionSpec` 物件。 例如，若要覆寫CRL伺服器，您可以叫用 `CRLOptionSpec` 物件的 `setLocalURI` 方法。
 
-**验证数字签名**
-
-要成功验证签名，请指定包含该签名的签名字段的完全限定名，例如 `form1[0].#subform[1].SignatureField3[3]`. 使用XFA表单字段时，您还可以使用签名字段的部分名称： `SignatureField3`.
-
-默认情况下，签名服务将验证后文档可签名的时间限制为65分钟。 如果用户尝试在当前时间验证签名，并且签名时间晚于当前时间且在65分钟内，则签名服务不会创建验证错误。
+時間戳記是追蹤已簽署或已驗證檔案修改時間的程式。 檔案簽署後，任何人都無法修改。 時間戳記有助於強制實施已簽署或已驗證檔案的有效性。 您可以使用設定時間戳記選項 `TSPOptionSpec` 物件。 例如，您可以指定時間戳記提供者(TSP)伺服器的URL。
 
 >[!NOTE]
 >
->有关验证签名时所需的其他值，请参见 [AEM Forms API参考](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
+>在Java和Web服務快速啟動中，驗證時間設定為 `VerificationTime.CURRENT_TIME` 且撤銷檢查設為 `RevocationCheckStyle.BestEffort`. 因為未指定CRL或OCSP伺服器資訊，所以會從憑證取得伺服器資訊。
 
-**确定签名的状态**
+**驗證數位簽名**
 
-作为验证数字签名的一部分，您可以检查签名的状态。
+若要成功驗證簽名，請指定包含簽名的簽名欄位的完整名稱，例如 `form1[0].#subform[1].SignatureField3[3]`. 使用XFA表單欄位時，您還可以使用簽名欄位的部分名稱： `SignatureField3`.
 
-**确定签名者的身份**
+依預設，簽名服務將驗證後檔案可簽署的時間限製為65分鐘。 如果使用者嘗試在目前時間驗證簽名，且簽署時間晚於目前時間且在65分鐘內，則簽名服務不會建立驗證錯誤。
 
-您可以确定签名者的身份，可以是以下值之一：
+>[!NOTE]
+>
+>有關驗證簽名時所需的其他值，請參閱 [AEM Forms API參考](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
 
-* **未知**：此签名者未知，因为无法执行签名者验证。
-* **受信任**：此签名者值得信任。
-* **不受信任**：此签名者不受信任。
+**判斷簽章的狀態**
+
+在驗證數位簽章時，您可以檢查簽章的狀態。
+
+**判斷簽署者的身分**
+
+您可以決定簽署者的身分，身分可以是下列其中一個值：
+
+* **未知**：此簽署者不明，因為無法執行簽署者驗證。
+* **受信任**：此簽署者值得信任。
+* **不受信任**：此簽署者不受信任。
 
 **另请参阅**
 
-[使用Java API验证数字签名](#verify-digital-signatures-using-the-java-api)
+[使用Java API驗證數位簽名](#verify-digital-signatures-using-the-java-api)
 
-[使用Web服务API验证数字签名](#verify-digital-signatures-using-the-web-service-api)
+[使用Web服務API驗證數位簽名](#verify-digital-signatures-using-the-web-service-api)
 
-[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
-[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### 使用Java API验证数字签名 {#verify-digital-signatures-using-the-java-api}
+### 使用Java API驗證數位簽名 {#verify-digital-signatures-using-the-java-api}
 
-使用签名服务API (Java)验证数字签名：
+使用Signature Service API (Java)驗證數位簽名：
 
-1. 包括项目文件
+1. 包含專案檔案
 
-   将客户端JAR文件（如adobe-signatures-client.jar）包含在Java项目的类路径中。
+   在您的Java專案的類別路徑中包含使用者端JAR檔案，例如adobe-signatures-client.jar。
 
-1. 创建签名客户端
+1. 建立簽名使用者端
 
-   * 创建 `ServiceClientFactory` 包含连接属性的对象。
-   * 创建 `SignatureServiceClient` 对象，使用它的构造函数传递 `ServiceClientFactory` 对象。
+   * 建立 `ServiceClientFactory` 包含連線屬性的物件。
+   * 建立 `SignatureServiceClient` 物件，使用它的建構函式並傳遞 `ServiceClientFactory` 物件。
 
-1. 获取包含要验证的签名的PDF文档
+1. 取得包含要驗證之簽名的PDF檔案
 
-   * 创建 `java.io.FileInputStream` 表示包含签名的PDF文档的对象，要使用签名的构造函数进行验证。 传递一个指定PDF文档位置的字符串值。
-   * 创建 `com.adobe.idp.Document` 对象，使用它的构造函数传递 `java.io.FileInputStream` 对象。
+   * 建立 `java.io.FileInputStream` 物件，代表包含簽名的PDF檔案，以使用它的建構函式進行驗證。 傳遞字串值，指定PDF檔案的位置。
+   * 建立 `com.adobe.idp.Document` 物件，使用它的建構函式並傳遞 `java.io.FileInputStream` 物件。
 
-1. 设置PKI运行时选项
+1. 設定PKI執行階段選項
 
-   * 创建 `PKIOptions` 对象。
-   * 通过调用 `PKIOptions` 对象的 `setVerificationTime` 方法和传递 `VerificationTime` 指定验证时间的枚举值。
-   * 通过调用设置吊销检查选项 `PKIOptions` 对象的 `setRevocationCheckStyle` 方法和传递 `RevocationCheckStyle` 指定是否执行吊销检查的枚举值。
+   * 建立 `PKIOptions` 物件（使用其建構函式）。
+   * 透過叫用設定驗證時間 `PKIOptions` 物件的 `setVerificationTime` 方法和傳遞 `VerificationTime` 指定驗證時間的列舉值。
+   * 透過叫用設定撤銷檢查選項 `PKIOptions` 物件的 `setRevocationCheckStyle` 方法和傳遞 `RevocationCheckStyle` 指定是否執行撤銷檢查的列舉值。
 
-1. 验证数字签名
+1. 驗證數位簽名
 
-   通过调用 `SignatureServiceClient` 对象的 `verify2` 方法，并传递以下值：
+   透過叫用 `SignatureServiceClient` 物件的 `verify2` 並傳遞下列值：
 
-   * A `com.adobe.idp.Document` 包含经过数字签名或认证的PDF文档的对象。
-   * 一个字符串值，表示包含要验证的签名的签名字段名称。
-   * A `PKIOptions` 包含PKI运行时选项的对象。
-   * A `VerifySPIOptions` 包含SPI信息的实例。 您可以指定 `null` （对于此参数）。
+   * A `com.adobe.idp.Document` 包含數位簽署或認證之PDF檔案的物件。
+   * 字串值，代表包含要驗證之簽章的簽章欄位名稱。
+   * A `PKIOptions` 包含PKI執行階段選項的物件。
+   * A `VerifySPIOptions` 包含SPI資訊的執行個體。 您可以指定 `null` 此引數的。
 
-   此 `verify2` 方法返回 `PDFSignatureVerificationInfo` 包含可用于验证数字签名的信息的对象。
+   此 `verify2` 方法傳回 `PDFSignatureVerificationInfo` 包含可用於驗證數位簽章之資訊的物件。
 
-1. 确定签名的状态
+1. 判斷簽章的狀態
 
-   * 通过调用 `PDFSignatureVerificationInfo` 对象的 `getStatus` 方法。 此方法会返回 `SignatureStatus` 指定签名状态的对象。 例如，如果未修改已签名的PDF文档，则此方法将返回 `SignatureStatus.DocumentSigNoChanges`.
+   * 透過叫用 `PDFSignatureVerificationInfo` 物件的 `getStatus` 方法。 此方法會傳回 `SignatureStatus` 指定簽章狀態的物件。 例如，如果未修改已簽署的PDF檔案，則此方法會傳回 `SignatureStatus.DocumentSigNoChanges`.
 
-1. 确定签名者的身份
+1. 判斷簽署者的身分
 
-   * 通过调用 `PDFSignatureVerificationInfo` 对象的 `getSigner` 方法。 此方法会返回 `IdentityInformation` 对象。
-   * 调用 `IdentityInformation` 对象的 `getStatus` 确定签名者身份的方法。 此方法会返回 `IdentityStatus` 指定标识的枚举值。 例如，如果签名者受信任，则此方法将返回 `IdentityStatus.TRUSTED`.
+   * 透過叫用 `PDFSignatureVerificationInfo` 物件的 `getSigner` 方法。 此方法會傳回 `IdentityInformation` 物件。
+   * 叫用 `IdentityInformation` 物件的 `getStatus` 判斷簽署者身分的方法。 此方法會傳回 `IdentityStatus` 指定身分的列舉值。 例如，如果簽署者受到信任，則此方法會傳回 `IdentityStatus.TRUSTED`.
 
 **另请参阅**
 
-[验证数字签名](#verify-digital-signatures-using-the-java-api)
+[驗證數位簽名](#verify-digital-signatures-using-the-java-api)
 
-[快速入门（SOAP模式）：使用Java API验证数字签名](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-verifying-a-digital-signature-using-the-java-api)
+[快速入門（SOAP模式）：使用Java API驗證數位簽名](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-verifying-a-digital-signature-using-the-java-api)
 
-[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
-[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### 使用Web服务API验证数字签名 {#verify-digital-signatures-using-the-web-service-api}
+### 使用Web服務API驗證數位簽名 {#verify-digital-signatures-using-the-web-service-api}
 
-使用签名服务API（Web服务）验证数字签名：
+使用Signature Service API （Web服務）驗證數位簽名：
 
-1. 包括项目文件
+1. 包含專案檔案
 
-   创建使用MTOM的Microsoft .NET项目。 确保使用以下WSDL定义： `http://localhost:8080/soap/services/SignatureService?WSDL&lc_version=9.0.1`.
+   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/SignatureService?WSDL&lc_version=9.0.1`.
 
    >[!NOTE]
    >
-   >Replace `localhost` 包含托管AEM Forms的服务器的IP地址。
+   >Replace `localhost` 搭配裝載AEM Forms之伺服器的IP位址。
 
-1. 创建签名客户端
+1. 建立簽名使用者端
 
-   * 创建 `SignatureServiceClient` 对象。
-   * 创建 `SignatureServiceClient.Endpoint.Address` 对象 `System.ServiceModel.EndpointAddress` 构造函数。 将指定WSDL的字符串值传递给AEM Forms服务(例如， `http://localhost:8080/soap/services/SignatureService?WSDL`)。 您无需使用 `lc_version` 属性。 创建服务引用时使用此属性。)
-   * 创建 `System.ServiceModel.BasicHttpBinding` 对象，方法是获取 `SignatureServiceClient.Endpoint.Binding` 字段。 将返回值强制转换为 `BasicHttpBinding`.
-   * 设置 `System.ServiceModel.BasicHttpBinding` 对象的 `MessageEncoding` 字段至 `WSMessageEncoding.Mtom`. 此值可确保使用MTOM。
-   * 通过执行以下任务启用基本HTTP身份验证：
+   * 建立 `SignatureServiceClient` 物件（使用其預設建構函式）。
+   * 建立 `SignatureServiceClient.Endpoint.Address` 物件，使用 `System.ServiceModel.EndpointAddress` 建構函式。 將指定WSDL的字串值傳遞至AEM Forms服務(例如， `http://localhost:8080/soap/services/SignatureService?WSDL`)。 您不需要使用 `lc_version` 屬性。 當您建立服務參考時，會使用此屬性。)
+   * 建立 `System.ServiceModel.BasicHttpBinding` 物件，方法是取得 `SignatureServiceClient.Endpoint.Binding` 欄位。 將傳回值轉換為 `BasicHttpBinding`.
+   * 設定 `System.ServiceModel.BasicHttpBinding` 物件的 `MessageEncoding` 欄位至 `WSMessageEncoding.Mtom`. 此值可確保使用MTOM。
+   * 執行下列工作來啟用基本HTTP驗證：
 
-      * 将AEM表单用户名分配给字段 `SignatureServiceClient.ClientCredentials.UserName.UserName`.
-      * 将相应的密码值分配给字段 `SignatureServiceClient.ClientCredentials.UserName.Password`.
-      * 分配常量值 `HttpClientCredentialType.Basic` 到字段 `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
-      * 分配常量值 `BasicHttpSecurityMode.TransportCredentialOnly` 到字段 `BasicHttpBindingSecurity.Security.Mode`.
+      * 將AEM表單使用者名稱指派給欄位 `SignatureServiceClient.ClientCredentials.UserName.UserName`.
+      * 將對應的密碼值指派給欄位 `SignatureServiceClient.ClientCredentials.UserName.Password`.
+      * 指派常數值 `HttpClientCredentialType.Basic` 至欄位 `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
+      * 指派常數值 `BasicHttpSecurityMode.TransportCredentialOnly` 至欄位 `BasicHttpBindingSecurity.Security.Mode`.
 
-1. 获取包含要验证的签名的PDF文档
+1. 取得包含要驗證之簽名的PDF檔案
 
-   * 创建 `BLOB` 对象。 此 `BLOB` 对象用于存储包含要验证的数字或认证签名的PDF文档。
-   * 创建 `System.IO.FileStream` 对象。 传递一个字符串值，该值表示已签名PDF文档的文件位置和打开文件的模式。
-   * 创建一个字节数组，用于存储 `System.IO.FileStream` 对象。 您可以通过获取 `System.IO.FileStream` 对象的 `Length` 属性。
-   * 通过调用 `System.IO.FileStream` 对象的 `Read` 方法。 传递字节数组、起始位置和要读取的流长度。
-   * 填充 `BLOB` 对象(通过指定其 `MTOM` 属性字节数组的内容。
+   * 建立 `BLOB` 物件（使用其建構函式）。 此 `BLOB` 物件是用來儲存包含要驗證的數位或認證簽名的PDF檔案。
+   * 建立 `System.IO.FileStream` 物件（透過叫用其建構函式）。 傳遞代表已簽署PDF檔案的檔案位置和開啟檔案的模式的字串值。
+   * 建立位元組陣列，儲存 `System.IO.FileStream` 物件。 您可以取得 `System.IO.FileStream` 物件的 `Length` 屬性。
+   * 叫用 `System.IO.FileStream` 物件的 `Read` 方法。 傳遞位元組陣列、起始位置以及要讀取的資料流長度。
+   * 填入 `BLOB` 物件，透過指派其 `MTOM` 屬性位元組陣列的內容。
 
-1. 设置PKI运行时选项
+1. 設定PKI執行階段選項
 
-   * 创建 `PKIOptions` 对象。
-   * 通过分配 `PKIOptions` 对象的 `verificationTime` 数据成员a `VerificationTime` 指定验证时间的枚举值。
-   * 通过分配 `PKIOptions` 对象的 `revocationCheckStyle` 数据成员a `RevocationCheckStyle` 指定是否执行吊销检查的枚举值。
+   * 建立 `PKIOptions` 物件（使用其建構函式）。
+   * 透過指派 `PKIOptions` 物件的 `verificationTime` 資料成員a `VerificationTime` 指定驗證時間的列舉值。
+   * 透過指派以下專案設定撤銷檢查選項 `PKIOptions` 物件的 `revocationCheckStyle` 資料成員a `RevocationCheckStyle` 指定是否執行撤銷檢查的列舉值。
 
-1. 验证数字签名
+1. 驗證數位簽名
 
-   通过调用 `SignatureServiceClient` 对象的 `verify2` 方法，并传递以下值：
+   透過叫用 `SignatureServiceClient` 物件的 `verify2` 並傳遞下列值：
 
-   * 此 `BLOB` 包含经过数字签名或认证的PDF文档的对象。
-   * 一个字符串值，表示包含要验证的签名的签名字段名称。
-   * A `PKIOptions` 包含PKI运行时选项的对象。
-   * A `VerifySPIOptions` 包含SPI信息的实例。 您可以指定 `null` （对于此参数）。
+   * 此 `BLOB` 包含數位簽署或認證之PDF檔案的物件。
+   * 字串值，代表包含要驗證之簽章的簽章欄位名稱。
+   * A `PKIOptions` 包含PKI執行階段選項的物件。
+   * A `VerifySPIOptions` 包含SPI資訊的執行個體。 您可以指定 `null` 此引數的。
 
-   此 `verify2` 方法返回 `PDFSignatureVerificationInfo` 包含可用于验证数字签名的信息的对象。
+   此 `verify2` 方法傳回 `PDFSignatureVerificationInfo` 包含可用於驗證數位簽章之資訊的物件。
 
-1. 确定签名的状态
+1. 判斷簽章的狀態
 
-   通过获取 `PDFSignatureVerificationInfo` 对象的 `status` 数据成员。 此数据成员存储 `SignatureStatus` 指定签名状态的对象。 例如，如果修改了已签名的PDF文档， `status` 数据成员存储值 `SignatureStatus.DocumentSigNoChanges`.
+   透過取得「 」的值，判斷簽章的狀態 `PDFSignatureVerificationInfo` 物件的 `status` 資料成員。 此資料成員會儲存 `SignatureStatus` 指定簽章狀態的物件。 例如，如果修改已簽署的PDF檔案，則 `status` 資料成員會儲存值 `SignatureStatus.DocumentSigNoChanges`.
 
-1. 确定签名者的身份
+1. 判斷簽署者的身分
 
-   * 通过检索的值，确定签名者的身份 `PDFSignatureVerificationInfo` 对象的 `signer` 数据成员。 此成员返回 `IdentityInformation` 对象。
-   * 检索 `IdentityInformation` 对象的 `status` 用于确定签名者身份的数据成员。 此数据成员返回 `IdentityStatus` 指定标识的枚举值。 例如，如果签名者受信任，则此成员会返回 `IdentityStatus.TRUSTED`.
+   * 透過擷取 `PDFSignatureVerificationInfo` 物件的 `signer` 資料成員。 此成員傳回 `IdentityInformation` 物件。
+   * 擷取 `IdentityInformation` 物件的 `status` 用於判斷簽署者身分的資料成員。 此資料成員傳回 `IdentityStatus` 指定身分的列舉值。 例如，如果簽署者受到信任，則此成員會傳回 `IdentityStatus.TRUSTED`.
 
 **另请参阅**
 
-[验证数字签名](#verify-digital-signatures-using-the-java-api)
+[驗證數位簽名](#verify-digital-signatures-using-the-java-api)
 
-[使用MTOM调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[使用MTOM叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[使用SwaRef调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[使用SwaRef叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
-## 验证多个数字签名 {#verifying-multiple-digital-signatures}
+## 驗證多個數位簽名 {#verifying-multiple-digital-signatures}
 
-AEM Forms提供了用于验证位于PDF文档中的所有数字签名的方法。 假设PDF文档包含多个数字签名，这是需要多个签名者签名的业务流程的结果。 例如，假设一项金融交易需要一位贷款管理人员和一位经理的签名。 您可以使用签名服务Java API或Web服务API来验证PDF文档中的所有签名。 验证多个数字签名时，您可以检查每个签名的状态和属性。 在信任数字签名之前，建议您对其进行验证。 建议您熟悉验证单个数字签名。
+AEM Forms提供可驗證位於PDF檔案中的所有數位簽名的方法。 假設PDF檔案包含多個數位簽名，因為業務流程需要來自多個簽名者的簽名。 例如，假設一項金融交易需要貸款專員和經理的簽名。 您可以使用Signature service Java API或Web服務API來驗證PDF檔案中的所有簽名。 驗證多個數位簽章時，您可以檢查每個簽章的狀態和屬性。 在您信任數位簽名之前，建議您先驗證它。 建議您熟悉驗證單一數位簽名。
 
 >[!NOTE]
 >
->有关签名服务和验证数字签名的更多信息，请参阅 [AEM Forms的服务参考](https://www.adobe.com/go/learn_aemforms_services_63).
+>如需有關簽名服務和驗證數位簽名的詳細資訊，請參閱 [AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
 
-### 步骤摘要 {#summary_of_steps-7}
+### 步驟摘要 {#summary_of_steps-7}
 
-要验证多个数字签名，请执行以下任务：
+若要驗證多個數位簽名，請執行下列工作：
 
-1. 包括项目文件。
-1. 创建签名客户端。
-1. 获取包含要验证的签名的PDF文档。
-1. 设置PKI运行时选项。
-1. 检索所有数字签名。
-1. 对所有签名进行迭代。
+1. 包含專案檔案。
+1. 建立簽章使用者端。
+1. 取得包含要驗證之簽名的PDF檔案。
+1. 設定PKI執行階段選項。
+1. 擷取所有數位簽名。
+1. 逐一檢視所有簽章。
 
-**包括项目文件**
+**包含專案檔案**
 
-在开发项目中包含必要的文件。 如果要使用Java创建客户端应用程序，请包含必要的JAR文件。 如果使用Web服务，请包含代理文件。
+在您的開發專案中包含必要的檔案。 如果您使用Java建立使用者端應用程式，請包含必要的JAR檔案。 如果您使用Web服務，請包含Proxy檔案。
 
-必须将以下JAR文件添加到项目的类路径中：
+下列JAR檔案必須新增到專案的類別路徑中：
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-signatures-client.jar
-* adobe-utilities.jar(如果在JBoss上部署了AEM Forms，则此为必填字段)
-* jbossall-client.jar(如果在JBoss上部署了AEM Forms，则此为必填字段)
+* adobe-utilities.jar (如果AEM Forms部署在JBoss上，則為必要)
+* jbossall-client.jar (如果AEM Forms部署在JBoss上，則為必要)
 
-有关这些JAR文件位置的信息，请参见 [包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
+有關這些JAR檔案位置的資訊，請參見 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
 
-**创建签名客户端**
+**建立簽名使用者端**
 
-以编程方式执行签名服务操作之前，请先创建签名服务客户端。
+以程式設計方式執行簽名服務操作之前，請先建立簽名服務使用者端。
 
-**获取包含要验证的签名的PDF文档**
+**取得包含要驗證之簽名的PDF檔案**
 
-要验证用于数字签名或认证PDF文档的签名，请获取包含签名的PDF文档。
+若要驗證用於數位簽署或認證PDF檔案的簽名，請取得包含簽名的PDF檔案。
 
-**设置PKI运行时选项**
+**設定PKI執行階段選項**
 
-设置以下PKI运行时选项，签名服务在验证PDF文档中的所有签名时使用这些选项：
+設定Signature service在驗證PDF檔案中的所有簽名時所使用的下列PKI執行階段選項：
 
-* 验证时间
-* 吊销检查
-* 时间戳值
+* 驗證時間
+* 撤銷檢查
+* 時間戳記值
 
-在设置这些选项时，您可以指定验证时间。 例如，您可以选择当前时间（验证器计算机上的时间），以指示使用当前时间。 有关不同时间值的信息，请参见 `VerificationTime` 中的枚举值 [AEM Forms API参考](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
+在設定這些選項時，您可以指定驗證時間。 例如，您可以選取目前時間（驗證器電腦上的時間），以指出要使用目前時間。 如需不同時間值的詳細資訊，請參閱 `VerificationTime` 列舉值於 [AEM Forms API參考](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
 
-您还可以指定是否在验证过程中执行吊销检查。 例如，您可以执行吊销检查以确定证书是否被吊销。 有关吊销检查选项的信息，请参见 `RevocationCheckStyle` 中的枚举值 [AEM Forms API参考](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
+您也可以指定是否在驗證程式中執行撤銷檢查。 例如，您可以執行撤銷檢查來決定是否撤銷憑證。 有關撤銷檢查選項的資訊，請參閱 `RevocationCheckStyle` 列舉值於 [AEM Forms API參考](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
 
-要对证书执行吊销检查，请使用 `CRLOptionSpec` 对象。 但是，如果您没有指定指向CRL服务器的URL，则签名服务会从证书中获取该URL。
+若要對憑證執行撤銷檢查，請使用 `CRLOptionSpec` 物件。 不過，如果您未指定CRL伺服器的URL，則簽章服務會從憑證取得該URL。
 
-在执行吊销检查时，可以使用联机证书状态协议(OCSP)服务器，而不是使用CRL服务器。 通常，在使用OCSP服务器而不是CRL服务器时，吊销检查的执行速度会更快。 (请参阅 [联机证书状态协议](https://tools.ietf.org/html/rfc2560).)
+執行撤銷檢查時，您可以使用線上憑證狀態通訊協定(OCSP)伺服器，而不使用CRL伺服器。 通常，使用OCSP伺服器而非CRL伺服器時，撤銷檢查的執行速度會更快。 (請參閱 [線上憑證狀態通訊協定](https://tools.ietf.org/html/rfc2560).)
 
-您可以使用Adobe应用程序和服务来设置签名服务使用的CRL和OCSP服务器顺序。 例如，如果首先在Adobe应用程序和服务中设置了OCSP服务器，则会检查OCSP服务器，然后检查CRL服务器。
+您可以使用Adobe應用程式和服務來設定Signature服務使用的CRL和OCSP伺服器順序。 例如，如果先在Adobe應用程式和服務中設定OCSP伺服器，則會檢查OCSP伺服器，然後檢查CRL伺服器。
 
-如果不执行吊销检查，签名服务将不会检查证书是否被吊销。 即，忽略CRL和OCSP服务器信息。
-
->[!NOTE]
->
->您可以使用覆盖证书中指定的URL `CRLOptionSpec` 和 `OCSPOptionSpec` 对象。 例如，要覆盖CRL服务器，您可以调用 `CRLOptionSpec` 对象的 `setLocalURI` 方法。
-
-时间戳是指跟踪已签署或已验证文档修改时间的过程。 文档签署后，任何人都无法对其进行修改。 时间戳有助于强制实施已签署或已认证文档的有效性。 可以使用设置时间戳选项 `TSPOptionSpec` 对象。 例如，您可以指定时间戳提供程序(TSP)服务器的URL。
+如果您未執行撤銷檢查，Signature service就不會檢查憑證是否被撤銷。 也就是說，會忽略CRL和OCSP伺服器資訊。
 
 >[!NOTE]
 >
->在Java和Web服务快速启动中，验证时间设置为 `VerificationTime.CURRENT_TIME` 吊销检查设置为 `RevocationCheckStyle.BestEffort`. 由于未指定CRL或OCSP服务器信息，因此将从证书中获取服务器信息。
+>您可以使用覆寫憑證中指定的URL `CRLOptionSpec` 和 `OCSPOptionSpec` 物件。 例如，若要覆寫CRL伺服器，您可以叫用 `CRLOptionSpec` 物件的 `setLocalURI` 方法。
 
-**检索所有数字签名**
-
-要验证位于PDF文档中的所有数字签名，请从PDF文档中检索数字签名。 所有签名都将返回一个列表。 作为验证数字签名的一部分，检查签名的状态。
+時間戳記是追蹤已簽署或已驗證檔案修改時間的程式。 檔案簽署後，任何人都無法修改。 時間戳記有助於強制實施已簽署或已驗證檔案的有效性。 您可以使用 `TSPOptionSpec` 物件。 例如，您可以指定時間戳記提供者(TSP)伺服器的URL。
 
 >[!NOTE]
 >
->与验证单个数字签名不同，验证多个签名时，不需要指定签名字段名称。
+>在Java和Web服務快速啟動中，驗證時間設定為 `VerificationTime.CURRENT_TIME` 且撤銷檢查設為 `RevocationCheckStyle.BestEffort`. 因為未指定CRL或OCSP伺服器資訊，所以會從憑證取得伺服器資訊。
 
-**对所有签名进行迭代**
+**擷取所有數位簽名**
 
-逐个签名进行迭代。 即对每个签名，验证数字签名，并检查签名者的身份和每个签名的状态。 (请参阅 [验证数字签名](#verify-digital-signatures-using-the-java-api).)
+若要驗證PDF檔案中的所有數位簽名，請從PDF檔案中擷取數位簽名。 所有簽名都會傳回清單中。 在驗證數位簽章時，請檢查簽章的狀態。
 
 >[!NOTE]
 >
->如果要求是整个文档，则无需迭代所有签名。
+>與驗證單一數位簽章不同，驗證多個簽章時，您不需要指定簽章欄位名稱。
+
+**逐一檢視所有簽章**
+
+逐一檢視每個簽章。 也就是說，對於每個簽名，驗證數位簽名，並檢查簽名者的身份和每個簽名的狀態。 (請參閱 [驗證數位簽名](#verify-digital-signatures-using-the-java-api).)
+
+>[!NOTE]
+>
+>如果要求是整個檔案，則不需要反複檢查所有簽名。
 
 **另请参阅**
 
-[使用Java API验证多个数字签名](#verify-digital-signatures-using-the-java-api)
+[使用Java API驗證多個數位簽名](#verify-digital-signatures-using-the-java-api)
 
-[使用Web服务API验证多个数字签名](#verify-digital-signatures-using-the-web-service-api)
+[使用Web服務API驗證多個數位簽名](#verify-digital-signatures-using-the-web-service-api)
 
-[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
-[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### 使用Java API验证多个数字签名 {#verify-multiple-digital-signatures-using-the-java-api}
+### 使用Java API驗證多個數位簽名 {#verify-multiple-digital-signatures-using-the-java-api}
 
-使用签名服务API (Java)验证多个数字签名：
+使用Signature Service API (Java)驗證多個數位簽名：
 
-1. 包括项目文件
+1. 包含專案檔案
 
-   将客户端JAR文件（如adobe-signatures-client.jar）包含在Java项目的类路径中。
+   在您的Java專案的類別路徑中包含使用者端JAR檔案，例如adobe-signatures-client.jar。
 
-1. 创建签名客户端
+1. 建立簽名使用者端
 
-   * 创建 `ServiceClientFactory` 包含连接属性的对象。
-   * 创建 `SignatureServiceClient` 对象，使用它的构造函数传递 `ServiceClientFactory` 对象。
+   * 建立 `ServiceClientFactory` 包含連線屬性的物件。
+   * 建立 `SignatureServiceClient` 物件，使用它的建構函式並傳遞 `ServiceClientFactory` 物件。
 
-1. 获取包含要验证的签名的PDF文档
+1. 取得包含要驗證之簽名的PDF檔案
 
-   * 创建 `java.io.FileInputStream` 表示包含多个数字签名的PDF文档的对象，可通过使用其构造函数进行验证。 传递一个指定PDF文档位置的字符串值。
-   * 创建 `com.adobe.idp.Document` 对象，使用它的构造函数传递 `java.io.FileInputStream` 对象。
+   * 建立 `java.io.FileInputStream` 物件，代表包含多個數位簽章的PDF檔案，以透過其建構函式進行驗證。 傳遞字串值，指定PDF檔案的位置。
+   * 建立 `com.adobe.idp.Document` 物件，使用它的建構函式並傳遞 `java.io.FileInputStream` 物件。
 
-1. 设置PKI运行时选项
+1. 設定PKI執行階段選項
 
-   * 创建 `PKIOptions` 对象。
-   * 通过调用 `PKIOptions` 对象的 `setVerificationTime` 方法和传递 `VerificationTime` 指定验证时间的枚举值。
-   * 通过调用设置吊销检查选项 `PKIOptions` 对象的 `setRevocationCheckStyle` 方法和传递 `RevocationCheckStyle` 指定是否执行吊销检查的枚举值。
+   * 建立 `PKIOptions` 物件（使用其建構函式）。
+   * 透過叫用設定驗證時間 `PKIOptions` 物件的 `setVerificationTime` 方法和傳遞 `VerificationTime` 指定驗證時間的列舉值。
+   * 透過叫用設定撤銷檢查選項 `PKIOptions` 物件的 `setRevocationCheckStyle` 方法和傳遞 `RevocationCheckStyle` 指定是否執行撤銷檢查的列舉值。
 
-1. 检索所有数字签名
+1. 擷取所有數位簽名
 
-   调用 `SignatureServiceClient` 对象的 `verifyPDFDocument` 方法，并传递以下值：
+   叫用 `SignatureServiceClient` 物件的 `verifyPDFDocument` 方法並傳遞下列值：
 
-   * A `com.adobe.idp.Document` 包含包含包含多个数字签名的PDF文档的对象。
-   * A `PKIOptions` 包含PKI运行时选项的对象。
-   * A `VerifySPIOptions` 包含SPI信息的实例。 您可以指定 `null` （对于此参数）。
+   * A `com.adobe.idp.Document` 包含包含包含多個數位簽名的PDF檔案的物件。
+   * A `PKIOptions` 包含PKI執行階段選項的物件。
+   * A `VerifySPIOptions` 包含SPI資訊的執行個體。 您可以指定 `null` 此引數的。
 
-   此 `verifyPDFDocument` 方法返回 `PDFDocumentVerificationInfo` 包含有关PDF文档中所有数字签名信息的对象。
+   此 `verifyPDFDocument` 方法傳回 `PDFDocumentVerificationInfo` 包含位於PDF檔案中所有數位簽名相關資訊的物件。
 
-1. 对所有签名进行迭代
+1. 逐一檢視所有簽章
 
-   * 通过调用 `PDFDocumentVerificationInfo` 对象的 `getVerificationInfos` 方法。 此方法会返回 `java.util.List` 对象，其中每个元素为 `PDFSignatureVerificationInfo` 对象。 使用 `java.util.Iterator` 对象对签名列表进行迭代。
-   * 使用 `PDFSignatureVerificationInfo` 对象，则可以通过调用 `PDFSignatureVerificationInfo` 对象的 `getStatus` 方法。 此方法会返回 `SignatureStatus` 其静态数据成员通知您签名状态的对象。 例如，如果签名未知，此方法将返回 `SignatureStatus.DocumentSignatureUnknown`.
+   * 透過叫用 `PDFDocumentVerificationInfo` 物件的 `getVerificationInfos` 方法。 此方法會傳回 `java.util.List` 物件，其中每個元素為 `PDFSignatureVerificationInfo` 物件。 使用 `java.util.Iterator` 物件，逐一檢視簽名清單。
+   * 使用 `PDFSignatureVerificationInfo` 物件時，您可以執行工作，例如透過叫用 `PDFSignatureVerificationInfo` 物件的 `getStatus` 方法。 此方法會傳回 `SignatureStatus` 其靜態資料成員通知您簽名狀態的物件。 例如，如果簽章不明，此方法會傳回 `SignatureStatus.DocumentSignatureUnknown`.
 
 **另请参阅**
 
-[验证多个数字签名](#verifying-multiple-digital-signatures)
+[驗證多個數位簽名](#verifying-multiple-digital-signatures)
 
-[快速入门（SOAP模式）：使用Java API验证多个数字签名](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-verifying-multiple-digital-signatures-using-the-java-api)
+[快速入門（SOAP模式）：使用Java API驗證多個數位簽名](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-verifying-multiple-digital-signatures-using-the-java-api)
 
-[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
-[验证数字签名](#verify-digital-signatures-using-the-java-api)
+[驗證數位簽名](#verify-digital-signatures-using-the-java-api)
 
-[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### 使用Web服务API验证多个数字签名 {#verifying-multiple-digital-signatures-using-the-web-service-api}
+### 使用Web服務API驗證多個數位簽名 {#verifying-multiple-digital-signatures-using-the-web-service-api}
 
-使用签名服务API（Web服务）验证多个数字签名：
+使用Signature Service API （Web服務）驗證多個數位簽名：
 
-1. 包括项目文件
+1. 包含專案檔案
 
-   创建使用MTOM的Microsoft .NET项目。 确保使用以下WSDL定义： `http://localhost:8080/soap/services/SignatureService?WSDL&lc_version=9.0.1`.
+   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/SignatureService?WSDL&lc_version=9.0.1`.
 
    >[!NOTE]
    >
-   >Replace `localhost` 包含托管AEM Forms的服务器的IP地址。
+   >Replace `localhost` 搭配裝載AEM Forms之伺服器的IP位址。
 
-1. 创建签名客户端
+1. 建立簽名使用者端
 
-   * 创建 `SignatureServiceClient` 对象。
-   * 创建 `SignatureServiceClient.Endpoint.Address` 对象 `System.ServiceModel.EndpointAddress` 构造函数。 将指定WSDL的字符串值传递给AEM Forms服务(例如， `http://localhost:8080/soap/services/SignatureService?WSDL`)。 您无需使用 `lc_version` 属性。 创建服务引用时使用此属性。)
-   * 创建 `System.ServiceModel.BasicHttpBinding` 对象，方法是获取 `SignatureServiceClient.Endpoint.Binding` 字段。 将返回值强制转换为 `BasicHttpBinding`.
-   * 设置 `System.ServiceModel.BasicHttpBinding` 对象的 `MessageEncoding` 字段至 `WSMessageEncoding.Mtom`. 此值可确保使用MTOM。
-   * 通过执行以下任务启用基本HTTP身份验证：
+   * 建立 `SignatureServiceClient` 物件（使用其預設建構函式）。
+   * 建立 `SignatureServiceClient.Endpoint.Address` 物件，使用 `System.ServiceModel.EndpointAddress` 建構函式。 將指定WSDL的字串值傳遞至AEM Forms服務(例如， `http://localhost:8080/soap/services/SignatureService?WSDL`)。 您不需要使用 `lc_version` 屬性。 當您建立服務參考時，會使用此屬性。)
+   * 建立 `System.ServiceModel.BasicHttpBinding` 物件，方法是取得 `SignatureServiceClient.Endpoint.Binding` 欄位。 將傳回值轉換為 `BasicHttpBinding`.
+   * 設定 `System.ServiceModel.BasicHttpBinding` 物件的 `MessageEncoding` 欄位至 `WSMessageEncoding.Mtom`. 此值可確保使用MTOM。
+   * 執行下列工作來啟用基本HTTP驗證：
 
-      * 将AEM表单用户名分配给字段 `SignatureServiceClient.ClientCredentials.UserName.UserName`.
-      * 将相应的密码值分配给字段 `SignatureServiceClient.ClientCredentials.UserName.Password`.
-      * 分配常量值 `HttpClientCredentialType.Basic` 到字段 `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
-      * 分配常量值 `BasicHttpSecurityMode.TransportCredentialOnly` 到字段 `BasicHttpBindingSecurity.Security.Mode`.
+      * 將AEM表單使用者名稱指派給欄位 `SignatureServiceClient.ClientCredentials.UserName.UserName`.
+      * 將對應的密碼值指派給欄位 `SignatureServiceClient.ClientCredentials.UserName.Password`.
+      * 指派常數值 `HttpClientCredentialType.Basic` 至欄位 `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
+      * 指派常數值 `BasicHttpSecurityMode.TransportCredentialOnly` 至欄位 `BasicHttpBindingSecurity.Security.Mode`.
 
-1. 获取包含要验证的签名的PDF文档
+1. 取得包含要驗證之簽名的PDF檔案
 
-   * 创建 `BLOB` 对象。 此 `BLOB` 对象存储包含多个要验证的数字签名的PDF文档。
-   * 创建 `System.IO.FileStream` 对象。 传递一个字符串值，该值表示PDF文档的文件位置和打开文件的模式。
-   * 创建一个字节数组，用于存储 `System.IO.FileStream` 对象。 您可以通过获取 `System.IO.FileStream` 对象的 `Length` 属性。
-   * 通过调用 `System.IO.FileStream` 对象的 `Read` 方法。 传递字节数组、起始位置和要读取的流长度。
-   * 填充 `BLOB` 对象(通过指定其 `MTOM` 属性字节数组的内容。
+   * 建立 `BLOB` 物件（使用其建構函式）。 此 `BLOB` 物件會儲存包含多個要驗證的數位簽名的PDF檔案。
+   * 建立 `System.IO.FileStream` 物件（透過叫用其建構函式）。 傳遞代表PDF檔案的檔案位置和開啟檔案的模式的字串值。
+   * 建立位元組陣列，儲存 `System.IO.FileStream` 物件。 您可以取得 `System.IO.FileStream` 物件的 `Length` 屬性。
+   * 叫用 `System.IO.FileStream` 物件的 `Read` 方法。 傳遞位元組陣列、起始位置以及要讀取的資料流長度。
+   * 填入 `BLOB` 物件，透過指派其 `MTOM` 屬性位元組陣列的內容。
 
-1. 设置PKI运行时选项
+1. 設定PKI執行階段選項
 
-   * 创建 `PKIOptions` 对象。
-   * 通过分配 `PKIOptions` 对象的 `verificationTime` 数据成员a `VerificationTime` 指定验证时间的枚举值。
-   * 通过分配 `PKIOptions` 对象的 `revocationCheckStyle` 数据成员a `RevocationCheckStyle` 指定是否执行吊销检查的枚举值。
+   * 建立 `PKIOptions` 物件（使用其建構函式）。
+   * 透過指派 `PKIOptions` 物件的 `verificationTime` 資料成員a `VerificationTime` 指定驗證時間的列舉值。
+   * 透過指派以下專案來設定撤銷檢查選項 `PKIOptions` 物件的 `revocationCheckStyle` 資料成員a `RevocationCheckStyle` 指定是否執行撤銷檢查的列舉值。
 
-1. 检索所有数字签名
+1. 擷取所有數位簽名
 
-   调用 `SignatureServiceClient` 对象的 `verifyPDFDocument` 方法，并传递以下值：
+   叫用 `SignatureServiceClient` 物件的 `verifyPDFDocument` 方法並傳遞下列值：
 
-   * A `BLOB` 包含包含包含多个数字签名的PDF文档的对象。
-   * A `PKIOptions` 包含PKI运行时选项的对象。
-   * A `VerifySPIOptions` 包含SPI信息的实例。 您可以为此参数指定null。
+   * A `BLOB` 包含包含包含多個數位簽名的PDF檔案的物件。
+   * A `PKIOptions` 包含PKI執行階段選項的物件。
+   * A `VerifySPIOptions` 包含SPI資訊的執行個體。 您可以為此引數指定null。
 
-   此 `verifyPDFDocument` 方法返回 `PDFDocumentVerificationInfo` 包含有关PDF文档中所有数字签名信息的对象。
+   此 `verifyPDFDocument` 方法傳回 `PDFDocumentVerificationInfo` 包含位於PDF檔案中所有數位簽名相關資訊的物件。
 
-1. 对所有签名进行迭代
+1. 逐一檢視所有簽章
 
-   * 通过获取 `PDFDocumentVerificationInfo` 对象的 `verificationInfos` 数据成员。 此数据成员返回 `Object` 数组，其中每个元素为 `PDFSignatureVerificationInfo` 对象。
-   * 使用 `PDFSignatureVerificationInfo` 对象，您可以通过获取 `PDFSignatureVerificationInfo` 对象的 `status` 数据成员。 此数据成员返回 `SignatureStatus` 其静态数据成员通知您签名状态的对象。 例如，如果签名未知，此方法将返回 `SignatureStatus.DocumentSignatureUnknown`.
+   * 透過取得 `PDFDocumentVerificationInfo` 物件的 `verificationInfos` 資料成員。 此資料成員傳回 `Object` 陣列，其中每個元素為 `PDFSignatureVerificationInfo` 物件。
+   * 使用 `PDFSignatureVerificationInfo` 物件，您可以透過取得 `PDFSignatureVerificationInfo` 物件的 `status` 資料成員。 此資料成員傳回 `SignatureStatus` 其靜態資料成員通知您簽名狀態的物件。 例如，如果簽章不明，此方法會傳回 `SignatureStatus.DocumentSignatureUnknown`.
 
 **另请参阅**
 
-[验证多个数字签名](#verifying-multiple-digital-signatures)
+[驗證多個數位簽名](#verifying-multiple-digital-signatures)
 
-[使用MTOM调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[使用MTOM叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[使用SwaRef调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[使用SwaRef叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
-## 删除数字签名 {#removing-digital-signatures}
+## 移除數位簽名 {#removing-digital-signatures}
 
-必须先从签名字段中删除数字签名，然后才能应用更新的数字签名。 无法覆盖数字签名。 如果尝试将数字签名应用于包含签名的签名字段，则会发生异常。
+數位簽章必須先從簽章欄位中移除，才能套用更新的數位簽章。 無法覆寫數位簽章。 如果您嘗試將數位簽章套用至包含簽章的簽章欄位，會發生例外狀況。
 
 >[!NOTE]
 >
->有关Signature服务的详细信息，请参见 [AEM Forms的服务参考](https://www.adobe.com/go/learn_aemforms_services_63).
+>如需Signature服務的詳細資訊，請參閱 [AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
 
-### 步骤摘要 {#summary_of_steps-8}
+### 步驟摘要 {#summary_of_steps-8}
 
-要从签名字段中删除数字签名，请执行以下任务：
+若要從簽名欄位中移除數位簽名，請執行下列工作：
 
-1. 包括项目文件。
-1. 创建签名客户端。
-1. 获取包含要删除的签名的PDF文档。
-1. 从签名字段中移除数字签名。
-1. 将PDF文档另存为PDF文件。
+1. 包含專案檔案。
+1. 建立簽章使用者端。
+1. 取得包含要移除之簽名的PDF檔案。
+1. 從簽名欄位中移除數位簽名。
+1. 將PDF檔案儲存為PDF檔案。
 
-**包括项目文件**
+**包含專案檔案**
 
-在开发项目中包含必要的文件。 如果要使用Java创建客户端应用程序，则包含必要的JAR文件。 如果您使用的是Web服务，请确保包含代理文件。
+將必要的檔案納入您的開發專案中。 如果您使用Java建立使用者端應用程式，請包含必要的JAR檔案。 如果您使用Web服務，請務必包含Proxy檔案。
 
-必须将以下JAR文件添加到项目的类路径中：
+下列JAR檔案必須新增到專案的類別路徑中：
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-signatures-client.jar
-* adobe-utilities.jar(如果在JBoss上部署了AEM Forms，则此为必填字段)
-* jbossall-client.jar(如果在JBoss上部署了AEM Forms，则此为必填字段)
+* adobe-utilities.jar (如果AEM Forms部署在JBoss上，則為必要)
+* jbossall-client.jar (如果AEM Forms部署在JBoss上，則為必要)
 
-有关这些JAR文件位置的信息，请参见 [包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
+有關這些JAR檔案位置的資訊，請參見 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
 
-**创建签名客户端**
+**建立簽名使用者端**
 
-必须先创建签名服务客户端，然后才能以编程方式执行签名服务操作。
+您必須先建立簽名服務使用者端，才能以程式設計方式執行簽名服務作業。
 
-**获取包含要删除的签名的PDF文档**
+**取得包含要移除之簽名的PDF檔案**
 
-要从PDF文档中删除签名，必须获取包含签名的PDF文档。
+若要從PDF檔案中移除簽名，您必須取得包含簽名的PDF檔案。
 
-**从签名字段中移除数字签名**
+**從簽名欄位中移除數位簽名**
 
-要成功地从PDF文档中删除数字签名，必须指定包含数字签名的签名字段的名称。 此外，您必须具有删除数字签名的权限；否则，会发生异常。
+若要成功從PDF檔案中移除數位簽名，您必須指定包含數位簽名的簽名欄位名稱。 此外，您必須擁有移除數位簽章的許可權；否則，會發生例外狀況。
 
-**将PDF文档另存为PDF文件**
+**將PDF檔案儲存為PDF檔案**
 
-签名服务从签名字段中移除数字签名后，您可以将PDF文档另存为PDF文件，以便用户可在Acrobat或Adobe Reader中打开它。
-
-**另请参阅**
-
-[使用Java API删除数字签名](digitally-signing-certifying-documents.md#remove-digital-signatures-using-the-java-api)
-
-[使用Web服务API删除数字签名](digitally-signing-certifying-documents.md#remove-digital-signatures-using-the-web-service-api)
-
-[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
-
-[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
-
-[添加签名字段](digitally-signing-certifying-documents.md#adding-signature-fields)
-
-### 使用Java API删除数字签名 {#remove-digital-signatures-using-the-java-api}
-
-使用签名API (Java)删除数字签名：
-
-1. 包括项目文件
-
-   在Java项目的类路径中包含客户端JAR文件，如adobe-signatures-client.jar。
-
-1. 创建签名客户端。
-
-   * 创建 `ServiceClientFactory` 包含连接属性的对象。
-   * 创建 `SignatureServiceClient` 对象，使用它的构造函数传递 `ServiceClientFactory` 对象。
-
-1. 获取包含要删除的签名的PDF文档
-
-   * 创建 `java.io.FileInputStream` 表示包含要移除的签名的PDF文档的对象，方法是使用其构造函数并传递一个指定PDF文档位置的字符串值。
-   * 创建 `com.adobe.idp.Document` 对象，使用它的构造函数传递 `java.io.FileInputStream` 对象。
-
-1. 从签名字段中移除数字签名
-
-   通过调用 `SignatureServiceClient` 对象的 `clearSignatureField` 方法，并传递以下值：
-
-   * A `com.adobe.idp.Document` 表示包含要删除的签名的PDF文档的对象。
-   * 一个字符串值，指定包含数字签名的签名字段的名称。
-
-   此 `clearSignatureField` 方法返回 `com.adobe.idp.Document` 表示从中删除数字签名的PDF文档的对象。
-
-1. 将PDF文档另存为PDF文件
-
-   * 创建 `java.io.File` 对象并确保文件扩展名为.pdf。
-   * 调用 `com.adobe.idp.Document` 对象的 `copyToFile` 方法。 传递 `java.io.File` 对象以复制 `com.adobe.idp.Document` 对象到文件。 确保您使用 `Document` 返回的对象 `clearSignatureField` 方法。
+簽名服務從簽名欄位中移除數位簽名後，您可以將PDF檔案儲存為PDF檔案，以便使用者可以在Acrobat或Adobe Reader中開啟它。
 
 **另请参阅**
 
-[删除数字签名](digitally-signing-certifying-documents.md#removing-digital-signatures)
+[使用Java API移除數位簽名](digitally-signing-certifying-documents.md#remove-digital-signatures-using-the-java-api)
 
-[快速入门（SOAP模式）：使用Java API删除数字签名](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-removing-a-digital-signature-using-the-java-api)
+[使用Web服務API移除數位簽名](digitally-signing-certifying-documents.md#remove-digital-signatures-using-the-web-service-api)
 
-[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
-[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### 使用Web服务API删除数字签名 {#remove-digital-signatures-using-the-web-service-api}
+[新增簽名欄位](digitally-signing-certifying-documents.md#adding-signature-fields)
 
-使用签名API（Web服务）删除数字签名：
+### 使用Java API移除數位簽名 {#remove-digital-signatures-using-the-java-api}
 
-1. 包括项目文件
+使用簽名API (Java)移除數位簽名：
 
-   创建使用MTOM的Microsoft .NET项目。 确保使用以下WSDL定义： `http://localhost:8080/soap/services/SignatureService?WSDL&lc_version=9.0.1`.
+1. 包含專案檔案
+
+   在您的Java專案的類別路徑中包含使用者端JAR檔案，例如adobe-signatures-client.jar。
+
+1. 建立簽章使用者端。
+
+   * 建立 `ServiceClientFactory` 包含連線屬性的物件。
+   * 建立 `SignatureServiceClient` 物件，使用它的建構函式並傳遞 `ServiceClientFactory` 物件。
+
+1. 取得包含要移除之簽名的PDF檔案
+
+   * 建立 `java.io.FileInputStream` 物件，代表PDF檔案，其中包含要移除的簽名，方法是使用其建構函式並傳遞指定PDF檔案位置的字串值。
+   * 建立 `com.adobe.idp.Document` 物件，使用它的建構函式並傳遞 `java.io.FileInputStream` 物件。
+
+1. 從簽名欄位中移除數位簽名
+
+   透過叫用「 」，從簽名欄位中移除數位簽名 `SignatureServiceClient` 物件的 `clearSignatureField` 並傳遞下列值：
+
+   * A `com.adobe.idp.Document` 物件，代表包含要移除之簽名的PDF檔案。
+   * 字串值，指定包含數位簽章的簽章欄位名稱。
+
+   此 `clearSignatureField` 方法傳回 `com.adobe.idp.Document` 物件，代表從中移除數位簽名的PDF檔案。
+
+1. 將PDF檔案儲存為PDF檔案
+
+   * 建立 `java.io.File` 物件，並確認副檔名為.pdf。
+   * 叫用 `com.adobe.idp.Document` 物件的 `copyToFile` 方法。 傳遞 `java.io.File` 物件，以複製 `com.adobe.idp.Document` 物件至檔案。 確保您使用 `Document` 物件，由 `clearSignatureField` 方法。
+
+**另请参阅**
+
+[移除數位簽名](digitally-signing-certifying-documents.md#removing-digital-signatures)
+
+[快速入門（SOAP模式）：使用Java API移除數位簽名](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-removing-a-digital-signature-using-the-java-api)
+
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+
+[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+
+### 使用Web服務API移除數位簽名 {#remove-digital-signatures-using-the-web-service-api}
+
+使用Signature API （Web服務）移除數位簽名：
+
+1. 包含專案檔案
+
+   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/SignatureService?WSDL&lc_version=9.0.1`.
 
    >[!NOTE]
    >
-   >Replace `localhost` 包含托管AEM Forms的服务器的IP地址。
+   >Replace `localhost` 搭配裝載AEM Forms之伺服器的IP位址。
 
-1. 创建签名客户端
+1. 建立簽名使用者端
 
-   * 创建 `SignatureServiceClient` 对象。
-   * 创建 `SignatureServiceClient.Endpoint.Address` 对象 `System.ServiceModel.EndpointAddress` 构造函数。 将指定WSDL的字符串值传递给AEM Forms服务(例如， `http://localhost:8080/soap/services/SignatureService?WSDL`)。 您无需使用 `lc_version` 属性。 创建服务引用时使用此属性。)
-   * 创建 `System.ServiceModel.BasicHttpBinding` 对象，方法是获取 `SignatureServiceClient.Endpoint.Binding` 字段。 将返回值强制转换为 `BasicHttpBinding`.
-   * 设置 `System.ServiceModel.BasicHttpBinding` 对象的 `MessageEncoding` 字段至 `WSMessageEncoding.Mtom`. 此值可确保使用MTOM。
-   * 通过执行以下任务启用基本HTTP身份验证：
+   * 建立 `SignatureServiceClient` 物件（使用其預設建構函式）。
+   * 建立 `SignatureServiceClient.Endpoint.Address` 物件，使用 `System.ServiceModel.EndpointAddress` 建構函式。 將指定WSDL的字串值傳遞至AEM Forms服務(例如， `http://localhost:8080/soap/services/SignatureService?WSDL`)。 您不需要使用 `lc_version` 屬性。 當您建立服務參考時，會使用此屬性。)
+   * 建立 `System.ServiceModel.BasicHttpBinding` 物件，方法是取得 `SignatureServiceClient.Endpoint.Binding` 欄位。 將傳回值轉換為 `BasicHttpBinding`.
+   * 設定 `System.ServiceModel.BasicHttpBinding` 物件的 `MessageEncoding` 欄位至 `WSMessageEncoding.Mtom`. 此值可確保使用MTOM。
+   * 執行下列工作來啟用基本HTTP驗證：
 
-      * 将AEM表单用户名分配给字段 `SignatureServiceClient.ClientCredentials.UserName.UserName`.
-      * 将相应的密码值分配给字段 `SignatureServiceClient.ClientCredentials.UserName.Password`.
-      * 分配常量值 `HttpClientCredentialType.Basic` 到字段 `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
-      * 分配常量值 `BasicHttpSecurityMode.TransportCredentialOnly` 到字段 `BasicHttpBindingSecurity.Security.Mode`.
+      * 將AEM表單使用者名稱指派給欄位 `SignatureServiceClient.ClientCredentials.UserName.UserName`.
+      * 將對應的密碼值指派給欄位 `SignatureServiceClient.ClientCredentials.UserName.Password`.
+      * 指派常數值 `HttpClientCredentialType.Basic` 至欄位 `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
+      * 指派常數值 `BasicHttpSecurityMode.TransportCredentialOnly` 至欄位 `BasicHttpBindingSecurity.Security.Mode`.
 
-1. 获取包含要删除的签名的PDF文档
+1. 取得包含要移除之簽名的PDF檔案
 
-   * 创建 `BLOB` 对象。 此 `BLOB` 对象用于存储包含要删除的数字签名的PDF文档。
-   * 创建 `System.IO.FileStream` 对象，方法是调用其构造函数并传递一个字符串值，该字符串值表示已签名PDF文档的文件位置和打开文件的模式。
-   * 创建一个字节数组，用于存储 `System.IO.FileStream` 对象。 您可以通过获取 `System.IO.FileStream` 对象的 `Length` 属性。
-   * 通过调用 `System.IO.FileStream` 对象的 `Read` 方法。 传递字节数组、起始位置和要读取的流长度。
-   * 填充 `BLOB` 对象(通过指定其 `MTOM` 属性与字节数组的内容。
+   * 建立 `BLOB` 物件（使用其建構函式）。 此 `BLOB` 物件是用來儲存包含要移除的數位簽名的PDF檔案。
+   * 建立 `System.IO.FileStream` 物件，方法是叫用其建構函式，並傳遞代表已簽署PDF檔案的檔案位置和開啟檔案的模式的字串值。
+   * 建立位元組陣列，儲存 `System.IO.FileStream` 物件。 您可以取得 `System.IO.FileStream` 物件的 `Length` 屬性。
+   * 叫用 `System.IO.FileStream` 物件的 `Read` 方法。 傳遞位元組陣列、起始位置以及要讀取的資料流長度。
+   * 填入 `BLOB` 物件，透過指派其 `MTOM` 具有位元組陣列內容的屬性。
 
-1. 从签名字段中移除数字签名
+1. 從簽名欄位中移除數位簽名
 
-   通过调用 `SignatureServiceClient` 对象的 `clearSignatureField` 方法，并传递以下值：
+   透過叫用 `SignatureServiceClient` 物件的 `clearSignatureField` 並傳遞下列值：
 
-   * A `BLOB` 包含已签名PDF文档的对象。
-   * 一个字符串值，表示包含要删除的数字签名的签名字段的名称。
+   * A `BLOB` 包含已簽署PDF檔案的物件。
+   * 字串值，代表包含要移除之數位簽章的簽章欄位名稱。
 
-   此 `clearSignatureField` 方法返回 `BLOB` 表示从中删除数字签名的PDF文档的对象。
+   此 `clearSignatureField` 方法傳回 `BLOB` 物件，代表從中移除數位簽名的PDF檔案。
 
-1. 将PDF文档另存为PDF文件
+1. 將PDF檔案儲存為PDF檔案
 
-   * 创建 `System.IO.FileStream` 对象，方法是调用其构造函数并传递一个字符串值，该字符串值表示PDF文档的文件位置（包含空签名字段和打开文件的模式）。
-   * 创建一个字节数组，用于存储 `BLOB` 返回的对象 `sign` 方法。 通过获取的值填充字节数组 `BLOB` 对象的 `MTOM` 数据成员。
-   * 创建 `System.IO.BinaryWriter` 对象，方法是调用其构造函数 `System.IO.FileStream` 对象。
-   * PDF通过调用 `System.IO.BinaryWriter` 对象的 `Write` 方法和传递字节数组。
+   * 建立 `System.IO.FileStream` 物件，方法是叫用其建構函式並傳遞字串值，該值代表PDF檔案的檔案位置，該檔案包含空白簽名欄位和開啟檔案的模式。
+   * 建立位元組陣列，儲存 `BLOB` 物件，由 `sign` 方法。 透過取得 `BLOB` 物件的 `MTOM` 資料成員。
+   * 建立 `System.IO.BinaryWriter` 物件，方法是叫用其建構函式並傳遞 `System.IO.FileStream` 物件。
+   * PDF透過叫用 `System.IO.BinaryWriter` 物件的 `Write` 方法並傳遞位元組陣列。
 
 **另请参阅**
 
-[删除数字签名](digitally-signing-certifying-documents.md#removing-digital-signatures)
+[移除數位簽名](digitally-signing-certifying-documents.md#removing-digital-signatures)
 
-[使用MTOM调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[使用MTOM叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[使用SwaRef调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[使用SwaRef叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)

@@ -1,6 +1,6 @@
 ---
-title: 与Adobe Experience Cloud集成
-description: 了解如何将Adobe Experience Manager与Adobe Experience Cloud集成。
+title: 與Adobe Experience Cloud整合
+description: 瞭解如何將Adobe Experience Manager與Adobe Experience Cloud整合。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
@@ -13,79 +13,79 @@ ht-degree: 4%
 
 ---
 
-# 与Adobe Experience Cloud集成{#integrating-with-the-adobe-marketing-cloud}
+# 與Adobe Experience Cloud整合{#integrating-with-the-adobe-marketing-cloud}
 
-的 [Adobe Experience Cloud](https://business.adobe.com/products/marketing-cloud/main.html)，包括功能强大的网站分析和网站优化产品，可提供可操作的实时数据和洞察，以推动成功的在线计划。 它为在线业务优化提供了集成且开放的平台。 云由集成应用程序组成，这些应用程序可收集和释放客户洞察力，从而优化客户获取、转化和保留工作以及内容的创建和分发。
+此 [Adobe Experience Cloud](https://business.adobe.com/products/marketing-cloud/main.html)包括功能強大的網站分析和網站最佳化產品，可提供可操作的即時資料和深入分析，以推動成功的線上方案。 它提供整合且開放的平台，用於線上業務最佳化。 Cloud包含整合的應用程式，可收集並釋放客戶洞察的力量，以最佳化客戶贏取、轉換和保留工作，以及內容的建立和分發。
 
-通过Adobe Experience Manager(AEM)，您可以与Adobe Experience Cloud的以下产品无缝集成：
+透過Adobe Experience Manager (AEM)，您可以順暢地整合下列Adobe Experience Cloud產品：
 
-* Adobe Analytics为营销人员提供有关在线策略和营销计划的可操作实时信息。
-* Adobe Target使营销人员能够持续提升其在线内容与其客户的相关性，从而提高转化率。
-* Adobe Dynamic Media Classic可在托管环境中自动执行媒体管理、简化Web发布并增强Web体验。
-* Adobe动态Tag Management为营销人员提供了直观的工具，可快速轻松地管理无限数量的Adobe和第三方标记。
+* Adobe Analytics為行銷人員提供線上策略和行銷方案的可行、即時資訊。
+* Adobe Target可讓行銷人員持續提供與客戶更相關的線上內容，進而提高轉換率。
+* Adobe Dynamic Media Classic可自動化媒體管理、簡化Web發佈，以及增強Web體驗，所有這些都可在託管環境中完成。
+* Adobe Dynamic Tag Management為行銷人員提供了直覺式工具，可快速輕鬆地管理無限數量的Adobe和協力廠商標籤。
 <!-- Search&Promote is end of life as of September 1, 2022 * Adobe Search&Promote gives marketers the ability to control and optimize the search results on their sites. -->
-* Adobe Campaign允许您直接在Adobe Experience Manager中管理电子邮件投放内容。
+* Adobe Campaign可讓您直接在Adobe Experience Manager中管理電子郵件傳遞內容。
 
-此外，您还可以 [将AEM与Creative Cloud集成](/help/assets/aem-cc-integration-best-practices.md) 和 [第三方服务](/help/sites-administering/third-party-services.md).
+此外，您可以 [將AEM與Creative Cloud整合](/help/assets/aem-cc-integration-best-practices.md) 和 [協力廠商服務](/help/sites-administering/third-party-services.md).
 
 ## 与 Adobe Analytics 集成 {#integrating-with-adobe-analytics}
 
-[Adobe Analytics](https://business.adobe.com/products/analytics/adobe-analytics.html) 是行业领先的解决方案，为数字营销人员提供了一个测量、分析和优化跨多个营销渠道所有在线计划的集成数据的位置。 它为营销人员提供了有关数字策略和营销计划的可操作实时Web分析智能。 Adobe Analytics可帮助营销人员快速识别通过网站获得最高利润的路径，细分流量以发现高价值Web访客，确定访客在何处导航离开网站，并确定在线营销活动的关键成功量度。
+[Adobe Analytics](https://business.adobe.com/products/analytics/adobe-analytics.html) 是領先業界的解決方案，為數位行銷人員提供一個可以測量、分析和最佳化多個行銷管道中所有線上方案的整合資料的位置。 它為行銷人員提供有關數位策略和行銷方案的可行、即時Web分析情報。 Adobe Analytics可協助行銷人員快速找出網站中最有利可圖的路徑、劃分流量以找出高價值的網頁訪客、判斷訪客從網站瀏覽至何處，以及找出線上行銷活動的關鍵成功量度。
 
-您可以使用Adobe Analytics分析网站中的数据。
+您可以使用Adobe Analytics來分析來自您網站的資料。
 
-与Adobe Analytics集成后，您可以执行以下操作：
+與Adobe Analytics整合可讓您執行下列作業：
 
-* 启用Analytics用户跟踪。
-* 将您的运行模式（例如，创作、发布）映射到不同的报表包。
-* 将Client Context变量作为转化变量或流量属性提交。
-* 使用预定义的变量映射。
-* 一次配置整个网站区域。
-* 跟踪自定义事件。
+* 啟用Analytics使用者追蹤。
+* 將您的執行模式（例如作者、發佈）對應至不同的報表套裝。
+* 將Client Context變數提交為轉換變數或流量屬性。
+* 使用預先定義的變數對應。
+* 一次設定完整的網站區域。
+* 追蹤自訂定義的事件。
 
-有关将AEM与Analytics集成的信息，请参阅 [与Adobe Analytics集成](/help/sites-administering/adobeanalytics.md).
+如需整合AEM與Analytics的相關資訊，請參閱 [與Adobe Analytics整合](/help/sites-administering/adobeanalytics.md).
 
-您还可以使用 [选择加入向导](/help/sites-administering/opt-in.md) 以轻松执行集成。
+您也可以使用 [選擇加入精靈](/help/sites-administering/opt-in.md) 以輕鬆執行整合。
 
 ## 与 Adobe Target 集成 {#integrating-with-adobe-target}
 
 [营销人员使用 Adobe Target 来设计和执行在线测试、创建动态受众区段（基于行为）以及自动定位内容和在线体验。](https://business.adobe.com/products/target/adobe-target.html)
 
-如今，在线消费者的需求不断变化，希望从他们可以选择的各种网站和内容源中获得相关、甚至是个性化的内容。 要吸引在线受众，在线营销人员必须快速确定哪些选件和内容对其受众具有相关性和吸引力，这一点至关重要。 借助这些知识，营销人员需要能够不断改进其网站，并将相应内容定位到不同的受众。
+現今的線上消費者不斷改變需求，期望從各種網站和內容來源取得相關、甚至個人化的內容。 若要吸引線上受眾，線上行銷人員必須快速找出哪些優惠方案和內容與其受眾相關且吸引人。 有了這些知識，行銷人員需要能夠持續改進其網站，並將適當的內容鎖定在不同對象。
 
-[与Adobe Target集成](/help/sites-administering/target.md) 介绍如何将您的网站与Target集成。
+[與Adobe Target整合](/help/sites-administering/target.md) 說明如何將您的網站與Target整合。
 
-您还可以使用 [选择加入向导](/help/sites-administering/opt-in.md) 以轻松执行集成。
+您也可以使用 [選擇加入精靈](/help/sites-administering/opt-in.md) 以輕鬆執行整合。
 
-## 选择启用Analytics和Target {#opting-in-to-analytics-and-target}
+## 選擇加入Analytics和Target {#opting-in-to-analytics-and-target}
 
-AEM提供了一个简单的选择加入过程，以便与Adobe Analytics和Adobe Target集成。 当您以管理员身份登录并访问项目控制台时，将会显示一个选择加入向导。
+AEM提供簡單的選擇加入程式，以便與Adobe Analytics和Adobe Target整合。 當您以管理員身分登入並造訪「專案」主控台時，畫面會顯示選擇加入精靈。
 
 ![chlimage_1-107](assets/chlimage_1-107a.png)
 
-选择加入与Analytics和/或Target的集成，以便能够使用其页面跟踪和分析功能以及个性化功能。 选择加入后，提供您的用户帐户信息并指定要跟踪的页面。
+選擇與Analytics和/或Target整合，以啟用其頁面追蹤和分析功能及個人化功能。 當您選擇加入時，請提供您的使用者帳戶資訊，並指定追蹤的頁面。
 
-有关更多信息，请参阅 [选择加入Adobe Analytics和Adobe Target。](/help/sites-administering/opt-in.md)
+如需詳細資訊，請參閱 [選擇使用Adobe Analytics和Adobe Target。](/help/sites-administering/opt-in.md)
 
-## 与Adobe Dynamic Media Classic集成 {#integrating-with-scene}
+## 與Adobe Dynamic Media Classic整合 {#integrating-with-scene}
 
-Adobe Dynamic Media Classic是一个托管解决方案，用于发布、管理、增强和将动态营销资产和丰富的可视化促销内容交付到Web、移动设备、电子邮件、社交媒体、连接Internet的显示屏和打印。
+Adobe Dynamic Media Classic是託管解決方案，可發佈、管理、增強及提供動態行銷資產，以及針對網路、行動裝置、電子郵件、社群媒體、網際網路連線顯示和列印的豐富視覺銷售。
 
-在Adobe Experience Manager中，您可以将数字资产直接从Adobe Experience Manager发布到Dynamic Media Classic，也可以将数字资产从Dynamic Media Classic发布到Adobe Experience Manager。
+在Adobe Experience Manager中，您可以直接從Adobe Experience Manager將數位資產發佈到Dynamic Media Classic，也可以從Dynamic Media Classic將數位資產發佈到Adobe Experience Manager。
 
-此外，您还可以在各种查看器（如基本缩放和视频）中查看在Dynamic Media Classic中发布的Adobe Experience Manager资产。
+此外，您也可以使用各種檢視器（例如「基本縮放」和「視訊」）來檢視Dynamic Media Classic中發佈的Adobe Experience Manager資產。
 
-有关Adobe Experience Manager如何与Dynamic Media Classic集成的更多信息，请参阅 [与Dynamic Media Classic集成](/help/sites-administering/scene7.md) 文档。
+如需Adobe Experience Manager如何與Dynamic Media Classic整合的詳細資訊，請參閱 [與Dynamic Media Classic整合](/help/sites-administering/scene7.md) 說明檔案。
 
-## 与AdobeDynamic Tag Management集成 {#integrating-with-adobe-dynamic-tag-management}
+## 與Adobe Dynamic Tag Management整合 {#integrating-with-adobe-dynamic-tag-management}
 
-[Adobe动态Tag Management](https://business.adobe.com/products/experience-platform/adobe-experience-platform.html) 为营销人员提供了直观的工具，可快速轻松地管理无限数量的Adobe和第三方标记。 您拥有更多的控制和灵活性，几乎可以在线优化任何内容，同时减少对IT资源的依赖。
+[AdobeDynamic Tag Management](https://business.adobe.com/products/experience-platform/adobe-experience-platform.html) 提供直覺式工具，讓行銷人員快速輕鬆地管理不限數量的Adobe和協力廠商標籤。 您擁有更多控制能力和彈性，幾乎可將任何線上作業最佳化，同時減少對IT資源的依賴。
 
-[集成Adobe动态Tag Management](/help/sites-administering/dtm.md) 使用AEM，以便您能够使用动态Tag Management Web属性来跟踪AEM网站。
+[整合AdobeDynamic Tag Management](/help/sites-administering/dtm.md) AEM，讓您能夠使用Dynamic Tag Management Web屬性來追蹤AEM網站。
 
-## 与Adobe Audience Manager集成 {#integrating-with-adobe-audience-manager}
+## 與Adobe Audience Manager整合 {#integrating-with-adobe-audience-manager}
 
-Audience Manager集成已在AEM 6.3中删除。
+AEM 6.3中已移除Audience Manager整合。
 
 <!-- Search&Promote is end of life as of September 1, 2022 ## Integrating with Search&Promote {#integrating-with-search-promote} -->
 
@@ -97,6 +97,6 @@ Audience Manager集成已在AEM 6.3中删除。
 
 ## 与 Adobe Campaign 集成 {#integrating-with-adobe-campaign}
 
-[Adobe Campaign](https://business.adobe.com/products/campaign/adobe-campaign.html) 允许您直接在Adobe Experience Manager中管理电子邮件投放内容。
+[Adobe Campaign](https://business.adobe.com/products/campaign/adobe-campaign.html) 可讓您直接在Adobe Experience Manager中管理電子郵件傳遞內容。
 
-有关AEM如何与Adobe Campaign集成的信息，请参阅 [与Adobe Campaign集成](/help/sites-administering/campaignstandard.md).
+如需AEM如何與Adobe Campaign整合的詳細資訊，請參閱 [與Adobe Campaign整合](/help/sites-administering/campaignstandard.md).

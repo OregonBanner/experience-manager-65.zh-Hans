@@ -1,6 +1,6 @@
 ---
-title: 作者的首要步骤
-description: 此部分概述了使用Adobe Experience Manager(AEM)创作内容时使用的主要任务。
+title: 作者的首要步驟
+description: 本節提供您使用Adobe Experience Manager (AEM)編寫內容時的主要工作概覽。
 uuid: 1343acf9-b104-40f3-a3f2-df42060cb4fd
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -15,78 +15,78 @@ ht-degree: 7%
 
 ---
 
-# 作者的首要步骤{#first-steps-for-authors}
+# 作者的首要步驟{#first-steps-for-authors}
 
-本节概述您将在 [开始创作内容](/help/sites-authoring/author.md#concept-of-authoring-and-publishing) 和Adobe Experience Manager(AEM)。
+本節提供您在以下情況下將使用的主要任務概觀： [開始編寫內容](/help/sites-authoring/author.md#concept-of-authoring-and-publishing) 使用Adobe Experience Manager (AEM)。
 
-它涵盖：
+內容涵蓋：
 
-* [快速入门](#getting-started):详细介绍创建和发布首个页面所需的一系列基本事件。
+* [快速入門](#getting-started)：詳細說明建立和發佈第一個頁面所需的基本事件順序。
 
-* [其他操作](#further-actions):继续执行您在创作时可以使用的许多其他操作。
+* [進一步動作](#further-actions)：繼續進行您可在編寫時使用的許多其他動作。
 
 ## 快速入门 {#getting-started}
 
-这些组件详细介绍了创建和发布首个页面所需的一系列基本事件。
+這些詳細說明建立和發佈第一頁所需的基本事件順序。
 
-### 导航到页面位置 {#navigating-to-the-page-location}
+### 瀏覽至頁面位置 {#navigating-to-the-page-location}
 
-网站中的内容以树结构保存。 要创建或编辑页面，您需要使用 [网站控制台](/help/sites-classic-ui-authoring/author-env-basic-handling.md#navigating-with-the-websites-console).
+您網站中的內容以樹狀結構儲存。 若要建立或編輯頁面，您需要使用 [網站主控台](/help/sites-classic-ui-authoring/author-env-basic-handling.md#navigating-with-the-websites-console).
 
 ### 创建新页面 {#creating-a-new-page}
 
-在编辑之前，您需要 [创建新页面](/help/sites-classic-ui-authoring/classic-page-author-manage-pages.md#creating-a-new-page).
+編輯之前，您需要 [建立新頁面](/help/sites-classic-ui-authoring/classic-page-author-manage-pages.md#creating-a-new-page).
 
-### 打开页面 {#opening-a-page}
+### 開啟頁面 {#opening-a-page}
 
-对于许多操作（如编辑），您需要 [打开页面](/help/sites-classic-ui-authoring/classic-page-author-manage-pages.md#opening-a-page-for-editing).
+針對許多動作（例如編輯），您需要 [開啟頁面](/help/sites-classic-ui-authoring/classic-page-author-manage-pages.md#opening-a-page-for-editing).
 
-### 编辑页面 {#editing-a-page}
+### 編輯頁面 {#editing-a-page}
 
-无论您的实例已有页面，还是您刚刚自行创建了一个新页面，您都可以 [编辑页面](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md) 按：
+無論您的執行個體是否已有現有頁面，或您自己剛建立新頁面，您都可以 [編輯頁面](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md) 作者：
 
-* [插入组件（段落）](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md#inserting-a-component)
-* [编辑组件](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md#editing-a-component-content-and-properties)
+* [插入元件（段落）](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md#inserting-a-component)
+* [編輯元件](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md#editing-a-component-content-and-properties)
 * [移动组件](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md#moving-a-component)
-* [删除组件](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md#deleting-a-component)
-* [剪切/复制/粘贴组件](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md#cut-copy-paste-a-component)
+* [刪除元件](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md#deleting-a-component)
+* [剪下/複製/貼上元件](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md#cut-copy-paste-a-component)
 * [撤消和重做页面编辑](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md#undoing-and-redoing-page-edits)
-* [使用预览模式](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md#previewing-pages) （查看发布时的外观）
+* [使用預覽模式](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md#previewing-pages) （檢視發佈時的外觀）
 * [锁定页面](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md#locking-a-page)
 * [解锁页面](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md#unlocking-a-page)
 
-### 发布页面 {#publishing-a-page}
+### 發佈頁面 {#publishing-a-page}
 
-编辑完页面后，您将需要 [发布（或激活页面）](/help/sites-classic-ui-authoring/classic-page-author-publish-pages.md#main-pars-title-10) 以便网站的访客可以使用该功能。
+編輯完頁面後，您要 [發佈（或啟動）您的頁面](/help/sites-classic-ui-authoring/classic-page-author-publish-pages.md#main-pars-title-10) 以便您的網站訪客可以使用。
 
-## 其他操作 {#further-actions}
+## 進一步動作 {#further-actions}
 
-除了基本步骤之外，创作时还可以执行许多其他操作。
+除了基本步驟之外，製作時還有許多其他動作可供使用。
 
-### 复制页面 {#copying-a-page}
+### 複製頁面 {#copying-a-page}
 
-有时更容易 [复制页面](/help/sites-classic-ui-authoring/classic-page-author-manage-pages.md#copying-and-pasting-a-page) 并重新使用内容，而不是再次从头开始创建所有内容。
+有時候會比較容易 [複製頁面](/help/sites-classic-ui-authoring/classic-page-author-manage-pages.md#copying-and-pasting-a-page) 並重複使用內容，而非從頭開始再次建立所有內容。
 
 ### 移动或重命名页面 {#moving-or-renaming-a-page}
 
-[移动和重命名页面](/help/sites-classic-ui-authoring/classic-page-author-manage-pages.md#moving-or-renaming-page) 基本上使用同一操作完成。
+[移動和重新命名頁面](/help/sites-classic-ui-authoring/classic-page-author-manage-pages.md#moving-or-renaming-page) 基本上會以相同的動作完成。
 
-### 取消发布页面 {#unpublishing-a-page}
+### 取消發佈頁面 {#unpublishing-a-page}
 
-若要使之前发布（或激活）的内容在您的公共网站上不可用，您 [取消发布（或取消激活）页面](/help/sites-classic-ui-authoring/classic-page-author-publish-pages.md#unpublishing-a-page).
+若要讓先前發佈（或啟動）的內容無法用於您的公開網站，請 [取消發佈（或停用）頁面](/help/sites-classic-ui-authoring/classic-page-author-publish-pages.md#unpublishing-a-page).
 
 ### 删除页面 {#deleting-a-page}
 
-如果不再需要某个页面，您可能希望 [删除页面](/help/sites-classic-ui-authoring/classic-page-author-manage-pages.md#deleting-a-page).
+如果不再需要某個頁面，您可能要 [刪除頁面](/help/sites-classic-ui-authoring/classic-page-author-manage-pages.md#deleting-a-page).
 
-### 设置页面属性 {#setting-the-page-properties}
+### 設定頁面屬性 {#setting-the-page-properties}
 
-每 [页面具有属性](/help/sites-classic-ui-authoring/classic-page-author-edit-page-properties.md) 定义以确定其操作的方面。
+每 [頁面有屬性](/help/sites-classic-ui-authoring/classic-page-author-edit-page-properties.md) 您可以定義來決定其作業的各方面。
 
-### 创建页面版本 {#creating-a-version-of-a-page}
+### 建立頁面版本 {#creating-a-version-of-a-page}
 
-您可以 [创建页面版本](/help/sites-classic-ui-authoring/classic-page-author-work-with-versions.md#creating-a-new-version) 然后 [还原回版本](/help/sites-classic-ui-authoring/classic-page-author-work-with-versions.md#restoring-a-page-version-from-sidekick) （如有必要）。
+您可以 [建立頁面的版本](/help/sites-classic-ui-authoring/classic-page-author-work-with-versions.md#creating-a-new-version) 然後 [回覆成版本](/help/sites-classic-ui-authoring/classic-page-author-work-with-versions.md#restoring-a-page-version-from-sidekick) 如有需要。
 
 ## 更多信息 {#more-information}
 
-有关创作的更多信息，请访问 [页面创作](/help/sites-classic-ui-authoring/classic-page-author.md) 和 [使用创作环境](/help/sites-classic-ui-authoring/author-env.md).
+如需撰寫的詳細資訊，請前往 [頁面製作](/help/sites-classic-ui-authoring/classic-page-author.md) 和 [使用作者環境](/help/sites-classic-ui-authoring/author-env.md).

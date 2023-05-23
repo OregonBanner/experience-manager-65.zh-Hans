@@ -1,7 +1,7 @@
 ---
-title: 使用评级
+title: 使用評等
 seo-title: Using Ratings
-description: 向页面添加评级组件
+description: 將Rating元件新增至頁面
 seo-description: Adding a Rating component to a page
 uuid: a986970b-1221-4648-9a69-410f4480e0ae
 contentOwner: msm-service
@@ -17,43 +17,43 @@ ht-degree: 2%
 
 ---
 
-# 使用评级 {#using-ratings}
+# 使用評等 {#using-ratings}
 
-此 `Rating` 组件可独立使用或与其他Communities功能结合使用。 此组件允许已登录的社区成员通过评级内容来表达他们的意见。
+此 `Rating` 元件可獨立使用或搭配其他Communities功能使用。 此元件可讓登入的社群成員透過對內容進行評分來表達意見。
 
-## 向页面添加评级 {#adding-a-rating-to-a-page}
+## 新增評等至頁面 {#adding-a-rating-to-a-page}
 
-添加 `Rating` 组件到创作模式下的页面，找到该组件 `Communities / Rating` 并将其拖动到页面上的适当位置，例如相对于该特征的位置以供成员评级。
+若要新增 `Rating` 元件至作者模式下的頁面，找到元件 `Communities / Rating` 並將其拖曳至頁面上某個位置，例如成員相對於該特徵進行評等。
 
-有关必要信息，请访问 [社区组件基础知识](basics.md).
+如需必要資訊，請造訪 [Communities元件基本知識](basics.md).
 
-当 [所需的客户端库](rating-basics.md#essentials-for-client-side) 包括，这就是 `Rating` 组件随即出现。
+當 [必要的使用者端程式庫](rating-basics.md#essentials-for-client-side) 包含，這就是 `Rating` 元件隨即出現。
 
 ![评级](assets/rating.png)
 
-## 配置评级 {#configuring-rating}
+## 設定評等 {#configuring-rating}
 
-选择已放置的 `Rating` 组件以访问和选择 `Configure` 图标，打开“编辑”对话框。
+選取已放置的 `Rating` 元件以存取及選取 `Configure` 圖示來開啟「編輯」對話方塊。
 
 ![configure-new](assets/configure-new.png)
 
-在 **[!UICONTROL 文本和标签]** 选项卡，指定评分的内部标识符。
+在 **[!UICONTROL 文字和標籤]** 標籤：您指定「評等」的內部識別碼。
 
 ![tallyname](assets/tallyname.png)
 
-**[!UICONTROL 标签名称]**
-(*必需*)的简单名称 `Rating` 唯一地标识此实例。 必须为存储库的有效节点名称。
+**[!UICONTROL 標簽名稱]**
+(*必填*)的簡單名稱 `Rating` 會唯一識別此執行個體。 必須為存放庫的有效節點名稱。
 
-## 网站访客体验 {#site-visitor-experience}
+## 網站訪客體驗 {#site-visitor-experience}
 
 ### 成员 {#members}
 
-每个成员只允许一个评级。 会员可以随时变更等级。
+每個成員只允許一個評等。 會員可隨時變更其評等。
 
 ### 匿名 {#anonymous}
 
-不支持匿名发布评级。 网站访客必须注册（成为会员）并登录才能参与。
+不支援評級的匿名發佈。 網站訪客必須註冊（成為會員）並登入才能參與。
 
 ## 附加信息 {#additional-information}
 
-欲知更多信息，请访问 [Rating Essentials](rating-basics.md) 适用于开发人员的页面。
+如需詳細資訊，請參閱 [Rating Essentials](rating-basics.md) 適用於開發人員的頁面。

@@ -1,7 +1,7 @@
 ---
-title: 用于处理表单门户上已提交表单的API
+title: 用於處理表單入口網站上已提交表單的API
 seo-title: APIs to work with submitted forms on forms portal
-description: AEM Forms提供了API，您可以使用这些API来查询表单门户中已提交的表单数据并对其执行操作。
+description: AEM Forms提供API，您可使用這些API來查詢表單入口網站中已提交的表單資料，並對其執行動作。
 seo-description: AEM Forms provides APIs that you can use to query and take actions on submitted forms data in forms portal.
 uuid: c47c8392-e5a9-4c40-b65e-4a7f379a6b45
 content-type: reference
@@ -17,25 +17,25 @@ ht-degree: 7%
 
 ---
 
-# 用于处理表单门户上已提交表单的API {#apis-to-work-with-submitted-forms-on-forms-portal}
+# 用於處理表單入口網站上已提交表單的API {#apis-to-work-with-submitted-forms-on-forms-portal}
 
-AEM Forms提供了可用于查询通过表单门户提交的表单数据的API。 此外，您还可以使用本文档中介绍的API发布注释或更新已提交表单的属性。
+AEM Forms提供API，您可以使用這些API來查詢透過表單入口網站提交的表單資料。 此外，您可以使用本檔案說明的API張貼註解或更新已提交表單的屬性。
 
 >[!NOTE]
 >
->必须将将调用API的用户添加到审阅者组中，如中所述 [将提交审阅者与表单关联](/help/forms/using/adding-reviewers-form.md).
+>必須依照中的說明，將叫用API的使用者新增到稽核者群組 [將提交稽核者與表單建立關聯](/help/forms/using/adding-reviewers-form.md).
 
 ## GET/content/forms/portal/submission.review.json？func=getFormsForSubmissionReview {#get-content-forms-portal-submission-review-json-func-getformsforsubmissionreview-br}
 
-返回所有符合条件的表单的列表。
+傳回所有合格表單的清單。
 
-### URL参数 {#url-parameters}
+### URL引數 {#url-parameters}
 
-此API不需要其他参数。
+此API不需要其他引數。
 
 ### 响应 {#response}
 
-响应对象包含一个JSON数组，其中包含表单名称及其存储库路径。 响应结构如下：
+回應物件包含JSON陣列，其中包含表單名稱及其存放庫路徑。 回應的結構如下：
 
 ```json
 [
@@ -61,11 +61,11 @@ https://[host]:[port]/content/forms/portal/submission.review.json?func=getFormsF
 
 ## GET/content/forms/portal/submission.review.json？func=getAllSubmissions {#get-content-forms-portal-submission-review-json-func-getallsubmissions}
 
-返回所有已提交表单的详细信息。 但是，您可以使用URL参数来限制结果。
+傳回所有已提交表單的詳細資料。 不過，您可以使用URL引數來限制結果。
 
-### URL参数 {#url-parameters-1}
+### URL引數 {#url-parameters-1}
 
-在请求URL中指定以下参数：
+在請求URL中指定下列引數：
 
 <table>
  <tbody>
@@ -75,38 +75,38 @@ https://[host]:[port]/content/forms/portal/submission.review.json?func=getFormsF
   </tr>
   <tr>
    <td><code>formPath</code></td>
-   <td>指定表单所在的CRX存储库路径。 如果不指定表单路径，则会返回空响应。<br /> </td>
+   <td>指定表單所在的CRX存放庫路徑。 如果您未指定表單路徑，則會傳回空白回應。<br /> </td>
   </tr>
   <tr>
    <td><code>offset</code> （可选）</td>
-   <td>指定结果集索引中的起点。 默认值为 <strong>0</strong>.</td>
+   <td>指定結果集索引中的起點。 預設值為 <strong>0</strong>.</td>
   </tr>
   <tr>
    <td><code>limit</code> （可选）</td>
-   <td>限制结果的数量。 默认值为 <strong>30</strong>.</td>
+   <td>限制結果數量。 預設值為 <strong>30</strong>.</td>
   </tr>
   <tr>
    <td><code>orderby</code> <br /> （可选）</td>
-   <td>指定用于排序结果的属性。 默认值为 <strong>jcr：lastModified</strong>，根据上次修改时间对结果进行排序。</td>
+   <td>指定排序結果的屬性。 預設值為 <strong>jcr：lastModified</strong>，會根據上次修改時間來排序結果。</td>
   </tr>
   <tr>
    <td><code>sort</code> <br /> （可选）</td>
-   <td>指定排序结果的顺序。 默认值为 <strong>desc</strong>，以降序对结果进行排序。 您可以指定 <code>asc</code> 以按升序对结果进行排序。</td>
+   <td>指定排序結果的順序。 預設值為 <strong>desc</strong>，會依遞減順序排序結果。 您可以指定 <code>asc</code> 以遞增順序排序結果。</td>
   </tr>
   <tr>
    <td><code>cutPoints</code> <br /> （可选）</td>
-   <td>指定要包含在结果中的表单属性的逗号分隔列表。 默认属性为：<br /> <code>formName</code>， <code>formPath</code>， <code>submitID</code>， <code>formType</code>， <code>jcr:lastModified</code>， <code>owner</code></td>
+   <td>指定要包含在結果中的以逗號分隔的表單屬性清單。 預設屬性為：<br /> <code>formName</code>， <code>formPath</code>， <code>submitID</code>， <code>formType</code>， <code>jcr:lastModified</code>， <code>owner</code></td>
   </tr>
   <tr>
    <td><code>search</code> <br /> （可选）</td>
-   <td>在表单属性中搜索指定的值并返回具有匹配值的表单。 默认值为 <strong>""</strong>.</td>
+   <td>在表單屬性中搜尋指定的值，並傳回具有相符值的表單。 默认值为 <strong>""</strong>.</td>
   </tr>
  </tbody>
 </table>
 
 ### 响应 {#response-1}
 
-响应对象包含一个JSON数组，其中包含指定表单的详细信息。 响应结构如下：
+回應物件包含JSON陣列，其中包含指定表單的詳細資訊。 回應的結構如下：
 
 ```json
 {
@@ -131,20 +131,20 @@ https://[host]:[port]/content/forms/portal/submission.review.json?func=getAllSub
 
 ## POST/content/forms/portal/submission.review.json？func=addComment {#post-content-forms-portal-submission-review-json-func-addcomment-br}
 
-向指定的提交实例添加注释。
+將註解新增至指定的提交執行個體。
 
-### URL参数 {#url-parameters-2}
+### URL引數 {#url-parameters-2}
 
-在请求URL中指定以下参数：
+在請求URL中指定下列引數：
 
 | 参数 | 描述 |
 |---|---|
-| `submitID` | 指定与提交实例关联的元数据ID。 |
-| `Comment` | 指定要添加到指定提交实例的注释文本。 |
+| `submitID` | 指定與提交執行個體相關聯的中繼資料ID。 |
+| `Comment` | 指定要新增至指定提交執行個體的註解文字。 |
 
 ### 响应 {#response-2}
 
-在成功发布评论时返回评论ID。
+在評論成功張貼時傳回評論ID。
 
 ### 示例 {#example-2}
 
@@ -162,19 +162,19 @@ https://[host:'port'/content/forms/portal/submission.review.json?func=addComment
 
 ## GET/content/forms/portal/submission.review.json？func=getComments   {#get-content-forms-portal-submission-review-json-func-getcomments-nbsp}
 
-返回在指定的提交实例上发布的所有注释。
+傳回在指定提交執行個體上張貼的所有註解。
 
-### URL参数 {#url-parameters-3}
+### URL引數 {#url-parameters-3}
 
-在请求URL中指定以下参数：
+在請求URL中指定以下引數：
 
 | 参数 | 描述 |
 |---|---|
-| `submitID` | 指定提交实例的元数据ID。 |
+| `submitID` | 指定提交執行個體的中繼資料ID。 |
 
 ### 响应 {#response-3}
 
-响应对象包含一个JSON数组，该数组包含与指定的提交ID关联的所有注释。 响应结构如下：
+回應物件包含JSON陣列，其中包含與指定提交ID相關聯的所有註解。 回應的結構如下：
 
 ```json
 [{
@@ -200,21 +200,21 @@ https://[host]:'port'/content/forms/portal/submission.review.json?func=getCommen
 
 ## POST/content/forms/portal/submission.review.json？func=updateSubmission {#post-content-forms-portal-submission-review-json-func-updatesubmission-br}
 
-更新指定提交的表单实例的指定属性的值。
+更新指定之提交表單執行個體的指定屬性值。
 
-### URL参数 {#url-parameters-4}
+### URL引數 {#url-parameters-4}
 
-在请求URL中指定以下参数：
+在請求URL中指定下列引數：
 
 | 参数 | 描述 |
 |---|---|
-| `submitID` | 指定与提交实例关联的元数据ID。 |
-| `property` | 指定要更新的表单属性。 |
-| `value` | 指定要更新的表单属性的值。 |
+| `submitID` | 指定與提交執行個體相關聯的中繼資料ID。 |
+| `property` | 指定要更新的表單屬性。 |
+| `value` | 指定要更新的表單屬性值。 |
 
 ### 响应 {#response-4}
 
-返回一个包含有关已发布更新的信息的JSON对象。
+傳回JSON物件，其中包含已發佈更新的相關資訊。
 
 ### 示例 {#example-4}
 

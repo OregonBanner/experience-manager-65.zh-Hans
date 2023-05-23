@@ -1,7 +1,7 @@
 ---
-title: 为JEE上的AEM Forms配置安全管理设置
+title: 為JEE上的AEM Forms進行安全管理設定
 seo-title: Configuring Secure Administration Settings for AEM Forms on JEE
-description: 了解如何管理尽管私密开发环境中需要但在AEM Forms on JEE的生产环境中不需要的用户帐户和服务。
+description: 瞭解如何管理私密開發環境中雖然需要，但在JEE上的AEM Forms生產環境中不需要的使用者帳戶和服務。
 seo-description: Learn how to administer user accounts and services that, although required in a private development environment, are not required in a production environment of AEM Forms on JEE.
 uuid: 04e45d06-f57d-406c-8228-15f483199430
 content-type: reference
@@ -17,115 +17,115 @@ ht-degree: 0%
 
 ---
 
-# 为JEE上的AEM Forms配置安全管理设置 {#configuring-secure-administration-settings-for-aem-forms-on-jee}
+# 為JEE上的AEM Forms進行安全管理設定 {#configuring-secure-administration-settings-for-aem-forms-on-jee}
 
-了解如何管理尽管私密开发环境中需要但在AEM Forms on JEE的生产环境中不需要的用户帐户和服务。
+瞭解如何管理私密開發環境中雖然需要，但在JEE上的AEM Forms生產環境中不需要的使用者帳戶和服務。
 
-通常，开发人员不使用生产环境来构建和测试其应用程序。 因此，您必须管理用户帐户和服务，虽然这些用户帐户和服务在专用开发环境中是必需的，但在生产环境中却不是必需的。
+一般而言，開發人員不會使用生產環境來建置和測試他們的應用程式。 因此，您必須管理使用者帳戶和服務，雖然這些帳戶和服務在私人開發環境中是必要的，但在生產環境中卻不是必要的。
 
-本文介绍了通过AEM Forms on JEE提供的管理选项来减少整体攻击表面的方法。
+本文介紹透過AEM Forms on JEE提供的管理選項來減少整體攻擊面的方法。
 
-## 禁用对服务的非必要远程访问 {#disabling-non-essential-remote-access-to-services}
+## 停用對服務的非必要遠端存取 {#disabling-non-essential-remote-access-to-services}
 
-安装并配置JEE上的AEM Forms后，许多服务都可用于通过SOAP和Enterprise JavaBeans™ (EJB)进行远程调用。在本例中，远程一词是指对应用程序服务器的SOAP、EJB或操作消息格式(AMF)端口具有网络访问权限的任何调用方。
+安裝及設定JEE上的AEM Forms後，許多服務都可透過SOAP和Enterprise JavaBeans™ (EJB)進行遠端叫用。在此案例中，遠端一詞是指任何可存取應用程式伺服器SOAP、EJB或Action Message Format (AMF)連線埠的網路呼叫者。
 
-虽然JEE服务上的AEM Forms要求为授权调用方传递有效凭据，但您应仅允许远程访问您需要远程访问的服务。 要实现有限的可访问性，您应该尽可能减少可远程访问的服务的数量，以便系统正常运行，然后启用远程调用所需的其他服务。
+雖然JEE服務上的AEM Forms需要向授權來電者傳遞有效的認證，但您應僅允許從遠端存取您需要存取的服務。 若要達到有限的協助功能，您應該儘可能減少遠端可存取的服務組合，讓系統正常運作，然後啟用遠端呼叫其他您需要的服務。
 
-JEE服务上的AEM Forms始终至少需要SOAP访问权限。 这些服务通常是Workbench使用的必需服务，但也包括Workspace Web应用程序调用的服务。
+JEE服務上的AEM Forms一律需要至少SOAP存取權。 這些服務通常是Workbench使用的必要服務，但也包括Workspace Web應用程式呼叫的服務。
 
-使用Administration Console中的“应用程序和服务”网页完成以下过程：
+使用Administration Console中的「應用程式和服務」網頁完成此程式：
 
-1. 在Web浏览器中键入以下URL以登录到Administration Console：
+1. 在網頁瀏覽器中輸入下列URL登入Administration Console：
 
    ```java
             https://[host name]:'port'/adminui
    ```
 
-1. 单击 **服务>应用程序和服务>首选项**.
-1. 设置“首选项”可在同一页面上查看最多200个服务和端点。
-1. 单击 **服务** > **应用程序和服务** > **端点管理**.
-1. 选择 **EJB** 从 **提供商** 列表，然后单击 **筛选条件**.
-1. 要禁用所有EJB端点，请选中列表中每个端点旁边的复选框，然后单击 **禁用**.
-1. 单击 **下一个** 并对所有EJB端点重复上一步骤。 在禁用端点之前，请确保EJB列在“提供程序”列中。
-1. 选择 **SOAP** 从 **提供商** 列表，然后单击 **筛选条件**.
-1. 要删除SOAP端点，请选中列表中每个端点旁边的复选框，然后单击 **移除**. 请勿删除以下端点：
+1. 按一下 **服務>應用程式和服務>偏好設定**.
+1. 設定「偏好設定」可檢視相同頁面上最多200個服務和端點。
+1. 按一下 **服務** > **應用程式和服務** > **端點管理**.
+1. 選取 **EJB** 從 **提供者** 清單，然後按一下 **篩選**.
+1. 若要停用所有EJB端點，請選取清單中每個端點旁的核取方塊，然後按一下 **停用**.
+1. 按一下 **下一個** 並對所有EJB端點重複上述步驟。 在停用端點之前，請確定EJB列在「提供者」資料欄中。
+1. 選取 **SOAP** 從 **提供者** 清單，然後按一下 **篩選**.
+1. 若要移除SOAP端點，請選取清單中每個端點旁的核取方塊，然後按一下 **移除**. 請勿移除下列端點：
 
    * AuthenticationManagerService
-   * 目录管理器服务
-   * 作业管理器
+   * 目錄管理員服務
+   * 工作管理員
    * event_management_service
-   * 事件配置服务
-   * 进程管理器
-   * TemplateManager
-   * 存储库服务
-   * 任务管理器服务
-   * 任务队列管理器
-   * 任务管理器查询服务
-   * 工作区单点登录
-   * ApplicationManager
+   * event_configuration_service
+   * Processmanager
+   * 範本管理員
+   * 存放庫服務
+   * 任務管理員服務
+   * TaskQueueManager
+   * TaskManagerQueryService
+   * WorkspaceSingleSignOn
+   * 應用程式管理員
 
-1. 单击 **下一个** 并对不在上述列表中的SOAP端点重复上一步骤。 在删除端点之前，请确保在提供程序列中列出SOAP。
+1. 按一下 **下一個** 並對不在上述清單中的SOAP端點重複上述步驟。 在移除端點之前，請確定SOAP列在「提供者」欄中。
 
-## 禁用对服务的非基本匿名访问 {#disabling-non-essential-anonymous-access-to-services}
+## 停用對服務的非必要匿名存取 {#disabling-non-essential-anonymous-access-to-services}
 
-某些表单服务器服务允许对某些操作进行未经身份验证（匿名）的调用。 这意味着服务公开的一个或多个操作可以作为任何经过身份验证的用户或根本不作为经过身份验证的用户调用。
+某些表單伺服器服務允許對某些作業進行未經驗證的（匿名）引發。 這表示服務公開的一或多個作業可能會以任何已驗證使用者或完全沒有驗證使用者的身分叫用。
 
-1. 在Web浏览器中键入以下URL以登录到管理控制台：
+1. 在網頁瀏覽器中輸入下列URL來登入管理主控台：
 
    ```java
             https://[host name]:'port'/adminui
    ```
 
-1. 单击 **服务>应用程序和服务>服务管理**.
-1. 单击要禁用的服务的名称（例如，AuthenticationManagerService）。
-1. 单击 **“安全”选项卡**，取消选择 **允许匿名访问**，然后单击 **保存**.
-1. 完成以下服务的步骤3和4：
+1. 按一下 **服務>應用程式和服務>服務管理**.
+1. 按一下要停用的服務名稱（例如AuthenticationManagerService）。
+1. 按一下 **安全性索引標籤**，取消選取 **允許匿名存取**，然後按一下 **儲存**.
+1. 完成下列服務的步驟3和4：
 
    * AuthenticationManagerService
    * EJB
    * 电子邮件
-   * 作业管理器
-   * 观察文件夹
+   * 工作管理員
+   * 觀察資料夾
    * UsermanagerUtilservice
-   * 远程处理
+   * 遠端
    * RepositoryProviderService
    * EMCDocumentumRepositoryProvider
    * IBMFilenetRepositoryProvider
    * FormAugmenter
-   * 任务管理器服务
-   * 任务管理器连接器
-   * 任务管理器查询服务
-   * 任务队列管理器
-   * 任务端点管理器
-   * 用户服务
+   * 任務管理員服務
+   * TaskmanagerConnector
+   * TaskManagerQueryService
+   * TaskQueueManager
+   * 任務端點管理員
+   * 使用者服務
    * WorkspaceSearchTemplateService
-   * 工作区属性服务
-   * 输出服务
-   * 表单服务
+   * WorkspacePropertyService
+   * 輸出服務
+   * FormsService
 
-   如果您打算公开这些服务的任何服务以进行远程调用，则还应该考虑禁用这些服务的匿名访问。 否则，任何对此服务具有网络访问权限的调用者都可以在不传递有效凭据的情况下调用该服务。
+   如果您要公開這些服務的任何一項以進行遠端引發，您也應考慮停用這些服務的匿名存取。 否則，任何具有此服務網路存取權的呼叫者都可以在不傳遞有效認證的情況下叫用服務。
 
-   对于任何不需要的服务，应禁用匿名访问。 许多内部服务都要求启用匿名身份验证，因为它们可能需要由系统中的任何用户调用，而不需要获得预授权。
+   任何不需要的服務都應該停用匿名存取。 許多內部服務都要求啟用匿名驗證，因為它們可能需要由系統中的任何使用者叫用，而不需要預先授權。
 
-## 更改默认全局超时 {#changing-the-default-global-time-out}
+## 變更預設全域逾時 {#changing-the-default-global-time-out}
 
-最终用户可以通过Workbench、AEM Forms Web应用程序或调用AEM Forms服务器服务的自定义应用程序来验证AEM Forms。 一个全局超时设置用于指定此类用户在被迫重新进行身份验证之前可以与AEM Forms交互的时间（使用基于SAML的断言）。 默认设置为2小时。 在生产环境中，时间量需要减少到可接受的最小分钟数。
+一般使用者可透過Workbench、AEM Forms Web應用程式或叫用AEM Forms伺服器服務的自訂應用程式，驗證AEM Forms。 一個全域逾時設定用於指定這類使用者在被迫重新驗證之前，可以與AEM Forms互動多久的時間（使用以SAML為基礎的判斷提示）。 預設設定是兩個小時。 在生產環境中，時間量需要減少至可接受的最小分鐘數。
 
-### 最大程度地减少重新身份验证时间限制 {#minimize-reauthentication-time-limit}
+### 將重新驗證時間限制最小化 {#minimize-reauthentication-time-limit}
 
-1. 在Web浏览器中键入以下URL以登录到管理控制台：
+1. 在網頁瀏覽器中輸入下列URL來登入管理主控台：
 
    ```java
             https://[host name]:'port'/adminui
    ```
 
-1. 单击 **设置>用户管理>配置>导入和导出配置文件**.
-1. 单击 **导出** 以使用现有AEM Forms设置生成config.xml文件。
-1. 在编辑器中打开XML文件，并找到以下条目：
+1. 按一下 **「設定」 > 「使用者管理」 > 「組態」 > 「匯入和匯出組態檔」**.
+1. 按一下 **匯出** 以使用現有的AEM Forms設定產生config.xml檔案。
+1. 在編輯器中開啟XML檔案，並找出下列專案：
 
    `<entry key="assertionValidityInMinutes" value="120"/>`
 
-1. 将该值更改为大于5的任何数字（以分钟为单位）并保存文件。
-1. 在管理控制台中，导航到导入和导出配置文件页面。
-1. 输入修改后的config.xml文件的路径，或单击“浏览”导航到该文件。
-1. 单击 **导入** 上传修改后的config.xml文件，然后单击 **确定**.
+1. 將值變更為大於5 （以分鐘為單位）的任何數字，並儲存檔案。
+1. 在Administration Console中，瀏覽至Import And Export Configuration Files頁面。
+1. 輸入修改過的config.xml檔案的路徑，或按一下「瀏覽」瀏覽至該檔案。
+1. 按一下 **匯入** 上傳修改過的config.xml檔案，然後按一下 **確定**.

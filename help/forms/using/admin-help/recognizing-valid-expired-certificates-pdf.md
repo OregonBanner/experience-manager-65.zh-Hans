@@ -1,7 +1,7 @@
 ---
-title: 识别PDF文档中的有效证书和过期证书
+title: 在PDF檔案中辨識有效及過期的憑證
 seo-title: Recognizing valid and expired certificates in PDF documents
-description: 了解如何识别PDF文档中的有效证书和过期证书。
+description: 瞭解如何在PDF檔案中識別有效及過期的憑證。
 seo-description: Learn how to recognize valid and expired certificates in PDF documents.
 uuid: ceeff57a-586f-4f7b-852f-2a637f003d7e
 contentOwner: admin
@@ -17,10 +17,10 @@ ht-degree: 0%
 
 ---
 
-# 识别PDF文档中的有效证书和过期证书 {#recognizing-valid-and-expired-certificates-in-pdf-documents}
+# 在PDF檔案中辨識有效及過期的憑證 {#recognizing-valid-and-expired-certificates-in-pdf-documents}
 
-在Adobe Reader中打开具有由PDF扩展应用的使用权限的Reader文档时，将显示一个状态栏，其中描述在PDF文档中启用的特定使用权限。
+在Adobe Reader中開啟具有由PDF擴充功能套用之使用許可權的Reader檔案時，會顯示一個狀態列，說明PDF檔案中啟用的特定使用許可權。
 
-当指定PDF文档使用权限的数字证书过期并在Adobe Reader中打开PDF文档时，会出现一个对话框，提示用户该PDF文档具有使用权限，但这些权限被禁用。 尽管该消息表明PDF文档已被更改或篡改，但情况不一定如此。 当证书过期或修改文档时，Adobe Reader会显示此消息。 在Adobe Reader 7.0.x或更高版本中，您无法确定当前问题是哪种情况。
+當指定PDF檔案使用許可權的數位憑證過期且PDF檔案在Adobe Reader中開啟時，會出現一個對話方塊，建議使用者該PDF檔案具有使用許可權，但這些許可權已停用。 雖然此訊息指出PDF檔案已被更改或篡改，但情況不一定如此。 當憑證過期或修改檔案時，Adobe Reader會顯示此訊息。 在Adobe Reader 7.0.x或更新版本中，您無法判斷目前問題是哪個案例。
 
-关闭对话框后，Adobe Reader会打开PDF文档。 使用Acrobat Reader DC扩展应用的使用权限将无法按预期使用。 如果PDF文档是交互式表单，则表单字段将被锁定，用户无法更改表单数据。
+關閉對話方塊後，Adobe Reader會開啟PDF檔案。 使用Acrobat Reader DC擴充功能套用的使用許可權如預期般無法使用。 如果PDF檔案是互動式表單，則表單欄位會鎖定，使用者無法變更表單資料。

@@ -54,7 +54,7 @@ Assets HTTP API 包含：
 
 Assets HTTP API 的当前实施基于 **REST** 架构样式，并使您能够通过 **CRUD** 操作（创建、读取、更新、删除）访问内容（存储在 AEM 中）。
 
-通过这些操作，API允许您通过向JavaScript前端应用程序提供内容服务，将Adobe Experience Manager作为Headless CMS（内容管理系统）运行。 或者，任何其他可以执行 HTTP 请求并处理 JSON 响应的应用程序。例如，基于框架或自定义的单页应用程序 (SPA) 需要通过 API 提供的内容（通常采用 JSON 格式）。
+透過這些操作，API可讓您藉由向JavaScript前端應用程式提供內容服務，將Adobe Experience Manager當作Headless CMS （內容管理系統）來操作。 或者，任何其他可以执行 HTTP 请求并处理 JSON 响应的应用程序。例如，基于框架或自定义的单页应用程序 (SPA) 需要通过 API 提供的内容（通常采用 JSON 格式）。
 
 <!--
 >[!NOTE]
@@ -251,7 +251,7 @@ API 引用文档中将定义受支持请求的准确格式。
 
 >[!CAUTION]
 >
->AEM实例上的Dispatcher配置可能会阻止对的访问 `/api`.
+>AEM執行個體上的Dispatcher設定可能會封鎖對的存取 `/api`.
 
 >[!NOTE]
 >
@@ -318,7 +318,7 @@ API 引用文档中将定义受支持请求的准确格式。
 
 <!--You should continue your AEM headless journey by next reviewing the document [How to Put It All Together - Your App and Your Content in AEM Headless](put-it-all-together.md) where you learn how to take your AEM Headless project and prepare it for going live.-->
 
-您应该通过下一次查看文档来继续您的AEM Headless历程 [如何使用Headless应用程序上线](go-live.md) 您实际将AEM Headless项目上线的位置！
+您應該透過下一次檢視檔案來繼續您的AEM Headless歷程 [如何使用Headless應用程式上線](go-live.md) 您實際將AEM Headless專案上線的位置！
 
 ## 其他资源 {#additional-resources}
 

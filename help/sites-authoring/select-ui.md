@@ -1,6 +1,6 @@
 ---
-title: 在AEM中选择用户界面
-description: 配置在AEM中使用的界面。
+title: 在AEM中選取您的使用者介面
+description: 設定您在AEM中使用哪個介面。
 uuid: ab127f2f-2f8a-4398-90dd-c5d48eed9e53
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -16,125 +16,125 @@ ht-degree: 1%
 
 ---
 
-# 选择您的UI{#selecting-your-ui}
+# 選取您的UI{#selecting-your-ui}
 
-尽管触屏优化UI现在是标准UI，并且在站点管理和编辑方面几乎实现了功能对等性，但有时用户可能希望切换到 [经典UI](/help/sites-classic-ui-authoring/classicui.md). 可以使用多个选项来执行此操作。
+雖然觸控式UI現在是標準UI，網站的管理和編輯幾乎已達功能對等性，但使用者有時可能想要切換至 [傳統UI](/help/sites-classic-ui-authoring/classicui.md). 有幾個選項可以執行此操作。
 
 >[!NOTE]
 >
->有关与经典UI的功能对等性状态的详细信息，请参阅 [触屏UI对等功能](/help/release-notes/touch-ui-features-status.md) 文档。
+>如需與傳統UI功能對等狀態的詳細資訊，請參閱 [Touch UI功能比較](/help/release-notes/touch-ui-features-status.md) 檔案。
 
-您可以在多个位置定义要使用的UI:
+您可以在多個位置定義要使用的UI：
 
-* [为实例配置默认UI](#configuring-the-default-ui-for-your-instance)
-这将设置用户登录时显示的默认UI，但用户可能能够覆盖此设置并为其帐户或当前会话选择其他UI。
+* [為您的執行個體設定預設使用者介面](#configuring-the-default-ui-for-your-instance)
+這會將預設UI設定為在使用者登入時顯示，儘管使用者可以覆寫此UI並為他們的帳戶或目前的工作階段選取不同的UI。
 
-* [为帐户设置经典UI创作](/help/sites-authoring/select-ui.md#setting-classic-ui-authoring-for-your-account)
-这会将UI设置为编辑页面时的默认UI，不过用户可以覆盖此设置，为其帐户或当前会话选择其他UI。
+* [為您的帳戶設定傳統UI編寫](/help/sites-authoring/select-ui.md#setting-classic-ui-authoring-for-your-account)
+這會將UI設定為編輯頁面時使用的預設值，但使用者可以覆寫此設定，並為他們的帳戶或目前的工作階段選取不同的UI。
 
-* [为当前会话切换到经典UI](#switching-to-classic-ui-for-the-current-session)
-这会将当前会话切换到经典UI。
+* [切換到目前工作階段的傳統UI](#switching-to-classic-ui-for-the-current-session)
+這會切換到目前工作階段的傳統UI。
 
-* 对于 [页面创作系统会根据UI进行某些覆盖](#ui-overrides-for-the-editor).
+* 若為 [編寫頁面的系統會在與UI的關係中進行某些覆寫](#ui-overrides-for-the-editor).
 
 >[!CAUTION]
 >
->切换到经典UI的各种选项并非直接可用，必须为您的实例专门配置这些选项。
+>用於切換至傳統UI的各種選項無法立即使用，必須針對您的執行個體專門設定。
 >
->请参阅 [启用对经典UI的访问](/help/sites-administering/enable-classic-ui.md) 以了解更多信息。
+>另請參閱 [啟用對傳統UI的存取](/help/sites-administering/enable-classic-ui.md) 以取得詳細資訊。
 
 >[!NOTE]
 >
->从以前版本升级的实例将保留经典UI用于页面创作。
+>從舊版升級的執行個體將保留傳統UI以進行頁面編寫。
 >
->升级后，页面创作不会自动切换到触屏优化UI，但您可以使用 [OSGi配置](/help/sites-deploying/configuring-osgi.md) 的 **WCM创作UI模式服务** ( `AuthoringUIMode` 服务)。 请参阅 [编辑器的UI覆盖](#ui-overrides-for-the-editor).
+>升級後，頁面製作功能不會自動切換至觸控式UI，但您可以使用 [OSGi設定](/help/sites-deploying/configuring-osgi.md) 的 **WCM編寫UI模式服務** ( `AuthoringUIMode` 服務)。 另請參閱 [編輯器的使用者介面覆寫](#ui-overrides-for-the-editor).
 
-## 为实例配置默认UI {#configuring-the-default-ui-for-your-instance}
+## 為您的執行個體設定預設UI {#configuring-the-default-ui-for-your-instance}
 
-系统管理员可以使用配置启动和登录时显示的UI [根映射](/help/sites-deploying/osgi-configuration-settings.md#daycqrootmapping).
+系統管理員可以使用設定啟動時看到的UI和登入 [根對應](/help/sites-deploying/osgi-configuration-settings.md#daycqrootmapping).
 
-该设置可能会被用户默认设置或会话设置所覆盖。
+這可以由使用者預設值或工作階段設定來覆寫。
 
-## 为帐户设置经典UI创作 {#setting-classic-ui-authoring-for-your-account}
+## 為您的帳戶設定傳統UI編寫 {#setting-classic-ui-authoring-for-your-account}
 
-每个用户都可以访问 [用户首选项](/help/sites-authoring/user-properties.md#userpreferences) 用于定义他/她是否希望使用经典UI进行页面创作（而不是默认UI）。
+每個使用者都可以存取他/她 [使用者偏好設定](/help/sites-authoring/user-properties.md#userpreferences) 以定義他/她是否想要使用傳統UI來編寫頁面（而不是預設的UI）。
 
-该设置可能会被会话设置覆盖。
+這可以由工作階段設定覆寫。
 
-## 为当前会话切换到经典UI {#switching-to-classic-ui-for-the-current-session}
+## 切換到目前工作階段的傳統UI {#switching-to-classic-ui-for-the-current-session}
 
-使用触屏优化UI时，桌面用户可能希望还原到经典（仅限桌面）UI。 可通过以下几种方法切换到当前会话的经典UI:
+使用觸控式UI時，桌上型電腦使用者可能想要恢復為傳統（僅限桌上型電腦） UI。 有幾種方法可以在目前的工作階段切換至傳統UI：
 
-* **导航链接**
+* **導覽連結**
 
    >[!CAUTION]
    >
-   >切换到经典UI的此选项并非直接可用，必须为您的实例专门配置此选项。
+   >這個用於切換至傳統UI的選項無法立即使用，必須針對您的執行個體進行專門設定。
    >
    >
-   >请参阅 [启用对经典UI的访问](/help/sites-administering/enable-classic-ui.md) 以了解更多信息。
+   >另請參閱 [啟用對傳統UI的存取](/help/sites-administering/enable-classic-ui.md) 以取得詳細資訊。
 
-   如果启用了此设置，则每当您将鼠标悬停在适用的控制台上时，都会显示一个图标（显示器的符号），点按/单击该图标将在经典UI中打开相应的位置。
+   如果已啟用此功能，則每當您將滑鼠移至適用的主控台時，畫面都會顯示一個圖示（監視器的符號），點選/按一下此圖示即可在傳統UI中開啟適當的位置。
 
-   例如， **站点** to **siteadmin**:
+   例如，下列連結來自： **網站** 至 **siteadmin**：
 
    ![syui-01](assets/syui-01.png)
 
 * **URL**
 
-   经典UI可通过欢迎屏幕的URL()访问 `welcome.html`. 例如：
+   傳統UI可使用歡迎畫面的URL進行存取，網址為 `welcome.html`. 例如：
 
    `https://localhost:4502/welcome.html`
 
    >[!NOTE]
    >
-   >触屏优化UI可以通过 `sites.html`. 例如：
+   >觸控式UI可透過以下方式存取： `sites.html`. 例如：
    >
    >
    >`https://localhost:4502/sites.html`
 
-### 编辑页面时切换为经典UI {#switching-to-classic-ui-when-editing-a-page}
+### 編輯頁面時切換到傳統UI {#switching-to-classic-ui-when-editing-a-page}
 
 >[!CAUTION]
 >
->切换到经典UI的此选项并非直接可用，必须为您的实例专门配置此选项。
+>這個用於切換至傳統UI的選項無法立即使用，必須針對您的執行個體進行專門設定。
 >
->请参阅 [启用对经典UI的访问](/help/sites-administering/enable-classic-ui.md) 以了解更多信息。
+>另請參閱 [啟用對傳統UI的存取](/help/sites-administering/enable-classic-ui.md) 以取得詳細資訊。
 
-如果启用， **打开经典UI** 可从 **页面信息** 对话框：
+如果已啟用， **開啟Classic UI** 可從以下網址取得： **頁面資訊** 對話方塊：
 
 ![syui-02](assets/syui-02.png)
 
-### 编辑器的UI覆盖 {#ui-overrides-for-the-editor}
+### 編輯器的使用者介面覆寫 {#ui-overrides-for-the-editor}
 
-在页面创作时，系统可能会覆盖用户或系统管理员定义的设置。
+在頁面編寫的情況下，由使用者或系統管理員定義的設定可由系統覆寫。
 
-* 创作页面时：
+* 編寫頁面時：
 
-   * 在使用 `cf#` 中。 例如：
+   * 透過存取頁面時，會強制使用傳統編輯器 `cf#` 在URL中。 例如：
       `https://localhost:4502/cf#/content/geometrixx/en/products/triangle.html`
 
-   * 在使用 `/editor.html` 在URL中或使用触控设备时。 例如：
+   * 使用時，會強制使用觸控式編輯器 `/editor.html` 在URL中或使用觸控裝置時。 例如：
       `https://localhost:4502/editor.html/content/geometrixx/en/products/triangle.html`
 
-* 任何强制操作都是临时的，并且仅对浏览器会话有效
+* 任何強制都是暫時的，只對瀏覽器工作階段有效
 
-   * 将根据是否启用触屏( `editor.html`)或classic( `cf#`)。
+   * Cookie集的設定取決於是否啟用觸控功能( `editor.html`)或傳統( `cf#`)已使用。
 
-* 通过打开页面时 `siteadmin`，将检查是否存在：
+* 透過開啟頁面時 `siteadmin`，將會檢查是否存在下列專案：
 
    * Cookie
-   * 用户首选项
-   * 如果两者都不存在，则默认使用 [OSGi配置](/help/sites-deploying/configuring-osgi.md) 的 **WCM创作UI模式服务** ( `AuthoringUIMode` 服务)。
+   * 使用者偏好設定
+   * 如果兩者都不存在，則預設值為中設定的定義。 [OSGi設定](/help/sites-deploying/configuring-osgi.md) 的 **WCM編寫UI模式服務** ( `AuthoringUIMode` 服務)。
 
 >[!NOTE]
 >
->如果 [用户已经定义了页面创作首选项](#settingthedefaultauthoringuiforyouraccount)，则不会通过更改OSGi属性来覆盖该值。
+>若 [使用者已定義頁面編寫的偏好設定](#settingthedefaultauthoringuiforyouraccount)，不會透過變更OSGi屬性來覆寫。
 
 >[!CAUTION]
 >
->由于使用了Cookie（如前面所述），因此不建议执行以下任一操作：
+>由於使用Cookie （如上所述），不建議執行以下任一操作：
 >
->* 手动编辑URL — 非标准URL可能会导致未知情况和功能缺失。
->* 同时打开两个编辑器 — 例如，在单独的窗口中打开。
+>* 手動編輯URL — 非標準URL可能會導致未知的情況和缺乏功能。
+>* 讓兩個編輯器同時開啟 — 例如，在不同的視窗中。
 

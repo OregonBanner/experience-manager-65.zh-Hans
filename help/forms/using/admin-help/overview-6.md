@@ -1,7 +1,7 @@
 ---
-title: 配置SSL概述
+title: 設定SSL的概觀
 seo-title: Overview of configuring SSL
-description: 了解如何通过配置SSL增强通信安全性。
+description: 瞭解如何透過設定SSL來增強通訊的安全性。
 seo-description: Learn about how to enhance security of communication by configuring SSL.
 uuid: 3e99d2bf-137b-45ba-8384-309624094623
 contentOwner: admin
@@ -17,20 +17,20 @@ ht-degree: 0%
 
 ---
 
-# 配置SSL概述 {#overview-of-configuring-ssl}
+# 設定SSL的概觀 {#overview-of-configuring-ssl}
 
-您可以创建安全套接字层(SSL)凭据，并在应用程序服务器上配置SSL，以增强与应用程序服务器通信的安全性。
+您可以建立安全通訊端層(SSL)認證，並在應用程式伺服器上設定SSL，以加強與應用程式伺服器通訊的安全性。
 
-作为安全产品，Rights Management需要配置SSL。 配置SSL证书时，请确保仅使用RSA密钥。 不支持包含DSA密钥的SSL证书。
+作為安全性產品，Rights Management需要設定SSL。 設定SSL憑證時，請確定您僅使用RSA金鑰。 不支援具有DSA金鑰的SSL憑證。
 
-提供的信息适用于交钥匙安装、自动安装和手动安装。 它提供了一个配置SSL的方法示例。 您也可以使用更适合您的网络或组织的其他方法。
-
->[!NOTE]
->
->建议您在应用程序服务器中配置SSL之前，完成AEM表单模块的安装、配置和部署，并确保产品正常运行。
+提供的資訊適用於交鑰匙安裝、自動安裝和手動安裝。 它提供設定SSL方法的範例。 您也可以使用其他更適合您的網路或組織的方法。
 
 >[!NOTE]
 >
->创建SSL安全证书和凭据时，请使用与运行应用程序服务器相同的用户帐户权限。 如果使用其他用户权限运行应用程序服务器，则当ContentRootURI指向https时，表单可能无法正确呈现为PDFForm呈现形式。
+>建議您先完成AEM表單模組的安裝、設定和部署，並在應用程式伺服器上設定SSL之前，確保產品可正確執行。
 
-如果您具有启用了SSL的LDAP服务器，请配置用户管理以与它配合使用。 (请参阅 [为启用了SSL的LDAP服务器配置用户管理](/help/forms/using/admin-help/configure-user-management-ssl-enabled.md#configure-user-management-for-an-ssl-enabled-ldap-server).)
+>[!NOTE]
+>
+>建立SSL安全性憑證和認證時，請使用您用來執行應用程式伺服器的相同使用者帳戶許可權。 如果使用其他使用者許可權執行應用程式伺服器，則當ContentRootURI指向https時，表單可能無法正確轉譯為PDFForm轉譯。
+
+如果您有啟用SSL的LDAP伺服器，請設定「使用者管理」以搭配使用。 (請參閱 [為啟用SSL的LDAP伺服器設定使用者管理](/help/forms/using/admin-help/configure-user-management-ssl-enabled.md#configure-user-management-for-an-ssl-enabled-ldap-server).)

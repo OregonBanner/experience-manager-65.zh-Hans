@@ -1,6 +1,6 @@
 ---
 title: 启动项
-description: 创建启动项，以允许更新现有网页的新版本，以供将来激活。 创建启动项时，需要指定标题和源页面。
+description: 建立啟動項，以更新現有網頁的新版本，以供日後啟用。 建立Launch時，您可以指定標題和來源頁面。
 uuid: b1952b6c-fc44-4e39-80ba-9380a6c66b8c
 contentOwner: AEM Docs
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -17,18 +17,18 @@ ht-degree: 1%
 
 # 启动项{#launches}
 
-通过启动项，您可以有效地为将来的版本开发内容。
+啟動可讓您有效率地開發未來版本的內容。
 
-将创建一个启动项，以便进行更改以准备将来发布（同时维护当前页面）。 编辑和更新启动页面后，您可以将其提升回源，然后激活源页面（顶级）。 提升会将启动项内容复制回源页面，并且可以手动或自动完成（具体取决于创建和编辑启动项时设置的字段）。
+建立啟動後，您就可以進行變更，以備將來發佈（同時保留目前的頁面）。 編輯和更新啟動頁面後，您會將啟動頁面升級回來源，然後啟動來源頁面（頂層）。 提升會將啟動內容復寫回來源頁面，並且可以手動或自動完成（取決於建立和編輯啟動時設定的欄位）。
 
 >[!NOTE]
 >
->详细描述了发射原理。 [启动项](/help/sites-authoring/launches.md) ，位于标准创作文档中。
+>以下詳細說明啟動背後的理論： [啟動](/help/sites-authoring/launches.md) 在標準撰寫檔案中。
 >
->有关在经典UI中使用启动项的特定信息，请参阅以下文档和 [创建启动项](/help/sites-classic-ui-authoring/classic-launches-creating.md), [编辑启动项](/help/sites-classic-ui-authoring/classic-launches-editing.md)和 [提升启动项](/help/sites-classic-ui-authoring/classic-launches-promoting.md).
+>在傳統UI中使用啟動的特定資訊，可在以下檔案連同 [建立啟動](/help/sites-classic-ui-authoring/classic-launches-creating.md)， [編輯啟動](/help/sites-classic-ui-authoring/classic-launches-editing.md)、和 [提升啟動](/help/sites-classic-ui-authoring/classic-launches-promoting.md).
 
 >[!CAUTION]
 >
->经典UI中无法为启动项设置多个源分支。
+>傳統UI中無法針對啟動設定多個來源分支。
 
-可以通过直接访问启动项控制台 [http://localhost:4502/libs/launches/content/admin.html](http://localhost:4502/libs/launches/content/admin.html)
+您可以透過以下方式直接存取「啟動」主控台： [http://localhost:4502/libs/launches/content/admin.html](http://localhost:4502/libs/launches/content/admin.html)

@@ -1,6 +1,6 @@
 ---
-title: 翻译资产的最佳实践
-description: 高效管理资产的最佳实践，以同步各种翻译版本并简化翻译工作流。
+title: 翻譯資產的最佳實務
+description: 有效管理資產的最佳實務，以同步各種翻譯版本並簡化翻譯工作流程。
 contentOwner: AG
 role: Admin
 feature: Asset Management
@@ -12,26 +12,26 @@ ht-degree: 1%
 
 ---
 
-# 翻译资产的最佳实践 {#best-practices-for-translating-assets-efficiently}
+# 翻譯資產的最佳實務 {#best-practices-for-translating-assets-efficiently}
 
-[!DNL Adobe Experience Manager Assets] 支持多语言工作流将数字资源的二进制文件、元数据和标记翻译成多个区域设置并管理已翻译的资源。 有关详细信息，请参阅 [多语言资产](multilingual-assets.md).
+[!DNL Adobe Experience Manager Assets] 支援多語言工作流程，將數位資產的二進位檔案、中繼資料和標籤翻譯成多個區域設定，並管理已翻譯的資產。 如需詳細資訊，請參閱 [多語言資產](multilingual-assets.md).
 
-为了高效管理资产以确保不同的翻译版本保持同步，请创建 [语言副本](preparing-assets-for-translation.md) 之前的所有资产。
+為了有效管理資產，以確保不同翻譯版本保持同步，請建立 [語言副本](preparing-assets-for-translation.md) 執行翻譯工作流程之前的所有資產。
 
-资产或资产组的语言副本是具有相似内容层次结构的语言同级（或相同语言的资产版本）。
+資產或資產群組的語言副本是具有類似內容階層的語言同層級（或相同語言的資產版本）。
 
-每个语言副本都是一个独立的资产。 因此，将资产转换为多个区域设置可以显着增加CRX存储库的大小。 例如，将总大小为10 GB的资产翻译为两种语言可将存储库大小增加约20 GB（每种语言增加10 GB）。
+每個語言副本都是獨立的資產。 因此，將資產轉換為多個地區設定可大幅增加CRX存放庫的大小。 例如，將合併大小為10 GB的資產翻譯為兩種語言可將存放庫大小增加約20 GB （每種語言增加10 GB）。
 
-与元数据和标记相比，资产二进制文件占用的存储空间要大得多。 因此，如果翻译元数据和标记仅符合您的目的，请忽略以翻译二进制文件。 您可以在资料档案库中保留二进制文件的原始副本，以便与翻译成不同区域设置的元数据和标记相关联。 维护二进制文件的单个副本而不是多个已翻译版本，可最大限度地减少对存储库大小的影响。
+和中繼資料和標籤相比，資產二進位檔佔用的儲存空間大得多。 因此，如果轉譯中繼資料和標籤只符合您的用途，請省略轉譯二進位檔案。 您可以將二進位檔的原始復本保留在儲存區域中，以便與翻譯成不同地區設定的中繼資料和標籤相關聯。 維護二進位檔的單一復本，而不是多個翻譯版本，可將對存放庫大小的影響降至最低。
 
-File Data Store和Amazon S3 Data Store提供了最适合这些情况的存储基础架构。 这些存储库存储着资产二进制文件（包括演绎版）的单一副本，这些副本可由元数据和标记在多个区域设置中共享。 因此，创建资源语言副本并翻译元数据和标记不会影响存储库大小。
+File Data Store和Amazon S3 Data Store提供最適合這些情況的儲存基礎架構。 這些存放庫會儲存單一的資產二進位檔復本（包括轉譯），可供多個地區設定的中繼資料和標籤共用。 因此，建立資產語言副本並翻譯中繼資料和標籤不會影響存放庫大小。
 
-您还可以对几个工作流和翻译集成框架进行一些配置更改，以进一步简化该过程。
+您也可以對幾個工作流程和翻譯整合框架進行一些設定變更，以進一步簡化程式。
 
 1. 执行下列操作之一：
 
-   * [设置文件数据存储](/help/sites-deploying/data-store-config.md)
-   * [设置Amazon S3数据存储](/help/sites-deploying/data-store-config.md)
+   * [設定檔案資料存放區](/help/sites-deploying/data-store-config.md)
+   * [設定Amazon S3資料存放區](/help/sites-deploying/data-store-config.md)
 
 <!--
 1. Disable the [DAM MetaData Write-back](/help/sites-administering/workflow-offloader.md#disable-offloading) workflow.
@@ -43,9 +43,9 @@ File Data Store和Amazon S3 Data Store提供了最适合这些情况的存储基
    >Disabling the [!UICONTROL DAM MetaData Writeback] workflow turns off XMP metadata write-back on asset binaries. Consequently, future metadata changes are no longer be saved within the assets. Evaluate the consequences before disabling this workflow.
 -->
 
-1. 启用 [!UICONTROL 设置上次修改日期] 工作流。
+1. 啟用 [!UICONTROL 設定上次修改日期] 工作流程。
 
-   此 [!UICONTROL DAM元数据写回] 工作流配置资产的上次修改日期。 由于您在步骤2中禁用了此工作流， [!DNL Assets] 无法再使资源的上次修改日期保持最新。 因此，请启用 *设置上次修改日期* 此工作流用于确保资产的上次修改日期是最新的。 如果资源具有过时的上次修改日期，则可能会导致错误。
+   此 [!UICONTROL DAM中繼資料回寫] 工作流程會設定資產的上次修改日期。 由於您已在步驟2中停用此工作流程， [!DNL Assets] 無法再將資產的上次修改日期保持在最新狀態。 因此，啟用 *設定上次修改日期* 工作流程，確保資產的上次修改日期為最新。 如果資產具有過時的上次修改日期，可能會導致錯誤。
 
-1. [配置翻译集成框架](/help/sites-administering/tc-tic.md) 以停止翻译资产二进制文件。 取消选择 **[!UICONTROL 翻译资产]** 下的选项 [!UICONTROL 资产] 制表符，以停止翻译资产二进制文件。
-1. 翻译资源元数据/标记，使用 [多语言资源工作流](multilingual-assets.md).
+1. [設定翻譯整合框架](/help/sites-administering/tc-tic.md) 以停止翻譯資產二進位檔。 取消選取 **[!UICONTROL 翻譯資產]** 下的選項 [!UICONTROL 資產] 索引標籤以停止翻譯資產二進位檔。
+1. 翻譯資產中繼資料/標籤，使用 [多語言資產工作流程](multilingual-assets.md).

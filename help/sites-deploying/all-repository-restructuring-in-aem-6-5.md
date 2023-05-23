@@ -1,7 +1,7 @@
 ---
-title: AEM 6.5中的常见存储库重组
+title: AEM 6.5中的常見存放庫重組
 seo-title: Common Repository Restructuring in AEM 6.5
-description: 了解如何进行必要的更改，以便迁移到AEM 6.5中适用于AEM所有区域的新存储库结构。
+description: 瞭解如何進行必要的變更，以移轉至AEM 6.5中適用於AEM所有區域的新存放庫結構。
 seo-description: Learn how to make the necessary changes in order to migrate to the new repository structure in AEM 6.5 that are common for all areas of AEM.
 uuid: a4bb64e5-387b-4084-9258-54e68db12f3b
 contentOwner: chaikels
@@ -17,63 +17,63 @@ ht-degree: 2%
 
 ---
 
-# AEM 6.5中的常见存储库重组 {#common-repository-restructuring-in-aem}
+# AEM 6.5中的常見存放庫重組 {#common-repository-restructuring-in-aem}
 
-如父项中所述 [AEM 6.5中的存储库重组](/help/sites-deploying/repository-restructuring.md) 页面，升级到AEM 6.5的客户应使用此页面评估与存储库更改关联的工作量，这些更改可能会影响所有解决方案。 在AEM 6.5升级过程中，有些更改需要您投入精力，而有些则可能会推迟到将来升级。
+如父項所述 [AEM 6.5中的存放庫重組](/help/sites-deploying/repository-restructuring.md) 頁面，升級至AEM 6.5的客戶應使用此頁面來評估與存放庫變更相關聯的工作量，變更可能會影響所有解決方案。 有些變更需要在AEM 6.5升級過程中投入精力，而其他變更則可能延遲到未來升級。
 
-**6.5版升级**
+**6.5版升級**
 
 * [ContextHub 配置](#contexthub-6.5)
 * [工作流实例](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#workflow-instances)
 * [工作流模型](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#workflow-models)
 * [工作流启动器](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#workflow-launchers)
-* [工作流脚本](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#workflow-scripts)
+* [工作流程指令碼](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#workflow-scripts)
 
-**在将来升级之前**
+**未來升級之前**
 
 * [ContextHub 配置](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#contexthub-configurations)
-* [经典Cloud Services设计](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#classic-cloud-services-designs)
-* [经典功能板设计](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#classic-dashboards-designs)
-* [经典报表设计](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#classic-reports-designs)
-* [默认设计](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#default-designs)
-* [AdobeDTM JavaScript端点](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#adobe-dtm-javascript-endpoint)
-* [AdobeDTM Web挂接端点](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#adobe-dtm-web-hook-endpoint)
-* [收件箱任务](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#inbox-tasks)
-* [多站点管理器Blueprint配置](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#multi-site-manager-blueprint-configurations)
-* [AEM项目功能板小工具配置](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#aem-projects-dashboard-gadget-configurations)
-* [复制通知电子邮件模板](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#replication-notification-e-mail-template)
+* [傳統Cloud Services設計](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#classic-cloud-services-designs)
+* [傳統儀表板設計](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#classic-dashboards-designs)
+* [傳統報表設計](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#classic-reports-designs)
+* [預設設計](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#default-designs)
+* [AdobeDTM JavaScript端點](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#adobe-dtm-javascript-endpoint)
+* [AdobeDTM Web勾點端點](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#adobe-dtm-web-hook-endpoint)
+* [收件匣任務](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#inbox-tasks)
+* [多站點管理員Blueprint設定](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#multi-site-manager-blueprint-configurations)
+* [AEM專案儀表板小工具設定](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#aem-projects-dashboard-gadget-configurations)
+* [復寫通知電子郵件範本](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#replication-notification-e-mail-template)
 * [标记](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#tags)
 * [翻译云服务](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#translation-cloud-services)
-* [翻译语言](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#translation-languages)
+* [翻譯語言](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#translation-languages)
 * [翻译规则](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#translation-rules)
-* [翻译构件客户端库](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#translation-widget-client-library)
-* [树激活Web控制台](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#tree-activation-web-console)
-* [供应商翻译连接器Cloud Services](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#vendor-translation-connector-cloud-services)
-* [工作流通知电子邮件模板](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#workflow-notification-email-templates)
+* [翻譯Widget使用者端資料庫](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#translation-widget-client-library)
+* [樹啟動Web主控台](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#tree-activation-web-console)
+* [廠商翻譯聯結器Cloud Services](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#vendor-translation-connector-cloud-services)
+* [工作流程通知電子郵件範本](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#workflow-notification-email-templates)
 
-## 6.5版升级 {#with-upgrade}
+## 6.5版升級 {#with-upgrade}
 
 ### ContextHub 配置 {#contexthub-6.5}
 
-从AEM 6.4开始，没有默认的ContextHub配置。 因此，在站点的根级别上 `cq:contextHubPathproperty` 应设置为指示应使用的配置。
+從AEM 6.4開始，沒有預設的ContextHub設定。 因此，在網站的根層級 `cq:contextHubPathproperty` 應設定為指示應使用哪個設定。
 
-1. 导航到站点的根目录。
-1. 打开根页面的页面属性，然后选择个性化选项卡。
-1. 在Contexthub路径字段中，输入您自己的ContextHub配置路径。
+1. 導覽至網站的根目錄。
+1. 開啟根頁面的頁面屬性，並選取「個人化」標籤。
+1. 在Contexthub路徑欄位中，輸入您自己的ContextHub設定路徑。
 
-此外，在ContextHub配置中， `sling:resourceType` 需要更新为相对路径而不是绝对路径。
+此外，在ContextHub設定上， `sling:resourceType` 需要更新為相對而非絕對。
 
-1. 在CRX DE Lite中打开ContextHub配置节点的属性，例如 `/apps/settings/cloudsettings/legacy/contexthub`
-1. 更改 `sling:resourceType` 起始日期 `/libs/granite/contexthub/cloudsettings/components/baseconfiguration` 到 `granite/contexthub/cloudsettings/components/baseconfiguration`
+1. 在CRX DE Lite中開啟ContextHub設定節點的屬性，例如 `/apps/settings/cloudsettings/legacy/contexthub`
+1. 變更 `sling:resourceType` 從 `/libs/granite/contexthub/cloudsettings/components/baseconfiguration` 至 `granite/contexthub/cloudsettings/components/baseconfiguration`
 
-即 `sling:resourceType` ContextHub配置的项必须是相对项而不是绝对项。
+即 `sling:resourceType` 的URL必須是相對的，而不是絕對的。
 
 ### 工作流模型 {#workflow-models}
 
 <table style="table-layout:auto">
  <tbody>
   <tr>
-   <td><strong>上一个位置</strong></td>
+   <td><strong>上一個位置</strong></td>
    <td><code>/etc/workflow/models</code></td>
   </tr>
   <tr>
@@ -81,23 +81,23 @@ ht-degree: 2%
    <td><p><code>/libs/settings/workflow/models</code></p> <p><code>/conf/global/settings/workflow/models</code></p> <p><code>/var/workflow/models</code></p> </td>
   </tr>
   <tr>
-   <td><strong>重构指南</strong></td>
-   <td><p>任何新的或修改过的工作流模型必须迁移到/conf/global/workflow/models。</p>
+   <td><strong>重組指引</strong></td>
+   <td><p>任何新的或修改過的工作流程模型必須移轉至/conf/global/workflow/models。</p>
     <ol>
-     <li>将修改过的工作流模型部署到本地AEM 6.5开发实例中，以便它们存在于“上一个”位置。</li>
-     <li>在“AEM”&gt;“工具”&gt;“工作流”&gt;“模型”中使用“AEM工作流模型编辑器”编辑工作流模型。</li>
-     <li>迁移修改的AEM提供的工作流模型时
+     <li>將修改過的工作流程模型部署至本機AEM 6.5開發執行個體，使其存在於先前位置。</li>
+     <li>在「AEM &gt;工具&gt;工作流程&gt;模型」中，使用「AEM工作流程模型編輯器」編輯工作流程模型。</li>
+     <li>移轉修改過的AEM提供的工作流程模型時
       <ol>
-       <li>打开工作流模型编辑器后，修改浏览器的地址URL，并将路径段/libs/settings/workflow/models替换为/etc/workflow/models。
+       <li>在「工作流程模型編輯器」開啟的狀態下，修改瀏覽器的位址URL，並將路徑區段/libs/settings/workflow/models取代為/etc/workflow/models。
         <ul>
-         <li>例如，更改： <em>http://localhost:4502/editor.html<strong>/libs/settings/workflow/model</strong>/dam/update_asset.html</em> 到 <em>http://localhost:4502/editor.html<strong>/etc/workflow/model</strong>/dam/update_asset.html</em></li>
+         <li>例如，變更： <em>http://localhost:4502/editor.html<strong>/libs/settings/workflow/model</strong>/dam/update_asset.html</em> 至 <em>http://localhost:4502/editor.html<strong>/etc/workflow/model</strong>/dam/update_asset.html</em></li>
         </ul> </li>
       </ol> </li>
-     <li>在工作流模型编辑器中启用编辑模式，该模式会将工作流模型定义复制到/conf/global/workflow/models。</li>
-     <li>点按“同步”按钮，将更改同步到/var/workflow/models下的“运行时工作流模型”。</li>
-     <li>导出两个工作流模型(/conf/global/workflow/models/&lt;workflow-model&gt;)和运行时工作流模型(/var/workflow/models/&lt;workflow-model&gt;)并集成到AEM项目中。
+     <li>啟用「工作流程模型編輯器」中的「編輯」模式，將工作流程模型定義複製到/conf/global/workflow/models。</li>
+     <li>點選「同步」按鈕，將變更同步到/var/workflow/models下的「執行階段工作流程模型」。</li>
+     <li>匯出兩個工作流程模型(/conf/global/workflow/models/&lt;workflow-model&gt;)和執行階段工作流程模型(/var/workflow/models/&lt;workflow-model&gt;)並整合至AEM專案。
       <ol>
-       <li>例如，导出：
+       <li>例如，匯出：
         <ul>
          <li><code>/conf/global/settings/workflow/models/dam/my_workflow_model</code> 和 </li>
          <li><code>/var/workflow/models/dam/my_workflow_model</code></li>
@@ -107,12 +107,12 @@ ht-degree: 2%
   </tr>
   <tr>
    <td><strong>注释</strong></td>
-   <td><p>工作流模型解析的顺序如下：</p>
+   <td><p>工作流程模型解析的順序如下：</p>
     <ol>
      <li><code>/conf/global/settings/workflow/models</code></li>
      <li><code>/libs/settings/workflow/models</code></li>
      <li><code>/etc/workflow/models</code></li>
-    </ol> <p>因此，如果要保留AEM提供的工作流模型的任何自定义项，则必须将其移至/conf/global/settings/workflow/models ，否则它们将被替换为/libs/settings/workflow/models中AEM提供的工作流模型定义。</p> </td>
+    </ol> <p>因此，如果想要保留AEM提供之工作流程模型的任何自訂專案，必須將其保留在「先前位置」中，並移至/conf/global/settings/workflow/models ，否則它們會由/libs/settings/workflow/models中AEM提供之工作流程模型定義取代。</p> </td>
   </tr>
  </tbody>
 </table>
@@ -122,7 +122,7 @@ ht-degree: 2%
 <table style="table-layout:auto">
  <tbody>
   <tr>
-   <td><strong>上一个位置</strong></td>
+   <td><strong>上一個位置</strong></td>
    <td><code>/etc/workflow/instances</code></td>
   </tr>
   <tr>
@@ -130,15 +130,15 @@ ht-degree: 2%
    <td><code>/var/workflow/instances</code></td>
   </tr>
   <tr>
-   <td><strong>重构指南</strong></td>
-   <td><p>无需执行任何操作即可与新位置对齐。</p> <p>历史工作流实例可以安全地继续驻留在前一位置，而新工作流实例将创建在新位置。</p> </td>
+   <td><strong>重組指引</strong></td>
+   <td><p>無需任何動作即可與新位置對齊。</p> <p>歷史工作流程例項可以安全地繼續駐留於先前位置，而新的工作流程例項將會建立於新位置。</p> </td>
   </tr>
   <tr>
    <td><strong>注释</strong></td>
-   <td>中的任何显式路径引用
+   <td>中的任何明確路徑參照
     <code>
      custom
-    </code> “上一位置”的代码还应考虑“新位置”。 建议重构此代码以使用AEM Workflow API。</td>
+    </code> 「先前位置」的程式碼也應考慮到「新位置」。 建議將此程式碼重構為使用AEM Workflow API。</td>
   </tr>
  </tbody>
 </table>
@@ -148,7 +148,7 @@ ht-degree: 2%
 <table style="table-layout:auto">
  <tbody>
   <tr>
-   <td><strong>上一个位置</strong></td>
+   <td><strong>上一個位置</strong></td>
    <td><code>/etc/workflow/launcher/config</code></td>
   </tr>
   <tr>
@@ -156,30 +156,30 @@ ht-degree: 2%
    <td><p><code>/libs/settings/workflow/launcher/config</code></p> <p><code>/conf/global/settings/workflow/launcher/config</code></p> </td>
   </tr>
   <tr>
-   <td><strong>重构指南</strong></td>
-   <td><p>任何新的或修改过的工作流启动器都必须迁移到 <code>/conf/global/workflow/launcher/config</code>.</p>
+   <td><strong>重組指引</strong></td>
+   <td><p>任何新工作流程啟動器或修改過的工作流程啟動器都必須移轉至 <code>/conf/global/workflow/launcher/config</code>.</p>
     <ol>
-     <li>将任何新的或修改过的工作流启动器配置从上一个位置复制到新位置(<code>/conf/global</code>)。</li>
+     <li>將任何新的或修改過的工作流程啟動器設定從上一個位置複製到新位置(<code>/conf/global</code>)。</li>
     </ol> </td>
   </tr>
   <tr>
    <td><strong>注释</strong></td>
-   <td><p>工作流启动器解析的顺序如下：</p>
+   <td><p>工作流程啟動器解析度的發生順序如下：</p>
     <ol>
      <li><code>/conf/global/settings/workflow/launcher</code></li>
      <li><code>/libs/settings/workflow/launcher</code></li>
      <li><code>/etc/workflow/launcher</code></li>
-    </ol> <p>因此，必须将AEM提供的工作流启动器保留在上一个位置的任何自定义项移至新位置(<code>/conf/global/settings/workflow/launcher</code> 如果要保留它们，则它们将由AEM提供的工作流启动器定义取代。 <code>/libs/settings/workflow/launcher</code>.</p> </td>
+    </ol> <p>因此，AEM提供之工作流程啟動器保留在上一個位置的任何自訂內容，都必須移至新位置(<code>/conf/global/settings/workflow/launcher</code> 如果要保留它們，否則它們將由AEM在中提供的Workflow Launcher定義取代。 <code>/libs/settings/workflow/launcher</code>.</p> </td>
   </tr>
  </tbody>
 </table>
 
-### 工作流脚本 {#workflow-scripts}
+### 工作流程指令碼 {#workflow-scripts}
 
 <table style="table-layout:auto">
  <tbody>
   <tr>
-   <td><strong>上一个位置</strong></td>
+   <td><strong>上一個位置</strong></td>
    <td><code>/etc/workflow/scripts</code></td>
   </tr>
   <tr>
@@ -187,34 +187,34 @@ ht-degree: 2%
    <td><p><code>/libs/workflow/scripts</code></p> <p><code>/apps/workflow/scripts</code></p> </td>
   </tr>
   <tr>
-   <td><strong>重构指南</strong></td>
-   <td><p>任何新的或修改过的工作流脚本必须迁移到新位置，并且引用工作流模型必须更新以反映新位置。</p>
+   <td><strong>重組指引</strong></td>
+   <td><p>任何新的或修改過的工作流程指令碼都必須移轉到新位置，而且參考工作流程模型會更新以反映新位置。</p>
     <ol>
-     <li>将任何新的或修改过的工作流脚本从以前的位置复制到新位置。<br />
+     <li>將任何新的或修改過的工作流程指令碼從先前位置複製到新位置。<br />
       <ul>
-       <li><code>/apps/workflow/scripts</code> 应在SCM中维护。</li>
+       <li><code>/apps/workflow/scripts</code> 應在SCM中維護。</li>
       </ul> </li>
-     <li>更新对工作流模型中先前位置处的工作流脚本的任何引用，以指向新位置。</li>
+     <li>更新工作流'b5'7b模型中先前位置處對「工作流'b5'7b指令碼」的任何參照，以指向新位置。</li>
     </ol> </td>
   </tr>
   <tr>
    <td><strong>注释</strong></td>
-   <td><p>AEM 6.4 SP1在发布后规定，此重组可以推迟到6.5
+   <td><p>AEM 6.4 SP1在發行時使其可延遲至6.5
      <code>
       upgrade
-     </code>.</p> <p>如果在发布AEM 6.4 SP1之前升级到AEM 6.4，则此重构应作为升级项目的一部分执行。 如果不这样做，则编辑和保存引用先前位置中的脚本的工作流步骤将会从工作流步骤中完全删除工作流脚本引用，并且只有新位置中的工作流脚本才会在脚本选择下拉菜单中可用。</p> </td>
+     </code>.</p> <p>如果升級至AEM 6.4 SP1發行前的AEM 6.4，此重組應該作為升級專案的一部分執行。 如果不這樣做，編輯和儲存參考先前位置中指令碼的工作流程步驟將會從工作流程步驟中完全移除工作流程指令碼參考，而且指令碼選擇下拉式清單中只能使用新位置中的工作流程指令碼。</p> </td>
   </tr>
  </tbody>
 </table>
 
-## 在将来升级之前 {#prior-to-upgrade}
+## 未來升級之前 {#prior-to-upgrade}
 
 ### ContextHub 配置 {#contexthub-configurations}
 
 <table style="table-layout:auto">
  <tbody>
   <tr>
-   <td><strong>上一个位置</strong></td>
+   <td><strong>上一個位置</strong></td>
    <td><code>/etc/cloudsettings</code></td>
   </tr>
   <tr>
@@ -222,15 +222,15 @@ ht-degree: 2%
    <td><p><code>/libs/settings/cloudsettings</code></p> <p><code>/conf/global/settings/cloudsettings</code></p> <p><code>/conf/&lt;tenant&gt;/settings/cloudsettings</code></p> </td>
   </tr>
   <tr>
-   <td><strong>重构指南</strong></td>
-   <td><p>任何新的或修改过的ContextHub配置都必须迁移到新位置，并且必须更新引用的AEM Sites页面以反映新位置。</p>
+   <td><strong>重組指引</strong></td>
+   <td><p>任何新設定或修改過的ContextHub設定都必須移轉至新位置，且參照的AEM Sites頁面必須更新以反映新位置。</p>
     <ol>
-     <li>将任何新的或修改过的ContextHub配置从上一个位置复制到新位置。</li>
-     <li>将适用的AEM配置与AEM内容层次结构关联。
+     <li>將任何新的或修改過的ContextHub設定從先前的位置複製到新位置。</li>
+     <li>將適用的AEM設定與AEM內容階層建立關聯。
       <ol>
-       <li><strong>通过AEM Sites &gt;页面&gt;页面属性&gt;高级选项卡&gt;云配置，查看AEM Sites页面层次结构</strong>.</li>
+       <li><strong>透過AEM Sites &gt;頁面&gt;頁面屬性&gt;進階標籤&gt;雲端設定建立AEM Sites頁面階層</strong>.</li>
       </ol> </li>
-     <li>取消任何已迁移的旧版ContextHub配置与上述AEM内容层次结构的关联。</li>
+     <li>解除所有已移轉的舊版ContextHub設定與上述的AEM內容階層的關聯。</li>
     </ol> </td>
   </tr>
   <tr>
@@ -240,12 +240,12 @@ ht-degree: 2%
  </tbody>
 </table>
 
-### 经典Cloud Services设计 {#classic-cloud-services-designs}
+### 傳統Cloud Services設計 {#classic-cloud-services-designs}
 
 <table style="table-layout:auto">
  <tbody>
   <tr>
-   <td><strong>上一个位置</strong></td>
+   <td><strong>上一個位置</strong></td>
    <td><code>/etc/designs/cloudservices</code></td>
   </tr>
   <tr>
@@ -253,23 +253,23 @@ ht-degree: 2%
    <td><p><code>/libs/settings/wcm/designs/cloudservices</code></p> <p><code>/apps/settings/wcm/designs/cloudservices</code></p> </td>
   </tr>
   <tr>
-   <td><strong>重构指南</strong></td>
-   <td><p>用于任何在SCM中管理，且未在运行时通过“设计”对话框写入的设计。</p>
+   <td><strong>重組指引</strong></td>
+   <td><p>用於任何在SCM中管理，且未透過設計對話方塊在執行階段寫入的設計。</p>
     <ol>
-     <li>将设计从上一个位置复制到新位置(<code>/apps</code>)。</li>
-     <li>将设计中的任何CSS、JavaScript和静态资源转换为 <a href="/help/sites-developing/clientlibs.md#creating-client-library-folders" target="_blank">客户端库</a> 替换为 <code>allowProxy = true</code>.</li>
-     <li>更新对中先前位置的引用 <span class="code">
+     <li>將設計從先前位置複製到新位置(<code>/apps</code>)。</li>
+     <li>將設計中的任何CSS、JavaScript和靜態資源轉換為 <a href="/help/sites-developing/clientlibs.md#creating-client-library-folders" target="_blank">使用者端資源庫</a> 替換為 <code>allowProxy = true</code>.</li>
+     <li>更新中先前位置的參照 <span class="code">
        <code>
         cq
        </code>：
        <code>
         designPath
-       </code></span> 属性。</li>
-     <li>更新任何引用以前位置的页面以使用新的客户端库类别（这需要更新页面实施代码）。</li>
-     <li>更新AEM Dispatcher规则以允许通过/etc.clientlibs/提供客户端库。 代理servlet。</li>
-    </ol> <p>用于未在SCM中管理的任何设计，并通过“设计”对话框修改运行时设置。</p>
+       </code></span> 屬性。</li>
+     <li>更新任何參考先前位置的頁面，以使用新的使用者端程式庫類別（這需要更新頁面實施程式碼）。</li>
+     <li>更新AEM Dispatcher規則，以允許透過/etc.clientlibs/提供使用者端程式庫。 Proxy servlet。</li>
+    </ol> <p>對於未在SCM中管理的任何設計，以及透過「設計」對話方塊修改的執行時間。</p>
     <ul>
-     <li>请勿将可创作设计移出 <code>/etc</code>.</li>
+     <li>請勿將可作者設計移出 <code>/etc</code>.</li>
     </ul> </td>
   </tr>
   <tr>
@@ -279,12 +279,12 @@ ht-degree: 2%
  </tbody>
 </table>
 
-### 经典功能板设计 {#classic-dashboards-designs}
+### 傳統儀表板設計 {#classic-dashboards-designs}
 
 <table style="table-layout:auto">
  <tbody>
   <tr>
-   <td><strong>上一个位置</strong></td>
+   <td><strong>上一個位置</strong></td>
    <td><code>/etc/designs/dashboards</code></td>
   </tr>
   <tr>
@@ -292,23 +292,23 @@ ht-degree: 2%
    <td><p><code>/libs/settings/wcm/designs/dashboards</code></p> <p><code>/apps/settings/wcm/designs/dashboards</code></p> </td>
   </tr>
   <tr>
-   <td><strong>重构指南</strong></td>
-   <td><p>用于任何在SCM中管理，且未在运行时通过“设计”对话框写入的设计。</p>
+   <td><strong>重組指引</strong></td>
+   <td><p>用於任何在SCM中管理，且未透過設計對話方塊在執行階段寫入的設計。</p>
     <ol>
-     <li>将设计从上一个位置复制到新位置(/apps)。</li>
-     <li>将设计中的任何CSS、JavaScript和静态资源转换为 <a href="/help/sites-developing/clientlibs.md#creating-client-library-folders" target="_blank">客户端库</a> 替换为 <code>allowProxy = true</code>.</li>
-     <li>更新对中先前位置的引用
+     <li>將設計從先前位置複製到新位置(/apps)。</li>
+     <li>將設計中的任何CSS、JavaScript和靜態資源轉換為 <a href="/help/sites-developing/clientlibs.md#creating-client-library-folders" target="_blank">使用者端資源庫</a> 替換為 <code>allowProxy = true</code>.</li>
+     <li>更新中先前位置的參照
       <code>
        cq
       </code>：
       <code>
        designPath
-      </code> 属性。</li>
-     <li>更新任何引用以前位置的页面以使用新的客户端库类别（这需要更新页面实施代码）。</li>
-     <li>更新AEM Dispatcher规则以允许通过/etc.clientlibs/提供客户端库。 代理servlet。</li>
-    </ol> <p>用于未在SCM中管理的任何设计，并通过“设计”对话框修改运行时设置。</p>
+      </code> 屬性。</li>
+     <li>更新任何參考先前位置的頁面，以使用新的使用者端程式庫類別（這需要更新頁面實施程式碼）。</li>
+     <li>更新AEM Dispatcher規則，以允許透過/etc.clientlibs/提供使用者端程式庫。 Proxy servlet。</li>
+    </ol> <p>對於未在SCM中管理的任何設計，以及透過「設計」對話方塊修改的執行時間。</p>
     <ul>
-     <li>请勿将可创作设计移出 <code>/etc</code>.</li>
+     <li>請勿將可作者設計移出 <code>/etc</code>.</li>
     </ul> </td>
   </tr>
   <tr>
@@ -318,12 +318,12 @@ ht-degree: 2%
  </tbody>
 </table>
 
-### 经典报表设计 {#classic-reports-designs}
+### 傳統報表設計 {#classic-reports-designs}
 
 <table style="table-layout:auto">
  <tbody>
   <tr>
-   <td><strong>上一个位置</strong></td>
+   <td><strong>上一個位置</strong></td>
    <td><code>/etc/designs/reports</code></td>
   </tr>
   <tr>
@@ -331,23 +331,23 @@ ht-degree: 2%
    <td><p><code>/libs/settings/wcm/designs/reports</code></p> <p><code>/apps/settings/wcm/designs/reports</code></p> </td>
   </tr>
   <tr>
-   <td><strong>重构指南</strong></td>
-   <td><p>用于任何在SCM中管理，且未在运行时通过“设计”对话框写入的设计。</p>
+   <td><strong>重組指引</strong></td>
+   <td><p>用於任何在SCM中管理，且未透過設計對話方塊在執行階段寫入的設計。</p>
     <ol>
-     <li>将设计从上一个位置复制到新位置(/apps)。</li>
-     <li>将设计中的任何CSS、JavaScript和静态资源转换为 <a href="/help/sites-developing/clientlibs.md#creating-client-library-folders" target="_blank">客户端库</a> 替换为 <code>allowProxy = true</code>.</li>
-     <li>更新对中先前位置的引用
+     <li>將設計從先前位置複製到新位置(/apps)。</li>
+     <li>將設計中的任何CSS、JavaScript和靜態資源轉換為 <a href="/help/sites-developing/clientlibs.md#creating-client-library-folders" target="_blank">使用者端資源庫</a> 替換為 <code>allowProxy = true</code>.</li>
+     <li>更新中先前位置的參照
       <code>
        cq
       </code>：
       <code>
        designPath
-      </code> 属性。</li>
-     <li>更新任何引用以前位置的页面以使用新的客户端库类别（这需要更新页面实施代码）。</li>
-     <li>更新AEM Dispatcher规则以允许通过/etc.clientlibs/提供客户端库。 代理servlet。</li>
-    </ol> <p>用于未在SCM中管理的任何设计，并通过“设计”对话框修改运行时设置。</p>
+      </code> 屬性。</li>
+     <li>更新任何參考先前位置的頁面，以使用新的使用者端程式庫類別（這需要更新頁面實施程式碼）。</li>
+     <li>更新AEM Dispatcher規則，以允許透過/etc.clientlibs/提供使用者端程式庫。 Proxy servlet。</li>
+    </ol> <p>對於未在SCM中管理的任何設計，以及透過「設計」對話方塊修改的執行時間。</p>
     <ul>
-     <li>请勿将可创作设计移出 <code>/etc</code>.</li>
+     <li>請勿將可作者設計移出 <code>/etc</code>.</li>
     </ul> </td>
   </tr>
   <tr>
@@ -357,12 +357,12 @@ ht-degree: 2%
  </tbody>
 </table>
 
-### 默认设计 {#default-designs}
+### 預設設計 {#default-designs}
 
 <table style="table-layout:auto">
  <tbody>
   <tr>
-   <td><strong>上一个位置</strong></td>
+   <td><strong>上一個位置</strong></td>
    <td><code>/etc/designs/default</code></td>
   </tr>
   <tr>
@@ -370,23 +370,23 @@ ht-degree: 2%
    <td><p><code>/libs/settings/wcm/designs/default</code></p> <p><code>/apps/settings/wcm/designs/default</code></p> </td>
   </tr>
   <tr>
-   <td><strong>重构指南</strong></td>
-   <td><p>用于任何在SCM中管理，且未在运行时通过“设计”对话框写入的设计。</p>
+   <td><strong>重組指引</strong></td>
+   <td><p>用於任何在SCM中管理，且未透過設計對話方塊在執行階段寫入的設計。</p>
     <ol>
-     <li>将设计从上一个位置复制到新位置(/apps)。</li>
-     <li>将设计中的任何CSS、JavaScript和静态资源转换为 <a href="/help/sites-developing/clientlibs.md#creating-client-library-folders" target="_blank">客户端库</a> 替换为 <code>allowProxy = true</code>.</li>
-     <li>更新对中先前位置的引用
+     <li>將設計從先前位置複製到新位置(/apps)。</li>
+     <li>將設計中的任何CSS、JavaScript和靜態資源轉換為 <a href="/help/sites-developing/clientlibs.md#creating-client-library-folders" target="_blank">使用者端資源庫</a> 替換為 <code>allowProxy = true</code>.</li>
+     <li>更新中先前位置的參照
       <code>
        cq
       </code>：
       <code>
        designPath
-      </code> 属性。</li>
-     <li>更新任何引用以前位置的页面以使用新的客户端库类别（这需要更新页面实施代码）。</li>
-     <li>更新AEM Dispatcher规则以允许通过/etc.clientlibs/提供客户端库。 代理servlet。</li>
-    </ol> <p>用于未在SCM中管理的任何设计，并通过“设计”对话框修改运行时设置。</p>
+      </code> 屬性。</li>
+     <li>更新任何參考先前位置的頁面，以使用新的使用者端程式庫類別（這需要更新頁面實施程式碼）。</li>
+     <li>更新AEM Dispatcher規則，以允許透過/etc.clientlibs/提供使用者端程式庫。 Proxy servlet。</li>
+    </ol> <p>對於未在SCM中管理的任何設計，以及透過「設計」對話方塊修改的執行時間。</p>
     <ul>
-     <li>请勿将可创作设计移出 <code>/etc</code>.</li>
+     <li>請勿將可作者設計移出 <code>/etc</code>.</li>
     </ul> </td>
   </tr>
   <tr>
@@ -396,12 +396,12 @@ ht-degree: 2%
  </tbody>
 </table>
 
-### AdobeDTM JavaScript端点 {#adobe-dtm-javascript-endpoint}
+### AdobeDTM JavaScript端點 {#adobe-dtm-javascript-endpoint}
 
 <table style="table-layout:auto">
  <tbody>
   <tr>
-   <td><strong>上一个位置</strong></td>
+   <td><strong>上一個位置</strong></td>
    <td><code>/etc/clientlibs/dtm</code></td>
   </tr>
   <tr>
@@ -409,8 +409,8 @@ ht-degree: 2%
    <td><code>/var/cq/dtm/clientlibs</code></td>
   </tr>
   <tr>
-   <td><strong>重构指南</strong></td>
-   <td><p>无需执行任何操作。</p> <p>以前的公共位置用作专用新位置的代理端点。</p> </td>
+   <td><strong>重組指引</strong></td>
+   <td><p>不需要採取任何動作。</p> <p>先前公用位置會作為私人新位置的Proxy端點。</p> </td>
   </tr>
   <tr>
    <td><strong>注释</strong></td>
@@ -419,12 +419,12 @@ ht-degree: 2%
  </tbody>
 </table>
 
-### AdobeDTM Web挂接端点 {#adobe-dtm-web-hook-endpoint}
+### AdobeDTM Web勾點端點 {#adobe-dtm-web-hook-endpoint}
 
 <table style="table-layout:auto">
  <tbody>
   <tr>
-   <td><strong>上一个位置</strong></td>
+   <td><strong>上一個位置</strong></td>
    <td><code>/etc/dtm-hook</code></td>
   </tr>
   <tr>
@@ -432,8 +432,8 @@ ht-degree: 2%
    <td><code>/var/cq/dtm/web-hook</code></td>
   </tr>
   <tr>
-   <td><strong>重构指南</strong></td>
-   <td><p>无需执行任何操作。</p> <p>以前的公共位置用作专用新位置的代理端点。</p> </td>
+   <td><strong>重組指引</strong></td>
+   <td><p>不需要採取任何動作。</p> <p>先前公用位置會作為私人新位置的Proxy端點。</p> </td>
   </tr>
   <tr>
    <td><strong>注释</strong></td>
@@ -442,12 +442,12 @@ ht-degree: 2%
  </tbody>
 </table>
 
-### 收件箱任务 {#inbox-tasks}
+### 收件匣任務 {#inbox-tasks}
 
 <table style="table-layout:auto">
  <tbody>
   <tr>
-   <td><strong>上一个位置</strong></td>
+   <td><strong>上一個位置</strong></td>
    <td><code>/etc/taskmanagement</code></td>
   </tr>
   <tr>
@@ -455,26 +455,26 @@ ht-degree: 2%
    <td><code>/var/taskmanagement</code></td>
   </tr>
   <tr>
-   <td><strong>重构指南</strong></td>
-   <td>使用 <strong>收件箱清除维护任务</strong> 以根据需要从上一个位置删除旧任务。</td>
+   <td><strong>重組指引</strong></td>
+   <td>使用 <strong>收件匣清除維護任務</strong> 以視需要從先前位置移除舊任務。</td>
   </tr>
   <tr>
    <td><strong>注释</strong></td>
-   <td><p>无需执行任何操作即可将任务迁移到新位置。</p>
+   <td><p>將工作移轉至新位置無需採取任何動作。</p>
     <ul>
-     <li>“上一位置”中的任务继续可用并正常工作。</li>
-     <li>新任务是在新位置创建的。</li>
+     <li>「先前位置」中的任務繼續可用且運作正常。</li>
+     <li>新任務會在新位置中建立。</li>
     </ul> </td>
   </tr>
  </tbody>
 </table>
 
-### 多站点管理器Blueprint配置 {#multi-site-manager-blueprint-configurations}
+### 多站點管理員Blueprint設定 {#multi-site-manager-blueprint-configurations}
 
 <table style="table-layout:auto">
  <tbody>
   <tr>
-   <td><strong><em></em>上一个位置</strong></td>
+   <td><strong><em></em>上一個位置</strong></td>
    <td><code>/etc/blueprints</code></td>
   </tr>
   <tr>
@@ -482,10 +482,10 @@ ht-degree: 2%
    <td><p><code>/libs/msm</code></p> <p><code>/apps/msm</code></p> </td>
   </tr>
   <tr>
-   <td><strong>重构指南</strong></td>
+   <td><strong>重組指引</strong></td>
    <td>
     <ol>
-     <li>从以下位置复制自定义配置 <code>/etc/blueprints</code> 到 <code>/apps/msm</code>.</li>
+     <li>複製自訂設定來源 <code>/etc/blueprints</code> 至 <code>/apps/msm</code>.</li>
      <li>移除 <code>/etc/blueprints</code>.</li>
     </ol> </td>
   </tr>
@@ -496,12 +496,12 @@ ht-degree: 2%
  </tbody>
 </table>
 
-### AEM项目功能板小工具配置 {#aem-projects-dashboard-gadget-configurations}
+### AEM專案儀表板小工具設定 {#aem-projects-dashboard-gadget-configurations}
 
 <table style="table-layout:auto">
  <tbody>
   <tr>
-   <td><strong>上一个位置</strong></td>
+   <td><strong>上一個位置</strong></td>
    <td><code>/etc/projects/dashboard/gadgets</code></td>
   </tr>
   <tr>
@@ -509,29 +509,29 @@ ht-degree: 2%
    <td><p><code>/libs/cq/core/content/projects/dashboard/gadgets</code></p> <p><code>/apps/cq/core/content/projects/dashboard/gadgets</code></p> </td>
   </tr>
   <tr>
-   <td><strong>重构指南</strong></td>
-   <td><p>任何新的或修改过的AEM项目功能板小工具配置必须迁移到新位置(<code>/apps</code>)。</p>
+   <td><strong>重組指引</strong></td>
+   <td><p>任何新的或修改過的AEM專案儀表板小工具設定都必須移轉到新位置(<code>/apps</code>)。</p>
     <ol>
-     <li>将任何新的或修改过的AEM项目功能板小工具配置从上一个位置复制到新位置(<code>/apps</code>)。
+     <li>將任何新的或修改過的AEM專案儀表板小工具設定從先前的位置複製到新位置(<code>/apps</code>)。
       <ol>
-       <li>请勿复制未修改的AEM项目功能板小工具配置，因为这些配置现在位于新位置(<code>/libs</code>)。</li>
+       <li>請勿複製未修改的AEM專案儀表板小工具設定，因為這些設定現在存在於新位置(<code>/libs</code>)。</li>
       </ol> </li>
-     <li>更新任何引用了先前位置的AEM Projects模板，以指向适当的新位置。</li>
+     <li>更新任何參照先前位置的AEM專案範本，以指向適當的新位置。</li>
     </ol> </td>
   </tr>
   <tr>
    <td><strong>注释</strong></td>
-   <td>如果应用了AEM 6.4兼容包，则必须在删除兼容包时执行存储库对齐活动。</td>
+   <td>如果套用AEM 6.4相容性套件，在移除相容性套件時就必須執行存放庫對齊活動。</td>
   </tr>
  </tbody>
 </table>
 
-### 复制通知电子邮件模板 {#replication-notification-e-mail-template}
+### 復寫通知電子郵件範本 {#replication-notification-e-mail-template}
 
 <table style="table-layout:auto">
  <tbody>
   <tr>
-   <td><strong>上一个位置</strong></td>
+   <td><strong>上一個位置</strong></td>
    <td><code>/etc/notification/email/default/com.day.cq.replication</code></td>
   </tr>
   <tr>
@@ -539,16 +539,16 @@ ht-degree: 2%
    <td><p><code>/libs/settings/notification-templates/com.day.cq.replication</code></p> <p><code>/apps/settings/notification-templates/com.day.cq.replication</code></p> </td>
   </tr>
   <tr>
-   <td><strong>重构指南</strong></td>
-   <td><p>任何新的或修改过的复制通知电子邮件模板必须迁移到新位置(<code>/apps</code>)</p>
+   <td><strong>重組指引</strong></td>
+   <td><p>任何新的或修改過的復寫通知電子郵件範本都必須移轉到新位置(<code>/apps</code>)</p>
     <ol>
-     <li>将任何新的或修改过的复制通知电子邮件模板从上一个位置复制到新位置(<code>/apps</code>)。</li>
-     <li>从上一个位置删除任何已迁移的复制通知电子邮件模板。</li>
+     <li>將任何新的或修改過的復寫通知電子郵件範本從先前位置複製到新位置(<code>/apps</code>)。</li>
+     <li>從先前位置移除任何已移轉的復寫通知電子郵件範本。</li>
     </ol> </td>
   </tr>
   <tr>
    <td><strong>注释</strong></td>
-   <td><p>唯一支持的新复制通知电子邮件模板是支持新区域设置。</p> <p>复制通知电子邮件模板解析的顺序如下：</p>
+   <td><p>唯一支援的新復寫通知電子郵件範本是支援新的地區設定。</p> <p>復寫通知電子郵件範本解析的順序如下：</p>
     <ol>
      <li><code>/etc/notification/email/default/com.day.cq.replication</code></li>
      <li><code class="code">/apps/settings/notification-templates/com.day.cq.replication
@@ -564,7 +564,7 @@ ht-degree: 2%
 <table style="table-layout:auto">
  <tbody>
   <tr>
-   <td><strong>上一个位置</strong></td>
+   <td><strong>上一個位置</strong></td>
    <td><code>/etc/tags</code></td>
   </tr>
   <tr>
@@ -572,23 +572,23 @@ ht-degree: 2%
    <td><code>/content/cq:tags</code></td>
   </tr>
   <tr>
-   <td><strong>重构指南</strong></td>
-   <td><p>必须将所有标记迁移到 <code>/content/cq:tags</code>.</p>
+   <td><strong>重組指引</strong></td>
+   <td><p>所有標籤都必須移轉至 <code>/content/cq:tags</code>.</p>
     <ol>
-     <li>将所有标记从上一个位置复制到新位置。</li>
-     <li>从上一个位置删除所有标记。</li>
-     <li>通过AEM Web Console，重新启动Day Communique 5 Tagging OSGi捆绑包，网址为 <em>https://serveraddress:serverport/system/console/bundles/com.day.cq.cq-tagging</em> ，以便AEM识别新位置，该位置包含内容，应当使用。</li>
+     <li>將所有標籤從先前位置複製到新位置。</li>
+     <li>從先前位置移除所有標籤。</li>
+     <li>透過AEM網頁主控台，重新啟動Day Communique 5 Tagging OSGi套件組合，網址為 <em>https://serveraddress:serverport/system/console/bundles/com.day.cq.cq-tagging</em> 讓AEM識別「新位置」包含內容，且應該使用。</li>
     </ol> </td>
   </tr>
   <tr>
    <td><strong>注释</strong></td>
-   <td><p>重新启动Day Communique Tagging OSGi捆绑包后，只有当Previous Location为空时，才会将新位置注册为标记根。</p> <p>对于所有利用AEM TagManager API进行标记解析的功能，在迁移到新位置后，对之前位置的引用将继续有效。</p> <p>任何显式引用路径的自定义代码 <code>/etc/tags</code> 必须更新到 <span class="code">/content/
+   <td><p>重新啟動Day Communique Tagging OSGi套件組合後，若「先前位置」為空，系統只會將「新位置」註冊為標籤根。</p> <p>針對所有運用AEM TagManager API進行標籤解析的功能，移轉至新位置後，「先前位置」的參照仍會繼續運作。</p> <p>明確參考路徑的任何自訂程式碼 <code>/etc/tags</code> 必須更新至 <span class="code">/content/
       <code>
        cq
       </code>
       <code>
        :tags
-      </code></span>，或者最好进行重写以结合此迁移使用TagManager Java API。</p> </td>
+      </code></span>，或是最好重寫以搭配此移轉使用TagManager Java API。</p> </td>
   </tr>
  </tbody>
 </table>
@@ -598,7 +598,7 @@ ht-degree: 2%
 <table style="table-layout:auto">
  <tbody>
   <tr>
-   <td><strong>上一个位置</strong></td>
+   <td><strong>上一個位置</strong></td>
    <td><code>/etc/cloudservices/translation</code></td>
   </tr>
   <tr>
@@ -606,44 +606,44 @@ ht-degree: 2%
    <td><p><code>/libs/settings/cloudconfigs/translation/translationcfg</code></p> <p><code>/apps/settings/cloudconfigs/translation/translationcfg</code></p> <p><code>/conf/global/settings/cloudconfigs/translation/translationcfg</code></p> <p><code>/conf/&lt;tenant&gt;/settings/cloudconfigs/translation/translationcfg</code></p> </td>
   </tr>
   <tr>
-   <td><strong>重构指南</strong></td>
-   <td><p>任何新翻译Cloud Services都必须迁移到新位置(<code>/apps</code>， <code>/conf/global</code> 或 <code>/conf/&lt;tenant&gt;</code>)。</p>
+   <td><strong>重組指引</strong></td>
+   <td><p>任何新翻譯Cloud Services都必須移轉至新位置(<code>/apps</code>， <code>/conf/global</code> 或 <code>/conf/&lt;tenant&gt;</code>)。</p>
     <ol>
-     <li>将之前位置中的现有配置迁移到新位置。
+     <li>將先前位置中的現有設定移轉到新位置。
       <ul>
-       <li>通过AEM创作UI手动重新创建新的翻译Cloud Services配置，网址为 <strong>“工具”&gt;“Cloud Services”&gt;“翻译Cloud Services”</strong>.<br /> 或者 </li>
-       <li>将任何新的翻译Cloud Services配置从上一个位置复制到新位置(<code>/apps</code>， <code>/conf/global</code> 或 <code>/conf/&lt;tenant&gt;</code>)。</li>
+       <li>透過AEM編寫UI手動重新建立新的翻譯Cloud Services設定，網址為 <strong>「工具&gt;Cloud Services&gt;翻譯Cloud Services」</strong>.<br /> 或 </li>
+       <li>將任何新的翻譯Cloud Services設定從上一個位置複製到新位置(<code>/apps</code>， <code>/conf/global</code> 或 <code>/conf/&lt;tenant&gt;</code>)。</li>
       </ul> </li>
-     <li>将适用的AEM配置与AEM内容层次结构关联。
+     <li>將適用的AEM設定與AEM內容階層建立關聯。
       <ol>
-       <li>AEM Sites页面层级，通过 <strong>AEM Sites &gt;页面&gt;页面属性&gt;高级选项卡&gt;云配置</strong>.</li>
-       <li>通过以下方式的AEM体验片段层次结构 <strong>AEM体验片段&gt;体验片段&gt;属性&gt;Cloud Services选项卡&gt;云配置</strong>.</li>
-       <li>通过以下方式的AEM体验片段文件夹层次结构 <strong>AEM Experience Fragments &gt;文件夹&gt;属性&gt;Cloud Services选项卡&gt;云配置</strong>.<br /> </li>
-       <li>AEM Assets文件夹层次结构，通过 <strong>AEM Assets &gt;文件夹&gt;文件夹属性&gt;Cloud Services选项卡&gt;配置</strong>.</li>
-       <li>AEM项目，通过 <strong>AEM项目&gt;项目&gt;项目属性&gt;高级选项卡&gt;云配置</strong>.</li>
+       <li>AEM Sites頁面階層，透過 <strong>AEM Sites &gt;頁面&gt;頁面屬性&gt;進階標籤&gt;雲端設定</strong>.</li>
+       <li>AEM體驗片段階層，透過 <strong>AEM體驗片段&gt;體驗片段&gt;屬性&gt;Cloud Services標籤&gt;雲端設定</strong>.</li>
+       <li>AEM體驗片段資料夾階層，透過 <strong>AEM Experience Fragments &gt;資料夾&gt;屬性&gt;Cloud Services標籤&gt;雲端設定</strong>.<br /> </li>
+       <li>AEM Assets資料夾階層，透過 <strong>AEM Assets &gt;資料夾&gt;資料夾屬性&gt;Cloud Services標籤&gt;設定</strong>.</li>
+       <li>AEM專案，透過 <strong>AEM專案&gt;專案&gt;專案屬性&gt;進階標籤&gt;雲端設定</strong>.</li>
       </ol> </li>
-     <li>取消任何已迁移旧版翻译Cloud ServicesAEM与上述内容层级的关联。</li>
+     <li>解除所有已移轉的舊版翻譯Cloud ServicesAEM與上述內容階層的關聯。</li>
     </ol> </td>
   </tr>
   <tr>
    <td><strong>注释</strong></td>
-   <td><p>翻译Cloud Services解析的顺序如下：</p>
+   <td><p>翻譯Cloud Services解析的順序如下：</p>
     <ol>
      <li><code>/conf/&lt;tenant&gt;/settings/cloudconfigs/translations/translationcfg</code></li>
      <li><code>/conf/global/settings/cloudconfigs/translations/translationcfg</code></li>
      <li><code>/apps/settings/cloudconfigs/translations/translationcfg</code></li>
      <li><code>/libs/settings/cloudconfigs/translations/translationcfg</code></li>
-    </ol> <p>已迁移的翻译Cloud Services必须与AEM 6.4兼容。</p> </td>
+    </ol> <p>已移轉的翻譯Cloud Services必須與AEM 6.4相容。</p> </td>
   </tr>
  </tbody>
 </table>
 
-### 翻译语言 {#translation-languages}
+### 翻譯語言 {#translation-languages}
 
 <table style="table-layout:auto">
  <tbody>
   <tr>
-   <td><strong>上一个位置</strong></td>
+   <td><strong>上一個位置</strong></td>
    <td><code>/etc/translation/supportedLanguages</code></td>
   </tr>
   <tr>
@@ -651,20 +651,20 @@ ht-degree: 2%
    <td><p><code>/libs/settings/translation/supportedLanguages</code></p> <p><code>/apps/settings/translation/supportedLanguages</code></p> </td>
   </tr>
   <tr>
-   <td><strong>重构指南</strong></td>
-   <td><p>任何新的或修改的翻译语言定义都需要将所有翻译语言定义迁移到新位置(<code>/apps</code>)。</p>
+   <td><strong>重組指引</strong></td>
+   <td><p>任何新翻譯語言定義或修改過的翻譯語言定義都需要將所有翻譯語言定義移轉到新位置(<code>/apps</code>)。</p>
     <ol>
-     <li>如果对翻译语言定义进行了任何添加或修改，则将所有翻译语言定义从上一个位置复制到新位置(<code>/apps</code>)。</li>
+     <li>如果對翻譯語言定義進行了任何新增或修改，則將所有翻譯語言定義從先前位置複製到新位置(<code>/apps</code>)。</li>
     </ol> </td>
   </tr>
   <tr>
    <td><strong>注释</strong></td>
-   <td><p>翻译语言路径解析的顺序如下：</p>
+   <td><p>翻譯語言路徑解析的順序如下：</p>
     <ol>
      <li><code>/etc/translation/supportedLanguages</code></li>
      <li><code>/apps/settings/translation/supportedLanguage</code></li>
      <li><code>/libs/settings/translation/supportedLanguages</code></li>
-    </ol> <p>此分辨率不支持合并叠加，这意味着解析的路径必须包含所有支持的语言，并且不会从更高分辨率继承支持的语言。</p> </td>
+    </ol> <p>此解析度不支援合併覆蓋，這表示解析的路徑必須包含所有支援的語言，並且不會繼承更高階解析度的支援語言。</p> </td>
   </tr>
  </tbody>
 </table>
@@ -674,7 +674,7 @@ ht-degree: 2%
 <table style="table-layout:auto">
  <tbody>
   <tr>
-   <td><strong>上一个位置</strong></td>
+   <td><strong>上一個位置</strong></td>
    <td><code>/etc/workflow/models/translation/translation_rules.xml</code></td>
   </tr>
   <tr>
@@ -682,12 +682,12 @@ ht-degree: 2%
    <td><p><code>/libs/settings/translation/rules/translation_rules.xml</code></p> <p><code>/apps/settings/translation/rules/translation_rules.xml</code></p> <p><code>/conf/global/settings/translation/rules/translation_rules.xml</code></p> </td>
   </tr>
   <tr>
-   <td><strong>重构指南</strong></td>
-   <td><p>必须将修改后的翻译规则XML文件迁移到新位置(<code>/apps</code>，或 <code>/conf/global</code>)。</p> <p>1.将修改后的“翻译规则”XML文件从上一个位置复制到新位置。</p> </td>
+   <td><strong>重組指引</strong></td>
+   <td><p>修改過的翻譯規則XML檔案必須移轉到新位置(<code>/apps</code>，或 <code>/conf/global</code>)。</p> <p>1.將修改過的「轉譯規則」XML檔案從先前位置複製到新位置。</p> </td>
   </tr>
   <tr>
    <td><strong>注释</strong></td>
-   <td><p>复制翻译规则XML解析的顺序如下：</p>
+   <td><p>復寫轉譯規則XML解析的順序如下：</p>
     <ol>
      <li><code>/conf/global/settings/translation/rules/translation_rules.xml</code></li>
      <li><code class="code">/apps/settings/translation/rules/translation_rules.xml
@@ -700,12 +700,12 @@ ht-degree: 2%
  </tbody>
 </table>
 
-### 翻译构件客户端库 {#translation-widget-client-library}
+### 翻譯Widget使用者端資料庫 {#translation-widget-client-library}
 
 <table style="table-layout:auto">
  <tbody>
   <tr>
-   <td><strong>上一个位置</strong></td>
+   <td><strong>上一個位置</strong></td>
    <td><code>/etc/designs/translation/translationwidget</code></td>
   </tr>
   <tr>
@@ -713,23 +713,23 @@ ht-degree: 2%
    <td><p><code>/libs/settings/wcm/designs/translation/translationwidget</code></p> <p><code>/apps/settings/wcm/designs/translation/translationwidget</code></p> </td>
   </tr>
   <tr>
-   <td><strong>重构指南</strong></td>
-   <td><p>用于任何在SCM中管理，且未在运行时通过“设计”对话框写入的设计。</p>
+   <td><strong>重組指引</strong></td>
+   <td><p>用於任何在SCM中管理，且未透過設計對話方塊在執行階段寫入的設計。</p>
     <ol>
-     <li>将设计从上一个位置复制到新位置(/apps)。</li>
-     <li>将设计中的任何CSS、JavaScript和静态资源转换为 <a href="/help/sites-developing/clientlibs.md#creating-client-library-folders" target="_blank">客户端库</a> 替换为 <code>allowProxy = true</code>.</li>
-     <li>更新对中先前位置的引用
+     <li>將設計從先前位置複製到新位置(/apps)。</li>
+     <li>將設計中的任何CSS、JavaScript和靜態資源轉換為 <a href="/help/sites-developing/clientlibs.md#creating-client-library-folders" target="_blank">使用者端資源庫</a> 替換為 <code>allowProxy = true</code>.</li>
+     <li>更新中先前位置的參照
       <code>
        cq
       </code>：
       <code>
        designPath
-      </code> 属性。</li>
-     <li>更新任何引用以前位置的页面以使用新的客户端库类别（这需要更新页面实施代码）。</li>
-     <li>更新AEM Dispatcher规则以允许通过/etc.clientlibs/提供客户端库。 代理servlet。</li>
-    </ol> <p>用于未在SCM中管理的任何设计，并通过“设计”对话框修改运行时设置。</p>
+      </code> 屬性。</li>
+     <li>更新任何參考先前位置的頁面，以使用新的使用者端程式庫類別（這需要更新頁面實施程式碼）。</li>
+     <li>更新AEM Dispatcher規則，以允許透過/etc.clientlibs/提供使用者端程式庫。 Proxy servlet。</li>
+    </ol> <p>對於未在SCM中管理的任何設計，以及透過「設計」對話方塊修改的執行時間。</p>
     <ul>
-     <li>请勿将可创作设计移出 <code>/etc</code>.</li>
+     <li>請勿將可作者設計移出 <code>/etc</code>.</li>
     </ul> </td>
   </tr>
   <tr>
@@ -739,22 +739,22 @@ ht-degree: 2%
  </tbody>
 </table>
 
-### 树激活Web控制台 {#tree-activation-web-console}
+### 樹啟動Web主控台 {#tree-activation-web-console}
 
-| **上一个位置** | `/etc/replication/treeactivation` |
+| **上一個位置** | `/etc/replication/treeactivation` |
 |---|---|
 | **新位置** | `/libs/replication/treeactivation` |
-| **重构指南** | 无需执行任何操作。 |
-| **注释** | 树激活Web控制台现在可通过以下方式使用 **工具>部署>复制>激活树**. |
+| **重組指引** | 不需要採取任何動作。 |
+| **注释** | Tree Activation Web Console現在可透過 **「工具」>「部署」>「復寫」>「啟動樹狀結構」**. |
 
 {style="table-layout:auto"}
 
-### 供应商翻译连接器Cloud Services {#vendor-translation-connector-cloud-services}
+### 廠商翻譯聯結器Cloud Services {#vendor-translation-connector-cloud-services}
 
 <table style="table-layout:auto">
  <tbody>
   <tr>
-   <td><strong>上一个位置</strong></td>
+   <td><strong>上一個位置</strong></td>
    <td><code>/etc/cloudservices/&lt;vendor&gt;</code></td>
   </tr>
   <tr>
@@ -764,28 +764,28 @@ ht-degree: 2%
        </code></p> <p><code>/conf/&lt;tenant&gt;/settings/cloudconfigs/translation/&lt;vendor&gt;</code></p> </td>
   </tr>
   <tr>
-   <td><strong>重构指南</strong></td>
-   <td><p>任何新的供应商翻译连接器Cloud Services必须迁移到新位置(<code>/apps</code>， <code>/conf/global</code> 或 <code>/conf/&lt;tenant&gt;</code>)。</p>
+   <td><strong>重組指引</strong></td>
+   <td><p>任何新的廠商翻譯聯結器Cloud Services都必須移轉到新位置(<code>/apps</code>， <code>/conf/global</code> 或 <code>/conf/&lt;tenant&gt;</code>)。</p>
     <ol>
-     <li>将以前位置中的现有配置迁移到新位置。
+     <li>將先前位置中的現有設定移轉到新位置。
       <ul>
-       <li>通过，手动创建新的供应商翻译连接器Cloud Services配置 <strong>位于“工具”&gt;“Cloud Services”&gt;“翻译Cloud Services”中的AEM创作UI</strong>.<br /> 或者 </li>
-       <li>将任何新的供应商翻译连接器Cloud Services配置从上一个位置复制到新位置(<code>/apps</code>， <code>/conf/global </code>或 <code>/conf/&lt;tenant&gt;</code>)。</li>
+       <li>手動建立全新廠商翻譯聯結器Cloud Services設定，透過 <strong>「工具&gt;Cloud Services&gt;翻譯Cloud Services」中的AEM編寫UI</strong>.<br /> 或 </li>
+       <li>將任何新的廠商翻譯聯結器的Cloud Services設定從先前位置複製到新位置(<code>/apps</code>， <code>/conf/global </code>或 <code>/conf/&lt;tenant&gt;</code>)。</li>
       </ul> </li>
-     <li>将适用的AEM配置与AEM内容层次结构关联。
+     <li>將適用的AEM設定與AEM內容階層建立關聯。
       <ol>
-       <li>AEM Sites页面层级，通过 <strong>AEM Sites &gt;页面&gt;页面属性&gt;高级选项卡&gt;云配置</strong>.</li>
-       <li>通过以下方式的AEM体验片段层次结构 <strong>AEM体验片段&gt;体验片段&gt;属性&gt;Cloud Services选项卡&gt;云配置</strong>.</li>
-       <li>通过以下方式的AEM体验片段文件夹层次结构 <strong>AEM Experience Fragments &gt;文件夹&gt;属性&gt;Cloud Services选项卡&gt;云配置</strong>.</li>
-       <li>AEM Assets文件夹层次结构，通过 <strong>AEM Assets &gt;文件夹&gt;文件夹属性&gt;Cloud Services选项卡&gt;配置</strong>.</li>
-       <li>AEM项目，通过 <strong>AEM项目&gt;项目&gt;项目属性&gt;高级选项卡&gt;云配置</strong>.</li>
+       <li>AEM Sites頁面階層，透過 <strong>AEM Sites &gt;頁面&gt;頁面屬性&gt;進階標籤&gt;雲端設定</strong>.</li>
+       <li>AEM體驗片段階層，透過 <strong>AEM體驗片段&gt;體驗片段&gt;屬性&gt;Cloud Services標籤&gt;雲端設定</strong>.</li>
+       <li>AEM體驗片段資料夾階層，透過 <strong>AEM Experience Fragments &gt;資料夾&gt;屬性&gt;Cloud Services標籤&gt;雲端設定</strong>.</li>
+       <li>AEM Assets資料夾階層，透過 <strong>AEM Assets &gt;資料夾&gt;資料夾屬性&gt;Cloud Services標籤&gt;設定</strong>.</li>
+       <li>AEM專案，透過 <strong>AEM專案&gt;專案&gt;專案屬性&gt;進階標籤&gt;雲端設定</strong>.</li>
       </ol> </li>
-     <li>取消任何已迁移旧版翻译Cloud ServicesAEM与上述内容层级的关联。</li>
+     <li>解除所有已移轉的舊版翻譯Cloud ServicesAEM與上述內容階層的關聯。</li>
     </ol> </td>
   </tr>
   <tr>
    <td><strong>注释</strong></td>
-   <td><p>翻译Cloud Services解析的顺序如下：</p>
+   <td><p>翻譯Cloud Services解析的順序如下：</p>
     <ol>
      <li><code>/conf/&lt;tenant&gt;/settings/cloudconfigs/translations/&lt;vendor&gt;</code></li>
      <li><code>/conf/global/settings/cloudconfigs/translations/&lt;vendor&gt;</code></li>
@@ -796,12 +796,12 @@ ht-degree: 2%
  </tbody>
 </table>
 
-### 工作流通知电子邮件模板 {#workflow-notification-email-templates}
+### 工作流程通知電子郵件範本 {#workflow-notification-email-templates}
 
 <table style="table-layout:auto">
  <tbody>
   <tr>
-   <td><strong>上一个位置</strong></td>
+   <td><strong>上一個位置</strong></td>
    <td><code>/etc/workflow/notification</code></td>
   </tr>
   <tr>
@@ -809,16 +809,16 @@ ht-degree: 2%
    <td><p><code>/libs/settings/workflow/notification</code></p> <p><code>/conf/global/settings/workflow/notification</code></p> </td>
   </tr>
   <tr>
-   <td><strong>重构指南</strong></td>
-   <td><p>任何修改过的工作流通知电子邮件模板必须迁移到新位置(<code>/conf/global</code>)。</p>
+   <td><strong>重組指引</strong></td>
+   <td><p>任何修改過的工作流程通知電子郵件範本都必須移轉到新位置(<code>/conf/global</code>)。</p>
     <ol>
-     <li>将任何修改过的工作流通知电子邮件模板从上一个位置复制到新位置。</li>
-     <li>从上一个位置删除已迁移的工作流通知电子邮件模板。</li>
+     <li>將先前位置的任何修改過的工作流程通知電子郵件範本複製到新位置。</li>
+     <li>從先前位置移除已移轉的工作流程通知電子郵件範本。</li>
     </ol> </td>
   </tr>
   <tr>
    <td><strong>注释</strong></td>
-   <td><p>工作流通知电子邮件模板解析的顺序如下：</p>
+   <td><p>工作流程通知電子郵件範本解析的順序如下：</p>
     <ol>
      <li><code>/etc/workflow/notification</code></li>
      <li><code>/conf/global/settings/workflow/notification</code></li>
@@ -828,12 +828,12 @@ ht-degree: 2%
  </tbody>
 </table>
 
-### 工作流包 {#workflow-packages}
+### 工作流程封裝 {#workflow-packages}
 
 <table style="table-layout:auto">
  <tbody>
   <tr>
-   <td><strong>上一个位置</strong></td>
+   <td><strong>上一個位置</strong></td>
    <td><code>/etc/workflow/packages</code></td>
   </tr>
   <tr>
@@ -841,17 +841,17 @@ ht-degree: 2%
    <td><code>/var/workflow/packages</code></td>
   </tr>
   <tr>
-   <td><strong>重构指南</strong></td>
-   <td><p>应将以前位置中的现有Workflow包迁移到新位置。</p>
+   <td><strong>重組指引</strong></td>
+   <td><p>先前位置中的現有Workflow套件應移轉到新位置。</p>
     <ol>
-     <li>删除先前位置中未被其他内容引用且在其他情况下不需要的任何工作流包。</li>
-     <li>将任何未由其他内容引用、但在新位置有其他要求的工作流包移动到以前的位置。</li>
-     <li>将其他内容引用的任何工作流包保留在上一个位置。</li>
+     <li>移除先前位置中未被其他內容參考且在其他方面不需要的任何工作流程封裝。</li>
+     <li>將未被其他內容引用、但在新位置有其他需要的任何Workflow套件移至先前位置。</li>
+     <li>將其他內容參考的任何Workflow套件保留在先前位置。</li>
     </ol> </td>
   </tr>
   <tr>
    <td><strong>注释</strong></td>
-   <td><p>通过经典UI Miscadmin控制台创建的工作流包将保留在以前的位置，而所有其他工作流包将保留在新位置。</p> <p>通过经典UI Miscadmin控制台，可以管理存储在以前或以下位置的工作流包。</p> </td>
+   <td><p>透過傳統UI Miscadmin主控台建立的工作流程封裝會保留在舊位置，而所有其他工作流程封裝則會保留在新位置。</p> <p>儲存在先前或列位置的工作流程套件可以透過傳統UI Miscadmin主控台管理。</p> </td>
   </tr>
  </tbody>
 </table>

@@ -1,7 +1,7 @@
 ---
-title: Ideation Essentials
+title: 創意力基本要素
 seo-title: Ideation Essentials
-description: 构思功能概述
+description: 創意力功能概觀
 seo-description: Ideation feature overview
 uuid: abaf03ee-8bf4-4241-96c3-474c95a30a88
 contentOwner: msm-service
@@ -17,11 +17,11 @@ ht-degree: 3%
 
 ---
 
-# Ideation Essentials {#ideation-essentials}
+# 創意力基本要素 {#ideation-essentials}
 
-此页面提供了使用构思功能的基本信息，该功能与论坛类似，但可以另存为草稿并提供更具协作性的体验。
+此頁面提供使用創意力功能的基本資訊，此功能類似於論壇，但可儲存為草稿，並提供更具合作性的感覺。
 
-## 适用于客户端的Essentials {#essentials-for-client-side}
+## 適用於使用者端的Essentials {#essentials-for-client-side}
 
 <table>
  <tbody>
@@ -30,7 +30,7 @@ ht-degree: 3%
    <td>social/ideation/components/hbs/ideation</td>
   </tr>
   <tr>
-   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>可包含</strong></a></td>
+   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>包含</strong></a></td>
    <td>否</td>
   </tr>
   <tr>
@@ -38,7 +38,7 @@ ht-degree: 3%
    <td>cq.social.hbs.voting<br /> cq.social.hbs.liking<br /> cq.social.hbs.ideation</td>
   </tr>
   <tr>
-   <td> <strong>模板</strong></td>
+   <td> <strong>範本</strong></td>
    <td> /libs/social/ideation/components/hbs/ideation/ideation.hbs<br /> /libs/social/ideation/components/hbs/ideation/ideationlists.hbs<br /> /libs/social/ideation/components/hbs/ideation/composer.hbs</td>
   </tr>
   <tr>
@@ -47,13 +47,13 @@ ht-degree: 3%
   </tr>
   <tr>
    <td><strong> 属性</strong></td>
-   <td>参见 <a href="ideation-feature.md">构思特征</a></td>
+   <td>另請參閱 <a href="ideation-feature.md">創意力功能</a></td>
   </tr>
  </tbody>
 </table>
 
-* [客户端自定义](client-customize.md)
+* [使用者端自訂](client-customize.md)
 
 ### 构思功能 {#ideation-function}
 
-社区站点结构包括 [构思功能](functions.md#ideation-function)，包括已配置的 `ideation` 组件。
+社群網站結構包含 [創意力功能](functions.md#ideation-function)，包括已設定的 `ideation` 元件。

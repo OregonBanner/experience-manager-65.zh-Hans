@@ -1,7 +1,7 @@
 ---
-title: 管理横幅
+title: 管理橫幅
 seo-title: Managing Banners
-description: 横幅代表典型的图形促销链接。 关注此页面以了解更多信息。
+description: 橫幅通常代表圖形式促銷連結。 請詳閱本頁以瞭解更多資訊。
 seo-description: Banners represent typically graphical promotional links. Follow this page to learn more.
 uuid: 593fe2ef-84df-42e2-8a03-897fb67a896d
 contentOwner: User
@@ -17,123 +17,123 @@ ht-degree: 1%
 
 ---
 
-# 管理横幅{#managing-banners}
+# 管理橫幅{#managing-banners}
 
 >[!NOTE]
 >
->Adobe建议对需要基于单页应用程序框架的客户端渲染（例如React）的项目使用SPA编辑器。 [了解更多](/help/sites-developing/spa-overview.md)。
+>Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）專案使用SPA編輯器。 [了解详情](/help/sites-developing/spa-overview.md).
 
-内容管理操作是构建块，有助于在应用程序中创建和管理内容。 对应用程序中的内容执行以下操作。
+內容管理動作是建置區塊，可協助您建立和管理應用程式內的內容。 會對應用程式內的內容執行下列動作。
 
-## 横幅概述 {#banners-overview}
+## 橫幅概觀 {#banners-overview}
 
-横幅代表典型的图形促销链接。
+橫幅通常代表圖形式促銷連結。
 
 >[!NOTE]
 >
->请参阅联机帮助中的以下资源，了解AEM Mobile应用程序中的以下主题：
+>請參閱線上說明中的下列資源，瞭解AEM Mobile應用程式中的下列主題：
 >
->* [设计注意事项](https://helpx.adobe.com/digital-publishing-solution/help/design-app.html)
+>* [設計考量](https://helpx.adobe.com/digital-publishing-solution/help/design-app.html)
 >
->* [创建横幅](https://helpx.adobe.com/digital-publishing-solution/help/creating-banners.html)
+>* [建立橫幅](https://helpx.adobe.com/digital-publishing-solution/help/creating-banners.html)
 >
 
 
-## 创建横幅 {#creating-a-banner}
+## 建立橫幅 {#creating-a-banner}
 
-创建文章的常规工作流如下：
+建立文章的一般工作流程如下：
 
-1. 选择 **移动设备** 从侧边栏上删除。
-1. 从Mobile中，从目录中选择您的Mobile On-Demand应用程序。
-1. 单击右上角的向下箭头 **管理横幅** 图块。
-1. 完成向导的每个步骤，以继续创建新横幅。
-1. 准备就绪后，单击 **创建**.
-1. 您的新横幅将显示在 **管理横幅** 图块。
+1. 選取 **行動** 從側邊欄移除。
+1. 在Mobile中，從目錄中選擇您的Mobile On-Demand應用程式。
+1. 按一下右上角的向下箭頭 **管理橫幅** 圖磚。
+1. 完成精靈的每個步驟，以繼續建立新橫幅。
+1. 準備就緒後，按一下 **建立**.
+1. 您的新橫幅會出現在 **管理橫幅** 圖磚。
 
 ![chlimage_1-6](assets/chlimage_1-6.gif)
 
-## 导入新横幅 {#importing-a-new-banner}
+## 匯入新橫幅 {#importing-a-new-banner}
 
-现有Mobile On-Demand内容可以从Mobile On-Demand下载（导入）到AEM。 这允许编辑和查看本地内容。
+現有的Mobile On-Demand內容可以從Mobile On-Demand下載（匯入）到AEM。 如此可讓您編輯和檢視本機內容。
 
 >[!NOTE]
 >
->导入不包括图像。
+>匯入不包括影像。
 
-用于导入新文章的工作流
+匯入新文章的工作流程
 
-1. 从Mobile中，从目录中选择您的Mobile On-Demand应用程序。
-1. 单击右上角的向下箭头 **管理横幅** 图块并选择导入横幅。
-1. 单击 **导入横幅** 在对话框中，然后单击关闭。
-1. 您的Mobile On-Demand文章现在显示在 **管理横幅** 图块。
-
->[!CAUTION]
->
->您必须先关联Mobile On-Demand连接。
-
-## 编辑横幅 {#editing-a-banner}
-
-使用内置的AEM拖放编辑器添加或更改文章。 可以添加/删除文本和图像等组件。 可以插入DAM资产中的图像。
+1. 從Mobile從目錄中選擇您的Mobile On-Demand應用程式。
+1. 按一下右上角的向下箭頭 **管理橫幅** 並選取匯入橫幅。
+1. 按一下 **匯入橫幅** 在對話方塊上，然後按一下「關閉」。
+1. 您的Mobile On-Demand文章現在會出現在 **管理橫幅** 圖磚。
 
 >[!CAUTION]
 >
->只有在AEM中创建的横幅才能在编辑器中打开。
+>您必須先關聯Mobile On-Demand連線。
 
-用于编辑文章的工作流：
+## 編輯橫幅 {#editing-a-banner}
 
-1. 从Mobile中，从目录中选择您的Mobile On-Demand应用程序。
-1. 从**管理横幅**图块中选择一个来自AEM的横幅。
-1. 从列表视图中单击高亮显示的横幅以在内容编辑器中打开它。
-1. 使用内容编辑器拖动横幅内容（手稿、图像、文本等）。
+使用內建的AEM拖放編輯器來新增或變更文章。 可以新增/移除文字和影像等元件。 可以插入DAM Assets中的影像。
 
-### 查看和编辑横幅中的元数据 {#viewing-and-editing-the-metadata-within-a-banner}
+>[!CAUTION]
+>
+>編輯器中只能開啟在AEM中建立的橫幅。
 
-横幅具有许多属性，例如标题、描述、图像。 此操作用于查看和修改此类属性。 或者，这些更改可以在保存时上传到Mobile On-Demand。
+編輯文章的工作流程：
 
-查看/编辑文章的常规工作流：
+1. 在Mobile中，從目錄中選擇您的Mobile On-Demand應用程式。
+1. 從**管理橫幅**圖磚中選取AEM來源的橫幅。
+1. 從清單檢視中按一下醒目提示的橫幅，以在內容編輯器中開啟它。
+1. 使用內容編輯器拖曳橫幅內容（手稿、影像、文字等）。
 
-1. 从Mobile中，从目录中选择您的Mobile On-Demand应用程序。
-1. 从中选择横幅 **管理横幅** 图块。
+### 檢視和編輯橫幅內的中繼資料 {#viewing-and-editing-the-metadata-within-a-banner}
 
-1. 选择 **属性** 操作栏中的。
-1. 查看该文章的所有可用元数据。
-1. 编辑元数据（如果需要），然后单击 **保存** 完成时。
-1. （可选）立即将更改上传到Mobile On-Demand。
+橫幅有許多屬性，例如標題、說明、影像。 此動作用於檢視和修改此類屬性。 或者，您也可以在儲存時將這些變更上傳至Mobile On-Demand。
 
-## 上传横幅 {#uploading-a-banner}
+檢視/編輯文章的一般工作流程：
 
-上传操作会复制所选内容并将其添加到Mobile On-Demand项目。 现有的Mobile On-Demand内容将由新版本替换。
+1. 在Mobile中，從目錄中選擇您的Mobile On-Demand應用程式。
+1. 從中選擇橫幅 **管理橫幅** 圖磚。
 
-上传横幅的常规工作流：
+1. 選取 **屬性** 動作列中的。
+1. 檢視該文章的所有可用中繼資料。
+1. 視需要編輯中繼資料，然後按一下 **儲存** 完成時。
+1. 或者，您可以立即將變更上傳至Mobile On-Demand。
 
-1. 起始日期 **移动设备**，从目录中选择您的Mobile On-Demand应用程序。
-1. 在 **管理横幅** 图块，选择要上传到Mobile On-Demand的横幅。
-1. 如果需要，可从列表视图添加更多横幅。
-1. 选择 **上传** 在操作栏中，单击对话框中的“上传”。
-1. 您的横幅现已上传至Mobile On-Demand。
+## 上傳橫幅 {#uploading-a-banner}
+
+上傳動作會複製所選內容，並將其新增至Mobile On-Demand專案。 現有的Mobile On-Demand內容將由新版本取代。
+
+上傳橫幅的一般工作流程：
+
+1. 從 **行動**，從目錄中選擇您的Mobile On-Demand應用程式。
+1. 在 **管理橫幅** 圖磚，選取橫幅以上傳至Mobile On-Demand。
+1. 如有需要，從清單檢視中新增更多橫幅。
+1. 選取 **上傳** 從動作列，然後按一下對話方塊中的「上傳」 。
+1. 您的橫幅現在已上傳至Mobile On-Demand。
 
 ![chlimage_1-7](assets/chlimage_1-7.gif)
 
-## 删除横幅 {#deleting-a-banner}
+## 刪除橫幅 {#deleting-a-banner}
 
-此操作会从Mobile On-Demand中删除选定的横幅，也可以从本地AEM实例中删除（可选）。
+此操作會從Mobile On-Demand以及本機的AEM執行個體中刪除選取的橫幅（選擇性）。
 
-用于删除横幅的常规工作流：
+刪除橫幅的一般工作流程：
 
-1. 从Mobile中，从目录中选择您的Mobile On-Demand应用程序。
-1. 选择要删除的横幅 **管理横幅** 图块。
-1. 确保在列表中选中它（根据需要选择要删除的其他项）。
-1. 单击 **删除** 操作栏中的。
-1. 检查是否要从AEM和Mobile On-Demand中删除。
+1. 在Mobile中，從目錄中選擇您的Mobile On-Demand應用程式。
+1. 選取要刪除的橫幅 **管理橫幅** 圖磚。
+1. 確定在清單中選取它（視需要選取要刪除的其他專案）。
+1. 按一下 **刪除** 動作列中的。
+1. 檢查您是否要從AEM和Mobile On-Demand中刪除。
 1. 单击&#x200B;**删除**。
-1. 您的横幅现在已从列表中删除。
+1. 您的橫幅現在已從清單中移除。
 
 ### 后续步骤 {#the-next-steps}
 
-如果您了解如何管理横幅，请参阅
+如需管理橫幅的詳細資訊，請參閱
 
 * [管理文章](/help/mobile/mobile-on-demand-managing-articles.md)
-* [管理收藏集](/help/mobile/mobile-on-demand-managing-collections.md)
-* [上传共享资源](/help/mobile/mobile-on-demand-shared-resources.md)
-* [发布/取消发布内容](/help/mobile/mobile-on-demand-publishing-unpublishing.md)
-* [使用Preflight预览](/help/mobile/aem-mobile-manage-ondemand-services.md)
+* [管理集合](/help/mobile/mobile-on-demand-managing-collections.md)
+* [上傳共用資源](/help/mobile/mobile-on-demand-shared-resources.md)
+* [發佈/取消發佈內容](/help/mobile/mobile-on-demand-publishing-unpublishing.md)
+* [使用預檢預覽](/help/mobile/aem-mobile-manage-ondemand-services.md)

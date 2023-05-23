@@ -1,7 +1,7 @@
 ---
 title: ContextHub
 seo-title: ContextHub
-description: ContextHub是一个用于存储、操作和呈现上下文数据的框架
+description: ContextHub是一種用於儲存、操控和呈現內容資料的架構
 seo-description: ContextHub is a framework for storing, manipulating, and presenting context data
 uuid: 14e6ff4f-ffbe-454a-b2ec-a35333526e27
 contentOwner: Guillaume Carlino
@@ -19,42 +19,42 @@ ht-degree: 1%
 
 # ContextHub{#contexthub}
 
-ContextHub是一个用于存储、操作和呈现上下文数据的框架。 通过客户端Javascript API，可访问数据以个性化内容。
+ContextHub是一種用於儲存、操控和呈現內容資料的架構。 使用者端Javascript API可讓您存取個人化內容的資料。
 
 >[!NOTE]
 >
->此 [We.Retail引用实施](/help/sites-developing/we-retail.md) 实施ContextHub，并可作为将ContextHub集成到您自己的项目中的参考。
+>此 [We.Retail參考實作](/help/sites-developing/we-retail.md) 實作ContextHub，並可作為將ContextHub整合至您專案時的參考。
 
 >[!CAUTION]
 >
->包含由使用的示例ContextHub配置的路径 [We.Retail引用实施](/help/sites-developing/we-retail.md) ( `/libs/settings/cloudsettings/legacy`)只能用作创建您自己的配置的参考。
+>包含範例ContextHub設定(用於 [We.Retail參考實作](/help/sites-developing/we-retail.md) ( `/libs/settings/cloudsettings/legacy`)僅可作為建立您自己的設定的參考。
 >
->不应在项目中将它用作您自己的ContextHub配置。
+>請勿在專案中作為您自己的ContextHub設定使用。
 
-## 持久性 {#persistence}
+## 持續性 {#persistence}
 
-ContextHub存储保留在客户端上的上下文数据。 通过ContextHub Javascript API，您可以访问存储区，以根据需要创建、更新和删除数据。 因此，ContextHub表示页面上的数据层。
+ContextHub會儲存持續存在於使用者端上的內容資料。 ContextHub Javascript API可讓您存取存放區，以視需要建立、更新和刪除資料。 因此，ContextHub代表頁面上的資料層。
 
-每个ContextHub存储都是预定义存储类型的实例：
+每個ContextHub存放區都是預先定義存放區型別的例項：
 
-* ContextHub提供了多个 [示例存储类型](/help/sites-developing/ch-samplestores.md).
-* 使用AEM控制台可以 [创建商店](ch-configuring.md#creating-a-contexthub-store).
-* 开发人员可以 [创建自定义商店类型](/help/sites-developing/ch-extend.md#creating-custom-store-candidates).
-* 开发人员可以 [访问存储数据](/help/sites-developing/ch-adding.md#interacting-with-contexthub-stores) 通过Javascript。
+* ContextHub提供數種 [範例存放區型別](/help/sites-developing/ch-samplestores.md).
+* 使用AEM主控台 [建立存放區](ch-configuring.md#creating-a-contexthub-store).
+* 開發人員可以 [建立自訂商店型別](/help/sites-developing/ch-extend.md#creating-custom-store-candidates).
+* 開發人員可以 [存取存放區資料](/help/sites-developing/ch-adding.md#interacting-with-contexthub-stores) 透過Javascript。
 
 ## 分段 {#segmentation}
 
-ContextHub包括一个分段引擎，该引擎管理区段并确定在当前上下文中解析哪些区段。 定义了多个区段。 您可以使用Javascript API执行以下操作 [确定已解析的区段](/help/sites-developing/ch-adding.md#determining-resolved-contexthub-segments).
+ContextHub包含區段引擎，可管理區段並決定針對目前內容解析哪些區段。 已定義數個區段。 您可以使用Javascript API來 [決定已解析的區段](/help/sites-developing/ch-adding.md#determining-resolved-contexthub-segments).
 
 ## 演示文稿 {#presentation}
 
-此 [ContextHub工具栏](/help/sites-authoring/ch-previewing.md) 使营销人员和作者能够查看和处理存储数据，以便在创作页面时模拟用户体验。 工具栏由提供对ContextHub存储的访问权限的UI模块组组成。
+此 [contexthub工具列](/help/sites-authoring/ch-previewing.md) 可讓行銷人員和作者檢視並操控存放區資料，以便在編寫頁面時模擬使用者體驗。 工具列由提供存取ContextHub存放區的UI模組群組組成。
 
-每个ContextHub UI模块都是预定义模块类型的实例：
+每個ContextHub UI模組都是預先定義模組型別的例項：
 
-* ContextHub提供了多个 [示例模块类型](/help/sites-developing/ch-samplemodules.md).
-* 使用AEM控制台可以 [添加用户界面模块](ch-configuring.md#adding-a-ui-module)、和 [在UI模式下对这些组件进行分组](ch-configuring.md#adding-a-ui-mode).
+* ContextHub提供數種 [範例模組型別](/help/sites-developing/ch-samplemodules.md).
+* 使用AEM主控台 [新增使用者介面模組](ch-configuring.md#adding-a-ui-module)，並至 [在UI模式下將其分組](ch-configuring.md#adding-a-ui-mode).
 
-* 开发人员可以 [创建自定义模块类型](/help/sites-developing/ch-extend.md#creating-contexthub-ui-module-types).
+* 開發人員可以 [建立自訂模組型別](/help/sites-developing/ch-extend.md#creating-contexthub-ui-module-types).
 
-开发人员需要 [将ContextHub组件添加到页面](/help/sites-developing/ch-adding.md).
+開發人員需要 [將ContextHub元件新增至頁面](/help/sites-developing/ch-adding.md).

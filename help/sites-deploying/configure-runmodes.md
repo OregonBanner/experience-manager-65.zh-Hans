@@ -1,7 +1,7 @@
 ---
 title: 运行模式
 seo-title: Run Modes
-description: 了解如何使用运行模式调整AEM实例以用于特定目的。
+description: 瞭解如何使用執行模式針對特定目的調整AEM執行個體。
 seo-description: Learn how to tune your AEM instance for specific purposes by using run modes.
 uuid: 8a0c6e5c-4fae-43e2-b745-eee58f346ceb
 contentOwner: User
@@ -20,44 +20,44 @@ ht-degree: 1%
 
 # 运行模式{#run-modes}
 
-运行模式允许您针对特定目的调整AEM实例；例如，创作或发布、测试、开发、内部网或其他。
+執行模式可讓您針對特定目的調整AEM執行個體；例如製作或發佈、測試、開發、內部網路或其他目的。
 
 您可以：
 
-* [为每个运行模式定义配置参数集合](#defining-configuration-properties-for-a-run-mode).
+* [定義每個執行模式的設定引數集合](#defining-configuration-properties-for-a-run-mode).
 
-   所有运行模式都应用一组基本的配置参数，然后您可以根据特定环境的目的调整其他集。 这些值将根据需要应用。
+   所有執行模式都會套用一組基本組態引數，然後您就可以根據特定環境的目的調整其他組。 這些會視需要套用。
 
-* [定义要为特定模式安装的其他包](#defining-additional-bundles-to-be-installed-for-a-run-mode).
+* [定義要針對特定模式安裝的其他組合](#defining-additional-bundles-to-be-installed-for-a-run-mode).
 
-所有设置和定义都存储在一个存储库中，并通过设置 **运行模式**.
+所有設定和定義都儲存在一個存放庫中，並透過設定 **執行模式**.
 
-## 安装运行模式 {#installation-run-modes}
+## 安裝執行模式 {#installation-run-modes}
 
-安装时使用安装（或固定）运行模式，然后在实例的整个生命周期内对其进行修复，这些模式将无法更改。
+安裝（或固定）執行模式會在安裝時使用，然後在執行個體的整個存留期內固定，因此無法變更。
 
-提供了现成的安装运行模式：
+提供立即可用的安裝執行模式：
 
 * `author`
 * `publish`
 * `samplecontent`
 * `nosamplecontent`
 
-这是两对相互排斥的运行模式；例如，您可以：
+這兩對執行模式互斥；例如，您可以：
 
-* 定义 `author` 或 `publish`，而不是同时进行
+* 定義 `author` 或 `publish`，而非兩者同時進行
 
-* 合并 `author` 使用 `samplecontent` 或 `nosamplecontent` （但不能同时考虑两者）
+* 合併 `author` 透過 `samplecontent` 或 `nosamplecontent` （但不是兩者）
 
 >[!CAUTION]
 >
->使用上述运行模式之一（创作、发布、samplecontent、nosamplecontent）时，安装时使用的值将定义 *整个生命周期* 那个装置。
+>使用上述執行模式之一(author、publish、samplecontent、nosamplecontent)時，安裝時使用的值會定義 *整個期限* 安裝完成。
 >
->对于这些运行模式，您 *无法* 安装后进行更改。
+>對於這些執行模式，您 *無法* 安裝後變更。
 
-## 自定义运行模式 {#customized-run-modes}
+## 自訂執行模式 {#customized-run-modes}
 
-您还可以创建自己的自定义运行模式。 这些选项可以组合在一起，以涵盖以下场景：
+您也可以建立自己的自訂執行模式。 這些可結合以涵蓋下列案例：
 
 * `author` + `development`
 
@@ -67,121 +67,121 @@ ht-degree: 1%
 
 * `publish` + `intranet`
 
-* （根据需要）。..
+* 視需要。..
 
-每次启动时也可以选择自定义运行模式。
+每次啟動時也可以選取自訂的執行模式。
 
 ## 使用samplecontent和nosamplecontent {#using-samplecontent-and-nosamplecontent}
 
-利用这些模式，可控制示例内容的使用。 在构建快速入门之前定义示例内容，该内容可以包含包、配置等：
+這些模式可讓您控制範例內容的使用。 範例內容是在建置快速入門之前定義，可包含套件、設定等：
 
-* 的 `samplecontent` 运行模式将安装此内容（默认模式）。
+* 此 `samplecontent` 執行模式將會安裝此內容（預設模式）。
 
-* 的 `nosamplecontent` 模式将不会安装示例内容。
+* 此 `nosamplecontent` 模式不會安裝範例內容。
 
-nosamplecontent运行模式专为生产安装而设计。
+nosamplecontent執行模式是針對生產安裝所設計。
 
-## 为运行模式定义配置属性 {#defining-configuration-properties-for-a-run-mode}
+## 定義執行模式的設定屬性 {#defining-configuration-properties-for-a-run-mode}
 
-配置属性的值集合（用于特定运行模式）可以保存在存储库中。
+組態屬性的值集合（用於特定執行模式）可儲存在存放庫中。
 
-运行模式在文件夹名称上由后缀表示。 这样，您可以将所有配置作为存储在一个存储库中。 例如：
+資料夾名稱上的字尾表示執行模式。 這可讓您將所有設定作為儲存在單一存放庫中。 例如：
 
 * `config`
 
-   适用于所有运行模式
+   適用於所有執行模式
 
 * `config.author`
 
-   用于创作运行模式
+   用於作者執行模式
 
 * `config.publish`
 
-   用于发布运行模式
+   用於發佈執行模式
 
 * `config.<run-mode>`
 
-   用于适用的运行模式；例如，config
+   用於適用的執行模式；例如，設定
 
-请参阅 [存储库中的OSGi配置](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository) 有关定义这些文件夹中的各个配置节点以及为多个运行模式组合创建配置的更多详细信息。
+另請參閱 [存放庫中的OSGi設定](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository) 有關定義這些資料夾中的個別設定節點以及為多個執行模式的組合建立設定的更多詳細資訊。
 
 >[!NOTE]
 >
->对于 [安装运行模式](#installation-run-modes) （例如作者）安装后，无法更改运行模式。 但是，对单个配置属性所做的更改将在重新启动后生效。
+>對象 [安裝執行模式](#installation-run-modes) （例如author）安裝後無法變更執行模式。 不過，個別設定屬性的變更將在重新啟動後生效。
 
-## 定义要为运行模式安装的其他包 {#defining-additional-bundles-to-be-installed-for-a-run-mode}
+## 定義要針對執行模式安裝的其他組合 {#defining-additional-bundles-to-be-installed-for-a-run-mode}
 
-还可以指定应为特定运行模式安装的其他包。 对于这些定义，使用安装文件夹来保存包。 运行模式同样由前缀表示：
+也可以指定應該為特定執行模式安裝的其他組合。 對於這些定義，會使用安裝資料夾來儲存組合。 執行模式再次以字首表示：
 
 * `install.author`
 * `install.publish`
 
-这些文件夹的类型 `nt:folder` 和应包含相应的包。
+這些資料夾屬於型別 `nt:folder` 和應包含適當的組合。
 
-## 以特定运行模式启动CQ {#starting-cq-with-a-specific-run-mode}
+## 以特定執行模式啟動CQ {#starting-cq-with-a-specific-run-mode}
 
-如果您为多个运行模式定义了配置，则需要定义启动时要使用的配置。 可通过多种方法来指定要使用的运行模式；决议的顺序是：
+如果您已定義多個執行模式的設定，則需要定義要在啟動時使用的設定。 有數種方法可指定要使用的執行模式；解析的順序為：
 
-1. [系统属性(](#using-a-system-property-in-the-start-script)
+1. [系統屬性(](#using-a-system-property-in-the-start-script)
 1. [ ](#using-the-sling-properties-file)
 1. [ ](#using-the-r-option)
-1. [文件名检测](#filename-detection-renaming-the-jar-file)
+1. [檔案名稱偵測](#filename-detection-renaming-the-jar-file)
 
-使用应用程序服务器时，您还可以 [在web.xml中定义运行模式](#defining-the-run-mode-in-web-xml-with-application-server).
+使用應用程式伺服器時，您也可以 [在web.xml中定義執行模式](#defining-the-run-mode-in-web-xml-with-application-server).
 
-### 使用sling.properties文件 {#using-the-sling-properties-file}
+### 使用sling.properties檔案 {#using-the-sling-properties-file}
 
-的 `sling.properties` 文件可用于定义所需的运行模式：
+此 `sling.properties` 檔案可用來定義所需的執行模式：
 
-1. 编辑配置文件：
+1. 編輯組態檔：
 
    `<cq-installation-dir>/crx-quickstart/conf/sling.properties`
 
-1. 添加以下属性；以下示例供作者使用：
+1. 新增以下屬性；以下範例適用於作者：
 
    `sling.run.modes=author`
 
-### 使用 — r选项 {#using-the-r-option}
+### 使用 — r選項 {#using-the-r-option}
 
-自定义运行模式可以使用 `-r` 选项。 例如，使用以下命令启动运行模式设置为dev的AEM实例。&quot;
+自訂執行模式可透過使用 `-r` 選項。 例如，使用以下命令來啟動執行模式設為dev的AEM執行個體。&quot;
 
 ```shell
 java -jar cq-56-p4545.jar -r dev
 ```
 
-### 在启动脚本中使用系统属性 {#using-a-system-property-in-the-start-script}
+### 在啟動指令碼中使用系統屬性 {#using-a-system-property-in-the-start-script}
 
-启动脚本中的系统属性可用于指定运行模式。
+啟動指令碼中的系統屬性可用於指定執行模式。
 
-* 例如，使用以下方法将一个实例作为位于美国的生产发布实例启动：
+* 例如，使用以下專案將執行個體啟動為位於美國的生產發佈執行個體：
 
    `-Dsling.run.modes=publish,prod,us`
 
-### 文件名检测 — 重命名jar文件 {#filename-detection-renaming-the-jar-file}
+### 檔案名稱偵測 — 重新命名jar檔案 {#filename-detection-renaming-the-jar-file}
 
-以下两种安装运行模式可通过在安装前重命名安装jar文件来激活：
+您可以在安裝前重新命名安裝jar檔案，以啟動下列兩種安裝執行模式：
 
 * 发布
 * 作者
 
-jar文件必须使用命名约定：
+jar檔案必須使用命名慣例：
 
 `cq5-<run-mode>-p<port-number>`
 
-例如，将 `publish` 通过命名jar文件来运行模式：
+例如，設定 `publish` 透過命名jar檔案來執行模式：
 
 `cq5-publish-p4503`
 
-### 在web.xml中定义运行模式（使用Application Server） {#defining-the-run-mode-in-web-xml-with-application-server}
+### 在web.xml中定義執行模式（使用應用程式伺服器） {#defining-the-run-mode-in-web-xml-with-application-server}
 
-使用应用程序服务器时，您还可以配置属性：
+當您使用應用程式伺服器時，也可以設定屬性：
 
 `sling.run.modes`
 
-在文件中：
+在檔案中：
 
 `WEB-INF/web.xml`
 
-这在AEM中 `war` 文件，且应在部署之前更新。
+這在AEM中 `war` 檔案和應於部署前更新。
 
-请参阅 [使用应用程序服务器安装AEM](/help/sites-deploying/application-server-install.md) 以了解更多详细信息。
+另請參閱 [使用應用程式伺服器安裝AEM](/help/sites-deploying/application-server-install.md) 以取得更多詳細資料。

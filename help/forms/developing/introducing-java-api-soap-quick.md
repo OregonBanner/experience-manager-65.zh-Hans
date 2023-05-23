@@ -1,7 +1,7 @@
 ---
-title: Java API快速入门简介
+title: Java API快速入門簡介
 seo-title: Introducing Java API QuickStart
-description: Java API快速入门简介
+description: Java API快速入門簡介
 uuid: 480e1809-f789-4ad8-b5d5-2d97aba8411a
 contentOwner: admin
 content-type: reference
@@ -17,17 +17,17 @@ ht-degree: 0%
 
 ---
 
-# Java API快速入门简介 {#introducing-java-api-quickstart}
+# Java API快速入門簡介 {#introducing-java-api-quickstart}
 
-**本文档中的示例和示例仅适用于AEM Forms on JEE环境。**
+**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms 。**
 
-AdobeAEM Forms API快速入门可以帮助您加快开发与AEM Forms服务交互的程序。 *快速入门*&#x200B;是完整的程序，您可以将其复制并粘贴到您自己的项目中，并用作起点。 您可以运行快速入门以了解其行为方式，并根据自己的需求对其进行修改。
+AdobeAEM Forms API快速入門可幫助您加速開發與AEM Forms服務互動的程式。 *快速入門*&#x200B;是完整的程式，您可以複製並貼到您自己的專案中，作為起點。 您可以執行快速入門，檢視其行為方式，並根據您自己的需求進行修改。
 
-AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应设置为SOAP。
+AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定為SOAP。
 
-Java强类型API快速入门提供了执行Java应用程序所需的JAR文件列表。 大多数Java快速启动都是控制台应用程序，运行于 `main`. 但是，Forms Java强类型API快速入门是作为在Web应用程序中运行的Java servlet实现的。
+Java強型別API快速入門提供執行Java應用程式所需的JAR檔案清單。 大部分的Java快速入門都是控制檯應用程式，執行於 `main`. 不過，Forms Java強型別API快速入門是以在Web應用程式中執行的Java servlet實施。
 
-JAR文件列表位于“快速入门”开头处的注释部分中。 例如，以下注释位于“输出”快速入门中，并且是每个Java快速入门中提供的典型JAR文件列表。
+JAR檔案清單位於「快速入門」開頭的註解區段中。 例如，以下註解位於「輸出」快速入門中，並且是在每個Java快速入門中找到的典型JAR檔案清單。
 
 ```java
  /*
@@ -64,28 +64,28 @@ JAR文件列表位于“快速入门”开头处的注释部分中。 例如，�
      */
 ```
 
-## 多项服务快速入门 {#multiple-services-quick-start}
+## 多項服務快速入門 {#multiple-services-quick-start}
 
-最快速入门位于 *在JEE中使用AEM Forms编程* 调用特定服务以执行操作。 但是，某些快速启动会调用多个AEM Forms服务以执行给定工作流。 以下列表提供了可调用多个AEM Forms服务的Java快速启动：
+最快速入門位於 *使用AEM Forms on JEE進行程式設計* 叫用特定服務以執行作業。 不過，有些快速入門會叫用多個AEM Forms服務來執行指定的工作流程。 下列清單提供叫用多個AEM Forms服務的Java快速啟動：
 
-[快速入门（SOAP模式）：使用Java API将位于AEM Forms存储库中的文档传递到输出服务](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-passing-a-document-located-in-the-repository-to-the-output-service-using-the-java-api) （调用Repository and Output服务）
+[快速入門（SOAP模式）：使用Java API將位於AEM Forms存放庫中的檔案傳遞至輸出服務](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-passing-a-document-located-in-the-repository-to-the-output-service-using-the-java-api) （叫用存放庫和輸出服務）
 
-[快速入门（SOAP模式）：使用Java API基于片段创建PDF文档](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-document-based-on-fragments-using-the-java-api) （调用Assembler and Output服务）
+[快速入門（SOAP模式）：使用Java API根據片段建立PDF檔案](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-document-based-on-fragments-using-the-java-api) （叫用Assembler and Output服務）
 
-[快速入门（SOAP模式）：使用Java API使用提交的XML数据创建PDF文档](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-creating-pdf-documents-with-submitted-xml-data-using-the-java-api) (调用Forms、输出和文档管理服务)
+[快速入門（SOAP模式）：使用Java API以提交的XML資料建立PDF檔案](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-creating-pdf-documents-with-submitted-xml-data-using-the-java-api) (叫用Forms、輸出和檔案管理服務)
 
-[快速入门（SOAP模式）：使用Java API将文档传递到Forms服务](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-passing-documents-to-the-forms-service-using-the-java-api) (调用Forms和文档管理服务)
+[快速入門（SOAP模式）：使用Java API將檔案傳遞至Forms服務](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-passing-documents-to-the-forms-service-using-the-java-api) (叫用Forms和檔案管理服務)
 
-[快速入门（SOAP模式）：使用Java API对基于XFA的表单进行数字签名](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-digitally-signing-a-xfa-based-form-using-the-java-api) (调用Forms和签名服务)
+[快速入門（SOAP模式）：使用Java API數位簽署XFA型表單](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-digitally-signing-a-xfa-based-form-using-the-java-api) (叫用Forms和簽名服務)
 
-[快速入门（SOAP模式）：使用Java API管理角色和权限](/help/forms/developing/user-manager-java-api-quick.md#quick-start-soap-mode-managing-roles-and-permissions-using-the-java-api) （调用DirectoryManager和AuthorizationManager服务）
+[快速入門（SOAP模式）：使用Java API管理角色和許可權](/help/forms/developing/user-manager-java-api-quick.md#quick-start-soap-mode-managing-roles-and-permissions-using-the-java-api) （叫用DirectoryManager和AuthorizationManager服務）
 
-[快速入门（SOAP模式）：使用Java API将文档传递到输出服务](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-passing-documents-to-the-output-service-using-the-java-api) （调用Output and Document Management服务）
-
->[!NOTE]
->
->“使用AEM Forms编程”中的“快速入门”基于部署在JBoss® Application Server和Microsoft® Windows®操作系统上的AEM Forms。 但是，如果您使用的是其他操作系统(如UNIX®)，请将特定于Windows的路径替换为适用的操作系统支持的路径。 同样，如果您使用的是其他J2EE应用程序服务器，请确保指定有效的连接属性。 (请参阅 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).)
+[快速入門（SOAP模式）：使用Java API將檔案傳遞至輸出服務](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-passing-documents-to-the-output-service-using-the-java-api) （叫用輸出和檔案管理服務）
 
 >[!NOTE]
 >
->大多数Web服务快速启动都使用C#编写，并且使用.NET框架。 但是，您可以创建客户端应用程序逻辑，以便能够在支持SOAP标准的任何开发环境中调用AEM Forms服务。 (请参阅 [使用Web服务调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-web-services).)
+>「使用AEM Forms進行程式設計」中的「快速入門」是根據部署在JBoss® Application Server和Microsoft® Windows®作業系統上的AEM Forms所撰寫。 不過，如果您使用其他作業系統(例如UNIX®)，請將Windows專用的路徑取代為適用作業系統支援的路徑。 同樣地，如果您使用其他J2EE應用程式伺服器，請務必指定有效的連線屬性。 (請參閱 [設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).)
+
+>[!NOTE]
+>
+>大部分的Web服務快速啟動是以C#撰寫並使用.NET Framework。 不過，您可以建立使用者端應用程式邏輯，以便在支援SOAP標準的任何開發環境中叫用AEM Forms服務。 (請參閱 [使用Web服務叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-web-services).)

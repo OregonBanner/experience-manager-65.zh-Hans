@@ -1,7 +1,7 @@
 ---
-title: 创建自定义扩展
+title: 建立自訂擴充功能
 seo-title: Creating Custom Extensions
-description: 您可以在Adobe Campaign中从AEM或从AEM到Adobe Campaign调用自定义代码
+description: 您可以在Adobe Campaign中從AEM或從AEM呼叫Adobe Campaign的自訂程式碼
 seo-description: You can call your custom code in Adobe Campaign from AEM or from AEM to Adobe Campaign
 uuid: 8392aa0d-06cd-4b37-bb20-f67e6a0550b1
 contentOwner: User
@@ -13,44 +13,44 @@ exl-id: 0702858e-5e46-451f-9ac3-40a4fec68ca0
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '518'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
-# 创建自定义扩展{#creating-custom-extensions}
+# 建立自訂擴充功能{#creating-custom-extensions}
 
-通常，在实施项目时，您在AEM和Adobe Campaign中都拥有自定义代码。 通过使用现有API，您可以在Adobe Campaign中从AEM或从AEM到Adobe Campaign调用自定义代码。 本文档介绍了如何执行此操作。
+一般而言，實作專案時，您在AEM和Adobe Campaign中都有自訂程式碼。 使用現有API，您可以在Adobe Campaign中從AEM或從AEM到Adobe Campaign呼叫自訂程式碼。 本檔案將說明如何執行此操作。
 
 ## 前提条件 {#prerequisites}
 
-您需要安装以下组件：
+您必須安裝下列專案：
 
 * Adobe Experience Manager
 * Adobe Campaign 6.1
 
-参见 [将AEM与Adobe Campaign 6.1集成](/help/sites-administering/campaignonpremise.md) 了解更多信息。
+另請參閱 [將AEM與Adobe Campaign 6.1整合](/help/sites-administering/campaignonpremise.md) 以取得詳細資訊。
 
-## 示例1：从AEM到Adobe Campaign {#example-aem-to-adobe-campaign}
+## 範例1：從AEM到Adobe Campaign {#example-aem-to-adobe-campaign}
 
-AEM和Campaign之间的标准集成基于JSON和JSSP (JavaScript Server Page)。 这些JSSP文件可在Campaign控制台中找到，并且全部以开头 **amc** (Adobe Marketing Cloud)。
+AEM和Campaign之間的標準整合是以JSON和JSSP （JavaScript伺服器頁面）為基礎。 這些JSSP檔案可在Campaign主控台中找到，而且全都開頭為 **amc** (Adobe Marketing Cloud)。
 
 ![chlimage_1-15](assets/chlimage_1-15a.png)
 
 >[!NOTE]
 >
->[对于此示例，请参阅Geometrixx](/help/sites-developing/we-retail.md)，该页面可从包共享中获取。
+>[如需此範例，請參閱Geometrixx](/help/sites-developing/we-retail.md)，可在「封裝共用」中取得。
 
-在此示例中，我们创建一个新的自定义JSSP文件，并从AEM端调用该文件以检索结果。 例如，这可用于从Adobe Campaign检索数据，或将数据保存到Adobe Campaign中。
+在此範例中，我們會建立新的自訂JSSP檔案，並從AEM端呼叫該檔案來擷取結果。 舉例來說，這可用來從Adobe Campaign擷取資料，或將資料儲存至Adobe Campaign。
 
-1. 在Adobe Campaign中，要创建新的JSSP文件，请单击 **新** 图标。
+1. 在Adobe Campaign中，若要建立新的JSSP檔案，請按一下 **新增** 圖示。
 
    ![](do-not-localize/chlimage_1-4a.png)
 
-1. 输入此JSSP文件的名称。 在此示例中，我们使用 **cus：custom.jssp** (这意味着它将位于 **cus** 命名空间)。
+1. 輸入此JSSP檔案的名稱。 在此範例中，我們使用 **cus：custom.jssp** (這表示它將位於 **cus** 名稱空間)。
 
    ![chlimage_1-16](assets/chlimage_1-16a.png)
 
-1. 将以下代码放入jssp-file中：
+1. 將下列程式碼放入jssp-file中：
 
    ```
    <%
@@ -59,15 +59,15 @@ AEM和Campaign之间的标准集成基于JSON和JSSP (JavaScript Server Page)。
    %>
    ```
 
-1. 保存您所做的工作。 剩余的工作在AEM中。
-1. 在AEM端创建一个简单的servlet以调用此JSSP。 在本示例中，我们假定：
+1. 儲存您的工作。 其餘的工作在AEM中。
+1. 在AEM端建立簡單的servlet以呼叫此JSSP。 在此範例中，我們假設如下：
 
-   * 您已在AEM和Campaign之间建立连接
-   * campaign cloudservice配置于 **/content/geometrixx-outdoors**
+   * 您已在AEM和Campaign之間使用連線
+   * campaign cloudservice設定於 **/content/geometrixx-outdoors**
 
-   此示例中最重要的对象是 **GenericCampaignConnector**，允许您在Adobe Campaign端调用（获取和发布）jssp文件。
+   此範例中最重要的物件是 **GenericCampaignConnector**，可讓您在Adobe Campaign端呼叫（取得和發佈） jssp檔案。
 
-   以下是一个小的代码片段：
+   以下是一個小型程式碼片段：
 
    ```
    @Reference
@@ -79,7 +79,7 @@ AEM和Campaign之间的标准集成基于JSON和JSSP (JavaScript Server Page)。
    return results.bodyAsString();
    ```
 
-1. 如本示例所示，您需要将凭据传递到调用中。 您可以通过getCredentials()方法获取此项，其中传递的页面配置了Campaign云服务。
+1. 如本範例所示，您必須將認證傳入呼叫。 您可以透過getCredentials()方法取得此資訊，您可在其中傳入已設定Campaign雲端服務的頁面。
 
    ```xml
    // page containing the cloudservice for Adobe Campaign
@@ -87,7 +87,7 @@ AEM和Campaign之间的标准集成基于JSON和JSSP (JavaScript Server Page)。
    CampaignCredentials credentials = campaignConnector.retrieveCredentials(config);
    ```
 
-完整的代码如下：
+完整的程式碼如下：
 
 ```java
 import java.io.IOException;
@@ -162,17 +162,17 @@ public class CustomServlet extends SlingSafeMethodsServlet {
 }
 ```
 
-## 示例2：从Adobe Campaign到AEM {#example-adobe-campaign-to-aem}
+## 範例2：從Adobe Campaign到AEM {#example-adobe-campaign-to-aem}
 
-AEM提供现成的API，用于检索siteadmin explorer视图中任何位置可用的对象。
+AEM提供立即可用的API，可擷取siteadmin explorer檢視中任何位置的物件。
 
 ![chlimage_1-17](assets/chlimage_1-17a.png)
 
 >[!NOTE]
 >
->[对于此示例，请参阅Geometrixx](/help/sites-developing/we-retail.md)，该页面可从包共享中获取。
+>[如需此範例，請參閱Geometrixx](/help/sites-developing/we-retail.md)，可在「封裝共用」中取得。
 
-对于资源管理器中的每个节点，都有一个API链接到该节点。 例如，对于节点：
+對於總管中的每個節點，都有一個API連結至該節點。 例如，節點：
 
 * [http://localhost:4502/siteadmin#/content/campaigns/geometrixx/scott-recommends](http://localhost:4502/siteadmin#/content/campaigns/geometrixx/scott-recommends)
 
@@ -180,15 +180,15 @@ API是：
 
 * [http://localhost:4502/content/campaigns/geometrixx/scott-recommends.1.json](http://localhost:4502/content/campaigns/geometrixx/scott-recommends.2.json)
 
-URL的结尾 **.1.json** 可替换为 **.2.json**， **.3.json**，根据您感兴趣的子级别数量获取所有子级别的关键字 **无限** 可以使用：
+URL結尾 **.1.json** 可以取代為 **.2.json**， **.3.json**，根據您想要取得的子層級數量以取得所有子層級關鍵字 **無限** 可使用：
 
 * [http://localhost:4502/content/campaigns/geometrixx/scott-recommends.infinity.json](http://localhost:4502/content/campaigns/geometrixx/scott-recommends.2.json)
 
-现在，要使用API，我们必须知道，AEM默认使用基本身份验证。
+現在若要使用API，我們必須知道AEM預設會使用基本驗證。
 
-名为的JS库 **amcIntegration.js** 在6.1.1（内部版本8624及更高版本）中提供，该版本会在多个其他版本中实施该逻辑。
+名為的JS程式庫 **amcIntegration.js** 6.1.1 （版本編號8624及更新版本）中提供，可在其他數個版本中實作該邏輯。
 
-### AEM API调用 {#aem-api-call}
+### AEM API呼叫 {#aem-api-call}
 
 ```java
 loadLibrary("nms:amcIntegration.js");

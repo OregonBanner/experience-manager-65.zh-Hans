@@ -1,7 +1,7 @@
 ---
-title: 设置PDFG网络打印机（仅限Windows）
+title: 設定PDFG網路印表機（僅限Windows）
 seo-title: Setting up a PDFG Network Printer (Windows only)
-description: 了解如何设置PDFG网络打印机（仅限Windows ）
+description: 瞭解如何設定PDFG網路印表機（僅限Windows ）
 seo-description: Learn how to set up a PDFG Network Printer ( Windows only )
 uuid: 13b8481e-5ef0-4a07-9602-7bc4d9e05dd4
 contentOwner: admin
@@ -18,55 +18,55 @@ ht-degree: 0%
 
 ---
 
-# 设置PDFG网络打印机（仅限Windows） {#setting-up-a-pdfg-network-printer-windows-only}
+# 設定PDFG網路印表機（僅限Windows） {#setting-up-a-pdfg-network-printer-windows-only}
 
-PDFG网络打印机允许用户从任何支持打印的应用程序生成PDF文档。 用户安装PDFG网络打印机后，新打印机 *PDF生成器* 显示在Windows控制面板的“Printers（打印机）”部分。 如果已经存在同名打印机，则会提示用户提供其他名称。
+PDFG網路印表機可讓使用者從任何支援列印的應用程式產生PDF檔案。 使用者安裝PDFG網路印表機後，新印表機命名為 *PDF產生器* 會出現在Windows控制檯的「印表機」區段中。 如果已經存在同名的印表機，系統會提示使用者提供其他名稱。
 
-从任何应用程序打印到此打印机，都会将文档（以PostScript格式）发送到PDF生成器，后者将PostScript文件转换为PDF。 根据您配置PDF生成器的方式，它会将PDF文档作为电子邮件的附件发送给用户，将PDF文档转发到指定的AEM表单服务或流程，或者同时执行这两项操作。
+從任何應用程式列印到這台印表機會將檔案（以PostScript格式）傳送到PDF產生器，後者會將PostScript檔案轉換為PDF。 根據您設定PDF產生器的方式，它會將PDF檔案作為電子郵件訊息的附件傳送給使用者、將PDF檔案轉送給指定的AEM表單服務或程式，或執行這兩個動作。
 
-设置PDFG网络打印机需要以下步骤：
+設定PDFG網路印表機需要下列步驟：
 
-1. 配置电子邮件设置。 (请参阅 [配置PDFG网络打印机的电子邮件设置](setting-pdfg-network-printer-windows.md#configure-email-settings-for-pdfg-network-printer).)
-1. 在管理控制台中，配置PDFG网络打印机设置。 (请参阅 [配置PDFG网络打印机设置](setting-pdfg-network-printer-windows.md#configure-the-pdfg-network-printer-settings).)
-1. 确保在AEM表单数据库中为用户配置了有效的电子邮件地址，并为每个用户分配PDFGUserPermission。 <!-- Fix broken link See Setting up and organizing users -->
-1. 确保用户的计算机上安装了32位JRE6。
-1. 在用户计算机上安装打印机。 (请参阅 [在用户计算机上安装PDFG网络打印机](setting-pdfg-network-printer-windows.md#install-pdfg-network-printer-on-a-user-s-computer).)
+1. 設定電子郵件設定。 (請參閱 [設定PDFG網路印表機的電子郵件設定](setting-pdfg-network-printer-windows.md#configure-email-settings-for-pdfg-network-printer).)
+1. 在管理主控台中，設定PDFG網路印表機設定。 (請參閱 [設定PDFG網路印表機設定](setting-pdfg-network-printer-windows.md#configure-the-pdfg-network-printer-settings).)
+1. 確保您的使用者在AEM表單資料庫中設定了有效的電子郵件地址，並將PDFGUserPermission指派給每個使用者。 <!-- Fix broken link See Setting up and organizing users -->
+1. 確定使用者的電腦上已安裝32位元JRE6。
+1. 在您的使用者電腦上安裝印表機。 (請參閱 [在使用者的電腦上安裝PDFG網路印表機](setting-pdfg-network-printer-windows.md#install-pdfg-network-printer-on-a-user-s-computer).)
 
-## 配置PDFG网络打印机的电子邮件设置 {#configure-email-settings-for-pdfg-network-printer}
+## 設定PDFG網路印表機的電子郵件設定 {#configure-email-settings-for-pdfg-network-printer}
 
-1. 在管理控制台中，单击服务>应用程序和服务>服务管理。
-1. 在“服务管理”页上，单击provider.email_sendmail_service，指定SMTP设置，然后单击保存。
+1. 在Administration Console中，按一下「服務>應用程式和服務>服務管理」。
+1. 在「服務管理」頁面上，按一下provider.email_sendmail_service，指定SMTP設定值，然後按一下儲存。
 
-## 配置PDFG网络打印机设置 {#configure-the-pdfg-network-printer-settings}
+## 設定PDFG網路印表機設定 {#configure-the-pdfg-network-printer-settings}
 
-1. 在管理控制台中，单击“服务”>“PDF生成器”>“PDFG网络打印机”
-1. 在Adobe PDF设置和安全设置列表中，选择要应用于所生成PDF的选项。 有关这些设置的详细信息，请参阅 [配置Adobe PDF设置](/help/forms/using/admin-help/configuring-pdf-settings.md#configuring-adobe-pdf-settings) 和 [配置安全设置](/help/forms/using/admin-help/configuring-security-settings.md#configuring-security-settings).
-1. 要将转换后的PDF发送回用户，请选择通过电子邮件将转换后的PDF文件发送回用户选项，并指定以下信息：
+1. 在管理主控台中，按一下「服務>PDF產生器> PDFG網路印表機」
+1. 在Adobe PDF設定和安全性設定清單中，選取要套用至所產生PDF的選項。 如需這些設定的詳細資訊，請參閱 [設定Adobe PDF設定](/help/forms/using/admin-help/configuring-pdf-settings.md#configuring-adobe-pdf-settings) 和 [正在設定安全性設定](/help/forms/using/admin-help/configuring-security-settings.md#configuring-security-settings).
+1. 若要將轉換後的PDF傳回給使用者，請選取Email The ConvertedPDF檔案傳回給使用者選項，並指定下列資訊：
 
-   * 用于向用户发送PDF的电子邮件地址
-   * 电子邮件的主题
-   * 电子邮件的页眉、正文和页脚。 在电子邮件中， &lt;receivername> 替换为打印文档的用户的全名。
+   * 用於傳送PDF給使用者的電子郵件地址
+   * 電子郵件訊息的主旨
+   * 電子郵件訊息的頁首、內文和頁尾。 在電子郵件訊息中， &lt;receivername> 會取代為列印檔案之使用者的全名。
 
-1. 要将转换后的PDF发送到AEM表单服务或流程，请选择将转换后的PDF转发到指定的AEM表单服务或流程选项，并指定以下信息：
+1. 若要將轉換的PDF傳送至AEM表單服務或程式，請選取將轉換的PDF轉寄至指定的AEM表單服務或程式選項，並指定下列資訊：
 
-   * 要调用的服务的名称
-   * 要调用的服务的操作名称
-   * 输入参数的名称，在服务或进程的component.xml文件中指定。 PDF文档将用作该输入参数的值。
+   * 要叫用的服務名稱
+   * 要叫用的服務操作名稱
+   * 輸入引數的名稱，如服務或程式的component.xml檔案中所指定。 PDF檔案將用作該輸入引數的值。
 
 1. 单击“保存”。
 
-如果要还原为原始的默认电子邮件文本，请单击“还原电子邮件内容”。
+如果要還原成原始的預設電子郵件文字，請按一下[還原電子郵件內容]。
 
-## 在用户计算机上安装PDFG网络打印机 {#install-pdfg-network-printer-on-a-user-s-computer}
+## 在使用者的電腦上安裝PDFG網路印表機 {#install-pdfg-network-printer-on-a-user-s-computer}
 
-具有PDFG管理员或PDFG用户角色的用户可以安装PDFG网络打印机。 计算机上必须安装了32位JDK。
+具有PDFG管理員或PDFG使用者角色的使用者可以安裝PDFG網路印表機。 電腦上必須安裝32位元JDK。
 
-1. （PDFG管理员）在管理控制台中，单击“服务”>“PDF生成器”>“PDFG网络打印机”。
+1. （PDFG管理員）在管理主控台中，按一下「服務>PDF產生器> PDFG網路印表機」。
 
-   （PDFG用户）转到 `http(s)://[host]:'port'/pdfgui` ，然后单击“PDFG Network Printer Installation（PDFG网络打印机安装）”下的链接。
+   （PDFG使用者）前往 `http(s)://[host]:'port'/pdfgui` 並按一下「PDFG網路印表機安裝」下的連結。
 
-1. 在“PDFG Network Printer Installation（PDFG网络打印机安装）”下，单击链接。 提示输入用户帐户信息时，请指定您在步骤1中用于登录的用户名和密码。 出现一条消息，说明打印机已成功安装。
+1. 在「PDFG網路印表機安裝」下，按一下連結。 提示輸入使用者帳戶資訊時，請指定您在步驟1用來登入的使用者名稱和密碼。 出現一則訊息，說明印表機已成功安裝。
 
-   ***注释&#x200B;**：如果用户密码更改，则用户需要在其计算机上重新安装PDFG网络打印机。 无法从管理控制台更新密码。*
+   ***注意&#x200B;**：如果使用者密碼變更，使用者必須在電腦上重新安裝PDFG網路印表機。 您無法從管理控制檯更新密碼。*
 
 1. 单击确定。

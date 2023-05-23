@@ -1,7 +1,7 @@
 ---
-title: 延迟内容迁移
+title: 延遲內容移轉
 seo-title: Lazy Content Migration
-description: 了解AEM 6.4中的延迟内容迁移。
+description: 瞭解AEM 6.4中的延遲內容移轉。
 seo-description: Learn about Lazy Content Migration in AEM 6.4.
 uuid: f5b0aa84-5638-4708-9da2-89964d394632
 contentOwner: sarchiz
@@ -19,47 +19,47 @@ ht-degree: 6%
 
 ---
 
-# 延迟内容迁移 {#lazy-content-migration}
+# 延遲內容移轉 {#lazy-content-migration}
 
-为了向后兼容，中的内容和配置 **/etc** 和 **/content** 从AEM 6.3开始，升级后不会立即进行接触或转换。 这样做是为了确保客户应用程序对这些结构的依赖关系保持不变。 即使开箱即用的AEM 6.5中的内容将托管在另一个位置，与这些内容结构相关的功能仍然相同。
+為了回溯相容性，中的內容和設定 **/etc** 和 **/content** 從AEM 6.3開始，升級後不會立即觸及或轉換。 這麼做是為了確保客戶應用程式對這些結構的相依性保持不變。 即使現成可用的AEM 6.5中的內容會託管在其他位置，與這些內容結構相關的功能仍相同。
 
-虽然并非所有这些地点都可自动转换，但有一些位置是延迟的 `CodeUpgradeTasks` 也称为延迟内容迁移。 这允许客户通过使用此系统属性重新启动实例来触发这些自动转换：
+雖然並非所有這些位置都可自動轉換，但有一些延遲 `CodeUpgradeTasks` 也稱為「延遲內容移轉」。 這可讓客戶透過使用此系統屬性重新啟動執行個體，以觸發這些自動轉換：
 
 ```shell
 -Dcom.adobe.upgrade.forcemigration=true
 ```
 
-这将导致 `CodeUpgradeTasks` 将在迁移期间执行。
+這將導致 `CodeUpgradeTasks` 將在移轉期間執行。
 
-虽然目标是高效执行，但此升级过程是同步的，因此会根据需要处理的内容量而产生停机。 建议在生产系统之前评估暂存环境中的执行时间，以计划相应的维护窗口。
+雖然目標是有效率地執行，但此升級程式是同步的，因此會根據需要處理的內容量而產生停機。 建議在生產系統之前評估中繼環境中的執行時間，以計畫相應的維護時段。
 
-由于这通常还需要调整应用程序，此活动应该与相应的应用程序部署一起执行。
+由於這通常也需要調整應用程式，此活動應該與對應的應用程式部署一起執行。
 
-以下是以下内容的完整列表 `CodeUpgradeTasks` 在6.5中引入：
+以下為完整清單 `CodeUpgradeTasks` 6.5引入：
 
-| **名称** | **相关** **对于以下版本之前的AEM** | **迁移** **类型** | **详细信息** |
+| **名称** | **相關** **適用於以下版本之前的AEM** | **移轉** **型別** | **详细信息** |
 |---|---|---|---|
 | `Cq561ProjectContentUpgrade` | &lt; 5.6.1 | 即时 |  |
-| `Cq60MSMContentUpgrade` | &lt; 6.0 | 即时 | 全部检测 `LiveRelationShips` 起始日期 `VersionStorage` ，并将排除属性添加到父级 |
-| `Cq61CloudServicesContentUpgrade` | &lt; 6.1 | 即时 | 根据默认设置重新构建cloudservices以提供安全 |
-| `Cq62ConfContentUpgrade` | &lt; 6.2 | 即时 | 从删除基于属性的链接 **/content** 到 **/conf** （替换为OSGi机制），生成相应的OSGi配置 |
-| `Cq62FormsContentUpgrade` | &lt; 6.2 | 即时 | 由于merge_preserve处理默认的安全拒绝规则会覆盖给定的权限，因此需要在升级时重新排序 |
-| `CQ62Html5SmartFileUpgrade` | &lt; 6.2 | 即时 | 利用Html5SmartFile小组件检测组件，在内容中搜索组件的使用情况并重新构建持久性，有效地将二进制文件下移一层，而不是将其存储在组件级别。 |
-| `Cq62ProjectsCodeUpgrade` | &lt; 6.2 | 即时 | 移动旧样式项目 **/etc/projects** 到 **/content/projects** |
-| `Cq62TargetCampaignsContentUpgrade` | &lt; 6.2 | 即时 | 将容器图层引入层级（区域）并调整引用。 |
-| `Cq62TargetContentUpgrade` | &lt; 6.2 | 即时 | 将固定位置名称设置为目标组件。 |
-| `Cq62WorkflowContentUpgrade` | &lt; 6.2 | 即时 | 先于6.2结构、实例、通知，然后从备份位置合并回的工作流模型的复杂转换 **/var/backup** |
-| `CQ63AssetsMetadataFormsUpdate` | &lt; 6.3 | 即时 | 从以下位置移动资产、自定义元数据架构和处理配置文件 **/apps** 到 **/conf** 和将元数据架构和元数据配置文件表单从coral2转换为coral3。 |
-| `CQ63AssetsSearchFacetsUpdate` | &lt; 6.3 | 即时 | 将资源和自定义搜索Facet从 **/apps** 到 **/conf** 和将元数据架构和元数据配置文件表单从coral2转换为coral3。 |
-| `CQ63InboxItemsUpgrade` | &lt; 6.3 | 即时 | 更新收件箱项目以排序收件箱项目（调整元数据以实现高效排序） |
-| `CQ63MetadataSchemaConfigUpdate` | &lt; 6.3 | 即时 | 通过将相对路径替换为，调整文件夹上的metadataSchema属性 **/conf** 取代 **/apps** |
-| `CQ63MobileAppsNavUpgrade` | &lt; 6.3 | 即时 | 调整导航结构 |
-| `CQ63MonitoringDashboardsConfigUpdate` | &lt; 6.3 | 即时 | 将监视仪表板的自定义配置从 **/libs** 和 **/apps** |
-| `CQ63ProcessingProfileConfigUpdate` | &lt; 6.3 | 即时 | 翻译Assets中的processingProfile属性（直到6.1使用）以匹配6.3及更高版本结构。 还可以将配置文件的相对路径调整为 **/conf** 取代 **/apps**. |
-| `CQ63ToolsMenuEntriesContentUpgrade` | &lt; 6.3 | 即时 | 升级任务，用于在升级时删除过时的CRXDE Lite和Web控制台菜单项。 |
-| `CQ64CommunitiesConfigsCleanupTask` | &lt; 6.3 | 延迟 | 移动SRP云配置、社区标语配置、清理 **/etc/social** 和 **/etc/enablement** （运行延迟迁移时需要调整任何引用和数据 — 任何应用程序部分都不应再依赖于此结构）。 |
-| `CQ64LegacyCloudSettingsCleanupTask` | &lt; 6.4 | 延迟 | 清理 **/etc/cloudsettings** （包含ContextHub配置） 首次访问时自动迁移配置。 如果开始延迟内容迁移时同时升级此内容，请 **/etc/cloudsettings** 必须在升级之前通过包进行保留并重新安装，以便隐式转换生效，并且在完成后后续卸载包。 |
-| `CQ64UsersTitleFixTask` | &lt; 6.4 | 延迟 | 将旧版标题结构调整为用户配置文件节点中的标题。 |
-| `CQ64CommerceMigrationTask` | &lt; 6.4 | 延迟 | 从以下位置迁移商务内容 **/etc/commerce** 到 **/var/commerce**. 在迁移期间，将移动内容并更新对已移动内容的引用，以反映新位置。 |
-| `CQ65DMMigrationTask` | &lt; 6.5 | 延迟 | 从迁移旧版目录设置和Dynamic MediaCloud Services设置 **/etc** 到 **/conf** |
-| `CQ65LegacyClientlibsCleanupTask` | &lt; 6.5 | 延迟 | 清理下存在的旧版clientlibs **/etc/clientlibs** |
+| `Cq60MSMContentUpgrade` | &lt; 6.0 | 即时 | 偵測全部 `LiveRelationShips` 從 `VersionStorage` 已刪除，並將排除屬性新增至父項 |
+| `Cq61CloudServicesContentUpgrade` | &lt; 6.1 | 即时 | 根據預設設定，重新建構cloudservices以提供安全性 |
+| `Cq62ConfContentUpgrade` | &lt; 6.2 | 即时 | 從移除屬性型連結 **/content** 至 **/conf** （由OSGi機製取代），產生對應的OSGi設定 |
+| `Cq62FormsContentUpgrade` | &lt; 6.2 | 即时 | 由於merge_preserve處理安全（預設）拒絕規則會覆寫指定的許可權，導致升級時需要重新排序 |
+| `CQ62Html5SmartFileUpgrade` | &lt; 6.2 | 即时 | 利用Html5SmartFile Widget偵測元件、搜尋元件在內容中的使用情況並重新建構持續性、有效地將二進位檔案下移一層，而不是儲存在元件層級。 |
+| `Cq62ProjectsCodeUpgrade` | &lt; 6.2 | 即时 | 移動舊樣式專案 **/etc/projects** 至 **/content/projects** |
+| `Cq62TargetCampaignsContentUpgrade` | &lt; 6.2 | 即时 | 將容器圖層引入階層（「區域」）並調整參照。 |
+| `Cq62TargetContentUpgrade` | &lt; 6.2 | 即时 | 設定目標元件的固定位置名稱。 |
+| `Cq62WorkflowContentUpgrade` | &lt; 6.2 | 即时 | 工作流程模型的複雜轉換可追溯至6.2結構、例項、通知，然後從備份位置合併回來 **/var/backup** |
+| `CQ63AssetsMetadataFormsUpdate` | &lt; 6.3 | 即时 | 從以下位置移動資產、自訂中繼資料結構描述和處理設定檔： **/apps** 至 **/conf** 和會將中繼資料結構描述和中繼資料設定檔表單從coral2轉譯為coral3。 |
+| `CQ63AssetsSearchFacetsUpdate` | &lt; 6.3 | 即时 | 將資產和自訂搜尋Facet從 **/apps** 至 **/conf** 和會將中繼資料結構描述和中繼資料設定檔表單從coral2轉譯為coral3。 |
+| `CQ63InboxItemsUpgrade` | &lt; 6.3 | 即时 | 更新InboxItems以排序收件匣專案（調整中繼資料以有效排序） |
+| `CQ63MetadataSchemaConfigUpdate` | &lt; 6.3 | 即时 | 將相對路徑取代為以調整資料夾的metadataSchema屬性 **/conf** 取代 **/apps** |
+| `CQ63MobileAppsNavUpgrade` | &lt; 6.3 | 即时 | 調整導覽結構 |
+| `CQ63MonitoringDashboardsConfigUpdate` | &lt; 6.3 | 即时 | 移動監控儀表板的自訂設定 **/libs** 和 **/apps** |
+| `CQ63ProcessingProfileConfigUpdate` | &lt; 6.3 | 即时 | 轉譯Assets中的processingProfile屬性（直到6.1使用），以符合6.3和更新版本結構。 也會將設定檔的相對路徑調整為 **/conf** 取代 **/apps**. |
+| `CQ63ToolsMenuEntriesContentUpgrade` | &lt; 6.3 | 即时 | 升級工作，移除升級時過時的CRXDE Lite和Web主控台功能表專案。 |
+| `CQ64CommunitiesConfigsCleanupTask` | &lt; 6.3 | 已延遲 | 移動SRP雲端設定、社群標語設定、清除 **/etc/social** 和 **/etc/enablement** （執行延遲移轉時，需要調整任何參考資料和資料 — 應用程式部分不應再依賴此結構）。 |
+| `CQ64LegacyCloudSettingsCleanupTask` | &lt; 6.4 | 已延遲 | 清除 **/etc/cloudsettings** （包含ContextHub設定）。 首次存取時自動移轉設定。 萬一延遲內容移轉已開始，同時將此內容升級至 **/etc/cloudsettings** 必須在升級前透過套件保留，並重新安裝才能開始隱含轉換，以及完成後後續解除安裝套件。 |
+| `CQ64UsersTitleFixTask` | &lt; 6.4 | 已延遲 | 將舊版標題結構調整為使用者設定檔節點中的標題。 |
+| `CQ64CommerceMigrationTask` | &lt; 6.4 | 已延遲 | 從移轉商務內容 **/etc/commerce** 至 **/var/commerce**. 在移轉期間，會移動內容並更新對已移動內容的引用，以反映新位置。 |
+| `CQ65DMMigrationTask` | &lt; 6.5 | 已延遲 | 從移轉舊版目錄設定和Dynamic MediaCloud Services設定 **/etc** 至 **/conf** |
+| `CQ65LegacyClientlibsCleanupTask` | &lt; 6.5 | 已延遲 | 清理下存在的舊版clientlibs **/etc/clientlibs** |

@@ -1,7 +1,7 @@
 ---
-title: 使用表单数据模型
+title: 使用表單資料模型
 seo-title: Work with form data model
-description: 数据集成提供了表单数据模型编辑器，以配置和使用表单数据模型。
+description: 資料整合提供表單資料模型編輯器，可設定和使用表單資料模型。
 seo-description: Data Integration provides form data model editor to configure and work with form data models.
 uuid: ed78f7f7-8123-4778-9252-89924cec09d6
 topic-tags: integration
@@ -17,199 +17,199 @@ ht-degree: 0%
 
 ---
 
-# 使用表单数据模型{#work-with-form-data-model}
+# 使用表單資料模型{#work-with-form-data-model}
 
-![数据集成](do-not-localize/data-integeration.png)
+![資料整合](do-not-localize/data-integeration.png)
 
-表单数据模型编辑器提供了直观的用户界面和用于编辑和配置表单数据模型的工具。 使用该编辑器，您可以从表单数据模型中的关联数据源添加和配置数据模型对象、属性和服务。 此外，它还允许您在不使用数据源的情况下创建数据模型对象和属性，并在以后将它们与相应的数据模型对象和属性绑定。 您还可以生成和编辑数据模型对象属性的示例数据，在预览时使用这些数据模型对象属性预填充自适应表单和交互式通信。 您可以测试在表单数据模型中配置的数据模型对象和服务，以确保其与数据源正确集成。
+表單資料模型編輯器提供直覺式使用者介面和工具，用於編輯和設定表單資料模型。 使用編輯器，您可以從表單資料模型中的相關資料來源新增及設定資料模型物件、屬性和服務。 此外，它可讓您在不使用資料來源的情況下建立資料模型物件和屬性，並在稍後將它們與各自的資料模型物件和屬性繫結。 您也可以產生和編輯資料模型物件屬性的範例資料，以便在預覽時用來預先填入最適化表單和互動式通訊。 您可以測試表單資料模型中設定的資料模型物件和服務，以確保其與資料來源正確整合。
 
-如果您是初次使用Forms数据集成，并且尚未配置数据源或创建表单数据模型，请参阅以下主题：
+如果您是初次使用Forms資料整合，但尚未設定資料來源或建立表單資料模型，請參閱下列主題：
 
-* [AEM Forms数据集成](/help/forms/using/data-integration.md)
+* [AEM Forms資料整合](/help/forms/using/data-integration.md)
 * [配置数据源](/help/forms/using/configure-data-sources.md)
-* [创建表单数据模型](/help/forms/using/create-form-data-models.md)
+* [建立表單資料模型](/help/forms/using/create-form-data-models.md)
 
-有关您可以使用表单数据模型编辑器执行的各种任务和配置的详细信息，请参阅。
+請閱讀下文，瞭解您可以使用表單資料模型編輯器執行的各種任務和設定的詳細資訊。
 
 >[!NOTE]
 >
->您必须同时是这两个角色的成员 **fdm-author** 和 **forms-user** 组才能创建和使用表单数据模型。 请联系您的AEM管理员以成为组的成员。
+>您必須同時為兩者 **fdm-author** 和 **forms-user** 群組，以便能夠建立和使用表單資料模型。 請聯絡您的AEM管理員，以成為群組的成員。
 
-## 添加数据模型对象和服务 {#add-data-model-objects-and-services}
+## 新增資料模型物件和服務 {#add-data-model-objects-and-services}
 
-如果您使用数据源创建了表单数据模型，则可以使用表单数据模型编辑器来添加数据模型对象和服务、配置其属性、在数据模型对象之间构建关联以及测试表单数据模型和服务。
+如果您使用資料來源建立表單資料模型，您可以使用表單資料模型編輯器來新增資料模型物件和服務、設定其屬性、建立資料模型物件之間的關聯，以及測試表單資料模型和服務。
 
-您可以在表单数据模型中从可用数据源添加数据模型对象和服务。 当添加的数据模型对象显示在“模型”选项卡中时，添加的服务显示在“服务”选项卡中。
+您可以從表單資料模型中的可用資料來源新增資料模型物件和服務。 當新增的資料模型物件出現在「模型」標籤中時，新增的服務出現在「服務」標籤中。
 
-要添加数据模型对象和服务，请执行以下操作：
+若要新增資料模型物件與服務：
 
-1. 登录AEM创作实例，导航到 **[!UICONTROL Forms >数据集成]**，然后打开要向其中添加数据模型对象的表单数据模型。
-1. 在数据源窗格中，展开数据源以查看可用的数据模型对象和服务。
-1. 选择要添加到表单数据模型的数据模型对象和服务，然后点击 **[!UICONTROL 添加选定项]**.
+1. 登入AEM作者執行個體，導覽至 **[!UICONTROL Forms >資料整合]**，然後開啟您要新增資料模型物件的表單資料模型。
+1. 在「資料來源」窗格中，展開資料來源以檢視可用的資料模型物件和服務。
+1. 選取您要新增至表單資料模型的資料模型物件和服務，然後點選 **[!UICONTROL 新增選取專案]**.
 
-   ![选定对象](assets/selected-objects.png)
+   ![選取的物件](assets/selected-objects.png)
 
-   选定的数据模型对象和服务
+   選取的資料模型物件與服務
 
    >[!NOTE]
    >
-   > 如果Forms数据模型包含对象，而该对象是关系数据库的保留关键字，则可能会导致数据添加、更新或检索问题。 因此，请避免在表单数据模型中使用此类对象。
+   > 如果您的Forms資料模型包含物件，而該物件是關聯式資料庫的保留關鍵字，則可能會導致資料新增、更新或擷取問題。 因此，請避免在表單資料模型中使用這類物件。
 
-   “模型”选项卡以图形形式显示添加到表单数据模型中的所有数据模型对象及其属性。 每个数据模型对象由表单数据模型中的框表示。
+   「模型」標籤以圖形呈現所有資料模型物件及其新增至表單資料模型的屬性。 每個資料模型物件都由表單資料模型中的方塊表示。
 
    ![model-tab](assets/model-tab.png)
 
-   模型选项卡显示添加的数据模型对象
+   「模型」標籤顯示新增的資料模型物件
 
    >[!NOTE]
    >
-   >您可以按住并拖动数据模型对象框，以便在内容区域中组织它们。 在表单数据模型中添加的所有数据模型对象在“数据源”窗格中均显示为灰色。
+   >您可以按住並拖曳資料模型物件方塊，將其組織到內容區域中。 新增至表單資料模型的所有資料模型物件在「資料來源」窗格中會呈現灰色。
 
-   “服务”选项卡列出了已添加的服务。
+   「服務」標籤會列出新增的服務。
 
-   ![“服务”选项卡](assets/services-tab.png)
+   ![services-tab](assets/services-tab.png)
 
-   “服务”选项卡显示数据模型服务
-
-   >[!NOTE]
-   >
-   >除了数据模型对象和服务之外，OData服务元数据文档还包括定义两个数据模型对象之间的关联的导航属性。 有关更多信息，请参阅 [使用OData服务的导航属性](#work-with-navigation-properties-of-odata-services).
-
-1. 点按 **[!UICONTROL 保存]** 以保存表单模型对象。
+   「服務」標籤顯示資料模型服務
 
    >[!NOTE]
    >
-   >您可以使用自适应表单规则调用在表单数据模型的服务选项卡中配置的服务。 配置的服务在规则编辑器的Invoke Services操作中可用。有关在自适应表单规则中使用这些服务的更多信息，请参阅调用服务和设置规则值，位置如下： [规则编辑器](/help/forms/using/rule-editor.md).
+   >除了資料模型物件和服務之外，OData服務中繼資料檔案還包括定義兩個資料模型物件之間關聯的導覽屬性。 如需詳細資訊，請參閱 [使用OData服務的導覽屬性](#work-with-navigation-properties-of-odata-services).
 
-## 创建数据模型对象和子属性 {#create-data-model-objects-and-child-properties}
+1. 點選 **[!UICONTROL 儲存]** 以儲存表單模型物件。
 
-### 创建数据模型对象 {#create-data-model-objects}
+   >[!NOTE]
+   >
+   >您可以使用最適化表單規則，叫用您在表單資料模型的「服務」標籤中設定的服務。 設定的服務可在規則編輯器的「叫用服務」動作中使用。如需在調適型表單規則中使用這些服務的詳細資訊，請參閱叫用服務並設定規則的值，位置如下： [規則編輯器](/help/forms/using/rule-editor.md).
 
-虽然可以从配置的数据源添加数据模型对象，但也可以创建没有数据源的数据模型对象或实体。 这很有用，尤其是当您尚未在表单数据模型中配置数据源时。
+## 建立資料模型物件和子屬性 {#create-data-model-objects-and-child-properties}
 
-要创建没有数据源的数据模型对象，请执行以下操作：
+### 建立資料模型物件 {#create-data-model-objects}
 
-1. 登录AEM创作实例，导航到 **[!UICONTROL Forms >数据集成]**，并打开要在其中创建数据模型对象或实体的表单数据模型。
-1. 点按 **[!UICONTROL 创建实体]**.
-1. 在创建数据模型对话框中，指定数据模型对象的名称，然后点按 **[!UICONTROL 添加]**. 数据模型对象被添加到表单数据模型。 请注意，新添加的数据模型对象未绑定到数据源，并且不具有下图中所示的任何属性。
+雖然您可以從已設定的資料來源新增資料模型物件，也可以建立沒有資料來源的資料模型物件或實體。 這很有幫助，尤其是如果您尚未在表單資料模型中設定資料來源。
+
+若要建立不含資料來源的資料模型物件：
+
+1. 登入AEM作者執行個體，導覽至 **[!UICONTROL Forms >資料整合]**，然後開啟您要建立資料模型物件或實體的表單資料模型。
+1. 點選 **[!UICONTROL 建立實體]**.
+1. 在「建立資料模型」對話方塊中，指定資料模型物件的名稱，然後點選 **[!UICONTROL 新增]**. 資料模型物件會新增至表單資料模型。 請注意，新加入的資料模型物件並未繫結至資料來源，且沒有任何屬性，如下圖所示。
 
    ![new-entity](assets/new-entity.png)
 
-接下来，您可以在未绑定数据模型对象中添加子属性。
+接下來，您可以在未繫結的資料模型物件中新增子屬性。
 
-### 添加子属性 {#child-properties}
+### 新增子屬性 {#child-properties}
 
-表单数据模型编辑器允许您在数据模型对象中创建子属性。 创建时的属性未绑定到数据源中的任何属性。 您稍后可以将子属性与包含数据模型对象中的另一个属性绑定。
+表單資料模型編輯器可讓您在資料模型物件中建立子屬性。 建立時的屬性未繫結至資料來源中的任何屬性。 您稍後可以將子屬性與包含資料模型物件中的另一個屬性繫結。
 
-要创建子资产，请执行以下操作：
+若要建立子屬性：
 
-1. 在表单数据模型中，选择数据模型对象并点按 **[!UICONTROL 创建子属性]**.
-1. 在 **[!UICONTROL 创建子属性]** 对话框中，为属性指定名称和数据类型 **[!UICONTROL 名称]** 和 **[!UICONTROL 类型]** 字段。 您可以选择为属性指定标题和描述。
-1. 如果属性是计算属性，则启用Computed 。 计算属性的值是根据规则或表达式计算的。 有关更多信息，请参阅 [编辑属性](#edit-properties).
-1. 如果数据模型对象绑定到数据源，则添加的子属性将自动绑定到具有相同名称和数据类型的父数据模型对象的属性。
+1. 在表單資料模型中，選取資料模型物件並點選 **[!UICONTROL 建立子屬性]**.
+1. 在 **[!UICONTROL 建立子屬性]** 對話方塊中，為屬性指定名稱和資料型別 **[!UICONTROL 名稱]** 和 **[!UICONTROL 型別]** 欄位。 您可以選擇指定屬性的標題和說明。
+1. 如果屬性是計算屬性，則啟用Computed 。 計算屬性的值是根據規則或運算式來評估。 如需詳細資訊，請參閱 [編輯屬性](#edit-properties).
+1. 如果資料模型物件繫結至資料來源，則新增的子屬性會自動繫結至具有相同名稱和資料型別的父資料模型物件的屬性。
 
-   要手动绑定子属性与数据模型对象属性，请点按 **[!UICONTROL 绑定引用]** 字段。 此 **[!UICONTROL 选择对象]** 对话框列出父数据模型对象的所有属性。 选择要绑定的属性，然后点按勾号图标。 请注意，您只能选择与子资产具有相同数据类型的资产。
+   若要手動繫結子屬性與資料模型物件屬性，請點選「 」旁的瀏覽圖示 **[!UICONTROL 繫結參考]** 欄位。 此 **[!UICONTROL 選取物件]** 對話方塊會列出父資料模型物件的所有屬性。 選取要繫結的屬性，然後點選勾號圖示。 請注意，您只能選取與子屬性具有相同資料型別的屬性。
 
-1. 点按 **[!UICONTROL 完成]** 要保存子资产并点按 **[!UICONTROL 保存]** 以保存表单数据模型。 子属性现在添加到数据模型对象中。
+1. 點選 **[!UICONTROL 完成]** 儲存子屬性並點選 **[!UICONTROL 儲存]** 以儲存表單資料模型…… 子屬性現在已新增至資料模型物件。
 
-创建数据模型对象和属性后，您可以继续基于表单数据模型创建自适应表单和交互式通信。 稍后，当您具有可用数据源并配置了数据源时，可以将表单数据模型与数据源绑定。 绑定将在关联的自适应表单和交互式通信中自动更新。 有关使用表单数据模型创建自适应表单和交互式通信的更多信息，请参阅 [使用表单数据模型](/help/forms/using/using-form-data-model.md).
+建立資料模型物件和屬性後，您可以繼續根據表單資料模型建立最適化表單和互動式通訊。 稍後，當您有可用的資料來源且已設定資料來源時，即可將表單資料模型與資料來源繫結。 繫結將會在相關的最適化表單和互動式通訊中自動更新。 如需使用表單資料模型建立最適化表單和互動式通訊的詳細資訊，請參閱 [使用表單資料模型](/help/forms/using/using-form-data-model.md).
 
-### 绑定数据模型对象和属性 {#bind-data-model-objects-and-properties}
+### 繫結資料模型物件和屬性 {#bind-data-model-objects-and-properties}
 
-当要与表单数据模型集成的数据源可用时，可将其添加到表单数据模型，如中所述 [更新数据源](/help/forms/using/create-form-data-models.md#update). 然后，执行以下操作以绑定未绑定的数据模型对象和属性：
+當您想要與表單資料模型整合的資料來源可用時，您可以將其新增至表單資料模型，如中所述 [更新資料來源](/help/forms/using/create-form-data-models.md#update). 然後，執行下列操作以繫結未繫結的資料模型物件和屬性：
 
-1. 在表单数据模型中，选择要与数据源绑定的未绑定数据源。
-1. 点按 **[!UICONTROL 编辑属性]**.
-1. 在 **[!UICONTROL 编辑属性]** 窗格，点按“ ”旁边的浏览图标 **[!UICONTROL 绑定]** 字段。 它会打开 **[!UICONTROL 选择对象]** 对话框，其中列出了在表单数据模型中添加的数据源。
+1. 在表單資料模型中，選取您要與資料來源繫結的未繫結資料來源。
+1. 點選 **[!UICONTROL 編輯屬性]**.
+1. 在 **[!UICONTROL 編輯屬性]** 窗格，點選「 」旁的「瀏覽」圖示 **[!UICONTROL 繫結]** 欄位。 它會開啟 **[!UICONTROL 選取物件]** 此對話方塊會列出新增至表單資料模型中的資料來源。
 
-   ![选择对象](assets/select-object.png)
+   ![select-object](assets/select-object.png)
 
-1. 展开数据源树并选择要绑定的数据模型对象，然后点按勾号图标。
-1. 点按 **[!UICONTROL 完成]** 以保存属性，然后点按 **[!UICONTROL 保存]** 以保存表单数据模型。 数据模型对象现在与数据源绑定。 请注意，数据模型对象不再标记为“未绑定”。
+1. 展開資料來源樹狀結構並選取要繫結的資料模型物件，然後點選勾號圖示。
+1. 點選 **[!UICONTROL 完成]** 以儲存屬性，然後點選 **[!UICONTROL 儲存]** 以儲存表單資料模型。 資料模型物件現在與資料來源繫結。 請注意，資料模型物件不再標籤為「未繫結」。
 
-   ![绑定模型对象](assets/bound-model-object.png)
+   ![bound-model-object](assets/bound-model-object.png)
 
-## 配置服务 {#configure-services}
+## 設定服務 {#configure-services}
 
-要读取和写入数据模型对象的数据，请执行以下操作来配置读取和写入服务：
+若要讀取和寫入資料模型物件的資料，請執行以下動作來設定讀取和寫入服務：
 
-1. 选中数据模型对象顶部的复选框以将其选中并点按 **[!UICONTROL 编辑属性]**.
+1. 選取資料模型物件頂端的核取方塊以選取並點選 **[!UICONTROL 編輯屬性]**.
 
    ![edit-properties](assets/edit-properties.png)
 
-   编辑属性以配置数据模型对象的读写服务
+   編輯屬性以設定資料模型物件的讀取和寫入服務
 
-   将打开“编辑属性”对话框。
+   「編輯屬性」對話方塊開啟。
 
    ![edit-properties-2](assets/edit-properties-2.png)
 
-   “编辑属性”对话框
+   編輯內容對話方塊
 
    >[!NOTE]
    >
-   >除了数据模型对象和服务之外，OData服务元数据文档还包括定义两个数据模型对象之间的关联的导航属性。 将OData服务数据源添加到表单数据模型时，表单数据模型中有一个服务可用于数据模型对象中的所有导航属性。 可以使用此服务读取相应数据模型对象的导航属性。
+   >除了資料模型物件和服務之外，OData服務中繼資料檔案還包括定義兩個資料模型物件之間關聯的導覽屬性。 當您將OData服務資料來源新增至表單資料模型時，表單資料模型中有一項服務可用於資料模型物件中的所有導覽屬性。 您可以使用此服務來讀取對應資料模型物件的導覽屬性。
    >
    >
-   >有关使用该服务的更多信息，请参阅 [使用OData服务的导航属性](#work-with-navigation-properties-of-odata-services).
+   >如需使用服務的詳細資訊，請參閱 [使用OData服務的導覽屬性](#work-with-navigation-properties-of-odata-services).
 
-1. 切换 **[!UICONTROL 顶级对象]** 以指定数据模型对象是否为顶层模型对象。
+1. 切換 **[!UICONTROL 頂層物件]** 指定資料模型物件是否為頂層模型物件。
 
-   在基于表单数据模型的自适应表单的内容浏览器中，可以在数据模型对象选项卡中使用在表单数据模型中配置的数据模型对象。 添加两个数据模型对象之间的关联时，与关联的数据模型对象嵌套在“数据模型对象”选项卡中关联的数据模型对象下。 如果嵌套数据模型是顶级对象，则它还将单独显示在“数据模型对象”选项卡中。 因此，您将看到它的两个条目，一个在嵌套层次结构内，另一个在嵌套层次结构外，这可能会使表单作者感到困惑。 要使关联的数据模型对象仅显示在嵌套层次结构中，请禁用“顶级对象”属性。
+   在表單資料模型中設定的資料模型物件可用於根據表單資料模型的最適化表單內容瀏覽器中的資料模型物件索引標籤。 當您新增兩個資料模型物件之間的關聯時，您與之關聯的資料模型物件會巢狀內嵌在從「資料模型物件」標籤中關聯的資料模型物件下。 如果巢狀資料模型是頂層物件，它也會單獨出現在「資料模型物件」標籤中。 因此，您會看到其中的兩個專案，一個在巢狀階層內，另一個在巢狀階層外，這可能會使表單作者感到困惑。 若要讓關聯的資料模型物件只出現在巢狀階層中，請停用「頂層物件」屬性。
 
-1. 为选定的数据模型对象选择读取和写入服务。 将显示服务的参数。
+1. 為選取的資料模型物件選取讀取和寫入服務。 會出現服務的引數。
 
-   ![读写服务](assets/read-write-services.png)
+   ![讀寫服務](assets/read-write-services.png)
 
-   为员工数据源配置的读写服务
+   為員工資料來源設定的讀寫服務
 
-1. 点按 ![aem_6_3_edit](assets/aem_6_3_edit.png) 将读取服务参数设置为 [将参数绑定到用户配置文件属性、请求属性或文本值](#bindargument) 和指定绑定值。
-1. 点按 **[!UICONTROL 完成]** 保存参数， **[!UICONTROL 完成]** 以保存属性，然后 **[!UICONTROL 保存]** 以保存表单数据模型。
+1. 點選 ![aem_6_3_edit](assets/aem_6_3_edit.png) 將讀取服務引數設為 [將引數繫結至使用者設定檔屬性、要求屬性或常值](#bindargument) 和指定繫結值。
+1. 點選 **[!UICONTROL 完成]** 若要儲存引數， **[!UICONTROL 完成]** 以儲存屬性，然後 **[!UICONTROL 儲存]** 以儲存表單資料模型。
 
-### 绑定读取服务参数 {#bindargument}
+### 繫結讀取服務引數 {#bindargument}
 
-根据绑定值，将读取服务参数绑定到用户配置文件属性、请求属性或文本值。 该值作为参数传递给服务，以从数据源获取与指定值关联的详细信息。
+根據繫結值，將讀取服務引數繫結到使用者設定檔屬性、要求屬性或常值值。 值會作為引數傳遞至服務，以從資料來源擷取與指定值相關聯的詳細資料。
 
-#### 文本值 {#literal-value}
+#### 常值 {#literal-value}
 
-选择 **[!UICONTROL 文本]** 从 **[!UICONTROL 捆绑到]** 下拉菜单，然后在 **[!UICONTROL 捆绑值]** 字段。 从数据源中检索与值关联的详细信息。 使用此选项可检索与静态值关联的详细信息。
+選取 **[!UICONTROL 常值]** 從 **[!UICONTROL 繫結至]** 下拉式功能表，並在 **[!UICONTROL 繫結值]** 欄位。 會從資料來源擷取與該值相關聯的詳細資料。 使用此選項可擷取與靜態值相關聯的詳細資訊。
 
-在此示例中，与关联的详细信息 **4367655678**，作为的值 `mobilenum` 参数)进行检索。 如果传递了手机号码参数的值，则关联的详细信息可以包括客户名称、客户地址和城市等属性。
+在此範例中，與 **4367655678**，作為 `mobilenum` 引數，從資料來源擷取。 如果您傳遞行動號碼引數的值，關聯的詳細資料可包含客戶名稱、客戶地址及城市等屬性。
 
-![文本值](assets/fdm_binding_literal_new.png)
+![常值](assets/fdm_binding_literal_new.png)
 
 #### 用户配置文件属性 {#user-profile-attribute}
 
-选择 **[!UICONTROL 用户配置文件属性]** 从 **[!UICONTROL 捆绑到]** 下拉菜单，然后在 **[!UICONTROL 捆绑值]** 字段。 根据属性名称从数据源检索登录到AEM实例的用户详细信息。
+選取 **[!UICONTROL 使用者設定檔屬性]** 從 **[!UICONTROL 繫結至]** 下拉式功能表，然後在 **[!UICONTROL 繫結值]** 欄位。 根據屬性名稱，會從資料來源擷取登入AEM執行處理的使用者詳細資訊。
 
-中指定的属性名称 **[!UICONTROL 捆绑值]** 字段必须包括完整的绑定路径，直到用户的属性名称为止。 打开以下URL以访问CRXDE上的用户详细信息：
+中指定的屬性名稱 **[!UICONTROL 繫結值]** 欄位必須包含完整的繫結路徑，直到使用者的屬性名稱為止。 開啟以下URL以存取CRXDE上的使用者詳細資訊：
 
 `https://[server-name]:[port]/crx/de/index.jsp#/home/users/`
 
 ![用户配置文件](assets/binding_crxde_user_profile_new.png)
 
-在此示例中，指定 `profile.empid` 在 **[!UICONTROL 捆绑值]** 的字段 `grios` 用户。
+在此範例中，指定 `profile.empid` 在 **[!UICONTROL 繫結值]** 的欄位 `grios` 使用者。
 
 ![编辑参数](assets/edit_argument_user_profile_new.png)
 
-此 `id` 参数采用 `empid` 用户配置文件的属性，并将其作为参数传递给读取服务。 它会从员工数据模型对象中读取并返回关联属性的值。 `empid` 与登录用户相关联。
+此 `id` 引數採用 `empid` 使用者設定檔的屬性，並將其作為引數傳遞至讀取服務。 它會從employee資料模型物件讀取並傳回相關屬性的值， `empid` 與登入使用者相關聯。
 
 #### 请求属性 {#request-attribute}
 
-使用请求属性从数据源检索关联的属性。
+使用request屬性從資料來源擷取關聯的屬性。
 
-1. 选择 **[!UICONTROL 请求属性]** 从 **[!UICONTROL 捆绑到]** 下拉菜单，然后在 **[!UICONTROL 捆绑值]** 字段。
+1. 選取 **[!UICONTROL 請求屬性]** 從 **[!UICONTROL 繫結至]** 下拉式功能表，然後在 **[!UICONTROL 繫結值]** 欄位。
 
-1. 创建 [叠加](../../../help/sites-developing/overlays.md) 用于head.jsp。 要创建叠加，请打开CRX DE并复制 `https://<server-name>:<port number>/crx/de/index.jsp#/libs/fd/af/components/page2/afStaticTemplatePage/head.jsp` 文件到 `https://<server-name>:<port number>/crx/de/index.jsp#/apps/fd/af/components/page2/afStaticTemplatePage/head.jsp`
+1. 建立 [覆蓋](../../../help/sites-developing/overlays.md) 用於head.jsp。 若要建立覆蓋，請開啟CRX DE並複製 `https://<server-name>:<port number>/crx/de/index.jsp#/libs/fd/af/components/page2/afStaticTemplatePage/head.jsp` 檔案至 `https://<server-name>:<port number>/crx/de/index.jsp#/apps/fd/af/components/page2/afStaticTemplatePage/head.jsp`
 
    >[!NOTE]
    >
-   >* 如果使用静态模板，请将head.jsp覆盖在：
+   >* 如果您使用靜態範本，請將head.jsp覆蓋在：
       >  `/libs/fd/af/components/page2/afStaticTemplatePage/head.jsp`
-   >* 如果您使用可编辑的模板，请在以下位置叠加aftemplatedpage.jsp：
+   >* 如果您使用可編輯的範本，請覆蓋aftemplatedpage.jsp：
       >  `/libs/fd/af/components/page2/aftemplatedpage/aftemplatedpage.jsp`
 
 
-1. 设置 [!DNL paramMap] 请求属性的。 例如，将以下代码包含在apps文件夹的.jsp文件中：
+1. 設定 [!DNL paramMap] 請求屬性的。 例如，將下列程式碼加入apps資料夾的.jsp檔案中：
 
    ```javascript
    <%Map paraMap = new HashMap();
@@ -217,7 +217,7 @@ ht-degree: 0%
     request.setAttribute("paramMap",paraMap);
    ```
 
-   例如，使用以下代码从数据源检索petid的值：
+   例如，使用以下程式碼從資料來源擷取petid值：
 
 
    ```javascript
@@ -226,120 +226,120 @@ ht-degree: 0%
    request.setAttribute("paramMap",paraMap);%>
    ```
 
-根据请求中指定的属性名称，从数据源检索详细信息。
+系統會根據請求中指定的屬性名稱，從資料來源擷取詳細資訊。
 
-例如，将属性指定为 `petid=100` 中的从数据源检索与属性值关联的属性。
+例如，將屬性指定為 `petid=100` 中的從資料來源擷取與屬性值相關的屬性。
 
-## 添加关联 {#add-associations}
+## 新增關聯 {#add-associations}
 
-通常，数据源中的数据模型对象之间会建立关联。 关联可以是一对一或一对多。 例如，可以有多个与员工关联的家属。 它称为一对多关联，由以下内容描述 `1:n` 在连接关联的数据模型对象的行上。 但是，如果关联为给定员工ID返回唯一的员工姓名，则称为一对一关联。
+通常，資料來源中的資料模型物件之間會建立關聯。 關聯可以是一對一或一對多。 例如，一個員工可以有多個相依關係。 它稱為一對多關聯，由以下描述： `1:n` 在連線相關資料模型物件的線上。 不過，如果關聯針對指定的員工ID傳回唯一員工名稱，則稱為一對一關聯。
 
-将数据源中的关联数据模型对象添加到表单数据模型时，其关联将保留并显示为用箭头线连接。 您可以在表单数据模型中跨不同数据源的数据模型对象之间添加关联。
+當您將資料來源中的關聯資料模型物件新增至表單資料模型時，它們的關聯會保留並顯示為以箭頭線連線。 您可以在表單資料模型中跨不同資料來源的資料模型物件之間新增關聯。
 
 >[!NOTE]
 >
->JDBC数据源中的预定义关联不会保留在表单数据模型中。 您必须手动创建它们。
+>JDBC資料來源中的預先定義關聯不會保留在表單資料模型中。 您必須手動建立。
 
-要添加关联，请执行以下操作：
+若要新增關聯，請執行下列動作：
 
-1. 选中数据模型对象顶部的复选框以将其选中并点按 **[!UICONTROL 添加关联]**. 将打开“添加关联”对话框。
+1. 選取資料模型物件頂端的核取方塊以選取並點選 **[!UICONTROL 新增關聯]**. 「新增關聯」對話方塊開啟。
 
    ![add-association](assets/add-association.png)
 
    >[!NOTE]
    >
-   >除了数据模型对象和服务之外，OData服务元数据文档还包括定义两个数据模型对象之间的关联的导航属性。 在表单数据模型中添加关联时，可以使用这些导航属性。 有关更多信息，请参阅 [使用OData服务的导航属性](#work-with-navigation-properties-of-odata-services).
+   >除了資料模型物件和服務之外，OData服務中繼資料檔案還包括定義兩個資料模型物件之間關聯的導覽屬性。 在表單資料模型中新增關聯時，可以使用這些導覽屬性。 如需詳細資訊，請參閱 [使用OData服務的導覽屬性](#work-with-navigation-properties-of-odata-services).
 
-   将打开“添加关联”对话框。
+   「新增關聯」對話方塊開啟。
 
    ![add-association-2](assets/add-association-2.png)
 
-   “添加关联”对话框
+   新增關聯對話方塊
 
-1. 在“添加关联”窗格中：
+1. 在「新增關聯」窗格中：
 
-   * 指定关联的标题。
-   * 选择关联类型 — “一对一”或“一对多”。
-   * 选择要关联的数据模型对象。
-   * 选择读取服务以从所选模型对象中读取数据。 此时将显示读取服务参数。 编辑以更改参数（如有必要），并将其绑定到要关联的数据模型对象的属性。
+   * 指定關聯的標題。
+   * 選取關聯型別 — 「一對一」或「一對多」。
+   * 選取要關聯的資料模型物件。
+   * 選取讀取服務，從選取的模型物件讀取資料。 讀取服務引數會出現。 編輯以變更引數（如有必要），並將其繫結至要關聯的資料模型物件的屬性。
 
-   在以下示例中， Dependents数据模型对象的读取服务的默认参数是 `dependentid`.
+   在以下範例中，「相依專案」資料模型物件的讀取服務預設引數為 `dependentid`.
 
    ![add-association-example](assets/add-association-example.png)
 
-   依赖项读取服务的默认参数是依赖的
+   依存專案讀取服務的預設引數為依存專案
 
-   但是，参数必须是关联数据模型对象之间的公共属性，在本例中为 `Employeeid`. 因此， `Employeeid` 参数必须绑定到 `id` Employee数据模型对象的属性，用于从Dependents数据模型对象获取关联的依赖项详细信息。
+   不過，引數必須是關聯資料模型物件之間的通用屬性，在此範例中為 `Employeeid`. 因此， `Employeeid` 引數必須繫結至 `id` Employee資料模型物件的屬性，以從Dependents資料模型物件擷取關聯的相依專案詳細資料。
 
    ![add-association-example-2](assets/add-association-example-2.png)
 
-   已更新参数和绑定
+   已更新引數和繫結
 
-   点按 **[!UICONTROL 完成]** 以保存参数。
+   點選 **[!UICONTROL 完成]** 以儲存引數。
 
-1. 点按 **[!UICONTROL 完成]** 保存关联，然后 **[!UICONTROL 保存]** 以保存表单数据模型。
-1. 根据需要重复这些步骤以创建更多关联。
+1. 點選 **[!UICONTROL 完成]** 以儲存關聯，然後 **[!UICONTROL 儲存]** 以儲存表單資料模型。
+1. 視需要重複這些步驟以建立更多關聯。
 
 >[!NOTE]
 >
->所添加的关联将显示在数据模型对象框中，其中包含指定的标题和连接关联的数据模型对象的线。
+>新增的關聯會顯示在資料模型物件方塊中，並帶有指定的標題和連線關聯資料模型物件的線。
 >
->您可以通过选中关联旁边的复选框并点按来编辑关联 **[!UICONTROL 编辑关联]**.
+>您可以選取關聯的核取方塊並點選，以編輯關聯 **[!UICONTROL 編輯關聯]**.
 
-![添加关联](assets/added-association.png)
+![added-association](assets/added-association.png)
 
 ## 编辑属性 {#properties}
 
-您可以编辑在表单数据模型中添加的数据模型对象的属性、其属性和服务。
+您可以編輯資料模型物件的屬性、其屬性，以及在表單資料模型中新增的服務。
 
-要编辑属性，请执行以下操作：
+若要編輯屬性：
 
-1. 选中表单数据模型中数据模型对象、属性或服务旁边的复选框。
-1. 点按 **[!UICONTROL 编辑属性]**. 此 **[!UICONTROL 编辑属性]** 此时将打开选定模型对象、属性或服务的窗格。
+1. 選取表單資料模型中資料模型物件、屬性或服務旁的核取方塊。
+1. 點選 **[!UICONTROL 編輯屬性]**. 此 **[!UICONTROL 編輯屬性]** 所選模型物件、屬性或服務的窗格開啟。
 
-   * **数据模型对象**：指定读取和写入服务以及编辑参数。
-   * **属性**：指定属性的类型、子类型和格式。 您还可以指定所选属性是否是数据模型对象的主键。
-   * **服务**：指定服务的输入模型对象、输出类型和参数。 对于Get服务，您可以指定它是否应返回数组。
+   * **資料模型物件**：指定讀取和寫入服務以及編輯引數。
+   * **屬性**：指定屬性的型別、子型別和格式。 您也可以指定選取的屬性是否為資料模型物件的主索引鍵。
+   * **服務**：指定服務的輸入模型物件、輸出型別和引數。 對於Get服務，您可以指定是否預期它會傳回陣列。
 
    ![edit-properties-service](assets/edit-properties-service.png)
 
-   获取服务的“编辑属性”对话框
+   取得服務的「編輯內容」對話方塊
 
-1. 点按 **[!UICONTROL 完成]** 以保存属性，然后 **[!UICONTROL 保存]** 以保存表单数据模型。
+1. 點選 **[!UICONTROL 完成]** 以儲存屬性，然後 **[!UICONTROL 儲存]** 以儲存表單資料模型。
 
-### 创建计算属性 {#computed}
+### 建立計算屬性 {#computed}
 
-计算属性是根据规则或表达式计算其值的属性。 使用规则，您可以将计算属性的值设置为文本字符串、数字、数学表达式的结果或表单数据模型中其他属性的值。
+計算屬性是根據規則或運算式計算其值的屬性。 您可以使用規則將計算屬性的值設定為常值字串、數字、數學運算式的結果或表單資料模型中其他屬性的值。
 
-例如，您可以创建一个计算属性 **全名** 其值是连接现有 **名字** 和 **姓氏** 属性。 为此，请执行以下操作：
+例如，您可以建立計算屬性 **全名** 其值是串連現有 **名字** 和 **姓氏** 屬性。 若要這麼做：
 
-1. 使用名称创建新属性 `FullName` 数据类型为字符串的数据。
-1. 启用 **[!UICONTROL 已计算]** 并点按 **[!UICONTROL 完成]** 以创建资产。
+1. 以名稱建立新屬性 `FullName` 其資料型別為String。
+1. 啟用 **[!UICONTROL 已計算]** 並點選 **[!UICONTROL 完成]** 以建立屬性。
 
-   ![已计算](assets/computed.png)
+   ![已計算](assets/computed.png)
 
-   将创建FullName计算属性。 请注意属性旁边的图标以描述计算属性。
+   隨即建立FullName運算屬性。 請注意屬性旁的圖示，以描繪計算屬性。
 
-   ![计算属性](assets/computed-prop.png)
+   ![computedprop](assets/computed-prop.png)
 
-1. 选择FullName属性并点按 **[!UICONTROL 编辑规则]**. 此时将打开一个规则编辑器窗口。
-1. 在规则编辑器窗口中，点按 **[!UICONTROL 创建]**. A **[!UICONTROL 设置值]** “规则”窗口将打开。
+1. 選取FullName屬性並點選 **[!UICONTROL 編輯規則]**. 規則編輯器視窗隨即開啟。
+1. 在規則編輯器視窗中，點選 **[!UICONTROL 建立]**. A **[!UICONTROL 設定值]** 規則視窗隨即開啟。
 
-   从选择选项下拉列表中，选择 **[!UICONTROL 数学表达式]**. 其他可用选项包括 **[!UICONTROL 表单数据模型对象]** 和 **[!UICONTROL 字符串]**.
+   從選取選項下拉式清單中選取 **[!UICONTROL 數學運算式]**. 其他可用選項包括 **[!UICONTROL 表單資料模型物件]** 和 **[!UICONTROL 字串]**.
 
-1. 在数学表达式中，选择 **[!UICONTROL 名字]** 和 **[!UICONTROL 姓氏]** 分别在第一和第二对象中。 选择 **[!UICONTROL 加]** 作为运算符。
+1. 在數學運算式中，選取 **[!UICONTROL 名字]** 和 **[!UICONTROL 姓氏]** 分別位於第一和第二物件中。 選取 **[!UICONTROL 加]** 作為運運算元。
 
-   点按 **[!UICONTROL 完成]** 然后点按 **[!UICONTROL 关闭]** 以关闭规则编辑器窗口。 该规则类似于以下内容。
+   點選 **[!UICONTROL 完成]** 然後點選 **[!UICONTROL 關閉]** 以關閉規則編輯器視窗。 規則看起來類似下列。
 
    ![规则](assets/rule.png)
 
-1. 在表单数据模型上，点按 **[!UICONTROL 保存]**. 已配置计算属性。
+1. 在表單資料模型上，點選 **[!UICONTROL 儲存]**. 已設定運算屬性。
 
-## 使用OData服务的导航属性 {#work-with-navigation-properties-of-odata-services}
+## 使用OData服務的導覽屬性 {#work-with-navigation-properties-of-odata-services}
 
-在OData服务中，导航属性用于定义两个数据模型对象之间的关联。 这些属性是在实体类型或复杂类型上定义的。 例如，在以下从示例的元数据文件中提取的内容中 [旅行固定](https://www.odata.org/blog/trippin-new-odata-v4-sample-service/) OData示例服务，人员实体包含三个导航属性 — Friends、BestFriend和Trips。
+在OData服務中，導覽屬性用於定義兩個資料模型物件之間的關聯。 這些屬性是在實體型別或複雜型別上定義的。 例如，在以下從範例的中繼資料檔案擷取中 [旅行夾](https://www.odata.org/blog/trippin-new-odata-v4-sample-service/) OData範例服務，個人實體包含三個導覽屬性 — Friends、BestFriend和Trips。
 
-有关导航属性的更多信息，请参阅 [OData文档](https://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part3-csdl/odata-v4.0-errata03-os-part3-csdl-complete.html#_Toc453752536).
+如需導覽屬性的詳細資訊，請參閱 [OData檔案](https://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part3-csdl/odata-v4.0-errata03-os-part3-csdl-complete.html#_Toc453752536).
 
 ```xml
 <edmx:Edmx xmlns:edmx="https://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
@@ -367,73 +367,73 @@ ht-degree: 0%
 </EntityType>
 ```
 
-在表单数据模型中配置OData服务时，实体容器中的所有导航属性都可通过表单数据模型中的服务使用。 在此示例TripPin OData服务中，三个导航属性 `Person` 实体容器可使用其中一个 `GET LINK` 表单数据模型中的服务。
+當您在表單資料模型中設定OData服務時，實體容器中的所有導覽屬性都可透過表單資料模型中的服務使用。 在此範例中，TripPin OData服務中 `Person` 實體容器可使用其中一種讀取 `GET LINK` 表單資料模型中的服務。
 
-以下内容重点介绍 `GET LINK of Person /People` 表单数据模型中的服务，它是三个导航属性的组合服务 `Person` TripPin OData服务的实体。
+下列專案會重點說明 `GET LINK of Person /People` 表單資料模型中的服務，此服務是三個導覽屬性的組合服務。 `Person` TripPin OData服務的實體。
 
 ![nav-prop-service](assets/nav-prop-service.png)
 
-一旦您添加 `GET LINK` 服务表单数据模型中的服务选项卡，您可以编辑属性以选择要在服务中使用的输出模型对象和导航属性。 例如，以下各项 `GET LINK of Person /People` 下例中的服务将行程用作输出模型对象，将定位属性用作行程。
+在新增 `GET LINK` 服務至「表單資料模型」中的「服務」標籤，您可以編輯屬性以選擇要在服務中使用的輸出模型物件和導覽屬性。 例如，下列專案 `GET LINK of Person /People` 下列範例中的服務會使用「運送航程」作為輸出模型物件，而瀏覽屬性則作為「運送航程」。
 
 ![edit-prop-nav-prop](assets/edit-prop-nav-prop.png)
 
 >[!NOTE]
 >
->中可用的值 **默认值** 字段 **导航属性名称** 参数取决于 **返回数组？** 切换按钮。 启用后，将显示“收藏集”类型的导航属性。
+>中可用的值 **預設值** 的欄位 **導覽屬性名稱** 引數取決於 **傳回陣列？** 切換按鈕。 啟用時，它會顯示集合型別的導覽屬性。
 
-在此示例中，您还可以选择输出模型对象作为Person，选择导航属性参数作为Friends或BestFriend(具体取决于是否 **返回数组？** 启用或禁用)。
+在此範例中，您也可以選擇輸出模型物件作為Person，選擇導覽屬性引數作為Friends或BestFriend (取決於是否 **傳回陣列？** 啟用或停用)。
 
 ![edit-prop-nav-prop2](assets/edit-prop-nav-prop2.png)
 
-同样，您也可以选择 `GET LINK` 在表单数据模型中添加关联时，服务并配置其导航属性。 但是，要能够选择导航属性，请确保 **[!UICONTROL 绑定到字段]** 设置为 **文本**.
+同樣地，您也可以選擇 `GET LINK` 在表單資料模型中新增關聯時，服務並設定其導覽屬性。 不過，若要能夠選取導覽屬性，請確定 **[!UICONTROL 繫結至欄位]** 設為 **常值**.
 
 ![add-association-nav-prop](assets/add-association-nav-prop.png)
 
-## 生成和编辑示例数据 {#sample}
+## 產生和編輯範例資料 {#sample}
 
-表单数据模型编辑器允许您为表单数据模型中的所有数据模型对象属性（包括计算属性）生成示例数据。 它是一组符合为每个属性配置的数据类型的随机值。 您还可以编辑和保存数据，即使重新生成示例数据，也会保留这些数据。
+表單資料模型編輯器可讓您為表單資料模型中的所有資料模型物件屬性（包括計算屬性）產生範例資料。 這是一組隨機值，符合為每個屬性設定的資料型別。 您也可以編輯並儲存資料，即使您重新產生範例資料，也會保留資料。
 
-执行以下操作可生成和编辑示例数据：
+執行下列操作以產生和編輯範例資料：
 
-1. 打开表单数据模型并点按 **[!UICONTROL 编辑示例数据]**. 它在“编辑样本数据”窗口中生成并显示样本数据。
+1. 開啟表單資料模型並點選 **[!UICONTROL 編輯範例資料]**. 它會在「編輯範例資料」視窗中產生並顯示範例資料。
 
-   ![生成示例数据](assets/form_data_model_generate_sample_data_new.png)
+   ![產生範例資料](assets/form_data_model_generate_sample_data_new.png)
 
-1. In **[!UICONTROL 编辑示例数据]** 窗口，根据需要编辑数据，然后点按 **[!UICONTROL 保存]**.
+1. 在 **[!UICONTROL 編輯範例資料]** 視窗，視需要編輯資料，然後點選 **[!UICONTROL 儲存]**.
 
-接下来，可使用示例数据预填充和测试基于表单数据模型的交互式通信。 有关更多信息，请参阅 [使用表单数据模型](/help/forms/using/using-form-data-model.md).
+接下來，您可以使用範例資料，根據表單資料模型預先填寫和測試互動式通訊。 如需詳細資訊，請參閱 [使用表單資料模型](/help/forms/using/using-form-data-model.md).
 
-## 测试数据模型对象和服务 {#test-data-model-objects-and-services}
+## 測試資料模型物件與服務 {#test-data-model-objects-and-services}
 
-您的表单数据模型已配置，但在将其投入使用之前，您可能需要测试配置的数据模型对象和服务是否按预期工作。 要测试数据模型对象和服务，请执行以下操作：
+您的表單資料模型已設定，但在投入使用前，您可能想要測試已設定的資料模型物件和服務是否如預期般運作。 若要測試資料模型物件與服務：
 
-1. 在表单数据模型中选择数据模型对象或服务，然后点按 **[!UICONTROL 测试模型对象]** 或 **[!UICONTROL 测试服务]**，则不会显示任何内容。
+1. 在表單資料模型中選取資料模型物件或服務，然後點選 **[!UICONTROL 測試模型物件]** 或 **[!UICONTROL 測試服務]**（分別）。
 
-   将打开“测试表单数据模型”窗口。
+   「測試表單資料模型」視窗隨即開啟。
 
    ![test-data-model](assets/test-data-model.png)
 
-1. 在“测试表单数据模型”窗口中，从输入窗格中选择要测试的数据模型对象或服务。
+1. 在「測試表單資料模型」視窗中，從「輸入」窗格選取要測試的資料模型物件或服務。
 
-1. 在测试代码中指定一个参数值，然后点按 **[!UICONTROL 测试]**. 成功的测试会在“输出”窗格中返回输出。
+1. 在測試程式碼中指定引數值，然後點選 **[!UICONTROL 測試]**. 成功的測試會傳回「輸出」窗格中的輸出。
 
-   ![测试结果](assets/test_results_form_data_model_new.png)
+   ![測試結果](assets/test_results_form_data_model_new.png)
 
-同样，您可以在表单数据模型中测试其他数据模型对象和服务。
+同樣地，您可以在表單資料模型中測試其他資料模型物件和服務。
 
-## 自动验证输入数据 {#automated-validation-of-input-data}
+## 自動驗證輸入資料 {#automated-validation-of-input-data}
 
-表单数据模型验证在调用DermisBridge API时接收作为输入的数据（基于表单数据模型中提供的验证条件）。 验证基于 `ValidationOptions` 在用于调用API的查询对象中设置标志。
+表單資料模型會在叫用DermisBridge API時（根據表單資料模型中提供的驗證條件）驗證作為輸入所收到的資料。 驗證是根據 `ValidationOptions` 在用來叫用API的查詢物件中設定的旗標。
 
-可以将标志设置为以下任意值：
+此旗標可設為下列任一值：
 
-* **完整**：FDM基于所有约束执行验证
-* **关闭**：无验证
-* **基本**：FDM根据“必需”和“可空”约束执行验证
+* **完整**：FDM會根據所有限制執行驗證
+* **關閉**：無驗證
+* **基本**：FDM會根據「必要」和「可為nullable」的限制來執行驗證
 
-如果没有为 `ValidationOptions`标志， **基本** 对输入数据执行验证。
+若未設定任何值 `ValidationOptions`標幟， **基本** 對輸入資料執行驗證。
 
-以下是将验证标志设置为 **完整**：
+以下範例說明如何設定驗證標幟為 **完整**：
 
 ```java
 operationOptions.setValidationOptions(ValidationOptions.FULL);
@@ -441,94 +441,94 @@ operationOptions.setValidationOptions(ValidationOptions.FULL);
 
 >[!NOTE]
 >
->为输入数据中的属性提供的值必须与为元数据文档中的属性定义的数据类型匹配。\
->如果值与为属性定义的数据类型不匹配，则DermisBridge API显示异常，而不管 `ValidationOptions` 标志。 如果日志级别设置为Debug ，则会将错误记录到 **error.log** 文件。
+>您在輸入資料中為屬性提供的值必須與在中繼資料檔案中為屬性定義的資料型別相符。\
+>如果值不符合為屬性定義的資料型別，DermisBridge API會顯示例外狀況，不論 `ValidationOptions` 標幟。 如果記錄層級設定為Debug，則會將錯誤記錄到 **error.log** 檔案。
 
-表单数据模型根据数据类型约束列表验证输入数据。 输入数据的约束列表可能会因数据源而异。
+表單資料模型會根據資料型別限制清單來驗證輸入資料。 輸入資料的限制清單可能會因資料來源而異。
 
-下表列出了基于数据源的输入数据的约束条件：
+下表根據資料來源列出輸入資料的限制：
 
 <table>
  <tbody> 
   <tr> 
    <td>约束</td> 
    <td>描述</td> 
-   <td>输入数据源</td> 
+   <td>輸入資料來源</td> 
   </tr> 
   <tr> 
-   <td>必需</td> 
-   <td>如果为true，则参数必须包含在输入数据中。</td> 
-   <td>Swagger、WSDL和数据库</td> 
+   <td>必填</td> 
+   <td>如果為true，則引數必須包含在輸入資料中。</td> 
+   <td>Swagger、WSDL和資料庫</td> 
   </tr> 
   <tr> 
-   <td>可空</td> 
-   <td>如果为true，则可将输入数据中的参数值设置为Null。</td> 
-   <td>WSDL、Odata和数据库</td> 
+   <td>可為nullable</td> 
+   <td>若為true，則可將輸入資料中的引數值設為Null。</td> 
+   <td>WSDL、Odata和資料庫</td> 
   </tr> 
   <tr> 
    <td>最大值</td> 
-   <td>指定数值的上限。 指定为上限的最大值也可以分配给输入数据中的参数。</td> 
+   <td>指定數值的上限。 指定為上限的最大值也可以指派給輸入資料中的引數。</td> 
    <td>Swagger和WSDL</td> 
   </tr> 
   <tr> 
    <td>最小值</td> 
-   <td>指定数字值的下限。 指定为下限的最小值也可以分配给输入数据中的参数。</td> 
+   <td>指定數值的下限。 指定為下限的最小值也可以指定給輸入資料中的引數。</td> 
    <td>Swagger和WSDL</td> 
   </tr> 
   <tr> 
    <td>exclusiveMaximum</td> 
-   <td>指定数值的上限。 不能将指定为上限的最大值分配给输入数据中的参数。</td> 
+   <td>指定數值的上限。 不得將指定為上限的最大值指派給輸入資料中的引數。</td> 
    <td>Swagger和WSDL</td> 
   </tr> 
   <tr> 
    <td>exclusiveMinimum</td> 
-   <td>指定数字值的下限。 不得将指定为下限的最小值分配给输入数据中的参数。</td> 
+   <td>指定數值的下限。 不得將指定為下限的最小值指派給輸入資料中的引數。</td> 
    <td>Swagger和WSDL</td> 
   </tr> 
   <tr> 
    <td>minlength</td> 
-   <td>指定字符串中包含的字符数的下限。 指定为下限的最小值也可以分配给输入数据中的参数。</td> 
+   <td>指定字串中所含字元數的下限。 指定為下限的最小值也可以指定給輸入資料中的引數。</td> 
    <td>Swagger和WSDL</td> 
   </tr> 
   <tr> 
    <td>maxLength</td> 
-   <td>指定字符串中包含的字符数的上限。 指定为上限的最大值也可以分配给输入数据中的参数。</td> 
-   <td>Swagger、WSDL、Odata和数据库</td> 
+   <td>指定字串中包含的字元數上限。 指定為上限的最大值也可以指派給輸入資料中的引數。</td> 
+   <td>Swagger、WSDL、Odata和資料庫</td> 
   </tr> 
   <tr> 
-   <td>模式</td> 
-   <td>指定固定字符序列。 仅当字符符合指定的模式时，才能成功验证输入字符串。</td> 
+   <td>圖樣</td> 
+   <td>指定固定字元順序。 只有在字元符合指定的模式時，才能成功驗證輸入字串。</td> 
    <td>Swagger</td> 
   </tr> 
   <tr> 
    <td>minItems</td> 
-   <td>指定数组中的最小项数。 指定为下限的最小值也可以分配给输入数据中的参数。</td> 
+   <td>指定陣列中專案的最小數量。 指定為下限的最小值也可以指定給輸入資料中的引數。</td> 
    <td>Swagger和WSDL</td> 
   </tr> 
   <tr> 
    <td>maxItems</td> 
-   <td>指定数组中的最大项数。 指定为上限的最大值也可以分配给输入数据中的参数。</td> 
+   <td>指定陣列中專案的最大數量。 指定為上限的最大值也可以指派給輸入資料中的引數。</td> 
    <td>Swagger和WSDL</td> 
   </tr> 
   <tr> 
    <td>uniqueItems</td> 
-   <td>如果为true，则数组的所有元素在输入数据中必须是唯一的。</td> 
+   <td>如果為true，則陣列的所有元素在輸入資料中必須是唯一的。</td> 
    <td>Swagger</td> 
   </tr> 
   <tr> 
-   <td>枚举（字符串）<br /> <br /> </td> 
-   <td>将输入数据中的参数值限制为一组固定的字符串值。 它必须是一个至少具有一个元素的数组，其中每个元素都是唯一的。</td> 
+   <td>列舉（字串）<br /> <br /> </td> 
+   <td>將輸入資料中的引數值限製為固定的字串值集。 它必須是至少有一個元素的陣列，其中每個元素都是唯一的。</td> 
    <td>Swagger、WSDL和Odata</td> 
   </tr> 
   <tr> 
-   <td>枚举（数字）<br /> <br /> </td> 
-   <td>将输入数据中的参数值限制为一组固定的数值。 它必须是一个至少具有一个元素的数组，其中每个元素都是唯一的。</td> 
+   <td>列舉（數字）<br /> <br /> </td> 
+   <td>將輸入資料中的引數值限製為固定的數值集。 它必須是至少有一個元素的陣列，其中每個元素都是唯一的。</td> 
    <td>WSDL</td> 
   </tr> 
  </tbody> 
 </table>
 
-在此示例中，根据Swagger文件中定义的最大值、最小值和所需约束来验证输入数据。 仅当存在订单ID且其值介于1和10之间时，输入数据才符合验证标准。
+在此範例中，輸入資料會根據Swagger檔案中定義的最大值、最小值和必要限制進行驗證。 只有在存在訂單ID且其值介於1到10之間時，輸入資料才會符合驗證准則。
 
 ```json
    parameters: [
@@ -545,12 +545,12 @@ operationOptions.setValidationOptions(ValidationOptions.FULL);
    ]
 ```
 
-如果输入数据不符合验证标准，则显示例外。 如果日志级别设置为 **调试**，则会将错误记录到 **error.log** 文件。 例如，
+如果輸入資料不符合驗證准則，則會顯示例外。 如果記錄層級設定為 **偵錯**，錯誤會記錄到 **error.log** 檔案。 例如，
 
 ```verilog
 21.01.2019 17:26:37.411 *ERROR* com.adobe.aem.dermis.core.validation.JsonSchemaValidator {"errorCode":"AEM-FDM-001-044","errorMessage":"Input validations failed during operation execution.","violations":{"/orderId":["numeric instance is greater than the required maximum (maximum: 10, found: 16)"]}}
 ```
 
-## 下面的步骤 {#next-steps}
+## 后续步骤 {#next-steps}
 
-您有一个工作表单数据模型，现在可用于自适应表单和交互式通信工作流。 有关更多信息，请参阅 [使用表单数据模型](/help/forms/using/using-form-data-model.md).
+您有一個工作表單資料模型，現在可用於最適化表單和互動式通訊工作流程。 如需詳細資訊，請參閱 [使用表單資料模型](/help/forms/using/using-form-data-model.md).

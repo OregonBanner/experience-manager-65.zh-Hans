@@ -1,7 +1,7 @@
 ---
-title: 自定义AEM表单工作区简介
+title: 自訂AEM表單工作區簡介
 seo-title: Introduction to Customizing AEM form workspace
-description: 快速介绍，其中包含概念和技术信息，可自定义LiveCycleAEM Forms工作区以进行流程管理。
+description: 提供概念和技術資訊的快速介紹，用於自訂流程管理的LiveCycleAEM Forms工作區。
 seo-description: A quick introduction, with conceptual and technical information, to customize LiveCycle AEM Forms workspace for process management.
 uuid: 38759071-e6b8-4976-8b06-909ad7a786cd
 contentOwner: robhagat
@@ -18,55 +18,55 @@ ht-degree: 0%
 
 ---
 
-# 自定义AEM表单工作区简介{#introduction-to-customizing-aem-form-workspace}
+# 自訂AEM表單工作區簡介{#introduction-to-customizing-aem-form-workspace}
 
-AEM表单工作区提供了修改其界面的呈现语义和功能的功能。 用于更改样式、布局、格式、品牌和核心功能的自定义项类型如下所述。
+AEM表單工作區提供修改其介面的呈現語意和功能的功能。 以下說明用於變更樣式、版面、格式設定、品牌和核心功能的自訂型別。
 
 ![cu_customized_workspace_example](assets/cu_customized_workspace_example.png)
 
-自定义工作区的示例
+自訂工作區的範例
 
-## 自定义项类型 {#types-of-customizations}
+## 自訂型別 {#types-of-customizations}
 
-AEM Forms工作区支持各种自定义设置，以更新用户界面的布局、外观、功能等。 自定义项涉及更新以下一项或多项内容：
+AEM Forms工作區支援各種自訂，以更新使用者介面的版面、外觀、功能等。 自訂涉及更新下列一或多個專案：
 
-* 用户界面的外观
-* 使用语义自定义的功能
-* 在其他应用程序中重用HTML组件
+* 使用者介面的外觀
+* 使用語意自訂的功能
+* 在其他應用程式中重複使用HTML元件
 
-### 用户界面更改 {#user-interface-changes}
+### 使用者介面變更 {#user-interface-changes}
 
-您可以更改AEM Forms工作区的外观、布局和其他呈现语义。 通过自定义CSS、HTML模板和JavaScript™文件更改工作区。 所有默认文件均在默认安装中提供。
+您可以變更AEM Forms工作區的外觀、版面配置和其他呈現語意。 透過自訂CSS、HTML範本和JavaScript™檔案來變更工作區。 預設安裝會提供所有預設檔案。
 
-最常用的步骤包含在 [AEM Forms工作区自定义的一般步骤](../../forms/using/generic-steps-html-workspace-customization.md). 有关此类自定义的特定示例，包括详细步骤，请参阅本文末尾的相关文章。
+最常用的步驟包含在 [AEM Forms工作區自訂的一般步驟](../../forms/using/generic-steps-html-workspace-customization.md). 如需此類自訂的特定範例，包括詳細步驟，請參閱本文結尾的相關文章。
 
-#### 了解样式表 {#understanding-the-style-sheet}
+#### 瞭解樣式表 {#understanding-the-style-sheet}
 
-在自定义工作区之前，请熟悉AEM Forms提供的默认样式表，网址为/libs/ws/css/style.css。
+在自訂工作區之前，請熟悉AEM Forms所提供的預設樣式表，網址為/libs/ws/css/style.css。
 
-要自定义工作区，建议您熟悉位于/libs/ws/css文件夹中的现有样式表style.css。 下面介绍了一些主要的组件。
+若要自訂工作區，建議您熟悉位於/libs/ws/css資料夾中的現有樣式表style.css。 以下說明一些顯著元件。
 
 <table>
  <tbody>
   <tr>
    <th><p>CSS元素</p> </th>
-   <th><p>用户界面组件已修改</p> </th>
+   <th><p>使用者介面元件已修改</p> </th>
   </tr>
   <tr>
    <td><p>#标题</p> </td>
-   <td><p>AEM Forms工作区的标题</p> </td>
+   <td><p>AEM Forms工作區的標頭</p> </td>
   </tr>
   <tr>
    <td><p>.categoryList</p> </td>
-   <td><p>类别列表</p> </td>
+   <td><p>類別清單</p> </td>
   </tr>
   <tr>
    <td><p>.categoryList .header</p> </td>
-   <td><p>类别列表标题</p> </td>
+   <td><p>類別清單的標題</p> </td>
   </tr>
   <tr>
-   <td><p>.类别， .filters</p> </td>
-   <td><p>类别列表下方的空间</p> </td>
+   <td><p>.category， .filters</p> </td>
+   <td><p>類別清單下方的空間</p> </td>
   </tr>
   <tr>
    <td><p>.category， .filter</p> </td>
@@ -74,310 +74,310 @@ AEM Forms工作区支持各种自定义设置，以更新用户界面的布局�
   </tr>
   <tr>
    <td><p>.category：hover， .category.selected， .filter：hover， .filter.selected</p> </td>
-   <td><p>选定的类别并将鼠标悬停在类别样式上</p> </td>
+   <td><p>選取的類別並將滑鼠移到類別樣式上</p> </td>
   </tr>
   <tr>
    <td><p>categoryListBar .tool， categoryListBar .content</p> </td>
-   <td><p>开始流程页（已关闭的类别列表）</p> </td>
+   <td><p>開始程式頁面（已關閉的類別清單）</p> </td>
   </tr>
   <tr>
    <td><p>filterListBar .tool， filterListBar .content</p> </td>
-   <td><p>待办事项页面（已关闭的过滤器列表）</p> </td>
+   <td><p>待辦事項頁面（已關閉的篩選器清單）</p> </td>
   </tr>
   <tr>
    <td><p>processNameListBar .tool， processNameListBar .content</p> </td>
-   <td><p>跟踪页面（已关闭的进程名称列表）</p> </td>
+   <td><p>追蹤頁面（已關閉的流程名稱清單）</p> </td>
   </tr>
   <tr>
    <td><p>.startPointList， .tasklist</p> </td>
-   <td><p>起点列表或任务列表</p> </td>
+   <td><p>起點清單或任務清單</p> </td>
   </tr>
   <tr>
    <td><p>.startPointList .header， .tasklist .header</p> </td>
-   <td><p>起点列表或任务列表的标题</p> </td>
+   <td><p>起點清單或任務清單的標題</p> </td>
   </tr>
   <tr>
    <td><p>.startpoint.selected， .task.selected</p> </td>
-   <td><p>选定的起点或任务</p> </td>
+   <td><p>選取的起點或任務</p> </td>
   </tr>
   <tr>
    <td><p>.startpoint.selected .description， .task.selected .description</p> </td>
-   <td><p>所选起点或任务的描述</p> </td>
+   <td><p>所選起點或任務的描述</p> </td>
   </tr>
   <tr>
    <td><p>#taskarea</p> </td>
-   <td><p>任务区域</p> </td>
+   <td><p>工作區域</p> </td>
   </tr>
   <tr>
-   <td><p>下#header.dropdown</p> </td>
-   <td><p>标题中的用户下拉列表</p> </td>
+   <td><p>#header .dropdown</p> </td>
+   <td><p>標題中的使用者下拉式清單</p> </td>
   </tr>
   <tr>
    <td><p>.sortDrop dd ul</p> </td>
-   <td><p>排序任务下拉列表</p> </td>
+   <td><p>排序任務下拉式清單</p> </td>
   </tr>
  </tbody>
 </table>
 
 #### CSS {#css}
 
-AEM Forms工作区的外观从CSS借入其外观。 通过自定义CSS，您可以更改工作区的表示语义，如字体、颜色、品牌和布局。
+AEM Forms工作區的外觀會從CSS借用其外觀。 透過自訂CSS，您可以變更工作區的表現語意，例如字型、顏色、品牌和版面。
 
-CSS自定义的顶级步骤包括：
+CSS自訂的頂層步驟為：
 
-* 创建CSS文件。
-* 将样式项添加到此CSS。 有关更多信息，请参阅了解CSS样式。
-* 在中更新其引用 `html.jsp`.
+* 建立CSS檔案。
+* 將樣式專案新增至此CSS。 如需詳細資訊，請參閱瞭解CSS樣式。
+* 更新其參照 `html.jsp`.
 
-有关执行这些自定义的确切步骤，请参阅 [AEM Forms工作区自定义的一般步骤](../../forms/using/generic-steps-html-workspace-customization.md). AEM Forms工作区附带的CSS文件位于/libs/ws/css/。 对于与CSS相关的自定义，请使用 [发送包](../../forms/using/introduction-customizing-html-workspace.md#p-crx-package-p). 有关CSS相关自定义的特定示例，请参阅本文末尾的相关帮助主题。
+如需進行這些自訂的確切步驟，請參閱 [AEM Forms工作區自訂的一般步驟](../../forms/using/generic-steps-html-workspace-customization.md). AEM Forms工作區隨附的CSS檔案位於/libs/ws/css/。 對於CSS相關的自訂，請使用 [出貨套件](../../forms/using/introduction-customizing-html-workspace.md#p-crx-package-p). 如需CSS相關自訂的特定範例，請參閱本文結尾的相關說明主題。
 
 #### 图像 {#image}
 
-您可以自定义AEM Forms工作区以添加用户头像或添加贵组织的徽标。 对于这些自定义项，请使用 [发送包](../../forms/using/introduction-customizing-html-workspace.md#p-crx-package-p).
+您可以自訂AEM Forms工作區，以新增使用者的頭像或新增組織的標誌。 對於這些自訂，請使用 [出貨套件](../../forms/using/introduction-customizing-html-workspace.md#p-crx-package-p).
 
-自定义图像的顶级步骤包括：
+影像自訂的最上層步驟為：
 
-* 安装和配置WebDAV。
-* 添加新图像。
-* 添加与所添加图像对应的新样式。
-* 链接到中的新CSS文件 `html.jsp` 文件。
+* 安裝及設定WebDAV。
+* 新增影像。
+* 新增與新增的影像對應的新樣式。
+* 連結至中的新CSS檔案 `html.jsp` 檔案。
 
-要开始在AEM Forms工作区中自定义图像，请按照 [AEM Forms工作区自定义的一般步骤](../../forms/using/generic-steps-html-workspace-customization.md). 有关图像相关自定义的特定示例，请参阅本文末尾的相关帮助主题。
+若要開始在AEM Forms工作區中自訂影像，請遵循 [AEM Forms工作區自訂的一般步驟](../../forms/using/generic-steps-html-workspace-customization.md). 如需影像相關自訂的特定範例，請參閱本文結尾的相關說明主題。
 
-#### HTML模板 {#html-template}
+#### HTML範本 {#html-template}
 
-HTML模板有助于定义workspace用户界面外观和布局。 通过更新默认HTML模板，您可以自定义版面默认用户界面。
+HTML範本有助於定義工作區使用者介面的外觀和版面。 透過更新預設HTML範本，您可以自訂配置預設使用者介面。
 
-对HTML模板进行自定义的顶级步骤包括：
+HTML範本自訂的最上層步驟為：
 
-* 在用户创建的文件夹中，复制所需的默认文件。
-* 在用户定义的文件夹中添加新模板。
-* 对复制的文件进行相关更新，例如，新模板的路径。
+* 在使用者建立的資料夾中，複製所需的預設檔案。
+* 在使用者定義的資料夾中新增範本。
+* 對複製的檔案進行相關更新，例如新範本的路徑。
 
-有关此类自定义的特定示例，请参阅本文末尾提供的帮助主题。 选择 [发送包](../../forms/using/introduction-customizing-html-workspace.md#p-crx-package-p) 或 [开发包](../../forms/using/introduction-customizing-html-workspace.md#p-crx-package-p)，具体取决于要自定义的模板。
+如需此類自訂的特定範例，請參閱本文結尾提供的說明主題。 選擇 [出貨套件](../../forms/using/introduction-customizing-html-workspace.md#p-crx-package-p) 或 [開發封裝](../../forms/using/introduction-customizing-html-workspace.md#p-crx-package-p)，視要自訂的範本而定。
 
-### 语义更改 {#semantic-changes}
+### 語意變更 {#semantic-changes}
 
-要修改AEM Forms工作区功能，请更改JavaScript源代码。 核心功能中的修改将标记为语义更改。 您可以修改作为AEM Forms工作区源代码的一部分提供的模型、视图和模板。
+若要修改AEM Forms工作區功能，請變更JavaScript原始程式碼。 核心功能中的修改專案會標示為語意變更。 您可以修改提供為AEM Forms工作區原始程式碼一部分的模型、檢視和範本。
 
-进行语义更改以修改AEM Forms工作区功能的顶级步骤包括：
+進行語意變更以修改AEM Forms工作區功能的頂層步驟如下：
 
-* 在用户创建的文件夹中，复制相应的默认文件。
-* 在用户定义的文件夹中添加新模型和视图。
-* 进行相关更新，例如更新默认JavaScript文件中新添加的模型和视图的路径。
-* 缩小包以优化性能。
+* 在使用者建立的資料夾中，複製適當的預設檔案。
+* 在使用者定義的資料夾中新增模型和檢視。
+* 進行相關更新，例如更新預設JavaScript檔案中新新增的模型和檢視的路徑。
+* 將套件最小化，以最佳化效能。
 
-有关属于源代码一部分的组件的更多概念信息，请参见 [可重用组件的描述](/help/forms/using/description-reusable-components.md). 对于这些自定义项，请使用开发包。
+如需原始程式碼中元件的詳細概念資訊，請參閱 [可重複使用元件的說明](/help/forms/using/description-reusable-components.md). 對於這些自訂，請使用開發套件。
 
-### 可重用组件 {#reusable-components}
+### 可重複使用的元件 {#reusable-components}
 
-由于AEM Forms工作区是基于组件的软件，因此可以轻松自定义和重复使用。 您可以轻松地将工作区组件与Web应用程序集成。
+由於AEM Forms工作區是以元件為基礎的軟體，因此可輕鬆自訂及重複使用。 您可以輕鬆地將工作區元件與Web應用程式整合。
 
-有关更多概念信息，请参见 [可重用组件的描述](/help/forms/using/description-reusable-components.md) 有关使用组件的说明，请参阅 [在Web应用程序中集成AEM Forms工作区组件](/help/forms/using/description-reusable-components.md).
+如需更多概念資訊，請參閱 [可重複使用元件的說明](/help/forms/using/description-reusable-components.md) 如需有關使用元件的指示，請參閱 [在網頁應用程式中整合AEM Forms工作區元件](/help/forms/using/description-reusable-components.md).
 
-## 构建AEM Forms工作区代码 {#building-html-workspace-code}
+## 建立AEM Forms工作區程式碼 {#building-html-workspace-code}
 
-### SDK包 {#sdk-package}
+### SDK套件 {#sdk-package}
 
-该软件包包含AEM Forms工作区的源代码。 该软件包位于 `[LC root]\sdk\html-workspace\adobe-lc-workspace-src.zip`.
+此套件包含AEM Forms工作區的原始碼。 套件位於 `[LC root]\sdk\html-workspace\adobe-lc-workspace-src.zip`.
 
-它主要用于自定义，因为它提供生成以下项的功能：
+此範本主要用於自訂，因為它提供產生以下專案的功能：
 
-* 发货、调试和开发配置文件的CRX包(如下所述 [CRX包](../../forms/using/introduction-customizing-html-workspace.md#p-crx-package-p))。
-* 自定义代码的缩小版本（用于语义更改）。
+* 出貨、偵錯和開發設定檔的CRX套件(如下所述 [CRX套件](../../forms/using/introduction-customizing-html-workspace.md#p-crx-package-p))。
+* 自訂程式碼的縮製版本（用於語意變更）。
 
-#### WS内容 {#ws-content}
+#### WS內容 {#ws-content}
 
 * client-pkg：
 
-   * src — 包含创建CRX节点所需的构件。
-   * pom.xml — 为各种配置文件生成部署包的脚本WS-Deploy包
+   * src — 包含建立CRX節點所需的成品。
+   * pom.xml — 為各種設定檔建置部署套件的指令碼WS-Deploy套裝
 
 * client-html：
 
-   * 程序集 — 包含脚本用于创建AEM Forms工作区SDK的zip.xml。
+   * 元件 — 包含指令碼用來建立AEM Forms工作區SDK的zip.xml。
    * src/main/webapp -
 
-      * css — 包含AEM Forms工作区的样式表。
-      * 图像 — 包含在AEM Forms工作区中使用的图像。
+      * css — 包含AEM Forms工作區的樣式表。
+      * 影像 — 包含AEM Forms工作區中使用的影像。
       * js：
 
-         * libs — 包含AEM Forms工作区中使用的所有第三方库。
-         * 许可证 — 包含HTML和JS文件的许可证，以及用于在相应源文件中添加这些许可证前缀的代码。
-         * 缩小器 — 用于组合、缩小和优化自定义JavaScript代码。
-         * resourcejs_optimizer — 用于JavaScript源的组合、缩小和优化。
-         * resource_generator — 用于生成register.js和modelcontrollerpath.js。
-         * 运行时：
+         * libs — 包含AEM Forms工作區中使用的所有第三方程式庫。
+         * licenses — 包含HTML和JS檔案的授權，以及這些授權在各自原始檔中加上前置詞的程式碼。
+         * minifier — 用於組合、縮制和升級customizedJavaScript程式碼。
+         * resourcejs_optimizer — 用於JavaScript來源的組合、縮制和升級。
+         * resource_generator — 用於產生register.js和modelcontrollerpath.js。
+         * 執行階段：
 
-            * 初始值设定项 — 包含用于初始化AEM Forms工作区中使用的骨干网视图和模型的initializer.js。
-            * 模型 — 包含AEM Forms工作区中存在的所有组件的主干模型。
-            * 路由 — 包含JavaScript文件和HTML文件，这些文件在AEM Forms workspace中加载启动进程、待办事项、跟踪和首选项。
-            * 服务 — 包含在AEM Forms工作区中使用的service.js。 所有服务器调用均通过service.js进行。
-            * 模板 — 包含所有模板，即AEM Forms workspace中所有视图的HTML文件。
-            * util — 包含在AEM Forms工作区中使用的所有实用程序文件(javascript)。
-            * 视图 — 包含AEM Forms工作区中所有组件的主干视图。
+            * 初始設定式 — 包含用於初始化AEM Forms工作區中使用的骨幹檢視和模型的initializer.js。
+            * 模型 — 包含AEM Forms工作區中所有元件的主幹模型。
+            * 路由 — 包含JavaScript檔案和HTML檔案，可在AEM Forms工作區中載入啟動程式、待辦事項、追蹤和偏好設定。
+            * 服務 — 包含AEM Forms工作區中使用的service.js。 所有伺服器呼叫都是透過service.js進行。
+            * 範本 — 包含所有範本，即AEM Forms workspace中所有檢視的HTML檔案。
+            * util — 包含在AEM Forms工作區中使用的所有公用程式檔案(javascript)。
+            * 檢視 — 包含AEM Forms工作區中所有元件的主幹檢視。
          * main.js
          * router.js
-      * libs/ws： pdf.html和pluginPing.pdf用于在AEM Forms工作区中加载PDF forms，而WSNextAdapter.swf用于在AEM Forms工作区中加载SWF表单和参考线。
-      * 区域设置：
+      * libs/ws： pdf.html和pluginPing.pdf用於載入AEM Forms工作區中的PDF forms，而WSNextAdapter.swf用於載入AEM Forms工作區中的SWF表單和參考線。
+      * 地區設定：
 
-         * de-DE — 包含德语版的translation.json。
-         * en-US — 包含英语的translation.json。
-         * fr-FR — 包含法语的translation.json。
-         * ja-JP — 包含日语的translation.json。
-         * html.jsp — 包含用于查找当前浏览器区域设置的代码。
+         * de-DE — 包含德文的translation.json。
+         * en-US — 包含英文的translation.json。
+         * fr-FR — 包含法文的translation.json。
+         * ja-JP — 包含日文的translation.json。
+         * html.jsp — 包含可找出目前瀏覽器地區設定的程式碼。
       * html.jsp
       * GET.jsp
 
 
 
 
-### CRX包 {#crx-package}
+### CRX套件 {#crx-package}
 
-CRX包可以部署在CRX™存储库上。 它位于 `[LC root]\crx-repository\install\adobe-lc-workspace-pkg.zip`.
+CRX套件可部署在CRX™存放庫上。 此函式位於 `[LC root]\crx-repository\install\adobe-lc-workspace-pkg.zip`.
 
-可使用下述三个配置文件构建此包。
+此套件可使用下述的三個設定檔來建置。
 
 | **配置文件** | **描述** | **使用** |
 |---|---|---|
-| 发货配置文件 | 此配置文件使用缩小功能创建尽可能小的CRX包。 此包效率最高。 所有JavaScript™文件都将被组合并缩小为一个JS文件。 | 当JS文件中不需要进一步语义更改时，使用此配置文件。 |
-| 调试配置文件 | 此配置文件创建一个效率适度的CRX包。 包的大小略大于使用Ship profile创建的包。 此包将大多数JavaScript文件合并到一个JS文件中。 | 使用此配置文件进行调试。 |
-| 开发配置文件 | 此配置文件创建可能具有最大大小的CRX包。 所有JavaScript文件都可单独使用，因为它们位于SDK包中。 | 在合并语义更改时使用此配置文件。 |
+| 出貨設定檔 | 此設定檔會使用縮制來建立可能大小最小的CRX套件。 此套件最有效率。 所有JavaScript™檔案會合併並縮製為單一JS檔案。 | 當JS檔案中不需要進一步語意變更時，請使用此設定檔。 |
+| 偵錯設定檔 | 此設定檔會建立中等效率的CRX套件。 封裝的大小略大於使用「出貨設定檔」建立的封裝。 此套件已將大部分JavaScript檔案合併至單一JS檔案中。 | 使用此設定檔進行偵錯。 |
+| 開發設定檔 | 此設定檔會建立最大可能大小的CRX套件。 所有JavaScript檔案都可單獨使用，因為它們位於SDK套件中。 | 在合併語意變更時使用此設定檔。 |
 
-#### 发货配置文件 {#ship-profile}
+#### 出貨設定檔 {#ship-profile}
 
-#### Command {#command}
+#### 命令 {#command}
 
-* mvn clean -P在发送给客户端的源软件包的client-pkg文件夹上提供安装。
-* Ship profile命令仅在64位JVM上执行。
+* mvn clean -P將安裝傳送至使用者端之來源封裝的client-pkg資料夾上。
+* Ship profile命令僅能在64位元JVM上執行。
 
-#### WS内容 {#ws-content-1}
+#### WS內容 {#ws-content-1}
 
 * css — 包含style.css、ie.css和jquery-ui.css。
-* 图像 — 包含所有图像。
+* 影像 — 包含所有影像。
 * js：
 
-   * 库：
+   * 程式庫：
 
       * require - Contains require.js.
       * jqueryui — 包含jquery.ui.datepicker.ja.js。
-   * 运行时：
+   * 執行階段：
 
-      * 模板 — 包含所有模板，即AEM Forms workspace中所有组件的HTML文件。
-   * main.js（合并、缩小和丑化）。
+      * 範本 — 包含所有範本，即AEM Forms workspace中所有元件的HTML檔案。
+   * main.js （合併、縮小和醜化）。
    * registry.js
 
 
 
-* 库：
+* 程式庫：
 
    * ws — 包含pluginPing.pdf、pdf.html和WSNextAdapter.swf。
 
-* 区域设置 — 包含.content.xml。
-* 区域设置：
+* 地區設定 — 包含.content.xml。
+* 地區設定：
 
-   * de-DE — 包含德语版的translation.json。
-   * en-US — 包含英语的translation.json。
-   * fr-FR — 包含法语的translation.json。
-   * ja-JP — 包含日语的translation.json。
-   * html.jsp — 包含用于查找当前浏览器区域设置的代码。
+   * de-DE — 包含德文的translation.json。
+   * en-US — 包含英文的translation.json。
+   * fr-FR — 包含法文的translation.json。
+   * ja-JP — 包含日文的translation.json。
+   * html.jsp — 包含可找出目前瀏覽器地區設定的程式碼。
 
 * 索引 — 包含.content.xml
-* 配置文件 — 包含offline.jsp。
+* 設定檔 — 包含offline.jsp。
 * GET.jsp
 * html.jsp
 * content.xml
 * _rep_policy.xml
 
-#### 调试配置文件 {#debug-profile}
+#### 偵錯設定檔 {#debug-profile}
 
-#### Command {#command-1}
+#### 命令 {#command-1}
 
-* mvn clean -P在client-pkg上调试安装
-* 调试配置文件命令仅在64位JVM上执行。
+* mvn clean -P在client-pkg上偵錯安裝
+* 偵錯設定檔命令執行僅適用於64位元JVM。
 
-#### WS内容 {#ws-content-2}
+#### WS內容 {#ws-content-2}
 
 * css — 包含style.css、ie.css和jqueri-ui.css。
-* 图像 — 包含所有图像。
+* 影像 — 包含所有影像。
 * js：
 
-   * 库：
+   * 程式庫：
 
       * require - Contains require.js.
       * jqueryui — 包含jquery.ui.datepicker.ja.js。
-   * 运行时：
+   * 執行階段：
 
-      * 模板 — 包含所有模板，即AEM Forms workspace中所有组件的HTML文件。
-   * main.js（组合）。
+      * 範本 — 包含所有範本，即AEM Forms workspace中所有元件的HTML檔案。
+   * main.js （合併）。
    * registry.js
 
 
 
-* 库：
+* 程式庫：
 
    * ws — 包含pluginPing.pdf、pdf.html和WSNextAdapter.swf。
 
-* 区域设置 — 包含.content.xml。
-* 区域设置：
+* 地區設定 — 包含.content.xml。
+* 地區設定：
 
-   * de-DE — 包含德语版的translation.json。
-   * en-US — 包含英语的translation.json。
-   * fr-FR — 包含法语的translation.json。
-   * ja-JP — 包含日语的translation.json。
-   * html.jsp — 包含用于查找当前浏览器区域设置的代码。
+   * de-DE — 包含德文的translation.json。
+   * en-US — 包含英文的translation.json。
+   * fr-FR — 包含法文的translation.json。
+   * ja-JP — 包含日文的translation.json。
+   * html.jsp — 包含可找出目前瀏覽器地區設定的程式碼。
 
 * 索引 — 包含.content.xml
-* 配置文件 — 包含offline.jsp。
+* 設定檔 — 包含offline.jsp。
 * GET.jsp
 * html.jsp
 * content.xml
 * _rep_policy.xml
 
-#### 开发配置文件 {#dev-profile}
+#### 開發設定檔 {#dev-profile}
 
-#### Command {#command-2}
+#### 命令 {#command-2}
 
-mvn clean — 在客户端上安装P Dev-pkg
+mvn clean — 在client-pkg上安裝P Dev
 
-#### WS内容 {#ws-content-3}
+#### WS內容 {#ws-content-3}
 
 * css — 包含style.css、ie.css和jqueri-ui.css。
-* 图像 — 包含所有图像。
+* 影像 — 包含所有影像。
 * js：
 
-   * libs — 包含AEM Forms工作区中使用的所有库。
-   * require - Contains require.js
+   * libs — 包含AEM Forms工作區中使用的所有程式庫。
+   * require — 包含require.js
    * jqueryui — 包含jquery.ui.datepicker.ja.js
-   * 运行时：
+   * 執行階段：
 
-      * 初始值设定项 — 包含初始值设定项.js和modelcontrollerpath.js。
-      * 模型 — 包含AEM Forms工作区中所有组件的模型。
-      * 路由 — 包含JavaScript文件和HTML文件，这些文件在AEM Forms workspace中加载启动进程、待办事项、跟踪和首选项。
-      * 服务 — 包含在AEM Forms工作区中使用的service.js。
-      * 模板 — 包含所有模板，即AEM Forms workspace中所有组件的HTML文件。
-      * util — 包含在AEM Forms工作区中使用的所有实用程序文件(JavaScript)。
-      * 视图 — 包含AEM Forms工作区中所有组件的视图。
+      * 初始設定式 — 包含初始設定式.js和modelcontrollerpath.js。
+      * 模型 — 包含AEM Forms工作區中所有元件的模型。
+      * 路由 — 包含JavaScript檔案和HTML檔案，可在AEM Forms工作區中載入啟動程式、待辦事項、追蹤和偏好設定。
+      * 服務 — 包含AEM Forms工作區中使用的service.js。
+      * 範本 — 包含所有範本，即AEM Forms workspace中所有元件的HTML檔案。
+      * util — 包含在AEM Forms工作區中使用的所有公用程式檔案(JavaScript)。
+      * 檢視 — 包含AEM Forms工作區中所有元件的檢視。
    * main.js
    * registry.js
    * router.js
 
 
-* 库：
+* 程式庫：
 
    * ws — 包含pluginPing.pdf、pdf.html和WSNextAdapter.swf。
 
-* 区域设置 — 包含.content.xml。
-* 区域设置：
+* 地區設定 — 包含.content.xml。
+* 地區設定：
 
-   * de-DE — 包含德语版的translation.json。
-   * en-US — 包含英语的translation.json。
-   * fr-FR — 包含法语的translation.json。
-   * ja-JP — 包含日语的translation.json。
-   * html.jsp — 包含用于查找当前浏览器区域设置的代码。
+   * de-DE — 包含德文的translation.json。
+   * en-US — 包含英文的translation.json。
+   * fr-FR — 包含法文的translation.json。
+   * ja-JP — 包含日文的translation.json。
+   * html.jsp — 包含可找出目前瀏覽器地區設定的程式碼。
 
 * 索引 — 包含.content.xml
-* 配置文件 — 包含offline.jsp。
+* 設定檔 — 包含offline.jsp。
 * GET.jsp
 * html.jsp
 * content.xml

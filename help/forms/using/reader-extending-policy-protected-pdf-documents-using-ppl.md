@@ -1,7 +1,7 @@
 ---
-title: 使用可移植保护库扩展受策略保护的PDF文档的Reader
+title: 使用Portable Protection LibraryReader擴充受原則保護的PDF檔案
 seo-title: Reader extending policy-protected PDF documents using Portable Protection Library
-description: Reader扩展通过Acrobat Reader启用Adobe PDF文档中的交互式功能。 您可以使用Portable Protection Library (PPL)来读取器扩展受DRM保护的PDF文档。
+description: Reader擴充功能可透過Acrobat Reader啟用Adobe PDF檔案中的互動功能。 您可以使用Portable Protection Library (PPL)來讀取器延伸受DRM保護的PDF檔案。
 seo-description: Reader extensions enable interactive features in Adobe PDF documents through Acrobat Reader. You can use the Portable Protection Library (PPL) to reader extend the DRM protected PDF documents.
 uuid: 0da17641-d24c-43c2-b918-8b5abe1e5473
 contentOwner: khsingh
@@ -18,37 +18,37 @@ ht-degree: 0%
 
 ---
 
-# 使用可移植保护库扩展受策略保护的PDF文档的Reader {#reader-extending-policy-protected-pdf-documents-using-portable-protection-library}
+# 使用Portable Protection LibraryReader擴充受原則保護的PDF檔案 {#reader-extending-policy-protected-pdf-documents-using-portable-protection-library}
 
-您必须熟悉Document Security、Reader Extension和Java编程语言的概念，以便对Document Security受策略保护的PDF文档进行读者扩展。
+您必須熟悉Document Security、Reader Extension和Java程式設計語言的概念，才能對Document Security受原則保護的PDF檔案進行讀者擴充。
 
-您可以使用Document Security限制仅授权用户访问特定PDF文档。 您还可以确定收件人如何使用受保护的文档。 例如，您可以指定收件人是否可以打印、复制或编辑受Document Security策略保护的文档的文本。 要了解有关Document Security的更多信息，请参阅 [关于document security](/help/forms/using/admin-help/document-security.md).
+您可以使用Document Security來限制只有授權使用者才能存取特定PDF檔案。 您也可以決定收件者如何使用受保護檔案。 例如，您可以指定收件人是否可以列印、複製或編輯受Document Security原則保護檔案的文字。 若要進一步瞭解Document Security，請參閱 [關於document security](/help/forms/using/admin-help/document-security.md).
 
-您可以使用Reader Extensions通过Acrobat Reader在Adobe PDF文档中启用交互式功能。 这些交互功能通常只能通过Adobe Acrobat Professional和Standard使用。 要了解Reader扩展可以启用的交互式功能，请参阅 [Adobe Experience Manager Forms DocAssurance服务&#x200B;](/help/forms/using/overview-aem-document-services.md)**.**
+您可以使用Reader延伸模組，透過Acrobat Reader在Adobe PDF檔案中啟用互動功能。 這些互動式功能通常只能透過Adobe Acrobat Professional和Standard使用。 若要瞭解Reader擴充功能可啟用的互動功能，請參閱 [Adobe Experience Manager Forms DocAssurance服務&#x200B;](/help/forms/using/overview-aem-document-services.md)**.**
 
-您可以使用可移植保护库对文档应用策略，而无需通过网络传输文档。 只有安全凭据和保护策略详细信息会通过网络传递。 实际文档永远不会离开客户端，并且保护策略将在客户端本地应用。
+您可以使用可攜式保護程式庫在檔案上套用原則，而不需要檔案透過網路傳輸。 只有安全性認證和保護原則詳細資訊會透過網路傳遞。 實際檔案永遠不會離開使用者端，並且保護原則會套用至使用者端的本機。
 
-## Reader扩展document security受策略保护的PDF文档 {#reader-extending-document-security-policy-protected-pdf-documents}
+## Reader延伸document security受原則保護的PDF檔案 {#reader-extending-document-security-policy-protected-pdf-documents}
 
-受策略保护的文档是加密的文档。 您无法使用标准reader-extension API来应用、删除和检索受策略保护的PDF文档的使用权限。 只有Portable Protection Library的Reader扩展服务提供API来应用、删除和检索受Document Security策略保护的PDF文档的使用权限。
+受原則保護的檔案是加密的檔案。 您無法使用標準Reader延伸模組API來套用、移除和擷取受原則保護之PDF檔案的使用許可權。 只有Portable Protection Library的Reader擴充功能服務提供可套用、移除和擷取受Document Security原則保護之PDF檔案使用許可權的API。
 
-### Reader扩展服务 {#reader-extensions-service}
+### Reader擴充功能服務 {#reader-extensions-service}
 
-Reader扩展服务向受策略保护的PDF文档添加使用权限，以激活在使用Adobe Acrobat Reader打开PDF文档时通常不可用的功能。 它还具有用于移除和检索受策略保护文档的使用权限的API。
+Reader擴充功能服務會將使用許可權新增至受原則保護的PDF檔案，以啟用使用Adobe Acrobat Reader開啟PDF檔案時通常無法使用的功能。 它也有移除和擷取受原則保護檔案使用許可權的API。
 
-Reader扩展服务完全支持基于PDF标准1.6及更高版本的PDF文档。 除了Acrobat Reader之外，第三方用户不需要任何额外的软件或插件即可使用受策略保护的PDF文档。
+Reader擴充功能服務完全支援以PDF標準1.6和更新版本為基礎的PDF檔案。 除了Acrobat Reader之外，協力廠商使用者不需要任何額外的軟體或外掛程式來使用受原則保護的PDF檔案。
 
-您可以使用Reader扩展服务完成以下任务：
+您可以使用Reader擴充功能服務完成下列工作：
 
-* 将使用权限应用于受策略保护的PDF文档。
-* 删除受策略保护的PDF文档的使用权限。
-* 检索应用于受策略保护的PDF文档的使用权限。
+* 將使用許可權套用至受原則保護的PDF檔案。
+* 移除受原則保護的PDF檔案的使用許可權。
+* 擷取套用至受原則保護的PDF檔案的使用許可權。
 
-### 对受Document Security策略保护的PDF文档应用使用权限 {#apply-usage-rights-to-a-document-security-policy-protected-pdf-document}
+### 將使用許可權套用至受Document Security原則保護的PDF檔案 {#apply-usage-rights-to-a-document-security-policy-protected-pdf-document}
 
-您可以使用 `applyUsageRights`Java API可将使用权限应用于受策略保护的PDF文档。 使用权限与Acrobat中默认提供的功能有关，但在Adobe Reader中不可用，例如向表单添加注释或填写表单字段并保存表单的功能。 已应用使用权限的PDF文档称为启用权限的文档。 在Adobe Reader中打开启用了权限的文档的用户可以执行为该特定文档启用的操作。
+您可以使用 `applyUsageRights`Java API可將使用許可權套用至受原則保護的PDF檔案。 使用許可權與Acrobat中預設提供但Adobe Reader中預設不提供的功能相關，例如新增註解至表單或填寫表單欄位及儲存表單的功能。 已套用使用許可權的PDF檔案稱為許可權啟用檔案。 在Adobe Reader中開啟許可權啟用檔案的使用者可以執行為該特定檔案啟用的操作。
 
-**语法：** `InputStream applyUsageRights(InputStream inputFile, File certFile, String credentialPassword, UsageRights usageRights)`
+**語法：** `InputStream applyUsageRights(InputStream inputFile, File certFile, String credentialPassword, UsageRights usageRights)`
 
 <table>
  <tbody>
@@ -57,29 +57,29 @@ Reader扩展服务完全支持基于PDF标准1.6及更高版本的PDF文档。 �
    <td><p><strong>描述</strong></p> </td>
   </tr>
   <tr>
-   <td><p>输入文件</p> </td>
-   <td><p>指定表示要应用使用权限的PDF文档的InputStream。 您可以使用LiveCycleRights Management或AEM Forms Document Security保护的文档。</p> </td>
+   <td><p>輸入檔案</p> </td>
+   <td><p>指定代表要套用使用許可權的PDF檔案的InputStream。 您可以使用LiveCycleRights Management或AEM Forms document security保護的檔案。</p> </td>
   </tr>
   <tr>
    <td><p>certFile</p> </td>
-   <td><p>指定表示.jks文件的File对象。 .jks文件是密钥库文件。 它指向授予使用权限的证书。</p> </td>
+   <td><p>指定代表.jks檔案的檔案物件。 .jks檔案是金鑰儲存庫檔案。 它會指向授予使用許可權的憑證。</p> </td>
   </tr>
   <tr>
    <td><p>credentialPassword</p> </td>
-   <td><p>指定密钥库的密码。 </p> </td>
+   <td><p>指定金鑰庫的密碼。 </p> </td>
   </tr>
   <tr>
    <td><p>usageRights</p> </td>
-   <td><p>指定类型的对象 <a href="https://help.adobe.com/en_US/livecycle/11.0/ProgramLC/javadoc/com/adobe/livecycle/readerextensions/client/UsageRights.html" target="_blank">使用权限</a>. usageRights对象表示可以应用于受策略保护的PDF文档的单个权限。</p> </td>
+   <td><p>指定物件型別 <a href="https://help.adobe.com/en_US/livecycle/11.0/ProgramLC/javadoc/com/adobe/livecycle/readerextensions/client/UsageRights.html" target="_blank">使用許可權</a>. usageRights物件代表可以套用至受原則保護之PDF檔案的個別權利。</p> </td>
   </tr>
  </tbody>
 </table>
 
-### 检索应用于受策略保护的PDF文档的使用权限。   {#retrieve-usage-rights-applied-to-a-policy-protected-pdf-document-nbsp}
+### 擷取套用至受原則保護的PDF檔案的使用許可權。   {#retrieve-usage-rights-applied-to-a-policy-protected-pdf-document-nbsp}
 
-您可以使用 `getDocumentUsageRights`用于检索应用于受策略保护的PDF文档的Reader扩展使用权限的Java API。 通过检索有关使用权限的信息，您可以了解为受策略保护的PDF文档启用的功能Reader扩展。
+您可以使用 `getDocumentUsageRights`Java API可擷取套用至受原則保護之PDF檔案的Reader擴充功能使用許可權。 透過擷取使用許可權的相關資訊，您可以瞭解受原則保護的PDF檔案已啟用的Reader擴充功能。
 
-**语法：** `public GetUsageRightsResult getDocumentUsageRights(InputStream inDoc)`
+**語法：** `public GetUsageRightsResult getDocumentUsageRights(InputStream inDoc)`
 
 <table>
  <tbody>
@@ -89,12 +89,12 @@ Reader扩展服务完全支持基于PDF标准1.6及更高版本的PDF文档。 �
   </tr>
   <tr>
    <td><p>inDoc</p> </td>
-   <td><p>指定表示从中检索使用权限的PDF文档的InputStream。 您可以使用LiveCycleRights Management或AEM Forms Document Security保护的文档。</p> </td>
+   <td><p>指定代表要從中擷取使用許可權之PDF檔案的InputStream。 您可以使用LiveCycleRights Management或AEM Forms document security保護的檔案。</p> </td>
   </tr>
  </tbody>
 </table>
 
-#### 代码示例 {#code-sample}
+#### 程式碼範例 {#code-sample}
 
 ```java
 //Create a ServiceClientFactory instance
@@ -140,11 +140,11 @@ System.out.println("RE rights for the file are :\n"+right1);
  fileWithRe.close();
 ```
 
-### 删除受策略保护的PDF文档的使用权限 {#remove-usage-rights-of-a-policy-protected-pdf-document}
+### 移除受原則保護的PDF檔案的使用許可權 {#remove-usage-rights-of-a-policy-protected-pdf-document}
 
-您可以使用 `removeUsageRights`Java API可从受策略保护的文档中删除使用权限。 从受策略保护的PDF文档中删除使用权限是对该文档执行其他AEM Forms操作所必需的。 例如，在设置使用权限之前，您必须对PDF文档进行数字签名（或认证）。 因此，如果您要对受策略保护的文档执行操作，则必须从PDF文档中删除使用权限，执行其他操作，如对文档进行数字签名，然后重新将使用权限应用于该文档。
+您可以使用 `removeUsageRights`Java API可從受原則保護的檔案中移除使用許可權。 若要對檔案執行其他AEM Forms操作，必須從受原則保護的PDF檔案中移除使用許可權。 例如，您必須先數位簽署（或認證）PDF檔案，才能設定使用許可權。 因此，如果您想要對受原則保護的檔案執行操作，您必須從PDF檔案中移除使用許可權，執行其他操作，例如以數位方式簽署檔案，然後重新將使用許可權套用至檔案。
 
-**语法：** `InputStream removeUsageRights(InputStream inputFile)`
+**語法：** `InputStream removeUsageRights(InputStream inputFile)`
 
 <table>
  <tbody>
@@ -153,13 +153,13 @@ System.out.println("RE rights for the file are :\n"+right1);
    <td><p><strong>描述</strong></p> </td>
   </tr>
   <tr>
-   <td><p> </p> <p>输入文件</p> </td>
-   <td>指定表示使用情况的PDF文档的InputStream<br /> 权限将被删除。 您可以使用LiveCycleRights Management或AEM Forms Document Security保护的文档。</td>
+   <td><p> </p> <p>輸入檔案</p> </td>
+   <td>指定代表使用方式的PDF檔案的InputStream<br /> 許可權將被移除。 您可以使用LiveCycleRights Management或AEM Forms document security保護的檔案。</td>
   </tr>
  </tbody>
 </table>
 
-#### 代码示例 {#code-sample-1}
+#### 程式碼範例 {#code-sample-1}
 
 ```java
 //Create a ServiceClientFactory instance

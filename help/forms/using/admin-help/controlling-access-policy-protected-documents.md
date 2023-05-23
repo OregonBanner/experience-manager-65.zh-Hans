@@ -1,7 +1,7 @@
 ---
-title: 控制对受策略保护文档的访问
+title: 控制對受原則保護檔案的存取
 seo-title: Controlling access to policy-protected documents
-description: 了解如何查看、管理和控制对受策略保护文档的访问。
+description: 瞭解如何檢視、管理及控制受原則保護檔案的存取權。
 seo-description: See how you can view, manage and control the access to your policy-protected documents.
 uuid: 2d9f95e9-e4ee-47e2-988e-a191d1d1d264
 contentOwner: admin
@@ -18,190 +18,190 @@ ht-degree: 0%
 
 ---
 
-# 控制对受策略保护文档的访问 {#controlling-access-to-policy-protected-documents}
+# 控制對受原則保護檔案的存取 {#controlling-access-to-policy-protected-documents}
 
-您可以控制收件人使用受策略保护文档的方式，无论这些文档分发得多广泛。
+您可以控制收件者使用受原則保護檔案的方式，無論受原則保護檔案的分佈範圍有多廣。
 
-使用“文档”页，您可以执行以下任务：
+您可以在「檔案」頁面執行下列工作：
 
-* 搜索并查看受策略保护文档的详细信息。 您可以查看有关文档名称、发布者名称、策略名称和应用策略的日期的信息。 如果删除了保护文档的策略，您还可以在策略名称下看到已删除的策略ID。 用户可以查看和管理自己受策略保护的文档。 管理员可以查看和管理所有受策略保护的文档。
-* 更改应用于文档的策略的详细信息。 用户可以编辑自己的策略，管理员可以编辑共享策略和个人策略，策略集协调员可以编辑他们拥有权限的策略集中的共享策略。 您可以直接从“文档详细信息”页面访问与文档关联的策略。
-* 撤销和恢复对受策略保护文档的访问权限。 管理员可以撤销和恢复对任何文档的访问权限。 策略集协调人（有权管理文档）可以从其策略集中撤销和恢复对使用共享策略的受策略保护文档的访问权限。 如果用户创建了保护文档的策略，或者该策略是允许此功能的共享策略，则用户可以撤销对其受策略保护文档的访问权限。
-* 切换应用于文档的策略。 如果将策略应用于文档，则创建该策略或该策略是启用此功能的共享策略时，用户可以切换该策略。 策略集协调员可以从其策略集切换策略。 管理员可以切换应用于任何文档的策略。
+* 搜尋並檢視受原則保護檔案的詳細資訊。 您可以檢視檔名稱、發行者名稱、原則名稱和套用原則的日期的相關資訊。 如果刪除了保護檔案的原則，您也可以在原則名稱下看到已刪除的原則ID。 使用者可以檢視和管理自己受原則保護的檔案。 管理員可以檢視和管理所有受原則保護的檔案。
+* 變更套用至檔案之原則的詳細資訊。 使用者可以編輯他們自己的原則，管理員可以編輯共用和個人原則，原則集專員可以編輯他們有權執行的原則集中的共用原則。 您可以直接從「檔案詳細資訊」頁面存取與檔案相關聯的原則。
+* 撤銷並恢復受原則保護檔案的存取權。 管理員可以撤銷和恢復任何檔案的存取權。 原則組協調員（有權管理檔案的人）可以從其原則組撤銷和恢復對使用共用原則的受原則保護檔案的存取權。 如果使用者建立了保護檔案的原則，或該原則是允許此功能的共用原則，則使用者可以撤銷對其受原則保護檔案的存取權。
+* 切換套用至檔案的原則。 將原則套用至檔案的使用者，可以在建立原則或該原則是啟用此功能的共用原則時切換原則。 原則組專員可以從其原則組切換原則。 管理員可以切換套用至任何檔案的原則。
 
-当文档受策略保护并且您撤销访问权限或切换应用的策略时，更改将生效，如下所示：
+當檔案受原則保護，而您撤銷存取許可權或切換套用的原則時，變更將生效，如下所示：
 
-* 如果文档处于联机状态，除非用户打开了文档，否则将立即应用更改。 在这种情况下，用户必须关闭文档才能使更改生效。
-* 如果收件人脱机使用文档（例如，在笔记本电脑上），则更改在下次收件人通过打开任何受策略保护的文档与Document Security同步时生效。
+* 如果檔案線上上，除非使用者已開啟檔案，否則會立即套用變更。 在這種情況下，使用者必須關閉檔案，變更才會生效。
+* 如果收件者離線使用檔案（例如在筆記型電腦上），則變更會在下次收件者透過開啟任何受原則保護的檔案與Document Security同步時生效。
 
-## 查看有关文档的信息 {#view-information-about-a-document}
+## 檢視檔案的相關資訊 {#view-information-about-a-document}
 
-对于“文档”页面上列出的每个文档，您可以看到文档名称、发布者名称、策略名称和文档受保护日期。 如果保护文档的策略已删除，则该策略ID将列在“策略名称”下。
+對於「檔案」頁面上列出的每個檔案，您可以看到檔名稱、發行者名稱、原則名稱和檔案受保護日期。 如果保護檔案的原則已刪除，則原則ID會列在「原則名稱」下。
 
-您还可以在“文档详细信息”页面上查看有关特定文档的更多详细信息（如下所述）：
-
->[!NOTE]
->
->您必须使用“文档详细信息”页面上的“策略名称”链接来访问在Microsoft Outlook中为附加到电子邮件的文档的收件人自动生成的策略。 这些策略不会显示在策略页面上。
-
-**文档名称：** 所选文档的名称。
-
-**文档ID：** Document Security在将策略应用于文档时分配的唯一标识符。 document security使用此编号来跟踪文档。
-
-**文档状态：** 文档的状态（例如，有效或已撤销。）
-
-**发布者：** 将策略附加到文档的用户的名称。
-
-**策略名称：** 用于保护文档的策略的名称。 您可以单击该名称以打开策略。 您必须使用此链接来访问Acrobat为Outlook中附加到电子邮件的文档的收件人生成的策略。 这些策略不会显示在“策略”页面上。
-
-**策略类型：** 应用于文档的策略类型。
-
-**发布日期：** 将策略应用于文档的日期。
-
-**相关迭代：** 如果文档具有相关小版本，则此项目也会显示在列表中。 单击链接可查看文档的相关小版本的列表。
-
-用户可以查看有关其受保护文档的信息。 管理员可以查看有关任何用户已受策略保护的文档的信息。 策略集协调员可以查看受策略保护的文档的相关信息，而不受策略集的保护。
-
-1. 在Document Security页面上，单击“文档”。
-1. 在文档列表中，单击相应的文档。 “文档详细信息”页面将打开，显示有关文档的详细信息。 此页面还提供了撤销文档访问权限、切换策略和查看与此文档相关的事件的选项。
-
-## 查看文档的相关小版本 {#view-related-iterations-for-a-document}
-
-如果启用了跟踪相关小版本，则可以跟踪各个用户已保存的文档版本。 只有某些应用程序（如PTC Pro/ENGINEER Wildfire）支持此功能。
-
-当多个用户协作并保存同一文档的不同版本时，此功能非常有用。 document security可以跟踪各种迭代；因此，您可以轻松查看不同版本的文档信息。
-
-如果启用了此功能，则可以从“文档”页面查看文档的相关小版本。
-
-1. 查看文档的“文档详细信息”页面。 (请参阅 [查看有关文档的信息](controlling-access-policy-protected-documents.md#view-information-about-a-document).)
-1. 单击“查看相关小版本”。 仅当启用该功能时，该选项才可用。 此时将显示相关迭代的列表。 对于每个小版本，可以查看以下信息：
-
-   * **迭代：** 文件名。 它可能与原始文件名不同，并且末尾附加了一个版本号。
-   * **发布者：** 原始文档的发布者。
-   * **创建者：** 保存迭代的用户。
-   * **创建日期：** 保存迭代的日期和时间。
-   * **策略：** 保护迭代的策略。 不同的迭代可能受不同的策略保护。
-
-1. 要显示该小版本的“文档详细信息”页面，请单击小版本的文件名。
-
-## 撤销和恢复对文档的访问 {#revoking-and-reinstating-access-to-documents}
-
-您可以撤销和恢复对受策略保护文档的访问权限：
-
-**用户：** 可以撤销或恢复对文档的访问权限，这些文档由应用策略的用户使用自己的个人策略或启用了撤销功能的共享策略进行保护。 无法撤销文档访问权限或切换策略的用户需要联系管理员。
-
-**管理员：** 可以撤销或恢复对任何受策略保护文档的访问权限，包括受个人或共享策略保护的文档。 如果管理员撤销对受共享策略保护的文档的访问权限，则只有管理员可以恢复该文档的访问权限。
-
-**策略集协调器：** 可以撤销或恢复策略集中的策略所保护的文档的访问权限。
-
-当您撤销或恢复文档访问权限时，更改将在以下时间生效：
-
-* 如果文档处于联机状态且已关闭，则下次收件人通过打开受策略保护的文档与Document Security同步时，更改将生效。
-* 如果文档在线且处于打开状态，则更改将在收件人关闭文档时生效。
-* 如果文档处于脱机状态（在没有Internet连接的情况下使用，例如在笔记本电脑上），则更改将在收件人下次与文档安全同步时生效。
-
-**撤销对受策略保护文档的访问权限**
-
-1. 在Document Security页面上，单击“文档”。
-1. 选中相应文档旁边的复选框，然后单击“撤消”。 您可以一次撤消对多个文档的访问权限。
-1. 选择要在撤消文档后向尝试打开文档的用户显示的消息：
-
-   * **常规消息：** 指示作者撤消了文档
-   * **文档已终止：** 指示作者已终止文档
-   * **已修订文档**：表示作者修订了文档
-
-1. （可选）如果文档有较新版本可用，请输入URL并单击测试以验证该URL。
-1. 单击“确定”，然后再次单击“确定”以返回“文档”页。
-
-**恢复文档访问权限**
-
-1. 在Document Security页面上，单击“文档”。
-1. 在文档列表中，单击相应的文档。
-1. 单击取消撤销，然后单击确定。
-
-## 切换应用于文档的策略 {#switch-a-policy-that-is-applied-to-a-document}
-
-用户、策略集协调员和管理员可以切换应用于受策略保护文档的策略（您一次只能对文档应用一个策略）。 如果用户创建了策略，或者该策略是启用了此功能的共享策略，则用户可以切换应用于自己受策略保护的文档的策略。 否则，管理员或策略集协调器必须切换策略。 管理员可以为任何用户的受策略保护的文档切换策略。 策略集协调员可以从其策略集切换策略。
-
-切换策略时，新策略将按以下方式执行：
-
-* 如果文档在线并已关闭，则下次收件人通过在线打开任何受策略保护的文档与Document Security同步时，更改将生效。
-* 如果文档在线且处于打开状态，则更改将在用户关闭文档时生效。
-* 如果文档处于脱机状态（在使用中时没有活动的Internet或网络连接，例如在笔记本电脑上），则下次用户通过联机打开受策略保护的文档与Document Security同步时，将应用更改。
+您也可以在「檔案詳細資訊」頁面上檢視有關特定檔案的更多詳細資訊（如下所述）：
 
 >[!NOTE]
 >
->要允许对当前没有此访问权限的受策略保护文档进行匿名访问，请删除客户端应用程序中的现有策略，然后应用允许匿名访问的策略。 如果切换策略，用户仍必须登录才能访问该文档。
+>您必須使用[檔案詳細資訊]頁面上的[原則名稱]連結，才能存取在Microsoft Outlook中為附加至電子郵件訊息之檔案的收件者自動產生的原則。 這些原則不會出現在原則頁面上。
 
-1. 在Document Security页面上，单击“文档”。
-1. 在文档列表中，单击相应的文档。
-1. 单击Switch Policy。 此时将显示一个最多包含100个策略的列表。
-1. 如果未显示所需的策略，请从“查找”列表中选择“策略名称”或“策略ID”，键入名称或ID，然后单击“查找”。
-1. 单击列表中的新策略。
-1. 单击“切换策略”，然后单击“确定”返回“文档”页。
+**檔名稱：** 所選檔案的名稱。
 
-## 搜索文档 {#search-for-a-document}
+**檔案ID：** 當原則套用至檔案時，Document Security指派的唯一識別碼。 document security使用此編號來追蹤檔案。
 
-您可以使用列表中可用的日期范围条件和搜索条件的组合在“文档”页面上搜索文档。 这些标准包括文档名称、策略名称或所有文档。
+**檔案狀態：** 檔案的狀態（例如，有效或已撤銷）。
 
-一些其他搜索选项仅向管理员提供：
+**發行者：** 將原則附加至檔案的使用者名稱。
 
-**文档ID：** 应用策略时Document Security分配给文档的唯一ID号。
+**原則名稱：** 用來保護檔案的原則名稱。 您可以按一下名稱以開啟原則。 您必須使用此連結來存取Acrobat為Outlook中附加至電子郵件訊息之檔案的收件者產生的原則。 這些原則不會顯示在「原則」頁面上。
 
-**文档名称：** 文档的名称。
+**原則型別：** 套用至檔案的原則型別。
 
-**发布者名称：** 将策略附加到文档的用户的名称。 您可以从所有域或指定域中选择用户。
+**發佈日期：** 將原則套用至檔案的日期。
 
-**策略ID：** 附加到文档的策略的ID号。
+**相關反複專案：** 如果檔案具有相關版序，則此專案也會出現在清單中。 按一下連結可檢視檔案的相關版序清單。
 
-**策略名称：** 附加到文档的策略的名称。
+使用者可以檢視有關其受保護檔案的資訊。 管理員可檢視任何使用者已受原則保護之檔案的相關資訊。 原則組專員可以檢視受原則保護的檔案相關資訊，而不受其原則組的影響。
 
-**所有文档：** 所有受管理员和用户保护的文档。 使用“所有文档”选项进行搜索可能会返回一长串文档。
+1. 在Document Security頁面上，按一下「檔案」。
+1. 在檔案清單中，按一下適當的檔案。 「檔案詳細資訊」頁面隨即開啟，顯示有關檔案的詳細資訊。 此頁面也提供撤銷檔案存取權、切換原則以及檢視與此檔案相關之事件的選項。
 
-1. 在Document Security页面上，单击“文档”。
-1. 在“查找”列表中，选择所需的搜索条件。
+## 檢視檔案的相關版序 {#view-related-iterations-for-a-document}
 
-   可以将条件指定为文档ID、文档名称、发布者名称、策略ID、策略名称或所有文档。
+如果啟用了追蹤相關版序，您可以追蹤不同使用者已儲存的檔案版本。 只有特定應用程式支援此功能，例如PTC Pro/ENGINEER Wildfire。
 
-   如果指定发布者名称，请单击“通讯簿”图标并指定要在其中搜索用户的域，然后单击“确定”以返回“文档”搜索页。
+當多位使用者共同作業並儲存同一份檔案的不同版本時，此功能會很有用。 document security可以追蹤各種版序；因此，您可以輕鬆檢視不同版本的檔案資訊。
 
-1. （可选）在日期列表中，选择一个日期范围选项。 如果选择自定义日期，请在显示的框中以yyyy/mm/dd格式键入日期，或使用日期选取器指定日期范围：
+如果啟用此功能，您可以從「檔案」頁面檢視檔案的相關版序。
 
-   * 单击日历以打开日期选择器。
-   * 使用箭头查找年和月。
-   * 在日历上单击月中某日。
-   * 单击“确定”以关闭日期选取器。
+1. 檢視檔案的「檔案詳細資訊」頁面。 (請參閱 [檢視檔案的相關資訊](controlling-access-policy-protected-documents.md#view-information-about-a-document).)
+1. 按一下「檢視相關版序」。 只有在啟用特徵時，才可使用選項。 相關版序清單隨即顯示。 對於每個版序，您可以檢視下列資訊：
 
-1. 单击“查找”。
+   * **反複專案：** 檔案名稱。 它可能與原始檔案名稱不同，並且會在結尾附加一個版本號碼。
+   * **發行者：** 原始檔案的發行者。
+   * **建立者：** 儲存反複專案的使用者。
+   * **建立日期：** 儲存反複專案的日期和時間。
+   * **原則：** 保護反複專案的原則。 不同的反複專案可能受不同的原則保護。
 
-## 对文档列表排序 {#sort-the-document-list}
+1. 若要顯示該版序的「檔案詳細資訊」頁面，請按一下版序的檔案名稱。
 
-您可以按列标题对文档列表进行排序。 列标题旁边的三角形图标指示当前使用哪一列进行排序。 上指三角形表示升序，下指三角形表示降序。
+## 撤銷和恢復對檔案的存取權 {#revoking-and-reinstating-access-to-documents}
 
-1. 在Document Security页面上，单击“文档”。
-1. 单击相应的列标题。
-1. 要更改排序顺序，请再次单击该列。
+您可以撤銷並恢復受原則保護檔案的存取權：
 
-## 将封面页添加到受策略保护的文档 {#add-cover-page-to-policy-protected-documents}
+**使用者：** 可以撤銷或恢復使用個人原則或共用原則（套用原則的使用者可針對這些共用原則啟用撤銷功能）保護之檔案的存取權。 無法撤銷檔案存取權或切換原則的使用者需要聯絡管理員。
 
-对于大多数非Adobe PDF查看器，如果您打开受Document Security保护的文档，则第一页显示为空白页，或者应用程序在没有打开文档的情况下中止。
+**管理員：** 可以撤銷或恢復任何受原則保護檔案的存取許可權，包括受個人或共用原則保護的檔案。 如果管理員撤銷對受共用原則保護之檔案的存取權，則只有管理員可以恢復該檔案的存取許可權。
 
-您可以使用页面0（包装文档）支持来允许非Adobe PDF查看者打开受保护的文档并在文档中显示封面页。
+**原則集協調員：** 可以撤銷或恢復其原則集所保護之檔案的存取許可權。
+
+當您撤銷或恢復檔案存取許可權時，變更會在以下時間生效：
+
+* 如果檔案線上上並已關閉，則下次收件者透過開啟受原則保護的檔案與Document Security同步時，變更會生效。
+* 如果檔案線上上且已開啟，則變更會在收件者關閉檔案時生效。
+* 如果檔案離線（使用時沒有網際網路連線，例如在筆記型電腦上），則變更會在收件者下次與Document Security同步時生效。
+
+**撤銷受原則保護檔案的存取權**
+
+1. 在Document Security頁面上，按一下「檔案」。
+1. 選取適當檔案旁的核取方塊，然後按一下撤銷。 您可以一次撤銷多個檔案的存取權。
+1. 選取要在檔案撤銷後向嘗試開啟檔案的使用者顯示的訊息：
+
+   * **一般訊息：** 指出作者已撤銷檔案
+   * **檔案已終止：** 指出作者已終止檔案
+   * **檔案已修訂**：指出作者已修訂檔案
+
+1. （可選）如果有較新版本的檔案可用，請輸入URL並按一下測試以驗證URL。
+1. 按一下「確定」，然後再次按一下「確定」以返回「檔案」頁面。
+
+**恢復檔案存取許可權**
+
+1. 在Document Security頁面上，按一下「檔案」。
+1. 在檔案清單中，按一下適當的檔案。
+1. 按一下取消撤銷，然後按一下確定。
+
+## 切換套用至檔案的原則 {#switch-a-policy-that-is-applied-to-a-document}
+
+使用者、原則組專員和管理員可以切換套用至受原則保護檔案的原則（您一次只能套用一個原則至檔案）。 如果使用者已建立原則，或該原則是已啟用此功能之共用原則，則使用者可以切換套用至他們自己的受原則保護檔案的原則。 否則，管理員或原則設定協調者必須切換原則。 管理員可以為任何使用者的受原則保護檔案切換原則。 原則組專員可以從其原則組切換原則。
+
+當您切換原則時，新原則會依下列方式強制執行：
+
+* 如果檔案線上上並已關閉，則下次收件者透過線上上開啟任何受原則保護的檔案來與Document Security同步時，變更會生效。
+* 如果檔案線上上且已開啟，則變更會在使用者關閉檔案時生效。
+* 如果檔案離線（使用中時沒有使用中的網際網路或網路連線，例如在筆記型電腦上），則下次使用者透過線上開啟受原則保護的檔案與Document Security同步時，會套用變更。
 
 >[!NOTE]
 >
->在Adobe Reader/Acrobat或MobileReader中查看此类文档（包含页面0）时，默认情况下会打开受保护的文档。
+>若要允許匿名存取目前沒有此存取權的受原則保護檔案，請移除使用者端應用程式中的現有原則，然後套用允許匿名存取的原則。 如果您切換原則，使用者仍然必須登入才能存取檔案。
 
-**将封面页添加到受策略保护的文档**
+1. 在Document Security頁面上，按一下「檔案」。
+1. 在檔案清單中，按一下適當的檔案。
+1. 按一下「切換原則」。 最多會顯示100個原則的清單。
+1. 如果未顯示您想要的原則，請從[尋找]清單中選取[原則名稱]或[原則ID]，輸入名稱或ID，然後按一下[尋找]。
+1. 按一下清單中的新原則。
+1. 按一下「切換原則」，然後按一下「確定」返回「檔案」頁面。
 
-在Workbench中使用以下流程：
+## 搜尋檔案 {#search-for-a-document}
 
-**带封面页的Protect文档：** 使用指定的策略保护PDF文档，并将封面页添加到文档中
+您可以使用日期範圍條件與清單中可用的搜尋條件組合，在「檔案」頁面上搜尋檔案。 這些條件包括檔名稱、原則名稱或所有檔案。
 
-**提取受保护的文档：** 从带有封面页的PDF文档中提取受策略保护的PDF文档
+只有管理員可以使用其他搜尋選項：
 
-使用以下Document Security API：
+**檔案ID：** 當套用原則時，Document Security指派給檔案的唯一ID號。
 
-**protectDocumentWithCoverPage：** 使用指定的策略保护给定PDF，并返回带有封面页和受保护文档的文档作为附件
-`//Create a ServiceClientFactory instance ServiceClientFactory factory = ServiceClientFactory.createInstance(connectionProps); //Create a RightsManagementClient object RightsManagementClient rightsClient = new RightsManagementClient(factory); //Reference a PDF document to which a policy is applied FileInputStream fileInputStream = new FileInputStream("C:\\testFile.pdf"); Document inPDF = new Document(fileInputStream); //Reference a Cover Page document FileInputStream coverPageInputStream = new FileInputStream("C:\\CoverPage.pdf"); Document inCoverDoc = new Document(coverPageInputStream); //Create a Document Manager object DocumentManager documentManager = rightsClient.getDocumentManager(); //Apply a policy to the PDF document RMSecureDocumentResult rmSecureDocument = documentManager.protectDocumentWithCoverPage( inPDF, "ProtectedPDF.pdf", "PolicySetName", "PolicyName", null, null, inCoverDoc, true); //Retrieve the policy-protected PDF document Document protectPDF = rmSecureDocument.getProtectedDoc(); //Save the policy-protected PDF document File myFile = new File("C:\\PolicyProtectedDoc.pdf"); protectPDF.copyToFile(myFile);` **extractProtectedDocument：** 提取作为带封面页文档中的附件的受保护文档。 可以使用protectDocumentWithCoverPage方法创建具有封面页的文档
+**檔名稱：** 檔名稱。
+
+**發行者名稱：** 將原則附加至檔案的使用者名稱。 您可以從所有網域或指定的網域中選取使用者。
+
+**原則ID：** 附加到檔案的原則的ID號。
+
+**原則名稱：** 附加至檔案的原則名稱。
+
+**所有檔案：** 所有受管理員和使用者保護的檔案。 使用「所有檔案」選項進行搜尋可能會傳回一長串檔案。
+
+1. 在Document Security頁面上，按一下「檔案」。
+1. 在「尋找」清單中，選取所需的搜尋條件。
+
+   您可以將條件指定為檔案ID、檔名稱、發行者名稱、原則ID、原則名稱或所有檔案。
+
+   如果您指定發行者名稱，請按一下[通訊錄]圖示，並指定您要搜尋使用者的網域，然後按一下[確定]返回[檔案]搜尋頁面。
+
+1. （選用）在日期清單中，選取日期範圍選項。 如果您選取「自訂日期」，請在出現的方塊中以yyyy/mm/dd格式輸入日期，或使用日期選擇器指定日期範圍：
+
+   * 按一下行事曆以開啟日期選擇器。
+   * 使用箭頭來尋找年份和月份。
+   * 在行事曆上按一下當月某日。
+   * 按一下「確定」以關閉「日期選擇器」。
+
+1. 按一下「尋找」。
+
+## 排序檔案清單 {#sort-the-document-list}
+
+您可以依欄標題來排序檔案清單。 欄標題旁的三角形圖示表示目前使用哪一欄來排序。 向上指向三角形表示遞增順序，向下指向三角形表示遞減順序。
+
+1. 在Document Security頁面上，按一下「檔案」。
+1. 按一下適當的欄標題。
+1. 若要變更排序順序，請再次按一下欄。
+
+## 新增封面頁至受原則保護的檔案 {#add-cover-page-to-policy-protected-documents}
+
+在大部分非Adobe PDF檢視器的情況下，如果您開啟受Document Security保護的檔案，第一頁會顯示為空白頁面，或者應用程式會在未開啟檔案的情況下中止。
+
+您可以使用頁面0 （包裝函式檔案）支援，讓非Adobe PDF檢視器開啟受保護的檔案並在檔案中顯示封面頁。
+
+>[!NOTE]
+>
+>在Adobe Reader/Acrobat或行動Reader中檢視此類檔案（包含頁面0）時，受保護檔案會依預設開啟。
+
+**若要將封面頁新增至受原則保護的檔案**
+
+在Workbench中使用下列處理：
+
+**含封面頁的Protect檔案：** 使用指定的原則保護PDF檔案，並將封面頁新增至檔案
+
+**擷取受保護檔案：** 從含有封面頁的PDF檔案中擷取受原則保護的PDF檔案
+
+使用下列Document Security API：
+
+**protectDocumentWithCoverPage：** 使用指定的原則保護指定PDF，並傳回附有封面頁和受保護檔案作為附件的檔案
+`//Create a ServiceClientFactory instance ServiceClientFactory factory = ServiceClientFactory.createInstance(connectionProps); //Create a RightsManagementClient object RightsManagementClient rightsClient = new RightsManagementClient(factory); //Reference a PDF document to which a policy is applied FileInputStream fileInputStream = new FileInputStream("C:\\testFile.pdf"); Document inPDF = new Document(fileInputStream); //Reference a Cover Page document FileInputStream coverPageInputStream = new FileInputStream("C:\\CoverPage.pdf"); Document inCoverDoc = new Document(coverPageInputStream); //Create a Document Manager object DocumentManager documentManager = rightsClient.getDocumentManager(); //Apply a policy to the PDF document RMSecureDocumentResult rmSecureDocument = documentManager.protectDocumentWithCoverPage( inPDF, "ProtectedPDF.pdf", "PolicySetName", "PolicyName", null, null, inCoverDoc, true); //Retrieve the policy-protected PDF document Document protectPDF = rmSecureDocument.getProtectedDoc(); //Save the policy-protected PDF document File myFile = new File("C:\\PolicyProtectedDoc.pdf"); protectPDF.copyToFile(myFile);` **extractProtectedDocument：** 擷取受保護的檔案，它是封面頁所在檔案的附件。 可以使用protectDocumentWithCoverPage方法建立具有封面頁的檔案
 `//Create a ServiceClientFactory instance ServiceClientFactory factory = ServiceClientFactory.createInstance(connectionProps); //Create a RightsManagementClient object RightsManagementClient rightsClient = new RightsManagementClient(factory); //Reference a protected PDF document with a Cover Page FileInputStream fileInputStream = new FileInputStream("C:\\policyProtectedDocWithCoverPage.pdf"); Document inPDF = new Document(fileInputStream); //Create a Document Manager object DocumentManager documentManager = rightsClient.getDocumentManager(); //Apply a policy to the PDF document Document extractedDoc = documentManager.extractProtectedDocument(inPDF); //Save the policy-protected PDF document File myFile = new File("C:\\PolicyProtectedDoc.pdf"); extractedDoc.copyToFile(myFile);`

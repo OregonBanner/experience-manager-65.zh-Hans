@@ -1,7 +1,7 @@
 ---
-title: 自适应表单的布局功能
+title: 調適型表單的版面配置功能
 seo-title: Layout capabilities of adaptive forms
-description: 自适应表单在各种设备上的布局和外观受布局设置控制。 了解各种布局及其应用方式。
+description: 調適型表單在各種裝置上的版面配置與外觀是由版面配置設定所控管。 瞭解各種版面以及如何套用它們。
 seo-description: Layout and appearances of adaptive forms on various devices are governed by the layout settings. Understand the various layouts and how to apply them.
 uuid: 79022ac2-1aa3-47c5-b094-cbe83334ea62
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -17,164 +17,164 @@ ht-degree: 0%
 
 ---
 
-# 自适应表单的布局功能{#layout-capabilities-of-adaptive-forms}
+# 調適型表單的版面配置功能{#layout-capabilities-of-adaptive-forms}
 
-Adobe Experience Manager (AEM)允许您创建易于使用的自适应表单，为最终用户提供动态体验。 表单布局控制项或组件在自适应表单中的显示方式。
+Adobe Experience Manager (AEM)可讓您建立易於使用的調適型表單，為使用者提供動態體驗。 表單版面配置會控制專案或元件在調適型表單中的顯示方式。
 
-## 必备知识 {#prerequisite-knowledge}
+## 必備條件知識 {#prerequisite-knowledge}
 
-在了解自适应表单的不同布局功能之前，请阅读以下文章以详细了解自适应表单。
+在了解調適型表單的不同版面功能之前，請閱讀以下文章以進一步了解調適型表單。
 
-[AEM Forms简介](../../forms/using/introduction-aem-forms.md)
+[AEM Forms簡介](../../forms/using/introduction-aem-forms.md)
 
-[创作表单简介](../../forms/using/introduction-forms-authoring.md)
+[製作表單簡介](../../forms/using/introduction-forms-authoring.md)
 
-## 布局类型 {#types-of-layouts}
+## 版面型別 {#types-of-layouts}
 
-自适应表单为您提供以下类型的布局：
+最適化表單提供您下列型別的版面：
 
-**面板布局** 控制面板中的项目或组件在设备上的显示方式。
+**面板配置** 控制面板內的專案或元件在裝置上的顯示方式。
 
-**移动设备布局** 控制表单在移动设备上的导航。 如果设备宽度为768像素或更高，则布局被视为移动设备布局并适用于移动设备。
+**行動佈局** 控制行動裝置上表單的導覽。 如果裝置寬度為768畫素或更高，此版面會被視為行動版面，並針對行動裝置進行最佳化。
 
-**工具栏布局** 控制操作按钮在表单工具栏或面板工具栏中的位置。
+**工具列配置** 控制動作按鈕在表單中工具列或面板工具列中的位置。
 
-所有这些面板布局都在以下位置定义：
+所有這些面板配置都定義在下列位置：
 
 `/libs/fd/af/layouts`。
 
 >[!NOTE]
 >
->要更改自适应表单的布局，请使用AEM中的创作模式。
+>若要變更最適化表單的版面，請使用AEM中的「撰寫模式」。
 
-![CRX存储库中的布局位置](assets/layouts_location_in_crx.png)
+![CRX存放庫中的版面位置](assets/layouts_location_in_crx.png)
 
 ## 面板布局 {#panel-layout}
 
-表单作者可以将布局与自适应表单的每个面板（包括根面板）关联。
+表單作者可以將版面配置與最適化表單的每個面板相關聯，包括根面板。
 
-面板布局位于 `/libs/fd/af/layouts/panel` 位置。
+面板配置位於 `/libs/fd/af/layouts/panel` 位置。
 
-![自适应表单的根面板的面板布局列表](assets/layouts.png)
+![最適化表單根面板的面板配置清單](assets/layouts.png)
 
-自适应表单中的面板布局列表
+調適型表單中的面板配置清單
 
-### 响应式 — 页面上的所有内容，无需导航 {#responsive-everything-on-one-page-without-navigation-br}
+### Responsive — 全部於單頁無需導覽 {#responsive-everything-on-one-page-without-navigation-br}
 
-使用此面板布局可创建响应式布局，该布局可调整到设备的屏幕大小，而无需任何专门的导航。
+使用此面板版面配置可建立回應式版面，此版面可依裝置的熒幕大小進行調整，而不需要任何專門的導覽。
 
-使用此布局，您可以放置多个 **[!UICONTROL 面板自适应表单]** 组件在面板中逐个显示。
+使用此版面，您可以放置多個 **[!UICONTROL 面板最適化表單]** 元件在面板中一個接一個。
 
-![使用响应式布局的表单，如小屏幕上所示](assets/responsive_layout_seen_on_small_screen.png)
+![使用回應式版面的表單（如小熒幕所示）](assets/responsive_layout_seen_on_small_screen.png)
 
-使用响应式布局的表单，如小屏幕上所示
+使用回應式版面的表單（如小熒幕所示）
 
-![使用响应式布局的表单，如大屏幕上所示](assets/responsive_layout_seen_on_large_screen.png)
+![使用回應式版面的表單（如大熒幕所見）](assets/responsive_layout_seen_on_large_screen.png)
 
-使用响应式布局的表单，如大屏幕上所示
+使用回應式版面的表單（如大熒幕所見）
 
-### 向导 — 一次显示一个步骤的多步表单 {#wizard-a-multi-step-form-showing-one-step-at-a-time}
+### 精靈 — 一次顯示一個步驟的多步驟表單 {#wizard-a-multi-step-form-showing-one-step-at-a-time}
 
-使用此面板布局可在表单中提供引导式导航。 例如，当您要在表单中捕获必填信息时分步引导用户时，可使用此布局。
+使用此面板版面配置在表單內提供引導式導覽。 例如，當您想要在表單中擷取必要資訊，同時逐步引導使用者時，請使用此版面。
 
-使用 `Panel adaptive form` 组件，用于在面板中提供分步导航。 使用此布局时，用户仅在当前步骤完成后才移至下一步
+使用 `Panel adaptive form` 元件，在面板內提供逐步導覽。 使用此版面配置時，使用者只會在目前步驟完成後移至下一個步驟
 
 ```javascript
 window.guideBridge.validate([], this.panel.navigationContext.currentItem.somExpression)
 ```
 
-![多步骤表单的向导布局中的步骤完成表达式](assets/layout-sidebar.png)
+![多步驟表單的精靈版面配置中的步驟完成運算式](assets/layout-sidebar.png)
 
-多步骤表单的向导布局中的步骤完成表达式
+多步驟表單的精靈版面配置中的步驟完成運算式
 
-![使用向导布局的表单](assets/wizard-layout.png)
+![使用精靈配置的表單](assets/wizard-layout.png)
 
-使用向导的表单
+使用精靈的表單
 
-### 可折叠项设计的布局 {#layout-for-accordion-design}
+### 摺疊式功能表設計的配置 {#layout-for-accordion-design}
 
-使用此布局，您可以放置 `Panel adaptive form` 面板中具有折叠样式导航的组件。 使用此布局，您还可以创建可重复的面板。 可重复面板允许您根据需要动态添加或移除面板。 您可以定义面板重复的最小和最大次数。 此外，可以根据面板项中提供的信息来动态地确定面板的标题。
+使用此版面，您可以放置 `Panel adaptive form` 面板中的元件，具有摺疊式功能表樣式導覽。 使用此版面，您也可以建立可重複的面板。 可重複面板可讓您視需要動態新增或移除面板。 您可以定義面板重複的最小和最大次數。 此外，面板的標題可以根據面板專案中提供的資訊動態確定。
 
-摘要表达式可用于显示最终用户在最小化面板的标题中提供的值。
+摘要運算式可用來顯示一般使用者在最小化面板標題中提供的值。
 
-![在自适应表单中使用折叠布局的可重复面板](assets/repeatable_panels_using_accordion_layout.png)
+![在最適化表單中使用摺疊式佈局的可重複面板](assets/repeatable_panels_using_accordion_layout.png)
 
-使用折叠布局创建的可重复面板
+使用摺疊式佈局建立的可重複面板
 
-### 选项卡式布局 — 选项卡显示在左侧 {#tabbed-layout-tabs-appear-on-the-left}
+### 索引標籤版面配置 — 索引標籤顯示在左側 {#tabbed-layout-tabs-appear-on-the-left}
 
-使用此布局，您可以放置 `Panel adaptive form` 带选项卡导航的面板中的组件。 选项卡位于面板内容的左侧。
+使用此版面，您可以放置 `Panel adaptive form` 具有索引標籤導覽的面板中的元件。 標籤會放置在面板內容的左側。
 
-![在选项卡式布局中，选项卡显示在左侧](assets/tabbed_layout_left.png)
+![在「索引標籤」配置圖中，索引標籤會顯示在左側](assets/tabbed_layout_left.png)
 
-显示在面板左侧的选项卡
+出現在面板左側的索引標籤
 
-### 选项卡式布局 — 选项卡显示在顶部 {#tabbed-layout-tabs-appear-on-the-top}
+### 索引標籤版面配置 — 索引標籤顯示在頂端 {#tabbed-layout-tabs-appear-on-the-top}
 
-使用此布局，您可以放置 `Panel adaptive form` 具有选项卡导航的面板中的组件。 选项卡位于面板内容的顶部。
+使用此版面，您可以放置 `Panel adaptive form` 具有索引標籤導覽的面板中的元件。 索引標籤會放置在面板內容的頂端。
 
-![带选项卡的自适应表单中的选项卡式布局](assets/tabbed_layout_top.png)
+![最適化表單中有索引標籤的索引標籤版面](assets/tabbed_layout_top.png)
 
-显示在面板顶部的选项卡
+出現在面板頂端的索引標籤
 
-## 移动设备布局 {#mobile-layouts}
+## 行動版面配置 {#mobile-layouts}
 
-移动设备布局允许在屏幕相对较小的移动设备上进行用户友好的导航。 移动设备布局使用选项卡式或向导式样式进行表单导航。 应用移动设备布局可为整个表单提供单个布局。
+行動版面配置可在熒幕較小之行動裝置上進行方便好用的導覽。 行動版面會使用索引標籤或精靈樣式來進行表單導覽。 套用行動版面配置可為整個表單提供單一版面配置。
 
-此布局使用导航栏和导航菜单控制导航。 导航栏显示 **&lt;** 和 **>** 图标，指示 **下一个** 和 **上一个** 表单中的导航步骤。
+此版面配置會使用導覽列和導覽功能表來控制導覽。 導覽列隨即顯示 **&lt;** 和 **>** 圖示表示 **下一個** 和 **上一個** 表單中的導覽步驟。
 
-移动设备布局位于 `/libs/fd/af/layouts/mobile/` 位置。 默认情况下，自适应表单中提供了以下移动设备布局。
+行動版面配置位於 `/libs/fd/af/layouts/mobile/` 位置。 下列行動版面預設為可在調適型表單中使用。
 
-![自适应表单中的移动设备布局列表](assets/mobile-navigation.png)
+![調適型表單中的行動版面配置清單](assets/mobile-navigation.png)
 
-自适应表单中的移动设备布局列表
+調適型表單中的行動版面配置清單
 
-使用移动布局时，可通过点按访问各种表单面板的表单菜单 ![aem6forms_form_menu](assets/aem6forms_form_menu.png) 图标。
+使用行動版面時，可點選表單功能表來存取各種表單面板 ![aem6forms_form_menu](assets/aem6forms_form_menu.png) 圖示。
 
-### 表单标题中具有面板标题的布局 {#layout-with-panel-titles-in-the-form-header}
+### 在表單標題中使用面板標題的佈局 {#layout-with-panel-titles-in-the-form-header}
 
-顾名思义，此布局显示面板标题以及导航菜单和导航栏。 此布局还提供用于导航的“下一个”和“上一个”图标。
+如名稱所示，此版面會顯示面板標題以及導覽功能表和導覽列。 此版面配置也提供用於導覽的「下一個」和「上一個」圖示。
 
-![在表单标题中具有面板标题的移动布局](assets/mobile_layout_with.png)
+![行動版面配置在表單標題中具有面板標題](assets/mobile_layout_with.png)
 
-在表单标题中具有面板标题的移动布局
+行動版面配置在表單標題中具有面板標題
 
-### 表单标题中没有面板标题的布局 {#layout-without-panel-titles-in-the-form-header}
+### 版面配置中表單標題沒有面板標題 {#layout-without-panel-titles-in-the-form-header}
 
-顾名思义，此布局仅显示没有面板标题的导航菜单和导航栏。 此布局还提供用于导航的“下一个”和“上一个”图标。
+如名稱所建議，此版面只會顯示導覽功能表和導覽列，而不會顯示面板標題。 此版面配置也提供用於導覽的「下一個」和「上一個」圖示。
 
-![表单标题中没有面板标题的移动布局](assets/mobile_layout_without.png)
+![行動版面在表單標題中沒有面板標題](assets/mobile_layout_without.png)
 
-表单标题中没有面板标题的移动布局
+行動版面在表單標題中沒有面板標題
 
-## 工具栏布局 {#toolbar-layouts}
+## 工具列配置 {#toolbar-layouts}
 
-工具栏布局控制您添加到自适应表单的任何操作按钮的位置和显示。 可以在表单级别或面板级别添加布局。
+工具列版面配置可控制您新增至最適化表單之任何動作按鈕的定位和顯示。 版面配置可在表單層級或面板層級新增。
 
-![自适应表单中用于控制按钮布局的工具栏布局列表](assets/toolbar-layouts.png)
+![最適化表單中的工具列配置清單，可控制按鈕的配置](assets/toolbar-layouts.png)
 
-自适应表单中的工具栏布局列表
+調適型表單中的工具列配置清單
 
-工具栏布局位于 `/libs/fd/af/layouts/toolbar` 位置。 默认情况下，自适应表单提供以下工具栏布局。
+工具列配置位於 `/libs/fd/af/layouts/toolbar` 位置。 最適化表單預設提供下列工具列配置。
 
-### 工具栏的默认布局 {#default-layout-for-toolbar}
+### 工具列的預設配置 {#default-layout-for-toolbar}
 
-在自适应表单中添加任何操作按钮时，此布局被选为默认布局。 选择此布局时，桌面设备和移动设备会显示相同的布局。
+在調適型表單中新增任何動作按鈕時，此版面會選取為預設版面。 選取此配置時，桌上型電腦和行動裝置會顯示相同的配置。
 
-此外，您还可以添加多个工具栏，其中包含使用此布局配置的操作按钮。 操作按钮与表单控件相关联。 您可以将工具栏配置为位于面板之前或之后。
+此外，您也可以新增多個工具列，其中包含使用此配置設定的動作按鈕。 動作按鈕與表單控制項相關聯。 您可以將工具列設定為面板之前或之後。
 
-![工具栏的默认视图](assets/toolbar_layout_default.png)
+![工具列的預設檢視](assets/toolbar_layout_default.png)
 
-工具栏的默认视图
+工具列的預設檢視
 
-### 移动固定工具栏布局 {#mobile-fixed-layout-for-toolbar}
+### 工具列的行動固定版面配置 {#mobile-fixed-layout-for-toolbar}
 
-选择此布局可提供桌面和移动设备的替代布局。
+選取此配置以提供案頭和行動裝置的替代配置。
 
-对于桌面布局，您可以使用某些特定标签添加“操作”按钮。 只能使用此布局配置一个工具栏。 如果使用此布局配置了多个工具栏，则移动设备存在重叠，并且只显示一个工具栏。 例如，您可以在表单底部或顶部有一个工具栏，或者在表单中的面板之后或之前有一个工具栏。
+對於案頭版面配置，您可以使用某些特定標籤來新增「動作」按鈕。 此配置只能設定一個工具列。 若有一個以上的工具列已設定此版面，行動裝置會出現重疊，且只會顯示一個工具列。 例如，您可以在表單底部或頂部有一個工具列，或者在表單中的面板之後或之前。
 
-对于移动设备布局，您可以使用图标添加操作按钮。
+針對行動佈局，您可以使用圖示新增動作按鈕。
 
-![移动固定工具栏布局](assets/toolbar_layout_mobile_fixed.png)
+![工具列的行動固定版面配置](assets/toolbar_layout_mobile_fixed.png)
 
-移动固定工具栏布局
+工具列的行動固定版面配置

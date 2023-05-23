@@ -1,7 +1,7 @@
 ---
-title: 社区站点控制台
+title: 社群網站主控台
 seo-title: Communities Sites Console
-description: 如何访问社区站点控制台
+description: 如何存取社群網站主控台
 seo-description: How to access the Communities Sites console
 uuid: 74134281-244c-40da-a941-7f2f3e706d4b
 contentOwner: Janice Kendall
@@ -19,248 +19,248 @@ ht-degree: 4%
 
 ---
 
-# 社区站点控制台 {#communities-sites-console}
+# 社群網站主控台 {#communities-sites-console}
 
-社区站点控制台提供对以下项的访问：
+社群網站主控台提供下列專案的存取權：
 
-* 网站创建
-* 网站编辑
-* 站点管理
-* [创建和编辑嵌套群组](/help/communities/groups.md) （子社区）
+* 網站建立
+* 網站編輯
+* 網站管理
+* [建立和編輯巢狀群組](/help/communities/groups.md) （子社群）
 
-请参阅 [开始使用AEM Communities](/help/communities/getting-started.md) 了解如何在创作环境中快速创建社区站点，以及如何从创作和发布环境创建社区组。
+另請參閱 [AEM Communities快速入門](/help/communities/getting-started.md) 體驗在製作環境中建立社群網站的速度有多快，以及如何從製作和發佈環境建立社群群組。
 
 >[!NOTE]
 >
->用于创建 [社区站点](/help/communities/sites-console.md), [社区网站模板](/help/communities/sites.md), [社区组模板](/help/communities/tools-groups.md) 和 [社区功能](/help/communities/functions.md) 只能在创作环境中使用。
+>用於建立的主要Communities功能表 [社群網站](/help/communities/sites-console.md)， [社群網站範本](/help/communities/sites.md)， [社群群組範本](/help/communities/tools-groups.md) 和 [社群功能](/help/communities/functions.md) 僅供作者環境使用。
 
 ## 前提条件 {#prerequisites}
 
-在创建社区站点之前，它是 *必需* 至：
+在建立社群網站之前，請先 *必填* 至：
 
-* 确保一个或多个发布实例正在运行。
-* 启用 [隧道服务](/help/communities/deploy-communities.md#tunnel-service-on-author) 管理成员和成员组。
-* 识别 [主发布者](/help/communities/deploy-communities.md#primary-publisher).
-* [配置复制](/help/communities/deploy-communities.md#replication-agents-on-author) 当主发布者端口不是默认端口时(4503)。
+* 請確定一個或多個發佈執行個體正在執行。
+* 啟用 [通道服務](/help/communities/deploy-communities.md#tunnel-service-on-author) 以管理成員和成員群組。
+* 識別 [主要發行者](/help/communities/deploy-communities.md#primary-publisher).
+* [設定復寫](/help/communities/deploy-communities.md#replication-agents-on-author) 主要發行者連線埠不是預設值(4503)時。
 
-为确保站点准备好支持许多功能，最佳做法是采取以下步骤：
+為確保網站準備好支援許多功能，最佳實務是採取下列步驟：
 
-* 安装 [最新功能包](/help/communities/deploy-communities.md#latestfeaturepack).
-* 启用 [Adobe Analytics](/help/communities/analytics.md) AEM Communities。
-* 配置 [电子邮件](/help/communities/email.md)
-* 识别 [社区管理员](/help/communities/users.md#creating-community-members).
-* [启用OAuth处理程序](/help/communities/social-login.md#adobe-granite-oauth-authentication-handler) 用于社交登录。
+* 安裝 [最新feature pack](/help/communities/deploy-communities.md#latestfeaturepack).
+* 啟用 [Adobe Analytics](/help/communities/analytics.md) 適用於AEM Communities。
+* 設定 [電子郵件](/help/communities/email.md)
+* 識別 [社群管理員](/help/communities/users.md#creating-community-members).
+* [啟用OAuth處理常式](/help/communities/social-login.md#adobe-granite-oauth-authentication-handler) 用於社交登入。
 
-## 访问社区站点控制台 {#accessing-communities-sites-console}
+## 存取社群網站主控台 {#accessing-communities-sites-console}
 
-在创作环境中，要访问社区站点控制台，请执行以下操作：
+在製作環境中，若要存取Communities Sites主控台：
 
-* 从全局导航： **[!UICONTROL 社区]** > **[!UICONTROL 站点]**
+* 從全域導覽： **[!UICONTROL Communities]** > **[!UICONTROL 網站]**
 
-“社区站点”控制台会显示任何现有的社区站点。 在此控制台中，可以创建、编辑、管理和删除社区站点。
+社群網站主控台會顯示任何現有的社群網站。 您可以在此主控台建立、編輯、管理及刪除社群網站。
 
-要创建新的社区站点，请选择 **创建** 图标。
+若要建立新的社群網站，請選取 **建立** 圖示。
 
-要访问现有社区网站，为了创作、修改、发布、导出或添加嵌套群组，请选择网站的文件夹图标。
+若要存取現有的社群網站，以便編寫、修改、發佈、匯出或新增巢狀群組，請選取網站的資料夾圖示。
 
 ## 站点创建 {#site-creation}
 
-站点创建控制台提供了一种根据所选内容来组合站点功能的分步方法 [社区站点模板](/help/communities/sites.md) 和设置。
+網站建立主控台提供根據所選物件來組裝網站特徵的逐步方法 [社群網站範本](/help/communities/sites.md) 和設定。
 
-创建的每个网站都包含登录功能，因为网站访客在发布内容、发送消息或参与群组之前，必须先登录。 其他包含的功能包括用户配置文件、消息、通知、网站菜单、搜索、主题和品牌。
+每個建立的網站都包含登入功能，因為網站訪客必須先登入，才能發佈內容、傳送訊息或參與群組。 其他包含的功能包括使用者設定檔、傳訊、通知、網站功能表、搜尋、主題設定和品牌化。
 
-通过选择 `Create` 按钮。
+透過選取 `Create` 按鈕的位置。
 
-创建过程是一系列步骤，这些步骤以面板的形式呈现，其中包含要配置的一组特征（以子面板的形式呈现）。 可以向 **下一个** 步骤或 **返回** 到上一步，然后再在最后一步中提交网站。
+建立過程是作為面板顯示的一系列步驟，其中包含要配置的一組特徵（顯示為子面板）。 您可以前往 **下一個** 步驟或 **返回** 到最後一個步驟中認可網站之前的上一個步驟。
 
-### 步骤1 :网站模板 {#step-site-template}
+### 步驟1 ：網站範本 {#step-site-template}
 
-![新站点模板](assets/newsitetemplate.png)
+![newsitetemplate](assets/newsitetemplate.png)
 
-在“站点模板”面板中，指定了“标题”、“描述”、“站点根”、“基本语言”、“名称”和“站点模板”：
+在「網站範本」面板上，指定標題、說明、網站根目錄、基本語言、名稱和網站範本：
 
 * **社区站点标题**
 
-   网站的显示标题。
+   網站的顯示標題。
 
-   标题会显示在已发布的网站以及网站管理员UI中。
+   標題會顯示在已發佈的網站以及網站管理員UI中。
 
 * **社区站点描述**
 
-   网站的描述。
+   網站說明。
 
-   该描述不会显示在已发布的网站上。
+   說明未出現在已發佈的網站上。
 
-* **社区站点根目录**
+* **社群網站根目錄**
 
-   站点的根路径。
+   網站的根路徑。
 
-   默认根为 `/content/sites`，但可以将根移动到网站中的任何位置。
+   預設根目錄為 `/content/sites`，但根可移至網站內的任何位置。
 
 * **社区站点基本语言**
 
-   (单语言不受影响：英语)使用下拉菜单选择一个 *或更多* 基本语言 — 德语、意大利语、法语、日语、西班牙语、葡萄牙语（巴西）、中文（繁体）和简体中文。 将为添加的每种语言创建一个社区站点，并按照 [翻译多语言站点的内容](/help/sites-administering/translation.md). 每个站点的根页面将包含一个子页面，该子页面由所选语言之一的语言代码命名，如“en”表示英语，“fr”表示法语。
+   （單一語言則保持原樣：英文）使用下拉式功能表選擇一個語言 *或更多* 可用語言提供的基礎語言 — 德文、義大利文、法文、日文、西班牙文、葡萄牙文（巴西）、中文（繁體）和中文（簡體）。 將會針對新增的每種語言建立一個社群網站，並會遵循中所述的最佳實務存在於相同的網站資料夾中 [翻譯多語言網站的內容](/help/sites-administering/translation.md). 每個網站的根頁面都會包含子頁面，其名稱為所選語言之一的語言代碼，例如「en」代表英文，「fr」代表法文。
 
 * **社区站点名称**:
 
-   站点根页面在URL中显示的名称。
+   顯示在URL中的網站根頁面名稱。
 
-   * 请仔细检查名称，因为创建网站后，该名称不容易更改。
-   * 基本URL( `https://server:port/site root/site name)` 将显示在 `Community Site Name`.
+   * 請仔細檢查名稱，因為網站建立後不易變更。
+   * 基底URL ( `https://server:port/site root/site name)` 將會顯示在 `Community Site Name`.
 
-   * 对于有效的URL，请附加基本语言代码+ &quot;。html&quot;
+   * 若要取得有效的URL，請附加基本語言代碼+ &quot;。html&quot;
 
-      *例如*, `https://localhost:4502/content/sites/mysight/en.html`
+      *例如*， `https://localhost:4502/content/sites/mysight/en.html`
 
-* **社区站点模板** 菜单
+* **社群網站範本** 功能表
 
-   使用下拉菜单选择可用的 [社区站点模板](/help/communities/tools.md).
+   使用下拉式功能表選擇可用的 [社群網站範本](/help/communities/tools.md).
 
 * 选择&#x200B;**下一步**。
 
-### 第2步：设计 {#step-design}
+### 步驟2 ：設計 {#step-design}
 
-“设计”面板包含2个用于选择主题和品牌横幅的子面板：
+「設計」面板包含2個子面板，用於選取主題和品牌橫幅：
 
-#### 社区站点主题 {#community-site-theme}
+#### 社群網站主題 {#community-site-theme}
 
 ![sitetheme](assets/sitetheme.png)
 
-框架使用 `Twitter Bootstrap` 为网站引入响应式灵活设计。 可以选择多个预加载的Bootstrap主题之一来设置所选社区站点模板的样式，或者可以上传Bootstrap主题。
+框架使用 `Twitter Bootstrap` 為網站帶來回應式靈活設計。 可選擇許多預先載入的Bootstrap主題之一來設定所選社群網站範本的樣式，或可上傳Bootstrap主題。
 
-选择后，将使用不透明的蓝色复选标记覆盖主题。
+選取時，主題會以不透明的藍色核取記號覆蓋。
 
-发布社区网站后，可以 [编辑属性](#modifying-site-properties) 并选择其他主题。
+社群網站發佈後，您可以 [編輯屬性](#modifying-site-properties) 並選取不同的主題。
 
-#### 社区网站品牌化 {#community-site-branding}
+#### 社群網站品牌化 {#community-site-branding}
 
-![网站品牌化](assets/site-branding.png)
+![網站品牌](assets/site-branding.png)
 
-社区网站品牌化是在每个页面顶部显示为标题的图像。
+社群網站品牌化是顯示為每個頁面頂端標題的影像。
 
-图像的大小应与浏览器中页面的预期显示一样宽，高度应为120像素。
+影像大小應設定為和瀏覽器中頁面的預期顯示一樣寬，且高度為120畫素。
 
-在创建或选择图像时，请记住：
+建立或選取影像時，請記住：
 
-* 图像高度将从图像的上边缘裁剪为120像素。
-* 图像已固定到浏览器窗口的左边缘。
-* 图像没有调整大小，因此当图像宽度为……
+* 影像高度將會裁切成從影像頂端邊緣測量的120畫素。
+* 影像已釘選至瀏覽器視窗的左邊緣。
+* 不會調整影像大小，因此當影像寬度為……
 
-   * 小于浏览器的宽度，图像将水平重复。
-   * 大于浏览器的宽度，图像将被裁剪。
+   * 小於瀏覽器的寬度，影像將會水準重複。
+   * 大於瀏覽器的寬度，影像看起來將會被裁切。
 
 * 选择&#x200B;**下一步**。
 
-### 第3步：设置 {#step-settings}
+### 步驟3：設定 {#step-settings}
 
-“设置”面板包含多个子面板，这些子面板显示要在移至创建站点的最后一步之前配置的功能。
+「設定」面板包含數個子面板，顯示了在移至建立網站的最後一步之前要設定的功能。
 
-* [用户管理](#user-management)
-* [标记](#tagging)
+* [USER MANAGEMENT](#user-management)
+* [標籤](#tagging)
 * [角色](#roles)
-* [审核](#moderation)
+* [稽核](#moderation)
 * [ANALYTICS](#analytics)
-* [翻译](#translation)
+* [翻譯](#translation)
 
 >[!NOTE]
 >
->**启用隧道服务**
+>**啟用通道服務**
 >
->几个“设置”子面板允许分配受信任成员以审核UGC、管理组或作为联系人，以在发布环境中获取启用资源。
+>有幾個「設定」子面板允許指派受信任的成員來稽核UGC、管理群組或成為發佈環境中啟用資源的聯絡人。
 >
->约定适用于发布端 [用户和用户组](/help/communities/users.md) （成员和成员组）。
+>慣例適用於發佈端 [使用者與使用者群組](/help/communities/users.md) （成員和成員群組）。
 >
->因此，在创作环境中创建社区站点并将可信成员分配给各种角色时，需要从发布环境中检索成员数据。
+>因此，在製作環境中建立社群網站，並將受信任的成員指派給各種角色時，必須從發佈環境中擷取成員資料。
 >
->这是通过启用 ` [AEM Communities Publish Tunnel Service](/help/communities/deploy-communities.md#tunnel-service-on-author)` （在创作环境中）。
+>這是透過啟用 ` [AEM Communities Publish Tunnel Service](/help/communities/deploy-communities.md#tunnel-service-on-author)` 用於製作環境。
 
-#### 用户管理 {#user-management}
+#### USER MANAGEMENT {#user-management}
 
-![创建站点设置](assets/createsitesettings.png)
+![createsitesettings](assets/createsitesettings.png)
 
 * **允许用户注册**
 
-   如果选中此选项，则网站访客可以通过自行注册成为社区成员。
-如果未选中，则社区站点将 *受限* 和网站访客必须被分配到社区网站的成员组、提出请求或通过电子邮件发送邀请。 如果未选中，则不应允许匿名访问。
-取消选中 *私人* 社区站点。 默认选中。
+   若勾選，網站訪客可透過自助註冊成為社群成員。
+如果未勾選，社群網站會是 *受限制* 和網站訪客必須指派給社群網站的成員群組、提出請求或透過電子郵件傳送邀請。 如果未勾選，則不應允許匿名存取。
+取消勾選 *私人* 社群網站。 預設為已核取。
 
 * **允许匿名访问**
 
-   如果选中，则社区站点将*打开*任何站点访客都可以访问该站点。
-如果未选中，则只有已登录的成员才能访问该站点。
-取消选中*私有*社区站点。 默认选中。
+   如果勾選，社群網站為*open *且任何網站訪客都可以存取該網站。
+如果未勾選，則只有已登入的成員才能存取該網站。
+取消勾選*private *community網站。 預設為已核取。
 
 * **允许发送消息**
 
-   如果选中，则成员可以向彼此发送消息，并向社区站点内的组发送消息。
-如果未选中此选项，则不会为社区设置消息传送。
-默认为未选中。
+   如果勾選，成員可以相互傳送訊息給群組，也可以傳送訊息給社群網站內的群組。
+如果未勾選，則不會為社群設定傳訊。
+預設為未勾選。
 
 * **允许社交登录: Facebook**
 
-   如果选中此项，则允许网站访客使用其Facebook帐户凭据登录。 选定的 [Facebook云配置](/help/communities/social-login.md#create-a-facebook-connect-cloud-service) 应配置为在创建社区站点后将用户添加到社区站点的成员组。
-如果未选中，则不会显示Facebook登录。
-取消选中 *私人* 社区站点。 默认为未选中。
+   如果勾選，則允許網站訪客使用其Facebook帳戶憑證登入。 選取的 [facebook雲端設定](/help/communities/social-login.md#create-a-facebook-connect-cloud-service) 建立社群網站後，應設定為將使用者新增至社群網站的成員群組。
+如果未勾選，則不會顯示任何Facebook登入。
+取消勾選 *私人* 社群網站。 預設為未勾選。
 
 * **允许社交登录: Twitter**
 
-   如果选中此项，则允许网站访客使用其Twitter帐户凭据登录。 选定的 [Twitter云配置](/help/communities/social-login.md#create-a-twitter-connect-cloud-service) 应配置为在创建社区站点后将用户添加到社区站点的成员组。
-如果未选中，则不会显示Twitter登录。
-取消选中 *私人* 社区站点。 默认为未选中。
+   如果勾選，則允許網站訪客使用其Twitter帳戶憑證登入。 選取的 [twitter雲端設定](/help/communities/social-login.md#create-a-twitter-connect-cloud-service) 建立社群網站後，應設定為將使用者新增至社群網站的成員群組。
+如果未勾選，則不會顯示任何Twitter登入。
+取消勾選 *私人* 社群網站。 預設為未勾選。
 
 >[!NOTE]
 >
->**允许社交登录**
+>**允許社交登入**
 >
->虽然Facebook和Twitter配置示例可能存在，并且可供选择，但是 [生产环境](/help/sites-administering/production-ready.md)，则需要创建自定义Facebook和Twitter应用程序。 请参阅 [使用Facebook和Twitter进行社交登录](/help/communities/social-login.md).
+>雖然範例Facebook和Twitter設定可能存在且可供選取，但對於 [生產環境](/help/sites-administering/production-ready.md)，您必須建立自訂Facebook和Twitter應用程式。 另請參閱 [使用Facebook和Twitter進行社交登入](/help/communities/social-login.md).
 
-#### 标记 {#tagging}
+#### 標籤 {#tagging}
 
-![网站标记](assets/site-tagging.png)
+![網站標籤](assets/site-tagging.png)
 
-可应用于社区内容的标记可通过选择之前通过 [标记控制台](/help/sites-administering/tags.md#tagging-console).
+可套用至社群內容的標籤是透過選取先前透過定義的標籤名稱空間來控制的 [標籤主控台](/help/sites-administering/tags.md#tagging-console).
 
-此外，为社区站点选择标记命名空间会限制在定义目录和资源时显示的选择。
+此外，為社群網站選取標籤名稱空間會限制定義目錄和資源時顯示的選取範圍。
 
-* 文本搜索框：开始键入内容以识别允许在网站上使用的标记。
+* 文字搜尋方塊：開始輸入以識別允許用於網站上的標籤。
 
 #### 角色 {#roles}
 
-![社区角色](assets/site-admin-2.png)
+![社群角色](assets/site-admin-2.png)
 
-的 [社区成员的角色](/help/communities/users.md) 会随这些设置一起分配。
+此 [社群成員的角色](/help/communities/users.md) 會指派這些設定。
 
-使用提前键入搜索，可轻松查找社区成员。
+使用預先輸入搜尋可輕鬆尋找社群成員。
 
 * **社区管理员**
 
-   开始键入内容以选择一个或多个可管理社区成员和成员组的社区成员或成员组。
+   開始輸入以選取一個或多個可管理社群成員和成員群組的社群成員或成員群組。
 
 * **社区审查方**
 
-   开始键入内容以选择一个或多个社区成员或成员组，这些成员或成员组将作为用户生成内容的审核者受信任。
+   開始輸入以選取一或多個社群成員或成員群組，這些成員或成員群組將被信任為使用者產生內容的版主。
 
 * **拥有权限的社区成员**
 
-   开始键入内容以选择一个或多个社区成员或成员组，以便在 `Allow Privileged Member` 已为 [社区功能](/help/communities/functions.md).
+   開始輸入以選取一個或多個社群成員或成員群組，以便在下列情況下建立新內容 `Allow Privileged Member` 已為「 」選取 [社群功能](/help/communities/functions.md).
 
 * **社区管理员**
 
-   开始键入内容以选择一个或多个站点管理员，这些管理员可以独立于其他站点管理员和默认社区管理员处理站点结构。 他们可以在层次结构的任何级别创建群组，并成为嵌套群组的默认管理员（但以后可以从嵌套群组的管理员角色中删除这些群组）。
+   開始輸入以選取一個或多個可以獨立於其他網站管理員和預設社群管理員來處理網站結構的網站管理員。 他們可以在階層架構的任何層級建立群組，並成為巢狀群組的預設管理員（但他們稍後可以從巢狀群組的管理員角色中移除）。
 
-#### 审核 {#moderation}
+#### 稽核 {#moderation}
 
-![网站审核](assets/site-moderation.png)
+![網站稽核](assets/site-moderation.png)
 
-审核用户生成内容(UGC)的全局设置由这些设置控制。 单个组件具有用于控制审核的其他设置。
+用於仲裁使用者產生內容(UGC)的全域設定是由這些設定所控制。 個別元件具有控制稽核的其他設定。
 
 * **内容已通过预审**
 
-   如果选中此项，则在审核者批准后才会显示已发布的社区内容。 默认为未选中。 有关更多信息，请参阅 [审核社区内容](/help/communities/moderate-ugc.md#premoderation).
+   如果勾選，張貼的社群內容必須等到版主核准後才會顯示。 預設為未勾選。 如需詳細資訊，請參閱 [仲裁社群內容](/help/communities/moderate-ugc.md#premoderation).
 
 * **标记阈值，达到此值后隐藏内容**
 
-   如果大于0，则在将主题或帖子隐藏到公共视图中之前必须标记其次数。 如果设置为–1，则标记的主题或帖子永远不会在公共视图中隐藏。 默认值为5。
+   如果大於0，則在從公開檢視隱藏主題或貼文之前，必須將其標籤的次數。 如果設為–1，則已標幟的主題或貼文絕不會從公開檢視中隱藏。 預設值為5。
 
 #### ANALYTICS {#analytics}
 
@@ -268,187 +268,187 @@ ht-degree: 4%
 
 * **启用 Analytics**
 
-   仅在Adobe Analytics [已配置](/help/communities/analytics.md) （针对社区功能）。
-默认为未选中。 选中此选项后，将显示额外的选择菜单：
+   僅當Adobe Analytics已 [已設定](/help/communities/analytics.md) 用於Communities功能。
+預設為未勾選。 勾選後，會出現其他選取功能表：
 
-![启用site-analytics](assets/site-analytics-enable.png)
+![site-analytics-enable](assets/site-analytics-enable.png)
 
 * **云配置框架引用**
 
-   从下拉菜单中，选择为此社区站点配置的Analytics云服务框架。
-   `Communities` 是 [社区功能的Analytics配置](/help/communities/analytics.md#aem-analytics-framework-configuration) 文档。
+   從下拉式選單中，選取為此社群網站設定的Analytics雲端服務架構。
+   `Communities` 是來自的架構範例 [Communities功能的Analytics設定](/help/communities/analytics.md#aem-analytics-framework-configuration) 說明檔案。
 
-#### 翻译 {#translation}
+#### 翻譯 {#translation}
 
-![站点翻译](assets/site-translation.png)
+![網站翻譯](assets/site-translation.png)
 
 * **允许机器翻译**
 
-   选中此选项（默认选项未选中）后，将为网站中的UGC启用机器翻译。 这不会影响任何其他内容，例如页面内容，即使该网站设置为多语言网站也是如此。 请参阅 [翻译用户生成的内容](/help/communities/translate-ugc.md) 有关为AEM Communities配置授权翻译服务的信息。 请参阅 [翻译多语言站点的内容](/help/sites-administering/translation.md) 以获取完整概述。
+   核取後（預設為未核取），網站內的UGC會啟用機器翻譯。 這不會影響任何其他內容，例如頁面內容，即使網站設定為多語言網站亦然。 另請參閱 [翻譯使用者產生的內容](/help/communities/translate-ugc.md) 以取得為AEM Communities設定授權翻譯服務的相關資訊。 另請參閱 [翻譯多語言網站的內容](/help/sites-administering/translation.md) 以取得完整的總覽。
 
-![允许机器翻译](assets/allow-machine-translation.png)
+![allow-machine-translation](assets/allow-machine-translation.png)
 
 * **为选定的语言启用机器翻译**
 
-   为机器翻译启用的语言默认为 [翻译集成配置](/help/communities/translate-ugc.md#translation-integration-configuration). 通过删除默认设置和/或从下拉菜单中选择其他语言，可能会覆盖此网站的这些默认设置。
+   為機器翻譯啟用的語言預設為指定的系統設定 [翻譯整合設定](/help/communities/translate-ugc.md#translation-integration-configuration). 您可透過刪除預設值和/或從下拉式選單中選取其他語言來覆寫此網站的這些預設設定。
 
 * **选择翻译提供商**
 
-   默认情况下，服务提供商是使用 `microsoft` 仅供演示。 如果没有翻译服务提供商获得许可， **允许机器翻译** 应该不加限制。
+   依預設，服務提供者為試用服務，使用 `microsoft` 僅供示範。 如果沒有授權翻譯服務提供者， **允許機器翻譯** 應取消勾選。
 
 * **选择全球共享商店**
 
-   对于具有多个语言副本的网站，全局共享存储会提供单个会话线程，从每个语言副本中可见。 这可以通过选择其中一种语言作为语言副本来实现。 默认为 *无全局共享存储*.
+   對於擁有多個語言副本的網站，全域共用商店會提供單一對話對話對話對話串，從每個語言副本中可見。 這是透過選取語言副本中包含的語言之一來達成。 預設為 *無全域共用存放區*.
 
 * **选择翻译提供商配置**
 
-   选择 [翻译集成框架](/help/sites-administering/tc-tic.md) 为授权翻译提供程序创建。
+   選擇 [翻譯整合框架](/help/sites-administering/tc-tic.md) 已為授權的翻譯提供者建立。
 
 * **为您的社区站点选择翻译选项**
 
    * **翻译整个页面**
 
-      如果选择，则页面上的所有UGC都将转换为页面的基本语言。
+      如果選取，頁面上的所有UGC都會轉譯為頁面的基本語言。
 
-      默认为 *未选定*.
+      預設為 *未選取*.
 
    * **仅翻译选定内容**
 
-      如果选中，则每个帖子旁边都会显示一个翻译选项，允许将各个帖子翻译成该页面的基本语言。
-默认为 *已选*.
+      如果選取，每個貼文旁都會顯示翻譯選項，可將個別貼文翻譯成頁面的基本語言。
+預設為 *已選取*.
 
 * **选择持久性选项**
 
-   * **根据用户请求翻译贡献内容并在之后保留**
-如果选中此选项，则在发出请求之前不会翻译内容。 翻译后，翻译会存储在存储库中。
+   * **翻譯使用者要求的貢獻並於之後持續**
+如果選取，則在提出請求之前不會翻譯內容。 翻譯完成後，翻譯會儲存在存放庫中。
 
-      默认为 *未选定*.
+      預設為 *未選取*.
 
-   * **不保留翻译**
+   * **不持續翻譯**
 
-      如果选中，则转换不会存储在存储库中。
+      如果選取，翻譯將不會儲存在存放庫中。
 
-      如果未选择，则保留翻译。
+      如果未選取，則會持續翻譯。
 
-      默认为 *未选定*.
+      預設為 *未選取*.
 
 * **智能渲染**
 
-   选择以下选项之一：
+   選取下列其中一項：
 
    * `Always show contributions in the original language`（默认）
    * `Always show contributions in user preferred language`
    * `Show contributions in user preferred language for only logged-in users`
 
-### 步骤4 :创建社区站点 {#step-create-communities-site}
+### 步驟4 ：建立社群網站 {#step-create-communities-site}
 
-如果需要进行任何调整，请使用 **返回** 按钮来制作它们。
+如果需要任何調整，請使用 **返回** 按鈕來進行變更。
 
-一次 **创建** 选择并启动后，创建站点的过程将无法中断。
+一次 **建立** 選取並啟動，建立網站的程式無法中斷。
 
-创建网站后：
+建立網站後：
 
-* 不支持更改URL（节点名称）。
-* 将来对社区站点模板所做的更改将不会影响已创建的社区站点。
-* 禁用社区站点模板不会影响已创建的社区站点。
-* 可以编辑 [结构](#modify-structure) 社区站点的属性。
+* 不支援變更url （節點名稱）。
+* 社群網站範本的未來變更不會影響已建立的社群網站。
+* 停用社群網站範本不會影響已建立的社群網站。
+* 您可以編輯 [結構](#modify-structure) 修改其屬性以建立社群網站。
 
-![创建站点](assets/create-site1.png)
+![create-site](assets/create-site1.png)
 
-完成该过程后，新站点的文件夹将显示在社区站点控制台中，作者可以在此控制台中添加页面内容，或者管理员可以修改站点的属性。
+程式完成時，新網站的資料夾會顯示在Communities Sites主控台中，作者可在其中新增頁面內容，管理員則可修改網站的屬性。
 
 ![modify-site-property](assets/modify-site-property.png)
 
-要修改社区站点，请选择其项目文件夹以将其打开：
+若要修改社群網站，請選取其專案資料夾以開啟它：
 
-![站点项目](assets/site-project.png)
+![site-project](assets/site-project.png)
 
-将鼠标悬停在网站上或触摸网站卡时，会显示图标，允许 [在创作模式下编辑网站](#authoring-site-content), [打开网站属性进行修改](#modifying-site-properties), [发布网站](#publishing-the-site), [导出网站](#exporting-the-site)和 [删除网站](#deleting-the-site).
+使用滑鼠將滑鼠游標停留在網站上或接觸網站卡片時，會出現圖示，允許 [在作者模式下編輯網站](#authoring-site-content)， [開啟網站屬性以進行修改](#modifying-site-properties)， [發佈網站](#publishing-the-site)， [匯出網站](#exporting-the-site)、和 [刪除網站](#deleting-the-site).
 
-## 创作网站内容 {#authoring-site-content}
+## 製作網站內容 {#authoring-site-content}
 
-网站内容的创作工具可能与任何其他AEM网站相同。 要打开要创作的站点，请选择 `Open Site` 图标。 该站点将在新选项卡中打开，以便仍然可以访问社区站点控制台。
+可以使用與任何其他AEM網站相同的工具來編寫網站內容。 若要開啟網站進行編寫，請選取 `Open Site` 圖示顯示在滑鼠懸停網站上。 網站將在新標籤中開啟，以便Communities Sites主控台保持可存取狀態。
 
-![站点内容](assets/site-content.png)
+![site-content](assets/site-content.png)
 
 >[!NOTE]
 >
->如果不熟悉AEM，请查看 [基本操作](/help/sites-authoring/basic-handling.md) 和 [页面创作快速指南](/help/sites-authoring/qg-page-authoring.md).
+>若不熟悉AEM，請檢視以下說明檔案： [基本處理](/help/sites-authoring/basic-handling.md) 和 [製作頁面的快速指南](/help/sites-authoring/qg-page-authoring.md).
 
-## 修改网站属性 {#modifying-site-properties}
+## 修改場地屬性 {#modifying-site-properties}
 
-![编辑站点](assets/edit-site.png)
+![edit-site](assets/edit-site.png)
 
-通过选择 `Edit Site`图标。
+在場地建立過程中指定的現有場地屬性，可以透過選取 `Edit Site`圖示顯示在滑鼠懸停網站上。
 
-`Details of the following properties match the descriptions provided in the` [网站创建](#site-creation) 中。
+`Details of the following properties match the descriptions provided in the` [網站建立](#site-creation) 區段。
 
 ![modify-site-basicinfo](assets/modify-site-basicinfo.png)
 
 ### 修改基本 {#modify-basic}
 
-基本面板允许修改：
+「基本」面板允許修改：
 
 * 社区站点标题
 * 社区站点描述
 
-不能修改社区站点名称。
+社群網站名稱不可修改。
 
-选择其他社区站点模板对现有社区站点不会产生任何影响，因为模板和站点之间没有任何连接。
+選擇不同的社群網站範本不會影響現有的社群網站，因為範本和網站之間沒有連線。
 
-相反， [结构](#modify-structure) 可以修改社区站点。
+取而代之的是 [結構](#modify-structure) 可修改社群網站的「 」。
 
-### 修改结构 {#modify-structure}
+### 修改結構 {#modify-structure}
 
-“结构”面板允许修改最初从所选社区站点模板创建的结构。 在面板中，可以：
+「結構」面板允許修改最初從所選社群網站範本建立的結構。 您可以從面板執行下列作業：
 
-* 拖放其他 [社区功能](/help/communities/functions.md) 进入站点结构。
-* 在站点结构中社区功能的实例上：
+* 拖放其他專案 [社群功能](/help/communities/functions.md) 放入網站結構中。
+* 在網站結構中的社群功能例項上：
 
    * **`gear icon`**
 
-      编辑设置，包括显示标题和URL名称*，以及 [特权成员组](/help/communities/users.md#privilegedmembersgroups).
+      編輯設定，包括顯示標題和URL名稱*以及 [有特殊許可權的成員群組](/help/communities/users.md#privilegedmembersgroups).
 
    * **`trashcan icon`**
 
-      从站点结构中删除（删除）函数。
+      從網站結構移除（刪除）函式。
 
    * **`grid icon`**
 
-      修改功能在网站顶级导航栏中显示的顺序。
+      修改網站最上層導覽列中顯示的函式順序。
 
 >[!NOTE]
 >
->除了顶部的函数外，您可以更改“网站结构”中所有函数的顺序。 因此，无法更改社区站点的主页。
+>您可以變更「場地結構」中所有函式的順序，但頂端的函式除外。 因此，無法變更Communities網站首頁。
 
 >[!CAUTION]
 >
->* 虽然显示标题可能会发生更改而不会产生副作用，但不建议编辑属于社区站点的社区函数的URL名称。
+>* 雖然顯示標題可能會變更且沒有副作用，但建議您不要編輯屬於社群網站的社群功能的URL名稱。
 >
->例如，重命名URL不会移动现有UGC，因此会产生“丢失”UGC的效果。
+>例如，重新命名URL不會移動現有UGC，因此會產生「遺失」UGC的效果。
 
 >[!CAUTION]
 >
->组函数必须 *not* be *第一，也是唯一* 函数。
+>群組函式必須 *not* 成為 *第一個或唯一* 網站結構中的函式。
 >
->任何其他函数，例如 [页面函数](/help/communities/functions.md#page-function)，必须先包含并列出。
+>任何其他函式，例如 [頁面函式](/help/communities/functions.md#page-function)，必須先包含並列出。
 
-#### 示例：向社区站点结构添加目录函数 {#example-adding-a-catalog-function-to-a-community-site-structure}
+#### 範例：新增目錄函式至社群網站結構 {#example-adding-a-catalog-function-to-a-community-site-structure}
 
 ![add-catalog-site](assets/add-catalog-site.png)
 
-### 修改设计 {#modify-design}
+### 修改設計 {#modify-design}
 
-“设计”面板允许应用新主题：
+「設計」面板可套用新主題：
 
 * [社区站点主题](#community-site-theme)
 * [社区站点品牌化](#community-site-branding)
 
-   * 滚动到面板底部以更改品牌图像。
+   * 捲動至面板底部以變更品牌影像。
 
-### 修改设置 {#modify-settings}
+### 修改設定 {#modify-settings}
 
-“设置”面板允许访问社区站点创建步骤3的子面板下的大多数设置：
+「設定」面板可讓您存取子面板下的大部分設定，這些子面板用於建立社群網站的步驟3：
 
 * [用户管理](#user-management)
 * [标记](#tagging)
@@ -457,76 +457,76 @@ ht-degree: 4%
 * [分析](#analytics)
 * [翻译](#translation)
 
-### 修改缩略图 {#modify-thumbnail}
+### 修改縮圖 {#modify-thumbnail}
 
-缩略图面板允许上传图像以在社区站点控制台中表示站点。
+「縮圖」面板可讓您上傳影像，以在Communities Sites主控台中代表網站。
 
-## 发布网站 {#publishing-the-site}
+## 發佈網站 {#publishing-the-site}
 
-在社区网站新创建或修改后，可以通过选择 `Publish Site` 图标，该图标会在将鼠标悬停在网站上时显示。
+建立或修改社群網站後，可以透過選取 `Publish Site` 圖示，此圖示會出現在滑鼠停留在場地上。
 
 ![publish-site](assets/publish-site.png)
 
-网站成功发布后，将显示一个指示。
+網站成功發佈後，將會顯示提示。
 
-![网站已发布](assets/site-published.png)
+![site-published](assets/site-published.png)
 
-### 使用嵌套群组发布 {#publishing-with-nested-groups}
+### 使用巢狀群組發佈 {#publishing-with-nested-groups}
 
-发布社区站点后，必须单独发布使用 [“组”控制台](/help/communities/groups.md).
+發佈社群網站後，有必要個別發佈使用建立的每個子社群（巢狀群組）。 [群組主控台](/help/communities/groups.md).
 
-## 导出网站 {#exporting-the-site}
+## 匯出網站 {#exporting-the-site}
 
-![导出站点](assets/export-site.png)
+![export-site](assets/export-site.png)
 
-选择将鼠标悬停在网站上的导出图标，以创建同时存储在 [包管理器](/help/sites-administering/package-manager.md) 和下载。
+將滑鼠停留在網站上，選取匯出圖示，以建立同時儲存在中的社群網站套件 [封裝管理員](/help/sites-administering/package-manager.md) 並下載。
 
-请注意，网站包中未包含UGC。
+請注意，UGC未包含在網站套件中。
 
-## 删除网站 {#deleting-the-site}
+## 刪除網站 {#deleting-the-site}
 
 ![deleteicon](assets/deleteicon.png)
 
-要删除社区站点，请选择删除站点图标，该图标将鼠标悬停在社区站点控制台中的站点上。 此操作会删除与网站关联的所有项目，如UGC、用户组、资产和数据库记录。
+若要刪除社群網站，請選取將滑鼠游標停留在Communities網站主控台的網站上方時顯示的刪除網站圖示。 此動作會移除與網站相關聯的所有專案，例如UGC、使用者群組、資產和資料庫記錄。
 
-## 创建的社区用户组 {#created-community-user-groups}
+## 已建立的社群使用者群組 {#created-community-user-groups}
 
-发布新社区站点后，新的成员组（在发布环境中创建用户组）将拥有为各种管理角色和成员角色设置的适当权限。
+發佈新社群網站後，新成員群組（在發佈環境中建立使用者群組）將擁有針對各種管理和成員角色設定的適當許可權。
 
-为成员组创建的名称包括 *site-name* 在 [步骤1](#step13asitetemplate) （在URL中显示的名称）以及唯一ID，以避免与不同社区站点根目录具有相同站点名称的社区站点和组发生冲突。
+為成員群組建立的名稱包括 *site-name* 指定網站於 [步驟1](#step13asitetemplate) （出現在URL中的名稱）以及唯一ID，以避免與不同社群網站根目錄具有相同網站名稱的社群網站和群組發生衝突。
 
-例如，如果标题为“Getting Started Tutorial”的网站的名称为“engage”，则审核者的用户组将为：
+例如，如果名稱為「Getting Started Tutorial」的網站為「engage」，則版主的使用者群組將是：
 
-* 标题：社区参与审核者
-* 名称：社区 — *engage-uid* — 审核者
+* title：社群參與版主
+* 名稱： community-*engage-uid* — 版主
 
-请注意，在创建站点时，任何以审核者或组管理员身份分配角色的成员都将被分配给相应的组，并被分配给成员组。 发布新站点时，将在发布时创建这些组和成员分配。
+請注意，在建立場地時，任何指派為版主或群組管理員角色的成員，都會指派給適當的群組，也會指派給成員群組。 發佈新網站時，會在發佈時建立這些群組和成員指派。
 
-有关详细信息，请参阅 [管理用户和用户组](/help/communities/users.md).
+如需詳細資訊，請參閱 [管理使用者和使用者群組](/help/communities/users.md).
 
 >[!NOTE]
 >
->如果 [允许社交登录：Facebook](#user-management) 启用后，用户群组
+>若 [允許社交登入： Facebook](#user-management) 已啟用，一旦使用者群組
 >
 >* `community-<site-name>-<uid>-members`
 >
->创建后，应用的 [Facebook云服务](/help/communities/social-login.md#createafacebookcloudservice) 应配置为将用户添加到此组。
+>已建立，已套用 [facebook雲端服務](/help/communities/social-login.md#createafacebookcloudservice) 應設定為新增使用者至此群組。
 
-## 验证错误配置 {#configure-for-authentication-error}
+## 設定驗證錯誤 {#configure-for-authentication-error}
 
-默认情况下，当用户输入错误的凭据且无法登录时，社区站点将重定向到示例登录页面。 此登录示例将不存在于 [生产服务器](/help/sites-administering/production-ready.md).
+依預設，當使用者輸入錯誤的憑證且無法登入時，社群網站將重新導向至範例登入頁面。 此範例登入將不會出現在 [生產伺服器](/help/sites-administering/production-ready.md).
 
-要正确重定向，请在配置了网站并将其推送到发布后，完成以下步骤以获取无法重定向到社区站点的身份验证：
+若要正確重新導向，在設定網站並推送至發佈後，請完成以下步驟以取得驗證失敗，重新導向至社群網站：
 
-* 在每个AEM发布实例上。
-* 使用管理员权限登录。
-* 访问 [Web控制台](/help/sites-deploying/configuring-osgi.md).
+* 在每個AEM發佈執行個體上。
+* 以管理員許可權登入。
+* 存取 [網頁主控台](/help/sites-deploying/configuring-osgi.md).
 
    * 例如， [https://localhost:4503/system/console/configMgr](https://localhost:4503/system/console/configMgr).
 
-* 定位 `Adobe Granite Login Selector Authentication Handler`.
-* 选择 `pencil` 图标以打开要编辑的配置。
-* 输入 **登录页面映射** 如下所示：
+* 尋找 `Adobe Granite Login Selector Authentication Handler`.
+* 選取 `pencil` 圖示以開啟設定進行編輯。
+* 輸入 **登入頁面對應** 如下所示：
 
    `/content/sites/<site-name>/path/to/login/page:/content/sites/<site-name>`
 
@@ -537,25 +537,25 @@ ht-degree: 4%
 
 ![auth-error](assets/auth-error.png)
 
-### 测试身份验证重定向 {#test-authentication-redirection}
+### 測試驗證重新導向 {#test-authentication-redirection}
 
-在使用社区站点的登录页面映射配置的同一AEM发布实例上：
+在設定了社群網站登入頁面對應的相同AEM發佈執行個體上：
 
-* 浏览到社区站点主页。
+* 瀏覽至社群網站首頁。
 
    * 例如， [https://localhost:4503/content/sites/engage/en.html](https://localhost:4503/content/sites/engage/en.html)
 
-* 选择注销。
-* 选择登录。
-* 输入明显不正确的凭据，如用户名“x”和密码“x”。
-* 登录页面应显示“登录无效”错误。
+* 選取「登出」。
+* 選取「登入」。
+* 輸入明顯不正確的認證，例如使用者名稱&quot;x&quot;和密碼&quot;x&quot;。
+* 登入頁面應顯示「無效登入」錯誤。
 
-![测试验证](assets/test-authentication.png)
+![測試驗證](assets/test-authentication.png)
 
-## 从主站点控制台访问社区站点 {#accessing-community-sites-from-main-sites-console}
+## 從主要網站主控台存取社群網站 {#accessing-community-sites-from-main-sites-console}
 
-从全局导航站点控制台中，社区站点位于 `Community Sites` 文件夹。
+從全域導覽Sites主控台，社群網站位於 `Community Sites` 資料夾。
 
-虽然可以通过这种方式访问社区站点，但是对于管理任务，应从社区站点控制台访问社区站点。
+雖然可以這種方式存取社群網站，但針對管理任務，社群網站應從「社群網站」主控台存取。
 
-![访问站点](assets/access-site.png)
+![access-site](assets/access-site.png)

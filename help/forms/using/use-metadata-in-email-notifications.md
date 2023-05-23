@@ -1,7 +1,7 @@
 ---
-title: 在电子邮件通知中使用元数据
+title: 在電子郵件通知中使用中繼資料
 seo-title: Use metadata in an email notification
-description: 使用元数据在表单工作流电子邮件通知中填充信息
+description: 使用中繼資料在表單工作流程電子郵件通知中填入資訊
 seo-description: Use metadata to populate information in a forms workflow email notification
 uuid: 9075b64e-1934-44d5-8b16-aa6e95e93da9
 topic-tags: publish
@@ -11,19 +11,19 @@ exl-id: 18cfc4be-676d-4f08-afc1-4f11bb48dab6
 source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
 workflow-type: tm+mt
 source-wordcount: '897'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
-# 在电子邮件通知中使用元数据 {#use-metadata-in-an-email-notification}
+# 在電子郵件通知中使用中繼資料 {#use-metadata-in-an-email-notification}
 
-您可以使用“分配任务”步骤来创建任务并将其分配给用户或组。 将任务分配给用户或组时，会向定义的用户或定义的组的每个成员发送电子邮件通知。 典型的 [电子邮件通知](../../forms/using/use-custom-email-template-assign-task-step.md) 包含已分配任务的链接和与该任务相关的信息。
+您可以使用「指派任務」步驟來建立任務並指派給使用者或群組。 當任務指派給使用者或群組時，會傳送電子郵件通知給已定義的使用者或已定義群組的每個成員。 典型 [電子郵件通知](../../forms/using/use-custom-email-template-assign-task-step.md) 包含已指派任務的連結及與任務相關的資訊。
 
-您可以在电子邮件模板中使用元数据来动态填充电子邮件通知中的信息。 例如，在运行时（生成电子邮件通知时），将动态选择以下电子邮件通知中的标题、描述、截止日期、优先级、工作流和上次日期的值。
+您可以在電子郵件範本中使用中繼資料，以動態方式填入電子郵件通知中的資訊。 例如，下列電子郵件通知中的標題、說明、到期日、優先順序、工作流程和上次日期的值會在執行階段動態選取（產生電子郵件通知時）。
 
-![默认电子邮件模板](assets/default_email_template_metadata_new.png)
+![預設電子郵件範本](assets/default_email_template_metadata_new.png)
 
-元数据存储在键值对中。 您可以在电子邮件模板中指定密钥，并在运行时（生成电子邮件通知时）将该密钥替换为值。 例如，在以下代码示例中，“$ {workitem_title}”是一个键。 在运行时，该值会被替换为值“Loan-Request”。
+中繼資料會儲存在索引鍵值配對中。 您可以在電子郵件範本中指定金鑰，而金鑰會在執行階段以值取代（產生電子郵件通知時）。 例如，在以下程式碼範例中，「$ {workitem_title}」是索引鍵。 在執行階段會以「Loan-Request」值取代。
 
 ```html
 subject=Task Assigned - ${workitem_title}
@@ -96,9 +96,9 @@ message=<html><body>\n\
 </html>\n\
 ```
 
-## 在电子邮件通知中使用系统生成的元数据 {#using-system-generated-metadata-in-an-email-notification}
+## 在電子郵件通知中使用系統產生的中繼資料 {#using-system-generated-metadata-in-an-email-notification}
 
-AEM Forms应用程序提供了多个开箱即用的元数据变量（键值对）。 您可以在电子邮件模板中使用这些变量。 变量的值基于关联的表单应用程序。 下表列出了所有开箱即用的元数据变量：
+AEM Forms應用程式提供數個立即可用的中繼資料變數（機碼值組）。 您可以在電子郵件範本中使用這些變數。 變數的值是根據關聯的表單應用程式。 下表列出所有立即可用的中繼資料變數：
 
 <table>
  <tbody> 
@@ -108,62 +108,62 @@ AEM Forms应用程序提供了多个开箱即用的元数据变量（键值对�
   </tr> 
   <tr> 
    <td>workitem_title</td> 
-   <td>关联的表单应用程序的标题。</td> 
+   <td>相關表單應用程式的標題。</td> 
   </tr> 
   <tr> 
    <td>workitem_url</td> 
-   <td>用于访问关联表单应用程序的URL。</td> 
+   <td>存取相關表單應用程式的URL。</td> 
   </tr> 
   <tr> 
    <td>workitem_description</td> 
-   <td>相关表单应用程序的描述。</td> 
+   <td>相關表單應用程式的說明。</td> 
   </tr> 
   <tr> 
    <td>workitem_priority</td> 
-   <td>为关联的表单应用程序指定的优先级。</td> 
+   <td>為關聯表單應用程式指定的優先順序。</td> 
   </tr> 
   <tr> 
    <td>workitem_due_date</td> 
-   <td>对关联的表单应用程序执行操作的最后日期。</td> 
+   <td>對相關表單應用程式採取行動的最後日期。</td> 
   </tr> 
   <tr> 
    <td>workitem_workflow</td> 
-   <td>与表单应用程序关联的工作流的名称。</td> 
+   <td>與表單應用程式關聯的工作流程名稱。</td> 
   </tr> 
   <tr> 
    <td>workitem_assign_timestamp</td> 
-   <td>将工作流项目分配给当前被分配人的日期和时间。</td> 
+   <td>將工作流程專案指派給目前受指派人的日期和時間。</td> 
   </tr> 
   <tr> 
    <td>workitem_assigner</td> 
-   <td>当前被分派人的姓名。</td> 
+   <td>目前被指定者的姓名。</td> 
   </tr> 
   <tr> 
    <td>host_prefix</td> 
-   <td>作者服务器的URL。 例如， https://10.41.42.66:4502<br /> </td> 
+   <td>作者伺服器的URL。 例如， https://10.41.42.66:4502<br /> </td> 
   </tr> 
   <tr> 
    <td>publish_prefix</td> 
-   <td>发布服务器的URL。 例如， https://10.41.42.66:4503</td> 
+   <td>發佈伺服器的URL。 例如， https://10.41.42.66:4503</td> 
   </tr> 
  </tbody> 
 </table>
 
-## 在电子邮件通知中使用自定义元数据 {#using-custom-metadata-in-an-email-notification}
+## 在電子郵件通知中使用自訂中繼資料 {#using-custom-metadata-in-an-email-notification}
 
-您还可以在电子邮件通知中使用自定义元数据。 自定义元数据除了包含系统生成的元数据外，还包含其他信息。 例如，从数据库检索到的策略详细信息。 您可以使用ECMAScript或OSGi捆绑包在crx-repository中添加自定义元数据：
+您也可以在電子郵件通知中使用自訂中繼資料。 自訂中繼資料除了包含系統產生的中繼資料外，也包含其他資訊。 例如，從資料庫擷取的原則詳細資訊。 您可以使用ECMAScript或OSGi套件組合在crx-repository中新增自訂中繼資料：
 
-### 使用ECMAScript添加自定义元数据  {#use-ecmascript-to-add-custom-metadata}
+### 使用ECMAScript新增自訂中繼資料  {#use-ecmascript-to-add-custom-metadata}
 
-[ECMAScript](https://en.wikipedia.org/wiki/ECMAScript) 是一种脚本语言。 它用于客户端脚本和服务器应用程序。 执行以下步骤，使用ECMAScript为电子邮件模板添加自定义元数据：
+[ECMAScript](https://en.wikipedia.org/wiki/ECMAScript) 是指令碼語言。 它用於使用者端指令碼和伺服器應用程式。 執行以下步驟，使用ECMAScript為電子郵件範本新增自訂中繼資料：
 
-1. 使用管理帐户登录CRX DE。 URL为https://&#39;[服务器]：[端口]&#39;/crx/de/index.jsp
+1. 使用管理帳戶登入CRX DE。 URL為https://&#39;[伺服器]：[連線埠]&#39;/crx/de/index.jsp
 
-1. 导航到/apps/fd/dashboard/scripts/metadataScripts。 创建扩展名为.ecma的文件。 例如，usermetadata.ecma
+1. 導覽至/apps/fd/dashboard/scripts/metadataScripts。 建立副檔名為.ecma的檔案。 例如，usermetadata.ecma
 
-   如果上述路径不存在，请创建它。
+   如果上述路徑不存在，請建立它。
 
-1. 将代码添加到.ecma文件中，该文件具有在键值对中生成自定义元数据的逻辑。 例如，以下ECMAScript代码为保单生成自定义元数据：
+1. 將程式碼新增至.ecma檔案，該檔案具有在索引鍵值配對中產生自訂中繼資料的邏輯。 例如，下列ECMAScript程式碼會為保單產生自訂中繼資料：
 
    ```javascript
    function getUserMetaData()  {
@@ -177,38 +177,38 @@ AEM Forms应用程序提供了多个开箱即用的元数据变量（键值对�
    }
    ```
 
-1. 单击全部保存。 现在，该脚本可在AEM工作流模型中选择。
+1. 按一下「儲存全部」。 現在，指令碼可在AEM工作流程模型中選擇。
 
    ![assigntask-metadata](assets/assigntask-metadata.png)
 
-1. （可选）指定脚本的标题：
+1. （選用）指定指令碼的標題：
 
-   如果不指定标题，自定义元数据字段将显示ECMAScript文件的完整路径。 执行以下步骤，为脚本指定有意义的标题：
+   如果您未指定標題，自訂中繼資料欄位會顯示ECMAScript檔案的完整路徑。 執行以下步驟，為指令碼指定有意義的標題：
 
-   1. 展开脚本节点，右键单击 **[!UICONTROL jcr：content]** 节点，然后单击 **[!UICONTROL Mixins]**.
-   1. 在“编辑Mixin”对话框中键入mix：title并单击 **+**.
-   1. 添加具有以下值的属性。
+   1. 展開指令碼節點，用滑鼠右鍵按一下 **[!UICONTROL jcr：content]** 節點，然後按一下 **[!UICONTROL Mixin]**.
+   1. 在「編輯Mixin」對話方塊中輸入mix：title並按一下 **+**.
+   1. 新增具有以下值的屬性。
 
       | 名称 | jcr:title |
       |---|---|
       | 类型 | 字符串 |
-      | 值 | 指定脚本的标题。 例如，策略持有者的自定义元数据。 指定的值显示在分配任务步骤中。 |
+      | 价值 | 指定指令碼的標題。 例如，原則持有者的自訂中繼資料。 指定的值會顯示在指派工作步驟中。 |
 
-### 使用OSGi捆绑包和Java界面添加自定义元数据 {#use-an-osgi-bundle-and-java-interface-to-add-custom-metadata}
+### 使用OSGi套件組合和Java介面來新增自訂中繼資料 {#use-an-osgi-bundle-and-java-interface-to-add-custom-metadata}
 
-您可以使用WorkitemUserMetadataService Java界面为电子邮件模板添加自定义元数据。 您可以创建一个使用WorkitemUserMetadataService Java接口的OSGi捆绑包，并将其部署到AEM Forms服务器。 它使元数据可用于在分配任务步骤中进行选择。
+您可以使用WorkitemUserMetadataService Java介面為電子郵件範本新增自訂中繼資料。 您可以建立使用WorkitemUserMetadataService Java介面的OSGi套件組合，並將其部署至AEM Forms伺服器。 它使中繼資料可用於指派任務步驟中的選擇。
 
-要创建具有Java接口的OSGi捆绑包，请添加 [AEM Forms客户端SDK](https://helpx.adobe.com/cn/aem-forms/kb/aem-forms-releases.html) jar和 [花岗岩罐](https://repo1.maven.org/maven2/com/adobe/granite/com.adobe.granite.workflow.api/1.0.2/) 文件作为OSGi包项目的外部依赖项。 您可以使用任何Java IDE创建OSGi捆绑包。 以下过程提供了使用Eclipse创建OSGi捆绑包的步骤：
+若要使用Java介面建立OSGi套件組合，請新增 [AEM Forms使用者端SDK](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) jar和 [granite jar](https://repo1.maven.org/maven2/com/adobe/granite/com.adobe.granite.workflow.api/1.0.2/) 檔案做為OSGi套件專案的外部相依性。 您可以使用任何Java IDE來建立OSGi套件。 下列程式提供使用Eclipse建立OSGi套件的步驟：
 
-1. 打开Eclipse IDE。 导航到文件>新建项目。
+1. 開啟Eclipse IDE。 導覽至「檔案>新增專案」。
 
-1. 在选择向导屏幕上，选择Maven项目，然后单击下一步。
+1. 在「選取精靈」畫面上，選取「Maven專案」，然後按一下「下一步」。
 
-1. 在新的Maven项目中，保留默认值，然后单击下一步。 选择原型并单击“下一步”。 例如，maven-archetype-quickstart。 指定项目的组ID、工件ID、版本和包，然后单击完成。 项目随即会创建。
+1. 在新Maven專案中，保留預設值，然後按下一步。 選取一個原型，然後按下一步。 例如，maven-archetype-quickstart。 指定專案的群組ID、成品ID、版本和封裝，然後按一下完成。 專案已建立。
 
-1. 打开pom.xml文件进行编辑，并将文件的所有内容替换为以下内容：
+1. 開啟pom.xml檔案進行編輯，並將檔案的所有內容取代為下列內容：
 
-1. 添加使用WorkitemUserMetadataService Java界面为电子邮件模板添加自定义元数据的源代码。 下面列出了一个示例代码：
+1. 新增使用WorkitemUserMetadataService Java介面為電子郵件範本新增自訂中繼資料的原始程式碼。 程式碼範例如下：
 
    ```java
    package com.aem.impl;
@@ -244,10 +244,10 @@ AEM Forms应用程序提供了多个开箱即用的元数据变量（键值对�
    }
    ```
 
-1. 打开命令提示符并导航到包含OSGi捆绑包项目的目录。 使用以下命令创建OSGi捆绑包：
+1. 開啟命令提示字元並瀏覽至包含OSGi套件專案的目錄。 使用以下命令來建立OSGi套件：
 
    `mvn clean install`
 
-1. 将捆绑包上传到AEM Forms服务器。 您可以使用AEM包管理器将包导入到AEM Forms服务器。
+1. 將套件組合上傳至AEM Forms伺服器。 您可以使用AEM封裝管理員將套件組合匯入至AEM Forms伺服器。
 
-导入包后，可以在“分配任务”步骤中选择元数据，并将其用作电子邮件模板。
+匯入束後，您可以在「指派任務」步驟中選取中繼資料，並將其用於電子郵件範本。

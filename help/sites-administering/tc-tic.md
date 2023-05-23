@@ -1,7 +1,7 @@
 ---
 title: 配置翻译集成框架
 seo-title: Configuring the Translation Integration Framework
-description: 了解如何配置翻译集成框架。
+description: 瞭解如何設定翻譯整合架構。
 seo-description: Learn how to configure the Translation Integration Framework.
 uuid: 5ecfe154-732f-4a13-96f8-92f55023c54d
 contentOwner: Guillaume Carlino
@@ -30,7 +30,7 @@ ht-degree: 47%
 
 ## 连接到翻译服务提供商 {#connecting-to-a-translation-service-provider}
 
-创建用于将 AEM 连接到您的翻译服务提供商的云配置。默认情况下，AEM 具有连接到 Microsoft Translator 的功能。以下翻译供应商为翻译项目提供新API的实施。 用于了解有关集成的更多信息的链接：
+创建用于将 AEM 连接到您的翻译服务提供商的云配置。默认情况下，AEM 具有连接到 Microsoft Translator 的功能。以下翻譯廠商為翻譯專案提供新API的實作。 深入瞭解整合的連結：
 
 * [Translations.com](https://exchange.adobe.com/experiencecloud.details.90104.globallink-connect-plus-for-aem.html)（Adobe Exchange 首选合作伙伴）
 * [Clay Tablet Technologies](https://exchange.adobe.com/experiencecloud.details.90064.clay-tablet-translation-for-experience-manager.html)
@@ -42,16 +42,16 @@ ht-degree: 47%
 * [RWS](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.108277.html)
 * [Smartling](https://www.smartling.com/software/integrations/adobe-experience-manager/)
 * [Systran](https://exchange.adobe.com/experiencecloud.details.90233.systran-for-adobe-experience-manager.html)
-* [阿尔特朗](https://exchange.adobe.com/experiencecloud.details.90222.altlang.html)
-* Microsoft (AEM中预装了Microsoft Translator)
+* [Altlang](https://exchange.adobe.com/experiencecloud.details.90222.altlang.html)
+* Microsoft (AEM中預先安裝了Microsoft Translator)
 
 >[!NOTE]
 >
->要查找人工翻译提供商和机器翻译提供商的最新列表，请查看以下页面：
+>若要尋找人工翻譯和機器翻譯提供者的最新清單，請檢視以下頁面：
 >
 >
->* [AEM人工翻译](https://www.adobe.com/go/aem-human-translation-connectors)
->* [AEM机器翻译](https://www.adobe.com/go/aem-machine-translation-connectors)
+>* [AEM人工翻譯](https://www.adobe.com/go/aem-human-translation-connectors)
+>* [AEM機器翻譯](https://www.adobe.com/go/aem-machine-translation-connectors)
 >
 
 
@@ -71,18 +71,18 @@ ht-degree: 47%
 
 创建框架配置后，请将云配置与要根据该配置翻译的页面关联。开始翻译过程后，将根据关联的框架配置执行翻译工作流。
 
-当网站的不同部分有不同的翻译要求时，请相应地创建多个框架配置。例如，多语言网站包括英语、西班牙语和日语副本。 站点所有者使用两个不同的翻译服务提供商生成西班牙语和日语译文。因此，配置了两个框架配置。每个配置使用一个不同的翻译服务提供商。
+当网站的不同部分有不同的翻译要求时，请相应地创建多个框架配置。例如，多語言網站包含英文、西班牙文和日文版本。 站点所有者使用两个不同的翻译服务提供商生成西班牙语和日语译文。因此，配置了两个框架配置。每个配置使用一个不同的翻译服务提供商。
 
 配置翻译集成框架后，可[将它与使用它的页面关联](/help/sites-administering/tc-prep.md)。
 
-**注意：** 有关AEM中内容翻译功能的概述，请参阅 [翻译多语言站点的内容](/help/sites-administering/translation.md).
+**注意：** 如需AEM內容翻譯功能的概觀，請參閱 [翻譯多語言網站的內容](/help/sites-administering/translation.md).
 
-只有一个框架配置可控制如何翻译页面内容、社区内容和资产。
+架構的單一設定可控制如何翻譯頁面內容、社群內容和資產。
 ![chlimage_1-386](assets/translation-config-65.jpg)
 
 ### 站点配置属性 {#sites-configuration-properties}
 
-站点属性控制如何执行页面内容的翻译。
+Sites屬性可控制執行頁面內容翻譯的方式。
 
 <table>
  <tbody>
@@ -92,50 +92,50 @@ ht-degree: 47%
   </tr>
   <tr>
    <td>翻译工作流</td>
-   <td><p>选择框架为网站内容执行的翻译方法：</p>
+   <td><p>選取框架為網站內容執行的翻譯方法：</p>
     <ul>
-     <li>机器翻译：翻译提供商使用机器翻译实时执行翻译。</li>
-     <li>人工翻译：将内容发送到翻译提供商，以供翻译人员翻译。 </li>
-     <li>不翻译：不发送内容以供翻译。 这是为了跳过某些不翻译但可用最新内容更新的内容分支。</li>
+     <li>機器翻譯：翻譯提供者會使用機器翻譯即時執行翻譯。</li>
+     <li>人工翻譯：內容會傳送給翻譯提供者，以供譯者翻譯。 </li>
+     <li>不翻譯：不傳送內容以供翻譯。 这是为了跳过某些不翻译但可用最新内容更新的内容分支。</li>
     </ul> </td>
   </tr>
   <tr>
    <td>翻译提供商</td>
-   <td>选择要执行翻译的翻译提供商。 安装提供商的相应连接器后，列表中会显示该提供商。</td>
+   <td>選取要執行翻譯的翻譯提供者。 安裝提供者的對應聯結器後，提供者會出現在清單中。</td>
   </tr>
   <tr>
    <td>内容类别</td>
-   <td>（仅限机器翻译）描述正在翻译的内容的类别。 在翻译内容时，类别可能会影响术语和措辞的选择。</td>
+   <td>（僅限機器翻譯）說明您要翻譯之內容的類別。 在翻译内容时，类别可能会影响术语和措辞的选择。</td>
   </tr>
   <tr>
    <td>翻译标记</td>
-   <td>选择可翻译与页面关联的标记。</td>
+   <td>選取以翻譯與頁面相關聯的標籤。</td>
   </tr>
   <tr>
    <td>翻译页面资产</td>
-   <td><p>选择如何翻译从文件系统添加到组件或从资源引用的资源：</p>
+   <td><p>選取如何翻譯從檔案系統新增至元件或從Assets參照的資產：</p>
     <ul>
-     <li>不翻译：不翻译页面资产。</li>
-     <li>使用站点翻译工作流：根据站点选项卡上的配置属性处理资产。</li>
-     <li>使用资产翻译工作流：根据资产选项卡上属性的配置处理资产。</li>
+     <li>不翻譯：不翻譯頁面資產。</li>
+     <li>使用網站翻譯工作流程：根據網站標籤上的設定屬性處理資產。</li>
+     <li>使用資產翻譯工作流程：根據資產標籤上屬性的設定處理資產。</li>
     </ul> </td>
   </tr>
   <tr>
    <td>自动执行翻译</td>
-   <td>选择可在创建翻译项目后自动执行翻译作业。 选择此选项时，无法复查翻译作业和划定其范围。</td>
+   <td>選取此選項可在建立翻譯專案後自動執行翻譯工作。 选择此选项时，无法复查翻译作业和划定其范围。</td>
   </tr>
  </tbody>
 </table>
 
-### Communities配置属性 {#communities-configuration-properties}
+### Communities設定屬性 {#communities-configuration-properties}
 
-社区属性控制如何执行用户生成的内容的翻译。 用户生成的内容的翻译始终使用机器翻译。 有关更多信息，请参阅 [翻译用户生成的内容](/help/communities/translate-ugc.md).
+Communities屬性可控制如何執行使用者產生的內容翻譯。 翻譯使用者產生的內容一律使用機器翻譯。 如需詳細資訊，請參閱 [翻譯使用者產生的內容](/help/communities/translate-ugc.md).
 
 | 属性 | 描述 |
 |---|---|
-| 翻译提供商 | 选择要执行翻译的翻译提供商。 为其创建云配置的提供程序将显示在列表中。 |
-| 内容类别 | 描述正在翻译的内容的类别。 在翻译内容时，类别可能会影响术语和措辞的选择。 |
-| 选择要用作全局共享存储的区域设置 | （可选）通过选择存储UGC的区域设置，来自所有语言副本的帖子将显示在一个全局对话中。 按照惯例，选择 [基本语言](/help/communities/sites-console.md#translation) 用于网站。 选择无公用存储将禁用全局翻译。 默认情况下，全局翻译处于禁用状态。 |
+| 翻译提供商 | 選取要執行翻譯的翻譯提供者。 為其建立雲端設定的提供者會出現在清單中。 |
+| 内容类别 | 說明您要翻譯之內容的類別。 在翻译内容时，类别可能会影响术语和措辞的选择。 |
+| 選擇要用作全域共用存放區的地區設定 | （選擇性）選取儲存UGC的語言環境，所有語言副本的貼文都會出現在同一個全域對話中。 依照慣例，選擇 [基本語言](/help/communities/sites-console.md#translation) 適用於網站。 選擇「無通用存放區」會停用全域翻譯。 預設會停用全域翻譯。 |
 
 ### 资产配置属性 {#assets-configuration-properties}
 
@@ -149,48 +149,48 @@ ht-degree: 47%
   </tr>
   <tr>
    <td>翻译工作流</td>
-   <td><p>选择框架为资源执行的翻译的类型：</p>
+   <td><p>選取框架為資產執行的翻譯型別：</p>
     <ul>
-     <li>机器翻译：翻译提供商使用机器翻译立即执行翻译。</li>
-     <li>人工翻译：自动将内容发送到翻译提供商，以供手动翻译。 </li>
-     <li>不翻译：不发送资产以供翻译。</li>
+     <li>機器翻譯：翻譯提供者會使用機器翻譯立即執行翻譯。</li>
+     <li>人工翻譯：內容會自動傳送給翻譯提供者，以供手動翻譯。 </li>
+     <li>不翻譯：不會傳送資產以供翻譯。</li>
     </ul> </td>
   </tr>
   <tr>
    <td>翻译提供商</td>
-   <td>选择要执行翻译的翻译提供商。 安装提供商的相应连接器后，列表中会显示该提供商。</td>
+   <td>選取要執行翻譯的翻譯提供者。 安裝提供者的對應聯結器後，提供者會出現在清單中。</td>
   </tr>
   <tr>
    <td>内容类别</td>
-   <td>（仅限机器翻译）描述正在翻译的内容的类别。 在翻译内容时，类别可能会影响术语和措辞的选择。</td>
+   <td>（僅限機器翻譯）說明您要翻譯之內容的類別。 在翻译内容时，类别可能会影响术语和措辞的选择。</td>
   </tr>
   <tr>
    <td>翻译资产</td>
-   <td>选择以在翻译项目中包含资产。 </td>
+   <td>選取以在翻譯專案中包含資產。 </td>
   </tr>
   <tr>
    <td>翻译元数据</td>
-   <td>选择以翻译资源元数据。</td>
+   <td>選取以翻譯資產中繼資料。</td>
   </tr>
   <tr>
    <td>翻译标记</td>
-   <td>选择以翻译与资源关联的标记。</td>
+   <td>選取以翻譯與資產相關聯的標籤。</td>
   </tr>
   <tr>
    <td>自动执行翻译</td>
-   <td>选择可在创建翻译项目后自动执行翻译作业。 选择此选项时，无法复查翻译作业或划定其范围。</td>
+   <td>選取此選項可在建立翻譯專案後自動執行翻譯工作。 选择此选项时，无法复查翻译作业或划定其范围。</td>
   </tr>
  </tbody>
 </table>
 
-1. 单击或点按侧栏中的“工具”>“操作”>“云”>“Cloud Services”。
-1. 在翻译集成区域，是否已创建任何配置决定了显示的链接：
+1. 在側邊欄中，按一下或點選「工具>作業>雲端>Cloud Services」。
+1. 在「翻譯整合」區域中，是否已建立任何設定會決定顯示哪個連結：
 
-   * 如果尚未创建配置，请单击或点按立即配置。
-   * 如果配置已存在，请单击或点按显示配置，然后单击或点按可用配置旁边显示的+链接。
+   * 如果尚未建立任何設定，請按一下或點選「立即設定」。
+   * 如果設定已存在，請按一下或點選「 Show Configurations 」，然後按一下或點選「 Available Configurations 」旁邊顯示的+連結。
 
-1. 键入配置的名称，然后单击或点按创建。
-1. 在站点、社区和资产选项卡上配置属性，然后单击或点按确定。
+1. 輸入設定的名稱，然後按一下或點選「建立」。
+1. 在「網站」、「社群」和「資產」標籤上設定屬性，然後按一下或點選「確定」。
 
 ## 配置页面以供翻译 {#configuring-pages-for-translation}
 
@@ -201,26 +201,26 @@ ht-degree: 47%
 
 请注意，翻译集成框架云配置标识要用于连接到服务提供商的云配置。将源页面与框架云配置关联时，该页面必须与该框架云配置使用的服务提供商云配置关联。
 
-将页面与云配置关联时，该页面的后代页面继承这种关联。例如，如果将/content/geometrixx/en/products页面与翻译集成框架关联，则将根据该框架翻译产品页面及其下的所有页面。
+将页面与云配置关联时，该页面的后代页面继承这种关联。例如，如果您將/content/geometrixx/en/products頁面與翻譯整合框架建立關聯，產品頁面及其下方的所有頁面都會根據該框架進行翻譯。
 
-必要时，可在后代页面上取代该关联。例如，网站的内容主要是关于服装。 但某个分支的页面介绍公司情况。站点的根页面与指定使用“服装”类别进行机器翻译的翻译集成框架关联。 描述公司情况的分支使用框架，该框架使用“常规”类别执行机器翻译。
+必要时，可在后代页面上取代该关联。例如，網站的內容主要是關於服裝。 但某个分支的页面介绍公司情况。網站的根頁面與指定使用「服飾」類別進行機器翻譯的翻譯整合架構相關聯。 說明公司的分支使用框架，該框架會使用「一般」類別執行機器翻譯。
 
-此外，对于任何社区 [SCF组件](/help/communities/scf.md) 在页面上，用户生成的内容(UGC)将包括用户翻译内容的功能。 有关更多信息，请参阅 [用户生成内容的翻译](/help/communities/translate-ugc.md).
+此外，適用於任何社群 [SCF元件](/help/communities/scf.md) 在頁面上，使用者產生的內容(UGC)將包含使用者翻譯內容的能力。 如需詳細資訊，請參閱 [翻譯使用者產生的內容](/help/communities/translate-ugc.md).
 
 ### 将页面与翻译提供商关联 {#associating-a-page-with-a-translation-provider}
 
 将页面与您用于翻译该页面和后代页面的翻译提供商关联。
 
-1. 在站点控制台中，选择要配置的页面，然后单击或点按查看属性。
-1. 单击或点按编辑，然后单击或点按Cloud Services选项卡。
-1. 单击或点按添加配置>翻译集成。
-1. 选择要使用的翻译提供商，然后单击或点按完成。
+1. 在網站主控台中，選取要設定的頁面，然後按一下或點選「檢視屬性」。
+1. 按一下或點選「編輯」，然後按一下或點選「Cloud Services」標籤。
+1. 按一下或點選「新增設定>翻譯整合」。
+1. 選取要使用的翻譯提供者，然後按一下或點選「完成」。
 
 ### 将页面与翻译集成框架关联 {#associating-pages-with-a-translation-integration-framework}
 
 将页面与定义您要如何为该页面和后代页面执行翻译的翻译集成框架关联。
 
-1. 在站点控制台中，选择要配置的页面，然后单击或点按查看属性。
-1. 单击或点按编辑，然后单击或点按Cloud Services选项卡。
-1. 单击或点按添加配置>翻译集成。
-1. 选择要使用的翻译集成框架，然后单击或点按完成。
+1. 在網站主控台中，選取要設定的頁面，然後按一下或點選「檢視屬性」。
+1. 按一下或點選「編輯」，然後按一下或點選「Cloud Services」標籤。
+1. 按一下或點選「新增設定>翻譯整合」。
+1. 選取要使用的翻譯整合架構，然後按一下或點選「完成」。

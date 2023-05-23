@@ -1,6 +1,6 @@
 ---
 title: 推送通知
-description: 可查看本页以了解如何在Adobe Experience Manager Mobile应用程序中使用推送通知。
+description: 請依照本頁面的說明操作，瞭解如何在Adobe Experience Manager Mobile應用程式中使用推播通知。
 uuid: 0ed8b183-ef81-487f-8f35-934d74ec82af
 contentOwner: User
 content-type: reference
@@ -19,354 +19,354 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->Adobe建议对需要基于单页应用程序框架的客户端渲染（例如React）的项目使用SPA编辑器。 [了解详情](/help/sites-developing/spa-overview.md).
+>Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）專案使用SPA編輯器。 [了解详情](/help/sites-developing/spa-overview.md).
 
-通过重要通知立即提醒AEM Mobile应用程序用户，对于移动设备应用程序及其营销活动的价值至关重要。 在本例中，我们将介绍需要采取哪些步骤来允许您的应用程序接收推送通知，以及如何配置推送消息并将其从AEM Mobile发送到手机上安装的应用程序。 此外，本节还介绍如何配置 [深层链接](#deeplinking) 功能。
-
->[!NOTE]
->
->*推送通知无法得到保证；更像是公告。 尽最大努力确保每个人都收到这些文件，但它们并不是有保证的交付机制。 此外，推送的时间可能会从不到一秒到多达半小时不等。*
-
-在AEM中使用推送通知需要一些不同的技术。 首先，必须使用推送通知服务提供商来管理通知和设备(AEM尚未提供)。 使用AEM开箱即用配置了两个提供程序： [Amazon Simple Notification Service](https://aws.amazon.com/sns/) （或SNS），以及 [普什沃什](https://www.pushwoosh.com/). 其次，针对给定移动操作系统的推送技术必须通过相应的服务 — 针对iOS设备的Apple推送通知服务（或APNS）；和适用于Android设备的Google Cloud Messaging（或GCM）。 尽管AEM不会直接与这些特定于平台的服务通信，但AEM必须随通知一起提供一些相关配置信息，以便这些服务执行推送。
-
-安装和配置后（如下所述），它的工作方式如下：
-
-1. 在AEM中创建推送通知，并将其发送给服务提供商(Amazon SNS或Pushwoosh)。
-1. 服务提供商将收到该数据集，并将其发送到核心提供商（APNS或GCM）。
-1. 核心提供商将通知推送到为该推送注册的所有设备。 对于每个设备，它都使用蜂窝数据网络或WiFi（以设备上当前可用的值为准）。
-1. 如果为其注册的应用程序未运行，则通知会显示在设备上。 点按通知的用户将启动应用程序并在应用程序中显示通知。 如果应用程序已在运行，则只会显示应用程序内通知。
-
-此版本的AEM支持iOS和Android移动设备。
-
-## 概述和过程 {#overview-and-procedure}
-
-要在AEM Mobile应用程序中使用推送通知，必须执行以下高级步骤。
-
-通常，Experience Manager开发人员会执行以下操作：
-
-1. 在Apple和Google报文传送服务中注册
-1. 使用推送消息服务注册并配置
-1. 向应用程序添加推送支持
-1. 准备电话以进行测试
-
-而Experience Manager管理员会执行以下操作：
-
-1. 在AEM应用程序上配置推送
-1. 构建和部署应用程序
-1. 发送推送通知
-1. 配置深层链接 *（可选）*
-
-### 步骤1:在Apple和Google报文传送服务中注册 {#step-register-with-apple-and-google-messaging-services}
-
-#### 使用Apple推送通知服务(APNS) {#using-the-apple-push-notification-service-apns}
-
-转到Apple页面 [此处](https://developer.apple.com/documentation/usernotifications#//apple_ref/doc/uid/TP40008194-CH8-SW1) 熟悉Apple推送通知服务。
-
-要使用APN，您需要 **证书** 文件（.cer文件），推送 **私钥** （a .p12文件）和 **私钥密码** 从Apple。 有关如何执行此操作的说明可在 [此处](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/).
-
-#### 使用Google Cloud Messaging(GCM)服务 {#using-the-google-cloud-messaging-gcm-service}
+能夠透過重要通知立即提醒您的AEM Mobile應用程式使用者，對行動應用程式及其行銷活動的價值至關重要。 我們在此處說明允許應用程式接收推播通知所需執行的步驟，以及如何設定推播並從AEM Mobile傳送推播至安裝在電話上的應用程式。 此外，本節將說明如何設定 [深層連結](#deeplinking) 功能加入推播通知。
 
 >[!NOTE]
 >
->Google正在将GCM替换为名为Firebase Cloud Messaging(FCM)的类似服务。 有关FCM的更多信息，请单击 [此处](https://developers.google.com/cloud-messaging/faq).
+>*推播通知並不保證一定會傳送；它們更像是公告。 盡最大努力確保每個人都能收到這些訊息，但並非保證傳送機制。 此外，傳送推播的時間也可能從不到一秒到最多半小時不等。*
 
-转到Google页面 [此处](https://developer.android.com/google/gcm/index.html) 熟悉适用于Android的Google云消息传送。
+搭配AEM使用推播通知需要幾項不同的技術。 首先，推播通知服務提供者必須用來管理通知和裝置(AEM尚未執行此操作)。 使用AEM可立即使用兩個提供者進行設定： [Amazon Simple Notification Service](https://aws.amazon.com/sns/) （或SNS），以及 [Pushwoosh](https://www.pushwoosh.com/). 其次，特定行動作業系統的推送技術必須通過適當的服務 — 適用於iOS裝置的Apple推送通知服務（或APNS），以及適用於Android裝置的Google雲端通訊（或GCM）。 雖然AEM不會直接與這些平台特定服務通訊，但AEM必須隨附通知來提供某些相關設定資訊，這些服務才能執行推送。
 
-您需要执行以下步骤 [此处](https://developer.android.com/google/gcm/gs.html) to **创建Google API项目**, **启用GCM服务**&#x200B;和 **获取API密钥**. 您将需要 **API密钥** 向Android设备发送推送通知。 此外，请记录 **项目编号**，有时也称为 **GCM发件人ID**.
+安裝及設定後（如下所述），其運作方式如下：
 
-以下步骤显示了创建GCM API密钥的不同方法：
+1. 推播通知會在AEM中建立，並傳送給服務提供者(Amazon SNS或Pushwoosh)。
+1. 服務提供者會收到該資訊，然後傳送給核心提供者（APNS或GCM）。
+1. 核心提供者會將通知推播至已註冊該推播的所有裝置。 對於每個裝置，它會使用行動資料網路或WiFi，以裝置上目前可用的任何專案為準。
+1. 如果為其註冊的應用程式未執行，則通知會顯示在裝置上。 使用者點選通知將會啟動應用程式，並在應用程式中顯示通知。 如果應用程式已在執行中，則只會顯示應用程式內通知。
 
-1. 登录google并转到 [Google的开发人员页面](https://developers.google.com/mobile/add?platform=android&amp;cntapi=gcm).
-1. 从列表中选择您的应用程序（或创建一个新应用程序）。
-1. 在Android包名称下，输入您的应用程序ID，即 `com.adobe.cq.mobile.weretail.outdoorsapp`. （如果这不起作用，请使用“test.test”重试。）
-1. 单击 **继续选择和配置服务**
-1. 选择云消息传送，然后单击 **启用Google Cloud消息传送**.
-1. 随后将显示新的服务器API密钥和（新的或现有的）发件人ID。
+此版本的AEM支援iOS和Android行動裝置。
+
+## 概述與程式 {#overview-and-procedure}
+
+若要在AEM Mobile應用程式中使用推播通知，您必須採取下列高階步驟。
+
+通常，Experience Manager開發人員會執行以下操作：
+
+1. 註冊Apple和Google訊息服務
+1. 註冊並設定推送訊息服務
+1. 新增推送支援至應用程式
+1. 準備電話以進行測試
+
+當Experience Manager管理員執行下列操作時：
+
+1. 在AEM應用程式上設定推播
+1. 建置和部署應用程式
+1. 傳送推播通知
+1. 設定深層連結 *（選擇性）*
+
+### 步驟1：註冊Apple和Google訊息服務 {#step-register-with-apple-and-google-messaging-services}
+
+#### 使用Apple推播通知服務(APNS) {#using-the-apple-push-notification-service-apns}
+
+前往Apple頁面 [此處](https://developer.apple.com/documentation/usernotifications#//apple_ref/doc/uid/TP40008194-CH8-SW1) 熟悉Apple推播通知服務。
+
+若要使用APN，您需要 **憑證** 檔案（.cer檔案），推播 **私密金鑰** （a .p12檔案）和 **私密金鑰密碼** 來自Apple。 操作說明，請參閱 [此處](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/).
+
+#### 使用Google雲端通訊(GCM)服務 {#using-the-google-cloud-messaging-gcm-service}
 
 >[!NOTE]
 >
->记录服务器API密钥。 此值在您的推送提供商的网站上输入。
+>Google正在以名為Firebase Cloud Messaging (FCM)的類似服務取代GCM。 如需FCM的詳細資訊，請按一下 [此處](https://developers.google.com/cloud-messaging/faq).
 
-### 步骤2:注册和配置推送消息服务 {#step-register-and-configure-a-push-messaging-service}
+前往Google頁面 [此處](https://developer.android.com/google/gcm/index.html) 熟悉Android適用的Google Cloud Messaging。
 
-AEM配置为使用三种服务之一进行推送通知：
+您需要依照步驟操作 [此處](https://developer.android.com/google/gcm/gs.html) 至 **建立Google API專案**， **啟用GCM服務**、和 **取得API金鑰**. 您將需要 **API金鑰** 傳送推播通知至Android裝置。 此外，請記錄您的 **專案編號**，有時也稱為 **GCM寄件者ID**.
+
+下列步驟顯示建立GCM API金鑰的不同方法：
+
+1. 登入google並前往 [Google的開發人員頁面](https://developers.google.com/mobile/add?platform=android&amp;cntapi=gcm).
+1. 從清單中選擇您的應用程式（或建立新應用程式）。
+1. 在「Android套件名稱」下方輸入您的應用程式ID，即 `com.adobe.cq.mobile.weretail.outdoorsapp`. （如果這樣還是不行，請用「test.test」再試一次。）
+1. 按一下 **繼續選擇及設定服務**
+1. 選取「雲端通訊」，然後按一下 **啟用Google雲端通訊**.
+1. 隨後將顯示新的伺服器API金鑰和（新的或現有的）寄件者ID。
+
+>[!NOTE]
+>
+>記錄伺服器API金鑰。 此值是在您的推送提供者的網站上輸入。
+
+### 步驟2：註冊並設定推送訊息服務 {#step-register-and-configure-a-push-messaging-service}
+
+AEM已設定為使用下列三種服務之一來推送通知：
 
 * Amazon SNS
 * Pushwoosh
 * Adobe Mobile Services
 
-*Amazon SNS* 和 *普什沃什* 配置允许您发送从AEM屏幕内部推送的内容。
+*AMAZON SNS* 和 *Pushwoosh* 設定可讓您從AEM畫面內傳送推播。
 
-*AdobeMobile Services* 配置允许您使用Adobe Analytics帐户在AdobeMobile Services中配置和发送推送通知（但需要使用此配置集构建应用程序才能启用AMS推送通知）。
+*Adobe行動服務* 設定可讓您使用Adobe Analytics帳戶從Adobe Mobile Services中設定及傳送推播通知（但應用程式必須透過此設定集建置，才能啟用AMS推播通知）。
 
-#### 使用Amazon SNS报文传送服务 {#using-the-amazon-sns-messaging-service}
+#### 使用Amazon SNS傳訊服務 {#using-the-amazon-sns-messaging-service}
 
 >[!NOTE]
 >
->*有关Amazon SNS的信息，以及创建新AWS帐户的链接，可以找到 [此处](https://aws.amazon.com/sns/). 你可以免费开一年账户。*
+>*如需Amazon SNS的相關資訊，以及建立新AWS帳戶的連結，請參閱 [此處](https://aws.amazon.com/sns/). 您可以取得一年的免費帳戶。*
 
-如果您不想使用Amazon SNS，可以跳过这些步骤。
+如果您不想使用Amazon SNS，可以跳過這些步驟。
 
-请按照以下步骤设置Amazon SNS进行推送通知：
+請依照下列步驟設定推播通知的Amazon SNS：
 
-1. **在Amazon SNS中注册**
+1. **註冊Amazon SNS**
 
-   1. 记录您的帐户ID。 格式应为12位数字，无空格或短划线，即&quot;123456789012&quot;。
-   1. 确保您位于“美国东部”或“欧盟”地区，因为后续步骤（身份池创建）需要其中一个步骤。
-   1. 注册后，登录到管理控制台并选择 [SNS](https://console.aws.amazon.com/sns/) （推送通知服务）。 如果显示“Get Started”（快速入门），请单击。
+   1. 記錄您的帳戶ID。 格式應為12位數，且不含空格或破折號，即「123456789012」。
+   1. 確定您位於「美國東部」或「歐盟」地區，因為後續步驟（建立身分識別集區）需要這些步驟之一。
+   1. 註冊之後，登入管理主控台並選取 [SNS](https://console.aws.amazon.com/sns/) （推播通知服務）。 如果出現，請按一下「開始使用」。
 
-1. **创建访问密钥和ID**
+1. **建立存取金鑰和ID**
 
-   1. 单击屏幕右上方的登录名，然后从菜单中选择“安全凭据”。
-   1. 单击访问密钥，然后在下面的空白处单击 **创建新访问密钥**.
-   1. 单击 **显示访问密钥**，并复制并保存显示的访问密钥ID和密钥访问密钥。 如果选择下载密钥的选项，您将获得一个包含这些相同值的csv文件。
-   1. 此页面上可以管理其他与安全相关的证书和其他一些证书。
-
-   >[!NOTE]
-   >
-   >访问密钥可用于多个应用程序。
-
-   对于使用“AWS沙盒”帐户的组织，步骤非常相似，如下所述：
-
-   1. 单击屏幕右上方的登录名，然后从菜单中选择“My Security Credentials（我的安全凭据）”。
-   1. 单击操作左侧列表中的用户，然后选择您的用户名。
-   1. 单击安全凭据选项卡。
-   1. 从此处，您可以看到密钥并创建新密钥。 保存密钥供以后使用。
-
-
-1. **创建主题**
-
-   1. 单击 **创建主题** 并选择主题名称。 记录所有字段，如“主题ARN”、“主题所有者”、“区域”、“显示名称”。
-   1. 单击 **其他主题操作** > **编辑主题策略**. 在 **允许这些用户订阅此主题**，选择 **大家。**
-   1. 单击 **更新策略**.
+   1. 按一下畫面右上方的登入名稱，然後從功能表選擇[安全性認證]。
+   1. 按一下「存取金鑰」，然後在下列空白處按一下 **建立新的存取金鑰**.
+   1. 按一下 **顯示存取金鑰**，並複製及儲存顯示的存取金鑰ID和秘密存取金鑰。 如果您選擇下載金鑰的選項，則會得到包含這些相同值的csv檔案。
+   1. 您可以在此頁面管理其他安全性相關憑證，以及某些其他憑證。
 
    >[!NOTE]
    >
-   >您可以为不同的场景（如开发、测试、演示等）创建多个主题。 SNS配置的其余部分可以保持不变。 使用不同的主题构建应用程序；只有使用该主题构建的应用程序才会接收发送到该主题的推送通知。
+   >存取金鑰可用於多個應用程式。
 
-1. **创建平台应用程序**
+   對於使用「AWS沙箱」帳戶的組織，步驟非常類似，並概述如下：
 
-   1. 单击“应用程序”，然后单击“创建平台应用程序”。 选择一个名称并选择一个平台(APNS for iOS, GCM for Android)。 根据平台的不同，需要填写其他字段：
+   1. 按一下畫面右上方的登入名稱，然後從功能表選擇[我的安全性認證]。
+   1. 按一下動作左側清單中的「使用者」 ，然後選擇您的使用者名稱。
+   1. 按一下「安全性證明資料」標籤。
+   1. 從這裡，您可以看到您的金鑰並建立新金鑰。 儲存金鑰以供日後使用。
 
-      1. 对于APNS，必须输入P12文件、密码、证书和私钥。 这些文件应该在步骤中获得 *使用Apple推送通知服务(APNS)* 上。
-      1. 对于GCM，必须输入API密钥。 此值应在步骤中获取 *使用Google Cloud Messaging(GCM)服务* 上。
-   1. 对要支持的每个平台重复上述步骤一次。 要同时推送到iOS和Android，必须创建两个平台应用程序。
+
+1. **建立主題**
+
+   1. 按一下 **建立主題** 並選擇主題名稱。 記錄所有欄位，例如「主題ARN」、「主題擁有者」、「區域」、「顯示名稱」。
+   1. 按一下 **其他主題動作** > **編輯主題原則**. 下 **允許這些使用者訂閱此主題**，選取 **每個人。**
+   1. 按一下 **更新原則**.
+
+   >[!NOTE]
+   >
+   >您可以為不同的情境建立多個主題，例如開發、測試、示範等。 其餘的SNS設定可以維持不變。 使用不同主題建置應用程式；傳送至該主題的推播通知只會由該主題建置的應用程式接收。
+
+1. **建立平台應用程式**
+
+   1. 按一下應用程式，然後按一下建立平台應用程式。 選擇名稱並選取平台(APNS適用於iOS，GCM適用於Android)。 視平台而定，需要填寫其他欄位：
+
+      1. 對於APNS，必須輸入P12檔案、密碼、憑證和私密金鑰。 這些應該已在步驟中取得 *使用Apple推播通知服務(APNS)* 以上。
+      1. 對於GCM，必須輸入API金鑰。 這應該已在步驟中取得 *使用Google雲端通訊(GCM)服務* 以上。
+   1. 針對您將支援的每個平台重複上述步驟一次。 若要同時推送至iOS和Android，您必須建立兩個平台應用程式。
 
 
-1. **创建身份池**
+1. **建立識別集區**
 
-   1. 使用 [Cognito](https://console.aws.amazon.com/cognito) 创建身份池，该池将存储未经身份验证的用户的基本数据。 请注意，目前只有“美国东部”和“欧盟”地区受Amazon Cognito支持。
-   1. 为其命名，并选中“启用对未验证身份的访问”复选框。
-   1. 在下一页(&quot;*您的Cognito身份需要访问您的资源*“)单击允许。
-   1. 在页面的右上方，单击链接“*编辑身份池”*. 将显示身份池Id。 保存此文本以备以后使用。
-   1. 在同一页面上，选择“未验证角色”旁边的下拉列表，并确保该角色为Cognito_&lt;pool name=&quot;&quot;>已选择UnauthRole。 保存更改。
+   1. 使用 [Cognito](https://console.aws.amazon.com/cognito) 建立身分識別集區，以儲存未驗證使用者的基本資料。 請注意，Amazon Cognito目前僅支援「美國東部」和「歐盟」地區。
+   1. 為其命名，並勾選「啟用對未驗證身分的存取」方塊。
+   1. 在下一頁(&quot;*您的Cognito身分識別需要存取您的資源*&quot;)按一下「允許」。
+   1. 在頁面的右上角，按一下連結»*編輯身分識別集區*. 此時會顯示身分識別集區ID。 儲存此文字以供稍後使用。
+   1. 在同一頁面上，選擇「Unauthenticated role」旁的下拉式清單，並確定其角色為Cognito_&lt;pool name=&quot;&quot;>已選取UnauthRole。 儲存您的變更。
 
 1. **配置访问权限**
 
-   1. 登录 [身份和访问管理](https://console.aws.amazon.com/iam/home) (IAM)
-   1. 选择角色
-   1. 单击在上一步中创建的角色，称为Cognito_&lt;youridentitypoolname>Unauth_Role。 记录显示的“角色ARN”。
-   1. 打开“内联策略”（如果尚未打开）。 您应会在此处看到一个名称类似oneClick_Cognito_的策略&lt;youridentitypoolname>Unauth_Role_1234567890123。
-   1. 单击“编辑策略”。 将策略文档的内容替换为以下JSON代码片段：
+   1. 登入 [Identity and Access Management](https://console.aws.amazon.com/iam/home) (IAM)
+   1. 選取角色
+   1. 按一下在上一步建立的角色，稱為Cognito_&lt;youridentitypoolname>Unauth_Role。 記錄顯示的「角色ARN」。
+   1. 開啟「內嵌原則」（如果尚未開啟）。 您應該會看到名稱為oneClick_Cognito_的原則&lt;youridentitypoolname>Unauth_Role_1234567890123。
+   1. 按一下「編輯原則」。 將原則檔案的內容替換為此JSON片段：
 
    <table>
     <tbody>
      <tr>
-     <td><p> </p> <p>{</p> <p> "版本":"2012-10-17",</p> <p> "语句": [</p> <p> {</p> <p> "操作": [</p> <p> "mobileanalytics:PutEvents",</p> <p> "cognito sync:*",</p> <p> "SNS:CreatePlatformEndpoint",</p> <p> "SNS：订阅"</p> <p> ],</p> <p> “效果”："允许",</p> <p> "资源": [</p> <p> "*"</p> <p> ]</p> <p> }</p> <p> ]</p> <p>}</p> <p> </p> </td>
+     <td><p> </p> <p>{</p> <p> 「版本」：「2012-10-17」，</p> <p> "语句": [</p> <p> {</p> <p> "操作": [</p> <p> "mobileanalytics：PutEvents"，</p> <p> "cognito-sync：*"，</p> <p> "SNS：CreatePlatformEndpoint"，</p> <p> "SNS：Subscribe"</p> <p> ],</p> <p> "Effect"： "Allow"，</p> <p> "资源": [</p> <p> "*"</p> <p> ]</p> <p> }</p> <p> ]</p> <p>}</p> <p> </p> </td>
      </tr>
     </tbody>
     </table>
 
-   1. 单击 **应用策略**
+   1. 按一下 **套用原則**
 
 
-#### 使用Pushwoosh消息传递服务 {#using-the-pushwoosh-messaging-service}
+#### 使用Pushwoosh訊息服務 {#using-the-pushwoosh-messaging-service}
 
-如果不想使用Pushwoosh，可以跳过此步骤。
+如果您不想要使用Pushwoosh，可以略過此步驟。
 
-要使用Pushwoosh，请执行以下操作：
+若要使用Pushwoosh：
 
-1. **在Pushwoosh注册**
+1. **註冊Pushwoosh**
 
-   1. 转到pushwoosh.com并创建新帐户。
+   1. 前往pushwoosh.com並建立新帳戶。
 
-1. **创建API访问令牌**
+1. **建立API存取權杖**
 
-   1. 在Pushwoosh网站上，转到API访问菜单项，以生成API访问令牌。 您需要安全地记录此内容。
+   1. 在Pushwoosh網站上，前往API存取功能表專案來產生API存取權杖。 您必須安全地記錄此內容。
 
 1. **创建新应用程序**
 
-   1. 要获得Android支持，您需要提供GCM API密钥。
-   1. 配置应用程序时，选择Cordova作为框架。
-   1. 要获得iOS支持，您需要提供证书文件(.cer)、推送证书(.p12)和私钥密码；这些数据应该从Apple的APNS网站获取。 对于“框架”，选择“Cordova”。
-   1. Pushwoosh将为该应用程序生成一个应用程序ID，格式为“XXXXX-XXXX”，其中每个X是一个十六进制值（0到F）。
+   1. 如需Android支援，您需要提供GCM API金鑰。
+   1. 設定應用程式時，請選擇Cordova做為架構。
+   1. 如需iOS支援，您需要提供憑證檔案(.cer)、推送憑證(.p12)和私密金鑰密碼；這些應該已從Apple的APNS網站取得。 對於「框架」，請選擇「Cordova」。
+   1. Pushwoosh會為該應用程式產生應用程式ID，格式為「XXXXX-XXXXX」，其中每個X都是十六進位值（0到F）。
 
 >[!NOTE]
 >
->*如果在AEM中为第二个应用程序配置了相同的应用程序ID(和其他相关值：API访问令牌和GCM ID)，则通过AEM上的第二个应用程序发送的任何推送通知都将转到具有该应用程序ID的任何其他应用程序。*
+>*如果在AEM中使用相同的應用程式ID （及其他相關值： API存取權杖和GCM ID）設定第二個應用程式，任何透過AEM上的第二個應用程式傳送的推播通知都會傳送到具有該應用程式ID的任何其他應用程式。*
 
-### 步骤3:向应用程序添加推送支持 {#step-add-push-support-to-the-app}
+### 步驟3：將推送支援新增至應用程式 {#step-add-push-support-to-the-app}
 
-#### 添加ContentSync配置 {#add-contentsync-configuration}
+#### 新增ContentSync設定 {#add-contentsync-configuration}
 
-创建两个内容节点（一个在app-config中，一个在app-config-dev中），称为notificationsConfig :
+建立兩個名為notificationsConfig的內容節點（一個在app-config中，一個在app-config-dev中）：
 
-* /content/`<your app>`/shell/jcr:content/pge-app/app-config-dev/notificationsConfig
-* /content/`<your app>`/shell/jcr:content/pge-app/app-config/notificationsConfig
+* /content/`<your app>`/shell/jcr：content/pge-app/app-config-dev/notificationsConfig
+* /content/`<your app>`/shell/jcr：content/pge-app/app-config/notificationsConfig
 
-使用以下属性（.content.xml文件）：
-&lt;jcr:root xmlns:jcr=&quot; &lt;span id=&quot; translate=&quot;no&quot; />https://developer.adobe.com/experience-manager/reference-materials/spec/jcr/1.0/index.html](https://developer.adobe.com/experience-manager/reference-materials/spec/jcr/1.0/index.html)&quot; xmlns:nt=&quot; [https://developer.adobe.com/experience-manager/reference-materials/spec/jcr/1.0/index.html](https://developer.adobe.com/experience-manager/reference-materials/spec/jcr/1.0/index.html)&quot; jcr:primaryType=&quot;nt:unstructured&quot; excludeProperties=&quot;[appAPIAccessToken]&quot;path=&quot;。./../../...&quot;
+使用這些屬性（.content.xml檔案） ：
+&lt;jcr:root xmlns:jcr=&quot; &lt;span id=&quot; translate=&quot;no&quot; />https://developer.adobe.com/experience-manager/reference-materials/spec/jcr/1.0/index.html](https://developer.adobe.com/experience-manager/reference-materials/spec/jcr/1.0/index.html)&quot; xmlns：nt=&quot; [https://developer.adobe.com/experience-manager/reference-materials/spec/jcr/1.0/index.html](https://developer.adobe.com/experience-manager/reference-materials/spec/jcr/1.0/index.html)&quot; jcr：primaryType=&quot;nt：unstructured&quot; excludeProperties=&quot;[appAPIAccessToken]&quot; path=&quot;。./../../..&quot;
 [targetRootDirectory=&quot;www&quot; type=&quot;notificationsconfig&quot;/>
 
 >[!NOTE]
 >
->内容同步处理程序会查找这些节点，如果它们不在该节点，则不会写出pge-notifications-config.json文件。
+>內容同步處理常式會尋找這些節點，如果它們不存在，則不會寫出pge-notifications-config.json檔案。
 
-#### 添加客户端库 {#add-client-libraries}
+#### 新增使用者端資料庫 {#add-client-libraries}
 
-必须按照以下步骤将推送通知客户端库添加到应用程序：
+您必須依照下列步驟，將推播通知使用者端程式庫新增至應用程式：
 
-在CRXDE Lite中：
+CRXDE Lite：
 
-1. 导航到 */etc/designs/phonegap/&lt;app name=&quot;&quot;>/clientlibsall。*
-1. 双击属性窗格中的嵌入部分。
-1. 在显示的对话框中，单击+按钮以添加新的客户端库。
-1. 在新文本字段中，添加“cq.mobile.push”，然后单击“确定”。
-1. 再添加一个名为cq.mobile.push.amazon的页面，然后单击“确定”。
+1. 導覽至 */etc/designs/phonegap/&lt;app name=&quot;&quot;>/clientlibsall。*
+1. 在屬性窗格中的內嵌區段上按兩下。
+1. 在出現的對話方塊中，按一下+按鈕以新增使用者端程式庫。
+1. 在新文字欄位中新增&quot;cq.mobile.push&quot;，然後按一下「確定」。
+1. 再新增一個名為cq.mobile.push.amazon的專案，然後按一下「確定」。
 1. 保存更改。
 
 >[!NOTE]
 >
->如果出于应用程序上的空间考虑因素而删除或不使用推送通知，并避免出现控制台错误消息，请从应用程序中删除这些clientlib。
+>如果出於應用程式上空間考量而移除或未使用推播通知，並為了避免主控台錯誤訊息，請從您的應用程式中移除這些clientlibs。
 
-### 步骤4:准备电话以进行测试 {#step-prepare-a-phone-for-testing}
+### 步驟4：準備電話以進行測試 {#step-prepare-a-phone-for-testing}
 
 >[!NOTE]
 >
->*对于推送通知，您需要在实际设备上进行测试，因为模拟器无法接收推送通知。*
+>*對於推播通知，您需要在實際裝置上進行測試，因為模擬器無法接收推播通知。*
 
 #### iOS {#ios}
 
-对于iOS，您需要使用Mac OS计算机，并且您需要加入 [iOS开发人员计划](https://developer.apple.com/programs/ios/). 有些公司拥有公司许可证，所有开发人员都可使用这些许可证。
+若使用iOS，您需要使用Mac作業系統電腦，並且加入 [iOS開發人員計畫](https://developer.apple.com/programs/ios/). 有些公司擁有公司授權，所有開發人員皆可取得。
 
-对于XCode 8.1，在使用推送通知之前，您必须转到项目的功能选项卡，然后切换推送通知切换开关。
+使用XCode 8.1時，您必須先前往專案中的「功能」標籤，然後將「推送通知」切換為「開啟」，才能使用「推送通知」。
 
 #### Android {#android}
 
-要使用CLI在Android手机上安装应用程序，请参阅以下内容： **步骤6 — 构建和部署应用程序**)，则必须首先将手机置于“开发人员模式”。 请参阅 [启用设备内开发人员选项](https://developer.android.com/tools/device.html#developer-device-options) 以了解有关执行此操作的详细信息。
+若要使用CLI在Android手機上安裝應用程式(請參閱下文： **步驟6 — 建置和部署應用程式**)，您必須先將手機置於「開發人員模式」。 另請參閱 [啟用裝置上開發人員選項](https://developer.android.com/tools/device.html#developer-device-options) 以取得執行此動作的詳細資訊。
 
-### 步骤5:在AEM应用程序上配置推送 {#step-configure-push-on-aem-apps}
+### 步驟5：在AEM應用程式上設定推播 {#step-configure-push-on-aem-apps}
 
-在构建并部署到已配置的移动设备之前，您必须为决定使用的消息传送服务配置通知设置。
+在建置和部署到您設定的行動裝置之前，您必須為您決定使用的訊息服務設定通知設定。
 
-1. 为推送通知创建相应的授权组。
-1. 以相应用户身份登录AEM，单击应用程序选项卡。
-1. 单击应用程序。
-1. 找到“管理Cloud Services”拼贴并单击铅笔，以修改云配置。
-1. 选择Amazon SNS连接、Pushwoosh连接或AdobeMobile Services作为通知配置。
-1. 输入提供程序属性，然后单击提交以保存它们，然后单击完成。 除AMS外，在此阶段不会远程验证它们。
-1. 此时，您应会看到您刚刚在“管理Cloud Services”拼贴中输入的配置。
+1. 為推播通知建立適當的授權群組。
+1. 以適當使用者身分登入AEM，然後按一下「應用程式」標籤。
+1. 按一下應用程式。
+1. 找到「管理Cloud Services」圖磚，然後按一下鉛筆圖磚，即可修改您的雲端設定。
+1. 選取Amazon SNS Connection、Pushwoosh Connection或Adobe Mobile Services作為通知設定。
+1. 輸入提供者屬性，然後按一下送出以儲存它們，然後按一下完成。 除了在AMS的情況下，目前階段不會從遠端驗證這些事件。
+1. 您現在應該會看到您剛才在「管理Cloud Services」表徵圖上輸入的設定。
 
-### 步骤6:构建和部署应用程序 {#step-build-and-deploy-the-app}
+### 步驟6：建置和部署應用程式 {#step-build-and-deploy-the-app}
 
-**注意：** 另请参阅我们的说明 [此处](/help/mobile/building-app-mobile-phonegap.md) 构建PhoneGap应用程序时，请执行以下操作：
+**注意：** 另請參閱我們的指示 [此處](/help/mobile/building-app-mobile-phonegap.md) 建立PhoneGap應用程式的相關資訊。
 
-使用PhoneGap构建和部署应用程序的方法有两种。
+有兩種方法可使用PhoneGap建置和部署您的應用程式。
 
-**注意：** 对于推送通知测试，模拟器是不够的，因为推送通知在推送提供程序(Apple或Google)和设备之间使用不同的协议。 当前的Mac/PC硬件和模拟器不支持此功能。
+**注意：** 對於推播通知測試，模擬器是不夠的，因為推播通知在推播提供者(Apple或Google)和裝置之間使用不同的通訊協定。 目前的Mac/PC硬體和模擬器不支援此功能。
 
-1. *PhoneGap Build* 是PhoneGap提供的一项服务，将在其服务器上为您构建应用程序，并允许您直接将其下载到设备。 请参阅 [PhoneGap Build文档](https://build.phonegap.com/) 了解如何设置和使用PhoneGap Build。
+1. *PhoneGap Build* 是PhoneGap提供的服務，可在伺服器上為您建立應用程式，並允許您直接下載至裝置。 請參閱 [PhoneGap Build檔案](https://build.phonegap.com/) 以瞭解如何設定和使用PhoneGap Build。
 
-1. *PhoneGap命令行界面* (CLI)允许您在命令行中使用丰富的PhoneGap命令集来构建、调试和部署应用程序。 请参阅 [PhoneGap开发人员文档](https://docs.phonegap.com/en/edge/guide_cli_index.md.html#The%20Command-Line%20Interface) 了解如何设置和使用PhoneGap CLI。
+1. *PhoneGap命令列介面* (CLI)可讓您在命令列上使用一組豐富的PhoneGap命令，以建置、偵錯和部署您的應用程式。 請參閱 [PhoneGap開發人員檔案](https://docs.phonegap.com/en/edge/guide_cli_index.md.html#The%20Command-Line%20Interface) 瞭解如何設定和使用PhoneGap CLI。
 
-### 步骤7:发送推送通知 {#step-send-a-push-notification}
+### 步驟7：傳送推播通知 {#step-send-a-push-notification}
 
-要创建并发送新通知，请执行以下步骤。
+若要建立新通知並傳送，請依照下列步驟進行。
 
-1. 创建新通知
+1. 建立新通知
 
-   * 在AEM Mobile应用程序的功能板中，找到推送通知拼贴。
-   * 在右上方的菜单中，选择“创建”。 请注意，在首次设置云配置之前，此按钮将不可用。
-   * 在创建通知向导中，输入标题和消息，然后单击“创建”按钮。 您的通知现已准备就绪，可立即发送或稍后发送。 可以编辑消息和/或标题，并更改和保存。
+   * 在AEM Mobile應用程式的儀表板中，找出「推播通知」表徵圖。
+   * 在右上方的功能表中，選擇「建立」。 請注意，在首次設定雲端設定之前，此按鈕不可用。
+   * 在「建立通知精靈」中輸入標題和訊息，然後按一下「建立」按鈕。 您的通知現在已準備好立即或稍後傳送。 可以編輯它，並且可以變更和儲存訊息和/或標題。
 
-1. 发送通知
+1. 傳送通知
 
-   * 在“应用程序”功能板中，找到推送通知拼贴。
-   * 选择通知，或单击右下方的详细信息按钮(...)以显示通知列表。 此列表还指示通知是否已准备好发送、是否已发送，或是否在发送过程中出错。
-   * 选中一个通知的复选框（仅限），然后单击列表上方的“发送通知”按钮。 您将有一次机会在显示的对话框中“取消”或“发送”通知。
+   * 在應用程式控制面板中，找出「推播通知」表徵圖。
+   * 選取通知，或按一下右下方的詳細資訊按鈕(...)，顯示通知清單。 此清單也會指出通知是否已準備好傳送、已傳送，或傳送期間是否發生錯誤。
+   * 勾選一個通知的核取方塊（僅限），然後按一下清單上方的「傳送通知」按鈕。 您有機會在出現的對話方塊上「取消」或「傳送」通知。
 
-1. 处理结果
+1. 處理結果
 
-   * 如果推送通知服务(Amazon SNS或Pushwoosh)收到发送请求，确认该请求有效，并将其成功发送到本机提供程序（APNS和GCM），则“发送”对话框将关闭，且不显示任何消息。 在通知列表中，该通知的状态将列为已发送。
-   * 如果推送发送失败，对话框将显示一条消息，指示问题。 在通知列表中，该通知的状态将列为“错误”，但如果问题得到纠正，则可以再次发送通知。 发生错误时，服务器错误日志中应显示其他错误信息。
-   * 请注意，iOS和Android推送通知之间存在一些平台差异。 其中包括：
+   * 如果推播通知服務(Amazon SNS或Pushwoosh)收到傳送要求，確認其有效，然後成功傳送給原生提供者（APNS和GCM），傳送對話方塊會關閉，但不顯示任何訊息。 在通知清單中，該通知的狀態將列為「已傳送」。
+   * 如果推送傳送失敗，對話方塊會顯示訊息指出問題。 在通知清單中，該通知的狀態將列為「錯誤」，但如果問題已解決，則可再次傳送通知。 發生錯誤時，伺服器錯誤記錄中應會顯示其他錯誤資訊。
+   * 請注意，iOS和Android推播通知之間在平台上有一些差異。 其中包括：
 
-      * 在Android上部署应用程序后，使用CLI进行构建将启动该应用程序。 在iOS上，您必须手动启动它。 由于推送注册步骤在启动时进行，因此Android应用程序可以立即接收推送通知（因为该通知将已启动并注册），而iOS应用程序则不会。
-      * 在Android中，“确定”按钮文本全部大写（以及在应用程序内通知中添加的任何其他按钮中），而在iOS中，则不全部大写。
+      * 使用CLI建置應用程式後，應用程式就會在Android上部署後啟動。 在iOS上，您必須手動啟動。 由於推播註冊步驟會在啟動時進行，Android應用程式會立即收到推播通知（因為它會啟動並註冊），而iOS應用程式不會收到通知。
+      * 在Android上，「確定」按鈕文字全部為大寫字母（以及在應用程式內通知中新增的任何其他按鈕中也一樣），但在iOS中則否。
 
-对于AMS推送通知，必须从AMS服务器撰写并发送通知。 AMS提供的推送通知功能，超出了AEM通知与AWS和Pushwoosh提供的功能。
+對於AMS推播通知，必須撰寫通知並從AMS伺服器傳送。 AMS提供的推播通知功能比AEM通知隨AWS和Pushwoosh提供的功能更多。
 
 >[!NOTE]
 >
->*推送通知无法得到保证；更像是公告。 尽最大努力确保每个人都听到这一消息，但它们并不是一个有保证的交付机制。 此外，推送的时间可能会从不到一秒到多达半小时不等。*
+>*推播通知並不保證一定會傳送；它們更像是公告。 盡最大努力確保每個人都能聽到，但他們不是保證的傳送機制。 此外，傳送推播的時間也可能從不到一秒到最多半小時不等。*
 
-### 配置包含推送通知的深层链接 {#configuring-deep-linking-with-push-notifications}
+### 使用推播通知設定深層連結 {#configuring-deep-linking-with-push-notifications}
 
-什么是深层链接？ 在推送通知的上下文中，这是一种允许将应用程序打开或定向（如果打开）到应用程序内指定位置的方法。
+什麼是深層連結？ 在推播通知的情境下，這是一種允許應用程式開啟或導向（如果開啟）至應用程式內指定位置的方法。
 
-它是如何工作的？ 推送通知的作者可以选择添加按钮标签(例如，“给我看看！”) ，并通过可视路径浏览器选择要在通知中链接的页面。 发送后，推送会正常进行，但应用程序内消息中的“确定”按钮会被替换为“关闭”按钮，并指定新按钮（“显示我！”） 。 单击新按钮将使应用程序转到应用程序中的指定页面。 单击“取消”将只是关闭消息。
+如何運作？ 推播通知的作者可選擇新增按鈕標籤（即「顯示給我！」） 並透過視覺路徑瀏覽器，選擇要在通知中連結的頁面。 傳送後，推播會正常發生，除了應用程式內訊息中，「確定」按鈕會被「關閉」按鈕取代，而新按鈕會指定（「顯示我！」） 也會出現。 按一下新按鈕，應用程式就會移至應用程式內的指定頁面。 按一下「關閉」只會關閉訊息。
 
-如果应用程序未打开，则阴影将正常显示。 对阴影中的通知执行操作将打开应用程序，然后根据推送通知中配置的内容向用户显示深层链接按钮。
+如果應用程式未開啟，則陰影會正常顯示。 對陰影中的通知採取行動將開啟應用程式，然後根據推播通知中的設定向使用者顯示深層連結按鈕。
 
-创建通知、添加按钮文本和可选深层链接的链接路径：
+建立通知、新增按鈕文字，以及選擇性深層連結的連結路徑：
 
 >[!CAUTION]
 >
->。要访问功能板中的“推送通知”拼贴，请执行以下步骤。
+>.若要存取控制面板中的「推播通知」表徵圖，請遵循下列步驟。
 
-1. 单击 **管理Cloud Services** 拼贴。
+1. 按一下右上角的編輯 **管理Cloud Services** 圖磚。
 
    ![chlimage_1-108](assets/chlimage_1-108.png)
 
-1. 选择 **Pushwoosh连接**. 单击&#x200B;**下一步**。
+1. 選取 **Pushwoosh連線**. 单击&#x200B;**下一步**。
 
    ![chlimage_1-109](assets/chlimage_1-109.png)
 
-1. 输入属性的详细信息并单击 **提交**.
+1. 輸入屬性的詳細資訊，然後按一下 **提交**.
 
    ![chlimage_1-110](assets/chlimage_1-110.png)
 
-   提交配置后， **推送通知** “拼贴”显示在功能板中。
+   一旦您提交設定， **推播通知** 圖磚會顯示在控制面板中。
 
    ![chlimage_1-111](assets/chlimage_1-111.png)
 
 ### 创建通知向导 {#create-notification-wizard}
 
-一旦 **推送通知** 拼贴显示在功能板中，使用创建通知向导添加内容：
+一旦 **推播通知** 圖磚會顯示在您的儀表板中，使用建立通知精靈來新增內容：
 
-1. 单击 **推送通知** 用于打开的拼贴 **创建通知向导**.
+1. 按一下右上角的新增符號 **推播通知** 圖磚以開啟 **建立通知精靈**.
 
    ![chlimage_1-112](assets/chlimage_1-112.png)
 
-1. 单击链接路径中的浏览图标，可向用户显示应用程序的内容结构。
+1. 按一下連結路徑中的瀏覽圖示，使用者就會看到應用程式的內容結構。
 
-   选择路径后，单击复选图标。
+   選取路徑後，按一下核取圖示。
 
    ![chlimage_1-113](assets/chlimage_1-113.png)
 
    >[!NOTE]
    >
-   >链接按钮文本限制为20个字符。
+   >連結按鈕文字限製為20個字元。
    >
-   >如果最终用户没有应用程序的最新版本并且链接的路径不可用，则确认深层链接的操作会将用户引导至应用程序的主页。
+   >如果一般使用者沒有最新版本的應用程式，而且連結的路徑不可用，則確認深層連結的動作會將使用者引導至應用程式的首頁面。
 
-1. 输入 **文本详细信息** 在 **创建通知向导** 单击 **创建**.
+1. 輸入 **文字詳細資料** 在 **建立通知精靈** 並按一下 **建立**.
 
    ![chlimage_1-114](assets/chlimage_1-114.png)
 
-   单击从 **推送通知** 拼贴。
+   按一下您從「 」建立的推播通知，以開啟詳細資料 **推播通知** 圖磚。
 
-   您可以编辑属性、发送通知或删除通知。
+   您可以編輯屬性、傳送通知或刪除通知。
 
    ![chlimage_1-115](assets/chlimage_1-115.png)
 
@@ -374,8 +374,8 @@ AEM配置为使用三种服务之一进行推送通知：
 >
 >**附加信息**:
 >
->在6.4版本发布后，将不支持Pushwoosh和Amazon SNS，它们将作为包共享的附加组件提供。
+>6.4版之後將不再支援Pushwoosh和Amazon SNS，並會以套件共用的附加元件形式提供。
 
 ### 后续步骤 {#the-next-steps}
 
-了解有关应用程序推送通知的详细信息后，请参阅 [AEM Mobile内容个性化](/help/mobile/phonegap-aem-mobile-content-personalization.md).
+瞭解應用程式的推播通知詳細資料後，請參閱 [AEM Mobile內容個人化](/help/mobile/phonegap-aem-mobile-content-personalization.md).

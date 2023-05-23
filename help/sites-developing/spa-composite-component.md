@@ -1,6 +1,6 @@
 ---
 title: SPA 中的复合组件
-description: 了解如何创建自己的复合组件，这些组件由使用AEM单页应用程序(SPA)编辑器的其他组件组成。
+description: 瞭解如何建立自己的複合元件，也就是由AEM單頁應用程式(SPA)編輯器運作的其他元件所組成的元件。
 exl-id: 02b6c698-d169-467a-9168-9fa6181bed6c
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
@@ -11,52 +11,52 @@ ht-degree: 1%
 
 # SPA 中的复合组件 {#composite-components-in-spas}
 
-复合组件通过将多个基本组件组合到一个组件中来利用AEM组件的模块化特性。 常见的复合组件用例是卡组件，由图像和文本组件组合而成。
+複合元件可藉由將多個基本元件結合為單一元件，以運用AEM元件的模組化特性。 常見的複合元件使用案例是卡片元件，由影像和文字元件組合而成。
 
-在AEM单页应用程序(SPA)编辑器框架中正确实施复合组件后，内容作者可以像拖放任何其他组件一样拖放此类组件，但仍然能够单独编辑构成复合组件的每个组件。
+在AEM單頁應用程式(SPA)編輯器架構中正確實作複合元件時，內容作者可以像拖放任何其他元件一樣拖放此類元件，但還是可以個別編輯組成複合元件的每個元件。
 
-本文演示了如何将复合组件添加到单页应用程序，以便与AEM SPA编辑器无缝协作。
+本文示範如何將複合元件新增至單頁應用程式，以順暢地與AEM SPA編輯器搭配運作。
 
 ## 用例 {#use-case}
 
-本文将以典型卡组件作为示例用例。 信息卡是许多数字体验的公用UI元素，通常由图像和相关文本或题注组成。 作者希望能够拖放整个卡片，但能够单独编辑卡片的图像并自定义关联的文本。
+本文將以典型卡片元件作為範例使用案例。 卡片是許多數位體驗的通用UI元素，通常由影像和相關文字或註解組成。 作者想要能夠拖放整個卡片，但可以個別編輯卡片的影像以及自訂關聯的文字。
 
 ## 前提条件 {#prerequisites}
 
-以下支持复合组件用例的模型需要以下先决条件。
+以下支援複合元件使用案例的模型需要下列先決條件。
 
-* 您的AEM开发实例正在本地端口4502上运行，并带有示例项目。
-* 您有一个正常工作的外部React应用程序 [已启用以便在AEM中编辑。](spa-edit-external.md)
-* React应用程序加载到AEM编辑器中 [使用RemotePage组件。](spa-remote-page.md)
+* 您的AEM開發執行個體正在本機連線埠4502上透過範例專案執行。
+* 您有一個正常運作的外部React應用程式 [已啟用以便在AEM中編輯。](spa-edit-external.md)
+* React應用程式會載入AEM編輯器中 [使用RemotePage元件。](spa-remote-page.md)
 
-## 将复合组件添加到SPA {#adding-composite-components}
+## 將複合元件新增至SPA {#adding-composite-components}
 
-实施复合组件有三种不同的模型，具体取决于AEM中的SPA实施。
+實作複合元件有三種不同的模式，視您在AEM中的SPA實作而定。
 
-* [您的AEM项目中不存在该组件。](#component-does-not-exist)
-* [您的AEM项目中存在该组件，但其必需的内容不存在。](#content-does-not-exist)
-* [组件及其所需内容都存在于您的AEM项目中。](#both-exist)
+* [您的AEM專案中不存在該元件。](#component-does-not-exist)
+* [元件存在於您的AEM專案中，但它的必要內容不存在。](#content-does-not-exist)
+* [元件及其必要內容都存在於您的AEM專案中。](#both-exist)
 
-以下各节提供了使用卡组件作为示例来实施每个用例的示例。
+以下各節會以卡片元件為例，提供實施每個案例的範例。
 
-### 您的AEM项目中不存在该组件。 {#component-does-not-exist}
+### 您的AEM專案中不存在該元件。 {#component-does-not-exist}
 
-首先，创建将构成复合组件的组件，即图像及其文本的组件。
+首先，建立構成複合元件的元件，即影像及其文字的元件。
 
-1. 在AEM项目中创建文本组件。
-1. 添加相应的 `resourceType` 从组件的项目 `editConfig` 节点。
+1. 在您的AEM專案中建立文字元件。
+1. 新增對應的 `resourceType` 從元件中的專案 `editConfig` 節點。
 
    ```text
     resourceType: 'wknd-spa/components/text' 
    ```
 
-1. 使用 `withMappable` 帮助程序启用组件的编辑。
+1. 使用 `withMappable` 協助程式啟用元件的編輯。
 
    ```text
    export const AEMText = withMappable(Text, TextEditConfig); 
    ```
 
-文本组件将类似于以下内容。
+文字元件將類似於以下內容。
 
 ```javascript
 import React from 'react';
@@ -85,7 +85,7 @@ export const Text = ({ cqPath, richText, text }) => {
 export const AEMText = withMappable(Text, TextEditConfig);
 ```
 
-如果以类似方式创建图像组件，则可以将其与 `AEMText` 组件放入新的卡片组件中，并将图像和文本组件用作子组件。
+如果您以類似方式建立影像元件，可以將其與 `AEMText` 元件放入新的卡片元件中，使用影像和文字元件作為子項。
 
 ```javascript
 import React from 'react';
@@ -104,7 +104,7 @@ export const AEMCard = ({ pagePath, itemPath}) => (
 );
 ```
 
-生成的复合组件现在可以放置在应用程序中的任意位置，并且将在SPA编辑器中为文本和图像组件添加占位符。 在以下示例中，卡组件被添加到标题下的主组件中。
+如此產生的複合元件現在可置於應用程式中的任何位置，且將在SPA編輯器中新增文字和影像元件的預留位置。 在以下範例中，卡片元件會新增至標題下方的首頁元件。
 
 ```javascript
 function Home() {
@@ -118,19 +118,19 @@ function Home() {
 }
 ```
 
-这将在编辑器中为文本和图像显示一个空占位符。 使用编辑器输入这些属性的值时，它们存储在指定的页面路径(即 `/content/wknd-spa/home`  在根级别使用 `itemPath`.
+這會在編輯器中顯示文字和影像的空白預留位置。 使用編輯器輸入這些專案的值時，會儲存在指定的頁面路徑，即 `/content/wknd-spa/home`  在根層級，名稱指定於 `itemPath`.
 
-![编辑器中的复合卡组件](assets/composite-card.png)
+![編輯器中的複合卡元件](assets/composite-card.png)
 
-### 您的AEM项目中存在该组件，但其必需的内容不存在。 {#content-does-not-exist}
+### 元件存在於您的AEM專案中，但它的必要內容不存在。 {#content-does-not-exist}
 
-在这种情况下，信息卡组件已在包含标题和图像节点的AEM项目中创建了。 子节点（文本和图像）具有相应的资源类型。
+在此情況下，卡片元件已在包含標題和影像節點的AEM專案中建立。 子節點（文字和影像）具有對應的資源型別。
 
-![卡组件的节点结构](assets/composite-node-structure.png)
+![卡片元件的節點結構](assets/composite-node-structure.png)
 
-然后，您可以将其添加到SPA并检索其内容。
+然後，您可以將其新增到您的SPA並擷取其內容。
 
-1. 在SPA中为此创建一个对应的组件。 确保子组件映射到SPA项目中的相应AEM资源类型。 在此示例中，我们使用相同的 `AEMText` 和 `AEMImage` 详细组件 [在上一个案例中。](#component-does-not-exist)
+1. 在SPA中為此建立對應的元件。 確保子元件對應到SPA專案中它們對應的AEM資源型別。 在此範例中，我們使用相同的 `AEMText` 和 `AEMImage` 詳細元件 [在上一個案例中。](#component-does-not-exist)
 
    ```javascript
    import React from 'react';
@@ -146,9 +146,9 @@ function Home() {
    MapTo('wknd-spa/components/image')(Image, ImageEditConfig);
    ```
 
-1. 因为没有内容 `imagecard` 组件中，将卡添加到页面中。 在SPA中包含来自AEM的现有容器。
-   * 如果AEM项目中已存在容器，我们可以改为将此容器包含在SPA中，并改为将组件从AEM添加到容器中。
-   * 确保卡组件映射到SPA中相应的资源类型。
+1. 因為沒有內容 `imagecard` 元件，將卡片新增至頁面。 在SPA中加入AEM的現有容器。
+   * 如果AEM專案中已經有容器，我們可以改為將此容器加入SPA，並改為從AEM將元件新增至容器。
+   * 確認卡片元件已對應至SPA中對應的資源型別。
 
    ```javascript
    <ResponsiveGrid
@@ -156,15 +156,15 @@ function Home() {
     itemPath='root/responsivegrid' />
    ```
 
-1. 添加已创建的 `wknd-spa/components/imagecard` 组件到容器组件允许的组件 [在页面模板中。](/help/sites-authoring/templates.md)
+1. 新增已建立的 `wknd-spa/components/imagecard` 元件至容器元件允許的元件 [在頁面範本中。](/help/sites-authoring/templates.md)
 
-现在， `imagecard` 组件可直接添加到AEM编辑器中的容器。
+現在 `imagecard` 元件可直接新增至AEM編輯器中的容器。
 
-![编辑器中的复合卡](assets/composite-card.gif)
+![編輯器中的複合卡片](assets/composite-card.gif)
 
-### 组件及其所需内容都存在于您的AEM项目中。 {#both-exist}
+### 元件及其必要內容都存在於您的AEM專案中。 {#both-exist}
 
-如果内容存在于AEM中，则可以通过提供指向内容的路径直接将其包含在SPA中。
+如果內容存在於AEM中，則可透過提供內容的路徑直接包含在SPA中。
 
 ```javascript
 <AEMCard
@@ -172,6 +172,6 @@ function Home() {
     itemPath='root/responsivegrid/imagecard' />
 ```
 
-![节点结构中的复合路径](assets/composite-path.png)
+![節點結構中的複合路徑](assets/composite-path.png)
 
-此 `AEMCard` 组件与定义的组件相同 [在上一个用例中。](#content-does-not-exist) 此处，在AEM项目的上述位置中定义的内容包含在SPA中。
+此 `AEMCard` 元件與定義相同 [在上一個使用案例中。](#content-does-not-exist) 在這裡，上述位置在AEM專案中定義的內容包含在SPA中。

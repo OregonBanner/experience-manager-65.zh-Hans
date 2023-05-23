@@ -1,6 +1,6 @@
 ---
 title: 模板
-description: 创建用作新页面基础的页面时，会使用模板。
+description: 建立作為新頁面基礎的頁面時，會使用範本。
 uuid: 6fa3dafc-dfa1-42d8-b296-d4be57449411
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -18,124 +18,124 @@ ht-degree: 1%
 
 # 模板{#templates}
 
-模板在AEM的不同位置使用：
+範本在AEM中的不同時間點使用：
 
-* [创建页面时，需要选择一个模板](#templates-pages). 此模板用作新页面的基础。 模板可定义页面的结构、任何初始内容以及 [组件](/help/sites-authoring/default-components.md) （设计属性）。
+* [建立頁面時，請選取範本](#templates-pages). 此範本用作新頁面的基礎。 範本會定義頁面的結構、任何初始內容，以及 [元件](/help/sites-authoring/default-components.md) （設計屬性）。
 
-* [创建内容片段时，您还可以选择模板](#templates-content-fragments). 此模板可定义结构、初始元素和变量。
+* [建立內容片段時，您也可以選取範本](#templates-content-fragments). 此範本定義結構、初始元素和變數。
 
-详细介绍了以下模板：
+以下範本將詳細說明：
 
-* [页面模板 — 可编辑](/help/sites-developing/page-templates-editable.md)
-* [页面模板 — 静态](/help/sites-developing/page-templates-static.md)
-* [内容片段模板](/help/sites-developing/content-fragment-templates.md)
-* [自适应模板渲染](/help/sites-developing/templates-adaptive-rendering.md)
+* [頁面範本 — 可編輯](/help/sites-developing/page-templates-editable.md)
+* [頁面範本 — 靜態](/help/sites-developing/page-templates-static.md)
+* [內容片段範本](/help/sites-developing/content-fragment-templates.md)
+* [最適化範本演算](/help/sites-developing/templates-adaptive-rendering.md)
 
-## 模板 — 页面 {#templates-pages}
+## 範本 — 頁面 {#templates-pages}
 
-AEM现在提供两种用于创建页面的基本模板类型：
+AEM現在提供兩種基本型別的範本來建立頁面：
 
 >[!NOTE]
 >
->使用模板 [创建页面](/help/sites-authoring/managing-pages.md#creating-a-new-page)，则没有显示差异（对页面作者而言），也没有显示所使用模板的类型。
+>使用範本時 [建立頁面](/help/sites-authoring/managing-pages.md#creating-a-new-page)，沒有可見的差異（對頁面作者而言），也沒有指示使用的範本型別。
 
 ### 可编辑模板 {#editable-templates}
 
-可编辑的模板现在被视为使用AEM进行开发的最佳实践。
+可編輯的範本現在被認為是使用AEM開發的最佳實務。
 
-可编辑模板的优势：
+可編輯範本的優點：
 
-* 可以 [已创建](/help/sites-authoring/templates.md#creating-a-new-template-template-author) 和 [编辑](/help/sites-authoring/templates.md#editing-a-template-structure-template-author) 的作者。
+* 可以是 [已建立](/help/sites-authoring/templates.md#creating-a-new-template-template-author) 和 [已編輯](/help/sites-authoring/templates.md#editing-a-template-structure-template-author) 您的作者。
 
-* 引入此模板后，您可以为使用该模板创建的任何页面定义以下内容：
+* 引入此功能，可讓您為使用範本建立的任何頁面定義下列內容：
 
-   * 结构
-   * 初始内容
-   * 内容策略
+   * 結構
+   * 初始內容
+   * 內容原則
 
-* 创建新页面后，页面与模板之间将保持动态连接。 这种连接意味着对模板结构所做的更改会反映在使用该模板创建的任何页面上；不会反映对初始内容所做的更改。
-* 使用内容策略（从模板编辑器中编辑）来保留设计属性（在页面编辑器中不使用设计模式）。
-* 存储在 `/conf`
-* 请参阅 [可编辑的模板](/help/sites-developing/page-templates-editable.md) 以了解更多信息。
+* 建立新頁面後，頁面和範本之間會維持動態連線。 此連線表示範本結構的變更會反映在使用該範本建立的任何頁面上；初始內容的變更不會反映出來。
+* 使用內容原則（從範本編輯器編輯）來儲存設計屬性（不使用頁面編輯器中的設計模式）。
+* 儲存在 `/conf`
+* 另請參閱 [可編輯的範本](/help/sites-developing/page-templates-editable.md) 以取得進一步資訊。
 
 >[!NOTE]
 >
->请参阅 [使用可编辑的页面模板来开发Experience Manager网站](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html?lang=en).
+>另請參閱 [使用可編輯的頁面範本來開發Experience Manager網站](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html?lang=en).
 
 ### 静态模板 {#static-templates}
 
 静态模板:
 
-* 必须由您的开发人员定义和配置。
-* AEM的原始模板系统，已在许多版本中可用。
-* 静态模板是节点的层次结构，其结构与要创建的页面相同，但没有任何实际内容。
-* 复制以创建页面，之后不存在任何动态连接。
-* 使用 [设计模式](/help/sites-authoring/default-components-designmode.md) 来保留设计属性。
-* 存储在 `/apps`
-* 请参阅 [静态模板](/help/sites-developing/page-templates-static.md) 以了解更多信息。
+* 必須由您的開發人員定義和設定。
+* 已推出多個版本的AEM原始範本系統。
+* 靜態範本是節點的階層，其結構與要建立的頁面相同，但沒有任何實際內容。
+* 複製來建立頁面，之後就沒有任何動態連線存在。
+* 使用 [設計模式](/help/sites-authoring/default-components-designmode.md) 以儲存設計屬性。
+* 儲存在 `/apps`
+* 另請參閱 [靜態範本](/help/sites-developing/page-templates-static.md) 以取得進一步資訊。
 
 >[!NOTE]
 >
->自AEM 6.5起，使用静态模板不被视为最佳实践。 请改用可编辑的模板。
+>自AEM 6.5起，使用靜態範本並不被視為最佳實務。 請改用可編輯的範本。
 >
->[AEM现代化](modernization-tools.md) 工具可以帮助您从静态模板迁移到可编辑的模板。
+>[AEM現代化](modernization-tools.md) 工具可協助您從靜態範本移轉至可編輯範本。
 
 ### 模板可用性 {#template-availability}
 
 >[!CAUTION]
 >
->AEM提供了多个属性来控制 **站点**. 但是，将它们组合在一起可能会导致难以跟踪和管理的复杂规则。
+>AEM提供多個屬性，可控制底下允許的範本 **網站**. 但是，將它們合併可能會導致難以跟蹤和管理的複雜規則。
 >
->因此，Adobe建议您首先通过定义以下内容来简单操作：
+>因此，Adobe建議您先定義：
 >
->* 只有 `cq:allowedTemplates` 属性
+>* 僅限 `cq:allowedTemplates` 屬性
 >
->* 仅在站点根目录上
+>* 僅於網站根目錄上
 >
->有关示例，请参阅We.Retail: `/content/we-retail/jcr:content`
+>如需範例，請參閱We.Retail： `/content/we-retail/jcr:content`
 >
->属性 `allowedPaths`, `allowedParents`和 `allowedChildren` 也可以放置在模板上以定义更复杂的规则。 但是，如果可能， *多* 更简单地进一步定义 `cq:allowedTemplates` 网站子区域的属性（如果需要进一步限制允许的模板）。
+>屬性 `allowedPaths`， `allowedParents`、和 `allowedChildren` 亦可放置在範本上，以定義更複雜的規則。 不過，如果可能的話，它會 *很多* 更簡單以進一步定義 `cq:allowedTemplates` 屬性（若需要進一步限制允許的範本）。
 >
->另一个优势是 `cq:allowedTemplates` 属性可由作者在 **高级** 选项卡 **页面属性**. 无法使用（标准）UI更新其他模板属性，因此需要开发人员为每次更改维护规则和代码部署。
+>一個額外優點是 `cq:allowedTemplates` 作者可以在以下位置更新屬性： **進階** 的標籤 **頁面屬性**. 其他範本屬性無法使用（標準） UI更新，因此需要開發人員維護規則和每次變更的程式碼部署。
 
-在站点管理界面中创建页面时，可用模板的列表取决于新页面的位置以及每个模板中指定的放置限制。
+在網站管理員介面中建立頁面時，可用範本的清單取決於新頁面的位置和每個範本中指定的版位限制。
 
-以下属性确定模板是否 `T` 用于要作为页面子项放置的新页面 `P`. 以下每个属性都是一个包含零个或多个正则表达式的多值字符串，用于与路径匹配：
+下列屬性決定是否使用範本 `T` 用於要放置為頁面子項的新頁面 `P`. 以下每個屬性都是多值字串，其中包含零個或多個用來與路徑比對的規則運算式：
 
-* 的 `cq:allowedTemplates` 属性 `jcr:content` 子节点 `P` 或 `P`.
+* 此 `cq:allowedTemplates` 的屬性 `jcr:content` 的子節點： `P` 或祖先 `P`.
 
-* 的 `allowedPaths` 财产 `T`.
+* 此 `allowedPaths` 屬性 `T`.
 
-* 的 `allowedParents` 财产 `T`.
+* 此 `allowedParents` 屬性 `T`.
 
-* 的 `allowedChildren` 模板的属性 `P`.
+* 此 `allowedChildren` 的範本屬性 `P`.
 
-评价工作如下：
+評估的運作方式如下：
 
-* 第一个非空 `cq:allowedTemplates` 属性，该属性在页面层次结构的升序时以开头 `P` 与 `T`. 如果没有值匹配， `T` 被拒绝。
+* 第一個非空白 `cq:allowedTemplates` 將頁面階層從開頭遞增時發現屬性 `P` 比對的路徑 `T`. 如果沒有任何相符的值， `T` 已拒絕。
 
-* 如果 `T` 具有非空 `allowedPaths` 属性，但没有任何值与 `P`, `T` 被拒绝。
+* 若 `T` 具有非空白 `allowedPaths` 屬性，但沒有值符合的路徑 `P`， `T` 已拒絕。
 
-* 如果上述两个属性为空或不存在， `T` 被拒绝，除非它属于与 `P`. `T` 属于与 `P` 如果且仅当路径的第二级名称 `T` 与路径的第二级名称相同 `P`. 例如，模板 `/apps/geometrixx/templates/foo` 属于与页面相同的应用程序 `/content/geometrixx`.
+* 如果上述兩個屬性都空白或不存在， `T` 除非屬於與相同的應用程式，否則會遭拒 `P`. `T` 屬於與相同的應用程式 `P` 若且唯若第二層路徑的名稱 `T` 與路徑的第二層級名稱相同 `P`. 例如，範本 `/apps/geometrixx/templates/foo` 屬於與頁面相同的應用程式 `/content/geometrixx`.
 
-* 如果 `T` 具有非空 `allowedParents` 属性，但没有任何值与 `P`, `T` 被拒绝。
+* 若 `T` 具有非空白 `allowedParents` 屬性，但沒有值符合的路徑 `P`， `T` 已拒絕。
 
-* 如果的模板 `P` 具有非空 `allowedChildren` 属性，但没有任何值与 `T`, `T` 被拒绝。
+* 如果範本屬於 `P` 具有非空白 `allowedChildren` 屬性，但沒有值符合的路徑 `T`， `T` 已拒絕。
 
-* 在所有其他情况下， `T` 中的“禁止页面加载闪烁”。
+* 在所有其他情況下， `T` 允許。
 
-下图描述了模板评估流程：
+下圖說明範本評估程式：
 
 ![chlimage_1-176](assets/chlimage_1-176.png)
 
-#### 子页面中使用的限制模板 {#limiting-templates-used-in-child-pages}
+#### 限制子頁面中使用的範本 {#limiting-templates-used-in-child-pages}
 
-要限制可在给定页面下创建子页面的模板，请使用 `cq:allowedTemplates` 财产 `jcr:content` 用于指定允许作为子页面的模板列表的页面节点。 列表中的每个值都必须是允许的子页面模板的绝对路径，例如 `/apps/geometrixx/templates/contentpage`.
+若要限制哪些範本可用於在指定頁面下建立子頁面，請使用 `cq:allowedTemplates` 屬性 `jcr:content` 頁面節點，用來指定允許做為子頁面的範本清單。 例如，清單中的每個值都必須是允許的子頁面範本的絕對路徑 `/apps/geometrixx/templates/contentpage`.
 
-您可以使用 `cq:allowedTemplates` 模板上的属性  `jcr:content` 节点，以将此配置应用于使用此模板的所有新创建页面。
+您可以使用 `cq:allowedTemplates` 範本的屬性  `jcr:content` 節點，將此設定套用至使用此範本的所有新建立頁面。
 
-如果要添加更多约束（例如，与模板层次结构有关的约束），可以使用 `allowedParents/allowedChildren` 属性。 然后，您可以明确指定从模板T创建的页面必须是从模板T创建的页面的父/子页面。
+如果您想要新增更多限制，例如關於範本階層的限制，您可以使用 `allowedParents/allowedChildren` 範本的屬性。 然後，您可以明確指定從範本T建立的頁面必須是從範本T建立的頁面的父項/子項。
 
-## 模板 — 内容片段 {#templates-content-fragments}
+## 範本 — 內容片段 {#templates-content-fragments}
 
-请参阅 [内容片段模板](/help/sites-developing/content-fragment-templates.md).
+另請參閱 [內容片段範本](/help/sites-developing/content-fragment-templates.md).

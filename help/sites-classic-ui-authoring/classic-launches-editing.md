@@ -1,6 +1,6 @@
 ---
 title: 编辑启动项
-description: 为页面（或一组页面）创建启动项后，您可以编辑页面启动项副本中的内容。
+description: 為某個頁面（或一組頁面）建立啟動後，您可以編輯頁面啟動副本中的內容。
 uuid: 3a310eeb-553d-4d2b-98b5-c5bc523b2aca
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -18,50 +18,50 @@ ht-degree: 3%
 
 # 编辑启动项{#editing-launches}
 
-## 编辑启动页面 {#editing-launch-pages}
+## 編輯啟動頁面 {#editing-launch-pages}
 
-为页面（或一组页面）创建启动项后，您可以编辑页面启动项副本中的内容。
+為某個頁面（或一組頁面）建立啟動後，您可以編輯頁面啟動副本中的內容。
 
-1. 打开页面进行编辑。
-1. 在Sidekick中，选择 **版本控制** ，然后展开 **启动项** 群组。 当前正在编辑的启动项的标题使用粗体字体。
+1. 開啟頁面以進行編輯。
+1. 在Sidekick中，選取 **版本設定** 標籤，然後展開 **啟動** 群組。 目前正在編輯的啟動項標題會使用粗體字型。
 
    ![chlimage_1-13](assets/chlimage_1-13.jpeg)
 
-1. 选择要处理的启动项，然后单击 **交换机**.
-1. 开始编辑。
+1. 選取您要處理的啟動項，然後按一下 **切換**.
+1. 開始編輯。
 
    >[!NOTE]
    >
-   >您可以使用 **页面** 选项卡，以执行以下操作： **创建子页面**&#x200B;等。
+   >您可以使用 **頁面** tab of sidekick來執行動作，例如 **建立子頁面**，等等。
 
-## 编辑启动配置 {#editing-a-launch-configuration}
+## 編輯Launch設定 {#editing-a-launch-configuration}
 
-创建启动项后，您可以更改启动项的名称和日期。 您还可以指定要与启动项关联的图像。
+建立啟動後，您可以變更啟動名稱和啟動日期。 您也可以指定要與啟動建立關聯的影像。
 
-1. 打开启动项管理页面([http://localhost:4502/libs/launches/content/admin.html](http://localhost:4502/libs/launches/content/admin.html))。
+1. 開啟啟動管理頁面([http://localhost:4502/libs/launches/content/admin.html](http://localhost:4502/libs/launches/content/admin.html))。
 
-1. 选择所需的启动项并单击 **编辑** 要打开对话框，请执行以下操作：
+1. 選取所需的啟動項，然後按一下 **編輯** 若要開啟對話方塊：
 
-   * 在 **常规** 选项卡，您可以编辑：
+   * 在 **一般** 標籤，您可以編輯：
 
       * **标题**
-      * **起始日期**:这等同于启动日期
+      * **上線日期**：這等同於啟動日期
       * **生产就绪**
 
-      请参阅 [启动项 — 事件的顺序](/help/sites-authoring/launches.md#launches-the-order-of-events) 以了解这些字段的用途和交互。
+      另請參閱 [啟動 — 事件順序](/help/sites-authoring/launches.md#launches-the-order-of-events) 這些欄位的用途和互動相關資訊。
 
-   * 在 **图像** 选项卡，您可以上传图像文件。
+   * 在 **影像** 索引標籤上，您可以上傳影像檔案。
 
 
 1. 单击“**保存**”。
 
-## 了解页面的启动状态 {#discovering-the-launch-status-of-a-page}
+## 探索頁面的啟動狀態 {#discovering-the-launch-status-of-a-page}
 
-编辑页面的启动项时，有关该启动项的信息会显示在 **版本控制** 选项卡：
+編輯頁面的啟動時，啟動的相關資訊會顯示在 **版本設定** Sidekick索引標籤：
 
-* 启动项的名称。
-* 上次更改后的时间。
-* 执行上次更改的用户。
-* 的状态 **生产就绪** 标记（橙色=未设置）绿色=设置)。
+* 啟動項名稱。
+* 上次變更後的時間。
+* 執行上次變更的使用者。
+* 的狀態 **生產就緒** 標幟（橘色=未設定；綠色=設定）。
 
 ![chlimage_1-186](assets/chlimage_1-186.png)

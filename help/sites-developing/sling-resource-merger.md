@@ -1,7 +1,7 @@
 ---
-title: 在AEM中使用Sling资源合并器
+title: 在AEM中使用Sling Resource Merger
 seo-title: Using the Sling Resource Merger in AEM
-description: Sling资源合并器提供访问和合并资源的服务
+description: Sling Resource Merger提供存取和合併資源的服務
 seo-description: The Sling Resource Merger provides services to access and merge resources
 uuid: 0a28fdc9-caea-490b-8f07-7c4a6b802e09
 contentOwner: Guillaume Carlino
@@ -17,113 +17,113 @@ ht-degree: 1%
 
 ---
 
-# 在AEM中使用Sling资源合并器{#using-the-sling-resource-merger-in-aem}
+# 在AEM中使用Sling Resource Merger{#using-the-sling-resource-merger-in-aem}
 
 ## 用途 {#purpose}
 
-Sling资源合并器提供访问和合并资源的服务。 它为以下两种情况提供了不同（差异）机制：
+Sling Resource Merger提供存取和合併資源的服務。 它為兩者提供不同的（差異）機制：
 
-* **[叠加](/help/sites-developing/overlays.md)** 资源，使用 [已配置的搜索路径](/help/sites-developing/overlays.md#configuring-the-search-paths).
+* **[覆蓋](/help/sites-developing/overlays.md)** 資源使用 [設定的搜尋路徑](/help/sites-developing/overlays.md#configuring-the-search-paths).
 
-* **覆盖** 触屏UI的组件对话框数量(`cq:dialog`)，使用资源类型层次结构(通过属性 `sling:resourceSuperType`)。
+* **覆寫** 觸控式UI的元件對話方塊數量(`cq:dialog`)，使用資源型別階層(透過屬性 `sling:resourceSuperType`)。
 
-通过Sling资源合并器，叠加/覆盖资源和/或属性与原始资源/属性合并：
+透過Sling Resource Merger，覆蓋/覆寫資源和/或屬性會與原始資源/屬性合併：
 
-* 自定义定义的内容比原始定义的内容优先级更高(即 *叠加* 或 *覆盖* it)。
+* 自訂定義的內容優先順序高於原始定義(亦即 *覆蓋* 或 *覆寫* it)。
 
-* 必要时， [属性](#properties) 在自定义设置中定义，指示如何使用从原始内容合并的内容。
+* 必要時， [屬性](#properties) 在自訂中定義，指示如何使用從原始內容合併的內容。
 
 >[!CAUTION]
 >
->Sling资源合并器和相关方法只能用于 [Granite](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html). 这也意味着它仅适用于标准的触屏优化UI；尤其是以这种方式定义的覆盖仅适用于组件的触屏优化对话框。
+>Sling資源合併器和相關方法只能用於 [Granite](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html). 這也表示這僅適用於標準的觸控式UI，尤其是以這種方式定義的覆寫僅適用於元件的觸控式對話方塊。
 >
->其他区域（包括触屏式组件或经典UI的其他方面）的覆盖/覆盖涉及将相应的节点和结构从原始复制到将定义自定义的位置。
+>其他區域（包括觸控式元件或傳統UI的其他方面）的覆蓋/覆寫涉及將適當的節點和結構從原始複製到將定義自訂的位置。
 
-### AEM目标 {#goals-for-aem}
+### AEM的目標 {#goals-for-aem}
 
-在AEM中使用Sling资源合并器的目标是：
+在AEM中使用Sling Resource Merger的目標為：
 
-* 确保自定义更改不会在中进行 `/libs`.
-* 减少复制自以下对象的结构： `/libs`.
+* 確保不會在中進行自訂變更 `/libs`.
+* 減少復寫來源的結構 `/libs`.
 
-   在使用Sling资源合并器时，不建议从以下位置复制整个结构 `/libs` 因为这会导致自定义设置中包含过多的信息(通常 `/apps`)。 无论以何种方式升级系统时，不必要地复制信息都会增加出现问题的机会。
+   使用Sling Resource Merger時，不建議從複製整個結構 `/libs` 因為這會導致自訂中保留太多資訊(通常是 `/apps`)。 當系統以任何方式升級時，不必要地複製資訊會增加發生問題的機會。
 
 >[!NOTE]
 >
->覆盖不依赖于搜索路径，而是使用属性 `sling:resourceSuperType` 以建立连接。
+>覆寫與搜尋路徑無關，而是使用屬性 `sling:resourceSuperType` 以建立連線。
 >
->但是，覆盖通常在下定义 `/apps`，因为AEM中的最佳实践是在 `/apps`；这是因为您不得更改下的任何内容 `/libs`.
+>不過，覆寫通常定義於 `/apps`，因為AEM的最佳實務是定義下的自訂 `/apps`；這是因為您不得變更下的任何專案 `/libs`.
 
 >[!CAUTION]
 >
->您 ***必须*** 不更改 `/libs` 路径。
+>您 ***必須*** 不變更中的任何專案 `/libs` 路徑。
 >
->这是因为 `/libs` 下次升级实例时将被覆盖（在应用修补程序或功能包时很可能会被覆盖）。
+>這是因為 `/libs` 下次升級執行個體時會被覆寫（而您在套用hotfix或feature pack時很可能會被覆寫）。
 >
->配置和其他更改的推荐方法是：
+>設定和其他變更的建議方法是：
 >
->1. 重新创建所需项目（即该项目存在于中） `/libs`)下 `/apps`
+>1. 重新建立所需專案（即該專案存在於中） `/libs`)下 `/apps`
 >
->1. 在中进行任何更改 `/apps`
+>1. 進行任何變更 `/apps`
 
 >
 
 
 ### 属性 {#properties}
 
-资源合并器提供以下属性：
+資源合併器提供下列屬性：
 
 * `sling:hideProperties` ( `String` 或 `String[]`)
 
-   指定要隐藏的属性或属性列表。
+   指定要隱藏的屬性或屬性清單。
 
-   通配符 `*` 隐藏所有。
+   萬用字 `*` 隱藏所有。
 
 * `sling:hideResource` ( `Boolean`)
 
-   指示资源是否应完全隐藏，包括其子项。
+   指出資源是否應該完全隱藏，包括其子項。
 
 * `sling:hideChildren` ( `String` 或 `String[]`)
 
-   包含要隐藏的子节点或子节点列表。 将维护节点的属性。
+   包含要隱藏的子節點或子節點清單。 將會保留節點的屬性。
 
-   通配符 `*` 隐藏所有。
+   萬用字 `*` 隱藏所有。
 
 * `sling:orderBefore` ( `String`)
 
-   包含当前节点应位于其前面的同级节点的名称。
+   包含同層級節點的名稱，目前節點應位於該節點的前面。
 
-这些属性如何影响相应的/原始资源/属性(来自 `/libs`)由叠加/覆盖使用(通常在 `/apps`)。
+這些屬性會影響對應/原始資源/屬性(來自 `/libs`)由覆蓋/覆寫使用(通常用於 `/apps`)。
 
-### 创建结构 {#creating-the-structure}
+### 建立結構 {#creating-the-structure}
 
-要创建叠加或覆盖，您需要在目标下重新创建具有对等结构的原始节点(通常是 `/apps`)。 例如：
+若要建立覆蓋或覆寫，您需要在目的地底下重新建立具有對等結構的原始節點(通常是 `/apps`)。 例如：
 
 * 叠加
 
-   * 站点控制台的导航条目（如边栏中所示）的定义定义定义如下：
+   * Sites主控台的導覽專案定義（如邊欄中所示）的定義定義位於：
 
       `/libs/cq/core/content/nav/sites/jcr:title`
 
-   * 要叠加此节点，请创建以下节点：
+   * 若要覆蓋此節點，請建立下列節點：
 
       `/apps/cq/core/content/nav/sites`
 
-      然后更新属性 `jcr:title` 根据需要。
+      然後更新屬性 `jcr:title` 視需要。
 
 * 替代
 
-   * 文本控制台的触屏启用对话框的定义定义如下：
+   * 文字主控台的觸控式對話方塊的定義定義如下：
 
       `/libs/foundation/components/text/cq:dialog`
 
-   * 要覆盖此节点，请创建以下节点 — 例如：
+   * 若要覆寫此節點，請建立下列節點 — 例如：
 
       `/apps/the-project/components/text/cq:dialog`
 
-要创建其中任一结构，您只需重新创建骨架结构。 要简化结构的重新创建，所有中间节点都可以是 `nt:unstructured` (它们不必反映原始节点类型；例如，在 `/libs`)。
+若要建立其中任何一個，您只需要重新建立骨架結構。 若要簡化重新建立結構，所有中間節點都可以是型別 `nt:unstructured` (它們不必反映原始節點型別；例如，在 `/libs`)。
 
-因此，在上述覆盖示例中，需要以下节点：
+所以在上述覆蓋圖範例中，需要下列節點：
 
 ```shell
 /apps
@@ -136,138 +136,138 @@ Sling资源合并器提供访问和合并资源的服务。 它为以下两种�
 
 >[!NOTE]
 >
->在使用Sling资源合并器（即处理标准的触屏UI时）时，不建议从复制整个结构 `/libs` 因为这会导致太多信息被保存在 `/apps`. 以任何方式升级系统时，这都可能导致问题。
+>使用Sling Resource Merger時（即處理標準觸控式UI時），不建議從複製整個結構 `/libs` 因為這會導致太多資訊保留在 `/apps`. 以任何方式升級系統時，這可能會導致問題。
 
-### 用例 {#use-cases}
+### 使用案例 {#use-cases}
 
-这些功能与标准功能相结合，使您能够：
+這些功能搭配標準功能，可讓您：
 
-* **添加资产**
+* **新增屬性**
 
-   属性不存在于 `/libs` 定义，但在 `/apps` 覆盖/覆盖。
+   屬性不存在於 `/libs` 定義，但在 `/apps` 覆蓋/覆寫。
 
-   1. 在中创建对应的节点 `/apps`
-   1. 在此节点上创建新属性»
+   1. 在中建立對應的節點 `/apps`
+   1. 在此節點上建立新屬性»
 
-* **重新定义属性（非自动创建的属性）**
+* **重新定義屬性（非自動建立的屬性）**
 
-   在中定义属性 `/libs`，但中需要新值 `/apps` 覆盖/覆盖。
+   屬性定義於 `/libs`，但中需要新值 `/apps` 覆蓋/覆寫。
 
-   1. 在中创建对应的节点 `/apps`
-   1. 在此节点上创建匹配属性（在/下） `apps`)
+   1. 在中建立對應的節點 `/apps`
+   1. 在此節點上建立相符的屬性（在/底下） `apps`)
 
-      * 该资产的优先级将基于Sling资源解析程序配置。
-      * 支持更改属性类型。
+      * 根據Sling Resource Resolver設定，屬性會有優先順序。
+      * 支援變更屬性型別。
 
-         如果您使用的属性类型与中使用的属性类型不同 `/libs`，则将使用您定义的属性类型。
+         如果您使用的屬性型別與中使用的不同 `/libs`，則會使用您定義的屬性型別。
    >[!NOTE]
    >
-   >支持更改属性类型。
+   >支援變更屬性型別。
 
-* **重新定义自动创建的属性**
+* **重新定義自動建立的屬性**
 
-   默认情况下，自动创建的属性(例如 `jcr:primaryType`)不受覆盖/覆盖的约束，以确保当前在下的节点类型 `/libs` 受到尊重。 要实施覆盖/覆盖，您必须在以下位置重新创建节点： `/apps`，显式隐藏属性并重新定义它：
+   依預設，自動建立的屬性(例如 `jcr:primaryType`)不受覆蓋/覆寫約束，以確保目前位於下的節點型別 `/libs` 已遵守。 若要強制覆蓋/覆寫，您必須在中重新建立節點 `/apps`，明確隱藏屬性並重新定義：
 
-   1. 在下创建对应的节点 `/apps` 具有所需的 `jcr:primaryType`
-   1. 创建资产 `sling:hideProperties` ，其值设置为自动创建的属性的值；例如， `jcr:primaryType`
+   1. 在下方建立對應的節點 `/apps` 搭配所需的 `jcr:primaryType`
+   1. 建立屬性 `sling:hideProperties` 在該節點上，將值設定為自動建立屬性的值；例如， `jcr:primaryType`
 
-      此属性，在下定义 `/apps`，现在优先级将高于下定义的优先级 `/libs`
+      此屬性，在下定義 `/apps`，現在會優先於下定義者 `/libs`
 
-* **重新定义节点及其子节点**
+* **重新定義節點及其子系**
 
-   节点及其子节点定义于 `/libs`，但是中需要新配置 `/apps` 覆盖/覆盖。
+   節點及其子系定義於 `/libs`，但中需要新設定 `/apps` 覆蓋/覆寫。
 
-   1. 合并以下各项的操作：
+   1. 結合下列動作：
 
-      1. 隐藏节点的子节点（保留节点的属性）
-      1. 重新定义属性/属性
+      1. 隱藏節點的子系（保留節點的屬性）
+      1. 重新定義屬性/屬性
 
-* **隐藏资产**
+* **隱藏屬性**
 
-   在中定义属性 `/libs`，但不必在 `/apps` 覆盖/覆盖。
+   屬性定義於 `/libs`，但不需要 `/apps` 覆蓋/覆寫。
 
-   1. 在中创建对应的节点 `/apps`
-   1. 创建资产 `sling:hideProperties` 类型 `String` 或 `String[]`. 使用此选项可指定要隐藏/忽略的属性。 也可以使用通配符。 例如：
+   1. 在中建立對應的節點 `/apps`
+   1. 建立屬性 `sling:hideProperties` 型別 `String` 或 `String[]`. 使用此選項可指定要隱藏/忽略的屬性。 也可以使用萬用字元。 例如：
 
       * `*`
       * `["*"]`
       * `jcr:title`
       * `["jcr:title", "jcr:description"]`
 
-* **隐藏节点及其子节点**
+* **隱藏節點及其子系**
 
-   节点及其子节点定义于 `/libs`，但不必在 `/apps` 覆盖/覆盖。
+   節點及其子系定義於 `/libs`，但不需要 `/apps` 覆蓋/覆寫。
 
-   1. 在/apps下创建对应的节点
-   1. 创建资产 `sling:hideResource`
+   1. 在/apps下建立對應的節點
+   1. 建立屬性 `sling:hideResource`
 
       * 类型: `Boolean`
-      * 选定: `true`
+      * 值: `true`
 
-* **隐藏节点的子节点（同时保留节点的属性）**
+* **隱藏節點的子系（同時保留節點的屬性）**
 
-   节点、其属性及其子节点定义于 `/libs`. 节点及其属性需要在 `/apps` 覆盖/覆盖，但部分或全部子节点在中不是必需的 `/apps` 覆盖/覆盖。
+   節點、其屬性及其子系定義於 `/libs`. 節點及其屬性需要在 `/apps` 覆蓋/覆寫，但部分或全部子節點在中並非必要 `/apps` 覆蓋/覆寫。
 
-   1. 在下创建对应的节点 `/apps`
-   1. 创建资产 `sling:hideChildren`：
+   1. 在下方建立對應的節點 `/apps`
+   1. 建立屬性 `sling:hideChildren`：
 
       * 类型: `String[]`
-      * 值：子节点的列表（如中的定义）。 `/libs`)以隐藏/忽略
+      * 值：子節點的清單（如中所定義）。 `/libs`)以隱藏/忽略
 
-      通配符&amp;ast；可用于隐藏/忽略所有子节点。
+      萬用字元&amp;ast；可用來隱藏/忽略所有子節點。
 
 
-* **重新排序节点**
+* **重新排序節點**
 
-   节点及其同级节点定义于 `/libs`. 需要新位置，以便在中重新创建节点 `/apps` 覆盖/覆盖，其中新位置是参考中相应的同级节点定义的 `/libs`.
+   節點及其同層級定義於 `/libs`. 需要新位置，才能在中重新建立節點 `/apps` 覆蓋/覆寫，其中新位置是參照中適當的同層級節點來定義 `/libs`.
 
-   * 使用 `sling:orderBefore` 属性：
+   * 使用 `sling:orderBefore` 屬性：
 
-      1. 在下创建对应的节点 `/apps`
-      1. 创建资产 `sling:orderBefore`：
+      1. 在下方建立對應的節點 `/apps`
+      1. 建立屬性 `sling:orderBefore`：
 
-         这会指定节点(如 `/libs`)当前节点应位于以下位置之前：
+         這會指定節點(如 `/libs`)，而目前節點應放置在下列位置之前：
 
          * 类型: `String`
-         * 选定: `<before-SiblingName>`
+         * 值: `<before-SiblingName>`
 
-### 从代码中调用Sling资源合并器 {#invoking-the-sling-resource-merger-from-your-code}
+### 從您的程式碼叫用Sling資源合併器 {#invoking-the-sling-resource-merger-from-your-code}
 
-Sling资源合并器包含两个自定义资源提供程序 — 一个用于叠加，另一个用于覆盖。 可以使用挂载点在代码中调用其中的每项：
+Sling Resource Merger包含兩個自訂資源提供者 — 一個用於覆蓋，另一個用於覆蓋。 您可以使用掛接點，在程式碼中叫用下列各項：
 
 >[!NOTE]
 >
->在访问资源时，建议使用适当的挂载点。
+>存取資源時，建議使用適當的掛載點。
 >
->这可确保调用Sling资源合并器并返回完全合并的资源(减少需要复制的结构 `/libs`)。
+>這可確保叫用Sling資源合併器並傳回完全合併的資源(減少需要複製的結構 `/libs`)。
 
 * 叠加:
 
-   * 用途：根据资源的搜索路径合并资源
-   * 装入点： `/mnt/overlay`
-   * 用法： `mount point + relative path`
-   * 示例：
+   * 用途：根據搜尋路徑合併資源
+   * 掛接點： `/mnt/overlay`
+   * 使用狀況： `mount point + relative path`
+   * 範例：
 
       * `getResource('/mnt/overlay' + '<relative-path-to-resource>');`
 
 * 替代:
 
-   * 用途：根据资源的超类型合并资源
-   * 装入点： `/mnt/overide`
-   * 用法： `mount point + absolute path`
-   * 示例：
+   * 用途：根據資源的超級型別合併資源
+   * 掛接點： `/mnt/overide`
+   * 使用狀況： `mount point + absolute path`
+   * 範例：
 
       * `getResource('/mnt/override' + '<absolute-path-to-resource>');`
 
-### 使用示例 {#example-of-usage}
+### 使用範例 {#example-of-usage}
 
-介绍了一些示例：
+涵蓋部分範例：
 
 * 叠加:
 
-   * [自定义控制台](/help/sites-developing/customizing-consoles-touch.md)
-   * [自定义页面创作](/help/sites-developing/customizing-page-authoring-touch.md)
+   * [自訂主控台](/help/sites-developing/customizing-consoles-touch.md)
+   * [自訂頁面製作](/help/sites-developing/customizing-page-authoring-touch.md)
 
 * 替代:
 
-   * [配置页面属性](/help/sites-developing/page-properties-views.md#configuring-your-page-properties)
+   * [設定頁面屬性](/help/sites-developing/page-properties-views.md#configuring-your-page-properties)

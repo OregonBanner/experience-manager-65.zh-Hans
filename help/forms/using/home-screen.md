@@ -1,7 +1,7 @@
 ---
-title: 主屏幕
+title: 主畫面
 seo-title: Home screen
-description: AEM Forms应用程序主屏幕的组件描述
+description: AEM Forms應用程式首頁畫面的元件說明
 seo-description: Description of the components of the AEM Forms app Home screen
 uuid: abc95e58-a685-42a9-82ab-4990155945d3
 content-type: reference
@@ -17,33 +17,33 @@ ht-degree: 0%
 
 ---
 
-# 主屏幕{#home-screen}
+# 主畫面{#home-screen}
 
-登录到AEM Forms应用程序后，您将被重定向到主屏幕。
+登入AEM Forms應用程式時，系統會將您重新導向至首頁畫面。
 
-## 默认主屏幕 {#default-home-screen}
+## 預設主畫面 {#default-home-screen}
 
-默认情况下，主屏幕会显示所有表单，包括起点和任务(如果连接的服务器启用了AEM Forms Workflow)以及相关缩略图。 您可以在AEM Forms服务器中指定缩略图。
+根據預設，「首頁」畫面會顯示所有表單，包括起點和任務(如果連線的伺服器已啟用AEM Forms Workflow)，以及關聯的縮圖。 您可以在AEM Forms伺服器中指定縮圖。
 
-下图在默认主屏幕上通过重要组件的标注进行注释。
+下圖會以預設首頁畫面上的重要元件標註來註解。
 
-![Forms应用程序主屏幕](assets/home-screen-1.png)
+![Forms應用程式首頁](assets/home-screen-1.png)
 
 <!--Click to enlarge
 
 ![home-screen-1-1](assets/home-screen-1-1.png)-->
 
-1. **菜单按钮**：点按 **菜单** 按钮以导航到“任务”、“Forms”、“发件箱”和“设置”。 如果您的AEM Forms应用程序已连接到AEM Forms JEE服务器，则可以看到任务选项。 “任务”选项还存储从流程中的任务创建的草稿。 对于AEM Forms OSGi服务器， Tasks选项是隐藏的。 Outbox在与服务器同步之前存储已保存的表单和草稿。 当应用程序处于以下状态时，发件箱中所有保存的表单和草稿都将上传到AEM Forms服务器 [与服务器同步](../../forms/using/sync-app.md). 有关设置的信息，请参阅 [更新常规设置](../../forms/using/update-general-settings.md).
-1. **任务或表单**：点按列出的要处理的任务或表单。
-1. **水平省略号**：表示操作对表单可用。 点按省略号会显示作者提供的操作和描述。 此 **删除草稿** 和 **完成** 选项在点击省略号时可见。
-1. **“刷新”图标**：点按刷新图标可将您的应用程序与AEM Forms服务器同步。
+1. **功能表按鈕**：點選 **選單** 按鈕以導覽至「工作」、「Forms」、「寄件匣」和「設定」。 如果您的AEM Forms應用程式已連線至AEM Forms JEE伺服器，您會看到「工作」選項。 「任務」選項也會儲存從流程中的任務建立的草稿。 若為AEM Forms OSGi伺服器，任務選項會隱藏。 Outbox會先儲儲存存的表單和草稿，然後再與伺服器同步。 應用程式啟用時，「寄件匣」中所有儲存的表單和草稿都會上傳至AEM Forms伺服器 [與伺服器同步](../../forms/using/sync-app.md). 如需有關設定的詳細資訊，請參閱 [更新一般設定](../../forms/using/update-general-settings.md).
+1. **任務或表單**：點選列出的任務或您要使用的表單。
+1. **水準省略符號**：表示動作可供表單使用。 點選省略符號會顯示作者提供的動作和說明。 此 **刪除草稿** 和 **完成** 點選省略符號時會顯示選項。
+1. **重新整理圖示**：點選重新整理圖示，以將您的應用程式與AEM Forms伺服器同步。
 
-### 自定义主屏幕 {#customizing-the-home-screen}
+### 自訂首頁畫面 {#customizing-the-home-screen}
 
 ![常规设置](assets/gen-settings.png)
 
-您可以从以下位置更改应用程序的默认主屏幕： **[常规设置](../../forms/using/update-general-settings.md)** ，或者从 **首选项** HTML选项卡。
+您可以從以下位置變更應用程式的預設Home畫面： **[一般設定](../../forms/using/update-general-settings.md)** 或來自應用程式的 **偏好設定** 索引標籤中的「HTML工作區」。
 
-对应用程序上的主屏幕设置所做的更改将影响当前登录的主屏幕或当前移动设备上的用户。
+應用程式上對「首頁」畫面設定所做的變更，會為目前登入的使用者或目前行動裝置上的使用者影響「首頁」畫面。
 
-但是，在HTML工作区中所做的更改会影响到登录到AEM Forms服务器的所有AEM Forms应用程序用户。
+不過，在HTML Workspace中所做的變更會影響所有登入AEM Forms伺服器的AEM Forms應用程式使用者。

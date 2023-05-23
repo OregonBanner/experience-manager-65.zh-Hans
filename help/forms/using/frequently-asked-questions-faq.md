@@ -1,7 +1,7 @@
 ---
-title: 自适应Forms、HTML5表单和AEM Forms的常见问题解答(FAQ)
+title: 最適化Forms、HTML5表單和AEM Forms的常見問題集(FAQ)
 seo-title: Frequently asked questions (FAQ) for Adaptive Forms, HTML5 forms, and AEM Forms
-description: 有关自适应Forms、HTML5表单和AEM Forms的布局、脚本支持和范围的常见问题解答(FAQ)。
+description: 有關最適化Forms、HTML5表單和AEM Forms的版面、指令碼支援和範圍的常見問題集(FAQ)。
 seo-description: Frequently Asked Questions (FAQ) about layout, scripting support, and scope of Adaptive Forms, HTML5 forms, and AEM Forms.
 docset: aem65
 exl-id: 19a6e431-de66-4d5c-924f-f9c1a195390c
@@ -12,8 +12,8 @@ ht-degree: 0%
 
 ---
 
-# 常见问题解答(FAQ) {#frequently-asked-questions-faq}
+# 常見問題集(FAQ) {#frequently-asked-questions-faq}
 
-1. 为什么中的条形码和签名字段未出现在我的HTML5表单中？
+1. 中的條碼和簽名欄位為何沒有出現在我的HTML5表單中？
 
-   答案：条形码和签名字段在HTML或移动场景中无关。 这些字段显示为非交互区域。 但是，AEM Forms Designer提供了一个新的签名涂写字段，该字段可用于代替签名字段。 也可以添加 [自定义构件](../../forms/using/custom-widgets.md) 用于条形码，并将其集成。
+   答案：條碼和簽名欄位在HTML或行動場景中沒有關聯。 這些欄位會顯示為非互動區域。 不過，AEM Forms Designer提供新的簽名手寫欄位，可用來取代簽名欄位。 您也可以新增 [自訂Widget](../../forms/using/custom-widgets.md) 並加以整合。

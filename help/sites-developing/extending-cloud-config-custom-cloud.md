@@ -1,7 +1,7 @@
 ---
-title: 创建自定义Cloud Service
+title: 建立自訂Cloud Service
 seo-title: Creating a Custom Cloud Service
-description: 可以使用自定义Cloud Service类型扩展默认Cloud Services集
+description: 預設Cloud Services集可使用自訂Cloud Service型別擴展
 seo-description: The default set of Cloud Services can be extended with custom Cloud Service types
 uuid: b105a0c1-b68c-4f57-8e3b-561c8051a08e
 contentOwner: User
@@ -13,58 +13,58 @@ exl-id: 9414c77a-b180-4440-8386-e6eb4426e475
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '418'
-ht-degree: 15%
+ht-degree: 14%
 
 ---
 
-# 创建自定义Cloud Service{#creating-a-custom-cloud-service}
+# 建立自訂Cloud Service{#creating-a-custom-cloud-service}
 
-可以使用自定义Cloud Services类型扩展默认Cloud Service集。 这允许您以结构化方式将自定义标记插入页面中。 这主要用于第三方分析提供商，例如Google Analytics、图表等。 Cloud Services会从父页面继承到子页面，并且能够在任何级别中断继承。
+預設Cloud Services集可使用自訂Cloud Service型別擴展。 這可讓您以結構化的方式將自訂標籤插入頁面中。 這主要是用於第三方分析提供者，例如Google Analytics、圖表節拍等。 Cloud Services會從父頁面繼承至子頁面，且能夠在任何層級中斷繼承。
 
 >[!NOTE]
 >
->此创建新Cloud Service的分步指南是使用Google Analytics的示例。 并非所有情况都适用于您的用例。
+>此建立新Cloud Service的逐步指南是使用Google Analytics的範例。 並非所有情況都適用於您的使用案例。
 
-1. 在CRXDE Lite下，创建一个新节点 `/apps`：
+1. 在CRXDE Lite中，建立新節點，位於 `/apps`：
 
    * **名称**: `acs`
    * **类型**: `nt:folder`
 
-1. 在下创建新节点 `/apps/acs`：
+1. 在下建立新節點 `/apps/acs`：
 
    * **名称**: `analytics`
    * **类型**: `sling:Folder`
 
-1. 在下创建2个新节点 `/apps/acs/analytics`：
+1. 在下建立2個新節點 `/apps/acs/analytics`：
 
-   * **名称**：组件
+   * **名稱**：元件
    * **类型**: `sling:Folder`
 
    和
 
-   * **名称**：模板
+   * **名稱**：範本
    * **类型**: `sling:Folder`
 
 
-1. 右键单击 `/apps/acs/analytics/components`. 选择 **创建……** 后接 **创建组件……** 打开的对话框允许您指定：
+1. 按一下右鍵 `/apps/acs/analytics/components`. 選取 **建立……** 後面接著 **建立元件……** 開啟的對話方塊可讓您指定：
 
-   * **标签**: `googleanalyticspage`
+   * **標籤**： `googleanalyticspage`
    * **标题**: `Google Analytics Page`
    * **超级类型**: `cq/cloudserviceconfigs/components/configpage`
-   * **组**: `.hidden`
+   * **群組**： `.hidden`
 
-1. 单击 **下一个** 两次，并指定：
+1. 按一下 **下一個** 兩次，並指定：
 
    * **允许的父项:** `acs/analytics/templates/googleanalytics`
 
-   单击 **下一个** 两次，然后单击 **确定**.
+   按一下 **下一個** 兩次，然後按一下 **確定**.
 
-1. 将资产添加到 `googleanalyticspage`：
+1. 將屬性新增至 `googleanalyticspage`：
 
    * **名称:** `cq:defaultView`
    * **值:** `html`
 
-1. 创建新文件，名为 `content.jsp` 下 `/apps/acs/analytics/components/googleanalyticspage`，包含以下内容：
+1. 建立名為的新檔案 `content.jsp` 在 `/apps/acs/analytics/components/googleanalyticspage`，包含下列內容：
 
    ```xml
    <%@page contentType="text/html"
@@ -79,7 +79,7 @@ ht-degree: 15%
    </div>
    ```
 
-1. 在下创建新节点 `/apps/acs/analytics/components/googleanalyticspage/`：
+1. 在下建立新節點 `/apps/acs/analytics/components/googleanalyticspage/`：
 
    * **名称**: `dialog`
    * **类型**: `cq:Dialog`
@@ -92,7 +92,7 @@ ht-degree: 15%
       * **类型**: `String`
       * **值**: `dialog`
 
-1. 在下创建新节点 `/apps/acs/analytics/components/googleanalyticspage/dialog`：
+1. 在下建立新節點 `/apps/acs/analytics/components/googleanalyticspage/dialog`：
 
    * **名称**: `items`
    * **类型**: `cq:Widget`
@@ -102,14 +102,14 @@ ht-degree: 15%
       * **类型**: `String`
       * **值**: `tabpanel`
 
-1. 在下创建新节点 `/apps/acs/analytics/components/googleanalyticspage/dialog/items`：
+1. 在下建立新節點 `/apps/acs/analytics/components/googleanalyticspage/dialog/items`：
 
    * **名称**: `items`
    * **类型**: `cq:WidgetCollection`
 
-1. 在下创建新节点 `/apps/acs/analytics/components/googleanalyticspage/dialog/items/items`：
+1. 在下建立新節點 `/apps/acs/analytics/components/googleanalyticspage/dialog/items/items`：
 
-   * **名称**：选项卡1
+   * **名稱**：tab1
    * **类型**: `cq:Panel`
    * **属性**:
 
@@ -117,15 +117,15 @@ ht-degree: 15%
       * **类型**: `String`
       * **值**: `Config`
 
-1. 在下创建新节点 `/apps/acs/analytics/components/googleanalyticspage/dialog/items/items/tab1`：
+1. 在下建立新節點 `/apps/acs/analytics/components/googleanalyticspage/dialog/items/items/tab1`：
 
-   * **名称**：项目
+   * **名稱**：專案
    * **类型**: `nt:unstructured`
    * **属性**:
 
       * **名称**: `fieldLabel`
-      * **类型**：字符串
-      * **值**：帐户ID
+      * **型別**：字串
+      * **值**：帳戶ID
 
       * **名称**: `fieldDescription`
       * **类型**: `String`
@@ -141,20 +141,20 @@ ht-degree: 15%
       * **类型**: `String`
       * **值**: `textfield`
 
-1. 复制 `/libs/cq/cloudserviceconfigs/components/configpage/body.jsp` 到 `/apps/acs/analytics/components/googleanalyticspage/body.jsp` 和更改 `libs` 到 `apps` 第34行并使第79行的脚本引用成为完全限定的路径。
-1. 在下创建新模板 `/apps/acs/analytics/templates/`：
+1. 複製 `/libs/cq/cloudserviceconfigs/components/configpage/body.jsp` 至 `/apps/acs/analytics/components/googleanalyticspage/body.jsp` 和變更 `libs` 至 `apps` 第34行並將第79行的指令碼參考設為完整路徑。
+1. 在下建立新範本 `/apps/acs/analytics/templates/`：
 
-   * 替换为 **资源类型** = `acs/analytics/components/googleanalyticspage`
-   * 替换为 **标签** = `googleanalytics`
-   * 替换为 **标题**= `Google Analytics Configuration`
-   * 替换为 **allowedpath** = `/etc/cloudservices/googleanalytics(/.*)?`
-   * 替换为 **allowedChildren** = `/apps/acs/analytics/templates/googleanalytics`
-   * 替换为 **sling：resourceSuperType** = `cq/cloudserviceconfigs/templates/configpage` （在模板节点上，而不是jcr：content节点上）
-   * 替换为 **cq：designPath** = `/etc/designs/cloudservices/googleanalytics` （在jcr：content上）
+   * 替換為 **資源型別** = `acs/analytics/components/googleanalyticspage`
+   * 替換為 **標籤** = `googleanalytics`
+   * 替換為 **標題**= `Google Analytics Configuration`
+   * 替換為 **allowedpath** = `/etc/cloudservices/googleanalytics(/.*)?`
+   * 替換為 **allowedChildren** = `/apps/acs/analytics/templates/googleanalytics`
+   * 替換為 **sling：resourceSuperType** = `cq/cloudserviceconfigs/templates/configpage` （在範本節點上，而不是jcr：content節點）
+   * 替換為 **cq：designPath** = `/etc/designs/cloudservices/googleanalytics` （在jcr：content上）
 
-1. 创建新组件： `/apps/acs/analytics/components/googleanalytics`.
+1. 建立新元件： `/apps/acs/analytics/components/googleanalytics`.
 
-   将以下内容添加到 `googleanalytics.jsp`：
+   將下列內容新增至 `googleanalytics.jsp`：
 
    ```xml
    <%@page import="org.apache.sling.api.resource.Resource,
@@ -193,27 +193,27 @@ ht-degree: 15%
    %>
    ```
 
-   这应根据配置属性输出自定义标记。
+   這應根據設定屬性輸出自訂標籤。
 
-1. 导航到 `http://localhost:4502/miscadmin#/etc/cloudservices` 并创建新页面：
+1. 導覽至 `http://localhost:4502/miscadmin#/etc/cloudservices` 和建立新頁面：
 
    * **标题**: `Google Analytics`
    * **名称**: `googleanalytics`
 
-   返回CRXDE Lite，然后在 `/etc/cloudservices/googleanalytics`，添加以下属性到 `jcr:content`：
+   返回CRXDE Lite中，並在 `/etc/cloudservices/googleanalytics`，將下列屬性新增至 `jcr:content`：
 
    * **名称**: `componentReference`
    * **类型**: `String`
    * **值**: `acs/analytics/components/googleanalytics`
 
 
-1. 导航到新创建的服务页面( `http://localhost:4502/etc/cloudservices/googleanalytics.html`)，然后单击 **+** 要创建新配置，请执行以下操作：
+1. 導覽至新建立的「服務」頁面( `http://localhost:4502/etc/cloudservices/googleanalytics.html`)並按一下 **+** 若要建立新設定：
 
    * **父配置**: `/etc/cloudservices/googleanalytics`
    * **标题:**  `My First GA Config`
 
-   选择 **Google Analytics配置** 并单击 **创建**.
+   選擇 **Google Analytics設定** 並按一下 **建立**.
 
-1. 输入 **帐户ID**&#x200B;例如 `AA-11111111-1`. 单击&#x200B;**确定**。
-1. 导航到页面，并在页面属性下的添加新配置 **Cloud Services** 选项卡。
-1. 页面中将会添加自定义标记。
+1. 輸入 **帳戶ID**，例如 `AA-11111111-1`. 单击&#x200B;**确定**。
+1. 導覽至頁面，並在頁面屬性下新增新建立的設定。 **Cloud Services** 標籤。
+1. 頁面中將會新增自訂標籤。

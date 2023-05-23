@@ -1,6 +1,6 @@
 ---
-title: 支持的文件格式和MIME类型
-description: 支持的文件格式和MIME类型 [!DNL Assets] 和 [!DNL Dynamic Media] 以及每种格式支持的功能。
+title: 支援的檔案格式和MIME型別
+description: 支援的檔案格式和MIME型別 [!DNL Assets] 和 [!DNL Dynamic Media] 以及每種格式支援的功能。
 contentOwner: AG
 mini-toc-levels: 1
 role: User, Admin
@@ -14,23 +14,23 @@ ht-degree: 10%
 
 ---
 
-# 支持的格式 [!DNL Adobe Experience Manager Assets] {#assets-supported-formats}
+# 中支援的格式 [!DNL Adobe Experience Manager Assets] {#assets-supported-formats}
 
-[!DNL Experience Manager Assets] 支持多种文件格式，每种功能都支持不同的MIME类型。 集成 [!DNL Assets] 使用符合其他标准的数字资产管理(DAM)解决方案和桌面软件，使用Adobe [!DNL Extensible Metadata Platform] (XMP)。
+[!DNL Experience Manager Assets] 支援廣泛的檔案格式，且每種功能對於不同的MIME型別都有不同的支援。 若要整合 [!DNL Assets] 搭配其他符合標準的數位資產管理(DAM)解決方案和案頭軟體，使用Adobe的 [!DNL Extensible Metadata Platform] (XMP)。
 
 使用图例了解支持级别。
 
 | 支持级别 | 描述 |
 | :-----------: | ------------------------------ |
 | ✓ | 支持 |
-| &#42; | 附加功能支持 |
+| &#42; | 支援附加功能 |
 | − | 不适用 |
 
-## 支持的栅格图像格式 [!DNL Experience Manager] {#supported-raster-image-formats}
+## 中支援的點陣影像格式 [!DNL Experience Manager] {#supported-raster-image-formats}
 
-支持的栅格图像格式 [!DNL Assets] 为：
+中支援的點陣影像格式 [!DNL Assets] 為：
 
-| 格式 | 存储 | 元数据管理 | 元数据提取 | 缩略图生成 | 编辑 | 元数据写回 | 见解 |
+| 格式 | 存储 | 中繼資料管理 | 中繼資料擷取 | 產生縮圖 | 编辑 | 中繼資料回寫 | 见解 |
 | ------------ | :------: | :-----------------: | :-----------------: | :------------------: | :------: | :----------------: | :------: |
 | PNG | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | GIF | ✓ | ✓ | ✓ | ✓ | ✓ | − | ✓ |
@@ -46,60 +46,60 @@ ht-degree: 10%
 | PICT | − | − | − | − | − | − | ✓ |
 | PSB | ✓ | ✓ | ✓ | ✓ | − | − | − |
 
-从PSD文件中提取合并的图像。 它是由Adobe Photoshop生成并包含在PSD文件中的图像。 根据设置，合并的图像可能是实际的图像，也可能不是实际的图像。
+‡合併的影像會從PSD檔案中擷取。 這是由Adobe Photoshop產生並包含在PSD檔案中的影像。 視設定而定，合併的影像不一定是實際影像。
 
-除上述信息外，请考虑以下事项：
+除了上述資訊外，請考量下列事項：
 
-* 对EPS文件的支持仅适用于光栅图像。 例如，默认不支持为EPS矢量图像生成缩略图。 要添加支持， [配置ImageMagick](best-practices-for-imagemagick.md). 要集成第三方工具以启用其他功能，请参阅 [基于命令行的媒体处理程序](media-handlers.md#command-line-based-media-handler).
+* EPS檔案支援僅適用於點陣影像。 例如，預設不支援EPS向量影像的縮圖產生。 若要新增支援， [設定ImageMagick](best-practices-for-imagemagick.md). 若要整合協力廠商工具以啟用其他功能，請參閱 [以命令列為基礎的媒體處理常式](media-handlers.md#command-line-based-media-handler).
 
-* 元数据写回在添加到 `NComm` 处理程序。
+* 當中繼資料回寫新增至PSB檔案格式時，即可使用 `NComm` 處理常式。
 
-* 对于EPS文件， PostScript文档结构约定(PS-Adobe)版本3.0或更高版本支持元数据写回。
+* 對於EPS檔案，PostScript檔案建構慣例(PS-Adobe) 3.0版或更新版本支援中繼資料回寫。
 
-## 支持的3D格式 {#support-3d-formats}
+## 支援的3D格式 {#support-3d-formats}
 
-支持以下3D格式列表。
+支援下列3D格式清單。
 
-另请参阅 [在Dynamic Media中使用3D资产。](/help/assets/assets-3d.md)
+另請參閱 [在Dynamic Media中使用3D資產。](/help/assets/assets-3d.md)
 
-| 格式 | 存储 | 版本控制 | 工作流 | 发布 | 访问控制 | 缩略图预览 | 3D预览 | Dynamic Media交付 |
+| 格式 | 存储 | 版本控制 | 工作流 | 发布 | 存取控制 | 縮圖預覽 | 3D預覽 | Dynamic Media傳遞 |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | DN | ✓ | ✓ | ✓ |  | ✓ | ✓ | − | − |
 | gLB | ✓ | ✓ | ✓ | ✓ | ✓ | − | ✓ | ✓ |
 | gLTF | ✓ | ✓ | ✓ |  | ✓ | − | ✓ | − |
-| OBJ | ✓ | ✓ | ✓ | ✓ | ✓ | − | ✓ | ✓ |
+| 物件 | ✓ | ✓ | ✓ | ✓ | ✓ | − | ✓ | ✓ |
 | STL | ✓ | ✓ | ✓ | ✓ | ✓ | − | ✓ | ✓ |
 | USDz | ✓ | ✓ | ✓ | ✓ | ✓ | − | − | ✓ |
 
-## 支持的PDF光栅器库 {#supported-pdf-rasterizer-library}
+## 支援的PDF模擬轉譯器程式庫 {#supported-pdf-rasterizer-library}
 
-Adobe PDF光栅化库可为大型内容密集型应用程序生成高质量缩略图和预览 [!DNL Adobe Illustrator] 和PDF文件。 Adobe建议为以下内容使用PDF光栅器库：
+Adobe PDF模擬轉譯器程式庫可為大型且需要大量內容的影片製作高品質的縮圖和預覽 [!DNL Adobe Illustrator] 和PDF檔案。 Adobe建議針對下列專案使用PDF模擬轉譯器資料庫：
 
-* 需要大量处理的内容密集型AI/PDF文件。
-* AI/PDF文件，默认情况下不会为其生成缩略图。
-* 具有Pantone匹配系统(PMS)颜色的AI文件。
+* 需要處理大量資源的內容密集型AI/PDF檔案。
+* 預設不會產生縮圖的AI/PDF檔案。
+* 具有Pantone Matching System (PMS)顏色的AI檔案。
 
-请参阅 [使用PDF光栅器](aem-pdf-rasterizer.md).
+另請參閱 [使用PDF模擬轉譯器](aem-pdf-rasterizer.md).
 
-## 支持的图像转码库 {#supported-image-transcoding-library}
+## 支援的影像轉碼程式庫 {#supported-image-transcoding-library}
 
-Adobe图像转码库是一款图像处理解决方案，可执行核心的图像处理功能，例如编码、转码、重新取样和调整大小。
+「Adobe影像轉碼」資料庫是影像處理解決方案，可執行核心影像處理功能，例如編碼、轉碼、重新取樣和調整大小。
 
-图像转码库支持JPG/JPEG、PNG（8位和16位）、GIF、BMP、TIFF/压缩TIFF(32位TIFF文件和PTIFF文件除外)、ICO和ICN MIME类型。
+影像轉碼程式庫支援JPG/JPEG、PNG （8位元和16位元）、GIF、BMP、TIFF/壓縮TIFF(32位元TIFF檔案和PTIFF檔案除外)、ICO和ICN MIME型別。
 
-请参阅 [图像转码库](imaging-transcoding-library.md).
+另請參閱 [影像轉碼程式庫](imaging-transcoding-library.md).
 
-## 支持的Camera Raw {#supported-camera-raw}
+## 支援的Camera Raw {#supported-camera-raw}
 
-的 [!DNL Adobe Camera Raw] 库启用 [!DNL Assets] 以摄取原始图像。 请参阅 [Camera Raw支持](camera-raw.md).
+此 [!DNL Adobe Camera Raw] 程式庫啟用 [!DNL Assets] 擷取原始影像。 另請參閱 [Camera Raw支援](camera-raw.md).
 
-## 支持 [!DNL Assets] 文档格式 {#supported-document-formats}
+## 支援 [!DNL Assets] 檔案格式 {#supported-document-formats}
 
-资产管理功能支持的文档格式如下：
+資產管理功能支援的檔案格式如下：
 
-| 格式 | 存储 | [元数据管理](metadata.md) | 全文<br> 提取 | [元数据提取](metadata.md) | 缩略图<br> 生成 | [子资产提取](managing-linked-subassets.md) | [元数据写回](xmp-writeback.md) | [连接的资产](use-assets-across-connected-assets-instances.md) |
+| 格式 | 存储 | [中繼資料管理](metadata.md) | 全文<br> 摘取 | [中繼資料擷取](metadata.md) | 縮圖<br> 層代 | [子資產擷取](managing-linked-subassets.md) | [中繼資料回寫](xmp-writeback.md) | [连接的资产](use-assets-across-connected-assets-instances.md) |
 |---|---|---|---|---|---|---|---|---|
-| [人工智能](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ | − | ✓ | ✓ | ✓ | ✓ | − |
+| [AI](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ | − | ✓ | ✓ | ✓ | ✓ | − |
 | DOC | ✓ | ✓ | ✓ | ✓ | − | − | − | ✓ |
 | DOCX | ✓ | ✓ | ✓ | ✓ | − | − | − | ✓ |
 | ODT | ✓ | ✓ | ✓ | − | − | − | − | ✓ |
@@ -118,9 +118,9 @@ Adobe图像转码库是一款图像处理解决方案，可执行核心的图像
 | QXP | ✓ | ✓ | − | − | − | − | − | − |
 | ePub | ✓ | ✓ | − | ✓ | ✓ | − | − | − |
 
-## 支持的多媒体格式 {#supported-multimedia-formats}
+## 支援的多媒體格式 {#supported-multimedia-formats}
 
-|  | 存储 | 元数据管理 | 元数据提取 | 缩略图生成 | FFmpeg转码 |
+|  | 存储 | 中繼資料管理 | 中繼資料擷取 | 產生縮圖 | FFmpeg轉碼 |
 |:---|:---:|:---:|:---:|:---:|:---:|
 | AAC | ✓ | ✓ | − | − | &#42; |
 | MIDI | ✓ | ✓ | − | − | &#42; |
@@ -141,11 +141,11 @@ Adobe图像转码库是一款图像处理解决方案，可执行核心的图像
 | WMV | ✓ | ✓ | − | &#42; | &#42; |
 | SWF | ✓ | ✓ | − | − | − |
 
-## 支持的存档格式 {#supported-archive-formats}
+## 支援的封存格式 {#supported-archive-formats}
 
-下表介绍了支持的存档格式以及常用DAM工作流的适用性。
+下表說明支援的封存格式及常見DAM工作流程的適用性。
 
-| 格式 | 存储 | 版本控制 | 工作流 | 发布 | 访问控制 | Dynamic Media交付 |
+| 格式 | 存储 | 版本控制 | 工作流 | 发布 | 访问控制 | Dynamic Media傳遞 |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
 | TGZ | ✓ | ✓ | ✓ | ✓ | ✓ | − |
 | JAR | ✓ | ✓ | ✓ | ✓ | ✓ | − |
@@ -153,42 +153,42 @@ Adobe图像转码库是一款图像处理解决方案，可执行核心的图像
 | TAR | ✓ | ✓ | ✓ | ✓ | ✓ | − |
 | ZIP | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 
-## 其他支持的格式 {#other-supported-formats}
+## 其他支援的格式 {#other-supported-formats}
 
-下面介绍了一些特定文件格式通常的DAM功能的适用性。
+以下說明幾種特定檔案格式常見DAM功能的適用性。
 
-| 格式 | 存储 | 版本控制 | 工作流 | 发布 | 访问控制 | Dynamic Media交付 |
+| 格式 | 存储 | 版本控制 | 工作流 | 发布 | 访问控制 | Dynamic Media傳遞 |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
 | SVG | ✓ | ✓ | ✓ | ✓ | ✓ | − |
 | CSS | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | VTT | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | XML | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| JavaScript（使用自己的交付域配置时） | − | − | − | − | − | ✓ |
+| JavaScript （若已設定自己的傳送網域） | − | − | − | − | − | ✓ |
 
 >[!NOTE]
 >
->上传和分发JavaScript文件可能是安全的，也可能不安全。 如有必要，您可以使用叠加来阻止用户上传JS文件。
+>上傳和分發JavaScript檔案可能安全，也可能不安全。 如有必要，您可以使用覆蓋來防止使用者上傳JS檔案。
 
-## 支持的MIME类型 {#supported-mime-types}
+## 支援的MIME型別 {#supported-mime-types}
 
-默认情况下， [!DNL Experience Manager] 检测使用文件扩展名的文件类型。 [!DNL Experience Manager] 可以从文件内容中检测到它。 对于后者，选择 [!UICONTROL 从内容中检测MIME] 选项 [!UICONTROL Day CQ DAM Mime类型服务] 在 [!DNL Experience Manager] Web控制台。
+依預設， [!DNL Experience Manager] 會使用副檔名偵測檔案型別。 [!DNL Experience Manager] 可以從檔案內容偵測到它。 如果是後者，請選取 [!UICONTROL 從內容中偵測MIME] 中的選項 [!UICONTROL Day CQ DAM Mime型別服務] 在 [!DNL Experience Manager] 網頁主控台。
 
-支持的MIME类型列表可在以下位置CRXDE Lite `/conf/global/settings/cloudconfigs/dmscene7/jcr:content/mimeTypes`.
+CRXDE Lite中有提供支援的MIME型別清單，請前往 `/conf/global/settings/cloudconfigs/dmscene7/jcr:content/mimeTypes`.
 
-| 文件扩展名 | MIME类型/ Internet媒体类型 | 默认jobParam值 | 允许的jobParam值 |
+| 副檔名 | MIME型別/網際網路媒體型別 | 預設jobParam值 | 允許的工作引數值 |
 |---|---|---|---|
-| 图像 | 图像/s7asset | `usmAmount=1.75&usmRadius=0.2`<br>`&usmThreshold=2&usmMonochrome=0&` | 默认的jobParam适用于所有图像MIME类型资产。<ul><li>[knouckBackgroundOptions](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-knockout-background-options.html)</li><li>[manualCropOptions](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-manual-crop-options.html)</li><li>[autoColorCropOptions](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-auto-color-crop-options.html)</li><li>[autoTransparentCropOptions](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-auto-transparent-crop-options.html)</li><li>[colorManagementOptions](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-color-management-options.html)</li><li>[autoSetCreationOptions](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-auto-set-creation-options.html)</li><li>[emailSetting](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/sting-constants/r-email-settings.html)</li><li>[xmpKeywords](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-xmp-keywords.html)</li><li>[usmarpMaskOptions](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-unsharp-mask-options.html)</li></ul> |
+| 图像 | image/s7asset | `usmAmount=1.75&usmRadius=0.2`<br>`&usmThreshold=2&usmMonochrome=0&` | 預設jobParam會套用至所有影像MIME型別資產。<ul><li>[去底色背景選項](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-knockout-background-options.html)</li><li>[manualCropOptions](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-manual-crop-options.html)</li><li>[autoColorCropOptions](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-auto-color-crop-options.html)</li><li>[autoTransparentCropOptions](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-auto-transparent-crop-options.html)</li><li>[colorManagementOptions](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-color-management-options.html)</li><li>[autoSetCreationOptions](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-auto-set-creation-options.html)</li><li>[emailSetting](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/sting-constants/r-email-settings.html)</li><li>[xmpKeywords](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-xmp-keywords.html)</li><li>[unsharpMaskOptions](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-unsharp-mask-options.html)</li></ul> |
 | 3G2 | video/3gpp2 |  | [ExcludeMasterVideoFromAVS](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-exclude-master-video-from-avs.html) |
 | 3GP | video/3gpp |  | [ExcludeMasterVideoFromAVS](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-exclude-master-video-from-avs.html) |
 | AAC | audio/x-aac |  |  |
 | AFM | application/x-font-type1 |  |  |
-| 人工智能 | application/postscript | `aiprocess=Rasterize&airesolution=150`<br>`&aicolorspace=Auto&aialpha=false` | <ul><li>[postScriptOptions](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-post-script-options.html)</li><li> [illustratorOptions](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-illustrator-options.html)</li></ul> |
+| AI | application/postscript | `aiprocess=Rasterize&airesolution=150`<br>`&aicolorspace=Auto&aialpha=false` | <ul><li>[postScriptOptions](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-post-script-options.html)</li><li> [illustratorOptions](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-illustrator-options.html)</li></ul> |
 | AIFF | audio/x-aiff |  |  |
 | AVI | video/x-msvideo |  | [ExcludeMasterVideoFromAVS](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-exclude-master-video-from-avs.html) |
 | BMP | image/bmp |  |  |
 | CSS | text/css |  |  |
 | DOC | application/msword |  |  |
-| EPS | <ul><li>application/postscript</li><li>application/eps</li><li>application/x-eps</li><li>图像/eps</li><li>image/x-eps</li></ul> |  |  |
+| EPS | <ul><li>application/postscript</li><li>application/eps</li><li>application/x-eps</li><li>image/eps</li><li>image/x-eps</li></ul> |  |  |
 | F4V | video/x-f4v |  | ExcludeMasterVideoFromAVS |
 | FLA | application/x-shockwave-flash |  |  |
 | FLV | video/x-flv |  | [ExcludeMasterVideoFromAVS](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-exclude-master-video-from-avs.html) |
@@ -215,16 +215,16 @@ Adobe图像转码库是一款图像处理解决方案，可执行核心的图像
 | PICT | image/x-pict |  |  |
 | PNG | image/png |  |  |
 | PPT | application/vnd.ms-powerpoint |  |  |
-| PS | application/postscript | `psprocess=Rasterize&psresolution=150`<br>`&pscolorspace=Auto&psalpha=false`<br>`&psextractsearchwords=false`<br>`&aiprocess=Rasterize&airesolution=150`<br>`&aicolorspace=Auto&aialpha=false` | <ul><li>[postScriptOptions](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-post-script-options.html)</li><li>[illustratorOptions](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-illustrator-options.html)</li></ul> |
+| PS | application/postscript | `psprocess=Rasterize&psresolution=150`<br>`&pscolorspace=Auto&psalpha=false`<br>`&psextractsearchwords=false`<br>`&aiprocess=Rasterize&airesolution=150`<br>`&aicolorspace=Auto&aialpha=false` | <ul><li>[postScriptOptions](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-post-script-options.html)</li><li>[illustratorOptions](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-illustrator-options.html</li></ul> |
 | PSD | image/vnd.adobe.photoshop | `process=None&layerNaming=Layername`<br>`&anchor=Center&createTemplate=false`<br>`&extractText=false&extendLayers=false` | <ul><li>[photoshopOptions](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-photoshop-options.html)</li><li>[photoshopLayerOptions](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-photoshop-layer-options.html)</li></ul> |
 | RTF | application/rtf |  |  |
 | SVG | image/svg+xml |  |  |
 | SWF | application/x-shockwave-flash |  |  |
 | TAR | application/x-tar |  |  |
-| TIF /TIFF | image/tiff |  |  |
+| TIF/TIFF | image/tiff |  |  |
 | TTC | application/x-font-ttf |  |  |
 | TTF | application/x-font-ttf |  |  |
-| VOB | 视频/dvd |  | [ExcludeMasterVideoFromAVS](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-exclude-master-video-from-avs.html) |
+| VOB | video/dvd |  | [ExcludeMasterVideoFromAVS](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-exclude-master-video-from-avs.html) |
 | VTT | text/vtt |  |  |
 | WAV | audio/x-wav |  |  |
 | WEBM | video/webm |  | [ExcludeMasterVideoFromAVS](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-exclude-master-video-from-avs.html) |
@@ -233,77 +233,77 @@ Adobe图像转码库是一款图像处理解决方案，可执行核心的图像
 | XLS | application/vnd.ms-excel |  |  |
 | ZIP | application/zip |  |  |
 
-## Dynamic Media — 支持的用于转码的输入视频格式 {#supported-input-video-formats-for-dynamic-media-transcoding}
+## Dynamic Media — 支援的輸入視訊格式可轉碼 {#supported-input-video-formats-for-dynamic-media-transcoding}
 
-| 视频文件扩展名 | 容器 | 推荐的视频编解码器 | 不支持的视频编解码器 |
+| 視訊副檔名 | 容器 | 建議的視訊轉碼器 | 不支援的視訊轉碼器 |
 |---|---|---|---|
-| AVI | A/V交织 | XVID、DIVX、HDV、MiniDV(DV25)、Techsmith Camtasia、Huffyuv、Fraps、Panasonic DVCPro | Indeo3(IV30)、MJPEG、Microsoft® Video 1(MS-CRAM) |
-| FLV、F4V | AdobeFlash | H264/AVC、Flix VP6、H263、Sorenson | SWF（矢量动画文件） |
+| AVI | A/V交錯 | XVID、DIVX、HDV、MiniDV (DV25)、Techsmith Camtasia、Huffyuv、Fraps、Panasonic DVCPro | Indeo3 (IV30)、MJPEG、Microsoft®Video 1 (MS-CRAM) |
+| FLV、F4V | AdobeFlash | H264/AVC、Flix VP6、H263、Sorenson | SWF（向量動畫檔案） |
 | M4V | Apple iTunes | H264/AVC | − |
-| MKV | 马特罗斯卡 | H264/AVC | − |
-| MOV、QT | Apple QuickTime | H264/AVC、Apple ProRes422和HQ、Sony XDCAM、Sony DVCAM、HDV、Panasonic DVCPro、Apple DV(DV25)、Apple PhotoJPEG、Sorenson、Avid DNxHD、Avid AVR | Apple中级，Apple动画 |
-| MP4 | MPEG-4 | H264/AVC（所有用户档案） | − |
+| MKV | Matroska | H264/AVC | − |
+| MOV、QT | Apple QuickTime | H264/AVC、Apple ProRes422和HQ、Sony XDCAM、Sony DVCAM、HDV、Panasonic DVCPro、Apple DV (DV25)、Apple PhotoJPEG、Sorenson、Avid DNxHD、Avid AVR | Apple Intermediate， Apple動畫 |
+| MP4 | MPEG-4 | H264/AVC （所有設定檔） | − |
 | MPG、VOB、M2V、MP2 | MPEG-2 | MPEG-2 | − |
 | MXF ‡ | MXF | Sony XDCAM、MPEG-2、MPEG-4、Panasonic DVCPro | − |
-| OGV、OGG | Ogg | Theora， VP3, Dirac | − |
+| OGV， OGG | Ogg | Theora， VP3， Dirac | − |
 | WebM | WebM | Google VP8 | − |
-| WMV | Windows Media 9 | WMV3(v9)、WMV2(v8)、WMV1(v7)、GoToMeeting(G2M2、G2M3、G2M4) | Microsoft®屏幕(MSS2)、Microsoft®照片故事(WVP2) |
+| WMV | Windows Media 9 | WMV3 (v9)、WMV2 (v8)、WMV1 (v7)、GoToMeeting (G2M2、G2M3、G2M4) | Microsoft®畫面(MSS2)、Microsoft®像片故事(WVP2) |
 
-‡尚不支持在Dynamic Media中将此视频格式用于交互式视频，或在Experience Manager Assets中将其与“注释”一起使用。
+‡目前尚不支援將此視訊格式用於Dynamic Media中的互動式視訊，或用於Experience Manager Assets中的註解。
 
-## Dynamic Media — 支持的文档格式 {#supported-document-formats-dynamic-media}
+## Dynamic Media — 支援的檔案格式 {#supported-document-formats-dynamic-media}
 
-| 格式 | 上传<br> （输入格式） | 创建<br> 图像<br> 预设<br> （输出格式） | 预览<br> 动态<br> 演绎版 | 交付<br> 动态<br> 演绎版 | 下载<br> 动态<br> 演绎版 |
+| 格式 | 上傳<br> （輸入格式） | 建立<br> 影像<br> 預設集<br> （輸出格式） | 預覽<br> 動態<br> 轉譯 | 傳遞<br> 動態<br> 轉譯 | 下載<br> 動態<br> 轉譯 |
 |---|:---:|:---:|:---:|:---:|:---:|
-| [人工智能](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | − | − | − | − |
+| [AI](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | − | − | − | − |
 | [INDD](managing-image-presets.md#indesign-indd-file-format) | ✓ | − | − | − | − |
-| [PDF](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) （请参阅下文的注释） | ✓ | ✓ | ✓ | ✓ | ✓ |
+| [PDF](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) （請參閱下方的注意事項） | ✓ | ✓ | ✓ | ✓ | ✓ |
 
 >[!NOTE]
 >
->对于安全PDF，仅支持上传。
+>對於安全PDF，僅支援上傳。
 
-除了上述功能外，还请考虑以下事项：
+除了上述功能外，請考量下列事項：
 
-* 要使用Dynamic Media为PDF文件生成动态演绎版，请参阅 [Adobe Illustrator(AI)、Postscript(EPS)和PDF文件格式。](../assets/managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
+* 若要使用Dynamic Media產生PDF檔案的動態轉譯，請參閱 [Adobe Illustrator (AI)、Postscript (EPS)和PDF檔案格式。](../assets/managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
 
-* 要使用Dynamic Media预览和生成AI文件的动态演绎版，请参阅 [Adobe Illustrator(AI)、Postscript(EPS)和PDF文件格式。](../assets/managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
+* 若要使用Dynamic Media來預覽和產生AI檔案的動態轉譯，請參閱 [Adobe Illustrator (AI)、Postscript (EPS)和PDF檔案格式。](../assets/managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
 
-* 要使用Dynamic Media为INDD文件生成动态演绎版，请参阅 [InDesign(INDD)文件格式](../assets/managing-image-presets.md#indesign-indd-file-format).
+* 若要使用Dynamic Media產生INDD檔案的動態轉譯，請參閱 [InDesign(INDD)檔案格式](../assets/managing-image-presets.md#indesign-indd-file-format).
 
-## Dynamic Media — 支持的栅格图像格式 {#supported-raster-image-formats-dynamic-media}
+## Dynamic Media — 支援的點陣影像格式 {#supported-raster-image-formats-dynamic-media}
 
-| 格式 | 上传<br> （输入格式） | 创建<br> 图像<br> 预设<br> （输出格式） | 预览<br> 动态<br> 演绎版 | 交付<br> 动态<br> 演绎版 | 下载<br> 动态<br> 演绎版 | 设置支持此格式的类型 |
+| 格式 | 上傳<br> （輸入格式） | 建立<br> 影像<br> 預設集<br> （輸出格式） | 預覽<br> 動態<br> 轉譯 | 傳遞<br> 動態<br> 轉譯 | 下載<br> 動態<br> 轉譯 | 設定支援此格式的型別 |
 |---|:---:|:---:|:---:|:---:|:---:| --- |
-| PNG | ✓ | ✓ | ✓ | ✓ | ✓ | [图像](/help/assets/image-sets.md), [混合媒体](/help/assets/mixed-media-sets.md)和 [旋转](/help/assets/spin-sets.md) |
+| PNG | ✓ | ✓ | ✓ | ✓ | ✓ | [影像](/help/assets/image-sets.md)， [混合媒體](/help/assets/mixed-media-sets.md)、和 [迴轉](/help/assets/spin-sets.md) |
 | GIF | ✓ | ✓ | ✓ | ✓ | ✓ | − |
-| TIFF | ✓ | ✓ | ✓ | ✓ | ✓ | [图像](/help/assets/image-sets.md), [混合媒体](/help/assets/mixed-media-sets.md)和 [旋转](/help/assets/spin-sets.md) |
-| JPEG | ✓ | ✓ | ✓ | ✓ | ✓ | [图像](/help/assets/image-sets.md), [混合媒体](/help/assets/mixed-media-sets.md)和 [旋转](/help/assets/spin-sets.md) |
-| BMP | ✓ | − | − | − | − | [图像](/help/assets/image-sets.md), [混合媒体](/help/assets/mixed-media-sets.md)和 [旋转](/help/assets/spin-sets.md) |
+| TIFF | ✓ | ✓ | ✓ | ✓ | ✓ | [影像](/help/assets/image-sets.md)， [混合媒體](/help/assets/mixed-media-sets.md)、和 [迴轉](/help/assets/spin-sets.md) |
+| JPEG | ✓ | ✓ | ✓ | ✓ | ✓ | [影像](/help/assets/image-sets.md)， [混合媒體](/help/assets/mixed-media-sets.md)、和 [迴轉](/help/assets/spin-sets.md) |
+| BMP | ✓ | − | − | − | − | [影像](/help/assets/image-sets.md)， [混合媒體](/help/assets/mixed-media-sets.md)、和 [迴轉](/help/assets/spin-sets.md) |
 | PSD ‡ | ✓ | − | − | − | − | − |
 | [EPS](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ | ✓ | ✓ | ✓ | − |
 | PICT | ✓ | − | − | − | − | − |
 
-从PSD文件中提取合并的图像。 它是由Adobe Photoshop生成并包含在PSD文件中的图像。 根据设置，合并的图像可能是实际的图像，也可能不是实际的图像。
+‡合併的影像會從PSD檔案中擷取。 這是由Adobe Photoshop產生並包含在PSD檔案中的影像。 視設定而定，合併的影像不一定是實際影像。
 
-* 对EPS文件的支持仅适用于光栅图像。 例如，默认不支持为EPS矢量图像生成缩略图。 要添加支持， [配置ImageMagick](best-practices-for-imagemagick.md). 要集成第三方工具以启用其他功能，请参阅 [基于命令行的媒体处理程序](media-handlers.md#command-line-based-media-handler).
+* EPS檔案支援僅適用於點陣影像。 例如，預設不支援EPS向量影像的縮圖產生。 若要新增支援， [設定ImageMagick](best-practices-for-imagemagick.md). 若要整合協力廠商工具以啟用其他功能，請參閱 [以命令列為基礎的媒體處理常式](media-handlers.md#command-line-based-media-handler).
 
-* 使用 [!DNL Dynamic Media] 要预览和生成EPS文件的动态演绎版，请参阅 [Adobe Illustrator(AI)、Postscript(EPS)和PDF文件格式。](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
+* 使用 [!DNL Dynamic Media] 若要預覽和產生EPS檔案的動態轉譯，請參閱 [Adobe Illustrator (AI)、Postscript (EPS)和PDF檔案格式。](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
 
-* 对于EPS文件， PostScript文档结构约定(PS-Adobe)版本3.0或更高版本支持元数据写回。
+* 對於EPS檔案，PostScript檔案建構慣例(PS-Adobe) 3.0版或更新版本支援中繼資料回寫。
 
-## Dynamic Media — 不支持的栅格图像格式 {#unsupported-image-formats-dynamic-media}
+## Dynamic Media — 不支援的點陣影像格式 {#unsupported-image-formats-dynamic-media}
 
-下表介绍了栅格图像文件格式的子类型，这些子类型包括 *not* 在Dynamic Media中受支持。
+下列清單說明點陣影像檔案格式的子型別 *not* 在Dynamic Media中支援。
 
-另请参阅 [检测不支持的Dynamic Media文件格式](https://helpx.adobe.com/experience-manager/kb/detect-unsupported-assets-for-dynamic-media.html) 知识库文章。
+另請參閱 [偵測Dynamic Media不支援的檔案格式](https://helpx.adobe.com/experience-manager/kb/detect-unsupported-assets-for-dynamic-media.html) 知識庫文章。
 
-* IDAT区块大于100 MB的PNG文件。
-* PSB文件。
-* 不支持具有CMYK、RGB、灰度或位图以外的色彩空间的PSD文件。 不支持DuoTone、Lab和索引色彩空间。
-* PSD位深度大于16的文件。
-* TIFF具有浮点数据的文件。
-* TIFF具有Lab色彩空间的文件。
+* IDAT區塊大小大於100 MB的PNG檔案。
+* PSB檔案。
+* 不支援色彩空間不是CMYK、RGB、灰階或點陣圖的PSD檔案。 不支援DuoTone、Lab和索引色域。
+* 位元深度大於16的PSD檔案。
+* TIFF含有浮點資料的檔案。
+* TIFF具有Lab色域的檔案。
 
 <!-- Topic commented out for now as of March 31, 2020. The topic may still need adjustment so it can be published live, or it may be moved into a KB article instead. Just waiting on feedback in CQDOC-15657. - Rick
 ## Unsupported raster image formats in Dynamic Media (#unsupported-image-formats-dynamic-media)
@@ -323,21 +323,21 @@ The following table describes the sub-types of raster image formats that are *no
 |  | Files that have Lab color space. | Use ExifTool if the color mode is Lab.<br>Example in an ExifTool log:<br>1. Color mode: `Lab` |
 -->
 
-## Dynamic Media — 支持的3D格式 {#supported-three-d-file-formats-in-dm}
+## Dynamic Media — 支援的3D格式 {#supported-three-d-file-formats-in-dm}
 
-Dynamic Media支持以下3D格式。
+Dynamic Media支援下列3D格式。
 
-另请参阅 [在Dynamic Media中使用3D资产](/help/assets/assets-3d.md).
+另請參閱 [在Dynamic Media中使用3D資產](/help/assets/assets-3d.md).
 
-| 3D文件扩展名 | 文件格式 | MIME类型 | 注释 |
+| 3D副檔名 | 檔案格式 | MIME型別 | 注释 |
 |---|---|---|---|
-| GLB | 二进制GL传输 | model/gltf-binary | 将材料和纹理作为单个资产包含在内。 |
-| OBJ | WaveFront 3D对象文件 | application/x-tgif |  |
-| STL | 立体成形 | application/vnd.ms-pki.stl |  |
-| USDZ | 通用场景描述Zip存档 | model/vnd.usdz+zip | *仅支持摄取；无法查看或进行交互。* USDZ是一种专有的3D格式，Safari和iOS设备可在本机查看该格式。 |
+| GLB | 二進位GL傳輸 | model/gltf-binary | 將材質和紋理納入為單一資產。 |
+| 物件 | WaveFront 3D物件檔案 | application/x-tgif |  |
+| STL | 立體光刻 | application/vnd.ms-pki.stl |  |
+| USDZ | Universal Scene說明Zip封存 | model/vnd.usdz+zip | *僅支援內嵌；不提供檢視或互動。* USDZ是專屬的3D格式，可供Safari和iOS裝置原生檢視。 |
 
 >[!MORELIKETHIS]
 >
->* [启用基于MIME类型的资产和Dynamic Media Classic上传作业参数支持](/help/sites-administering/scene7.md#enabling-mime-type-based-assets-scene-upload-job-parameter-support).
->* [为上传作业参数支持配置基于MIME类型](config-dynamic.md).
+>* [啟用MIME型別型資產和Dynamic Media Classic上傳工作引數支援](/help/sites-administering/scene7.md#enabling-mime-type-based-assets-scene-upload-job-parameter-support).
+>* [為上載工作引數支援設定MIME型別型](config-dynamic.md).
 

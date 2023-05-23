@@ -1,7 +1,7 @@
 ---
-title: HTML5表单的架构
+title: HTML5表單的架構
 seo-title: Architecture of HTML5 forms
-description: HTML5表单作为包部署在嵌入式AEM实例中，并使用RESTful Apache Sling架构将功能公开为REST端点（通过HTTP/S）。
+description: HTML5表單會部署為內嵌AEM執行個體中的套件，並使用RESTful Apache Sling架構以HTTP/S的REST端點形式公開功能。
 seo-description: HTML5 forms is deployed as a package within the embedded AEM instance and exposes the functionality as REST end point over HTTP/S using RESTful Apache Sling architecture.
 uuid: 7f515cea-1447-4fc7-82ba-17f2e3f9f80c
 contentOwner: robhagat
@@ -19,170 +19,170 @@ ht-degree: 1%
 
 ---
 
-# HTML5表单的架构{#architecture-of-html-forms}
+# HTML5表單的架構{#architecture-of-html-forms}
 
 ## 架构 {#architecture}
 
-HTML5表单功能在嵌入的AEM实例中作为包部署，并使用RESTful以REST端点的形式显示为HTTP/S上的REST端点 [Apache Sling架构](https://sling.apache.org/).
+HTML5表單功能會以套件形式部署在內嵌AEM執行個體中，並使用RESTful作為HTTP/S上的REST端點公開 [Apache Sling架構](https://sling.apache.org/).
 
 ![02-aem-forms-architecture_large](assets/02-aem-forms-architecture_large.jpg)
 
 ### 使用Sling框架 {#using-sling-framework}
 
-[Apache Sling](https://sling.apache.org/) 以资源为中心。 它使用请求URL来首先解析资源。 每个资源都具有 **sling:resourceType** (或 **sling:resourceSuperType**)属性。 然后，根据此属性、请求方法和请求URL的属性，选择sling脚本以处理请求。 此sling脚本可以是JSP或Servlet。 对于HTML5表单， **用户档案** 节点充当sling资源和 **配置文件渲染器** 充当sling脚本，用于处理渲染具有特定用户档案的移动设备表单的请求。 A **配置文件渲染器** 是一个JSP，用于从请求中读取参数并调用Forms OSGi服务。
+[Apache Sling](https://sling.apache.org/) 以資源為中心。 它會使用請求URL來先解析資源。 每個資源都有一個 **sling：resourceType** (或 **sling：resourceSuperType**)屬性。 接著，系統會根據此屬性、要求方法和要求URL的屬性，選取Sling指令碼來處理要求。 此Sling指令碼可以是JSP或servlet。 對於HTML5表單， **設定檔** 節點會充當sling資源和 **設定檔轉譯器** 當作sling指令碼，處理請求，以使用特定設定檔轉譯行動表單。 A **設定檔轉譯器** 是一種JSP，可從請求中讀取引數並呼叫Forms OSGi服務。
 
-有关REST端点和支持的请求参数的详细信息，请参阅 [渲染表单模板](/help/forms/using/rendering-form-template.md).
+如需REST端點和支援的請求引數的詳細資訊，請參閱 [呈現表單範本](/help/forms/using/rendering-form-template.md).
 
-当用户从客户端设备(如iOS或Android™浏览器)发出请求时，Sling首先会根据请求URL解析配置文件节点。 从此配置文件节点中，将读取 **sling:resourceSuperType** 和 **sling:resourceType** 以确定可处理此表单渲染请求的所有可用脚本。 然后，它会使用Sling请求选择器以及请求方法来识别最适合处理此请求的脚本。 请求到达配置文件渲染器JSP后，JSP将调用Forms OSGi服务。
+當使用者從使用者端裝置(例如iOS或Android™瀏覽器)提出請求時，Sling會先根據請求URL解析設定檔節點。 此設定檔節點會顯示 **sling：resourceSuperType** 和 **sling：resourceType** 以決定可處理此表單轉譯器請求的所有可用指令碼。 接著，它會使用Sling要求選取器以及要求方法，以識別最適合處理此要求的指令碼。 請求到達設定檔轉譯器JSP後，JSP會呼叫Forms OSGi服務。
 
-有关sling脚本解析的更多详细信息，请参阅 [AEM Sling备忘单](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hans) 或 [Apache Sling Url分解](https://sling.apache.org/documentation/the-sling-engine/url-decomposition.html).
+如需Sling指令碼解析的詳細資訊，請參閱 [AEM Sling速查表](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hans) 或 [Apache Sling Url分解](https://sling.apache.org/documentation/the-sling-engine/url-decomposition.html).
 
-#### 典型表单处理调用流 {#typical-form-processing-call-flow}
+#### 典型的表單處理呼叫流程 {#typical-form-processing-call-flow}
 
-HTML5表单可缓存处理（呈现或提交）第一个请求时所需的所有中间对象。 它不会缓存依赖于数据的对象，因为此类对象可能会发生更改。
+HTML5表單會快取處理（轉譯或提交）第一個請求中的表單所需的所有中間物件。 它不會快取相依於資料的物件，因為這類物件可能會變更。
 
-移动设备表单维护两个不同级别的缓存： PreRender缓存和Render缓存。 preRender缓存包含解析模板的所有片段和图像，而Render缓存包含渲染的内容，如HTML。
+Mobile Form會維護兩個不同層級的快取：PreRender快取和轉譯器快取。 preRender快取包含已解析範本的所有片段和影像，而Render快取則包含HTML等轉譯內容。
 
-![HTML5表单工作流](assets/cacheworkflow.png)
+![HTML5表單工作流程](assets/cacheworkflow.png)
 
-HTML5表单工作流
+HTML5表單工作流程
 
-HTML5表单不会缓存缺少片段和图像引用的模板。 如果HTML5表单花费的时间超过正常时间，则检查服务器日志中是否缺少引用和警告。 另外，请确保未达到对象的最大大小。
+HTML5表單不會快取遺失片段和影像參考的範本。 如果HTML5表單花費的時間超過正常時間，請檢查伺服器記錄檔中是否有遺漏參考和警告。 同時請確定未達到物件大小上限。
 
-Forms OSGi服务通过两个步骤处理请求：
+Forms OSGi服務會分兩個步驟處理請求：
 
-* **布局和初始形式状态生成**:Forms OSGi呈现服务会调用Forms缓存组件，以确定表单是否已缓存且尚未失效。 如果表单已缓存且有效，则它将从缓存中提供生成的HTML。 如果表单失效，Forms OSGi呈现服务将以XML格式生成初始表单布局和表单状态。 Forms OSGi服务会将此XML转换为HTML布局和初始JSON表单状态，然后缓存以备后续请求使用。
-* **预填充Forms**:在渲染时，如果用户请求使用预填充数据的表单，Forms OSGi渲染服务会调用Forms服务容器，并通过合并数据生成新的表单状态。 但是，由于布局已在上述步骤中生成，因此此调用比首次调用速度更快。 此调用仅执行数据合并并对数据运行脚本。
+* **版面配置與初始表單狀態產生**： Forms OSGi轉譯服務會呼叫Forms快取元件，以判斷表單是否已快取且未失效。 如果表單已快取且有效，則會從快取中提供產生的HTML。 如果表單失效，Forms OSGi轉譯服務會產生XML格式的初始表單版面和表單狀態。 此XML會由Forms OSGi服務轉換為HTML版面配置和初始JSON表單狀態，然後針對後續請求進行快取。
+* **預先填入的Forms**：在轉譯時，如果使用者請求具有預先填入資料的表單，Forms OSGi轉譯服務會呼叫Forms服務容器，並使用合併的資料產生新的表單狀態。 不過，由於版面配置已在上述步驟中產生，因此此呼叫的速度會比第一次呼叫快。 此呼叫只會執行資料合併，並對資料執行指令碼。
 
-如果表单中存在任何更新或表单内使用的任何资产，则表单缓存组件会检测到该更新，并且该特定表单的缓存将失效。 Forms OSGi服务完成处理后，配置文件渲染器jsp会将JavaScript库引用和样式添加到此表单，并将响应返回给客户端。 典型的Web服务器，如 [Apache](https://httpd.apache.org/) 可在此处用于HTML压缩。 Web服务器将显着减少响应大小、网络流量以及在服务器和客户端计算机之间传输数据所需的时间。
+如果表單中有任何更新，或表單內使用任何資產，表單快取元件會偵測到它，且該特定表單的快取會失效。 Forms OSGi服務完成處理之後，設定檔轉譯器jsp會將JavaScript程式庫參照和樣式新增至此表單，並將回應傳回給使用者端。 典型的網頁伺服器，例如 [Apache](https://httpd.apache.org/) 可在此搭配HTML壓縮使用。 網頁伺服器可大幅減少回應大小、網路流量，以及伺服器與使用者端電腦之間資料串流所需的時間。
 
-当用户提交表单时，浏览器会将JSON格式的表单状态发送到 [提交服务代理](../../forms/using/service-proxy.md);然后，提交服务代理使用JSON数据生成一个数据XML，并提交该数据XML以提交端点。
+當使用者提交表單時，瀏覽器會將表單狀態以JSON格式傳送至 [送出服務Proxy](../../forms/using/service-proxy.md)；然後提交服務Proxy會使用JSON資料產生資料XML，並將該資料XML提交至提交端點。
 
 ## 组件 {#components}
 
-您需要AEM Forms附加组件包才能启用HTML5表单。 有关安装AEM Forms附加组件包的信息，请参阅 [安装和配置AEM Forms](../../forms/using/installing-configuring-aem-forms-osgi.md).
+您需要AEM Forms附加元件套件才能啟用HTML5表單。 如需有關安裝AEM Forms附加元件套件的資訊，請參閱 [安裝和設定AEM Forms](../../forms/using/installing-configuring-aem-forms-osgi.md).
 
-### OSGi组件(adobe-lc-forms-core.jar) {#osgi-components-adobe-lc-forms-core-jar}
+### OSGi元件(adobe-lc-forms-core.jar) {#osgi-components-adobe-lc-forms-core-jar}
 
-**AdobeXFA Forms呈现器(com.adobe.livecycle.adobe-lc-forms-core)** 是从Felix管理控制台的包视图(https://)查看HTML5表单OSGi包时的显示名称[主机]:[端口]/system/console/bundles)。
+**AdobeXFA Forms轉譯器(com.adobe.livecycle.adobe-lc-forms-core)** 是從Felix Admin Console的套件組合檢視檢視時HTML5 forms OSGi套件的顯示名稱(https://[主機]：[連線埠]/system/console/bundles)。
 
-此组件包含用于呈现、缓存管理和配置设置的OSGi组件。
+此元件包含用於轉譯、快取管理和組態設定的OSGi元件。
 
-#### Forms OSGi服务 {#forms-osgi-service}
+#### Forms OSGi服務 {#forms-osgi-service}
 
-此OSGi服务包含将XDP渲染为HTML的逻辑，并处理表单提交以生成数据XML。 此服务使用Forms服务容器。 Forms服务容器内部调用本机组件 `XMLFormService.exe` 执行处理的程序。
+此OSGi服務包含將XDP轉譯為HTML的邏輯，並處理表單提交以產生資料XML。 此服務使用Forms服務容器。 Forms服務容器會在內部呼叫原生元件 `XMLFormService.exe` 執行處理作業的URL。
 
-如果收到呈现请求，则此组件将调用Forms服务容器以生成布局和状态信息，并将进一步处理这些信息以生成HTML和JSON表单DOM状态。
+如果收到轉譯要求，此元件會呼叫Forms服務容器以產生版面和狀態資訊，系統會進一步處理這些資訊以產生HTML和JSON表單DOM狀態。
 
-此组件还负责从提交的表单状态JSON生成数据XML。
+此元件也負責從提交的表單狀態JSON產生資料XML。
 
-#### 缓存组件 {#cache-component}
+#### 快取元件 {#cache-component}
 
-HTML5表单使用缓存来优化吞吐量和响应时间。 您可以配置缓存服务的级别，以微调性能和空间利用率之间的权衡。
+HTML5表單會使用快取來最佳化輸送量和回應時間。 您可以設定快取服務的層級，以微調效能與空間使用率之間的平衡。
 
 <table>
  <tbody>
   <tr>
-   <th>缓存策略</th>
+   <th>快取策略</th>
    <th>描述</th>
   </tr>
   <tr>
    <td>无</td>
-   <td>不缓存工件<br /> </td>
+   <td>不要快取成品<br /> </td>
   </tr>
   <tr>
    <td>保守</td>
-   <td>仅缓存在呈现表单（如包含内联片段和图像的模板）之前生成的中间工件</td>
+   <td>僅快取在表單轉譯之前產生的中繼成品，例如包含內嵌片段和影像的範本</td>
   </tr>
   <tr>
-   <td>攻击性</td>
-   <td>缓存呈现的HTML内容<br /> 缓存保守级别中缓存的所有工件。<br /> <strong>注意</strong>:此策略可获得最佳性能，但会消耗更多内存来存储缓存的伪像。</td>
+   <td>積極進取</td>
+   <td>快取呈現的HTML內容<br /> 快取在Conservative層級快取的所有成品。<br /> <strong>注意</strong>：此策略可提供最佳效能，但會消耗更多記憶體來儲存快取的成品。</td>
   </tr>
  </tbody>
 </table>
 
-HTML5表单使用LRU策略执行内存内存缓存。 如果将缓存策略设置为无缓存，则不会创建缓存，并清除现有缓存数据（如果有）。 除缓存策略外，您还可以配置内存中缓存的总大小，这有助于限制缓存大小的最大值，如果超出此限制，则将使用LRU模式释放缓存资源。
+HTML5表單使用LRU策略執行記憶體內快取。 如果快取策略設為「無」，將不會建立快取，並將清除現有的快取資料（若有的話）。 除了快取策略之外，您也可以設定記憶體中的總快取大小，這有助於使快取大小有最大限制，如果超過此限制，將使用LRU模式來釋放快取資源。
 
 >[!NOTE]
 >
->内存内缓存不在群集节点之间共享。
+>記憶體內部快取不會在叢集節點之間共用。
 
-#### 配置服务 {#configuration-service}
+#### 設定服務 {#configuration-service}
 
-配置服务允许对HTML5表单的配置参数和缓存设置进行调整。
+Configuration Service可讓您調整HTML5表單的組態引數和快取設定值。
 
-要更新这些设置，请转到CQ FelixAdmin Console(位于https://&lt;&#39;)[服务器]:[端口]“/system/console/configMgr)，搜索并选择移动Forms配置。
+若要更新這些設定，請前往CQ FelixAdmin Console(位於https://&lt;&#39;[伺服器]：[連線埠]&#39;/system/console/configMgr)，搜尋並選取「行動Forms設定」。
 
-您可以配置缓存大小或使用配置服务禁用缓存。 您还可以使用“调试选项”参数启用调试。 有关调试表单的更多信息，请访问 [调试HTML5表单](/help/forms/using/debug.md).
+您可以使用設定服務來設定快取大小或停用快取。 您也可以使用「偵錯選項」引數來啟用偵錯。 如需有關除錯表單的詳細資訊，請參閱 [偵錯HTML5表單](/help/forms/using/debug.md).
 
-### 运行时组件(adobe-lc-forms-runtime-pkg.zip) {#runtime-components-adobe-lc-forms-runtime-pkg-zip}
+### 執行階段元件(adobe-lc-forms-runtime-pkg.zip) {#runtime-components-adobe-lc-forms-runtime-pkg-zip}
 
-运行时包包含用于呈现HTML表单的客户端库。
+執行階段套件包含用於轉譯HTML表單的使用者端程式庫。
 
-**作为运行时包的一部分提供的重要组件：**
+**執行階段套件中提供的重要元件：**
 
-#### 脚本引擎 {#scripting-engine}
+#### 指令碼引擎 {#scripting-engine}
 
-AdobeXFA实施支持两种脚本语言，以在表单中启用用户定义的逻辑执行：JavaScript和FormCalc。
+Adobe XFA實作支援兩種指令碼語言，以便在表單中啟用使用者定義的邏輯執行：JavaScript和FormCalc。
 
-HTML Forms的脚本引擎使用JavaScript编写，以支持这两种语言的XFA脚本API。
+HTMLForms的指令碼引擎是以JavaScript撰寫，以支援這兩種語言的XFA指令碼API。
 
-在呈现时，FormCalc脚本在对用户或设计人员透明的服务器上被转换为JavaScript（并缓存）。
+在轉譯時，FormCalc指令碼會在伺服器上轉譯（和快取）為JavaScript，對使用者或設計人員而言是透明的。
 
-此脚本引擎使用ECMAScript5的某些功能，如Object.defineProperty。 引擎/库将作为具有类别名称的CQ客户端库提交 **xfaforms.profile**. 它还提供 **FormBridge API** 使外部门户或应用程序能够与表单进行交互。 使用FormBridge，外部应用程序可以以编程方式隐藏某些元素、获取或设置其值，或更改其属性。
+此指令碼引擎使用ECMAScript5的某些功能，例如Object.defineProperty。 引擎/程式庫會以具有類別名稱的CQ使用者端程式庫形式提供 **xfaforms.profile**. 它也提供 **FormBridge API** 啟用外部入口網站或應用程式與表單互動。 使用FormBridge時，外部應用程式能以程式設計方式隱藏特定元素、取得或設定其值，或變更其屬性。
 
-有关更多详细信息，请参阅 [表单桥](/help/forms/using/form-bridge-apis.md) 文章。
+如需詳細資訊，請參閱 [Form Bridge](/help/forms/using/form-bridge-apis.md) 文章。
 
-#### 布局引擎 {#layout-engine}
+#### 版面引擎 {#layout-engine}
 
-HTML5表单的布局和可视方面基于SVG1.1、jQuery、BackBone和CSS3功能。 表单的初始外观会在服务器上生成并缓存。 在客户端上管理初始布局的调整以及对表单布局的任何进一步增量更改。 要实现此目的，运行时包包含一个以JavaScript编写且基于jQuery/Backbone的布局引擎。 此引擎处理所有动态行为，如添加/删除可重复实例、可增长对象布局。 此布局引擎每次渲染一个表单一页。 最初，用户只查看一个页面，而水平滚动条仅考虑第一页。 但是，当用户向下滚动时，下一页开始渲染。 此逐页呈现可减少在浏览器中呈现第一页所需的时间，并增强表单的感知性能。 此引擎/库是CQ客户端库中具有类别名称的一部分 **xfaforms.profile**.
+HTML5表單的版面與視覺效果以SVG1.1、jQuery、BackBone和CSS3功能為基礎。 表單的初始外觀會在伺服器產生並快取。 使用者端會管理該初始版面的微調以及對表單版面所做的任何進一步增量變更。 為實現此目的，Runtime套件包含以JavaScript撰寫並以jQuery/Backbone為基礎的版面引擎。 此引擎會處理所有動態行為，例如新增/移除可重複例項、可成長物件配置。 此版面引擎會一次轉譯一個表單頁面。 最初，使用者只檢視一個頁面，而水準卷軸只代表第一個頁面。 但是，當使用者向下捲動時，下一頁開始呈現。 此逐頁轉譯可減少在瀏覽器中轉譯第一頁所需的時間，並增強表單的感知效能。 此引擎/程式庫屬於具有類別名稱的CQ使用者端程式庫 **xfaforms.profile**.
 
-布局引擎还包含一组用于从用户捕获表单字段值的小组件。 这些小组件建模为 [jQuery UI小组件](https://api.jqueryui.com/jQuery.widget/) 实施某些附加合同，以便与布局引擎无缝协作。
+版面引擎也包含一組用於從使用者擷取表單欄位值的Widget。 這些Widget的模型化為 [jQuery UI Widget](https://api.jqueryui.com/jQuery.widget/) 可實作特定額外合約，以順暢地與版面引擎搭配運作。
 
-有关小部件和相应合同的更多详细信息，请参阅 [HTML5表单的自定义小组件](/help/forms/using/introduction-widgets.md).
+如需Widget和對應合約的詳細資訊，請參閱 [HTML5表單的自訂Widget](/help/forms/using/introduction-widgets.md).
 
 #### 样式 {#styling}
 
-与HTML元素关联的样式是内联添加的，还是基于嵌入的CSS块添加的。 某些不依赖于表单的常见样式是CQ客户端库的一部分，该客户端库的类别名称为xfaforms.profile。
+與HTML元素相關聯的樣式會內嵌或根據內嵌CSS區塊新增。 有些常見樣式與形式無關，但屬於類別名稱為xfaforms.profile的CQ使用者端程式庫。
 
-除了默认的样式属性之外，每个表单元素还包含某些基于元素类型、名称和其他属性的CSS类。 使用这些类，您可以通过指定元素自己的CSS来重新设置元素样式。
+除了預設的樣式屬性外，每個表單元素也包含根據元素型別、名稱和其他屬性的特定CSS類別。 使用這些類別，使用者可以透過指定他們自己的CSS來重新樣式化元素。
 
-有关默认样式和类的更多详细信息，请参阅 [样式简介](/help/forms/using/css-styles.md).
+如需預設樣式和類別的詳細資訊，請參閱 [樣式簡介](/help/forms/using/css-styles.md).
 
-#### 服务器端脚本和Web服务 {#server-side-script-and-web-services}
+#### 伺服器端指令碼和Web服務 {#server-side-script-and-web-services}
 
-任何标记为在服务器上运行或标记为调用Web服务（无论其标记为执行的位置）的脚本始终在服务器上执行。
+任何標示為在伺服器上執行或標示為呼叫Web服務的指令碼（無論標示為要執行的位置為何）一律會在伺服器上執行。
 
-客户端脚本引擎：
+使用者端指令碼引擎：
 
-1. 以JSON形式对传递当前表单状态的服务器进行同步调用
-1. 在服务器上执行脚本或Web服务
-1. 生成新的JSON状态
-1. 返回响应时，将合并客户端上的新JSON状态。
+1. 以JSON的形式，向傳遞目前表單狀態的伺服器發出同步呼叫
+1. 在伺服器上執行指令碼或Web服務
+1. 產生新的JSON狀態
+1. 傳回回應時，合併使用者端上的新JSON狀態。
 
-#### 本地化资源包 {#localization-resource-bundles}
+#### 本地化資源組合 {#localization-resource-bundles}
 
-HTML5表单支持意大利语(it)、西班牙语(es)、巴西葡萄牙语(pt_BR)、简体中文(zh_CN)、繁体中文（仅限支持）(zh_TW)、韩语(ko_KR)、英语(en_US)、法语(fr_FR)、德语(de_DE)和日语(ja)语言。 根据在请求标头中收到的区域设置，相应的资源包将发送到客户端。 此资源包将作为具有类别名称的CQ客户端库添加到配置文件JSP中 **xfaforms.I18N**. 您可以覆盖在配置文件中提取区域设置包的逻辑。
+HTML5表單支援義大利文(it)、西班牙文(es)、巴西葡萄牙文(pt_BR)、簡體中文(zh_CN)、繁體中文（僅有限支援） (zh_TW)、韓文(ko_KR)、英文(en_US)、法文(fr_FR)、德文(de_DE)和日文(ja)語言。 根據在請求標頭中收到的地區設定，相應的資源組合會傳送給使用者端。 此資源套件會以類別名稱的CQ使用者端程式庫形式新增至設定檔JSP **xfaforms.I18N**. 您可以覆寫在設定檔中提取地區設定套件的邏輯。
 
-### Sling组件(adobe-lc-forms-content-pkg.zip) {#sling-components-adobe-lc-forms-content-pkg-zip}
+### Sling元件(adobe-lc-forms-content-pkg.zip) {#sling-components-adobe-lc-forms-content-pkg-zip}
 
-Sling包包含与“配置文件”和“配置文件渲染器”相关的内容。
+Sling套件包含與設定檔和設定檔轉譯器相關的內容。
 
 #### 配置文件 {#profiles}
 
-配置文件是sling中表示表单或Forms系列的资源节点。 在CQ级别，这些配置文件是JCR节点。 节点位于 **/content** 文件夹，可以位于 **/content** 文件夹。
+設定檔是Sling中的資源節點，代表表單或Forms系列。 在CQ層級，這些設定檔是JCR節點。 節點位於 **/content** 資料夾位於JCR存放庫中，並可位於 **/content** 資料夾。
 
-#### 配置文件渲染器 {#profile-renderers}
+#### 設定檔轉譯器 {#profile-renderers}
 
-“配置文件”节点具有属性 **sling:resourceSuperType** 具有值 **xfaforms/profile**. 此属性会在内部向位于 **/libs/xfaforms/profile** 文件夹。 这些脚本是JSP页，它们是将HTML表单和必需的JS/CSS工件组合在一起的容器。 这些页面包括对以下项的引用：
+設定檔節點具有屬性 **sling：resourceSuperType** 含值 **xfaforms/profile**. 此屬性會在內部將請求轉寄給位於以下位置之設定檔節點的sling指令碼： **/libs/xfaforms/profile** 資料夾。 這些指令碼是JSP頁面，是用來組合HTML表單和必要JS/CSS人工因素的容器。 這些頁面包含對下列專案的參照：
 
-* **xfaforms.I18N。&lt;locale>**:此库包含本地化数据。
-* **xfaforms.profile**:此库包含XFA脚本和布局引擎的实施。
+* **xfaforms.I18N。&lt;locale>**：此程式庫包含當地語系化的資料。
+* **xfaforms.profile**：此程式庫包含XFA指令碼和版面引擎的實作。
 
-这些库建模为CQ客户端库，它们利用CQ框架JavaScript库的自动连接、缩小和压缩功能。
-有关CQ客户端库的更多信息，请参阅 [CQ Clientlib文档](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hans).
+這些程式庫被模型化為CQ使用者端程式庫，這些程式庫利用CQ架構JavaScript程式庫的自動串連、縮制和壓縮功能。
+如需CQ使用者端程式庫的詳細資訊，請參閱 [CQ Clientlib檔案](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hans).
 
-如上所述，配置文件渲染器JSP通过sling include调用Forms服务。 此JSP还根据管理员配置或请求参数设置各种调试选项。
+如上所述，設定檔轉譯器JSP透過sling include呼叫Forms服務。 此JSP也會根據管理員設定或請求引數設定各種偵錯選項。
 
-HTML5表单允许开发人员创建配置文件和配置文件渲染器以自定义表单的外观。 例如，HTML表单允许开发人员在面板或 &lt;div> 部分。
-有关创建自定义用户档案的更多详细信息，请参阅 [创建自定义用户档案](/help/forms/using/custom-profile.md).
+HTML5表單可讓開發人員建立設定檔和設定檔轉譯器，以自訂表單的外觀。 例如，HTML表單可讓開發人員將表單整合到面板或 &lt;div> 現有HTML入口網站的區段。
+如需建立自訂設定檔的詳細資訊，請參閱 [建立自訂設定檔](/help/forms/using/custom-profile.md).

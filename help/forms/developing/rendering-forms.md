@@ -1,7 +1,7 @@
 ---
-title: 渲染Forms
+title: 轉譯Forms
 seo-title: Rendering Forms
-description: 使用Forms服务创建交互式数据捕获客户端应用程序，这些应用程序验证、处理、转换和交付通常在Designer中创建的表单。 表单作者可以开发一个表单设计，Forms服务会在各种浏览器环境下以PDF、SWF或HTML呈现该设计。
+description: 使用Forms服務建立互動式資料擷取使用者端應用程式，以驗證、處理、轉換及傳遞通常在Designer中建立的表單。 表單作者可以開發單一表單設計，Forms服務會在各種瀏覽器環境中以PDF、SWF或HTML呈現。
 seo-description: Use the Forms service to create interactive data capture client applications that validate, process, transform, and deliver forms typically created in Designer. Form authors can develop a single form design that the Forms service renders in PDF, SWF, or HTML in various browser environments.
 uuid: 68d7b7bc-7730-4a83-b7b9-ebe2a29d6c51
 contentOwner: admin
@@ -19,42 +19,42 @@ ht-degree: 0%
 
 ---
 
-# 渲染Forms {#rendering-forms}
+# 轉譯Forms {#rendering-forms}
 
-**本文档中的示例和示例仅适用于AEM Forms on JEE环境。**
+**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms 。**
 
-**关于Forms服务**
+**關於Forms服務**
 
-Forms服务允许您创建交互式数据捕获客户端应用程序，这些应用程序验证、处理、转换和交付通常在Designer中创建的表单。 表单作者可以开发一个表单设计，Forms服务会在各种浏览器环境下以PDF、SWF或HTML呈现该设计。
+Forms服務可讓您建立互動式資料擷取使用者端應用程式，以驗證、處理、轉換及傳遞通常在Designer中建立的表單。 表單作者可以開發單一表單設計，Forms服務會在各種瀏覽器環境中以PDF、SWF或HTML呈現。
 
-当最终用户请求表单时，客户端应用程序将请求发送到Forms服务，该服务以适当的格式返回表单。 Forms服务一收到请求，就会将数据与表单设计合并，然后以所需的格式交付表单。 表单服务输出是交互式表单，通常是PDF文档。 交互式表单可让用户填写表单上的字段。
+當一般使用者請求表單時，使用者端應用程式會將請求傳送至Forms服務，該服務會以適當格式傳回表單。 Forms服務一收到要求，就會將資料與表單設計合併，然後以所需格式傳送表單。 表單服務輸出是互動式表單，通常是PDF檔案。 互動式表單可讓使用者填寫表單上的欄位。
 
-根据客户端应用程序的类型，可以将表单写入客户端Web浏览器，或将表单另存为PDF文件。 基于Web的应用程序可以将表单写入Web浏览器。 桌面应用程序可以将表单另存为PDF文件。 要演示如何向Web浏览器和PDF文件写出，快速启动位于 *渲染Forms* 部分按以下方式组织：
+根據使用者端應用程式的型別，您可以將表單寫入使用者端網頁瀏覽器，或將表單儲存為PDF檔案。 網頁型應用程式可將表單寫入網頁瀏覽器。 案頭應用程式可將表單儲存為PDF檔案。 為了示範如何寫出至網頁瀏覽器和PDF檔案，快速入門位於 *轉譯Forms* 區段的組織方式如下：
 
-* Java API强类型（SOAP模式）示例是一个Java servlet。
-* Web服务(Java Base64)示例是一个Java servlet。
-* Web服务(MTOM)示例是控制台应用程序（并非所有快速启动都有MTOM示例）。
+* Java API強型別（SOAP模式）範例為Java servlet。
+* Web服務(Java Base64)範例是Java servlet。
+* Web服務(MTOM)範例是主控台應用程式（並非所有快速啟動都有MTOM範例）。
 
 >[!NOTE]
 >
->有关创建使用Java Servlet调用Forms服务的Web应用程序的信息，请参阅 [创建渲染Forms的Web应用程序](/help/forms/developing/creating-web-applications-renders-forms.md).
+>如需有關建立使用Java Servlet來呼叫Forms服務的Web應用程式的資訊，請參閱 [建立轉譯Forms的網頁應用程式](/help/forms/developing/creating-web-applications-renders-forms.md).
 
-您可以使用以下两种方式之一将表单设计（XDP文件）或PDF文档传递到Forms服务：
+您可以使用下列兩種方式之一，將表單設計（XDP檔案）或PDF檔案傳遞到Forms服務：
 
-* 您可以使用URL值引用表单设计。 此方法涉及使用 `URLSpec` 对象。 使用将内容根传递到Forms服务 `URLSpec` 对象的 `setContentRootURI` 方法。 窗体设计名称( `formQuery`)作为单独的参数传递。 将这两个值连接起来以获得对窗体设计的绝对引用。 (大多数快速启动位于 *渲染Forms* 部分使用此方法。)
-* 您可以传递 `com.adobe.idp.Document` 其中包含表单设计到Forms服务。 两个名为的新方法 `renderPDFForm2` 和 `renderHTMLForm2` 接受 `com.adobe.idp.Document` 包含表单设计的对象。 (请参阅 [将文档传递到Forms服务](/help/forms/developing/passing-documents-forms-service.md)
+* 您可以使用URL值來參考表單設計。 此方法涉及使用 `URLSpec` 物件。 內容根目錄會使用傳遞至Forms服務 `URLSpec` 物件的 `setContentRootURI` 方法。 表單設計名稱( `formQuery`)以個別引數傳遞。 這兩個值會串連起來，以取得表單設計的絕對參照。 (大部分快速入門位於 *轉譯Forms* 部分請使用此方法。)
+* 您可以傳遞 `com.adobe.idp.Document` 包含表單設計給Forms服務的檔案。 兩個命名的新方法 `renderPDFForm2` 和 `renderHTMLForm2` 接受 `com.adobe.idp.Document` 包含表單設計的物件。 (請參閱 [將檔案傳遞至Forms服務](/help/forms/developing/passing-documents-forms-service.md)
 
-您可以使用Forms服务完成这些任务：
+您可以使用Forms服務完成這些工作：
 
-* 呈现交互式PDF forms。 (请参阅 [渲染交互式PDF forms](/help/forms/developing/rendering-interactive-pdf-forms.md).)
-* 在客户端渲染表单。 (请参阅 [在客户端渲染Forms](/help/forms/developing/rendering-forms-client.md).)
-* 根据片段渲染表单。 (请参阅 [根据片段渲染Forms](/help/forms/developing/rendering-forms-based-fragments.md).)
-* 渲染启用权限的表单。 (请参阅 [渲染启用权限的Forms](/help/forms/developing/rendering-rights-enabled-forms.md).)
-* 将表单渲染为HTML。 (请参阅 [将Forms渲染为HTML](/help/forms/developing/rendering-forms-html.md).)
-* 使用自定义CSS文件渲染HTMLForms ([使用自定义CSS文件渲染HTMLForms](/help/forms/developing/rendering-html-forms-using-custom.md).)
-* 处理提交的表单。 (请参阅 [处理提交的Forms](/help/forms/developing/handling-submitted-forms.md).)
-* 使用提交的XML数据创建PDF文档。 (请参阅 [使用提交的XML数据创建PDF单据](/help/forms/developing/creating-pdf-documents-submitted-xml.md).)
-* 预填充表单。 (请参阅 [使用可流布局预填充Forms](/help/forms/developing/prepopulating-forms-flowable-layouts.md).)
-* 传递文档。 (请参阅 [将文档传递到Forms服务](/help/forms/developing/passing-documents-forms-service.md)
-* 计算表单数据。 (请参阅 [计算表单数据](/help/forms/developing/calculating-form-data.md).)
-* 优化应用程序。 (请参阅 [优化Forms服务的性能](/help/forms/developing/optimizing-performance-forms-service.md).)
+* 演算互動式PDF forms。 (請參閱 [呈現互動式PDF forms](/help/forms/developing/rendering-interactive-pdf-forms.md).)
+* 在使用者端轉譯表單。 (請參閱 [在使用者端轉譯Forms](/help/forms/developing/rendering-forms-client.md).)
+* 根據片段轉譯表單。 (請參閱 [根據片段轉譯Forms](/help/forms/developing/rendering-forms-based-fragments.md).)
+* 轉譯啟用許可權的表單。 (請參閱 [轉譯啟用許可權的Forms](/help/forms/developing/rendering-rights-enabled-forms.md).)
+* 將表單轉譯為HTML。 (請參閱 [將Forms呈現為HTML](/help/forms/developing/rendering-forms-html.md).)
+* 使用自訂CSS檔案呈現HTMLForms ([使用自訂CSS檔案轉譯HTMLForms](/help/forms/developing/rendering-html-forms-using-custom.md).)
+* 處理提交的表單。 (請參閱 [處理已提交的Forms](/help/forms/developing/handling-submitted-forms.md).)
+* 使用已提交的XML資料建立PDF檔案。 (請參閱 [使用已提交的XML資料建立PDF檔案](/help/forms/developing/creating-pdf-documents-submitted-xml.md).)
+* 預先填入表單。 (請參閱 [使用可流動版面預先填入Forms](/help/forms/developing/prepopulating-forms-flowable-layouts.md).)
+* 傳遞檔案。 (請參閱 [將檔案傳遞至Forms服務](/help/forms/developing/passing-documents-forms-service.md)
+* 計算表單資料。 (請參閱 [計算表單資料](/help/forms/developing/calculating-form-data.md).)
+* 最佳化應用程式。 (請參閱 [最佳化Forms服務的效能](/help/forms/developing/optimizing-performance-forms-service.md).)

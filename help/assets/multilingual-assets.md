@@ -1,6 +1,6 @@
 ---
-title: 多语言资产
-description: 了解如何自动将资产（包括二进制文件、元数据和标记）转换为多种语言的工作流。
+title: 多語言資產
+description: 瞭解如何自動化將資產（包括二進位檔案、中繼資料和標籤）翻譯成多種語言的工作流程。
 contentOwner: AG
 feature: Asset Management
 role: Admin
@@ -13,29 +13,29 @@ ht-degree: 8%
 
 ---
 
-# 多语言资产 {#multilingual-assets}
+# 多語言資產 {#multilingual-assets}
 
-| 版本 | 文章链接 |
+| 版本 | 文章連結 |
 | -------- | ---------------------------- |
 | AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/translate-assets.html?lang=en) |
 | AEM 6.5 | 本文 |
 
-[!DNL Adobe Experience Manager Assets] 允许您自动执行资产（包括二进制文件、元数据和标记）的翻译工作流，以生成其他语言版本的资产，以供在多语言项目中使用。
+[!DNL Adobe Experience Manager Assets] 可讓您自動化資產（包括二進位檔案、中繼資料和標籤）的翻譯工作流程，以產生其他語言的資產，以用於多語言專案。
 
-要自动执行翻译工作流，您需要将翻译服务提供商与 [!DNL Experience Manager] 并创建将资产翻译成多种语言的项目。 [!DNL Experience Manager] 支持人工翻译工作流和机器翻译工作流。
+若要自動化翻譯工作流程，您可以將翻譯服務提供者與 [!DNL Experience Manager] 以及建立專案，將資產翻譯成多種語言。 [!DNL Experience Manager] 支持人工翻译工作流和机器翻译工作流。
 
-人文翻译：已换算资产会退回及导入 [!DNL Experience Manager]. 将翻译提供商与 [!DNL Experience Manager]，则会在 [!DNL Experience Manager] 和翻译提供商。
+人工翻譯：系統會傳回已翻譯的資產並將其匯入 [!DNL Experience Manager]. 當您的翻譯提供者與整合時 [!DNL Experience Manager]，資產會在以下時間之間自動傳送： [!DNL Experience Manager] 以及翻譯提供者。
 
-机器翻译：机器翻译服务会立即翻译资产的元数据和标记。
+機器翻譯：機器翻譯服務會立即翻譯資產的中繼資料和標籤。
 
-换算资产包括以下各项：
+翻譯資產包括下列專案：
 
-1. [将Experience Manager与翻译服务提供商连接](/help/sites-administering/tc-tic.md#connecting-to-a-translation-service-provider)
-1. [创建翻译集成框架配置](/help/sites-administering/tc-tic.md)
-1. [准备资产以进行翻译](preparing-assets-for-translation.md)
-1. [将翻译云服务应用到文件夹](transition-cloud-services.md)
-1. [创建翻译项目](translation-projects.md)
+1. [將Experience Manager與翻譯服務提供者連線](/help/sites-administering/tc-tic.md#connecting-to-a-translation-service-provider)
+1. [建立翻譯整合框架設定](/help/sites-administering/tc-tic.md)
+1. [準備要翻譯的資產](preparing-assets-for-translation.md)
+1. [將翻譯雲端服務套用至資料夾](transition-cloud-services.md)
+1. [建立翻譯專案](translation-projects.md)
 
-如果您的翻译服务提供商没有提供要与集成的连接器 [!DNL Experience Manager]，使用 [替代过程](/help/sites-administering/tc-manage.md#exporting-a-translation-job).
+如果您的翻譯服務提供者未提供聯結器來與整合 [!DNL Experience Manager]，使用 [替代程式](/help/sites-administering/tc-manage.md#exporting-a-translation-job).
 
-另请参阅 [为内容片段创建翻译项目](creating-translation-projects-for-content-fragments.md).
+另請參閱 [建立內容片段的翻譯專案](creating-translation-projects-for-content-fragments.md).

@@ -1,7 +1,7 @@
 ---
-title: 导入和导出配置文件
+title: 匯入和匯出組態檔
 seo-title: Importing and exporting the configuration file
-description: 了解如何导入和导出配置文件，以编辑服务器首选项或配置其他AEM Forms产品实例。
+description: 瞭解如何匯入和匯出設定檔案，以編輯伺服器偏好設定或設定其他AEM表單產品執行個體。
 seo-description: Learn how to import and export the configuration file in order to edit server preferences or configure another AEM forms product instance.
 uuid: 32e8a709-2d7c-4740-9533-d53aa751bc58
 contentOwner: admin
@@ -17,22 +17,22 @@ ht-degree: 0%
 
 ---
 
-# 导入和导出配置文件 {#importing-and-exporting-the-configuration-file}
+# 匯入和匯出組態檔 {#importing-and-exporting-the-configuration-file}
 
-使用“手动配置”页可以以XML格式下载配置设置的副本。 此文件中的设置控制所有服务器首选项。 然后，您可以编辑该文件并将其上传回服务器。 您还可以使用该文件配置另一个AEM Forms产品实例。
+您可以在「手動組態」頁面下載XML格式的組態設定值復本。 此檔案中的設定可控制所有伺服器偏好設定。 然後，您可以編輯檔案並將其上傳回伺服器。 您也可以使用檔案來設定另一個AEM表單產品執行個體。
 
-为避免安全风险，导出的配置文件中不包含目录服务器的绑定密码值。 在将文件导入新系统之前，请更新XML文件中的密码。
+為了避免安全風險，匯出的組態檔中不包含目錄伺服器的繫結密碼值。 請先更新XML檔案中的密碼，然後再將檔案匯入新系統。
 
 >[!NOTE]
 >
->导入配置文件会根据文件中的信息重新配置AEM表单。 只有熟悉AEM Forms产品和XML的系统管理员或专业服务顾问才应考虑修改配置文件。 他们可能需要编辑配置文件，例如，重新配置损坏的设置。
+>匯入組態檔案會根據檔案中的資訊重新設定AEM表單。 只有熟悉AEM表單產品和XML的系統管理員或專業服務顧問才應考慮修改設定檔。 例如，他們可能需要編輯設定檔案，以重新設定損毀的設定。
 
-**导出配置信息**
+**匯出設定資訊**
 
-1. 在Administration Console中，单击Settings > User Management > Configuration > Import and Export Configuration Files。
-1. 单击“导出”。 如果您使用的是Microsoft Internet Explorer，系统会提示您指定保存文件的位置。 如果您使用的是Firefox，则文件会保存在您的桌面上。
+1. 在Administration Console中，按一下「設定」>「使用者管理」>「組態」>「匯入和匯出組態檔」。
+1. 按一下「匯出」。 如果您使用Microsoft Internet Explorer，系統會提示您指定儲存檔案的位置。 如果您使用Firefox，檔案會儲存在您的案頭上。
 
-**导入配置信息**
+**匯入組態資訊**
 
-1. 在Administration Console中，单击Settings > User Management > Configuration > Import and Export Configuration Files。
-1. 单击“浏览”查找配置文件，单击“导入”，然后单击“确定”。
+1. 在Administration Console中，按一下「設定」>「使用者管理」>「組態」>「匯入和匯出組態檔」。
+1. 按一下「瀏覽」以尋找組態檔，按一下「匯入」，然後按一下「確定」。

@@ -1,7 +1,7 @@
 ---
-title: 打印渠道和Web渠道
+title: 列印管道和網頁管道
 seo-title: Print channel and web channel
-description: 导入打印渠道模板以及创建和启用Web渠道模板
+description: 匯入列印管道範本並建立及啟用Web管道範本
 seo-description: Importing print channel templates and creating and enabling web channel templates
 uuid: 2361b1ee-c789-4a5a-9575-8b62b603da1e
 topic-tags: interactive-communications
@@ -17,73 +17,73 @@ ht-degree: 0%
 
 ---
 
-# 打印渠道和Web渠道{#print-channel-and-web-channel}
+# 列印管道和網頁管道{#print-channel-and-web-channel}
 
-交互式通信可通过两种渠道提供：打印和Web。 打印渠道用于创建PDF和纸面通信，例如作为保险费支付提醒的打印信件，而Web渠道用于提供在线体验，例如网站上的信用卡对帐单。
+互動式通訊可透過兩種管道提供：列印與網路。 列印管道用於建立PDF和紙張通訊，例如作為保險費付款提醒的列印信函，而網路管道用於提供線上體驗，例如網站上的信用卡對帳單。
 
-交互式通信作者可以重用文档片段和图像等资产，以创建交互式通信的打印版本和Web版本。
+互動式通訊作者可重複使用檔案片段和影像等資產，以建立互動式通訊的列印版和網頁版。
 
-的先决条件之一 [创建交互式通信](../../forms/using/create-interactive-communication.md) 需要在服务器上提供打印和/或web channel模板。 当模板作者在AEM本身中创建Web渠道模板时，打印渠道模板XDP是在AdobeForms Designer中创建并上传到服务器。
+的先決條件之一 [建立互動式通訊](../../forms/using/create-interactive-communication.md) 是讓伺服器上有可供列印和/或web channel使用的範本。 範本作者在AEM中建立網路管道範本時，列印管道範本XDP是在Forms DesignerAdobe中建立並上傳至伺服器。
 
-## 打印渠道 {#printchannel}
+## 列印頻道 {#printchannel}
 
-交互式通信的打印渠道使用XFA表单模板XDP。 在AdobeForms Designer中设计了XDP。 有关创建打印渠道模板的详细信息，请参阅 [布局设计](../../forms/using/layout-design-details.md). 要在交互式通信中使用打印渠道模板，您需要将该模板上传到AEM Forms服务器。
+互動式通訊的列印頻道使用XFA表單範本XDP。 XDP是在AdobeForms Designer中設計。 如需建立列印管道範本的詳細資訊，請參閱 [版面設計](../../forms/using/layout-design-details.md). 若要在互動式通訊中使用列印管道範本，您必須將範本上傳至AEM Forms伺服器。
 
-### 上传交互式通信打印渠道模板 {#upload-interactive-communication-print-channel-template}
+### 上傳互動式通訊列印頻道範本 {#upload-interactive-communication-print-channel-template}
 
-要上传模板，您需要是表单用户组的成员。 使用以下步骤将打印渠道模板(XDP)上传到AEM Forms：
+若要上傳範本，您必須是表單 — 使用者群組的成員。 使用下列步驟將列印管道範本(XDP)上傳至AEM Forms：
 
-1. 选择 **[!UICONTROL Forms]** > **[!UICONTROL Forms和文档]**.
+1. 選取 **[!UICONTROL Forms]** > **[!UICONTROL Forms與檔案]**.
 
-1. 点按 **[!UICONTROL 创建]** > **[!UICONTROL 文件上传]**.
+1. 點選 **[!UICONTROL 建立]** > **[!UICONTROL 檔案上傳]**.
 
-   导航并选择相应的打印渠道模板(XDP)并点按 **[!UICONTROL 打开]**.
+   導覽並選取適當的列印管道範本(XDP)並點選 **[!UICONTROL 開啟]**.
 
-## Web渠道 {#web-channel}
+## 網路頻道 {#web-channel}
 
-模板作者和管理员可以创建、编辑和启用Web模板。 要允许其他用户创作Web模板，您需要授予他们权限。 有关更多信息，请参阅 [用户、组和访问权限管理](/help/sites-administering/user-group-ac-admin.md).
+範本作者和管理員可以建立、編輯和啟用Web範本。 若要允許其他使用者編寫網頁範本，您需要授予他們許可權。 如需詳細資訊，請參閱 [使用者、群組和存取許可權管理](/help/sites-administering/user-group-ac-admin.md).
 
-### 创作Web渠道模板 {#authoring-web-channel-template}
+### 編寫Web Channel範本 {#authoring-web-channel-template}
 
-要创建Web渠道模板，您需要首先创建模板文件夹。 在模板文件夹内创建Web模板后，需要启用该模板以允许表单用户根据该模板创建交互式通信的Web渠道。
+若要建立Web Channel範本，您必須先建立範本資料夾。 在範本資料夾中建立Web範本後，您需要啟用範本以允許表單使用者根據範本建立互動式通訊的Web通道。
 
-要创作Web渠道模板，请完成以下步骤：
+若要編寫Web Channel範本，請完成以下步驟：
 
-1. 创建模板文件夹以保留交互式通信Web模板（如果尚未创建）。 有关更多信息，请参阅模板文件夹，位置在 [页面模板 — 可编辑](/help/sites-developing/page-templates-editable.md).
+1. 建立範本資料夾以保留互動式通訊Web範本（如果尚未建立）。 如需詳細資訊，請參閱範本資料夾： [頁面範本 — 可編輯](/help/sites-developing/page-templates-editable.md).
 
-   1. 点按 **[!UICONTROL 工具]** ![工具](assets/tools.png) > **[!UICONTROL 配置浏览器]**.
-      * 请参阅 [配置浏览器](/help/sites-administering/configurations.md) 文档，以了解更多信息。
-   1. 在配置浏览器页面中，点按 **[!UICONTROL 创建]**.
-   1. 在创建配置对话框中，指定文件夹的标题，选中 **[!UICONTROL 可编辑的模板]**，然后点按 **[!UICONTROL 创建]**.
+   1. 點選 **[!UICONTROL 工具]** ![工具](assets/tools.png) > **[!UICONTROL 設定瀏覽器]**.
+      * 請參閱 [設定瀏覽器](/help/sites-administering/configurations.md) 說明檔案以取得詳細資訊。
+   1. 在「設定瀏覽器」頁面中，點選 **[!UICONTROL 建立]**.
+   1. 在建立設定對話方塊中，指定資料夾的標題，核取 **[!UICONTROL 可編輯的範本]**，然後點選 **[!UICONTROL 建立]**.
 
-      将创建文件夹，并在配置浏览器页面中列出该文件夹。
+      資料夾隨即建立並列在「設定瀏覽器」頁面中。
 
-1. 导航到相应的模板文件夹并创建Web模板。
+1. 導覽至適當的範本資料夾，並建立網站範本。
 
-   1. 通过选择导航到相应的模板文件夹 **[!UICONTROL 工具]** > **[!UICONTROL 模板]** > **`[Folder]`**.
-   1. 点按&#x200B;**[!UICONTROL 创建]**。
-   1. 选择 **[!UICONTROL 交互式通信 — Web渠道]** 并点按 **[!UICONTROL 下一个]**.
-   1. 输入模板标题和描述，然后点按 **[!UICONTROL 创建]**.
+   1. 選取「 」，導覽至適當的範本資料夾 **[!UICONTROL 工具]** > **[!UICONTROL 範本]** > **`[Folder]`**.
+   1. 點選 **[!UICONTROL 建立]**.
+   1. 選取 **[!UICONTROL 互動式通訊 — Web Channel]** 並點選 **[!UICONTROL 下一個]**.
+   1. 輸入範本標題和說明，然後點選 **[!UICONTROL 建立]**.
 
-      模板随即创建，并出现一个对话框。
+      範本隨即建立，並出現一個對話方塊。
 
-   1. 点按 **[!UICONTROL 打开]** 以打开您在模板编辑器中创建的模板。
+   1. 點選 **[!UICONTROL 開啟]** 以開啟您在範本編輯器中建立的範本。
 
-      此时将显示模板编辑器。
+      「範本編輯器」隨即出現。
 
       ![webchanneltemplate](assets/webchanneltemplate.png)
 
-      创建或编辑模板时，模板作者可以定义多个方面。 创建或编辑模板与页面创作类似。 有关更多信息，请参阅编辑模板 — 模板作者，位于 [创建页面模板](/help/sites-authoring/templates.md).
+      建立或編輯範本時，範本作者可以定義多個方面。 建立或編輯範本類似於頁面製作。 如需詳細資訊，請參閱編輯範本 — 範本作者，位置在： [建立頁面範本](/help/sites-authoring/templates.md).
 
-1. 要允许使用此模板创建交互式通信，请启用该模板。
+1. 若要允許此範本用於建立互動式通訊，請啟用此範本。
 
-   1. 点按 **[!UICONTROL 工具]** ![工具](assets/tools.png) > **[!UICONTROL 模板]**.
-   1. 导航到相应的模板，选择它，然后点按 **[!UICONTROL 启用]** 在警报消息中，点按 **[!UICONTROL 启用]**.
+   1. 點選 **[!UICONTROL 工具]** ![工具](assets/tools.png) > **[!UICONTROL 範本]**.
+   1. 導覽至適當的範本，選取該範本，然後點選 **[!UICONTROL 啟用]** 在警報訊息中，點選 **[!UICONTROL 啟用]**.
 
-      模板已启用，其状态显示为“已启用”。 现在，您可以继续创建交互式通信，您可以在其中使用新创建的Web渠道模板。
+      範本已啟用，其狀態會顯示為「已啟用」。 現在您可以繼續建立互動式通訊，在其中使用新建立的Web Channel範本。
 
-### 将Web渠道的渠道打印为主控 {#print-channel-as-master-for-web-channel}
+### 列印頻道作為Web Channel的主版 {#print-channel-as-master-for-web-channel}
 
-在创作交互式通信时，作者可以选择此选项，以创建与打印渠道同步的Web渠道。 使用打印渠道作为Web渠道的主控可以确保Web渠道的内容、继承和数据绑定是从打印渠道派生出来的，并且打印渠道中所做的更改可以反映在Web渠道中。 但是，交互式通信作者可以根据需要中断Web渠道中特定组件的继承。
+在製作互動式通訊時，作者可以選取此選項，以建立與列印頻道同步的Web頻道。 使用print channel作為web channel的主版，可確保從print channel衍生出web channel的內容、繼承和資料繫結，並且在print channel中所做的變更可以反映在web channel中。 不過，互動式通訊作者可視需要中斷Web Channel中特定元件的繼承。
 
-![将渠道打印为主控](assets/create_ic_print_master_new.png) ![打印渠道为主控的Web渠道](assets/create_ic_print_master_web_new.png)
+![將頻道列印為主版](assets/create_ic_print_master_new.png) ![以print channel為主的Web channel](assets/create_ic_print_master_web_new.png)

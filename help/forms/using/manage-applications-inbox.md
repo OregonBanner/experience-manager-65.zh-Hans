@@ -1,7 +1,7 @@
 ---
-title: 在AEM收件箱中管理Forms应用程序和任务
+title: 在AEM收件匣中管理Forms應用程式和工作
 seo-title: Manage Forms applications and tasks in AEM Inbox
-description: AEM收件箱允许您通过提交应用程序和管理任务来启动以Forms为中心的工作流。
+description: AEM收件匣可讓您透過提交應用程式和管理工作來啟動以Forms為中心的工作流程。
 seo-description: AEM Inbox allows you to launch Forms-centric workflows through submitting applications and manage tasks.
 uuid: c6c0d8ea-743f-4852-99d1-69fd50a0994e
 contentOwner: vishgupt
@@ -17,131 +17,131 @@ ht-degree: 3%
 
 ---
 
-# 在AEM收件箱中管理Forms应用程序和任务{#manage-forms-applications-and-tasks-in-aem-inbox}
+# 在AEM收件匣中管理Forms應用程式和工作{#manage-forms-applications-and-tasks-in-aem-inbox}
 
-启动或触发以Forms为中心的工作流的多种方式之一，就是在AEM收件箱中通过应用程序。 要使Forms工作流作为应用程序在收件箱中可用，请创建工作流应用程序。 有关工作流应用程序和其他启动Forms工作流的方法的更多信息，请参阅 [在OSGi上启动以Forms为中心的工作流](../../forms/using/aem-forms-workflow.md#launch).
+啟動或觸發以Forms為中心的工作流程有許多方式，其中之一就是透過AEM收件匣中的應用程式。 若要讓Forms工作流程在收件匣中成為應用程式，請建立工作流程應用程式。 如需工作流程應用程式和啟動Forms工作流程其他方法的詳細資訊，請參閱 [在OSGi上啟動以Forms為中心的工作流程](../../forms/using/aem-forms-workflow.md#launch).
 
-此外，AEM收件箱可整合来自各种AEM组件(包括Forms工作流)的通知和任务。 触发包含“分配”任务步骤的表单工作流时，关联的应用程序将作为任务列在被分派人的收件箱中。 如果受分配人是组，则任务会显示在所有组成员的收件箱中，直到个人声明或委派任务为止。
+此外，AEM收件匣會整合來自各種AEM元件(包括Forms工作流程)的通知和工作。 觸發包含「指派」任務步驟的表單工作流程時，相關聯的應用程式會在受指派人的「收件匣」中列為任務。 如果受指派人是群組，則該任務會出現在所有群組成員的「收件匣」中，直到個別人員宣告或委派該任務為止。
 
-收件箱用户界面提供列表视图和日历视图以查看任务。 您还可以配置视图设置。 您可以根据各种参数筛选任务。 有关视图和过滤器的更多信息，请参阅 [您的收件箱](/help/sites-authoring/inbox.md).
+收件匣使用者介面提供清單和行事曆檢視來檢視任務。 您也可以配置檢視設定。 您可以根據各種引數篩選任務。 如需檢視和篩選的詳細資訊，請參閱 [您的收件匣](/help/sites-authoring/inbox.md).
 
-总之，收件箱允许您创建新应用程序并管理分配的任务。
+總而言之，收件匣可讓您建立新應用程式並管理指派的任務。
 
 >[!NOTE]
 >
->您必须是工作流用户组的成员，才能使用AEM收件箱。
+>您必須是工作流程 — 使用者群組的成員，才能使用AEM收件匣。
 
-## 创建应用程序 {#create-application}
+## 建立應用程式 {#create-application}
 
-1. 转到AEM收件箱： https://&#39;[服务器]:[端口]“/aem/inbox”。
-1. 在收件箱UI中，点按 **[!UICONTROL 创建>应用程序]**. 此时将显示“选择应用程序”页。
-1. 选择应用程序并单击 **[!UICONTROL 创建]**. 随即会打开与应用程序关联的自适应表单。 在自适应表单中填写信息并点按 **[!UICONTROL 提交]**. 它会启动关联的工作流，并在被分派人的收件箱中创建任务。
+1. 前往AEM收件匣，網址為https://&#39;[伺服器]：[連線埠]&#39;/aem/inbox.
+1. 在收件匣UI中，點選 **[!UICONTROL 建立>應用程式]**. 便會顯示「選取應用程式」頁面。
+1. 選取應用程式並按一下 **[!UICONTROL 建立]**. 與應用程式關聯的最適化表單隨即開啟。 在最適化表單中填寫資訊，然後點選 **[!UICONTROL 提交]**. 它會啟動關聯的工作流程，並在受指派人的收件匣中建立任務。
 
 ## 管理任务 {#manage-tasks}
 
-当触发Forms工作流并且您是代理人或代理人组的一部分时，您的收件箱中会显示一个任务。 您可以在收件箱中查看任务详细信息并对任务执行可用操作。
+當觸發Forms工作流程，而您是被指派人或被指派人群組的一部分時，您的收件匣中會出現一個任務。 您可以從「收件匣」中檢視任務詳細資訊，並對任務執行可用的動作。
 
-### 声明或委派任务 {#claim-or-delegate-tasks}
+### 宣告或委派任務 {#claim-or-delegate-tasks}
 
-分配给群组的任务将显示在所有群组成员的收件箱中。 任何组成员都可以声明该任务或将其委派给另一个组成员。 为此，请执行以下操作：
+指派給群組的任務會出現在所有群組成員的收件匣中。 任何群組成員都可以要求該任務或將其委派給其他群組成員。 若要這麼做：
 
-1. 点按以选择任务的缩略图。 用于打开或委派任务的选项显示在顶部。
+1. 點選以選取工作的縮圖。 用於開啟或委派任務的選項會顯示在頂端。
 
-   ![选择任务](assets/select-task.png)
+   ![選擇任務](assets/select-task.png)
 
 1. 执行下列操作之一：
 
-   * 要委派任务，请点按 **[!UICONTROL 委派]**. 此时将打开委派项目对话框。 选择用户，（可选）添加评论，然后点按 **[!UICONTROL 确定]**.
+   * 若要委派任務，請點選 **[!UICONTROL 委派]**. 「委派專案」對話方塊開啟。 選取使用者，並選擇性地新增註解，然後點選 **[!UICONTROL 確定]**.
 
-   ![委托](assets/delegate.png)
+   ![委派](assets/delegate.png)
 
-   * 要声明任务，请点按 **[!UICONTROL 打开]**. “指定到自身”(Assign to Self)对话框打开。 点按 **[!UICONTROL 继续]** 来宣布任务。 声明的任务将以您的收件箱中的代理人身份显示。
+   * 若要宣告工作，請點選 **[!UICONTROL 開啟]**. 「指派給自己」對話方塊開啟。 點選 **[!UICONTROL 繼續]** 以宣告任務。 宣告的任務會以受指派人的身分出現在您的「收件匣」中。
 
-   ![索赔](assets/claim.png)
+   ![宣告](assets/claim.png)
 
-### 查看详细信息并对任务执行操作 {#view-details-and-perform-actions-on-tasks}
+### 檢視詳細資料並對任務執行動作 {#view-details-and-perform-actions-on-tasks}
 
-打开任务时，可以查看任务详细信息并执行可用操作。 任务可用的操作在关联的Forms工作流的“分配任务”步骤中定义。
+開啟任務時，您可以檢視任務詳細資訊並執行可用的動作。 任務可用的動作會在相關Forms工作流程的「指派任務」步驟中定義。
 
-1. 点按以选择任务的缩略图。 用于打开或委派所选任务的选项显示在顶部。
-1. 点按 **打开** 查看任务详细信息。 此时将打开详细的任务视图。 在此视图中，您可以查看任务详细信息并处理任务。
+1. 點選以選取工作的縮圖。 用於開啟或委派所選任務的選項會顯示在頂端。
+1. 點選 **開啟** 以檢視工作詳細資訊。 詳細任務檢視隨即開啟。 在此檢視中，您可以檢視任務詳細資訊並處理任務。
 
    >[!NOTE]
    >
-   >如果任务被分配给某个组，则必须声明该任务能够在详细视图中打开它。
+   >如果將任務指派給群組，您必須宣告它能在詳細檢視中開啟。
 
-![任务详细信息](assets/task-details.png)
+![task-details](assets/task-details.png)
 
-详细的任务视图包括以下部分：
+詳細的工作檢視包含下列區段：
 
 * 任务详细信息
 * 表单
 * 工作流详细信息
-* “操作”工具栏
+* 動作工具列
 
 #### 任务详细信息 {#task-details}
 
-“任务详细信息”部分显示有关任务的信息。 显示的信息取决于 [分配任务步骤](/help/sites-developing/workflows-step-ref.md) 中。 上例显示用于任务的描述、状态、开始日期和工作流。 它还允许将文件附加到任务。
+「工作詳細資訊」段落顯示有關工作的資訊。 顯示的資訊取決於 [指派任務步驟](/help/sites-developing/workflows-step-ref.md) 在工作流程中。 上述範例顯示用於工作的說明、狀態、開始日期和工作流程。 它還允許將檔案附加到任務。
 
 #### 表单 {#form}
 
-主内容区域中的“表单”选项卡显示已提交的表单和字段级附件（如果有）。
+主要內容區域中的「表單」標籤會顯示提交的表單和欄位層級附件（如果有）。
 
 #### 工作流详细信息 {#workflow-details}
 
-顶部的“工作流详细信息”选项卡显示任务在工作流中各个阶段的进度。 它显示任务的已完成、当前和待定阶段。 工作流的阶段在 [分配任务步骤](/help/sites-developing/workflows-step-ref.md) 的子代。
+頂端的「工作流程詳細資訊」標籤會顯示工作流程中各個階段的任務進度。 它會顯示任務的已完成階段、目前階段及擱置階段。 工作流程的階段定義於 [指派任務步驟](/help/sites-developing/workflows-step-ref.md) 相關聯工作流程的URL。
 
-此外，选项卡还显示工作流中每个已完成阶段的任务历史记录。 您可以点按 **[!UICONTROL 查看详细信息]** 以了解有关该阶段的详细信息。 它显示有关任务的注释、表单和任务附件、状态、开始和结束日期等。
+此外，索引標籤會顯示工作流程中每個已完成階段的任務歷史記錄。 您可以點選 **[!UICONTROL 檢視詳細資料]** 完成階段以得知有關該階段的詳細資料。 它會顯示關於任務的註解、表單與工作附件、狀態、開始與結束日期等。
 
-![工作流详细信息](assets/workflow-details.png)
+![workflow-details](assets/workflow-details.png)
 
-#### “操作”工具栏 {#actions-toolbar}
+#### 動作工具列 {#actions-toolbar}
 
-“操作”工具栏显示任务的所有可用选项。 虽然“保存”、“重置”和“委派”是默认操作，但其他可用操作在 [分配任务步骤](/help/sites-developing/workflows-step-ref.md). 在以上示例中，工作流中配置了批准和拒绝。
+動作工具列會顯示任務的所有可用選項。 「儲存」、「重設」和「委派」是預設動作，其他可用動作則配置於 [指派任務步驟](/help/sites-developing/workflows-step-ref.md). 在上述範例中，核准和拒絕是在工作流程中設定。
 
-在您处理任务时，它会在工作流中进一步进行。
+當您處理任務時，它會在工作流程中繼續進行。
 
-### 查看已完成的任务 {#view-completed-tasks}
+### 檢視完成的任務 {#view-completed-tasks}
 
-AEM收件箱仅显示活动任务。 已完成的任务不会显示在列表中。 但是，您可以使用收件箱过滤器根据多个参数（如任务类型、状态以及开始和结束日期）筛选任务。 要查看已完成的任务，请执行以下操作：
+AEM收件匣只會顯示作用中的任務。 已完成的任務未出現在清單中。 不過，您可以使用收件匣篩選器根據多個引數來篩選任務，例如任務型別、狀態以及開始和結束日期。 若要檢視已完成的工作，請執行下列動作：
 
-1. 在AEM收件箱中，点按 ![切换侧面板1](assets/toggle-side-panel1.png) 以打开过滤器选择器。
-1. 点按 **[!UICONTROL 任务状态]** 折叠面板和选择 **[!UICONTROL 完成]**. 将显示所有已完成的任务。
+1. 在AEM收件匣中，點選 ![toggle-side-panel1](assets/toggle-side-panel1.png) 以開啟篩選選擇器。
+1. 點選 **[!UICONTROL 任務狀態]** 摺疊式功能表並選取 **[!UICONTROL 完成]**. 所有已完成的任務都會出現。
 
    ![filter](assets/filter.png)
 
-1. 点按以选择任务并单击 **[!UICONTROL 打开]**.
+1. 點選以選取工作，然後按一下 **[!UICONTROL 開啟]**.
 
-此时会打开任务以显示与任务关联的文档或自适应表单。 对于自适应表单，任务会显示只读自适应表单或其记录PDF文档，如 [分配任务工作流步骤](/help/sites-developing/workflows-step-ref.md).
+任務會開啟以顯示與任務相關聯的檔案或最適化表單。 對於最適化表單，任務會顯示在的「表單/檔案」索引標籤中設定的唯讀最適化表單或其PDF記錄檔案 [指派任務工作流程步驟](/help/sites-developing/workflows-step-ref.md).
 
-“任务详细信息”部分显示已执行的操作、任务状态、开始日期和结束日期等信息。
+任務詳細資訊區段會顯示已執行動作、任務狀態、開始日期和結束日期等資訊。
 
-![已完成任务](assets/completed-task.png)
+![completed-task](assets/completed-task.png)
 
-的 **[!UICONTROL 工作流详细信息]** 选项卡，其中显示了工作流的每个步骤。 点按 **[!UICONTROL 查看详细信息]** ，以了解详细信息。
+此 **[!UICONTROL 工作流程詳細資訊]** 索引標籤會顯示工作流程的每個步驟。 點選 **[!UICONTROL 檢視詳細資料]** 以取得詳細資訊。
 
-![已完成的任务 — 工作流](assets/completed-task-workflow.png)
+![completed-task-workflow](assets/completed-task-workflow.png)
 
 ## 疑难解答 {#troubleshooting-workflows}
 
-### 无法在AEM收件箱中查看与AEM Workflow相关的项目 {#unable-to-see-aem-worklow-items}
+### 無法在AEM收件匣中檢視與AEM工作流程相關的專案 {#unable-to-see-aem-worklow-items}
 
-工作流模型所有者无法在AEM收件箱中查看与AEM Workflow相关的项目。 要解决此问题，请将下面列出的索引添加到您的AEM存储库并重新构建该索引。
+工作流程模型所有者無法在AEM收件匣中檢視與AEM Workflow相關的專案。 若要解決此問題，請將下列索引新增至您的AEM存放庫並重新建立索引。
 
-1. 使用以下方法之一添加索引：
+1. 使用下列其中一種方法來新增索引：
 
-   * 在CRX DE的以下位置创建节点： `/oak:index/workflowDataLucene/indexRules/granite:InboxItem/properties` ，其属性如下表中指定：
+   * 在CRX DE的以下位置建立下列節點： `/oak:index/workflowDataLucene/indexRules/granite:InboxItem/properties` 具有下表所指定的個別屬性：
 
-      | 节点 | 属性 | 类型 |
+      | 節點 | 属性 | 类型 |
       |---|---|---|
-      | sharedWith | sharedWith | 字符串 |
+      | sharedwith | sharedwith | 字符串 |
       | 已锁定 | 已锁定 | Boolean |
-      | 返回 | 返回 | Boolean |
+      | 已傳回 | 已傳回 | Boolean |
       | allowInboxSharing | allowInboxSharing | Boolean |
       | allowExplicitSharing | allowExplicitSharing | Boolean |
 
 
-   * 通过AEM包部署索引。 您可以使用 [AEM原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/using.html?lang=en) 项目创建可部署的AEM包。 使用以下示例代码向AEM Archetype项目添加索引：
+   * 透過AEM套件部署索引。 您可以使用 [AEM原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/using.html?lang=en) 專案以建立可部署的AEM套件。 使用以下範常式式碼，將索引新增至AEM Archetype專案：
 
    ```Java
       .property("sharedWith", "sharedWith").type(TYPENAME_STRING).propertyIndex()
@@ -151,8 +151,8 @@ AEM收件箱仅显示活动任务。 已完成的任务不会显示在列表中�
       .property("allowExplicitSharing", "allowExplicitSharing").type(TYPENAME_BOOLEAN).propertyIndex()
    ```
 
-1. [创建属性索引并将其设置为true](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/queries-and-indexing.html#the-property-index).
+1. [建立屬性索引並將其設定為true](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/queries-and-indexing.html#the-property-index).
 
-1. 在CRX DE中配置索引或通过包部署后， [重新索引存储库](https://helpx.adobe.com/in/experience-manager/kb/HowToCheckLuceneIndex.html#Completelyrebuildtheindex).
+1. 在CRX DE中設定索引或透過套件部署後， [重新索引存放庫](https://helpx.adobe.com/in/experience-manager/kb/HowToCheckLuceneIndex.html#Completelyrebuildtheindex).
 
 https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/queries-and-indexing.html

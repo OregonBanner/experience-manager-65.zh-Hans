@@ -1,7 +1,7 @@
 ---
-title: 配置IBM FileNet的连接器
+title: 設定IBM FileNet的聯結器
 seo-title: Configuring Connector for IBM FileNet
-description: 了解如何配置IBM FileNet的连接器，以启用AEM Forms和IBM FileNet之间的通信。
+description: 瞭解如何設定IBM FileNet的聯結器，以啟用AEM Forms與IBM FileNet之間的通訊。
 seo-description: Learn how to configure the Connector for IBM FileNet to enable communication between AEM forms and IBM FileNet.
 uuid: 29d4e221-97f7-4cfb-b7e4-75a8289d2604
 contentOwner: admin
@@ -17,78 +17,78 @@ ht-degree: 1%
 
 ---
 
-# 配置IBM FileNet的连接器 {#configuring-connector-for-ibm-filenet}
+# 設定IBM FileNet的聯結器 {#configuring-connector-for-ibm-filenet}
 
-IBM FileNet连接器支持AEM Forms与IBM FileNet之间的通信。 有关其他背景信息，请参阅中的“Connectors for ECM” [服务参考](https://www.adobe.com/go/learn_aemforms_services_63).
+IBM FileNet聯結器可啟用AEM Forms與IBM FileNet之間的通訊。 如需其他背景資訊，請參閱以下的「Connectors for ECM」： [服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
 
 >[!NOTE]
 >
->在早期版本中，资产可以存储在ECM存储库中。 在此版本中，资产存储在AEM forms本地存储库中，并且存储库Provider Services已被弃用。 当您升级到AEM表单时，会将资源从ECM存储库迁移到AEM表单存储库。 有关详细信息，请参阅适用于您的应用程序服务器的AEM表单升级指南。
+>在舊版中，資產可以儲存在ECM存放庫中。 在此版本中，資產會儲存在AEM Forms原生存放庫中，且存放庫Provider Services已過時。 資產從ECM存放庫移轉至AEM表單存放庫是在您執行升級至AEM表單時完成的。 如需詳細資訊，請參閱應用程式伺服器的AEM表單升級指南。
 
-## 配置与内容引擎的连接 {#configure-the-connection-to-the-content-engine}
+## 設定與內容引擎的連線 {#configure-the-connection-to-the-content-engine}
 
-IBM FileNet P8 Content Engine提供了用于管理FileNet内容存储库中的企业内容和客户定义的业务对象的软件服务。
+IBM FileNet P8 Content Engine提供軟體服務，用於管理FileNet內容存放庫中的企業內容和客戶定義的商業物件。
 
-1. 在管理控制台中，单击“服务”>“IBM FileNet的连接器”。
-1. 在“内容引擎URL”框中，输入完整的连接URL。 例如：
+1. 在Administration Console中，按一下「服務」>「IBM FileNet聯結器」。
+1. 在「內容引擎URL」方塊中，輸入完整的連線URL。 例如：
 
-   如果将FileNet Content Engine 4.x与CEWS传输一起使用，请输入：
+   如果您使用FileNet Content Engine 4.x搭配CEWS傳輸，請輸入：
 
    `cemp:https://ContentEngineHostNameorIP:port/wsi/FNCEWS40DIME?jaasConfigurationName=FileNetP8WSI`
 
-   如果将FileNet Content Engine 4.x与EJB传输一起使用（只有WebLogic支持），请输入：
+   如果您使用FileNet Content Engine 4.x搭配EJB傳輸（只有WebLogic支援），請輸入：
 
    `cemp:t3://ContentEngineHostNameorIP:port/FileNet/Engine?jaasConfigurationName=FileNetP8Engine`
 
-1. 在“凭据保护方案”列表中，选择以下保护级别之一：
+1. 在「認證保護配置」清單中，選取下列其中一個保護等級：
 
-   * **清除：** 以无保护模式通过网络发送凭据
-   * **对称：** 通过网络发送加密凭据
+   * **清除：** 以無保護模式透過網路傳送認證
+   * **對稱：** 透過網路傳送加密的認證
 
-1. 在“加密文件位置”框中，输入加密文件的路径：
+1. 在「加密檔案位置」方塊中，輸入加密檔案的路徑：
 
-   * 如果选择清除作为凭据保护方案，则会忽略此关键字及其值。
-   * 如果选择了Symmetric作为凭据保护方案，则输入的路径指向包含要使用的加密密钥的Forms服务器上加密文件的位置。
+   * 如果您選取「清除」作為認證保護配置，則會忽略此關鍵字及其值。
+   * 如果您選取Symmetric作為認證保護配置，則您輸入的路徑會指向forms伺服器上包含要使用的密碼編譯金鑰的加密檔案的位置。
 
-1. 在“默认对象存储”框中，输入AEM Forms默认连接到的对象存储连接器。
-1. 在“用户名”框中，输入具有您在上一步中指定的默认对象存储访问权限的用户的用户名。
-1. 在“密码”框中，输入用户的密码，然后单击“保存”。
+1. 在「預設物件存放區」方塊中，輸入AEM Forms預設會連線的物件存放區聯結器。
+1. 在「使用者名稱」方塊中，輸入具有您在上一步中指定的預設物件存放區存取許可權的使用者的使用者名稱。
+1. 在「密碼」方塊中，輸入使用者的密碼，然後按一下「儲存」。
 
-## 配置进程引擎设置 {#configure-the-process-engine-settings}
+## 設定程式引擎設定 {#configure-the-process-engine-settings}
 
-IBM FileNet的连接器包含IBM FileNet服务的Process Engine Connector ，用于与IBM FileNet Process Engine交互。 您可以为此服务配置设置。
+IBM FileNet的聯結器包含IBM FileNet服務的Process Engine Connector，用於與IBM FileNet Process Engine互動。 您可以設定此服務的設定。
 
-1. 在管理控制台中，单击“服务”>“IBM FileNet连接器”。
-1. 要启用将Process Engine Connector用于IBM FileNet服务，请选择“使用Process Engine Connector服务”。
-1. 在“Process Router/Connection Point（进程路由器/连接点）”框中，输入主机名或IP地址和端口号，后跟进程路由器的名称。 例如：
+1. 在Administration Console中，按一下「服務」>「IBM FileNet聯結器」。
+1. 若要啟用對IBM FileNet服務使用Process Engine Connector，請選取「使用Process Engine Connector服務」。
+1. 在「處理路由器/連線點」方塊中，輸入主機名稱或IP位址和連線埠號碼，後接處理路由器名稱。 例如：
 
    `rmi://ProcessEngineHostNameorIP:port/Name`
 
-1. 在“用户名”框中，输入用于连接到进程引擎的用户名。
-1. 在“密码”框中，输入用于连接进程引擎的密码，然后单击“保存”。
+1. 在「使用者名稱」方塊中，輸入用來連線至程式引擎的使用者名稱。
+1. 在「密碼」方塊中，輸入用來連線至程式引擎的密碼，然後按一下「儲存」。
 
-## 验证服务设置 {#validation-of-service-settings}
+## 驗證服務設定 {#validation-of-service-settings}
 
-如果在配置与内容引擎的连接或流程引擎设置时输入了错误的用户名或密码，则将获得以下结果，具体取决于服务当前是否正在运行：
+如果您在設定「內容引擎」連線或「處理引擎」設定時輸入不正確的使用者名稱或密碼，將會根據服務目前是否執行而得到下列結果：
 
-* 如果IBM FileNet的存储库提供程序服务和IBM FileNet的Content Repository Connector服务都已停止，则在保存服务配置信息时，不会出现任何错误。 但是，下次启动服务时，将会引发异常，并且服务不会启动。
-* 如果启动了IBM FileNet的存储库提供程序服务或IBM FileNet的Content Repository Connector服务，则在保存服务配置信息时，该服务将尝试立即验证凭据信息。 在这种情况下，会发生错误，并且不会保存配置信息。
+* 如果IBM FileNet的「儲存庫提供者」服務和IBM FileNet的「內容儲存庫聯結器」服務都已停止，當您儲存服務組態資訊時，不會出現任何錯誤。 不過，下次啟動服務時，將會擲回例外狀況，且服務不會啟動。
+* 如果IBM FileNet的「儲存庫提供者」服務或IBM FileNet的「內容儲存庫聯結器」服務已啟動，當您儲存服務組態資訊時，服務會嘗試立即驗證認證資訊。 在這種情況下，會發生錯誤且未儲存設定資訊。
 
-## 更改存储库服务提供程序 {#change-the-repository-service-provider}
+## 變更存放庫服務提供者 {#change-the-repository-service-provider}
 
-您可以配置要与FileNet一起使用的资料档案库服务提供程序。 存储库服务调用已委派给您配置的提供程序。
+您可以設定要搭配FileNet使用的存放庫服務提供者。 存放庫服務呼叫會委派給您設定的提供者。
 
 以下选项可供选择：
 
-**当前存储库提供程序名称：** 当前存储库服务提供程序的名称
+**目前的存放庫提供者名稱：** 目前存放庫服務提供者的名稱
 
-**IBM FileNet存储库提供程序：** 使FileNet资料档案库提供程序成为资料档案库的提供程序。 此选项已弃用。
+**IBM FileNet存放庫提供者：** 讓FileNet儲存區域提供者成為儲存區域的提供者。 此選項已過時。
 
-**存储库提供程序：** 使本地存储库提供程序成为存储库的提供程序
+**存放庫提供者：** 讓原生存放庫提供者成為存放庫的提供者
 
 >[!NOTE]
 >
->要选择除列出的之外的其他存储库服务提供程序，请在应用程序和服务中配置RepositoryService。 <!-- Fix broken link(See Managing Services) -->
+>若要選取所列專案以外的存放庫服務提供者，請在「應用程式和服務」中設定RepositoryService。 <!-- Fix broken link(See Managing Services) -->
 
-1. 在管理控制台中，单击“服务”>“IBM FileNet的连接器”。
-1. 在“存储库服务提供程序信息”区域中，选择替代存储库服务提供程序，然后单击保存。
+1. 在Administration Console中，按一下「服務」>「IBM FileNet聯結器」。
+1. 在「存放庫服務提供者資訊」區域中，選取替代的存放庫服務提供者，然後按一下儲存。

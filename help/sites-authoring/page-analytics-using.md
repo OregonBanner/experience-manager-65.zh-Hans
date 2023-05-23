@@ -1,7 +1,7 @@
 ---
-title: 查看页面分析数据以衡量页面内容的有效性
+title: 檢視頁面分析資料以評估頁面內容的有效性
 seo-title: Seeing Page Analytics Data
-description: 使用页面分析数据衡量其页面内容的有效性
+description: 使用頁面分析資料來評估其頁面內容的成效
 seo-description: Use page analytics data to gauge the effectiveness of their page content
 uuid: 5398a5d5-0239-4194-a403-77f5e6fcd741
 contentOwner: Guillaume Carlino
@@ -19,76 +19,76 @@ ht-degree: 11%
 
 ---
 
-# 查看页面分析数据{#seeing-page-analytics-data}
+# 檢視頁面分析資料{#seeing-page-analytics-data}
 
-使用页面分析数据衡量页面内容的有效性。
+使用頁面分析資料來評估頁面內容的成效。
 
-## 从控制台中可见的Analytics {#analytics-visible-from-the-console}
+## 控制檯中的Analytics可見專案 {#analytics-visible-from-the-console}
 
 ![spad-01](assets/spad-01.png)
 
-页面分析数据显示在 [列表视图](/help/sites-authoring/basic-handling.md#list-view) 的子菜单。 当页面以列表格式显示时，默认情况下可使用以下列：
+頁面分析資料顯示於 [清單檢視](/help/sites-authoring/basic-handling.md#list-view) Sites主控台的。 當頁面以清單格式顯示時，預設可使用下列欄：
 
 * 页面视图
 * 独特访客
 * 页面停留时间
 
-每列显示当前报告时段的值，还指示该值自上一个报告时段以来是增加还是减少。 您看到的数据每12小时更新一次。
+每欄會顯示目前報告期間的值，也會指出值自上一個報告期間以來是增加還是減少。 您看到的資料每12小時會更新一次。
 
 >[!NOTE]
 >
->要更改更新期，请 [配置导入间隔](/help/sites-administering/adobeanalytics-connect.md#configuring-the-import-interval).
+>若要變更更新週期， [設定匯入間隔](/help/sites-administering/adobeanalytics-connect.md#configuring-the-import-interval).
 
-1. 打开 **站点** 控制台；例如 [https://localhost:4502/sites.html/content](https://localhost:4502/sites.html/content)
-1. 在工具栏的最右侧（右上角），单击或点按图标以选择 **列表视图** (显示的图标取决于 [当前视图](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources))。
+1. 開啟 **網站** 主控台；例如 [https://localhost:4502/sites.html/content](https://localhost:4502/sites.html/content)
+1. 在工具列的最右側（右上角），按一下或點選圖示以選取 **清單檢視** (顯示的圖示取決於 [目前檢視](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources))。
 
-1. 同样，在工具栏的最右侧（右上角），单击或点按图标，然后选择 **查看设置**. 的 **配置列** 对话框。 进行所需的任何更改，然后使用进行确认 **更新**.
+1. 再次強調，在工具列的最右側（右上角），按一下或點選圖示，然後選取 **檢視設定**. 此 **設定欄** 對話方塊將會開啟。 進行任何必要的變更，並確認： **更新**.
 
    ![spad-02](assets/spad-02.png)
 
-### 选择报告期 {#selecting-the-reporting-period}
+### 選取報告期間 {#selecting-the-reporting-period}
 
-选择在站点控制台中显示Analytics数据的报表时段：
+選取Analytics資料出現在Sites主控台上的報告期間：
 
 * 过去 30 天的数据
 * 过去 90 天的数据
 * 本年度的数据
 
-当前报表时段显示在站点控制台的工具栏（顶部工具栏的右侧）中。 使用下拉列表选择所需的报告时段。
+目前的報告期間會顯示在Sites控制檯的工具列上（在頂端工具列的右側）。 使用下拉式清單來選取所需的報告期間。
 
 ![aa-05](assets/aa-05.png)
 
-### 配置可用数据列 {#configuring-available-data-columns}
+### 設定可用的資料欄 {#configuring-available-data-columns}
 
-Analytics — 管理员用户组的成员可以配置站点控制台，以使作者能够查看额外的Analytics列。
+analytics-administrators使用者群組的成員可以設定Sites主控台，讓作者檢視額外的Analytics欄。
 
 >[!NOTE]
 >
->当页面树包含与不同Adobe Analytics云配置关联的子项时，您无法为页面配置可用的数据列。
+>當頁面的樹狀結構包含與不同Adobe Analytics雲端設定相關聯的子項時，您無法設定頁面的可用資料欄。
 
-1. 在列表视图中，使用视图选择器（工具栏右侧），选择 **查看设置** 然后 **添加自定义Analytics数据**.
+1. 在清單檢視中，使用檢視選取器（工具列右側），選取 **檢視設定** 然後 **新增自訂Analytics資料**.
 
    ![spad-03](assets/spad-03.png)
 
-1. 在“站点”控制台中选择要向作者显示的量度，然后单击 **添加**.
+1. 選取您要在Sites主控台中向作者公開的量度，然後按一下 **新增**.
 
-   显示的列将从Adobe Analytics中检索。
+   顯示的欄是從Adobe Analytics中擷取。
 
    ![aa-16](assets/aa-16.png)
 
-### 从网站打开内容分析 {#opening-content-insights-from-sites}
+### 從Sites開啟內容分析 {#opening-content-insights-from-sites}
 
-打开 [内容分析](/help/sites-authoring/content-insights.md) 从“站点”控制台中，进一步调查页面的有效性。
+開啟 [內容分析](/help/sites-authoring/content-insights.md) 從Sites主控台，以進一步調查頁面有效性。
 
-1. 在站点控制台中，选择要查看其内容分析的页面。
-1. 在工具栏上，单击Analytics和Recommendations图标。
+1. 在Sites主控台中，選取您要檢視其內容深入分析的頁面。
+1. 在工具列上，按一下Analytics和Recommendations圖示。
 
    ![](do-not-localize/chlimage_1-14.png)
 
-## 在页面编辑器中可见的Analytics(Activity Map) {#analytics-visible-from-the-page-editor-activity-map}
+## 頁面編輯器中的Analytics (Activity Map) {#analytics-visible-from-the-page-editor-activity-map}
 
 >[!CAUTION]
 >
 >由于 Adobe Analytics API 中的安全性更改，无法再使用 AEM 中包含的 Activity Map 版本。
 >
->的 [ActivityMap插件由Adobe Analytics提供](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html) 现在应使用。
+>此 [Adobe Analytics提供的ActivityMap外掛程式](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html) 現在應該使用。

@@ -1,6 +1,6 @@
 ---
-title: 将Dynamic Media Assets添加到页面
-description: 如何在Adobe Experience Manager中将Dynamic Media组件添加到页面。
+title: 將Dynamic Media資產新增至頁面
+description: 如何將Dynamic Media元件新增至Adobe Experience Manager中的頁面。
 uuid: b5e982f5-fa1c-478a-bcb3-a1ef980df201
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -20,131 +20,131 @@ ht-degree: 5%
 
 # 将 Dynamic Media 资源添加到页面{#adding-dynamic-media-assets-to-pages}
 
-要将Dynamic Media功能添加到您在网站上使用的资产中，您可以将 **Dynamic Media**, **交互式媒体**, **全景媒体**&#x200B;或 **视频360媒体** 组件。 可通过进入布局模式并启用Dynamic Media组件来添加组件。 然后，您可以将这些组件添加到页面，并将资产添加到该组件。 Dynamic media组件是智能的——它们知道您添加的是图像还是视频，可用的配置选项会相应地发生更改。
+若要將Dynamic Media功能新增至您在網站上使用的資產，您可以新增 **Dynamic Media**， **互動媒體**， **全景媒體**，或 **360度影片媒體** 元件直接在頁面上。 若要新增元件，請進入「版面」模式並啟用Dynamic Media元件。 然后，您可以将这些组件添加到页面，并将资产添加到该组件。 Dynamic media组件是智能的——它们知道您添加的是图像还是视频，可用的配置选项会相应地发生更改。
 
-如果您使用Dynamic Media作为WCM，则可以直接将Adobe Experience Manager资产添加到页面。 如果您为WCM使用第三方，则 [链接](/help/assets/linking-urls-to-yourwebapplication.md) 或 [嵌入](/help/assets/embed-code.md) 您的资产。 有关响应式第三方网站，请参阅[将优化的图像交付到响应式网站](/help/assets/responsive-site.md)。
+如果您使用Dynamic Media做為WCM，請直接將Adobe Experience Manager資產新增至頁面。 如果您使用協力廠商來處理WCM，請 [連結](/help/assets/linking-urls-to-yourwebapplication.md) 或 [內嵌](/help/assets/embed-code.md) 您的資產。 有关响应式第三方网站，请参阅[将优化的图像交付到响应式网站](/help/assets/responsive-site.md)。
 
 >[!NOTE]
 >
->在将资产添加到Experience Manager的页面之前，请确保先发布资产。 请参阅 [发布Dynamic Media资产](/help/assets/publishing-dynamicmedia-assets.md).
+>在將資產新增至Experience Manager頁面之前，請務必先發佈資產。 另請參閱 [發佈Dynamic Media資產](/help/assets/publishing-dynamicmedia-assets.md).
 
-## 将Dynamic Media组件添加到页面 {#adding-a-dynamic-media-component-to-a-page}
+## 將Dynamic Media元件新增至頁面 {#adding-a-dynamic-media-component-to-a-page}
 
-向页面添加3D媒体、Dynamic Media、交互式媒体、全景媒体、智能裁剪视频或视频360媒体组件与向任何页面添加组件相同。 以下部分介绍了Dynamic Media组件。
+新增3D媒體、Dynamic Media、互動媒體、全景媒體、智慧型裁切視訊或360度視訊媒體元件至頁面，與新增元件至任何頁面相同。 以下各節將說明Dynamic Media元件。
 
-**要将Dynamic Media组件添加到页面，请执行以下操作：**
+**若要將Dynamic Media元件新增至頁面：**
 
-1. 在Experience Manager中，打开要添加Dynamic Media组件的页面。
-1. 在页面左侧的面板中（如有必要，可切换侧面板的显示），选择 **[!UICONTROL 组件]** 图标。
-1. 在 **[!UICONTROL 组件]** 标题，在下拉列表中，选择 **[!UICONTROL Dynamic Media]**.
+1. 在Experience Manager中，開啟您要新增Dynamic Media元件的頁面。
+1. 在頁面左側的面板中（如有必要，請切換側面板的顯示），選取 **[!UICONTROL 元件]** 圖示。
+1. 在 **[!UICONTROL 元件]** 標題，在下拉式清單中，選取 **[!UICONTROL Dynamic Media]**.
 
-   如果没有可用的Dynamic Media组件列表，则必须启用要使用的Dynamic Media组件。 请参阅 [启用Dynamic Media组件](#enabling-dynamic-media-components).
+   如果沒有可用的Dynamic Media元件清單，您必須啟用您要使用的Dynamic Media元件。 另請參閱 [啟用Dynamic Media元件](#enabling-dynamic-media-components).
 
    ![6_5_360video_wcmcomponent](/help/assets/assets/6_5_360video_wcmcomponent.png)
 
-1. 拖动 **[!UICONTROL Dynamic Media]** 组件，并将其拖放到页面上的所需位置。
+1. 拖曳 **[!UICONTROL Dynamic Media]** 您要使用的元件，並將其拖曳至頁面上的所需位置。
 
-1. 将鼠标指针直接悬停在组件上。 当组件被蓝色框包围时，选择一次以显示组件的工具栏。 选择 **[!UICONTROL 配置（扳手）]** 图标。
+1. 將滑鼠指標直接停留在元件上。 當元件被藍色方塊包圍時，選取一次以顯示元件的工具列。 選取 **[!UICONTROL 設定（扳手）]** 圖示。
 
    ![6_5_360video_wcmcomponentconfigure](/help/assets/assets/6_5_360video_wcmcomponentconfigure.png)
 
-1. 根据您拖放到页面上的Dynamic Media组件，将打开一个配置对话框。 [设置组件的选项](/help/assets/adding-dynamic-media-assets-to-pages.md#dynamic-media-components) 视需要。
+1. 視您放置在頁面上的Dynamic Media元件而定，設定對話方塊隨即開啟。 [設定元件的選項](/help/assets/adding-dynamic-media-assets-to-pages.md#dynamic-media-components) 視需要而定。
 
-   以下示例显示了Dynamic Media **[!UICONTROL 视频360媒体]** 组件对话框中，以及“查看器预设”下拉列表中可用的选项。
+   以下範例顯示Dynamic Media **[!UICONTROL 360度影片媒體]** 元件對話方塊，以及「檢視器預設集」下拉式清單中可用的選項。
 
-   ![视频360媒体组件](assets/6_5_360video_wcmcomponentviewerpreset.png)
+   ![360度影片媒體元件](assets/6_5_360video_wcmcomponentviewerpreset.png)
 
-   Dynamic Media视频360媒体组件。
+   Dynamic Media 360度影片媒體元件。
 
-1. 完成后，在对话框的右上角，选择复选标记以保存更改。
+1. 完成後，在對話方塊的右上角，選取核取記號以儲存變更。
 
-### 启用Dynamic Media组件 {#enabling-dynamic-media-components}
+### 啟用Dynamic Media元件 {#enabling-dynamic-media-components}
 
-如果没有可添加到页面的Dynamic Media组件，则可能意味着您必须首先启用要使用的组件。
+如果沒有可供新增至頁面的Dynamic Media元件，可能表示您必須先啟用您要使用的元件。
 
-**要启用Dynamic Media组件，请执行以下操作：**
+**若要啟用Dynamic Media元件：**
 
-1. 在Experience Manager中，打开要添加Dynamic Media组件的页面。
-1. 在工具栏左侧靠近页面顶部的位置，选择页面信息图标，然后选择 **[!UICONTROL 编辑模板]** 从下拉列表中。
+1. 在Experience Manager中，開啟您要新增Dynamic Media元件的頁面。
+1. 在靠近頁面頂端的工具列左側，選取「頁面資訊」圖示，然後選取 **[!UICONTROL 編輯範本]** 下拉式清單中的。
 
    ![edit-template](/help/assets/assets-dm/edit-template.png)
 
-1. 在工具栏右侧页面顶部附近的下拉列表中，选择 **[!UICONTROL 结构]**.
+1. 在靠近頁面頂端的工具列右側，從下拉式清單中選取 **[!UICONTROL 結構]**.
 
    ![策略](/help/assets/assets-dm/structure-mode.png)
 
-1. 在页面底部附近，选择 **[!UICONTROL 布局容器]** 要打开其工具栏，请选择策略图标。
-1. 在 **[!UICONTROL 布局容器]** 页面下 **[!UICONTROL 属性]** 标题，确保 **[!UICONTROL 允许的组件]** 选项卡。
+1. 在頁面底部附近，選取 **[!UICONTROL 配置容器]** 若要開啟其工具列，請選取原則圖示。
+1. 於 **[!UICONTROL 配置容器]** 頁面，在 **[!UICONTROL 屬性]** 標題，確認 **[!UICONTROL 允許的元件]** 標籤已選取。
 
-   ![允许的组件](/help/assets/assets-dm/allowed-components.png)
+   ![允許的元件](/help/assets/assets-dm/allowed-components.png)
 
-1. 滚动直到您看到 **[!UICONTROL Dynamic Media]**.
-1. 选择左侧的>图标 **[!UICONTROL Dynamic Media]** 以展开列表，然后选择要启用的Dynamic Media组件。
+1. 捲動直到您看到 **[!UICONTROL Dynamic Media]**.
+1. 選取左側的>圖示 **[!UICONTROL Dynamic Media]** 以便展開清單，然後選取您要啟用的Dynamic Media元件。
 
-   ![Dynamic Media组件列表](/help/assets/assets-dm/dm-components-select.png)
+   ![Dynamic Media元件清單](/help/assets/assets-dm/dm-components-select.png)
 
-1. 在 **[!UICONTROL 布局容器]** ，选择完成（复选标记）图标。
+1. 在右上角附近 **[!UICONTROL 配置容器]** 頁面中，選取「完成」 （勾號）圖示。
 
-1. 在工具栏右侧页面顶部附近的下拉列表中，选择 **[!UICONTROL 初始内容]**，则 [将Dynamic Media组件添加到页面](#adding-a-dynamic-media-component-to-a-page) 和往常一样。
+1. 在靠近頁面頂端的工具列右側，從下拉式清單中選取 **[!UICONTROL 初始內容]**，則 [將Dynamic Media元件新增至頁面](#adding-a-dynamic-media-component-to-a-page) 一如既往。
 
-## 将Dynamic Media组件本地化 {#localizing-dynamic-media-components}
+## 本地化Dynamic Media元件 {#localizing-dynamic-media-components}
 
-您可以通过以下两种方式之一将Dynamic Media组件本地化：
+您可以透過下列兩種方式之一將Dynamic Media元件當地語系化：
 
 * 在“站点”的网页中，打开“属 **[!UICONTROL 性]** ”，然后选择“ **[!UICONTROL 高级]** ”选项卡。 选择所需的本地化语言。
 
    ![chlimage_1-172](assets/chlimage_1-538.png)
 
-* 从站点选择器中，选择所需的页面或页面群组。 选择 **[!UICONTROL 属性]** ，然后选择 **[!UICONTROL 高级]** 选项卡。 选择所需的本地化语言。
+* 從網站選擇器中，選取所需的頁面或頁面群組。 選取 **[!UICONTROL 屬性]** 並選取 **[!UICONTROL 進階]** 標籤。 选择所需的本地化语言。
 
    >[!NOTE]
    >
-   >并非所有语言都适用于 **[!UICONTROL 语言]** 菜单当前已分配令牌。
+   >並非所有語言都可在 **[!UICONTROL 語言]** 功能表目前有指派的權杖。
 
-## Dynamic Media组件 {#dynamic-media-components}
+## Dynamic Media Components {#dynamic-media-components}
 
-当您选择 **[!UICONTROL 组件]** 图标，然后进行筛选 **[!UICONTROL Dynamic Media]**.
+選取「 」時，可使用Dynamic Media元件 **[!UICONTROL 元件]** 圖示，然後篩選 **[!UICONTROL Dynamic Media]**.
 
-可用的Dynamic Media组件包括：
+可用的Dynamic Media元件包括：
 
 * **[!UICONTROL Dynamic Media]** - 用于图像、视频、电子目录和旋转集等资产。
-* **[!UICONTROL 交互式媒体]**  — 用于任何交互式资产，如交互式视频、交互式图像或轮播集。
-* **[!UICONTROL 全景媒体]**  — 用于全景图像或全景VR图像资产。
-* **[!UICONTROL 视频360媒体]**  — 用于360个视频和360个VR视频资产。
+* **[!UICONTROL 互動媒體]**  — 用於任何互動式資產，例如互動式視訊、互動式影像或轉盤集。
+* **[!UICONTROL 全景媒體]**  — 用於全景影像或全景VR影像資產。
+* **[!UICONTROL 360度影片媒體]**  — 用於360視訊和360 VR視訊資產。
 
 >[!NOTE]
 >
->默认情况下，这些组件不可用；在使用模板编辑器之前，必须先通过模板编辑器使用这些模板。 [在它们可用后，](/help/sites-authoring/templates.md#editing-templates-template-authors)在模板编辑器中，您可以像向任何其他Experience Manager组件添加组件一样，将组件添加到页面。
+>預設不會提供這些元件；您必須透過範本編輯器提供這些元件，才能使用它們。 [在可供使用之後，請](/help/sites-authoring/templates.md#editing-templates-template-authors)在範本編輯器中，您可以將元件新增至頁面，就像新增任何其他Experience Manager元件一樣。
 
 ![6_5_dynamicmediawcmcomponents](assets/6_5_dynamicmediawcmcomponents.png)
 
-### Dynamic Media组件 {#dynamic-media-component}
+### Dynamic Media元件 {#dynamic-media-component}
 
-Dynamic Media组件是智能的。 无论您是添加图像还是视频，都有各种不同的选项。 该组件支持图像预设、基于图像的查看器（如图像集、旋转集、混合媒体集和视频）。 此外，查看器是响应式的 — 屏幕大小会根据屏幕大小自动更改。 所有查看器均为HTML5查看器。
+Dynamic Media元件是智慧型的。 無論您新增影像或影片，都有各種選項。 元件支援影像預設集、影像型檢視器（例如影像集、迴轉集、混合媒體集和視訊）。 此外，檢視器會回應 — 熒幕大小會自動根據熒幕大小變更。 所有檢視器皆為HTML5檢視器。
 
 >[!NOTE]
 >
->如果您的网页具有以下功能：
+>如果您的網頁有以下內容：
 >
->* 同一页面上使用的Dynamic Media组件的多个实例。
->* 每个实例使用相同的资产类型。
+>* 相同頁面上使用了多個Dynamic Media元件例項。
+>* 每個例項都使用相同的資產型別。
 >
->不支持为该页面上的每个Dynamic Media组件分配不同的查看器预设。
+>不支援為該頁面上的每個Dynamic Media元件指派不同的檢視器預設集。
 >
->但是，您可以对页面中使用相同类型资产的所有Dynamic Media组件使用相同的查看器预设。
+>不過，您可以在頁面內，為所有使用相同型別資產的Dynamic Media元件使用相同的檢視器預設集。
 
-添加Dynamic Media组件时，以及 **[!UICONTROL Dynamic Media设置]** 为空，或者您无法正确添加资产，请勾选以下内容：
+新增Dynamic Media元件時，以及 **[!UICONTROL Dynamic Media設定]** 為空白或無法正確新增資產，請檢查下列專案：
 
-* 您拥有 [启用Dynamic Media](/help/assets/config-dynamic.md). Dynamic Media默认处于禁用状态。
-* 该图像具有金字塔TIFF文件。 在启用Dynamic Media之前导入的图像没有金字塔tiff文件。
+* 您有 [已啟用Dynamic Media](/help/assets/config-dynamic.md). Dynamic Media預設為停用。
+* 影像具有金字塔tiff檔案。 啟用Dynamic Media之前匯入的影像沒有金字塔tiff檔案。
 
-#### 使用图像时 {#when-working-with-images}
+#### 使用影像時 {#when-working-with-images}
 
-通过Dynamic Media组件，您可以添加动态图像，包括图像集、旋转集和混合媒体集。 您可以放大、缩小，如果适用，可以在旋转集中旋转图像或从其他类型的集合中选择图像。
+Dynamic Media元件可讓您新增動態影像，包括影像集、迴轉集及混合媒體集。 您可以放大、縮小旋轉集內的影像，或是從其他型別的旋轉集中選取影像（如果適用）。
 
-您还可以直接在组件中配置查看器预设、图像预设或图像格式。 要使图像具有响应性，您可以设置断点或应用响应式图像预设。
+您也可以直接在元件中設定檢視器預設集、影像預設集或影像格式。 若要使影像具有回應性，您可以設定中斷點或套用回應性影像預設集。
 
-通过选择 **[!UICONTROL 编辑]** 图标，然后 **[!UICONTROL Dynamic Media设置]**.
+選取「 」，編輯下列Dynamic Media設定 **[!UICONTROL 編輯]** 圖示，然後 **[!UICONTROL Dynamic Media設定]**.
 
 ![dm-settings-image-preset](assets/dm-settings-image-preset.png)
 
@@ -152,218 +152,218 @@ Dynamic Media组件是智能的。 无论您是添加图像还是视频，都有
 >
 >默认情况下，Dynamic media图像组件是自适应的。 如果要使其变为固定大小，请在“高级”选项卡的组件中设置 **[!UICONTROL 它]** ，并使用“宽度”和“高 **** 度” ****。
 
-* **[!UICONTROL 查看器预设]**  — 从下拉菜单中选择现有的查看器预设。 如果您要查找的查看器预设不可见，则必须使其可见。 请参阅 [管理查看器预设](/help/assets/managing-viewer-presets.md). 如果您使用的是图像预设，则无法选择查看器预设，反之，则无法选择查看器预设。
+* **[!UICONTROL 檢視器預設集]**  — 從下拉式選單中選取現有的檢視器預設集。 如果您要尋找的檢視器預設集不可見，您必須使其可見。 另請參閱 [管理檢視器預設集](/help/assets/managing-viewer-presets.md). 如果您使用影像預設集，則無法選取檢視器預設集，反之亦然。
 
-   当您查看图像集、旋转集或混合媒体集时，此选项是唯一可用的选项。 显示的查看器预设是智能的 — 仅显示相关的查看器预设。
+   只有當您檢視影像集、迴轉集或混合媒體集時，才能使用此選項。 顯示的檢視器預設集是智慧型的 — 只會顯示相關的檢視器預設集。
 
-* **[!UICONTROL 查看器修饰符]**  — 查看器修饰符采用名称=值对和分隔符的形式，允许您按照《查看器参考指南》中所述更改查看器。 查看器修饰符的示例为 `posterimage=img.jpg&caption=text.vtt,1` 为视频缩略图设置不同的图像，并将隐藏式字幕/子标题文件与视频相关联。
+* **[!UICONTROL 檢視器修飾元]**  — 檢視器修飾元採用name=value搭配&amp;分隔字元的形式，可讓您依照《檢視器參考指南》中的概述變更檢視器。 檢視器修飾元的範例為 `posterimage=img.jpg&caption=text.vtt,1` 這會為視訊縮圖設定不同的影像，並將隱藏式字幕/字幕檔案與視訊建立關聯。
 
-* **[!UICONTROL 图像预设]**  — 从下拉菜单中选择现有的图像预设。 如果您要查找的图像预设不可见，则必须使其可见。 请参阅管理图像预设。 如果您使用的是图像预设，则无法选择查看器预设，反之，则无法选择查看器预设。
+* **[!UICONTROL 影像預設集]**  — 從下拉式選單中選取現有的影像預設集。 如果您要尋找的影像預設集不可見，您必須使其可見。 請參閱管理影像預設集。 如果您使用影像預設集，則無法選取檢視器預設集，反之亦然。
 
-   如果您查看的是图像集、旋转集或混合媒体集，则此选项不可用。
+   如果您檢視影像集、迴轉集或混合媒體集，則此選項不可用。
 
-* **[!UICONTROL 图像修饰符]**  — 您可以通过提供其他图像命令来应用图像效果。 图像预设和图像提供命令参考中介绍了这些效果。
+* **[!UICONTROL 影像修飾元]**  — 您可以透過提供其他影像指令來套用影像效果。 這些效果在「影像預設集」和「影像伺服命令」參考中進行了說明。
 
-   如果您查看的是图像集、旋转集或混合媒体集，则此选项不可用。
+   如果您檢視影像集、迴轉集或混合媒體集，則此選項不可用。
 
-* **[!UICONTROL 断点]**  — 如果您在响应式网站上使用此资产，则必须添加图像断点。 图像断点之间用逗号分隔(,)。 当图像预设中未定义高度或宽度时，此选项有效。
+* **[!UICONTROL 中斷點]**  — 如果您在回應式網站上使用此資產，必須新增影像中斷點。 影像中斷點以逗號(，)分隔。 影像預設集中未定義高度或寬度時，此選項即會運作。
 
-   如果您查看的是图像集、旋转集或混合媒体集，则此选项不可用。
+   如果您檢視影像集、迴轉集或混合媒體集，則此選項不可用。
 
-   您可以通过选择 **[!UICONTROL 编辑]** 中。
+   您可以選取「 」，編輯下列進階設定 **[!UICONTROL 編輯]** 在元件中。
 
-* **[!UICONTROL 优化分辨率更高的设备]**  — 选中（默认）复选框以允许DPR（设备像素比）优化。
+* **[!UICONTROL 針對更高解析度的裝置最佳化]**  — 選取（預設）核取方塊以允許DPR （裝置畫素比率）最佳化。
 
-   的 **[!UICONTROL 优化分辨率更高的设备]** 选项仅在以下情况下才显示：
+   此 **[!UICONTROL 針對更高解析度的裝置最佳化]** 選項僅在下列為true時顯示：
 
-   * 在“预设类型”下， **[!UICONTROL 图像预设]** ，并且 **[!UICONTROL RESS_IP]** 从 **[!UICONTROL 图像预设]** 下拉列表。
+   * 在「預設集型別」下， **[!UICONTROL 影像預設集]** 「 」已選取，並且 **[!UICONTROL RESS_IP]** 是從 **[!UICONTROL 影像預設集]** 下拉式清單。
 
-   ![图像预设中的设备像素比率设置](/help/assets/assets-dm/dpr-ress-ip.png)
+   ![影像預設集的裝置畫素比設定](/help/assets/assets-dm/dpr-ress-ip.png)
 
-   另请参阅 [关于设备像素比例优化](/help/assets/imaging-faq.md#dpr). 任何Adobe Experience Manager Dynamic Media智能成像DPR值都将被忽略。
+   另請參閱 [關於裝置畫素比最佳化](/help/assets/imaging-faq.md#dpr). 任何Adobe Experience Manager Dynamic Media智慧型影像DPR值都會被忽略。
 
-* **[!UICONTROL 标题]**  — 更改图像的标题。
+* **[!UICONTROL 標題]**  — 變更影像的標題。
 
-* **[!UICONTROL 替换文本]**  — 为已关闭图形的用户在图像中添加标题。
+* **[!UICONTROL 替代文字]**  — 為已關閉圖形的使用者新增影像標題。
 
-   如果您查看的是图像集、旋转集或混合媒体集，则此选项不可用。
+   如果您檢視影像集、迴轉集或混合媒體集，則此選項不可用。
 
-* **[!UICONTROL URL，在中打开]**  — 您可以设置资产以打开链接。 设置URL，然后在打开方式中指示您希望在同一窗口还是新窗口中将其打开。
+* **[!UICONTROL URL，開啟位置]**  — 您可以設定資產以開啟連結。 設定URL，並在「開啟」中指定您要在同一個視窗或新視窗中開啟。
 
-   如果您查看的是图像集、旋转集或混合媒体集，则此选项不可用。
+   如果您檢視影像集、迴轉集或混合媒體集，則此選項不可用。
 
-* **[!UICONTROL 宽度]**  — 如果希望图像具有固定大小，请输入值（以像素为单位）。 将此值留空会使资产具有自适应性。
+* **[!UICONTROL 寬度]**  — 如果您希望影像為固定大小，請輸入畫素值。 將此值保留空白可讓資產適應新情況。
 
-* **[!UICONTROL 高度]**  — 如果希望图像具有固定大小，请输入值（以像素为单位）。 将此值留空会使资产具有自适应性。
+* **[!UICONTROL 高度]**  — 如果您希望影像為固定大小，請輸入畫素值。 將此值保留空白可讓資產適應新情況。
 
-#### 使用视频时 {#when-working-with-video}
+#### 使用視訊時 {#when-working-with-video}
 
-使用Dynamic Media组件将动态视频添加到您的网页。 编辑组件时，您可以选择使用预定义的视频查看器预设来在页面上播放视频。
+使用Dynamic Media元件將動態視訊新增至您的網頁。 編輯元件時，您可以選擇使用預先定義的視訊檢視器預設集在頁面上播放視訊。
 
 ![chlimage_1-173](assets/chlimage_1-540.png)
 
-通过选择 **[!UICONTROL 编辑]** 中。
+選取「 」，編輯下列Dynamic Media設定 **[!UICONTROL 編輯]** 在元件中。
 
 >[!NOTE]
 >
->默认情况下，Dynamic Media视频组件是自适应的。 如果要使其变为固定大小，请在组件中使用 **[!UICONTROL 宽度]** 和 **[!UICONTROL 高度]** 在 **[!UICONTROL 高级]** 选项卡。
+>依預設，Dynamic Media視訊元件是自我調整的。 如果要使其成為固定大小，請在元件中設定它，並使用 **[!UICONTROL 寬度]** 和 **[!UICONTROL 高度]** 在 **[!UICONTROL 進階]** 標籤。
 
-* **[!UICONTROL 查看器预设]**  — 从下拉菜单中选择现有的视频查看器预设。 如果您要查找的查看器预设不可见，则必须使其可见。 请参阅 [管理查看器预设](/help/assets/managing-viewer-presets.md).
+* **[!UICONTROL 檢視器預設集]**  — 從下拉式選單中選取現有的視訊檢視器預設集。 如果您要尋找的檢視器預設集不可見，您必須使其可見。 另請參閱 [管理檢視器預設集](/help/assets/managing-viewer-presets.md).
 
-* **[!UICONTROL 查看器修饰符]**  — 查看器修饰符采用名称=值对和分隔符的形式，允许您按照《Adobe查看器参考指南》中所述更改查看器。 查看器修饰符的示例为 `posterimage=img.jpg&caption=text.vtt,1`
+* **[!UICONTROL 檢視器修飾元]**  — 檢視器修飾元採用名稱=值配對及&amp;分隔字元的形式，可讓您依照Adobe檢視器參考指南中的概述變更檢視器。 檢視器修飾元的範例為 `posterimage=img.jpg&caption=text.vtt,1`
 
-   例如，通过查看器修饰符，您可以执行以下操作：
+   例如，您可以使用檢視器修飾元執行下列動作：
 
-   * 将字幕文件与视频关联： [字幕](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/command-reference-url-video/r-html5-video-viewer-url-caption.html)
-   * 将导航文件与视频关联： [导航](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/command-reference-url-video/r-html5-video-viewer-url-navigation.html)
+   * 將註解檔案與視訊建立關聯： [註解](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/command-reference-url-video/r-html5-video-viewer-url-caption.html)
+   * 將導覽檔案與視訊建立關聯： [導覽](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/command-reference-url-video/r-html5-video-viewer-url-navigation.html)
 
-      您可以通过选择 **[!UICONTROL 编辑]** 中。
+      您可以選取「 」，編輯下列進階設定 **[!UICONTROL 編輯]** 在元件中。
 
-* **[!UICONTROL 标题]**  — 更改视频的标题。
+* **[!UICONTROL 標題]**  — 變更視訊標題。
 
-* **[!UICONTROL 宽度]**  — 如果希望图像具有固定大小，请输入值（以像素为单位）。 将此值留空会使资产具有自适应性。
+* **[!UICONTROL 寬度]**  — 如果您希望影像為固定大小，請輸入畫素值。 將此值保留空白可讓資產適應新情況。
 
-* **[!UICONTROL 高度]**  — 如果希望图像具有固定大小，请输入值（以像素为单位）。 将此值留空会使资产具有自适应性。
+* **[!UICONTROL 高度]**  — 如果您希望影像為固定大小，請輸入畫素值。 將此值保留空白可讓資產適應新情況。
 
-#### 使用智能裁剪时 {#when-working-with-smart-crop}
+#### 使用智慧型裁切時 {#when-working-with-smart-crop}
 
-使用Dynamic Media组件将智能裁剪图像资产添加到您的网页。 编辑组件时，您可以选择使用预定义的视频查看器预设来在页面上播放视频。
+使用Dynamic Media元件將智慧型裁切影像資產新增至您的網頁。 編輯元件時，您可以選擇使用預先定義的視訊檢視器預設集在頁面上播放視訊。
 
-另请参阅 [图像配置文件](/help/assets/image-profiles.md).
+另請參閱 [影像設定檔](/help/assets/image-profiles.md).
 
 ![dm-settings-smart-crop](assets/dm-settings-smart-crop.png)
 
-通过选择 **[!UICONTROL 编辑]** 中。
+選取以編輯下列Dynamic Media設定 **[!UICONTROL 編輯]** 在元件中。
 
 >[!NOTE]
 >
 >默认情况下，Dynamic media图像组件是自适应的。 如果要使其变为固定大小，请在“高级”选项卡的组件中设置 **[!UICONTROL 它]** ，并使用“宽度”和“高 **** 度” ****。
 
-* **[!UICONTROL 图像修饰符]**  — 您可以通过提供其他图像命令来应用图像效果。 图像预设和图像提供命令参考中介绍了这些效果。
+* **[!UICONTROL 影像修飾元]**  — 您可以透過提供其他影像指令來套用影像效果。 這些效果在「影像預設集」和「影像伺服命令」參考中進行了說明。
 
-   如果您查看的是图像集、旋转集或混合媒体集，则此选项不可用。
+   如果您檢視影像集、迴轉集或混合媒體集，則此選項不可用。
 
-   您可以通过选择 **[!UICONTROL 编辑]** 中。
+   您可以選取「 」，編輯下列進階設定 **[!UICONTROL 編輯]** 在元件中。
 
-* **[!UICONTROL 启用宽高比匹配]**  — 要让Dynamic Media选取宽高比与原始图像的宽高比最匹配的智能裁剪呈现，请选择此选项。
+* **[!UICONTROL 啟用長寬比相符]**  — 若要讓Dynamic Media挑選外觀比例最符合原始影像外觀比例的智慧型裁切轉譯，請選取此選項。
 
-* **[!UICONTROL 优化分辨率更高的设备]**  — 选中（默认）复选框以允许DPR（设备像素比）优化。
+* **[!UICONTROL 針對更高解析度的裝置最佳化]**  — 選取（預設）核取方塊以允許DPR （裝置畫素比率）最佳化。
 
-   的 **[!UICONTROL 优化分辨率更高的设备]** 选项仅在以下情况下才显示：
+   此 **[!UICONTROL 針對更高解析度的裝置最佳化]** 選項僅在下列為true時顯示：
 
-   * 在“预设类型”下， **[!UICONTROL 智能裁剪]** 选项。
+   * 在「預設集型別」下， **[!UICONTROL 智慧型裁切]** 選項時才會選擇此選項。
 
-   ![用于智能裁剪的设备像素比设置](/help/assets/assets-dm/dpr-smartcrop.png)
+   ![智慧型裁切的裝置畫素比設定](/help/assets/assets-dm/dpr-smartcrop.png)
 
-   另请参阅 [关于设备像素比例优化](/help/assets/imaging-faq.md#dpr). 任何Adobe Experience Manager Dynamic Media智能成像DPR值都将被忽略。
+   另請參閱 [關於裝置畫素比最佳化](/help/assets/imaging-faq.md#dpr). 任何Adobe Experience Manager Dynamic Media智慧型影像DPR值都會被忽略。
 
-* **[!UICONTROL 标题]**  — 更改智能裁剪图像的标题。
+* **[!UICONTROL 標題]**  — 變更智慧型裁切影像的標題。
 
-* **[!UICONTROL 替换文本]**  — 为关闭了图形的用户添加智能裁剪图像的标题。
+* **[!UICONTROL 替代文字]**  — 為已關閉圖形的使用者新增標題至智慧型裁切影像。
 
-   如果您查看的是图像集、旋转集或混合媒体集，则此选项不可用。
+   如果您檢視影像集、迴轉集或混合媒體集，則此選項不可用。
 
-* **[!UICONTROL URL，在中打开]**  — 您可以设置资产以打开链接。 设置URL，然后在打开方式中指示您希望在同一窗口还是新窗口中将其打开。
+* **[!UICONTROL URL，開啟位置]**  — 您可以設定資產以開啟連結。 設定URL，並在「開啟」中指定您要在同一個視窗或新視窗中開啟。
 
-   如果您查看的是图像集、旋转集或混合媒体集，则此选项不可用。
+   如果您檢視影像集、迴轉集或混合媒體集，則此選項不可用。
 
-* **[!UICONTROL 宽度]**  — 如果希望图像具有固定大小，请输入值（以像素为单位）。 将此值留空会使资产具有自适应性。
+* **[!UICONTROL 寬度]**  — 如果您希望影像為固定大小，請輸入畫素值。 將此值保留空白可讓資產適應新情況。
 
-* **[!UICONTROL 高度]**  — 如果希望图像具有固定大小，请输入值（以像素为单位）。 将此值留空会使资产具有自适应性。
+* **[!UICONTROL 高度]**  — 如果您希望影像為固定大小，請輸入畫素值。 將此值保留空白可讓資產適應新情況。
 
-### 交互式媒体组件 {#interactive-media-component}
+### 互動媒體元件 {#interactive-media-component}
 
-交互式媒体组件适用于具有交互性的资产，例如热点或图像映射。 如果您有交互式图像、交互式视频或轮播横幅，请使用 **[!UICONTROL 交互式媒体]** 组件。
+互動式媒體元件適用於具有互動性的資產，例如熱點或影像地圖。 如果您有互動式影像、互動式視訊或輪播橫幅，請使用 **[!UICONTROL 互動媒體]** 元件。
 
-交互式媒体组件是智能的。 无论您是添加图像还是视频，都有各种不同的选项。 此外，查看器是响应式的 — 屏幕大小会根据屏幕大小自动更改。 所有查看器均为HTML5查看器。
+互動媒體元件是智慧型的。 無論您新增影像或影片，都有各種選項。 此外，檢視器會回應 — 熒幕大小會自動根據熒幕大小變更。 所有檢視器皆為HTML5檢視器。
 
 >[!NOTE]
 >
->如果您的网页具有以下功能：
+>如果您的網頁有以下內容：
 >
->* 在同一页面上使用的交互式媒体组件的多个实例。
->* 每个实例使用相同的资产类型。
+>* 在相同頁面上使用的多個互動式媒體元件例項。
+>* 每個例項都使用相同的資產型別。
 >
->不支持为该页面上的每个交互式媒体组件分配不同的查看器预设。
+>不支援為該頁面上的每個互動媒體元件指派不同的檢視器預設集。
 >
->但是，您可以在页面中为使用相同类型资产的所有交互式媒体组件使用相同的查看器预设。
+>不過，您可以對頁面內使用相同型別資產的所有互動式媒體元件使用相同的檢視器預設集。
 
 ![chlimage_1-174](assets/chlimage_1-541.png)
 
-您可以编辑以下内容 **[!UICONTROL 常规]** 设置 **[!UICONTROL 编辑]** 中。
+您可以編輯下列專案 **[!UICONTROL 一般]** 設定，方法是選取 **[!UICONTROL 編輯]** 在元件中。
 
-* **[!UICONTROL 查看器预设]**  — 从下拉菜单中选择现有的查看器预设。 如果您要查找的查看器预设不可见，则必须使其可见。 查看器预设必须先发布，然后才能使用。 请参阅管理查看器预设。
+* **[!UICONTROL 檢視器預設集]**  — 從下拉式選單中選取現有的檢視器預設集。 如果您要尋找的檢視器預設集不可見，您必須使其可見。 檢視器預設集必須先發佈，然後才能使用。 請參閱管理檢視器預設集。
 
-* **[!UICONTROL 标题]**  — 更改视频的标题。
+* **[!UICONTROL 標題]**  — 變更視訊標題。
 
-* **[!UICONTROL 宽度]**  — 如果希望图像具有固定大小，请输入值（以像素为单位）。 将此值留空会使资产具有自适应性。
+* **[!UICONTROL 寬度]**  — 如果您希望影像為固定大小，請輸入畫素值。 將此值保留空白可讓資產適應新情況。
 
-* **[!UICONTROL 高度]**  — 如果希望图像具有固定大小，请输入值（以像素为单位）。 将此值留空会使资产具有自适应性。
+* **[!UICONTROL 高度]**  — 如果您希望影像為固定大小，請輸入畫素值。 將此值保留空白可讓資產適應新情況。
 
-   您可以编辑以下内容 **[!UICONTROL 添加到购物车]** 设置 **[!UICONTROL 编辑]** 中。
+   您可以編輯下列專案 **[!UICONTROL 加入購物車]** 設定，方法是選取 **[!UICONTROL 編輯]** 在元件中。
 
-* **[!UICONTROL 显示产品资产]**  — 默认情况下，此值处于选中状态。 产品资产会显示在商务模块中定义的产品图像。 清除复选标记，不会显示产品资产。
+* **[!UICONTROL 顯示產品資產]**  — 預設會選取此值。 產品資產會依商務模組中的定義顯示產品影像。 清除核取記號即可不顯示產品資產。
 
-* **[!UICONTROL 显示产品价格]**  — 默认情况下，此值处于选中状态。 产品价格显示了商务模块中定义的项目价格。 清除复选标记，不显示产品价格。
+* **[!UICONTROL 顯示產品價格]**  — 預設會選取此值。 產品價格會顯示「商務」模組中定義的專案價格。 清除核取記號即可不顯示產品價格。
 
-* **[!UICONTROL 显示产品表单]**  — 默认情况下，未选择此值。 产品表单包含任何产品变体，如大小和颜色。 清除复选标记，不显示产品变体。
+* **[!UICONTROL 顯示產品表單]**  — 預設不會選取此值。 產品表單包含任何產品變體，例如大小和顏色。 清除核取記號即可不顯示產品變體。
 
-### 全景媒体组件 {#panoramic-media-component}
+### 全景媒體元件 {#panoramic-media-component}
 
-全景媒体组件适用于那些球面全景图像的资产。 此类图像可提供360°的房间、属性、位置或景观观看体验。 要使图像符合球面全景，它必须具有以下任一或两者：
+全景媒體元件適用於球面全景影像的資產。 這類影像可提供360度的房間、屬性、位置或橫向觀賞體驗。 若要讓影像符合球面全景的條件，它必須具備下列其中一項（或）兩項：
 
-* 宽高比为2:1。
-* 使用关键词标记 `equirectangular` 或(`spherical` + `panorama`)或(`spherical` + `panoramic`)。 请参阅 [使用标记](/help/sites-authoring/tags.md).
+* 外觀比例為2:1。
+* 以關鍵字標籤 `equirectangular` 或(`spherical` + `panorama`)或(`spherical` + `panoramic`)。 另請參閱 [使用標籤](/help/sites-authoring/tags.md).
 
 纵横比和关键字条件都适用于资产详细信息页面和&#x200B;**[!UICONTROL 全景媒体]** WCM 组件的全景资产。
 
 >[!NOTE]
 >
->如果您的网页具有以下功能：
+>如果您的網頁有以下內容：
 >
->* 的多个实例 **[!UICONTROL 全景媒体]** 组件。
->* 每个实例使用相同的资产类型。
+>* 的多個執行個體 **[!UICONTROL 全景媒體]** 在相同頁面上使用的元件。
+>* 每個例項都使用相同的資產型別。
 >
->为每个查看器预设分配不同的查看器预设 **[!UICONTROL 全景媒体]** 不支持该页面上的组件。
+>指派不同的檢視器預設集給每個檢視器 **[!UICONTROL 全景媒體]** 不支援該頁面上的元件。
 >
->但是，您可以在页面中对使用相同类型资产的所有全景媒体组件使用相同的查看器预设。
+>不過，您可以對頁面內使用相同資產型別的所有「全景媒體」元件，使用相同的檢視器預設集。
 
 ![panoramic-media-viewer-preset](assets/panoramic-media-viewer-preset.png)
 
-您可以通过选择 **[!UICONTROL 配置]** 中。
+您可以選取「 」，編輯下列設定 **[!UICONTROL 設定]** 在元件中。
 
-* **[!UICONTROL 查看器预设]**  — 从“查看器预设”下拉菜单中选择一个现有的查看器。
+* **[!UICONTROL 檢視器預設集]**  — 從「檢視器預設集」下拉式選單中選取現有的檢視器。
 
-如果您要查找的查看器预设不可见，请勾选以确保该查看器预设已发布。 在使用查看器预设之前，先发布查看器预设。 请参阅 [管理查看器预设](/help/assets/managing-viewer-presets.md).
+如果您要尋找的檢視器預設集不可見，請檢查以確保其已發佈。 請先發佈檢視器預設集，然後再使用。 另請參閱 [管理檢視器預設集](/help/assets/managing-viewer-presets.md).
 
-### 视频360媒体组件 {#video-media-component}
+### 360度影片媒體元件 {#video-media-component}
 
-使用 **[!UICONTROL 视频360媒体]** 组件，用于在网页上呈现等矩形视频，以体验房间、属性、位置、景观或医疗过程的沉浸式查看体验。
+使用 **[!UICONTROL 360度影片媒體]** 此元件可在網頁上呈現等角視訊，以提供房間、屬性、位置、橫向或醫療程式的沈浸式檢視體驗。
 
-在平面显示器上播放时，用户可以控制观看角度；移动设备上的播放通常使用其内置的陀螺仪控件。
+在平面顯示器上播放期間，使用者可以控制視角；行動裝置上的播放通常使用其內建的陀螺儀控制項。
 
-查看器包含对交付360个视频资产的本机支持。 默认情况下，查看或播放不需要任何其他配置。 您使用标准视频扩展名(如.mp4、.mkv和.mov)来交付360视频。 最常见的编解码器是H.264。
+檢視器包含原生支援，可傳送360個視訊資產。 依預設，檢視或播放不需要額外的設定。 您會使用標準視訊副檔名（例如.mp4、.mkv和.mov）來傳送360視訊。 最常見的轉碼器是H.264。
 
 ![6_5_360video_wcmcomponent-1](assets/6_5_360video_wcmcomponent-1.png)
 
-您可以通过选择 **[!UICONTROL 配置]** 中。
+您可以選取「 」，編輯下列設定 **[!UICONTROL 設定]** 在元件中。
 
-* **[!UICONTROL 查看器预设]**  — 从“查看器预设”下拉菜单中选择一个现有的查看器。 使用Video360VR的最终用户使用虚拟现实眼镜。 包括基本的视频播放控件和社交媒体功能。 使用Video360_social，其中包含基本的视频播放控件。 视频渲染在立体声模式下完成。 手动视点控制关闭，但陀螺仪控制打开。 没有社交媒体功能。
+* **[!UICONTROL 檢視器預設集]**  — 從「檢視器預設集」下拉式選單中選取現有的檢視器。 使用Video360VR的使用者若使用虛擬實境眼鏡，即可使用。 包含基本視訊播放控制項和社群媒體功能。 使用包含基本視訊播放控制項的Video360_social。 視訊演算是以立體聲模式完成。 手動視點控制已關閉，但陀螺儀控制已開啟。 沒有社群媒體功能。
 
-如果您要查找的查看器预设不可见，请勾选以确保该查看器预设已发布。 请确保在使用查看器预设之前先发布查看器预设。 请参阅 [管理查看器预设](/help/assets/managing-viewer-presets.md).
+如果您要尋找的檢視器預設集不可見，請檢查以確保其已發佈。 使用檢視器預設集之前，請務必先發佈檢視器預設集。 另請參閱 [管理檢視器預設集](/help/assets/managing-viewer-presets.md).
 
-### 使用HTTP/2交付Dynamic Media资产 {#using-http-to-delivery-dynamic-media-assets}
+### 使用HTTP/2傳遞Dynamic Media資產 {#using-http-to-delivery-dynamic-media-assets}
 
-HTTP/2是经过更新的新Web协议，可改进浏览器和服务器的通信方式。 它提供了更快的信息传输，并降低了所需的处理能力。 现在，Dynamic Media资产的交付可以通过HTTP/2进行，从而提供更好的响应和加载时间。
+HTTP/2是新的、更新的Web通訊協定，可改善瀏覽器和伺服器的通訊方式。 它提供更快速的資訊傳輸，並減少所需的處理能力。 Dynamic Media資產的傳送現在可透過HTTP/2進行，以提供更佳的回應和載入時間。
 
-请参阅 [HTTP2内容交付](/help/assets/http2.md) 有关开始使用HTTP/2与您的Dynamic Media帐户的完整详细信息。
+另請參閱 [HTTP2傳送內容](/help/assets/http2.md) 以取得開始使用HTTP/2與Dynamic Media帳戶的完整詳細資訊。
 
 >[!MORELIKETHIS]
 >
->* [在Experience ManagerDynamic Media中使用视频播放器](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/video/dynamic-media-video-player-feature-video-use.html)
->* [将交互式视频与Experience ManagerDynamic Media结合使用](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/video/dynamic-media-interactive-video-feature-video-use.html)
->* [了解具有Experience ManagerDynamic Media的资产查看器](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/viewers/dynamic-media-viewer-feature-video-understand.html)
->* [将自定义视频缩略图与Experience ManagerDynamic Media结合使用](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/video/dynamic-media-video-thumbnails-feature-video-use.html)
->* [了解使用Experience ManagerDynamic Media的色彩管理](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-color-management-technical-video-setup.html)
->* [在Experience ManagerDynamic Media中使用图像锐化](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-image-sharpening-feature-video-use.html)
+>* [在Experience ManagerDynamic Media中使用視訊播放器](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/video/dynamic-media-video-player-feature-video-use.html)
+>* [搭配使用互動式視訊與Experience ManagerDynamic Media](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/video/dynamic-media-interactive-video-feature-video-use.html)
+>* [透過Experience ManagerDynamic Media瞭解資產檢視器](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/viewers/dynamic-media-viewer-feature-video-understand.html)
+>* [透過Experience ManagerDynamic Media使用自訂視訊縮圖](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/video/dynamic-media-video-thumbnails-feature-video-use.html)
+>* [透過Experience ManagerDynamic Media瞭解色彩管理](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-color-management-technical-video-setup.html)
+>* [搭配Experience ManagerDynamic Media使用影像銳利化](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-image-sharpening-feature-video-use.html)
 

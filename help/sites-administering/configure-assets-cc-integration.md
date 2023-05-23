@@ -1,6 +1,6 @@
 ---
-title: 配置AEM Assets与Experience Cloud的集成
-description: 了解如何配置AEM Assets与Experience Cloud的集成。
+title: 設定AEM Assets與Experience Cloud的整合
+description: 瞭解如何透過Experience Cloud設定AEM Assets整合。
 contentOwner: AG
 feature: Asset Management
 role: User, Architect, Admin
@@ -12,21 +12,21 @@ ht-degree: 2%
 
 ---
 
-# 配置AEM Assets与Experience Cloud的集成 {#configure-aem-assets-integration-with-experience-cloud-and-creative-cloud}
+# 設定AEM Assets與Experience Cloud的整合 {#configure-aem-assets-integration-with-experience-cloud-and-creative-cloud}
 
-如果您是Adobe Experience Cloud客户，则可以将Adobe Experience Manager Assets中的资源与Adobe Creative Cloud同步，反之亦然。 您还可以将资源与Experience Cloud同步，反之亦然。 您可以通过以下方式设置此同步 [!DNL Adobe I/O]. 更新后的名称 [!DNL Adobe Marketing Cloud] 是 [!DNL Adobe Experience Cloud].
+如果您是Adobe Experience Cloud客戶，則可以將Adobe Experience Manager Assets中的資產與Adobe Creative Cloud同步，反之亦然。 您也可以將資產與Experience Cloud同步，反之亦然。 您可以透過以下方式設定此同步處理 [!DNL Adobe I/O]. 已更新的名稱 [!DNL Adobe Marketing Cloud] 是 [!DNL Adobe Experience Cloud].
 
-设置此集成的工作流是：
+設定此整合的工作流程為：
 
-1. 在中创建身份验证 [!DNL Adobe I/O] 使用公共网关获取应用程序ID。
-1. 使用应用程序ID在AEM Assets实例上创建配置文件。
-1. 使用此配置可同步您的资产。
+1. 在中建立驗證 [!DNL Adobe I/O] 使用公用閘道並取得應用程式ID。
+1. 使用應用程式ID在您的AEM Assets執行個體上建立設定檔。
+1. 使用此設定來同步您的資產。
 
-在后端，AEM服务器通过网关验证您的配置文件，然后在Assets和Experience Cloud之间同步数据。
+在後端，AEM伺服器會與閘道驗證您的設定檔，然後在資產和Experience Cloud之間同步資料。
 
 >[!NOTE]
 >
->此功能在中已弃用 [!DNL Assets]. 在中查找替换部件 [AEM和Creative Cloud集成最佳实践](/help/assets/aem-cc-integration-best-practices.md). 如果您有任何查询， [联系Adobe客户支持](https://www.adobe.com/cn/account/sign-in.supportportal.html).
+>此功能已棄用 [!DNL Assets]. 尋找取代 [AEM與Creative Cloud整合最佳實務](/help/assets/aem-cc-integration-best-practices.md). 如果您有任何查詢， [聯絡Adobe客戶支援](https://www.adobe.com/cn/account/sign-in.supportportal.html).
 
 <!-- Hiding this for now via cqdoc-16834.
 ![Flow of data when AEM Assets and Creative Cloud are integrated](assets/chlimage_1-48.png)
@@ -38,87 +38,87 @@ ht-degree: 2%
 
 ## 创建应用程序 {#create-an-application}
 
-1. 通过以下方式访问Adobe Developer网关界面： [https://legacy-oauth.cloud.adobe.io](https://legacy-oauth.cloud.adobe.io/).
+1. 登入，存取Adobe Developer閘道介面 [https://legacy-oauth.cloud.adobe.io](https://legacy-oauth.cloud.adobe.io/).
 
    >[!NOTE]
    >
-   >您需要管理员权限才能创建应用程序ID。
+   >您需要管理員許可權才能建立應用程式ID。
 
-1. 从左窗格中，导航到 **[!UICONTROL 开发人员工具]** > **[!UICONTROL 应用程序]** 查看应用程序列表。
-1. 单击 **[!UICONTROL 添加]** ![aem_assets_addcircle_icon](assets/aem_assets_addcircle_icon.png) 创建应用程序。
-1. 从 **[!UICONTROL 客户端凭据]** 列表，选择 **[!UICONTROL 服务帐户（JWT断言）]**，是用于服务器身份验证的服务器到服务器通信服务。
+1. 從左窗格，導覽至 **[!UICONTROL 開發人員工具]** > **[!UICONTROL 應用]** 以檢視應用程式清單。
+1. 按一下 **[!UICONTROL 新增]** ![aem_assets_addcircle_icon](assets/aem_assets_addcircle_icon.png) 以建立應用程式。
+1. 從 **[!UICONTROL 使用者端認證]** 清單，選取 **[!UICONTROL 服務帳戶（JWT判斷提示）]**，此元件為伺服器對伺服器的通訊服務，用於伺服器驗證。
 
    ![chlimage_1-49](assets/chlimage_1-49.png)
 
-1. 指定应用程序的名称和可选说明。
-1. 从 **[!UICONTROL 组织]** 列表中，选择要为其同步资产的组织。
-1. 从 **[!UICONTROL 范围]** 列表，选择 **[!UICONTROL dam-read]**， **[!UICONTROL dam-sync]**， **[!UICONTROL dam-write]**、和 **[!UICONTROL cc-share]**.
-1. 单击&#x200B;**[!UICONTROL 创建]**。此时将显示一条消息，通知应用程序已创建。
+1. 指定應用程式的名稱和選擇性說明。
+1. 從 **[!UICONTROL 組織]** 清單中，選取您要同步資產的組織。
+1. 從 **[!UICONTROL 範圍]** 清單，選取 **[!UICONTROL dam-read]**， **[!UICONTROL dam-sync]**， **[!UICONTROL dam-write]**、和 **[!UICONTROL cc-share]**.
+1. 单击&#x200B;**[!UICONTROL 创建]**。系統會顯示一則訊息，通知已建立應用程式。
 
-   ![成功创建应用程序以将AEM Assets与Creative Cloud集成的通知](assets/chlimage_1-50.png)
+   ![成功建立應用程式以將AEM Assets與Creative Cloud整合的通知](assets/chlimage_1-50.png)
 
-1. 复制 **[!UICONTROL 应用程序ID]** 为新的应用程序生成的属性。
+1. 複製 **[!UICONTROL 應用程式ID]** 會為新應用程式產生。
 
    >[!CAUTION]
    >
-   >确保您不会无意中复制 **[!UICONTROL 应用程序密码]** 而不是 **[!UICONTROL 应用程序ID]**.
+   >確保您不會不小心複製 **[!UICONTROL 應用程式密碼]** 而非 **[!UICONTROL 應用程式ID]**.
 
-## 向Experience Cloud添加新配置 {#add-a-new-configuration}
+## 新增設定至Experience Cloud {#add-a-new-configuration}
 
-1. 单击本地AEM Assets实例用户界面上的AEM徽标，然后导航到 **[!UICONTROL 工具]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL 旧版Cloud Services]**.
+1. 按一下本機AEM Assets執行個體使用者介面上的AEM標誌，並導覽至 **[!UICONTROL 工具]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL 舊版Cloud Services]**.
 
-1. 找到 **[!UICONTROL Adobe Experience Cloud]** 服务。 如果不存在配置，请单击 **[!UICONTROL 立即配置]**. 如果存在配置，请单击 **[!UICONTROL 显示配置]** 并单击 `+` 以添加新配置。
+1. 找到 **[!UICONTROL Adobe Experience Cloud]** 服務。 如果不存在任何設定，請按一下 **[!UICONTROL 立即設定]**. 如果設定存在，請按一下 **[!UICONTROL 顯示設定]** 並按一下 `+` 以新增設定。
 
    >[!NOTE]
    >
-   >使用具有组织管理员权限的Adobe ID帐户。
+   >使用具有組織管理員許可權的Adobe ID帳戶。
 
-1. 在 **[!UICONTROL 创建配置]** 对话框，指定新配置的标题和名称，然后单击 **[!UICONTROL 创建]**.
+1. 在 **[!UICONTROL 建立設定]** 對話方塊，指定新設定的標題和名稱，然後按一下 **[!UICONTROL 建立]**.
 
-   ![命名新配置以集成AEM Assets和Creative Cloud](assets/aem-ec-integration-config1.png)
+   ![命名新設定以整合AEM Assets和Creative Cloud](assets/aem-ec-integration-config1.png)
 
-1. 在 **[!UICONTROL 租户URL]** 字段中，指定AEM Assets的URL。 过去，如果URL定义为 `https://<tenant_id>.marketing.adobe.com`，将其更改为 `https://<tenant_id>.experiencecloud.adobe.com`.
+1. 在 **[!UICONTROL 租使用者URL]** 欄位中，指定AEM Assets的URL。 在過去，如果URL定義為 `https://<tenant_id>.marketing.adobe.com`，將其變更為 `https://<tenant_id>.experiencecloud.adobe.com`.
 
-   1. 导航到&#x200B;**工具 > 云服务 > 旧版云服务**。在Adobe Experience Cloud下，单击 **显示配置**.
-   1. 选择要编辑的现有配置。 编辑配置并替换 `marketing.adobe.com` 到 `experiencecloud.adobe.com`.
-   1. 保存配置。测试MAC-sync复制代理。
+   1. 导航到&#x200B;**工具 > 云服务 > 旧版云服务**。在Adobe Experience Cloud底下，按一下 **顯示設定**.
+   1. 選取要編輯的現有設定。 編輯設定並取代 `marketing.adobe.com` 至 `experiencecloud.adobe.com`.
+   1. 保存配置。測試MAC同步復寫代理。
 
-1. 在 **[!UICONTROL 客户端ID]** 字段，粘贴您在过程结束时复制的应用程序ID [创建应用程序](#create-an-application).
+1. 在 **[!UICONTROL 使用者端ID]** 欄位，貼上您在程式結尾複製的應用程式ID [建立應用程式](#create-an-application).
 
-   ![提供集成AEM Assets和Creative Cloud所需的应用程序ID值](assets/cloudservices_tenant_info.png)
+   ![提供整合AEM Assets和Creative Cloud所需的應用程式ID值](assets/cloudservices_tenant_info.png)
 
-1. 下 **[!UICONTROL 同步]** 选择 **[!UICONTROL 已启用]** 启用同步并单击 **[!UICONTROL 确定]**. 如果您选择 **已禁用**，同步在单个方向上工作。
+1. 下 **[!UICONTROL 同步]** 選取 **[!UICONTROL 已啟用]** 啟用同步化並按一下 **[!UICONTROL 確定]**. 如果您選取 **已停用**，同步化會以單一方向運作。
 
-1. 在配置页面中，单击 **[!UICONTROL 显示公钥]** 以显示为您的实例生成的公共密钥。 或者，单击 **[!UICONTROL 下载OAuth网关的公共密钥]** 下载包含公钥的文件。 然后，打开文件以显示公钥。
+1. 在設定頁面中，按一下 **[!UICONTROL 顯示公開金鑰]** 以顯示針對執行個體產生的公開金鑰。 或者，按一下 **[!UICONTROL 下載OAuth閘道的公開金鑰]** 下載包含公開金鑰的檔案。 然後，開啟檔案以顯示公開金鑰。
 
-## 启用同步 {#enable-synchronization}
+## 啟用同步 {#enable-synchronization}
 
-1. 使用该过程的最后一步中提到的以下方法之一显示公钥 [向Experience Cloud添加新配置](#add-a-new-configuration). 单击 **[!UICONTROL 显示公钥]**.
+1. 使用程式最後步驟中所述的下列方法之一顯示公開金鑰 [新增設定至Experience Cloud](#add-a-new-configuration). 按一下 **[!UICONTROL 顯示公開金鑰]**.
 
-1. 复制公钥并将其粘贴到 **[!UICONTROL 公钥]** 您在中创建的应用程序的配置界面的字段 [创建应用程序](#create-an-application).
+1. 複製公開金鑰並貼到 **[!UICONTROL 公開金鑰]** 您所建立之應用程式的設定介面欄位 [建立應用程式](#create-an-application).
 
    ![chlimage_1-53](assets/chlimage_1-53.png)
 
-1. 单击&#x200B;**[!UICONTROL 更新]**。立即将您的资源与AEM Assets实例同步。
+1. 单击&#x200B;**[!UICONTROL 更新]**。立即將您的資產與AEM Assets執行個體同步。
 
-## 测试同步 {#test-the-synchronization}
+## 測試同步 {#test-the-synchronization}
 
-1. 单击本地AEM Assets实例用户界面上的AEM徽标，然后导航到 **[!UICONTROL 工具]**> **[!UICONTROL 部署]**> **[!UICONTROL 复制]**定位为同步创建的复制配置文件。
-1. 在 **[!UICONTROL 复制]** 页面，单击 **[!UICONTROL 作者代理]**.
-1. 从配置文件列表中，单击贵组织的默认复制配置文件以将其打开。
-1. 在对话框中，单击 **[!UICONTROL 测试连接]**.
+1. 按一下本機AEM Assets執行個體使用者介面上的AEM標誌，並導覽至 **[!UICONTROL 工具]**> **[!UICONTROL 部署]**> **[!UICONTROL 復寫]**尋找為同步處理所建立的復寫設定檔。
+1. 於 **[!UICONTROL 復寫]** 頁面，按一下 **[!UICONTROL 作者上的代理]**.
+1. 從設定檔清單中，按一下您組織的預設復寫設定檔以開啟它。
+1. 在對話方塊中，按一下 **[!UICONTROL 測試連線]**.
 
-   ![测试连接并为您的组织设置默认复制配置文件](assets/chlimage_1-54.png)
+   ![測試連線，並為您的組織設定預設復寫設定檔](assets/chlimage_1-54.png)
 
-1. 复制休息完成后，在测试结果结束时检查是否显示成功消息。
+1. 當復寫回覆完成時，請在測試結果結束時檢查成功訊息。
 
-## 将用户添加到Experience Cloud {#add-users-to-experience-cloud}
+## 將使用者新增至Experience Cloud {#add-users-to-experience-cloud}
 
-1. 使用管理员凭据登录Experience Cloud。
-1. 从滑轨，转到 **[!UICONTROL 管理]** 然后单击 **[!UICONTROL 启动Enterprise Dashboard]**.
-1. 在边栏中，单击 **[!UICONTROL 用户]** 以打开 **[!UICONTROL User Management]** 页面。
-1. 在工具栏中，单击 **添加** ![aem_assets_add_icon](assets/aem_assets_add_icon.png).
-1. 添加一个或多个要提供与Creative Cloud共享资源的用户。
+1. 使用管理員認證登入Experience Cloud。
+1. 從導軌，前往 **[!UICONTROL 管理]** 然後按一下 **[!UICONTROL 啟動Enterprise Dashboard]**.
+1. 在邊欄中，按一下 **[!UICONTROL 使用者]** 以開啟 **[!UICONTROL User Management]** 頁面。
+1. 在工具列中按一下 **新增** ![aem_assets_add_icon](assets/aem_assets_add_icon.png).
+1. 新增一或多個使用者，讓您提供與Creative Cloud共用資產的能力。
 
 <!-- TBD: Check.
    >[!NOTE]
@@ -127,19 +127,19 @@ ht-degree: 2%
 
 -->
 
-## 在AEM Assets和Experience Cloud之间交换资源 {#exchange-assets-between-aem-and-experience-cloud}
+## 在AEM Assets和Experience Cloud之間交換資產 {#exchange-assets-between-aem-and-experience-cloud}
 
-1. 登录 AEM Assets。
-1. 在Assets控制台中，创建一个文件夹并将一些资产上传到该文件夹。 例如，创建一个文件夹 **mc-demo** 并将资产上传到其中。
-1. 选择文件夹并单击 **共享** ![assets_share](assets/do-not-localize/assets_share.png).
-1. 从菜单中，选择 **[!UICONTROL Adobe Experience Cloud]** 和点击 **[!UICONTROL 共享]**. 此时将显示一条消息，通知该文件夹已与Experience Cloud共享。
+1. 登入AEM Assets。
+1. 在「資產」主控台中，建立資料夾並上傳部分資產至該資料夾。 例如，建立資料夾 **mc-demo** 並將資產上傳至其中。
+1. 選取資料夾並按一下 **共用** ![assets_share](assets/do-not-localize/assets_share.png).
+1. 從功能表中選取 **[!UICONTROL Adobe Experience Cloud]** 以及按一下 **[!UICONTROL 共用]**. 訊息會通知該資料夾已與Experience Cloud共用。
 
    >[!NOTE]
    >
-   >共享该类型的资产文件夹 `sling:OrderedFolder`在Adobe Experience Cloud中共享的上下文中不支持。 如果要共享文件夹，则在AEM Assets中创建该文件夹时，请勿选择 **[!UICONTROL 已排序]** 选项。
+   >共用型別的資產資料夾 `sling:OrderedFolder`在Adobe Experience Cloud中共用的內容中不支援。 如果您想要共用資料夾，在AEM Assets中建立資料夾時，請勿選取 **[!UICONTROL 已訂購]** 選項。
 
-1. 刷新AEM Assets用户界面。 您在本地AEM Assets实例的Assets控制台中创建的文件夹将会复制到Experience Cloud用户界面。 在AEM服务器处理上传到AEM Assets中文件夹的资源后，该资源将显示在Experience Cloud中的文件夹副本中。
-1. 您还可以在Experience Cloud中上传文件夹的已复制副本中的资源。 处理完资源后，该资源将显示在AEM Assets的共享文件夹中。
+1. 重新整理AEM Assets使用者介面。 您在本機AEM Assets執行個體的Assets主控台中建立的資料夾會複製到Experience Cloud使用者介面。 上傳至AEM Assets資料夾的資產會由AEM伺服器處理後，顯示在Experience Cloud資料夾副本中。
+1. 您也可以在Experience Cloud中上傳資料夾復寫復本中的資產。 處理之後，資產會顯示在AEM Assets的共用資料夾中。
 
 <!-- Removing as per PM guidance via https://jira.corp.adobe.com/browse/CQDOC-16834?focusedCommentId=22881523&page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel#comment-22881523.
 
@@ -170,5 +170,5 @@ For example, if an asset is uploaded from an AEM Assets (on premises) instance, 
 
 >[!MORELIKETHIS]
 >
->* [资源和Creative Cloud集成最佳实践](/help/assets/aem-cc-integration-best-practices.md)
+>* [資產與Creative Cloud整合最佳實務](/help/assets/aem-cc-integration-best-practices.md)
 

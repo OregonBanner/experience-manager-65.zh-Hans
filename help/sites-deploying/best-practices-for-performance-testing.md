@@ -8,7 +8,7 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: 669018a0-f6ef-42b2-9c6f-83d7dd5a7095
 exl-id: fcac75e1-15c1-4a37-8d43-93c95267b903
-source-git-commit: 18f843ed3ffb719d168b67826baaffd926ffd2dd
+source-git-commit: 9defa6d1843007e9375d839f72f6993c691a37c0
 workflow-type: tm+mt
 source-wordcount: '1831'
 ht-degree: 1%
@@ -60,7 +60,7 @@ AEM中的許多效能測量（例如查詢回應時間）都可能受到系統�
 
 * **載入執行器** 是企業級負載測試產品。 提供免費的評估版本。 如需詳細資訊，請參閱 [https://www.microfocus.com/en-us/portfolio/performance-engineering/overview](https://www.microfocus.com/en-us/portfolio/performance-engineering/overview)
 
-* 網站負載測試工具，例如 [Vercara](https://vercara.com/website-performance-management) 也可以使用。
+* 網站負載測試工具，例如 [Neustar](https://neustarsecurityservices.com/web-performance-management) 也可以使用。
 * 測試行動或回應式網站時，必須使用另一組工具。 它們的運作方式是節流網路頻寬，模擬較慢的行動連線，例如3G或EDGE。 使用範圍較廣的工具包括：
 
    * **[網路連結調節器](https://nshipster.com/network-link-conditioner/)**  — 它提供易於使用的UI，並在網路棧疊上以相當低的層級運作。 其中包括OS X和iOS的版本；

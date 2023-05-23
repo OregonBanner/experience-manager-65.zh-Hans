@@ -1,7 +1,7 @@
 ---
-title: 使用经典UI创建语言根
+title: 使用Classic UI建立語言根
 seo-title: Creating a Language Root Using the Classic UI
-description: 了解如何使用Classic UI创建语言根。
+description: 瞭解如何使用Classic UI建立語言根。
 seo-description: Learn how to create a language root using the Classic UI.
 uuid: 62e40d39-2868-4d3d-9af7-c60a1a658be0
 contentOwner: Guillaume Carlino
@@ -15,47 +15,47 @@ exl-id: 1ae21d80-0683-4ab9-afaa-4d733ff47720
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '316'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
-# 使用经典UI创建语言根{#creating-a-language-root-using-the-classic-ui}
+# 使用Classic UI建立語言根{#creating-a-language-root-using-the-classic-ui}
 
-以下过程使用经典UI创建站点的语言根。 有关更多信息，请参阅 [创建语言根](/help/sites-administering/tc-prep.md#creating-a-language-root).
+下列程式會使用傳統UI建立網站的語言根。 如需詳細資訊，請參閱 [建立語言根目錄](/help/sites-administering/tc-prep.md#creating-a-language-root).
 
-1. 在网站控制台的网站树中，选择站点的根页面。 ([http://localhost:4502/siteadmin#](http://localhost:4502/siteadmin#))
-1. 添加表示站点语言版本的新子页面：
+1. 在網站主控台中的網站樹狀結構中，選取網站的根頁面。 ([http://localhost:4502/siteadmin#](http://localhost:4502/siteadmin#))
+1. 新增代表網站語言版本的子頁面：
 
-   1. 单击“新建”>“新建页面”。
-   1. 在对话框中，指定标题和名称。 名称格式必须为 `<language-code>` 或 `<language-code>_<country-code>`，例如en、en_US、en_us、en_GB、en_gb。
+   1. 按一下「新增>新增頁面」。
+   1. 在對話方塊中，指定「標題」和「名稱」。 名稱格式必須是 `<language-code>` 或 `<language-code>_<country-code>`，例如en、en_US、en_us、en_GB、en_gb。
 
-      * 支持的语言代码是由ISO-639-1定义的小写双字母代码
-      * 支持的国家/地区代码是由ISO 3166定义的小写或大写形式的双字母代码
-   1. 选择模板并单击创建。
+      * 支援的語言程式碼為ISO-639-1所定義的小寫雙字母程式碼
+      * 支援的國家代碼是小寫或大寫、兩個字母的代碼，如ISO 3166所定義
+   1. 選取範本，然後按一下「建立」。
 
    ![newpagefr](assets/newpagefr.png)
 
-1. 在网站控制台的网站树中，选择站点的根页面。
-1. 在“工具”菜单中，选择“语言复制”。
+1. 在網站主控台中的網站樹狀結構中，選取網站的根頁面。
+1. 在「工具」功能表中，選取「語言副本」。
 
    ![toolslanguagecopy](assets/toolslanguagecopy.png)
 
-   语言复制对话框显示可用语言版本和网页的矩阵。 语言列中的x表示该页面在该语言中可用。
+   「語言複製」對話方塊會顯示可用語言版本和網頁的矩陣。 語言欄中的x表示頁面可使用該語言。
 
    ![languagecopydialog](assets/languagecopydialog.png)
 
-1. 要将现有页面或页面树复制到语言版本，请在语言列中选择该页面的单元格。 单击箭头并选择要创建的副本类型。
+1. 若要將現有頁面或頁面樹狀結構複製到語言版本，請在語言欄中選取該頁面的儲存格。 按一下箭頭，然後選取要建立的複製型別。
 
-   在以下示例中，设备/太阳镜/爱尔兰页面将被复制到法语版本。
+   在下列範例中，裝置/太陽鏡/愛爾蘭版頁面正在複製到法文版。
 
    ![languagecopydilogdropdown](assets/languagecopydilogdropdown.png)
 
-   | 语言副本类型 | 描述 |
+   | 語言副本型別 | 描述 |
    |---|---|
-   | auto | 使用父页面的行为 |
-   | 忽略 | 不创建此页面及其子页面的副本 |
-   | `<language>+` （例如，法语+） | 从该语言复制页面及其所有子页面 |
-   | `<language>` （例如，法语） | 仅复制该语言的页面 |
+   | auto | 使用父頁面的行為 |
+   | 忽略 | 不建立此頁面及其子頁面的復本 |
+   | `<language>+` （例如French+） | 複製該語言的頁面及其所有子頁面 |
+   | `<language>` （例如法文） | 僅複製該語言的頁面 |
 
-1. 单击“确定”关闭对话框。
-1. 在下一个对话框中，单击“是”以确认复制。
+1. 按一下「確定」關閉對話方塊。
+1. 在下一個對話方塊中，按一下「是」以確認複製。

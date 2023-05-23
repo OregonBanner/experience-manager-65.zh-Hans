@@ -1,7 +1,7 @@
 ---
-title: 根据使用的模板显示组件
+title: 根據使用的範本顯示元件
 seo-title: Displaying components based on the template used
-description: 创建表单时，了解如何根据所选模板在侧栏中启用组件。
+description: 建立表單時，瞭解如何根據所選範本在側欄中啟用元件。
 seo-description: When you create a form, learn how you can enable components in the sidebar based on the template selected.
 uuid: 790d201b-318d-4d02-9bc5-9d6bc41d057a
 contentOwner: sashanka
@@ -18,46 +18,46 @@ ht-degree: 1%
 
 ---
 
-# 根据使用的模板显示组件{#displaying-components-based-on-the-template-used}
+# 根據使用的範本顯示元件{#displaying-components-based-on-the-template-used}
 
-当表单作者使用创建自适应表单时 [模板](../../forms/using/template-editor.md)，表单作者可以查看和使用基于模板策略的特定组件。 您可以指定一个模板内容策略，以便选择表单作者在表单创作时看到的一组组件。
+表單作者使用建立最適化表單時 [範本](../../forms/using/template-editor.md)，表單作者就能根據範本原則檢視和使用特定元件。 您可以指定範本內容原則，以讓您選擇表單作者在表單製作時看到的一組元件。
 
-## 更改模板的内容策略 {#changing-the-content-policy-of-a-template}
+## 變更範本的內容原則 {#changing-the-content-policy-of-a-template}
 
-创建模板时，模板创建于 `/conf` 在内容存储库中。 基于您在中创建的文件夹 `/conf` 目录，模板的路径为： `/conf/<your-folder>/settings/wcm/templates/<your-template>`.
+當您建立範本時，它會建立在 `/conf` 內容存放庫中。 根據您在中建立的資料夾 `/conf` 目錄，範本的路徑為： `/conf/<your-folder>/settings/wcm/templates/<your-template>`.
 
-执行以下步骤，根据模板的内容策略在侧栏中显示组件：
+執行以下步驟，根據範本的內容原則在側邊欄中顯示元件：
 
-1. 打开CRXDE lite。\
+1. 開啟CRXDE Lite。\
    URL: `https://<server>:<port>/crx/de/index.jsp`
-1. 在CRXDE中，导航到在其中创建模板的文件夹。
+1. 在CRXDE中，導覽至建立範本的資料夾。
 
    例如：`/conf/<your-folder>/`
 
-1. 在CRXDE中，导航到： `/conf/<your-folder>/settings/wcm/policies/fd/af/layouts/gridFluidLayout/`
+1. 在CRXDE中，導覽至： `/conf/<your-folder>/settings/wcm/policies/fd/af/layouts/gridFluidLayout/`
 
-   要选择一组组件，需要新的内容策略。 要创建新策略，请复制并粘贴默认策略，然后对其进行重命名。
+   若要選取一組元件，需要新的內容原則。 若要建立新原則，請複製並貼上預設原則，然後將其重新命名。
 
-   默认内容策略的路径为： `/conf/<your-folder>/settings/wcm/policies/fd/af/layouts/gridFluidLayout/default`
+   預設內容原則的路徑為： `/conf/<your-folder>/settings/wcm/policies/fd/af/layouts/gridFluidLayout/default`
 
-   在 `gridFluidLayout` 文件夹，复制粘贴默认策略并对其进行重命名。 例如：`myPolicy`。
+   在 `gridFluidLayout` 資料夾，複製並貼上預設原則並重新命名。 例如：`myPolicy`。
 
-   ![复制默认策略](assets/crx-default1.png)
+   ![複製預設原則](assets/crx-default1.png)
 
-1. 选择您创建的新策略，然后选择 **组件** 右侧面板中具有类型的属性 `string[]`.
+1. 選取您建立的新原則，然後選取 **元件** 屬性與型別 `string[]`.
 
-   选择并打开components属性时，您会看到“编辑组件”对话框。 通过“编辑组件”对话框，您可以使用组件组 **+** 和 **-** 按钮。 您可以添加包含您希望作者使用的表单的组件的组件组。
+   選取並開啟components屬性時，您會看到「編輯元件」對話方塊。 編輯元件對話方塊可讓您使用新增或移除元件群組。 **+** 和 **-** 按鈕。 您可以新增元件群組，其中包含您希望作者使用的元件。
 
-   ![在策略中添加或删除组件](assets/add-components-list1.png)
+   ![在原則中新增或移除元件](assets/add-components-list1.png)
 
-   添加组件组后，单击 **确定** 以更新列表，然后单击 **全部保存** 在CRXDE地址栏上方进行刷新。
+   新增元件群組後，按一下 **確定** 以更新清單，然後按一下 **全部儲存** 在CRXDE位址列上方並重新整理。
 
-1. 在模板中，将内容策略从默认策略更改为您创建的新策略。 ( `myPolicy` 在此示例中。)
+1. 在範本中，將內容原則從預設變更為您建立的新原則。 ( `myPolicy` 在此範例中。)
 
-   要更改策略，请在CRXDE中导航到 `/conf/<your-folder>/settings/wcm/templates/<your-template>/policies/jcr:content/guideContainer/rootPanel/items`.
+   若要變更原則，請在CRXDE中導覽至 `/conf/<your-folder>/settings/wcm/templates/<your-template>/policies/jcr:content/guideContainer/rootPanel/items`.
 
-   在 `cq:policy` 属性，更改 `default` 到新策略名称( `myPolicy`)。
+   在 `cq:policy` 屬性，變更 `default` 至新原則名稱( `myPolicy`)。
 
-   ![已更新模板内容策略](assets/updated-policy.png)
+   ![已更新範本內容原則](assets/updated-policy.png)
 
-   在创作使用该模板创建的表单时，您可以在侧栏中看到添加的组件。
+   當您使用範本製作表單時，可以在側邊欄中看到新增的元件。

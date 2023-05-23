@@ -1,7 +1,7 @@
 ---
-title: 配置服务器设置
+title: 正在設定伺服器設定
 seo-title: Configuring Server Settings
-description: “服务器设置”页提供对电子邮件、任务通知和管理员通知设置的访问。
+description: 「伺服器設定」頁面提供電子郵件、工作通知和管理員通知設定的存取權。
 seo-description: The Server Settings page provides access to email, task notification and administrator notification settings.
 uuid: 73b51ac0-56e5-4748-bb33-e3986c69eb2d
 contentOwner: admin
@@ -17,278 +17,278 @@ ht-degree: 0%
 
 ---
 
-# 配置服务器设置 {#configuring-server-settings}
+# 正在設定伺服器設定 {#configuring-server-settings}
 
-通过“服务器设置”页面可访问表单工作流的各种设置：
+「伺服器設定」頁面提供對表單工作流程各種設定的存取：
 
-* **电子邮件设置** 启用传出电子邮件以及这些邮件使用的电子邮件服务器设置。 (请参阅 [配置电子邮件设置](configuring-server-settings.md#configuring-email-settings).)
-* **任务通知设置** 启用、禁用或修改在电子邮件通知中发送给最终用户和组的有关其任务的消息。 (请参阅 [为用户和组配置通知](configuring-server-settings.md#configuring-notifications-for-users-and-groups).)
-* **管理员通知设置** 启用、禁用或修改管理任务电子邮件通知中发送的消息。 (请参阅 [为管理员配置通知](configuring-server-settings.md#configuring-notifications-for-administrators).)
+* **電子郵件設定** 啟用外寄電子郵件訊息，以及這些訊息所使用的電子郵件伺服器設定。 (請參閱 [正在設定電子郵件設定](configuring-server-settings.md#configuring-email-settings).)
+* **任務通知設定** 可啟用、停用或修改傳送給使用者與群組有關其任務的電子郵件通知訊息。 (請參閱 [設定使用者和群組的通知](configuring-server-settings.md#configuring-notifications-for-users-and-groups).)
+* **管理員通知設定** 可啟用、停用或修改管理任務之電子郵件通知中所傳送的訊息。 (請參閱 [為管理員設定通知](configuring-server-settings.md#configuring-notifications-for-administrators).)
 
-## 配置电子邮件设置 {#configuring-email-settings}
+## 正在設定電子郵件設定 {#configuring-email-settings}
 
-您可以为表单服务器指定一个电子邮件帐户，通过该帐户向AEM表单用户和管理员发送电子邮件。 这些电子邮件用于通知和提醒用户必须完成的任务、通知用户已达到截止日期的任务，以及通知管理员发生的任何进程错误。
+您可以指定表單伺服器的電子郵件帳戶，透過該帳戶傳送電子郵件訊息給AEM表單使用者和管理員。 這些電子郵件訊息用於通知和提醒使用者他們必須完成的工作、通知使用者已達到截止日期的任務，以及通知管理員發生的任何程式錯誤。
 
-要在AEM表单和用户之间启用电子邮件发送，请在“电子邮件设置”页面上配置传出电子邮件设置。 传出电子邮件必须使用SMTP服务器。
+若要在AEM表單和使用者之間啟用電子郵件訊息的傳送，請在「電子郵件設定」頁面上設定寄出電子郵件設定。 寄出電子郵件必須使用SMTP伺服器。
 
-要启用AEM表单以接收和处理来自用户的传入电子邮件，请为Complete Task服务创建电子邮件端点。 (请参阅 [为完成任务服务创建电子邮件端点](/help/forms/using/admin-help/configuring-email-endpoints.md#create-an-email-endpoint-for-the-complete-task-service))。
+若要讓AEM表單接收並處理使用者傳入的電子郵件訊息，請為「完成任務」服務建立電子郵件端點。 (請參閱 [建立Complete Task服務的電子郵件端點](/help/forms/using/admin-help/configuring-email-endpoints.md#create-an-email-endpoint-for-the-complete-task-service))。
 
-如果您的流程是在不需要电子邮件的情况下设计和实施的，则无需在“电子邮件设置”页面上配置任何选项。
+如果您的流程在設計及實作時不需要電子郵件，則您不需要在「電子郵件設定」頁面上設定任何選項。
 
-### 配置传出电子邮件设置 {#configure-outgoing-email-settings}
+### 設定傳出電子郵件設定 {#configure-outgoing-email-settings}
 
-1. 在管理控制台中，单击服务>表单工作流>服务器设置>电子邮件设置。
-1. 选择“启用传出消息”。
-1. 在“SMTP服务器”框中，键入电子邮件服务器名称或IP地址。 表单工作流中的所有通知电子邮件消息都从此电子邮件服务器发送。
-1. 在“用户名”和“密码”框中，键入当SMTP服务器要求验证时使用的登录名和密码。 如果允许匿名登录，则将其留空。
-1. 在“电子邮件地址”框中，键入要用作Forms Workflow发送的电子邮件的返回地址的电子邮件地址。
+1. 在管理控制檯中，按一下「服務>表單工作流程>伺服器設定>電子郵件設定」。
+1. 選取啟用外寄訊息。
+1. 在「SMTP伺服器」方塊中，輸入電子郵件伺服器名稱或IP位址。 來自表單工作流程的所有通知電子郵件訊息都是從此電子郵件伺服器傳送。
+1. 在「使用者名稱」和「密碼」方塊中，輸入SMTP伺服器需要驗證時所使用的登入名稱和密碼。 如果允許匿名登入，請將它們留空。
+1. 在「電子郵件地址」方塊中，輸入電子郵件地址，以用作Forms Workflow所傳送之電子郵件的傳回地址。
 
    >[!NOTE]
    >
-   >如果您使用的是Microsoft Exchange Server ，且电子邮件地址为无效的电子邮件地址，则Microsoft Exchange Server无法向通讯组列表发送电子邮件。 要解决此问题，请选择 **启用外部通信** 选项，分别用于Microsoft Exchange Server上的每个通讯组列表。
+   >如果您使用的是Microsoft Exchange Server，且電子郵件地址為無效的電子郵件地址，則Microsoft Exchange Server無法將電子郵件傳送至通訊群組清單。 若要解決問題，請選取 **啟用外部通訊** 個選項，分別適用於Microsoft Exchange伺服器上的每個通訊群組清單。
 
 1. 单击“保存”。
 
 >[!NOTE]
 >
->如果输入的信息不正确，可以单击“取消”返回之前显示的页面。
+>如果您輸入不正確的資訊，可以按一下「取消」返回先前顯示的頁面。
 
-### 配置电子邮件模板以使用AEM Forms Workspace {#configuring-email-templates-to-use-html-workspace}
+### 設定電子郵件範本以使用AEM Forms Workspace {#configuring-email-templates-to-use-html-workspace}
 
 >[!NOTE]
 >
->AEM Forms版本弃用Flex工作区。
+>AEM Forms版本已棄用Flex工作區。
 
-默认情况下，AEMAEM表单发送的电子邮件包含指向（JEE上已弃用）Flex Workspace的链接。 您可以将AEM表单配置为发送包含AEM Forms Workspace链接的电子邮件。 要详细了解AEM Forms工作区与(JEE上已弃用的AEM forms) Flex工作区相比所具有的好处，请参阅 [此](/help/forms/using/features-html-workspace-available-flex.md) 文章。
+根據預設，AEM表單傳送的電子郵件會包含指向(JEE上已棄用的AEM表單) Flex工作區的連結。 您可以設定AEM表單，以傳送包含AEM Forms Workspace連結的電子郵件。 若要進一步瞭解AEM Forms工作區優於(JEE已棄用AEM forms) Flex工作區，請參閱 [此](/help/forms/using/features-html-workspace-available-flex.md) 文章。
 
-1. 在管理控制台中，单击主页>服务>表单工作流>服务器设置>任务通知。
-1. 打开任务分派模板。
-1. 将任务通知中的模板设置为以下内容： `https://@@notification-host@@:8080/lc/libs/ws/index.html?taskId=@@taskid@@`
+1. 在管理控制檯中，按一下首頁>服務>表單工作流程>伺服器設定>任務通知。
+1. 開啟任務指派範本。
+1. 將任務通知中的範本設定如下： `https://@@notification-host@@:8080/lc/libs/ws/index.html?taskId=@@taskid@@`
 
    ```java
    https://@@notification-host@@:8080/lc/libs/ws/index.html?taskId=@@taskid@@
    ```
 
-## 为用户和组配置通知 {#configuring-notifications-for-users-and-groups}
+## 設定使用者和群組的通知 {#configuring-notifications-for-users-and-groups}
 
-在“任务通知”页面上，您可以配置模板，表单工作流将使用该模板生成发送给用户和组的电子邮件通知。 您可以使用表单工作流变量自定义通知和设置通知格式。
+在「任務通知」頁面上，您可以設定表單工作流程將用來產生傳送給使用者和群組的電子郵件通知的範本。 您可以使用表單工作流程變數自訂通知並設定通知格式。
 
-您可以为用户和组配置以下类型的通知：
+您可以為使用者和群組設定下列型別的通知：
 
 * 提醒
-* 任务分配
+* 任務指派
 * 截止日期
 
-要为组生成电子邮件通知，请在“用户管理”中指定组的电子邮件地址。 <!--Fix broken link See Setting up and organizing users -->当Forms Workflow向组发送电子邮件通知时，组内每个具有指定电子邮件地址的成员都会收到电子邮件通知。 当组的成员收到电子邮件通知并想要申请任务时，该成员必须单击电子邮件通知中的申请链接，这会打开Workspace中的任务详细信息页面。 从那里，成员可以索偿或索偿并打开工作项。
+若要產生群組的電子郵件通知，請在「使用者管理」中指定群組的電子郵件地址。 <!--Fix broken link See Setting up and organizing users -->當表單工作流程傳送電子郵件通知給群組時，群組中每個具有指定電子郵件地址的成員都會收到電子郵件通知。 當群組的成員收到電子郵件通知並想要宣告任務時，該成員必須按一下電子郵件通知中的宣告連結，這會在Workspace中開啟任務詳細資訊頁面。 從那裡，成員可以申請或申請，然後開啟工作專案。
 
 >[!NOTE]
 >
->AEM Forms版本弃用Flex工作区。
+>AEM Forms版本已棄用Flex Workspace。
 
-### 为用户或组配置提醒 {#configure-reminders-for-users-or-groups}
+### 設定使用者或群組的提醒 {#configure-reminders-for-users-or-groups}
 
-当完成任务的截止日期临近时，您可以向分配的用户或组发送提醒通知。 用于确切确定何时发送提醒通知的规则由进程开发人员确定。
+當完成任務的截止日期臨近時，您可以傳送提醒通知給指派的使用者或群組。 判斷提醒通知確切何時傳送的規則由程式開發人員決定。
 
-1. 在管理控制台中，单击服务> Forms工作流>服务器设置>任务通知。
-1. 在“通知类型”下，单击“提醒”（适用于用户）或“组 — 提醒”（适用于组）。
-1. 选择“启用提醒”或“启用群组 — 提醒”。
-1. （仅限用户通知）要在提醒电子邮件中包含表单的附件及其数据，请选择“包括表单数据”。
-1. 在“主题”框中，键入电子邮件主题行的文本。 此字段已预填充了默认文本。 有关自定义此字段的详细信息，请参阅 [自定义通知内容](configuring-server-settings.md#customizing-the-content-of-notifications).
-1. 在“通知模板”框中，键入电子邮件正文的文本。 此字段已预填充了默认文本。 有关自定义此字段的详细信息，请参阅 [自定义通知内容](configuring-server-settings.md#customizing-the-content-of-notifications).
-1. 在“邮件格式”列表中，选择发送电子邮件的格式，即HTML或文本。 默认格式为HTML。
-1. 在电子邮件编码列表中，选择用于电子邮件的编码格式。 默认值为UTF-8，日本以外的大多数用户都将使用该格式。 日本用户可以选择ISO2022-JP。
+1. 在管理控制檯中，按一下「服務> Forms工作流程>伺服器設定>任務通知」。
+1. 在「通知型別」下，按一下「提醒」（適用於使用者）或「群組 — 提醒」（適用於群組）。
+1. 選取「啟用提醒」或「啟用群組 — 提醒」。
+1. （僅限使用者通知）若要在提醒電子郵件訊息中包含表單及其資料的附件，請選取「包含表單資料」。
+1. 在「主旨」方塊中，輸入電子郵件主旨行的文字。 此欄位已預先填入預設文字。 如需自訂此欄位的詳細資訊，請參閱 [自訂通知內容](configuring-server-settings.md#customizing-the-content-of-notifications).
+1. 在「通知範本」方塊中，輸入電子郵件內文的文字。 此欄位已預先填入預設文字。 如需自訂此欄位的詳細資訊，請參閱 [自訂通知內容](configuring-server-settings.md#customizing-the-content-of-notifications).
+1. 在「訊息格式」清單中，選取傳送電子郵件訊息的格式，即「HTML」或「文字」。 預設格式為HTML。
+1. 在電子郵件編碼清單中，選取用於電子郵件訊息的編碼格式。 預設值為UTF-8，日本以外的大多數使用者都會使用它。 日本的使用者可以選擇ISO2022-JP。
 1. 单击“保存”。
 
-### 为用户或组配置任务分配通知 {#configure-task-assignment-notifications-for-users-or-groups}
+### 設定使用者或群組的任務指派通知 {#configure-task-assignment-notifications-for-users-or-groups}
 
-当用户或组被分配任务时，您可以向他们发送任务分配通知。
+當使用者或群組被指派任務時，您可以傳送任務指派通知給他們。
 
-1. 在管理控制台中，单击服务> Forms工作流>服务器设置>任务通知。
-1. 在通知类型下，单击用户的任务分配或组 — 组的任务分配。
-1. 选择为用户启用任务分配，或为组启用组 — 任务分配。
-1. （仅限用户通知）要在任务分配电子邮件中包含表单及其数据的附件，请选择“包括表单数据”。
-1. 在“主题”框中，键入电子邮件主题行的文本。 此字段已预填充了默认文本。 有关自定义此字段的详细信息，请参阅 [自定义通知内容](configuring-server-settings.md#customizing-the-content-of-notifications).
-1. 在“通知模板”框中，键入电子邮件正文的文本。 此字段已预填充了默认文本。 有关自定义此字段的详细信息，请参阅 [自定义通知内容](configuring-server-settings.md#customizing-the-content-of-notifications).
-1. 在“邮件格式”列表中，选择发送电子邮件的格式，即HTML或文本。 默认格式为HTML。
-1. 在电子邮件编码列表中，选择用于电子邮件的编码格式。 默认值为UTF-8，日本以外的大多数用户都将使用该格式。 日本用户可以选择ISO2022-JP。
+1. 在管理控制檯中，按一下「服務> Forms工作流程>伺服器設定>任務通知」。
+1. 在通知型別下，按一下使用者的任務指派或群組 — 群組的任務指派。
+1. 選取「啟用使用者的任務指派」或「啟用群組 — 群組的任務指派」。
+1. （僅限使用者通知）若要在任務指派電子郵件訊息中包含表單及其資料的附件，請選取「包含表單資料」。
+1. 在「主旨」方塊中，輸入電子郵件主旨行的文字。 此欄位已預先填入預設文字。 如需自訂此欄位的詳細資訊，請參閱 [自訂通知內容](configuring-server-settings.md#customizing-the-content-of-notifications).
+1. 在「通知範本」方塊中，輸入電子郵件內文的文字。 此欄位已預先填入預設文字。 如需自訂此欄位的詳細資訊，請參閱 [自訂通知內容](configuring-server-settings.md#customizing-the-content-of-notifications).
+1. 在「訊息格式」清單中，選取傳送電子郵件訊息的格式，即「HTML」或「文字」。 預設格式為HTML。
+1. 在電子郵件編碼清單中，選取用於電子郵件訊息的編碼格式。 預設值為UTF-8，日本以外的大多數使用者都會使用它。 日本的使用者可以選擇ISO2022-JP。
 1. 单击“保存”。
 
-### 为用户或组配置截止日期通知 {#configure-deadline-notifications-for-users-or-groups}
+### 設定使用者或群組的截止日期通知 {#configure-deadline-notifications-for-users-or-groups}
 
-当对已分配任务采取行动的截止日期已过时，您可以向用户和组发送截止日期通知。 截止日期通知通常是信息性的，因为用户无法再根据分配的任务执行操作。
+當對指派的任務採取行動的截止日期已過時，您可以向使用者和群組傳送截止日期通知。 期限通知通常是資訊性的，因為使用者無法再對指派的任務採取行動。
 
-1. 在管理控制台中，单击服务> Forms工作流>服务器设置>任务通知。
-1. 在通知类型下，单击截止日期（对于用户）或组 — 截止日期（对于组）。
-1. 选择启用截止日期或启用组 — 截止日期。
-1. 在“主题”框中，键入电子邮件主题行的文本。 此字段已预填充了默认文本。 有关自定义此字段的详细信息，请参阅 [自定义通知内容](configuring-server-settings.md#customizing-the-content-of-notifications).
-1. 在“通知模板”框中，键入电子邮件正文的文本。 此字段已预填充了默认文本。 有关自定义此字段的详细信息，请参阅 [自定义通知内容](configuring-server-settings.md#customizing-the-content-of-notifications).
-1. 在“邮件格式”列表中，选择发送电子邮件的格式，即HTML或文本。 默认格式为HTML。
-1. 在电子邮件编码列表中，选择用于电子邮件的编码格式。 默认值为UTF-8，日本以外的大多数用户都将使用该格式。 日本用户可以选择ISO2022-JP。
+1. 在管理控制檯中，按一下「服務> Forms工作流程>伺服器設定>任務通知」。
+1. 在「通知型別」下，按一下「截止日期」（適用於使用者）或「群組 — 截止日期」（適用於群組）。
+1. 選取「啟用期限」或「啟用群組 — 期限」。
+1. 在「主旨」方塊中，輸入電子郵件主旨行的文字。 此欄位已預先填入預設文字。 如需自訂此欄位的詳細資訊，請參閱 [自訂通知內容](configuring-server-settings.md#customizing-the-content-of-notifications).
+1. 在「通知範本」方塊中，輸入電子郵件內文的文字。 此欄位已預先填入預設文字。 如需自訂此欄位的詳細資訊，請參閱 [自訂通知內容](configuring-server-settings.md#customizing-the-content-of-notifications).
+1. 在「訊息格式」清單中，選取傳送電子郵件訊息的格式，即「HTML」或「文字」。 預設格式為HTML。
+1. 在電子郵件編碼清單中，選取用於電子郵件訊息的編碼格式。 預設值為UTF-8，日本以外的大多數使用者都會使用它。 日本的使用者可以選擇ISO2022-JP。
 1. 单击“保存”。
 
-### 隐藏所有电子邮件的“不DELETE”标记 {#hide-the-do-not-delete-tag-for-all-emails}
+### 隱藏所有電子郵件的「不DELETE」標籤 {#hide-the-do-not-delete-tag-for-all-emails}
 
-您可以将电子邮件配置为在以人为中心的流程发送的所有电子邮件中隐藏“不DELETE”跟踪标记。
+您可以設定電子郵件，隱藏在以人為中心的程式傳送的所有電子郵件中的「不要DELETE」追蹤標籤。
 
 <!-- 
 For details, see [How to hide the 'DO-NOT-DELETE' tag with CSS](https://blogs.adobe.com/LiveCycleHelp/2013/09/how-to-hide-the-do-not-delete-tag-with-css.html) 
 -->
 
-## 为管理员配置通知 {#configuring-notifications-for-administrators}
+## 為管理員設定通知 {#configuring-notifications-for-administrators}
 
-您可以配置模板，表单工作流将使用该模板生成发送给管理员的电子邮件通知。
+您可以設定表單工作流程將用來產生傳送給管理員的電子郵件通知的範本。
 
-您可以为管理员配置以下类型的通知：
+您可以為管理員設定下列型別的通知：
 
-* 停止的分支
-* 停止的操作
+* 已停止的分支
+* 已停止的作業
 
-### 配置停止的分支通知 {#configure-stalled-branch-notifications}
+### 設定停止的分支通知 {#configure-stalled-branch-notifications}
 
-如果分支停止（由于故意或错误而停止执行），您可以向管理员或其他用户发送电子邮件通知，管理员或其他用户随后可以调查该问题。
+如果分支停止（由於故意或錯誤而停止執行），您可以傳送電子郵件通知給管理員或其他使用者，由他們調查問題。
 
-1. 在管理控制台中，单击服务> Forms工作流>服务器设置>管理员通知。
-1. 在“通知类型”下，单击“停止的分支”。
-1. 选择“启用停止的分支”。
-1. 在“电子邮件地址”框中，键入分支停止时要通知的用户地址。 使用user@domain.com格式并用逗号分隔每个地址。 通常，此电子邮件地址适用于管理员。
-1. 在“主题”框中，键入电子邮件主题行的文本。 此字段已预填充了默认文本。 有关自定义此字段的详细信息，请参阅 [自定义通知内容](configuring-server-settings.md#customizing-the-content-of-notifications).
-1. 在“通知模板”框中，键入电子邮件正文的文本。 此字段已预填充了默认文本。 有关自定义此字段的详细信息，请参阅 [自定义通知内容](configuring-server-settings.md#customizing-the-content-of-notifications).
-1. 在“邮件格式”列表中，选择发送电子邮件的格式，即HTML或文本。 默认格式为HTML。
-1. 在电子邮件编码列表中，选择用于电子邮件的编码格式。 默认值为UTF-8，日本以外的大多数用户都使用它。 日本用户可以选择ISO2022-JP。
+1. 在管理控制檯中，按一下「服務> Forms工作流程>伺服器設定>管理員通知」。
+1. 在「通知型別」下，按一下「停止的分支」。
+1. 選取「啟用停止的分支」。
+1. 在「電子郵件地址」方塊中，輸入分支停止時要通知的使用者地址。 使用格式user@domain.com ，並以逗號分隔每個地址。 此電子郵件地址通常供管理員使用。
+1. 在「主旨」方塊中，輸入電子郵件主旨行的文字。 此欄位已預先填入預設文字。 如需自訂此欄位的詳細資訊，請參閱 [自訂通知內容](configuring-server-settings.md#customizing-the-content-of-notifications).
+1. 在「通知範本」方塊中，輸入電子郵件內文的文字。 此欄位已預先填入預設文字。 如需自訂此欄位的詳細資訊，請參閱 [自訂通知內容](configuring-server-settings.md#customizing-the-content-of-notifications).
+1. 在「訊息格式」清單中，選取傳送電子郵件訊息的格式，即「HTML」或「文字」。 預設格式為HTML。
+1. 在電子郵件編碼清單中，選取用於電子郵件訊息的編碼格式。 預設值為UTF-8，日本以外的大多數使用者都使用它。 日本的使用者可以選擇ISO2022-JP。
 1. 单击“保存”。
 
-### 配置停止的操作通知 {#configure-stalled-operation-notifications}
+### 設定已停止的操作通知 {#configure-stalled-operation-notifications}
 
-如果某个操作停止（由于故意或错误而停止执行），您可以向管理员或其他用户发送电子邮件通知，以便他们调查问题。
+如果作業中止（由於故意或錯誤而停止執行），您可以傳送電子郵件通知給管理員或其他使用者，由他們調查問題。
 
-1. 在管理控制台中，单击服务> Forms工作流>服务器设置>管理员通知。
-1. 在Notification Type（通知类型）下，单击Stalled Operation（停止的操作）。
-1. 选择启用停止的操作。
-1. 在“电子邮件地址”框中，键入要在操作停止时通知的用户地址。 使用user@domain.com格式并用逗号分隔每个地址。 通常，此电子邮件地址适用于管理员。
-1. 在“主题”框中，键入电子邮件主题行的文本。 此字段已预填充了默认文本。 有关自定义此字段的详细信息，请参阅 [自定义通知内容](configuring-server-settings.md#customizing-the-content-of-notifications)
-1. 在“通知模板”框中，键入电子邮件正文的文本。 此字段已预填充了默认文本。 有关自定义此字段的详细信息，请参阅 [自定义通知内容](configuring-server-settings.md#customizing-the-content-of-notifications).
+1. 在管理控制檯中，按一下「服務> Forms工作流程>伺服器設定>管理員通知」。
+1. 在「通知型別」下，按一下「已停止的作業」。
+1. 選取「啟用停止的作業」。
+1. 在「電子郵件地址」方塊中，輸入作業停止時要通知的使用者地址。 使用格式user@domain.com ，並以逗號分隔每個地址。 此電子郵件地址通常供管理員使用。
+1. 在「主旨」方塊中，輸入電子郵件主旨行的文字。 此欄位已預先填入預設文字。 如需自訂此欄位的詳細資訊，請參閱 [自訂通知內容](configuring-server-settings.md#customizing-the-content-of-notifications)
+1. 在「通知範本」方塊中，輸入電子郵件內文的文字。 此欄位已預先填入預設文字。 如需自訂此欄位的詳細資訊，請參閱 [自訂通知內容](configuring-server-settings.md#customizing-the-content-of-notifications).
 1. 单击“保存”。
 
-## 自定义通知内容 {#customizing-the-content-of-notifications}
+## 自訂通知內容 {#customizing-the-content-of-notifications}
 
-“任务通知”和“管理员通知”页提供了若干功能，可让您自定义通知消息：
+「工作通知」和「管理員通知」頁面提供幾個可讓您自訂通知訊息的功能：
 
-* 富文本编辑器
-* 变量选取器
-* URL生成
+* RTF編輯器
+* 變數選取器
+* URL產生
 
-### 富文本编辑器 {#rich-text-editor}
+### RTF編輯器 {#rich-text-editor}
 
-Notification Template区域是一个富文本编辑器，可用于生成电子邮件通知消息的HTML。 它提供字体和段落格式选项，这些选项位于“通知模板”框的下方。 这些选项包括字体类型、大小、样式和颜色，以及段落对齐方式和项目符号。
+「通知範本」區域是RTF編輯器，可讓您產生電子郵件通知訊息的HTML。 它提供字型和段落格式選項，這些選項可在「通知範本」方塊下方找到。 選項包括字型型別、大小、樣式和顏色，以及段落對齊方式和專案符號。
 
-### URL生成 {#url-generation}
+### URL產生 {#url-generation}
 
-仅对于任务通知，Forms工作流包括两个预定义的URL配置，您可以将它们从“URL生成”列表拖到“通知模板”框中，然后对其进行自定义：
+僅針對任務通知，Forms工作流程包含兩個預先定義的URL設定，您可以將其從URL產生清單拖曳至通知範本方塊，然後進行自訂：
 
-* OpenTask可用于“提醒”和“任务分配”通知类型。 此URL提供指向工作区中任务的链接，允许用户从电子邮件通知中快速访问任务。 将OpenTask URL拖到“通知模板”框时，该URL的格式如下：
+* OpenTask可用於「提醒」和「任務指派」通知型別。 此URL提供工作區中任務的連結，可讓使用者從電子郵件通知快速存取任務。 將OpenTask URL拖曳至「通知範本」方塊時，URL的格式如下：
 
    `https://@@notification-host@@:<PORT>/workpace/Main.html?taskId=@@taskid@@`
 
-* ClaimTask可用于“组 — 提醒”和“组 — 任务分配”通知类型。 此URL提供一个指向工作区中任务详细信息页面的链接，用户可以在其中声明或声明并打开工作项。 将ClaimTask URL拖到“通知模板”框时，该URL的格式如下：
+* ClaimTask可用於「群組 — 提醒」和「群組 — 任務指派」通知型別。 此URL提供工作區中任務詳細資訊頁面的連結，使用者可以在其中宣告或宣告並開啟工作專案。 將ClaimTask URL拖曳至「通知範本」方塊時，URL的格式如下：
 
    `https://@@notification-host@@:<PORT>/workpace/Main.html?taskId=@@taskid@@`
 
 >[!NOTE]
 >
->AEM Forms版本弃用Flex工作区。
+>AEM Forms版本已棄用Flex Workspace。
 
-如果您的解决方案部署在群集环境中，请将 `@@notification-host@@` 使用群集地址。
+如果您的解決方案部署在叢集環境中，請將 `@@notification-host@@` 叢集位址。
 
-`<`*端口* `>` 是应用程序服务器的HTTP侦听器的端口号。 支持的应用程序服务器的默认HTTP侦听器端口如下所示：
+`<`*連線埠* `>` 是應用程式伺服器HTTP接聽程式的連線埠號碼。 支援的應用程式伺服器的預設HTTP接聽程式連線埠如下：
 
 **JBoss：** 8080
 
-**WebLogic ServerOracle：** 7001
+**oracleWebLogic Server：** 7001
 
 **IBM WebSphere：** 9080
 
-要使这些URL正常运行，请将 `<`*端口* `>` ，端口号适合您的环境。
+若要讓這些URL正常運作，請將 `<`*連線埠* `>` 使用適合您環境的連線埠號碼。
 
 >[!NOTE]
 >
->如果您使用非Forms的自定义Web应用程序为用户提供任务访问权限，则必须使用适用于您的自定义应用程序的URL格式。
+>如果您使用Forms以外的自訂Web應用程式來向使用者提供任務的存取權，您必須改用適合您的自訂應用程式的URL格式。
 
-### 变量选取器 {#variable-picker}
+### 變數選取器 {#variable-picker}
 
-变量选取器列表提供了一些有用的变量，您可以将这些变量拖放到“主题”或“通知模板”框中。 将变量拖放到“主题”或“通知模板”框中时，它更改为实际表单工作流变量名称，其两侧各有两个@符号，例如， `@@taskid@@`.
+「變數選取器」清單提供有用的變數，您可以將其拖放至「主旨」或「通知範本」方塊中。 將變數拖放到「主旨」或「通知範本」方塊中時，變數會變更為實際表單工作流程變數名稱，其兩側會有兩個@符號，例如： `@@taskid@@`.
 
-对于用户和组的提醒、任务分配和截止日期，您可以在“主题”和“通知模板”框中使用以下变量：
+對於使用者和群組的提醒、任務指派和截止日期，您可以在「主旨」和「通知範本」方塊中使用下列變數：
 
-**描述** “说明”属性的内容，如Workbench中流程的用户步骤（起始点、分配任务操作或分配多个任务操作）中所定义。
+**說明** 「工作台」中處理之使用者步驟（起點、指定作業作業或指定多重作業作業）中所定義的「摘要」特性內容。
 
-**说明** 任务指令属性的内容，如Workbench中流程的用户步骤中所定义。
+**指示** 「作業指示」屬性的內容，如Workbench中處理作業的使用者步驟中所定義。
 
-**notification-host** AEM Forms应用程序服务器的主机名。
+**notification-host** AEM表單應用程式伺服器的主機名稱。
 
-**process-name** 进程的名称。
+**process-name** 處理序的名稱。
 
-**operation-name** 步骤的名称。
+**operation-name** 步驟的名稱。
 
-**taskid** 当前任务的唯一标识符。
+**taskid** 目前任務的唯一識別碼。
 
-**操作** 生成收件人可以单击的有效路由的编号列表（例如，批准、拒绝）。
+**動作** 產生收件者可點按的有效路由的編號清單（例如，核准、拒絕）。
 
-此外，对于组提醒、组任务分配和组截止日期，您还可以使用：
+此外，對於群組提醒、群組任務指派和群組截止日期，您也可以使用：
 
-**group-name** 分配了工作项的组的名称。
+**group-name** 指派工作專案的群組名稱。
 
 >[!NOTE]
 >
->如果变量没有值，则不会返回任何内容。
+>如果變數沒有值，則不會傳回任何專案。
 
-对于停止的分支，您可以在“主题”和“通知模板”框中使用以下变量：
+對於停頓的分支，您可以在「主旨」和「通知範本」方塊中使用下列變數：
 
-**branch-id** 分支标识符。
+**branch-id** 分支識別碼。
 
-**process-id** 进程实例标识符。
+**process-id** 處理序執行個體識別碼。
 
-**notification-host** AEM Forms应用程序服务器的主机名。
+**notification-host** AEM表單應用程式伺服器的主機名稱。
 
-对于停止的操作，您可以在“主题”和“通知模板”框中使用以下变量：
+對於已停止的作業，您可以在「主旨」和「通知範本」方塊中使用下列變數：
 
-**action-id** 操作标识符。
+**action-id** 作業識別碼。
 
-**branch-id** 分支标识符。
+**branch-id** 分支識別碼。
 
-**process-id** 进程实例标识符。
+**process-id** 處理序執行個體識別碼。
 
-**notification-host** AEM Forms应用程序服务器的主机名。
+**notification-host** AEM表單應用程式伺服器的主機名稱。
 
-### 在“主题”框中使用变量 {#using-a-variable-in-the-subject-box}
+### 在主旨方塊中使用變數 {#using-a-variable-in-the-subject-box}
 
-如果在“任务分配”通知的“主题”框中键入以下文本：
+如果您在「任務指派」通知的「主旨」方塊中輸入下列文字：
 
 `Please complete task @@taskid@@`
 
-如果用户被分配到任务376，则用户接收带有以下主题的电子邮件：
+如果使用者被指派了任務376，則他們將會收到一封包含以下主旨的電子郵件訊息：
 
 `Please complete task 376`
 
-### 在“通知模板”框中使用变量 {#using-variables-in-the-notification-template-box}
+### 在通知範本方塊中使用變數 {#using-variables-in-the-notification-template-box}
 
-如果在Stalled Branch通知的“通知模板”框中键入以下文本：
+如果您在「通知範本」方塊中為Stalled Branch通知鍵入下列文字：
 
 `Branch @@branch-id@@ has stalled! You have received this notification from @@notification-host@@.`
 
-如果分支编号为4868且服务器名称为，则管理员会收到包含以下内容的电子邮件 `ServerXYZ`：
+如果分支編號為4868且伺服器名稱為，則管理員會收到包含以下內容的電子郵件訊息 `ServerXYZ`：
 
 `Branch 4868 has stalled! You have received this notification from ServerXYZ.`
 
-## 配置业务活动监控连接 {#configuring-business-activity-monitoring-connections}
+## 設定商務活動監視連線 {#configuring-business-activity-monitoring-connections}
 
-Business Activity Monitoring是一个可选模块，提供了一组操作仪表板，用于实时查看您的操作和关键绩效指标。
+「業務活動監控」是選用的模組，提供一組營運儀表板，可即時掌握您的營運情況和關鍵績效指標。
 
-在“BAM配置设置”页上，可以设置与运行BAM的服务器的连接，以便可以跟踪与进程相关的事件并将其传输到该服务器。
+在「BAM組態設定」頁面中，您可以設定與執行BAM之伺服器的連線，以便追蹤與處理序相關的事件並將其傳輸至該伺服器。
 
-1. 在管理控制台中，单击服务> Forms工作流>服务器设置> BAM配置设置。
-1. 在“BAM主机”框中，键入运行BAM的服务器的名称。 缺省值为localhost。
-1. 在“BAM端口”框中，键入用于连接到运行BAM的服务器的端口。 JBoss的默认BAM端口为8080，WebLogic为7001，WebSphere为9080。
-1. 在服务器主机框中，键入主机表单服务器的名称或IP地址。 默认值为localhost。
-1. 在“服务器端口”框中，键入表单服务器使用的端口号。
-1. 在“User Name（用户名）”和“Password（密码）”框中，键入相应的用户ID和密码以访问BAM服务器。 默认用户名是CognosNowAdmin ，默认密码是manager。
+1. 在管理控制檯中，按一下「服務> Forms工作流程>伺服器設定> BAM組態設定」。
+1. 在「BAM主機」方塊中，輸入執行BAM的伺服器名稱。 預設值為localhost。
+1. 在「BAM連線埠」方塊中，輸入用來連線到執行BAM之伺服器的連線埠。 JBoss的預設BAM連線埠是8080、WebLogic是7001、WebSphere是9080。
+1. 在「伺服器主機」方塊中，輸入主機表單伺服器的名稱或IP位址。 預設值為localhost。
+1. 在「伺服器連線埠」方塊中，輸入表單伺服器使用的連線埠號碼。
+1. 在「使用者名稱」和「密碼」方塊中，輸入適當的使用者ID和密碼以存取「BAM伺服器」。 預設使用者名稱為CognosNowAdmin，預設密碼為manager。
 1. 单击“保存”。

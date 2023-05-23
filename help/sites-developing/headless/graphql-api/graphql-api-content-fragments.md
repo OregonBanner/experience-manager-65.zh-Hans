@@ -1,18 +1,18 @@
 ---
 title: 用于内容片段的 AEM GraphQL API
-description: 了解如何将Adobe Experience Manager(AEM)中的内容片段与AEM GraphQL API结合使用来交付无头内容。
+description: 瞭解如何在Adobe Experience Manager (AEM)中將內容片段與AEM GraphQL API搭配使用，以進行Headless內容傳送。
 feature: Content Fragments,GraphQL API
 exl-id: beae1f1f-0a76-4186-9e58-9cab8de4236d
 source-git-commit: cf78742614fd2d35f59905895dfacb83190140cd
 workflow-type: tm+mt
 source-wordcount: '3250'
-ht-degree: 88%
+ht-degree: 89%
 
 ---
 
 # 用于内容片段的 AEM GraphQL API {#graphql-api-for-use-with-content-fragments}
 
-了解如何将Adobe Experience Manager(AEM)中的内容片段与AEM GraphQL API结合使用来交付无头内容。
+瞭解如何在Adobe Experience Manager (AEM)中將內容片段與AEM GraphQL API搭配使用，以進行Headless內容傳送。
 
 与内容片段一起使用的 AEM GraphQL API 很大程度上依赖于标准的开源 GraphQL API。
 
@@ -24,7 +24,7 @@ ht-degree: 88%
 
 >[!NOTE]
 >
->GraphQL当前用于Adobe Experience Manager(AEM)的两个（单独）方案：
+>GraphQL目前用於Adobe Experience Manager (AEM)中的兩種（不同）情況：
 >
 >* [AEM Commerce 通过 GraphQL 使用来自 Commerce 平台的数据](/help/commerce/cif/integrating/magento.md)。
 >* AEM 内容片段与 AEM GraphQL API（一种自定义实施，基于标准 GraphQL）配合使用，提供结构化内容用于您的应用程序。
@@ -32,7 +32,7 @@ ht-degree: 88%
 
 ## 前提条件 {#prerequisites}
 
-使用GraphQL的客户应使用GraphQL索引包1.0.5安装AEM内容片段。请参阅 [发行说明](/help/release-notes/release-notes.md#install-aem-graphql-index-add-on-package) 以了解更多详细信息。
+使用GraphQL的客戶應安裝AEM內容片段搭配GraphQL索引套件1.0.5。請參閱 [發行說明](/help/release-notes/release-notes.md#install-aem-graphql-index-add-on-package) 以取得更多詳細資料。
 
 ## GraphQL API {#graphql-api}
 
@@ -104,19 +104,19 @@ GraphQL 使用以下对象：
 
 * **[条目列表](https://graphql.org/learn/schema/#lists-and-non-null)**
 
-AEM 提供将查询（两种类型）转换为[](/help/sites-developing/headless/graphql-api/persisted-queries.md)持久化查询的功能，可由 Dispatcher 和 CDN 缓存。
+AEM 提供将查询（两种类型）转换为[](/help/sites-developing/headless/graphql-api/persisted-queries.md)持久查询的功能，可由 Dispatcher 和 CDN 缓存。
 
 ### GraphQL 查询最佳实践（Dispatcher 和 CND） {#graphql-query-best-practices}
 
 [持久查询](/help/sites-developing/headless/graphql-api/persisted-queries.md)是推荐用于发布实例的方法：
 
 * 它们被缓存
-* 它们由AEM集中管理
+* 由AEM集中管理
 
 <!-- is this fully accurate? -->
 >[!NOTE]
 >
->通常，作者上没有调度程序/CDN，因此在使用保留查询时不会获得任何性能提升；除了测试它们。
+>通常創作例項上沒有Dispatcher/CDN，因此在那裡使用持續查詢不會提高效能；除了測試它們。
 
 不建议使用 POST 请求的 GraphQL 查询，因为它们未缓存，因此在默认实例中，Dispatcher 配置为阻止此类查询。
 
@@ -126,9 +126,9 @@ AEM 提供将查询（两种类型）转换为[](/help/sites-developing/headless
 >
 >将来某个时候，执行直接查询的功能可能会被弃用。
 
-## GraphiQL接口 {#graphiql-interface}
+## GraphiQL介面 {#graphiql-interface}
 
-标准的实施 [GraphiQL](https://graphql.org/learn/serving-over-http/#graphiql) 界面可与AEM GraphQL一起使用。
+標準的實作 [GraphiQL](https://graphql.org/learn/serving-over-http/#graphiql) 介面可與AEM GraphQL搭配使用。
 
 >[!NOTE]
 >
@@ -136,7 +136,7 @@ AEM 提供将查询（两种类型）转换为[](/help/sites-developing/headless
 >
 >在以前的版本中，安装 GraphiQL IDE 时需要软件包。 如果您已安装此软件，现可将其移除。
 
-此界面允许您直接输入和测试查询。
+此介面可讓您直接輸入及測試查詢。
 
 例如：
 
@@ -148,18 +148,18 @@ AEM 提供将查询（两种类型）转换为[](/help/sites-developing/headless
 
 >[!NOTE]
 >
->有关更多详细信息，请参阅 [使用GraphiQL IDE](/help/sites-developing/headless/graphql-api/graphiql-ide.md).
+>如需詳細資訊，請參閱 [使用GraphiQL IDE](/help/sites-developing/headless/graphql-api/graphiql-ide.md).
 
 ## 针对创作环境和发布环境的用例 {#use-cases-author-publish-environments}
 
-用例取决于AEM环境的类型：
+使用案例可能取決於AEM環境的型別：
 
 * 发布环境；用于：
    * 查询 JS 应用程序的数据（标准用例）
 
 * 创作环境；用于：
    * 查询用于“内容管理用途”的数据：
-      * AEM中的GraphQL当前是只读API。
+      * AEM中的GraphQL目前是唯讀API。
       * REST API 可用于 CR(u)D 操作。
 
 ## 权限 {#permission}
@@ -261,7 +261,7 @@ GraphQL for AEM 支持一个类型列表。所有支持的内容片段模型数�
 | 枚举 |  `String` | 用于显示在模型创建时定义的选项列表中的选项 |
 | 标记 |  `[String]` | 用于显示表示在 AEM 中所用标记的字符串列表 |
 | 内容引用 |  `String` | 用于显示指向 AEM 中其他资源的路径 |
-| 片段引用 | *模型类型* <br><br>单个字段： `Model`  — 模型类型，直接引用 <br><br>多字段，具有一个引用类型： `[Model]`  — 类型数组 `Model`，直接从数组引用 <br><br>多字段，具有多个引用类型： `[AllFragmentModels]`  — 所有模型类型的数组，从具有并集类型的数组引用 |  用于引用在创建模型时定义的特定模型类型的一个或多个内容片段 |
+| 片段引用 | *模型类型*<br><br>单个字段：`Model`-模型类型，直接引用<br><br>多字段，具有一个引用类型：`[Model]`-数组类型`Model`，直接从数组中引用<br><br>多字段，带有多个引用类型；`[AllFragmentModels]`-所有模型类型的数组，从具有合并类型的数组中引用 | 用于引用创建模型时定义的特定模型类型的一个或多个内容片段 |
 
 {style="table-layout:auto"}
 
@@ -483,10 +483,10 @@ query {
    * 将 `List` 添加到模型名称；例如，`cityList`
    * 请参阅[示例查询 – 关于所有城市的所有信息](#sample-all-information-all-cities)
 
-* 过滤器 `includeVariations` 包含在 `List` 查询类型。  要在查询结果中检索内容片段变量，请 `includeVariations` 筛选器必须设置为 `true`.
+* 篩選器 `includeVariations` 包含在 `List` 查詢型別。  若要擷取查詢結果中的內容片段變數，請 `includeVariations` 篩選器必須設定為 `true`.
 
    >[!CAUTION]
-   >过滤器 `includeVariations` 不能与系统生成的字段一起使用 `_variation`.
+   >篩選器 `includeVariations` 無法與系統產生的欄位一起使用 `_variation`.
 
 * 如果您希望使用逻辑 OR：
    * 使用 ` _logOp: OR`
@@ -518,17 +518,17 @@ query {
          >如果内容片段不存在给定的变量，则主控变量将作为（回退）默认值返回。
 
          >[!CAUTION]
-         >系统生成的字段 `_variation` 不能与过滤器一起使用 `includeVariations`.
+         >系統產生的欄位 `_variation` 無法與篩選器搭配使用 `includeVariations`.
 
          * 请参阅[示例查询 – 具有指定变体的所有城市](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-cities-named-variation)
-      * `_tags` :显示包含标记的内容片段或变体的ID;这是 `cq:tags` 标识符。
+      * `_tags` ：顯示包含標籤的內容片段或變體ID；這是一個陣列 `cq:tags` 識別碼。
 
-         * 请参阅 [示例查询 — 标记为城市中断的所有城市的名称](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-names-all-cities-tagged-city-breaks)
-         * 请参阅 [附加了特定标记的给定模型的内容片段变量查询示例](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-wknd-fragment-variations-given-model-specific-tag)
+         * 另請參閱 [範例查詢 — 所有標籤為分行符號的城市名稱](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-names-all-cities-tagged-city-breaks)
+         * 另請參閱 [附加特定標籤之指定模型的內容片段變體範例查詢](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-wknd-fragment-variations-given-model-specific-tag)
 
          >[!NOTE]
          >
-         >还可以通过列出内容片段的元数据来查询标记。
+         >也可以透過列出內容片段的中繼資料來查詢標籤。
    * 以及操作：
 
       * `_operator`：应用特定运算符；`EQUALS`、`EQUALS_NOT`、`GREATER_EQUAL`、`LOWER`、`CONTAINS`、`STARTS_WITH`
@@ -556,7 +556,7 @@ query {
 
 * 在查询嵌套片段时回退：
 
-   * 如果请求的变量在嵌套片段中不存在，则 **主控** 将返回变量。
+   * 如果巢狀片段中不存在請求的變數，則 **主版** 將傳回變數。
 
 ### CORS 筛选条件 {#cors-filter}
 
@@ -564,9 +564,9 @@ query {
 >
 >有关 AEM 中 CORS 资源共享策略的详细概述，请参阅[了解跨源资源共享 (CORS)](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html?lang=zh-Hans#understand-cross-origin-resource-sharing-(cors))。
 
-要访问GraphQL端点，必须在客户Git存储库中配置CORS策略。 此操作可通过为所需端点添加相应的 OSGi CORS 配置文件来完成。
+若要存取GraphQL端點，必須在客戶Git存放庫中設定CORS原則。 此操作可通过为所需端点添加相应的 OSGi CORS 配置文件来完成。
 
-此配置必须指定受信任的网站源 `alloworigin` 或 `alloworiginregexp` 必须授予其访问权限。
+此設定必須指定信任的網站來源 `alloworigin` 或 `alloworiginregexp` 必須授予其存取權。
 
 例如，要授予对 GraphQL 端点  的访问权限，以及对 `https://my.domain` 的持久查询端点的访问权限，您可以使用：
 
@@ -607,9 +607,9 @@ query {
 
 ### 反向链接筛选条件 {#referrer-filter}
 
-除了CORS配置之外，还必须配置反向链接过滤器，以允许从第三方主机访问。
+除了CORS設定外，反向連結篩選條件必須設定為允許從協力廠商主機存取。
 
-这是通过添加相应的OSGi反向链接过滤器配置文件来完成的，该配置文件：
+若要這麼做，請新增適當的OSGi反向連結篩選設定檔，其可：
 
 * 指定了可信的网站主机名；可以为 `allow.hosts` 或 `allow.hosts.regexp`。
 * 授予了对此主机名的访问权限。

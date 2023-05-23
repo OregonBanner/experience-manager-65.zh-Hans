@@ -1,7 +1,7 @@
 ---
-title: 为HTML5表单启用附件
+title: 啟用HTML5表單的附件
 seo-title: Enabling attachments for an HTML5 form
-description: 默认情况下，将禁用HTML5表单的附件支持。
+description: 依預設，會停用HTML5表單的附件支援。
 seo-description: By default, the attachment support for HTML5 forms is disabled.
 uuid: 2c62ac3e-4b27-46c7-a61d-a805fb5d26fb
 content-type: reference
@@ -17,52 +17,52 @@ ht-degree: 1%
 
 ---
 
-# 为HTML5表单启用附件 {#enabling-attachments-for-an-html-form}
+# 啟用HTML5表單的附件 {#enabling-attachments-for-an-html-form}
 
-您可以使用HTML5表单上传、预览和提交附件。 默认情况下，附件支持处于禁用状态。 启用附件支持：
+您可以使用HTML5表單上傳、預覽及提交附件。 依預設，會停用附件支援。 若要啟用附件支援：
 
-1. 创建 [自定义配置文件](/help/forms/using/custom-profile.md) 带有 `mfAttachmentOptions` 多选字符串属性。 中的每个字符串 `mfAttachmentOptions` 属性必须具有 `property=value` 格式以配置文件附件小部件的选项。 此 `property` 和 `value` 可以具有以下任一值：
+1. 建立 [自訂設定檔](/help/forms/using/custom-profile.md) 搭配 `mfAttachmentOptions` multiselect string屬性。 每個字串 `mfAttachmentOptions` 屬性必須具有 `property=value` 格式以設定檔案附件Widget的選項。 此 `property` 和 `value` 可以有下列任何值：
 
-   | 属性 | 值 |
+   | 属性 | 价值 |
    |--- |---|
-   | multiSelect | true或false（默认为true） |
-   | fileSizeLimit | 以MB为单位的数字（默认为2 MB）。 例如，5。 |
-   | 按钮文本 | 弹出窗口的按钮文本（默认为“附加”） |
-   | 接受 | 要接受的文件类型的逗号分隔列表（默认为“audio/&amp;ast；， video/&amp;ast；， image/&amp;ast；， text/&amp;ast；， .pdf”） |
+   | multiSelect | true或false （預設為true） |
+   | fileSizeLimit | 以MB為單位的數字（預設為2 MB）。 例如，5。 |
+   | 按鈕文字 | 彈出式視窗的按鈕文字（預設為「附加」） |
+   | 接受 | 要接受的檔案型別清單（預設為&quot;audio/&amp;ast；， video/&amp;ast；， image/&amp;ast；， text/&amp;ast；， .pdf&quot;）（以逗號分隔） |
 
    例如：
 
-   ![配置选项](assets/mfAttachmentOptions.png)
+   ![設定選項](assets/mfAttachmentOptions.png)
 
-   根据需要，您还可以为 `mfAttachmentOptions` 属性。
-
-   >[!NOTE]
-   >
-   >在Microsoft Internet Explorer 9中，用户可以附加大于指定限制的文件。 这是一个已知问题。
-
-1. 使用 [元数据编辑器](/help/forms/using/manage-form-metadata.md) 选择您在上面为HTML5表单创建的自定义配置文件。
-1. 使用自定义配置文件渲染表单模板，表单工具栏上会显示附件图标。
+   如有需要，您也可以為「 」指定更多自訂選項 `mfAttachmentOptions` 屬性。
 
    >[!NOTE]
    >
-   >开箱即用的Forms Portal提供了启用了草稿和附件功能的自定义配置文件。 欲知关于 **另存为草稿** 配置文件，请参阅 [将HTML5表单另存为草稿](/help/forms/using/saving-html5-form-draft.md).
+   >在Microsoft Internet Explorer 9中，使用者可以附加超過指定限制的檔案。 這是已知問題。
 
-1. 单击附件图标，将出现一个附件选择对话框。 浏览并选择附件，然后单击 **附加**.
-
-   >[!NOTE]
-   >
-   >要预览附件，请单击附件名称。
+1. 使用 [中繼資料編輯器](/help/forms/using/manage-form-metadata.md) 以選取您在上面為HTML5表單建立的自訂設定檔。
+1. 使用自訂設定檔演算您的表單範本，表單工具列上會出現附件圖示。
 
    >[!NOTE]
    >
-   >文件预览选项不适用于匿名用户。
+   >Forms Portal提供開箱即用的自訂設定檔，並啟用草稿和附件功能。 如需更多有關「 」的資訊， **另存為草稿** 個人資料，請參閱 [將HTML5表單儲存為草稿](/help/forms/using/saving-html5-form-draft.md).
+
+1. 按一下附件圖示，附件選取對話方塊就會顯示。 瀏覽並選取附件，然後按一下 **附加**.
+
+   >[!NOTE]
+   >
+   >若要預覽附件，請按一下附件名稱。
+
+   >[!NOTE]
+   >
+   >檔案預覽選項不適用於匿名使用者。
 
 ## 附件提交格式 {#attachment-submission-format}
 
-启用附件后，HTML5表单会提交多部分数据。 多部分提交数据分为两部分 **dataXml** 和 **附件**.
+啟用附件時，HTML5表單會提交多部分資料。 多部分提交資料包含兩個部分 **dataXml** 和 **附件**.
 
 >[!NOTE]
 >
->要获得向后兼容性，如果 `mfAllowAttachments` 选项关闭，则HTML5表单不会发送多部分数据。 它将简单数据xml发送到 **application/xml** 格式。
+>為了回溯相容性，如果 `mfAllowAttachments` 選項關閉，則HTML5表單不會傳送多部分資料。 它會傳送簡單資料xml於 **application/xml** 格式。
 
-如果已打开mfAllowAttachments标志，则 [提交服务代理服务](/help/forms/using/service-proxy.md) 此外，还通过dataXml和附件发布多部分数据。
+如果已開啟mfAllowAttachments旗標，則 [送出服務Proxy服務](/help/forms/using/service-proxy.md) 也會以dataXml和附件張貼多部分資料。

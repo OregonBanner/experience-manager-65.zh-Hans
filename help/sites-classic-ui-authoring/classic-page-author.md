@@ -1,6 +1,6 @@
 ---
-title: 创作页面
-description: 有两个关于使用AEM进行创作的概述。 (1)作者的首要步骤 — 新作者的简介，以及(2)页面创作快速指南 — 主要操作的快速指南（概要）。
+title: 製作頁面
+description: 使用AEM編寫有兩個概述。 (1)作者的首要步驟 — 新作者的簡介，及(2)頁面製作快速指南 — 主要動作的快速指南（高階說明）。
 uuid: 95d12bd6-c51d-4b7c-9d67-a152a822eb01
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -15,37 +15,37 @@ ht-degree: 0%
 
 ---
 
-# 创作页面{#authoring-pages}
+# 製作頁面{#authoring-pages}
 
-以下内容概述了如何使用AEM进行创作：
+以下提供使用AEM撰寫的概觀：
 
-* [作者的首要步骤](/help/sites-classic-ui-authoring/classic-page-author-first-steps.md)  — 新作者简介
+* [作者的首要步驟](/help/sites-classic-ui-authoring/classic-page-author-first-steps.md)  — 新作者的簡介
 
 >[!NOTE]
 >
->本节介绍创作内容页面时涉及的任务。 <!-- There are many additional features closely related to page authoring, these are covered under [Site and Page Features](/sites-classic-ui-authoring/classic-feature.md). -->
+>本節說明撰寫內容頁面時涉及的作業。 <!-- There are many additional features closely related to page authoring, these are covered under [Site and Page Features](/sites-classic-ui-authoring/classic-feature.md). -->
 
-## 页面创作功能快速概述 {#quick-overview-of-features-used-for-authoring-pages}
+## 用於編寫頁面的功能的快速概覽 {#quick-overview-of-features-used-for-authoring-pages}
 
-为了在创作页面时帮助您，创作环境提供了以下功能：
+為協助您撰寫頁面，作者環境會提供下列功能：
 
 * **拖放**
-只需将组件（如文本、图像）和数字资产（如图像）拖放到所需位置，即可将它们放置到页面上。
+只要將元件（例如文字、影像）和數位資產（例如影像）拖放至所需位置，就能在頁面上放置元件。
 
-* **编辑**
-将组件放置到页面上后，可以打开一个特定于组件的对话框，以输入内容和/或配置该组件的特性（例如，图像大小）。
+* **編輯**
+一旦定位在頁面上，即可開啟元件專用對話方塊，以輸入內容及/或設定該元件的特性（例如影像大小）。
 
-* **就地编辑**
-文本和图像组件可以直接在网页上进行编辑，而无需打开对话框或明确的保存操作。
+* **就地編輯**
+可直接在網頁上編輯文字和影像元件，而不需開啟對話方塊或明確儲存動作。
 
 * **[Sidekick](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#sidekickclassicui)**
-可编辑页面上显示的浮动“检查器”窗口。 从此处，可以将新组件拖动到页面上，并执行特定于页面的操作。
+顯示在可編輯頁面上的浮動「檢視窗」。 從此處，可將新元件拖曳至頁面上，並執行頁面專屬動作。
 
-* **[内容查找器](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#thecontentfinderclassicui)**
-在每个可创作页面的左侧，内容查找器可让您快速访问一系列资产，包括数字资产(如其他图像、Flash元素和文档)、其他页面和段落。 这些项目可拖至页面；例如，放置资产或创建指向其他页面的链接。
+* **[內容尋找器](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#thecontentfinderclassicui)**
+在每個可編寫頁面的左側，內容尋找器可讓您快速存取一系列資產，包括數位資產(例如其他影像、Flash元素和檔案)、其他頁面和段落。 這些專案可拖曳至頁面；例如，放置資產或建立其他頁面的連結。
 
-* **上下文菜单**
-右键单击屏幕上的大多数元素（例如页面上的段落）会显示包含相应操作选项的上下文菜单。
+* **內容功能表**
+以滑鼠右鍵按一下大部分熒幕上的元素（例如頁面上的段落），可開啟包含適當動作選項的內容選單。
 
-* **在键入时搜索**
-在某些情况下（例如，编辑对话框中的路径选择），当您键入查询时，通过AEM界面搜索内容会显示动态匹配项。
+* **依輸入內容搜尋**
+在某些情況下（例如，編輯對話方塊中的路徑選擇），當您鍵入查詢時，透過AEM介面搜尋內容會顯示動態比對。

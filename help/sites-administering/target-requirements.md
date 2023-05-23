@@ -1,7 +1,7 @@
 ---
-title: 与Adobe Target集成的先决条件
+title: 與Adobe Target整合的必要條件
 seo-title: Prerequisites for Integrating with Adobe Target
-description: 了解与Adobe Target集成的先决条件。
+description: 瞭解與Adobe Target整合的先決條件。
 seo-description: Find out about the prerequisites for integrating with Adobe Target.
 uuid: 55d87a96-5fe7-4f7e-93c1-fdf7fbb7c971
 contentOwner: User
@@ -18,66 +18,66 @@ ht-degree: 7%
 
 ---
 
-# 与Adobe Target集成的先决条件{#prerequisites-for-integrating-with-adobe-target}
+# 與Adobe Target整合的必要條件{#prerequisites-for-integrating-with-adobe-target}
 
-作为 [AEM与Adobe Target的集成](/help/sites-administering/target.md)，您需要注册Adobe Target、配置复制代理以及发布节点上的安全活动设置。
+作為 [AEM與Adobe Target的整合](/help/sites-administering/target.md)，您必須向Adobe Target註冊、設定復寫代理程式，並在發佈節點上保護活動設定。
 
-## 在Adobe Target中注册 {#registering-with-adobe-target}
+## 向Adobe Target註冊 {#registering-with-adobe-target}
 
-要将AEM与Adobe Target集成，您必须拥有有效的Adobe Target帐户。 此帐户必须具有 **审批者** 最低级别权限。 当您注册Adobe Target时，您将收到一个客户端代码。 您需要客户端代码以及Adobe Target登录名和密码才能将AEM连接到Adobe Target。
+若要將AEM與Adobe Target整合，您必須具備有效的Adobe Target帳戶。 此帳戶必須具有 **核准者** 至少需要層級許可權。 註冊Adobe Target時，您會收到使用者端代碼。 您需要使用者端代碼以及Adobe Target登入名稱和密碼，才能將AEM連線至Adobe Target。
 
-客户端代码在调用Adobe Target服务器时标识Adobe Target客户帐户。
+使用者端代碼會在呼叫Adobe Target伺服器時識別Adobe Target客戶帳戶。
 
 >[!NOTE]
 >
->您的帐户还必须由Target团队启用才能使用集成。
+>您的帳戶也必須由Target團隊啟用，才能使用整合。
 >
->如果不是这种情况，请联系 [Adobe客户关怀](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html).
+>如果不是這種情況，請聯絡 [Adobe客戶服務](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html).
 
-## 启用目标复制代理 {#enabling-the-target-replication-agent}
+## 啟用目標復寫代理 {#enabling-the-target-replication-agent}
 
-测试和目标 [复制代理](/help/sites-deploying/replication.md) 必须在创作实例上启用。 请注意，如果您使用的是 [nosamplecontent](/help/sites-deploying/configure-runmodes.md#using-samplecontent-and-nosamplecontent) 用于安装AEM的运行模式。 有关保护生产环境的更多信息，请参见 [安全核对清单](/help/sites-administering/security-checklist.md).
+測試和目標 [復寫代理](/help/sites-deploying/replication.md) 必須在作者執行個體上啟用。 請注意，如果您使用 [nosamplecontent](/help/sites-deploying/configure-runmodes.md#using-samplecontent-and-nosamplecontent) 執行模式以安裝AEM。 如需保護生產環境的詳細資訊，請參閱 [安全性檢查清單](/help/sites-administering/security-checklist.md).
 
-1. 在AEM主页上，单击或点按 **工具** > **部署** > **复制**.
-1. 单击或点按 **作者代理**.
-1. 单击或点按 **测试和定位（测试和定位）** 复制代理，然后单击或点按 **编辑**.
-1. 选择已启用选项，然后单击或点按 **确定**.
+1. 在AEM首頁上，按一下或點選 **工具** > **部署** > **復寫**.
+1. 按一下或點選 **作者上的代理**.
+1. 按一下或點選 **Test and Target (test and target)** 復寫代理程式，然後按一下或點選 **編輯**.
+1. 選取「已啟用」選項，然後按一下或點選 **確定**.
 
    >[!NOTE]
    >
-   >配置Test and Target复制代理时，在 **传输** 选项卡，URI默认设置为 **tnt:///**. 不要将此URI替换为 **https://admin.testandtarget.omniture.com**.
+   >當您設定Test and Target復寫代理程式時，請在 **傳輸** 索引標籤中，URI預設會設定為 **tnt:///**. 請勿將此URI取代為 **https://admin.testandtarget.omniture.com**.
    >
-   >请注意，如果您尝试测试与的连接 **tnt:///**，则会引发错误。 这是预期行为，因为此URI仅供内部使用，不应与一起使用 **测试连接**.
+   >請注意，如果您嘗試透過測試連線 **tnt:///**，會擲回錯誤。 這是預期行為，因為此URI僅供內部使用，不應與搭配使用 **測試連線**.
 
-## 保护活动设置节点 {#securing-the-activity-settings-node}
+## 保護活動設定節點 {#securing-the-activity-settings-node}
 
 您必须确保发布实例中的活动设置节点 **cq:ActivitySettings** 安全，以使其不可由普通用户访问。该活动设置节点应当只能由负责将活动同步到 Adobe Target 的服务访问。
 
-此 **cq：ActivitySettings** 节点在CRXDE lite中可用，位于 `/content/campaigns/*nameofbrand*`* *在活动jcr：content节点下；* *例如 `/content/campaign/we-retail/master/myactivity/jcr:content/cq:ActivitySettings`. 此节点仅在定位组件后创建。
+此 **cq：ActivitySettings** 節點可在CRXDE lite中使用，位於 `/content/campaigns/*nameofbrand*`* *在活動jcr：content節點下；* *例如 `/content/campaign/we-retail/master/myactivity/jcr:content/cq:ActivitySettings`. 此節點僅在您鎖定元件目標後建立。
 
-此 **cq：ActivitySettings** 节点的活动的jcr：content受以下ACL保护：
+此 **cq：ActivitySettings** 活動jcr：content下的節點受以下ACL保護：
 
-* 拒绝所有人的所有
-* 允许“target-activity-authors”使用jcr：read，rep：write（作者是此组的一名现成成员）
-* 允许“targetservice”的jcr：read，rep：write
+* 拒絕所有人的所有
+* 允許「target-activity-authors」的jcr：read，rep：write （author是此群組的成員）
+* 允許「targetservice」的jcr：read，rep：write
 
-这些设置可确保普通用户无权访问节点属性。 在创作实例和发布实例上使用相同的ACL。 参见 [用户管理和安全性](/help/sites-administering/security.md) 了解更多信息。
+這些設定可確保一般使用者無權存取節點屬性。 在製作和發佈上使用相同的ACL。 另請參閱 [使用者管理與安全性](/help/sites-administering/security.md) 以取得詳細資訊。
 
-## 配置AEM链接外部化器 {#configuring-the-aem-link-externalizer}
+## 設定AEM連結外部化器 {#configuring-the-aem-link-externalizer}
 
-在Adobe Target中编辑活动时，URL指向 **localhost** 除非您更改了AEM创作节点上的URL。 如果希望导出的内容指向特定的，则可以配置AEM Link Externalizer *发布* 域。
-
->[!NOTE]
->
->另请参阅 [添加云配置](/help/sites-administering/experience-fragments-target.md#add-the-cloud-configuration).
-
-要配置AEM外部化器，请执行以下操作：
+在Adobe Target中編輯活動時，URL會指向 **localhost** 除非您變更AEM作者節點上的URL。 如果您希望匯出的內容指向特定的，可以設定AEM Link Externalizer *發佈* 網域。
 
 >[!NOTE]
 >
->有关更多详细信息，请参阅 [将URL外部化](/help/sites-developing/externalizer.md).
+>另請參閱 [新增雲端設定](/help/sites-administering/experience-fragments-target.md#add-the-cloud-configuration).
 
-1. 导航到OSGi Web控制台，网址为 **https://&lt;server>：&lt;port>/system/console/configMgr.**
-1. 查找 **Day CQ链接外部化器** 并输入创作节点的域。
+若要設定AEM外部化程式：
+
+>[!NOTE]
+>
+>如需詳細資訊，請參閱 [將URL外部化](/help/sites-developing/externalizer.md).
+
+1. 導覽至OSGi Web主控台，網址為 **https://&lt;server>：&lt;port>/system/console/configMgr。**
+1. 尋找 **Day CQ連結外部化器** 並輸入作者節點的網域。
 
    ![chlimage_1-120](assets/aem-externalizer-01.png)

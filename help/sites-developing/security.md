@@ -1,7 +1,7 @@
 ---
 title: 安全性
 seo-title: Security
-description: 应用程序安全在开发阶段启动
+description: 應用程式安全性在開發階段啟動
 seo-description: Application Security starts during the development phase
 exl-id: c4f7f45f-224b-4fc3-b4b0-f5b21b8a466f
 source-git-commit: c55b70ec11842d3f7d82adbf552b2624c1dcc599
@@ -13,48 +13,48 @@ ht-degree: 0%
 
 # 安全性{#security}
 
-Application Security在开发阶段启动。 Adobe建议应用以下安全最佳实践。
+Application Security在開發階段啟動。 Adobe建議套用下列安全性最佳實務。
 
-## 使用请求会话 {#use-request-session}
+## 使用請求工作階段 {#use-request-session}
 
-按照最小权限原则，Adobe建议使用绑定到用户请求的会话和适当的访问控制来完成每次存储库访问。
+根據最低許可權原則，Adobe建議使用繫結至使用者要求的工作階段和適當的存取控制，來完成每個存放庫存取權。
 
-## Protect防止跨站点脚本(XSS) {#protect-against-cross-site-scripting-xss}
+## Protect避免跨網站指令碼(XSS) {#protect-against-cross-site-scripting-xss}
 
-跨站点脚本(XSS)允许攻击者将代码注入其他用户查看的网页中。 此安全漏洞可被恶意Web用户利用来绕过访问控制。
+跨網站指令碼(XSS)可讓攻擊者將程式碼插入其他使用者檢視的網頁中。 惡意的網頁使用者可以利用這個安全性弱點來略過存取控制。
 
-AEM应用了在输出时筛选所有用户提供的内容的原则。 在开发和测试过程中，防御XSS被列为最高优先事项。
+AEM會套用輸出時篩選所有使用者提供內容的原則。 在開發和測試期間，防止XSS都被賦予最高優先權。
 
-AEM提供的XSS保护机制基于 [AntiSamy Java库](https://www.owasp.org/index.php/Category:OWASP_AntiSamy_Project) 提供者 [OWASP（开放Web应用程序安全项目）](https://www.owasp.org/). 默认AntiSamy配置位于
+AEM提供的XSS保護機制是以 [AntiSamy Java資料庫](https://www.owasp.org/index.php/Category:OWASP_AntiSamy_Project) 提供者 [OWASP (Open Web Application Security Project)](https://www.owasp.org/). 預設AntiSamy設定可在以下網址找到：
 
 `/libs/cq/xssprotection/config.xml`
 
-请务必通过覆盖配置文件来调整此配置，以满足您自己的安全需求。 官方的 [AntiSamy文档](https://www.owasp.org/index.php/Category:OWASP_AntiSamy_Project) 将为您提供实施安全要求所需的所有信息。
+請務必透過覆蓋設定檔案來調整此設定，以符合您自己的安全性需求。 官方 [AntiSamy檔案](https://www.owasp.org/index.php/Category:OWASP_AntiSamy_Project) 會提供您實作安全性需求所需的所有資訊。
 
 >[!NOTE]
 >
->我们强烈建议您始终使用访问XSS保护API [AEM提供的XSSAPI](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/xss/XSSAPI.html).
+>我們強烈建議您務必使用 [AEM提供的XSSAPI](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/xss/XSSAPI.html).
 
-此外，Web应用程序防火墙，例如 [适用于Apache的mod_security](https://www.modsecurity.org)提供了对部署环境的安全性的可靠集中控制，并抵御以前未检测到的跨站点脚本攻击。
+此外，Web應用程式防火牆，例如 [Apache適用的mod_security](https://www.modsecurity.org)，可提供部署環境安全性的可靠集中控制，並抵禦先前未偵測到的跨網站指令碼攻擊。
 
-## 访问Cloud Service信息 {#access-to-cloud-service-information}
+## 存取Cloud Service資訊 {#access-to-cloud-service-information}
 
 >[!NOTE]
 >
->Cloud Service信息的ACL以及保护实例所需的OSGi设置作为 [生产就绪模式](/help/sites-administering/production-ready.md). 虽然这意味着您无需手动更改配置，但仍建议您在开始部署之前查看这些更改。
+>Cloud Service資訊的ACL以及保護執行個體所需的OSGi設定，會隨著以下步驟而自動化： [生產就緒模式](/help/sites-administering/production-ready.md). 雖然這表示您不需要手動進行設定變更，但建議您先檢閱變更，然後再開始部署。
 
-当您 [将AEM实例与Adobe Marketing Cloud集成](/help/sites-administering/marketing-cloud.md) 您使用 [Cloud Service配置](/help/sites-developing/extending-cloud-config.md). 有关这些配置的信息以及收集的任何统计信息都存储在存储库中。 我们建议您检查此信息的默认安全性是否符合您的要求。
+當您 [將您的AEM執行個體與Adobe Marketing Cloud整合](/help/sites-administering/marketing-cloud.md) 您使用 [Cloud Service設定](/help/sites-developing/extending-cloud-config.md). 這些組態的相關資訊以及所收集的任何統計資料都會儲存在儲存區域中。 如果您使用此功能，建議您檢閱此資訊的預設安全性是否符合您的需求。
 
-webservicesupport模块将统计信息和配置信息写入以下位置：
+webservicesupport模組會將統計資料和設定資訊寫入下列位置：
 
 `/etc/cloudservices`
 
-具有默认权限：
+使用預設許可權：
 
-* 创作环境： `read` 对象 `contributors`
+* 作者環境： `read` 的 `contributors`
 
-* 发布环境： `read` 对象 `everyone`
+* 發佈環境： `read` 的 `everyone`
 
-## Protect抵御跨站点请求伪造攻击 {#protect-against-cross-site-request-forgery-attacks}
+## Protect抵禦跨網站請求偽造攻擊 {#protect-against-cross-site-request-forgery-attacks}
 
-有关AEM用于缓解CSRF攻击的安全机制的更多信息，请参阅 [Sling引用过滤器](/help/sites-administering/security-checklist.md#protect-against-cross-site-request-forgery) 安全核对清单和 [CSRF保护框架文档](/help/sites-developing/csrf-protection.md).
+如需AEM用於緩解CSRF攻擊的安全性機制的詳細資訊，請參閱 [Sling查閱者篩選器](/help/sites-administering/security-checklist.md#protect-against-cross-site-request-forgery) 安全性檢查清單的區段及 [CSRF Protection Framework檔案](/help/sites-developing/csrf-protection.md).

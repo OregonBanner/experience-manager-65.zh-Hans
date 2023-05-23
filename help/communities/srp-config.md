@@ -1,7 +1,7 @@
 ---
 title: 存储配置
 seo-title: Storage Configuration
-description: 如何访问存储配置控制台
+description: 如何存取儲存設定主控台
 seo-description: How to access the Storage Configuration Console
 uuid: 6a5a71d5-6aaa-4635-8852-4dae33c497a9
 contentOwner: Janice Kendall
@@ -14,48 +14,48 @@ exl-id: 67de7e26-3f93-4034-9e3a-5c127f7447bc
 source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '199'
-ht-degree: 4%
+ht-degree: 3%
 
 ---
 
 # 存储配置 {#storage-configuration}
 
-存储配置是标识为社区内容(也称为用户生成内容(UGC))选择的存储的方法。
+儲存設定是識別為社群內容（也稱為使用者產生的內容，UGC）選擇的儲存空間的手段。
 
-此设置会通知AEM Communities代码，在访问UGC时将使用存储资源提供程序(SRP)的哪个实现，并且必须反映在部署AEM时建立的拓扑。
+此設定會通知AEM Communities程式碼，存取UGC時將使用儲存資源提供者(SRP)的實作，且必須反映部署AEM時建立的拓撲。
 
-有关存储选项和部署拓扑的讨论，请访问：
+如需儲存選項和部署拓撲的討論，請造訪：
 
-* [社区内容存储](working-with-srp.md)
-* [推荐的拓扑](topologies.md)
+* [社群內容存放區](working-with-srp.md)
+* [建議的拓撲](topologies.md)
 
-## 存储配置控制台 {#storage-configuration-console}
+## 儲存設定主控台 {#storage-configuration-console}
 
-![jsrp配置](assets/jsrp-configuration.png)
+![jsrp-configuration](assets/jsrp-configuration.png)
 
-在创作环境中，访问存储配置控制台。
+在製作環境中，存取儲存設定主控台。
 
-* 在全局导航中，选择 **[!UICONTROL 工具]** > **[!UICONTROL Communities]** > **[!UICONTROL 存储配置]**
+* 在全域導覽中選取 **[!UICONTROL 工具]** > **[!UICONTROL Communities]** > **[!UICONTROL 儲存設定]**
 
-要选择默认JCR以外的存储选项，请执行以下操作：
+若要選取預設JCR以外的儲存選項：
 
 * 选择选项
-* 正确配置
+* 正確設定
 
-   * 查看详细信息 [选择MSRP](msrp.md#select-msrp)
-   * 查看详细信息 [选择DSRP](dsrp.md#select-dsrp)
-   * 查看详细信息 [选择ASRP](asrp.md#select-asrp)
+   * 檢視詳細資訊 [選取MSRP](msrp.md#select-msrp)
+   * 檢視詳細資訊 [選取DSRP](dsrp.md#select-dsrp)
+   * 檢視詳細資訊 [選取ASRP](asrp.md#select-asrp)
 
-* 选择&#x200B;**[!UICONTROL 提交]**。
+* 選取 **[!UICONTROL 提交]**.
 
-### 关于JCR存储 {#about-jcr-storage}
+### 關於JCR儲存 {#about-jcr-storage}
 
-请注意，如果未进行任何选择，则默认为AEM存储库JCR。
+請注意，如果未進行選取，預設為AEM存放庫JCR。
 
-JCR是 *非* 作者和发布环境共享的公用存储。 社区内容将仅从创建它的创作或发布环境中可见。
+JCR是 *not* 作者和發佈環境共用的公用存放區。 社群內容只會從建立它的作者或發佈環境中可見。
 
-访问 [JCR存储](jsrp.md) 以获取其他信息。
+造訪 [JCR存放區](jsrp.md) 以取得其他資訊。
 
 >[!NOTE]
 >
->节点不存在 `srpc` 下 `/etc/socialconfig` 指示默认值 [JCR存储](jsrp.md).
+>節點不存在 `srpc` 在 `/etc/socialconfig` 表示預設值 [JCR存放區](jsrp.md).

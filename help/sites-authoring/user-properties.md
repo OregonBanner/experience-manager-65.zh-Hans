@@ -1,7 +1,7 @@
 ---
-title: 配置帐户环境
+title: 設定帳戶環境
 seo-title: Configuring Your Account Environment
-description: AEM 提供了用于配置帐户和创作环境的某些方面的功能
+description: AEM提供您設定帳戶及製作環境某些方面的功能
 seo-description: AEM provides you with the capability to configure your account and certain aspects of the author environment
 uuid: ef31be29-5c18-4dc9-ad51-fb001588b31e
 contentOwner: Chris Bohnert
@@ -14,29 +14,29 @@ exl-id: 6079431d-7d08-4973-8bb4-a8d10626a795
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '517'
-ht-degree: 99%
+ht-degree: 52%
 
 ---
 
-# 配置帐户环境{#configuring-your-account-environment}
+# 設定帳戶環境{#configuring-your-account-environment}
 
 AEM 提供了配置帐户和创作环境某些方面的功能。
 
 通过使用[标题](/help/sites-authoring/basic-handling.md#the-header)和关联的[我的首选项](#userpreferences)对话框中的[用户](/help/sites-authoring/user-properties.md#user-settings)选项，您可以修改用户选项。
 
-首先，访问标题中的[用户](/help/sites-authoring/user-properties.md#user-settings)选项。
+從存取 [使用者](/help/sites-authoring/user-properties.md#user-settings) 選項來識別。
 
 ## 用户设置 {#user-settings}
 
-在&#x200B;**用户**&#x200B;设置对话框中，您可以访问：
+此 **使用者** 設定對話方塊可讓您存取：
 
 * 模拟为
 
-   * 借助[模拟为](/help/sites-administering/security.md#impersonating-another-user)功能，用户可以代表其他用户工作。
+   * 使用 [模擬為](/help/sites-administering/security.md#impersonating-another-user) 使用者可以代表其他使用者工作的功能。
 
 * 配置文件
 
-   * 提供一个指向您的[用户设置](/help/sites-administering/security.md)的便捷链接
+   * 提供您便利的連結，讓您連結至 [使用者設定](/help/sites-administering/security.md))
 
 * [我的偏好设置](/help/sites-authoring/user-properties.md#my-preferences)
 
@@ -54,36 +54,36 @@ AEM 提供了配置帐户和创作环境某些方面的功能。
 
 * **语言**
 
-   此选项定义要用于创作环境 UI 的语言。从可用列表中选择所需语言。
+   這會定義用於編寫環境UI的語言。 從可用清單中選取所需的語言。
 
-   此配置也可用于经典 UI。
+   此設定也用於傳統UI。
 
 * **窗口管理**
 
-   此选项定义打开窗口的行为。选择：
+   這會定義行為或開啟視窗。 选择：
 
-   * **多窗口**（默认）
+   * **多視窗** （預設）
 
-      * 页面将在新窗口中打开。
-   * **单一窗口**
+      * 頁面將在新視窗中開啟。
+   * **单窗口**
 
-      * 页面将在当前窗口中打开。
+      * 頁面將在目前視窗中開啟。
 
 
 * **显示适用于资产的桌面操作**
 
-   此选项要求使用 AEM 桌面应用程序。
+   此選項需要AEM案頭應用程式才能使用。
 
 * **注释颜色**
 
-   此选项定义创建注释时使用的默认颜色。
+   這會定義製作註解時使用的預設顏色。
 
-   * 单击颜色块可打开色板选择器以选择一种颜色。
+   * 按一下顏色區塊以開啟色票選取器來選取顏色。
    * 或者，可在字段中输入所需颜色的十六进制代码。
 
 * **相对日期显示**
 
-   为了提高可读性，AEM 会将过去七天内的日期显示为相对日期（例如三天前），而将更早的日期则显示为确切日期（例如 2017 年 3 月 20 日）。
+   為了改善可讀性，AEM會將過去七天內的日期轉譯為相對日期（例如三天前），而將較舊的日期轉譯為確切日期（例如2017年3月20日）。
 
    此选项定义系统中日期的显示方式。以下选项可供选择：
 
@@ -105,11 +105,11 @@ AEM 提供了配置帐户和创作环境某些方面的功能。
    * [用于编辑页面的键盘快捷键](/help/sites-authoring/page-authoring-keyboard-shortcuts.md)
    * [控制台的键盘快捷键](/help/sites-authoring/keyboard-shortcuts.md)
 
-   此选项可启用键盘快捷键。默认情况下，这些键盘快捷键处于启用状态，但也可以将其禁用，例如，当用户要求使用特定辅助功能时。
+   此選項會啟用鍵盤快速鍵。 預設會啟用這些功能，但如果使用者有特定的協助工具要求，則可以停用這些功能。
 
-* **使用经典的创作体验**
+* **使用经典版创作体验**
 
-   此选项可启用基于[经典 UI](/help/sites-classic-ui-authoring/home.md) 的页面创作。默认情况下将使用标准 UI。
+   此選項會啟用 [傳統UI](/help/sites-classic-ui-authoring/home.md)-based頁面製作。 依預設，會使用標準UI。
 
 * **启用资产主页**
 
@@ -117,4 +117,4 @@ AEM 提供了配置帐户和创作环境某些方面的功能。
 
 * **Stock 配置**
 
-   此选项允许指定首选的 Adobe Stock 配置，并且仅在系统管理员已启用 [Adobe Stock 集成](/help/assets/aem-assets-adobe-stock.md)时才可用。
+   此選項可讓您指定偏好的Adobe Stock設定，且僅在您的系統管理員已啟用時才能使用 [Adobe Stock整合](/help/assets/aem-assets-adobe-stock.md).

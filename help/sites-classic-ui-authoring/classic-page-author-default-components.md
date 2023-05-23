@@ -18,26 +18,26 @@ ht-degree: 8%
 
 # 组件{#components}
 
-Adobe Experience Manager(AEM)附带多种现成的组件，这些组件为网站作者提供了全面的功能。 在 [编辑页面](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md) 和按主要功能区域（即组件组）进行分组，以便便于筛选。
+Adobe Experience Manager (AEM)隨附多種現成的元件，為網站作者提供全方位功能。 它們可用於 [編輯頁面](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md) 和會依主要功能區域（即元件群組）分組，以協助篩選。
 
 >[!CAUTION]
 >
->本节仅讨论标准AEM安装中现成可用的组件。
+>本節僅討論標準AEM安裝中現成可用的元件。
 >
->根据您的实例，您可能具有明确根据您的要求开发的自定义组件。 这些组件甚至可能与此处讨论的某些组件具有相同的名称。
+>根據您的執行個體，您可能已針對您的需求明確開發自訂元件。 這些元件的名稱甚至可能與此處討論的部分元件相同。
 
-## 组件 — 主要区域 {#components-major-areas}
+## 元件 — 主要區域 {#components-major-areas}
 
-以下页面提供了一些内容管理主要方面的快速链接（上面的概述页面提供了指向其他方面的链接）：
+下列頁面提供內容管理部分主要區域的快速連結（上方概觀頁面提供進一步區域的連結）：
 
-* [页面创作组件](/help/sites-classic-ui-authoring/classic-page-author-edit-mode.md)
+* [用於頁面編寫的元件](/help/sites-classic-ui-authoring/classic-page-author-edit-mode.md)
 
-   用于创建标准页面内容的组件主要包含在组中 **常规**, **列** 和 **Forms**.
+   用於建立標準頁面內容的元件主要包含在群組中 **一般**， **欄** 和 **Forms**.
 
 * [电子商务](/help/commerce/cif-classic/administering/ecommerce.md)
 
-   AEM中的电子商务功能还包含一系列组件，这些组件位于 **商务** 群组。 实际使用情况取决于所使用的商务引擎。
+   AEM中的電子商務功能也包含一系列元件，包含在 **商務** 群組。 實際使用情形取決於所使用的商業引擎。
 
-## 使用设计模式配置组件 {#using-design-mode-to-configure-components}
+## 使用設計模式設定元件 {#using-design-mode-to-configure-components}
 
-除了作者可以通过标准安装中的Sidekick访问的组件外，还提供了各种其他组件。 您可以使用 [设计模式](/help/sites-classic-ui-authoring/classic-page-author-design-mode.md#enable-disable-components) 启用/禁用这些组件，并编辑特定组件的参数。
+除了作者可在標準安裝中透過Sidekick存取的元件外，您也可以使用其他各種元件。 您可以使用 [設計模式](/help/sites-classic-ui-authoring/classic-page-author-design-mode.md#enable-disable-components) 以啟用/停用這些元件及編輯特定元件的引數。

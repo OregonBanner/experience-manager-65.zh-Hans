@@ -1,7 +1,7 @@
 ---
-title: Forms服务API快速启动
+title: Forms服務API快速入門
 seo-title: Forms Service API Quick Starts
-description: 使用Forms服务API的快速启动。
+description: 使用Forms服務API的快速入門。
 seo-description: Use the Quick Starts for the Forms Service API.
 uuid: dfce259a-e392-4929-ad7e-6d902faceaeb
 contentOwner: admin
@@ -18,53 +18,53 @@ ht-degree: 0%
 
 ---
 
-# Forms服务API快速启动 {#forms-service-api-quick-starts}
+# Forms服務API快速入門 {#forms-service-api-quick-starts}
 
-**本文档中的示例和示例仅适用于AEM Forms on JEE环境。**
+**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms 。**
 
-以下快速启动适用于Forms服务：
+Forms服務提供下列快速入門：
 
-[快速入门（SOAP模式）：使用Java API呈现交互式PDF表单](forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-an-interactive-pdf-form-using-the-java-api)
+[快速入門（SOAP模式）：使用Java API呈現互動式PDF表單](forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-an-interactive-pdf-form-using-the-java-api)
 
-[快速入门（SOAP模式）：使用Java API在客户端渲染表单](forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-a-form-at-the-client-using-the-java-api)
+[快速入門（SOAP模式）：使用Java API在使用者端轉譯表單](forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-a-form-at-the-client-using-the-java-api)
 
-[快速入门（SOAP模式）：使用Java API基于片段呈现表单](forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-a-form-based-on-fragments-using-the-java-api)
+[快速入門（SOAP模式）：使用Java API根據片段呈現表單](forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-a-form-based-on-fragments-using-the-java-api)
 
-[快速入门（SOAP模式）：使用Java API呈现启用权限的表单](forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-a-rights-enabled-form-using-the-java-api)
+[快速入門（SOAP模式）：使用Java API轉譯已啟用許可權的表單](forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-a-rights-enabled-form-using-the-java-api)
 
-[快速入门（SOAP模式）：使用Java API渲染HTML表单](forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-an-html-form-using-the-java-api)
+[快速入門（SOAP模式）：使用Java API轉譯HTML表單](forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-an-html-form-using-the-java-api)
 
-[快速入门（SOAP模式）：使用Java API通过自定义工具栏呈现HTML表单](forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-an-html-form-with-a-custom-toolbar-using-the-java-api)
+[快速入門（SOAP模式）：使用Java API使用自訂工具列轉譯HTML表單](forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-an-html-form-with-a-custom-toolbar-using-the-java-api)
 
-[快速入门（SOAP模式）：使用Java API处理作为XML提交的PDF forms](forms-service-api-quick-starts.md#quick-start-soap-mode-handling-pdf-forms-submitted-as-xml-using-the-java-api)
+[快速入門（SOAP模式）：使用Java API處理以XML提交的PDF forms](forms-service-api-quick-starts.md#quick-start-soap-mode-handling-pdf-forms-submitted-as-xml-using-the-java-api)
 
-[快速入门（SOAP模式）：使用Java API处理作为PDF提交的PDF forms](forms-service-api-quick-starts.md#quick-start-soap-mode-handling-pdf-forms-submitted-as-pdf-using-the-java-api)
+[快速入門（SOAP模式）：使用Java API處理作為PDF提交的PDF forms](forms-service-api-quick-starts.md#quick-start-soap-mode-handling-pdf-forms-submitted-as-pdf-using-the-java-api)
 
-[快速入门（SOAP模式）：使用Java API处理作为XML提交的HTML表单](forms-service-api-quick-starts.md#quick-start-soap-mode-handling-html-forms-submitted-as-xml-using-the-java-api)
+[快速入門（SOAP模式）：使用Java API處理以XML格式提交的HTML表單](forms-service-api-quick-starts.md#quick-start-soap-mode-handling-html-forms-submitted-as-xml-using-the-java-api)
 
-[快速入门（SOAP模式）：使用Java API使用提交的XML数据创建PDF文档](forms-service-api-quick-starts.md#quick-start-soap-mode-creating-pdf-documents-with-submitted-xml-data-using-the-java-api)
+[快速入門（SOAP模式）：使用Java API以提交的XML資料建立PDF檔案](forms-service-api-quick-starts.md#quick-start-soap-mode-creating-pdf-documents-with-submitted-xml-data-using-the-java-api)
 
-[快速入门（SOAP模式）：使用Java API使用可流动布局预填充Forms](forms-service-api-quick-starts.md#quick-start-soap-mode-prepopulating-forms-with-flowable-layouts-using-the-java-api)
+[快速入門（SOAP模式）：使用Java API以可流動的版面預先填入Forms](forms-service-api-quick-starts.md#quick-start-soap-mode-prepopulating-forms-with-flowable-layouts-using-the-java-api)
 
-[快速入门（SOAP模式）：使用Java API处理包含计算脚本的表单](forms-service-api-quick-starts.md#quick-start-soap-mode-handling-a-form-containing-a-calculation-script-using-the-java-api)
+[快速入門（SOAP模式）：使用Java API處理包含計算指令碼的表單](forms-service-api-quick-starts.md#quick-start-soap-mode-handling-a-form-containing-a-calculation-script-using-the-java-api)
 
-[快速入门（SOAP模式）：使用Java API优化性能](forms-service-api-quick-starts.md#quick-start-soap-mode-optimizing-performance-using-the-java-api)
+[快速入門（SOAP模式）：使用Java API最佳化效能](forms-service-api-quick-starts.md#quick-start-soap-mode-optimizing-performance-using-the-java-api)
 
-[快速入门（SOAP模式）：使用Java API按值渲染](forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-by-value-using-the-java-api)
+[快速入門（SOAP模式）：使用Java API依值轉譯](forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-by-value-using-the-java-api)
 
-[快速入门（SOAP模式）：使用Java API将文档传递到Forms服务](forms-service-api-quick-starts.md#quick-start-soap-mode-passing-documents-to-the-forms-service-using-the-java-api)
+[快速入門（SOAP模式）：使用Java API將檔案傳遞至Forms服務](forms-service-api-quick-starts.md#quick-start-soap-mode-passing-documents-to-the-forms-service-using-the-java-api)
 
-使用Forms服务API的应用程序逻辑是作为Java servlet实现的。 AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应设置为SOAP。
+使用Forms服務API的應用程式邏輯已實作為Java servlet。 AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定為SOAP。
 
 >[!NOTE]
 >
->使用v编程中的快速启动基于使用其他操作系统（如Unix）的表单服务器，用适用的操作系统支持的路径替换windows特定的路径。 同样，如果您使用的是其他J2EE应用程序服务器，请确保指定有效的连接属性。 参见 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>使用v程式設計中的快速入門是根據您使用其他作業系統（例如Unix）的表單伺服器，以適用作業系統支援的路徑取代Windows特定路徑。 同樣地，如果您使用其他J2EE應用程式伺服器，請確定您指定有效的連線屬性。 另請參閱 [設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
-**笔尖**： Adobe Developer网站包含以下文章，其中讨论了如何创建调用Forms服务并渲染表单的ASP.NET应用程序。
+**秘訣**： Adobe Developer網站包含下列文章，討論如何建立呼叫Forms服務並轉譯表單的ASP.NET應用程式。
 
-## 快速入门（SOAP模式）：使用Java API呈现交互式PDF表单 {#quick-start-soap-mode-rendering-an-interactive-pdf-form-using-the-java-api}
+## 快速入門（SOAP模式）：使用Java API呈現互動式PDF表單 {#quick-start-soap-mode-rendering-an-interactive-pdf-form-using-the-java-api}
 
-以下代码示例呈现一个名为的交互式PDF表单 *Loan.xdp* 到客户端Web浏览器。 一个文件被附加到表单上。 请注意，表单设计是应用程序的一部分，通过使用内容根URI值引用 `repository:///`. (请参阅 [渲染交互式PDF forms](/help/forms/developing/rendering-forms.md#rendering-interactive-pdf-forms).)
+下列程式碼範例會轉譯名為的互動式PDF表單 *Loan.xdp* 至使用者端網頁瀏覽器。 檔案會附加至表單。 請注意，表單設計屬於應用程式的一部分，且透過使用內容根URI值引用 `repository:///`. (請參閱 [呈現互動式PDF forms](/help/forms/developing/rendering-forms.md#rendering-interactive-pdf-forms).)
 
 ```java
  /*
@@ -204,9 +204,9 @@ ht-degree: 0%
  }
 ```
 
-## 快速入门（SOAP模式）：使用Java API在客户端渲染表单 {#quick-start-soap-mode-rendering-a-form-at-the-client-using-the-java-api}
+## 快速入門（SOAP模式）：使用Java API在使用者端轉譯表單 {#quick-start-soap-mode-rendering-a-form-at-the-client-using-the-java-api}
 
-以下代码示例呈现一个名为的表单 *Loan.xdp* 在客户端使用Forms服务Java API。 请注意，表单设计是应用程序的一部分，通过使用内容根URI值引用 `repository:///`. (请参阅 [在客户端渲染Forms](/help/forms/developing/rendering-forms.md#rendering-forms-at-the-client).)
+下列程式碼範例會轉譯名為的表單 *Loan.xdp* 在使用者端使用Forms服務Java API。 請注意，表單設計屬於應用程式的一部分，且透過使用內容根URI值引用 `repository:///`. (請參閱 [在使用者端轉譯Forms](/help/forms/developing/rendering-forms.md#rendering-forms-at-the-client).)
 
 ```java
  /*
@@ -337,9 +337,9 @@ ht-degree: 0%
  
 ```
 
-## 快速入门（SOAP模式）：使用Java API渲染指南（已弃用） {#quick-start-soap-mode-rendering-a-guide-deprecated-using-the-java-api}
+## 快速入門（SOAP模式）：使用Java API呈現指南（已棄用） {#quick-start-soap-mode-rendering-a-guide-deprecated-using-the-java-api}
 
-以下代码示例呈现一个名为的指南（已弃用） *TLALifeClaim.xdp* 到客户端Web浏览器。
+以下程式碼範例轉譯名為的指南（已棄用） *TLALifeClaim.xdp* 至使用者端網頁瀏覽器。
 
 ```java
  /*
@@ -473,9 +473,9 @@ ht-degree: 0%
  
 ```
 
-## 快速入门（SOAP模式）：使用Java API基于片段呈现表单 {#quick-start-soap-mode-rendering-a-form-based-on-fragments-using-the-java-api}
+## 快速入門（SOAP模式）：使用Java API根據片段呈現表單 {#quick-start-soap-mode-rendering-a-form-based-on-fragments-using-the-java-api}
 
-以下代码示例渲染基于片段的表单。 窗体设计的名称为 *PurchaseOrderDynamic.xdp* 它位于AEM Forms存储库中（XDP文件存储在存储库中名为FormsFolder的文件夹中）。 此外，POFragment表单引用的片段还必须位于存储库中。 (请参阅 [根据片段渲染Forms](/help/forms/developing/rendering-forms.md#rendering-forms-based-on-fragments).)
+下列程式碼範例會根據片段轉譯表單。 表單設計的名稱是 *PurchaseOrderDynamic.xdp* 且位於AEM Forms存放庫中（XDP檔案儲存在存放庫內名為FormsFolder的資料夾中）。 此外，POFragment表單引用的片段也必須位於存放庫中。 (請參閱 [根據片段轉譯Forms](/help/forms/developing/rendering-forms.md#rendering-forms-based-on-fragments).)
 
 ```java
  /*
@@ -606,9 +606,9 @@ ht-degree: 0%
  }
 ```
 
-## 快速入门（SOAP模式）：使用Java API呈现启用权限的表单 {#quick-start-soap-mode-rendering-a-rights-enabled-form-using-the-java-api}
+## 快速入門（SOAP模式）：使用Java API轉譯已啟用許可權的表單 {#quick-start-soap-mode-rendering-a-rights-enabled-form-using-the-java-api}
 
-以下代码示例将启用了权限的表单渲染到客户端Web浏览器。 此代码示例中设置的使用权限使用户能够在表单中添加注释并保存表单数据。 (请参阅 [渲染启用权限的Forms](/help/forms/developing/rendering-forms.md#rendering-rights-enabled-forms).)
+下列程式碼範例會將啟用許可權的表單轉譯給使用者端Web瀏覽器。 此程式碼範例中設定的使用許可權可讓使用者在表單中新增註解並儲存表單資料。 (請參閱 [轉譯啟用許可權的Forms](/help/forms/developing/rendering-forms.md#rendering-rights-enabled-forms).)
 
 ```java
  /*
@@ -743,9 +743,9 @@ ht-degree: 0%
  
 ```
 
-## 快速入门（SOAP模式）：使用Java API渲染HTML表单 {#quick-start-soap-mode-rendering-an-html-form-using-the-java-api}
+## 快速入門（SOAP模式）：使用Java API轉譯HTML表單 {#quick-start-soap-mode-rendering-an-html-form-using-the-java-api}
 
-以下代码示例使用Forms服务Java API渲染HTML表单。 一个工具栏以及两个文件附件添加到HTML表单中。 此外，用户代理值也可从 `HttpServletRequest` 对象。 (请参阅 [将Forms渲染为HTML](/help/forms/developing/rendering-forms.md#rendering-forms-as-html).)
+下列程式碼範例使用Forms服務Java API轉譯HTML表單。 工具列會新增至HTML表單以及兩個檔案附件。 此外，使用者代理程式值也可從 `HttpServletRequest` 物件。 (請參閱 [將Forms呈現為HTML](/help/forms/developing/rendering-forms.md#rendering-forms-as-html).)
 
 ```java
  /*
@@ -904,9 +904,9 @@ ht-degree: 0%
  
 ```
 
-## 快速入门（SOAP模式）：渲染使用CSS文件的HTML表单（使用Java API） {#quick-start-soap-mode-rendering-an-html-form-that-uses-a-css-file-using-the-java-api}
+## 快速入門（SOAP模式）：使用Java API呈現使用CSS檔案的HTML表單 {#quick-start-soap-mode-rendering-an-html-form-that-uses-a-css-file-using-the-java-api}
 
-以下代码示例使用Forms服务客户端API渲染HTML表单。 引用的自定义CSS文件的名称为 *custom.css*. (请参阅 [使用自定义CSS文件渲染HTMLForms](/help/forms/developing/rendering-forms.md#rendering-html-forms-using-custom-css-files).)
+下列程式碼範例使用Forms服務使用者端API轉譯HTML表單。 參考的自訂CSS檔案名稱為 *custom.css*. (請參閱 [使用自訂CSS檔案轉譯HTMLForms](/help/forms/developing/rendering-forms.md#rendering-html-forms-using-custom-css-files).)
 
 ```java
  /*
@@ -1059,9 +1059,9 @@ ht-degree: 0%
  }
 ```
 
-## 快速入门（SOAP模式）：使用Java API通过自定义工具栏呈现HTML表单 {#quick-start-soap-mode-rendering-an-html-form-with-a-custom-toolbar-using-the-java-api}
+## 快速入門（SOAP模式）：使用Java API使用自訂工具列轉譯HTML表單 {#quick-start-soap-mode-rendering-an-html-form-with-a-custom-toolbar-using-the-java-api}
 
-以下代码示例渲染带有以法语显示的工具栏的HTML表单。 fscmenu.xml的位置是C:\Adobe (此文件夹必须位于托管AEM Forms的服务器上)。 请注意，区域设置值为 `fr_FR`. 讨论如何使用自定义工具栏呈现HTML表单的部分显示了此快速入门中使用的fscmenu.xml文件的语法。 (请参阅 [使用自定义工具栏渲染HTMLForms](/help/forms/developing/rendering-forms.md#rendering-html-forms-with-custom-toolbars).)
+下列程式碼範例會轉譯HTML表單，其工具列顯示為法文。 fscmenu.xml的位置為C:\Adobe (此資料夾必須位於託管AEM Forms的伺服器上)。 請注意，地區設定值為 `fr_FR`. 討論如何使用自訂工具列轉譯HTML表單的區段會顯示此快速入門中使用的fscmenu.xml檔案語法。 (請參閱 [使用自訂工具列呈現HTMLForms](/help/forms/developing/rendering-forms.md#rendering-html-forms-with-custom-toolbars).)
 
 ```java
  /*
@@ -1215,9 +1215,9 @@ ht-degree: 0%
  
 ```
 
-## 快速入门（SOAP模式）：使用Java API处理作为XML提交的PDF forms {#quick-start-soap-mode-handling-pdf-forms-submitted-as-xml-using-the-java-api}
+## 快速入門（SOAP模式）：使用Java API處理以XML提交的PDF forms {#quick-start-soap-mode-handling-pdf-forms-submitted-as-xml-using-the-java-api}
 
-以下代码示例处理作为XML提交的表单。 传递到的内容类型值 `processFormSubmission` 方法为 `CONTENT_TYPE=text/xml`. 与命名的字段对应的值 `mortgageAmount`， `lastName`、和 `firstName` 将显示。 用户定义的方法，名为 `getNodeText` 在此快速入门中使用。 它接受 `org.w3c.dom.Document` 实例和指定节点名称的字符串值。 此方法返回表示节点值的字符串值。 (请参阅 [处理提交的Forms](/help/forms/developing/rendering-forms.md#handling-submitted-forms).)
+以下程式碼範例會處理以XML格式提交的表單。 傳遞至的內容型別值 `processFormSubmission` 方法為 `CONTENT_TYPE=text/xml`. 對應至指定欄位的值 `mortgageAmount`， `lastName`、和 `firstName` 都會顯示。 使用者定義的方法，名為 `getNodeText` 用於此快速入門中。 它接受 `org.w3c.dom.Document` 執行個體和字串值，指定節點名稱。 此方法會傳回代表節點值的字串值。 (請參閱 [處理已提交的Forms](/help/forms/developing/rendering-forms.md#handling-submitted-forms).)
 
 ```java
  /*
@@ -1382,11 +1382,11 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->使用时 `com.adobe.idp.Document` 对象和 `org.w3c.dom.Document` 在同一应用程序中，完全符合条件 `org.w3c.dom.Document`.
+>使用時 `com.adobe.idp.Document` 物件和 `org.w3c.dom.Document` 在相同的應用程式中，完全符合資格 `org.w3c.dom.Document`.
 
-## 快速入门（SOAP模式）：使用Java API处理作为PDF提交的PDF forms {#quick-start-soap-mode-handling-pdf-forms-submitted-as-pdf-using-the-java-api}
+## 快速入門（SOAP模式）：使用Java API處理作為PDF提交的PDF forms {#quick-start-soap-mode-handling-pdf-forms-submitted-as-pdf-using-the-java-api}
 
-以下代码示例处理作为PDF数据提交的表单。 传递到的内容类型值 `processFormSubmission` 方法为 `CONTENT_TYPE=application/pdf`. 提交的表单将另存为名为的PDF文件 *tempPDF.pdf*. 此外，由于表单是以PDF形式提交的，因此可以检索文件附件。 任何文件附件都保存为JPEG文件。 (请参阅 [处理提交的Forms](/help/forms/developing/rendering-forms.md#handling-submitted-forms).)
+以下程式碼範例會處理以PDF資料提交的表單。 傳遞至的內容型別值 `processFormSubmission` 方法為 `CONTENT_TYPE=application/pdf`. 提交的表單會儲存為名為的PDF檔案 *tempPDF.pdf*. 此外，由於表單是以PDF提交，因此可擷取檔案附件。 任何檔案附件都會儲存為JPEG檔案。 (請參閱 [處理已提交的Forms](/help/forms/developing/rendering-forms.md#handling-submitted-forms).)
 
 ```java
  /*
@@ -1534,9 +1534,9 @@ ht-degree: 0%
  
 ```
 
-## 快速入门（SOAP模式）：使用Java API处理作为XML提交的HTML表单 {#quick-start-soap-mode-handling-html-forms-submitted-as-xml-using-the-java-api}
+## 快速入門（SOAP模式）：使用Java API處理以XML格式提交的HTML表單 {#quick-start-soap-mode-handling-html-forms-submitted-as-xml-using-the-java-api}
 
-以下代码示例处理作为XML数据提交的HTML表单。 传递到的内容类型值 `processFormSubmission` 方法为 `CONTENT_TYPE=application/x-www-form-urlencoded`与命名的字段对应的值 `mortgageAmount`， `lastName`、和 `firstName` 将显示。 用户定义的方法，名为 `getNodeText` 在此快速入门中使用。 它接受 `org.w3c.dom.Document` 实例和指定节点名称的字符串值。 此方法返回表示节点值的字符串值。 (请参阅 [处理提交的Forms](/help/forms/developing/rendering-forms.md#handling-submitted-forms).)
+以下程式碼範例會處理以XML資料提交的HTML表單。 傳遞至的內容型別值 `processFormSubmission` 方法為 `CONTENT_TYPE=application/x-www-form-urlencoded`與下列欄位相對應的值： `mortgageAmount`， `lastName`、和 `firstName` 都會顯示。 使用者定義的方法，名為 `getNodeText` 用於此快速入門中。 它接受 `org.w3c.dom.Document` 執行個體和字串值，指定節點名稱。 此方法會傳回代表節點值的字串值。 (請參閱 [處理已提交的Forms](/help/forms/developing/rendering-forms.md#handling-submitted-forms).)
 
 ```java
  /*
@@ -1694,9 +1694,9 @@ ht-degree: 0%
  
 ```
 
-## 快速入门（SOAP模式）：使用Java API使用提交的XML数据创建PDF文档 {#quick-start-soap-mode-creating-pdf-documents-with-submitted-xml-data-using-the-java-api}
+## 快速入門（SOAP模式）：使用Java API以提交的XML資料建立PDF檔案 {#quick-start-soap-mode-creating-pdf-documents-with-submitted-xml-data-using-the-java-api}
 
-以下Java代码示例处理作为XML提交的表单数据。 使用Forms API从表单提交中检索表单数据，并将其发送到输出服务。 表单数据和表单设计用于创建非交互式PDF文档。 非交互式PDF文档存储在名为的Content Services（已弃用）节点中 `/Company Home/Test Directory`. 表单名称会动态创建。 即，使用用户的名字和姓氏来命名PDF文件。 新内容的资源标识符将写入客户端Web浏览器。 (请参阅 [使用提交的XML数据创建PDF单据](/help/forms/developing/rendering-forms.md#creating-pdf-documents-with-submitted-xml-data).)
+以下Java程式碼範例會處理以XML格式提交的表單資料。 表單資料是使用Forms API從表單提交中擷取的，並傳送至輸出服務。 表單資料和表單設計可用來建立非互動式PDF檔案。 非互動式PDF檔案會儲存在名為的Content Services （已棄用）節點中 `/Company Home/Test Directory`. 表單名稱會以動態方式建立。 也就是說，系統會使用使用者的名字和姓氏來命名PDF檔案。 新內容的資源識別碼會寫入使用者端Web瀏覽器。 (請參閱 [使用已提交的XML資料建立PDF檔案](/help/forms/developing/rendering-forms.md#creating-pdf-documents-with-submitted-xml-data).)
 
 ```java
  /*
@@ -1966,15 +1966,15 @@ ht-degree: 0%
  }
 ```
 
-## 快速入门（SOAP模式）：使用Java API使用可流动布局预填充Forms {#quick-start-soap-mode-prepopulating-forms-with-flowable-layouts-using-the-java-api}
+## 快速入門（SOAP模式）：使用Java API以可流動的版面預先填入Forms {#quick-start-soap-mode-prepopulating-forms-with-flowable-layouts-using-the-java-api}
 
-以下代码示例使用动态数据源预填充表单。 也就是说，数据源是在运行时创建的，而不包含在XML文件中或是在设计期间创建的。 此代码示例包含三种用户定义的算法：
+下列程式碼範例會在表單中預先填入動態資料來源。 也就是說，資料來源是在執行階段建立的，並不包含在XML檔案中或是在設計階段建立的。 此程式碼範例包含三個使用者定義的方法：
 
-* `createDataSource`：创建 `org.w3c.dom.Document` 表示用于预填充表单的数据源的对象。 此用户定义的方法会返回 `org.w3c.dom.Document` 对象。
-* `convertDataSource`：转换 `org.w3c.dom.Document` 对象到 `com.adobe.idp.Document` 对象。 此方法接受 `org.w3c.dom.Document` 对象，作为输入参数并返回 `com.adobe.idp.Document` 对象。
-* `renderPOForm`：使用Forms服务Java API渲染动态采购订单表单。 此 `com.adobe.idp.Document` 返回的对象 `convertDataSource` 方法用于预填充表单。
+* `createDataSource`：建立 `org.w3c.dom.Document` 物件，代表用來預先填入表單的資料來源。 這個使用者定義的方法會傳回 `org.w3c.dom.Document` 物件。
+* `convertDataSource`：轉換 `org.w3c.dom.Document` 物件至 `com.adobe.idp.Document` 物件。 此方法接受 `org.w3c.dom.Document` 物件作為輸入引數並傳回 `com.adobe.idp.Document` 物件。
+* `renderPOForm`：使用Forms服務Java API來轉譯動態採購訂單表單。 此 `com.adobe.idp.Document` 物件，由 `convertDataSource` 方法可用來預先填入表單。
 
-   所有这些方法都是从Java servlet的 `doPost` 方法。 (请参阅 [使用可流布局预填充Forms](/help/forms/developing/rendering-forms.md#prepopulating-forms-with-flowable-layouts).)
+   所有這些方法都是從Java servlet的 `doPost` 方法。 (請參閱 [使用可流動版面預先填入Forms](/help/forms/developing/rendering-forms.md#prepopulating-forms-with-flowable-layouts).)
 
 ```java
 /*
@@ -2251,9 +2251,9 @@ public class RenderDynamicForm extends HttpServlet implements Servlet {
 }
 ```
 
-## 快速入门（SOAP模式）：使用Java API处理包含计算脚本的表单 {#quick-start-soap-mode-handling-a-form-containing-a-calculation-script-using-the-java-api}
+## 快速入門（SOAP模式）：使用Java API處理包含計算指令碼的表單 {#quick-start-soap-mode-handling-a-form-containing-a-calculation-script-using-the-java-api}
 
-以下代码示例处理包含计算脚本的表单，并将结果写回客户端Web浏览器。 (请参阅 [计算表单数据](/help/forms/developing/rendering-forms.md#calculating-form-data).)
+下列程式碼範例會處理包含計算指令碼的表單，並將結果寫入使用者端網頁瀏覽器。 (請參閱 [計算表單資料](/help/forms/developing/rendering-forms.md#calculating-form-data).)
 
 ```java
  /*
@@ -2369,9 +2369,9 @@ public class RenderDynamicForm extends HttpServlet implements Servlet {
  }
 ```
 
-## 快速入门（SOAP模式）：使用Java API优化性能 {#quick-start-soap-mode-optimizing-performance-using-the-java-api}
+## 快速入門（SOAP模式）：使用Java API最佳化效能 {#quick-start-soap-mode-optimizing-performance-using-the-java-api}
 
-以下代码示例通过设置缓存、独立和线性化选项来优化性能。 线性化的文件已针对在Web上传送进行了优化。 (请参阅 [优化Forms服务的性能](/help/forms/developing/rendering-forms.md#optimizing-the-performance-of-the-forms-service).)
+下列程式碼範例會透過設定快取、獨立和線性化選項來最佳化效能。 線性化的檔案已最佳化，以利在網路上傳送。 (請參閱 [最佳化Forms服務的效能](/help/forms/developing/rendering-forms.md#optimizing-the-performance-of-the-forms-service).)
 
 ```java
  /*
@@ -2497,9 +2497,9 @@ public class RenderDynamicForm extends HttpServlet implements Servlet {
  }
 ```
 
-## 快速入门（SOAP模式）：使用Java API按值渲染 {#quick-start-soap-mode-rendering-by-value-using-the-java-api}
+## 快速入門（SOAP模式）：使用Java API依值轉譯 {#quick-start-soap-mode-rendering-by-value-using-the-java-api}
 
-以下Java快速入门呈现基于名为的表单设计的交互式PDF表单 *Loan.xdp* 按值。 请注意，表单设计用于填充 `com.adobe.idp.Document` 对象已命名 *inputXDP*. (请参阅 [按值渲染Forms](/help/forms/developing/rendering-forms.md#rendering-forms-by-value).)
+以下Java快速入門會根據名為的表單設計，呈現互動式PDF表單 *Loan.xdp* 依值。 請注意，表單設計是用來填入 `com.adobe.idp.Document` 物件已命名 *inputXDP*. (請參閱 [依值呈現Forms](/help/forms/developing/rendering-forms.md#rendering-forms-by-value).)
 
 ```java
  /*
@@ -2624,9 +2624,9 @@ public class RenderDynamicForm extends HttpServlet implements Servlet {
  }
 ```
 
-## 快速入门（SOAP模式）：使用Java API将文档传递到Forms服务 {#quick-start-soap-mode-passing-documents-to-the-forms-service-using-the-java-api}
+## 快速入門（SOAP模式）：使用Java API將檔案傳遞至Forms服務 {#quick-start-soap-mode-passing-documents-to-the-forms-service-using-the-java-api}
 
-以下Java快速入门从内容服务中检索文件Loan.xdp（已弃用）。 此XDP文件位于空间中 `/Company Home/Form Designs`. XDP文件返回到 `com.adobe.idp.Document` 实例。 此 `com.adobe.idp.Document` 实例被传递到Forms服务。 交互式表单将写入客户端Web浏览器。 (请参阅 [将文档传递到Forms服务](/help/forms/developing/passing-documents-forms-service.md).)
+以下Java快速入門會從內容服務（已棄用）擷取Loan.xdp檔案。 此XDP檔案位於空間 `/Company Home/Form Designs`. XDP檔案會傳回 `com.adobe.idp.Document` 執行個體。 此 `com.adobe.idp.Document` 執行個體會傳遞至Forms服務。 互動式表單會寫入使用者端網頁瀏覽器。 (請參閱 [將檔案傳遞至Forms服務](/help/forms/developing/passing-documents-forms-service.md).)
 
 ```java
  /*

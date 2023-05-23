@@ -1,7 +1,7 @@
 ---
-title: 慢速查询疑难解答
+title: 疑難排解緩慢查詢
 seo-title: Troubleshooting Slow Queries
-description: 慢速查询疑难解答
+description: 疑難排解緩慢查詢
 seo-description: null
 uuid: ad09546a-c049-44b2-99a3-cb74ee68f040
 contentOwner: User
@@ -17,69 +17,69 @@ ht-degree: 0%
 
 ---
 
-# 慢速查询疑难解答{#troubleshooting-slow-queries}
+# 疑難排解緩慢查詢{#troubleshooting-slow-queries}
 
-## 查询分类速度缓慢 {#slow-query-classifications}
+## 查詢分類緩慢 {#slow-query-classifications}
 
-AEM中慢速查询有三个主要分类，按严重性列出：
+AEM中有三個主要分類為緩慢查詢，依嚴重程度列出：
 
-1. **无索引查询**
+1. **無索引查詢**
 
-   * 查询 **not** 解析到索引并遍历JCR的内容以收集结果
+   * 有此功能的查詢 **not** 解析為索引並遍歷JCR的內容以收集結果
 
-1. **限制不当（或范围较广）的查询**
+1. **限制不良（或設定範圍）的查詢**
 
-   * 解析为索引，但必须遍历所有索引条目以收集结果的查询
+   * 解析為索引，但必須遍歷所有索引專案以收集結果的查詢
 
-1. **大型结果集查询**
+1. **大型結果集查詢**
 
-   * 返回大量结果的查询
+   * 傳回大量結果的查詢
 
-前两个查询分类（无索引和限制较差）速度较慢。 测试速度缓慢，因为它们会强制Oak查询引擎检查每个 **潜在** 结果（内容节点或索引条目），用于标识属于 **实际** 结果集。
+查詢的前兩個分類（無索引和限制不佳）很慢。 速度較慢，因為它們強制Oak查詢引擎檢查每個 **潛在** 識別屬於下列專案之結果（內容節點或索引專案）： **實際** 結果集。
 
-检查每个潜在结果的操作即称为“遍历”。
+檢查每個潛在結果的動作稱為周遊動作。
 
-由于必须检查每个潜在结果，因此确定实际结果集的成本随电位结果的数量线性增加。
+由於必須檢查每個潛在結果，所以確定實際結果集的成本會隨著潛在結果的數目線性增長。
 
-添加查询限制和调整索引允许索引数据以优化格式存储，提供快速的结果检索，并且减少或消除对潜在结果集的线性检查的需要。
+新增查詢限制和調整索引可讓索引資料以最佳化格式儲存，以便快速擷取結果，並減少或免除線性檢查潛在結果集的需要。
 
-在AEM 6.3中，默认情况下，当访问100,000时，查询失败并引发异常。 默认情况下，AEM 6.3之前的AEM版本中不存在此限制，但可以通过Apache Jackrabbit查询引擎设置OSGi配置和QueryEngineSettings JMX Bean（属性LimitReads）进行设置。
+在AEM 6.3中，依預設，當達到100,000的周遊時，查詢會失敗並擲回例外狀況。 在AEM 6.3之前的AEM版本中，此限制預設不存在，但可透過Apache Jackrabbit查詢引擎設定OSGi設定和QueryEngineSettings JMX bean （屬性LimitReads）設定。
 
-### 检测无索引查询 {#detecting-index-less-queries}
+### 偵測無索引查詢 {#detecting-index-less-queries}
 
-#### 开发期间 {#during-development}
+#### 開發期間 {#during-development}
 
-解释 **全部** 查询，并确保其查询计划不包含 **/&amp;ast;横移** 解释。 遍历查询计划的示例：
+說明 **全部** 查詢並確保其查詢計畫不包含 **/&amp;ast；周遊** 說明書。 周遊查詢計畫範例：
 
-* **计划：** `[nt:unstructured] as [a] /* traverse "/content//*" where ([a].[unindexedProperty] = 'some value') and (isdescendantnode([a], [/content])) */`
+* **計畫：** `[nt:unstructured] as [a] /* traverse "/content//*" where ([a].[unindexedProperty] = 'some value') and (isdescendantnode([a], [/content])) */`
 
-#### 部署后 {#post-deployment}
+#### 部署後 {#post-deployment}
 
-* 监控 `error.log` 对于无索引遍历查询：
+* 監視 `error.log` 對於無索引周遊查詢：
 
    * `*INFO* org.apache.jackrabbit.oak.query.QueryImpl Traversal query (query without index) ... ; consider creating and index`
-   * 仅当没有可用索引，并且查询可能遍历多个节点时，才会记录此消息。 如果索引可用，则不会记录消息，但遍历量较小，因此速度很快。
+   * 只有在沒有可用的索引且查詢可能穿越許多節點時，才會記錄此訊息。 如果索引可用，則不會記錄訊息，但周遊的量很小，因此很快。
 
-* 访问AEM [查询性能](/help/sites-administering/operations-dashboard.md#query-performance) 操作控制台和 [解释](/help/sites-administering/operations-dashboard.md#explain-query) 查找遍历或没有索引查询说明的查询速度缓慢。
+* 造訪AEM [查詢效能](/help/sites-administering/operations-dashboard.md#query-performance) 操作控制檯和 [說明](/help/sites-administering/operations-dashboard.md#explain-query) 尋找周遊或無索引查詢說明的緩慢查詢。
 
-### 检测受限性差的查询 {#detecting-poorly-restricted-queries}
+### 偵測限制不佳的查詢 {#detecting-poorly-restricted-queries}
 
-#### 开发期间 {#during-development-1}
+#### 開發期間 {#during-development-1}
 
-解释所有查询，并确保它们解析到调整为匹配查询属性限制的索引。
+說明所有查詢並確保它們解析為調整為符合查詢屬性限制的索引。
 
-* 理想的查询计划范围 `indexRules` ，并且至少对于查询中最紧的属性限制。
-* 对结果进行排序的查询应解析为Lucene属性索引，该索引具有按设置的属性排序的索引规则 `orderable=true.`
+* 理想的查詢計畫涵蓋範圍有 `indexRules` 用於所有屬性限制，以及查詢中最嚴格的屬性限制。
+* 排序結果的查詢應解析為Lucene屬性索引，其中包含按設定的屬性排序的索引規則 `orderable=true.`
 
-#### 例如，默认 `cqPageLucene` 没有的索引规则 `jcr:content/cq:tags` {#for-example-the-default-cqpagelucene-does-not-have-an-index-rule-for-jcr-content-cq-tags}
+#### 例如，預設值 `cqPageLucene` 沒有索引規則 `jcr:content/cq:tags` {#for-example-the-default-cqpagelucene-does-not-have-an-index-rule-for-jcr-content-cq-tags}
 
-添加cq:tags索引规则之前
+新增cq：tags索引規則之前
 
-* **cq:tags索引规则**
+* **cq：tags索引規則**
 
-   * 不存在即装即用
+   * 不存在現成可用的
 
-* **查询生成器查询**
+* **查詢產生器查詢**
 
    ```js
    type=cq:Page
@@ -87,15 +87,15 @@ AEM中慢速查询有三个主要分类，按严重性列出：
    property.value=my:tag
    ```
 
-* **查询计划**
+* **查詢計畫**
 
    `[cq:Page] as [a] /* lucene:cqPageLucene(/oak:index/cqPageLucene) *:* where [a].[jcr:content/cq:tags] = 'my:tag' */`
 
-此查询解析为 `cqPageLucene` 索引，但是由于没有属性索引规则 `jcr:content` 或 `cq:tags`，在评估此限制时， `cqPageLucene` 检查索引以确定匹配项。 如果指数包含100万， `cq:Page` 节点，然后检查100万条记录以确定结果集。
+此查詢解析為 `cqPageLucene` 索引，但因為沒有屬性索引規則存在 `jcr:content` 或 `cq:tags`，評估此限制時， `cqPageLucene` 會檢查索引以判斷相符專案。 因此，如果索引包含1百萬 `cq:Page` 節點，則會檢查100萬筆記錄以確定結果集。
 
-添加cq:tags索引规则后
+新增cq：tags索引規則後
 
-* **cq:tags索引规则**
+* **cq：tags索引規則**
 
    ```js
    /oak:index/cqPageLucene/indexRules/cq:Page/properties/cqTags
@@ -103,7 +103,7 @@ AEM中慢速查询有三个主要分类，按严重性列出：
    @propertyIndex=true
    ```
 
-* **查询生成器查询**
+* **查詢產生器查詢**
 
    ```js
    type=cq:Page
@@ -111,87 +111,87 @@ AEM中慢速查询有三个主要分类，按严重性列出：
    property.value=myTagNamespace:myTag
    ```
 
-* **查询计划**
+* **查詢計畫**
 
    `[cq:Page] as [a] /* lucene:cqPageLucene(/oak:index/cqPageLucene) jcr:content/cq:tags:my:tag where [a].[jcr:content/cq:tags] = 'my:tag' */`
 
-添加了 `jcr:content/cq:tags` 在 `cqPageLucene` 索引允许 `cq:tags` 以优化方式存储的数据。
+新增indexRule for `jcr:content/cq:tags` 在 `cqPageLucene` 索引允許 `cq:tags` 以最佳化方式儲存的資料。
 
-当使用 `jcr:content/cq:tags` 限制，索引可以按值查找结果。 这意味着如果 `cq:Page` 节点 `myTagNamespace:myTag` 作为值，仅返回这100个结果，而其他99,000则从限制检查中排除，使性能提高了10,000倍。
+當查詢使用 `jcr:content/cq:tags` 執行限制，索引可以按值查詢結果。 這表示如果是100 `cq:Page` 節點具有 `myTagNamespace:myTag` 作為值，只會傳回這100個結果，而其他999,000個結果會排除在限制檢查之外，效能會以10,000的係數提升。
 
-更多查询限制会减少符合条件的结果集，并进一步优化查询优化。
+更多的查詢限制會減少符合條件的結果集，並進一步最佳化查詢最佳化。
 
-同样，对于 `cq:tags` 属性，甚至包含 `cq:tags` 将性能不佳，因为索引的结果将返回所有全文匹配。 cq:tags的限制将在其后进行过滤。
+同樣地，不需要額外的索引規則 `cq:tags` 屬性，甚至是對具有限制的全文查詢 `cq:tags` 會表現不佳，因為來自索引的結果會傳回所有全文匹配。 cq：tags上的限制會在之後被篩選。
 
-索引后过滤的另一个原因是访问控制列表，在开发过程中经常会漏掉该列表。 尝试确保查询不返回用户可能无法访问的路径。 通过更好的内容结构以及对查询提供相关路径限制，可以执行此操作。
+索引後篩選的另一個原因是開發期間經常遺漏的存取控制清單。 請嘗試確保查詢未傳回使用者可能無法存取的路徑。 若要這麼做，可透過更好的內容結構以及對查詢提供相關的路徑限制來完成。
 
-识别Lucene索引是否返回了许多结果以返回作为查询结果的小子集的有效方法是，为 `org.apache.jackrabbit.oak.plugins.index.lucene.LucenePropertyIndex`. 这样，您就可以查看从索引加载的文档数量。 最终结果的数量与加载文档的数量之间不应有过度差异。 有关更多信息，请参阅 [记录](/help/sites-deploying/configure-logging.md).
+若要識別Lucene索引是否傳回許多結果以傳回小子集作為查詢結果，一個有效方法是啟用DEBUG記錄 `org.apache.jackrabbit.oak.plugins.index.lucene.LucenePropertyIndex`. 這樣做可讓您檢視正在從索引載入多少檔案。 最終結果數量與載入檔案數量不應不相稱。 如需詳細資訊，請參閱 [記錄](/help/sites-deploying/configure-logging.md).
 
-#### 部署后 {#post-deployment-1}
+#### 部署後 {#post-deployment-1}
 
-* 监控 `error.log` 对于遍历查询：
+* 監視 `error.log` 若為周遊查詢：
 
    * `*WARN* org.apache.jackrabbit.oak.spi.query.Cursors$TraversingCursor Traversed ### nodes ... consider creating an index or changing the query`
 
-* 访问AEM [查询性能](/help/sites-administering/operations-dashboard.md#query-performance) 操作控制台和 [解释](/help/sites-administering/operations-dashboard.md#explain-query) 查询查找查询计划时速度缓慢，无法将查询属性限制解析为索引属性规则。
+* 造訪AEM [查詢效能](/help/sites-administering/operations-dashboard.md#query-performance) 操作控制檯和 [說明](/help/sites-administering/operations-dashboard.md#explain-query) 尋找查詢計畫的查詢速度緩慢，查詢計畫無法解決查詢屬性限制以索引屬性規則。
 
-### 检测大结果集查询 {#detecting-large-result-set-queries}
+### 偵測大型結果集查詢 {#detecting-large-result-set-queries}
 
-#### 开发期间 {#during-development-2}
+#### 開發期間 {#during-development-2}
 
-为oak.queryLimitInMemory(例如10000)和oak.queryLimitReads（例如5000）设置低阈值，并在点击“查询读取的节点数多于x...”的UnsupportedOperationException时优化昂贵的查询
+設定oak.queryLimitInMemory (例如10000)和oak.queryLimitReads （例如5000）的低臨界值，並在遇到顯示「查詢讀取超過x個節點……」的UnsupportedOperationException時最佳化昂貴的查詢
 
-设置低阈值有助于避免资源密集型查询（即，不受任何索引的支持或受覆盖索引较少的支持）。 例如，一个读取100万个节点的查询将导致大量的IO，并对整个应用程序性能产生负面影响。 因此，任何因超出限制而失败的查询都应进行分析和优化。
+設定低臨界值有助於避免資源密集的查詢（亦即，不受任何索引支援，或受較少涵蓋範圍索引支援）。 例如，讀取一百萬個節點的查詢會導致大量IO，並對整體應用程式效能造成負面影響。 因此，應分析和最佳化任何因上述限制而失敗的查詢。
 
-#### 部署后 {#post-deployment-2}
+#### 部署後 {#post-deployment-2}
 
-* 监视日志中触发大节点遍历或大堆内存消耗的查询：&quot;
+* 監控查詢記錄以觸發大型節點周遊或大型棧積記憶體消耗： 」
 
    * `*WARN* ... java.lang.UnsupportedOperationException: The query read or traversed more than 100000 nodes. To avoid affecting other tasks, processing was stopped.`
-   * 优化查询，以减少已遍历的节点数。
+   * 最佳化查詢，以減少周遊的節點數。
 
-* 监控日志以了解触发大堆内存消耗的查询：
+* 監視觸發大型棧積記憶體消耗的查詢記錄：
 
    * `*WARN* ... java.lang.UnsupportedOperationException: The query read more than 500000 nodes in memory. To avoid running out of memory, processing was stopped`
-   * 优化查询，以减少堆内存消耗。
+   * 最佳化查詢，以減少棧積記憶體消耗。
 
-对于AEM 6.0 - 6.2版本，您可以通过AEM启动脚本中的JVM参数调整节点遍历的阈值，以防止大型查询过载环境。 推荐的值为：
+對於AEM 6.0 - 6.2版本，您可以透過AEM開始指令碼中的JVM引數調整節點周遊的臨界值，以防止大型查詢使環境過載。 建議值為：
 
 * `-Doak.queryLimitInMemory=500000`
 * `-Doak.queryLimitReads=100000`
 
-在AEM 6.3中，上述两个参数默认进行了预配置，并可通过OSGi QueryEngineSettings进行修改。
+在AEM 6.3中，上述兩個引數預設為預先設定，並可透過OSGi QueryEngineSettings進行修改。
 
-下方提供了更多信息： [https://jackrabbit.apache.org/oak/docs/query/query-engine.html#Slow_Queries_and_Read_Limits](https://jackrabbit.apache.org/oak/docs/query/query-engine.html#Slow_Queries_and_Read_Limits)
+如需詳細資訊，請前往： [https://jackrabbit.apache.org/oak/docs/query/query-engine.html#Slow_Queries_and_Read_Limits](https://jackrabbit.apache.org/oak/docs/query/query-engine.html#Slow_Queries_and_Read_Limits)
 
-## 查询性能优化 {#query-performance-tuning}
+## 查詢效能調整 {#query-performance-tuning}
 
-AEM中查询性能优化的基本思想是：
+AEM中查詢效能最佳化的座右銘為：
 
-**“限制越多越好。”**
+**「限制越多，越好。」**
 
-以下概述了为确保查询性能而建议的调整。 首先优化查询，使其更不显眼，然后根据需要优化索引定义。
+以下概述為確保查詢效能而建議的調整。 首先，調整查詢，減少干擾的活動，然後視需要調整索引定義。
 
-### 调整查询语句 {#adjusting-the-query-statement}
+### 調整查詢陳述式 {#adjusting-the-query-statement}
 
-AEM支持以下查询语言：
+AEM支援下列查詢語言：
 
 * 查询生成器
 * JCR-SQL2
 * XPath
 
-以下示例使用查询生成器，因为查询生成器是AEM开发人员使用的最常用的查询语言，但JCR-SQL2和XPath也适用相同的原则。
+下列範例使用Query Builder，因為這是AEM開發人員最常使用的查詢語言，但是相同的原則適用於JCR-SQL2和XPath。
 
-1. 添加nodetype限制，以便查询解析为现有Lucene属性索引。
+1. 新增節點型別限制，讓查詢解析為現有的Lucene屬性索引。
 
-* **未优化查询**
+* **未最佳化的查詢**
 
    ```js
    property=jcr:content/contentType
    property.value=article-page
    ```
 
-* **优化查询**
+* **最佳化的查詢**
 
    ```js
    type=cq:Page
@@ -199,13 +199,13 @@ AEM支持以下查询语言：
    property.value=article-page
    ```
 
-   缺少nodetype限制的查询强制AEM采用 `nt:base` nodetype(AEM中的每个节点都是的子类型)，有效地不产生nodetype限制。
+   缺少節點型別限制的查詢強制AEM假設 `nt:base` nodetype (AEM中的每個節點都是其子型別)，實際上不會產生任何節點型別限制。
 
-   设置 `type=cq:Page` 将此查询限制为仅 `cq:Page` 节点，并将查询解析为AEM cqPageLucene，将结果限制为节点的子集(仅 `cq:Page` 节点)。
+   設定 `type=cq:Page` 將此查詢限製為僅限 `cq:Page` 節點，並將查詢解析為AEM cqPageLucene，將結果限製為節點子集(僅限 `cq:Page` AEM節點)。
 
-1. 调整查询的nodetype限制，以便查询解析为现有Lucene属性索引。
+1. 調整查詢的節點型別限制，讓查詢解析為現有的Lucene屬性索引。
 
-* **未优化查询**
+* **未最佳化的查詢**
 
    ```js
    type=nt:hierarchyNode
@@ -213,7 +213,7 @@ AEM支持以下查询语言：
    property.value=article-page
    ```
 
-* **优化查询**
+* **最佳化的查詢**
 
    ```js
    type=cq:Page
@@ -221,35 +221,35 @@ AEM支持以下查询语言：
    property.value=article-page
    ```
 
-   `nt:hierarchyNode` 是的父节点类型 `cq:Page`. 假设 `jcr:content/contentType=article-page` 仅应用于 `cq:Page` 节点，则此查询仅返回 `cq:Page` 节点所在位置 `jcr:content/contentType=article-page`. 但此流量是次优限制，因为：
+   `nt:hierarchyNode` 為的父節點型別 `cq:Page`. 假設 `jcr:content/contentType=article-page` 僅套用至 `cq:Page` 節點透過Adobe的自訂應用程式，此查詢只會傳回 `cq:Page` 節點，其中 `jcr:content/contentType=article-page`. 不過，此流程並非最佳限制，因為：
 
-   * 其他节点继承自 `nt:hierarchyNode` (例如， `dam:Asset`)会不必要地向潜在结果集添加。
-   * 不存在AEM提供的索引 `nt:hierarchyNode`，但是，由于 `cq:Page`.
-   设置 `type=cq:Page` 将此查询限制为仅 `cq:Page` 节点，并将查询解析为AEM cqPageLucene，从而将结果限制为AEM中的一个子集节点（仅cq:Page节点）。
+   * 其他節點繼承自 `nt:hierarchyNode` (例如， `dam:Asset`)會不必要地新增至潛在結果集。
+   * 「 」沒有AEM提供的索引 `nt:hierarchyNode`，但由於有為 `cq:Page`.
+   設定 `type=cq:Page` 將此查詢限製為僅限 `cq:Page` 節點，並將查詢解析為AEM cqPageLucene，將結果限製為AEM中的節點子集（僅限cq：Page節點）。
 
-1. 或者，调整属性限制，以便查询解析为现有的属性索引。
+1. 或者，調整屬性限制，讓查詢解析為現有的屬性索引。
 
-* **未优化查询**
+* **未最佳化的查詢**
 
    ```js
    property=jcr:content/contentType
    property.value=article-page
    ```
 
-* **优化查询**
+* **最佳化的查詢**
 
    ```js
    property=jcr:content/sling:resourceType
    property.value=my-site/components/structure/article-page
    ```
 
-   将属性限制从 `jcr:content/contentType` （自定义值）到已知属性 `sling:resourceType` 允许查询解析到属性索引 `slingResourceType` 对所有内容进行索引的依据 `sling:resourceType`.
+   變更屬性限制 `jcr:content/contentType` （自訂值）至已知屬性 `sling:resourceType` 讓查詢解析為屬性索引 `slingResourceType` 以下條件索引所有內容 `sling:resourceType`.
 
-   当查询不能通过nodetype识别，并且结果集由单个属性限制主导时，最好使用属性索引（与Lucene属性索引相对）。
+   當查詢未依節點型別識別，且單一屬性限制主導結果集時，最好使用屬性索引（與Lucene屬性索引相對）。
 
-1. 向查询添加最紧的路径限制。 例如，首选 `/content/my-site/us/en` over `/content/my-site`或 `/content/dam` over `/`.
+1. 將最嚴格的路徑限制新增至查詢。 例如，偏好設定 `/content/my-site/us/en` 超過 `/content/my-site`，或 `/content/dam` 超過 `/`.
 
-* **未优化查询**
+* **未最佳化的查詢**
 
    ```js
    type=cq:Page
@@ -258,7 +258,7 @@ AEM支持以下查询语言：
    property.value=article-page
    ```
 
-* **优化查询**
+* **最佳化的查詢**
 
    ```js
    type=cq:Page
@@ -267,13 +267,13 @@ AEM支持以下查询语言：
    property.value=article-page
    ```
 
-   将路径限制范围从 `path=/content`to `path=/content/my-site/us/en` 允许索引减少必须检查的索引条目数。 当查询能够很好地限制路径时，不仅仅 `/content` 或 `/content/dam`，请确保索引具有 `evaluatePathRestrictions=true`.
+   設定路徑限制的範圍 `path=/content`至 `path=/content/my-site/us/en` 允許索引減少必須檢查的索引專案數。 當查詢可以限制路徑時，不僅僅是 `/content` 或 `/content/dam`，確認索引具有 `evaluatePathRestrictions=true`.
 
-   注释使用 `evaluatePathRestrictions` 增加索引大小。
+   注意使用 `evaluatePathRestrictions` 增加索引大小。
 
-1. 尽可能避免查询函数和查询操作，例如： `LIKE` 和 `fn:XXXX` 因为其成本会随着限制结果的数量而增加。
+1. 可能的話，請避免查詢函式和查詢操作，例如： `LIKE` 和 `fn:XXXX` 因為它們的成本會隨著限制型結果數量而調整。
 
-* **未优化查询**
+* **未最佳化的查詢**
 
    ```js
    type=cq:Page
@@ -282,7 +282,7 @@ AEM支持以下查询语言：
    property.value=%article%
    ```
 
-* **优化查询**
+* **最佳化的查詢**
 
    ```js
    type=cq:Page
@@ -290,39 +290,39 @@ AEM支持以下查询语言：
    fulltext.relPath=jcr:content/contentType
    ```
 
-   LIKE条件评估速度缓慢，因为如果文本以通配符(&quot;%。..&quot;)开头，则无法使用索引。 jcr:contains条件允许使用全文索引，因此首选使用该条件。 它要求解析的Lucene属性索引具有的indexRule `jcr:content/contentType` with `analayzed=true`.
+   LIKE條件的評估緩慢，因為如果文字的開頭是萬用字元(&quot;%。..&#39;)，則無法使用索引。 jcr：contains條件允許使用全文檢索，因此是推薦使用。 需要解析的Lucene屬性索引才能有indexRule `jcr:content/contentType` 替換為 `analayzed=true`.
 
-   使用查询函数，如 `fn:lowercase(..)` 优化可能比较困难，因为没有更快的等效项（在更复杂和更突出的索引分析器配置之外）。 最好确定其他范围界定限制以改进整体查询性能，要求函数对尽可能小的潜在结果集进行操作。
+   使用類似以下的查詢函式 `fn:lowercase(..)` 因為沒有速度更快的對等專案（在更複雜且干擾較大的索引分析器設定之外），可能更難最佳化。 最好找出其他範圍限制，以改善整體查詢效能，這要求函式儘可能對最小的潛在結果集進行操作。
 
-1. ***此调整特定于查询生成器，不适用于JCR-SQL2或XPath。***
+1. ***此調整是Query Builder專用，不適用於JCR-SQL2或XPath。***
 
-   使用 [查询生成器的guessTotal](/help/sites-developing/querybuilder-api.md#using-p-guesstotal-to-return-the-results) 当结果的完整集 **not** 立即需要。
+   使用 [查詢產生器的guessTotal](/help/sites-developing/querybuilder-api.md#using-p-guesstotal-to-return-the-results) 當完整的結果集為 **not** 立即需要。
 
-   * **未优化查询**
+   * **未最佳化的查詢**
 
       ```js
       type=cq:Page
       path=/content
       ```
 
-   * **优化查询**
+   * **最佳化的查詢**
 
       ```js
       type=cq:Page
       path=/content
       p.guessTotal=100
       ```
-   如果查询执行速度快但结果数量大，则为p。 `guessTotal` 是查询生成器查询的关键优化。
+   對於查詢執行速度較快但結果數量很大的情況，p。 `guessTotal` 是Query Builder查詢的重要最佳化。
 
-   `p.guessTotal=100` 告知查询生成器仅收集前100个结果。 并且，要设置布尔标记，以指示是否存在至少一个结果（但不存在多少个结果，因为计数此数字会导致速度缓慢）。 这种优化优于分页或无限负载用例，在这些用例中，仅递增显示结果子集。
+   `p.guessTotal=100` 告知Query Builder只收集前100個結果。 此外，若要設定布林值標幟，指出是否至少還有一個結果（但不表示還有多少個結果，因為計算此數字會導致速度變慢）。 此最佳化不適用於分頁或無限載入的使用案例，這類使用案例只會以累加方式顯示結果子集。
 
-## 现有索引优化 {#existing-index-tuning}
+## 現有索引調整 {#existing-index-tuning}
 
-1. 如果将最佳查询解析为属性索引，则无需执行任何操作，因为属性索引是最小可调的。
-1. 否则，查询应解析为Lucene属性索引。 如果无法解析索引，请跳转到创建新索引。
-1. 根据需要，将查询转换为XPath或JCR-SQL2。
+1. 如果最佳查詢解析為「屬性索引」，則沒有剩下的事情可做，因為「屬性索引」最低可調整。
+1. 否則，查詢應解析為Lucene屬性索引。 如果無法解析索引，請跳至建立新索引。
+1. 視需要將查詢轉換為XPath或JCR-SQL2。
 
-   * **查询生成器查询**
+   * **查詢產生器查詢**
 
       ```js
       query type=cq:Page
@@ -333,15 +333,15 @@ AEM支持以下查询语言：
       orderby.sort=desc
       ```
 
-   * **从查询生成器查询生成的XPath**
+   * **從查詢產生器查詢產生的XPath**
 
       ```js
       /jcr:root/content/my-site/us/en//element(*, cq:Page)[jcr:content/@contentType = 'article-page'] order by jcr:content/@publishDate descending
       ```
 
-1. 将XPath（或JCR-SQL2）提供给Oak索引定义生成器(位于 `https://oakutils.appspot.com/generate/index` 以便生成优化的Lucene属性索引定义。 <!-- The above URL is 404 as of April 24, 2023 -->
+1. 將XPath （或JCR-SQL2）提供給Oak索引定義產生器，位於 `https://oakutils.appspot.com/generate/index` 以便產生最佳化的Lucene屬性索引定義。 <!-- The above URL is 404 as of April 24, 2023 -->
 
-   **生成的Lucene属性索引定义**
+   **產生的Lucene屬性索引定義**
 
    ```xml
    - evaluatePathRestrictions = true
@@ -360,18 +360,18 @@ AEM支持以下查询语言：
                - name = "jcr:content/publishDate"
    ```
 
-1. 以添加方式将生成的定义手动合并到现有Lucene属性索引中。 请注意，不要删除现有配置，因为它们可能用于满足其他查询。
+1. 以累加方式手動將產生的定義合併到現有Lucene屬性索引中。 請注意不要移除現有的設定，因為這些設定可能用於滿足其他查詢。
 
-   1. 找到包含cq:Page的现有Lucene属性索引（使用索引管理器）。 在这种情况下， `/oak:index/cqPageLucene`.
-   1. 识别优化索引定义(步骤#4)与现有索引(/oak:index/cqPageLucene)之间的配置增量，并将优化索引中缺少的配置添加到现有索引定义中。
-   1. 根据AEM重新索引最佳实践，根据现有内容是否可能受此索引配置更改的影响，按顺序进行刷新或重新索引。
+   1. 找到涵蓋cq：Page （使用索引管理員）的現有Lucene屬性索引。 在這種情況下， `/oak:index/cqPageLucene`.
+   1. 識別最佳化索引定義(步驟#4)和現有索引(/oak：index/cqPageLucene)之間的設定差異，並將最佳化索引中遺漏的設定新增至現有索引定義。
+   1. 根據AEM重新索引最佳實務，重新整理或重新索引會根據現有內容是否可能受此索引設定變更影響而順序。
 
-## 创建新索引 {#create-a-new-index}
+## 建立新索引 {#create-a-new-index}
 
-1. 验证查询未解析为现有Lucene属性索引。 如果有，请参阅上面有关调整和现有索引的部分。
-1. 根据需要，将查询转换为XPath或JCR-SQL2。
+1. 確認查詢未解析為現有的Lucene屬性索引。 如果確實如此，請參閱上述調整與現有索引一節。
+1. 視需要將查詢轉換為XPath或JCR-SQL2。
 
-   * **查询生成器查询**
+   * **查詢產生器查詢**
 
       ```js
       type=myApp:Author
@@ -379,15 +379,15 @@ AEM支持以下查询语言：
       property.value=ira
       ```
 
-   * **从查询生成器查询生成的XPath**
+   * **從查詢產生器查詢產生的XPath**
 
       ```js
       //element(*, myApp:Page)[@firstName = 'ira']
       ```
 
-1. 将XPath（或JCR-SQL2）提供给Oak索引定义生成器(位于 `https://oakutils.appspot.com/generate/index` 以便生成优化的Lucene属性索引定义。 <!-- The above URL is 404 as of April 24, 2023 -->
+1. 將XPath （或JCR-SQL2）提供給Oak索引定義產生器，位於 `https://oakutils.appspot.com/generate/index` 以便產生最佳化的Lucene屬性索引定義。 <!-- The above URL is 404 as of April 24, 2023 -->
 
-   **生成的Lucene属性索引定义**
+   **產生的Lucene屬性索引定義**
 
    ```xml
    - compatVersion = 2
@@ -402,73 +402,73 @@ AEM支持以下查询语言：
                - propertyIndex = true
    ```
 
-1. 部署生成的Lucene属性索引定义。
+1. 部署產生的Lucene屬性索引定義。
 
-   将Oak索引定义生成器为新索引提供的XML定义添加到管理Oak索引定义的AEM项目中（记住，将Oak索引定义视为代码，因为代码取决于它们）。
+   將Oak索引定義產生器為新索引提供的XML定義新增到管理Oak索引定義的AEM專案（記住，將Oak索引定義視為程式碼，因為程式碼取決於它們）。
 
-   在常规的AEM软件开发生命周期后部署和测试新索引，并验证查询是否解析为该索引且查询性能良好。
+   在通常的AEM軟體開發生命週期之後部署和測試新索引，並確認查詢解析至索引且查詢執行正常。
 
-   在初次部署此索引时，AEM会使用必需的数据填充索引。
+   在此索引的初始部署中，AEM會使用必要資料填入索引。
 
-## 无索引查询和遍历查询何时可以？ {#when-index-less-and-traversal-queries-are-ok}
+## 無索引查詢和周遊查詢何時正常？ {#when-index-less-and-traversal-queries-are-ok}
 
-由于AEM具有灵活的内容架构，因此很难预测并确保内容结构的遍历不会随着时间的推移而演变为大到无法接受的程度。
+由於AEM靈活的內容架構，很難預測並確保內容結構的周遊不會隨著時間發展而變得異常龐大。
 
-因此，确保索引满足查询，除非路径限制和节点类型限制的组合保证 **遍历的节点数少于20个。**
+因此，請確保索引滿足查詢，除非路徑限制和節點型別限制的組合保證 **曾經周遊的節點少於20個。**
 
-## 查询开发工具 {#query-development-tools}
+## 查詢開發工具 {#query-development-tools}
 
-### Adobe支持 {#adobe-supported}
+### 支援的Adobe {#adobe-supported}
 
-* **查询生成器调试器**
+* **Query Builder Debugger**
 
-   * 用于执行查询生成器查询并生成支持的XPath的WebUI（用于解释查询或Oak索引定义生成器）。
+   * 用於執行Query Builder查詢並產生支援XPath的WebUI （用於Explain Query或Oak Index Definition Generator）。
    * 在AEM上 [/libs/cq/search/content/querydebug.html](http://localhost:4502/libs/cq/search/content/querydebug.html)
 
-* **CRXDE Lite — 查询工具**
+* **CRXDE Lite — 查詢工具**
 
-   * 用于执行XPath和JCR-SQL2查询的WebUI。
-   * 在AEM上 [/crx/de/index.jsp](http://localhost:4502/crx/de/index.jsp) >工具>查询……
+   * 用於執行XPath和JCR-SQL2查詢的WebUI。
+   * 在AEM上 [/crx/de/index.jsp](http://localhost:4502/crx/de/index.jsp) >工具>查詢……
 
 * **[说明查询](/help/sites-administering/operations-dashboard.md#explain-query)**
 
-   * “AEM操作”功能板，为任何给定的XPATH或JCR-SQL2查询提供详细说明（查询计划、查询时间和结果数）。
+   * 「AEM作業」控制面板，針對任何指定的XPATH或JCR-SQL2查詢，提供詳細的說明（查詢計畫、查詢時間及結果數）。
 
-* **[慢速/热门查询](/help/sites-administering/operations-dashboard.md#query-performance)**
+* **[緩慢/熱門查詢](/help/sites-administering/operations-dashboard.md#query-performance)**
 
-   * AEM Operations功能板，其中列出了在AEM上执行的最近缓慢且热门的查询。
+   * AEM Operations儀表板，列出最近在AEM上執行的緩慢且熱門的查詢。
 
 * **[索引管理器](/help/sites-administering/operations-dashboard.md#the-index-manager)**
 
-   * AEM操作WebUI，显示AEM实例上的索引；有助于了解哪些索引存在；可以定位或增强。
+   * 顯示AEM執行個體上索引的AEM Operations WebUI；有助於瞭解存在哪些索引；可以定位或擴充。
 
 * **[记录](/help/sites-administering/operations-dashboard.md#log-messages)**
 
-   * 查询生成器日志记录
+   * 查詢產生器記錄
 
       * `DEBUG @ com.day.cq.search.impl.builder.QueryImpl`
-   * Oak查询执行日志记录
+   * Oak查詢執行記錄
 
       * `DEBUG @ org.apache.jackrabbit.oak.query`
 
 
-* **Apache Jackrabbit查询引擎设置OSGi配置**
+* **Apache Jackrabbit查詢引擎設定OSGi設定**
 
-   * 用于配置用于遍历查询的失败行为的OSGi配置。
+   * 用於設定周遊查詢的失敗行為的OSGi設定。
    * 在AEM上 [/system/console/configMgr#org.apache.jackrabbit.oak.query.QueryEngineSettingsService](http://localhost:4502/system/console/configMgr#org.apache.jackrabbit.oak.query.QueryEngineSettingsService)
 
 * **NodeCounter JMX Mbean**
 
-   * JMX MBean用于估计AEM中内容树中的节点数。
+   * JMX MBean用於估算AEM內容樹狀結構中的節點數量。
    * 在AEM上 [/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3DnodeCounter%2Ctype%3DNodeCounter](http://localhost:4502/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3DnodeCounter%2Ctype%3DNodeCounter)
 
-### 社区支持 {#community-supported}
+### 社群支援 {#community-supported}
 
-* **位于的Oak索引定义生成器`https://oakutils.appspot.com/generate/index`** <!-- The above URL is 404 as of April 24, 2023 -->
+* **Oak索引定義產生器位於`https://oakutils.appspot.com/generate/index`** <!-- The above URL is 404 as of April 24, 2023 -->
 
-   * 从XPath或JCR-SQL2查询语句生成最佳Lucence属性索引。
+   * 從XPath或JCR-SQL2查詢陳述式產生最佳的Lucence屬性索引。
 
-* **[AEM Chrome插件](https://chrome.google.com/webstore/detail/aem-chrome-plug-in/ejdcnikffjleeffpigekhccpepplaode?hl=en-US)**
+* **[AEM Chrome外掛程式](https://chrome.google.com/webstore/detail/aem-chrome-plug-in/ejdcnikffjleeffpigekhccpepplaode?hl=en-US)**
 
-   * Google Chrome Web浏览器扩展，可在浏览器的开发工具控制台中公开按请求发送的日志数据，包括已执行的查询及其查询计划。
-   * 需要 [Sling Log Tracer 1.0.2+](https://sling.apache.org/downloads.cgi) 以在AEM上安装和启用。
+   * Google Chrome網頁瀏覽器擴充功能，可在瀏覽器的開發工具主控台中公開每個請求的記錄資料，包括已執行的查詢及其查詢計畫。
+   * 需要 [Sling Log Tracer 1.0.2+](https://sling.apache.org/downloads.cgi) ，並會在AEM上安裝和啟用。

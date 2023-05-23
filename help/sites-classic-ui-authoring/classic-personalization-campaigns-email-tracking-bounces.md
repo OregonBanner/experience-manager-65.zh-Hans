@@ -1,7 +1,7 @@
 ---
-title: 跟踪弹回的电子邮件
+title: 追蹤退信電子郵件
 seo-title: Tracking Bounced Emails
-description: 当您向许多用户发送新闻稿时，列表中通常会存在一些无效的电子邮件地址。 向这些地址发送新闻稿时会弹回。 AEM可以管理这些退回，并在超出配置的退回计数后停止向这些地址发送新闻稿。
+description: 當您傳送電子報給許多使用者時，清單中通常會有一些無效的電子郵件地址。 傳送電子報回這些地址。 AEM可以管理這些跳出，並在超過設定的跳出計數器後停止傳送電子報到這些地址。
 seo-description: When you send a newsletter to many users, there are usually some invalid emails addresses in the list. Sending newsletters to those addresses bounce back. AEM is capable of managing those bounces and can stop sending newsletters to those addresses after the configured bounce counter is exceeded.
 uuid: 749959f2-e6f8-465f-9675-132464c65f11
 contentOwner: User
@@ -17,86 +17,86 @@ ht-degree: 0%
 
 ---
 
-# 跟踪弹回的电子邮件{#tracking-bounced-emails}
+# 追蹤退信電子郵件{#tracking-bounced-emails}
 
 >[!NOTE]
 >
->Adobe不打算进一步增强对AEM SMTP服务发送的打开/弹回电子邮件的跟踪。
+>Adobe不打算進一步增強追蹤由AEM SMTP服務傳送的已開啟/已退回電子郵件。
 >
->建议是 [使用Adobe Campaign及其AEM集成](/help/sites-administering/campaign.md).
+>建議如下 [使用Adobe Campaign及其AEM整合](/help/sites-administering/campaign.md).
 
-当您向许多用户发送新闻稿时，列表中通常会存在一些无效的电子邮件地址。 向这些地址发送新闻稿时会弹回。 AEM可以管理这些退回，并在超出配置的退回计数后停止向这些地址发送新闻稿。 默认情况下，跳出率设置为3，但可进行配置。
+當您傳送電子報給許多使用者時，清單中通常會有一些無效的電子郵件地址。 傳送電子報回這些地址。 AEM可以管理這些跳出，並在超過設定的跳出計數器後停止傳送電子報到這些地址。 依預設，跳出率會設為3，但可設定。
 
-要设置AEM以跟踪退回的电子邮件，请设置AEM以轮询接收退回电子邮件的现有邮箱。 通常，此位置是您指定发送新闻稿的“发件人”电子邮件地址。 AEM会轮询此收件箱并导入轮询配置中指定路径下的所有电子邮件。 然后，会触发一个工作流，以搜索用户中的退回电子邮件地址，并相应地更新用户的bounceCounter属性值。 超出配置的最大跳出次数后，用户将从新闻稿列表中删除。
+若要設定AEM以追蹤彈回電子郵件，請設定AEM以輪詢接收彈回電子郵件的現有信箱。 通常，此位置是您指定傳送Newsletter的來源電子郵件地址。 AEM會輪詢此收件匣，並匯入位於輪詢設定中所指定路徑下方的所有電子郵件。 然後會觸發工作流程，以搜尋使用者內退信的電子郵件地址，並相應地更新使用者的bounceCounter屬性值。 超過設定的最大彈回數後，使用者會從Newsletter清單中移除。
 
-## 配置馈送导入器 {#configuring-the-feed-importer}
+## 設定摘要匯入工具 {#configuring-the-feed-importer}
 
-通过馈送导入器，您可以将外部源中的内容重复导入您的存储库。 使用Feed Importer的此配置， AEM会检查发件人邮箱中的退回电子邮件。
+摘要匯入工具可讓您重複地將外部來源的內容匯入存放庫。 使用摘要匯入工具的這個設定，AEM會檢查寄件者的信箱是否有退回的電子郵件。
 
-要配置Feed Importer以跟踪弹回的电子邮件，请执行以下操作：
+若要設定摘要匯入工具來追蹤彈回電子郵件，請執行下列動作：
 
-1. 在 **工具**，选择馈送导入器。
+1. 在 **工具**，選取摘要匯入工具。
 
-1. 单击 **添加** 创建配置。
+1. 按一下 **新增** 以建立設定。
 
    ![chlimage_1](assets/chlimage_1a.png)
 
-1. 通过选择类型并向轮询URL添加信息来添加配置，以便您可以配置主机和端口。 此外，向URL查询中添加一些特定于邮件和协议的参数。 将配置设置为每天至少轮询一次。
+1. 選取型別，並將資訊新增至輪詢URL，以便您設定主機和連線埠，藉此新增設定。 此外，將一些郵件和通訊協定特定的引數新增到URL查詢中。 設定為每天至少輪詢一次。
 
-   轮询URL中的所有配置都需要以下信息：
+   所有設定都需要輪詢URL中下列專案的相關資訊：
 
-   `username`:用于连接的用户名
+   `username`：用於連線的使用者名稱
 
-   `password`:用于连接的密码
+   `password`：用來連線的密碼
 
-   此外，您还可以根据协议配置某些设置。
+   此外，您可以根據通訊協定來設定特定設定。
 
-   **POP3配置属性：**
+   **POP3設定屬性：**
 
-   `pop3.leave.on.server`:定义是否将消息保留在服务器上。 设置为true可将消息保留在服务器上，否则设置为false。 默认值为true。
+   `pop3.leave.on.server`：定義是否要將訊息留在伺服器上。 設為true會在伺服器上保留訊息，否則則為false。 預設為true。
 
-   **POP3示例：**
+   **POP3範例：**
 
-   | pop3s://pop.gmail.com:995/INBOX?username=user&amp;password=secret | 使用pop3 over SSL通过用户/密钥在端口995上连接到GMail，默认情况下将消息保留在服务器上 |
+   | pop3s://pop.gmail.com:995/INBOX?username=user&amp;password=secret | 透過SSL使用pop3連線至連線埠995上的GMail （使用者/密碼），依預設會在伺服器上留下訊息 |
    |---|---|
    | pop3s://pop.gmail.com:995/INBOX?username=user&amp;password=secret&amp;pop3.leave.on.server=false | pop3s://pop.gmail.com:995/INBOX?username=user&amp;password=secret&amp;pop3.leave.on.server=false |
 
-   **IMAP配置属性：**
+   **IMAP設定屬性：**
 
-   允许您设置要搜索的标记。
+   可讓您設定要搜尋的標幟。
 
-   `imap.flag.SEEN`：对于新消息/未看消息，设置为false；对于已读消息，设置为true
+   `imap.flag.SEEN`：設定新增/未檢視訊息為false，已讀取訊息為true
 
-   请参阅 [https://javaee.github.io/javamail/docs/api/index.html?javax/mail/Flags.Flag.html](https://javaee.github.io/javamail/docs/api/index.html?javax/mail/Flags.Flag.html) 全部的旗子。
+   另請參閱 [https://javaee.github.io/javamail/docs/api/index.html?javax/mail/Flags.Flag.html](https://javaee.github.io/javamail/docs/api/index.html?javax/mail/Flags.Flag.html) 以取得完整的旗標清單。
 
-   **IMAP示例：**
+   **IMAP範例：**
 
-   | imaps://imap.gmail.com:993/inbox?username=user&amp;password=secret | 使用IMAP over SSL通过用户/密钥在端口993上连接到GMail。 默认情况下仅获取新消息。 |
+   | imaps://imap.gmail.com:993/inbox?username=user&amp;password=secret | 透過SSL使用IMAP連線至具有使用者/密碼的連線埠993上的GMail。 僅依預設取得新訊息。 |
    |---|---|
-   | imaps://imap.gmail.com:993/inbox?username=user&amp;password=secret&amp;imap.flag.SEEN=true | 使用IMAP over SSL通过用户/密钥连接到GMail 993，只获取已看到的消息。 |
-   | imaps://imap.gmail.com:993/inbox?username=user&amp;password=secret&amp;imap.flag.SEEN=true&amp;imap.flag.SEEN=false | 使用IMAP over SSL通过用户/密钥连接到GMail 993，获取已读或新邮件。 |
+   | imaps://imap.gmail.com:993/inbox?username=user&amp;password=secret&amp;imap.flag.SEEN=true | 使用IMAP over SSL連線至具有使用者/密碼的GMail 993，只會看到訊息。 |
+   | imaps://imap.gmail.com:993/inbox?username=user&amp;password=secret&amp;imap.flag.SEEN=true&amp;imap.flag.SEEN=false | 使用IMAP over SSL連線至具有使用者/密碼的GMail 993，已讀取或收到新訊息。 |
 
 1. 保存配置。
 
-## 配置新闻稿服务组件 {#configuring-the-newsletter-service-component}
+## 設定Newsletter服務元件 {#configuring-the-newsletter-service-component}
 
-配置馈送导入器后，配置“发件人”地址和退件计数器。
+在設定摘要匯入工具後，請設定「寄件者」位址和「跳出」計數器。
 
-要配置新闻稿服务，请执行以下操作：
+若要設定Newsletter服務：
 
-1. 在OSGi控制台中， `<host>:<port>/system/console/configMgr`，导航到 **MCM新闻稿**.
+1. 在OSGi主控台中，位於 `<host>:<port>/system/console/configMgr`，導覽至 **MCM電子報**.
 
-1. 配置服务并在完成后保存更改。
+1. 完成時設定服務並儲存變更。
 
    ![chlimage_1-1](assets/chlimage_1-1a.png)
 
-   可以设置以下配置来调整行为：
+   可設定下列設定來調整行為：
 
-   | 跳出计数器最大值(max.bounce.count) | 定义在用户发送新闻稿时忽略之前的退回次数。 将此值设置为0将完全禁用退回检查。 |
+   | 彈回計數器最大值(max.bounce.count) | 定義在傳送Newsletter時直到使用者被省略之前的跳出次數。 將此值設為0，會完全停用退信檢查。 |
    |---|---|
-   | 活动无缓存(sent.activity.nocache) | 定义用于新闻稿发送活动的缓存设置 |
+   | 活動無快取(sent.activity.nocache) | 定義快取設定以用於電子報傳送活動 |
 
-   保存后，Newsletter MCM服务会执行以下操作：
+   儲存後，Newsletter MCM服務會執行以下操作：
 
-   * 成功发送新闻稿后，将活动写入用户隐藏的流。
-   * 在检测到跳出且用户跳出计数器发生更改时写入活动。
+   * 在成功傳送Newsletter時將活動寫入使用者隱藏的資料流。
+   * 在偵測到跳出且使用者跳出計數器變更時寫入活動。

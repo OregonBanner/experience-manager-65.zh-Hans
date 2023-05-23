@@ -1,7 +1,7 @@
 ---
-title: 通信管理配置属性
+title: 通訊管理設定屬性
 seo-title: Correspondence Management Configuration Properties
-description: 本主题介绍如何使用特定于解决方案的配置来修改资产编辑器。 本主题详细介绍可编辑的属性，及其说明、默认值和可接受值。
+description: 本主題說明如何使用解決方案特定設定來修改Asset Composer。 本主題詳細說明您可以編輯的屬性，以及其說明、預設值和可接受值。
 seo-description: This topic explains how you can modify Asset Composer with solution-specific configurations. This topic details the properties you can edit, with their description, default values, and acceptable values.
 uuid: 6b401d51-9332-459b-b751-42a9b5a1462d
 content-type: reference
@@ -17,11 +17,11 @@ ht-degree: 3%
 
 ---
 
-# 通信管理配置属性 {#correspondence-management-configuration-properties}
+# 通訊管理設定屬性 {#correspondence-management-configuration-properties}
 
-要配置这些属性，请在浏览器中打开以下URL： `https://<server>:<port>/<contextPath>/system/console/configMgr` 并选择 **通信管理配置**.
+若要設定這些屬性，請在瀏覽器中開啟下列URL： `https://<server>:<port>/<contextPath>/system/console/configMgr` 並選取 **通訊管理設定**.
 
-通信管理具有以下配置属性：
+「通訊管理」有下列設定屬性：
 
 <table>
  <tbody>
@@ -29,269 +29,269 @@ ht-degree: 3%
    <th><p><strong>属性</strong></p> </th>
    <th><p><strong>描述</strong></p> </th>
    <th><p><strong>默认</strong></p> </th>
-   <th><p><strong>可接受值</strong></p> </th>
+   <th><p><strong>可接受的值</strong></p> </th>
   </tr>
   <tr>
    <td><p>缩进</p> </td>
-   <td>模块缩进<p> </p> </td>
+   <td>模組的縮排<p> </p> </td>
    <td><p>12.7mm</p> </td>
-   <td><p>任意数字</p> </td>
+   <td><p>任何數字</p> </td>
   </tr>
   <tr>
-   <td>数字最小宽度</td>
-   <td>使用罗马数字以外的编号列表时，项目符号/编号字段应用的最小宽度</td>
+   <td>數字最小寬度</td>
+   <td>使用羅馬數字以外的編號清單時，要套用至專案符號/數字欄位的最小寬度</td>
    <td>8.0mm</td>
-   <td>任意数字</td>
+   <td>任何數字</td>
   </tr>
   <tr>
-   <td><p>罗马数字最小宽度</p> </td>
-   <td><p>使用罗马数字时，应用于项目符号/数字字段的最小宽度</p> </td>
+   <td><p>羅馬數字最小寬度</p> </td>
+   <td><p>使用羅馬數字時，要套用至專案符號/數字欄位的最小寬度</p> </td>
    <td><p>12.7mm</p> </td>
-   <td><p>任意数字</p> </td>
+   <td><p>任何數字</p> </td>
   </tr>
   <tr>
-   <td>节目类型</td>
-   <td>创建通信应用程序用于呈现信件预览的演绎版类型。 </td>
-   <td>HTML演绎版</td>
-   <td>HTML呈现版本/PDF呈现版本</td>
+   <td>轉譯型別</td>
+   <td>建立通訊應用程式用來呈現信件預覽的轉譯型別。 </td>
+   <td>HTML轉譯</td>
+   <td>HTML轉譯/PDF轉譯</td>
   </tr>
   <tr>
-   <td><p>启用CCRPDF高亮显示</p> </td>
-   <td><p>在“创建通信”应用程序中启用PDF高亮显示</p> </td>
+   <td><p>啟用CCRPDF反白顯示</p> </td>
+   <td><p>在建立通訊應用程式中啟用反白顯示PDF</p> </td>
    <td><p>true</p> </td>
    <td><p>true / false</p> </td>
   </tr>
   <tr>
-   <td><p>目标高亮类型</p> </td>
-   <td><p>创建通信应用程序中的目标高亮类型</p> </td>
-   <td><p>边框</p> </td>
-   <td><p>边框/填充/无</p> </td>
+   <td><p>目標反白顯示型別</p> </td>
+   <td><p>建立對應應用程式中的目標反白顯示型別</p> </td>
+   <td><p>邊框</p> </td>
+   <td><p>邊框/填滿/無</p> </td>
   </tr>
   <tr>
-   <td><p>目标高亮颜色</p> </td>
-   <td><p>创建通信应用程序中的目标高亮颜色</p> </td>
+   <td><p>目標反白顯示色彩</p> </td>
+   <td><p>建立對應應用程式中的目標反白顯示色彩</p> </td>
    <td><p>90;155;245</p> </td>
-   <td><p>格式为R；G；B的任何RGB</p> </td>
+   <td><p>R；G；B格式的任何RGB顏色</p> </td>
   </tr>
   <tr>
-   <td><p>内容高亮类型</p> </td>
-   <td><p>创建通信应用程序中的内容高亮类型</p> </td>
-   <td><p>填充</p> </td>
-   <td><p>边框/填充/无</p> </td>
+   <td><p>內容反白顯示型別</p> </td>
+   <td><p>建立對應應用程式中的內容反白顯示型別</p> </td>
+   <td><p>填滿</p> </td>
+   <td><p>邊框/填滿/無</p> </td>
   </tr>
   <tr>
-   <td><p>内容高亮颜色</p> </td>
-   <td><p>创建通信应用程序中的内容高亮颜色</p> </td>
+   <td><p>內容反白顯示色彩</p> </td>
+   <td><p>建立對應應用程式中的內容反白顯示色彩</p> </td>
    <td><p>210;225;245</p> </td>
-   <td><p>格式为R；G；B的任何RGB</p> </td>
+   <td><p>R；G；B格式的任何RGB顏色</p> </td>
   </tr>
   <tr>
-   <td><p>字段高亮类型</p> </td>
-   <td><p>创建通信应用程序中的字段高亮类型</p> </td>
-   <td><p>填充</p> </td>
-   <td><p>边框/填充/无</p> </td>
+   <td><p>欄位反白顯示型別</p> </td>
+   <td><p>建立對應應用程式中的欄位反白顯示型別</p> </td>
+   <td><p>填滿</p> </td>
+   <td><p>邊框/填滿/無</p> </td>
   </tr>
   <tr>
-   <td><p>字段高亮颜色</p> </td>
-   <td><p>创建通信应用程序中的字段高亮颜色</p> </td>
+   <td><p>欄位反白顯示色彩</p> </td>
+   <td><p>建立對應應用程式中的欄位反白顯示色彩</p> </td>
    <td><p>210;225;245</p> </td>
-   <td><p>格式为R；G；B的任何RGB</p> </td>
+   <td><p>R；G；B格式的任何RGB顏色</p> </td>
   </tr>
   <tr>
-   <td><p>应用程序超时</p> </td>
-   <td><p>应用程序超时（以秒为单位）</p> </td>
+   <td><p>應用程式逾時</p> </td>
+   <td><p>應用程式逾時（以秒為單位）</p> </td>
    <td><p>1200</p> </td>
-   <td><p>任意数字</p> </td>
+   <td><p>任何數字</p> </td>
   </tr>
   <tr>
-   <td><p>PDF的文档参数名称</p> </td>
-   <td><p>后处理中PDF文档的参数名称</p> </td>
+   <td><p>PDF檔案引數名稱</p> </td>
+   <td><p>後處理中PDF檔案的引數名稱</p> </td>
    <td><p>inPDFDoc</p> </td>
-   <td><p>任意字符串变量名称</p> </td>
+   <td><p>任何字串變數名稱</p> </td>
   </tr>
   <tr>
-   <td><p>XML数据参数名称</p> </td>
-   <td><p>后处理中的XML文档（数据）的参数名称</p> </td>
+   <td><p>XML資料引數名稱</p> </td>
+   <td><p>後處理中XML檔案（資料）的引數名稱</p> </td>
    <td><p>inXMLDoc</p> </td>
-   <td><p>任意字符串变量名称</p> </td>
+   <td><p>任何字串變數名稱</p> </td>
   </tr>
   <tr>
-   <td><p>XDP文档参数名称</p> </td>
-   <td><p>发送到后处理的XDP文档的参数名称</p> </td>
+   <td><p>XDP檔案引數名稱</p> </td>
+   <td><p>傳送到後處理的XDP檔案的引數名稱</p> </td>
    <td><p>inXDPDoc</p> </td>
-   <td><p>任意字符串变量名称</p> </td>
+   <td><p>任何字串變數名稱</p> </td>
   </tr>
   <tr>
-   <td><p>重定向URL参数名称</p> </td>
-   <td><p>从后处理发送的重定向URL的参数名称此值可以是任何字符串变量名称</p> </td>
-   <td><p>redirecturl</p> </td>
-   <td><p>任意字符串变量名称</p> </td>
+   <td><p>重新導向URL引數名稱</p> </td>
+   <td><p>從後處理程式傳送之重新導向URL的引數名稱此值可以是任何字串變數名稱</p> </td>
+   <td><p>redirectURL</p> </td>
+   <td><p>任何字串變數名稱</p> </td>
   </tr>
   <tr>
-   <td><p>PDF提交类型</p> </td>
-   <td><p>PDF提交类型(从“创建通信”应用产品提交时生成的PDF类型)</p> </td>
-   <td><p>非交互式</p> </td>
-   <td><p>交互式/非交互式</p> </td>
+   <td><p>PDF提交型別</p> </td>
+   <td><p>PDF提交型態(從「建立通訊」應用模組提交時產生的PDF型態)</p> </td>
+   <td><p>非互動式</p> </td>
+   <td><p>互動/非互動</p> </td>
   </tr>
   <tr>
-   <td><p>优化数据字典实例</p> </td>
-   <td><p>实现数据字典实例b/w服务器和客户端的优化传输</p> </td>
+   <td><p>最佳化資料字典例項</p> </td>
+   <td><p>啟用最佳化資料字典執行個體傳輸（包含伺服器和使用者端）</p> </td>
    <td><p>true</p> </td>
    <td><p>true / false</p> </td>
   </tr>
   <tr>
-   <td><p>自动更正不一致 </p> </td>
-   <td><p>启用后，它会自动处理信件分配中可能的不一致情况</p> </td>
+   <td><p>自動修正不一致之處 </p> </td>
+   <td><p>啟用時，會自動處理信件指派中可能發生的不一致情況</p> </td>
    <td><p>true</p> </td>
    <td><p>true / false</p> </td>
   </tr>
   <tr>
-   <td><p>使用配置的数据格式</p> </td>
-   <td><p>控制是否使用配置的数据编辑格式和数据显示格式</p> </td>
+   <td><p>使用已設定的資料格式</p> </td>
+   <td><p>控制是否使用已設定的資料編輯格式和資料顯示格式</p> </td>
    <td><p>true</p> </td>
    <td><p>true / false</p> </td>
   </tr>
   <tr>
-   <td><p>数据显示格式</p> </td>
-   <td><p>指定特定于区域设置的数据显示格式</p> </td>
+   <td><p>資料顯示格式</p> </td>
+   <td><p>指定資料的區域設定特定顯示格式</p> </td>
    <td><p>locale=en_US； dateFormat=dd-MM-yyyy； numberDecimalSeparator=.； numberGroupSeparator=，； numberUseGroupSeparator=truelocale=de_DE； dateFormat=dd-MM-yyyy； numberDecimalSeparator=，； numberGroupSeparator=.； numberUseGroupSeparator=truelocale=fr_FR； dateFormat=dd-MM-yyyy； numberDecimalSeparator=，； numberGroupSeparator= ； numberUseGroupSeparator=truelocale=ja_JP； dateFormat=dd-MM-yyy； numberDecimalSeparator=。； numberGroupSeparator=，； numberUseGroupSeparator=true</p> </td>
    <td><p>—</p> </td>
   </tr>
   <tr>
-   <td><p>数据编辑格式</p> </td>
-   <td><p>编辑数据格式。 将数据写入字符串或从字符串解析数据时，将使用此属性</p> </td>
+   <td><p>資料編輯格式</p> </td>
+   <td><p>編輯資料的格式。 將資料寫入為String或從String剖析資料時，會使用此值</p> </td>
    <td><p>locale=en_US； dateFormat=dd-MM-yyyy； numberDecimalSeparator=.； numberGroupSeparator=，； numberUseGroupSeparator=true</p> </td>
    <td>--<p> </p> </td>
   </tr>
   <tr>
-   <td><p>在发布时管理书信实例</p> </td>
-   <td><p>启用/禁用管理书信功能（仅适用于发布服务器）</p> </td>
+   <td><p>管理發布時的信件例項</p> </td>
+   <td><p>啟用/停用「管理信件」功能（僅適用於發佈伺服器）</p> </td>
    <td><p>false</p> </td>
    <td><p>true / false</p> </td>
   </tr>
   <tr>
-   <td><p>启用审核</p> </td>
-   <td><p>启用/禁用审核功能。 为false时，将禁用所有操作的审核日志</p> </td>
+   <td><p>啟用稽核</p> </td>
+   <td><p>啟用/停用稽核功能。 為false時，將會停用所有動作的稽核記錄</p> </td>
    <td><p>false</p> </td>
    <td><p>true / false</p> </td>
   </tr>
   <tr>
-   <td><p>启用读取审核</p> </td>
-   <td><p>启用/禁用资产读取的审核功能</p> </td>
+   <td><p>啟用讀取稽核</p> </td>
+   <td><p>啟用/停用資產讀取的稽核功能</p> </td>
    <td><p>false</p> </td>
    <td><p>true / false</p> </td>
   </tr>
   <tr>
-   <td><p>启用“创建审核”</p> </td>
-   <td><p>启用/禁用资产创建的审核功能</p> </td>
+   <td><p>啟用建立稽核</p> </td>
+   <td><p>啟用/停用資產建立的稽核功能</p> </td>
    <td><p>false</p> </td>
    <td><p>true / false</p> </td>
   </tr>
   <tr>
-   <td><p>启用更新审核</p> </td>
-   <td><p>启用/禁用资产更新的审核功能</p> </td>
+   <td><p>啟用更新稽核</p> </td>
+   <td><p>啟用/停用資產更新的稽核功能</p> </td>
    <td><p>false</p> </td>
    <td><p>true / false</p> </td>
   </tr>
   <tr>
-   <td><p>启用还原审核</p> </td>
-   <td><p>启用/禁用用于资源还原的审核功能</p> </td>
+   <td><p>啟用回覆稽核</p> </td>
+   <td><p>啟用/停用資產回覆的稽核功能</p> </td>
    <td><p>false</p> </td>
    <td><p>true / false</p> </td>
   </tr>
   <tr>
-   <td><p>启用发布审核</p> </td>
-   <td><p>启用/禁用资产发布的审核功能</p> </td>
+   <td><p>啟用發佈稽核</p> </td>
+   <td><p>啟用/停用資產發佈的稽核功能</p> </td>
    <td><p>false</p> </td>
    <td><p>true / false</p> </td>
   </tr>
   <tr>
-   <td><p>启用SaveAsDraft审核</p> </td>
-   <td><p>启用/禁用用于保存书信草稿的审核功能</p> </td>
+   <td><p>啟用SaveAsDraft稽核</p> </td>
+   <td><p>啟用/停用儲存信件草稿的稽核功能</p> </td>
    <td><p>false</p> </td>
    <td><p>true / false</p> </td>
   </tr>
   <tr>
-   <td><p>启用提交审核</p> </td>
-   <td><p>启用/禁用信件提交的审核功能</p> </td>
+   <td><p>啟用提交稽核</p> </td>
+   <td><p>啟用/停用信件提交的稽核功能</p> </td>
    <td><p>false</p> </td>
    <td><p>true / false</p> </td>
   </tr>
   <tr>
-   <td><p>启用电子邮件审核</p> </td>
-   <td><p>启用/禁用电子邮件信件的审核功能</p> </td>
+   <td><p>啟用電子郵件稽核</p> </td>
+   <td><p>啟用/停用電子郵件信件的稽核功能</p> </td>
    <td><p>false</p> </td>
    <td><p>true / false</p> </td>
   </tr>
   <tr>
-   <td><p>启用打印审核</p> </td>
-   <td><p>启用/禁用打印信件的审核功能</p> </td>
+   <td><p>啟用列印稽核</p> </td>
+   <td><p>啟用/停用列印信函的稽核功能</p> </td>
    <td><p>false</p> </td>
    <td><p>true / false</p> </td>
   </tr>
   <tr>
-   <td><p>启用自定义投放审核</p> </td>
-   <td><p>启用/禁用自定义信件投放的审核功能</p> </td>
+   <td><p>啟用自訂傳遞稽核</p> </td>
+   <td><p>啟用/停用自訂信件傳送的稽核功能</p> </td>
    <td><p>false</p> </td>
    <td><p>true / false</p> </td>
   </tr>
   <tr>
-   <td><p>附件文档参数名称</p> </td>
-   <td><p>发送到发布流程的附件文档的参数名称</p> </td>
+   <td><p>附件檔案引數名稱</p> </td>
+   <td><p>傳送至發佈程式的附件檔案的引數名稱</p> </td>
    <td><p>inAttachmentDocs</p> </td>
-   <td><p>任意字符串变量名称</p> </td>
+   <td><p>任何字串變數名稱</p> </td>
   </tr>
   <tr>
-   <td><p>CM用户根目录</p> </td>
-   <td><p>包含所有通信管理用户资产的文件夹的URL</p> </td>
+   <td><p>CM使用者根目錄</p> </td>
+   <td><p>包含所有Correspondence Management使用者資產的資料夾URL</p> </td>
    <td><p>--</p> </td>
-   <td><p>有效的文件夹位置</p> </td>
+   <td><p>有效的資料夾位置</p> </td>
   </tr>
   <tr>
-   <td><p>书信缓存大小</p> </td>
-   <td><p>指定缓存中保留的最大字母数。</p> <p>更改此值将导致清理 <code>in-memory</code> 缓存。</p> </td>
+   <td><p>字母快取大小</p> </td>
+   <td><p>指定快取中保留的最大字母數。</p> <p>變更此值將導致清理 <code>in-memory</code> 快取。</p> </td>
    <td><p>100</p> </td>
-   <td><p>任意数值</p> </td>
+   <td><p>任何數值</p> </td>
   </tr>
   <tr>
-   <td><p>启用书信缓存</p> </td>
-   <td><p>启用/禁用信件缓存。</p> <p>更改此值将导致清理 <code>in-memory </code> 缓存。</p> </td>
+   <td><p>啟用字母快取</p> </td>
+   <td><p>啟用/停用字母快取。</p> <p>變更此值將導致清理 <code>in-memory </code> 快取。</p> </td>
    <td><p>true</p> </td>
    <td><p>true / false</p> </td>
   </tr>
   <tr>
-   <td><p>数据元素排序</p> </td>
-   <td><p>根据数据元素在Letter中的顺序，保持数据元素在创建通信界面中的排序</p> </td>
+   <td><p>資料元素排序</p> </td>
+   <td><p>根據資料元素在Letter中的順序，保持建立通訊介面中的資料元素順序</p> </td>
    <td><p>true</p> </td>
    <td><p>true / false</p> </td>
   </tr>
   <tr>
-   <td><p>支持重新加载</p> </td>
-   <td><p>启用/禁用在服务器端呈现的字母中的重新加载支持。</p> <p>禁用此项将提高信件渲染性能。</p> </td>
+   <td><p>支援重新載入</p> </td>
+   <td><p>啟用/停用伺服器端轉譯字母的重新載入支援。</p> <p>停用此專案將改善字母轉譯效能。</p> </td>
    <td><p>false</p> </td>
    <td><p>true / false</p> <p> </p> </td>
   </tr>
   <tr>
-   <td>临时文件夹</td>
-   <td>临时文件夹的位置。</td>
+   <td>暫存資料夾</td>
+   <td>暫存資料夾的位置。</td>
    <td>acm.tpmFolder</td>
    <td> </td>
   </tr>
   <tr>
-   <td>远程保存</td>
-   <td>将书信实例保存在指定的处理作者上。</td>
+   <td>遠端儲存</td>
+   <td>將信件例項儲存在指定的處理作者上。</td>
    <td> </td>
    <td> </td>
   </tr>
   <tr>
-   <td>兼容性选项</td>
-   <td>以逗号分隔的configname：configvalue格式的兼容性选项。</td>
+   <td>相容性選項</td>
+   <td>以逗號分隔的configname：configvalue格式的相容性選項。</td>
    <td>acm.compatibilityOptions</td>
    <td> </td>
   </tr>
   <tr>
-   <td><p>调试目录 </p> <p> </p> </td>
-   <td>用于调试的文件系统文件夹位置。 如果目录没有 <code>exists</code>，将不会生成调试转储。</td>
+   <td><p>偵錯目錄 </p> <p> </p> </td>
+   <td>用於偵錯的檔案系統資料夾位置。 如果目錄沒有 <code>exists</code>，不會產生任何偵錯傾印。</td>
    <td>acm.debugDirectory</td>
    <td> </td>
   </tr>

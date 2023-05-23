@@ -1,7 +1,7 @@
 ---
 title: Adobe 分类
 seo-title: Adobe Classifications
-description: 了解Adobe分类。
+description: 瞭解Adobe分類。
 seo-description: Learn about Adobe Classifications.
 uuid: 57fb59f4-da90-4fe7-a5b1-c3bd51159a16
 contentOwner: User
@@ -19,130 +19,130 @@ ht-degree: 7%
 
 # Adobe 分类{#adobe-classifications}
 
-Adobe分类将分类数据导出到 [Adobe Analytics](/help/sites-administering/adobeanalytics.md) 按预定方式发送。 导出器是 **com.adobe.cq.scheduled.exporter.Exporter**.
+Adobe分類會將分類資料匯出至 [Adobe Analytics](/help/sites-administering/adobeanalytics.md) 以排程方式進行。 匯出程式是 **com.adobe.cq.scheduled.exporter.Exporter**.
 
-要配置此项，请执行以下操作：
+若要設定此專案：
 
-1. 使用 **导航**，选择 **工具**， **Cloud Services**，则 **旧版Cloud Services**.
-1. 滚动到 **Adobe Analytics** 并选择 **显示配置**.
-1. 单击 **[+]** Adobe Analytics配置旁边的链接。
+1. 使用 **導覽**，選取 **工具**， **Cloud Services**，則 **舊版Cloud Services**.
+1. 捲動至 **Adobe Analytics** 並選取 **顯示設定**.
+1. 按一下 **[+]** Adobe Analytics設定旁的連結。
 
-1. 在 **创建框架** 对话框：
+1. 在 **建立框架** 對話方塊：
 
    * 指定&#x200B;**标题**。
-   * （可选）您可以指定 **名称**，适用于在存储库中存储框架详细信息的节点。
-   * 选择 **Adobe Analytics分类**
+   * 您可選擇指定 **名稱**，適用於將架構詳細資料儲存在存放庫中的節點。
+   * 選取 **Adobe Analytics分類**
 
-   然后单击 **创建**.
+   然後按一下 **建立**.
 
-   ![“创建框架”对话框](assets/aa-25.png)
+   ![建立框架對話方塊](assets/aa-25.png)
 
-1. 此 **分类设置** 这将打开对话框以进行编辑。
+1. 此 **分類設定** 對話方塊會開啟以進行編輯。
 
-   ![“分类设置”对话框](assets/aa-classifications-settings.png)
+   ![分類設定對話方塊](assets/aa-classifications-settings.png)
 
-   属性包括：
+   屬性包括下列各項：
 
    | **字段** | **描述** |
    |---|---|
-   | 启用 | 选择 **是** 以启用“Adobe分类”设置。 |
-   | 发生冲突时覆盖 | 选择 **是** 覆盖所有数据冲突。 默认情况下，此参数设置为 **否**. |
-   | 删除已处理的项目 | 如果设置为 **是**，会在导出后删除已处理的节点。 默认为 **False**. |
-   | 导出作业描述 | 输入Adobe分类作业的说明。 |
-   | 通知电子邮件 | 输入Adobe分类通知的电子邮件地址。 |
-   | 报表包 | 输入要为其运行导入作业的报表包。 |
-   | 数据集 | 输入要为其运行导入作业的数据集关系ID。 |
-   | 转换程序 | 从下拉菜单中，选择一个转换器实施。 |
-   | 数据源 | 导航到数据容器的路径。 |
-   | 导出时间表 | 选择导出计划。 默认值为每30分钟。 |
+   | 启用 | 選取 **是** 以啟用「Adobe分類」設定。 |
+   | 发生冲突时覆盖 | 選取 **是** 覆寫任何資料衝突。 根據預設，此設定為 **否**. |
+   | 删除已处理的项目 | 若設為 **是**，會在匯出處理後刪除節點。 預設值為 **False**. |
+   | 导出作业描述 | 輸入「Adobe分類」工作的說明。 |
+   | 通知電子郵件 | 輸入Adobe分類通知的電子郵件地址。 |
+   | 报表包 | 輸入要執行匯入工作的報表套裝。 |
+   | 数据集 | 輸入要執行匯入作業的資料集關係ID。 |
+   | 转换程序 | 從下拉式功能表中，選取轉換器實作。 |
+   | 数据源 | 導覽至資料容器的路徑。 |
+   | 导出时间表 | 選取匯出的排程。 預設為每30分鐘。 |
 
-1. 单击 **确定** 以保存您的设置。
+1. 按一下 **確定** 以儲存您的設定。
 
-## 修改页面大小 {#modifying-page-size}
+## 修改頁面大小 {#modifying-page-size}
 
-在页面中处理记录。 默认情况下，“Adobe分类”会创建页面大小为1000的页面。
+系統會在頁面中處理記錄。 根據預設，「Adobe分類」會建立頁面大小為1000的頁面。
 
-根据Adobe分类中的定义，页面最大大小可以是25000的，并且可以从Felix控制台中修改。 在导出期间，“Adobe分类”会锁定源节点，以防止同时进行修改。 导出后、出错时或会话关闭时，节点会解锁。
+根據Adobe分類中的定義，頁面大小上限可25000，並可從Felix主控台修改。 在匯出期間，「Adobe分類」會鎖定來源節點，以防止同時進行修改。 節點會在匯出後、發生錯誤時或工作階段關閉時解除鎖定。
 
-要更改页面大小，请执行以下操作：
+若要變更頁面大小：
 
-1. 导航到OSGI控制台，网址为 **https://&lt;host>：&lt;port>/system/console/configMgr** 并选择 **AdobeAEM分类导出程序**.
+1. 瀏覽至OSGI主控台，網址為 **https://&lt;host>：&lt;port>/system/console/configMgr** 並選取 **AdobeAEM分類匯出程式**.
 
    ![aa-26](assets/aa-26.png)
 
-1. 更新 **导出页面大小** 根据需要，然后单击 **保存**.
+1. 更新 **匯出頁面大小** 視需要，然後按一下 **儲存**.
 
 ## SAINTDefaultTransformer {#saintdefaulttransformer}
 
 >[!NOTE]
 >
->“Adobe分类”以前称为“SAINT导出程序”。
+>「Adobe分類」先前稱為「SAINT匯出工具」。
 
-导出程序可以使用转换器将导出数据转换为特定格式。 对于“Adobe分类”，为子界面 `SAINTTransformer<String[]>` 提供了实现转换器接口的方法。 此接口用于将数据类型限制为 `String[]` SAINTAPI使用该标记来查找此类服务以供选择。
+匯出工具可使用轉換器將匯出資料轉換為特定格式。 對於「Adobe分類」，為子介面 `SAINTTransformer<String[]>` 已提供實作轉換器介面。 此介面用於將資料型別限製為 `String[]` 供SAINTAPI使用，並具有標籤介面來尋找可供選取的此類服務。
 
-在默认实施SAINTDefaultTransformer中，导出程序源的子资源被视为记录，属性名称作为键，属性值作为值。 此 **键** 列自动添加为第一列 — 其值将是节点名称。 命名空间属性(包含 `:`)将被忽略。
+在預設實作SAINTDefaultTransformer中，匯出程式來源的子資源會被視為記錄，而屬性名稱會被視為索引鍵，而屬性值則會被視為值。 此 **金鑰** 欄會自動新增為第一欄 — 其值將是節點名稱。 名稱空間屬性(包含 `:`)會被忽略。
 
-*节点结构：*
+*節點結構：*
 
-* id分类 `nt:unstructured`
+* id-classification `nt:unstructured`
 
    * 1 `nt:unstructured`
 
-      * 产品=我的产品名称（字符串）
-      * 价格= 120.90（字符串）
-      * 大小= M（字符串）
-      * 颜色=黑色（字符串）
-      * Color^Code = 101（字符串）
+      * 產品=我的產品名稱（字串）
+      * 價格= 120.90 （字串）
+      * 大小= M （字串）
+      * 顏色=黑色（字串）
+      * Color^Code = 101 （字串）
 
-**SAINT标题和记录：**
+**SAINT標題和記錄：**
 
 | **键** | **产品** | **价格** | **大小** | **颜色** | **Color^Code** |
 |---|---|---|---|---|---|
-| 1 | 我的产品名称 | 120.90 | M | black | 101 |
+| 1 | 我的產品名稱 | 120.90 | M | black | 101 |
 
-属性包括：
+屬性包括下列各項：
 
 <table>
  <tbody>
   <tr>
-   <td><strong>属性路径</strong></td>
+   <td><strong>屬性路徑</strong></td>
    <td><strong>描述</strong></td>
   </tr>
   <tr>
-   <td>转换器</td>
-   <td>SAINTTransformer实现的类名</td>
+   <td>轉換器</td>
+   <td>SAINTTransformer實作的類別名稱</td>
   </tr>
   <tr>
    <td>电子邮件</td>
-   <td>通知电子邮件地址。</td>
+   <td>通知電子郵件地址。</td>
   </tr>
   <tr>
-   <td>报告包</td>
-   <td>要为其运行导入作业的报表包ID。 </td>
+   <td>報告套裝</td>
+   <td>執行匯入作業的報表套裝ID。 </td>
   </tr>
   <tr>
-   <td>数据集</td>
-   <td>运行导入作业的数据集关系ID。 </td>
+   <td>資料集</td>
+   <td>執行匯入作業的資料集關係ID。 </td>
   </tr>
   <tr>
-   <td>描述</td>
-   <td>作业描述。 <br /> </td>
+   <td>说明</td>
+   <td>工作說明。 <br /> </td>
   </tr>
   <tr>
    <td>覆盖</td>
-   <td>用于覆盖数据冲突的标记。 默认为 <strong>false</strong>.</td>
+   <td>標幟以覆寫資料衝突。 預設為 <strong>false</strong>.</td>
   </tr>
   <tr>
    <td>checkdivision</td>
-   <td>用于检查报表包兼容性的标记。 默认为 <strong>true</strong>.</td>
+   <td>用於檢查報表套裝相容性的旗標。 預設為 <strong>true</strong>.</td>
   </tr>
   <tr>
    <td>deleteprocessed</td>
-   <td>用于在导出后删除已处理节点的标志。 默认为 <strong>false</strong>.</td>
+   <td>標幟以在匯出後刪除已處理的節點。 預設為 <strong>false</strong>.</td>
   </tr>
  </tbody>
 </table>
 
-## 自动导出Adobe分类 {#automating-adobe-classifications-export}
+## 自動化Adobe分類匯出 {#automating-adobe-classifications-export}
 
-您可以创建自己的工作流，以便任何新的导入都会启动该工作流，以在中创建适当且结构正确的数据 **/var/export/** 以便可以将其导出到“Adobe分类”。
+您可以建立自己的工作流程，讓任何新的匯入都能啟動工作流程，以在中建立適當且結構正確的資料 **/var/export/** 以便將其匯出至「Adobe分類」。

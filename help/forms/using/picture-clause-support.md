@@ -1,7 +1,7 @@
 ---
-title: HTML5表单的Picture子句支持
+title: HTML5表單的Picture子句支援
 seo-title: Picture clause support for HTML5 forms
-description: HTML5表单支持XFA Picture子句，用于显示日期、文本和数字符号的值以及格式化的值。
+description: HTML5表單支援XFA Picture子句，用於顯示日期、文字和數值符號的顯示值和格式化值。
 seo-description: HTML5 forms supports XFA Picture clause for display value and formatted value for date, text, and numeric symbols.
 uuid: ca5074ce-8219-4f27-a37c-b1f0dca4ce03
 contentOwner: robhagat
@@ -18,198 +18,198 @@ ht-degree: 1%
 
 ---
 
-# HTML5表单的Picture子句支持 {#picture-clause-support-for-html-forms}
+# HTML5表單的Picture子句支援 {#picture-clause-support-for-html-forms}
 
-HTML5表单支持XFA Picture子句，用于显示日期、文本和数字符号的值以及格式化的值。 支持以下Picture子句表达式：
+HTML5表單支援XFA Picture子句，用於顯示日期、文字和數值符號的顯示值和格式化值。 支援下列Picture子句運算式：
 
 * category(locale){picture-clause} | category(locale){picture-clause} | category(locale){picture-clause}
 * category.subcategory{}
 
 >[!NOTE]
 >
->目前，Mobiles Forms不支持Edit Picture子句。 此外，不支持DateTime和Time Picture子句符号。
+>目前Mobiles Forms不支援Edit Picture子句。 此外，不支援DateTime和Time Picture子句符號。
 
-## 支持的日期字段符号 {#supported-date-field-symbols}
+## 支援的日期欄位符號 {#supported-date-field-symbols}
 
-Date Picture子句支持的表达式：
+Date Picture子句支援的運算式：
 
 * date.long{}
 * date.short{}
 * date.medium{}
 * date.full{}
 * date.short{}
-* date{date Picture子句符号}
+* date{date Picture子句符號}
 
 >[!NOTE]
 >
->picture子句的默认模式为{MMM D， YYYY}模式。 如果未应用任何阵列，则使用缺省阵列。
+>picture子句的預設模式為{MMM D， YYYY}模式。 如果未套用任何陣列，則會使用預設的陣列。
 
 <table>
  <tbody>
   <tr>
-   <th><strong>符号</strong></th>
-   <th>解释</th>
+   <th><strong>符號</strong></th>
+   <th>解譯</th>
   </tr>
   <tr>
    <td>D</td>
-   <td>每月的1或2位数(1-31)日</td>
+   <td>每月的1或2位數(1-31)日</td>
   </tr>
   <tr>
    <td>DD</td>
-   <td>每月补零两位数(01-31)的天数。<br /> </td>
+   <td>每月以零填入兩位數(01-31)的天數。<br /> </td>
   </tr>
   <tr>
    <td>M</td>
-   <td>一年中的1或2位数(1-12)月份。<br /> </td>
+   <td>一年中的1或2位數(1-12)月份。<br /> </td>
   </tr>
   <tr>
-   <td>MM</td>
-   <td>月份中填充零的两位数(01-12)。<br /> </td>
+   <td>公厘</td>
+   <td>月份以零填入兩位數(01-12)表示。<br /> </td>
   </tr>
   <tr>
    <td>MMM</td>
-   <td>当前区域设置的缩写月份名称<br /> </td>
+   <td>目前地區設定的月份名稱縮寫<br /> </td>
   </tr>
   <tr>
    <td>MMMM</td>
-   <td>当前区域设置的完整月份名称<br /> </td>
+   <td>目前地區設定的完整月份名稱<br /> </td>
   </tr>
   <tr>
    <td>EEE</td>
-   <td>当前区域设置的缩写工作日名称<br /> </td>
+   <td>目前地區設定的簡化工作日名稱<br /> </td>
   </tr>
   <tr>
    <td>EEEE</td>
-   <td>当前区域设置的完整工作日名称<br /> </td>
+   <td>目前地區設定的完整工作日名稱<br /> </td>
   </tr>
   <tr>
    <td>YY</td>
-   <td>2位数年份，其中00 = 2000,29 = 2029,30 = 1930,99 = 1999<br /> </td>
+   <td>2位數的年份，其中00 = 2000、29 = 2029、30 = 1930、99 = 1999<br /> </td>
   </tr>
   <tr>
    <td>YYYY</td>
-   <td>4位数年份<br /> </td>
+   <td>4位數年份<br /> </td>
   </tr>
  </tbody>
 </table>
 
-## Numeric Picture子句 {#numeric-picture-clause}
+## 數值圖片子句 {#numeric-picture-clause}
 
-HTML5表单支持数字图片符号。 但是，PDF forms和HTMLForms之间的支持存在差异。
+HTML5表單支援數字圖片符號。 不過，PDF forms和HTMLForms之間的支援存在差異。
 
-In **PDF forms**，数字的格式与Picture子句中的符号数无关
+在 **PDF forms**，數字的格式與Picture子句中的符號數目無關
 
-In **HTMLForms**，仅当数字的位数小于Picture子句中的符号数时，才会对数字进行格式化。
+在 **HTMLForms**，只有在數字的位數小於Picture子句中的符號數時，才會格式化數字。
 
-**示例**：考虑一个Picture子句： num{zzz，zzz，zz9}。
+**範例**：以Picture子句為例： num{zzz，zzz，zz9}。
 
-数字 **10000** 格式为 **10,000** 在HTML和PDF forms中。
+數字 **10000** 格式為 **10,000** 在HTML和PDF forms中。
 
-数字1000000PDF forms格式为1,000,000。 但是，在HTMLForms中，数字保持为1000000格式。
+數字1000000的格式為1,000,000 (PDF forms)。 不過，在HTMLForms中，數字仍保持未格式化為1000000。
 
-中支持的Numeric Picture子句表达式 **HTMLForms** 为：
+中支援的Numeric Picture子句運算式 **HTMLForms** 為：
 
 * num.integer{}
 * num.decimal{}
 * num.currency{}
 * num.percent{}
-* num{Numeric Picture子句符号}
+* num{Numeric Picture子句符號}
 
 <table>
  <tbody>
   <tr>
-   <th><strong>符号</strong></th>
-   <th><strong>解释</strong></th>
-   <th>输入解析</th>
+   <th><strong>符號</strong></th>
+   <th><strong>解譯</strong></th>
+   <th>輸入剖析</th>
   </tr>
   <tr>
    <td>9</td>
-   <td><strong>输出格式</strong>：一位数字。 或者，如果输入数据为空或相应位置有空格，则为零位数。<br /> </td>
-   <td>一位数</td>
+   <td><strong>輸出格式</strong>：一位數。 或者，如果輸入資料為空白或對應位置的空格，則為零位數。<br /> </td>
+   <td>一位數</td>
   </tr>
   <tr>
    <td>Z</td>
-   <td><strong>输出格式</strong>：一位数字。 或者，如果输入数据为空，则为空格，或者为相应位置中的零位数。<br /> </td>
-   <td>一位数或空格</td>
+   <td><strong>輸出格式</strong>：一位數。 或者，若輸入資料為空白、空格或對應位置中的零位數，則為空格。<br /> </td>
+   <td>一位數或空格</td>
   </tr>
   <tr>
    <td>z</td>
-   <td><strong>输出格式</strong>：一位数字。 或者，如果输入数据为空、有空格或对应位置中的零位数，则无意义。<br /> </td>
-   <td>一位数或无</td>
+   <td><strong>輸出格式</strong>：一位數。 如果輸入資料是空的、空格或對應位置中的零位數，則無意義。<br /> </td>
+   <td>一位數或無</td>
   </tr>
   <tr>
    <td>E</td>
-   <td><strong>输出格式</strong>：由指数符号(E)组成的浮点数的指数部分。 后跟一个可选的加号或减号。 后跟指数值。<br /> </td>
-   <td>与输出格式设置相同</td>
+   <td><strong>輸出格式</strong>：由指數符號(E)組成的浮點數的指數部分。 後面接著選用的加號或減號。 後面接著指數值。<br /> </td>
+   <td>與輸出格式設定相同</td>
   </tr>
   <tr>
-   <td>Cr或cr<br /> </td>
-   <td>如果数字为负，则为贷方符号(CR)。 否则什么也没有。</td>
+   <td>CR或CR<br /> </td>
+   <td>若數字為負數，則為貸方符號(CR)。 否則就別無他法。</td>
    <td><br type="_moz" /> </td>
   </tr>
   <tr>
    <td>S或s<br /> </td>
-   <td>输出格式：数字为负数时为负号。 其他空间。<br /> </td>
-   <td>如果数字为负数，则使用负号。 如果数字为正数，则使用加号</td>
+   <td>輸出格式：如果數字為負數，則為負號。 其他空格。<br /> </td>
+   <td>如果數字為負數，則為負號。 數字為正數時加上正號</td>
   </tr>
   <tr>
    <td>V</td>
-   <td>常用区域设置的十进制基数。 允许在输入解析时隐含十进制基数。</td>
+   <td>主要地區設定的十進位基數。 允許輸入剖析時隱含十進位基數。</td>
    <td><br type="_moz" /> </td>
   </tr>
   <tr>
    <td>v</td>
-   <td>常用区域设置的十进制基数。 允许在输入解析和输出格式设置时隐含十进制基数。</td>
+   <td>主要地區設定的十進位基數。 允許輸入剖析和輸出格式設定時隱含十進位基數。</td>
    <td><br type="_moz" /> </td>
   </tr>
   <tr>
    <td>。</td>
-   <td>常用区域设置的十进制基数。</td>
+   <td>主要地區設定的十進位基數。</td>
    <td><br type="_moz" /> </td>
   </tr>
   <tr>
    <td>， (U+FF0C)</td>
-   <td>主要区域设置的分组分隔符</td>
+   <td>主要地區設定的群組分隔符號</td>
    <td><br type="_moz" /> </td>
   </tr>
   <tr>
    <td>$ (U+FF04)</td>
-   <td>当前区域设置的货币符号。</td>
+   <td>主要地區設定的貨幣符號。</td>
    <td><br type="_moz" /> </td>
   </tr>
   <tr>
    <td>% (U+FF05)</td>
-   <td>常用区域设置的百分比符号。</td>
+   <td>主要地區設定的百分比符號。</td>
    <td><br type="_moz" /> </td>
   </tr>
   <tr>
    <td>( (U+FF08)</td>
-   <td>数字为负数时用左括号。 其他空间。</td>
+   <td>數字為負數時加上左括弧。 其他空格。</td>
    <td><br type="_moz" /> </td>
   </tr>
   <tr>
    <td>) (U+FF09)</td>
-   <td>数字为负数时用右括号。 其他空间。</td>
+   <td>數字為負數時加上右括弧。 其他空格。</td>
    <td><br type="_moz" /> </td>
   </tr>
   <tr>
    <td>t</td>
-   <td>制表符</td>
+   <td>定位字元</td>
    <td><br type="_moz" /> </td>
   </tr>
  </tbody>
 </table>
 
-## 文本图片子句 {#text-picture-clause}
+## 文字圖片子句 {#text-picture-clause}
 
-HTML5表单支持以下Text Picture子句表达式：
+HTML5表單支援下列Text Picture子句運算式：
 
-* text{text Picture子句符号}
+* text{text Picture子句符號}
 
-| **符号** | **解释** |
+| **符號** | **解譯** |
 |---|---|
-| A | 单个字母字符。 |
-| X | 单个字符。 |
-| O | 单个字母数字字符。 |
-| 0（零） | 单个字母数字字符。 |
-| 9 | 一位数字。 |
+| A | 單一字母字元。 |
+| X | 單一字元。 |
+| O | 單一英數字元。 |
+| 0 （零） | 單一英數字元。 |
+| 9 | 一位數。 |

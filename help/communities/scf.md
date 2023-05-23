@@ -1,7 +1,7 @@
 ---
-title: 社交组件框架
+title: 社交元件架構
 seo-title: Social Component Framework
-description: 社交组件框架(SCF)简化了配置、自定义和扩展Communities组件的过程
+description: 社交元件架構(SCF)簡化了設定、自訂和擴展Communities元件的程式
 seo-description: The social component framework (SCF) simplifies the process of configuring, customizing, and extending Communities components
 uuid: 23b4418d-b91c-46fc-bf42-1154ef79fe5a
 contentOwner: msm-service
@@ -17,162 +17,162 @@ ht-degree: 0%
 
 ---
 
-# 社交组件框架 {#social-component-framework}
+# 社交元件架構 {#social-component-framework}
 
-社交组件框架(SCF)简化了服务器端和客户端上配置、自定义和扩展Communities组件的过程。
+社交元件架構(SCF)簡化了設定、自訂和擴充伺服器端和使用者端之Communities元件的程式。
 
-框架的好处包括：
+此架構的優點：
 
-* **功能**：开箱即用的易集成性，对80%的用例很少或没有自定义设置。
-* **可剥皮**：一致地使用HTML属性进行CSS样式设置。
-* **可扩展**：组件实施是面向对象的，并且业务逻辑较轻 — 易于在服务器上添加增量业务登录。
-* **灵活**：简单的无逻辑JavaScript模板，易于叠加和自定义。
-* **可访问**： HTTP API支持从任何客户端（包括移动应用程序）发布内容。
-* **便携**：集成/嵌入到基于任何技术构建的任何网页中。
+* **功能**：開箱即用的簡易整合，對80%的使用案例很少自訂或沒有自訂。
+* **可剝皮**：一致的使用CSS樣式的HTML屬性。
+* **可擴充**：元件實施是物件導向且商業邏輯較輕 — 易於在伺服器上新增增量商業登入。
+* **彈性**：簡單無邏輯的JavaScript範本，可輕鬆覆蓋和自訂。
+* **可存取**： HTTP API支援從任何使用者端張貼，包括行動應用程式。
+* **可攜式**：整合/內嵌至任何建置在任何技術上的任何網頁。
 
-使用交互式浏览创作或发布实例 [社区组件指南](components-guide.md).
+使用互動式功能探索作者或發佈例項 [社群元件指南](components-guide.md).
 
 ## 概述 {#overview}
 
-在SCF中，组件由SocialComponent POJO、Handlebars JS模板（用于渲染组件）和CSS（用于设置组件样式）组成。
+在SCF中，元件是由SocialComponent POJO、Handlebars JS範本（用於呈現元件）和CSS （用於設定元件樣式）所組成。
 
-Handlebars JS模板可以扩展model/view JS组件，以处理用户与客户端上的组件的交互。
+Handlebars JS範本可延伸模型/檢視JS元件，以處理使用者與使用者端元件之間的互動。
 
-如果某个组件需要支持数据修改，则可以编写SocialComponent API的实施以支持编辑/保存类似于传统Web应用程序中模型/数据对象的数据。 此外，可以添加操作（控制器）和操作服务以处理操作请求、执行业务逻辑以及调用模型/数据对象上的API。
+如果元件需要支援資料修改，可以撰寫SocialComponent API的實作來支援編輯/儲存資料，類似於傳統Web應用程式中的模型/資料物件。 此外，可以新增作業（控制者）和作業服務來處理作業請求、執行商業邏輯，以及叫用模型/資料物件上的API。
 
-可以扩展SocialComponent API以提供客户端对视图层或HTTP客户端所需的数据。
+SocialComponent API可延伸以提供使用者端檢視層或HTTP使用者端所需的資料。
 
-### 如何为客户端呈现页面 {#how-pages-are-rendered-for-client}
+### 如何為使用者端呈現頁面 {#how-pages-are-rendered-for-client}
 
-![scf页面渲染](assets/scf-overview.png)
+![scf頁面轉譯](assets/scf-overview.png)
 
-### 组件自定义和扩展 {#component-customization-and-extension}
+### 元件自訂和擴充功能 {#component-customization-and-extension}
 
-要自定义或扩展组件，您只需将叠加和扩展写入/apps目录，这可以简化升级到未来版本的过程。
+若要自訂或擴充元件，您只需將覆蓋和擴充功能寫入/apps目錄，可簡化升級至未來版本的程式。
 
-* 对于外观设置：
-   * 仅 [CSS需要编辑](client-customize.md#skinning-css).
-* 外观：
-   * 更改JS模板和CSS。
-* 对于Look、Feel和UX：
-   * 更改JS模板、CSS和 [扩展/覆盖Javascript](client-customize.md#extending-javascript).
-* 要修改JS模板或GET端点可用的信息，请执行以下操作：
-   * 扩展 [SocialComponent](server-customize.md#socialcomponent-interface).
-* 要在操作期间添加自定义处理，请执行以下操作：
-   * 写入 [操作扩展](server-customize.md#operationextension-class).
-* 要添加新的自定义操作，请执行以下操作：
-   * 新建 [Sling Post操作](server-customize.md#postoperation-class).
-   * 使用现有 [操作服务](server-customize.md#operationservice-class) 根据需要。
-   * 添加Javascript代码以根据需要从客户端调用您的操作。
+* 外觀設定：
+   * 僅限 [CSS需要編輯](client-customize.md#skinning-css).
+* 外觀：
+   * 變更JS範本和CSS。
+* 外觀、感覺和UX：
+   * 變更JS範本、CSS和 [擴充/覆寫Javascript](client-customize.md#extending-javascript).
+* 若要修改JS範本或GET端點可用的資訊：
+   * 擴充 [社交元件](server-customize.md#socialcomponent-interface).
+* 若要在作業期間新增自訂處理：
+   * 寫入 [Operationextension](server-customize.md#operationextension-class).
+* 若要新增自訂作業：
+   * 建立新的 [Sling Post操作](server-customize.md#postoperation-class).
+   * 使用現有 [OperationServices](server-customize.md#operationservice-class) 視需要。
+   * 新增Javascript程式碼，以視需要從使用者端叫用作業。
 
-## 服务器端框架 {#server-side-framework}
+## 伺服器端架構 {#server-side-framework}
 
-该框架提供API来访问服务器上的功能，并支持客户端和服务器之间的交互。
+此架構提供API來存取伺服器上的功能，並支援使用者端與伺服器之間的互動。
 
 ### Java API {#java-apis}
 
-Java API提供了易于继承或子类的抽象类和接口。
+Java API提供可輕鬆繼承或子類別的抽象類別和介面。
 
-有关主要类的说明，请参见 [服务器端自定义](server-customize.md) 页面。
+主要類別的說明請參閱 [伺服器端自訂](server-customize.md) 頁面。
 
-访问 [存储资源提供程序概述](srp.md) 了解有关使用UGC的信息。
+造訪 [儲存資源提供者概觀](srp.md) 瞭解如何使用UGC。
 
 ### HTTP API {#http-api}
 
-HTTP API支持PhoneGap应用程序、本机应用程序以及其他集成和混合的客户端平台的轻松自定义和选择。 此外，HTTP API允许社区站点作为服务运行，而无需客户端，这样框架组件可以集成到基于任何技术构建的任何网页中。
+HTTP API支援輕鬆自訂，並可為PhoneGap應用程式、原生應用程式以及其他整合和混合程式選擇使用者端平台。 此外，HTTP API還允許社群網站在沒有使用者端的情況下以服務形式執行，使得框架元件可以整合到任何技術建置的任何網頁中。
 
-### HTTP API -GET请求 {#http-api-get-requests}
+### HTTP API -GET要求 {#http-api-get-requests}
 
-对于每个SocialComponent，该框架都提供一个基于HTTP的API端点。 通过向具有“.social.json”选择器+扩展名的资源发送GET请求来访问端点。 使用Sling，请求将传递给 `DefaultSocialGetServlet`.
+框架會為每個SocialComponent提供HTTP型API端點。 透過傳送GET要求至具有「.social.json」選擇器+擴充功能的資源來存取端點。 使用Sling時，要求會傳遞至 `DefaultSocialGetServlet`.
 
 **`DefaultSocialGetServlet`**
 
-1. 将资源(resourceType)传递给 `SocialComponentFactoryManager` 并接收一个能够选择 `SocialComponent` 代表资源。
+1. 將資源(resourceType)傳遞給 `SocialComponentFactoryManager` 並接收能夠選取 `SocialComponent` 代表資源。
 
-1. 调用工厂并接收 `SocialComponent` 能够处理资源和请求。
-1. 调用 `SocialComponent`，这将处理请求并返回结果的JSON表示形式。
-1. 将JSON响应返回给客户端。
+1. 叫用工廠並接收 `SocialComponent` 能夠處理資源和請求。
+1. 叫用 `SocialComponent`，會處理要求並傳回結果的JSON表示法。
+1. 傳回JSON回應給使用者端。
 
 **`GET Request`**
 
-默认GETservlet监听.social.json请求，SocialComponent使用可自定义的JSON响应这些请求。
+預設GETservlet會接聽SocialComponent以可自訂JSON回應的.social.json請求。
 
 ![scf框架](assets/scf-framework.png)
 
-### HTTP API -POST请求 {#http-api-post-requests}
+### HTTP API -POST要求 {#http-api-post-requests}
 
-除了GET（读取）操作外，框架还定义端点模式以启用组件上的其他操作，包括创建、更新和删除。 这些端点是HTTP API，它们接受输入并使用HTTP状态代码或JSON响应对象进行响应。
+除了GET（讀取）作業之外，框架還定義了端點模式，以啟用元件上的其他作業，包括建立、更新和刪除。 這些端點是HTTP API，可接受輸入並使用HTTP狀態代碼或JSON回應物件回應。
 
-该框架端点模式使得CUD操作具有可扩展性、可重用性和可测试性。
+此框架端點模式可讓CUD作業可擴充、可重複使用且可測試。
 
 **`POST Request`**
 
-每个SocialComponent操作都有一个SlingPOST：操作。 每个操作的业务逻辑和维护代码都封装在OperationService中，该服务可通过HTTP API或从其他位置作为OSGi服务访问。 提供了支持操作之前/操作之后可插拔操作扩展的挂接。
+每個SocialComponent作業都有一個SlingPOST：operation。 每個作業的業務邏輯和維護程式碼都包裝在OperationService中，可透過HTTP API或從其他位置以OSGi服務的形式存取。 提供鉤點，可支援之前/之後動作的可插接操作延伸模組。
 
 ![scf-post-request](assets/scf-post-request.png)
 
-### 存储资源提供程序(SRP) {#storage-resource-provider-srp}
+### 儲存資源提供者(SRP) {#storage-resource-provider-srp}
 
-要了解如何处理存储在中的UGC [社区内容存储](working-with-srp.md)，请参见：
+瞭解如何處理UGC (儲存在 [社群內容存放區](working-with-srp.md)，請參閱：
 
-* [存储资源提供程序概述](srp.md)  — 简介和存储库使用概述。
-* [SRP和UGC Essentials](srp-and-ugc.md) - SRP API实用程序方法和示例。
-* [使用SRP访问UGC](accessing-ugc-with-srp.md)  — 编码准则。
+* [儲存資源提供者概觀](srp.md)  — 簡介和存放庫使用概述。
+* [SRP和UGC Essentials](srp-and-ugc.md) - SRP API公用程式方法與範例。
+* [使用SRP存取UGC](accessing-ugc-with-srp.md)  — 程式碼指南。
 
-### 服务器端自定义 {#server-side-customizations}
+### 伺服器端自訂 {#server-side-customizations}
 
-访问 [服务器端自定义](server-customize.md) 有关自定义服务器端的Communities组件的业务逻辑和行为的信息。
+造訪 [伺服器端自訂](server-customize.md) 有關在伺服器端自訂Communities元件商業邏輯和行為的資訊。
 
-## Handlebars JS模板语言 {#handlebars-js-templating-language}
+## Handlebars JS範本語言 {#handlebars-js-templating-language}
 
-新框架中更显着的变化之一是使用了 `Handlebars JS` (HBS)模板语言，一种用于服务器 — 客户端渲染的常用开源技术。
+新架構中比較明顯的變更之一，就是使用了 `Handlebars JS` (HBS)範本化語言，伺服器使用者端轉譯的常用開放原始碼技術。
 
-HBS脚本简单、无逻辑、在服务器和客户端上编译、易于叠加和自定义，并且与客户端UX自然绑定，因为HBS支持客户端渲染。
+HBS指令碼簡單、無邏輯、在伺服器和使用者端上編譯、易於覆蓋和自訂，並且自然繫結到使用者端UX，因為HBS支援使用者端轉譯。
 
-该框架提供了多个 [Handlebars助手](handlebars-helpers.md) 在开发SocialComponents时很有用。
+此架構提供數種 [Handlebars協助程式](handlebars-helpers.md) 在開發SocialComponents時很有用。
 
-在服务器上，当Sling解析GET请求时，它会标识将用于响应请求的脚本。 如果脚本是HBS模板(.hbs)，Sling会将请求委派给Handlebars引擎。 然后，Handlebars引擎将从相应的SocialComponentFactory获取SocialComponent、构建上下文并渲染HTML。
+在伺服器上，當Sling解析GET請求時，它會識別將用於回應請求的指令碼。 如果指令碼是HBS範本(.hbs)，Sling會將請求委派給Handlebars引擎。 然後Handlebars引擎會從適當的SocialComponentFactory取得SocialComponent、建置上下文，並轉譯HTML。
 
-### 无访问限制 {#no-access-restriction}
+### 無存取限制 {#no-access-restriction}
 
-Handlebars (HBS)模板文件(.hbs)类似于.jsp和.html模板文件，但它们可用于在客户端浏览器和服务器上渲染。 因此，请求客户端模板的客户端浏览器将从服务器接收.hbs文件。
+Handlebars (HBS)範本檔案(.hbs)類似於.jsp和.html範本檔案，但它們可用於在使用者端瀏覽器和伺服器上呈現。 因此，請求使用者端範本的使用者端瀏覽器將會從伺服器接收.hbs檔案。
 
-这要求Sling搜索路径中的所有HBS模板（/libs/或/apps下的任何.hbs文件）可以由任何用户从创作或发布中获取。
+這要求Sling搜尋路徑中的所有HBS範本（/libs/或/apps下的任何.hbs檔案）可由任何使用者從製作或發佈中擷取。
 
-可能不会禁止通过HTTP访问.hbs文件。
+可能不會禁止對.hbs檔案的HTTP存取。
 
-### 添加或包含社区组件 {#add-or-include-a-communities-component}
+### 新增或包含Communities元件 {#add-or-include-a-communities-component}
 
-大多数社区组件必须 *已添加* 作为Sling可寻址资源。 选定的几个Communities组件可能是 *已包括* 在模板中作为非现有资源，以允许动态包含和自定义用户生成内容(UGC)的写入位置。
+大部分的Communities元件必須 *已新增* 作為Sling可定址資源。 Communities的部分精選元件可能為 *已包含* 在非現有資源範本中，允許動態包含和自訂寫入使用者產生內容(UGC)的位置。
 
-在任一情况下，组件的 [所需的客户端库](clientlibs.md) 也必须存在。
+無論是哪種情況，元件的 [必要的使用者端程式庫](clientlibs.md) 也必須存在。
 
-**添加组件**
+**新增元件**
 
-添加组件是指添加资源（组件）实例的过程，例如从组件浏览器(sidekick)拖动到创作编辑模式下的页面上的过程。
+新增元件是指新增資源（元件）例項的程式，例如從元件瀏覽器(sidekick)拖曳至作者編輯模式下的頁面時。
 
-结果是par节点下的JCR子节点，该节点为Sling可寻址。
+結果為par節點下的JCR子節點，該節點為Sling可定址。
 
-**包括组件**
+**包含元件**
 
-包含元件是指将参照添加到 [“非现有”资源](srp.md#for-non-existing-resources-ners) （无JCR节点），例如使用脚本语言。
+包含元件是指將參照加入至的過程 [「非現有」資源](srp.md#for-non-existing-resources-ners) （無JCR節點），例如使用指令碼語言。
 
-自AEM 6.1起，如果动态包含而不是添加组件，则可以在author *design *mode中编辑组件的属性。
+自AEM 6.1起，當動態包含而不是新增元件時，可以在author *design *mode中編輯元件的屬性。
 
-只能动态包含少量AEM Communities组件。 它们是：
+只能動態納入少數AEM Communities元件。 包括：
 
 * [评论](essentials-comments.md)
-* [评级](rating-basics.md)
+* [评分](rating-basics.md)
 * [审核](reviews-basics.md)
 * [投票](essentials-voting.md)
 
-此 [社区组件指南](components-guide.md) 允许将可包含组件从添加更改为包含。
+此 [社群元件指南](components-guide.md) 允許將可包含元件從新增切換到包含。
 
-**使用Handlebars** 模板化语言，非现有资源使用 [包含辅助函数](handlebars-helpers.md#include) 通过指定其resourceType：
+**使用Handlebars** 範本化語言，非現有資源會使用 [包含協助程式](handlebars-helpers.md#include) 透過指定其resourceType：
 
 `{{include this.id path="comments" resourceType="social/commons/components/hbs/comments"}}`
 
-**使用JSP时**，则使用标记包含资源 [cq：include](../../help/sites-developing/taglib.md#lt-cq-include)：
+**使用JSP時**，使用標籤包含資源 [cq：include](../../help/sites-developing/taglib.md#lt-cq-include)：
 
 ```
 <cq:include path="votes"
@@ -181,45 +181,45 @@ Handlebars (HBS)模板文件(.hbs)类似于.jsp和.html模板文件，但它们�
 
 >[!NOTE]
 >
->要将组件动态添加到页面，而不是在模板中添加或包含组件，请参阅 [组件侧载](sideloading.md).
+>若要以動態方式將元件新增至頁面，而非在範本中新增或包含元件，請參閱 [元件側載](sideloading.md).
 
-### Handlebars助手 {#handlebars-helpers}
+### Handlebars協助程式 {#handlebars-helpers}
 
-参见 [SCF Handlebars助手](handlebars-helpers.md) 有关SCF中可用的自定义帮助程序的列表和描述。
+另請參閱 [SCF Handlebars協助程式](handlebars-helpers.md) 以取得SCF中可用的自訂協助程式清單和說明。
 
-## 客户端框架 {#client-side-framework}
+## 使用者端架構 {#client-side-framework}
 
-### 模型视图Javascript框架 {#model-view-javascript-framework}
+### 模型檢視Javascript框架 {#model-view-javascript-framework}
 
-该框架包括以下扩展 [Backbone.js](https://www.backbonejs.org/)，一个模型视图JavaScript框架，便于开发丰富、交互的组件。 面向对象的性质支持可扩展/可重用的框架。 通过HTTP API简化了客户端和服务器之间的通信。
+此架構包含 [Backbone.js](https://www.backbonejs.org/)，此元件為模型檢視JavaScript架構，可協助開發豐富的互動式元件。 物件導向性質支援可擴充/可重複使用的架構。 透過HTTP API，可簡化使用者端與伺服器之間的通訊。
 
-该框架利用服务器端Handlebars模板渲染客户端的组件。 这些模型基于HTTP API生成的JSON响应。 视图将自己绑定到Handlebars模板生成的HTML并提供交互性。
+此架構利用伺服器端Handlebars範本來呈現使用者端的元件。 模型以HTTP API產生的JSON回應為基礎。 檢視會將自身繫結到Handlebars範本產生的HTML，並提供互動功能。
 
-### CSS约定 {#css-conventions}
+### CSS慣例 {#css-conventions}
 
-以下是定义和使用CSS类的推荐约定：
+以下是定義和使用CSS類別的建議慣例：
 
-* 使用命名空间明确的CSS类选择器名称，并避免使用通用名称（如“标题”、“图像”等）。
-* 定义特定的类选择器样式，以便CSS样式表可以很好地与页面上的其他元素和样式配合使用。 例如：`.social-forum .topic-list .li { color: blue; }`
-* 对于由JavaScript驱动的UX，将用于样式的CSS类与CSS类分开。
+* 使用名稱空間明確的CSS類別選擇器名稱，並避免使用一般名稱，例如「標題」、「影像」等。
+* 定義特定的類別選取器樣式，讓CSS樣式表可以和頁面上的其他元素和樣式搭配使用。 例如：`.social-forum .topic-list .li { color: blue; }`
+* 將樣式設定的CSS類別與由JavaScript驅動的UX的CSS類別分開。
 
-### 客户端自定义 {#client-side-customizations}
+### 使用者端自訂 {#client-side-customizations}
 
-要自定义客户端上Communities组件的外观和行为，请参阅 [客户端自定义](client-customize.md)，其中包含有关以下项的信息：
+若要自訂使用者端Communities元件的外觀和行為，請參考 [使用者端自訂](client-customize.md)，包括下列專案的資訊：
 
 * [叠加](client-customize.md#overlays)
 * [扩展名](client-customize.md#extensions)
-* [HTML标记](client-customize.md#htmlmarkup)
-* [设置CSS外观](client-customize.md#skinning-css)
-* [扩展Javascript](client-customize.md#extending-javascript)
-* [适用于SCF的Clientlibs](client-customize.md#clientlibs-for-scf)
+* [HTML標籤](client-customize.md#htmlmarkup)
+* [建立CSS外觀](client-customize.md#skinning-css)
+* [擴充Javascript](client-customize.md#extending-javascript)
+* [適用於SCF的Clientlibs](client-customize.md#clientlibs-for-scf)
 
-## 功能和组件要点 {#feature-and-component-essentials}
+## 功能和元件要點 {#feature-and-component-essentials}
 
-有关面向开发人员的基本信息，请参见 [功能和组件要点](essentials.md) 部分。
+如需開發人員的基本資訊，請參閱 [功能和元件要點](essentials.md) 區段。
 
-其他开发人员信息可在 [编码准则](code-guide.md) 部分。
+如需其他開發人員資訊，請參閱 [編碼准則](code-guide.md) 區段。
 
 ## 疑难解答 {#troubleshooting}
 
-有关常见问题和已知问题的说明，请参见 [疑难解答](troubleshooting.md) 部分。
+關於常見問題和已知問題的說明，請參見 [疑難排除](troubleshooting.md) 區段。

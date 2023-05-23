@@ -1,55 +1,55 @@
 ---
-title: AEM 6.5用户指南中心
+title: AEM 6.5使用手冊中樞
 seo-title: AEM 6.5 User Guide Hub
-description: 了解、安装、管理和使用AEM 6.5的所有基本资源概述
+description: 瞭解、安裝、管理和使用AEM 6.5的所有基本資源概觀
 seo-description: An overview of all of the essential resources for understanding, installing, managing, and using AEM 6.5
 exl-id: 51788662-6214-408e-98d9-692950c366be
 source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
 workflow-type: tm+mt
 source-wordcount: '214'
-ht-degree: 18%
+ht-degree: 9%
 
 ---
 
-# AEM 6.5用户指南中心 {#aem-64-user-guide}
+# AEM 6.5使用手冊中樞 {#aem-64-user-guide}
 
 ## 简介 {#introduction}
 
-| [首要步骤](https://helpx.adobe.com/cn/experience-manager/get-started.html) | [功能视频](https://helpx.adobe.com/experience-manager/kt/index/aem-6-5-videos.html) | [发行说明](https://helpx.adobe.com/cn/experience-manager/6-5/release-notes.html) |
+| [首要步骤](https://helpx.adobe.com/cn/experience-manager/get-started.html) | [功能影片](https://helpx.adobe.com/experience-manager/kt/index/aem-6-5-videos.html) | [发行说明](https://helpx.adobe.com/cn/experience-manager/6-5/release-notes.html) |
 |:-:|:-:|:-:|
-| 探索AEM快速入门教程和文章 | 重点介绍6.5版新增功能的一系列视频 | 了解AEM 6.5的新增功能 |
+| 探索AEM快速入門的教學課程和文章 | 精選影片，重點說明6.5新功能 | 探索AEM 6.5的新功能 |
 
-## 用户指南和资源 {#user-guides-and-resources}
+## 使用手冊及資源 {#user-guides-and-resources}
 
-* [AEM功能用户指南](capabilities.md)
-* [AEM实施用户指南](implementation.md)
-* [AEM资源](resources.md)
+* [AEM功能使用手冊](capabilities.md)
+* [AEM實作使用手冊](implementation.md)
+* [AEM資源](resources.md)
 
-## 疑难解答和帮助 {#troubleshooting-and-help}
+## 疑難排解和說明 {#troubleshooting-and-help}
 
-* [AEM 新增功能](new.md)
-* [了解AEM功能](learn.md)
-* [AEM的最佳实践、操作方法和培训](best-practice.md)
-* [AEM 社区](community.md)
-* [AEM 疑难解答](troubleshooting.md)
+* [AEM新手](new.md)
+* [瞭解AEM功能](learn.md)
+* [AEM的最佳實務、做法與訓練](best-practice.md)
+* [AEM社群](community.md)
+* [疑難排解AEM](troubleshooting.md)
 
-## 联系人选项 {#contact-options}
+## 連絡人選項 {#contact-options}
 
-支持代表可以通过以下方式获得辅助支持：
+支援代表可透過以下方式取得協助支援：
 
-* Web：Experience Manager支持门户
-* 电话： [查找您所在地区的电话号码。](https://helpx.adobe.com/contact/dma-external/DMACustomeCareRegionalPhoneNumbers.html)
+* 網路：Experience Manager支援入口網站
+* 電話： [尋找您所在地區的電話號碼。](https://helpx.adobe.com/contact/dma-external/DMACustomeCareRegionalPhoneNumbers.html)
 
 >[!NOTE]
 >
->不确定您是否为 **支持委派**？ 了解此项 [用户类型适用于您](https://helpx.adobe.com/experience-cloud/supported-users.html) 了解我们的 [企业支持条款](https://helpx.adobe.com/support/programs/enterprise-support-terms.html).
+>不確定您是否為 **支援委派**？ 瞭解此專案是否 [使用者型別適用於您](https://helpx.adobe.com/experience-cloud/supported-users.html) 並瞭解我們的 [企業支援條款](https://helpx.adobe.com/support/programs/enterprise-support-terms.html).
 
 ## 社区 {#community}
 
-加入对话！
+加入對話！
 
-* [AEM Sites论坛](https://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/adobe-experience-manager.html)
-* [AEM Communities 论坛](https://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/aem-communities.html)
-* [AEM Forms论坛](https://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/aem-forms.html)
-* [AEM Assets 论坛](https://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/aem-assets.html)
-* [AEM Mobile 论坛](https://forums.adobe.com/community/experiencemanagermobile)
+* [AEM Sites論壇](https://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/adobe-experience-manager.html)
+* [AEM Communities論壇](https://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/aem-communities.html)
+* [AEM Forms論壇](https://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/aem-forms.html)
+* [AEM Assets論壇](https://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/aem-assets.html)
+* [AEM Mobile論壇](https://forums.adobe.com/community/experiencemanagermobile)

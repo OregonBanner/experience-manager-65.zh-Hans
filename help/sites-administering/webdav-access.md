@@ -1,7 +1,7 @@
 ---
-title: WebDAV访问
+title: WebDAV存取
 seo-title: WebDAV Access
-description: 了解AEM中的WebDAV访问。
+description: 瞭解AEM中的WebDAV存取。
 seo-description: Learn about WebDAV access in AEM.
 uuid: b0ecaa5d-5454-42df-8453-404ece734c32
 contentOwner: Chiradeep Majumdar
@@ -17,15 +17,15 @@ ht-degree: 0%
 
 ---
 
-# WebDAV访问{#webdav-access}
+# WebDAV存取{#webdav-access}
 
-要通过使用KDE通过WebDAV连接到AEM，请执行以下操作：
+透過WebDAV與KDE連線AEM：
 
-AEM提供了WebDAV支持，可让您显示和编辑存储库内容。 通过WebDAV连接可让您通过桌面直接访问内容存储库。 通过WebDAV连接添加到存储库的文本和PDF文件会自动建立全文索引，并且可以使用标准搜索界面和标准Java™ API进行搜索。
+AEM提供WebDAV支援，可讓您顯示和編輯存放庫內容。 透過WebDAV連線可讓您透過案頭直接存取內容存放庫。 透過WebDAV連線新增到存放庫中的文字和PDF檔案會自動建立全文檢索索引，並可透過標準搜尋介面和標準Java™ API進行搜尋。
 
 ## 常规 {#general}
 
-[每个操作系统的详细说明](/help/sites-administering/webdav-access.md#connecting-via-webdav) 包含在本文档中，但本质上是使用WebDAV协议连接到存储库，则将WebDAV客户端指向以下位置：
+[每個作業系統的詳細指示](/help/sites-administering/webdav-access.md#connecting-via-webdav) 本檔案內含下列內容，但若要使用WebDAV通訊協定連線至您的存放庫，您必須將WebDAV使用者端指向下列位置：
 
 ```xml
 http://localhost:4502
@@ -33,23 +33,23 @@ http://localhost:4502
 
 ![chlimage_1-111](assets/chlimage_1-111a.png)
 
-当从操作系统级别连接此URL时，WebDAV将访问默认工作区( `crx.default`)。 虽然对于用户而言，这样更简单，但并不能赋予他们指定工作区名称的额外灵活性，您可以使用其他 [WebDAV URL](/help/sites-administering/webdav-access.md#webdav-urls).
+從作業系統層級連線此URL時，可提供預設工作區的WebDAV存取權( `crx.default`)。 雖然這對使用者來說較為簡單，但並不會提供他們指定工作區名稱的額外靈活性，而這是可以使用其他 [WebDAV URL](/help/sites-administering/webdav-access.md#webdav-urls).
 
-AEM按如下方式显示存储库内容：
+AEM會依照以下方式顯示存放庫內容：
 
-* 类型的节点 `nt:folder` 显示为文件夹。 下方的节点 `nt:folder` 节点显示为文件夹内容。
+* 型別的節點 `nt:folder` 會顯示為資料夾。 以下的節點 `nt:folder` 節點會顯示為資料夾內容。
 
-* 类型的节点 `nt:file` 显示为文件。 下方的节点 `nt:file` 不显示节点，但会形成文件的内容。
+* 型別的節點 `nt:file` 會顯示為檔案。 以下的節點 `nt:file` 節點不會顯示，但會構成檔案的內容。
 
-使用WebDAV创建和编辑文件夹和文件时，AEM会创建和编辑必要的 `nt:folder` 和 `nt:file` 节点。 如果您计划使用WebDAV导入和导出内容，请尝试使用 `nt:file` 和 `nt:folder` 节点类型。
+當您使用WebDAV建立及編輯資料夾和檔案時，AEM會建立並編輯必要的 `nt:folder` 和 `nt:file` 節點。 如果您計畫使用WebDAV匯入和匯出內容，請嘗試使用 `nt:file` 和 `nt:folder` 節點型別。
 
 >[!NOTE]
 >
->在设置WebDAV之前，请检查 [技术要求](/help/sites-deploying/technical-requirements.md#webdav-clients).
+>設定WebDAV之前，請檢查 [技術需求](/help/sites-deploying/technical-requirements.md#webdav-clients).
 
 ## WebDAV URL {#webdav-urls}
 
-WebDAV服务器的URL具有以下结构：
+WebDAV伺服器的URL結構如下：
 
 <table>
  <colgroup>
@@ -82,25 +82,25 @@ WebDAV服务器的URL具有以下结构：
   </tr>
   <tr>
    <td><strong>描述</strong></td>
-   <td>运行AEM的主机和端口</td>
-   <td>AEM存储库Web应用程序的路径</td>
-   <td>WebDAV Servlet映射到的路径</td>
-   <td>工作区的名称</td>
+   <td>AEM執行所在的主機與連線埠</td>
+   <td>AEM存放庫Webapp的路徑</td>
+   <td>WebDAV servlet對應到的路徑</td>
+   <td>工作區的名稱</td>
   </tr>
  </tbody>
 </table>
 
-通过更改路径中的工作区元素，可以映射除默认 `crx.default`)。 例如，映射名为 `staging`，请使用以下URL:
+透過變更路徑中的工作區元素，您可以對應預設值以外的工作區( `crx.default`)。 例如，若要對映名為的工作區 `staging`，使用下列URL：
 
 ```xml
 http://localhost:4502/crx/repository/staging
 ```
 
-## 通过WebDAV连接 {#connecting-via-webdav}
+## 透過WebDAV連線 {#connecting-via-webdav}
 
-[如上所述](/help/sites-administering/webdav-access.md#general)，若要使用WebDAV协议连接到存储库，请将WebDAV客户端指向您的存储库位置。 但是，根据您的操作系统，连接客户端时涉及的步骤会有所不同，可能需要对操作系统进行配置。
+[如上所述](/help/sites-administering/webdav-access.md#general)，若要使用WebDAV通訊協定連線到您的存放庫，請將WebDAV使用者端指向您的存放庫位置。 不過，視您的作業系統而定，連線使用者端的步驟會有所不同，而且可能需要設定作業系統。
 
-提供了关于如何连接以下操作系统的说明：
+提供如何連線下列作業系統的說明：
 
 * [Windows](/help/sites-administering/webdav-access.md#windows)
 * [macOS](/help/sites-administering/webdav-access.md#macos)
@@ -108,127 +108,127 @@ http://localhost:4502/crx/repository/staging
 
 ### Windows {#windows}
 
-要成功将Microsoft® Windows 7（及更高版本）系统连接到未使用SSL保护的AEM实例，必须在Windows中明确启用通过不安全网络建立基本身份验证的选项。 此功能要求在WebClient的Windows注册表中进行更改。
+若要成功將Microsoft® Windows 7 （及更新版本）系統連線至未使用SSL加密的AEM執行個體，必須在Windows中明確啟用透過不加密網路建立基本驗證的選項。 這項功能需要變更WebClient的Windows登入。
 
-更新注册表后，AEM实例即可映射为驱动器。
+更新登入之後，就可以將AEM執行個體對應為磁碟機。
 
-#### Windows 7及更高版本配置 {#windows-and-greater-configuration}
+#### Windows 7和更新組態 {#windows-and-greater-configuration}
 
-要更新注册表，以允许在不安全的网络上进行基本身份验证，请执行以下操作：
+若要更新登入以允許透過不安全的網路進行基本驗證：
 
-1. 找到以下注册表子项：
+1. 找到下列登入子機碼：
 
    ```xml
    HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WebClient\Parameters
    ```
 
-1. 设置 `BasicAuthLevel` 注册表项子项到 `2` 或更大。
+1. 設定 `BasicAuthLevel` 登入專案子機碼至的值 `2` 或更高。
 
-   如果不存在，请添加子键。
+   如果不存在，請新增子索引鍵。
 
-1. 重新启动系统以使注册表更改生效。
+1. 重新啟動系統，讓登入變更生效。
 
 >[!NOTE]
 >
->Adobe建议您创建一个与存储库用户具有相同凭据的Windows用户，否则可能会遇到权限冲突。
+>Adobe建議您使用與存放庫使用者相同的認證來建立Windows使用者，否則可能會發生許可權衝突。
 
-#### Windows 8配置 {#windows-configuration}
+#### Windows 8設定 {#windows-configuration}
 
-对于Windows 8，请更改注册表项 [如Windows 7及更高版本中所述](/help/sites-administering/webdav-access.md#windows-and-greater-configuration). 但是，在执行此任务之前，必须启用桌面体验才能查看注册表项。
+若是Windows 8，請變更登入專案 [如Windows 7和更新版本所述](/help/sites-administering/webdav-access.md#windows-and-greater-configuration). 不過，在執行此工作之前，必須啟用Desktop Experience才能檢視登入專案。
 
-要启用桌面体验，请打开 **服务器管理器**，则 **功能**，则 **添加功能**，则 **桌面体验**.
+若要啟用案頭體驗，請開啟 **伺服器管理員**，則 **功能**，則 **新增功能**，則 **案頭體驗**.
 
-重新启动后，可以使用Windows 7及更高版本描述的注册表项。 按照Windows 7及更高版本中的说明对其进行修改。
+重新開機之後，就可以使用Windows 7和更新版本中說明的登入專案。 依照Windows 7和更新版本的說明修改它。
 
-#### 在Windows中连接 {#connecting-in-windows}
+#### 在Windows中連線 {#connecting-in-windows}
 
-要在Windows环境中通过WebDAV连接到AEM，请执行以下操作：
+若要在Windows環境中透過WebDAV連線至AEM：
 
-1. 打开 **Windows资源管理器** 或 **文件资源管理器** 单击 **计算机** 或 **这台电脑**.
+1. 開啟 **Windows檔案總管** 或 **檔案總管** 並按一下 **電腦** 或 **這台電腦**.
 
    ![chlimage_1-112](assets/chlimage_1-112a.png)
 
-1. 要启动向导，请单击 **映射网络驱动器**.
-1. 输入映射详细信息：
+1. 若要啟動精靈，請按一下 **對應網路磁碟機**.
+1. 輸入對應詳細資訊：
 
-   * **驱动器**:选择任何可用的信件
+   * **推動**：選擇任何可用的字母
    * **文件夹**: `http://localhost:4502`
-   * 检查 **使用不同的凭据进行连接**
+   * Check **使用不同的認證連線**
 
-   单击“完成”
+   按一下完成
 
    ![chlimage_1-113](assets/chlimage_1-113a.png)
 
    >[!NOTE]
    >
-   >如果AEM位于其他端口上，请使用该端口号，而不是4502。 此外，如果您未在本地计算机上运行内容存储库，请将 `localhost` 具有相应的服务器名或IP地址。
+   >如果AEM在另一個連線埠上，請使用該連線埠號碼，而不是4502。 此外，如果您未在本機電腦上執行內容存放庫，請將 `localhost` 具有個別伺服器名稱或IP位址。
 
-1. 输入用户名 `admin` 和密码 `admin`. Adobe建议您使用预配置的管理员帐户进行测试。
+1. 輸入使用者名稱 `admin` 和密碼 `admin`. Adobe建議您使用預先設定的管理員帳戶進行測試。
 
    ![chlimage_1-114](assets/chlimage_1-114a.png)
 
-1. 向导将关闭，并在Windows资源管理器或文件资源管理器窗口中打开新映射的驱动器。
+1. 精靈會關閉，新對應的磁碟機會在Windows檔案總管或「檔案總管」視窗中開啟。
 
    ![chlimage_1-115](assets/chlimage_1-115a.png)
 
-Windows现在已通过WebDAV将AEM映射为驱动器，您可以将其用作任何其他驱动器。
+Windows現在已透過WebDAV將AEM對應為磁碟機，而且您可以像使用任何其他磁碟機一樣使用它。
 
 ### macOS {#macos}
 
-在macOS上通过WebDAV进行连接无需任何配置步骤。 您可以连接到WebDAV服务器。
+在macOS上透過WebDAV連線不需要設定步驟。 您可以連線到WebDAV伺服器。
 
-1. 导航到任意 **查找器** 窗口，单击 **开始** 和 **连接到服务器**，或按 **Command+k**.
-1. 在 **连接到服务器** 窗口，输入AEM位置：
+1. 導覽至任何 **Finder** 視窗並按一下 **前往** 和 **連線到伺服器**，或按下 **Command+k**.
+1. 在 **連線到伺服器** 視窗，輸入AEM位置：
 
    * `http://localhost:4502`
    >[!NOTE]
    >
-   >如果AEM位于其他端口上，请使用该端口号，而不是4502。 此外，如果您未在本地计算机上运行内容存储库，请将 `localhost` 具有相应的服务器名或IP地址。
+   >如果AEM在另一個連線埠上，請使用該連線埠號碼，而不是4502。 此外，如果您未在本機電腦上執行內容存放庫，請將 `localhost` 具有個別伺服器名稱或IP位址。
 
-1. 提示您进行身份验证时，请输入用户名 `admin` 和密码 `admin`. Adobe建议您使用预配置的管理员帐户进行测试。
+1. 當系統提示您進行驗證時，請輸入使用者名稱 `admin` 和密碼 `admin`. Adobe建議您使用預先設定的管理員帳戶進行測試。
 
-macOS现在已通过WebDAV连接到AEM，您可以将其用作Mac上的任何其他文件夹。
+macOS現在已透過WebDAV連線至AEM，您可以像使用Mac上的任何其他資料夾一樣使用該資料夾。
 
 ### Linux® {#linux}
 
-在Linux®上通过WebDAV连接不需要任何配置，但需要执行一些步骤来建立连接，具体取决于您的桌面环境。
+在Linux®上透過WebDAV連線不需要任何設定，但需要執行幾個步驟來進行連線，因您的案頭環境而異。
 
-#### 格诺梅 {#gnome}
+#### GNAME {#gnome}
 
-要通过使用GNOME通过WebDAV连接到AEM，请执行以下操作：
+若要使用GNOME透過WebDAV連線至AEM：
 
-1. 在Nautilus（文件资源管理器）中，选择 **位置** 选择 **连接到服务器**.
-1. 在 **连接到服务器** 窗口，在“服务类型”中选择WebDAV(HTTP)。
+1. 在Nautilus （檔案總管）中，選取 **地點** 並選取 **連線到伺服器**.
+1. 在 **連線到伺服器** 視窗中，選取「服務型別」中的WebDAV (HTTP)。
 
-1. 在 **服务器**，输入 `http://localhost:4502/crx/repository/crx.default`
+1. 在 **伺服器**，輸入 `http://localhost:4502/crx/repository/crx.default`
 
    >[!NOTE]
    >
-   >如果AEM位于其他端口上，请使用该端口号，而不是4502。 此外，如果您未在本地计算机上运行内容存储库，请将 `localhost` 具有相应的服务器名或IP地址。
+   >如果AEM在另一個連線埠上，請使用該連線埠號碼，而不是4502。 此外，如果您未在本機電腦上執行內容存放庫，請將 `localhost` 具有個別伺服器名稱或IP位址。
 
-1. 在 **文件夹**，输入 `/dav`
-1. 输入用户名 `admin`. Adobe建议您使用预配置的管理员帐户进行测试。
-1. 将端口留空，并输入连接的任意名称。
-1. 单击 **连接**. AEM会提示您输入密码。
-1. 输入密码 `admin` 单击 **连接**.
+1. 在 **資料夾**，輸入 `/dav`
+1. 輸入使用者名稱 `admin`. Adobe建議您使用預先設定的管理員帳戶進行測試。
+1. 將連線埠保留為空白，並為您的連線輸入任何名稱。
+1. 按一下 **Connect**. AEM會提示您輸入密碼。
+1. 輸入密碼 `admin` 並按一下 **Connect**.
 
-GNOME现已将AEM作为卷进行装载，您可以像任何其他卷一样使用它。
+GNOME現在已將AEM掛接為磁碟區，您可以像使用任何其他磁碟區一樣使用該磁碟區。
 
 #### KDE {#kde}
 
-1. 打开“网络文件夹”向导。
-1. 选择 **WebFolder**(webdav)，然后单击“下一步”。
-1. 在 **名称**，请键入连接名称。
-1. 在 **用户**，输入 `admin.` Adobe建议您使用预配置的管理员帐户。
-1. 在 **服务器**，输入 `http://localhost:4502/crx/repository/crx.default`
+1. 開啟網路資料夾精靈。
+1. 選取 **網頁資料夾**(webdav)，然後按「下一步」。
+1. 在 **名稱**，輸入連線名稱。
+1. 在 **使用者**，輸入 `admin.` Adobe建議您使用預先設定的管理員帳戶。
+1. 在 **伺服器**，輸入 `http://localhost:4502/crx/repository/crx.default`
 
    >[!NOTE]
    >
-   >如果AEM位于其他端口上，请使用该端口号，而不是4502。 此外，如果您未在本地计算机上运行内容存储库，请将 `localhost` 具有相应的服务器名或IP地址
+   >如果AEM在另一個連線埠上，請使用該連線埠號碼，而不是4502。 此外，如果您未在本機電腦上執行內容存放庫，請將 `localhost` 具有個別伺服器名稱或IP位址
 
-1. 在 **文件夹**，输入 `dav`
+1. 在 **資料夾**，輸入 `dav`
 
-1. 单击 **保存并连接**.
-1. 提示输入密码时，输入密码 `admin` 单击 **连接**.
+1. 按一下 **儲存並連線**.
+1. 當提示您輸入密碼時，請輸入密碼 `admin` 並按一下 **Connect**.
 
-KDE现在已将AEM作为卷装载，您可以像使用任何其他卷一样使用它。
+KDE現在已將AEM掛接為磁碟區，您可以像使用任何其他磁碟區一樣使用它。

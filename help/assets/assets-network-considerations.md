@@ -1,6 +1,6 @@
 ---
-title: 网络注意事项和要求
-description: 讨论设计应用程序时的网络注意事项 [!DNL Adobe Experience Manager Assets] 部署。
+title: 網路考量與需求
+description: 討論設計網路時的網路考量事項 [!DNL Adobe Experience Manager Assets] 部署。
 contentOwner: AG
 role: Architect, Admin
 feature: Developer Tools
@@ -12,91 +12,91 @@ ht-degree: 0%
 
 ---
 
-# [!DNL Assets] 网络注意事项 {#assets-network-considerations}
+# [!DNL Assets] 網路考量事項 {#assets-network-considerations}
 
-了解您的网络与了解一样重要 [!DNL Adobe Experience Manager Assets]. 网络可能会影响上传、下载和用户体验。 绘制网络拓扑图有助于识别网络中的瓶颈点和子优化区域，您必须修复这些区域才能提高网络性能和改善用户体验。
+瞭解您的網路和瞭解一樣重要 [!DNL Adobe Experience Manager Assets]. 網路可能會影響上傳、下載和使用者體驗。 繪製網路拓撲圖有助於找出網路中的瓶頸點和次最佳化區域，您必須修正這些區域才能改善網路效能和使用者體驗。
 
-确保网络图中包含以下内容：
+請確定您的網路圖表中包含下列專案：
 
-* 从客户端设备（例如，计算机、移动设备和平板电脑）到网络的连接。
-* 公司网络的拓扑。
-* 从公司网络和 [!DNL Experience Manager] 环境。
-* 的拓扑 [!DNL Experience Manager] 环境。
-* 定义的同时使用者 [!DNL Experience Manager] 网络接口。
-* 已定义的工作流 [!DNL Experience Manager] 部署。
+* 從使用者端裝置（例如電腦、行動裝置和平板電腦）連線到網路。
+* 公司網路的拓撲。
+* 從公司網路和 [!DNL Experience Manager] 環境。
+* 的拓撲 [!DNL Experience Manager] 環境。
+* 定義同時的消費者 [!DNL Experience Manager] 網路介面。
+* 已定義的工作流程 [!DNL Experience Manager] 部署。
 
-## 从客户端设备到公司网络的连接 {#connectivity-from-the-client-device-to-the-corporate-network}
+## 從使用者端裝置連線到企業網路 {#connectivity-from-the-client-device-to-the-corporate-network}
 
-首先绘制单个客户端设备与公司网络之间的连接图。 在此阶段，确定多个用户访问同一点或以太网交换机以上传和下载资产的共享资源，例如WiFi连接。
+首先，繪製個別使用者端裝置與企業網路之間的連線圖。 在這個階段，識別共用資源，例如WiFi連線，讓多位使用者存取相同的點或乙太網路交換器以上傳和下載資產。
 
 ![chlimage_1-353](assets/chlimage_1-353.png)
 
-客户端设备通过各种方式连接到公司网络，例如共享WiFi、到共享交换机的以太网和VPN。 识别和了解此网络上的瓶颈点对于以下方面很重要 [!DNL Assets] 规划和修改网络。
+使用者端裝置會以各種方式連線至企業網路，例如共用WiFi、乙太網路至共用交換器，以及VPN。 識別並瞭解此網路上的咽喉 [!DNL Assets] 規劃及修改網路。
 
-图左上角将三个设备描述为共享48 Mbps WiFi接入点。 如果所有设备同时上传，则设备之间共享WiFi网络带宽。 与系统整体相比，用户可能在这个划分的信道上遇到三个客户端的不同阻塞点。
+在圖表的左上方，三個裝置被描繪為共用48 Mbps WiFi存取點。 如果所有裝置同時上傳，WiFi網路頻寬會在裝置之間共用。 相較於系統整體，使用者可能會在此劃分的管道中遇到三個使用者端的不同瓶頸。
 
-测量WiFi网络的真实速度是一项挑战，因为速度慢的设备可能会影响接入点上的其他客户端。 如果您计划使用WiFi进行资产交互，请同时从多个客户端执行速度测试以评估吞吐量。
+測量WiFi網路的真實速度是一項挑戰，因為速度緩慢的裝置可能會影響存取點上的其他使用者端。 如果您打算使用WiFi進行資產互動，請同時從多個使用者端執行速度測試，以評估輸送量。
 
-该图的左下角显示了通过独立通道连接到公司网络的两个设备。 因此，每个设备的最低速度可以是10 Mbps和100 Mbps。
+圖表左下角顯示兩個透過獨立通道連線至企業網路的裝置。 因此，每個裝置的最低速度可以是10 Mbps和100 Mbps。
 
-右侧显示的计算机通过速度为1 Mbps的VPN有限地上游到公司网络。 1Mbps连接的用户体验与1Gbps连接的用户体验大不相同。 根据用户与之交互的资产大小，他们的VPN上行链路可能不足以完成任务。
+右側顯示的電腦透過速度為1 Mbps的VPN上行至公司網路有限。 1Mbps連線的使用者體驗與1Gbps連線的使用者體驗大不相同。 根據使用者與之互動的資產大小，他們的VPN上行鏈路可能不足以完成任務。
 
-## 公司网络的拓扑 {#topology-of-the-corporate-network}
+## 公司網路的拓撲 {#topology-of-the-corporate-network}
 
 ![chlimage_1-354](assets/chlimage_1-354.png)
 
-该图显示了公司网络内比一般使用的上行链路速度更快的上行链路速度。 这些管道是共享资源。 如果共享交换机需要处理50个客户端，则它可能是瓶颈。 在初始图表中，只有两台计算机共享特定连接。
+此圖表顯示公司網路內的上行鏈路速度高於一般使用的速度。 這些管道是共用資源。 如果共用交換器預期可處理50個使用者端，則可能是瓶頸。 在初始圖表中，只有兩台電腦共用特定連線。
 
-## 从公司网络和 [!DNL Experience Manager] 环境 {#uplink-to-the-internet-from-the-corporate-network-and-aem-environment}
+## 從公司網路與網際網路的上行鏈路 [!DNL Experience Manager] 環境 {#uplink-to-the-internet-from-the-corporate-network-and-aem-environment}
 
 ![chlimage_1-355](assets/chlimage_1-355.png)
 
-请务必考虑Internet和VPC连接上的未知因素，因为因特网的带宽可能因峰值负载或大规模提供商中断而受损。 通常，Internet连接是可靠的。 但是，它有时可能会引入瓶颈。
+請務必考量網際網路和VPC連線上的未知因素，因為網際網路的頻寬可能會因為尖峰負載或大型提供者中斷而受損。 一般來說，網際網路連線非常可靠。 但是，它有時可能會引入瓶頸。
 
-在从公司网络到Internet的上行链路上，可以使用带宽进行其他服务。 了解多少带宽可以专用于资产或排定其优先顺序非常重要。 例如，如果1 Gbps链路的利用率已经达到80% ，则您最多只能为分配20%的带宽 [!DNL Experience Manager Assets].
+從企業網路到網際網路的上行鏈路上，可以使用頻寬提供其他服務。 請務必瞭解有多少頻寬可專用於資產或排定優先順序。 例如，如果1 Gbps的連結已經達到80%的使用率，您最多只能為分配20%的頻寬 [!DNL Experience Manager Assets].
 
-企业防火墙和代理还可以通过多种不同的方式调整带宽。 此类设备可以使用服务质量、每个用户的带宽限制或每个主机的比特率限制来排定带宽优先级。 这些是需要检查的重要瓶颈，因为它们可以产生重大影响 [!DNL Assets] 用户体验。
+企業防火牆和代理程式也可以以多種不同的方式調整頻寬。 這類裝置可使用服務品質、每位使用者的頻寬限制，或每位主機的位元速率限制，來排定頻寬優先順序。 這些是需要檢查的重要瓶頸，因為它們可能會產生重大影響 [!DNL Assets] 使用者體驗。
 
-在此示例中，企业具有10 Gbps的上行链路。 它应该足够大，可容纳多个客户。 此外，防火墙还设置了10 Mbps的主机速率限制。 即使到Internet的上行链路速度为10 Gbps，此限制也可能将单台主机的通信量限制为10 Mbps。
+在此範例中，企業有10 Gbps的上行鏈路。 其大小應足以容納數個使用者端。 此外，防火牆會設定10 Mbps的主機速率限制。 即使網際網路的上行鏈路速度為10 Gbps，此限制仍可能會將單一主機的流量限製為10 Mbps。
 
-这是最小的面向客户的瓶颈。 但是，您可以通过负责此防火墙的网络操作组评估更改或配置允许列表。
+這是最小的使用者端導向瓶頸。 不過，您可以透過負責此防火牆的網路作業群組評估變更或設定允許清單。
 
-从示例图中，您可以得出以下结论：六台设备共享一个10Mbps的概念信道。 根据利用的资产规模，这可能不足以满足用户期望。
+從範例圖表中，您可以得出以下結論：六部裝置共用概念10Mbps通道。 根據利用的資產規模，這可能不足以達成使用者的期望。
 
-## 的拓扑 [!DNL Experience Manager] 环境 {#topology-of-the-aem-environment}
+## 的拓撲 [!DNL Experience Manager] 環境 {#topology-of-the-aem-environment}
 
 ![chlimage_1-356](assets/chlimage_1-356.png)
 
-设计拓扑结构 [!DNL Experience Manager] 环境要求详细了解系统配置以及用户环境中网络连接的方式。
+設計拓撲 [!DNL Experience Manager] 環境需要詳細的系統設定知識以及使用者環境中網路的連線方式。
 
-此示例场景包含一个发布场，其中配置了五台服务器、一个S3二进制存储区以及一个Dynamic Media。
+範例情境包含具有五部伺服器的發佈陣列、S3二進位存放區以及已設定的Dynamic Media。
 
-Dispatcher与两个实体(外部世界和 [!DNL Experience Manager] 部署。 对于同时上载和下载操作，应将此数字除以2。 连接的外部存储使用单独的连接。
+Dispatcher會與兩個實體(外部世界和 [!DNL Experience Manager] 部署。 對於同時上載和下載作業，您應該將此數字除以二。 附加的外部儲存體使用單獨的連線。
 
-此 [!DNL Experience Manager] 部署与多个服务共享1Gbps连接。 从网络拓扑的角度来看，它等同于使用不同的服务共享单个信道。
+此 [!DNL Experience Manager] 部署會將其的1Gbps連線與多項服務共用。 從網路拓撲的觀點來看，這等同於使用不同服務共用單一通道。
 
-检查从客户端设备到 [!DNL Experience Manager] 部署时，最小的瓶颈似乎是10 Mbit企业防火墙限制。 您可以在的大小计算器中使用以下值： [Assets大小调整指南](assets-sizing-guide.md) 以确定用户体验。
+檢閱從使用者端裝置到 [!DNL Experience Manager] 部署時，最小的瓶頸似乎是10 Mbit企業防火牆限制。 您可以在的大小計算程式中使用這些值 [Assets規模調整指南](assets-sizing-guide.md) 以判斷使用者體驗。
 
-## 已定义的工作流 [!DNL Experience Manager] 部署 {#defined-workflows-of-the-aem-deployment}
+## 已定義的工作流程 [!DNL Experience Manager] 部署 {#defined-workflows-of-the-aem-deployment}
 
-在考虑网络性能时，可能必须考虑系统中将发生的工作流和发布。 此外，您使用和I/O请求的S3或其他网络连接存储占用了网络带宽。 因此，即使在完全优化的网络中，性能也可能受到磁盘I/O的限制。
+在考慮網路效能時，請務必考量系統中可能發生的工作流程與發佈。 此外，您使用和I/O請求的S3或其他網路附加儲存裝置會消耗網路頻寬。 因此，即使在完全最佳化的網路中，效能也可能受到磁碟I/O的限制。
 
-要简化资产摄取流程（特别是在上传大量资产时），请探索资产工作流并详细了解其配置。
+若要簡化資產擷取的相關程式（尤其是上傳大量資產時），請探索資產工作流程，並深入瞭解其設定。
 
-在评估内部工作流拓扑时，应分析以下内容：
+評估內部工作流程拓撲時，您應該分析下列內容：
 
-* 编写资产的过程
-* 修改资产/元数据时触发的工作流/事件
-* 读取资产的过程
+* 寫入資產的程式
+* 修改資產/中繼資料時觸發的工作流程/事件
+* 讀取資產的程式
 
-以下是需要考虑的一些项目：
+以下是一些需要考量的專案：
 
-* XMP元数据读/写
-* 自动激活和复制
-* 添加水印
-* 子资产提取/页面提取
-* 重叠的工作流。
+* XMP中繼資料讀取/回寫
+* 自動啟用和復寫
+* 浮水印
+* 子資產擷取/頁面擷取
+* 重疊的工作流程。
 
-以下是定义资产工作流的客户示例。
+以下是資產工作流程定義的客戶範例。
 
 ![chlimage_1-357](assets/chlimage_1-357.png)

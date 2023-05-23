@@ -1,7 +1,7 @@
 ---
-title: 将自适应Forms与XFA表单模板同步
+title: 將最適化Forms與XFA表單範本同步
 seo-title: Synchronizing Adaptive Forms with XFA Form Templates
-description: 将自适应表单与XFA/XDP文件同步。
+description: 將調適型表單與XFA/XDP檔案同步。
 seo-description: Synchronizing Adaptive forms with XFA/XDP files.
 uuid: 92818132-1ae0-4576-84f2-ece485a34457
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -17,127 +17,127 @@ ht-degree: 0%
 
 ---
 
-# 将自适应Forms与XFA表单模板同步{#synchronizing-adaptive-forms-with-xfa-form-templates}
+# 將最適化Forms與XFA表單範本同步{#synchronizing-adaptive-forms-with-xfa-form-templates}
 
 ## 简介 {#introduction}
 
-您可以基于XFA表单模板创建自适应表单( `*.XDP` 文件)。 通过重复使用，您可以保留在现有XFA表单中的投资。 有关如何使用XFA表单模板创建自适应表单的信息， [基于模板创建自适应表单](../../forms/using/creating-adaptive-form.md#p-create-an-adaptive-form-based-on-an-xfa-form-template-p).
+您可以根據XFA表單範本建立最適化表單( `*.XDP` 檔案)。 此重複使用可讓您保留在現有XFA表單中的投資。 如需有關如何使用XFA表單範本建立調適型表單的資訊， [根據範本建立最適化表單](../../forms/using/creating-adaptive-form.md#p-create-an-adaptive-form-based-on-an-xfa-form-template-p).
 
-您可以在自适应表单中重用XDP文件中的字段。 这些字段称为绑定字段。 从XDP文件复制绑定字段的属性（如脚本、标签和显示格式）。 您还可以选择覆盖其中某些属性的值。
+您可以在最適化表單中重複使用XDP檔案中的欄位。 這些欄位稱為繫結欄位。 繫結欄位的屬性（例如指令碼、標籤和顯示格式）會從XDP檔案複製。 您也可以選擇覆寫其中某些屬性的值。
 
-AEM Forms提供了一种方法，帮助您将自适应表单的字段与稍后对XDP文件中的相应字段所做的任何更改保持同步。 本文介绍如何启用此同步。
+AEM Forms可協助您保持適用性表單的欄位與稍後對XDP檔案中對應欄位所做的任何變更同步。 本文說明如何啟用此同步化。
 
-![您可以将字段从XFA表单拖到自适应表单中](assets/drag-drop-xfa.gif.gif)
+![您可以從XFA表單將欄位拖曳到最適化表單](assets/drag-drop-xfa.gif.gif)
 
-在AEM Forms创作环境中，您可以将字段从XFA表单（左）拖到自适应表单（右）中
+在AEM Forms製作環境中，您可以將XFA表單（左）的欄位拖曳至最適化表單（右）
 
 ## 前提条件 {#prerequisites}
 
-若要使用本文中的信息，建议熟悉以下方面：
+若要使用本文中的資訊，建議您熟悉下列領域：
 
-* [创建自适应表单](../../forms/using/creating-adaptive-form.md)
+* [建立最適化表單](../../forms/using/creating-adaptive-form.md)
 
-* XFA(XML Forms架构)
+* XFA (XML Forms架構)
 
-要使用文章中提供的资源作为示例，请下载示例包，如下一节中所述， [示例包](../../forms/using/synchronizing-adaptive-forms-xfa.md#p-sample-package-p).
+若要使用文章中提供的資產作為範例，請下載範例套件，如下節所述， [範例套件](../../forms/using/synchronizing-adaptive-forms-xfa.md#p-sample-package-p).
 
-## 示例包 {#sample-package}
+## 範例套件 {#sample-package}
 
-文章通过一个示例演示了如何将自适应表单与更新后的XFA表单模板同步。 该示例中使用的资产位于一个包中，该包可从以下位置下载： [下载](../../forms/using/synchronizing-adaptive-forms-xfa.md#p-downloads-p) 章节。
+文章以範例示範如何將最適化表單與更新的XFA表單範本同步。 範例中使用的資產可在套件中使用，該套件可從 [下載](../../forms/using/synchronizing-adaptive-forms-xfa.md#p-downloads-p) 章節。
 
-上传包后，您可以在AEM Forms UI中查看这些资源。
+上傳套件後，您可以在AEM Forms UI中檢視這些資產。
 
-使用包管理器安装包： `https://<server>:<port>/crx/packmgr/index.jsp`
+使用封裝管理程式安裝封裝： `https://<server>:<port>/crx/packmgr/index.jsp`
 
-该资源包包含以下资源：
+此套件包含下列資產：
 
-1. `sample-form.xdp`：用作示例的XFA表单模板
+1. `sample-form.xdp`：作為範例的XFA表單範本
 
-1. `sample-xfa-af`：基于sample-form.xdp文件的自适应表单。 但是，此自适应表单不包括任何字段。 在下一步中，我们将向此自适应表单添加内容。
+1. `sample-xfa-af`：根據sample-form.xdp檔案的最適化表單。 不過，此最適化表單不包含任何欄位。 在下一步中，我們將新增內容至此最適化表單。
 
-### 将内容添加到自适应表单 {#add-content-to-adaptive-form-br}
+### 將內容新增至最適化表單 {#add-content-to-adaptive-form-br}
 
-1. 导航到https://&lt;server>：&lt;port>/aem/forms.html. 如果询问，请输入您的凭据。
-1. 打开sample-af-xfa以在创作模式下进行编辑。
-1. 从侧栏中的内容浏览器中，选择数据模型对象选项卡。 将NumericField1和TextField1拖动到自适应表单上。
-1. 将NumericField1的标题从 **数值字段** 到 **AF数字字段。**
-
->[!NOTE]
->
->在前面的步骤中，我们覆盖了XDP文件中字段的属性。 因此，如果稍后修改XDP文件中的相应属性，则不会同步此属性。
-
-## 检测XDP文件中的更改 {#detecting-changes-in-xdp-file}
-
-每当XDP文件或片段中的任何更改时，AEM Forms UI都会标记所有基于XDP文件或片段的自适应表单。
-
-更新XDP文件后，您需要在AEM Forms UI中再次上传该文件，以便标记更改。
-
-例如，让我们更新 `sample-form.xdp` 文件，请执行以下步骤：
-
-1. 导航到 `https://<server>:<port>/projects.html.` 如果出现提示，请输入您的凭据。
-1. 单击左侧的Forms选项卡。
-1. 下载 `sample-form.xdp` 文件。 XDP文件下载为 `.zip` 文件，可使用任何文件解压缩实用程序提取该文件。
-
-1. 打开 `sample-form.xdp` 文件，并将TextField1字段的标题从 **文本字段** 到 **我的文本字段**.
-
-1. 上传 `sample-form.xdp` 文件返回到AEM Forms UI。
-
-如果更新了XDP文件，当您编辑基于XDP文件的自适应表单时，会在编辑器中看到一个图标。 此图标表示自适应表单与XDP文件不同步。 在下图中，查看侧栏中的下一个图标。
-
-![用于显示自适应表单与XDP文件不同步的图标](assets/sync-af-xfa.png)
-
-## 将自适应表单与最新的XDP文件同步 {#synchronizing-adaptive-forms-with-the-latest-xdp-file}
-
-下次打开与XDP文件不同步的自适应表单进行创作时，会显示以下消息： **自适应表单的架构/表单模板已更新。 `Click Here` 以使用新版本进行重新定位。**
-
-单击消息可将自适应表单中的字段与XDP文件中的相应字段同步。
-
-对于本文中使用的示例，请打开 `sample-xfa-af` 处于创作模式。 消息会显示在自适应表单的底部。
-
-![消息提示您将自适应表单与XDP文件同步](assets/sync-af-xfa-1.png)
-
-### 更新属性 {#updating-the-properties}
-
-从XDP文件复制到自适应表单的所有属性都将更新，但作者在自适应表单中（从“组件”对话框）显式覆盖的属性除外。 服务器日志中提供了已更新的属性列表。
-
-要更新自适应表单示例中的属性，请单击链接(标签为 `"Click Here"`)。 TextField1的标题从 **文本字段** 到 **我的文本字段**.
-
-![update — 属性](assets/update-property.png)
+1. 導覽至https://&lt;server>：&lt;port>/aem/forms.html. 如有要求，請輸入您的認證。
+1. 開啟sample-af-xfa以在作者模式中編輯。
+1. 從側邊欄中的內容瀏覽器，選擇資料模型物件索引標籤。 將NumericField1和TextField1拖曳至最適化表單上。
+1. 變更NumericField1的標題，從 **數值欄位** 至 **AF數值欄位。**
 
 >[!NOTE]
 >
->标签AF数值字段未发生更改，因为您已从组件属性对话框中覆盖了此属性，如中所述 [将内容添加到自适应表单](../../forms/using/synchronizing-adaptive-forms-xfa.md#p-add-content-to-adaptive-form-br-p).
+>在上述步驟中，我們覆寫XDP檔案中欄位的屬性。 因此，如果稍後修改XDP檔案中的對應屬性，此屬性將不會同步。
 
-### 将XDP文件中的新字段添加到自适应表单   {#adding-new-fields-from-xdp-file-to-adaptive-form-nbsp}
+## 偵測XDP檔案中的變更 {#detecting-changes-in-xdp-file}
 
-稍后添加到原始XDP文件中的任何字段都会显示在“表单层次结构”选项卡中，您可以将这些新字段拖到自适应表单中。
+每當XDP檔案或片段中發生任何變更時，AEM Forms UI都會標示所有以XDP檔案或片段為基礎的最適化表單。
 
-您无需单击错误消息中的链接即可更新“表单层次结构”选项卡中的字段。
+更新XDP檔案後，您需要在AEM Forms UI中再次上傳該檔案，才能標籤變更。
 
-### XDP文件中已删除字段 {#deleted-fields-in-xdp-file}
+例如，讓我們更新 `sample-form.xdp` 檔案：
 
-如果从XDP文件中删除了之前复制到自适应表单的字段，则会以创作模式显示错误消息，声明该字段在XDP文件中不存在。 在这种情况下，请从自适应表单中手动删除字段或清除 `bindRef` 属性。
+1. 導覽至 `https://<server>:<port>/projects.html.` 出現提示時輸入您的認證。
+1. 按一下左側的Forms標籤。
+1. 下載 `sample-form.xdp` 檔案。 XDP檔案下載為 `.zip` 檔案，可使用任何檔案解壓縮公用程式解壓縮。
 
-以下步骤说明了本文中所用示例中资产的此使用流程：
+1. 開啟 `sample-form.xdp` 檔案並變更欄位TextField1的標題 **文字欄位** 至 **我的文字欄位**.
 
-1. 更新 `sample-form.xdp` 文件并删除NumericField1。
-1. 上传 `sample-form.xdp` AEM Forms UI中的文件
-1. 打开 `sample-xfa-af` 用于创作的自适应表单。 显示以下错误消息：自适应表单的架构/表单模板已更新。 `Click Here` 以使用新版本进行重新定位。
+1. 上傳 `sample-form.xdp` 檔案傳回AEM Forms UI。
 
-1. 单击链接(标记为“ ” `Click Here`“)中。 此时会显示一条错误消息，指出该字段在XDP文件中不再存在。
+如果XDP檔案更新，當您根據XDP檔案編輯調適型表單時，會在編輯器中看到圖示。 此圖示表示最適化表單與XDP檔案不同步。 在下圖中，請參閱側邊欄中的下一個圖示。
 
-![删除XDP文件中的元素时看到的错误](assets/no-element-xdp.png)
+![圖示可顯示最適化表單不同步於XDP檔案](assets/sync-af-xfa.png)
 
-已删除的字段还会标记一个图标，以指示字段中存在错误。
+## 將調適型表單與最新的XDP檔案同步 {#synchronizing-adaptive-forms-with-the-latest-xdp-file}
 
-![字段中的错误图标](assets/error-field.png)
+下次開啟與XDP檔案不同步的適用性表單進行製作時，會顯示下列訊息： **最適化表單的結構描述/表單範本已更新。 `Click Here` 以使用新版本重新建立基礎。**
+
+按一下訊息會將最適化表單中的欄位與XDP檔案中的對應欄位同步。
+
+對於本文中使用的範例，請開啟 `sample-xfa-af` 在製作模式中。 訊息會顯示在最適化表單的底部。
+
+![提示您將最適化表單與XDP檔案同步的訊息](assets/sync-af-xfa-1.png)
+
+### 更新屬性 {#updating-the-properties}
+
+從XDP檔案複製到調適型表單的所有屬性都會更新，但作者在調適型表單（從元件對話方塊）中明確覆寫的內容除外。 伺服器記錄檔中提供已更新的屬性清單。
+
+若要更新最適化表單範例中的屬性，請按一下連結(標籤為 `"Click Here"`)。 TextField1的標題變更自 **文字欄位** 至 **我的文字欄位**.
+
+![update — 屬性](assets/update-property.png)
 
 >[!NOTE]
 >
->自适应表单中的字段具有不正确的绑定（无效） `bindRef` （例如，编辑对话框中的值）也视为已删除的字段。 如果作者未修复这些错误并发布自适应表单，则该字段将被视为普通未绑定的自适应表单字段，并包含在输出XML文件的未绑定部分中。
+>標籤AF數值欄位未變更，因為您已從元件屬性對話方塊覆寫此屬性，如中所述 [將內容新增至最適化表單](../../forms/using/synchronizing-adaptive-forms-xfa.md#p-add-content-to-adaptive-form-br-p).
+
+### 將XDP檔案的新欄位新增至最適化表單   {#adding-new-fields-from-xdp-file-to-adaptive-form-nbsp}
+
+任何稍後新增至原始XDP檔案的欄位都會顯示在「表單階層」標籤中，而且您可以將這些新欄位拖曳至調適型表單。
+
+您不需要按一下錯誤訊息中的連結，即可更新「表單階層」標籤中的欄位。
+
+### XDP檔案中的已刪除欄位 {#deleted-fields-in-xdp-file}
+
+如果先前複製到最適化表單的欄位從XDP檔案中刪除，則會在編寫模式下顯示一則錯誤消息，指出該欄位不存在於XDP檔案中。 在這種情況下，請從最適化表單中手動刪除欄位或清除 `bindRef` 屬性（在元件對話方塊中）。
+
+以下步驟說明本文中所用範例中資產的此使用流程：
+
+1. 更新 `sample-form.xdp` 檔案並刪除NumericField1。
+1. 上傳 `sample-form.xdp` AEM Forms UI中的檔案
+1. 開啟 `sample-xfa-af` 用於編寫的最適化表單。 顯示下列錯誤訊息：已更新最適化表單的結構描述/表單範本。 `Click Here` 以使用新版本重新建立基礎。
+
+1. 按一下連結(標示為「 」 `Click Here`「)中。 系統會顯示錯誤訊息，指出欄位在XDP檔案中不再存在。
+
+![刪除XDP檔案中的元素時看到的錯誤](assets/no-element-xdp.png)
+
+已刪除的欄位也會標示圖示，以表示欄位中發生錯誤。
+
+![欄位中的錯誤圖示](assets/error-field.png)
+
+>[!NOTE]
+>
+>適用性表單中有不正確繫結（無效）的欄位 `bindRef` （例如「編輯」對話方塊中的值）也視為已刪除欄位。 如果作者未修正這些錯誤並發佈調適型表單，則該欄位會被視為一般未繫結的調適型表單欄位，並包含在輸出XML檔案的未繫結區段中。
 
 ## 下载 {#downloads}
 
-内容包（适用于本文中的示例）
+本文範例的Content-package
 
 [获取文件](assets/sample-xfa-af-sync-1.0.zip)

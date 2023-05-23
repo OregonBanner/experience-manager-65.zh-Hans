@@ -1,6 +1,6 @@
 ---
-title: 集成 [!DNL Assets] 替换为 [!DNL InDesign Server]
-description: 了解如何集成 [!DNL Adobe Experience Manager Assets] 替换为 [!DNL Adobe InDesign Server].
+title: 整合 [!DNL Assets] 替換為 [!DNL InDesign Server]
+description: 瞭解如何整合 [!DNL Adobe Experience Manager Assets] 替換為 [!DNL Adobe InDesign Server].
 contentOwner: AG
 role: Admin
 feature: Publishing
@@ -12,106 +12,106 @@ ht-degree: 4%
 
 ---
 
-# 集成 [!DNL Adobe Experience Manager Assets] 替换为 [!DNL Adobe InDesign Server] {#integrating-aem-assets-with-indesign-server}
+# 整合 [!DNL Adobe Experience Manager Assets] 替換為 [!DNL Adobe InDesign Server] {#integrating-aem-assets-with-indesign-server}
 
-[!DNL Adobe Experience Manager Assets] 使用:
+[!DNL Adobe Experience Manager Assets] 使用：
 
-* 用于分配特定处理任务负载的代理。 代理是 [!DNL Experience Manager] 与代理工作进程通信以完成特定任务等的实例 [!DNL Experience Manager] 实例来交付结果。
-* 用于定义和管理特定任务的代理工作进程。
-这些功能可以涵盖各种任务；例如，使用 [!DNL InDesign Server] 以处理文件。
+* 用於分配特定處理任務負載的Proxy。 Proxy是 [!DNL Experience Manager] 與Proxy Worker通訊以完成特定任務和其他任務的例項 [!DNL Experience Manager] 執行個體以傳遞結果。
+* 定義和管理特定任務的Proxy Worker。
+這些功能可涵蓋各種作業；例如，使用 [!DNL InDesign Server] 以處理檔案。
 
-要将文件完全上传到 [!DNL Experience Manager Assets] 您创建的内容 [!DNL Adobe InDesign] 使用代理。 这会使用代理工作进程与 [!DNL Adobe InDesign Server]，其中 [脚本](https://www.adobe.com/devnet/indesign/documentation.html#idscripting) 运行以提取元数据并生成各种演绎版 [!DNL Experience Manager Assets]. 代理工作程序可以实现 [!DNL InDesign Server] 和 [!DNL Experience Manager] 云配置中的实例。
-
->[!NOTE]
->
->[!DNL Adobe InDesign] 作为两个单独的选项提供。 [Adobe InDesign](https://www.adobe.com/products/indesign.html) 用于为打印和数字分发设计页面布局的桌面应用程序。 [Adobe InDesign Server](https://www.adobe.com/products/indesignserver.html) 使您能够根据您创建的内容以编程方式创建自动化文档 [!DNL InDesign]. 它作为一项服务运行，向其提供接口 [ExtendScript](https://www.adobe.com/devnet/indesign/documentation.html#idscripting) engine。脚本编写方式 [!DNL ExtendScript]，与 [!DNL JavaScript]. 有关信息 [!DNL InDesign] 脚本请参阅 [https://www.adobe.com/devnet/indesign/documentation.html#idscripting](https://www.adobe.com/devnet/indesign/documentation.html#idscripting).
-
-## 提取的工作原理 {#how-the-extraction-works}
-
-此 [!DNL Adobe InDesign Server] 可以与集成 [!DNL Experience Manager Assets] 这样创建的INDD文件 [!DNL InDesign] 可以上传、生成演绎版、提取所有媒体（例如，视频）并将其存储为资产：
+若要將檔案完全上傳至 [!DNL Experience Manager Assets] 您已使用建立的 [!DNL Adobe InDesign] 已使用Proxy。 這會使用Proxy Worker與 [!DNL Adobe InDesign Server]，其中 [指令碼](https://www.adobe.com/devnet/indesign/documentation.html#idscripting) 執行以擷取中繼資料並產生各種轉譯 [!DNL Experience Manager Assets]. Proxy Worker會啟用 [!DNL InDesign Server] 和 [!DNL Experience Manager] 雲端設定中的例項。
 
 >[!NOTE]
 >
->早期版本的 [!DNL Experience Manager] 能够提取XMP和缩略图，现在可以提取所有媒体。
+>[!DNL Adobe InDesign] 以兩種不同的方案提供。 [Adobe InDesign](https://www.adobe.com/products/indesign.html) 用於為列印和數位發佈設計頁面佈局的案頭應用程式。 [Adobe InDesign Server](https://www.adobe.com/products/indesignserver.html) 可讓您根據已建立的檔案，以程式設計方式建立自動化檔案 [!DNL InDesign]. 它是作為一項服務提供介面給其 [ExtendScript](https://www.adobe.com/devnet/indesign/documentation.html#idscripting) engine.Script是以 [!DNL ExtendScript]，類似於 [!DNL JavaScript]. 如需有關的資訊 [!DNL InDesign] 指令碼請參閱 [https://www.adobe.com/devnet/indesign/documentation.html#idscripting](https://www.adobe.com/devnet/indesign/documentation.html#idscripting).
 
-1. 将INDD文件上传到 [!DNL Experience Manager Assets].
-1. 框架将命令脚本发送到 [!DNL InDesign Server] 通过SOAP（简单对象访问协议）。
-此命令脚本将：
+## 擷取的運作方式 {#how-the-extraction-works}
 
-   * 检索INDD文件。
-   * 执行 [!DNL InDesign Server] 命令：
+此 [!DNL Adobe InDesign Server] 可以與整合 [!DNL Experience Manager Assets] 這樣建立的INDD檔案 [!DNL InDesign] 可以上傳、產生轉譯、擷取所有媒體（例如視訊）並儲存為資產：
 
-      * 将提取结构、文本和任何媒体文件。
-      * 将生成PDF和JPG演绎版。
-      * 将生成HTML和IDML演绎版。
-   * 将生成的文件发布回 [!DNL Experience Manager Assets].
+>[!NOTE]
+>
+>舊版 [!DNL Experience Manager] 能夠擷取XMP和縮圖，現在可以擷取所有媒體。
+
+1. 將您的INDD檔案上傳到 [!DNL Experience Manager Assets].
+1. 框架會將命令指令碼傳送至 [!DNL InDesign Server] 透過SOAP （簡單物件存取通訊協定）。
+這個命令指令碼會：
+
+   * 擷取INDD檔案。
+   * 執行 [!DNL InDesign Server] 命令：
+
+      * 會擷取結構、文字及任何媒體檔案。
+      * 會產生PDF和JPG轉譯。
+      * 會產生HTML和IDML轉譯。
+   * 將產生的檔案發佈回 [!DNL Experience Manager Assets].
 
    >[!NOTE]
    >
-   >IDML是一种基于XML的格式，它呈现 [!DNL InDesign] 文件。 它作为压缩包存储，使用 [ZIP](https://www.techterms.com/definition/zip) 压缩。 有关更多信息，请参阅 [InDesign交换格式INX和IDML](https://www.peachpit.com/articles/article.aspx?p=1381880&amp;seqNum=8).
+   >IDML是以XML為基礎的格式，可轉譯所有內容 [!DNL InDesign] 檔案。 它會以壓縮封裝形式儲存，使用 [ZIP](https://www.techterms.com/definition/zip) 壓縮。 如需詳細資訊，請參閱 [InDesign交換格式INX和IDML](https://www.peachpit.com/articles/article.aspx?p=1381880&amp;seqNum=8).
 
    >[!CAUTION]
    >
-   >如果 [!DNL InDesign Server] 未安装或未配置，则仍可以将INDD文件上传到 [!DNL Experience Manager]. 但是，生成的演绎版将限制为PNG和JPEG。 您将无法生成HTML、.idml或页面呈现版本。
+   >如果 [!DNL InDesign Server] 尚未安裝或未設定，則您仍可上傳INDD檔案至 [!DNL Experience Manager]. 不過，產生的轉譯將限製為PNG和JPEG。 您將無法產生HTML、.idml或頁面轉譯。
 
-1. 提取和演绎版生成后：
+1. 產生擷取和轉譯後：
 
-   * 该结构被复制到 `cq:Page` （演绎版类型）。
-   * 提取的文本和文件存储在中 [!DNL Experience Manager Assets].
-   * 所有演绎版都存储在 [!DNL Experience Manager Assets]，在资产本身中。
+   * 此結構會復寫至 `cq:Page` （轉譯型別）。
+   * 擷取的文字和檔案會儲存在 [!DNL Experience Manager Assets].
+   * 所有轉譯都儲存在 [!DNL Experience Manager Assets]，在資產本身中。
 
-## 集成 [!DNL InDesign Server] 带有Experience Manager {#integrating-the-indesign-server-with-aem}
+## 整合 [!DNL InDesign Server] 具有Experience Manager {#integrating-the-indesign-server-with-aem}
 
-要集成 [!DNL InDesign Server] 与配合使用 [!DNL Experience Manager Assets] 配置代理后，您需要：
+若要整合 [!DNL InDesign Server] 搭配使用 [!DNL Experience Manager Assets] 設定Proxy後，您需要：
 
-1. [安装InDesign Server](#installing-the-indesign-server).
-1. 如果需要， [配置Experience Manager Assets工作流](#configuring-the-aem-assets-workflow).
-仅当默认值不适用于您的实例时，才需要执行此操作。
-1. 配置 [InDesign Server的代理工作进程](#configuring-the-proxy-worker-for-indesign-server).
+1. [安裝InDesign Server](#installing-the-indesign-server).
+1. 如有需要， [設定Experience Manager Assets工作流程](#configuring-the-aem-assets-workflow).
+只有在預設值不適合您的執行個體時，才需要執行此操作。
+1. 設定 [InDesign Server的Proxy背景工作](#configuring-the-proxy-worker-for-indesign-server).
 
-### 安装 [!DNL InDesign Server] {#installing-the-indesign-server}
+### 安裝 [!DNL InDesign Server] {#installing-the-indesign-server}
 
-安装并启动 [!DNL InDesign Server] 与配合使用 [!DNL Experience Manager]：
+若要安裝並啟動 [!DNL InDesign Server] 搭配使用 [!DNL Experience Manager]：
 
-1. 下载并安装 [!DNL InDesign Server].
+1. 下載並安裝 [!DNL InDesign Server].
 
-1. 如果需要，您可以自定义 [!DNL InDesign Server] 实例。
+1. 如有需要，您可以自訂 [!DNL InDesign Server] 執行個體。
 
-1. 从命令行启动服务器：
+1. 從命令列啟動伺服器：
 
    `<*ids-installation-dir*>/InDesignServer.com -port 8080`
 
-   这将启动在端口8080上侦听SOAP插件的服务器。 所有日志消息和输出都直接写入命令窗口。
+   這將啟動伺服器，並在連線埠8080上接聽SOAP外掛程式。 所有日誌訊息和輸出都直接寫入命令視窗。
 
    >[!NOTE]
    >
-   >如果要将输出消息保存到文件，则使用重定向；例如，在Windows下：
+   >如果您要將輸出訊息儲存至檔案，則使用重新導向；例如，在Windows下：
    >`<ids-installation-dir>/InDesignServer.com -port 8080 > ~/temp/INDD-logfile.txt 2>&1`
 
-### 配置 [!DNL Experience Manager Assets] 工作流 {#configuring-the-aem-assets-workflow}
+### 設定 [!DNL Experience Manager Assets] 工作流程 {#configuring-the-aem-assets-workflow}
 
-[!DNL Experience Manager Assets] 具有预配置的工作流 **[!UICONTROL DAM更新资产]**，其中包含多个专门用于以下用途的流程步骤 [!DNL InDesign]：
+[!DNL Experience Manager Assets] 有預先設定的工作流程 **[!UICONTROL DAM更新資產]**，其中包含數項專門用於下列用途的處理步驟 [!DNL InDesign]：
 
 * [媒体提取](#media-extraction)
 * [页面提取](#page-extraction)
 
-此工作流使用默认值设置，这些默认值可以适应您对各种创作实例的设置(这是一个标准工作流，因此有关详细信息，请参阅 [编辑工作流](/help/sites-developing/workflows-models.md#configuring-a-workflow-step))。 如果您使用的是默认值（包括SOAP端口），则无需配置。
+此工作流程設定了預設值，這些值可以適應您在各種作者執行個體上的設定(這是標準工作流程，因此如需詳細資訊，請參閱 [編輯工作流程](/help/sites-developing/workflows-models.md#configuring-a-workflow-step))。 如果您使用預設值（包括SOAP連線埠），則不需要進行設定。
 
-设置后，上传 [!DNL InDesign] 文件到 [!DNL Experience Manager Assets] （通过任何常用方法）触发工作流以处理资源并准备各种演绎版。 通过将INDD文件上传到测试您的配置 [!DNL Experience Manager Assets] 要确认您看到由ID创建的不同演绎版，请 `<*your_asset*>.indd/Renditions`
+設定完成後，上傳 [!DNL InDesign] 檔案到 [!DNL Experience Manager Assets] （透過任何一般方法）觸發工作流程來處理資產並準備各種轉譯。 透過上傳INDD檔案到測試您的設定 [!DNL Experience Manager Assets] 確認您看見底下由ID建立的不同轉譯 `<*your_asset*>.indd/Renditions`
 
-#### 媒体提取 {#media-extraction}
+#### 媒體擷取 {#media-extraction}
 
-此步骤控制从INDD文件中提取介质。
+此步驟會控制從INDD檔案擷取媒體。
 
 要进行自定义，可以编辑&#x200B;**[!UICONTROL 媒体提取]**&#x200B;步骤的&#x200B;**[!UICONTROL 参数]**&#x200B;选项卡。
 
-![媒体提取参数和脚本路径](assets/media_extraction_arguments_scripts.png)
+![媒體擷取引數和指令碼路徑](assets/media_extraction_arguments_scripts.png)
 
-媒体提取参数和脚本路径
+媒體擷取引數和指令碼路徑
 
-* **ExtendScript库**：这是一个简单的http get/post方法库，其他脚本需要此库。
+* **ExtendScript資料庫**：這是簡單的http get/post方法程式庫，其他指令碼會需要此程式庫。
 
-* **扩展脚本**：您可以在此处指定不同的脚本组合。 如果您希望自己的脚本在 [!DNL InDesign Server]，将脚本保存在 `/apps/settings/dam/indesign/scripts`.
+* **擴充指令碼**：您可以在此處指定不同的指令碼組合。 如果您希望自己的指令碼在 [!DNL InDesign Server]，將指令碼儲存在 `/apps/settings/dam/indesign/scripts`.
 
 <!-- TBD: Hiding this link since ADC is not available anymore. 
 For information about [!DNL Adobe InDesign] scripts, see [InDesign developer documentation](https://www.adobe.com/devnet/indesign/documentation.html#idscripting).
@@ -119,87 +119,87 @@ For information about [!DNL Adobe InDesign] scripts, see [InDesign developer doc
 
 >[!CAUTION]
 >
->请勿更改 ExtendScript 库。此库提供与Sling通信所需的HTTP功能。 此设置指定要发送到的库 [!DNL InDesign Server] 以便使用。
+>请勿更改 ExtendScript 库。此程式庫提供與Sling通訊所需的HTTP功能。 此設定會指定要傳送至的程式庫 [!DNL InDesign Server] 以便在該處使用。
 
-此 `ThumbnailExport.jsx` 通过“媒体提取”工作流步骤运行的脚本会生成JPG格式的缩略图演绎版。 此呈现版本由流程缩略图工作流步骤用于生成所需的静态呈现版本 [!DNL Experience Manager].
+此 `ThumbnailExport.jsx` 媒體提取工作流程步驟執行的指令碼會產生JPG格式的縮圖轉譯。 「處理縮圖」工作流程步驟使用此轉譯來產生所需的靜態轉譯 [!DNL Experience Manager].
 
-您可以配置流程缩略图工作流步骤以生成不同大小的静态演绎版。 确保您不删除默认值，因为默认值是 [!DNL Experience Manager Assets] 界面。 最后，“删除图像预览演绎版”工作流步骤会删除JPG缩略图演绎版，因为不再需要它。
+您可以設定「處理縮圖」工作流程步驟，以產生不同大小的靜態轉譯。 請確定您並未移除預設值，因為 [!DNL Experience Manager Assets] 介面。 最後，「刪除影像預覽轉譯」工作流程步驟會移除JPG縮圖轉譯，因為不再需要它。
 
-#### 页面提取 {#page-extraction}
+#### 頁面擷取 {#page-extraction}
 
-这会创建 [!DNL Experience Manager] 页面提取元素。 提取处理程序用于从演绎版(当前为HTML或IDML)中提取数据。 然后，使用此数据通过PageBuilder创建页面。
+這會建立 [!DNL Experience Manager] 頁面擷取元素。 擷取處理常式用於從轉譯(目前為HTML或IDML)中擷取資料。 然後會使用此資料來使用PageBuilder建立頁面。
 
 要进行自定义，可以编辑&#x200B;**[!UICONTROL 页面提取]**&#x200B;步骤的&#x200B;**[!UICONTROL 参数]**&#x200B;选项卡。
 
 ![chlimage_1-96](assets/chlimage_1-289.png)
 
-* **页面提取处理程序**：从弹出列表中，选择要使用的处理程序。 提取处理程序对相关 `RenditionPicker` 选择的特定演绎版发挥作用（请参阅 `ExtractionHandler` API）。在标准中 [!DNL Experience Manager] 安装以下项可用：
-   * IDML导出提取句柄：对运行 `IDML` MediaExtract步骤中生成的演绎版。
+* **頁面擷取處理常式**：從快顯清單中選取您要使用的處理常式。 提取处理程序对相关 `RenditionPicker` 选择的特定演绎版发挥作用（请参阅 `ExtractionHandler` API）。在標準 [!DNL Experience Manager] 安裝下列專案可供使用：
+   * IDML匯出擷取控制代碼：對下列專案操作： `IDML` MediaExtract步驟中產生的轉譯。
 
-* **页面名称**：指定要分配给结果页面的名称。 如果保留为空，则名称为“page”（如果已存在“page”，则为派生项）。
+* **頁面名稱**：指定您要指派給產生頁面的名稱。 如果保留為空白，則名稱是「page」（如果已存在「page」，則為衍生物）。
 
-* **页面标题**：指定要分配给结果页面的标题。
+* **頁面標題**：指定您要指派給產生頁面的標題。
 
-* **页面根路径**：结果页面的根位置的路径。 如果留空，将使用保存资产的演绎版的节点。
+* **頁面根路徑**：結果頁面的根位置的路徑。 如果保留為空白，則會使用儲存資產轉譯的節點。
 
-* **页面模板**：生成生成结果页面时使用的模板。
+* **頁面範本**：產生結果頁面時要使用的範本。
 
-* **页面设计**：生成生成结果页面时要使用的页面设计。
+* **頁面設計**：產生結果頁面時要使用的頁面設計。
 
-### 为以下对象配置代理工作进程： [!DNL InDesign Server] {#configuring-the-proxy-worker-for-indesign-server}
+### 設定Proxy背景工作 [!DNL InDesign Server] {#configuring-the-proxy-worker-for-indesign-server}
 
 >[!NOTE]
 >
->Worker驻留在代理实例上。
+>Worker位在Proxy執行個體上。
 
-1. 在“工具”控制台中，展开 **[!UICONTROL Cloud Services配置]** 在左窗格中。 然后展开 **[!UICONTROL 云代理配置]**.
+1. 在「工具」控制檯中，展開 **[!UICONTROL Cloud Services設定]** 在左窗格中。 然後展開 **[!UICONTROL 雲端Proxy設定]**.
 
 1. 双击 **[!UICONTROL IDS worker]** 以打开进行配置。
 
-1. 单击 **[!UICONTROL 编辑]** 要打开“配置”对话框并定义所需的设置，请执行以下操作：
+1. 按一下 **[!UICONTROL 編輯]** 若要開啟組態對話方塊並定義必要的設定：
 
    ![proxy_idsworkerconfig](assets/proxy_idsworkerconfig.png)
 
-   * **IDS池**
-用于与通信的SOAP端点 [!DNL InDesign Server]. 您可以添加、删除和排序项目。
+   * **IDS集區**
+用來與通訊的SOAP端點 [!DNL InDesign Server]. 您可以新增、移除及訂購必要專案。
 
-1. 单击确定进行保存。
+1. 按一下「確定」以儲存。
 
-### 配置Day CQ链接外部化器 {#configuring-day-cq-link-externalizer}
+### 設定Day CQ Link Externalizer {#configuring-day-cq-link-externalizer}
 
-如果 [!DNL InDesign Server] 和 [!DNL Experience Manager] 在不同的主机上，或者其中一个或两个应用程序在默认端口上不起作用，然后配置 [!UICONTROL Day CQ链接外部化器] 设置的主机名、端口和内容路径 [!DNL InDesign Server].
+如果 [!DNL InDesign Server] 和 [!DNL Experience Manager] 位於不同主機上，或其中一個或兩個應用程式在預設連線埠上無法運作，然後設定 [!UICONTROL Day CQ連結外部化器] 設定主機名稱、連線埠和內容路徑 [!DNL InDesign Server].
 
-1. 访问Web控制台，网址为 `https://[aem_server]:[port]/system/console/configMgr`.
-1. 找到配置 **[!UICONTROL Day CQ链接外部化器]**. 单击 **[!UICONTROL 编辑]** 打开。
-1. 链接外部化器设置有助于为创建绝对URL [!DNL Experience Manager] 部署和用于 [!DNL InDesign Server]. 使用 **[!UICONTROL 域]** 用于指定主机名的字段 [!DNL Adobe InDesign Server]. 单击“**保存**”。
+1. 存取Web主控台，網址為 `https://[aem_server]:[port]/system/console/configMgr`.
+1. 找到設定 **[!UICONTROL Day CQ連結外部化器]**. 按一下 **[!UICONTROL 編輯]** 以開啟。
+1. 連結外部化程式設定有助於為建立絕對URL [!DNL Experience Manager] 的部署和 [!DNL InDesign Server]. 使用 **[!UICONTROL 網域]** 欄位來指定主機名稱 [!DNL Adobe InDesign Server]. 单击“**保存**”。
 
-   在绝对URL中，使用 `localhost` 作为本地（创作）实例的主机名，以及发布实例的主机名或IP地址，如下图所示。
+   在絕對URL中，使用 `localhost` 作為本機（作者）執行個體的主機名稱，以及發佈執行個體的主機名稱或IP位址，如下圖所示。
 
-   ![链接外部化器设置](assets/link-externalizer-config.png)
+   ![連結外部化程式設定](assets/link-externalizer-config.png)
 
-### 启用并行作业处理 [!DNL InDesign Server] {#enabling-parallel-job-processing-for-indesign-server}
+### 啟用並行工作處理 [!DNL InDesign Server] {#enabling-parallel-job-processing-for-indesign-server}
 
-您现在可以为IDS启用并行作业处理。 确定最大并行作业数(`x`) an [!DNL InDesign Server] 可以处理：
+您現在可以啟用ID的平行作業處理。 決定平行作業的最大數量(`x`)和 [!DNL InDesign Server] 可以處理：
 
-* 在单个多处理器计算机上，最大并行作业数(`x`)表示 [!DNL InDesign Server] 可以处理的处理器数量比运行ID的处理器数量少一个。
-* 在多台计算机上运行ID时，您需要计算可用的处理器总数（即所有计算机上的处理器总数），然后减去计算机总数。
+* 在單一多處理器電腦上，平行作業的最大數量(`x`)表示 [!DNL InDesign Server] 可以處理比執行ID的處理器數目少一個。
+* 當您在多部機器上執行ID時，您需要計算可用的處理器總數（即所有機器上的處理器總數），然後減去機器總數。
 
-要配置并行IDS作业的数量，请执行以下操作：
+若要設定平行ID作業的數目：
 
-1. 打开 **[!UICONTROL 配置]** 选项卡，例如： `https://[aem_server]:[port]/system/console/configMgr`.
+1. 開啟 **[!UICONTROL 設定]** 標籤進行識別，例如： `https://[aem_server]:[port]/system/console/configMgr`.
 
-1. 选择IDS处理队列，位于 `Apache Sling Job Queue Configuration`.
+1. 選取IDS處理佇列於 `Apache Sling Job Queue Configuration`.
 
 1. 套:
 
    * **类型** - `Parallel`
-   * **最大并行作业数** - `<*x*>` （如上文计算）
+   * **最大平行作業數** - `<*x*>` （如上計算）
 
-1. 保存这些更改。
-1. 要为AdobeCS6及更高版本启用多会话支持，请选中 `enable.multisession.name` 复选框，位于 `com.day.cq.dam.ids.impl.IDSJobProcessor.name` 配置。
-1. 创建 [池 `x` 通过将SOAP端点添加到IDS Worker配置中的IDS Worker](#configuring-the-proxy-worker-for-indesign-server).
+1. 儲存這些變更。
+1. 若要啟用AdobeCS6和更新版本的多工作階段支援，請核取 `enable.multisession.name` 核取方塊，下 `com.day.cq.dam.ids.impl.IDSJobProcessor.name` 設定。
+1. 建立 [集區： `x` 將SOAP端點新增至IDS Worker設定來建立IDS Worker](#configuring-the-proxy-worker-for-indesign-server).
 
-   如果有多台计算机正在运行 [!DNL InDesign Server]，为每个计算机添加SOAP端点（每台计算机的处理器数–1）。
+   如果有多台電腦在執行 [!DNL InDesign Server]，為每部機器新增SOAP端點（每部機器的處理器數目–1）。
 
 <!-- 
 TBD: Make updates to configurations for allow and block list after product updates are done.
@@ -207,35 +207,35 @@ TBD: Make updates to configurations for allow and block list after product updat
 
 >[!NOTE]
 >
->在使用工作进程池时，您可以启用IDS工作进程的阻止列表。
+>使用背景工作集區時，您可以啟用IDS背景工作區的封鎖清單。
 >
->要执行此操作，请启用 **[!UICONTROL enable.retry.name]** 复选框，位于 `com.day.cq.dam.ids.impl.IDSJobProcessor.name` 配置，用于启用IDS作业重试。
+>若要這麼做，請啟用 **[!UICONTROL enable.retry.name]** 核取方塊，位於 `com.day.cq.dam.ids.impl.IDSJobProcessor.name` 設定，可啟用IDS工作重試。
 >
->此外，在 `com.day.cq.dam.ids.impl.IDSPoolImpl.name` 配置，为设置正值 `max.errors.to.blacklist` 确定从作业处理程序列表中禁止ID之前的作业重试次数的参数。
+>此外，在 `com.day.cq.dam.ids.impl.IDSPoolImpl.name` 設定，設定正值 `max.errors.to.blacklist` 引數可決定從工作處理常式清單中禁止ID之前的工作重試次數。
 >
->默认情况下，在可配置(`retry.interval.to.whitelist.name`)重新验证IDS Worker所需的时间（以分钟为单位）。 如果工作进程在线找到，则会将其从阻止列表中删除。
+>依預設，在可設定的(`retry.interval.to.whitelist.name`)重新驗證IDS工作者所需的時間（以分鐘為單位）。 如果工作程式線上上找到，則會從封鎖清單中將其移除。
 
-## 启用支持 [!DNL InDesign Server] 10.0或更高版本 {#enabling-support-for-indesign-server-or-later}
+## 啟用支援 [!DNL InDesign Server] 10.0或更新版本 {#enabling-support-for-indesign-server-or-later}
 
-对象 [!DNL InDesign Server] 10.0或更高版本，请执行以下步骤以启用多会话支持。
+對象 [!DNL InDesign Server] 10.0或更新版本，執行以下步驟以啟用多工作階段支援。
 
-1. 从打开配置管理器 [!DNL Experience Manager Assets] 实例 `https://[aem_server]:[port]/system/console/configMgr`.
-1. 编辑配置 `com.day.cq.dam.ids.impl.IDSJobProcessor.name`.
-1. 选择 **[!UICONTROL ids.cc.enable]** 选项，然后单击 **[!UICONTROL 保存]**.
+1. 從您的開啟設定管理員 [!DNL Experience Manager Assets] 例項 `https://[aem_server]:[port]/system/console/configMgr`.
+1. 編輯設定 `com.day.cq.dam.ids.impl.IDSJobProcessor.name`.
+1. 選取 **[!UICONTROL ids.cc.enable]** 選項，然後按一下 **[!UICONTROL 儲存]**.
 
 >[!NOTE]
 >
->对象 [!DNL InDesign Server] 与集成 [!DNL Experience Manager Assets]，请使用多核处理器，因为单核系统不支持集成所需的会话支持功能。
+>對象 [!DNL InDesign Server] 與整合 [!DNL Experience Manager Assets]，請使用多核心處理器，因為單核心系統不支援整合所需的作業階段支援功能。
 
-## 配置 [!DNL Experience Manager] 凭据 {#configure-aem-credentials}
+## 設定 [!DNL Experience Manager] 認證 {#configure-aem-credentials}
 
-您可以更改访问 [!DNL InDesign Server] 来自您的 [!DNL Experience Manager] 部署，无需中断与的集成 [!DNL InDesign Server].
+您可以變更用來存取的預設管理員認證（使用者名稱和密碼）。 [!DNL InDesign Server] 從您的 [!DNL Experience Manager] 部署，而不中斷與的整合 [!DNL InDesign Server].
 
 1. 转到 `/etc/cloudservices/proxy.html`.
-1. 在对话框中，指定新用户名和密码。
-1. 保存凭据。
+1. 在對話方塊中，指定新的使用者名稱和密碼。
+1. 儲存認證。
 
 >[!MORELIKETHIS]
 >
->* [关于Adobe InDesign Server](https://www.adobe.com/products/indesignserver/faq.html)
+>* [關於Adobe InDesign Server](https://www.adobe.com/products/indesignserver/faq.html)
 

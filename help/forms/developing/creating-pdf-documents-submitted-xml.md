@@ -1,7 +1,7 @@
 ---
-title: 使用SubmittedXML数据创建PDF文档
+title: 使用SubmittedXML資料建立PDF檔案
 seo-title: Creating PDF Documents with SubmittedXML Data
-description: 使用Forms服务检索用户输入交互式表单的表单数据。 将表单数据传递到另一个AEM Forms服务操作，然后使用该数据创建PDF文档。
+description: 使用Forms服務來擷取使用者在互動式表單中輸入的表單資料。 將表單資料傳遞至另一個AEM Forms服務操作，然後使用該資料建立PDF檔案。
 seo-description: Use the Forms service to retrieve the form data that the user entered into an interactive form. Pass the form data to another AEM Forms service operation and create a PDF document using the data.
 uuid: 2676c614-8988-451b-ac7c-bd07731a3f5f
 contentOwner: admin
@@ -19,137 +19,137 @@ ht-degree: 0%
 
 ---
 
-# 使用提交的XML数据创建PDF单据 {#creating-pdf-documents-with-submittedxml-data}
+# 使用已提交的XML資料建立PDF檔案 {#creating-pdf-documents-with-submittedxml-data}
 
-**本文档中的示例和示例仅适用于AEM Forms on JEE环境。**
+**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms 。**
 
-## 使用提交的XML数据创建PDF单据 {#creating-pdf-documents-with-submitted-xml-data}
+## 使用已提交的XML資料建立PDF檔案 {#creating-pdf-documents-with-submitted-xml-data}
 
-使用户能够填写交互式表单的基于Web的应用程序要求将数据提交回服务器。 使用Forms服务，您可以检索用户输入交互式表单的表单数据。 然后，您可以将表单数据传递到另一个AEM Forms服务操作，并使用这些数据创建PDF文档。
+讓使用者填寫互動式表單的網頁式應用程式需要將資料提交回伺服器。 使用Forms服務，您可以擷取使用者在互動式表單中輸入的表單資料。 然後，您可以將表單資料傳遞至另一個AEM Forms服務操作，並使用資料建立PDF檔案。
 
 >[!NOTE]
 >
->在阅读本内容之前，建议您对处理提交的表单有一定的了解。 处理提交的Forms中介绍了一些概念，例如表单设计和提交的XML数据之间的关系。
+>在閱讀本內容之前，建議您先對處理已提交表單有一定的瞭解。 處理提交的Forms中涵蓋了表單設計和提交的XML資料之間的關係等概念。
 
-请考虑以下涉及三种AEM Forms服务的工作流：
+請考量下列涉及三項AEM Forms服務的工作流程：
 
-* 用户将XML数据从基于Web的应用程序提交到Forms服务。
-* Forms服务用于处理提交的表单并提取表单字段。 可以处理表单数据。 例如，可以将数据提交到企业数据库。
-* 表单数据会发送到Output服务以创建非交互式PDF文档。
-* 非交互式PDF文档存储在Content Services中（已弃用）。
+* 使用者從網頁型應用程式將XML資料提交至Forms服務。
+* Forms服務用於處理提交的表單並擷取表單欄位。 可以處理表單資料。 例如，資料可以提交至企業資料庫。
+* 表單資料會傳送至Output服務以建立非互動式PDF檔案。
+* 非互動式PDF檔案會儲存在Content Services中（已棄用）。
 
-下图提供了此工作流的可视表示形式。
+下圖提供此工作流程的視覺化呈現。
 
 ![cd_cd_finsrv_architecture_xml_pdf1](assets/cd_cd_finsrv_architecture_xml_pdf1.png)
 
-用户从客户端Web浏览器提交表单后，非交互式PDF文档将存储在Content Services中（已弃用）。 下图显示了一个PDF文档，该文档存储在Content Services中（已弃用）。
+使用者從使用者端Web瀏覽器提交表單後，非互動式PDF檔案會儲存在Content Services中（已棄用）。 下圖顯示儲存在Content Services （已棄用）中的PDF檔案。
 
 ![cd_cd_cs_gui](assets/cd_cd_cs_gui.png)
 
-### 步骤摘要 {#summary-of-steps}
+### 步驟摘要 {#summary-of-steps}
 
-要创建具有提交的XML数据的非交互式PDF文档，并将其存储在Content Services的PDF文档中（已弃用），请执行以下任务：
+若要使用提交的XML資料建立非互動式PDF檔案，並將其儲存在Content Services的PDF檔案中（已棄用），請執行下列工作：
 
-1. 包括项目文件。
-1. 创建Forms、输出和文档管理对象。
-1. 使用Forms服务检索表单数据。
-1. 使用Output服务创建非交互式PDF文档。
-1. 使用文档管理服务将PDF表单存储在Content Services中（已弃用）。
+1. 包含專案檔案。
+1. 建立Forms、輸出和檔案管理物件。
+1. 使用Forms服務擷取表單資料。
+1. 使用Output服務建立非互動式PDF檔案。
+1. 使用Document Management服務將PDF表單儲存在Content Services （已棄用）。
 
-**包括项目文件**
+**包含專案檔案**
 
-在开发项目中包含必要的文件。 如果要使用Java创建客户端应用程序，请包含必要的JAR文件。 如果使用Web服务，请确保包含代理文件。
+將必要的檔案納入您的開發專案中。 如果您使用Java建立使用者端應用程式，請包含必要的JAR檔案。 如果您使用Web服務，請確定您包含Proxy檔案。
 
-**创建Forms、输出和文档管理对象**
+**建立Forms、Output和Document Management物件**
 
-在以编程方式执行Forms服务API操作之前，请先创建Forms客户端API对象。 同样，由于此工作流调用输出和文档管理服务，因此请创建输出客户端API对象和文档管理客户端API对象。
+以程式設計方式執行Forms服務API作業之前，請先建立Forms使用者端API物件。 同樣地，由於此工作流程會叫用Output和Document Management服務，因此請建立Output Client API物件和Document Management Client API物件。
 
-**使用Forms服务检索表单数据**
+**使用Forms服務擷取表單資料**
 
-检索提交到Forms服务的表单数据。 您可以处理提交的数据以满足业务要求。 例如，可以将表单数据存储到企业数据库中。 但是，要创建非交互式PDF文档，表单数据将传递到Output服务。
+擷取已提交至Forms服務的表單資料。 您可以處理提交的資料，以符合您的業務需求。 例如，您可以將表單資料儲存在企業資料庫中。 不過，若要建立非互動式PDF檔案，會將表單資料傳遞至Output服務。
 
-**使用Output服务创建非交互式PDF文档。**
+**使用Output服務建立非互動式PDF檔案。**
 
-使用Output服务创建基于表单设计和XML表单数据的非交互式PDF文档。 在工作流中，将从Forms服务中检索表单数据。
+使用Output服務建立以表單設計和XML表單資料為基礎的非互動式PDF檔案。 在工作流程中，會從Forms服務擷取表單資料。
 
-**使用PDF管理服务将文档表单存储在Content Services（已弃用）中**
+**使用檔案管理服務將PDF表單儲存在內容服務（已棄用）中**
 
-使用文档管理服务API在Content Services中存储PDF文档（已弃用）。
-
-**另请参阅**
-
-[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
-
-[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
-
-[Forms服务API快速启动](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)
-
-### 使用Java API创建包含已提交XML数据的PDF文档 {#create-a-pdf-document-with-submitted-xml-data-using-the-java-api}
-
-使用Forms、Output和Document Management API (Java)创建包含提交的XML数据的PDF文档：
-
-1. 包括项目文件
-
-   在Java项目的类路径中包含客户端JAR文件，如adobe-forms-client.jar、adobe-output-client.jar和adobe-contentservices-client.jar。
-
-1. 创建Forms、输出和文档管理对象
-
-   * 创建 `ServiceClientFactory` 包含连接属性的对象。
-   * 创建 `FormsServiceClient` 对象，使用它的构造函数传递 `ServiceClientFactory` 对象。
-   * 创建 `OutputClient` 对象，使用它的构造函数传递 `ServiceClientFactory` 对象。
-   * 创建 `DocumentManagementServiceClientImpl` 对象，使用它的构造函数传递 `ServiceClientFactory` 对象。
-
-1. 使用Forms服务检索表单数据
-
-   * 调用 `FormsServiceClient` 对象的 `processFormSubmission` 方法，并传递以下值：
-
-      * 此 `com.adobe.idp.Document` 包含表单数据的对象。
-      * 一个字符串值，它指定环境变量，包括所有相关的HTTP标头。 通过为指定一个或多个值来指定要处理的内容类型 `CONTENT_TYPE` 环境变量。 例如，要处理XML数据，请为此参数指定以下字符串值： `CONTENT_TYPE=text/xml`.
-      * 一个字符串值，它指定 `HTTP_USER_AGENT` 标头值，例如 `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`.
-      * A `RenderOptionsSpec` 存储运行时选项的对象。
-
-      此 `processFormSubmission` 方法返回 `FormsResult` 包含表单提交结果的对象。
-
-   * 确定Forms服务是否通过调用 `FormsResult` 对象的 `getAction` 方法。 如果此方法返回值 `0`，则数据已准备好处理。
-   * 通过创建 `com.adobe.idp.Document` 对象 `FormsResult` 对象的 `getOutputContent` 方法。 （此对象包含可以发送到Output服务的表单数据。）
-   * 创建 `java.io.InputStream` 对象 `java.io.DataInputStream` 构造函数并传递 `com.adobe.idp.Document` 对象。
-   * 创建 `org.w3c.dom.DocumentBuilderFactory` 对象(通过调用静态 `org.w3c.dom.DocumentBuilderFactory` 对象的 `newInstance` 方法。
-   * 创建 `org.w3c.dom.DocumentBuilder` 对象 `org.w3c.dom.DocumentBuilderFactory` 对象的 `newDocumentBuilder` 方法。
-   * 创建 `org.w3c.dom.Document` 对象 `org.w3c.dom.DocumentBuilder` 对象的 `parse` 方法和传递 `java.io.InputStream` 对象。
-   * 检索XML文档中每个节点的值。 完成此任务的一种方法是创建接受两个参数的自定义方法： `org.w3c.dom.Document` 对象以及要检索其值的节点的名称。 此方法返回表示节点值的字符串值。 在此过程后的代码示例中，调用此自定义方法 `getNodeText`. 显示了该方法的主体。
-
-
-1. 使用Output服务创建非交互式PDF文档。
-
-   PDF通过调用 `OutputClient` 对象的 `generatePDFOutput` 方法，并传递以下值：
-
-   * A `TransformationFormat` 枚举值。 要生成PDF单据，请指定 `TransformationFormat.PDF`.
-   * 一个字符串值，它指定表单设计的名称。 确保表单设计与从Forms服务检索的表单数据兼容。
-   * 一个字符串值，它指定表单设计所在的内容根。
-   * A `PDFOutputOptionsSpec` 包含PDF运行时选项的对象。
-   * A `RenderOptionsSpec` 包含渲染运行时选项的对象。
-   * 此 `com.adobe.idp.Document` 包含要与表单设计合并的数据的XML数据源的对象。 确保此对象由 `FormsResult` 对象的 `getOutputContent` 方法。
-   * 此 `generatePDFOutput` 方法返回 `OutputResult` 包含操作结果的对象。
-   * PDF通过调用 `OutputResult` 对象的 `getGeneratedDoc` 方法。 此方法会返回 `com.adobe.idp.Document` 表示非交互式PDF文档的实例。
-
-1. 使用PDF管理服务将文档表单存储在Content Services（已弃用）中
-
-   通过调用 `DocumentManagementServiceClientImpl` 对象的 `storeContent` 方法，并传递以下值：
-
-   * 一个字符串值，它指定添加内容的存储。 默认存储为 `SpacesStore`. 此值是必需参数。
-   * 一个字符串值，指定添加内容的空间的完全限定路径(例如， `/Company Home/Test Directory`)。 此值是必需参数。
-   * 表示新内容的节点名称(例如， `MortgageForm.pdf`)。 此值是必需参数。
-   * 指定节点类型的字符串值。 要添加新内容(如PDF文件)，请指定 `{https://www.alfresco.org/model/content/1.0}content`. 此值是必需参数。
-   * A `com.adobe.idp.Document` 表示内容的对象。 此值是必需参数。
-   * 指定编码值的字符串值(例如， `UTF-8`)。 此值是必需参数。
-   * An `UpdateVersionType` 指定如何处理版本信息的枚举值(例如， `UpdateVersionType.INCREMENT_MAJOR_VERSION` 以递增内容版本。 )此值是必需参数。
-   * A `java.util.List` 指定与内容相关的方面的实例。 此值是一个可选参数，您可以指定 `null`.
-   * A `java.util.Map` 存储内容属性的对象。
-
-   此 `storeContent` 方法返回 `CRCResult` 描述内容的对象。 使用 `CRCResult` 对象，例如，您可以获取内容的唯一标识符值。 要执行此任务，请调用 `CRCResult` 对象的 `getNodeUuid` 方法。
+使用檔案管理服務API將PDF檔案儲存在內容服務（已棄用）中。
 
 **另请参阅**
 
-[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
-[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+
+[Forms服務API快速入門](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)
+
+### 使用Java API建立包含已提交XML資料的PDF檔案 {#create-a-pdf-document-with-submitted-xml-data-using-the-java-api}
+
+使用Forms、Output和Document Management API (Java)建立包含已提交XML資料的PDF檔案：
+
+1. 包含專案檔案
+
+   在您的Java專案的類別路徑中包含使用者端JAR檔案，例如adobe-forms-client.jar、adobe-output-client.jar和adobe-contentservices-client.jar。
+
+1. 建立Forms、Output和Document Management物件
+
+   * 建立 `ServiceClientFactory` 包含連線屬性的物件。
+   * 建立 `FormsServiceClient` 物件，使用它的建構函式並傳遞 `ServiceClientFactory` 物件。
+   * 建立 `OutputClient` 物件，使用它的建構函式並傳遞 `ServiceClientFactory` 物件。
+   * 建立 `DocumentManagementServiceClientImpl` 物件，使用它的建構函式並傳遞 `ServiceClientFactory` 物件。
+
+1. 使用Forms服務擷取表單資料
+
+   * 叫用 `FormsServiceClient` 物件的 `processFormSubmission` 方法並傳遞下列值：
+
+      * 此 `com.adobe.idp.Document` 包含表單資料的物件。
+      * 字串值，指定環境變數，包括所有相關的HTTP標頭。 指定要處理的內容型別，方法為指定一個或多個 `CONTENT_TYPE` 環境變數。 例如，若要處理XML資料，請為此引數指定下列字串值： `CONTENT_TYPE=text/xml`.
+      * 字串值，指定 `HTTP_USER_AGENT` 標頭值，例如 `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`.
+      * A `RenderOptionsSpec` 儲存執行階段選項的物件。
+
+      此 `processFormSubmission` 方法傳回 `FormsResult` 包含表單提交結果的物件。
+
+   * 判斷Forms服務是否已透過叫用 `FormsResult` 物件的 `getAction` 方法。 如果此方法傳回值 `0`，資料已準備好處理。
+   * 透過建立 `com.adobe.idp.Document` 物件(透過叫用 `FormsResult` 物件的 `getOutputContent` 方法。 （此物件包含可傳送至Output服務的表單資料。）
+   * 建立 `java.io.InputStream` 物件(透過叫用 `java.io.DataInputStream` 建構函式並傳遞 `com.adobe.idp.Document` 物件。
+   * 建立 `org.w3c.dom.DocumentBuilderFactory` 物件（透過呼叫靜態） `org.w3c.dom.DocumentBuilderFactory` 物件的 `newInstance` 方法。
+   * 建立 `org.w3c.dom.DocumentBuilder` 物件(透過叫用 `org.w3c.dom.DocumentBuilderFactory` 物件的 `newDocumentBuilder` 方法。
+   * 建立 `org.w3c.dom.Document` 物件(透過叫用 `org.w3c.dom.DocumentBuilder` 物件的 `parse` 方法和傳遞 `java.io.InputStream` 物件。
+   * 擷取XML檔案中每個節點的值。 完成此工作的一種方式是建立接受兩個引數的自訂方法： `org.w3c.dom.Document` 物件和您要擷取其值的節點名稱。 此方法會傳回代表節點值的字串值。 在此程式之後的程式碼範例中，會呼叫此自訂方法 `getNodeText`. 此時會顯示此方法的內文。
+
+
+1. 使用Output服務建立非互動式PDF檔案。
+
+   透過叫用建立PDF檔案 `OutputClient` 物件的 `generatePDFOutput` 並傳遞下列值：
+
+   * A `TransformationFormat` 列舉值。 若要產生PDF檔案，請指定 `TransformationFormat.PDF`.
+   * 字串值，指定表單設計的名稱。 確保表單設計與從Forms服務擷取的表單資料相容。
+   * 字串值，指定表單設計所在的內容根。
+   * A `PDFOutputOptionsSpec` 包含PDF執行階段選項的物件。
+   * A `RenderOptionsSpec` 包含演算執行階段選項的物件。
+   * 此 `com.adobe.idp.Document` 包含要與表單設計合併之資料之XML資料來源的物件。 確定此物件是由 `FormsResult` 物件的 `getOutputContent` 方法。
+   * 此 `generatePDFOutput` 方法傳回 `OutputResult` 包含作業結果的物件。
+   * 透過叫用非互動式PDF檔案來擷取 `OutputResult` 物件的 `getGeneratedDoc` 方法。 此方法會傳回 `com.adobe.idp.Document` 代表非互動式PDF檔案的例項。
+
+1. 使用Document Management服務將PDF表單儲存在內容服務（已棄用）中
+
+   透過叫用 `DocumentManagementServiceClientImpl` 物件的 `storeContent` 並傳遞下列值：
+
+   * 字串值，指定新增內容的存放區。 預設存放區為 `SpacesStore`. 此值為必要引數。
+   * 字串值，指定新增內容的空間完整路徑(例如， `/Company Home/Test Directory`)。 此值為必要引數。
+   * 代表新內容的節點名稱(例如， `MortgageForm.pdf`)。 此值為必要引數。
+   * 字串值，指定節點型別。 若要新增內容(例如PDF檔案)，請指定 `{https://www.alfresco.org/model/content/1.0}content`. 此值為必要引數。
+   * A `com.adobe.idp.Document` 代表內容的物件。 此值為必要引數。
+   * 字串值，指定編碼值(例如， `UTF-8`)。 此值為必要引數。
+   * 一個 `UpdateVersionType` 指定如何處理版本資訊的列舉值(例如， `UpdateVersionType.INCREMENT_MAJOR_VERSION` 增加內容版本。 )此值是必要引數。
+   * A `java.util.List` 指定與內容相關之方面的例項。 此值是選用引數，您可以指定 `null`.
+   * A `java.util.Map` 儲存內容屬性的物件。
+
+   此 `storeContent` 方法傳回 `CRCResult` 說明內容的物件。 使用 `CRCResult` 物件，例如，您可以取得內容的唯一識別碼值。 若要執行此工作，請叫用 `CRCResult` 物件的 `getNodeUuid` 方法。
+
+**另请参阅**
+
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+
+[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)

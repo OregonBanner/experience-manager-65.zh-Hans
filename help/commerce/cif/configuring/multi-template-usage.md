@@ -1,6 +1,6 @@
 ---
-title: 创建多个类别和产品页面
-description: 了解如何使用目标营销内容丰富“类别登录”和“产品详细信息”页面。
+title: 建立多個類別和產品頁面
+description: 瞭解如何使用目標行銷內容來豐富類別登陸和產品詳細資料頁面。
 sub-product: Commerce
 doc-type: feature-video
 activity: use
@@ -16,12 +16,12 @@ ht-degree: 4%
 
 ---
 
-# 创建多个类别和产品页面
+# 建立多個類別和產品頁面
 
-[AEM CIF核心组件](https://github.com/adobe/aem-core-cif-components) 使内容作者能够创建其他类别和产品页面。 这些页面可以通过附加营销内容进行扩充，并配置为针对特定类别和产品。 以下视频介绍了此功能的设置。
+[AEM CIF Core Components](https://github.com/adobe/aem-core-cif-components) 讓內容作者能夠建立其他類別和產品頁面。 這些頁面可以包含其他行銷內容，並設定為鎖定特定類別和產品。 以下影片會逐步介紹此功能的設定。
 
 >[!VIDEO](https://video.tv.adobe.com/v/28969/?quality=12)
 
-您可以从以下资源中找到有关此主题的更多信息：
+您可以從下列資源中找到有關此主題的更多資訊：
 
-- [AEM CIF核心组件 — 多目录页面配置](https://github.com/adobe/aem-core-cif-components/wiki/configuration#multi-catalog-page-template-configuration)
+- [AEM CIF核心元件 — 多目錄頁面設定](https://github.com/adobe/aem-core-cif-components/wiki/configuration#multi-catalog-page-template-configuration)

@@ -1,7 +1,7 @@
 ---
-title: 导入和导出PDF生成器配置文件
+title: 匯入和匯出PDF產生器組態檔
 seo-title: Importing and exporting PDF Generator configuration files
-description: 了解如何导入和导出PDF生成器配置文件。
+description: 瞭解如何匯入和匯出PDF產生器組態檔。
 seo-description: Learn how to import and export PDF Generator configuration files.
 uuid: 3367253b-d222-4c5f-9455-a1810d96112e
 contentOwner: admin
@@ -18,49 +18,49 @@ ht-degree: 0%
 
 ---
 
-# 导入和导出PDF生成器配置文件 {#importing-and-exporting-pdf-generator-configuration-files}
+# 匯入和匯出PDF產生器組態檔 {#importing-and-exporting-pdf-generator-configuration-files}
 
-配置文件包含PDF生成器转换信息，包括PDF、文件类型和安全性设置。
-
->[!NOTE]
->
->无法通过导入自定义native2pdfconfig.xml文件来更改PDF生成器的超时设置。 该文件中的超时设置仅供参考，并在PDF生成器中显示当前设置。 要更改超时设置，请参阅中的“设置PDF生成器性能参数” [安装和部署AEM Forms](https://www.adobe.com/go/learn_aemforms_installJBoss_63).
-
-## 导出当前配置文件 {#export-your-current-configuration-file}
-
-1. 在管理控制台中，单击“服务”>“PDF生成器”>“配置文件”>“导出配置”。
-1. 要导出设置，请选择相应的选项：
-
-   * 要导出所有命名设置，请选择“下载整个配置”。
-   * 要仅导出一个Adobe PDF设置、安全设置或文件类型设置，请选择下载最小配置。
-
-      如果要导出最小配置，请选择要导出的Adobe PDF、安全和文件类型设置。
-
-1. 单击“下载”并将XML文件保存在适当的位置。
-
-## 导入配置文件 {#import-a-configuration-file}
+組態檔包含PDF產生器轉換資訊，包括PDF、檔案型別和安全性設定。
 
 >[!NOTE]
 >
->系统将根据导入文件中的信息重新配置系统。
+>無法透過匯入自訂native2pdfconfig.xml檔案來變更PDF產生器的逾時設定。 該檔案中的逾時設定僅供參考，並在PDF產生器中顯示目前的設定。 若要變更逾時設定，請參閱以下的「設定PDF產生器效能引數」： [安裝和部署AEM表單](https://www.adobe.com/go/learn_aemforms_installJBoss_63).
 
-1. 在管理控制台中，单击服务>PDF生成器>配置文件>导入配置。
-1. 选择导入现有配置文件。
-1. 要在“配置文件”框中指定文件位置，请单击“浏览”查找并选择文件，然后单击 **导入**.
+## 匯出您目前的組態檔 {#export-your-current-configuration-file}
 
-## 转换AutoCAD文件中的所有图层 {#convert-all-layers-within-autocad-files}
+1. 在Administration Console中，按一下「服務>PDF產生器>組態檔>匯出組態」。
+1. 若要匯出設定，請選取適當的選項：
 
-默认情况下，“PDF生成器”只将AutoCAD文件的默认图层转换为PDF，而不转换文件中的所有图层。 要转换所有图层，请按照以下步骤操作。
+   * 若要匯出所有已命名的設定，請選取「下載整個設定」。
+   * 若只要匯出一個Adobe PDF設定、安全性設定或檔案型別設定，請選取「下載最低設定」。
 
-1. 在管理控制台中，单击“服务”>“PDF生成器”>“配置文件”>“导出配置”。
-1. 选择下载整个配置，然后单击下载。
-1. 在文本编辑器中，打开下载的文件，然后在 `AutoCAD` 标记内 `PDFMaker` 标记，添加文本 `convertAllPages="true"`.
-1. 在管理控制台中，单击服务>PDF生成器>配置文件>导入配置。
-1. 选择“导入现有配置文件”，指定更新的文件，然后单击“导入”。
+      如果您要匯出最小組態，請選取要匯出的Adobe PDF、安全性及檔案型別設定。
 
-   使用修改后的配置文件转换的任何AutoCAD文件都将转换所有图层。
+1. 按一下「下載」 ，並將XML檔案儲存在適當的位置。
 
-## 将配置重置为随PDF生成器一起安装的原始设置 {#reset-your-configuration-to-the-original-settings-installed-with-pdf-generator}
+## 匯入組態檔 {#import-a-configuration-file}
 
-1. 在管理控制台中，单击服务>PDF生成器>配置文件>导入配置。
-1. 选择将配置重置为默认设置，然后单击导入。
+>[!NOTE]
+>
+>您的系統將根據匯入檔案中的資訊重新設定。
+
+1. 在Administration Console中，按一下「服務>PDF產生器>組態檔>匯入組態」。
+1. 選取「匯入現有的組態檔」。
+1. 若要在「組態檔案」方塊中指定檔案位置，請按一下「瀏覽」來尋找並選取檔案，然後按一下 **匯入**.
+
+## 轉換AutoCAD檔案中的所有圖層 {#convert-all-layers-within-autocad-files}
+
+根據預設，「PDF產生器」只會將AutoCAD檔案的預設圖層轉換為PDF，而不是檔案中的所有圖層。 若要轉換所有圖層，請遵循此程式。
+
+1. 在Administration Console中，按一下「服務>PDF產生器>組態檔>匯出組態」。
+1. 選取「下載整個設定」，然後按一下「下載」。
+1. 在文字編輯器中，開啟下載的檔案，並在 `AutoCAD` 標籤內 `PDFMaker` 標籤，新增文字 `convertAllPages="true"`.
+1. 在Administration Console中，按一下「服務>PDF產生器>組態檔>匯入組態」。
+1. 選取「匯入現有的組態檔」，指定更新的檔案，然後按一下「匯入」。
+
+   使用修改過的組態檔案轉換的任何AutoCAD檔案都會轉換所有圖層。
+
+## 將您的設定重設為隨PDF產生器安裝的原始設定 {#reset-your-configuration-to-the-original-settings-installed-with-pdf-generator}
+
+1. 在Administration Console中，按一下「服務>PDF產生器>組態檔>匯入組態」。
+1. 選取「重設組態至預設設定」，然後按一下「匯入」。

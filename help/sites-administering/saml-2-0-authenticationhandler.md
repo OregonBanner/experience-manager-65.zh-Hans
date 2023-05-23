@@ -1,7 +1,7 @@
 ---
 title: SAML 2.0 身份验证处理程序
 seo-title: SAML 2.0 Authentication Handler
-description: 了解AEM中的SAML 2.0身份验证处理程序。
+description: 瞭解AEM中的SAML 2.0驗證處理常式。
 seo-description: Learn about the SAML 2.0 Authentication Handler in AEM.
 uuid: 51f97315-350a-42a4-af2c-2de87307c6ad
 contentOwner: Guillaume Carlino
@@ -13,132 +13,132 @@ exl-id: 8e54bccf-0ff1-448d-a237-ec42fd3bfa23
 source-git-commit: 6fa3679429527e026313b22d953267503598d1a9
 workflow-type: tm+mt
 source-wordcount: '850'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
 # SAML 2.0 身份验证处理程序{#saml-authentication-handler}
 
-AEM附带 [SAML](https://saml.xml.org/saml-specifications) 身份验证处理程序。 此处理程序支持 [SAML](https://saml.xml.org/saml-specifications) 2.0身份验证请求协议（Web-SSO配置文件）使用 `HTTP POST` 绑定。
+AEM隨附 [SAML](https://saml.xml.org/saml-specifications) 驗證處理常式。 此處理常式提供 [SAML](https://saml.xml.org/saml-specifications) 2.0驗證要求通訊協定（Web-SSO設定檔）使用 `HTTP POST` 繫結。
 
-它支持：
+它支援：
 
-* 消息的签名和加密
-* 自动创建用户
-* 将组同步到AEM中的现有组
-* 服务提供者和身份提供者启动的身份验证
+* 訊息的簽署和加密
+* 自動建立使用者
+* 將群組同步至AEM中的現有群組
+* 服務提供者和身分提供者啟動的驗證
 
-此处理程序将加密的SAML响应消息存储在用户节点( `usernode/samlResponse`)以促进与第三方服务提供商的通信。
-
->[!NOTE]
->
->参见 [AEM与SAML集成的演示](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17481.html).
-
-## 配置SAML 2.0身份验证处理程序 {#configuring-the-saml-authentication-handler}
-
-此 [Web控制台](/help/sites-deploying/configuring-osgi.md) 提供对 [SAML](https://saml.xml.org/saml-specifications) 已调用2.0身份验证处理程序配置 **AdobeGranite SAML 2.0身份验证处理程序**. 可以设置以下属性。
+此處理常式會將加密的SAML回應訊息儲存在使用者節點( `usernode/samlResponse`)以促進與協力廠商服務供應商通訊。
 
 >[!NOTE]
 >
->默认情况下，SAML 2.0身份验证处理程序处于禁用状态。 要启用处理程序，您必须至少设置以下属性之一：
+>另請參閱 [AEM與SAML整合的示範](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17481.html).
+
+## 設定SAML 2.0驗證處理常式 {#configuring-the-saml-authentication-handler}
+
+此 [網頁主控台](/help/sites-deploying/configuring-osgi.md) 提供對的存取 [SAML](https://saml.xml.org/saml-specifications) 2.0已呼叫驗證處理常式設定 **AdobeGranite SAML 2.0驗證處理常式**. 可設定下列屬性。
+
+>[!NOTE]
 >
->* 身份提供程序POSTURL或IDP URL。
->* 服务提供商实体ID。
+>SAML 2.0 Authentication Handler預設為停用。 您必須至少設定下列其中一個屬性，才能啟用處理常式：
+>
+>* 身分提供者POSTURL或IDP URL。
+>* 服務提供者實體識別碼。
 >
 
 
 >[!NOTE]
 >
->SAML断言经过签名，可以选择进行加密。 要使此功能正常工作，您必须至少在TrustStore中提供身份提供程序的公共证书。 参见 [将IdP证书添加到TrustStore](/help/sites-administering/saml-2-0-authenticationhandler.md#add-the-idp-certificate-to-the-aem-truststore) 部分以了解更多信息。
+>SAML宣告已簽署，並可選擇加密。 為了使其運作，您必須至少在TrustStore中提供身分提供者的公開憑證。 另請參閱 [將IdP憑證新增至TrustStore](/help/sites-administering/saml-2-0-authenticationhandler.md#add-the-idp-certificate-to-the-aem-truststore) 區段以取得詳細資訊。
 
-**路径** Sling应使用此身份验证处理程序的存储库路径。 如果此为空，则将禁用身份验证处理程序。
+**路徑** Sling應使用此驗證處理常式的存放庫路徑。 如果此為空白，則會停用驗證處理常式。
 
-**服务排名** OSGi框架服务排名值，指示调用此服务的顺序。 这是一个整数值，其中较高的值表示较高的优先级。
+**服務排名** OSGi框架服務排名值，可指出呼叫此服務的順序。 此為整數值，其中較高的值代表較高的優先順序。
 
-**IDP证书别名** 全局truststore中IdP证书的别名。 如果此属性为空，则将禁用身份验证处理程序。 有关如何设置证书，请参阅下面的“将IdP证书添加到AEM TrustStore”一章。
+**IDP憑證別名** 全域信任存放區中IdP憑證的別名。 如果此屬性為空，則會停用驗證處理常式。 如需如何設定，請參閱下方的「將IdP憑證新增至AEM TrustStore」一章。
 
-**IDP URL** IDP的URL，应将SAML身份验证请求发送到该位置。 如果此属性为空，则将禁用身份验证处理程序。
+**IDP URL** IDP的URL，應將SAML驗證請求傳送至此處。 如果此屬性為空，則會停用驗證處理常式。
 
 >[!CAUTION]
 >
->必须将身份提供程序主机名添加到 **Apache Sling引用过滤器** osgi配置。 请参阅 [Web控制台](/help/sites-deploying/configuring-osgi.md) 部分以了解更多信息。
+>身分提供者主機名稱必須新增至 **Apache Sling查閱者篩選器** OSGi設定。 請參閱 [網頁主控台](/help/sites-deploying/configuring-osgi.md) 區段以取得詳細資訊。
 
-**服务提供商实体ID** 使用身份提供程序唯一标识此服务提供程序的ID。 如果此属性为空，则将禁用身份验证处理程序。
+**服務提供者實體ID** 使用身分提供者唯一識別此服務提供者的ID。 如果此屬性為空，則會停用驗證處理常式。
 
-**默认重定向** 成功身份验证后重定向到的默认位置。
-
->[!NOTE]
->
->此位置仅在 `request-path` 未设置Cookie。 如果您在没有有效登录令牌的情况下请求所配置路径下的任何页面，则请求的路径将存储在Cookie中
->在成功进行身份验证后，浏览器将再次重定向到此位置。
-
-**用户ID属性** 属性的名称，该属性包含用于在CRX存储库中验证和创建用户的用户ID。
+**預設重新導向** 在成功驗證後重新導向到的預設位置。
 
 >[!NOTE]
 >
->不会从获取用户ID `saml:Subject` SAML断言的节点，但来自此 `saml:Attribute`.
+>此位置僅用於 `request-path` 未設定Cookie。 如果您在沒有有效登入權杖的情況下請求已設定路徑下的任何頁面，則請求的路徑會儲存在Cookie中
+>而且在成功驗證後，瀏覽器會重新導向至此位置。
 
-**使用加密** 此身份验证处理程序是否需要加密的SAML声明。
+**使用者ID屬性** 屬性的名稱，其中包含在CRX存放庫中用於驗證和建立使用者的使用者ID。
 
-**自动创建CRX用户** 在成功身份验证后是否自动在存储库中创建非现有用户。
+>[!NOTE]
+>
+>系統不會從以下位置取得使用者ID： `saml:Subject` SAML宣告的節點，但來自此 `saml:Attribute`.
+
+**使用加密** 此驗證處理常式是否需要加密的SAML宣告。
+
+**自動建立CRX使用者** 在成功驗證後，是否自動建立存放庫中的非現有使用者。
 
 >[!CAUTION]
 >
->如果禁用了CRX用户的自动创建，则必须手动创建用户。
+>如果停用CRX使用者的自動建立，則必須手動建立使用者。
 
-**添加到组** 成功身份验证后是否应自动将用户添加到CRX组。
+**新增至群組** 在成功驗證後，是否應自動將使用者新增到CRX群組。
 
-**组成员资格** saml：Attribute的名称，其中包含此用户应添加到的CRX组列表。
+**群組成員資格** saml：Attribute的名稱，其中包含此使用者應新增至的CRX群組清單。
 
-## 将IdP证书添加到AEM TrustStore {#add-the-idp-certificate-to-the-aem-truststore}
+## 將IdP憑證新增至AEM TrustStore {#add-the-idp-certificate-to-the-aem-truststore}
 
-SAML断言经过签名，可以选择进行加密。 要使此功能正常工作，您必须在存储库中至少提供IdP的公共证书。 为此，您需要：
+SAML宣告已簽署，並可選擇加密。 為了使其運作，您必須至少提供存放庫中IdP的公開憑證。 若要這麼做，您需要：
 
-1. 转到 *http:/serveraddress:serverport/libs/granite/security/content/truststore.html*
-1. 按 **[!UICONTROL 创建TrustStore链接]**
-1. 输入TrustStore的密码，然后按 **[!UICONTROL 保存]**.
-1. 单击 **[!UICONTROL 管理Truststore]**.
-1. 上传IdP证书。
-1. 记下证书别名。 别名为 **[!UICONTROL admin#1436172864930]** 在以下示例中。
+1. 前往 *http:/serveraddress:serverport/libs/granite/security/content/truststore.html*
+1. 按下 **[!UICONTROL 建立TrustStore連結]**
+1. 輸入TrustStore的密碼，然後按 **[!UICONTROL 儲存]**.
+1. 按一下 **[!UICONTROL 管理信任存放區]**.
+1. 上傳IdP憑證。
+1. 記下憑證別名。 別名為 **[!UICONTROL admin#1436172864930]** 在以下範例中。
 
    ![chlimage_1-372](assets/chlimage_1-372.png)
 
-## 将服务提供程序密钥和证书链添加到AEM密钥库 {#add-the-service-provider-key-and-certificate-chain-to-the-aem-keystore}
+## 將服務提供者金鑰和憑證鏈新增至AEM金鑰存放區 {#add-the-service-provider-key-and-certificate-chain-to-the-aem-keystore}
 
 >[!NOTE]
 >
->以下步骤是必需的，否则将引发以下异常： `com.adobe.granite.keystore.KeyStoreNotInitialisedException: Uninitialised system trust store`
+>下列步驟為必要步驟，否則將擲回下列例外狀況： `com.adobe.granite.keystore.KeyStoreNotInitialisedException: Uninitialised system trust store`
 
-1. 转到： [http://localhost:4502/libs/granite/security/content/useradmin.html](http://localhost:4502/libs/granite/security/content/useradmin.html)
-1. 编辑 `authentication-service` 用户。
-1. 通过单击 **创建密钥库** 下 **帐户设置**.
+1. 前往： [http://localhost:4502/libs/granite/security/content/useradmin.html](http://localhost:4502/libs/granite/security/content/useradmin.html)
+1. 編輯 `authentication-service` 使用者。
+1. 按一下以建立KeyStore **建立KeyStore** 在 **帳戶設定**.
 
 >[!NOTE]
 >
->仅当处理程序能够签名或解密消息时，才需要执行以下步骤。
+>只有在處理常式應該能夠簽署或解密訊息時，才需要執行下列步驟。
 
-1. 为AEM创建证书/密钥对。 通过openssl生成它的命令应类似于以下示例：
+1. 為AEM建立憑證/金鑰組。 透過openssl產生它的命令應該類似於以下範例：
 
    `openssl req -newkey rsa:2048 -new -x509 -days 3652 -nodes -out certificate.crt -keyout key.pem`
 
-1. 使用DER编码将密钥转换为PKCS#8格式。 这是AEM密钥库所需的格式。
+1. 使用DER編碼將金鑰轉換為PKCS#8格式。 這是AEM金鑰存放區所需的格式。
 
    `openssl pkcs8 -topk8 -inform PEM -outform DER -in key.pem -out key.der -nocrypt`
 
-1. 通过单击上传私钥文件 **选择私钥文件**.
-1. 通过单击上传证书文件 **选择证书链文件**.
-1. 分配别名，如下所示：
+1. 按一下「 」以上傳私密金鑰檔案 **選取私密金鑰檔案**.
+1. 按一下以上傳憑證檔案 **選取憑證鏈結檔案**.
+1. 指派別名，如下所示：
 
    ![chlimage_1-373](assets/chlimage_1-373.png)
 
-## 为SAML配置记录器 {#configure-a-logger-for-saml}
+## 設定SAML的記錄器 {#configure-a-logger-for-saml}
 
-您可以设置记录器，以调试因错误配置SAML而引发的任何问题。 您可以执行以下操作来实现此目标：
+您可以設定記錄器，以偵錯任何可能因錯誤設定SAML而產生的問題。 您可以执行以下操作来实现此目标：
 
-1. 转到Web控制台，网址为 *http://localhost:4502/system/console/configMgr*
-1. 搜索并单击名为的条目 **Apache Sling日志记录器配置**
-1. 使用以下配置创建日志程序：
+1. 前往網頁主控台，位於 *http://localhost:4502/system/console/configMgr*
+1. 搜尋並按一下以下專案： **Apache Sling記錄記錄器設定**
+1. 使用下列設定建立記錄器：
 
-   * **日志级别：** 调试
-   * **日志文件：** logs/saml.log
-   * **记录器：** com.adobe.granite.auth.saml
+   * **記錄層級：** 偵錯
+   * **記錄檔：** logs/saml.log
+   * **記錄器：** com.adobe.granite.auth.saml

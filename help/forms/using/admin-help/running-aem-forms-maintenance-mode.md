@@ -1,7 +1,7 @@
 ---
-title: 在维护模式下运行AEM表单
+title: 在維護模式下執行AEM表單
 seo-title: Running AEM forms in maintenance mode
-description: 在执行打补丁DSC、升级AEM表单或应用Service Pack等任务时，维护模式很有用。 了解有关在维护模式下运行AEM表单的更多信息。
+description: 執行修補DSC、升級AEM表單或套用Service Pack等工作時，維護模式會很有用。 進一步瞭解如何在維護模式下執行AEM表單。
 seo-description: Maintenance mode is useful when performing tasks such as patching a DSC, upgrading AEM forms, or applying a service pack. Learn more about running AEM forms in maintenance mode.
 uuid: 9aa3be20-f17e-4384-b4ce-daaee2898c96
 contentOwner: admin
@@ -17,39 +17,39 @@ ht-degree: 0%
 
 ---
 
-# 在维护模式下运行AEM表单 {#running-aem-forms-in-maintenance-mode}
+# 在維護模式下執行AEM表單 {#running-aem-forms-in-maintenance-mode}
 
-在执行打补丁DSC、升级AEM表单或应用Service Pack等任务时，维护模式很有用。
+執行修補DSC、升級AEM表單或套用Service Pack等工作時，維護模式會很有用。
 
-避免在服务器处于维护模式时调用任何进程。 如果在服务器处于维护模式时调用进程，则会发生以下情况：
+伺服器處於維護模式時，請避免叫用任何處理程式。 如果伺服器處於維護模式時叫用程式，就會發生以下情況：
 
-* 如果进程是长期的，则会将其添加到作业数据库，但不会启动。 当您退出维护模式时，AEM Forms会处理其队列中的长期作业，即使服务器在维护模式下重新启动也是如此。
-* 如果处理周期较短，则会立即进行处理。
+* 如果處理序為長期，則會新增至工作資料庫，但不會啟動。 當您結束維護模式時，AEM Forms會處理其佇列中的長期工作，即使伺服器是在維護模式中重新啟動亦然。
+* 如果程式存留期較短，則會立即處理。
 
-**将AEM表单置于维护模式**
+**將AEM表單置於維護模式**
 
-1. 在Web浏览器中，输入：
+1. 在網頁瀏覽器中，輸入：
 
    `https://[hostname]:[port]/dsc/servlet/DSCStartupServlet?maintenanceMode=pause&user=[administrator username]&password=[password]`
 
-   浏览器窗口中将显示“现已暂停”消息。
+   瀏覽器視窗中會顯示「現已暫停」訊息。
 
    >[!NOTE]
    >
-   >如果在服务器处于维护模式时将其关闭，则在重新启动时它仍将处于维护模式。 完成维护任务后，必须关闭维护模式。
+   >如果您在伺服器處於維護模式時將其關閉，則伺服器重新啟動時仍會處於維護模式。 完成維護任務後，您必須關閉維護模式。
 
-**检查AEM表单是否正在维护模式下运行**
+**檢查AEM表單是否以維護模式執行**
 
-1. 在Web浏览器中，输入：
+1. 在網頁瀏覽器中，輸入：
 
    `https://[hostname]:[port]/dsc/servlet/DSCStartupServlet?maintenanceMode=isPaused&user=[administrator username]&password=[password]`
 
-   状态将显示在浏览器窗口中。 状态“true”表示服务器正在维护模式下运行，“false”表示服务器不在维护模式下。
+   狀態會顯示在瀏覽器視窗中。 狀態「true」表示伺服器正在維護模式下執行，而「false」表示伺服器不在維護模式中。
 
-**关闭维护模式**
+**關閉維護模式**
 
-1. 在Web浏览器中，输入：
+1. 在網頁瀏覽器中，輸入：
 
    `https://[hostname]:[port]/dsc/servlet/DSCStartupServlet?maintenanceMode=resume&user=[administrator username]&password=[password]`
 
-   浏览器窗口中将显示“正在运行”消息。
+   瀏覽器視窗中會顯示「正在執行」訊息。

@@ -1,7 +1,7 @@
 ---
-title: 与 Salesforce 集成
+title: 與Salesforce整合
 seo-title: Integrating with Salesforce
-description: 了解如何将AEM与Salesforce集成。
+description: 瞭解如何整合AEM與Salesforce。
 seo-description: Learn about integrating AEM with Salesforce.
 uuid: 3d6a249d-082f-4a10-b255-96482ccd2c65
 contentOwner: Guillaume Carlino
@@ -14,233 +14,233 @@ exl-id: 0f3aaa0a-ccfb-4162-97a6-ee5485595d28
 source-git-commit: c7958efbc4557ab3e50732da59faabf4e36c3844
 workflow-type: tm+mt
 source-wordcount: '1564'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
 
-# 与 Salesforce 集成 {#integrating-with-salesforce}
+# 與Salesforce整合 {#integrating-with-salesforce}
 
-将Salesforce与AEM集成提供了商机管理功能，并利用了Salesforce提供的现成功能。 您可以配置AEM将潜在客户发布到Salesforce，并创建可直接从Salesforce访问数据的组件。
+將Salesforce與AEM整合提供銷售機會管理功能，並運用Salesforce立即提供的現有功能。 您可以設定AEM將銷售機會發佈至Salesforce，並建立可直接從Salesforce存取資料的元件。
 
-AEM和Salesforce之间的双向可扩展集成可实现：
+AEM與Salesforce之間的雙向及可擴充整合可讓您：
 
-* 组织可充分利用和更新数据以增强客户体验。
-* 从营销活动到销售活动的参与。
-* 自动从Salesforce数据存储区传输和接收数据的组织。
+* 組織可充分運用和更新資料，以增強客戶體驗。
+* 從行銷到銷售活動的參與。
+* 自動從Salesforce資料存放區傳輸及接收資料的組織。
 
-本文档将介绍以下内容：
+本檔案說明下列各項：
 
-* 如何配置SalesforceCloud Services(配置AEM以与Salesforce集成)。
-* 如何在Client Context中使用Salesforce潜在客户/联系人信息并进行个性化。
-* 如何使用Salesforce工作流模型在Salesforce潜在客户中发布AEM用户。
-* 如何创建一个显示Salesforce中数据的组件。
+* 如何設定SalesforceCloud Services(設定AEM以與Salesforce整合)。
+* 如何在Client Context中使用Salesforce銷售機會/聯絡資訊進行個人化。
+* 如何使用Salesforce工作流程模型將AEM使用者發佈為salesforce的潛在客戶。
+* 如何建立可顯示Salesforce中資料的元件。
 
-## 配置AEM以与Salesforce集成 {#configuring-aem-to-integrate-with-salesforce}
+## 設定AEM以與Salesforce整合 {#configuring-aem-to-integrate-with-salesforce}
 
-要配置AEM以与Salesforce集成，您需要首先在Salesforce中配置远程访问应用程序。 然后，将salesforce云服务配置为指向此远程访问应用程序。
+若要設定AEM以與Salesforce整合，您必須先在Salesforce中設定遠端存取應用程式。 然後，您將Salesforce雲端服務設定為指向此遠端存取應用程式。
 
 >[!NOTE]
 >
->您可以在Salesforce中创建免费的开发人员帐户。
+>您可以在Salesforce中建立免費的開發人員帳戶。
 
-要配置AEM以与Salesforce集成，请执行以下操作：
+若要設定AEM以與Salesforce整合：
 
 >[!CAUTION]
 >
->您需要安装 [Salesforce Api](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?fulltext=salesforce*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=2&amp;package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Fcom.adobe.cq.mcm.salesforce.content-1.0.4.zip) 集成包。 有关如何使用包的更多详细信息，请参阅 [如何使用包](/help/sites-administering/package-manager.md#package-share) 页面。
+>您必須安裝 [Salesforce Api](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?fulltext=salesforce*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=2&amp;package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Fcom.adobe.cq.mcm.salesforce.content-1.0.4.zip) 繼續此程式之前，請先整合套件。 如需如何使用套件的詳細資訊，請參閱 [如何使用套件](/help/sites-administering/package-manager.md#package-share) 頁面。
 
-1. 在AEM中，导航到 **Cloud Services**. 在第三方服务中，单击 **立即配置** 在 **Salesforce**.
+1. 在AEM中，導覽至 **Cloud Services**. 在協力廠商服務中，按一下 **立即設定** 在 **Salesforce**.
 
    ![chlimage_1-70](assets/chlimage_1-70.png)
 
-1. 创建新配置，例如， **开发人员**.
+1. 建立新設定，例如， **開發人員**.
 
    >[!NOTE]
    >
-   >新配置将重定向到一个新页面： **http://localhost:4502/etc/cloudservices/salesforce/developer.html**. 这与在Salesforce中创建远程访问应用程序时需要在Callback URL中指定的值完全相同。 这些值必须匹配。
+   >新組態會重新導向至新頁面： **http://localhost:4502/etc/cloudservices/salesforce/developer.html**. 這完全等同於您在Salesforce中建立遠端存取應用程式時，需要在Callback URL中指定的值。 這些值必須相符。
 
-1. 登录到您的salesforce帐户(或者，如果您没有帐户，请在 [https://developer.force.com](https://developer.force.com).)
-1. 在Salesforce中，导航到 **创建** > **应用程序** 以访问 **连接的应用程序** (在以前版本的salesforce中，工作流是 **部署** > **远程访问**)。
-1. 单击 **新** 连接AEM与Salesforce。
+1. 登入您的Salesforce帳戶(或如果您沒有帳戶，請在以下網址建立帳戶： [https://developer.force.com](https://developer.force.com).)
+1. 在Salesforce中，導覽至 **建立** > **應用程式** 前往 **連線的應用程式** (在舊版salesforce中，工作流程為 **部署** > **遠端存取**)。
+1. 按一下 **新增** 以連線AEM與Salesforce。
 
    ![chlimage_1-71](assets/chlimage_1-71.png)
 
-1. 输入 **连接的应用程序名称**， **API名称**、和 **联系人电子邮件**. 选择 **启用OAuth设置** 复选框，然后输入 **回调URL** 和添加OAuth作用域（例如，完全访问）。 回调URL类似于： `http://localhost:4502/etc/cloudservices/salesforce/developer.html`
+1. 輸入 **已連線的應用程式名稱**， **API名稱**、和 **連絡人電子郵件**. 選取 **啟用OAuth設定** 核取方塊並輸入 **回撥URL** 並新增OAuth範圍（例如，完全存取）。 回呼URL看起來類似這樣： `http://localhost:4502/etc/cloudservices/salesforce/developer.html`
 
-   更改服务器名称/端口号和页面名称以匹配您的配置。
+   變更伺服器名稱/連線埠號碼和頁面名稱，以符合您的設定。
 
    ![chlimage_1-72](assets/chlimage_1-72.png)
 
-1. 单击 **保存** 以保存salesforce配置。 Salesforce创建 **使用者密钥** 和 **消费方密码**，这是AEM配置所需的参数。
+1. 按一下 **儲存** 以儲存salesforce組態。 Salesforce建立 **使用者金鑰** 和 **使用者密碼**，以進行AEM設定。
 
    ![chlimage_1-73](assets/chlimage_1-73.png)
 
    >[!NOTE]
    >
-   >您可能需要等待几分钟（最多15分钟）才能激活Salesforce中的远程访问应用程序。
+   >您可能需要等候幾分鐘（最多15分鐘），讓Salesforce中的遠端存取應用程式啟動。
 
-1. 在AEM中，导航到 **Cloud Services** 并导航到您之前创建的salesforce配置(例如， **开发人员**)。 单击 **编辑** 并从salesforce.com输入客户密钥和客户密钥。
+1. 在AEM中，導覽至 **Cloud Services** 並導覽至您先前建立的salesforce設定(例如， **開發人員**)。 按一下 **編輯** 並從salesforce.com輸入客戶金鑰和客戶密碼。
 
    ![chlimage_1-15](assets/chlimage_1-15.jpeg)
 
-   | 登录 Url | 这是Salesforce授权端点。 其值是预填充的，适用于大多数情况。 |
+   | 登录 Url | 這是Salesforce授權端點。 其值會預先填入，且適用於大多數情況。 |
    |---|---|
-   | 客户密钥 | 输入从salesforce.com中的“远程访问应用程序注册”页获得的值 |
-   | 客户密码 | 输入从salesforce.com中的“远程访问应用程序注册”页获得的值 |
+   | 客戶金鑰 | 輸入從salesforce.com中的「遠端存取應用程式註冊」頁面取得的值 |
+   | 客戶密碼 | 輸入從salesforce.com中的「遠端存取應用程式註冊」頁面取得的值 |
 
-1. 单击 **连接到Salesforce** 以连接。 Salesforce请求您允许配置连接到salesforce。
+1. 按一下 **連線到Salesforce** 以連線。 Salesforce要求您允許設定連線至salesforce。
 
    ![chlimage_1-74](assets/chlimage_1-74.png)
 
-   在AEM中，将打开一个确认对话框，告诉您已成功连接。
+   在AEM中，會開啟確認對話方塊，告知您已成功連線。
 
-1. 导航到网站的根页面，然后单击 **页面属性**. 然后选择 **Cloud Services** 并添加 **Salesforce** 并选择正确的配置(例如， **开发人员**)。
+1. 導覽至網站的根頁面，然後按一下 **頁面屬性**. 然後選取 **Cloud Services** 並新增 **Salesforce** 並選取正確的設定(例如， **開發人員**)。
 
    ![chlimage_1-75](assets/chlimage_1-75.png)
 
-   现在，您可以使用工作流模型将潜在客户发布到Salesforce，并创建用于访问来自Salesforce的数据的组件。
+   現在您可以使用工作流程模型將銷售機會發佈到Salesforce，並建立可從Salesforce存取資料的元件。
 
-## 将AEM用户导出为Salesforce潜在客户 {#exporting-aem-users-as-salesforce-leads}
+## 將AEM使用者匯出為Salesforce銷售機會 {#exporting-aem-users-as-salesforce-leads}
 
-如果要将AEM用户导出为Salesforce潜在客户，您需要配置工作流以将潜在客户发布到Salesforce。
+如果您想要將AEM使用者匯出為Salesforce銷售機會，您需要設定工作流程以將銷售機會發佈至Salesforce。
 
-要将AEM用户导出为Salesforce潜在客户，请执行以下操作：
+若要將AEM使用者匯出為Salesforce銷售機會：
 
-1. 导航到Salesforce工作流，网址为 `http://localhost:4502/workflow` 通过右键单击工作流 **Salesforce.com导出** 并单击 **开始**.
+1. 導覽至Salesforce工作流程，網址為 `http://localhost:4502/workflow` 在工作流程上按一下滑鼠右鍵 **Salesforce.com匯出** 並按一下 **開始**.
 
    ![chlimage_1-76](assets/chlimage_1-76.png)
 
-1. 选择要作为潜在客户创建的AEM用户，作为 **有效负荷** （主页 — >用户）。 请确保选择用户的配置文件节点，因为它包含如下信息 **givenName**， **familyName**，等等，这些变量映射到Salesforce潜在客户的 **名字** 和 **姓氏** 字段。
+1. 選取您要建立為潛在客戶的AEM使用者，作為 **裝載** 用於此工作流程（首頁 — >使用者）。 請務必選取使用者的設定檔節點，因為它包含資訊如下 **givenName**， **familyName**，依此類推，這些對應至Salesforce潛在客戶的 **名字** 和 **姓氏** 欄位。
 
    ![chlimage_1-77](assets/chlimage_1-77.png)
 
    >[!NOTE]
    >
-   >在启动此工作流之前，AEM中的潜在客户节点在发布到Salesforce之前必须填写某些必填字段。 这些是 **givenName**， **familyName**， **公司**&#x200B;和 **电子邮件**. 要查看AEM用户与Salesforce潜在客户之间的映射的完整列表，请参阅 [AEM用户和Slaesforce潜在客户之间的映射配置。](#mapping-configuration-between-aem-user-and-salesforce-lead)
+   >在開始此工作流程之前，AEM中的潛在客戶節點必須先具備某些必填欄位，才能發佈至Salesforce。 這些是 **givenName**， **familyName**， **公司**&#x200B;和 **電子郵件**. 若要檢視AEM使用者與Salesforce潛在客戶之間的完整對應清單，請參閱 [AEM使用者與Slaesforce銷售機會之間的對應設定。](#mapping-configuration-between-aem-user-and-salesforce-lead)
 
-1. 单击&#x200B;**确定**。用户信息将导出到salesforce.com。 您可以在salesforce.com中进行验证。
+1. 单击&#x200B;**确定**。使用者資訊會匯出至salesforce.com。 您可以在salesforce.com確認。
 
    >[!NOTE]
    >
-   >错误日志将显示商机是否已导入。 有关更多信息，请查看错误日志。
+   >錯誤記錄會顯示是否匯入潛在客戶。 如需詳細資訊，請檢視錯誤記錄。
 
-### 配置Salesforce.com导出工作流 {#configuring-the-salesforce-com-export-workflow}
+### 設定Salesforce.com匯出工作流程 {#configuring-the-salesforce-com-export-workflow}
 
-您可能需要配置Salesforce.com导出工作流，以使其与正确的Salesforce.com配置匹配或进行其他更改。
+您可能需要設定Salesforce.com匯出工作流程，以使其符合正確的Salesforce.com設定或進行其他變更。
 
-要配置Salesforce.com导出工作流，请执行以下操作：
+若要設定Salesforce.com匯出工作流程：
 
 1. 导航至 `http://localhost:4502/cf#/etc/workflow/models/salesforce-com-export.html.`
 
    ![chlimage_1-16](assets/chlimage_1-16.jpeg)
 
-1. 打开Salesforce.com导出步骤，选择 **参数** 选项卡，然后选择正确的配置并单击 **确定**. 此外，如果您希望工作流重新创建在Salesforce中删除的潜在客户，请选中该复选框。
+1. 開啟Salesforce.com匯出步驟，選取 **引數** 標籤，並選取正確的設定，然後按一下 **確定**. 此外，如果您希望工作流程重新建立Salesforce中刪除的銷售機會，請選取核取方塊。
 
    ![chlimage_1-78](assets/chlimage_1-78.png)
 
-1. 单击 **保存** 以保存更改。
+1. 按一下 **儲存** 以儲存變更。
 
    ![chlimage_1-79](assets/chlimage_1-79.png)
 
-### AEM用户和Salesforce潜在客户之间的映射配置 {#mapping-configuration-between-aem-user-and-salesforce-lead}
+### AEM使用者與Salesforce銷售機會之間的對應設定 {#mapping-configuration-between-aem-user-and-salesforce-lead}
 
-要查看或编辑AEM用户和Salesforce潜在客户之间的当前映射配置，请打开Configuration Manager： `https://<hostname>:<port>/system/console/configMgr` 和搜索 **Salesforce潜在客户映射配置**.
+若要檢視或編輯AEM使用者與Salesforce銷售機會之間目前的對應組態，請開啟Configuration Manager： `https://<hostname>:<port>/system/console/configMgr` 並搜尋 **Salesforce銷售機會對應設定**.
 
-1. 通过单击打开配置管理器 **Web控制台** 或直接转到 `https://<hostname>:<port>/system/console/configMgr.`
-1. 搜索 **Salesforce潜在客户映射配置**.
+1. 按一下以開啟Configuration Manager **網頁主控台** 或直接前往 `https://<hostname>:<port>/system/console/configMgr.`
+1. 搜尋 **Salesforce銷售機會對應設定**.
 
    ![chlimage_1-80](assets/chlimage_1-80.png)
 
-1. 根据需要更改映射。 缺省映射遵循该模式 **aemUserAttribute=sfLeadAttribute**. 单击 **保存** 以保存更改。
+1. 視需要變更對應。 預設對應會遵循該模式 **aemUserAttribute=sfLeadAttribute**. 按一下 **儲存** 以儲存變更。
 
-## 配置Salesforce客户端上下文存储 {#configuring-salesforce-client-context-store}
+## 設定Salesforce使用者端內容存放區 {#configuring-salesforce-client-context-store}
 
-salesforce客户端上下文存储显示有关当前登录用户的附加信息，而不显示AEM中已有的信息。 它会根据用户与Salesforce之间的连接从Salesforce中提取此附加信息。
+salesforce使用者端內容存放區顯示有關目前登入使用者的其他資訊，而不只是AEM中已有的資訊。 它會根據使用者與Salesforce的連線從Salesforce提取此額外資訊。
 
-为此，您需要配置以下内容：
+若要這麼做，您需要設定下列專案：
 
-1. 通过Salesforce连接组件将AEM用户与Salesforce ID关联。
-1. 将Salesforce配置文件数据添加到客户端上下文页面，以配置要查看的属性。
-1. （可选）构建一个使用Salesforce Client Context Store中的数据的区段。
+1. 透過Salesforce連線元件將AEM使用者與Salesforce ID連結。
+1. 將「Salesforce設定檔資料」新增至使用者端內容頁面，以設定您要檢視的屬性。
+1. （選用）建立使用Salesforce Client Context Store資料的區段。
 
-### 将AEM用户与Salesforce ID关联 {#linking-an-aem-user-with-a-salesforce-id}
+### 將AEM使用者與Salesforce ID連結 {#linking-an-aem-user-with-a-salesforce-id}
 
-您需要使用Salesforce ID映射AEM用户，以便在客户端上下文中加载它。 在真实情景中，您将基于已知用户数据与验证进行关联。 为了演示目的，在此过程中，您可以使用 **Salesforce连接** 组件。
+您需要對應具有Salesforce ID的AEM使用者，才能在使用者端內容中載入。 在真實世界中，您會根據已知的使用者資料連結進行驗證。 為了示範之目的，在此程式中，您會使用 **Salesforce連線** 元件。
 
-1. 导航到AEM中的网站，登录，然后拖放 **Salesforce连接** 从副手手那里拿走一部分。
+1. 導覽至AEM中的網站，登入，然後拖放 **Salesforce連線** Sidekick的元件。
 
    >[!NOTE]
    >
-   >如果 **Salesforce连接** 组件不可用，请转到 **设计** 查看并选择它以使其在 **编辑** 视图。
+   >如果 **Salesforce連線** 元件無法使用，請前往 **設計** 檢視並選取它，使其可在以下位置使用： **編輯** 檢視。
 
    ![chlimage_1-17](assets/chlimage_1-17.jpeg)
 
-   将组件拖动到页面时，该组件会显示 **链接到Salesforce=Off**.
+   將元件拖曳至頁面時，畫面會隨即顯示 **連結至Salesforce=Off**.
 
    ![chlimage_1-81](assets/chlimage_1-81.png)
 
    >[!NOTE]
    >
-   >此组件仅用于演示目的。 对于真实情景，还有一个流程可将用户与潜在客户关联起来/匹配。
+   >此元件僅供示範之用。 對於真實情境，會有另一個程式將使用者與潛在客戶連結起來/比對。
 
-1. 在页面上拖动组件后，打开它以进行配置。 选择配置、联系人类型以及Salesforce潜在客户或联系人，然后单击 **确定**.
+1. 在頁面上拖曳元件後，請開啟元件以對其進行設定。 選取組態、連絡人型別以及Salesforce銷售機會或連絡人，然後按一下 **確定**.
 
    ![chlimage_1-82](assets/chlimage_1-82.png)
 
-   AEM将用户与Salesforce联系人或潜在客户关联起来。
+   AEM會將使用者與Salesforce聯絡人或潛在客戶連結。
 
    ![chlimage_1-83](assets/chlimage_1-83.png)
 
-### 将Salesforce数据添加到客户端上下文 {#adding-salesforce-data-to-client-context}
+### 將Salesforce資料新增至Client Context {#adding-salesforce-data-to-client-context}
 
-您可以在Client Context中从Salesforce加载用户数据以用于个性化：
+您可以在Client Context中從Salesforce載入使用者資料，以用於個人化：
 
-1. 通过导航到要扩展的客户端上下文来打开它，例如， `http://localhost:4502/etc/clientcontext/default/content.html.`
+1. 瀏覽以開啟您要擴充的使用者端內容，例如， `http://localhost:4502/etc/clientcontext/default/content.html.`
 
    ![chlimage_1-18](assets/chlimage_1-18.jpeg)
 
-1. 拖动 **Salesforce配置文件数据** 组件到客户端上下文。
+1. 拖曳 **Salesforce設定檔資料** 元件至使用者端內容。
 
    ![chlimage_1-19](assets/chlimage_1-19.jpeg)
 
-1. 双击组件以将其打开。 选择 **添加项目** 并从下拉列表中选择一个资产。 添加所需数量的属性并选择 **确定**.
+1. 連按兩下元件以將其開啟。 選取 **新增專案** 並從下拉式清單中選取屬性。 新增任意數量的屬性並選取 **確定**.
 
    ![chlimage_1-84](assets/chlimage_1-84.png)
 
-1. 现在，您会看到客户端上下文中显示了Salesforce中特定于Salesforce的属性。
+1. 現在，您會在使用者端內容中看到Salesforce的Salesforce特定屬性。
 
    ![chlimage_1-85](assets/chlimage_1-85.png)
 
-### 使用Salesforce Client Context Store中的数据构建区段 {#building-a-segment-using-data-from-salesforce-client-context-store}
+### 使用Salesforce Client Context Store中的資料建立區段 {#building-a-segment-using-data-from-salesforce-client-context-store}
 
-您可以构建一个使用Salesforce Client Context Store中的数据的区段。 要执行此操作：
+您可以建立使用Salesforce Client Context Store資料的區段。 要执行此操作：
 
-1. 通过转到，导航到AEM中的分段 **工具** > **分段** 或即将访问 [http://localhost:4502/miscadmin#/etc/segmentation](http://localhost:4502/miscadmin#/etc/segmentation).
-1. 创建或更新区段以包含来自Salesforce的数据。 有关更多信息，请参阅 [分段](/help/sites-administering/campaign-segmentation.md).
+1. 請前往「 」，導覽至AEM中的分段 **工具** > **細分** 或即將移至 [http://localhost:4502/miscadmin#/etc/segmentation](http://localhost:4502/miscadmin#/etc/segmentation).
+1. 建立或更新區段以包含來自Salesforce的資料。 如需詳細資訊，請參閱 [細分](/help/sites-administering/campaign-segmentation.md).
 
-## 搜索潜在客户 {#searching-leads}
+## 搜尋銷售機會 {#searching-leads}
 
-AEM附带了一个示例搜索组件，该组件根据给定的条件在Salesforce中搜索潜在客户。 此组件向您展示了如何使用Salesforce REST API搜索salesforce对象。 您需要将页面与Salesforce配置关联以触发对salesforce.com的调用。
+AEM隨附範例Search元件，該元件會根據指定條件在Salesforce中搜尋銷售機會。 此元件會示範如何使用Salesforce REST API來搜尋Salesforce物件。 您需要將頁面與Salesforce設定連結以觸發對salesforce.com的呼叫。
 
 >[!NOTE]
 >
->这是一个示例组件，向您展示了如何使用Salesforce REST API查询Salesforce对象。 以它为例，根据您的需求创建更复杂的组件。
+>此元件範例說明如何使用Salesforce REST API查詢Salesforce物件。 以為例，根據您的需求建立更複雜的元件。
 
-要使用此组件，请执行以下操作：
+若要使用此元件：
 
-1. 导航到要使用此配置的页面。 打开页面属性并选择 **Cloud Services。** 单击 **添加服务** 并选择 **Salesforce** 以及相应的配置，然后单击 **确定**.
+1. 導覽至您要使用此設定的頁面。 開啟頁面屬性並選取 **Cloud Services。** 按一下 **新增服務** 並選取 **Salesforce** 以及適當的設定，然後按一下 **確定**.
 
    ![chlimage_1-20](assets/chlimage_1-20.jpeg)
 
-1. 将Salesforce搜索组件拖动到页面（前提是已启用它）。 要启用该功能，请转到“设计”模式并将其添加到相应的区域)。
+1. 將Salesforce搜尋元件拖曳至頁面（假設該元件已啟用）。 若要啟用它，請移至[設計]模式，並將其新增至適當的區域)。
 
    ![chlimage_1-21](assets/chlimage_1-21.jpeg)
 
-1. 打开“搜索”组件并指定搜索参数，然后单击 **好的。**
+1. 開啟「搜尋」元件並指定搜尋引數，然後按一下 **確定。**
 
    ![chlimage_1-86](assets/chlimage_1-86.png)
 
-1. AEM显示搜索组件中指定的符合指定条件的潜在客户。
+1. AEM會顯示搜尋元件中指定的、符合指定條件的潛在客戶。
 
    ![chlimage_1-87](assets/chlimage_1-87.png)

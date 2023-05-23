@@ -1,7 +1,7 @@
 ---
-title: 使用AEM Forms工作区
+title: 使用AEM Forms工作區
 seo-title: Working with AEM Forms workspace
-description: 通过此流程工作流的快速概述开始使用AEM Forms工作区。
+description: 開始使用AEM Forms工作區，快速瞭解此程式工作流程。
 seo-description: Get started with AEM Forms workspace with this quick overview of the process workflows.
 uuid: 36381e7b-1533-459c-80de-92e806a49cd5
 content-type: reference
@@ -17,125 +17,125 @@ ht-degree: 0%
 
 ---
 
-# 使用AEM Forms工作区{#working-with-aem-forms-workspace}
+# 使用AEM Forms工作區{#working-with-aem-forms-workspace}
 
 ## 简介 {#introduction}
 
-AEM Forms工作区是AEM Forms的一部分。 除了PDF forms之外，工作区还方便了HTMLForms的演绎版。 现在，您可以从移动界面和Web应用程序参与业务流程。
+AEM Forms工作區是AEM Forms的一部分。 除了PDF forms之外，工作區還能協助HTMLForms的轉譯。 現在您可以從行動介面和Web應用程式參與業務流程。
 
-此外，AEM Forms工作区可使用标准HTML和JavaScript™开发方法高度自定义。 它是一个基于组件的软件，可以轻松与其他Web应用程序集成。
+此外，AEM Forms工作區也可供您使用標準HTML和JavaScript™開發方法進行高度自訂。 它是元件式軟體，可輕鬆與您的其他Web應用程式整合。
 
-有关更多信息，请参阅 [AEM Forms工作区简介](/help/forms/using/introduction-html-workspace.md).
+如需詳細資訊，請參閱 [AEM Forms工作區簡介](/help/forms/using/introduction-html-workspace.md).
 
 ## 熟悉 {#getting-familiar}
 
-要熟悉创建表单应用程序以自动化业务流程的端到端过程，请按照以下步骤进行操作。 在逐步演示之后，您可以使用Workbench、Designer和AEM Forms Workspace创建、管理和测试应用程序。 有关实施详细信息，请参阅 [创建您的第一个AEM Forms应用程序](https://help.adobe.com/en_US/livecycle/11.0/CreateFirstApp/index.html).
+若要熟悉建立表單應用程式以自動化業務流程的端對端流程，請按照以下逐步說明進行操作。 在逐步說明後，您可以使用Workbench、Designer和AEM Forms工作區來建立、管理和測試應用程式。 如需實作詳細資訊，請參閱 [建立您的第一個AEM Forms應用程式](https://help.adobe.com/en_US/livecycle/11.0/CreateFirstApp/index.html).
 
 ## 功能概述 {#functional-overview}
 
-您可以使用AEM Forms工作区执行以下任务：
+您可以使用AEM Forms工作區執行下列工作：
 
-**启动业务流程：** AEM Forms工作区根据贵组织设计和设置对您的流程进行分类。 您可以收藏常用类别以快速访问类别。 启动流程时，通常会填写表单以启动构成工作流控制的业务流程。 有关更多信息，请参阅 [启动进程](/help/forms/using/starting-processes.md).
+**啟動業務流程：** AEM Forms工作區會將您的流程分類為您的組織所設計和設定的流程。 您可以將常用的類別加入最愛，以便快速存取類別。 啟動程式時，您通常會填寫表單以啟動形成工作流程控制的業務流程。 如需詳細資訊，請參閱 [啟動程式](/help/forms/using/starting-processes.md).
 
-**查看任务并执行任务：** 在查看待办事项列表时，您会看到业务流程中分配给您、您所属的任何组或其他用户的共享任务的任务。 您可以根据需要打开、处理和完成任务。 通常，完成任务需要提供信息、批准表单或拒绝表单。 有关更多信息，请参阅 [使用待办事项列表](/help/forms/using/todo-lists.md).
+**檢視任務並據以行動：** 當您檢視您的待辦事項清單時，您會看到業務流程中指派給您、您所屬的任何群組，或是其他使用者的共用工作的工作。 您可以視需要開啟、處理及完成工作。 完成工作通常需要提供資訊、核准表單或拒絕表單。 如需詳細資訊，請參閱 [使用待辦事項清單](/help/forms/using/todo-lists.md).
 
-**跟踪任务**：要跟踪您的任务，请使用AEM Forms工作区的“跟踪”选项卡。 您可以搜索已启动或参与的活动或已完成的流程。 您可以查看属于该流程一部分的任务、分配和表单。 您还可以使用之前启动的流程的表单数据启动新流程。 有关更多信息，请参阅 [跟踪流程](/help/forms/using/tracking-processes.md).
+**追蹤任務**：若要追蹤您的工作，請使用AEM Forms工作區的「追蹤」標籤。 您可以搜尋您開始或參與的有效或已完成的程式。 您可以檢視屬於程式一部分的任務、指派和表單。 您也可以使用先前起始之流程的表單資料來開始新流程。 如需詳細資訊，請參閱 [追蹤流程](/help/forms/using/tracking-processes.md).
 
-## AEM Forms工作区的新增功能 {#new-offering-of-aem-forms-workspace}
+## AEM Forms工作區的新功能 {#new-offering-of-aem-forms-workspace}
 
-**支持批量审批任务**：
+**支援大量核准任務**：
 
-您可以批准同一类型的多个任务。 选择一个任务进行审批后，将只启用具有相同流程、相同任务名称和相同路由选项的任务。 参见 [使用待办事项列表](/help/forms/using/todo-lists.md) 以了解实施详细信息。
+您可以核准相同型別的多個任務。 選取一項任務進行核准後，只有具有相同程式、相同任務名稱和相同路由選項的任務會保持啟用狀態。 另請參閱 [使用待辦事項清單](/help/forms/using/todo-lists.md) 以取得實作詳細資料。
 
-## 从Flex工作区迁移到AEM Forms工作区 {#migrating-from-flex-workspace-to-aem-forms-workspace}
+## 從Flex工作區移轉至AEM Forms工作區 {#migrating-from-flex-workspace-to-aem-forms-workspace}
 
-AEM Forms客户不支持Flex Workspace。 所有使用Flex工作区的客户都应迁移到AEM Forms工作区。
+AEM Forms客戶不支援Flex Workspace。 所有使用Flex工作區的客戶都應移至AEM Forms工作區。
 
-在AEM Forms工作区中，与XDP表单关联的默认操作配置文件中的默认渲染和提交服务已更改，并且引入了新服务。 有关详细信息，请参阅 [新渲染和提交服务](/help/forms/using/new-render-submit-service.md). 要迁移使用XDP表单的现有流程，并充分利用这些服务，您可以遵循 [这些步骤](new-render-submit-service.md).
+在AEM Forms工作區中，與XDP表單相關的預設動作設定檔中的預設轉譯和提交服務已變更，且已引入新服務。 如需詳細資訊，請參閱 [新的轉譯與提交服務](/help/forms/using/new-render-submit-service.md). 若要移轉與XDP表單搭配使用的現有程式，並運用這些服務，您可以依照以下步驟操作 [這些步驟](new-render-submit-service.md).
 
-**将Flex工作区自定义项与AEM Forms工作区映射**
+**將Flex工作區自訂與AEM Forms工作區對應**
 
-两个工作区中各种自定义项之间的映射如下所示。
+兩個工作區中各種自訂型別之間的對應如下。
 
 <table>
  <tbody>
   <tr>
-   <td><strong>自定义类型 </strong></td>
-   <td><strong>自定义项已覆盖 </strong></td>
-   <td><strong>相应的AEM Forms工作区自定义方案</strong></td>
+   <td><strong>自訂型別 </strong></td>
+   <td><strong>涵蓋自訂內容 </strong></td>
+   <td><strong>對應的AEM Forms工作區自訂情境</strong></td>
   </tr>
   <tr>
-   <td>本地化自定义</td>
+   <td>本地化自訂</td>
    <td>
     <ol>
-     <li>更改工作区的区域设置</li>
+     <li>變更工作區的地區設定</li>
     </ol> </td>
    <td>
     <ol>
-     <li><a href="/help/forms/using/changing-locale-user-interface.md">更改AEM Forms工作区区域设置</a></li>
-    </ol> </td>
-  </tr>
-  <tr>
-   <td>主题自定义</td>
-   <td>
-    <ol>
-     <li>替换图像</li>
-     <li>修改颜色</li>
-    </ol> </td>
-   <td>
-    <ol>
-     <li><a href="/help/forms/using/changing-organization-logo-branding.md">更改组织徽标</a> </li>
-     <li><a href="/help/forms/using/changing-color-scheme-interface.md">更改颜色方案</a></li>
+     <li><a href="/help/forms/using/changing-locale-user-interface.md">變更AEM Forms工作區地區設定</a></li>
     </ol> </td>
   </tr>
   <tr>
-   <td>布局自定义</td>
+   <td>佈景主題自訂</td>
    <td>
     <ol>
-     <li>简化工作区用户界面<br /> </li>
-     <li>创建新的登录屏幕</li>
-     <li>创建自定义审批容器</li>
+     <li>取代影像</li>
+     <li>修改顏色</li>
     </ol> </td>
    <td>
     <ol>
-     <li><a href="/help/forms/using/description-reusable-components.md">使用可重用组件</a></li>
-     <li><a href="/help/forms/using/creating-new-login-screen.md">创建新的登录屏幕</a></li>
-     <li>审批容器已弃用。</li>
+     <li><a href="/help/forms/using/changing-organization-logo-branding.md">變更組織標誌</a> </li>
+     <li><a href="/help/forms/using/changing-color-scheme-interface.md">變更色彩配置</a></li>
+    </ol> </td>
+  </tr>
+  <tr>
+   <td>版面配置自訂</td>
+   <td>
+    <ol>
+     <li>簡化工作區使用者介面<br /> </li>
+     <li>建立新的登入畫面</li>
+     <li>建立自訂核准容器</li>
+    </ol> </td>
+   <td>
+    <ol>
+     <li><a href="/help/forms/using/description-reusable-components.md">使用可重複使用的元件</a></li>
+     <li><a href="/help/forms/using/creating-new-login-screen.md">建立新的登入畫面</a></li>
+     <li>核准容器已過時。</li>
     </ol> </td>
   </tr>
  </tbody>
 </table>
 
-Flex Workspace中提供的AEM Forms Workspace的一些功能包括：消息和通知、欢迎页面、审批容器以及管理列标题的选项。 有关完整列表，请参阅 [Flex工作区中的功能在AEM Forms工作区中不可用](/help/forms/using/features-flex-workspace-available-html.md).
+AEM Forms Workspace中未提供的部分Flex Workspace功能包括：訊息和通知、歡迎頁面、核准容器，以及管理欄標題的選項。 如需完整清單，請參閱 [Flex工作區中的AEM Forms工作區功能無法使用](/help/forms/using/features-flex-workspace-available-html.md).
 
-## 使用AEM Forms工作区进行开发 {#developing-with-aem-forms-workspace}
+## 使用AEM Forms工作區進行開發 {#developing-with-aem-forms-workspace}
 
 ### 架构 {#architecture}
 
-AEM Forms工作区是托管在CRX™上的基于HTML和JavaScript™的Web应用程序。 在浏览器中打开Workspace URL时，将访问CRX™资源，并且应用程序将在浏览器中呈现为HTML页。 JavaScript库和自定义JavaScript代码管理应用程序的内部和外部行为，例如用户界面、用户交互和与AEM Forms服务器的通信。 有关更多详细信息，请参阅AEM Forms工作区 [体系结构](/help/forms/using/html-workspace-architecture.md).
+AEM Forms工作區是託管於CRX™上的HTML和JavaScript™型網頁應用程式。 在瀏覽器中開啟Workspace URL時，會存取CRX™資源，並將應用程式呈現為瀏覽器中的HTML頁面。 JavaScript程式庫和自訂JavaScript程式碼可管理應用程式的內部和外部行為，例如使用者介面、使用者互動以及與AEM Forms伺服器的通訊。 如需詳細資訊，請參閱AEM Forms工作區 [架構](/help/forms/using/html-workspace-architecture.md).
 
-### AEM Forms工作区自定义 {#aem-forms-workspace-customization}
+### AEM Forms工作區自訂 {#aem-forms-workspace-customization}
 
-AEM Forms工作区支持各种自定义设置，以更新用户界面的布局、外观、功能等。 自定义项涉及更新以下一项或多项内容：
+AEM Forms工作區支援各種自訂，以更新使用者介面的版面、外觀、功能等。 自訂涉及更新下列一或多個專案：
 
-* 用户界面的外观
-* 使用语义自定义的功能
-* 在其他Web应用程序中重用HTML组件
+* 使用者介面的外觀
+* 使用語意自訂的功能
+* 在其他Web應用程式中重複使用HTML元件
 
-此 [自定义](introduction-customizing-html-workspace.md#types-of-customizations) 文章说明了此类自定义的类型。
+此 [自訂](introduction-customizing-html-workspace.md#types-of-customizations) 文章說明此類自訂的型別。
 
-### 设置开发人员环境 {#set-up-the-developer-environment}
+### 設定開發人員環境 {#set-up-the-developer-environment}
 
-AEM Forms工作区交付件包括部署在CRX上的CRX包、包含完整源代码的SDK档案、第三方JavaScript库和AEM Forms工作区的构建脚本。 使用这些选项设置开发人员环境以执行上述自定义设置。 有关更多详细信息，请参阅 [构建AEM Forms工作区代码](introduction-customizing-html-workspace.md#building-html-workspace-code).
+AEM Forms工作區交付專案包括部署在CRX上的CRX套件、包含完整原始程式碼的SDK封存、第三方JavaScript程式庫，以及AEM Forms工作區的建置指令碼。 使用這些專案來設定開發人員環境，以執行上述自訂。 如需詳細資訊，請參閱 [建立AEM Forms工作區程式碼](introduction-customizing-html-workspace.md#building-html-workspace-code).
 
-您可以自定义界面和核心功能的主要部分，如字体、颜色方案、徽标、登录屏幕、错误对话框、与第三方应用程序的集成以及第三方应用程序中组件的重用。 您还可以增强“任务摘要”页面上显示的内容，显示任务路由操作的图像，甚至修改用于创建AEM Forms工作区应用程序的低级骨干模型和视图。
+您可以自訂介面和核心功能的主要部分，例如，字型、色彩配置、標誌、登入畫面、錯誤對話方塊、與協力廠商應用程式的整合，以及協力廠商應用程式中元件的重複使用。 您也可以增強「任務摘要」頁面上顯示的內容、顯示任務路由動作的影像，甚至修改建立AEM Forms工作區應用程式的低階骨幹模型與檢視。
 
-### XDP Forms的HTML渲染 {#html-rendering-of-xdp-forms}
+### XDP Forms的HTML轉譯 {#html-rendering-of-xdp-forms}
 
-默认情况下，对于新流程，XDP表单在桌面上以PDF格式呈现，在平板电脑上以HTML格式呈现。 可以始终以HTML格式渲染XDP表单。 有关详细信息，请参阅 [新的渲染和提交服务](/help/forms/using/new-render-submit-service.md).
+根據預設，對於新程式，XDP表單會在案頭上以PDF格式呈現，並在平板電腦上以HTML格式呈現。 可以一律以HTML格式呈現XDP表單。 如需詳細資訊，請參閱 [新的轉譯與提交服務](/help/forms/using/new-render-submit-service.md).
 
-[移动设备Forms](https://helpx.adobe.com/livecycle/help/mobile-forms/introduction.html) 功能，适用于 [用户档案](https://helpx.adobe.com/livecycle/help/mobile-forms/creating-profile.html)，支持XDP表单的HTML演绎版。 默认情况下，“渲染新HTML表单”使用 `default.html` 个人资料，您可以对其进行更改。 您还可以添加在以HTML格式呈现XDP表单之前发生的自定义更改。
+[行動Forms](https://helpx.adobe.com/livecycle/help/mobile-forms/introduction.html) 功能，適用於的 [設定檔](https://helpx.adobe.com/livecycle/help/mobile-forms/creating-profile.html)，啟用XDP表單的HTML轉譯。 依預設，「轉譯新HTML表單」會使用 `default.html` 設定檔，您可以加以變更。 您也可以新增在以HTML格式呈現XDP表單之前發生的自訂變更。
 
-## AEM Forms工作区应用程序 {#aem-forms-workspace-app}
+## AEM Forms工作區應用程式 {#aem-forms-workspace-app}
 
-要在移动设备上处理业务流程，您可以使用AEM Forms的AEM Forms工作区应用程序产品。 欲了解更多信息，请参见 [AEM Forms工作区应用程序概述](https://helpx.adobe.com/livecycle/help/mobile-workspace/mobile-workspace-overview.html).
+若要在行動裝置上處理您的業務流程，您可以使用AEM Forms的AEM Forms工作區應用程式產品。 如需詳細資訊，請參閱 [AEM Forms工作區應用程式總覽](https://helpx.adobe.com/livecycle/help/mobile-workspace/mobile-workspace-overview.html).

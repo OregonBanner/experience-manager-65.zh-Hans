@@ -1,7 +1,7 @@
 ---
-title: 升级代码和自定义
+title: 升級程式碼和自訂
 seo-title: Upgrading Code and Customizations
-description: 了解有关在AEM中升级自定义代码的更多信息。
+description: 進一步瞭解如何在AEM中升級自訂程式碼。
 seo-description: Learn more about upgrading custom code in AEM.
 uuid: dec11ef0-bf85-4e4e-80ac-dcb94cc3c256
 contentOwner: sarchiz
@@ -20,42 +20,42 @@ ht-degree: 0%
 
 ---
 
-# 升级代码和自定义{#upgrading-code-and-customizations}
+# 升級程式碼和自訂{#upgrading-code-and-customizations}
 
-在规划升级时，必须调查并解决实施的以下方面。
+規劃升級時，必須調查並處理實作的下列領域。
 
-* [升级代码库](#upgrade-code-base)
-* [与6.5存储库结构保持一致](#align-repository-structure)
-* [AEM自定义](#aem-customizations)
-* [测试过程](#testing-procedure)
+* [升級程式碼基底](#upgrade-code-base)
+* [與6.5存放庫結構一致](#align-repository-structure)
+* [AEM自訂](#aem-customizations)
+* [測試程式](#testing-procedure)
 
 ## 概述 {#overview}
 
-1. **图案检测器**  — 运行模式检测器（如升级计划中所述），详见 [本页](/help/sites-deploying/pattern-detector.md). 您会收到一份模式检测器报表，其中包含除Target版本的AEM中不可用的API/包之外，还必须解决的区域的更多详细信息。 模式检测报告会指示代码中的任何不兼容性。 如果不存在，则表明您的部署已兼容6.5。 您仍可以选择使用6.5功能进行新开发，但您不仅需要它来保持兼容性。 如果报告了不兼容问题，您可以选择在兼容性模式下运行，并推迟开发以获得新的6.5功能或兼容性。 或者，您也可以在升级后决定进行开发，然后转到步骤2。 请参阅 [AEM 6.5中的向后兼容性](/help/sites-deploying/backward-compatibility.md) 以了解更多详细信息。
+1. **模式偵測器**  — 執行模式偵測器，如升級計畫中所述，並詳見 [此頁面](/help/sites-deploying/pattern-detector.md). 您會收到模式偵測器報告，其中除了AEM目標版本中無法使用的API/套件組合，還包含必須解決之領域的詳細資訊。 「模式偵測」報表可讓您指出程式碼中的任何不相容專案。 如果不存在任何專案，表示您的部署已經與6.5相容。 您仍然可以選擇使用6.5功能進行新開發，但並非只是為了維護相容性。 如果回報不相容，您可以選擇在相容模式中執行，並延遲開發新的6.5功能或相容性。 或者，您可以在升級後決定進行開發，然後移至步驟2。 另請參閱 [AEM 6.5的回溯相容性](/help/sites-deploying/backward-compatibility.md) 以取得更多詳細資料。
 
-1. **为6.5开发代码库** — 为Target版本的代码库创建专用分支或存储库。 使用升级前兼容性中的信息来规划要更新的代码区域。
-1. **使用6.5 Uber jar **进行编译 — 更新代码库POM以指向6.5 uber jar并针对其编译代码。
-1. **更新AEM自定义*** - *对AEM的任何自定义或扩展都应进行更新/验证，以在6.5中正常工作，并添加到6.5代码库中。 包括UI搜索Forms、资产自定义，以及使用/mnt/overlay的任何内容
+1. **開發6.5適用的程式碼基底** — 為Target版本的程式碼基底建立專用分支或存放庫。 使用升級前相容性中的資訊來規劃要更新的程式碼區域。
+1. **使用6.5 Uber jar編譯** — 更新程式碼基底POM以指向6.5 Uber jar並據此編譯程式碼。
+1. **更新AEM自訂*** - *AEM的任何自訂或擴充功能應更新/驗證以在6.5中運作，並新增至6.5程式碼基底。 包含UI搜尋Forms、資產自訂、使用/mnt/overlay的任何內容
 
-1. **部署到6.5环境**  — 在开发/QA环境中，应当停用AEM 6.5（创作+发布）的干净实例。 应该部署更新的代码库和具有代表性的内容示例（来自当前生产环境）。
-1. **QA验证和错误修复** - QA应在6.5的创作实例和发布实例上验证应用程序。发现的任何错误都应修复并提交到6.5代码库。 根据需要重复开发周期，直到修复所有错误。
+1. **部署至6.5環境** - AEM 6.5 (Author + Publish)的乾淨例項應在Dev/QA環境中顯示。 應部署更新的程式碼庫和代表性內容範例（來自目前生產環境）。
+1. **QA驗證和錯誤修正** - QA應在6.5的Author和Publish執行個體上驗證應用程式。發現的任何錯誤都應修正並認可至6.5程式碼基底。 視需要重複開發週期，直到修復所有錯誤為止。
 
-在继续升级之前，您应该拥有一个稳定的应用程序代码库，该库已针对目标版本的AEM进行了全面测试。 根据测试中的观察，可以使用各种方法来优化自定义代码。 例如，它可能包括重构代码以避免遍历存储库、自定义索引以优化搜索，或在JCR中使用无序节点等。
+在繼續升級之前，您應該要有已針對AEM目標版本進行完整測試的穩定應用程式程式碼基底。 根據測試中所做的觀察，可能有方法來最佳化自訂程式碼。 例如，其中可能包括重構程式碼以避免周遊存放庫、自訂索引以最佳化搜尋，或在JCR中使用無序節點等。
 
-除了选择性地升级您的代码库和自定义以与新的AEM版本配合使用之外， 6.5还有助于使用向后兼容性功能更高效地管理您的自定义，如 [本页](/help/sites-deploying/backward-compatibility.md).
+除了選擇性地升級您的程式碼基底和自訂以與新的AEM版本搭配使用外，6.5還可以利用回溯相容性功能更有效率地管理您的自訂，如中所述 [此頁面](/help/sites-deploying/backward-compatibility.md).
 
-如上图所示，运行 [图案检测器](/help/sites-deploying/pattern-detector.md) 在第一步中，您可以帮助评估升级的整体复杂性。 它还可以帮助您确定您是要在兼容模式下运行，还是更新自定义以使用所有新的AEM 6.5功能。 请参阅 [AEM 6.5中的向后兼容性](/help/sites-deploying/backward-compatibility.md) 页面以了解更多详细信息。
-[ ![opt_scrift](assets/opt_cropped.png)](assets/upgrade-code-base-highlevel.png)
+如上所述及下圖所示，執行 [模式偵測器](/help/sites-deploying/pattern-detector.md) 在第一個步驟中，可以幫助您評估升級的整體複雜性。 它也可以協助您決定要在相容性模式下執行，或更新自訂以使用所有新的AEM 6.5功能。 請參閱 [AEM 6.5的回溯相容性](/help/sites-deploying/backward-compatibility.md) 頁面，以取得更多詳細資料。
+[ ![opt_cropped](assets/opt_cropped.png)](assets/upgrade-code-base-highlevel.png)
 
-## 升级代码库 {#upgrade-code-base}
+## 升級程式碼基底 {#upgrade-code-base}
 
-### 在版本控制中为6.5代码创建专用分支 {#create-a-dedicated-branch-for-6.5-code-in-version-control}
+### 在版本控制中為6.5程式碼建立專用分支 {#create-a-dedicated-branch-for-6.5-code-in-version-control}
 
-您的AEM实施所需的所有代码和配置都应使用某种形式的版本控制进行管理。 应在版本控制中创建专用分支，以管理目标版本AEM中代码库所需的任何更改。 此分支会根据AEM的目标版本对代码库进行迭代测试，并管理后续的错误修复。
+應使用某種形式的版本控制來管理您的AEM實作所需的所有程式碼和設定。 應建立版本控制中的專用分支，以管理目標AEM版本中程式碼庫所需的任何變更。 此分支管理針對AEM目標版本的反複程式碼庫測試和後續錯誤修正。
 
 ### 更新AEM Uber Jar版本 {#update-the-aem-uber-jar-version}
 
-AEM Uber Jar将所有AEM API作为单个依赖项包含在您Maven项目的 `pom.xml`. 最好将Uber Jar作为单个依赖项包含在内，而不是包含单个AEM API依赖项。 升级代码库时，请更改Uber Jar的版本以指向AEM的目标版本。 如果您的项目是在AEM版本之前开发的，请删除所有单独的AEM API依赖项。 将它们替换为仅包含目标版本AEM的Uber Jar。 针对新版Uber Jar重新编译代码库。 更新任何已弃用的API或方法，使其与AEM的目标版本兼容。
+AEM Uber jar包含所有AEM API，作為您Maven專案的 `pom.xml`. 最佳實務一律會將Uber Jar納入為單一相依性，而非納入個別AEM API相依性。 升級程式碼基底時，請變更Uber Jar的版本以指向目標AEM版本。 如果您的專案是在Uber Jar存在之前的AEM版本上開發，請移除所有個別AEM API相依性。 以AEM目標版本的Uber Jar的單一包含取代它們。 針對新版Uber Jar重新編譯程式碼基底。 更新任何過時的API或方法，使其與AEM的目標版本相容。
 
 ```
 <dependency>
@@ -67,163 +67,163 @@ AEM Uber Jar将所有AEM API作为单个依赖项包含在您Maven项目的 `pom
 </dependency>
 ```
 
-### 逐步停用管理资源解析程序 {#phase-out-use-of-administrative-resource-resolver}
+### 逐步停止使用管理資源解析程式 {#phase-out-use-of-administrative-resource-resolver}
 
-通过 `SlingRepository.loginAdministrative()` 和 `ResourceResolverFactory.getAdministrativeResourceResolver()` 在AEM 6.0之前的代码库中很流行。由于安全原因，这些方法已被弃用，因为它们提供的访问级别过宽。 [在Sling的未来版本中，将删除这些方法](https://sling.apache.org/documentation/the-sling-engine/service-authentication.html#deprecation-of-administrative-authentication). 强烈建议重构任何代码以改用服务用户。 有关服务用户和 [如何逐步停用管理会话，可在此处找到](/help/sites-administering/security-service-users.md#how-to-phase-out=admin-sessions).
+透過使用管理工作階段 `SlingRepository.loginAdministrative()` 和 `ResourceResolverFactory.getAdministrativeResourceResolver()` 在AEM 6.0之前的程式碼基底中普遍存在。由於這些方法提供的存取層級過於廣泛，因此已基於安全性原因而遭到取代。 [在未來Sling版本中，將移除這些方法](https://sling.apache.org/documentation/the-sling-engine/service-authentication.html#deprecation-of-administrative-authentication). 強烈建議您重構任何程式碼，以改用服務使用者。 有關服務使用者與的更多資訊 [如何逐步淘汰管理工作階段可在此處找到](/help/sites-administering/security-service-users.md#how-to-phase-out=admin-sessions).
 
-### 查询和Oak索引 {#queries-and-oak-indexes}
+### 查詢和Oak索引 {#queries-and-oak-indexes}
 
-在升级代码库时，必须对代码库中查询的任何使用进行全面测试。 对于从Jackrabbit 2(AEM 6.0以上版本)升级的客户，此测试尤其重要，因为Oak不会自动为内容编入索引，应创建自定义索引。 如果从AEM 6.x版本升级，则开箱即用的Oak索引定义可能已发生更改，并且可能会影响现有查询。
+升級程式碼庫時，必須對程式碼庫中任何查詢的使用進行徹底測試。 對於從Jackrabbit 2 (6.0以前的AEM版本)升級的客戶，這項測試尤其重要，因為Oak不會自動索引內容且應建立自訂索引。 如果從AEM 6.x版本升級，現成可用的Oak索引定義可能已變更，並且可能影響現有查詢。
 
-以下工具可用于分析和检查查询性能：
+下列工具可用來分析和檢查查詢效能：
 
-* [AEM索引工具](/help/sites-deploying/queries-and-indexing.md)
+* [AEM Index Tools](/help/sites-deploying/queries-and-indexing.md)
 
-* [操作诊断工具 — 查询性能](/help/sites-administering/operations-dashboard.md#diagnosis-tools)
+* [作業診斷工具 — 查詢效能](/help/sites-administering/operations-dashboard.md#diagnosis-tools)
 
 <!-- URL is 404 as of 04/24/23; commenting out * [Oak Utils](https://oakutils.appspot.com/). This is an open source tool that is not maintained by Adobe. -->
 
-### 经典UI创作 {#classic-ui-authoring}
+### 傳統UI編寫 {#classic-ui-authoring}
 
-经典UI创作在AEM 6.5中仍可用，但现已弃用。 可以找到更多信息 [此处](/help/release-notes/deprecated-removed-features.md#pre-announcement-for-next-release). 如果您的应用程序在经典UI创作环境中运行，则建议升级到AEM 6.5并继续使用经典UI。 然后，可以将迁移到触屏UI作为单独的项目进行规划，以在多个开发周期中完成。 要在AEM 6.5中使用经典UI，必须将多个OSGi配置提交到代码库。 有关如何配置的更多详细信息，请参阅 [此处](/help/sites-administering/enable-classic-ui.md).
+傳統UI編寫仍可在AEM 6.5中使用，但已過時。 如需詳細資訊，請參閱 [此處](/help/release-notes/deprecated-removed-features.md#pre-announcement-for-next-release). 如果您的應用程式在傳統UI作者環境中執行，建議升級至AEM 6.5並繼續使用傳統UI。 移轉至Touch UI可規劃為獨立專案，以透過數個開發週期完成。 若要在AEM 6.5中使用傳統UI，必須將數個OSGi設定認可至程式碼基底。 如需如何進行設定的詳細資訊，請參閱 [此處](/help/sites-administering/enable-classic-ui.md).
 
-## 与6.5存储库结构保持一致 {#align-repository-structure}
+## 與6.5存放庫結構一致 {#align-repository-structure}
 
-为了简化升级过程并确保配置在升级期间不被覆盖，在6.4中重组了存储库，以将内容与配置分离。
+為了更輕鬆升級並確保在升級期間不會覆寫設定，存放庫在6.4中進行了重組，以將內容與設定分開。
 
-因此，必须将一些设置移动到下方，以便不再驻留 `/etc` 和过去一样。 要审查在更新到AEM 6.4时必须审查和解决的整套存储库重组问题，请参阅 [AEM 6.4中的存储库重组](/help/sites-deploying/repository-restructuring.md).
+因此，必須移動數個設定，使其不再位於下 `/etc` 一如既往。 若要檢閱更新至AEM 6.4中必須檢閱和解決的整套存放庫重組問題，請參閱 [AEM 6.4中的存放庫重組](/help/sites-deploying/repository-restructuring.md).
 
-## AEM自定义  {#aem-customizations}
+## AEM自訂  {#aem-customizations}
 
-必须识别AEM源版本中对AEM创作环境的所有自定义设置。 确定后，建议将每个自定义都存储在版本控制中，或作为内容包的一部分至少备份一次。 在生产升级之前，应在运行AEM目标版本的QA或暂存环境中部署和验证所有自定义设置。
+必須識別AEM來源版本中AEM製作環境的所有自訂。 識別之後，建議將每個自訂內容儲存在版本控制中，或至少備份為內容套件的一部分。 所有自訂都應在生產升級之前，在執行目標AEM版本的QA或測試環境中部署及驗證。
 
-### 一般情况下叠加 {#overlays-in-general}
+### 一般覆蓋 {#overlays-in-general}
 
-通常的做法是，通过在/libs下的节点和/或文件上叠加/apps下的其他节点，来扩展AEM的开箱即用功能。 应在版本控制中跟踪这些叠加，并针对AEM的目标版本进行测试。 如果文件（如JS、JSP、HTL）被叠加，Adobe建议您对扩展了哪些功能留下评论，以便在AEM的目标版本上更轻松地进行回归测试。 有关一般叠加的详细信息，请参阅 [此处](/help/sites-developing/overlays.md). 有关特定AEM叠加的说明，请参阅下文。
+常見的作法是將AEM開箱即用的功能擴充，方法是使用/apps下的其他節點覆蓋/libs下的節點和/或檔案。 您應在版本控制中追蹤這些覆蓋圖，並針對AEM的目標版本進行測試。 如果檔案（例如JS、JSP、HTL）重疊，Adobe建議您留下註解，說明已增強哪些功能，以便在AEM的目標版本上更輕鬆地進行回歸測試。 一般覆蓋圖的更多資訊可以找到 [此處](/help/sites-developing/overlays.md). 特定AEM覆蓋圖的指示見下文。
 
-### 升级自定义搜索Forms {#upgrading-custom-search-forms}
+### 升級自訂搜尋Forms {#upgrading-custom-search-forms}
 
-自定义搜索彩块化需要在升级后进行一些手动调整才能正常运行。 有关更多详细信息，请参阅 [升级自定义搜索Forms](/help/sites-deploying/upgrading-custom-search-forms.md).
+自訂搜尋Facet在升級後需要一些手動調整才能正常運作。 如需詳細資訊，請參閱 [升級自訂搜尋Forms](/help/sites-deploying/upgrading-custom-search-forms.md).
 
-### 资产UI自定义 {#assets-ui-customizations}
+### Assets UI自訂 {#assets-ui-customizations}
 
 >[!NOTE]
 >
->只有从AEM 6.2以前的版本升级时，才需要执行此过程。
+>只有從AEM 6.2之前的版本升級時，才需要執行此程式。
 
-必须为具有自定义资产部署的实例准备升级。 要确保所有自定义内容与新的6.4节点结构兼容，必须执行此操作。
+具有自訂Assets部署的執行個體必須為升級做好準備。 此動作是必要的，可確保所有自訂內容與新的6.4節點結構相容。
 
-您可以通过执行以下操作，为资产UI准备自定义设置：
+您可以執行下列動作，為Assets UI準備自訂：
 
-1. 在正在升级的实例上，通过转到 *https://server:port/crx/de/index.jsp*
+1. 在要升級的執行個體上，前往以下位置開啟CRXDE Lite： *https://server:port/crx/de/index.jsp*
 
-1. 转到以下节点：
+1. 前往下列節點：
 
    * `/apps/dam/content`
 
-1. 将内容节点重命名为 **content_backup** 右键单击窗口左侧的资源管理器窗格，然后选择 **重命名**.
+1. 將內容節點重新命名為 **content_backup** 在視窗左側的瀏覽器窗格上按一下滑鼠右鍵，然後選擇 **重新命名**.
 
-1. 重命名节点后，在 `/apps/dam` 已命名 **内容** 将其节点类型设置为 **sling:Folder**.
+1. 重新命名節點後，在下方建立名為內容的節點 `/apps/dam` 已命名 **內容** 並將其節點型別設為 **sling：Folder**.
 
-1. 移动的所有子节点 **content_backup** 右键单击资源管理器窗格中的每个子节点，然后选择 **移动**.
+1. 移動的所有子節點 **content_backup** 在新建立的內容節點中，以滑鼠右鍵按一下瀏覽器窗格中的每個子節點，然後選取 **移動**.
 
-1. 删除 **content_backup** 节点。
+1. 刪除 **content_backup** 節點。
 
-1. 下方更新的节点 `/apps/dam` 的节点类型正确 `sling:Folder` 理想情况下，应将其保存到版本控制中，并使用代码库进行部署，或至少作为内容包进行备份。
+1. 下方更新的節點 `/apps/dam` 具有正確的節點型別 `sling:Folder` 理想情況下，應儲存至版本控制中，並以程式碼庫部署，或至少備份為內容套件。
 
-### 为现有资产生成资产ID {#generating-asset-ids-for-existing-assets}
+### 產生現有資產的資產ID {#generating-asset-ids-for-existing-assets}
 
-要为现有资产生成资产ID，请在升级AEM实例以运行AEM 6.5时升级资产。要启用 [资产分析功能](/help/assets/asset-insights.md). 有关更多详细信息，请参阅 [添加嵌入代码](/help/assets/use-page-tracker.md#add-embed-code).
+若要產生現有資產的資產ID，請在升級AEM執行個體以執行AEM 6.5時升級資產。若要啟用「 」，必須執行此步驟 [Assets深入分析功能](/help/assets/asset-insights.md). 如需詳細資訊，請參閱 [新增內嵌程式碼](/help/assets/use-page-tracker.md#add-embed-code).
 
-要升级资产，请在JMX控制台中配置关联资产ID包。 根据存储库中的资产数量， `migrateAllAssets` 可能需要很长时间。 Adobe的内部测试估计TarMK上125000个资产大约有1小时。
+若要升級資產，請在JMX主控台中設定「關聯資產ID」套件。 根據存放庫中的資產數量， `migrateAllAssets` 可能需要很長的時間。 Adobe的內部測試估計，TarMK上的125000資產大約需要1小時。
 
 ![1487758945977](assets/1487758945977.png)
 
-如果您需要为整个资产的子集使用资产ID，请使用 `migrateAssetsAtPath` API。
+如果您需要整個資產的子集的資產ID，請使用 `migrateAssetsAtPath` API。
 
-对于所有其他目的，请使用 `migrateAllAssets()` API。
+若為所有其他目的，請使用 `migrateAllAssets()` API。
 
-### InDesign脚本自定义 {#indesign-script-customizations}
+### InDesign指令碼自訂 {#indesign-script-customizations}
 
-Adobe建议在 `/apps/settings/dam/indesign/scripts` 位置。 有关InDesign脚本自定义的更多信息，请参阅 [此处](/help/assets/indesign.md#configuring-the-aem-assets-workflow).
+Adobe建議您將自訂指令碼放在 `/apps/settings/dam/indesign/scripts` 位置。 有關InDesign指令碼自訂的更多資訊可以找到 [此處](/help/assets/indesign.md#configuring-the-aem-assets-workflow).
 
-### 恢复ContextHub配置 {#recovering-contexthub-configurations}
+### 正在復原ContextHub設定 {#recovering-contexthub-configurations}
 
-ContextHub配置受升级的影响。 有关如何恢复现有ContextHub配置的说明可以找到 [此处](/help/sites-developing/ch-configuring.md#recovering-contexthub-configurations-after-upgrading).
+ContextHub設定會受升級影響。 有關如何復原現有ContextHub設定的說明，請參閱 [此處](/help/sites-developing/ch-configuring.md#recovering-contexthub-configurations-after-upgrading).
 
-### 工作流自定义 {#workflow-customizations}
+### 工作流程自訂 {#workflow-customizations}
 
-通常做法是开箱即用地编辑工作流，以添加或删除不需要的功能。 自定义的常见工作流是 [!UICONTROL DAM更新资产] 工作流。 自定义实施所需的所有工作流都应进行备份并存储在版本控制中，因为升级期间可能会覆盖这些工作流。
+通常的做法是編輯現成的工作流程，以新增或移除不需要的功能。 自訂的常見工作流程為 [!UICONTROL DAM更新資產] 工作流程。 自訂實作所需的所有工作流程都應備份並儲存在版本控制中，因為升級期間可能會覆寫這些工作流程。
 
 ### 可编辑模板 {#editable-templates}
 
 >[!NOTE]
 >
->只有使用AEM 6.2中的可编辑模板进行站点升级时，才需要执行此过程
+>只有在使用AEM 6.2的可編輯範本進行Sites升級時，才需要執行此程式
 
-可编辑模板的结构在AEM 6.2和6.3之间发生了更改。如果您是从6.2或更早版本升级，并且如果您的网站内容是使用可编辑的模板构建的，则必须使用 [响应式节点清理工具](https://github.com/Adobe-Marketing-Cloud/aem-sites-template-migration). 该工具用于运行 **after** 用于清理内容的升级。 在创作层和发布层上运行它。
+可編輯範本的結構在AEM 6.2和6.3之間變更。如果您要從6.2或更舊版本升級，而且您的網站內容是使用可編輯的範本建立的，則必須使用 [回應式節點清理工具](https://github.com/Adobe-Marketing-Cloud/aem-sites-template-migration). 此工具旨在執行 **晚於** 清理內容的升級。 在「作者」和「發佈」層級上執行。
 
-### CUG实施更改 {#cug-implementation-changes}
+### CUG實作變更 {#cug-implementation-changes}
 
-已关闭的用户组的实施已发生重大更改，以解决以前版本的AEM中存在的性能和可扩展性限制。 6.3中已弃用CUG的先前版本，并且仅触屏UI支持新实施。 如果您是从6.2或更低版本升级，则可以找到迁移到新CUG实施的说明 [此处](/help/sites-administering/closed-user-groups.md#upgradetoaem63).
+封閉式使用者群組的實作已大幅變更，以解決舊版AEM的效能和擴充性限制。 6.3已棄用舊版CUG，新實作僅支援觸控式UI。 如果您是從6.2版或更舊版本升級，請查閱移轉至新CUG實作的指示 [此處](/help/sites-administering/closed-user-groups.md#upgradetoaem63).
 
-## 测试过程 {#testing-procedure}
+## 測試程式 {#testing-procedure}
 
-应为测试升级准备全面的测试计划。 必须首先在较低的环境中测试已升级的代码库和应用程序。 发现的任何错误都应以迭代方式修复，直到代码库稳定为止，只有这样才应升级更高级别的环境。
+應針對測試升級準備完整的測試計畫。 測試升級的程式碼基底和應用程式必須先在較低的環境中完成。 找到的任何錯誤都應透過反複的方式進行修正，直到程式碼庫穩定為止，只有在穩定後才會升級較高層級的環境。
 
-### 测试升级过程 {#testing-the-upgrade-procedure}
+### 測試升級程式 {#testing-the-upgrade-procedure}
 
-应按照自定义运行手册中的说明，在开发和QA环境中对此处概述的升级过程进行测试(请参阅 [规划升级](/help/sites-deploying/upgrade-planning.md))。 应重复升级过程，直到升级运行手册中记录了所有步骤，并且升级过程顺利。
+這裡概述的升級程式應在開發和QA環境中進行測試，如您的自訂執行手冊中所述(請參閱 [規劃升級](/help/sites-deploying/upgrade-planning.md))。 升級程式應重複執行，直到所有步驟都記錄在升級執行手冊中且升級過程順利進行。
 
-### 实施测试区域  {#implementation-test-areas-}
+### 實作測試區域  {#implementation-test-areas-}
 
-以下是任何AEM实施的关键区域，在升级环境并部署升级的代码库后，测试计划应涵盖这些区域。
+以下是任何AEM實作的重要領域，在環境升級且部署升級後的程式碼庫後，這些領域應包含在測試計畫中。
 
 <table>
  <tbody>
   <tr>
-   <td><strong>功能测试区</strong></td>
+   <td><strong>功能測試區域</strong></td>
    <td><strong>描述</strong></td>
   </tr>
   <tr>
-   <td>已发布的站点</td>
-   <td>在发布层测试AEM实施和关联代码<br /> 通过Dispatcher。 应包括页面更新标准和<br /> 缓存失效。</td>
+   <td>已發佈的網站</td>
+   <td>在發佈層級上測試AEM實作和相關聯的程式碼<br /> 透過Dispatcher。 應包含頁面更新的條件和<br /> 快取失效。</td>
   </tr>
   <tr>
    <td>创作</td>
-   <td>在创作层测试AEM实施和关联代码。 应包括页面、组件创作和对话框。</td>
+   <td>在製作層級上測試AEM實作和相關聯的程式碼。 應包括頁面、元件製作和對話方塊。</td>
   </tr>
   <tr>
-   <td>与Experience Cloud解决方案集成</td>
-   <td>验证与Analytics、DTM和Target等产品的集成。</td>
+   <td>與Experience Cloud解決方案整合</td>
+   <td>驗證與Analytics、DTM和Target等產品的整合。</td>
   </tr>
   <tr>
-   <td>与第三方系统集成</td>
-   <td>验证创作层和发布层上的任何第三方集成。</td>
+   <td>與協力廠商系統整合</td>
+   <td>驗證「作者」和「發佈」層級上的任何協力廠商整合。</td>
   </tr>
   <tr>
-   <td>身份验证、安全性和权限</td>
-   <td>应验证任何身份验证机制，如LDAP/SAML。<br /> 应在“创作”和“发布”两个页面上测试权限和组<br /> 层。</td>
+   <td>驗證、安全性和許可權</td>
+   <td>任何驗證機制（例如LDAP/SAML）都應經過驗證。<br /> 應在「作者」和「發佈」上測試許可權和群組<br /> 層級。</td>
   </tr>
   <tr>
-   <td>查询</td>
-   <td>自定义索引和查询应与查询性能一起进行测试。</td>
+   <td>查詢</td>
+   <td>自訂索引和查詢應該與查詢效能一起測試。</td>
   </tr>
   <tr>
-   <td>UI自定义</td>
-   <td>创作环境中对AEM UI的任何扩展或自定义设置。</td>
+   <td>UI自訂</td>
+   <td>製作環境中AEM UI的任何擴充功能或自訂專案。</td>
   </tr>
   <tr>
    <td>工作流</td>
-   <td>自定义和/或开箱即用的工作流和功能。</td>
+   <td>自訂和/或現成可用的工作流程和功能。</td>
   </tr>
   <tr>
    <td>性能测试</td>
-   <td>应对模拟真实情景的创作层和发布层执行负载测试。</td>
+   <td>載入測試應在模擬真實世界情境的Author和Publish層上執行。</td>
   </tr>
  </tbody>
 </table>
 
-### 文档测试计划和结果 {#document-test-plan-and-results}
+### 記錄測試計畫和結果 {#document-test-plan-and-results}
 
-应创建涵盖上述实施测试区域的测试计划。 通常，按“创作”和“发布”任务列表来分隔测试计划是有意义的。 在升级生产环境之前，应在开发、QA和暂存环境中执行此测试计划。 应在较低的环境中捕获测试结果和性能量度，以便在升级暂存环境和生产环境时进行比较。
+應建立涵蓋上述實作測試區域的測試計畫。 通常，依作者和發佈工作清單來區分測試計畫是可行的做法。 此測試計畫應在升級生產環境之前在開發、QA和中繼環境上執行。 測試結果和效能量度應在較低層級環境中擷取，以便在升級中繼和生產環境時提供比較。

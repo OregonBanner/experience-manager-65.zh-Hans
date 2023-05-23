@@ -1,7 +1,7 @@
 ---
 title: 为 Adobe Analytics 配置链接跟踪
 seo-title: Configuring Link Tracking for Adobe Analytics
-description: 了解如何为SiteCatalyst配置链接跟踪。
+description: 瞭解如何設定SiteCatalyst的連結追蹤。
 seo-description: Learn about configuring link tracking for SiteCatalyst.
 uuid: b6d5bd1c-f91a-4d38-9e9e-dc2bcb271dae
 contentOwner: User
@@ -19,22 +19,22 @@ ht-degree: 1%
 
 # 为 Adobe Analytics 配置链接跟踪{#configuring-link-tracking-for-adobe-analytics}
 
-当用户单击网站页面上的链接时，您可以在Adobe Analytics中捕获相关信息。 例如，使用链接跟踪可了解用户如何与您的网站进行交互、跟踪文件下载以及跟踪退出链接。
+當使用者按一下您網站頁面上的連結時，您可以在Adobe Analytics中擷取相關資訊。 例如，使用連結追蹤來瞭解使用者如何與您的網站互動、追蹤檔案下載和追蹤退出連結。
 
-## 为Adobe Analytics Framework配置链接跟踪 {#configuring-link-tracking-for-an-adobe-analytics-framework}
+## 為Adobe Analytics框架設定連結追蹤 {#configuring-link-tracking-for-an-adobe-analytics-framework}
 
-1. 使用 **导航**，通过 **部署**， **Cloud Services** 到 **Adobe Analytics** 部分。
+1. 使用 **導覽**，前往 **部署**， **Cloud Services** 至 **Adobe Analytics** 區段。
 
-1. 使用 **显示配置**，打开所需的Adobe Analytics framework。
-1. 展开 **链接跟踪配置** 部分，并根据需要进行配置（此页提供了更多详细信息）：
+1. 使用 **顯示設定**，開啟必要的Adobe Analytics架構。
+1. 展開 **連結追蹤設定** 區段並視需要設定（此頁面提供進一步詳細資訊）：
 
    ![aa-08](assets/aa-08.png)
 
-## 跟踪文件下载 {#tracking-file-downloads}
+## 追蹤檔案下載 {#tracking-file-downloads}
 
-配置Adobe Analytics Framework，以便在Adobe Analytics中自动跟踪从关联页面下载的文件。 启用下载跟踪后，将仅跟踪您指定的文件类型。
+設定Adobe Analytics架構，將從關聯頁面下載的檔案自動追蹤為Adobe Analytics中的下載專案。 當您啟用下載追蹤時，只會追蹤您指定的檔案型別。
 
-默认情况下，将跟踪以下文件类型的下载：
+預設會追蹤下列檔案型別的下載：
 
 * exe
 * zip
@@ -48,57 +48,57 @@ ht-degree: 1%
 * pdf
 * xls
 
-例如，为PDF文件启用下载跟踪后，每当用户单击指向PDF文件的链接时，都会跟踪PDF的下载。
+因此，舉例來說，若為PDF檔案啟用下載追蹤，則每當使用者按一下指向PDF檔案的連結時，就會追蹤PDF的下載。
 
-框架的下载跟踪属性在中作为代码实施 `analytics.sitecatalyst.js` 为页面生成的文件。 以下代码示例表示默认的下载跟踪配置：
+架構的下載追蹤屬性會實作為中的程式碼 `analytics.sitecatalyst.js` 為頁面產生的檔案。 下列程式碼範例代表預設的下載追蹤設定：
 
 ```
 s.trackDownloadLinks= true;
 s.linkDownloadFileTypes= 'exe,zip,wav,mp3,mov,mpg,avi,wmv,doc,pdf,xls';
 ```
 
-要为Adobe Analytics框架启用下载跟踪，请执行以下操作：
+若要為您的Adobe Analytics架構啟用下載追蹤：
 
-1. [打开Adobe Analytics框架，并展开链接跟踪配置部分](#configuring-link-tracking-for-an-adobe-analytics-framework).
-1. 启用 **跟踪下载**.
-1. 在 **下载文件类型** 框中，键入要跟踪的文件类型的文件扩展名。
+1. [開啟Adobe Analytics框架，然後展開「連結追蹤設定」區段](#configuring-link-tracking-for-an-adobe-analytics-framework).
+1. 啟用 **追蹤下載**.
+1. 在 **下載檔案型別** 方塊中，輸入您要追蹤之檔案型別的副檔名。
 
-## 跟踪外部链接 {#tracking-external-links}
+## 追蹤外部連結 {#tracking-external-links}
 
-您可以跟踪页面上的外部链接（退出链接）点击次数。
+您可以追蹤頁面上的外部連結（退出連結）點選次數。
 
-要跟踪Adobe Analytics框架的外部链接，请执行以下操作：
+若要追蹤Adobe Analytics架構的外部連結：
 
-1. [打开Adobe Analytics框架并展开 **链接跟踪配置** 部分](#configuring-link-tracking-for-an-adobe-analytics-framework).
-1. 根据您的要求配置以下属性。
+1. [開啟Adobe Analytics架構並展開 **連結追蹤設定** 區段](#configuring-link-tracking-for-an-adobe-analytics-framework).
+1. 根據您的要求設定以下屬性。
 
-单击外部链接时进行跟踪的属性：
+按一下外部連結時進行追蹤的屬性：
 
-* **跟踪外部**
-启用外部链接跟踪。
+* **追蹤外部**
+啟用外部連結追蹤。
 
-* **外部筛选器**
-（可选）定义用于匹配链接目标的外部URL的过滤器。 当链接目标与过滤器匹配时，将跟踪该链接。 外部过滤器仅可用于跟踪页面上的某些外部链接。
+* **外部篩選器**
+（選用）定義符合連結目標外部URL的篩選器。 當連結目標符合篩選器時，就會追蹤連結。 外部篩選器適合用來追蹤頁面上的部分外部連結。
 
-   要指定要跟踪的外部链接，请键入链接目标的全部或部分URL。 用逗号分隔多个过滤器。 将字符串文字括在单引号中。 无值(默认值 `''`，两个单引号)导致跟踪所有外部链接。
+   若要指定要追蹤的外部連結，請輸入連結目標的全部或部分URL。 請使用逗號分隔多個篩選器。 將字串常值括在單引號中。 無值(的預設值 `''`，兩個單引號)會導致追蹤所有外部連結。
 
-* **内部筛选器**
-定义用于匹配内部链接URL的过滤器。 当链接定向与此过滤器匹配的URL时，不会跟踪该链接。 默认值是一个javascript命令，该命令返回当前窗口地址的URL的主机名。
+* **內部篩選器**
+定義符合內部連結URL的篩選器。 當連結鎖定符合此篩選器的URL時，將不會追蹤連結。 預設值是javascript命令，它會傳回目前視窗位址的URL主機名稱。
 
-   要指定未跟踪的内部链接，请键入链接目标的全部或部分内部URL。 用逗号分隔多个过滤器。 将字符串文字括在单引号中。
+   若要指定未追蹤的內部連結，請輸入連結目標的全部或部分內部URL。 請使用逗號分隔多個篩選器。 將字串常值括在單引號中。
 
    默认值为 `'javascript:,'+window.location.hostname`
 
-* **保留查询字符串**
-在评估与内部和外部筛选器的匹配项时包含URL参数。
+* **保留查詢字串**
+評估符合內部和外部篩選器時包含URL引數。
 
-   启用后可在根据外部和内部过滤器评估链接目标URL时包含URL参数。
+   啟用以在根據外部和內部篩選器評估連結目標URL時包含URL引數。
 
-外部链接跟踪属性在中作为代码实施 `analytics.sitecatalyst.js` 为页面生成的文件。 为与通过以下配置启用外部链接跟踪的框架关联的页面生成以下示例代码：
+外部連結追蹤屬性會實作為中的程式碼 `analytics.sitecatalyst.js` 為頁面產生的檔案。 下列範常式式碼產生自與架構相關聯的頁面，此架構已透過下列設定啟用外部連結追蹤：
 
-* 外部筛选器是 `'google.com'`
-* 内部筛选器是默认值 `'javascript:,'+window.location.hostname`
-* 根据过滤器评估链接目标时，未包含查询字符串。
+* 外部篩選器為 `'google.com'`
+* 內部篩選是預設值 `'javascript:,'+window.location.hostname`
+* 對照篩選器評估連結目標時，未包含查詢字串。
 
 ```
 s.trackExternalLinks= false;
@@ -107,184 +107,184 @@ s.linkInternalFilters= 'javascript:,'+window.location.hostname;
 s.linkLeaveQueryString= false;
 ```
 
-## 通过链接点击发送变量数据 {#sending-variable-data-with-link-clicks}
+## 透過連結點選傳送變數資料 {#sending-variable-data-with-link-clicks}
 
-您可以将AEM配置为在用户单击链接时将事件和变量数据发送到Adobe Analytics。 此 **链接跟踪配置** 通过属性，可指定要在发生链接点击时跟踪的Adobe Analytics事件和变量。
+您可以設定AEM，讓使用者按一下連結時，將事件和變數資料傳送至Adobe Analytics。 此 **連結追蹤設定** 屬性可讓您指定Adobe Analytics事件和變數，以便在發生連結點選時追蹤。
 
-框架映射确定事件和变量值。 您可以将Adobe Analytics变量映射到内容组件的变量，这些变量存储着您希望在单击链接时跟踪的数据。
+框架對應決定事件和變數值。 您可以將Adobe Analytics變數對應至內容元件的變數，這些變數會儲存您要在點選連結時追蹤的資料。
 
-要通过链接点击发送变量数据，请执行以下操作：
+若要透過連結點選傳送變數資料：
 
-1. [打开Adobe Analytics框架，并展开链接跟踪配置部分](#configuring-link-tracking-for-an-adobe-analytics-framework).
-1. 根据您的要求配置以下属性。
+1. [開啟Adobe Analytics框架，然後展開「連結追蹤設定」區段](#configuring-link-tracking-for-an-adobe-analytics-framework).
+1. 根據您的要求設定以下屬性。
 
-通过链接点击发送变量数据的属性：
+透過連結點選傳送變數資料的屬性：
 
-* **链接跟踪事件**
-输入要用于对链接点击次数进行计数的Adobe Analytics事件变量。
+* **連結追蹤事件**
+輸入您要用來計算連結點按次數的Adobe Analytics事件變數。
 
-   用逗号分隔多个变量名称。
+   請使用逗號分隔多個變數名稱。
 
-   默认值 `None` 导致无事件跟踪。
+   預設值 `None` 不會造成事件追蹤。
 
-* **链接跟踪变量**
-输入您希望在单击链接时发送到Adobe Analytics的Adobe Analytics变量。 用逗号分隔多个变量名称。
+* **連結追蹤Var**
+輸入您要在點按連結時傳送至Adobe Analytics的Adobe Analytics變數。 請使用逗號分隔多個變數名稱。
 
-   默认值 `None` 导致不发送任何变量数据。
+   預設值 `None` 不會傳送任何變數資料。
 
-指定要发送的事件和变量时，配置将作为代码实施到 `analytics.sitecatalyst.js` 为页面生成的文件。 当框架跟踪以下内容时，将为页面生成以下示例代码 `event10` 事件和 `prop4` 属性：
+當您指定要傳送的事件和變數時，設定會實作為中的程式碼 `analytics.sitecatalyst.js` 為頁面產生的檔案。 當架構追蹤 `event10` 事件與 `prop4` 屬性：
 
 ```
 s.linkTrackEvents= 'event10';
 s.linkTrackVars= 'prop4';
 ```
 
-## 链接跟踪配置示例 {#example-link-tracking-configuration}
+## 連結追蹤設定範例 {#example-link-tracking-configuration}
 
-执行以下过程以探索Adobe Analytics集成的链接跟踪行为。 过程显示结果来自 [Adobe Marketing Cloud调试器](https://experienceleague.adobe.com/docs/debugger/using/experience-cloud-debugger.html).
+執行以下程式，探索Adobe Analytics整合的連結追蹤行為。 程式顯示結果來自 [Adobe Marketing Cloud Debugger](https://experienceleague.adobe.com/docs/debugger/using/experience-cloud-debugger.html).
 
-### 常规配置 {#general-configuration}
+### 一般設定 {#general-configuration}
 
-此示例说明了映射如何在跟踪和调试器的上下文中工作：
+此範例說明對應在追蹤和Debugger環境中如何運作：
 
-1. 打开与网页关联的框架。
-1. 拖动 **页面** 组件到框架的映射区域。 此 **页面** 组件属于 **常规** Sidekick中的组件组。
+1. 開啟與網頁相關聯的架構。
+1. 拖曳 **頁面** 元件到框架的對映區域。 此 **頁面** 元件屬於 **一般** Sidekick中的元件群組。
 
    >[!NOTE]
    >
-   >应在现实场景中使用的组件取决于继承自的组件（如果有的话）。
+   >您應在實際案例中使用的元件取決於繼承自的元件（如果有的話）。
    >
-   >如果不能，您应该在此处公开自己的组件（通过在其页面组件中定义Analytics子节点）。
+   >如果您不該在此公開自己的元件（透過在其頁面元件中定義Analytics子節點）。
 
-   通过从左侧面板拖动Analytics(SiteCatalyst)变量，根据下表配置映射：
+   從左側面板拖曳Analytics (SiteCatalyst)變數，根據下表設定對應：
 
 <table>
  <tbody>
   <tr>
-   <th>CQ变量<br /> </th>
-   <th>变量浏览器中的条目<br /> </th>
-   <th>Adobe Analytics变量</th>
+   <th>CQ變數<br /> </th>
+   <th>變數瀏覽器中的專案<br /> </th>
+   <th>Adobe Analytics變數</th>
   </tr>
   <tr>
    <td>pagedata.title</td>
-   <td>自定义eVar1 (eVar1)</td>
+   <td>自訂eVar1 (eVar1)</td>
    <td>eVar1</td>
   </tr>
   <tr>
    <td>eventdata.events.pageView</td>
-   <td>自定义1 (event1)</td>
+   <td>自訂1 (event1)</td>
    <td>event1</td>
   </tr>
  </tbody>
 </table>
 
-1. 将搜索组件拖动到框架的映射区域。 搜索组件属于Sidekick中的常规组件组。 通过从左侧面板拖动Analytics(SiteCatalyst)变量，根据下表配置映射：
+1. 將「搜尋」元件拖曳至框架的對映區域。 搜尋元件屬於Sidekick中的「一般」元件群組。 從左側面板拖曳Analytics (SiteCatalyst)變數，根據下表設定對應：
 
 <table>
  <tbody>
   <tr>
-   <th>CQ变量<br /> </th>
-   <th>变量浏览器中的条目</th>
-   <th>Adobe Analytics变量</th>
+   <th>CQ變數<br /> </th>
+   <th>變數瀏覽器中的專案</th>
+   <th>Adobe Analytics變數</th>
   </tr>
   <tr>
    <td>eventdata.keyword</td>
-   <td>自定义eVar2 (eVar2)</td>
+   <td>自訂eVar2 (eVar2)</td>
    <td>eVar2</td>
   </tr>
   <tr>
    <td>eventdata.results</td>
-   <td>自定义eVar3 (eVar3)</td>
+   <td>自訂eVar3 (eVar3)</td>
    <td>eVar3</td>
   </tr>
   <tr>
    <td>eventdata.events.search</td>
-   <td>自定义2 (event2)</td>
+   <td>自訂2 (event2)</td>
    <td>event2</td>
   </tr>
  </tbody>
 </table>
 
-### 配置外部链接跟踪 {#configure-external-link-tracking}
+### 設定外部連結追蹤 {#configure-external-link-tracking}
 
-1. 在您的框架中，展开 **链接跟踪配置** 区域。
-1. 取消选择 **跟踪下载**.
+1. 在您的架構中，展開 **連結追蹤設定** 區域。
+1. 取消選取 **追蹤下載**.
 
-1. 选择 **跟踪外部**.
-1. 取消选择 **保留查询字符串**.
-1. 使用以下值 **外部筛选器** 列表以将其标识为外部URL：
+1. 選取 **追蹤外部**.
+1. 取消選取 **保留查詢字串**.
+1. 使用以下值 **外部篩選器** 識別為外部URL的清單：
 
    `‘yahoo.com’`
 
-1. 将以下值添加到 **链接跟踪事件** 字段：
+1. 將下列值新增至 **連結追蹤事件** 欄位：
 
    ```
        event1,event2
    ```
 
-1. 将以下值添加到 **链接跟踪变量** 字段：
+1. 將下列值新增至 **連結追蹤Var** 欄位：
 
    ```
        eVar1,eVar2
    ```
 
-1. 在与框架关联的页面上，添加 **文本** 组件。 内部 **文本** 组件，添加指向以下地址的超链接：
+1. 在與框架關聯的頁面上，新增 **文字** 元件。 內部 **文字** 元件，新增指向下列位址的超連結：
 
    `https://search.yahoo.com/?p=this`
 
-1. 切换到 **预览模式** ，然后单击链接。
+1. 切換至 **預覽模式** 並按一下連結。
 
-使用Adobe Marketing Cloud Debugger查看时，发出的调用将如下所示：
+使用Adobe Marketing Cloud Debugger檢視時，所進行的呼叫看起來會像這樣：
 
 ![aa-leavequerysearch-blank](assets/aa-leavequerysearch-blank.png)
 
 >[!NOTE]
 >
->URL不包含查询字符串： `?p=this`
+>URL不包含查詢字串： `?p=this`
 
-### 包含URL参数 {#include-the-url-parameter}
+### 包含URL引數 {#include-the-url-parameter}
 
-1. 在框架中，展开 **链接跟踪配置** 区域。
-1. 启用 **保留查询字符串**.
-1. 重新加载页面预览，然后单击链接。
+1. 在框架中，展開 **連結追蹤設定** 區域。
+1. 啟用 **保留查詢字串**.
+1. 重新載入頁面預覽，然後按一下連結。
 
-Adobe Marketing Cloud Debugger中显示的调用详细信息类似于以下示例：
+Adobe Marketing Cloud Debugger中顯示的呼叫詳細資訊類似於以下範例：
 
 ![aa-leavequerysearch-active](assets/aa-leavequerysearch-active.png)
 
 >[!NOTE]
 >
->此时URL不包含查询字符串： `?p=this`
+>這次URL不包含查詢字串： `?p=this`
 
-## 临时链接跟踪 {#ad-hoc-link-tracking}
+## 隨機連結追蹤 {#ad-hoc-link-tracking}
 
-通过随机链接跟踪，内容作者可以为组件配置链接跟踪。 组件的配置将覆盖 **链接跟踪配置** 框架中，因此在与框架关联的页面上， **文本** 可以配置组件以对URL进行链接跟踪。
+隨選連結追蹤可讓內容作者設定元件的連結追蹤。 元件的設定會覆寫 **連結追蹤設定** 框架，所以在與框架關聯的頁面上， **文字** 可以設定元件以追蹤URL。
 
-通过临时链接跟踪，您可以跟踪下载链接、外部链接以及事件和变量数据。
+隨選連結追蹤可讓您追蹤下載連結、外部連結，以及事件和變數資料。
 
-要启用临时链接跟踪，您需要：
+若要啟用隨選連結追蹤，您需要：
 
-* [关联包含 **文本** 带有框架的组件](/help/sites-administering/adobeanalytics-connect.md#associating-a-page-with-a-adobe-analytics-framework).
-* [配置Adobe Analytics框架以启用临时链接跟踪](#enabling-ad-hoc-link-tracking).
-* [为文本组件配置链接跟踪](#configuring-link-tracking-for-a-text-component).
+* [關聯包含 **文字** 具有框架的元件](/help/sites-administering/adobeanalytics-connect.md#associating-a-page-with-a-adobe-analytics-framework).
+* [設定Adobe Analytics架構以啟用隨選連結追蹤](#enabling-ad-hoc-link-tracking).
+* [設定文字元件的連結追蹤](#configuring-link-tracking-for-a-text-component).
 
-### 启用临时链接跟踪 {#enabling-ad-hoc-link-tracking}
+### 啟用隨選連結追蹤 {#enabling-ad-hoc-link-tracking}
 
-配置Adobe Analytics框架以启用临时链接跟踪。
+設定您的Adobe Analytics架構以啟用隨選連結追蹤。
 
-1. 打开Adobe Analytics框架并展开 **链接跟踪配置** 部分。
+1. 開啟Adobe Analytics架構並展開 **連結追蹤設定** 區段。
 
-1. 启用 **临时链接跟踪**.
+1. 啟用 **隨機連結追蹤**.
 
    >[!NOTE]
    >
-   >并非所有用户类型都有权访问此复选框。 如果您需要访问权限，请联系您的站点管理员。
+   >並非所有使用者型別都能存取此核取方塊。 如果您需要存取權，請聯絡您的網站管理員。
 
 >[!NOTE]
 >
->XSS Antisamy配置现在位于SLING路径下 **/libs/sling/xss.config.xml** 并且需要在中添加以下规则才能使用临时链接：
+>XSS Antisamy設定現在位於SLING路徑下 **/libs/sling/xss.config.xml** 而且需要新增下列規則，臨時連結才能運作：
 
-#### 锚点标记规则扩展 {#anchor-tag-rule-extension}
+#### 錨點標籤規則延伸 {#anchor-tag-rule-extension}
 
 ```xml
 <attribute name="onclick">
@@ -310,47 +310,47 @@ Adobe Marketing Cloud Debugger中显示的调用详细信息类似于以下示�
 </attribute>
 ```
 
-### 为文本组件配置链接跟踪 {#configuring-link-tracking-for-a-text-component}
+### 設定文字元件的連結追蹤 {#configuring-link-tracking-for-a-text-component}
 
-在为配置临时链接跟踪之前 **文本** 组件本身，则必须已实施以下配置：
+設定個人連結追蹤之前 **文字** 元件本身必須已實作下列設定：
 
-* 此 [Adobe Analytics框架配置为启用临时链接跟踪](#enabling-ad-hoc-link-tracking).
-* 此 [包含 **文本** 组件与框架关联](/help/sites-administering/adobeanalytics-connect.md#associating-a-page-with-a-adobe-analytics-framework).
+* 此 [Adobe Analytics框架已設定為啟用隨選連結追蹤](#enabling-ad-hoc-link-tracking).
+* 此 [包含 **文字** 元件與框架相關聯](/help/sites-administering/adobeanalytics-connect.md#associating-a-page-with-a-adobe-analytics-framework).
 
-使用以下过程可配置链接的链接跟踪 **文本** 组件：
+使用以下程式來設定連結追蹤 **文字** 元件：
 
-1. 在编辑模式下打开页面并编辑 **文本** 组件。
+1. 在編輯模式下開啟頁面並編輯 **文字** 元件。
 
-1. 选择要用作超文本的文本，然后单击“超链接”按钮。
+1. 選取要當作超文字使用的文字，然後按一下「超連結」按鈕。
 
    ![](do-not-localize/chlimage_1.png)
 
-1. 在链接至框中添加目标URL，然后展开链接跟踪区域。
+1. 在「連結至」方塊中新增目標URL，然後展開「連結追蹤」區域。
 
    >[!NOTE]
    >
-   >自定义链接跟踪作为单独的操作显示，位于链接/取消链接操作（Analytics图标）旁边。
+   >自訂連結追蹤會以個別動作顯示，位於連結/取消連結動作（Analytics圖示）旁邊。
    >
-   >仅当您在RTE中选择了有效的链接时，才会启用它。
+   >只有當您在RTE中選取有效的連結時，才會啟用它。
 
    ![aa-17](assets/aa-17.png)
 
-1. 启用 **自定义链接跟踪** 覆盖Adobe Analytics框架的链接跟踪配置，并为当前链接启用链接跟踪。
+1. 啟用 **自訂連結追蹤** 覆寫Adobe Analytics架構的連結追蹤設定，並為目前連結啟用連結追蹤。
 
-1. （可选）要通过单击链接来跟踪事件，请将Adobe Analytics事件名称添加到 **包含Adobe Analytics变量** 字段。 用逗号分隔多个事件名称，例如
+1. （可選）若要追蹤連結點選的事件，請新增Adobe Analytics事件名稱至 **包含Adobe Analytics變數** 欄位。 以逗號分隔多個事件名稱，例如
 
    `event1, event22`。
 
-1. （可选）要通过单击链接来跟踪变量数据，请将Adobe Analytics变量添加到 **包含Adobe Analytics变量** 字段。 使用以下格式之一：
+1. （可選）若要透過連結點選追蹤變數資料，請新增Adobe Analytics變數至 **包含Adobe Analytics變數** 欄位。 使用下列其中一種格式：
 
    * *`<Variable-name>`*： *`<Dynamic Value>`*
    * *`<Variable-name>`*: *`‘CONSTANT'`*
 
-   以下示例说明了每种格式：
+   下列範例說明每種格式：
 
    * `eVar10:pagedata.title`
    * `prop1: ‘Aubergine'`
 
-   用逗号分隔多个值。
+   請使用逗號分隔多個值。
 
-1. 选择 **确定**.
+1. 選取 **確定**.

@@ -1,7 +1,7 @@
 ---
 title: 排行榜功能
 seo-title: Leaderboard Feature
-description: 向页面添加排行榜组件
+description: 新增排行榜元件至頁面
 seo-description: Adding a Leaderboard component to a page
 uuid: c4633919-75d3-4bc7-830c-ef9c28cc1cba
 contentOwner: msm-service
@@ -22,130 +22,130 @@ ht-degree: 10%
 
 ## 简介 {#introduction}
 
-此 `Leaderboard` 通过根据获得的点数（基本评分）或其专业知识（高级评分）对成员进行排名，组件提供了解成员如何在社区内进行交互的能力。
+此 `Leaderboard` 元件可讓使用者根據獲得的點數（基本評分）或專長（進階評分）來排名成員，藉此瞭解成員在社群內的互動方式。
 
-在页面上包含排行榜组件之前，需要配置 [社区评分和徽章](/help/communities/implementing-scoring.md).
+在頁面上加入排行榜元件之前，必須先設定 [社群評分和預算](/help/communities/implementing-scoring.md).
 
-本文档的这一部分描述了：
+本檔案的這一節將說明：
 
-* 添加 `Leaderboard` 组件到 [社区站点](/help/communities/overview.md#community-sites).
-* 的配置设置 `Leaderboard` 组件。
+* 新增 `Leaderboard` 元件至 [社群網站](/help/communities/overview.md#community-sites).
+* 的組態設定 `Leaderboard` 元件。
 
-### 将排行榜添加到页面 {#adding-a-leaderboard-to-a-page}
+### 新增排行榜至頁面 {#adding-a-leaderboard-to-a-page}
 
-添加 `Leaderboard` 组件到创作模式下的页面，找到该组件
+若要新增 `Leaderboard` 元件至作者模式下的頁面，找到元件
 
 * `Communities / Leaderboard`
 
-并将其拖动到页面上的适当位置。
+並將其拖曳至頁面上的適當位置。
 
-有关必要信息，请访问 [社区组件基础知识](/help/communities/basics.md).
+如需必要資訊，請造訪 [Communities元件基本知識](/help/communities/basics.md).
 
-首次放置到社区站点的页面上时，以下是组件的显示方式：
+當元件首次放置於社群網站的頁面時，以下是元件的顯示方式：
 
 ![排行榜](assets/leaderboard.png)
 
-### 配置排行榜 {#configuring-leaderboard}
+### 設定排行榜 {#configuring-leaderboard}
 
-选择已放置的 `Leaderboard` 组件以访问和选择 `Configure` 图标，打开“编辑”对话框。
+選取已放置的 `Leaderboard` 元件以存取及選取 `Configure` 圖示來開啟「編輯」對話方塊。
 
 ![configure-new](assets/configure-new.png)
 
 ![configure-leaderboard](assets/configure-leaderboard.png)
 
-#### “设置”选项卡 {#settings-tab}
+#### 設定索引標籤 {#settings-tab}
 
-在 **[!UICONTROL 设置]** 选项卡，指定与显示的成员相关的信息：
+在 **[!UICONTROL 設定]** 索引標籤中，指定與顯示之成員相關的資訊：
 
 * **显示名称**
 
-   为展示板显示的描述性名称，反映为显示徽章和分数而选择的规则。
-默认为 `Leaderboard`如果未输入任何内容，则为。
+   為展示板顯示的描述性名稱，反映為顯示徽章和分數而選取的規則。
+預設為 `Leaderboard`，則不會輸入任何內容。
 
 * **徽章**
 
-   如果选中，则排行榜中包含徽章图标列。
-默认值为未选中。
+   如果勾選，則排行榜會包含徽章圖示欄。
+預設為未勾選。
 
 * **徽章名称**
 
-   如果选中，则排行榜中将包含徽章名称列。
-默认值为未选中。
+   如果勾選，則排行榜會包含徽章名稱的欄。
+預設為未勾選。
 
-* **使用头像**
+* **使用頭像**
 
-   如果选中，则成员的头像图像将包含在排行榜中，位于其名称链接旁边，指向其成员配置文件。
-默认值为未选中。
+   如果勾選，成員的頭像影像會包含在排行榜中，位於其名稱連結至成員個人檔案的旁邊。
+預設為未勾選。
 
-#### “规则”选项卡 {#rules-tab}
+#### 規則標籤 {#rules-tab}
 
-在 **规则** 选项卡、社区站点及其评分和标记规则
+在 **規則** 標籤、社群網站及其評分和徽章規則
 
 * **规则位置**
 
-   （必需）配置评分/徽章规则的位置。
+   （必要）評分/徽章規則的設定位置。
 
 * **评分规则**
 
-   （必需）生成要显示的分数的特定规则。
+   （必要）產生要顯示之分數的特定規則。
 
 * **徽章规则**
 
-   （必需）生成要显示的徽章的特定规则。
+   （必要）產生要顯示之徽章的特定規則。
 
 * **显示限制**
 
-   每页显示的成员数。默认为10。
+   每頁顯示的成員數目。預設為10。
 
-### 示例：参与者排行榜 {#example-participants-leaderboard}
+### 範例：參與者排行榜 {#example-participants-leaderboard}
 
-此排行榜报告应用基本评分规则的结果。
+此排行榜會報告套用基本評分規則的結果。
 
-排行榜组件配置：
+排行榜元件設定：
 
-* 设置选项卡：
+* 設定標籤：
 
    * 显示名称 = `Participation Board`
    * `checked`:
 
       * 徽章
       * 徽章名称
-      * 使用头像
+      * 使用頭像
 
-* “规则”选项卡：
+* 規則標籤：
 
    * 规则位置 = `/content/sites/<site name>/jcr:content`
    * 评分规则 = `/libs/settings/community/scoring/rules/forums-scoring`
    * 徽章规则 = `/libs/settings/community/badging/rules//reference-badging`
    * 显示限制 = `10`
 
-![参与者 — 排行榜](assets/participants-leaderboard.png)
+![參與者 — 排行榜](assets/participants-leaderboard.png)
 
-### 示例：专家排行榜 {#example-experts-leaderboard}
+### 範例：專家排行榜 {#example-experts-leaderboard}
 
-此排行榜报告应用高级评分规则的结果。
+此排行榜會報告套用進階評分規則的結果。
 
-排行榜组件配置：
+排行榜元件設定：
 
-* 设置选项卡：
+* 設定標籤：
 
    * 显示名称 = `Expertise Board`
    * `checked`:
 
       * 徽章
-      * 使用头像
+      * 使用頭像
 
-* “规则”选项卡：
+* 規則標籤：
 
    * 规则位置 = `/content/sites/<site name>/jcr:content`
    * 评分规则 = `/libs/settings/community/scoring/rules/adv-forums-scoring`
    * 徽章规则 = `/libs/settings/community/badging/rules/adv-forums-badging`
    * 显示限制 = `10`
 
-![专家 — 排行榜](assets/experts-leaderboard.png)
+![experts-leaderboard](assets/experts-leaderboard.png)
 
 ### 附加信息 {#additional-information}
 
-欲知更多信息，请访问 [排行榜要点](/help/communities/leaderboard.md) 适用于开发人员的页面。
+如需詳細資訊，請參閱 [排行榜要點](/help/communities/leaderboard.md) 適用於開發人員的頁面。
 
-有关创建规则的说明，请参见 [社区评分和徽章](/help/communities/implementing-scoring.md) 页面。
+建立規則的指示見 [社群評分和預算](/help/communities/implementing-scoring.md) 管理員頁面。

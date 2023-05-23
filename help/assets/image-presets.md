@@ -1,6 +1,6 @@
 ---
 title: 应用 Dynamic Media 图像预设
-description: 了解如何在Dynamic Media中应用图像预设
+description: 瞭解如何在Dynamic Media中套用影像預設集
 uuid: 8bafcbd0-6df0-4d5b-b2f7-116ddb4ec060
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -13,48 +13,48 @@ exl-id: 98d88b59-eb8f-42db-abb8-04506a5b8c30
 source-git-commit: 4b8369de9e6a10b73115d53358ce98729d92ed44
 workflow-type: tm+mt
 source-wordcount: '327'
-ht-degree: 33%
+ht-degree: 3%
 
 ---
 
-# 应用Dynamic Media图像预设 {#applying-image-presets}
+# 套用Dynamic Media影像預設集 {#applying-image-presets}
 
-图像预设使资产能够动态投放不同大小、不同格式或具有动态生成的其他图像属性的图像。可以在导出图像时选择预设。 预设按照管理员指定的规范重新格式化图像。
+影像預設集可讓資產動態傳送不同大小、不同格式或動態產生之其他影像屬性的影像。 您可在匯出影像時選擇預設集。 預設集會根據管理員指定的規格重新格式化影像。
 
-此外，您可以选择响应式图像预设（选择图像预设后，通过 **[!UICONTROL RESS]** 按钮指定）。
+此外，您也可以選擇回應式影像預設集(由 **[!UICONTROL RESS]** 按鈕)。
 
-本节介绍如何使用图像预设。[管理员可以创建并配置图像预设](managing-image-presets.md)。
-
->[!NOTE]
->
->智能成像可与您现有的图像预设配合使用，并在交付的最后毫秒内使用智能功能，以根据浏览器或网络连接速度进一步减小图像文件大小。 参见 [智能成像](imaging-faq.md) 了解更多信息。
-
-无论您何时预览图像，都可以对图像应用图像预设。
+本節說明如何使用影像預設集。 [管理員可以建立和設定影像預設集](managing-image-presets.md).
 
 >[!NOTE]
 >
->在Dynamic Media - Scene7模式下，仅图像资产支持图像预设。
+>智慧型影像處理可搭配您現有的影像預設集運作，並在傳送的最後毫秒內運用智慧功能，根據瀏覽器或網路連線速度，進一步縮減影像檔案大小。 另請參閱 [智慧型影像](imaging-faq.md) 以取得詳細資訊。
 
-**要应用Dynamic Media图像预设，请执行以下操作：**
+您可以隨時將影像預設集套用至影像預覽。
 
-1. 打开资产，在左边栏中，选择下拉菜单，然后选择 **[!UICONTROL 演绎版]**.
+>[!NOTE]
+>
+>在Dynamic Media - Scene7模式中，影像預設集僅支援影像資產。
+
+**若要套用Dynamic Media影像預設集：**
+
+1. 開啟資產，然後在左側邊欄中選取下拉式功能表，然後選取「 」 **[!UICONTROL 轉譯]**.
 
    >[!NOTE]
    >
-   >* 静态演绎版显示在窗格的上半部分。 动态演绎版显示在下半部分。您只能对动态演绎版使用 URL 来显示图像。**[!UICONTROL URL]** 按钮仅在选择动态演绎版的情况下才会显示。而 **[!UICONTROL RESS]** 按钮则仅在选择响应式图像预设的情况下才会显示。
+   >* 靜態轉譯會顯示在窗格的上半部。 動態轉譯會顯示在下半部。 若僅限動態轉譯，您可以使用URL來顯示影像。 此 **[!UICONTROL URL]** 按鈕僅在您選取動態轉譯時顯示。 此 **[!UICONTROL RESS]** 按鈕僅在您選取回應式影像預設集時顯示。
    >
-   >* 当您选择时，系统会显示大量演绎版 **[!UICONTROL 演绎版]** 在资产的“详细信息”视图中。 您可以增加可查看的预设数。参见 [增加显示的图像预设数量](managing-image-presets.md#increasing-or-decreasing-the-number-of-image-presets-that-display).
+   >* 當您選取時，系統會顯示許多轉譯 **[!UICONTROL 轉譯]** 在資產的「詳細資訊」檢視中。 您可以增加可查看的预设数。另請參閱 [增加顯示的影像預設集數目](managing-image-presets.md#increasing-or-decreasing-the-number-of-image-presets-that-display).
 
 
    ![chlimage_1-208](assets/chlimage_1-208.png)
 
-1. 执行以下操作之一：
+1. 執行下列任一項作業：
 
-   * 选择动态演绎版，以便预览图像预设。
-   * 要显示弹出窗口，请选择 **[!UICONTROL URL]**， **[!UICONTROL 嵌入]**，或 **[!UICONTROL RESS]**.
+   * 選取動態轉譯，以便預覽影像預設集。
+   * 若要顯示快顯視窗，請選取 **[!UICONTROL URL]**， **[!UICONTROL 內嵌]**，或 **[!UICONTROL RESS]**.
 
    >[!NOTE]
    >
-   >如果资产 *和* 图像预设尚未发布，因此 **[!UICONTROL URL]** 按钮(或 **[!UICONTROL URL]** 和 **[!UICONTROL RESS]** 按钮（如果适用）不可用。
+   >如果資產 *和* 影像預設集尚未發佈，因此 **[!UICONTROL URL]** 按鈕(或 **[!UICONTROL URL]** 和 **[!UICONTROL RESS]** 按鈕（如果適用）不可用。
    >
-   >另请注意，图像预设会自动发布在Dynamic Media服务器上。
+   >另請注意，影像預設集會自動發佈在Dynamic Media伺服器上。

@@ -1,7 +1,7 @@
 ---
-title: 设置自适应表单的样式
+title: 設定最適化表單的樣式
 seo-title: Style your adaptive form
-description: 了解如何创建自定义主题、为各个组件设置样式以及在主题中使用Web字体
+description: 瞭解如何建立自訂主題、為個別元件設計樣式，以及在主題中使用網頁字型
 seo-description: Learn to create a custom theme, style individual components, and use web fonts in a theme
 page-status-flag: de-activated
 uuid: ffb2cc22-baaf-4525-a2e3-29f39271c670
@@ -16,152 +16,152 @@ ht-degree: 8%
 
 ---
 
-# 设置自适应表单的样式 {#do-not-publish-style-your-adaptive-form}
+# 設定最適化表單的樣式 {#do-not-publish-style-your-adaptive-form}
 
-了解如何创建自定义主题、为各个组件设置样式以及在主题中使用Web字体
+瞭解如何建立自訂主題、為個別元件設計樣式，以及在主題中使用網頁字型
 
 ![](do-not-localize/08-style_your_adaptiveformmain.png)
 
-本教程是 [创建您的第一个自适应表单](https://helpx.adobe.com/cn/experience-manager/6-3/forms/using/create-your-first-adaptive-form.html) 系列。 建议按时间顺序关注该系列，以了解、执行和演示完整的教程用例。
+本教學課程是 [建立第一個最適化表單](https://helpx.adobe.com/cn/experience-manager/6-3/forms/using/create-your-first-adaptive-form.html) 數列。 建議您依照時間順序觀看本系列，以瞭解、執行和示範完整的教學課程使用案例。
 
-## 关于教程  {#about-the-tutorial}
+## 關於教學課程  {#about-the-tutorial}
 
-您可以使用主题为自适应表单提供独特的外观和样式。 您可以应用随自适应表单编辑器提供的现成主题，也可以创建自己的自定义主题。 AEM [!DNL Forms] 提供 [主题编辑器](https://helpx.adobe.com/experience-manager/6-3/forms/using/themes.html) 创建自定义主题。 单个主题可以为在移动设备、平板电脑或桌面上打开的相同自适应表单提供不同的外观。 使用主题编辑器不需要具备CSS或LESS的任何先验知识，但这是必需的。
+您可以使用主題為最適化表單提供獨特的外觀和樣式。 您可以套用最適化表單編輯器提供的現成主題，或是建立自己的自訂主題。 AEM [!DNL Forms] 提供 [主題編輯器](https://helpx.adobe.com/experience-manager/6-3/forms/using/themes.html) 以建立自訂主題。 單一主題可為在行動裝置、平板電腦或桌上型電腦上開啟的相同最適化表單提供不同外觀。 使用主題編輯器不需要具備CSS或LESS的任何先前知識，但這是必要的。
 
-在本教程结束时，您将学习：
+在本教學課程結束時，您將學習：
 
-* 将现成的主题应用于自适应表单
-* 使用主题编辑器为自适应表单创建主题
-* 为单个组件设置样式
-* 附加部分：在自定义主题中使用Web字体
+* 將現成的主題套用至最適化表單
+* 使用主題編輯器為最適化表單建立主題
+* 為個別元件設定樣式
+* 額外章節：在自訂主題中使用網頁字型
 
-完成本教程后，该表单将类似于以下内容：
+完成本教學課程後，表單外觀會類似於下文：
 
-![具有自定义主题的表单](assets/styled-adaptive-form.png)
+![具有自訂主題的表單](assets/styled-adaptive-form.png)
 
 ## 开始之前 {#before-you-start}
 
-将下面给定的页眉样式和徽标图像下载到本地计算机上。 的标题 `shipping-address-add-update-form` 自适应表单使用页眉样式和徽标图像。 标题样式图像显示在标题的右侧。
+下載您本機電腦上的頁首樣式和標誌影像（如下所示）。 「 」的標題 `shipping-address-add-update-form` 最適化表單使用頁首樣式和標誌影像。 頁首樣式影像會出現在頁首的右側。
 
 [获取文件](assets/header-style.png)
 
 [获取文件](assets/logo-1.png)
 
-## 步骤1：将主题应用于自适应表单 {#step-apply-a-theme-to-your-adaptive-form}
+## 步驟1：將主題套用至最適化表單 {#step-apply-a-theme-to-your-adaptive-form}
 
-自适应表单编辑器提供了多个现成的主题。 如果您计划不对自适应表单使用自定义样式，则还可以使用现成的主题发布自适应表单。 主题与自适应表单无关。 您可以将同一主题应用于多个自适应表单。 要将主题应用于自适应表单，请执行以下操作：
+調適型表單編輯器提供多個現成可用的主題。 如果您不打算將自訂樣式用於最適化表單，也可以使用現成可用的主題發佈最適化表單。 主題與調適型表單無關。 您可以將相同主題套用至多個最適化表單。 若要將主題套用至最適化表單：
 
-1. 打开自适应表单进行编辑。
+1. 開啟最適化表單進行編輯。
 
    [http://localhost:4502/editor.html/content/forms/af/shipping-address-add-update-form.html](http://localhost:4502/editor.html/content/forms/af/shipping-address-add-update-form.html)
 
-1. 打开属性 **[!UICONTROL 自适应表单容器]**. 在属性浏览器中，导航到 **[!UICONTROL 基本]** > **[!UICONTROL 自适应表单主题]**. 此 **[!UICONTROL 自适应表单主题]** 字段列出了所有现成的主题和自定义主题。 默认情况下，将应用画布主题。
-1. 从中选择主题 **[!UICONTROL 自适应表单主题]** 字段。 例如， **调查主题**. 点按 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) 以应用所选主题。
+1. 開啟屬性 **[!UICONTROL 最適化表單容器]**. 在屬性瀏覽器中，導覽至 **[!UICONTROL 基本]** > **[!UICONTROL 最適化表單主題]**. 此 **[!UICONTROL 最適化表單主題]** 欄位會列出所有現成可用的主題和自訂主題。 依預設，會套用畫布主題。
+1. 從中選擇主題 **[!UICONTROL 最適化表單主題]** 欄位。 例如， **意見調查主題**. 點選 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) 以套用選取的主題。
 
-   ![带有默认主题的自适应表单](assets/default-adaptive-form.png)
+   ![具有預設主題的最適化表單](assets/default-adaptive-form.png)
 
-   **图：** *带有默认主题的自适应表单*
+   **圖：** *具有預設主題的最適化表單*
 
-   ![带有调查主题的自适应表单](assets/adaptive-form-with-survey-theme.png)
+   ![包含調查主題的最適化表單](assets/adaptive-form-with-survey-theme.png)
 
-   **图：** *带有调查主题的自适应表单*
+   **圖：** *包含調查主題的最適化表單*
 
-## 步骤2：更新您的自适应表单 {#step-update-your-adaptive-form}
+## 步驟2：更新最適化表單 {#step-update-your-adaptive-form}
 
-以上显示的设计要求更改现有自适应表单的占位符文本和徽标。 执行以下步骤以进行所需的更改：
+以上顯示的設計需要變更您現有的最適化表單的預留位置文字和標誌。 執行下列步驟以進行必要的變更：
 
-1. 更改页眉的现有徽标和文本。 要删除徽标，请执行以下操作：
+1. 變更頁首的現有標誌和文字。 若要移除標誌：
 
-   1. 在表单编辑器中打开表单。
+   1. 在表單編輯器中開啟表單。
 
       [http://localhost:4502/editor.html/content/forms/af/shipping-address-add-update-form.html](http://localhost:4502/editor.html/content/forms/af/shipping-address-add-update-form.html)
 
-   1. 点按中的徽标图像 [!UICONTROL 标头] 组件和点按 ![cmppr](assets/cmppr.png) **[!UICONTROL 属性]**. 在 [!UICONTROL 图像] 属性，点按X可删除现有的徽标图像。
-   1. 点按 **[!UICONTROL 上传]**，选择logo.png ，然后点按 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) 以保存更改。 图像下载到 [开始之前](/help/forms/using/style-your-adaptive-form.md#before-you-start) 部分。
-   1. 点按标题文本， `We.Retail`，然后点按 ![aem_6_3_edit](assets/aem_6_3_edit.png) **[!UICONTROL 编辑]**. 将标题文本更改为 `we retail`. 仅将粗体格式应用于 `we`在 `we retail`.
+   1. 點選中的標誌影像 [!UICONTROL 頁首] 元件並點選 ![cmppr](assets/cmppr.png) **[!UICONTROL 屬性]**. 在 [!UICONTROL 影像] 屬性，點選X以移除現有的標誌影像。
+   1. 點選 **[!UICONTROL 上傳]**，選取logo.png，然後點選 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) 以儲存變更。 此影像下載於 [開始之前](/help/forms/using/style-your-adaptive-form.md#before-you-start) 區段。
+   1. 點選頁首文字， `We.Retail`，然後點選 ![aem_6_3_edit](assets/aem_6_3_edit.png) **[!UICONTROL 編輯]**. 將頁首文字變更為 `we retail`. 僅套用粗體格式至 `we`在 `we retail`.
 
       ![we-retail-logo-text](assets/we-retail-logo-text.png)
 
-1. 删除标题并添加占位符文本：
+1. 移除標題並新增預留位置文字：
 
-   1. 点按客户ID字段，然后点按 ![cmppr](assets/cmppr.png) 属性。
-   1. 复制的内容 **[!UICONTROL 标题]** 字段到 **[!UICONTROL 占位符文本]** 字段。
-   1. 删除的内容 **[!UICONTROL 标题]** 字段并点按 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
-   1. 对表单中的所有文本框、数字框和电子邮件字段重复前三个步骤。
+   1. 點選「客戶ID」欄位並點選 ![cmppr](assets/cmppr.png) 屬性。
+   1. 複製的內容 **[!UICONTROL 標題]** 欄位至 **[!UICONTROL 預留位置文字]** 欄位。
+   1. 刪除的內容 **[!UICONTROL 標題]** 欄位並點選 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
+   1. 對表單中的所有文字方塊、數值方塊和電子郵件欄位重複前三個步驟。
 
       ![updated-adaptive-form](assets/updated-adaptive-form.png)
 
-## 步骤3：为自适应表单创建自定义主题 {#step-create-a-custom-theme-for-your-adaptive-form}
+## 步驟3：建立最適化表單的自訂主題 {#step-create-a-custom-theme-for-your-adaptive-form}
 
-您可以使用 [主题编辑器](/help/forms/using/themes.md) 创建自定义主题。 主题编辑器是一个功能强大的WYSIWYG编辑器。 这是一种将CSS应用于自适应表单的各种组件的可视化方法。 它提供更精细的控件以设置自适应表单的组件和面板的样式。
+您可以使用 [主題編輯器](/help/forms/using/themes.md) 以建立自訂主題。 主題編輯器是功能齊全的WYSIWYG編輯器。 這是一種將CSS套用至最適化表單的各種元件的視覺方法。 它提供更精細的控制項，以設定最適化表單元件和面板的樣式。
 
-主题是一个单独的实体，例如自适应表单。 它包含自适应表单的组件和面板的样式(CSS)。 样式包括CSS属性，例如背景颜色、状态颜色、透明度、对齐方式和大小。 应用主题时，指定的样式将应用于自适应表单的相应组件。
+主題是獨立的實體，例如調適型表單。 它包含最適化表單的元件和面板的樣式(CSS)。 樣式包含CSS屬性，例如背景顏色、狀態顏色、透明度、對齊方式和大小。 套用主題時，指定的樣式會套用至最適化表單的對應元件。
 
-在本教程中，您将设置页眉和页脚、文本和数字组件、附件组件和按钮的样式。 让我们从创建主题开始：
+在本教學課程中，您將會設定頁首與頁尾、文字與數值元件、附件元件及按鈕的樣式。 讓我們從建立主題開始：
 
 ### 创建主题 {#create-a-theme}
 
-1. 登录到AEM创作实例并导航到 **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]** > **[!UICONTROL 主题]**. 默认URL为 [http://localhost:4502/aem/forms.html/content/dam/formsanddocuments-themes](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments-themes).
-1. 点按 **[!UICONTROL 创建]** 并选择 **[!UICONTROL 主题]**. 此 [!UICONTROL 创建主题] 此时将显示包含创建主题所需字段的页面。 此 **[!UICONTROL 标题]** 和 **[!UICONTROL 名称]** 字段为必填字段：
+1. 登入AEM編寫執行個體並導覽至 **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]** > **[!UICONTROL 主題]**. 預設URL為 [http://localhost:4502/aem/forms.html/content/dam/formsanddocuments-themes](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments-themes).
+1. 點選 **[!UICONTROL 建立]** 並選取 **[!UICONTROL 主題]**. 此 [!UICONTROL 建立主題] 包含建立主題所需欄位的頁面隨即顯示。 此 **[!UICONTROL 標題]** 和 **[!UICONTROL 名稱]** 欄位為必填欄位：
 
-   * **标题：** 指定主题的标题。 例如， **全局主题。** 标题可帮助您从主题列表中识别主题。
-   * **名称：** 指定主题的名称。 例如， **全局主题。** 在存储库中创建具有指定名称的节点。 开始键入标题时，将自动生成“名称”字段的值。 您可以更改建议值。 名称字段只能包含字母数字字符、连字符和下划线。 所有无效输入均被替换为连字符。
+   * **標題：** 指定主題的標題。 例如， **全域主題。** 標題可協助您從主題清單中識別主題。
+   * **名稱：** 指定主題的名稱。 例如， **全域佈景主題。** 在存放庫中會建立具有指定名稱的節點。 當您開始輸入標題時，會自動產生名稱欄位的值。 您可以變更建議值。 名稱欄位只能包含英數字元、連字型大小和底線。 所有無效輸入都會以連字型大小取代。
 
-1. 点按&#x200B;**[!UICONTROL 创建]**。创建主题，并显示用于打开表单进行编辑的对话框。 点按 **[!UICONTROL 打开]** 在新选项卡中打开新创建的主题。 主题将在主题编辑器中打开。 对于样式，主题编辑器使用AEM附带的现成自适应表单 [!DNL Forms].
+1. 點選 **[!UICONTROL 建立]**. 主題隨即建立，並出現對話方塊以開啟表單進行編輯。 點選 **[!UICONTROL 開啟]** 在新標籤中開啟新建立的主題。 主題會在主題編輯器中開啟。 對於樣式，主題編輯器會使用AEM隨附的現成最適化表單 [!DNL Forms].
 
-   有关使用主题编辑器UI的信息，请参阅 [关于主题编辑器](/help/forms/using/themes.md#aboutthethemeeditor).
+   如需有關使用主題編輯器UI的資訊，請參閱 [關於主題編輯器](/help/forms/using/themes.md#aboutthethemeeditor).
 
-1. 点按 **[!UICONTROL 主题选项]** ![theme-options](assets/theme-options.png) > **[!UICONTROL 配置]**. 在 **[!UICONTROL 预览表单]** 字段中，选择 **shipping-address-add-update-form** 自适应表单，点按 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)，点按 **[!UICONTROL 保存]**. 现在，主题编辑器配置为使用您自己的自适应表单，而不是默认的自适应表单。 点按 **[!UICONTROL 取消]** 以返回到主题编辑器。
+1. 點選 **[!UICONTROL 主題選項]** ![theme-options](assets/theme-options.png) > **[!UICONTROL 設定]**. 在 **[!UICONTROL 預覽表單]** 欄位中，選取 **shipping-address-add-update-form** 最適化表單，點選 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)，點選 **[!UICONTROL 儲存]**. 現在，主題編輯器已設定為使用您自己的最適化表單，而不是預設的最適化表單。 點選 **[!UICONTROL 取消]** 以返回主題編輯器。
 
-   ![custom-them](assets/custom-theme.png)
+   ![custom-theme](assets/custom-theme.png)
 
-   **图：** *带有shipping-address-add-update-form自适应表单的主题编辑器*
+   **圖：** *具有shipping-address-add-update-form最適化表單的主題編輯器*
 
-   ![create-a-them](assets/create-a-theme.png)
+   ![create-a-theme](assets/create-a-theme.png)
 
-   **图：** *带有默认表单的自适应表单*
+   **圖：** *具預設表單的最適化表單*
 
-### 样式页眉和页脚 {#style-header-and-footer}
+### 樣式頁首與頁尾 {#style-header-and-footer}
 
-页眉和页脚为自适应表单提供一致且独特的外观。 通常，页眉包含组织的徽标和名称，页脚包含版权信息，并且这些信息在组织的多个表单中保持相同。 要设置shipping-address-add-update-form自适应表单的页眉和页脚样式，请执行以下操作：
+頁首和頁尾提供最適化表單的一致且獨特外觀。 一般而言，頁首包含組織的標誌和名稱，頁尾包含版權資訊，而在組織的多個表單中，這些資訊維持相同。 若要設定shipping-address-add-update-form最適化表單的頁首與頁尾樣式：
 
-1. 导航至 **[!UICONTROL 页眉]** > **[!UICONTROL 文本]** 选项。 “选择器”面板位于主题编辑器的左侧。 如果面板不可见，请点按 ![切换侧面板](assets/toggle-side-panel.png) 切换侧面板。
+1. 導覽 **[!UICONTROL 頁首]** > **[!UICONTROL 文字]** 選項。 「選取器」面板位於主題編輯器的左側。 如果看不到面板，請點選 ![切換側面板](assets/toggle-side-panel.png) 切換側面板。
 
-1. 在中设置以下属性 **[!UICONTROL 文本]** 可折叠项和点按 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
+1. 在中設定下列屬性 **[!UICONTROL 文字]** 摺疊式功能表並點選 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
 
-   | 属性 | 值 |
+   | 属性 | 价值 |
    |---|---|
    | 字体系列 | Arial |
    | 字体颜色 | FFFFFF |
    | 字体大小 | 54px |
 
-1. 点按 [!UICONTROL 标头] 小工具和点按 **[!UICONTROL 页眉]**. 用于设置标题小组件样式的选项显示在左侧。 展开 **[!UICONTROL Dimension和位置]** 可折叠项，设置 **[!UICONTROL 高度]** 到 `120px`，然后点按 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
-1. 展开 **[!UICONTROL 背景]** 标题小部件的折叠面板，设置 **[!UICONTROL 背景颜色]** 到 `F6921E.`
+1. 點選 [!UICONTROL 頁首] Widget和點選 **[!UICONTROL 頁首]**. 「頁首」Widget的樣式選項會顯示在左側。 展開 **[!UICONTROL Dimension與位置]** 收合式選單，設定 **[!UICONTROL 高度]** 至 `120px`，然後點選 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
+1. 展開 **[!UICONTROL 背景]** 頁首Widget的摺疊式功能表，設定 **[!UICONTROL 背景顏色]** 至 `F6921E.`
 
-   将鼠标悬停在 **[!UICONTROL 图像和渐变]** > **[!UICONTROL +添加]**，点按 **[!UICONTROL 图像]**. 设置以下属性并点按 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
+   暫留在 **[!UICONTROL 影像和漸層]** > **[!UICONTROL +新增]**，點選 **[!UICONTROL 影像]**. 設定以下屬性並點選 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
 
-   | 属性 | 值 |
+   | 属性 | 价值 |
    |---|---|
-   | 图像 | 上传header-style.png。 图像下载到 [开始之前](/help/forms/using/style-your-adaptive-form.md#before-you-start) 部分。 |
+   | 图像 | 上傳header-style.png。 此影像下載於 [開始之前](/help/forms/using/style-your-adaptive-form.md#before-you-start) 區段。 |
    | 位置 | 右下 |
    | 并排显示 | 不重复 |
 
-1. 在主题编辑器中，点按标题中的徽标并点按 **[!UICONTROL 页眉徽标]**. 展开Dimension和位置折叠面板，设置以下属性并点按 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
+1. 在主題編輯器中，點選標頭中的標誌並點選 **[!UICONTROL 頁首標誌]**. 展開「Dimension和位置」摺疊式功能表，設定下列屬性並點選 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
 
    <table> 
     <tbody> 
      <tr> 
       <td><b>边距</b></td> 
-      <td><b>值</b></td> 
+      <td><b>价值</b></td> 
      </tr> 
      <tr> 
       <td>边距</td> 
       <td> 
        <ul> 
-        <li>顶部：1.5雷姆</li> 
-        <li>底部：-35像素</li> 
-        <li>左：1rem<strong><br /> </strong></li> 
-       </ul> <p><strong>提示：</strong> 点按 <img src="assets/link.png"> 链接图标，为每个字段提供不同的值。<br /> </p> </td> 
+        <li>頂端：1.5雷姆</li> 
+        <li>下：-35px</li> 
+        <li>左： 1rem<strong><br /> </strong></li> 
+       </ul> <p><strong>秘訣：</strong> 點選 <img src="assets/link.png"> 連結圖示，為每個欄位提供不同的值。<br /> </p> </td> 
      </tr> 
      <tr> 
       <td>高度</td> 
@@ -170,20 +170,20 @@ ht-degree: 8%
     </tbody> 
    </table>
 
-1. 点按页脚小组件并点按 **[!UICONTROL 页脚]**. 展开 **[!UICONTROL 背景]** 可折叠项，设置 **[!UICONTROL 背景颜色]** 到 `F6921E`，然后点按 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
+1. 點選頁尾Widget並點選 **[!UICONTROL 頁尾]**. 展開 **[!UICONTROL 背景]** 收合式選單，設定 **[!UICONTROL 背景顏色]** 至 `F6921E`，然後點選 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
 
-### 设置数据捕获组件的样式，并将背景应用于自适应表单 {#style-the-data-capture-component-and-apply-a-background-to-the-adaptive-form}
+### 設定資料擷取元件的樣式，並將背景套用至最適化表單 {#style-the-data-capture-component-and-apply-a-background-to-the-adaptive-form}
 
-您可以在自适应表单中使用多个组件来捕获数据。 例如，文本框和数字框。 您可以为所有数据捕获组件提供相同的样式，或者为每个组件提供单独的样式。 在本教程中，会将相同的样式应用于数字框（客户ID、邮政编码）和文本框（客户ID、名称、送货地址、省/州、电子邮件）。 设置数据捕获组件的样式：
+您可以在最適化表單中使用多個元件來擷取資料。 例如，文字方塊和數值方塊。 您可以為所有資料擷取元件提供相同的樣式，或為每個元件提供個別的樣式。 在本教學課程中，相同的樣式會套用至數值方塊（客戶ID、郵遞區號）和文字方塊（客戶ID、名稱、送貨地址、州、電子郵件）。 設定資料擷取元件的樣式：
 
-1. 点按 **[!UICONTROL 客户ID]** 字段并点按 **[!UICONTROL 字段小组件]** 选项。 设置以下属性并点按 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
+1. 點選 **[!UICONTROL 客戶ID]** 欄位並點選 **[!UICONTROL 欄位Widget]** 選項。 設定以下屬性並點選 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
 
    <table> 
     <tbody> 
      <tr> 
       <td><b>折叠</b></td> 
       <td><b>属性</b></td> 
-      <td><b>值</b></td> 
+      <td><b>价值</b></td> 
      </tr> 
      <tr> 
       <td>边框</td> 
@@ -195,10 +195,10 @@ ht-degree: 8%
       <td>边框半径 </td> 
       <td> 
        <ul> 
-        <li>顶部：7像素<br /> </li> 
-        <li>右：7像素<br /> </li> 
-        <li>底部：7像素<br /> </li> 
-        <li>左：7像素<br /> </li> 
+        <li>頂端： 7px<br /> </li> 
+        <li>右： 7px<br /> </li> 
+        <li>下： 7px<br /> </li> 
+        <li>左側： 7px<br /> </li> 
        </ul> </td> 
      </tr> 
      <tr> 
@@ -226,28 +226,28 @@ ht-degree: 8%
       <td>边距</td> 
       <td> 
        <ul> 
-        <li>左：10雷姆</li> 
+        <li>左： 10rem</li> 
        </ul> </td> 
      </tr> 
     </tbody> 
     </table>
 
-1. 点按“ ”上方的空白区域 **[!UICONTROL 客户ID]** 字段并点按 **[!UICONTROL 响应面板容器]**. 设置 **[!UICONTROL 背景]** > **[!UICONTROL 背景颜色]** 到F1F2F2。 点按 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
+1. 點選上方空白區域 **[!UICONTROL 客戶ID]** 欄位並點選 **[!UICONTROL 回應式面板容器]**. 設定 **[!UICONTROL 背景]** > **[!UICONTROL 背景顏色]** 至F1F2F2。 點選 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
 
    ![](do-not-localize/responsive-panel-container.png)
 
-### 设置按钮的样式 {#style-the-buttons}
+### 設定按鈕的樣式 {#style-the-buttons}
 
-您可以使用自定义主题将相同的样式应用于自适应表单的所有按钮，并且 [内联样式](/help/forms/using/inline-style-adaptive-forms.md) 将样式应用于特定按钮。 设置按钮的样式：
+您可以使用自訂主題，將相同的樣式套用至最適化表單的所有按鈕，以及 [內嵌樣式](/help/forms/using/inline-style-adaptive-forms.md) 將樣式套用至特定按鈕。 設定按鈕的樣式：
 
-1. 点按 **[!UICONTROL 提交]** 按钮并点按 **[!UICONTROL 按钮]** 选项。 设置以下属性并点按 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
+1. 點選 **[!UICONTROL 提交]** 按鈕並點選 **[!UICONTROL 按鈕]** 選項。 設定以下屬性並點選 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
 
    <table> 
     <tbody> 
      <tr> 
       <td><b>折叠</b></td> 
       <td><b>属性</b></td> 
-      <td><b>值</b></td> 
+      <td><b>价值</b></td> 
      </tr> 
      <tr> 
       <td>背景</td> 
@@ -264,10 +264,10 @@ ht-degree: 8%
       <td>边框半径 </td> 
       <td> 
        <ul> 
-        <li>顶部：7像素<br /> </li> 
-        <li>右：7像素<br /> </li> 
-        <li>底部：7像素<br /> </li> 
-        <li>左：7像素</li> 
+        <li>頂端： 7px<br /> </li> 
+        <li>右： 7px<br /> </li> 
+        <li>下： 7px<br /> </li> 
+        <li>左側： 7px</li> 
        </ul> </td> 
      </tr> 
      <tr> 
@@ -288,34 +288,34 @@ ht-degree: 8%
     </tbody> 
    </table>
 
-1. [应用自定义主题](/help/forms/using/style-your-adaptive-form.md#step-apply-a-theme-to-your-adaptive-form)，全局主题，添加到自适应表单。 如果样式未反映在自适应表单上，请清除浏览器缓存并重试。
+1. [套用自訂主題](/help/forms/using/style-your-adaptive-form.md#step-apply-a-theme-to-your-adaptive-form)，全域佈景主題，變更為最適化表單。 如果樣式未反映在最適化表單上，請清除瀏覽器快取，然後再試一次。
 
    ![style-data-capture-components](assets/style-data-capture-components.png)
 
-## 步骤4：设置单个组件的样式 {#step-style-individual-components}
+## 步驟4：設定個別元件的樣式 {#step-style-individual-components}
 
-某些样式仅应用于特定组件。 此类组件在自适应表单编辑器中设置样式。
+某些樣式僅套用至特定元件。 這類元件會在最適化表單編輯器中設定樣式。
 
-1. 打开自适应表单进行编辑。 [http://localhost:4502/editor.html/content/forms/af/shipping-address-add-update-form.html](http://localhost:4502/editor.html/content/forms/af/change-billing-shipping-address.html)
-1. 在顶部栏上，选择 **[!UICONTROL 样式]** 选项。
+1. 開啟最適化表單進行編輯。 [http://localhost:4502/editor.html/content/forms/af/shipping-address-add-update-form.html](http://localhost:4502/editor.html/content/forms/af/change-billing-shipping-address.html)
+1. 在頂端列上，選取 **[!UICONTROL 樣式]** 選項。
 
    ![style-option](assets/style-option.png)
 
-1. 点按 **[!UICONTROL 附加]** 按钮并点按 ![aem_6_3_edit](assets/aem_6_3_edit.png)图标。 在中设置以下属性 **[!UICONTROL Dimension和位置]** 可折叠项：
+1. 點選 **[!UICONTROL 附加]** 按鈕並點選 ![aem_6_3_edit](assets/aem_6_3_edit.png)圖示。 在中設定下列屬性 **[!UICONTROL Dimension和位置]** 收合式選單：
 
-   | 属性 | 值 |
+   | 属性 | 价值 |
    |---|---|
    | 浮点数 | 左 |
    | 宽度 | 10% |
 
-1. 点按 **[!UICONTROL 政府批准的地址证明]** 选项，然后点按 ![aem_6_3_edit](assets/aem_6_3_edit.png)图标。 设置以下属性：
+1. 點選 **[!UICONTROL 政府核准的地址證明]** 選項，然後點選 ![aem_6_3_edit](assets/aem_6_3_edit.png)圖示。 設定下列屬性：
 
    <table> 
     <tbody> 
      <tr> 
       <td><b>折叠</b></td> 
       <td><b>属性</b></td> 
-      <td><b>值</b></td> 
+      <td><b>价值</b></td> 
      </tr> 
      <tr> 
       <td>尺寸及位置</td> 
@@ -332,7 +332,7 @@ ht-degree: 8%
       <td>边距</td> 
       <td> 
        <ul> 
-        <li>左：10像素</li> 
+        <li>左： 10px</li> 
        </ul> </td> 
      </tr> 
      <tr> 
@@ -346,7 +346,7 @@ ht-degree: 8%
       <td><br /> 
        <ul> 
         <li>右：2rem</li> 
-        <li>左：10雷姆 </li> 
+        <li>左： 10rem </li> 
        </ul> </td> 
      </tr> 
      <tr> 
@@ -398,14 +398,14 @@ ht-degree: 8%
     </tbody> 
    </table>
 
-1. 点按 **[!UICONTROL 提交]** 按钮并点按 ![aem_6_3_edit](assets/aem_6_3_edit.png) 图标。 设置以下属性：
+1. 點選 **[!UICONTROL 提交]** 按鈕並點選 ![aem_6_3_edit](assets/aem_6_3_edit.png) 圖示。 設定下列屬性：
 
    <table> 
     <tbody> 
      <tr> 
       <td><b>折叠</b></td> 
       <td><b>属性</b></td> 
-      <td><b>值</b></td> 
+      <td><b>价值</b></td> 
      </tr> 
      <tr> 
       <td>Dimension和位置</td> 
@@ -417,10 +417,10 @@ ht-degree: 8%
       <td>边距</td> 
       <td> 
        <ul> 
-        <li>顶部：5雷姆</li> 
-        <li>右：14雷姆</li> 
-        <li>底部：20像素</li> 
-        <li>左：20像素<br /> </li> 
+        <li>頂端：5rem</li> 
+        <li>右： 14rem</li> 
+        <li>底部：20px</li> 
+        <li>左： 20px<br /> </li> 
        </ul> </td> 
      </tr> 
      <tr> 
@@ -438,21 +438,21 @@ ht-degree: 8%
 
    ![styled-adaptive-form-1](assets/styled-adaptive-form-1.png)
 
-## 步骤5：附加部分：在自定义主题中使用Web字体 {#step-bonus-section-using-web-fonts-in-a-custom-theme}
+## 步驟5：額外區段：在自訂主題中使用Web字型 {#step-bonus-section-using-web-fonts-in-a-custom-theme}
 
-您可以使用各种字体设计自适应表单。 查看自适应表单的所有设备可能没有用于设计自适应表单的字体。 您可以使用Web字体服务将所需的字体交付给目标设备。
+您可以使用各種字型來設計最適化表單。 檢視最適化表單的所有裝置可能沒有用來設計最適化表單的字型。 您可以使用Web字型服務，將所需的字型傳送至目標裝置。
 
-[!DNL Adobe Fonts] 是Web字体服务。 您可以针对自适应表单配置和使用服务。 使用 [!DNL Adobe Fonts] 在自适应表单中：
+[!DNL Adobe Fonts] 是web fonts服務。 您可以透過最適化表單來設定和使用服務。 使用 [!DNL Adobe Fonts] 在最適化表單中：
 
 >[!NOTE]
 >
->![typekit-to-adobe-fonts](assets/typekit-to-adobe-fonts.png) [!DNL Typekit] 现在称为Adobe Fonts，包含在Creative Cloud和其他订阅中。 [了解更多](https://fonts.adobe.com/)。
+>![typekit-to-adobe-fonts](assets/typekit-to-adobe-fonts.png) [!DNL Typekit] 現在稱為Adobe Fonts，並包含在Creative Cloud和其他訂閱中。 [了解详情](https://fonts.adobe.com/).
 
-1. 创建 [Adobe Fonts](https://typekit.com/) 帐户、创建套件、将字体Myriad Pro添加到套件、发布套件并获取套件ID。 需要使用 [!DNL Adobe Fonts] （Web字体）。
-1. 在AEM中 [!DNL Forms] 服务器，导航到 ![adobeexperiencemanager](assets/adobeexperiencemanager.png) **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL 工具]** ![锤子](assets/hammer.png) > **[!UICONTROL Adobe Fonts]**. 现在，打开一个配置文件夹。 如果配置已经可用，请单击 **[!UICONTROL 创建]** 按钮以创建新实例。
+1. 建立 [Adobe Fonts](https://typekit.com/) 帳戶、建立套件、將字型Myriad Pro新增至套件、發佈套件並取得套件ID。 必須使用 [!DNL Adobe Fonts] （網頁字型）的最適化表單。
+1. 在AEM中 [!DNL Forms] 伺服器，導覽至 ![adobeexperiencemanager](assets/adobeexperiencemanager.png) **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL 工具]** ![槌子](assets/hammer.png) > **[!UICONTROL Adobe Fonts]**. 現在，開啟設定資料夾。 如果設定已經可用，請按一下 **[!UICONTROL 建立]** 按鈕來建立新執行個體。
 
-   在创建配置对话框中，指定 **标题** ，然后单击 **[!UICONTROL 创建]**. 您将被重定向到配置页面。 在 [!UICONTROL 编辑组件] 对话框，请提供 **套件ID** 并单击 **[!UICONTROL 确定]**.
+   在建立組態對話方塊上，指定 **標題** ，然後按一下 **[!UICONTROL 建立]**. 系統會將您重新導向至設定頁面。 在 [!UICONTROL 編輯元件] 對話方塊中，提供您的 **套件ID** 並按一下 **[!UICONTROL 確定]**.
 
-1. 配置主题以使用 [!DNL Adobe Fonts] 配置。 在创作实例上，打开 **[!UICONTROL 全局主题]** 在主题编辑器中。 在主题编辑器中，导航到 **[!UICONTROL 主题选项]** ![theme-options](assets/theme-options.png) > **[!UICONTROL 配置]**. In **[!UICONTROL Adobe Fonts配置]** 字段，选择配套件，然后单击 **[!UICONTROL 保存]**.
+1. 設定您的主題以使用 [!DNL Adobe Fonts] 設定。 在作者執行個體上，開啟 **[!UICONTROL 全域主題]** 在主題編輯器中。 在主題編輯器中，導覽至 **[!UICONTROL 主題選項]** ![theme-options](assets/theme-options.png) > **[!UICONTROL 設定]**. 在 **[!UICONTROL Adobe Fonts設定]** 欄位，選取套件，然後按一下 **[!UICONTROL 儲存]**.
 
-   添加到中的字体 **[!UICONTROL Adobe Fonts]** 可在 **[!UICONTROL 文本]** 所有组件的折叠面板。
+   新增至的字型 **[!UICONTROL Adobe Fonts]** 可供選取 **[!UICONTROL 文字]** 所有元件的摺疊式功能表。

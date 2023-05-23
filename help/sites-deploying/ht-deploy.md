@@ -1,7 +1,7 @@
 ---
-title: 配置操作方法文章
+title: 設定操作說明文章
 seo-title: Configuration How-To Articles
-description: 描述如何在AEM中完成特定部署任务的文章列表。
+description: 說明如何在AEM中完成特定部署工作的文章清單。
 seo-description: A list of articles that describe how to accomplish specific deployment tasks in AEM.
 uuid: 5a339a6f-9c1a-4324-92d3-08b975131a1b
 contentOwner: Guillaume Carlino
@@ -18,13 +18,13 @@ ht-degree: 10%
 
 ---
 
-# 配置操作方法文章{#configuration-how-to-articles}
+# 設定操作說明文章{#configuration-how-to-articles}
 
-以下主题介绍如何完成特定AEM部署任务：
+下列主題說明如何完成特定的AEM部署工作：
 
-* [如何使用日志查看器](https://helpx.adobe.com/experience-manager/kb/logsviewer.html)
-* [如何清除工作流和审核日志](https://helpx.adobe.com/experience-manager/kb/howtopurgewf.html)
+* [如何使用記錄檢視器](https://helpx.adobe.com/experience-manager/kb/logsviewer.html)
+* [如何清除工作流程和稽核記錄](https://helpx.adobe.com/experience-manager/kb/howtopurgewf.html)
 
-* [性能调整提示](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html?lang=zh-Hans)
-* [如何从欢迎屏幕中删除功能](/help/sites-developing/customizing-the-welcome-console.md)
-* [如何关闭位置跟踪器功能](https://helpx.adobe.com/experience-manager/kb/turn-off-geolocation.html)
+* [效能調整秘訣](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html?lang=zh-Hans)
+* [如何從歡迎畫面中移除功能](/help/sites-developing/customizing-the-welcome-console.md)
+* [如何關閉位置追蹤器功能](https://helpx.adobe.com/experience-manager/kb/turn-off-geolocation.html)
