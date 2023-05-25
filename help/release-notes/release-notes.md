@@ -1,290 +1,278 @@
 ---
-title: 版本注意事項 [!DNL Adobe Experience Manager] 6.5
-description: 尋找版本資訊、新增功能、安裝作法和詳細的變更清單 [!DNL Adobe Experience Manager] 6.5.
+title: 的发行说明 [!DNL Adobe Experience Manager] 6.5
+description: 查找版本信息、新增功能、安装操作方法和详细更改列表 [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 3
-exl-id: fc7d3727-7cd4-47a4-8e75-840f9f9c0e62
-source-git-commit: a95255594ec03c152cd96df48597ced5fce4b315
+source-git-commit: f8af806bbb78623d5ba12379fc547a2cffc03841
 workflow-type: tm+mt
-source-wordcount: '2972'
-ht-degree: 3%
+source-wordcount: '2606'
+ht-degree: 2%
 
 ---
 
-# [!DNL Adobe Experience Manager] 6.5最新Service Pack發行說明 {#aem-service-pack-release-notes}
+# [!DNL Adobe Experience Manager] 6.5最新Service Pack发行说明 {#aem-service-pack-release-notes}
 
-<!-- For an itemized list of all issues found in these release notes, see the following spreadsheet: https://adobe-my.sharepoint.com/:x:/r/personal/anujkapo_adobe_com/Documents/issue_tracker_sp_cfp_updates.xlsx?d=w3ea81ae4e6054153b132f2698c86f84e&csf=1&web=1&e=WRAZ43&nav=MTVfezk2OTJDQTNFLUI4QTQtNDY2RS05NEVCLUQ5QjcyNEVENkJDNn0 -->
+<!-- For an itemized list of all issues found in these release notes, see the following spreadsheet: https://adobe-my.sharepoint.com/:x:/r/personal/anujkapo_adobe_com/Documents/issue_tracker_sp_cfp_updates.xlsx?d=w3ea81ae4e6054153b132f2698c86f84e&csf=1&web=1&e=7yhrWb&nav=MTVfe0U0RjdDQUM3LTZCQ0EtNDk1Qy04Mjc1LTM2MUJEMzE1OEVGN30 -->
+
+<!-- DO NOT DELETE THIS HIDDEN NOTE      DO NOT DELETE THIS HIDDEN NOTE
+>[!NOTE]
+>
+>Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on package one week after the scheduled [!DNL Experience Manager] Service Pack release date. In this case, the add-on packages release Thursday, June 1, 2023. In addition, a list of Forms fixes and enhancements is added to this section. -->
 
 ## 发行版信息 {#release-information}
 
 | 产品 | [!DNL Adobe Experience Manager] 6.5 |
 | -------- | ---------------------------- |
-| 版本 | 6.5.16.0 <!-- UPDATE FOR EACH NEW RELEASE --> |
-| 类型 | Service Pack發行 |
-| 日期 | 2023年2月23日星期四 <!-- UPDATE FOR EACH NEW RELEASE --> |
-| 下载 URL | [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?pack[...]be/packages/cq650/servicepack/aem-service-pkg-6.5.16.0.zip) <!-- UPDATE FOR EACH NEW RELEASE --> |
+| 版本 | 6.5.17.0 <!-- UPDATE FOR EACH NEW RELEASE --> |
+| 类型 | Service Pack版本 |
+| 日期 | 2023年5月25日星期四 <!-- UPDATE FOR EACH NEW RELEASE --> |
+| 下载 URL | [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.17.0.zip) <!-- UPDATE FOR EACH NEW RELEASE --> |
 
-## 包含在 [!DNL Experience Manager] 6.5.16.0 {#what-is-included-in-aem-6516}
+## 中包括的内容 [!DNL Experience Manager] 6.5.17.0 {#what-is-included-in-aem-6517}
 
-[!DNL Experience Manager] 6.5.16.0包括自2019年4月6.5版首次發行以來所推出的新功能、客戶要求的重要增強功能、錯誤修正，以及效能、穩定性和安全性改善專案。 [安裝此Service Pack](#install) 於 [!DNL Experience Manager] 6.5. <!-- UPDATE FOR EACH NEW RELEASE -->
+[!DNL Experience Manager] 6.5.17.0包括自2019年4月首次推出6.5以来发布的新功能、客户请求的关键增强功能、错误修复以及性能、稳定性和安全性改进。 [安装此Service Pack](#install) 日期 [!DNL Experience Manager] 6.5. <!-- UPDATE FOR EACH NEW RELEASE -->
 
 <!-- Some of the key features and improvements are the following:
 
 * _REVIEWERS: WHAT ARE THE KEY FEATURES AND ENHANCEMENTS YOU WANT TO HIGHLIGHT IN THIS RELEASE?_ -->
 
-Dynamic Media的一項主要改善專案如下：
+此版本中的一些主要功能和改进如下：
 
-新通訊協定DASH (Dynamic Adaptive Streaming over HTTP)支援已推出，適用於Dynamic Media視訊傳送（透過CMAF）中的最適化位元速率串流 [通用媒體應用程式格式] 已啟用)。
+* **搜索体验增强功能**  — 您现在可以对搜索结果中显示的资源快速执行以下操作：
+   * 创建工作流
+   * 创建一个版本
+   * 关联或取消关联资源
 
-* 自适应流式处理 (DASH/HLS) 可确保最终用户获得更出色的视频观看体验.
-* DASH 是自适应视频流式处理的国际标准协议，在业界得到广泛应用.
-* 現在提交支援票證即可使用。
-
-另請參閱 [在您的帳戶上啟用DASH](/help/assets/video.md#enable-dash).
+   您无需导航到资产位置并查看其属性即可执行这些操作。
+* **Dynamic Media _快照_**— 试验测试图像或Dynamic Media URL，以查看各种图像修饰符的输出，并对文件大小（使用WebP和AVIF交付）、网络带宽和设备像素比进行智能成像优化。 参见 [Dynamic Media快照](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-snapshot.html).
+* **使用Dynamic Media进行DASH流**  — 为Dynamic Media视频交付中的自适应流推出了新协议(DASH - Dynamic Adaptive Streaming over HTTP)支持（已启用CMAF）。 现在向所有地区提供， [通过支持票证启用](/help/assets/video.md#enable-dash-on-your-account-enable-dash).
 
 <!-- UPDATE BELOW FOR EACH NEW RELEASE -->
 
-## [!DNL Assets] {#assets-6516}
+## [!DNL Assets]{#assets-6517}
 
-* 連線資產：當您在遠端DAM上啟用影像的智慧型裁切選項、將影像上傳至資料夾，並將資料夾同步至本機站台時，該資料夾不會在本機Sites部署上開啟。 (NPR-39912)
-* 依名稱排序集合時，清單檢視無法正常運作(ASSETS-19401)
-* 將大型媒體檔案(JPEG)上傳至「集合」時，Experience Manager會停止回應。 (ASSETS-19387)
-* 在內容樹窗格中，顯示的資產名稱不正確，因為資產位置未正確呈現。 (ASSETS-18870)
-* 使用連結共用集合時，URL中的資料在卡片檢視和清單檢視之間的隨機排列不相符。 (ASSETS-18758)
-* 當您在資料夾型別上使用篩選器執行Omnisearch時，搜尋結果不一致。 (ASSETS-18227)
-* 此 `dam:size` 屬性未在XMP回寫後更新，這會導致從傳回的資訊不正確 `/platform/path/to/asset.jpg;resource=metadata` API。 (ASSETS-17631)
-* 所有Experience Manager執行個體上未關閉的資源解析器。 (ASSETS-16904)
-* 無法為資產建立版本，即使您被指派了 `create` 和 `modify` 許可權。 (ASSETS-15956)
-* 此 `move` 將資產從一個點移動到另一個點時，按鈕會隨機停用。 (ASSETS-14889)
-* 熒幕助讀程式無法識別標題，因為標題標籤內的文字並未定義，而是定義為一般文字。 (ASSETS-6924)
-* 影像下方的替代文字不是強制性的，但影像下顯示的文字是重複的 `Type` 屬性。 (ASSETS-6915)
+* 如果同时发布40个以上的PDF， [!DNL Experience Manager] 停止响应并在一段时间内不可用。 (ASSETS-21789)
+* 如果您以测试用户身份登录，则在单击某个资产的属性时，您将看不到与某个特定资产相关的资产。 (ASSETS-21648)
+* 使用编辑资源时 `Desktop Actions`，如果您尝试一次签入五个以上的资产， `Limit Reached` 将显示错误并签出选定的资产。 (ASSETS-21121)
+* 无法按收藏集中的名称对资源排序。 (ASSETS-20924)
+* 无法在图像格式类型的资产上设置维度。 (ASSETS-20835)
+* 共享链接时，“搜索/添加电子邮件地址”字段上的工具提示文本及其背景不显示相应的对比度。 (ASSETS-17347)
+* 展开时 `Notifications`时，由于段落间距，文本无法正常显示。 (ASSETS-17345)
+* 在收藏集中复制资产时， `Public Collection` 复选框未正确显示。 (ASSETS-17343)
+* 元素在没有角色的情况下使用ARIA属性。 (ASSETS-17325，ASSETS-17323)
+* 展开时链接不是描述性的 `Notifications`. (ASSETS-17283)
+* 导航并展开 [!DNL Smart Crop] 按钮时，内容看起来像列表一样，但未标记为未排序列表。 因此，屏幕阅读器无法识别无序列表并将其阅读为纯文本。 (ASSETS-17247)
+* 此 `Sort By` 标签不与其相应的下拉列表关联。 因此，屏幕阅读器无法识别下拉选项。 (ASSETS-17239)
+* 当您尝试使用添加用户时，无法使用键盘Tab键或箭头键向前或向后移动 `Add user` 组合框。 (ASSETS-17233)
+* 屏幕阅读器无法正确传达工作流步骤的信息(ASSETS-17285)。
+* 当您导航到 `Saved Searches` 下拉框中，名称和角色均没有任何分配的标签。 (ASSETS-17329)
+* 当您导航时 `Collection` 并将光标悬停在文本上 *成员*，则文本不会显示为已标记。 因此，屏幕阅读器无法识别标题文本并将其阅读为纯文本。 (ASSETS-17245)
+* 无法访问 `View Settings` 选项，使用键盘上的向下或向上滚动键。 (ASSETS-17257)
+* 无法为使用搜索筛选器找到的多个选定资产触发工作流。 (ASSETS-7689)
+* 从搜索结果中选择资产（或多个资产）时，“相关”或“取消相关”选项不可见。 但是，该选项可用，否则。 (ASSETS-7679)
+* 搜索过滤器面板在登录后仅打开一次，如果您退出搜索页面并重新运行搜索，则不会打开。 (ASSETS-7671)
 
+<!-- REMOVED BY ENGINEERING FROM TOTAL RELEASE CANDIDATE LIST 
+* When you select any file in a Collection and click `Download`, and then navigate to the email checkbox and expand it, regular text and email link is not recognizable due to background color. (ASSETS-17349) 
+* When you navigate to `Smart Crop` option, the screen reader does not announce the expand or collapse state of the button. (ASSETS-17335)-->
 
-## [!DNL Assets] - [!DNL Dynamic Media] {#dm-6516}
+## [!DNL Assets] - [!DNL Dynamic Media]{#dm-6517}
 
-* 表單元素不包含標籤。 使用NVDA和JAWS等熒幕閱讀程式時，表單標籤資訊無法正確宣告。 (CQ-4344078)
-* 下拉式清單在 `Escape` 鍵用於鍵盤。 (CQ-4344077)
-* 在提供無效輸入後針對內嵌錯誤建議顯示的資訊圖示（字母「i」）無法使用鍵盤存取。 (CQ-4344076)
-* `getManifestURI` 由於JCR屬性被讀取為，所以傳回null `toString` 而非 `getString`. (ASSETS-18674)
-* SmartCrop視訊元件的行為不正確。 元件正在執行播放而非串流，且VTT呼叫失敗，產生404錯誤。 (ASSETS-18468)
-* 選取 **[!UICONTROL 屬性]** 在資產的Viewer頁面上導致Null指標例外狀況。 (ASSETS-18420)
-* [!DNL Experience Manager] DASH串流的使用者介面變更，包括下列專案：
-   * 在視訊設定檔編輯器中具有可見的CMAF （通用媒體應用程式格式）欄位。
-   * 讓視訊上傳程式傳送CMAF標幟。
-   * 選項 **[!UICONTROL 自動]**， **[!UICONTROL hls]**、和 **[!UICONTROL 虛線]** 現在於檢視器預設集編輯器的「播放」下拉式清單中提供 **[!UICONTROL 行為]** 標籤。
-(ASSETS-17428)
-* 在「導覽」中，當您選取 **[!UICONTROL 資產]** > **[!UICONTROL 檔案]** > **[!UICONTROL 建立]** > **[!UICONTROL 傳送集]**，圖片圖示會與「投影片1」文字字串重疊。 (ASSETS-18578)
-* 已取消發佈的資產會再次發佈。 (ASSETS-16428)
-* Experience Manager作者因載入問題而關閉，提示建立綜合警報。 (ASSETS-15937)
-* 在Dynamic Media「一般設定」頁面中，出現未轉譯的錯誤訊息 `Failed to fetch data` 出現。 (ASSETS-15617)
+* 当Dynamic Media云配置已存在时，与Dynamic Media的连接已断开。 (ASSETS-23057)
+* 提高了浏览包含大量Dynamic Media视频的文件夹时的性能，解决了在文件夹信息卡视图上加载失败的问题。 (ASSETS-23016)
+* 从中删除预览令牌 `error.log` 用于从安全测试服务器请求安全内容。 (ASSETS-22685)
+* PDF缩略图渲染添加阴影。 升级了Gibson lib版本4.0.1680232194，以解决PDF缩略图渲染问题。 (ASSETS-22585)
+* Dynamic Media混合模式现在与New Relic Agent版本8.0.1 (ASSETS-22578)兼容。
+* 现在，在Experience Manager上预览Dynamic Media文件时，会考虑Experience ManagerACL（访问控制列表）。 (ASSETS-21628)
+* 当用户尝试使用向下箭头键或Tab键导航时，屏幕阅读器不会导航到隐藏元素。 (ASSETS-5617)
+* 图像配置文件用户界面限制使用相同名称、相同维度或两者的智能裁剪。 (ASSETS-16997)
+* 图像配置文件用户界面上的智能裁剪的默认宽度和高度现在设置为50像素。 (ASSETS-16997)
 
-## [!DNL Forms] {#forms-6516}
+## [!DNL Commerce]{#commerce-6517}
 
-### [!DNL Forms] 主要功能 {#forms-features-6516}
+* 已移动的标记是垃圾收集的，但仍由下的产品引用。 `/var`. (CQ-4351337)
 
-* [Headless最適化Forms](https://experienceleague.adobe.com/docs/experience-manager-headless-adaptive-forms/using/overview.html) 讓您的開發人員能夠建立、發佈和管理互動式表單，這些表單可透過API存取及互動，而不是透過傳統的圖形使用者介面。
+## [!DNL Forms]{#forms-6517}
 
-* [最適化Forms核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html#features) 是一組24個開放原始碼、符合BEM規範的元件，建立在Adobe Experience Manager WCM核心元件的基礎上。 這些元件是開放原始碼，讓開發人員能夠輕鬆自訂和擴充這些元件，以符合其組織的特定需求。 任何具備自訂技能的人 [WCM核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/authoring.html?lang=en) 可輕鬆自訂這些元件並設定其樣式。
+>[!NOTE]
+>
+>中的修复 [!DNL Experience Manager] Forms在计划日期后一周通过单独的附加组件包提供 [!DNL Experience Manager] Service Pack发行日期。 在本例中，附加组件包于2023年6月1日星期四发布。 此外，此部分还添加了Forms修复和增强功能的列表。
 
-* OSGi上的Reader擴充功能現在提供個別選項，可啟用PDF的匯入和匯出使用許可權，以便在Adobe Acrobat Reader中匯入或匯出資料。 (NPR-39909)
+## 集成{#integrations-6517}
 
-### [!DNL Forms] 修复 {#forms-fixes-6516}
+* 将Adobe Target IMS配置转换为旧版云配置中的用户凭据时， `connectedWhen` 属性不会更改。 此问题使得所有调用都像配置仍基于IMS一样运行。 (CQ-4352810)
+* 添加 `modifyProperties` 权限 `fd-cloudservice` Adobe Sign配置的系统用户。 (FORMS-6164)
+* 通过与Adobe Target集成的Experience Manager，在创建AB测试活动时，它不会将与其关联的受众同步到Target。 (NPR-40085)
 
-* 使用 **指派任務** 步驟針對指派的任務傳送通知，會傳送兩封電子郵件給指派的個人，而非一封。 (NPR-40078)
-* 當使用者隱藏表格標題時，會導致先前設定的欄寬取消設定，並且所有欄都保留相同的寬度。 (NPR-40063)
-* 如果您將管理員使用者的預設密碼從 `admin`，同時執行 `Prepare Adobe Experience Manager Server For DSC deployment` 檢查AEM Forms JEE Service Pack是否失敗。 (NPR-40062)、(NPR-39387)
-* OutputService和AssemblerService API無法將PDF表單轉換為PDF/A。(NPR-39990)
-* AssemblerService無法將PDF轉換為PDF/A。當使用者將PDF轉換為PDF/A時，出現以下錯誤： `PDFAConformance isCompliant="false" compliance="PDF/A-1b" resultLevel="Summary" ignoreUnusedResources="true" allowCertificationSignatures="true"> <Violation count="6" key="PDFA_CS_001_NOT_DEVICE_INDEPENDENT" description="ColorSpace is not device independent`. (NPR-39956)
-* 當GuideSubmitServlet API呼叫的伺服器端驗證失敗時，傳送給使用者端的回應中不會傳回錯誤。 (NPR-39925)
-* 在Windows伺服器上升級至AEM 6.5.15.0 Service Pack後，使用者會遇到多個錯誤訊息，且電子郵件服務無法運作。(NPR-39919)
-* 當您升級至AEM 6.5.14.0並使用importData服務將PDF與XML合併時，會發生下列錯誤： `Caused by: java.lang.NoSuchMethodError: com.adobe.xfa.form.FormModel.isXFABarcode(Lcom/adobe/xfa/Node;)Ljava/lang/Boolean`.(NPR-39807)
-* 使用者安裝時 **Document Security Office** 擴充功能時，會發生下列問題：
-   * Microsoft® Excel經常當機。
-   * 開啟安全保護檔案時， **Document Security Office** 未偵測到擴充功能已安裝在電腦上。 指示使用者下載並安裝安全性擴充功能。 (NPR-39768)
-* 使用者升級至AEM 6.5.15.0 Service Pack後，PostScript轉換為Pdf無法運作。 (NPR-39765)、(NPR-39764)
-* 當使用者嘗試在開啟最適化表單後開啟導覽畫面時，它會失敗並出現NullPointer例外狀況：`[172.17.0.1[1662032923933]GET/libs/fd/af/content/editors/form/tour/content.htmlHTTP/1.1]com.day.cq.wcm.core.impl.WCMDebugFilterException:org.apache.sling.api.scripting.ScriptEvaluationException:"` (NPR-39654)
-* 在Windows中，當使用者啟用高對比黑色設定時，HTML5 Forms內容在瀏覽器中呈現為HTML預覽時會變得不清楚。 (NPR-39018)
-* 當使用者嘗試新增中繼資料時，「草稿」和「提交」元件的「儲存」按鈕變得無法運作。(CQ-4349601)
-* 升級至AEM 6.5.15.0 Service Pack後，相對URL的重新導向無法在視覺化編輯器中運作。 (NPR-39947)
-* 當使用者升級至AEM 6.5.15.0 Service Pack時，重新導向停止搭配Internet Explorer使用。 (CQ-4351745)
-* 使用者升級至AEM 6.5.15.0 Service Pack後，無法辨識HTML標題標籤。 標題標籤的HTML碼會在HTML表單中顯示為文字。 (NPR-39915)
-* 當使用者嘗試提交最適化表單時，會發生型別預測錯誤： `ERROR [10.207.64.167 [1668589530607] POST /app/LS4/content/forms/af/revalidate/jcr:content/guideContainer.af.submit.jsp HTTP/1.1]`( NPR-39809)
-* 當使用者預覽記錄檔案使用 **傳送電子郵件** 提交動作，無法正確顯示。 郵件範本內嵌在記錄檔案的預覽中。 (CQ-4352155)
-* 當使用者在具有IE相容模式的Microsoft Edge瀏覽器上預覽最適化表單作為HTML時，該表單無法正確顯示。(CQ-4352216)
-* 字典必須包含具有特殊字元（例如底線或連字型大小）的新地區設定，才能啟用翻譯。 (NPR-40088)
+## Platform{#platform-6517}
 
-安裝AEM 6.5.16.0 Forms附加元件Service Pack後，客戶面臨下列問題。 因此，更新版本的 [AEM 6.5.16.0 Forms附加元件service pack - 6.0.914](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) 已發行。 Adobe建議使用更新的Service Pack：
-* base/java.util當使用者嘗試與表單 — 使用者群組中的使用者建立調適型表單時，選擇任何範本的選項不存在，並出現類似以下內容的錯誤：內部伺服器錯誤： java.lang.NullPointerException at com.adobe.aem.formsndocuments.servlet.ThemeClientLibraryDataSourceServlet.lambda$getThemeClientLibCategoryList$3(ThemeClientLibraryDataSourceServletServlet.java.java：76) at$java.stream.referencePipeline $1.accept(ReferencePipeline.java：176) at java.base/java.util.Iterator.forEachRemaining(Iterator.java：133) (FORMS-7629)
-* 未儲存程式碼編輯器規則中所做的變更。(FORMS-7532)
+* 在Experience ManagerTag Management用户界面(/aem/tags/)中，命名空间和标记按其创建顺序显示。 但是，当存在许多命名空间和标记时，查看和管理它们的功能会比较困难。 此问题是因为它们不能以任何其他方式排序。 (NPR-39620)
+* 需要Google关闭版本更新，因为缩小作业无法用于某些客户端库。 (NPR-40043)
 
-## 集成 {#integrations-6516}
+## [!DNL Sites]{#sites-6517}
 
-* 從Experience Manager6.5中移除AdobeSearch&amp;Promote程式碼和相依性。AdobeSearch&amp;Promote於2022年9月終止服務。 另請參閱 [AdobeSearch&amp;Promote服務終止公告](https://experienceleague.adobe.com/docs/discontinued/using/search-promote.html?lang=en). (NPR-39706)
+* LinkCheckerTransformer中的性能下降。 (SITES-11661)
+* 页面的语言副本未按预期更新。 (SITES-11191)
+* 打开非营销活动页面调用 `targeteditor.html` 不必要的。 删除 `targeteditor` 必要时调用。 (SITES-12469)
+* 无法为带有批注的页面创建活动副本。 (SITES-12154)
+* 页面转出已在Experience Manager6.5.16上运行。 (SITES-12008)
+* 内存不足；由于以下原因，垃圾收集活动频繁 `NotificationManagerImpl`. `NotificationManager` 捆绑包升级到AEM 6.5。 (SITES-11440)
+* 修复了阻止Service Pack 17的WCM IT测试。 (SITES-13089)
+* 在servlet上检索站点引用失败。 (SITES-10901)
 
-## [!DNL Sites] {#sites-6516}
+### [!DNL Sites]  — 管理员用户界面{#sites-adminui-6517}
 
-* 目前 `cq-wcm-core` 製作版本沒有POM。 (SITES-10983)
-* 轉出預覽動作不應列出要建立的頁面。 (SITES-10355， CQ-4266213)
-* 在MSM分離後轉出會重新建立分離的頁面。 (SITES-9841)
-* 建立啟動已逾時；使用者必須在載入畫面上等候數分鐘，要求才會逾時。 (SITES-9051)
-* 「轉出頁面」使用者介面顯示不存在的父頁面路徑。 您可以轉出包含成功訊息的頁面，但子頁面不會轉出，因為父頁面從一開始就沒有轉出。 (SITES-8621)
+* 无法关闭缩略图图像选择器的预览窗口。 (SITES-10459)
 
-### [!DNL Sites] - 核心组件 {#sites-core-components-6516}
+### [!DNL Sites] - [!DNL Content Fragments]{#sites-contentfragments-6517}
 
-* 集中處理電子郵件頁面上的連結，因此不再需要模型自訂。 (SITES-9002)
+* 用于连接到Polaris服务对象（URL、凭据、回调等）的配置。 (SITES-12149)
+* 使用情况 `SemanticDataType.REFERENCE` 应支持“Remote-Asset-IDs”。 (SITES-12127)
+* 将Polaris资产选择器集成到内容片段编辑器中。 (SITES-12125)
+* 访问元数据服务端点需要必需的http标头。 (SITES-13068)
+* GraphQL 6.5的实施与Cloud Service（主要）不尽相同；已确定的问题已得到修复。 (SITES-13096)
+* GraphQL分页/排序和混合筛选应在AEM 6.5/AMS上可用。 (SITES-9154)
 
-### [!DNL Sites]  — 管理員使用者介面 {#sites-adminui-6516}
+### [!DNL Sites] - 核心组件{#sites-core-components-6517}
 
-* 「CSV匯出」不會匯出所選頁面下的所有頁面。 (SITES-9390)
+* 属性 `cq-msm-lockable` Foundation页面组件中的重定向值错误。 (SITES-10904)
+* 远程资产选取器始终重定向到IMS暂存环境。 (SITES-13433)
 
-### [!DNL Sites] - [!DNL Content Fragments] {#sites-contentfragments-6516}
+### [!DNL Sites] - [!DNL Experience Fragments]{#sites-experiencefragments-6517}
 
-* 無法列印內容片段的JSON。 原因是當您開啟內容片段的「預覽」頁面時，無法產生GraphQL查詢。 (SITES-8619)
-* 重新開啟內容片段模式編輯器時，全部 **[!UICONTROL 日期與時間]** 欄位會預設為「日期與時間」型別。 (SITES-8401)
+* 在导出到Adobe Target时，在体验片段中选择外部化器配置会导致发送错误的外部化URL。 (SITES-12402)
+* 删除非包含性条款；应用包含性条款准则。 (SITES-11244)
 
-### [!DNL Sites] - [!DNL Experience Fragments] {#sites-experiencefragments-6516}
+### [!DNL Sites] - 页面编辑器{#sites-pageeditor-6517}
 
-* 您無法將體驗片段移動到另一個資料夾，即使範本列在允許的範本下。 (SITES-8601)
-* (SITES-7989)
+* Experience Manager内容查找器侧边栏中的轮播集未显示任何缩略图。 (SITES-8593)
 
+## Sling{#sling-6517}
 
-### [!DNL Sites] - 页面编辑器 {#sites-pageeditor-6516}
+* Sling `ResourceMerger` 为虚拟路径提供时会占用大量CPU，从而导致拒绝服务。 (NPR-40338)
 
-* 更新在SITES-8464中進行的資源解析器改善的相依性，其中在製作模式中轉譯的頁面建立了大量的 `TemplatedResourceImpl` 物件。 (SITES-9350)
+## 翻译项目{#translation-6517}
 
+<!-- REMOVED BY ENGINEERING FROM TOTAL RELEASE CANDIDATE LIST * The `translationrules.xml` is sorted poorly when adding a rule to a property by way of the translation configuration user interface. (NPR-40431) -->
+* 用户未配置非必填字段时不会创建语言副本。 (NPR-40036)
 
-## Sling {#sling-6516}
+## 用户界面{#ui-6517}
 
-* Experience Manager在啟動時鎖定。 (NPR-39832)
-* 當Experience Manager的版本儲存區中存在許多虛名路徑時，Experience Manager無法啟動。 (NPR-38955)
+* “页面属性”中的“取消”按钮处于不活动状态；它应该会将您转到“站点管理员”用户界面。 (NPR-40501)
 
+<!-- ## WCM{#wcm-6517}
 
-## 翻譯專案 {#translation-6516}
+* TEXT -->
 
-* 在 `MicrosoftTranslationServiceImpl`，查詢字串引數 `Category` 不正確。 (NPR-39828)
-* 建立翻譯專案會顯示錯誤 *主版頁面資源不存在*；未建立翻譯專案。 (NPR-39762)
-* 無法在使用人工翻譯聯結器的翻譯專案上設定到期日。 (NPR-39593)
+## 工作流{#workflow-6517}
 
-## 用户界面 {#ui-6516}
+* 工作流控制台更改。 (NPR-40502)
+* `SegmentNotfound errors` 在生产创作实例的日志中，由类中未关闭的资源解析程序导致 `com.day.cq.workflow.impl.email.EMailNotificationServic`. (NPR-40187)
+* 已关闭的未关闭 `ResourceResolver` 记录异常。 (ASSETS-22495)
+* Experience Manager创作在PSD/PDF大量内容时崩溃 `DocumentAncestors` 元数据属性已上传。 (ASSETS-22966)
+* 类中的会话泄漏 `InboxSharingCache` 替换为 `user-reader-service`. (CQ-4352513)
+* 当“工作流发起者参与者选择器”步骤列出参与者步骤的用户和组时，将显示不完整的用户和组列表。 当一个组同时也是另一个组的成员，则会发生此问题。 (NPR-40055)
+* 增强了工作流清除功能。 (NPR-40459)
 
-* 當變更為較小的解析度時，日期選擇器不會顯示，且AM/PM選取範圍不會顯示或明顯變更。 (NPR-39948)
-* 使用minify js （JavaScript最小化）時，由於剖析錯誤，其不會處理最小化。 (NPR-39650)
-* 標籤欄位(`/libs/cq/gui/components/coral/common/form/tagfield`)與時間軸衝突。 (CQ-4350751)
-
-
-## WCM {#wcm-6516}
-
-* 轉出預覽動作不應列出要建立的頁面。 (CQ-4266213， SITES-10355)
-
-## 工作流 {#workflow-6516}
-
-* 從手動刪除可編輯的工作流程模型 `/conf` 離開延遲的執行階段模型例證，而不含可編輯的模型。 (CQ-4349365)
-
-
-## 安裝 [!DNL Experience Manager] 6.5.16.0 {#install}
+## 安装 [!DNL Experience Manager] 6.5.17.0{#install}
 
 <!-- Remaining content from here to bottom stays the same except for version updating as needed as per update team feedback. -->
 
-* [!DNL Experience Manager] 6.5.16.0需要 [!DNL Experience Manager] 6.5.請參閱 [升級檔案](/help/sites-deploying/upgrade.md) 以取得詳細指示。 <!-- UPDATE FOR EACH NEW RELEASE -->
-* Service Pack下載專案可在Adobe取得 [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html).
-* 在具有MongoDB和多個執行個體的部署上，安裝 [!DNL Experience Manager] 使用封裝管理器的其中一個Author執行個體上的6.5.16.0。<!-- UPDATE FOR EACH NEW RELEASE -->
+* [!DNL Experience Manager] 6.5.17.0需要 [!DNL Experience Manager] 6.5.见 [升级文档](/help/sites-deploying/upgrade.md) 以获取详细说明。 <!-- UPDATE FOR EACH NEW RELEASE -->
+* 可在Adobe上获取Service Pack下载 [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.17.0.zip).
+* 在具有MongoDB和多个实例的部署中，安装 [!DNL Experience Manager] 使用包管理器对其中一个Author实例执行6.5.17.0。<!-- UPDATE FOR EACH NEW RELEASE -->
 
 >[!IMPORTANT]
 >
-> Adobe不建議您移除或解除安裝 [!DNL Experience Manager] 6.5.16.0套件。 因此，在安裝套件之前，您應該建立 `crx-repository` 以備您需要復原時使用。 <!-- UPDATE FOR EACH NEW RELEASE -->
+> Adobe不建议您删除或卸载 [!DNL Experience Manager] 6.5.17.0程序包。 因此，在安装该包之前，您应该创建 `crx-repository` 以防你必须把它倒回去。 <!-- UPDATE FOR EACH NEW RELEASE -->
 <!-- For instructions to install Service Pack for AEM Forms, see [AEM Forms Service Pack installation instructions](/help/release-notes/aem-forms-current-service-pack-installation-instructions.md). -->
 
 
-### 在上安裝Service Pack [!DNL Experience Manager] 6.5 {#install-service-pack}
+### 在上安装服务包 [!DNL Experience Manager] 6.5{#install-service-pack}
 
-1. 如果執行個體處於更新模式（執行個體是從舊版更新時），請在安裝前重新啟動執行個體。 如果執行個體的目前運作時間很高，Adobe建議重新啟動。
+1. 如果实例处于更新模式（从早期版本更新实例时），请在安装之前重新启动实例。 如果实例的当前正常运行时间较长，则Adobe建议重新启动。
 
-1. 安裝之前，請先拍攝快照或進行全新備份 [!DNL Experience Manager] 執行個體。
+1. 安装之前，请拍摄快照或进行全新备份 [!DNL Experience Manager] 实例。
 
-1. 下載Service Pack，從 [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.15.0.zip). <!-- UPDATE FOR EACH NEW RELEASE -->
+1. 从以下位置下载Service Pack [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.17.0.zip). <!-- UPDATE FOR EACH NEW RELEASE -->
 
-1. 開啟封裝管理員，然後選取 **[!UICONTROL 上傳套裝]** 以上傳套件。 若要瞭解更多，請參閱 [封裝管理員](/help/sites-administering/package-manager.md).
+1. 打开包管理器，然后选择 **[!UICONTROL 上传包]** 以上传包。 要了解更多信息，请参阅 [包管理器](/help/sites-administering/package-manager.md).
 
-1. 選取套件，然後選取 **[!UICONTROL 安裝]**.
+1. 选择包，然后选择 **[!UICONTROL 安装]**.
 
-1. 若要更新S3聯結器，請在安裝Service Pack後停止執行個體，以安裝資料夾中提供的新二進位檔案取代現有的聯結器，然後重新啟動執行個體。 另請參閱 [Amazon S3資料存放區](/help/sites-deploying/data-store-config.md#upgrading-to-a-new-version-of-the-s-connector).
+1. 要更新S3连接器，请在安装Service Pack后停止实例，将现有连接器替换为安装文件夹中提供的新二进制文件，然后重新启动实例。 参见 [Amazon S3数据存储](/help/sites-deploying/data-store-config.md#upgrading-to-a-new-version-of-the-s-connector).
 
 >[!NOTE]
 >
->安裝Service Pack期間，套件管理員UI上的對話方塊有時會結束。 Adobe建議您在存取部署之前，先等待錯誤記錄穩定下來。 等待與更新程式套件組合解除安裝相關的特定記錄，再確認安裝成功。 此問題通常發生於 [!DNL Safari] 瀏覽器，但可能間歇性地在任何瀏覽器上發生。
+>在安装Service Pack期间，有时会退出包管理器UI上的对话框。 Adobe建议您在访问部署之前等待错误日志稳定下来。 等待与卸载更新程序捆绑包相关的特定日志，然后确定安装成功。 通常，此问题出现在以下位置 [!DNL Safari] 浏览器，但可能间歇性地在任何浏览器上出现。
 
 **自动安装**
 
-您可以使用兩種方法自動安裝 [!DNL Experience Manager] 6.5.16.0。<!-- UPDATE FOR EACH NEW RELEASE -->
+可以使用两种不同的方法来自动安装 [!DNL Experience Manager] 6.5.17.0。<!-- UPDATE FOR EACH NEW RELEASE -->
 
-* 將套件置於 `../crx-quickstart/install` 資料夾（當伺服器線上上可用時）。 套件會自動安裝。
-* 使用 [套件管理器的HTTP API](/help/sites-administering/package-manager.md#package-share). 使用 `cmd=install&recursive=true` 以便安裝巢狀套件。
-
->[!NOTE]
->
->Experience Manager6.5.16.0不支援Bootstrap安裝。 <!-- UPDATE FOR EACH NEW RELEASE -->
-
-**驗證安裝**
-
-若要瞭解經過認證可搭配此版本使用的平台，請參閱 [技術需求](/help/sites-deploying/technical-requirements.md).
-
-1. 產品資訊頁(`/system/console/productinfo`)顯示更新的版本字串 `Adobe Experience Manager (6.5.16.0)` 在 [!UICONTROL 已安裝產品]. <!-- UPDATE FOR EACH NEW RELEASE -->
-
-1. 所有OSGi套件組合都可以 **[!UICONTROL 作用中]** 或 **[!UICONTROL 片段]** 在OSGi主控台中(使用Web主控台： `/system/console/bundles`)。
-
-1. OSGi套件 `org.apache.jackrabbit.oak-core` 是1.22.14版或更新版本(使用Web主控台： `/system/console/bundles`)。 <!-- NPR-39939 for 6.5.16.0 --> <!-- NPR-39436 for 6.5.15.0 --> <!-- OAK Oak oak VERSION -MAY- NEED TO BE UPDATED FOR EACH NEW RELEASE -->
-
-### 安裝Service Pack for [!DNL Experience Manager] Forms {#install-aem-forms-add-on-package}
-
-如需在AEM Forms上安裝Service Pack的說明，請參閱 [AEM Forms Service Pack安裝指示](/help/release-notes/aem-forms-current-service-pack-installation-instructions.md).
-
-### 安裝適用於Experience Manager內容片段的GraphQL索引套件 {#install-aem-graphql-index-add-on-package}
-
-使用GraphQL的客戶應安裝 [具有GraphQL索引套件1.0.5的AEM內容片段](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Fcfm-graphql-index-def-1.0.5.zip).
-
-這可讓您根據索引定義實際使用的功能，新增所需的索引定義。
-
-若未安裝此套件，可能會導致GraphQL查詢緩慢或失敗。
+* 将包放入 `../crx-quickstart/install` 文件夹（服务器联机时）。 软件包会自动安装。
+* 使用 [包管理器中的HTTP API](/help/sites-administering/package-manager.md#package-share). 使用 `cmd=install&recursive=true` 以便安装嵌套包。
 
 >[!NOTE]
 >
->每個執行個體只能安裝此套件一次；不需要隨每個Service Pack重新安裝此套件。
+>Experience Manager6.5.17.0不支持Bootstrap安装。 <!-- UPDATE FOR EACH NEW RELEASE -->
 
-### UberJar {#uber-jar}
+**验证安装**
 
-The UberJar for [!DNL Experience Manager] 6.5.16.0可在以下網址取得： [Maven中央存放庫](https://repo.maven.apache.org/maven2/com/adobe/aem/uber-jar/6.5.15/). <!-- CHECK FOR UPDATE EACH NEW RELEASE -->
+要了解经认证可与本版本配合使用的平台，请参阅 [技术要求](/help/sites-deploying/technical-requirements.md).
+
+1. 产品信息页面(`/system/console/productinfo`)显示更新的版本字符串 `Adobe Experience Manager (6.5.17.0)` 下 [!UICONTROL 已安装的产品]. <!-- UPDATE FOR EACH NEW RELEASE -->
+
+1. 所有OSGi捆绑包包 **[!UICONTROL 活动]** 或 **[!UICONTROL 片段]** 在OSGi控制台中(使用Web控制台： `/system/console/bundles`)。
+
+1. OSGi包 `org.apache.jackrabbit.oak-core` 是版本1.22.15或更高版本(使用Web控制台： `/system/console/bundles`)。 <!-- NPR-40398 for 6.5.17.0 --> <!-- OAK Oak oak VERSION -MAY- NEED TO BE UPDATED FOR EACH NEW RELEASE -->
+
+### 安装Service Pack for [!DNL Experience Manager] Forms{#install-aem-forms-add-on-package}
+
+有关在AEM Forms上安装此Service Pack的说明，请参阅 [AEM Forms Service Pack安装说明](/help/release-notes/aem-forms-current-service-pack-installation-instructions.md).
+
+### 安装用于Experience Manager内容片段的GraphQL索引包{#install-aem-graphql-index-add-on-package}
+
+使用GraphQL的客户必须安装 [包含GraphQL索引包1.1.1的AEM内容片段](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/cfm-graphql-index-def-1.1.1.zip).
+
+这样做可让您根据它们实际使用的功能添加所需的索引定义。
+
+无法安装此包可能会导致GraphQL查询缓慢或失败。
 
 >[!NOTE]
 >
->在Experience Manager6.5.16.0中，UberJar版本(6.5.15.0)與舊版相同。
+>每个实例仅安装此包一次；无需随每个Service Pack一起重新安装。
 
+### UberJar{#uber-jar}
 
-若要在Maven專案中使用UberJar，請參閱 [如何使用UberJar](/help/sites-developing/ht-projects-maven.md) 並在您的專案POM中包含下列相依性： <!-- CHECK FOR UPDATE EACH NEW RELEASE -->
+UberJar用于 [!DNL Experience Manager] 6.5.17.0可从以下网站获取： [Maven中央存储库](https://repo.maven.apache.org/maven2/com/adobe/aem/uber-jar/6.5.17/). <!-- CHECK FOR UPDATE EACH NEW RELEASE -->
+
+要在Maven项目中使用UberJar，请参阅 [如何使用UberJar](/help/sites-developing/ht-projects-maven.md) 并在项目POM中包含以下依赖项： <!-- CHECK FOR UPDATE EACH NEW RELEASE -->
 
 ```shell
 <dependency>
      <groupId>com.adobe.aem</groupId>
      <artifactId>uber-jar</artifactId>
-     <version>6.5.15</version>
+     <version>6.5.17</version>
      <scope>provided</scope>
 </dependency>
 ```
 
 >[!NOTE]
 >
->UberJar和其他相關成品可在Maven中央存放庫上使用，而不是Adobe公共Maven存放庫(`repo.adobe.com`)。 主要UberJar檔案已重新命名為 `uber-jar-<version>.jar`. 因此，沒有 `classifier`，搭配 `apis` 作為值，針對 `dependency` 標籤之間。
+>UberJar和其他相关工件在Maven中央存储库而不是Adobe公共Maven存储库(`repo.adobe.com`)。 主UberJar文件将重命名为 `uber-jar-<version>.jar`. 所以，没有 `classifier`，替换为 `apis` 作为值，用于 `dependency` 标记之前。
 
-## 已弃用功能 {#removed-deprecated-features}
+## 已弃用功能{#removed-deprecated-features}
 
-底下列出標示為過時的功能 [!DNL Experience Manager] 6.5.7.0。功能最初會標示為過時，之後會在未來版本中移除。 提供替代選項。
+以下为标记为已弃用的特性和功能的列表 [!DNL Experience Manager] 6.5.7.0。这些功能最初标记为已弃用，但以后会在以后的版本中删除。 提供了替代选项。
 
-檢閱是否在部署中使用功能或功能。 此外，計畫變更實作以使用替代選項。
+查看是否在部署中使用某个功能或功能。 此外，计划更改实施以使用替代选项。
 
 | 区域 | 专题 | 替换 |
 |---|---|---|
-| 集成 | 此 **[!UICONTROL AEM Cloud Services選擇加入]** 熒幕已過時，因為 [!DNL Experience Manager] 和 [!DNL Adobe Target] 整合更新於 [!DNL Experience Manager] 6.5.整合支援Adobe Target Standard API。 API透過Adobe IMS和以下方式使用驗證 [!DNL Adobe I/O Runtime]. 它可支援Adobe Launch在樂器領域日益增加的作用 [!DNL Experience Manager] 頁面進行分析和個人化時，選擇加入精靈在功能上並不相關。 | 設定系統連線、Adobe IMS驗證和 [!DNL Adobe I/O Runtime] 透過個別 [!DNL Experience Manager] 雲端服務。 |
-| 连接器 | Microsoft®SharePoint 2010和Microsoft®SharePoint 2013的AdobeJCR聯結器已過時 [!DNL Experience Manager] 6.5. | 不适用 |
+| 集成 | 屏幕 **[!UICONTROL AEM云服务选择加入]** 已弃用，因为 [!DNL Experience Manager] 和 [!DNL Adobe Target] 集成更新于 [!DNL Experience Manager] 6.5.该集成支持Adobe Target标准API。 该API通过Adobe IMS进行身份验证，并且 [!DNL Adobe I/O Runtime]. 它支持AdobeLaunch在检测方面发挥越来越大的作用 [!DNL Experience Manager] 页面进行分析和个性化时，选择加入向导在功能上无关紧要。 | 配置系统连接、Adobe IMS身份验证和 [!DNL Adobe I/O Runtime] 通过各自的集成 [!DNL Experience Manager] 云服务。 |
+| 连接器 | 用于Microsoft®SharePoint 2010和Microsoft®SharePoint 2013的AdobeJCR连接器已弃用 [!DNL Experience Manager] 6.5. | 不适用 |
 
-## 已知问题 {#known-issues}
+## 已知问题{#known-issues}
 
 <!-- THESE KNOWN ISSUES CARRY OVER EACH RELEASE. THE "PRODUCT UPDATES TEAM" IS SUPPOSED TO VERIFY EACH ISSUE AND LET YOU KNOW IF ANYTHING NEEDS TO BE ADDED, DELETED, OR CHANGED IN THIS LIST.
  -->
@@ -292,37 +280,37 @@ The UberJar for [!DNL Experience Manager] 6.5.16.0可在以下網址取得： [M
 To retrieve your runtime copy, Adobe recommends to synchronize the design-time copy of the custom workflow model with its runtime copy using the HTTP API:
 `<designModelPath>/jcr:content.generate.json`. -->
 
-* 請將可能已使用內容模型的自訂API名稱的GraphQL查詢更新為改用內容模型的預設名稱。
+* 将可能已使用内容模型的自定义API名称的GraphQL查询更新为改用内容模型的默认名称。
 
-* GraphQL查詢可使用 `damAssetLucene` 索引而非 `fragments` 索引。 這可能會導致GraphQL查詢失敗或需要很長時間執行。
+* GraphQL查询可以使用 `damAssetLucene` 索引而非 `fragments` 索引。 此操作可能会导致GraphQL查询失败或需要很长时间才能运行。
 
-   若要修正問題， `damAssetLucene` 必須設定為包含下列兩個屬性：
+   要更正此问题， `damAssetLucene` 必须配置为包含以下两个属性：
 
    * `contentFragment`
    * `model`
 
-   在索引定義變更後，需要重新索引(`reindex` = `true`)。
+   更改索引定义后，需要重新索引(`reindex` = `true`)。
 
-   執行這些步驟後，GraphQL查詢的執行速度應該會更快。
+   执行这些步骤后，GraphQL查询应该可以更快地执行。
 
-* 作為 [!DNL Microsoft®® Windows Server 2019] 不支援 [!DNL MySQL 5.7] 和 [!DNL JBoss®® EAP 7.1]， [!DNL Microsoft®® Windows Server 2019] 不支援以下專案的turnkey安裝 [!DNL AEM Forms 6.5.10.0].
+* 作为 [!DNL Microsoft® Windows Server 2019] 不支持 [!DNL MySQL 5.7] 和 [!DNL JBoss® EAP 7.1]， [!DNL Microsoft® Windows Server 2019] 不支持的全包安装 [!DNL AEM Forms 6.5.10.0].
 
-* 如果您升級您的 [!DNL Experience Manager] 從6.5.0 - 6.5.4執行個體到Java™ 11上的最新Service Pack，您會看到 `RRD4JReporter` 中的例外狀況 `error.log` 檔案。 若要停止例外，請重新啟動您的執行個體 [!DNL Experience Manager]. <!-- THIS BULLET POINT WAS UPDATED AS PER CQDOC-20021, JANUARY 23, 2023 -->
+* 如果您升级 [!DNL Experience Manager] 从6.5.0 - 6.5.4到Java™ 11上最新Service Pack的实例，请参见 `RRD4JReporter` 中的例外 `error.log` 文件。 要停止异常，请重新启动您的实例 [!DNL Experience Manager]. <!-- THIS BULLET POINT WAS UPDATED AS PER CQDOC-20021, JANUARY 23, 2023 -->
 
-* 使用者可以在下列位置重新命名階層中的資料夾： [!DNL Assets] 並將巢狀資料夾發佈至 [!DNL Brand Portal]. 但是，資料夾的標題不會更新於 [!DNL Brand Portal] 直到重新發佈根資料夾為止。
+* 用户可以在以下位置重命名层次结构中的文件夹： [!DNL Assets] 并将嵌套文件夹发布到 [!DNL Brand Portal]. 但是，文件夹的标题不会在中更新 [!DNL Brand Portal] 直到重新发布根文件夹。
 
-* 當使用者選擇在最適化表單中首次設定欄位時，儲存設定的選項未顯示在屬性瀏覽器中。 選擇在相同編輯器中設定最適化表單的其他欄位即可解決問題。
+* 当用户选择在自适应表单中首次配置字段时，保存配置的选项未显示在属性浏览器中。 选择在同一编辑器中配置自适应表单的其他一些字段可解决此问题。
 
-* 安裝期間可能會顯示下列錯誤和警告訊息 [!DNL Experience Manager] 6.5.x.x：
-   * 「當在中設定Adobe Target整合時 [!DNL Experience Manager] 使用Target Standard API （IMS驗證），然後將體驗片段匯出至Target會導致建立錯誤的選件型別。 Target不會使用「體驗片段」/來源「Adobe Experience Manager」型別，而是會建立多個具有「HTML」/來源「Adobe Target Classic」型別的選件。
-   * `com.adobe.granite.maintenance.impl.TaskScheduler`：在granite/operations/maintenance找不到維護時段。
-   * 使用SUM、MAX和MIN等彙總函式時，Adaptive Form伺服器端驗證會失敗(CQ-4274424)。
-   * `com.adobe.granite.maintenance.impl.TaskScheduler`  — 在granite/operations/maintenance找不到維護時段。
-   * 透過Shoppable Banner檢視器預覽資產時，Dynamic Media互動影像中的熱點不可見。
-   * `com.adobe.cq.social.cq-social-jcr-provider bundle com.adobe.cq.social.cq-social-jcr-provider:1.3.5 (395)[com.adobe.cq.social.provider.jcr.impl.SpiSocialJcrResourceProviderImpl(2302)]` ：等待登入變更完成解除登入逾時。
+* 安装过程中可能会显示以下错误和警告消息 [!DNL Experience Manager] 6.5.x.x：
+   * “当在中配置Adobe Target集成时 [!DNL Experience Manager] 使用Target Standard API（IMS身份验证），然后将体验片段导出到Target会导致创建错误的选件类型。 Target将创建多个类型为“Experience Fragment”/源“Adobe Experience Manager”的选件，而不是类型“HTML”/源“Adobe Target Classic”。
+   * `com.adobe.granite.maintenance.impl.TaskScheduler`：在granite/operations/maintenance中未找到维护窗口。
+   * 当使用SUM、MAX和MIN等聚合函数时，Adaptive Form服务器端验证失败(CQ-4274424)。
+   * `com.adobe.granite.maintenance.impl.TaskScheduler`  — 在granite/operations/maintenance未找到维护窗口。
+   * 通过Shoppable Banner查看器预览资源时，Dynamic Media交互式图像中的热点不可见。
+   * `com.adobe.cq.social.cq-social-jcr-provider bundle com.adobe.cq.social.cq-social-jcr-provider:1.3.5 (395)[com.adobe.cq.social.provider.jcr.impl.SpiSocialJcrResourceProviderImpl(2302)]` ：等待注册更改完成取消注册时超时。
 
-* 嘗試移動/刪除/發佈內容片段或網站/頁面時，發生擷取內容片段參考的問題，因為背景查詢失敗；即功能無法運作。
-若要確保作業正確，您必須將下列屬性新增至索引定義節點 `/oak:index/damAssetLucene` （不需要重新索引）：
+* 尝试移动、删除或发布内容片段、站点或页面时，在获取内容片段引用时出现问题，因为后台查询失败。 也就是说，功能无法正常工作。
+为确保操作正确，必须将以下属性添加到索引定义节点 `/oak:index/damAssetLucene` （无需重新索引）：
 
    ```xml
    "tags": [
@@ -331,26 +319,26 @@ To retrieve your runtime copy, Adobe recommends to synchronize the design-time c
    "refresh": true
    ```
 
-* 在AEM Forms中，POP3通訊協定不適用於Microsoft® Office 365的電子郵件端點。
-* 在JBoss® 7.1.4平台上，當使用者安裝AEM 6.5.16.0 Service Pack時， `adobe-livecycle-jboss.ear` 部署失敗。
+* 在AEM Forms中，POP3协议不适用于Microsoft® Office 365的电子邮件端点。
+* 在JBoss® 7.1.4平台上，当用户安装AEM 6.5.16.0 Service Pack时， `adobe-livecycle-jboss.ear` 部署失败。
 
-## 包含的OSGi套件組合和內容套件 {#osgi-bundles-and-content-packages-included}
+## 包含的OSGi包和内容包{#osgi-bundles-and-content-packages-included}
 
-下列文字檔案列出中包含的OSGi套件組合和內容套件 [!DNL Experience Manager] 6.5.16.0： <!-- UPDATE FOR EACH NEW RELEASE -->
+以下文本文档列出了中包含的OSGi包和内容包 [!DNL Experience Manager] 6.5.17.0： <!-- UPDATE FOR EACH NEW RELEASE -->
 
-* [Experience Manager6.5.16.0中包含的OSGi套件組合清單](/help/release-notes/assets/65160_bundles.txt) <!-- UPDATE FOR EACH NEW RELEASE -->
-* [Experience Manager6.5.16.0中包含的內容套件清單](/help/release-notes/assets/65160_packages.txt) <!-- UPDATE FOR EACH NEW RELEASE -->
+* [Experience Manager6.5.17.0中包含的OSGi包列表](/help/release-notes/assets/65170_bundles.txt) <!-- UPDATE FOR EACH NEW RELEASE -->
+* [Experience Manager6.5.17.0中包含的内容包列表](/help/release-notes/assets/65170_packages.txt) <!-- UPDATE FOR EACH NEW RELEASE -->
 
-## 受限制的網站 {#restricted-sites}
+## 受限制的网站{#restricted-sites}
 
-這些網站僅供客戶使用。 如果您是客戶且需要存取權，請聯絡您的Adobe客戶經理。
+这些网站仅供客户使用。 如果您是客户并且需要访问权限，请联系您的Adobe客户经理。
 
-* [產品下載網址為licensing.adobe.com](https://licensing.adobe.com/)
-* [聯絡Adobe客戶支援](https://experienceleague.adobe.com/docs/customer-one/using/home.html).
+* [产品下载地址：licensing.adobe.com](https://licensing.adobe.com/)
+* [联系Adobe客户支持](https://experienceleague.adobe.com/docs/customer-one/using/home.html).
 
 >[!MORELIKETHIS]
 >
->* [[!DNL Experience Manager] 產品頁面](https://business.adobe.com/products/experience-manager/adobe-experience-manager.html)
->* [[!DNL Experience Manager] 6.5檔案](https://experienceleague.adobe.com/docs/experience-manager-65.html?lang=zh-Hans)
+>* [[!DNL Experience Manager] 产品页面](https://business.adobe.com/products/experience-manager/adobe-experience-manager.html)
+>* [[!DNL Experience Manager] 6.5文档](https://experienceleague.adobe.com/docs/experience-manager-65.html?lang=zh-Hans)
 >* [订阅 Adobe 产品更新早知道](https://www.adobe.com/cn/subscription/priority-product-update.html)
 
