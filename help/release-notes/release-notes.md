@@ -2,9 +2,9 @@
 title: 的发行说明 [!DNL Adobe Experience Manager] 6.5
 description: 查找版本信息、新增功能、安装操作方法和详细更改列表 [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 3
-source-git-commit: f8af806bbb78623d5ba12379fc547a2cffc03841
+source-git-commit: 0bce05571590bc09e2b65f6bd6c1f387c71fba3a
 workflow-type: tm+mt
-source-wordcount: '2606'
+source-wordcount: '2620'
 ht-degree: 2%
 
 ---
@@ -70,6 +70,7 @@ ht-degree: 2%
 * 无法为使用搜索筛选器找到的多个选定资产触发工作流。 (ASSETS-7689)
 * 从搜索结果中选择资产（或多个资产）时，“相关”或“取消相关”选项不可见。 但是，该选项可用，否则。 (ASSETS-7679)
 * 搜索过滤器面板在登录后仅打开一次，如果您退出搜索页面并重新运行搜索，则不会打开。 (ASSETS-7671)
+* 共享链接时，电子邮件组合框不显示适当的对比度。 (ASSETS-17349)
 
 <!-- REMOVED BY ENGINEERING FROM TOTAL RELEASE CANDIDATE LIST 
 * When you select any file in a Collection and click `Download`, and then navigate to the email checkbox and expand it, regular text and email link is not recognizable due to background color. (ASSETS-17349) 
