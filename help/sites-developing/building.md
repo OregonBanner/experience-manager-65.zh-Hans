@@ -1,7 +1,7 @@
 ---
-title: 將標籤建置到AEM應用程式中
+title: 在AEM应用程序中构建标记
 seo-title: Building Tagging into an AEM Application
-description: 以程式設計方式使用自訂AEM應用程式中的標籤或擴展標籤
+description: 以编程方式使用自定义AEM应用程序中的标记或扩展标记
 seo-description: Programmatically work with tags or extending tags within a custom AEM application
 uuid: 0549552e-0d51-4162-b418-babf4ceee046
 contentOwner: Guillaume Carlino
@@ -11,39 +11,39 @@ content-type: reference
 discoiquuid: 032aea1f-0105-4299-8d32-ba6bee78437f
 feature: Tagging
 exl-id: d885520d-d0ed-45fa-8511-faa2495d667a
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: be028f116ccb83853cd46dc742438babd2207314
 workflow-type: tm+mt
-source-wordcount: '875'
+source-wordcount: '903'
 ht-degree: 0%
 
 ---
 
-# 將標籤建置到AEM應用程式中{#building-tagging-into-an-aem-application}
+# 在AEM应用程序中构建标记{#building-tagging-into-an-aem-application}
 
-為了以程式設計方式使用自訂AEM應用程式內的標籤或擴展標籤，本頁面說明如何使用
+为了以编程方式使用自定义AEM应用程序中的标记或扩展标记，本页介绍了
 
-* [標籤API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/tagging/package-summary.html)
+* [标记API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/tagging/package-summary.html)
 
-會與
+会与
 
-* [標籤框架](/help/sites-developing/framework.md)
+* [标记框架](/help/sites-developing/framework.md)
 
-如需關於標籤的相關資訊，請參閱：
+有关标记的相关信息，请参阅：
 
-* [管理標籤](/help/sites-administering/tags.md) 以取得關於建立和管理標籤以及已對哪些內容標籤套用的資訊。
-* [使用標籤](/help/sites-authoring/tags.md) 以取得關於標籤內容的資訊。
+* [管理标记](/help/sites-administering/tags.md) 有关创建和管理标记以及已对哪些内容应用标记的信息。
+* [使用标记](/help/sites-authoring/tags.md) 以了解有关标记内容的信息。
 
-## 標籤API概觀 {#overview-of-the-tagging-api}
+## 标记API概述 {#overview-of-the-tagging-api}
 
-實作 [標籤框架](/help/sites-developing/framework.md) AEM允許使用JCR API管理標籤和標籤內容。 TagManager會確保在 `cq:tags` 字串陣列屬性不會重複，它會移除指向非現有標籤的TagID，並更新已移動或合併標籤的標籤ID。 TagManager會使用JCR觀察接聽程式來回覆任何不正確的變更。 主要類別位於 [com.day.cq.tagg](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/index.html?com/day/cq/tagging/package-summary.html) 封裝：
+实施 [标记框架](/help/sites-developing/framework.md) 在AEM中，允许使用JCR API管理标记和标记内容。 TagManager确保在 `cq:tags` 字符串数组属性不重复，它会删除指向不存在的标记的TagID，并更新已移动或合并标记的标记ID。 TagManager使用JCR观察侦听器来还原任何不正确的更改。 主类位于 [com.day.cq.tagg](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/index.html?com/day/cq/tagging/package-summary.html) 包：
 
-* JcrTagManagerFactory — 傳回JCR型實作 `TagManager`. 這是標籤API的參考實作。
-* `TagManager`  — 允許依照路徑和名稱解析和建立標籤。
-* `Tag`  — 定義標籤物件。
+* JcrTagManagerFactory — 返回基于JCR的 `TagManager`. 它是标记API的参考实施。
+* `TagManager`  — 允许按路径和名称解析和创建标记。
+* `Tag`  — 定义标记对象。
 
-### 取得以JCR為基礎的標籤管理員 {#getting-a-jcr-based-tagmanager}
+### 获取基于JCR的TagManager {#getting-a-jcr-based-tagmanager}
 
-若要擷取TagManager執行個體，您需要有JCR `Session` 和以呼叫 `getTagManager(Session)`：
+要检索TagManager实例，您需要具有JCR `Session` 并调用 `getTagManager(Session)`：
 
 ```java
 @Reference
@@ -52,15 +52,15 @@ JcrTagManagerFactory jcrTagManagerFactory;
 TagManager tagManager = jcrTagManagerFactory.getTagManager(session);
 ```
 
-在一般Sling情境中，您也可以適應 `TagManager` 從 `ResourceResolver`：
+在典型的Sling上下文中，您还可以适应 `TagManager` 从 `ResourceResolver`：
 
 ```java
 TagManager tagManager = resourceResolver.adaptTo(TagManager.class);
 ```
 
-### 擷取標籤物件 {#retrieving-a-tag-object}
+### 检索标记对象 {#retrieving-a-tag-object}
 
-A `Tag` 可透過 `TagManager`，解析現有標籤或建立新標籤：
+A `Tag` 可通过 `TagManager`，通过解析现有标记或创建新标记：
 
 ```java
 Tag tag = tagManager.resolve("my/tag"); // for existing tags
@@ -68,13 +68,13 @@ Tag tag = tagManager.resolve("my/tag"); // for existing tags
 Tag tag = tagManager.createTag("my/tag"); // for new tags
 ```
 
-對於以JCR為基礎的實作，其會 `Tags` 至JCR `Nodes`，您可以直接使用Sling `adaptTo` 機制(如果您有資源，例如 `/content/cq:tags/default/my/tag`)：
+对于基于JCR的实施，其映射了 `Tags` 转到JCR `Nodes`，您可以直接使用Sling `adaptTo` 机制(如果您有资源，例如 `/content/cq:tags/default/my/tag`)：
 
 ```java
 Tag tag = resource.adaptTo(Tag.class);
 ```
 
-雖然標籤只能從*資源（非節點）轉換*而來，但標籤可以轉換為*節點和資源：
+虽然标记只能从*资源（而非节点）转换*到，但标记可以同时*转换*为节点和资源：
 
 ```java
 Node node = tag.adaptTo(Node.class);
@@ -83,9 +83,9 @@ Resource node = tag.adaptTo(Resource.class);
 
 >[!NOTE]
 >
->直接改寫自 `Node` 至 `Tag` 不可能，因為 `Node` 不實作Sling `Adaptable.adaptTo(Class)` 方法。
+>直接从 `Node` 到 `Tag` 不可能，因为 `Node` 不实施Sling `Adaptable.adaptTo(Class)` 方法。
 
-### 取得和設定標籤 {#getting-and-setting-tags}
+### 获取和设置标记 {#getting-and-setting-tags}
 
 ```java
 // Getting the tags of a Resource:
@@ -95,7 +95,7 @@ Tag[] tags = tagManager.getTags(resource);
 tagManager.setTags(resource, tags);
 ```
 
-### 搜尋標籤 {#searching-for-tags}
+### 搜索标记 {#searching-for-tags}
 
 ```java
 // Searching for the Resource objects that are tagged with the tag object:
@@ -114,88 +114,92 @@ long count = tag.getCount();
 >
 >`com.day.cq.commons.RangeIterator`
 
-### 刪除標籤 {#deleting-tags}
+### 删除标记 {#deleting-tags}
 
 ```java
 tagManager.deleteTag(tag);
 ```
 
-### 複製標籤 {#replicating-tags}
+### 复制标记 {#replicating-tags}
 
-可以使用復寫服務( `Replicator`)與標籤，因為標籤的型別為 `nt:hierarchyNode`：
+可以使用复制服务( `Replicator`)，因为标记的类型为 `nt:hierarchyNode`：
 
 ```java
 replicator.replicate(session, replicationActionType, tagPath);
 ```
 
-## 在使用者端上標籤 {#tagging-on-the-client-side}
+## 在客户端进行标记 {#tagging-on-the-client-side}
 
-`CQ.tagging.TagInputField` 是用於輸入標籤的表單Widget。 它有一個快顯功能表，可從現有標籤中選取，包括自動完成和許多其他功能。 其xtype為 `tags`.
+`CQ.tagging.TagInputField` 是用于输入标记的表单构件。 它有一个弹出菜单，用于从现有标记中进行选择，包括自动完成和许多其他功能。 其xtype为 `tags`.
 
-## 標籤記憶體回收器 {#the-tag-garbage-collector}
+## 标记垃圾收集器 {#the-tag-garbage-collector}
 
-標籤垃圾回收程式是一項背景服務，可清除隱藏和未使用的標籤。 隱藏和未使用的標籤是底下的標籤 `/content/cq:tags` 具有 `cq:movedTo` 屬性和，而不是在內容節點上使用 — 它們的計數為零。 藉由使用此延遲刪除程式，內容節點(即 `cq:tags` 屬性)，不必隨著移動或合併作業進行更新。 中的參照 `cq:tags` 屬性會在以下情況時自動更新： `cq:tags` 屬性已更新，例如透過頁面屬性對話方塊。
+标记垃圾收集器是一种后台服务，用于清理隐藏和未使用的标记。 隐藏和未使用的标记是以下标记 `/content/cq:tags` 具有 `cq:movedTo` 属性和未用在内容节点上 — 它们的计数为零。 通过使用这种延迟删除流程，内容节点(即 `cq:tags` 属性)不必作为移动或合并操作的一部分进行更新。 中的引用 `cq:tags` 属性在以下情况下自动更新： `cq:tags` 属性已更新，例如通过页面属性对话框。
 
-標籤記憶體回收行程預設為每天執行一次。 這可以在以下位置設定：
+默认情况下，标记垃圾回收器每天运行一次。 这可以在以下位置配置：
 
 ```xml
 http://localhost:4502/system/console/configMgr/com.day.cq.tagging.impl.TagGarbageCollector
 ```
 
-## 標籤搜尋和標籤清單 {#tag-search-and-tag-listing}
+## 标记搜索和标记列表 {#tag-search-and-tag-listing}
 
-搜尋標籤和標籤清單的運作方式如下：
+搜索标记和标记列表的工作方式如下：
 
-* 搜尋TagID會搜尋具有屬性的標籤 `cq:movedTo` 設定為TagID並遵循 `cq:movedTo` 標籤ID。
+* 搜索TagID会搜索具有属性的标记 `cq:movedTo` 设置为TagID并遵循 `cq:movedTo` 标记ID。
 
-* 搜尋標籤Title只會搜尋沒有 `cq:movedTo` 屬性。
+* 搜索标记“标题”只会搜索不具有 `cq:movedTo` 属性。
 
-## 不同語言的標籤 {#tags-in-different-languages}
+## 不同语言的标记 {#tags-in-different-languages}
 
-如管理標籤的檔案一節中所述 [管理不同語言的標籤](/help/sites-administering/tags.md#managing-tags-in-different-languages)，標籤 `title`能以不同語言定義。 然後，語言敏感屬性會新增至標籤節點。 此屬性的格式為 `jcr:title.<locale>`，例如 `jcr:title.fr` 法文翻譯版。 `<locale>` 必須為小寫ISO地區設定字串，並使用「_」而非「 — 」，例如： `de_ch`.
+如有关管理标记的文档中所述，位于部分 [管理不同语言的标记](/help/sites-administering/tags.md#managing-tags-in-different-languages)，标记 `title`可以通过不同的语言进行定义。 然后，将区分语言的属性添加到标记节点。 此属性的格式为 `jcr:title.<locale>`，例如 `jcr:title.fr` 法文版的。 `<locale>` 必须为小写的ISO区域设置字符串，并使用“_”而不是“ — ”，例如： `de_ch`.
 
-當 **動物** 標籤已新增至 **產品** 頁面，值 `stockphotography:animals` 已新增至屬性 `cq:tags` /content/geometrixx/en/products/jcr：content節點的 已從標籤節點參考翻譯。
+当 **动物** 标记将添加到 **产品** 页面，值 `stockphotography:animals` 添加到属性 `cq:tags` /content/geometrixx/en/products/jcr：content节点的。 从标记节点引用翻译。
 
-伺服器端API已本地化 `title`相關方法：
+服务器端API已本地化 `title`相关方法：
 
 * [com.day.cq.tagging.Tag](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/index.html?com/day/cq/tagging/Tag.html)
 
-   * getLocalizedTitle（地區設定）
+   * getLocalizedTitle（区域设置）
    * getLocalizedTitlePaths()
    * getLocalizedTitles()
-   * getTitle（地區設定）
-   * getTitlePath（地區設定）
+   * getTitle（区域设置）
+   * getTitlePath（区域设置）
 
 * [com.day.cq.tagging.TagManager](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/index.html?com/day/cq/tagging/TagManager.html)
 
    * canCreateTagByTitle(String tagTitlePath， Locale)
    * createTagByTitle(String tagTitlePath， Locale)
-   * resolveByTitle(String tagTitlePath， Locale)
+   * resolveByTitle（String tagTitlePath，区域设置）
 
-在AEM中，可以從頁面語言或使用者語言取得語言：
+在AEM中，可以从页面语言或用户语言中获取语言：
 
-* 若要擷取JSP中的頁面語言：
+* 要在JSP中检索页面语言，请执行以下操作：
 
    * `currentPage.getLanguage(false)`
 
-* 若要擷取JSP中的使用者語言：
+* 要在JSP中检索用户语言，请执行以下操作：
 
    * `slingRequest.getLocale()`
 
-`currentPage` 和 `slingRequest` 可在JSP中使用，透過 [&lt;cq:definedobjects>](/help/sites-developing/taglib.md) 標籤之間。
+`currentPage` 和 `slingRequest` 可在JSP中通过 [&lt;cq:definedobjects>](/help/sites-developing/taglib.md) 标记之前。
 
-對於標籤，本地化取決於作為標籤的內容設定 `titles`能以頁面語言、使用者語言或任何其他語言顯示。
+对于标记，本地化取决于作为标记的上下文 `titles`能够以页面语言、用户语言或任何其他语言显示。
 
-### 新增語言至編輯標籤對話方塊 {#adding-a-new-language-to-the-edit-tag-dialog}
+### 向“编辑标记”对话框添加新语言 {#adding-a-new-language-to-the-edit-tag-dialog}
 
-下列程式說明如何新增語言（芬蘭文）至 **標籤編輯** 對話方塊：
+以下过程介绍了如何向添加新语言（芬兰语） **标记编辑** 对话框：
 
-1. 在 **CRXDE**，編輯多值屬性 `languages` 節點的 `/content/cq:tags`.
+1. In **CRXDE**，编辑多值属性 `languages` 节点的 `/content/cq:tags`.
 
-1. 新增 `fi_fi`  — 代表芬蘭語言環境 — 並儲存變更。
+1. 添加 `fi_fi`  — 表示芬兰语言环境 — 并保存更改。
 
-新語言（芬蘭文）現在可在頁面屬性的標籤對話方塊和 **編輯標籤** 對話方塊 **標籤** 主控台。
+新语言（芬兰语）现在可以在页面属性的标记对话框中以及 **编辑标记** 对话框 **标记** 控制台。
 
 >[!NOTE]
 >
->新語言必須是AEM認可的語言之一，也就是說，它必須可作為以下節點提供 `/libs/wcm/core/resources/languages`.
+>新语言需要是AEM认可的语言之一，即它需要作为以下节点提供 `/libs/wcm/core/resources/languages`.
+
+>[!CAUTION]
+>
+>安装Service Pack会将/content/cq：tags节点的languages属性重置为默认值。 因此，在安装之前，必须从属性中添加它。
