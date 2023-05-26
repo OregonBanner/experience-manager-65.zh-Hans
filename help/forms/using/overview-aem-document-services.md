@@ -1,7 +1,7 @@
 ---
-title: AEM檔案服務概要
+title: AEM Document Service概述
 seo-title: Overview of AEM Document Services
-description: AEM Document Services是一組OSGi服務，用於建立、組合和保護PDF檔案。
+description: AEM Document Services是一组用于创建、汇编和保护PDF文档的OSGi服务。
 seo-description: AEM Document Services are a set of OSGi Services for creating, assembling, and securing PDF Documents.
 uuid: 439144b7-f805-4819-9ed9-a6e9e374b5ed
 content-type: reference
@@ -17,119 +17,119 @@ ht-degree: 0%
 
 ---
 
-# AEM檔案服務概要{#overview-of-aem-document-services}
+# AEM Document Service概述{#overview-of-aem-document-services}
 
-AEM Document Services是一組OSGi服務，用於建立、組合和保護PDF檔案。 檔案服務包含下列服務：
+AEM Document Services是一组用于创建、汇编和保护PDF文档的OSGi服务。 Document Services包含以下服务：
 
 ## 输出服务 {#output-service}
 
-「輸出」服務可讓您建立不同格式的檔案，包括PDF、雷射印表機格式和標籤印表機格式。 雷射印表機格式為PostScript和印表機控制語言(PCL)。 下列清單指定標籤印表機格式：
+“输出”服务允许您创建各种格式的文档，包括PDF、激光打印机格式和标签打印机格式。 激光打印机格式为PostScript和打印机控制语言(PCL)。 下面的列表指定了标签打印机格式：
 
-* 斑馬文(ZPL)
+* 斑马(ZPL)
 * Intermec (IPL)
 * Datamax (DPL)
-* 泰克東芝(TPCL)
+* TecToshiba (TPCL)
 
-檔案可以傳送至網路印表機、本機印表機或檔案系統上的檔案。 Output服務會合併XML表單資料與表單設計，以產生檔案。 Output服務可以產生檔案，而不需要將XML表單資料合併到檔案中。 不過，主要工作流程是將資料合併至檔案。
+可以将文档发送到网络打印机、本地打印机或文件系统上的文件。 Output服务将XML表单数据与表单设计合并以生成文档。 Output服务可以生成文档，而无需将XML表单数据合并到文档中。 但是，主工作流将数据合并到文档中。
 
 >[!NOTE]
 >
->表單設計通常使用Designer建立。 如需有關為Output服務建立表單設計的資訊，請參閱設計工具說明。
+>通常使用Designer创建窗体设计。 有关为Output服务创建表单设计的信息，请参阅Designer帮助。
 
-使用Output服務將XML資料與表單設計合併時，結果會產生非互動式PDF檔案。 非互動式PDF檔案不允許使用者在其欄位中輸入資料。 相反地，您可以使用Forms服務建立互動式PDF表單，讓使用者在其欄位中輸入資料。
+使用Output服务将XML数据与表单设计合并时，结果是一个非交互式PDF文档。 非交互式PDF文档不允许用户在其字段中输入数据。 相反，您可以使用Forms服务创建交互式PDF表单，该表单允许用户在其字段中输入数据。
 
-下列四個輸出服務操作可供使用：
+以下四个输出服务操作可供使用：
 
-* **generatePDFOuput**：將表單設計與資料合併，以產生PDF檔案
-* **generatePrintedOutput**：將表單設計與表單資料合併，以產生要傳送至雷射或標籤網路印表機的檔案
+* **generatePDFOuput**：将表单设计和数据合并以生成PDF文档
+* **generatePrintedOutput**：将表单设计与表单数据合并，生成要发送到激光打印机或标签网络打印机的文档
 
-* **generatePDFOutputBatch**：以單一叫用合併具有多個資料記錄的多個範本，以產生一批PDF檔案。 您也可以選擇合併所有PDF，以產生單一PDF
-* **generatePrintedOutputBatch**：在單一叫用中將多個範本與多個資料記錄合併，以產生一批列印檔案(PS、PCL、ZPL、DPL、IPL、TPCL)。 也可以選擇產生單一列印檔案。
+* **generatePDFOutputBatch**：在一次调用中合并多个模板和多个数据记录，以生成一批PDF文件。 还有一个选项，即通过合并所有PDF来生成单个PDF
+* **generatePrintedOutputBatch**：在一次调用中合并多个模板和多个数据记录，以生成一批打印文档(PS、PCL、ZPL、DPL、IPL、TPCL)。 还可以选择生成单个打印文档。
 
 ## 汇编程序服务 {#assembler-service}
 
-組合器服務可讓您組合、重新排列和增加PDF和XDP檔案，並取得有關PDF檔案的資訊。 提交至Assembler服務的每個工作都包含檔案描述XML (DDX)檔案、來原始檔以及外部資源（字串和圖形）。 DDX檔案提供了有關如何使用來原始檔來產生一組結果檔案的指示。
+Assembler服务允许您组合、重新排列和增大PDF和XDP文档，并获取有关PDF文档的信息。 提交给Assembler服务的每个作业都包括Document Description XML (DDX)文档、源文档和外部资源（字符串和图形）。 DDX文档提供了有关如何使用源文档生成一组结果文档的说明。
 
-除了上述功能外，組裝程式服務也提供下列功能：
+除上述功能外，汇编程序服务还可以：
 
-* 將PDF檔案轉換為PDF/A標準。
-* 將PDF forms、XML表單（在Designer中建立）和PDF forms(在Acrobat中建立)轉換為PDF/A-1b、PDF/A-2b和PDFA/A-3b。
-* 轉換已簽署或未簽署的PDF檔案（需要數位簽名）。
-* 驗證PDF/A檔案的合規性，並在必要時轉換它。
+* 将PDF文档转换为PDF/A标准。
+* 将PDF forms、XML表单（在Designer中创建）和PDF forms(在Acrobat中创建)转换为PDF/A-1b、PDF/A-2b和PDFA/A-3b。
+* 转换已签名或未签名的PDF文档（需要数字签名）。
+* 验证PDF/A文件的符合性并在必要时转换它。
 
-### 關於DDX {#about-ddx}
+### 关于DDX {#about-ddx}
 
-使用Assembler服務時，請使用名為Document Description XML (DDX)的XML語言來說明您想要的輸出。 DDX是一種宣告式標籤語言，其元素代表檔案的建置組塊。 這些建置區塊包括PDF檔案、XDP檔案、XDP表單片段和其他元素，例如註解、書籤和樣式化文字。
+使用Assembler服务时，使用基于XML的语言(称为Document Description XML (DDX))来描述所需的输出。 DDX是一种声明性标记语言，其元素代表文档的构建块。 这些构建块包括PDF文档、XDP文档、XDP表单片段以及其他元素，例如注释、书签和样式文本。
 
-DDX檔案可以指定具有以下特性的結果檔案：
+DDX文档可以指定具有以下特征的结果文档：
 
-* 從多個PDF檔案組裝的PDF檔案
-* 與單一PDF檔案分開的多個PDF檔案
-* 包含獨立使用者介面以及多個PDF和非PDF檔案的PDFPortfolio
-* 由多個XDP檔案組合的XDP檔案
-* 包含動態插入XDP檔案之XML片段的XDP檔案
-* 封裝XDP檔案的PDF檔案
-* 報告PDF檔案特性的XML檔案。 報告的特性包括文字、註釋、表單資料、檔案附件、PDFPortfolio中使用的檔案、書籤和PDF屬性。 PDF屬性包括表單屬性、頁面旋轉和檔案作者。
+* 从多个PDF文档组装的PDF文档
+* 从单个PDF文档分离的多个PDF文档
+* PDFPortfolio，包括一个自包含的用户界面以及多个PDF和非PDF文档
+* 从多个XDP文档组合的XDP文档
+* 包含动态插入XDP文档中的XML片段的XDP文档
+* 打包XDP文档的PDF文档
+* 报告PDF文档特征的XML文件。 报告的特性包括文本、注释、表单数据、文件附件、PDFPortfolio中使用的文件、书签和PDF属性。 PDF属性包括表单属性、页面轮换和文档作者。
 
-您可以使用DDX來增加PDF檔案，作為檔案元件或反組譯的一部分。 您可以指定下列效果的任意組合：
+可以使用DDX作为文档组件或反汇编的一部分来增强PDF文档。 您可以指定以下效果的任意组合：
 
-* 在選取的頁面上新增或移除浮水印或背景。
-* 在選取的頁面上新增或移除頁首與頁尾。
-* 移除PDF封裝或PDFPortfolio的結構和導覽功能。 結果會是單一PDF檔案。
-* 重新編號頁面標籤。 頁面標籤通常用於頁碼。
-* 從其他來原始檔匯入中繼資料。
-* 新增或移除檔案附件、書籤、連結、註解和JavaScript。
-* 設定初始檢視特性並最佳化以在網頁上檢視。
-* 設定加密PDF的許可權。
-* 旋轉頁面，或在頁面上旋轉和移動內容。
-* 變更所選頁面的大小。
-* 合併資料與XFA型PDF。
+* 在选定页面上添加或删除水印或背景。
+* 在选定页面上添加或删除页眉和页脚。
+* 删除PDF包或PDFPortfolio的结构和导航功能。 结果生成一个PDF文件。
+* 重新编号页面标签。 页面标签通常用于页码。
+* 从其他源文档导入元数据。
+* 添加或删除文件附件、书签、链接、注释和JavaScript。
+* 设置初始视图特征并优化以在Web上查看。
+* 设置加密PDF的权限。
+* 旋转页面或在页面上旋转和移动内容。
+* 更改所选页面的大小。
+* 将数据与基于XFA的PDF合并。
 
-您可以使用簡單的輸入對映來指定來源和結果檔案的位置。 您也可以使用下列外部資料URL型別：
+您可以使用简单的输入映射来指定源文档和生成文档的位置。 您还可以使用以下外部数据URL类型：
 
 * 文件
 * FTP
 * HTTP/HTTPS
 
-## 檔案保證服務 {#doc-assurance-service}
+## 文档保障服务 {#doc-assurance-service}
 
-檔案保證服務可協助您加密和解密檔案、透過其他使用許可權來擴充Adobe Reader的功能，以及將數位簽名新增至您的檔案。 您的使用者可以輕鬆與PDF forms和檔案互動，而您的組織則可改善安全性、封存和合規性。
+文档保证服务可帮助您加密和解密文档，通过其他使用权限扩展Adobe Reader的功能，以及向文档添加数字签名。 您的用户可以轻松地与PDF forms和文档进行交互，而您的企业则可改进安全性、归档和法规遵从性。
 
-Doc Assurance服務包含三種服務：簽名、加密和讀取器延伸。
+文档保证服务包含三个服务：签名、加密和读取器扩展。
 
-### 簽章服務 {#signature-service}
+### 签名服务 {#signature-service}
 
-簽名服務可讓您在AEM伺服器上使用數位簽名和檔案。 例如，簽章服務通常用於下列情況：
+签名服务允许您在AEM服务器上处理数字签名和文档。 例如，签名服务通常在以下情况下使用：
 
-* AEM伺服器會在表單傳送給使用者以使用Acrobat或Adobe Reader開啟之前驗證表單。
-* AEM伺服器會使用Acrobat或Adobe Reader驗證已新增至表單的簽名。
-* AEM伺服器代表公證人簽署表格。
+* AEM服务器在发送表单给用户以使用Acrobat或Adobe Reader打开该表单之前对其进行身份验证。
+* AEM服务器使用Acrobat或Adobe Reader验证添加到表单中的签名。
+* AEM服务器代表公共公证人签署表单。
 
-簽章服務會存取儲存在信任存放區中的憑證和認證。
+签名服务访问存储在信任存储中的证书和凭据。
 
 ### 加密服务 {#encryption-service}
 
-加密服務可讓您加密和解密檔案。 檔案加密後，其內容會變得無法讀取。 您可以加密整個PDF檔案（包括其內容、中繼資料和附件）、中繼資料以外的所有內容，或僅加密附件。 授權的使用者可以解密檔案以取得其內容的存取權。 如果PDF檔案已使用密碼加密，使用者必須先指定開啟的密碼，才能在Adobe Reader或Acrobat中檢視該檔案。 如果使用憑證加密PDF檔案，使用者必須使用私密金鑰（憑證）解密PDF檔案。 用於解密PDF檔案的私密金鑰必須與用於加密該檔案的公開金鑰相對應。
+加密服务使您能够加密和解密文档。 文档加密后，其内容变得不可读。 您可以加密整个PDF文档（包括其内容、元数据和附件）、除元数据以外的所有内容，或仅加密附件。 授权用户可以解密文档以获取对其内容的访问权限。 如果使用密码对PDF文档进行加密，则用户必须先指定打开密码，然后才能在Adobe Reader或Acrobat中查看文档。 如果使用证书对PDF文档进行加密，则用户必须使用私钥（证书）对PDF文档进行解密。 用于解密PDF文档的私钥必须与用于加密该文档的公钥对应。
 
-### Reader延伸服務 {#reader-extension-service}
+### Reader扩展服务 {#reader-extension-service}
 
-Reader擴充功能可擴充具有其他使用許可權的Adobe Reader功能，讓貴組織輕鬆共用互動式PDF檔案。 Reader擴充功能可搭配Adobe Reader 7.0或更新版本使用。 此服務會將使用許可權新增至PDF檔案。 此動作會啟動使用Adobe Reader開啟PDF檔案時通常無法使用的功能，例如新增註釋至檔案、填寫表單和儲存檔案。 協力廠商使用者不需要其他軟體或外掛程式即可使用具有許可權的檔案。
+Reader扩展服务通过扩展Adobe Reader的功能以及附加的使用权限，使您的组织能够轻松共享交互式PDF文档。 Reader扩展服务适用于Adobe Reader 7.0或更高版本。 该服务向PDF文档添加使用权限。 此操作激活在使用Adobe Reader打开PDF文档时通常不可用的功能，例如向文档添加注释、填写表单和保存文档。 第三方用户无需其他软件或插件即可使用启用了权限的文档。
 
-當PDF檔案新增了適當的使用許可權時，收件者可以在Adobe Reader中執行下列活動：
+当PDF文档添加了相应的使用权限时，收件人可以在Adobe Reader中执行以下操作：
 
-* 線上上或離線完成PDF檔案和表單，讓收件者可在本機儲存復本以儲存其記錄，並保持新增資訊不變
-* 將PDF檔案儲存至本機硬碟，以保留原始檔案以及任何其他註釋、資料或附件
-* 將檔案和媒體剪輯附加至PDF檔案
-* 使用業界標準的公開金鑰基礎結構(PKI)技術套用數位簽名，簽署、認證和驗證PDF檔案
-* 以電子方式提交已完成或附註的PDF檔案
-* 使用PDF檔案和表單作為內部資料庫和Web服務的直覺式開發前端
-* 與其他人共用PDF檔案，讓檢閱者可以使用直覺式標籤工具來新增註解。 這些工具包括電子註解、印章、醒目提示和文字刪除線。 Acrobat中提供相同函式。
-* 支援條碼式表單解碼。
+* 在线或离线完成PDF文档和表单，允许收件人本地保存副本以保存其记录，并且仍保持添加的信息完整
+* 将PDF文档保存到本地硬盘，以保留原始文档以及任何其他注释、数据或附件
+* 将文件和媒体剪辑附加到PDF文档
+* 通过使用行业标准公钥基础设施(PKI)技术应用数字签名对PDF文档进行签名、认证和身份验证
+* 以电子方式提交已完成或附注的PDF文档
+* 使用PDF文档和表单作为内部数据库和Web服务的直观开发前端
+* 与其他人共享PDF文档，以便审阅人可以使用直观的标记工具添加注释。 这些工具包括电子便笺、印章、高亮和文本删除线。 Acrobat中提供了相同的函数。
+* 支持条形码表单解码。
 
-在Adobe Reader中開啟啟用許可權的PDF檔案時，會自動啟用這些特殊使用者功能。 當使用者完成使用啟用許可權的檔案時，這些功能在Adobe Reader中會再次停用。 除非使用者收到其他啟用許可權的PDF檔案，否則這些功能會維持停用狀態。
+在Adobe Reader中打开启用了权限的PDF文档时，会自动激活这些特殊用户功能。 当用户使用完启用了权限的文档时，Adobe Reader中再次禁用这些功能。 它们保持禁用状态，直到用户收到另一个启用了权限的PDF文档。
 
-開箱即用的DocAssurance服務無法使用。 若要設定DocAssurance服務，請參閱 [安裝和配置配置檔案服務](../../forms/using/install-configure-document-services.md).
+开箱即用的DocAssurance服务不可用。 要配置DocAssurance服务，请参阅 [安装和配置文档服务](../../forms/using/install-configure-document-services.md).
 
-## 傳送至印表機服務 {#send-to-printer-service}
+## 发送到打印机服务 {#send-to-printer-service}
 
-「傳送至印表機服務」提供API將檔案傳送至指定的印表機以進行列印。
+“发送到打印机”服务提供API以将文档发送到指定的打印机进行打印。

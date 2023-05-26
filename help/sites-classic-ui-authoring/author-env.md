@@ -1,7 +1,7 @@
 ---
-title: 使用作者環境
+title: 使用创作环境
 seo-title: Working with the Author Environment
-description: 製作環境可讓您執行與製作（包括頁面製作和管理資產）相關的任務，以及管理您在產生和維護網站上的內容時所需的任務。
+description: 通过创作环境，您可以执行与创作（包括页面创作和管理资产）以及管理在网站上生成和维护内容时所需的任务相关的任务。
 seo-description: The author environment allows you to perform tasks related to authoring (including page authoring and managing assets) and administering tasks you need when generating and maintaining the content on your website.
 uuid: ebeaa2c3-05b0-4108-8e84-69b9ba48cfbe
 contentOwner: Chris Bohnert
@@ -17,38 +17,38 @@ ht-degree: 1%
 
 ---
 
-# 使用作者環境{#working-with-the-author-environment}
+# 使用创作环境{#working-with-the-author-environment}
 
 >[!NOTE]
 >
->以下檔案著重於傳統UI。 如需有關使用現代化觸控式UI編寫的資訊，請參閱 [標準制作檔案](/help/assets/assets.md).
+>以下文档重点介绍经典UI。 有关在启用了触屏的现代UI中进行创作的信息，请参阅 [标准创作文档](/help/assets/assets.md).
 
-作者環境可讓您執行與以下專案相關的工作：
+创作环境允许您执行与以下内容相关的任务：
 
-* [製作](/help/sites-authoring/author.md) (包括 [頁面製作](/help/sites-authoring/qg-page-authoring.md) 和 [管理資產](/help/assets/assets.md))
+* [创作](/help/sites-authoring/author.md) (包括 [页面创作](/help/sites-authoring/qg-page-authoring.md) 和 [管理资产](/help/assets/assets.md))
 
-* [管理](/help/sites-administering/administer-best-practices.md) 產生和維護網站內容時所需的工作
+* [管理](/help/sites-administering/administer-best-practices.md) 在网站上生成和维护内容时所需的任务
 
-提供兩種圖形化使用者介面來達成此目的，這些介面可透過任何新式瀏覽器存取：
+提供了两个图形用户界面来实现这一点，它们可以通过任何新式浏览器访问：
 
 1. 经典 UI
 
-   * 此UI在AEM中可用已多年了。
-   * 主要是綠色的。
-   * 專為桌上型電腦裝置所設計。
-   * 已不再進行維護。
-   * 以下檔案著重於此傳統UI。 如需使用最新的觸控式UI編寫的相關資訊，請參閱 [標準制作檔案](/help/sites-authoring/author.md).
+   * 此UI在AEM中始终可用已有多年。
+   * 它主要是绿色的。
+   * 它专为桌面设备而设计。
+   * 它不再被维护。
+   * 以下文档重点介绍此经典UI。 有关使用基于触摸的现代UI进行创作的信息，请参阅 [标准创作文档](/help/sites-authoring/author.md).
    ![chlimage_1-149](assets/chlimage_1-149.png)
 
-1. 觸控式UI
+1. 触屏优化UI
 
-   * 這是最新的標準AEM UI。
-   * 它主要是灰色，具有乾淨的平面介面。
-   * 專為觸控和桌上型裝置所設計（針對觸控最佳化）。 不過，所有裝置上的外觀和感覺都相同 [檢視和選取您的資源](/help/sites-authoring/basic-handling.md) 稍微有些不同（點選與點按）。
-   * 請參閱 [標準制作檔案](/help/sites-authoring/author.md) 以進一步瞭解如何使用觸控式UI進行編寫。 以下檔案著重於傳統UI。
+   * 这是现代的标准AEM UI。
+   * 它以灰色为主，界面干净、平整。
+   * 它专为触摸和桌面设备而设计（针对触摸设备而优化）。 不过，所有设备上的外观和感觉都相同 [查看和选择资源](/help/sites-authoring/basic-handling.md) 略有不同（点击次数与点击次数）。
+   * 请参阅 [标准创作文档](/help/sites-authoring/author.md) 有关如何使用基于触摸的UI进行创作的更多详细信息。 以下文档重点介绍经典UI。
 
    * 桌面:
    ![chlimage_1-150](assets/chlimage_1-150.png)
 
-   * 平板電腦裝置（或寬度小於1024畫素的桌上型電腦）：
+   * 平板电脑设备（或宽度小于1024像素的台式机）：
    ![chlimage_1-7](assets/chlimage_1-7.jpeg)

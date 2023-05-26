@@ -1,7 +1,7 @@
 ---
-title: 新增和移除使用者名稱和密碼認證
+title: 添加和删除用户名和密码凭据
 seo-title: Adding and removing user name and password credentials
-description: 瞭解如何新增和移除使用者名稱和密碼認證。
+description: 了解如何添加和删除用户名和密码凭据。
 seo-description: Learn how to add and remove user name and password credentials.
 uuid: f1d083b5-ba48-4b02-b40b-969f03732e36
 contentOwner: admin
@@ -17,18 +17,18 @@ ht-degree: 0%
 
 ---
 
-# 新增和移除使用者名稱和密碼認證 {#adding-and-removing-user-name-and-password-credentials}
+# 添加和删除用户名和密码凭据 {#adding-and-removing-user-name-and-password-credentials}
 
-在「信任存放區管理」頁面中，您可以新增/移除Forms服務在收到具有SOAP層級安全性的要求時所使用的使用者名稱和密碼認證。
+从“信任存储区管理”页中，可以添加和删除Forms服务在收到具有SOAP级别安全性的请求时使用的用户名和密码凭据。
 
-## 新增使用者名稱和密碼認證 {#add-a-user-name-and-password-credential}
+## 添加用户名和密码凭据 {#add-a-user-name-and-password-credential}
 
-1. 在管理控制檯中，按一下 **[!UICONTROL 設定>信任存放區管理>使用者和密碼認證]** 然後按一下 **[!UICONTROL 新增]**.
-1. 在 **[!UICONTROL 設定檔名稱]** 方塊中，輸入認證的名稱。
-1. 在 **[!UICONTROL 使用者名稱]** 方塊中，輸入唯一的使用者名稱。
-1. 在 **[!UICONTROL 密碼]** 方塊，輸入使用者的密碼，然後按一下 **[!UICONTROL 確定]**.
+1. 在管理控制台中，单击 **[!UICONTROL 设置>信任存储区管理>用户和密码凭据]** 然后单击 **[!UICONTROL 添加]**.
+1. 在 **[!UICONTROL 配置文件名称]** 框中，键入凭据的名称。
+1. 在 **[!UICONTROL 用户名]** 框中，键入唯一的用户名。
+1. 在 **[!UICONTROL 密码]** 框中，键入用户的密码，然后单击 **[!UICONTROL 确定]**.
 
-## 刪除使用者名稱和密碼認證 {#delete-a-user-name-and-password-credential}
+## 删除用户名和密码凭据 {#delete-a-user-name-and-password-credential}
 
-1. 在管理控制檯中，按一下 **[!UICONTROL 設定>信任存放區管理>使用者和密碼認證]**.
-1. 選取您要刪除的認證核取方塊，按一下 **[!UICONTROL 刪除]**，然後按一下 **[!UICONTROL 確定]**.
+1. 在管理控制台中，单击 **[!UICONTROL 设置>信任存储区管理>用户和密码凭据]**.
+1. 选中要删除的凭据对应的复选框，然后单击 **[!UICONTROL 删除]**，然后单击 **[!UICONTROL 确定]**.

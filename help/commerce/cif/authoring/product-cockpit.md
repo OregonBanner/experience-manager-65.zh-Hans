@@ -1,6 +1,6 @@
 ---
 title: 产品 Cockpit
-description: 使用產品駕駛艙
+description: 使用产品驾驶舱
 exl-id: 05ef2604-1d52-4397-a696-0b64717cc3cc
 source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
 workflow-type: tm+mt
@@ -13,72 +13,72 @@ ht-degree: 1%
 
 ## 概述 {#overview}
 
-產品駕駛艙提供連結產品目錄和相關內容的統一總覽。 所有關聯內容都有連結，可從駕駛艙快速存取。
+产品驾驶舱提供链接的产品目录和相关内容的统一概述。 所有关联内容都有链接，可从驾驶舱快速访问这些内容。
 
-分階段產品資料包含未來的任何突變，例如新類別、產品或更新的屬性。
+暂存的产品数据包括未来的任何突变，例如新类别、产品或更新的属性。
 
 >[!NOTE]
 >
->產品目錄一詞可與商務商店、商店檢視和類似運算式互換。
+>术语产品目录与商务商店、商店视图和类似表达式可互换。
 
 ## 配置 {#configuration}
 
-產品目錄需在AEM中設定。 另請參閱 [設定存放區和目錄](/help/commerce/cif/getting-started.md#catalog) 以取得詳細資訊。
+需要在AEM中配置产品目录。 参见 [配置存储和目录](/help/commerce/cif/getting-started.md#catalog) 了解更多信息。
 
-啟用分階段目錄功能需要驗證。 另請參閱 [快速入門](/help/commerce/cif/getting-started.md) 以取得詳細資訊。
-
->[!NOTE]
->
->只有支援權杖式驗證的Adobe Commerce和第三方聯結器才提供分階段目錄功能。
-
-## 開啟產品駕駛艙 {#opening-product-cockpit}
-
-存取產品駕駛艙最簡單的方式是透過AEM主功能表中的「商務」功能表。 也可以使用Omnisearch （搜尋商務）或opening `https://<yourAEMInstance>/commerce.html`.
-
-![AEM功能表](/help/commerce/cif/assets/aem-menu.png)
-
-## 瀏覽產品目錄 {#browsing-product-catalogs}
-
-產品駕駛艙會依產品目錄結構以階層式方式組織。 第一個層級顯示所有已設定產品目錄的目錄根層級，包括商務後端的中繼資訊。
-
-![已設定的目錄](/help/commerce/cif/assets/catalog-overview.png)
-
-按一下類別時，會載入所點選類別的子系。
-
-![類別子項](/help/commerce/cif/assets/catalog-category-children.png)
-
-如果可用，按一下產品將會載入產品變數。
-
-![產品變數](/help/commerce/cif/assets/catalog-product-variation.png)
+启用暂存目录功能需要身份验证。 参见 [快速入门](/help/commerce/cif/getting-started.md) 了解更多信息。
 
 >[!NOTE]
 >
->AEM中的產品目錄資料是指透過設定的商務端點即時擷取的資料。 AEM中未儲存任何產品目錄資料。
+>暂存目录功能仅适用于支持基于令牌的身份验证的Adobe Commerce和第三方连接器。
 
-## 搜尋產品目錄 {#searching-product-catalog}
+## 打开产品驾驶舱 {#opening-product-cockpit}
 
-左側篩選索引標籤中提供完整產品目錄的全文檢索搜尋，以快速尋找產品。
+访问产品驾驶舱的最简单方法是通过AEM主菜单中的“商务”菜单。 也可以使用Omnisearch（搜索商业）或opening `https://<yourAEMInstance>/commerce.html`.
+
+![AEM菜单](/help/commerce/cif/assets/aem-menu.png)
+
+## 浏览产品目录 {#browsing-product-catalogs}
+
+产品驾驶舱按照产品目录结构以分层方式组织。 第一级显示所有已配置产品目录的目录根级别，包括商务后端的元信息。
+
+![已配置的目录](/help/commerce/cif/assets/catalog-overview.png)
+
+单击某个类别将加载已单击类别的子项。
+
+![类别子项](/help/commerce/cif/assets/catalog-category-children.png)
+
+单击产品将加载产品变体（如果可用）。
+
+![产品变体](/help/commerce/cif/assets/catalog-product-variation.png)
+
+>[!NOTE]
+>
+>AEM中的产品目录数据是通过配置的商务端点实时检索的数据。 AEM中未存储任何产品目录数据。
+
+## 搜索产品目录 {#searching-product-catalog}
+
+左侧过滤器选项卡中提供了对完整产品目录的全文搜索，以便快速查找产品。
 
 ![搜索](/help/commerce/cif/assets/search-cockpit.png)
 
-## 瀏覽分階段產品目錄 {#staged-product-catalogs}
+## 浏览暂存产品目录 {#staged-product-catalogs}
 
-依預設，產品駕駛艙會顯示即時產品目錄資料。 使用左側篩選索引標籤中的「階段目錄」將會載入任何所選日期的產品目錄。
+默认情况下，产品驾驶舱显示实时产品目录数据。 使用左侧过滤器选项卡中的“暂存目录”将加载任何选定日期的产品目录。
 
-![暫存目錄](/help/commerce/cif/assets/staged-cockpit.png)
+![暂存目录](/help/commerce/cif/assets/staged-cockpit.png)
 
-## 產品目錄屬性 {#catalog-properties}
+## 产品目录属性 {#catalog-properties}
 
-按一下產品或類別的屬性圖示會開啟所選物件的屬性檢視。 產品變體的開啟屬性等於開啟主要產品屬性。
+单击产品或类别的属性图标将打开选定对象的属性视图。 产品变体的打开属性等于打开主产品属性。
 
-### Commerce標籤 {#tabs}
+### 商务选项卡 {#tabs}
 
-一般和變體標籤會顯示來自商務後端的預先定義商務屬性。 此資料(包括 變體)是AEM中的唯讀資料，因為記錄系統是商務後端。 變體索引標籤只會針對具有變體的產品顯示，並顯示所有變體的清單。
+常规和变量选项卡显示来自商业后端的预定义商业属性。 此数据(包括 变体)是AEM中的只读数据，因为记录系统是商务后端。 变体选项卡仅对具有变体的产品显示，并显示所有变体的列表。
 
-![目錄屬性](/help/commerce/cif/assets/catalog-properties.png)
+![目录属性](/help/commerce/cif/assets/catalog-properties.png)
 
-### AEM內容標籤 {#content-tabs}
+### AEM内容选项卡 {#content-tabs}
 
-這些按AEM內容型別（體驗片段、內容片段、相關資產）分組的標籤會顯示與商業物件相關聯的AEM內容。 「檢視詳細資料」動作會開啟含有所選內容的新瀏覽器標籤。
+这些按AEM内容类型（体验片段、内容片段、关联资产）分组的选项卡显示与商业对象关联的AEM内容。 “查看详细信息”操作将打开一个包含选定内容的新浏览器选项卡。
 
-![內容屬性](/help/commerce/cif/assets/content-properties.png)
+![内容属性](/help/commerce/cif/assets/content-properties.png)

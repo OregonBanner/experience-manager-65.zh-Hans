@@ -96,6 +96,6 @@ ht-degree: 93%
 
 ## 其他资源 {#additional-resources}
 
-我們建議您檢閱檔案，繼續進行Headless翻譯歷程的下一部分 [翻譯內容](translate-content.md)，以下是一些其他可選資源，這些資源對本文檔中提到的一些概念進行了更深入的探究，但並非繼續無頭之旅的必要。
+我们建议您查看文档，以继续进行Headless翻译历程的下一部分 [翻译内容](translate-content.md)，以下是一些其他可选资源，这些资源对本文档中提到的一些概念进行了更深入的探究，但并非继续无头之旅所必需的。
 
 * [标识要翻译的内容](/help/sites-administering/tc-rules.md) – 了解翻译规则如何标识需要翻译的内容。

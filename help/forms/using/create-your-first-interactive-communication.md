@@ -1,7 +1,7 @@
 ---
-title: 教學課程 — 建立您的第一個互動式通訊
+title: 教程 — 创建您的第一个交互式通信
 seo-title: Create your first Interactive Communication
-description: 瞭解如何建立您的第一個互動式通訊。
+description: 了解如何创建您的第一个交互式通信。
 seo-description: Learn to create your first Interactive Communication.
 uuid: ed5003c6-ba3a-4fcb-8645-c7b607b22fb5
 contentOwner: anujkapo
@@ -17,139 +17,139 @@ ht-degree: 1%
 
 ---
 
-# 教學課程：建立您的第一個互動式通訊 {#tutorial-create-your-first-interactive-communication}
+# 教程：创建您的第一个交互式通信 {#tutorial-create-your-first-interactive-communication}
 
-瞭解如何建立您的第一個互動式通訊。
+了解如何创建您的第一个交互式通信。
 
 ![01-create-first-adaptive-form-hero-image](assets/01-create-first-adaptive-form-hero-image.png)
 
-互動式通訊可集中處理及管理安全、個人化與互動式信函的建立、集合與傳遞，例如商務信函、檔案、對帳單、行銷郵件、帳單和歡迎套件。 互動式通訊可使用兩種管道來提供：列印和網路。 Print channel用於建立PDF和紙張通訊，而Web channel用於提供線上體驗。
+交互式通信可以集中管理安全、个性化的交互式信函的创建、编排和交付，例如业务信函、文档、对帐单、营销邮件、账单和欢迎资料包。 交互式通信可通过两种渠道提供：打印和Web。 Print channel用于创建PDF和纸张通信，而Web channel用于提供在线体验。
 
-本教學課程提供建立互動式通訊的端對端架構。 本教學課程可組織為一個使用案例和多個指南。 每個指南都可協助您建立功能，這些功能會作為建立互動式通訊的建置組塊。
+本教程提供了一个用于创建交互式通信的端到端框架。 本教程将组织为一个用例和多个指南。 每个指南都可帮助您创建用作构建块的功能，以创建交互式通信。
 
-下圖說明建立互動式通訊所需的組成要素。
+下图说明了创建交互式通信所需的构建基块。
 
 ![工作流](assets/workflow.gif)
 
-在本教學課程結束時，您將能夠：
+在本教程结束时，您将能够：
 
-* 建立組成要素（表單資料模型、檔案片段和範本）
-* 建立互動式通訊
-* 測試並發佈互動式通訊
+* 创建构建基块（表单数据模型、文档片段和模板）
+* 创建交互式通信
+* 测试和发布交互式通信
 
-## 使用案例 {#use-case}
+## 用例 {#use-case}
 
-歷程從學習使用案例開始：
+历程从学习用例开始：
 
-電信營運商透過電子郵件每月向客戶傳送帳單。 帳單是互動式通訊。 電子郵件包含：
+电信运营商每月通过电子邮件向客户发送账单。 账单是交互式通信。 该电子邮件包括：
 
-* 受密碼保護的PDF，在本教學課程中稱為Print channel。 其中包含客戶詳細資料、帳單詳細資料、費用摘要、便利的帳單支付模式和使用方式詳細資料。
-* 帳單網頁版本的連結，在本教學課程中稱為網頁管道。 帳單的網頁版本，除了PDF版本中涵蓋的詳細資訊外，還提供使用詳細資訊的圖形表示，以及根據Adobe Target的個人化優惠方案。 網頁版本也包含線上付款表單。 它有助於在不離開積體電路的情況下進行線上付款。
-* 附加值服務的連結，例如線上儲存、音樂訂閱和隨選視訊訂閱。
+* 受密码保护的PDF，在本教程中称为Print channel。 它包括客户详细信息、账单详细信息、费用汇总、方便的账单支付方式和使用详细信息。
+* 指向Bill的Web版本的链接，在本教程中称为Web渠道。 账单的Web版本除了PDF版本中涵盖的详细信息外，还提供了使用详细信息的图形表示以及基于Adobe Target的个性化优惠。 Web版本还包含在线支付表单。 它有助于在不离开集成电路的情况下进行在线支付。
+* 指向增值服务的链接，例如在线存储、音乐订阅和按需视频订阅。
 
 ## 前提条件 {#prerequisites}
 
-* 設定AEM編寫執行個體。
-* 安裝 [AEM Forms附加元件](/help/forms/using/installing-configuring-aem-forms-osgi.md) 在作者執行個體上
-* 設定MYSQL資料庫
-* 從資料庫提供者取得JDBC資料庫驅動程式（JAR檔案）。 教學課程中的範例是以MySQL資料庫為基礎，並使用Oracle的 [MySQL JDBC資料庫驅動程式](https://dev.mysql.com/downloads/connector/j/5.1.html).
+* 设置AEM创作实例。
+* 安装 [AEM Forms加载项](/help/forms/using/installing-configuring-aem-forms-osgi.md) 在创作实例上
+* 设置MYSQL数据库
+* 从数据库提供程序获取JDBC数据库驱动程序（JAR文件）。 本教程中的示例基于MySQL数据库并使用Oracle [MySQL JDBC数据库驱动程序](https://dev.mysql.com/downloads/connector/j/5.1.html).
 
-## 步驟1：規劃互動式通訊 {#step-plan-the-interactive-communication}
+## 步骤1：规划交互式通信 {#step-plan-the-interactive-communication}
 
 ![07-apply-rules-to-adaptive-form_small](assets/07-apply-rules-to-adaptive-form_small.png)
 
-規劃互動式通訊的第一步是完成互動式通訊的內容。 內容完成之後，您必須加以分析，以識別建立互動式通訊所需的各種資產型別。
+规划交互式通信的第一步是最终确定交互式通信的内容。 内容定稿后，必须对其进行分析以确定创建交互式通信所需的各种资源类型。
 
 **目标：**
 
-若要使用下列資料輸入模式來建立互動式通訊的剖析：
+为具有以下数据输入模式的交互式通信创建剖析：
 
-* 靜態文字
-* 表單資料模型
+* 静态文本
+* 表单数据模型
 * 代理 UI
-* 條件資料
+* 条件数据
 * 图像
 
 [ ](/help/forms/using/planning-interactive-communications.md)
 
-## 步驟2：建立表單資料模型 {#step-create-form-data-model}
+## 步骤2：创建表单数据模型 {#step-create-form-data-model}
 
 ![03-create-adaptive-form-main-image_small](assets/03-create-adaptive-form-main-image_small.png)
 
-表單資料模型可讓您將互動式通訊連線到不同的資料來源。 例如，AEM使用者設定檔、RESTful Web服務、以SOAP為基礎的Web服務、OData服務和關聯式資料庫。 表單資料模型是連線資料來源中可用的商業實體和服務的統一資料表示架構。 您可以搭配互動式通訊使用表單資料模型，從連線的資料來源擷取資料。 如需表單資料模型的詳細資訊，請參閱 [AEM Forms資料整合](/help/forms/using/data-integration.md).
+表单数据模型允许您将交互式通信连接到不同的数据源。 例如，AEM用户配置文件、RESTful Web服务、基于SOAP的Web服务、OData服务和关系数据库。 表单数据模型是连接数据源中可用的业务实体和服务的统一数据表示模式。 您可以将表单数据模型与交互式通信结合使用，以从连接的数据源中检索数据。 有关表单数据模型的更多信息，请参阅 [AEM Forms数据集成](/help/forms/using/data-integration.md).
 
 **目标：**
 
-* 將資料庫執行處理（MySQL資料庫）設定為資料來源
-* 使用MySQL資料庫作為資料來源來建立表單資料模型
-* 將資料模型物件新增至表單資料模型
-* 設定表單資料模型的讀取和寫入服務
-* 建立資料模型物件之間的關聯
-* 檢視自動產生的範例資料
-* 編輯範例資料
-* 測試表單資料模型和已設定的服務（包含測試資料）
+* 将数据库实例（MySQL数据库）配置为数据源
+* 使用MySQL数据库作为数据源创建表单数据模型
+* 将数据模型对象添加到表单数据模型
+* 为表单数据模型配置读写服务
+* 在数据模型对象之间创建关联
+* 查看自动生成的示例数据
+* 编辑示例数据
+* 测试表单数据模型和使用测试数据配置的服务
 
 [ ](/help/forms/using/create-form-data-model0.md)
 
-## 步驟3：建立檔案片段 {#step-create-document-fragments}
+## 步骤3：创建文档片段 {#step-create-document-fragments}
 
 ![05-create-form-data-model-main_small](assets/05-create-form-data-model-main_small.png)
 
-檔案片段是通訊的可重複使用元件，用於構成互動式通訊。 檔案片段的型別有：文字、清單和條件。
+文档片段是用于构成交互式通信的通信的可重用组件。 文档片段的类型有：文本、列表和条件。
 
 **目标：**
 
-* 建立檔案片段
-* 建立變數
-* 建立和套用規則
+* 创建文档片段
+* 创建变量
+* 创建和应用规则
 
 [ ](/help/forms/using/create-document-fragments.md)
 
-## 步驟4：建立範本 {#step-create-templates}
+## 步骤4：创建模板 {#step-create-templates}
 
 ![07-apply-rules-to-adaptive-form_small](assets/07-apply-rules-to-adaptive-form_small.png)
 
-若要建立互動式通訊，您必須在AEM伺服器上擁有可供列印和Web Channels使用的範本。
+要创建交互式通信，必须在AEM服务器上为打印和Web渠道提供模板。
 
-列印頻道的範本是在AdobeForms Designer中建立並上傳至AEM伺服器。 建立互動式通訊時，即可使用這些範本。
+打印渠道的模板是在AdobeForms Designer中创建并上传到AEM服务器。 然后，在创建交互式通信时可以使用这些模板。
 
-Web channel的範本是在AEM中建立。 範本作者和管理員可以建立、編輯和啟用網頁範本。 建立並啟用後，這些範本便可在建立互動式通訊時使用。
+Web渠道的模板是在AEM中创建的。 模板作者和管理员可以创建、编辑和启用Web模板。 创建并启用后，这些模板便可在创建交互式通信时使用。
 
 **目标：**
 
-* 使用AdobeForms Designer為列印頻道建立XDP範本
-* 將XDP範本上傳至AEM Forms伺服器
-* 建立和啟用網頁頻道的範本
+* 使用AdobeForms Designer为打印渠道创建XDP模板
+* 将XDP模板上传到AEM Forms服务器
+* 为Web渠道创建和启用模板
 
 [ ](/help/forms/using/create-templates-print-web.md)
 
-## 步驟5：建立互動式通訊 {#step-create-an-interactive-communication}
+## 步骤5：创建交互式通信 {#step-create-an-interactive-communication}
 
 ![09-style-your-adaptive-form-small](assets/09-style-your-adaptive-form-small.png)
 
-一旦您為Web版本建立了所有建置區塊（例如表單資料模型、檔案片段和範本），您就可以開始建立互動式通訊。
+为Web版本创建所有构建基块（如表单数据模型、文档片段和模板）后，即可开始创建交互式通信。
 
-互動式通訊可透過兩種管道提供：列印和網路。 您也可以建立以Print channel為主體的互動式通訊。 Web channel的「列印為主版」選項可確保從Print channel衍生出Web channel的內容、繼承和資料繫結。
+交互式通信可通过两种渠道提供：打印和Web。 您还可以创建以Print channel作为主控的交互式通信。 Web渠道的“打印为主控”选项确保Web渠道的内容、继承和数据绑定派生自Print渠道。
 
 **目标：**
 
-* 為列印頻道建立互動式通訊
-* 建立Web channel的互動式通訊
-* 以「列印為主版」建立列印與Web互動式通訊
-* 在互動式通訊的Web版本中建立動態表格
-* 在Web版本的互動式通訊中建立圖表
-* 在互動式通訊的Web版本中建立超連結
+* 为打印渠道创建交互式通信
+* 为Web渠道创建交互式通信
+* 创建Print和Web交互式通信，将Print作为主控
+* 在Web版本的交互式通信中创建动态表
+* 在Web版本的交互式通信中创建图表
+* 在Web版本的交互式通信中创建超链接
 
 [ ](/help/forms/using/create-interactive-communication0.md)
 
-## 步驟6：發佈互動式通訊 {#step-publish-your-interactive-communication}
+## 步骤6：发布交互式通信 {#step-publish-your-interactive-communication}
 
 ![12-publish-your-adaptive-form-_small](assets/12-publish-your-adaptive-form-_small.png)
 
-使用列印和Web通道建立及測試互動式通訊後，您就可以發佈這些資產。 本教學課程中說明的使用案例著重於將這些資產與電子郵件使用者端整合。 電子郵件使用者端可作為橋接器，將互動式通訊傳送至多個電子郵件地址。
+使用打印和Web渠道创建和测试交互式通信后，即可发布这些资产。 本教程中描述的用例侧重于将这些资产与电子邮件客户端集成。 电子邮件客户端用作将交互式通信发送到多个电子邮件地址的桥梁。
 
 **目标：**
 
-* 將互動式通訊與電子郵件使用者端整合，以便向客戶傳送通訊
-* 將PDF檔案加入為附件（在Print channel中建立的互動式通訊）
-* 加入互動式通訊Web版本的連結
+* 将交互式通信与电子邮件客户端集成，以便能够向客户发送通信
+* 将PDF文档作为附件包括在内（在打印渠道中创建的交互式通信）
+* 包括指向交互式通信的Web版本的链接

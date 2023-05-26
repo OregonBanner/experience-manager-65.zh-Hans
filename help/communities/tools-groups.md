@@ -1,7 +1,7 @@
 ---
 title: 组模板
 seo-title: Group Templates
-description: 如何存取群組範本主控台
+description: 如何访问“组模板”控制台
 seo-description: How to access the Group Templates console
 uuid: 4cf20c91-32b0-4051-a98d-44e4eb50a231
 contentOwner: Janice Kendall
@@ -21,84 +21,84 @@ ht-degree: 3%
 
 # 组模板 {#group-templates}
 
-「群組範本」控制檯類似於 [網站範本](/help/communities/sites.md) 主控台。 兩者都是組成社群網站的一組預佈線頁面和功能的藍圖。 不同之處在於網站範本適用於主要社群，而群組範本適用於社群群組，即巢狀內建於主要社群的子社群。
+“组模板”控制台与 [站点模板](/help/communities/sites.md) 控制台。 两者都是构成社区站点的一组预布线页面和功能的蓝图。 不同之处在于，站点模板适用于主社区，组模板适用于社区组（嵌套在主社区中的子社区）。
 
-社群群組是透過包含 [群組功能](/help/communities/functions.md#groups-function) （這並非範本中的第一個或唯一函式）。
+社区组通过包含 [组功能](/help/communities/functions.md#groups-function) （该功能可能不是模板中的第一个或唯一函数）。
 
-截至社群 [feature pack 1](/help/communities/deploy-communities.md#latestfeaturepack)，可在群組範本中加入「群組」功能以巢狀內嵌群組。
+截至社区 [功能包1](/help/communities/deploy-communities.md#latestfeaturepack)，可通过在组模板中包含组函数来嵌套组。
 
-執行動作建立新社群群組時，即會選取該群組的範本（結構）。 選取範圍取決於群組新增至網站或群組範本時的設定方式。
+执行操作创建新社区组后，即会选择该组的模板（结构）。 选择取决于组功能在添加到站点或组模板时的配置方式。
 
 >[!NOTE]
 >
->用於建立的控制檯 [社群網站](/help/communities/sites-console.md)， [社群網站範本](/help/communities/sites.md)， [社群群組範本](/help/communities/tools-groups.md) 和 [社群功能](/help/communities/functions.md) 僅供作者環境使用。
+>用于创建的控制台 [社区站点](/help/communities/sites-console.md)， [社区站点模板](/help/communities/sites.md)， [社区组模板](/help/communities/tools-groups.md) 和 [社区功能](/help/communities/functions.md) 仅用于创作环境。
 
-## 群組範本主控台 {#group-templates-console}
+## 组模板控制台 {#group-templates-console}
 
-若要存取AEM作者環境中的「群組範本」主控台：
+要访问AEM创作环境中的“组模板”控制台，请执行以下操作：
 
-* 選取 **工具 |社群 |群組範本，** 從全域導覽。
+* 选择 **工具 |社区 |组模板，** 从全局导航中。
 
-此主控台會顯示 [社群網站](/help/communities/sites-console.md) 可建立並允許建立新的群組範本。
+此控制台显示模板，其中 [社区站点](/help/communities/sites-console.md) 可以创建，并允许创建新的组模板。
 
-![社群群組範本](assets/groups-template.png)
+![社区组模板](assets/groups-template.png)
 
 ## 创建组模板 {#create-group-template}
 
-若要開始建立新的群組範本，請選取 `Create`.
+要开始创建新组模板，请选择 `Create`.
 
-這會顯示包含3個子面板的網站編輯器面板：
+这将显示站点编辑器面板，其中包含3个子面板：
 
 ### 基本信息 {#basic-info}
 
 ![site-basic-info](assets/site-basic-info.png)
 
-在「基本資訊」面板上，會設定名稱、說明以及範本是啟用還是停用：
+在“基本信息”面板上，配置了名称、说明以及模板是启用还是禁用：
 
 * **新组模板名称**
 
-   範本名稱id。
+   模板名称id。
 
 * **描述**
 
-   範本說明。
+   模板描述。
 
-* **已停用/已啟用**
+* **已禁用/已启用**
 
-   控制範本是否可參照的切換開關。
+   控制模板是否可引用的切换开关。
 
 #### 缩略图 {#thumbnail}
 
-![網站縮圖](assets/site-thumbnail.png)
+![site-thumbnail](assets/site-thumbnail.png)
 
-（可選）選取「上傳影像」圖示以顯示縮圖，以及社群網站建立者的名稱和說明。
+（可选）选择“上传图像”图标以显示缩略图，以及社区站点创建者的名称和描述。
 
 #### 结构 {#structure}
 
 >[!CAUTION]
 >
->如果使用AEM 6.1 Communities FP4或更舊版本，請勿將群組函式新增至群組範本。
+>如果使用AEM 6.1 Communities FP4或更低版本，请勿将组函数添加到组模板。
 >
->巢狀群組功能自Communities起即可使用 [FP1](/help/communities/communities.md#latestfeaturepack).
+>嵌套群组功能自社区起可用 [FP1](/help/communities/communities.md#latestfeaturepack).
 >
->仍不允許將「群組」函式新增為範本中的第一個或唯一函式。
+>仍不允许将组函数添加为模板中的第一个或唯一函数。
 
-![群組範本編輯器](assets/template-editor.png)
+![组模板编辑器](assets/template-editor.png)
 
-若要新增社群功能，請從右側拖曳至左側，順序為網站功能表連結的顯示順序。 在建立網站期間，樣式將套用至範本。
+要添加社区功能，请按站点菜单链接出现的顺序从右侧向左拖动。 样式将在创建站点期间应用于模板。
 
-例如，如果您想要論壇，請從資料庫拖曳論壇功能，然後放置於範本產生器下。 這會導致論壇設定對話方塊開啟。 請參閱 [函式主控台](/help/communities/functions.md) 以取得有關設定對話方塊的資訊。
+例如，如果您需要论坛，请将论坛函数从库中拖放到模板生成器下。 这将导致论坛配置对话框打开。 请参阅 [函数控制台](/help/communities/functions.md) 有关配置对话框的信息。
 
-根據此範本，繼續拖放子社群網站（群組）所需的任何其他社群功能。
+基于此模板，继续拖放子社区站点（组）所需的任何其他社区功能。
 
-![拖曳函式](assets/dragfunctions.png)
+![拖动函数](assets/dragfunctions.png)
 
-將所有需要的函式放入範本產生器區域並設定後，選取 **儲存** 右上角。
+将所有需要的函数放入模板生成器区域并进行配置后，选择 **保存** 在右上角。
 
 ## 编辑组模板 {#edit-group-template}
 
-在主要內容中檢視社群群組時 [群組範本主控台](#group-templates-console)，即可選取要編輯的現有群組範本。
+在主页中查看社区组时 [组模板控制台](#group-templates-console)，则可以选择要编辑的现有组模板。
 
-編輯群組範本不會影響已從範本建立的社群網站。 您可以直接 [編輯社群網站](/help/communities/sites-console.md#modify-structure)的結。
+编辑组模板不会影响已从该模板创建的社区站点。 可以直接执行以下操作 [编辑社区站点](/help/communities/sites-console.md#modify-structure)的构造替换为。
 
-此程式提供的面板與 [建立群組範本](#create-group-template).
+此流程提供的面板与 [创建组模板](#create-group-template).

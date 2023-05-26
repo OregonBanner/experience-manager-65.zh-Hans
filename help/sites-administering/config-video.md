@@ -1,7 +1,7 @@
 ---
-title: 設定視訊元件
+title: 配置视频组件
 seo-title: Configure the Video component
-description: 瞭解如何設定視訊元件。
+description: 了解如何配置视频组件。
 seo-description: Learn how to configure the Video Component.
 uuid: f4755a13-08ea-4096-a951-46a590f8d766
 contentOwner: Guillaume Carlino
@@ -17,72 +17,72 @@ ht-degree: 0%
 
 ---
 
-# 設定視訊元件 {#configure-the-video-component}
+# 配置视频组件 {#configure-the-video-component}
 
-此 [視訊元件](/help/sites-authoring/default-components-foundation.md#video) 可讓您在頁面上放置預先定義的現成(OOTB)視訊資產。
+此 [视频组件](/help/sites-authoring/default-components-foundation.md#video) 允许您在页面上放置预定义的、开箱即用(OOTB)视频资产。
 
-為了進行適當的轉碼，管理員會個別安裝FFmpeg。 另請參閱 [安裝FFmpeg並設定AEM](#install-ffmpeg). 管理員也 [設定視訊設定檔](#configure-video-profiles) 與HTML5元素搭配使用。
-
->[!CAUTION]
->
->此基礎元件已過時。 Adobe建議使用 [核心元件內嵌元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/embed.html) 而非。
+为了进行正确的转码，管理员需单独安装FFmpeg。 参见 [安装FFmpeg并配置AEM](#install-ffmpeg). 管理员也是 [配置视频配置文件](#configure-video-profiles) 用于HTML5元素。
 
 >[!CAUTION]
 >
->若無廣泛的專案層級自訂，此元件就不能再立即運作。
+>此基础组件已被弃用。 Adobe建议利用 [核心组件嵌入组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/embed.html) 而是。
 
-## 設定視訊設定檔 {#configure-video-profiles}
+>[!CAUTION]
+>
+>如果没有广泛的项目级别自定义，则此组件将无法再开箱即用。
 
-若要使用HTML5元素，請定義視訊設定檔。 此處選取的專案會依序使用。 若要存取，請使用 [設計模式](/help/sites-authoring/default-components-designmode.md) （僅限傳統UI）並選取 **[!UICONTROL 設定檔]** 標籤：
+## 配置视频配置文件 {#configure-video-profiles}
+
+要使用HTML5元素，请定义视频配置文件。 此处选择的按顺序使用。 要访问，请使用 [设计模式](/help/sites-authoring/default-components-designmode.md) （仅限经典UI）并选择 **[!UICONTROL 配置文件]** 选项卡：
 
 ![chlimage_1-317](assets/chlimage_1-317.png)
 
-在此對話方塊中，您也可以設定視訊元件的設計和引數， [!UICONTROL 播放]， [!UICONTROL Flash]、和 [!UICONTROL 進階].
+在此对话框中，您还可以配置视频组件的设计和参数 [!UICONTROL 播放]， [!UICONTROL Flash]、和 [!UICONTROL 高级].
 
-## 安裝FFmpeg並設定AEM {#install-ffmpeg}
+## 安装FFmpeg并配置AEM {#install-ffmpeg}
 
-視訊元件仰賴協力廠商開放原始碼產品FFmpeg轉碼視訊。 下載來源 [https://ffmpeg.org/](https://ffmpeg.org/). 安裝FFmpeg後，請設定AEM使用特定的音訊轉碼器和特定的執行階段選項。
+视频组件依靠第三方开源产品FFmpeg对视频进行转码。 下载自 [https://ffmpeg.org/](https://ffmpeg.org/). 安装FFmpeg后，请将AEM配置为使用特定的音频编解码器和特定的运行时选项。
 
-若要將FFmpeg安裝在 **Windows**，請遵循下列步驟：
+在上安装FFmpeg **Windows**，请按照以下步骤操作：
 
-1. 將編譯的二進位檔下載為 `ffmpeg.zip`.
-1. 取消封存至資料夾。
-1. 設定系統環境變數 `PATH` 至&lt;*your-ffmpeg-location*>`\bin`.
-1. 重新啟動AEM。
+1. 将编译后的二进制文件下载为 `ffmpeg.zip`.
+1. 取消存档到文件夹。
+1. 设置系统环境变量 `PATH` 到&lt;*your-ffmpeg-location*>`\bin`.
+1. 重新启动AEM。
 
-若要將FFmpeg安裝在 **MAC OS X**，請遵循下列步驟：
+在上安装FFmpeg **MAC OS X**，请按照以下步骤操作：
 
-1. 安裝Xcode，位於 [developer.apple.com/xcode](https://developer.apple.com/xcode/).
-1. 安裝位於 [XQuartz](https://www.xquartz.org) 以取得 [X11](https://support.apple.com/en-us/HT201341).
-1. 安裝MacPorts，位於 [www.macports.org](https://www.macports.org/).
-1. 在主控台中執行 `sudo port install ffmpeg` 命令並依照熒幕上的指示操作。 請確定 `FFmpeg` 可執行檔已新增至 `PATH` 系統變數。
+1. 安装Xcode，位于 [developer.apple.com/xcode](https://developer.apple.com/xcode/).
+1. 可在以下位置安装 [XQuartz](https://www.xquartz.org) 以获取 [X11](https://support.apple.com/en-us/HT201341).
+1. 安装MacPorts，位于 [www.macports.org](https://www.macports.org/).
+1. 在控制台中执行 `sudo port install ffmpeg` 命令，并按照屏幕上的说明操作。 确保 `FFmpeg` 可执行文件将添加到 `PATH` 系统变量。
 
-若要將FFmpeg安裝在 **Mac作業系統X 10.6**，使用預先編譯的版本，請遵循下列步驟：
+在上安装FFmpeg **Mac OS X 10.6**，使用预编译版本，执行以下步骤：
 
-1. 下載預先編譯版本。
-1. 取消封存至 `/usr/local` 目錄。
-1. 在主控台中，執行 `sudo ln -s /usr/local/Cellar/ffmpeg/0.6/bin/ffmpeg /usr/bin/ffmpeg`. 視需要變更路徑。
+1. 下载预编译版本。
+1. 将其取消存档到 `/usr/local` 目录。
+1. 在控制台中，执行 `sudo ln -s /usr/local/Cellar/ffmpeg/0.6/bin/ffmpeg /usr/bin/ffmpeg`. 根据需要更改路径。
 
-至 **設定AEM**，請遵循下列步驟：
+至 **配置AEM**，请按照以下步骤操作：
 
 >[!NOTE]
 >
->只有在需要進一步自訂轉碼器時，才需要執行這些步驟。
+>只有在需要进一步自定义编解码器时，才需要执行这些步骤。
 
-1. 開啟 [!UICONTROL CRXDE Lite] 在網頁瀏覽器中。 存取 [http://localhost:4502/crx/de](http://localhost:4502/crx/de).
-2. 選取 `/libs/settings/dam/video/format_aac/jcr:content` 節點並確保節點屬性如下：
+1. 打开 [!UICONTROL CRXDE Lite] 在Web浏览器中。 访问 [http://localhost:4502/crx/de](http://localhost:4502/crx/de).
+2. 选择 `/libs/settings/dam/video/format_aac/jcr:content` 节点并确保节点属性如下所示：
 
    * `audioCodec` 是 `aac`.
    * `customArgs` 是 `-flags +loop -me_method umh -g 250 -qcomp 0.6 -qmin 10 -qmax 51 -qdiff 4 -bf 16 -b_strategy 1 -i_qfactor 0.71 -cmp chroma -subq 8 -me_range 16 -coder 1 -sc_threshold 40 -b-pyramid normal -wpredp 2 -mixed-refs 1 -8x8dct 1 -fast-pskip 1 -keyint_min 25 -refs 4 -trellis 1 -direct-pred 3 -partitions i8x8,i4x4,p8x8,b8x8`.
 
-3. 若要自訂設定，請建立覆蓋，位於 `/apps/settings/` 節點並將相同的結構移動到 `/conf/global/settings/` 節點。 無法在中編輯它 `/libs` 節點。 例如，若要覆蓋路徑 `/libs/settings/dam/video/fullhd-bp`，建立它於 `/conf/global/settings/dam/video/fullhd-bp`.
+3. 要自定义配置，请在中创建一个叠加 `/apps/settings/` 节点并将相同的结构移动到 `/conf/global/settings/` 节点。 无法在中编辑它 `/libs` 节点。 例如，要叠加路径 `/libs/settings/dam/video/fullhd-bp`，创建它于 `/conf/global/settings/dam/video/fullhd-bp`.
 
    >[!NOTE]
    >
-   >覆蓋並編輯整個設定檔節點，而不僅僅是需要修改的屬性。 這類資源無法透過SlingResourceMerger解析。
+   >叠加并编辑整个配置文件节点，而不仅仅是需要修改的属性。 此类资源不会通过SlingResourceMerger进行解析。
 
-4. 如果您變更了其中一個屬性，請按一下 **[!UICONTROL 全部儲存]**.
+4. 如果更改了其中一个属性，请单击 **[!UICONTROL 全部保存]**.
 
 >[!NOTE]
 >
->升級AEM執行個體時，不會保留預設現成(OOTB)工作流程模型的變更。 Adobe建議您先複製修改過的工作流程模型，然後再進行編輯。 例如，複製OOTB [!UICONTROL DAM更新資產] 在編輯「 」中的「FFmpeg轉碼」步驟之前建立的模型 [!UICONTROL DAM更新資產] 模型以挑選升級前存在的視訊設定檔名稱。 然後，您可以覆蓋 `/apps` 節點以供AEM擷取對OOTB模型的自訂變更。
+>升级AEM实例时，不会保留对默认现成(OOTB)工作流模型的更改。 Adobe建议先复制修改过的工作流模型，然后再进行编辑。 例如，复制OOTB [!UICONTROL DAM更新资产] 中编辑FFmpeg转码步骤之前的模型 [!UICONTROL DAM更新资产] 用于选取升级前存在的视频配置文件名称的模型。 然后，您可以叠加 `/apps` 节点，以便AEM检索对OOTB模型的自定义更改。

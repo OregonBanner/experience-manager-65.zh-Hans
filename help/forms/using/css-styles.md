@@ -1,7 +1,7 @@
 ---
-title: 建立HTML5表單的CSS樣式
+title: 为HTML5表单创建CSS样式
 seo-title: Creating CSS styles for HTML5 forms
-description: 瞭解如何修改與HTML表單元素關聯的CSS類別，以變更HTML5表單的外觀。
+description: 了解如何通过修改与HTML表单元素关联的CSS类来更改HTML5表单的外观。
 seo-description: Learn how to change the appearance of HTML5 forms by modifying the CSS class associated with the HTML form element.
 uuid: 43c689b4-243c-43de-a8be-1eef10d75295
 contentOwner: robhagat
@@ -18,39 +18,39 @@ ht-degree: 3%
 
 ---
 
-# 建立HTML5表單的CSS樣式 {#creating-css-styles-for-html-forms}
+# 为HTML5表单创建CSS样式 {#creating-css-styles-for-html-forms}
 
-XFA型表單範本的HTML5轉譯包含數個HTML元素。 這些元素會依順序排列。 每個元素都有已妥善定義的CSS類別。 您可以使用這些CSS類別來選取和變更元素的外觀。
-
->[!NOTE]
->
->在CSS類別中，請勿變更width、height、border-thickness、top、left、right、bottom、padding、margin及其他位置與大小屬性的值。 位置和大小屬性的任何變更都會改變表單的版面。
-
-## 元素的CSS類別  {#css-classes-nbsp-for-elements-nbsp}
-
-每個元素都包含定義良好的CSS類別。 您可以修改這些類別來變更元素的外觀。 每個元素（欄位和繪圖元素除外）都有兩個CSS類別 — Type類別和Name類別。
-
-* 此 **型別類別** 代表XFA欄位的型別。 您可以覆寫 `type` 類別修改特定型別之所有元素的樣式。
-
-* 此 **名稱類別** 對應至XFA欄位的名稱。 您可以覆寫 `name` 類別來修改自訂樣式並套用至元素。
+基于XFA的表单模板的HTML5演绎版包含多个HTML元素。 这些元素按顺序排列。 每个元素都有明确定义的CSS类。 您可以使用这些CSS类选择和更改元素的外观。
 
 >[!NOTE]
 >
->某些XFA元素沒有名稱。 若要變更這類元件的樣式，請修改該特定型別的所有元件。
+>在CSS类中，请勿更改width、height、border-thickness、top、left、right、bottom、padding、margin以及其他位置和大小属性的值。 位置和大小属性的任何更改都会改变表单的布局。
 
-對於AEM Forms Designer中未命名的頁面，HTML5表單中的頁面會以遞增的順序命名。 例如，對於具有兩個頁面的HTML5表單，這些頁面的名稱為Page1， Page2。
+## 元素的CSS类  {#css-classes-nbsp-for-elements-nbsp}
 
-## 欄位元素 {#field-element}
+每个元素都包含明确定义的CSS类。 可以修改这些类以更改元素的外观。 除字段和绘制元素外，每个元素都有两个CSS类 — Type类和Name类。
 
-欄位元素包含兩個巢狀元素：Widget和標題。
+* 此 **类型类** 表示XFA字段的类型。 您可以覆盖 `type` 类来修改特定类型的所有元素的样式。
 
-**Widget元素**
+* 此 **名称类** 对应于XFA字段的名称。 您可以覆盖 `name` 类，用于修改自定义样式并将自定义样式应用于元素。
 
-widget元素包含用於與使用者互動的使用者介面元素。 它有三個CSS類別：
+>[!NOTE]
+>
+>某些XFA元素没有名称。 要更改此类组件的样式，请修改该特定类型的所有组件。
 
-* **Widget**：每個Widget都有這個類別。
-* **名稱**：AEM隨附的所有Widget都包含Widget Name類別。 對於自訂Widget，Widget開發人員會提供Widget name類別。
-* **type**：每個Widget都有使用者介面元素。 此類別會定義使用者介面元素的型別。
+对于AEM Forms Designer中未命名的页面，HTML5表单中的页面会按其编号的递增顺序进行命名。 例如，对于包含两页的HTML5表单，这些页被命名为Page1、Page2。
+
+## 字段元素 {#field-element}
+
+字段元素包含两个嵌套元素：小部件和题注。
+
+**构件元素**
+
+构件元素包含用于与用户交互的用户界面元素。 它有三个CSS类：
+
+* **构件**：每个构件都具有此类。
+* **name**：AEM附带的所有构件都包含构件名称类。 对于自定义构件，构件开发人员提供构件名称类。
+* **type**：每个构件都有一个用户界面元素。 此类定义用户界面元素的类型。
 
 ```xml
 <!--field with caption-->
@@ -69,9 +69,9 @@ widget元素包含用於與使用者互動的使用者介面元素。 它有三�
 </div>
 ```
 
-除了型別和名稱類別之外，欄位元件也包含其他名為的CSS類別 **子型別**. 子型別會識別其欄位型別，例如NumericField、DateField、TextField。 您可以覆寫子型別類別，以修改型別、子型別的所有欄位的樣式。
+除了类型和名称类之外，字段组件还包含一个名为的附加CSS类 **子类型**. 子类型标识其字段的类型，例如NumericField、DateField、TextField。 可以覆盖子类型类来修改类型、子类型的所有字段的样式。
 
-## 不同元件的CSS類別 {#css-classes-for-different-components}
+## 不同组件的CSS类 {#css-classes-for-different-components}
 
 <table>
  <tbody>
@@ -83,32 +83,32 @@ widget元素包含用於與使用者互動的使用者介面元素。 它有三�
   <tr>
    <td>页面</td>
    <td>页</td>
-   <td>使用者定義的名稱<br /> 或<br /> 頁面&lt;pagenumber&gt; （預設）</td>
+   <td>用户定义的名称<br /> 或<br /> 页面&lt;pagenumber&gt; （默认）</td>
   </tr>
   <tr>
    <td>内容区域</td>
    <td>contentarea</td>
-   <td>使用者定義的名稱</td>
+   <td>用户定义的名称</td>
   </tr>
   <tr>
-   <td>子表單</td>
-   <td>子表單</td>
-   <td>使用者定義的名稱</td>
+   <td>子表单</td>
+   <td>子表单</td>
+   <td>用户定义的名称</td>
   </tr>
   <tr>
-   <td>排除群組</td>
-   <td>排除群組</td>
-   <td>使用者定義的名稱</td>
+   <td>排除组</td>
+   <td>排除组</td>
+   <td>用户定义的名称</td>
   </tr>
   <tr>
    <td>Draw</td>
    <td>draw</td>
-   <td>使用者定義的名稱</td>
+   <td>用户定义的名称</td>
   </tr>
   <tr>
    <td>字段</td>
    <td>字段</td>
-   <td>使用者定義的名稱</td>
+   <td>用户定义的名称</td>
   </tr>
   <tr>
    <td>描述</td>
@@ -117,137 +117,137 @@ widget元素包含用於與使用者互動的使用者介面元素。 它有三�
   </tr>
   <tr>
    <td>小组件</td>
-   <td>Widget</td>
-   <td>Widget開發人員會加以定義（使用者定義的Widget請參閱下節中的表格）</td>
+   <td>构件</td>
+   <td>构件开发人员对其进行定义（对于用户定义的构件，请参阅下节中的表）</td>
   </tr>
  </tbody>
 </table>
 
-## 不同欄位的CSS類別 {#css-classes-for-different-fields}
+## 不同字段的CSS类 {#css-classes-for-different-fields}
 
-AEM Forms Designer支援表單中不同型別的欄位，例如NumericField、DecimalField和Date Field。 HTML中的所有欄位都包含上述CSS類別。 視欄位型別而定，它們也包含一些額外的類別。
+AEM Forms Designer支持表单中不同类型的字段，如NumericField、DecimalField和Date Field。 HTML中的所有字段都包含上述CSS类。 它们还包含一些额外的类，具体取决于字段的类型。
 
-每個欄位都有一個代表UI元素的相關Widget。 每個欄位的類別以及與每個欄位關聯的Widget如下所列。
+每个字段都有一个表示UI元素的关联构件。 下面列出了每个字段的类以及与每个字段关联的构件。
 
 <table>
  <tbody>
   <tr>
-   <td><strong>欄位型別</strong></td>
+   <td><strong>字段类型</strong></td>
    <td><strong>子类型</strong></td>
-   <td><strong>Widget名稱</strong></td>
-   <td><strong>Widget型別</strong></td>
-   <td><strong>HTMLUI標籤</strong></td>
+   <td><strong>构件名称</strong></td>
+   <td><strong>构件类型</strong></td>
+   <td><strong>HTMLUI标记</strong></td>
   </tr>
   <tr>
    <td>按钮<br type="_moz" /> </td>
    <td>NA</td>
    <td>xfaButton<br type="_moz" /> </td>
    <td>buttonfieldwidget<br type="_moz" /> </td>
-   <td>輸入型別=按鈕<br type="_moz" /> </td>
+   <td>输入类型=按钮<br type="_moz" /> </td>
   </tr>
   <tr>
-   <td>檢查按鈕<br type="_moz" /> </td>
-   <td>核取方塊欄位<br /> </td>
+   <td>Checkbutton<br type="_moz" /> </td>
+   <td>checkboxfield<br /> </td>
    <td>XfaCheckBox<br type="_moz" /> </td>
-   <td>核取方塊欄位Widget<br type="_moz" /> </td>
+   <td>复选框字段小组件<br type="_moz" /> </td>
    <td>input type=checkbox<br type="_moz" /> </td>
   </tr>
   <tr>
-   <td>日期欄位<br type="_moz" /> </td>
+   <td>日期字段<br type="_moz" /> </td>
    <td>datefield<br type="_moz" /> </td>
    <td>dateField<br type="_moz" /> </td>
-   <td>datefieldwidget<br type="_moz" /> </td>
-   <td>input type=text<br type="_moz" /> </td>
+   <td>日期字段小组件<br type="_moz" /> </td>
+   <td>输入类型=文本<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>DateTimeField<br type="_moz" /> </td>
    <td>textfield<br type="_moz" /> </td>
    <td>textField<br type="_moz" /> </td>
-   <td>textfieldwidget</td>
-   <td>input type=text<br type="_moz" /> </td>
+   <td>文本字段小组件</td>
+   <td>输入类型=文本<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>DecimalField<br type="_moz" /> </td>
    <td>numericfield<br type="_moz" /> </td>
-   <td>數值輸入<br type="_moz" /> </td>
-   <td>numericfieldwidget<br type="_moz" /> </td>
-   <td>input type=text<br type="_moz" /> </td>
+   <td>数值输入<br type="_moz" /> </td>
+   <td>numericfield小组件<br type="_moz" /> </td>
+   <td>输入类型=文本<br type="_moz" /> </td>
   </tr>
   <tr>
-   <td>下拉式清單<br type="_moz" /> </td>
-   <td>choicelist<br type="_moz" /> </td>
+   <td>下拉列表<br type="_moz" /> </td>
+   <td>选择器<br type="_moz" /> </td>
    <td>dropDownListWidget<br type="_moz" /> </td>
    <td>choicelistwidget<br type="_moz" /> </td>
-   <td>選取</td>
+   <td>选择</td>
   </tr>
   <tr>
-   <td>ListBox<br type="_moz" /> </td>
-   <td>choicelist<br type="_moz" /> </td>
+   <td>列表框<br type="_moz" /> </td>
+   <td>选择器<br type="_moz" /> </td>
    <td>listBoxWidget<br type="_moz" /> </td>
    <td>choicelistwidget<br type="_moz" /> </td>
    <td>ol</td>
   </tr>
   <tr>
-   <td>數值欄位<br type="_moz" /> </td>
+   <td>数值字段<br type="_moz" /> </td>
    <td>numericfield<br type="_moz" /> </td>
-   <td>數值輸入<br type="_moz" /> </td>
-   <td>numericfieldwidget<br type="_moz" /> </td>
-   <td>input type=text<br type="_moz" /> </td>
+   <td>数值输入<br type="_moz" /> </td>
+   <td>numericfield小组件<br type="_moz" /> </td>
+   <td>输入类型=文本<br type="_moz" /> </td>
   </tr>
   <tr>
-   <td>密碼欄位<br type="_moz" /> </td>
-   <td>密碼欄位<br type="_moz" /> </td>
-   <td>defaultWidget<br type="_moz" /> </td>
-   <td>密碼欄位Widget<br type="_moz" /> </td>
+   <td>密码字段<br type="_moz" /> </td>
+   <td>密码字段<br type="_moz" /> </td>
+   <td>defaultwidget<br type="_moz" /> </td>
+   <td>密码字段小组件<br type="_moz" /> </td>
    <td>input type=password<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>单选按钮<br type="_moz" /> </td>
-   <td>無線電場<br type="_moz" /> </td>
+   <td>辐射场<br type="_moz" /> </td>
    <td>XfaCheckBox<br type="_moz" /> </td>
-   <td>radiofieldwidget<br type="_moz" /> </td>
-   <td>input type=radio<br type="_moz" /> </td>
+   <td>无线电字段小组件<br type="_moz" /> </td>
+   <td>输入类型=无线电<br type="_moz" /> </td>
   </tr>
   <tr>
-   <td>文字欄位<br type="_moz" /> </td>
+   <td>文本字段<br type="_moz" /> </td>
    <td>textfield<br type="_moz" /> </td>
    <td>textField<br type="_moz" /> </td>
-   <td>textfieldwidget<br type="_moz" /> </td>
-   <td>input type=text<br type="_moz" /> </td>
+   <td>文本字段小组件<br type="_moz" /> </td>
+   <td>输入类型=文本<br type="_moz" /> </td>
   </tr>
   <tr>
-   <td>時間欄位<br type="_moz" /> </td>
+   <td>TimeField<br type="_moz" /> </td>
    <td>textfield<br type="_moz" /> </td>
    <td>textField<br type="_moz" /> </td>
-   <td>textfieldwidget<br type="_moz" /> </td>
-   <td>input type=text<br type="_moz" /> </td>
+   <td>文本字段小组件<br type="_moz" /> </td>
+   <td>输入类型=文本<br type="_moz" /> </td>
   </tr>
  </tbody>
 </table>
 
-## 不同繪圖元素的CSS類別 {#css-classes-for-different-draw-elements}
+## 不同绘图元素的CSS类 {#css-classes-for-different-draw-elements}
 
-您可以使用AEM Forms Designer插入靜態繪圖元素，例如文字和影像。 對於每個繪圖元素，個別的CSS類別會與該元素相關聯。 以下列出繪製元素的CSS類別清單。 每個繪圖元素都有與其關聯的繪圖類別。
+您可以使用AEM Forms Designer插入静态绘制元素，如文本和图像。 对于每个绘制元素，一个单独的CSS类与该元素关联。 绘制元素的CSS类列表如下所列。 每个绘制元素都有一个与其关联的绘制类。
 
-| **Draw Type** | **CSS 类** |
+| **绘制类型** | **CSS 类** |
 |---|---|
 | 文本 | text |
 | 图像 | 图像 |
 | 矩形 | 矩形 |
 | Line | 折线图 |
 
-## 設定表單其他部分的樣式 {#styling-other-parts-of-the-form}
+## 设置表单其他部分的样式 {#styling-other-parts-of-the-form}
 
-除了HTML表單中UI元件的外觀外，您還可以變更元素的樣式，例如內嵌錯誤、內嵌警告和有驗證錯誤的欄位。
+除了HTML表单中显示UI组件外，您还可以更改元素的样式，如内联错误、内联警告和有验证错误的字段。
 
 `Styling Inline Errors`
 
-當欄位驗證導致錯誤時，當欄位處於活動狀態時會顯示內嵌錯誤。 若要變更內嵌錯誤的樣式，請覆寫CSS ID **error-msg**.
+如果字段的验证导致错误，则字段处于活动状态时会显示内联错误。 要更改内联错误的样式，请覆盖CSS ID **error-msg**.
 
 `Styling Inline Warnings`
 
-當欄位驗證導致警告時，當欄位處於活動狀態時會顯示內嵌警告。 若要變更這些內嵌警告的樣式，請覆寫CSS ID **warning-msg**.
+当字段的验证导致警告时，当字段处于活动状态时会显示内联警告。 要更改这些内联警告的样式，请覆盖CSS ID **warning-msg**.
 
 `Styling Fields with Validation Errors`
 
-當欄位驗證失敗時，Widget的樣式會變更。 此樣式變更是藉由套用CSS類別來完成 **widgetError** 在widget元件上。 若要修改預設樣式，請覆寫 **widgetError** 類別。
+当字段验证失败时，小部件的样式会更改。 此样式更改通过应用CSS类来完成 **widgetError** 在构件组件上。 要修改默认样式，请覆盖 **widgetError** 类。

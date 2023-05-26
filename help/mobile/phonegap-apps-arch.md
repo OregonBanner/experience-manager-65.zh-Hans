@@ -1,7 +1,7 @@
 ---
-title: 應用程式的剖析
+title: 应用程序的剖析
 seo-title: The Anatomy of an App
-description: 此頁面說明您為應用程式建立的頁面元件，這些元件是以/libs/mobileapps/components/angular/ng-page元件(本機伺服器上的CRXDE Lite)為基礎。
+description: 本页介绍了您为应用程序创建的基于/libs/mobileapps/components/angular/ng-page组件(CRXDE Lite在本地服务器上)的页面组件。
 seo-description: This page provides description of the page components that you create for your app are based on the /libs/mobileapps/components/angular/ng-page component (CRXDE Lite on a local server).
 uuid: 4c1a74c1-85af-4a79-b723-e9fbfc661d35
 contentOwner: User
@@ -16,15 +16,15 @@ ht-degree: 0%
 
 ---
 
-# 應用程式的剖析{#the-anatomy-of-an-app}
+# 应用程序的剖析{#the-anatomy-of-an-app}
 
 >[!NOTE]
 >
->Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）專案使用SPA編輯器。 [了解详情](/help/sites-developing/spa-overview.md).
+>Adobe建议对需要基于单页应用程序框架的客户端渲染（例如React）的项目使用SPA编辑器。 [了解详情](/help/sites-developing/spa-overview.md).
 
-## 行動應用程式的頁面範本 {#page-templates-for-mobile-apps}
+## 移动应用程序的页面模板 {#page-templates-for-mobile-apps}
 
-您為應用程式建立的頁面元件是根據/libs/mobileapps/components/angular/ng-page元件([在本機伺服器上以CRXDE Lite開啟](http://localhost:4502/crx/de/index.jsp#/libs/mobileapps/components/angular/ng-page))。 此元件包含下列元件繼承或覆寫的JSP指令碼：
+您为应用程序创建的页面组件基于/libs/mobileapps/components/angular/ng-page组件([在本地服务器上的CRXDE Lite中打开](http://localhost:4502/crx/de/index.jsp#/libs/mobileapps/components/angular/ng-page))。 此组件包含您的组件继承或覆盖的以下JSP脚本：
 
 * ng-page.jsp
 * head.jsp
@@ -42,29 +42,29 @@ ht-degree: 0%
 
 ### ng-page.jsp {#ng-page-jsp}
 
-使用判斷應用程式的名稱 `applicationName` 屬性，並透過pageContext加以公開。
+使用确定应用程序的名称 `applicationName` 属性，并通过pageContext公开它。
 
-包含head.jsp和body.jsp。
+包括head.jsp和body.jsp。
 
 ### head.jsp {#head-jsp}
 
-寫出 `<head>` 應用程式頁面的元素。
+写出 `<head>` 应用程序页面的元素。
 
-如果您想要覆寫應用程式的檢視區中繼屬性，這是您覆寫的檔案。
+如果要覆盖应用程序的视区元属性，这是您覆盖的文件。
 
-根據最佳實務，應用程式會將使用者端程式庫的css部分包含在標題中，而JS則包含在結尾處&lt; `body>` 元素。
+按照最佳实践，应用程序在头中包含客户端库的css部分，而JS包含在结束&lt; `body>` 元素。
 
 ### body.jsp {#body-jsp}
 
-angular視是否偵測到wcmMode (！= WCMMode.DISABLED)，以判斷開啟頁面以供撰寫還是作為已發佈頁面。
+angular根据是否检测到wcmMode (！= WCMMode.DISABLED)，以确定是打开该页面进行创作，还是将其作为已发布的页面。
 
 **作者模式**
 
-在製作模式中，每個個別頁面會個別呈現。 angular不會處理頁面之間的路由，也不會使用ng-view載入包含頁面元件的部分範本。 相反地，頁面範本(template.jsp)的內容會透過包含在伺服器端 `cq:include` 標籤之間。
+在创作模式下，每个页面将单独呈现。 angular不处理页面之间的路由，也不能使用ng-view加载包含页面组件的部分模板。 相反，页面模板(template.jsp)的内容通过包含在服务器端 `cq:include` 标记之前。
 
-此策略可啟用作者功能（例如在段落系統、Sidekick、設計模式等中新增和編輯元件） 在不修改的情況下運作。 依賴使用者端轉譯的頁面（例如應用程式的頁面）在AEM編寫模式中無法正常運作。
+此策略可启用作者功能（例如在段落系统、Sidekick、设计模式等中添加和编辑组件） 无需修改即可正常运行。 依赖客户端渲染的页面（例如应用程序的页面）在AEM创作模式下性能不佳。
 
-請注意，template.jsp include會包裝在 `div` 元素包含 `ng-controller` 指令。 此結構可啟用DOM內容與控制器的連結。 因此，雖然在使用者端轉譯的頁面會失敗，但這麼做可正常運作的個別元件（請參閱下文元件一節）。
+请注意，template.jsp include封装在 `div` 包含 `ng-controller` 指令。 此结构允许DOM内容与控制器的链接。 因此，虽然在客户端呈现自身的页面会失败，但可以正常工作的各个组件可以正常使用（请参阅下面关于组件的部分）。
 
 ```xml
 <div ng-controller="<c:out value="${controllerNameStripped}"/>">
@@ -72,43 +72,43 @@ angular視是否偵測到wcmMode (！= WCMMode.DISABLED)，以判斷開啟頁面
 </div>
 ```
 
-**發佈模式**
+**发布模式**
 
-在發佈模式中（例如使用Content Sync匯出應用程式時），所有頁面都會變成單頁應用程式(SPA)。 (若要瞭解SPA，請使用Angular教學課程，尤其是 [https://docs.angularjs.org/tutorial/step_07](https://docs.angularjs.org/tutorial/step_07).)
+在发布模式下（例如，使用内容同步导出应用程序时），所有页面都会变成单页应用程序(SPA)。 (要了解SPA，请使用Angular教程，尤其是 [https://docs.angularjs.org/tutorial/step_07](https://docs.angularjs.org/tutorial/step_07).)
 
-SPA中只有一個HTML頁面(包含 `<html>` 元素)。 此頁面稱為「版面配置範本」。 在Angular術語中，這是「……在我們的應用程式中所有檢視都通用的範本」。 將此頁面視為「頂層應用程式頁面」。 按照慣例，頂層應用程式頁面為 `cq:Page` 最接近根的應用程式節點（且不是重新導向）。
+SPA中只有一个HTML页面(包含 `<html>` 元素)。 此页面称为“布局模板”。 在Angular术语中，它是“……一种在我们的应用程序中的所有视图中都通用的模板”。 将此页面视为“顶级应用程序页面”。 按照惯例，顶级应用程序页面是 `cq:Page` 最接近根的应用程序的节点（不是重定向）。
 
-由於應用程式的實際URI在發佈模式下不會變更，因此從此頁面參考外部資產必須使用相對路徑。 因此，提供特殊的影像元件，在轉譯影像以進行匯出時，會將此頂層頁面列入考量。
+由于应用程序的实际URI在发布模式下不会更改，因此从该页面引用外部资产必须使用相对路径。 因此，提供了一个特殊的图像组件，在渲染要导出的图像时，该组件会考虑此顶级页面。
 
-作為SPA，此配置範本頁面只會產生具有ng-view指示詞的div元素。
+作为SPA，此布局模板页只生成一个带有ng-view指令的div元素。
 
 ```xml
  <div ng-view ng-class="transition"></div>
 ```
 
-angular路由服務會使用此元素來顯示應用程式中每個頁面的內容，包括目前頁面的可授權內容（包含在template.jsp中）。
+angular路由服务使用此元素来显示应用程序中每页的内容，包括当前页的可创作内容（包含在template.jsp中）。
 
-body.jsp檔案包含空白的header.jsp和footer.jsp。 如果您想要在每個頁面上提供靜態內容，可以在應用程式中覆寫這些指令碼。
+body.jsp文件包括空的header.jsp和footer.jsp。 如果您要在每个页面上提供静态内容，可以在应用程序中覆盖这些脚本。
 
-最後，javascript clientlibs會包含在底部 &lt;body> 元素，其中包含伺服器上產生的兩個特殊JS檔案： *&lt;page name=&quot;&quot;>*.angular-app-module.js和 *&lt;page name=&quot;&quot;>*.angular-app-controllers.js.
+最后，javascript clientlibs包含在 &lt;body> 元素，其中包括在服务器上生成的两个特殊JS文件： *&lt;page name=&quot;&quot;>*.angular-app-module.js和 *&lt;page name=&quot;&quot;>*.angular-app-controllers.js.
 
 ### angular-app-module.js.jsp {#angular-app-module-js-jsp}
 
-此指令碼會定義應用程式的Angular模組。 此指令碼的輸出會連結至範本的其餘元件透過 `html` 元素，包含下列屬性：
+此脚本定义应用程序的Angular模块。 此脚本的输出链接到模板的其余组件通过 `html` 元素，它包含以下属性：
 
 ```xml
 ng-app="<c:out value='${applicationName}'/>"
 ```
 
-此屬性會指示Angular此DOM元素的內容應連結至下列模組。 此模組會將檢視(在AEM中，這些會是cq：Page資源)與對應的控制器連結。
+此属性指示Angular此DOM元素的内容应链接到以下模块。 此模块将视图(在AEM中，这些资源将为cq：Page资源)与相应的控制器链接。
 
-此模組也會定義名為的頂層控制器 `AppController` 會公開 `wcmMode` 變數，並設定從中擷取Content Sync更新裝載的URI。
+此模块还定义了一个名为的顶层控制器 `AppController` 会公开 `wcmMode` 变量，并配置从中获取内容同步更新负载的URI。
 
-最後，此模組會逐一檢視每個下級頁面（包括其本身），並呈現每個頁面的路由片段的內容(透過angular-route-fragment.js選擇器和擴充功能)，包括作為Angular$routeProvider的設定專案。 換言之，$routeProvider會告知應用程式當要求指定路徑時要轉譯哪些內容。
+最后，本模块遍历每个下级页面（包括本身）并渲染每个页面的路由片段的内容(通过angular-route-fragment.js选择器和扩展)，包括它作为Angular$routeProvider的配置条目。 换句话说，$routeProvider会告知应用程序在请求给定路径时要渲染哪些内容。
 
 ### angular-route-fragment.js.jsp {#angular-route-fragment-js-jsp}
 
-此指令碼會產生JavaScript片段，該片段必須採用以下形式：
+此脚本将生成一个必须采用以下形式的JavaScript片段：
 
 ```
 .when('/<path>', {
@@ -117,9 +117,9 @@ ng-app="<c:out value='${applicationName}'/>"
 })
 ```
 
-此程式碼向$routeProvider (定義於angular-app-module.js.jsp中)指出「/&lt;path>&#39;將由位於的資源處理 `templateUrl`，並連線至 `controller` （我們接下來會介紹此功能）。
+此代码指示$routeProvider(在angular-app-module.js.jsp中定义)为“/&lt;path>&#39;将由位于以下位置的资源处理： `templateUrl`，并由 `controller` （下面我们将介绍）。
 
-如有必要，您可以覆寫此指令碼以處理更複雜的路徑，包括含有變數的路徑。 在AEM隨附的/apps/geometrixx-outdoors-app/components/angular/ng-template-page/angular-route-fragment.js.jsp指令碼中可以看到這方面的範例：
+如有必要，您可以覆盖此脚本以处理更复杂的路径，包括带有变量的路径。 随AEM一起安装的/apps/geometrixx-outdoors-app/components/angular/ng-template-page/angular-route-fragment.js.jsp脚本中提供了这方面的示例：
 
 ```xml
 // note the :id suffix on the path
@@ -131,11 +131,11 @@ ng-app="<c:out value='${applicationName}'/>"
 
 ### angular-app-controllers.js.jsp {#angular-app-controllers-js-jsp}
 
-在Angular中，控制器在$scope中連線變數，使其顯示在檢視中。 angular-app-controllers.js.jsp指令碼遵循angular-app-module.js.jsp所述的模式，即它會逐一瀏覽每個下級頁面（包括其本身），並輸出每個頁面定義的控制器片段(透過controller.js.jsp)。 它定義的模組稱為 `cqAppControllers` 和必須列為頂層應用程式模組的相依性，才能使用頁面控制器。
+在Angular中，控制器连接$scope中的变量，使其显示在视图中。 angular-app-controllers.js.jsp脚本遵循angular-app-module.js.jsp所示的模式，即它遍历每个下级页面（包括本身），并输出每个页面定义的控制器片段(通过controller.js.jsp)。 它定义的模块名为 `cqAppControllers` 和必须作为顶级应用程序模块的依赖项列出，以便页面控制器可用。
 
 ### controller.js.jsp {#controller-js-jsp}
 
-controller.js.jsp指令碼會為每個頁面產生控制器片段。 此控制器片段採用下列形式：
+controller.js.jsp脚本为每个页面生成控制器片段。 此控制器片段采用以下形式：
 
 ```
 .controller('<c:out value="${controllerNameStripped}"/>', ['$scope', '$http',
@@ -147,66 +147,66 @@ controller.js.jsp指令碼會為每個頁面產生控制器片段。 此控制�
 ])
 ```
 
-請注意 `data` 變數會獲派Angular傳回的promise `$http.get` 方法。 如果需要，此頁面中包含的每個元件都可以(透過其angular.json.jsp指令碼)提供一些.json內容，並在解析時處理此請求的內容。 行動裝置上的要求非常快速，因為它只會存取檔案系統。
+请注意 `data` 变量分配了由Angular返回的承诺 `$http.get` 方法。 如果需要，此页中包含的每个组件都可以(通过其angular.json.jsp脚本)提供一些.json内容，并在解析时对此请求的内容执行操作。 该请求在移动设备上非常快速，因为它仅访问文件系统。
 
-若要讓元件以這種方式成為控制器的一部分，應擴充/libs/mobileapps/components/angular/ng-component元件並包含 `frameworkType: angular` 屬性。
+为了使组件以这种方式成为控制器的一部分，它应该扩展/libs/mobileapps/components/angular/ng-component组件并包含 `frameworkType: angular` 属性。
 
 ### template.jsp {#template-jsp}
 
-template.jsp最初是在body.jsp一節中介紹的，它只包含頁面的parsys。 在發佈模式中，此內容會直接參考(在 &lt;page-path>.template.html)，並透過$routeProvider上設定的templateUrl載入SPA。
+首先在body.jsp部分中介绍，template.jsp仅包含页面的parsys。 在发布模式下，将直接引用此内容(位于 &lt;page-path>.template.html)，并通过在$routeProvider上配置的templateUrl加载到SPA中。
 
-此指令碼中的parsys可設定為接受任何型別的元件。 但是，在處理為傳統網站(而不是SPA)建立的元件時，必須謹慎。 例如，foundation影像元件只有在頂層應用程式頁面上才能正常運作，因為它的設計目的並非參照應用程式內的資產。
+此脚本中的parsys可以配置为接受任何类型的组件。 但是，在处理为传统网站(而不是SPA)构建的组件时，必须谨慎。 例如，foundation图像组件仅在顶级应用程序页面上正常运行，因为它并非设计为引用应用程序内的资产。
 
 ### angular-module-list.js.jsp {#angular-module-list-js-jsp}
 
-此指令碼只會輸出頂層Angular應用程式模組的Angular相依性。 angular-app-module.js.jsp會參考該模型。
+此脚本仅输出顶级Angular应用程序模块的Angular依赖关系。 angular-app-module.js.jsp引用了该函数。
 
 ### header.jsp {#header-jsp}
 
-將靜態內容放在應用程式頂端的指令碼。 此內容包含在頂層頁面中，不在ng-view的範圍之內。
+将静态内容放在应用程序顶部的脚本。 此内容包含在顶级页面中，不在ng-view的范围内。
 
 ### footer.jsp {#footer-jsp}
 
-將靜態內容放在應用程式底部的指令碼。 此內容包含在頂層頁面中，不在ng-view的範圍之內。
+将静态内容放置在应用程序底部的脚本。 此内容包含在顶级页面中，不在ng-view的范围内。
 
 ### js_clientlibs.jsp {#js-clientlibs-jsp}
 
-覆寫此指令碼以包含您的JavaScript clientlibs。
+覆盖此脚本以包含您的JavaScript clientlibs。
 
 ### css_clientlibs.jsp {#css-clientlibs-jsp}
 
-覆寫此指令碼以包含您的CSS clientlibs。
+覆盖此脚本以包含您的CSS clientlibs。
 
-## 應用程式元件 {#app-components}
+## 应用程序组件 {#app-components}
 
-應用程式元件不僅必須在AEM例項（發佈或作者）上運作，而且必須在應用程式內容透過Content Sync匯出至檔案系統時運作。 因此，元件必須包括下列特性：
+应用程序组件不仅必须在AEM实例（发布或创作）上运行，而且还必须在应用程序内容通过内容同步导出到文件系统时运行。 因此，该组件必须包括以下特性：
 
-* PhoneGap應用程式中的所有資產、範本和指令碼都必須相對參照。
-* 如果AEM執行個體以製作或發佈模式運作，連結的處理方式會有所不同。
+* 必须相对引用PhoneGap应用程序中的所有资产、模板和脚本。
+* 如果AEM实例在创作或发布模式下运行，则链接的处理方式会有所不同。
 
-### 相對資產 {#relative-assets}
+### 相对资源 {#relative-assets}
 
-PhoneGap應用程式中任何指定資產的URI不僅會因平台而異，在應用程式的每次安裝時也會是唯一的。 例如，記下在iOS模擬器中執行之應用程式的下列URI：
+PhoneGap应用程序中任何给定资产的URI不仅会因平台而异，而且会在应用程序的每次安装中是唯一的。 例如，记下在iOS模拟器中运行的应用程序的以下URI：
 
 `file:///Users/userId/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/24BA22ED-7D06-4330-B7EB-F6FC73251CA3/Library/files/www/content/phonegap/geometrixx/apps/ng-geometrixx-outdoors/en/home.html`
 
-請注意路徑中的GUID &#39;24BA22ED-7D06-4330-B7EB-F6FC73251CA3&#39;。
+请注意路径中的GUID &#39;24BA22ED-7D06-4330-B7EB-F6FC73251CA3&#39;。
 
-身為PhoneGap開發人員，您關注的內容位於www目錄下方。 若要存取應用程式資產，請使用相對路徑。
+作为PhoneGap开发人员，您关注的内容位于www目录下方。 要访问应用程序资产，请使用相对路径。
 
-為了解決複雜的問題，PhoneGap應用程式會使用單頁應用程式(SPA)模式，讓基本URI （雜湊除外）永不變更。 因此，您參考的每個資產、範本或指令碼**都必須是相對於頂層頁面的物件。 **最上層頁面會藉由下列方式初始化Angular路由與控制器： `*<name>*.angular-app-module.js` 和 `*<name>*.angular-app-controllers.js`. 此頁面應該是離存放庫根目錄*不*延伸sling：redirect的最近頁面。
+为了解决此问题，PhoneGap应用程序使用单页应用程序(SPA)模式，以便基本URI（不包括哈希）永不更改。 因此，您引用的每个资源、模板或脚本**都必须相对于顶级页面。 **顶层页通过下列方式初始化Angular路由和控制器： `*<name>*.angular-app-module.js` 和 `*<name>*.angular-app-controllers.js`. 此页面应该是距离存储库根目录*不*扩展sling：redirect的最近页面。
 
-有數種協助程式方法可用於處理相對路徑：
+有几种辅助方法可用于处理相对路径：
 
 * FrameworkContentExporterUtils.getTopLevelAppResource
 * FrameworkContentExporterUtils.getRelativePathToRootLevel
 * FrameworkContentExporterUtils.getPathToAsset
 
-若要檢視其使用範例，請開啟位於/libs/mobileapps/components/angular的mobileapps來源。
+要查看其用法示例，请打开位于/libs/mobileapps/components/angular的mobileapps源。
 
 ### 链接 {#links}
 
-連結必須使用 `ng-click="go('/path')"` 函式以支援所有WCM模式。 此函式取決於範圍變數的值，以正確判斷連結動作：
+链接必须使用 `ng-click="go('/path')"` 函数以支持所有WCM模式。 此函数依赖范围变量的值来正确确定链接操作：
 
 ```xml
 <c:choose><c:when test="${wcmMode}">
@@ -218,37 +218,37 @@ PhoneGap應用程式中任何指定資產的URI不僅會因平台而異，在應
 </c:otherwise></c:choose>
 ```
 
-時間 `$scope.wcmMode == true` 我們會以一般方式處理每個導覽事件，因此會變更URL的路徑和/或頁面部分。
+时间 `$scope.wcmMode == true` 我们使用常规方式处理每个导航事件，以便结果对URL的路径和/或页面部分进行更改。
 
-或者，如果 `$scope.wcmMode == false`，則每個導覽事件都會導致URL的雜湊部分變更，而此URL會由Angular的ngRoute模組在內部解析。
+或者，如果 `$scope.wcmMode == false`，则每个导航事件都会导致URL的哈希部分发生变化，该变化由Angular的ngRoute模块在内部解析。
 
-### 元件指令碼詳細資料 {#component-script-details}
+### 组件脚本详细信息 {#component-script-details}
 
 ![chlimage_1-144](assets/chlimage_1-144.png)
 
 #### ng-component.jsp {#ng-component-jsp}
 
-偵測到編輯模式時，此指令碼會顯示元件內容或適當的預留位置。
+此脚本在检测到编辑模式时显示组件内容或合适的占位符。
 
 #### template.jsp {#template-jsp-1}
 
-template.jsp指令碼會呈現元件的標籤。 如果有問題的元件是由從AEM擷取的JSON資料所驅動(例如「ng-text」：/libs/mobileapps/components/angular/ng-text/template.jsp)，則此指令碼將負責使用頁面的控制器範圍所公開的資料來連線標籤。
+template.jsp脚本渲染组件的标记。 如果相关组件由从AEM提取的JSON数据(例如“ng-text”：/libs/mobileapps/components/angular/ng-text/template.jsp)驱动，则此脚本将负责使用页面的控制器范围公开的数据来连接标记。
 
-不過，效能需求有時會規定不執行任何使用者端範本（亦即資料繫結）。 在此情況下，只需在伺服器端轉譯元件的標籤，且該標籤會包含在頁面範本內容中。
+但是，性能要求有时要求不执行客户端模板（也称为数据绑定）。 在这种情况下，只需在服务器端渲染组件的标记，并将其包含在页面模板内容中即可。
 
 #### overhead.jsp {#overhead-jsp}
 
-在由JSON資料驅動的元件中(例如「ng-text」：/libs/mobileapps/components/angular/ng-text)，overhead.jsp可用來從template.jsp移除所有Java程式碼。 然後會從template.jsp中引用它，並且在請求中公開的任何變數都可供使用。 此策略鼓勵將邏輯與呈現方式分離，並限制從現有元件衍生出新元件時，必須複製和貼上的程式碼數量。
+在由JSON数据驱动的组件中(例如“ng-text”：/libs/mobileapps/components/angular/ng-text)，oversay.jsp可用于从template.jsp中删除所有Java代码。 然后，它从template.jsp中引用，并且在请求中公开的任何变量都可供使用。 此策略鼓励将逻辑与表示分离，并限制从现有组件派生新组件时必须复制和粘贴的代码量。
 
 #### controller.js.jsp {#controller-js-jsp-1}
 
-如AEM頁面範本中所述，每個元件都可以輸出JavaScript片段，以使用 `data` Promise。 依照Angular慣例，控制器只應用於指派變數至範圍。
+如AEM页面模板中所述，每个组件都可以输出一个JavaScript片段以使用由公开的JSON内容。 `data` 我保证。 按照Angular约定，控制器只应用于将变量分配给作用域。
 
 #### angular.json.jsp {#angular-json-jsp}
 
-此指令碼會以片段形式包含在全頁面的「&lt;page-name>針對每個延伸ng-page的頁面匯出的。angular.json&#39;檔案。 在此檔案中，元件開發人員可以公開元件所需的任何JSON結構。 在「ng-text」範例中，此結構僅包含元件的文字內容，以及指出元件是否包含RTF文字的標幟。
+此脚本作为片段包含在页面范围的&#39;&lt;page-name>针对每个扩展ng-page的angular导出的.page.json&#39;文件。 在此文件中，组件开发人员可以公开组件所需的任何JSON结构。 在“ng-text”示例中，此结构仅包括组件的文本内容，以及一个指示组件是否包括富文本的标志。
 
-Geometrixx戶外應用程式產品元件是更複雜的範例(/apps/geometrixx-outdoors-app/components/angular/ng-product)：
+GeometrixxOutdoors应用程序产品组件是一个更复杂的示例(/apps/geometrixx-outdoors-app/components/angular/ng-product)：
 
 ```xml
 {
@@ -281,9 +281,9 @@ Geometrixx戶外應用程式產品元件是更複雜的範例(/apps/geometrixx-o
 }
 ```
 
-## CLI資產下載內容 {#contents-of-the-cli-assets-download}
+## CLI资产下载内容 {#contents-of-the-cli-assets-download}
 
-從Apps主控台下載CLI資產，以針對特定平台最佳化，然後使用PhoneGap命令列整合(CLI) API建置應用程式。 您儲存至本機檔案系統的ZIP檔案內容具有下列結構：
+从“应用程序”控制台下载CLI资产以针对特定平台优化它们，然后使用PhoneGap命令行集成(CLI) API构建应用程序。 保存到本地文件系统的ZIP文件的内容具有以下结构：
 
 ```xml
 .cordova/
@@ -305,29 +305,29 @@ www/
 
 ### .cordova {#cordova}
 
-這是隱藏的目錄，視您目前的作業系統設定而定，您可能無法看見。 您應設定作業系統，以便在您計畫修改其中包含的應用程式掛接時顯示此目錄。
+这是一个隐藏目录，根据您当前的操作系统设置，您可能无法看到该目录。 您应该配置操作系统，以便在计划修改其中包含的应用程序挂接时显示此目录。
 
 #### .cordova/hooks/ {#cordova-hooks}
 
-此目錄包含 [CLI鉤點](https://cordova.apache.org/docs/en/10.x/guide/appdev/hooks/). Hooks目錄中的資料夾包含node.js指令碼，會在建置期間於確切時間點執行。
+此目录包含 [CLI挂接](https://cordova.apache.org/docs/en/10.x/guide/appdev/hooks/). Hooks目录中的文件夹包含node.js脚本，这些脚本在构建期间的确切时间点执行。
 
 #### .cordova/hooks/after-platform_add/ {#cordova-hooks-after-platform-add}
 
-after-platform_add目錄包含 `copy_AMS_Conifg.js` 檔案。 此指令碼會複製設定檔案，以支援Adobe Mobile Services分析資料的收集。
+after-platform_add目录包含 `copy_AMS_Conifg.js` 文件。 此脚本可复制配置文件以支持AdobeMobile Services分析的收集。
 
 #### .cordova/hooks/after-prepare/ {#cordova-hooks-after-prepare}
 
-after-prepare目錄包含 `copy_resource_files.js` 檔案。 此指令碼會將許多圖示和啟動畫面影像複製到平台專屬的位置。
+after-prepare目录包含 `copy_resource_files.js` 文件。 此脚本将许多图标和闪屏图像复制到平台特定的位置。
 
 #### .cordova/hooks/before_platform_add/ {#cordova-hooks-before-platform-add}
 
-before_platform_add目錄包含 `install_plugins.js` 檔案。 此指令碼會逐一檢視Cordova外掛程式識別碼清單，目前尚無法安裝所偵測到的識別碼。
+before_platform_add目录包含 `install_plugins.js` 文件。 此脚本遍历一个Cordova插件标识符列表，从而安装它所检测到的那些尚不可用。
 
-此策略並不要求您每次Maven時都套件和安裝外掛程式至AEM `content-package:install` 命令會執行。 將檔案簽入SCM系統的替代策略需要重複的套件和安裝活動。
+此策略不需要每次Maven时都捆绑插件并将其安装到AEM `content-package:install` 命令被执行。 将文件签入SCM系统的替代策略需要重复的捆绑和安装活动。
 
-#### .cordova/鉤點/其他鉤點 {#cordova-hooks-other-hooks}
+#### .cordova/挂钩/其他挂钩 {#cordova-hooks-other-hooks}
 
-視需要包含其他鉤點。 可使用下列鉤點（如Phonegap範例hello world應用程式所提供）：
+根据需要包含其他挂接。 可以使用以下挂接（如Phonegap示例hello world应用程序所提供）：
 
 * after_build
 * before_build
@@ -356,67 +356,67 @@ before_platform_add目錄包含 `install_plugins.js` 檔案。 此指令碼會�
 
 #### 平台/ {#platforms}
 
-在您執行 `phonegap run <platform>` 指令。 目前， `<platform>` 可以是 `ios` 或 `android`.
+在执行 `phonegap run <platform>` 命令。 目前， `<platform>` 可以是 `ios` 或 `android`.
 
-為特定平台建立應用程式後，會建立對應的目錄，且目錄中包含平台專屬的應用程式程式程式碼。
+在为特定平台构建应用程序后，将会创建相应的目录，并且其中包含特定于平台的应用程序代码。
 
-#### 外掛程式/ {#plugins}
+#### 插件/ {#plugins}
 
-外掛程式目錄會由 `.cordova/hooks/before_platform_add/install_plugins.js` 檔案執行之後 `phonegap run <platform>` 命令。 目錄最初是空的。
+插件目录由中列出的每个插件填充 `.cordova/hooks/before_platform_add/install_plugins.js` 文件执行 `phonegap run <platform>` 命令。 目录最初是空的。
 
 #### www/ {#www}
 
-www目錄包含實施應用程式外觀和行為的所有網頁內容(HTML、JS和CSS檔案)。 除了下述例外情況外，此內容源自AEM，並透過Content Sync匯出至其靜態形式。
+www目录包含实施应用程序外观和行为的所有Web内容(HTML、JS和CSS文件)。 除了下面描述的例外情况之外，此内容源自AEM，并通过Content Sync导出为其静态形式。
 
 #### www/config.xml {#www-config-xml}
 
-此 [PhoneGap檔案](https://docs.phonegap.com) 將此檔案稱為「全域設定檔案」。 config.xml包含許多應用程式屬性，例如應用程式名稱、應用程式「偏好設定」(例如iOS Webview是否允許捲動)以及 *僅限* 已由PhoneGap Build使用。
+此 [PhoneGap文档](https://docs.phonegap.com) 将此文件称为“全局配置文件”。 config.xml包含许多应用程序属性，例如应用程序名称、应用程序“首选项”(例如iOS Webview是否允许过度滚动)以及 *仅限* 已被PhoneGap Build使用。
 
-config.xml檔案是AEM中的靜態檔案，會透過Content Sync依原樣匯出。
+config.xml文件是AEM中的静态文件，通过内容同步按原样导出。
 
 #### www/index.html {#www-index-html}
 
-index.html檔案會重新導向至應用程式的起始頁面。
+index.html文件将重定向到应用程序的起始页。
 
-config.xml檔案包含 `content` 元素：
+config.xml文件包含 `content` 元素：
 
 `<content src="content/phonegap/geometrixx/apps/ng-geometrixx-outdoors/en.html" />`
 
-在 [PhoneGap檔案](https://docs.phonegap.com)，此元素會說明為「選擇性」 &lt;content> 元素會定義應用程式在頂層web assets目錄中的起始頁面。 預設值為index.html，通常顯示在專案的頂層www目錄中。」
+In [PhoneGap文档](https://docs.phonegap.com)，此元素将描述为“可选 &lt;content> 元素定义应用程序在顶级web assets目录中的起始页面。 默认值为index.html，通常显示在项目的顶级www目录中。”
 
-如果沒有index.html檔案，PhoneGap Build會失敗。 因此，包含此檔案。
+如果没有index.html文件，PhoneGap Build将失败。 因此，此文件包含在内。
 
 #### www/res {#www-res}
 
-res目錄包含啟動畫面影像和圖示。 此 `copy_resource_files.js` 指令碼會在「 」期間將檔案複製到其平台特定位置 `after_prepare` 建置階段。
+res目录包含启动屏幕图像和图标。 此 `copy_resource_files.js` 脚本会在以下期间将文件复制到其平台特定的位置： `after_prepare` 构建阶段。
 
 #### www/etc {#www-etc}
 
-依照慣例，在AEM中，/etc節點包含靜態clientlib內容。 etc目錄包含Topcoat、AngularJS和ng-clientlibsallGeometrixx庫。
+按照惯例，在AEM中，/etc节点包含静态clientlib内容。 etc目录包含Topcoat、AngularJS和ng-clientlibsallGeometrixx。
 
 #### www/apps {#www-apps}
 
-apps目錄包含與啟動顯示畫面相關的程式碼。 AEM應用程式啟動顯示頁面的唯一特徵是，它會在使用者不互動的情況下初始化應用程式。 因此，應用程式的clientlib內容（CSS和JS）會降到最低，以最大化效能。
+apps目录包含与启动页相关的代码。 AEM应用程序启动页的独特特征是，它可以在不进行用户交互的情况下初始化应用程序。 因此，应用程序的clientlib内容（CSS和JS）最小，以最大限度地提高性能。
 
 #### www/content {#www-content}
 
-內容目錄包含應用程式的其餘網頁內容。 內容可以包含但不限於下列檔案：
+内容目录包含应用程序的其余网页内容。 内容可以包括但不限于以下文件：
 
-* HTML頁面內容(直接在AEM中編寫)
-* 與AEM元件相關聯的影像資產
-* 伺服器端指令碼產生的JavaScript內容
-* 說明頁面或元件內容的JSON檔案
+* HTML页面内容，直接在AEM中创作
+* 与AEM组件关联的图像资源
+* 服务器端脚本生成的JavaScript内容
+* 描述页面或组件内容的JSON文件
 
 #### www/package.json {#www-package-json}
 
-package.json檔案是資訊清單檔案，其列出了 **完整** 內容同步下載包含。 此檔案也包含產生內容同步裝載的時間戳記( `lastModified`)。 向AEM請求應用程式的部分更新時，會使用此屬性。
+package.json文件是一个清单文件，该文件列出了 **完整** 内容同步下载包括。 此文件还包含生成内容同步有效负载的时间戳( `lastModified`)。 在从AEM请求对应用程序进行部分更新时，将使用此属性。
 
 #### www/package-update.json {#www-package-update-json}
 
-如果此裝載是整個應用程式的下載，此資訊清單會包含檔案的確切清單，如下所示 `package.json`.
+如果此有效负载是整个应用程序的下载，则此清单包含文件的确切列表 `package.json`.
 
-不過，如果此裝載為部分更新， `package-update.json` 僅包含此特定裝載中包含的檔案。
+但是，如果此有效负载是部分更新， `package-update.json` 仅包含此特定有效负载中包含的文件。
 
 ### 后续步骤 {#the-next-steps}
 
-瞭解應用程式的剖析後，請參閱 [單頁應用程式](/help/mobile/phonegap-single-page-applications.md).
+了解了应用程序的解剖后，请参阅 [单页应用程序](/help/mobile/phonegap-single-page-applications.md).

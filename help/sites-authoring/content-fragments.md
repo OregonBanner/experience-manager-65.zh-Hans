@@ -1,6 +1,6 @@
 ---
-title: 使用內容片段編寫內容頁面
-description: AEM內容片段可讓您設計、建立、組織和使用獨立於頁面的內容。
+title: 使用内容片段创作内容页面
+description: AEM内容片段允许您设计、创建、策划和使用独立于页面的内容。
 uuid: 987de428-8354-4b23-a552-3ea415122184
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -16,7 +16,7 @@ ht-degree: 91%
 
 ---
 
-# 使用內容片段編寫頁面{#page-authoring-with-content-fragments}
+# 使用内容片段进行页面创作{#page-authoring-with-content-fragments}
 
 Adobe Experience Manager (AEM) 内容片段[作为独立于页面的资产而创建和管理](/help/assets/content-fragments/content-fragments.md)。
 
@@ -28,7 +28,7 @@ Adobe Experience Manager (AEM) 内容片段[作为独立于页面的资产而创
 >
 >**内容片段**&#x200B;和&#x200B;**[体验片段](/help/sites-authoring/experience-fragments.md)**&#x200B;是 AEM 中的两个不同功能：
 >
->* **内容片段**&#x200B;是可编辑内容，主要为文本和相关图像。它們是純內容，沒有設計和版面。
+>* **内容片段**&#x200B;是可编辑内容，主要为文本和相关图像。它们是纯内容，没有设计和布局。
 >* **体验片段**&#x200B;是经过充分布局的内容；例如，网页的一个片段。
 >
 >体验片段可以包含内容片段形式的内容，反之则不行。
@@ -106,23 +106,23 @@ Adobe Experience Manager (AEM) 内容片段[作为独立于页面的资产而创
 
    * **单个文本元素**
 
-   * **多個元素**
+   * **多个元素**
 
 * **元素**
 
-   * 預設 **主要** 將始終可用。
-   * 如果片段是以適當的範本建立，將有可選擇的範本可用。
+   * 默认 **主要** 将始终可用。
+   * 如果片段是使用相应的模板创建的，将有可选择的内容可用。
 
    >[!NOTE]
    >
-   >可用的元素視使用的範本而定。
+   >可用的元素取决于使用的模板。
 
 * **变体**
 
    * 默认主 **视图** 将始终可用。
    * 如果变体是为片段而创建的，将有可选择的变体可用。
 
-* **段落**：指定要包含的段落範圍：
+* **段落**：指定要包含的段落范围：
 
    * **所有**
    * **范围**：例如 `1`、`3-5`、`9-*`
@@ -196,7 +196,7 @@ Adobe Experience Manager (AEM) 内容片段[作为独立于页面的资产而创
 
 ### 插入到片段中的资产 {#assets-inserted-into-the-fragment}
 
-如果已將資產（例如影像）插入片段本身，則頁面編輯器中用於編輯這些資產的選項會受到限制。 <!-- Removed link as it was a 404 on helpx -->
+如果已在片段本身中插入资产（例如图像），则页面编辑器中用于编辑这些资产的选项会受到限制。 <!-- Removed link as it was a 404 on helpx -->
 
 例如，您可以对图像执行以下操作
 

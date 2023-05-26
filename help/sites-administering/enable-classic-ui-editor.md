@@ -1,7 +1,7 @@
 ---
 title: 编辑器
 seo-title: Editor
-description: 瞭解如何切換回傳統使用者介面編輯器。
+description: 了解如何切换回经典用户界面编辑器。
 seo-description: Learn how to switch back to the Classic UI Editor.
 uuid: ca8b07e7-014f-428e-82bd-87f3aae12f6e
 contentOwner: Chris Bohnert
@@ -20,11 +20,11 @@ ht-degree: 7%
 
 # 编辑器{#editor}
 
-根據預設，從編輯器切換到傳統UI的功能已停用。
+默认情况下，已禁用从编辑器切换到经典UI的功能。
 
-若要重新啟用選項 **在傳統UI中開啟** 在 **頁面資訊** 選單中，請依照下列步驟操作。
+要重新启用该选项，请执行以下操作 **在经典用户界面中打开** 在 **页面信息** 菜单，请按照以下步骤操作。
 
-1. 使用CRXDE Lite尋找下列節點：
+1. 使用CRXDE Lite查找以下节点：
 
    `/libs/wcm/core/content/editor/jcr:content/content/items/content/header/items/headerbar/items/pageinfopopover/items/list/items/classicui`
 
@@ -32,16 +32,16 @@ ht-degree: 7%
 
    ` [https://localhost:4502/crx/de/index.jsp#/libs/wcm/core/content/editor/jcr%3Acontent/content/items/content/header/items/headerbar/items/pageinfopopover/items/list/items/classicui](https://localhost:4502/crx/de/index.jsp#/libs/wcm/core/content/editor/jcr%3Acontent/content/items/content/header/items/headerbar/items/pageinfopopover/items/list/items/classicui)`
 
-1. 使用建立覆蓋 **覆蓋節點** 選項；例如：
+1. 使用创建叠加 **覆盖节点** 选项；例如：
 
    * **路径**: `/apps/wcm/core/content/editor/jcr:content/content/items/content/header/items/headerbar/items/pageinfopopover/items/list/items/classicui`
    * **覆盖位置**: `/apps/`
-   * **符合節點型別**：作用中（選取核取方塊）
+   * **匹配节点类型**：活动（选中复选框）
 
-1. 將下列多值文字屬性新增至覆蓋的節點：
+1. 将以下多值文本属性添加到叠加节点：
 
    `sling:hideProperties = ["granite:hidden"]`
 
-1. 此 **在傳統UI中開啟** 選項在中再次可用 **頁面資訊** 功能表。
+1. 此 **在经典用户界面中打开** 选项在中再次可用 **页面信息** 菜单。
 
    ![](assets/syui-03-2019-02-27-15-19-48.png)

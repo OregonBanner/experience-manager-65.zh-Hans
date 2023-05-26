@@ -1,6 +1,6 @@
 ---
-title: AEM社群
-description: AEM社群
+title: AEM社区
+description: AEM社区
 exl-id: 2e73572c-78de-4c20-ada8-d95f7fd16dc9
 source-git-commit: 768576e300b655962adc3e1db20fc5ec06a5ba6c
 workflow-type: tm+mt
@@ -9,26 +9,26 @@ ht-degree: 6%
 
 ---
 
-# AEM社群 {#the-aem-community}
+# AEM社区 {#the-aem-community}
 
-## 什麼是AEM社群？ {#what-is}
+## 什么是AEM社区？ {#what-is}
 
-AEM社群在全球擁有數千名成員。 他們涵蓋新手到Experience Manager，以及經驗豐富的專家開發人員和管理員。 社群可協助您從AEM功能問題到協助解決開發問題。 AEM Community定期與內部和外部專家使用者舉行Expert研討會。 它還有助於為您製作範例、文章和教學課程。
+AEM社区在全球拥有数千名成员。 他们包括从Experience Manager新手到经验丰富的专业开发人员和管理人员。 社区可帮助您从有关AEM功能的问题到帮助解决开发问题。 AEM Community定期与内部和外部专家用户举行Expert会议。 它还有助于为您制作样本、文章和教程。
 
-[立即加入社群，即可存取最佳內容、人員和知識。](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community) 向所有人開放。 如果您對AEM感興趣，不客氣。 今天順便過來！
+[立即加入社区，获取最佳内容、人员和知识。](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community) 它向所有人开放。 如果你对AEM感兴趣，那就不客气。 今天过来！
 
-## AEM社群成員有哪些活動？ {#events}
+## AEM社区成员有哪些活动？ {#events}
 
-會員有許多活動！ 每個月都會舉行講座，您可以向專家詢問特定AEM主題。 瞭解重大事件，例如 [Immerse](https://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/adobe-experience-manager.topic.html/forum__fb7p-the_immerseagendai.html) 或 [Adobe Summit](https://business.adobe.com/summit/adobe-summit.html)，甚至您區域中的使用者群組事件。
+会员们有很多活动！ 每月都会召开会议，您可以在会上就特定的AEM主题向专家提问。 了解重大事件，例如 [Immerse](https://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/adobe-experience-manager.topic.html/forum__fb7p-the_immerseagendai.html) 或 [Adobe Summit](https://business.adobe.com/summit/adobe-summit.html)，甚至您所在地区的用户组事件。
 
-[立即造訪AEM社群，瞭解最新動態](https://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/adobe-experience-manager.html).
+[立即访问AEM社区并查看最新动态](https://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/adobe-experience-manager.html).
 
-## 我可以取得程式碼範例來協助我嗎？ {#code-samples}
+## 我可以获取代码示例来帮助我吗？ {#code-samples}
 
-AEM社群團隊不斷製作「做法」指南和程式碼範例，以協助Experience Manager開發人員和使用者掌握解決方案。 [以下是實用文章和程式碼範例的清單](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community).
+AEM社区团队不断制作“如何”指南和代码示例，以帮助Experience Manager开发人员和用户掌握解决方案。 [以下是实用文章和代码示例列表](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community).
 
-## 諮詢社群專家會議和GEMS {#gems}
+## 咨询社区专家讲座和GEMS {#gems}
 
-AEM社群定期舉辦活動，協助教導成員掌握技巧和最佳實務。 您可以參加這些直播網路廣播，或閒暇時再播放。 此外還有Expert活動、概覽和全新錄製。
+AEM社区定期举办活动，帮助对成员进行技术和最佳实践教育。 您可以参加这些实时网络广播，也可以在空闲时播放它们。 这里有Expert活动，还有专题介绍和新增功能。
 
-[這裡有過去Experience Manager專家諮詢會的完整清單。](https://experienceleague.adobe.com/docs/experience-manager-guides-learn/tutorials/knowledge-base/expert-session/expert-session.html?lang=en)
+[此处提供了过去的Experience Manager专家讲座的完整列表。](https://experienceleague.adobe.com/docs/experience-manager-guides-learn/tutorials/knowledge-base/expert-session/expert-session.html?lang=en)

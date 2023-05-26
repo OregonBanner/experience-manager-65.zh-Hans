@@ -1,7 +1,7 @@
 ---
-title: 程式報告簡介
+title: 进程报告简介
 seo-title: Introduction to Process Reporting
-description: AEM Forms on JEE Process Reporting的簡介和主要功能
+description: AEM Forms on JEE Process Reporting的简介和关键功能
 seo-description: Introduction and key capabilities of AEM Forms on JEE Process Reporting
 uuid: a7f2455b-1b09-41a7-817b-e2e7a1ff9936
 content-type: reference
@@ -17,56 +17,56 @@ ht-degree: 0%
 
 ---
 
-# 程式報告簡介{#introduction-to-process-reporting}
+# 进程报告简介{#introduction-to-process-reporting}
 
-![程式報告](assets/process-reporting.png)
+![进程报告](assets/process-reporting.png)
 
-程式報告是一種基於瀏覽器的工具，可用於建立和檢視AEM Forms程式和任務的報告。
+进程报告是一种基于浏览器的工具，可用于创建和查看有关AEM Forms进程和任务的报告。
 
-「程式報告」提供一組現成可用的報告，可讓您篩選、檢視長時間執行程式、程式持續時間和工作流程量的相關資訊。
+进程报告提供一组现成的报告，允许您筛选、查看有关长时间运行的进程、进程持续时间以及工作流量的信息。
 
-此外，「程式報告」提供執行臨機查詢的介面，以及將自訂報告檢視整合到「程式報告」使用者介面中。
+此外，“流程报表”提供了一个界面，用于运行临时查询并将自定义报表视图集成到“流程报表”用户界面中。
 
-如需支援的瀏覽器清單，請參閱 [AEM Forms支援的平台](/help/forms/using/aem-forms-jee-supported-platforms.md).
+有关支持的浏览器列表，请参阅 [AEM Forms支持的平台](/help/forms/using/aem-forms-jee-supported-platforms.md).
 
-程式報告會建置在符合以下條件的模組上：
+进程报告基于以下模块构建：
 
-* 從AEM Forms資料庫讀取程式資料
-* 將程式資料發佈到內嵌的程式報告存放庫
-* 提供瀏覽器式使用者介面以檢視報表
+* 从AEM Forms数据库读取流程数据
+* 将流程数据发布到嵌入式流程报表存储库
+* 提供用于查看报告的基于浏览器的用户界面
 
 ## 主要功能 {#key-capabilities}
 
-### 永遠開啟的報表 {#always-on-reporting}
+### 永不停机报告 {#always-on-reporting}
 
-![網站管理](assets/site-management.png)
+![网站管理](assets/site-management.png)
 
-檢視長時間執行流程的清單、流程持續時間圖表，以及使用篩選器執行自訂查詢。
+查看长时间运行的进程的列表、进程持续时间图表，并使用过滤器运行自定义查询。
 
-「程式報表」也提供將報表和查詢資料匯出為CSV格式的選項。
+流程报表还提供了以CSV格式导出报表和查询数据的选项。
 
-### 臨時報表 {#adhoc-reports}
+### 临时报表 {#adhoc-reports}
 
-![列印&amp; — 色彩](assets/print-&-colour.png)
+![print-&amp;-color](assets/print-&-colour.png)
 
-使用篩選器以取得您資料的特定檢視。
+使用筛选器获取数据的特定视图。
 
-您可以依ID、持續時間、開始和結束日期、流程發起者等搜尋流程或任務。
+您可以按ID、持续时间、开始和结束日期、进程发起者等搜索进程或任务。
 
-您可以結合多個篩選器以建立特定報表。
+您可以组合多个过滤器以创建特定报告。
 
-然後，您可以儲存報表篩選器，以供稍後日期或時間執行。
+然后，您可以保存报表过滤器，以便在以后的日期或时间运行。
 
-### 程式/任務歷史記錄 {#process-task-history}
+### 进程/任务历史记录 {#process-task-history}
 
-![檔案管理](assets/file-management.png)
+![文件管理](assets/file-management.png)
 
-AEM Forms伺服器會同時執行多個程式。 這些程式會不斷從一種狀態轉換到另一種狀態。 透過定期將Forms資料發佈到Process Reporting存放庫， Process Reporting可保留AEM Forms中執行之程式的轉換資訊。
+AEM Forms服务器并行运行多个进程。 这些进程会不断从一个状态转换到另一个状态。 通过定期将Forms数据发布到Process Reporting存储库， Process Reporting保留了有关AEM Forms中运行的流程过渡信息。
 
 ### 访问控制 {#access-control-br}
 
-![未命名](assets/untitled.png)
+![无标题](assets/untitled.png)
 
-「程式報告」提供對使用者介面的許可權型存取。
+进程报告提供对用户界面的基于权限的访问。
 
-這表示只有具有報表許可權的使用者才能存取程式報表使用者介面。
+这意味着只有具有报表权限的用户才有权访问“流程报表”用户界面。

@@ -28,11 +28,11 @@ ht-degree: 91%
 
 可以使用三种方法来添加元数据和标记：
 
-* 首次建立片段時：
+* 首次创建片段时：
 
    ![创建内容片段 – 提供名称](/help/journey-headless/author/assets/headless-journey-author-content-fragment-03.png)
 
-* 此 **變數** 內容片段編輯器的索引標籤可讓您新增預先定義的 **標籤** 從您的專案：
+* 此 **变体** 内容片段编辑器的选项卡允许您添加预定义的 **标记** 从您的项目中：
 
    ![内容片段编辑器 – 阿拉斯加烈酒](/help/journey-headless/author/assets/headless-journey-author-content-fragment-05.png)
 

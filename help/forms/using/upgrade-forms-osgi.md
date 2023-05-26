@@ -1,6 +1,6 @@
 ---
-title: 在OSGi上升級至AEM 6.5 Forms
-description: 您可以從AEM 6.1 Forms、AEM 6.2 Forms和LiveCycleES4 SP1直接升級至AEM 6.3 Forms。
+title: 在OSGi上升级到AEM 6.5 Forms
+description: 您可以从AEM 6.1 Forms、AEM 6.2 Forms和LiveCycleES4 SP1直接升级到AEM 6.3 Forms。
 uuid: 1435246a-9215-4d88-b52c-59a5c329bb77
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.3/FORMS
@@ -16,57 +16,57 @@ ht-degree: 5%
 
 ---
 
-# 在OSGi上升級至AEM 6.5 Forms {#upgrade-to-aem-forms-osgi}
+# 在OSGi上升级到AEM 6.5 Forms {#upgrade-to-aem-forms-osgi}
 
-您可以從AEM 6.3 Forms或AEM 6.4 Forms直接升級至AEM 6.5 Forms。
+您可以从AEM 6.3 Forms或AEM 6.4 Forms直接升级到AEM 6.5 Forms。
 
-直接升級路徑： **AEM 6.0 Forms、AEM 6.1 Forms**、和 **AEM 6.2 Forms** 至AEM 6.5 Forms無法使用。 執行中繼 [升級至AEM 6.2 Forms](https://helpx.adobe.com/experience-manager/6-2/forms/using/upgrade.html)， [升級至AEM 6.3 Forms](https://helpx.adobe.com/experience-manager/6-3/forms/using/upgrade.html)，或 [升級至AEM 6.4 Forms](/help/forms/using/upgrade.md) 然後從AEM 6.3 Forms或AEM 6.4 Forms升級至AEM 6.5 Forms。
+直接升级路径 **AEM 6.0 Forms、AEM 6.1 Forms**、和 **AEM 6.2 Forms** 到AEM 6.5的Forms不可用。 执行中间活动 [升级到AEM 6.2 Forms](https://helpx.adobe.com/experience-manager/6-2/forms/using/upgrade.html)， [升级到AEM 6.3 Forms](https://helpx.adobe.com/experience-manager/6-3/forms/using/upgrade.html)，或 [升级到AEM 6.4 Forms](/help/forms/using/upgrade.md) 然后从AEM 6.3 Forms或AEM 6.4 Forms升级到AEM 6.5 Forms。
 
-若要從AEM 6.3 Forms或AEM 6.4 Forms升級至AEM 6.5 Forms，請執行下列動作：
+要从AEM 6.3 Forms或AEM 6.4 Forms升级到AEM 6.5 Forms，请执行以下操作：
 
-1. 將現有AEM執行個體升級至AEM 6.5。步驟如下：
+1. 将现有AEM实例升级到AEM 6.5。步骤如下所示：
 
-   1. 安裝AEM 6.3 Forms或AEM 6.4 Forms的最新Service Pack和修補程式。 如需詳細資訊，請參閱 [AEM維護中心](https://helpx.adobe.com/cn/experience-manager/aem-releases-updates.html).
-   1. 準備來源執行個體以進行升級。 如需詳細步驟，請參閱 [升級至AEM 6.5](/help/sites-deploying/upgrade.md).
-   1. 下載 [AEM 6.5快速入門](/help/sites-deploying/deploy.md#getting%20the%20software).
-   1. **（僅適用於Unix/Linux安裝）** 如果您使用UNIX或Linux作為基礎作業系統，請開啟終端機視窗，瀏覽至包含crx-quickstart的資料夾，然後執行下列命令：
+   1. 安装适用于AEM 6.3 Forms或AEM 6.4 Forms的最新Service Pack和修补程序。 有关详细信息，请参阅 [AEM维护中心](https://helpx.adobe.com/cn/experience-manager/aem-releases-updates.html).
+   1. 为升级准备源实例。 有关详细步骤，请参阅 [升级到AEM 6.5](/help/sites-deploying/upgrade.md).
+   1. 下载 [AEM 6.5快速入门](/help/sites-deploying/deploy.md#getting%20the%20software).
+   1. **（仅限基于Unix/Linux的安装）** 如果您使用UNIX或Linux作为基础操作系统，请打开“终端”窗口，导航到包含crx-quickstart的文件夹，然后运行以下命令：
 
       `chmod -R 755 ../crx-quickstart`
 
-   1. 將您的AEM執行個體升級至AEM 6.3。如需逐步指示，請參閱 [升級至AEM 6.5](/help/sites-deploying/upgrade.md).
+   1. 将AEM实例升级到AEM 6.3。有关分步说明，请参阅 [升级到AEM 6.5](/help/sites-deploying/upgrade.md).
 
-      繼續後續步驟之前，請等待ServiceEvent REGISTERED和ServiceEvent UNREGISTERED訊息停止出現在 &lt;crx-repository>/error.log檔案。
+      在继续后续步骤之前，请等待ServiceEvent REGISTERED和ServiceEvent UNREGISTERED消息停止出现在 &lt;crx-repository>/error.log文件。
 
       >[!NOTE]
       >
-      >伺服器啟動並執行後，一些AEM Forms套件組合會維持安裝狀態。 每個安裝的套件組合數量可能有所不同。 您可以安全地忽略這些套裝的狀態。 套件組合列於https://&#39;[伺服器]：[連線埠]&#39;/system/console/。
+      >在服务器启动并运行后，一些AEM Forms捆绑包仍处于安装状态。 每次安装的捆绑包数量可能有所不同。 您可以安全地忽略这些捆绑包的状态。 这些捆绑包位于https://&#39;[服务器]：[端口]&#39;/system/console/.
 
-1. 安裝AEM Forms附加元件套件。 步驟如下：
+1. 安装AEM Forms附加组件包。 步骤如下所示：
 
    1. 打开 [Software Distribution](https://experience.adobe.com/downloads)。您需要 Adobe ID 才能登录 Software Distribution。
    1. 点按标题菜单中的 **[!UICONTROL Adobe Experience Manager]**。
-   1. 在 **[!UICONTROL 篩選器]** 區段：
-      1. 選取 **[!UICONTROL Forms]** 從 **[!UICONTROL 解決方案]** 下拉式清單。
-      1. 選取套件的版本和型別。 您也可以使用 **[!UICONTROL 搜尋下載]** 篩選結果的選項。
-   1. 點選適用於您的作業系統的套件名稱，然後選取 **[!UICONTROL 接受EULA條款]**，然後點選 **[!UICONTROL 下載]**.
+   1. 在 **[!UICONTROL 筛选器]** 部分：
+      1. 选择 **[!UICONTROL Forms]** 从 **[!UICONTROL 解决方案]** 下拉列表。
+      1. 选择包的版本和类型。 您还可以使用 **[!UICONTROL 搜索下载]** 用于筛选结果的选项。
+   1. 点按适用于您的操作系统的包名称，然后选择 **[!UICONTROL 接受EULA条款]**，然后点按 **[!UICONTROL 下载]**.
    1. 打开[包管理器](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html)，并单击&#x200B;**[!UICONTROL 上传包]**&#x200B;以上传包。
-   1. 選取套件並按一下 **[!UICONTROL 安裝]**.
+   1. 选择资源包并单击 **[!UICONTROL 安装]**.
 
-      您也可以使用下列直接連結下載套件： [AEM Forms發行版本](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) 文章。
+      您还可以使用中列出的直接链接下载包 [AEM Forms版本](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) 文章。
 
       >[!NOTE]
       >
-      >安裝套件後，系統會提示您重新啟動AEM執行個體。 **請勿立即停止伺服器。** 在停止AEM Forms伺服器之前，請等待ServiceEvent REGISTERED和ServiceEvent UNREGISTERED訊息停止出現在 &lt;crx-repository>/error.log檔案且記錄穩定。 另請注意，有些套件可能維持已安裝狀態。 您可以安全地忽略這些套件的狀態。
+      >安装软件包后，系统会提示您重新启动AEM实例。 **不要立即停止服务器。** 在停止AEM Forms服务器之前，请等待ServiceEvent REGISTERED和ServiceEvent UNREGISTERED消息停止出现在 &lt;crx-repository>/error.log文件，并且日志稳定。 另请注意，一些软件包可以保持已安装状态。 您可以安全地忽略这些软件包的状态。
 
-1. 重新啟動AEM執行個體。
+1. 重新启动AEM实例。
 
-1. 執行安裝後活動。
+1. 执行安装后活动。
 
-   * **執行移轉公用程式**
+   * **运行迁移实用程序**
 
-      移轉公用程式可讓適用性表單和舊版通訊管理資產相容於AEM 6.5表單。 您可以從AEM Software Distribution下載公用程式。 如需設定和使用移轉公用程式的逐步資訊，請參閱 [移轉公用程式](../../forms/using/migration-utility.md).
+      迁移实用程序使自适应表单和以前版本的通信管理资产与AEM 6.5表单兼容。 您可以从AEM Software Distribution下载该实用程序。 有关配置和使用迁移实用程序的分步信息，请参阅 [迁移实用程序](../../forms/using/migration-utility.md).
 
-      如果您使用 [整合草稿和提交元件的範例](https://helpx.adobe.com/experience-manager/6-3/forms/using/integrate-draft-submission-database.html) 使用資料庫並從舊版升級，然後在執行升級後執行下列SQL查詢：
+      如果您使用 [用于集成草稿和提交组件的示例](https://helpx.adobe.com/experience-manager/6-3/forms/using/integrate-draft-submission-database.html) 使用数据库并从以前的版本升级，然后在执行升级后运行以下SQL查询：
 
       ```sql
       UPDATE metadata m, additionalmetadatatable am
@@ -80,30 +80,30 @@ ht-degree: 5%
       WHERE `key` = 'dataType'
       ```
 
-   * **(如果從AEM 6.2 Forms或舊版升級)重新設定Adobe Sign**
+   * **(如果仅从AEM 6.2 Forms或以前的版本升级)重新配置Adobe Sign**
 
-      如果您已在舊版AEM Forms中設定Adobe Sign，請從AEM雲端服務重新設定Adobe Sign 。 如需詳細資訊，請參閱 [將Adobe Sign與AEM Forms整合](../../forms/using/adobe-sign-integration-adaptive-forms.md).
+      如果您在早期版本的AEM Forms中配置了Adobe Sign，请从AEM Cloud Services重新配置Adobe Sign。 有关更多详细信息，请参阅 [将Adobe Sign与AEM Forms集成](../../forms/using/adobe-sign-integration-adaptive-forms.md).
 
-   * **支援jQuery**
+   * **支持jQuery**
 
-      在AEM 6.5 Forms中，jQuery的版本更新至3.2.1，而jQuery UI版本更新至1.12.1。AEM Form使用JQuery於 **noConflict** 模式。 因此，如果您使用任何其他jQuery版本，執行升級時都不會顯示任何問題。 不過，當您升級至AEM 6.5 Forms時：
+      在AEM 6.5 Forms中，jQuery的版本更新为3.2.1，jQuery UI版本更新为1.12.1。AEM Form在中使用JQuery **noConflict** 模式。 因此，如果您使用的是任何其他jQuery版本，则在执行升级时不会显示任何问题。 但是，当您升级到AEM 6.5 Forms时：
 
-      * 確保您的自訂元件（如果有）與支援的jQuery版本相容。
-      * 從自訂元件中移除不支援的API。 另請參閱 [升級指南](https://jquery.com/upgrade-guide/3.0/) 以取得已移除的API清單。 例如，對load()、.unload()和.error() API的支援已移除。 使用.on()方法取代上述API。 例如，將$(&quot;img&quot;)。load(fn)變更為$(&quot;img&quot;)。on(&quot;load&quot;， fn)。
-   * **(如果從AEM 6.2 Forms或舊版升級)重新設定分析和報表**
+      * 确保您的自定义组件（如果有）与支持的jQuery版本兼容。
+      * 从自定义组件中删除不支持的API。 参见 [升级指南](https://jquery.com/upgrade-guide/3.0/) 以获取已删除的API的列表。 例如，对load()、.unload()和.error() API的支持已删除。 使用.on()方法替换前面提到的API。 例如，将$(&quot;img&quot;)。load(fn)更改为$(&quot;img&quot;)。on(&quot;load&quot;， fn)。
+   * **(如果仅从AEM 6.2 Forms或之前的版本升级)重新配置Analytics和报表**
 
-      在AEM 6.4 Forms中，無法使用曝光的來源和成功事件流量變數。 因此，當您從AEM 6.2 Forms或舊版升級時，AEM Forms會停止傳送資料至Adobe Analytics伺服器，且無法使用最適化表單的Analytics報表。 此外，AEM 6.4 Forms還針對表單分析版本引入了流量變數，並針對在欄位上逗留的時間量引入了成功事件。 因此，請為您的AEM Forms環境重新設定分析和報表。 如需詳細步驟，請參閱 [設定分析和報表](../../forms/using/configure-analytics-forms-documents.md).
+      在AEM 6.4 Forms中，源的流量变量和印象的成功事件不可用。 因此，当您从AEM 6.2 Forms或之前的版本升级时，AEM Forms会停止向Adobe Analytics服务器发送数据，并且自适应表单的Analytics报表将不可用。 此外，AEM 6.4 Forms还为form analytics版本引入了流量变量，并为success event在字段上花费的时间量引入了流量变量。 因此，请为您的AEM Forms环境重新配置分析和报表。 有关详细步骤，请参阅 [配置分析和报表](../../forms/using/configure-analytics-forms-documents.md).
 
 
-1. 確認伺服器升級成功，所有資料也成功移轉，而且伺服器可以正常運作。
+1. 验证服务器是否升级成功，所有数据是否也迁移成功，服务器是否能够正常运行。
 
-   * **驗證套件組合的狀態：** 確定所有套件組合都處於作用中狀態。
-   * **驗證復寫和反向復寫：** 發佈、填寫和提交一些已移轉的表單。 同時驗證提交的資料。
-   * **驗證對管理員和開發人員使用者介面的存取權：** 從管理員帳戶登入AEM執行個體，並確認您擁有下列URL的存取權：
+   * **验证捆绑包的状态：** 确保所有捆绑包都处于活动状态。
+   * **验证复制和反向复制：** 发布、填写和提交一些已迁移的表单。 同时验证提交的数据。
+   * **验证对管理员和开发人员用户界面的访问权限：** 从管理员帐户登录AEM实例，并确认您有权访问以下URL：
 
       * `https://'[server]:[port]'/crx/packmgr`
       * `https://'[server]:[port]'/crx/de`
       * `https://'[server]:[port]'/aem/forms.html/content/dam/formsanddocuments`
 
    >[!NOTE]
-   在AEM 6.4 Forms中，crx-repository的結構已變更。 如果從6.3 Forms升級至AEM 6.5 Forms，請使用變更的路徑進行自訂，讓您重新建立。 如需已變更路徑的完整清單，請參閱 [AEM中的Forms存放庫重組](/help/sites-deploying/forms-repository-restructuring-in-aem-6-5.md).
+   在AEM 6.4 Forms中，crx-repository的结构已更改。 如果从6.3 Forms升级到AEM 6.5 Forms，请使用更改后的路径进行重新创建的自定义设置。 有关已更改路径的完整列表，请参见 [AEM中的Forms存储库重组](/help/sites-deploying/forms-repository-restructuring-in-aem-6-5.md).

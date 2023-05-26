@@ -1,6 +1,6 @@
 ---
 title: 控制台的键盘快捷键
-description: 在整个 AEM 环境中都可以使用各种键盘快捷键。有些適用於主控台的使用，有些則適用於頁面編輯。
+description: 在整个 AEM 环境中都可以使用各种键盘快捷键。一些可应用于控制台的使用，另一些可应用于页面编辑。
 uuid: 3be775f4-ea44-4843-9041-dbcf0c41eec4
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -21,11 +21,11 @@ ht-degree: 33%
 
 >[!NOTE]
 >
->在桌上型電腦裝置上進行多選：
+>在桌面设备上多选：
 >
->* Windows： **Ctrl**+**按一下** 在必要元件上。
+>* Windows： **Ctrl**+**点击** 在必需组件上。
 >
->* Mac： **Cmd**+**按一下** 在必要元件上。
+>* Mac： **Cmd**+**点击** 在必需组件上。
 >
 
 
@@ -35,15 +35,15 @@ ht-degree: 33%
  <tbody>
   <tr>
    <th>位置</th>
-   <th>捷徑</th>
+   <th>快捷键</th>
    <th>描述</th>
   </tr>
   <tr>
    <td>控制台</td>
-   <td><strong><code>Shift-Double-Click</code></strong><br /> （在必要頁面）</td>
-   <td>在新視窗中開啟頁面。<br /> <strong>注意：</strong> 這是可操作的，如果 <a href="/help/sites-classic-ui-authoring/author-env-user-props.md">使用者屬性</a> 設為「單一視窗」；若為「多個視窗」，則這是預設行為。</td>
+   <td><strong><code>Shift-Double-Click</code></strong><br /> （在所需页面上）</td>
+   <td>在新窗口中打开页面。<br /> <strong>注意：</strong> 这是可操作的，如果 <a href="/help/sites-classic-ui-authoring/author-env-user-props.md">用户属性</a> 设置为“单个窗口”；如果设置为“多个窗口”，则这是默认行为。</td>
   </tr>
  </tbody>
 </table>
 
-案頭使用者在使用時，也可以使用各種鍵盤快速鍵 [頁面編輯器](/help/sites-classic-ui-authoring/classic-page-author-keyboard-shortcuts.md) 以編寫頁面。
+桌面用户在使用时，也可以使用各种键盘快捷键 [页面编辑器](/help/sites-classic-ui-authoring/classic-page-author-keyboard-shortcuts.md) 以创作页面。

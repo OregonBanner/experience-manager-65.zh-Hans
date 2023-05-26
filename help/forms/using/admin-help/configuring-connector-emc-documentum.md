@@ -1,7 +1,7 @@
 ---
-title: 為EMC Documentum設定聯結器
+title: 为EMC Documentum配置连接器
 seo-title: Configuring Connector for EMC Documentum
-description: 瞭解如何設定EMC Documentum聯結器，以啟用AEM Forms與EMC Documentum之間的通訊。
+description: 了解如何配置Connector for EMC Documentum ，以实现AEM Forms与EMC Documentum之间的通信。
 seo-description: Learn how to configure the Connector for EMC Documentum to enable communication between AEM forms and EMC Documentum.
 uuid: fc96900a-ec8a-4efd-ad8e-25e9967e649b
 contentOwner: admin
@@ -17,102 +17,102 @@ ht-degree: 1%
 
 ---
 
-# 為EMC Documentum設定聯結器 {#configuring-connector-for-emc-documentum}
+# 为EMC Documentum配置连接器 {#configuring-connector-for-emc-documentum}
 
-Connector for EMC Documentum可實現AEM Forms與EMC Documentum之間的通訊。 如需其他背景資訊，請參閱以下的「Connectors for ECM」： [服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
+Connector for EMC Documentum实现了AEM Forms与EMC Documentum之间的通信。 有关其他背景信息，请参阅中的“Connectors for ECM” [服务参考](https://www.adobe.com/go/learn_aemforms_services_63).
 
-設定EMC Documentum的聯結器需要設定伺服器連線和存放庫憑證。
-
->[!NOTE]
->
->在舊版中，資產可以儲存在ECM存放庫中。 在目前版本中，資產會儲存在AEM Forms原生存放庫中，且存放庫Provider Services已過時。 資產從ECM存放庫移轉至AEM表單存放庫是在您執行升級至AEM表單時完成的。 如需詳細資訊，請參閱應用程式伺服器的AEM表單升級指南。
-
-## 設定伺服器連線 {#configuring-the-server-connection}
-
-本主題說明您可以在「組態設定」頁面上執行的EMC Documentum聯結器工作。
+为EMC Documentum设置连接器涉及配置服务器连接和存储库凭据。
 
 >[!NOTE]
 >
->如果您同時設定所有設定，則只需按一下「儲存」一次。
+>在早期版本中，资产可以存储在ECM存储库中。 在当前版本中，资产存储在AEM Forms本地存储库中，并且存储库Provider Services已被弃用。 当您升级到AEM表单时，会将资源从ECM存储库迁移到AEM表单存储库。 有关详细信息，请参阅适用于您的应用程序服务器的AEM表单升级指南。
 
-### 設定伺服器 {#configure-the-server}
+## 配置服务器连接 {#configuring-the-server-connection}
 
-您必須設定連線代理人伺服器資訊。 此資訊對於連線到Documentum內容存放庫和啟動EMC Documentum聯結器是必要的。
-
-1. 在管理控制檯中，按一下「服務」>「EMC Documentum聯結器」>「組態設定」。
-1. 在「Documentum組態資訊」區域中，輸入連線代理人的主機名稱或IP位址以及連線埠號碼。 連線埠號碼必須是正整數（例如1489）。
-1. 单击“保存”。
-
-### 設定主體認證 {#configure-principal-credentials}
-
-在設定主體認證時，您提供的存放庫名稱取決於登入期間是否提供明確的存放庫名稱。
-
-如果您輸入不正確的使用者名稱或密碼，將會根據服務目前是否執行而得到下列結果：
-
-* 如果EMC Documentum Repository Provider服務和EMC Documentum Content Repository Connector服務都停止，當您儲存服務組態資訊時，不會出現任何錯誤。 不過，下次啟動服務時，將會擲回例外狀況，且服務不會啟動。
-* 如果EMC Documentum Repository Provider服務或EMC Documentum Content Repository Connector服務已啟動，當您儲存服務組態資訊時，服務會嘗試立即驗證認證資訊。 在這種情況下，會發生錯誤且未儲存設定資訊。
-
-1. 在管理控制檯中，按一下「服務」>「EMC Documentum聯結器」>「組態設定」。
-1. 在「Documentum主體證明資料」區域中，輸入具有超級管理員許可權的使用者的使用者名稱和密碼。
-1. 如果在登入期間未提供明確的存放庫名稱，請輸入與證明資料關聯的存放庫名稱。
-1. 单击“保存”。
-
-### 變更存放庫服務提供者 {#change-the-repository-service-provider}
-
-您可以設定要搭配Documentum使用的儲存庫服務提供者。 存放庫服務呼叫會委派給您設定的提供者。 以下选项可供选择：
-
-**目前的存放庫服務提供者名稱：** 目前存放庫服務提供者的名稱
-
-**ECM Documentum儲存庫提供者：** 讓Documentum儲存庫提供者成為儲存庫的提供者。 此選項已過時
-
-**存放庫提供者：** 讓原生存放庫提供者成為存放庫的提供者
+本主题介绍可在“配置设置”页面上执行的EMC Documentum连接器任务。
 
 >[!NOTE]
 >
->若要選取所列專案以外的存放庫服務提供者，請在「應用程式和服務>服務管理」中設定RepositoryService。 <!-- Fix broken link (See Managing Services) -->.
+>如果要同时配置所有设置，则只需单击一次保存。
 
-1. 在管理控制檯中，按一下「服務」>「EMC Documentum聯結器」>「組態設定」。
-1. 在「存放庫服務提供者資訊」區域中，選取替代的存放庫服務提供者。
+### 配置服务器 {#configure-the-server}
+
+您需要配置连接代理服务器信息。 此信息对于连接到Documentum内容存储库和启动Connector for EMC Documentum是必需的。
+
+1. 在管理控制台中，单击“服务”>“EMC Documentum连接器”>“配置设置”。
+1. 在“ Documentum配置信息”区域中，输入连接代理的主机名或IP地址和端口号。 端口号必须是正整数（例如，1489）。
 1. 单击“保存”。
 
-## 設定存放庫認證 {#configuring-repository-credentials}
+### 配置主体凭据 {#configure-principal-credentials}
 
-Documentum認證資訊用於AEM表單系統內容。 存放庫認證是特定於Documentum中的特定存放庫。 您可以為任何數量的存放庫提供證明資料，但您只能為每個存放庫指定一組證明資料。
+配置主体凭据时，您提供的存储库名称取决于登录期间是否提供明确的存储库名称。
 
-### 新增存放庫認證 {#add-a-repository-credential}
+如果输入的用户名或密码不正确，将根据服务当前是否正在运行获得以下结果：
 
-1. 在管理控制檯中，按一下「服務」>「EMC Documentum聯結器」>「存放庫憑證設定」。
-1. 按一下「新增」。 便會顯示「Documentum系統證明資訊」頁面。
-1. 輸入存放庫的名稱。
-1. 輸入使用者名稱和密碼。
+* 如果EMC Documentum Repository Provider服务和EMC Documentum Content Repository Connector服务都已停止，则在保存服务配置信息时，不会出现任何错误。 但是，下次启动服务时，将会引发异常，并且服务不会启动。
+* 如果EMC Documentum Repository Provider服务或EMC Documentum Content Repository Connector服务已启动，则在保存服务配置信息时，该服务将尝试立即验证凭据信息。 在这种情况下，会发生错误，并且不会保存配置信息。
+
+1. 在管理控制台中，单击“服务”>“EMC Documentum连接器”>“配置设置”。
+1. 在“Documentum主体身份证明信息”区域中，键入具有超级管理员权限的用户名和密码。
+1. 如果在登录期间未提供显式存储库名称，请输入与凭据关联的存储库名称。
 1. 单击“保存”。
 
-如果EMC Documentum的Content Repository Connector服務和/或EMC Documentum的Repository Service正在執行，則在將認證資訊儲存在資料庫中之前，會針對指定的儲存庫進行驗證。 如果認證無效或存在，則會顯示錯誤訊息。
+### 更改存储库服务提供程序 {#change-the-repository-service-provider}
 
-### 移除存放庫認證 {#remove-a-repository-credential}
+您可以配置要与Documentum一起使用的存储库服务提供商。 存储库服务调用已委派给您配置的提供程序。 以下选项可供选择：
 
-1. 在管理控制檯中，按一下「服務」>「EMC Documentum聯結器」>「組態設定」。
-1. 選取要從中移除認證的存放庫旁的核取方塊，然後按一下移除。 所選儲存區域的證明資料會從資料庫中移除。
+**当前存储库服务提供程序名称：** 当前存储库服务提供程序的名称
 
-### 變更存放庫認證的使用者名稱和密碼 {#change-the-user-name-and-password-for-a-repository-credential}
+**ECM Documentum存储库提供程序：** 使Documentum存储库提供程序成为存储库的提供程序。 此选项已弃用
 
-1. 在管理控制檯中，按一下「服務」>「EMC Documentum聯結器」>「組態設定」。
-1. 按一下要編輯其證明資料的儲存庫名稱。
-1. 變更存放庫的使用者名稱或密碼，或同時變更兩者。 （存放庫名稱是唯讀的。）
+**存储库提供程序：** 使本地存储库提供程序成为存储库的提供程序
+
+>[!NOTE]
+>
+>要选择除列出的系统信息库服务提供程序之外的其他系统信息库服务提供程序，请在应用程序和服务>服务管理中配置RepositoryService。 <!-- Fix broken link (See Managing Services) -->.
+
+1. 在管理控制台中，单击“服务”>“EMC Documentum连接器”>“配置设置”。
+1. 在“存储库服务提供程序信息”区域中，选择替代存储库服务提供程序。
 1. 单击“保存”。
 
-如果EMC Documentum的Content Repository Connector服務和/或EMC Documentum的Repository Service正在執行，則在將認證資訊儲存在資料庫中之前，會針對指定的儲存庫進行驗證。 如果認證無效或存在，則會顯示錯誤訊息。
+## 配置存储库凭据 {#configuring-repository-credentials}
 
-## 啟用共用工作區工作佇列的請求 {#enable-the-request-for-sharing-of-workspace-task-queues}
+Documentum凭据信息在AEM表单系统上下文中使用。 存储库凭据特定于Documentum中的特定存储库。 您可以为任意数量的存储库提供凭据；但是，您只能为每个存储库指定一组凭据。
 
-需要一些手動步驟，以確保Workspace中的「請求工作佇列共用」功能可與Connector for EMC Documentum正常運作。
+### 添加存储库凭据 {#add-a-repository-credential}
 
-1. 部署AEM Forms並安裝Workbench後，登入Workbench並開啟「資源」檢視。 您將決定QueueSharing.swf檔案在此檢視中的位置。
-1. 將QueueSharing.swf檔案從「資源檢視」拖曳至Windows案頭或同等位置（視您的作業系統而定）。
-1. 在管理控制檯中，按一下「服務」>「EMC Documentum聯結器」>「組態設定」。
-1. 在「儲存庫服務提供者資訊」下，將已設定的儲存庫提供者變更為「EMC Documentum儲存庫提供者」。
-1. 啟動Workbench，並將QueueSharing.swf檔案從您最初複製到的位置（例如Windows案頭或其他位置）複製到EMC Documentum存放庫內的現有目錄中。
-1. 在「維護作業處理」檢視表中，開啟「佇列共用」處理。
-1. 在「變數」檢視中，開啟「theForm」變數的屬性，並變更URI以符合您在步驟5中放置QueueSharing.swf檔案的路徑。
-1. 儲存程式。
-1. 根據貴組織的原則將流程移轉至生產環境。
+1. 在管理控制台中，单击“服务”>“EMC Documentum连接器”>“存储库凭据设置”。
+1. 单击“添加”。 此时将显示“Documentum系统凭据信息”页。
+1. 输入存储库的名称。
+1. 输入用户名和密码。
+1. 单击“保存”。
+
+如果Content Repository Connector for EMC Documentum服务和/或Repository Service for EMC Documentum正在运行，则在将凭据信息存储到数据库中之前，会针对指定的存储库对其进行验证。 如果凭据无效或存在，则会显示错误消息。
+
+### 删除存储库凭据 {#remove-a-repository-credential}
+
+1. 在管理控制台中，单击“服务”>“EMC Documentum连接器”>“配置设置”。
+1. 选中要从中删除凭据的存储库旁边的复选框，然后单击删除。 所选存储库的凭据将从数据库中删除。
+
+### 更改存储库凭据的用户名和密码 {#change-the-user-name-and-password-for-a-repository-credential}
+
+1. 在管理控制台中，单击“服务”>“EMC Documentum连接器”>“配置设置”。
+1. 单击要编辑其凭据的存储库名称。
+1. 更改存储库的用户名或密码，或同时更改两者。 （存储库名称是只读的。）
+1. 单击“保存”。
+
+如果Content Repository Connector for EMC Documentum服务和/或Repository Service for EMC Documentum正在运行，则在将凭据信息存储到数据库中之前，会针对指定的存储库对其进行验证。 如果凭据无效或存在，则会显示错误消息。
+
+## 启用共享工作区任务队列的请求 {#enable-the-request-for-sharing-of-workspace-task-queues}
+
+需要执行一些手动步骤，以确保Workspace中的“请求共享任务队列”功能可以与Connector for EMC Documentum正常配合使用。
+
+1. 在部署AEM Forms并安装Workbench后，登录到Workbench并打开“资源”视图。 您将确定QueueSharing.swf文件在此视图中的位置。
+1. 根据您的操作系统，将QueueSharing.swf文件从“资源视图”拖到Windows桌面或等效位置。
+1. 在管理控制台中，单击“服务”>“EMC Documentum连接器”>“配置设置”。
+1. 在“存储库服务提供程序信息”下，将配置的存储库提供程序更改为EMC Documentum Repository Provider。
+1. 启动Workbench，将QueueSharing.swf文件从最初复制到的位置（例如，Windows桌面或其他位置）复制到EMC Documentum存储库内的现有目录中。
+1. 在“工作台流程”视图中，打开“队列共享”流程。
+1. 在“变量”视图中，打开“theForm”变量的属性，并更改URI以匹配您在步骤5中放置QueueSharing.swf文件的路径。
+1. 保存进程。
+1. 根据贵组织的策略将流程迁移到生产环境。

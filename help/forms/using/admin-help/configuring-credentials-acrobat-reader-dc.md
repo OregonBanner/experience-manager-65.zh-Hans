@@ -1,7 +1,7 @@
 ---
-title: 設定用於Acrobat Reader DC擴充功能的認證
+title: 配置凭据以用于Acrobat Reader DC扩展
 seo-title: Configuring credentials for use with Acrobat Reader DC extensions
-description: 瞭解如何設定憑證以與Acrobat Reader DC擴充功能搭配使用。
+description: 了解如何配置凭据以用于Acrobat Reader DC扩展。
 seo-description: Learn how to configure credentials for use with Acrobat Reader DC extensions.
 uuid: 9210e6c9-6f5c-402d-b355-b104cdffd5eb
 contentOwner: admin
@@ -17,47 +17,47 @@ ht-degree: 0%
 
 ---
 
-# 設定用於Acrobat Reader DC擴充功能的認證{#configuring-credentials-for-use-with-acrobat-reader-dc-extensions}
+# 配置凭据以用于Acrobat Reader DC扩展{#configuring-credentials-for-use-with-acrobat-reader-dc-extensions}
 
-若要將使用許可權套用至PDF檔案，請為AEM表單設定Acrobat Reader DC擴充功能的有效認證。 在安裝AEM表單期間可能已設定認證。 如果在執行Configuration Manager時未設定Acrobat Reader DC擴充功能認證，或者如果您需要匯入新的或取代認證，可以使用「信任存放區管理」頁面進行設定。
+要对PDF文档应用使用权限，请使用Acrobat Reader DC扩展的有效凭据配置AEM表单。 可能在安装AEM表单期间配置了凭据。 如果在运行Configuration Manager时未配置Acrobat Reader DC扩展凭据，或者如果需要导入新凭据或替换凭据，可以使用“信任存储区管理”页面进行配置。
 
-如果您使用評估認證，請在移至生產環境時，以生產認證取代。 若要更新過期的或評估認證，請先刪除舊的Acrobat Reader DC擴充功能認證。
+如果您使用的是评估凭据，请在移至生产环境时将其替换为生产凭据。 要更新过期的凭据或评估凭据，请首先删除旧的Acrobat Reader DC扩展凭据。
 
-如需取得認證的相關資訊，請參閱 [準備安裝AEM表單（單一伺服器）](https://www.adobe.com/go/learn_aemforms_prepareInstallsingle_63).
+有关获取凭据的信息，请参阅 [准备安装AEM表单（单服务器）](https://www.adobe.com/go/learn_aemforms_prepareInstallsingle_63).
 
-信任存放區可包含多個Acrobat Reader DC延伸模組認證。 您必須指定其中一個認證作為預設Reader延伸模組認證。 當Workbench使用者無法決定要在流程建立期間使用哪個認證時，就會使用預設認證。 這些規則適用於預設認證：
+信任存储区可以包含多个Acrobat Reader DC扩展凭据。 您必须指定其中一个凭据作为默认Reader扩展凭据。 当Workbench用户无法确定要在进程创建过程中使用的凭据时，将使用默认凭据。 以下规则适用于默认凭据：
 
-* 如果您匯入Acrobat Reader DC擴充功能認證，而信任存放區不含其他Acrobat Reader DC擴充功能認證，則會將其設為預設值。
-* 如果您匯入Acrobat Reader DC擴充功能認證，並選取「預設」選項，則會從現有的預設認證中移除預設型別。 匯入的認證會成為預設值。
-* 您無法刪除預設的Acrobat Reader DC延伸模組認證。 若要刪除預設的認證，請先將其他認證設定為預設值。 此規則的例外情況是，如果只有一個認證，即使它是預設值，您也可以將其刪除。
-* 您無法更新預設的Acrobat Reader DC延伸模組認證。
+* 如果您导入Acrobat Reader DC扩展凭据，并且信任存储区不包含其他Acrobat Reader DC扩展凭据，则会将其设置为默认值。
+* 如果在选择了“默认”选项的情况下导入Acrobat Reader DC扩展凭据，则会从现有的默认凭据中删除默认类型。 导入的凭据成为默认值。
+* 您无法删除默认的Acrobat Reader DC扩展凭据。 要删除默认凭据，请先将其他凭据设置为默认凭据。 此规则的一个例外是，如果只有一个凭据，则可以将其删除，即使它是默认凭据。
+* 无法更新默认的Acrobat Reader DC扩展凭据。
 
 >[!NOTE]
 >
->您也可以以程式設計方式匯入和刪除認證。 (請參閱 [使用AEM表單程式設計](https://www.adobe.com/go/learn_aemforms_programming_63).)
+>您还可以以编程方式导入和删除凭据。 (请参阅 [使用AEM表单编程](https://www.adobe.com/go/learn_aemforms_programming_63).)
 
-## 匯入Acrobat Reader DC擴充功能認證 {#import-a-acrobat-reader-dc-extensions-credential}
+## 导入Acrobat Reader DC扩展凭据 {#import-a-acrobat-reader-dc-extensions-credential}
 
-1. 在管理控制檯中，按一下「設定>信任存放區管理>本機認證」。
-1. 按一下匯入，然後在「信任存放區型別」下方，選取Acrobat Reader DC延伸模組認證。
-1. （選用）若要指出此認證是搭配Acrobat Reader DC擴充功能使用的預設認證，請選取「預設」。
-1. 在「別名」方塊中，輸入認證的識別碼。 此識別碼會用作Acrobat Reader DC擴充功能中認證的顯示名稱。 此別名也可用來透過AEM Forms SDK以程式設計方式存取認證。
+1. 在管理控制台中，单击设置>信任存储区管理>本地凭据。
+1. 单击导入，然后在“信任存储区类型”下，选择Acrobat Reader DC扩展凭据。
+1. （可选）要指示此凭据是与Acrobat Reader DC扩展一起使用的默认凭据，请选择默认。
+1. 在“别名”框中，键入凭据的标识符。 此标识符用作Acrobat Reader DC扩展中凭据的显示名称。 此别名还用于通过AEM Forms SDK以编程方式访问凭据。
 
    >[!NOTE]
    >
-   >別名會自動轉換為大寫，以便顯示。 您在程式中參考別名時，別名名稱不區分大小寫。
+   >别名会自动转换为大写以便显示。 在进程中引用别名时，别名不区分大小写。
 
-1. 按一下選擇檔案來尋找證明資料、輸入證明資料的密碼，然後按一下確定。
+1. 单击选择文件以查找凭据，键入凭据的口令，然后单击确定。
 
-   如果出現錯誤訊息「由於檔案格式不正確或密碼不正確而無法匯入認證」，請確認密碼有效。
+   如果出现错误消息“由于文件格式不正确或密码不正确而无法导入凭据”，请验证密码是否有效。
 
-## 移除Acrobat Reader DC擴充功能認證 {#remove-a-acrobat-reader-dc-extensions-credential}
+## 删除Acrobat Reader DC扩展凭据 {#remove-a-acrobat-reader-dc-extensions-credential}
 
-1. 在管理控制檯中，按一下「設定>信任存放區管理>本機認證」。
-1. 選取認證並按一下刪除。
+1. 在管理控制台中，单击设置>信任存储区管理>本地凭据。
+1. 选择凭据，然后单击删除。
 
-## 取代Acrobat Reader DC擴充功能認證 {#replace-a-acrobat-reader-dc-extensions-credential}
+## 替换Acrobat Reader DC扩展凭据 {#replace-a-acrobat-reader-dc-extensions-credential}
 
-1. 在管理控制檯中，按一下「設定>信任存放區管理>本機認證」。
-1. 記下現有認證的別名，然後選取並按一下刪除。
-1. 使用完全相同的別名匯入新的認證。
+1. 在管理控制台中，单击设置>信任存储区管理>本地凭据。
+1. 记下现有凭据的别名，然后选择该凭据并单击删除。
+1. 使用完全相同的别名导入新凭据。

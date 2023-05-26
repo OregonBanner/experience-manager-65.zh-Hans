@@ -1,7 +1,7 @@
 ---
-title: 新增、啟用、修改或移除端點
+title: 添加、启用、修改或删除端点
 seo-title: Adding, enabling, modifying, or removing endpoints
-description: 瞭解如何新增、啟用、修改和移除端點。
+description: 了解如何添加、启用、修改和删除端点。
 seo-description: Learn how to add, enable, modify and remove endpoints.
 uuid: c53f225b-3d55-42f6-8982-0cd7dde0c4f5
 contentOwner: admin
@@ -17,59 +17,59 @@ ht-degree: 0%
 
 ---
 
-# 新增、啟用、修改或移除端點 {#adding-enabling-modifying-or-removing-endpoints}
+# 添加、启用、修改或删除端点 {#adding-enabling-modifying-or-removing-endpoints}
 
-## 將端點新增至服務 {#add-an-endpoint-to-a-service}
+## 向服务添加端点 {#add-an-endpoint-to-a-service}
 
-端點只能新增到服務。 端點不能單獨存在；它必須與服務相關聯。
-
->[!NOTE]
->
->新增端點時，建議您使用唯一的名稱。
-
-1. 在Administration Console中，按一下「服務>應用程式和服務>服務管理」。
-1. 在「服務管理」頁面上，按一下要設定的服務。
-1. 在「端點」標籤上的清單中，選取要新增的端點型別，然後按一下「新增」。
-1. 根據端點型別，設定其他端點設定。
-
-[Watched資料夾端點設定](/help/forms/using/admin-help/configuring-watched-folder-endpoints.md#watched-folder-endpoint-settings)
-
-[電子郵件端點設定](/help/forms/using/admin-help/configuring-email-endpoints.md#email-endpoint-settings)
-
-[設定任務管理員端點](/help/forms/using/admin-help/configuring-task-manager-endpoints.md#configuring-task-manager-endpoints)
-
-[遠端端點設定](/help/forms/using/admin-help/configuring-remoting-endpoints.md#remoting-endpoint-settings)
-
-1. 按一下「新增」。
-
-## 啟用或停用端點 {#enable-or-disable-an-endpoint}
-
-依預設，新端點會自動啟用。 但如果您已停用端點，則需要啟用它才能運作。
-
-如果您遇到服務問題，請停用相關的端點，以便更妥善地疑難排解問題。 您也可以在定期系統維護或升級服務時停用端點。
-
-1. 在Administration Console中，按一下「服務>應用程式和服務>端點管理」。
-1. 在「端點管理」頁面上，選取要啟用或停用端點的核取方塊，然後按一下啟用或停用。
-
-## 修改端點 {#modify-an-endpoint}
+端点只能添加到服务。 端点不能单独存在；它必须与服务相关联。
 
 >[!NOTE]
 >
->您使用管理主控台對端點設定所做的變更，不會反映在應用程式的設計階段復本中。 如果您重新部署應用程式，您使用管理主控台對其端點所做的任何變更都將遺失。
+>建议您在添加端点时使用唯一的名称。
 
-1. 在Administration Console中，按一下「服務>應用程式和服務>端點管理」。
-1. 在「端點管理」頁面上，按一下要修改的端點。
-1. 在「更新端點」頁面上，修改端點名稱、說明和設定。
+1. 在管理控制台中，单击服务>应用程序和服务>服务管理。
+1. 在“服务管理”页上，单击要配置的服务。
+1. 在“端点”选项卡的列表中，选择要添加的端点类型，然后单击“添加”。
+1. 根据端点类型，配置其他端点设置。
+
+[观察文件夹端点设置](/help/forms/using/admin-help/configuring-watched-folder-endpoints.md#watched-folder-endpoint-settings)
+
+[电子邮件端点设置](/help/forms/using/admin-help/configuring-email-endpoints.md#email-endpoint-settings)
+
+[配置任务管理器端点](/help/forms/using/admin-help/configuring-task-manager-endpoints.md#configuring-task-manager-endpoints)
+
+[远程端点设置](/help/forms/using/admin-help/configuring-remoting-endpoints.md#remoting-endpoint-settings)
+
+1. 单击“添加”。
+
+## 启用或禁用端点 {#enable-or-disable-an-endpoint}
+
+默认情况下，自动启用新端点。 但是，如果您已禁用端点，则需要启用它才能使其可操作。
+
+如果您遇到服务问题，请禁用关联的端点以便更好地解决问题。 您可能还希望在常规系统维护期间或升级服务时禁用端点。
+
+1. 在管理控制台中，单击服务>应用程序和服务>端点管理。
+1. 在“端点管理”页面上，选中要启用或禁用端点的复选框，然后单击启用或禁用。
+
+## 修改端点 {#modify-an-endpoint}
+
+>[!NOTE]
+>
+>您使用管理控制台对端点配置所做的更改不会反映在应用程序的设计时副本中。 如果重新部署应用程序，则使用管理控制台对其端点所做的任何更改都将丢失。
+
+1. 在管理控制台中，单击服务>应用程序和服务>端点管理。
+1. 在“端点管理”页面上，单击要修改的端点。
+1. 在“更新端点”页面上，修改端点名称、描述和设置。
 
    >[!NOTE]
    >
-   >請勿在名稱或說明中加入&lt;字元，因為它會截斷工作區中顯示的名稱或說明。
+   >请勿在名称或描述中包含&lt;字符，因为它将截断工作区中显示的名称或描述。
 
-1. 若要儲存變更，請按一下[更新]。
+1. 要保存更改，请单击“更新”。
 
-您也可以從「服務管理」頁面選取服務，然後按一下「端點」標籤，來執行此工作。
+您还可以从“服务管理”页选择服务，然后单击“端点”选项卡来执行此任务。
 
-## 移除端點 {#remove-an-endpoint}
+## 删除端点 {#remove-an-endpoint}
 
-1. 在Administration Console中，按一下「服務>應用程式和服務>端點管理」。
-1. 在「端點管理」頁面上，選取要移除之端點的核取方塊，然後按一下移除。 端點不再顯示。
+1. 在管理控制台中，单击服务>应用程序和服务>端点管理。
+1. 在“端点管理”页面上，选中要删除的端点的复选框，然后单击“删除”。 端点不再显示。

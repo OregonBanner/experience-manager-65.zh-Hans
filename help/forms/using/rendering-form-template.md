@@ -1,7 +1,7 @@
 ---
-title: 呈現HTML5表單的表單範本
+title: HTML5表单的渲染表单模板
 seo-title: Rendering form template for HTML5 forms
-description: HTML5表單設定檔與設定檔轉譯器相關聯。 設定檔轉譯器是JSP頁面，負責呼叫Forms OSGi服務來產生表單的HTML表示。
+description: HTML5表单配置文件与配置文件渲染关联。 配置文件渲染器是JSP页，负责通过调用Forms OSGi服务来生成表单的HTML表示形式。
 seo-description: HTML5 forms profiles are associated with profile renders. Profile Renders are JSP pages responsible for generating HTML representation of the form by calling the Forms OSGi service.
 uuid: 34daed78-0611-4355-9698-0d7f758e6b61
 content-type: reference
@@ -17,21 +17,21 @@ ht-degree: 1%
 
 ---
 
-# 呈現HTML5表單的表單範本 {#rendering-form-template-for-html-forms}
+# HTML5表单的渲染表单模板 {#rendering-form-template-for-html-forms}
 
-## 轉譯端點 {#render-endpoint}
+## 渲染端点 {#render-endpoint}
 
-HTML5表單的概念為 **設定檔** 會顯示為REST端點，以啟用表單範本的行動轉譯。 這些設定檔已 **設定檔轉譯器**. 這些是JSP頁面，負責呼叫Forms OSGi服務來產生表單的HTML表示。 設定檔節點的JCR路徑會決定轉譯器端點的URL。 指向「預設」設定檔之表單的預設轉譯端點看起來像這樣：
+HTML5表单的概念是 **配置文件** 将作为REST端点公开以启用表单模板的移动渲染。 这些配置文件已关联 **配置文件渲染器**. 它们是JSP页，负责通过调用Forms OSGi服务来生成表单的HTML表示形式。 配置文件节点的JCR路径决定了渲染端点的URL。 表单指向“默认”配置文件的默认渲染终结点如下所示：
 
-https://&lt;*主機*>：&lt;*連線埠*>/content/xfaforms/profiles/default.html？contentRoot=&lt;*包含表單xdp的資料夾路徑*>&amp;template=&lt;*xdp的名稱*>
+https://&lt;*主机*>：&lt;*端口*>/content/xfaforms/profiles/default.html？contentRoot=&lt;*包含表单xdp的文件夹的路径*>&amp;template=&lt;*xdp的名称*>
 
 例如，`http://localhost:4502/content/xfaforms/profiles/default.html?contentRoot=c:/xdps&template=sampleForm.xdp`
 
-對於自訂設定檔，端點會據此變更。 例如，名稱為表單的自訂設定檔的端點是：
+对于自定义用户档案，端点会相应地更改。 例如，名为hrforms的自定义用户档案的终点是：
 
 `http://localhost:4502/content/xfaforms/profiles/hrforms.html?contentRoot=c:/xdps&template=sampleForm.xdp`
 
-如果您的範本位於AEM存放庫中，且應用程式名為FormSubmission，則URI會是：
+如果您的模板驻留在名为FormSubmission的应用程序的AEM存储库中，则URI为：
 
 ```http
 http://localhost:4502/content/xfaforms/profiles/default.html?
@@ -39,9 +39,9 @@ http://localhost:4502/content/xfaforms/profiles/default.html?
  &template=sampleForm.xdp
 ```
 
-## 演算引數 {#render-parameters}
+## 渲染参数 {#render-parameters}
 
-以HTML呈現表單時支援的要求引數包括：
+以HTML形式呈现表单时支持的请求参数包括：
 
 <table>
  <tbody>
@@ -50,37 +50,37 @@ http://localhost:4502/content/xfaforms/profiles/default.html?
    <th><strong>描述</strong></th>
   </tr>
   <tr>
-   <td>範本<br /> </td>
-   <td>此引數會指定範本檔案的名稱。<br /> </td>
+   <td>模板<br /> </td>
+   <td>此参数指定模板文件的名称。<br /> </td>
   </tr>
   <tr>
    <td>contentRoot<br /> </td>
-   <td>此引數會指定範本和相關資源所在的路徑。 此路徑可以是伺服器檔案系統路徑或存放庫路徑、http或ftp路徑。<br /> </td>
+   <td>此参数指定模板和相关资源所在的路径。 此路径可以是服务器文件系统路径或存储库路径、http或ftp路径。<br /> </td>
   </tr>
   <tr>
    <td>submitUrl<br /> </td>
-   <td>此引數會指定表單資料xml張貼到的URL。<br /> </td>
+   <td>此参数指定将表单数据xml发布到的url。<br /> </td>
   </tr>
  </tbody>
 </table>
 
-### 將資料與表單範本合併 {#merge-data-with-form-template}
+### 将数据与表单模板合并 {#merge-data-with-form-template}
 
 | 参数 | 描述 |
 |---|---|
-| dataRef | 此引數會指定 **絕對路徑** 與範本合併的資料檔案中。 此引數可以是Rest服務的URL，此服務會以xml格式傳回資料。 |
-| 資料 | 此引數會指定與範本合併的UTF-8編碼資料位元組。 如果指定此引數，HTML5表單會忽略dataRef引數。 |
+| dataRef | 此参数指定 **绝对路径** 与模板合并的数据文件的ID。 此参数可以是一个以xml格式返回数据的rest服务的URL。 |
+| 数据 | 此参数指定与模板合并的UTF-8编码数据字节。 如果指定此参数，HTML5表单将忽略dataRef参数。 |
 
-### 傳遞轉譯器引數 {#passing-the-render-parameter}
+### 传递渲染参数 {#passing-the-render-parameter}
 
-HTML5表單支援三種傳遞轉譯器引數的方法。 您可以透過URL、索引鍵值配對和設定檔節點傳遞引數。 在轉譯器引數中，機碼值組擁有最高的優先順序，其後是設定檔節點。 URL要求引數的優先順序最低。
+HTML5表单支持三种传递渲染参数的方法。 您可以通过URL、键值对和配置文件节点来传递参数。 在渲染参数中，键值对具有最高的优先级，其后是配置文件节点。 URL请求参数的优先级最低。
 
-* **URL要求引數**：您可以在URL中指定轉譯器引數。 在URL要求引數中，一般使用者可看見引數。 例如，下列提交URL在URL中包含範本引數： `http://localhost:4502/content/xfaforms/profiles/default.html?contentRoot=/Applications/FormSubmission/1.0&template=sampleForm.xdp`
+* **URL请求参数**：您可以在URL中指定渲染参数。 在URL请求参数中，这些参数对于最终用户可见。 例如，以下提交URL在URL中包含模板参数： `http://localhost:4502/content/xfaforms/profiles/default.html?contentRoot=/Applications/FormSubmission/1.0&template=sampleForm.xdp`
 
-* **SetAttribute要求引數**：您可以將轉譯器引數指定為機碼值組。 在SetAttribute要求引數中，一般使用者看不到這些引數。 您可以將請求從任何其他JSP轉送到HTML5表單設定檔轉譯器JSP並使用 *setAttribute* 請求物件以傳遞所有轉譯器引數。 此方法具有最高優先順序。
+* **SetAttribute请求参数**：您可以将渲染参数指定为键值对。 在SetAttribute请求参数中，最终用户看不到这些参数。 您可以将请求从任何其他JSP转发到HTML5表单配置文件渲染器JSP并使用 *setAttribute* 请求对象以传递所有渲染参数。 此方法具有最高优先级。
 
-* **設定檔節點要求引數：** 您可以將轉譯器引數指定為設定檔節點的節點屬性。 在設定檔節點請求引數中，一般使用者看不到引數。 設定檔節點是傳送請求的節點。 若要將引數指定為節點屬性，請使用CRXDE lite。
+* **配置文件节点请求参数：** 您可以将渲染参数指定为配置文件节点的节点属性。 在配置文件节点请求参数中，最终用户看不到这些参数。 配置文件节点是从中发送请求的节点。 要将参数指定为节点属性，请使用CRXDE lite。
 
-### 提交引數 {#submit-parameters}
+### 提交参数 {#submit-parameters}
 
-HTML5表單提交資料；在AEM伺服器上執行伺服器端指令碼和Web服務。 如需用於在AEM伺服器上執行伺服器端指令碼和Web服務的引數的詳細資訊，請參閱 [HTML5表單服務Proxy](/help/forms/using/service-proxy.md).
+HTML5表单提交数据；在AEM服务器上执行服务器端脚本和Web服务。 有关用于在AEM服务器上执行服务器端脚本和Web服务的参数的详细信息，请参见 [HTML5表单服务代理](/help/forms/using/service-proxy.md).

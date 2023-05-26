@@ -1,6 +1,6 @@
 ---
-title: 鎖定您的Adobe Campaign
-description: 設定細分包括建立區段、品牌、行銷活動和體驗。
+title: 定位您的Adobe Campaign
+description: 设置分段包括创建区段、品牌、营销活动和体验。
 uuid: 520cd006-0aa8-43f3-b754-efb7397bb92f
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -15,95 +15,95 @@ ht-degree: 0%
 
 ---
 
-# 鎖定您的Adobe Campaign{#targeting-your-adobe-campaign}
+# 定位您的Adobe Campaign{#targeting-your-adobe-campaign}
 
-若要鎖定您的Adobe Campaign電子報，您必須先設定分段，而這僅在傳統UI中可用。 之後，您可以為Adobe Campaign建立鎖定目標的體驗。
+要定位Adobe Campaign新闻稿，您需要先设置仅在Classic UI中提供的分段。 之后，您可以为Adobe Campaign创建目标体验。
 
-## 在AEM中設定分段 {#setting-up-segmentation-in-aem}
+## 在AEM中设置分段 {#setting-up-segmentation-in-aem}
 
-設定細分包括建立區段、品牌、行銷活動和體驗。 您只能在傳統UI中建立區段。 您可以在觸控式UI中建立品牌、行銷活動和體驗。
+设置分段包括创建区段、品牌、营销活动和体验。 您只能在经典UI中创建区段。 您可以在触屏UI中创建品牌、营销活动和体验。
 
 >[!NOTE]
 >
->區段ID必須對應至Adobe Campaign端的ID。
+>区段ID需要映射到Adobe Campaign端的ID。
 
-### 建立區段 {#creating-segments}
+### 创建区段 {#creating-segments}
 
-若要建立區段：
+要创建区段，请执行以下操作：
 
-1. 開啟 [分段主控台](http://localhost:4502/miscadmin#/etc/segmentation) 於 **&lt;host>：&lt;port>/miscadmin#/etc/segment**.
-1. 建立新頁面並輸入標題 — 例如， **AC區段**  — 並選取 **區段(Adobe Campaign)** 範本。
-1. 在左側的樹狀檢視中選取建立的頁面。
-1. 建立區段，例如鎖定男性使用者，方法是在您建立的區段下建立一個名為「男性」的新頁面，然後選取 **區段(Adobe Campaign)** 範本。
-1. 開啟已建立的區段頁面，並拖放 **區段ID** 從sidekick到頁面。
-1. 連按兩下特徵，輸入ID，在此例中代表Adobe Campaign中定義的男性區段 — 例如， **男性**  — 並按一下 **確定**. 應會顯示下列訊息： `targetData.segmentCode == "MALE"`
-1. 對另一個區段重複這些步驟，例如以女性使用者為目標的區段。
+1. 打开 [分段控制台](http://localhost:4502/miscadmin#/etc/segmentation) 在 **&lt;host>：&lt;port>/miscadmin#/etc/segment**.
+1. 创建新页面并输入标题 — 例如， **交流区段**  — 并选择 **区段(Adobe Campaign)** 模板。
+1. 在左侧的树视图中选择创建的页面。
+1. 创建一个区段，例如定位男性用户，方法是在您创建的名为“男性”的区段下创建一个新页面，然后选择 **区段(Adobe Campaign)** 模板。
+1. 打开创建的区段页面，然后拖放 **区段ID** 从副手到书页。
+1. 双击该特征，输入ID，在此例中表示在Adobe Campaign中定义的男性区段 — 例如， **男性**  — 并单击 **确定**. 应出现以下消息： `targetData.segmentCode == "MALE"`
+1. 对另一个区段重复这些步骤，例如，针对女性用户的区段。
 
-### 建立品牌 {#creating-a-brand}
+### 创建品牌 {#creating-a-brand}
 
-若要建立品牌：
+要创建品牌，请执行以下操作：
 
-1. 在 **網站**，導覽至 **行銷活動** 資料夾（例如在We.Retail中）。
-1. 按一下 **建立頁面** 並輸入頁面的標題，例如We.Retail Brand，然後選取 **品牌** 範本。
+1. In **站点**，导航到 **营销活动** 文件夹（例如，在We.Retail中）。
+1. 单击 **创建页面** 并输入页面的标题，例如We.Retail Brand，然后选择 **品牌** 模板。
 
 ### 创建活动 {#creating-a-campaign}
 
-若要建立行銷活動：
+要创建活动，请执行以下操作：
 
-1. 開啟 **品牌** 您剛才建立的頁面。
-1. 按一下 **建立頁面** 並輸入頁面的標題，例如We.Retail Campaign，然後選取 **Campaign** 範本並按一下 **建立**.
+1. 打开 **品牌** 您刚刚创建的页面。
+1. 单击 **创建页面** 并输入页面的标题，例如We.Retail Campaign，然后选择 **Campaign** 模板并单击 **创建**.
 
-### 建立體驗 {#creating-experiences}
+### 创建体验 {#creating-experiences}
 
-若要建立區段的體驗：
+要为区段创建体验，请执行以下操作：
 
-1. 開啟 **Campaign** 您剛才建立的頁面。
-1. 按一下「 」，為您的區段建立體驗 **建立頁面** 並輸入頁面的標題，例如，當您為「男性」區段建立體驗時，請選取 **體驗** 範本。
-1. 開啟已建立的體驗頁面。
-1. 按一下 **編輯**，然後按一下「區段」下方的 **新增專案**.
-1. 輸入男性區段的路徑，例如 `/etc/segmentation/ac-segments/male` 並按一下 **確定**. 應會顯示下列訊息： *體驗鎖定目標：男性*
-1. 重複上述步驟，為所有區段（例如女性目標）建立體驗。
+1. 打开 **Campaign** 您刚刚创建的页面。
+1. 通过单击为区段创建体验 **创建页面** 并为页面输入标题，例如，在为男性区段创建体验时为“男性”，然后选择 **体验** 模板。
+1. 打开已创建的体验页面。
+1. 单击 **编辑**，然后在“区段”下方单击 **添加项目**.
+1. 输入男性区段的路径，例如 `/etc/segmentation/ac-segments/male` 并单击 **确定**. 应出现以下消息： *体验面向：男性*
+1. 重复上述步骤为所有区段（例如女性目标）创建体验。
 
-## 建立具有目標內容的新聞稿 {#creating-a-newsletter-with-targeted-content}
+## 创建包含目标内容的新闻稿 {#creating-a-newsletter-with-targeted-content}
 
-建立區段、品牌、行銷活動和體驗後，您可以建立具有目標內容的新聞稿。 建立體驗後，您可以將體驗連結至區段。
+创建区段、品牌、营销活动和体验后，您可以创建包含目标内容的新闻稿。 创建体验后，可将体验链接到区段。
 
-您可以在觸控式使用者介面和傳統使用者介面中建立具有目標內容的Newsletter。 本檔案說明觸控式UI的程式。
+您可以在已启用触屏的用户界面和经典用户界面中创建包含目标内容的新闻稿。 本文档介绍了触屏UI的操作过程。
 
-若要建立具有目標內容的Newsletter：
+要创建包含目标内容的新闻稿，请执行以下操作：
 
-1. 建立具有目標內容的Newsletter：在Geometrixx Outdoors中的電子郵件促銷活動下方，按一下或點選 **建立** > **頁面**，然後選取其中一個Adobe Campaign郵件範本。
-
-   >[!NOTE]
-   >
-   >[電子郵件範例僅適用於Geometrixx](/help/sites-developing/we-retail.md#weretail). 請從「封裝共用」下載範例Geometrixx內容。
-
-1. 在Newsletter中，新增文字和個人化元件。
-1. 將文字新增至「文字與個人化」元件，例如「這是預設值」。
-1. 按一下旁邊的箭頭 **編輯** 並選取 **目標定位**.
-1. 從「品牌」下拉式選單中選取您的品牌，然後選取您的Campaign。 （這是您先前建立的品牌和行銷活動）。
-1. 按一下 **開始定位**. 您會看到您的區段出現在「對象」區域中。 如果沒有相符的已定義區段，則會使用預設體驗。
+1. 创建包含目标内容的新闻稿：在Geometrixx Outdoors中的电子邮件促销活动下方，单击或点按 **创建** > **页面**，然后选择其中一个Adobe Campaign Mail模板。
 
    >[!NOTE]
    >
-   >根據預設，AEM隨附的電子郵件範例會使用Adobe Campaign作為目標定位引擎。 針對自訂電子報，您可能需要選取Adobe Campaign作為定位引擎。 鎖定目標時，點選或按一下工具列中的「+」，輸入新活動的標題，然後選取 **Adobe Campaign** 作為目標定位引擎。
+   >[电子邮件示例仅在Geometrixx中可用](/help/sites-developing/we-retail.md#weretail). 请从包共享下载示例Geometrixx内容。
 
-1. 按一下 **預設** 然後是您新增的文字和個人化元件，您會看到裡面有箭頭的靶心。 按一下圖示以鎖定此元件。
+1. 在新闻稿中，添加文本和个性化组件。
+1. 将文本添加到文本和个性化组件中，例如“这是默认设置”。
+1. 单击旁边的箭头 **编辑** 并选择 **定位**.
+1. 从“品牌”下拉菜单中选择您的品牌，然后选择您的Campaign。 （这是您之前创建的品牌和营销活动）。
+1. 单击 **开始定位**. 此时，您的区段将显示在受众区域中。 如果没有定义的区段匹配，则使用默认体验。
+
+   >[!NOTE]
+   >
+   >默认情况下，AEM中包含的电子邮件示例使用Adobe Campaign作为定位引擎。 对于自定义新闻稿，您可能需要选择Adobe Campaign作为定位引擎。 定位时，点按或单击工具栏中的+ ，输入新活动的标题，然后选择 **Adobe Campaign** 作为定位引擎。
+
+1. 单击 **默认** 然后是您添加的文本和个性化组件，您会看到带有箭头的靶心。 单击图标以定位此组件。
 
    ![chlimage_1-165](assets/chlimage_1-165.png)
 
-1. 導覽至另一個區段（男性），然後按一下 **新增優惠方案** 並按一下加號圖示+。 然後編輯選件。
-1. 導覽至另一個區段（女性）並按一下 **新增優惠方案** 和加號圖示+。 然後編輯此選件。
-1. 按一下 **下一個** 若要檢視對應，請按一下 **下一個** 若要檢視未套用至Adobe Campaign的設定，請按一下 **儲存**.
+1. 导航到其他区段（男性），然后单击 **添加选件** ，然后单击加号图标+。 然后编辑选件。
+1. 导航到其他区段（女性）并单击 **添加选件** 和加号图标+。 然后编辑此选件。
+1. 单击 **下一个** 要查看映射，请单击 **下一个** 要查看不适用于Adobe Campaign的设置，请单击 **保存**.
 
-   當內容用於Adobe Campaign內的傳遞時，AEM會自動為Adobe Campaign產生正確的鎖定目的碼
+   当内容在Adobe Campaign内的投放中使用时，AEM会自动为Adobe Campaign生成正确的定位代码
 
-1. 在Adobe Campaign中建立您的傳遞 — 選取 **包含AEM內容的電子郵件傳遞** 並視情況選取本機AEM帳戶，然後確認您的變更。
+1. 在Adobe Campaign中创建投放 — 选择 **包含AEM内容的电子邮件投放** 并根据需要选择本地AEM帐户，然后确认所做的更改。
 
-   在HTML檢視中，Adobe Campaign鎖定目標程式碼會包含目標元件的不同體驗。
+   在HTML视图中，目标组件的不同体验包含在Adobe Campaign定位代码中。
 
    ![chlimage_1-166](assets/chlimage_1-166.png)
 
    >[!NOTE]
    >
-   >如果您也在Adobe Campaign中設定區段，請按一下 **預覽** 將顯示每個區段的體驗。
+   >如果您还在Adobe Campaign中设置区段，请单击 **预览** 将显示每个区段的体验。

@@ -1,7 +1,7 @@
 ---
-title: AEM Forms工作區中未提供Flex工作區功能
+title: Flex工作区中的功能在AEM Forms工作区中不可用
 seo-title: Features of Flex workspace not available in AEM Forms workspace
-description: AEM Forms工作區在Flex工作區之外進行創新。 閱讀特性和功能的差異。
+description: AEM Forms工作区在基于Flex的工作区之外进行创新。 了解特性和功能的差异。
 seo-description: AEM Forms workspace innovates beyond Flex-based Workspace. Read about the differences in features and capabilities.
 uuid: 128729b3-2367-42e8-8159-a080595e8455
 contentOwner: robhagat
@@ -17,14 +17,14 @@ ht-degree: 0%
 
 ---
 
-# AEM Forms工作區中未提供Flex工作區功能 {#features-of-flex-workspace-not-available-in-aem-forms-workspace}
+# Flex工作区中的功能在AEM Forms工作区中不可用 {#features-of-flex-workspace-not-available-in-aem-forms-workspace}
 
-AEM Forms工作區是全新的工作區。 以下是Flex工作區中未提供的部分AEM Forms工作區功能。
+AEM Forms工作区是全新的工作区。 以下是基于Flex的工作区的一些功能，这些功能在AEM Forms工作区中不可用。
 
-* 歡迎頁面無法使用。 您可以將「開始程式」、「待辦事項」、「追蹤」和「我的最愛」頁面設定為登入Workspace時顯示的第一個頁面。
-* 系統事件的訊息和通知不會顯示在AEM Forms工作區中。 對應至訊息的所有設定（例如「訊息通知檢視時間」）也不適用於AEM Forms工作區。
-* 檢視已重新整理，對於起點和任務，卡片檢視和清單檢視之間沒有區別。
-* 由於AEM Forms工作區中的卡片檢視和清單檢視之間沒有區別，因此未提供在待辦事項、歷史記錄和偏好設定中管理欄標題的設定。
-* AEM Forms工作區中沒有管理「追蹤」頁面欄標題的選項。
-* AEM Forms工作區不接受為使用者任務設定核准容器或自訂容器。
-* 搜尋範本的選項可在「追蹤」標籤中使用，但無法在「待辦事項」標籤中使用。
+* 欢迎页面不可用。 您可以将“开始流程”、“待办事项”、“跟踪”和“收藏夹”页面设置为登录工作区时显示的第一个页面。
+* AEM Forms工作区中不显示系统事件的消息和通知。 与消息对应的所有设置（如“消息通知查看时间”）也不适用于AEM Forms工作区。
+* 视图已重新组织，现在，对于起点和任务，卡片视图和列表视图没有区别。
+* 由于AEM Forms工作区中的卡片视图和列表视图之间没有区别，因此未提供在待办事项、历史记录和首选项中管理列标题的设置。
+* AEM Forms工作区中没有管理“跟踪”页面的列标题的选项。
+* AEM Forms工作区中不执行为用户任务设置审批容器或自定义容器的操作。
+* 搜索模板的选项在“跟踪”选项卡中可用，但在“待办事项”选项卡中不可用。

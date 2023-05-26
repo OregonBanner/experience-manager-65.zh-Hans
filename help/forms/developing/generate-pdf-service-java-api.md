@@ -1,7 +1,7 @@
 ---
-title: 產生PDF服務Java API快速入門(SOAP)
+title: 生成PDF服务Java API快速启动(SOAP)
 seo-title: Generate PDF Service Java API QuickStart(SOAP)
-description: 使用「產生PDF」服務將Microsoft Word檔案轉換為PDF檔案、將HTML內容轉換為PDF檔案、使用Java API將PDF檔案轉換為RTF檔案。
+description: 使用“生成PDF”服务将Microsoft Word文档转换为PDF文档、将HTML内容转换为PDF文档、使用Java API将PDF文档转换为RTF文件。
 seo-description: Use the Generate PDF service to convert a Microsoft Word document to a PDF document, convert HTML content to a PDF document, convert a PDF document to an RTF file using the Java API.
 uuid: f8c4a476-de5e-440a-b419-0bd1d7fde5ca
 contentOwner: admin
@@ -18,25 +18,25 @@ ht-degree: 0%
 
 ---
 
-# 產生PDF服務Java API快速入門(SOAP) {#generate-pdf-service-java-api-quickstart-soap}
+# 生成PDF服务Java API快速入门(SOAP) {#generate-pdf-service-java-api-quickstart-soap}
 
-Java API快速入門(SOAP)適用於產生PDF服務。
+Java API快速入门(SOAP)可用于生成PDF服务。
 
-[快速入門（SOAP模式）：使用Java API將Microsoft Word檔案轉換為PDF檔案](generate-pdf-service-java-api.md#quick-start-soap-mode-converting-a-microsoft-word-document-to-a-pdf-document-using-the-java-api)
+[快速入门（SOAP模式）：使用Java API将Microsoft Word文档转换为PDF文档](generate-pdf-service-java-api.md#quick-start-soap-mode-converting-a-microsoft-word-document-to-a-pdf-document-using-the-java-api)
 
-[快速入門（SOAP模式）：使用Java API將HTML內容轉換為PDF檔案](generate-pdf-service-java-api.md#quick-start-soap-mode-converting-html-content-to-a-pdf-document-using-the-java-api)
+[快速入门（SOAP模式）：使用Java API将HTML内容转换为PDF文档](generate-pdf-service-java-api.md#quick-start-soap-mode-converting-html-content-to-a-pdf-document-using-the-java-api)
 
-[快速入門（SOAP模式）：使用Java API （SOAP模式）將PDF檔案轉換為RTF檔案](generate-pdf-service-java-api.md#quick-start-soap-mode-converting-a-pdf-document-to-an-rtf-file-using-the-java-api-soap-mode)
+[快速入门（SOAP模式）：使用Java API（SOAP模式）将PDF文档转换为RTF文件](generate-pdf-service-java-api.md#quick-start-soap-mode-converting-a-pdf-document-to-an-rtf-file-using-the-java-api-soap-mode)
 
-AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定為SOAP。
+AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应设置为SOAP。
 
 >[!NOTE]
 >
->「使用AEM Forms進行程式設計」中的「快速入門」是以部署在JBoss Application Server和Microsoft Windows作業系統上的Forms Server為基礎。 不過，如果您使用其他作業系統（例如UNIX），請以適用的作業系統支援的路徑取代Windows特定路徑。 同樣地，如果您使用其他J2EE應用程式伺服器，請務必指定有效的連線屬性。 另請參閱 [設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>位于“使用AEM Forms编程”中的快速入门指南基于部署在JBoss Application Server和Microsoft Windows操作系统上的Forms Server。 但是，如果您使用的是其他操作系统（如UNIX），请将特定于Windows的路径替换为适用的操作系统支持的路径。 同样，如果您使用的是其他J2EE应用程序服务器，请确保指定有效的连接属性。 参见 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
-## 快速入門（SOAP模式）：使用Java API將Microsoft Word檔案轉換為PDF檔案 {#quick-start-soap-mode-converting-a-microsoft-word-document-to-a-pdf-document-using-the-java-api}
+## 快速入门（SOAP模式）：使用Java API将Microsoft Word文档转换为PDF文档 {#quick-start-soap-mode-converting-a-microsoft-word-document-to-a-pdf-document-using-the-java-api}
 
-下列程式碼範例會轉換名為的Word檔案 *Loan.doc* 至名為的PDF檔案 *Loan.pdf*. (請參閱 [將Word檔案轉換為PDF檔案](/help/forms/developing/converting-file-formats-pdf.md#converting-word-documents-to-pdf-documents).)
+以下代码示例转换一个名为的Word文件 *Loan.doc* 到名为的PDF文档 *Loan.pdf*. (请参阅 [将Word文档转换为PDF文档](/help/forms/developing/converting-file-formats-pdf.md#converting-word-documents-to-pdf-documents).)
 
 ```java
  /*
@@ -148,9 +148,9 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
  }
 ```
 
-## 快速入門（SOAP模式）：使用Java API將HTML內容轉換為PDF檔案 {#quick-start-soap-mode-converting-html-content-to-a-pdf-document-using-the-java-api}
+## 快速入门（SOAP模式）：使用Java API将HTML内容转换为PDF文档 {#quick-start-soap-mode-converting-html-content-to-a-pdf-document-using-the-java-api}
 
-以下Java程式碼範例將位於https://www.adobe.com的HTML內容轉換為名為的PDF檔案 *AdobeHTML.pdf*. (請參閱 [將HTML檔案轉換為PDF檔案](/help/forms/developing/converting-file-formats-pdf.md#converting-html-documents-to-pdf-documents).)
+以下Java代码示例将位于https://www.adobe.com的HTML内容转换为名为的PDF文档 *AdobeHTML.pdf*. (请参阅 [将HTML文档转换为PDF文档](/help/forms/developing/converting-file-formats-pdf.md#converting-html-documents-to-pdf-documents).)
 
 ```java
  /*
@@ -254,9 +254,9 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
  }
 ```
 
-## 快速入門（SOAP模式）：使用Java API （SOAP模式）將PDF檔案轉換為RTF檔案 {#quick-start-soap-mode-converting-a-pdf-document-to-an-rtf-file-using-the-java-api-soap-mode}
+## 快速入门（SOAP模式）：使用Java API（SOAP模式）将PDF文档转换为RTF文件 {#quick-start-soap-mode-converting-a-pdf-document-to-an-rtf-file-using-the-java-api-soap-mode}
 
-下列程式碼範例會轉換名為的PDF檔案 *Loan.pdf* 至名為的RTF檔案 *Loan.rtf*. (請參閱 [將PDF檔案轉換為非影像格式](/help/forms/developing/converting-file-formats-pdf.md#converting-pdf-documents-to-non-image-formats).)
+以下代码示例转换名为的PDF文档 *Loan.pdf* 到名为的RTF文档 *Loan.rtf*. (请参阅 [将PDF文档转换为非图像格式](/help/forms/developing/converting-file-formats-pdf.md#converting-pdf-documents-to-non-image-formats).)
 
 ```java
  /*

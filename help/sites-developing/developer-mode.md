@@ -1,7 +1,7 @@
 ---
 title: 开发人员模式
 seo-title: Developer Mode
-description: 開發人員模式會開啟一個側面板，其中包含數個標籤，為開發人員提供有關目前頁面的資訊
+description: 开发人员模式会打开一个侧面板，其中包含多个选项卡，为开发人员提供有关当前页面的信息
 seo-description: Developer mode opens a side panel with several tabs that provide a developer with infomation about the current page
 uuid: 8301ab51-93d6-44f9-a813-ba7f03f54485
 contentOwner: Guillaume Carlino
@@ -20,127 +20,127 @@ ht-degree: 1%
 
 # 开发人员模式{#developer-mode}
 
-在AEM中編輯頁面時，有數個 [模式](/help/sites-authoring/author-environment-tools.md#modestouchoptimizedui) 可用，包括開發人員模式。 這會開啟一個側面板，其中包含數個標籤，為開發人員提供有關目前頁面的資訊。 三個標籤為：
+在AEM中编辑页面时，多个 [模式](/help/sites-authoring/author-environment-tools.md#modestouchoptimizedui) 可用，包括开发人员模式。 这将打开一个侧面板，其中包含多个选项卡，为开发人员提供有关当前页面的信息。 三个选项卡包括：
 
-* **[元件](#components)** 以檢視結構和效能資訊。
-* **[測試](#tests)** 以執行測試和分析結果。
-* **[錯誤](#errors)** 檢視發生的任何問題。
+* **[组件](#components)** 用于查看结构和性能信息。
+* **[测试](#tests)** 用于运行测试和分析结果。
+* **[错误](#errors)** 查看发生的任何问题。
 
-這些功能可協助開發人員：
+这些功能可帮助开发人员：
 
-* 探索：組成頁面的專案。
-* 偵錯：隨時隨地發生的狀況，進而有助於解決問題。
-* 測試：應用程式的行為是否符合預期。
+* 发现：由哪些页面组成。
+* 调试：在哪里以及何时发生什么情况，这反过来有助于解决问题。
+* 测试：应用程序是否按预期运行。
 
 >[!CAUTION]
 >
 >开发人员架构:
 >
->* 僅適用於觸控式UI （編輯頁面時）。
->* 不適用於行動裝置或桌上型電腦上的小型視窗（因為空間限制）。
+>* 仅在触屏UI中可用（在编辑页面时）。
+>* 在移动设备或桌面上的小窗口中不可用（由于空间限制）。
    >
-   >   * 當寬度小於1024畫素時，就會發生這種情況。
->* 僅適用於屬於以下群組的使用者： `administrators` 群組。
+   >   * 当宽度小于1024像素时，会出现此情况。
+>* 仅适用于作为会员的用户 `administrators` 组。
 
 
 >[!CAUTION]
 >
->開發人員模式僅適用於未使用nosamplecontent執行模式的標準制作執行個體。
+>开发人员模式仅适用于未使用nosamplecontent运行模式的标准创作实例。
 >
->如有需要，可將其設定為使用：
+>如果需要，可以将其配置为使用：
 >
->* 在使用nosamplecontent執行模式的作者執行個體上
->* 發佈執行個體
+>* 在使用nosamplecontent运行模式的创作实例上
+>* 发布实例
 >
->使用後應再次停用。
+>使用后应再次禁用它。
 
 >[!NOTE]
 >
->請參閱：
+>请参见：
 >
->* 知識庫文章， [疑難排解AEM TouchUI問題](https://helpx.adobe.com/experience-manager/kb/troubleshooting-aem-touchui-issues.html)，以取得進一步的提示和工具。
->* AEM Gems課程關於 [AEM 6.0開發人員模式](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2014/aem-developer-mode.html?lang=en).
+>* 知识库文章， [AEM TouchUI问题疑难解答](https://helpx.adobe.com/experience-manager/kb/troubleshooting-aem-touchui-issues.html)，以获取更多提示和工具。
+>* AEM Gems会话关于 [AEM 6.0开发人员模式](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2014/aem-developer-mode.html?lang=en).
 >
 
 
-## 開啟開發人員模式 {#opening-developer-mode}
+## 打开开发人员模式 {#opening-developer-mode}
 
-開發人員模式會實作為頁面編輯器的側面板。 若要開啟面板，請選取 **開發人員** 從頁面編輯器工具列中的模式選取器：
+开发人员模式作为页面编辑器的侧面板实施。 要打开面板，请选择 **开发人员** 从页面编辑器工具栏中的模式选择器中：
 
 ![chlimage_1-11](assets/chlimage_1-11.png)
 
-面板分為兩個標籤：
+该面板分为两个选项卡：
 
-* **[元件](/help/sites-developing/developer-mode.md#components)**  — 這個選項會顯示元件樹，類似於 [內容樹狀結構](/help/sites-authoring/author-environment-tools.md#content-tree) 作者
+* **[组件](/help/sites-developing/developer-mode.md#components)**  — 这显示了一个组件树，类似于 [内容树](/help/sites-authoring/author-environment-tools.md#content-tree) 对于作者
 
-* **[錯誤](/help/sites-developing/developer-mode.md#errors)**  — 發生問題時，會顯示每個元件的詳細資料。
+* **[错误](/help/sites-developing/developer-mode.md#errors)**  — 出现问题时，将显示每个组件的详细信息。
 
 ### 组件 {#components}
 
 ![chlimage_1-12](assets/chlimage_1-12.png)
 
-這顯示一個元件樹狀結構，其中：
+这显示了一个组件树，该组件树：
 
-* 概述在頁面上呈現的元件和範本鏈（SLY、JSP等）。 可展開樹狀結構以顯示階層內的前後關聯。
-* 顯示轉譯元件所需的伺服器端運算時間。
-* 可讓您展開樹狀結構並選取樹狀結構中的特定元件。 選取範圍可讓您存取元件詳細資訊，例如：
+* 概述页面上渲染的组件和模板链（SLY、JSP等）。 可以展开树以显示层次结构中的上下文。
+* 显示渲染组件所需的服务器端计算时间。
+* 允许您展开树并选择树中的特定组件。 选择提供对组件详细信息的访问；例如：
 
-   * 存放庫路徑
-   * 指令碼連結(以CRXDE Lite存取)
+   * 存储库路径
+   * 脚本链接(在CRXDE Lite中访问)
 
-* 選取的元件（在內容流程中，以藍色邊框表示）將在內容樹狀結構中反白顯示（反之亦然）。
+* 选定的组件（在内容流中，由蓝色边框指示）将在内容树中突出显示（反之亦然）。
 
-這有助於：
+这有助于：
 
-* 決定並比較每個元件的演算時間。
-* 檢視並瞭解階層。
-* 找出緩慢的元件，瞭解並改善頁面載入時間。
+* 确定并比较每个组件的渲染时间。
+* 查看并了解层级。
+* 通过查找慢速组件，了解并缩短页面加载时间。
 
-每個元件專案可顯示（例如）：
+每个组件条目可以显示（例如）：
 
 ![chlimage_1-13](assets/chlimage_1-13.png)
 
-* **檢視詳細資料**：清單的連結，其中顯示：
+* **查看详细信息**：指向列表的链接，其中显示：
 
-   * 用於呈現元件的所有元件指令碼。
-   * 此特定元件的存放庫內容路徑。
+   * 用于呈现组件的所有组件脚本。
+   * 此特定组件的存储库内容路径。
 
    ![chlimage_1-14](assets/chlimage_1-14.png)
 
-* **編輯指令碼**：連結：
+* **编辑脚本**：具有以下特征的链接：
 
-   * 以CRXDE Lite開啟元件指令碼。
+   * 在CRXDE Lite中打开组件脚本。
 
-* 展開元件專案（箭頭標頭）也可顯示：
+* 展开组件条目（箭头头）也可显示：
 
-   * 所選元件內的階層。
-   * 所選元件的單獨呈現時間、任何巢狀在其中的個別元件以及合併總數。
+   * 所选组件中的层次结构。
+   * 所选组件的单独呈现时间、嵌套在其中的任何单个组件以及组合总计。
 
    ![chlimage_1-15](assets/chlimage_1-15.png)
 
 >[!CAUTION]
 >
->有些連結會指向下的指令碼 `/libs`. 不過，這些僅供參考，您 **不得** 編輯下的任何專案 `/libs`，因為您所做的任何變更都可能遺失。 這是因為每當您升級或套用Hotfix/Feature Pack時，此分支隨時可能變更。 您所需的任何變更都應該在 `/apps`，請參閱 [覆蓋和覆寫](/help/sites-developing/overlays.md).
+>某些链接指向下的脚本 `/libs`. 但是，这些仅供参考，您 **不得** 编辑下的任何内容 `/libs`，因为您所做的任何更改都可能会丢失。 这是因为无论何时升级或应用修补程序/功能包，此分支都可能会发生更改。 您所需的任何更改都应在下进行 `/apps`，请参见 [叠加和覆盖](/help/sites-developing/overlays.md).
 
 ### 错误 {#errors}
 
 ![chlimage_1-16](assets/chlimage_1-16.png)
 
-希望 **錯誤** 索引標籤一律為空白（如上所述），但發生問題時，會顯示每個元件的下列詳細資料：
+希望 **错误** 选项卡将始终为空（如上所述），但是当出现问题时，将显示每个组件的以下详细信息：
 
-* 如果元件將專案寫入錯誤記錄檔，連同錯誤的詳細資訊以及指向CRXDE Lite內適當程式碼的直接連結，會出現警告。
-* 如果元件開啟管理員工作階段，會出現警告。
+* 如果组件将条目写入错误日志，会出现警告，同时显示错误详细信息以及指向CRXDE Lite中相应代码的直接链接。
+* 如果组件打开管理会话，则会显示警告。
 
-例如，在呼叫未定義的方法的情況下，產生的錯誤將顯示在 **錯誤** 標籤：
+例如，在调用未定义的方法的情况下，生成的错误将显示在 **错误** 选项卡：
 
 ![chlimage_1-17](assets/chlimage_1-17.png)
 
-發生錯誤時，「元件」標籤樹狀結構中的元件專案也會標示一個指示器。
+当发生错误时，“组件”选项卡的树中的组件条目也将标记一个指示符。
 
 ### 测试 {#tests}
 
 >[!CAUTION]
 >
->在AEM 6.2中，開發人員模式的測試功能已重新實作為獨立的工具應用程式。
+>在AEM 6.2中，开发人员模式的测试功能被重新实现为一个独立的工具应用程序。
 >
->如需完整詳細資訊，請參閱 [測試您的UI](/help/sites-developing/hobbes.md).
+>有关完整详细信息，请参阅 [测试您的UI](/help/sites-developing/hobbes.md).

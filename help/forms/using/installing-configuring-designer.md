@@ -1,7 +1,7 @@
 ---
-title: 安裝和設定Designer
+title: 安装和配置Designer
 seo-title: Installing and configuring Designer
-description: Designer是獨立的安裝程式，也與Workbench搭配。 瞭解如何安裝獨立設計工具。
+description: Designer作为独立安装程序提供，并且还与Workbench捆绑在一起。 了解如何安装独立设计器。
 seo-description: Designer is available as a stand-alone installer and is also bundled with Workbench. Learn how to install stand-alone Designer.
 uuid: c5b779d1-cb6a-48f4-87d6-48464753e516
 contentOwner: gtalwar
@@ -19,67 +19,67 @@ ht-degree: 0%
 
 ---
 
-# 安裝和設定Designer{#installing-and-configuring-designer}
+# 安装和配置Designer{#installing-and-configuring-designer}
 
-## 先決條件 {#pre-requisites}
+## 先决条件 {#pre-requisites}
 
-* 安裝32位元版本的  [Visual C++ 2019可轉散發套件(x86)](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170). 在開始安裝之前，請確定已安裝先前提到的可轉散發執行階段套件。
-* 具有安裝或解除安裝AEM Forms Designer管理員許可權的使用者。
+* 安装32位版本的  [Visual C++ 2019可再分发(x86)](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170). 在开始安装之前，请确保已安装前面提到的可再发行运行时包。
+* 具有安装或卸载AEM Forms Designer管理员权限的用户。
 
-## 安裝AEM Forms設計工具 {#install-designer}
+## 安装AEM Forms Designer {#install-designer}
 
-Designer是獨立的安裝程式，也與WorkBench搭配。 如果您使用AEM Forms Designer的獨立安裝程式，請執行以下步驟：
+Designer作为独立的安装程序提供，并且与WorkBench捆绑在一起。 如果您使用的是独立的AEM Forms Designer安装程序，请执行以下步骤：
 
-1. 解除安裝舊版AEM Forms Designer （如果已安裝）。
-1. 下載設計工具，從 [Adobe授權網站](https://licensing.adobe.com/).
+1. 卸载以前版本的AEM Forms Designer（如果已安装）。
+1. 从以下位置下载设计器 [Adobe授权网站](https://licensing.adobe.com/).
 
    >[!NOTE]
    >
-   > * Adobe Experience Manager 6.5 Forms Service Pack 15 (6.5.15.0)以後的Forms Designer版本也包含Service Pack版本。 例如，Service Pack 15的版本編號為6.5.15.20221112.1.0。在此範例中，6.5.15是Service Pack版本。
+   > * 从Adobe Experience Manager 6.5 Forms Service Pack 15 (6.5.15.0)版本开始，Forms Designer版本还包含Service Pack版本。 例如，对于Service Pack 15，版本号为6.5.15.20221112.1.0。在此示例中，6.5.15是Service Pack版本。
 
 
-1. 按兩下setup.exe，啟動AEM Forms Designer安裝程式。
-1. 繼續並在「個人化」畫面上提供您的詳細資訊和序號。
-1. 如果您接受授權合約，請按[下一步]繼續。
-1. （選擇性）如果您想要在選擇的位置安裝Designer，請變更預設安裝路徑。 单击下一步。
-1. 按一下「上一步」以變更任何偏好設定。 若要安裝Designer，請按一下[安裝]。
-1. 安裝完成時，按一下「完成」。
+1. 通过双击setup.exe启动AEM Forms Designer安装程序。
+1. 继续并在“个性化”屏幕上提供您的详细信息和序列号。
+1. 如果您接受许可协议，请单击“下一步”继续。
+1. （可选）如果要将Designer安装在所选的位置，请更改默认安装路径。 单击下一步。
+1. 单击“上一步”以更改任何首选项。 要安装设计器，请单击“安装”。
+1. 安装完成后，单击“完成”。
 
-或者，您也可以使用被動或無訊息模式，透過命令列安裝AEM Forms Designer。
+或者，您也可以使用被动模式或静默模式，通过命令行安装AEM Forms Designer。
 
-* 被動式命令列安裝：安裝程式會顯示進度列，指出安裝進行中，但不會顯示提示或錯誤訊息。 一旦啟動，您就無法取消安裝。
+* 被动命令行安装：安装程序显示一个进度条，指示安装正在进行，但不显示提示或错误消息。 启动后，无法取消安装。
 
 ```shell
 msiexec /i "<absolute path>\Designer.msi" /passive SERIALNUMBER=****-****-****-****-****-****
 ```
 
-* 無訊息命令列安裝：安裝程式執行安裝時不會顯示使用者介面。 不顯示提示、訊息或對話方塊。 一旦啟動，您就無法取消安裝。
+* 静默命令行安装：安装程序运行安装时不显示用户界面。 不显示提示、消息或对话框。 启动后，无法取消安装。
 
 ```shell
 msiexec /i "<absolute path>\Designer.msi" /quiet SERIALNUMBER=****-****-****-****-****-****
 ```
 
-## 更新AEM Forms設計工具 {#update-forms-designer}
+## 更新AEM Forms Designer {#update-forms-designer}
 
-更新最新版AEM Forms Designer 6.5.16.0有兩個情況：
+在更新最新版本的AEM Forms Designer 6.5.16.0时，有两种情况：
 
-* **案例1**：當使用者使用6.5.15.0之前的AEM Forms Designer版本時。
-* **案例2**：當使用者有6.5.15.0 AEM Forms Designer版本時。
+* **用例1**：用户使用的AEM Forms Designer版本低于6.5.15.0时。
+* **用例2**：用户具有6.5.15.0版本的AEM Forms Designer时。
 
-+++**當使用者使用6.5.15.0之前的AEM Forms Designer版本時。**
++++**用户使用的AEM Forms Designer版本低于6.5.15.0时。**
 
-如果您使用AEM Forms Designer的獨立安裝程式，請執行以下步驟：
+如果您使用的是独立的AEM Forms Designer安装程序，请执行以下步骤：
 
-1. 安裝之前 **AEM Forms Designer 6.5.16.0**，使用者必須解除安裝任何舊版。
-1. 下載並安裝 [AEM Forms Designer 6.5.15.0](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) 從AEM Form發行頁面。
-1. 成功安裝後 **AEM Forms Designer 6.5.15.0**，下載並安裝 [AEM Forms Designer 6.5.16.0](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) 連按兩下下載的安裝程式檔案。
+1. 安装之前 **AEM Forms Designer 6.5.16.0**，用户必须卸载任何以前的版本。
+1. 下载并安装 [AEM Forms Designer 6.5.15.0](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) 从AEM Form版本页面。
+1. 成功安装 **AEM Forms Designer 6.5.15.0**，下载并安装 [AEM Forms Designer 6.5.16.0](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) 双击下载的安装程序文件。
 
 +++
 
-+++**當使用者有6.5.15.0 AEM Forms Designer版本時**
++++**当用户具有6.5.15.0 AEM Forms Designer版本时**
 
-如果您使用AEM Forms Designer的獨立安裝程式，請執行以下步驟：
-1. 從以下網址下載最新版AEM Forms Designer： [軟體發佈入口網站](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html).
-1. 連按兩下下載的安裝程式檔案，安裝最新版的AEM Forms Designer。
+如果您使用的是独立的AEM Forms Designer安装程序，请执行以下步骤：
+1. 从下载最新版本的AEM Forms Designer [软件分发门户](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html).
+1. 双击下载的安装程序文件，安装最新版本的AEM Forms Designer。
 
 +++

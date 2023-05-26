@@ -1,7 +1,7 @@
 ---
-title: 建立與使用解除安裝工單
+title: 创建和使用卸载作业
 seo-title: Creating and Consuming Jobs for Offloading
-description: Apache Sling Discovery功能提供Java API，可讓您建立JobManager作業和使用這些作業的JobConsumer服務
+description: Apache Sling Discovery功能提供了一个Java API，使您能够创建JobManager作业和使用这些作业的JobConsumer服务
 seo-description: The Apache Sling Discovery feature provides a Java API that enables you to create JobManager jobs and JobConsumer services that consume them
 uuid: d6a5beb0-0618-4b61-9b52-570862eac920
 contentOwner: Guillaume Carlino
@@ -17,35 +17,35 @@ ht-degree: 0%
 
 ---
 
-# 建立與使用解除安裝工單{#creating-and-consuming-jobs-for-offloading}
+# 创建和使用卸载作业{#creating-and-consuming-jobs-for-offloading}
 
-Apache Sling Discovery功能提供Java API，可讓您建立JobManager作業和使用這些作業的JobConsumer服務。
+Apache Sling Discovery功能提供了一个Java API，使您能够创建JobManager作业和使用这些作业的JobConsumer服务。
 
-如需建立解除安裝拓撲和設定主題使用量的相關資訊，請參閱 [正在解除安裝工作](/help/sites-deploying/offloading.md).
+有关创建卸载拓扑和配置主题消耗的信息，请参阅 [卸载作业](/help/sites-deploying/offloading.md).
 
-## 處理工作裝載 {#handling-job-payloads}
+## 处理作业负载 {#handling-job-payloads}
 
-解除安裝架構會定義兩個用於識別工作裝載的工作屬性。 解除安裝復寫代理程式會使用這些屬性來識別要復寫到拓撲中執行個體的資源：
+卸载框架定义了两个用于标识作业有效负载的作业属性。 卸载复制代理使用这些属性来标识要复制到拓扑中实例的资源：
 
-* `offloading.job.input.payload`：以逗號分隔的內容路徑清單。 內容會復寫到執行工作的執行處理。
-* `offloading.job.output.payload`：以逗號分隔的內容路徑清單。 當工作執行完成時，會將工作裝載復寫到建立工作的執行個體上的這些路徑。
+* `offloading.job.input.payload`：以逗号分隔的内容路径列表。 内容将复制到执行作业的实例。
+* `offloading.job.output.payload`：以逗号分隔的内容路径列表。 作业执行完成后，作业有效负载将复制到创建该作业的实例上的这些路径。
 
-使用 `OffloadingJobProperties` 列舉以參照屬性名稱：
+使用 `OffloadingJobProperties` 枚举以引用属性名称：
 
 * `OffloadingJobProperties.INPUT_PAYLOAD.propertyName()`
 * `OffloadingJobProperties.OUTPUT_PAYLOAD.propetyName()`
 
-工作不需要裝載。 不過，如果工作需要操作資源，且工作解除安裝至未建立工作的電腦，則裝載是必要的。
+作业不需要负载。 但是，如果作业需要操作资源并且作业被卸载到未创建该作业的计算机，则有效负载是必需的。
 
-## 建立解除安裝工作 {#creating-jobs-for-offloading}
+## 创建卸载作业 {#creating-jobs-for-offloading}
 
-建立呼叫JobManager.addJob方法的使用者端，以建立由自動選取的JobConsumer執行的工作。 提供下列資訊以建立工作：
+创建一个调用JobManager.addJob方法的客户端，以创建自动选择的JobConsumer执行的作业。 提供以下信息以创建作业：
 
-* 主題：工作主題。
-* 名稱： （選擇性）
-* 屬性對應： A `Map<String, Object>` 包含任何數量屬性的物件，例如輸入裝載路徑和輸出裝載路徑。 執行工作的JobConsumer物件可使用此Map物件。
+* 主题：作业主题。
+* 名称： （可选）
+* 属性映射：A `Map<String, Object>` 包含任意数量属性的对象，例如输入有效负载路径和输出有效负载路径。 此Map对象可用于执行作业的JobConsumer对象。
 
-以下範例服務會為指定主題和輸入裝載路徑建立作業。
+以下示例服务为给定主题和输入有效负载路径创建作业。
 
 ```java
 package com.adobe.example.offloading;
@@ -93,17 +93,17 @@ public class JobGeneratorImpl implements JobGenerator  {
 }
 ```
 
-為呼叫JobGeneratorImpl.createJob時，記錄會包含下列訊息 `com/adobe/example/offloading` 主題與 `/content/geometrixx/de/services` 裝載：
+当对调用JobGeneratorImpl.createJob时，日志包含以下消息 `com/adobe/example/offloading` 主题和 `/content/geometrixx/de/services` 有效负载：
 
 ```shell
 10.06.2013 15:43:33.868 *INFO* [JobHandler: /etc/workflow/instances/2013-06-10/model_1554418768647484:/content/geometrixx/en/company] com.adobe.example.offloading.JobGeneratorImpl Received request to make job for topic com/adobe/example/offloading and payload /content/geometrixx/de/services
 ```
 
-## 開發工作消費者 {#developing-a-job-consumer}
+## 发展工作消费者 {#developing-a-job-consumer}
 
-若要使用工作，請開發實作的OSGi服務 `org.apache.sling.event.jobs.consumer.JobConsumer` 介面。 使用要使用的主題來識別 `JobConsumer.PROPERTY_TOPICS` 屬性。
+要使用作业，请开发一个实施 `org.apache.sling.event.jobs.consumer.JobConsumer` 界面。 使用要使用的主题进行标识 `JobConsumer.PROPERTY_TOPICS` 属性。
 
-以下範例JobConsumer實作會註冊 `com/adobe/example/offloading` 主題。 取用者只需將裝載內容節點的Consumed屬性設定為true即可。
+以下示例JobConsumer实施向 `com/adobe/example/offloading` 主题。 使用者只需将有效负载内容节点的Consumed属性设置为true即可。
 
 ```java
 package com.adobe.example.offloading;
@@ -168,7 +168,7 @@ public class MyJobConsumer implements JobConsumer {
 }
 ```
 
-MyJobConsumer類別會為/content/geometrixx/de/services的輸入裝載產生下列記錄訊息：
+MyJobConsumer类为/content/geometrixx/de/services的输入有效负载生成以下日志消息：
 
 ```shell
 10.06.2013 16:02:40.803 *INFO* [pool-7-thread-17-<main queue>(com/adobe/example/offloading)] com.adobe.example.offloading.MyJobConsumer Consuming job of topic: com/adobe/example/offloading
@@ -176,13 +176,13 @@ MyJobConsumer類別會為/content/geometrixx/de/services的輸入裝載產生下
 10.06.2013 16:02:40.884 *INFO* [pool-7-thread-17-<main queue>(com/adobe/example/offloading)] com.adobe.example.offloading.MyJobConsumer Job OK for payload /content/geometrixx/de/services
 ```
 
-可以使用CRXDE Lite來觀察Consumed屬性：
+可以使用CRXDE Lite观察Consumed属性：
 
 ![chlimage_1-25](assets/chlimage_1-25a.png)
 
-## Maven相依性 {#maven-dependencies}
+## Maven依赖项 {#maven-dependencies}
 
-將下列相依性定義新增至您的pom.xml檔案，以便Maven能夠解析解除安裝相關類別。
+将以下依赖关系定义添加到pom.xml文件，以便Maven能够解析卸载相关类。
 
 ```xml
 <dependency>
@@ -199,7 +199,7 @@ MyJobConsumer類別會為/content/geometrixx/de/services的輸入裝載產生下
 </dependency>
 ```
 
-前面的範例還需要下列相依性定義：
+前面的示例还需要以下依赖关系定义：
 
 ```xml
 <dependency>

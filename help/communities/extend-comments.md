@@ -1,7 +1,7 @@
 ---
-title: 延伸註解元件
+title: 扩展注释组件
 seo-title: Extend Comments Component
-description: 擴充Comments元件以改變其外觀或特定用途的行為
+description: 扩展“注释”组件，以针对特定用途更改其外观或行为
 seo-description: Extend the Comments component to alter its appearance or behavior for specific uses
 uuid: 6f439097-b1d0-4e7d-afcf-01d8f43aa866
 contentOwner: Guillaume Carlino
@@ -17,26 +17,26 @@ ht-degree: 0%
 
 ---
 
-# 延伸註解元件  {#extend-comments-component}
+# 扩展注释组件  {#extend-comments-component}
 
-的意圖 [延伸](client-customize.md#extensions) 預設元件是針對特定用途變更元件的外觀或行為。
+意图 [扩展](client-customize.md#extensions) 默认组件是为特定用途更改组件的外观或行为。
 
-元件的路徑是唯一的，會將預設元件參照為超級資源型別。 與元件覆蓋的整個範圍相比，範圍是有限的，因此風險較低。
+组件的路径是唯一的，并将默认组件引用为超级资源类型。 与组件叠加的全局范围相比，其范围是有限的，因此风险较小。
 
 >[!NOTE]
 >
->擴充 [重疊](client-customize.md#overlays) 不支援元件。
+>扩展 [覆盖](client-customize.md#overlays) 组件不受支持。
 
 ## 示例 {#example}
 
-假設註解元件的標題必須以替代外觀顯示在AEM例項的一個網站上，而以預設顯示出現在另一個網站上。 取代覆蓋預設註解（會變更所有例項的註解元件）的更好的解決方案是確保有多個註解元件可用於各種網站。
+假设注释组件的标题必须以替代外观显示在AEM实例的一个网站上，而以默认外观显示在另一个网站上。 覆盖默认注释会更改所有实例的注释组件，更好的解决方案是确保有多个注释组件可用于各种站点。
 
-若要實作此解決方案，請建立延伸（覆寫）現有元件的新元件，並修改Handlebars指令碼。 使用新註解的網站區域可使用延伸區域，而使用預設外觀的網站則不受影響。
+要实施此解决方案，请创建一个扩展（覆盖）现有组件的新组件，并修改Handlebars脚本。 使用新注释的站点区域可以使用扩展注释区域，而使用默认外观的站点不受影响。
 
-註解元件實際上是構成註解系統的兩個元件之一。 因此，有兩個元件需要擴充： *評論* 和 *評論*. 要編輯的指令碼位於 *評論* 元件的 `header.hbs` 檔案，而父系 *評論* 元件（註解系統）是作者實際新增至頁面的專案。
+注释组件实际上是组成注释系统的两个组件之一。 因此，需要扩展以下两个部分： *评论* 和 *注释*. 要编辑的脚本位于 *注释* 组件的 `header.hbs` 文件，而父级 *评论* 组件（注释系统）是作者实际添加到页面中的内容。
 
-若要擴充註解，您必須：
+要扩展注释，您需要：
 
-1. [建立元件](extend-create-components.md)
-1. [新增註解至範例頁面](extend-sample-page.md)
-1. [變更外觀](extend-alter-appearance.md)
+1. [创建组件](extend-create-components.md)
+1. [向示例页面添加注释](extend-sample-page.md)
+1. [更改外观](extend-alter-appearance.md)

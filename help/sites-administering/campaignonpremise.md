@@ -1,7 +1,7 @@
 ---
 title: 与 Adobe Campaign Classic 集成
 seo-title: Integrating with Adobe Campaign Classic
-description: 瞭解如何將AEM與Adobe Campaign Classic整合
+description: 了解如何将AEM与Adobe Campaign Classic集成
 seo-description: Learn how to integrate AEM with Adobe Campaign Classic
 uuid: 3c998b0e-a885-4aa9-b2a4-81b86f9327d3
 contentOwner: User
@@ -20,9 +20,9 @@ ht-degree: 67%
 
 # 与 Adobe Campaign Classic 集成 {#integrating-campaign-classic}
 
-將AEM與Adobe Campaign整合後，您可以直接在AEM中管理電子郵件傳送、內容和表單。 需要同时完成 Adobe Campaign Classic 和 AEM 的配置步骤才可以实现解决方案之间的双向通信。
+通过将AEM与Adobe Campaign集成，您可以直接在AEM中管理电子邮件投放、内容和表单。 需要同时完成 Adobe Campaign Classic 和 AEM 的配置步骤才可以实现解决方案之间的双向通信。
 
-此整合可讓AEM和Adobe Campaign Classic獨立使用。 行銷人員可以在Adobe Campaign中建立行銷活動並使用目標定位，而內容建立者則可以同時在AEM中設計內容。 透過整合，Adobe Campaign可鎖定在AEM中建立之行銷活動的內容和設計，並加以傳遞。
+此集成允许AEM和Adobe Campaign Classic单独使用。 营销人员可以在Adobe Campaign中创建活动并使用定位，而内容创建者则可以同时在AEM中进行内容设计。 通过集成，Adobe Campaign可以定位和交付在AEM中创建的营销活动的内容和设计。
 
 ## 集成步骤 {#integration-steps}
 
@@ -42,9 +42,9 @@ AEM 和 Campaign 之间的集成需要在这两种解决方案中完成多个步
 * 具有 Adobe Campaign Classic 管理员访问权限
    * 要执行集成，您需要一个有效的 Adobe Campaign Classic 实例，包括一个已配置的数据库。
    * 如果您需要有关如何设置和配置 Adobe Campaign Classic 的更多详细信息，请参阅 [Adobe Campaign Classic 文档](https://experienceleague.adobe.com/docs/campaign-classic/using/campaign-classic-home.html)，特别是《安装和配置指南》。
-* AEM的管理員存取權
+* AEM的管理员访问权限
 
-## 在Campaign中安裝AEM整合套件 {#install-package}
+## 在Campaign中安装AEM集成包 {#install-package}
 
 Adobe Campaign 中的 **AEM 集成**&#x200B;包含有连接到 AEM 所需的许多标准配置。
 
@@ -68,7 +68,7 @@ Adobe Campaign 中的 **AEM 集成**&#x200B;包含有连接到 AEM 所需的许�
 
 集成包现在已安装。
 
-## 在Campaign中為AEM建立運運算元 {#create-operator}
+## 在Campaign中为AEM创建运算符 {#create-operator}
 
 集成包会自动创建 AEM 用于连接到 Adobe Campaign 的`aemserver`运算符。您必须为此运算符定义一个安全区域并设置密码。
 
@@ -122,7 +122,7 @@ Adobe Campaign 中的 **AEM 集成**&#x200B;包含有连接到 AEM 所需的许�
 
 1. 单击&#x200B;**“确定”**&#x200B;以保存`aemserver`运算符的密码。
 
-## 在AEM中設定Campaign整合 {#campaign-integration}
+## 在AEM中配置Campaign集成 {#campaign-integration}
 
 AEM 使用[您在 Campaign 中设置的运算符](#create-operator)与 Campaign 进行通信
 
@@ -150,56 +150,56 @@ AEM 现在可以与 Adobe Campaign 通信。
 
 >[!NOTE]
 >
->确保您的 Adobe Campaign 服务器可以通过 Internet 访问。AEM無法存取私人網路。
+>确保您的 Adobe Campaign 服务器可以通过 Internet 访问。AEM无法访问专用网络。
 
-## 設定復寫至AEM發佈執行個體的設定 {#replication}
+## 配置到AEM发布实例的复制 {#replication}
 
-Campaign內容是由內容作者在AEM編寫執行個體上建立。 此例項通常僅供貴組織內部使用。 為了讓行銷活動的收件者能夠存取影像和資產等內容，您需要發佈該內容。
+Campaign内容由内容作者在AEM创作实例上创建。 此实例通常仅在贵组织内部可用。 要使营销活动的收件人能够访问图像和资产等内容，您需要发布该内容。
 
-復寫代理程式負責將您的內容從AEM製作執行個體發佈到發佈執行個體，且必須設定復寫代理程式，整合才能正常運作。 此步驟也是將某些編寫執行個體設定復寫到發佈執行個體所必需的。
+复制代理负责将内容从AEM创作实例发布到发布实例，并且必须设置该代理才能使集成正常工作。 此外，还需要执行此步骤以将某些创作实例配置复制到发布实例。
 
-若要設定從AEM編寫執行個體到發佈執行個體的復寫：
+要配置从AEM创作实例到发布实例的复制，请执行以下操作：
 
 1. 以管理员身份登录到您的 AEM 创作实例。
 
-1. 從全域導覽側邊欄中，選取 **工具** > **部署** > **復寫** > **作者上的代理**，然後點選或按一下 **預設代理程式（發佈）**.
+1. 从全局导航侧边栏中，选择 **工具** > **部署** > **复制** > **作者代理**，然后点按或单击 **默认代理（发布）**.
 
-   ![設定復寫代理程式](assets/acc-replication-config.png)
+   ![配置复制代理](assets/acc-replication-config.png)
 
-1. 點選或按一下 **編輯** 然後選取 **傳輸** 標籤。
+1. 点击或单击 **编辑** 然后选择 **传输** 选项卡。
 
-1. 設定 **URI** 欄位，取代預設值 `localhost` 值為AEM發佈執行個體的IP位址。
+1. 配置 **URI** 字段，用于替换默认字段 `localhost` 值与AEM发布实例的IP地址。
 
-   ![傳輸標籤](assets/acc-transport-tab.png)
+   ![“传输”选项卡](assets/acc-transport-tab.png)
 
-1. 點選或按一下 **確定** 以儲存代理程式設定的變更。
+1. 点击或单击 **确定** 保存对代理设置所做的更改。
 
-您已設定復寫至AEM發佈執行個體，讓您的行銷活動收件者可以存取您的內容。
+您已配置复制到AEM发布实例，以便您的Campaign收件人可以访问您的内容。
 
 >[!NOTE]
 >
->如果您不想使用復寫URL，而是使用公開顯示的URL，您可以透過OSGi在下列組態設定中設定公開URL
+>如果您不想使用复制URL，而是使用面向公众的URL，则可以通过OSGi在以下配置设置中设置公开URL
 >
->從全域導覽側邊欄中，選取 **工具** > **作業** > **網頁主控台** > **OSGi設定** 並搜尋 **AEM Campaign整合 — 設定**. 編輯設定並變更欄位 **公開URL** (`com.day.cq.mcm.campaign.impl.IntegrationConfigImpl#aem.mcm.campaign.publicUrl`)。
+>从全局导航侧边栏中，选择 **工具** > **操作** > **Web控制台** > **OSGi配置** 和搜索 **AEM Campaign集成 — 配置**. 编辑配置并更改字段 **公共URL** (`com.day.cq.mcm.campaign.impl.IntegrationConfigImpl#aem.mcm.campaign.publicUrl`)。
 
 ## 配置 AEM 外部化器 {#externalizer}
 
-[外部化器是 AEM 中的一个 OSGi 服务，它可将资源路径转换为外部和绝对 URL，这是 AEM 提供 Campaign 可以使用的内容所必需的。](/help/sites-developing/externalizer.md)您必須加以設定，Campaign整合才能運作。
+[外部化器是 AEM 中的一个 OSGi 服务，它可将资源路径转换为外部和绝对 URL，这是 AEM 提供 Campaign 可以使用的内容所必需的。](/help/sites-developing/externalizer.md)您必须对其进行配置以使Campaign集成正常工作。
 
 1. 以管理员身份登录到 AEM 创作实例。
-1. 從全域導覽側邊欄中，選取 **工具** > **作業** > **網頁主控台** > **OSGi設定** 並搜尋 **Day CQ連結外部化器**.
-1. 根據預設，最後一個專案位於 **網域** 欄位適用於發佈執行個體。 變更URL的預設值 `http://localhost:4503` 至公開可用的發佈執行個體。
+1. 从全局导航侧边栏中，选择 **工具** > **操作** > **Web控制台** > **OSGi配置** 和搜索 **Day CQ链接外部化器**.
+1. 默认情况下， **域** 字段适用于发布实例。 将URL从默认值更改为其他值 `http://localhost:4503` 发布实例。
 
-   ![設定外部化程式](assets/acc-externalizer-config.png)
+   ![配置外部化器](assets/acc-externalizer-config.png)
 
 1. 点按或单击&#x200B;**保存**。
 
-您已設定Externalizer，Adobe Campaign現在可以存取您的內容。
+您已经配置了Externalizer，Adobe Campaign现在可以访问您的内容。
 
 >[!NOTE]
-发布实例必须可以从 Adobe Campaign 服务器中访问。如果它指向 `localhost:4503` 或Adobe Campaign無法存取的其他伺服器，來自AEM的影像將不會顯示在Adobe Campaign主控台中。
+发布实例必须可以从 Adobe Campaign 服务器中访问。如果它指向 `localhost:4503` 或者Adobe Campaign无法访问的其他服务器，来自AEM的图像将不会显示在Adobe Campaign控制台中。
 
-## 在AEM中設定行銷活動 — 遠端使用者 {#configure-user}
+## 在AEM中配置活动远程用户 {#configure-user}
 
 如要实现 Campaign 与 AEM 之间的通信，您需要在 AEM 中为 `campaign-remote` 用户设置一个密码。
 
@@ -213,9 +213,9 @@ Campaign內容是由內容作者在AEM編寫執行個體上建立。 此例項�
 1. 单击&#x200B;**“保存”**&#x200B;以保存密码更改。
 1. 单击&#x200B;**“保存并关闭”**&#x200B;以将更改保存到`campaign-remote`用户。
 
-## 在Campaign中設定AEM外部帳戶 {#acc-setup}
+## 在Campaign中配置AEM外部帐户 {#acc-setup}
 
-当[在 Campaign 中安装&#x200B;**AEM 集成**&#x200B;包时，](#install-package)会为 AEM 创建一个外部帐户。透過設定此外部帳戶，Adobe Campaign可以連線至AEM，啟用解決方案之間的雙向通訊。
+当[在 Campaign 中安装&#x200B;**AEM 集成**&#x200B;包时，](#install-package)会为 AEM 创建一个外部帐户。通过配置此外部帐户，Adobe Campaign可以连接到AEM，从而实现解决方案之间的双向通信。
 
 1. 使用客户端控制台以管理员身份登录 Adobe Campaign。
 
@@ -228,8 +228,8 @@ Campaign內容是由內容作者在AEM編寫執行個體上建立。 此例項�
 1. 找到外部 AEM 帐户。默认情况下，它具有以下值：
 
    * **类型** - `AEM`
-   * **標籤** - `AEM Instance`
-   * **內部名稱** - `aemInstance`
+   * **标签** - `AEM Instance`
+   * **内部名称** - `aemInstance`
 
 1. 在该帐户的&#x200B;**“常规”**&#x200B;选项卡上，输入您在[设置活动远程用户密码](#set-campaign-remote-password)步骤中定义的用户信息。
 
@@ -247,6 +247,6 @@ Adobe Campaign 现在可以与 AEM 通信。
 
 ## 后续步骤 {#next-steps}
 
-Adobe Campaign Classic和AEM都已設定完成，整合即可完成。
+在配置Adobe Campaign Classic和AEM后，集成现已完成。
 
 您现在可以通过继续阅读[本文档](/help/sites-authoring/campaign.md)学习如何在 Adobe Experience Manager 中创建新闻稿。

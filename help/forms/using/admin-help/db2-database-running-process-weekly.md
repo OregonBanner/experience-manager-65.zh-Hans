@@ -1,7 +1,7 @@
 ---
-title: 「DB2資料庫：每週執行處理序」
+title: “DB2数据库：每周运行进程”
 seo-title: "DB2 database: Running a process weekly"
-description: 瞭解如何改善AEM Forms DB2資料庫的效能。
+description: 了解如何提高AEM forms DB2数据库的性能。
 seo-description: See how you can improve the performance of your AEM forms DB2 database.
 uuid: 36070087-c250-41df-a841-aa922e777697
 contentOwner: admin
@@ -17,20 +17,20 @@ ht-degree: 0%
 
 ---
 
-# DB2資料庫：每週執行處理序{#db-database-running-a-process-weekly}
+# DB2数据库：每周运行一个进程{#db-database-running-a-process-weekly}
 
-如果您的AEM Forms DB2資料庫開始執行緩慢，每週執行下列程式可以改善其效能：
+如果AEM Forms DB2数据库开始运行缓慢，则每周运行以下进程可以提高其性能：
 
-1. 啟動DB2控制中心：
+1. 启动DB2控制中心：
 
-   (Windows)選取「開始>程式> IBM DB2 >一般管理工具>控制中心」。
+   (Windows)选择“开始”>“程序”>“IBM DB2”>“常规管理工具”>“控制中心”。
 
-   （Linux和UNIX）在命令提示字元中，輸入 `db2jcc` 命令。
+   （Linux和UNIX）在命令提示符下，键入 `db2jcc` 命令。
 
-1. 在DB2 Control Center物件樹狀結構中，按一下所有資料庫。
-1. 按一下您為AEM表單建立的資料庫，然後按一下表格資料夾。
-1. 選取內容窗格中的所有資料庫表格，用滑鼠右鍵按一下這些表格，然後選取執行統計資料。
-1. 前往統計資料>索引統計資料。
-1. 選取收集所有索引的統計值，選取收集具有延伸詳細統計值的索引的統計值，然後按一下確定。
+1. 在DB2 Control Center对象树中，单击所有数据库。
+1. 单击为AEM表单创建的数据库，然后单击“表”文件夹。
+1. 在内容窗格中选择所有数据库表，右键单击它们并选择运行统计信息。
+1. 转到“统计信息”>“索引统计信息”。
+1. 选择收集所有索引的统计信息，选择收集具有扩展详细统计信息的索引的统计信息，然后单击确定。
 
-當程式完成時，會出現一則訊息。 關閉訊息。
+进程完成后，将显示一条消息。 关闭消息。

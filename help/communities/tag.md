@@ -1,7 +1,7 @@
 ---
-title: 標籤Essentials
+title: Tag Essentials
 seo-title: Tag Essentials
-description: 標籤總覽
+description: 标记概述
 seo-description: Tag overview
 uuid: a5d52319-f821-4608-b0ab-abc8a1374343
 contentOwner: Guillaume Carlino
@@ -17,29 +17,29 @@ ht-degree: 2%
 
 ---
 
-# 標籤Essentials {#tag-essentials}
+# Tag Essentials {#tag-essentials}
 
-當AEM Communities元件設定為啟用標籤時，社群成員將可標籤他們發佈在發佈環境中的內容。
+在启用“标记”的情况下配置AEM Communities组件后，社区成员将能够标记他们在发布环境中发布的内容。
 
-發佈環境中套用標籤的基礎基礎結構與製作環境中套用至內容（例如頁面和資產）的標籤基礎基礎結構相同：
+发布环境中应用的标记的基础基础架构与创作环境中应用于内容（如页面和资产）的标记的基础基础架构相同：
 
-* 另請參閱 [管理標籤](../../help/sites-administering/tags.md) 和 [標籤使用者產生的內容](tag-ugc.md) (UGC)，以瞭解建立和管理標籤的相關資訊。
+* 参见 [管理标记](../../help/sites-administering/tags.md) 和 [标记用户生成的内容](tag-ugc.md) (UGC)，以获取有关创建和管理标记的信息。
 
-* 另請參閱 [為開發人員加上標籤](../../help/sites-developing/tags.md) 以取得關於 [標籤框架](../../help/sites-developing/framework.md) 以及在中包含和擴充標籤 [自訂應用程式](../../help/sites-developing/building.md).
+* 参见 [为开发人员添加标记](../../help/sites-developing/tags.md) 了解有关 [标记框架](../../help/sites-developing/framework.md) 以及在中包含和扩展标记 [自定义应用程序](../../help/sites-developing/building.md).
 
-* 另請參閱 [使用社交標籤雲](tagcloud.md) 供作者瞭解如何新增 `social tag cloud` 元件至頁面，醒目提示發佈環境中套用至UGC的標籤。
+* 参见 [使用社交标签云](tagcloud.md) 供作者参考，了解如何添加 `social tag cloud` 页面中的组件，用于突出显示发布环境中应用于UGC的标记。
 
-設定時可啟用UGC標籤 [社群網站](sites-console.md#tagging) 或下列其中一項功能：
+可以在配置 [社区站点](sites-console.md#tagging) 或以下功能之一：
 
 * [博客](blog-feature.md)
 * [日程表](calendar.md)
-* [檔案庫](file-library.md)
+* [文件库](file-library.md)
 * [论坛](forum.md)
 * [问题与解答](working-with-qna.md)
 
-## 適用於使用者端的Essentials {#essentials-for-client-side}
+## 适用于客户端的Essentials {#essentials-for-client-side}
 
-### 社交標籤雲 {#social-tag-cloud}
+### 社交标签云 {#social-tag-cloud}
 
 <table>
  <tbody>
@@ -48,7 +48,7 @@ ht-degree: 2%
    <td>social/commons/components/hbs/tagcloud</td>
   </tr>
   <tr>
-   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>包含</strong></a></td>
+   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>可包含</strong></a></td>
    <td>否</td>
   </tr>
   <tr>
@@ -56,7 +56,7 @@ ht-degree: 2%
    <td>cq.social.hbs.tagcloud</td>
   </tr>
   <tr>
-   <td> <strong>範本</strong></td>
+   <td> <strong>模板</strong></td>
    <td> /libs/social/commons/components/hbs/tagcloud/tagcloud.hbs<br /> </td>
   </tr>
   <tr>
@@ -65,23 +65,23 @@ ht-degree: 2%
   </tr>
   <tr>
    <td><strong>属性</strong></td>
-   <td>另請參閱 <a href="tagcloud.md">使用社交標籤雲</a></td>
+   <td>参见 <a href="tagcloud.md">使用社交标签云</a></td>
   </tr>
  </tbody>
 </table>
 
-* [使用者端自訂](client-customize.md)
+* [客户端自定义](client-customize.md)
 
-## 伺服器端的Essentials {#essentials-for-server-side}
+## 服务器端Essentials {#essentials-for-server-side}
 
-* [社交標籤雲端API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/commons/tagcloud/api/package-summary.html)
+* [社交标记云API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/commons/tagcloud/api/package-summary.html)
 
-* [社交標籤管理員](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/commons/tagging/package-summary.html)
+* [社交标签管理器](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/commons/tagging/package-summary.html)
 
-* [伺服器端自訂](server-customize.md)
+* [服务器端自定义](server-customize.md)
 
-## 標籤搜尋 {#tag-searching}
+## 标记搜索 {#tag-searching}
 
-截至 [feature pack 1](deploy-communities.md#latestfeaturepack) (FP1)，使用執行標籤搜尋 [標籤標題](../../help/sites-developing/framework.md#tag-characteristics).
+截至 [功能包1](deploy-communities.md#latestfeaturepack) (FP1)，使用执行标签搜索 [标记标题](../../help/sites-developing/framework.md#tag-characteristics).
 
-在FP1之前，搜尋是使用 [標籤id](../../help/sites-developing/framework.md#tagid).
+在FP1之前，搜索是使用 [标记id](../../help/sites-developing/framework.md#tagid).

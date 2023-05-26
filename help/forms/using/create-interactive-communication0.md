@@ -1,7 +1,7 @@
 ---
-title: 「教學課程：建立互動式通訊」
+title: "教程：创建交互式通信"
 seo-title: Create an Interactive Communication for Print and Web
-description: 使用所有建置區塊建立互動式通訊
+description: 使用所有构建块创建交互式通信
 seo-description: Create an Interactive Communication using all building blocks
 uuid: 5ffaa86f-87c7-4673-8b41-63ec61421be2
 contentOwner: anujkapo
@@ -17,229 +17,229 @@ ht-degree: 0%
 
 ---
 
-# 教學課程：建立互動式通訊 {#tutorial-create-interactive-communication}
+# 教程：创建交互式通信 {#tutorial-create-interactive-communication}
 
 ![09-style-your-adaptive-form-small](assets/09-style-your-adaptive-form-small.png)
 
-本教學課程是 [建立您的第一個互動式通訊](/help/forms/using/create-your-first-interactive-communication.md) 數列。 建議您依照時間順序觀看本系列，以瞭解、執行和示範完整的教學課程使用案例。
+本教程是 [创建您的第一个交互式通信](/help/forms/using/create-your-first-interactive-communication.md) 系列。 建议按时间顺序关注该系列，以了解、执行和演示完整的教程用例。
 
-建立完表單資料模型、檔案片段、範本和Web版本的主題等所有建置區塊後，您就可以開始建立互動式通訊。
+创建完表单数据模型、文档片段、模板和Web版本的主题等所有构建块后，即可开始创建交互式通信。
 
-互動式通訊可透過兩種管道提供：列印和網路。 您也可以建立以Print channel為主體的互動式通訊。 Web channel的Print as master選項可確保Web channel的內容、繼承和資料繫結衍生自Print channel。 它也能確保在Print channel中所做的變更在Web channel中同步。 不過，互動式通訊作者可以中斷Web channel中特定元件的繼承。
+交互式通信可通过两种渠道提供：打印和Web。 您还可以创建以Print channel作为主控的交互式通信。 Web渠道的“打印为主控”选项确保Web渠道的内容、继承和数据绑定派生自打印渠道。 它还可以确保在Print channel中所做的更改在Web channel中同步。 但是，允许交互式通信作者中断Web渠道中特定组件的继承。
 
-本教學課程將逐步引導您完成為列印和Web頻道建立互動式通訊的步驟。 在本教學課程結束時，您將能夠：
+本教程将指导您完成为打印和Web渠道创建交互式通信的步骤。 在本教程结束时，您将能够：
 
-* 為列印頻道建立互動式通訊
-* 建立Web channel的互動式通訊
-* 以「列印為主版」建立列印與Web互動式通訊
+* 为打印渠道创建交互式通信
+* 为Web渠道创建交互式通信
+* 创建Print和Web交互式通信，将Print作为主控
 
-## 建立無同步處理的列印與網頁互動式通訊 {#create-interactive-communications-for-print-and-web-with-no-synchronization}
+## 为打印和Web创建无同步的交互式通信 {#create-interactive-communications-for-print-and-web-with-no-synchronization}
 
-### 為列印頻道建立互動式通訊 {#create-interactive-communication-for-print-channel}
+### 为打印渠道创建交互式通信 {#create-interactive-communication-for-print-channel}
 
-以下是已在本教學課程中建立且在為列印頻道建立互動式通訊時所需的資源清單：
+以下是本教程中已创建的资源列表，在为打印渠道创建交互式通信时需要这些资源：
 
-**列印範本：** [create_first_ic_print_template](../../forms/using/create-templates-print-web.md)
+**打印模板：** [create_first_ic_print_template](../../forms/using/create-templates-print-web.md)
 
-**表單資料模型：** [FDM_Create_First_IC](../../forms/using/create-form-data-model0.md)
+**表单数据模型：** [FDM_Create_First_IC](../../forms/using/create-form-data-model0.md)
 
-**檔案片段：** [bill_details_first_ic、customer_details_first_ic、bill_summary_first_ic、summary_charges_first_ic](../../forms/using/create-document-fragments.md)
+**文档片段：** [bill_details_first_ic、customer_details_first_ic、bill_summary_first_ic、summary_charges_first_ic](../../forms/using/create-document-fragments.md)
 
-**佈局片段：** [table_lf](../../forms/using/create-templates-print-web.md)
+**布局片段：** [table_lf](../../forms/using/create-templates-print-web.md)
 
-**影像：** PayNow和ValueAddedServices
+**图像：** PayNow和ValueAddedService
 
-1. 登入AEM編寫執行個體並導覽至 **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]** > **[!UICONTROL Forms與檔案]**.
-1. 點選 **建立** 並選取 **互動式通訊**. 此 **建立互動式通訊** 精靈隨即顯示。
-1. 指定 **create_first_ic** 在 **標題** 和 **名稱** 欄位。 選取 **FDM_Create_First_IC** 以表單資料模型形式使用，然後點選 **下一個**.
-1. 在 **頻道** 精靈：
+1. 登录到AEM创作实例并导航到 **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]** > **[!UICONTROL Forms和文档]**.
+1. 点按 **创建** 并选择 **交互式通信**. 此 **创建交互式通信** 将显示向导。
+1. 指定 **create_first_ic** 在 **标题** 和 **名称** 字段。 选择 **FDM_Create_First_IC** 作为表单数据模型并点按 **下一个**.
+1. 在 **渠道** 向导：
 
-   1. 指定 **create_first_ic_print_template** 作為「列印」範本，然後點選 **選取**. 確保 **針對Web Channel使用列印為主版** 未選取核取方塊。
+   1. 指定 **create_first_ic_print_template** 作为打印模板，然后点按 **选择**. 确保 **对Web Channel使用“打印为主控”** 未选中复选框。
 
-   1. 指定 **Create_First_IC_templates** 資料夾> **Create_First_IC_Web_Template** 做為Web範本並點選 **選取**.
+   1. 指定 **Create_First_IC_templates** 文件夹> **Create_First_IC_Web_Template** 作为Web模板并点按 **选择**.
 
-   1. 點選 **建立**.
+   1. 点按 **创建**.
 
-   系統會顯示確認訊息，指出已成功建立互動式通訊。
+   将显示一条确认消息，表明已成功创建交互式通信。
 
-1. 點選 **編輯** 以開啟右窗格中的互動式通訊。
-1. 前往 **資產** 標籤並套用篩選器，以在左窗格中僅顯示檔案片段。
-1. 將下列檔案片段拖放至互動式通訊中的目標區域：
-
-   | 文档片段 | 目标区域 |
-   |---|---|
-   | bill_details_first_ic | 帳單詳細資訊 |
-   | customer_details_first_ic | Customerdetails |
-   | bill_summary_first_ic | 帳單摘要 |
-   | summary_charges_first_interactive_communication | 費用 |
-
-   ![互動式通訊的檔案片段](assets/create_first_ic_doc_fragments_new.png)
-
-1. 點選 **圖表** 目標區域，然後點選 **+** 新增 **圖表** 元件。
-1. 點選「圖表」元件並選取 ![configure_icon](assets/configure_icon.png) （設定）。 圖表屬性會顯示在左窗格中：
-
-   1. 指定圖表的名稱。
-   1. 選取 **圓形圖** 從 **圖表型別** 下拉式清單。
-   1. 選取 **calltype** 屬性來自 **呼叫** 中的資料模型物件型別 **X軸** 區段。 點選 ![done_icon](assets/done_icon.png).
-   1. 選取 **頻率** 從 **函式** 下拉式清單。
-   1. 選取 **calltype** 屬性來自 **呼叫** 中的資料模型物件型別 **Y軸** 區段。 點選 ![done_icon](assets/done_icon.png).
-   1. 點選 ![done_icon](assets/done_icon.png) 以儲存圖表屬性。
-
-1. 前往 **資產** 標籤並套用篩選器，以在左窗格中僅顯示佈局片段。 拖放 **table_lf** 佈局片段到 **逐項列出的呼叫** 目標區域。
-1. 選取中的文字欄位 **日期** 欄並點選 ![configure_icon](assets/configure_icon.png) （設定）。
-1. 選取 **資料模型物件** 從 **繫結型別** 下拉式清單並選取 **呼叫** > **calldate**. 點選 ![done_icon](assets/done_icon.png) 儲存屬性兩次。
-
-   同樣地，建立繫結 **calltime**， **callnumber**， **callduration**、和 **callcharges** 中的文字欄位 **時間**， **數字**， **持續時間**、和 **費用** 欄。
-
-1. 點選 **Paynow** 目標區域，然後點選 **+** 新增 **影像** 元件。
-1. 點選影像元件並選取 ![configure_icon](assets/configure_icon.png) （設定）。 影像屬性會顯示在左窗格中：
-
-   1. 指定 **Paynow** 作為中影像的名稱 **名稱** 欄位。
-   1. 點選 **上傳**，選取儲存在本機檔案系統上的影像，然後點選 **開啟**.
-   1. 點選 ![done_icon](assets/done_icon.png) 以儲存影像屬性。
-
-1. 重複步驟13和14以新增 **ValueAddedServices** 影像至 **ValueAddedServices** 目標區域。
-
-### 建立Web channel的互動式通訊 {#create-interactive-communication-for-web-channel}
-
-以下是已在本教學課程中建立且在建立Web頻道的互動式通訊時所需的資源清單：
-
-**網頁範本：** [Create_First_IC_Web_Template](../../forms/using/create-templates-print-web.md)
-
-**表單資料模型：** [FDM_Create_First_IC](../../forms/using/create-form-data-model0.md)
-
-**檔案片段：** [bill_details_first_ic、customer_details_first_ic、bill_summary_first_ic、summary_charges_first_ic](../../forms/using/create-document-fragments.md)
-
-**影像：** PayNowWeb和ValueAddedServicesWeb
-
-1. 登入AEM編寫執行個體並導覽至 **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]** > **[!UICONTROL Forms與檔案]**.
-1. 點選 **建立** 並選取 **互動式通訊**. 此 **建立互動式通訊** 精靈隨即顯示。
-1. 指定 **create_first_ic** 在 **標題** 和 **名稱** 欄位。 選取 **FDM_Create_First_IC** 以表單資料模型形式使用，然後點選 **下一個**.
-1. 在 **頻道** 精靈：
-
-   1. 指定 **create_first_ic_print_template** 作為「列印」範本，然後點選 **選取**. 確保 **針對Web Channel使用列印為主版** 未選取核取方塊。
-
-   1. 指定 **Create_First_IC_templates** 資料夾> **Create_First_IC_Web_Template** 做為Web範本並點選 **選取**.
-
-   1. 點選 **建立**.
-
-   系統會顯示確認訊息，指出已成功建立互動式通訊。
-
-1. 點選 **編輯** 以開啟右窗格中的互動式通訊。
-1. 點選 **頻道** 從左窗格按Tab鍵並點選 **Web**.
-1. 前往 **資產** 標籤並套用篩選器，以在左窗格中僅顯示檔案片段。
-1. 將下列檔案片段拖放至互動式通訊中的目標區域：
+1. 点按 **编辑** 打开右窗格中的交互式通信。
+1. 转到 **资产** 选项卡并应用过滤器以在左窗格中仅显示文档片段。
+1. 将以下文档片段拖放到交互式通信中的目标区域：
 
    | 文档片段 | 目标区域 |
    |---|---|
-   | bill_details_first_ic | 帳單詳細資訊 |
-   | customer_details_first_ic | Customerdetails |
-   | bill_summary_first_ic | 帳單摘要 |
-   | summary_charges_first_interactive_communication | 費用 |
+   | bill_details_first_ic | 账单详细信息 |
+   | customer_details_first_ic | 客户详细信息 |
+   | bill_summary_first_ic | 账单摘要 |
+   | summary_charges_first_interactive_communication | 费用 |
 
-1. 點選 **費用摘要** 目標區域，然後點選 **+** 新增 **圖表** 元件。
-1. 點選「圖表」元件並選取 ![configure_icon](assets/configure_icon.png) （設定）。 圖表屬性會顯示在左窗格中：
+   ![交互式通信的文档片段](assets/create_first_ic_doc_fragments_new.png)
 
-   1. 指定圖表的名稱。
-   1. 選取 **圓形圖** 從 **圖表型別** 下拉式清單。
+1. 点按 **图表** 目标区域，然后点按 **+** 添加 **图表** 组件。
+1. 点按图表组件并选择 ![configure_icon](assets/configure_icon.png) （配置）。 图表属性显示在左窗格中：
 
-   1. 選取 **calltype** 屬性來自 **呼叫** 中的資料模型物件型別 **X軸** 區段。 點選 ![done_icon](assets/done_icon.png).
+   1. 指定图表的名称。
+   1. 选择 **饼图** 从 **图表类型** 下拉列表。
+   1. 选择 **calltype** 属性来自 **调用** 中的数据模型对象类型 **X轴** 部分。 点按 ![done_icon](assets/done_icon.png).
+   1. 选择 **频率** 从 **函数** 下拉列表。
+   1. 选择 **calltype** 属性来自 **调用** 中的数据模型对象类型 **Y轴** 部分。 点按 ![done_icon](assets/done_icon.png).
+   1. 点按 ![done_icon](assets/done_icon.png) 以保存图表属性。
 
-   1. 選取 **頻率** 從 **函式** 下拉式清單。
+1. 转到 **资产** 选项卡并应用过滤器以仅在左窗格中显示布局片段。 拖放 **table_lf** 布局片段到 **分项调用** 目标区域。
+1. 选择中的文本字段 **日期** 列并点按 ![configure_icon](assets/configure_icon.png) （配置）。
+1. 选择 **数据模型对象** 从 **绑定类型** 下拉列表并选择 **调用** > **calldate**. 点按 ![done_icon](assets/done_icon.png) 保存属性两次。
 
-   1. 選取 **calltype** 屬性來自 **呼叫** 中的資料模型物件型別 **Y軸** 區段。 點選 ![done_icon](assets/done_icon.png).
+   同样，创建绑定 **calltime**， **callnum**， **标注**、和 **callcharges** 中的文本字段 **时间**， **数字**， **持续时间**、和 **费用** 列进行归类。
 
-   1. 點選 ![done_icon](assets/done_icon.png) 以儲存圖表屬性。
+1. 点按 **PayNow** 目标区域，然后点按 **+** 添加 **图像** 组件。
+1. 点按图像组件并选择 ![configure_icon](assets/configure_icon.png) （配置）。 图像属性显示在左窗格中：
 
-1. 選取 **資料來源** 標籤並拖放 **呼叫** 資料模型物件至 **逐項列出的呼叫** 目標區域。 中的所有屬性 **呼叫** 資料模型物件會顯示為 **逐項列出的呼叫** 右窗格中的目標區域。
+   1. 指定 **PayNow** 作为图像在 **名称** 字段。
+   1. 点按 **上传**，选择保存在本地文件系统中的图像，然后点按 **打开**.
+   1. 点按 ![done_icon](assets/done_icon.png) 以保存图像属性。
 
-   根據使用案例，您在表格中需要「通話日期」、「通話時間」、「通話號碼」、「通話持續時間」和「通話費用」欄。
+1. 重复步骤13和14以添加 **ValueAddedServices** 图像到 **ValueAddedServices** 目标区域。
 
-   ![互動式通訊的表格](assets/table_ic_web_new.png)
+### 为Web渠道创建交互式通信 {#create-interactive-communication-for-web-channel}
 
-1. 選取 **Mobilenum** 表格欄標題並選取 **更多選項** > **刪除欄**. 同樣地，刪除 **Calltype** 欄。
-1. 選取 **Calldate** 表格欄標題並點選 ![編輯](assets/edit.png) （編輯）將文字重新命名為 **通話日期**. 同樣地，重新命名表格中的其他欄標題。
-1. 根據使用案例，插入 **立即付款** 互動式通訊中的按鈕，提供使用者按一下按鈕以進行付款的選項。 執行以下步驟來插入按鈕：
+以下是本教程中已创建、且在为Web渠道创建交互式通信时所需的资源列表：
 
-   1. 點選 **立即付款** 目標區域，然後點選 **+** 新增 **文字** 元件。
+**Web模板：** [Create_First_IC_Web_Template](../../forms/using/create-templates-print-web.md)
 
-   1. 點選文字元件並點選 ![編輯](assets/edit.png) （編輯）。
-   1. 將文字重新命名為 **立即付款**.
-   1. 選取文字並點選「超連結」圖示。
-   1. 在中指定付款URL **路徑** 欄位。
-   1. 選取 **新標籤** 從 **Target** 下拉式清單。
+**表单数据模型：** [FDM_Create_First_IC](../../forms/using/create-form-data-model0.md)
 
-   1. 點選 ![done_icon](assets/done_icon.png) 以儲存超連結屬性。
+**文档片段：** [bill_details_first_ic、customer_details_first_ic、bill_summary_first_ic、summary_charges_first_ic](../../forms/using/create-document-fragments.md)
 
-1. 選取 **樣式** 從「 」旁邊的「 」下拉式清單 **預覽** 選項。
+**图像：** PayNowWeb和ValueAddedServicesWeb
 
-   ![選取互動式通訊的樣式模式](assets/select_style_ic_web_new.png)
+1. 登录到AEM创作实例并导航到 **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]** > **[!UICONTROL Forms和文档]**.
+1. 点按 **创建** 并选择 **交互式通信**. 此 **创建交互式通信** 将显示向导。
+1. 指定 **create_first_ic** 在 **标题** 和 **名称** 字段。 选择 **FDM_Create_First_IC** 作为表单数据模型并点按 **下一个**.
+1. 在 **渠道** 向导：
 
-1. 使用下列步驟，設定超連結文字的樣式，使其顯示為互動式通訊中的按鈕：
+   1. 指定 **create_first_ic_print_template** 作为打印模板，然后点按 **选择**. 确保 **对Web Channel使用“打印为主控”** 未选中复选框。
 
-   1. 點選文字元件並選取 ![編輯](assets/edit.png) （編輯）。
-   1. 在 **邊框** 區段，指定 **1.5畫素** 作為 **邊框寬度**，選取 **實線** 作為 **邊框樣式**，並指定 **46畫素** 作為 **邊框半徑**.
+   1. 指定 **Create_First_IC_templates** 文件夹> **Create_First_IC_Web_Template** 作为Web模板并点按 **选择**.
 
-   1. 選取「紅色」作為按鈕的背景顏色，該按鈕位於 **背景** 區段。
-   1. 在 **利潤** 欄位 **Dimension與位置** 區段，點選 **同時編輯** 圖示，並設定 **右** 邊界為 **450畫素**. 「上」、「下」和「左」欄位會設定為空白。
+   1. 点按 **创建**.
 
-   ![在互動式通訊中插入超連結](assets/ic_web_hyperlink_new.png)
+   将显示一条确认消息，表明已成功创建交互式通信。
 
-1. 點選 **立即付款** 目標區域，然後點選 **+** 新增 **影像** 元件。
-1. 點選影像元件並選取 ![configure_icon](assets/configure_icon.png) （設定）。 影像屬性會顯示在左窗格中：
+1. 点按 **编辑** 打开右窗格中的交互式通信。
+1. 点按 **渠道** 选项卡，然后点按 **Web**.
+1. 转到 **资产** 选项卡并应用过滤器以在左窗格中仅显示文档片段。
+1. 将以下文档片段拖放到交互式通信中的目标区域：
 
-   1. 指定 **Paynow** 作為中影像的名稱 **名稱** 欄位。
+   | 文档片段 | 目标区域 |
+   |---|---|
+   | bill_details_first_ic | 账单详细信息 |
+   | customer_details_first_ic | 客户详细信息 |
+   | bill_summary_first_ic | 账单摘要 |
+   | summary_charges_first_interactive_communication | 费用 |
 
-   1. 點選 **上傳**，選取 **PayNowWeb** 影像儲存在本機檔案系統上，然後點選 **開啟**.
+1. 点按 **费用汇总** 目标区域，然后点按 **+** 添加 **图表** 组件。
+1. 点按图表组件并选择 ![configure_icon](assets/configure_icon.png) （配置）。 图表属性显示在左窗格中：
 
-   1. 點選 ![done_icon](assets/done_icon.png) 以儲存影像屬性。
+   1. 指定图表的名称。
+   1. 选择 **饼图** 从 **图表类型** 下拉列表。
 
-1. 根據使用案例，插入 **訂閱** 互動式通訊中的按鈕，可讓使用者透過按一下按鈕來訂閱增值服務。
+   1. 选择 **calltype** 属性来自 **调用** 中的数据模型对象类型 **X轴** 部分。 点按 ![done_icon](assets/done_icon.png).
 
-   重複步驟13到17以新增 **訂閱** 按鈕至 **增值服務** 目標區域並新增 **ValueAddedServicesWeb** 影像。
+   1. 选择 **频率** 从 **函数** 下拉列表。
 
-## 使用自動同步建立列印與網頁的互動式通訊 {#create-interactive-communications-for-print-and-web-with-auto-synchronization}
+   1. 选择 **calltype** 属性来自 **调用** 中的数据模型对象类型 **Y轴** 部分。 点按 ![done_icon](assets/done_icon.png).
 
-您也可以透過啟用列印和Web頻道之間的自動同步來建立互動式通訊。 若要啟用自動同步化，請在建立互動式通訊時選取「列印為主版」選項。 選取「列印為主版」選項，可確保Web channel的內容、繼承和資料繫結衍生自Print channel。 它也能確保在列印管道中所做的變更反映在網頁管道中。
+   1. 点按 ![done_icon](assets/done_icon.png) 以保存图表属性。
 
-執行以下步驟，衍生使用Print channel的Web channel內容：
+1. 选择 **数据源** 选项卡，然后拖放 **调用** 数据模型对象 **分项调用** 目标区域。 中的全部属性 **调用** 数据模型对象显示为表中的表列 **分项调用** 右窗格中的目标区域。
 
-1. 登入AEM編寫執行個體並導覽至 **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]** > **[!UICONTROL Forms與檔案]**.
-1. 點選 **建立** 並選取 **互動式通訊**. 此 **建立互動式通訊** 精靈隨即顯示。
-1. 指定 **create_first_ic** 在 **標題** 和 **名稱** 欄位。 選取 **FDM_Create_First_IC** 以表單資料模型形式使用，然後點選 **下一個**.
-1. 在 **頻道** 精靈：
+   根据用例，您需要表中的呼叫日期、呼叫时间、呼叫编号、呼叫持续时间和呼叫费用列。
 
-   1. 指定 **create_first_ic_print_template** 作為「列印」範本，然後點選 **選取**.
+   ![交互式通信表](assets/table_ic_web_new.png)
 
-   1. 選取 **針對Web Channel使用列印為主版** 核取方塊。
-   1. 指定 **Create_First_IC_templates** 資料夾> **Create_First_IC_Web_Template** 做為Web範本並點選 **選取**.
+1. 选择 **Mobilenum** 表列标题并选择 **更多选项** > **删除列**. 同样，删除 **Calltype** 列。
+1. 选择 **Calldate** 表格列标题并点按 ![编辑](assets/edit.png) （编辑）以将文本重命名为 **通话日期**. 同样，重命名表中的其他列标题。
+1. 根据用例，插入 **立即付款** 交互式通信中的按钮，它通过单击按钮为用户提供进行付款的选项。 执行以下步骤以插入按钮：
 
-   1. 點選 **建立**.
+   1. 点按 **立即付款** 目标区域，然后点按 **+** 添加 **文本** 组件。
 
-   系統會顯示確認訊息，指出已成功建立互動式通訊。
+   1. 点按文本组件并点按 ![编辑](assets/edit.png) （编辑）。
+   1. 将文本重命名为 **立即付款**.
+   1. 选择文本并点按超链接图标。
+   1. 在中指定付款URL **路径** 字段。
+   1. 选择 **新建选项卡** 起始日期 **Target** 下拉列表。
 
-1. 點選 **編輯** 以開啟右窗格中的互動式通訊。
-1. 執行步驟6 - 15 / [為列印頻道建立互動式通訊](../../forms/using/create-interactive-communication0.md#create-interactive-communication-for-print-channel) 區段。
-1. 點選 **頻道** 從左窗格按Tab鍵並點選 **Web** 從Print channel自動產生Web channel的內容。
-1. 作為 **針對Web Channel使用列印為主版** 在步驟4中選取核取方塊，則會從Print channel自動為Web channel產生內容和繫結。
+   1. 点按 ![done_icon](assets/done_icon.png) 以保存超链接属性。
 
-   列印管道內容會插入Web channel範本內容下方。 若要修改從Print channel自動產生的Web channel內容，您可以取消任何目標區域的繼承。
+1. 选择 **样式** 下拉列表中 **预览** 选项。
 
-   將滑鼠游標停留在Web Channel中的相關目標區域上，然後選取 ![取消繼承](assets/cancelinheritance.png) （取消繼承），然後在 **取消繼承** 對話方塊，點選 **是**.
+   ![为交互式通信选择样式模式](assets/select_style_ic_web_new.png)
+
+1. 使用以下步骤，将超链接文本设置为在交互式通信中显示为按钮的样式：
+
+   1. 点按文本组件并选择 ![编辑](assets/edit.png) （编辑）。
+   1. 在 **边框** 部分，指定 **1.5像素** 作为 **边框宽度**，选择 **实线** 作为 **边框样式**，并指定 **46像素** 作为 **边框半径**.
+
+   1. 从中选择红色作为按钮的背景颜色 **背景** 部分。
+   1. 在 **边距** 字段 **Dimension和位置** 部分，点按 **同时编辑** 图标，然后设置 **右** 边距为 **450像素**. “顶部”、“底部”和“左侧”字段设置为空白。
+
+   ![在交互式通信中插入超链接](assets/ic_web_hyperlink_new.png)
+
+1. 点按 **立即付款** 目标区域，然后点按 **+** 添加 **图像** 组件。
+1. 点按图像组件并选择 ![configure_icon](assets/configure_icon.png) （配置）。 图像属性显示在左窗格中：
+
+   1. 指定 **PayNow** 作为图像在 **名称** 字段。
+
+   1. 点按 **上传**，选择 **PayNowWeb** 图像保存在本地文件系统中，然后点按 **打开**.
+
+   1. 点按 ![done_icon](assets/done_icon.png) 以保存图像属性。
+
+1. 根据用例，插入 **订阅** 交互式通信中的按钮，通过单击此按钮，用户可以选择订阅增值服务。
+
+   重复步骤13 - 17以添加 **订阅** 按钮到 **增值服务** 目标区域并添加 **ValueAddServicesWeb** 图像。
+
+## 通过自动同步为打印和Web创建交互式通信 {#create-interactive-communications-for-print-and-web-with-auto-synchronization}
+
+您还可以通过启用打印和Web渠道之间的自动同步来创建交互式通信。 要启用自动同步，请在创建交互式通信时选择“打印为主控”选项。 选择打印为主控选项可确保从Print channel派生出Web channel的内容、继承和数据绑定。 它还可确保在打印渠道中所做的更改反映在Web渠道中。
+
+执行以下步骤以使用打印渠道获取Web渠道内容：
+
+1. 登录到AEM创作实例并导航到 **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]** > **[!UICONTROL Forms和文档]**.
+1. 点按 **创建** 并选择 **交互式通信**. 此 **创建交互式通信** 将显示向导。
+1. 指定 **create_first_ic** 在 **标题** 和 **名称** 字段。 选择 **FDM_Create_First_IC** 作为表单数据模型并点按 **下一个**.
+1. 在 **渠道** 向导：
+
+   1. 指定 **create_first_ic_print_template** 作为打印模板，然后点按 **选择**.
+
+   1. 选择 **对Web Channel使用“打印为主控”** 复选框。
+   1. 指定 **Create_First_IC_templates** 文件夹> **Create_First_IC_Web_Template** 作为Web模板并点按 **选择**.
+
+   1. 点按 **创建**.
+
+   将显示一条确认消息，表明已成功创建交互式通信。
+
+1. 点按 **编辑** 打开右窗格中的交互式通信。
+1. 执行第6 - 15步，共 [为打印渠道创建交互式通信](../../forms/using/create-interactive-communication0.md#create-interactive-communication-for-print-channel) 部分。
+1. 点按 **渠道** 选项卡，然后点按 **Web** 从Print channel自动生成Web渠道的内容。
+1. 作为 **对Web Channel使用“打印为主控”** 如果在步骤4中选中了复选框，则会从打印渠道为Web渠道自动生成内容和绑定。
+
+   打印渠道内容插入Web渠道模板内容下方。 要修改已从打印渠道自动生成的Web渠道内容，您可以取消任何目标区域的继承。
+
+   将鼠标悬停在Web渠道中的相关目标区域上并选择 ![取消继承](assets/cancelinheritance.png) （取消继承），然后在 **取消继承** 对话框，点按 **是**.
 
    ![取消继承](assets/cancel_inheritance_web_channel_new.png)
 
-   如果您已取消元件的繼承，則可重新啟用它。 若要重新啟用繼承，請將游標停留在相關目標區域的邊界上（包括元件），然後點選 ![reenableinheritance](assets/reenableinheritance.png).
+   如果已取消组件的继承，则可以重新启用它。 要重新启用继承，请将鼠标悬停在相关目标区域（包括组件）的边界上，然后点按 ![reenableinheritance](assets/reenableinheritance.png).
 
-1. 選取 **內容** 索引標籤進行編輯。
-1. 使用內容樹將自動產生的Web頻道內容拖放至Web範本中的現有面板。 以下是需要重新排列的元件清單：
+1. 选择 **内容** 选项卡。
+1. 使用内容树将自动生成的Web渠道内容拖放到Web模板中的现有面板。 以下是需要重新排列的组件列表：
 
-   * 「用料表詳細資訊」面板的「用料表詳細資訊」元件
-   * 「客戶詳細資料」面板的「客戶詳細資料」元件
-   * 「用料表彙總」元件至「用料表彙總」面板
-   * 「費用彙總」面板的「費用彙總」元件
-   * 分項呼叫面板的佈局片段（表格）
+   * “清单详细信息”面板中的清单详细信息组件
+   * “客户详细信息”面板的“客户详细信息”组件
+   * “清单汇总”组件到“清单汇总”面板
+   * “费用汇总”组件到“费用汇总”面板
+   * “分项调用”面板的布局片段（表）
 
-   ![網頁內容樹狀結構](assets/ic_web_content_tree_new.png)
+   ![Web内容树](assets/ic_web_content_tree_new.png)
 
-1. 重複步驟13 - 18 / [建立Web channel的互動式通訊](../../forms/using/create-interactive-communication0.md#create-interactive-communication-for-web-channel) 以插入 **立即付款** 和 **訂閱** 互動式通訊的Web channel中的超連結。
+1. 重复步骤13 - 18，共 [为Web渠道创建交互式通信](../../forms/using/create-interactive-communication0.md#create-interactive-communication-for-web-channel) 插入 **立即付款** 和 **订阅** 交互式通信的Web渠道中的超链接。

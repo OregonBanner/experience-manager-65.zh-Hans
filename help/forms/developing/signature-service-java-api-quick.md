@@ -1,7 +1,7 @@
 ---
-title: 簽名服務Java API快速入門(SOAP)
+title: 签名服务Java API快速启动(SOAP)
 seo-title: Signature Service Java API QuickStart(SOAP)
-description: 使用簽名服務將簽名欄位新增到PDF檔案、擷取簽名欄位名稱、修改簽名欄位、數位簽署PDF檔案、數位簽署XFA型表單、認證PDF檔案、驗證數位簽名、驗證多個數位簽名，以及移除數位簽名。
+description: 使用签名服务向PDF文档添加签名字段、检索签名字段名称、修改签名字段、对PDF文档进行数字签名、对基于XFA的表单进行数字签名、认证PDF文档、验证数字签名、验证多个数字签名以及移除数字签名。
 seo-description: Use the Signature service to add a signature field to a PDF document, retrieve signature field names, modify a signature field, digitally sign a PDF document, digitally sign an XFA-based form, certify a PDF document, verify a digital signature, verify multiple digital signatures, and remove a digital signature.
 uuid: ae6adf23-b119-45f6-bd57-73d8d9ca8ecb
 contentOwner: admin
@@ -18,39 +18,39 @@ ht-degree: 0%
 
 ---
 
-# 簽名服務Java API快速入門(SOAP) {#signature-service-java-api-quickstart-soap}
+# 签名服务Java API快速入门(SOAP) {#signature-service-java-api-quickstart-soap}
 
-下列Java API快速入門(SOAP)適用於AEM Forms JEE簽名服務：
+以下Java API快速入门(SOAP)可用于AEM Forms JEE签名服务：
 
-[快速入門（SOAP模式）：使用Java API將簽名欄位新增到PDF檔案](signature-service-java-api-quick.md#quick-start-soap-mode-adding-a-signature-field-to-a-pdf-document-using-the-java-api)
+[快速入门（SOAP模式）：使用Java API向PDF文档添加签名字段](signature-service-java-api-quick.md#quick-start-soap-mode-adding-a-signature-field-to-a-pdf-document-using-the-java-api)
 
-[快速入門（SOAP模式）：使用Java API擷取簽名欄位名稱](signature-service-java-api-quick.md#quick-start-soap-mode-retrieving-signature-field-names-using-the-java-api)
+[快速入门（SOAP模式）：使用Java API检索签名字段名称](signature-service-java-api-quick.md#quick-start-soap-mode-retrieving-signature-field-names-using-the-java-api)
 
-[快速入門（SOAP模式）：使用Java API修改簽名欄位](signature-service-java-api-quick.md#quick-start-soap-mode-modifying-a-signature-field-using-the-java-api)
+[快速入门（SOAP模式）：使用Java API修改签名字段](signature-service-java-api-quick.md#quick-start-soap-mode-modifying-a-signature-field-using-the-java-api)
 
-[快速入門（SOAP模式）：使用Java API數位簽署PDF檔案](signature-service-java-api-quick.md#quick-start-soap-mode-digitally-signing-a-pdf-document-using-the-java-api)
+[快速入门（SOAP模式）：使用Java API对PDF文档进行数字签名](signature-service-java-api-quick.md#quick-start-soap-mode-digitally-signing-a-pdf-document-using-the-java-api)
 
-[快速入門（SOAP模式）：使用Java API數位簽署XFA型表單](signature-service-java-api-quick.md#quick-start-soap-mode-digitally-signing-a-xfa-based-form-using-the-java-api)
+[快速入门（SOAP模式）：使用Java API对基于XFA的表单进行数字签名](signature-service-java-api-quick.md#quick-start-soap-mode-digitally-signing-a-xfa-based-form-using-the-java-api)
 
-[快速入門（SOAP模式）：使用Java API認證PDF檔案](signature-service-java-api-quick.md#quick-start-soap-mode-certifying-a-pdf-document-using-the-java-api)
+[快速入门（SOAP模式）：使用Java API认证PDF文档](signature-service-java-api-quick.md#quick-start-soap-mode-certifying-a-pdf-document-using-the-java-api)
 
-[快速入門（SOAP模式）：使用Java API驗證數位簽名](signature-service-java-api-quick.md#quick-start-soap-mode-verifying-a-digital-signature-using-the-java-api)
+[快速入门（SOAP模式）：使用Java API验证数字签名](signature-service-java-api-quick.md#quick-start-soap-mode-verifying-a-digital-signature-using-the-java-api)
 
-[快速入門（SOAP模式）：使用Java API驗證多個數位簽名](signature-service-java-api-quick.md#quick-start-soap-mode-verifying-multiple-digital-signatures-using-the-java-api)
+[快速入门（SOAP模式）：使用Java API验证多个数字签名](signature-service-java-api-quick.md#quick-start-soap-mode-verifying-multiple-digital-signatures-using-the-java-api)
 
-[快速入門（SOAP模式）：使用Java API移除數位簽名](signature-service-java-api-quick.md#quick-start-soap-mode-removing-a-digital-signature-using-the-java-api)
+[快速入门（SOAP模式）：使用Java API删除数字签名](signature-service-java-api-quick.md#quick-start-soap-mode-removing-a-digital-signature-using-the-java-api)
 
-[快速入門（SOAP模式）：使用Java API套用檔案時間戳記](#quick-start-soap-mode-apply-document-timestamp-using-the-java-api)
+[快速入门（SOAP模式）：使用Java API应用文档时间戳](#quick-start-soap-mode-apply-document-timestamp-using-the-java-api)
 
-AEM Forms JEE作業可使用AEM Forms強型別API執行，且連線模式應設定為SOAP。
+AEM Forms JEE操作可以使用AEM Forms强类型API执行，并且连接模式应设置为SOAP。
 
 >[!NOTE]
 >
->「使用AEM Forms進行程式設計」中的「快速入門」是以部署在JBoss Application Server和Microsoft Windows作業系統上的Forms伺服器為基礎。 不過，如果您使用其他作業系統（例如UNIX），請以適用的作業系統支援的路徑取代Windows特定路徑。 同樣地，如果您使用其他J2EE應用程式伺服器，請務必指定有效的連線屬性。 另請參閱 [設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>位于“使用AEM Forms编程”中的快速入门指南基于部署在JBoss Application Server和Microsoft Windows操作系统上的Forms服务器。 但是，如果您使用的是其他操作系统（如UNIX），请将特定于Windows的路径替换为适用的操作系统支持的路径。 同样，如果您使用的是其他J2EE应用程序服务器，请确保指定有效的连接属性。 参见 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
-## 快速入門（SOAP模式）：使用Java API將簽名欄位新增到PDF檔案 {#quick-start-soap-mode-adding-a-signature-field-to-a-pdf-document-using-the-java-api}
+## 快速入门（SOAP模式）：使用Java API向PDF文档添加签名字段 {#quick-start-soap-mode-adding-a-signature-field-to-a-pdf-document-using-the-java-api}
 
-以下Java程式碼範例新增名為的簽名欄位 *SignatureField1* 至以名為的PDF檔案為基礎的PDF檔案&#x200B;*Loan.pdf*. 包含新簽名欄位的PDF檔案會儲存為名為的PDF檔案 *LoanSig.pdf*. (請參閱 [新增簽名欄位](/help/forms/developing/digitally-signing-certifying-documents.md#adding-signature-fields).)
+以下Java代码示例添加了一个名为的签名字段 *签名字段1* 基于名为的PDF文件的PDF文档&#x200B;*Loan.pdf*. 包含新签名字段的PDF文档将另存为名为的PDF文件 *LoanSig.pdf*. (请参阅 [添加签名字段](/help/forms/developing/digitally-signing-certifying-documents.md#adding-signature-fields).)
 
 ```java
  /*
@@ -164,9 +164,9 @@ AEM Forms JEE作業可使用AEM Forms強型別API執行，且連線模式應設�
  
 ```
 
-## 快速入門（SOAP模式）：使用Java API擷取簽名欄位名稱 {#quick-start-soap-mode-retrieving-signature-field-names-using-the-java-api}
+## 快速入门（SOAP模式）：使用Java API检索签名字段名称 {#quick-start-soap-mode-retrieving-signature-field-names-using-the-java-api}
 
-以下Java程式碼範例會擷取位於名為的PDF檔案中的簽名欄位名稱 *LoanSig.pdf*. (請參閱 [正在擷取簽章欄位名稱](/help/forms/developing/digitally-signing-certifying-documents.md#retrieving-signature-field-names).)
+以下Java代码示例检索位于名为的PDF文档中的签名字段的名称 *LoanSig.pdf*. (请参阅 [正在检索签名字段名称](/help/forms/developing/digitally-signing-certifying-documents.md#retrieving-signature-field-names).)
 
 ```java
  /*
@@ -270,9 +270,9 @@ AEM Forms JEE作業可使用AEM Forms強型別API執行，且連線模式應設�
  }
 ```
 
-## 快速入門（SOAP模式）：使用Java API修改簽名欄位 {#quick-start-soap-mode-modifying-a-signature-field-using-the-java-api}
+## 快速入门（SOAP模式）：使用Java API修改签名字段 {#quick-start-soap-mode-modifying-a-signature-field-using-the-java-api}
 
-以下Java程式碼範例修改名為SignatureField1的簽章欄位，方法是在簽章套用至簽章欄位時，鎖定表單中的所有欄位，並確保不允許變更。 簽名服務傳回包含修改過簽名欄位的PDF檔案後，PDF檔案會儲存為名為LoanSig.pdf的PDF檔案。 (此範例會覆寫傳遞至Signature服務的PDF檔案。) (請參閱 [修改簽章欄位](/help/forms/developing/digitally-signing-certifying-documents.md#modifying-signature-fields).)
+以下Java代码示例修改名为SignatureField1的签名字段，方法是在将签名应用于签名字段时锁定表单中的所有字段，并确保不允许任何更改。 签名服务返回包含修改后的签名字段的PDF文档后，PDF文档将另存为名为LoanSig.pdf的PDF文件。 (此示例将覆盖传递到Signature服务的PDF文件。) (请参阅 [修改签名字段](/help/forms/developing/digitally-signing-certifying-documents.md#modifying-signature-fields).)
 
 ```java
  /*
@@ -398,9 +398,9 @@ AEM Forms JEE作業可使用AEM Forms強型別API執行，且連線模式應設�
  
 ```
 
-## 快速入門（SOAP模式）：使用Java API數位簽署PDF檔案 {#quick-start-soap-mode-digitally-signing-a-pdf-document-using-the-java-api}
+## 快速入门（SOAP模式）：使用Java API对PDF文档进行数字签名 {#quick-start-soap-mode-digitally-signing-a-pdf-document-using-the-java-api}
 
-以下Java程式碼範例會以數位方式簽署以名為的PDF檔案為基礎的PDF檔案 *LoanSig.pdf*. 為安全性認證指定的別名是安全的，並且會執行撤銷檢查。 因為未指定CRL或OCSP伺服器資訊，所以伺服器資訊會從用來數位簽署PDF檔案的憑證取得。 已簽署的檔案會儲存為名為的PDF檔案 *LoanSigned.pdf*. (請參閱 [數位簽署PDF檔案](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-pdf-documents).)
+以下Java代码示例对基于PDF文件的PDF文档进行数字签名 *LoanSig.pdf*. 为安全凭据指定的别名是安全的，将执行吊销检查。 由于未指定CRL或OCSP服务器信息，因此服务器信息是从用于对PDF文档进行数字签名的证书中获取的。 已签署文档另存为名为的PDF文件 *LoanSigned.pdf*. (请参阅 [对PDF文档进行数字签名](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-pdf-documents).)
 
 ```java
  /*
@@ -547,9 +547,9 @@ AEM Forms JEE作業可使用AEM Forms強型別API執行，且連線模式應設�
  
 ```
 
-## 快速入門（SOAP模式）：使用Java API數位簽署XFA型表單 {#quick-start-soap-mode-digitally-signing-a-xfa-based-form-using-the-java-api}
+## 快速入门（SOAP模式）：使用Java API对基于XFA的表单进行数字签名 {#quick-start-soap-mode-digitally-signing-a-xfa-based-form-using-the-java-api}
 
-以下Java程式碼範例會對Forms服務轉譯的互動式表單加上簽名。 此 `com.adobe.idp.Document` Forms服務傳回的執行個體會傳遞至簽名服務。 已簽署的互動式表單會儲存為名為的PDF檔案 *LoanXFASigned.pdf*.
+以下Java代码示例对由Forms服务渲染的交互式表单进行签名。 此 `com.adobe.idp.Document` Forms服务返回的实例将传递到签名服务。 已签名的交互式表单另存为名为的PDF文件 *LoanXFASigned.pdf*.
 
 ```java
  /*
@@ -759,9 +759,9 @@ AEM Forms JEE作業可使用AEM Forms強型別API執行，且連線模式應設�
  
 ```
 
-## 快速入門（SOAP模式）：使用Java API認證PDF檔案 {#quick-start-soap-mode-certifying-a-pdf-document-using-the-java-api}
+## 快速入门（SOAP模式）：使用Java API认证PDF文档 {#quick-start-soap-mode-certifying-a-pdf-document-using-the-java-api}
 
-以下Java程式碼範例會根據名為的PDF檔案來認證PDF檔案 *LoanSig.pdf*. 為安全性認證指定的別名是安全的，不會執行撤銷檢查。 已驗證的檔案會儲存為名為的PDF檔案 *LoanCertified.pdf*. (請參閱 [認證PDF檔案](/help/forms/developing/digitally-signing-certifying-documents.md#certifying-pdf-documents).)
+以下Java代码示例验证了基于名为的PDF文件的PDF文档 *LoanSig.pdf*. 为安全凭据指定的别名是安全的，不会执行吊销检查。 已验证文档将另存为名为的PDF文件 *LoanCertified.pdf*. (请参阅 [认证PDF文档](/help/forms/developing/digitally-signing-certifying-documents.md#certifying-pdf-documents).)
 
 ```java
  /*
@@ -908,9 +908,9 @@ AEM Forms JEE作業可使用AEM Forms強型別API執行，且連線模式應設�
  }
 ```
 
-## 快速入門（SOAP模式）：使用Java API驗證數位簽名 {#quick-start-soap-mode-verifying-a-digital-signature-using-the-java-api}
+## 快速入门（SOAP模式）：使用Java API验证数字签名 {#quick-start-soap-mode-verifying-a-digital-signature-using-the-java-api}
 
-以下Java程式碼範例會驗證位於已簽署PDF檔案中的數位簽名，該檔案是根據名為LoanSigned.pdf的PDF檔案。 驗證時間設定為目前時間，撤銷檢查選項設定為「盡最大努力」。 (請參閱 [驗證數位簽名](#verifying-digital-signatures).)
+以下Java代码示例验证位于已签名PDF文档中的数字签名，该文档基于名为LoanSigned.pdf的PDF文件。 验证时间设置为当前时间，撤销检查选项设置为尽力而为。 (请参阅 [验证数字签名](#verifying-digital-signatures).)
 
 ```java
  /*
@@ -1072,9 +1072,9 @@ AEM Forms JEE作業可使用AEM Forms強型別API執行，且連線模式應設�
  
 ```
 
-## 快速入門（SOAP模式）：使用Java API驗證多個數位簽名 {#quick-start-soap-mode-verifying-multiple-digital-signatures-using-the-java-api}
+## 快速入门（SOAP模式）：使用Java API验证多个数字签名 {#quick-start-soap-mode-verifying-multiple-digital-signatures-using-the-java-api}
 
-以下Java程式碼範例會根據名為LoanAllSigs.pdf的PDF檔案，驗證位於已簽署PDF檔案中的多個數位簽名。 驗證時間設定為目前時間，撤銷檢查選項設定為「盡最大努力」。 (請參閱 [驗證多個數位簽名](signature-service-java-api-quick.md#quick-start-soap-mode-verifying-multiple-digital-signatures-using-the-java-api).)
+以下Java代码示例验证位于已签名PDF文档(基于名为LoanAllSigs.pdf的PDF文件)中的多个数字签名。 验证时间设置为当前时间，撤销检查选项设置为尽力而为。 (请参阅 [验证多个数字签名](signature-service-java-api-quick.md#quick-start-soap-mode-verifying-multiple-digital-signatures-using-the-java-api).)
 
 ```java
  /*
@@ -1234,9 +1234,9 @@ AEM Forms JEE作業可使用AEM Forms強型別API執行，且連線模式應設�
  }
 ```
 
-## 快速入門（SOAP模式）：使用Java API移除數位簽名 {#quick-start-soap-mode-removing-a-digital-signature-using-the-java-api}
+## 快速入门（SOAP模式）：使用Java API删除数字签名 {#quick-start-soap-mode-removing-a-digital-signature-using-the-java-api}
 
-以下Java程式碼範例會從名為的簽名欄位中移除數位簽名 *SignatureField1*. 包含簽名欄位的PDF檔案的名稱為 *LoanSigned.pdf*. (請參閱 [移除數位簽名](/help/forms/developing/digitally-signing-certifying-documents.md#removing-digital-signatures).)
+以下Java代码示例从名为的签名字段中删除数字签名 *签名字段1*. 包含签名字段的PDF文件的名称为 *LoanSigned.pdf*. (请参阅 [删除数字签名](/help/forms/developing/digitally-signing-certifying-documents.md#removing-digital-signatures).)
 
 ```java
  /*
@@ -1343,9 +1343,9 @@ AEM Forms JEE作業可使用AEM Forms強型別API執行，且連線模式應設�
  
 ```
 
-## 快速入門（SOAP模式）：使用Java API套用檔案時間戳記 {#quick-start-soap-mode-apply-document-timestamp-using-the-java-api}
+## 快速入门（SOAP模式）：使用Java API应用文档时间戳 {#quick-start-soap-mode-apply-document-timestamp-using-the-java-api}
 
-以下Java程式碼範例會將時間戳記套用至PDF檔案：
+以下Java代码示例将时间戳应用于PDF文档：
 
 ```java
  /*

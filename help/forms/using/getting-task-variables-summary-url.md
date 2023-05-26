@@ -1,7 +1,7 @@
 ---
-title: 在摘要URL中取得任務變數
+title: 在摘要URL中获取任务变量
 seo-title: Getting Task Variables in Summary URL
-description: 如何重複使用有關任務的資訊，並產生「摘要URL」來摘要或描述任務。
+description: 如何重用有关任务的信息并生成摘要URL以摘要或描述任务。
 seo-description: How-to reuse the information about a task and generate a Summary URL to summarize or describe a task.
 uuid: 9eab3a6a-a99a-40ae-b483-33ec7d21c5b6
 content-type: reference
@@ -16,26 +16,26 @@ ht-degree: 0%
 
 ---
 
-# 在摘要URL中取得任務變數 {#getting-task-variables-in-summary-url}
+# 在摘要URL中获取任务变量 {#getting-task-variables-in-summary-url}
 
-摘要頁面會顯示與工作相關的資訊。 本文說明如何在摘要頁面中重複使用與工作相關的資訊。
+摘要页面显示与任务相关的信息。 本文介绍了如何在摘要页面中重用与任务相关的信息。
 
-在此協調流程範例中，員工會提交休假申請表。 然後申請表會前往員工的經理進行核准。
+在此示例编排中，员工会提交休假申请表。 然后，申请表将转至员工的经理进行审批。
 
-1. 為resourseType建立範例HTML轉譯器(html.esp) **員工/PtoApplication**.
+1. 为resourceType创建示例HTML渲染器(html.esp) **员工/Pto应用程序**.
 
-   轉譯器會假設要在節點上設定下列屬性：
+   渲染器假定在节点上设置以下属性：
 
    * ename
    * empid
    * 原因
-   * 持續時間
+   * 持续时间
 
    >[!NOTE]
    >
-   >此轉譯器是摘要頁面範本。
+   >此渲染器是摘要页面模板。
 
-   此轉譯器的下列範常式式碼包含在中：
+   此渲染器的以下示例代码包含在中：
 
    `apps/Employees/PtoApplication/html.esp`
 
@@ -58,33 +58,33 @@ ht-degree: 0%
    </html>
    ```
 
-1. 修改協調流程，從提交的表單資料中擷取四個屬性。 之後，在CRX中建立型別的節點 **員工/PtoApplication**，並填入屬性。
+1. 修改编排，以从提交的表单数据中提取四个属性。 之后，在CRX中创建类型为的节点 **员工/Pto应用程序**，并填充属性。
 
-   1. 建立程式 **建立PTO摘要** 並將此作為之前的子程式 **指派任務** 在協調流程中操作。
-   1. 定義 **employeeName**， **employeeid**， **ptoReason**， **totalDays**、和 **nodeName** 作為新程式中的輸入變數。 這些變數將作為提交的表單資料傳遞。
+   1. 创建流程 **创建PTO摘要** 并将其用作之前的子进程 **分配任务** 在编排中进行操作。
+   1. 定义 **employeeName**， **employeeID**， **ptoReason**， **totalDays**、和 **nodeName** 作为新流程中的输入变量。 这些变量将作为提交的表单数据传递。
 
-      同時定義輸出變數 **ptoNodePath** ，設定摘要URL時將使用。
+      还定义一个输出变量 **ptoNodePath** 将在设置摘要URL时使用。
 
-   1. 在 **建立PTO摘要** 程式，使用 **設定值** 元件以設定輸入詳細資訊 **node屬性**(**nodeProps**)對應。
+   1. 在 **创建PTO摘要** 流程，使用 **设置值** 用于在中设置输入详细信息的组件 **节点属性**(**nodeProps**)映射。
 
-      此對應中的索引鍵應與上一步中HTML轉譯器中定義的索引鍵相同。
+      此映射中的键应与上一步中HTML渲染器中定义的键相同。
 
-      此外，新增 **sling：resourceType** 有值的索引鍵 **員工/PtoApplication** 在地圖中。
+      此外，添加 **sling：resourceType** 键值 **员工/Pto应用程序** 在地图上。
 
-   1. 使用子程式 **storeContent** 從 **ContentRepositoryConnector** 中的服務 **建立PTO摘要** 程式。 此子程式會建立CRX節點。
+   1. 使用子进程 **storeContent** 从 **ContentRepositoryConnector** 中的服务 **创建PTO摘要** 进程。 此子进程将创建一个CRX节点。
 
-      它需要三個輸入變數：
+      它需要三个输入变量：
 
-      * **資料夾路徑**：建立新CRX節點的路徑。 將路徑設為 **/content**.
-      * **節點名稱**：將輸入變數nodeName指派給此欄位。 這是唯一的節點名稱字串。
-      * **節點型別**：將型別定義為 **nt：unstructured**. 此程式的輸出為nodePath。 nodePath是新建立節點的CRX路徑。 ndoePath會是 **建立PTO** 摘要程式。
-   1. 傳遞提交的表單資料(**employeeName**， **employeeid**， **ptoReason**、和 **totalDays**)作為新程式的輸入 **建立PTO摘要**. 將輸出視為 **ptoSummaryNodePath**.
+      * **文件夹路径**：创建新CRX节点的路径。 将路径设置为 **/content**.
+      * **节点名称**：将输入变量nodeName分配给此字段。 这是一个唯一的节点名称字符串。
+      * **节点类型**：将类型定义为 **nt：unstructured**. 此进程的输出为nodePath。 nodePath是新创建节点的CRX路径。 ndoePath将作为 **创建PTO** 摘要过程。
+   1. 传递提交的表单数据(**employeeName**， **employeeID**， **ptoReason**、和 **totalDays**)作为新进程的输入 **创建PTO摘要**. 将输出视为 **ptoSummaryNodePath**.
 
 
-1. 將摘要URL定義為包含伺服器詳細資訊的XPath運算式，以及 **ptoSummaryNodePath**.
+1. 将摘要URL定义为包含服务器详细信息的XPath表达式，以及 **ptoSummaryNodePath**.
 
    XPath: `concat('https://[*server*]:[*port*]/lc',/process_data/@ptoSummaryNodePath,'.html')`.
 
-在AEM Forms工作區中，當您開啟任務時，摘要URL會存取CRX節點，而HTML轉譯器會顯示摘要。
+在AEM Forms工作区中，打开任务时，摘要URL将访问CRX节点，HTML渲染器将显示摘要。
 
-無需修改程式即可變更摘要版面。 HTML轉譯器會適當地顯示摘要。
+无需修改流程即可更改摘要布局。 HTML渲染器可正确显示摘要。

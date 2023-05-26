@@ -1,6 +1,6 @@
 ---
-title: 安裝最新的6.5.15.0 Service Pack後，CRX/bundle和Start page service就會發生無法使用的錯誤
-description: 安裝最新的6.5.15.0 Service Pack後，CRX/bundle和Start page service就會發生無法使用的錯誤
+title: 安装最新的6.5.15.0 Service Pack后，出现CRX/捆绑包和起始页服务不可用错误
+description: 安装最新的6.5.15.0 Service Pack后，出现CRX/捆绑包和起始页服务不可用错误
 exl-id: dfe015a3-3a24-41c5-aede-8e086851d62b
 source-git-commit: e961f0c7107b4eacb0d5e50565cb64f5fa30e265
 workflow-type: tm+mt
@@ -9,43 +9,43 @@ ht-degree: 2%
 
 ---
 
-# 安裝AEM (6.5.15.0) Service Pack後發生「服務無法使用」錯誤 {#steps-to-resolve-error-after-installing-service-pack}
+# 安装AEM (6.5.15.0) Service Pack后出现“服务不可用”错误 {#steps-to-resolve-error-after-installing-service-pack}
 
 ## 问题 {#issue}
 
-安裝後 [AEM 6.5.15.0 service pack](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.15.0.zip)，錯誤發生為：
-* 錯誤 [FelixDispatchQueue] org.apache.sling.scripting.console FrameworkEvent錯誤(org.osgi.framework.BundleException：無法解析org.apache.sling.scripting.console
+安装后 [AEM 6.5.15.0 service pack](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.15.0.zip)，错误发生如下：
+* 错误 [FelixDispatchQueue] org.apache.sling.scripting.console框架事件错误(org.osgi.framework.BundleException：无法解析org.apache.sling.scripting.console
 
-安裝AEM 6.5.15.0 Service Pack後，CRX/套件組合和起始頁面會顯示服務無法使用的錯誤。
+安装AEM 6.5.15.0 Service Pack后，CRX/捆绑包和起始页显示服务不可用错误。
 
 ## 应用到 {#applies-to}
 
-此解決方案適用於：
-* 所有JEE伺服器上的AEM Forms （在JBoss EAP 7.4.0上執行除外）
+此解决方案适用于：
+* 所有JEE服务器（在JBoss EAP 7.4.0上运行的除外）上的AEM Forms
 
 ## 解决方案 {#solution}
 
 >[!NOTE]
 >
->疑難排解步驟適用於除JBoss EAP 7.4以外的所有應用程式伺服器。
+>故障排除步骤适用于除JBoss EAP 7.4之外的所有应用程序服务器。
 
-安裝後 [AEM 6.5.15.0 service pack](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.15.0.zip)，如果CRX/套件組合和起始頁面顯示服務無法使用錯誤，請執行以下步驟：
+安装后 [AEM 6.5.15.0 service pack](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.15.0.zip)，如果CRX/捆绑包和起始页显示服务不可用错误，请执行以下步骤：
 
-1. 停止應用程式伺服器。
+1. 停止应用程序服务器。
 1. 导航到 `[aem-forms root]\crx-repository\launchpad\felix\bundle52`。
-1. 找到 `bundle.info` 檔案。
-1. 開啟 `bundle.info` 在ant文字編輯器中的檔案，並搜尋的套件組合名稱為 `org.apache.felix.http.bridge`.
+1. 找到 `bundle.info` 文件。
+1. 打开 `bundle.info` 文件，并将包名称搜索为 `org.apache.felix.http.bridge`.
 
    >[!NOTE]
    >
-   >如果是 `bundle.info` 在 `bundle52` 不包含 `org.apache.felix.http.bridge` 捆綁，檢查 `org.apache.felix.http.bridge`. 然後導覽至 [aem-forms根]\crx-repository\launchpad\felix\bundle[x] 並在此位置執行後續步驟。
+   >如果 `bundle.info` 下 `bundle52` 不包含 `org.apache.felix.http.bridge` 捆绑，检查 `org.apache.felix.http.bridge`. 然后导航到 [aem-forms根]\crx-repository\launchpad\felix\bundle[x] 并在此位置执行后续步骤。
 
 1. 导航至 URL: `[aem-forms root]\crx-repository\launchpad\felix\bundle[x]\version0.1`.
-1. 搜尋 `bundle.jar` 並重新命名 `bundle.jar` 至 `bundle.jar.bak`.
-1. 複製 `Bundle for AEM 6.5 Forms on JEE Service Pack 15` 在此位置，從 [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/bundle.jar).
-1. 啟動應用程式伺服器，等待記錄檔穩定並檢查套件組合狀態。
-1. 當所有套件組合都處於作用中狀態時，請安裝 [JEE Service Pack 15上AEM 6.5 Forms的片段](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/org.apache.felix.http.servlet-api-1.2.0_fragment_full.jar) 從 `system/console/bundles` 並等待應用程式伺服器穩定下來。
-1. 停止應用程式伺服器。
-1. 導覽至 `[aem-forms root]\crx-repository\launchpad\felix\bundle52\version0.1` 並刪除 `bundle.jar`.
-1. 重新命名 `bundle.jar.bak` 至 `bundle.jar`.
-1. 啟動應用程式伺服器。
+1. 搜索 `bundle.jar` 并重命名 `bundle.jar` 到 `bundle.jar.bak`.
+1. 复制 `Bundle for AEM 6.5 Forms on JEE Service Pack 15` 在此位置，从 [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/bundle.jar).
+1. 启动应用程序服务器，等待日志稳定并检查捆绑包状态。
+1. 一旦所有捆绑包都处于活动状态，请安装 [JEE Service Pack 15上的AEM 6.5 Forms片段](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/org.apache.felix.http.servlet-api-1.2.0_fragment_full.jar) 从 `system/console/bundles` 并等待应用程序服务器稳定下来。
+1. 停止应用程序服务器。
+1. 导航到 `[aem-forms root]\crx-repository\launchpad\felix\bundle52\version0.1` 并删除 `bundle.jar`.
+1. 重命名 `bundle.jar.bak` 到 `bundle.jar`.
+1. 启动应用程序服务器。

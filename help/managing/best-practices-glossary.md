@@ -1,7 +1,7 @@
 ---
 title: 术语表
 seo-title: Glossary
-description: 此字彙表會列出「專案檢查清單」中所有交付專案檔案的詳細資訊（按字母順序）。
+description: 此术语表按字母顺序列出了项目核对清单中所有可交付结果文档的详细信息。
 seo-description: This glossary lists (alphabetically) details of all Deliverable documents from the Project Checklist.
 uuid: 5f919b05-3ec5-4b18-b966-5dcf706407f4
 contentOwner: User
@@ -20,1398 +20,1398 @@ ht-degree: 0%
 
 # 术语表{#glossary}
 
-此字彙表會依字母順序列出 [專案檢查清單](/help/managing/best-practices-checklist.md).
+此术语表按字母顺序列出 [项目核对清单](/help/managing/best-practices-checklist.md).
 
-## 業務利害關係人的認可 {#acceptance-from-business-stakeholders}
+## 来自业务利益相关者的接受 {#acceptance-from-business-stakeholders}
 
-來自業務利害關係人的接受證實，他們作為關鍵利害關係人，與解決方案保持一致，並已就業務需求如何滿足業務案例給予核准。
+业务利益相关者对此的接受证实，他们作为关键利益相关者，与解决方案保持一致，并且已批准他们如何满足业务需求。
 
-### 驗收測試 {#acceptance-tests}
+### 验收测试 {#acceptance-tests}
 
-當應用程式準備就緒以進行生產時，會執行驗收測試。 這些測試由代表各種型別一般使用者的群組執行，使用現實生活情境。
+验收测试在应用程序准备生产时执行。 测试由代表各种类型最终用户的组使用现实场景执行。
 
-驗收測試用於確認：
+验收测试用于确认：
 
-* Project符合客戶的要求。
-* 解決方案適合各種用途。
-* 使用者接受解決方案，並可設想使用它。
-* 客戶接受專案。
+* 项目满足客户的要求。
+* 解决方案适合各种用途。
+* 用户接受该解决方案，并可以设想使用该解决方案。
+* 客户接受项目。
 
-您規劃及設計驗收測試的時間越早，最終部署就會越容易。 應與客戶及您的品質保證團隊一起定義。
+计划并设计验收测试的时间越早，最终部署就越容易。 它们应与客户和您的质量保证团队一起定义。
 
-雖然您可能無法於專案開始時定義所有詳細資訊，但應討論並同意初始定義。 驗收測試可能會根據基本需求（功能與效能）進行。
+虽然您可能无法在本项目一开始就定义所有详细信息，但应讨论并商定初始定义。 验收测试可能基于基本要求（功能和性能）。
 
-### 已協調測試系統的存取權 {#access-to-test-system-coordinated}
+### 协调对测试系统的访问 {#access-to-test-system-coordinated}
 
-確保已向所有角色授與所需等級的系統存取權。
+确保为所有角色授予了所需的系统访问权限级别。
 
-### Adobe安全性檢查清單 {#adobe-security-checklist}
+### Adobe安全核对清单 {#adobe-security-checklist}
 
-此 [Adobe安全性檢查清單](/help/sites-administering/security-checklist.md) 是提供的官方檢查清單，用於確保AEM在安裝時安全。 它包含您需要執行的安全措施和驗證步驟，以確保執行個體的完整性。
+此 [Adobe安全核对清单](/help/sites-administering/security-checklist.md) 是提供的官方核对清单，用于确保AEM在安装时安全。 它包含为确保实例的完整性所需执行的安全措施和验证步骤。
 
-### Adobe支援入口網站專案設定 {#adobe-support-portal-project-set-up}
+### Adobe支持门户项目设置 {#adobe-support-portal-project-set-up}
 
-Adobe支援入口網站可讓實作合作夥伴和客戶在支援入口網站中將AEM實作設定為專案。
+Adobe支持门户使实施合作伙伴和客户能够在支持门户中将AEM实施设置为项目。
 
-您可登入詳細資訊；例如，關於實作的技術和版本。 這些可提供客戶和Adobe之間的透明度。
+可以注册详细信息；例如，关于所实施的技术和版本的详细信息。 这些选项在客户和Adobe之间提供了透明度。
 
-### AEM管理員培訓 {#aem-administrator-training}
+### AEM管理员培训 {#aem-administrator-training}
 
-為解決方案的管理人員提供培訓。 請參閱 [Adobe訓練服務](https://training.adobe.com/training/courses.html#solution=adobeExperienceManager) 以取得詳細資訊。
+对解决方案的管理人员进行培训。 请参阅 [Adobe培训服务](https://training.adobe.com/training/courses.html#solution=adobeExperienceManager) 了解更多信息。
 
-### AEM作者培訓 {#aem-author-training}
+### AEM作者培训 {#aem-author-training}
 
-為將製作（編寫）解決方案內容的員工提供培訓。 請參閱 [Adobe訓練服務](https://training.adobe.com/training/courses.html#solution=adobeExperienceManager) 以取得詳細資訊。
+培训为解决方案制作（创作）内容的员工。 请参阅 [Adobe培训服务](https://training.adobe.com/training/courses.html#solution=adobeExperienceManager) 了解更多信息。
 
-### AEM認證考試 {#aem-certification-exam}
+### AEM认证考试 {#aem-certification-exam}
 
-確保已註冊適當的角色，以取得相關 [認證考試](https://training.adobe.com/certification/exams.html#p=1&amp;solution=adobeExperienceManager).
+确保注册适当的角色，以便 [认证考试](https://training.adobe.com/certification/exams.html#p=1&amp;solution=adobeExperienceManager).
 
-### AEM認證 {#aem-certified}
+### AEM认证 {#aem-certified}
 
-確保適當的角色已傳遞相關的 [認證考試](https://training.adobe.com/certification/exams.html#p=1&amp;solution=adobeExperienceManager).
+确保相应角色已传递相关 [认证考试](https://training.adobe.com/certification/exams.html#p=1&amp;solution=adobeExperienceManager).
 
-### AEM技術訓練 {#aem-technical-training}
+### AEM技术培训 {#aem-technical-training}
 
-為適當的角色（例如開發人員、架構師、工程師和商務從業人員）提供技術培訓。
+为适当的角色（例如，开发人员、架构师、工程师和业务从业人员）提供技术培训。
 
-### 對定義為專案目標的KPI達成協定 {#agreement-on-kpis-defined-as-goals-for-the-project}
+### 同意定义为项目目标的KPI {#agreement-on-kpis-defined-as-goals-for-the-project}
 
-關鍵績效指標(KPI)可協助組織定義及衡量達成組織目標與宗旨的進度。 一旦組織分析其使命並定義其目標，就需要衡量實現這些目標的進度。 KPI提供測量機制。
+关键绩效指标(KPI)可帮助组织定义和衡量实现组织目标和宗旨的进度。 一旦一个组织分析了它的使命并确定了它的目标，它就需要衡量实现这些目标的进展情况。 KPI提供了一种衡量机制。
 
-### 協調業務與效能KPI {#align-business-and-performance-kpis}
+### 协调业务和性能KPI {#align-business-and-performance-kpis}
 
-協調您的業務與績效關鍵績效指標(KPI)，有助於彙集組織內所有參與的人員與流程。 這進而有助於減少達成業務目標及達成建議目的所需的時間和精力。
+协调您的业务和绩效关键绩效指标(KPI)有助于将组织内所有涉及的人和流程汇集在一起。 这进而有助于减少实现业务目标和实现建议目的所需的时间和精力。
 
-### 內容架構與KPI的協調 {#alignment-of-content-architecture-with-kpis}
+### 内容体系结构与KPI的协调 {#alignment-of-content-architecture-with-kpis}
 
-確保建議的內容架構符合相關的關鍵績效指標(KPI)。
+确保建议的内容架构与相关关键绩效指标(KPI)保持一致。
 
-### 使客戶藍圖與專案時間表一致 {#alignment-of-the-customer-roadmap-with-project-timeline}
+### 使客户路线图与项目时间表保持一致 {#alignment-of-the-customer-roadmap-with-project-timeline}
 
-客戶藍圖由高層級里程碑和業務目標組成。 專案時間表必須遵循並符合此策略，因此必須強調並追蹤任何潛在風險及/或可能的偏差。
+客户路线图由高级别的里程碑和业务目标组成。 项目时间表必须遵循并符合此策略，因此必须突出显示并跟踪任何潜在风险和/或可能存在的偏差。
 
-### 應用程式架構定義 {#application-architecture-definition}
+### 应用程序架构定义 {#application-architecture-definition}
 
-此 [應用程式架構](/help/managing/best-practices.md#development-preparation) 應清楚定義建議應用程式的行為。
+此 [应用架构](/help/managing/best-practices.md#development-preparation) 应清楚地定义所建议应用程序的行为。
 
-其重點為：
+其重点是：
 
-* 他們如何彼此互動以及如何與使用者互動。
-* 由應用程式使用和產生的資料，而非其內部結構。
+* 他们如何彼此互动以及如何与用户互动。
+* 由应用程序使用和生成的数据，而不是其内部结构。
 
-### 已定義應用程式特定的維護工作 {#application-specific-maintenance-tasks-defined}
+### 已定义特定于应用程序的维护任务 {#application-specific-maintenance-tasks-defined}
 
-除了標準Adobe Experience Manager (AEM)維護任務外，您需要定義為了持續維護解決方案而需要執行的任何其他操作任務。
+除了标准Adobe Experience Manager (AEM)维护任务外，您还需要定义为持续维护解决方案而需要执行的任何其他操作任务。
 
-### 受過適當訓練的員工 {#appropriately-trained-staff}
+### 经过适当培训的工作人员 {#appropriately-trained-staff}
 
-確保您的團隊是由經過適當培訓的員工所組成。 對於專案團隊，建議具備下列所有條件：
+确保您的团队由经过适当培训的员工组成。 对于项目团队，建议具有以下所有项：
 
-* 至少有一名AEM認證的潛在開發人員
-* 至少有一個AEM認證架構師
-* 您的開發人員中至少有75%通過AEM認證；這可讓經過認證的開發人員指導初級開發人員，並確保知識分享和透明度
+* 至少有一位AEM认证的潜在客户开发人员
+* 至少一个AEM认证架构师
+* 您的开发人员中至少有75%通过AEM认证；这使经认证的开发人员能够指导初级开发人员，并确保知识共享和透明度
 
-### 架構圖 {#architecture-diagram}
+### 架构图 {#architecture-diagram}
 
-架構圖以圖形呈現架構。 它包含下列表示：
+架构图是架构的图形表示。 它包括表示以下内容：
 
 * 概念
-* 他們的原則
-* 屬於架構一部分的元素和元件
+* 他们的原则
+* 属于架构一部分的元素和组件
 
-### 架構草稿 {#architecture-draft}
+### 架构草稿 {#architecture-draft}
 
-這可提供系統和解決方案架構的高層級檢視。 在此階段，這是一份草稿，將在稍後階段進行審查和完善。
+这提供了系统和解决方案体系结构的高级视图。 在这一阶段，草案将在以后阶段加以审查和完善。
 
-### 架構稽核委員會簽核 {#architecture-review-board-sign-off}
+### 架构审查委员会签署 {#architecture-review-board-sign-off}
 
-架構稽核委員會是一個跨組織的機構，它可以：
+架构审查委员会是一个跨组织的机构，它可以：
 
-* 監督連貫策略的實施
-* 確保系統的合規性
+* 监督连贯战略的实施
+* 确保系统中的法规遵从性
 
-稽核委員會應代表架構中涉及的所有關鍵利害關係人。 他們通常由一組主管組成，負責審查和維護整體架構。
+审查委员会应代表参与该架构的所有关键利益攸关方。 通常，他们由一组负责审核和维护整体架构的执行人员组成。
 
-### 與KPI比較適合真實內容和結果的自動化測試套裝 {#automated-test-suite-adapted-for-real-content-and-results-compared-to-kpis}
+### 与KPI相比，适应了实际内容和结果的自动化测试套件 {#automated-test-suite-adapted-for-real-content-and-results-compared-to-kpis}
 
-自動化指令碼和基本自動化使用案例：
+自动化脚本和基本自动化用例：
 
-* 適用於生產內容
-* 已根據KPI檢查
+* 适用于生产内容
+* 已根据KPI检查
 
-### 自動化測試策略 {#automated-testing-strategy}
+### 自动化测试策略 {#automated-testing-strategy}
 
-此策略定義可重複使用自動化指令碼的架構，以及品質保證(QA)團隊規劃的方法。 它概述了自動化測試的整體計畫，以幫助確保：
+此策略定义了可重用自动化脚本的框架，以及质量保证(QA)团队计划的方法。 它概述了自动化测试的总体计划，以帮助确保：
 
-* 更高的投資報酬率(ROI)
-* 更多測試涵蓋範圍
-* 透過品質重複提高測試可靠性
+* 更高的投资回报(ROI)
+* 更多测试覆盖
+* 通过质量重复提高测试可靠性
 
-### 自動化測試策略已根據實際和預期負載進行驗證 {#automated-testing-strategy-validated-against-realistic-and-expected-load}
+### 根据现实和预期负载验证的自动测试策略 {#automated-testing-strategy-validated-against-realistic-and-expected-load}
 
-自動化測試策略必須根據解決方案上的內容和預期負載進行驗證和調整。
+必须根据解决方案上将包含的内容和预期负载来验证和调整自动化测试策略。
 
-### 自動化策略 {#automation-strategy}
+### 自动化策略 {#automation-strategy}
 
-部署的自動化可確保更快、更一致的部署。 自動化策略概述任何此類自動化機制的設定，包括：
+部署自动化可确保更快、更一致的部署。 自动化战略概述了任何此类自动化机制的配置，包括：
 
 * 频率
 * 要使用的工具
-* 要部署到的環境
+* 要部署到的环境
 
-### 瞭解溝通計畫 {#aware-of-communication-plan}
+### 了解通信计划 {#aware-of-communication-plan}
 
-整個專案團隊和所有利害關係人必須確認他們瞭解：
+整个项目团队和所有利益相关者必须确认他们了解：
 
-* 報告結構
-* 報告步調
-* 通訊管道
+* 报告结构
+* 报告的节奏
+* 通信渠道
 
-### 瞭解成功定義和條件 {#aware-of-success-definitions-and-criteria}
+### 了解成功定义和标准 {#aware-of-success-definitions-and-criteria}
 
-整個專案團隊和所有利害關係人必須確認他們瞭解：
+整个项目团队和所有利益相关者必须确认他们了解：
 
-* 成功的定義
-* 成功標準
+* 成功定义
+* 成功标准
 
-### 備份和還原概念 {#backup-and-restore-concept}
+### 备份和还原概念 {#backup-and-restore-concept}
 
-備份和還原概念概述將在解決方案中實作的技術功能。 這是公司備份與還原原則所要求的。
+备份和还原概念概述了将在解决方案中实施的技术功能。 这是公司备份和恢复策略所必需的。
 
-### 已測試備份與還原 {#backup-and-restore-tested}
+### 已测试备份和恢复 {#backup-and-restore-tested}
 
-以備份和還原概念為基礎的完整端對端測試。
+基于备份和恢复概念的完整端到端测试。
 
-### 業務案例 {#business-case-s}
+### 商业论证 {#business-case-s}
 
-業務案例檔案會提供與採取動作、採取替代動作（如果可用）或不採取任何動作相關的引數。 應該根據具體事實（只要有可能/相關），平衡各引數，並強調所有案例的好處和風險。
+业务案例文档提供了与采取操作、采取替代操作（如果可用）或不采取任何操作相关的论据。 应当平衡各种论点，以具体事实为基础（只要有可能/相关），并突出所有情况的好处和风险。
 
-業務案例檔案應是所有選項的清晰定義，最後是實施所建議解決方案的令人信服的引數。
+业务案例文档应是对所有选项的明确定义，最后应给出实施所提议解决方案的令人信服的论据。
 
-### 業務分析人員瞭解專案範圍和期望 {#business-analyst-understands-scope-of-project-and-expectations}
+### 业务分析师了解项目范围和期望 {#business-analyst-understands-scope-of-project-and-expectations}
 
-業務分析師應確認其完全瞭解：
+业务分析师应确认他们完全了解：
 
-* 專案範圍
-* 所有客戶期望
-* 這是專案中每個角色每個階段所做所有決定的基礎
+* 项目范围
+* 所有客户期望
+* 这是项目中每个角色和每个阶段所做所有决策的基础
 
-### 業務KPI {#business-kpis}
+### 业务KPI {#business-kpis}
 
-組織會使用關鍵績效指標(KPI)來評估達成目標的成功程度。
+组织使用关键绩效指标(KPI)来评估他们在实现目标方面的成功情况。
 
-業務KPI定義可衡量的價值，可顯示公司達成關鍵業務目標的效率。 請務必選擇適合您業務/案例的KPI，並清楚定義其內容、測量方式、使用方式及使用對象。
+业务KPI定义了可衡量的价值，这些价值可表明一家公司在多大程度上有效地实现了关键业务目标。 选择适合您的业务/方案的KPI，并清楚地定义它们是什么、如何衡量、如何使用以及由谁使用它们非常重要。
 
-### 業務需求檔案 {#business-requirements-documentation}
+### 业务要求文档 {#business-requirements-documentation}
 
-業務需求檔案(BRD)詳細說明專案的業務解決方案，提供客戶業務需求和期望的明確規格。 BRD也會區分業務解決方案和技術解決方案。
+业务需求文档(BRD)详细说明了项目的业务解决方案，提供了客户业务需求和期望的明确说明。 BRD还区分业务解决方案和技术解决方案。
 
-在檢查業務解決方案時，BRD應該回答以下問題：「業務想要做什麼？」
+在研究业务解决方案时，BRD应回答以下问题：“业务部门希望做什么？”
 
-### 針對已識別並符合ROI和KPI期望的解決方案或架構，由企業核准任何必要的調整 {#business-sign-off-on-any-required-adjustments-to-the-solution-or-architecture-identified-and-aligned-against-roi-and-kpi-expectations}
+### 对已确定并根据ROI和KPI预期进行调整的解决方案或体系结构进行必要的调整，由业务部门签收 {#business-sign-off-on-any-required-adjustments-to-the-solution-or-architecture-identified-and-aligned-against-roi-and-kpi-expectations}
 
-風險評估和滲透測試程式可能會產生需要在架構或解決方案開發過程中解決的問題和結果。
+风险评估和渗透测试流程可能会产生需要在解决方案体系结构或开发过程中解决的问题和结果。
 
-任何因這些流程而導致的調整都需要由業務部門稽核和核准，並根據整體目標來衡量。
+任何因该等流程而引致之调整须由业务部门审阅及批准，并按整体目标衡量。
 
-### 快取策略 {#caching-strategy}
+### 缓存策略 {#caching-strategy}
 
-快取策略概述將為一般使用者快取的內容。 它必須符合效能KPI。
+缓存策略概述了将为最终用户缓存的内容。 它必须符合性能KPI。
 
-例如，可以快取影像、JavaScript和其他伺服器檔案等元素以提高解決方案的效能。
+例如，可以缓存图像、JavaScript和其他服务器文件等元素以提高解决方案的性能。
 
-### 編碼准則 {#coding-guidelines}
+### 编码准则 {#coding-guidelines}
 
-程式碼准則定義開發人員在開發解決方案時應遵守的基本原則。 這些可能包括：
+编码指南定义了开发人员在开发解决方案时应遵循的基本原则。 这些可能包括：
 
-* 命名慣例
-* 服務使用量
-* 程式庫使用情況
+* 命名约定
+* 服务使用情况
+* 库使用情况
 
-### 通訊操作手冊 {#communicate-operations-manual}
+### 传达操作手册 {#communicate-operations-manual}
 
-確定所有適當的角色/角色都已收到作業手冊。
+确保所有适当的角色/角色都已收到《操作手册》。
 
-### 傳達效能測試報告 {#communicate-performance-test-report}
+### 传达性能测试报告 {#communicate-performance-test-report}
 
-確定所有適當的角色/角色都已收到效能測試報告。
+确保所有适当的角色/角色都已收到性能测试报告。
 
-### 傳達發行說明 {#communicate-release-notes}
+### 传达发行说明 {#communicate-release-notes}
 
-確定所有適當的角色/角色都已收到發行說明。
+确保所有适当的角色/角色都已收到发行说明。
 
-### 向團隊傳達範圍和期望 {#communicate-scope-and-expectations-to-team}
+### 向团队传达范围和期望 {#communicate-scope-and-expectations-to-team}
 
-確保專案團隊完全瞭解並符合專案範圍和交付期望。
+确保项目团队完全了解并符合项目范围和交付期望。
 
-### 傳達培訓教材和使用手冊 {#communicate-training-materials-and-user-guides}
+### 传达培训材料和用户指南 {#communicate-training-materials-and-user-guides}
 
-確定所有適當的角色/角色都能收到培訓教材和使用手冊。
+确保所有适当的角色/角色都能获得培训材料和用户指南。
 
-### 符合客戶安全性需求 {#compliance-with-customer-security-requirements}
+### 符合客户安全要求 {#compliance-with-customer-security-requirements}
 
-確保客戶的所有安全性需求都已準備就緒。
+确保客户的所有安全要求都准备就绪。
 
-### 符合安全性概念 {#compliance-with-security-concept}
+### 符合安全概念 {#compliance-with-security-concept}
 
-確定安全性概念已準備就緒。
+确保安全概念到位。
 
-### 元件與範本關係概念 {#components-and-templates-relationship-concept}
+### 组件和模板关系概念 {#components-and-templates-relationship-concept}
 
-將在新應用程式中使用的範本和元件的輪廓。 包括繼承規則、許可權和關係等細節。
+将在新应用程序中使用的模板和组件的概要。 包括继承规则、权限和关系等详细信息。
 
-### 元件與樣版關係規格 {#components-and-templates-relationship-specification}
+### 组件和模板关系规范 {#components-and-templates-relationship-specification}
 
-元件和範本關係概念的詳細資訊。
+组件和模板关系概念的详细信息。
 
-### 元件規格 {#components-specification}
+### 组件规范 {#components-specification}
 
-要實作的每個元件的規格細節。
+要实施的每个组件的规范详细信息。
 
-### 外部介面模型概念 {#concept-for-mock-ups-of-external-interfaces}
+### 外部接口模型的概念 {#concept-for-mock-ups-of-external-interfaces}
 
-如何針對開發或測試環境可能未開放/可用的任何外部介面進行開發和測試的概念。
+此概念介绍如何针对开发或测试环境中可能未打开/可用的任何外部接口进行开发和测试。
 
-規劃/實作這些介面的模型，以確保測試儘可能接近生產時的行為。
+规划/实施这些接口的模型，以确保测试尽可能接近生产型行为。
 
-### 內容架構檔案 {#content-architecture-document}
+### 内容架构文档 {#content-architecture-document}
 
-建議的內容架構檔案。 詳細資訊應包括（及其他）：
+建议的内容架构的文档。 详情应包括（及其他）：
 
-* 內容樹狀結構
-* 標籤概念
-* 重複使用內容的策略
+* 内容树
+* 标记概念
+* 内容重用策略
 
-### 已針對移轉驗證的內容 {#content-validated-for-migration}
+### 已验证内容以进行迁移 {#content-validated-for-migration}
 
-系統會檢閱舊版系統內容，並驗證所選內容是否可移轉至新解決方案。
+审核旧版系统内容，验证所选内容以迁移到新解决方案。
 
-### 合約草稿 {#contract-draft}
+### 合同草稿 {#contract-draft}
 
-法律合約的初稿。
+法律合同的初稿。
 
-### 目前的內容結構和格式 {#current-content-structure-and-format}
+### 当前内容结构和格式 {#current-content-structure-and-format}
 
-目前內容架構和格式的檔案。 這將用於產生未來的內容架構。 也會用於移轉概念。
+当前内容架构和格式的文档。 这将用于生成未来的内容架构。 它也将被用于迁移概念。
 
-### 客戶備份與還原原則 {#customer-backup-and-restore-policy}
+### 客户备份和恢复策略 {#customer-backup-and-restore-policy}
 
-客戶提出的政策，涉及：
+客户提供的政策涉及：
 
-* 資料與解決方案的備份程式
-* 備份儲存
-* 確認備份是否如預期運作
-* 發生失敗時的復原
+* 针对数据和解决方案的备份过程
+* 备份存储
+* 确认备份按预期运行
+* 故障时的恢复
 
-### 客戶編碼准則 {#customer-coding-guidelines}
+### 客户编码准则 {#customer-coding-guidelines}
 
-客戶對於應如何進行開發的任何准則/要求。
+客户关于如何进行开发的任何准则/要求。
 
-### 客戶部署/發行政策 {#customer-deployment-release-policies}
+### 客户部署/发布策略 {#customer-deployment-release-policies}
 
-客戶定義如何及何時進行部署/發行的原則。
+客户提供的策略，用于定义何时以及如何进行部署/发布。
 
-這些通常包括時間表、排程和簽核需求。
+这些通常包括时间线、时间安排和签核要求。
 
-### 客戶監控原則或需求 {#customer-monitoring-policies-or-requirements}
+### 客户监控策略或要求 {#customer-monitoring-policies-or-requirements}
 
-客戶政策與需求，應監控哪些專案。 這些是在「監控概念」中指定的任何建議之外的建議。
+关于应监控内容的客户策略和要求。 这些是在“监控概念”中指定的任何建议之外的建议。
 
-### 客戶生產核發排程 {#customer-production-release-schedule}
+### 客户生产版本计划 {#customer-production-release-schedule}
 
-客戶為發佈至生產環境所定義的排程。
+客户为发布到生产环境而定义的计划。
 
-### 客戶報告原則和需求 {#customer-reporting-policies-and-requirements}
+### 客户报告策略和要求 {#customer-reporting-policies-and-requirements}
 
-客戶關於報告的任何原則及/或要求。 這些可能包括：
+客户关于报告的任何政策和/或要求。 这些可能包括：
 
-* 特定報告的傳遞頻率
-* 特定報告的格式
-* 特殊需求
+* 提交特定报告的频率
+* 特定报告的格式
+* 特殊要求
 
-### 客戶藍圖 {#customer-roadmap}
+### 客户路线图 {#customer-roadmap}
 
-制定技術和業務要實施的主要里程碑的藍圖。 然後向客戶傳達此藍圖。
+制定技术和商业方面要实施的主要里程碑的路线图。 然后向客户传达此路线图。
 
-### 客戶安全性原則 {#customer-security-policies}
+### 客户安全策略 {#customer-security-policies}
 
-客戶（企業和IT）會制定原則，定義解決方案所需的安全性層級。 這些可能包括：
+客户（业务和IT）将制定策略来定义解决方案所需的安全级别。 这些可能包括：
 
-* 通過風險評估的要求。
-* 通過滲透測試的要求。
-* 任何特定的安全性需求；例如所有輸入欄位的逸出、加密使用(SSL)、憑證以及驗證和作業處理。
+* 通过风险评估的要求。
+* 通过渗透测试的要求。
+* 任何特定的安全要求；例如所有输入字段的转义、加密使用(SSL)、证书以及身份验证和会话。
 
-### 客戶規格指引 {#customer-specification-guidelines}
+### 客户规格指南 {#customer-specification-guidelines}
 
-客戶有關於規格格式、傳送和簽核的任何准則。
+客户对规范的格式、交付和签核有任何指导。
 
-### 客戶測試報告 {#customer-test-reports}
+### 客户测试报告 {#customer-test-reports}
 
-在使用者驗收測試(UAT)期間從客戶向「品質銷售機會」報告。
+在用户验收测试(UAT)期间，客户向Quality Lead报告。
 
-### 已記錄影響升級的自訂和Hotfix {#customizations-and-hotfixes-that-affect-upgrades-documented}
+### 已记录影响升级的自定义项和修补程序 {#customizations-and-hotfixes-that-affect-upgrades-documented}
 
-套用的任何自訂功能和/或套用的Hotfix都必須記錄下來，因為它們可能會影響未來的升級：
+必须记录应用的任何自定义设置和/或应用的修补程序，因为它们可能会影响未来的升级：
 
-* AEM可大量客製化，以符合業務需求。 任何可能影響升級的自訂都必須完整記錄。 例如，對AEM的使用者介面(UI)所做的任何重大變更。
-* 目前解決方案所需的任何更新都必須完整記錄；這些可能包括：
+* AEM可大量定制，以满足业务需求。 必须完整记录任何可能影响升级的自定义设置。 例如，对AEM的用户界面(UI)所做的任何重大更改。
+* 必须完整记录当前解决方案所需的任何更新；这些更新可能包括：
 
-   * cumulative fix pack (CFP)
-   * Service Pack (SP)
-   * Hotfix
-   * 升級
+   * 累积修补程序包(CFP)
+   * 服务包(SP)
+   * 修补程序
+   * 升级
 
-### 每日使用者驗收測試報告 {#daily-user-acceptance-test-report}
+### 每日用户验收测试报告 {#daily-user-acceptance-test-report}
 
-使用者驗收測試(UAT)產生的報告或會議。 檔案應詳細說明：
+用户验收测试(UAT)产生的报告或会议。 他们应该详细说明：
 
-* 報告的問題
-* 這些問題的優先順序
+* 报告的问题
+* 这些问题的优先次序
 
-### 預設安全性已啟用 {#default-security-enabled}
+### 默认安全性已启用 {#default-security-enabled}
 
-確認已啟用/實作AEM的預設安全性設定。
+确保已启用/实施了AEM的默认安全设置。
 
-### 部署/發行原則與程式 {#deployment-release-policies-and-processes}
+### 部署/发布策略和流程 {#deployment-release-policies-and-processes}
 
-涵蓋專案部署和版本的正式原則。 這些可能包括：
+规范化的策略，涵盖项目的部署和版本。 这些可能包括：
 
-* 發行時間
-* 假日規劃
+* 发布时间
+* 假日规划
 * 频率
-* 並可視相關環境而定
+* 而且可以依靠有问题的环境
 
-### 已建立部署步調 {#deployment-cadence-established}
+### 已建立部署节奏 {#deployment-cadence-established}
 
-定義跨環境的所需部署頻率。
+定义跨环境部署所需的频率。
 
-### 開發方法 {#development-methodology}
+### 开发方法 {#development-methodology}
 
-軟體開發方法包括將整個軟體開發工作流程分成不同的階段（或階段），每個階段都有不同的活動。 目的是改善規劃與管理。
+软件开发方法包括将软件开发工作的整个过程分成不同的阶段（或阶段），每个阶段都有不同的活动。 其目的是改善规划和管理。
 
-在定義方法時，您應該預先定義專案團隊為開發或維護您的應用程式而建立並完成的特定交付專案和成品。
+在定义方法时，您应该预先定义项目团队为开发或维护应用程序而创建和完成的特定交付项和工件。
 
-### 開發角色定義 {#development-role-definition}
+### 开发角色定义 {#development-role-definition}
 
-定義在解決方案內執行IT （效能或其他）及/或單元測試的開發人員及/或角色。
+定义在解决方案中执行IT（性能或其他）和/或单元测试的开发人员和/或角色。
 
-### 開發環境已就緒 {#development-environment-ready}
+### 开发环境就绪 {#development-environment-ready}
 
-確保開發環境已設定自動化部署所需的整合工具。
+确保使用自动化部署所需的集成工具配置开发环境。
 
-### 開發團隊瞭解專案範圍和期望 {#development-team-understands-scope-of-project-and-expectations}
+### 开发团队了解项目的范围和期望 {#development-team-understands-scope-of-project-and-expectations}
 
-開發團隊應確認他們完全瞭解：
+开发团队应确认他们完全了解：
 
-* 專案範圍
-* 所有客戶期望
-* 這是專案中每個角色每個階段所做所有決定的基礎
+* 项目范围
+* 所有客户期望
+* 这是项目中每个角色和每个阶段所做所有决策的基础
 
-### 對話方塊規格 {#dialogs-specification}
+### 对话框规范 {#dialogs-specification}
 
-解決方案所需對話方塊的詳細資訊。
+有关解决方案所需的对话框的详细信息。
 
-### 檔案開發環境設定 {#document-development-environment-setup}
+### 文档开发环境设置 {#document-development-environment-setup}
 
-開發環境的檔案。
+开发环境的文档。
 
-### 檔案生產環境設定 {#document-production-environment-setup}
+### 文档生产环境设置 {#document-production-environment-setup}
 
-生產環境的檔案。
+生产环境的文档。
 
-### 檔案測試環境設定 {#document-test-environment-setup}
+### 文档测试环境设置 {#document-test-environment-setup}
 
-測試環境的檔案。
+测试环境的文档。
 
-### 耐久性測試 {#durability-test}
+### 耐久性试验 {#durability-test}
 
-耐久性測試會顯示特定負載下的解決方案效能。 這些測試會評估解決方案在提交至臨界值負載時存活的時間以及效能等級。
+耐久性试验表明了该方案在特定载荷下的性能。 这些测试用于衡量解决方案在提交到阈值负载时存活的时间以及处于什么性能级别。
 
-### 已執行耐久性測試 {#durability-test-executed}
+### 已执行耐久性测试 {#durability-test-executed}
 
-執行耐久性測試。
+耐久性测试的执行。
 
-### 錯誤處理概念 {#error-handling-concept}
+### 错误处理概念 {#error-handling-concept}
 
-錯誤處理是指程式設計、應用程式和通訊錯誤的預期、偵測和解決。
+错误处理是指对编程、应用和通信错误的预测、检测和解决。
 
-### 錯誤處理檔案 {#error-handling-documentation}
+### 错误处理文档 {#error-handling-documentation}
 
-建議錯誤處理的詳細檔案，根據錯誤處理概念。
+有关建议的错误处理的详细文档，基于错误处理概念。
 
-### 向上呈報流程 {#escalation-processes}
+### 上报流程 {#escalation-processes}
 
-所有提升流程的定義。 每個專案層級會有不同的程式：
+所有上报流程的定义。 每个项目级别都有单独的流程：
 
-* 專案團隊
+* 项目团队
 * 客户
 * Adobe
 
-### 建立定期品質複查工作階段 {#establish-regular-quality-review-sessions}
+### 建立定期质量审查会议 {#establish-regular-quality-review-sessions}
 
-與適當的團隊成員建立定期品質審查會議。
+与适当的团队成员定期举行质量审查会议。
 
-### 現有許可權結構 {#existing-permissions-structure}
+### 现有权限结构 {#existing-permissions-structure}
 
-為舊版解決方案或組織內定義的現有許可權和群組集的檔案。
+为旧版解决方案或组织内定义的现有权限和组集的文档。
 
-### 現有系統圖 {#existing-systems-map}
+### 现有系统映射 {#existing-systems-map}
 
-現有系統和相依性的圖表（或圖表集）。
+现有系统和依赖项的图表（或图表集）。
 
-### 預期成功定義和條件 {#expected-success-definitions-and-criteria}
+### 预期成功定义和标准 {#expected-success-definitions-and-criteria}
 
-專案贊助者會收集與專案成功相關的商業期望。 在專案開始時提供完整的期望集非常重要，因為這些期望集會影響整個實作過程中所做的所有決策。
+项目发起人收集与项目成功相关的业务期望。 在项目开始时提出一整套期望很重要，因为这些期望应影响在整个执行过程中作出的所有决定。
 
-預期可能包括：
+预期可能包括：
 
-* 特定KPI，例如提供的頁面增加百分比
-* 縮短發布內容的時間
-* 更高級別的目標，例如易用的介面
+* 特定KPI，例如提供的页面增长百分比
+* 缩短发布内容的时间
+* 更高级别的目标，例如易于使用的界面
 
-### 體驗設計需求 {#experience-designs-requirements}
+### 体验设计要求 {#experience-designs-requirements}
 
-解決方案整體體驗的需求。 這涵蓋個人化、跨裝置持續性和使用者體驗等因素。
+对解决方案整个体验的要求。 这包括个性化、跨设备持久性和用户体验等因素。
 
-### 體驗規格 {#experience-specifications}
+### 体验规范 {#experience-specifications}
 
-體驗設計需求的詳細資訊。
+体验设计要求的详细信息。
 
-### 外部系統與使用者相依性/系統內容 {#external-system-and-user-dependencies-system-context}
+### 外部系统和用户依赖项/系统上下文 {#external-system-and-user-dependencies-system-context}
 
-概述解決方案完整生態系統的圖表（或一組圖表）。 這應該包括外部整合、介面、相依性和網路等元素。
+一个图表（或一组图表），其中概述了解决方案的完整生态系统。 这应该包括外部集成、接口、依赖项和网络等元素。
 
-### 備援系統與程式 {#fallback-system-and-procedure}
+### 回退系统和过程 {#fallback-system-and-procedure}
 
-遞補系統的定義：
+后备系统的定义：
 
-* 在發生重大故障時必須持續運作的業務關鍵功能
-* 後援情況下所需的程式
+* 在发生严重故障时必须保持运行的关键业务功能
+* 回退时所需的流程
 
-### 已測試後援系統與程式 {#fallback-system-and-procedure-tested}
+### 已测试后备系统和过程 {#fallback-system-and-procedure-tested}
 
-後援系統的端對端測試。
+备用系统的端到端测试。
 
-### 從業務關係人處簽核後援系統 {#fallback-system-sign-off-from-business-stakeholders}
+### 备用系统从业务利益相关者处注销 {#fallback-system-sign-off-from-business-stakeholders}
 
-向業務利害關係人簽署備援系統和相關程式將確保關鍵業務功能。
+从业务利益相关者处签署备用系统和相关程序将确保关键业务功能。
 
-### KPI的可行性確認 {#feasibility-confirmation-on-kpis}
+### KPI的可行性确认 {#feasibility-confirmation-on-kpis}
 
-針對AEM和高階解決方案設計的可行性研究結果。 這些指標應與KPI比較，以確保可符合這些指標。
+针对AEM和高级解决方案设计的可行性研究结果。 应根据KPI衡量这些指标，以确保实现这些指标。
 
-### 已完成合約 {#finalized-contract}
+### 最终确定的合同 {#finalized-contract}
 
-繼續專案之前，必須先完成並簽署合約。 這是根據 [合約草稿](#contract-draft).
+在继续项目之前，需要完成并签署合同。 这是基于 [合同草稿](#contract-draft).
 
-### 利害關係人接受的解決方案功能 {#functionality-of-the-solution-accepted-by-stakeholders}
+### 利益相关者接受的解决方案功能 {#functionality-of-the-solution-accepted-by-stakeholders}
 
-確認利害關係人完全接受：
+确认利益相关者完全接受：
 
-* 解決方案功能
-* 解決方案中的任何已知問題
+* 解决方案功能
+* 解决方案中的任何已知问题
 
-### 上線排程 {#go-live-schedule}
+### 上线计划 {#go-live-schedule}
 
-活動所需的時間表和排程：
+以下活动所需活动的时间表和计划：
 
-* 準備上線
-* 實際上線
+* 准备上线
+* 实际上线
 
-### 已定義快樂路徑 {#happy-paths-defined}
+### 定义的快乐路径 {#happy-paths-defined}
 
-快樂路徑是沒有例外或錯誤條件的預設情境。 它由當一切都如預期時執行的活動順序組成。
+快乐路径是没有例外或错误条件的默认方案。 它由当一切按预期进行时所执行的一系列活动组成。
 
-### 硬體預估值 {#hardware-estimates}
+### 硬件评估 {#hardware-estimates}
 
-下列專案的初始估計：
+初步估计：
 
-* 基本AEM安裝所需的硬體
-* 任何額外需求，根據高階解決方案設計
+* 基本AEM安装所需的硬件
+* 任何附加需求，基于高级解决方案设计
 
-### 硬體將滿足需求 {#hardware-will-be-available-to-fulfill-requirements}
+### 硬件将满足要求 {#hardware-will-be-available-to-fulfill-requirements}
 
-確認所有環境都具備所需的最低硬體。
+确认所有环境都具备所需的最低硬件。
 
-### 高層次需求 {#high-level-requirements}
+### 高层次要求 {#high-level-requirements}
 
-高層級需求的定義提供系統需求的一般劃分，涵蓋下列方面：
+高层要求的定义提供了对系统要求的概括性细分，包括以下方面：
 
-* 業務流程
-* 主要系統功能
+* 业务流程
+* 主要系统功能
 
-這些函式的基本詳細資訊通常是已知的，因此本檔案不應是估計值。
+有关这些功能的基本详细信息通常是已知的，因此本文档不应作为估计值。
 
-### 高階解決方案設計 {#high-level-solution-design}
+### 高级解决方案设计 {#high-level-solution-design}
 
-高階解決方案設計說明了用於開發解決方案的架構。 架構圖提供整個系統的概觀，識別將針對產品及其介面開發的主要元件。
+高级解决方案设计说明了用于开发解决方案的体系结构。 架构图提供了整个系统的概述，确定了将为产品开发的主要组件及其界面。
 
-### 高階系統圖 {#high-level-system-map}
+### 高级系统图 {#high-level-system-map}
 
-此系統圖應提供系統非常高的層級圖。 它與「解決方案內容」的不同之處在於，它是所有相關系統的通用對應，此圖表上沒有介面。
+此系统图应提供非常高级别的系统图。 它与解决方案上下文的不同之处在于，它是所有涉及系统的广义映射，此图上没有接口。
 
-### 歷史內容結構 {#historical-content-structure}
+### 历史内容结构 {#historical-content-structure}
 
-舊式系統的內容結構定義。 這可作為參考，也可用於準備移轉策略。
+旧版系统的内容结构的定义。 此内容不仅供参考，还可在准备迁移策略时使用。
 
-### 歷史績效與歷史績效KPI {#historical-performance-and-historical-performance-kpis}
+### 历史绩效和历史绩效KPI {#historical-performance-and-historical-performance-kpis}
 
-您需要從舊版系統收集並記錄效能統計資料和效能KPI。 然後這些會用作參考點，並用於設定新解決方案的基準。
+您需要从旧版系统中收集和记录性能统计信息和性能KPI。 然后，这些指标将用作参考点并用于设定新解决方案的基准。
 
-### 識別關鍵解決方案/功能 {#identify-critical-key-solutions-functionalities}
+### 确定关键解决方案/功能 {#identify-critical-key-solutions-functionalities}
 
-業務關鍵功能清單。
+业务关键功能列表。
 
-### 實作 — 根據滲透測試結果的變更 {#implementation-changes-based-on-penetration-test-results}
+### 实施 — 基于渗透测试结果的更改 {#implementation-changes-based-on-penetration-test-results}
 
-根據滲透測試的結果，實施解決方案的所有必要變更（已簽署）。
+根据渗透测试的结果，实施解决方案的所有必要更改（已签署）。
 
-### 實作 — 自動化測試策略 {#implementation-automated-testing-strategy}
+### 实施 — 自动化测试策略 {#implementation-automated-testing-strategy}
 
-設定支援自動化測試所需的工具與流程。
+设置支持自动化测试所需的工具和流程。
 
-### 實作 — 自動化策略 {#implementation-automation-strategy}
+### 实施 — 自动化策略 {#implementation-automation-strategy}
 
-支援自動化所需的工具集和程式的設定。
+设置支持自动化所需的工具集和流程。
 
-### 實作 — 內容架構 {#implementation-content-architecture}
+### 实施 — 内容架构 {#implementation-content-architecture}
 
-實施內容架構、標籤概念和重複使用內容。
+内容体系结构的实施、标记概念和内容的重用。
 
-### 實作 — 體驗設計 {#implementation-experience-design}
+### 实施 — 体验设计 {#implementation-experience-design}
 
-實作需求以支援體驗設計。
+实施要求以支持体验设计。
 
-### 實作 — 後援系統和程式 {#implementation-fallback-system-and-procedures}
+### 实施 — 后备系统和过程 {#implementation-fallback-system-and-procedures}
 
-執行遞補系統和相關程式。
+备用系统的实施及相关程序。
 
-### 實作 — 整合 {#implementation-integration}
+### 实施 — 集成 {#implementation-integration}
 
-實施與所有必要外部系統的整合。
+实施与所有必需外部系统的集成。
 
-### 實作 — 移轉策略 {#implementation-migration-strategy}
+### 实施 — 迁移策略 {#implementation-migration-strategy}
 
-移轉以及新解決方案的內容和其他成品驗證。
+迁移以及验证新解决方案的内容和其他工件。
 
-### 實作 — 角色和許可權 {#implementation-roles-and-rights}
+### 实施 — 角色和权限 {#implementation-roles-and-rights}
 
-角色和許可權、使用者和群組的實作。
+角色和权限、用户和组的实施。
 
-### 實作 — 安全性概念 {#implementation-security-concept}
+### 实施 — 安全概念 {#implementation-security-concept}
 
-實施所有安全性措施，包括AEM預設值。
+执行所有安全措施，包括AEM默认值。
 
-### 實作 — 安全性軟體 {#implementation-security-software}
+### 实施 — 安全软件 {#implementation-security-software}
 
-實作軟體應用程式安全性。
+实现软件应用安全。
 
-### 實作 — 系統架構安全性概念 {#implementation-system-architecture-security-concept}
+### 实施 — 系统架构安全概念 {#implementation-system-architecture-security-concept}
 
-實作系統安全性。
+实现系统安全。
 
-### 實作 — URL處理 {#implementation-url-handling}
+### 实施 — URL处理 {#implementation-url-handling}
 
-實作URL處理概念。
+URL处理概念的实施。
 
-### 實作 — 工作流程 {#implementation-workflows}
+### 实施 — 工作流 {#implementation-workflows}
 
-實施設計的工作流程。
+实施设计的工作流。
 
-### 實作概念 {#implementation-concept}
+### 实施概念 {#implementation-concept}
 
-實作概念提供整個實作的指導原則。 這應該考慮到：
+实施概念为整个实施提供了指导原则。 它应考虑到：
 
 * 运营
 * 维护
-* 相容性
-* 可重複使用
+* 兼容性
+* 可重用性
 * 安全性
-* 擴充性
+* 可扩展性
 
-此概念也可以概述解決方案中使用的架構、程式庫和其他成品。
+此概念还可以概述解决方案中使用的框架、库和其他工件。
 
-### 通知Adobe支援有關上線排程 {#inform-adobe-support-about-the-go-live-schedule}
+### 通知Adobe支持人员上线计划 {#inform-adobe-support-about-the-go-live-schedule}
 
-請聯絡Adobe支援，以確保任何需要的支援都可以在上線期間啟用。
+请联系Adobe支持，以确保在上线期间可以启用所需的任何支持。
 
-### 初始體驗設計 {#initial-experience-designs}
+### 初始体验设计 {#initial-experience-designs}
 
-體驗設計的初步概念。
+体验设计的初步概念。
 
-### 整合測試 {#integration-testing}
+### 集成测试 {#integration-testing}
 
-內部和外部所有整合的測試及結果確認。
+测试所有集成（包括内部集成和外部集成），并据此确认。
 
-這應該自動化並經常執行，以確保系統穩定性。
+此操作应自动执行并经常运行，以确保系统稳定性。
 
-### 問題追蹤流程 {#issue-tracking-process}
+### 问题跟踪流程 {#issue-tracking-process}
 
-清晰的流程會記錄所有遇到的問題，並追蹤進行中的活動，以確保所有問題都得到解決。
+清晰的流程记录所有遇到的问题，并跟踪正在进行的活动，以确保所有问题都得到解决。
 
-### 問題追蹤系統和流程 {#issue-tracking-system-and-processes}
+### 问题跟踪系统和流程 {#issue-tracking-system-and-processes}
 
-追蹤系統與必要的程式，記錄所有遇到的問題，並追蹤進行中的活動，以確保所有問題都得到處理。
+一个跟踪系统和所需程序，记录遇到的所有问题并跟踪正在进行的活动，以确保解决所有问题。
 
-所有專案利害關係人都應具有存取權，以促進專案狀態的透明度。
+所有项目利害关系方都应有权进入，以促进项目状况的透明度。
 
-範例包括Atlassian JIRA和HP Quality Center。
+示例包括Atlassian JIRA和HP Quality Center。
 
-### 問題追蹤系統流程已設定並整合 {#issue-tracking-system-process-is-set-up-and-integrated}
+### 问题跟踪系统流程已设置并集成 {#issue-tracking-system-process-is-set-up-and-integrated}
 
-選取的工具已完全整合，並授與所有必要角色的存取權。
+所选工具已完全集成，并授予所有所需角色的访问权限。
 
-### 舊版系統 {#legacy-system}
+### 传统系统 {#legacy-system}
 
-對於您的專案而言，舊版系統是指將由新解決方案取代的現有技術、電腦系統或應用程式。
+对于您的项目，旧版系统是指将由新解决方案替换的现有技术、计算机系统或应用程序。
 
-應收集舊系統的詳細資訊，以便您瞭解哪些內容可以淘汰、何時淘汰，以及對於任何其他系統的影響。
+应收集旧版系统的详细信息，以便您了解哪些内容可以停用、何时停用以及对任何其他系统的影响。
 
-### 要使用的開發工具清單 {#list-of-development-tools-to-be-used}
+### 要使用的开发工具列表 {#list-of-development-tools-to-be-used}
 
-實施中將使用的工具概要；這些工具應包括：
+实施中将使用的工具概述；这些工具应包括：
 
-* 檔案工具
-* 問題追蹤工具
+* 文档工具
+* 问题跟踪工具
 * 部署工具
-* 建置工具
+* 生成工具
 
-### 需要存取Adobe支援入口網站的使用者清單 {#list-of-users-that-require-access-to-adobe-support-portal}
+### 需要访问Adobe支持门户的用户列表 {#list-of-users-that-require-access-to-adobe-support-portal}
 
-需要存取Adobe支援入口網站的所有使用者和角色的清單。
+需要访问Adobe支持门户的所有用户和角色的列表。
 
-清單通常由解決方案架構師和/或客戶IT人員組成。
+该列表通常由解决方案设计师和/或客户IT人员组成。
 
-### 記錄檔分析 {#log-file-analysis}
+### 日志文件分析 {#log-file-analysis}
 
-分析以及產生的建議，定義監控解決方案所需的記錄內容：
+分析以及由此产生的建议，定义监控解决方案所需的记录内容：
 
-* 要記錄的活動
-* 詳細程度
-* 為每個活動記錄的資訊
+* 要记录的活动
+* 粒度级别
+* 为每个活动记录的信息
 
-### 維護任務(AEM特定)已測試並啟用 {#maintenance-tasks-aem-specific-tested-and-enabled}
+### 测试并启用的维护任务(特定于AEM) {#maintenance-tasks-aem-specific-tested-and-enabled}
 
-測試並啟用AEM維護任務，例如：
+测试并启用AEM维护任务，例如：
 
-* 壓縮
-* 系統清理
-* 工作流程清除
+* 压缩
+* 系统清理
+* 工作流清除
 
-### 移轉計畫 {#migration-plan}
+### 迁移计划 {#migration-plan}
 
-記錄移轉；包括
+记录迁移；包括
 
-* 移轉時間表
-* 內容維護計畫（根據移轉策略）
+* 迁移时间线
+* 内容维护计划，根据迁移策略
 
-### 移轉策略 {#migration-strategy}
+### 迁移策略 {#migration-strategy}
 
-對應至新解決方案的現有內容、內容架構和格式的完整說明。 內容應涵蓋：
+全面介绍映射到新解决方案的现有内容、内容架构和格式。 报告应涵盖：
 
-* 儘可能提供自動移轉的技術細節
-* 要在移轉後執行的抽菸測試，以驗證移轉的內容
+* 自动化迁移的技术详细信息（如果可能）
+* 迁移后要执行的抽烟测试，以验证迁移的内容
 
-此外也應建議如何在移轉與新系統實際上線之間的期間保持內容最新（或儘可能保持最新）。 這可能表示內容凍結、雙重發佈或維護Alpha系統。
+它还应建议如何在新系统迁移至实际启用期间保持内容最新（或尽可能保持最新）。 这可能意味着内容冻结、双重发布或维护Alpha系统。
 
-### 監視 — CPU {#monitoring-cpu}
+### 监控 — CPU {#monitoring-cpu}
 
-監控解決方案使用系統CPU的情況：
-
-* 平均
-* 峰值
-
-### 監視 — 磁碟I/O {#monitoring-disk-i-o}
-
-監控解決方案的磁碟輸入和輸出速率：
+监控解决方案对系统CPU的使用：
 
 * 平均
 * 峰值
 
-### 監視 — 磁碟空間 {#monitoring-disk-space}
+### 监控 — 磁盘I/O {#monitoring-disk-i-o}
 
-監控解決方案的磁碟空間使用狀況：
+监控解决方案的磁盘输入和输出速率：
 
 * 平均
-* 一段時間的增長
+* 峰值
 
-您應透過以下方式監控使用：
+### 监控 — 磁盘空间 {#monitoring-disk-space}
 
-* 存放庫
-* 記錄檔
+监控解决方案对磁盘空间的使用：
 
-### 監視 — 外部系統 {#monitoring-external-system-s}
+* 平均
+* 随时间推移的增长
 
-監控解決方案與外部系統之間的任何連線：
+您应通过以下方式监控使用情况：
+
+* 存储库
+* 日志文件
+
+### 监控 — 外部系统 {#monitoring-external-system-s}
+
+监控解决方案与外部系统之间的任何连接：
 
 * 流量率
 * 峰值
-* 穩定性
+* 稳定性
 
-### 監視 — 網路頻寬 {#monitoring-network-bandwidth}
+### 监控 — 网络带宽 {#monitoring-network-bandwidth}
 
-監視解決方案對網路頻寬的使用情況：
+监控解决方案的网络带宽使用情况：
 
-* 平均流量速率
+* 平均通信速率
 * 峰值
-* 穩定性
+* 稳定性
 
-### 監視 — 請求 {#monitoring-requests}
+### 监控 — 请求 {#monitoring-requests}
 
-監控對解決方案提出的請求。
+监控对解决方案发出的请求。
 
-### 監控 — 安全性點 {#monitoring-security-points}
+### 监控 — 安全点 {#monitoring-security-points}
 
-在定義的安全性點進行監視。
+在定义的安全点进行监视。
 
-### 監視 — 系統 {#monitoring-system}
+### 监控 — 系统 {#monitoring-system}
 
-監視整個系統；例如：
+监控整个系统；例如：
 
 * 可用性
-* 平均效能
-* 效能尖峰
-* 警報
+* 平均性能
+* 性能峰值
+* 警报
 
-### 監控 — 臨界值和干預 {#monitoring-threshold-and-intervention}
+### 监控 — 阈值和干预 {#monitoring-threshold-and-intervention}
 
-監控解決方案的已定義臨界值，以及實施干預步驟以降低負載。
+监控解决方案定义的阈值，并执行干预步骤以减少负载。
 
-### 監控概念 {#monitoring-concept}
+### 监控概念 {#monitoring-concept}
 
-要套用至解決方案的監控概念；包含：
+要应用于解决方案的监控概念；包括：
 
-* AEM標準監視
-* 系統監視
-* 客戶特定的監控需求
+* AEM标准监控
+* 系统监测
+* 特定于客户的监控要求
 
-### 監控潛在的弱點 {#monitoring-potential-weak-points}
+### 监测潜在弱点 {#monitoring-potential-weak-points}
 
-應識別並定義可能失敗的特定點。 與這些監督任務相關的任何監督任務也應加以定義。
+应确定和定义可能会发生失败的特定点。 任何与这些任务相关的监控任务也应进行定义。
 
-例如：
+示例包括（其中包括）：
 
-* 重要工作流程
-* 交易處理
-* 整合點
+* 关键工作流
+* 事务处理
+* 集成点
 
-### 與系統工程師溝通的監控原則 {#monitoring-policy-communicated-to-system-engineer}
+### 监视策略已通知系统工程师 {#monitoring-policy-communicated-to-system-engineer}
 
-確保系統工程師和營運人員瞭解並瞭解任何監控政策。
+确保系统工程师和操作人员知道并了解任何监控策略。
 
-### 監控報告 — 結構已就緒 {#monitoring-reports-structure-in-place}
+### 监控报告 — 结构已就绪 {#monitoring-reports-structure-in-place}
 
 定义：
 
-* 何時應產生監控報告
-* 應傳送給誰
+* 何时应生成监控报告
+* 他们应该被送到
 
-### 作業任務檔案 {#operational-tasks-documentation}
+### 运行任务文档 {#operational-tasks-documentation}
 
-所有作業任務都已記錄下來，並定義其頻率。
+记录所有操作任务，并定义其频率。
 
-### 作業手冊 {#operations-manual}
+### 操作手册 {#operations-manual}
 
-手動提供成功運作和維護解決方案所需的所有資訊：
+手动提供成功运行和维护解决方案所需的所有信息：
 
-* 所有作業任務
-* 主要聯絡人
-* 部署計畫
-* 部署前/部署後檢查清單
-* 任何其他關鍵任務
+* 所有运行任务
+* 关键联系人
+* 部署计划
+* 部署前/部署后核对清单
+* 任何其他关键任务
 
-同時也應詳細說明以下專案的實作概念：
+还应详细说明以下项目的实施概念：
 
-* 符合效能KPI
-* 擴展解決方案以繼續符合這些KPI
+* 满足性能KPI
+* 扩展解决方案以继续满足这些KPI
 
-### 封裝已準備 {#package-prepared}
+### 已准备包 {#package-prepared}
 
-軟體套件已建置並提供，可供部署。
+构建并交付的软件包可随时部署。
 
-### 滲透測試 {#penetration-tests}
+### 渗透测试 {#penetration-tests}
 
-滲透測試（非正式地稱為筆型測試）是指對電腦系統進行的攻擊，會尋找安全性弱點，並可能存取電腦的功能與資料。
+渗透测试（非正式地称为笔测试）是指对计算机系统的攻击，它会寻找安全弱点，并可能获得对计算机功能和数据的访问权限。
 
-### 滲透測試 — 通過 {#penetration-tests-passed}
+### 渗透测试 — 通过 {#penetration-tests-passed}
 
-所有必要條件都會通過。
+所有必需的条件均已通过。
 
-### 滲透測試 — 結果 {#penetration-tests-results}
+### 渗透测试 — 结果 {#penetration-tests-results}
 
-為企業建立的報表，說明滲透測試結果。
+为企业创建的报告，说明渗透测试结果。
 
-### 效能與擴充性概念 {#performance-and-scalability-concept}
+### 性能和可扩展性概念 {#performance-and-scalability-concept}
 
-概念性檔案，說明如何確保實施符合效能KPI，以及如何擴展解決方案以持續符合這些KPI。
+有关如何确保您的实施满足性能KPI以及如何扩展解决方案以使其继续满足这些KPI的概念性文档。
 
-### 效能基準 {#performance-benchmark}
+### 性能基准 {#performance-benchmark}
 
-效能基準是用來定義效能測試、耐久性測試和監控。 其做法是評估解決方案和系統硬體的效能特性。
+性能基准用于定义性能测试、耐久性测试和监控。 它通过评估解决方案和系统硬件的性能特征来实现这一点。
 
-### 效能KPI {#performance-kpis}
+### 性能KPI {#performance-kpis}
 
-這些會定義測量系統效能所需的關鍵績效指標(KPI)。 某些範例包括頁面載入時間、伺服器回應時間和資料庫查詢效能。
+这些指标定义了衡量系统绩效所需的关键绩效指标(KPI)。 一些示例包括页面加载时间、服务器响应时间和数据库查询性能。
 
-### 效能測試 — 報表 {#performance-tests-report}
+### 性能测试 — 报表 {#performance-tests-report}
 
-為企業建立的報告，詳細說明效能測試的結果。
+为业务创建的报告，详细说明性能测试的结果。
 
-### 效能測試 — 結果符合效能KPI {#performance-tests-results-match-performance-kpis}
+### 性能测试 — 结果匹配性能KPI {#performance-tests-results-match-performance-kpis}
 
-結果必須符合定義的KPI和效能期望。
+结果必须匹配定义的KPI和性能预期。
 
-### 以人物為基礎的測試概念 {#persona-based-testing-concept}
+### 基于角色的测试概念 {#persona-based-testing-concept}
 
-以角色為基礎的測試是根據體驗設計中所概述的不同角色的方法。 它也會測試帳戶及其相關許可權層級。
+基于角色的测试是基于体验设计中概述的不同角色的方法。 它还会测试帐户及其相关权限级别。
 
-這通常用於使用者驗收測試(UAT)。
+这通常用于用户验收测试(UAT)。
 
-### POC已根據需求檔案測試及驗證 {#poc-tested-and-verified-against-requirement-documentation}
+### 根据需求文档测试和验证POC {#poc-tested-and-verified-against-requirement-documentation}
 
-概念驗證(POC)會根據需求來評估，以確保兩者保持一致。
+概念验证(POC)根据要求进行衡量，以确保两者保持一致。
 
-### 部署後檢查清單 {#post-deployment-checklist}
+### 部署后核对清单 {#post-deployment-checklist}
 
-檢查清單可定義每次部署後要執行的一系列檢查與工作。
+一个清单，用于定义每次部署后要执行的一系列检查和任务。
 
-### 部署前檢查清單 {#pre-deployment-checklist}
+### 部署前检查清单 {#pre-deployment-checklist}
 
-一份檢查清單，可定義每次部署前要執行的一系列檢查與工作。
+一个清单，用于定义在每次部署之前要执行的一系列检查和任务。
 
-### 生產環境基準效能測試 {#production-environment-baseline-performance-tests}
+### 生产环境基线性能测试 {#production-environment-baseline-performance-tests}
 
-通常在AEM的標準安裝上執行基準測試。 然後，這會作為測試實作與硬體的基準。
+通常对AEM的标准安装运行基准测试。 然后，可将此基准用作测试实施和硬件的基准。
 
-### 生產環境已就緒 {#production-environment-ready}
+### 生产环境已就绪 {#production-environment-ready}
 
-確認生產環境已準備就緒，並具備自動化部署。
+确认生产环境已准备就绪，并且已实施自动部署。
 
-### 從業務利害關係人處簽核生產資料 {#production-sign-off-from-business-stakeholders}
+### 从业务利益相关者处签发生产许可证 {#production-sign-off-from-business-stakeholders}
 
-上線進入生產環境之前，必須授與生產簽核(PSO)。 這是審查將投入生產的版本的結果，包括所有已知問題。 登出會作為「上線」排程的一部分提供。
+在投入生产环境之前，必须授予生产注销(PSO)权限。 这是对将投入生产的版本以及任何已知问题进行的审查的结果。 注销作为上线计划的一部分提供。
 
-### 生產登出程式與原則 {#production-sign-off-process-and-policy}
+### 生产注销流程和策略 {#production-sign-off-process-and-policy}
 
-將套件移至生產環境之前，取得生產簽署所需的原則和程式。
+在将包移动到生产环境之前获得生产注销所需的策略和流程。
 
-### 專案通訊計畫 {#project-communication-plan}
+### 项目沟通计划 {#project-communication-plan}
 
-為業務利害關係人和專案團隊定義溝通計畫。
+为业务利益相关者和项目团队定义沟通计划。
 
-### 專案工作 — 最終估計 {#project-efforts-final-estimates}
+### 项目工作 — 最终估计 {#project-efforts-final-estimates}
 
-此 [初始預估](#project-efforts-initial-estimates) 是高水準的，並根據實作的高水準要求製作。
+此 [初步估计](#project-efforts-initial-estimates) 高水平，并根据实施的高水平要求制定。
 
-這些資料現在經過審查、完善和擴充，以提供最終估計。 預估應由每個適當的專案主管提供，包括專案管理、諮詢、架構、測試和開發。
+这些报告现在经过审查、完善和扩充，以提供最终估计数。 应由每个适当的项目牵头方提供估计数，包括项目管理、咨询、架构、测试和开发。
 
-這些預估用於資源配置與預算編列。
+该等估计用于资源配置及预算编制。
 
-### 專案工作 — 初始估計 {#project-efforts-initial-estimates}
+### 项目工作 — 初步估计 {#project-efforts-initial-estimates}
 
-初始估計是高水準的，並根據實施的高水準要求進行。 這將在稍後階段中檢閱和改良。
+初步估计数数额较大，而且是根据执行工作的高额要求作出的。 这将在以后阶段进行审查和完善。
 
-### 專案組織 {#project-organization}
+### 项目组织 {#project-organization}
 
-概述專案和團隊的組織與報告結構的必要檔案。
+概述项目和团队的组织和报告结构所需的文档。
 
-通常會採用或包含圖表形式，以視覺化方式呈現時間表與責任的概觀。 有許多工具可協助解決此問題。
+通常采用图表形式或包含图表，以直观地概述时间表和职责。 有许多工具可以帮助解决此问题。
 
-### 專案範圍檔案 {#project-scope-document}
+### 项目范围文档 {#project-scope-document}
 
-專案範圍檔案需要您識別並記錄以下清單：
+项目范围文档要求您确定并记录以下列表：
 
-* 特定專案目標
-* 交付專案
+* 特定项目目标
+* 交付成果
 * 功能
 * 函数
 * 任务
 * 截止日期
-* 計畫付出
+* 计划工作
 
-它涵蓋了交付專案所必須達成的目標以及必須完成的工作
+它涵盖了交付项目所必须实现的目标以及必须完成的工作
 
-### 定義步調內的專案狀態報表 {#project-status-reports-within-a-defined-cadence}
+### 定义的节奏内的项目状态报表 {#project-status-reports-within-a-defined-cadence}
 
-專案狀態報告會根據商定的排程並以要求的格式傳送。
+按照商定的时间表和要求的格式交付项目状态报告。
 
-### 概念證明(POC) {#proof-of-concept-poc}
+### 概念验证(POC) {#proof-of-concept-poc}
 
-概念證明(POC)為解決方案實作有限範圍的功能。
+概念验证(POC)为解决方案实施了有限范围的功能。
 
-其目標應該是證明解決方案的可行性、確認其可達成所需目的，並證明其使用潛力。
+目的是要说明方案的可行性，验证方案能够达到预期目的，证明方案具有潜在的应用潜力。
 
-### 清除規則 {#purge-rules}
+### 清除规则 {#purge-rules}
 
-AEM會維護多個版本的資產和內容。 清除規則的設計及設定是定期移除舊版本，以維持存放庫運作狀況及大小。
+AEM维护多个版本的资源和内容。 清除规则的设计和配置可定期删除旧版本，以维护存储库的运行状况和大小。
 
-### 品質報表格式與步調 {#quality-report-format-and-cadence}
+### 质量报表格式和节奏 {#quality-report-format-and-cadence}
 
-定義品質報表的必要內容和格式，以及必須傳遞的頻率。
+定义质量报告的所需内容和格式，以及必须提交的频率。
 
-### 協調發行 {#release-coordinated}
+### 协调的发布 {#release-coordinated}
 
-專案經理會協調發行到生產環境所需的所有角色。
+项目经理协调发布到生产环境所需的所有角色。
 
 ### 发行说明 {#release-notes}
 
-發行說明是此版本檔案的一部分。 發行說明應涵蓋：
+发行说明是此版本文档的一部分。 发行说明应涵盖：
 
-* 必備條件
+* 先决条件
 * 包含的要求
-* 已解決的問題
-* 版本中的已知問題
+* 已解决的问题
+* 版本中的已知问题
 
-它可與Runbook搭配使用，以執行安裝前和安裝後步驟及檢查。
+它与Runbook一起使用来执行安装前和安装后步骤和检查。
 
 >[!NOTE]
 >
->如需範例，請參閱 [AEM發行說明](/help/release-notes/release-notes.md).
+>有关示例，请参阅 [AEM发行说明](/help/release-notes/release-notes.md).
 
-### 在生產環境中執行的版本 {#release-running-on-production-environment}
+### 在生产环境中运行的版本 {#release-running-on-production-environment}
 
-最終版本正在執行中，且已在生產中啟用。
+最终版本正在运行并在生产中处于活动状态。
 
-### 相關合約條款 {#relevant-contract-terms}
+### 相关合同条款 {#relevant-contract-terms}
 
-您應該標示與專案實作相關的特定合約條款，例如合約里程碑、發票期間或員工需求。
+您应突出显示与项目实施相关的具体合同条款；例如合同里程碑、发票期限或员工要求。
 
-### 報告步調 {#reporting-cadence}
+### 报告节奏 {#reporting-cadence}
 
-與客戶一起定義傳送給他們的報表頻率。
+与客户一起，定义提交给他们的报表的频率。
 
-### 存放庫最佳化 {#repository-optimization}
+### 存储库优化 {#repository-optimization}
 
-tar檔案中的資料永遠不會被覆寫，即使只更新現有資料時，磁碟使用量也會增加。
+tar文件中的数据永远不会被覆盖，即使只更新现有数据，磁盘使用量也会增加。
 
-為了對抗存放庫規模與日俱增的影響，我們已實施最佳化策略來移除過時的資料。
+为了应对存储库不断增长的大小，我们实施了一项优化策略来删除过时数据。
 
-### 請求在Adobe支援入口網站中設定專案區段 {#request-for-setting-up-project-section-in-adobe-support-portal}
+### 请求在Adobe支持门户中设置项目部分 {#request-for-setting-up-project-section-in-adobe-support-portal}
 
-在Adobe支援入口網站中設定專案的正式請求。
+在Adobe支持门户中设置项目的正式请求。
 
-### 需求檔案 {#requirements-documentation}
+### 要求文档 {#requirements-documentation}
 
-這組檔案涵蓋功能性需求和非功能性需求，以及預估的工作量。
+这一组文档涵盖了功能性和非功能性要求，以及估计的工作量。
 
-### 可支援Go Live的資源 {#resources-available-to-support-go-live}
+### 可用支持资源上线 {#resources-available-to-support-go-live}
 
-確定上線所需的所有角色都已配備人員且可供使用。
+确保上线所需的所有角色都配备了人员并且可用。
 
-### 風險評估 {#risk-assessment}
+### 风险评估 {#risk-assessment}
 
-風險評估由客戶的IT及/或安全部門執行。
+风险评估由客户的IT和/或安全部门执行。
 
-它會評估專案的技術和業務風險。 解決方案需要進行評估，以確保符合安全性原則。
+评估项目的技术和业务风险。 该解决方案需要进行评估以确保符合安全策略。
 
-### 風險降低計畫 {#risk-mitigation-plan}
+### 风险缓解计划 {#risk-mitigation-plan}
 
-風險緩解計畫包含風險評估。 它們共同涵蓋：
+风险缓解计划包括风险评估。 它们共同涵盖：
 
-* 已識別的風險
-* 如果這些風險在實施中出現，可使用的解決方案
+* 已识别风险
+* 如果在实施中出现这些风险，可采用哪些可能的解决方案
 
 ### ROI期望 {#roi-expectations}
 
-定義附加至解決方案的投資報酬率(ROI)期望。
+定义附加到该解决方案的投资回报率(ROI)预期。
 
-它們旨在定義與估計投資相關的預期收益/利潤，以經濟方式指出解決方案的效率。
+该等准则旨在透过界定与估计投资有关之预期利益/溢利以经济方式显示解决方案之效率。
 
-### 角色和許可權概念 {#roles-and-rights-concept}
+### 角色和权限概念 {#roles-and-rights-concept}
 
-與新應用程式所需的角色和存取權相關概念的詳細規格，包括以下高階大綱：
+与新应用程序所需的角色和访问权限相关的概念的详细规范，包括以下内容的高级概述：
 
 * 角色
 * 组
 * 用户
-* 許可權
-* 以及使用者管理與布建
+* 权限
+* 以及用户管理和配置
 
-### 角色和許可權概念符合安全性准則 {#roles-and-rights-concept-meets-security-guidelines}
+### 角色和权限概念符合安全准则 {#roles-and-rights-concept-meets-security-guidelines}
 
-檢閱角色和許可權概念，以確保其符合安全性原則。
+审查“角色”和“权限”概念，确保其符合安全策略。
 
-### 角色與許可權規格 {#roles-and-rights-specification}
+### 角色和权限规范 {#roles-and-rights-specification}
 
-根據角色和許可權概念的詳細規格。
+基于角色和权限概念的详细规范。
 
-### 安全性架構Recommendations {#security-architecture-recommendations}
+### 安全架构Recommendations {#security-architecture-recommendations}
 
-與軟體與硬體架構安全性相關的Recommendations。
+Recommendations与软件和硬件架构的安全性相关。
 
-### 基於安全性的編碼准則 {#security-based-coding-guidelines}
+### 基于安全的编码准则 {#security-based-coding-guidelines}
 
-這些准則會根據下列安全性需求，定義應如何完成開發編碼：
+这些准则根据以下安全要求定义了应如何进行开发编码，例如：
 
-* 命名慣例
-* 資料庫
-* 框架指南
-* API使用狀況
+* 命名约定
+* 库
+* 框架准则
+* API使用情况
 
-### 安全性檢查清單 {#security-checklist}
+### 安全核对清单 {#security-checklist}
 
-專案特定的專案檢查清單，根據安全性概念以及確保解決方案合規性所需的任何其他原則。
+项目特定的项目核对清单，基于安全概念以及确保解决方案合规性所需的任何其他策略。
 
-這通常也會包含在Runbook中的部署後步驟中。
+通常，这也包含在Runbook中的部署后步骤中。
 
-### 安全性概念 {#security-concept}
+### 安全概念 {#security-concept}
 
-定義並記錄應用程式、架構和基礎結構所需之安全性設定的詳細資訊。
+定义并记录应用程序、架构和基础架构所需安全配置的详细信息。
 
-### 安全性概念草稿 {#security-concept-draft}
+### 安全概念草稿 {#security-concept-draft}
 
-涵蓋下列專案之安全性設定的高階大綱：
+概要介绍以下项目的安全设置：
 
-* 應用計畫
+* 应用程序
 * 架构
-* 基礎結構
+* 基础结构
 
-### 列出並評估安全性問題 {#security-issues-listed-and-assessed}
+### 列出并评估安全问题 {#security-issues-listed-and-assessed}
 
-列出並評估解決方案的所有安全性問題，包括工作量估算。
+列出并评估解决方案的所有安全问题；包括工作量估计。
 
-### 從業務關係人簽核安全性 {#security-sign-off-from-business-stakeholders}
+### 从业务利益相关者处签发安全信息 {#security-sign-off-from-business-stakeholders}
 
-向利害關係人簽署，以確保安全性實作符合政策和期望。
+从利益相关者处获得批准，以确保安全实施符合策略和期望。
 
-### 設定支援流程 {#set-up-support-processes}
+### 设置支持流程 {#set-up-support-processes}
 
-設定適當的必要支援程式。
+设置所需的支持流程。
 
-### 第三方系統的SLA {#slas-for-third-party-systems}
+### 第三方系统的SLA {#slas-for-third-party-systems}
 
-確保服務等級協定(SLA)可供使用，並傳達給開發和營運團隊，以便在實施和支援期間使用。
+确保服务级别协议(SLA)可用，并传达给开发和运营团队，以便在实施和支持期间使用。
 
-### 煙霧測試概念 {#smoke-test-concept}
+### 烟雾测试概念 {#smoke-test-concept}
 
-煙霧測試包含一組已定義的步驟，這些步驟會測試解決方案的主要功能，以確保解決方案的基本操作和功能。
+烟雾测试由一组已定义的步骤组成，这些步骤测试解决方案的关键功能，以确保解决方案的基本操作和功能。
 
-安裝或部署後，它們會在任何環境中執行。
+安装或部署后，可在任何环境中执行它们。
 
-### 針對系統驗證執行的冒煙測試 {#smoke-tests-executed-for-system-validation}
+### 为验证系统而执行的冒烟测试 {#smoke-tests-executed-for-system-validation}
 
-煙霧測試應在所有系統上執行，以確保解決方案的基本功能在安裝或部署到任何環境時正確運作。
+应在所有系统上运行烟雾测试，以确保解决方案的基本功能在安装或部署到任何环境时正确运行。
 
-### 軟體架構策略 {#software-architecture-strategy}
+### 软件体系结构策略 {#software-architecture-strategy}
 
-軟體架構的高階策略；包括服務、servlet、架構和其他實作決定。
+软件体系结构的高级战略；包括服务、servlet、框架和其他实施决策。
 
-### 已建立解決方案稽核委員會並設定會議步調 {#solution-review-board-established-and-meeting-cadence-set}
+### 解决方案审查委员会已成立，会议节奏已设定 {#solution-review-board-established-and-meeting-cadence-set}
 
-解決方案稽核委員會通常由客戶利害關係人組成。
+解决方案审查委员会通常由客户利益相关者组成。
 
-董事會定期舉行會議，持續檢討目前限定範圍之要求及相關規格。 目標是確保符合成功定義和標準，並為需求開發提供意見。
+董事会定期举行会议，以持续检讨目前界定的规定及有关规格。 目的是确保与成功定义和标准保持一致，并为制定要求提供投入。
 
-### 解決方案Runbook {#solution-runbook}
+### 解决方案Runbook {#solution-runbook}
 
-解決方案的安裝指示，以及安裝時所要執行的基本操作工作。
+解决方案的安装说明，以及在安装时执行的基本操作任务。
 
-### 解決方案簽核與接受程式 {#solution-sign-off-and-acceptance-process}
+### 解决方案签核和接受流程 {#solution-sign-off-and-acceptance-process}
 
-簽核與接受程式會概述必須先滿足的條件，才能將解決方案發行至生產環境。
+签署和接受流程概述了在解决方案发布到生产环境中之前必须满足的标准。
 
-它也可以作為合約里程碑。
+它还可以作为合同里程碑。
 
 ### 特殊功能概念 {#special-functionality-concept}
 
-任何在AEM平台上視為正常開發範圍以外的特殊功能的初始概念。
+任何被认为不属于AEM平台正常开发范围的特殊功能的初始概念。
 
-### 特殊功能規格 {#special-functionality-specification}
+### 特殊功能规范 {#special-functionality-specification}
 
-任何在AEM平台上被視為超出正常開發範圍的特殊功能的詳細資訊。
+任何被认为不属于AEM平台正常开发范围的特殊功能的详细信息。
 
-### 規格指南 {#specification-guidelines}
+### 规范准则 {#specification-guidelines}
 
-客戶關於應如何完成規格的任何准則。
+客户关于如何完成规范的任何准则。
 
-### 定義並傳達規格複查與核准流程 {#specification-review-and-approval-process-defined-and-communicated}
+### 已定义和传达的规格审查和批准流程 {#specification-review-and-approval-process-defined-and-communicated}
 
-客戶簽署規格的明確程式應已就緒。 此程式可確保需求範圍的明確和穩固。
+应制定明确的流程，让客户签发规格。 此过程确保要求范围的明确和固定。
 
-### 為AEM管理員培訓選取的人員 {#staff-selected-for-aem-administrator-training}
+### 为AEM管理员培训选定的员工 {#staff-selected-for-aem-administrator-training}
 
-需要培訓以管理解決方案的內部員工。
+需要培训以管理解决方案的内部员工。
 
-### 為作者和一般使用者訓練所選取的工作人員 {#staff-selected-for-author-and-end-user-training}
+### 为作者和最终用户培训选定的员工 {#staff-selected-for-author-and-end-user-training}
 
-需要培訓才能撰寫解決方案的內部員工。
+需要培训以编写解决方案的内部员工。
 
-### 利害關係人 {#stakeholders}
+### 利益相关者 {#stakeholders}
 
-利害關係人是專案中擁有重大利益的關鍵人員和/或角色。 部分人員將會貢獻專案預算。
+利益相关者是对该项目具有重大利益的关键人员和/或角色。 有些国家将为项目预算捐款。
 
-利害關係人可以是內部和/或外部的。
+利益相关者可以是内部和/或外部的。
 
-### 利害關係人知道成功定義和標準 {#stakeholders-are-aware-of-success-definitions-and-criteria}
+### 利益相关者了解成功定义和标准 {#stakeholders-are-aware-of-success-definitions-and-criteria}
 
-確認實際實作團隊以外的所有利害關係人皆瞭解：
+确认实际实施团队之外的所有利益相关者都知道：
 
-* 成功的定義
-* 成功標準
+* 成功定义
+* 成功标准
 
-### 利害關係人瞭解專案和期望 {#stakeholders-understand-project-and-expectations}
+### 利益相关者了解项目和期望 {#stakeholders-understand-project-and-expectations}
 
-確認實際實作團隊以外的所有利害關係人符合整體專案和期望，包括專案團隊內部和客戶內部的。
+确认实际实施团队之外的所有利益相关者与整个项目和期望一致，无论是项目团队内部还是客户内部。
 
-### 狀態報表格式定義 {#status-report-format-definition}
+### 状态报表格式定义 {#status-report-format-definition}
 
-狀態報告是重要的溝通工具。 格式應與客戶的任何報告要求一致。
+状态报告是沟通的重要工具。 格式应与客户的任何报告要求保持一致。
 
-### 成功標準與定義 {#success-criteria-and-definition}
+### 成功标准和定义 {#success-criteria-and-definition}
 
-客戶、專案贊助者和專案經理或顧問應指定：
+客户、项目发起人和项目经理或顾问应指定：
 
-* 決定專案成功結果的因素。
-* 符合成功定義所需的特定條件。
+* 决定项目成功结果的因素。
+* 满足成功定义所需的具体标准。
 
-這些用來確保符合成功標準：
+它们用于确保满足成功标准：
 
-* 作為KPI的基礎。
-* 在整個實作中做出決定時。
+* 作为KPI的基础。
+* 在整个实施过程中做出决策时。
 
-### 支援驗證報告的問題 {#support-in-validation-of-reported-issues}
+### 支持验证报告的问题 {#support-in-validation-of-reported-issues}
 
-Quality Lead的部分職責是確保有資源可在測試時支援任何使用者。 例如，在測試時協助使用者、在報告問題時協助使用者，以及協助根據測試環境驗證問題。
+Quality Lead的部分职责是确保有资源在测试时支持任何用户。 例如，在测试时帮助用户、在报告问题时帮助用户，以及帮助根据测试环境验证问题。
 
-### 支援程式與存取Adobe支援入口網站 {#support-processes-and-access-to-adobe-support-portal}
+### 支持流程和访问Adobe支持门户 {#support-processes-and-access-to-adobe-support-portal}
 
-存取Adobe支援入口網站對於提交實施期間可能出現的任何產品相關問題的票證至關重要。
+访问Adobe支持门户对于提交有关实施期间可能出现的任何基于产品的问题的票证至关重要。
 
-應該將存取權分配給團隊的主要成員。
+应将访问权限分配给团队的关键成员。
 
-### 系統架構定義 {#system-architecture-definition}
+### 系统架构定义 {#system-architecture-definition}
 
-針對解決方案所有環境的架構初始提案和定義。
+针对解决方案所有环境的初始建议书和体系结构定义。
 
-### 系統架構檔案 {#system-architecture-documentation}
+### 系统架构文档 {#system-architecture-documentation}
 
-詳細說明系統架構的檔案；包括所有環境的介面、網路位置和整合，以及其他資訊。
+详细说明系统架构的文档；包括所有环境的接口、网络位置和集成以及其他信息。
 
-### 系統架構安全性概念 {#system-architecture-security-concept}
+### 系统架构安全概念 {#system-architecture-security-concept}
 
-有關如何使系統架構符合任何安全性原則的高層級概述。 內容包括：
+有关如何使系统体系结构符合任何安全策略的简要概述。 这可能包括：
 
-* 防火牆和防火牆規則
-* 安全性區域
-* 本地和一般流量管理員
-* 網頁伺服器
+* 防火墙和防火墙规则
+* 安全区域
+* 本地和常规流量管理器
+* Web服务器
 * 代理和反向代理
 
-### 已識別及驗證的系統風險因素 {#system-risk-factors-identified-and-verified}
+### 系统风险因素确定和验证 {#system-risk-factors-identified-and-verified}
 
-識別並評估在風險評估（或其他審查）中發現的任何風險因素：
+任何在风险评估（或其他检讨）中发现的风险因素会被识别及评估：
 
-* 每個風險中所隱含的風險等級
-* 以及解決這些變更所需的實作變更預估工作量。
+* 每一种风险所隐含的风险水平
+* 以及对实施进行任何必要更改所需的估计工作量。
 
-### 團隊知道成功定義和條件 {#team-is-aware-of-success-definitions-and-criteria}
+### 团队了解成功定义和标准 {#team-is-aware-of-success-definitions-and-criteria}
 
-確認整個團隊都知道成功定義和標準。
+确认整个团队都了解成功定义和标准。
 
-### 團隊知道溝通計畫 {#team-is-aware-of-the-communication-plan}
+### 团队了解通信计划 {#team-is-aware-of-the-communication-plan}
 
-確認團隊的所有成員都知道誰應該和客戶溝通，以及溝通方式和時間的詳細資訊。
+确认团队的所有成员都知道谁应该与客户沟通，以及沟通方式和时间的详细信息。
 
-### 團隊瞭解專案和期望 {#team-understands-project-and-expectations}
+### 团队了解项目和期望 {#team-understands-project-and-expectations}
 
-符合整體專案和期望，包括專案團隊和客戶內部的。
+与项目团队和客户的整体项目和期望保持一致。
 
-### 技術需求 {#technical-requirements}
+### 技术要求 {#technical-requirements}
 
-這些需求是支援解決方案的服務之技術實作所特有的。
+这些要求特定于支持该解决方案的服务的技术实施。
 
-### 技術風險因素已驗證 {#technical-risk-factors-verified}
+### 技术风险因素已验证 {#technical-risk-factors-verified}
 
-識別及驗證潛在的技術風險。 技術風險可能包括：
+识别并验证潜在的技术风险。 技术风险可能包括：
 
-* 跨網站指令碼
-* 面向一般使用者的輸入欄位
-* 基礎結構
-* 技術時代
-* 整合數量
-* 和相依性
+* 跨站点脚本
+* 面向最终用户的输入字段
+* 基础结构
+* 技术时代
+* 集成数量
+* 和依赖关系
 
-### 技術規格 {#technical-specification}
+### 技术规范 {#technical-specification}
 
-技術規格涵蓋（及其他資訊中）：
+技术规范涵盖（及其他信息中）：
 
-* 介面
-* 設定
+* 界面
+* 配置
 * API
-* 支援解決方案需求的服務
+* 支持解决方案要求的服务
 
-### 範本規格 {#template-specification}
+### 模板规范 {#template-specification}
 
-所需範本的規格。 這些專案應涵蓋詳細資訊，包括parsys、Blueprint和繼承對應等。
+所需模板的规范。 这些内容应涵盖详细信息，包括parsys、Blueprint和继承映射等。
 
-這些規格是以業務需求和體驗需求為基礎。
+这些规范基于业务要求和体验要求。
 
-### 測試案例 {#test-cases}
+### 测试用例 {#test-cases}
 
-測試案例會具體說明執行解決方案功能測試所需的詳細步驟。
+测试案例具体说明了执行解决方案功能测试所需的详细步骤。
 
-### 測試內容 {#test-content}
+### 测试内容 {#test-content}
 
-測試內容應儘可能接近生產內容。 其選擇範圍必須足夠廣，以允許測試所有情境。
+测试内容应尽可能接近生产内容。 它的选择范围必须足够大，以允许测试所有场景。
 
-### 測試環境就緒 {#test-environment-ready}
+### 测试环境就绪 {#test-environment-ready}
 
-確保測試環境已準備就緒，並具備自動化部署，以確保所有發行候選程式碼都可供測試的最新。
+确保测试环境已准备就绪，并且已实施自动化部署，以确保所有候选发行版代码都是最新的以供测试。
 
-### 測試報告 {#test-reports}
+### 测试报告 {#test-reports}
 
-詳細說明測試結果的報告；包括：
+详细说明测试结果的报告，包括：
 
-* 產生的瑕疵
-* 已執行測試案例的狀態
-* 其他品質相關主題
+* 产生的缺陷
+* 已执行测试用例的状态
+* 其他与质量相关的主题
 
-請注意：
+应当指出：
 
-* 任何測試團隊都應被允許保持中立並交付測試結果。
-* 專案經理有責任評估結果的任何影響，並決定適當的行動。
+* 应允许任何测试团队保持中立并交付测试结果。
+* 项目经理有责任评估结果的任何影响并决定适当的行动。
 
-### 測試套裝 {#test-suite}
+### 测试套件 {#test-suite}
 
-選擇自動化套裝和工具。 這些將用於自動化測試，包括用例測試。
+选择自动化套件和工具。 这些内容将用于自动进行测试，包括用例的测试。
 
-### 測試工具套裝已選取 {#test-tooling-suite-selected}
+### 已选择测试工具套件 {#test-tooling-suite-selected}
 
-為使用案例自動化和其他測試執行任務選取的自動化套件和工具。
+为用例自动化和其他测试执行任务选择的自动化套件和工具。
 
-### 測試概念 {#testing-concept}
+### 测试概念 {#testing-concept}
 
-測試概念是專案測試的高層級概述；包括QA、UAT、效能、安全性和整合測試。
+测试概念是项目测试的高层次概述；包括QA、UAT、性能、安全性和集成测试。
 
-### 測試計畫 {#testing-plans}
+### 测试计划 {#testing-plans}
 
-這些計畫會更詳細地概述每個開發階段的測試執行，並以 [測試策略](#testing-strategy).
+这些计划更详细地概述了每个开发阶段的测试执行情况，并基于 [测试策略](#testing-strategy).
 
-### 測試範圍 {#testing-scope}
+### 测试范围 {#testing-scope}
 
-這些需求是支援解決方案的服務之技術實作所特有的。
+这些要求特定于支持该解决方案的服务的技术实施。
 
-### 測試策略 {#testing-strategy}
+### 测试策略 {#testing-strategy}
 
-測試策略概述品質保證和使用者驗收測試的高層級策略。 這包括時間表、報告步調和執行。
+测试策略概述了质量保证和用户验收测试的高级策略。 这包括时间线、报告节奏和执行。
 
-### 協力廠商整合概念 {#third-party-integration-concept}
+### 第三方集成概念 {#third-party-integration-concept}
 
-與協力廠商系統整合的架構和系統層級概念。
+与第三方系统集成的架构和系统级别概念。
 
-### 協力廠商整合規格 {#third-party-integration-specification}
+### 第三方集成规范 {#third-party-integration-specification}
 
-協力廠商系統支援的功能與整合需求細節（功能性與非功能性）。
+第三方系统支持的功能和集成的要求（包括功能性和非功能性）的详细信息。
 
-### 協力廠商安全性概念 {#third-party-security-concept}
+### 第三方安全概念 {#third-party-security-concept}
 
-此概念可確保任何協力廠商整合的安全性。 必須符合適當的安全性原則。
+用于确保任何第三方集成安全性的概念。 必须符合适当的安全策略。
 
-### 整合的協力廠商系統 {#third-party-system-for-integration}
+### 用于集成的第三方系统 {#third-party-system-for-integration}
 
-確定所有協力廠商系統都可供使用，並附上適當的檔案，以進行整合實作。
+确保所有第三方系统都可获取并附带相应文档，用于集成实施。
 
-### 啟用協力廠商系統存取 {#third-party-systems-access-enabled}
+### 已启用第三方系统访问 {#third-party-systems-access-enabled}
 
-授與協力廠商系統搭配使用之各個角色的必要存取權。
+向与第三方系统结合使用的各个角色授予所需的访问权限。
 
-### 協力廠商測試概念 {#third-party-testing-concept}
+### 第三方测试概念 {#third-party-testing-concept}
 
-定義：
+定义：
 
-* 測試整合的使用案例
-* 與任何協力廠商應用程式相關的功能
+* 测试集成的用例
+* 与任何第三方应用程序相关的功能
 
-### 臨界值定義 {#threshold-definition}
+### 阈值定义 {#threshold-definition}
 
-定義系統中監視點的關鍵值。
+定义系统中监视点的关键值。
 
 例如：
 
-* 未傳送的記錄檔中有多少KB會在主要伺服器執行個體上產生警告
-* 主要伺服器產生警告之前，容許的每一交易平均延遲毫秒數
+* 未发送日志的千字节数(KB)会在主体服务器实例上生成警告
+* 在主服务器上生成警告之前允许的每个事务的平均延迟毫秒数
 
-### 時間軸和里程碑 {#timeline-and-milestones}
+### 时间轴和里程碑 {#timeline-and-milestones}
 
-這應該定義用於以下用途的專案時間軸和合約里程碑：
+这应定义用于以下目的的项目时间表和合同里程碑：
 
-* 開立商業發票。
-* 根據成功定義、成功標準和KPI校準。
+* 开票。
+* 与成功定义、成功标准和KPI保持一致。
 
-### 專案工作量總計 {#total-project-efforts}
+### 项目工作总量 {#total-project-efforts}
 
-專案中每個潛在客戶的所有工作預估都應進行合併；包括管理費用、開發、系統工程、架構和測試工作。
+项目各牵头方的所有工作估计都应合并；包括管理费用、开发、系统工程、建筑和测试工作。
 
-如果協定中包含支援等級，支援和操作工作也應包含在內。
+如果协议中包含了某个支持级别，则还应该包括支持和业务工作。
 
-### 訓練教材 {#training-materials}
+### 培训材料 {#training-materials}
 
-訓練課程使用的資料。 這些資料應專門針對解決方案建立，並設計成與使用手冊結合使用。
+培训课程中使用的材料。 这些资料应专门为解决方案创建，并设计成与用户指南结合使用。
 
-### 瞭解專案範圍和期望 {#understands-scope-of-project-and-expectations}
+### 了解项目范围和期望 {#understands-scope-of-project-and-expectations}
 
-適當的角色應確認他們完全瞭解：
+适当的角色应确认他们完全了解：
 
-* 專案範圍
-* 所有客戶期望
-* 這是專案中每個角色每個階段所做所有決定的基礎
+* 项目范围
+* 所有客户期望
+* 这是项目中每个角色和每个阶段所做所有决策的基础
 
-### URL處理概念 {#url-handling-concept}
+### URL处理概念 {#url-handling-concept}
 
-您的URL處理概念應涵蓋AEM特定的URL功能，包括：
+您的URL处理概念应涵盖特定于AEM的URL功能，包括：
 
-* 虛名URL
-* 連結外部化
-* 錯誤頁面
-* 對應
+* 虚URL
+* 链接外部化
+* 错误页面
+* 映射
 
-概念也應涵蓋：
+这一概念还应包括：
 
-* 任何重寫規則
-* 網頁伺服器上的虛擬主機
-* SEO考量，例如robots.txt
-* 網站地圖
+* 任何重写规则
+* Web服务器上的虚拟主机
+* SEO注意事项，例如robots.txt
+* 网站地图
 
-### 使用案例 {#use-cases}
+### 用例 {#use-cases}
 
-使用案例是達成目標所需的動作或事件步驟清單。 它們通常定義角色和解決方案之間的互動。 角色可以是使用者或外部系統。
+用例是实现目标所需的操作或事件步骤的列表。 通常，它们定义角色和解决方案之间的交互。 角色可以是用户或外部系统。
 
-### 轉換為測試案例的使用案例 {#use-cases-converted-into-test-scenarios}
+### 用例转换为测试场景 {#use-cases-converted-into-test-scenarios}
 
-測試案例是根據技術和業務使用案例。 它們可用來測試解決方案行為是否如預期般運作。
+测试方案基于技术和业务用例。 它们用于测试解决方案行为是否按预期运行。
 
-### 使用手冊 {#user-guides}
+### 用户指南 {#user-guides}
 
-使用手冊為解決方案的使用者提供資訊和協助：
+用户指南为解决方案的用户提供信息和帮助：
 
 * 作者
-* 進階使用者
-* 管理員
+* 超级用户
+* 管理员
 
-### 已驗證的預算計畫 {#validated-budget-plan}
+### 已验证的预算计划 {#validated-budget-plan}
 
-預算計畫必須由所有利害關係人稽核和驗證。 他們需要檢查諸如開立發票、金額和預算報告的方法/時間等細節。
+预算计划必须由所有利益相关者审查和验证。 他们需要检查发票开具、金额和预算报告方法/时间等详细信息。
 
-### 白盒測試結果 {#white-box-test-results}
+### 白盒测试结果 {#white-box-test-results}
 
-「白盒測試」是測試應用程式的內部結構或運作方式（與其功能相反）的方法。 在軟體測試程式的單元、整合及系統層級可套用白盒測試。
+“白盒测试”是一种测试应用程序的内部结构或工作方式（相对于其功能）的方法。 白盒测试可以应用在单元、集成和系统等层级的软件测试过程。
 
-### 工作流程規格 {#workflow-specifications}
+### 工作流规范 {#workflow-specifications}
 
-根據工作流程概念，這些規格應詳細定義將建立完整工作流程的步驟。
+基于工作流概念，这些规范应详细定义将创建完整工作流的步骤。
 
-每個工作流程的規格至少應包括：
+每个工作流的规范应包括（至少）：
 
-* 使用案例
+* 用例
 * 角色
-* 步驟
-* 結果
-* 錯誤處理
+* 步骤
+* 结果
+* 错误处理
 
-### 工作流程概念 {#workflows-concept}
+### 工作流概念 {#workflows-concept}
 
-工作流程可讓您自動化AEM活動。 工作流程概念概述：
+工作流允许您自动执行AEM活动。 工作流概念概述：
 
-* 需要自動化的程式
-* AEM中將受影響的服務和角色
+* 需要自动化的流程
+* AEM中将受影响的服务和角色

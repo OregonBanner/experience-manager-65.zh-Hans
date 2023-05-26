@@ -1,6 +1,6 @@
 ---
-title: 為回應式網站傳送最佳化的影像
-description: 如何使用回應式程式碼功能來傳遞最佳化的影像
+title: 为响应式网站传送优化的图像
+description: 如何使用响应式代码功能交付优化的图像
 uuid: 7c6baef5-7513-4644-94ed-2383e8724c17
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -19,17 +19,17 @@ ht-degree: 11%
 
 # 为响应式站点传送优化的图像 {#delivering-optimized-images-for-a-responsive-site}
 
-當您想要與網頁開發人員共用用於回應式服務的程式碼時，請使用回應式程式碼功能。 您複製回應式(**[!UICONTROL RESS]**)程式碼並放入剪貼簿，以便與網頁開發人員共用。
+当您想要与Web开发人员共享用于响应式服务的代码时，请使用响应式代码功能。 您复制响应式(**[!UICONTROL RESS]**)代码到剪贴板，以便与Web开发人员共享。
 
-如果您的網站位於協力廠商WCM上，則使用此功能較為合理。 不過，如果您的網站改在Adobe Experience Manager上，則站外影像伺服器會轉譯影像，並將其提供給網頁。
+如果您的网站位于第三方WCM上，则此功能很有用。 但是，如果您的网站位于Adobe Experience Manager上，则站点外图像服务器会渲染图像并将其提供给网页。
 
-另請參閱 [將視訊檢視器內嵌在網頁上](embed-code.md).
+另请参阅 [在网页上嵌入视频查看器](embed-code.md).
 
-另請參閱 [將URL連結至您的網頁應用程式](linking-urls-to-yourwebapplication.md).
+另请参阅 [将URL链接到您的Web应用程序](linking-urls-to-yourwebapplication.md).
 
-**若要為回應式網站傳送最佳化的影像：**
+**要为响应式网站提供优化的图像，请执行以下操作：**
 
-1. 導覽至您要提供回應式程式碼的影像，然後在下拉式選單中選取 **[!UICONTROL 轉譯]**.
+1. 导航到要为其提供响应代码的图像，然后在下拉菜单中，选择 **[!UICONTROL 演绎版]**.
 
    ![chlimage_1-408](assets/chlimage_1-408.png)
 
@@ -41,17 +41,17 @@ ht-degree: 11%
    >
    >必须发布选定的资产&#x200B;*和*&#x200B;选定的图像预设或查看器预设，才能使 **[!UICONTROL URL]** 或 **[!UICONTROL RESS]** 按钮可用。
    >
-   >Dynamic Media — 混合模式需要您發佈影像預設集； Dynamic Media - Scene7模式會自動發佈影像預設集。
+   >Dynamic Media — 混合模式要求发布图像预设；Dynamic Media - Scene7模式会自动发布图像预设。
 
-1. 選取 **[!UICONTROL RESS]**.
+1. 选择 **[!UICONTROL RESS]**.
 
    ![chlimage_1-410](assets/chlimage_1-410.png)
 
-1. 在 **[!UICONTROL 內嵌回應式影像]** 對話方塊中，選取並複製回應式程式碼文字，然後貼到您的網站以存取回應式資產。
-1. 直接在內嵌程式碼中編輯預設中斷點，以符合回應式網站的中斷點。 此外，測試在不同頁面中斷點提供的不同影像解析度。
+1. 在 **[!UICONTROL 嵌入响应图像]** 对话框，选择并复制响应式代码文本，然后将其粘贴到您的网站中以访问响应式资产。
+1. 直接在代码中编辑嵌入代码中的默认断点，以匹配响应式网站的断点。 此外，测试在不同的页面断点提供的不同图像分辨率。
 
-## 使用HTTP/2傳送您的Dynamic Media資產 {#using-http-to-delivery-your-dynamic-media-assets}
+## 使用HTTP/2交付您的Dynamic Media资源 {#using-http-to-delivery-your-dynamic-media-assets}
 
-HTTP/2是新的、更新的Web通訊協定，可改善瀏覽器和伺服器的通訊方式。 它提供更快速的資訊傳輸，並減少所需的處理能力。 HTTP/2支援傳送Dynamic Media資產，可提供較佳的回應和載入時間。
+HTTP/2是新的、更新的Web协议，它改进了浏览器和服务器的通信方式。 它提供了更快的信息传输并减少了所需的处理能力。 HTTP/2支持交付Dynamic Media资源，可提供更好的响应和加载时间。
 
-另請參閱 [HTTP2傳送內容](http2.md) 以取得開始使用HTTP/2與Dynamic Media帳戶的完整詳細資訊。
+参见 [HTTP2内容交付](http2.md) ，以了解有关开始将HTTP/2用于Dynamic Media帐户的完整详细信息。

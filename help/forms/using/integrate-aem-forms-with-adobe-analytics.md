@@ -1,6 +1,6 @@
 ---
-title: 如何將AEM Forms與Adobe Analytics整合？
-description: AEM Forms與Adobe Analytics整合，以擷取和追蹤您發佈之表單的績效量度。
+title: 如何将AEM Forms与Adobe Analytics集成？
+description: AEM Forms与Adobe Analytics集成，可捕获和跟踪已发布表单的性能指标。
 docset: aem65
 exl-id: 030fe9f2-cd41-4290-b8a6-2f9ade6b5789
 source-git-commit: 45ca98ffb68e1e31e2f45f352e86f5aa1b6f0f00
@@ -10,278 +10,278 @@ ht-degree: 0%
 
 ---
 
-# 分析使用 [!DNL Adobe Launch] {#analyticsusingadobelaunch}
+# Analytics使用 [!DNL Adobe Launch] {#analyticsusingadobelaunch}
 
-AEM Forms整合 [Adobe Analytics](https://experienceleague.adobe.com/docs/analytics-learn/tutorials/overview.html?lang=en) 可讓您擷取及追蹤已發佈表單的績效量度。 分析這些量度是為了讓業務使用者深入瞭解一般使用者行為，並最佳化資料擷取體驗。 您可以透過Adobe Analytics for Adaptive Forms擷取及追蹤已登入和未登入（匿名）使用者的行為。
+AEM Forms与 [Adobe Analytics](https://experienceleague.adobe.com/docs/analytics-learn/tutorials/overview.html?lang=en) 允许您捕获和跟踪已发布表单的性能指标。 分析这些量度背后的目标是使商业用户能够洞察最终用户行为并优化数据捕获体验。 您可以通过Adobe Analytics for Adaptive Forms捕获和跟踪已登录和未登录（匿名）用户的行为。
 
-您也可以使用Cloud Service框架執行分析。 如需如何將AEM Forms與Cloud Service架構整合的詳細資訊，請參閱 [使用Cloud Service架構的Analytics](/help/forms/using/configure-analytics-forms-documents.md). 使用Analytics Launch勝過Analytics使用AdobeCloud Service架構的主要優點在於，除了這些現成可用的事件外，您還可以定義自訂事件。 自訂事件是使用規則編輯器或客戶clientlibs定義，並對應至中的事件 [!DNL Adobe Analytics].
+您还可以使用Cloud Service框架执行分析。 有关如何将AEM Forms与Cloud Service框架集成的详细信息，请参阅 [使用Cloud Service框架进行分析](/help/forms/using/configure-analytics-forms-documents.md). 与使用Adobe框架的Analytics相比，使用Cloud ServiceLaunch的主要优势在于，除了这些现成事件之外，您还可以定义自定义事件。 自定义事件使用规则编辑器或客户clientlibs定义，并映射到中的事件 [!DNL Adobe Analytics].
 
-執行本文所述的動作後，您可以在中設定和檢視報表 [!DNL Adobe Analytics]，如下列影片所示：
+执行本文中提到的操作后，您可以在中配置和查看报表 [!DNL Adobe Analytics]，如以下视频中所示：
 
 >[!VIDEO](https://video.tv.adobe.com/v/337262)
 
-您可以使用 [!DNL Adobe Analytics] 探索使用者在使用最適化表單時遇到的互動模式和問題。 開箱即用 [!DNL Adobe Analytics] 追蹤並儲存下列事件的相關資訊：
+您可以使用 [!DNL Adobe Analytics] 发现用户在使用自适应表单时面临的交互模式和问题。 开箱即用， [!DNL Adobe Analytics] 跟踪和存储有关以下事件的信息：
 
-* **演算**：表單開啟次數。
+* **渲染**：打开表单的次数。
 
-* **提交**：表單提交次數。
+* **提交**：提交表单的次数。
 
-* **放棄**：使用者未完成表單而離開的次數。
+* **放弃**：用户未完成表单而离开的次数。
 
-* **錯誤**：在面板和面板欄位上遇到的錯誤數。
+* **错误**：在面板和面板的字段中遇到的错误数。
 
-* **說明**：使用者開啟面板說明及面板欄位的次數。
+* **帮助**：用户打开面板帮助和面板字段的次数。
 
-* **現場造訪**：使用者造訪表單中欄位的次數。
+* **现场访问**：用户访问表单中字段的次数。
 
-* **儲存**：使用者將表單儲存至Forms入口網站的次數。
+* **保存**：用户将表单保存到Forms门户的次数。
 
-除了這些現成可用的事件以外，您也可以定義自訂事件。
+除了这些现成的事件，您还可以定义自定义事件。
 
-下圖說明在中檢視報表之前需要執行的動作 [!DNL Adobe Analytics]：
+下图说明了在中查看报告之前需要执行的操作 [!DNL Adobe Analytics]：
 
-![Analytics概觀](/help/forms/using/assets/analyticsworkflow.png)
+![Analytics概述](/help/forms/using/assets/analyticsworkflow.png)
 
-## 1.設定 [!DNL Adobe Analytics] {#Configure-adobe-analytics}
+## 1.配置 [!DNL Adobe Analytics] {#Configure-adobe-analytics}
 
-設定前 [!DNL Adobe Analytics]，建立：
+配置之前 [!DNL Adobe Analytics]，创建：
 
-* 要登入的Adobe ID [Adobe Experience Cloud](https://experience.adobe.com/#/home).
-* A [報告套裝](https://experienceleague.adobe.com/docs/analytics/admin/manage-report-suites/new-report-suite/t-create-a-report-suite.html).
+* 要登录的Adobe ID [Adobe Experience Cloud](https://experience.adobe.com/#/home).
+* A [报告包](https://experienceleague.adobe.com/docs/analytics/admin/manage-report-suites/new-report-suite/t-create-a-report-suite.html).
 
 
-### 安裝AEM Forms和 [!DNL Adobe Analytics] 擴充功能 {#install-extensions}
+### 安装AEM Forms和 [!DNL Adobe Analytics] 扩展 {#install-extensions}
 
-執行以下步驟來設定AEM Forms和 [Adobe Analytics](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/analytics/overview.html) 擴充功能：
+执行以下步骤来配置AEM Forms和 [Adobe Analytics](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/analytics/overview.html) 扩展：
 
-1. 登入Adobe Experience Cloud並為公司選取適當的名稱。
+1. 登录到Adobe Experience Cloud并为公司选择适当的名称。
 
-1. 點選 **[!UICONTROL 啟動/資料收集]** 並點選 **[!UICONTROL 前往啟動/資料收集]**.
+1. 点按 **[!UICONTROL 启动/数据收集]** 并点按 **[!UICONTROL 转到Launch/数据收集]**.
 
-1. 點選 **[!UICONTROL 新增屬性]** 並指定設定的名稱。
+1. 点按 **[!UICONTROL 新建属性]** 并指定配置的名称。
 
-1. 指定網域名稱並點選 **[!UICONTROL 儲存]** 以儲存屬性。
+1. 指定域名并点按 **[!UICONTROL 保存]** 以保存资产。
 
-1. 點選「標籤屬性」清單中可用的設定名稱。
+1. 点按“标记属性”列表中可用的配置名称。
 
-1. 在 **[!UICONTROL 製作]** 區段，點選 **[!UICONTROL 擴充功能]**.
+1. 在 **[!UICONTROL 创作]** 部分，点按 **[!UICONTROL 扩展]**.
 
-1. 點選 **[!UICONTROL 目錄]** 並點選 **[!UICONTROL 安裝]** 的 **[!UICONTROL Adobe Experience Manager Forms]** 副檔名。 **[!UICONTROL Adobe Experience Manager Forms]** 會顯示在中提供的已安裝擴充功能清單中 **已安裝** 標籤。
+1. 点按 **[!UICONTROL 目录]** 并点按 **[!UICONTROL 安装]** 对于 **[!UICONTROL Adobe Experience Manager Forms]** 扩展。 **[!UICONTROL Adobe Experience Manager Forms]** 显示在中可用的已安装扩展列表中 **已安装** 选项卡。
 
-1. 點選 **[!UICONTROL 安裝]** 的 **[!UICONTROL Adobe Analytics]** 副檔名。
-1. 在中選取報表套裝名稱 **[!UICONTROL 開發報表套裝]**， **[!UICONTROL 中繼報表套裝]**、和 **[!UICONTROL 產品報表套裝]** 下拉式清單並點選 **[!UICONTROL 儲存]** 以儲存擴充功能。
+1. 点按 **[!UICONTROL 安装]** 对于 **[!UICONTROL Adobe Analytics]** 扩展。
+1. 在中选择报表包名称 **[!UICONTROL 开发报表包]**， **[!UICONTROL 暂存报表包]**、和 **[!UICONTROL 产品报表包]** 下拉列表并点按 **[!UICONTROL 保存]** 以保存该扩展。
 
-### 設定資料元素 {#configure-data-elements}
+### 配置数据元素 {#configure-data-elements}
 
-您可以在為事件建立的規則中，選取任何已設定的資料元素。 當最適化表單上發生事件時，AEM Forms會將這些資料元素傳送至 [!DNL Adobe Analytics].
+您可以在为事件创建的规则中选择任何配置的数据元素。 当自适应表单上发生事件时，AEM Forms将这些数据元素发送至 [!DNL Adobe Analytics].
 
-安裝後 **[!UICONTROL Adobe Experience Manager Forms]** 擴充功能上，您可以建立下列資料元素：
+安装后 **[!UICONTROL Adobe Experience Manager Forms]** 扩展上，您可以创建以下数据元素：
 
 <table>
  <tbody>
   <tr>
-   <td>欄位名稱</th>
-   <td>欄位標題</th>
+   <td>字段名称</th>
+   <td>字段标题</th>
    <td>FormInstance</th>
   </tr>
   <tr>
-   <td>FormName<br /> </td>
-   <td>表單標題<br /> </td>
-   <td>頁面名稱</td>
+   <td>表单名称<br /> </td>
+   <td>表单标题<br /> </td>
+   <td>页面名称</td>
   </tr>
   <tr>
    <td>PageURL<br /> </td>
-   <td>面板標題<br /> </td>
-   <td>逗留時間</td>
+   <td>面板标题<br /> </td>
+   <td>逗留时间</td>
   </tr>
  </tbody>
 </table>
 
-執行以下步驟來設定資料元素：
+执行以下步骤来配置数据元素：
 
-1. 在 **[!UICONTROL 製作]** 區段，點選 **[!UICONTROL 資料元素]**.
+1. 在 **[!UICONTROL 创作]** 部分，点按 **[!UICONTROL 数据元素]**.
 
-1. 點選 **[!UICONTROL 建立新資料元素]**.
+1. 点按 **[!UICONTROL 创建新数据元素]**.
 
-1. 指定資料元素的名稱。 例如，FormTitle資料元素型別的表單標題。
+1. 指定数据元素的名称。 例如，FormTitle数据元素类型的表单标题。
 
-1. 指定 **[!UICONTROL Adobe Experience Manager Forms]** 作為擴充功能名稱。
+1. 指定 **[!UICONTROL Adobe Experience Manager Forms]** 作为扩展名称。
 
-1. 選取 **[!UICONTROL 資料元素型別]**.
+1. 选择 **[!UICONTROL 数据元素类型]**.
 
-1. 點選 **[!UICONTROL 儲存]** 以儲存資料元素。
+1. 点按 **[!UICONTROL 保存]** 以保存数据元素。
 
    >[!VIDEO](https://video.tv.adobe.com/v/337472)
 
-### 設定規則 {#configure-rules}
+### 配置规则 {#configure-rules}
 
-執行以下步驟，根據下列專案建立規則： **[!UICONTROL Adobe Experience Manager Forms]** 副檔名：
+执行以下步骤以根据 **[!UICONTROL Adobe Experience Manager Forms]** 扩展名：
 
-1. 在 **[!UICONTROL 製作]** 區段，點選 **[!UICONTROL 規則]**.
+1. 在 **[!UICONTROL 创作]** 部分，点按 **[!UICONTROL 规则]**.
 
-1. 點選 **[!UICONTROL 建立新規則]**.
+1. 点按 **[!UICONTROL 创建新规则]**.
 
-1. 指定「規則」的名稱。 例如，表單提交可記錄表單提交。
+1. 指定规则的名称。 例如，表单提交以记录表单提交。
 
-1. 在 **[!UICONTROL 事件]** 區段，點選 **[!UICONTROL 新增]**.
+1. 在 **[!UICONTROL 事件]** 部分，点按 **[!UICONTROL 添加]**.
 
-1. 指定 **[!UICONTROL Adobe Experience Manager Forms]** 作為擴充功能名稱。
+1. 指定 **[!UICONTROL Adobe Experience Manager Forms]** 作为扩展名称。
 
-1. 選取事件型別。 的輸入 **[!UICONTROL 名稱]** 欄位會自動根據選取的事件型別填入。
+1. 选择事件类型。 的输入 **[!UICONTROL 名称]** 字段根据所选事件类型自动填充。
 
-1. 點選 **[!UICONTROL 保留變更]** 以儲存事件。
+1. 点按 **[!UICONTROL 保留更改]** 以保存事件。
 
-1. 在 **[!UICONTROL 動作]** 區段，點選 **[!UICONTROL 新增]**.
+1. 在 **[!UICONTROL 操作]** 部分，点按 **[!UICONTROL 添加]**.
 
-1. 指定 **[!UICONTROL Adobe Analytics]** 作為擴充功能名稱。
+1. 指定 **[!UICONTROL Adobe Analytics]** 作为扩展名称。
 
-1. 選取 **[!UICONTROL 設定變數]** 作為「動作型別」。 下拉式清單中可用的選項包括：
+1. 选择 **[!UICONTROL 设置变量]** 作为操作类型。 下拉列表中可用的选项包括：
 
-   * **[!UICONTROL 設定變數]**：使用此動作型別可定義從AEM Forms將所選資料元素傳送至的事件型別 [!DNL Adobe Analytics].
+   * **[!UICONTROL 设置变量]**：使用此操作类型定义从AEM Forms向其发送选定数据元素的事件类型 [!DNL Adobe Analytics].
 
-   * **[!UICONTROL 傳送信標]**：使用此動作型別將資料從AEM Forms傳送至 [!DNL Adobe Analytics].
+   * **[!UICONTROL 发送信标]**：使用此操作类型将数据从AEM Forms发送到 [!DNL Adobe Analytics].
 
-   * **[!UICONTROL 清除變數]**：使用此動作型別可清除資料追蹤，讓事件在中只註冊一次 [!DNL Adobe Analytics].
+   * **[!UICONTROL 清除变量]**：使用此操作类型可清除数据跟踪，以便事件在中只注册一次 [!DNL Adobe Analytics].
 
-      建議方法是使用 **[!UICONTROL 設定變數]** 動作型別以設定事件和資料元素，然後使用 **[!UICONTROL 傳送信標]** 以傳送資料，然後使用 **[!UICONTROL 清除變數]** 以清除資料軌跡。
+      推荐的方法是使用 **[!UICONTROL 设置变量]** 操作类型以配置事件和数据元素，然后使用 **[!UICONTROL 发送信标]** 以发送数据，然后使用 **[!UICONTROL 清除变量]** 以清除数据跟踪。
 
-1. 在 **[!UICONTROL Prop]** 區段，將下拉式清單中可用的報表套裝選項，與使用定義的資料元素對應 [設定資料元素](#configure-data-elements).
+1. 在 **[!UICONTROL Prop]** 部分，将下拉列表中可用的报表包选项映射到使用定义的数据元素 [配置数据元素](#configure-data-elements).
 
-   例如，若要傳送 **表單標題** 資料元素從AEM Forms移至 [!DNL Adobe Analytics] 當您提交表單時：
-   1. 在 **[!UICONTROL Prop]** 區段，選取報表套裝中可用表單標題的prop，然後點選 ![資料庫圖示](/help/forms/using/assets/database-icon.svg) 以將其對應至在中建立的表單標題 [設定資料元素](#configure-data-elements).
+   例如，要发送 **表单标题** 从AEM Forms到的数据元素 [!DNL Adobe Analytics] 提交表单时：
+   1. 在 **[!UICONTROL Prop]** 部分，为报表包中可用的表单标题选择一个prop，然后点按 ![“数据库”图标](/help/forms/using/assets/database-icon.svg) 以将其映射到在中创建的表单标题 [配置数据元素](#configure-data-elements).
 
       ![define-props](/help/forms/using/assets/define-props.png)
 
-   1. 點選 **[!UICONTROL 新增其他]** 以新增更多資料元素至清單。
+   1. 点按 **[!UICONTROL 添加其他]** 以向列表添加更多数据元素。
 
-1. 在 **[!UICONTROL 事件]** 區段中，從報表套裝中可用的選項中選取事件，然後點選 **[!UICONTROL 保留變更]**.
+1. 在 **[!UICONTROL 事件]** 部分，从报表包中可用的选项中选择一个事件，然后点按 **[!UICONTROL 保留更改]**.
 
-1. 在 **[!UICONTROL 動作]** 區段，點選+並指定 **[!UICONTROL Adobe Analytics]** 作為擴充功能名稱。
+1. 在 **[!UICONTROL 操作]** 部分，点按+并指定 **[!UICONTROL Adobe Analytics]** 作为扩展名称。
 
-1. 選取 **[!UICONTROL 傳送信標]** 作為「動作型別」。 在右窗格中，選取 **[!UICONTROL s.t()]** 將資料傳送至 [!DNL Adobe Analytics] 並將其視為頁面檢視或 **[!UICONTROL s.tl()]** 將資料傳送至 [!DNL Adobe Analytics] 且不要將其視為頁面檢視。 點選 **[!UICONTROL 保留變更]**.
+1. 选择 **[!UICONTROL 发送信标]** 作为操作类型。 在右窗格中，选择 **[!UICONTROL s.t()]** 将数据发送到 [!DNL Adobe Analytics] 并将其视为页面查看或 **[!UICONTROL s.tl()]** 将数据发送到 [!DNL Adobe Analytics] 并且不要将其视为页面查看。 点按 **[!UICONTROL 保留更改]**.
 
-1. 在 **[!UICONTROL 動作]** 區段，點選+並指定 **[!UICONTROL Adobe Analytics]** 作為擴充功能名稱。
+1. 在 **[!UICONTROL 操作]** 部分，点按+并指定 **[!UICONTROL Adobe Analytics]** 作为扩展名称。
 
-1. 選取 **[!UICONTROL 清除變數]** 作為「動作型別」。 點選 **[!UICONTROL 保留變更]**. 執行這些步驟後， **[!UICONTROL 動作]** 區段顯示為：
-   ![動作設定](/help/forms/using/assets/actions-config.png)
+1. 选择 **[!UICONTROL 清除变量]** 作为操作类型。 点按 **[!UICONTROL 保留更改]**. 执行这些步骤后， **[!UICONTROL 操作]** 部分显示为：
+   ![操作配置](/help/forms/using/assets/actions-config.png)
 
-   自訂 **[!UICONTROL 動作]** 區段。 例如，您可以定義兩個 **傳送信標** 傳送資料的目標動作流程步驟 [!DNL Adobe Analytics] 並將其視為一個步驟中的頁面檢視，並將資料傳送至 [!DNL Adobe Analytics] 且請勿將其視為第二個步驟中的頁面檢視。
+   自定义 **[!UICONTROL 操作]** 区段。 例如，您可以定义两个 **发送信标** 操作流中用于将数据发送到的步骤 [!DNL Adobe Analytics] 并将其视为一个步骤中的页面查看，然后将数据发送到 [!DNL Adobe Analytics] 并且不要将其视为第二步中的页面查看。
 
-   ![動作設定](/help/forms/using/assets/actions-config-2.png)
+   ![操作配置](/help/forms/using/assets/actions-config-2.png)
 
-1. 點選 **[!UICONTROL 儲存]** 以儲存規則。
+1. 点按 **[!UICONTROL 保存]** 以保存规则。
 
-   您可以為所有事件型別建立規則，例如「放棄」、「錯誤」、「欄位瀏覽」、「說明」、「呈現」、「儲存」和「提交」。
+   您可以为所有事件类型创建规则，例如“放弃”、“错误”、“字段访问”、“帮助”、“渲染”、“保存”和“提交”。
 
    >[!VIDEO](https://video.tv.adobe.com/v/337425)
 
 
-### 發佈流程 {#publish-flow}
+### 发布流 {#publish-flow}
 
-建立資料元素並在規則中使用它們後，發佈設定以在中收集表單資料 [!DNL Adobe Analytics].
+创建数据元素并在规则中使用它们后，发布配置以在中收集表单数据 [!DNL Adobe Analytics].
 
-執行以下步驟以發佈設定：
+执行以下步骤以发布配置：
 
-1. 在 **[!UICONTROL 發佈]** 區段，點選 **[!UICONTROL 發佈流程]**.
+1. 在 **[!UICONTROL 发布]** 部分，点按 **[!UICONTROL 发布流]**.
 
-1. 點選 **[!UICONTROL 新增程式庫]** 和指定名稱，並選取程式庫的環境。
+1. 点按 **[!UICONTROL 添加库]** 和指定名称，然后选择库的环境。
 
-1. 點選 **[!UICONTROL 新增所有變更的資源]** 然後點選 **[!UICONTROL 儲存並建置到開發環境]**.
+1. 点按 **[!UICONTROL 添加所有更改的资源]** 然后点按 **[!UICONTROL 保存并构建到开发环境]**.
 
-1. 在 **[!UICONTROL 開發]** 區段，點選 ![更多選項](/help/forms/using/assets/more-options-icon.svg) 然後點選 **[!UICONTROL 核准並發佈至生產環境]**.
+1. 在 **[!UICONTROL 开发]** 部分，点按 ![更多选项](/help/forms/using/assets/more-options-icon.svg) 然后点按 **[!UICONTROL 批准并发布到生产环境]**.
 
-1. 確認變更，發佈流程即會顯示在 **[!UICONTROL 已發佈]** 區段。
+1. 确认更改，发布流将很快显示在中 **[!UICONTROL 已发布]** 部分。
 
-![發佈流程](/help/forms/using/assets/publish-flow.png)
+![发布流程](/help/forms/using/assets/publish-flow.png)
 
-## 2.設定AEM Forms {#configure-aem-forms}
+## 2.配置AEM Forms {#configure-aem-forms}
 
-建立Adobe Launch設定之前，請先建立 [使用Adobe Launch作為雲端解決方案的Adobe IMS設定](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/connect-aem-launch-adobe-io.html).
+在创建Adobe启动项配置之前，请创建 [将AdobeLaunch用作云解决方案的Adobe IMS配置](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/connect-aem-launch-adobe-io.html).
 
 ### 创建 Adobe Launch 配置 {#create-adobe-launch-configuration}
 
-執行以下步驟來建立Adobe Launch設定：
+执行以下步骤以创建Adobe启动配置：
 
-1. 在AEM Forms作者執行個體上，導覽至 **[!UICONTROL 工具]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL AdobeLaunch設定]**.
+1. 在AEM Forms创作实例上，导航到 **[!UICONTROL 工具]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL AdobeLaunch配置]**.
 
-1. 選取資料夾以建立設定並點選 **[!UICONTROL 建立]**.
+1. 选择一个文件夹以创建配置，然后点按 **[!UICONTROL 创建]**.
 
-1. 在中指定設定的標題 **[!UICONTROL 標題]** 欄位。
+1. 在中指定配置的标题 **[!UICONTROL 标题]** 字段。
 
-1. 選取 [關聯的Adobe IMS設定](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/connect-aem-launch-adobe-io.html).
+1. 选择 [关联的Adobe IMS配置](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/connect-aem-launch-adobe-io.html).
 
-1. 選取當時使用的公司名稱 [設定Adobe Analytics](#Configure-adobe-analytics).
+1. 选择使用的公司名称，同时 [配置Adobe Analytics](#Configure-adobe-analytics).
 
-1. 選取建立時建立的屬性名稱。 [設定Adobe Analytics](#install-extensions).
+1. 选择创建属性的名称，同时 [配置Adobe Analytics](#install-extensions).
 
-1. 點選 **[!UICONTROL 儲存並關閉]**.
+1. 点按 **[!UICONTROL 保存并关闭]**.
 
-1. 發佈設定。
+1. 发布配置。
 
-### 啟用 [!DNL Adobe Analytics] 最適化表單 {#enable-analytics-adaptive-form}
+### 启用 [!DNL Adobe Analytics] 自适应表单 {#enable-analytics-adaptive-form}
 
-使用 [!DNL Adobe Launch] 現有最適化表單中的設定：
+使用 [!DNL Adobe Launch] 现有自适应表单中的配置：
 
-1. 在AEM Forms作者執行個體上，導覽至 **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]** > **[!UICONTROL Forms與檔案]**.
-1. 選取最適化表單並點選 **[!UICONTROL 屬性]**.
-1. 在 **[!UICONTROL 基本]** 索引標籤中，選取 [設定容器](#create-adobe-launch-configuration) 用於建立Adobe Launch設定。
-1. 點選 **[!UICONTROL 儲存並關閉]**. 已針對以下專案啟用最適化表單 [!DNL Adobe Analytics].
-1. 發佈表單。
+1. 在AEM Forms创作实例上，导航到 **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]** > **[!UICONTROL Forms和文档]**.
+1. 选择自适应表单并点按 **[!UICONTROL 属性]**.
+1. 在 **[!UICONTROL 基本]** 选项卡，选择 [配置容器](#create-adobe-launch-configuration) 在创建AdobeLaunch配置时使用。
+1. 点按 **[!UICONTROL 保存并关闭]**. 自适应表单已启用 [!DNL Adobe Analytics].
+1. 发布表单。
 
-在您啟用之後 [!DNL Adobe Analytics] 對於最適化表單，您可以 [驗證](https://experienceleague.adobe.com/docs/launch-learn/implementing-in-websites-with-launch/implement-solutions/analytics.html?lang=en#validate-the-page-view-beacon) 如果AEM Forms和之間有適當的資料事件流程 [!DNL Adobe Analytics]. AEM Forms與Adobe Analytics的整合已完成。 您現在可以 [在Adobe Analytics中設定和檢視報表](#view-reports-adobe-analytics).
+启用后 [!DNL Adobe Analytics] 对于自适应表单，您可以 [验证](https://experienceleague.adobe.com/docs/launch-learn/implementing-in-websites-with-launch/implement-solutions/analytics.html?lang=en#validate-the-page-view-beacon) 在AEM Forms和之间是否存在适当的数据事件流 [!DNL Adobe Analytics]. AEM Forms与Adobe Analytics的集成已完成。 您现在可以 [在Adobe Analytics中配置和查看报表](#view-reports-adobe-analytics).
 
 >[!NOTE]
->如果兩者皆有 [使用Cloud Service架構的Analytics](/help/forms/using/configure-analytics-forms-documents.md) 和 **使用Adobe啟動的Analytics** 功能會同時啟用， **使用Adobe啟動的Analytics** 將取得優先權。
+>如果两者都有 [使用Cloud Service框架进行分析](/help/forms/using/configure-analytics-forms-documents.md) 和 **使用Adobe启动项的Analytics** 功能同时启用， **使用Adobe启动项的Analytics** 将优先。
 
-### 建立規則以擷取自訂事件（選用） {#capture-custom-events}
+### 创建规则以捕获自定义事件（可选） {#capture-custom-events}
 
-使用規則編輯器在最適化表單的特定欄位上建立規則，以將Analytics資料從最適化表單傳送至 [!DNL Adobe Analytics].
+使用规则编辑器针对自适应表单的特定字段创建规则，以将Analytics数据从自适应表单发送到 [!DNL Adobe Analytics].
 
-在兩階段程式中，您會在最適化表單的欄位上定義規則。 規則會傳送事件。 事件名稱會對應至Adobe Launch中的自訂擷取事件。
+在两阶段流程中，您需要在自适应表单中的字段上定义规则。 规则将调度事件。 事件名称会映射到Adobe启动项中的自定义捕获事件。
 
-若要在最適化表單中使用規則編輯器建立規則：
+要使用自适应表单中的规则编辑器创建规则，请执行以下操作：
 
-1. 點選欄位並選取 ![規則編輯器](/help/forms/using/assets/rule-editor-icon.svg) 以開啟規則編輯器頁面。
-1. 在中定義條件 [!UICONTROL 時間] 區段。
-1. 在 [!UICONTROL 則] 區段，選取 **[!UICONTROL 分派事件]** 從 **[!UICONTROL 選取動作]** 下拉式清單。
-1. 在中指定事件的名稱 **[!UICONTROL 輸入事件名稱]** 欄位。
+1. 点按字段并选择 ![规则编辑器](/help/forms/using/assets/rule-editor-icon.svg) 以打开规则编辑器页面。
+1. 在中定义条件 [!UICONTROL 时间] 部分。
+1. 在 [!UICONTROL 则] 部分，选择 **[!UICONTROL 分派事件]** 从 **[!UICONTROL 选择操作]** 下拉列表。
+1. 在中指定事件的名称 **[!UICONTROL 键入事件名称]** 字段。
 
-例如，如果出生日期在某個日期之前，AEM Forms會傳送 **安全性** 事件。
+例如，如果出生日期在某个日期之前，AEM Forms会发送 **安全性** 事件。
 
 ![分派事件](/help/forms/using/assets/security-event.png)
 
-若要將事件對應至中的自訂擷取事件 [!DNL Adobe Analytics]：
+将事件映射到中的自定义捕获事件 [!DNL Adobe Analytics]：
 
 1. [创建规则](#configure-rules).
 
-1. 在 **[!UICONTROL 事件]** 區段，點選 **[!UICONTROL 新增]**.
+1. 在 **[!UICONTROL 事件]** 部分，点按 **[!UICONTROL 添加]**.
 
-1. 指定 **[!UICONTROL Adobe Experience Manager Forms]** 作為擴充功能名稱。
+1. 指定 **[!UICONTROL Adobe Experience Manager Forms]** 作为扩展名称。
 
-1. 選取 **[!UICONTROL 擷取自訂事件]** 從 **[!UICONTROL 事件型別]** 下拉式清單。
+1. 选择 **[!UICONTROL 捕获自定义事件]** 从 **[!UICONTROL 事件类型]** 下拉列表。
 
-1. 使用規則編輯器建立規則時，指定您在步驟4中指定的事件名稱。
+1. 使用规则编辑器创建规则时，指定您在步骤4中指定的事件的名称。
 
-1. 點選 **保留變更** 並執行中指定的其餘動作 [設定規則](#configure-rules).
+1. 点按 **保留更改** 并执行中指定的其余操作 [配置规则](#configure-rules).
 
-## 3.設定並檢視報表，於 [!DNL Adobe Analytics] {#view-reports-adobe-analytics}
+## 3.在中配置和查看报表 [!DNL Adobe Analytics] {#view-reports-adobe-analytics}
 
-設定最適化表單以傳送事件資料至後 [!DNL Adobe Analytics]，您就可以開始在中檢視報表 [!DNL Adobe Analytics]：
+配置自适应表单以将事件数据发送到 [!DNL Adobe Analytics]，您便可以开始在中查看报表 [!DNL Adobe Analytics]：
 
-1. 點選 ![選取產品](/help/forms/using/assets/select-analytics.png) 並選取 **[!UICONTROL 分析]**.
+1. 点按 ![选择产品](/help/forms/using/assets/select-analytics.png) 并选择 **[!UICONTROL 分析]**.
 
-1. 點選 **[!UICONTROL 建立專案]** 並選取 **[!UICONTROL 空白專案]**.
+1. 点按 **[!UICONTROL 创建项目]** 并选择 **[!UICONTROL 空白项目]**.
 
-1. 從自由表格右上角的下拉式清單中選取報表套裝名稱。
+1. 从自由格式右上角的下拉列表中选择报表包名称。
 
-1. 指定 **表單標題** 在 **[!UICONTROL 搜尋維度專案]** 文字以檢視所有表單標題。
+1. 指定 **表单标题** 在 **[!UICONTROL 搜索维度项目]** 文本以查看所有表单标题。
 
-1. 將最適化表單標題拖放至 **[!UICONTROL 將區段拖放到這裡（或任何其他元件）]** 文字方塊。
+1. 将自适应表单标题拖放到 **[!UICONTROL 将区段（或任何其他组件）拖放到此处]** 文本框。
 
-1. 從 **[!UICONTROL 量度]** 區段，放置要追蹤的事件 **[!UICONTROL 將量度拖放到這裡（或任何其他元件）]** 文字方塊。
+1. 从 **[!UICONTROL 量度]** 部分，放置要跟踪的事件 **[!UICONTROL 将量度（或任何其他组件）拖放到此处]** 文本框。
 
-1. 點選 ![視覺效果](/help/forms/using/assets/visualization-icon.svg) 並將圖表型別拖放至「自由格式」區段。 同樣地，您可以將多個圖表型別新增至自由格式區段。
+1. 点按 ![可视化图表](/help/forms/using/assets/visualization-icon.svg) 并将图表类型拖放到自由格式部分。 同样，您还可以向自由格式部分添加多个图表类型。
 
-1. 點選Ctrl + S鍵並指定名稱以儲存專案。
+1. 点按Ctrl + S键并指定名称以保存项目。
 
-如需檢視表單分析報表的詳細資訊，請參閱 [檢視和瞭解AEM Forms Analytics報表](../../forms/using/view-understand-aem-forms-analytics-reports.md).
+有关查看表单分析报表的详细信息，请参阅 [查看和了解AEM Forms Analytics报表](../../forms/using/view-understand-aem-forms-analytics-reports.md).

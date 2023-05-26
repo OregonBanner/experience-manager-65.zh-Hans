@@ -11,7 +11,7 @@ ht-degree: 99%
 
 # WCAG 2.1 快速指南{#quick-guide-to-wcag}
 
-Adobe Experience Manager (AEM)的開發過程充分遵循「網頁內容可及性指引」。
+Adobe Experience Manager (AEM)的开发旨在最大限度地符合Web内容无障碍准则。
 
 [Web 无障碍准则 (WCAG) 版本 2.1](https://www.w3.org/TR/WCAG/) 是由[万维网联盟 (W3C)](https://www.w3.org/) 根据其 [Web 无障碍倡议 (WAI)](https://www.w3.org/WAI/) 制定的国际公认准则。
 

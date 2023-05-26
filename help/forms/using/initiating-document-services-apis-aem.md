@@ -1,7 +1,7 @@
 ---
-title: 從AEM工作流程啟動Document Services API
+title: 从AEM Workflow启动Document Services API
 seo-title: Initiate Document Services APIs from AEM Workflow
-description: 瞭解如何在DDX或提供的輸入上叫用AEM檔案服務。 另請參閱如何將PDF轉換為PDF/A
+description: 了解如何在DDX或提供的输入上调用AEM Document服务。 另请参阅如何将PDF转换为PDF/A
 seo-description: Learn how to invoke AEM Document services on DDX or supplied inputs. Also see hwo to convert PDF to PDF/A
 uuid: aacec2df-1ad6-4ff2-a99d-ef206efcdc09
 content-type: reference
@@ -16,146 +16,146 @@ ht-degree: 0%
 
 ---
 
-# 從AEM工作流程啟動Document Services API  {#initiate-document-services-apis-from-aem-workflow}
+# 从AEM Workflow启动Document Services API  {#initiate-document-services-apis-from-aem-workflow}
 
-## 組合器 {#assembler}
+## 汇编程序 {#assembler}
 
-AEM Forms提供自訂工作流程，以叫用下列Assembler服務API：
+AEM Forms提供自定义工作流以调用以下Assembler服务API：
 
-* **叫用**：對提供的輸入叫用輸入DDX中指定的操作。
-* **toPDFA**：將輸入PDF檔案轉換為PDF/A檔案。
+* **调用**：对提供的输入调用输入DDX中指定的操作。
+* **toPDFA**：将输入PDF文档转换为PDF/文档。
 
-### 叫用DDX工作流程 {#invoke-ddx-workflow}
+### 调用DDX工作流 {#invoke-ddx-workflow}
 
-此 **啟動DDX** 工作流程會叫用 `Invoke` 組合器服務API，可用於組合或分解檔案、為PDF新增浮水印等。
+此 **调用DDX** 工作流会调用 `Invoke` 汇编程序服务API，可用于汇编或反汇编文档、向PDF添加水印等。
 
-1. 拖曳 **[!UICONTROL 啟動DDX]** Sidekick中「Forms Workflow」標籤下的工作流程步驟。
-1. 連按兩下新增的工作流程步驟以編輯元件。
-1. 在「編輯元件」對話方塊中，設定輸入檔案、環境選項和輸出檔案，然後按一下 **[!UICONTROL 確定]**.
+1. 拖动 **[!UICONTROL 调用DDX]** Sidekick中“Forms Workflow”选项卡下的工作流步骤。
+1. 双击添加的工作流步骤以编辑组件。
+1. 在“编辑组件”对话框中，配置输入文档、环境选项和输出文档，然后单击 **[!UICONTROL 确定]**.
 
-#### 輸入檔案 {#input-documents}
+#### 输入文档 {#input-documents}
 
-叫用DDX工作流程需要下列輸入檔案：
+调用DDX工作流需要以下输入文档：
 
-* **DDX**：此為呼叫DDX工作流程步驟的必要輸入，可透過從DDX輸入下拉式清單中選取下列選項之一來指定。
+* **DDX**：它是调用DDX工作流步骤的必需输入，可以通过从DDX输入下拉列表中选择以下选项之一来指定。
 
-   * *相對於裝載*： DDX輸入檔案是相對於工作流程專案的裝載資料夾。
-   * *使用裝載*：工作流程專案的裝載會用作輸入DDX檔案。
-   * *絕對路徑*：CRX存放庫中DDX檔案的絕對路徑。
+   * *相对于有效负荷*：DDX输入文件相对于工作流项的有效负荷文件夹。
+   * *使用有效负载*：工作流项的有效负载用作输入DDX文档。
+   * *绝对路径*：CRX存储库中DDX文档的绝对路径。
 
-* **從付款載入建立地圖**：選取後，裝載資料夾下的所有檔案都會新增到的Input Document地圖中 `invoke` 組合器中的API。 每個檔案的節點名稱都會當做對應中的索引鍵。
+* **从付费加载创建映射**：在选中时，有效负荷文件夹下的所有文档都将添加到输入文档的映射中 `invoke` 汇编程序中的API。 每个文档的节点名称在映射中用作键。
 
-* **輸入檔案的地圖**：指定輸入檔案的對應。 您可以新增任意數量的專案，每個專案都會指定對應中的檔案索引鍵和檔案來源。
+* **输入文档的映射**：指定输入文档的映射。 您可以添加任意数量的条目，其中每个条目在映射中指定文档的键和文档的源。
 
-#### 環境選項 {#environment-options}
+#### 环境选项 {#environment-options}
 
-「環境選項」索引標籤可讓您為叫用API設定各種處理選項。
+环境选项选项卡允许您为调用API设置各种处理选项。
 
-* *工作記錄層級*：指定處理記錄的記錄層級。
-* *僅驗證*：檢查輸入DDX的有效性。
+* *作业日志级别*：指定处理日志的日志级别。
+* *仅验证*：检查输入DDX的有效性。
 
-* *因錯誤而失敗*：指定發生錯誤時，對Assembler服務的呼叫是否應失敗。 預設值為False。
+* *出错时失败*：指定在发生错误时，对Assembler服务的调用是否应失败。 默认值为False。
 
-#### 輸出檔案 {#output-documents}
+#### 输出文档 {#output-documents}
 
-根據輸入DDX，叫用API可以產生多個輸出檔案。 「輸出檔案」標籤可讓您選取將儲存輸出檔案的位置。
+根据输入DDX，调用API可以生成多个输出文档。 “输出文档”选项卡允许您选择保存输出文档的位置。
 
-1. *將輸出儲存在承載中*：將輸出檔案儲存在承載資料夾下，或如果承載是檔案則覆寫承載。
-1. *輸出檔案的地圖*：允許為每個輸出檔案新增一個專案，以明確指定儲存每個輸出檔案的位置。 每個專案都會指定檔案以及儲存檔案的位置。 輸出檔案可能會覆寫承載或儲存在承載資料夾下。 有多個輸出檔案時，此功能會很有用。
+1. *将输出保存在有效负荷中*：将输出文档保存在有效负荷文件夹中，如果有效负荷是文件，则覆盖有效负荷。
+1. *输出文档的映射*：允许通过为每个输出文档添加一个条目来明确指定保存每个输出文档的位置。 每个条目都指定文档以及保存文档的位置。 输出文档可能会覆盖有效负载或保存在有效负载文件夹下。 当有多个输出文档时，此选项非常有用。
 
-1. *工作記錄*：指定工作記錄檔案的儲存位置，這有助於疑難排解失敗。
+1. *作业日志*：指定保存作业日志文档的位置，这有助于排除故障。
 
-### 轉換為PDF/工作流程 {#convert-to-pdf-a-workflow}
+### 转换为PDF/A工作流 {#convert-to-pdf-a-workflow}
 
-轉換成PDF/工作流程步驟會叫用 `toPDFA` 組合器服務API。 它用於將PDF檔案轉換為PDF/A相容檔案。
+“转换为PDF/A”工作流步骤调用 `toPDFA` 汇编程序服务API。 它用于将PDF文档转换为PDF/A兼容文档。
 
-1. 拖曳 **[!UICONTROL ConvertToPDFA]** Sidekick中「Forms Workflow」標籤下的工作流程步驟。
+1. 拖动 **[!UICONTROL ConvertToPDFA]** Sidekick中“Forms Workflow”选项卡下的工作流步骤。
 
-1. 連按兩下新增的工作流程步驟以編輯元件。
-1. 在「編輯元件」對話方塊中，設定輸入檔案、轉換選項和輸出檔案，然後按一下 **[!UICONTROL 確定]**.
+1. 双击添加的工作流步骤以编辑组件。
+1. 在“编辑组件”对话框中，配置输入文档、转换选项和输出文档，然后单击 **[!UICONTROL 确定]**.
 
-#### 輸入檔案 {#input-documents-1}
+#### 输入文档 {#input-documents-1}
 
-以下列其中一種方式指定要轉換為PDF/A相容檔案的檔案來源。
+通过下列方式之一指定要转换为PDF/A兼容文档的文档源。
 
-* *相對於裝載*：輸入檔案是相對於工作流程專案的裝載資料夾。
-* *使用裝載*：工作流程專案的裝載會用作輸入檔案。
-* *絕對路徑*：CRX存放庫中輸入檔案的絕對路徑。
+* *相对于有效负荷*：输入文档相对于工作流项目的有效负荷文件夹。
+* *使用有效负载*：工作流项的有效负载用作输入文档。
+* *绝对路径*：CRX存储库中输入文档的绝对路径。
 
-#### 轉換選項 {#conversion-options}
+#### 转换选项 {#conversion-options}
 
-「轉換選項」可讓您指定變更PDF/A轉換程式的選項。
+“转换选项”允许您指定更改PDF/A转换过程的选项。
 
-* *合規性* ：指定輸出PDF/A必須符合的PDF/A標準。
-* *結果層級* ：指定用於PDF/A轉換記錄的記錄層級。
-* *簽章* ：指定轉換期間必須如何處理輸入檔案中的簽章。
-* *色域* ：指定要用於輸出PDF/A檔案的預先定義色域。
-* *驗證* 轉換：指定轉換後的PDF/A檔案在轉換後是否應驗證PDF/A相容性。
-* *工作記錄層級* ：指定用於處理記錄的記錄層級。
+* *合规性* ：指定输出PDF/A必须符合的PDF/A标准。
+* *结果级别* ：指定用于PDF/A转换日志的日志级别。
+* *签名* ：指定在转换期间必须如何处理输入文档中的签名。
+* *色彩空间* ：指定用于输出PDF/A文档的预定义颜色空间。
+* *验证* 转换：指定转换后的PDF/A文档在转换后是否应验证PDF/A符合性。
+* *作业日志级别* ：指定用于处理日志的日志级别。
 
-* *中繼資料延伸結構描述* ：指定PDF檔案中繼資料中用於XMP屬性的中繼資料延伸結構描述的路徑。
+* *元数据扩展架构* ：指定用于PDF文档元数据中XMP属性的元数据扩展架构的路径。
 
-#### 輸出檔案 {#output-documents-1}
+#### 输出文档 {#output-documents-1}
 
-「輸出檔案」標籤可讓您指定輸出檔案的目的地
+“输出文档”选项卡允许您指定输出文档的目标
 
-* *PDFA檔案*：指定轉換PDF/A檔案的儲存位置。 它可以覆寫裝載檔案或儲存在裝載資料夾下。
-* *轉換記錄*：指定儲存轉換記錄的位置。 它可以覆寫裝載檔案，或儲存在裝載資料夾下。
+* *PDFA文档*：指定保存转换后的PDF/文档的位置。 它可以覆盖有效负载文档或保存在有效负载文件夹下。
+* *转化日志*：指定保存转换日志的位置。 它可以覆盖有效负载文档，也可以保存在有效负载文件夹下。
 
 ## Forms {#forms}
 
-呈現PDF表單工作流程是周圍的包裝函式 `renderPDFForm` Forms服務API可使用XDP範本和資料xml建立PDF表單。
+渲染PDF表单工作流是周围的包装器 `renderPDFForm` Forms服务API，可使用XDP模板和数据xml创建PDF表单。
 
-### 呈現PDF表單工作流程 {#render-pdf-form-workflow}
+### 呈现PDF表单工作流 {#render-pdf-form-workflow}
 
-1. 將「呈現PDF表單」工作流程步驟拖曳至Sidekick中「Forms Workflow」標籤下方。
-1. 連按兩下新增的工作流程步驟以編輯元件。
-1. 在「編輯元件」對話方塊中，設定輸入檔案、輸出檔案和其他引數，然後按一下 **[!UICONTROL 確定]**.
+1. 将“渲染PDF表单”工作流步骤拖动到Sidekick的“Forms Workflow”选项卡下。
+1. 双击添加的工作流步骤以编辑组件。
+1. 在“编辑组件”对话框中，配置输入文档、输出文档和其他参数，然后单击 **[!UICONTROL 确定]**.
 
-#### 輸入檔案 {#input-documents-2}
+#### 输入文档 {#input-documents-2}
 
-* *範本檔案*：指定XDP範本的位置。 它是必填欄位。
+* *模板文件*：指定XDP模板的位置。 它是必填字段。
 
-* *資料檔案*：指定需要與範本合併的資料xml的位置。
+* *数据文档*：指定需要与模板合并的数据xml的位置。
 
-#### 輸出檔案 {#output-documents-2}
+#### 输出文档 {#output-documents-2}
 
-* *輸出檔案*： — 指定所產生PDF表單的名稱。
+* *输出文档*： — 指定生成的PDF表单的名称。
 
-#### 其他引數 {#additional-parameters}
+#### 其他参数 {#additional-parameters}
 
-* *內容根目錄*：指定存放庫中儲存輸入XDP範本中使用的片段或影像的資料夾路徑。
-* *提交Url*：指定所產生PDF表單的預設提交URL。
-* *地區設定*：指定所產生PDF表單的預設地區設定。
-* *Acrobat版本*：指定所產生PDF表單的目標Acrobat版本。
-* *標籤PDF*：指定是否允許存取產生的PDF。
-* *XCI檔案*：指定XCI檔案的路徑。
+* *内容根*：指定存储库中用于存储输入XDP模板中使用的片段或图像的文件夹的路径。
+* *提交Url*：指定所生成PDF表单的默认提交URL。
+* *区域设置*：指定生成的PDF表单的默认区域设置。
+* *Acrobat版本*：为生成的PDF表单指定目标Acrobat版本。
+* *已标记的PDF*：指定是否使生成的PDF可访问。
+* *XCI文档*：指定XCI文件的路径。
 
 ## 输出 {#output}
 
-「產生非互動式PDF」工作流程是周圍的包裝函式 `generatePDFOutput` 輸出服務API。 它用於從XDP範本和資料xml產生非互動式PDF檔案。
+“生成非交互式PDF”工作流是一个包装器 `generatePDFOutput` 输出服务API。 它用于从XDPPDF和数据xml生成非交互式模板文档。
 
-### 產生非互動式PDF輸出工作流程   {#generate-non-interactive-pdf-output-workflow-nbsp}
+### 生成非交互式PDF输出工作流   {#generate-non-interactive-pdf-output-workflow-nbsp}
 
-1. 將「產生非互動式PDF輸出」工作流程拖曳至Sidekick中「Forms Workflow」標籤下方。
-1. 連按兩下新增的工作流程步驟以編輯元件。
-1. 在「編輯元件」對話方塊中，設定輸入檔案、輸出檔案和其他引數，然後按一下 **[!UICONTROL 確定]**.
+1. 将“生成非交互式PDF输出”工作流拖动到Sidekick的“Forms Workflow”选项卡下。
+1. 双击添加的工作流步骤以编辑组件。
+1. 在“编辑组件”对话框中，配置输入文档、输出文档和其他参数，然后单击 **[!UICONTROL 确定]**.
 
-#### 輸入檔案 {#input-documents-3}
+#### 输入文档 {#input-documents-3}
 
-* *範本檔案*：指定XDP範本的位置。 它是必填欄位。
+* *模板文件*：指定XDP模板的位置。 它是必填字段。
 
-* *資料檔案*：指定需要與範本合併的資料xml的位置。
+* *数据文档*：指定需要与模板合并的数据xml的位置。
 
-#### 輸出檔案 {#output-document}
+#### 输出文档 {#output-document}
 
-*輸出檔案*：指定所產生PDF表單的名稱。
+*输出文档*：指定生成的PDF表单的名称。
 
-#### 其他引數 {#additional-parameters-1}
+#### 其他参数 {#additional-parameters-1}
 
-* *內容根目錄*：指定存放庫中儲存輸入XDP範本中使用的片段或影像的資料夾路徑。
-* *地區設定*：指定所產生PDF表單的預設地區設定。
-* *Acrobat版本*：指定所產生PDF表單的目標Acrobat版本。
-* 線性PDF：指定是否要最佳化產生的PDF以供網頁檢視。
-* *標籤PDF*：指定是否允許存取產生的PDF。
-* *XCI檔案*：指定XCI檔案的路徑。
+* *内容根*：指定存储库中用于存储输入XDP模板中使用的片段或图像的文件夹的路径。
+* *区域设置*：指定生成的PDF表单的默认区域设置。
+* *Acrobat版本*：为生成的PDF表单指定目标Acrobat版本。
+* 线性PDF：指定是否优化生成的PDF以进行Web查看。
+* *已标记的PDF*：指定是否使生成的PDF可访问。
+* *XCI文档*：指定XCI文件的路径。

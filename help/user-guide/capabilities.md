@@ -1,7 +1,7 @@
 ---
-title: AEM 6.5功能使用手冊
+title: AEM 6.5功能用户指南
 seo-title: AEM 6.5 Capabilities User Guide
-description: AEM 6.5基本功能概觀
+description: AEM 6.5基本功能概述
 seo-description: An overview of the essential capabilities of AEM 6.5
 exl-id: d9941242-a01d-48fa-bad0-4c5b9dd16f4c
 source-git-commit: a51a863a4edf7e8b951a8361c5c7f0517b09f12a
@@ -11,19 +11,19 @@ ht-degree: 41%
 
 ---
 
-# AEM 6.5功能使用手冊 {#aem-65-capabilities-user-guides}
+# AEM 6.5功能用户指南 {#aem-65-capabilities-user-guides}
 
 ## AEM Foundation {#aem-foundation}
 
-[進一步瞭解Adobe Experience Manager 6.5的安裝、部署和架構](/help/sites-deploying/home.md)，包括我們的Adobe Managed Services雲端部署。
+[详细了解Adobe Experience Manager 6.5的安装、部署和架构](/help/sites-deploying/home.md)，包括我们的Adobe Managed Services云部署。
 
-[瞭解如何管理AEM專案](/help/managing/home.md).
+[了解如何管理AEM项目](/help/managing/home.md).
 
 ## AEM Sites {#aem-sites}
 
-[瞭解在AEM中建立內容和編寫的重要概念](/help/sites-authoring/home.md).
+[了解在AEM中创建内容和创作的主要概念](/help/sites-authoring/home.md).
 
-[瞭解如何管理AEM](/help/sites-administering/home.md).
+[了解如何管理AEM](/help/sites-administering/home.md).
 
 ## AEM Assets {#aem-assets}
 
@@ -35,11 +35,11 @@ ht-degree: 41%
 
 ## AEM Screens {#aem-screens}
 
-[瞭解用於發佈動態和互動式體驗的數位看板解決方案。](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html)
+[了解用于发布动态和交互式体验的数字标牌解决方案。](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html)
 
-## AEM商務 {#aem-commerce}
+## AEM商务 {#aem-commerce}
 
-[瞭解AEM商務。](/help/commerce/home.md)
+[了解AEM商务。](/help/commerce/home.md)
 
 ## AEM Communities {#aem-communities}
 

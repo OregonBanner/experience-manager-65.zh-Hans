@@ -1,7 +1,7 @@
 ---
-title: 管理使用者和使用者群組
+title: 管理用户和用户组
 seo-title: Managing Users and User Groups
-description: AEM Communities的使用者可以自行註冊及編輯其設定檔
+description: AEM Communities的用户可以自行注册和编辑其配置文件
 seo-description: Users of AEM Communities can self-register and edit their profiles
 uuid: aeba424e-ea7e-4da5-b94f-ea8af4caa7d2
 contentOwner: Janice Kendall
@@ -18,150 +18,150 @@ ht-degree: 0%
 
 ---
 
-# 管理使用者和使用者群組 {#managing-users-and-user-groups}
+# 管理用户和用户组 {#managing-users-and-user-groups}
 
 ## 概述 {#overview}
 
-在AEM Communities中的發佈環境中，使用者可以自行註冊及編輯其設定檔。 若有適當的許可權，他們也可以：
+在AEM Communities中，在发布环境中，用户可以自行注册和编辑其配置文件。 获得适当的权限后，他们还可以：
 
-* 在社群網站中建立子社群(請參閱 [社群群組](creating-groups.md))。
+* 在社区站点中创建子社区(请参阅 [社区组](creating-groups.md))。
 
-* [稽核](moderation.md) 使用者產生的內容(UGC)。
+* [审核](moderation.md) 用户生成内容(UGC)。
 
-* 是 [有特殊許可權](#privileged-members-group) 為部落格、行事曆、QnA和論壇建立專案。
+* 是 [特权](#privileged-members-group) 创建博客、日历、问题与解答和论坛条目。
 
-在發佈環境中註冊的使用者通常稱為 *社群成員（成員）* 以區別他們 *使用者* 在作者環境中。
+在发布环境中注册的用户通常称为 *社区成员（成员）* 来区分他们 *用户* 在创作环境中。
 
-透過將成員指派給以下任一專案來授予許可權： [成員（使用者）群組](#publish-group-roles) 社群網站為時，以動態方式建立 [已建立](sites-console.md) 或 [已修改](sites-console.md#modifying-site-properties) 來自作者環境。 使用作者環境時，成員可透過以下方式從發佈環境檢視： [通道服務](#tunnel-service).
+通过为成员分配以下项之一来授予权限： [成员（用户）组](#publish-group-roles) 在社区站点为 [已创建](sites-console.md) 或 [修改时间](sites-console.md#modifying-site-properties) 创作环境中的。 在创作环境中工作时，成员可通过以下方式从发布环境中可见： [隧道服务](#tunnel-service).
 
-根據設計，在發佈環境中建立的成員和成員群組不應出現在作者環境中。 在作者環境中建立的使用者和使用者群組，其目的類似地是保留在作者環境中。
+根据设计，在发布环境中创建的成员和成员组不应出现在创作环境中。 在创作环境中创建的用户和用户组同样打算保留在创作环境中。
 
-當作者上的使用者與發佈上的成員來自相同的使用者清單時（例如從相同的LDAP目錄同步），在作者與發佈環境中，他們不會被視為具有相同許可權和群組成員資格的相同使用者。 成員與使用者的角色必須視情況個別建立於發佈與作者。
+当创作用户和发布用户来自同一用户列表时（例如从同一LDAP目录同步），在创作环境和发布环境中他们不会被视为拥有相同权限和组成员资格的同一用户。 必须根据需要在发布和创作时分别建立成员和用户的角色。
 
-對於 [發佈陣列](topologies.md)，對一個發佈執行個體進行的註冊和修改需要與其他發佈執行個體同步，以便他們能夠存取相同的使用者資料。 如需詳細資訊，請參閱 [使用者同步](sync.md)，其中包含說明以下內容的區段： [當……發生什麼情況](sync.md#what-happens-when).
+对于 [发布场](topologies.md)，对一个发布实例所做的注册和修改需要与其他发布实例同步，以便它们可以访问相同的用户数据。 有关详细信息，请参阅 [用户同步](sync.md)，其中包含描述 [当……发生什么情况？](sync.md#what-happens-when).
 
 ### 贡献限制 {#contribution-limits}
 
-為了防止垃圾郵件，可以限制成員的張貼內容頻率。 此外，也可以自動限制新註冊成員的貢獻。
+为了防止垃圾邮件，可以限制成员发布内容的频率。 此外，可以自动限制新登记成员的缴款。
 
-如需詳細資訊，請參閱 [成員貢獻限制](limits.md).
+有关详细信息，请参阅 [成员缴款限制](limits.md).
 
-### 動態建立的使用者群組 {#dynamically-created-user-groups}
+### 动态创建的用户组 {#dynamically-created-user-groups}
 
-建立新社群網站時，新使用者群組會以唯一id (uid)和適當的許可權動態建立，這些許可權適合在製作環境中管理社群網站所需的各種管理功能(請參閱 [作者群組角色](#author-group-roles))或發佈環境(請參閱 [發佈群組角色](#publish-group-roles))。
+创建新社区站点后，系统会使用唯一id (uid)和适当的权限动态创建新用户组，这些权限适合在创作环境中管理社区站点所需的各种管理功能(请参阅 [作者组角色](#author-group-roles))或发布环境(请参阅 [发布组角色](#publish-group-roles))。
 
-群組的名稱是從指定網站名稱產生的。 [社群網站建立](sites-console.md#step13asitetemplate). 此唯一ID可避免相同伺服器上名稱相似的社群網站和社群群組的命名衝突。
+组的名称由指定站点的名称生成，该名称创建于 [社区站点创建](sites-console.md#step13asitetemplate). 唯一ID可避免同一服务器上名称相似的社区站点和社区组的命名冲突。
 
-例如，如果網站名稱是&quot;*參與*&#x200B;若為名為「We.Retail Engage」的網站，則其中一個建立的使用者群組將是：
+例如，如果站点名称为“*参与*”对于名为“We.Retail Engage”的网站，则创建的用户组之一将是：
 
-* 社群 *參與* 成員
+* 社区 *参与* 成员
 
 ## 创作环境 {#author-environment}
 
-### 通道服務 {#tunnel-service}
+### 通道服务 {#tunnel-service}
 
-使用製作環境時 [建立網站](sites-console.md)， [修改網站屬性](sites-console.md#modifying-site-properties) 和 [管理社群成員和成員群組](members.md)時，必須存取在發佈環境中註冊的使用者和使用者群組。
+使用创作环境时 [创建站点](sites-console.md)， [修改站点属性](sites-console.md#modifying-site-properties) 和 [管理社区成员和成员组](members.md)中，必须访问在发布环境中注册的用户和用户组。
 
-通道服務使用作者上的復寫代理程式提供此存取。
+通道服务使用创作实例上的复制代理提供此访问权限。
 
-* 如需詳細資訊，請參閱 [設定指示](deploy-communities.md#tunnel-service-on-author) （在部署頁面上）。
+* 有关详细信息，请参阅 [配置说明](deploy-communities.md#tunnel-service-on-author) （在部署页面上）。
 
-此 [社群成員和群組主控台](members.md) 僅用於管理在發佈環境中註冊的使用者（成員）和使用者群組（成員群組）。
+此 [社区成员和组控制台](members.md) 仅用于管理仅在发布环境中注册的用户（成员）和用户组（成员组）。
 
-若要管理在作者環境中註冊的使用者和使用者群組，請使用 [安全性主控台](../../help/sites-administering/security.md)
+要管理在创作环境中注册的用户和用户组，请使用 [安全控制台](../../help/sites-administering/security.md)
 
-### 作者群組角色 {#author-group-roles}
+### 作者组角色 {#author-group-roles}
 
-| 如果群組的成員…… | 主要角色 |
+| 如果组成员…… | 主要角色 |
 |---|---|
-| 管理員 | 管理員群組由系統管理員組成，系統管理員擁有社群管理員的所有能力以及管理社群管理員群組的能力。 |
-| 社区管理员 | 社群管理員群組會自動成為所有社群網站及網站上建立的任何社群群組的成員。 Community Administrators群組的初始成員是administrators群組。 在作者環境中，社群管理員可以建立社群網站、管理網站、管理成員（他們可以禁止社群成員）和稽核內容。 |
-| 社群&lt;*網站名稱*> Sitecontentmanager | 社群網站內容管理員能夠執行傳統的AEM編寫、內容建立和修改社群網站的頁面。 |
-| 无 | 匿名網站訪客可能無法存取作者環境。 |
+| 管理员 | 管理员组由系统管理员组成，系统管理员具有社区管理员的所有能力以及管理社区管理员组的能力。 |
+| 社区管理员 | 社区管理员组会自动成为所有社区站点以及在站点上创建的任何社区组的成员。 社区管理员组的初始成员是管理员组。 在创作环境中，社区管理员能够创建社区站点、管理站点、管理成员（他们可以从社区中禁止成员）和审核内容。 |
+| 社区&lt;*站点名称*> Sitecontentmanager | 社区站点内容管理器能够为社区站点执行传统的AEM创作、内容创建和修改页面。 |
+| 无 | 匿名网站访客不能访问作者环境。 |
 
-### 系統管理員 {#system-administrators}
+### 系统管理员 {#system-administrators}
 
-管理員群組的成員是系統管理員，他們能夠為製作和發佈環境執行AEM安裝的初始設定。
+管理员组的成员是系统管理员，他们能够为创作和发布环境执行AEM安装的初始设置。
 
-出於示範和開發目的，管理員群組有一個成員，其使用者ID為 *管理員* 而密碼為 *管理員*.
+出于演示和开发目的，管理员组具有的用户ID为 *管理员* 且密码为 *管理员*.
 
-對於生產環境，應修改預設的管理員群組。
+对于生产环境，应修改默认的管理员组。
 
-請務必遵循 [安全性檢查清單](../../help/sites-administering/security-checklist.md).
+请务必遵循 [安全核对清单](../../help/sites-administering/security-checklist.md).
 
 ## 发布环境 {#publish-environment}
 
-### 成為會員 {#becoming-a-member}
+### 成为会员 {#becoming-a-member}
 
-在發佈環境中，取決於 [設定](sites-console.md#user-management) 在社群網站中，網站訪客可以成為社群成員：
+在发布环境中，具体取决于 [设置](sites-console.md#user-management) 在社区站点中，站点访客可以成为社区成员：
 
-* 當社群網站為私人（已關閉）時：
-   * 透過邀請
-   * 依管理員的動作
+* 当社区站点为私有（关闭）时：
+   * 通过邀请
+   * 按管理员操作
 
-* 當社群網站為公開（開放）時：
-   * 透過自助註冊
-   * 透過使用Facebook和Twitter進行社交登入
+* 当社区站点为公共（开放）时：
+   * 通过自助注册
+   * 通过使用Facebook和Twitter进行社交登录
 
 >[!NOTE]
 >
->如果網站訪客註冊為一個開放社群網站的成員，他們會自動成為相同發佈環境中其他開放社群網站的成員。
+>如果网站访客注册为一个开放社区网站的成员，则他们会自动成为同一发布环境中其他开放社区网站的成员。
 
-### 發佈群組角色 {#publish-group-roles}
+### 发布组角色 {#publish-group-roles}
 
-| 如果群組的成員…… | 主要角色 |
+| 如果组成员…… | 主要角色 |
 |---|---|
-| 社群&lt;*網站名稱*>成員 | 社群網站成員是註冊使用者。 他們可以登入、修改其設定檔、加入開放的社群群組、將內容發佈至社群、傳送訊息給其他成員，以及關注網站活動。 |
-| 社群&lt;*網站名稱*>版主 | 社群網站版主是受信任的社群成員，他可以使用版主主控台（大量使用），或在內容發佈頁面的內容中檢閱UGC。 |
-| 社群&lt;*網站名稱*> &lt;*群組名稱*>成員 | 社群群組成員是指已加入開放社群群組，或已受邀加入封閉式社群群組的社群成員。 他們擁有網站內該社群群組的成員能力。 |
-| 社群&lt;*網站名稱*>群組管理員 | 社群網站群組管理員是受信任的社群成員，被指派在社群網站中建立和管理子社群（群組）。 包含提供內容內稽核的功能。 |
-| *有特殊許可權的成員安全性群組* | 為了限制內容建立而手動建立和維護的使用者群組。 另請參閱 [有特殊許可權的成員群組](#privileged-members-group). |
-| 无 | 探索到網站的匿名網站訪客可檢視和搜尋允許匿名存取的社群網站。 為了參與和發佈內容，使用者必須自行註冊（如果允許）並成為社群成員。 |
+| 社区&lt;*站点名称*>成员 | 社区站点成员是注册用户。 他们可以登录、修改个人资料、加入开放的社区组、向社区发布内容、向其他成员发送消息以及关注网站活动。 |
+| 社区&lt;*站点名称*>版主 | 社区站点审查方是受信任的社区成员，他能够在发布内容的页面上使用审查控制台批量审查或上下文审查UGC。 |
+| 社区&lt;*站点名称*> &lt;*组名称*>成员 | 社区组成员是已加入开放社区组或已被邀请加入封闭社区组的社区成员。 他们具有站点中该社区组的成员的能力。 |
+| 社区&lt;*站点名称*>组管理员 | 社区站点组管理员是受信任的社区成员，其任务是在社区站点中创建和管理子社区（组）。 包括提供上下文审核的功能。 |
+| *拥有权限的成员安全组* | 手动创建和维护的用户组，用于限制内容创建。 参见 [拥有权限的成员组](#privileged-members-group). |
+| 无 | 发现网站的匿名网站访客可以查看和搜索允许匿名访问的社区网站。 要参与并发布内容，用户必须自行注册（如果允许）并成为社区成员。 |
 
-### 指派成員給發佈群組角色 {#assigning-members-to-publish-group-roles}
+### 将成员分配给发布组角色 {#assigning-members-to-publish-group-roles}
 
-時間 [建立社群網站](sites-console.md) 在作者環境中，或當 [修改場地屬性，](sites-console.md#modifying-site-properties) 可為成員指派在發佈環境中執行的各種角色，例如版主、群組管理員、資源聯絡人或有特殊許可權的成員。
+时间 [创建社区站点](sites-console.md) 在创作环境中，或 [修改站点属性，](sites-console.md#modifying-site-properties) 可以为成员分配在发布环境中执行的各种角色，例如版主、组管理员、资源联系人或拥有权限的成员。
 
-[啟用通道服務](sync.md#accessingpublishusersfromauthor) 結果會從發佈上的成員而不是作者上的使用者顯示指派選擇。
+[启用通道服务](sync.md#accessingpublishusersfromauthor) 导致从“发布”上的成员而不是“作者”上的用户显示分配选择。
 
-選取的成員將會自動指派給 [適當的群組](#publish-group-roles) 和他們的成員資格將在社群網站（重新）發佈時包括在內。
+选定的成员将自动分配给 [适当组](#publish-group-roles) 社区站点（重新）发布时，其成员资格将包含在内。
 
 ### 拥有权限的成员组 {#privileged-members-group}
 
-有特殊許可權的成員安全群組的目的是限製為某些社群功能建立內容，而僅限於社群網站成員的有特殊許可權子集。
+拥有权限的成员安全组的目的是将某些社区功能的内容创建限制在社区站点成员拥有权限的子集。
 
-有特殊許可權的成員群組是使用 [社群群組主控台](members.md).
+拥有权限的成员组是使用 [社区组控制台](members.md).
 
-建立有特殊許可權的成員群組之後，使用 [通道服務已啟用](sync.md#accessingpublishusersfromauthor)，則現有社群網站的結構可能為 [已修改](sites-console.md#modify-structure) 編輯其社群功能的設定為「允許有特殊許可權的成員」並新增建立的群組。
+创建拥有权限的成员组后，使用 [已启用通道服务](sync.md#accessingpublishusersfromauthor)，则现有社区站点的结构可能为 [修改时间](sites-console.md#modify-structure) 将其社区功能的配置编辑为“允许拥有权限的成员”并添加已创建的组。
 
-允許指定一或多個有特殊許可權的成員群組的社群功能如下：
+允许指定一个或多个拥有权限的成员组的社区功能包括：
 
-* [部落格功能](functions.md#blog-function)  — 限制新文章的建立。
-* [行事曆功能](functions.md#calendar-function)  — 限制建立新事件。
-* [論壇功能](functions.md#forum-function)  — 限制建立新主題。
-* [QnA函式](functions.md#qna-function)  — 限制新問題的建立。
+* [博客功能](functions.md#blog-function)  — 限制创建新文章。
+* [日历功能](functions.md#calendar-function)  — 限制创建新事件。
+* [论坛功能](functions.md#forum-function)  — 限制创建新主题。
+* [问题与解答功能](functions.md#qna-function)  — 限制创建新问题。
 
-當社群功能未設定為安全時（未指派擁有特殊許可權的成員群組），則允許所有社群網站成員建立功能內容（文章、事件、主題、問題）。
+当社区功能不安全（未分配拥有权限的成员组）时，则允许所有社区站点成员创建功能内容（文章、事件、主题、问题）。
 
 >[!NOTE]
 >
->將使用者新增至社群網站的特權成員群組，只會授予他們建立許可權（如果他們也是同一社群網站的成員）。
+>将用户添加到社区站点的拥有权限的成员组时，只有该用户同时也是同一社区站点的成员，才会授予其创建权限。
 
-## 建立社群成員 {#creating-community-members}
+## 创建社区成员 {#creating-community-members}
 
-### 存放庫位置 {#repository-location}
+### 存储库位置 {#repository-location}
 
-為了讓某些功能正常運作，需要建立具有適當許可權的使用者和使用者群組。
+为了使某些功能正常工作，需要创建具有适当权限的用户和用户组。
 
-在中建立成員時 `/home/users/community`，它們會繼承賦予成員設定檔讀取許可權的適當ACL。
+在中创建成员时 `/home/users/community`，它们将继承赋予成员配置文件读取权限的正确ACL。
 
-同樣地，自訂社群使用者群組（例如擁有特殊許可權的成員群組）應建立於 `/home/groups/community`.
+同样，自定义社区用户组（如拥有权限的成员组）应创建于 `/home/groups/community`.
 
-使用 [社群成員和群組主控台](members.md) 將會在這些路徑中建立使用者和群組。
+使用 [社区成员和组控制台](members.md) 将在这些路径中创建用户和组。
 
-若要指定自訂路徑，必須使用傳統安全性UI，此介面可供存取： [https://&lt;server>：&lt;port>/useradmin](http://localhost:4503/useradmin).
+要指定自定义路径，需要使用经典安全UI，可从以下位置访问： [https://&lt;server>：&lt;port>/useradmin](http://localhost:4503/useradmin).
 
-若要為自訂成員路徑提供讀取許可權，請在所有發佈執行個體上設定類似的ACL `/home/users/community`：
+要授予自定义成员路径的读取权限，请在所有发布实例上设置ACL，其形式类似于 `/home/users/community`：
 
 ```xml
 <allow
@@ -174,7 +174,7 @@ ht-degree: 0%
 </allow>
 ```
 
-若要為所有發佈執行個體上的自訂成員群組路徑（例如/home/groups/mycompany）提供適當的許可權，請設定類似的ACL `/home/groups/community`：
+要为所有发布实例上的自定义成员组路径（如/home/groups/mycompany）授予适当的权限，请设置类似于的ACL `/home/groups/community`：
 
 ```xml
 <allow
@@ -185,62 +185,62 @@ ht-degree: 0%
 
 ### 控制台 {#consoles}
 
-只有編寫環境提供四個單獨的控制檯：
+只有创作环境中提供了四个单独的控制台：
 
-| 主控台 | 工具、安全性、使用者 | 工具、安全性、群組 | 社群、成員 | 社群、群組 |
+| 控制台 | 工具、安全性、用户 | 工具、安全性、组 | 社区、成员 | 社区、组 |
 |----------|-----------------------|------------------------|------------------------------------------------------------|------------------------------------------------------------|
-| 管理 | 作者上的使用者 | 作者上的使用者群組 | 發佈上的成員 | 發佈時的成員群組 |
-| 需要 | 管理員許可權 | 管理員許可權 | 管理員許可權、通道服務、發佈伺服器陣列的使用者同步 | 管理員許可權、通道服務、發佈伺服器陣列的使用者同步 |
+| 管理 | 作者用户 | 作者用户组 | 发布时的成员 | 发布时的成员组 |
+| 需要 | 管理员权限 | 管理员权限 | 发布场的管理员权限、隧道服务、用户同步 | 发布场的管理员权限、隧道服务、用户同步 |
 
-### 社群管理員角色 {#community-administrators-role}
+### 社区管理员角色 {#community-administrators-role}
 
-如 [作者群組角色](#author-group-roles) 圖表，社群管理員群組的成員可以建立社群網站、管理網站、管理成員（他們可以禁止社群成員）和稽核內容。
+如附注所述， [作者组角色](#author-group-roles) 图表，社区管理员组的成员可以创建社区站点、管理站点、管理成员（他们可以从社区中禁止成员）和审核内容。
 
-請遵循建立使用者並將其指派給啟用管理員角色的相同步驟，但新增c `ommunity-administrators` 群組（位於使用者的「群組」標籤下）。
+执行与创建用户并将其分配给启用管理员角色相同的步骤，但添加c `ommunity-administrators` 组（在用户的“组”选项卡下）。
 
-### LDAP整合 {#ldap-integration}
+### LDAP集成 {#ldap-integration}
 
-AEM支援使用LDAP來驗證使用者並建立使用者帳戶。 詳情請參閱 [使用AEM 6設定LDAP](../../help/sites-administering/ldap-config.md).
+AEM支持使用LDAP对用户进行身份验证以及创建用户帐户。 有关详情，请参阅 [使用AEM 6配置LDAP](../../help/sites-administering/ldap-config.md).
 
-以下是社群成員和成員群組專屬的一些設定詳細資料。
+以下是特定于社区成员和成员组的一些配置详细信息。
 
-1. 為每個AEM發佈執行個體設定LDAP。
-2. [LDAP身分提供者](../../help/sites-administering/ldap-config.md#configuring-the-ldap-identity-provider)
+1. 为每个AEM发布实例配置LDAP。
+2. [LDAP身份提供程序](../../help/sites-administering/ldap-config.md#configuring-the-ldap-identity-provider)
 
-   * 無特殊指示
+   * 无特殊说明
 
-3. [同步處理常式](../../help/sites-administering/ldap-config.md#configuring-the-synchronization-handler)
+3. [同步处理程序](../../help/sites-administering/ldap-config.md#configuring-the-synchronization-handler)
 
-   * 設定下列屬性：
+   * 设置以下属性：
 
-      * **[!UICONTROL 使用者自動成員資格]**： `community-<site name>-<uid>-members`
-      * **[!UICONTROL 使用者路徑首碼]**： `/community`
-      * **[!UICONTROL 群組路徑首碼]**： `/community`
+      * **[!UICONTROL 用户自动成员资格]**： `community-<site name>-<uid>-members`
+      * **[!UICONTROL 用户路径前缀]**： `/community`
+      * **[!UICONTROL 组路径前缀]**： `/community`
 
-4. [外部登入模組](../../help/sites-administering/ldap-config.md#the-external-login-module)
+4. [外部登录模块](../../help/sites-administering/ldap-config.md#the-external-login-module)
 
-   * 無特殊指示
+   * 无特殊说明
 
-這會導致系統自動將使用者指派給社群網站的成員群組，且存放庫位置為 `/home/users/community` 和 `/home/groups/community`，因此他們會繼承適當的許可權，以便檢視彼此的設定檔。
+这会导致自动将用户分配给社区站点的成员组，并且存储库位置为 `/home/users/community` 和 `/home/groups/community`，以便他们继承查看彼此配置文件的相应权限。
 
-* 此 `User auto membership` 值應為 `rep:authorizableId` 屬性，而非 `givenName` （顯示名稱）。
+* 此 `User auto membership` 值应为 `rep:authorizableId` 属性，而不是 `givenName` （显示名称）。
 
-## 在AEM執行個體之間同步使用者 {#synchronizing-users-among-aem-instances}
+## 在AEM实例之间同步用户 {#synchronizing-users-among-aem-instances}
 
-使用時 [發佈陣列](topologies.md)，先將使用者匯入一個執行個體，確保使用者在每個發佈執行個體上具有相同的路徑，並 [啟用使用者同步](sync.md) 將使用者分發到其他發佈執行個體。
+使用时 [发布场](topologies.md)，确保用户在每个发布实例上具有相同的路径，方法是首先将用户导入一个实例，然后 [启用用户同步](sync.md) 对于Sling，将用户分配到其他发布实例。
 
-如果匯入使用者群組，為確保使用者群組在每個發佈執行個體上具有相同的路徑，請匯入到一個執行個體，然後 [建立套件](../../help/sites-administering/package-manager.md#creating-a-new-package) 匯出，並在所有其他發佈執行個體上安裝該套件。
+如果导入用户组，为确保用户组在每个发布实例上具有相同的路径，请导入一个实例，然后 [创建资源包](../../help/sites-administering/package-manager.md#creating-a-new-package) 导出，并在所有其他发布实例上安装该包。
 
-雖然透過使用者同步處理來同步使用者群組將包含在未來的版本中，但目前僅限 *會籍* 執行使用者同步時，將會同步使用者群組的。
+虽然通过用户同步来同步用户组将包含在未来版本中，但目前仅 *会员资格* 用户同步运行时将同步的用户组的。
 
-## 關於社群群組 {#about-community-groups}
+## 关于社区组 {#about-community-groups}
 
-討論群組時，有兩個不同的主題：
+讨论组时，有两个不同的主题：
 
-* **[社群群組](overview.md#communitygroups)**
+* **[社区组](overview.md#communitygroups)**
 
-   社群群組是子社群，可在支援建立社群群組的社群網站之發佈環境中建立。 建立社群群組後，會有更多頁面新增至網站，且會以類似於其上層社群網站的方式進行管理。 如需詳細資訊，請造訪 [社群群組Essentials](essentials-groups.md) 適用於開發人員和 [社群群組](creating-groups.md) 適用於作者。
+   社区组是子社区，可以在支持创建社区组的社区站点的发布环境中创建。 创建社区组后，会将更多页面添加到该网站，并按照与其父社区站点类似的方式进行管理。 有关详细信息，请访问 [社区组要点](essentials-groups.md) 适用于开发人员和 [社区组](creating-groups.md) 供作者使用。
 
-* **[成員群組](../../help/sites-administering/security.md)**
+* **[成员组](../../help/sites-administering/security.md)**
 
-   成員群組是成員可能所屬的群組，並可透過「群組」主控台進行管理。 本頁大部分討論都集中在成員群組上。 自動為社群網站建立的成員群組，其前置詞為 *`Community`*，可稱為社群群組，因此必須考量討論的內容。
+   成员组是成员可能所属的组，通过“组”控制台进行管理。 本页上的大部分讨论都专门针对成员组。 自动为社区站点创建的成员组，其前缀为 *`Community`*，可称为社区组，因此必须考虑讨论的内容。

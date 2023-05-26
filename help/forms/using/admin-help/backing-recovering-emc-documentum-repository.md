@@ -1,7 +1,7 @@
 ---
-title: 備份和復原EMC Documentum存放庫
+title: 备份和恢复EMC Documentum存储库
 seo-title: Backing up and recovering the EMC Documentum repository
-description: 本檔案說明備份和復原為您的AEM表單環境設定的EMC Documentum存放庫所需的工作。
+description: 本文档介绍了备份和恢复为您的AEM Forms环境配置的EMC Documentum存储库所需的任务。
 seo-description: This document describes the tasks required to back up and recover the EMC Documentum repository configured for your AEM forms environment.
 uuid: ab3b1fb1-25b3-4c95-801f-82d4b58f05ff
 contentOwner: admin
@@ -17,48 +17,48 @@ ht-degree: 0%
 
 ---
 
-# 備份和復原EMC Documentum存放庫 {#backing-up-and-recovering-the-emc-documentum-repository}
+# 备份和恢复EMC Documentum存储库 {#backing-up-and-recovering-the-emc-documentum-repository}
 
-本節說明備份和復原為您的AEM Forms環境設定的EMC Documentum存放庫所需的工作。
-
->[!NOTE]
->
->這些指示假設已視需要安裝並設定AEM forms with Connectors for ECM和EMC Documentum Content Server。
-
-對於備份和還原程式，有兩個主要工作：
-
-* 備份（或還原） AEM表單環境。
-* 備份（或還原） EMC Documentum Content Server。
+本节介绍了备份和恢复为您的AEM Forms环境配置的EMC Documentum存储库所需的任务。
 
 >[!NOTE]
 >
->在備份EMC Documentum系統之前，請先備份AEM表單資料，接著在還原AEM表單環境之前還原EMC Documentum系統。
+>这些说明假定已根据需要安装和配置带有Connectors for ECM和EMC Documentum Content Server的AEM Forms。
 
-## 軟體需求 {#software-requirements}
+对于备份和恢复过程，有两个主要任务：
 
-若要在EMC Documentum Content Server上執行必要的備份工作，請從EMC購買適當的第三方公用程式，例如EMC NetWorker，或從CYA購買適用於EMC Documentum的CYA SmartRecovery。 下列指示說明使用EMC NetWorker Module 7.2.2版的步驟。
+* 备份（或恢复）AEM forms环境。
+* 备份（或恢复） EMC Documentum Content Server。
 
-您需要下列EMC NetWorker模組：
+>[!NOTE]
+>
+>在备份EMC Documentum系统之前备份您的AEM表单数据，然后在恢复AEM表单环境之前恢复EMC Documentum系统。
 
-* NetWorker模組
-* NetWorker設定精靈
-* NetWorker裝置設定精靈
-* NetWorker Module，適用於您的Content Server使用的資料庫型別
-* Networker Module for Documentum
+## 软件要求 {#software-requirements}
 
-## 準備EMC Document Content Server以進行備份和復原 {#preparing-the-emc-document-content-server-for-backup-and-recovery}
+要在EMC Documentum Content Server上执行必要的备份任务，请从EMC购买适当的第三方应用工具（如EMC NetWorker ）或从CYA购买用于EMC Documentum的CYA SmartRecovery。 以下说明介绍了使用EMC NetWorker Module 7.2.2版的步骤。
 
-本節說明如何在Content Server上安裝和設定EMC NetWorker軟體。
+您需要以下EMC NetWorker模块：
 
-**準備EMC Documentum伺服器以進行備份**
+* NetWorker Module
+* NetWorker配置向导
+* NetWorker设备配置向导
+* NetWorker Module ，用于Content Server使用的数据库类型
+* NetWorker Module for Documentum
 
-1. 在EMC Documentum Content Server上，安裝EMC NetWorker模組，接受所有預設值。
+## 为备份和恢复准备EMC Document Content Server {#preparing-the-emc-document-content-server-for-backup-and-recovery}
 
-   在安裝過程中，系統會提示您輸入Content Server電腦的伺服器名稱作為 *NetWorker伺服器名稱*. 為資料庫安裝EMC NetWorker Module時，請選擇「完整」安裝。
+本节介绍如何在Content Server上安装和配置EMC NetWorker软件。
 
-1. 使用以下範例內容，建立名為的設定檔 *nsrnmd_win.cfg* 並儲存至Content Server上可存取的位置。 備份與還原命令會呼叫此檔案。
+**准备EMC Documentum服务器以进行备份**
 
-   下列文字包含分行符號的格式字元。 如果您將此文字複製到此檔案以外的位置，請一次複製一個部分，並在您將文字貼到新位置時移除格式設定字元。
+1. 在EMC Documentum Content Server上，安装EMC NetWorker模块，接受所有默认值。
+
+   在安装过程中，系统会提示您输入Content Server计算机的服务器名称作为 *NetWorker服务器名称*. 为数据库安装EMC NetWorker Module时，请选择“完整”安装。
+
+1. 使用以下示例内容，创建一个名为的配置文件 *nsrnmd_win.cfg* 并将其保存到Content Server上可访问的位置。 此文件将由备份和还原命令调用。
+
+   以下文本包含换行符的格式字符。 如果您将此文本复制到此文档之外的某个位置，请一次复制一个部分，并在将文本粘贴到新位置时删除格式设置字符。
 
    ```shell
     ################################################
@@ -187,83 +187,83 @@ ht-degree: 0%
     NMDDE_DM_PASSWD=XAtup9pl
    ```
 
-   保留設定檔密碼欄位 `NMDDE_DM_PASSWD` 空白。 您將在下一個步驟中設定密碼。
+   保留配置文件密码字段 `NMDDE_DM_PASSWD` 空白。 您将在下一步中设置密码。
 
-1. 設定組態檔密碼，如下所示：
+1. 按如下方式设置配置文件密码：
 
-   * 開啟命令提示字元並變更為 `[NetWorker_root]\Legato\nsr\bin`.
-   * 執行以下命令： `-nsrnmdsv.exe -f`*&lt;path_to_cfg_file> -P &lt;password>*
+   * 打开命令提示符，然后更改为 `[NetWorker_root]\Legato\nsr\bin`.
+   * 运行以下命令： `-nsrnmdsv.exe -f`*&lt;path_to_cfg_file> -P &lt;password>*
 
-1. 建立用來備份資料庫的可執行批次(.bat)檔案。 （請參閱NetWorker檔案）。 根據您的安裝設定批次檔案中的詳細資訊。
+1. 创建用于备份数据库的可执行批处理(.bat)文件。 （请参阅NetWorker文档。） 根据安装情况在批处理文件中设置详细信息。
 
-   * 完整資料庫備份(nsrnmddbf.bat)：
+   * 完整数据库备份(nsrnmddbf.bat)：
 
-      `NetWorker_database_module_root` `-s`*&lt;networker_server_name>* `-U``[username]` `-P`*[密碼&#x200B;]*`-l full`*&lt;database_name>*
+      `NetWorker_database_module_root` `-s`*&lt;networker_server_name>* `-U``[username]` `-P`*[密码&#x200B;]*`-l full`*&lt;database_name>*
 
-   * 增量資料庫備份(nsrnmddbi.bat)：
+   * 增量数据库备份(nsrnmddbi.bat)：
 
       `[NetWorker_database_module_root]` `-s`*&lt;NetWorker_Server_Name>* `-U``[username]` `-P``[password]` `-l 1 -R`*&lt;database_name>*
 
-   * 資料庫記錄備份(nsrnmddbl.bat)：
+   * 数据库日志备份(nsrnmddbl.bat)：
 
       `[NetWorker_database_module_root]` `-s``<NetWorker_Server_Name>` `-U``[username]` `-P``[password]` `-l incr -R`*&lt;database_name>*
 
       其中：
 
-      `[NetWorker_database_module_root]` 是NetWorker模組的安裝目錄。 例如，NetWorker Module for SQL Server的預設安裝目錄為C:\Program Files\Legato\nsr\bin\nsrsqlsv。
+      `[NetWorker_database_module_root]` 是NetWorker模块的安装目录。 例如， NetWorker Module for SQL Server的默认安装目录为C:\Program Files\Legato\nsr\bin\nsrsqlsv。
 
-      `NetWorker_Server_Name` 是安裝NetWorker的伺服器。
+      `NetWorker_Server_Name` 是安装NetWorker的服务器。
 
-      `username` 和 `password` 是資料庫管理員使用者的使用者名稱和密碼。
+      `username` 和 `password` 是数据库管理员用户的用户名和口令。
 
-      `database_name` 是要備份的資料庫名稱。
+      `database_name` 是要备份的数据库的名称。
 
-**建立備份裝置**
+**创建备份设备**
 
-1. 在EMC Documentum伺服器上建立新目錄，並透過授予所有使用者完整許可權來共用資料夾。
-1. 啟動「EMC NetWorker管理員」，然後按一下「媒體管理>裝置」。
-1. 以滑鼠右鍵按一下裝置，然後選取建立。
-1. 輸入下列值，然後按一下「確定」：
+1. 在EMC Documentum服务器上创建一个新目录，并通过为所有用户授予完全权限来共享该文件夹。
+1. 启动EMC NetWorker Administrator ，然后单击Media Management > Devices。
+1. 右键单击“设备”并选择“创建”。
+1. 输入以下值，然后单击“确定”：
 
-   **名稱：** 共用目錄的完整路徑
+   **名称：** 共享目录的完整路径
 
-   **媒體型別：** `File`
+   **媒体类型：** `File`
 
-1. 在新裝置上按一下滑鼠右鍵，然後選取操作。
-1. 按一下「標籤」，輸入名稱，按一下「確定」，然後按一下「掛載」。
+1. 右键单击新设备并选择操作。
+1. 单击“标签”，输入名称，单击“确定”，然后单击“装载”。
 
-新增要儲存已備份檔案的裝置。 您可以新增多種不同格式的裝置。
+将添加一个设备，备份的文件将保存到该设备。 您可以添加多种不同格式的设备。
 
-## 備份EMC Documentum Content Server {#back-up-the-emc-documentum-content-server}
+## 备份EMC Documentum Content Server {#back-up-the-emc-documentum-content-server}
 
-完成AEM表單資料的完整備份後，請執行以下工作。 (請參閱 [備份AEM表單資料](/help/forms/using/admin-help/backing-aem-forms-data.md#backing-up-the-aem-forms-data).)
+在完成AEM表单数据的完整备份后，执行以下任务。 (请参阅 [备份AEM表单数据](/help/forms/using/admin-help/backing-aem-forms-data.md#backing-up-the-aem-forms-data).)
 
 >[!NOTE]
 >
->命令指令碼需要您在中建立的nsrnmd_win.cfg檔案的完整路徑 [準備EMC Document Content Server以進行備份和復原](backing-recovering-emc-documentum-repository.md#preparing-the-emc-document-content-server-for-backup-and-recovery).
+>命令脚本需要您在中创建的nsrnmd_win.cfg文件的完整路径 [为备份和恢复准备EMC Document Content Server](backing-recovering-emc-documentum-repository.md#preparing-the-emc-document-content-server-for-backup-and-recovery).
 
-1. 開啟命令提示字元並變更為 `[NetWorker_root]\Legato\nsr\bin`.
-1. 執行以下命令：
+1. 打开命令提示符，然后更改为 `[NetWorker_root]\Legato\nsr\bin`.
+1. 运行以下命令：
 
    ```shell
     - nsrnmdsv.exe -f <path_to_cfg_file>
    ```
 
-## 還原EMC Documentum Content Server {#restore-the-emc-documentum-content-server}
+## 恢复EMC Documentum Content Server {#restore-the-emc-documentum-content-server}
 
-還原AEM表單資料之前，請執行以下工作。 (請參閱 [復原AEM表單資料](/help/forms/using/admin-help/recovering-aem-forms-data.md#recovering-the-aem-forms-data).)
+在还原AEM表单数据之前，请执行以下任务。 (请参阅 [恢复AEM表单数据](/help/forms/using/admin-help/recovering-aem-forms-data.md#recovering-the-aem-forms-data).)
 
 >[!NOTE]
 >
->命令指令碼需要您在中建立的nsrnmd_win.cfg檔案的完整路徑 [準備EMC Document Content Server以進行備份和復原](backing-recovering-emc-documentum-repository.md#preparing-the-emc-document-content-server-for-backup-and-recovery).
+>命令脚本需要您在中创建的nsrnmd_win.cfg文件的完整路径 [为备份和恢复准备EMC Document Content Server](backing-recovering-emc-documentum-repository.md#preparing-the-emc-document-content-server-for-backup-and-recovery).
 
-1. 停止正在還原的Docbase服務。
-1. 啟動資料庫模組的NetWorker使用者公用程式(例如， *NetWorker User for SQL Server*)。
-1. 按一下「還原」工具，然後選取「一般」。
-1. 在畫面左側，選取檔案庫的資料庫，然後按一下工具列上的「開始」按鈕。
-1. 還原資料庫時，請重新啟動Docbase服務。
-1. 開啟命令提示字元並變更為 *[NetWorker_root]*\Legato\nsr\bin
-1. 執行以下命令：
+1. 停止要恢复的Docbase服务。
+1. 为数据库模块启动NetWorker User实用程序(例如， *NetWorker User for SQL Server*)。
+1. 单击“恢复”工具，然后选择“正常”。
+1. 在屏幕左侧，选择文档库的数据库，然后单击工具栏上的“开始”按钮。
+1. 还原数据库后，重新启动Docbase服务。
+1. 打开命令提示符并更改为 *[NetWorker_root]*\Legato\nsr\bin
+1. 运行以下命令：
 
    ```shell
     - nsrnmdrs.exe -B <docbase_name> -f <path_to_cfg_file> -C SA

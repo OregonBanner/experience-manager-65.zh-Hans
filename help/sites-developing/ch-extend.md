@@ -1,7 +1,7 @@
 ---
 title: 扩展 ContextHub
 seo-title: Extending ContextHub
-description: 定義新型別的ContextHub存放區和模組，如果提供的儲存區和模組不符合您的解決方案需求
+description: 定义新类型的ContextHub存储和模块（如果提供的存储和模块不符合您的解决方案要求）
 seo-description: Define new types of ContextHub stores and modules when the ones provided do not meet your solution requirements
 uuid: 1d80c01d-ec5d-4e76-849d-bec0e1c3941a
 contentOwner: User
@@ -19,68 +19,68 @@ ht-degree: 0%
 
 # 扩展 ContextHub{#extending-contexthub}
 
-定義新型別的ContextHub存放區和模組，如果提供的儲存區和模組不符合您的解決方案需求。
+当提供的ContextHub存储和模块不符合您的解决方案要求时，定义新类型的ContextHub存储和模块。
 
-## 建立自訂商店候選者 {#creating-custom-store-candidates}
+## 创建自定义商店候选者 {#creating-custom-store-candidates}
 
-ContextHub存放區是從已註冊的存放區候選項中建立的。 若要建立自訂商店，您需要建立並註冊商店候選商店。
+ContextHub存储是从已注册的候选存储创建的。 要创建自定义商店，您需要创建并注册商店候选项。
 
-包含建立及註冊候選商店之程式碼的javascript檔案必須包含在 [使用者端資料庫資料夾](/help/sites-developing/clientlibs.md#creating-client-library-folders). 資料夾的類別必須符合以下模式：
+包含创建和注册商店候选的代码的javascript文件必须包含在 [客户端库文件夹](/help/sites-developing/clientlibs.md#creating-client-library-folders). 文件夹的类别必须与以下模式匹配：
 
 ```xml
 contexthub.store.[storeType]
 ```
 
-此 `[storeType]` 類別的一部分為 `storeType` 存放區候選者註冊所在的區域。 (請參閱 [註冊ContextHub存放區候選者](/help/sites-developing/ch-extend.md#registering-a-contexthub-store-candidate))。 例如，若為storeType `contexthub.mystore`，使用者端程式庫資料夾的類別必須是 `contexthub.store.contexthub.mystore`.
+此 `[storeType]` 类别的一部分是 `storeType` 注册商店候选者。 (请参阅 [注册ContextHub存储候选项](/help/sites-developing/ch-extend.md#registering-a-contexthub-store-candidate))。 例如，对于storeType `contexthub.mystore`，客户端库文件夹的类别必须是 `contexthub.store.contexthub.mystore`.
 
-### 建立ContextHub存放區候選專案 {#creating-a-contexthub-store-candidate}
+### 创建ContextHub存储候选项 {#creating-a-contexthub-store-candidate}
 
-若要建立候選商店，請使用 [`ContextHub.Utils.inheritance.inherit`](/help/sites-developing/contexthub-api.md#inherit-child-parent) 擴充其中一個基礎存放區的函式：
+要创建商店候选者，您可以使用 [`ContextHub.Utils.inheritance.inherit`](/help/sites-developing/contexthub-api.md#inherit-child-parent) 函数以扩展其中一个基础存储：
 
 * [&#39;ContextHub.Store.PersistedStore&#39;](/help/sites-developing/contexthub-api.md#contexthub-store-persistedstore)
 * [&#39;ContextHub.Store.SessionStore&#39;](/help/sites-developing/contexthub-api.md#contexthub-store-sessionstore)
 * [&#39;ContextHub.Store.JSONPStore&#39;](/help/sites-developing/contexthub-api.md#contexthub-store-jsonpstore)
 * [&#39;ContextHub.Store.PersistedJSONPStore&#39;](/help/sites-developing/contexthub-api.md#contexthub-store-persistedjsonpstore)
 
-請注意，每個基礎存放區都會擴充 [`ContextHub.Store.Core`](/help/sites-developing/contexthub-api.md#contexthub-store-core) 商店。
+请注意，每个基础存储区都扩展 [`ContextHub.Store.Core`](/help/sites-developing/contexthub-api.md#contexthub-store-core) 商店。
 
-下列範例會建立 `ContextHub.Store.PersistedStore` 存放區候選者：
+以下示例创建 `ContextHub.Store.PersistedStore` 商店候选者：
 
 ```
 myStoreCandidate = function(){};
 ContextHub.Utils.inheritance.inherit(myStoreCandidate,ContextHub.Store.PersistedStore);
 ```
 
-實際上，您的自訂商店候選者將定義其他功能或覆寫商店的初始設定。 數個 [範例商店候選者](/help/sites-developing/ch-samplestores.md) 會安裝在以下的存放庫中 `/libs/granite/contexthub/components/stores`. 若要瞭解這些範例的內容，請使用CRXDE Lite開啟Javascript檔案。
+实际上，您的自定义商店候选者将定义其他功能或覆盖商店的初始配置。 多个 [示例存储候选项](/help/sites-developing/ch-samplestores.md) 安装在以下存储库中 `/libs/granite/contexthub/components/stores`. 要学习这些示例，请使用CRXDE Lite打开javascript文件。
 
-### 註冊ContextHub存放區候選者 {#registering-a-contexthub-store-candidate}
+### 注册ContextHub存储候选项 {#registering-a-contexthub-store-candidate}
 
-註冊存放區候選項，以將其與ContextHub架構整合，並允許從中建立存放區。 若要註冊候選商店，請使用 [`registerStoreCandidate`](/help/sites-developing/contexthub-api.md#registerstorecandidate-store-storetype-priority-applies) 的功能 `ContextHub.Utils.storeCandidates` 類別。
+注册存储候选对象，以将其与ContextHub框架集成并允许从中创建存储。 要注册候选商店，请使用 [`registerStoreCandidate`](/help/sites-developing/contexthub-api.md#registerstorecandidate-store-storetype-priority-applies) 的功能 `ContextHub.Utils.storeCandidates` 类。
 
-註冊候選商店時，需提供商店型別的名稱。 從候選者建立存放區時，您可以使用存放區型別來識別它所依據的候選者。
+注册商店候选者时，需提供商店类型的名称。 从候选项创建存储时，可使用存储类型标识存储所基于的候选项。
 
-註冊候選商店時，需指定其優先順序。 當使用與已註冊商店候選相同的商店型別註冊商店候選時，會使用具有較高優先順序的候選商店。 因此，您可以使用新的實作來覆寫現有的商店候選者。
+注册候选商店时，需指定其优先级。 当使用与已注册的商店候选相同的商店类型注册商店候选时，使用具有较高优先级的候选。 因此，您可以使用新实施覆盖现有商店候选商店。
 
 ```
 ContextHub.Utils.storeCandidates.registerStoreCandidate(myStoreCandidate,
                                 'contexthub.mystorecandidate', 0);
 ```
 
-在大多數情況下，只需要一個候選者，而且優先順序可以設定為 `0`，但如果您有興趣，可瞭解 [更進階的註冊，](/help/sites-developing/contexthub-api.md#registerstorecandidate-store-storetype-priority-applies) 可讓您根據javascript條件(`applies`)和候選者優先順序。
+在大多数情况下，只需要一个候选，并且优先级可以设置为 `0`，但是如果您有兴趣，可以了解 [更高级的注册，](/help/sites-developing/contexthub-api.md#registerstorecandidate-store-storetype-priority-applies) 这允许根据javascript条件选择少数存储实现之一(`applies`)和候选优先级。
 
-## 建立ContextHub UI模組型別 {#creating-contexthub-ui-module-types}
+## 创建ContextHub UI模块类型 {#creating-contexthub-ui-module-types}
 
-建立自訂UI模組型別，如果 [與ContextHub一起安裝](/help/sites-developing/ch-samplemodules.md) 不符合您的需求。 若要建立UI模組型別，請擴充以下擴充功能以建立新的UI模組轉譯器： `ContextHub.UI.BaseModuleRenderer` 類別，然後將其註冊至 `ContextHub.UI`.
+创建自定义UI模块类型，如果 [随ContextHub一起安装](/help/sites-developing/ch-samplemodules.md) 不符合您的要求。 要创建UI模块类型，请通过扩展 `ContextHub.UI.BaseModuleRenderer` 类，然后将其注册到 `ContextHub.UI`.
 
-若要建立UI模組化轉譯器，請建立 `Class` 包含轉譯UI模組之邏輯的物件。 您的類別至少必須執行下列動作：
+要创建UI模块渲染器，请创建 `Class` 包含渲染UI模块的逻辑的对象。 类至少必须执行以下操作：
 
-* 擴充 `ContextHub.UI.BaseModuleRenderer` 類別。 此類別是所有UI模組轉譯器的基本實作。 此 `Class` 物件會定義名為的屬性 `extend` 用來將這個類別命名為要擴充的類別。
+* 扩展 `ContextHub.UI.BaseModuleRenderer` 类。 此类是所有UI模块渲染器的基本实现。 此 `Class` 对象定义一个名为的属性 `extend` 用于将此类命名为正在扩展的类。
 
-* 提供預設設定。 建立 `defaultConfig` 屬性。 此屬性是一個物件，其中包含為定義的屬性 [`contexthub.base`](/help/sites-developing/ch-samplemodules.md#contexthub-base-ui-module-type) UI模組，以及您需要的任何其他屬性。
+* 提供默认配置。 创建 `defaultConfig` 属性。 此属性是一个对象，其中包含为定义的属性 [`contexthub.base`](/help/sites-developing/ch-samplemodules.md#contexthub-base-ui-module-type) UI模块以及您需要的任何其他属性。
 
-的來源 `ContextHub.UI.BaseModuleRenderer` 位於/libs/granite/contexthub/code/ui/container/js/ContextHub.UI.BaseModuleRenderer.js。  若要註冊轉譯器，請使用 [`registerRenderer`](/help/sites-developing/contexthub-api.md#registerrenderer-moduletype-renderer-dontrender) 方法 `ContextHub.UI` 類別。 您必須提供模組型別的名稱。 管理員根據此轉譯器建立UI模組時，會指定此名稱。
+的源 `ContextHub.UI.BaseModuleRenderer` 位于/libs/granite/contexthub/code/ui/container/js/ContextHub.UI.BaseModuleRenderer.js。  要注册渲染器，请使用 [`registerRenderer`](/help/sites-developing/contexthub-api.md#registerrenderer-moduletype-renderer-dontrender) 方法 `ContextHub.UI` 类。 您需要提供模块类型的名称。 当管理员基于此渲染器创建UI模块时，他们会指定此名称。
 
-在自動執行的匿名函式中建立並註冊轉譯器類別。 以下範例是根據contexthub.browserinfo UI模組的原始碼。 此UI模組是 `ContextHub.UI.BaseModuleRenderer` 類別。
+在自动执行的匿名函数中创建并注册渲染器类。 以下示例基于contexthub.browserinfo UI模块的源代码。 此UI模块是 `ContextHub.UI.BaseModuleRenderer` 类。
 
 ```xml
 ;(function() {
@@ -107,10 +107,10 @@ ContextHub.Utils.storeCandidates.registerStoreCandidate(myStoreCandidate,
 }());
 ```
 
-包含建立及註冊轉譯器之程式碼的javascript檔案必須包含在 [使用者端資料庫資料夾](/help/sites-developing/clientlibs.md#creating-client-library-folders). 資料夾的類別必須符合以下模式：
+包含创建和注册渲染器的代码的javascript文件必须包含在 [客户端库文件夹](/help/sites-developing/clientlibs.md#creating-client-library-folders). 文件夹的类别必须与以下模式匹配：
 
 ```xml
 contexthub.module.[moduleType]
 ```
 
-此 `[moduleType]` 類別的一部分為 `moduleType` 模組轉譯器註冊所在的區域。 例如，對於 `moduleType` 之 `contexthub.browserinfo`，使用者端程式庫資料夾的類別必須是 `contexthub.module.contexthub.browserinfo`.
+此 `[moduleType]` 类别的一部分是 `moduleType` 注册了模块渲染器的位置。 例如，对于 `moduleType` 之 `contexthub.browserinfo`，客户端库文件夹的类别必须是 `contexthub.module.contexthub.browserinfo`.

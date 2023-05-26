@@ -1,7 +1,7 @@
 ---
-title: 新增註解至範例頁面
+title: 向示例页面添加注释
 seo-title: Add Comment to Sample Page
-description: 新增自訂註解至頁面
+description: 向页面添加自定义评论
 seo-description: Add Custom Comments to a page
 uuid: ab258960-6de2-4943-80a7-e72904c0fd8e
 contentOwner: User
@@ -18,56 +18,56 @@ ht-degree: 0%
 
 ---
 
-# 新增註解至範例頁面  {#add-comment-to-sample-page}
+# 向示例页面添加注释  {#add-comment-to-sample-page}
 
-現在，自訂註解系統的元件已放置於應用程式目錄(/apps)中，可以使用擴充元件。 要受影響的網站中評論系統的執行個體必須將其資源型別設定為自訂評論系統，並包含所有必要的使用者端程式庫。
+现在，自定义注释系统的组件已放置在application目录(/apps)中，可以使用扩展组件。 要受影响的网站中的注释系统实例必须将其resourceType设置为自定义注释系统，并包括所有必要的客户端库。
 
-## 識別所需的Clientlibs {#identify-required-clientlibs}
+## 确定所需的Clientlibs {#identify-required-clientlibs}
 
-對於延伸的「註釋」，預設「註釋」的樣式和功能所需的使用者端程式庫也是必要的。
+对于扩展注释而言，缺省注释的样式和功能所必需的客户端库也是必需的。
 
-此 [社群元件指南](/help/communities/components-guide.md) 會識別所需的使用者端程式庫。 瀏覽至「元件指南」並檢視「註解」元件，例如：
+此 [社区组件指南](/help/communities/components-guide.md) 标识所需的客户端库。 浏览到组件指南并查看注释组件，例如：
 
 [https://localhost:4502/content/community-components/en/comments.html](https://localhost:4502/content/community-components/en/comments.html)
 
-請注意，Comments需要三個使用者端程式庫才能正確呈現和運作。 在參照擴充註解時，必須包含這些註解，而且 [延伸註解的使用者端程式庫](/help/communities/extend-create-components.md#create-a-client-library-folder) ( `apps.custom.comments`)。
+请注意注释渲染和正常运行所需的三个客户端库。 引用扩展注释时，需要包含这些注释，并且 [扩展注释的客户端库](/help/communities/extend-create-components.md#create-a-client-library-folder) ( `apps.custom.comments`)。
 
 ![comments-component1](assets/comments-component1.png)
 
-### 新增自訂註解至頁面 {#add-custom-comments-to-a-page}
+### 向页面添加自定义评论 {#add-custom-comments-to-a-page}
 
-由於每頁只能有一個註解系統，所以建立範例頁面會比較簡單，如短文所述 [建立範例頁面](/help/communities/create-sample-page.md) 教學課程。
+由于每个页面只能有一个评论系统，因此创建示例页面会更简单，如简中所述 [创建示例页面](/help/communities/create-sample-page.md) 教程。
 
-建立後，進入設計模式並讓自訂元件群組可供使用，以允許 `Alt Comments` 要新增至頁面的元件。
+创建后，进入设计模式并使自定义组件组可用，以允许 `Alt Comments` 要添加到页面中的组件。
 
-為了讓「註解」顯示並正常運作，必須將「註解」的使用者端程式庫新增至頁面的clientlibslist (請參閱 [Communities元件的Clientlibs](/help/communities/clientlibs.md))。
+为了使“注释”正确显示和运行，必须将用于“注释”的客户端库添加到页面的clientlibslist中(请参阅 [适用于社区组件的Clientlibs](/help/communities/clientlibs.md))。
 
-#### 範例頁面上的註解Clientlibs {#comments-clientlibs-on-sample-page}
+#### 示例页面上的Comments Clientlibs {#comments-clientlibs-on-sample-page}
 
 ![comments-clientlibs-crxde](assets/comments-clientlibs-crxde.png)
 
-#### 作者：範例頁面上的替代註解 {#author-alt-comment-on-sample-page}
+#### 作者：示例页面上的Alt注释 {#author-alt-comment-on-sample-page}
 
 ![alt-comment](assets/alt-comment.png)
 
-#### 作者：範例頁面註解節點 {#author-sample-page-comments-node}
+#### 作者：示例页面评论节点 {#author-sample-page-comments-node}
 
-您可以在CRXDE中檢視範例頁面之comments節點的屬性，以驗證resourceType `/content/sites/sample/en/jcr:content/content/primary/comments`.
+通过查看示例页面的comments节点的属性，可以在CRXDE中验证resourceType `/content/sites/sample/en/jcr:content/content/primary/comments`.
 
 ![verify-comment-crxde](assets/verify-comment-crxde.png)
 
-#### 發佈範例頁面 {#publish-sample-page}
+#### 发布示例页面 {#publish-sample-page}
 
-將自訂元件新增至頁面後，也需要（重新） [發佈頁面](/help/communities/sites-console.md#publishing-the-site).
+将自定义组件添加到页面后，还需要（重新） [发布页面](/help/communities/sites-console.md#publishing-the-site).
 
-#### 發佈：範例頁面上的替代註解 {#publish-alt-comment-on-sample-page}
+#### 发布：示例页面上的Alt注释 {#publish-alt-comment-on-sample-page}
 
-在發佈自訂應用程式和範例頁面後，可以輸入註解。 登入時，請使用 [示範使用者](/help/communities/tutorials.md#demo-users) 或管理員，可以發表評論。
+在发布自定义应用程序和示例页面后，可以输入注释。 登录时，使用 [演示用户](/help/communities/tutorials.md#demo-users) 或管理员，则可以发布评论。
 
-以下是aaron.mcdonald@mailinator.com發表評論：
+以下是aaron.mcdonald@mailinator.com发表评论：
 
 ![publish-alt-comment](assets/publish-alt-comment.png)
 
 ![publish-alt-comment1](assets/publish-alt-comment1.png)
 
-現在，延伸元件在預設外觀下已正常運作，修改外觀的時候到了。
+现在，扩展组件在默认外观下运行正常，是时候修改外观了。

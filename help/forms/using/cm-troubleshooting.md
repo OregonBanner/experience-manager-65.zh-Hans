@@ -1,7 +1,7 @@
 ---
-title: 「通訊管理：疑難排解」
+title: “通信管理：故障排除”
 seo-title: Correspondence Management Troubleshooting
-description: 通訊管理疑難排解
+description: 通信管理疑难解答
 seo-description: Correspondence Management Troubleshooting
 uuid: 25828cdd-110e-4a84-8f31-d82cd610a54f
 content-type: reference
@@ -17,40 +17,40 @@ ht-degree: 6%
 
 ---
 
-# 通訊管理：疑難排解 {#correspondence-management-troubleshooting}
+# 通信管理：故障排除 {#correspondence-management-troubleshooting}
 
-## 儲存字母時發生錯誤 {#errors-when-saving-a-letter}
+## 保存书信时出错 {#errors-when-saving-a-letter}
 
 ### 问题 {#issue}
 
-儲存信件時會顯示下列其中一個錯誤：
+保存信件时显示以下错误之一：
 
-* 文字模組沒有資料繫結
+* 文本模块的数据绑定不存在
 * 请提供以下内容所需的属性信息
 
 ### 原因 {#reason}
 
-發生這些錯誤可能是因為下列原因之一：
+由于以下原因之一，可能会发生这些错误：
 
-* 資料字典已繫結至信件，但伺服器上不存在。
-* 資料字典已繫結至字母，但名稱中有底線(_)。
+* 数据字典已绑定到字母，但服务器上不存在。
+* 数据字典绑定到字母，但名称中包含下划线(_)。
 
-### 因應措施 {#workaround}
+### 解决方法 {#workaround}
 
-確定您在信件中使用的資料字典位於伺服器上，且名稱中沒有底線(_)。
+确保您在书信中使用的数据字典位于服务器上，并且其名称中没有下划线(_)。
 
-## 預覽信件時發生錯誤 {#error-when-previewing-a-letter}
+## 预览信件时出错 {#error-when-previewing-a-letter}
 
 ### 问题 {#issue-1}
 
-預覽信函時，即使信函中先前未發佈的文字資產已發佈，也會出現「載入信函時發生錯誤：無法從XML輸入匯入資產」錯誤。
+预览信件时，即使信件中之前未发布的文本资产已发布，也会显示错误“加载信件时出错：无法从XML输入导入资产”。
 
-### 因應措施 {#workaround-1}
+### 解决方法 {#workaround-1}
 
-使用以下步驟重設發佈執行個體上的信件快取，然後再次嘗試檢視信件：
+使用以下步骤重置发布实例上的信件缓存，然后重试查看信件：
 
-1. 前往 **`https://'[server]:[port]'/[contextPath]/system/console/configMgr`** 並以管理員身分登入。
-1. 選取 **通訊管理設定**.
-1. 在 **通訊管理設定**，停用 **啟用字母快取**&#x200B;然後按一下&#x200B;**儲存。**
-1. 啟用 **啟用字母快取** 然後按一下 **儲存**.
-1. 重試檢視信件。
+1. 转到 **`https://'[server]:[port]'/[contextPath]/system/console/configMgr`** 并以管理员身份登录。
+1. 选择 **通信管理配置**.
+1. In **通信管理配置**，禁用 **启用书信缓存**&#x200B;然后单击&#x200B;**保存。**
+1. 启用 **启用书信缓存** 然后单击 **保存**.
+1. 重试查看书信。

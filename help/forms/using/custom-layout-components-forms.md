@@ -1,7 +1,7 @@
 ---
-title: 建立最適化表單的自訂版面配置元件
+title: 创建自适应表单的自定义布局组件
 seo-title: Creating custom layout components for adaptive forms
-description: 建立最適化表單自訂版面元件的程式。
+description: 为自适应表单创建自定义布局组件的过程。
 seo-description: Procedure to create custom layout components for adaptive forms.
 uuid: f0bb5fcd-3938-4804-ad0c-d96d3083fd01
 content-type: reference
@@ -17,32 +17,32 @@ ht-degree: 1%
 
 ---
 
-# 建立最適化表單的自訂版面配置元件{#creating-custom-layout-components-for-adaptive-forms}
+# 创建自适应表单的自定义布局组件{#creating-custom-layout-components-for-adaptive-forms}
 
 ## 先决条件 {#prerequisite}
 
-配置圖知識，可讓您建立/使用自訂配置。 另請參閱 [變更面板配置](../../forms/using/layout-capabilities-adaptive-forms.md).
+了解布局，使您能够创建/使用自定义布局。 参见 [更改面板布局](../../forms/using/layout-capabilities-adaptive-forms.md).
 
-## 最適化表單面板佈局元件 {#adaptive-form-panel-layout-component}
+## 自适应表单面板布局组件 {#adaptive-form-panel-layout-component}
 
-最適化表單面板配置元件會控制最適化表單元件在面板中相對於使用者介面的配置方式。
+自适应表单面板布局组件控制自适应表单组件在面板中相对于用户界面的布局方式。
 
-## 建立自訂面板配置 {#creating-a-custom-panel-layout}
+## 创建自定义面板布局 {#creating-a-custom-panel-layout}
 
-1. 導覽至該位置 `/crx/de`.
-1. 從位置複製面板版面 `/libs/fd/af/layouts/panel` (例如， `tabbedPanelLayout`)至 `/apps` (例如， `/apps/af-custom-layout`)。
-1. 重新命名您複製到的版面 `customPanelLayout`. 變更節點的屬性 `qtip` 和 `jcr:description`. 例如，將其變更為 `Custom layout - Toggle tabs`.
+1. 导航到位置 `/crx/de`.
+1. 从位置复制面板布局 `/libs/fd/af/layouts/panel` (例如， `tabbedPanelLayout`)至 `/apps` (例如， `/apps/af-custom-layout`)。
+1. 重命名您复制的布局 `customPanelLayout`. 更改节点的属性 `qtip` 和 `jcr:description`. 例如，将其更改为 `Custom layout - Toggle tabs`.
 
 qtip
 
-![自訂面板配置CRX DE快照](assets/custom_layout_new.png)
+![自定义面板布局CRX DE快照](assets/custom_layout_new.png)
 
 >[!NOTE]
 >
->設定屬性 `guideComponentType`至值 `fd/af/layouts/panel` 判斷配置是面板配置。
+>设置属性 `guideComponentType`到值 `fd/af/layouts/panel` 确定布局为面板布局。
 
-1. 重新命名檔案 `tabbedPanelLayout.jsp` 在customPanelLayout.jsp的新版面下。
-1. 若要匯入新樣式和行為，請在 `etc` 節點。 例如，在/etc/af-custom-layout-clientlib位置，建立節點client-library。 讓節點具有categories屬性af.panel.custom。 它有下列.css和.js檔案：
+1. 重命名文件 `tabbedPanelLayout.jsp` 在customPanelLayout.jsp的新布局下。
+1. 要引入新样式和行为，请在 `etc` 节点。 例如，在/etc/af-custom-layout-clientlib位置，创建节点client-library。 让节点具有categories属性af.panel.custom。 它有以下.css和.js文件：
 
    ```css
    /** CSS defining new styles used by custom layout **/
@@ -114,9 +114,9 @@ qtip
    });
    ```
 
-1. 若要增強外觀和行為，您可以包括 `client library`.
+1. 要增强外观和行为，您可以包括 `client library`.
 
-   此外，請更新.jsp檔案中包含的指令碼路徑。 例如，更新 `customPanelLayout.jsp` 檔案如下所示：
+   此外，更新.jsp文件中包含的脚本的路径。 例如，更新 `customPanelLayout.jsp` 文件如下所示：
 
    ```html
    <%-- jsp encapsulating navigator container and panel container divs --%>
@@ -145,7 +145,7 @@ qtip
    </div>
    ```
 
-   此 `/apps/af-custom-layout/customPanelLayout/defaultNavigatorLayout.jsp` 檔案：
+   此 `/apps/af-custom-layout/customPanelLayout/defaultNavigatorLayout.jsp` 文件：
 
    ```html
    <%-- jsp governing the navigation part --%>
@@ -201,10 +201,10 @@ qtip
    </div>
    ```
 
-1. 在撰寫模式中開啟最適化表單。 您定義的面板配置會新增至清單中，以設定面板配置。
+1. 在创作模式下打开自适应表单。 您定义的面板布局即会添加到列表中，以便配置面板布局。
 
-   ![自訂面板配置會顯示在面板配置清單中](assets/auth-layt.png) ![最適化表單的熒幕擷取畫面，使用自訂面板配置](assets/s1.png) ![熒幕擷圖示範自訂配置的切換功能](assets/s2.png)
+   ![自定义面板布局显示在面板布局列表中](assets/auth-layt.png) ![自适应表单屏幕快照，使用自定义面板布局](assets/s1.png) ![演示自定义布局切换功能的屏幕快照](assets/s2.png)
 
-自訂面板佈局的範例ZIP以及使用此範例的最適化表單。
+自定义面板布局和自适应表单的示例ZIP。
 
 [获取文件](assets/af-custom-layout.zip)

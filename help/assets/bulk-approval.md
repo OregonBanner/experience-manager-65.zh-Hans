@@ -1,6 +1,6 @@
 ---
 title: 审核文件夹资源和收藏集
-description: 為資料夾或收藏集中的資產設定稽核工作流程，並與稽核者或創意合作夥伴分享，以徵求意見反應。
+description: 为文件夹或收藏集中的资产设置审阅工作流，并与审阅人或创意合作伙伴共享该工作流以寻求反馈。
 contentOwner: AG
 feature: Collaboration, Collections
 role: User
@@ -15,102 +15,102 @@ ht-degree: 5%
 
 # 审核文件夹资源和收藏集 {#review-folder-assets-and-collections}
 
-| 版本 | 文章連結 |
+| 版本 | 文章链接 |
 | -------- | ---------------------------- |
 | AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/bulk-approval.html?lang=en) |
 | AEM 6.5 | 本文 |
 
-為資料夾或收藏集中的資產設定稽核工作流程，並與稽核者或創意合作夥伴分享，以徵求意見反應。
+为文件夹或收藏集中的资产设置审阅工作流，并与审阅人或创意合作伙伴共享该工作流以寻求反馈。
 
-[!DNL Adobe Experience Manager Assets] 可讓您為資料夾或集合內的資產設定隨選稽核工作流程，並與稽核者或創意合作夥伴共用該工作流程，以徵求意見反應。
+[!DNL Adobe Experience Manager Assets] 允许您为文件夹或收藏集中的资产设置临时审阅工作流，并与审阅人或创意合作伙伴共享该工作流以寻求反馈。
 
-您可以將稽核工作流程與專案建立關聯，也可以建立獨立的稽核任務。
+您可以将审阅工作流与项目关联，也可以创建独立的审阅任务。
 
-共用資產後，稽核者可以核准或拒絕資產。 通知會在工作流程的不同階段傳送，以通知預期的收件者有關各種任務的完成。 例如，當您共用資料夾或集合時，稽核者會收到資料夾/集合已共用供稽核的通知。
+共享资产后，审核者可以批准或拒绝资产。 通知会在工作流的各个阶段发送，以通知目标收件人有关各种任务的完成。 例如，当您共享文件夹或收藏集时，审阅人会收到一则通知，指出已共享文件夹/收藏集以供审阅。
 
-複查者完成複查（核准或拒絕資產）後，您會收到複查完成通知。
+在审核者完成审核（批准或拒绝资产）后，您将收到审核完成通知。
 
-## 建立資料夾的稽核任務 {#creating-a-review-task-for-folders}
+## 为文件夹创建审核任务 {#creating-a-review-task-for-folders}
 
-1. 從 [!DNL Assets] 使用者介面，選取您要建立稽核任務的資料夾。
-1. 在工具列中按一下 **[!UICONTROL 建立稽核任務]** ![建立稽核任務](assets/do-not-localize/create-review-task.png) 以開啟 **[!UICONTROL 評論任務]** 頁面。 如果您在工具列中看不到選項，請按一下 **[!UICONTROL 更多]** 然後選取選項。
+1. 从 [!DNL Assets] 用户界面中，选择要为其创建审阅任务的文件夹。
+1. 在工具栏中，单击 **[!UICONTROL 创建审阅任务]** ![创建审阅任务](assets/do-not-localize/create-review-task.png) 以打开 **[!UICONTROL 审核任务]** 页面。 如果在工具栏中看不到该选项，请单击 **[!UICONTROL 更多]** 然后选择选项。
 
-1. （選用）從 **[!UICONTROL 專案]** 清單中，選取要與稽核任務相關聯的專案。 根據預設， **[!UICONTROL 無]** 選項時才會選擇此選項。 如果您不想將任何專案與稽核任務相關聯，請保留此選擇。
-
-   >[!NOTE]
-   >
-   >只有您擁有編輯器層級許可權（或更高版本）的專案才會顯示在 **[!UICONTROL 專案]** 清單。
-
-1. 輸入稽核工作的名稱，然後從中選擇核准者 **[!UICONTROL 指派給]** 清單。
+1. （可选）从 **[!UICONTROL 项目]** 列表中，选择要与审阅任务关联的项目。 默认情况下， **[!UICONTROL 无]** 选项。 如果不想将任何项目与审阅任务相关联，请保留此选择。
 
    >[!NOTE]
    >
-   >所選專案的成員/群組可作為核准者出現在 **[!UICONTROL 指派給]** 清單。
+   >只有您具有编辑器级别权限（或更高版本）的项目才会在中显示 **[!UICONTROL 项目]** 列表。
 
-1. 輸入複查工作的描述、工作優先順序和到期日。
+1. 输入审核任务的名称，然后从中选择一个批准者 **[!UICONTROL 分配给]** 列表。
+
+   >[!NOTE]
+   >
+   >所选项目的成员/组可作为批准者出现在 **[!UICONTROL 分配给]** 列表。
+
+1. 输入审阅任务的描述、任务优先级和到期日。
 
    ![task_details](assets/task_details.png)
 
-1. 在進階索引標籤中，輸入要用來建立URI的標籤。
+1. 在高级选项卡中，输入要用于创建URI的标签。
 
    ![review_name](assets/review_name.png)
 
-1. 按一下 **[!UICONTROL 提交]**，然後按一下 **[!UICONTROL 完成]** 以關閉確認訊息。 新任务的通知将发送给审批者。
-1. 登入 [!DNL Assets] 以核准者身分導覽至 [!DNL Assets] UI。 若要核准資產，請按一下 **[!UICONTROL 通知]** 然後從清單中選取稽核任務。
+1. 单击 **[!UICONTROL 提交]**，然后单击 **[!UICONTROL 完成]** 以关闭确认消息。 新任务的通知将发送给审批者。
+1. 登录 [!DNL Assets] 以审批者身份导航至 [!DNL Assets] UI。 要批准资源，请单击 **[!UICONTROL 通知]** 然后从列表中选择审阅任务。
 
-   ![資產通知](assets/aemAssetsNotification.png)
+   ![资产通知](assets/aemAssetsNotification.png)
 
-1. 在 **[!UICONTROL 評論任務]** 頁面，檢查複查工作的詳細資訊，然後按一下 **[!UICONTROL 檢閱]**.
-1. 在 **[!UICONTROL 評論任務]** 頁面，選取資產，然後按一下 **[!UICONTROL 核准/拒絕]** 以核准或拒絕（視情況而定）。
+1. 在 **[!UICONTROL 审核任务]** 页，检查复查任务的详细资料，然后单击 **[!UICONTROL 审核]**.
+1. 在 **[!UICONTROL 审核任务]** 页面，选择资源，然后单击 **[!UICONTROL 批准/拒绝]** 以批准或拒绝（根据需要）。
 
    ![review_task](assets/review_task.png)
 
-1. 按一下 **[!UICONTROL 完成]** （從工具列）。 在對話方塊中，輸入註解並按一下  **[!UICONTROL 完成]** 以確認。
-1. 導覽至 [!DNL Assets] 使用者介面並開啟資料夾。 資產的核准狀態圖示會出現在卡片檢視和清單檢視中。
+1. 单击 **[!UICONTROL 完成]** 工具栏中。 在对话框中，输入注释并单击  **[!UICONTROL 完成]** 以确认。
+1. 导航到 [!DNL Assets] 用户界面并打开文件夹。 资产的审批状态图标会显示在卡片视图和列表视图中。
 
    **信息卡视图**
 
-   ![檢閱卡片檢視中顯示的狀態](assets/chlimage_1-404.png)
+   ![查看卡片视图中的状态](assets/chlimage_1-404.png)
 
    **列表视图**
 
-   ![檢閱狀態（如清單檢視中所示）](assets/review_status_listview.png)
+   ![查看列表视图中的状态](assets/review_status_listview.png)
 
-## 建立集合的稽核任務 {#creating-a-review-task-for-collections}
+## 为收藏集创建审核任务 {#creating-a-review-task-for-collections}
 
-1. 從「集合」頁面中，選取您要建立稽核任務的集合。
-1. 在工具列中按一下 **[!UICONTROL 建立稽核任務]** ![建立稽核任務](assets/do-not-localize/create-review-task.png) 以開啟 **[!UICONTROL 評論任務]** 頁面。 如果您在工具列上看不到選項，請按一下 **[!UICONTROL 更多]** 然後選取選項。
+1. 从“收藏集”页面中，选择要为其创建审阅任务的收藏集。
+1. 在工具栏中，单击 **[!UICONTROL 创建审阅任务]** ![创建审阅任务](assets/do-not-localize/create-review-task.png) 以打开 **[!UICONTROL 审核任务]** 页面。 如果在工具栏上看不到该选项，请单击 **[!UICONTROL 更多]** 然后选择选项。
 
-1. （選用）從 **[!UICONTROL 專案]** 清單中，選取要與稽核任務相關聯的專案。 根據預設， **[!UICONTROL 無]** 選項時才會選擇此選項。 如果您不想將任何專案與稽核任務相關聯，請保留此選擇。
-
-   >[!NOTE]
-   >
-   >只有您擁有編輯器層級許可權（或更高版本）的專案才會顯示在 **[!UICONTROL 專案]** 清單。
-
-1. 輸入稽核工作的名稱，然後從中選擇核准者 **[!UICONTROL 指派給]** 清單。
+1. （可选）从 **[!UICONTROL 项目]** 列表中，选择要与审阅任务关联的项目。 默认情况下， **[!UICONTROL 无]** 选项。 如果不想将任何项目与审阅任务相关联，请保留此选择。
 
    >[!NOTE]
    >
-   >所選專案的成員/群組可作為核准者出現在 **[!UICONTROL 指派給]** 清單。
+   >只有您具有编辑器级别权限（或更高版本）的项目才会在中显示 **[!UICONTROL 项目]** 列表。
 
-1. 輸入複查工作的描述、工作優先順序和到期日。
+1. 输入审核任务的名称，然后从中选择一个批准者 **[!UICONTROL 分配给]** 列表。
 
-   ![task_details-collection](assets/task_details-collection.png)
+   >[!NOTE]
+   >
+   >所选项目的成员/组可作为批准者出现在 **[!UICONTROL 分配给]** 列表。
 
-1. 按一下 **[!UICONTROL 提交]**，然後按一下 **[!UICONTROL 完成]** 以關閉確認訊息。 新任务的通知将发送给审批者。
-1. 登入 [!DNL Assets] 以核准者身分導覽至 [!DNL Assets] 主控台。 若要核准資產，請按一下 **[!UICONTROL 通知]** 然後從清單中選取稽核任務。
-1. 在 **[!UICONTROL 評論任務]** 頁面，檢查複查工作的詳細資訊，然後按一下 **[!UICONTROL 檢閱]**.
-1. 收藏集中的所有資產都會顯示在稽核頁面上。 選取資產並按一下 **[!UICONTROL 核准/拒絕]** 以核准或拒絕資產。
+1. 输入审阅任务的描述、任务优先级和到期日。
+
+   ![task_details — 收藏集](assets/task_details-collection.png)
+
+1. 单击 **[!UICONTROL 提交]**，然后单击 **[!UICONTROL 完成]** 以关闭确认消息。 新任务的通知将发送给审批者。
+1. 登录 [!DNL Assets] 以审批者身份导航至 [!DNL Assets] 控制台。 要批准资源，请单击 **[!UICONTROL 通知]** 然后从列表中选择审阅任务。
+1. 在 **[!UICONTROL 审核任务]** 页，检查复查任务的详细资料，然后单击 **[!UICONTROL 审核]**.
+1. 收藏集中的所有资产均显示在审核页面上。 选择资源并单击 **[!UICONTROL 批准/拒绝]** 批准或拒绝资产（根据需要）。
 
    ![review_task_collection](assets/review_task_collection.png)
 
-1. 按一下 **[!UICONTROL 完成]** （從工具列）。 在對話方塊中，輸入註解並按一下 **[!UICONTROL 完成]** 以確認。
-1. 導覽至「系列」主控台，並開啟系列。 資產的核准狀態圖示會顯示在「卡片」和「清單」檢視中。
+1. 单击 **[!UICONTROL 完成]** 工具栏中。 在对话框中，输入注释并单击 **[!UICONTROL 完成]** 以确认。
+1. 导航到收藏集控制台并打开收藏集。 资产的审批状态图标会同时显示在“信息卡”和“列表”视图中。
 
    ![collection_reviewstatuscardview](assets/collection_reviewstatuscardview.png)
 
-   *圖：卡片檢視。*
+   *图：卡片视图。*
 
    ![collection_reviewstatuslistview](assets/collection_reviewstatuslistview.png)
 
-   *圖：清單檢視。*
+   *图：列表视图。*

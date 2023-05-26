@@ -1,7 +1,7 @@
 ---
-title: Forms工作流程概觀
+title: Forms工作流概述
 seo-title: Overview of Forms workflow
-description: Forms工作流程可讓使用者設計、管理和最佳化以人為中心的流程。 使用表單工作流程，使用者還可以管理連線系統和人員的自動化業務流程應用程式。
+description: Forms工作流允许用户设计、管理和优化以人为中心的流程。 使用表单工作流，用户还可以管理连接系统和人员的自动化业务流程应用程序。
 seo-description: Forms workflow lets users design, manage, and optimize human-centric processes. Using forms workflow, users can also manage automated business-process applications that connect systems and people.
 uuid: b28ada7c-de75-416a-b2c8-f6494be5330c
 contentOwner: admin
@@ -17,11 +17,11 @@ ht-degree: 2%
 
 ---
 
-# Forms工作流程概觀 {#overview-of-forms-workflow}
+# Forms工作流概述 {#overview-of-forms-workflow}
 
-Forms工作流程可讓使用者設計、管理和最佳化以人為中心的流程。 使用表單工作流程，使用者還可以管理連線系統和人員的自動化業務流程應用程式。
+Forms工作流允许用户设计、管理和优化以人为中心的流程。 使用表单工作流，用户还可以管理连接系统和人员的自动化业务流程应用程序。
 
-在管理控制檯中的每個Forms工作流程頁面上，您可以執行一組不同的工作，如本表中所述。
+在管理控制台中的每个Forms工作流页面上，您可以执行一组不同的任务，如此表中所述。
 
 <table>
  <thead>
@@ -33,57 +33,57 @@ Forms工作流程可讓使用者設計、管理和最佳化以人為中心的流
  </thead>
  <tbody>
   <tr>
-   <td><p>伺服器設定</p></td>
+   <td><p>服务器设置</p></td>
    <td>
     <ul>
-     <li><p>設定電子郵件設定</p></li>
-     <li><p>設定使用者的任務通知</p></li>
-     <li><p>設定管理員通知</p></li>
-     <li><p>配置商務活動監視的組態設定 </p></li>
+     <li><p>配置电子邮件设置</p></li>
+     <li><p>为用户配置任务通知</p></li>
+     <li><p>配置管理员通知</p></li>
+     <li><p>配置业务活动监视的配置设置 </p></li>
     </ul></td>
-   <td><p><a href="/help/forms/using/admin-help/configuring-server-settings.md#configuring-server-settings">正在設定伺服器設定</a></p></td>
+   <td><p><a href="/help/forms/using/admin-help/configuring-server-settings.md#configuring-server-settings">配置服务器设置</a></p></td>
   </tr>
   <tr>
-   <td><p>表單工作流程</p></td>
+   <td><p>表单工作流</p></td>
    <td>
     <ul>
-     <li><p>檢視作用中的處理序</p></li>
-     <li><p>檢視和處理處理序執行個體、作業及任務</p></li>
-     <li><p>暫停、終止及重試處理序執行個體、子處理序及作業</p></li>
+     <li><p>查看活动进程</p></li>
+     <li><p>查看和处理流程实例、操作和任务</p></li>
+     <li><p>暂停、终止和重试进程实例、子进程和操作</p></li>
     </ul></td>
    <td><p><a href="/help/forms/using/admin-help/processes.md#managing-processes">管理流程</a></p></td>
   </tr>
   <tr>
-   <td><p>程式搜尋</p></td>
+   <td><p>进程搜索</p></td>
    <td>
     <ul>
-     <li><p>搜尋程式</p></li>
+     <li><p>搜索流程</p></li>
     </ul></td>
-   <td><p><a href="/help/forms/using/admin-help/searching-process-instances.md#searching-for-process-instances">搜尋處理序執行個體</a></p></td>
+   <td><p><a href="/help/forms/using/admin-help/searching-process-instances.md#searching-for-process-instances">搜索进程实例</a></p></td>
   </tr>
   <tr>
-   <td><p>任務搜尋</p></td>
+   <td><p>任务搜索</p></td>
    <td>
     <ul>
-     <li><p>依使用者或任務ID搜尋任務</p></li>
+     <li><p>按用户或任务ID搜索任务</p></li>
     </ul></td>
-   <td><p><a href="/help/forms/using/admin-help/tasks.md#working-with-tasks">使用任務</a></p></td>
+   <td><p><a href="/help/forms/using/admin-help/tasks.md#working-with-tasks">使用任务</a></p></td>
   </tr>
   <tr>
-   <td><p>已停止的作業錯誤</p></td>
+   <td><p>停止的操作错误</p></td>
    <td>
     <ul>
-     <li><p>檢視所有已停止的操作及其錯誤</p></li>
-     <li><p>重試或終止已停止的作業</p></li>
+     <li><p>查看所有停止的操作及其错误</p></li>
+     <li><p>重试或终止停止的操作</p></li>
     </ul></td>
    <td><p><a href="/help/forms/using/admin-help/stalled-operations-branches.md#working-with-stalled-operations-and-branches">使用停止的操作和分支</a></p></td>
   </tr>
   <tr>
-   <td><p>停止的分支錯誤</p></td>
+   <td><p>停止的分支错误</p></td>
    <td>
     <ul>
-     <li><p>檢視所有停頓的分支及其錯誤</p></li>
-     <li><p>重試停止的分支</p></li>
+     <li><p>查看所有停止的分支及其错误</p></li>
+     <li><p>重试停止的分支</p></li>
     </ul></td>
    <td><p><a href="/help/forms/using/admin-help/stalled-operations-branches.md#working-with-stalled-operations-and-branches">使用停止的操作和分支</a></p></td>
   </tr>
@@ -91,23 +91,23 @@ Forms工作流程可讓使用者設計、管理和最佳化以人為中心的流
    <td><p>外出办公</p></td>
    <td>
     <ul>
-     <li><p>檢視使用者的休假資訊</p></li>
-     <li><p>變更使用者的狀態（在辦公室內或辦公室外）</p></li>
-     <li><p>新增休假日期範圍 </p></li>
-     <li><p>指定使用者不在辦公室時如何處理任務</p></li>
+     <li><p>查看用户的外出信息</p></li>
+     <li><p>更改用户的状态（在办公室内或办公室外）</p></li>
+     <li><p>添加外出日期范围 </p></li>
+     <li><p>指定用户外出时如何处理任务</p></li>
     </ul></td>
-   <td><p><a href="/help/forms/using/admin-help/configuring-out-office-settings.md#configuring-out-of-office-settings">正在設定「外出」設定</a></p></td>
+   <td><p><a href="/help/forms/using/admin-help/configuring-out-office-settings.md#configuring-out-of-office-settings">配置“外出”设置</a></p></td>
   </tr>
   <tr>
-   <td><p>商務行事曆</p></td>
+   <td><p>商业日历</p></td>
    <td>
     <ul>
-     <li><p>建立定義營業日和非營業日的營業行事曆</p></li>
+     <li><p>创建定义工作日和非工作日的业务日历</p></li>
     </ul></td>
-   <td><p><a href="/help/forms/using/admin-help/configuring-business-calendars.md#configuring-business-calendars">設定商務行事曆</a></p></td>
+   <td><p><a href="/help/forms/using/admin-help/configuring-business-calendars.md#configuring-business-calendars">配置商业日历</a></p></td>
   </tr>
   <tr>
-   <td><p>共用佇列</p></td>
+   <td><p>共享队列</p></td>
    <td><p></p></td>
    <td><p></p></td>
   </tr>

@@ -1,7 +1,7 @@
 ---
-title: 建立新的Granite UI欄位元件
+title: 创建新的Granite UI字段组件
 seo-title: Creating a New Granite UI Field Component
-description: Granite UI提供一系列設計用於表單的元件，稱為欄位
+description: Granite UI提供了一系列旨在用于表单的组件，称为字段
 seo-description: Granite UI provides a range of components designed to be used in forms, called fields
 uuid: cf26e057-4b0c-45f4-8975-2c658517f20e
 contentOwner: Guillaume Carlino
@@ -17,71 +17,71 @@ ht-degree: 0%
 
 ---
 
-# 建立新的Granite UI欄位元件{#creating-a-new-granite-ui-field-component}
+# 创建新的Granite UI字段组件{#creating-a-new-granite-ui-field-component}
 
-Granite UI提供一系列設計用於表單的元件；這些稱為 *欄位* 在Granite UI辭彙中。 標準Granite表單元件可在下列網址取得：
+Granite UI提供了一系列旨在用于表单的组件；这些组件称为 *字段* 在Granite UI词汇中。 标准Granite表单组件在以下位置提供：
 
 `/libs/granite/ui/components/foundation/form/*`
 
 >[!NOTE]
 >
->這些Granite UI表單欄位特別令人感興趣，因為它們用於 [元件對話方塊](/help/sites-developing/developing-components.md).
+>这些Granite UI表单字段特别令人感兴趣，因为它们用于 [组件对话框](/help/sites-developing/developing-components.md).
 
 >[!NOTE]
 >
->如需欄位的完整詳細資訊，請參閱 [Granite UI檔案](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html).
+>有关字段的完整详细信息，请参阅 [Granite UI文档](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html).
 
-使用Granite UI Foundation架構來開發及/或擴充Granite元件。 此變數有兩個元素：
+使用Granite UI Foundation框架开发和/或扩展Granite组件。 这包含两个元素：
 
-* 伺服器端：
+* 服务器端：
 
-   * 基礎元件的集合
+   * 基础组件的集合
 
-      * 基礎 — 模組化、可組合、可分層、可重複使用
-      * 元件 — Sling元件
-   * 協助開發應用程式的協助程式
+      * 基础 — 模块化、可组合、可分层、可重用
+      * 组件 — Sling组件
+   * 帮助应用程序开发的帮助程序
 
 
-* 使用者端：
+* 客户端：
 
-   * 提供一些辭彙(即HTML語言的延伸)的clientlibs集合，以透過Hypermedia導向的UI實現一般互動模式
+   * 提供一些词汇(即HTML语言的扩展)的clientlibs集合，以通过Hypermedia驱动的UI实现通用交互模式
 
-一般Granite UI元件 `field` 由兩個感興趣的檔案組成：
+通用Granite UI组件 `field` 由两个感兴趣的文件组成：
 
-* `init.jsp`：處理一般處理；標籤、說明，並提供呈現欄位時所需的表單值。
-* `render.jsp`：這是執行欄位實際呈現的位置，且需要為您的自訂欄位覆寫；包含於 `init.jsp`.
+* `init.jsp`：处理常规处理；设置标签、描述，并提供呈现字段时所需的表单值。
+* `render.jsp`：这是执行字段实际渲染的位置，需要为自定义字段覆盖；包含在 `init.jsp`.
 
-請參閱 [Granite UI檔案 — 欄位](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/components/foundation/form/field/index.html) 如果您想要更多詳細資料。
+请参阅 [Granite UI文档 — 字段](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/components/foundation/form/field/index.html) 如果您想了解更多详细信息。
 
-如需範例，請參閱：
+有关示例，请参阅：
 
 * `cqgems/customizingfield/components/colorpicker`
 
-   * 提供者： [程式碼範例](/help/sites-developing/developing-components-samples.md#code-sample-how-to-customize-dialog-fields)
+   * 由 [代码示例](/help/sites-developing/developing-components-samples.md#code-sample-how-to-customize-dialog-fields)
 
 * `granite/ui/components/foundation/form`
 
 >[!NOTE]
 >
->由於此機制使用JSP，i18n和XSS不是現成可用的。 這表示您需要國際化並逸出字串。 下列目錄包含來自標準例證的類屬欄位，您可以將這些欄位作為參照：
+>由于此机制使用JSP，因此i18n和XSS不是现成的。 这意味着您需要国际化并逃避“字符串”。 以下目录包含来自标准实例的通用字段，您可以将这些字段用作引用：
 >
->`/libs/granite/ui/components/foundation/form` 目錄
+>`/libs/granite/ui/components/foundation/form` 目录
 
-## 建立元件的伺服器端指令碼 {#creating-the-server-side-script-for-the-component}
+## 创建组件的服务器端脚本 {#creating-the-server-side-script-for-the-component}
 
-您的自訂欄位應該只會覆寫 `render.jsp` 指令碼，您可在其中提供元件的標籤。 您可以將JSP （即轉譯指令碼）視為標籤的外包裝。
+您的自定义字段应仅覆盖 `render.jsp` 脚本，您可以在其中为组件提供标记。 可以将JSP（即渲染脚本）视为标记的包装器。
 
-1. 建立使用 `sling:resourceSuperType` 繼承自下列專案的屬性：
+1. 创建使用 `sling:resourceSuperType` 继承自以下对象的属性：
 
    `/libs/granite/ui/components/foundation/form/field`
 
-1. 覆寫指令碼：
+1. 覆盖脚本：
 
    `render.jsp`
 
-   在此指令碼中，您需要產生超媒體標籤（即包含超媒體可供使用的擴充標籤），讓使用者端知道如何與產生的元素互動。 這應該遵循Granite UI伺服器端風格的編碼。
+   在此脚本中，您需要生成超媒体标记（即包含超媒体可供性的扩充标记），以便客户端知道如何与生成的元素进行交互。 这应遵循Granite UI服务器端编码样式。
 
-   自訂時，您唯一的 *必須* full為讀取表單值(初始化於 `init.jsp`)從請求取得，使用：
+   在自定义时，您唯一的 *必须* fullable为读取表单值(初始化于 `init.jsp`)从请求访问：
 
    ```
    // Delivers the value of the field (read from the content)
@@ -89,21 +89,21 @@ Granite UI提供一系列設計用於表單的元件；這些稱為 *欄位* 在
    vm.get("value, String.class");
    ```
 
-   如需更多詳細資訊，請參閱現成可用的Granite UI欄位的實作；例如 `/libs/granite/ui/components/foundation/form/textfield`.
+   有关更多详细信息，请参阅现成可用的Granite UI字段的实施；例如， `/libs/granite/ui/components/foundation/form/textfield`.
 
    >[!NOTE]
    >
-   >目前JSP是慣用的指令碼編寫方法，因為在HTL中不易將資訊從一個元件傳遞至另一個元件（在表單/欄位的內容中很常見）。
+   >目前，JSP是首选的脚本编写方法，因为在HTL中不太容易将信息从一个组件传递到另一个组件（在表单/字段的上下文中非常频繁）。
 
-## 建立元件的使用者端程式庫 {#creating-the-client-library-for-the-component}
+## 为组件创建客户端库 {#creating-the-client-library-for-the-component}
 
-若要將特定使用者端行為新增至元件：
+要将特定客户端行为添加到组件，请执行以下操作：
 
-1. 建立類別的clientlib `cq.authoring.dialog`.
-1. 建立類別的clientlib `cq.authoring.dialog` 並定義 `JS`/ `CSS` 裡面有。
+1. 创建类别的clientlib `cq.authoring.dialog`.
+1. 创建类别的clientlib `cq.authoring.dialog` 并定义 `JS`/ `CSS` 里面的。
 
-   定義您的 `JS`/ `CSS` 在clientlib內。
+   定义 `JS`/ `CSS` clientlib内部。
 
    >[!NOTE]
    >
-   >目前，Granite UI不提供任何您可以直接用來新增JS行為的現成接聽程式或鉤點。 因此，若要將其他JS行為新增至元件，您必須實作JS連結至自訂類別，然後在標籤產生期間將其指派至元件。
+   >目前，Granite UI不提供任何可以直接用于添加JS行为的现成侦听器或挂接。 因此，要向组件添加其他JS行为，您必须实施JS挂接到自定义类，然后在标记生成期间将该自定义类分配给组件。

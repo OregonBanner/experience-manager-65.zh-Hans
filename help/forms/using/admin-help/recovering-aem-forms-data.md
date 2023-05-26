@@ -1,7 +1,7 @@
 ---
-title: 復原AEM表單資料
+title: 恢复AEM表单数据
 seo-title: Recovering the AEM forms data
-description: 本檔案說明復原AEM表單資料所需的步驟。
+description: 本文档介绍了恢复AEM表单数据所需的步骤。
 seo-description: This document describes the steps required to recover the AEM forms data.
 uuid: b5735196-5a8d-4358-884f-e9b8d8f4f682
 contentOwner: admin
@@ -17,119 +17,119 @@ ht-degree: 0%
 
 ---
 
-# 復原AEM表單資料 {#recovering-the-aem-forms-data}
+# 恢复AEM表单数据 {#recovering-the-aem-forms-data}
 
-本節說明復原AEM表單資料所需的步驟。 另請參閱 [備份與復原的特殊考量](/help/forms/using/admin-help/backup-recovery-strategy-aem-forms.md#special-considerations-for-backup-and-recovery).
+本节介绍恢复AEM表单数据所需的步骤。 另请参阅 [备份和恢复的特殊注意事项](/help/forms/using/admin-help/backup-recovery-strategy-aem-forms.md#special-considerations-for-backup-and-recovery).
 
 >[!NOTE]
 >
->資料庫、GDS、AEM儲存庫和內容儲存根目錄必須還原至與原始檔案具有相同DNS名稱的電腦。
+>必须将数据库、GDS、AEM存储库和内容存储根目录还原到与原始目录具有相同DNS名称的计算机。
 
-AEM forms應該能從下列故障中可靠地復原：
+AEM forms应该能够从以下故障中可靠地恢复：
 
-**磁碟故障：** 需要最新的備份媒體來復原資料庫內容。
+**磁盘故障：** 恢复数据库内容需要最新的备份介质。
 
-**資料損毀：** 檔案系統不會記錄過去的交易記錄，而且系統可能會意外覆寫必要的程式資料。
+**数据损坏：** 文件系统不记录过去的事务，而且系统可能会意外覆盖所需的流程数据。
 
-**使用者錯誤：** 復原僅限於資料庫提供的資料。 如果資料已儲存且可供使用，回覆程式就會簡化。
+**用户错误：** 恢复仅限于数据库提供的数据。 如果数据已存储并且可用，则恢复过程会得到简化。
 
-**停電、系統當機：** 檔案系統API的設計或使用方式通常不夠健全，無法防範非預期的系統故障。 如果發生電源中斷或系統當機，儲存在資料庫中的檔案內容比儲存在檔案系統中的內容更可能是最新的。
+**断电、系统崩溃：** 文件系统API的设计或使用方式通常不够健全，无法防止意外系统故障。 如果发生断电或系统崩溃，则存储在数据库中的文档内容比存储在文件系统中的内容更可能是最新的。
 
-如果您使用滾動備份模式，復原後您仍會處於備份模式。 如果您使用快照備份模式，則在復原後不會處於備份模式。
+如果您使用的是滚动备份模式，则在恢复后您仍然处于备份模式。 如果您使用的是快照备份模式，则在恢复后不会处于备份模式。
 
-從備份還原至新系統時，下列設定可能會不同。 此差異不應影響AEM表單應用程式的成功復原：
+从备份还原到新系统时，以下配置可能不同。 此差异不应影响AEM forms应用程序的成功恢复：
 
-* ip位址
-* 實體系統組態（CPU、磁碟、記憶體）
+* IP地址
+* 物理系统配置（CPU、磁盘、内存）
 * GDS位置
 
 >[!NOTE]
 >
->內容儲存根目錄的備份必須還原到該目錄的位置，如同在內容服務設定期間所設定的那樣。
+>内容存储根目录的备份必须还原到该目录的位置，因为它是在内容服务配置期间设置的。
 
-如果多節點叢集的單一節點失敗，且叢集的其餘節點運作正常，請執行叢集單一節點復原程式。
+如果多节点群集的单个节点出现故障，且群集的其余节点运行正常，请执行群集单节点恢复过程。
 
-## 復原AEM表單資料 {#recover-the-aem-forms-data}
+## 恢复AEM表单数据 {#recover-the-aem-forms-data}
 
-1. 停止AEM表單服務及應用程式伺服器（如果執行）。
-1. 如有必要，請從系統映像重新建立實體系統。 例如，如果復原的原因是錯誤的資料庫伺服器，則可能不需要執行此步驟。
-1. 將修補程式或更新套用至建立影像後套用的AEM表單。 此資訊會記錄在備份程式中。 AEM表單必須修補至與系統備份時相同的修補程式層級。
-1. (WebSphere® Application Server)如果您要復原到新的WebSphere® Application Server執行個體，請執行restoreConfig.bat/sh命令。
-1. 先使用資料庫備份檔案執行資料庫還原作業，然後將交易重做日誌套用至復原的資料庫，以復原AEM表單資料庫。 (請參閱 [AEM forms資料庫](/help/forms/using/admin-help/files-back-recover.md#aem-forms-database).) 如需詳細資訊，請參閱下列其中一篇知識庫文章：
+1. 如果正在运行，请停止AEM forms服务和应用程序服务器。
+1. 如有必要，从系统映像重新创建物理系统。 例如，如果恢复的原因是数据库服务器故障，则可能不需要执行此步骤。
+1. 将自映像生成以来应用的修补程序或更新应用于AEM表单。 此信息记录在备份过程中。 必须将AEM表单修补到与备份系统时相同的修补程序级别。
+1. (WebSphere®应用程序服务器)如果要恢复到WebSphere®应用程序服务器的新实例，请运行restoreConfig.bat/sh命令。
+1. 首先使用数据库备份文件运行数据库还原操作，然后将事务处理重做日志应用于已恢复的数据库，以恢复AEM表单数据库。 (请参阅 [AEM forms数据库](/help/forms/using/admin-help/files-back-recover.md#aem-forms-database).) 有关更多信息，请参阅以下知识库文章之一：
 
    * [DB2](/help/forms/using/admin-help/files-back-recover.md#db2)
-   * [AEM表單的Oracle備份與復原](/help/forms/using/admin-help/files-back-recover.md#oracle)
+   * [AEM表单的Oracle备份和恢复](/help/forms/using/admin-help/files-back-recover.md#oracle)
    * [Microsoft](/help/forms/using/admin-help/files-back-recover.md#sql-server)
-   * [適用於AEM表單的MySQL備份與復原](/help/forms/using/admin-help/files-back-recover.md#mysql)
+   * [MySQL Backup and Recovery for AEM forms](/help/forms/using/admin-help/files-back-recover.md#mysql)
 
-1. 請先刪除現有AEM Forms安裝上的GDS目錄內容，然後從備份的GDS複製GDS目錄內容，以復原GDS目錄。 如果您變更了GDS目錄位置，請參閱 [在復原期間變更GDS位置](recovering-aem-forms-data.md#changing-the-gds-location-during-recovery).
-1. 重新命名要還原的GDS備份目錄，如下列範例所示：
+1. 通过首先删除AEM表单现有安装上的GDS目录的内容，然后从备份的GDS中复制GDS目录的内容来恢复GDS目录。 如果更改了GDS目录位置，请参见 [在恢复过程中更改GDS位置](recovering-aem-forms-data.md#changing-the-gds-location-during-recovery).
+1. 重命名要恢复的GDS备份目录，如以下示例所示：
 
    >[!NOTE]
    >
-   >如果/restore目錄已經存在，請先備份該目錄，然後刪除它，然後再重新命名包含最新資料的/backup目錄。
+   >如果/restore目录已存在，请备份该目录，然后将其删除，然后再重命名包含最新数据的/backup目录。
 
-   * (JBoss®)重新命名 `[appserver root]/server/'server'/svcnative/DocumentStorage/backup` 至：
+   * (JBoss®)重命名 `[appserver root]/server/'server'/svcnative/DocumentStorage/backup` 到：
 
       `[appserver root]/server/'server'/svcnative/DocumentStorage/restore`。
 
-   * (WebLogic)重新命名 `[appserverdomain]/'server'/adobe/AEMformsserver/DocumentStorage/backup` 至：
+   * (WebLogic)重命名 `[appserverdomain]/'server'/adobe/AEMformsserver/DocumentStorage/backup` 至：
 
       `[appserverdomain]/'server'/adobe/AEMformsserver/DocumentStorage/restore`。
 
-   * (WebSphere®)重新命名 `[appserver root]/installedApps/adobe/'server'/DocumentStorage/backup` 至：
+   * (WebSphere®)重命名 `[appserver root]/installedApps/adobe/'server'/DocumentStorage/backup` 至：
 
       `[appserver root]/installedApps/adobe/'server'/DocumentStorage/restore`。
 
-1. 請先刪除現有AEM Forms安裝上的「內容儲存根目錄」內容，然後遵循獨立或叢集環境的工作來復原內容，以復原「內容儲存根目錄」：
+1. 通过首先删除现有AEM Forms安装上的Content Storage Root目录的内容，然后执行独立环境或群集环境的任务来恢复内容，从而恢复内容存储根目录：
 
    >[!NOTE]
    >
-   >內容儲存根目錄的備份必須還原至內容儲存根目錄的位置，因為它是在內容服務（已棄用）設定期間所設定。
+   >内容存储根目录的备份必须还原到内容存储根目录的位置，因为它是在内容服务（已弃用）配置期间设置的。
 
-   **獨立：** 在復原程式中，還原所有已備份的目錄。 還原這些目錄時，如果存在/backup-lucene-indexes目錄，請將其重新命名為/lucene-indexes。 否則，lucene-indexes目錄應該已經存在，並且不需要採取任何動作。
+   **独立：** 在恢复过程中，恢复已备份的所有目录。 恢复这些目录后，如果存在/backup-lucene-indexes目录，请将其重命名为/lucene-indexes。 否则，Lucene-Indexes目录应该已经存在，并且无需执行任何操作。
 
-   **叢集：** 在復原程式中，還原所有已備份的目錄。 若要還原「索引根目錄」，請在叢集的每個節點上執行下列步驟：
+   **群集：** 在恢复过程中，恢复已备份的所有目录。 要恢复索引根目录，请在群集的每个节点上执行以下步骤：
 
-   * 刪除索引根目錄中的所有內容。
-   * 如果/backup-lucene-indexes目錄存在，請複製 *內容儲存根目錄*/backup-lucene-indexes目錄至索引根目錄並刪除 *內容儲存根目錄*/backup-lucene-index目錄。
-   * 如果/lucene-indexes目錄存在，請複製 *內容儲存根目錄*/lucene-indexes目錄至索引根目錄。
+   * 删除索引根目录中的所有内容。
+   * 如果存在/backup-lucene-indexes目录，请复制 *内容存储根目录*/backup-lucene-indexes目录到索引根目录并删除 *内容存储根目录*/backup-lucene-index目录。
+   * 如果存在/lucene-indexes目录，则复制 *内容存储根目录*/lucene-indexes目录到索引根目录。
 
-1. 還原/復原CRX-repository。
+1. 恢复/恢复CRX存储库。
 
-   * **獨立**
+   * **独立**
 
-      *還原作者和發佈執行個體*：如果發生災難，您可以執行中所述的步驟，將存放庫還原至上次備份狀態 [備份與還原。](https://helpx.adobe.com/experience-manager/kb/CRXBackupAndRestoreProcedure.html)
+      *恢复创作实例和发布实例*：如果发生灾难，您可以通过执行中所述的步骤，将存储库恢复到上次备份的状态 [备份和恢复。](https://helpx.adobe.com/experience-manager/kb/CRXBackupAndRestoreProcedure.html)
 
-      「作者」節點的完整還原作業也會確定Forms Manager和AEM Forms Workspace資料的還原作業。
+      “创作”节点的完全恢复还确定Forms Manager和AEM Forms Workspace数据的恢复。
 
-   * **叢集**
+   * **已聚类**
 
-      若要在叢集環境中還原，請參閱 [在叢集環境中進行備份與還原的策略](/help/forms/using/admin-help/strategy-backup-restore-clustered-environment.md#strategy-for-backup-and-restore-in-a-clustered-environment).
+      有关群集环境中的恢复，请参见 [群集环境中的备份和恢复策略](/help/forms/using/admin-help/strategy-backup-restore-clustered-environment.md#strategy-for-backup-and-restore-in-a-clustered-environment).
 
-1. 刪除在java.io.temp目錄或Adobe臨時目錄中建立的任何AEM表單暫存檔。
-1. 啟動AEM表單(請參閱 [啟動和停止服務](/help/forms/using/admin-help/starting-stopping-services.md#starting-and-stopping-services))<!-- BROKEN LINK and the application server(s) (see [Maintaining the Application Server](/help/forms/using/admin-help/topics/maintaining-the-application-server.md))-->.
+1. 删除在java.io.temp目录或Adobe临时目录中创建的任何AEM forms临时文件。
+1. 启动AEM表单(请参阅 [启动和停止服务](/help/forms/using/admin-help/starting-stopping-services.md#starting-and-stopping-services))<!-- BROKEN LINK and the application server(s) (see [Maintaining the Application Server](/help/forms/using/admin-help/topics/maintaining-the-application-server.md))-->.
 
-## 在復原期間變更GDS位置 {#changing-the-gds-location-during-recovery}
+## 在恢复过程中更改GDS位置 {#changing-the-gds-location-during-recovery}
 
-如果您的GDS還原至原本位置以外的位置，請執行LCSetGDS指令碼，將GDS設定至新位置。 指令碼位於 `[aem-forms root]\sdk\misc\Foundation\SetGDSCommandline` 資料夾。 指令碼會採用兩個引數， `defaultGDS` 和 `newGDS`. 請參閱 `ReadMe.txt` 檔案來取得如何執行指令碼的指示。
-
->[!NOTE]
->
->如果您已在資料庫中啟用檔案儲存，則不需要變更GDS位置。
+如果您的GDS还原到原来位置以外的其他位置，请运行LCSetGDS脚本将GDS设置为新位置。 脚本位于 `[aem-forms root]\sdk\misc\Foundation\SetGDSCommandline` 文件夹。 该脚本包含两个参数， `defaultGDS` 和 `newGDS`. 请参阅 `ReadMe.txt` 文件，以获取有关如何运行脚本的说明。
 
 >[!NOTE]
 >
->只有在這種情況下，您才應該使用此指令碼來變更GDS位置。 若要在AEM表單執行時變更GDS位置，請使用Administration Console。 (請參閱 [設定一般AEM表單設定](/help/forms/using/admin-help/configure-general-aem-forms-settings.md#configure-general-aem-forms-settings).)
+>如果在数据库中启用了文档存储，则无需更改GDS位置。
 
 >[!NOTE]
 >
->如果GDS目錄位於磁碟機根目錄(例如D:\)，則在Windows上部署元件將會失敗。 對於GDS，您必須確定目錄不是位於磁碟機的根目錄，而是位於子目錄中。 例如，目錄應該是D:\GDS，而不是簡單的D:\。
-
-## 將GDS復原至叢集環境 {#recovering-the-gds-to-a-clustered-environment}
-
-若要變更叢集環境中的GDS位置，請關閉整個叢集，並在叢集的單一節點上執行LCSetGDS指令碼。 (請參閱 [在復原期間變更GDS位置](recovering-aem-forms-data.md#changing-the-gds-location-during-recovery).) 僅啟動該節點。 當該節點完全啟動時，叢集中的其他節點可以安全地啟動，並正確地指向新的GDS。
+>只有在这种情况下，您才应使用此脚本来更改GDS位置。 要在AEM表单运行时更改GDS位置，请使用Administration Console。 (请参阅 [配置常规AEM表单设置](/help/forms/using/admin-help/configure-general-aem-forms-settings.md#configure-general-aem-forms-settings).)
 
 >[!NOTE]
 >
->如果您無法確保在啟動其他節點之前完全啟動一個節點，則必須在啟動叢集之前，在叢集中的每個節點上執行LCSetGDS指令碼。
+>如果GDS目录位于驱动器根目录(例如，D:\)，则组件部署将在Windows上失败。 对于GDS，必须确保目录不位于驱动器的根目录下，而是位于子目录中。 例如，目录应该是D:\GDS ，而不是简单的D:\。
+
+## 将GDS恢复到群集环境 {#recovering-the-gds-to-a-clustered-environment}
+
+要更改群集环境中的GDS位置，请关闭整个群集并在群集的单个节点上运行LCSetGDS脚本。 (请参阅 [在恢复过程中更改GDS位置](recovering-aem-forms-data.md#changing-the-gds-location-during-recovery).) 仅启动该节点。 当该节点完全启动时，群集中的其他节点可以安全地启动，并将正确地指向新的GDS。
+
+>[!NOTE]
+>
+>如果无法确保在启动其他节点之前完全启动一个节点，则必须先在群集中的每个节点上运行LCSetGDS脚本，然后再启动群集。

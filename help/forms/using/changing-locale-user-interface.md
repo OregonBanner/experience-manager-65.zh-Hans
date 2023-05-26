@@ -1,7 +1,7 @@
 ---
-title: 變更AEM Forms工作區使用者介面的地區設定
+title: 更改AEM Forms工作区用户界面的区域设置
 seo-title: Changing the locale of AEM Forms workspace user interface
-description: 如何修改AEM Forms工作區，以將文字、摺疊的類別、佇列和程式，以及介面上的日期選擇器本地化。
+description: 如何修改AEM Forms工作区以将文本、折叠的类别、队列和进程以及界面上的日期选择器本地化。
 seo-description: How to modify the AEM Forms workspace to localize text, collapsed categories, queues, and processes, and the date picker on the interface.
 uuid: c89ff150-a36e-45cc-99a6-8768dbe58eab
 contentOwner: robhagat
@@ -18,52 +18,52 @@ ht-degree: 0%
 
 ---
 
-# 變更AEM Forms工作區使用者介面的地區設定{#changing-the-locale-of-aem-forms-workspace-user-interface}
+# 更改AEM Forms工作区用户界面的区域设置{#changing-the-locale-of-aem-forms-workspace-user-interface}
 
-AEM Forms工作區提供英文、法文、德文和日文語言的立即可用支援。 它還提供將AEM Forms工作區使用者介面本地化為任何其他語言的功能。
+AEM Forms工作区为英语、法语、德语和日语提供开箱即用支持。 它还提供将AEM Forms工作区用户界面本地化为任何其他语言的功能。
 
-將AEM Forms工作區使用者介面本地化為您選擇的語言：
+要将AEM Forms工作区用户界面本地化为您选择的语言，请执行以下操作：
 
-* 將AEM Forms工作區的文字當地語系化。
-* 將摺疊的類別、佇列和程式當地語系化。
-* 將日期選擇器本地化
+* 将AEM Forms工作区的文本本地化。
+* 本地化折叠的类别、队列和进程。
+* 本地化日期选取器
 
-在執行上述步驟之前，請務必遵循下列步驟操作： [AEM Forms工作區自訂的一般步驟](../../forms/using/generic-steps-html-workspace-customization.md).
+在执行上述步骤之前，请确保遵循下列步骤操作 [AEM Forms工作区自定义的一般步骤](../../forms/using/generic-steps-html-workspace-customization.md).
 
 >[!NOTE]
 >
->若要變更AEM Forms工作區的登入畫面語言，請參閱 [建立新的登入畫面](../../forms/using/creating-new-login-screen.md).
+>要更改AEM Forms工作区的登录屏幕语言，请参阅 [创建新的登录屏幕](../../forms/using/creating-new-login-screen.md).
 
-## 本地化文字 {#localizing-text}
+## 本地化文本 {#localizing-text}
 
-執行以下步驟以新增對語言的支援 *新增* 和瀏覽器地區代碼 *nw*.
+执行以下步骤以添加对语言的支持 *新* 和浏览器区域设置代码 *nw*.
 
-1. 登入CRXDE Lite。
-CRXDE Lite的預設URL為 `https://'[server]:[port]'/lc/crx/de/index.jsp`.
-1. 導覽至該位置 `apps/ws/locales` 並建立新資料夾 `nw.`
-1. 複製檔案 `translation.json`從位置 `/apps/ws/locales/en-US` 目標位置 `/apps/ws/locales/nw` .
-1. 導覽至 `/apps/ws/locales/nw` 並開啟 `translation.json` 進行編輯。 對translation.json檔案進行地區設定的特定變更。
+1. 登录到CRXDE Lite。
+CRXDE Lite的默认URL为 `https://'[server]:[port]'/lc/crx/de/index.jsp`.
+1. 导航到位置 `apps/ws/locales` 并创建新文件夹 `nw.`
+1. 复制文件 `translation.json`从位置 `/apps/ws/locales/en-US` 目标位置 `/apps/ws/locales/nw` .
+1. 导航到 `/apps/ws/locales/nw` 并打开 `translation.json` 进行编辑。 对translation.json文件进行特定于区域设置的更改。
 
-   下列範例包含AEM Forms工作區中英文與法文地區設定的translation.json檔案。
+   以下示例包含AEM Forms工作区的英语和法语区域设置的translation.json文件。
 
    ![translation_json_in_en](assets/translation_json_in_en.png) ![translation_json_in_fr](assets/translation_json_in_fr.png)
 
-## 本地化摺疊的類別、佇列和程式 {#localizing-collapsed-categories-queues-and-processes}
+## 本地化折叠的类别、队列和进程 {#localizing-collapsed-categories-queues-and-processes}
 
-AEM Forms工作區使用影像來顯示類別、佇列和程式的標題。 您需要開發套件將這些標頭當地語系化。 如需建立開發套件的詳細資訊，請參閱 [正在建置AEM Forms工作區程式碼。](introduction-customizing-html-workspace.md#building-html-workspace-code)
+AEM Forms工作区使用图像来显示类别、队列和流程的标题。 您需要开发包来本地化这些标头。 有关创建开发包的详细信息，请参阅 [构建AEM Forms工作区代码。](introduction-customizing-html-workspace.md#building-html-workspace-code)
 
-在下列步驟中，假設新的當地語系化影像檔案為 *Categories_nw.png*， *Queue_nw.png*、和 *Processes_nw.png*. 建議的影像寬度為19px。
+在以下步骤中，假定新的本地化图像文件为 *Categories_nw.png*， *Queue_nw.png*、和 *Processes_nw.png*. 建议的图像宽度为19像素。
 
 >[!NOTE]
 >
->尋找瀏覽器的瀏覽器語言地區設定代碼。 打开 `https://'[server]:[port]'/lc/libs/ws/Locale.html`.
+>查找浏览器的浏览器语言区域设置代码。 打开 `https://'[server]:[port]'/lc/libs/ws/Locale.html`.
 
 ![collapsing_panels_image](assets/collapsing_panels_image.png)
 
-執行以下步驟將影像當地語系化：
+执行以下步骤来本地化图像：
 
-1. 使用WebDAV使用者端，將影像檔案置於 */apps/ws/images* 資料夾。
-1. 導覽至 */apps/ws/css*. 開啟 *newStyle.css* 編輯及新增下列專案：
+1. 使用WebDAV客户端，将图像文件放入 */apps/ws/images* 文件夹。
+1. 导航到 */apps/ws/css*. 打开 *newStyle.css* 编辑和添加以下条目：
 
    ```css
    #categoryListBar .content.nw {
@@ -79,9 +79,9 @@ AEM Forms工作區使用影像來顯示類別、佇列和程式的標題。 您�
    }
    ```
 
-1. 執行中列出的所有語意變更 [工作區自訂](../../forms/using/introduction-customizing-html-workspace.md) 文章。
-1. 導覽至 *js/runtime/utility* 資料夾並開啟 *usersession.js* 檔案進行編輯。
-1. 找出原始程式碼區塊中列出的程式碼並新增條件 *lang ！== &#39;nw&#39;* 至if陳述式：
+1. 执行中列出的所有语义更改 [工作区自定义](../../forms/using/introduction-customizing-html-workspace.md) 文章。
+1. 导航到 *js/runtime/utility* 文件夹并打开 *usersession.js* 要编辑的文件。
+1. 找到原始代码块中列出的代码并添加条件 *lang ！== &#39;nw&#39;* 到if语句：
 
    ```javascript
    // Orignal code
@@ -107,25 +107,25 @@ AEM Forms工作區使用影像來顯示類別、佇列和程式的標題。 您�
        }
    ```
 
-## 將日期選擇器本地化 {#localizing-date-picker}
+## 本地化日期选取器 {#localizing-date-picker}
 
-您需要開發套件才能將 *日期選取器* API。 如需建立開發套件的詳細資訊，請參閱 [建立AEM Forms工作區程式碼](introduction-customizing-html-workspace.md#building-html-workspace-code).
+您需要开发包才能本地化 *日期选取器* API。 有关创建开发包的详细信息，请参阅 [构建AEM Forms工作区代码](introduction-customizing-html-workspace.md#building-html-workspace-code).
 
-1. 下載並解壓縮 [jQuery UI套件](https://jqueryui.com/download/all/)，導覽至 *&lt;extracted jquery=&quot;&quot; ui=&quot;&quot; package=&quot;&quot;>*\jquery-ui-1.10.2.zip\jquery-ui-1.10.2\ui\i18n。
-1. 將地區設定代碼的jquery.ui.datepicker-nw.js檔案複製到apps/ws/js/libs/jqueryui，並對檔案進行地區設定特定變更。
-1. 導覽至 `apps/ws/js` 並開啟 `jquery.ui.datepicker-nw.js` 檔案進行編輯。
-1. 在main.js檔案中建立別名 `jquery.ui.datepicker-nw.js.` 為建立別名的程式碼 `jquery.ui.datepicker-nw.js` 檔案為：
+1. 下载并解压缩 [jQuery UI包](https://jqueryui.com/download/all/)，导航到 *&lt;extracted jquery=&quot;&quot; ui=&quot;&quot; package=&quot;&quot;>*\jquery-ui-1.10.2.zip\jquery-ui-1.10.2\ui\i18n。
+1. 将区域设置代码nw的jquery.ui.datepicker-nw.js文件复制到apps/ws/js/libs/jqueryui，并对该文件进行特定于区域设置的更改。
+1. 导航到 `apps/ws/js` 然后打开 `jquery.ui.datepicker-nw.js` 要编辑的文件。
+1. 在main.js文件中，为创建一个别名 `jquery.ui.datepicker-nw.js.` 用于为创建别名的代码 `jquery.ui.datepicker-nw.js` 文件为：
 
    ```javascript
    jqueryuidatepickernw : pathprefix + 'libs/jqueryui/jquery.ui.datepicker-nw'
    ```
 
-1. 使用別名 `jqueryuidatepickernw` 以包含 `jquery.ui.datepicker-nw.js` 檔案中選取的日期選取器。 日期選擇器用於下列檔案中：
+1. 使用别名 `jqueryuidatepickernw` 以包含 `jquery.ui.datepicker-nw.js` 文件（在所有使用日期选取器的文件中）。 日期选取器用于以下文件：
 
    * `js/runtime/views/outofoffice.js`
    * `js/runtime/views/searchtemplatedetails.js`
 
-   以下程式碼範例說明如何新增jquery.ui.datepicker-nw.js專案：
+   以下代码示例显示了如何添加jquery.ui.datepicker-nw.js条目：
 
    ```json
    //Original Code
@@ -162,12 +162,12 @@ AEM Forms工作區使用影像來顯示類別、佇列和程式的標題。 您�
    ], function ($, _, Backbone, jQueryUI, jQueryUIDatePickerJA, jQueryUIDatePickerDE, jQueryUIDatePickerFR, jQueryUIDatePickerNW, slimScroll, UserSearch, LogManager, Logger) {
    ```
 
-1. 在所有使用日期選擇器API的檔案中，變更預設的日期選擇器API設定。 下列檔案會使用datepicker API：
+1. 在使用日期选取器API的所有文件中，更改默认的日期选取器API设置。 日期选取器API用于以下文件：
 
    * apps\ws\js\runtime\views\searchtemplatedetails.js
    * apps\ws\js\runtime\views\outofoffice.js
 
-   變更下列程式碼以新增地區設定：
+   更改以下代码以添加新区域设置：
 
    ```javascript
    if (locale === 'ja-JP') {

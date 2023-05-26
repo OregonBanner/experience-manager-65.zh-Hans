@@ -1,7 +1,7 @@
 ---
 title: 内容分析
 seo-title: Content Insight
-description: 內容深入分析會使用網頁分析和SEO建議來提供頁面效能的相關資訊
+description: 内容分析通过Web分析和SEO推荐提供有关页面性能的信息
 seo-description: Content Insight provides information about page performance using web analytics and SEO recommendation
 uuid: 32f5b37c-2a82-462a-9f0a-c19bed46e198
 contentOwner: Guillaume Carlino
@@ -19,82 +19,82 @@ ht-degree: 0%
 
 # 内容分析{#content-insight}
 
-「內容分析」會使用網頁分析和SEO建議來提供頁面效能的相關資訊。 使用「內容分析」來決定如何修改頁面，或瞭解先前的變更如何改變效能。 對於您編寫的每個頁面，您可以開啟「內容分析」來分析頁面。
+内容分析提供了有关使用Web分析和SEO推荐的页面性能的信息。 使用内容分析可做出有关如何修改页面的决策，或了解以前的更改如何更改性能。 对于您创建的每个页面，都可以打开“内容分析”来分析该页面。
 
 ![chlimage_1-311](assets/chlimage_1-311.png)
 
-「內容分析」頁面的版面會隨著您使用之裝置的熒幕維度和方向而改變。
+“内容分析”页面的布局会发生更改，以适合您正在使用的设备的屏幕维度和方向。
 
-## 報表資料
+## 报表数据
 
-「內容分析」頁面包含使用Adobe SiteCatalyst、Adobe Target、Adobe Social和BrightEdge資料的報表：
+“内容分析”页面包含使用Adobe SiteCatalyst、Adobe Target、Adobe Social和BrightEdge数据的报表：
 
-* SiteCatalyst：提供下列量度的報表：
+* SiteCatalyst：提供了以下量度的报表：
 
-   * 頁面檢視
-   * 頁面平均逗留時間
+   * 页面查看次数
+   * 页面平均逗留时间
    * 源
 
-* Target：您的頁面包含選件的促銷活動報表。
-* BrightEdge：報告可改善搜尋引擎對頁面可見度的頁面功能，並建議應實作的功能。
+* Target：页面包含选件的促销活动报表。
+* BrightEdge：报告提高页面对搜索引擎可见性的页面功能，并推荐应实施的功能。
 
-另請參閱 [開啟頁面的Analytics和Recommendations](/help/sites-authoring/ci-analyze.md#opening-analytics-and-recommendations-for-a-page).
+参见 [为页面打开Analytics和Recommendations](/help/sites-authoring/ci-analyze.md#opening-analytics-and-recommendations-for-a-page).
 
-## 報告期間
+## 报告期
 
-報表會顯示您所控制的一段時間的資料。 當您調整報告時段時，報表會自動重新整理該時段的資料。 視覺提示會指出頁面版本變更的時間，讓您能夠比較每個版本的效能。
+报表显示您所控制的一段时间的数据。 在调整报告时段时，报表将自动刷新以显示该时段的数据。 视觉提示指示页面版本发生更改的时间，以便您可以比较每个版本的性能。
 
-您也可以指定報告資料的詳細程度，例如，您可以檢視每日、每週、每月或每年的資料。
+您还可以指定报告数据的粒度，例如，您可以查看每日、每周、每月或每年数据。
 
-另請參閱 [變更報告期間](/help/sites-authoring/ci-analyze.md#changing-the-reporting-period).
+参见 [更改报告周期](/help/sites-authoring/ci-analyze.md#changing-the-reporting-period).
 
 >[!NOTE]
 >
->內容深入分析報表要求您的管理員已將AEM與SiteCatalyst、Target和BrightEdge整合。 另請參閱 [與SightCatalyst整合](/help/sites-administering/adobeanalytics.md)， [與Adobe Target整合](/help/sites-administering/target.md)、和 [與BrightEdge整合](/help/sites-administering/brightedge.md).
+>内容分析报表要求您的管理员已将AEM与SiteCatalyst、Target和BrightEdge集成。 参见 [与SightCatalyst集成](/help/sites-administering/adobeanalytics.md)， [与Adobe Target集成](/help/sites-administering/target.md)、和 [与BrightEdge集成](/help/sites-administering/brightedge.md).
 
-## 檢視報告 {#the-views-report}
+## 查看次数报表 {#the-views-report}
 
-「檢視」報表包含下列評估頁面流量的功能：
+“查看次数”报表包括以下用于评估页面流量的功能：
 
-* 報告期間頁面檢視的總數。
-* 報告期間檢視次數的圖表：
+* 报告期内页面查看的总数。
+* 报告期内查看次数的图表：
 
-   * 檢視總數。
-   * 不重複訪客。
+   * 查看次数总计。
+   * 独特访客。
 
 ![chlimage_1-312](assets/chlimage_1-312.png)
 
-## 頁面平均參與報表 {#the-page-average-engaged-report}
+## 页面平均参与次数报表 {#the-page-average-engaged-report}
 
-「頁面平均參與」報表包含下列功能，可用來評估頁面成效：
+“页面平均参与次数”报表包括以下用于评估页面有效性的功能：
 
-* 整個報告期間保持頁面開啟的平均時間。
-* 整個報告期間頁面檢視的平均長度圖表。
+* 页面在整个报告期内保持打开状态的平均时间。
+* 整个报告期间的页面查看平均长度的图表。
 
 ![chlimage_1-313](assets/chlimage_1-313.png)
 
-## 來源報表 {#the-sources-report}
+## 源报表 {#the-sources-report}
 
-「來源」報表指出使用者如何導覽至頁面，例如從搜尋引擎結果或使用已知URL。
+“源”报表指示用户如何导航到页面，例如从搜索引擎结果或使用已知URL。
 
 ![chlimage_1-314](assets/chlimage_1-314.png)
 
-## 彈回報表 {#the-bounces-report}
+## “跳出”报表 {#the-bounces-report}
 
-「跳出數」報表包含圖形，顯示所選報告期間某個頁面發生的跳出數。
+“跳出次数”报表包含一个图表，该图表显示在选定的报告时段内某个页面发生的跳出次数。
 
 ![chlimage_1-315](assets/chlimage_1-315.png)
 
-## 行銷活動報表 {#the-campaign-activity-report}
+## 促销活动报表 {#the-campaign-activity-report}
 
-對於頁面有效的每個行銷活動，都會顯示一個報表，並命名為 *行銷活動名稱* 活動。 報表會顯示提供選件的每個區段的頁面曝光次數和轉換次數。
+对于页面处于活动状态的每个营销活动，都会显示一个名为的报告 *营销活动名称* 活动。 报表会显示提供选件的每个区段的页面展示次数和转化次数。
 
 ![chlimage_1-316](assets/chlimage_1-316.png)
 
-## SEO Recommendations報表 {#the-seo-recommendations-report}
+## SEO Recommendations报表 {#the-seo-recommendations-report}
 
-SEO Recommendations報表包含頁面BrightEdge分析的結果。 該報告是頁面功能的檢查清單，指出頁面包含和不包含哪些功能，以使用搜尋引擎最大化發現能力。
+SEO Recommendations报表包含对页面进行BrightEdge分析的结果。 该报告是页面功能的核对清单，指示页面包含和不包含哪些功能，以便使用搜索引擎最大程度地提高查找能力。
 
-報表可讓您建立任務，以便進行改善以改善頁面可發現性。 Recommendations會指出已建立實施建議的工作。 另請參閱 [指派SEO Recommendations的任務](/help/sites-authoring/ci-analyze.md#assigning-tasks-for-seo-recommendations).
+利用报告，可创建任务以改进页面查找能力。 Recommendations表示已创建用于实施推荐的任务。 参见 [为SEO Recommendations分配任务](/help/sites-authoring/ci-analyze.md#assigning-tasks-for-seo-recommendations).
 
 ![chlimage_1-317](assets/chlimage_1-317.png)

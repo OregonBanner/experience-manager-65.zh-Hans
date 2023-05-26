@@ -1,7 +1,7 @@
 ---
-title: 建立自訂最適化表單範本
+title: 创建自定义自适应表单模板
 seo-title: Creating a custom adaptive form template
-description: 本文介紹如何建立自訂最適化表單範本。
+description: 本文介绍了如何创建自定义自适应表单模板。
 seo-description: This article describes how to create custom adaptive form templates.
 uuid: 11b5f8cd-c56a-4525-97d5-1938ef5f183d
 content-type: reference
@@ -17,37 +17,37 @@ ht-degree: 0%
 
 ---
 
-# 建立自訂最適化表單範本{#creating-a-custom-adaptive-form-template}
+# 创建自定义自适应表单模板{#creating-a-custom-adaptive-form-template}
 
 >[!NOTE]
 >
->AEM Forms已推出動態範本。 您可以使用AEM Sites範本編輯器 [建立或編輯動態範本](../../forms/using/template-editor.md). 下文中提及的範本為靜態範本。 預設安裝中無法提供這些選項。 [安裝相容性套件](../../forms/using/compatibility-package.md) 以便在您的環境中取得這些範本。
+>AEM Forms引入了动态模板。 您可以使用AEM Sites模板编辑器来 [创建或编辑动态模板](../../forms/using/template-editor.md). 下文中提到的模板是静态模板。 这些选项在默认安装中不可用。 [安装兼容包](../../forms/using/compatibility-package.md) 以便在您的环境中获取这些模板。
 
 ## 前提条件 {#prerequisites}
 
-* 瞭解AEM [頁面範本](/help/sites-authoring/templates.md) 和 [最適化表單製作](https://helpx.adobe.com/aem-forms/6-1/introduction-forms-authoring.html)
+* 了解AEM [页面模板](/help/sites-authoring/templates.md) 和 [自适应表单创作](https://helpx.adobe.com/aem-forms/6-1/introduction-forms-authoring.html)
 
-* 瞭解AEM [使用者端資源庫](/help/sites-developing/clientlibs.md)
+* 了解AEM [客户端库](/help/sites-developing/clientlibs.md)
 
-## 自適應表單範本 {#adaptive-form-template}
+## 自适应表单模板 {#adaptive-form-template}
 
-調適型表單範本是專用的AEM頁面範本，具有用來建立調適型表單的特定屬性和內容結構。 範本有預先設定的版面、樣式和基本初始內容結構。
+自适应表单模板是专用的AEM页面模板，具有某些用于创建自适应表单的属性和内容结构。 模板具有预配置的布局、样式和基本初始内容结构。
 
-建立表單後，對原始範本內容結構所做的任何變更都不會反映在表單中。
+创建表单后，对原始模板内容结构所做的任何更改都不会反映在表单中。
 
-## 預設最適化表單範本 {#default-adaptive-form-templates}
+## 默认自适应表单模板 {#default-adaptive-form-templates}
 
-AEM QuickStart提供下列最適化表單範本：
+AEM QuickStart提供了以下自适应表单模板：
 
-* 調查範本：可讓您使用已設定多個欄的回應式版面，建立單頁最適化表單。 版面會根據您想要顯示表單的各種熒幕的尺寸自動調整。
-* Simple Enrollment範本：可讓您使用精靈版面配置建立多步驟最適化表單。 在此配置中，您可以為每個步驟指定步驟完成運算式，在精靈繼續下一步之前驗證此運算式。
-* 索引標籤式註冊範本：可讓您使用索引標籤左側的版面配置建立多索引標籤最適化表單，您可以在其中以任意順序瀏覽索引標籤。
-* 進階註冊範本：可讓您建立包含多個索引標籤和精靈的表單。 它使用索引標籤在左側的版面，可讓您以任意順序造訪索引標籤。 它使用Adobe Document Cloud設計服務來簽署和驗證。
-* 空白範本：可讓您建立不含任何頁首、頁尾和初始內容的表單。 您可以新增文字方塊、按鈕和影像等元件。 空白範本可讓您建立表單，您可以 [內嵌於AEM網站頁面](/help/forms/using/embed-adaptive-form-aem-sites.md).
+* 调查模板：允许您使用配置了多个列的响应式布局创建单页自适应表单。 布局会根据要在其上显示表单的各种屏幕的尺寸自动进行调整。
+* 简单注册模板：允许您使用向导布局创建多步骤自适应表单。 在此布局中，您可以为每个步骤指定步骤完成表达式，该表达式在向导继续下一步之前经过验证。
+* 选项卡式注册模板：允许您使用左侧的选项卡式布局创建多选项卡式自适应表单，您可以在其中按任意顺序访问选项卡。
+* 高级注册模板：允许您创建具有多个选项卡和向导的表单。 它使用左侧的选项卡布局，允许您按任意顺序访问选项卡。 它使用Adobe Document Cloud设计服务进行签名和验证。
+* 空白模板：允许您创建没有任何页眉、页脚和初始内容的表单。 可以添加文本框、按钮和图像等组件。 使用空白模板可创建表单，您可以 [嵌入到AEM网站页面](/help/forms/using/embed-adaptive-form-aem-sites.md).
 
-這些範本具有 `sling:resourceType` 屬性會設定為對應的頁面元件。 頁面元件會轉譯CQ頁面（包含調適型表單容器），接著轉譯調適型表單。
+这些模板具有 `sling:resourceType` 属性设置为相应的页面组件。 页面组件渲染CQ页面（包含自适应表单容器），进而渲染自适应表单。
 
-下表列舉範本與頁面元件之間的關聯：
+下表枚举模板与页面组件之间的关联：
 
 <table>
  <tbody>
@@ -74,83 +74,83 @@ AEM QuickStart提供下列最適化表單範本：
  </tbody>
 </table>
 
-## 使用範本編輯器建立最適化表單範本 {#creating-an-adaptive-form-template-using-template-editor}
+## 使用模板编辑器创建自适应表单模板 {#creating-an-adaptive-form-template-using-template-editor}
 
-您可以使用範本編輯器來指定最適化表單的結構和初始內容。 例如，您希望所有表單作者在登錄檔單中都擁有一些文字方塊、導覽按鈕和提交按鈕。 您可以建立範本，供作者用來建立與其他登錄檔單一致的表單。 AEM範本編輯器可讓您：
+您可以使用模板编辑器指定自适应表单的结构和初始内容。 例如，您希望所有表单作者在注册表单中都只有几个文本框、导航按钮和提交按钮。 您可以创建一个模板，供作者创建与其他注册表单一致的表单。 通过AEM模板编辑器，您可以：
 
-* 在結構層中新增表單的頁首與頁尾元件
-* 提供表單的初始內容。
-* 指定主題。
-* 指定提交、重設和導覽等動作。
+* 在结构层中添加表单的页眉和页脚组件
+* 提供表单的初始内容。
+* 指定主题。
+* 指定提交、重置和导航等操作。
 
-如需詳細資訊，請參閱 [範本編輯器](../../forms/using/template-editor.md).
+有关更多信息，请参阅 [模板编辑器](../../forms/using/template-editor.md).
 
-## 從CRXDE建立最適化表單範本 {#creating-an-adaptive-form-template-from-crxde}
+## 从CRXDE创建自适应表单模板 {#creating-an-adaptive-form-template-from-crxde}
 
-您可以建立範本並使用它來建立調適型表單，而不使用可用的範本。 自訂範本是以參照最適化表單容器和頁面元素（例如頁首和頁尾）的各種頁面元件為基礎。
+您可以创建模板并使用它来创建自适应表单，而不是使用可用的模板。 自定义模板基于引用自适应表单容器和页面元素（如页眉和页脚）的各种页面组件。
 
-您可以使用網站的基底頁面元件來建立這些元件。 或者，您也可以擴充現成範本使用的最適化表單的頁面元件。
+您可以使用网站的基础页面组件创建这些组件。 或者，您也可以扩展现成模板使用的自适应表单的页面组件。
 
-執行以下步驟來建立自訂範本，例如simpleEnrollmentTemplate。
+执行以下步骤可创建自定义模板，如simpleEnrollmentTemplate。
 
-1. 導覽至您編寫執行個體上的CRXDE Lite。
+1. 在创作实例上导航到CRXDE Lite。
 
-1. 在/apps目錄下，為您的應用程式建立資料夾結構。 例如，如果應用程式名稱為mycompany，請建立具有此名稱的資料夾。 通常，應用程式資料夾包含元件、設定、範本、src和安裝目錄。 在此範例中，請建立元件、設定和範本資料夾。
+1. 在/apps目录下，为应用程序创建文件夹结构。 例如，如果应用程序名称为mycompany，请使用此名称创建一个文件夹。 通常，应用程序文件夹包含组件、配置、模板、src和安装目录。 在本例中，创建“组件”、“配置”和“模板”文件夹。
 
-1. 導覽至/libs/fd/af/templates資料夾。
-1. 複製 `simpleEnrollmentTemplate` 節點。
-1. 導覽至/apps/mycompany/templates資料夾。 以滑鼠右鍵按一下並選取 **[!UICONTROL 貼上]**.
-1. 如有必要，請重新命名您所複製的範本節點。 例如，將其重新命名為註冊範本。
+1. 导航到文件夹/libs/fd/af/templates。
+1. 复制 `simpleEnrollmentTemplate` 节点。
+1. 导航到/apps/mycompany/templates文件夹。 右键单击并选择 **[!UICONTROL 粘贴]**.
+1. 如有必要，请重命名复制的模板节点。 例如，将其重命名为注册模板。
 
-1. 導覽至/apps/mycompany/templates/enrollment-template位置。
+1. 导航到位置/apps/mycompany/templates/enrollment-template。
 
-1. 修改 `jcr:title` 和 `jcr:description` 屬性 `jcr:content` 節點，以區別範本與您所複製的範本。
+1. 修改 `jcr:title` 和 `jcr:description` 的属性 `jcr:content` 节点，以区分模板和复制的模板。
 
-1. 此 `jcr:content` 修改後範本的節點包含 `guideContainer` 和 `guideformtitle` 元件。 `guideContainer` 是儲存最適化表單的容器。 此 `guideformtitle` 元件會顯示應用程式名稱、說明等。
+1. 此 `jcr:content` 修改模板的节点包含 `guideContainer` 和 `guideformtitle` 组件。 `guideContainer` 是保存自适应表单的容器。 此 `guideformtitle` 组件显示应用程序名称、描述等。
 
-   而非 `guideformtitle`，您可以包含自訂元件或 `parsys` 元件。 例如，移除 `guideformtitle`，並新增自訂元件或 `parsys` 元件節點。 確保 `sling:resourceType` 元件的屬性會參照元件，並在頁面中定義相同的屬性 `component.jsp` 檔案。
+   而不是 `guideformtitle`中，您可以包含自定义组件或 `parsys` 组件。 例如，删除 `guideformtitle`，并添加自定义组件或 `parsys` 组件节点。 确保 `sling:resourceType` 组件的属性引用组件，并在页面中定义该组件 `component.jsp` 文件。
 
-1. 導覽至/apps/mycompany/templates/enrollment-template/jcr：content位置。
+1. 导航到位置/apps/mycompany/templates/enrollment-template/jcr：content。
 
-1. 開啟 **[!UICONTROL 屬性]** 標籤並變更的值 `cq:designPath` 屬性至/etc/designs/mycompany。
+1. 打开 **[!UICONTROL 属性]** 制表符并更改 `cq:designPath` 属性到/etc/designs/mycompany。
 
-1. 現在建立/etc/designs/mycompany節點，用於 `cq:Page` 型別。
+1. 现在为创建一个/etc/designs/mycompany节点 `cq:Page` 类型。
 
-## 建立最適化表單頁面元件 {#create-an-adaptive-form-page-component}
+## 创建自适应表单页面组件 {#create-an-adaptive-form-page-component}
 
-自訂範本與預設範本的樣式相同，因為範本參照頁面元件/libs/fd/af/components/page/base。 您可以找到作為屬性的元件參照 `sling:resourceType` 定義於/apps/mycompany/templates/enrollment-template/jcr：content節點。 由於基礎是核心產品元件，請勿修改此元件。
+自定义模板的样式与默认模板相同，因为模板引用页面组件/libs/fd/af/components/page/base。 您可以找到作为属性的组件引用 `sling:resourceType` 在节点/apps/mycompany/templates/enrollment-template/jcr：content中定义。 由于基础是核心产品组件，因此请勿修改此组件。
 
-1. 導覽至/apps/mycompany/templates/enrollment-template/jcr：content節點，並修改屬性的值 `sling:resourceType` 至/apps/mycompany/components/page/enrollmentpage
-1. 將節點/libs/fd/af/components/page/base複製到資料夾/apps/mycompany/components/page。
+1. 导航到节点/apps/mycompany/templates/enrollment-template/jcr：content并修改属性的值 `sling:resourceType` 到/apps/mycompany/components/page/enrollmentpage
+1. 将节点/libs/fd/af/components/page/base复制到文件夹/apps/mycompany/components/page中。
 
-1. 將複製的元件重新命名為 `enrollmentpage`.
+1. 将复制的组件重命名为 `enrollmentpage`.
 
-1. **（只有在您已擁有內容頁面時）** 如果您有現有的，請執行下列步驟(a-d) `contentpage`您網站的元件。 如果您沒有現有的 `contentpage`元件時，您可以將 `resourceSuperType`屬性以指向OOTB基本頁面。
+1. **（仅当您已有内容页面时）** 如果现有，请执行以下步骤(a-d) `contentpage`网站组件。 如果您不存在 `contentpage`组件时，您可以将 `resourceSuperType`属性指向OOTB基本页。
 
-   1. 對於 `enrollmentpage` 節點，設定屬性的值 `sling:resourceSuperType` 至mycompany/components/page/contentpage。 此 `contentpage` component是您網站的基本頁面元件。 其他頁面元件可加以擴充。 移除下的指令碼檔案 `enrollmentpage`，除了 `head.jsp`， `content.jsp`、和 `library.jsp`. 此 `sling:resourceSuperType` 元件，也就是 `contentpage` 在此情況下，會包含所有這類指令碼。 頁首（包括導覽列和頁尾）繼承自 `contentpage` 元件。
+   1. 对于 `enrollmentpage` 节点，设置属性的值 `sling:resourceSuperType` 到mycompany/components/page/contentpage。 此 `contentpage` 组件是站点的基本页面组件。 其他页面组件可以对其进行扩展。 删除下的脚本文件 `enrollmentpage`，除 `head.jsp`， `content.jsp`、和 `library.jsp`. 此 `sling:resourceSuperType` 组件，即 `contentpage` 在这种情况下，包括所有此类脚本。 标题（包括导航栏和页脚）继承自 `contentpage` 组件。
 
-   1. 開啟檔案 `head.jsp`.
+   1. 打开文件 `head.jsp`.
 
-      JSP檔案包含這行 `<cq.include script="library.jsp"/>`.
+      JSP文件包含行 `<cq.include script="library.jsp"/>`.
 
-      此 `library.jsp` 檔案包含 `guide.theme.simpleEnrollment` 使用者端資料庫，其中包含最適化表單的樣式。
+      此 `library.jsp` 文件包含 `guide.theme.simpleEnrollment` 客户端库，其中包含自适应表单的样式。
 
-      頁面元件 `enrollmentpage` 具有獨佔 `head.jsp` 覆寫 `head.jsp` 的檔案 `contentpage` 元件。
+      页面组件 `enrollmentpage` 具有独占 `head.jsp` 覆盖 `head.jsp` 的文件 `contentpage` 组件。
 
-   1. 將所有指令碼包含在 `head.jsp` 的檔案 `contentpage` 元件至 `head.jsp` 的檔案 `enrollmentpage` 元件。
-   1. 在 `content.jsp` 指令碼，您可以新增其他頁面內容或參考至頁面轉譯時包含的其他元件。 例如，如果您新增自訂元件 `applicationformheader`，請確定您在JSP檔案中新增下列元件參考：
+   1. 将所有脚本包含在 `head.jsp` 的文件 `contentpage` 组件到 `head.jsp` 的文件 `enrollmentpage` 组件。
+   1. 在 `content.jsp` 脚本，您可以添加其他页面内容或对页面渲染时包含的其他组件的引用。 例如，如果添加自定义组件 `applicationformheader`，请确保在JSP文件中添加对组件的以下引用：
 
       `<cq:include path="applicationformheader" resourceType="mycompany/components/applicationformheader"/>`
 
-      同樣地，如果您新增 `parsys` 元件在範本節點結構中，也包含自訂元件。
+      同样，如果添加 `parsys` 组件在模板节点结构中，还包括自定义组件。
 
-## 建立最適化表單使用者端資料庫 {#creating-an-adaptive-form-client-library}
+## 创建自适应表单客户端库 {#creating-an-adaptive-form-client-library}
 
-此 `head.jsp` 的檔案 `enrollmentpage` 新範本的元件包含使用者端程式庫 `guide.theme.simpleEnrollment`. 預設範本也會使用此使用者端程式庫。 使用以下方法之一變更新範本中的樣式：
+此 `head.jsp` 的文件 `enrollmentpage` 新模板的组件包括一个客户端库 `guide.theme.simpleEnrollment`. 默认模板也使用此客户端库。 使用以下方法之一更改新模板中的样式：
 
-* 定義自訂主題並取代預設主題 `guide.theme.simpleEnrollment` 自訂佈景主題。
-* 在/etc/designs/mycompany下定義新的使用者端程式庫。 在jsp頁面中的預設主題專案之後包含從屬端程式庫。 在此使用者端資料庫中包含所有覆寫樣式和其他Java Script檔案。
+* 定义自定义主题并替换默认主题 `guide.theme.simpleEnrollment` 使用自定义主题。
+* 在/etc/designs/mycompany下定义新的客户端库。 在jsp页中的默认主题条目之后包含客户端库。 在此客户端库中包含所有覆盖的样式和其他Java脚本文件。
 
 >[!NOTE]
 >
->主題是指包含在用於呈現最適化表單的頁面元件中的使用者端資料庫。 使用者端資料庫主要控管最適化表單的外觀。
+>主题是指用于呈现自适应表单的页面组件中包含的客户端库。 客户端库主要控制自适应表单的外观。

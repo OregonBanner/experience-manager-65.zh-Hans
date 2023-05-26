@@ -1,7 +1,7 @@
 ---
-title: 社群主控台
+title: Communities控制台
 seo-title: Communities Consoles
-description: 社群主控台說明
+description: 社区控制台解释
 seo-description: Community Consoles explained
 uuid: 1c5b2600-9059-4b44-9741-f1b627423d3c
 contentOwner: Janice Kendall
@@ -18,55 +18,55 @@ ht-degree: 1%
 
 ---
 
-# 社群主控台 {#communities-consoles}
+# Communities控制台 {#communities-consoles}
 
-AEM Communities主控台可在製作環境中從全域導覽面板取得，可讓您存取管理工作，例如：
+AEM Communities控制台可在创作环境中从全局导航面板中使用，通过该控制台可访问管理任务，例如：
 
-* [建立社群網站](sites-console.md)
-* 新增 [群組](groups.md) 巢狀內嵌於網站內
-* 管理 [社群網站範本](sites.md)
-* 管理 [社群成員](members.md)
-* [稽核](moderate-ugc.md) 使用者產生的內容(UGC)
-* 建立 [自訂徽章](badges.md)
-* 設定 [UGC的預設儲存空間](srp-config.md)
+* [创建社区站点](sites-console.md)
+* 添加 [组](groups.md) 嵌套在站点内
+* 管理 [社区站点模板](sites.md)
+* 管理 [社区成员](members.md)
+* [正在审核](moderate-ugc.md) 用户生成内容(UGC)
+* 创建 [自定义徽章](badges.md)
+* 配置 [UGC的默认存储](srp-config.md)
 
-時間 [UGC儲存](working-with-srp.md) 設為製作和發佈環境共用的公用存放區， [稽核主控台](moderation.md)適用於製作和發佈環境，在UGC的單一例項上運作。
+时间 [UGC存储](working-with-srp.md) 配置为由创作环境和发布环境共享的公用存储， [审核控制台](moderation.md)在创作和发布环境中均可用，可在UGC的单独实例上运行。
 
-在作者環境中，以管理員許可權登入後， `Communities` 「導覽」和「工具」主控台提供主控台。
+在创作环境中，以管理员权限登录后， `Communities` 控制台可从“导航”和“工具”控制台中使用。
 
 >[!NOTE]
 >
->在發佈環境中， [社群網站](sites-console.md) 將會顯示 `Administration` 功能表專案（當登入成員具有適當許可權時）。
+>在发布环境中， [社区站点](sites-console.md) 将显示 `Administration` 菜单项。
 
-## 全域導覽面板 {#global-navigation-panel}
+## 全局导航面板 {#global-navigation-panel}
 
-選取 `Adobe Experience Manager` 圖示開啟「全域導覽」面板，並存取兩個圖示：
+选择 `Adobe Experience Manager` 图标打开全局导航面板并访问两个图标：
 
-* [導覽主控台](#navigation-console)
-* [工具主控台](tools.md)
+* [导航控制台](#navigation-console)
+* [工具控制台](tools.md)
 
-## 導覽主控台 {#navigation-console}
+## 导航控制台 {#navigation-console}
 
-若要存取各種Communities主控台，請從全域導覽選取 **導覽，社群**.
+要访问各种Communities控制台，请从全局导航中选择 **导航，社区**.
 
 ![社区](assets/communities.png)
 
 * [Sites](sites-console.md)
 
-   您可以在作者環境中存取Sites主控台，以便建立和管理社群網站及其 [群組](groups.md).
+   站点控制台可在创作环境中访问，以创建和管理社区站点及其 [组](groups.md).
 
 * [审核](moderation.md)
 
-   「調節」主控台適用於在製作環境中大量調節UGC。 在發佈環境中，指派了角色的社群成員可存取類似的大量稽核主控台。 [社群版主](users.md#publishenvironmentusersandgroups) 用於一或多個社群網站。
+   “审阅”控制台用于批量审阅UGC和创作环境。 在发布环境中，分配了角色的社区成员可以访问类似的批量审核控制台。 [社区审查方](users.md#publishenvironmentusersandgroups) 用于一个或多个社区站点。
 
-* [成員、群組](members.md)
+* [成员、组](members.md)
 
-   「成員」和「群組」主控台用於從作者環境管理存在於發佈環境中的社群成員和成員群組。
+   “成员”和“组”控制台用于从创作环境管理发布环境中存在的社区成员和成员组。
 
 * [报表](reports.md)
 
-   「報表」主控台是當社群網站具有下列條件時，可能產生工作總攬、頁面檢視和張貼內容(UGC)報表的地方 [已啟用Adobe Analytics](sites-console.md#analytics). 主控台僅適用於作者環境。
+   当社区网站具有以下URL时，“报表”控制台可以生成有关分配、页面查看和已发布内容(UGC)的报表： [已启用Adobe Analytics](sites-console.md#analytics). 控制台仅在创作环境中可用。
 
-## 工具主控台 {#tools-console}
+## 工具控制台 {#tools-console}
 
-若要存取 [Communities工具](tools.md) （前身為administration console），從全域導覽： **[!UICONTROL 工具]** > **[!UICONTROL Communities]**
+要访问 [Communities工具](tools.md) （前身为administration console），从全局导航中： **[!UICONTROL 工具]** > **[!UICONTROL Communities]**

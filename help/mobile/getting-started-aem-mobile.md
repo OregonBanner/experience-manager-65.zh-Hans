@@ -1,7 +1,7 @@
 ---
-title: AEM Mobile快速入門
+title: AEM Mobile快速入门
 seo-title: Getting Started with AEM Mobile
-description: 此頁面可用作AEM Mobile的登陸頁面。 請依照本頁所述，開始瞭解建立應用程式的三種不同方法。
+description: 此页用作AEM Mobile的登录页。 请关注此页面，以开始了解创建应用程序的三种不同方法。
 seo-description: This page serves as a landing page for AEM Mobile. Follow this page as a starting point to learn about the three different ways for creating apps.
 uuid: a5398216-f9bb-4009-a9f8-a4f0135db67c
 contentOwner: User
@@ -17,24 +17,24 @@ ht-degree: 1%
 
 ---
 
-# AEM Mobile快速入門{#getting-started-with-aem-mobile}
+# AEM Mobile快速入门{#getting-started-with-aem-mobile}
 
 >[!NOTE]
 >
->Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）專案使用SPA編輯器。 [了解详情](/help/sites-developing/spa-overview.md).
+>Adobe建议对需要基于单页应用程序框架的客户端渲染（例如React）的项目使用SPA编辑器。 [了解详情](/help/sites-developing/spa-overview.md).
 
 >[!CAUTION]
 >
->從AEM 6.2或6.3移轉至AEM 6.5的現有AEM Mobile應用程式客戶，可以從PackageShare下載套件，繼續使用AEM Mobile應用程式。 不過，新安裝的AEM 6.5不支援AEM Mobile應用程式功能。
+>从AEM 6.2或6.3迁移到AEM 6.5的现有AEM Mobile应用程序客户可以通过从PackageShare下载包继续使用AEM Mobile应用程序。 但是，新安装的AEM 6.5不支持AEM Mobile应用程序功能。
 
-Adobe Experience Manager (AEM) Mobile是Adobe Experience Manager多頻道數位平台的一部分，也利用AEM Assets、Sites、Screens、Workflow、User Manager、Commerce和Forms。 AEM Mobile提供絕佳的部署彈性，讓企業能夠使用各種內容來源。
+Adobe Experience Manager (AEM) Mobile是Adobe Experience Manager多渠道数字平台的一部分，该平台还利用AEM Assets、Sites、Screens、Workflow、User Manager、Commerce和Forms。 AEM Mobile提供了出色的部署灵活性，使企业能够使用各种内容源。
 
-AEM Mobile提供多種建立應用程式的方法。 建立應用程式的三種不同方式如下：
+AEM Mobile提供了多种创建应用程序的方法。 您可以创建应用程序的三种不同方式是：
 
-* **[搭配AEM使用隨選服務](/help/mobile/getting-started-aem-mobile-on-demand.md)**
-* **[不使用AEM而使用On-Demand Services](https://helpx.adobe.com/digital-publishing-solution/help/aem-mobile-end-of-life-faq.html)**
-* **[搭配AEM使用Adobe PhoneGap Enterprise](/help/mobile/getting-started-aem-mobile-phonegap.md)**
+* **[在AEM中使用On-Demand Services](/help/mobile/getting-started-aem-mobile-on-demand.md)**
+* **[在不使用AEM的情况下使用On-Demand Services](https://helpx.adobe.com/digital-publishing-solution/help/aem-mobile-end-of-life-faq.html)**
+* **[将Adobe PhoneGap Enterprise与AEM结合使用](/help/mobile/getting-started-aem-mobile-phonegap.md)**
 
 >[!NOTE]
 >
->如果您是Adobe Experience Manager的新手，您可能想要逐步瞭解 [AEM快速入門](/help/sites-deploying/deploy.md).
+>如果您是Adobe Experience Manager的新用户，则可能需要逐步了解 [AEM快速入门](/help/sites-deploying/deploy.md).

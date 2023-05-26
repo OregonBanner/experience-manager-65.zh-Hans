@@ -1,6 +1,6 @@
 ---
-title: '"[!DNL Adobe Camera Raw] 支援處理數位資產」'
-description: 瞭解如何啟用 [!DNL Adobe Camera Raw] 中的支援 [!DNL Adobe Experience Manager Assets]
+title: ”[!DNL Adobe Camera Raw] 支持处理数字资产”
+description: 了解如何启用 [!DNL Adobe Camera Raw] 中的支持 [!DNL Adobe Experience Manager Assets]
 contentOwner: AG
 role: Admin
 feature: Developer Tools
@@ -12,34 +12,34 @@ ht-degree: 1%
 
 ---
 
-# 處理影像，使用 [!DNL Adobe Camera Raw] {#camera-raw-support}
+# 处理图像，使用 [!DNL Adobe Camera Raw] {#camera-raw-support}
 
-您可以啟用 [!DNL Adobe Camera Raw] 支援處理原始檔案格式（例如CR2、NEF和RAF），並以JPEG格式轉譯影像。 支援的功能 [!DNL Adobe Experience Manager Assets] 使用 [Camera Raw封裝](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/aem630/product/assets/aem-assets-cameraraw-pkg) 可透過Software Distribution取得。
+您可以启用 [!DNL Adobe Camera Raw] 支持处理原始文件格式（如CR2、NEF和RAF），并以JPEG格式渲染图像。 中支持该功能 [!DNL Adobe Experience Manager Assets] 使用 [Camera Raw包](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/aem630/product/assets/aem-assets-cameraraw-pkg) 可从Software Distribution获得。
 
 >[!NOTE]
 >
->功能僅支援JPEG轉譯。 Windows 64位元、Mac作業系統和RHEL 7.x均支援此功能。
+>功能仅支持JPEG呈现版本。 它在Windows 64位、Mac OS和RHEL 7.x上受支持。
 
-若要啟用 [!DNL Camera Raw] 中的支援 [!DNL Experience Manager Assets]，請遵循下列步驟：
+启用 [!DNL Camera Raw] 中的支持 [!DNL Experience Manager Assets]，请按照以下步骤操作：
 
-1. 下載 [[!DNL Camera Raw] 封裝](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/product/assets/aem-assets-cameraraw-pkg-1.4.8.zip) 從 [!DNL Software Distribution].
-1. 访问 `https://[aem_server]:[port]/workflow`. 開啟 **[!UICONTROL DAM更新資產]** 工作流程。
-1. 編輯 **[!UICONTROL 程式縮圖]** 步驟。
-1. 在「 」中提供下列設定 **[!UICONTROL 縮圖]** 標籤：
+1. 下载 [[!DNL Camera Raw] 包](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/product/assets/aem-assets-cameraraw-pkg-1.4.8.zip) 起始日期 [!DNL Software Distribution].
+1. 访问 `https://[aem_server]:[port]/workflow`. 打开 **[!UICONTROL DAM更新资产]** 工作流。
+1. 编辑 **[!UICONTROL 进程缩略图]** 步骤。
+1. 在中提供以下配置 **[!UICONTROL 缩略图]** 选项卡：
 
-   * **[!UICONTROL 縮圖]**： `140:100:false, 48:48:false, 319:319:false`
+   * **[!UICONTROL 缩略图]**： `140:100:false, 48:48:false, 319:319:false`
    * **[!UICONTROL 跳过 MIME 类型]**: `skip:image/dng, skip:image/x-raw-(.*)`
 
    ![chlimage_1-128](assets/chlimage_1-334.png)
 
-1. 在 **[!UICONTROL 啟用Web的影像]** 標籤，在 **[!UICONTROL 略過清單]** 欄位，指定 `audio/mpeg, video/(.*), image/dng, image/x-raw-(.*)`.
+1. 在 **[!UICONTROL 启用Web的图像]** 选项卡，在 **[!UICONTROL 跳过列表]** 字段，指定 `audio/mpeg, video/(.*), image/dng, image/x-raw-(.*)`.
 
    ![chlimage_1-129](assets/chlimage_1-335.png)
 
-1. 從側面板新增 **[!UICONTROL Camera Raw/DNG處理常式]** 步驟低於 **[!UICONTROL 程式縮圖]** 步驟。
-1. 在 **[!UICONTROL Camera Raw/DNG處理常式]** 步驟，將下列設定新增至 **[!UICONTROL 引數]** 標籤：
+1. 从侧面板中，添加 **[!UICONTROL Camera Raw/DNG处理程序]** 步骤低于 **[!UICONTROL 进程缩略图]** 步骤。
+1. 在 **[!UICONTROL Camera Raw/DNG处理程序]** 步骤，将以下配置添加到 **[!UICONTROL 参数]** 选项卡：
 
-   * **[!UICONTROL Mime型別]**： `image/dng` 和 `image/x-raw-(.*)`
+   * **[!UICONTROL Mime类型]**： `image/dng` 和 `image/x-raw-(.*)`
    * **[!UICONTROL 命令]**：
 
       * `DAM_Raw_Converter ${directory}/${filename} ${directory} cq5dam.web.1280.1280.jpeg 1280 1280`
@@ -53,24 +53,24 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->確保上述設定與 **[!UICONTROL 具有Camera Raw和DNG處理步驟的DAM更新資產範例]** 設定。
+>确保上述配置与 **[!UICONTROL 具有Camera Raw和DNG处理步骤的DAM更新资源示例]** 配置。
 
-您現在可以將Camera Raw檔案匯入「資產」。 安裝Camera Raw套件並設定所需的工作流程後， **[!UICONTROL 影像調整]** 選項會顯示在側窗格清單中。
+您现在可以将Camera Raw文件导入Assets。 安装Camera Raw包并配置所需的工作流后， **[!UICONTROL 图像调整]** 选项将显示在侧窗格列表中。
 
 ![chlimage_1-131](assets/chlimage_1-337.png)
 
-*圖：側窗格中的選項。*
+*图：侧窗格中的选项。*
 
 ![chlimage_1-132](assets/chlimage_1-338.png)
 
-*圖：使用選項對影像進行輕量編輯。*
+*图：使用选项对图像进行轻量级编辑。*
 
-將編輯儲存至後 [!DNL Camera Raw] 影像，新轉譯 `AdjustedPreview.jpg` 會為影像產生。 對於其他影像型別，除了 [!DNL Camera Raw]，變更會反映在所有轉譯中。
+将编辑内容保存到之后 [!DNL Camera Raw] 图像，新演绎版 `AdjustedPreview.jpg` 为图像生成。 对于其他图像类型，不包括 [!DNL Camera Raw]，则更改会反映在所有演绎版中。
 
-## 最佳實務、已知問題和限制 {#best-practices}
+## 最佳实践、已知问题和限制 {#best-practices}
 
-功能具有下列限制：
+该功能具有以下限制：
 
-* 功能僅支援JPEG轉譯。 Windows 64位元、Mac作業系統和RHEL 7.x均支援此功能。
-* RAW和DNG格式不支援中繼資料回寫。
-* 此 [!DNL Camera Raw] 程式庫一次可處理的總畫素數存在限制。 目前，它最多可在檔案長邊處理65000個畫素，或處理先遇到的任何條件的512 MP。
+* 功能仅支持JPEG呈现版本。 它在Windows 64位、Mac操作系统和RHEL 7.x上受支持。
+* RAW和DNG格式不支持元数据写回。
+* 此 [!DNL Camera Raw] 库在每次可处理的总像素数方面存在限制。 目前，它最多可以在文件的长边处理65000像素，或者处理无论首先遇到什么标准的512 MP文件。

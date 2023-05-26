@@ -1,7 +1,7 @@
 ---
-title: 建構應用程式
+title: 构建应用程序
 seo-title: Structure an App
-description: 請依照本頁面的說明操作，瞭解如何建立應用程式的結構。 本頁面說明如何建構範本和元件，以及JavaScript和CSS Clientlibs的相關資訊。
+description: 关注此页面，了解如何创建应用程序的结构。 本页介绍如何构建模板和组件以及有关JavaScript和CSS Clientlibs的信息。
 seo-description: Follow this page to learn about how to create structure of an app. This page describes how to structure templates and components along with information on JavaScript and CSS Clientlibs.
 uuid: bf0e8b0c-a075-4847-b56d-de458715027c
 contentOwner: User
@@ -17,46 +17,46 @@ ht-degree: 0%
 
 ---
 
-# 建構應用程式{#structure-an-app}
+# 构建应用程序{#structure-an-app}
 
 >[!NOTE]
 >
->Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）專案使用SPA編輯器。 [了解详情](/help/sites-developing/spa-overview.md).
+>Adobe建议对需要基于单页应用程序框架的客户端渲染（例如React）的项目使用SPA编辑器。 [了解详情](/help/sites-developing/spa-overview.md).
 
-AEM Mobile專案涉及多樣化的內容型別集，包括頁面、JavaScript和CSS使用者端資料庫、可重複使用的AEM元件、Content Sync設定和PhoneGap應用程式殼層內容。 讓您的新AEM Mobile應用程式以 [入門套件](https://github.com/Adobe-Marketing-Cloud-Apps/aem-phonegap-starter-kit) 是讓所有不同型別的內容進入我們建議結構的好方法，以便在長期內降低可移植性和可維護性。
+AEM Mobile项目涉及多种内容类型，包括页面、JavaScript和CSS客户端库、可重用的AEM组件、Content Sync配置和PhoneGap应用程序外壳内容。 您的新AEM Mobile应用程序基于 [入门工具包](https://github.com/Adobe-Marketing-Cloud-Apps/aem-phonegap-starter-kit) 是一种将各种不同类型的内容纳入我们推荐结构的好方法，以便在长期内提高可移植性和可维护性。
 
-## 頁面內容 {#page-content}
+## 页面内容 {#page-content}
 
-應用程式的頁面應該全都位於/content/mobileapps下方，以便AEM Mobile主控台可辨識這些頁面。
+应用程序页面应全部位于/content/mobileapps下方，以便AEM Mobile控制台能够识别这些页面。
 
 ![chlimage_1-52](assets/chlimage_1-52.png)
 
-根據AEM慣例，應用程式的第一個頁面應該會重新導向至其中一個子頁面，做為應用程式的預設語言(在Geometrixx和Starter Kit案例中均為「en」)。 頂層地區設定頁面通常會繼承自foundation &#39;splash-page&#39;元件(/libs/mobileapps/components/splash-page)，該元件會負責支援安裝Over-the-Air Content Sync更新所需的初始化(contentInit程式碼位於/etc/clientlibs/mobile/content-sync/js/contentInit.js)。
+根据AEM约定，应用程序的第一个页面应该重定向到其子页面之一，该子页面用作应用程序的默认语言(在Geometrixx和入门套件案例中均为“en”)。 顶级区域设置页面通常继承自foundation“splash-page”组件(/libs/mobileapps/components/splash-page)，该组件会负责支持安装无线内容同步更新所需的初始化(contentInit代码位于/etc/clientlibs/mobile/content-sync/js/contentInit.js)。
 
-## 範本和元件 {#templates-and-components}
+## 模板和组件 {#templates-and-components}
 
-應用程式的範本和元件程式碼應位於/apps/&lt;brand name=&quot;&quot;>/&lt;app name=&quot;&quot;>. 依照慣例，您應該將範本和元件程式碼放在/apps/&lt;brand name=&quot;&quot;>/&lt;app name=&quot;&quot;>. 已經在AEM中操作過Site的開發人員應該熟悉此模式。 通常會接著執行，因為/apps/預設會被鎖定以匿名存取發佈執行個體。 因此，您的原始JSP程式碼會向潛在攻擊者隱藏。
+应用程序的模板和组件代码应位于/apps/&lt;brand name=&quot;&quot;>/&lt;app name=&quot;&quot;>. 应按照惯例将模板和组件代码放置在/apps/中&lt;brand name=&quot;&quot;>/&lt;app name=&quot;&quot;>. 已使用AEM中的站点的开发人员应熟悉此模式。 通常，它随后设置，因为/apps/在发布实例上默认被锁定进行匿名访问。 因此，会隐藏您的原始JSP代码，使其远离潜在的攻击者。
 
-應用程式特定的範本可設定為僅透過使用顯示。 `allowedPaths` 屬性節點，並將其值設為&#39;/content/mobileapps(/)。&amp;ast；)？&#39;  — 或是某些更具體的專案（如果範本僅可用於單一應用程式的話）。 此 `allowedParents` 和 `allowedChildren` 屬性也可以用來根據建立新頁面的位置，對作者可以使用哪些範本進行非常精細的控制。
+可以将特定于应用程序的模板配置为仅通过使用 `allowedPaths` 属性节点，并将其值设置为“/content/mobileapps(/”。&amp;ast；)？&#39;  — 或者，如果模板仅可用于单个应用程序，则执行更具体的操作。 此 `allowedParents` 和 `allowedChildren` 属性还可以用于根据创建新页面的位置，非常精细地控制作者可以使用哪些模板。
 
-從頭開始建立新應用程式頁面元件時，建議將其設為 `sling:resourceSuperType` 屬性變更為&#39;mobileapps/components/angular/ng-page&#39;。 這會將您的頁面設定為以單頁應用程式進行製作和呈現，並讓您覆蓋元件可能需要變更的任何.jsp檔案。 由於ng-page完全不包含任何UI架構，因此開發人員通常最終會覆蓋（至少）「template.jsp」(覆蓋自/libs/mobileapps/components/angular/ng-page/template.jsp)。
+从头开始创建新的应用程序页面组件时，建议设置为 `sling:resourceSuperType` 属性更改为“mobileapps/components/angular/ng-page”。 这会将您的页面设置为以单页应用程序进行创作和渲染，并允许您覆盖组件可能需要更改的任何.jsp文件。 由于ng-page根本不包含任何UI框架，因此开发人员通常最终将覆盖（至少）“template.jsp”(覆盖自/libs/mobileapps/components/angular/ng-page/template.jsp)。
 
-希望運用AngularJS的可編寫頁面元件具有同等功能 `sling:resourceSuperType` 元件位於/libs/mobileapps/components/angular/ng-component ，可透過相同方式加以覆蓋及自訂。
+希望使用AngularJS的可创作页面组件具有等效项 `sling:resourceSuperType` 位于/libs/mobileapps/components/angular/ng-component的组件，可以按相同方式叠加和自定义该组件。
 
 ## JavaScript和CSS Clientlibs {#javascript-and-css-clientlibs}
 
-對於使用者端程式庫，開發人員有一些選項可供選擇，以便將程式庫放在存放庫中。 以下模式僅供參考，並非硬性要求。
+对于客户端库，开发人员有一些选项可用于将库放置在存储库中的位置。 提供以下模式作为指导，但并非硬性要求。
 
-如果您的使用者端程式碼可以獨立運作，且與應用程式的特定元件無關（這表示它可以在其他應用程式中重複使用），建議您將其儲存於/etc/clientlibs/&lt;brand name=&quot;&quot;>/&lt;lib name=&quot;&quot;>. 另一方面，如果clientlib專屬於單一應用程式，您可以巢狀內嵌為應用程式設計節點的子節點；/etc/designs/phonegap/&lt;brand name=&quot;&quot;>/&lt;app name=&quot;&quot;>/clientlibs。 此clientlib的類別不應由其他程式庫使用，而應視需要用來內嵌其他程式庫。 遵循此模式可讓開發人員無須在每次將使用者端程式庫新增至應用程式時都新增新的Content Sync設定，而只需更新應用程式設計clientlib的「embeds」屬性。 例如，檢視/content/phonegap/geometrixx-outdoors/en/jcr：content/pge-app/app-config/clientlibs-all中的clientlibs-all Content Sync設定Geometrixx。
+如果您的客户端代码可以独立存在，并且与应用程序的特定组件无关（这意味着它可以在其他应用程序中重复使用），我们建议将其存储在/etc/clientlibs/中&lt;brand name=&quot;&quot;>/&lt;lib name=&quot;&quot;>. 另一方面，如果clientlib特定于单个应用程序，则可以将其嵌套为应用程序设计节点/etc/designs/phonegap/的子节点&lt;brand name=&quot;&quot;>/&lt;app name=&quot;&quot;>/clientlibs。 此clientlib的类别不应由其他库使用，而应根据需要用于嵌入其他库。 通过遵循此模式，开发人员无需在每次将客户端库添加到应用程序时都添加新的内容同步配置，而只需更新应用程序设计clientlib的“embeds”属性。 例如，查看/content/phonegap/geometrixx-outdoors/en/jcr：content/pge-app/app-config/clientlibs-all中的clientlibs-all Content SyncGeometrixx。
 
-如果您的使用者端程式碼與特定元件緊密結合，請將該程式碼放入巢狀使用者端程式庫中/apps/中元件位置的下方，並將其類別內嵌至應用程式的「設計」clientlib。
+如果您的客户端代码与特定组件紧密耦合，请将该代码放置在嵌套在/apps/中组件位置下方的客户端库中，并将其类别嵌入应用程序的“设计”clientlib中。
 
-## PhoneGap設定 {#phonegap-configuration}
+## PhoneGap配置 {#phonegap-configuration}
 
-每個AEM Mobile應用程式都包含一個目錄，其中託管PhoneGap使用的設定檔案 [命令列介面](https://github.com/phonegap/phonegap-cli) 和 [PhoneGap Build](https://build.phonegap.com/) 將您的網頁內容轉換為可執行的應用程式。 舉例來說，在Geometrixx範例中，此目錄(/content/phonegap/geometrixx-outdoors/shell/jcr：content/pge-app/app-content)位於殼層的一部分；這是由於其中僅包含無法直接更新的內容而做出的設計決定，例如處理裝置API和應用程式本身設定的外掛程式。
+每个AEM Mobile应用程序都包含一个目录，其中托管PhoneGap使用的配置文件 [命令行界面](https://github.com/phonegap/phonegap-cli) 和 [PhoneGap Build](https://build.phonegap.com/) 将Web内容转换为可运行的应用程序。 例如，在Geometrixx示例中，此目录(/content/phonegap/geometrixx-outdoors/shell/jcr：content/pge-app/app-content)作为Shell的一部分进行定位；之所以做出设计决策，是因为该目录仅包含无法动态更新的内容，例如处理设备API和应用程序本身配置的插件。
 
-在此目錄中，您也會找到 [Cordova鉤點](https://cordova.apache.org/docs/en/edge/guide_appdev_hooks_index.md.html#Hooks%20Guide) ，可用來安裝外掛程式、將資源檔案置於其平台特定位置，以及其他應在建置中執行的動作。 注意：除了在建置中下載每個外掛程式外，您也可以遵循「廚房水槽」應用程式的模式，並且 [包含外掛程式原始碼](https://github.com/blefebvre/aem-phonegap-kitchen-sink/tree/master/content/src/main/content/jcr_root/content/phonegap/kitchen-sink/shell/_jcr_content/pge-app/app-content/phonegap/plugins) 與其他應用程式專案搭配使用。
+在此目录中，您还将找到许多 [Cordova挂钩](https://cordova.apache.org/docs/en/edge/guide_appdev_hooks_index.md.html#Hooks%20Guide) ，可用于安装插件、将资源文件放置在其平台特定的位置，以及应在生成过程中执行的其他操作。 注意：除了在内部版本中下载每个插件之外，您还可以遵循厨房水槽应用程序的模式，并且 [包含插件源代码](https://github.com/blefebvre/aem-phonegap-kitchen-sink/tree/master/content/src/main/content/jcr_root/content/phonegap/kitchen-sink/shell/_jcr_content/pge-app/app-content/phonegap/plugins) 应用程序项目的其余部分。
 
 ## 后续步骤 {#the-next-steps}
 
-瞭解應用程式的結構後，請參閱 [使用App Console建立和編輯應用程式](/help/mobile/phonegap-apps-console.md).
+了解应用程序的结构后，请参阅 [使用应用程序控制台创建和编辑应用程序](/help/mobile/phonegap-apps-console.md).

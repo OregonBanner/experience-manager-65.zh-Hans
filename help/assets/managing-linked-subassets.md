@@ -1,6 +1,6 @@
 ---
-title: 管理具有參考資料和多頁面的複合資產
-description: 瞭解如何從內建立數位資產的參考 [!DNL Adobe InDesign]， [!DNL Adobe Illustrator]、和 [!DNL Adobe Photoshop]. 使用「頁面檢視器」功能可檢視多頁檔案的個別子資產頁面，例如PDF、INDD、PPT、PPTX和AI檔案。
+title: 管理包含引用和多个页面的复合资产
+description: 了解如何在中创建对数字资产的引用 [!DNL Adobe InDesign]， [!DNL Adobe Illustrator]、和 [!DNL Adobe Photoshop]. 使用“页面查看器”功能可以查看多页文件(如PDF、INDD、PPT、PPTX和AI文件)的各个子资源页面。
 contentOwner: AG
 role: User, Admin
 feature: Asset Management
@@ -12,136 +12,136 @@ ht-degree: 0%
 
 ---
 
-# 管理複合和多頁資產 {#managing-compound-assets}
+# 管理复合和多页资源 {#managing-compound-assets}
 
-[!DNL Adobe Experience Manager Assets] 可識別上傳的檔案是否包含已存在於存放庫中的資產參考。 此功能僅適用於支援的檔案格式。 如果上傳的資產包含任何參考 [!DNL Experience Manager] 資產，則會在上傳和參照的資產之間建立雙向連結。
+[!DNL Adobe Experience Manager Assets] 可以识别上传的文件是否包含对存储库中已存在的资源的引用。 此功能仅适用于支持的文件格式。 如果上传的资源包含对的任何引用 [!DNL Experience Manager] 资源时，将在上传的资源和引用的资源之间创建一个双向链接。
 
-除了消除備援外，請參考中的資產 [!DNL Adobe Creative Cloud] 應用程式可加強協同合作，並提升使用者的效率和生產力。
+除了消除冗余之外，还引用中的资产 [!DNL Adobe Creative Cloud] 应用程序增强了协作，提高了用户的效率和生产力。
 
-[!DNL Experience Manager Assets] 支援雙向參照。 您可以在上傳檔案的資產詳細資訊頁面中找到引用的資產。 此外，您還可以在參照資產的資產詳細資訊頁面中檢視參照檔案。
+[!DNL Experience Manager Assets] 支持双向引用。 您可以在上传文件的资源详细信息页面中找到引用的资源。 此外，还可以在引用资源的资源详细信息页面中查看引用文件。
 
-參照是根據參照資產的路徑、檔案ID和執行個體ID來解析。
+引用是根据引用的资产的路径、文档ID和实例ID解析的。
 
-## [!DNL Adobe Illustrator]：新增數位資產作為參考 {#refai}
+## [!DNL Adobe Illustrator]：添加数字资产作为引用 {#refai}
 
-您可以從中參考現有的數位資產 [!DNL Adobe Illustrator] 檔案。
+您可以从中引用现有的数字资产 [!DNL Adobe Illustrator] 文件。
 
-1. 使用 [[!DNL Experience Manager] 案頭應用程式](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html)，在本機檔案系統上擷取數位資產。 導覽至您要參考之資產的檔案系統位置。
-1. 將資產從本機資料夾拖曳至 [!DNL Illustrator] 檔案。
+1. 使用 [[!DNL Experience Manager] 桌面应用程序](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html)，获取本地文件系统上的数字资产。 导航到要引用的资源的文件系统位置。
+1. 将资源从本地文件夹拖到 [!DNL Illustrator] 文件。
 
-1. 儲存 [!DNL Illustrator] 檔案到掛載的磁碟機，或 [上傳](/help/assets/manage-assets.md#uploading-assets) 至 [!DNL Experience Manager] 存放庫。
+1. 保存 [!DNL Illustrator] 文件到已装入的驱动器，或 [上传](/help/assets/manage-assets.md#uploading-assets) 到 [!DNL Experience Manager] 存储库。
 
-1. 工作流程完成後，前往資產的資產詳細資訊頁面。 現有數位資產的參考資料列於 **[!UICONTROL 相依性]** 在 **[!UICONTROL 引用]** 欄。
+1. 工作流完成后，转到资产的资产详细信息页面。 对现有数字资产的引用列在 **[!UICONTROL 依赖关系]** 在 **[!UICONTROL 引用]** 列。
 
    ![chlimage_1-84](assets/chlimage_1-258.png)
 
-1. 顯示在下方的參考資產 **[!UICONTROL 相依性]** 也可以由目前檔案以外的檔案參照。 若要檢視資產的參考檔案清單，請按一下下方中的資產 **[!UICONTROL 相依性]**.
+1. 下显示的引用资产 **[!UICONTROL 依赖关系]** 也可以由当前文件以外的文件引用。 要查看某个资源的引用文件列表，请单击下方的资源 **[!UICONTROL 依赖关系]**.
 
    ![chlimage_1-85](assets/chlimage_1-259.png)
 
-1. 按一下 **[!UICONTROL 檢視屬性]** （從工具列）。 在 [!UICONTROL 屬性] 頁面，參照目前資產的檔案清單會出現在 **[!UICONTROL 引用]** 中的欄 **[!UICONTROL 基本]** 標籤。
+1. 单击 **[!UICONTROL 查看属性]** 工具栏中。 在 [!UICONTROL 属性] 页面上，引用当前资源的文件列表显示在 **[!UICONTROL 引用]** 中的列 **[!UICONTROL 基本]** 选项卡。
 
-   ![在資產詳細資訊的「參考」欄中檢視Experience Manager Assets的參考](assets/asset-references.png)
+   ![在资源详细信息中的引用列中查看Experience Manager Assets的引用](assets/asset-references.png)
 
-   *圖：資產詳細資料中的資產參考。*
+   *图：资源详细信息中的资源引用。*
 
-## [!DNL Adobe InDesign]：新增數位資產作為參考 {#add-aem-assets-as-references-in-adobe-indesign}
+## [!DNL Adobe InDesign]：添加数字资产作为引用 {#add-aem-assets-as-references-in-adobe-indesign}
 
-若要從內部參照數位資產 [!DNL InDesign] 檔案，將資產拖曳至 [!DNL InDesign] 檔案或匯出 [!DNL InDesign] 壓縮封存檔的檔案。
+要从中引用数字资产，请执行以下操作 [!DNL InDesign] 文件，将资产拖到 [!DNL InDesign] 文件或导出 [!DNL InDesign] 文件作为ZIP存档。
 
-引用的資產已存在於 [!DNL Experience Manager Assets]. 您可以透過以下方式擷取子資產： [設定InDesign Server](indesign.md). 中的內嵌資產 [!DNL InDesign] 檔案會擷取為子資產。
-
->[!NOTE]
->
->如果 [!DNL InDesign Server] 已代理， [!DNL InDesign] 檔案的XMP中繼資料中內嵌其預覽。 在此情況下，不會明確要求縮圖擷取。 但是，如果 [!DNL InDesign Server] 並未進行代理，必須明確擷取縮圖 [!DNL InDesign] 檔案。
-
-上傳INDD檔案時，會透過查詢具有以下特徵的資產來擷取參考： `xmpMM:InstanceID` 和 `xmpMM:DocumentID` 屬性存放庫中。
-
-### 透過拖曳資產建立引用 {#create-references-by-dragging-aem-assets}
-
-此程式類似於 [在Adobe Illustrator中新增數位資產作為參考](#refai).
-
-### 透過匯出ZIP檔案來建立資產的參考 {#create-references-to-aem-assets-by-exporting-a-zip-file}
-
-1. 執行以下步驟： [建立工作流程模型](/help/sites-developing/workflows-models.md) 以建立新的工作流程。
-1. 使用 [封裝功能](https://helpx.adobe.com/indesign/how-to/indesign-package-files-for-handoff.html) 之 [!DNL Adobe InDesign] 以匯出檔案。 [!DNL Adobe InDesign] 可將檔案和連結的資產匯出為套件。 在此案例中，匯出的資料夾包含 `Links` 包含子資產的資料夾 [!DNL InDesign] 檔案。 此 `Links` 資料夾與INDD檔案位於相同的資料夾中。
-1. 建立ZIP檔案並將其上傳至 [!DNL Experience Manager] 存放庫。
-1. 開始 `Unarchiver` 工作流程。
-1. 工作流程完成時，連結資料夾中的參照會自動參照為子資產。 若要檢視引用的資產清單，請導覽至 [!DNL InDesign] 資產並關閉 [邊欄](/help/sites-authoring/basic-handling.md#rail-selector).
-
-## [!DNL Adobe Photoshop]：新增數位資產作為參考 {#refps}
-
-1. 使用 [!DNL Experience Manager] 要存取的案頭應用程式 [!DNL Experience Manager Assets]. 下載並顯示本機檔案系統上的資產。 使用 [!UICONTROL 置入已連結] 中的功能 [!DNL Adobe Photoshop]. 另請參閱 [將資產放入案頭應用程式](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#place-assets-in-native-documents).
-
-1. 儲存於 [!DNL Photoshop] 檔案到已掛載的磁碟機或 [上傳](/help/assets/manage-assets.md#uploading-assets) 至 [!DNL Experience Manager] 存放庫。
-1. 工作流程完成後，參考至現有的 [!DNL Experience Manager] 資產會列在資產詳細資訊頁面中。
-
-   若要檢視參照的資產，請關閉 [邊欄](/help/sites-authoring/basic-handling.md#rail-selector) （在資產詳細資訊頁面中）。
-
-1. 引用的資產也包含從中引用它們的資產清單。 若要檢視參照的資產清單，請導覽至資產詳細資訊頁面並關閉 [邊欄](/help/sites-authoring/basic-handling.md#rail-selector).
+引用的资产已存在于 [!DNL Experience Manager Assets]. 您可以通过以下方式提取子资源 [配置InDesign Server](indesign.md). 中的嵌入式资产 [!DNL InDesign] 文件将提取为子资产。
 
 >[!NOTE]
 >
->複合資產中的資產也可以根據其檔案ID和例項ID進行引用。 此功能適用於 [!DNL Adobe Illustrator] 和 [!DNL Adobe Photoshop] 僅限版本。 對於其他人，會根據主要複合資產中連結資產的相對路徑進行引用，如同在舊版中做的那樣 [!DNL Experience Manager].
+>如果 [!DNL InDesign Server] 被代理了， [!DNL InDesign] 文件的XMP元数据中嵌入了其预览。 在这种情况下，不会明确要求提取缩略图。 但是，如果 [!DNL InDesign Server] 未进行代理，必须显式提取缩略图 [!DNL InDesign] 文件。
 
-## 建立子資產 {#generate-subassets}
+上传INDD文件时，将通过查询具有以下特征的资产来获取引用： `xmpMM:InstanceID` 和 `xmpMM:DocumentID` 属性。
 
-對於支援的多頁格式資產 — PDF檔案、AI檔案、 [!DNL Microsoft PowerPoint] 和 [!DNL Apple Keynote] 檔案，和 [!DNL Adobe InDesign] 檔案 —  [!DNL Experience Manager] 可以產生與原始資產的每個個別頁面相對應的子資產。 這些子資產連結至 *父級* 資產並加速多頁檢視。 至於所有其他用途，會將子資產視為中的一般資產 [!DNL Experience Manager].
+### 通过拖动资产创建引用 {#create-references-by-dragging-aem-assets}
 
-子資產產生功能預設為停用。 若要啟用子資產產生功能，請遵循下列步驟：
+此过程类似于 [在Adobe Illustrator中添加数字资源作为引用](#refai).
 
-1. 登入 [!DNL Experience Manager] 作為管理員。 存取 **[!UICONTROL 工具]** > **[!UICONTROL 工作流程]** > **[!UICONTROL 模型]**.
-1. 選取 **[!UICONTROL DAM更新資產]** 工作流程與點按 **[!UICONTROL 編輯]**.
-1. 按一下 **[!UICONTROL 切換側面板]** 並找到 **[!UICONTROL 建立子資產]** 步驟。 將步驟新增至工作流程。 单击&#x200B;**[!UICONTROL 同步]**。
+### 通过导出ZIP文件创建对资产的引用 {#create-references-to-aem-assets-by-exporting-a-zip-file}
 
-若要產生子資產，請執行下列任一項作業：
+1. 执行以下步骤： [创建工作流模型](/help/sites-developing/workflows-models.md) 以创建新工作流。
+1. 使用 [包功能](https://helpx.adobe.com/indesign/how-to/indesign-package-files-for-handoff.html) 之 [!DNL Adobe InDesign] 以导出文档。 [!DNL Adobe InDesign] 可将文档和链接的资产导出为资源包。 在这种情况下，导出的文件夹包含 `Links` 文件夹中包含子资产 [!DNL InDesign] 文件。 此 `Links` 文件夹与INDD文件位于同一文件夹中。
+1. 创建ZIP文件并将其上传到 [!DNL Experience Manager] 存储库。
+1. 启动 `Unarchiver` 工作流。
+1. 工作流完成后，链接文件夹中的引用将自动引用为子资产。 要查看引用的资源列表，请导航到 [!DNL InDesign] 资产并关闭 [边栏](/help/sites-authoring/basic-handling.md#rail-selector).
 
-* 新資產： [!UICONTROL DAM更新資產] 工作流程會在任何上傳至的新資產上執行 [!DNL Experience Manager]. 系統會自動為新多頁資產產生子資產。
-* 現有的多頁資產：手動執行 [!UICONTROL DAM更新資產] 工作流程會遵循下列任一步驟：
+## [!DNL Adobe Photoshop]：添加数字资产作为引用 {#refps}
 
-   * 選取資產並按一下 [!UICONTROL 時間表] 以開啟左側面板。 或者，使用鍵盤快速鍵 `alt + 3`. 按一下 [!UICONTROL 開始工作流程]，選取 [!UICONTROL DAM更新資產]，按一下 [!UICONTROL 開始]，然後按一下 [!UICONTROL 繼續].
-   * 選取資產並按一下 [!UICONTROL 建立] > [!UICONTROL 工作流程] （從工具列）。 在快顯對話方塊中，選取 [!UICONTROL DAM更新資產] 工作流程，按一下 [!UICONTROL 開始]，然後按一下 [!UICONTROL 繼續].
+1. 使用 [!DNL Experience Manager] 要访问的桌面应用程序 [!DNL Experience Manager Assets]. 下载并显示本地文件系统上的资产。 使用 [!UICONTROL 置入已链接] 中的功能 [!DNL Adobe Photoshop]. 参见 [将资产放入桌面应用程序](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#place-assets-in-native-documents).
 
-特別是對於Microsoft Word檔案，請執行 **[!UICONTROL DAM剖析Word檔案]** 工作流程。 它會產生 `cq:Page` Microsoft Word檔案內容中的元件。 從檔案擷取的影像會參照自 `cq:Page` 元件。 即使停用子資產產生，也會擷取這些影像。
+1. 保存位置 [!DNL Photoshop] 文件到已装入的驱动器或 [上传](/help/assets/manage-assets.md#uploading-assets) 到 [!DNL Experience Manager] 存储库。
+1. 工作流完成后，对现有 [!DNL Experience Manager] 资产将在“资产详细信息”页面中列出。
+
+   要查看引用的资产，请关闭 [边栏](/help/sites-authoring/basic-handling.md#rail-selector) 在资源详细信息页面中。
+
+1. 引用的资产还包含从中引用它们的资产的列表。 要查看引用的资产列表，请导航到资产详细信息页面并关闭 [边栏](/help/sites-authoring/basic-handling.md#rail-selector).
 
 >[!NOTE]
 >
->在 [!UICONTROL 建立子資產程式 — 步驟屬性] 在 [!UICONTROL 程式引數]，您可以指定達到以下條件的子資產數量： [!DNL Experience Manager] 會產生。 默认值为 5。若要產生所有子資產，請將此欄位留空。 如果欄位包含負值，則不會產生任何子資產。
+>复合资产中的资产也可以根据其文档ID和实例ID进行引用。 此功能可用于 [!DNL Adobe Illustrator] 和 [!DNL Adobe Photoshop] 仅限版本。 对于其他人，引用是基于主复合资产中关联资产的相对路径，就像在早期版本中一样 [!DNL Experience Manager].
 
-## 檢視子資產 {#viewing-subassets}
+## 创建子资产 {#generate-subassets}
 
-只有在產生子資產且可用於所選的多頁資產時，才會顯示子資產。 若要檢視產生的子資產，請開啟多頁資產。 在頁面的左上角區域，按一下 ![開啟左側邊欄的選項](assets/do-not-localize/aem_leftrail_contentonly.png) 並按一下 **[!UICONTROL 子資產]** 從清單中。 當您選取 **[!UICONTROL 子資產]** 從清單中。 或者，使用鍵盤快速鍵 `alt + 5`.
+对于支持的多页格式资源 — PDF文件、AI文件、 [!DNL Microsoft PowerPoint] 和 [!DNL Apple Keynote] 文件，和 [!DNL Adobe InDesign] 文件 —  [!DNL Experience Manager] 可以生成与原始资产的每个单独页面对应的子资产。 这些子资产链接到 *父级* 资源并促进多页面查看。 对于所有其他目的，子资产在中被视为普通资产。 [!DNL Experience Manager].
 
-![檢視多頁資產的子資產](assets/view_subassets_simulation.gif)
+默认情况下，子资源生成处于禁用状态。 要启用子资产生成，请执行以下步骤：
 
-## 檢視多頁檔案的頁面 {#view-pages-of-a-multi-page-file}
+1. 登录 [!DNL Experience Manager] 作为管理员。 访问 **[!UICONTROL 工具]** > **[!UICONTROL 工作流]** > **[!UICONTROL 模型]**.
+1. 选择 **[!UICONTROL DAM更新资产]** 工作流并单击 **[!UICONTROL 编辑]**.
+1. 单击 **[!UICONTROL 切换侧面板]** 并找到 **[!UICONTROL 创建子资产]** 步骤。 将步骤添加到工作流。 单击&#x200B;**[!UICONTROL 同步]**。
 
-您可以使用以下的「頁面檢視器」功能來檢視多頁檔案，例如PDF、INDD、PPT、PPTX和AI檔案： [!DNL Experience Manager Assets]. 開啟多頁資產並按一下 **[!UICONTROL 檢視頁面]** 從頁面的左上角。 開啟的頁面檢視器會顯示資產的頁面，以及用來瀏覽和縮放每個頁面的控制項。
+要生成子资产，请执行下列操作之一：
 
-![檢視和檢視多頁資產的頁面](assets/view_multipage_asset_fmr.gif)
+* 新资产： [!UICONTROL DAM更新资产] 工作流会在上传到的任何新资产上执行 [!DNL Experience Manager]. 为新的多页面资源自动生成子资源。
+* 现有的多页面资源：手动执行 [!UICONTROL DAM更新资产] 工作流会遵循以下任一步骤：
 
-對象 [!DNL InDesign]，您可以使用以下專案擷取頁面： [!DNL InDesign Server]. 如果頁面的預覽是在以下期間儲存： [!DNL InDesign] 建立檔案，然後 [!DNL InDesign Server] 不須用於頁面擷取。
+   * 选择资源并单击 [!UICONTROL 时间线] 以打开左侧面板。 或者，使用键盘快捷键 `alt + 3`. 单击 [!UICONTROL 启动工作流]，选择 [!UICONTROL DAM更新资产]，单击 [!UICONTROL 开始]，然后单击 [!UICONTROL 继续].
+   * 选择资源并单击 [!UICONTROL 创建] > [!UICONTROL 工作流] 工具栏中。 从弹出对话框中，选择 [!UICONTROL DAM更新资产] 工作流，单击 [!UICONTROL 开始]，然后单击 [!UICONTROL 继续].
 
-工具列、左側邊欄及「頁面檢視器」控制項中有以下選項：
+对于Microsoft Word文档，请执行 **[!UICONTROL DAM解析Word文档]** 工作流。 它会生成 `cq:Page` Microsoft Word文档内容中的组件。 从文档提取的图像将被引用 `cq:Page` 组件。 即使禁用子资产生成，也会提取这些图像。
 
-* **[!UICONTROL 案頭動作]** 若要開啟或顯示特定子資產，請使用 [!DNL Experience Manager] 案頭應用程式。 瞭解如何 [設定案頭動作](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#desktopactions-v2) 如果您使用 [!DNL Experience Manager] 案頭應用程式。
+>[!NOTE]
+>
+>在 [!UICONTROL 创建子资产进程 — 步骤属性] 在 [!UICONTROL 进程参数]，您可以指定满足以下条件的子资产数量： [!DNL Experience Manager] 生成。 默认值为 5。要生成所有子资产，请将字段留空。 如果字段为负，则不会生成任何子资产。
 
-* **[!UICONTROL 屬性]** 選項會開啟 [!UICONTROL 屬性] 特定子資產的頁面。
+## 查看子资产 {#viewing-subassets}
 
-* **[!UICONTROL 註釋]** 選項可讓您為特定子資產加上註釋。 您用於個別子資產的註解會在父資產開啟以供檢視時一起收集和顯示。
+仅当生成了子资产且可用于所选多页资产时，才会显示子资产。 要查看生成的子资产，请打开多页资产。 在页面的左上角区域，单击 ![打开左边栏的选项](assets/do-not-localize/aem_leftrail_contentonly.png) 并单击 **[!UICONTROL 子资产]** 从名单上。 当您选择时 **[!UICONTROL 子资产]** 从名单上。 或者，使用键盘快捷键 `alt + 5`.
 
-* **[!UICONTROL 頁面概觀]** 選項會同時顯示所有子資產。
+![查看多页资源的子资源](assets/view_subassets_simulation.gif)
 
-* **[!UICONTROL 時間表]** 選項（在按一下後從左側邊欄選取） ![開啟左側邊欄的選項](assets/do-not-localize/aem_leftrail_contentonly.png) 顯示檔案的活動資料流。
+## 查看多页文件的页面 {#view-pages-of-a-multi-page-file}
 
-## 最佳作法和限制 {#best-practice-limitation-tips}
+您可以使用的“页面查看器”功能查看多页文件，如PDF、INDD、PPT、PPTX和AI文件 [!DNL Experience Manager Assets]. 打开多页资源并单击 **[!UICONTROL 查看页面]** 从页面的左上角。 打开的页面查看器会显示资产的页面，以及用于在每个页面中浏览和缩放的控件。
 
-* 在任何專案上，產生子資產可能會耗費大量資源 [!DNL Experience Manager] 部署。 如果您在上傳複雜資產時產生子資產，請在「DAM更新資產」工作流程中新增步驟。 如果您要隨選產生子資產，請建立個別的工作流程以產生子資產。 專用工作流程可讓您略過DAM更新資產工作流程中的其他步驟，並儲存運算資源。
+![查看并查看多页资源的页面](assets/view_multipage_asset_fmr.gif)
+
+对象 [!DNL InDesign]，您可以使用提取页面 [!DNL InDesign Server]. 如果页面预览是在以下期间保存的： [!DNL InDesign] 创建文件，然后 [!DNL InDesign Server] 不是页面提取所必需的。
+
+工具栏、左边栏和页面查看器控件中提供了以下选项：
+
+* **[!UICONTROL 桌面操作]** 要打开或显示特定子资产，请使用 [!DNL Experience Manager] 桌面应用程序。 了解如何 [配置桌面操作](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#desktopactions-v2) 如果您使用 [!DNL Experience Manager] 桌面应用程序。
+
+* **[!UICONTROL 属性]** 选项打开 [!UICONTROL 属性] 页面。
+
+* **[!UICONTROL 批注]** 选项允许您为特定子资源添加注释。 在打开父资产进行查看时，将收集并显示您在各个子资产上使用的注释。
+
+* **[!UICONTROL 页面概述]** 选项同时显示所有子资产。
+
+* **[!UICONTROL 时间线]** 选项（单击后左边栏中的） ![打开左边栏的选项](assets/do-not-localize/aem_leftrail_contentonly.png) 显示文件的活动流。
+
+## 最佳实践和限制 {#best-practice-limitation-tips}
+
+* 在任何情况下，子资产生成都可能会占用大量资源 [!DNL Experience Manager] 部署。 如果您在上传复杂资产时生成子资产，请在DAM更新资产工作流中添加该步骤。 如果要按需生成子资产，请创建单独的工作流以生成子资产。 专用工作流允许您跳过DAM更新资产工作流中的其他步骤并保存计算资源。
 
 >[!MORELIKETHIS]
 >
->* [使用Adobe Experience Manager案頭應用程式](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html)
->* [在Adobe Experience Manager中設定案頭動作](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#desktopactions-v2)
->* [在Adobe Photoshop中建立連結智慧物件](https://helpx.adobe.com/photoshop/using/create-smart-objects.html#create-linked-smart-objects)
->* [在Adobe InDesign中置入圖形](https://helpx.adobe.com/indesign/using/placing-graphics.html)
+>* [使用Adobe Experience Manager桌面应用程序](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html)
+>* [在Adobe Experience Manager中配置桌面操作](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#desktopactions-v2)
+>* [在Adobe Photoshop中创建链接智能对象](https://helpx.adobe.com/photoshop/using/create-smart-objects.html#create-linked-smart-objects)
+>* [在Adobe InDesign中置入图形](https://helpx.adobe.com/indesign/using/placing-graphics.html)
 

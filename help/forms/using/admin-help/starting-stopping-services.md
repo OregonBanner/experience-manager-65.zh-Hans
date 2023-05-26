@@ -1,7 +1,7 @@
 ---
-title: 啟動和停止服務
+title: 启动和停止服务
 seo-title: Starting and stopping services
-description: 瞭解如何啟動和停止與AEM Forms模組、應用程式伺服器和資料庫關聯的服務。
+description: 了解如何启动和停止与AEM Forms模块以及应用程序服务器和数据库关联的服务。
 seo-description: Learn how to start and stop services associated with AEM Forms modules and the application server and database.
 uuid: 8c831cb2-4165-4118-8a09-764cec4e5e05
 contentOwner: admin
@@ -17,35 +17,35 @@ ht-degree: 0%
 
 ---
 
-# 啟動和停止服務 {#starting-and-stopping-services}
+# 启动和停止服务 {#starting-and-stopping-services}
 
-AEM表單中有兩種型別的服務：
+AEM表单中包含两种类型的服务：
 
-* 控制AEM表單應用程式伺服器和資料庫的服務。
-* 控制AEM表單模組的服務
+* 控制AEM表单应用程序服务器和数据库的服务。
+* 控制AEM表单模块的服务
 
-## 啟動或停止與AEM表單模組關聯的服務 {#start-or-stop-the-services-associated-with-aem-forms-modules}
+## 启动或停止与AEM表单模块关联的服务 {#start-or-stop-the-services-associated-with-aem-forms-modules}
 
-AEM表單模組(例如Forms、Rights Management、輸出)可作為服務運作。 有時您可能需要停止或啟動這些AEM表單模組的服務。 例如，在變更服務的設定後，您必須停止然後重新啟動AEM表單服務。
+AEM表单模块(例如Forms、Rights Management、输出)作为服务运行。 有时，您可能需要停止或启动这些AEM表单模块的服务。 例如，在更改服务的设置后，必须停止AEM表单服务，然后重新启动该服务。
 
-1. 在管理主控台中按一下 **服務** > **應用程式和服務** > **服務管理**.
-1. 在「服務管理」頁面上，選取要停止或啟動之服務旁的核取方塊，然後按一下停止或啟動。
+1. 在管理控制台中，单击 **服务** > **应用程序和服务** > **服务管理**.
+1. 在“服务管理”页上，选中要停止或启动的服务旁边的复选框，然后单击停止或启动。
 
-## 啟動或停止應用程式伺服器和資料庫的服務 {#start-or-stop-services-for-the-application-server-and-database}
+## 启动或停止应用程序服务器和数据库的服务 {#start-or-stop-services-for-the-application-server-and-database}
 
-AEM表單的完整實作包括應用程式伺服器和資料庫服務：
+AEM Forms的完整实施包括应用程序服务器和数据库服务：
 
-* *`[application server]`* 適用於AEM表單
-* *`[database]`* 適用於AEM表單
+* *`[application server]`* 适用于AEM表单的
+* *`[database]`* 适用于AEM表单的
 
-在Windows上，這些服務可透過 **管理工具** > **服務面板**. 例如，如果您使用turnkey方法在JBoss上安裝AEM表單，則您的系統上可使用下列服務：
+在Windows上，这些服务可通过 **管理工具** > **“服务”面板**. 例如，如果您使用turnkey方法在JBoss上安装了AEM表单，则您的系统上可以使用以下服务：
 
-* 適用於Adobe Experience Manager表單的JBoss
-* 適用於Adobe Experience Manager的MySQL表單
+* Adobe Experience Manager表单的JBoss
+* 适用于Adobe Experience Manager的MySQL表单
 
-從「服務」面板的清單中選取這些服務，然後按一下面板上的適當動作按鈕，即可啟動或停止這些服務。
+通过从“服务”面板的列表中选择这些服务，然后单击面板上的相应操作按钮，启动或停止这些服务。
 
-在UNIX®或Linux上，從命令列輸入下列文字，其中 *`[service name]`* 是您正在驗證的服務名稱：
+在UNIX®或Linux上，从命令行输入以下文本，其中 *`[service name]`* 是正在验证的服务的名称：
 
 ```java
      ps -A | grep [service name]

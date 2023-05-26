@@ -1,7 +1,7 @@
 ---
-title: 啟用對傳統UI的存取
+title: 启用对经典UI的访问
 seo-title: Enabling Access to Classic UI
-description: 瞭解如何啟用對傳統UI的存取。
+description: 了解如何启用对经典UI的访问。
 seo-description: Lear how to enable access to Classic UI.
 uuid: 08698023-6e0d-4160-8c4d-d282e74182bc
 contentOwner: Chris Bohnert
@@ -17,13 +17,13 @@ ht-degree: 1%
 
 ---
 
-# 啟用對傳統UI的存取{#enabling-access-to-classic-ui}
+# 启用对经典UI的访问{#enabling-access-to-classic-ui}
 
-由於觸控式功能在AEM的許多區域已達到和傳統UI同等的地位，而且實際上已超過傳統UI，現在預設會停用透過觸控式介面存取傳統介面。 下列頁面說明如何在必要時重新啟用此存取權。
+由于触屏功能在AEM的许多区域中已达到与经典UI相当的水平，并且实际上已超过经典UI，因此现在默认禁用通过触屏界面访问经典界面。 以下页面说明了如何在必要时重新启用此访问权限。
 
 * [编辑器](/help/sites-administering/enable-classic-ui-editor.md)
 * [Admin Console](/help/sites-administering/enable-classic-ui-admin.md)
 
 >[!NOTE]
 >
->如需與傳統UI功能對等狀態的詳細資訊，請參閱 [Touch UI功能比較](/help/release-notes/touch-ui-features-status.md) 檔案。
+>有关与经典UI的功能对等状态的详细信息，请参阅 [触屏UI对等功能](/help/release-notes/touch-ui-features-status.md) 文档。

@@ -1,7 +1,7 @@
 ---
-title: 升級後檢查與疑難排解
+title: 升级后检查和故障排除
 seo-title: Post Upgrade Checks and Troubleshooting
-description: 瞭解如何疑難排解升級後可能出現的問題。
+description: 了解如何对升级后可能显示的问题进行故障排除。
 seo-description: Learn how to troubleshoot issues that might appear after an upgrade.
 uuid: 3f525f2c-8d25-4bb8-a57e-3adf667edde8
 contentOwner: sarchiz
@@ -19,188 +19,188 @@ ht-degree: 0%
 
 ---
 
-# 升級後檢查與疑難排解{#post-upgrade-checks-and-troubleshooting}
+# 升级后检查和故障排除{#post-upgrade-checks-and-troubleshooting}
 
-## 升級後檢查 {#post-upgrade-checks}
+## 升级后检查 {#post-upgrade-checks}
 
-遵循 [就地升級](/help/sites-deploying/in-place-upgrade.md) 應執行下列活動以完成升級。 假設AEM已使用6.5 jar啟動，且已部署升級的程式碼基底。
+遵循 [就地升级](/help/sites-deploying/in-place-upgrade.md) 应执行以下活动以完成升级。 假定已使用6.5 jar启动了AEM，并且已部署升级的代码库。
 
-* [驗證升級成功的記錄](#main-pars-header-290365562)
+* [验证升级成功日志](#main-pars-header-290365562)
 
-* [驗證OSGi組合](#main-pars-header-1637350649)
+* [验证OSGi包](#main-pars-header-1637350649)
 
-* [驗證Oak版本](#main-pars-header-1293049773)
+* [验证Oak版本](#main-pars-header-1293049773)
 
-* [Inspect PreUpgradeBackup資料夾](#main-pars-header-988995987)
+* [Inspect PreUpgradeBackup文件夹](#main-pars-header-988995987)
 
-* [頁面初始驗證](#main-pars-header-20827371)
-* [套用AEM Service Pack](#main-pars-header-215142387)
+* [页面初始验证](#main-pars-header-20827371)
+* [应用AEM Service Pack](#main-pars-header-215142387)
 
-* [移轉AEM功能](#main-pars-header-1434457709)
+* [迁移AEM功能](#main-pars-header-1434457709)
 
-* [驗證排程的維護設定](#main-pars-header-1552730183)
+* [验证计划的维护配置](#main-pars-header-1552730183)
 
-* [啟用復寫代理](#main-pars-header-823243751)
+* [启用复制代理](#main-pars-header-823243751)
 
-* [啟用自訂排程工作](#main-pars-header-244535083)
+* [启用自定义计划作业](#main-pars-header-244535083)
 
-* [執行測試計畫](#main-pars-header-1167972233)
+* [执行测试计划](#main-pars-header-1167972233)
 
-### 驗證升級成功的記錄 {#verify-logs-for-upgrade-success}
+### 验证升级成功的日志 {#verify-logs-for-upgrade-success}
 
 **upgrade.log**
 
-過去，檢查執行個體的升級後狀態需要仔細檢查各種記錄檔、存放庫部分和啟動板。 產生升級後報告有助於在升級上線前偵測到瑕疵升級。
+过去，检查实例的升级后状态需要仔细检查各种日志文件、部分存储库和启动板。 生成升级后报告有助于在升级前检测有缺陷的升级。
 
-此功能的主要目的是減少手動解譯或跨多個端點複雜剖析邏輯的需求，這些是確保升級成功所必需的。 此解決方案旨在為外部自動化系統提供明確資訊，以便在更新成功或識別失敗時做出反應。
+此功能的主要用途是，减少鉴定升级成功所需的手动解释或跨多个端点的复杂解析逻辑的需要。 该解决方案旨在为外部自动化系统提供明确的信息，以对更新的成功或识别的失败作出反应。
 
-更具體地說，這可確保：
+更具体地说，它确保：
 
-* 升級架構偵測到的升級故障可集中於單一升級報告中；
-* 升級報告包含有關必要手動介入的指標。
+* 升级框架检测到的升级故障可以集中在一个升级报告中；
+* 升级报告包含有关必要手动干预的指标。
 
-為因應此情況，在中產生記錄的方式已有所變更。 `upgrade.log` 檔案。
+为了适应这种情况，在中生成日志的方式已发生更改 `upgrade.log` 文件。
 
-以下是升級期間未顯示任何錯誤的範例報告：
+以下是升级期间未显示任何错误的示例报表：
 
 ![1487887443006](assets/1487887443006.png)
 
-以下是範例報告，其中顯示升級過程中未安裝的套件組合：
+以下是一个示例报告，其中显示了在升级过程中未安装的捆绑包：
 
 ![1487887532730](assets/1487887532730.png)
 
 **error.log**
 
-在使用目標版本jar啟動AEM期間和之後，應該仔細檢閱error.log。 應檢閱任何警告或錯誤。 一般來說，最好在記錄的開頭尋找問題。 稍後在記錄檔中發生的錯誤，實際上可能是檔案中較早呼叫的根源的副作用。 如果發生重複錯誤和警告，請參閱以下內容 [分析升級相關問題](/help/sites-deploying/post-upgrade-checks-and-troubleshooting.md#analyzing-issues-with-the-upgrade).
+在使用目标版本jar启动AEM期间和之后，应该仔细检查error.log。 应审查任何警告或错误。 一般来说，最好在日志的开头查找问题。 日志中稍后发生的错误实际上可能是文件早期调用的根本原因的副作用。 如果出现重复错误和警告，请参阅下面的 [分析升级问题](/help/sites-deploying/post-upgrade-checks-and-troubleshooting.md#analyzing-issues-with-the-upgrade).
 
-### 驗證OSGi組合 {#verify-osgi-bundles}
+### 验证OSGi包 {#verify-osgi-bundles}
 
-導覽至OSGi主控台 `/system/console/bundles` 並檢視是否有任何套件組合未啟動。 如果有任何套件組合處於安裝狀態，請參閱 `error.log` 以判斷根問題。
+导航到OSGi控制台 `/system/console/bundles` 并查看是否有任何捆绑包未启动。 如果有任何捆绑包处于安装状态，请查阅 `error.log` 以确定根问题。
 
-### 驗證Oak版本 {#verify-oak-version}
+### 验证Oak版本 {#verify-oak-version}
 
-升級後，您應該會看到Oak版本已更新至 **1.10.2**. 若要驗證Oak版本，請導覽至OSGi主控台，並檢視與Oak套件組合相關聯的版本：Oak Core、Oak Commons、Oak Segment Tar。
+升级后，您应该会看到Oak版本已更新到 **1.10.2**. 要验证Oak版本，请导航到OSGi控制台并查看与Oak捆绑包关联的版本：Oak Core、Oak Commons、Oak Segment Tar。
 
-### Inspect PreUpgradeBackup資料夾 {#inspect-preupgradebackup-folder}
+### Inspect PreUpgradeBackup文件夹 {#inspect-preupgradebackup-folder}
 
-在升級期間，AEM會嘗試備份自訂並將它們儲存在下方 `/var/upgrade/PreUpgradeBackup/<time-stamp-of-upgrade>`. 若要以CRXDE Lite檢視此資料夾，您可能需要 [暫時啟用CRXDE Lite](/help/sites-administering/enabling-crxde-lite.md).
+在升级期间，AEM将尝试备份自定义项并将其存储在下方 `/var/upgrade/PreUpgradeBackup/<time-stamp-of-upgrade>`. 要在CRXDE Lite中查看此文件夹，您可能需要 [临时启用CRXDE Lite](/help/sites-administering/enabling-crxde-lite.md).
 
-具有時間戳記的資料夾應具有名為的屬性 `mergeStatus` 具有值 `COMPLETED`. 此 **待處理** 資料夾應為空白，且 **已覆寫** node會指出哪些節點在升級期間被覆寫。 下的內容 **剩餘專案** 節點表示在升級期間無法安全合併的內容。 如果您的實施相依於任何子節點（且尚未由升級後的程式碼套件安裝），則需要手動合併。
+具有时间戳的文件夹应具有名为的属性 `mergeStatus` 具有值 `COMPLETED`. 此 **待处理** 文件夹应为空，并且 **被覆盖** 节点指示在升级期间被覆盖的节点。 下的内容 **剩余** 节点表示在升级期间无法安全合并的内容。 如果您的实施依赖于任何子节点（并且尚未由升级后的代码包安装），则需要手动合并这些子节点。
 
-如果在預備或生產環境中，請停用此練習後的CRXDE Lite。
+如果在暂存或生产环境中，则禁用此练习后的CRXDE Lite。
 
-### 頁面初始驗證 {#initial-validation-of-pages}
+### 页面初始验证 {#initial-validation-of-pages}
 
-對AEM中的數個頁面執行初始驗證。 如果升級作者環境，請開啟開始頁面和歡迎頁面( `/aem/start.html`， `/libs/cq/core/content/welcome.html`)。 在製作和發佈環境中，會開啟一些應用程式頁面，並進行煙霧測試，確保它們可正確呈現。 如果有任何問題，請參閱 `error.log` 進行疑難排解。
+对AEM中的多个页面执行初始验证。 如果升级创作环境，请打开开始页面和欢迎页面( `/aem/start.html`， `/libs/cq/core/content/welcome.html`)。 在创作和发布环境中，打开几个应用程序页面并进行冒烟测试，以使其正确呈现。 如果有任何问题，请参阅 `error.log` 以进行故障排除。
 
-### 套用AEM Service Pack {#apply-aem-service-packs}
+### 应用AEM Service Pack {#apply-aem-service-packs}
 
-套用任何相關的AEM 6.5 Service Pack （如果已經發行）。
+应用任何相关的AEM 6.5 Service Pack（如果已发布）。
 
-### 移轉AEM功能 {#migrate-aem-features}
+### 迁移AEM功能 {#migrate-aem-features}
 
-升級後，AEM中的幾項功能需要額外的步驟。 這些功能及在AEM 6.5中移轉這些功能的步驟的完整清單可在以下網址找到： [升級程式碼和自訂](/help/sites-deploying/upgrading-code-and-customizations.md) 頁面。
+升级后，AEM中的多项功能需要执行其他步骤。 有关这些功能的完整列表以及在AEM 6.5中迁移这些功能的步骤，请参阅 [升级代码和自定义项](/help/sites-deploying/upgrading-code-and-customizations.md) 页面。
 
-### 驗證排程的維護設定 {#verify-scheduled-maintenance-configurations}
+### 验证计划的维护配置 {#verify-scheduled-maintenance-configurations}
 
-#### 啟用資料存放區垃圾收集 {#enable-data-store-garbage-collection}
+#### 启用数据存储垃圾收集 {#enable-data-store-garbage-collection}
 
-如果使用檔案資料存放區，請確定已啟用資料存放區垃圾收集工作，並將其新增至每週維護清單。 說明已概述 [此處](/help/sites-administering/data-store-garbage-collection.md).
+如果使用文件数据存储，请确保已启用数据存储垃圾收集任务并将其添加到每周维护列表。 说明已概述 [此处](/help/sites-administering/data-store-garbage-collection.md).
 
 >[!NOTE]
 >
->S3自訂資料存放區安裝或使用共用資料存放區時，不建議使用此選項。
+>对于S3自定义数据存储安装或使用共享数据存储时，不建议这样做。
 
-#### 啟用線上修訂清除 {#enable-online-revision-cleanup}
+#### 启用联机修订版清理 {#enable-online-revision-cleanup}
 
-如果使用MongoMK或新的TarMK區段格式，請確定已啟用「修訂清除」任務並將其新增到「每日維護」清單中。 說明概述 [此處](/help/sites-deploying/revision-cleanup.md).
+如果使用MongoMK或新的TarMK区段格式，请确保已启用“修订版清理”任务并将其添加到“每日维护”列表中。 说明概述 [此处](/help/sites-deploying/revision-cleanup.md).
 
-### 執行測試計畫 {#execute-test-plan}
+### 执行测试计划 {#execute-test-plan}
 
-依照定義執行詳細的測試計畫 [升級程式碼和自訂](/help/sites-deploying/upgrading-code-and-customizations.md) 在 **測試程式** 區段。
+根据定义执行详细的测试计划 [升级代码和自定义项](/help/sites-deploying/upgrading-code-and-customizations.md) 在 **测试过程** 部分。
 
-### 啟用復寫代理 {#enable-replication-agents}
+### 启用复制代理 {#enable-replication-agents}
 
-發佈環境完成升級和驗證後，請在製作環境中啟用復寫代理。 確認代理程式能夠連線至個別的發佈執行個體。 參閱U [升級程式](/help/sites-deploying/upgrade-procedure.md) 以取得事件順序的詳細資訊。
+发布环境完全升级并验证后，在创作环境中启用复制代理。 验证代理是否能够连接到各自的发布实例。 参见U [升级过程](/help/sites-deploying/upgrade-procedure.md) 以了解有关事件顺序的更多详细信息。
 
-### 啟用自訂排程工作 {#enable-custom-scheduled-jobs}
+### 启用自定义计划作业 {#enable-custom-scheduled-jobs}
 
-此時可以啟用程式碼庫中的任何排程工作。
+此时可以启用任何作为代码库一部分的计划作业。
 
-## 分析升級相關問題 {#analyzing-issues-with-upgrade}
+## 分析升级问题 {#analyzing-issues-with-upgrade}
 
-本節包含升級到AEM 6.3的過程中可能會遇到的一些問題案例。
+此部分包含升级到AEM 6.3的过程中可能会遇到的一些问题场景。
 
-這些案例應該有助於追蹤與升級相關問題的根本原因，並且應該有助於識別專案或產品特定問題。
+这些场景应该有助于找到与升级相关问题的根本原因，并且应该有助于识别项目或产品特定问题。
 
-### 存放庫移轉失敗  {#repository-migration-failing-}
+### 存储库迁移失败  {#repository-migration-failing-}
 
-從CRX2到Oak的資料移轉應該適用於任何以根據CQ 5.4的來源例項開始的情境。請務必確實按照本檔案中的升級指示進行，包括準備 `repository.xml`，確認沒有透過JAAS啟動自訂驗證器，且已在開始移轉前檢查執行個體是否不一致。
+对于以基于CQ 5.4的源实例开始的任何场景，从CRX2到Oak的数据迁移应该是可行的。确保完全按照本文档中的升级说明进行操作，包括准备 `repository.xml`，确保在开始迁移之前，没有通过JAAS启动自定义身份验证器，并且已检查实例是否不一致。
 
-如果移轉仍然失敗，您可以透過檢查 `upgrade.log`. 如果問題尚未知，請回報客戶支援。
+如果迁移仍然失败，您可以通过检查 `upgrade.log`. 如果问题尚未知，请向客户支持部门报告。
 
-### 升級未執行 {#the-upgrade-did-not-run}
+### 升级未运行 {#the-upgrade-did-not-run}
 
-在開始準備步驟之前，請務必執行 **source** 先使用java -jar aem-quickstart.jar命令執行執行個體。 這是必要的，才能確保quickstart.properties檔案已正確產生。 如果遺失，升級將無法運作。 或者，您可以檢視下方，檢查檔案是否存在 `crx-quickstart/conf` 在來源執行個體的安裝資料夾中。 此外，啟動AEM以開始升級時，必須使用java -jar aem-quickstart.jar命令執行。 從啟動指令碼啟動時，AEM不會以升級模式啟動。
+在开始准备步骤之前，请确保运行 **源** 首先使用java -jar aem-quickstart.jar命令执行实例。 这是确保正确生成quickstart.properties文件所必需的。 如果缺少该参数，则升级将不起作用。 或者，您可以通过查看以下内容来检查文件是否存在 `crx-quickstart/conf` 在源实例的安装文件夹中。 此外，在启动AEM以开始升级时，必须使用java -jar aem-quickstart.jar命令执行该升级。 从启动脚本启动时，在升级模式下不会启动AEM。
 
-### 套件和套件組合無法更新  {#packages-and-bundles-fail-to-update-}
+### 包和捆绑包无法更新  {#packages-and-bundles-fail-to-update-}
 
-如果在升級期間無法安裝套件，其中包含的套件組合也不會更新。 這類問題通常是由資料存放區設定錯誤所造成。 它們也會顯示為 **錯誤** 和 **警告** error.log中的訊息。 由於多數情況下預設登入可能無法運作，因此您可以直接使用CRXDE來檢查並尋找設定問題。
+如果在升级期间无法安装包，则不会更新包中包含的包。 此类问题通常是由数据存储错误配置引起的。 它们还将显示为 **错误** 和 **警告** error.log中的消息。 由于在大多数情况下，默认登录可能无法工作，因此您可以直接使用CRXDE来检查和查找配置问题。
 
-### 部分AEM套件組合未切換至作用中狀態 {#some-aem-bundles-are-not-switching-to-the-active-state}
+### 某些AEM捆绑包未切换到活动状态 {#some-aem-bundles-are-not-switching-to-the-active-state}
 
-如果套件組合未啟動，您應該檢查是否有任何未滿足的相依性。
+如果捆绑包未启动，则应检查是否存在任何未满足的依赖关系。
 
-如果出現此問題，但此問題的基礎是失敗的套件安裝，導致套件組合無法升級，則視為與新版本不相容。 如需疑難排解此問題的詳細資訊，請參閱 **套件和套件組合無法更新** 以上。
+如果存在此问题，但此问题基于失败的软件包安装，从而导致捆绑包无法升级，则它们将被视为与新版本不兼容。 有关如何对此进行故障排除的更多信息，请参阅 **包和捆绑包无法更新** 上面。
 
-此外，也建議將全新AEM 6.5執行個體的套件組合清單與升級後的套件組合清單進行比較，以偵測未升級的套件組合。 這將提供更密切範圍來搜尋以下專案： `error.log`.
+此外，还建议将新的AEM 6.5实例的捆绑包列表与已升级的实例进行比较，以检测未升级的捆绑包。 这将提供一个更小的范围，让您了解在 `error.log`.
 
-### 自訂套件組合未切換至作用中狀態 {#custom-bundles-not-switching-to-the-active-state}
+### 自定义捆绑包未切换到活动状态 {#custom-bundles-not-switching-to-the-active-state}
 
-如果您的自訂套件組合未切換至使用中狀態，很可能是因為有程式碼未匯入變更API。 這通常會導致不滿意的相依性。
+如果您的自定义捆绑包未切换到活动状态，则很可能是因为存在未导入更改API的代码。 这通常会导致依赖关系得不到满足。
 
-移除的API應在先前的其中一個版本中標籤為已過時。 您可以在此淘汰通知中找到直接移轉程式碼的相關指示。 Adobe旨在儘可能進行語意版本設定，以便版本可指出重大變更。
+以前的一个版本应将已删除的API标记为已弃用。 您可以在此弃用通知中找到有关直接迁移代码的说明。 Adobe旨在尽可能进行语义版本控制，以便版本能够指示重大更改。
 
-另外，最好檢查造成問題的變更是否絕對必要，如果不是，則加以回覆。 此外，在嚴格的語意版本設定後，檢查套件匯出的版本增加是否超過必要。
+另外，最好检查导致问题的更改是否是绝对必要的，如果不是，则恢复它。 此外，在严格的语义版本控制之后，检查资源包导出的版本增加是否超过需要。
 
-### 運作不良的平台UI {#malfunctioning-platform-ui}
+### 平台UI出现故障 {#malfunctioning-platform-ui}
 
-若某些UI功能在升級後無法正常運作，您應該先檢查介面的自訂覆蓋圖。 有些結構可能已變更，覆蓋可能需要更新或過時。
+如果在升级后某些UI功能无法正常工作，则应首先检查界面的自定义叠加。 某些结构可能已更改，并且叠加可能需要更新或过时。
 
-接下來，請檢查是否有任何Javascript錯誤，可以向下追蹤至連結至使用者端程式庫的自訂新增擴充功能。 這同樣適用於可能造成AEM版面問題的自訂CSS。
+接下来，检查是否存在任何可以向下跟踪到已链接到客户端库的自定义添加扩展的Javascript错误。 这同样适用于可能导致AEM布局问题的自定义CSS。
 
-最後，檢查Javascript可能無法處理的設定錯誤。 不當停用擴充功能時通常會發生這種情況。
+最后，检查Javascript可能无法处理的错误配置。 不正确取消激活的扩展通常会出现这种情况。
 
-### 故障自訂元件、範本或UI擴充功能 {#malfunctioning-custom-components-templates-or-ui-extensions}
+### 自定义组件、模板或UI扩展出现故障 {#malfunctioning-custom-components-templates-or-ui-extensions}
 
-在大多數情況下，這些問題的根本原因與未啟動的套件組合或套件未安裝的套件相同，只是第一次使用元件時問題開始發生。
+在大多数情况下，这些问题的根本原因与未启动的捆绑包或未安装的包相同，只是首次使用组件时问题开始发生。
 
-處理錯誤自訂程式碼的方法是先執行煙霧測試，以找出原因。 找到後，請檢視下列建議 [連結] 章節，以瞭解修正方法。
+处理错误自定义代码的方法是首先执行烟雾测试，以确定原因。 找到后，请查看以下推荐 [链接] 部分以了解修复方法。
 
-### /etc下缺少自訂 {#missing-customizations-under-etc}
+### /etc下缺少自定义项 {#missing-customizations-under-etc}
 
-`/apps` 和 `/libs` 已順利由升級處理，但變更位於 `/etc` 可能需要從手動還原 `/var/upgrade/PreUpgradeBackup` 升級之後。 請務必檢查此位置，找出任何需要手動合併的內容。
+`/apps` 和 `/libs` 升级处理得当，但更改位于 `/etc` 可能需要从手动恢复 `/var/upgrade/PreUpgradeBackup` 升级后。 确保检查此位置是否有任何需要手动合并的内容。
 
-### 正在分析error.log和upgrade.log {#analyzing-the-error.log-and-upgrade.log}
+### 分析error.log和upgrade.log {#analyzing-the-error.log-and-upgrade.log}
 
-在大多數情況下，需要查閱記錄檔中的錯誤，以找出問題的原因。 不過，升級時也需要監控相依性問題，因為舊套件組合可能未正確升級。
+在大多数情况下，需要查阅日志中的错误信息，以找出问题的原因。 但是，在升级时，还需要监测依赖项问题，因为旧捆绑包可能无法正确升级。
 
-最佳方法是移除error.log，移除所有預期與您面臨的問題無關的訊息。 您可以透過grep等工具使用下列工具執行此操作：
+最好的方法是删除error.log ，方法是删除预期与您面临的问题无关的所有消息。 您可以使用以下工具通过grep等工具执行此操作：
 
 ```shell
 grep -v UnrelatedErrorString
 ```
 
-有些錯誤訊息可能不會立即明確。 在此情況下，檢視發生錯誤的前後關聯也有助於瞭解錯誤的建立位置。 您可以使用以下專案來區隔錯誤：
+某些错误消息可能不会立即具有说明性。 在这种情况下，查看发生错误的上下文也有助于了解错误是在何处创建的。 您可以使用以下内容分隔错误：
 
-* `grep -B` 用於在錯誤之前新增行；
+* `grep -B` 用于在错误前添加行；
 
 或
 
-* `grep -A` 用於在後面新增行。
+* `grep -A` 用于在后面添加行。
 
-在少數情況下，錯誤也可能會找到WARN訊息，因為可能存在導致此狀態的有效案例，而應用程式並不總是能夠判斷這是否為實際錯誤。 也請務必參閱這些訊息。
+在少数情况下，还可以找到错误WARN消息，因为可能存在导致此状态的有效案例，并且应用程序并不总是能够确定这是否是实际的错误。 请务必查阅这些信息。
 
 ### 联系 Adobe 支持 {#contacting-adobe-support}
 
-如果您詳閱過本頁面上的建議，但仍遇到問題，請聯絡Adobe支援。 為了向處理您案例的支援工程師提供儘可能多的資訊，請務必加入升級中的upgrade.log檔案。
+如果您已阅读本页上的建议，但仍遇到问题，请联系Adobe支持。 为了向处理您的案例的支持工程师提供尽可能多的信息，请确保升级中包含upgrade.log文件。

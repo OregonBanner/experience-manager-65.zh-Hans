@@ -1,6 +1,6 @@
 ---
 title: 关联的内容
-description: 瞭解AEM關聯內容功能如何提供連線，以便在片段新增至內容頁面時，可以選擇將資產與片段搭配使用，為Headless內容傳送新增更多彈性。
+description: 了解AEM关联内容功能如何提供连接，以便在将资产添加到内容页面时，可以选择将资产与片段一起使用，从而为Headless内容投放增加额外的灵活性。
 feature: Content Fragments
 role: User
 exl-id: 8b93fd6e-47d1-46fd-901b-621caa25be7b
@@ -13,7 +13,7 @@ ht-degree: 60%
 
 # 关联的内容{#associated-content}
 
-AEM關聯內容功能提供連線，以便在將資產新增到內容頁面時，可以選擇將資產與片段一起使用。 這可透過以下方式為您的Headless內容傳遞提供靈活性 [提供在頁面上使用內容片段時可存取的一系列資產，](/help/sites-authoring/content-fragments.md#using-associated-content) 同時有助於縮短搜尋適當資產所需的時間。
+AEM关联内容功能提供了连接，以便在将资产添加到内容页面时，可以选择将资产与片段一起使用。 这通过以下方式为您的Headless内容投放提供了灵活性 [在页面上使用内容片段时，提供要访问的一系列资产，](/help/sites-authoring/content-fragments.md#using-associated-content) 同时还有助于减少搜索适当资产所需的时间。
 
 ## 添加关联内容 {#adding-associated-content}
 

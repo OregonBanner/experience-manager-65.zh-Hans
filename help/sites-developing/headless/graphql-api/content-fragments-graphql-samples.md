@@ -1,18 +1,18 @@
 ---
-title: 了解如何将GraphQL与AEM结合使用 — 示例内容和查询
-description: 了解如何将GraphQL与AEM结合使用，通过浏览示例内容和查询来无头提供内容。
+title: 了解如何将 GraphQL 与 AEM 结合使用 – 示例内容和查询
+description: 通过探索示例内容和查询，了解如何将 GraphQL 与 AEM 结合使用，以 Headless 方式提供内容。
 feature: Content Fragments,GraphQL API
 exl-id: 91c5f61c-9c15-4d72-9b9b-0c23f31e7cdc
-source-git-commit: 1481d613783089046b44d4652d38f7b4b16acc4d
+source-git-commit: 85f8da2a30e1bb5b78cbb36cd9b79939dd913251
 workflow-type: tm+mt
 source-wordcount: '1586'
-ht-degree: 74%
+ht-degree: 94%
 
 ---
 
 # 了解如何将 GraphQL 与 AEM 结合使用 – 示例内容和查询 {#learn-graphql-with-aem-sample-content-queries}
 
-了解如何将GraphQL与AEM结合使用，通过浏览示例内容和查询来无头提供内容。
+通过探索示例内容和查询，了解如何将 GraphQL 与 AEM 结合使用，以 Headless 方式提供内容。
 
 >[!NOTE]
 >
@@ -23,7 +23,7 @@ ht-degree: 74%
 >* [用于内容片段的 AEM GraphQL API](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md)
 
 
-要开始使用GraphQL查询以及它们如何与AEM内容片段一起使用，查看一些实际示例会有所帮助。
+要开始了解 GraphQL 查询以及它们如何与 AEM 内容片段结合使用，看一些具体的示例会有所帮助。
 
 有关这方面的帮助，请查看：
 
@@ -38,7 +38,7 @@ ht-degree: 74%
 
 >[!NOTE]
 >
->根据您的实例，您可以直接访问 [AEM GraphQL API中包含的GraphiQL接口](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#graphiql-interface) 用于提交和测试查询。
+>根据您的实例，您可以直接访问 [AEM GraphQL API 中包含的 GraphiQL 接口](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#graphiql-interface)，用于提交和测试查询。
 >
 >例如：`http://localhost:4502/content/graphiql.html`
 
@@ -48,11 +48,11 @@ ht-degree: 74%
 
 ### 示例查询 – 所有可用架构和数据类型 {#sample-all-schemes-datatypes}
 
-此示例查询返回所有 `types` 用于所有可用架构。
+这会返回所有可用架构的所有 `types`。
 
 **示例查询**
 
-```graphql
+```xml
 {
   __schema {
     types {
@@ -65,7 +65,7 @@ ht-degree: 74%
 
 **示例结果**
 
-```json
+```xml
 {
   "data": {
     "__schema": {
@@ -141,10 +141,10 @@ ht-degree: 74%
 
 ### 示例查询 – 关于所有城市的所有信息 {#sample-all-information-all-cities}
 
-要检索有关所有城市的所有信息，您可以使用基本查询：
+要检索有关所有城市的所有信息，您可以使用非常基本的查询：
 **示例查询**
 
-```graphql
+```xml
 {
   cityList {
     items
@@ -152,9 +152,9 @@ ht-degree: 74%
 }
 ```
 
-运行时，系统自动扩展查询以包含所有字段：
+在执行时，系统将自动扩展查询以包含所有字段：
 
-```graphql
+```xml
 {
   cityList {
     items {
@@ -169,7 +169,7 @@ ht-degree: 74%
 
 **示例结果**
 
-```json
+```xml
 {
   "data": {
     "cityList": {
@@ -224,11 +224,11 @@ ht-degree: 74%
 
 ### 示例查询 – 所有城市的名称 {#sample-names-all-cities}
 
-此示例查询是一个直接的查询，用于返回 `name`中所有条目的 `city`架构。
+这是一个直接的查询，返回 `city` 架构中所有条目的 `name`。
 
 **示例查询**
 
-```xmgraphqll
+```xml
 query {
   cityList {
     items {
@@ -240,7 +240,7 @@ query {
 
 **示例结果**
 
-```json
+```xml
 {
   "data": {
     "cityList": {
@@ -274,11 +274,11 @@ query {
 
 ### 示例查询 – 一个特定城市片段 {#sample-single-specific-city-fragment}
 
-此示例查询是一种返回存储库中特定位置单个片段条目的详细信息的查询。
+此查询返回存储库中特定位置的单个片段条目的详细信息。
 
 **示例查询**
 
-```graphql
+```xml
 {
   cityByPath (_path: "/content/dam/sample-content-fragments/cities/berlin") {
     item {
@@ -294,7 +294,7 @@ query {
 
 **示例结果**
 
-```json
+```xml
 {
   "data": {
     "cityByPath": {
@@ -315,11 +315,11 @@ query {
 
 ### 示例查询 – 具有指定变体的所有城市 {#sample-cities-named-variation}
 
-如果您创建一个名为“柏林中心”的变体(`berlin_centre`)，对于 `city` 柏林，您可以使用查询返回变体的详细信息。
+如果您创建新的变体，命名为“柏林中心”(`berlin_centre`)，则对于 `city` 柏林，您可以使用查询返回变体的详细信息。
 
 **示例查询**
 
-```graphql
+```xml
 {
   cityList (variation: "berlin_center") {
     items {
@@ -335,7 +335,7 @@ query {
 
 **示例结果**
 
-```json
+```xml
 {
   "data": {
     "cityList": {
@@ -361,13 +361,13 @@ query {
 如果您：
 
 * 创建各种标记，已命名 `Tourism` ： `Business`， `City Break`， `Holiday`
-* 并将这些标记分配给各种主控变体 `City` 实例
+* 并将它们分配给各种主控变体 `City` 实例
 
 然后，您可以使用查询返回 `name` 和 `tags`中所有标记为“城市间断”的条目 `city`架构。
 
 **示例查询**
 
-```graphql
+```xml
 query {
   cityList(
     includeVariations: true,
@@ -383,7 +383,7 @@ query {
 
 **示例结果**
 
-```json
+```xml
 {
   "data": {
     "cityList": {
@@ -414,7 +414,7 @@ query {
 
 **示例查询**
 
-```graphql
+```xml
 query {
   companyList {
     items {
@@ -443,7 +443,7 @@ query {
 
 **示例结果**
 
-```json
+```xml
 {
   "data": {
     "companyList": {
@@ -538,11 +538,11 @@ query {
 
 ### 示例查询 – 所有名为“Jobs”或“Smith”的人 {#sample-all-persons-jobs-smith}
 
-此示例查询筛选所有 `persons` 任何具有此名称的 `Jobs`或 `Smith`.
+这将筛选出名为 `Jobs` 或 `Smith` 的所有 `persons`。
 
 **示例查询**
 
-```graphql
+```xml
 query {
   personList(filter: {
     name: {
@@ -567,7 +567,7 @@ query {
 
 **示例结果**
 
-```json
+```xml
 {
   "data": {
     "personList": {
@@ -592,11 +592,11 @@ query {
 
 ### 示例查询 – 所有名字不是“Jobs”的人 {#sample-all-persons-not-jobs}
 
-此示例查询筛选所有 `persons` 任何具有此名称的 `Jobs`或 `Smith`.
+这将筛选出名为 `Jobs` 或 `Smith` 的所有 `persons`。
 
 **示例查询**
 
-```graphql
+```xml
 query {
   personList(filter: {
     name: {
@@ -618,7 +618,7 @@ query {
 
 **示例结果**
 
-```json
+```xml
 {
   "data": {
     "personList": {
@@ -663,7 +663,7 @@ query {
 
 **示例查询**
 
-```graphql
+```xml
 query {
   adventureList(
     filter: {
@@ -685,7 +685,7 @@ query {
 
 **示例结果**
 
-```json
+```xml
 {
   "data": {
     "adventureList": {
@@ -702,13 +702,13 @@ query {
 }
 ```
 
-### 示例查询 — 德国或瑞士境内人口为400000到999999的所有城市 {#sample-all-cities-d-ch-population}
+### 示例查询 – 位于德国或瑞士且人口在 400000 到 999999 之间的所有城市。 {#sample-all-cities-d-ch-population}
 
-此处筛选了字段组合。 使用 `AND`（隐式）来选择 `population` 范围，使用 `OR`（显式）来选择所需的城市。
+以下是筛选的字段组合：使用 `AND`（隐式）来选择 `population` 范围，使用 `OR`（显式）来选择所需的城市。
 
 **示例查询**
 
-```graphql
+```xml
 query {
   cityList(filter: {
     population: {
@@ -744,7 +744,7 @@ query {
 
 **示例结果**
 
-```json
+```xml
 {
   "data": {
     "cityList": {
@@ -771,7 +771,7 @@ query {
 
 **示例查询**
 
-```graphql
+```xml
 query {
   cityList(filter: {
     name: {
@@ -795,7 +795,7 @@ query {
 
 **示例结果**
 
-```json
+```xml
 {
   "data": {
     "cityList": {
@@ -822,7 +822,7 @@ query {
 
 **示例查询**
 
-```graphql
+```xml
 query {
   cityList(filter: {
     categories: {
@@ -846,7 +846,7 @@ query {
 
 **示例结果**
 
-```json
+```xml
 {
   "data": {
     "cityList": {
@@ -880,7 +880,7 @@ query {
 
 **示例查询**
 
-```graphql
+```xml
 query {
   cityList(filter: {
     categories: {
@@ -906,7 +906,7 @@ query {
 
 **示例结果**
 
-```json
+```xml
 {
   "data": {
     "cityList": {
@@ -932,7 +932,7 @@ query {
 
 **示例查询**
 
-```graphql
+```xml
 query {
   companyList(filter: {
     employees: {
@@ -964,7 +964,7 @@ query {
 
 **示例结果**
 
-```json
+```xml
 {
   "data": {
     "companyList": {
@@ -998,7 +998,7 @@ query {
 
 **示例查询**
 
-```graphql
+```xml
 query {
   companyList(filter: {
     employees: {
@@ -1040,7 +1040,7 @@ query {
 
 **示例结果**
 
-```json
+```xml
 {
   "data": {
     "companyList": {
@@ -1090,7 +1090,7 @@ query {
 
 **示例查询**
 
-```graphql
+```xml
 query {
   awardList(filter: {
       id: {
@@ -1117,7 +1117,7 @@ query {
 
 **示例结果**
 
-```json
+```xml
 {
   "data": {
     "awardList": {
@@ -1146,7 +1146,7 @@ query {
 
 ## 使用 WKND 项目的示例查询 {#sample-queries-using-wknd-project}
 
-这些示例查询基于 WKND 项目。它具有以下功能：
+这些示例查询基于 WKND 项目。它具有：
 
 * 在以下位置提供的内容片段模型：
    `http://<hostname>:<port>/libs/dam/cfm/models/console/content/models.html/conf/wknd`
@@ -1167,7 +1167,7 @@ query {
 
 **示例查询**
 
-```graphql
+```xml
 {
   articleList {
     items {
@@ -1187,7 +1187,7 @@ query {
 
 **示例查询**
 
-```graphql
+```xml
 {
   adventureList {
     items {
@@ -1244,7 +1244,7 @@ query {
 此示例查询查找：
 
 * 特定路径下类型为 `article` 的单个内容片段
-   * 在该路径内，所有格式的内容：
+   * 在其中，所有下列格式的内容：
       * HTML
       * Markdown
       * 纯文本
@@ -1252,7 +1252,7 @@ query {
 
 **示例查询**
 
-```graphql
+```xml
 {
   articleByPath (_path: "/content/dam/wknd/en/magazine/alaska-adventure/alaskan-adventures") {
     item {
@@ -1278,7 +1278,7 @@ query {
 
 **示例查询**
 
-```graphql
+```xml
 {
   adventureByPath(_path: "/content/dam/wknd/en/adventures/riverside-camping-australia/riverside-camping-australia") {
     item {
@@ -1298,7 +1298,7 @@ query {
 此查询查找：
 
 * 特定路径下类型为 `article` 的单个内容片段
-   * 在该路径中，引用（嵌套）片段的路径和作者
+   * 在其中，引用（嵌套）片段的路径和作者
 
 >[!NOTE]
 >
@@ -1393,7 +1393,7 @@ query {
 
 以下查询通过使用 `_references` 返回所有内容引用：
 
-```graphql
+```xml
 {
   bookmarkList {
      _references {
@@ -1427,13 +1427,13 @@ query {
 
 #### 具有附件的多个内容片段的示例查询 {#sample-wknd-multiple-fragments-attachments}
 
-以下查询返回所有 `attachments`  — 类型为的特定字段（子组） `content-reference`：
+以下查询返回所有 `attachments` – 类型为 `content-reference` 的特定字段（子组）：
 
 >[!NOTE]
 >
 >字段 `attachments` 具有数据类型 `content-reference`，并选择了多种格式。
 
-```graphql
+```xml
 {
   bookmarkList {
     items {
@@ -1477,7 +1477,7 @@ query {
 
 **示例查询**
 
-```graphql
+```xml
 {
   bookmarkByPath(_path: "/content/dam/wknd/en/bookmarks/skitouring") {
     item {
@@ -1515,11 +1515,11 @@ query {
 此查询查找：
 
 * 特定路径下类型为 `article` 的单个内容片段
-   * 在该路径中，数据关联到变体： `variation1`
+   * 在其中，数据关联到变体：`variation1`
 
 **示例查询**
 
-```graphql
+```xml
 {
   articleByPath (_path: "/content/dam/wknd/en/magazine/alaska-adventure/alaskan-adventures", variation: "variation1") {
     item {
@@ -1544,7 +1544,7 @@ query {
 
 **示例查询**
 
-```graphql
+```xml
 {
   articleList (variation: "variation1") {
     items {
@@ -1569,7 +1569,7 @@ query {
 
 **示例查询**
 
-```graphql
+```xml
 query {
   articleList(
     includeVariations: true  ){
@@ -1596,7 +1596,7 @@ query {
 
 **示例查询**
 
-```graphql
+```xml
 {
   articleList(
     includeVariations: true,
@@ -1625,7 +1625,7 @@ query {
 
 **示例查询**
 
-```graphql
+```xml
 { 
   articleList (_locale: "fr") {
     items {
@@ -1652,7 +1652,7 @@ query {
 
 ### 示例内容片段模型（架构） {#sample-content-fragment-models-schemas}
 
-对于示例查询，请使用以下内容模型及其相互关系（引用 — >）：
+对于相同的查询，我们将使用以下内容模型及其相互关系（引用 ->）：
 
 * [公司](#model-company)
 -> [人员](#model-person)

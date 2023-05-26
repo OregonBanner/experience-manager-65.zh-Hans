@@ -1,7 +1,7 @@
 ---
-title: 設定電子郵件
+title: 配置电子邮件
 seo-title: Configuring Email
-description: 社群的電子郵件設定
+description: 社区的电子邮件配置
 seo-description: Email configuration for Communities
 uuid: e8422cc2-1594-43b0-b587-82825636cec1
 contentOwner: Janice Kendall
@@ -19,181 +19,181 @@ ht-degree: 4%
 
 ---
 
-# 設定電子郵件 {#configuring-email}
+# 配置电子邮件 {#configuring-email}
 
-AEM Communities將電子郵件用於：
+AEM Communities将电子邮件用于：
 
-* [社群通知](notifications.md)
+* [社区通知](notifications.md)
 * [Communities 订阅](subscriptions.md)
 
-依預設，電子郵件功能無法運作，因為它需要指定SMTP伺服器和SMTP使用者。
+默认情况下，电子邮件功能不起作用，因为它需要指定SMTP服务器和SMTP用户。
 
 >[!CAUTION]
 >
->通知和訂閱的電子郵件只能在 [主要發行者](deploy-communities.md#primary-publisher).
+>通知和订阅电子邮件只能在 [主要发布者](deploy-communities.md#primary-publisher).
 
-## 預設郵件服務設定 {#default-mail-service-configuration}
+## 默认邮件服务配置 {#default-mail-service-configuration}
 
-通知和訂閱都需要預設郵件服務。
+通知和订阅都需要默认的邮件服务。
 
-* 以系統管理員許可權登入主要發行者並存取 [網頁主控台](../../help/sites-deploying/configuring-osgi.md)：
+* 以管理员权限登录到主发布服务器，并访问 [Web控制台](../../help/sites-deploying/configuring-osgi.md)：
 
    * 例如， [http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr)
 
 * 找到 `Day CQ Mail Service`.
-* 選取編輯圖示。
+* 选择编辑图标。
 
-這是根據以下專案的檔案： [設定電子郵件通知](../../help/sites-administering/notification.md)，但欄位中有所差異 `"From" address` 是 *not* 必填，且應留空。
+这是基于的文档 [配置电子邮件通知](../../help/sites-administering/notification.md)，但不同之处在于 `"From" address` 是 *非* 必需，且应留空。
 
-例如（填入的值僅供說明用途）：
+例如（填入的值仅用于说明目的）：
 
 ![email-config](assets/email-config.png)
 
-* **[!UICONTROL smtp伺服器主機名稱]**
+* **[!UICONTROL SMTP服务器主机名]**
 
-   *（必要）* 要使用的SMTP伺服器。
+   *（必需）* 要使用的SMTP服务器。
 
-* **[!UICONTROL SMTP伺服器連線埠]**
+* **[!UICONTROL SMTP服务器端口]**
 
-   *（必要）* SMTP伺服器連線埠必須是25或更高。
+   *（必需）* SMTP服务器端口必须为25或更高。
 
-* **[!UICONTROL SMTP使用者]**
+* **[!UICONTROL SMTP用户]**
 
-   *（必要）* smtp使用者。
+   *（必需）* SMTP用户。
 
-* **[!UICONTROL SMTP密碼]**
+* **[!UICONTROL SMTP密码]**
 
-   *（必要）* SMTP使用者的密碼。
+   *（必需）* SMTP用户的密码。
 
-* **[!UICONTROL 「寄件者」地址]**
+* **[!UICONTROL “寄件者”地址]**
 
    留空
 * **[!UICONTROL SMTP使用SSL]**
 
-   如果勾選，將傳送安全電子郵件。 請確定連線埠已設定為465或SMTP伺服器所需的連線埠。
-* **[!UICONTROL 偵錯電子郵件]**
+   如果选中，将发送安全电子邮件。 确保端口设置为465或SMTP服务器所需的端口。
+* **[!UICONTROL 调试电子邮件]**
 
-   如果勾選，會啟用SMTP伺服器互動的記錄。
+   如果选中，则启用SMTP服务器交互的日志记录。
 
-## AEM Communities電子郵件設定 {#aem-communities-email-configuration}
+## AEM Communities电子邮件配置 {#aem-communities-email-configuration}
 
-一旦 [預設郵件服務](#default-mail-service-configuration) 的下列兩個現有執行個體： `AEM Communities Email Reply Configuration` 此發行版本中包含的OSGi設定會正常運作。
+一旦 [默认邮件服务](#default-mail-service-configuration) 配置，则两个现有的实例 `AEM Communities Email Reply Configuration` 此版本中包含的OSGi配置将正常运行。
 
-當允許透過電子郵件回覆時，只需要進一步設定訂閱的執行個體。
+在允许通过电子邮件回复时，只需进一步配置订阅的实例。
 
-1. [電子郵件](#configuration-for-notifications) 例項：
+1. [电子邮件](#configuration-for-notifications) 实例：
 
-   對於不支援回覆電子郵件的通知，不應加以變更。
+   对于通知，不支持回复电子邮件，不应对其进行更改。
 
-1. [訂閱 — 電子郵件](#configuration-for-subscriptions) 例項：
+1. [订阅 — 电子邮件](#configuration-for-subscriptions) 实例：
 
-   需要設定才能完全啟用從回覆電子郵件建立貼文。
+   需要配置才能完全启用通过回复电子邮件创建帖子。
 
-若要存取Communities電子郵件設定例項：
+要访问社区电子邮件配置实例，请执行以下操作：
 
-* 以系統管理員許可權登入主要發行者並存取 [網頁主控台](../../help/sites-deploying/configuring-osgi.md)
+* 以管理员权限登录到主发布服务器，并访问 [Web控制台](../../help/sites-deploying/configuring-osgi.md)
 
    * 例如， [http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr)
 
-* 尋找 `AEM Communities Email Reply Configuration`.
+* 查找 `AEM Communities Email Reply Configuration`.
 
 ![email-reply-config](assets/email-reply-config.png)
 
-### 通知的設定 {#configuration-for-notifications}
+### 通知的配置 {#configuration-for-notifications}
 
-的例項 `AEM Communities Email Reply Configuration` 使用Name email is forthenotifications功能設定的OSGi。 此功能不包含電子郵件回覆。
+实例 `AEM Communities Email Reply Configuration` 使用Name email is forthenotifications功能进行OSGi配置。 此功能不包括电子邮件回复。
 
-此設定不可變更。
+不应更改此配置。
 
 * 找到 `AEM Communities Email Reply Configuration`.
-* 選取編輯圖示。
-* 驗證 **名稱** 是 `email`.
+* 选择编辑图标。
+* 验证 **名称** 是 `email`.
 
-* 驗證 **從回覆電子郵件建立貼文** 是 `unchecked`.
+* 验证 **通过回复电子邮件创建帖子** 是 `unchecked`.
 
 ![configure-email-reply](assets/configure-email-reply.png)
 
-### 訂閱的設定 {#configuration-for-subscriptions}
+### 订阅的配置 {#configuration-for-subscriptions}
 
-若為Communities訂閱，可透過回覆電子郵件來啟用或停用成員張貼內容的能力。
+对于Communities订阅，可以启用或禁用成员通过回复电子邮件来发布内容的功能。
 
 * 找到 `AEM Communities Email Reply Configuration`.
-* 選取編輯圖示。
-* 驗證 **名稱** 是 `subscriptions-email`.
+* 选择编辑图标。
+* 验证 **名称** 是 `subscriptions-email`.
 
    ![configure-email-subscription](assets/configure-email-subscriptions.png)
 
 * **[!UICONTROL 名称]**
 
-   *（必要）* `subscriptions-email`. 請勿編輯。
+   *（必需）* `subscriptions-email`. 请勿编辑。
 
-* **[!UICONTROL 從回覆電子郵件建立貼文]**
+* **[!UICONTROL 通过回复电子邮件创建帖子]**
 
-   如果勾選，訂閱電子郵件的收件者可以透過傳送回覆來張貼內容。 預設為已核取。
-* **[!UICONTROL 將追蹤的ID新增至標頭]**
+   如果选中，订阅电子邮件的收件人可以通过发送回复来发布内容。 默认值为已选中。
+* **[!UICONTROL 将跟踪的ID添加到标头]**
 
-   預設為 `Reply-To`.
+   默认为 `Reply-To`.
 
 * **[!UICONTROL 最大主题长度]**
 
-   如果將追蹤器ID新增至主旨行，這是主旨的長度上限（不包括追蹤的ID），之後會加以裁剪。 請注意，這應該儘可能小，以避免追蹤的ID資訊遺失。 預設值為200。
+   如果将跟踪器ID添加到主题行，这是主题（不包括跟踪的ID）的最大长度，之后将裁切。 请注意，这应当尽可能小，以避免丢失跟踪的id信息。 默认值为200。
 
-* **[!UICONTROL 「回覆」電子郵件地址]**
+* **[!UICONTROL “回复”电子邮件地址]**
 
-   用作「回覆」電子郵件地址的地址。 預設為 `no-reply@example.com`.
+   用作“回复”电子邮件地址的地址。 默认为 `no-reply@example.com`.
 
-* **[!UICONTROL 回覆分隔符號]**
+* **[!UICONTROL 回复分隔符]**
 
-   如果將追蹤器ID新增至回覆標頭，則會使用此分隔符號。 預設為 `+` （加號）。
+   如果将跟踪器ID添加到回复标头，则将使用此分隔符。 默认为 `+` （加号）。
 
-* **[!UICONTROL 主旨中的追蹤器ID首碼]**
+* **[!UICONTROL 主题中的跟踪器ID前缀]**
 
-   如果將追蹤器ID新增至主旨行，將會使用此首碼。 預設為 `post#`.
+   如果将跟踪器ID添加到主题行，则将使用此前缀。 默认为 `post#`.
 
-* **[!UICONTROL 訊息內文中的追蹤器ID首碼]**
+* **[!UICONTROL 消息正文中的跟踪器ID前缀]**
 
-   如果將追蹤器ID新增至訊息本文，將會使用此首碼。 預設為 `Please do not remove this:`.
+   如果将跟踪器ID添加到消息正文，则将使用此前缀。 默认为 `Please do not remove this:`.
 
-* **[!UICONTROL 以HTML形式傳送電子郵件]**：如果勾選，電子郵件的「內容型別」將設為 `"text/html;charset=utf-8"`. 預設為已核取。
+* **[!UICONTROL 作为HTML发送电子邮件]**：如果选中，则将电子邮件的内容类型设置为 `"text/html;charset=utf-8"`. 默认值为已选中。
 
-* **[!UICONTROL 預設使用者名稱]**
+* **[!UICONTROL 默认用户名]**
 
-   此名稱將用於無名稱使用者。 預設為 `no-reply@example.com`.
+   此名称将不用于任何姓名用户。 默认为 `no-reply@example.com`.
 
-* **[!UICONTROL 範本根路徑]**
+* **[!UICONTROL 模板根路径]**
 
-   电子邮件是使用该根路径中存储的模板生成的. 預設為 `/etc/community/templates/subscriptions-email`.
+   电子邮件是使用该根路径中存储的模板生成的. 默认为 `/etc/community/templates/subscriptions-email`.
 
-## 設定輪詢匯入工具 {#configure-polling-importer}
+## 配置轮询导入程序 {#configure-polling-importer}
 
-為了將電子郵件放入存放庫，需要手動設定Polling Importer並在存放庫中設定其屬性。
+要将电子邮件放入存储库，需要配置轮询导入程序并在存储库中手动配置其属性。
 
-### 新增輪詢匯入工具 {#add-new-polling-importer}
+### 添加新的轮询导入程序 {#add-new-polling-importer}
 
-* 以系統管理員許可權登入主要發行者，並瀏覽至輪詢匯入工具主控台：
+* 使用管理员权限登录到主发布服务器，并浏览到轮询导入程序控制台：
 
    例如， [http://localhost:4503/etc/importers/polling.html](http://localhost:4503/etc/importers/polling.html)
 
-* 選取 **[!UICONTROL 新增]**
+* 选择 **[!UICONTROL 添加]**
 
-   ![polling-importer](assets/polling-importer.png)
+   ![轮询导入程序](assets/polling-importer.png)
 
 * **[!UICONTROL 类型]**
 
-   *（必要）* 下拉以選取 `POP3 (over SSL)`.
+   *（必需）* 下拉以选择 `POP3 (over SSL)`.
 
 * **[!UICONTROL URL]**
 
-   *（必要）* 輸出郵件伺服器。 例如：`pop.gmail.com:995/INBOX?username=community-emailgmail.com&password=****`。
+   *（必需）* 出站邮件服务器。 例如：`pop.gmail.com:995/INBOX?username=community-emailgmail.com&password=****`。
 
-* **[!UICONTROL 匯入至路徑]**&amp;ast；
+* **[!UICONTROL 导入到路径]**&amp;ast；
 
-   *（必要）* 設定為 `/content/usergenerated/mailFolder/postEmails`
-瀏覽至 `postEmails`資料夾並選取 **確定**.
+   *（必需）* 设置为 `/content/usergenerated/mailFolder/postEmails`
+通过浏览到 `postEmails`文件夹并选择 **确定**.
 
 * **[!UICONTROL 以秒为单位的更新时间间隔]**
 
-   *（可選）* 為預設郵件服務設定的郵件伺服器可能具有有關更新間隔值的要求。 例如，Gmail可能需要 `300`.
+   *（可选）* 为默认邮件服务配置的邮件服务器可能具有有关更新间隔值的要求。 例如，Gmail可能需要 `300`.
 
 * **[!UICONTROL 登录]**
 
@@ -203,22 +203,22 @@ AEM Communities將電子郵件用於：
 
    *(可选)*
 
-* 選取 **[!UICONTROL 確定]**.
+* 选择 **[!UICONTROL 确定]**.
 
-### 調整新輪詢匯入工具的通訊協定 {#adjust-protocol-for-new-polling-importer}
+### 调整新轮询导入程序的协议 {#adjust-protocol-for-new-polling-importer}
 
-儲存新的輪詢設定後，需要進一步修改訂閱電子郵件匯入工具的屬性，以便從變更通訊協定 `POP3` 至 `emailreply`.
+保存新的轮询配置后，需要进一步修改订阅电子邮件导入程序的属性，以便从更改协议 `POP3` 到 `emailreply`.
 
 使用 [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md)：
 
-* 以系統管理員許可權登入主要發行者並瀏覽至 [https://&lt;server>：&lt;port>/crx/de/index.jsp#/etc/importers/polling](http://localhost:4503/crx/de/index.jsp#/etc/importers/polling).
-* 選取新建立的組態並修改下列屬性：
+* 使用管理员权限登录到主发布服务器，并浏览至 [https://&lt;server>：&lt;port>/crx/de/index.jsp#/etc/importers/polling](http://localhost:4503/crx/de/index.jsp#/etc/importers/polling).
+* 选择新创建的配置并修改以下属性：
 
-   * **摘要型別**：取代 `pop3s` 替換為 **`emailreply`**
-   * **source**：取代來源的通訊協定 `pop3s://` 替換為 **`emailreply://`**
+   * **信息源类型**：替换 `pop3s` 替换为 **`emailreply`**
+   * **源**：替换源的协议 `pop3s://` 替换为 **`emailreply://`**
 
-![輪詢通訊協定](assets/polling-protocol.png)
+![轮询协议](assets/polling-protocol.png)
 
-紅色三角形表示修改的屬性。 請務必儲存變更：
+红色三角形表示修改的属性。 确保保存更改：
 
-* 選取 **[!UICONTROL 全部儲存]**.
+* 选择 **[!UICONTROL 全部保存]**.

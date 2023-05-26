@@ -1,7 +1,7 @@
 ---
-title: 變更品牌推廣的組織標誌
+title: 更改组织的品牌标识
 seo-title: Changing the organization logo for branding
-description: 若要品牌化AEM Forms工作區，請自訂預設標誌，以提供您組織的標誌。
+description: 要打造AEM Forms工作区，请通过自定义默认徽标来提供贵组织的徽标。
 seo-description: To brand AEM Forms workspace provide the logo of your organization by customizing the default logo.
 uuid: f0c340ee-2e54-4bb0-9c30-383cc1bbadb8
 contentOwner: robhagat
@@ -17,21 +17,21 @@ ht-degree: 6%
 
 ---
 
-# 變更品牌推廣的組織標誌 {#changing-the-organization-logo-for-branding}
+# 更改组织的品牌标识 {#changing-the-organization-logo-for-branding}
 
-組織標誌會顯示在AEM Forms工作區的左上角。 若要更新標誌，請遵循 [AEM Forms工作區自訂的一般步驟](/help/forms/using/generic-steps-html-workspace-customization.md#generic-steps-for-html-workspace-customization) 然後執行下列步驟。
+组织徽标显示在AEM Forms工作区的左上角。 要更新徽标，请按照 [AEM Forms工作区自定义的一般步骤](/help/forms/using/generic-steps-html-workspace-customization.md#generic-steps-for-html-workspace-customization) 然后执行以下步骤。
 
-1. 建立標誌並將檔案命名為 `NewWorkspace.png`. 使用WebDAV使用者端將影像檔案放入/apps/ws/images資料夾。
-
-   >[!NOTE]
-   >
-   >建議使用的標誌影像大小為218畫素×20畫素。
+1. 创建徽标并将文件命名为 `NewWorkspace.png`. 使用WebDAV客户端将图像文件放入/apps/ws/images文件夹中。
 
    >[!NOTE]
    >
-   >如需有關WebDAV存取的詳細資訊，請參閱 [https://dev.day.com/docs/en/crx/current/how_to/webdav_access.html](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hans).
+   >推荐的徽标图像大小为218像素×20像素。
 
-1. 新增下列樣式，以參考樣式表中的新標誌影像：/apps/ws/css/newStyle.css。
+   >[!NOTE]
+   >
+   >有关WebDAV访问的详细信息，请参见 [https://dev.day.com/docs/en/crx/current/how_to/webdav_access.html](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hans).
+
+1. 通过添加以下样式，在/apps/ws/css/newStyle.css的样式表中引用新的徽标图像。
 
    ```css
    #logo {

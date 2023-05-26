@@ -1,5 +1,5 @@
 ---
-title: 部署社群
+title: 部署社区
 seo-title: Deploying Communities
 description: 如何部署AEM Communities
 seo-description: How to deploy AEM Communities
@@ -18,332 +18,332 @@ ht-degree: 1%
 
 ---
 
-# 部署社群 {#deploying-communities}
+# 部署社区 {#deploying-communities}
 
 ## 前提条件 {#prerequisites}
 
 * [AEM 6.5平台](/help/sites-deploying/deploy.md)
 
-* AEM Communities授權
+* AEM Communities许可证
 
-* 選購的授權：
+* 可选许可证：
 
-   * [適用於社群的Adobe Analytics功能](/help/communities/analytics.md)
+   * [Adobe Analytics for Communities功能](/help/communities/analytics.md)
    * [MongoDB for MSRP](/help/communities/msrp.md)
-   * [ASRP的Adobe雲端](/help/communities/asrp.md)
+   * [ASRP的Adobe云](/help/communities/asrp.md)
 
-## 安裝檢查清單 {#installation-checklist}
+## 安装核对清单 {#installation-checklist}
 
-**對於 [AEM平台](/help/sites-deploying/deploy.md#what-is-aem)**
+**对于 [AEM平台](/help/sites-deploying/deploy.md#what-is-aem)**
 
-* 安裝最新版本 [AEM 6.5更新](#aem64updates)
+* 安装最新版本 [AEM 6.5更新](#aem64updates)
 
-* 若不使用預設連線埠(4502、4503)，則 [設定復寫代理](#replication-agents-on-author)
-* [復寫加密金鑰](#replicate-the-crypto-key)
-* 如果支援全球化， [設定自動化翻譯](/help/sites-administering/translation.md)
-（提供範例設定以供開發）
+* 如果不使用默认端口(4502、4503)，则 [配置复制代理](#replication-agents-on-author)
+* [复制加密密钥](#replicate-the-crypto-key)
+* 如果支持全球化， [设置自动翻译](/help/sites-administering/translation.md)
+（为开发提供了示例设置）
 
-**對於 [Communities功能](/help/communities/overview.md)**
+**对于 [Communities功能](/help/communities/overview.md)**
 
-* 如果部署 [發佈陣列](/help/sites-deploying/recommended-deploys.md#tarmk-farm)， [識別主要發行者](#primary-publisher)
+* 如果部署 [发布场](/help/sites-deploying/recommended-deploys.md#tarmk-farm)， [标识主要发布者](#primary-publisher)
 
-* [啟用通道服務](#tunnel-service-on-author)
-* [啟用社交登入](/help/communities/social-login.md#adobe-granite-oauth-authentication-handler)
-* [設定Adobe Analytics](/help/communities/analytics.md)
-* 設定 [預設電子郵件服務](/help/communities/email.md)
-* 識別 [共用的UGC儲存體](/help/communities/working-with-srp.md) (**SRP**)
+* [启用通道服务](#tunnel-service-on-author)
+* [启用社交登录](/help/communities/social-login.md#adobe-granite-oauth-authentication-handler)
+* [配置Adobe Analytics](/help/communities/analytics.md)
+* 设置 [默认电子邮件服务](/help/communities/email.md)
+* 确定以下各项的选择 [共享UGC存储](/help/communities/working-with-srp.md) (**SRP**)
 
    * 如果MongoDB SRP [(MSRP)](/help/communities/msrp.md)
 
-      * [安裝及設定MongoDB](/help/communities/msrp.md#mongodb-configuration)
-      * [設定Solr](/help/communities/solr.md)
-      * [選取MSRP](/help/communities/srp-config.md)
-   * 如果關聯式資料庫SRP [(DSRP)](/help/communities/dsrp.md)
+      * [安装和配置MongoDB](/help/communities/msrp.md#mongodb-configuration)
+      * [配置Solr](/help/communities/solr.md)
+      * [选择MSRP](/help/communities/srp-config.md)
+   * 如果关系数据库SRP [(DSRP)](/help/communities/dsrp.md)
 
-      * [安裝適用於MySQL的JDBC驅動程式](#jdbc-driver-for-mysql)
-      * [安裝及設定MySQL for DSRP](/help/communities/dsrp-mysql.md)
-      * [設定Solr](/help/communities/solr.md)
-      * [選取DSRP](/help/communities/srp-config.md)
+      * [安装用于MySQL的JDBC驱动程序](#jdbc-driver-for-mysql)
+      * [安装和配置MySQL for DSRP](/help/communities/dsrp-mysql.md)
+      * [配置Solr](/help/communities/solr.md)
+      * [选择DSRP](/help/communities/srp-config.md)
    * 如果AdobeSRP [(ASRP)](/help/communities/asrp.md)
 
-      * 與您的客戶代表合作以進行布建
-      * [選取ASRP](/help/communities/srp-config.md)
-   * 若為JCR SRP [(JSRP)](/help/communities/jsrp.md)
+      * 与您的客户代表合作进行配置
+      * [选择ASRP](/help/communities/srp-config.md)
+   * 如果JCR SRP [(JSRP)](/help/communities/jsrp.md)
 
-      * 不是共用的UGC存放區：
+      * 不是共享的UGC存储：
 
-         * 從未復寫UGC
-         * UGC只顯示在輸入它的AEM執行個體或叢集上
+         * 从不复制UGC
+         * UGC仅在输入它的AEM实例或群集中可见
 
-         * 預設為JSRP
+         * 默认值为JSRP
 
 
 
 
 ## 最新版本 {#latest-releases}
 
-AEM 6.5 Communities GA包含Communities套件。 瞭解AEM 6.5的更新 [Communities](/help/release-notes/release-notes.md#experiencemanagercommunities)，請參閱 [AEM 6.5發行說明](/help/release-notes/release-notes.md#communities-release-notes.html).
+AEM 6.5 Communities GA包含Communities包。 了解AEM 6.5的更新 [Communities](/help/release-notes/release-notes.md#experiencemanagercommunities)，请参阅 [AEM 6.5发行说明](/help/release-notes/release-notes.md#communities-release-notes.html).
 
 ### AEM 6.5更新 {#aem-updates}
 
-從AEM 6.4開始，Communities更新作為AEM Cumulative Fix Pack和Service Pack的一部分提供。
+从AEM 6.4开始，对Communities的更新作为AEM累积修补程序包和Service Pack的一部分提供。
 
-如需AEM 6.5的最新更新，請參閱 [Adobe Experience Manager 6.4 Cumulative Fix Pack和Service Pack](https://helpx.adobe.com/cn/experience-manager/aem-releases-updates.html).
+有关AEM 6.5的最新更新，请参阅 [Adobe Experience Manager 6.4累积修补程序包和Service Pack](https://helpx.adobe.com/cn/experience-manager/aem-releases-updates.html).
 
 ### 版本历史记录 {#version-history}
 
-和AEM 6.4及更高版本一樣，AEM Communities功能和Hotfix是AEM Communities Cumulative Fix Pack和Service Pack的一部分。 因此，沒有單獨的Feature Pack。
+与AEM 6.4及更高版本一样，AEM Communities功能和修补程序是AEM Communities累积修补程序包和Service Pack的一部分。 因此，没有单独的功能包。
 
-### MySQL的JDBC驅動程式 {#jdbc-driver-for-mysql}
+### 适用于MySQL的JDBC驱动程序 {#jdbc-driver-for-mysql}
 
-一個Communities功能使用MySQL資料庫：
+一个Communities功能使用MySQL数据库：
 
-* 對象 [DSRP](/help/communities/dsrp.md)：儲存使用者產生的內容(UGC)
+* 对象 [DSRP](/help/communities/dsrp.md)：存储用户生成的内容(UGC)
 
-必須單獨取得並安裝MySQL聯結器。
+必须单独获取和安装MySQL连接器。
 
-必要的步驟如下：
+必需的步骤包括：
 
-1. 下載ZIP封存，從 [https://dev.mysql.com/downloads/connector/j/](https://dev.mysql.com/downloads/connector/j/)
+1. 下载ZIP存档，从 [https://dev.mysql.com/downloads/connector/j/](https://dev.mysql.com/downloads/connector/j/)
 
-   * 版本必須>= 5.1.38
+   * 版本必须>= 5.1.38
 
-1. 擷取mysql-connector-java-&lt;version>-bin.jar （套件）
-1. 使用Web主控台來安裝並啟動套件組合：
+1. 提取mysql-connector-java-&lt;version>-bin.jar（捆绑）
+1. 使用Web控制台安装和启动捆绑包：
 
    * 例如， https://localhost:4502/system/console/bundles
    * 选择 **`Install/Update`**
-   * 瀏覽……以選取從下載的ZIP封存解壓縮的套件組合
-   * 檢查 *oracle公司的MySQLcom.mysql.jdbc之JDBC驅動程式* 處於作用中狀態，如果沒有，則啟動它（或檢查記錄）
+   * 浏览……以选择从下载的ZIP存档中提取的包
+   * 检查 *oracle公司的MySQLcom.mysql.jdbc的JDBC驱动程序* 处于活动状态，如果未处于活动状态，则启动它（或检查日志）
 
-1. 如果在設定JDBC之後在現有部署上進行安裝，則從Web主控台重新儲存JDBC設定，以將JDBC重新繫結至新聯結器：
+1. 如果在配置JDBC之后在现有部署上进行安装，则通过从Web控制台重新保存JDBC配置来将JDBC重新绑定到新连接器：
    * 例如， https://localhost:4502/system/console/configMgr
-   * 尋找 `Day Commons JDBC Connections Pool` 設定
-   * 選取以開啟
+   * 查找 `Day Commons JDBC Connections Pool` 配置
+   * 选择以打开
    * 选择 `Save`
 
-1. 在所有製作和發佈執行個體上重複步驟3和4
+1. 对所有创作和发布实例重复步骤3和4
 
-如需有關安裝套裝的詳細資訊，請參閱 [網頁主控台](/help/sites-deploying/web-console.md) 頁面。
+有关安装捆绑包的更多信息，请参阅 [Web控制台](/help/sites-deploying/web-console.md) 页面。
 
-#### 範例：已安裝MySQL聯結器套件組合 {#example-installed-mysql-connector-bundle}
+#### 示例：已安装MySQL连接器捆绑包 {#example-installed-mysql-connector-bundle}
 
 ![connect-bundle](assets/connector-bundle.png)
 
 
 
-### AEM進階MLS {#aem-advanced-mls}
+### AEM高级MLS {#aem-advanced-mls}
 
-為了讓SRP集合（MSRP或DSRP）支援進階多語言搜尋(MLS)，除了自訂結構描述和Solr設定外，還需要新的Solr外掛程式。 所有必要專案都會封裝成可下載的zip檔案。
+对于SRP集合（MSRP或DSRP）以支持高级多语言搜索(MLS)，除了自定义架构和Solr配置之外，还需要新的Solr插件。 所有必需的项目都打包到一个可下载的zip文件中。
 
-進階MLS下載（也稱為「phasetwo」）可從Adobe存放庫取得：
+高级MLS下载（也称为“phasetwo”）可从Adobe存储库中获取：
 
 * AEM-SOLR-MLS-phasetwo
 
-   若要取得進階MLS套件，請參閱 [AEM進階MLS](deploy-communities.md#aem-advanced-mls) 在檔案的部署區段中。
+   要获取高级MLS包，请参阅 [AEM高级MLS](deploy-communities.md#aem-advanced-mls) 在文档的“部署”部分中。
 
-   * 1.2.40版（2016年4月6日）
-   * 下載AEM-SOLR-MLS-phasetwo-1.2.40.zip
+   * 版本1.2.40,2016年4月6日
+   * 下载AEM-SOLR-MLS-phasetwo-1.2.40.zip
 
-如需詳細資訊和安裝資訊，請造訪 [Solr設定](/help/communities/solr.md) 用於SRP。
+有关详细信息和安装信息，请访问 [Solr配置](/help/communities/solr.md) 用于SRP。
 
-### 關於封裝共用的連結 {#about-links-to-package-share}
+### 关于指向包共享的链接 {#about-links-to-package-share}
 
-**AdobeAEM Cloud中可見的套件**
+**AdobeAEM Cloud中可见的软件包**
 
-此頁面上的封裝連結不需要正在執行的AEM執行個體，因為它們要共用封裝 `adobeaemcloud.com`. 雖然可檢視套件，但 `Install` 按鈕用於將套件安裝至Adobe代管網站。 如果要在本機AEM執行個體上安裝，請選取 `Install` 將會導致錯誤。
+此页上的包链接不需要正在运行的AEM实例，因为它们将在其上共享包 `adobeaemcloud.com`. 虽然可以查看包，但是 `Install` 按钮用于将包安装到托管Adobe的站点。 如果要在本地AEM实例上安装，请选择 `Install` 将导致错误。
 
-**如何在本機AEM執行個體上安裝**
+**如何在本地AEM实例上安装**
 
-若要安裝中顯示的套件 `adobeaemcloud.com` 在本機AEM執行個體上，套件必須先下載至本機磁碟：
+要安装中显示的包，请执行以下操作 `adobeaemcloud.com` 在本地AEM实例上，必须首先将软件包下载到本地磁盘：
 
-* 選取 **資產** 標籤
-* 選取 **下載至磁碟**
+* 选择 **资产** 选项卡
+* 选择 **下载到磁盘**
 
-在本機AEM執行個體上，使用封裝管理員(例如 [https://localhost:4502/crx/packmgr/](https://localhost:4502/crx/packmgr/))，以上傳至本機AEM套件存放庫。
+在本地AEM实例上，使用包管理器(例如 [https://localhost:4502/crx/packmgr/](https://localhost:4502/crx/packmgr/))，以上传到本地AEM包存储库。
 
-或者，您也可以從本機AEM執行個體(例如， [https://localhost:4502/crx/packageshare/](https://localhost:4502/crx/packageshare/))， `Download` 按鈕將下載到本機AEM執行個體的封裝存放庫。
+或者，使用本地AEM实例中的包共享访问包(例如， [https://localhost:4502/crx/packageshare/](https://localhost:4502/crx/packageshare/))，则 `Download` 按钮将下载到本地AEM实例的包存储库。
 
-一旦進入本機AEM執行個體的封裝存放庫，請使用封裝管理員來安裝封裝。
+进入本地AEM实例的包存储库后，使用包管理器安装包。
 
-如需詳細資訊，請造訪 [如何使用套件](/help/sites-administering/package-manager.md#package-share).
+有关详细信息，请访问 [如何使用包](/help/sites-administering/package-manager.md#package-share).
 
-## 建議的部署 {#recommended-deployments}
+## 建议的部署 {#recommended-deployments}
 
-在AEM Communities中，常用存放區用於儲存使用者產生的內容(UGC)，通常稱為 [儲存資源提供者(SRP)](/help/communities/working-with-srp.md). 建議的部署著重於為通用存放區選擇SRP選項。
+在AEM Communities中，公用存储用于存储用户生成的内容(UGC)，通常称为 [存储资源提供程序(SRP)](/help/communities/working-with-srp.md). 建议的部署侧重于为公用存储选择一个SRP选项。
 
-通用存放區支援在發佈環境中稽核和分析UGC，同時消除了對的需求 [復寫](/help/communities/sync.md) UGC的。
+公用存储支持在发布环境中审核和分析UGC，同时消除了对的必要 [复制](/help/communities/sync.md) UGC的。
 
-* [社群內容存放區](/help/communities/working-with-srp.md) ：討論AEM社群的SRP儲存選項
+* [社区内容存储](/help/communities/working-with-srp.md) ：讨论AEM社区的SRP存储选项
 
-* [建議的拓撲](/help/communities/topologies.md) ：根據使用案例和SRP選擇討論要使用的拓撲
+* [推荐的拓扑](/help/communities/topologies.md) ：根据用例和SRP选择讨论要使用的拓扑
 
-## 升級 {#upgrading}
+## 升级 {#upgrading}
 
-從舊版AEM升級至AEM 6.5平台時，請務必閱讀 [升級至AEM 6.5](/help/sites-deploying/upgrade.md).
+从以前版本的AEM升级到AEM 6.5平台时，请务必阅读 [升级到AEM 6.5](/help/sites-deploying/upgrade.md).
 
-除了升級平台以外，請閱讀 [升級至AEM Communities 6.5](/help/communities/upgrade.md) 以瞭解Communities變更。
+除了升级平台外，请阅读 [升级到AEM Communities 6.5](/help/communities/upgrade.md) 以了解社区更改。
 
 ## 配置 {#configurations}
 
-### 主要發行者 {#primary-publisher}
+### 主要发布者 {#primary-publisher}
 
-當選擇的部署是 [發佈陣列](/help/communities/topologies.md#tarmk-publish-farm)，則必須將一個AEM發佈執行個體識別為 **`primary publisher`** 針對不應該在所有執行個體上發生的活動，例如依賴的功能 **通知** 或 **Adobe Analytics**.
+当选择的部署是 [发布场](/help/communities/topologies.md#tarmk-publish-farm)，则必须将一个AEM发布实例标识为 **`primary publisher`** 对于不应在所有实例上发生的活动，例如依赖以下项的功能 **通知** 或 **Adobe Analytics**.
 
-根據預設， `AEM Communities Publisher Configuration` OSGi設定是使用 **`Primary Publisher`** 核取方塊，讓發佈伺服器陣列中的所有發佈執行個體可自我識別為主要執行個體。
+默认情况下， `AEM Communities Publisher Configuration` OSGi配置使用 **`Primary Publisher`** 选中复选框，以便发布场中的所有发布实例都将自行标识为主发布实例。
 
-因此，有必要 **編輯所有次要發佈執行個體的設定** 取消核取 **`Primary Publisher`** 核取方塊。
+因此，有必要 **编辑所有辅助发布实例上的配置** 取消选中 **`Primary Publisher`** 复选框。
 
-![primary-publisher](assets/primary-publisher.png)
+![primary-publish](assets/primary-publisher.png)
 
-對於發佈伺服器陣列中的所有其他（次要）發佈執行個體：
+对于发布场中的所有其他（辅助）发布实例：
 
-* 以管理員許可權登入
-* 存取 [網頁主控台](/help/sites-deploying/configuring-osgi.md)
+* 使用管理员权限登录
+* 访问 [Web控制台](/help/sites-deploying/configuring-osgi.md)
 
    * 例如， [https://localhost:4503/system/console/configMgr](https://localhost:4503/system/console/configMgr)
 
 * 找到 `AEM Communities Publisher Configuration`
-* 選取編輯圖示
-* 取消勾選 **主要發行者** 方塊
-* 選取 **儲存**
+* 选择编辑图标
+* 取消选中 **主要发布者** 框
+* 选择 **保存**
 
-### 作者上的復寫代理 {#replication-agents-on-author}
+### 创作实例上的复制代理 {#replication-agents-on-author}
 
-復寫可用於在發佈環境中建立的網站內容（例如社群群組），以及使用 [通道服務](#tunnel-service-on-author).
+复制用于发布环境中创建的站点内容，如社区组，以及使用 [隧道服务](#tunnel-service-on-author).
 
-對於主要發行者，請確定 [復寫代理程式設定](/help/sites-deploying/replication.md) 正確識別發佈伺服器和授權使用者。 預設授權使用者， `admin,` 已經擁有適當的許可權(是 `Communities Administrators`)。
+对于主发布者，请确保 [复制代理配置](/help/sites-deploying/replication.md) 正确标识发布服务器和授权用户。 默认授权用户， `admin,` 已经具有相应的权限(是 `Communities Administrators`)。
 
-為了讓其他使用者擁有適當的許可權，必須將其新增為的成員 `administrators` 使用者群組(也是 `Communities Administrators`)。
+为了使其他某个用户具有适当的权限，必须将这些用户作为成员添加到 `administrators` 用户组(也是 `Communities Administrators`)。
 
-製作環境中有兩個復寫代理程式需要正確設定傳輸設定。
+创作环境中有两个复制代理需要正确配置传输配置。
 
-* 存取作者上的復寫主控台
+* 访问创作实例上的复制控制台
 
-   * 從全域導覽，導覽至 **[!UICONTROL 工具]** > **[!UICONTROL 部署]** > **[!UICONTROL 復寫]** > **[!UICONTROL 作者上的代理]**
+   * 在全局导航中，导航到 **[!UICONTROL 工具]** > **[!UICONTROL 部署]** > **[!UICONTROL 复制]** > **[!UICONTROL 作者代理]**
 
-* 兩個代理程式請遵循相同的程式：
+* 对于这两个代理，请遵循相同的过程：
 
-   * **預設代理程式（發佈）**
-   * **反向復寫代理程式（反向發佈）**
+   * **默认代理（发布）**
+   * **反向复制代理（反向发布）**
 
-      1. 選取代理程式
-      1. 選取 **編輯**
-      1. 選取 **傳輸** 標籤
-      1. 若非連線埠 `4503`，編輯 **URI** 指定正確的連線埠
+      1. 选择代理
+      1. 选择 **编辑**
+      1. 选择 **传输** 选项卡
+      1. 如果没有端口 `4503`，编辑 **URI** 指定正确的端口
 
-      1. 若非使用者 `admin`，編輯 **使用者** 和 **密碼** 若要指定 `administrators` 使用者群組
+      1. 如果不是用户 `admin`，编辑 **用户** 和 **密码** 指定以下项的成员： `administrators` 用户组
 
-下列影像顯示透過將連線埠從4503變更為6103的結果：
+下图显示了将端口从4503更改为6103的结果：
 
-#### 預設代理程式（發佈） {#default-agent-publish}
+#### 默认代理（发布） {#default-agent-publish}
 
 ![default-agent-publish](assets/default-agent-publish.png)
 
-#### 反向復寫代理程式（反向發佈） {#reverse-replication-agent-publish-reverse}
+#### 反向复制代理（反向发布） {#reverse-replication-agent-publish-reverse}
 
 ![reverse-replication-agent](assets/reverse-replication-agent.png)
 
-### 作者上的通道服務 {#tunnel-service-on-author}
+### 作者上的隧道服务 {#tunnel-service-on-author}
 
-使用製作環境時 [建立網站](/help/communities/sites-console.md)， [修改網站屬性](/help/communities/sites-console.md#modifying-site-properties) 或 [管理社群成員](/help/communities/members.md)時，必須存取在發佈環境中註冊的成員（使用者），而非在作者中註冊的使用者。
+使用创作环境时 [创建站点](/help/communities/sites-console.md)， [修改站点属性](/help/communities/sites-console.md#modifying-site-properties) 或 [管理社区成员](/help/communities/members.md)时，必须访问在发布环境中注册的成员（用户），而不是访问在作者中注册的用户。
 
-通道服務使用作者上的復寫代理程式提供此存取。
+通道服务使用创作实例上的复制代理提供此访问权限。
 
-若要啟用通道服務：
+启用通道服务：
 
-* 以作者執行個體的管理許可權登入。
-* 如果publisher不是localhost：4503，或傳輸使用者不是 `admin`，則 [設定復寫代理](#replication-agents-on-author)
+* 使用作者实例的管理权限登录。
+* 如果publisher不是localhost：4503，或者传输用户不是 `admin`，则 [配置复制代理](#replication-agents-on-author)
 
-* 存取 [網頁主控台](/help/sites-deploying/configuring-osgi.md)
+* 访问 [Web控制台](/help/sites-deploying/configuring-osgi.md)
 
    * 例如， [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)
 
 * 找到 `AEM Communities Publish Tunnel Service`
-* 選取編輯圖示
-* 檢查 **啟用** 方塊
-* 選取 **儲存**
+* 选择编辑图标
+* 查看 **启用** 框
+* 选择 **保存**
 
    ![tunnel-service](assets/tunnel-service.png)
 
-### 復寫加密金鑰 {#replicate-the-crypto-key}
+### 复制加密密钥 {#replicate-the-crypto-key}
 
-AEM Communities有兩項功能需要所有AEM伺服器執行個體使用相同的加密金鑰。 這些是 [分析](/help/communities/analytics.md) 和 [ASRP](/help/communities/asrp.md).
+AEM Communities有两项功能要求所有AEM服务器实例使用相同的加密密钥。 这些是 [分析](/help/communities/analytics.md) 和 [ASRP](/help/communities/asrp.md).
 
-從AEM 6.3開始，金鑰材料會儲存在檔案系統中，不再儲存在存放庫中。
+从AEM 6.3开始，密钥资料存储在文件系统中，不再存储在存储库中。
 
-若要將主要素材從作者複製到所有其他例項，您必須：
+要将关键资料从创作实例复制到所有其他实例，有必要执行以下操作：
 
-* 存取包含要複製之重要素材的AEM例項，通常是作者例項
+* 访问包含要复制的关键材料的AEM实例，通常是创作实例
 
-   * 找到 `com.adobe.granite.crypto.file` 例如，本機檔案系統中的組合
+   * 找到 `com.adobe.granite.crypto.file` 捆绑包，例如，
 
       * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21`
-      * 此 `bundle.info` 檔案將識別該組合
-   * 導覽至資料夾，例如，
+      * 此 `bundle.info` 文件将标识该捆绑包
+   * 导航到数据文件夹，例如，
 
       * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21/data`
 
-      * 複製hmac和主要節點檔案
+      * 复制hmac和主节点文件
 
 
-* 針對每個目標AEM執行個體
+* 对于每个目标AEM实例
 
-   * 導覽至資料夾，例如，
+   * 导航到数据文件夹，例如，
 
       * `<publish-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21/data`
-   * 貼上先前複製的2個檔案
-   * 必須 [重新整理Granite加密套件組合](#refresh-the-granite-crypto-bundle) 如果目標AEM執行個體目前正在執行
+   * 粘贴之前复制的2个文件
+   * 有必要 [刷新Granite加密包](#refresh-the-granite-crypto-bundle) 目标AEM实例当前是否正在运行
 
 
 >[!CAUTION]
 >
->如果已設定了另一個以加密金鑰為基礎的安全性功能，則複製加密金鑰可能會損壞設定。 如需協助， [聯絡客戶服務](https://helpx.adobe.com/cn/marketing-cloud/contact-support.html).
+>如果已配置了基于加密密钥的其他安全功能，则复制加密密钥可能会损坏配置。 如需帮助， [联系客户关怀团队](https://helpx.adobe.com/cn/marketing-cloud/contact-support.html).
 
-#### 存放庫復寫 {#repository-replication}
+#### 存储库复制 {#repository-replication}
 
-在第一次啟動每個AEM執行個體（這會建立初始存放庫）時，指定下列系統屬性，即可保留存放庫中的金鑰資料(AEM 6.2及舊版的情況相同)：
+将关键资料存储在存储库中(对于AEM 6.2及更早版本)，可以通过在每个AEM实例的首次启动时指定以下系统属性（这将创建初始存储库）来保留：
 
 * `-Dcom.adobe.granite.crypto.file.disable=true`
 
 >[!NOTE]
 >
->務必確認 [作者上的復寫代理](#replication-agents-on-author) 已正確設定。
+>务必确认 [作者上的复制代理](#replication-agents-on-author) 已正确配置。
 
-將金鑰資料儲存在存放庫後，將加密金鑰從作者複製到其他執行個體的方式如下：
+将密钥资料存储在存储库中，将加密密钥从创作实例复制到其他实例的方式如下：
 
 使用 [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md)：
 
-* 瀏覽至 [https://&lt;server>：&lt;port>/crx/de](https://localhost:4502/crx/de)
+* 浏览到 [https://&lt;server>：&lt;port>/crx/de](https://localhost:4502/crx/de)
 * 选择 `/etc/key`
-* 開啟 `Replication` 標籤
+* 打开 `Replication` 选项卡
 * 选择 `Replicate`
 
-* [重新整理Granite加密套件組合](#refresh-the-granite-crypto-bundle)
+* [刷新Granite加密包](#refresh-the-granite-crypto-bundle)
 
-   ![復寫存放庫](assets/replicare-repository.png)
+   ![replicare-repository](assets/replicare-repository.png)
 
-#### 重新整理Granite加密套件組合 {#refresh-the-granite-crypto-bundle}
+#### 刷新Granite加密包 {#refresh-the-granite-crypto-bundle}
 
-* 在每個發佈執行個體上，存取 [網頁主控台](/help/sites-deploying/configuring-osgi.md)
+* 在每个发布实例上，访问 [Web控制台](/help/sites-deploying/configuring-osgi.md)
 
    * 例如， [https://&lt;server>：&lt;port>/system/console/bundles](https://localhost:4503/system/console/bundles)
 
-* 尋找 `Adobe Granite Crypto Support` 套件組合(com.adobe.granite.crypto)
-* 選取 **重新整理**
+* 查找 `Adobe Granite Crypto Support` 包(com.adobe.granite.crypto)
+* 选择 **刷新**
 
-   ![granite-crypto](assets/granite-crypto.png)
+   ![花岗岩密码](assets/granite-crypto.png)
 
-* 過了一會兒， **成功** 對話方塊應會出現：
+* 片刻之后， **成功** 对话框应会出现：
    `Operation completed successfully.`
 
 ### Apache HTTP Server {#apache-http-server}
 
-如果使用Apache HTTP伺服器，請確定您對所有相關專案使用正確的伺服器名稱。
+如果使用Apache HTTP Server，请确保为所有相关条目使用正确的服务器名称。
 
-請特別注意，請使用正確的伺服器名稱，而不是 `localhost`，在 `RedirectMatch`.
+特别是，请注意使用正确的服务器名称，而不是 `localhost`，在 `RedirectMatch`.
 
-#### httpd.conf範例 {#httpd-conf-sample}
+#### httpd.conf示例 {#httpd-conf-sample}
 
 ```shell
 <IfModule alias_module>
@@ -362,17 +362,17 @@ AEM Communities有兩項功能需要所有AEM伺服器執行個體使用相同�
 
 ### Dispatcher {#dispatcher}
 
-如果使用Dispatcher，請參閱：
+如果使用Dispatcher，请参阅：
 
-* AEM [Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html) 檔案
+* AEM [调度程序](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html) 文档
 * [安装 Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-install.html)
-* [為社群設定Dispatcher](/help/communities/dispatcher.md)
+* [为社区配置Dispatcher](/help/communities/dispatcher.md)
 * [已知问题](/help/communities/troubleshooting.md#dispatcher-refetch-fails)
 
-## 相關Communities檔案 {#related-communities-documentation}
+## 相关社区文档 {#related-communities-documentation}
 
-* 造訪 [管理社群網站](/help/communities/administer-landing.md) 瞭解有關建立社群網站、設定社群網站範本、仲裁社群內容、管理成員和設定傳訊功能的資訊。
+* 访问 [管理社区站点](/help/communities/administer-landing.md) 了解有关创建社区站点、配置社区站点模板、审核社区内容、管理成员和配置消息传送的信息。
 
-* 造訪 [開發社群](/help/communities/communities.md) 瞭解社交元件架構(SCF)和自訂Communities元件和功能。
+* 访问 [发展中的社区](/help/communities/communities.md) 了解社交组件框架(SCF)和自定义社区组件和功能。
 
-* 造訪 [Authoring Communities元件](/help/communities/author-communities.md) 瞭解如何使用及設定Communities元件進行創作。
+* 访问 [创作社区组件](/help/communities/author-communities.md) 了解如何使用创作和配置社区组件。

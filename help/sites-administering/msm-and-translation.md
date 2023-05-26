@@ -1,7 +1,7 @@
 ---
-title: 網站管理
+title: 网站管理
 seo-title: Website Administration
-description: 瞭解如何在AEM中管理多語言網站。
+description: 了解如何在AEM中管理多语言网站。
 seo-description: Learn how to manage multilingual websites in AEM.
 uuid: a32d458b-a5ad-46ef-a68c-4717c63b4bdd
 contentOwner: Guillaume Carlino
@@ -17,31 +17,31 @@ ht-degree: 42%
 
 ---
 
-# 網站管理{#website-administration}
+# 网站管理{#website-administration}
 
-下列管理工具可用來管理網站和頁面：
+以下管理工具可用于管理网站和页面：
 
-* 多網站管理員(MSM)可讓您在多個位置使用相同的網站內容，同時允許以下變化：
+* 多站点管理器(MSM)允许您在多个位置使用相同的站点内容，同时允许以下变化：
 
    * [重用内容：多站点管理器和 Live Copy](/help/sites-administering/msm.md)
 
-* 翻譯可讓您自動翻譯頁面內容、資產和使用者產生的內容，以建立和維護多語言網站：
+* 翻译允许您自动翻译页面内容、资产和用户生成的内容，以创建和维护多语言网站：
 
    * [翻译多语言站点的内容](/help/sites-administering/translation.md)
 
-* 這兩個功能可結合使用，以符合以下兩種網站的需求： [跨國及多國語言](#multinational-and-multilingual-sites).
+* 可以结合使用这两种功能，以满足兼具两种功能的网站的需求 [跨国和多语言](#multinational-and-multilingual-sites).
 
 ## 跨国和多语言站点 {#multinational-and-multilingual-sites}
 
-通过结合使用多站点管理器和翻译工作流，您可以高效地为跨国和多语言站点创建内容。針對特定國家/地區，以一種語言建立主要網站，然後將該內容作為其他網站的基礎，並在需要時使用翻譯：
+通过结合使用多站点管理器和翻译工作流，您可以高效地为跨国和多语言站点创建内容。为特定国家/地区以一种语言创建主控站点，然后将该内容用作其他站点的基础，并在需要时使用翻译：
 
 * 将主站点[翻译](/help/sites-administering/translation.md)成其他语言。
 
 * 使用[多站点管理器](/help/sites-administering/msm.md)可以：
 
-   * 重複使用主要網站的內容和翻譯，為其他國家/地區和文化建立網站。
-   * 請務必將多網站管理員的使用限製為使用單一語言的內容，例如，英文母版 — >國網站的英文分支，法文母版 — >國網站的法文分支。
-   * 必要時，請分離即時副本的元素，以新增本地化詳細資訊。
+   * 重复使用主控站点的内容和翻译，为其他国家/地区和文化创建站点。
+   * 确保将多站点管理器的使用限制为使用一种语言的内容，例如，英语主控->国家/地区站点的英语分支，法语主控->国家/地区站点的法语分支。
+   * 如果需要，可分离活动副本的元素以添加本地化详细信息。
 
 下图说明了主要概念的相交部分（但未显示涉及的所有级别/元素）：
 
@@ -51,7 +51,7 @@ ht-degree: 42%
 >
 >在此场景以及类似场景中，MSM 不会管理不同的语言版本。
 >
->* [MSM](/help/sites-administering/msm.md) 管理在語言範圍內從Blueprint （例如全域主版）到即時副本（例如本機站台）的翻譯內容部署。
+>* [MSM](/help/sites-administering/msm.md) 管理在语言边界内从Blueprint(例如全局主控)到活动副本（例如本地站点）的已翻译内容部署。
 >* AEM 的[翻译](/help/sites-administering/translation.md)集成功能与第三方翻译管理服务相结合，可以管理语言并将内容翻译成这些不同的语言。
 >
 >在更高级的用例中，也可以跨语言母版使用 MSM。
@@ -60,7 +60,7 @@ ht-degree: 42%
 >
 >对于所有用例，建议阅读以下最佳实践：
 >
->* [MSM 的最佳实践](/help/sites-administering/msm-best-practices.md)；尤其是：
+>* [MSM 的最佳实践](/help/sites-administering/msm-best-practices.md)；特别是：
    >
    >   * [创建站点](/help/sites-administering/msm-best-practices.md#create-site)
    >   * [MSM 和多语言网站](/help/sites-administering/msm-best-practices.md#msm-and-multilingual-websites)

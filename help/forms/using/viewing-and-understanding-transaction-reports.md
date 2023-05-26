@@ -1,7 +1,7 @@
 ---
-title: 檢視與瞭解交易報表
+title: 查看和了解事务处理报表
 seo-title: Viewing and Understanding Transaction Reports
-description: 使用交易報告，針對產品使用情況以及重新平衡軟硬體投資做出明智的決策。
+description: 使用交易报告，就产品使用情况以及重新平衡硬件和软件投资做出明智的决策。
 seo-description: Use transaction reports to make an informed decision about the product usage and rebalancing investments in hardware and software.
 uuid: 56d9f01d-4778-47c9-bbb2-6650a73a3f59
 topic-tags: forms-manager
@@ -16,82 +16,82 @@ ht-degree: 0%
 
 ---
 
-# 檢視與瞭解交易報表{#viewing-and-understanding-transaction-reports}
+# 查看和了解事务处理报表{#viewing-and-understanding-transaction-reports}
 
-交易報表可讓您擷取及追蹤已提交的表單、已處理檔案及已轉譯檔案數目。 追蹤這些交易的目的在於，針對產品使用狀況做出明智的決策，並重新平衡軟硬體投資。 如需詳細資訊，請參閱 [AEM Forms交易報表概觀](../../forms/using/transaction-reports-overview.md).
+利用事务报表，可捕获和跟踪已提交的表单、已处理的文档和已渲染文档的数量。 跟踪这些交易背后的目标是针对产品使用情况做出明智的决策，并重新平衡硬件和软件方面的投资。 有关更多信息，请参阅 [AEM Forms交易报表概述](../../forms/using/transaction-reports-overview.md).
 
-## 設定交易報告  {#setting-up-transaction-reports}
+## 设置交易报告  {#setting-up-transaction-reports}
 
-交易報告功能屬於AEM Forms附加元件套件的一部分。 如需有關在所有作者和發佈執行個體上安裝附加元件套件的資訊，請參閱 [安裝和設定AEM表單](/help/forms/using/installing-configuring-aem-forms-osgi.md). 安裝AEM Forms附加元件套件後，請執行下列動作：
+事务报表功能作为AEM Forms附加组件包的一部分提供。 有关在所有创作实例和发布实例上安装附加组件包的信息，请参阅 [安装和配置AEM表单](/help/forms/using/installing-configuring-aem-forms-osgi.md). 安装AEM Forms附加组件包后，请执行以下操作：
 
-* 在所有發佈執行個體上啟用反向復寫
-* 啟用交易報告
-* 提供檢視交易報告的許可權
-* （選擇性）設定異動排清期間與寄件匣 [](/help/forms/using/installing-configuring-aem-forms-osgi.md)
+* 在所有发布实例上启用反向复制
+* 启用交易报告
+* 提供查看交易报告的权限
+* （可选）配置事务刷新期间和发件箱 [](/help/forms/using/installing-configuring-aem-forms-osgi.md)
 
 >[!NOTE]
 >
->* AEM Forms交易報表不支援僅包含發佈例項的拓撲。
->* 在使用交易報告之前，請確定已針對所有發佈執行個體啟用反向復寫。
->* 交易資料會從發佈執行個體反向復寫至僅對應的製作或處理執行個體。 作者或處理執行個體無法進一步將資料復寫至其他執行個體。
+>* AEM Forms事务报表不支持仅包含发布实例的拓扑。
+>* 在使用事务报告之前，请确保为所有发布实例启用了反向复制。
+>* 事务数据仅从发布实例反向复制到相应的创作或处理实例。 创作或处理实例无法进一步将数据复制到另一个实例。
 >
 
 
-### 在所有發佈執行個體上啟用反向復寫 {#enable-reverse-replication-on-all-the-publish-instances}
+### 在所有发布实例上启用反向复制 {#enable-reverse-replication-on-all-the-publish-instances}
 
-交易報表會使用反向復寫來合併從發佈執行個體到編寫執行個體的交易計數。 在所有發佈執行個體上設定反向復寫。 如需設定反向復寫的詳細指示，請參閱 [復寫](/help/sites-deploying/replication.md).
+事务报表使用反向复制将事务计数从发布实例合并到创作实例。 在所有发布实例上设置反向复制。 有关设置反向复制的详细说明，请参阅 [复制](/help/sites-deploying/replication.md).
 
-### 啟用交易報告 {#enable-transaction-reports}
+### 启用交易报告 {#enable-transaction-reports}
 
-交易報告預設為停用。 您可以從AEM Web主控台啟用報表。 若要在AEM Forms環境中啟用交易報表，請在所有製作和發佈執行個體上執行下列步驟：
+默认情况下，事务报表处于禁用状态。 您可以从AEM Web Console启用报表。 要在AEM Forms环境中启用事务报表，请在所有创作实例和发布实例上执行以下步骤：
 
-1. 以管理員身分登入AEM執行個體。 前往 **工具** > **作業** > **網頁主控台**.
-1. 找到並開啟 **Forms交易報告** 服務。
-1. 選取「記錄異動」核取方塊。 单击“**保存**”。
+1. 以管理员身份登录到AEM实例。 转到 **工具** > **操作** > **Web控制台**.
+1. 找到并打开 **Forms Transaction Reporting** 服务。
+1. 选择“记录事务处理”复选框。 单击“**保存**”。
 
-   在所有製作和發佈執行個體上重複步驟1至3。
+   对所有创作和发布实例重复步骤1-3。
 
-### 提供檢視交易報告的許可權 {#provide-rights-to-view-a-transaction-report}
+### 提供查看交易报告的权限 {#provide-rights-to-view-a-transaction-report}
 
-只有fd-administrator群組的成員可以檢視交易報告。 若要允許使用者檢視交易報告，請讓使用者成為fd-administrator群組的成員。 如需讓使用者成為AEM群組成員的指示，請參閱 [使用者、群組和存取許可權管理](/help/sites-administering/user-group-ac-admin.md).
+只有fd-administrator组的成员可以查看事务报告。 要允许用户查看事务报告，请使用户成为fd-administrator组的成员。 有关使用户成为AEM组成员的说明，请参阅 [用户、组和访问权限管理](/help/sites-administering/user-group-ac-admin.md).
 
-### （選擇性）設定異動排清期間與寄件匣 {#optional-configure-transaction-flush-period-and-outboxes}
+### （可选）配置事务刷新期间和发件箱 {#optional-configure-transaction-flush-period-and-outboxes}
 
-交易會先在記憶體中快取，再儲存在存放庫中。 會遵循此程式，以確保不會頻繁寫入存放庫。 根據預設，快取期間（「交易排清期間」）設為60秒。 您可以變更預設期間以符合您的環境。 執行以下步驟來變更預設快取期間：
+事务先缓存在内存中，然后再存储到存储库中。 此过程可确保不会频繁写入存储库。 默认情况下，缓存周期（事务刷新周期）设置为60秒。 您可以更改默认时间段以适合您的环境。 执行以下步骤以更改默认缓存周期：
 
-1. 以管理員身分登入作者執行個體。 前往 **工具** > **作業** > **網頁主控台**.
-1. 找到並開啟 **Forms交易存放庫儲存提供者** 服務。
-1. 指定中的秒數 **異動排清期間** 欄位。 单击“**保存**”。
+1. 以管理员身份登录到创作实例。 转到 **工具** > **操作** > **Web控制台**.
+1. 找到并打开 **Forms事务存储库存储提供程序** 服务。
+1. 指定中的秒数 **交易刷新期间** 字段。 单击“**保存**”。
 
-反向復寫會將交易資料複製到製作執行個體的預設寄件匣。 您可以將交易資料放入自訂寄件匣。 執行以下步驟來指定自訂寄件匣：
+反向复制将事务数据复制到创作实例的默认发件箱。 您可以将交易数据放在自定义发件箱中。 执行以下步骤可指定自定义发件箱：
 
-1. 以管理員身分登入作者執行個體。 前往 **工具** > **作業** > **網頁主控台**.
-1. 找到並開啟 **Forms交易存放庫儲存提供者** 服務。
-1. 指定自訂寄件匣的名稱 **寄件匣** 欄位。 单击“**保存**”。會在所有編寫執行個體上建立具有指定名稱的寄件匣。
+1. 以管理员身份登录到创作实例。 转到 **工具** > **操作** > **Web控制台**.
+1. 找到并打开 **Forms事务存储库存储提供程序** 服务。
+1. 指定自定义发件箱的名称 **发件箱** 字段。 单击“**保存**”。将在所有创作实例上创建具有指定名称的发件箱。
 
-## 檢視交易報告 {#viewing-the-transaction-report}
+## 查看事务处理报表 {#viewing-the-transaction-report}
 
-您可以檢視有關作者或發佈執行個體的交易報告。 製作執行個體上的交易報告提供在設定的製作和發佈執行個體上發生的所有交易的彙總總和。 發佈執行個體上的交易報告會提供只發生在基礎發佈執行個體上的交易計數。 執行以下步驟來檢視報表：
+您可以查看有关创作或发布实例的事务报告。 创作实例上的transaction报告提供在配置的创作实例和发布实例上发生的所有事务的总和。 发布实例上的事务报表提供仅在基础发布实例上发生的事务计数。 执行以下步骤以查看报表：
 
-1. 登入AEM Forms伺服器，網址為 `https://[hostname]:'port'`.
-1. 導覽至 **工具** > **Forms**>**檢視交易報告**.
+1. 登录到AEM Forms服务器，网址为 `https://[hostname]:'port'`.
+1. 导航到 **工具** > **Forms**>**查看交易报告**.
 
-## 瞭解報告 {#understanding-the-report}
+## 了解报告 {#understanding-the-report}
 
-AEM Forms會顯示自設定日期以來的交易報表，如下列摘要報表所示：
+AEM Forms显示自配置日期以来的交易报表，如下面的摘要报表所示：
 
 ![sample-transaction-report-author](assets/sample-transaction-report-author.png)
 
-* 使用 **將日期重設為今天** 重設交易記錄的選項。 當您將日期重設為今天時，所有先前的交易記錄都會遺失。 當您在作者執行個體上重設日期時，此變更不會影響「發佈」執行個體上的交易報告，反之亦然。
-* 使用 **僅顯示發佈執行個體的交易** 以檢視只在已設定的發佈執行個體或發佈伺服器陣列上發生的所有交易。
-* 使用類別： **已處理的檔案**， **已呈現的檔案**、和 **Forms已提交** 以檢視對應的交易。 如需這些分類中入帳的交易型態，請參閱 [可記帳交易報表API](../../forms/using/transaction-reports-billable-apis.md).
+* 使用 **将日期重置为今天** 用于重置事务记录的选项。 如果将日期重置为今天，则所有先前的事务记录都将丢失。 在创作实例上重置日期时，此更改不会影响“发布”实例上的事务报表，反之亦然。
+* 使用 **仅显示发布实例的事务** 查看仅在配置的发布实例或发布场上发生的所有事务。
+* 使用类别： **已处理的文档**， **已渲染的文档**、和 **Forms已提交** 以查看相应的交易记录。 有关在这些类别中入帐的交易记录的类型，请参阅 [可记帐交易报告API](../../forms/using/transaction-reports-billable-apis.md).
 
-## 檢視交易報告記錄 {#view-transaction-reporting-logs}
+## 查看事务报告日志 {#view-transaction-reporting-logs}
 
-交易報告會將所有顯示在報告中的資訊和一些其他資訊放入日誌中。 記錄檔中提供的資訊對進階使用者很有幫助。 例如，記錄會將交易分割成多個精細類別，而報告中會顯示三個整合的類別。 記錄檔位於 `error.log` 檔案位於 `/crx-repository/logs/` 目錄。 即使您未從AEM Web主控台啟用交易報告，仍可使用記錄檔。
+交易报告会将报告中显示的所有信息和一些附加信息放置在日志中。 日志中提供的信息对高级用户很有帮助。 例如，日志将事务划分为多个粒度类别，而报告中显示了三个整合的类别。 日志位于 `error.log` 文件位于 `/crx-repository/logs/` 目录。 即使未从AEM Web控制台启用事务报告，日志也可用。
 
 ## 相关文章 {#related-articles}
 
-* [交易報表概觀](../../forms/using/transaction-reports-overview.md)
-* [交易報表可記帳API](../../forms/using/transaction-reports-billable-apis.md)
-* [記錄自訂實作的交易](/help/forms/using/record-transaction-custom-implementation.md)
+* [事务处理报表概览](../../forms/using/transaction-reports-overview.md)
+* [交易报告可记帐API](../../forms/using/transaction-reports-billable-apis.md)
+* [记录自定义实施的交易](/help/forms/using/record-transaction-custom-implementation.md)

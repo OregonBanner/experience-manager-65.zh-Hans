@@ -1,6 +1,6 @@
 ---
-title: 連線到Microsoft&reg； Translator
-description: 瞭解如何將AEM連結至Microsoft&reg； Translator。
+title: 连接到Microsoft&reg； Translator
+description: 了解如何将AEM连接到Microsoft&reg； Translator。
 uuid: 5e3916ec-36a0-4d31-94ff-c340a462411a
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -16,69 +16,69 @@ ht-degree: 11%
 
 ---
 
-# 正在連線到Microsoft® Translator{#connecting-to-microsoft-translator}
+# 连接到Microsoft® Translator{#connecting-to-microsoft-translator}
 
-建立Microsoft® Translator雲端服務的設定，以使用您的Microsoft® Translation帳戶來翻譯AEM頁面內容、社群內容或資產。
+为Microsoft® Translator云服务创建配置以使用您的Microsoft® Translation帐户来翻译AEM页面内容、社区内容或资源。
 
 | 属性 | 描述 |
 |---|---|
 | 翻译标签 | 翻译服务的显示名称。 |
 | 翻译属性 | （可选）对于用户生成的内容，为已翻译文本旁边显示的属性，例如 `Translations by Microsoft`。 |
-| 工作区 ID | （選用）要使用的自訂Microsoft® Translator引擎ID。 |
-| 订阅密钥 | 您的Microsoft® Translator Microsoft®訂閱金鑰。 |
+| 工作区 ID | （可选）要使用的自定义Microsoft® Translator引擎的ID。 |
+| 订阅密钥 | 您的Microsoft® Translator的Microsoft®订阅密钥。 |
 
-建立設定後，您必須 [啟動它](/help/sites-administering/tc-msconf.md#activating-the-translator-service-configurations).
+创建配置后，您必须 [激活它](/help/sites-administering/tc-msconf.md#activating-the-translator-service-configurations).
 
-下列程式會使用觸控最佳化UI來建立Microsoft® Translator設定。
+以下过程使用触屏优化UI创建Microsoft® Translator配置。
 
-1. 在邊欄上，按一下或點選「工具>Cloud Services」。
-1. 在Microsoft® Translator區域中，選取「顯示設定」。
-1. 按一下「可用設定」旁的+連結。
+1. 在边栏上，单击或点按工具>Cloud Services。
+1. 在Microsoft® Translator区域中，选择Show Configurations。
+1. 单击“Available Configurations（可用配置）”旁边的+链接。
 
    ![chlimage_1-382](assets/chlimage_1-382.png)
 
-1. 为您的配置键入标题。標題會識別Cloud Services控制檯和頁面屬性下拉式清單中的設定。 預設名稱是根據標題。 （可选）键入一个名称以用于存储该配置的存储库节点。使用儲存庫節點路徑的Parent Configuration屬性的預設值。
+1. 为您的配置键入标题。标题在“Cloud Services”控制台和页面属性下拉列表中标识该配置。 默认名称基于标题。 （可选）键入一个名称以用于存储该配置的存储库节点。使用作为存储库节点路径的Parent Configuration属性的默认值。
 1. 单击创建。
-1. 在出現的對話方塊中，輸入屬性的值，然後按一下「確定」。
+1. 在出现的对话框中，键入属性的值，然后单击“确定”。
 
-## Microsoft® TranslatorCloud Service設定範例 {#sample-microsoft-translator-cloud-service-configurations}
+## Microsoft® TranslatorCloud Service配置示例 {#sample-microsoft-translator-cloud-service-configurations}
 
-下列Microsoft® Translator雲端服務設定會與Geometrixx範例一起安裝。 某些範例設定使用試用的Microsoft®翻譯帳戶，每月最多允許2,000,000個免費翻譯的字元。
+以下Microsoft® Translator云服务配置将与Geometrixx示例一起安装。 一些示例配置使用试用Microsoft®翻译帐户，每月最多允许200万个免费翻译的字符。
 
-### Microsoft® Translator試用授權 {#microsoft-translator-trial-license}
+### Microsoft® Translator试用许可证 {#microsoft-translator-trial-license}
 
-Microsoft® Translator試用版授權設定是隨Geometrixx Outdoors範例套件一起安裝的範例設定。 此設定使用Microsoft® Translator帳戶，該帳戶具有每月允許2,000,000個已翻譯字元的免費訂閱。
+Microsoft® Translator试用许可证配置是随Geometrixx Outdoors示例包一起安装的示例配置。 此配置使用Microsoft® Translator帐户，该帐户具有免费订阅，每月允许2,000,000个翻译的字符。
 
-### Microsoft® Translator試用版授權 — 戶外Geometrixx {#microsoft-translator-trial-license-geometrixx-outdoors}
+### Microsoft® Translator试用许可证 — Geometrixx {#microsoft-translator-trial-license-geometrixx-outdoors}
 
-Microsoft® Translator試用版授權 — Geometrixx-outdoors設定是隨Geometrixx Outdoors安裝的設定範例。 此設定使用與Microsoft® Translator試用授權設定相同的免費Microsoft® Translator帳戶。 此帳戶提供免費訂閱，每月可允許2,000,000個已翻譯字元。
+Microsoft® Translator试用许可证 — Geometrixx-outdoors配置是随Geometrixx Outdoors一起安装的示例配置。 此配置使用与Microsoft® Translator试用许可证配置相同的免费Microsoft® Translator帐户。 该帐户有一个免费订阅，每月允许2,000,000个翻译的字符。
 
-此Microsoft® Translator設定已針對與Geometrixx Outdoors範例網站的內容型別搭配使用進行最佳化。
+此Microsoft® Translator配置已针对与Geometrixx Outdoors示例站点的内容类型一起使用进行了优化。
 
-### 升級Microsoft® Translator試用授權設定 {#upgrading-the-microsoft-translator-trial-license-configuration}
+### 升级Microsoft® Translator试用许可证配置 {#upgrading-the-microsoft-translator-trial-license-configuration}
 
-Microsoft®翻譯設定頁面提供指向Microsoft®網站的便利連結，以取得足以用於生產系統的帳戶訂閱。
+Microsoft®翻译配置页面提供了指向Microsoft®网站的便利链接，可用于获取足以用于生产系统的帐户订阅。
 
-1. 在邊欄上，按一下或點選「工具>作業>雲端>Cloud Services」。
-1. 在Microsoft® Translator區域中，按一下或點選「 Show Configurations 」，然後按一下或點選「 Microsoft® Translator Trial License (Microsoft® Translation Configuration) 」。
+1. 在边栏上，单击或点按工具>操作>云>Cloud Services。
+1. 在Microsoft® Translator区域中，单击或点按显示配置，然后单击或点按Microsoft® Translator试用许可证(Microsoft® Translation Configuration)。
 
    ![chlimage_1-383](assets/chlimage_1-383.png)
 
-1. 在設定頁面上，按一下升級訂閱。 使用開啟的Microsoft®網頁來設定您的帳戶。
+1. 在配置页面上，单击Upgrade Subscription。 使用打开的Microsoft®网页配置您的帐户。
 
    ![chlimage_1-384](assets/chlimage_1-384.png)
 
-### 自訂Microsoft® Translator引擎 {#customizing-your-microsoft-translator-engine}
+### 自定义Microsoft® Translator引擎 {#customizing-your-microsoft-translator-engine}
 
-Microsoft®翻譯設定頁面提供指向Microsoft®網站的便利連結，以便自訂Microsoft® Translator引擎。 ([https://www.microsoft.com/en-us/research/project/microsoft-translator-hub/](https://www.microsoft.com/en-us/research/project/microsoft-translator-hub/))
+Microsoft®翻译配置页面提供了一个指向Microsoft®网站的便捷链接，可用于自定义您的Microsoft® Translator引擎。 ([https://www.microsoft.com/en-us/research/project/microsoft-translator-hub/](https://www.microsoft.com/en-us/research/project/microsoft-translator-hub/))
 
-1. 在邊欄上，按一下或點選「工具>作業>雲端>Cloud Services」。
-1. 在Microsoft® Translator區域中，按一下或點選「 Show Configurations 」，然後按一下或點選您要自訂的設定。
-1. 在設定頁面上，按一下「自訂轉換器」。 使用開啟的Microsoft®網頁來自訂您的服務。
+1. 在边栏上，单击或点按工具>操作>云>Cloud Services。
+1. 在Microsoft® Translator区域中，单击或点按显示配置，然后单击或点按要自定义的配置。
+1. 在配置页面上，单击Customize Translator。 使用打开的Microsoft®网页自定义您的服务。
 
 ## 激活 Translator 服务配置 {#activating-the-translator-service-configurations}
 
-若要支援復寫至發佈執行個體的翻譯內容，請啟用雲端服務設定。 若要啟用儲存Microsoft® Translator或協力廠商雲端服務設定的存放庫節點，請使用以下方法 [啟動完整截面（樹狀結構）](/help/sites-authoring/publishing-pages.md#publishing-and-unpublishing-a-tree). 这些节点位于以下父节点的下方：
+要支持复制到发布实例的已翻译内容，请激活云服务配置。 要激活存储Microsoft® Translator或第三方云服务配置的存储库节点，请使用的方法 [激活完整部分（树）](/help/sites-authoring/publishing-pages.md#publishing-and-unpublishing-a-tree). 这些节点位于以下父节点的下方：
 
-* Microsoft®翻譯服務：/libs/settings/cloudconfigs/translation/msft-translation
-* 協力廠商翻譯： /etc/cloudservices/machine-translation
+* Microsoft®翻译服务：/libs/settings/cloudconfigs/translation/msft-translation
+* 第三方翻译： /etc/cloudservices/machine-translation

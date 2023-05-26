@@ -1,7 +1,7 @@
 ---
-title: 設定頁面以大量編輯頁面屬性
+title: 配置页面以批量编辑页面属性
 seo-title: Configuring your Page for Bulk Editing of Page Properties
-description: 大量編輯頁面屬性可讓您一次編輯多個頁面的屬性
+description: 批量编辑页面属性允许您同时编辑多个页面的属性
 seo-description: Bulk editing of page properties allows you to edit the properties of multiple pages at once
 uuid: 1ad403d2-4b93-4943-ae45-74bf20705b81
 contentOwner: User
@@ -17,36 +17,36 @@ ht-degree: 5%
 
 ---
 
-# 設定頁面以大量編輯頁面屬性 {#configuring-your-page-for-bulk-editing-of-page-properties}
+# 配置页面以批量编辑页面属性 {#configuring-your-page-for-bulk-editing-of-page-properties}
 
-[大量編輯頁面屬性](/help/sites-authoring/editing-page-properties.md#from-the-sites-console-multiple-pages) 可讓您一次編輯多個頁面的屬性。
+[批量编辑页面属性](/help/sites-authoring/editing-page-properties.md#from-the-sites-console-multiple-pages) 允许您一次编辑多个页面的属性。
 
-由於可能存在不同的值，頁面屬性未啟用作為預設的大量編輯。 必須明確允許（啟用）。 在定義可供大量編輯的頁面屬性時，您需要考慮某些意涵，例如：
+由于可能存在不同的值，因此默认情况下不会启用页面属性以进行批量编辑。 必须明确允许（启用）。 在定义可用于批量编辑的页面属性时，您需要考虑某些影响，例如：
 
-* 某些欄位通常是唯一的；例如頁面標題。 您必須決定在套用一個值時，啟用此類欄位進行大量編輯是否有意義。
-* 某些欄位可能有多個值 — 這在呈現時需要有意義的表示。
+* 某些字段通常是唯一的；例如页面标题。 您必须确定在应用一个值时启用此类字段进行批量编辑是否有意义。
+* 某些字段可能具有多个值 — 这在呈现时需要有意义的表示形式。
 
-   例如，顯示「準備發佈」的核取方塊。 在大量編輯之前，這可能有數個值（例如，就緒、稽核中、進行中）。
+   例如，显示“准备发布”的复选框。 在批量编辑之前，这可能会有多个值（例如，就绪、正在审核、正在进行）。
 
 >[!CAUTION]
 >
->大量編輯頁面屬性為：
+>批量编辑页面属性是：
 >
->* 傳統UI中不提供。
->* 不適用於即時副本中的頁面。
->* 僅適用於具有相同資源型別的頁面。
+>* 在经典UI中不可用。
+>* 对Live Copy中的页面不可用。
+>* 仅适用于具有相同资源类型的页面。
 >
 
 
 >[!NOTE]
 >
->Assets也可進行大量編輯。 其操作大体相同，只有少数几点差别。另請參閱 [編輯多個資產的屬性](/help/assets/metadata.md) 以取得完整資訊。 您可以使用來自訂資產的大量中繼資料編輯器中的欄位 [結構描述編輯器](/help/assets/metadata-schemas.md).
+>批量编辑也可用于Assets。 其操作大体相同，只有少数几点差别。参见 [编辑多个资产的属性](/help/assets/metadata.md) 以获取完整信息。 您可以使用自定义资产的批量元数据编辑器中的字段 [架构编辑器](/help/assets/metadata-schemas.md).
 
-## 啟用欄位 {#enabling-a-field}
+## 启用字段 {#enabling-a-field}
 
 >[!NOTE]
 >
->某些欄位可能有多個值 — 這在呈現時需要有意義的表示。 因此，您應該只啟用下列欄位型別：
+>某些字段可能具有多个值 — 这在呈现时需要有意义的表示形式。 因此，您应该仅启用以下字段类型：
 >
 >* `/libs/granite/ui/components/foundation/form/textfield`
 >* `/libs/granite/ui/components/foundation/form/textarea`
@@ -57,41 +57,41 @@ ht-degree: 5%
 >
 
 
-欄位在頁面元件上已啟用(*not* （在範本上）：
+在页面组件中启用了字段(*非* （在模板上）：
 
-1. 使用CRXDE Lite（或同等方法）開啟頁面元件。
+1. 使用CRXDE Lite（或等效方法）打开页面组件。
 
    例如：`/apps/core/wcm/components/page/v1/page`
 
    >[!NOTE]
    >
-   >此範例假設核心元件已安裝在例項上，如果例項搭配We.Retail範例內容執行則屬於此情況。 請參閱 [核心元件檔案](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans) 以取得詳細資訊。
+   >此示例假定已在实例上安装核心组件，如果实例正在与We.Retail示例内容一起运行，则属于此情况。 请参阅 [核心组件文档](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans) 了解更多信息。
 
-1. 導覽至「 」內的必填欄位。 `cq:dialog` 定義。
-1. 在欄位節點上定義下列屬性：
+1. 导航到 `cq:dialog` 定义。
+1. 在字段节点上定义以下属性：
 
    * **名称**: `allowBulkEdit`
    * **类型**: `Boolean`
    * **值**: `true`
 
-   例如，對於標準頁面 [基礎元件](/help/sites-authoring/default-components-foundation.md)：
+   例如，对于标准页面 [基础组件](/help/sites-authoring/default-components-foundation.md)：
 
    `/libs/foundation/components/page`
 
-   屬性會定義於：
+   将在以下位置定义属性：
 
    `cq:dialog/content/items/tabs/items/basic/items/column/items/onofftime/items/ondate`
 
    >[!CAUTION]
    >
-   >您 ***必須*** 不變更中的任何專案 `/libs` 路徑。
+   >您 ***必须*** 不更改 `/libs` 路径。
    >
-   >這是因為 `/libs` 下次升級執行個體時會被覆寫（而您在套用hotfix或feature pack時很可能會被覆寫）。
+   >这是因为 `/libs` 下次升级实例时将被覆盖（在应用修补程序或功能包时很可能会被覆盖）。
    >
-   >設定和其他變更的建議方法是：
+   >配置和其他更改的推荐方法是：
    >
-   >    1. 重新建立所需專案（即該專案存在於中） `/libs`)下 `/apps`
-   >    1. 進行任何變更 `/apps`
+   >    1. 重新创建所需项目（即该项目存在于中） `/libs`)下 `/apps`
+   >    1. 在中进行任何更改 `/apps`
 
 
-1. 選取 **全部儲存** 以儲存您的更新。
+1. 选择 **全部保存** 以保留您的更新。

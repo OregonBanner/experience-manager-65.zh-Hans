@@ -1,7 +1,7 @@
 ---
-title: AEM Forms的架構和部署拓撲
+title: AEM Forms的架构和部署拓扑
 seo-title: Architecture and deployment topologies for AEM Forms
-description: AEM Forms的架構詳細資料，以及針對新客戶和現有AEM客戶以及從LiveCycleES4升級至AEM Forms的客戶建議的拓撲。
+description: AEM Forms的架构详细信息，以及面向新客户和现有AEM客户以及从LiveCycleES4升级到AEM Forms的客户推荐的拓扑。
 seo-description: Architecture details for AEM Forms and recommended topologies for new and existing AEM customers and customers upgrading from LiveCycle ES4 to AEM Forms.
 uuid: 90baa57a-4785-4b49-844c-a44717d3c12d
 content-type: reference
@@ -18,130 +18,130 @@ ht-degree: 0%
 
 ---
 
-# AEM Forms的架構和部署拓撲 {#architecture-and-deployment-topologies-for-aem-forms}
+# AEM Forms的架构和部署拓扑 {#architecture-and-deployment-topologies-for-aem-forms}
 
 ## 架构 {#architecture}
 
-AEM Forms是部署至AEM的應用程式，做為AEM套件。 此套件稱為AEM Forms附加元件套件。 AEM Forms附加元件套件包含部署至AEM OSGi容器中的服務（API提供者），以及由AEM Sling架構管理的servlet或JSP （提供前端和REST API功能）。 下圖說明此設定：
+AEM Forms是作为AEM包部署到AEM中的应用程序。 此包称为AEM Forms附加组件包。 AEM Forms附加组件包包含部署到AEM OSGi容器中的服务（API提供程序）和由AEM Sling框架管理的servlet或JSP（提供前端和REST API功能）。 下图描述了此设置：
 
 ![架构](assets/architecture.png)
 
-AEM Forms的架構包括下列元件：
+AEM Forms的架构包含以下组件：
 
-* **核心AEM服務：** AEM提供給已部署應用程式的基本服務。 這些服務包括符合JCR規範的內容存放庫、OSGI服務容器、工作流程引擎、信任存放區、金鑰存放區等。 AEM Forms應用程式可以使用這些服務，但AEM Forms套件不提供這些服務。 這些服務是整體AEM棧疊不可或缺的一部分，各種AEM Forms元件都使用這些服務。
-* **Forms服務：** 提供與表單相關的功能，例如建立、組合、散發和封存PDF檔案、新增數位簽名以限制對檔案的存取，以及對條碼表單進行解碼。 這些服務可公開供AEM中共同部署的自訂程式碼使用。
-* **網頁層：** 建立在通用和表單服務之上的JSP或servlet，可提供下列功能：
+* **核心AEM服务：** AEM为已部署的应用程序提供的基本服务。 这些服务包括符合JCR的内容存储库、OSGI服务容器、工作流引擎、信任存储、密钥存储等。 AEM Forms应用程序可以使用这些服务，但AEM Forms包不提供这些服务。 这些服务是整个AEM栈栈的组成部分，各种AEM Forms组件都使用这些服务。
+* **Forms服务：** 提供与表单相关的功能，如创建、汇编、分发和存档PDF文档，添加数字签名以限制对文档的访问，以及对条形码表单进行解码。 这些服务可公开供在AEM中联合部署的自定义代码使用。
+* **Web层：** JSP或servlet，基于常用服务和表单服务构建，提供以下功能：
 
-   * **製作前端**：表單製作和表單管理使用者介面，用於製作和管理表單。
-   * **表單轉譯和提交前端**：使用者介面，供AEM Forms的一般使用者（例如存取政府網站的公民）使用。 此功能提供表單轉譯（在網頁瀏覽器中顯示表單）和提交功能。
-   * **REST API**：JSP和servlet會匯出表單服務的子集，以供以HTTP為基礎的使用者端（例如forms mobile SDK）從遠端使用。
+   * **创作前端**：用于创作和管理表单的表单创作和表单管理用户界面。
+   * **表单呈现和提交前端**：面向最终用户的界面，供AEM Forms的最终用户（例如，访问政府网站的公民）使用。 这提供了表单演绎版（在Web浏览器中显示表单）和提交功能。
+   * **REST API**：JSP和servlet导出表单服务的子集，以供基于HTTP的客户端（例如forms mobile SDK）远程使用。
 
-**OSGi上的AEM Forms：** OSGi環境上的AEM Forms是標準AEM Author或部署了AEM Forms套件的AEM Publish 。 您可以在的OSGi上執行AEM Forms [單一伺服器環境、伺服陣列和叢集設定](/help/sites-deploying/recommended-deploys.md). 叢集設定僅適用於AEM作者執行個體。
+**OSGi上的AEM Forms：** OSGi环境上的AEM Forms是标准的AEM Author或AEM Publish ，并在其中部署了AEM Forms包。 您可以在OSGi上运行AEM Forms [单服务器环境、群组和群集设置](/help/sites-deploying/recommended-deploys.md). 群集设置仅适用于AEM创作实例。
 
-**JEE版AEM Forms：** JEE上的AEM Forms是在JEE棧疊上執行的AEM Forms伺服器。 其透過AEM Forms附加元件套件和其他AEM Forms JEE功能，搭配AEM Author部署於應用程式伺服器上執行的單一JEE棧疊上。 您可以在單一伺服器和叢集設定中在JEE上執行AEM Forms。 只有執行Document Security、程式管理，以及升級至AEM Forms的LiveCycle客戶時，才需要JEE上的AEM Forms。 以下是一些在JEE上使用AEM Forms的其他案例：
+**JEE上的AEM Forms：** JEE上的AEM Forms是在JEE栈栈上运行的AEM Forms服务器。 它在应用程序服务器中运行的一个JEE栈栈上共同部署了包含AEM Forms附加组件包的AEM Author以及其他AEM Forms JEE功能。 您可以在单服务器和群集设置中在JEE上运行AEM Forms。 只有运行Document Security、流程管理以及升级到AEM Forms的LiveCycle客户才需要AEM Forms on JEE。 以下是一些在JEE上使用AEM Forms的其他场景：
 
-* **HTML workspace支援(適用於使用HTML workspace的客戶)：** JEE上的AEM Forms可透過處理執行個體啟用單一登入、為處理執行個體上呈現的特定資產提供服務，並處理HTML工作區中呈現的表單提交。
-* **進階額外表單/互動式通訊資料處理**：在需要進階程式管理功能的複雜使用案例中，可使用JEE上的AEM Forms額外處理表單/互動式通訊資料（並將結果儲存至適當的資料存放區）。
+* **HTML工作区支持(适用于使用HTML工作区的客户)：** JEE上的AEM Forms支持通过处理实例进行单点登录，为处理实例上渲染的特定资源提供服务，并处理HTML工作区中渲染的表单提交。
+* **高级附加表单/交互式通信数据处理**：在需要高级流程管理功能的复杂用例中，可以使用JEE上的AEM Forms来额外处理表单/交互式通信数据（并将结果保存到合适的数据存储中）。
 
-JEE上的AEM Forms也包含對AEM元件提供下列支援服務：
+JEE上的AEM Forms还向AEM组件提供以下支持服务：
 
-* **整合式使用者管理：** 可讓JEE上的AEM Forms使用者在OSGi使用者上辨識為AEM表單，並有助於為OSGi和JEE使用者啟用SSO。 若需要在OSGi上的AEM表單與JEE上的AEM Forms之間進行單一登入(例如HTML工作區)，則需要此專案。
-* **資產託管：** JEE上的AEM Forms可以提供OSGi上在AEM Forms上演算的資產(例如HTML5表單)。
+* **集成的用户管理：** 允许将JEE上的AEM Forms用户识别为OSGi用户上的AEM表单，并帮助为OSGi和JEE用户启用SSO。 对于需要在OSGi上的AEM表单与JEE上的AEM Forms之间进行单点登录的情况(例如，HTML工作区)，这是必需的。
+* **资产托管：** JEE上的AEM Forms可以提供在OSGi上的AEM Forms上渲染的资源(例如，HTML5表单)。
 
-AEM Forms製作使用者介面不支援建立記錄檔案(DOR)、PDF forms和HTML5 Forms。 這類資產是使用獨立的Forms Designer應用程式設計而成，並分別上傳至AEM Forms Manager。 或者，對於JEE版AEM Forms，可將表單設計成應用程式(在AEM Forms Workbench中)資產，並部署至JEE伺服器上的AEM Forms。
+AEM Forms创作用户界面不支持创建记录文档(DOR)、PDF forms和HTML5 Forms。 此类资源是使用独立的Forms Designer应用程序设计的，并分别上传到AEM Forms Manager。 或者，对于JEE上的AEM Forms，可以将表单设计为(在AEM Forms Workbench中)应用程序资产，并将其部署到JEE服务器上的AEM Forms中。
 
-OSGi上的AEM Forms和JEE上的AEM Forms都有工作流程功能。 您可以在OSGi上的AEM表單上快速建立及部署各種任務的基本工作流程，而無須在JEE上安裝AEM Forms的全方位流程管理功能。 兩者有一些差異 [OSGi上AEM Forms的表單中心工作流程功能和JEE上AEM Forms的流程管理功能](capabilities-osgi-jee-workflows.md). 在OSGi上開發和管理AEM Forms的表單中心工作流程，會使用熟悉的AEM Workflow和AEM Inbox功能。
+OSGi上的AEM Forms和JEE上的AEM Forms都具有工作流功能。 您可以在OSGi上的AEM表单上快速构建和部署用于各种任务的基本工作流，而无需在JEE上安装AEM Forms的全套流程管理功能。 以下内容有一些区别 [OSGi上AEM Forms的以表单为中心的工作流的功能和JEE上AEM Forms的流程管理功能](capabilities-osgi-jee-workflows.md). 在OSGi上的AEM Forms上开发和管理以表单为中心的工作流，使用的是熟悉的AEM Workflow和AEM Inbox功能。
 
-## 術語 {#terminologies}
+## 术语 {#terminologies}
 
-下圖顯示典型AEM Forms部署中使用的各種AEM表單伺服器設定及其元件：
+下图显示了典型AEM Forms部署中使用的各种AEM表单服务器配置及其组件：
 
 ![aem_forms_-_recommendedtopology](assets/aem_forms_-_recommendedtopology.png)
 
-**作者：** 製作執行個體是在標準制作執行模式中執行的AEM Forms伺服器。 這可以是JEE上的AEM Forms或OSGi環境上的AEM Forms 。 此範本適用於內部使用者、表單和互動式通訊設計人員以及開發人員。 可啟用下列功能：
+**作者：** 创作实例是在标准创作运行模式下运行的AEM Forms服务器。 它可以是JEE上的AEM Forms或OSGi环境上的AEM Forms。 它面向内部用户、表单和交互式通信设计人员以及开发人员。 它支持以下功能：
 
-* **製作及管理表單與互動式通訊：** 設計人員和開發人員可以建立和編輯最適化表單和互動式通訊，上傳外部建立的其他型別表單，例如在AdobeForms Designer中建立的表單，並使用Forms Manager主控台管理這些資產。
-* **表單與互動式通訊發佈：** 在製作執行個體上託管的資產可以發佈到發佈執行個體來執行執行階段作業。 資產發佈會使用AEM復寫功能。 Adobe建議您在所有author執行個體上設定復寫代理程式，以手動方式將發佈的表單推播到處理執行個體，並在處理執行個體上設定另一個復寫代理程式，使用 *接收時* 觸發器已啟用，可自動將收到的表單復寫至發佈例項。
+* **创作和管理表单和交互式通信：** 设计人员和开发人员可以创建和编辑自适应表单和交互式通信，上传外部创建的其他类型的表单，例如在AdobeForms Designer中创建的表单，并使用Forms Manager控制台管理这些资源。
+* **表单和交互式通信发布：** 可以将在创作实例上托管的资产发布到发布实例以执行运行时操作。 资产发布使用AEM复制功能。 Adobe建议在所有创作实例上配置复制代理，以手动将发布的表单推送到处理实例，并在使用处理实例时配置另一个复制代理 *接收时* 触发器已启用，可自动将收到的表单复制到发布实例。
 
-**發佈：** 發佈執行個體是在標準發佈執行模式下執行的AEM Forms伺服器。 發佈例項適用於表單式應用程式的一般使用者，例如存取公共網站和提交表單的使用者。 可啟用下列功能：
+**发布：** 发布实例是在标准发布运行模式下运行的AEM Forms服务器。 发布实例适用于基于表单的应用程序的最终用户，例如访问公共网站和提交表单的用户。 它支持以下功能：
 
-* 為一般使用者呈現和提交Forms。
-* 將原始提交的表單資料傳輸至處理執行個體，以便在最終記錄系統中進一步處理和儲存。 AEM Forms中提供的預設實作可使用AEM的反向復寫功能來達成此目的。 您也可以使用替代實作，將表單資料直接推送至處理伺服器，而非先在本機儲存（後者是啟用反向復寫的先決條件）。 擔心發佈執行個體上儲存潛在敏感資料的客戶可以提出此問題 [替代實作](/help/forms/using/configuring-draft-submission-storage.md)，因為處理執行個體通常位在較安全的區域中。
-* 呈現和提互動動式通訊和信件：在發佈執行個體上呈現互動式通訊和信件，並將對應的資料提交至處理執行個體，以進行儲存和後處理。 資料可以儲存在發佈執行個體本機上，並在稍後反向複製到處理執行個體（預設選項），或直接推送至處理執行個體，而不儲存在發佈執行個體上。 後者的實作對於注重安全性的客戶很有用。
+* 呈现和提交最终用户的Forms。
+* 将原始提交的表单数据传输到处理实例，以供在最终记录系统中进一步处理和存储。 AEM Forms中提供的默认实施会使用AEM的反向复制功能来实现这一点。 还有一种替代实施可用于将表单数据直接推送到处理服务器，而不是先在本地保存（后者是激活反向复制的先决条件）。 如果客户担心发布实例上可能存在的敏感数据的存储，则可以加入讨论 [替代实施](/help/forms/using/configuring-draft-submission-storage.md)，因为处理实例通常位于更安全的区域中。
+* 呈现和提交交互式通信和信件：在发布实例上呈现交互式通信和信件，并将相应数据提交到处理实例以供存储和后处理。 数据可以保存在发布实例本地，稍后反向复制到处理实例（默认选项），也可以直接推送到处理实例，而不保存在发布实例上。 后一种实施对于注重安全的客户非常有用。
 
-**處理中：** AEM Forms的執行個體會在作者執行模式下執行，且未將使用者指派給表單管理員群組。 您可以在JEE上部署AEM Forms，或在OSGi上部署AEM Forms作為處理執行個體。 系統不會指派使用者，以確保系統不會在處理執行個體上執行表單撰寫和管理活動，而只會發生在編寫執行個體上。 處理執行個體可啟用下列功能：
+**正在处理：** AEM Forms实例在创作运行模式下运行，未将任何用户分配给forms-manager组。 您可以在JEE上部署AEM Forms，或在OSGi上部署AEM Forms作为处理实例。 未分配用户以确保表单创作和管理活动不在处理实例上执行，并且仅在创作实例上发生。 处理实例可启用以下功能：
 
-* **處理從Publish執行個體到達的原始表單資料：** 這主要是透過AEM工作流程在處理執行個體上達成，此工作流程會在資料到達時觸發。 工作流程可以使用提供的現成可用表單資料模型步驟，將資料或檔案封存到適當的資料存放區。
-* **安全儲存表單資料**：處理作業會針對與使用者隔離的原始表單資料，提供防火牆後的存放庫。 Author執行個體的表單設計人員和Publish執行個體的一般使用者都無法存取此存放庫。
+* **处理从Publish实例到达的原始表单数据：** 这主要是在处理实例上通过AEM工作流实现，该工作流会在数据到达时触发。 工作流可以使用提供的现成表单数据模型步骤，将数据或文档存档到适当的数据存储中。
+* **安全存储表单数据**：处理过程为与用户隔离的原始表单数据提供了一个防火墙后的存储库。 创作实例上的表单设计人员或发布实例上的最终用户均无法访问此存储库。
 
    >[!NOTE]
    >
-   >Adobe建議使用協力廠商資料存放區來儲存最終處理的資料，而非使用AEM存放庫。
+   >Adobe建议使用第三方数据存储来保存最终处理数据，而不是使用AEM存储库。
 
-* **對從Publish執行個體到達的對應資料進行儲存和後處理：** AEM工作流程會針對對應的字母定義執行選擇性後續處理。 這些工作流程可將最終處理的資料儲存至適當的外部資料存放區。
+* **对从Publish实例到达的对应数据的存储和后处理：** AEM工作流对相应的书信定义执行可选的后处理。 这些工作流可以将最终处理的数据保存到合适的外部数据存储中。
 
-* **HTML Workspace託管**：處理執行個體會託管HTML Workspace的前端。 HTML工作區為稽核和核准流程提供相關任務/群組指派的UI。
+* **HTML工作区托管**：处理实例托管HTML工作区的前端。 HTML工作区为审阅和批准流程提供了相关任务/组分配的UI。
 
-處理執行個體設定為在作者執行模式下執行，原因如下：
+处理实例配置为在创作运行模式下运行，因为：
 
-* 它可讓您從發佈執行個體反向復寫原始表單資料。 預設的資料儲存處理常式需要反向復寫功能。
-* AEM工作流程是處理從發佈執行個體到達的原始表單資料的主要方式，建議您在作者樣式系統上執行。
+* 它允许从发布实例反向复制原始表单数据。 默认数据存储处理程序需要反向复制功能。
+* AEM Workflow是处理从Publish实例到达的原始表单数据的主要方法，建议在创作样式系统上运行。
 
-## JEE上AEM Forms的實體拓撲範例 {#sample-physical-topologies-for-aem-forms-on-jee}
+## JEE上AEM Forms的物理拓扑示例 {#sample-physical-topologies-for-aem-forms-on-jee}
 
-以下建議的JEE版AEM Forms拓撲主要是供從JEE版LiveCycle或舊版AEM Forms升級的客戶使用。 Adobe建議在OSGi上使用AEM Forms進行全新安裝。 JEE全新安裝AEM Forms僅建議使用檔案安全性和程式管理功能。
+下面推荐的AEM Forms on JEE拓扑主要适用于从JEE上的LiveCycle或以前版本的AEM Forms进行升级的客户。 Adobe建议在OSGi上使用AEM Forms进行全新安装。 建议在JEE上全新安装AEM Forms，但仅建议使用Document Security和流程管理功能。
 
-### 使用Document Services或Document Security功能的拓朴 {#topology-for-using-document-services-or-document-security-capabilities}
+### 用于使用Document Services或Document Security功能的拓扑 {#topology-for-using-document-services-or-document-security-capabilities}
 
-計畫僅使用Document Services或Document Security功能的AEM Forms客戶可擁有類似於以下顯示的拓撲。 此拓撲建議使用單一AEM Forms例項。 如有需要，您也可以建立AEM Forms伺服器的叢集或陣列。 當大部分使用者以程式設計方式存取AEM Forms伺服器的功能，且透過使用者介面的干預最小時，建議使用此拓撲。 此拓撲有助於檔案服務的批次處理操作。 例如，每天使用輸出服務建立數百份不可編輯的PDF檔案。
+计划仅使用Document Services或Document Security功能的AEM Forms客户可以具有与下面显示的拓扑类似的拓扑。 此拓扑建议使用单个AEM Forms实例。 如有必要，您还可以创建AEM Forms服务器的群集或场。 当大多数用户以编程方式访问AEM Forms服务器的功能且通过用户界面进行干预最小时，建议使用此拓扑。 该拓扑有助于文档服务的批处理操作。 例如，使用输出服务每天创建数百个不可编辑的PDF文档。
 
-雖然AEM Forms可讓您從單一伺服器設定並執行所有功能，但您仍應執行容量規劃、負載平衡，並為生產環境中的特定功能設定專用伺服器。 例如，在使用PDF產生器服務的環境中，每天轉換數千頁並新增數位簽名以限制對檔案的存取，請為PDF產生器服務和數位簽名功能設定單獨的AEM Forms伺服器。 它有助於提供最佳效能，並獨立擴充伺服器。
+虽然AEM Forms允许您从一台服务器设置和运行所有功能，但您应该进行容量规划、负载平衡，并为生产环境中的特定功能设置专用服务器。 例如，对于使用PDF生成器服务每天转换数千页并添加数字签名以限制访问文档的环境，请为PDF生成器服务和数字签名功能设置单独的AEM Forms服务器。 它有助于提供最佳性能并扩展彼此独立的服务器。
 
 ![基本功能](assets/basic-features.png)
 
-### 使用AEM Forms程式管理的拓撲 {#topology-for-using-aem-forms-process-management}
+### 使用AEM Forms进程管理的拓扑 {#topology-for-using-aem-forms-process-management}
 
-例如，計畫使用AEM Forms流程管理功能的AEM Forms客戶，HTML Workspace可擁有類似於以下顯示的拓撲。 JEE伺服器上的AEM Forms可以在單一伺服器或叢集設定中。
+计划使用AEM Forms流程管理功能的AEM Forms客户，例如，HTML工作区可以具有与下面显示的拓扑类似的拓扑。 JEE服务器上的AEM Forms可以位于单个服务器或群集配置中。
 
-如果您從LiveCycleES4升級，此拓撲會密切映象您在LiveCycle中已有的內容，除了在JEE上新增AEM Author內建到AEM Forms。 此外，執行升級之客戶的叢集需求並沒有改變。 如果您在叢集環境中使用AEM Forms，則可以在AEM 6.5 Forms中繼續使用相同功能。 若要重新安裝JEE的AEM Forms以使用HTML Workspace，則需額外執行內建於JEE環境的AEM編寫執行個體。
+如果您从LiveCycleES4升级，此拓扑与LiveCycle中已有的内容紧密镜像，但AEM Author内置到AEM Forms on JEE的除外。 此外，执行升级的客户对群集的要求没有变化。 如果您在群集环境中使用AEM Forms，则可以在AEM 6.5 Forms中继续使用相同功能。 要重新安装AEM Forms of JEE以使用HTML工作区，还需要运行内置于JEE环境中的AEM创作实例。
 
-表單資料存放區是協力廠商資料存放區，用於儲存表單和互動式通訊的最終處理資料。 這是拓撲中的選用元素。 您也可以選擇設定處理執行個體，並視需要將其儲存庫用作最終記錄系統。
+表单数据存储是第三方数据存储库，用于存储表单和交互式通信的最终处理数据。 这是拓扑中的可选元素。 您还可以选择设置处理实例，并在必要时将其存储库用作最终记录系统。
 
 ![topology_for_usinghtmlworkspaceandformsapp](assets/topology_for_usinghtmlworkspaceandformsapp.png)
 
-此拓撲建議給打算使用JEE伺服器上的AEM Forms進行程式管理功能(HTML工作區)的客戶，而不使用任何後處理、調適型表單、HTML5表單和互動式通訊功能。
+此拓扑建议计划使用JEE Server上的AEM Forms实现流程管理功能(HTML工作区)的客户不使用任何后处理、自适应表单、HTML5表单和交互式通信功能。
 
-### 使用最適化表單、HTML5表單、互動式通訊功能的拓撲 {#topology-for-using-adaptive-forms-html-forms-interactive-communication-capabilities}
+### 使用自适应表单、HTML5表单和交互式通信功能的拓扑 {#topology-for-using-adaptive-forms-html-forms-interactive-communication-capabilities}
 
-計畫使用AEM Forms資料擷取功能(例如最適化表單、HTML5 Forms、PDF forms)的AEM Forms客戶，可擁有類似於以下顯示的拓撲。 在使用AEM Forms的互動式通訊功能時，也建議使用此拓撲。
+计划使用AEM Forms数据捕获功能(例如，自适应表单、HTML5 Forms、PDF forms)的AEM Forms客户可以具有与下面显示的拓扑类似的拓扑。 此外，还建议将此拓扑用于使用AEM Forms的交互式通信功能。
 
 ![topology-for-using-forms-osgi-modules](assets/topology-for-using-forms-osgi-modules.png)
 
-您可以對上述建議的拓撲進行下列變更/自訂：
+您可以对上述建议的拓扑进行以下更改/定制：
 
-* 使用HTML Workspace和AEM Forms應用程式需要AEM作者或處理執行個體。 您可以使用JEE伺服器上AEM Forms內建的AEM作者執行個體，而不需要設定額外的外部AEM作者伺服器。
-* 只有在OSGi、適用性表單、表單入口網站和互動式通訊中，以Forms為中心的工作流程，才需要AEM作者或處理執行個體。
-* 互動式通訊Agent UI通常在組織內執行。 因此，您可以在私人網路內保留代理程式UI的發佈伺服器。
-* JEE伺服器上AEM Forms內建的OSGi執行個體上的AEM表單也可以在OSGi和Watched資料夾上執行Forms中心的工作流程。
+* 使用HTML工作区和AEM Forms应用程序需要AEM创作或处理实例。 您可以使用JEE服务器上AEM Forms的内置AEM创作实例，而不是设置额外的外部AEM创作服务器。
+* 只有在OSGi、自适应表单、表单门户和交互式通信中以Forms为中心的工作流，才需要AEM创作或处理实例。
+* 交互式通信代理UI通常在组织内运行。 因此，您可以在专用网络中为代理UI保留发布服务器。
+* JEE服务器上AEM Forms内置的OSGi实例上的AEM表单也可以在OSGi和Watched文件夹上运行以Forms为中心的工作流。
 
-## 在OSGi上使用AEM Forms的實體拓撲範例 {#sample-physical-topologies-for-using-aem-forms-on-osgi}
+## 在OSGi上使用AEM Forms的物理拓扑示例 {#sample-physical-topologies-for-using-aem-forms-on-osgi}
 
-### 資料擷取、互動式通訊的拓撲，以及OSGi功能的表單導向工作流程 {#topology-for-data-capture-interactive-communication-form-centric-workflow-on-osgi-capabilities}
+### 数据捕获、交互式通信以及OSGi功能上的以表单为中心的工作流的拓扑 {#topology-for-data-capture-interactive-communication-form-centric-workflow-on-osgi-capabilities}
 
-計畫使用AEM Forms資料擷取功能(例如最適化表單、HTML5 Forms、PDF forms)的AEM Forms客戶，可擁有類似於以下顯示的拓撲。 在OSGi功能上使用互動式通訊和Forms為中心的工作流程時，也建議使用此拓撲，例如，使用AEM收件匣和AEM Forms應用程式進行業務流程工作流程。
+计划使用AEM Forms数据捕获功能(例如，自适应表单、HTML5 Forms、PDF forms)的AEM Forms客户可以具有与下面显示的拓扑类似的拓扑。 此外，还建议将此拓扑用于在OSGi功能上使用交互式通信以及以Forms为中心的工作流，例如，将AEM收件箱和AEM Forms应用程序用于业务流程工作流。
 
 ![interactive-use-cases-af-cm-osgi-workflow](assets/interactive-use-cases-af-cm-osgi-workflow.png)
 
-### 使用watched資料夾功能進行離線批次處理的拓撲 {#topology-for-using-watched-folder-capabilities-for-offline-batch-processing}
+### 用于脱机批处理的Watched文件夹功能的拓扑 {#topology-for-using-watched-folder-capabilities-for-offline-batch-processing}
 
-計畫使用Watched資料夾進行批次處理的AEM Forms客戶可擁有類似於以下所示的拓撲。 拓撲會顯示叢集環境，但您決定根據負載使用單一執行個體或AEM Forms伺服器陣列。 第三方資料來源是您自己的記錄系統。 它可作為Watched資料夾的輸入來源。 拓撲也會以列印檔案的形式顯示輸出。 您也可以將輸出內容儲存至檔案系統、透過電子郵件傳送，以及使用其他自訂方法來使用輸出。
+计划使用Watched文件夹进行批处理的AEM Forms客户可以具有与下面显示的拓扑类似的拓扑。 拓扑显示一个群集环境，但您决定根据负载使用单个实例或AEM Forms服务器场。 第三方数据源是您自己的记录系统。 它用作Watched文件夹的输入源。 拓扑还会以打印文件的形式显示输出。 您还可以将输出内容存储到文件系统、通过电子邮件发送以及使用其他自定义方法使用输出。
 
 ![offline-batch-processing-via-watched-folders](assets/offline-batch-processing-via-watched-folders.png)
 
-### 使用檔案服務功能進行離線API型處理的拓撲 {#topology-for-using-document-services-capabilities-for-offline-api-based-processing}
+### 使用文档服务功能进行基于API的脱机处理的拓扑 {#topology-for-using-document-services-capabilities-for-offline-api-based-processing}
 
-計畫僅使用document services功能的AEM Forms客戶可擁有類似於以下所示的拓撲。 此拓撲建議在OSGi伺服器上使用AEM Forms叢集。 當大部分使用者以程式設計（使用API）方式存取AEM Forms伺服器的功能，且透過使用者介面的干預最小時，建議使用此拓撲。 此拓撲在多個軟體使用者端案例中相當實用。 例如，使用PDF產生器服務來依需求建立PDF檔案的多個使用者端。
+计划仅使用document services功能的AEM Forms客户可以具有与下面显示的拓扑类似的拓扑。 此拓扑建议在OSGi服务器上使用AEM Forms集群。 当大多数用户以编程方式（使用API）访问AEM Forms服务器的功能并通过用户界面进行干预最小时，建议使用此拓扑。 该拓扑在多个软件客户端场景中非常有用。 例如，多个客户端使用PDF生成器服务按需创建PDF文档。
 
-雖然AEM Forms可讓您從單一伺服器設定並執行所有功能，但您應執行容量規劃、負載平衡，並為生產環境中的特定功能設定專用伺服器。 例如，若環境使用PDF產生器服務每天轉換數千頁頁面，並使用多個調適型表單來擷取資料，請為PDF產生器服務和調適型表單功能設定個別的AEM Forms伺服器。 它有助於提供最佳效能，並獨立擴充伺服器。
+虽然AEM Forms允许您从一台服务器设置和运行所有功能，但您应该执行容量规划、负载平衡，并为生产环境中的特定功能设置专用服务器。 例如，对于使用PDF生成器服务每天转换数千页以及使用多个自适应表单捕获数据的环境，请为PDF生成器服务和自适应表单功能设置单独的AEM Forms服务器。 它有助于提供最佳性能并扩展彼此独立的服务器。
 
-![offline-api型處理](assets/offline-api-based-processing.png)
+![离线基于api的处理](assets/offline-api-based-processing.png)

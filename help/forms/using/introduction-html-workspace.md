@@ -1,7 +1,7 @@
 ---
-title: AEM Forms工作區簡介
+title: AEM Forms工作区简介
 seo-title: Introduction to AEM Forms workspace
-description: 使用LiveCycleAEM Forms工作區，透過業務流程自動化提高組織效率並建立無紙化辦公室。
+description: 使用LiveCycleAEM Forms workspace通过业务流程自动化提高组织效率并创建无纸化办公室。
 seo-description: Increase org efficiency and create paperless office by business process automation using LiveCycle AEM Forms workspace.
 uuid: 6493101e-1030-4579-8bb1-4825cffe8fa3
 contentOwner: robhagat
@@ -18,17 +18,17 @@ ht-degree: 0%
 
 ---
 
-# AEM Forms工作區簡介{#introduction-to-aem-forms-workspace}
+# AEM Forms工作区简介{#introduction-to-aem-forms-workspace}
 
-Forms工作流程可自動化重要檔案及表單相關業務流程，並提供相關可見度，提升組織效率。 使用「程式管理」模組，您可以建立可線上或離線存取的簡化端對端工作流程，包括人員、系統、內容和商業規則。Forms工作流程包含AEM Forms工作區。 AEM Forms工作區新增功能，可擴充及整合工作區，並使其更人性化。
+Forms workflow通过自动化关键文档和与表单相关的业务流程并提供可视性来提高组织效率。 使用“流程管理”模块，您可以构建可在线或离线访问的简化的端到端工作流（包括人员、系统、内容和业务规则）。Forms工作流包括AEM Forms工作区。 AEM Forms工作区新增了扩展和集成工作区的功能，使其更便于用户使用。
 
-AEM Forms工作區與更多裝置和外形規格相容。 它允許在沒有Flash®播放器和Adobe®Reader®的使用者端上進行任務管理。 它有助於除了PDF forms之外轉譯HTMLForms。
+AEM Forms workspace与更多设备和外形规格兼容。 它允许在没有Flash®播放器和Adobe®Reader®的客户端上进行任务管理。 它有助于在PDF forms之外再现HTMLForms。
 
 ![html-ws](assets/html-ws.png)
 
-**重要功能**：
+**主要功能**：
 
-* 使用動態PDF forms、行動介面和Web應用程式，與各地的程式參與者互動。
-* 輕鬆將工作區元件與網頁應用程式整合。 由於AEM Forms工作區是以元件為基礎的軟體，因此可輕鬆自訂及重複使用。
-* 使用AEM Forms工作區應用程式，將業務流程擴充至線上和離線行動工作者。
-* 檢視報告以監控積壓、工作佇列和關鍵績效指標(KPI)。 您可以使用API來擷取資料，以使用協力廠商報告工具進行進一步分析。
+* 使用动态PDF forms、移动界面和Web应用程序吸引世界各地的流程参与者。
+* 轻松地将工作区组件与Web应用程序集成。 由于AEM Forms工作区是基于组件的软件，因此可以轻松自定义和重复使用。
+* 使用AEM Forms工作区应用程序将业务流程扩展到在线和离线移动工作人员。
+* 查看用于监控积压、工作队列和关键绩效指标(KPI)的报告。 您可以使用API提取数据，以使用第三方报告工具进行进一步分析。

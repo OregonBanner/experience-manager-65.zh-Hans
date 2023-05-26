@@ -1,6 +1,6 @@
 ---
-title: '"[!DNL Assets] 首頁體驗」'
-description: 個人化 [!DNL Experience Manager Assets] 首頁提供豐富的歡迎畫面體驗，包括資產相關近期活動的快照。
+title: ”[!DNL Assets] 主页体验”
+description: 个性化 [!DNL Experience Manager Assets] 主页提供了丰富的欢迎屏幕体验，包括有关资产的最近活动的快照。
 contentOwner: AG
 feature: Developer Tools, Asset Management
 role: Admin, User
@@ -12,78 +12,78 @@ ht-degree: 1%
 
 ---
 
-# [!DNL Adobe Experience Manager Assets] 首頁體驗 {#aem-assets-home-page-experience}
+# [!DNL Adobe Experience Manager Assets] 主页体验 {#aem-assets-home-page-experience}
 
-個人化 [!DNL Adobe Experience Manager Assets] 首頁，提供豐富的歡迎畫面體驗，包括資產相關近期活動的快照。
+个性化 [!DNL Adobe Experience Manager Assets] 主页以提供丰富的欢迎屏幕体验，包括有关资产的最近活动的快照。
 
-[!DNL Assets] 首頁提供豐富且個人化的歡迎畫面體驗，包括最近活動的快照，例如最近檢視或上傳的資產。
+[!DNL Assets] 主页提供了丰富而个性化的欢迎屏幕体验，其中包括最近活动的快照，例如最近查看或上传的资产。
 
-此 [!DNL Assets] 首頁預設為停用。 若要啟用此功能，請執行下列步驟：
+此 [!DNL Assets] 默认情况下，主页处于禁用状态。 要启用该功能，请执行以下步骤：
 
-1. 開啟 [!DNL Experience Manager] 設定管理員 `https://[aem_server]:[port]/system/console/configMgr`.
-1. 開啟 **[!UICONTROL Day CQ DAM事件記錄器]** 服務。
-1. 選取 **[!UICONTROL 啟用此服務]** 以啟用活動記錄。
+1. 打开 [!DNL Experience Manager] 配置管理器 `https://[aem_server]:[port]/system/console/configMgr`.
+1. 打开 **[!UICONTROL Day CQ DAM事件记录器]** 服务。
+1. 选择 **[!UICONTROL 启用此服务]** 以启用活动记录。
 
    ![chlimage_1-250](assets/chlimage_1-250.png)
 
-1. 從 **[!UICONTROL 事件型別]** 清單中，選取要記錄的事件，並儲存變更。
+1. 从 **[!UICONTROL 事件类型]** 列表中，选择要记录的事件，并保存更改。
 
    >[!CAUTION]
    >
-   >啟用「已檢視資產」、「已檢視專案」和「已檢視集合」選項，會大幅增加已記錄事件的數量。
+   >启用“已查看资产”、“已查看项目”和“已查看收藏集”选项，会显着增加已记录事件的数量。
 
-1. 開啟 **[!UICONTROL dam資產首頁功能標幟]** 來自Configuration Manager的服務 `https://[aem_server]:[port]/system/console/configMgr`.
-1. 選取 `isEnabled.name` 可啟用「 」的選項 [!DNL Assets] 首頁功能。 保存更改。
+1. 打开 **[!UICONTROL DAM资产主页功能标记]** 配置管理器中的服务 `https://[aem_server]:[port]/system/console/configMgr`.
+1. 选择 `isEnabled.name` 用于启用 [!DNL Assets] 主页功能。 保存更改。
 
    ![chlimage_1-251](assets/chlimage_1-251.png)
 
-1. 開啟 **[!UICONTROL 使用者偏好設定]** 對話方塊，並選取 **[!UICONTROL 啟用資產首頁]**. 保存更改。
+1. 打开 **[!UICONTROL 用户首选项]** 对话框，然后选择 **[!UICONTROL 启用资产主页]**. 保存更改。
 
-   ![在使用者偏好設定對話方塊上啟用資產首頁](assets/Annotation-color.png)
+   ![在“用户首选项”对话框中启用资源主页](assets/Annotation-color.png)
 
-啟用 [!DNL Assets] 首頁，導覽至 [!DNL Assets] 使用者介面可從導覽頁面或直接從URL存取 `https://[aem_server]:[port]/aem/assetshome.html/content/dam`.
+启用 [!DNL Assets] 主页，导航到 [!DNL Assets] 用户界面的“导航”页面，或直接从URL访问它 `https://[aem_server]:[port]/aem/assetshome.html/content/dam`.
 
-![在Assets使用者介面上設定體驗連結](assets/config-experience-link.png)
+![在Assets用户界面上配置Experience Link](assets/config-experience-link.png)
 
-按一下 **[!UICONTROL 按一下這裡以設定您的體驗連結]** 以新增您的使用者名稱、背景影像和設定檔影像。
+单击 **[!UICONTROL 单击此处配置您的体验链接]** 以添加用户名、背景图像和配置文件图像。
 
-此 [!DNL Assets] 首頁包含下列段落：
+此 [!DNL Assets] 主页包含以下部分：
 
-* 歡迎區段
-* Widget區段
+* 欢迎部分
+* 构件区域
 
-**歡迎區段**
+**欢迎部分**
 
-如果您的設定檔存在，「歡迎」區段會顯示寄給您的歡迎訊息。 此外，它會顯示您的個人資料圖片和歡迎影像（如果已設定）。
+如果您的用户档案存在，“欢迎”部分将显示一则发送给您的欢迎消息。 此外，它还显示您的个人资料图片和欢迎图像（如果已配置）。
 
-如果您的設定檔不完整，「歡迎」區段會顯示一般歡迎訊息和設定檔圖片的預留位置。
+如果您的个人资料不完整，欢迎部分将显示通用欢迎消息和您的个人资料图片的占位符。
 
-**Widget區段**
+**构件区域**
 
-此區段會顯示在「歡迎」區段下方，並在下列區段下顯示現成的Widget：
+此部分显示在欢迎部分下方，并在以下部分下显示现成的构件：
 
 * 活动
 * 最近
 * 发现
 
-**活動**：在本節底下， **[!UICONTROL 我的活動]** widget會顯示登入使用者使用資產（包括沒有轉譯的資產）執行的最近活動，例如資產上傳、下載、資產建立、編輯、註解、註解及共用。
+**活动**：在本节下， **[!UICONTROL 我的活动]** 构件显示由登录用户使用资产（包括没有演绎版的资产）执行的最近活动，例如资产上传、下载、资产创建、编辑、注释、注释和共享。
 
-**最近**：此 **[!UICONTROL 最近檢視的專案]** 此區段下的Widget會顯示登入使用者最近存取的實體，包括資料夾、集合和專案。
+**最近**：此 **[!UICONTROL 最近查看的项目]** 此部分下的小部件显示登录用户最近访问的实体，包括文件夹、收藏集和项目。
 
-**探索**：此 **[!UICONTROL 新增]** 此區段下的Widget會顯示最近上傳至的資產和轉譯 [!DNL Assets] 部署。
+**发现**：此 **[!UICONTROL 新]** 此部分下的小组件显示最近上传到的资源和演绎版 [!DNL Assets] 部署。
 
-若要啟用清除使用者活動資料，請啟用 **[!UICONTROL DAM事件清除服務]** 從Configuration Manager。 啟用此服務後，系統會刪除登入使用者超過指定數目的活動。
+要启用清除用户活动数据，请启用 **[!UICONTROL DAM事件清除服务]** 从Configuration Manager。 启用此服务后，系统会删除登录用户超出指定数量的活动。
 
-「歡迎」畫面提供簡單的導覽協助，例如工具列上的圖示以存取資料夾、集合和目錄。
+“欢迎”屏幕提供简单的导航帮助，例如工具栏上的图标以访问文件夹、收藏集和目录。
 
 >[!NOTE]
 >
->啟用 [!UICONTROL Day CQ DAM事件記錄器] 和 [!UICONTROL DAM事件清除] 服務會增加對JCR的寫入作業和搜尋索引，大幅增加 [!DNL Experience Manager] 伺服器。 上的額外負載 [!DNL Experience Manager] 伺服器可能會影響其效能。
+>启用 [!UICONTROL Day CQ DAM事件记录器] 和 [!UICONTROL DAM事件清除] 服务增加了对JCR的写入操作和搜索索引，从而显着增加了 [!DNL Experience Manager] 服务器。 上的附加负载 [!DNL Experience Manager] 服务器会影响其性能。
 
 >[!CAUTION]
 >
->擷取、篩選及永久刪除使用者活動所需 [!DNL Assets] 首頁會對效能造成額外負擔。 因此，管理員應該為目標使用者有效地設定首頁。
+>捕获、筛选和清除所需的用户活动 [!DNL Assets] 主页会对性能造成额外负担。 因此，管理员应该为目标用户有效地配置主页。
 >
->Adobe建議執行大量作業的管理員和使用者避免使用資產首頁功能，以防止使用者活動增加。 此外，管理員可以透過設定來排除特定使用者的錄製活動 [!UICONTROL Day CQ DAM事件記錄器] 從 [!UICONTROL 設定管理員].
+>Adobe建议执行批量操作的管理员和用户避免使用Asset Home Page功能，以防止用户活动增加。 此外，管理员可以通过配置排除特定用户的录制活动 [!UICONTROL Day CQ DAM事件记录器] 起始日期 [!UICONTROL 配置管理器].
 >
->如果您使用此功能，Adobe建議您根據伺服器負載排定清除頻率。
+>如果使用该功能，Adobe建议您根据服务器负载安排清除频率。

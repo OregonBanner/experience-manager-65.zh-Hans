@@ -1,7 +1,7 @@
 ---
-title: 軟體架構
+title: 软件体系结构
 seo-title: Software Architecture
-description: 設計軟體架構的最佳作法
+description: 构建软件的最佳实践
 seo-description: Best practices for architecting your software
 uuid: a557f6ca-c3f1-486e-a45e-6e1f986fab41
 contentOwner: User
@@ -17,50 +17,50 @@ ht-degree: 0%
 
 ---
 
-# 軟體架構{#software-architecture}
+# 软件体系结构{#software-architecture}
 
-## 針對升級而設計 {#design-for-upgrades}
+## 针对升级进行设计 {#design-for-upgrades}
 
-延伸OOTB行為時，請務必牢記升級事項。 請一律在/apps目錄中套用自訂，並覆蓋在/libs目錄中對應節點的頂端，或使用sling：resourceSuperType來擴充現成行為。 雖然支援新AEM版本可能需要一些修改，但若遵循此作法，新版本不應覆寫您的自訂。
+扩展OOTB行为时，请务必牢记升级。 始终应用/apps目录中的自定义项，并叠加到/libs目录中的相应节点顶部，或使用sling：resourceSuperType扩展开箱即用行为。 虽然可能需要进行一些修改才能支持新的AEM版本，但是如果遵循此实践，则新版本不应覆盖您的自定义设置。
 
-### 儘可能重複使用範本和元件 {#reuse-template-and-components-when-possible}
+### 尽可能重用模板和组件 {#reuse-template-and-components-when-possible}
 
-這可讓網站維持一致的外觀和風格，並簡化程式碼維護。 當需要新範本時，請務必從共用基本範本擴充，以便可以在一個位置對clientlib包含等全域需求進行編碼。 需要新元件時，請尋找從現有元件擴充的機會。
+这将使站点能够保持更一致的外观，并简化代码维护。 当需要新模板时，请确保从共享基础模板扩展，以便可以在一个位置对clientlib包含等全局要求进行编码。 当需要新组件时，寻找从现有组件扩展的机会。
 
-### 設計範本設計 {#design-template-designs}
+### 设计模板设计 {#design-template-designs}
 
-透過定義頁面上每個parsys可包含哪些元件，可以控制網站外觀/感覺的一致性。 透過限制對頁面上設計的存取，可允許「超級作者」修改每頁允許的元件，而不需要開發人員干預，同時確保其他作者遵循企業標準。
+通过定义页面上每个parsys中可包含的组件，可以控制站点外观/感觉的一致性。 通过在页面上限制对设计的访问，可以允许“超级作者”修改每页允许的组件，而无需开发人员干预，同时确保其他作者遵循企业标准。
 
-### 開發堅固的架構 {#develop-a-solid-architecture}
+### 开发SOLID体系结构 {#develop-a-solid-architecture}
 
-SOLID是描述應遵守的五個架構原則的縮寫：
+SOLID是描述应遵循的五个体系结构原则的缩写：
 
-* **S**&#x200B;單一職責原則 — 每個模組、類別、方法等應只有一個職責。
-* **O**&#x200B;筆型/封閉式原則 — 模組應開啟以供擴充，並關閉以供修改。
-* **L** iskov替代原則 — 型別應該由其子型別取代。
-* **I**&#x200B;介面分隔原則 — 不應強制任何使用者端依賴其未使用的方法。
-* **D**&#x200B;相依性反轉原則 — 高階模組不應依賴低階模組。 兩者都應該依賴抽象。 抽象不應該取決於細節。 詳細資訊應取決於抽象概念。
+* **S**&#x200B;单一责任原则 — 每个模块、类、方法等只能有一个责任。
+* **O**&#x200B;钢笔/封闭式原则 — 模块应开放进行扩展，封闭进行修改。
+* **L** iskov替换原理 — 类型应该由其子类型替换。
+* **I**&#x200B;接口分隔原则 — 不应强制任何客户端依赖它未使用的方法。
+* **D**&#x200B;依赖性反转原理 — 高层模块不应依赖低层模块。 两者都应该依靠抽象。 抽象不应依赖于细节。 细节应取决于抽象概念。
 
-努力遵守這五項原則應該會導致系統對關注點有嚴格的分離。
+努力遵守这五项原则应导致一种严格区分各种关切的制度。
 
 >[!TIP]
 >
->SOLID是物件導向程式設計中常用的概念，在產業文獻中廣泛討論每個元素。
+>SOLID是面向对象编程中常用的概念，在工业文献中广泛讨论了它的各个元素。
 >
->此為簡短摘要，旨在提升您的認識，建議您更深入地熟悉這些概念。
+>这只是为便于了解而提供的简短摘要，鼓励您更深入地了解这些概念。
 
-### 遵循健全性原則 {#follow-the-robustness-principle}
+### 遵循鲁棒性原则 {#follow-the-robustness-principle}
 
-穩健性原則指出我們對於傳送的內容應保持保守，但在接受的內容上應保持開明。 換言之，當傳送訊息給第三方時，我們應完全符合規格，但是當從第三方接收訊息時，只要訊息的含義明確，我們就應接受不符合的訊息。
+稳健性原则指出我们对于所发送的内容应保持保守，但在所接受的内容上应保持自由。 换句话说，向第三方发送消息时，我们应完全符合规范，但在接收来自第三方的消息时，我们应接受不符合规范的消息，只要该消息的含义是明确的。
 
-### 在自己的模組中實作尖峰 {#implement-spikes-in-their-own-modules}
+### 在自己的模块中实施峰值 {#implement-spikes-in-their-own-modules}
 
-尖峰和測試程式碼是任何Agile軟體實作不可或缺的一部分，但我們想要確保這些程式碼在沒有適當監督的情況下，不會進入我們的生產程式碼庫。 因此，建議在其本身的模組中建立尖峰。
+尖峰和测试代码是任何Agile软件实施中不可或缺的一部分，但我们希望确保它们在没有适当监督的情况下不会进入我们的生产代码库。 因此，建议在其自身的模块中创建峰值。
 
-### 在其本身的模組中實作資料移轉指令碼 {#implement-data-migration-scripts-in-their-own-module}
+### 在其自己的模块中实施数据迁移脚本 {#implement-data-migration-scripts-in-their-own-module}
 
-資料移轉指令碼雖然是生產程式碼，但通常只在網站的初始啟動時執行一次。 因此，一旦網站上線，這就會變成廢棄的程式碼。 為了確保我們不建置相依於移轉指令碼的實作程式碼，這些程式碼應在各自的模組中實作。 這也允許我們在啟動後立即移除並淘汰此程式碼，從系統中消除廢棄的程式碼。
+数据迁移脚本虽然是生产代码，但通常在网站的初始启动时只运行一次。 因此，只要站点处于活动状态，它就会成为死代码。 为了确保我们不构建依赖于迁移脚本的实施代码，应该在它们自己的模块中实施它们。 这还允许我们在启动后立即删除并停用此代码，从而消除系统中的死代码。
 
-### 遵循POM檔案中發佈的Maven慣例 {#follow-published-maven-conventions-in-pom-files}
+### 遵循POM文件中发布的Maven惯例 {#follow-published-maven-conventions-in-pom-files}
 
-Apache已發佈樣式慣例 [https://maven.apache.org/developers/conventions/code.html](https://maven.apache.org/developers/conventions/code.html). 最好遵循這些慣例，因為這會使新資源更易於快速上線。
+Apache已在以下位置发布样式约定 [https://maven.apache.org/developers/conventions/code.html](https://maven.apache.org/developers/conventions/code.html). 最好遵循这些惯例，因为这将使新资源更容易快速上手。

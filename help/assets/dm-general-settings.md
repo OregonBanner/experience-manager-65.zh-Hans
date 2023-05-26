@@ -1,6 +1,6 @@
 ---
-title: 設定Dynamic Media一般設定
-description: 瞭解如何在Dynamic Media中管理一般設定。 您可以在此處設定您的發佈伺服器名稱和原始伺服器名稱，並設定影像覆寫選項。 此外，還有預設的上傳選項可讓您對影像進行遮色片銳利化調整，以及上傳您想如何處理PostScript、Adobe Photoshop、PDF和Adobe Illustrator檔案的選項。
+title: 配置Dynamic Media常规设置
+description: 了解如何在Dynamic Media中管理常规设置。 您可以在此处设置发布服务器名称和原始服务器名称，并设置图像覆盖选项。 此外，还有用于图像钝化蒙版的默认上传选项，以及用于指定如何处理PostScript、Adobe Photoshop、PDF和Adobe Illustrator文件的上传选项。
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: administering
@@ -16,145 +16,145 @@ ht-degree: 4%
 
 ---
 
-# 設定Dynamic Media一般設定
+# 配置Dynamic Media常规设置
 
-設定 **[!UICONTROL Dynamic Media一般設定]** 僅在下列情況下可用：
+配置 **[!UICONTROL Dynamic Media常规设置]** 仅在以下情况下可用：
 
-* 您正在以Scene7模式執行Dynamic Media。 另請參閱 [在Scene7模式下啟用Dynamic Media](/help/assets/config-dms7.md#enabling-dynamic-media-in-scene-mode).
-* 您有 *現有* **[!UICONTROL Dynamic Media設定]** (in **[!UICONTROL Cloud Services]**)在Adobe Experience Manager 6.5.11或更新版本中。 另請參閱 [在Cloud Services中建立Dynamic Media設定](/help/assets/config-dms7.md#configuring-dynamic-media-cloud-services).
-* 您是具有管理員許可權的Experience Manager系統管理員。
+* 您正在以Scene7模式运行Dynamic Media。 参见 [在Scene7模式下启用Dynamic Media](/help/assets/config-dms7.md#enabling-dynamic-media-in-scene-mode).
+* 您有一个 *现有* **[!UICONTROL Dynamic Media配置]** (in **[!UICONTROL Cloud Services]**)在Adobe Experience Manager 6.5.11或更高版本中。 参见 [在Cloud Services中创建Dynamic Media配置](/help/assets/config-dms7.md#configuring-dynamic-media-cloud-services).
+* 您是具有管理员权限的Experience Manager系统管理员。
 
-Dynamic Media一般設定適用於有經驗的網站開發人員和程式設計人員。 Adobe Dynamic Media建議變更這些發佈設定的使用者熟悉Adobe Experience Manager上的Dynamic Media和基本影像技術。
+Dynamic Media常规设置旨在供经验丰富的网站开发人员和程序员使用。 AdobeDynamic Media建议更改这些发布设置的用户熟悉Adobe Experience Manager上的Dynamic Media和基本图像技术。
 
-建立帳戶時，AdobeDynamic Media會自動提供指派給貴公司的伺服器。 這些伺服器可用來建構您網站和應用程式的URL字串。 這些URL呼叫特定於您的帳戶。
+在创建帐户时，AdobeDynamic Media会自动为您的公司提供分配的服务器。 这些服务器用于为网站和应用程序构建URL字符串。 这些URL调用特定于您的帐户。
 
-「Dynamic Media發佈設定」頁面會建立預設設定，以判斷如何將資產從Adobe Dynamic Media伺服器傳送至網站或應用程式。 如果未指定任何設定，AdobeDynamic Media伺服器會根據Dynamic Media Publish Setup頁面上設定的預設設定傳送資產。
+“Dynamic Media发布设置”页面可建立默认设置，以确定如何将资源从AdobeDynamic Media服务器传递到网站或应用程序。 如果未指定设置，则AdobeDynamic Media服务器会根据“Dynamic Media发布设置”页面上配置的默认设置交付资源。
 
-另請參閱 [可選 — Dynamic Media的設定和配置 — Scene7模式設定](/help/assets/config-dms7.md#optional-setup-and-configuration-of-dynamic-media-scene7-mode-settings) 以取得更多選擇性設定工作。
+另请参阅 [可选 — 设置和配置Dynamic Media - Scene7模式设置](/help/assets/config-dms7.md#optional-setup-and-configuration-of-dynamic-media-scene7-mode-settings) 了解更多可选配置任务。
 
 >[!NOTE]
 >
->在Adobe Experience Manager上從Dynamic Media Classic升級至Dynamic Media？ 「一般設定」頁面和 [發佈設定](/help/assets/dm-publish-settings.md) Dynamic Media中的頁面會預先填入從您的Dynamic Media Classic帳戶中取得的值。 例外情況是 **[!UICONTROL 預設上傳選項]** 「一般設定」頁面的區域。 這些值已Experience Manager。 因此，您在下列專案底下所做的任何變更 **[!UICONTROL 預設上傳選項]**&#x200B;橫跨五個標籤的任何一個，透過Experience Manager使用者介面，反映在Dynamic Media中，而不是Dynamic Media Classic中。 「一般設定」頁面和 [發佈設定](/help/assets/dm-publish-settings.md) 頁面會在Experience Manager時於Dynamic Media Classic和Dynamic Media之間維護。
+>在Adobe Experience Manager上从Dynamic Media Classic升级到Dynamic Media？ “常规设置”页面和 [发布设置](/help/assets/dm-publish-settings.md) Dynamic Media中的页面会预填充从您的Dynamic Media Classic帐户中获取的值。 例外情况是 **[!UICONTROL 默认上传选项]** 区域。 这些值已在Experience Manager中。 因此，您对以下内容所做的任何更改 **[!UICONTROL 默认上传选项]**&#x200B;通过Experience Manager用户界面，这五个选项卡中的任何一个都会反映在Dynamic Media中，而不是Dynamic Media Classic中。 “常规设置”页面和 [发布设置](/help/assets/dm-publish-settings.md) 页面会在Experience Manager时在Dynamic Media Classic和Dynamic Media之间维护。
 
-**若要設定Dynamic Media一般設定：**
+**要配置Dynamic Media常规设置，请执行以下操作：**
 
-1. 在Experience Manager作者模式中，選取Experience Manager標誌以存取全域導覽主控台。
-1. 在左側欄中，選取「工具」圖示，然後前往 **[!UICONTROL 資產]** > **[!UICONTROL Dynamic Media一般設定]**.
-1. 在「伺服器」頁面中，設定您的 **[!UICONTROL 已發佈的伺服器名稱]** 和 **[!UICONTROL 原始伺服器名稱]**，然後使用五個索引標籤來設定「影像編輯」以及Postscript、Photoshop、PDF和Illustrator檔案的預設上傳選項。
+1. 在Experience Manager创作模式下，选择Experience Manager徽标以访问全局导航控制台。
+1. 在左边栏中，选择工具图标，然后转到 **[!UICONTROL 资产]** > **[!UICONTROL Dynamic Media常规设置]**.
+1. 在“服务器”页中，设置您的 **[!UICONTROL 已发布的服务器名称]** 和 **[!UICONTROL 源服务器名称]**，然后使用五个选项卡为“图像编辑”以及Postscript、Photoshop、PDF和Illustrator文件配置默认上传选项。
 
    * [服务器](#server-general-setting)
    * [上载到应用程序](#upload-to-application)
-   * [影像編輯](#image-editing-tab) 標籤
-   * [PostScript](#postscript-tab) 標籤
-   * [Photoshop](#photoshop-tab) 標籤
-   * [PDF](#pdf-tab) 標籤
-   * [Illustrator](#illustrator-tab) 標籤
+   * [图像编辑](#image-editing-tab) 选项卡
+   * [PostScript](#postscript-tab) 选项卡
+   * [Photoshop](#photoshop-tab) 选项卡
+   * [PDF](#pdf-tab) 选项卡
+   * [Illustrator](#illustrator-tab) 选项卡
 
-   ![Dynamic Media一般設定頁面](/help/assets/assets-dm/dm-general-settings.png)
-   *Dynamic Media一般設定頁面，包含&#x200B;**[!UICONTROL 影像編輯]**標籤已選取。*<br><br>
+   ![“Dynamic Media常规设置”页面](/help/assets/assets-dm/dm-general-settings.png)
+   *Dynamic Media的“常规设置”页面，带有&#x200B;**[!UICONTROL 图像编辑]**已选择选项卡。*<br><br>
 
-1. 完成後，在頁面的右上角附近，選取 **[!UICONTROL 儲存]**.
+1. 完成后，在页面的右上角附近，选择 **[!UICONTROL 保存]**.
 
 ## 服务器 {#server-general-setting}
 
-建立帳戶時，AdobeDynamic Media會自動提供指派給貴公司的伺服器。 這些伺服器可用來建構您網站和應用程式的URL字串。 這些URL呼叫特定於您的帳戶。
+在创建帐户时，AdobeDynamic Media会自动为您的公司提供分配的服务器。 这些服务器用于为网站和应用程序构建URL字符串。 这些URL调用特定于您的帐户。
 
 | 选项 | 描述 |
 | --- | --- |
-| **[!UICONTROL 已发布的服务器名称]** | 必填.<br>名稱必須使用 `https://` 路徑中。<br>此伺服器是所有系統產生、且特定於您帳戶的URL呼叫中所使用的即時CDN （內容傳遞網路）伺服器。 請勿變更此伺服器名稱，除非Adobe技術支援指示您這麼做。 |
-| **[!UICONTROL 原始服务器名称]** | 必填.<br>此伺服器僅用於品質保證測試。 除非得到Adobe技術支援的指示，否則請勿變更此伺服器名稱。 |
+| **[!UICONTROL 已发布的服务器名称]** | 必填.<br>名称必须使用 `https://` 在路径中。<br>此服务器是特定于您的帐户的所有系统生成URL调用中使用的实时CDN（内容分发网络）服务器。 请勿更改此服务器名称，除非Adobe技术支持指示您这样做。 |
+| **[!UICONTROL 原始服务器名称]** | 必填.<br>此服务器仅用于质量保证测试。 除非经Adobe技术支持指示，否则请勿更改此服务器名称。 |
 
 ## 上载到应用程序 {#upload-to-application}
 
 * **[!UICONTROL 覆盖图像]**
 
-   AdobeDynamic Media不允許兩個檔案具有相同名稱。 每個專案的AdobeDynamic Media ID （影像名稱減去副檔名）必須是唯一的。 由於此規則， **[!UICONTROL 上傳至應用程式]** 有覆寫。 此選項的確切效果取決於您選擇的指定「覆寫影像」選項。 這些選項會指定取代影像的上傳方式：取代原始影像，還是成為重複影像。 重複影像會重新命名為 `-1`. 例如， `chair.tif` 已重新命名 `chair-1.tif`. 這些選項會影響上傳到與原始檔案夾不同的檔案夾的影像，或是副檔名與原始檔案夾不同的影像，例如JPG、TIF或PNG。
+   AdobeDynamic Media不允许两个文件具有相同的名称。 每个项目的AdobeDynamic Media ID（图像名称减去文件扩展名）必须是唯一的。 因为这个规则， **[!UICONTROL 上载到应用程序]** 具有覆盖。 此选项的确切效果取决于您选择的指定覆盖图像选项。 这些选项指定如何上载替换图像：替换原始图像还是成为重复图像。 使用重命名重复图像 `-1`. 例如， `chair.tif` 已重命名 `chair-1.tif`. 这些选项会影响上传到与原始文件不同的文件夹中的图像，或者文件扩展名与原始文件扩展名不同的图像，例如JPG、TIF或PNG。
 
    >[!NOTE]
    >
-   >若要維持與Experience Manager的一致性，請選取「覆寫影像」選項 **[!UICONTROL 在目前檔案夾中以相同的基本名稱/副檔名覆寫]**.
+   >要保持与Experience Manager的一致性，请选择覆盖图像选项 **[!UICONTROL 在当前文件夹内，使用相同的基本名称/扩展名进行覆盖]**.
 
-   | 覆寫影像選項 | 描述 |
+   | “覆盖图像”选项 | 描述 |
    | --- | --- |
-   | **[!UICONTROL 覆盖当前文件夹中相同的基本名称/扩展名]** | *預設* 僅適用新的Dynamic Media帳戶。<br>此選項是最嚴格的取代規則。 您需要將取代影像上傳到與原始影像相同的資料夾，而且取代影像的副檔名必須與原始影像相同。 如果不符合這些要求，則會建立副本。<br>*若要與Experience Manager保持一致，請選取此選項*. |
-   | **[!UICONTROL 覆盖当前文件夹中相同的基本名称，不区分扩展名]** | 需要您將取代影像上傳到與原始影像相同的資料夾，但副檔名可能與原始影像不同。 例如，chair.tif會取代chair.jpg。 |
-   | **[!UICONTROL 在任意文件夹内，使用相同的基本资源名称和扩展名进行覆盖]** | 取代影像的副檔名必須與原始影像相同（例如，chair.jpg必須取代chair.jpg，而不是chair.tif）。 不過，您可以將取代影像上傳至與原始影像不同的資料夾。 更新後的影像位於新資料夾中；檔案無法再在其原始位置找到。 |
-   | **[!UICONTROL 在任意文件夹内，使用相同的基本资源名称（不区分扩展名）进行覆盖]** | 此選項是最具包容性的取代規則。 您可以將取代影像上傳至與原始檔案不同的資料夾、上傳副檔名不同的檔案，以及取代原始檔案。 如果原始檔案位於不同的資料夾中，取代影像會位於上傳該影像的新資料夾中。 |
+   | **[!UICONTROL 覆盖当前文件夹中相同的基本名称/扩展名]** | *默认* 仅用于新的Dynamic Media帐户。<br>此选项是最严格的更换规则。 它要求您将替换图像上传到与原始图像相同的文件夹，并且替换图像具有与原始图像相同的文件扩展名。 如果不满足这些要求，则会创建副本。<br>*要与Experience Manager保持一致，请选择此选项*. |
+   | **[!UICONTROL 覆盖当前文件夹中相同的基本名称，不区分扩展名]** | 要求您将替换图像上传到与原始图像相同的文件夹，但文件扩展名可能与原始图像不同。 例如，chair.tif将取代chair.jpg。 |
+   | **[!UICONTROL 在任意文件夹内，使用相同的基本资源名称和扩展名进行覆盖]** | 要求替换图像具有与原始图像相同的文件扩展名（例如，chair.jpg必须替换chair.jpg，而不是chair.tif）。 但是，您可以将替换图像上传到与原始图像不同的文件夹。 更新的图像驻留在新文件夹中；无法再在其原始位置找到该文件。 |
+   | **[!UICONTROL 在任意文件夹内，使用相同的基本资源名称（不区分扩展名）进行覆盖]** | 此选项是最具包容性的替换规则。 您可以将替换图像上载到与原始图像不同的文件夹，上载文件扩展名不同的文件，然后替换原始文件。 如果原始文件位于其他文件夹中，则替换图像将驻留在将其上载到的新文件夹中。 |
 
 * **[!UICONTROL 保留裁切]**
 
-   控制任何現有手動裁切定義的保留。
+   控制任何现有手动裁切定义的保留。
 
-   另請參閱 `preserveCrop` 在 [UploadpostJob](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-upload-post-job.html) 和 [重新處理資產工作](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-reprocess-assets-job.html)，兩者均在Dynamic Media檢視器參考指南中。
+   另请参阅 `preserveCrop` 在 [UploadPost作业](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-upload-post-job.html) 和 [重新处理资产作业](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-reprocess-assets-job.html)，两者均在Dynamic Media查看器参考指南中。
 
-## 預設上傳選項 {#default-upload-options}
+## 默认上传选项 {#default-upload-options}
 
-### 影像編輯索引標籤 {#image-editing-tab}
+### “图像编辑”选项卡 {#image-editing-tab}
 
-此濾鏡可讓您微調最終縮減取樣影像的銳利化濾鏡效果。 它可協助您控制效果的強度、效果的半徑（以畫素測量），以及被忽略的對比度臨界值。
+通过此滤镜，可以对最终取样缩小的图像微调锐化滤镜效果。 它有助于控制效果的强度、效果的半径（以像素为单位）以及被忽略的对比度阈值。
 
-「遮色片銳利化調整」效果使用與Photoshop的「遮色片銳利化調整」濾鏡相同的選項。 與名稱所顯示的相反，「不銳利化遮色片」是一種銳利化濾鏡。
+“钝化蒙版”效果使用与Photoshop的“钝化蒙版”滤镜相同的选项。 与名称所暗示的相反，“USM锐化”是一种锐化滤镜。
 
-| 「不銳利化遮色片」選項 | 描述 |
+| “钝化蒙版”选项 | 描述 |
 | --- | --- |
-| **[!UICONTROL 数量]** | 必填.<br>控制套用至邊緣畫素的對比量。<br>將其視為效果的強度。 AdobeDynamic Media中「遮色片銳利化」的量值與Adobe Photoshop中量值的主要差異在於Photoshop的量範圍是1%到500%。 而在AdobeDynamic Media中，值範圍是 `0.0` 至 `5.0`. Adobe Dynamic Media中的5.0值約略等同於Photoshop中的500%；0.9值等同於90%，以此類推。 |
-| **[!UICONTROL 半径]** | 必填.<br>控制效果的半徑。<br>值範圍是 `0` 至 `250`. 此效果會在影像中的所有畫素上執行，並從所有方向的所有畫素向外輻射。 半徑是以畫素來測量。 例如，若要針對2000 x 2000畫素影像和500 x 500畫素影像獲得類似的銳利化效果，您可以在2000 x 2000畫素影像上設定兩個畫素的半徑。 然後在500 x 500畫素影像上設定一個畫素的半徑值。 較大的值會用於畫素較多的影像。 |
-| **[!UICONTROL 阈值]** | 必填.<br>臨界值是套用「遮色片銳利化調整」濾鏡時忽略的對比度範圍。 此效果很重要，因此使用此濾鏡時，影像中不會引入「雜訊」。 值範圍是 `0` - `255`，這是灰階影像中的亮度步驟數。 `0`=black， `128`=50%灰色和 `255`=white.<br>臨界值 `12` 會忽略膚色亮度的微小變化，以避免增加雜訊，但仍會為相較的區域增加邊緣對比，例如睫毛與皮膚相遇的區域。<br>如果您有某個人的臉部照片，「不銳利化遮色片」會影響影像的反差部分。 例如，睫毛與皮膚相遇可建立明顯對比區域，而平滑的皮膚則屬於此區域。 即使是最平滑的皮膚，也會顯示亮度值的微小變化。 如果您不使用臨界值，濾鏡會強調外觀畫素中的這些細微變化。 反過來，會產生雜音和不想要的效果，同時增加睫毛的對比，增強銳利度。<br>為了避免此問題，系統引入臨界值，告知濾鏡忽略對比度沒有明顯改變的畫素，例如平滑外觀。<br>在先前顯示的拉鍊圖形中，請注意拉鍊旁的材質。 由於臨界值太低，無法抑制雜訊，因此會顯示影像雜訊。 |
-| **[!UICONTROL 单色]** | 選取此選項可取消遮色片影像亮度（強度）的銳利化。<br>取消選取以分別取消銳利化遮色片銳利化每個顏色元件。 |
+| **[!UICONTROL 数量]** | 必填.<br>控制应用于边缘像素的对比度数量。<br>把它想成是效果的强度。 AdobeDynamic Media中“钝化蒙版”的量值与Adobe Photoshop中量值的主要区别在于，Photoshop具有1%到500%的量范围。 而在AdobeDynamic Media中，值范围是 `0.0` 到 `5.0`. 在AdobeDynamic Media中，值5.0大致相当于Photoshop中的500%；值0.9相当于90%，依此类推。 |
+| **[!UICONTROL 半径]** | 必填.<br>控制效果的半径。<br>值范围是 `0` 到 `250`. 该效果在图像中的所有像素上运行，并从所有像素向各个方向辐射。 半径以像素为单位。 例如，要对2000 x 2000像素图像和500 x 500像素图像获得类似的锐化效果，可以在2000 x 2000像素图像上将半径设置为2像素。 然后，在500 x 500像素图像上设置一个像素的半径值。 较大的值适用于像素较多的图像。 |
+| **[!UICONTROL 阈值]** | 必填.<br>阈值是应用“钝化蒙版”滤镜时忽略的对比度范围。 这种效果非常重要，因此使用此滤镜时，图像不会引入“杂色”。 值范围是 `0` - `255`，灰度图像中的亮度步骤数。 `0`=black， `128`=50%灰色和 `255`=white.<br>阈值 `12` 忽略肤色亮度的细微变化，以避免添加杂色，但仍然为对比区域（如睫毛与皮肤相遇的地方）添加边缘对比度。<br>如果您有某个人的面部照片，则“钝化蒙版”会影响图像的对比度部分。 例如，睫毛和皮肤相遇可产生明显的对比区域，而皮肤本身光滑。 即使最平滑的皮肤也会表现出亮度值的细微变化。 如果不使用阈值，则滤镜会强调外观像素中的这些细微变化。 反过来，在增加睫毛上的对比度的同时，产生噪音和不想要的效果，增强锐度。<br>为了避免此问题，引入了一个阈值，该阈值可告知滤镜忽略对比度没有显着变化的像素，如平滑外观。<br>在前面显示的拉链图形中，请注意拉链旁边的纹理。 由于阈值过低，图像噪声难以抑制。 |
+| **[!UICONTROL 单色]** | 选择可钝化蒙版图像亮度（强度）。<br>取消选择可单独对每个颜色分量进行钝化蒙版。 |
 
-另請參閱 [在Adobe Dynamic Media和影像伺服器上銳利化影像](/help/assets/assets/sharpening_images.pdf).
+另请参阅 [锐化AdobeDynamic Media和图像服务器上的图像](/help/assets/assets/sharpening_images.pdf).
 
-### PostScript索引標籤 {#postscript-tab}
+### “PostScript”选项卡 {#postscript-tab}
 
-您可以點陣化Adobe PostScript®檔案、維持透明背景、選擇解析度，以及選擇色域。
+可以栅格化Adobe PostScript®文件、保持透明背景、选择分辨率以及选择颜色空间。
 
-您可以在Adobe Dynamic Media中使用Adobe PostScript® (EPS)檔案。 AdobeDynamic Media會在您上傳這些檔案時提供用來設定這些檔案的命令。
+您可以在AdobeDynamic Media中使用Adobe PostScript® (EPS)文件。 AdobeDynamic Media提供了用于在上传这些文件时配置这些文件的命令。
 
-上傳PostScript (EPS)影像檔案時，您可以透過各種方式格式化檔案。 您可以點陣化檔案、維持透明背景、選擇解析度，以及選擇色域。
+上传PostScript (EPS)图像文件时，可以通过各种方式设置其格式。 您可以栅格化文件、保持透明背景、选择分辨率以及选择颜色空间。
 
-| PostScript選項 | 描述 |
+| PostScript选项 | 描述 |
 | --- | --- |
-| **[!UICONTROL 正在处理]** | 選擇「點陣化」，將檔案中的向量圖形轉換為點陣圖格式。 |
-| **[!UICONTROL 在渲染的图像中保持透明背景]** | 保留檔案的背景透明度。 |
-| **[!UICONTROL 解析度（畫素/英吋）]** | 決定解析度設定。 此設定決定檔案中每英吋顯示的畫素數。 |
-| **[!UICONTROL 色域]** | · **[!UICONTROL 自動偵測]**  — 保留檔案的色域。<br>· **[!UICONTROL 強製為RGB]**  — 轉換成RGB色域。<br>· **[!UICONTROL 強製為CMYK]**  — 轉換成CMYK色彩空間。<br>· **[!UICONTROL 強製為灰階]**  — 轉換為灰階色彩空間。 |
+| **[!UICONTROL 正在处理]** | 选择“栅格化”以将文件中的矢量图形转换为位图格式。 |
+| **[!UICONTROL 在渲染的图像中保持透明背景]** | 保留文件的背景透明度。 |
+| **[!UICONTROL 分辨率（像素/英寸）]** | 确定分辨率设置。 此设置确定文件中每英寸显示的像素数。 |
+| **[!UICONTROL 色彩空间]** | · **[!UICONTROL 自动检测]**  — 保留文件的颜色空间。<br>· **[!UICONTROL 强制作为RGB]**  — 转换为RGB色彩空间。<br>· **[!UICONTROL 强制为CMYK]**  — 转换为CMYK颜色空间。<br>· **[!UICONTROL 强制为灰度]**  — 转换为灰度颜色空间。 |
 
-### Photoshop索引標籤 {#photoshop-tab}
+### “Photoshop”选项卡 {#photoshop-tab}
 
-您可以從Adobe® Photoshop®檔案建立範本、維護圖層、指定圖層的命名方式、擷取文字，以及指定影像錨定到範本的方式。
+您可以从Adobe®Photoshop®文件创建模板、维护图层、指定图层的命名方式、提取文本以及指定将图像锚定到模板中的方式。
 
-| Photoshop選項 | 描述 |
+| Photoshop选项 | 描述 |
 | --- | --- |
-| **[!UICONTROL 保持层]** | 將PSD中的圖層（如果有的話）擷取到個別資產中。 資產圖層會維持與PSD相關聯。 您可以在「詳細資料檢視」中開啟PSD檔案，並選取圖層面板來檢視它們。 請參閱在PSD檔案中檢視和編輯圖層。 |
-| **[!UICONTROL 创建模板]** | 從PSD檔案中的圖層建立範本。 |
-| **[!UICONTROL 提取文本]** | 擷取文字，讓使用者能在檢視器中搜尋文字。 |
-| **[!UICONTROL 将图层扩展至背景大小]** | 將擷取的影像圖層大小延伸至背景圖層大小。 |
-| **[!UICONTROL 图层命名]** | 將擷取的影像圖層大小延伸至背景圖層大小。<br>· **[!UICONTROL 圖層名稱]**  — 在PSD檔案中，以影像的圖層名稱來命名影像。 例如，原始PSD檔案中名為「價格標籤」的圖層會變成名為「價格標籤」的影像。 不過，如果PSD檔案中的圖層名稱是預設的Photoshop圖層名稱（「背景」、「圖層1」、「圖層2」等），則會以影像在PSD檔案中的圖層編號來命名影像。 <br>· **[!UICONTROL Photoshop和圖層編號]**  — 將影像命名為PSD檔案中的圖層編號後方，略過原始圖層名稱。 影像以Photoshop檔案名稱及附加的圖層編號命名。 例如，檔案的第二層，稱為 `Spring Ad.psd` 已命名 `Spring Ad_2` 即使它在Photoshop中有非預設名稱。<br>· **[!UICONTROL Photoshop和圖層名稱]**  — 在PSD檔案後面加上圖層名稱或圖層編號來命名影像。 如果PSD檔案中的圖層名稱是預設的Photoshop圖層名稱，則會使用圖層編號。 例如，名為 `Price Tag` 在名為的PSD檔案中 `SpringAd` 已命名 `Spring Ad_Price Tag`. 系統會呼叫預設名稱為「圖層2」的圖層 `Spring Ad_2`. |
-| **[!UICONTROL 锚点]** | 指定如何在範本中錨定影像，範本是從PSD檔案產生的圖層構成產生的。 依預設，錨點是中心。 無論取代影像的外觀比例為何，置中錨點都可讓取代影像以最佳方式填滿相同的空間。 以不同外觀取代此影像的影像，在參照範本並使用引數替代時，實際上會佔據相同的空間。 如果您的應用程式需要取代影像來填滿範本中配置的空間，請變更為其他設定。 |
+| **[!UICONTROL 保持层]** | 将PSD中的图层（如果有）拆分为单独的资源。 资源层仍与PSD相关联。 通过在“详细视图”中打开PSD文件并选择图层面板来查看它们。 请参阅在PSD文件中查看和编辑图层。 |
+| **[!UICONTROL 创建模板]** | 从PSD文件中的图层创建模板。 |
+| **[!UICONTROL 提取文本]** | 提取文本，以便用户能够在查看器中搜索文本。 |
+| **[!UICONTROL 将图层扩展至背景大小]** | 将翻录图像图层的大小扩展到背景图层的大小。 |
+| **[!UICONTROL 图层命名]** | 将翻录图像图层的大小扩展到背景图层的大小。<br>· **[!UICONTROL 图层名称]**  — 在PSD文件中将图像命名为图层名称后的名称。 例如，原始PSD文件中名为“Price Tag”的图层会变成名为“Price Tag”的图像。 但是，如果PSD文件中的图层名称是默认的Photoshop图层名称（“背景”、“图层1”、“图层2”等），则图像将根据PSD文件中的图层编号进行命名。 <br>· **[!UICONTROL Photoshop和图层编号]**  — 将图像命名为PSD文件中的图层编号后名称，而忽略原始图层名称。 图像使用Photoshop文件名和附加的图层编号进行命名。 例如，文件的第二层，称为 `Spring Ad.psd` 已命名 `Spring Ad_2` 即使它在Photoshop中具有非默认名称。<br>· **[!UICONTROL Photoshop和图层名称]**  — 在PSD文件后面加上图层名称或图层编号来命名图像。 如果PSD文件中的图层名称是默认的Photoshop图层名称，则使用图层编号。 例如，一个名为的层 `Price Tag` 在名为的PSD文件中 `SpringAd` 已命名 `Spring Ad_Price Tag`. 缺省名称为Layer 2的层称为 `Spring Ad_2`. |
+| **[!UICONTROL 锚点]** | 指定如何在模板中定位图像，该模板是根据PSD文件生成的图层合成生成的。 默认情况下，锚点是中心。 中心锚点允许替换图像以最佳方式填充相同的空间，而不管替换图像的长宽比如何。 当引用模板并使用参数替换时，替换此图像的不同方面的图像有效地占用了相同的空间。 如果您的应用程序要求替换图像填充模板中分配的空间，请更改为其他设置。 |
 
-### PDF標籤 {#pdf-tab}
+### “PDF”选项卡 {#pdf-tab}
 
-您可以選擇點陣化檔案、擷取搜尋字詞和連結、設定解析度，以及選擇色域。
+您可以选择栅格化文件、提取搜索词和链接、设置分辨率以及选择颜色空间。
 
-| PDF選項 | 描述 |
+| PDF选项 | 描述 |
 | --- | --- |
-| **[!UICONTROL 正在处理]** | · **[!UICONTROL 無]**  — 未完成任何PDF處理。<br>· **[!UICONTROL 縮圖]**  — 擷取PDF檔案中的每個頁面，並將其轉換為縮圖影像。<br> · **[!UICONTROL 點陣化]**  — 撕裂PDF檔案中的頁面，並將向量圖形轉換為點陣圖影像。 若要建立eCatalog，請選擇此選項。 |
-| **[!UICONTROL 提取]** | · **[!UICONTROL 無]**  — 不會從PDF中擷取搜尋字詞或連結。<br>· **[!UICONTROL 搜尋字詞]**  — 從PDF檔案中擷取搜尋字詞，以便在eCatalog檢視器中依關鍵字搜尋檔案。<br>· **[!UICONTROL 連結]**  — 從PDF檔案中擷取連結，並將其轉換成eCatalog檢視器中使用的影像地圖。<br>· **[!UICONTROL 搜尋字詞和連結]**  — 擷取搜尋字詞和連結，以用於eCatalog檢視器。 |
-| **[!UICONTROL 解析度（畫素/英吋）]** | 決定解析度設定。 此設定會決定PDF檔案中每英吋顯示的畫素數。 預設值為150。 |
-| **[!UICONTROL 色域]** | · **[!UICONTROL 自動偵測]**  — 維護PDF檔案的色域。<br>· **[!UICONTROL 強製為RGB]**  — 轉換成RGB色域。<br>· **[!UICONTROL 強製為CMYK]**  — 轉換成CMYK色彩空間。<br>· **[!UICONTROL 強製為灰階]**  — 轉換為灰階色彩空間。 |
+| **[!UICONTROL 正在处理]** | · **[!UICONTROL 无]**  — 不处理PDF。<br>· **[!UICONTROL 缩略图]**  — 翻录PDF文件中的每页，并将其转换为缩略图图像。<br> · **[!UICONTROL 栅格化]**  — 翻录PDF文件中的页面，并将矢量图形转换为位图图像。 要创建eCatalog，请选择此选项。 |
+| **[!UICONTROL 提取]** | · **[!UICONTROL 无]**  — 未从PDF中提取搜索词或链接。<br>· **[!UICONTROL 搜索词]**  — 从PDF文件中提取搜索词，以便在eCatalog查看器中按关键字搜索该文件。<br>· **[!UICONTROL 链接]**  — 从PDF文件中提取链接，并将其转换为eCatalog查看器中使用的图像映射。<br>· **[!UICONTROL 搜索词和链接]**  — 提取搜索词和链接以在eCatalog查看器中使用。 |
+| **[!UICONTROL 分辨率（像素/英寸）]** | 确定分辨率设置。 此设置确定PDF文件中每英寸显示的像素数。 默认值为150。 |
+| **[!UICONTROL 色彩空间]** | · **[!UICONTROL 自动检测]**  — 保留PDF文件的色彩空间。<br>· **[!UICONTROL 强制作为RGB]**  — 转换为RGB色彩空间。<br>· **[!UICONTROL 强制为CMYK]**  — 转换为CMYK颜色空间。<br>· **[!UICONTROL 强制为灰度]**  — 转换为灰度颜色空间。 |
 
-### Illustrator索引標籤 {#illustrator-tab}
+### “Illustrator”选项卡 {#illustrator-tab}
 
-您可以點陣化Adobe Illustrator®檔案、維持透明背景、選擇解析度，以及選擇色域。
+可以栅格化Adobe Illustrator®文件、保持透明背景、选择分辨率以及选择颜色空间。
 
-您可以在Adobe Dynamic Media中使用Illustrator® (AI)檔案Adobe® AdobeDynamic Media會在您上傳這些檔案時提供用來設定這些檔案的命令。
+您可以在AdobeDynamic Media中使用Adobe® Illustrator® (AI)文件。 AdobeDynamic Media提供了用于在上传这些文件时配置这些文件的命令。
 
-上傳Illustrator (AI)影像檔案時，您可以透過各種方式格式化檔案。 您可以點陣化檔案、維持透明背景、選擇解析度，以及選擇色域。 「上傳選項」中的「PostScript選項」和「上傳工作選項」方塊中的「Illustrator選項」下，有可用於格式化PostScript和Illustrator檔案的選項。
+上传Illustrator (AI)图像文件时，可以通过各种方式设置其格式。 您可以栅格化文件、保持透明背景、选择分辨率以及选择颜色空间。 用于格式化PostScript和Illustrator文件的选项在“上传作业选项”框中的“PostScript选项”和“Illustrator选项”下的上传屏幕上可用。
 
 
-| Illustrator選項 | 描述 |
+| Illustrator选项 | 描述 |
 | --- | --- |
-| **[!UICONTROL 正在处理]** | 選擇「點陣化」，將檔案中的向量圖形轉換為點陣圖格式。 |
-| **[!UICONTROL 在渲染的图像中保持透明背景]** | 保留檔案的背景透明度。 |
-| **[!UICONTROL 解析度（畫素/英吋）]** | 決定解析度設定。 此設定決定檔案中每英吋顯示的畫素數。 |
-| **[!UICONTROL 色域]** | · **[!UICONTROL 自動偵測]**  — 保留檔案的色域。<br>· **[!UICONTROL 強製為RGB]**  — 轉換成RGB色域。<br>· **[!UICONTROL 強製為CMYK]**  — 轉換成CMYK色彩空間。<br>· **[!UICONTROL 強製為灰階]**  — 轉換為灰階色彩空間。 |
+| **[!UICONTROL 正在处理]** | 选择“栅格化”以将文件中的矢量图形转换为位图格式。 |
+| **[!UICONTROL 在渲染的图像中保持透明背景]** | 保留文件的背景透明度。 |
+| **[!UICONTROL 分辨率（像素/英寸）]** | 确定分辨率设置。 此设置确定文件中每英寸显示的像素数。 |
+| **[!UICONTROL 色彩空间]** | · **[!UICONTROL 自动检测]**  — 保留文件的颜色空间。<br>· **[!UICONTROL 强制作为RGB]**  — 转换为RGB色彩空间。<br>· **[!UICONTROL 强制为CMYK]**  — 转换为CMYK颜色空间。<br>· **[!UICONTROL 强制为灰度]**  — 转换为灰度颜色空间。 |

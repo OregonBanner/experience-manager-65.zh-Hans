@@ -1,7 +1,7 @@
 ---
-title: 在Windows Vista上設定SSL
+title: 在Windows Vista上配置SSL
 seo-title: Configuring SSL on Windows Vista
-description: 瞭解如何在Windows Vista上設定SSL。
+description: 了解如何在Windows Vista上配置SSL。
 seo-description: Learn how to configure SSL on Windows Vista.
 uuid: 20bfcefb-ec84-4c55-bceb-6af106d883d7
 contentOwner: admin
@@ -17,24 +17,24 @@ ht-degree: 0%
 
 ---
 
-# 在Windows Vista上設定SSL {#configuring-ssl-on-windows-vista}
+# 在Windows Vista上配置SSL {#configuring-ssl-on-windows-vista}
 
-若要在Windows Vista™上設定SSL，您需要具有RSA金鑰的SSL憑證以進行驗證。 您可以使用Java keytool來建立憑證。
+要在Windows Vista™上配置SSL，您需要具有RSA密钥的SSL证书以进行身份验证。 您可以使用Java keytool创建证书。
 
 >[!NOTE]
 >
->Windows Vista無法搭配DSA金鑰使用。
+>Windows Vista不能使用DSA密钥。
 
-您可以使用單一命令來執行keytool，該命令包含建立憑證和keystore所需的所有資訊。
+您可以使用包含创建证书和密钥库所需的所有信息的单个命令来运行keytool。
 
-**建立SSL憑證**
+**创建SSL证书**
 
-1. 在命令提示字元中，瀏覽至 *`[JAVA HOME]`*/bin ，然後輸入以下命令來建立憑證和金鑰存放區：
+1. 在命令提示符下，导航到 *`[JAVA HOME]`*/bin并键入以下命令以创建证书和密钥库：
 
-   `keytool -genkey -keyalg RSA -dname "CN=`*主機名稱* `, OU=`*群組名稱* `, O=`*公司名稱* `,L=`*城市名稱* `, S=`*州* `, C=`*國家/地區代碼* `" -alias`*&quot;LC Cert&quot;* `-keypass` `key`*_* *密碼* `-keystore`*keystorename* `.keystore`
+   `keytool -genkey -keyalg RSA -dname "CN=`*主机名* `, OU=`*组名称* `, O=`*公司名称* `,L=`*城市名称* `, S=`*状态* `, C=`*国家/地区代码* `" -alias`*&quot;LC Cert&quot;* `-keypass` `key`*_* *密码* `-keystore`*keystorename* `.keystore`
 
    >[!NOTE]
    >
-   >Replace *`[JAVA_HOME]`以安裝JDK的目錄，並將斜體文字取代為與您的環境相對應的值。*
+   >Replace *`[JAVA_HOME]`替换为安装JDK的目录，并将斜体文本替换为与您的环境对应的值。*
 
-1. 型別 `changeit` 作為密碼。 此密碼是Java安裝的預設密碼，系統管理員可能已將其變更。
+1. 类型 `changeit` 作为密码。 此密码是Java安装的默认密码，系统管理员可能已更改此密码。

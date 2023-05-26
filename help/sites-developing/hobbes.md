@@ -1,7 +1,7 @@
 ---
-title: 測試您的UI
+title: 测试您的UI
 seo-title: Testing Your UI
-description: AEM為AEM UI提供自動化測試框架
+description: AEM提供了一个框架，用于实现AEM UI测试的自动化
 seo-description: AEM provides a framework for automating tests for your AEM UI
 uuid: 408a60b5-cba9-4c9f-abd3-5c1fb5be1c50
 contentOwner: Guillaume Carlino
@@ -18,103 +18,103 @@ ht-degree: 1%
 
 ---
 
-# 測試您的UI{#testing-your-ui}
+# 测试您的UI{#testing-your-ui}
 
 >[!NOTE]
 >
->自AEM 6.5起，hobbes.js UI測試框架已過時。 Adobe不打算進一步增強功能，因此建議客戶使用Selenium自動化。
+>从AEM 6.5开始，弃用hobbes.js UI测试框架。 Adobe不打算对其做进一步增强，因此建议客户使用Selenium自动化功能。
 >
->另請參閱 [過時和移除的功能](/help/release-notes/deprecated-removed-features.md).
+>参见 [已弃用和已删除的功能](/help/release-notes/deprecated-removed-features.md).
 
-AEM為AEM UI提供自動化測試框架。 使用該架構，您可以直接在網頁瀏覽器中編寫和執行UI測試。 此架構提供用於建立測試的JavaScript API。
+AEM提供了一个框架，用于实现AEM UI测试的自动化。 使用该框架，您可以直接在Web浏览器中编写和运行UI测试。 该框架提供了用于创建测试的javascript API。
 
-AEM測試架構使用Hobbes.js，這是以Javascript撰寫的測試程式庫。 開發Hobbes.js架構是為了在開發過程中測試AEM。 此架構現在可供公眾用來測試您的AEM應用程式。
+AEM测试框架使用Hobbes.js，这是一个使用Javascript编写的测试库。 Hobbes.js框架是为了在开发过程中测试AEM而开发的。 该框架现在可公开用于测试您的AEM应用程序。
 
 >[!NOTE]
 >
->請參閱Hobbes.js [檔案](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/test-api/index.html) 以取得API的完整詳細資料。
+>请参阅Hobbes.js [文档](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/test-api/index.html) 以了解API的完整详细信息。
 
-## 測試結構 {#structure-of-tests}
+## 测试结构 {#structure-of-tests}
 
-在AEM中使用自動化測試時，請務必瞭解下列詞語：
+在AEM中使用自动测试时，请务必了解以下术语：
 
-| 操作 | 一個 **動作** 是網頁上的特定活動，例如按一下連結或按鈕。 |
+| 操作 | An **操作** 是网页上的特定活动，例如单击链接或按钮。 |
 |---|---|
-| 測試案例 | A **測試案例** 是一種特定情況，可能由一或多個 **動作**. |
-| 測試套裝 | A **測試套裝** 是一組相關 **測試案例** 一起測試特定使用案例。 |
+| 测试用例 | A **测试用例** 是一种特定情况，可以由一个或多个 **操作**. |
+| 测试套件 | A **测试套件** 是一组相关 **测试用例** 共同测试特定用例。 |
 
-## 執行測試 {#executing-tests}
+## 执行测试 {#executing-tests}
 
-### 檢視測試套裝 {#viewing-test-suites}
+### 查看测试包 {#viewing-test-suites}
 
-開啟測試主控台，檢視已註冊的測試套裝。 「測試」面板包含測試套裝及其測試案例的清單。
+打开测试控制台以查看注册的测试包。 测试面板包含测试包及其测试用例的列表。
 
-透過以下方式導覽至「工具」主控台： **全域導覽 — >工具>操作 — >測試**.
+通过以下方式导航到“工具”控制台： **全局导航 — >工具>操作 — >测试**.
 
 ![chlimage_1-63](assets/chlimage_1-63.png)
 
-開啟主控台時，左側會列出測試套裝，以及可依序執行所有測試的選項。 右側顯示有格線背景的空格是測試執行時顯示頁面內容的預留位置。
+打开控制台时，左侧列出测试包，并附带按顺序运行所有测试包的选项。 右侧显示有方格背景的空间是一个占位符，用于在测试运行时显示页面内容。
 
 ![chlimage_1-64](assets/chlimage_1-64.png)
 
-### 執行單一測試套裝 {#running-a-single-test-suite}
+### 运行单个测试包 {#running-a-single-test-suite}
 
-測試套裝可以個別執行。 當您執行測試套裝時，頁面會隨著測試案例及其動作的執行而變更，並且會在測試完成後顯示結果。 圖示會指出結果。
+测试包可以单独运行。 运行测试包时，页面会随着测试用例及其操作的执行而发生更改，并且在测试完成后显示结果。 图标指示结果。
 
-核取記號圖示表示測試通過：
+复选标记图标表示已通过测试：
 
 ![](do-not-localize/chlimage_1-2.png)
 
-「X」圖示表示測試失敗：
+“X”图标表示测试失败：
 
 ![](do-not-localize/chlimage_1-3.png)
 
-若要執行測試套裝：
+要运行测试包，请执行以下操作：
 
-1. 在「測試」面板中，按一下或點選您要執行的測試案例名稱，以展開動作的詳細資訊。
+1. 在测试面板中，单击或点按要运行的测试用例的名称以展开操作的详细信息。
 
    ![chlimage_1-65](assets/chlimage_1-65.png)
 
-1. 按一下或點選 **執行測試** 按鈕。
+1. 单击或点按 **运行测试** 按钮。
 
    ![](do-not-localize/chlimage_1-4.png)
 
-1. 測試執行時，預留位置會取代為頁面內容。
+1. 在执行测试时，占位符会被替换为页面内容。
 
    ![chlimage_1-66](assets/chlimage_1-66.png)
 
-1. 點選或按一下說明以開啟測試案例的結果 **結果** 面板。 在中點選或按一下測試案例的名稱 **結果** 面板顯示所有詳細資料。
+1. 通过点按或单击描述以打开 **结果** 面板。 在中点击或单击测试用例的名称 **结果** 面板显示所有详细信息。
 
    ![chlimage_1-67](assets/chlimage_1-67.png)
 
-### 執行多項測試 {#running-multiple-tests}
+### 运行多个测试 {#running-multiple-tests}
 
-測試套裝會依顯示在主控台中的順序執行。 您可以深入研究測試以檢視詳細結果。
+测试包将按照它们在控制台中的显示顺序依次执行。 您可以深入到测试中查看详细结果。
 
 ![chlimage_1-68](assets/chlimage_1-68.png)
 
-1. 在「測試」面板上，點選或按一下 **執行所有測試** 按鈕或 **執行測試** 按鈕來設定您要執行之測試套裝的標題。
+1. 在测试面板上，点按或单击 **运行所有测试** 按钮或 **运行测试** 按钮时，单击要运行的测试包标题下方的“测试包”按钮。
 
    ![](do-not-localize/chlimage_1-5.png)
 
-1. 若要檢視每個測試案例的結果，請點選或按一下測試案例的標題。 在「 」中點選或按一下您的測試名稱 **結果** 面板顯示所有詳細資料。
+1. 要查看每个测试用例的结果，请点按或单击测试用例的标题。 在中点击或单击测试名称 **结果** 面板显示所有详细信息。
 
    ![chlimage_1-69](assets/chlimage_1-69.png)
 
-## 建立和使用簡單測試套裝 {#creating-and-using-a-simple-test-suite}
+## 创建和使用简单的测试套件 {#creating-and-using-a-simple-test-suite}
 
-下列程式會逐步引導您使用建立和執行測試套裝 [We.Retail內容](/help/sites-developing/we-retail.md)，但您可以輕鬆修改測試，以使用不同的網頁。
+以下过程会逐步引导您使用创建和执行测试包 [We.Retail内容](/help/sites-developing/we-retail.md)，但您可以轻松地将测试修改为使用其他网页。
 
-如需建立您自己的測試套裝的完整詳細資訊，請參閱 [Hobbes.js API檔案](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/test-api/index.html).
+有关创建您自己的测试包的完整详细信息，请参阅 [Hobbes.js API文档](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/test-api/index.html).
 
-1. 開啟CRXDE Lite。 ([https://localhost:4502/crx/de](https://localhost:4502/crx/de))
-1. 以滑鼠右鍵按一下 `/etc/clientlibs` 資料夾並按一下 **「建立」>「建立資料夾」**. 型別 `myTests` ，然後按一下 **確定**.
-1. 以滑鼠右鍵按一下 `/etc/clientlibs/myTests` 資料夾並按一下 **建立>建立節點**. 使用以下屬性值，然後按一下 **確定**：
+1. 打开CRXDE Lite。 ([https://localhost:4502/crx/de](https://localhost:4502/crx/de))
+1. 右键单击 `/etc/clientlibs` 文件夹并单击 **“创建”>“创建文件夹”**. 类型 `myTests` 名称，然后单击 **确定**.
+1. 右键单击 `/etc/clientlibs/myTests` 文件夹并单击 **创建>创建节点**. 使用以下属性值，然后单击 **确定**：
 
    * 名称: `myFirstTest`
    * 类型: `cq:ClientLibraryFolder`
 
-1. 將下列屬性新增至myFirstTest節點：
+1. 将以下属性添加到myFirstTest节点：
 
    | 名称 | 类型 | 价值 |
    |---|---|---|
@@ -123,29 +123,29 @@ AEM測試架構使用Hobbes.js，這是以Javascript撰寫的測試程式庫。 
 
    >[!NOTE]
    >
-   >**僅限AEM Forms**
+   >**仅限AEM Forms**
    >
    >
-   >若要測試調適型表單，請將下列值新增至類別和相依性。 例如：
+   >要测试自适应表单，请将以下值添加到类别和依赖关系。 例如：
    >
    >
-   >**類別**： `granite.testing.hobbes.tests, granite.testing.hobbes.af.commons`
+   >**类别**： `granite.testing.hobbes.tests, granite.testing.hobbes.af.commons`
    >
    >
-   >**相依性**： `granite.testing.hobbes.testrunner, granite.testing.hobbes.af`
+   >**依赖关系**： `granite.testing.hobbes.testrunner, granite.testing.hobbes.af`
 
-1. 按一下 **全部儲存**.
-1. 以滑鼠右鍵按一下 `myFirstTest` 節點並按一下 **「建立」>「建立檔案」**. 為檔案命名 `js.txt` 並按一下 **確定**.
-1. 在 `js.txt` 檔案中，輸入下列文字：
+1. 单击 **全部保存**.
+1. 右键单击 `myFirstTest` 节点并单击 **“创建”>“创建文件”**. 为文件命名 `js.txt` 并单击 **确定**.
+1. 在 `js.txt` 文件，输入以下文本：
 
    ```
    #base=.
    myTestSuite.js
    ```
 
-1. 按一下 **全部儲存** 然後關閉 `js.txt` 檔案。
-1. 以滑鼠右鍵按一下 `myFirstTest` 節點並按一下 **「建立」>「建立檔案」**. 為檔案命名 `myTestSuite.js` 並按一下 **確定**.
-1. 將下列程式碼複製到 `myTestSuite.js` 檔案，然後儲存檔案：
+1. 单击 **全部保存** 然后关闭 `js.txt` 文件。
+1. 右键单击 `myFirstTest` 节点并单击 **“创建”>“创建文件”**. 为文件命名 `myTestSuite.js` 并单击 **确定**.
+1. 将以下代码复制到 `myTestSuite.js` 文件，然后保存文件：
 
    ```
    new hobs.TestSuite("Experience Content Test Suite", {path:"/etc/clientlibs/myTests/myFirstTest/myTestSuite.js"})
@@ -160,4 +160,4 @@ AEM測試架構使用Hobbes.js，這是以Javascript撰寫的測試程式庫。 
    );
    ```
 
-1. 導覽至 **測試** 主控台以試用您的測試套裝。
+1. 导航到 **测试** 控制台以试用您的测试套件。

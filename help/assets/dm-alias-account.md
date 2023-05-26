@@ -1,6 +1,6 @@
 ---
-title: 設定Dynamic Media公司別名帳戶
-description: 瞭解如何在Dynamic Media中設定公司別名帳戶。
+title: 配置Dynamic Media公司别名帐户
+description: 了解如何在Dynamic Media中配置公司别名帐户。
 contentOwner: Rick Brough
 topic-tags: administering
 content-type: reference
@@ -18,39 +18,39 @@ ht-degree: 0%
 <!-- hide: yes
 hidefromtoc: yes -->
 
-# 關於設定Dynamic Media公司別名帳戶 {#about-dm-alias-acct}
+# 关于配置Dynamic Media公司别名帐户 {#about-dm-alias-acct}
 
-Dynamic Media URL和檢視器內嵌程式碼包含您的公司帳戶名稱。 此帳戶名稱是在布建Dynamic Media時建立的。 在某些情況下，您的企業可能會經歷收購或重新品牌化，或者您只想使用更令人難忘的名稱。 在這種情況下，在開箱即用的所有URL和檢視器內嵌程式碼中，手動更新公司帳戶名稱並不容易。 此外，您也可能會影響現有的Dynamic Media存放庫或即時內容。 若要解決此問題，您可以設定Dynamic Media公司別名帳戶。
+Dynamic Media URL和查看器嵌入代码包含您的公司帐户名称。 此帐户名是在配置Dynamic Media时创建的。 在某些情况下，您的企业可能会经历收购、品牌重塑，或者您只想使用更令人印象深刻的名称。 在这种情况下，在开箱即用的所有URL和查看器嵌入代码中手动更新公司帐户名称并不容易。 此外，还可能会影响现有Dynamic Media存储库或实时内容。 要解决此问题，您可以配置Dynamic Media公司别名帐户。
 
-Dynamic Media公司別名帳戶可確保使用者介面中所有現成可用的Dynamic Media URL和檢視器內嵌程式碼都會反映對企業內容所做的任何更新，例如品牌重塑。 別名帳戶也會對您的SEO （搜尋引擎最佳化）產生正面影響，因為Dynamic Media URL和檢視器內嵌程式碼會反映新的公司帳戶名稱。
+Dynamic Media公司别名帐户可确保用户界面中所有开箱即用的Dynamic Media URL和查看器嵌入代码反映对企业上下文所做的任何更新，例如品牌再造。 别名帐户也会对您的SEO（搜索引擎优化）产生积极影响，因为Dynamic Media URL和查看器嵌入代码会反映新的公司帐户名称。
 
-設定Dynamic Media公司別名帳戶時，請注意下列事項：
+配置Dynamic Media公司别名帐户时，请注意以下事项：
 
-* 任何現有的Dynamic Media URL或您的上的檢視器內嵌程式碼 *live* 數位屬性必須手動更新，以反映新的別名。 不過，使用您原始Dynamic Media公司名稱的任何URL或檢視器內嵌程式碼都能繼續用於現有或新資產。
-* Dynamic Media公司別名帳戶功能僅限於Experience Manager Assets製作模式和傳送。 公司別名不適用於Experience Manager Sites。 WCM （Web內容管理）元件未針對此變更進行更新。 這些元件可繼續搭配原始Dynamic Media公司名稱運作，以擷取Dynamic Media資產。
-* 您只能在上設定一個公司別名帳戶 **[!UICONTROL 編輯Dynamic Media設定]** 頁面。 不過，您可以透過支援案例建立儘可能多的公司別名帳戶，並在Dynamic Media URL或檢視器內嵌程式碼中手動反映必要的別名名稱。
-* 現成可用 [快取失效](/help/assets/invalidate-cdn-cache-dynamic-media.md) Dynamic Media的功能可讓在Cloud Services的「Dynamic Media設定」頁面中設定的「公司」和「公司別名」帳戶的URL失效。
-* 當您在上設定公司別名帳戶時 **[!UICONTROL 編輯Dynamic Media設定]** 頁面，若要讓快取失效成功，您必須讓以下專案的URL失效 *兩者* 此 **[!UICONTROL 公司]** 帳戶和 **[!UICONTROL 公司別名]** 帳戶（同時）。
+* 任何现有Dynamic Media URL或查看器嵌入代码 *实时* 必须手动更新数字属性以反映新的别名。 但是，任何使用您原始Dynamic Media公司名称嵌入代码的URL或查看器代码仍可用于现有资源或新资源。
+* Dynamic Media公司别名帐户功能仅限于Experience Manager Assets创作模式和交付。 公司别名不适用于Experience Manager Sites。 没有为此更改更新WCM （Web内容管理）组件。 这些组件将继续使用原始Dynamic Media公司名称来获取Dynamic Media资源。
+* 您只能在上设置一个公司别名帐户 **[!UICONTROL 编辑Dynamic Media配置]** 页面。 但是，您可以通过支持案例创建尽可能多的公司别名帐户，并在Dynamic Media URL或查看器嵌入代码中手动反映必要的别名。
+* 开箱即用 [缓存失效](/help/assets/invalidate-cdn-cache-dynamic-media.md) Dynamic Media的功能可使在Cloud Services的“Dynamic Media配置”页面中配置的公司和公司别名帐户的URL失效。
+* 在上配置公司别名帐户时 **[!UICONTROL 编辑Dynamic Media配置]** 页面，要使缓存失效成功，您必须使以下URL失效 *两者* 此 **[!UICONTROL 公司]** 帐户和 **[!UICONTROL 公司别名]** 帐户，同时。
 
-另請參閱 [在Cloud Services中建立Dynamic Media設定](/help/assets/config-dms7.md#configuring-dynamic-media-cloud-services)
+另请参阅 [在Cloud Services中创建Dynamic Media配置](/help/assets/config-dms7.md#configuring-dynamic-media-cloud-services)
 
-## 設定Dynamic Media公司別名帳戶 {#configure-dm-alias-account}
+## 配置Dynamic Media公司别名帐户 {#configure-dm-alias-account}
 
-請先提交支援案例，以開始設定Dynamic Media公司別名帳戶。 此步驟為必要步驟。
+您首先要提交支持案例，然后才能开始配置Dynamic Media公司别名帐户。 此步骤是必需的。
 
-1. [使用Admin Console建立支援案例](https://helpx.adobe.com/cn/enterprise/using/support-for-experience-cloud.html).
-1. 在您的支援案例中提供下列資訊：
+1. [使用Admin Console创建支持案例](https://helpx.adobe.com/cn/enterprise/using/support-for-experience-cloud.html).
+1. 在您的支持案例中提供以下信息：
 
-   * 您要使用的Dynamic Media公司別名。 名稱必須包含 *僅限* 字母（允許混合大小寫）、數字、連字型大小和底線。
-   * 您的地區。
-   * 是否有 [規則集](/help/assets/using-rulesets-to-transform-urls.md) 先前是用來透過替代Dynamic Media公司帳戶名稱來提供Dynamic Media內容。
+   * 要使用的Dynamic Media公司别名。 名称必须包含 *仅限* 字母（允许混合大小写）、数字、连字符和下划线。
+   * 您的地区。
+   * 是否有 [规则集](/help/assets/using-rulesets-to-transform-urls.md) 以前用于通过替代Dynamic Media公司帐户名称来提供Dynamic Media内容。
 
-1. 支援人員建立Dynamic Media別名帳戶後，在Experience Manageras a Cloud Service製作執行個體中，選取Experience Manageras a Cloud Service標誌以存取全域導覽主控台。
-1. 在主控台左側，選取「工具」圖示，然後前往 **[!UICONTROL Cloud Services> Dynamic Media設定]**.
-1. 在Dynamic Media設定瀏覽器頁面的左側窗格中，選取 **[!UICONTROL 全域]** (請勿選取左側的資料夾圖示 **[!UICONTROL 全域]**)。 然後選取 **[!UICONTROL 編輯]**.
+1. 支持部门创建Dynamic Media别名帐户后，在Experience Manageras a Cloud Service创作实例中，选择Experience Manageras a Cloud Service徽标以访问全局导航控制台。
+1. 在控制台左侧，选择工具图标，然后转到 **[!UICONTROL Cloud Services> Dynamic Media配置]**.
+1. 在“Dynamic Media配置浏览器”页面的左侧窗格中，选择 **[!UICONTROL 全局]** (请勿选择左侧的文件夹图标 **[!UICONTROL 全局]**)。 然后选择 **[!UICONTROL 编辑]**.
 
-   ![Dynamic Media公司別名文字欄位](/help/assets/assets-dm/dm-company-alias.png)
+   ![Dynamic Media公司别名文本字段](/help/assets/assets-dm/dm-company-alias.png)
 
-1. 於 **[!UICONTROL 編輯Dynamic Media設定]** 頁面，在 **[!UICONTROL 公司別名]** 文字欄位中，輸入您先前在支援案例中指定的Dynamic Media別名帳戶名稱。
-1. 在頁面的右上角，選取 **[!UICONTROL 儲存]**.
-Dynamic Media公司別名帳戶現在已儲存並啟用；現有及新資產的所有URL和檢視器內嵌程式碼現在都會反映新的公司別名。
+1. 在 **[!UICONTROL 编辑Dynamic Media配置]** 页面，在 **[!UICONTROL 公司别名]** 文本字段中，键入您之前在支持案例中指定的Dynamic Media别名帐户名称。
+1. 在页面的右上角，选择 **[!UICONTROL 保存]**.
+Dynamic Media公司别名帐户现已保存并启用；现有资源和新资源的所有URL和查看器嵌入代码现在都反映新的公司别名。

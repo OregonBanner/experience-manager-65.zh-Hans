@@ -1,7 +1,7 @@
 ---
-title: SharePoint Connector授權、版權注意事項和免責宣告
+title: SharePoint Connector许可证、版权声明和免责声明
 seo-title: SharePoint Connector Licenses, Copyright Notices, and Disclaimers
-description: 瞭解SharePoint聯結器授權、版權注意事項和免責宣告。
+description: 了解SharePoint Connector许可证、版权声明和免责声明。
 seo-description: Learn about SharePoint Connector Licenses, Copyright Notices and Disclaimers.
 uuid: 182c8f0f-dcca-461a-9d8f-f05b376ad0cb
 contentOwner: User
@@ -18,30 +18,30 @@ ht-degree: 19%
 
 ---
 
-# SharePoint Connector授權、版權注意事項和免責宣告{#sharepoint-connector-licenses-copyright-notices-and-disclaimers}
+# SharePoint Connector许可证、版权声明和免责声明{#sharepoint-connector-licenses-copyright-notices-and-disclaimers}
 
-本節列出與MS SharePoint適用的Day JCR Connector相關的所有授權、版權注意事項和免責宣告。
+本节列出了必须与Day JCR Connector for MS SharePoint一起明确声明的所有许可证、版权声明和免责声明。
 
-## Connector第三方程式庫概觀 {#overview-of-connector-rd-party-libraries}
+## Connector第三方库概述 {#overview-of-connector-rd-party-libraries}
 
-下表列出SharePoint Connector核心程式庫內使用的第三方程式庫，以及涵蓋這些程式庫的授權、版權宣告或免責宣告：
+下表列出了SharePoint Connector核心库中使用的第三方库，以及涵盖了这些库的许可证、版权声明或免责声明：
 
 | 库 | 许可类型 |
 |---|---|
-| annogen | [Apache](#apache) |
+| 注释 | [Apache](#apache) |
 | axiom-api | [Apache](#apache) |
 | axiom-dom | [Apache](#apache) |
 | axiom-impl | [Apache](#apache) |
 | axis2-adb | [Apache](#apache) |
 | axis2-kernel | [Apache](#apache) |
-| Backport-util-concurrent | 公用網域 |
+| Backport-util-concurrent | 公共域 |
 | commons-codec | [Apache](#apache) |
 | commons-collections | [Apache](#apache) |
 | commons-fileupload | [Apache](#apache) |
 | commons-httpclient | [Apache](#apache) |
 | commons-io | [Apache](#apache) |
 | commons-lang | [Apache](#apache) |
-| concurrent | [同時](#concurrent) （公用網域） |
+| 并发 | [并发](#concurrent) （公共域） |
 | geronimo-activation_1.1_spec | [Apache](#apache) |
 | geronimo-stax-api_1.0_spec | [Apache](#apache) |
 | httpcore | [Apache](#apache) |
@@ -49,7 +49,7 @@ ht-degree: 19%
 | jackrabbit-jcr-commons | [Apache](#apache) |
 | jackrabbit-spi-commons | [Apache](#apache) |
 | jackrabbit-spi | [Apache](#apache) |
-| jaxen | BSD |
+| 雅森 | BSD |
 | log4j | [Apache](#apache) |
 | lucene-core | [Apache](#apache) |
 | neethi | [Apache](#apache) |
@@ -60,12 +60,12 @@ ht-degree: 19%
 | wstx-asl | [Apache](#apache) |
 | xalan | [Apache](#apache) |
 | xbean | [Apache](#apache) |
-| xml-api | [Apache](#apache) （包含公共網域和W3C軟體授權所涵蓋的部分） |
+| xml-api | [Apache](#apache) （包含由公共域和W3C软件许可证覆盖的部分） |
 | XmlSchema | [Apache](#apache) |
 
-## CRX第三方程式庫概觀 {#overview-of-crx-rd-party-libraries}
+## CRX第三方库概述 {#overview-of-crx-rd-party-libraries}
 
-下表列出CRX內使用的協力廠商程式庫，以及涵蓋這些程式庫的授權、著作權宣告或免責宣告：
+下表列出了CRX中使用的第三方库，以及涵盖这些库的许可证、版权声明或免责声明：
 
 <table>
  <colgroup>
@@ -98,7 +98,7 @@ ht-degree: 19%
   </tr>
   <tr>
    <td>concurrent-1.3.4.jar</td>
-   <td><a href="#concurrent">同時</a></td>
+   <td><a href="#concurrent">并发</a></td>
   </tr>
   <tr>
    <td>derby-10.1.2.1.jar</td>
@@ -106,7 +106,7 @@ ht-degree: 19%
   </tr>
   <tr>
    <td>hsqldb-1.8.0.4.jar</td>
-   <td><a href="#hypersonic-sql-group">高超音速SQL群組</a></td>
+   <td><a href="#hypersonic-sql-group">高超音速SQL组</a></td>
   </tr>
   <tr>
    <td>jaxen-1.1-beta-6.jar</td>
@@ -155,9 +155,9 @@ ht-degree: 19%
  </tbody>
 </table>
 
-## CQSE第三方程式庫概觀 {#overview-of-cqse-rd-party-libraries}
+## CQSE第三方库概述 {#overview-of-cqse-rd-party-libraries}
 
-下表列出Communication Servlet Engine中使用的第三方程式庫，以及涵蓋這些程式庫的授權、著作權宣告或免責宣告：
+下表列出了公报Servlet引擎中使用的第三方库，以及涵盖这些库的许可证、版权声明或免责声明：
 
 <table>
  <colgroup>
@@ -211,11 +211,11 @@ ht-degree: 19%
   </tr>
   <tr>
    <td><br /> </td>
-   <td><a href="#w-c-document">W3C檔案</a></td>
+   <td><a href="#w-c-document">W3C文档</a></td>
   </tr>
   <tr>
    <td><br /> </td>
-   <td><a href="#w-c-software">W3C軟體</a></td>
+   <td><a href="#w-c-software">W3C软件</a></td>
   </tr>
  </tbody>
 </table>
@@ -426,7 +426,7 @@ ht-degree: 19%
      limitations under the License.
 ```
 
-## 同時 {#concurrent}
+## 并发 {#concurrent}
 
 ```xml
      All classes are released to the public domain and may be used for any
@@ -567,7 +567,7 @@ ht-degree: 19%
      implementations, and test suites thereof.
 ```
 
-## 高超音速SQL群組 {#hypersonic-sql-group}
+## 高超音速SQL组 {#hypersonic-sql-group}
 
 ```xml
      COPYRIGHTS AND LICENSES
@@ -1094,7 +1094,7 @@ ht-degree: 19%
      (LFI#95810/Form ID#011801)
 ```
 
-## W3C檔案 {#w-c-document}
+## W3C文档 {#w-c-document}
 
 ```xml
      This license came from: https://www.w3.org/Consortium/Legal/
@@ -1180,7 +1180,7 @@ ht-degree: 19%
      (last updated by reagle on 1999/04/99.)
 ```
 
-## W3C軟體 {#w-c-software}
+## W3C软件 {#w-c-software}
 
 ```xml
      This license came from: <a href="https://www.w3.org/Consortium/Legal/" TARGET="_blank" >https://www.w3.org/Consortium/Legal/</a>

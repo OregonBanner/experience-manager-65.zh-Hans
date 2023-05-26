@@ -1,7 +1,7 @@
 ---
-title: 連線到SQL資料庫
+title: 连接到SQL数据库
 seo-title: Connecting to SQL Databases
-description: 存取外部SQL資料庫，以便AEM應用程式可以與資料互動
+description: 访问外部SQL数据库，以便AEM应用程序可以与数据交互
 seo-description: Access an external SQL database to so that your AEM applications can interact with the data
 uuid: 0af0ed08-9487-4c37-87ce-049c9b4c1ea2
 contentOwner: Guillaume Carlino
@@ -17,30 +17,30 @@ ht-degree: 0%
 
 ---
 
-# 連線到SQL資料庫{#connecting-to-sql-databases}
+# 连接到SQL数据库{#connecting-to-sql-databases}
 
-存取外部SQL資料庫，讓您的CQ應用程式可以和資料互動：
+访问外部SQL数据库，以便CQ应用程序可以与数据交互：
 
-1. [建立或取得匯出JDBC驅動程式套件的OSGi套件](#bundling-the-jdbc-database-driver).
-1. [設定JDBC資料來源集區提供者](#configuring-the-jdbc-connection-pool-service).
-1. [取得資料來源物件，並在程式碼中建立連線](#connecting-to-the-database).
+1. [创建或获取用于导出JDBC驱动程序包的OSGi包](#bundling-the-jdbc-database-driver).
+1. [配置JDBC数据源池提供程序](#configuring-the-jdbc-connection-pool-service).
+1. [获取数据源对象并在代码中创建连接](#connecting-to-the-database).
 
-## 整合JDBC資料庫驅動程式 {#bundling-the-jdbc-database-driver}
+## 捆绑JDBC数据库驱动程序 {#bundling-the-jdbc-database-driver}
 
-例如，某些資料庫廠商以OSGi套件提供JDBC驅動程式 [MySQL](https://dev.mysql.com/downloads/connector/j/). 如果資料庫的JDBC驅動程式無法做為OSGi套件組合使用，請取得驅動程式JAR並將其包裝在OSGi套件組合中。 組合必須匯出與資料庫伺服器互動所需的套件。 該套件組合也必須匯入它所參照的套件。
+例如，一些数据库供应商在OSGi捆绑包中提供JDBC驱动程序 [MySQL](https://dev.mysql.com/downloads/connector/j/). 如果数据库的JDBC驱动程序不能作为OSGi捆绑包使用，请获取驱动程序JAR并将其包装在OSGi捆绑包中。 捆绑包必须导出与数据库服务器交互所需的包。 捆绑包还必须导入它引用的包。
 
-以下範例使用 [適用於Maven的套件外掛程式](https://felix.apache.org/documentation/subprojects/apache-felix-maven-bundle-plugin-bnd.html) 將HSQLDB驅動程式包裝在OSGi套件中。 POM會指示外掛程式內嵌識別為相依性的hsqldb.jar檔案。 所有org.hsqldb封裝都會匯出。
+以下示例使用 [适用于Maven的捆绑包插件](https://felix.apache.org/documentation/subprojects/apache-felix-maven-bundle-plugin-bnd.html) 将HSQLDB驱动程序封装在OSGi包中。 POM指示插件嵌入标识为依赖项的hsqldb.jar文件。 所有org.hsqldb包均已导出。
 
-外掛程式會自動決定要匯入哪些套件，並將其列在套件組合的MANIFEST.MF檔案中。 如果CQ伺服器上沒有任何套裝軟體，則套件組合不會在安裝時啟動。 以下是兩種可能的解決方案：
+该插件会自动确定要导入的包，并在包的MANIFEST.MF文件中列出这些包。 如果CQ服务器上没有任何软件包，则安装时不会启动捆绑包。 两种可能的解决方案如下：
 
-* 在POM中指出套件是選用的。 當JDBC連線實際上不需要套件成員時，請使用此解決方案。 使用Import-Package元素來指示可選套件，如以下範例所示：
+* 在POM中指明包是可选的。 当JDBC连接实际上不需要软件包成员时，可使用此解决方案。 使用Import-Package元素来指示可选软件包，如下例所示：
 
    `<Import-Package>org.jboss.*;resolution:=optional,*</Import-Package>`
-* 將包含套件的JAR檔案包裝在匯出套件的OSGi套件組合中，並部署該套件。 當程式碼執行期間需要套件成員時，請使用此解決方案。
+* 将包含包的JAR文件包装在用于导出包的OSGi捆绑包中，并部署该捆绑包。 当代码执行期间需要包成员时，请使用此解决方案。
 
-瞭解原始程式碼可讓您決定要使用哪個解決方案。 您也可以嘗試任一解決方案，並執行測試以驗證解決方案。
+了解源代码后，您可以决定使用哪个解决方案。 您还可以尝试任一解决方案并执行测试以验证解决方案。
 
-### 套裝hsqldb.jar的POM {#pom-that-bundles-hsqldb-jar}
+### 捆绑了hsqldb.jar的POM {#pom-that-bundles-hsqldb-jar}
 
 ```xml
 <project xmlns="https://maven.apache.org/POM/4.0.0"
@@ -84,54 +84,54 @@ ht-degree: 0%
 </project>
 ```
 
-下列連結會開啟某些熱門資料庫產品的下載頁面：
+以下链接可打开某些常用数据库产品的下载页：
 
 * [Microsoft® SQL Server](https://www.microsoft.com/en-us/download/details.aspx?displaylang=en&amp;id=11774)
 * [oracle](https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html)
 * [IBM® DB2®](https://www.ibm.com/support/pages/download-db2-fix-packs-version-db2-linux-unix-and-windows)
 
-### 設定JDBC連線集區服務 {#configuring-the-jdbc-connection-pool-service}
+### 配置JDBC连接池服务 {#configuring-the-jdbc-connection-pool-service}
 
-新增使用JDBC驅動程式建立資料來源物件的「JDBC連線集區」服務組態。 您的應用程式程式碼使用此服務來取得物件並連線至資料庫。
+为使用JDBC驱动程序创建数据源对象的JDBC连接池服务添加配置。 您的应用程序代码使用此服务来获取对象并连接到数据库。
 
-JDBC連線集區( `com.day.commons.datasource.jdbcpool.JdbcPoolService`)為工廠服務。 如果您需要使用不同屬性（例如唯讀或讀取/寫入存取權）的連線，請建立多個組態。
+JDBC连接池( `com.day.commons.datasource.jdbcpool.JdbcPoolService`)是工厂服务。 如果需要使用不同属性（例如只读或读/写访问）的连接，请创建多个配置。
 
-使用CQ時，有數種方法可管理此類服務的組態設定；請參閱 [設定OSGi](/help/sites-deploying/configuring-osgi.md) 以取得完整詳細資訊。
+使用CQ时，可通过多种方法管理此类服务的配置设置；请参阅 [配置OSGi](/help/sites-deploying/configuring-osgi.md) 以了解完整的详细信息。
 
-下列屬性可用於設定集區連線服務。 屬性名稱會在Web主控台中顯示。 的對應名稱 `sling:OsgiConfig` 節點會顯示在括弧中。 HSQLDB伺服器和別名的資料庫會顯示範例值。 `mydb`：
+以下属性可用于配置池连接服务。 资产名称在Web控制台中按其显示方式列出。 对应的名称 `sling:OsgiConfig` 节点显示在括号中。 对于HSQLDB服务器和别名为 `mydb`：
 
-* JDBC驅動程式類別( `jdbc.driver.class`)：用來實作java.sql.Driver介面的Java™類別，例如 `org.hsqldb.jdbc.JDBCDriver`. 資料型別為 `String`.
+* JDBC驱动程序类( `jdbc.driver.class`)：要使用的实现java.sql.Driver接口的Java™类，例如 `org.hsqldb.jdbc.JDBCDriver`. 数据类型是 `String`.
 
-* JDBC連線URI ( `jdbc.connection.uri`)：用來建立連線的資料庫URL，例如 `jdbc:hsqldb:hsql//10.36.79.223:9001/mydb`. URL的格式必須適用於java.sql.DriverManager類別的getConnection方法。 資料型別為 `String`.
+* JDBC连接URI ( `jdbc.connection.uri`)：用于创建连接的URL，例如 `jdbc:hsqldb:hsql//10.36.79.223:9001/mydb`. URL的格式必须对java.sql.DriverManager类的getConnection方法有效。 数据类型是 `String`.
 
-* 使用者名稱( `jdbc.username`)：用來向資料庫伺服器驗證的使用者名稱。 資料型別為 `String`.
+* 用户名( `jdbc.username`)：用于向数据库服务器进行身份验证的用户名。 数据类型是 `String`.
 
-* 密碼( `jdbc.password`)：用於驗證使用者的密碼。 資料型別為 `String`.
+* 密码( `jdbc.password`)：用于用户身份验证的密码。 数据类型是 `String`.
 
-* 驗證查詢( `jdbc.validation.query`)：用來驗證連線是否成功的SQL陳述式，例如 `select 1 from INFORMATION_SCHEMA.SYSTEM_USERS`. 資料型別為 `String`.
+* 验证查询( `jdbc.validation.query`)：用于验证连接是否成功的SQL语句，例如 `select 1 from INFORMATION_SCHEMA.SYSTEM_USERS`. 数据类型是 `String`.
 
-* 預設為唯讀(default.readonly)：當您希望連線提供唯讀存取權時，請選取此選項。 資料型別為 `Boolean`.
-* 依預設自動提交( `default.autocommit`)：選取此選項可為傳送至資料庫的每個SQL命令建立個別的交易，且會自動認可每個交易。 在程式碼中明確確認交易時，請勿選取此選項。 資料型別為 `Boolean`.
+* 默认只读(default.readonly)：如果希望连接提供只读访问，请选择此选项。 数据类型是 `Boolean`.
+* 默认自动提交( `default.autocommit`)：选择此选项可以为发送到数据库的每个SQL命令创建单独的事务，并且每个事务都会自动提交。 在代码中明确提交事务时，请勿选择此选项。 数据类型是 `Boolean`.
 
-* 集區大小( `pool.size`)：可供資料庫使用的同時連線數目。 資料型別為 `Long`.
+* 池大小( `pool.size`)：可供数据库使用的同时连接数。 数据类型是 `Long`.
 
-* 集區等待( `pool.max.wait.msec`)：連線要求逾時之前經過的時間量。 資料型別為 `Long`.
+* 池等待( `pool.max.wait.msec`)：连接请求超时之前经过的时间。 数据类型是 `Long`.
 
-* 資料來源名稱( `datasource.name`)：此資料來源的名稱。 資料型別為 `String`.
+* 数据源名称( `datasource.name`)：此数据源的名称。 数据类型是 `String`.
 
-* 其他服務屬性( `datasource.svc.properties`)：一組您想要附加至連線URL的名稱/值組。 資料型別為 `String[]`.
+* 其他服务属性( `datasource.svc.properties`)：要附加到连接URL的一组名称/值对。 数据类型是 `String[]`.
 
-JDBC連線集區服務是工廠服務。 因此，如果您使用 `sling:OsgiConfig` 節點若要設定連線服務，節點的名稱必須包含工廠服務PID，後面接著 *`-alias`*. 您使用的別名在該PID的所有設定節點中必須是唯一的。 節點名稱範例為 `com.day.commons.datasource.jdbcpool.JdbcPoolService-myhsqldbpool`.
+JDBC连接池服务是一个工厂。 因此，如果您使用 `sling:OsgiConfig` 节点要配置连接服务，节点的名称必须包含工厂服务PID，后跟一个 *`-alias`*. 您使用的别名对于该PID的所有配置节点必须是唯一的。 示例节点名称为 `com.day.commons.datasource.jdbcpool.JdbcPoolService-myhsqldbpool`.
 
 ![chlimage_1-7](assets/chlimage_1-7a.png)
 
-### 連線到資料庫 {#connecting-to-the-database}
+### 连接到数据库 {#connecting-to-the-database}
 
-在Java™程式碼中，使用DataSourcePool服務取得 `javax.sql.DataSource` 物件。 DataSourcePool服務提供 `getDataSource` 傳回「 」的方法 `DataSource` 物件做為指定的資料來源名稱。 作為方法引數，請使用資料來源名稱的值(或 `datasource.name`)屬性，指定給JDBC連線集區組態。
+在Java™代码中，使用DataSourcePool服务获取 `javax.sql.DataSource` 您创建的配置的对象。 DataSourcePool服务提供 `getDataSource` 返回值的方法 `DataSource` 指定数据源名称的对象。 作为方法参数，使用数据源名称的值(或 `datasource.name`)属性，该属性为JDBC连接池配置指定。
 
-下列範例JSP程式碼會取得hsqldbds資料來源的執行個體、執行簡單的SQL查詢，並顯示傳回的結果數目。
+以下示例JSP代码获取hsqldbds数据源的实例，执行简单的SQL查询，并显示返回的结果数。
 
-#### 執行資料庫查閱的JSP {#jsp-that-performs-a-database-lookup}
+#### 执行数据库查找的JSP {#jsp-that-performs-a-database-lookup}
 
 ```java
 <%@include file="/libs/foundation/global.jsp"%><%
@@ -169,7 +169,7 @@ JDBC連線集區服務是工廠服務。 因此，如果您使用 `sling:OsgiCon
 
 >[!NOTE]
 >
->如果getDataSource方法因找不到資料來源而擲回例外狀況，請確定Connections Pool服務設定正確。 驗證屬性名稱、值和資料型別。
+>如果getDataSource方法由于未找到数据源而引发异常，请确保连接池服务配置正确。 验证属性名称、值和数据类型。
 
 <!-- Link below redirects to the "Get started with AEM Sites - WKND tutorial"
 >[!NOTE]

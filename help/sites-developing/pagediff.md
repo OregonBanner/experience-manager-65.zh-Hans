@@ -1,7 +1,7 @@
 ---
-title: 開發和頁面差異
+title: 开发和页面差异
 seo-title: Developing and Page Diff
-description: 開發和頁面差異
+description: 开发和页面差异
 seo-description: null
 uuid: 06f27bc2-f42a-4176-ab94-255e721c6933
 contentOwner: User
@@ -18,33 +18,33 @@ ht-degree: 1%
 
 ---
 
-# 開發和頁面差異{#developing-and-page-diff}
+# 开发和页面差异{#developing-and-page-diff}
 
 ## 功能概述 {#feature-overview}
 
-內容建立是一個反複的過程。 以效率撰寫需要能夠檢視反複專案之間有何變更。 檢視一個頁面版本然後檢視另一個頁面版本會效率低下，並容易出錯。 作者想要能夠並排比較目前頁面與先前版本，並醒目提示差異。
+内容创建是一个反复的过程。 高效的创作要求能够查看在不同的迭代中发生了什么变化。 查看一个页面版本然后查看另一个页面版本会效率低下，并且容易出错。 作者希望能够并排比较当前页面与先前版本，并突出显示差异。
 
-頁面差異可讓使用者將目前頁面與啟動、舊版等專案進行比較。 如需此使用者功能的詳細資訊，請參閱 [頁面差異](/help/sites-authoring/page-diff.md).
+页面差异允许用户将当前页面与启动项、先前版本等进行比较。 有关此用户功能的详细信息，请参阅 [页面差异](/help/sites-authoring/page-diff.md).
 
-## 作業詳細資料 {#operation-details}
+## 操作详细信息 {#operation-details}
 
-比較頁面的版本時，使用者想要比較的先前版本會由AEM在背景中重新建立，以方便差異分析。 這是為了能夠呈現內容 [用於並排比較](/help/sites-developing/pagediff.md#operation-details).
+在比较页面的版本时，用户希望比较的先前版本由AEM在后台重新创建，以便利比较。 需要此项才能渲染内容 [用于并排比较](/help/sites-developing/pagediff.md#operation-details).
 
-此重新建立操作由AEM內部完成，對使用者而言是透明的，不需要任何干涉。 不過，管理員檢視存放庫（例如CRX DE Lite）時，會在內容結構中看到這些重新建立的版本。
+此娱乐操作由AEM在内部完成，对用户是透明的，无需干预。 但是，查看存储库（例如，在CRX DE Lite中）的管理员将在内容结构中看到这些重新创建的版本。
 
-比較內容時，系統會在下列位置重新建立整個樹狀結構，一直到要比較的頁面：
+比较内容时，将在以下位置重新创建截至要比较的页面的整个树：
 
 `/tmp/versionhistory/`
 
-清除工作會自動執行以清除此暫存內容。
+自动运行清理任务以清理此临时内容。
 
 ## 权限 {#permissions}
 
-先前，在傳統UI中，為了方便AEM差異(例如使用 `cq:text` 標籤程式庫，或自訂整合 `DiffService` OSGi服務轉換為元件)。 新的diff功能不再需要此專案，因為diff是透過DOM比較在使用者端發生。
+以前，在经典UI中，必须考虑特殊开发考虑以便于AEM差异(例如使用 `cq:text` 标记库，或自定义集成 `DiffService` OSGi服务转换为组件)。 新的diff功能不再需要此项，因为差异是通过DOM比较在客户端发生的。
 
-不過，開發人員需要考慮許多限制。
+但是，开发人员需要考虑许多限制。
 
-* 此功能使用的CSS類別名稱與AEM產品沒有間隔。 如果頁面上包含其他自訂CSS類別或具有相同名稱的第三方CSS類別，則差異的顯示可能會受到影響。
+* 此功能使用的CSS类与AEM产品没有命名空间。 如果页面上包含其他具有相同名称的自定义CSS类或第三方CSS类，则差异的显示可能会受到影响。
 
    * `html-added`
    * `html-removed`
@@ -53,12 +53,12 @@ ht-degree: 1%
    * `cq-component-moved`
    * `cq-component-changed`
 
-* 由於diff是使用者端並在頁面載入時執行，在使用者端diff服務執行後對DOM所做的任何調整都不會計算在內。 這可能會影響
+* 由于diff是客户端的，并在页面加载时执行，因此不会考虑在客户端差异服务运行后对DOM所做的任何调整。 这可能会影响
 
-   * 使用AJAX來包含內容的元件
+   * 使用AJAX包含内容的组件
    * 单页面应用程序
-   * 在使用者互動時操控DOM的Javascript型元件。
+   * 基于Javascript的组件，可在用户交互时处理DOM。
 
 >[!NOTE]
 >
->頁面差異比較僅適用於具有有效cq：editConfig節點的元件。
+>页面差异比较仅适用于具有有效cq：editConfig节点的组件。

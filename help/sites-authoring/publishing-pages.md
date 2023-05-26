@@ -1,6 +1,6 @@
 ---
-title: 發佈內容頁面
-description: 瞭解如何發佈內容頁面。
+title: 发布内容页面
+description: 了解如何发布内容页面。
 uuid: 57795e4a-e528-4e74-ad9c-e13f868daebb
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -18,15 +18,15 @@ ht-degree: 54%
 
 # 发布页面 {#publishing-pages}
 
-在您於作者環境中建立並檢閱您的內容後， [使其可在您的公開網站上使用](/help/sites-authoring/author.md#concept-of-authoring-and-publishing) （您的發佈環境）。
+在创作环境中创建和查看内容后， [使其在您的公共网站上可用](/help/sites-authoring/author.md#concept-of-authoring-and-publishing) （您的发布环境）。
 
-這稱為發佈頁面。 當您想要從發佈環境中移除頁面時，會稱為取消發佈。 發佈和取消發佈頁面時，作者環境仍會提供頁面以供進一步變更，直到您刪除為止。
+这称为发布页面。 要从发布环境中删除页面时，将称为取消发布。 在发布和取消发布页面时，该页面在删除之前仍可在创作环境中进行进一步更改。
 
-您也可以立即發佈/取消發佈頁面，或在預先定義的未來日期/時間發佈/取消發佈頁面。
+您还可以立即发布/取消发布页面，或者在预定义的未来日期/时间发布/取消发布页面。
 
 >[!NOTE]
 >
->某些與發佈相關的辭彙可能會混淆：
+>某些与发布相关的术语可能会混淆：
 >
 >* **发布/取消发布**
    >  这些是在发布环境中公开提供（或不公开提供）您的内容的主要操作术语。
@@ -35,23 +35,23 @@ ht-degree: 54%
    >  这两个术语与发布/取消发布同义。
 >
 >* **复制**
-   >  這些是技術術語，說明資料（例如頁面內容、檔案、程式碼、使用者註解）從一個環境移動到另一個環境，例如發佈或反向複製使用者註解時。
+   >  这些是技术术语，用于描述数据（例如页面内容、文件、代码、用户注释）从一个环境移动到另一个环境，例如发布或反向复制用户注释时。
 >
 
 
 >[!NOTE]
 >
->如果您沒有發佈特定頁面所需的許可權：
+>如果您没有发布特定页面所需的权限，请执行以下操作：
 >
->* 系統會觸發工作流程，將您要發佈的請求通知適當人員。
->* 此 [工作流程可能已自訂](/help/sites-developing/workflows-models.md#main-pars-procedure-6fe6) 由您的開發團隊提供。
+>* 将触发一个工作流，通知相应人员您的发布请求。
+>* 此 [工作流可能已自定义](/help/sites-developing/workflows-models.md#main-pars-procedure-6fe6) 由您的开发团队提供。
 >* 将显示一条简短的消息，通知您工作流已经触发。
 >
 
 
 ## 发布页面 {#publishing-pages-1}
 
-根據您的位置，您可以發佈：
+根据您的位置，您可以发布：
 
 * [从页面编辑器中](/help/sites-authoring/publishing-pages.md#publishing-from-the-editor)
 * [从站点控制台中](/help/sites-authoring/publishing-pages.md#publishing-from-the-console)
@@ -85,7 +85,7 @@ ht-degree: 54%
 
 >[!NOTE]
 >
->從編輯器發佈是淺層發佈，即只會發佈所選頁面/頁面，而不會發佈任何子頁面。
+>从编辑器中发布是一种简单的发布，即仅发布选定的页面，不发布任何子页面。
 
 >[!NOTE]
 >
@@ -93,30 +93,30 @@ ht-degree: 54%
 
 ### 从控制台中发布 {#publishing-from-the-console}
 
-在網站主控台中，有兩個發佈選項：
+站点控制台中有两个发布选项：
 
 * [快速发布](/help/sites-authoring/publishing-pages.md#quick-publish)
 * [管理发布](/help/sites-authoring/publishing-pages.md#manage-publication)
 
 #### 快速发布 {#quick-publish}
 
-**快速发布**&#x200B;适用于一些简单的情况，可立即发布选定的页面，而无需进行任何进一步的交互。因此，任何未發佈的參考也會自動發佈。
+**快速发布**&#x200B;适用于一些简单的情况，可立即发布选定的页面，而无需进行任何进一步的交互。因此，任何未发布的引用也将自动发布。
 
-若要使用「快速發佈」功能發佈頁面：
+要使用快速发布功能发布页面，请执行以下操作：
 
 1. 在站点控制台中选择一个或多个页面，然后单击&#x200B;**快速发布**&#x200B;按钮。
 
    ![pp-02](assets/pp-02.png)
 
-1. 在「快速發佈」對話方塊中，按一下以確認發佈 **發佈** 或按一下 **取消**. 请记住，任何未发布的引用也将被自动发布。
+1. 在快速发布对话框中，单击以确认发布 **Publish** 或单击 **取消**. 请记住，任何未发布的引用也将被自动发布。
 
    ![chlimage_1-1](assets/chlimage_1-1.png)
 
-1. 發佈頁面時，畫面會顯示確認發佈的警報。
+1. 发布页面时，将显示确认发布的警报。
 
 >[!NOTE]
 >
->「快速發佈」是淺層發佈，即只會發佈選取的頁面/頁面，而不會發佈任何子頁面。
+>快速发布是一种浅层发布，即仅发布选定的页面，不发布任何子页面。
 
 #### 管理发布 {#manage-publication}
 
@@ -131,9 +131,9 @@ ht-degree: 54%
 1. 此时会启动&#x200B;**管理发布**&#x200B;向导。第一个步骤&#x200B;**选项**&#x200B;允许您：
 
    * 选择发布或取消发布选定的页面。
-   * 選擇現在或稍後採取該動作。
+   * 选择立即或稍后执行该操作。
 
-   稍後發佈會啟動工作流程，以在指定時間發佈選取的一個或多個頁面。 反之，稍後取消發佈會啟動工作流程，以在特定時間取消發佈所選的一或多個頁面。
+   稍后发布会启动一个工作流，以在指定时间发布选定的一个或多个页面。 相反，稍后取消发布会启动一个工作流，以在特定时间取消发布选定的一个或多个页面。
 
    如果您要稍后撤消发布/取消发布页面，请转到[“工作流”控制台](/help/sites-administering/workflows.md)以终止相应的工作流。
 
@@ -141,7 +141,7 @@ ht-degree: 54%
 
    单击&#x200B;**下一步**&#x200B;以继续。
 
-1. 在管理出版物精靈的下一個步驟中， **範圍**，您可以定義發佈/取消發佈的範圍，例如包含以包含子頁面和/或包含參照。
+1. 在“管理发布”向导的下一步中， **范围**，您可以定义发布/取消发布的范围，例如包括以包含子页面和/或包括引用。
 
    ![screen_shot_2018-03-21at153354](assets/screen_shot_2018-03-21at153354.png)
 
@@ -151,11 +151,11 @@ ht-degree: 54%
 
    选择所需的页面，然后单击&#x200B;**选择**&#x200B;以将该内容添加到向导，或单击 **取消** 以取消所做的选择并返回到向导。
 
-   返回精靈，您可以在清單中選取專案以設定其進一步的選項，例如：
+   返回向导，您可以在列表中选择一个项目以配置其进一步的选项，例如：
 
-   * 包括其子項。
-   * 將其從選取範圍中移除。
-   * 管理其已發佈的參考。
+   * 包括其子项。
+   * 将其从选定内容中删除。
+   * 管理其已发布的引用。
 
    ![pp-03](assets/pp-03.png)
 
@@ -175,9 +175,9 @@ ht-degree: 54%
 
    ![pp-04](assets/pp-04.png)
 
-   此 **已發佈引用** 對話方塊會顯示所選內容的參照。 依預設，這些區段會全部選取，且將會發佈/取消發佈，但您可以取消勾選以取消選取，使其不包含在動作中。
+   此 **已发布引用** 对话框显示选定内容的引用。 默认情况下，这些组件处于选中状态并将进行发布/取消发布，但您可以取消选中以取消选中它们，以便它们不会包含在操作中。
 
-   按一下 **完成** 儲存變更或 **取消** 以取消選取並返回精靈。
+   单击 **完成** 保存更改或 **取消** 以取消选择并返回到向导。
 
    返回到向导后，**引用**&#x200B;列将进行相应的更新，以反映您选择的要发布或取消发布的引用。
 
@@ -191,12 +191,12 @@ ht-degree: 54%
 
    >[!NOTE]
    >
-   >将根据用户可能拥有也可能没有的权限显示&#x200B;**工作流**&#x200B;步骤。請參閱 [本頁上一個附註](/help/sites-authoring/publishing-pages.md#main-pars-note-0-ejsjqg-refd) 關於發佈許可權以及 [管理工作流程存取許可權](/help/sites-administering/workflows-managing.md) 和 [將工作流程套用至頁面](/help/sites-authoring/workflows-applying.md#main-pars-text-5-bvhbkh-refd) 以取得詳細資訊。
+   >将根据用户可能拥有也可能没有的权限显示&#x200B;**工作流**&#x200B;步骤。请参阅 [此页面上的上一注释](/help/sites-authoring/publishing-pages.md#main-pars-note-0-ejsjqg-refd) 关于发布权限以及 [管理对工作流的访问权限](/help/sites-administering/workflows-managing.md) 和 [将工作流应用于页面](/help/sites-authoring/workflows-applying.md#main-pars-text-5-bvhbkh-refd) 了解详细信息。
 
-   資源會依觸發的工作流程及每個指定選項分組，以便：
+   资源按触发的工作流和每个给定选项进行分组，以便：
 
-   * 定義工作流程的標題。
-   * 保留工作流程封裝，前提是工作流程具有 [多資源支援](/help/sites-developing/workflows-models.md#configuring-a-workflow-for-multi-resource-support).
+   * 定义工作流的标题。
+   * 保留工作流包，前提是工作流具有 [多资源支持](/help/sites-developing/workflows-models.md#configuring-a-workflow-for-multi-resource-support).
    * 在选择保留工作流包的选项时，定义工作流包的标题。
 
    单击&#x200B;**发布**&#x200B;或&#x200B;**稍后发布**&#x200B;以完成发布。
@@ -212,15 +212,15 @@ ht-degree: 54%
 * [从页面编辑器中](/help/sites-authoring/publishing-pages.md#unpublishing-from-the-editor)
 * [从站点控制台中](/help/sites-authoring/publishing-pages.md#unpublishing-from-the-console)
 
-### 從編輯器中取消發佈 {#unpublishing-from-the-editor}
+### 从编辑器中取消发布 {#unpublishing-from-the-editor}
 
-編輯頁面時，如果您要取消發佈該頁面，請選取 **取消發佈頁面** 在 **頁面資訊** 功能表，視需要而定 [發佈頁面](/help/sites-authoring/publishing-pages.md#publishing-from-the-editor).
+在编辑页面时，如果要取消发布该页面，请选择 **取消发布页面** 在 **页面信息** 菜单，你也可以这么说 [发布页面](/help/sites-authoring/publishing-pages.md#publishing-from-the-editor).
 
 >[!NOTE]
 >
 >无法取消发布编辑器中按[别名](/help/sites-authoring/editing-page-properties.md#advanced)处理的页面。编辑器中的发布选项仅适用于通过其实际路径访问的页面。
 
-### 從主控台取消發佈 {#unpublishing-from-the-console}
+### 从控制台取消发布 {#unpublishing-from-the-console}
 
 正如[使用“管理发布”选项发布页面](/help/sites-authoring/publishing-pages.md#manage-publication)一样，也可以使用它来取消发布页面。
 
@@ -233,40 +233,40 @@ ht-degree: 54%
 
    如果您要稍后撤消发布/取消发布页面，请转到[“工作流”控制台](/help/sites-administering/workflows.md)以终止相应的工作流。
 
-1. 若要完成取消發佈，請依照您想要的方式繼續完成精靈 [發佈頁面](/help/sites-authoring/publishing-pages.md#manage-publication).
+1. 要完成取消发布，请按照之前的步骤继续完成向导 [发布页面](/help/sites-authoring/publishing-pages.md#manage-publication).
 
 ## 发布和取消发布树 {#publishing-and-unpublishing-a-tree}
 
-當您輸入或更新了大量內容頁面時 — 所有內容頁面都位於同一個根頁面下 — 可以更輕鬆地在一次動作中發佈整個樹狀結構。
+当您输入或更新了大量内容页面时（所有内容页面都位于同一根页面下），可以更轻松地在一次操作中发布整个树。
 
-您可以使用 [管理發布](/help/sites-authoring/publishing-pages.md#manage-publication) 選項（位於網站主控台上）來執行此動作。
+您可以使用 [管理发布](/help/sites-authoring/publishing-pages.md#manage-publication) 选项来执行此操作。
 
-1. 在網站主控台中，選取您要發佈或取消發佈之樹狀結構的根頁面，然後選取 **管理發布**.
-1. 此时会启动&#x200B;**管理发布**&#x200B;向导。選擇發佈或取消發佈的時間及應發生的時間，然後選取 **下一個** 以繼續。
-1. 在 **範圍** 步驟，選取根頁面並選取 **包含子項**.
+1. 在站点控制台中，选择要发布或取消发布的树的根页面，然后选择 **管理发布**.
+1. 此时会启动&#x200B;**管理发布**&#x200B;向导。选择发布或取消发布以及应何时发布，然后选择 **下一个** 以继续。
+1. 在 **范围** 步骤，选择根页面并选择 **包括子项**.
 
    ![chlimage_1-6](assets/chlimage_1-6.png)
 
-1. 在 **包含子項** 對話方塊，取消核取選項：
+1. 在 **包括子项** 对话框，请取消选中以下选项：
 
    * 仅包括下级子项
    * 仅包括已发布的页面
 
-   預設會選取這些選項，因此您必須記得取消選取它們。 按一下 **新增** 以確認並將內容新增至發佈/取消發佈。
+   这些选项默认处于选中状态，因此您必须记得取消选择它们。 单击 **添加** 以确认内容并将其添加到发布/取消发布。
 
    ![chlimage_1-7](assets/chlimage_1-7.png)
 
-1. 此 **管理發布** 精靈會列出樹狀結構的內容以供檢閱。 您可以新增其他頁面或移除選取的頁面，進一步自訂選取範圍。
+1. 此 **管理发布** 向导列出树的内容以供审阅。 您可以通过添加其他页面或删除所选页面来进一步自定义选择。
 
    ![screen_shot_2018-03-21at154237](assets/screen_shot_2018-03-21at154237.png)
 
    请记住，您还可以通过&#x200B;**已发布引用**&#x200B;选项查看要发布的引用。
 
-1. [照常繼續管理出版物精靈](#manage-publication) 完成發佈或取消發佈樹狀結構。
+1. [照常继续执行“管理发布”向导](#manage-publication) 完成发布或取消发布树。
 
 ## 确定发布状态 {#determining-publication-status}
 
-您可以決定頁面的發佈狀態：
+您可以确定页面的发布状态：
 
 * 在[站点控制台上的资源概述信息](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)中
 

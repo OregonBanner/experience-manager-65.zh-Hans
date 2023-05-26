@@ -17,18 +17,18 @@ ht-degree: 41%
 
 # AEM 6.5 Managing 用户指南 {#managing}
 
-+ [Managing使用手冊](home.md)
-+ 管理 — 最佳實務檢查清單 {#managing-best-practices-checklist}
-   + [管理專案 — 最佳實務檢查清單](best-practices.md)
-   + [檢查清單](best-practices-checklist.md)
++ [Managing用户指南](home.md)
++ 管理 — 最佳实践核对清单 {#managing-best-practices-checklist}
+   + [管理项目 — 最佳实践核对清单](best-practices.md)
+   + [检查清单](best-practices-checklist.md)
    + [术语表](best-practices-glossary.md)
-   + [檢查清單 — 進一步參考](best-practices-further-reference.md)
-+ 管理 — 進一步參考 {#managing-further-reference}
-   + [硬體大小調整准則](hardware-sizing-guidelines.md)
+   + [清单 — 进一步参考](best-practices-further-reference.md)
++ 管理 — 进一步参考 {#managing-further-reference}
+   + [硬件大小调整准则](hardware-sizing-guidelines.md)
    + [企业 DevOps](enterprise-devops.md)
-   + [SEO和URL管理最佳作法](seo-and-url-management.md)
+   + [seo和URL管理最佳实践](seo-and-url-management.md)
 + 辅助功能 {#accessibility}
-   + [AEM與網頁協助工具准則](web-accessibility.md)
+   + [AEM和Web无障碍准则](web-accessibility.md)
    + [WCAG 2.1快速指南](qg-wcag.md)
-+ 資料保護 {#data-protection}
++ 数据保护 {#data-protection}
    + [用于数据保护和数据隐私法规的 AEM 就绪性](data-protection-and-privacy.md)

@@ -1,7 +1,7 @@
 ---
-title: 資產測試的命名慣例
+title: 资产测试的命名约定
 seo-title: Naming conventions for assets
-description: 存放庫中的節點會受到Java內容存放庫的命名慣例的約束。 不過，Adobe Experience Manager對資產節點名稱施加了進一步的慣例。
+description: 存储库中的节点遵循Java内容存储库的命名约定。 但是，Adobe Experience Manager对资源节点名称施加了进一步的约定。
 seo-description: Nodes in the repository are subject to naming conventions of the Java Content Repository. However, Adobe Experience Manager imposes further conventions for the name of asset nodes.
 uuid: 6b622a60-90e8-461e-9b67-42c11c7038f9
 contentOwner: Chris Bohnert
@@ -17,23 +17,23 @@ ht-degree: 1%
 
 ---
 
-# 資產測試的命名慣例{#naming-conventions-for-assets-testing}
+# 资产测试的命名约定{#naming-conventions-for-assets-testing}
 
-存放庫中的節點受限於的命名慣例 [Java內容存放庫](/help/sites-developing/the-basics.md#java-content-repository). 不過，Adobe Experience Manager對資產節點名稱施加了進一步的慣例。
+存储库中的节点遵循的命名约定 [Java内容存储库](/help/sites-developing/the-basics.md#java-content-repository). 但是，Adobe Experience Manager对资源节点名称施加了进一步的约定。
 
 ## 经典 UI {#classic-ui}
 
-傳統UI施加了更嚴格的限制：
+经典UI施加了更严格的限制：
 
-* 當出現下列任一情況時，當有明確的節點名稱時，會驗證資產名稱：
+* 在出现以下任一情况时验证资源名称：
 
-   * 提供了資產標題，以便轉換為節點名稱
-   * 提供了明確的節點名稱
+   * 提供了资源标题以转换为节点名称
+   * 提供了显式节点名称
 
-* 有效字元（從傳統UI中建立資產時，實際只有這些字元有效）：
+* 有效字符（从经典UI中创建资产时，只有这些字符实际有效）：
 
-   * &#39;a&#39;至&#39;z&#39;
-   * &#39;A&#39;至&#39;Z&#39;
+   * &#39;a&#39;到&#39;z&#39;
+   * &#39;A&#39;到&#39;Z&#39;
    * &#39;0&#39;到&#39;9&#39;
-   * _ （底線）
-   * `-` （破折號/減號）
+   * _ （下划线）
+   * `-` （短划线/减号）

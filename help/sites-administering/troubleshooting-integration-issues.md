@@ -1,7 +1,7 @@
 ---
-title: 疑難排解整合問題
+title: 集成问题疑难解答
 seo-title: Troubleshooting Integration Issues
-description: 瞭解如何疑難排解整合問題。
+description: 了解如何解决集成问题。
 seo-description: Learn how to troubleshoot integration issues.
 uuid: fe080e58-a855-4308-a611-f72eb47ba82d
 contentOwner: raiman
@@ -17,17 +17,17 @@ ht-degree: 1%
 
 ---
 
-# 疑難排解整合問題{#troubleshooting-integration-issues}
+# 集成问题疑难解答{#troubleshooting-integration-issues}
 
-## 一般疑難排解提示 {#general-troubleshooting-tips}
+## 一般疑难解答提示 {#general-troubleshooting-tips}
 
-### 確定沒有JavaScript錯誤 {#ensure-there-are-no-javascript-errors}
+### 确保没有JavaScript错误 {#ensure-there-are-no-javascript-errors}
 
-檢查瀏覽器的JavaScript主控台是否顯示任何錯誤。 未處理的錯誤可能會妨礙後續程式碼正確執行。 如果出現錯誤，請檢查導致錯誤的指令碼以及在哪個區域。 指令碼的路徑可能會指出指令碼所屬的功能。
+检查浏览器的JavaScript控制台是否显示任何错误。 未处理的错误可能会阻止正确执行后续代码。 如果出现错误，请检查导致错误的脚本以及在哪个区域。 脚本的路径可能会指示脚本所属的功能。
 
-### 在元件層級登入 {#logging-on-component-level}
+### 在组件级别登录 {#logging-on-component-level}
 
-在某些情況下，在元件層級新增其他陳述式可能會有幫助。 由於元件已呈現，您可以新增暫時標籤以顯示可能有助於您識別潛在問題的變數值。 例如：
+在某些情况下，在组件级别添加其他语句可能会有帮助。 由于组件已呈现，因此您可以添加临时标记以显示变量值，这可以帮助您识别潜在问题。 例如：
 
 ```
 <%
@@ -43,33 +43,33 @@ ${ myHtlVariable }
 -->
 ```
 
-如需有關記錄的其他詳細資訊，請參閱 [記錄](/help/sites-deploying/configure-logging.md) 和 [使用稽核記錄和記錄檔](/help/sites-deploying/monitoring-and-maintaining.md#working-with-audit-records-and-log-files) 頁面。
+有关日志记录的其他详细信息，请参见 [日志记录](/help/sites-deploying/configure-logging.md) 和 [使用审计记录和日志文件](/help/sites-deploying/monitoring-and-maintaining.md#working-with-audit-records-and-log-files) 页数。
 
-## Analytics整合問題 {#analytics-integration-issues}
+## Analytics集成问题 {#analytics-integration-issues}
 
-### Report Importer導致CPU/記憶體使用量高 {#the-report-importer-causes-high-cpu-memory-usage}
+### 报告导入程序会导致CPU/内存使用率过高 {#the-report-importer-causes-high-cpu-memory-usage}
 
-Report Importer導致CPU/記憶體使用率高或導致 `OutOfMemoryError` 例外。
+报告导入器导致CPU/内存使用率高或导致 `OutOfMemoryError` 例外。
 
 #### 解决方案 {#solution}
 
-若要修正此問題，請嘗試下列步驟：
+要解决此问题，您可以尝试以下操作：
 
-* 請確定並未註冊大量PollingImporters （請參閱以下的「由於PollingImporter關機需要很長時間」一節）。
-* 對以下專案使用CRON運算式，在一天中的特定時間執行報表匯入程式： `ManagedPollingImporter` 中的設定 [OSGi控制檯](/help/sites-deploying/configuring-osgi.md).
+* 确保没有注册大量PollingImporters（请参阅下面的“由于PollingImporter而关闭需要很长时间”部分）。
+* 对使用CRON表达式在一天中的某个时间运行报表导入程序 `ManagedPollingImporter` 中的配置 [OSGi控制台](/help/sites-deploying/configuring-osgi.md).
 
-如需有關在AEM中建立自訂資料匯入工具服務的其他詳細資訊，請參閱以下文章 [https://helpx.adobe.com/experience-manager/using/polling.html](https://helpx.adobe.com/experience-manager/using/polling.html).
+有关在AEM中创建自定义数据导入器服务的其他详细信息，请参阅以下文章 [https://helpx.adobe.com/experience-manager/using/polling.html](https://helpx.adobe.com/experience-manager/using/polling.html).
 
-### 由於PollingImporter，關機需要很長的時間 {#shutdown-takes-a-long-time-due-to-the-pollingimporter}
+### 由于PollingImporter，关闭需要很长时间 {#shutdown-takes-a-long-time-due-to-the-pollingimporter}
 
-Analytics在設計時已考慮繼承機制。 通常，您會透過在頁面屬性中新增Analytics設定的參照來啟用網站的Analytics [Cloud Services](/help/sites-developing/extending-cloud-config.md) 標籤。 然後，設定會自動繼承到所有子頁面，無需再次參考，除非頁面需要不同的設定。 新增對網站的參照也會自動建立多個型別的節點(12個適用於AEM 6.3及舊版，或6個適用於AEM 6.4及更新版) `cq;PollConfig` 這會具現化用來將Analytics資料匯入AEM的PollingImporters。 因此：
+Analytics在设计时考虑了继承机制。 通常，您通过在页面属性中添加对Analytics配置的引用来启用网站的Analytics [Cloud Services](/help/sites-developing/extending-cloud-config.md) 选项卡。 然后，配置会自动继承到所有子页面，而无需再次引用它，除非页面需要其他配置。 添加对站点的引用也会自动创建该类型的多个节点(12个用于AEM 6.3及更早版本，6个用于AEM 6.4及更高版本) `cq;PollConfig` 实例化用于将Analytics数据导入AEM的PollingImporters。 因此：
 
-* 有大量頁面參考Analytics會導致大量的PollingImporters。
-* 此外，複製和貼上參照Analytics設定的頁面會導致其PollingImporters重複。
+* 具有引用Analytics的大量页面会导致大量轮询导入程序。
+* 此外，复制和粘贴引用Analytics配置的页面会导致其PollingImporters重复。
 
 #### 解决方案 {#solution-1}
 
-首先，分析 [error.log](/help/sites-deploying/configure-logging.md) 可讓您深入瞭解作用中或註冊的PollingImporters數量。 例如：
+首先，分析 [error.log](/help/sites-deploying/configure-logging.md) 可让您深入了解活动或注册轮询导入程序的数量。 例如：
 
 ```
 # Count PollingImporter entries
@@ -83,99 +83,99 @@ sed -n "s/.*(aem-analytics-integration-.*).*target=\(.*\)\/jcr:content.*/\1/p" e
 28115
 ```
 
-其次，請確定只有最上層頁面（在階層中位於頂端）有參照的Analytics設定。
+其次，确保仅顶级页面（层次结构中的较高位置）引用了Analytics配置。
 
-如需有關在AEM中建立自訂資料匯入工具服務的其他詳細資訊，請參閱以下文章 [https://helpx.adobe.com/experience-manager/using/polling.html](https://helpx.adobe.com/experience-manager/using/polling.html).
+有关在AEM中创建自定义数据导入器服务的其他详细信息，请参阅以下文章 [https://helpx.adobe.com/experience-manager/using/polling.html](https://helpx.adobe.com/experience-manager/using/polling.html).
 
-## DTM（舊版）問題 {#dtm-legacy-issues}
+## DTM（旧版）问题 {#dtm-legacy-issues}
 
-### DTM指令碼標籤未呈現在頁面來源中 {#the-dtm-script-tag-is-not-rendered-in-the-page-source}
+### DTM脚本标记未在页面源中渲染 {#the-dtm-script-tag-is-not-rendered-in-the-page-source}
 
-此 [DTM](/help/sites-administering/dtm.md) 指令碼標籤未正確包含在頁面中，即使已在頁面屬性中參考設定 [Cloud Services](/help/sites-developing/extending-cloud-config.md) 標籤。
+此 [DTM](/help/sites-administering/dtm.md) 脚本标记未正确包含在页面中，即使已在页面属性中引用了该配置 [Cloud Services](/help/sites-developing/extending-cloud-config.md) 选项卡。
 
 #### 解决方案 {#solution-2}
 
-若要修正此問題，請嘗試下列步驟：
+要解决此问题，您可以尝试以下操作：
 
-* 請確定加密的屬性可以解密(請注意，加密可能在每個AEM執行個體上使用不同的自動產生金鑰)。 如需其他詳細資訊，請閱讀 [設定屬性的加密支援](/help/sites-administering/encryption-support-for-configuration-properties.md).
-* 重新發佈在中找到的設定 `/etc/cloudservices/dynamictagmanagement`
-* 檢查ACL `/etc/cloudservices`. ACL應為：
+* 确保加密的属性可以解密(请注意，加密可能在每个AEM实例上使用不同的自动生成密钥)。 有关其他详细信息，另请参阅 [对配置属性的加密支持](/help/sites-administering/encryption-support-for-configuration-properties.md).
+* 重新发布在中找到的配置 `/etc/cloudservices/dynamictagmanagement`
+* 检查ACL `/etc/cloudservices`. ACL应为：
 
-   * 允許； jcr：read； webservice-support-servicelibfinder
-   * 允許； jcr：read；每個人； rep:glob:&amp;ast；/defaults/&amp;ast；
-   * 允許； jcr：read；每個人； rep:glob:&amp;ast；/defaults
-   * 允許； jcr：read；每個人； rep:glob:&amp;ast；/public/&amp;ast；
-   * 允許； jcr：read；每個人； rep:glob:&amp;ast；/public
+   * 允许； jcr：read； webservice-support-servicelibfinder
+   * 允许； jcr：read；每个人； rep:glob:&amp;ast；/defaults/&amp;ast；
+   * 允许； jcr：read；每个人； rep:glob:&amp;ast；/defaults
+   * 允许； jcr：read；每个人； rep:glob:&amp;ast；/public/&amp;ast；
+   * 允许； jcr：read；每个人； rep:glob:&amp;ast；/public
 
-如需有關管理ACL的詳細資訊，請閱讀 [使用者管理與安全性](/help/sites-administering/security.md#permissions-in-aem) 頁面。
+有关管理ACL的详细信息，请阅读 [用户管理和安全性](/help/sites-administering/security.md#permissions-in-aem) 页面。
 
-## Target整合問題 {#target-integration-issues}
+## Target集成问题 {#target-integration-issues}
 
-### 使用自訂頁面元件時，目標內容在預覽模式中不可見 {#targeted-content-not-visible-in-preview-mode-when-using-custom-page-components}
+### 使用自定义页面组件时，目标内容在预览模式下不可见 {#targeted-content-not-visible-in-preview-mode-when-using-custom-page-components}
 
-發生此問題的原因是因為自訂頁面元件未包含處理Target DTM整合的正確JSP或使用者端資料庫。
+出现此问题的原因是，自定义页面组件不包含处理Target DTM集成的正确JSP或客户端库。
 
 #### 解决方案 {#solution-3}
 
-您可以嘗試下列解決方案：
+您可以尝试以下解决方案：
 
-* 確定自訂 `headlibs.jsp` （如有） `/apps/<CUSTOM-COMPONENTS-PATH>/headlibs.jsp`)包含下列專案：
+* 确保自定义 `headlibs.jsp` （如果有） `/apps/<CUSTOM-COMPONENTS-PATH>/headlibs.jsp`)包括以下各项：
 
 ```
 <%@include file="/libs/cq/cloudserviceconfigs/components/servicelibs/servicelibs.jsp" %>
 <sly data-sly-resource="${'contexthub' @ resourceType='granite/contexthub/components/contexthub'}"/>
 ```
 
-* 確定自訂 `head.html` （如有） `/apps/<CUSTOM-COMPONENTS-PATH>/head.html`) **不會** 選擇性地包含特定的整合標題庫，例如下列範例：
+* 确保自定义 `head.html` （如果有） `/apps/<CUSTOM-COMPONENTS-PATH>/head.html`) **不会** 选择性地包括特定的集成头库，如下例所示：
 
 ```
 <!-- DO NOT MANUALLY INCLUDE SPECIFIC CLOUD SERVICE HEADLIBS LIKE THIS -->
 <meta data-sly-include="/libs/cq/dtm/components/dynamictagmanagement/headlibs.jsp" data-sly-unwrap/>
 ```
 
-此 `servicelibs.jsp` 新增必要的Analytics JavaScript物件，並載入與網站相關聯的雲端服務程式庫。 若為Target服務，程式庫是透過 `/libs/cq/analytics/components/testandtarget/headlibs.jsp`
+此 `servicelibs.jsp` 添加所需的Analytics JavaScript对象，并加载与网站关联的云服务库。 对于Target服务，库是通过 `/libs/cq/analytics/components/testandtarget/headlibs.jsp`
 
-載入的程式庫組取決於目標使用者端程式庫的型別( `mbox.js` 或 `at.js`)用於Target設定。
+加载的库集取决于目标客户端库的类型( `mbox.js` 或 `at.js`)在Target配置上使用。
 
-使用DTM進行遞送時 `mbox.js` 或 `at.js` 請確定在轉譯內容之前載入程式庫。 使用以非同步方式載入這些程式庫的Tag Management系統，可能會導致執行目標特定JavaScript程式碼時發生問題。
+使用DTM进行投放时 `mbox.js` 或 `at.js` 确保在呈现内容之前加载库。 使用异步加载这些库的Tag Management Systems可能会导致执行特定于Target的JavaScript代码时出现问题。
 
-如需詳細資訊，請閱讀 [針對目標內容開發](/help/sites-developing/target.md#understanding-the-target-component) 頁面。
+欲了解更多信息，请阅读 [针对目标内容进行开发](/help/sites-developing/target.md#understanding-the-target-component) 页面。
 
-### 瀏覽器主控台中會顯示「AppMeasurement初始化中缺少報表套裝ID」錯誤 {#the-error-missing-report-suite-id-in-appmeasurement-initialization-is-displayed-in-the-browser-console}
+### 浏览器控制台中会显示错误“AppMeasurement初始化中缺少报表包ID” {#the-error-missing-report-suite-id-in-appmeasurement-initialization-is-displayed-in-the-browser-console}
 
-使用DTM在網站上實作Adobe Analytics並使用自訂程式碼時，可能會出現此問題。 原因是使用 `s = new AppMeasurement()` 例項化 `s` 物件。
+当使用DTM在网站上实施Adobe Analytics并使用自定义代码时，可能会出现此问题。 原因是使用 `s = new AppMeasurement()` 实例化 `s` 对象。
 
 #### 解决方案 {#solution-4}
 
-使用 `s_gi` 而非 `new AppMeasurement` 具現化方法。 例如：
+使用 `s_gi` 而不是 `new AppMeasurement` 实例化方法。 例如：
 
 ```
 var s_account="INSERT-RSID-HERE"
 var s=s_gi(s_account)
 ```
 
-### 預設選件會隨機顯示，而不是正確選件 {#a-default-offer-is-randomly-displayed-instead-of-the-correct-offer}
+### 默认选件是随机显示的，而不是正确选件 {#a-default-offer-is-randomly-displayed-instead-of-the-correct-offer}
 
-此問題可能有多個原因：
+此问题可能由多种原因引起：
 
-* 正在載入Target使用者端程式庫( `mbox.js` 或 `at.js`)非同步使用第三方Tag Management系統可能會隨機中斷鎖定目標。 Target程式庫應在頁面標頭中同步載入。 從AEM傳遞程式庫時，一律如此。
+* 正在加载Target客户端库( `mbox.js` 或 `at.js`)异步使用第三方Tag Management Systems可能会随机中断定位。 Target库应在页面标头中同步加载。 当库从AEM交付时，此情况始终为true。
 
-* 正在載入兩個Target使用者端資料庫( `at.js`)同時(例如，一個使用DTM，另一個使用AEM中的Target設定)。 這可能會導致 `adobe.target` 定義： `at.js` 版本不同。
+* 正在加载两个Target客户端库( `at.js`)同时(例如，一个使用DTM，另一个使用AEM中的Target配置)。 这可能会导致 `adobe.target` 定义，如果 `at.js` 版本不同。
 
 #### 解决方案 {#solution-5}
 
-您可以嘗試下列解決方案：
+您可以尝试以下解决方案：
 
-* 確保在中同步執行載入類似DTM程式庫的客戶程式碼（進而載入Target程式庫） [頁首](/help/sites-developing/target.md#enabling-targeting-with-adobe-target-on-your-pages).
-* 如果網站設定為使用DTM來傳遞Target程式庫，請確保 **DTM提供的Clientlib** 選項已核取 [Target設定](https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/target-configuring.html) 用於網站。
+* 确保在中同步执行加载类似DTM的库的客户代码（进而加载Target库） [页头](/help/sites-developing/target.md#enabling-targeting-with-adobe-target-on-your-pages).
+* 如果将站点配置为使用DTM来交付Target库，请确保 **DTM提供的Clientlib** 选项已勾选 [Target配置](https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/target-configuring.html) 用于该站点。
 
-### 使用AT.js 1.3+時，一律會顯示預設選件，而非正確選件 {#a-default-offer-is-always-displayed-instead-of-correct-offer-when-using-at-js}
+### 使用AT.js 1.3+时，始终显示默认选件，而不是正确选件 {#a-default-offer-is-always-displayed-instead-of-correct-offer-when-using-at-js}
 
-現成的AEM 6.2和6.3與AT.js版本1.3.0+不相容。 AT.js版本1.3.0為其API引入引數驗證， `adobe.target.applyOffer()` 需要「mbox」引數，但並未由 `atjs-itegration.js` 程式碼。
+开箱即用的AEM 6.2和6.3与AT.js版本1.3.0+不兼容。 利用AT.js版本1.3.0，引入了对其API进行参数验证的功能， `adobe.target.applyOffer()` 需要“mbox”参数，但该参数未由 `atjs-itegration.js` 代码。
 
 #### 解决方案 {#solution-6}
 
-若要解決此問題，請編輯 `atjs-itegration.js` 並新增 `"mbox": mboxName` 引數物件中的欄位 `adobe.target.applyOffer()` 如下所示：
+要解决此问题，请编辑 `atjs-itegration.js` 并添加 `"mbox": mboxName` 参数对象中的字段 `adobe.target.applyOffer()` 如下所示：
 
 ```
 adobe.target.getOffer({
@@ -190,13 +190,13 @@ adobe.target.getOffer({
     },
 ```
 
-### 「目標與設定」頁面未顯示「報表來源」區段 {#the-goals-settings-page-does-not-show-the-reporting-sources-section}
+### “目标和设置”页面不显示“报表源”部分 {#the-goals-settings-page-does-not-show-the-reporting-sources-section}
 
-此問題很可能是 [A4T Analytics Cloud設定](/help/sites-administering/target-configuring.md) 布建問題。
+此问题很可能是 [A4T Analytics Cloud配置](/help/sites-administering/target-configuring.md) 配置问题。
 
 #### 解决方案 {#solution-7}
 
-您必須藉由向AEM發出下列驗證要求，驗證您的Target帳戶是否已正確啟用A4T：
+您需要通过向AEM发出以下验证请求来验证是否已为Target帐户正确启用A4T：
 
 ```
 http://localhost:4502/etc/cloudservices/testandtarget/<YOUR-CONFIG>/jcr:content.a4t.json
@@ -212,13 +212,13 @@ http://localhost:4502/etc/cloudservices/testandtarget/<YOUR-CONFIG>/jcr:content.
 }
 ```
 
-如果回應包含行 `a4tEnabled:false`，連結 [Adobe客戶服務](https://helpx.adobe.com/contact.html) 以正確布建您的帳戶。
+如果响应包含行 `a4tEnabled:false`，contact [Adobe客户关怀](https://helpx.adobe.com/contact.html) 以正确配置您的帐户。
 
-### 實用的Target API {#helpful-target-apis}
+### 有用的Target API {#helpful-target-apis}
 
-以下是兩個Target API，它們在疑難排解Target問題時可能會很實用：
+下面提供了两个Target API，它们在解决Target问题时可能会很有用：
 
-* 擷取指定clientcode的Target端點
+* 检索给定clientcode的Target端点
 
 ```
 https://admin.testandtarget.omniture.com/rest/v1/endpoint/<CLIENTCODE>.json
@@ -226,7 +226,7 @@ https://admin.testandtarget.omniture.com/rest/v1/endpoint/<CLIENTCODE>.json
 {"api":"https://admin<N>.testandtarget.omniture.com/admin/rest/v1"}
 ```
 
-* 擷取使用者端的設定檔
+* 检索客户机的配置文件
 
 ```
 https://admin<N>.testandtarget.omniture.com/admin/rest/v1/clients/<CLIENT>?email=<EMAIL>&password=<PASSWORD>

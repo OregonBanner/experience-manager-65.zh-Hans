@@ -30,7 +30,7 @@ ht-degree: 51%
 
 ![screen_shot_2018-03-21at163054](assets/screen_shot_2018-03-21at163054.png)
 
-再次點選/按一下或最初以緩慢點選/按一下來選取元件，將會開啟就地編輯，此編輯有其專屬的工具列。 您可以在此處編輯內容並進行基本格式變更。
+再次点按/单击或最初通过缓慢点按/单击选择组件将打开就地编辑，它有自己的工具栏。 您可以在此处编辑内容并进行基本格式更改。
 
 ![screen_shot_2018-03-21at163214](assets/screen_shot_2018-03-21at163214.png)
 
@@ -44,11 +44,11 @@ ht-degree: 51%
 * **关闭**
 * **保存**
 
-## 全熒幕編輯 {#full-screen-editing}
+## 全屏编辑 {#full-screen-editing}
 
-對於文字元件，從工具列點選全熒幕模式 ![](do-not-localize/screen_shot_2018-03-21at163236.png) 開啟RTF編輯器，並隱藏頁面內容的其餘部分。
+对于基于文本的组件，从工具栏中点按全屏模式 ![](do-not-localize/screen_shot_2018-03-21at163236.png) 打开富文本编辑器并隐藏页面内容的其余部分。
 
-全熒幕模式會顯示您可用來編寫的所有已設定選項。 可用性為選項 [取決於設定](/help/sites-administering/rich-text-editor.md).
+全屏模式会显示可用于创作的所有已配置选项。 可用性是选项 [取决于配置](/help/sites-administering/rich-text-editor.md).
 
 ![screen_shot_2018-03-21at163248](assets/screen_shot_2018-03-21at163248.png)
 
@@ -59,10 +59,10 @@ ht-degree: 51%
 * **居中对齐文本**
 * **右对齐文本**
 
-按一下最小化圖示關閉全熒幕模式。
+单击最小化图标可关闭全屏模式。
 
 ![screen_shot_2018-03-21at163323](assets/screen_shot_2018-03-21at163323.png)
 
 >[!NOTE]
 >
->將巢狀清單從Microsoft Word複製到RTE中可能會產生不一致的結果，並且在RTE中貼上文字後可能需要手動調整。
+>将嵌套列表从Microsoft Word复制到RTE中可能会产生不一致的结果，并且在RTE中粘贴文本后可能需要手动进行调整。

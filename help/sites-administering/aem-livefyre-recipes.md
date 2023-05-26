@@ -21,7 +21,7 @@ ht-degree: 51%
 
 >[!IMPORTANT]
 >
->[Adobe Livefyre將於2021年11月30日正式終止服務](https://experienceleague.adobe.com/docs/discontinued/using/livefyre.html?lang=en).
+>[AdobeLivefyre正式于2021年11月30日停止服务](https://experienceleague.adobe.com/docs/discontinued/using/livefyre.html?lang=en).
 
 <!--
 Step-by-step instructions on common use cases for Adobe Experience Manager Livefyre.

@@ -1,7 +1,7 @@
 ---
-title: 存取和填寫已發佈的表單
+title: 访问和填写已发布的表单
 seo-title: Accessing and filling published forms
-description: Forms入口網站為網頁開發人員配備元件，以便在使用Adobe Experience Manager (AEM)編寫的網站上建立和自訂表單入口網站。
+description: Forms Portal为Web开发人员提供了组件，以便在使用Adobe Experience Manager (AEM)创作的网站上创建和自定义表单门户。
 seo-description: Forms Portal equips Web Developers with components to create and customize a forms portal on websites authored using Adobe Experience Manager (AEM).
 uuid: 44731604-5d97-46fa-baa9-0c020c634fa7
 content-type: reference
@@ -17,85 +17,85 @@ ht-degree: 0%
 
 ---
 
-# 存取和填寫已發佈的表單{#accessing-and-filling-published-forms}
+# 访问和填写已发布的表单{#accessing-and-filling-published-forms}
 
-在以表單為中心的入口網站部署設定中，表單開發和入口網站開發是兩個不同的活動。 當表單設計人員將表單設計和儲存在存放庫時，網頁開發人員會建立一個Web應用程式到該清單表單並處理提交。 Forms接著會複製到Web層，因為Forms存放庫和Web應用程式之間沒有通訊。
+在以表单为中心的门户部署设置中，表单开发和门户开发是两个不同的活动。 当表单设计人员将表单设计和存储在存储库中时，Web开发人员会创建一个Web应用程序来列出表单并处理提交。 Forms随后将复制到Web层，因为Forms存储库和Web应用程序之间没有通信。
 
-這通常會導致管理設定和生產延遲的問題。 例如，如果儲存庫中有較新版本的表單，則表單設計人員會取代Web層上的表單、修改Web應用程式，以及在公共網站上重新部署表單。 重新部署Web應用程式可能會造成伺服器停機。 由於伺服器停機時間是計畫的活動，因此變更無法立即推送至公用網站。
+这通常会导致管理设置和生产延迟时出现问题。 例如，如果存储库中有较新版本的表单，则表单设计人员会替换Web层上的表单、修改Web应用程序并在公共站点上重新部署表单。 重新部署Web应用程序可能会导致某些服务器停机。 由于服务器停机是一个计划活动，因此不能立即将更改推送到公共站点。
 
-Forms Portal可減少管理開銷和生產延遲。 它為網頁開發人員配備元件，以便在使用Adobe Experience Manager (AEM)編寫的網站上建立和自訂表單入口網站。
+Forms Portal减少了管理开销和生产延迟。 它为Web开发人员配备了组件，以便在使用Adobe Experience Manager (AEM)创作的网站上创建和自定义表单门户。
 
-如需有關表單入口網站及其功能的詳細資訊，請參閱 [在入口網站上發佈表單的簡介](/help/forms/using/introduction-publishing-forms.md).
+有关表单门户及其功能的更多信息，请参阅 [在门户上发布表单的简介](/help/forms/using/introduction-publishing-forms.md).
 
-## 表單入口網站快速入門 {#getting-started-with-forms-portal}
+## Forms Portal入门 {#getting-started-with-forms-portal}
 
-導覽至已發佈的表單入口網站頁面。 如需建立表單入口網站頁面的詳細資訊，請參閱 [建立表單入口網站頁面](../../forms/using/creating-form-portal-page.md).
+导航到已发布的表单门户页面。 有关创建表单门户页面的详细信息，请参阅 [创建表单门户页面](../../forms/using/creating-form-portal-page.md).
 
-Roms入口網站的搜尋和製表器元件會顯示AEM伺服器Publish執行個體上可用的表單。 此清單包含製作表單入口網站頁面時在篩選器中定義的所有表單或表單。 Forms入口網站頁面看起來類似，如下圖所示：
+roms portal的Search and Lister组件显示AEM服务器的Publish实例上可用的表单。 此列表包括创作表单门户页面时在筛选器中定义的所有表单或表单。 如下图所示，Forms Portal页面看起来类似：
 
-![範例表單入口網站頁面 ](assets/forms-portal-page.png)
+![示例表单门户页面 ](assets/forms-portal-page.png)
 
-範例表單入口網站頁面
+示例表单门户页面
 
-### 搜尋和製表人 {#search-and-lister}
+### 搜索和列表程序 {#search-and-lister}
 
-「搜尋並製表器」元件可讓您將下列功能新增至表單入口網站：
+搜索和列表程序组件允许您将以下功能添加到表单门户：
 
-* 在面板、卡片或格線檢視中列出現成可用的表單。 它也支援自訂範本列出Forms Manager中特定資料夾的表單。
-* 指定表單的呈現方式 — HTML5、PDF或兩者。
-* 指定PDF和XFA表單的呈現方式 — HTML5、PDF或兩者。 HTML5的非XFA表單。
-* 啟用根據條件搜尋表單，例如表單屬性、中繼資料和標籤。
-* 將表單資料提交至servlet。
-* 使用自訂樣式表(CSS)來自訂入口網站的外觀。
-* 建立表單連結。
+* 在面板、卡片或网格视图中列出现成可用的表单。 它还支持自定义templatesList表单(来自Forms Manager中的特定文件夹)。
+* 指定表单的呈现方式 — HTML5、PDF或两者。
+* 指定PDF和XFA表单的呈现方式 — HTML5、PDF或两者。 非XFA表单作为HTML5。
+* 启用基于条件的表单搜索，例如表单属性、元数据和标记。
+* 将表单数据提交到servlet。
+* 使用自定义样式表(CSS)自定义门户的外观。
+* 创建表单链接。
 
-您可以使用下列選項，在Forms Portal頁面中搜尋表單：
+您可以使用以下选项在Forms Portal页面中搜索表单：
 
-* 全文檢索搜尋
+* 全文搜索
 * 高级搜索
 
-全文檢索搜尋可讓您根據指定的關鍵字尋找及列出表單。
+全文搜索允许您根据指定的关键词查找和列出表单。
 
-![進階搜尋對話方塊](assets/search-panel.png)
+![高级搜索对话框](assets/search-panel.png)
 
-進階搜尋對話方塊
+高级搜索对话框
 
-進階搜尋可讓您根據指定的表單屬性來搜尋表單。 這比全文檢索搜尋提供更具體的結果。 進階搜尋包括根據標籤、屬性（例如作者、說明和標題）、修改日期和全文檢索進行的搜尋。
+高级搜索允许您根据指定的表单属性搜索表单。 这比全文搜索提供更具体的结果。 高级搜索包括基于标记、属性（如作者、描述和标题）、修改日期和全文的搜索。
 
-清單產生器會根據搜尋引數顯示表單。 搜尋結果中的每個表單都會顯示一個圖示，該圖示會以超連結方式連結到關聯的表單。 您可以按一下圖示以開啟及使用相關表單。
+列表程序根据搜索参数显示表单。 搜索结果中的每个表单都显示有一个图标，该图标以超链接方式链接到关联的表单。 您可以单击图标以打开并使用关联的表单。
 
-### 填寫表單 {#filling-a-form}
+### 填写表单 {#filling-a-form}
 
-![最適化表單範例](assets/filling_a_form.png)
+![自适应表单示例](assets/filling_a_form.png)
 
-最適化表單範例
+自适应表单示例
 
-可從隨頁面的「搜尋和製表器」元件中的表單提供的連結存取表單。
+可以通过与页面的“搜索和制表人”组件中的表单一起提供的链接来访问表单。
 
-每個表單都包含使用者填寫表單的說明資訊。
+每个表单都包含帮助信息，可让用户填写表单。
 
-#### 草稿與提交 {#drafts-and-submission}
+#### 草稿和提交 {#drafts-and-submission}
 
-使用者可以選擇按一下儲存按鈕來儲存表單草稿。 這可讓使用者在提交表單前的一段時間內處理表單。
+用户可以选择通过单击保存按钮来保存表单的草稿。 这允许用户在提交表单之前在一段时间内处理表单。
 
-填入表單（包括附件）的資料會儲存為伺服器上的草稿。 表單的草稿可以儲存任意次數。 已儲存的表單會顯示在頁面的「草稿和提交」元件的「草稿」標籤中。
+在表单中填写的数据（包括附件）将作为草稿保存在服务器上。 表单的草稿可以保存任意次数。 保存的表单会显示在页面的“草稿和提交”组件的“草稿”选项卡中。
 
-填寫完表單後，使用者按一下表單上的提交按鈕即可提交表單。 提交的表單會顯示在該頁面「草稿和提交」元件的「提交」標籤中。
+填写完表单后，用户通过单击表单上的提交按钮提交表单。 提交的表单将显示在页面草稿和提交组件的提交选项卡中。
 
 >[!NOTE]
 >
->只有當最適化表單的提交動作設定為Forms Portal提交動作時，提交的表單才會顯示在已提交的Forms標籤中。 如需提交動作的詳細資訊，請參閱 [設定提交動作](../../forms/using/configuring-submit-actions.md).
+>仅当自适应表单的提交操作配置为Forms Portal提交操作时，提交的表单才会显示在已提交的Forms选项卡中。 有关提交操作的详细信息，请参阅 [配置提交操作](../../forms/using/configuring-submit-actions.md).
 
-![草稿和提交元件](assets/draft-submission.png)
+![草稿和提交组件](assets/draft-submission.png)
 
-草稿和提交元件
+草稿和提交组件
 
-## 使用提交的表單資料開始新表單 {#start-a-new-form-using-submitted-form-data}
+## 使用提交的表单数据开始新表单 {#start-a-new-form-using-submitted-form-data}
 
-有些表格您經常需要填寫和提交。 例如，每年都會提交個人報稅表。 在這種情況下，雖然有些資訊會在您每次填寫表單時有所變更，但大部分如個人和家庭詳細資料一樣不會變更。 不過，您仍須從頭開始再次填寫整個表單。
+有一些表格需要经常填写和提交。 例如，个人纳税申报单每年都会提交。 在这种情况下，虽然每次填写表单时某些信息都会更改，但大多数信息（如个人和家庭详细信息）不会更改。 但是，您仍需要从头开始再次填写整个表单。
 
-AEM Forms可協助最佳化表單填寫體驗，並大幅縮短再次填寫和提交表單的時間。 一般使用者可使用提交的表單中的資料來開始新表單。 此功能內建於 [草稿和提交元件](../../forms/using/draft-submission-component.md). 當您新增草稿和提交元件至表單入口網站頁面並發佈時，終端使用者可在已提交的Forms和草稿Forms標籤中尋找選項，使用已提交表單中的資料建立新表單。 下圖會反白顯示該選項。
+AEM Forms可帮助优化表单填写体验，并显着缩短再次填写和提交表单的时间。 最终用户可使用已提交表单中的数据启动新表单。 此功能内置于 [草稿和提交组件](../../forms/using/draft-submission-component.md). 将草稿和提交组件添加到表单门户页面并进行发布时，最终用户将在已提交的Forms和草稿Forms选项卡中找到使用已提交表单中的数据创建新表单的选项。 下图突出显示了该选项。
 
-![開始新表單](assets/start-a-new-form.png)
+![start-a-new-form](assets/start-a-new-form.png)
 
-當您按一下按鈕以啟動新表單時，它會開啟一個新表單，其中包含來自對應提交表單的資料。 您現在可以視需要檢閱和更新資訊，並提交表單。
+当您单击按钮以创建新表单时，它会打开一个新表单，其中包含来自相应已提交表单的数据。 您现在可以根据需要查看和更新信息，并提交表单。

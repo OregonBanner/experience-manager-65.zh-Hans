@@ -1,7 +1,7 @@
 ---
-title: 在We.Retail中嘗試全球化網站結構
+title: 在We.Retail中尝试全局化网站结构
 seo-title: Trying out the Globalized Site Structure in We.Retail
-description: 在We.Retail中嘗試全球化網站結構
+description: 在We.Retail中尝试全局化网站结构
 seo-description: null
 uuid: 5e5a809d-578f-4171-8226-cb65aa995754
 contentOwner: User
@@ -17,59 +17,59 @@ ht-degree: 0%
 
 ---
 
-# 在We.Retail中嘗試全球化網站結構{#trying-out-the-globalized-site-structure-in-we-retail}
+# 在We.Retail中尝试全局化网站结构{#trying-out-the-globalized-site-structure-in-we-retail}
 
-We.Retail是以全球化網站結構建置，提供可即時複製至特定國家/地區網站的語言主版。 所有功能皆已開箱即用，可讓您實驗此結構和內建的翻譯功能。
+We.Retail构建时采用了全球化网站结构，该结构提供了语言母版，可以实时复制到特定于国家/地区的网站。 所有这一切都是现成设置的，允许您试验此结构和内置的翻译功能。
 
-## 正在試用 {#trying-it-out}
+## 正在尝试 {#trying-it-out}
 
-1. 從以下位置開啟網站主控台： **全域導覽 — >網站**.
-1. 切換到欄檢視（如果尚未啟用）並選取We.Retail。 請注意範例國家/地區結構（瑞士、美國、法國等）以及語言母版。
+1. 从打开站点控制台 **全局导航 — >站点**.
+1. 切换到列视图（如果尚未激活）并选择We.Retail。 请注意示例国家/地区结构（瑞士、美国、法国等）以及语言母版。
 
    ![chlimage_1-87](assets/chlimage_1-87a.png)
 
-1. 選取「瑞士」，並檢視該國家/地區的語言根目錄。 請注意，在這些根目錄下還沒有任何內容。
+1. 选择“瑞士”并查看该国家/地区的语言的语言根。 请注意，这些根目录下还没有任何内容。
 
    ![chlimage_1-88](assets/chlimage_1-88a.png)
 
-1. 切換到清單檢視，檢視國家/地區的語言副本都是即時副本。
+1. 切换到列表视图，查看国家/地区的语言副本都是活动副本。
 
    ![chlimage_1-89](assets/chlimage_1-89a.png)
 
-1. 返回欄檢視，然後按一下「語言主版」，檢視含有內容的語言主版根目錄。 請注意，只有英文有內容。
+1. 返回列视图，单击语言主控，然后查看包含内容的语言主控根。 请注意，只有英语才有内容。
 
-   We.Retail未隨附任何翻譯內容，但結構和設定已準備就緒，可讓您示範翻譯服務。
+   We.Retail不提供任何翻译的内容，但已建立结构和配置以允许您演示翻译服务。
 
    ![chlimage_1-90](assets/chlimage_1-90a.png)
 
-1. 選取「英文主版」後，開啟 **引用** 邊欄並選取「 」 **語言副本**.
+1. 选择“英语主控”后，打开 **引用** 站点控制台中的边栏并选择 **语言副本**.
 
    ![chlimage_1-91](assets/chlimage_1-91.png)
 
-1. 勾選「 」旁的核取方塊 **語言副本** 標籤以選取所有語言副本。 在 **更新語言副本** 區域內，選取選項以 **建立新的翻譯專案**. 提供專案名稱，然後按一下 **更新**.
+1. 勾选“ ”旁边的复选框 **语言副本** 标签以选择所有语言副本。 在 **更新语言副本** 部分，选择选项以 **创建新翻译项目**. 提供项目的名称，然后单击 **更新**.
 
    ![chlimage_1-92](assets/chlimage_1-92.png)
 
-1. 系統會為每個語言翻譯建立一個專案。 在下檢視它們 **導覽 — >專案**.
+1. 将为每个语言翻译创建一个项目。 在下查看它们 **导航 — >项目**.
 
    ![chlimage_1-93](assets/chlimage_1-93.png)
 
-1. 按一下德文，以檢視翻譯專案的詳細資料。 請注意，狀態顯示為 **草稿**. 若要使用Microsoft的翻譯服務開始翻譯，請按一下 **翻譯工作** 標題並選取 **開始**.
+1. 单击德语可查看翻译项目的详细信息。 请注意，状态为 **草稿**. 要使用Microsoft的翻译服务启动翻译，请单击 **翻译作业** 标题并选择 **开始**.
 
    ![chlimage_1-94](assets/chlimage_1-94.png)
 
-1. 翻譯專案隨即開始。 按一下標示為翻譯工作的卡片底部的省略符號以檢視詳細資訊。 具有狀態的頁面 **準備好審查** 已由翻譯服務翻譯。
+1. 翻译项目随即开始。 单击标有翻译作业的卡片底部的省略号以查看详细信息。 具有状态的页面 **准备审查** 已由翻译服务翻译。
 
    ![chlimage_1-95](assets/chlimage_1-95.png)
 
-1. 選取清單中的其中一個頁面，然後 **在網站中預覽** 在工具列中開啟頁面編輯器中的翻譯頁面。
+1. 选择列表中的页面之一，然后 **在站点中预览** 在工具栏中，在页面编辑器中打开已翻译页面。
 
    ![chlimage_1-96](assets/chlimage_1-96.png)
 
 >[!NOTE]
 >
->此程式展示與Microsoft機器翻譯的內建整合。 使用 [AEM翻譯整合架構](/help/sites-administering/translation.md)，您可以整合許多標準翻譯服務，以策劃AEM的翻譯。
+>此过程演示了与Microsoft机器翻译的内置集成。 使用 [AEM翻译集成框架](/help/sites-administering/translation.md)，您可以将它与许多标准翻译服务集成以编排AEM的翻译。
 
 ## 更多信息 {#further-information}
 
-如需進一步資訊，請參閱撰寫檔案 [翻譯多語言網站的內容](/help/sites-administering/translation.md) 以取得完整的技術細節。
+有关更多信息，请参阅创作文档 [翻译多语言站点的内容](/help/sites-administering/translation.md) 了解完整的技术详细信息。

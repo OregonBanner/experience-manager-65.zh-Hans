@@ -1,7 +1,7 @@
 ---
-title: 新功能摘要 | AEM 6.5 Forms
+title: 新增功能摘要 | AEM 6.5 Forms
 seo-title: New features summary | AEM 6.5 Forms
-description: 全球最進階數位體驗管理解決方案的表單和檔案的最新功能與改良。
+description: 世界上最高级的数字体验管理解决方案的表单和文档的最新功能和改进。
 seo-description: Latest features and improvements to forms and documents of world’s most advanced digital experience management solution.
 uuid: 179d372d-b7f6-4771-8349-fc6b7854efac
 topic-tags: introduction
@@ -16,129 +16,129 @@ ht-degree: 0%
 
 ---
 
-# 新功能摘要 | AEM 6.5 Forms{#new-features-summary-aem-forms}
+# 新增功能摘要 | AEM 6.5 Forms{#new-features-summary-aem-forms}
 
-## 交易報告 {#transaction-reports}
+## 交易报告 {#transaction-reports}
 
-交易報表可讓您擷取及追蹤已提交的表單、已處理檔案及已轉譯檔案數目。 追蹤這些交易的目的在於，針對產品使用狀況做出明智的決策，並重新平衡軟硬體投資。 交易的一些範例包括：
+利用事务报表，可捕获和跟踪已提交的表单、已处理的文档和已渲染文档的数量。 跟踪这些交易背后的目标是针对产品使用情况做出明智的决策，并重新平衡硬件和软件方面的投资。 交易的一些示例包括：
 
-* 提交最適化表單、HTML5表單或表單集
-* 互動式通訊的列印或網頁版本轉譯
-* 將檔案從一種檔案格式轉換為另一種檔案格式
+* 提交自适应表单、HTML5表单或表单集
+* 交互式通信的打印或Web版本的演绎版
+* 文档从一种文件格式转换为另一种文件格式
 
-如需設定和使用交易報表的詳細資訊，請參閱 [交易報表概觀](../../forms/using/transaction-reports-overview.md).
+有关配置和使用事务报表的信息，请参阅 [事务处理报表概览](../../forms/using/transaction-reports-overview.md).
 
-![範例交易報告](assets/surface_transaction_reporting.png)
+![示例交易报告](assets/surface_transaction_reporting.png)
 
 ## 交互式通信 {#interactive-communications}
 
-**定義資料顯示模式**
+**定义数据显示模式**
 
-互動式通訊作者現在可以定義 [資料顯示模式](create-interactive-communication.md#datadisplaypatterns) 欄位、變數和表單資料模型元素使用。 例如，日期、貨幣或電話格式。
+交互式通信作者现在可以定义 [数据显示模式](create-interactive-communication.md#datadisplaypatterns) 用于字段、变量和表单数据模型元素。 例如，日期、货币或电话格式。
 
-**使用新型別的圖表**
+**使用新类型的图表**
 
-您現在可以新增 [多序列象限圖表和圖表](../../forms/using/chart-component-interactive-communications.md) 至互動式通訊。
+您现在可以添加 [象限图表和多系列图表](../../forms/using/chart-component-interactive-communications.md) 更改为交互式通信。
 
-**排序表格中的欄**
+**对表中的列进行排序**
 
-您現在可以 [排序資料表的資料行](../../forms/using/create-interactive-communication.md#sortcolumns) 互動式通訊中。 您可以使用靜態文字或資料模型物件來繫結及排序表格欄。
+您现在可以 [对表的列进行排序](../../forms/using/create-interactive-communication.md#sortcolumns) 在交互式通信中。 您可以使用静态文本或数据模型对象来绑定和排序表列。
 
-**在Web Channel中使用新元件**
+**在Web渠道中使用新组件**
 
-您現在可以新增Button和Separator元件至Web Channel。 如需詳細資訊，請參閱 [將Button元件新增至Web Channel](../../forms/using/create-interactive-communication.md#add-button-component-to-the-web-channel) 和 [Web Channel中的分隔符號元件](../../forms/using/create-interactive-communication.md#separatorcomponent).
+您现在可以向Web渠道添加Button和Separator组件。 有关更多信息，请参阅 [将Button组件添加到Web渠道](../../forms/using/create-interactive-communication.md#add-button-component-to-the-web-channel) 和 [Web渠道中的分隔符组件](../../forms/using/create-interactive-communication.md#separatorcomponent).
 
-**調整元件大小的佈局模式**
+**调整组件大小的布局模式**
 
-您現在可以切換至 [版面模式](../../forms/using/resize-using-layout-mode.md) 使用WYSIWYG介面調整Web channel中元件的大小。
+您现在可以切换到 [布局模式](../../forms/using/resize-using-layout-mode.md) 使用WYSIWYG界面调整Web渠道中的组件大小。
 
-**可用性改善**
+**可用性改进**
 
-互動式通訊的作者現在可以在建立往來行時運用各種易於使用的操作。 作業清單包括：
+交互式通信作者现在可以在创建通信的同时利用各种易于使用的操作。 操作列表包括：
 
-* [在列印和Web頻道中執行還原/重做動作](../../forms/using/create-interactive-communication.md#undoredoactions)
-* [使用@符號在檔案片段中新增變數](../../forms/using/texts-interactive-communications.md#searchvariables)
-* [使用@符號在檔案片段中新增資料模型元素](../../forms/using/texts-interactive-communications.md#searchdatamodelproperties)
-* [刪除或新增Web Channel至現有的互動式通訊](../../forms/using/create-interactive-communication.md#edit-interactive-communication-properties)
-* [使用拖放動作將資料來源元素與欄位和變數繫結](../../forms/using/create-interactive-communication.md#binddatasourceelements)
-* [編寫互動式通訊時反白未繫結的欄位和變數](../../forms/using/create-interactive-communication.md#distinguishunboundfields)
-* [對Web Channel中繼承的元件執行其他動作，例如複製、群組等等](../../forms/using/create-interactive-communication.md#componenttoolbar)
+* [在打印和Web渠道中执行撤消/重做操作](../../forms/using/create-interactive-communication.md#undoredoactions)
+* [使用@符号在文档片段中添加变量](../../forms/using/texts-interactive-communications.md#searchvariables)
+* [使用@符号在文档片段中添加数据模型元素](../../forms/using/texts-interactive-communications.md#searchdatamodelproperties)
+* [删除或向现有交互式通信添加Web渠道](../../forms/using/create-interactive-communication.md#edit-interactive-communication-properties)
+* [使用拖放操作将数据源元素与字段和变量绑定](../../forms/using/create-interactive-communication.md#binddatasourceelements)
+* [创作交互式通信时突出显示未绑定的字段和变量](../../forms/using/create-interactive-communication.md#distinguishunboundfields)
+* [对Web渠道中的继承组件执行其他操作，例如复制、分组或更多](../../forms/using/create-interactive-communication.md#componenttoolbar)
 
-**同步程式中的改進**
+**同步过程的改进**
 
-使用Print channel自動產生的Web channel版面配置有幾項改進。
+在使用Print channel自动生成的Web渠道布局中有几项改进。
 
-![互動式通訊圖表](assets/interactive-communication-charts.png)
+![交互式通信图表](assets/interactive-communication-charts.png)
 
 ## 自适应表单 {#adaptive-forms}
 
-### 在最適化Forms中使用Adobe Sign的雲端型數位簽名 {#use-adobe-sign-s-cloud-based-digital-signatures-in-adaptive-forms}
+### 在自适应Forms中使用Adobe Sign基于云的数字签名 {#use-adobe-sign-s-cloud-based-digital-signatures-in-adaptive-forms}
 
-[雲端數位簽名](https://helpx.adobe.com/sign/kb/digital-certificate-providers.html) 或遠端簽名是新一代的數位簽名，可在案頭、行動裝置和Web上運作，並符合簽名者驗證的最高規範與保證。 您現在可以 [簽署最適化表單](../../forms/using/working-with-adobe-sign.md) 雲端數位簽名。
+[基于云的数字签名](https://helpx.adobe.com/sign/kb/digital-certificate-providers.html) 或远程签名是新一代的数字签名，可在桌面、移动设备和Web上使用，满足签名者身份验证的最高合规性和保证要求。 您现在可以 [签署自适应表单](../../forms/using/working-with-adobe-sign.md) 使用基于云的数字签名。
 
-#### 在AEM Sites單頁應用程式中內嵌最適化表單或互動式通訊 {#embed-an-adaptive-form-or-interactive-communcation-in-aem-sites-single-page-applications}
+#### 在AEM Sites单页应用程序中嵌入自适应表单或交互式通信 {#embed-an-adaptive-form-or-interactive-communcation-in-aem-sites-single-page-applications}
 
-AEM Forms可讓您 [無縫內嵌最適化表單](../../forms/using/embed-adaptive-form-aem-sites-spa.md) 或AEM Sites單頁應用程式(SPA)中的互動式通訊。 內嵌的最適化表單和互動式通訊功能完善，使用者無需離開頁面即可填寫和提交表單。 它有助於使用者停留在網頁上其他元素的上下文中，並同時與最適化表單或互動式通訊互動。
+AEM Forms允许您 [无缝嵌入自适应表单](../../forms/using/embed-adaptive-form-aem-sites-spa.md) 或AEM Sites单页应用程序(SPA)中的交互式通信。 嵌入式自适应表单和交互式通信功能完善，用户无需离开页面即可填写和提交表单。 它有助于用户停留在网页上其他元素的上下文中，并同时与自适应表单或交互式通信交互。
 
-#### 排序最適化表單的欄 {#sort-columns-of-adaptive-form-tables}
+#### 对自适应表单表的列进行排序 {#sort-columns-of-adaptive-form-tables}
 
-您可以 [排序最適化表單表格的任何欄](../../forms/using/adaptive-forms-tables.md#sortcolumnstable) 以遞增或遞減順序排列。 您可以將排序套用至具有靜態文字、資料模型物件屬性或靜態文字與資料模型物件屬性組合的表格欄。
+您可以 [对自适应表单表的任意列进行排序](../../forms/using/adaptive-forms-tables.md#sortcolumnstable) 按升序或降序排列。 您可以将排序应用于具有静态文本、数据模型对象属性或静态文本和数据模型对象属性组合的表列。
 
-#### 將最適化Forms範本的可用性限制在特定路徑 {#restrict-the-availability-of-adaptive-forms-templates-to-specific-paths}
+#### 限制自适应Forms模板仅对特定路径可用 {#restrict-the-availability-of-adaptive-forms-templates-to-specific-paths}
 
-調適型表單已新增對cq：allowedPaths屬性的支援。 屬性 [將最適化Forms範本限製為特定路徑的可用性](creating-adaptive-form.md#adaptive-form-templates).
+自适应表单添加了对cq：allowedPaths属性的支持。 属性 [将自适应Forms模板限制为特定路径的可用性](creating-adaptive-form.md#adaptive-form-templates).
 
-#### 動態新增核取方塊至最適化表單 {#add-check-boxes-to-the-adaptive-form-dynamically}
+#### 将复选框动态添加到自适应表单 {#add-check-boxes-to-the-adaptive-form-dynamically}
 
-您現在可以將規則定義為 [動態新增核取方塊至最適化表單](../../forms/using/rule-editor.md#setpropertyrule) 根據自訂函式、表單物件或物件屬性。
+您现在可以将规则定义为 [将复选框动态添加到自适应表单](../../forms/using/rule-editor.md#setpropertyrule) 基于自定义函数、表单对象或对象属性。
 
 ## AEM 工作流 {#aem-workflows}
 
-### 在AEM工作流程中使用變數 {#use-variables-in-aem-workflows}
+### 在AEM Workflow中使用变量 {#use-variables-in-aem-workflows}
 
-變數可讓工作流程步驟在執行階段跨工作流程步驟保留和傳遞中繼資料。 您可以建立不同型別的變數來儲存不同型別的資料。 例如，整數、字串、檔案或表單資料模型例項。 通常情況下，當您需要根據其持有的值做出決定或儲存您稍後在程式中需要的資訊時，會使用變數或變數集合。
+变量使工作流步骤能够在运行时跨工作流步骤保留和传递元数据。 您可以创建不同类型的变量来存储不同类型的数据。 例如，整数、字符串、文档或表单数据模型实例。 通常，当您需要根据其持有的值做出决策时，或者需要存储稍后在流程中所需的信息时，可以使用变量或变量集合。
 
-變數是 [中繼資料對應](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html) 舊版中可用的介面。 它有助於節省開發自訂ECMAScript程式碼的時間，這些程式碼用於擷取和更新中繼資料值。 您繼續使用MetaDataMap介面和ECMAScript程式碼來操作中繼資料。 使用變數優於MetaDataMap和ECMAScript的部分優點包括：
+变量是的扩展 [元数据映射](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html) 之前版本中可用的界面。 它有助于节省开发用于检索和更新元数据值的自定义ECMAScript代码所花费的时间。 继续使用MetaDataMap接口和ECMAScript代码处理元数据。 与MetaDataMap和ECMAScript相比，使用变量的一些好处包括：
 
-* 可在工作流程中動態儲存、更新及使用儲存在變數中的值，不需依賴自訂程式碼
-* 直接擷取值並更新至已提交表單的表單資料模型和資料檔案(XML/JSON)
-* 將完整檔案儲存在變數中，以執行檔案處理
+* 在整个工作流中动态存储、更新和使用变量中存储的值，而无需依赖自定义代码
+* 直接检索值并更新已提交表单的表单数据模型和数据文件(XML/JSON )
+* 将完整的文档存储在变量中以执行文档处理
 
-「跳至」步驟、「OR分割」步驟以及所有AEM Forms工作流程步驟都支援變數。 您可以使用MetaDataMap介面來存取工作流程步驟中沒有變數原生支援的變數。 如需詳細資訊，請參閱 [AEM工作流程中的變數](../../forms/using/variable-in-aem-workflows.md).
+转到步骤、OR拆分步骤以及所有AEM Forms工作流步骤都支持变量。 您可以使用MetaDataMap界面访问工作流步骤中本身不支持变量的变量。 有关更多信息，请参阅 [AEM Workflow中的变量](../../forms/using/variable-in-aem-workflows.md).
 
-![在工作流程中為設定變數](assets/variable.png)
+![在工作流中为设置变量](assets/variable.png)
 
-#### 搭配不同的最適化Forms使用工作流程  {#use-a-workflow-with-different-adaptive-forms}
+#### 将工作流用于其他自适应Forms  {#use-a-workflow-with-different-adaptive-forms}
 
-您可以 [為指派工作指定最適化表單](../../forms/using/aem-forms-workflow-step-reference.md#assign-task-step) 以及執行階段表單中心工作流程的記錄檔案步驟。 它讓工作流程可搭配不同的最適化Forms運作。 您可以在設計工作流程時決定選取最適化表單的方法。 最適化表單可位於絕對路徑下、提交為工作流程裝載，或位於使用變數計算的路徑下。
+您可以 [为分配任务指定自适应表单](../../forms/using/aem-forms-workflow-step-reference.md#assign-task-step) 以及运行时以表单为中心的工作流的记录文档步骤。 它允许工作流使用其他自适应Forms。 您可以在设计工作流时决定选择自适应表单的方法。 自适应表单可以位于绝对路径下、作为有效负载提交到工作流中，或者位于使用变量计算的路径下。
 
-#### 使用以表單為中心的工作流程步驟的增強記錄功能 {#use-enhanced-logging-capabilities-of-forms-centric-workflow-steps}
+#### 使用以表单为中心的工作流步骤的增强日志记录功能 {#use-enhanced-logging-capabilities-of-forms-centric-workflow-steps}
 
-以表單為中心的工作流程步驟的記錄功能已標準化。 現在，所有以表單為中心的工作流程步驟都會產生類似的標準化記錄。 這有助於提高偵錯速度。
+以表单为中心的工作流步骤的日志记录功能实现了标准化。 现在，所有以表单为中心的工作流步骤都会生成类似的标准化日志。 这有助于提高调试速度。
 
-## 資料整合 {#data-integration}
+## 数据集成 {#data-integration}
 
-您現在可以：
+您现在可以：
 
-* [驗證輸入資料](../../forms/using/work-with-form-data-model.md#automated-validation-of-input-data) 根據限制清單。 它有助於確保只將有效資料提交至資料來源。
-* [覆寫預設端點](../../forms/using/configure-data-sources.md#configure-soap-web-services) 在WSDL （Web服務描述語言）檔案中定義。
+* [验证输入数据](../../forms/using/work-with-form-data-model.md#automated-validation-of-input-data) 基于约束列表。 它有助于确保只向数据源提交有效数据。
+* [覆盖默认端点](../../forms/using/configure-data-sources.md#configure-soap-web-services) 在WSDL（Web服务描述语言）文件中定义。
 
-* [覆寫預設值](../../forms/using/configure-data-sources.md#configure-restful-web-services) [配置、主機和基本路徑](../../forms/using/configure-data-sources.md#configure-restful-web-services) 定義於Swagger定義檔案中。
+* [覆盖默认值](../../forms/using/configure-data-sources.md#configure-restful-web-services) [方案、主机和基本路径](../../forms/using/configure-data-sources.md#configure-restful-web-services) 在Swagger定义文件中定义。
 
-## 平台與安全性更新 {#platform-and-security-updates}
+## 平台和安全更新 {#platform-and-security-updates}
 
 ### 主要平台更新 {#major-platform-updates}
 
-AEM Forms可使用任何支援的作業系統、應用程式伺服器、資料庫、資料庫驅動程式、JDK、LDAP伺服器和電子郵件伺服器的組合進行設定。 以下為中的主要變更 [支援平台](../../forms/using/aem-forms-jee-supported-platforms.md)：
+AEM Forms可以使用支持的操作系统、应用程序服务器、数据库、数据库驱动程序、JDK、LDAP服务器和电子邮件服务器的任意组合进行设置。 以下为中的主要更改 [支持的平台](../../forms/using/aem-forms-jee-supported-platforms.md)：
 
 <table>
  <tbody>
   <tr>
    <td>组件</td>
-   <td>支援已移除</td>
+   <td>已删除支持</td>
   </tr>
   <tr>
-   <td>作業系統</td>
+   <td>操作系统</td>
    <td>
     <ul>
      <li>Microsoft Windows Server 2012 R2</li>
@@ -147,15 +147,15 @@ AEM Forms可使用任何支援的作業系統、應用程式伺服器、資料�
     </ul> </td>
   </tr>
   <tr>
-   <td>應用程式伺服器<br /> </td>
+   <td>应用程序服务器<br /> </td>
    <td>
     <ul>
-    <li>WebSphere Liberty設定檔</li>
+    <li>WebSphere Liberty配置文件</li>
     <li>oracleWebLogic</li>
     </ul> </td>
   </tr>
   <tr>
-   <td>資料庫</td>
+   <td>数据库</td>
    <td>
     <ul>
      <li>IBM DB2 <br /> </li>
@@ -163,7 +163,7 @@ AEM Forms可使用任何支援的作業系統、應用程式伺服器、資料�
     </ul> </td>
   </tr>
   <tr>
-   <td>LDAP伺服器</td>
+   <td>LDAP服务器</td>
    <td>
     <ul>
      <li>Microsoft Active Directory 2012</li>
@@ -172,7 +172,7 @@ AEM Forms可使用任何支援的作業系統、應用程式伺服器、資料�
     </ul> </td>
   </tr>
   <tr>
-   <td>電子郵件伺服器</td>
+   <td>电子邮件服务器</td>
    <td>
     <ul>
      <li>IBM Lotus Domino 8.5.0 </li>
@@ -182,15 +182,15 @@ AEM Forms可使用任何支援的作業系統、應用程式伺服器、資料�
    <td>连接器</td>
    <td>
     <ul>
-     <li>Microsoft Sharepoint 2013聯結器</li>
-     <li>EMC Documentum 7.0聯結器</li>
+     <li>Microsoft Sharepoint 2013连接器</li>
+     <li>EMC Documentum 7.0连接器</li>
     </ul> </td>
   </tr>
   <tr>
-   <td>AEM Forms應用程式<br /> </td>
+   <td>AEM Forms应用程序<br /> </td>
    <td>
     <ul>
-     <li>Windows 8.1支援</li>
+     <li>Windows 8.1支持</li>
     </ul> </td>
   </tr>
   <tr>
@@ -203,17 +203,17 @@ AEM Forms可使用任何支援的作業系統、應用程式伺服器、資料�
  </tbody>
 </table>
 
-&#42; 如需移轉至其他平台的資訊，請聯絡Adobe支援
+&#42; 有关迁移到其他平台的信息，请与Adobe支持部门联系
 
-#### 全新HTML5型UI {#new-html-based-uis}
+#### 新的基于HTML5的UI {#new-html-based-uis}
 
-為了遵循AdobeFlash Player的計畫生命週期結束以及將Flash型內容移轉至開放標準的整體方向，AEM 6.5 Forms已在JEE Administration Console上以HTML5型UI取代AEM Forms健康狀態監控、程式管理、Reader擴充功能和Flash類別管理UI的型UI。
+为了遵循AdobeFlash Player的计划生命周期结束以及基于Flash的内容迁移到开放标准的总体方向，AEM 6.5 Forms已在JEE管理控制台上用基于HTML5的UI替换了AEM Forms的健康监控、流程管理、Reader扩展和类别管理UI的基于Flash的UI。
 
-#### 安全性改善 {#security-improvements}
+#### 安全性改进 {#security-improvements}
 
-* JEE管理主控台UI上的AEM 6.5 Forms現在以Apache Struts 2.5為基礎。
-* AEM 6.5 Forms現在使用3.2.1的jQuery和jQuery UI 1.12.1。請參閱， [升級檔案](/help/forms/home.md) 變更的影響。
+* JEE管理控制台上的AEM 6.5 Forms UI现在基于Apache Struts 2.5。
+* AEM 6.5 Forms现在使用jQuery到3.2.1和jQuery UI 1.12.1。参见， [升级文档](/help/forms/home.md) 以了解更改的影响。
 
-#### 協助工具改良 {#accessibility-improvements}
+#### 辅助功能改进 {#accessibility-improvements}
 
-AEM 6.5 Forms已改善AEM Forms Workspace的協助工具。
+AEM 6.5 Forms改进了AEM Forms Workspace的可访问性。

@@ -1,7 +1,7 @@
 ---
-title: 執行AdministrationConsole時的注意事項
+title: 运行AdministrationConsole时的注意事项
 seo-title: Considerations when running AdministrationConsole
-description: 本檔案列出執行Administration Console時應考量的幾點。
+description: 本文档列出了运行Administration Console时要考虑的一些要点。
 seo-description: This document lists a few points to consider when running Administration Console.
 uuid: e260f187-4728-44f3-a5c1-7388ff3965c4
 contentOwner: admin
@@ -17,16 +17,16 @@ ht-degree: 0%
 
 ---
 
-# 執行Administration Console時的注意事項 {#considerations-when-running-administrationconsole}
+# 运行Administration Console时的注意事项 {#considerations-when-running-administrationconsole}
 
-以下是執行Administration Console時應考量的事項：
+以下是运行管理控制台时要考虑的一些事项：
 
-* 如果您使用URL存取管理主控台 `https://[hostname]:'port'/adminui`，指定的主機名稱不能包含底線字元。 否則，指向管理主控台某些區域的連結可能無法正常運作。
-* 如果您在日文作業系統上的Windows檔案總管中執行管理主控台，可能會遇到下列問題：
+* 如果您使用URL访问管理控制台 `https://[hostname]:'port'/adminui`，指定的主机名不能包含下划线字符。 否则，指向管理控制台某些区域的链接可能无法正常工作。
+* 如果在日语操作系统的Windows资源管理器中运行管理控制台，则可能会遇到以下问题：
 
-   * 按一下連結即可返回登入頁面，而非預期的連結。
-   * 按一下連結會顯示許可權錯誤。
+   * 单击链接会返回到登录页面，而不是预期的链接。
+   * 单击链接将显示权限错误。
 
-   最佳實務是從其他瀏覽器（例如Mozilla Firefox）執行管理主控台，以確保沒有任何連結會失敗。
+   最佳实践是从其他浏览器（如Mozilla Firefox）运行管理控制台，以确保没有链接会失败。
 
-* 在管理控制檯中執行搜尋時，請勿使用反斜線字元()。
+* 在管理控制台中执行搜索时，请勿使用反斜杠字符()。

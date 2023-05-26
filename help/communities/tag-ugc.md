@@ -1,7 +1,7 @@
 ---
-title: 標籤使用者產生的內容
+title: 标记用户生成的内容
 seo-title: Tagging User Generated Content
-description: 標籤使用者產生的內容(UGC)是社群成員如何協助其他成員搜尋內容
+description: 用户生成内容的标记(UGC)是社区成员帮助其他成员搜索内容的方式
 seo-description: Tagging of user generated content (UGC) is how community members can help other members search for content
 uuid: ce125d7c-6fc1-44c7-9f67-eca6f599d8e3
 contentOwner: Janice Kendall
@@ -18,19 +18,19 @@ ht-degree: 3%
 
 ---
 
-# 標籤使用者產生的內容 {#tagging-user-generated-content}
+# 标记用户生成的内容 {#tagging-user-generated-content}
 
 ## 概述 {#overview}
 
-標籤使用者產生的內容(UGC)是社群成員協助其他成員搜尋內容的方法。
+用户生成内容标记(UGC)是社区成员帮助其他成员搜索内容的一种方法。
 
-標籤通常由作者和管理員在作者環境中套用。 標籤UGC的獨特之處在於UGC標籤是由發佈環境中的社群成員套用。
+通常，标记由作者和管理员在创作环境中应用。 标记UGC的独特之处在于UGC标记由发布环境中的社区成员应用。
 
-兩個應用程式的標籤名稱空間和分類相同。
+这两个应用程序的标记命名空间和分类是相同的。
 
 ## Communities功能 {#communities-features}
 
-可設定為允許標籤的AEM Communities功能包括：
+可配置为允许标记的AEM Communities功能包括：
 
 * [博客](blog-feature.md)
 * [日程表](calendar.md)
@@ -38,22 +38,22 @@ ht-degree: 3%
 * [论坛](forum.md#configuretheaddedforum)
 * [问题与解答](working-with-qna.md)
 
-## 管理標籤 {#administering-tags}
+## 管理标记 {#administering-tags}
 
-另請參閱 [管理標籤](../../help/sites-administering/tags.md#tagging-console) 用於建立和管理標籤名稱空間和分類。
+参见 [管理标记](../../help/sites-administering/tags.md#tagging-console) 用于创建和管理标记命名空间和分类。
 
-另請參閱 [標籤Essentials](tag.md) 以取得開發人員資訊。
+参见 [Tag Essentials](tag.md) 了解开发人员信息。
 
-另請參閱 [使用社交標籤雲](tagcloud.md) 新增Social Tag Cloud元件至頁面，以方便使用套用的標籤搜尋已張貼的UGC。
+参见 [使用社交标签云](tagcloud.md) ，以便将Social Tag Cloud组件添加到页面中，从而方便使用应用的标记搜索已发布的UGC。
 
-### 標籤許可權 {#tag-permissions}
+### 标记权限 {#tag-permissions}
 
-預設許可權已設定為不允許發佈環境中的每個人都讀取標籤名稱空間。
+默认权限设置为不允许发布环境中的每个人都读取标记命名空间。
 
-由於標籤已套用至發佈環境中的UGC，因此社群成員需要啟用讀取許可權，才能選取要套用的標籤。
+由于标记应用于发布环境中的UGC，因此需要为社区成员启用读取权限，以便他们能够选择要应用的标记。
 
-另請參閱 [設定標籤許可權](../../help/sites-administering/tags.md#setting-tag-permissions).
+参见 [设置标记权限](../../help/sites-administering/tags.md#setting-tag-permissions).
 
-以下為管理員將讀取許可權套用至 `/etc/tag/discussions` 適用於群組 `Community Engage Members`.
+下面是管理员将读取权限应用于 `/etc/tag/discussions` 对于组 `Community Engage Members`.
 
 ![tag-permissions](assets/tag-permissions.png)

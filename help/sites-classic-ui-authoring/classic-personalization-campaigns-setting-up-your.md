@@ -1,7 +1,7 @@
 ---
-title: 設定您的行銷活動
+title: 设置活动
 seo-title: Setting up your campaign
-description: 設定新的行銷活動需要建立品牌以舉辦行銷活動、建立行銷活動以舉辦體驗，以及最後定義新行銷活動的屬性。
+description: 设置新营销活动需要创建品牌来举办营销活动，创建营销活动来举办体验，最后需要为新营销活动定义属性。
 seo-description: Setting up a new campaign requires creating a brand to hold your campaigns, creating a campaign to hold experiences, and finally defining the properties for your new campaign.
 uuid: 244a150e-7b5e-4eff-bd15-e3b04be6a3e9
 contentOwner: User
@@ -18,387 +18,387 @@ ht-degree: 0%
 
 ---
 
-# 設定您的行銷活動{#setting-up-your-campaign}
+# 设置活动{#setting-up-your-campaign}
 
-設定新的行銷活動包含下列（一般）步驟：
+设置新营销活动包括以下（通用）步骤：
 
-1. [建立品牌](#creating-a-new-brand) 以舉辦您的行銷活動。
-1. 如有需要，您可以 [為您的新品牌定義屬性](#defining-the-properties-for-your-new-brand).
-1. [建立行銷活動](#creating-a-new-campaign) 以保留體驗；例如Teaser頁面或電子報。
-1. 如有需要，您可以 [為您的新行銷活動定義屬性](#defining-the-properties-for-your-new-campaign).
+1. [创建品牌](#creating-a-new-brand) 以举办您的营销活动。
+1. 如果需要，您可以 [定义新品牌的资产](#defining-the-properties-for-your-new-brand).
+1. [创建营销活动](#creating-a-new-campaign) 用于保存体验；例如Teaser页面或新闻稿。
+1. 如果需要，您可以 [为新营销活动定义属性](#defining-the-properties-for-your-new-campaign).
 
-接著，視您建立的體驗型別而定，您需要 [建立體驗](#creating-a-new-experience). 體驗的詳細資訊及其建立後的動作取決於您要建立的體驗型別：
+然后，根据您创建的体验类型，您将需要 [创建体验](#creating-a-new-experience). 体验的详细信息及其创建后执行的操作取决于您要创建的体验类型：
 
-* 如果建立Teaser：
+* 如果创建Teaser：
 
-   1. [建立Teaser體驗](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#creatingateaserexperience).
-   1. [新增內容至您的Teaser](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#addingcontenttoyourteaser).
-   1. [為您的Teaser建立接觸點](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#creatingatouchpointforyourteaser) （將您的Teaser新增至內容頁面）。
+   1. [创建Teaser体验](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#creatingateaserexperience).
+   1. [将内容添加到Teaser](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#addingcontenttoyourteaser).
+   1. [为您的Teaser创建接触点](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#creatingatouchpointforyourteaser) （将Teaser添加到内容页面）。
 
-* 如果建立Newsletter：
+* 如果创建新闻稿：
 
-   1. [建立電子報體驗](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#creatinganewsletterexperience).
-   1. [新增內容至Newsletter。](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#addingcontenttonewsletters)
-   1. [個人化電子報。](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#personalizingnewsletters)
-   1. [建立引人入勝的新聞稿登陸頁面](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#settingupanewsletterlandingpage).
-   1. [傳送Newsletter](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#sendingnewsletters) 至訂閱者或潛在客戶。
+   1. [创建新闻稿体验](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#creatinganewsletterexperience).
+   1. [将内容添加到新闻稿。](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#addingcontenttonewsletters)
+   1. [个性化新闻稿。](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#personalizingnewsletters)
+   1. [创建引人注目的新闻稿登陆页面](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#settingupanewsletterlandingpage).
+   1. [发送新闻稿](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#sendingnewsletters) 订阅者或潜在客户。
 
-* 如果建立Adobe Target （先前稱為Test&amp;Target）選件：
+* 如果创建Adobe Target（以前称为Test&amp;Target）选件：
 
-   1. [建立Adobe Target選件體驗](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#creatingatesttargetofferexperience).
+   1. [创建Adobe Target选件体验](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#creatingatesttargetofferexperience).
    1. [与 Adobe Target 集成](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#integratewithadobetesttarget)
 
 >[!NOTE]
 >
->另請參閱 [細分](/help/sites-administering/campaign-segmentation.md) 以取得定義區段的詳細指示。
+>参见 [分段](/help/sites-administering/campaign-segmentation.md) 以获取有关定义区段的详细说明。
 
-## 建立新品牌 {#creating-a-new-brand}
+## 创建新品牌 {#creating-a-new-brand}
 
-若要建立新品牌：
+要创建新品牌：
 
-1. 開啟 **MCM** 並選取 **行銷活動** 在左窗格中。
+1. 打开 **MCM** 并选择 **营销活动** 在左窗格中。
 
-1. 選取 **新增……** 以輸入 **標題** 和 **名稱** 和範本以用於您的新品牌：
+1. 选择 **新建……** 输入 **标题** 和 **名称** 和模板用于新品牌：
 
    ![chlimage_1-17](assets/chlimage_1-17.png)
 
-1. 单击&#x200B;**创建**。您的新品牌將顯示在MCM中（具有預設圖示）。
+1. 单击&#x200B;**创建**。您的新品牌将显示在MCM中（带有默认图标）。
 
-### 定義新品牌的屬性 {#defining-the-properties-for-your-new-brand}
+### 定义新品牌的属性 {#defining-the-properties-for-your-new-brand}
 
-1. 從 **行銷活動** 在左窗格中，選取右窗格中的新品牌圖示，然後按一下 **屬性……**
+1. 起始日期 **营销活动** 在左窗格中，从右窗格中选择新建品牌图标，然后单击 **属性……**
 
-   您可以輸入 **標題**， **說明** 和要當作圖示使用的影像。
+   您可以输入 **标题**， **描述** 和要用作图标的图像。
 
    ![chlimage_1-18](assets/chlimage_1-18.png)
 
-1. 按一下 **確定** 以儲存。
+1. 单击 **确定** 以保存。
 
-### 建立新行銷活動 {#creating-a-new-campaign}
+### 创建新营销活动 {#creating-a-new-campaign}
 
-若要建立新的行銷活動：
+要创建新营销活动，请执行以下操作：
 
-1. 從 **行銷活動**，在左窗格中選取新品牌，或按兩下右窗格中的圖示。
+1. 起始日期 **营销活动**，在左窗格中选择新品牌，或双击右窗格中的图标。
 
-   將顯示概覽（如果品牌是新的，則為空白）。
+   将显示概述（如果品牌是新的，则为空）。
 
-1. 按一下 **新增……** 並指定 **標題**， **名稱** 和用於新行銷活動的範本。
+1. 单击 **新建……** 并指定 **标题**， **名称** 和用于新营销活动的模板。
 
    ![chlimage_1-19](assets/chlimage_1-19.png)
 
-1. 单击&#x200B;**创建**。您的新行銷活動將顯示在MCM中。
+1. 单击&#x200B;**创建**。您的新营销活动将显示在MCM中。
 
-### 定義新行銷活動的屬性 {#defining-the-properties-for-your-new-campaign}
+### 定义新营销活动的属性 {#defining-the-properties-for-your-new-campaign}
 
-設定控制行為的行銷活動屬性：
+配置控制行为的营销活动属性：
 
-* **優先順序：** 此行銷活動相對於其他行銷活動的優先順序。 同時開啟多個行銷活動時，具有最高優先順序的行銷活動會控制訪客體驗。
-* **開啟和關閉時間：** 這些屬性會控制行銷活動控制訪客體驗的時間段。 開啟時間屬性會控制行銷活動開始控制體驗的時間。 「關閉時間」屬性控制行銷活動何時停止控制體驗。
-* **影像：** 代表AEM中行銷活動的影像。
-* **Cloud Services：** 與行銷活動整合的Cloud Service設定。 (請參閱 [與Adobe Marketing Cloud整合](/help/sites-administering/marketing-cloud.md).)
+* **优先级：** 此营销活动相对于其他营销活动的优先级。 当多个营销活动同时开启时，具有最高优先级的营销活动会控制访客体验。
+* **开启和关闭时间：** 这些属性控制营销活动控制访客体验的时段。 “开启时间”属性控制营销活动开始控制体验的时间。 “关闭时间”属性控制营销活动何时停止控制体验。
+* **图像：** 在AEM中表示营销活动的图像。
+* **Cloud Services：** 与Campaign集成的Cloud Service配置。 (请参阅 [与Adobe Marketing Cloud集成](/help/sites-administering/marketing-cloud.md).)
 
-* **Adobe Target：** 設定與Adobe Target整合之行銷活動的屬性。 (請參閱 [與Adobe Target整合](/help/sites-administering/target.md).)
+* **Adobe Target：** 用于配置与Adobe Target集成的营销活动的属性。 (请参阅 [与Adobe Target集成](/help/sites-administering/target.md).)
 
-1. 從 **行銷活動**，選取您的品牌。 在右窗格中，選取您的行銷活動並按一下 **屬性**.
+1. 起始日期 **营销活动**，选择您的品牌。 在右侧窗格中，选择您的营销活动，然后单击 **属性**.
 
-   您可以輸入各種屬性，包括 **標題**， **說明** 和任何 **Cloud Services** 您想要的。
+   您可以输入各种属性，包括 **标题**， **描述** 和任意 **Cloud Services** 你想要。
 
    ![chlimage_1-20](assets/chlimage_1-20.png)
 
-1. 按一下 **確定** 以儲存。
+1. 单击 **确定** 以保存。
 
-### 建立新體驗 {#creating-a-new-experience}
+### 创建新体验 {#creating-a-new-experience}
 
-建立新體驗的程式取決於體驗型別：
+创建新体验的过程取决于体验类型：
 
-* [建立Teaser](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#creatingateaser)
-* [建立Newsletter](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#creatinganewsletter)
-* [建立Adobe Target選件](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#creatingatesttargetoffer)
+* [创建Teaser](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#creatingateaser)
+* [创建新闻稿](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#creatinganewsletter)
+* [创建Adobe Target选件](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#creatingatesttargetoffer)
 
 >[!NOTE]
 >
->和舊版一樣，您仍然可以在以下位置將體驗建立為頁面： **網站** 控制檯（以及之前版本中建立的任何這類頁面仍完全受支援）。
+>与以前的版本一样，仍然可以在中创建体验作为页面 **网站** 控制台（并且仍完全支持在以前版本中创建的任何此类页面）。
 >
->建議的作法是現在使用MCM來建立體驗。
+>现在，建议的做法是使用MCM创建体验。
 
-### 設定您的新體驗 {#configuring-your-new-experience}
+### 配置您的新体验 {#configuring-your-new-experience}
 
-現在您已為體驗建立了基本骨架，您需要繼續執行下列動作（視體驗型別而定）：
+现在，您已为体验创建了基本骨架，您需要继续执行以下操作（取决于体验类型）：
 
 * [Teaser](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#teasers):
 
-   * [將Teaser頁面連結至訪客區段。](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#applyingasegmenttoyourteaser)
-   * [為您的Teaser建立接觸點](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#creatingatouchpointforyourteaser) （將您的Teaser新增至內容頁面）。
+   * [将Teaser页面连接到访客区段。](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#applyingasegmenttoyourteaser)
+   * [为您的Teaser创建接触点](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#creatingatouchpointforyourteaser) （将Teaser添加到内容页面）。
 
 * [新闻稿](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#newsletters):
 
-   * [新增內容至Newsletter。](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#addingcontenttonewsletters)
-   * [個人化電子報。](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#personalizingnewsletters)
-   * [傳送Newsletter](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#sendingnewsletters) 至訂閱者或潛在客戶。
-   * [建立引人入勝的新聞稿登陸頁面](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#settingupanewsletterlandingpage).
+   * [将内容添加到新闻稿。](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#addingcontenttonewsletters)
+   * [个性化新闻稿。](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#personalizingnewsletters)
+   * [发送新闻稿](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#sendingnewsletters) 订阅者或潜在客户。
+   * [创建引人注目的新闻稿登陆页面](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#settingupanewsletterlandingpage).
 
-* [Adobe Target選件](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#testtargetoffers)：
+* [Adobe Target选件](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#testtargetoffers)：
 
    * [与 Adobe Target 集成](/help/sites-administering/target.md)
 
-### 新增接觸點 {#adding-a-new-touchpoint}
+### 添加新接触点 {#adding-a-new-touchpoint}
 
-如果您有現有的體驗，您可以直接從MCM的「行事曆」檢視新增接觸點：
+如果您拥有现有体验，则可以直接从MCM的日历视图添加接触点：
 
-1. 選取行銷活動的行事曆檢視。
+1. 为您的营销活动选择日历视图。
 
-1. 按一下 **新增接觸點……** 以開啟對話方塊。 指定要新增的體驗：
+1. 单击 **添加接触点……** 以打开对话框。 指定要添加的体验：
 
    ![chlimage_1-21](assets/chlimage_1-21.png)
 
-1. 按一下 **確定** 以儲存。
+1. 单击 **确定** 以保存。
 
-## 使用銷售機會 {#working-with-leads}
+## 使用潜在客户 {#working-with-leads}
 
 >[!NOTE]
 >
->Adobe不打算進一步增強此功能（管理銷售機會）。
->建議為 [善用Adobe Campaign以及與AEM的整合](/help/sites-administering/campaign.md).
+>Adobe不打算进一步增强此功能（管理潜在客户）。
+>建议为 [利用Adobe Campaign以及与AEM的集成](/help/sites-administering/campaign.md).
 
-在AEM MCM中，您可以手動輸入潛在客戶或匯入逗號分隔的清單（例如郵寄清單）來整理和新增潛在客戶。 產生銷售機會的其他方法來自電子報註冊或社群註冊（如果設定，這些方法可以觸發填入銷售機會的工作流程）。
+在AEM MCM中，您可以通过手动输入潜在客户或导入逗号分隔的列表（例如邮件列表）来组织和添加潜在客户。 生成潜在客户的其他方法来自新闻稿注册或社区注册（如果配置，这些方法可能会触发填充潜在客户的工作流）。
 
-銷售機會通常會分類並放入清單中，以便您稍後可以對整個清單執行動作，例如，傳送自訂電子郵件給特定清單。
+通常，潜在客户会被分类并放入列表中，以便您稍后可以对整个列表执行操作，例如，向特定列表发送自定义电子邮件。
 
-在「控制面板」中，您可以按一下「 」以存取所有銷售機會 **銷售機會** 從左窗格。 您也可以從以下存取銷售機會： **清單** 窗格。
+在功能板中，您可以通过单击 **潜在客户** 左窗格中的。 您还可以从以下位置访问潜在客户 **列表** 窗格。
 
 ![screen_shot_2012-02-21at114748am](assets/screen_shot_2012-02-21at114748am.png)
 
 >[!NOTE]
 >
->若要新增或修改使用者的頭像，請開啟clickstream cloud (Ctrl+Alt+c)、載入設定檔，然後按一下 **編輯**.
+>要添加或修改用户头像，请打开clickstream云(Ctrl+Alt+c)，加载配置文件，然后单击 **编辑**.
 
-### 建立新的銷售機會 {#creating-new-leads}
+### 创建新潜在客户 {#creating-new-leads}
 
-建立新銷售機會後，請確定 [啟用它們](#activating-or-deactivating-leads) 以便您可以追蹤他們在發佈例項上的活動並個人化其體驗。
+创建新潜在客户后，请确保 [激活它们](#activating-or-deactivating-leads) 以便您可以跟踪他们在发布实例上的活动并个性化其体验。
 
-若要手動建立新的銷售機會，請執行下列步驟：
+要人工创建新潜在客户，请执行以下操作：
 
-1. 在AEM中，導覽至MCM。 在控制面板中，按一下 **銷售機會**.
-1. 按一下 **新增**. 此 **新建** 視窗隨即開啟。
+1. 在AEM中，导航到MCM。 在功能板中，单击 **潜在客户**.
+1. 单击 **新**. 此 **新建** 窗口打开。
 
    ![screen_shot_2012-02-21at115008am](assets/screen_shot_2012-02-21at115008am.png)
 
-1. 視情況在欄位中輸入資訊。 按一下 **地址** 標籤。
+1. 根据需要，在字段中输入信息。 单击 **地址** 选项卡。
 
    ![screen_shot_2012-02-21at115045am](assets/screen_shot_2012-02-21at115045am.png)
 
-1. 視需要輸入地址資訊。 按一下 **儲存** 以儲存銷售機會。 如果您需要新增其他銷售機會，請按一下 **儲存並新增**.
+1. 输入适当的地址信息。 单击 **保存** 以保存潜在客户。 如果您需要添加其他潜在客户，请单击 **保存并新建**.
 
-   新潛在客戶會出現在「潛在客戶」窗格中。 當您按一下專案時，所有輸入的資訊都會顯示在右窗格中。 建立銷售機會後，您可以將其新增至清單。
+   新潜在客户将出现在“潜在客户”窗格中。 单击该条目后，所有输入的信息都会显示在右窗格中。 创建潜在客户后，您可以将其添加到列表中。
 
    ![screen_shot_2012-02-21at120307pm](assets/screen_shot_2012-02-21at120307pm.png)
 
-### 啟用或停用銷售機會 {#activating-or-deactivating-leads}
+### 激活或停用潜在客户 {#activating-or-deactivating-leads}
 
-啟用銷售機會可協助您在發佈執行個體上追蹤其活動，並讓您個人化其體驗。 當您不再想要追蹤其活動時，可以將其停用。
+激活潜在客户可帮助您跟踪他们在发布实例上的活动，并允许您个性化其体验。 当您不再需要跟踪其活动时，可以取消激活它们。
 
-若要使用中或停用中的銷售機會，請執行下列步驟：
+要激活或停用潜在客户，请执行以下操作：
 
-1. 在AEM中，導覽至MCM並按一下 **銷售機會**.
+1. 在AEM中，导航到MCM并单击 **潜在客户**.
 
-1. 選取您要啟用或停用的潛在客戶，然後按一下 **啟動** 或 **停用**.
+1. 选择要激活或取消激活的潜在客户，然后单击 **激活** 或 **取消激活**.
 
    ![screen_shot_2012-02-21at120620pm](assets/screen_shot_2012-02-21at120620pm.png)
 
-   和AEM頁面一樣，發佈狀態會指示在 **已發佈** 欄。
+   与AEM页面一样，发布状态显示在 **已发布** 列。
 
    ![screen_shot_2012-02-21at122901pm](assets/screen_shot_2012-02-21at122901pm.png)
 
-### 匯入新的銷售機會 {#importing-new-leads}
+### 导入新潜在客户 {#importing-new-leads}
 
-當您匯入新的潛在客戶時，您可以自動將其新增到現有清單或建立新清單以包含這些潛在客戶。
+导入新潜在客户时，您可以自动将其添加到现有列表，或创建新列表以包含这些潜在客户。
 
-若要從逗號分隔的清單匯入潛在客戶：
+要从以逗号分隔的列表导入潜在客户，请执行以下操作：
 
-1. 在AEM中，導覽至MCM並按一下 **銷售機會**.
-
-   >[!NOTE]
-   >
-   >或者，您可以執行下列其中一項作業來匯入銷售機會：
-   >
-   >* 在控制面板中，按一下 **匯入銷售機會** 在 **清單** 窗格
-   >* 按一下 **清單** 和 **工具** 功能表，選取 **匯入銷售機會**.
-
-
-1. 在 **工具** 功能表，選取 **匯入** **銷售機會**.
-
-1. 依照範例資料中的說明輸入資訊。 可以匯入下列欄位：email、familyName、givenName、gender、aboutMe、city、country、phoneNumber、postalCode、region、streetAddress
+1. 在AEM中，导航到MCM并单击 **潜在客户**.
 
    >[!NOTE]
    >
-   >CSV清單中的第一列是預先定義的標籤，必須完全依照範例編寫：
+   >或者，可通过执行以下操作之一来导入潜在客户：
+   >
+   >* 在功能板中，单击 **导入潜在客户** 在 **列表** 窗格
+   >* 单击 **列表** 和 **工具** 菜单，选择 **导入潜在客户**.
+
+
+1. 在 **工具** 菜单，选择 **导入** **潜在客户**.
+
+1. 按照示例数据中的说明输入信息。 可以导入以下字段：email、familyName、givenName、gender、aboutMe、city、country、phoneNumber、postalCode、region、streetAddress
+
+   >[!NOTE]
+   >
+   >CSV列表中的第一行是预定义的标签，必须完全按照以下示例编写这些标签：
    >
    >
-   >`email,givenName,familyName`  — 若寫入為 `givenname`例如，系統無法辨識它。
+   >`email,givenName,familyName`  — 如果写为 `givenname`例如，系统不会识别它。
 
    ![screen_shot_2012-02-21at123055pm](assets/screen_shot_2012-02-21at123055pm.png)
 
-1. 单击&#x200B;**下一步**。您可在此預覽銷售機會，以確保其正確性。
+1. 单击&#x200B;**下一步**。在此，您可以预览潜在客户以确保其准确性。
 
    ![screen_shot_2012-02-21at123104pm](assets/screen_shot_2012-02-21at123104pm.png)
 
-1. 单击&#x200B;**下一步**。選取您要銷售機會所屬的清單。 如果您不希望它們屬於清單，請刪除欄位中的資訊。 依預設，AEM會建立包含日期和時間的清單名稱。 按一下 **匯入**.
+1. 单击&#x200B;**下一步**。选择您希望潜在客户所属的列表。 如果不希望它们属于某个列表，请删除字段中的信息。 默认情况下，AEM会创建一个包含日期和时间的列表名称。 单击 **导入**.
 
    ![screen_shot_2012-02-21at123123pm](assets/screen_shot_2012-02-21at123123pm.png)
 
-   新潛在客戶會出現在「潛在客戶」窗格中。 如果按一下該專案，則所有輸入的資訊都會顯示在右窗格中。 建立銷售機會後，您可以將其新增至清單。
+   新潜在客户将出现在“潜在客户”窗格中。 如果单击该条目，则所有输入的信息都会显示在右窗格中。 创建潜在客户后，您可以将其添加到列表中。
 
-### 將潛在客戶新增至清單 {#adding-leads-to-lists}
+### 将潜在客户添加到列表 {#adding-leads-to-lists}
 
-若要將潛在客戶新增至預先存在的清單：
+要将潜在客户添加到预先存在的列表，请执行以下操作：
 
-1. 在MCM中，按一下 **銷售機會** 以檢視所有可用的銷售機會。
+1. 在MCM中，单击 **潜在客户** 以查看所有可用的潜在客户。
 
-1. 選取要新增至清單的銷售機會，方法是選取該銷售機會旁的核取方塊。 您可以新增任意數量的銷售機會。
+1. 通过选中潜在客户旁边的复选框，选择要添加到列表中的潜在客户。 您可以根据需要添加任意数量的潜在客户。
 
    ![screen_shot_2012-02-21at123835pm](assets/screen_shot_2012-02-21at123835pm.png)
 
-1. 在 **工具** 功能表，選取 **新增至清單....** 此 **新增至清單** 視窗隨即開啟。
+1. 在 **工具** 菜单，选择 **添加到列表....** 此 **添加到列表** 窗口打开。
 
    ![screen_shot_2012-02-21at124019pm](assets/screen_shot_2012-02-21at124019pm.png)
 
-1. 選取您要新增銷售機會的清單，然後按一下 **確定**. 潛在客戶會新增至適當的清單中。
+1. 选择要向哪个列表添加潜在客户，然后单击 **确定**. 潜在客户将添加到相应的列表中。
 
-### 檢視潛在客戶資訊 {#viewing-lead-information}
+### 查看潜在客户信息 {#viewing-lead-information}
 
-若要檢視銷售機會資訊，請在MCM中按一下銷售機會旁的核取方塊，然後開啟一個右窗格，其中顯示所有銷售機會資訊，包括清單附屬關係。
+要查看销售线索信息，请在MCM中单击该销售线索旁边的复选框，此时将打开一个右窗格，其中显示了所有销售线索的信息，包括列表隶属关系。
 
 ![screen_shot_2012-02-21at124228pm](assets/screen_shot_2012-02-21at124228pm.png)
 
-### 修改現有銷售機會 {#modifying-existing-leads}
+### 修改现有潜在客户 {#modifying-existing-leads}
 
-若要修改現有潛在客戶資訊，請執行下列步驟：
+要修改现有潜在客户信息，请执行以下操作：
 
-1. 在MCM中，按一下 **銷售機會**. 從銷售機會清單中，選取您要編輯的銷售機會旁邊的核取方塊。 所有潛在客戶資訊都會顯示在右窗格中。
+1. 在MCM中，单击 **潜在客户**. 从潜在客户列表中，选中要编辑的潜在客户旁边的复选框。 所有潜在客户信息都显示在右窗格中。
 
    ![screen_shot_2012-02-21at124514pm](assets/screen_shot_2012-02-21at124514pm.png)
 
    >[!NOTE]
    >
-   >您一次只能編輯單一銷售機會。 如果您需要修改屬於相同清單的銷售機會，您可以改為修改清單。
+   >您一次只能编辑一个潜在客户。 如果需要修改属于同一列表的销售线索，您可以改为修改列表。
 
-1. 按一下 **編輯**. 此 **編輯銷售機會** 視窗隨即開啟。
+1. 单击 **编辑**. 此 **编辑潜在客户** 窗口打开。
 
    ![screen_shot_2012-02-21at124609pm](assets/screen_shot_2012-02-21at124609pm.png)
 
-1. 視需要進行編輯，然後按一下 **儲存** 以儲存變更。
+1. 根据需要进行编辑，然后单击 **保存** 以保存更改。
 
    >[!NOTE]
    >
-   >若要變更潛在客戶頭像，請前往使用者設定檔。 您可以按下CTRL+ALT+c並按一下，在Clickstream Cloud中載入設定檔 **載入**，然後選取設定檔。
+   >要更改潜在客户头像，请转到用户配置文件。 您可以通过按CTRL+ALT+c，然后单击 **加载**，然后选择用户档案。
 
-### 刪除現有銷售機會 {#deleting-existing-leads}
+### 删除现有潜在客户 {#deleting-existing-leads}
 
-若要刪除MCM中的現有銷售機會，請選取該銷售機會旁的核取方塊，然後按一下 **刪除**. 潛在客戶會從潛在客戶清單及所有相關清單中移除。
-
->[!NOTE]
->
->刪除之前，AEM會確認您要刪除現有銷售機會。 刪除後，將無法擷取它。
-
-## 使用清單 {#working-with-lists}
+要删除MCM中的现有潜在客户，请选中该潜在客户旁边的复选框，然后单击 **删除**. 商机将从商机列表和所有相关列表中删除。
 
 >[!NOTE]
 >
->Adobe不打算進一步增強此功能（管理清單）。
->建議為 [善用Adobe Campaign以及與AEM的整合](/help/sites-administering/campaign.md).
+>在删除之前，AEM会确认您要删除现有潜在客户。 删除后，无法检索到它。
 
-清單可讓您將潛在客戶組織到群組中。 透過清單，您可以將行銷活動目標定位為一組選定的人員，例如，您可以將目標電子報傳送至清單。 清單會顯示在MCM中，位於「控制面板」中或按一下 **清單**. 兩者都會提供清單名稱和成員數目。
+## 使用列表 {#working-with-lists}
+
+>[!NOTE]
+>
+>Adobe不打算进一步增强此功能（管理列表）。
+>建议为 [利用Adobe Campaign以及与AEM的集成](/help/sites-administering/campaign.md).
+
+列表可让您将潜在客户组织到组中。 通过列表，您可以将营销活动定位到选定的用户组，例如，您可以将定向的新闻稿发送到列表。 列表在MCM中可见，可通过在功能板中或单击 **列表**. 两者都会为您提供列表名称和成员数。
 
 ![screen_shot_2012-02-21at125021pm](assets/screen_shot_2012-02-21at125021pm.png)
 
-如果您按一下 **清單**，您也可以檢視清單是否為其他清單的成員，並檢視說明。
+如果您单击 **列表**，您还可以查看列表是否是另一个列表的成员，并查看描述。
 
 ![screen_shot_2012-02-21at124828pm](assets/screen_shot_2012-02-21at124828pm.png)
 
-### 建立新清單 {#creating-new-lists}
+### 创建新列表 {#creating-new-lists}
 
-若要建立新清單（群組）：
+要创建新列表（组），请执行以下操作：
 
-1. 在MCM控制面板中，按一下 **新增清單……** 或 **清單**，按一下 **新增** ...「建立清單」視窗隨即開啟。
+1. 在MCM功能板中，单击 **新建列表……** 或位于 **列表**，单击 **新** ...将打开“创建列表”窗口。
 
    ![screen_shot_2012-02-21at125147pm](assets/screen_shot_2012-02-21at125147pm.png)
 
-1. 輸入名稱（必填），並視需要輸入說明，然後按一下 **儲存**. 清單會顯示在 **清單** 窗格。
+1. 输入名称（必需），如果需要，输入说明并单击 **保存**. 该列表将显示在 **列表** 窗格。
 
    ![screen_shot_2012-02-21at125320pm](assets/screen_shot_2012-02-21at125320pm.png)
 
-### 修改現有清單 {#modifying-existing-lists}
+### 修改现有列表 {#modifying-existing-lists}
 
-若要修改現有清單，請執行下列動作：
+修改现有列表：
 
-1. 在MCM中，按一下 **清單**.
+1. 在MCM中，单击 **列表**.
 
-1. 從清單中，選取要編輯的清單旁的核取方塊，然後按一下 **編輯**. 此 **編輯清單** 視窗隨即開啟。
+1. 从列表中，选中要编辑的列表旁边的复选框，然后单击 **编辑**. 此 **编辑列表** 窗口打开。
 
    ![screen_shot_2012-02-21at125452pm](assets/screen_shot_2012-02-21at125452pm.png)
 
    >[!NOTE]
    >
-   >您一次只能編輯一個清單。
+   >您一次只能编辑一个列表。
 
-1. 視需要進行編輯，然後按一下 **儲存** 以儲存變更。
+1. 根据需要进行编辑，然后单击 **保存** 以保存更改。
 
-### 刪除現有清單 {#deleting-existing-lists}
+### 删除现有列表 {#deleting-existing-lists}
 
-若要刪除現有清單，請在MCM中選取清單旁的核取方塊，然後按一下 **刪除**. 清單即會移除。 不會移除與清單關聯的潛在客戶 — 只會刪除與清單關聯的潛在客戶。
+要删除现有列表，请在MCM中，选中列表旁边的复选框，然后单击 **删除**. 该列表将被删除。 未删除与列表关联的潜在客户 — 仅删除与列表关联的潜在客户。
 
 >[!NOTE]
 >
->刪除之前，AEM會確認您要刪除現有清單。 刪除後，將無法擷取它。
+>在删除之前，AEM会确认您要删除现有列表。 删除后，无法检索到它。
 
-### 合併清單 {#merging-lists}
+### 合并列表 {#merging-lists}
 
-您可以將現有清單與其他清單合併。 執行此操作時，要合併的清單會成為另一個清單的成員。 它也仍然作為單獨的實體存在，不應該刪除。
+您可以将现有列表与其他列表合并。 执行此操作后，要合并的列表将成为另一个列表的成员。 它也作为单独的实体存在，不应删除。
 
-如果您在兩個不同位置有相同的會議，並且想要將它們合併到所有會議的出席者清單中，則可以合併清單。
+如果在两个不同的位置有相同的会议，并且希望将它们合并到所有会议的与会者列表中，则可以合并列表。
 
-若要合併現有清單，請執行下列動作：
+要合并现有列表，请执行以下操作：
 
-1. 在MCM中，按一下 **清單**.
+1. 在MCM中，单击 **列表**.
 
-1. 選取清單旁邊的核取方塊，以選取要與另一個清單合併的清單。
+1. 通过选中列表旁边的复选框，选择要与另一个列表合并的列表。
 
-1. 在 **工具** 功能表，選取 **合併清單**.
+1. 在 **工具** 菜单，选择 **合并列表**.
 
    >[!NOTE]
    >
-   >您一次只能合併一個清單。
+   >一次只能合并一个列表。
 
-1. 在 **合併清單** 視窗，選取要合併的清單，然後按一下 **確定**.
+1. 在 **合并列表** 窗口中，选择要合并的列表，然后单击 **确定**.
 
    ![screen_shot_2012-02-21at10259pm](assets/screen_shot_2012-02-21at10259pm.png)
 
-   您合併的清單應增加一個成員。 若要檢視您的清單是否已合併，請選取您合併的清單，然後在 **工具** 功能表，選取 **顯示潛在客戶**.
+   您合并的列表应增加一个成员。 要查看已合并的列表，请选择已合并的列表，然后在 **工具** 菜单，选择 **显示潜在客户**.
 
-1. 重複此步驟，直到合併所有想要的清單為止。
+1. 重复该步骤，直到合并了所需的所有列表为止。
 
    ![screen_shot_2012-02-21at10538pm](assets/screen_shot_2012-02-21at10538pm.png)
 
 >[!NOTE]
 >
->從合併清單的成員資格中移除與從清單中移除潛在客戶相同。 開啟 **清單** 標籤，選取包含合併清單的清單，並按一下清單旁的紅色圓圈來移除成員資格。
+>从合并列表的成员资格中删除列表与从列表中删除潜在客户相同。 打开 **列表** 选项卡，选择包含合并列表的列表，然后单击列表旁边的红色圆圈来移除成员资格。
 
-### 檢視清單中的潛在客戶 {#viewing-leads-in-lists}
+### 查看列表中的潜在客户 {#viewing-leads-in-lists}
 
-您可以隨時透過瀏覽或搜尋成員來檢視哪些潛在客戶屬於特定清單。
+您可以随时通过浏览或搜索成员来查看哪些潜在客户属于特定列表。
 
-若要檢視屬於清單的銷售機會，請執行下列步驟：
+要查看属于列表的销售线索，请执行以下操作：
 
-1. 在MCM中，按一下 **清單**.
+1. 在MCM中，单击 **列表**.
 
-1. 選取您要檢視其成員的清單旁的核取方塊。
+1. 选中要查看其成员的列表旁边的复选框。
 
-1. 在 **工具** 功能表，選取 **顯示潛在客戶**. AEM會顯示屬於該清單成員的潛在客戶。 您可以瀏覽清單或搜尋成員。
+1. 在 **工具** 菜单，选择 **显示潜在客户**. AEM显示属于该列表成员的潜在客户。 您可以浏览列表或搜索成员。
 
    >[!NOTE]
    >
-   >此外，您可以選取銷售機會，然後按一下「 」，從清單中刪除銷售機會 **移除成員資格**.
+   >此外，您还可以通过选择潜在客户，然后单击 **删除成员资格**.
 
    ![screen_shot_2012-02-21at10828pm](assets/screen_shot_2012-02-21at10828pm.png)
 
-1. 按一下 **關閉** 以返回MCM。
+1. 单击 **关闭** 返回MCM。

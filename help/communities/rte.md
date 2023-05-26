@@ -1,7 +1,7 @@
 ---
-title: RTF編輯器程式集
+title: 富文本编辑器Essentials
 seo-title: Rich Text Editor Essentials
-description: RTF編輯器功能概觀
+description: 富文本编辑器功能概述
 seo-description: Rich text Editor feature overview
 uuid: f96015cc-114b-431a-a5ba-dc195c2a0b83
 contentOwner: msm-service
@@ -17,52 +17,52 @@ ht-degree: 3%
 
 ---
 
-# RTF編輯器程式集 {#rich-text-editor-essentials}
+# 富文本编辑器Essentials {#rich-text-editor-essentials}
 
 ## 概述 {#overview}
 
-RTF編輯器(RTE)提供輸入含標示文字的功能。
+富文本编辑器(RTE)提供输入带有标记的文本的功能。
 
-若為Communities元件，則類似於 [作者環境中的RTF編輯器](../../help/sites-authoring/rich-text-editor.md)，它會影響在發佈環境中輸入的文字。
+对于Communities组件，而与 [创作环境中的富文本编辑器](../../help/sites-authoring/rich-text-editor.md)，它会影响在发布环境中输入的文本。
 
-![RTF編輯器](assets/rich-text-editor.png)
+![富文本编辑器](assets/rich-text-editor.png)
 
-## 啟用RTF編輯器 {#enabling-rich-text-editor}
+## 启用富文本编辑器 {#enabling-rich-text-editor}
 
-允許使用者產生內容(UGC)的Communities元件可啟用以允許RTE。 根據元件是新增至頁面還是包含在 [函式](functions.md)，RTE依預設可能會啟用，也可能不會啟用。
+可以启用允许用户生成内容(UGC)的社区组件以允许RTE。 根据组件是添加到页面还是包含在 [函数](functions.md)，默认情况下可以启用RTE，也可以不启用。
 
-如果未啟用，只要輸入 [作者編輯模式](sites-console.md#authoring-site-content)，選取要編輯的元件，然後選取 `Rich Text Editor` 核取方塊。
+如果未启用，只需输入 [作者编辑模式](sites-console.md#authoring-site-content)，选择要编辑的组件，然后选择 `Rich Text Editor` 复选框。
 
-RTE適用於下列Communities元件：
+RTE可用于以下Communities组件：
 
 * [博客](blog-feature.md)
 * [日程表](calendar.md)
 * [评论](comments.md)
-* [檔案庫](file-library.md)
+* [文件库](file-library.md)
 * [论坛](forum.md)
 * [消息](configure-messaging.md)
 * [问题与解答](working-with-qna.md)
 * [审核](reviews.md)
 
-## 自訂 {#customization}
+## 自定义 {#customization}
 
-RTF編輯器可以自訂，因為實作是根據 [CKEditor](https://www.ckeditor.com/).
+可以自定义富文本编辑器，因为实施基于 [CKEditor](https://www.ckeditor.com/).
 
-Communities元件的目前設定位於 `cq.social.  scf   clientlib`，位於存放庫中的
+Communities组件的当前配置位于 `cq.social.  scf   clientlib`，位于存储库中的
 
 `/libs/clientlibs/social/commons/scf/ckrte.js`
 
-不建議修改cq.social.scf clientlib，因為未來的升級可能會覆寫任何編輯。
+不建议修改cq.social.scf clientlib，因为未来的升级可能会覆盖任何编辑。
 
-### 自訂範例：內嵌連結 {#example-customization-inline-links}
+### 自定义示例：内联链接 {#example-customization-inline-links}
 
-基於安全性考量，超連結選項不會包含在預設提供給成員的RTF圖示集中。 當UGC中允許href時，惡意連結的能力很強。
+出于安全考虑，默认情况下向成员显示的富文本图标集中不包含超链接选项。 当UGC中允许href时，恶作剧的能力是广泛的。
 
-若要將超連結選項新增至工具列：
+要向工具栏添加超链接选项，请执行以下操作：
 
-* 新增名為「」的工具列 `links`&quot;
+* 添加名为“”的工具栏 `links`”
    * `{ name: 'links', items: [ 'Link','Unlink','Anchor' ] }`
-* 選取 **[!UICONTROL 全部儲存]**
+* 选择 **[!UICONTROL 全部保存]**
 
 #### /libs/clientlibs/social/commons/scf/ckrte.js {#libs-clientlibs-social-commons-scf-ckrte-js}
 

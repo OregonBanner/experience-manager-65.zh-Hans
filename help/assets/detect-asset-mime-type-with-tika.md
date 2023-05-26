@@ -1,6 +1,6 @@
 ---
-title: 使用Apache Tika偵測MIME型別的資產
-description: 啟用Apache Tika以協助 [!DNL Experience Manager Assets] 在上傳操作期間，從內容串流中偵測資產的MIME型別，而不是副檔名。
+title: 使用Apache Tika检测MIME类型的资源
+description: 启用Apache Tika以帮助 [!DNL Experience Manager Assets] 在上传操作期间，从内容流中检测MIME类型的资产，而不是检测文件扩展名。
 contentOwner: AG
 role: Admin, Architect
 feature: Metadata,Developer Tools,Asset Management
@@ -12,24 +12,24 @@ ht-degree: 0%
 
 ---
 
-# 使用以下專案偵測MIME型別的資產 [!DNL Apache Tika] {#detecting-mime-type-of-assets-using-apache-tika}
+# 使用以下方式检测MIME类型的资源 [!DNL Apache Tika] {#detecting-mime-type-of-assets-using-apache-tika}
 
-通常情況下， [!DNL Adobe Experience Manager Assets] 會偵測您從副檔名上傳的資產的MIME型別。
+通常情况下， [!DNL Adobe Experience Manager Assets] 检测您从其文件扩展名上传的资源的MIME类型。
 
-如果您使用 [!DNL Apache Tika] 若要上傳資產， [!DNL Assets] 會在上傳作業期間從內容串流偵測其MIME型別，而非副檔名。
+如果您使用 [!DNL Apache Tika] 要上传资产，请执行以下操作： [!DNL Assets] 在上传操作期间从内容流中检测其MIME类型而不是文件扩展名。
 
-此功能預設為停用。 若要啟用此功能，請設定 **[!UICONTROL Day CQ DAM Mime型別]** 服務來源 [!UICONTROL 設定管理員].
+默认情况下，此功能处于禁用状态。 要启用该功能，请配置 **[!UICONTROL Day CQ DAM Mime类型]** 服务来源 [!UICONTROL 配置管理器].
 
 >[!NOTE]
 >
->使用MIME型別偵測 [!DNL Apache Tika] 程式庫是耗用大量資源的作業。
+>使用进行MIME类型检测 [!DNL Apache Tika] 库是一项资源密集型操作。
 
-1. 若要開啟Configuration Manager Web主控台，請存取 `https://[aem_server]:[port]/system/console/configMgr`.
+1. 要打开Configuration Manager Web控制台，请访问 `https://[aem_server]:[port]/system/console/configMgr`.
 
-1. 從服務清單中找出 **[!UICONTROL Day CQ DAM Mime型別服務]** 並按一下 **[!UICONTROL 編輯]**.
+1. 在服务列表中，找到 **[!UICONTROL Day CQ DAM Mime类型服务]** 并单击 **[!UICONTROL 编辑]**.
 
-1. 選取 **[!UICONTROL 從內容中偵測MIME]** 啟用剖析已上傳資產以決定其MIME型別的選項，同時忽略副檔名。 依預設，此選項為取消選取。
+1. 选择 **[!UICONTROL 从内容中检测MIME]** 选项，用于在忽略文件扩展名时启用对已上传资产的解析以确定其MIME类型。 默认情况下，此选项处于未选中状态。
 
    ![chlimage_1-333](assets/chlimage_1-333.png)
 
-1. 按一下 **[!UICONTROL 儲存]** 以儲存變更。
+1. 单击 **[!UICONTROL 保存]** 以保存更改。

@@ -1,6 +1,6 @@
 ---
-title: 「教學課程：在AEM Forms中建立表單資料模型」
-description: 建立互動式通訊的表單資料模型
+title: “教程：在AEM Forms中创建表单数据模型”
+description: 为交互式通信创建表单数据模型
 uuid: b56d3dac-be54-4812-b958-38a085686218
 contentOwner: anujkapo
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -15,47 +15,47 @@ ht-degree: 0%
 
 ---
 
-# 教學課程：在AEM Forms中建立表單資料模型{#tutorial-create-form-data-model}
+# 教程：在AEM Forms中创建表单数据模型{#tutorial-create-form-data-model}
 
 ![04-create-form-data-model-main](assets/04-create-form-data-model-main.png)
 
-本教學課程是 [建立您的第一個互動式通訊](/help/forms/using/create-your-first-interactive-communication.md) 數列。 建議您依照時間順序觀看本系列，以瞭解、執行和示範完整的教學課程使用案例。
+本教程是 [创建您的第一个交互式通信](/help/forms/using/create-your-first-interactive-communication.md) 系列。 建议按时间顺序关注该系列，以了解、执行和演示完整的教程用例。
 
-## 關於教學課程 {#about-the-tutorial}
+## 关于教程 {#about-the-tutorial}
 
-AEM Forms資料整合模組可讓您從不同的後端資料來源(例如AEM使用者設定檔、RESTful Web服務、以SOAP為基礎的Web服務、OData服務和關聯式資料庫)建立表單資料模型。 您可以在表單資料模型中設定資料模型物件和服務，並將其與最適化表單建立關聯。 最適化表單欄位已繫結至資料模型物件屬性。 這些服務可讓您預填最適化表單，並將提交的表單資料寫入回資料模型物件。
+AEM Forms数据集成模块允许您从不同的后端数据源(如AEM用户配置文件、RESTful Web服务、基于SOAP的Web服务、OData服务和关系数据库)创建表单数据模型。 您可以在表单数据模型中配置数据模型对象和服务，并将其与自适应表单关联。 自适应表单字段绑定到数据模型对象属性。 这些服务使您能够预填充自适应表单并将提交的表单数据写回数据模型对象。
 
-如需表單資料整合和表單資料模型的詳細資訊，請參閱 [AEM Forms資料整合](https://helpx.adobe.com/experience-manager/6-3/forms/using/data-integration.html).
+有关表单数据集成和表单数据模型的更多信息，请参阅 [AEM Forms数据集成](https://helpx.adobe.com/experience-manager/6-3/forms/using/data-integration.html).
 
-本教學課程將引導您完成準備、建立、設定表單資料模型，並將其與互動式通訊建立關聯的步驟。 在本教學課程結束時，您將能夠：
+本教程将指导您完成准备、创建、配置表单数据模型并将其与交互式通信关联的步骤。 在本教程结束时，您将能够：
 
-* [設定資料庫](../../forms/using/create-form-data-model0.md#step-set-up-the-database)
-* [將MySQL資料庫設定為資料來源](../../forms/using/create-form-data-model0.md#step-configure-mysql-database-as-data-source)
-* [建立表單資料模型](../../forms/using/create-form-data-model0.md#step-create-form-data-model)
-* [設定表單資料模型](../../forms/using/create-form-data-model0.md#step-configure-form-data-model)
-* [測試表單資料模型](../../forms/using/create-form-data-model0.md#step-test-form-data-model-and-services)
+* [设置数据库](../../forms/using/create-form-data-model0.md#step-set-up-the-database)
+* [将MySQL数据库配置为数据源](../../forms/using/create-form-data-model0.md#step-configure-mysql-database-as-data-source)
+* [创建表单数据模型](../../forms/using/create-form-data-model0.md#step-create-form-data-model)
+* [配置表单数据模型](../../forms/using/create-form-data-model0.md#step-configure-form-data-model)
+* [测试表单数据模型](../../forms/using/create-form-data-model0.md#step-test-form-data-model-and-services)
 
-表單資料模型看起來類似下列：
+表单数据模型类似于以下内容：
 
-![表單資料模型](assets/form_data_model_callouts_new.png)
+![表单数据模型](assets/form_data_model_callouts_new.png)
 
-**答：** 已設定的資料來源 **B.** 資料來源結構描述 **C.** 可用服務 **D.** 資料模型物件 **E.** 已設定的服務
+**答：** 配置的数据源 **B.** 数据源架构 **C.** 可用服务 **D.** 数据模型对象 **E.** 配置的服务
 
 ## 前提条件 {#prerequisites}
 
-開始之前，請確定您具備下列條件：
+在开始之前，请确保您具备以下条件：
 
-* 含有範例資料的MySQL資料庫，如 [設定資料庫](../../forms/using/create-form-data-model0.md#step-set-up-the-database) 區段。
-* 適用於MySQL JDBC驅動程式的OSGi套件組合，如中所述 [整合JDBC資料庫驅動程式](https://helpx.adobe.com/experience-manager/6-3/help/sites-developing/jdbc.html#bundling-the-jdbc-database-driver)
+* 包含示例数据的MySQL数据库，如 [设置数据库](../../forms/using/create-form-data-model0.md#step-set-up-the-database) 部分。
+* 用于MySQL JDBC驱动程序的OSGi包，如中所述 [捆绑JDBC数据库驱动程序](https://helpx.adobe.com/experience-manager/6-3/help/sites-developing/jdbc.html#bundling-the-jdbc-database-driver)
 
-## 步驟1：設定資料庫 {#step-set-up-the-database}
+## 步骤1：设置数据库 {#step-set-up-the-database}
 
-資料庫是建立互動式通訊的必要條件。 本教學課程使用資料庫來顯示表單資料模型和互動式通訊的持續性功能。 設定包含客戶、帳單和呼叫表格的資料庫。
-下圖說明customer表格的範例資料：
+数据库对于创建交互式通信至关重要。 本教程使用数据库来显示表单数据模型和交互式通信的持久性功能。 设置包含客户、清单和调用表的数据库。
+下图说明了customer表的示例数据：
 
 ![sample_data_cust](assets/sample_data_cust.png)
 
-使用下列DDL陳述式來建立 **客戶** 資料庫的資料表。
+使用以下DDL语句创建 **客户** 表中的数据。
 
 ```sql
 CREATE TABLE `customer` (
@@ -70,7 +70,7 @@ CREATE TABLE `customer` (
  ) ENGINE=InnoDB DEFAULT CHARSET=utf8
 ```
 
-使用下列DDL陳述式來建立 **帳單** 資料庫的資料表。
+使用以下DDL语句创建 **帐单** 表中的数据。
 
 ```sql
 CREATE TABLE `bills` (
@@ -93,7 +93,7 @@ CREATE TABLE `bills` (
  ) ENGINE=InnoDB DEFAULT CHARSET=utf8
 ```
 
-使用下列DDL陳述式來建立 **呼叫** 資料庫的資料表。
+使用以下DDL语句创建 **调用** 表中的数据。
 
 ```sql
 CREATE TABLE `calls` (
@@ -107,297 +107,297 @@ CREATE TABLE `calls` (
  ) ENGINE=InnoDB DEFAULT CHARSET=utf8
 ```
 
-此 **呼叫** 此表格包含通話詳細資訊，例如，通話日期、通話時間、通話號碼、通話期間和通話費用。 此 **客戶** 表格會使用「行動電話號碼(mobilenum)」欄位連結至通話表格。 針對每個列出的行動電話號碼 **客戶** 表格中，有多個記錄 **呼叫** 表格。 例如，您可以擷取以下專案的呼叫詳細資料： **1457892541** 行動電話號碼(透過參考 **呼叫** 表格。
+此 **调用** 该表包括呼叫详细信息，例如呼叫日期、呼叫时间、呼叫编号、呼叫持续时间和呼叫费用。 此 **客户** 表使用手机号码(mobilenum)字段链接到呼叫表。 对于中列出的每个手机号码 **客户** 表中，有多个记录 **调用** 表格。 例如，您可以检索 **1457892541** 手机号码，通过参考 **调用** 表格。
 
-此 **帳單** 此表格包含帳單明細，例如，帳單日期、帳單期間、每月費用及通話費用。 此 **客戶** 表格連結至 **帳單** 使用「帳單計畫」欄位建立表格。 有一個計畫與中的每個客戶相關聯 **客戶** 表格。 此 **帳單** 表格包含所有現有計畫的訂價明細。 例如，您可以擷取計畫詳細資訊 **Sarah** 從 **客戶** 表格並使用這些詳細資料來擷取訂價詳細資訊 **帳單** 表格。
+此 **帐单** 此表包括记帐详细信息，如记帐日期、记帐期间、每月费用和呼叫费用。 此 **客户** 表格链接到 **帐单** 表中的“开单计划”字段。 有一个计划与中的每个客户关联 **客户** 表格。 此 **帐单** 此表包含所有现有计划的定价详细信息。 例如，您可以检索计划详细信息 **Sarah** 从 **客户** 表并使用这些详细信息检索定价详细信息 **帐单** 表格。
 
-## 步驟2：將MySQL資料庫設定為資料來源 {#step-configure-mysql-database-as-data-source}
+## 步骤2：将MySQL数据库配置为数据源 {#step-configure-mysql-database-as-data-source}
 
-您可以設定不同型別的資料來源，以建立表單資料模型。 在本教學課程中，您將設定已設定並填入範例資料的MySQL資料庫。 如需其他支援的資料來源以及如何設定這些來源的相關資訊，請參閱 [AEM Forms資料整合](https://helpx.adobe.com/experience-manager/6-3/forms/using/data-integration.html).
+您可以配置不同类型的数据源来创建表单数据模型。 在本教程中，您将配置已配置并填充了示例数据的MySQL数据库。 有关其他受支持数据源以及如何配置它们的信息，请参阅 [AEM Forms数据集成](https://helpx.adobe.com/experience-manager/6-3/forms/using/data-integration.html).
 
-執行下列操作來設定您的MySQL資料庫：
+执行以下操作以配置MySQL数据库：
 
-1. 以OSGi套件安裝MySQL資料庫的JDBC驅動程式：
+1. 作为OSGi捆绑包安装用于MySQL数据库的JDBC驱动程序：
 
-   1. 以管理員身分登入AEM Forms作者執行個體，並前往AEM網頁主控台套件組合。 預設URL為 [https://localhost:4502/system/console/bundles](https://localhost:4502/system/console/bundles).
-   1. 點選 **安裝/更新**. 一個 **上傳/安裝套件組合** 對話方塊隨即顯示。
+   1. 以管理员身份登录AEM Forms创作实例，然后转到AEM Web控制台包。 默认URL为 [https://localhost:4502/system/console/bundles](https://localhost:4502/system/console/bundles).
+   1. 点按 **安装/更新**. An **上传/安装包** 对话框。
 
-   1. 點選 **選擇檔案** 瀏覽並選取MySQL JDBC驅動程式OSGi套件。 選取 **開始套件組合** 和 **重新整理封裝**，然後點選 **安裝** 或 **更新**. 請確定Oracle Corporation的MySQL的JDBC驅動程式作用中。 已安裝驅動程式。
+   1. 点按 **选择文件** 浏览并选择MySQL JDBC驱动程序OSGi包。 选择 **启动捆绑包** 和 **刷新包**，然后点按 **安装** 或 **更新**. 确保Oracle公司针对MySQL的JDBC驱动程序处于活动状态。 已安装驱动程序。
 
-1. 將MySQL資料庫設定為資料來源：
+1. 将MySQL数据库配置为数据源：
 
-   1. 前往AEM網頁主控台，網址為 [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr).
-   1. 尋找 **Apache Sling Connection Pooled DataSource** 設定。 點選以在編輯模式中開啟設定。
-   1. 在設定對話方塊中，指定下列詳細資訊：
+   1. 转到AEM Web控制台，网址为 [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr).
+   1. 查找 **Apache Sling连接池化数据源** 配置。 点按以在编辑模式下打开配置。
+   1. 在配置对话框中，指定以下详细信息：
 
-      * **資料來源名稱：** 您可以指定任何名稱。 例如，指定 **MySQL**.
+      * **数据源名称：** 您可以指定任意名称。 例如，指定 **MySQL**.
 
-      * **資料來源服務屬性名稱**：指定包含DataSource名稱的服務屬性名稱。 它是在將資料來源執行個體註冊為OSGi服務時指定的。 例如， **資料來源名稱**.
+      * **数据源服务属性名称**：指定包含DataSource名称的服务属性的名称。 它是在将数据源实例注册为OSGi服务时指定的。 例如， **数据源名称**.
 
-      * **JDBC驅動程式類別**：指定JDBC驅動程式的Java類別名稱。 對於MySQL資料庫，請指定 **com.mysql.jdbc.Driver**.
+      * **JDBC驱动程序类**：指定JDBC驱动程序的Java类名。 对于MySQL数据库，指定 **com.mysql.jdbc.Driver**.
 
-      * **JDBC連線URI**：指定資料庫的連線URL。 對於在連線埠3306和結構描述teleca上執行的MySQL資料庫，URL是： `jdbc:mysql://'server':3306/teleca?autoReconnect=true&useUnicode=true&characterEncoding=utf-8`
-      * **使用者名稱：** 資料庫的使用者名稱。 必須啟用JDBC驅動程式才能建立與資料庫的連線。
-      * **密碼：** 資料庫的密碼。 必須啟用JDBC驅動程式才能建立與資料庫的連線。
-      * **借入時測試：** 啟用 **借入時測試** 選項。
+      * **JDBC连接URI**：指定数据库的连接URL。 对于在端口3306和模式teleca上运行的MySQL数据库，URL为： `jdbc:mysql://'server':3306/teleca?autoReconnect=true&useUnicode=true&characterEncoding=utf-8`
+      * **用户名：** 数据库的用户名。 必须启用JDBC驱动程序才能与数据库建立连接。
+      * **密码：** 数据库的密码。 必须启用JDBC驱动程序才能与数据库建立连接。
+      * **借入测试：** 启用 **借入测试** 选项。
 
-      * **回訪時測試：** 啟用 **回訪時測試** 選項。
+      * **返回时测试：** 启用 **回访时测试** 选项。
 
-      * **驗證查詢：** 指定SQL SELECT查詢來驗證集區的連線。 查詢至少必須傳回一列。 例如， **選取 &#42; 來自客戶**.
+      * **验证查询：** 指定一个SQL SELECT查询来验证池中的连接。 查询必须至少返回一行。 例如， **选择 &#42; 来自客户**.
 
-      * **交易隔離**：將值設為 **READ_COMMITTED**.
-   保留其他屬性為預設值 [值](https://tomcat.apache.org/tomcat-7.0-doc/jdbc-pool.html) 並點選 **儲存**.
+      * **事务隔离**：将值设置为 **READ_COMMITTED**.
+   将其他属性保留为默认值 [值](https://tomcat.apache.org/tomcat-7.0-doc/jdbc-pool.html) 并点按 **保存**.
 
-   會建立類似下列的設定。
+   将创建类似于以下内容的配置。
 
-   ![Apache設定](assets/apache_configuration_new.png)
+   ![Apache配置](assets/apache_configuration_new.png)
 
-## 步驟3：建立表單資料模型 {#step-create-form-data-model}
+## 步骤3：创建表单数据模型 {#step-create-form-data-model}
 
-AEM Forms提供直覺式使用者介面，可 [建立表單資料模式](https://helpx.adobe.com/experience-manager/6-3/forms/using/data-integration.html#main-pars_header_1524967585)l來自已設定的資料來源。 您可以在表單資料模型中使用多個資料來源。 針對本教學課程的使用案例，您將使用MySQL作為資料來源。
+AEM Forms提供了一个直观的用户界面，用于 [创建表单数据模式](https://helpx.adobe.com/experience-manager/6-3/forms/using/data-integration.html#main-pars_header_1524967585)l来自配置的数据源。 您可以在表单数据模型中使用多个数据源。 对于本教程中的用例，您将使用MySQL作为数据源。
 
-執行下列操作以建立表單資料模型：
+执行以下操作以创建表单数据模型：
 
-1. 在AEM編寫執行個體中，導覽至 **Forms** > **資料整合**.
-1. 點選 **建立** > **表單資料模型**.
-1. 在建立表單資料模型精靈中，指定 **名稱** 用於表單資料模型。 例如， **FDM_Create_First_IC**. 點選 **下一個**.
-1. 選取資料來源畫面會列出所有已設定的資料來源。 選取 **MySQL** 資料來源並點選 **建立**.
+1. 在AEM创作实例中，导航到 **Forms** > **数据集成**.
+1. 点按 **创建** > **表单数据模型**.
+1. 在创建表单数据模型向导中，指定 **name** 表单数据模型的。 例如， **FDM_Create_First_IC**. 点按 **下一个**.
+1. 选择数据源屏幕列出了所有已配置的数据源。 选择 **MySQL** 数据源并点按 **创建**.
 
-   ![MYSQL資料來源](assets/fdm_mysql_data_source_new.png)
+   ![MYSQL数据源](assets/fdm_mysql_data_source_new.png)
 
-1. 按一下 **完成**. 此 **FDM_Create_First_IC** 表單資料模型已建立。
+1. 单击 **完成**. 此 **FDM_Create_First_IC** 创建表单数据模型。
 
-## 步驟4：設定表單資料模型 {#step-configure-form-data-model}
+## 步骤4：配置表单数据模型 {#step-configure-form-data-model}
 
-設定表單資料模型包含：
+配置表单数据模型包括：
 
-* [新增資料模型物件和服務](#add-data-model-objects-and-services)
-* [建立資料模型物件的計運算元屬性](#create-computed-child-properties-for-data-model-object)
-* [新增資料模型物件之間的關聯](#add-associations-between-data-model-objects)
-* [編輯資料模型物件屬性](#edit-data-model-object-properties)
-* [為資料模型物件設定服務](#configure-services)
+* [添加数据模型对象和服务](#add-data-model-objects-and-services)
+* [为数据模型对象创建计算子属性](#create-computed-child-properties-for-data-model-object)
+* [添加数据模型对象之间的关联](#add-associations-between-data-model-objects)
+* [编辑数据模型对象属性](#edit-data-model-object-properties)
+* [为数据模型对象配置服务](#configure-services)
 
-### 新增資料模型物件和服務 {#add-data-model-objects-and-services}
+### 添加数据模型对象和服务 {#add-data-model-objects-and-services}
 
-1. 在AEM作者執行個體上，導覽至 **Forms** > **資料整合**. 預設URL為 [https://localhost:4502/aem/forms.html/content/dam/formsanddocuments-fdm](https://localhost:4502/aem/forms.html/content/dam/formsanddocuments-fdm).
-1. 此 **FDM_Create_First_IC** 此處列出您先前建立的表單資料模型。 選取並點選 **編輯**.
+1. 在AEM创作实例上，导航到 **Forms** > **数据集成**. 默认URL为 [https://localhost:4502/aem/forms.html/content/dam/formsanddocuments-fdm](https://localhost:4502/aem/forms.html/content/dam/formsanddocuments-fdm).
+1. 此 **FDM_Create_First_IC** 此处列出了您之前创建的表单数据模型。 选择并点按 **编辑**.
 
-   選取的資料來源 **MySQL** 會顯示在 **資料來源** 窗格。
+   选定的数据源 **MySQL** 在中显示 **数据源** 窗格。
 
-   ![FDM的MYSQL資料來源](assets/mysql_fdm_new.png)
+   ![适用于FDM的MYSQL数据源](assets/mysql_fdm_new.png)
 
-1. 展開 **MySQL** 資料來源樹狀結構。 從以下資料模型物件和服務中選取 **teleca** 綱要：
+1. 展开 **MySQL** 数据源树。 从中选择以下数据模型对象和服务 **teleca** 架构：
 
-   * **資料模型物件**：
+   * **数据模型对象**：
 
-      * 帳單
-      * 呼叫
-      * 客戶
+      * 帐单
+      * 调用
+      * 客户
    * **服务:**
 
       * get
       * 更新
 
-   點選 **新增選取專案** 將選取的資料模型物件和服務新增至表單資料模型。
+   点按 **添加选定项** 将选定的数据模型对象和服务添加到表单数据模型。
 
-   ![選取資料模型物件服務](assets/select_data_model_object_services_new.png)
+   ![选择数据模型对象服务](assets/select_data_model_object_services_new.png)
 
-   帳單、呼叫和客戶資料模型物件會顯示在的右窗格 **模型** 標籤。 取得和更新服務會顯示在 **服務** 標籤。
+   清单、调用和客户数据模型对象显示在右侧窗格中的 **模型** 选项卡。 获取和更新服务将显示在 **服务** 选项卡。
 
-   ![資料模型物件](assets/data_model_objects_new.png)
+   ![数据模型对象](assets/data_model_objects_new.png)
 
-### 建立資料模型物件的計運算元屬性 {#create-computed-child-properties-for-data-model-object}
+### 为数据模型对象创建计算子属性 {#create-computed-child-properties-for-data-model-object}
 
-計算屬性是根據規則或運算式計算其值的屬性。 您可以使用規則將計算屬性的值設定為常值字串、數字、數學運算式的結果或表單資料模型中其他屬性的值。
+计算属性是根据规则或表达式计算其值的属性。 使用规则，您可以将计算属性的值设置为文本字符串、数字、数学表达式的结果或表单数据模型中其他属性的值。
 
-根據使用案例，建立 **使用費用** 中的子計算屬性 **帳單** 資料模型物件使用下列數學運算式：
+根据用例，创建 **使用费用** 中的子计算属性 **帐单** 数据模型对象使用以下数学表达式：
 
-* 使用費=通話費+電話會議費+ SMS費+行動網際網路費+漫遊國家+漫遊國際+ VAS （所有這些屬性都存在於帳單資料模型物件中）如需詳細資訊，請參閱 **使用費用** 子計算屬性，請參閱 [規劃互動式通訊](/help/forms/using/planning-interactive-communications.md).
+* 使用费=呼叫费用+电话会议费用+短信费用+移动互联网费用+漫游国家/地区+漫游国际+ VAS（所有这些属性都存在于帐单数据模型对象中）有关详情，请参阅 **使用费用** 子计算属性，请参见 [规划交互式通信](/help/forms/using/planning-interactive-communications.md).
 
-執行以下步驟來建立用料表資料模型物件的計運算元屬性：
+执行以下步骤，为清单数据模型对象创建计算子属性：
 
-1. 選取上方的核取方塊 **帳單** 資料模型物件以選取並點選 **建立子屬性**.
-1. 在 **建立子屬性** 窗格：
+1. 选中顶部的复选框 **帐单** 要选择并点按的数据模型对象 **创建子属性**.
+1. 在 **创建子属性** 窗格：
 
-   1. 輸入 **使用費用** 做為子屬性的名稱。
-   1. 啟用 **已計算**.
-   1. 選取 **浮點數** 作為型別並點選 **完成** 將子屬性新增至 **帳單** 資料模型物件。
+   1. 输入 **使用费用** 作为子资产的名称。
+   1. 启用 **已计算**.
+   1. 选择 **浮点数** 作为类型并点按 **完成** 将子属性添加到 **帐单** 数据模型对象。
 
-   ![建立子屬性](assets/create_child_property_new.png)
+   ![创建子属性](assets/create_child_property_new.png)
 
-1. 點選 **編輯規則** 以開啟規則編輯器。
-1. 點選 **建立**. 此 **設定值** 規則視窗隨即開啟。
-1. 從選取選項下拉式清單中選取 **數學運算式**.
+1. 点按 **编辑规则** 以打开规则编辑器。
+1. 点按 **创建**. 此 **设置值** “规则”窗口将打开。
+1. 从选择选项下拉列表中，选择 **数学表达式**.
 
-   ![使用量收費規則編輯器](assets/usage_charges_rule_editor_new.png)
+   ![使用费用规则编辑器](assets/usage_charges_rule_editor_new.png)
 
-1. 在數學運算式中，選取 **callcharges** 和 **confcallcharges** 分別做為第一和第二物件。 選取 **加** 作為運運算元。 在數學運算式中點選，然後點選 **延伸運算式** 新增 **smscharges**， **網際費用**， **roamingnational**， **roamingintel**、和 **vas** 物件至運算式。
+1. 在数学表达式中，选择 **callcharges** 和 **confcallcharges** 分别作为第一和第二对象。 选择 **加** 作为运算符。 在数学表达式中点按并点按 **扩展表达式** 添加 **smscharges**， **internetcharges**， **roamingnational**， **roamingintel**、和 **vas** 对象到表达式。
 
-   下圖說明規則編輯器中的數學運算式：
+   下图描述了规则编辑器中的数学表达式：
 
-   ![使用量費用規則](assets/usage_charges_rule_all_new.png)
+   ![使用费用规则](assets/usage_charges_rule_all_new.png)
 
-1. 點選 **完成**. 規則會在規則編輯器中建立。
-1. 點選 **關閉** 以關閉「規則編輯器」視窗。
+1. 点按 **完成**. 将在规则编辑器中创建规则。
+1. 点按 **关闭** 以关闭“规则编辑器”窗口。
 
-### 新增資料模型物件之間的關聯 {#add-associations-between-data-model-objects}
+### 在数据模型对象之间添加关联 {#add-associations-between-data-model-objects}
 
-定義資料模型物件後，您就可以建立它們之間的關聯。 關聯可以是一對一或一對多。 例如，一個員工可以有多個相依關係。 它稱為一對多關聯，在連線關聯資料模型物件的線上以1：n表示。 不過，如果關聯針對指定的員工ID傳回唯一員工名稱，則稱為一對一關聯。
+定义数据模型对象后，您可以建立它们之间的关联。 关联可以是一对一或一对多。 例如，可以有多个与员工关联的家属。 它称为一对多关联，在连接关联的数据模型对象的行上以1：n表示。 但是，如果关联为给定员工ID返回唯一的员工姓名，则称为一对一关联。
 
-當您將資料來源中的關聯資料模型物件新增至表單資料模型時，它們的關聯會保留並顯示為以箭頭線連線。
+将数据源中的关联数据模型对象添加到表单数据模型时，其关联将保留并显示为用箭头线连接。
 
-根據使用案例，在資料模型物件之間建立下列關聯：
+根据用例，在数据模型对象之间创建以下关联：
 
-| 關聯 | 資料模型物件 |
+| 关联 | 数据模型对象 |
 |---|---|
-| 1：n | customer：calls （每月帳單中可將多個來電與客戶相關聯） |
-| 1:1 | customer：bills （一張帳單與特定月份的客戶相關聯） |
+| 1：n | customer：calls（每个月可以将多个呼叫与客户关联） |
+| 1:1 | 客户：帐单（一个帐单在特定的月份与客户关联） |
 
-執行以下步驟來建立資料模型物件之間的關聯：
+执行以下步骤来创建数据模型对象之间的关联：
 
-1. 選取上方的核取方塊 **客戶** 資料模型物件以選取並點選 **新增關聯**. 此 **新增關聯** 屬性窗格開啟。
-1. 在 **新增關聯** 窗格：
+1. 选中顶部的复选框 **客户** 要选择并点按的数据模型对象 **添加关联**. 此 **添加关联** 属性窗格打开。
+1. 在 **添加关联** 窗格：
 
-   * 指定關聯的標題。 此為選用欄位。
-   * 選取 **一對多** 從 **型別** 下拉式清單。
+   * 指定关联的标题。 它是一个可选字段。
+   * 选择 **一对多** 从 **类型** 下拉列表。
 
-   * 選取 **呼叫** 從 **模型物件** 下拉式清單。
+   * 选择 **调用** 从 **模型对象** 下拉列表。
 
-   * 選取 **get** 從 **服務** 下拉式清單。
+   * 选择 **get** 从 **服务** 下拉列表。
 
-   * 點選 **新增** 連結 **客戶** 資料模型物件至 **呼叫** 使用屬性的資料模型物件。 根據使用案例，呼叫資料模型物件必須連結至客戶資料模型物件中的行動號碼屬性。 此 **新增引數** 對話方塊開啟。
+   * 点按 **添加** 链接 **客户** 数据模型对象到 **调用** 数据模型对象。 根据用例，调用数据模型对象必须链接到客户数据模型对象中的移动号码属性。 此 **添加参数** 对话框打开。
 
-   ![新增關聯](assets/add_association_new.png)
+   ![添加关联](assets/add_association_new.png)
 
-1. 在 **新增引數** 對話方塊：
+1. 在 **添加参数** 对话框：
 
-   * 選取 **mobilenum** 從 **名稱** 下拉式清單。 行動號碼屬性是客戶中可用的常見屬性，可呼叫資料模型物件。 因此，它可用來建立customer與呼叫資料模型物件之間的關聯。
-對於客戶資料模型物件中可用的每個行動電話號碼，呼叫表格中有多個可用的呼叫記錄。
+   * 选择 **mobilenum** 从 **名称** 下拉列表。 mobile number属性是客户中可用的常见属性，可调用数据模型对象。 因此，它用于在客户和调用数据模型对象之间创建关联。
+对于客户数据模型对象中可用的每个移动号码，调用表中都有多个可用的调用记录。
 
-   * 指定引數的選用標題和說明。
-   * 選取 **客戶** 從 **繫結至** 下拉式清單。
+   * 为参数指定可选标题和描述。
+   * 选择 **客户** 从 **捆绑到** 下拉列表。
 
-   * 選取 **mobilenum** 從 **繫結值** 下拉式清單。
+   * 选择 **mobilenum** 从 **捆绑值** 下拉列表。
 
-   * 點選 **新增**.
+   * 点按 **添加**.
 
-   ![新增引數的關聯](assets/add_association_argument_new.png)
+   ![为参数添加关联](assets/add_association_argument_new.png)
 
-   mobilenum屬性會顯示在 **引數** 區段。
+   mobilenum属性显示在 **参数** 部分。
 
-   ![新增引數關聯](assets/add_argument_association_new.png)
+   ![添加参数关联](assets/add_argument_association_new.png)
 
-1. 點選 **完成** 在客戶和呼叫資料模型物件之間建立1：n關聯。
+1. 点按 **完成** 在客户和调用数据模型对象之间创建1：n关联。
 
-   在客戶與呼叫資料模型物件之間建立關聯後，在客戶與帳單資料模型物件之間建立1:1關聯。
+   在客户和调用数据模型对象之间创建关联后，在客户和清单数据模型对象之间创建1:1关联。
 
-1. 選取上方的核取方塊 **客戶** 資料模型物件以選取並點選 **新增關聯**. 此 **新增關聯** 屬性窗格開啟。
-1. 在 **新增關聯** 窗格：
+1. 选中顶部的复选框 **客户** 要选择并点按的数据模型对象 **添加关联**. 此 **添加关联** 属性窗格打开。
+1. 在 **添加关联** 窗格：
 
-   * 指定關聯的標題。 此為選用欄位。
-   * 選取 **一對一** 從 **型別** 下拉式清單。
+   * 指定关联的标题。 它是一个可选字段。
+   * 选择 **一对一** 从 **类型** 下拉列表。
 
-   * 選取 **帳單** 從 **模型物件** 下拉式清單。
+   * 选择 **帐单** 从 **模型对象** 下拉列表。
 
-   * 選取 **get** 從 **服務** 下拉式清單。 此 **billplan** 屬性是bills表格的主索引鍵，已可在 **引數** 區段。
-帳單與客戶資料模型物件分別使用帳單計畫(bills)與客戶計畫(customerplan)屬性進行連結。 在這些屬性之間建立繫結，以擷取MySQL資料庫中任何可用客戶的計畫詳細資訊。
+   * 选择 **get** 从 **服务** 下拉列表。 此 **billplan** 属性，即bills表的主键，在 **参数** 部分。
+票据和客户数据模型对象分别使用票据计划(bills)和客户计划(customerplan)属性链接。 创建这些属性之间的绑定以检索MySQL数据库中任何可用客户的计划详细信息。
 
-   * 選取 **客戶** 從 **繫結至** 下拉式清單。
+   * 选择 **客户** 从 **捆绑到** 下拉列表。
 
-   * 選取 **customerplan** 從 **繫結值** 下拉式清單。
+   * 选择 **customerplan** 从 **捆绑值** 下拉列表。
 
-   * 點選 **完成** 建立billplan和customerplan屬性之間的繫結。
+   * 点按 **完成** 创建billplan和customerplan属性之间的绑定。
 
-   ![新增客戶帳單的關聯](assets/add_association_customer_bills_new.png)
+   ![添加客户帐单关联](assets/add_association_customer_bills_new.png)
 
-   下列影像說明資料模型物件與用來建立它們之間關聯的屬性之間的關聯：
+   下图描述了数据模型对象与用于创建它们之间关联的属性之间的关联：
 
    ![fdm_associations](assets/fdm_associations.gif)
 
-### 編輯資料模型物件屬性 {#edit-data-model-object-properties}
+### 编辑数据模型对象属性 {#edit-data-model-object-properties}
 
-在客戶與其他資料模型物件之間建立關聯後，編輯客戶屬性以定義屬性，系統會根據此屬性從資料模型物件中擷取資料。 根據使用案例，行動電話號碼會作為屬性，以從客戶資料模型物件中擷取資料。
+在客户与其他数据模型对象之间创建关联后，编辑客户属性以定义属性，数据将根据该属性从数据模型对象中检索。 根据用例，使用手机号码作为属性，从客户数据模型对象中检索数据。
 
-1. 選取上方的核取方塊 **客戶** 資料模型物件以選取並點選 **編輯屬性**. 此 **編輯屬性** 窗格開啟。
-1. 指定 **客戶** 作為 **頂層模型物件**.
-1. 選取 **get** 從 **讀取服務** 下拉式清單。
-1. 在 **引數** 區段：
+1. 选中顶部的复选框 **客户** 要选择并点按的数据模型对象 **编辑属性**. 此 **编辑属性** 窗格打开。
+1. 指定 **客户** 作为 **顶级模型对象**.
+1. 选择 **get** 从 **读取服务** 下拉列表。
+1. 在 **参数** 部分：
 
-   * 選取 **請求屬性** 從 **繫結至** 下拉式清單。
+   * 选择 **请求属性** 从 **捆绑到** 下拉列表。
 
-   * 指定 **mobilenum** 做為繫結值。
+   * 指定 **mobilenum** 作为绑定值。
 
-1. 選取 **更新** 從 **寫入** 「服務」下拉式清單。
-1. 在 **引數** 區段：
+1. 选择 **更新** 从 **写入** “服务”下拉列表。
+1. 在 **参数** 部分：
 
-   * 對象 **mobilenum** 屬性，選取 **客戶** 從 **繫結至** 下拉式清單。
+   * 对象 **mobilenum** 属性，选择 **客户** 从 **捆绑到** 下拉列表。
 
-   * 選取 **mobilenum** 從 **繫結值** 下拉式清單。
+   * 选择 **mobilenum** 从 **捆绑值** 下拉列表。
 
-1. 點選 **完成** 以儲存屬性。
+1. 点按 **完成** 以保存属性。
 
-   ![設定服務](assets/configure_services_customer_new.png)
+   ![配置服务](assets/configure_services_customer_new.png)
 
-1. 選取上方的核取方塊 **呼叫** 資料模型物件以選取並點選 **編輯屬性**. 此 **編輯屬性** 窗格開啟。
-1. 停用 **頂層模型物件** 的 **呼叫** 資料模型物件。
-1. 點選 **完成**.
+1. 选中顶部的复选框 **调用** 要选择并点按的数据模型对象 **编辑属性**. 此 **编辑属性** 窗格打开。
+1. 禁用 **顶级模型对象** 对象 **调用** 数据模型对象。
+1. 点按 **完成**.
 
-   重複步驟8 - 10以設定屬性 **帳單** 資料模型物件。
+   重复步骤8 - 10以配置属性 **帐单** 数据模型对象。
 
-### 設定服務 {#configure-services}
+### 配置服务 {#configure-services}
 
-1. 前往 **服務** 標籤。
-1. 選取 **get** 服務並點選 **編輯屬性**. 此 **編輯屬性** 窗格開啟。
-1. 在 **編輯屬性** 窗格：
+1. 转到 **服务** 选项卡。
+1. 选择 **get** 服务和点击 **编辑属性**. 此 **编辑属性** 窗格打开。
+1. 在 **编辑属性** 窗格：
 
-   * 輸入選用的標題和說明。
-   * 選取 **客戶** 從 **輸出模型物件** 下拉式清單。
+   * 输入可选标题和描述。
+   * 选择 **客户** 从 **输出模型对象** 下拉列表。
 
-   * 點選 **完成** 以儲存屬性。
+   * 点按 **完成** 以保存属性。
 
    ![编辑属性](assets/edit_properties_get_details_new.png)
 
-1. 選取 **更新** 服務並點選 **編輯屬性**. 此 **編輯屬性** 窗格開啟。
-1. 在 **編輯屬性** 窗格：
+1. 选择 **更新** 服务和点击 **编辑属性**. 此 **编辑属性** 窗格打开。
+1. 在 **编辑属性** 窗格：
 
-   * 輸入選用的標題和說明。
-   * 選取 **客戶** 從 **輸入模型物件** 下拉式清單。
+   * 输入可选标题和描述。
+   * 选择 **客户** 从 **输入模型对象** 下拉列表。
 
-   * 點選 **完成**.
-   * 點選 **儲存** 以儲存表單資料模型。
+   * 点按 **完成**.
+   * 点按 **保存** 以保存表单数据模型。
 
-   ![更新服務屬性](assets/update_service_properties_new.png)
+   ![更新服务属性](assets/update_service_properties_new.png)
 
-## 步驟5：測試表單資料模型與服務 {#step-test-form-data-model-and-services}
+## 步骤5：测试表单数据模型和服务 {#step-test-form-data-model-and-services}
 
-您可以測試資料模型物件和服務，以確認表單資料模型已正確設定。
+您可以测试数据模型对象和服务，以验证是否正确配置了表单数据模型。
 
-執行下列操作以執行測試：
+执行以下操作以运行测试：
 
-1. 前往 **模型** 索引標籤中，選取 **客戶** 資料模型物件，然後點選 **測試模型物件**.
-1. 在 **測試表單資料模型** 視窗，選取 **讀取模型物件** 從 **選取模型/服務** 下拉式清單。
-1. 在 **輸入** 區段，指定 **mobilenum** 已設定之MySQL資料庫中存在的屬性，然後點選 **測試**.
+1. 转到 **模型** 选项卡，选择 **客户** 数据模型对象，然后点按 **测试模型对象**.
+1. 在 **测试表单数据模型** 窗口，选择 **读取模型对象** 从 **选择模型/服务** 下拉列表。
+1. 在 **输入** 部分，指定 **mobilenum** 已配置的MySQL数据库中存在的属性，然后点按 **测试**.
 
-   會擷取與指定mobilenum屬性相關聯的客戶詳細資訊，並顯示在「輸出」區段中，如下所示。 關閉對話方塊。
+   与指定的mobilenum属性关联的客户详细信息将被获取并显示在Output部分中，如下所示。 关闭对话框。
 
-   ![測試資料模型](assets/test_data_model_new.png)
+   ![测试数据模型](assets/test_data_model_new.png)
 
-1. 前往 **服務** 標籤。
-1. 選取 **get** 服務並點選 **測試服務。**
-1. 在 **輸入** 區段，指定 **mobilenum** 已設定之MySQL資料庫中存在的屬性，然後點選 **測試**.
+1. 转到 **服务** 选项卡。
+1. 选择 **get** 服务和点击 **测试服务。**
+1. 在 **输入** 部分，指定 **mobilenum** 已配置的MySQL数据库中存在的属性，然后点按 **测试**.
 
-   會擷取與指定mobilenum屬性相關聯的客戶詳細資訊，並顯示在「輸出」區段中，如下所示。 關閉對話方塊。
+   与指定的mobilenum属性关联的客户详细信息将被获取并显示在Output部分中，如下所示。 关闭对话框。
 
-   ![測試服務](assets/test_service_new.png)
+   ![测试服务](assets/test_service_new.png)
 
-### 編輯並儲存範例資料 {#edit-and-save-sample-data}
+### 编辑并保存示例数据 {#edit-and-save-sample-data}
 
-表單資料模型編輯器可讓您為表單資料模型中的所有資料模型物件屬性（包括計算屬性）產生範例資料。 這是一組隨機值，符合為每個屬性設定的資料型別。 您也可以編輯並儲存資料，即使您重新產生範例資料，也會保留資料。
+表单数据模型编辑器允许您为表单数据模型中的所有数据模型对象属性（包括计算属性）生成示例数据。 它是一组符合为每个属性配置的数据类型的随机值。 您还可以编辑和保存数据，即使重新生成示例数据，也会保留这些数据。
 
-執行下列動作，產生、編輯和儲存範例資料：
+执行以下操作以生成、编辑和保存示例数据：
 
-1. 在表單資料模型頁面上，點選 **編輯範例資料**. 它會在「編輯範例資料」視窗中產生並顯示範例資料。
+1. 在表单数据模型页面上，点按 **编辑示例数据**. 它在“编辑样本数据”窗口中生成并显示样本数据。
 
-   ![編輯範例資料](assets/edit_sample_data_new.png)
+   ![编辑示例数据](assets/edit_sample_data_new.png)
 
-1. 在 **編輯範例資料** 視窗，視需要編輯資料，然後點選 **儲存**. 關閉視窗。
+1. In **编辑示例数据** 窗口，根据需要编辑数据，然后点按 **保存**. 关闭窗口。

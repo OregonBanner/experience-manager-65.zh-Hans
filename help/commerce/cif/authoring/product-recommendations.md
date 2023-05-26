@@ -1,6 +1,6 @@
 ---
 title: 产品推荐
-description: Adobe Commerce提供由Adobe Sensei提供支援的建議引擎。 瞭解如何在Adobe Experience Manager (AEM)店面中動態插入這些產品推薦。
+description: Adobe Commerce具有由Adobe Sensei提供支持的推荐引擎。 了解如何在Adobe Experience Manager (AEM)店面中动态插入这些产品推荐。
 sub-product: Commerce
 version: 6.5
 doc-type: feature-video
@@ -19,6 +19,6 @@ ht-degree: 7%
 
 # 产品推荐
 
-Adobe Commerce提供由Adobe Sensei提供支援的建議引擎。 瞭解如何在Adobe Experience Manager (AEM)店面中動態插入這些產品推薦。
+Adobe Commerce具有由Adobe Sensei提供支持的推荐引擎。 了解如何在Adobe Experience Manager (AEM)店面中动态插入这些产品推荐。
 
 >[!VIDEO](https://video.tv.adobe.com/v/340130/?learn=on)

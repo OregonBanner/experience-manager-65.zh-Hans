@@ -1,7 +1,7 @@
 ---
-title: AEM 6中的稽核記錄維護
+title: AEM 6中的审核日志维护
 seo-title: Audit Log Maintenance in AEM 6
-description: 瞭解AEM中的稽核記錄維護。
+description: 了解AEM中的审核日志维护。
 seo-description: Lear about Audit Log Maintenance in AEM.
 uuid: 212de4df-6bf4-434c-94e1-74186d21945a
 contentOwner: User
@@ -18,86 +18,86 @@ ht-degree: 0%
 
 ---
 
-# AEM 6中的稽核記錄維護{#audit-log-maintenance-in-aem}
+# AEM 6中的审核日志维护{#audit-log-maintenance-in-aem}
 
-符合稽核記錄資格的AEM事件會產生許多封存的資料。 由於複製、資產上傳和其他系統活動，這些資料會隨著時間快速成長。
+符合审核日志记录条件的AEM事件会生成大量存档数据。 由于复制、资产上传和其他系统活动，此数据会随着时间的推移而快速增长。
 
-「稽核記錄維護」包含幾個部分功能，可讓您根據特定原則自動進行稽核記錄維護。
+审核日志维护包括若干部分功能，利用这些功能，可以自动执行特定策略下的审核日志维护。
 
-它是作為可設定的每週維護任務實作，並可透過Operations Dashboard監控主控台存取。
+它是作为可配置的每周维护任务实施的，可通过Operations Dashboard监控控制台访问。
 
-如需詳細資訊，請參閱 [操作儀表板檔案](/help/sites-administering/operations-dashboard.md).
+欲了解更多信息，请参见 [操作功能板文档](/help/sites-administering/operations-dashboard.md).
 
-「稽核記錄清除」選項有三種型別：
+有三种类型的审核日志清除选项：
 
-1. [頁面稽核記錄清除](/help/sites-administering/operations-audit-log.md#configure-page-audit-log-purging)
-1. [DAM稽核記錄清除](/help/sites-administering/operations-audit-log.md#configure-dam-audit-log-purging)
-1. [復寫稽核記錄檔期間](/help/sites-administering/operations-audit-log.md#configure-replication-audit-log-purging)
+1. [页面审核日志清除](/help/sites-administering/operations-audit-log.md#configure-page-audit-log-purging)
+1. [DAM审核日志清除](/help/sites-administering/operations-audit-log.md#configure-dam-audit-log-purging)
+1. [复制审核日志分析](/help/sites-administering/operations-audit-log.md#configure-replication-audit-log-purging)
 
-每一個都可透過在AEM Web Console中建立規則來設定。 設定完成後，您可以前往 **工具 — 作業 — 維護 — 每週維護視窗** 並執行 **稽核記錄維護任務**.
+每种规则都可以通过在AEM Web Console中创建规则来配置。 配置完毕后，您可以通过转到 **工具 — 操作 — 维护 — 每周维护窗口** 并运行 **审核日志维护任务**.
 
-## 設定頁面稽核記錄清除 {#configure-page-audit-log-purging}
+## 配置页面审计日志清除 {#configure-page-audit-log-purging}
 
-若要設定「稽核記錄永久刪除」，請依照下列步驟執行：
+要配置审计日志清除，请执行以下步骤：
 
-1. 將您的瀏覽器指向，前往Web Console Admin `http://localhost:4502/system/console/configMgr/`
+1. 通过将您的浏览器指向，转到Web控制台管理员 `http://localhost:4502/system/console/configMgr/`
 
-1. 搜尋名為的專案 **頁面稽核記錄清除規則** 並按一下。
+1. 搜索名为的项目 **页面审核日志清除规则** 然后点击它。
 
    ![chlimage_1-365](assets/chlimage_1-365.png)
 
-1. 接下來，根據您的需求設定清除排程器。 可用的选项为：
+1. 接下来，根据您的要求配置清除调度程序。 可用的选项为：
 
-   * **規則名稱：** 稽核策略規則的名稱；
-   * **內容路徑：** 將套用規則之內容的路徑；
-   * **最小年齡：** 需要保留稽核記錄的天數；
-   * **稽核記錄型別：** 應清除的稽核記錄型別。
+   * **规则名称：** 审计策略规则的名称；
+   * **内容路径：** 规则将应用于的内容的路径；
+   * **最低年龄：** 审核日志需要保存的时间（以天为单位）；
+   * **审核日志类型：** 应清除的审核日志的类型。
 
    >[!NOTE]
    >
-   >內容路徑僅適用於 `/var/audit/com.day.cq.wcm.core.page` 存放庫中的節點。
+   >内容路径仅适用于 `/var/audit/com.day.cq.wcm.core.page` 节点。
 
-1. 儲存規則。
-1. 您剛才建立的規則必須顯示在「操作控制面板」中，才能執行。 若要這麼做，請前往 **工具 — 作業 — 維護** 從AEM歡迎畫面。
+1. 保存规则。
+1. 您刚刚创建的规则需要显示在操作仪表板中才能执行。 要执行此操作，请转到 **工具 — 操作 — 维护** 从AEM欢迎屏幕。
 
-1. 按下 **每週維護期間** 卡片。
+1. 按 **每周维护时段** 信息卡。
 
-1. 您會發現維護任務已存在於下方 **稽核記錄維護任務** 卡片。
+1. 您会发现维护任务已存在于 **审核日志维护任务** 信息卡。
 
    ![chlimage_1-366](assets/chlimage_1-366.png)
 
-1. 您可以檢查下一次執行的日期、進行設定，或按播放按鈕手動執行。
+1. 您可以检查下一次执行的日期、配置该日期，或通过按播放按钮手动执行该日期。
 
-在AEM 6.3中，如果排定的維護視窗在「稽核記錄清除」作業完成之前關閉，作業會自動停止。 當下一個維護視窗開啟時，它會繼續。
+在AEM 6.3中，如果计划的维护窗口在审核日志清除任务完成之前关闭，则该任务将自动停止。 当下一个维护窗口打开时，它将恢复。
 
-**使用AEM 6.5**，您可以按一下「 」以手動停止執行中的「稽核記錄清除任務」。 **停止** 圖示。 在下次執行時，工作將安全地繼續。
+**使用AEM 6.5**，您可以通过单击 **停止** 图标。 在下次执行时，该任务将安全地恢复。
 
 >[!NOTE]
 >
->若要停止維護任務，表示要暫停其執行，而不會失去已進行中工作的追蹤。
+>停止维护任务意味着暂停其执行，而不会丢失已正在进行的作业的跟踪。
 
-## 設定DAM稽核記錄清除 {#configure-dam-audit-log-purging}
+## 配置DAM审核日志清除 {#configure-dam-audit-log-purging}
 
-1. 瀏覽至「系統主控台」，網址為 *https://&lt;serveraddress>：&lt;serverport>/system/console/configMgr*
-1. 搜尋 **DAM稽核記錄清除** 規則並按一下結果。
-1. 在下一個視窗中，相應地設定規則。 選項包括：
+1. 导航到位于的系统控制台 *https://&lt;serveraddress>：&lt;serverport>/system/console/configMgr*
+1. 搜索 **DAM审核日志清除** 规则并单击结果。
+1. 在下一个窗口中，相应地配置规则。 选项包括：
 
-   * **規則名稱：** 稽核策略規則的名稱；
-   * **內容路徑：** 規則將套用到的內容路徑
-   * **最小年齡：** 需要保留稽核記錄的時間（天）
-   * **稽核記錄Dam事件型別：** 應清除的DAM稽核事件型別。
+   * **规则名称：** 审计策略规则的名称；
+   * **内容路径：** 规则将应用于的内容的路径
+   * **最低年龄：** 需要保留审核日志的时间（以天为单位）
+   * **审核日志DAM事件类型：** 应清除的DAM审核事件的类型。
 
-1. 按一下 **儲存** 以儲存您的設定
+1. 单击 **保存** 保存配置
 
-## 設定復寫稽核記錄清除  {#configure-replication-audit-log-purging}
+## 配置复制审核日志清除  {#configure-replication-audit-log-purging}
 
-1. 瀏覽至「系統主控台」，網址為 *https://&lt;serveraddress>：&lt;serverport>/system/console/configMgr*
-1. 搜尋 **復寫稽核記錄清除排程器** 並按一下結果
-1. 在下一個視窗中，相應地設定規則。 選項包括：
+1. 导航到位于的系统控制台 *https://&lt;serveraddress>：&lt;serverport>/system/console/configMgr*
+1. 搜索 **复制审核日志清除计划程序** 并单击结果
+1. 在下一个窗口中，相应地配置规则。 选项包括：
 
-   * **規則名稱：** 稽核策略規則的名稱
-   * **內容路徑：** 規則將套用到的內容路徑
-   * **最小年齡：** 需要保留稽核記錄的時間（天）
-   * **稽核記錄復寫事件型別：** 應清除的復寫稽核事件型別
+   * **规则名称：** 审计策略规则的名称
+   * **内容路径：** 规则将应用于的内容的路径
+   * **最低年龄：** 需要保留审核日志的时间（以天为单位）
+   * **审核日志复制事件类型：** 应清除的复制审核事件类型
 
-1. 按一下 **儲存** 以儲存您的設定。
+1. 单击 **保存** 以保存您的配置。

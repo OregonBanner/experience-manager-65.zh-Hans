@@ -1,6 +1,6 @@
 ---
-title: 建立邀請外部使用者處理常式
-description: 建立邀請外部使用者處理常式
+title: 创建“邀请外部用户”处理程序
+description: 创建“邀请外部用户”处理程序
 role: Developer
 exl-id: b0416716-dcc9-4f80-986a-b9660a7c8f6b
 source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
@@ -10,51 +10,51 @@ ht-degree: 0%
 
 ---
 
-# 建立邀請外部使用者處理常式 {#create-invite-external-users-handler}
+# 创建“邀请外部用户”处理程序 {#create-invite-external-users-handler}
 
-**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms 。**
+**本文档中的示例和示例仅适用于AEM Forms on JEE环境。**
 
-您可以為Rights Management服務建立邀請外部使用者處理常式。 邀請外部使用者處理常式可讓Rights Management服務邀請外部使用者成為Rights Management使用者。 當使用者成為Rights Management使用者後，該使用者便能執行工作，例如開啟受原則保護的PDF檔案。 將邀請外部使用者處理常式部署到AEM Forms後，您可以使用管理主控台與其互動。
-
->[!NOTE]
->
->邀請外部使用者處理常式是AEM Forms元件。 建立「邀請外部使用者」處理常式之前，建議您先熟悉如何建立元件。
-
-**步驟摘要**
-
-若要開發「邀請外部使用者」處理常式，您必須執行下列步驟：
-
-1. 設定您的開發環境。
-1. 定義Invite External Users處理常式實施。
-1. 定義元件XML檔案。
-1. 部署邀請外部使用者處理常式。
-1. 測試「邀請外部使用者」處理常式。
-
-## 設定您的開發環境 {#setting-up-development-environment}
-
-若要設定開發環境，您必須建立新的Java專案，例如Eclipse專案。 支援的Eclipse版本為 `3.2.1` 或更新版本。
-
-Rights ManagementSPI需要 `edc-server-spi.jar` 檔案中設定的類別路徑。 如果您未參照此JAR檔案，則無法在Java專案中使用Rights ManagementSPI。 此JAR檔案會與AEM Forms SDK安裝在中 `[install directory]\Adobe\Adobe_Experience_Manager_forms\sdk\spi` 資料夾。
-
-除了新增 `edc-server-spi.jar` 檔案至專案的類別路徑，您也必須新增使用Rights Management服務API所需的JAR檔案。 若要在邀請外部使用者處理常式中使用Rights Management服務API，則需要這些檔案。
-
-## 定義邀請外部使用者處理常式實作 {#define-invite-external-users-handler}
-
-若要開發邀請外部使用者處理常式，您必須建立實作的Java類別 `com.adobe.edc.server.spi.ersp.InvitedUserProvider` 介面。 此類別包含方法，名為 `invitedUser`，當使用提交電子郵件地址時，Rights Management服務會叫用它 **新增受邀使用者** 可透過管理控制檯存取的頁面。
-
-此 `invitedUser` 方法接受 `java.util.List` 執行個體，其中包含從提交的字串型別電子郵件地址 **新增受邀使用者** 頁面。 此 `invitedUser` 方法傳回陣列 `InvitedUserProviderResult` 物件，通常是電子郵件地址到使用者物件的對應（不傳回null）。
+您可以为Rights Management服务创建邀请外部用户处理程序。 通过“邀请外部用户”处理程序，Rights Management服务可邀请外部用户成为Rights Management用户。 当用户成为Rights Management用户后，用户能够执行任务，例如打开受策略保护的PDF文档。 将邀请外部用户处理程序部署到AEM Forms后，您可以使用管理控制台与其交互。
 
 >[!NOTE]
 >
->除了示範如何建立邀請外部使用者處理常式外，本節也使用AEM Forms API。
+>邀请外部用户处理程序是一个AEM Forms组件。 在创建邀请外部用户处理程序之前，建议您熟悉如何创建组件。
 
-Invite外部使用者處理常式的實作包含使用者定義的方法，名為 `createLocalPrincipalAccount`. 此方法接受將電子郵件地址指定為引數值的字串值。 此 `createLocalPrincipalAccount` 方法假設名為的本機網域已存在 `EDC_EXTERNAL_REGISTERED`. 您可以將此網域名稱設定為您想要的任何名稱；但是，對於生產應用程式，您可能想要與企業網域整合。
+**步骤摘要**
 
-此 `createUsers` 方法會遍歷每個電子郵件地址，並建立對應的使用者物件（位於中的本機使用者）。 `EDC_EXTERNAL_REGISTERED` 網域)。 最後， `doEmails` 方法已呼叫。 此方法有意地留作範例中的虛設常式。 在生產環境實作中，它會包含應用程式邏輯，以將邀請電子郵件訊息傳送給新建立的使用者。 範例中會保留此功能，以示範實際應用程式的應用程式邏輯流程。
+要开发邀请外部用户处理程序，必须执行以下步骤：
 
-### 定義邀請外部使用者處理常式實作 {#user-handler-implementation}
+1. 设置开发环境。
+1. 定义“邀请外部用户”处理程序实施。
+1. 定义组件XML文件。
+1. 部署邀请外部用户处理程序。
+1. 测试Invite External Users处理程序。
 
-下列邀請外部使用者處理常式實作接受從「新增受邀使用者」頁面提交的電子郵件地址，可透過管理控制檯進行存取。
+## 设置开发环境 {#setting-up-development-environment}
+
+要设置开发环境，您必须创建一个新的Java项目，例如Eclipse项目。 支持的Eclipse版本是 `3.2.1` 或更高版本。
+
+Rights ManagementSPI需要 `edc-server-spi.jar` 文件在项目的类路径中设置。 如果不引用此JAR文件，则无法在Java项目中使用Rights ManagementSPI。 此JAR文件随AEM Forms SDK一起安装在中 `[install directory]\Adobe\Adobe_Experience_Manager_forms\sdk\spi` 文件夹。
+
+除了添加 `edc-server-spi.jar` 文件到项目的类路径，还必须添加使用Rights Management服务API所需的JAR文件。 在邀请外部Rights Management处理程序中使用用户服务API时需要这些文件。
+
+## 定义邀请外部用户处理程序实施 {#define-invite-external-users-handler}
+
+要开发邀请外部用户处理程序，您必须创建一个实现 `com.adobe.edc.server.spi.ersp.InvitedUserProvider` 界面。 此类包含一个名为的方法 `invitedUser`，在使用提交电子邮件地址时，Rights Management服务会调用该参数 **添加受邀用户** 通过Administration Console访问的页面。
+
+此 `invitedUser` 方法接受 `java.util.List` 实例，其中包含从提交的字符串类型电子邮件地址 **添加受邀用户** 页面。 此 `invitedUser` 方法返回数组 `InvitedUserProviderResult` 对象，通常是电子邮件地址到用户对象的映射（不返回null）。
+
+>[!NOTE]
+>
+>除了演示如何创建“邀请外部用户”处理程序外，本节还使用AEM Forms API。
+
+Invite外部用户处理程序的实现包含一个用户定义的方法，名为 `createLocalPrincipalAccount`. 此方法接受将电子邮件地址指定为参数值的字符串值。 此 `createLocalPrincipalAccount` 方法假定预先存在一个名为的本地域 `EDC_EXTERNAL_REGISTERED`. 您可以将此域名配置为所需的任何名称；但是，对于生产应用程序，您可能希望与企业域集成。
+
+此 `createUsers` 方法遍历每个电子邮件地址，并创建相应的用户对象（中的本地用户）。 `EDC_EXTERNAL_REGISTERED` 域)。 最后， `doEmails` 方法名为。 此方法刻意保留为示例中的存根。 在生产实施中，它将包含应用程序逻辑，用于向新创建的用户发送邀请电子邮件。 在示例中还留有它来演示实际应用程序的应用程序逻辑流程。
+
+### 定义邀请外部用户处理程序实施 {#user-handler-implementation}
+
+以下邀请外部用户处理程序实施接受从“添加受邀用户”页面提交的电子邮件地址，可通过管理控制台访问该页面。
 
 ```as3
 package com.adobe.livecycle.samples.inviteexternalusers.provider; 
@@ -166,15 +166,15 @@ public class InviteExternalUsersSample implements InvitedUserProvider
 
 >[!NOTE]
 >
->此Java類別會儲存為名為InviteExternalUsersSample.java的JAVA檔案。
+>此Java类保存为名为InviteExternalUsersSample.java的JAVA文件。
 
-## 定義授權處理常式的元件XML檔案 {#define-component-xml-authorization-handler}
+## 为授权处理程序定义组件XML文件 {#define-component-xml-authorization-handler}
 
-您必須定義元件XML檔案，才能部署Invite外部使用者處理常式元件。 每個元件都有一個元件XML檔案，並提供有關元件的中繼資料。
+必须定义一个组件XML文件，才能部署邀请外部用户处理程序组件。 每个组件都存在一个组件XML文件，该文件提供了有关该组件的元数据。
 
-下列專案 `component.xml` 檔案用於invite external users處理常式。 請注意，服務名稱為 `InviteExternalUsersSample` 此服務公開的操作已命名 `invitedUser`. 輸入引數是 `java.util.List` 執行個體，而輸出值是以下陣列 `com.adobe.edc.server.spi.esrp.InvitedUserProviderResult` 執行個體。
+以下各项 `component.xml` 文件用于invite外部用户处理程序。 请注意，服务名称为 `InviteExternalUsersSample` 并且此服务公开的操作名为 `invitedUser`. 输入参数为 `java.util.List` 实例且输出值是 `com.adobe.edc.server.spi.esrp.InvitedUserProviderResult` 实例。
 
-### 定義邀請外部使用者處理常式的元件XML檔案 {#component-xml-invite-external-users-handler}
+### 为邀请外部用户处理程序定义组件XML文件 {#component-xml-invite-external-users-handler}
 
 ```as3
 <component xmlns="https://adobe.com/idp/dsc/component/document"> 
@@ -201,48 +201,48 @@ public class InviteExternalUsersSample implements InvitedUserProvider
 </component> 
 ```
 
-## 正在封裝邀請外部使用者處理常式 {#packaging-invite-external-users-handler}
+## 正在打包Invite外部用户处理程序 {#packaging-invite-external-users-handler}
 
-若要將邀請外部使用者處理常式部署到AEM Forms，您必須將您的Java專案封裝到JAR檔案中。 您必須確保邀請外部使用者處理常式商業邏輯所依賴的外部JAR檔案，例如 `edc-server-spi.jar` 和 `adobe-rightsmanagement-client.jar` 檔案也包含在JAR檔案中。 此外，元件XML檔案必須存在。 此 `component.xml` 檔案和外部JAR檔案必須位於JAR檔案的根目錄下。
-
->[!NOTE]
->
->在下圖中， `BootstrapImpl` 類別會顯示出來。 本節不討論如何建立 `BootstrapImpl` 類別。
-
-下圖顯示封裝至邀請外部使用者處理常式的JAR檔案中的Java專案內容。
-
-![邀請使用者](assets/ci_ci_InviteUsers.png)
-
-A.元件所需的外部JAR檔案B. JAVA檔案
-
-您必須將邀請外部使用者處理常式封裝到JAR檔案中。 在上圖中，請注意已列出.JAVA檔案。 封裝成JAR檔案後，也必須指定對應的.CLASS檔案。 如果沒有.CLASS檔案，授權處理常式將無法運作。
+要将邀请外部用户处理程序部署到AEM Forms，必须将Java项目打包到JAR文件中。 必须确保邀请外部用户处理程序的业务逻辑所依赖的外部JAR文件，例如 `edc-server-spi.jar` 和 `adobe-rightsmanagement-client.jar` 文件也包含在JAR文件中。 此外，组件XML文件必须存在。 此 `component.xml` 文件和外部JAR文件必须位于JAR文件的根目录下。
 
 >[!NOTE]
 >
->將外部授權處理常式封裝成JAR檔案後，您可以將元件部署到AEM Forms。 一次只能部署一個邀請外部使用者處理常式。
+>在下图中， `BootstrapImpl` 显示类。 本节不讨论如何创建 `BootstrapImpl` 类。
+
+下图显示了打包到邀请外部用户处理程序的JAR文件中的Java项目内容。
+
+![邀请用户](assets/ci_ci_InviteUsers.png)
+
+A.组件所需的外部JAR文件B. JAVA文件
+
+必须将邀请外部用户处理程序打包到JAR文件中。 在上图中，请注意列出了.JAVA文件。 打包到JAR文件后，还必须指定相应的.CLASS文件。 如果没有.CLASS文件，授权处理程序将无法工作。
 
 >[!NOTE]
 >
->您也可以以程式設計方式部署元件。
-
-## 測試邀請外部使用者處理常式 {#testing-invite-external-users-handler}
-
-若要測試邀請外部使用者處理常式，您可以使用管理主控台新增要邀請的外部使用者。
-
-若要使用管理主控台新增要邀請的外部使用者：
-
-1. 使用Workbench部署邀請外部使用者處理常式的JAR檔案。
-1. 重新啟動應用程式伺服器。
-1. 登入管理主控台。
-1. 按一下 **[!UICONTROL 服務]** > **[!UICONTROL Rights Management]** > **[!UICONTROL 設定]** >已邀請 **[!UICONTROL 使用者註冊]**.
-1. 啟用受邀使用者註冊，方法是檢查 **[!UICONTROL 啟用受邀使用者註冊]** 方塊。 下 **[!UICONTROL 使用內建註冊系統]**，按一下 **[!UICONTROL 否]**. 儲存您的設定。
-1. 在管理控制檯首頁上，按一下 **[!UICONTROL 設定]** > **[!UICONTROL User Management]** > **[!UICONTROL 網域管理]**.
-1. 按一下 **[!UICONTROL 新增本機網域]**. 在下列頁面中，使用名稱和識別碼值建立網域 `EDC_EXTERNAL_REGISTERED`. 儲存您的變更。
-1. 在管理控制檯首頁上，按一下 **[!UICONTROL 服務]** > **[!UICONTROL Rights Management]** > **[!UICONTROL 受邀和本機使用者]**. 此 **[!UICONTROL 新增受邀使用者]** 頁面便會顯示。
-1. 輸入電子郵件地址（由於目前的邀請外部使用者處理常式實際上並不會傳送電子郵件訊息，因此電子郵件地址不一定有效）。 单击&#x200B;**[!UICONTROL 确定]**。使用者受邀加入系統。
-1. 在管理控制檯首頁上，按一下 **[!UICONTROL 設定]** > **[!UICONTROL User Management]** > **[!UICONTROL 使用者和群組]**.
-1. 在 **[!UICONTROL 尋找]** 欄位，輸入您指定的電子郵件地址。 按一下 **[!UICONTROL 尋找]**. 您邀請的使用者在本機中顯示為使用者 `EDC_EXTERNAL_REGISTERED` 網域。
+>将外部授权处理程序打包到JAR文件后，可以将组件部署到AEM Forms。 在给定时间只能部署一个邀请外部用户处理程序。
 
 >[!NOTE]
 >
->如果停止或解除安裝元件，邀請外部使用者處理常式會失敗。
+>您还可以以编程方式部署组件。
+
+## 测试邀请外部用户处理程序 {#testing-invite-external-users-handler}
+
+要测试邀请外部用户处理程序，可以使用管理控制台添加要邀请的外部用户。
+
+要使用管理控制台添加要邀请的外部用户，请执行以下操作：
+
+1. 使用Workbench部署邀请外部用户处理程序的JAR文件。
+1. 重新启动应用程序服务器。
+1. 登录到管理控制台。
+1. 单击 **[!UICONTROL 服务]** > **[!UICONTROL Rights Management]** > **[!UICONTROL 配置]** >已邀请 **[!UICONTROL 用户注册]**.
+1. 通过选中 **[!UICONTROL 启用受邀用户注册]** 盒子。 下 **[!UICONTROL 使用内置注册系统]**，单击 **[!UICONTROL 否]**. 保存您的设置。
+1. 在管理控制台主页中，单击 **[!UICONTROL 设置]** > **[!UICONTROL User Management]** > **[!UICONTROL 域管理]**.
+1. 单击 **[!UICONTROL 新建本地域]**. 在以下页面中，创建一个名称和标识符值为的域 `EDC_EXTERNAL_REGISTERED`. 保存更改。
+1. 在管理控制台主页中，单击 **[!UICONTROL 服务]** > **[!UICONTROL Rights Management]** > **[!UICONTROL 受邀用户和本地用户]**. 此 **[!UICONTROL 添加受邀用户]** 页面。
+1. 输入电子邮件地址（由于当前的邀请外部用户处理程序实际上并不发送电子邮件，因此电子邮件地址不一定有效）。 单击&#x200B;**[!UICONTROL 确定]**。用户受邀加入系统。
+1. 在管理控制台主页中，单击 **[!UICONTROL 设置]** > **[!UICONTROL User Management]** > **[!UICONTROL 用户和组]**.
+1. 在 **[!UICONTROL 查找]** 字段中，输入您指定的电子邮件地址。 单击 **[!UICONTROL 查找]**. 您邀请的用户将作为用户显示在本地 `EDC_EXTERNAL_REGISTERED` 域。
+
+>[!NOTE]
+>
+>如果停止或卸载该组件，则邀请外部用户处理程序将失败。

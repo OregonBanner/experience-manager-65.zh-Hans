@@ -1,7 +1,7 @@
 ---
-title: 以程式設計方式管理偏好設定節點
+title: 以编程方式管理PreferencesNodes
 seo-title: Programmatically managing the PreferencesNodes
-description: 使用Preferences Manager Service API (Java)以程式設計方式管理偏好設定節點。
+description: 使用首选项管理器服务API (Java)以编程方式管理首选项节点。
 seo-description: Use the Preferences Manager Service API (Java) to programmatically manage the Preferences Nodes.
 uuid: f0cb117a-a6cc-4ca5-8511-b3bc9f6738e9
 contentOwner: admin
@@ -18,28 +18,28 @@ ht-degree: 0%
 
 ---
 
-# 以程式設計方式管理偏好設定節點 {#programmatically-managing-the-preferencesnodes}
+# 以编程方式管理首选项节点 {#programmatically-managing-the-preferencesnodes}
 
-**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms 。**
+**本文档中的示例和示例仅适用于AEM Forms on JEE环境。**
 
-本主題說明如何使用偏好設定管理員服務API (Java)以程式設計方式管理偏好設定節點。
+本主题介绍如何使用首选项管理器服务API (Java)以编程方式管理首选项节点。
 
-您可以從管理員UI手動變更組態設定。 若要變更選項，請導覽至 `Home>Settings>User Management> Configuration>Manual Configuration`. 匯入 `config.xml` 進行變更後，您會注意到除了在節點所做的變更以外的所有變更 `/Adobe/Adobe Experience Manager Forms/Config/UM persist` 會遺失。 使用者管理匯入和匯出的預覽不支援變更其他元件的組態設定。 現在，可以使用以下專案進行這些變更： `PreferencesManagerServiceClient` API。
+您可以从管理员UI中手动更改配置设置。 要更改选项，请导航到 `Home>Settings>User Management> Configuration>Manual Configuration`. 导入 `config.xml` 进行更改后，您会注意到除了在节点进行的更改之外进行了所有更改 `/Adobe/Adobe Experience Manager Forms/Config/UM persist` 都迷路了。 用户管理导入和导出预览不支持更改其他组件的配置设置。 现在，可以使用以下方式作出这些更改 `PreferencesManagerServiceClient` API。
 
-**步驟摘要**&#x200B;若要以程式設計方式管理偏好設定節點，請執行下列步驟：
+**步骤摘要**&#x200B;要以编程方式管理首选项节点，请执行以下步骤：
 
-1. 包含專案檔案。
-1. 建立PreferencesManagerService使用者端
-1. 叫用適當的角色或許可權作業
+1. 包括项目文件。
+1. 创建PreferencesManagerService客户端
+1. 调用适当的角色或权限操作
 
-**包含專案檔案**
+**包括项目文件**
 
-在您的開發專案中包含必要的檔案。 如果您使用Java建立使用者端應用程式，請包含必要的JAR檔案。 如果您使用Web服務，請務必包含Proxy檔案。
+在开发项目中包含必要的文件。 如果要使用Java创建客户端应用程序，则包含必要的JAR文件。 如果您使用的是Web服务，请确保包含代理文件。
 
-**建立PreferencesManagerService使用者端**
+**创建PreferencesManagerService客户端**
 
-您必須先建立PreferencesManagerService使用者端，才能以程式設計方式執行User Management PreferencesManagerService作業。 使用Java API時，可透過建立PreferencesManagerServiceClient物件來完成。
+必须先创建PreferencesManagerService客户端，然后才能以编程方式执行用户管理PreferencesManagerService操作。 使用Java API可通过创建PreferencesManagerServiceClient对象来实现这一点。
 
-**叫用適當的角色或許可權作業**
+**调用适当的角色或权限操作**
 
-建立服務使用者端後，您就可以叫用「偏好設定管理員」作業。 服務使用者端可讓您讀取和設定許可權。
+创建服务客户端后，可以调用Preferences Manager操作。 服务客户端允许您读取和设置权限。

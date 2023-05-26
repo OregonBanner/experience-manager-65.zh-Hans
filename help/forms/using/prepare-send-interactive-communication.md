@@ -1,7 +1,7 @@
 ---
-title: 使用Agent UI準備和傳送互動式通訊
+title: 使用代理UI准备和发送交互式通信
 seo-title: Prepare and send Interactive Communication using the Agent UI
-description: 代理程式UI可讓代理程式準備互動式通訊，並將其傳送至發佈程式。 代理程式會視需要進行必要的修改，並將互動式通訊提交至發佈程式，例如電子郵件或列印。
+description: 代理UI允许代理准备交互式通信并将其发送到发布流程。 Agent在允许的情况下进行必要的修改，并将交互式通信提交至发布流程，如电子邮件或打印件。
 seo-description: Prepare and send Interactive Communication using the Agent UI
 uuid: d1a19b83-f630-4648-9ad2-a22374e31aa9
 topic-tags: interactive-communications
@@ -16,204 +16,204 @@ ht-degree: 0%
 
 ---
 
-# 使用Agent UI準備和傳送互動式通訊 {#prepare-and-send-interactive-communication-using-the-agent-ui}
+# 使用代理UI准备和发送交互式通信 {#prepare-and-send-interactive-communication-using-the-agent-ui}
 
-代理程式UI可讓代理程式準備互動式通訊，並將其傳送至發佈程式。 代理程式會視需要進行必要的修改，並將互動式通訊提交至發佈程式，例如電子郵件或列印。
+代理UI允许代理准备交互式通信并将其发送到发布流程。 Agent在允许的情况下进行必要的修改，并将交互式通信提交至发布流程，如电子邮件或打印件。
 
 ## 概述 {#overview}
 
-建立互動式通訊後，代理程式便可在代理程式UI中開啟互動式通訊，並透過輸入資料及管理內容與附件來準備收件者特定的復本。 最後，代理程式可將互動式通訊提交至後續程式。
+创建交互式通信后，代理可以在Agent UI中打开交互式通信，并通过输入数据和管理内容和附件来准备收件人特定的副本。 最后，Agent可以将交互式通信提交到后处理。
 
-使用代理程式UI準備互動式通訊時，代理程式會先在代理程式UI中管理互動式通訊的下列方面，然後再將其提交至後續程式：
+在使用代理UI准备交互式通信时，代理在将Agent UI提交到后处理之前管理Agent UI中的交互式通信的以下方面：
 
-* **資料**：Agent UI的「資料」索引標籤會在互動式通訊中顯示任何可由Agent編輯的變數以及未鎖定的表單資料模型屬性。 這些變數/屬性是在編輯或建立包含在互動式通訊中的檔案片段時建立的。 Data索引標籤也包含在XDP/列印管道範本中建置的任何欄位。 只有當互動式通訊中有任何可由代理程式編輯的變數、表單資料模型屬性或欄位時，資料標籤才會顯示。
-* **內容**：在「內容」標籤中，代理程式會管理互動式通訊中的內容，例如檔案片段和內容變數。 在這些檔案片段的屬性中建立互動式通訊時，代理程式可以在檔案片段中進行允許的變更。 如果允許，代理程式也可以重新排序、新增/移除檔案片段和新增分頁符號。
-* **附件**：只有互動式通訊具有任何附件或代理程式具有程式庫存取權時，「附件」索引標籤才會顯示在「代理程式」UI中。 代理程式可能可以變更或編輯附件，也可能不允許。
+* **数据**：代理UI的数据选项卡在交互式通信中显示任何可代理编辑的变量和未锁定的表单数据模型属性。 这些变量/属性是在编辑或创建交互式通信中包含的文档片段时创建的。 Data选项卡还包括在XDP/打印渠道模板中构建的任何字段。 仅当交互式通信中有代理可编辑的任何变量、表单数据模型属性或字段时，才会显示“数据”选项卡。
+* **内容**：在内容选项卡中，代理管理交互式通信中的内容，例如文档片段和内容变量。 代理可以在文档片段的属性中创建交互式通信时，对这些文档片段进行允许的更改。 如果允许，代理还可以重新排序、添加/删除文档片段和添加分页符。
+* **附件**：仅当交互式通信具有任何附件或代理具有库访问权限时，“附件”选项卡才会显示在代理UI中。 代理可以更改或编辑附件，也可以不更改或编辑附件。
 
-## 使用Agent UI準備互動式通訊 {#prepare-interactive-communication-using-the-agent-ui}
+## 使用代理UI准备交互式通信 {#prepare-interactive-communication-using-the-agent-ui}
 
-1. 選取 **[!UICONTROL Forms]** > **[!UICONTROL Forms與檔案]**.
-1. 選取適當的互動式通訊並點選 **[!UICONTROL 開啟代理程式UI]**.
+1. 选择 **[!UICONTROL Forms]** > **[!UICONTROL Forms和文档]**.
+1. 选择相应的交互式通信并点按 **[!UICONTROL 打开代理UI]**.
 
    >[!NOTE]
    >
-   >代理程式UI只有在選取的互動式通訊具有列印管道時才有效。
+   >仅当选定的交互式通信具有打印渠道时，代理UI才有效。
 
    ![openagentiui](assets/openagentiui.png)
 
-   根據互動式通訊的內容和屬性，代理程式UI會出現以下三個索引標籤：資料、內容和附件。
+   根据交互式通信的内容和属性，将显示代理UI，其中具有以下三个选项卡：“数据”、“内容”和“附件”。
 
-   ![代理程式](assets/agentuitabs.png)
+   ![agentuitabs](assets/agentuitabs.png)
 
-   繼續輸入資料、管理內容及管理附件。
+   继续输入数据、管理内容和管理附件。
 
 ### 输入数据 {#enter-data}
 
-1. 在「資料」標籤中，視需要輸入變數、表單資料模型屬性和列印範本(XDP)欄位的資料。 填寫所有標示星號(&amp;ast；)的必要欄位，以啟用 **提交** 按鈕。
+1. 在“数据”选项卡中，根据需要输入变量、表单数据模型属性和打印模板(XDP)字段的数据。 填写所有标有星号(&amp;ast；)的必填字段以启用 **提交** 按钮。
 
-   點選互動式通訊預覽中的資料欄位值，以反白顯示「資料」標籤中的對應資料欄位，反之亦然。
+   点按交互式通信预览中的数据字段值，以高亮显示“数据”选项卡中的相应数据字段，反之亦然。
 
 ### 管理内容 {#manage-content}
 
-在「內容」標籤中，管理互動式通訊中的內容，例如檔案片段和內容變數。
+在“内容”选项卡中，管理交互式通信中的内容，例如文档片段和内容变量。
 
-1. 選取 **[!UICONTROL 內容]**. 互動式通訊的內容標籤隨即顯示。
+1. 选择 **[!UICONTROL 内容]**. 此时将显示交互式通信的内容选项卡。
 
    ![agentuicontenttab](assets/agentuicontenttab.png)
 
-1. 視需要在「內容」標籤中編輯檔案片段。 若要將焦點置於內容階層中的相關片段，您可以點選互動式通訊預覽中的相關行或段落，或直接點選內容階層中的片段。
+1. 根据需要在“内容”选项卡中编辑文档片段。 要聚焦到内容层次结构中的相关片段，您可以点按交互式通信预览中的相关行或段落，或直接点按内容层次结构中的片段。
 
-   例如，在下列圖形的預覽中選取了「立即線上付款……」行的檔案片段，並在「內容」標籤中選取了相同的檔案片段。
+   例如，在下图的预览中选择了行为“Make a payment now ... ”的单据片段，并在“内容”选项卡中选择了相同的单据片段。
 
    ![contentmodulefocus](assets/contentmodulefocus.png)
 
-   在「內容」或「資料」標籤中，點選「內容」( ![highlightselectedmodulesincontentccr](assets/highlightselectedmodulesincontentccr.png))，您可以停用或啟用在預覽中點選/選取相關文字、段落或資料欄位時前往檔案片段的功能。
+   在内容或数据选项卡中，通过点按突出显示内容中的选定模块( ![highlightselectedmodulesincontentccr](assets/highlightselectedmodulesincontentccr.png))，您可以禁用或启用在预览中点按/选择相关文本、段落或数据字段时转到文档片段的功能。
 
-   建立互動式通訊時允許代理程式編輯的片段具有編輯選取的內容( ![iconeditselectedcontent](assets/iconeditselectedcontent.png))圖示。 點選「編輯選取的內容」圖示，在編輯模式下啟動片段並在其中進行變更。 使用下列選項來格式化及管理文字：
+   在创建交互式通信时允许代理编辑的片段具有编辑选定内容( ![iconeditselectedcontent](assets/iconeditselectedcontent.png))图标。 点按编辑选定内容图标以在编辑模式下启动片段并在其中进行更改。 使用以下选项设置文本格式和管理文本：
 
-   * [格式選項](#formattingtext)
+   * [格式选项](#formattingtext)
 
-      * [從其他應用程式複製貼上格式化文字](#pasteformattedtext)
-      * [反白部分文字](#highlightemphasize)
-   * [特殊字元](#specialcharacters)
+      * [复制粘贴来自其他应用程序的格式化文本](#pasteformattedtext)
+      * [突出显示文本的各个部分](#highlightemphasize)
+   * [特殊字符](#specialcharacters)
    * [键盘快捷键](/help/forms/using/keyboard-shortcuts.md)
 
-   如需代理程式使用者介面中各種檔案片段可用動作的詳細資訊，請參閱 [代理程式使用者介面中可用的動作和資訊](#actionsagentui).
+   有关“代理”用户界面中各种文档片段可用的操作的更多信息，请参阅 [代理用户界面中可用的操作和信息](#actionsagentui).
 
-1. 若要在互動式通訊的列印輸出中新增分頁符號，請將游標置於要插入分頁符號的位置，並選取「分頁符號在前」或「分頁符號在後」 ( ![pagebreakbeforeafter](assets/pagebreakbeforeafter.png))。
+1. 要将分页符添加到交互式通信的打印输出中，请将光标放在要插入分页符的位置，然后选择之前分页符或之后分页符( ![pagebreakbeforeafter](assets/pagebreakbeforeafter.png))。
 
-   在互動式通訊中插入明確的分頁符號預留位置。 若要檢視明確的分頁符號如何影響互動式通訊，請參閱列印預覽。
+   在交互式通信中插入显式分页符占位符。 要查看显式分页符对交互式通信的影响，请参阅打印预览。
 
    ![explicitpagebreak](assets/explicitpagebreak.png)
 
-   繼續管理互動式通訊的附件。
+   继续管理交互式通信的附件。
 
 ### 管理附件 {#manage-attachments}
 
-1. 選取 **[!UICONTROL 附件]**. 建立互動式通訊時，代理程式UI會依設定顯示可用的附件。
+1. 选择 **[!UICONTROL 附件]**. 在创建交互式通信时，代理UI将显示设置的可用附件。
 
-   點選檢檢視示即可選擇不隨互動式通訊提交附件，點選附件中的十字可將其從互動式通訊中刪除（如果允許代理刪除或隱藏附件）。 對於建立互動式通訊時指定為必要之附件，「檢視」和「刪除」圖示會停用。
+   您可以通过点按视图图标来选择不随交互式通信一起提交附件，也可以点按附件中的十字形图标以将其从交互式通信中删除（如果允许代理删除或隐藏附件）。 对于创建交互式通信时指定为必填的附件，“查看”和“删除”图标被禁用。
 
-   ![隨附sagentui](assets/attachmentsagentui.png)
+   ![萨根图伊附件](assets/attachmentsagentui.png)
 
-1. 點選「資料庫存取」 ( ![程式庫存取](assets/libraryaccess.png))圖示以存取「內容資料庫」，將DAM資產插入為附件。
+1. 点按库访问权限( ![库访问](assets/libraryaccess.png))图标以访问内容库并将DAM资产作为附件插入。
 
    >[!NOTE]
    >
-   >只有在建立互動式通訊時（在Print channel的「檔案容器」屬性中）已啟用程式庫存取時，才可使用「程式庫存取」圖示。
+   >只有在创建交互式通信时启用了库访问（在打印渠道的“文档容器”属性中），库访问图标才可用。
 
-1. 如果在建立互動式通訊時未鎖定附件的順序，您可以選取附件並點選向下和向上箭頭，以重新排序附件。
-1. 使用「Web預覽」和「列印預覽」，檢視這兩個輸出是否符合您的需求。
+1. 如果在创建交互式通信时未锁定附件的顺序，则可以通过选择附件并点按向下和向上箭头来重新排序附件。
+1. 使用Web预览和打印预览查看这两个输出是否符合您的要求。
 
-   如果您認為預覽令人滿意，請點選 **[!UICONTROL 提交]** 提交/傳送互動式通訊至貼文程式。 或者，若要進行變更，請退出預覽以返回進行變更。
+   如果您发现预览效果令人满意，请点按 **[!UICONTROL 提交]** 提交/发送交互式通信到发布流程。 或者，要进行更改，请退出预览以返回到所做的更改。
 
-## 格式化文字 {#formattingtext}
+## 设置文本格式 {#formattingtext}
 
-在代理程式UI中編輯文字片段時，工具列會隨著您選擇進行的編輯型別而改變：字型、段落或清單：
+在代理UI中编辑文本片段时，工具栏会根据您选择的编辑类型而发生更改：“字体”、“段落”或“列表”：
 
-![typeofformattingtoolbar](assets/typeofformattingtoolbar.png) ![字型工具列](do-not-localize/fonttoolbar.png)
+![typeofformattingtoolbar](assets/typeofformattingtoolbar.png) ![字体工具栏](do-not-localize/fonttoolbar.png)
 
-字型工具列
+字体工具栏
 
-![段落工具列](do-not-localize/paragraphtoolbar.png)
+![段落工具栏](do-not-localize/paragraphtoolbar.png)
 
-段落工具列
+段落工具栏
 
-![清單工具列](do-not-localize/listtoolbar.png)
+![列表工具栏](do-not-localize/listtoolbar.png)
 
-清單工具列
+列表工具栏
 
-### 反白顯示/強調文字部分 {#highlightemphasize}
+### 突出显示/强调文本的各个部分 {#highlightemphasize}
 
-若要反白顯示\強調可編輯片段中的部分文字，請選取文字並點選「反白顯示顏色」。
+要高亮显示\强调可编辑片段中的文本部分，请选择该文本，然后点按高亮颜色。
 
 ![highlighttextagentui](assets/highlighttextagentui.png)
 
-### 貼上格式化文字 {#pasteformattedtext}
+### 粘贴格式化文本 {#pasteformattedtext}
 
-![已貼上文字](assets/pastedtext.png)
+![已粘贴文本](assets/pastedtext.png)
 
-### 在文字中插入特殊字元 {#specialcharacters}
+### 在文本中插入特殊字符 {#specialcharacters}
 
-Agent UI已內建對210個特殊字元的支援。 管理員可以 [透過自訂新增對更多/自訂特殊字元的支援](/help/forms/using/custom-special-characters.md).
+代理UI内置支持210个特殊字符。 管理员可以 [通过自定义添加对更多/自定义特殊字符的支持](/help/forms/using/custom-special-characters.md).
 
-#### 附件傳遞 {#attachmentdelivery}
+#### 附件投放 {#attachmentdelivery}
 
-* 使用伺服器端API以互動或非互動式PDF呈現互動式通訊時，呈現的PDF會包含附件作為PDF附件。
-* 使用代理程式UI提交時，當與互動式通訊相關的貼文程式載入為其中一部分時，附件會以清單形式傳遞&lt;com.adobe.idp.document> inAttachmentDocs引數
-* 傳遞機制工作流程（例如電子郵件和列印）也會連同互動式通訊的PDF版本一起傳遞附件。
+* 当使用服务器端API作为交互式或非交互式PDF呈现交互式通信时，呈现的PDF包含作为PDF附件的附件。
+* 在使用代理UI提交过程中加载与交互式通信关联的后处理时，附件将作为列表传递&lt;com.adobe.idp.document> inAttachmentDocs参数。
+* 投放机制工作流（如电子邮件和打印）也随交互式通信的PDF版本一起投放附件。
 
-## 代理程式使用者介面中可用的動作和資訊 {#actionsagentui}
+## 代理用户界面中可用的操作和信息 {#actionsagentui}
 
-### 檔案片段 {#document-fragments}
+### 文档片段 {#document-fragments}
 
 ![](do-not-localize/contentoptionsdocfragments.png)
 
-* **向上/向下箭頭**：在互動式通訊中向上或向下移動檔案片段的箭頭。
-* **刪除**：如果允許，請從互動式通訊中刪除檔案片段。
-* **在此之前分頁** （適用於目標區域的子片段）：在檔案片段之前插入分頁符號。
-* **縮排**：增加或減少檔案片段的縮排。
-* **在以下位置後分頁：** （適用於目標區域的子片段）：在檔案片段後面插入分頁符號。
+* **向上/向下箭头**：用于在交互式通信中向上或向下移动文档片段的箭头。
+* **删除**：如果允许，从交互式通信中删除文档片段。
+* **在此之前分页** （适用于目标区域的子片段）：在文档片段之前插入分页符。
+* **缩进**：增加或减少文档片段的缩进。
+* **在以下位置后插入分页符：** （适用于目标区域的子片段）：在文档片段之后插入分页符。
 
 ![docfragoptions](assets/docfragoptions.png)
 
-* 編輯（僅限文字片段）：開啟RTF編輯器以編輯文字檔案片段。 如需詳細資訊，請參閱 [格式化文字](#formattingtext).
+* 编辑（仅限文本片段）：打开富文本编辑器以编辑文本文档片段。 有关更多信息，请参阅 [设置文本格式](#formattingtext).
 
-* 選擇（眼睛圖示）：包含\排除互動式通訊的檔案片段。
-* 未填入的值（資訊）：表示檔案片段中未填入的變數數量。
+* 选择（眼睛图标）：包含\排除交互式通信中的文档片段。
+* 未填充的值（信息）：指示文档片段中未填充变量的数量。
 
-### 列出檔案片段 {#list-document-fragments}
+### 列出文档片段 {#list-document-fragments}
 
 ![listoptions](assets/listoptions.png)
 
 * 插入空白行：插入新的空白行。
-* 選擇（眼睛圖示）：包含\排除互動式通訊的檔案片段。
-* 略過專案符號/編號：啟用可略過清單檔案片段中的專案符號/編號。
-* 未填入的值（資訊）：表示檔案片段中未填入的變數數量。
+* 选择（眼睛图标）：包含\排除交互式通信中的文档片段。
+* 跳过项目符号/编号：启用可跳过列表文档片段中的项目符号/编号。
+* 未填充的值（信息）：指示文档片段中未填充变量的数量。
 
-## 將互動式通訊儲存為草稿 {#save-as-draft}
+## 将交互式通信另存为草稿 {#save-as-draft}
 
-您可以使用代理程式UI來儲存每個互動式通訊的一個或多個草稿，並稍後擷取草稿以繼續處理。 您可以為每個草稿指定不同的名稱來識別它。
+您可以使用代理UI为每个交互式通信保存一个或多个草稿，并稍后检索草稿以继续处理。 您可以为每个草稿指定不同的名称来标识它。
 
-Adobe建議依序執行這些指示，以成功將互動式通訊儲存為草稿。
+Adobe建议按顺序执行这些指令，以成功将交互式通信另存为草稿。
 
-### 啟用另存為草稿功能 {#before-save-as-draft}
+### 启用另存为草稿功能 {#before-save-as-draft}
 
-預設不會啟用「另存為草稿」功能。 執行以下步驟來啟用此功能：
+缺省情况下，“另存为草稿”功能未启用。 执行以下步骤以启用该功能：
 
-1. 實作 [ccrDocumentInstance](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/ccm/ccr/ccrDocumentInstance/api/services/CCRDocumentInstanceService.html) 服務提供者介面(SPI)。
+1. 实施 [ccrDocumentInstance](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/ccm/ccr/ccrDocumentInstance/api/services/CCRDocumentInstanceService.html) 服务提供者接口(SPI)。
 
-   SPI可讓您以草稿ID作為唯一識別碼，將互動式通訊的草稿版本儲存至資料庫。 這些指示假設您先前知道如何使用Maven專案建立OSGi套件組合。
+   SPI允许您使用草稿ID作为唯一标识符将交互式通信的草稿版本保存到数据库。 这些说明假定您事先知道如何使用Maven项目构建OSGi捆绑包。
 
-   如需範例SPI實施，請參閱 [ccrDocumentInstance SPI實作範例](#sample-ccrDocumentInstance-spi).
-1. 開啟 `http://<hostname>:<port>/ system/console/bundles` 並點選 **[!UICONTROL 安裝/更新]** 上傳OSGi套件組合。 確認上傳之封裝的狀態顯示為 **作用中**. 如果封裝的狀態未顯示為，請重新啟動伺服器 **作用中**.
+   有关示例SPI实施，请参见 [ccrDocumentInstance SPI实施示例](#sample-ccrDocumentInstance-spi).
+1. 打开 `http://<hostname>:<port>/ system/console/bundles` 并点按 **[!UICONTROL 安装/更新]** 上传OSGi捆绑包。 验证已上传文件包的状态是否显示为 **活动**. 如果软件包的状态未显示为，请重新启动服务器 **活动**.
 1. 转到 `https://'[server]:[port]'/system/console/configMgr`.
-1. 點選 **[!UICONTROL 建立對應設定]**.
-1. 選取 **[!UICONTROL 使用CCRDocumentInstanceService啟用儲存]** 並點選 **[!UICONTROL 儲存]**.
+1. 点按 **[!UICONTROL 创建对应配置]**.
+1. 选择 **[!UICONTROL 使用CCRDocumentInstanceService启用保存]** 并点按 **[!UICONTROL 保存]**.
 
-### 將互動式通訊儲存為草稿 {#save-as-draft-agent-ui}
+### 将交互式通信另存为草稿 {#save-as-draft-agent-ui}
 
-執行下列步驟，將互動式通訊儲存為草稿：
+执行以下步骤，将交互式通信另存为草稿：
 
-1. 在Forms Manager中選取互動式通訊並點選 **[!UICONTROL 開啟代理程式UI]**.
+1. 在Forms Manager中选择交互式通信并点按 **[!UICONTROL 打开代理UI]**.
 
-1. 在Agent UI中進行適當的變更，然後點選 **[!UICONTROL 另存為草稿]**.
+1. 在Agent UI中进行相应更改，然后点按 **[!UICONTROL 另存为草稿]**.
 
-1. 在「 」中指定草繪的名稱 **[!UICONTROL 名稱]** 欄位並點選 **[!UICONTROL 完成]**.
+1. 在中指定拔模的名称 **[!UICONTROL 名称]** 字段并点按 **[!UICONTROL 完成]**.
 
-將互動式通訊儲存為草稿後，點選 **[!UICONTROL 儲存變更]** 以儲存對草稿的任何進一步變更。
+将交互式通信另存为草稿后，点按 **[!UICONTROL 保存更改]** 以保存对草稿的任何进一步更改。
 
-### 擷取互動式通訊的草稿 {#retrieve-draft}
+### 检索交互式通信的草稿 {#retrieve-draft}
 
-將互動式通訊儲存為草稿後，您可以擷取它以繼續處理。 擷取互動式通訊，使用：
+将交互式通信另存为草稿后，您可以检索该通信以继续对其进行处理。 使用以下方式检索交互式通信：
 
 `https://server:port/aem/forms/createcorrespondence.hmtl?draftid=[draftid]`
 
-[draftid] 是指將互動式通訊儲存為草稿後所產生之草稿版本的唯一識別碼。
+[draftid] 指将交互式通信另存为草稿后生成的草稿版本的唯一标识符。
 
-### ccrDocumentInstance SPI實作範例 {#sample-ccrDocumentInstance-spi}
+### ccrDocumentInstance SPI实施示例 {#sample-ccrDocumentInstance-spi}
 
-實作 `ccrDocumentInstance` SPI將互動式通訊儲存為草稿。 以下為的實作範例 `ccrDocumentInstance` SPI。
+实施 `ccrDocumentInstance` SPI将交互式通信另存为草稿。 以下是 `ccrDocumentInstance` SPI。
 
 ```javascript
 package Implementation;
@@ -313,36 +313,36 @@ public class CCRDraftService implements CCRDocumentInstanceService {
 }
 ```
 
-此 `save`， `update`， `get`、和 `getAll` 作業會呼叫資料庫服務，將互動式通訊儲存為草稿、更新互動式通訊、從資料庫擷取資料，以及擷取資料庫中所有可用互動式通訊的資料。 此範例使用 `mySQLDataBaseServiceCRUD` 做為資料庫服務的名稱。
+此 `save`， `update`， `get`、和 `getAll` 操作调用数据库服务以将交互式通信另存为草稿、更新交互式通信、从数据库中检索数据，以及检索数据库中所有可用交互式通信的数据。 此示例使用 `mySQLDataBaseServiceCRUD` 作为数据库服务的名称。
 
-下表說明範例 `ccrDocumentInstance` SPI實作。 它示範 `save`， `update`， `get`、和 `getAll` 操作會呼叫範例實作中的資料庫服務。
+下表说明了此示例 `ccrDocumentInstance` SPI实施。 它展示了 `save`， `update`， `get`、和 `getAll` 操作调用示例实施中的数据库服务。
 
 <table> 
  <tbody>
  <tr>
   <td><p><strong>操作</strong></p></td>
-  <td><p><strong>資料庫服務範例</strong></p></td> 
+  <td><p><strong>数据库服务示例</strong></p></td> 
    </tr>
   <tr>
-   <td><p>您可以建立互動式通訊的草稿或直接提交它。 儲存作業的API會檢查互動式通訊是否以草稿形式提交，並包含草稿名稱。 然後，API會呼叫mySQLDataBaseServiceCRUD服務，並將Save儲存為輸入方法。</p></br><img src="assets/save-as-draft-save-operation.png"/></br>[#$sd1_sf1_dp9]</td>
-   <td><p>mySQLDataBaseServiceCRUD服務會驗證Save做為輸入方法，並產生自動產生的草稿ID並將其傳回AEM。 產生草稿ID的邏輯可能會因資料庫而異。</p></br><img src="assets/save-operation-service.png"/></br>[#$sd1_sf1_dp13]</td>
+   <td><p>您可以为交互式通信创建草稿，也可以直接提交草稿。 保存操作的API检查交互式通信是否作为草稿提交，并包括草稿名称。 然后，API使用Save作为输入方法调用mySQLDataBaseServiceCRUD服务。</p></br><img src="assets/save-as-draft-save-operation.png"/></br>[#$sd1_sf1_dp9]</td>
+   <td><p>mySQLDataBaseServiceCRUD服务验证Save作为输入方法，并生成自动生成的草稿ID并将其返回给AEM。 生成草稿ID的逻辑可能会因数据库而异。</p></br><img src="assets/save-operation-service.png"/></br>[#$sd1_sf1_dp13]</td>
    </tr>
   <tr>
-   <td><p>更新作業的API會擷取互動式通訊草稿的狀態，並檢查互動式通訊是否包含草稿名稱。 API會呼叫mySQLDataBaseServiceCRUD服務，以更新資料庫中的狀態。</p></br><img src="assets/save-as-draft-update-operation.png"/></br>[#$sd1_sf1_dp17]</td>
-   <td><p>mySQLDataBaseServiceCRUD服務會驗證Update作為輸入方法，並將互動式通訊草稿的狀態儲存在資料庫中。</br></p><img src="assets/update-operation-service.png"/></td>
+   <td><p>更新操作的API可检索交互式通信草稿的状态，并检查交互式通信是否包含草稿名称。 API调用mySQLDataBaseServiceCRUD服务来更新数据库中的该状态。</p></br><img src="assets/save-as-draft-update-operation.png"/></br>[#$sd1_sf1_dp17]</td>
+   <td><p>mySQLDataBaseServiceCRUD服务验证Update作为输入方法，并将交互式通信草稿的状态保存到数据库中。</br></p><img src="assets/update-operation-service.png"/></td>
    </tr>
    <tr>
-   <td><p>取得作業的API會檢查互動式通訊是否包含草稿ID。 然後API會呼叫mySQLDataBaseServiceCRUD服務（使用Get作為輸入方法），以擷取互動式通訊的資料。</br></p><img src="assets/save-as-draft-get-operation.png"/></td>
-   <td><p>mySQLDataBaseServiceCRUD服務會驗證Get作為輸入方法，並根據草稿ID擷取互動式通訊的資料。</p></br><img src="assets/get-operation-service.png"/></br>[#$sd1_sf1_dp29]</td>
+   <td><p>获取操作的API检查交互式通信是否包含草稿ID。 然后，API使用Get作为输入方法调用mySQLDataBaseServiceCRUD服务，以检索交互式通信的数据。</br></p><img src="assets/save-as-draft-get-operation.png"/></td>
+   <td><p>mySQLDataBaseServiceCRUD服务验证Get作为输入方法，并根据草稿ID检索交互式通信的数据。</p></br><img src="assets/get-operation-service.png"/></br>[#$sd1_sf1_dp29]</td>
    </tr>
    <tr>
-   <td><p>getAll作業的API會呼叫mySQLGetALLData服務，以擷取資料庫中儲存之所有互動式通訊的資料。</br></p><img src="assets/save-as-draft-getall-operation.png"/></td>
-   <td><p>mySQLGetALLData服務會擷取資料庫中儲存之所有互動式通訊的資料。</p></br><img src="assets/getall-operation-service.png"/></br>[#$sd1_sf1_dp37]</td>
+   <td><p>getAll操作的API调用mySQLGetALLData服务以检索数据库中保存的所有交互式通信的数据。</br></p><img src="assets/save-as-draft-getall-operation.png"/></td>
+   <td><p>mySQLGetALLData服务检索数据库中保存的所有交互式通信的数据。</p></br><img src="assets/getall-operation-service.png"/></br>[#$sd1_sf1_dp37]</td>
    </tr>
   </tbody>
 </table>
 
-以下範例說明 `pom.xml` 屬於實作一部分的檔案：
+以下示例说明 `pom.xml` 属于实施一部分的文件：
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -439,4 +439,4 @@ public class CCRDraftService implements CCRDocumentInstanceService {
 
 >[!NOTE]
 >
->請務必更新 `aemfd-client-sdk` 與6.0.160的相依性 `pom.xml` 檔案。
+>确保更新 `aemfd-client-sdk` 与6.0.160的依赖关系 `pom.xml` 文件。

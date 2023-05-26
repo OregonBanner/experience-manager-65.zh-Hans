@@ -1,7 +1,7 @@
 ---
-title: Communities元件
+title: Communities组件
 seo-title: Communities Components
-description: 新增社群功能至任何AEM網站
+description: 向任何AEM站点添加社区功能
 seo-description: Adding community features to any AEM site
 uuid: 76824820-81e9-4192-8df3-dff55eaf144e
 contentOwner: Chris Bohnert
@@ -18,51 +18,51 @@ ht-degree: 27%
 
 ---
 
-# Communities元件 {#communities-components}
+# Communities组件 {#communities-components}
 
 ## 简介 {#introduction}
 
-取得AEM Communities授權後，除了建立社群網站，您也可以使用標準AEM編寫工具將社群功能新增至任何AEM網站。
+在许可AEM Communities后，除了创建社区站点之外，还可以使用标准AEM创作工具将社区功能添加到任何AEM站点。
 
-若要進一步瞭解如何建立社群網站，請造訪：
+要了解有关创建社区站点的更多信息，请访问：
 
-* [AEM Communities概觀](/help/communities/overview.md)
-* [AEM Communities快速入門](/help/communities/getting-started.md)
-
->[!NOTE]
->
->如果您不熟悉製作環境，請在以下位置檢視檔案： [基本處理](/help/sites-authoring/basic-handling.md) 和 [製作頁面的快速指南](/help/sites-authoring/qg-page-authoring.md).
-
-## 可用的Communities元件 {#available-communities-components}
-
-下表列出在元件瀏覽器(sidekick)中啟用時，作者可見的Communities元件。
-
-另請參閱互動式 [社群元件指南](/help/communities/components-guide.md).
+* [AEM Communities概述](/help/communities/overview.md)
+* [AEM Communities快速入门](/help/communities/getting-started.md)
 
 >[!NOTE]
 >
->讀取 [Communities元件基本知識](/help/communities/basics.md) 因為它包含使用Communities元件編寫時所需的資訊。
+>如果不熟悉创作环境，请查看文档 [基本处理](/help/sites-authoring/basic-handling.md) 和 [页面创作快速指南](/help/sites-authoring/qg-page-authoring.md).
 
-| **元件標題** | **专题** |
+## 可用社区组件 {#available-communities-components}
+
+下表列出了在组件浏览器(sidekick)中启用时对作者可见的社区组件。
+
+另请参阅交互式 [社区组件指南](/help/communities/components-guide.md).
+
+>[!NOTE]
+>
+>读取 [社区组件基础知识](/help/communities/basics.md) 因为它包含使用Communities组件创作所需的信息。
+
+| **组件标题** | **专题** |
 |---|---|
 | 活动流 | [活动流](/help/communities/activities.md) |
 | 博客 | [博客](/help/communities/blog-feature.md) |
 | 博客侧栏 | [博客](/help/communities/blog-feature.md) |
 | 日程表 | [日程表](/help/communities/calendar.md) |
 | 评论 | [评论](/help/communities/comments.md) |
-| 社区活动列表 | [活動趨勢](/help/communities/trends.md) |
+| 社区活动列表 | [活动趋势](/help/communities/trends.md) |
 | 社区组成员列表 | [社区组](/help/communities/creating-groups.md) |
-| 撰寫訊息 | [消息](/help/communities/configure-messaging.md) |
+| 撰写消息 | [消息](/help/communities/configure-messaging.md) |
 | 专题内容 | [专题内容](/help/communities/featured.md) |
 | 文件库 | [文件库](/help/communities/file-library.md) |
 | 关注 | [社交图](/help/communities/socialgraph.md) |
 | 关注 | [社交图](/help/communities/socialgraph.md) |
 | 论坛 | [论坛](/help/communities/forum.md) |
 | 构思 | [构思](/help/communities/ideation-feature.md) |
-| 排行榜 | [評分和預算](/help/communities/enabling-leaderboard.md) |
+| 排行榜 | [评分和徽章](/help/communities/enabling-leaderboard.md) |
 | 点赞 | [点赞](/help/communities/liking.md) |
 | 消息 | [消息](/help/communities/configure-messaging.md) |
-| 訊息清單 | [消息](/help/communities/configure-messaging.md) |
+| 消息列表 | [消息](/help/communities/configure-messaging.md) |
 | 问题与解答 | [问题与解答](/help/communities/working-with-qna.md) |
 | 快速搜索 | [搜索](/help/communities/search.md) |
 | 评分 | [评分](/help/communities/rating.md) |
@@ -71,17 +71,17 @@ ht-degree: 27%
 | 审核摘要（显示） | [审核](/help/communities/reviews.md) |
 | 搜索 | [搜索](/help/communities/search.md) |
 | 搜索结果 | [搜索](/help/communities/search.md) |
-| 社交標籤雲 | [社交標籤雲](/help/communities/tagcloud.md) |
+| 社交标签云 | [社交标签云](/help/communities/tagcloud.md) |
 | 投票 | [投票](/help/communities/voting.md) |
 
 >[!NOTE]
 >
->Experience Manager Communities不再提供輪詢元件，也不再支援輪詢元件。
+>轮询组件不再可用，并且在Experience Manager社区中不受支持。
 
-## 相關Communities檔案 {#related-communities-documentation}
+## 相关社区文档 {#related-communities-documentation}
 
-* 造訪 [部署社群](/help/communities/deploy-communities.md) 以瞭解建議的部署。
+* 访问 [部署社区](/help/communities/deploy-communities.md) 以了解建议的部署。
 
-* 造訪 [管理社群網站](/help/communities/administer-landing.md) 瞭解有關建立社群網站、設定社群網站範本、仲裁社群內容、管理成員和設定傳訊功能的資訊。
+* 访问 [管理社区站点](/help/communities/administer-landing.md) 了解有关创建社区站点、配置社区站点模板、审核社区内容、管理成员和配置消息传送的信息。
 
-* 造訪 [開發社群](/help/communities/communities.md) 瞭解社交元件架構(SCF)和自訂Communities元件和功能。
+* 访问 [发展中的社区](/help/communities/communities.md) 了解社交组件框架(SCF)和自定义社区组件和功能。

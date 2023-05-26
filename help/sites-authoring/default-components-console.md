@@ -20,7 +20,7 @@ ht-degree: 54%
 
 # 组件控制台{#components-console}
 
-「元件」主控台可讓您瀏覽針對執行個體定義的所有元件，並檢視每個元件的關鍵資訊。
+组件控制台允许您浏览针对实例定义的所有组件，并查看每个组件的关键信息。
 
 该控制台可从&#x200B;**工具** -> **常规** -> **组件**&#x200B;中访问。在控制台中，卡片视图和列表视图均可用。 由于组件没有树结构，因此列视图不可用。
 
@@ -28,7 +28,7 @@ ht-degree: 54%
 
 >[!NOTE]
 >
->「元件主控台」會顯示系統中的所有元件。 [组件浏览器](/help/sites-authoring/author-environment-tools.md#components-browser)显示可用于创作的组件，并隐藏任何以句点 (`.`) 开头的组件组。
+>组件控制台显示系统中的所有组件。 [组件浏览器](/help/sites-authoring/author-environment-tools.md#components-browser)显示可用于创作的组件，并隐藏任何以句点 (`.`) 开头的组件组。
 
 ## 搜索 {#searching}
 
@@ -38,7 +38,7 @@ ht-degree: 54%
 
 ### 组件详细信息 {#component-details}
 
-若要檢視特定元件的詳細資訊，請點選/按一下所需的資源。 三個索引標籤提供：
+要查看有关特定组件的详细信息，请点按/单击所需的资源。 三个选项卡提供：
 
 * **属性**
 
@@ -47,12 +47,12 @@ ht-degree: 54%
    在“属性”选项卡上，您可以：
 
    * 查看组件的常规属性。
-   * 檢視 [圖示或縮寫已定義](/help/sites-developing/components-basics.md#component-icon-in-touch-ui) 用於元件。
+   * 查看 [图标或缩写](/help/sites-developing/components-basics.md#component-icon-in-touch-ui) 对于组件。
 
-      * 按一下圖示的來源會前往該元件。
-   * 檢視 **資源型別** 和 **資源超級型別** （如果已定義）。
+      * 单击图标的来源将转到该组件。
+   * 查看 **资源类型** 和 **资源超级类型** （如果已定义）。
 
-      * 按一下「資源超級型別」即可前往該元件。
+      * 单击“资源超级类型”将转到该组件。
    >[!NOTE]
    >
    >由于 `/apps` 在运行时不可编辑，因此组件控制台为只读。
@@ -71,6 +71,6 @@ ht-degree: 54%
 
 * **文档**
 
-   如果開發人員已提供 [元件的檔案](/help/sites-developing/developing-components.md#documenting-your-component)，它會顯示在 **檔案** 標籤。 如果没有可用文档，则不会显示&#x200B;**文档**&#x200B;选项卡。
+   如果开发人员提供了 [组件的文档](/help/sites-developing/developing-components.md#documenting-your-component)，它将显示在 **文档** 选项卡。 如果没有可用文档，则不会显示&#x200B;**文档**&#x200B;选项卡。
 
    ![chlimage_1-171](assets/chlimage_1-171.png)

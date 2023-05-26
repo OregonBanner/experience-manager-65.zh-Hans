@@ -1,6 +1,6 @@
 ---
-title: 從Dynamic Media — 混合模式移轉至Dynamic Media - S7模式
-description: 瞭解如何將Dynamic Media — 混合模式執行個體移轉至Dynamic Media - S7模式
+title: 从Dynamic Media — 混合模式迁移到Dynamic Media - S7模式
+description: 了解如何将Dynamic Media — 混合模式实例迁移到Dynamic Media - S7模式
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
@@ -16,39 +16,39 @@ ht-degree: 2%
 
 ---
 
-# 關於從Dynamic Media-Hybrid移至Dynamic Media-Scene7 {#about-migrating}
+# 关于从Dynamic Media-Hybrid迁移到Dynamic Media-Scene7 {#about-migrating}
 
-Dynamic Media-Hybrid是Dynamic Media與Adobe Experience Manager整合的舊版本。 混合式版本最初是在Adobe Experience Manager 6.1中引入。雖然Adobe持續支援混合模式，但不是首選模式；首選使用Dynamic Media-Scene7模式。 混合模式也不支援智慧型裁切和全景影像等新功能，而Dynamic Media-Scene7則支援。
+Dynamic Media-Hybrid是Dynamic Media与Adobe Experience Manager集成的旧版本。 混合版本最初是在Adobe Experience Manager 6.1中引入的。虽然Adobe继续支持混合模式，但它不是首选模式；首选使用Dynamic Media-Scene7模式。 混合模式也不支持智能裁切和全景图像等新功能，而Dynamic Media-Scene7则支持这些功能。
 
-Dynamic Media-Hybrid和Dynamic Media-Scene7之間的其他主要差異包括：
+Dynamic Media-Hybrid和Dynamic Media-Scene7之间的其他主要区别包括：
 
-* URL的結構。
-* 影片擷取。
-* 影像轉譯的建立和儲存。
-* 雲端設定和認證（布建）。
+* URL的结构。
+* 视频摄取。
+* 创建和存储图像演绎版。
+* 云配置和凭据（配置）。
 
-從Dynamic Media-Hybrid移至Dynamic Media-Scene7時，有兩個選項可供使用。 第一個選項是直接在Experience Manager上布建新的Dynamic Media-Scene7執行個體。 第二個選項是將您現有的Dynamic Media-Hybrid執行個體移轉至Dynamic Media-Scene7。 此選項在下方以表格形式概述您在移動過程中要採取的步驟和考量事項。
+从Dynamic Media-Hybrid迁移到Dynamic Media-Scene7时，有两个选项可用。 第一个选项是仅在Experience Manager上配置新的Dynamic Media-Scene7实例。 第二个选项是将现有Dynamic Media-Hybrid实例迁移到Dynamic Media-Scene7。 此选项概述了移动过程中需要执行的步骤和注意事项，如下表所示。
 
 >[!IMPORTANT]
 >
->Adobe建議您不要在即時生產執行個體上將Dynamic Media-Hybrid實作移轉至Dynamic Media-Scene7。
+>Adobe建议您不要在实时生产实例上将Dynamic Media-Hybrid实施迁移到Dynamic Media-Scene7。
 
-## 選項1 — 在Experience Manager上布建新的Dynamic Media-Scene7執行個體 {#provision-new-dms7}
+## 选项1 — 在Experience Manager上配置新的Dynamic Media-Scene7实例 {#provision-new-dms7}
 
-請考慮在Adobe Experience Manager上使用Dynamic Media-Scene7布建的全新例項，從頭開始。 除了透過Dynamic MediaCloud Service來擷取和處理資產外，強烈建議對資產使用情況、工作流程和元件進行Adobe稽核。 通常，您可以使用較新、現成可用的功能來取代自訂元件和工作流程。
+只需考虑在Adobe Experience Manager上通过新的Dynamic Media-Scene7配置实例从头开始。 除了通过Dynamic MediaCloud Service摄取和处理资源外，还强烈建议对资源使用情况、工作流和组件进行Adobe审核。 通常，您可以使用较新、现成可用的功能替换自定义组件和工作流。
 
-## 選項2 — 將您現有的Dynamic Media-Hybrid執行個體移轉至Dynamic Media-Scene7 {#process-for-migrating}
+## 选项2 — 将现有Dynamic Media — 混合实例迁移到Dynamic Media-Scene7 {#process-for-migrating}
 
 | 步骤 | 任务 | 注意事项 |
 |---|---|---|
-| 1 | 複製Dynamic Media — 混合式製作例項。 | 維護您現有的Dynamic Media-Hybrid Author例項以供遞補用途，直到此移轉程式中的其餘步驟成功完成為止。 |
-| 2 | 在Dynamic Media-Scene7模式中開始復製作者執行個體。 |  |
-| 3 | 在Adobe Experience ManagerCloud Services中，使用Dynamic Media-Scene7憑證設定Dynamic Media。 | Adobe必須核准Dynamic Media-Scene7布建。 因此，您同時擁有受Adobe支援的Dynamic MediaM-Hybrid和Dynamic Media-Scene7環境，但僅限於有限時間。 |
-| 4 | 建立移轉套裝，以便您視需要內嵌資產。<br>刪除初始擷取至Dynamic Media-Hybrid期間建立的本機PTIFF。 | 如果所有資產目前都可在Dynamic Media — 混合式執行個體中使用，則複製的已包含所有資產。 因此，不需要組合。 |
-| 5 | 執行資產更新工作流程，讓您可以將資產同步至Dynamic MediaCloud Service。 | Adobe建議您以批次方式執行更新工作流程，以允許壓縮。 |
-| 6 | 移轉檢視器、影像和視訊預設集。 |  |
-| 7 | 瀏覽每個網頁內容管理參考的資產，並更新其關聯的URL。 |  |
-| 8 | 移轉您要支援新Dynamic Media-Scene7模式的任何自訂工作流程（手動更新）。 |  |
-| 9 | 驗證您的Web內容管理上傳和設定。 |  |
-| 10 | 驗證後，取得停用Dynamic Media-Hybrid Author （以備援形式維護）的核准。 |  |
-| 11 | 在成功使用Dynamic Media-Scene7約一個月後，刪除Dynamic Media-Hybrid Author例項。 |  |
+| 1 | 克隆Dynamic Media — 混合创作实例。 | 维护现有的Dynamic Media — 混合创作实例以用于回退目的，直到此迁移过程中的其余步骤成功完成。 |
+| 2 | 在Dynamic Media-Scene7模式下开始克隆创作实例。 |  |
+| 3 | 在Adobe Experience ManagerCloud Services中，使用Dynamic Media-Scene7凭据配置Dynamic Media。 | Adobe必须批准Dynamic Media-Scene7配置。 因此，您拥有受Adobe支持的并发Dynamic MediaM-Hybrid和Dynamic Media-Scene7环境，但仅限于有限的时间内。 |
+| 4 | 创建迁移捆绑包，以便您可以根据需要摄取资产。<br>删除初始引入Dynamic Media-Hybrid期间创建的本地PTIFF。 | 如果所有资源当前在Dynamic Media — 混合实例中均可用，则克隆的已包含所有这些资源。 因此，不需要捆绑。 |
+| 5 | 运行资源更新工作流，以便您可以将资源同步到Dynamic MediaCloud Service。 | Adobe建议分批执行更新工作流以允许压缩。 |
+| 6 | 迁移查看器、图像和视频预设。 |  |
+| 7 | 浏览每个引用Web内容管理的资产并更新其关联的URL。 |  |
+| 8 | 迁移您要支持新Dynamic Media-Scene7模式的任何自定义工作流（手动更新）。 |  |
+| 9 | 验证Web内容管理上传和配置。 |  |
+| 10 | 验证后，获得禁用混合创作Dynamic Media的批准（作为回退进行维护）。 |  |
+| 11 | 成功使用Dynamic Media-Scene7大约一个月后，删除Dynamic Media-Hybrid Author实例。 |  |

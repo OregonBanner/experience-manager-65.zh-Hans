@@ -1,7 +1,7 @@
 ---
-title: Forms JEE工作流程 |處理使用者資料
+title: Forms JEE工作流 |处理用户数据
 seo-title: Forms JEE workflows | Handling user data
-description: Forms JEE工作流程 |處理使用者資料
+description: Forms JEE工作流 |处理用户数据
 uuid: 3b06ef19-d3c4-411e-9530-2c5d2159b559
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -15,168 +15,168 @@ ht-degree: 0%
 
 ---
 
-# Forms JEE工作流程 |處理使用者資料 {#forms-jee-workflows-handling-user-data}
+# Forms JEE工作流 |处理用户数据 {#forms-jee-workflows-handling-user-data}
 
-AEM Forms JEE工作流程提供設計、建立和管理業務流程的工具。 工作流程處理包含一系列以指定順序執行的步驟。 每個步驟都會執行特定動作，例如將任務指派給使用者或傳送電子郵件訊息。 程式可以與資產、使用者帳戶和服務互動，並且可以使用以下任何方法觸發：
+AEM Forms JEE工作流提供了用于设计、创建和管理业务流程的工具。 工作流进程由一系列按指定顺序执行的步骤组成。 每个步骤都会执行特定操作，例如向用户分配任务或发送电子邮件。 一个进程可以与资产、用户帐户和服务进行交互，并且可以使用以下任意方法触发：
 
-* 從AEM Forms工作區啟動程式
-* 使用SOAP或RESTful服務
-* 提交最適化表單
-* 使用watched資料夾
-* 使用電子郵件
+* 从AEM Forms工作区启动流程
+* 使用SOAP或RESTful服务
+* 提交自适应表单
+* 使用观察文件夹
+* 使用电子邮件
 
-如需建立AEM Forms JEE工作流程程式的詳細資訊，請參閱 [Workbench說明](https://www.adobe.com/go/learn_aemforms_workbench_65).
+有关创建AEM Forms JEE工作流进程的更多信息，请参阅 [Workbench帮助](https://www.adobe.com/go/learn_aemforms_workbench_65).
 
-## 使用者資料和資料存放區 {#user-data-and-data-stores}
+## 用户数据和数据存储 {#user-data-and-data-stores}
 
-當流程被觸發並且進行時，它會擷取流程參與者的相關資料、參與者在與流程相關的表單中輸入的資料，以及新增至表單的附件。 資料會儲存在AEM Forms JEE伺服器資料庫中，而如已設定，部分資料（如附件）會儲存在全域檔案儲存(GDS)目錄中。 GDS目錄可以在共用檔案系統或資料庫上設定。
+当流程被触发并进展时，它会捕获有关流程参与者的数据、参与者在与流程关联的表单中输入的数据以及添加到表单的附件。 该数据存储在AEM Forms JEE服务器数据库中，如果进行了配置，一些数据（如附件）将存储在全局文档存储(GDS)目录中。 可以在共享文件系统或数据库上配置GDS目录。
 
-## 存取和刪除使用者資料 {#access-and-delete-user-data}
+## 访问和删除用户数据 {#access-and-delete-user-data}
 
-觸發程式時，系統會產生唯一的程式執行個體ID和長效的叫用ID，並與程式執行個體建立關聯。 您可以根據長效的叫用ID來存取和刪除程式執行個體的資料。 您可以使用已提交其任務的程式發起人或程式參與者的使用者名稱，來推斷程式執行個體的長期叫用ID。
+触发流程时，将生成唯一的流程实例ID和长生命周期调用ID，并与该流程实例关联。 您可以根据长时间的调用ID访问和删除流程实例的数据。 您可以使用已提交任务的进程发起者或进程参与者的用户名来推断进程实例的长寿命调用ID。
 
-不過，在下列情況下，您無法識別初始器的處理序執行個體ID：
+但是，在以下情况下，您无法识别启动器的进程实例ID：
 
-* **透過watched資料夾觸發的程式**：如果程式是由watched資料夾觸發，則無法使用程式執行個體的啟動器來識別該程式執行個體。 在此情況下，使用者資訊會編碼在儲存的資料中。
-* **從發佈AEM執行個體開始的流程**：所有從AEM發佈執行個體觸發的流程執行個體都不會擷取關於初始器的資訊。 不過，使用者資料可能會以與程式相關聯的表單擷取，並儲存在工作流程變數中。
-* **透過電子郵件起始的程式**：寄件者的電子郵件ID會擷取為的不透明blob欄中的屬性， `tb_job_instance` 無法直接查詢的資料庫表格。
+* **通过观察文件夹触发的进程**：如果进程由观察文件夹触发，则无法使用进程实例的启动器识别该进程。 在这种情况下，在存储的数据中对用户信息进行编码。
+* **从发布AEM实例启动的进程**：从AEM发布实例触发的所有进程实例都不会捕获有关启动器的信息。 但是，用户数据可捕获在与进程关联的表单中，该表单存储在工作流变量中。
+* **通过电子邮件启动的流程**：发件人的电子邮件ID被捕获为的不透明blob列中的属性。 `tb_job_instance` 无法直接查询的数据库表。
 
-### 在已知工作流程發起人或參與者時識別流程執行個體ID {#initiator-participant}
+### 在工作流发起者或参与者已知时标识流程实例ID {#initiator-participant}
 
-執行以下步驟來識別工作流程發起人或參與者的程式執行處理ID：
+执行以下步骤来标识工作流发起者或参与者的进程实例ID：
 
-1. 在AEM Forms伺服器資料庫中執行以下命令，以從擷取工作流程發起人或參與者的主體ID `edcprincipalentity` 資料庫表格。
+1. 在AEM Forms服务器数据库中执行以下命令，以从检索工作流发起者或参与者的主体ID `edcprincipalentity` 数据库表。
 
    ```sql
    select id from edcprincipalentity where canonicalname='user_ID'
    ```
 
-   查詢會傳回指定之主體ID `user_ID`.
+   查询返回指定的主体ID `user_ID`.
 
-1. (**對於工作流程發起人**)執行以下命令，從擷取與初始器的主體ID相關聯的所有任務 `tb_task` 資料庫表格。
+1. (**对于工作流启动器**)执行以下命令以从检索与启动器的主体ID关联的所有任务 `tb_task` 数据库表。
 
    ```sql
    select * from tb_task where start_task = 1 and create_user_id= 'initiator_principal_id'
    ```
 
-   查詢會傳回由指定的所起始的任務 `initiator`_ `principal_id`. 任務分為兩種型別：
+   查询返回由指定的发起的任务 `initiator`_ `principal_id`. 任务分为两种类型：
 
-   * **已完成任務**：這些工作已提交，並在下列位置顯示英數字元： `process_instance_id` 欄位。 記下已提交任務的所有程式執行個體ID，並繼續這些步驟。
-   * **已起始但未完成的工作**：這些任務已開始，但尚未提交。 中的值 `process_instance_id` 這些任務的欄位是 **0** （零）。 在此情況下，請記下對應的任務ID並參閱 [處理孤立任務](#orphan).
+   * **已完成的任务**：这些任务已提交，并在中显示一个字母数字值 `process_instance_id` 字段。 记下已提交任务的所有流程实例ID，并继续执行步骤。
+   * **任务已启动但未完成**：这些任务已启动，但尚未提交。 中的值 `process_instance_id` 这些任务的字段为 **0** （零）。 在这种情况下，请注意相应的任务ID，并查看 [处理孤立任务](#orphan).
 
-1. (**對於工作流程參與者**)執行以下命令，從擷取與啟動器之程式參與者的主體識別碼相關聯的程式執行個體ID `tb_assignment` 資料庫表格。
+1. (**对于工作流参与者**)执行以下命令以从检索与发起者的进程参与者的主体ID关联的进程实例ID `tb_assignment` 数据库表。
 
    ```sql
    select distinct a.process_instance_id from tb_assignment a join tb_queue q on a.queue_id = q.id where q.workflow_user_id='participant_principal_id'
    ```
 
-   查詢會傳回與參與者相關聯的所有處理序的執行個體ID，包括參與者尚未提交任何任務的那些處理序。
+   查询将返回与参与者关联的所有进程的实例ID，包括参与者尚未提交任何任务的进程。
 
-   記下已提交任務的所有程式執行個體ID，並繼續這些步驟。
+   记下已提交任务的所有流程实例ID，并继续执行步骤。
 
-   對於孤立任務或任務，如果 `process_instance_id` 為0 （零），記下對應的任務ID並檢視 [處理孤立任務](#orphan).
+   对于孤立任务或任务，如果 `process_instance_id` 为0（零），记下相应的任务ID并查看 [处理孤立任务](#orphan).
 
-1. 請依照下列說明操作： [根據流程執行個體ID從工作流程執行個體中清除使用者資料](/help/forms/using/forms-workflow-jee-handling-user-data.md#purge) 區段來刪除已識別程式執行個體ID的使用者資料。
+1. 按照中的说明操作 [根据流程实例ID从工作流实例中清除用户数据](/help/forms/using/forms-workflow-jee-handling-user-data.md#purge) 部分，用于删除已标识的流程实例ID的用户数据。
 
-### 當使用者資料儲存在基本變數中時，識別程式執行個體ID {#primitive}
+### 在用户数据存储在原始变量中时标识流程实例ID {#primitive}
 
-可將工作流程設計為擷取使用者資料於變數中，並將該變數儲存為資料庫中的blob。 在這種情況下，只有當使用者資料儲存在下列其中一個基本型別變數中時，才能查詢使用者資料：
+可以设计一个工作流，以便在变量中捕获用户数据，并将其存储为数据库中的blob。 在这种情况下，仅当用户数据存储在以下基元类型变量之一中时，才能查询用户数据：
 
-* **字串**：直接包含使用者ID或作為子字串包含，且可使用SQL查詢。
-* **數值**：直接包含使用者ID。
-* **XML**：包含使用者ID，作為儲存為資料庫中文字欄的文字中的子字串，並可像字串一樣進行查詢。
+* **字符串**：直接包含用户ID或包含用户ID作为子字符串，可以使用SQL查询。
+* **数值**：直接包含用户ID。
+* **XML**：在作为文本列存储在数据库中的文本内包含作为子字符串的用户ID，并且可以像字符串一样进行查询。
 
-執行以下步驟，判斷以基本型別變數儲存資料的工作流程是否包含使用者的資料：
+执行以下步骤，确定在基元类型变量中存储数据的工作流是否包含用户的数据：
 
-1. 執行以下資料庫命令：
+1. 执行以下数据库命令：
 
    ```sql
    select database_table from omd_object_type where name='pt_<app_name>/<workflow_name>'
    ```
 
-   查詢會傳回表格名稱，位於 `tb_<number>` 指定應用程式的格式( `app_name`)和工作流程( `workflow_name`)。
+   查询返回表名，位置为 `tb_<number>` 指定应用程序的格式( `app_name`)和工作流( `workflow_name`)。
 
    >[!NOTE]
    >
-   >的值 `name` 如果工作流程巢狀內嵌於應用程式內的子資料夾中，屬性可能會很複雜。 請務必指定工作流程的完整路徑，此路徑可從 `omd_object_type` 資料庫表格。
+   >的值 `name` 如果工作流嵌套在应用程序内的子文件夹中，则属性可能会很复杂。 确保您指定工作流的确切完整路径，该路径可从 `omd_object_type` 数据库表。
 
-1. 檢閱 `tb_<number>` 資料表結構描述。 此表格包含儲存指定工作流程之使用者資料的變數。 表格中的變數會與工作流程中的變數相對應。
+1. 查看 `tb_<number>` 表模式。 该表包含存储指定工作流的用户数据的变量。 表中的变量对应于工作流中的变量。
 
-   識別並記下與包含使用者ID的工作流程變數相對應的變數。 如果識別的變數屬於基本型別，您可以執行查詢來判斷與使用者ID相關聯的工作流程例項。
+   识别并记下与包含用户ID的工作流变量对应的变量。 如果识别的变量属于基元类型，则可以运行查询以确定与用户ID关联的工作流实例。
 
-1. 執行以下資料庫命令。 在此命令中， `user_var` 是包含使用者ID的基本型別變數。
+1. 执行以下数据库命令。 在此命令中， `user_var` 是包含用户ID的原始类型变量。
 
    ```sql
    select process_instance_id from <tb_name> where <user_var>=<user_ID>
    ```
 
-   查詢會傳回與指定的關聯的所有處理序執行個體ID `user_ID`.
+   查询返回与指定的关联的所有进程实例ID `user_ID`.
 
-1. 請依照下列說明操作： [根據流程執行個體ID從工作流程執行個體中清除使用者資料](/help/forms/using/forms-workflow-jee-handling-user-data.md#purge) 區段來刪除已識別程式執行個體ID的使用者資料。
+1. 按照中的说明操作 [根据流程实例ID从工作流实例中清除用户数据](/help/forms/using/forms-workflow-jee-handling-user-data.md#purge) 部分，用于删除已标识的流程实例ID的用户数据。
 
-### 根據流程執行個體ID從工作流程執行個體中清除使用者資料 {#purge}
+### 根据流程实例ID从工作流实例中清除用户数据 {#purge}
 
-現在您已識別與使用者相關聯的程式執行個體ID，請執行以下動作以從個別程式執行個體中刪除使用者資料。
+现在，您已标识与用户关联的流程实例ID，请执行以下操作以从相应的流程实例中删除用户数据。
 
-1. 執行以下命令，從擷取處理序執行個體的長效啟動ID和狀態 `tb_process_instance` 表格。
+1. 执行以下命令以从检索进程实例的长生命周期调用ID和状态 `tb_process_instance` 表格。
 
    ```sql
    select long_lived_invocation_id, status from tb_process_instance where id='process_instance_id'
    ```
 
-   查詢會傳回指定之長期引動識別碼和狀態 `process_instance_id`.
+   查询会返回指定对象的长期调用ID和状态 `process_instance_id`.
 
-1. 建立公開的執行個體 `ProcessManager` 使用者端( `com.adobe.idp.workflow.client.ProcessManager`)使用 `ServiceClientFactory` 具有正確連線設定的執行個體。
+1. 创建公共实例 `ProcessManager` 客户端( `com.adobe.idp.workflow.client.ProcessManager`)使用 `ServiceClientFactory` 具有正确连接设置的实例。
 
-   如需詳細資訊，請參閱Java API參考資料，以瞭解 [類別程式管理員](https://helpx.adobe.com/experience-manager/6-3/forms/ProgramLC/javadoc/com/adobe/idp/workflow/client/ProcessManager.html).
+   有关更多信息，请参阅以下内容的Java API参考： [类ProcessManager](https://helpx.adobe.com/experience-manager/6-3/forms/ProgramLC/javadoc/com/adobe/idp/workflow/client/ProcessManager.html).
 
-1. 檢查工作流程例項的狀態。 如果狀態不是2 (COMPLETE)或4 (TERMINATED)，請先呼叫下列方法來終止執行處理：
+1. 检查工作流实例的状态。 如果状态不是2 (COMPLETE)或4 (TERMINATED)，请首先通过调用以下方法终止实例：
 
    `ProcessManager.terminateProcess(<long_lived_invocation_id>)`。
 
-1. 呼叫下列方法以清除工作流程執行個體：
+1. 通过调用以下方法清除工作流实例：
 
    `ProcessManager.purgeProcessInstance(<long_lived_invocation_id>)`
 
-   此 `purgeProcessInstance` 方法會從AEM Forms伺服器資料庫和GDS （若已設定）中完全刪除指定叫用ID的所有資料。
+   此 `purgeProcessInstance` 方法会从AEM Forms服务器数据库和GDS（如果已配置）中完全删除指定调用ID的所有数据。
 
-### 處理孤立任務 {#orphan}
+### 处理孤立任务 {#orphan}
 
-孤立任務是指其容納流程已啟動但尚未提交的任務。 在此案例中， `process_instance_id` 是 **0** （零）。 因此，您無法使用程式執行個體ID來追蹤為孤立任務儲存的使用者資料。 不過，您可以使用孤立任務的工作ID來追蹤它。 您可以透過以下連結識別任務ID： `tb_task` 使用者的表格（如所述） [在已知工作流程發起人或參與者時識別流程執行個體ID](/help/forms/using/forms-workflow-jee-handling-user-data.md#initiator-participant).
+孤立任务是指其包含进程已启动但尚未提交的任务。 在本例中， `process_instance_id` 是 **0** （零）。 因此，无法使用进程实例ID跟踪为孤立任务存储的用户数据。 但是，您可以使用任务ID跟踪孤立任务。 您可以从以下位置识别任务ID `tb_task` 用户表（如中所述） [在工作流发起者或参与者已知时标识流程实例ID](/help/forms/using/forms-workflow-jee-handling-user-data.md#initiator-participant).
 
-取得工作ID後，請執行以下動作，從GDS和資料庫中清除具有孤立工作的相關檔案和資料。
+获得任务ID后，请执行以下操作以从GDS和数据库中清除具有孤立任务的关联文件和数据。
 
-1. 在AEM Forms伺服器資料庫上執行以下命令，以擷取已識別工作ID的ID。
+1. 在AEM Forms服务器数据库上执行以下命令，检索已标识任务ID的ID。
 
    ```sql
    select id from tb_form_data where task_id=<task_id>
    ```
 
-   查詢會傳回ID清單。 對於每個ID ( `fd_id`)，建立工作階段ID字串的清單，如下所示：
+   查询返回ID列表。 对于每个ID ( `fd_id`)返回的结果中，创建会话ID字符串的列表，如下所示：
 
    * _ `wfattach<task_id>`
    * `_wftask<fd_id>`
    * `_wftaskformid<fd_id>`
 
-1. 根據您的GDS指向檔案系統或資料庫，請執行下列步驟之一：
+1. 根据GDS指向文件系统还是数据库，执行以下步骤之一：
 
-   1. **檔案系統中的GDS**
+   1. **文件系统中的GDS**
 
-      在GDS檔案系統中：
+      在GDS文件系统中：
 
-      1. 搜尋副檔名為下列工作階段ID字串的檔案：
+      1. 搜索具有以下会话ID字符串作为其扩展名的文件：
       * `_wfattach<task_id>`
       * `_wftask<fd_id>`
       * `_wftaskformid<fd_id>`
 
-      具有這些副檔名的檔案是標籤檔案。 檔案名稱會以下列格式儲存：
+      具有这些扩展名的文件是标记文件。 它们与文件名一起以下列格式存储：
 
       `<file_name_guid>.session<session_id_string>`
 
-      1. 刪除所有標籤檔案和其他檔案，檔案名稱完全符合 `<file_name_guid>` 從檔案系統。
-   1. **資料庫中的GDS**
+      1. 删除所有标记文件和其他文件名完全相同的文件 `<file_name_guid>` 文件系统中的所有文件。
+   1. **数据库中的GDS**
 
-      針對每個工作階段ID執行以下命令：
+      对每个会话ID执行以下命令：
 
       ```sql
       delete from tb_dm_chunk where documentid in (select documentid from tb_dm_session_reference where sessionid=<session_id>)
@@ -187,7 +187,7 @@ AEM Forms JEE工作流程提供設計、建立和管理業務流程的工具。 
 
 
 
-1. 執行以下命令，從AEM Forms伺服器資料庫刪除工作ID的資料：
+1. 执行以下命令以从AEM Forms服务器数据库中删除任务ID的数据：
 
    ```sql
    delete from tb_task_acl where task_id=<task_id>

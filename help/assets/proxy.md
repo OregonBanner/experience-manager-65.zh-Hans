@@ -1,6 +1,6 @@
 ---
-title: '"[!DNL Assets] proxy development」'
-description: Proxy是 [!DNL Experience Manager] 使用Proxy Worker處理工作的執行個體。 瞭解如何設定 [!DNL Experience Manager] Proxy、支援的作業、Proxy元件，以及如何開發自訂Proxy Worker。
+title: ”[!DNL Assets] 代理开发”
+description: 代理是 [!DNL Experience Manager] 使用代理工作进程处理作业的实例。 了解如何配置 [!DNL Experience Manager] 代理、支持的操作、代理组件以及如何开发自定义代理工作程序。
 contentOwner: AG
 role: Admin, Architect
 exl-id: 42fff236-b4e1-4f42-922c-97da32a933cf
@@ -11,25 +11,25 @@ ht-degree: 0%
 
 ---
 
-# [!DNL Assets] proxy開發 {#assets-proxy-development}
+# [!DNL Assets] 代理开发 {#assets-proxy-development}
 
-[!DNL Adobe Experience Manager Assets] 會使用Proxy來分配特定工作的處理。
+[!DNL Adobe Experience Manager Assets] 使用代理为特定任务分发处理。
 
-Proxy是一種特定的（有時是獨立的）Experience Manager執行個體，它使用Proxy背景工作器作為負責處理工作和建立結果的處理器。 Proxy Worker可用於多種任務。 若是 [!DNL Assets] Proxy這可用於載入資產，以便在Assets內呈現。 例如， [IDS Proxy背景工作](indesign.md) 使用 [!DNL Adobe InDesign] 用於處理檔案以供在資產中使用的伺服器。
+代理是一种特定的（有时是单独的）Experience Manager实例，它使用代理工作程序作为负责处理作业和创建结果的处理器。 代理工作程序可用于多种任务。 如果是 [!DNL Assets] 代理，这可用于加载资源以在Assets中渲染。 例如， [IDS代理工作进程](indesign.md) 使用 [!DNL Adobe InDesign] 用于处理资源中使用的文件的服务器。
 
-當Proxy是獨立的 [!DNL Experience Manager] 執行個體這有助於減少 [!DNL Experience Manager] 製作執行個體。 依預設， [!DNL Assets] 在同一JVM中執行資產處理工作（透過Proxy外部化），以減少 [!DNL Experience Manager] 製作執行個體。
+当代理是单独的 [!DNL Experience Manager] 实例这有助于减轻 [!DNL Experience Manager] 创作实例。 默认情况下， [!DNL Assets] 在同一JVM中执行资源处理任务（通过代理外部化）以减少 [!DNL Experience Manager] 创作实例。
 
-## Proxy （HTTP存取） {#proxy-http-access}
+## 代理（HTTP访问） {#proxy-http-access}
 
-Proxy可透過HTTP Servlet使用，當它設定為接受處理作業時： `/libs/dam/cloud/proxy`. 此servlet會根據發佈的引數建立Sling作業。 然後將其新增至Proxy工作佇列，並連線至適當的Proxy Worker。
+当代理配置为接受以下位置的处理作业时，可以通过HTTP Servlet使用该代理： `/libs/dam/cloud/proxy`. 此servlet根据发布的参数创建sling作业。 然后将其添加到代理作业队列，并连接到相应的代理工作进程。
 
-### 支援的作業 {#supported-operations}
+### 支持的操作 {#supported-operations}
 
 * `job`
 
-   **需求**：引數 `jobevent` 必須設定為序列化值對應。 這可用來建立 `Event` 適用於工作處理器。
+   **要求**：参数 `jobevent` 必须设置为序列化值映射。 这用于创建 `Event` 用于作业处理器。
 
-   **結果**：新增工作。 如果成功，則會傳回唯一的工作ID。
+   **结果**：添加新作业。 如果成功，则会返回唯一的作业ID。
 
 ```shell
 curl -u admin:admin -F":operation=job" -F"someproperty=xxxxxxxxxxxx"
@@ -38,9 +38,9 @@ curl -u admin:admin -F":operation=job" -F"someproperty=xxxxxxxxxxxx"
 
 * `result`
 
-   **需求**：引數 `jobid` 必須設定。
+   **要求**：参数 `jobid` 必须设置。
 
-   **結果**：傳回由作業處理器建立的結果Node的JSON表示法。
+   **结果**：返回由作业处理器创建的结果节点的JSON表示形式。
 
 ```shell
 curl -u admin:admin -F":operation=result" -F"jobid=xxxxxxxxxxxx"
@@ -49,9 +49,9 @@ curl -u admin:admin -F":operation=result" -F"jobid=xxxxxxxxxxxx"
 
 * `resource`
 
-   **需求**：必須設定引數jobid。
+   **要求**：必须设置参数jobid。
 
-   **結果**：傳回與指定工作相關聯的資源。
+   **结果**：返回与给定作业关联的资源。
 
 ```shell
 curl -u admin:admin -F":operation=resource" -F"jobid=xxxxxxxxxxxx"
@@ -60,28 +60,28 @@ curl -u admin:admin -F":operation=resource" -F"jobid=xxxxxxxxxxxx"
 
 * `remove`
 
-   **需求**：必須設定引數jobid。
+   **要求**：必须设置参数jobid。
 
-   **結果**：移除工作（如果找到）。
+   **结果**：删除作业（如果找到）。
 
 ```shell
 curl -u admin:admin -F":operation=remove" -F"jobid=xxxxxxxxxxxx"
     http://localhost:4502/libs/dam/cloud/proxy
 ```
 
-### Proxy Worker {#proxy-worker}
+### 代理工作进程 {#proxy-worker}
 
-Proxy Worker是負責處理工作和建立結果的處理器。 背景工作位於Proxy執行個體上，且必須實作 [sling JobProcessor](https://sling.apache.org/site/eventing-and-jobs.html) 將被識別為Proxy Worker。
+代理工作进程是负责处理作业和创建结果的处理器。 工作进程驻留在代理实例上，必须实现 [sling JobProcessor](https://sling.apache.org/site/eventing-and-jobs.html) 将被识别为代理工作进程。
 
 >[!NOTE]
 >
->工作者必須實作 [sling JobProcessor](https://sling.apache.org/site/eventing-and-jobs.html) 將被識別為Proxy Worker。
+>工作人员必须实施 [sling JobProcessor](https://sling.apache.org/site/eventing-and-jobs.html) 将被识别为代理工作进程。
 
-### 使用者端API {#client-api}
+### 客户端API {#client-api}
 
-[`JobService`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/index.html) 可作為OSGi服務使用，提供建立工作、移除工作以及從這些工作取得結果的方法。 此服務的預設實作(`JobServiceImpl`)使用HTTP使用者端與遠端Proxy servlet通訊。
+[`JobService`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/index.html) 作为OSGi服务提供，该服务提供创建作业、删除作业以及从这些作业获取结果的方法。 此服务的默认实施(`JobServiceImpl`)使用HTTP客户端与远程代理servlet进行通信。
 
-以下是API使用方式的範例：
+以下是API用法的示例：
 
 ```java
 @Reference
@@ -103,7 +103,7 @@ Proxy Worker是負責處理工作和建立結果的處理器。 背景工作位�
  proxyJobService.removeJob(jobId);
 ```
 
-### Cloud Service設定 {#cloud-service-configurations}
+### Cloud Service配置 {#cloud-service-configurations}
 
 <!-- TBD: Cannot find com.day.cq.dam.api.proxy at https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/index.html which were generated in May 2020. Hiding this broken link for now.
 >[!NOTE]
@@ -111,13 +111,13 @@ Proxy Worker是負責處理工作和建立結果的處理器。 背景工作位�
 >Reference documentation for the proxy API is available under [`com.day.cq.dam.api.proxy`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/dam/api/proxy/package-summary.html).
 -->
 
-Proxy和Proxy背景工作設定均可透過雲端服務設定取得，可從以下網址存取： [!DNL Assets] **工具** 主控台或底下 `/etc/cloudservices/proxy`. 每個Proxy Worker都應該在 `/etc/cloudservices/proxy` worker特定組態詳細資訊(例如， `/etc/cloudservices/proxy/workername`)。
+可通过云服务配置使用代理和代理工作程序配置，可从访问 [!DNL Assets] **工具** 控制台或下 `/etc/cloudservices/proxy`. 每个代理工作进程应在 `/etc/cloudservices/proxy` 用于工作进程特定的配置详细信息(例如， `/etc/cloudservices/proxy/workername`)。
 
 >[!NOTE]
 >
->另請參閱 [InDesign ServerProxy Worker設定](indesign.md#configuring-the-proxy-worker-for-indesign-server) 和 [Cloud Services設定](../sites-developing/extending-cloud-config.md) 以取得詳細資訊。
+>参见 [InDesign Server代理工作进程配置](indesign.md#configuring-the-proxy-worker-for-indesign-server) 和 [Cloud Services配置](../sites-developing/extending-cloud-config.md) 了解更多信息。
 
-以下是API使用方式的範例：
+以下是API用法的示例：
 
 ```java
 @Reference(policy = ReferencePolicy.STATIC)
@@ -132,58 +132,58 @@ Proxy和Proxy背景工作設定均可透過雲端服務設定取得，可從以�
  final String value = cloudConfig.get("someProperty", "defaultValue");
 ```
 
-### 開發自訂的Proxy Worker {#developing-a-customized-proxy-worker}
+### 开发自定义的代理工作程序 {#developing-a-customized-proxy-worker}
 
-此 [IDS Proxy背景工作](indesign.md) 是 [!DNL Assets] 已提供現成可用的Proxy Worker，可將處理InDesign資產的工作委外。
+此 [IDS代理工作进程](indesign.md) 是 [!DNL Assets] 现成可用的代理工作程序，用于将InDesign资源的处理外包出去。
 
-您也可以開發和設定自己的 [!DNL Assets] proxy worker建立專門的員工，以派遣並外包 [!DNL Assets] 處理任務。
+您还可以开发和配置自己的 [!DNL Assets] 代理工作人员，创建专门的工作人员来派送并外包您的 [!DNL Assets] 正在处理任务。
 
-設定您自己的自訂Proxy Worker需要您：
+设置您自己的自定义代理工作程序需要您：
 
-* 設定和實作（使用Sling事件）：
+* 设置和实施（使用Sling事件）：
 
-   * 自訂工作主題
-   * 自訂作業事件處理常式
+   * 自定义作业主题
+   * 自定义作业事件处理程序
 
-* 然後使用JobService API來：
+* 然后，使用JobService API可以：
 
-   * 將您的自訂工作分派給Proxy
-   * 管理您的工作
+   * 将自定义作业分派给代理
+   * 管理您的作业
 
-* 如果您想從工作流程使用Proxy，您必須使用WorkflowExternalProcess API和JobService API實作自訂外部步驟。
+* 如果要从工作流中使用代理，则必须使用WorkflowExternalProcess API和JobService API实施自定义外部步骤。
 
-以下圖表和步驟詳細說明如何繼續：
+以下图表和步骤详细说明了如何继续：
 
 ![chlimage_1-249](assets/chlimage_1-249.png)
 
 >[!NOTE]
 >
->在下列步驟中，InDesign的對等項會指示為參考範例。
+>在以下步骤中，将InDesign等效项表示为参考示例。
 
-1. A [Sling工作](https://sling.apache.org/site/eventing-and-jobs.html) 會使用，因此您需要為使用案例定義工作主題。
+1. A [Sling作业](https://sling.apache.org/site/eventing-and-jobs.html) 使用，因此您需要为用例定义作业主题。
 
-   如需範例，請參閱 `IDSJob.IDS_EXTENDSCRIPT_JOB` 用於IDS Proxy Worker。
+   例如，请参阅 `IDSJob.IDS_EXTENDSCRIPT_JOB` 用于IDS代理工作进程。
 
-1. 外部步驟會用於觸發事件，然後等待直到完成；這是透過輪詢ID來完成。 您必須自行開發步驟來實作新功能。
+1. 外部步骤用于触发事件，然后等待该操作完成；可通过轮询ID来完成此操作。 您必须自行开发步骤来实施新功能。
 
-   實作 `WorkflowExternalProcess`，然後使用JobService API和您的工作主題來準備工作事件，並將其分派到JobService （OSGi服務）。
+   实施 `WorkflowExternalProcess`，然后使用作业服务API和作业主题准备作业事件并将其调度到作业服务（OSGi服务）。
 
-   如需範例，請參閱 `INDDMediaExtractProcess`IDS Proxy Worker的.java。
+   例如，请参阅 `INDDMediaExtractProcess`.java表示IDS代理工作进程。
 
-1. 實作您主題的工作處理常式。 此處理常式需要開發，以便執行您的特定動作，且被視為背景工作實作。
+1. 为主题实施作业处理程序。 此处理程序需要进行开发，以便执行特定操作并被视为工作程序实施。
 
-   如需範例，請參閱 `IDSJobProcessor.java` 用於IDS Proxy Worker。
+   例如，请参阅 `IDSJobProcessor.java` 用于IDS代理工作进程。
 
-1. 利用 `ProxyUtil.java` 在dam-commons中。 這可讓您使用DAM Proxy將工作分派給背景工作。
-
->[!NOTE]
->
->什麼是 [!DNL Assets] 集區機制是proxy framework未提供現成可用的機制。
->
->此 [!DNL InDesign] 整合可讓您存取集區： [!DNL InDesign] 伺服器(IDSPool)。 此集區專屬於 [!DNL InDesign] 整合，而非部分 [!DNL Assets] Proxy框架。
+1. 利用 `ProxyUtil.java` 在dam-commons中。 这允许您使用DAM代理将作业分派给工作人员。
 
 >[!NOTE]
 >
->結果的同步化：
+>什么是 [!DNL Assets] 代理框架不提供现成的池机制。
 >
->有n個執行個體使用相同的Proxy，處理結果會與Proxy一起保留。 使用者端(Experience Manager作者)的作業是使用在建立作業時提供給使用者端的相同唯一作業ID來請求結果。 Proxy只會完成工作，並保留可要求的結果。
+>此 [!DNL InDesign] 集成允许访问池 [!DNL InDesign] 服务器(IDSPool)。 此池特定于 [!DNL InDesign] 集成而不是的一部分 [!DNL Assets] 代理框架。
+
+>[!NOTE]
+>
+>结果同步：
+>
+>如果n个实例使用同一代理，则处理结果将保留在代理中。 客户端(Experience Manager作者)的作业是使用在作业创建时提供给客户端的相同唯一作业ID来请求结果。 代理只需完成作业并准备好结果即可请求。

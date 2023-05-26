@@ -1,6 +1,6 @@
 ---
 title: 简介 [!DNL Adobe Experience Manager Assets]
-description: 瞭解什麼是數位資產管理、其使用案例和 [!DNL Adobe Experience Manager Asset] 方案。
+description: 了解什么是数字资产管理、其用例以及 [!DNL Adobe Experience Manager Asset] 主动出击。
 contentOwner: AG
 feature: Asset Management
 role: Leader, Architect, User
@@ -12,85 +12,85 @@ ht-degree: 0%
 
 ---
 
-# 關於 [!DNL Adobe Experience Manager Assets] 作為DAM解決方案 {#administering-assets}
+# 关于 [!DNL Adobe Experience Manager Assets] 作为DAM解决方案 {#administering-assets}
 
-[!DNL Assets] 是數位資產管理(DAM)工具，是 [!DNL Experience Manager] 平台，讓您的企業能夠管理和散佈數位資產。 組織的使用者可以管理、儲存和存取許多型別的數位資產，例如影像、影片、檔案、音訊片段、3D檔案和豐富多彩的媒體，以便在網路、印刷品和數位發行中使用。
+[!DNL Assets] 是一个数字资产管理(DAM)工具，它是 [!DNL Experience Manager] 平台，使您的企业能够管理和分发数字资产。 组织内的用户可以管理、存储和访问多种类型的数字资产，如图像、视频、文档、音频剪辑、3D文件和富媒体，以便在Web上使用、在印刷品中使用和进行数字分发。
 
-## 什麼是數位資產管理？ {#what-is-digital-asset-management}
+## 什么是数字资产管理？ {#what-is-digital-asset-management}
 
-[!DNL Assets] 提供企業範圍內共用和發佈組織關鍵數位資產的功能。 組織的使用者可以透過Web介面（或CIFS或WebDAV資料夾）儲存、管理和存取數位資產，例如影像、圖形、音訊、視訊和檔案。
+[!DNL Assets] 在企业范围内共享和分发组织的主要数字资产。 组织内的用户可以通过Web界面（或CIFS或WebDAV文件夹）存储、管理和访问数字资产，如图像、图形、音频、视频和文档。
 
-[!DNL Assets] 功能 [!DNL Experience Manager] 可讓您進行下列作業：
+[!DNL Assets] 功能 [!DNL Experience Manager] 可让您执行以下操作：
 
-* 以各種檔案格式新增和共用影像、檔案、音訊檔案和視訊檔案。
-* 透過按標籤、燈箱或星星（您的最愛）分組來管理資產。 新增註解至資產。
-* 透過搜尋檔案名稱、檔案全文以及搜尋日期、檔案型別和標籤來尋找資產。
-* 新增或編輯資產的中繼資料資訊。 中繼資料會自動與對應的資產一起建立版本。 您可以匯入或匯出資產中繼資料。
-* 執行影像編輯功能，例如縮放和新增影像濾鏡。 使用WebDAV或CIFS資料夾同時匯入和匯出多個數位資產。
-* 使用工作流程與通知允許共同處理和下載任何資產集，並管理資產的存取許可權。
+* 以各种文件格式添加和共享图像、文档、音频文件和视频文件。
+* 通过按标记、灯箱或星星（您的收藏夹）对资源进行分组来管理资源。 向资源添加注释。
+* 通过搜索文件名、文档全文以及搜索日期、文档类型和标记来查找资源。
+* 添加或编辑资源的元数据信息。 元数据会自动与相应的资源一起进行版本控制。 您可以导入或导出资源元数据。
+* 执行图像编辑功能，例如缩放和添加图像滤镜。 使用WebDAV或CIFS文件夹同时导入和导出多个数字资产。
+* 使用工作流和通知允许联合处理和下载任何资产集并管理对资产的访问权限。
 
-### [!DNL Experience Manager Assets] 與整合 [!DNL Experience Manager Sites] {#aem-assets-fully-integrated-in-cq-wcm}
+### [!DNL Experience Manager Assets] 与集成 [!DNL Experience Manager Sites] {#aem-assets-fully-integrated-in-cq-wcm}
 
-[!DNL Assets] 完全整合 [!DNL Sites] 和適用於所有使用案例。 例如，編寫網頁時， [!DNL Sites] 作者可透過「內容尋找器」尋找及使用數位資產。 的使用者介面 [!DNL Assets] 與的相同 [!DNL Sites]. 另請參閱 [網站概觀](/help/sites-authoring/page-authoring.md) 以取得完整詳細資訊。
+[!DNL Assets] 与完全集成 [!DNL Sites] 和可以无缝地用于所有用例。 例如，在创作网页时， [!DNL Sites] 作者可以通过Content Finder查找和使用数字资产。 的用户界面 [!DNL Assets] 与 [!DNL Sites]. 参见 [Sites概述](/help/sites-authoring/page-authoring.md) 以了解完整的详细信息。
 
-基本使用者介面與相同， [!DNL Sites]. 另請參閱 [Sites概述](/help/sites-authoring/page-authoring.md) 以取得完整詳細資訊。
+基本用户界面与相同 [!DNL Sites]. 参见 [站点概述](/help/sites-authoring/page-authoring.md) 以了解完整的详细信息。
 
-### 數位資產管理與影像元件 {#digital-asset-management-versus-image-component}
+### 数字资产管理与图像组件 {#digital-asset-management-versus-image-component}
 
-在決定要將影像放入DAM存放庫或使用影像元件時，請考慮影像生命週期：
+在决定是将图像放入DAM存储库还是使用图像组件时，请考虑图像生命周期：
 
-* 如果影像的生命週期與頁面相同，請使用影像元件。
-* 如果影像有單獨的生命週期，例如，如果您使用影像兩次或在WCM外部，請使用 [!DNL Assets].
+* 如果图像与页面具有相同的生命周期，请使用图像组件。
+* 如果图像有单独的生命周期，例如，如果图像使用两次或在WCM之外使用，请使用 [!DNL Assets].
 
-## 什麼是數位資產？ {#what-are-digital-assets}
+## 什么是数字资产？ {#what-are-digital-assets}
 
-資產是數位檔案、影像、視訊或音訊（或其中一部分），可以多次轉譯也可以有子資產（例如Photoshop檔案中的圖層、PowerPoint檔案中的投影片、pdf中的頁面、ZIP中的檔案）。
+资产是指数字文档、图像、视频或音频（或其中任一部分），它们可以具有多个演绎版，并可以具有子资产（例如，Photoshop文件中的图层、PowerPoint文件中的幻灯片、PDF中的页面、ZIP中的文件）。
 
-資產本質上是二進位加中繼資料、轉譯加子資產。 請參閱 [DAM效能指南](/help/sites-deploying/assets-performance-sizing.md) 詳細資訊。
+资源基本上是二进制文件加元数据加演绎版加子资源。 请参阅 [DAM性能指南](/help/sites-deploying/assets-performance-sizing.md) 以了解详细信息。
 
 >[!CAUTION]
 >
->上傳和/或編輯大量資產（尤其是影像）可能會影響您的效能 [!DNL Experience Manager] 部署。
+>上传和/或编辑大量资产（特别是图像）可能会影响性能 [!DNL Experience Manager] 部署。
 
-### [!DNL Experience Manager Assets] 術語 {#aem-assets-terminology}
+### [!DNL Experience Manager Assets] 术语 {#aem-assets-terminology}
 
-在中使用數位資產時 [!DNL Experience Manager]，您必須瞭解下列術語：
+在中使用数字资产时 [!DNL Experience Manager]，您需要了解以下术语：
 
-* **集合**：資產集合，根據實體位置（資料夾）、一般屬性（儲存的搜尋資料夾）或使用者選擇（燈箱資料夾）。
+* **收藏集**：资产集合，基于物理位置（文件夹）、公共属性（保存的搜索文件夹）或用户选择（灯箱文件夹）。
 
-* **中繼資料** [!DNL Assets] 具有中繼資料；例如，作者、到期日、DRM資訊(Digital Rights Management)等。 中繼資料受存取控制。 [!DNL Assets] 支援下列各種立即可用的常見中繼資料結構：
+* **元数据** [!DNL Assets] 具有元数据；例如，作者、到期日、DRM信息(Digital Rights Management)等。 元数据受访问控制。 [!DNL Assets] 支持以下各种现成的常见元数据架构：
 
-   * Dublin Core：包括作者、說明、日期、主旨等。
+   * 都柏林核心：包括作者、描述、日期、主题等。
    * IPTC：包括事件、模型、位置等。
-   * WCM：包含頁面屬性、 [!UICONTROL 準時] 和 [!UICONTROL 關閉時間]、等等。
+   * WCM：包括页面属性、 [!UICONTROL 准时] 和 [!UICONTROL 关闭时间]，等等。
 
-* **標籤**： [!DNL Assets] 可以進行標籤和分類。 另請參閱 [組織資產](/help/assets/organize-assets.md).
+* **标记**： [!DNL Assets] 可以进行标记和分类。 参见 [组织资源](/help/assets/organize-assets.md).
 
-* **轉譯**：轉譯是資產的二進位表示法。 [!DNL Assets] 一律具有主要表示法 — 上傳檔案的主要表示法。 他們可以建立任何數量的其他表示法，例如透過自訂工作流程步驟或資產上傳時建立。 轉譯可能大小不同、解析度不同、加上了浮水印，或是其他特徵有所變更。
+* **演绎版**：演绎版是资源的二进制表示形式。 [!DNL Assets] 始终具有主要表示形式 — 已上传文件的主要表示形式。 他们可以创建任意数量的其他表示法，例如通过自定义工作流步骤在上传资产时创建。 演绎版可能具有不同的大小、不同的分辨率、添加的水印或某些其他已更改的特征。
 
-* **版本**：版本設定會在特定時間點建立數位資產的快照。 您可以將資產還原至舊版。 另請參閱 [版本設定 [!DNL Assets]](manage-assets.md#asset-versioning).
+* **版本**：版本控制可在特定时间点创建数字资产的快照。 您可以将资源还原到以前的版本。 参见 [版本控制 [!DNL Assets]](manage-assets.md#asset-versioning).
 
-* **子資產**：子資產是組成資產的資產，例如 [!DNL Adobe Photoshop] PDF檔案中的一或多個頁面。 在 [!DNL Assets]，您可以像管理資產一樣管理子資產。
+* **子资产**：子资产是构成资产的资产，例如，中的层 [!DNL Adobe Photoshop] PDF文件中的一个或多个页。 In [!DNL Assets]，您可以像管理资产一样管理子资产。
 
-### 如何使用數位資產 {#how-to-work-with-assets}
+### 如何使用数字资产 {#how-to-work-with-assets}
 
-您對資產或集合執行動作。 動作可以建立或修改資產、收藏集和轉譯。 您在資產上執行的許多基本動作（上傳、刪除、更新、儲存子資產）都會觸發預先設定的工作流程。 這些會自動開啟 [!DNL Assets] 和的詳細說明，請參閱 [!DNL Assets] 媒體處理常式。
+您可以对资产或收藏集执行操作。 操作可以创建或修改资源、收藏集和演绎版。 您在资产上执行的许多基本操作（上传、删除、更新、保存子资产）都会触发预配置的工作流。 这些功能会自动打开 [!DNL Assets] 并在以下部分中进行了详细描述： [!DNL Assets] 媒体处理程序。
 
-您可以透過這些預先設定的工作流程執行的任務：
+您可以使用这些预配置的工作流执行的任务：
 
-* 將資產儲存在存放庫中，或從存放庫中刪除資產。
-* 擷取並儲存資產的中繼資料；個別中繼資料專案會儲存為XMP。
-* 為資產產生轉譯和縮圖，包括視需要自動調整大小和裁切。
-* 視需要轉碼資產。 例如，行動和Web使用的視訊會以每秒24個影格進行轉碼，而下載的視訊則為每秒30個影格。 行動裝置和網頁使用的音訊會以128 Kbps轉碼，下載時則以192 Kbps轉碼。
+* 将资源保存在存储库中，或从存储库中删除资源。
+* 提取并保存资源的元数据；单个元数据项将另存为XMP。
+* 为资源生成演绎版和缩略图；包括根据需要自动调整大小和裁切。
+* 必要时对资产进行转码。 例如，用于移动和Web使用的视频以每秒24帧进行转码，下载视频以每秒30帧。 用于移动和Web的音频使用128 Kbps进行转码，用于下载的音频使用192 Kbps。
 
-當然，您也可以手動套用工作流程。 另請參閱 [Assets媒體處理常式](media-handlers.md)以取得預設工作流程清單。
+当然，您也可以手动应用工作流。 参见 [Assets媒体处理程序](media-handlers.md)以获取默认工作流的列表。
 
 ## [!DNL Experience Manager Assets] 和 [!DNL Media Library] {#cq-dam-vs-cq-medialibrary}
 
-另請參閱 [Assets與Media Library](medialibrary.md) 以取得差異的相關資訊。
+参见 [Assets和Media Library](medialibrary.md) 以了解关于这些差异的信息。
 
 >[!MORELIKETHIS]
 >
->* [影片簡介 — Experience Manager Assets as a modern DAM](https://www.youtube.com/watch?v=PBwQqZgC-yo)
->* [瞭解中繼資料概念](/help/assets/metadata-concepts.md)
+>* [视频介绍 — Experience Manager Assets as a modern DAM](https://www.youtube.com/watch?v=PBwQqZgC-yo)
+>* [了解元数据概念](/help/assets/metadata-concepts.md)
 

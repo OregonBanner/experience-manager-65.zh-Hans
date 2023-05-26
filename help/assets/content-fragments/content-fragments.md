@@ -1,6 +1,6 @@
 ---
 title: 使用内容片段
-description: 瞭解Adobe Experience Manager (AEM)中的內容片段如何讓您設計、建立、組織和使用獨立於頁面的內容，非常適合Headless傳送。
+description: 了解Adobe Experience Manager (AEM)中的内容片段如何允许您设计、创建、策划和使用独立于页面的内容，非常适用于Headless投放。
 feature: Content Fragments
 role: User
 exl-id: 0ee883c5-0cea-46b7-a759-600b8ea3bc3e
@@ -13,7 +13,7 @@ ht-degree: 93%
 
 # 使用内容片段 {#working-with-content-fragments}
 
-透過Adobe Experience Manager (AEM)，內容片段可讓您設計、建立、組織和 [發佈獨立於頁面的內容](/help/sites-authoring/content-fragments.md) 它們可讓您準備內容以用於多個位置/多個管道，非常適合Headless傳送。
+借助Adobe Experience Manager (AEM)，内容片段允许您设计、创建、管理和 [发布独立于页面的内容](/help/sites-authoring/content-fragments.md) 利用这些功能，可准备内容以准备在多个位置/多个渠道上使用，非常适用于Headless投放。
 
 内容片段包含结构化内容：
 
@@ -43,7 +43,7 @@ ht-degree: 93%
 * [Markdown](/help/assets/content-fragments/content-fragments-markdown.md) – 使用片段的 markdown 语法
 * [使用关联内容](/help/assets/content-fragments/content-fragments-assoc-content.md) – 添加关联内容
 * [元数据 – 片段属性](/help/assets/content-fragments/content-fragments-metadata.md) – 查看和编辑片段属性
-* 使用 [內容片段，搭配GraphQL一起提供內容](/help/assets/content-fragments/content-fragments-graphql.md) 供您的應用程式使用。 若要協助處理此專案，您可以預覽 [JSON輸出](/help/assets/content-fragments/content-fragments-json-preview.md).
+* 使用 [内容片段与GraphQL一起交付内容](/help/assets/content-fragments/content-fragments-graphql.md) 以便在您的应用程序中使用。 要帮助您完成此操作，您可以预览 [JSON输出](/help/assets/content-fragments/content-fragments-json-preview.md).
 
 >[!NOTE]
 >
@@ -86,7 +86,7 @@ ht-degree: 93%
 
 >[!NOTE]
 >
->在AEM 6.3之前，內容片段是使用範本而非模型建立的。 範本無法再用來建立新片段，但仍支援使用這類範本建立的任何片段。
+>在AEM 6.3之前，内容片段是使用模板而不是模型创建的。 模板不再可用于创建新片段，但仍支持使用此类模板创建的任何片段。
 
 ## 内容片段和内容服务 {#content-fragments-and-content-services}
 
@@ -126,7 +126,7 @@ AEM 内容片段可用于描述和管理结构化内容。 结构化内容在可
 
 * 存储为&#x200B;**资产**：
 
-   * 內容片段（及其變數）可以透過以下網址建立及維護： **資產** 主控台。
+   * 内容片段（及其变体）可以从以下网站创建和维护 **资产** 控制台。
    * 在内容片段编辑器中创作和编辑。
 
 * 通过内容片段组件](/help/sites-authoring/content-fragments.md)（引用组件）在[页面编辑器中使用：

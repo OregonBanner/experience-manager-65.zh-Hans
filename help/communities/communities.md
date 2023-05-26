@@ -1,7 +1,7 @@
 ---
-title: 開發社群
+title: 发展中的社区
 seo-title: Developing Communities
-description: 建立和自訂社群功能，例如論壇、使用者群組等
+description: 创建和自定义社区功能，如论坛、用户组等
 seo-description: Create and customize community features such as forums, user groups, and more
 uuid: 51dc54da-9090-4d36-adf9-72d5479062a5
 contentOwner: msm-service
@@ -17,83 +17,83 @@ ht-degree: 5%
 
 ---
 
-# 開發社群  {#developing-communities}
+# 发展中的社区  {#developing-communities}
 
 ## 概述 {#overview}
 
-AEM Communities可簡化社群功能的建立和自訂作業，例如論壇、使用者群組、部落格、Q&amp;A、行事曆、評論、評論、投票、評分和指派。 這些功能導致使用者產生的內容(UGC)輸入到發佈環境中。
+AEM Communities简化了社区功能（如论坛、用户组、博客、Q&amp;A、日历、评论、评论、投票、评级和分配）的创建和自定义。 这些功能导致在发布环境中输入用户生成的内容(UGC)。
 
-的基礎 [社群網站](overview.md#communitiessites) 是 [社交元件框架](scf.md) (SCF)。 社群網站的建立從選擇開始 [社群網站範本](sites-console.md) 由下列專案組成 [社群功能](functions.md).
+的基础 [社区站点](overview.md#communitiessites) 是 [社交组件框架](scf.md) (SCF)。 社区站点的创建从选择开始 [社区站点模板](sites-console.md) 由以下各项组成 [社区功能](functions.md).
 
-如需概覽和快速入門教學課程，請造訪：
+有关概述和入门教程，请访问：
 
-* [AEM Communities概觀](overview.md)
-* [AEM Communities快速入門](getting-started.md)
+* [AEM Communities概述](overview.md)
+* [AEM Communities快速入门](getting-started.md)
 
 >[!NOTE]
 > 
->強烈建議隨時掌握最新資訊 [最新版本](deploy-communities.md#latest-releases).
+>强烈建议及时了解 [最新版本](deploy-communities.md#latest-releases).
 
-## 建議的部署 {#recommended-deployments}
+## 建议的部署 {#recommended-deployments}
 
-* [社群內容儲存](working-with-srp.md)：討論UGC一般存放區的可用SRP選擇
-* [社群適用的建議拓撲](topologies.md)：根據使用案例和SRP選擇討論拓撲
+* [社区内容存储](working-with-srp.md)：讨论UGC公用存储的可用SRP选择
+* [推荐的社区拓扑](topologies.md)：讨论基于用例和SRP选择的拓扑
 
-## 社交元件架構 {#social-component-framework}
+## 社交组件框架 {#social-component-framework}
 
-* [社交元件架構](scf.md)：框架和API概觀。
-* [SCF Handlebars協助程式](handlebars-helpers.md)：預設協助程式以及如何撰寫自訂協助程式。
-* [使用者端自訂](client-customize.md)：自訂在瀏覽器中執行的程式碼。
-* [伺服器端自訂](server-customize.md)：自訂在伺服器上執行的程式碼。
-* [儲存資源提供者(SRP)](srp.md)：社群內容儲存概述。
-* [編碼准則](code-guide.md)：指南、提示與秘訣。
-* [社群元件指南](components-guide.md)：互動式開發工具。
+* [社交组件框架](scf.md)：框架和API概述。
+* [SCF Handlebars助手](handlebars-helpers.md)：默认帮助程序以及如何编写自定义帮助程序。
+* [客户端自定义](client-customize.md)：自定义在浏览器中运行的代码。
+* [服务器端自定义](server-customize.md)：自定义在服务器上运行的代码。
+* [存储资源提供程序(SRP)](srp.md)：社区内容存储概述。
+* [编码准则](code-guide.md)：指南、提示和技巧。
+* [社区组件指南](components-guide.md)：交互式开发工具。
 
-## 元件、函式和Feature Essentials {#component-function-and-feature-essentials}
+## 组件、功能和功能要点 {#component-function-and-feature-essentials}
 
-AEM Communities元件、函式和功能提供建置區塊，以便 [社群網站](sites-console.md).
+AEM Communities组件、功能和特性提供了构建块， [社区站点](sites-console.md).
 
-* [元件、函式和Feature Essentials](essentials.md)
-* [Communities元件的Clientlibs](clientlibs.md)
+* [组件、功能和功能要点](essentials.md)
+* [适用于社区组件的Clientlibs](clientlibs.md)
 * [社区功能](functions.md)
 * [社区组模板](tools-groups.md)
 * [社区站点模板](sites.md)
 
 ## 社区成员 {#community-members}
 
-* [管理使用者和使用者群組](users.md)
-* [使用Facebook和Twitter進行社交登入](social-login.md)
+* [管理用户和用户组](users.md)
+* [使用Facebook和Twitter进行社交登录](social-login.md)
 
 ## 社区组 {#community-groups}
 
-[社群群組](overview.md#communitygroups) 是允許社群成員在社群網站內建立子社群的構想。 您可以在發佈或作者環境中建立社群群組。
+[社区组](overview.md#communitygroups) 是允许社区成员在社区站点内形成子社区的概念。 可在发布或创作环境中创建社区组。
 
-* [社群群組Essentials](essentials-groups.md)
-* [群組功能](functions.md#groups-function)
+* [社区组要点](essentials-groups.md)
+* [组功能](functions.md#groups-function)
 * [社区组模板](tools-groups.md)
-* [管理使用者和使用者群組](users.md)
-* [作者適用的社群群組](creating-groups.md)
+* [管理用户和用户组](users.md)
+* [作者社区组](creating-groups.md)
 
-## 管理資料 {#managing-data}
+## 管理数据 {#managing-data}
 
-* [SRP和UGC Essentials](srp-and-ugc.md) - SRP API公用程式方法與範例
-* [標籤Essentials](tag.md)  — 社群成員可標籤UGC和/或編目啟用資源
+* [SRP和UGC Essentials](srp-and-ugc.md) - SRP API实用程序方法和示例
+* [Tag Essentials](tag.md)  — 社区成员能够标记UGC和/或编录的启用资源
 
 ## 教程 {#tutorials}
 
-* [使用者端教學課程](tutorials.md#client-side-customization)
-* [伺服器端教學課程](tutorials.md#server-side-customization)
-* [操作說明](tutorials.md#how-to-instructions)
+* [客户端教程](tutorials.md#client-side-customization)
+* [服务器端教程](tutorials.md#server-side-customization)
+* [操作说明](tutorials.md#how-to-instructions)
 
 ## 疑难解答 {#troubleshooting}
 
 * [疑难解答](troubleshooting.md)
 * [已知问题](/help/release-notes/release-notes.md)
 
-## 相關Communities檔案 {#related-communities-documentation}
+## 相关社区文档 {#related-communities-documentation}
 
-* 造訪 [部署社群](deploy-communities.md) 以瞭解建議的部署和Dispatcher設定。
+* 访问 [部署社区](deploy-communities.md) 了解建议的部署和Dispatcher配置。
 
-* 造訪 [管理社群網站](administer-landing.md) 瞭解有關建立社群網站、設定社群網站範本、仲裁社群內容、管理成員和設定傳訊功能的資訊。
+* 访问 [管理社区站点](administer-landing.md) 了解有关创建社区站点、配置社区站点模板、审核社区内容、管理成员和配置消息传送的信息。
 
-* 造訪 [Authoring Communities元件](author-communities.md) 瞭解如何使用及設定Communities元件進行創作。
+* 访问 [创作社区组件](author-communities.md) 了解如何使用创作和配置社区组件。

@@ -1,6 +1,6 @@
 ---
 title: Markdown
-description: 瞭解內容片段編輯器如何使用Markdown語法，讓您輕鬆建立Headless內容。
+description: 了解内容片段编辑器如何使用Markdown语法，轻松地创建Headless内容。
 feature: Content Fragments
 role: User
 exl-id: e4340828-fe16-4edf-94c9-b0b145740e74
@@ -13,7 +13,7 @@ ht-degree: 91%
 
 # Markdown {#markdown}
 
-當您 [製作](/help/assets/content-fragments/content-fragments-variations.md#authoring-your-content)，內容片段編輯器會使用 *markdown* 語法可讓您輕鬆撰寫Headless內容：
+当您 [创作](/help/assets/content-fragments/content-fragments-variations.md#authoring-your-content)，内容片段编辑器使用 *Markdown* 语法让您能够轻松编写Headless内容：
 
 ![Markdown 编辑器](/help/assets/content-fragments/assets/cfm-markdown-01.png)
 
@@ -99,7 +99,7 @@ ht-degree: 91%
 
     `![Alt text][id]`
 
-其中「id」是已定義影像參考的名稱。 图像引用是使用与链接引用相同的语法来定义的：
+其中，“id”是定义的图像引用的名称。 图像引用是使用与链接引用相同的语法来定义的：
 
     `[id]: url/to/image "Optional title attribute"`
 

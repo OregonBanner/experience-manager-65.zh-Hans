@@ -1,7 +1,7 @@
 ---
-title: 設計無障礙HTML5表單
+title: 设计无障碍HTML5表单
 seo-title: Designing accessible HTML5 forms
-description: HTML5表單使用ARIAHTML5協助工具標準。 這些表單支援標籤式導覽，經認證與常見熒幕閱讀器相容。
+description: HTML5表单使用ARIAHTML5辅助功能标准。 这些表单支持选项卡式导航，经认证与常用屏幕阅读器兼容。
 seo-description: HTML5 forms use the ARIA HTML5 accessibility standard. These forms support tabbed navigation and are certified to be compatible with common screen readers.
 uuid: 1ce5ba39-69ea-4d0e-96ea-e2a38b21d6b7
 content-type: reference
@@ -18,19 +18,19 @@ ht-degree: 0%
 
 ---
 
-# 設計無障礙HTML5表單 {#designing-accessible-html-forms}
+# 设计无障碍HTML5表单 {#designing-accessible-html-forms}
 
-HTML5表單使用ARIAHTML5協助工具標準來產生無障礙的HTML表單。 這些表單支援索引標籤式導覽（Mozilla FireFox除外），並且經過認證可與常見熒幕閱讀程式相容。 若要產生具備良好協助工具功能的HTML5表單，請根據一些基本設計准則來設計XFA表單範本。 設計准則包括設定正確的標籤順序，並為每個表單控制項提供「說文字」內容。 AEM Forms Designer支援這些表單控制項屬性的設定，以產生無障礙的PDF和HTML5表單。
+HTML5表单使用ARIAHTML5辅助功能标准生成无障碍的HTML表单。 这些表单支持选项卡式导航（Mozilla FireFox除外），并且经认证与常用屏幕阅读器兼容。 要生成具有良好辅助功能的HTML5表单，请根据一些基本设计准则来设计XFA表单模板。 设计准则包括配置正确的选项卡顺序并为每个表单控件提供“说出文本”内容。 AEM Forms Designer支持设置这些表单控件属性，以生成可访问的PDF和HTML5表单。
 
-*附註：頁標式導覽不會涵蓋受保護欄位，例如顯示值總和的計算欄位。 若要讓熒幕助讀程式讀取受保護欄位的值，請在受保護欄位的頂端或旁邊，放置空白的唯讀欄位。 將受保護欄位的值指派給新的唯讀欄位。 熒幕助讀程式或索引標籤式導覽可以挑選這個唯讀欄位，並將其朗讀為受保護欄位的值。*
+*注意：选项卡式导航不涵盖受保护字段，例如显示值总和的计算字段。 要使屏幕阅读器读取受保护字段的值，请在受保护字段的顶部或旁边放置一个空的只读字段。 将受保护字段的值分配给新的只读字段。 屏幕阅读器或选项卡式导航器可以选取此只读字段，并将其作为受保护字段的值发出。*
 
-AEM Forms Designer包含許多可傳遞給熒幕朗讀程式的「說話文字」選項。 對於表單中的每個物件，使用者可以為熒幕助讀程式文字指定下列其中一個設定：
+AEM Forms Designer包括许多可传递给屏幕阅读器的讲话文本选项。 对于表单中的每个对象，用户可以为屏幕阅读器文本指定以下几种设置之一：
 
-* 自訂熒幕助讀程式文字，可使用「協助工具」浮動視窗進行設定。 作者可以標註按鈕和欄位的名稱及其用途。
-* 工具提示，可在「協助工具」浮動視窗中設定。
-* 表單上的欄位註解。
-* 物件的名稱，如「繫結」標籤的「名稱」選項中所指定。
+* 自定义屏幕阅读器文本，可使用辅助功能面板进行设置。 作者可以注释按钮和字段的名称及其用途。
+* 工具提示，可在“辅助功能”面板中设置。
+* 表单上的字段的字幕。
+* 对象名称，在“绑定”选项卡的“名称”选项中指定。
 
-![協助工具](assets/accessibility.png)
+![辅助功能](assets/accessibility.png)
 
-當表單控制項上有工具提示、熒幕Reader文字和註解等多個選項可用時，熒幕Reader只會使用這些屬性之一。 預設順序為「自訂熒幕Reader文字」、「工具提示」、「註解」和「名稱」。 您可以使用「熒幕」Reader來覆寫預設順序 **優先順序** 協助工具浮動視窗中的選項。
+当“表单”控件上有工具提示、屏幕Reader文本和题注等多个选项可用时，“屏幕”Reader只使用其中一个属性。 默认顺序为“自定义屏幕Reader文本”、“工具提示”、“标题”和“名称”。 您可以使用屏幕Reader覆盖默认顺序 **优先顺序** “辅助功能”面板中的选项。

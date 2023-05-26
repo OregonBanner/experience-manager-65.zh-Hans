@@ -1,7 +1,7 @@
 ---
-title: 將草稿和提交元件與資料庫整合的範例
+title: 将草稿和提交组件与数据库集成的示例
 seo-title: Sample for integrating drafts & submissions component with database
-description: 參考自訂資料和中繼資料服務的實作，以將草稿和提交元件與資料庫整合。
+description: 参考自定义数据和元数据服务的实施，以将草稿和提交组件与数据库集成。
 seo-description: Reference implementation of customized data and metadata services to integrate drafts and submissions component with a database.
 uuid: ccdb900e-2c2e-4ed3-8a88-5c97aa0092a1
 content-type: reference
@@ -16,54 +16,54 @@ ht-degree: 1%
 
 ---
 
-# 將草稿和提交元件與資料庫整合的範例 {#sample-for-integrating-drafts-submissions-component-with-database}
+# 将草稿和提交组件与数据库集成的示例 {#sample-for-integrating-drafts-submissions-component-with-database}
 
-## 範例概述 {#sample-overview}
+## 示例概述 {#sample-overview}
 
-AEM Forms入口網站草稿和提交元件可讓使用者將其表單儲存為草稿，並在稍後從任何裝置提交。 此外，使用者還可以在入口網站上檢視他們提交的表單。 為了啟用此功能，AEM Forms提供資料和中繼資料服務，以儲存使用者在表單中填入的資料，以及與草稿和已提交表單關聯的表單中繼資料。 依預設，此資料會儲存在CRX存放庫中。 不過，當使用者透過AEM發佈執行個體（通常位於企業防火牆之外）與表單互動時，組織可能會想要自訂資料儲存，使其更安全可靠。
+AEM Forms portal草稿和提交组件允许用户将其表单另存为草稿，并稍后从任何设备提交。 此外，用户还可以在门户上查看他们提交的表单。 为了启用此功能，AEM Forms提供数据和元数据服务，以存储用户填写的表单数据，以及与草稿和已提交表单关联的表单元数据。 默认情况下，此数据存储在CRX存储库中。 但是，当用户通过AEM发布实例（通常位于企业防火墙之外）与表单进行交互时，组织可能希望自定义数据存储以便使其更加安全和可靠。
 
-本檔案中討論的範例是自訂資料和中繼資料服務的參考實作，以將草稿和提交元件與資料庫整合。 範例實作中使用的資料庫為 **MySQL 5.6.24**. 不過，您可以將草稿和提交元件與您選擇的任何資料庫整合。
+本文档中讨论的示例是自定义数据和元数据服务的参考实现，用于将草稿和提交组件与数据库集成。 示例实施中使用的数据库是 **MySQL 5.6.24**. 但是，您可以将草稿和提交组件与所选的任何数据库集成。
 
 >[!NOTE]
 >
->* 本檔案中說明的範例和設定是根據MySQL 5.6.24，您必須適當地取代它們來取代資料庫系統。
->* 確保您已安裝最新版AEM Forms附加元件套件。 如需可用套件的清單，請參閱 [AEM Forms發行版本](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) 文章。
->* 範例套件僅適用於Adaptive Forms提交動作。
+>* 本文档中说明的示例和配置均基于MySQL 5.6.24，您必须将它们适当地替换为您的数据库系统。
+>* 确保您已安装最新版本的AEM Forms附加组件包。 有关可用包的列表，请参阅 [AEM Forms版本](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) 文章。
+>* 示例包仅适用于自适应Forms提交操作。
 
 
-## 設定和設定範例 {#set-up-and-configure-the-sample}
+## 设置和配置示例 {#set-up-and-configure-the-sample}
 
-在所有作者和發佈執行個體上執行以下步驟，以安裝和設定範例：
+在所有创作和发布实例上执行以下步骤，以安装和配置示例：
 
-1. 下載下列專案 **aem-fp-db-integration-sample-pkg-6.1.2.zip** 封裝至您的檔案系統。
+1. 下载以下内容 **aem-fp-db-integration-sample-pkg-6.1.2.zip** 包到您的文件系统。
 
-   資料庫整合的範例套件
+   用于数据库集成的示例包
 
 [获取文件](assets/aem-fp-db-integration-sample-pkg-6.1.2.zip)
 
-1. 前往AEM封裝管理員，網址為https://[*主機*]：[*連線埠*]/crx/packmgr/。
-1. 按一下 **[!UICONTROL 上傳套裝]**.
+1. 转到AEM包管理器，网址为https://[*主机*]：[*端口*]/crx/packmgr/.
+1. 单击 **[!UICONTROL 上传包]**.
 
-1. 瀏覽以選取 **aem-fp-db-integration-sample-pkg-6.1.2.zip** 封裝並按一下 **[!UICONTROL 確定]**.
-1. 按一下 **[!UICONTROL 安裝]** 至套件旁邊，以安裝套件。
-1. 前往 **[!UICONTROL AEM Web主控台設定]**
-頁面為https://[*主機*]：[*連線埠*]/system/console/configMgr。
-1. 按一下以開啟 **[!UICONTROL Forms入口網站草稿和提交設定]** 在編輯模式中。
+1. 浏览以选择 **aem-fp-db-integration-sample-pkg-6.1.2.zip** 打包并单击 **[!UICONTROL 确定]**.
+1. 单击 **[!UICONTROL 安装]** 到包旁边以安装包。
+1. 转到 **[!UICONTROL AEM Web控制台配置]**
+页面：https://[*主机*]：[*端口*]/system/console/configMgr.
+1. 单击以打开 **[!UICONTROL Forms Portal草稿和提交配置]** 在编辑模式下。
 
-1. 依照下表的說明，指定屬性的值：
+1. 按照下表中的说明指定属性的值：
 
    | **属性** | **描述** | **值** |
    |---|---|---|
-   | Forms入口網站草稿資料服務 | 草稿資料服務的識別碼 | formsportal.sampledataservice |
-   | Forms入口網站草稿中繼資料服務 | 草稿中繼資料服務的識別碼 | formsportal.samplemetadataservice |
-   | Forms入口網站提交資料服務 | 用於提交資料服務的識別碼 | formsportal.sampledataservice |
-   | Forms入口網站提交中繼資料服務 | 用於提交中繼資料服務的識別碼 | formsportal.samplemetadataservice |
-   | Forms入口網站擱置中簽署資料服務 | 擱置中簽署資料服務的識別碼 | formsportal.sampledataservice |
-   | Forms入口網站擱置簽署中繼資料服務 | 擱置簽署中繼資料服務的識別碼 | formsportal.samplemetadataservice |
+   | Forms Portal草稿数据服务 | 草稿数据服务的标识符 | formsportal.sampledataservice |
+   | Forms Portal草稿元数据服务 | 草稿元数据服务的标识符 | formsportal.samplemetadataservice |
+   | Forms门户提交数据服务 | 提交数据服务的标识符 | formsportal.sampledataservice |
+   | Forms门户提交元数据服务 | 提交元数据服务的标识符 | formsportal.samplemetadataservice |
+   | Forms Portal挂起的签名数据服务 | 待处理签名数据服务的标识符 | formsportal.sampledataservice |
+   | Forms Portal挂起的签名元数据服务 | 待处理签名元数据服务的标识符 | formsportal.samplemetadataservice |
 
    >[!NOTE]
    >
-   >服務的解析方式是將其名稱作為 `aem.formsportal.impl.prop` 金鑰如下所示：
+   >服务名称作为服务的值来解析 `aem.formsportal.impl.prop` 键如下所示：
 
    ```java
    @Service(value = {SubmitDataService.class, DraftDataService.class})
@@ -72,23 +72,23 @@ AEM Forms入口網站草稿和提交元件可讓使用者將其表單儲存為�
    @Property(name = "aem.formsportal.impl.prop", value = "formsportal.samplemetadataservice")
    ```
 
-   您可以變更資料和中繼資料表格的名稱。
+   您可以更改数据和元数据表的名称。
 
-   為中繼資料表格提供不同的名稱：
+   要为元数据表提供其他名称，请执行以下操作：
 
-   * 在「Web主控台設定」中，尋找並按一下「Forms入口網站中繼資料服務範例實作」 。 您可以變更資料來源、中繼資料/其他中繼資料表格名稱的值。
+   * 在“Web控制台配置”中，查找并单击Forms Portal元数据服务示例实施。 您可以更改数据源、元数据/其他元数据表名的值。
 
-   為資料表格提供不同的名稱：
+   为数据表提供不同的名称：
 
-   * 在Web主控台設定中，尋找並按一下Forms入口網站資料服務範例實作。 您可以變更資料來源和資料表格名稱的值。
+   * 在“Web控制台配置”中，找到并单击Forms Portal数据服务示例实施。 您可以更改数据源和数据表名称的值。
    >[!NOTE]
    >
-   >如果您變更表格名稱，請在Form Portal設定中提供它們。
+   >如果更改表名，请在表单门户配置中提供它们。
 
-1. 將其他設定維持原狀，然後按一下 **[!UICONTROL 儲存]**.
+1. 保留其他配置不变，然后单击 **[!UICONTROL 保存]**.
 
-1. 資料庫連線可透過Apache Sling Connection Pooled Data Source完成。
-1. 若為Apache Sling連線，請尋找並按一下以開啟 **[!UICONTROL Apache Sling Connection Pooled DataSource]** 在「Web主控台設定」的編輯模式中。 依照下表的說明，指定屬性的值：
+1. 可以通过Apache Sling连接池数据源建立数据库连接。
+1. 对于Apache Sling连接，请查找并单击以打开 **[!UICONTROL Apache Sling连接池化数据源]** 在“Web控制台配置”的编辑模式下。 按照下表中的说明指定属性的值：
 
 <table>
  <tbody>
@@ -97,39 +97,39 @@ AEM Forms入口網站草稿和提交元件可讓使用者將其表單儲存為�
    <td><strong>价值</strong></td>
   </tr>
   <tr>
-   <td>資料來源名稱</td>
-   <td><p>從資料來源集區篩選驅動程式的資料來源名稱</p> <p><strong>注意： </strong><em>範例實作使用FormsPortal作為資料來源名稱。</em></p> </td>
+   <td>数据源名称</td>
+   <td><p>用于从数据源池筛选驱动程序的数据源名称</p> <p><strong>注意： </strong><em>示例实施使用FormsPortal作为数据源名称。</em></p> </td>
   </tr>
   <tr>
-   <td>JDBC驅動程式類別</td>
+   <td>JDBC驱动程序类</td>
    <td>com.mysql.jdbc.Driver</td>
   </tr>
   <tr>
-   <td>JDBC連線URI<br /> </td>
-   <td>jdbc:mysql://[<em>主機</em>]：[<em>連線埠</em>]/[<em>schema_name</em>]</td>
+   <td>JDBC连接URI<br /> </td>
+   <td>jdbc:mysql://[<em>主机</em>]：[<em>端口</em>]/[<em>schema_name</em>]</td>
   </tr>
   <tr>
    <td>用户名</td>
-   <td>用於驗證資料庫表格並執行動作的使用者名稱</td>
+   <td>用于对数据库表进行身份验证和执行操作的用户名</td>
   </tr>
   <tr>
    <td>密码</td>
-   <td>與使用者名稱相關聯的密碼</td>
+   <td>与用户名关联的密码</td>
   </tr>
   <tr>
-   <td>交易隔離</td>
+   <td>事务隔离</td>
    <td>READ_COMMITTED</td>
   </tr>
   <tr>
-   <td>最大使用中連線數</td>
+   <td>最大活动连接数</td>
    <td>1000</td>
   </tr>
   <tr>
-   <td>最大閒置連線</td>
+   <td>最大空闲连接数</td>
    <td>100</td>
   </tr>
   <tr>
-   <td>最小閒置連線</td>
+   <td>最小空闲连接数</td>
    <td>10</td>
   </tr>
   <tr>
@@ -137,23 +137,23 @@ AEM Forms入口網站草稿和提交元件可讓使用者將其表單儲存為�
    <td>10</td>
   </tr>
   <tr>
-   <td>最長等待</td>
+   <td>最大等待</td>
    <td>100000</td>
   </tr>
   <tr>
-   <td>借入時測試</td>
+   <td>借入测试</td>
    <td>已选中</td>
   </tr>
   <tr>
-   <td>閒置時測試</td>
+   <td>空闲时测试</td>
    <td>已选中</td>
   </tr>
   <tr>
-   <td>驗證查詢</td>
-   <td>範例值為SELECT 1(mysql)、select 1 from dual(oracle)、SELECT 1(MS Sql Server) (validationQuery)</td>
+   <td>验证查询</td>
+   <td>示例值为SELECT 1(mysql)，从dual(oracle)中选择1，SELECT 1(MS Sql Server) (validationQuery)</td>
   </tr>
   <tr>
-   <td>驗證查詢逾時</td>
+   <td>验证查询超时</td>
    <td>10000</td>
   </tr>
  </tbody>
@@ -161,21 +161,21 @@ AEM Forms入口網站草稿和提交元件可讓使用者將其表單儲存為�
 
 >[!NOTE]
 >
->* 範例未提供MySQL的JDBC驅動程式。 請確定您已布建它，並提供設定JDBC連線集區所需的資訊。
->* 將您的作者和發佈執行個體指向使用相同的資料庫。 所有製作和發佈執行個體的JDBC連線URI欄位值必須相同。
+>* 示例中未提供用于MySQL的JDBC驱动程序。 确保已为其配置并提供配置JDBC连接池所需的信息。
+>* 将创作实例和发布实例指向使用同一数据库。 对于所有创作实例和发布实例，JDBC连接URI字段的值必须相同。
 
 
-1. 將其他設定維持原狀，然後按一下 **[!UICONTROL 儲存]**.
+1. 保留其他配置不变，然后单击 **[!UICONTROL 保存]**.
 
-1. 如果您在資料庫綱要中已經有表格，請跳至下一個步驟。
+1. 如果数据库模式中已有表，请跳至下一步。
 
-   否則，如果資料庫綱要中還沒有表格，請執行下列SQL敘述句，為資料庫綱要中的資料、中繼資料和其他中繼資料建立個別的表格：
+   否则，如果数据库模式中还没有表，请执行以下SQL语句，为数据库模式中的数据、元数据和其他元数据创建单独的表：
 
    >[!NOTE]
    >
-   >製作和發佈執行個體不需要不同的資料庫。 在所有作者和發佈執行個體上使用相同的資料庫。
+   >创作实例和发布实例不需要不同的数据库。 在所有创作实例和发布实例上使用相同的数据库。
 
-   **資料表格的SQL陳述式**
+   **数据表的SQL语句**
 
    ```sql
    CREATE TABLE `data` (
@@ -187,7 +187,7 @@ AEM Forms入口網站草稿和提交元件可讓使用者將其表單儲存為�
    ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
    ```
 
-   **中繼資料表格的SQL陳述式**
+   **元数据表的SQL语句**
 
    ```sql
    CREATE TABLE `metadata` (
@@ -227,7 +227,7 @@ AEM Forms入口網站草稿和提交元件可讓使用者將其表單儲存為�
    ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
    ```
 
-   **適用於additionalmetadatable的SQL陳述式**
+   **SQL语句for additionalmetadatable**
 
    ```sql
    CREATE TABLE `additionalmetadatatable` (
@@ -239,7 +239,7 @@ AEM Forms入口網站草稿和提交元件可讓使用者將其表單儲存為�
    ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
    ```
 
-   **註解表格的SQL陳述式**
+   **注释表的SQL语句**
 
    ```sql
    CREATE TABLE `commenttable` (
@@ -250,15 +250,15 @@ AEM Forms入口網站草稿和提交元件可讓使用者將其表單儲存為�
    `time` varchar(255) DEFAULT NULL);
    ```
 
-1. 如果您在資料庫綱要中已經有表格（資料、中繼資料和additionalmetadatable），請執行以下變更表格查詢：
+1. 如果数据库模式中已有表（数据、元数据和additionalmetadatable），请执行以下更改表查询：
 
-   **用於變更資料表的SQL陳述式**
+   **用于更改数据表的SQL语句**
 
    ```sql
    ALTER TABLE `data` CHANGE `owner` `owner` VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL;
    ```
 
-   **變更中繼資料表格的SQL陳述式**
+   **用于更改元数据表的SQL语句**
 
    ```sql
    ALTER TABLE metadata add markedForDeletion varchar(45) DEFAULT NULL
@@ -266,7 +266,7 @@ AEM Forms入口網站草稿和提交元件可讓使用者將其表單儲存為�
 
    >[!NOTE]
    >
-   >如果您已執行ALTER TABLE中繼資料新增查詢，且表格中有marketforDeletion欄，查詢就會失敗。
+   >如果您已运行ALTER TABLE元数据添加查询，并且表中存在marketforDeletion列，则该查询会失败。
 
    ```sql
    ALTER TABLE metadata add agreementId varchar(255) DEFAULT NULL,
@@ -293,57 +293,57 @@ AEM Forms入口網站草稿和提交元件可讓使用者將其表單儲存為�
    CHANGE `xdpRef` `xdpRef` VARCHAR(1000) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL;
    ```
 
-   **用於變更additionalmetadatable表格的SQL陳述式**
+   **用于更改additionalmetadatable表的SQL语句**
 
    ```sql
    ALTER TABLE `additionalmetadatatable` CHANGE `value` `value` TEXT CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL, CHANGE `key` `key` VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL;
    ```
 
-範例實作現已完成設定，您可以在資料庫中儲存所有資料和中繼資料時，使用此範例實作來列出草稿和提交內容。 現在來看看範例中資料和中繼資料服務的設定方式。
+现在已配置示例实施，您可以在将所有数据和元数据存储在数据库中时，使用该实施列出草稿和提交内容。 现在，让我们查看示例中数据和元数据服务的配置方式。
 
-## 安裝mysql-connector-java-5.1.39-bin.jar檔案 {#install-mysql-connector-java-bin-jar-file}
+## 安装mysql-connector-java-5.1.39-bin.jar文件 {#install-mysql-connector-java-bin-jar-file}
 
-在所有作者和發佈執行個體上執行下列步驟，安裝mysql-connector-java-5.1.39-bin.jar檔案：
+在所有创作实例和发布实例上执行以下步骤，安装mysql-connector-java-5.1.39-bin.jar文件：
 
-1. 導覽至 `https://'[server]:[port]'/system/console/depfinder` 和搜尋com.mysql.jdbc套件。
-1. 在「匯出者」欄中，檢查封裝是否已由任何束匯出。
+1. 导航到 `https://'[server]:[port]'/system/console/depfinder` 和搜索com.mysql.jdbc包。
+1. 在“导出方式”列中，检查是否按任意包导出包。
 
-   如果套件未由任何套件組合匯出，請繼續。
+   如果包未由任何捆绑包导出，请继续。
 
-1. 導覽至 `https://'[server]:[port]'/system/console/bundles` 並按一下 **[!UICONTROL 安裝/更新]**.
-1. 按一下 **[!UICONTROL 選擇檔案]** 並瀏覽以選取mysql-connector-java-5.1.39-bin.jar檔案。 此外，請選取 **[!UICONTROL 開始套件組合]** 和 **[!UICONTROL 重新整理封裝]** 核取方塊。
-1. 按一下 **[!UICONTROL 安裝或更新]**. 完成後，請重新啟動伺服器。
-1. (*僅限Windows*)關閉作業系統的系統防火牆。
+1. 导航到 `https://'[server]:[port]'/system/console/bundles` 并单击 **[!UICONTROL 安装/更新]**.
+1. 单击 **[!UICONTROL 选择文件]** 并浏览以选择mysql-connector-java-5.1.39-bin.jar文件。 此外，选择 **[!UICONTROL 启动捆绑包]** 和 **[!UICONTROL 刷新包]** 复选框。
+1. 单击 **[!UICONTROL 安装或更新]**. 完成后，重新启动服务器。
+1. (*仅限Windows*)关闭操作系统的系统防火墙。
 
-## 表單入口網站資料和中繼資料服務的範常式式碼 {#sample-code-for-forms-portal-data-and-metadata-service}
+## 表单门户数据和元数据服务的示例代码 {#sample-code-for-forms-portal-data-and-metadata-service}
 
-下列zip包含 `FormsPortalSampleDataServiceImpl` 和 `FormsPortalSampleMetadataServiceImpl` （實作類別），用於資料和中繼資料服務介面。 此外，它包含編譯上述實作類別所需的所有類別。
+以下zip文件包含 `FormsPortalSampleDataServiceImpl` 和 `FormsPortalSampleMetadataServiceImpl` （实现类）用于数据和元数据服务接口。 此外，它还包含编译上述实现类所需的所有类。
 
 [获取文件](assets/sample_package.zip)
 
-## 驗證檔案名稱的長度  {#verify-length-of-the-file-name}
+## 验证文件名的长度  {#verify-length-of-the-file-name}
 
-Forms Portal的資料庫實作會使用其他中繼資料表格。 表格具有以表格的「索引鍵」和ID欄為基礎的複合主索引鍵。 MySQL允許主索引鍵長度不超過255個字元。 您可以使用以下使用者端驗證指令碼來驗證附加至檔案Widget的檔案名稱長度。 驗證會在附加檔案時執行。 當檔案名稱大於150 （包括副檔名）時，下列程式中提供的指令碼會顯示訊息。 您可以修改指令碼以檢查是否有不同的字元數。
+Forms Portal的数据库实施使用其他元数据表。 该表具有基于表的键和ID列的复合主键。 MySQL允许主键长度不超过255个字符。 您可以使用以下客户端验证脚本来验证附加到文件小部件的文件名的长度。 在附加文件时运行验证。 当文件名大于150（包括扩展名）时，以下过程中提供的脚本将显示一条消息。 您可以修改脚本以检查其他字符数。
 
-執行以下步驟以建立 [使用者端資源庫](/help/sites-developing/clientlibs.md) 並使用指令碼：
+执行以下步骤以创建 [客户端库](/help/sites-developing/clientlibs.md) 并使用脚本：
 
-1. 登入CRXDE並導覽至/etc/clientlibs/
-1. 建立型別的節點 **cq：ClientLibraryFolder** 並提供節點的名稱。 例如：`validation`。
+1. 登录到CRXDE并导航到/etc/clientlibs/
+1. 创建节点类型 **cq：ClientLibraryFolder** 并提供节点的名称。 例如：`validation`。
 
-   按一下 **[!UICONTROL 全部儲存]**.
+   单击 **[!UICONTROL 全部保存]**.
 
-1. 以滑鼠右鍵按一下節點，然後按一下 **[!UICONTROL 建立新檔案]**，並建立一個副檔名為.txt的檔案。 例如， `js.txt`將下列程式碼新增至新建立的.txt檔案，然後按一下 **[!UICONTROL 全部儲存]**.
+1. 右键单击节点，然后单击 **[!UICONTROL 创建新文件]**，并创建一个扩展名为.txt的文件。 例如， `js.txt`将以下代码添加到新创建的.txt文件中，然后单击 **[!UICONTROL 全部保存]**.
 
    ```javascript
    #base=util
     util.js
    ```
 
-   在上述程式碼中， `util` 是資料夾的名稱，並且 `util.js` 中的檔案名稱 `util` 資料夾。 此 `util` 資料夾和 `util.js` 檔案會在後續步驟中建立。
+   在上述代码中， `util` 是文件夹的名称，并且 `util.js` 中文件的名称 `util` 文件夹。 此 `util` 文件夹和 `util.js` 文件是在后续步骤中创建的。
 
-1. 以滑鼠右鍵按一下 `cq:ClientLibraryFolder` 在步驟2中建立的節點，選取「建立>建立資料夾」。 建立名為的資料夾 `util`. 按一下 **[!UICONTROL 全部儲存]**. 以滑鼠右鍵按一下 `util` 資料夾中，選取「建立>建立檔案」。 建立名為的檔案 `util.js`. 按一下 **[!UICONTROL 全部儲存]**.
+1. 右键单击 `cq:ClientLibraryFolder` 在步骤2中创建的节点，选择创建>创建文件夹。 创建名为的文件夹 `util`. 单击 **[!UICONTROL 全部保存]**. 右键单击 `util` 文件夹，选择“创建”>“创建文件”。 创建名为的文件 `util.js`. 单击 **[!UICONTROL 全部保存]**.
 
-1. 將下列程式碼新增至util.js檔案，然後按一下 **[!UICONTROL 全部儲存]**. 程式碼會驗證檔案名稱的長度。
+1. 将以下代码添加到util.js文件，然后单击 **[!UICONTROL 全部保存]**. 代码验证文件名的长度。
 
    ```javascript
    /*
@@ -398,24 +398,24 @@ Forms Portal的資料庫實作會使用其他中繼資料表格。 表格具有�
 
    >[!NOTE]
    >
-   >此指令碼適用於現成(OOTB)附件Widget元件。 如果您已自訂OOTB附件Widget，請變更上述指令碼以納入個別變更。
+   >该脚本用于现成(OOTB)附件小部件组件。 如果您自定义了OOTB附件小组件，请更改上述脚本以包含相应的更改。
 
-1. 將下列屬性新增至步驟2中建立的資料夾，然後按一下 **[!UICONTROL 全部儲存]**.
+1. 将以下属性添加到在步骤2中创建的文件夹，然后单击 **[!UICONTROL 全部保存]**.
 
-   * **[!UICONTROL 名稱：]** 類別
+   * **[!UICONTROL 名称：]** 类别
 
-   * **[!UICONTROL 型別：]** 字串
+   * **[!UICONTROL 类型：]** 字符串
 
    * **[!UICONTROL 值：]** fp.validation
 
-   * **[!UICONTROL 多選項：]** 已啟用
+   * **[!UICONTROL 多选项：]** 已启用
 
-1. 導覽至 `/libs/fd/af/runtime/clientlibs/guideRuntime`並附加 `fp.validation` 內嵌屬性的值。
+1. 导航到 `/libs/fd/af/runtime/clientlibs/guideRuntime`并附加 `fp.validation` 值。
 
-1. 導覽至/libs/fd/af/runtime/clientlibs/guideRuntimeWithXFA並附加 `fp.validation` 內嵌屬性的值。
+1. 导航到/libs/fd/af/runtime/clientlibs/guideRuntimeWithXFA并附加 `fp.validation` 值到嵌入属性。
 
    >[!NOTE]
    >
-   >如果您使用自訂使用者端程式庫，而不是guideRuntime和guideRuntimeWithXfa使用者端程式庫，請使用類別名稱，將此程式中所建立的使用者端程式庫內嵌到執行階段載入的自訂程式庫中。
+   >如果您使用的是自定义客户端库，而不是guideRuntime和guideRuntimeWithXfa客户端库，请使用类别名称将此过程中创建的客户端库嵌入在运行时加载的自定义库中。
 
-1. 按一下 **[!UICONTROL 全部儲存。]** 現在，當檔案名稱大於150 （包括副檔名）字元時，會顯示訊息。
+1. 单击 **[!UICONTROL 全部保存。]** 现在，当文件名大于150（包括扩展名）字符时，会显示一条消息。

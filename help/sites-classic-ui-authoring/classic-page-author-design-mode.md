@@ -1,6 +1,6 @@
 ---
-title: 在設計模式中設定元件
-description: 當現成安裝AEM執行個體時，可在Sidekick中立即使用所選元件。 除了這些以外，您也可以使用其他各種元件。 您可以使用「設計」模式來啟用/停用這類元件。
+title: 在设计模式下配置组件
+description: 现成安装AEM实例后，即可在Sidekick中立即找到一组组件。 除此之外，还提供各种其他组件。 可以使用“设计”模式启用/禁用此类组件。
 uuid: 2cd5dad0-2f9c-4f34-aae8-1638d1445eb3
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -16,67 +16,67 @@ ht-degree: 0%
 
 ---
 
-# 在設計模式中設定元件{#configuring-components-in-design-mode}
+# 在设计模式下配置组件{#configuring-components-in-design-mode}
 
-當現成安裝AEM執行個體時，可在Sidekick中立即使用所選元件。
+现成安装AEM实例后，即可在Sidekick中立即找到一组组件。
 
-除了這些以外，您也可以使用其他各種元件。 您可以使用設計模式來 [啟用/停用此類元件](#enabledisablecomponentsusingdesignmode). 啟用並位於您的頁面時，您可以使用設計模式來 [設定元件設計的各個方面](#configuringcomponentsusingdesignmode) 藉由編輯屬性引數。
-
->[!NOTE]
->
->編輯這些元件時務必謹慎。 設計設定通常是整個網站設計中不可或缺的一部分，因此這些設定只應由具有適當許可權（和體驗）的人變更，通常是管理員或開發人員。 另請參閱 [開發元件](/help/sites-developing/components.md) 以取得詳細資訊。
-
-這實際上涉及新增或移除頁面段落系統中允許的元件。 段落系統( `parsys`)是包含所有其他段落元件的複合元件。 段落系統可讓作者將不同型別的元件新增至頁面，因為它包含所有其他段落元件。 每個段落型別都表示為一個元件。
-
-例如，產品頁面的內容可能包含包含以下內容的段落系統：
-
-* 產品的影像（以影像或文欄位落的形式）
-* 產品說明（以文欄位落顯示）
-* 含有技術資料的表格（作為表格段落）
-* 使用者填寫的表單（表單開頭、表單元素和表單結尾段落）
+除此之外，还提供各种其他组件。 您可以使用设计模式来 [启用/禁用此类组件](#enabledisablecomponentsusingdesignmode). 启用并位于您的页面后，您可以使用设计模式来 [配置组件设计的各个方面](#configuringcomponentsusingdesignmode) 通过编辑属性参数。
 
 >[!NOTE]
 >
->另請參閱 [開發元件](/help/sites-developing/components.md#paragraphsystem) 和 [使用範本和元件的准則](/help/sites-developing/dev-guidelines-bestpractices.md#guidelines-for-using-templates-and-components) 如需更多關於 `parsys`.
+>编辑这些组件时务必谨慎。 设计设置通常是整个网站设计不可分割的一部分，因此它们只应由具有适当权限（和体验）的人更改，通常是管理员或开发人员。 参见 [开发组件](/help/sites-developing/components.md) 了解更多信息。
 
-## 啟用/停用元件 {#enable-disable-components}
+这实际上涉及添加或删除页面段落系统中允许的组件。 段落系统( `parsys`)是一个包含所有其他段落组件的复合组件。 段落系统允许作者向页面添加不同类型的组件，因为它包含所有其他段落组件。 每个段落类型都表示为一个组件。
 
-在設計模式中，Sidekick會最小化，您可以設定可編寫的元件：
+例如，产品页面的内容可能包含包含以下内容的段落系统：
 
-1. 若要進入設計模式，請開啟頁面進行編輯，並使用Sidekick圖示：
+* 产品的图像（采用图像或文本段落的形式）
+* 产品描述（作为文本段落）
+* 含有技术数据的表格（作为表格段落）
+* 表单用户填写（表单开头、表单元素和表单结尾段落）
+
+>[!NOTE]
+>
+>参见 [开发组件](/help/sites-developing/components.md#paragraphsystem) 和 [使用模板和组件的准则](/help/sites-developing/dev-guidelines-bestpractices.md#guidelines-for-using-templates-and-components) 了解有关 `parsys`.
+
+## 启用/禁用组件 {#enable-disable-components}
+
+在设计模式下，sidekick被最小化，您可以配置可用于创作的组件：
+
+1. 要进入设计模式，请打开一个页面进行编辑，并使用Sidekick图标：
 
    ![](do-not-localize/chlimage_1.png)
 
-1. 按一下 **編輯** 在段落系統(**Par設計**)。
+1. 单击 **编辑** 在段落系统(**杆件设计**)。
 
    ![screen_shot_2012-02-08at102726am](assets/screen_shot_2012-02-08at102726am.png)
 
-1. 將會開啟一個對話方塊，列出Sidekick中顯示的元件群組及其包含的個別元件。
+1. 此时将打开一个对话框，其中列出了Sidekick中显示的组件组及其包含的各个组件。
 
-   視需要選取，以新增或移除可在Sidekick中使用的元件。
+   根据需要选择添加或删除可在Sidekick中找到的组件。
 
    ![screen_shot_2012-02-08at103407am](assets/screen_shot_2012-02-08at103407am.png)
 
-1. Sidekick在設計模式中會最小化。 按一下箭頭可以將Sidekick最大化，並返回編輯模式：
+1. 在设计模式下，Sidekick会最小化。 通过单击箭头，您可以最大化Sidekick并返回到编辑模式：
 
    ![](do-not-localize/sidekick-collapsed.png)
 
-## 設定元件設計 {#configuring-the-design-of-a-component}
+## 配置组件设计 {#configuring-the-design-of-a-component}
 
-在「設計」模式中，您也可以設定個別元件的屬性。 每個元件都有自己的引數，以下範例顯示 **影像** 元件：
+在“设计”模式下，还可以配置各个组件的属性。 每个组件都有自己的参数，以下示例显示了 **图像** 组件：
 
-1. 若要進入設計模式，請開啟頁面進行編輯，並使用Sidekick圖示：
+1. 要进入设计模式，请打开一个页面进行编辑，并使用Sidekick图标：
 
    ![](do-not-localize/chlimage_1-1.png)
 
-1. 您可以設定元件設計。
+1. 您可以配置组件的设计。
 
-   例如，如果您按一下 **編輯** 在影像元件上(**影像設計**)您可以設定元件特定引數：
+   例如，如果您单击 **编辑** 在图像组件(**图像设计**)您可以配置特定于组件的参数：
 
    ![chlimage_1-5](assets/chlimage_1-5.png)
 
-1. 按一下 **確定** 以儲存變更。
+1. 单击 **确定** 以保存更改。
 
-1. Sidekick在設計模式中會最小化。 按一下箭頭可以將Sidekick最大化，並返回編輯模式：
+1. 在设计模式下，Sidekick会最小化。 通过单击箭头，您可以最大化Sidekick并返回到编辑模式：
 
    ![](do-not-localize/sidekick-collapsed-1.png)

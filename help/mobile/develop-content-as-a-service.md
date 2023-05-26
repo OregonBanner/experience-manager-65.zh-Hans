@@ -1,7 +1,7 @@
 ---
-title: 內容傳送
+title: 内容交付
 seo-title: Content Delivery
-description: 內容傳送
+description: 内容交付
 seo-description: null
 uuid: 1e7bea34-ca50-41ed-8295-fa182c27fa69
 contentOwner: User
@@ -16,67 +16,67 @@ ht-degree: 0%
 
 ---
 
-# 內容傳送{#content-delivery}
+# 内容交付{#content-delivery}
 
 >[!NOTE]
 >
->Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）專案使用SPA編輯器。 [了解详情](/help/sites-developing/spa-overview.md).
+>Adobe建议对需要基于单页应用程序框架的客户端渲染（例如React）的项目使用SPA编辑器。 [了解详情](/help/sites-developing/spa-overview.md).
 
-行動應用程式應能視需要使用AEM中的任何及所有內容，以提供目標應用程式體驗。
+移动设备应用程序应能够根据需要使用AEM中的任意和所有内容来提供目标应用程序体验。
 
-這包括使用資產、網站內容、CaaS內容（無線播放）內容，以及可能有其自身結構的自訂內容。
+这包括使用资产、网站内容、CaaS内容（免费）内容以及可能具有自身结构的自定义内容。
 
 >[!NOTE]
 >
->**無線內容** 可透過ContentSync處理常式來自上述任何一項。 它可用來透過ZIP將封裝和傳送分批處理，以及維護更新或那些封裝。
+>**空中内容** 可以通过ContentSync处理程序从以上任何一项中获取。 它可用于通过ZIP对包进行批量打包和交付，以及维护更新或这些包。
 
-Content Services提供三種主要型別的資料：
+Content Services提供了三种主要类型的资料：
 
 1. **Assets**
-1. **封裝的HTML內容(HTML/CSS/JS)**
-1. **獨立於管道的內容**
+1. **打包的HTML内容(HTML/CSS/JS)**
+1. **独立于渠道的内容**
 
 ![chlimage_1-154](assets/chlimage_1-154.png)
 
 ## Assets {#assets}
 
-資產集合是包含其他集合參考的AEM建構。
+资源收藏集是包含对其他收藏集引用的AEM构造。
 
-資產集合可透過內容服務公開。 在要求中呼叫資產集合時，會傳回資產清單中的物件，包括其URL。 透過URL存取資產。 URL是在物件中提供的。 例如：
+资产收藏集可以通过Content Services公开。 在请求中调用资产收藏集将返回一个对象，该对象是资产的列表 — 包括其URL。 通过URL访问资源。 URL在对象中提供。 例如：
 
-* 頁面實體會傳回包含影像參考的JSON （頁面物件）。 影像參考是用來取得影像資產二進位檔的URL。
-* 對資料夾中資產清單的請求會傳回JSON，其中包含該資料夾中所有實體的詳細資訊。 該清單是一個物件。 JSON的URL參考資料可用來取得該資料夾中每個資產的二進位檔案。
+* 页面实体返回包含图像引用的JSON（页面对象）。 图像引用是用于获取图像的资产二进制文件的URL。
+* 请求文件夹中的资产列表会返回JSON，其中包含有关该文件夹中所有实体的详细信息。 该列表是一个对象。 JSON具有URL引用，用于获取该文件夹中每个资源的二进制资源。
 
-### 資產最佳化 {#asset-optimization}
+### 资产优化 {#asset-optimization}
 
-Content Services的重要價值在於可傳回已針對裝置最佳化的資產。 這能減少本機裝置的儲存需求，並改善應用程式效能。
+Content Services的一个关键价值是能够返回针对设备优化的资产。 这减少了本地设备存储需求并提高了应用程序性能。
 
-資產最佳化將是伺服器端功能，根據API請求中提供的資訊。 應儘可能快取資產轉譯，以便類似請求不需要重新產生資產轉譯。
+资源优化将是一个服务器端函数，它基于API请求中提供的信息。 应尽可能缓存资产演绎版，以便类似的请求不需要重新生成资产演绎版。
 
-### 資產工作流程 {#assets-workflow}
+### 资产工作流程 {#assets-workflow}
 
-資產工作流程如下：
+资源工作流如下：
 
-1. AEM中提供的現成可用的資產參考
-1. 根據模型建立資產參考實體
-1. 編輯實體
+1. AEM中现成可用的资源引用
+1. 根据资源引用实体的模型创建资源引用实体
+1. 编辑实体
 
-   1. 挑選資產或資產集合
-   1. 自訂JSON演算
+   1. 选择资源或资源收藏集
+   1. 自定义JSON渲染
 
-下圖顯示 **資產參考工作流程**：
+下图显示了 **资产引用工作流**：
 
 ![chlimage_1-155](assets/chlimage_1-155.png)
 
-### 管理資產 {#managing-assets}
+### 管理资源 {#managing-assets}
 
-Content Services可讓您存取可能不會透過其他AEM內容參考的AEM管理的資產。
+Content Services允许访问可能不会通过其他AEM内容引用的AEM托管资源。
 
-#### 現有的受管理資產 {#existing-managed-assets}
+#### 现有受管资产 {#existing-managed-assets}
 
-現有的AEM Sites和Assets使用者正在使用AEM Assets管理其所有頻道的所有數位資料。 他們正在開發原生行動應用程式，且需要使用AEM Assets管理的多個資產。 例如標誌、背景影像、按鈕圖示等。
+现有AEM Sites和Assets用户正在使用AEM Assets管理其所有渠道的所有数字资料。 他们正在开发本机移动设备应用程序，并且需要使用AEM Assets管理的多个资源。 例如，徽标、背景图像、按钮图标等。
 
-目前這些區段分佈於資產存放庫。 應用程式需要參考的檔案位於：
+目前，这些功能分布在Assets存储库中。 应用程序需要引用的文件位于：
 
 * /content/dam/geometrixx-outdoors/brand/logo_light.png
 * /content/dam/geometrixx-outdoors/brand/logo_dark.png
@@ -84,9 +84,9 @@ Content Services可讓您存取可能不會透過其他AEM內容參考的AEM管�
 * /content/dam/geometrixx-outdoors/brand/icons/app/cart.png
 * /content/dam/geometrixx-outdoors/brand/icons/app/home.png
 
-#### 存取CS資產實體 {#accessing-cs-asset-entities}
+#### 访问CS资产实体 {#accessing-cs-asset-entities}
 
-暫時將透過API提供頁面的步驟放在一邊(AEM UI說明將涵蓋此頁面)，並假設此步驟已完成。 已建立資產實體並新增至「appImages」空間。 已在空間下建立其他資料夾以供組織使用。 因此，資產實體在AEM JCR中儲存為：
+现在，让我们暂且将通过API提供页面的步骤放在一边(AEM UI描述将涵盖该页面)，并假设该步骤已完成。 已创建资产实体并将其添加到“appImages”空间。 出于组织目的，在空间下创建了其他文件夹。 因此，资产实体在AEM JCR中存储为：
 
 * /content/entities/appImages/logos/logo_light
 * /content/entities/appImages/logos/logo_dark
@@ -94,53 +94,53 @@ Content Services可讓您存取可能不會透過其他AEM內容參考的AEM管�
 * /content/entities/appImages/icons/cart
 * /content/entities/appImages/icons/home
 
-#### 取得可用資產實體清單 {#getting-a-list-of-available-asset-entities}
+#### 获取可用资源实体的列表 {#getting-a-list-of-available-asset-entities}
 
-應用程式開發人員可透過擷取資產實體來取得可用資產清單。 內容服務空間端點可透過網站服務API SDK提供該資訊。
+应用程序开发人员可以通过检索资产实体来获取可用的资产列表。 内容服务空间端点可以通过Web服务API SDK提供该信息。
 
-結果會成為JSON格式的物件，提供「圖示」資料夾中的資產清單。
+结果将是一个JSON格式的对象，它将提供“图标”文件夹中的资产列表。
 
 ![chlimage_1-156](assets/chlimage_1-156.png)
 
-#### 取得影像 {#getting-an-image}
+#### 获取图像 {#getting-an-image}
 
-JSON會提供每個影像的URL，由Content Services針對影像產生。
+JSON为每个图像提供一个URL，由Content Services生成以供图像使用。
 
-若要取得「cart」影像的二進位檔，會再次使用使用者端資料庫。
+要获取“cart”图像的二进制文件，请再次使用客户端库。
 
-## 封裝的HTML內容 {#packaged-html-content}
+## 打包HTML内容 {#packaged-html-content}
 
-需要維護內容配置的客戶需要HTML內容。 這對於使用Web容器（例如Cordova Webview）顯示內容的原生應用程式非常有用。
+需要维护内容布局的客户需要HTML内容。 这对于使用Web容器（如Cordova Webview）显示内容的本机应用程序非常有用。
 
-AEM Content Services將能透過API將HTML內容提供給行動應用程式。 客戶想將AEM內容公開為HTML，會建立指向AEM內容來源的HTML頁面實體。
+AEM Content Services将能够通过API向移动设备应用程序提供HTML内容。 希望将AEM内容公开为HTML的客户将创建指向AEM内容源的HTML页面实体。
 
-考量到下列選項：
+将考虑以下选项：
 
-* **Zip檔案：** 為了能在裝置上正確顯示，請注意頁面的所有參考資料 — css、JavaScript、資產等。  — 將包含在單一壓縮檔案中並包含回應。 「HTML」頁面中的參照會調整為使用這些檔案的相對路徑。
-* **串流：** 從AEM取得必要檔案的資訊清單。 然後使用該資訊清單來要求所有檔案(HTML、CSS、JS等) 後續請求。
+* **Zip文件：** 为了尽可能在设备上正确显示，需要页面引用的所有材料 — css、JavaScript、资产等。  — 将包含在响应所在的单个压缩文件中。 将调整“HTML”页面中的引用，以使用这些文件的相对路径。
+* **流：** 从AEM获取所需文件的清单。 然后使用该清单来请求所有文件(HTML、CSS、JS等) 后续请求。
 
 ![chlimage_1-157](assets/chlimage_1-157.png)
 
-## 獨立於管道的內容 {#channel-independent-content}
+## 独立于渠道的内容 {#channel-independent-content}
 
-獨立於管道的內容是一種公開AEM內容建構（例如頁面）的方式，無需擔心版面、元件或其他管道特定資訊。
+与渠道无关的内容是一种无需担心布局、组件或其他特定于渠道的信息，即可公开AEM内容结构（如页面）的方法。
 
-這些內容實體是使用內容模型產生的，用於將AEM結構轉譯為JSON格式。 產生的JSON資料包含有關內容資料(與AEM存放庫分離)的資訊。 這包括傳回資產的中繼資料和AEM參考連結，以及內容結構（包括實體階層）之間的關係。
+这些内容实体是使用内容模型生成的，用于将AEM结构转换为JSON格式。 生成的JSON数据包含有关内容数据的信息，这些数据与AEM存储库是相互分离的。 这包括返回指向资源的元数据和AEM引用链接，以及内容结构（包括实体层次结构）之间的关系。
 
-### 管理獨立於管道的內容 {#managing-channel-independent-content}
+### 管理独立于渠道的内容 {#managing-channel-independent-content}
 
-內容可以透過數種方式進入應用程式。
+内容可以通过多种方式到达应用程序。
 
-1. 透過AEM Over-The-AirGET內容ZIP
+1. 通过AEM Over-The-AirGET内容ZIP
 
-   * 內容同步處理常式可以直接更新zip套件，或是呼叫現有的內容轉譯器
+   * 内容同步处理程序可以直接更新zip包，也可以通过调用现有的内容渲染器来更新
 
-      * 平台處理常式
-      * AEMM處理常式
-      * 自訂處理常式
+      * 平台处理程序
+      * AEMM处理程序
+      * 自定义处理程序
 
-1. 直接透過內容轉譯器GET內容
+1. 直接通过内容渲染器GET内容
 
-   * 現成可用的預設Sling轉譯器
-   * AEM Mobile/Content Services內容轉譯器
-   * 自訂轉譯
+   * 开箱即用的默认Sling渲染器
+   * AEM Mobile/Content Services内容渲染器
+   * 自定义渲染

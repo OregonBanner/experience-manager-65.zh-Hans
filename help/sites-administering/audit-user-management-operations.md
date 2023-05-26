@@ -1,7 +1,7 @@
 ---
-title: 如何在AEM中稽核使用者管理作業
+title: 如何在AEM中审核用户管理操作
 seo-title: How to Audit User Management Operations in AEM
-description: 瞭解如何在AEM中稽核使用者管理作業。
+description: 了解如何在AEM中审核用户管理操作。
 seo-description: Learn how to audit User Management Operations in AEM.
 uuid: 9d177afb-172c-4858-a678-254c97cfa472
 contentOwner: User
@@ -19,38 +19,38 @@ ht-degree: 1%
 
 ---
 
-# 如何在AEM中稽核使用者管理作業{#how-to-audit-user-management-operations-in-aem}
+# 如何在AEM中审核用户管理操作{#how-to-audit-user-management-operations-in-aem}
 
 ## 简介 {#introduction}
 
-AEM已引入記錄許可權變更的功能，以便稍後可以稽核這些變更。
+AEM引入了记录权限更改的功能，以便以后可以审核这些更改。
 
-增強功能允許稽核CRUD （建立、讀取、更新、刪除）使用者許可權和群組指派的動作。 更具體地說，它會記錄：
+增强功能允许对用户的权限和组分配执行审核CRUD（创建、读取、更新、删除）操作。 更具体地说，它将记录：
 
-* 已建立新使用者
-* 正在新增至群組的使用者
-* 現有使用者或群組的許可權變更
+* 正在创建新用户
+* 正在添加到组的用户
+* 现有用户或组的权限更改
 
-依預設，這些專案會寫入 `error.log` 檔案。 為了更輕鬆地進行監視，建議將它們重新導向到單獨的記錄檔。 如需如何執行此動作的詳細資訊，請參閱以下段落。
+默认情况下，这些条目将写入 `error.log` 文件。 为便于监视，建议将它们重定向到单独的日志文件。 有关如何执行此操作的更多信息，请参阅以下段落。
 
-## 將輸出重新導向至個別的記錄檔 {#redirecting-the-output-to-a-separate-log-file}
+## 将输出重定向到单独的日志文件 {#redirecting-the-output-to-a-separate-log-file}
 
-若要將記錄輸出重新導向至個別的記錄檔，您需要建立新的 **Apache Sling記錄記錄器** 設定。 我們將使用 `useraudit.log` 做為下方範例中個別檔案的名稱。
+要将日志记录输出重定向到单独的日志文件，您需要创建一个新的 **Apache Sling日志记录器** 配置。 我们将使用 `useraudit.log` 作为下例中单独文件的名称。
 
-1. 瀏覽至Web主控台 *https://serveraddress:serverport/system/console/configMgr*
-1. 搜尋 **Apache Sling記錄記錄器設定**. 然後，按專案右側的「+」以建立新的工廠設定。
-1. 建立下列設定：
+1. 通过浏览至Web控制台 *https://serveraddress:serverport/system/console/configMgr*
+1. 搜索 **Apache Sling日志记录器配置**. 然后，按条目右侧的“+”以创建新的工厂配置。
+1. 创建以下配置：
 
-   * **記錄層級：** 資訊
-   * **記錄檔：** logs/useraudit.log
-   * **訊息模式：** 層級預設
-   * **記錄器：** com.adobe.granite.security.user.internal.audit， com.adobe.granite.security.user.internal.servlets.AuthorizableServlet
+   * **日志级别：** 信息
+   * **日志文件：** logs/useraudit.log
+   * **消息模式：** 级别默认值
+   * **记录器：** com.adobe.granite.security.user.internal.audit， com.adobe.granite.security.user.internal.servlets.AuthorizableServlet
 
-   若要將兩個記錄器輸入到 **Logger** 欄位，您必須輸入第一個記錄器的名稱，然後按「+」按鈕並輸入第二個記錄器的名稱，以建立另一個欄位。
+   为了将两个记录器输入到 **Logger** 字段，则需要输入第一个日志记录器的名称，然后按“+”按钮并输入第二个日志记录器的名称来创建另一个字段。
 
-## 範例輸出 {#example-output}
+## 示例输出 {#example-output}
 
-如果設定正確，輸出應如下所示：
+如果配置正确，输出应如下所示：
 
 ```xml
 19.05.2017 15:15:08.933 *INFO* [0:0:0:0:0:0:0:1 [1495196108932] POST /libs/granite/security/post/authorizables.html HTTP/1.1] com.adobe.granite.security.user.internal.servlets.AuthorizableServlet Create Group 'group1' operation initiated by User 'admin' (administrator)
@@ -84,7 +84,7 @@ AEM已引入記錄許可權變更的功能，以便稍後可以稽核這些變�
 
 ## 经典 UI {#classic-ui}
 
-在Classic UI中，稽核記錄中記錄的有關新增和刪除使用者的CRUD操作資訊會限製為受影響使用者的ID以及發生變更的時間。
+在经典UI中，审核日志中记录的有关添加和删除用户的CRUD操作的信息仅限于受影响的用户的ID以及发生更改的时间。
 
 例如：
 

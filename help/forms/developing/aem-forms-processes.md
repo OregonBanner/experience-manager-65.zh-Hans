@@ -1,7 +1,7 @@
 ---
-title: 瞭解AEM Forms程式
+title: 了解AEM Forms流程
 seo-title: Understanding AEM Forms Processes
-description: 瞭解AEM Forms程式
+description: 了解AEM Forms流程
 uuid: 7cbebe7d-f222-42fa-8eb6-d2443458a791
 contentOwner: admin
 content-type: reference
@@ -17,67 +17,67 @@ ht-degree: 0%
 
 ---
 
-# 瞭解AEM Forms程式 {#understanding-aem-forms-processes}
+# 了解AEM Forms流程 {#understanding-aem-forms-processes}
 
-**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms 。**
+**本文档中的示例和示例仅适用于AEM Forms on JEE环境。**
 
-常見的使用案例是一組AEM Forms服務在單一檔案上運作。 您可以使用Workbench建立處理作業，將請求傳送至服務容器。 流程代表您正在自動化的業務流程。 如需建立處理作業的詳細資訊，請參閱 [使用Workbench](https://www.adobe.com/go/learn_aemforms_workbench_63).
+一个常见用例是一组AEM Forms服务在单个文档上运行。 您可以使用Workbench创建流程来向服务容器发送请求。 流程表示您正在自动化的业务流程。 有关创建进程的信息，请参见 [使用Workbench](https://www.adobe.com/go/learn_aemforms_workbench_63).
 
-程式一旦啟動，就會變成服務，而且可以像其他服務一樣叫用。 標準服務（例如Encryption服務）與源自處理序的服務之間的一個差異，是後者有一個執行許多動作的作業。 相反地，標準服務有很多操作。 每個操作通常會執行一個動作，例如將原則套用至檔案或加密檔案。
+一旦激活了某个进程，它就会变成一个服务，而且可以像其他服务一样被调用。 标准服务（如加密服务）与源自进程的服务之间的一个区别在于，后者具有一个执行多项操作的操作。 相比之下，标准服务具有许多操作。 每个操作通常执行一项操作，例如将策略应用到文档或加密文档。
 
-程式可以是短期或長期。 短期程式是在從中叫用程式的相同執行緒上同步執行的操作。 短期作業與大多數程式設計語言中的標準行為類似，使用者端應用程式會呼叫方法並等待傳回值。
+进程可以是短期的，也可以是长期的。 短期进程是在从中调用它的同一执行线程上同步执行的操作。 短期操作与大多数编程语言中的标准行为类似，大多数情况下，客户端应用程序会调用方法并等待返回值。
 
-不過，在某些情況下，由於下列因素，流程無法同步完成：
+但是，在某些情况下，由于以下因素，进程无法同步完成：
 
-* 一個程式可能需花費相當長的時間。
-* 一個程式可以跨越組織邊界。
-* 程式需要外部輸入才能完成。 例如，考慮將表單傳送給不在辦公室的經理的情況。 在此情況下，除非管理員返回並填寫表單，否則程式不會完成。
+* 一个过程可能持续相当长的时间。
+* 一个过程可以跨越组织边界。
+* 进程需要外部输入才能完成。 例如，考虑将表单发送给不在办公室的经理的情况。 在这种情况下，只有在经理返回并填写表单后该过程才会完成。
 
-   這些型別的程式稱為長效程式。 系統會以非同步方式執行長期程式，讓系統在資源允許時互動，並追蹤及監控作業。 叫用長期處理程式時，AEM Forms會建立叫用識別碼值，作為追蹤長期處理程式狀態的記錄的一部分。 記錄儲存在AEM Forms資料庫中。 您可以在不再需要長期處理記錄時將其清除。
-
->[!NOTE]
->
->叫用短期程式時，AEM Forms不會建立記錄。
-
-您可以使用叫用識別碼值來追蹤長效處理序的狀態。 例如，您可以使用處理序呼叫識別碼值來執行「處理序管理員」作業，例如終止執行中的處理序執行處理。
-
-**短期程式範例**
-
-下圖是名為的短期程式範例 *MyApplication/EncryptDocument*.
+   这些类型的进程称为长期进程。 长期进程是异步执行的，允许系统在资源允许时进行交互，并允许跟踪和监视操作。 在调用长期进程时，AEM Forms会创建一个调用标识符值，作为跟踪长期进程状态的记录的一部分。 该记录存储在AEM Forms数据库中。 您可以在不再需要长期进程记录时清除这些记录。
 
 >[!NOTE]
 >
->此程式並非以現有AEM Forms程式為基礎。 若要與討論如何呼叫此程式的程式碼範例一起遵循，請建立名為的程式 `MyApplication/EncryptDocument` 使用Workbench。 (請參閱 [使用Workbench](https://www.adobe.com/go/learn_aemforms_workbench_63).)
+>在调用短期进程时，AEM Forms不会创建记录。
 
-叫用這個短暫的處理程式時，會執行下列動作：
+使用调用标识符值，您可以跟踪长生命周期进程的状态。 例如，可以使用进程调用标识符值执行Process Manager操作，如终止正在运行的进程实例。
 
-1. 取得未加密的PDF檔案，該檔案會作為輸入值傳遞至處理序。
-1. 使用密碼加密PDF檔案。 此處理序的輸入引數名稱是 `inDoc` 而且資料型別為document。
-1. 將密碼加密的PDF檔案儲存為PDF檔案至本機檔案系統。 此程式會傳回加密的PDF檔案作為輸出值。 此處理序的輸出引數名稱是 `outDoc` 而且資料型別為document。
+**短期进程示例**
 
-   此程式會在從中叫用它的相同執行緒上同步完成。 此短期處理序的名稱為 `MyApplication/EncryptDocument`而且它的操作是 `invoke`.
+下图是名为的短暂进程的示例 *MyApplication/EncryptDocument*.
+
+>[!NOTE]
+>
+>此流程并非基于现有的AEM Forms流程。 要遵循以下说明如何调用此进程的代码示例，请创建一个名为的进程 `MyApplication/EncryptDocument` 使用Workbench。 (请参阅 [使用Workbench](https://www.adobe.com/go/learn_aemforms_workbench_63).)
+
+调用此短暂的进程时，它将执行以下操作：
+
+1. 获取作为输入值传递给进程的非安全PDF文档。
+1. 使用密码加密PDF文档。 此进程的输入参数的名称为 `inDoc` 并且数据类型是文档。
+1. 将密码加密的PDF文件作为PDF文件保存到本地文件系统。 此进程将加密的PDF文档作为输出值返回。 此进程的输出参数的名称为 `outDoc` 并且数据类型是文档。
+
+   此进程在从中调用它的同一执行线程上同步完成。 此短暂进程的名称是 `MyApplication/EncryptDocument`它的操作是 `invoke`.
 
    >[!NOTE]
    >
-   >通常一個短暫的流程包含三個以上的動作。 您可以使用Workbench建立處理。 (請參閱 [使用Workbench](https://www.adobe.com/go/learn_aemforms_workbench_63).)
+   >通常，一个短暂的过程包含三个以上的操作。 您可以使用Workbench创建流程。 (请参阅 [使用Workbench](https://www.adobe.com/go/learn_aemforms_workbench_63).)
 
-   *使用AEM表單程式設計*&#x200B;說明以下以程式設計方式呼叫此短期程式的方法：
+   *使用AEM表单编程*&#x200B;描述了您可以通过以下方式以编程方式调用此短暂的进程：
 
-   * [使用AEM Forms Remoting傳遞不安全的檔案以叫用短暫的流程](/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-a-short-lived-process-by-passing-an-unsecure-document-using-remoting) (使用Flex應用程式)
-   * [使用叫用API叫用短期程式](/help/forms/developing/invoking-aem-forms-using-java.md#invoking-a-short-lived-process-using-the-invocation-api) （Java叫用API）
-   * [使用Base64編碼叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding) （網站服務範例）
-   * [使用MTOM叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom) （網站服務範例）
-   * [使用SwaRef叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref) （網站服務範例）
-   * [透過HTTP使用BLOB資料叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-blob-data-over-http) （網站服務範例）
-   * [使用DIME叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-dime) （網站服務範例）
-   * [使用REST叫用MyApplication/EncryptDocument程式](/help/forms/developing/invoking-aem-forms-using-rest.md)
+   * [通过使用AEM Forms Remoting传递不安全的文档来调用短暂的进程](/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-a-short-lived-process-by-passing-an-unsecure-document-using-remoting) (使用Flex应用程序)
+   * [使用调用API调用短暂的进程](/help/forms/developing/invoking-aem-forms-using-java.md#invoking-a-short-lived-process-using-the-invocation-api) （Java调用API）
+   * [使用Base64编码调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding) （Web服务示例）
+   * [使用MTOM调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom) （Web服务示例）
+   * [使用SwaRef调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref) （Web服务示例）
+   * [通过HTTP使用BLOB数据调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-blob-data-over-http) （Web服务示例）
+   * [使用DIME调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-dime) （Web服务示例）
+   * [使用REST调用MyApplication/EncryptDocument进程](/help/forms/developing/invoking-aem-forms-using-rest.md)
 
-**長效程式範例**
+**长期流程示例**
 
-下圖是長期流程的範例。
+下图是一个长期过程的示例。
 
-當申請人提交貸款表單時，會呼叫此程式。 在貸款專員核准或拒絕貸款請求之前，該流程不會完成。 此長效處理序的名稱為 *FirstAppSolution/PreLoanProcess* 而且它的操作是 `invoke_Async`. 此程式必須以非同步方式叫用。 如需以程式設計方式叫用這個長效流程的相關資訊，請參閱 [叫用以人為中心的長期流程](/help/forms/developing/invoking-human-centric-long-lived.md#invoking-human-centric-long-lived-processes).
+当申请人提交贷款表单时，将调用此流程。 该过程要等到贷款官员批准或拒绝贷款请求后才能完成。 此长期进程的名称为 *FirstAppSolution/PreLoanProcess* 它的操作是 `invoke_Async`. 必须异步调用此进程。 有关以编程方式调用此长期进程的信息，请参见 [调用以人为中心的长期进程](/help/forms/developing/invoking-human-centric-long-lived.md#invoking-human-centric-long-lived-processes).
 
 >[!NOTE]
 >
->您可以依照中指定的教學課程來建立此程式 [建立您的第一個AEM Forms應用程式](https://www.adobe.com/go/learn_aemforms_firstapp_ds_63).
+>可以按照中指定的教程来创建此流程 [创建您的第一个AEM Forms应用程序](https://www.adobe.com/go/learn_aemforms_firstapp_ds_63).

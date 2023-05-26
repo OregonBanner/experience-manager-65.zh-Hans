@@ -1,7 +1,7 @@
 ---
-title: Request Analysis指令碼
+title: 请求分析脚本
 seo-title: Request Analysis Script
-description: 製作Request Analysis Script是為了方便分析access.log檔案，產生可讀報告以供日後處理
+description: 制作request analysis脚本是为了便于分析access.log文件，从而生成可读报告供以后处理
 seo-description: The request analysis script is made to ease the analysis of the access.log files producing a readable report for later processing
 uuid: 24eff3c6-5748-46f3-a30c-4a3a6427ce1d
 contentOwner: Guillaume Carlino
@@ -17,36 +17,36 @@ ht-degree: 2%
 
 ---
 
-# Request Analysis指令碼{#request-analysis-script}
+# 请求分析脚本{#request-analysis-script}
 
 ## 下载 {#download}
 
-製作此指令碼是為了方便分析 `access.log` 產生可讀報告以供日後處理的檔案。
+编写此脚本是为了便于分析 `access.log` 生成可读报告以供以后处理的文件。
 
 [获取文件](assets/analyse-access.sh)
 
 ## 描述 {#description}
 
-製作此指令碼是為了方便分析 `access.log` 產生可讀報告以供日後處理的檔案。
+编写此脚本是为了便于分析 `access.log` 生成可读报告以供以后处理的文件。
 
-它會產生整體請求數量、GET與POST、請求隨時間分佈等等。
+它可以生成整体请求数、GET与POST、请求随时间推移的分布等等。
 
-輸出為Markdown語法，因此將更容易轉換為使用pandoc等PDF的工具，或使用Markdown檢視器等外掛程式在瀏覽器中顯示。
+输出采用Markdown语法，因此将输出转换为使用pandoc等PDF或使用Markdown查看器等插件在浏览器中显示的工具会更容易。
 
-它可以分析命令列上提供的自訂路徑。
+它可以分析命令行上提供的自定义路径。
 
-從檔案內告訴您如何執行的註解中獲取：
+从文件中指明如何运行该程序的注释获取：
 
-分析CQ `access.log` 推斷各種資訊並產生Markdown輸出 `stdout`.
+分析CQ `access.log` 推断各种信息并生成Markdown输出 `stdout`.
 
 ## 用途 {#usage}
 
 `./analyse-access.sh access.log.2013-&ast;`
 
-您可以在命令列上提供其他要分析的自訂路徑
+您可以在命令行中提供其他要分析的自定义路径
 
 `/analyse-access.sh access.log.2013-&ast; /my/custom/path/1 /my/custom/path/2`
 
-您可以使用簡單管路儲存輸出
+可通过简单管道保存输出
 
 `./analyse-access.sh access.log.2013-&ast; | tee yr2013.md`

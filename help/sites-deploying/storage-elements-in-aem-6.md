@@ -1,7 +1,7 @@
 ---
-title: AEM 6.5中的儲存元素
+title: AEM 6.5中的存储元素
 seo-title: Storage Elements in AEM 6.5
-description: 瞭解AEM 6.5中可用的節點儲存實施以及如何維護存放庫。
+description: 了解AEM 6.5中可用的节点存储实施以及如何维护存储库。
 seo-description: Learn about the node storage implementations available in AEM 6.5 and how to maintain the repository.
 uuid: 3b018830-c42e-48e0-9b6f-cd230b02d914
 contentOwner: User
@@ -18,98 +18,98 @@ ht-degree: 1%
 
 ---
 
-# AEM 6.5中的儲存元素{#storage-elements-in-aem}
+# AEM 6.5中的存储元素{#storage-elements-in-aem}
 
-本文章涵蓋下列內容：
+本文涵盖以下内容：
 
-* [AEM 6儲存空間概述](/help/sites-deploying/storage-elements-in-aem-6.md#overview-of-storage-in-aem)
-* [維護存放庫](/help/sites-deploying/storage-elements-in-aem-6.md#maintaining-the-repository)
+* [AEM 6中的存储概述](/help/sites-deploying/storage-elements-in-aem-6.md#overview-of-storage-in-aem)
+* [维护存储库](/help/sites-deploying/storage-elements-in-aem-6.md#maintaining-the-repository)
 
-## AEM 6儲存空間概述 {#overview-of-storage-in-aem}
+## AEM 6中的存储概述 {#overview-of-storage-in-aem}
 
-AEM 6最重要的變更之一是存放庫層級的創新。
+AEM 6最重要的变化之一是存储库级别的创新。
 
-目前，AEM6提供兩種節點儲存實作： Tar儲存和MongoDB儲存。
+目前，AEM6中有两种节点存储实施：Tar存储和MongoDB存储。
 
-### Tar儲存 {#tar-storage}
+### Tar存储 {#tar-storage}
 
-#### 使用Tar儲存體執行全新安裝的AEM執行個體 {#running-a-freshly-installed-aem-instance-with-tar-storage}
+#### 使用Tar存储运行新安装的AEM实例 {#running-a-freshly-installed-aem-instance-with-tar-storage}
 
 >[!CAUTION]
 >
->區段節點存放區的PID已從org.apache.jackrabbit.oak變更。**外掛程式**.segment.SegmentNodeStoreService (舊版AEM 6中)至org.apache.jackrabbit.oak.segment.SegmentNodeStoreService (AEM 6.3中)。請確定已進行必要的設定調整，以便反映變更。
+>区段节点存储的PID已从org.apache.jackrabbit.oak更改。**插件**&#x200B;在AEM 6的早期版本中为.segment.SegmentNodeStoreService，而在AEM 6.3中为org.apache.jackrabbit.oak.segment.SegmentNodeStoreService。确保进行了必要的配置调整，以便反映所做的更改。
 
-依預設，AEM 6會使用預設設定選項，使用Tar儲存空間來儲存節點和二進位檔。 您可以執行下列動作，手動設定其儲存設定：
+默认情况下，AEM 6使用默认配置选项使用Tar存储来存储节点和二进制文件。 您可以通过执行以下操作来手动配置其存储设置：
 
-1. 下載AEM 6快速入門jar並將其放入新資料夾中。
-1. 透過執行以下動作解壓縮AEM：
-
-   `java -jar cq-quickstart-6.jar -unpack`
-
-1. 建立名為的資料夾 `crx-quickstart\install` 安裝目錄中的。
-
-1. 建立名為的檔案 `org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.cfg` 在新建立的資料夾中。
-
-1. 編輯檔案並設定組態選項。 以下選項適用於區段節點存放區，這是AEM Tar儲存體實作的基礎：
-
-   * `repository.home`：儲存各種存放庫相關資料的存放庫首頁的路徑。 依預設，區段檔案會儲存在crx-quickstart/segmentstore目錄下。
-   * `tarmk.size`：區段的大小上限（以MB為單位）。 預設值為256 MB。
-
-1. 啟動AEM。
-
-### Mongo儲存 {#mongo-storage}
-
-#### 使用Mongo儲存體執行全新安裝的AEM執行個體 {#running-a-freshly-installed-aem-instance-with-mongo-storage}
-
-可以依照以下程式將AEM 6設定為使用MongoDB儲存體執行：
-
-1. 下載AEM 6快速入門jar並將其放入新資料夾中。
-1. 透過執行以下命令來解壓縮AEM：
+1. 下载AEM 6快速入门jar并将其放入新文件夹中。
+1. 通过运行以下命令解压缩AEM：
 
    `java -jar cq-quickstart-6.jar -unpack`
 
-1. 請確定已安裝MongoDB且執行個體為 `mongod` 執行中。 如需詳細資訊，請參閱 [安裝MongoDB](https://docs.mongodb.org/manual/installation/).
-1. 建立名為的資料夾 `crx-quickstart\install` 安裝目錄中的。
-1. 建立包含您要在中使用的組態名稱的組態檔，以設定節點存放區。 `crx-quickstart\install` 目錄。
+1. 创建名为的文件夹 `crx-quickstart\install` 在安装目录中。
 
-   檔案節點存放區(AEM MongoDB儲存體實作的基礎)會使用名為的檔案 `org.apache.jackrabbit.oak.plugins.document.DocumentNodeStoreService.cfg`
+1. 创建一个名为的文件 `org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.cfg` 新建的文件夹中的路径。
 
-1. 編輯檔案並設定組態選項。 以下选项可供选择：
+1. 编辑文件并设置配置选项。 以下选项可用于区段节点存储，它是AEM Tar存储实施的基础：
 
-   * `mongouri`：此 [MongoURI](https://docs.mongodb.org/manual/reference/connection-string/) 連線至Mongo資料庫時需要。 預設值為 `mongodb://localhost:27017`
-   * `db`：Mongo資料庫的名稱。 預設情況下，新的AEM 6安裝使用 **aem-author** 作為資料庫名稱。
-   * `cache`：快取大小(MB)。 此快取大小分佈於DocumentNodeStore中使用的各種快取中。 預設值為256。
-   * `changesSize`：Mongo中用於快取差異輸出的限定集合大小（以MB為單位）。 預設值為256。
-   * `customBlobStore`：表示使用自訂資料存放區的布林值。 預設值為false。
+   * `repository.home`：存储各种与存储库相关的数据的存储库主目录的路径。 默认情况下，区段文件将存储在crx-quickstart/segmentstore目录下。
+   * `tarmk.size`：区段的最大大小（以MB为单位）。 默认值为256 MB。
 
-1. 以您要使用之資料存放區的PID建立設定檔案，並編輯檔案以設定設定選項。 如需詳細資訊，請參閱 [設定節點存放區和資料存放區](/help/sites-deploying/data-store-config.md).
+1. 启动AEM。
 
-1. 執行，啟動具有MongoDB儲存後端的AEM 6 jar：
+### Mongo存储 {#mongo-storage}
+
+#### 使用Mongo Storage运行新安装的AEM实例 {#running-a-freshly-installed-aem-instance-with-mongo-storage}
+
+可以按照以下过程将AEM 6配置为使用MongoDB存储运行：
+
+1. 下载AEM 6快速入门jar并将其放入新文件夹中。
+1. 通过运行以下命令解压缩AEM：
+
+   `java -jar cq-quickstart-6.jar -unpack`
+
+1. 确保已安装MongoDB并且实例为 `mongod` 正在运行。 有关更多信息，请参阅 [安装MongoDB](https://docs.mongodb.org/manual/installation/).
+1. 创建名为的文件夹 `crx-quickstart\install` 在安装目录中。
+1. 通过创建一个包含您想在中使用的配置名称的配置文件来配置节点存储 `crx-quickstart\install` 目录。
+
+   Document Node Store(AEM MongoDB存储实施的基础)使用一个名为的文件 `org.apache.jackrabbit.oak.plugins.document.DocumentNodeStoreService.cfg`
+
+1. 编辑文件并设置配置选项。 以下选项可供选择：
+
+   * `mongouri`：此 [MongoURI](https://docs.mongodb.org/manual/reference/connection-string/) 需要连接到Mongo数据库。 默认为 `mongodb://localhost:27017`
+   * `db`：Mongo数据库的名称。 默认情况下，新的AEM 6安装使用 **aem-author** 作为数据库名称。
+   * `cache`：缓存大小（以MB为单位）。 此缓存大小分布在DocumentNodeStore中使用的各种缓存中。 默认值为256。
+   * `changesSize`：Mongo中用于缓存差异输出的限定集合的大小（以MB为单位）。 默认值为256。
+   * `customBlobStore`：指示使用自定义数据存储的布尔值。 默认值为false。
+
+1. 使用要使用的数据存储的PID创建配置文件，并编辑该文件以设置配置选项。 有关详细信息，请参阅 [配置节点存储和数据存储](/help/sites-deploying/data-store-config.md).
+
+1. 通过运行以下命令，启动具有MongoDB存储后端的AEM 6 jar：
 
    ```shell
    java -jar cq-quickstart-6.jar -r crx3,crx3mongo
    ```
 
-   其中後端執行模式為 **`-r`**，此範例從MongoDB支援開始。
+   其中后端运行模式为 **`-r`**，该示例从MongoDB支持开始。
 
-#### 停用透明大型頁面 {#disabling-transparent-huge-pages}
+#### 禁用透明超大页面 {#disabling-transparent-huge-pages}
 
-Red Hat® Linux®使用稱為Transparent Great Pages (THP)的記憶體管理演演算法。 雖然AEM會執行微調的讀取和寫入，但THP已針對大型作業最佳化。 因此，建議您在Tar和Mongo儲存空間上停用THP。 若要停用演演算法，請執行下列步驟：
+Red Hat® Linux®使用称为Transparent Great Pages (THP)的内存管理算法。 虽然AEM执行细粒度读取和写入，但THP已针对大型操作进行了优化。 因此，建议您在Tar和Mongo存储中禁用THP。 要禁用算法，请执行以下步骤：
 
-1. 開啟 `/etc/grub.conf` 檔案的文字編輯器。
-1. 將下列行新增至 **grub.conf** 檔案：
+1. 打开 `/etc/grub.conf` 文件中的文本编辑器。
+1. 将以下行添加到 **grub.conf** 文件：
 
    ```
    transparent_hugepage=never
    ```
 
-1. 最後，執行以檢查設定是否已生效：
+1. 最后，通过运行以下命令，检查设置是否已生效：
 
    ```
    cat /sys/kernel/mm/redhat_transparent_hugepage/enabled
    ```
 
-   如果停用THP，上述命令的輸出應該是：
+   如果禁用了THP，则上述命令的输出应为：
 
    ```
    always madvise [never]
@@ -117,13 +117,13 @@ Red Hat® Linux®使用稱為Transparent Great Pages (THP)的記憶體管理演�
 
 >[!NOTE]
 >
->請參閱下列資源：
+>请查阅以下资源：
 >
->* 如需Red Hat® Linux®上透明大型頁面的詳細資訊，請參閱此 [文章](https://access.redhat.com/solutions/46111).
-* 如需Linux®調整秘訣，請參閱此 [文章](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html?lang=zh-Hans).
+>* 有关Red Hat® Linux®上透明大型页面的更多信息，请参阅此 [文章](https://access.redhat.com/solutions/46111).
+* 有关Linux®调整提示，请参阅此 [文章](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html?lang=zh-Hans).
 >
 
 
-## 維護存放庫 {#maintaining-the-repository}
+## 维护存储库 {#maintaining-the-repository}
 
-存放庫的每次更新都會建立內容修訂版本。 因此，儲存庫的大小會隨著每次更新而成長。 為避免儲存庫成長不受控制，必須清理舊修訂以釋放磁碟資源。 此維護功能稱為「版本清理」。 修訂清除機制會從存放庫中移除過時的資料，以回收磁碟空間。 如需修訂清除的詳細資訊，請閱讀 [修訂清除頁面](/help/sites-deploying/revision-cleanup.md).
+存储库的每次更新都会创建一个内容修订版本。 因此，存储库的大小会随着每次更新而增长。 为了避免不受控制的存储库增长，必须清理旧修订版以释放磁盘资源。 此维护功能称为修订版清理。 修订清理机制通过从存储库中删除过时数据来回收磁盘空间。 有关修订版清理的更多详细信息，请阅读 [“修订清理”页面](/help/sites-deploying/revision-cleanup.md).

@@ -1,6 +1,6 @@
 ---
-title: 使用Adobe Experience Manager編寫Headless
-description: 介紹Adobe Experience Manager強大且有彈性的無周邊功能，以及如何為您的專案撰寫內容。
+title: 使用Adobe Experience Manager为Headless创作
+description: 简单介绍Adobe Experience Manager强大而灵活的Headless功能，以及如何为项目创作内容。
 exl-id: 39d2218a-4f11-459d-8514-cfd312246be5
 source-git-commit: f4b6eb2ded17ec641f23a1fc3b977ce77169c8a1
 workflow-type: tm+mt
@@ -11,7 +11,7 @@ ht-degree: 90%
 
 # 使用 AEM 为 Headless 创作 – 简介 {#author-headless-introduction}
 
-在這部分中 [AEM Headless內容作者歷程](overview.md)，您可以瞭解使用Adobe Experience Manager (AEM)傳送headless內容所需的（基本）概念和術語，以瞭解authoring內容。
+在这部分中 [AEM Headless内容创作历程](overview.md)中，您可以了解使用Adobe Experience Manager (AEM)交付headless内容所需的创作内容的（基本）概念和术语。
 
 ## 目标 {#objective}
 

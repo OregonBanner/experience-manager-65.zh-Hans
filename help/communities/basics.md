@@ -1,7 +1,7 @@
 ---
-title: Communities元件基本知識
+title: 社区组件基础知识
 seo-title: Communities Components Basics
-description: 在編輯模式下將Communities功能新增至AEM網站並設定元件
+description: 在编辑模式下将社区功能添加到AEM站点并配置组件
 seo-description: Add Communities features to AEM sites in edit mode and configure components
 uuid: c017a7c5-40d1-4592-9317-96fd727dac86
 contentOwner: Guillaume Carlino
@@ -17,75 +17,75 @@ ht-degree: 2%
 
 ---
 
-# Communities元件基本知識 {#communities-components-basics}
+# 社区组件基础知识 {#communities-components-basics}
 
 ## 概述 {#overview}
 
-本檔案的製作區段會說明如何在作者編輯模式下將Communities功能新增至AEM網站，並說明元件設定。
+本文档的创作部分介绍了如何在创作编辑模式下将Communities功能添加到AEM站点，并描述了组件配置。
 
-您可以使用AEM例項和互動式來探索元件 [社群元件指南](components-guide.md).
+可以使用AEM实例和交互式 [社区组件指南](components-guide.md).
 
-## 存取Communities元件 {#accessing-communities-components}
+## 访问社区组件 {#accessing-communities-components}
 
-編寫頁面內容時，如果基礎範本允許對頁面設計進行變更，則可以啟用元件瀏覽器中尚未提供的元件，作為網站設計的一部分。
+在创作页面内容时，如果基础模板允许对页面设计进行更改，则可以启用组件浏览器中尚未提供的组件，作为站点设计的一部分。
 
-列出可用的Communities元件 [此處](author-communities.md#available-communities-components).
+列出可用的社区组件 [此处](author-communities.md#available-communities-components).
 
 >[!NOTE]
 >
->如需一般撰寫資訊，請檢視 [製作頁面的快速指南](../../help/sites-authoring/qg-page-authoring.md).
+>有关一般创作信息，请查看 [页面创作快速指南](../../help/sites-authoring/qg-page-authoring.md).
 >
->若不熟悉AEM，請檢視以下說明檔案： [基本處理](../../help/sites-authoring/basic-handling.md).
+>如果不熟悉AEM，请查看文档 [基本处理](../../help/sites-authoring/basic-handling.md).
 
-### 進入設計模式 {#entering-design-mode}
+### 进入设计模式 {#entering-design-mode}
 
-若為 **Communities** 元件瀏覽器(sidekick)中找不到元件，必須輸入 `Design Mode` 以新增其他Communities元件。 [必要的使用者端程式庫](#required-clientlibs) (clientlibs)可能也需要新增。
+如果 **Communities** 在组件浏览器(sidekick)中未找到组件，需要输入 `Design Mode` 以添加其他社区组件。 [所需的客户端库](#required-clientlibs) (clientlibs)可能也需要添加。
 
-如需詳細資訊，請參閱 [在設計模式中設定元件](../../help/sites-authoring/default-components-designmode.md).
+有关详细信息，请参阅 [在设计模式下配置组件](../../help/sites-authoring/default-components-designmode.md).
 
-以下是選取一些Communities元件並在元件瀏覽器中檢視這些元件的影像：
+以下是选择一些Communities组件并在组件浏览器中查看这些组件的图像：
 
-![component-design](assets/component-design.png)
+![组件设计](assets/component-design.png)
 
-元件瀏覽器現在提供選取的元件：
+现在，选定的组件在组件浏览器中可用：
 
 ![component-design1](assets/component-design1.png)
 
-## 必要的Clientlibs {#required-clientlibs}
+## 所需的Clientlibs {#required-clientlibs}
 
-[使用者端程式庫](../../help/sites-developing/clientlibs.md) 元件的正常運作(JavaScript)和樣式(CSS)需要(clientlibs)。
+[客户端库](../../help/sites-developing/clientlibs.md) 组件的正常功能(JavaScript)和样式(CSS)需要(clientlibs)。
 
-將Communities元件新增至頁面時，如果結果為錯誤或意外外觀，首先要嘗試為Communities元件新增必要的clientlibs。 如需詳細資訊，請參閱 [Communities元件的Clientlibs](clientlibs.md).
+将Communities组件添加到页面时，如果结果为错误或意外外观，首先要尝试为Communities组件添加所需的clientlibs。 有关详细信息，请参阅 [适用于社区组件的Clientlibs](clientlibs.md).
 
-### 範例：最初放置的檢閱沒有使用者端資料庫…… {#example-initially-placed-reviews-without-client-libraries}
+### 示例：最初放置的审阅没有客户端库…… {#example-initially-placed-reviews-without-client-libraries}
 
 ![clientlibs1](assets/clientlibs1.png)
 
-### ...以及使用使用者端資料庫 {#and-with-client-libraries}
+### ...以及客户端库 {#and-with-client-libraries}
 
 ![clientlibs2](assets/clientlibs2.png)
 
 ## 标记 {#tagging}
 
-許多Communities功能可設定為允許成員標籤在發佈環境中輸入（發佈）的內容。
+许多Communities功能可以配置为允许成员标记在发布环境中输入（发布）的内容。
 
-如果允許標籤，則可設定社群網站的設定，以限制向發佈環境中的成員顯示的名稱空間。 請參閱 [社群網站主控台](sites-console.md#tagging).
+如果允许标记，则可以设置社区站点的配置，以限制向发布环境中的成员显示的命名空间。 请参阅 [社区站点控制台](sites-console.md#tagging).
 
-允許標籤的功能： [部落格](blog-feature.md)， [行事曆](calendar.md)， [檔案庫](file-library.md)， [論壇](forum.md)
+允许标记的功能： [博客](blog-feature.md)， [日历](calendar.md)， [文件库](file-library.md)， [论坛](forum.md)
 
-使用標籤的功能： [搜尋](search.md)， [社交標籤雲](tagcloud.md)
+使用标记的功能： [搜索](search.md)， [社交标签云](tagcloud.md)
 
-如需製作資訊：
+有关创作信息：
 
 * [使用标记](../../help/sites-authoring/tags.md)
 
-如需管理資訊：
+管理信息：
 
-* 建立標籤名稱空間（分類法）： [管理標籤](../../help/sites-administering/tags.md)
-* 社群網站設定：請參閱 [標籤](sites-console.md#tagging)
-* [標籤使用者產生的內容](../../help/sites-authoring/tags.md)
+* 创建标记命名空间（分类）： [管理标记](../../help/sites-administering/tags.md)
+* 社区站点配置：请参阅 [标记](sites-console.md#tagging)
+* [标记用户生成的内容](../../help/sites-authoring/tags.md)
 
-如需開發人員資訊：
+有关开发人员信息：
 
 * [AEM 标记框架](../../help/sites-developing/framework.md)
-* [標籤Essentials](tag.md)
+* [标记Essentials](tag.md)

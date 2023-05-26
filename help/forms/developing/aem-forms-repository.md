@@ -1,7 +1,7 @@
 ---
-title: 使用AEM Forms存放庫
+title: 使用AEM Forms存储库
 seo-title: Working with AEM Forms Repository
-description: 管理AEM Forms存放庫，以使用Java API和Web服務API建立資料夾、寫入、清單、讀取、更新和搜尋資源。 此外，瞭解如何建立資源關係、鎖定和刪除資源。
+description: 管理AEM Forms存储库，以使用Java API和Web服务API创建文件夹、写入、列出、读取、更新和搜索资源。 此外，了解如何创建资源关系、锁定和删除资源。
 seo-description: Manage AEM Forms repository to create folders, write, list, read, update resources, and search resources using the Java API and Web Service API. In addition, learn how to create resource relationships, lock and delete resources.
 uuid: 6ead49f9-ca0d-4ee4-86a6-0a9ced6ec4f8
 contentOwner: admin
@@ -18,29 +18,29 @@ ht-degree: 0%
 
 ---
 
-# 使用AEM Forms存放庫 {#working-with-aem-forms-repository}
+# 使用AEM Forms存储库 {#working-with-aem-forms-repository}
 
-**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms 。**
+**本文档中的示例和示例仅适用于AEM Forms on JEE环境。**
 
-**關於存放庫服務**
+**关于存储库服务**
 
-存放庫服務可為AEM Forms提供資源儲存和管理服務。 當開發人員建立 *AEM Forms* 應用程式後，他們便可以部署存放庫中的資產，而非檔案系統。 資產可包含任何型別的附屬資料，包括XML表單、PDF forms(包括Acrobat表單)、表單片段、影像、設定檔、原則、SWF檔案、DDX檔案、XML結構描述、WSDL檔案和測試資料。
+存储库服务为AEM Forms提供资源存储和管理服务。 当开发人员创建 *AEM Forms* 应用程序时，他们可以在存储库中部署资产，而不是部署文件系统。 这些资源可以包括任何类型的宣传资料，包括XML表单、PDF forms(包括Acrobat表单)、表单片段、图像、配置文件、策略、SWF文件、DDX文件、XML架构、WSDL文件和测试数据。
 
-例如，假設下列名為的Forms應用程式 *應用程式/表單應用程式*：
+例如，考虑以下名为的Forms应用程序 *Applications/FormsApplication*：
 
 ![ww_ww_formrepository](assets/ww_ww_formrepository.png)
 
-請注意，FormsFolder中有一個名為Loan.xdp的檔案。 若要存取此表單設計，請指定完整路徑（包括版本）： `Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`.
+请注意，FormsFolder中有一个名为Loan.xdp的文件。 要访问此表单设计，请指定完整路径（包括版本）： `Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`.
 
 >[!NOTE]
 >
->如需使用Workbench建立Forms應用程式的詳細資訊，請參閱 [Workbench說明](https://www.adobe.com/go/learn_aemforms_workbench_63).
+>有关使用Workbench创建Forms应用程序的信息，请参阅 [Workbench帮助](https://www.adobe.com/go/learn_aemforms_workbench_63).
 
-位於AEM Forms存放庫中的資源路徑為：
+位于AEM Forms存储库中的资源的路径为：
 
 `Applications/Application-name/Application-version/Folder.../Filename`
 
-下列值顯示一些URI值的範例：
+以下值显示了一些URI值的示例：
 
 * Applications/AppraisalReport/1.0/Forms/FullForm.xdp
 * Applications/AnotherApp/1.1/Assets/picture.jpg
@@ -48,1210 +48,1210 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->您可以使用網頁瀏覽器瀏覽AEM Forms存放庫。 若要瀏覽存放庫，請在網頁瀏覽器中輸入下列URL `https://[server name]:[server port]/repository`. 您可以使用網頁瀏覽器來驗證與「使用AEM Forms存放庫」區段關聯的快速入門結果。 例如，如果您將內容新增至AEM Forms存放庫，即可在網頁瀏覽器中檢視內容。 (請參閱 [快速入門（SOAP模式）：使用Java API編寫資源](/help/forms/developing/repository-service-api-quick-starts.md#quick-start-soap-mode-writing-a-resource-using-the-java-api).)
+>您可以使用Web浏览器浏览AEM Forms存储库。 要浏览存储库，请在Web浏览器中输入以下URL `https://[server name]:[server port]/repository`. 您可以使用Web浏览器验证与使用AEM Forms存储库部分关联的快速入门结果。 例如，如果将内容添加到AEM Forms存储库，则可以在Web浏览器中查看内容。 (请参阅 [快速入门（SOAP模式）：使用Java API编写资源](/help/forms/developing/repository-service-api-quick-starts.md#quick-start-soap-mode-writing-a-resource-using-the-java-api).)
 
-存放庫API提供了許多操作，可用於儲存和檢索存放庫中的資訊。 例如，當處理應用程式時需要資源時，您可以取得資源清單或擷取儲存於存放庫中的特定資源。
-
->[!NOTE]
->
->存放庫API無法用於與內容服務互動（已棄用）。 若要與內容服務（已棄用）互動，請使用檔案管理API。
-
-使用存放庫服務API，您可以完成下列工作：
-
-* 创建文件夹. 另請參閱 [建立資料夾](aem-forms-repository.md#creating-folders).
-* 寫入資源及其屬性。 另請參閱 [寫入資源](aem-forms-repository.md#writing-resources).
-* 列出指定集合中或其他相關資源的資源。 另請參閱 [列出資源](aem-forms-repository.md#listing-resources).
-* 讀取資源及其屬性。 另請參閱 [正在讀取資源](aem-forms-repository.md#reading-resources).
-* 更新資源及其屬性。 另請參閱 [更新資源](aem-forms-repository.md#updating-resources).
-* 搜尋資源，包括其歷史記錄、相關資源和屬性。 另請參閱 [搜尋資源](aem-forms-repository.md#searching-for-resources).
-* 指定資源之間的關係。 另請參閱 [建立資源關係](aem-forms-repository.md#creating-resource-relationships).
-* 管理資源存取控制，包括鎖定和解鎖資源，以及讀取和寫入存取控制清單(ACL)。 另請參閱 [鎖定資源](aem-forms-repository.md#locking-resources).
-* 刪除資源及其屬性。 另請參閱 [刪除資源](aem-forms-repository.md#deleting-resources).
+存储库API提供了许多可用于存储和检索存储库信息的操作。 例如，在处理应用程序时需要资源时，您可以获取资源列表或检索存储在存储库中的特定资源。
 
 >[!NOTE]
 >
->使用存放庫API時，您無法使用ECM存放庫管理資源存取控制、搜尋資源或指定資源關係。
+>存储库API无法用于与Content Services交互（已弃用）。 要与Content Services（已弃用）交互，请使用文档管理API。
+
+使用存储库服务API，您可以完成以下任务：
+
+* 创建文件夹. 参见 [创建文件夹](aem-forms-repository.md#creating-folders).
+* 编写资源及其属性。 参见 [写入资源](aem-forms-repository.md#writing-resources).
+* 列出给定收藏集中的资源或其他相关资源。 参见 [列出资源](aem-forms-repository.md#listing-resources).
+* 读取资源及其属性。 参见 [正在读取资源](aem-forms-repository.md#reading-resources).
+* 更新资源及其属性。 参见 [更新资源](aem-forms-repository.md#updating-resources).
+* 搜索资源，包括其历史记录、相关资源和属性。 参见 [搜索资源](aem-forms-repository.md#searching-for-resources).
+* 指定资源之间的关系。 参见 [创建资源关系](aem-forms-repository.md#creating-resource-relationships).
+* 管理资源访问控制，包括锁定和解锁资源，以及读取和写入访问控制列表(ACL)。 参见 [锁定资源](aem-forms-repository.md#locking-resources).
+* 删除资源及其属性。 参见 [删除资源](aem-forms-repository.md#deleting-resources).
 
 >[!NOTE]
 >
->將加密的PDF寫入存放庫時，無法使用自動關係擷取功能。 否則，加密的PDF可以儲存在存放庫中，並於稍後擷取。 從PDF存放庫中擷取事件後，擷取器可以選擇將它解密。
+>使用存储库API，您无法使用ECM存储库管理资源访问控制、搜索资源或指定资源关系。
 
 >[!NOTE]
 >
->如需儲存庫服務的詳細資訊，請參閱 [AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
-
-## 建立資料夾 {#creating-folders}
-
-資料夾（資源集合）可用來將物件（檔案或資源）儲存在有組織的群組中。 資料夾可以包含資源和其他資料夾，也稱為子資料夾。 資源一次只能儲存在一個資料夾中。
-
-檔案從資料夾繼承存取控制清單(ACL)，子資料夾從其父資料夾繼承ACL。 因此，在建立子資料夾之前，父資料夾必須存在。 IDE僅允許您逐個資料夾進行互動，而不是逐個檔案進行互動。 您無法對資料夾進行版本設定，因此沒有必要這樣做；資料夾本身並不包含資料。 反之，它只是包含資料之資源的容器。 預設ACL是系統層級的許可權，這表示使用者必須擁有系統層級的許可權（讀取、寫入、周遊、管理ACL），直到有人授予他們特定檔案夾的許可權為止。 ACL只能在IDE中運作。
+>当加密的PDF写入存储库时，无法使用自动关系提取功能。 否则，可以将加密的PDF存储在存储库中并在以后进行检索。 从PDF库中检索内容后，检索器可以选择将它解密。
 
 >[!NOTE]
 >
->如需儲存庫服務的詳細資訊，請參閱 [AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
+>有关Repository服务的详细信息，请参见 [AEM Forms的服务参考](https://www.adobe.com/go/learn_aemforms_services_63).
 
-### 步驟摘要 {#summary-of-steps}
+## 创建文件夹 {#creating-folders}
 
-若要建立資料夾，請執行下列步驟：
+文件夹（资源集合）用于将对象（文件或资源）存储在组织的分组中。 文件夹可以包含资源和其他文件夹，也称为子文件夹。 资源一次只能存储在一个文件夹中。
 
-1. 包含專案檔案。
-1. 建立服務使用者端。
-1. 建立資料夾。
-1. 將資料夾寫入存放庫。
-
-**包含專案檔案**
-
-在您的開發專案中包含必要的檔案。 如果您使用Java建立使用者端應用程式，請包含必要的JAR檔案。 如果您使用Web服務，請包含Proxy檔案。
-
-**建立服務使用者端**
-
-您必須先建立連線並提供認證，才能以程式設計方式建立資源集合。 這是透過建立服務使用者端來完成。
-
-**建立資料夾**
-
-叫用存放庫服務方法建立資源集合，並填入識別資訊的資源集合，包括其UUID、資料夾名稱和說明。
-
-**將資料夾寫入存放庫**
-
-叫用存放庫服務方法來寫入資源集合，指定目標資料夾的URI。
-
-**另请参阅**
-
-[使用Java API建立資料夾](aem-forms-repository.md#create-folders-using-the-java-api)
-
-[使用Web服務API建立資料夾](aem-forms-repository.md#create-folders-using-the-web-service-api)
-
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
-
-[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
-
-[存放庫服務API快速啟動](/help/forms/developing/repository-service-api-quick-starts.md#repository-service-api-quick-starts)
-
-### 使用Java API建立資料夾 {#create-folders-using-the-java-api}
-
-使用存放庫服務API (Java)建立資料夾：
-
-1. 包含專案檔案
-
-   將專案檔案包含在Java專案的類別路徑中。
-
-1. 建立服務使用者端
-
-   建立 `ResourceRepositoryClient` 物件，使用它的建構函式並傳遞 `ServiceClientFactory` 包含連線屬性的物件。
-
-1. 建立資料夾
-
-   若要建立資源集合，您必須先建立 `com.adobe.repository.infomodel.bean.RepositoryInfomodelFactoryBean` 物件。
-
-   叫用 `repositoryInfomodelFactoryBean` 物件的 `newResourceCollection` 方法，並傳入下列引數：
-
-   * A `com.adobe.repository.infomodel.Id` 要指派給資源的UUID識別碼。
-   * A `com.adobe.repository.infomodel.Lid` 要指派給資源的UUID識別碼。
-   * A `java.lang.String` 包含資源集合的名稱。 例如：`FormsFolder`。
-
-   方法會傳回 `com.adobe.repository.infomodel.bean.ResourceCollection` 代表新資料夾的物件。
-
-   使用設定資料夾的說明 `setDescription` 方法並傳遞下列引數：
-
-   * A `String` 描述資源集合。 在此範例中， `"test Folder"` 已使用 `.`
-
-
-1. 將資料夾寫入存放庫
-
-   叫用 `ResourceRepositoryClient` 物件的 `writeResource` 方法並傳入資料夾的URI和 `ResourceCollection` 物件。 例如，資料夾的URI可以是以下值 `/Applications/FormsApplication/1.0/`.
-
-   方法會傳回新建立的例項 `com.adobe.repository.infomodel.bean.Resource` 物件。 例如，您可以透過叫用 `com.adobe.repository.infomodel.bean.Resource` 物件的 `getId` 方法。
-
-**另请参阅**
-
-[建立資料夾](aem-forms-repository.md#creating-folders)
-
-[快速入門（SOAP模式）：使用Java API建立資料夾](/help/forms/developing/repository-service-api-quick-starts.md#quick-start-soap-mode-creating-a-folder-using-the-java-api)
-
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
-
-[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
-
-### 使用Web服務API建立資料夾 {#create-folders-using-the-web-service-api}
-
-使用存放庫服務API （Web服務）建立資料夾：
-
-1. 包含專案檔案
-
-   * 使用base64建立使用存放庫WSDL的Microsoft .NET使用者端元件。
-   * 參考Microsoft .NET使用者端元件。
-
-1. 建立服務使用者端
-
-   使用Microsoft .NET使用者端元件，建立 `RepositoryServiceService` 物件，透過叫用其預設建構函式。 設定其 `Credentials` 屬性使用 `System.Net.NetworkCredential` 包含使用者名稱和密碼的物件。
-
-1. 建立資料夾
-
-   使用「 」的預設建構函式建立資料夾 `ResourceCollection` 類別並傳遞下列引數：
-
-   * 一個 `Id` 物件，這是透過叫用預設建構函式建立的 `Id` 類別並指派給 `Resource` 物件的 `id` 欄位。
-   * 一個 `Lid` 物件，這是透過叫用預設建構函式建立的 `Lid` 類別並指派給 `Resource` 物件的 `lid` 欄位。
-   * 包含資源集合名稱的字串，該資源集合會指派給 `Resource` 物件的 `name` 欄位。 此範例中使用的名稱為 `"testfolder"`.
-   * 包含資源集合說明的字串，該資源集合說明已指派給 `Resource` 物件的 `description` 欄位。 此範例中使用的說明為 `"test folder"`.
-
-1. 將資料夾寫入存放庫
-
-   叫用 `RepositoryServiceService` 物件的 `writeResource` 方法並傳遞下列引數：
-
-   * 要建立資料夾的路徑。
-   * 此 `ResourceCollection` 代表資料夾的物件。
-   * 通過 `null` 其他兩個引數的設定值。
-
-**另请参阅**
-
-[建立資料夾](aem-forms-repository.md#creating-folders)
-
-[使用Base64編碼叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
-
-## 寫入資源 {#writing-resources}
-
-您可以在存放庫中的指定位置建立資源。 自然檔案大小受資料庫限制和工作階段逾時影響。 對於預設設定，檔案限製為25 MB。 若要提高或降低檔案大小上限，您必須變更資料庫組態。
-
-寫入資源等同於將資料儲存在存放庫中。 將資源寫入存放庫後，存放庫生態系統中的所有使用者端都可存取該資源。 將資源（例如XML結構描述、XDP檔案和XSD檔案）寫入存放庫時，會根據MIME型別來剖析內容。 如果支援MIME型別，剖析器會判斷是否有與其他內容的隱含關係。 例如，如果階層式樣式表(CSS)具有參照通用CSS的相對URL，您應該也會將通用CSS提交至存放庫。 兩個資源之間的關係會儲存為未決關係，為期30天，不可調整。 當您在30天內將通用CSS提交至存放庫時，就會建立關係。
-
-當您建立資源時，存取控制清單(ACL)繼承自父資料夾。 在建立初始資源或資料夾之前，根資料夾具有系統層級的許可權，此時資源或資料夾會獲得預設的ACL許可權。
-
-您可以使用存放庫服務Java API或Web服務API，以程式設計方式寫入資源。
+文件从文件夹继承访问控制列表(ACL)，子文件夹从其父文件夹继承ACL。 因此，在创建子文件夹之前，父文件夹必须存在。 IDE仅允许您逐个文件夹进行交互，而不是逐个文件进行交互。 您不能对文件夹进行版本控制，也不需要这样做；文件夹本身不包含数据。 相反，它只是包含数据的资源的容器。 默认ACL是系统级别的权限，这意味着用户必须具有系统级别的权限（读取、写入、遍历、管理ACL），直到有人授予他们特定文件夹的权限。 ACL只能在IDE中工作。
 
 >[!NOTE]
 >
->如需儲存庫服務的詳細資訊，請參閱 [AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
+>有关Repository服务的详细信息，请参见 [AEM Forms的服务参考](https://www.adobe.com/go/learn_aemforms_services_63).
 
-### 步驟摘要 {#summary_of_steps-1}
+### 步骤摘要 {#summary-of-steps}
 
-若要寫入資源，請遵循下列步驟：
+要创建文件夹，请执行以下步骤：
 
-1. 包含專案檔案。
-1. 建立存放庫服務使用者端。
-1. 指定要讀取的資源的URI。
-1. 讀取資源。
+1. 包括项目文件。
+1. 创建服务客户端。
+1. 创建文件夹。
+1. 将文件夹写入存储库。
 
-**包含專案檔案**
+**包括项目文件**
 
-在您的開發專案中包含必要的檔案。 如果您使用Java建立使用者端應用程式，請包含必要的JAR檔案。 如果您使用Web服務，請包含Proxy檔案。
+在开发项目中包含必要的文件。 如果要使用Java创建客户端应用程序，请包含必要的JAR文件。 如果使用Web服务，请包含代理文件。
 
-**建立服務使用者端**
+**创建服务客户端**
 
-您必須先建立連線並提供認證，才能以程式設計方式讀取資源。 這是透過建立服務使用者端來完成。
+在以编程方式创建资源集合之前，必须建立连接并提供凭据。 这是通过创建服务客户端来实现的。
 
-**指定資源目標資料夾的URI**
+**创建文件夹**
 
-建立包含要讀取之資源URI的字串。 語法包括正斜線，如以下範例所示：「/*路徑*/*資料夾*「。
+调用存储库服务方法以创建资源收藏集，并使用标识信息（包括其UUID、文件夹名称和描述）填充资源收藏集。
 
-**建立資源**
+**将文件夹写入存储库**
 
-叫用存放庫服務方法來建立資源，並將識別資訊（包括其UUID、資源名稱和說明）填入資源。
-
-**指定資源內容**
-
-叫用存放庫服務方法建立資源內容，並將該內容儲存在資源中。
-
-**將資源寫入目標資料夾**
-
-叫用存放庫服務方法來寫入資源，指定目標資料夾的URI。
+调用存储库服务方法以写入资源集合，指定目标文件夹的URI。
 
 **另请参阅**
 
-[使用Java API編寫資源](aem-forms-repository.md#write-resources-using-the-java-api)
+[使用Java API创建文件夹](aem-forms-repository.md#create-folders-using-the-java-api)
 
-[使用Web服務API寫入資源](aem-forms-repository.md#write-resources-using-the-web-service-api)
+[使用Web服务API创建文件夹](aem-forms-repository.md#create-folders-using-the-web-service-api)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
-[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[存放庫服務API快速啟動](/help/forms/developing/repository-service-api-quick-starts.md#repository-service-api-quick-starts)
+[存储库服务API快速启动](/help/forms/developing/repository-service-api-quick-starts.md#repository-service-api-quick-starts)
 
-### 使用Java API編寫資源 {#write-resources-using-the-java-api}
+### 使用Java API创建文件夹 {#create-folders-using-the-java-api}
 
-使用存放庫服務API (Java)編寫資源：
+使用存储库服务API (Java)创建文件夹：
 
-1. 包含專案檔案
+1. 包括项目文件
 
-   在您的Java專案的類別路徑中包含使用者端JAR檔案。
+   将项目文件包含在Java项目的类路径中。
 
-1. 建立服務使用者端
+1. 创建服务客户端
 
-   建立 `ResourceRepositoryClient` 物件，使用它的建構函式並傳遞 `ServiceClientFactory` 包含連線屬性的物件。
+   创建 `ResourceRepositoryClient` 对象通过使用该对象的构造函数传递 `ServiceClientFactory` 包含连接属性的对象。
 
-1. 指定資源目標資料夾的URI
+1. 创建文件夹
 
-   指定資源目標資料夾的URI。 在此案例中，因為資源命名為 `testResource` 將會儲存在名為的資料夾中 `testFolder`，資料夾的URI為 `"/testFolder"`. URI會儲存為 `java.lang.String` 物件。
+   要创建资源集合，必须首先创建 `com.adobe.repository.infomodel.bean.RepositoryInfomodelFactoryBean` 对象。
 
-1. 建立資源
+   调用 `repositoryInfomodelFactoryBean` 对象的 `newResourceCollection` 方法，并传入以下参数：
 
-   若要建立資源，您必須先建立 `com.adobe.repository.infomodel.bean.RepositoryInfomodelFactoryBean` 物件。
+   * A `com.adobe.repository.infomodel.Id` 要分配给资源的UUID标识符。
+   * A `com.adobe.repository.infomodel.Lid` 要分配给资源的UUID标识符。
+   * A `java.lang.String` 包含资源集合的名称。 例如：`FormsFolder`。
 
-   叫用 `RepositoryInfomodelFactoryBean` 物件的 `newResource` 方法，會建立 `com.adobe.repository.infomodel.bean.Resource` 物件。 在此範例中，提供下列引數：
+   此方法会返回 `com.adobe.repository.infomodel.bean.ResourceCollection` 表示新文件夹的对象。
 
-   * A `com.adobe.repository.infomodel.Id` 物件，這是透過叫用預設建構函式建立的 `Id` 類別。
-   * A `com.adobe.repository.infomodel.Lid` 物件，這是透過叫用預設建構函式建立的 `Lid` 類別。
-   * A `java.lang.String` 包含資源的檔案名稱。
+   使用设置文件夹的描述 `setDescription` 方法，并传入以下参数：
 
-   若要指定資源的說明，請叫用 `Resource` 物件的 `setDescription` 方法並傳遞包含說明的字串。 在此範例中，說明為 `"test resource"`.
+   * A `String` 描述资源收藏集。 在此示例中， `"test Folder"` 已使用 `.`
 
-1. 指定資源內容
 
-   若要建立資源的內容，請叫用 `RepositoryInfomodelFactoryBean` 物件的 `newResourceContent` 方法，會傳回 `com.adobe.repository.infomodel.bean.ResourceContent` 物件。 將內容新增至 `ResourceContent` 物件。 在此範例中，這是透過執行下列工作來完成：
+1. 将文件夹写入存储库
 
-   * 叫用 `ResourceContent` 物件的 `setDataDocument` 方法和傳入 `com.adobe.idp.Document` 物件
-   * 叫用 `ResourceContent` 物件的 `setSize` 方法並傳入的大小（位元組） `Document` 物件
+   调用 `ResourceRepositoryClient` 对象的 `writeResource` 方法，并在文件夹的URI中传递和 `ResourceCollection` 对象。 例如，文件夹的URI可以是以下值 `/Applications/FormsApplication/1.0/`.
 
-   透過叫用將內容新增到資源 `Resource` 物件的 `setContent` 方法並傳入 `ResourceContent` 物件。 如需詳細資訊，請參閱 [AEM Forms API參考](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
-
-1. 將資源寫入目標資料夾
-
-   叫用 `ResourceRepositoryClient` 物件的 `writeResource` 方法並傳入資料夾的URI，以及 `Resource` 物件。
+   方法返回新创建的实例 `com.adobe.repository.infomodel.bean.Resource` 对象。 例如，您可以通过调用 `com.adobe.repository.infomodel.bean.Resource` 对象的 `getId` 方法。
 
 **另请参阅**
 
-[寫入資源](aem-forms-repository.md#writing-resources)
+[创建文件夹](aem-forms-repository.md#creating-folders)
 
-[快速入門（SOAP模式）：使用Java API編寫資源](/help/forms/developing/repository-service-api-quick-starts.md#quick-start-soap-mode-writing-a-resource-using-the-java-api)
+[快速入门（SOAP模式）：使用Java API创建文件夹](/help/forms/developing/repository-service-api-quick-starts.md#quick-start-soap-mode-creating-a-folder-using-the-java-api)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
-[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### 使用Web服務API寫入資源 {#write-resources-using-the-web-service-api}
+### 使用Web服务API创建文件夹 {#create-folders-using-the-web-service-api}
 
-使用存放庫服務API （Web服務）寫入資源：
+使用存储库服务API（Web服务）创建文件夹：
 
-1. 包含專案檔案
+1. 包括项目文件
 
-   * 使用base64建立使用存放庫WSDL的Microsoft .NET使用者端元件。
-   * 參考Microsoft .NET使用者端元件。
+   * 使用base64创建使用存储库WSDL的Microsoft .NET客户端程序集。
+   * 引用Microsoft .NET客户端程序集。
 
-1. 建立服務使用者端
+1. 创建服务客户端
 
-   使用Microsoft .NET使用者端元件，建立 `RepositoryServiceService` 物件，透過叫用其預設建構函式。 設定其 `Credentials` 屬性使用 `System.Net.NetworkCredential` 包含使用者名稱和密碼的物件。
+   使用Microsoft .NET客户端程序集，创建 `RepositoryServiceService` 对象。 设置其 `Credentials` 属性使用 `System.Net.NetworkCredential` 包含用户名和密码的对象。
 
-1. 指定資源目標資料夾的URI
+1. 创建文件夹
 
-   指定資源目標資料夾的URI。 在此案例中，因為資源命名為 `testResource` 將會儲存在名為的資料夾中 `testFolder`，資料夾的URI為 `"/testFolder"`. 使用與Microsoft .NET Framework相容的語言時（例如C#），請將URI儲存在 `System.String` 物件。
+   使用默认构造函数为创建文件夹 `ResourceCollection` 类并传递以下参数：
 
-1. 建立資源
+   * An `Id` 对象，通过调用 `Id` 类并分配给 `Resource` 对象的 `id` 字段。
+   * An `Lid` 对象，通过调用 `Lid` 类并分配给 `Resource` 对象的 `lid` 字段。
+   * 一个字符串，其中包含分配给 `Resource` 对象的 `name` 字段。 本示例中使用的名称为 `"testfolder"`.
+   * 一个字符串，其中包含分配给 `Resource` 对象的 `description` 字段。 本示例中使用的描述是 `"test folder"`.
 
-   若要建立資源，請叫用預設建構函式 `Resource` 類別。 在此範例中，下列資訊儲存在 `Resource` 物件：
+1. 将文件夹写入存储库
 
-   * A `com.adobe.repository.infomodel.Id` 物件，這是透過叫用預設建構函式建立的 `Id` 類別並指派給 `Resource` 物件的 `id` 欄位。
-   * A `com.adobe.repository.infomodel.Lid` 物件，這是透過叫用預設建構函式建立的 `Lid` 類別並指派給 `Resource` 物件的 `lid` 欄位。
-   * 包含指派給資源的檔案名稱的字串。 `Resource` 物件的 `name` 欄位。 此範例中使用的名稱為 `"testResource"`.
-   * 包含資源說明(已指派給 `Resource` 物件的 `description` 欄位。 此範例中使用的說明為 `"test resource"`.
+   调用 `RepositoryServiceService` 对象的 `writeResource` 方法并传递以下参数：
 
-1. 指定資源內容
-
-   若要建立資源的內容，請叫用預設建構函式 `ResourceContent` 類別。 然後將內容新增至 `ResourceContent` 物件。 在此範例中，這是透過執行下列工作來完成：
-
-   * 指派 `BLOB` 包含檔案的物件至 `ResourceContent` 物件的 `dataDocument` 欄位。
-   * 指派的大小（位元組） `BLOB` 物件至 `ResourceContent` 物件的 `size` 欄位。
-
-   透過指派以下專案將內容新增至資源： `ResourceContent` 物件至 `Resource` 物件的 `content` 欄位。
-
-1. 將資源寫入目標資料夾
-
-   叫用 `RepositoryServiceService` 物件的 `writeResource` 方法並傳入資料夾的URI，以及 `Resource` 物件。 通過 `null` 其他兩個引數的設定值。
+   * 要创建文件夹的路径。
+   * 此 `ResourceCollection` 表示文件夹的对象。
+   * 通过 `null` 其他两个参数。
 
 **另请参阅**
 
-[寫入資源](aem-forms-repository.md#writing-resources)
+[创建文件夹](aem-forms-repository.md#creating-folders)
 
-[使用Base64編碼叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
+[使用Base64编码调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
 
-## 列出資源 {#listing-resources}
+## 写入资源 {#writing-resources}
 
-您可以透過列出資源來探索資源。 系統會針對存放庫執行查詢，以尋找與指定資源集合相關的所有資源。
+您可以在存储库中的给定位置创建资源。 自然文件大小受数据库限制和会话超时的影响。 对于默认配置，文件限制为25 MB。 要提高或降低最大文件大小，必须更改数据库配置。
 
-組織資源後，您可以透過檢視結構的特定分支來檢查您建立的結構，就像在作業系統中操作一樣。
+写入资源相当于将数据存储在存储库中。 将资源写入存储库后，存储库生态系统中的所有客户端都可以访问该资源。 当您将资源（如XML架构、XDP文件和XSD文件）写入存储库时，将根据MIME类型解析内容。 如果支持MIME类型，则解析器确定是否存在与其他内容的隐含关系。 例如，如果层叠样式表(CSS)具有引用公共CSS的相对URL，则您应该也将公共CSS提交到存储库中。 这两个资源之间的关系作为待定关系存储30天的不可调整周期。 在30天内将公共CSS提交到存储库时，会形成关系。
 
-列出資源會依關係操作：資源是資料夾的成員。 成員資格由「member of」型別的關係表示。 當您在指定資料夾中列出資源時，會查詢與關係「member of」指定的資料夾相關的資源。 關係是方向性的：關係的成員具有作為目標成員的來源。 來源是資源；目標是父資料夾。
+创建资源时，访问控制列表(ACL)继承自父文件夹。 在创建初始资源或文件夹之前，根文件夹具有系统级别的权限，此时资源或文件夹将获得默认ACL权限。
+
+您可以使用存储库服务Java API或Web服务API以编程方式编写资源。
 
 >[!NOTE]
 >
->如需儲存庫服務的詳細資訊，請參閱 [AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
+>有关Repository服务的详细信息，请参见 [AEM Forms的服务参考](https://www.adobe.com/go/learn_aemforms_services_63).
 
-### 步驟摘要 {#summary_of_steps-2}
+### 步骤摘要 {#summary_of_steps-1}
 
-若要列出資源，請遵循下列步驟：
+要编写资源，请执行以下步骤：
 
-1. 包含專案檔案。
-1. 建立服務使用者端。
-1. 指定資料夾路徑。
-1. 擷取資源清單。
+1. 包括项目文件。
+1. 创建存储库服务客户端。
+1. 指定要读取的资源的URI。
+1. 读取资源。
 
-**包含專案檔案**
+**包括项目文件**
 
-在您的開發專案中包含必要的檔案。 如果您使用Java建立使用者端應用程式，請包含必要的JAR檔案。 如果您使用Web服務，請包含Proxy檔案。
+在开发项目中包含必要的文件。 如果要使用Java创建客户端应用程序，请包含必要的JAR文件。 如果使用Web服务，请包含代理文件。
 
-**建立服務使用者端**
+**创建服务客户端**
 
-您必須先建立連線並提供認證，才能以程式設計方式建立資源集合。 這是透過建立服務使用者端來完成。
+在以编程方式读取资源之前，必须建立连接并提供凭据。 这是通过创建服务客户端来实现的。
 
-**指定資料夾路徑**
+**为资源指定目标文件夹的URI**
 
-建立包含資源之資料夾路徑的字串。 語法包括正斜線，如以下範例所示：「/*路徑*/*資料夾*「。
+创建包含要读取的资源URI的字符串。 语法包括正斜杠，如以下示例所示：&quot;/*路径*/*文件夹*“。
 
-**擷取資源清單**
+**创建资源**
 
-叫用存放庫服務方法來擷取資源清單，指定目標資料夾的路徑。
+调用存储库服务方法以创建资源，并使用标识信息（包括资源的UUID、资源名称和描述）填充资源。
 
-**另请参阅**
+**指定资源内容**
 
-[使用Java API列出資源](aem-forms-repository.md#list-resources-using-the-java-api)
+调用存储库服务方法以创建资源内容，并将该内容存储在资源中。
 
-[使用Web服務API列出資源](aem-forms-repository.md#list-resources-using-the-web-service-api)
+**将资源写入目标文件夹**
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
-
-[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
-
-[存放庫服務API快速啟動](/help/forms/developing/repository-service-api-quick-starts.md#repository-service-api-quick-starts)
-
-### 使用Java API列出資源 {#list-resources-using-the-java-api}
-
-使用存放庫服務API (Java)列出資源：
-
-1. 包含專案檔案
-
-   在您的Java專案的類別路徑中包含使用者端JAR檔案。
-
-1. 建立服務使用者端
-
-   建立 `ResourceRepositoryClient` 物件，使用它的建構函式並傳遞 `ServiceClientFactory` 包含連線屬性的物件。
-
-1. 指定資料夾路徑
-
-   指定要查詢之資源集合的URI。 在這種情況下，其URI為 `"/testFolder"`. URI會儲存為 `java.lang.String` 物件。
-
-1. 擷取資源清單
-
-   叫用 `ResourceRepositoryClient` 物件的 `listMembers` 方法並傳入資料夾的URI。
-
-   方法會傳回 `java.util.List` 之 `com.adobe.repository.infomodel.bean.Resource` 物件，作為的來源 `com.adobe.repository.infomodel.bean.Relation` 型別 `Relation.TYPE_MEMBER_OF` 並將資源集合URI作為目標。 您可以逐一檢視此 `List` 以擷取每個資源。 在此範例中，會顯示每個資源的名稱和說明。
+调用存储库服务方法以写入资源，指定目标文件夹的URI。
 
 **另请参阅**
 
-[列出資源](aem-forms-repository.md#listing-resources).
+[使用Java API编写资源](aem-forms-repository.md#write-resources-using-the-java-api)
 
-[快速入門（SOAP模式）：使用Java API列出資源](/help/forms/developing/repository-service-api-quick-starts.md#quick-start-soap-mode-listing-resources-using-the-java-api)
+[使用Web服务API编写资源](aem-forms-repository.md#write-resources-using-the-web-service-api)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
-[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### 使用Web服務API列出資源 {#list-resources-using-the-web-service-api}
+[存储库服务API快速启动](/help/forms/developing/repository-service-api-quick-starts.md#repository-service-api-quick-starts)
 
-使用存放庫服務API （Web服務）列出資源：
+### 使用Java API编写资源 {#write-resources-using-the-java-api}
 
-1. 包含專案檔案
+使用存储库服务API (Java)编写资源：
 
-   * 建立使用存放庫WSDL的Microsoft .NET使用者端元件。
-   * 參考Microsoft .NET使用者端元件。
+1. 包括项目文件
 
-1. 建立服務使用者端
+   在Java项目的类路径中包含客户端JAR文件。
 
-   使用Microsoft .NET使用者端元件，建立 `RepositoryServiceService` 物件，透過叫用其預設建構函式。 設定其 `Credentials` 屬性使用 `System.Net.NetworkCredential` 包含使用者名稱和密碼的物件。
+1. 创建服务客户端
 
-1. 指定資料夾路徑
+   创建 `ResourceRepositoryClient` 对象通过使用该对象的构造函数传递 `ServiceClientFactory` 包含连接属性的对象。
 
-   指定包含要查詢之資料夾URI的字串。 在這種情況下，其URI為 `"/testFolder"`. 使用與Microsoft .NET Framework相容的語言時（例如C#），請將URI儲存在 `System.String` 物件。
+1. 为资源指定目标文件夹的URI
 
-1. 擷取資源清單
+   为资源指定目标文件夹的URI。 在本例中，因为资源名为 `testResource` 将存储在名为的文件夹中 `testFolder`，文件夹的URI为 `"/testFolder"`. URI存储为 `java.lang.String` 对象。
 
-   叫用 `RepositoryServiceService` 物件的 `listMembers` 方法，並將資料夾的URI傳入作為第一個引數。 通過 `null` 其他兩個引數的設定值。
+1. 创建资源
 
-   方法會傳回可強制轉換至的物件陣列 `Resource` 物件。 您可以逐一檢視物件陣列，以擷取每個相關資源。 在此範例中，會顯示每個資源的名稱和說明。
+   要创建资源，必须首先创建 `com.adobe.repository.infomodel.bean.RepositoryInfomodelFactoryBean` 对象。
+
+   调用 `RepositoryInfomodelFactoryBean` 对象的 `newResource` 方法，用于创建 `com.adobe.repository.infomodel.bean.Resource` 对象。 在此示例中，提供了以下参数：
+
+   * A `com.adobe.repository.infomodel.Id` 对象，通过调用 `Id` 类。
+   * A `com.adobe.repository.infomodel.Lid` 对象，通过调用 `Lid` 类。
+   * A `java.lang.String` 包含资源的文件名。
+
+   要指定资源的说明，请调用 `Resource` 对象的 `setDescription` 方法，并传递包含描述的字符串。 在此示例中，描述为 `"test resource"`.
+
+1. 指定资源内容
+
+   要为资源创建内容，请调用 `RepositoryInfomodelFactoryBean` 对象的 `newResourceContent` 方法，返回一个 `com.adobe.repository.infomodel.bean.ResourceContent` 对象。 将内容添加到 `ResourceContent` 对象。 在本例中，可通过执行以下任务来实现此目的：
+
+   * 调用 `ResourceContent` 对象的 `setDataDocument` 方法和传入 `com.adobe.idp.Document` 对象
+   * 调用 `ResourceContent` 对象的 `setSize` 方法和传入的大小（以字节为单位） `Document` 对象
+
+   通过调用 `Resource` 对象的 `setContent` 方法和传入 `ResourceContent` 对象。 有关更多信息，请参阅 [AEM Forms API参考](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
+
+1. 将资源写入目标文件夹
+
+   调用 `ResourceRepositoryClient` 对象的 `writeResource` 方法并传入文件夹的URI，以及 `Resource` 对象。
 
 **另请参阅**
 
-[列出資源](aem-forms-repository.md#listing-resources).
+[写入资源](aem-forms-repository.md#writing-resources)
 
-[使用Base64編碼叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
+[快速入门（SOAP模式）：使用Java API编写资源](/help/forms/developing/repository-service-api-quick-starts.md#quick-start-soap-mode-writing-a-resource-using-the-java-api)
 
-## 正在讀取資源 {#reading-resources}
+[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
-您可以從存放庫中的指定位置擷取資源，以讀取其內容和中繼資料。 工作流程會以初始化表單作為前端。 此程式擁有讀取表單所需的所有許可權。 系統會擷取資料表單，並從存放庫中讀取內容。 存放庫會授予對內容和中繼資料的存取權（甚至知道資源存在的能力）。
+[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-存放庫有以下四種許可權型別：
+### 使用Web服务API编写资源 {#write-resources-using-the-web-service-api}
 
-* **周遊**：可讓您列出資源；也就是讀取資源中繼資料，但不讀取資源內容
-* **讀取**：可讓您讀取資源內容
-* **寫入**：可讓您寫入資源內容
-* **管理存取控制清單(ACL)**：可讓您操控資源上的ACL
+使用存储库服务API（Web服务）编写资源：
 
-使用者只有具備執行程式的許可權時，才能執行程式。 IDE使用者需要遍歷和讀取許可權才能與存放庫同步。 ACL只會在設計時套用，因為執行階段發生在系統內容中。
+1. 包括项目文件
 
-您可以使用存放庫服務Java API或Web服務API，以程式設計方式讀取資源。
+   * 使用base64创建使用存储库WSDL的Microsoft .NET客户端程序集。
+   * 引用Microsoft .NET客户端程序集。
+
+1. 创建服务客户端
+
+   使用Microsoft .NET客户端程序集，创建 `RepositoryServiceService` 对象。 设置其 `Credentials` 属性使用 `System.Net.NetworkCredential` 包含用户名和密码的对象。
+
+1. 为资源指定目标文件夹的URI
+
+   为资源指定目标文件夹的URI。 在本例中，因为资源名为 `testResource` 将存储在名为的文件夹中 `testFolder`，文件夹的URI为 `"/testFolder"`. 使用与Microsoft .NET Framework兼容的语言时（例如，C#），请将URI存储在 `System.String` 对象。
+
+1. 创建资源
+
+   要创建资源，请调用 `Resource` 类。 在此示例中，以下信息存储在 `Resource` 对象：
+
+   * A `com.adobe.repository.infomodel.Id` 对象，通过调用 `Id` 类并分配给 `Resource` 对象的 `id` 字段。
+   * A `com.adobe.repository.infomodel.Lid` 对象，通过调用 `Lid` 类并分配给 `Resource` 对象的 `lid` 字段。
+   * 一个字符串，其中包含分配给的资源的文件名。 `Resource` 对象的 `name` 字段。 本示例中使用的名称为 `"testResource"`.
+   * 一个字符串，其中包含分配给的资源的描述。 `Resource` 对象的 `description` 字段。 本示例中使用的描述是 `"test resource"`.
+
+1. 指定资源内容
+
+   要为资源创建内容，请调用 `ResourceContent` 类。 然后将内容添加到 `ResourceContent` 对象。 在本例中，可通过执行以下任务来实现此目的：
+
+   * 分配 `BLOB` 包含文档的对象 `ResourceContent` 对象的 `dataDocument` 字段。
+   * 分配的大小（以字节为单位） `BLOB` 对象 `ResourceContent` 对象的 `size` 字段。
+
+   通过分配 `ResourceContent` 对象 `Resource` 对象的 `content` 字段。
+
+1. 将资源写入目标文件夹
+
+   调用 `RepositoryServiceService` 对象的 `writeResource` 方法并传入文件夹的URI，以及 `Resource` 对象。 通过 `null` 其他两个参数。
+
+**另请参阅**
+
+[写入资源](aem-forms-repository.md#writing-resources)
+
+[使用Base64编码调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
+
+## 列出资源 {#listing-resources}
+
+您可以通过列出资源来发现资源。 对存储库执行查询，以查找与给定资源集合相关的所有资源。
+
+在组织资源后，您可以通过查看结构的特定分支来检查您创建的结构，就像在操作系统中一样。
+
+列出资源按关系操作：资源是文件夹的成员。 成员资格由“成员”类型的关系表示。 在给定文件夹中列出资源时，查询与给定文件夹相关的资源，这些资源具有关系“成员”。 关系是方向性的：关系的成员具有作为目标成员的源。 源是资源；目标是父文件夹。
 
 >[!NOTE]
 >
->如需儲存庫服務的詳細資訊，請參閱 [AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
+>有关Repository服务的详细信息，请参见 [AEM Forms的服务参考](https://www.adobe.com/go/learn_aemforms_services_63).
 
-### 步驟摘要 {#summary_of_steps-3}
+### 步骤摘要 {#summary_of_steps-2}
 
-若要讀取資源，請遵循下列步驟：
+要列出资源，请执行以下步骤：
 
-1. 包含專案檔案。
-1. 建立存放庫服務使用者端。
-1. 指定要讀取的資源的URI。
-1. 讀取資源。
+1. 包括项目文件。
+1. 创建服务客户端。
+1. 指定文件夹路径。
+1. 检索资源列表。
 
-**包含專案檔案**
+**包括项目文件**
 
-在您的開發專案中包含必要的檔案。 如果您使用Java建立使用者端應用程式，請包含必要的JAR檔案。 如果您使用Web服務，請包含Proxy檔案。
+在开发项目中包含必要的文件。 如果要使用Java创建客户端应用程序，请包含必要的JAR文件。 如果使用Web服务，请包含代理文件。
 
-**建立服務使用者端**
+**创建服务客户端**
 
-您必須先建立連線並提供認證，才能以程式設計方式讀取資源。 這是透過建立服務使用者端來完成。
+在以编程方式创建资源集合之前，必须建立连接并提供凭据。 这是通过创建服务客户端来实现的。
 
-**指定要讀取的資源的URI**
+**指定文件夹路径**
 
-建立包含要讀取之資源URI的字串。 語法包括正斜線，如以下範例所示：「/*路徑*/*資源*「。
+创建一个字符串，其中包含包含资源的文件夹的路径。 语法包括正斜杠，如以下示例所示：&quot;/*路径*/*文件夹*“。
 
-**讀取資源**
+**检索资源列表**
 
-叫用存放庫服務方法以讀取資源，指定URI。
-
-**另请参阅**
-
-[使用Java API讀取資源](aem-forms-repository.md#read-resources-using-the-java-api)
-
-[使用Web服務API讀取資源](aem-forms-repository.md#reading-resources-using-the-web-service-api)
-
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
-
-[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
-
-[存放庫服務API快速啟動](/help/forms/developing/repository-service-api-quick-starts.md#repository-service-api-quick-starts)
-
-### 使用Java API讀取資源 {#read-resources-using-the-java-api}
-
-使用存放庫服務API (Java)讀取資源：
-
-1. 包含專案檔案
-
-   在您的Java專案的類別路徑中包含使用者端JAR檔案。
-
-1. 建立服務使用者端
-
-   建立 `ResourceRepositoryClient` 物件，使用它的建構函式並傳遞 `ServiceClientFactory` 包含連線屬性的物件。
-
-1. 指定要讀取的資源的URI
-
-   指定代表要擷取之資源的URI的字串值。 例如，假設資源名為 *testResource* 位在名為的資料夾中 *testFolder*，指定 `/testFolder/testResource`.
-
-1. 讀取資源
-
-   叫用 `ResourceRepositoryClient` 物件的 `readResource` 方法並傳遞資源的URI作為引數。 此方法會傳回 `Resource` 代表資源的執行個體。
+调用存储库服务方法以检索资源列表，指定目标文件夹的路径。
 
 **另请参阅**
 
-[正在讀取資源](aem-forms-repository.md#reading-resources)
+[使用Java API列出资源](aem-forms-repository.md#list-resources-using-the-java-api)
 
-[快速入門（SOAP模式）：使用Java API讀取資源](/help/forms/developing/repository-service-api-quick-starts.md#quick-start-soap-mode-reading-a-resource-using-the-java-api)
+[使用Web服务API列出资源](aem-forms-repository.md#list-resources-using-the-web-service-api)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
-[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### 使用Web服務API讀取資源 {#reading-resources-using-the-web-service-api}
+[存储库服务API快速启动](/help/forms/developing/repository-service-api-quick-starts.md#repository-service-api-quick-starts)
 
-使用存放庫服務API （Web服務）讀取資源：
+### 使用Java API列出资源 {#list-resources-using-the-java-api}
 
-1. 包含專案檔案
+使用存储库服务API (Java)列出资源：
 
-   * 建立使用存放庫WSDL的Microsoft .NET使用者端元件。 (請參閱 [建立使用Base64編碼的.NET使用者端元件](/help/forms/developing/invoking-aem-forms-using-web.md#creating-a-net-client-assembly-that-uses-base64-encoding).)
-   * 參考Microsoft .NET使用者端元件。 (請參閱 [建立使用Base64編碼的.NET使用者端元件](/help/forms/developing/invoking-aem-forms-using-web.md#creating-a-net-client-assembly-that-uses-base64-encoding).)
+1. 包括项目文件
 
-1. 建立服務使用者端
+   在Java项目的类路径中包含客户端JAR文件。
 
-   使用Microsoft .NET使用者端元件，建立 `RepositoryServiceService` 物件，透過叫用其預設建構函式。 設定其 `Credentials` 屬性使用 `System.Net.NetworkCredential` 包含使用者名稱和密碼的物件。
+1. 创建服务客户端
 
-1. 指定要讀取的資源的URI
+   创建 `ResourceRepositoryClient` 对象通过使用该对象的构造函数传递 `ServiceClientFactory` 包含连接属性的对象。
 
-   指定包含要擷取之資源URI的字串。 在此案例中，因為資源命名為 `testResource` 位於名為的資料夾中 `testFolder`，其URI為 `"/testFolder/testResource"`. 使用與Microsoft .NET Framework相容的語言時（例如C#），請將URI儲存在 `System.String` 物件。
+1. 指定文件夹路径
 
-1. 讀取資源
+   指定要查询的资源集合的URI。 在这种情况下，其URI为 `"/testFolder"`. URI存储为 `java.lang.String` 对象。
 
-   叫用 `RepositoryServiceService` 物件的 `readResource` 方法，並將資源的URI傳遞為第一個引數。 通過 `null` 其他兩個引數的設定值。
+1. 检索资源列表
+
+   调用 `ResourceRepositoryClient` 对象的 `listMembers` 方法，并在文件夹的URI中传递。
+
+   此方法会返回 `java.util.List` 之 `com.adobe.repository.infomodel.bean.Resource` 作为源的对象 `com.adobe.repository.infomodel.bean.Relation` 类型 `Relation.TYPE_MEMBER_OF` 并将资源收集URI作为目标。 您可以循环查看此内容 `List` 以检索每个资源。 在此示例中，将显示每个资源的名称和说明。
 
 **另请参阅**
 
-[正在讀取資源](aem-forms-repository.md#reading-resources)
+[列出资源](aem-forms-repository.md#listing-resources).
 
-[使用Base64編碼叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
+[快速入门（SOAP模式）：使用Java API列出资源](/help/forms/developing/repository-service-api-quick-starts.md#quick-start-soap-mode-listing-resources-using-the-java-api)
 
-## 更新資源 {#updating-resources}
+[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
-您可以擷取並更新存放庫中的資源內容。 當您更新資源時，這些資源的存取控制在各版本之間保持不變。 執行更新時，您可以選擇遞增主要版本。 如果您不選擇遞增主要版本，次要版本會自動更新。
+[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-更新資源時，會根據指定的資源屬性建立新版本。 更新資源時，您會指定兩個重要引數：目標URI和包含所有已更新中繼資料的資源執行個體。 請務必注意，如果您未變更特定屬性（例如，名稱），則在您傳入的執行個體中仍需要該屬性。 剖析內容時建立的關係會新增至特定版本，除非另有指定，否則不會轉寄。
+### 使用Web服务API列出资源 {#list-resources-using-the-web-service-api}
 
-例如，如果您更新XDP檔案並且它包含對其他資源的參照，這些額外的參照也會被記錄。 假設form.xdp 1.0版有兩個外部參照：一個標誌和一個樣式表，而您之後更新了form.xdp，使其現在有三個參照：一個標誌、一個樣式表和一個結構描述檔案。 在更新期間，存放庫會將第三個關係（到結構描述檔案）新增到其擱置關係表中。 一旦結構描述檔案出現在存放庫中，關係就會自動形成。 不過，如果form.xdp 2.0版不再使用標誌，form.xdp 2.0版將不會與標誌建立關係。
+使用存储库服务API（Web服务）列出资源：
 
-所有更新操作都是原子和交易式的。 例如，如果兩個使用者讀取相同的資源，且都決定將1.0版更新為2.0版，則其中一個會成功，而其中一個會失敗，系統會維持存放庫的完整性，且兩個使用者都會收到一則確認成功或失敗的訊息。 如果交易未確認，它將在資料庫失敗時回覆，並會逾時或回覆，視應用程式伺服器而定。
+1. 包括项目文件
 
-您可以使用存放庫服務Java API或Web服務API，以程式設計方式更新資源。
+   * 创建使用存储库WSDL的Microsoft .NET客户端程序集。
+   * 引用Microsoft .NET客户端程序集。
+
+1. 创建服务客户端
+
+   使用Microsoft .NET客户端程序集，创建 `RepositoryServiceService` 对象。 设置其 `Credentials` 属性使用 `System.Net.NetworkCredential` 包含用户名和密码的对象。
+
+1. 指定文件夹路径
+
+   指定包含要查询的文件夹URI的字符串。 在这种情况下，其URI为 `"/testFolder"`. 使用与Microsoft .NET Framework兼容的语言时（例如，C#），请将URI存储在 `System.String` 对象。
+
+1. 检索资源列表
+
+   调用 `RepositoryServiceService` 对象的 `listMembers` 方法，并在文件夹的URI中作为第一个参数传递。 通过 `null` 其他两个参数。
+
+   方法会返回一个对象数组，可以将这些对象转换为 `Resource` 对象。 您可以遍历对象数组以检索每个相关资源。 在此示例中，将显示每个资源的名称和说明。
+
+**另请参阅**
+
+[列出资源](aem-forms-repository.md#listing-resources).
+
+[使用Base64编码调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
+
+## 正在读取资源 {#reading-resources}
+
+您可以从存储库中的给定位置检索资源，以读取其内容和元数据。 工作流由初始化表单作为前端。 该流程具有读取表单所需的所有权限。 系统检索数据表单并从存储库中读取内容。 存储库授予对内容和元数据的访问权限（甚至能够知道资源存在）。
+
+存储库具有以下四种权限类型：
+
+* **遍历**：用于列出资源；即读取资源元数据，但不读取资源内容
+* **读取**：用于读取资源内容
+* **写入**：用于编写资源内容
+* **管理访问控制列表(ACL)**：用于处理资源上的ACL
+
+用户只有在拥有运行进程的权限时，才能运行进程。 IDE用户需要遍历和读取权限才能与存储库同步。 ACL仅在设计时应用，因为运行时发生在系统上下文内。
+
+您可以使用存储库服务Java API或Web服务API以编程方式读取资源。
 
 >[!NOTE]
 >
->如需儲存庫服務的詳細資訊，請參閱 [AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
+>有关Repository服务的详细信息，请参见 [AEM Forms的服务参考](https://www.adobe.com/go/learn_aemforms_services_63).
 
-### 步驟摘要 {#summary_of_steps-4}
+### 步骤摘要 {#summary_of_steps-3}
 
-若要更新資源，請遵循下列步驟：
+要读取资源，请执行以下步骤：
 
-1. 包含專案檔案。
-1. 建立存放庫服務使用者端。
-1. 擷取要更新的資源。
-1. 更新資源。
+1. 包括项目文件。
+1. 创建存储库服务客户端。
+1. 指定要读取的资源的URI。
+1. 读取资源。
 
-**包含專案檔案**
+**包括项目文件**
 
-在您的開發專案中包含必要的檔案。 如果您使用Java建立使用者端應用程式，請包含必要的JAR檔案。 如果您使用Web服務，請包含Proxy檔案。
+在开发项目中包含必要的文件。 如果要使用Java创建客户端应用程序，请包含必要的JAR文件。 如果使用Web服务，请包含代理文件。
 
-**建立服務使用者端**
+**创建服务客户端**
 
-您必須先建立連線並提供認證，才能以程式設計方式讀取資源。 這是透過建立服務使用者端來完成。
+在以编程方式读取资源之前，必须建立连接并提供凭据。 这是通过创建服务客户端来实现的。
 
-**擷取要更新的資源**
+**指定要读取的资源的URI**
 
-讀取資源。 如需詳細資訊，請參閱 [正在讀取資源](aem-forms-repository.md#reading-resources).
+创建包含要读取的资源URI的字符串。 语法包括正斜杠，如以下示例所示：&quot;/*路径*/*资源*“。
 
-**更新資源**
+**读取资源**
 
-在資源中設定新資訊，並叫用存放庫服務方法來更新資源，指定URI、更新的資源以及應如何更新版本資訊。
-
-**另请参阅**
-
-[使用Java API更新資源](aem-forms-repository.md#update-resources-using-the-java-api)
-
-[使用Web服務API更新資源](aem-forms-repository.md#update-resources-using-the-web-service-api)
-
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
-
-[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
-
-[存放庫服務API快速啟動](/help/forms/developing/repository-service-api-quick-starts.md#repository-service-api-quick-starts)
-
-### 使用Java API更新資源 {#update-resources-using-the-java-api}
-
-使用存放庫服務API (Java)更新資源：
-
-1. 包含專案檔案
-
-   在您的Java專案的類別路徑中包含使用者端JAR檔案。
-
-1. 建立服務使用者端
-
-   建立 `ResourceRepositoryClient` 物件，使用它的建構函式並傳遞 `ServiceClientFactory` 包含連線屬性的物件。
-
-1. 擷取要更新的資源
-
-   指定要擷取和讀取資源的資源URI。 在此範例中，資源的URI為 `"/testFolder/testResource"`.
-
-1. 更新資源
-
-   更新 `Resource` 物件的資訊。 在此範例中，若要更新說明，請叫用 `Resource` 物件的 `setDescription` 方法，並將新說明字串當做引數傳遞。
-
-   然後叫用 `ServiceClientFactory` 物件的 `updateResource` 方法，並傳入下列引數：
-
-   * A `java.lang.String` 包含資源URI的物件。
-   * 此 `Resource` 包含已更新資源資訊的物件。
-   * A `boolean` 指示是更新主要版本還是次要版本的值。 在此範例中，值 `true` 會傳入，以表示主要版本會增加。
+调用存储库服务方法以读取资源，指定URI。
 
 **另请参阅**
 
-[更新資源](aem-forms-repository.md#updating-resources)
+[使用Java API读取资源](aem-forms-repository.md#read-resources-using-the-java-api)
 
-[快速入門（SOAP模式）：使用Java API更新資源](/help/forms/developing/repository-service-api-quick-starts.md#quick-start-soap-mode-updating-a-resource-using-the-java-api)
+[使用Web服务API读取资源](aem-forms-repository.md#reading-resources-using-the-web-service-api)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
-[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### 使用Web服務API更新資源 {#update-resources-using-the-web-service-api}
+[存储库服务API快速启动](/help/forms/developing/repository-service-api-quick-starts.md#repository-service-api-quick-starts)
 
-使用存放庫API （Web服務）更新資源：
+### 使用Java API读取资源 {#read-resources-using-the-java-api}
 
-1. 包含專案檔案
+使用存储库服务API (Java)读取资源：
 
-   * 建立使用存放庫WSDL的Microsoft .NET使用者端元件。
-   * 參考Microsoft .NET使用者端元件。
+1. 包括项目文件
 
-1. 建立服務使用者端
+   在Java项目的类路径中包含客户端JAR文件。
 
-   使用Microsoft .NET使用者端元件，建立 `RepositoryServiceService` 物件，透過叫用其預設建構函式。 設定其 `Credentials` 屬性使用 `System.Net.NetworkCredential` 包含使用者名稱和密碼的物件。
+1. 创建服务客户端
 
-1. 擷取要更新的資源
+   创建 `ResourceRepositoryClient` 对象通过使用该对象的构造函数传递 `ServiceClientFactory` 包含连接属性的对象。
 
-   指定要擷取的資源URI並讀取資源。 在此範例中，資源的URI為 `"/testFolder/testResource"`. 如需詳細資訊，請參閱 [正在讀取資源](aem-forms-repository.md#reading-resources).
+1. 指定要读取的资源的URI
 
-1. 更新資源
+   指定一个字符串值，该值表示要检索的资源的URI。 例如，假定资源名为 *testResource* 位于名为的文件夹中的 *testFolder*，指定 `/testFolder/testResource`.
 
-   更新 `Resource` 物件的資訊。 在此範例中，若要更新說明，請將新值指派給 `Resource` 物件的 `description` 欄位。
+1. 读取资源
 
-1. 叫用 `RepositoryServiceService` 物件的 `updateResource` 方法，並傳入下列引數：
-
-   * A `System.String` 包含資源URI的物件。
-   * 此 `Resource` 包含已更新資源資訊的物件。
-   * A `boolean` 指示是更新主要版本還是次要版本的值。 在此範例中，值 `true` 會傳入，以表示主要版本會增加。
-   * 通過 `null` 其餘兩個引數。
+   调用 `ResourceRepositoryClient` 对象的 `readResource` 方法，并将资源的URI作为参数传递。 此方法会返回 `Resource` 表示资源的实例。
 
 **另请参阅**
 
-[更新資源](aem-forms-repository.md#updating-resources)
+[正在读取资源](aem-forms-repository.md#reading-resources)
 
-[使用Base64編碼叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
+[快速入门（SOAP模式）：使用Java API读取资源](/help/forms/developing/repository-service-api-quick-starts.md#quick-start-soap-mode-reading-a-resource-using-the-java-api)
 
-## 搜尋資源 {#searching-for-resources}
+[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
-您可以建構用於搜尋存放庫中資源（包括歷史記錄、相關資源和屬性）的查詢。
+[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-您可以擷取相關資源，以判斷表單與其片段之間的相依性。 例如，如果您有表單，您可以決定它使用哪些片段或外部資源。 如果您有影像，也可以找出使用影像的表單。 您也可以使用根據屬性篩選來搜尋相關資源。 例如，您可以搜尋使用具有指定名稱之影像的所有表單，或尋找由具有指定名稱之表單使用的任何影像。 您也可以使用資源屬性來搜尋。 例如，您可以執行查詢來尋找其名稱以指定字串開頭的所有表單或資源，該字串可能包含&#39;%&#39;和&#39;_&#39;萬用字元。 請記住，基於屬性的搜尋不是基於關係；此類搜尋是基於您對指定資源具有特定知識的假設。
+### 使用Web服务API读取资源 {#reading-resources-using-the-web-service-api}
 
-**查詢陳述式**
+使用存储库服务API（Web服务）读取资源：
 
-A *查詢* 包含一或多個邏輯上以條件聯結的陳述式。 A *陳述式* 由左運算元、運算元和右運算元組成。 此外，您可以指定搜尋結果要使用的排序順序。 此 *排序順序* 包含相當於SQL的資訊 `ORDER BY` 子句和由元素組成，這些元素包含搜尋所依據的屬性，以及一個指示是否要使用遞增或遞減順序的值。
+1. 包括项目文件
 
-您可以使用存放庫服務Java API，以程式設計方式搜尋資源。 目前無法使用Web服務API來搜尋資源。
+   * 创建使用存储库WSDL的Microsoft .NET客户端程序集。 (请参阅 [创建使用Base64编码的.NET客户端程序集](/help/forms/developing/invoking-aem-forms-using-web.md#creating-a-net-client-assembly-that-uses-base64-encoding).)
+   * 引用Microsoft .NET客户端程序集。 (请参阅 [创建使用Base64编码的.NET客户端程序集](/help/forms/developing/invoking-aem-forms-using-web.md#creating-a-net-client-assembly-that-uses-base64-encoding).)
 
-**排序行為**
+1. 创建服务客户端
 
-叫用時未遵循排序順序 `ResourceRepositoryClient` 物件的 `searchProperties` 方法並指定排序順序。 例如，假設您建立具有三個自訂屬性的資源，其中屬性名稱為 `name`， `secondName`、和 `asecondName`. 接下來，您在屬性名稱上建立排序順序元素，並設定 `ascending` 值至 `true`.
+   使用Microsoft .NET客户端程序集，创建 `RepositoryServiceService` 对象。 设置其 `Credentials` 属性使用 `System.Net.NetworkCredential` 包含用户名和密码的对象。
 
-然後您叫用 `ResourceRepositoryClient` 物件的 `searchProperties` 方法和以排序順序傳遞。 搜尋會傳回正確的資源，包含三個屬性。 不過，屬性並未依屬性名稱排序。 它們會依新增的順序傳回： `name`， `secondName`、和 `asecondName`.
+1. 指定要读取的资源的URI
+
+   指定包含要检索的资源URI的字符串。 在本例中，因为资源名为 `testResource` 位于名为的文件夹中 `testFolder`，其URI为 `"/testFolder/testResource"`. 使用与Microsoft .NET Framework兼容的语言时（例如，C#），请将URI存储在 `System.String` 对象。
+
+1. 读取资源
+
+   调用 `RepositoryServiceService` 对象的 `readResource` 方法，并将资源的URI作为第一个参数传递。 通过 `null` 其他两个参数。
+
+**另请参阅**
+
+[正在读取资源](aem-forms-repository.md#reading-resources)
+
+[使用Base64编码调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
+
+## 更新资源 {#updating-resources}
+
+您可以检索和更新存储库中资源的内容。 更新资源时，对这些资源的访问控制在版本之间保持不变。 执行更新时，您可以选择递增主版本。 如果不选择递增主要版本，则次要版本会自动更新。
+
+更新资源时，会根据指定的资源属性创建新版本。 更新资源时，需要指定两个重要参数：目标URI和包含所有已更新元数据的资源实例。 请务必注意，如果不更改给定属性（例如，名称），则在您传入的实例中仍需要该属性。 解析内容时创建的关系将添加到特定版本，除非另外指定，否则不会转发这些关系。
+
+例如，如果更新XDP文件并且它包含对其他资源的引用，则也会记录这些附加引用。 假设form.xdp 1.0版有两个外部引用：一个徽标和一个样式表，随后您更新了form.xdp，使其现在具有三个引用：一个徽标、一个样式表和一个模式文件。 在更新过程中，存储库会将第三个关系（添加到架构文件）添加到其挂起关系表中。 一旦架构文件出现在存储库中，关系将自动形成。 但是，如果form.xdp 2.0版不再使用徽标，则form.xdp 2.0版将与徽标无关。
+
+所有更新操作都是原子操作，并且是事务操作。 例如，如果两个用户读取同一资源，并且都决定将1.0版更新为2.0版，则其中一个用户将成功，而其中一个用户将失败，存储库的完整性将得到维护，并且两个用户都将收到一条确认成功或失败的消息。 如果事务未提交，则在数据库出现故障时将会回滚，并且会超时或回滚，具体取决于应用程序服务器。
+
+您可以使用存储库服务Java API或Web服务API以编程方式更新资源。
 
 >[!NOTE]
 >
->如需儲存庫服務的詳細資訊，請參閱 [AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
+>有关Repository服务的详细信息，请参见 [AEM Forms的服务参考](https://www.adobe.com/go/learn_aemforms_services_63).
 
-### 步驟摘要 {#summary_of_steps-5}
+### 步骤摘要 {#summary_of_steps-4}
 
-若要搜尋資源，請遵循下列步驟：
+要更新资源，请执行以下步骤：
 
-1. 包含專案檔案。
-1. 建立存放庫服務使用者端。
-1. 指定搜尋的目標資料夾。
-1. 指定搜尋中使用的屬性。
-1. 建立用於搜尋的查詢。
-1. 建立搜尋結果的排序順序。
-1. 搜尋資源。
-1. 從搜尋結果擷取資源。
+1. 包括项目文件。
+1. 创建存储库服务客户端。
+1. 检索要更新的资源。
+1. 更新资源。
 
-**包含專案檔案**
+**包括项目文件**
 
-在您的開發專案中包含必要的檔案。 如果您使用Java建立使用者端應用程式，請包含必要的JAR檔案。 如果您使用Web服務，請包含Proxy檔案。
+在开发项目中包含必要的文件。 如果要使用Java创建客户端应用程序，请包含必要的JAR文件。 如果使用Web服务，请包含代理文件。
 
-**建立服務使用者端**
+**创建服务客户端**
 
-您必須先建立連線並提供認證，才能以程式設計方式讀取資源。 這是透過建立服務使用者端來完成。
+在以编程方式读取资源之前，必须建立连接并提供凭据。 这是通过创建服务客户端来实现的。
 
-**指定搜尋的目標資料夾**
+**检索要更新的资源**
 
-建立字串，其中包含進行搜尋的基本路徑。 語法包括正斜線，如以下範例所示：「/*路徑*/*資料夾*「。
+读取资源。 有关更多信息，请参阅 [正在读取资源](aem-forms-repository.md#reading-resources).
 
-**指定搜尋中使用的屬性**
+**更新资源**
 
-您可以根據資源中所包含的屬性進行搜尋。 指定要執行搜尋的屬性值。
-
-**建立用於搜尋的查詢**
-
-使用陳述式和條件來建構查詢。 每個陳述式都會指定搜尋所依據的屬性、要使用的條件，以及要在搜尋中使用的屬性值。
-
-**建立搜尋結果的排序順序**
-
-排序順序由元素組成，每個元素都包含搜尋中使用的其中一個屬性，以及一個指示要使用升序或降序的值。
-
-**搜尋資源**
-
-使用資料夾、查詢和排序順序來搜尋資源。 此外，指出搜尋的深度以及要傳回的結果數目上限。
-
-**從搜尋結果擷取資源**
-
-逐一檢視傳回的資源清單，並擷取資訊以供進一步處理。
+在资源中设置新信息并调用存储库服务方法来更新资源，指定URI、更新的资源以及应如何更新版本信息。
 
 **另请参阅**
 
-[使用Java API搜尋資源](aem-forms-repository.md#search-for-resources-using-the-java-api)
+[使用Java API更新资源](aem-forms-repository.md#update-resources-using-the-java-api)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[使用Web服务API更新资源](aem-forms-repository.md#update-resources-using-the-web-service-api)
 
-[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
-[存放庫服務API快速啟動](/help/forms/developing/repository-service-api-quick-starts.md#repository-service-api-quick-starts)
+[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### 使用Java API搜尋資源 {#search-for-resources-using-the-java-api}
+[存储库服务API快速启动](/help/forms/developing/repository-service-api-quick-starts.md#repository-service-api-quick-starts)
 
-使用存放庫服務API (Java)搜尋資源：
+### 使用Java API更新资源 {#update-resources-using-the-java-api}
 
-1. 包含專案檔案
+使用存储库服务API (Java)更新资源：
 
-   在您的Java專案的類別路徑中包含使用者端JAR檔案。
+1. 包括项目文件
 
-1. 建立服務使用者端
+   在Java项目的类路径中包含客户端JAR文件。
 
-   建立 `ResourceRepositoryClient` 物件，使用它的建構函式並傳遞 `ServiceClientFactory` 包含連線屬性的物件。
+1. 创建服务客户端
 
-1. 指定搜尋的目標資料夾
+   创建 `ResourceRepositoryClient` 对象通过使用该对象的构造函数传递 `ServiceClientFactory` 包含连接属性的对象。
 
-   指定要執行搜尋的基本路徑URI。 在此範例中，資源的URI為 `/testFolder`.
+1. 检索要更新的资源
 
-1. 指定搜尋中使用的屬性
+   指定要检索和读取资源的资源URI。 在此示例中，资源的URI是 `"/testFolder/testResource"`.
 
-   指定要執行搜尋的屬性值。 屬性存在於 `com.adobe.repository.infomodel.bean.Resource` 物件。 在此範例中，將會對name屬性進行搜尋；因此， `java.lang.String` 包含 `Resource` 會使用物件的名稱，也就是 `testResource` 在此案例中。
+1. 更新资源
 
-1. 建立用於搜尋的查詢
+   更新 `Resource` 对象的信息。 在此示例中，要更新描述，请调用 `Resource` 对象的 `setDescription` 方法，并将新的描述字符串作为参数传递。
 
-   若要建立查詢，請建立 `com.adobe.repository.query.Query` 物件，方法是叫用預設建構函式 `Query` 類別並新增陳述式至查詢。
+   然后调用 `ServiceClientFactory` 对象的 `updateResource` 方法，并传入以下参数：
 
-   若要建立陳述式，請叫用 `com.adobe.repository.query.Query.Statement` 類別並傳遞下列引數：
-
-   * 包含資源屬性常數的左側運算元。 在此範例中，由於資源名稱是用作搜尋的基礎，因此靜態值 `Resource.ATTRIBUTE_NAME` 已使用。
-   * 包含用於搜尋屬性的條件的運運算元。 運運算元必須是中的靜態常數之一 `Query.Statement` 類別。 在此範例中，靜態值 `Query.Statement.OPERATOR_BEGINS_WITH` 已使用。
-   * 包含進行搜尋之屬性值的右運算元。 在此範例中，name屬性、 `String` 包含值 `"testResource"`，則會使用。
-
-   透過叫用 `Query.Statement` 物件的 `setNamespace` 方法並傳入 `com.adobe.repository.infomodel.bean.ResourceProperty` 類別。 在此示例中，使用 `ResourceProperty.RESERVED_NAMESPACE_REPOSITORY`。
-
-   透過叫用 `Query` 物件的 `addStatement` 方法並傳入 `Query.Statement` 物件。
-
-1. 建立搜尋結果的排序順序
-
-   若要指定搜尋結果中使用的排序順序，請建立 `com.adobe.repository.query.sort.SortOrder` 物件，方法是叫用預設建構函式 `SortOrder` 類別，並將元素新增至排序順序。
-
-   若要建立排序順序的元素，請叫用其中一個建構函式 `com.adobe.repository.query.sort.SortOrder.Element` 類別。 在此範例中，由於資源名稱是用作搜尋的基礎，因此靜態值 `Resource.ATTRIBUTE_NAME` 會作為第一個引數，並以遞增順序排列(a `boolean` 值 `true`)指定為第二個引數。
-
-   透過叫用 `SortOrder` 物件的 `addSortElement` 方法並傳入 `SortOrder.Element` 物件。
-
-1. 搜尋資源
-
-   若要搜尋 `resources` 根據屬性屬性，叫用 `ResourceRepositoryClient` 物件的 `searchProperties` 方法並傳遞下列引數：
-
-   * A `String` 包含執行搜尋的基本路徑。 在這種情況下， `"/testFolder"` 已使用。
-   * 搜尋中使用的查詢。
-   * 搜尋的深度。 在這種情況下， `com.adobe.repository.infomodel.bean.ResourceCollection.DEPTH_INFINITE` 用於表示要使用基本路徑及其所有資料夾。
-   * 一個 `int` 表示要從中選取未分頁結果集的第一個列的值。 在此範例中， `0` 已指定。
-   * 一個 `int` 表示要傳回的結果數目上限的值。 在此範例中， `10` 已指定。
-   * 搜尋中使用的排序順序。
-
-   方法會傳回 `java.util.List` 之 `Resource` 物件以指定的排序順序。
-
-1. 從搜尋結果擷取資源
-
-   若要擷取搜尋結果中包含的資源，請逐一檢視 `List` 並將每個物件轉換為 `Resource` 以擷取其資訊。 在此範例中，會顯示每個資源的名稱。
+   * A `java.lang.String` 包含资源URI的对象。
+   * 此 `Resource` 包含已更新资源信息的对象。
+   * A `boolean` 指示是更新主要版本还是次要版本的值。 在此示例中，值为 `true` 传入以指示主版本将递增。
 
 **另请参阅**
 
-[搜尋資源](aem-forms-repository.md#searching-for-resources)
+[更新资源](aem-forms-repository.md#updating-resources)
 
-[快速入門（SOAP模式）：使用Java API搜尋資源](/help/forms/developing/repository-service-api-quick-starts.md#quick-start-soap-mode-searching-for-resources-using-the-java-api)
+[快速入门（SOAP模式）：使用Java API更新资源](/help/forms/developing/repository-service-api-quick-starts.md#quick-start-soap-mode-updating-a-resource-using-the-java-api)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
-[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-## 建立資源關係 {#creating-resource-relationships}
+### 使用Web服务API更新资源 {#update-resources-using-the-web-service-api}
 
-您可以指定存放庫中資源之間的關係。 有三種關係：
+使用存储库API（Web服务）更新资源：
 
-* **相依性**：資源相依於其他資源的關係，這表示存放庫需要所有相關資源。
-* **成員資格（檔案系統）**：資源位於指定資料夾中的關係。
-* **自訂**：您指定的資源之間的關係。 例如，如果一個資源已棄用，而另一個資源已引入存放庫，您可以指定自己的替代關係。
+1. 包括项目文件
 
-您可以建立自己的自訂關係。 例如，如果您將HTML檔案儲存在存放庫中，而且它使用影像，則可以指定自訂關係來將HTML檔案與影像相關聯（因為通常只有XML檔案會使用存放庫定義的相依關係與影像相關聯）。 另一個自訂關係的範例是，如果您想使用循環圖表結構而不是樹狀結構來建置存放庫的不同檢視。 您可以定義圓形圖表以及檢視器來周遊這些關係。 最後，您可以指出一個資源會取代另一個資源，即使這兩個資源完全不同。 在這種情況下，您可以定義保留範圍以外的關係型別，並在這兩個資源之間建立關係。 您的應用程式將是唯一可以偵測及處理該關係的使用者端，並且可用於搜尋該關係。
+   * 创建使用存储库WSDL的Microsoft .NET客户端程序集。
+   * 引用Microsoft .NET客户端程序集。
 
-您可以使用存放庫服務Java API或Web服務API，以程式設計方式指定資源之間的關係。
+1. 创建服务客户端
+
+   使用Microsoft .NET客户端程序集，创建 `RepositoryServiceService` 对象。 设置其 `Credentials` 属性使用 `System.Net.NetworkCredential` 包含用户名和密码的对象。
+
+1. 检索要更新的资源
+
+   指定要检索的资源的URI并读取该资源。 在此示例中，资源的URI是 `"/testFolder/testResource"`. 有关更多信息，请参阅 [正在读取资源](aem-forms-repository.md#reading-resources).
+
+1. 更新资源
+
+   更新 `Resource` 对象的信息。 在本例中，要更新说明，请将新值分配给 `Resource` 对象的 `description` 字段。
+
+1. 调用 `RepositoryServiceService` 对象的 `updateResource` 方法，并传入以下参数：
+
+   * A `System.String` 包含资源URI的对象。
+   * 此 `Resource` 包含已更新资源信息的对象。
+   * A `boolean` 指示是更新主要版本还是次要版本的值。 在此示例中，值为 `true` 传入以指示主版本将递增。
+   * 通过 `null` 其余两个参数。
+
+**另请参阅**
+
+[更新资源](aem-forms-repository.md#updating-resources)
+
+[使用Base64编码调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
+
+## 搜索资源 {#searching-for-resources}
+
+您可以构建用于搜索存储库中资源（包括历史记录、相关资源和属性）的查询。
+
+您可以检索相关资源以确定表单与其片段之间的依赖关系。 例如，如果您有一个表单，则可以确定它使用的片段或外部资源。 如果您有图像，还可以找到使用该图像的表单。 您还可以使用基于属性的筛选来搜索相关资源。 例如，您可以搜索使用具有指定名称的图像的所有表单，或查找由具有指定名称的表单使用的任何图像。 您还可以使用资源属性进行搜索。 例如，您可以执行查询以查找其名称以给定字符串开头的所有表单或资源，该字符串可能包含“%”和“_”通配符。 请记住，基于属性的搜索不是基于关系；此类搜索基于假设您对给定资源具有特定知识。
+
+**查询语句**
+
+A *查询* 包含一个或多个用条件逻辑连接的语句。 A *语句* 由一个左操作数、一个运算符和一个右操作数组成。 此外，您还可以指定用于搜索结果的排序顺序。 此 *排序顺序* 包含与SQL等效的信息 `ORDER BY` 子句并且由元素组成，这些元素包含搜索所基于的属性，以及一个指示使用升序还是降序的值。
+
+您可以使用存储库服务Java API以编程方式搜索资源。 目前，无法使用Web服务API来搜索资源。
+
+**排序行为**
+
+调用时未遵循排序顺序 `ResourceRepositoryClient` 对象的 `searchProperties` 方法和指定排序顺序。 例如，假设您创建了一个具有三个自定义属性的资源，其中属性名称为 `name`， `secondName`、和 `asecondName`. 接下来，在属性名称上创建排序顺序元素并设置 `ascending` 值至 `true`.
+
+然后调用 `ResourceRepositoryClient` 对象的 `searchProperties` 方法，并按排序顺序传递。 搜索将返回正确的资源，并具有三个属性。 但是，属性不按属性名称排序。 它们会按添加它们的顺序返回： `name`， `secondName`、和 `asecondName`.
 
 >[!NOTE]
 >
->如需儲存庫服務的詳細資訊，請參閱 [AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
+>有关Repository服务的详细信息，请参见 [AEM Forms的服务参考](https://www.adobe.com/go/learn_aemforms_services_63).
 
-### 步驟摘要 {#summary_of_steps-6}
+### 步骤摘要 {#summary_of_steps-5}
 
-若要指定兩個資源之間的關係，請遵循下列步驟：
+要搜索资源，请执行以下步骤：
 
-1. 包含專案檔案。
-1. 建立存放庫服務使用者端。
-1. 指定要相關之資源的URI。
-1. 建立關係。
+1. 包括项目文件。
+1. 创建存储库服务客户端。
+1. 指定搜索的目标文件夹。
+1. 指定搜索中使用的属性。
+1. 创建搜索中使用的查询。
+1. 为搜索结果创建排序顺序。
+1. 搜索资源。
+1. 从搜索结果中检索资源。
 
-**包含專案檔案**
+**包括项目文件**
 
-在您的開發專案中包含必要的檔案。 如果您使用Java建立使用者端應用程式，請包含必要的JAR檔案。 如果您使用Web服務，請包含Proxy檔案。
+在开发项目中包含必要的文件。 如果要使用Java创建客户端应用程序，请包含必要的JAR文件。 如果使用Web服务，请包含代理文件。
 
-**建立服務使用者端**
+**创建服务客户端**
 
-您必須先建立連線並提供認證，才能以程式設計方式讀取資源。 這是透過建立服務使用者端來完成。
+在以编程方式读取资源之前，必须建立连接并提供凭据。 这是通过创建服务客户端来实现的。
 
-**指定要相關之資源的URI**
+**指定搜索的目标文件夹**
 
-建立包含要關聯之資源的URI的字串。 語法包括正斜線，如以下範例所示：「/*路徑*/*資源*「。
+创建一个字符串，其中包含执行搜索的基本路径。 语法包括正斜杠，如以下示例所示：&quot;/*路径*/*文件夹*“。
 
-**建立關係**
+**指定搜索中使用的属性**
 
-叫用存放庫服務方法以建立並指定關係型別。
+您可以基于资源中包含的属性进行搜索。 指定要执行搜索的属性的值。
 
-**另请参阅**
+**创建搜索中使用的查询**
 
-[使用Java API建立關係資源](aem-forms-repository.md#create-relationship-resources-using-the-java-api)
+使用语句和条件构建查询。 每个语句将指定搜索所依据的属性、要使用的条件以及要在搜索中使用的属性值。
 
-[使用Web服務API建立關係資源](aem-forms-repository.md#create-relationship-resources-using-the-web-service-api)
+**为搜索结果创建排序顺序**
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+排序顺序由元素组成，每个元素包含搜索中使用的属性之一，以及指示使用升序还是降序的值。
 
-[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+**搜索资源**
 
-[存放庫服務API快速啟動](/help/forms/developing/repository-service-api-quick-starts.md#repository-service-api-quick-starts)
+使用文件夹、查询和排序顺序搜索资源。 此外，指示搜索的深度以及要返回的结果数量的上限。
 
-### 使用Java API建立關係資源 {#create-relationship-resources-using-the-java-api}
+**从搜索结果中检索资源**
 
-使用存放庫服務Java API建立關係資源，執行以下工作：
-
-1. 包含專案檔案
-
-   在您的Java專案的類別路徑中包含使用者端JAR檔案。
-
-1. 建立服務使用者端
-
-   建立 `ResourceRepositoryClient` 物件，使用它的建構函式並傳遞 `ServiceClientFactory` 包含連線屬性的物件。
-
-1. 指定要相關之資源的URI
-
-   指定要相關之資源的URI。 在此情況下，因為資源已命名 `testResource1` 和 `testResource2` 和位於名為的資料夾中 `testFolder`，其URI為 `"/testFolder/testResource1"` 和 `"/testFolder/testResource2"`. URI會儲存為 `java.lang.String` 物件。 在此範例中，資源會先寫入存放庫，然後擷取其URI。 如需有關寫入資源的詳細資訊，請參閱 [寫入資源](aem-forms-repository.md#writing-resources).
-
-1. 建立關係
-
-   叫用 `ResourceRepositoryClient` 物件的 `createRelationship` 方法並傳遞下列引數：
-
-   * 來源資源的URI。
-   * 目標資源的URI。
-   * 關聯性型別，此為中的靜態常數之一 `com.adobe.repository.infomodel.bean.Relation` 類別。 在此範例中，相依關係是透過指定值來建立 `Relation.TYPE_DEPENDANT_OF`.
-   * A `boolean` 指示目標資源是否自動更新為 `com.adobe.repository.infomodel.Id`新head資源的 — based識別碼。 在此範例中，由於相依關係，值 `true` 已指定。
-
-   您也可以透過叫用 `ResourceRepositoryClient` 物件的 `getRelated` 方法並傳入下列引數：
-
-   * 要擷取相關資源的資源URI。 在此範例中，來源資源( `"/testFolder/testResource1"`)已指定。
-   * A `boolean` 指示指定的資源是否為關係中的來源資源的值。 在此範例中，值 `true` 已指定，因為情況如此。
-   * 關聯性型別，此型別為中的靜態常數之一。 `Relation` 類別。 在此範例中，相依關係是使用先前使用的相同值來指定： `Relation.TYPE_DEPENDANT_OF`.
-
-   此 `getRelated` 方法傳回 `java.util.List` 之 `Resource` 物件，您可以透過它來反複擷取每一個相關資源，轉換包含在 `List` 至 `Resource` 隨心所欲。 在此範例中， `testResource2` 預期會位於傳回資源的清單中。
+对返回的资源列表进行迭代，提取信息以供进一步处理。
 
 **另请参阅**
 
-[建立資源關係](aem-forms-repository.md#creating-resource-relationships)
+[使用Java API搜索资源](aem-forms-repository.md#search-for-resources-using-the-java-api)
 
-[快速入門（SOAP模式）：使用Java API建立資源之間的關係](/help/forms/developing/repository-service-api-quick-starts.md#quick-start-soap-mode-creating-relationships-between-resources-using-the-java-api)
+[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+[存储库服务API快速启动](/help/forms/developing/repository-service-api-quick-starts.md#repository-service-api-quick-starts)
 
-### 使用Web服務API建立關係資源 {#create-relationship-resources-using-the-web-service-api}
+### 使用Java API搜索资源 {#search-for-resources-using-the-java-api}
 
-使用存放庫API （Web服務）建立關係資源：
+使用存储库服务API (Java)搜索资源：
 
-1. 包含專案檔案
+1. 包括项目文件
 
-   * 建立使用存放庫WSDL的Microsoft .NET使用者端元件。
-   * 參考Microsoft .NET使用者端元件。
+   在Java项目的类路径中包含客户端JAR文件。
 
-1. 建立服務使用者端
+1. 创建服务客户端
 
-   使用Microsoft .NET使用者端元件，建立 `RepositoryServiceService` 物件，透過叫用其預設建構函式。 設定其 `Credentials` 屬性使用 `System.Net.NetworkCredential` 包含使用者名稱和密碼的物件。
+   创建 `ResourceRepositoryClient` 对象通过使用该对象的构造函数传递 `ServiceClientFactory` 包含连接属性的对象。
 
-1. 指定要相關之資源的URI
+1. 指定搜索的目标文件夹
 
-   指定要相關之資源的URI。 在此情況下，因為資源已命名 `testResource1` 和 `testResource2` 和位於名為的資料夾中 `testFolder`，其URI為 `"/testFolder/testResource1"` 和 `"/testFolder/testResource2"`. 使用與Microsoft .NET Framework相容的語言時（例如C#），URI會儲存為 `System.String` 物件。 在此範例中，資源會先寫入存放庫，然後擷取其URI。 如需有關寫入資源的詳細資訊，請參閱 [寫入資源](aem-forms-repository.md#writing-resources).
+   指定要从中执行搜索的基本路径的URI。 在此示例中，资源的URI是 `/testFolder`.
 
-1. 建立關係
+1. 指定搜索中使用的属性
 
-   叫用 `RepositoryServiceService` 物件的 `createRelationship` 方法並傳遞下列引數：
+   指定要执行搜索的属性的值。 属性存在于 `com.adobe.repository.infomodel.bean.Resource` 对象。 在本例中，将对name属性进行搜索；因此， `java.lang.String` 包含 `Resource` 使用了对象的名称，即 `testResource` 这种情况下。
 
-   * 來源資源的URI。
-   * 目標資源的URI。
-   * 關係的型別。 在此範例中，相依關係是透過指定值來建立 `3`.
-   * A `boolean` 指示是否已指定關係型別的值。 在此範例中，值 `true` 已指定。
-   * A `boolean` 指示目標資源是否自動更新為 `Id`新head資源的 — based識別碼。 在此範例中，由於相依關係，值 `true` 已指定。
-   * A `boolean` 指示是否已指定目標標頭的值。 在此範例中，值 `true` 已指定。
-   * 通過 `null` 最後一個引數。
+1. 创建搜索中使用的查询
 
-   您也可以透過叫用 `RepositoryServiceService` 物件的 `getRelated` 方法並傳入下列引數：
+   要创建查询，请创建 `com.adobe.repository.query.Query` 对象，方法是调用 `Query` 类并向查询中添加语句。
 
-   * 要擷取相關資源的資源URI。 在此範例中，來源資源( `"/testFolder/testResource1"`)已指定。
-   * A `boolean` 指示指定的資源是否為關係中的來源資源的值。 在此範例中，值 `true` 已指定，因為情況如此。
-   * A `boolean` 指示是否已指定來源資源的值。 在此範例中，值 `true` 「 」提供。
-   * 包含關係型別的整數陣列。 在此範例中，相依關係是在陣列中使用與先前所用的相同值來指定的： `3`.
-   * 通過 `null` 其餘兩個引數。
+   要创建语句，请调用 `com.adobe.repository.query.Query.Statement` 类并传递以下参数：
 
-   此 `getRelated` 方法會傳回可以轉型為的物件陣列 `Resource` 物件，您可以透過這些物件反複擷取每一個相關資源。 在此範例中， `testResource2` 預期會位於傳回資源的清單中。
+   * 包含资源属性常量的左操作数。 在本例中，由于资源的名称用作搜索的基础，因此静态值 `Resource.ATTRIBUTE_NAME` 已使用。
+   * 包含搜索属性时使用的条件的运算符。 运算符必须是 `Query.Statement` 类。 在此示例中，静态值 `Query.Statement.OPERATOR_BEGINS_WITH` 已使用。
+   * 包含进行搜索的属性值的右操作数。 在此示例中，name属性a `String` 包含值 `"testResource"`，则不会使用。
+
+   通过调用 `Query.Statement` 对象的 `setNamespace` 方法，并传入包含在 `com.adobe.repository.infomodel.bean.ResourceProperty` 类。 在此示例中，使用 `ResourceProperty.RESERVED_NAMESPACE_REPOSITORY`。
+
+   通过调用 `Query` 对象的 `addStatement` 方法和传入 `Query.Statement` 对象。
+
+1. 为搜索结果创建排序顺序
+
+   要指定搜索结果中使用的排序顺序，请创建 `com.adobe.repository.query.sort.SortOrder` 对象，方法是调用 `SortOrder` 类，并向排序顺序中添加元素。
+
+   要为排序顺序创建元素，请调用以下项的构造函数之一： `com.adobe.repository.query.sort.SortOrder.Element` 类。 在本例中，由于资源的名称用作搜索的基础，因此静态值 `Resource.ATTRIBUTE_NAME` 用作第一个参数，按升序排列(a `boolean` 值 `true`)指定为第二个参数。
+
+   通过调用 `SortOrder` 对象的 `addSortElement` 方法和传入 `SortOrder.Element` 对象。
+
+1. 搜索资源
+
+   要搜索 `resources` 根据属性属性，调用 `ResourceRepositoryClient` 对象的 `searchProperties` 方法并传递以下参数：
+
+   * A `String` 包含执行搜索的基本路径。 在这个案例中， `"/testFolder"` 已使用。
+   * 搜索中使用的查询。
+   * 搜索的深度。 在这个案例中， `com.adobe.repository.infomodel.bean.ResourceCollection.DEPTH_INFINITE` 用于指示要使用基本路径及其所有文件夹。
+   * An `int` 表示从中选择未分页结果集的第一行的值。 在此示例中， `0` 已指定。
+   * An `int` 指示要返回的最大结果数的值。 在此示例中， `10` 已指定。
+   * 搜索中使用的排序顺序。
+
+   此方法会返回 `java.util.List` 之 `Resource` 对象按指定的排序顺序。
+
+1. 从搜索结果中检索资源
+
+   要检索搜索结果中包含的资源，请迭代 `List` 并将每个对象转换为 `Resource` 以便提取其信息。 在此示例中，将显示每个资源的名称。
 
 **另请参阅**
 
-[建立資源關係](aem-forms-repository.md#creating-resource-relationships)
+[搜索资源](aem-forms-repository.md#searching-for-resources)
 
-[使用Base64編碼叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
+[快速入门（SOAP模式）：使用Java API搜索资源](/help/forms/developing/repository-service-api-quick-starts.md#quick-start-soap-mode-searching-for-resources-using-the-java-api)
 
-## 鎖定資源 {#locking-resources}
+[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
-您可以鎖定資源或資源集，以供特定使用者獨佔使用，或供多個使用者共用。 共用鎖定表示資源會發生什麼事，但不會阻止其他人對該資源採取動作。 共用鎖定應視為訊號機制。 獨佔鎖定表示鎖定資源的使用者將會變更資源，而鎖定可確保除非使用者不再需要存取資源且已解除鎖定，否則其他人無法變更。 如果存放庫管理員解除鎖定資源，則該資源的所有專屬和共用鎖定都會自動移除。 這類動作適用於使用者已無法使用且尚未解除鎖定資源的情況。
+[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-鎖定資源時，當您檢視位於Workbench中的「資源」標籤時，會出現鎖定圖示，如下圖所示。
+## 创建资源关系 {#creating-resource-relationships}
+
+您可以指定存储库中资源之间的关系。 有三种关系：
+
+* **依赖关系**：资源依赖其他资源的关系，这意味着存储库中需要所有相关资源。
+* **成员资格（文件系统）**：资源位于给定文件夹中的关系。
+* **自定义**：您在资源之间指定的关系。 例如，如果一个资源已被弃用，而另一个资源被引入存储库，则您可以指定自己的替换关系。
+
+您可以创建自己的自定义关系。 例如，如果将HTML文件存储在存储库中并且它使用图像，则可以指定将HTML文件与图像关联的自定义关系（因为通常只有XML文件使用存储库定义的依赖关系与图像关联）。 自定义关系的另一个示例是，如果您希望使用循环图结构而不是树结构构建存储库的不同视图。 您可以定义循环图以及查看者来遍历这些关系。 最后，您可以指明一个资源将替换另一个资源，即使这两个资源完全不同。 在这种情况下，您可以在保留范围之外定义关系类型，并在这两个资源之间创建关系。 您的应用程序将是唯一能够检测并处理关系的客户，并且可用于对该关系进行搜索。
+
+您可以使用存储库服务Java API或Web服务API以编程方式指定资源之间的关系。
+
+>[!NOTE]
+>
+>有关Repository服务的详细信息，请参见 [AEM Forms的服务参考](https://www.adobe.com/go/learn_aemforms_services_63).
+
+### 步骤摘要 {#summary_of_steps-6}
+
+要指定两个资源之间的关系，请执行以下步骤：
+
+1. 包括项目文件。
+1. 创建存储库服务客户端。
+1. 指定要关联的资源的URI。
+1. 创建关系。
+
+**包括项目文件**
+
+在开发项目中包含必要的文件。 如果要使用Java创建客户端应用程序，请包含必要的JAR文件。 如果使用Web服务，请包含代理文件。
+
+**创建服务客户端**
+
+在以编程方式读取资源之前，必须建立连接并提供凭据。 这是通过创建服务客户端来实现的。
+
+**指定要关联的资源的URI**
+
+创建包含要关联的资源的URI的字符串。 语法包括正斜杠，如以下示例所示：&quot;/*路径*/*资源*“。
+
+**创建关系**
+
+调用存储库服务方法以创建和指定关系类型。
+
+**另请参阅**
+
+[使用Java API创建关系资源](aem-forms-repository.md#create-relationship-resources-using-the-java-api)
+
+[使用Web服务API创建关系资源](aem-forms-repository.md#create-relationship-resources-using-the-web-service-api)
+
+[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+
+[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+
+[存储库服务API快速启动](/help/forms/developing/repository-service-api-quick-starts.md#repository-service-api-quick-starts)
+
+### 使用Java API创建关系资源 {#create-relationship-resources-using-the-java-api}
+
+使用存储库服务Java API创建关系资源，执行以下任务：
+
+1. 包括项目文件
+
+   在Java项目的类路径中包含客户端JAR文件。
+
+1. 创建服务客户端
+
+   创建 `ResourceRepositoryClient` 对象通过使用该对象的构造函数传递 `ServiceClientFactory` 包含连接属性的对象。
+
+1. 指定要关联的资源的URI
+
+   指定要关联的资源的URI。 在本例中，因为资源已命名 `testResource1` 和 `testResource2` 和位于名为的文件夹中 `testFolder`，它们的URI为 `"/testFolder/testResource1"` 和 `"/testFolder/testResource2"`. URI存储为 `java.lang.String` 对象。 在本例中，首先将资源写入存储库，然后检索其URI。 有关编写资源的详细信息，请参见 [写入资源](aem-forms-repository.md#writing-resources).
+
+1. 创建关系
+
+   调用 `ResourceRepositoryClient` 对象的 `createRelationship` 方法并传递以下参数：
+
+   * 源资源的URI。
+   * 目标资源的URI。
+   * 关系的类型，它是中的静态常量之一 `com.adobe.repository.infomodel.bean.Relation` 类。 在此示例中，通过指定值来建立依赖关系 `Relation.TYPE_DEPENDANT_OF`.
+   * A `boolean` 指示目标资源是否自动更新到的值 `com.adobe.repository.infomodel.Id`新标头资源的基于的标识符。 在本例中，由于依赖关系，值 `true` 已指定。
+
+   您还可以通过调用 `ResourceRepositoryClient` 对象的 `getRelated` 方法并传入以下参数：
+
+   * 要检索相关资源的资源的URI。 在此示例中，源资源( `"/testFolder/testResource1"`)。
+   * A `boolean` 指示指定的资源是否为关系中的源资源的值。 在此示例中，值 `true` 指定了，因为情况如此。
+   * 关系类型，是中的静态常量之一 `Relation` 类。 在此示例中，使用先前使用的相同值指定依赖关系： `Relation.TYPE_DEPENDANT_OF`.
+
+   此 `getRelated` 方法返回 `java.util.List` 之 `Resource` 对象进行迭代，通过它检索每个相关资源，转换包含在 `List` 到 `Resource` 你也会这么做。 在此示例中， `testResource2` 应包含在返回的资源的列表中。
+
+**另请参阅**
+
+[创建资源关系](aem-forms-repository.md#creating-resource-relationships)
+
+[快速入门（SOAP模式）：使用Java API创建资源之间的关系](/help/forms/developing/repository-service-api-quick-starts.md#quick-start-soap-mode-creating-relationships-between-resources-using-the-java-api)
+
+[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+
+[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+
+### 使用Web服务API创建关系资源 {#create-relationship-resources-using-the-web-service-api}
+
+使用存储库API（Web服务）创建关系资源：
+
+1. 包括项目文件
+
+   * 创建使用存储库WSDL的Microsoft .NET客户端程序集。
+   * 引用Microsoft .NET客户端程序集。
+
+1. 创建服务客户端
+
+   使用Microsoft .NET客户端程序集，创建 `RepositoryServiceService` 对象。 设置其 `Credentials` 属性使用 `System.Net.NetworkCredential` 包含用户名和密码的对象。
+
+1. 指定要关联的资源的URI
+
+   指定要关联的资源的URI。 在本例中，因为资源已命名 `testResource1` 和 `testResource2` 和位于名为的文件夹中 `testFolder`，它们的URI为 `"/testFolder/testResource1"` 和 `"/testFolder/testResource2"`. 使用与Microsoft .NET Framework兼容的语言（例如C#）时，URI存储为 `System.String` 对象。 在本例中，首先将资源写入存储库，然后检索其URI。 有关编写资源的详细信息，请参见 [写入资源](aem-forms-repository.md#writing-resources).
+
+1. 创建关系
+
+   调用 `RepositoryServiceService` 对象的 `createRelationship` 方法并传递以下参数：
+
+   * 源资源的URI。
+   * 目标资源的URI。
+   * 关系的类型。 在此示例中，通过指定值来建立依赖关系 `3`.
+   * A `boolean` 指示是否指定了关系类型的值。 在此示例中，值 `true` 已指定。
+   * A `boolean` 指示目标资源是否自动更新到的值 `Id`新标头资源的基于的标识符。 在本例中，由于依赖关系，值 `true` 已指定。
+   * A `boolean` 指示是否指定了目标标头的值。 在此示例中，值 `true` 已指定。
+   * 通过 `null` 最后一个参数。
+
+   您还可以通过调用 `RepositoryServiceService` 对象的 `getRelated` 方法并传入以下参数：
+
+   * 要检索相关资源的资源的URI。 在此示例中，源资源( `"/testFolder/testResource1"`)。
+   * A `boolean` 指示指定的资源是否为关系中的源资源的值。 在此示例中，值 `true` 指定了，因为情况如此。
+   * A `boolean` 指示是否指定了源资源的值。 在此示例中，值 `true` 提供。
+   * 包含关系类型的整数数组。 在此示例中，使用与之前使用的相同的数组值来指定依赖关系： `3`.
+   * 通过 `null` 其余两个参数。
+
+   此 `getRelated` 方法返回一个对象数组，可以将这些对象转换为 `Resource` 可循环检索每个相关资源的对象。 在此示例中， `testResource2` 应包含在返回的资源的列表中。
+
+**另请参阅**
+
+[创建资源关系](aem-forms-repository.md#creating-resource-relationships)
+
+[使用Base64编码调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
+
+## 锁定资源 {#locking-resources}
+
+您可以锁定一个资源或一组资源以供特定用户独占使用或供多个用户共享。 共享锁表示资源会发生一些情况，但并不阻止任何人对该资源执行操作。 共享锁应被视为一种信号机制。 独占锁意味着锁定资源的用户将更改资源，并且该锁确保在用户不再需要访问该资源并已释放该锁之前，没有其他人可以这样做。 如果存储库管理员解锁资源，则该资源上的所有独占和共享锁定将被自动删除。 此类操作适用于用户不再可用且未解锁资源的情况。
+
+锁定资源后，当您查看位于Workbench中的“资源”选项卡时，会出现一个锁定图标，如下图所示。
 
 ![lr_lr_lockrepository](assets/lr_lr_lockrepository.png)
 
-您可以使用存放庫服務Java API或Web服務API，以程式設計方式控制對資源的存取。
+您可以使用存储库服务Java API或Web服务API以编程方式控制对资源的访问。
 
 >[!NOTE]
 >
->如需儲存庫服務的詳細資訊，請參閱 [AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
+>有关Repository服务的详细信息，请参见 [AEM Forms的服务参考](https://www.adobe.com/go/learn_aemforms_services_63).
 
-### 步驟摘要 {#summary_of_steps-7}
+### 步骤摘要 {#summary_of_steps-7}
 
-若要鎖定和解鎖資源，請遵循下列步驟：
+要锁定和解锁资源，请执行以下步骤：
 
-1. 包含專案檔案。
-1. 建立存放庫服務使用者端。
-1. 指定要鎖定的資源的URI。
-1. 鎖定資源。
-1. 擷取資源的鎖定。
-1. 解除鎖定資源
+1. 包括项目文件。
+1. 创建存储库服务客户端。
+1. 指定要锁定的资源的URI。
+1. 锁定资源。
+1. 检索资源的锁定。
+1. 解锁资源
 
-**包含專案檔案**
+**包括项目文件**
 
-在您的開發專案中包含必要的檔案。 如果您使用Java建立使用者端應用程式，請包含必要的JAR檔案。 如果您使用Web服務，請包含Proxy檔案。
+在开发项目中包含必要的文件。 如果要使用Java创建客户端应用程序，请包含必要的JAR文件。 如果使用Web服务，请包含代理文件。
 
-**建立服務使用者端**
+**创建服务客户端**
 
-您必須先建立連線並提供認證，才能以程式設計方式讀取資源。 這是透過建立服務使用者端來完成。
+在以编程方式读取资源之前，必须建立连接并提供凭据。 这是通过创建服务客户端来实现的。
 
-**指定要鎖定的資源的URI**
+**指定要锁定的资源的URI**
 
-建立包含要鎖定之資源的URI的字串。 語法包括正斜線，如以下範例所示：「/*路徑*/*資源*「。
+创建一个字符串，其中包含要锁定的资源的URI。 语法包括正斜杠，如以下示例所示：&quot;/*路径*/*资源*“。
 
-**鎖定資源**
+**锁定资源**
 
-叫用存放庫服務方法來鎖定資源，指定URI、鎖定型別和鎖定深度。
+调用存储库服务方法以锁定资源，指定URI、锁定类型和锁定深度。
 
-**擷取資源的鎖定**
+**检索资源的锁定**
 
-叫用存放庫服務方法以擷取資源的鎖定，指定URI。
+调用Repository服务方法以检索资源的锁，指定URI。
 
-**解除鎖定資源**
+**解锁资源**
 
-叫用存放庫服務方法以解除鎖定資源，指定URI。
+调用Repository服务方法以解锁资源，指定URI。
 
 **另请参阅**
 
-[使用Java API鎖定資源](aem-forms-repository.md#lock-resources-using-the-java-api)
+[使用Java API锁定资源](aem-forms-repository.md#lock-resources-using-the-java-api)
 
-[使用Web服務API鎖定資源](aem-forms-repository.md#lock-resources-using-the-web-service-api)
+[使用Web服务API锁定资源](aem-forms-repository.md#lock-resources-using-the-web-service-api)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
-[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[存放庫服務API快速啟動](/help/forms/developing/repository-service-api-quick-starts.md#repository-service-api-quick-starts)
+[存储库服务API快速启动](/help/forms/developing/repository-service-api-quick-starts.md#repository-service-api-quick-starts)
 
-### 使用Java API鎖定資源 {#lock-resources-using-the-java-api}
+### 使用Java API锁定资源 {#lock-resources-using-the-java-api}
 
-使用存放庫服務API (Java)鎖定資源：
+使用存储库服务API (Java)锁定资源：
 
-1. 包含專案檔案
+1. 包括项目文件
 
-   在您的Java專案的類別路徑中包含使用者端JAR檔案。
+   在Java项目的类路径中包含客户端JAR文件。
 
-1. 建立服務使用者端
+1. 创建服务客户端
 
-   建立 `ResourceRepositoryClient` 物件，使用它的建構函式並傳遞 `ServiceClientFactory` 包含連線屬性的物件。
+   创建 `ResourceRepositoryClient` 对象通过使用该对象的构造函数传递 `ServiceClientFactory` 包含连接属性的对象。
 
-1. 指定要鎖定的資源的URI
+1. 指定要锁定的资源的URI
 
-   指定要鎖定的資源的URI。 在此案例中，因為資源命名為 `testResource` 位於名為的資料夾中 `testFolder`，其URI為 `"/testFolder/testResource"`. URI會儲存為 `java.lang.String` 物件。
+   指定要锁定的资源的URI。 在本例中，因为资源名为 `testResource` 位于名为的文件夹中 `testFolder`，其URI为 `"/testFolder/testResource"`. URI存储为 `java.lang.String` 对象。
 
-1. 鎖定資源
+1. 锁定资源
 
-   叫用 `ResourceRepositoryClient` 物件的 `lockResource` 方法並傳遞下列引數：
+   调用 `ResourceRepositoryClient` 对象的 `lockResource` 方法并传递以下参数：
 
-   * 資源的URI。
-   * 鎖定範圍。 在此範例中，由於資源將被鎖定以供獨佔使用，因此鎖定範圍指定為 `com.adobe.repository.infomodel.bean.Lock.SCOPE_EXCLUSIVE`.
-   * 鎖定深度。 在此範例中，由於鎖定只會套用至特定資源，不會套用至其任何成員或子系，因此鎖定深度會指定為 `Lock.DEPTH_ZERO`.
+   * 资源的URI。
+   * 锁定范围。 在本例中，由于资源将被锁定以便独占使用，因此锁定范围指定为 `com.adobe.repository.infomodel.bean.Lock.SCOPE_EXCLUSIVE`.
+   * 锁定深度。 在本例中，由于锁定将仅应用于特定资源而不应用于其任何成员或子资源，因此锁定深度指定为 `Lock.DEPTH_ZERO`.
 
    >[!NOTE]
    >
-   >多載版本的 `lockResource` 需要四個引數的方法會擲回例外狀況。 確保使用 `lockResource` 方法需要三個引數，如本逐步說明所示。
+   >重载版本的 `lockResource` 需要四个参数的方法会引发异常。 确保使用 `lockResource` 方法需要三个参数，如本演练所示。
 
-1. 擷取資源的鎖定
+1. 检索资源的锁定
 
-   叫用 `ResourceRepositoryClient` 物件的 `getLocks` 方法並傳遞資源的URI作為引數。 方法會傳回Lock物件清單，您可以透過該清單進行反複運算。 在此範例中，會透過叫用每個Lock物件的 `getOwnerUserId`， `getDepth`、和 `getType` 方法。
+   调用 `ResourceRepositoryClient` 对象的 `getLocks` 方法，并将资源的URI作为参数传递。 该方法会返回一个Lock对象列表，您可以通过该列表进行迭代。 在此示例中，通过调用每个锁定对象的 `getOwnerUserId`， `getDepth`、和 `getType` 方法。
 
-1. 解除鎖定資源
+1. 解锁资源
 
-   叫用 `ResourceRepositoryClient` 物件的 `unlockResource` 方法並傳遞資源的URI作為引數。 如需詳細資訊，請參閱 [AEM Forms API參考](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
-
-**另请参阅**
-
-[鎖定資源](aem-forms-repository.md#locking-resources)
-
-[快速入門（SOAP模式）：使用Java API鎖定資源](/help/forms/developing/repository-service-api-quick-starts.md#quick-start-soap-mode-locking-a-resource-using-the-java-api)
-
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
-
-[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
-
-### 使用Web服務API鎖定資源 {#lock-resources-using-the-web-service-api}
-
-使用存放庫服務API （Web服務）鎖定資源：
-
-1. 包含專案檔案
-
-   * 使用Base64建立使用存放庫WSDL的Microsoft .NET使用者端元件。
-   * 參考Microsoft .NET使用者端元件。
-
-1. 建立服務使用者端
-
-   使用Microsoft .NET使用者端元件，建立 `RepositoryServiceService` 物件，透過叫用其預設建構函式。 設定其 `Credentials` 屬性使用 `System.Net.NetworkCredential` 包含使用者名稱和密碼的物件。
-
-1. 指定要鎖定的資源的URI
-
-   指定包含要鎖定之資源URI的字串。 在此案例中，因為資源命名為 `testResource` 在資料夾中 `testFolder`，其URI為 `"/testFolder/testResource"`. 使用與Microsoft .NET Framework相容的語言時（例如C#），請將URI儲存在 `System.String` 物件。
-
-1. 鎖定資源
-
-   叫用 `RepositoryServiceService` 物件的 `lockResource` 方法並傳遞下列引數：
-
-   * 資源的URI。
-   * 鎖定範圍。 在此範例中，由於資源將被鎖定以供獨佔使用，因此鎖定範圍指定為 `11`.
-   * 鎖定深度。 在此範例中，由於鎖定只會套用至特定資源，不會套用至其任何成員或子系，因此鎖定深度會指定為 `2`.
-   * 一個 `int` 表示鎖定到期前的秒數的值。 在此範例中，值 `1000` 已使用。
-   * 通過 `null` 最後一個引數。
-
-1. 擷取資源的鎖定
-
-   叫用 `RepositoryServiceService` 物件的 `getLocks` 方法並傳遞資源的URI作為第一個引數，然後 `null` 第二個引數。 方法會傳回 `object` 陣列包含 `Lock` 您可用來反複處理的物件。 在此範例中，透過存取每個物件來列印每個物件的鎖定擁有者、深度和範圍 `Lock` 物件的 `ownerUserId`， `depth`、和 `type` 欄位。
-
-1. 解除鎖定資源
-
-   叫用 `RepositoryServiceService` 物件的 `unlockResource` 方法並傳遞資源的URI作為第一個引數，然後 `null` 第二個引數。
+   调用 `ResourceRepositoryClient` 对象的 `unlockResource` 方法，并将资源的URI作为参数传递。 欲了解更多信息，请参见 [AEM Forms API参考](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
 
 **另请参阅**
 
-[鎖定資源](aem-forms-repository.md#locking-resources)
+[锁定资源](aem-forms-repository.md#locking-resources)
 
-[使用Base64編碼叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
+[快速入门（SOAP模式）：使用Java API锁定资源](/help/forms/developing/repository-service-api-quick-starts.md#quick-start-soap-mode-locking-a-resource-using-the-java-api)
 
-## 刪除資源 {#deleting-resources}
+[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
-您可以使用存放庫服務Java API (SOAP)，以程式設計方式從存放庫中的指定位置刪除資源。
+[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-當您刪除資源時，刪除通常是永久性的，但在某些情況下，ECM存放庫可能會根據其歷史記錄機制來儲存資源的版本。 因此，在刪除資源時，請務必確保您不會再需要該資源。 刪除資源的常見原因包括需要增加資料庫中的可用空間。 您可以刪除資源的某個版本，但如果您這樣做，您必須指定資源識別碼，而不是其邏輯識別碼(LID)或路徑。 如果您刪除資料夾，則該資料夾中的所有內容（包括子資料夾和資源）都會自動刪除。
+### 使用Web服务API锁定资源 {#lock-resources-using-the-web-service-api}
 
-不會刪除相關資源。 例如，如果您有一個使用logo.gif檔案的表單，而您刪除了logo.gif，則關係會儲存在擱置關係表格中。 另外，對於版本淘汰，請將最新版本的物件狀態設定為deprecated。
+使用存储库服务API（Web服务）锁定资源：
 
-刪除操作在ECM系統中不是交易安全的。 例如，如果您嘗試刪除100個資源，而第50個資源的作業失敗，則會刪除前49個執行個體，但其餘的執行個體不會刪除。 否則，預設行為是回覆（非承諾）。
+1. 包括项目文件
+
+   * 使用Base64创建使用存储库WSDL的Microsoft .NET客户端程序集。
+   * 引用Microsoft .NET客户端程序集。
+
+1. 创建服务客户端
+
+   使用Microsoft .NET客户端程序集，创建 `RepositoryServiceService` 对象。 设置其 `Credentials` 属性使用 `System.Net.NetworkCredential` 包含用户名和密码的对象。
+
+1. 指定要锁定的资源的URI
+
+   指定包含要锁定的资源的URI的字符串。 在本例中，因为资源名为 `testResource` 在文件夹中 `testFolder`，其URI为 `"/testFolder/testResource"`. 使用与Microsoft .NET Framework兼容的语言时（例如，C#），请将URI存储在 `System.String` 对象。
+
+1. 锁定资源
+
+   调用 `RepositoryServiceService` 对象的 `lockResource` 方法并传递以下参数：
+
+   * 资源的URI。
+   * 锁定范围。 在本例中，由于资源将被锁定以便独占使用，因此锁定范围指定为 `11`.
+   * 锁定深度。 在本例中，由于锁定将仅应用于特定资源而不应用于其任何成员或子资源，因此锁定深度指定为 `2`.
+   * An `int` 表示锁定过期前的秒数的值。 在此示例中，值 `1000` 已使用。
+   * 通过 `null` 最后一个参数。
+
+1. 检索资源的锁定
+
+   调用 `RepositoryServiceService` 对象的 `getLocks` 方法，并将资源的URI作为第一个参数传递和 `null` 第二个参数。 此方法会返回 `object` 数组包含 `Lock` 可对其进行迭代的对象。 在本例中，通过访问每个对象来打印每个对象的锁定所有者、深度和范围 `Lock` 对象的 `ownerUserId`， `depth`、和 `type` 字段。
+
+1. 解锁资源
+
+   调用 `RepositoryServiceService` 对象的 `unlockResource` 方法，并将资源的URI作为第一个参数传递和 `null` 第二个参数。
+
+**另请参阅**
+
+[锁定资源](aem-forms-repository.md#locking-resources)
+
+[使用Base64编码调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
+
+## 删除资源 {#deleting-resources}
+
+您可以使用存储库服务Java API (SOAP)，以编程方式从存储库中的给定位置删除资源。
+
+删除资源时，删除通常是永久性的，但在某些情况下，ECM存储库可能会根据其历史记录机制存储资源的版本。 因此，在删除资源时，请务必确保您不会再需要该资源。 删除资源的常见原因包括需要增加数据库中的可用空间。 您可以删除资源的某个版本，但如果要这样做，您必须指定资源标识符，而不是其逻辑标识符(LID)或路径。 如果删除文件夹，则该文件夹中的所有内容（包括子文件夹和资源）都会自动删除。
+
+不会删除相关资源。 例如，如果您有一个使用logo.gif文件的表单，并且删除了logo.gif，则待处理关系表中将存储一个关系。 作为替代方法，对于版本弃用，请将最新版本的对象状态设置为“已弃用”。
+
+在ECM系统中，删除操作不是事务安全的。 例如，如果您尝试删除100个资源，但第50个资源上的操作失败，则前49个实例将被删除，但其余实例将不会被删除。 否则，默认行为是回滚（非承诺）。
 
 >[!NOTE]
 >
->使用時 `com.adobe.repository.bindings.dsc.client.ResourceRepositoryClient.deleteResources()` 方法與ECM存放庫(EMC Documentum Content Server和IBM FileNet P8 Content Manager)，如果刪除其中一個指定資源失敗，則不會復原交易，這表示無法刪除已刪除的檔案。
+>使用时 `com.adobe.repository.bindings.dsc.client.ResourceRepositoryClient.deleteResources()` 方法使用ECM存储库( EMC Documentum Content Server和IBM FileNet P8 Content Manager )，如果删除指定资源之一失败，则事务将不会回滚，这意味着已删除的文件无法取消删除。
 
 >[!NOTE]
 >
->如需儲存庫服務的詳細資訊，請參閱 [AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
+>有关Repository服务的详细信息，请参见 [AEM Forms的服务参考](https://www.adobe.com/go/learn_aemforms_services_63).
 
-### 步驟摘要 {#summary_of_steps-8}
+### 步骤摘要 {#summary_of_steps-8}
 
-若要刪除資源，請遵循下列步驟：
+要删除资源，请执行以下步骤：
 
-1. 包含專案檔案。
-1. 建立存放庫服務使用者端。
-1. 指定要刪除之資源的URI。
-1. 刪除資源。
+1. 包括项目文件。
+1. 创建存储库服务客户端。
+1. 指定要删除的资源的URI。
+1. 删除资源。
 
-**包含專案檔案**
+**包括项目文件**
 
-在您的開發專案中包含必要的檔案。 如果您使用Java建立使用者端應用程式，請包含必要的JAR檔案。 如果您使用Web服務，請包含Proxy檔案。
+在开发项目中包含必要的文件。 如果要使用Java创建客户端应用程序，请包含必要的JAR文件。 如果使用Web服务，请包含代理文件。
 
-**建立服務使用者端**
+**创建服务客户端**
 
-您必須先建立連線並提供認證，才能以程式設計方式讀取資源。 這是透過建立服務使用者端來完成。
+在以编程方式读取资源之前，必须建立连接并提供凭据。 这是通过创建服务客户端来实现的。
 
-**指定要刪除之資源的URI**
+**指定要删除的资源的URI**
 
-建立包含要刪除之資源URI的字串。 語法包括正斜線，如以下範例所示：「/*路徑*/*資源*「。 如果要刪除的資源是資料夾，則會遞回刪除。
+创建包含要删除的资源URI的字符串。 语法包括正斜杠，如以下示例所示：&quot;/*路径*/*资源*“。 如果要删除的资源是文件夹，则删除将递归。
 
-**刪除資源**
+**删除资源**
 
-叫用存放庫服務方法以刪除資源，指定URI。
-
-**另请参阅**
-
-[使用Java API刪除資源](aem-forms-repository.md#delete-resources-using-the-java-api-soap)
-
-[使用Web服務API刪除資源](aem-forms-repository.md#delete-resources-using-the-web-service-api)
-
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
-
-[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
-
-[存放庫服務API快速啟動](/help/forms/developing/repository-service-api-quick-starts.md#repository-service-api-quick-starts)
-
-### 使用Java API(SOAP)刪除資源 {#delete-resources-using-the-java-api-soap}
-
-使用存放庫API (Java)刪除資源：
-
-1. 包含專案檔案
-
-   在您的Java專案的類別路徑中包含使用者端JAR檔案。
-
-1. 建立服務使用者端
-
-   建立 `ResourceRepositoryClient` 物件，使用它的建構函式並傳遞 `ServiceClientFactory` 包含連線屬性的物件。
-
-1. 指定要刪除之資源的URI
-
-   指定要擷取的資源URI。 在這種情況下，由於名為testResourceToBeDeleted的資源位於名為testFolder的資料夾中，其URI為 `/testFolder/testResourceToBeDeleted`. URI會儲存為 `java.lang.String` 物件。 在此範例中，資源會先寫入存放庫，然後擷取其URI。 如需有關寫入資源的詳細資訊，請參閱 [寫入資源](aem-forms-repository.md#writing-resources).
-
-1. 刪除資源
-
-   叫用 `ResourceRepositoryClient` 物件的 `deleteResource` 方法並傳遞資源的URI作為引數。
+调用Repository服务方法以删除资源，指定URI。
 
 **另请参阅**
 
-[刪除資源](aem-forms-repository.md#deleting-resources)
+[使用Java API删除资源](aem-forms-repository.md#delete-resources-using-the-java-api-soap)
 
-[快速入門（SOAP模式）：使用Java API搜尋資源](/help/forms/developing/repository-service-api-quick-starts.md#quick-start-soap-mode-searching-for-resources-using-the-java-api)
+[使用Web服务API删除资源](aem-forms-repository.md#delete-resources-using-the-web-service-api)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
-[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### 使用Web服務API刪除資源 {#delete-resources-using-the-web-service-api}
+[存储库服务API快速启动](/help/forms/developing/repository-service-api-quick-starts.md#repository-service-api-quick-starts)
 
-使用存放庫API （Web服務）刪除資源：
+### 使用Java API(SOAP)删除资源 {#delete-resources-using-the-java-api-soap}
 
-1. 包含專案檔案
+使用存储库API (Java)删除资源：
 
-   * 使用Base64建立使用存放庫WSDL的Microsoft .NET使用者端元件。
-   * 參考Microsoft .NET使用者端元件。
+1. 包括项目文件
 
-1. 建立服務使用者端
+   在Java项目的类路径中包含客户端JAR文件。
 
-   使用Microsoft .NET使用者端元件，建立 `RepositoryServiceService` 物件，透過叫用其預設建構函式。 設定其 `Credentials` 屬性使用 `System.Net.NetworkCredential` 包含使用者名稱和密碼的物件。
+1. 创建服务客户端
 
-1. 指定要刪除之資源的URI
+   创建 `ResourceRepositoryClient` 对象通过使用该对象的构造函数传递 `ServiceClientFactory` 包含连接属性的对象。
 
-   指定要擷取的資源URI。 在此案例中，因為資源命名為 `testResourceToBeDeleted` 位於名為的資料夾中 `testFolder`，其URI為 `"/testFolder/testResourceToBeDeleted"`. 在此範例中，資源會先寫入存放庫，然後擷取其URI。 如需有關寫入資源的詳細資訊，請參閱 [寫入資源](aem-forms-repository.md#writing-resources).
+1. 指定要删除的资源的URI
 
-1. 刪除資源
+   指定要检索的资源的URI。 在这种情况下，由于名为testResourceToBeDeleted的资源位于名为testFolder的文件夹中，其URI为 `/testFolder/testResourceToBeDeleted`. URI存储为 `java.lang.String` 对象。 在本例中，首先将资源写入存储库，然后检索其URI。 有关编写资源的详细信息，请参见 [写入资源](aem-forms-repository.md#writing-resources).
 
-   叫用 `RepositoryServiceService` 物件的 `deleteResources` 方法並傳遞 `System.String` 陣列，包含資源的URI作為第一個引數。 通過 `null` 第二個引數。
+1. 删除资源
+
+   调用 `ResourceRepositoryClient` 对象的 `deleteResource` 方法，并将资源的URI作为参数传递。
 
 **另请参阅**
 
-[刪除資源](aem-forms-repository.md#deleting-resources)
+[删除资源](aem-forms-repository.md#deleting-resources)
 
-[使用Base64編碼叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
+[快速入门（SOAP模式）：使用Java API搜索资源](/help/forms/developing/repository-service-api-quick-starts.md#quick-start-soap-mode-searching-for-resources-using-the-java-api)
+
+[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+
+[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+
+### 使用Web服务API删除资源 {#delete-resources-using-the-web-service-api}
+
+使用存储库API（Web服务）删除资源：
+
+1. 包括项目文件
+
+   * 使用Base64创建使用存储库WSDL的Microsoft .NET客户端程序集。
+   * 引用Microsoft .NET客户端程序集。
+
+1. 创建服务客户端
+
+   使用Microsoft .NET客户端程序集，创建 `RepositoryServiceService` 对象。 设置其 `Credentials` 属性使用 `System.Net.NetworkCredential` 包含用户名和密码的对象。
+
+1. 指定要删除的资源的URI
+
+   指定要检索的资源的URI。 在本例中，因为资源名为 `testResourceToBeDeleted` 位于名为的文件夹中 `testFolder`，其URI为 `"/testFolder/testResourceToBeDeleted"`. 在本例中，首先将资源写入存储库，然后检索其URI。 有关编写资源的详细信息，请参见 [写入资源](aem-forms-repository.md#writing-resources).
+
+1. 删除资源
+
+   调用 `RepositoryServiceService` 对象的 `deleteResources` 方法和传递 `System.String` 数组，其中包含资源的URI作为第一个参数。 通过 `null` 第二个参数。
+
+**另请参阅**
+
+[删除资源](aem-forms-repository.md#deleting-resources)
+
+[使用Base64编码调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)

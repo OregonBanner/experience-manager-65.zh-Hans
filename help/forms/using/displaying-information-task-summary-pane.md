@@ -1,7 +1,7 @@
 ---
-title: 在工作摘要窗格中顯示資訊
+title: 在任务摘要窗格中显示信息
 seo-title: Displaying information in the Task Summary pane
-description: 在AEM Forms工作區中，「任務摘要」窗格可設定為摘要任務或顯示任何其他網頁。
+description: 在AEM Forms工作区中，可以将“任务摘要”窗格配置为摘要任务或显示任何其他网页。
 seo-description: In AEM Forms workspace, a Task Summary pane can be configured to summarize the task or display any other web page.
 uuid: 2fcc3d9f-0ec2-4250-8dc1-9746fd72ea60
 contentOwner: robhagat
@@ -17,24 +17,24 @@ ht-degree: 0%
 
 ---
 
-# 在工作摘要窗格中顯示資訊 {#displaying-information-in-the-task-summary-pane}
+# 在任务摘要窗格中显示信息 {#displaying-information-in-the-task-summary-pane}
 
-當您在AEM Forms工作區中開啟任務時，「任務摘要」窗格會顯示任務的摘要。 這項工作的額外和相關資訊為AEM Forms工作區的一般使用者增加了更多價值。
+在AEM Forms工作区中打开任务时，“任务摘要”窗格会显示任务的摘要。 这些与任务相关的附加信息为AEM Forms工作区的最终用户增添了更多价值。
 
-AEM Forms工作區可讓您在「工作摘要」窗格中顯示您選擇的網頁。 您可以使用Workbench建立處理以顯示「工作摘要」窗格。
+AEM Forms工作区允许您在“任务摘要”窗格中显示您选择的网页。 可以使用Workbench创建进程以显示“任务摘要”窗格。
 
-1. 在Workbench中建立「指定作業」處理。 如需「指派工作」作業的詳細資訊，請參閱以下連結中的服務參考主題： [Workbench說明](https://help.adobe.com/en_US/AEMForms/6.1/WorkbenchHelp/).
+1. 在Workbench中创建分配任务流程。 有关“分配任务”操作的更多详细信息，请参阅中的服务参考主题。 [Workbench帮助](https://help.adobe.com/en_US/AEMForms/6.1/WorkbenchHelp/).
 
    >[!NOTE]
    >
-   >如果TaskSummary URL存在，預設會開啟Task Summary檢視，而不是Form檢視。 在這種情況下，即使使用者在指派任務中啟用了「以最大化模式開啟表單」選項，表單也不會以最大化模式開啟。
+   >如果存在TaskSummary URL，则默认情况下会打开Task Summary视图，而不是Form视图。 在这种情况下，即使用户在“分配任务”中启用了“以最大化模式打开表单”选项，该表单也不会以最大化模式打开。
 
-1. 設定「任務摘要URL」欄位。 您可以指定常值、範本、變數或XPath運算式。
-1. 以下是在「任務摘要」頁面上顯示資訊的範例。
+1. 配置任务摘要URL字段。 您可以指定文本值、模板、变量或XPath表达式。
+1. 以下是在“任务摘要”页面上显示信息的示例。
 
-   * 登入CRXDE Lite環境： `https://'[server]:[port]'/lc/crx/de`.
-   * `Create a node`**範例摘要** ` under `/content` with type `nt：unstructured`. In the properties of this node, add `sling：resourceType` of type String and value `範例摘要`. In the Access Control List of this node, add an entry for `PERM_WORKSPACE_USER` allowing `jcr：read` privileges.`
-   * `Create a folder`**範例摘要** 在 `/apps`. 在存取控制清單中 `/apps/SampleSummary`，新增專案 `PERM_WORKSPACE_USER` 允許 `jcr:readprivileges`.
+   * 登录到CRXDE Lite环境： `https://'[server]:[port]'/lc/crx/de`.
+   * `Create a node`**示例摘要** ` under `/content` with type `nt：unstructured`. In the properties of this node, add `sling：resourceType` of type String and value `示例摘要`. In the Access Control List of this node, add an entry for `PERM_WORKSPACE_USER` allowing `jcr：read` privileges.`
+   * `Create a folder`**示例摘要** 下 `/apps`. 在“访问控制”列表中 `/apps/SampleSummary`，添加条目 `PERM_WORKSPACE_USER` 允许 `jcr:readprivileges`.
    * `Create a file `html.esp` at `/apps/SampleSummary`. For example, add the following lines in `html.esp`.`
 
    ```html
@@ -50,5 +50,5 @@ AEM Forms工作區可讓您在「工作摘要」窗格中顯示您選擇的網�
    </html>
    ```
 
-   * 將任務摘要URL的值設為 `/lc/content/SampleSummary.html` 在指派工作步驟中。
-   * 在AEM Forms工作區中開啟與此指派任務步驟相關聯的任務時， `html.esp` 於 `/apps/SampleSummary` 在任務摘要窗格中呈現。
+   * 将任务摘要URL的值设置为 `/lc/content/SampleSummary.html` 在分配任务步骤中。
+   * 在AEM Forms工作区中打开与此分配任务步骤关联的任务时， `html.esp` 在 `/apps/SampleSummary` 在任务摘要窗格中呈现。

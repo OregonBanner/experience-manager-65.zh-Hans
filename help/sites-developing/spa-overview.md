@@ -26,7 +26,7 @@ SPA 编辑器提供了一个全面的解决方案来支持 AEM 中的 SPA。此�
 
 >[!NOTE]
 >
->SPA編輯器是建議解決方案，適用於需要SPA架構使用者端轉譯的專案(例如React或Angular)。
+>对于需要基于SPA框架的客户端渲染(例如React或Angular)的项目，建议使用SPA编辑器。
 
 ## 简介 {#introduction}
 
@@ -39,7 +39,7 @@ AEM 中的 SPA 支持引入了一个薄的 JS 层，该层在页面编辑器中�
 有关 AEM 中的 SPA 的更多详细信息，请参阅以下文档：
 
 * [SPA Blueprint](/help/sites-developing/spa-blueprint.md)，了解 SPA 的技术要求
-* [AEM中的SPA快速入門](/help/sites-developing/spa-getting-started-react.md) 以快速瀏覽簡單的SPA
+* [AEM中的SPA快速入门](/help/sites-developing/spa-getting-started-react.md) 快速浏览简单的SPA
 
 ## 设计 {#design}
 
@@ -159,7 +159,7 @@ SPA 的页面组件不通过 JSP 或 HTL 文件提供其子组件的 HTML 元素
 
 ## 要求和限制 {#requirements-limitations}
 
-要使作者能够使用页面编辑器编辑 SPA 的内容，必须实施您的 SPA 应用程序以便与 AEM SPA Editor SDK 进行交互。請參閱 [AEM中的SPA快速入門](/help/sites-developing/spa-getting-started-react.md) 最少的檔案，讓您知道如何執行自己的工作。
+要使作者能够使用页面编辑器编辑 SPA 的内容，必须实施您的 SPA 应用程序以便与 AEM SPA Editor SDK 进行交互。请查看 [AEM中的SPA快速入门](/help/sites-developing/spa-getting-started-react.md) 记录运行所需了解的最少信息。
 
 ### 支持的框架 {#supported-frameworks}
 
@@ -176,22 +176,22 @@ SPA 编辑器 SDK 支持以下最低版本：
 
 ### 使用多个选择器 {#multiple-selectors}
 
-可以定义其他自定义选择器并将其用作针对 AEM SPA SDK 开发的 SPA 的一部分。然而，這項支援需要 `model` 選擇器是第一個選擇器，擴充功能是 `.json` 作為 [JSON匯出工具的要求。](json-exporter-components.md#multiple-selectors)
+可以定义其他自定义选择器并将其用作针对 AEM SPA SDK 开发的 SPA 的一部分。但是，此支持要求 `model` 选择器是第一个选择器，扩展是 `.json` 作为 [JSON导出程序要求。](json-exporter-components.md#multiple-selectors)
 
 ### 文本编辑器要求 {#text-editor-requirements}
 
 如果您想使用在 SPA 中创建的文本组件的就地编辑器，则需要进行额外配置。
 
-1. 在包含文本 HTML 的容器包装器元素上设置属性（可以是任意属性）。若是WKND日誌範例內容，則是 `<div>` 元素和已使用的選取器為 `data-rte-editelement`.
-1. 設定設定 `editElementQuery` 在對應AEM文字元件的 `cq:InplaceEditingConfig` 會指向該選取器，例如 `data-rte-editelement`. 这可让编辑器知道哪个 HTML 元素包装了 HTML 文本。
+1. 在包含文本 HTML 的容器包装器元素上设置属性（可以是任意属性）。对于WKND日志示例内容，它是 `<div>` 元素和已使用的选择器为 `data-rte-editelement`.
+1. 设置配置 `editElementQuery` 在对应AEM文本组件的 `cq:InplaceEditingConfig` 指向该选择器，例如 `data-rte-editelement`. 这可让编辑器知道哪个 HTML 元素包装了 HTML 文本。
 
-如需如何執行此作業的範例，請參閱 [WKND日誌範例內容。](https://github.com/adobe/aem-sample-we-retail-journal/pull/16/files)
+有关如何执行此操作的示例，请参见 [WKND日志示例内容。](https://github.com/adobe/aem-sample-we-retail-journal/pull/16/files)
 
 有关富文本编辑器的 `editElementQuery` 属性和配置的更多信息，请参阅[配置富文本编辑器。](/help/sites-administering/rich-text-editor.md)
 
 ### 限制 {#limitations}
 
-AEM SPA Editor SDK隨AEM 6.4 Service Pack 2推出。 Adobe完全支援此功能，且功能會持續增強和擴充。 SPA Editor 尚不支持以下 AEM 功能：
+AEM SPA编辑器SDK随AEM 6.4 Service Pack 2引入。 它完全受Adobe支持，并且将继续得到加强和扩展。 SPA Editor 尚不支持以下 AEM 功能：
 
 * 目标架构
 * ContextHub

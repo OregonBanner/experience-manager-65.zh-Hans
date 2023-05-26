@@ -1,7 +1,7 @@
 ---
-title: 教學課程：建立範本
+title: “教程：创建模板”
 seo-title: Create Print and Web templates for Interactive Communication
-description: 建立互動式通訊的列印和Web範本
+description: 为交互式通信创建打印模板和Web模板
 seo-description: Create Print and Web templates for Interactive Communication
 uuid: 22256a61-bcf6-4b02-9ee6-0ffb1cc20a6e
 contentOwner: anujkapo
@@ -17,262 +17,262 @@ ht-degree: 0%
 
 ---
 
-# 教學課程：建立範本{#tutorial-create-templates}
+# 教程：创建模板{#tutorial-create-templates}
 
 ![07-apply-rules-to-adaptive-form_small](assets/07-apply-rules-to-adaptive-form_small.png)
 
-本教學課程是 [建立您的第一個互動式通訊](/help/forms/using/create-your-first-interactive-communication.md) 數列。 建議您依照時間順序觀看本系列，以瞭解、執行和示範完整的教學課程使用案例。
+本教程是 [创建您的第一个交互式通信](/help/forms/using/create-your-first-interactive-communication.md) 系列。 建议按时间顺序关注该系列，以了解、执行和演示完整的教程用例。
 
-若要建立互動式通訊，您必須在AEM伺服器上擁有可供列印和Web Channels使用的範本。
+要创建交互式通信，必须在AEM服务器上为打印和Web渠道提供模板。
 
-列印頻道的範本是在AdobeForms Designer中建立並上傳至AEM伺服器。 建立互動式通訊時，即可使用這些範本。
+打印渠道的模板是在AdobeForms Designer中创建并上传到AEM服务器。 然后，在创建交互式通信时可以使用这些模板。
 
-Web channel的範本是在AEM中建立。 範本作者和管理員可以建立、編輯和啟用網頁範本。 建立並啟用後，這些範本便可在建立互動式通訊時使用。
+Web渠道的模板是在AEM中创建的。 模板作者和管理员可以创建、编辑和启用Web模板。 创建并启用后，这些模板便可在创建交互式通信时使用。
 
-本教學課程將逐步帶您瞭解為列印和Web管道建立範本的步驟，以便在建立互動式通訊時使用這些範本。 在本教學課程結束時，您將能夠：
+本教程将指导您完成为打印和Web渠道创建模板的步骤，以便在创建交互式通信时使用这些模板。 在本教程结束时，您将能够：
 
-* 使用AdobeForms Designer為列印頻道建立XDP範本
-* 將XDP範本上傳至AEM Forms伺服器
-* 建立和啟用網頁頻道的範本
+* 使用AdobeForms Designer为打印渠道创建XDP模板
+* 将XDP模板上传到AEM Forms服务器
+* 为Web渠道创建和启用模板
 
-## 建立列印管道的範本 {#create-template-for-print-channel}
+## 为打印渠道创建模板 {#create-template-for-print-channel}
 
-使用下列工作建立和管理互動式通訊列印頻道的範本：
+使用以下任务为交互式通信的打印渠道创建和管理模板：
 
-* [使用Forms Designer建立XDP範本](../../forms/using/create-templates-print-web.md#create-xdp-template-using-forms-designer)
-* [將XDP範本上傳至AEM Forms伺服器](../../forms/using/create-templates-print-web.md#upload-xdp-template-to-the-aem-forms-server)
-* [為佈局片段建立XDP範本](../../forms/using/create-templates-print-web.md#create-xdp-template-for-layout-fragments)
+* [使用Forms Designer创建XDP模板](../../forms/using/create-templates-print-web.md#create-xdp-template-using-forms-designer)
+* [将XDP模板上传到AEM Forms服务器](../../forms/using/create-templates-print-web.md#upload-xdp-template-to-the-aem-forms-server)
+* [为布局片段创建XDP模板](../../forms/using/create-templates-print-web.md#create-xdp-template-for-layout-fragments)
 
-### 使用Forms Designer建立XDP範本 {#create-xdp-template-using-forms-designer}
+### 使用Forms Designer创建XDP模板 {#create-xdp-template-using-forms-designer}
 
-根據 [使用案例](/help/forms/using/create-your-first-interactive-communication.md) 和 [解剖學](/help/forms/using/planning-interactive-communications.md)，在XDP範本中建立下列子表單：
+基于 [用例](/help/forms/using/create-your-first-interactive-communication.md) 和 [解剖学](/help/forms/using/planning-interactive-communications.md)，在XDP模板中创建以下子表单：
 
-* 帳單詳細資訊：包含檔案片段
-* 客戶詳細資料：包含檔案片段
-* 帳單摘要：包含檔案片段
-* 摘要：包含檔案片段（費用子表單）和圖表（圖表子表單）
-* 分項呼叫：包含表格（佈局片段）
-* 立即付款：包含影像
-* 增值服務：包含影像
+* 帐单详细信息：包括文档片段
+* 客户详细信息：包含文档片段
+* 账单摘要：包含文档片段
+* 摘要：包括文档片段（费用子表单）和图表（图表子表单）
+* 分项调用：包含表（布局片段）
+* 立即付款：包含图像
+* 增值服务：包含图像
 
 ![create_print_template](assets/create_print_template.gif)
 
-將XDP檔案上傳至Forms伺服器後，這些子表單會在列印範本中顯示為目標區域。 建立互動式通訊時，所有實體（例如檔案片段、圖表、版面片段和影像）都會新增至目標區域。
+将XDP文件上传到Forms服务器后，这些子表单在打印模板中显示为目标区域。 创建交互式通信时，文档片段、图表、布局片段和图像等所有实体都将添加到目标区域。
 
-執行以下步驟，為列印管道建立XDP範本：
+执行以下步骤为打印渠道创建XDP模板：
 
-1. 開啟Forms Designer，選取 **檔案** > **新增** > **使用空白表單，** 點選 **下一個**，然後點選 **完成** 以開啟表單以建立範本。
+1. 打开Forms Designer，选择 **文件** > **新** > **使用空白表单，** 点按 **下一个**，然后点按 **完成** 打开表单以创建模板。
 
-   確保 **物件庫** 和 **物件** 選項是從 **視窗** 功能表。
+   确保 **对象库** 和 **对象** 从以下位置选择选项 **窗口** 菜单。
 
-1. 拖放 **子表單** 元件來自 **物件庫** 至表單。
-1. 選取子表單，以在下列位置顯示子表單的選項： **物件** 視窗中。
-1. 選取 **子表單** 標籤並選取 **已流動** 從 **內容** 下拉式清單。 拖曳子表單的左側端點以調整長度。
-1. 在 **繫結** 標籤：
+1. 拖放 **子表单** 组件来自 **对象库** 到窗体。
+1. 选择子表单，以在中显示子表单的选项 **对象** 窗口。
+1. 选择 **子表单** 选项卡并选择 **已流动** 从 **内容** 下拉列表。 拖动子表单的左端点可调整长度。
+1. 在 **绑定** 选项卡：
 
-   1. 指定 **帳單詳細資訊** 在 **名稱** 欄位。
+   1. 指定 **账单详细信息** 在 **名称** 字段。
 
-   1. 選取 **無資料繫結** 從 **資料繫結** 下拉式清單。
+   1. 选择 **无数据绑定** 从 **数据绑定** 下拉列表。
 
-   ![Designer子表單](assets/forms_designer_subform_new.png)
+   ![Designer子表单](assets/forms_designer_subform_new.png)
 
-1. 同樣地，選取根子表單，然後選取 **子表單** 標籤，然後選取 **已流動** 從 **內容** 下拉式清單。 在 **繫結** 標籤：
+1. 同样，选择根子表单，选择 **子表单** 选项卡，然后选择 **已流动** 从 **内容** 下拉列表。 在 **绑定** 选项卡：
 
-   1. 指定 **TelecaBill** 在 **名稱** 欄位。
+   1. 指定 **TelecaBill** 在 **名称** 字段。
 
-   1. 選取 **無資料繫結** 從 **資料繫結** 下拉式清單。
+   1. 选择 **无数据绑定** 从 **数据绑定** 下拉列表。
 
-   ![列印範本的子表單](assets/root_subform_print_template_new.png)
+   ![打印模板的子表单](assets/root_subform_print_template_new.png)
 
-1. 重複步驟2 - 5以建立下列子表單：
+1. 重复步骤2 - 5以创建以下子表单：
 
-   * 帳單詳細資訊
-   * Customerdetails
-   * 帳單摘要
-   * 摘要 — 選取 **子表單** 標籤並選取 **已定位** 從 **內容** 此子表單的下拉式清單。 將下列子表單插入 **摘要** 子表單。
+   * 账单详细信息
+   * 客户详细信息
+   * 账单摘要
+   * 摘要 — 选择 **子表单** 选项卡并选择 **已定位** 从 **内容** 此子表单的下拉列表。 将以下子表单插入 **摘要** 子表单。
 
-      * 費用
-      * 圖表
+      * 费用
+      * 图表
    * ItemisedCalls
-   * Paynow
+   * PayNow
    * ValueAddedServices
 
-   為了節省時間，您也可以複製並貼上現有的子表單以建立新的子表單。
+   为了节省时间，您还可以复制并粘贴现有子表单以创建新子表单。
 
-   若要移動 **圖表** 子表單在「費用」子表單的右側，選取 **圖表** 從左窗格中選取子表單 **版面** 標籤，並指定值 **錨點X** 欄位。 值必須大於 **寬度** 的欄位 **費用** 子表單。 選取 **費用** 子表單並選取 **版面** 標籤以檢視 **寬度** 欄位。
+   要移动 **图表** 子表单选择“费用”子表单右侧的 **图表** 从左窗格中选择子表单 **版面** 选项卡，并指定值 **锚点X** 字段。 该值必须大于 **宽度** 的字段 **费用** 子表单。 选择 **费用** 子表单并选择 **版面** 选项卡以查看值 **宽度** 字段。
 
-1. 拖放 **文字** 物件 **物件庫** 至表單並輸入 **撥打XXXX進行訂閱** 方塊中的文字。
-1. 在左窗格中的文字物件上按一下滑鼠右鍵，然後選取 **重新命名物件**，然後輸入文字物件的名稱作為 **訂閱**.
+1. 拖放 **文本** 对象来自 **对象库** 至表单并输入 **拨打XXXX进行订购** 文本。
+1. 右键单击左窗格中的文本对象，然后选择 **重命名对象**，并输入文本对象的名称作为 **订阅**.
 
-   ![XDP範本](assets/print_xdp_template_subform_new.png)
+   ![XDP模板](assets/print_xdp_template_subform_new.png)
 
-1. 選取 **檔案** > **另存為** 若要將檔案儲存在本機檔案系統上：
+1. 选择 **文件** > **另存为** 将文件保存在本地文件系统中：
 
-   1. 導覽至儲存檔案的位置，並將名稱指定為 **create_first_ic_print_template**.
-   1. 選取 **.xdp** 從 **另存為型別** 下拉式清單。
+   1. 导航到保存文件的位置，并将名称指定为 **create_first_ic_print_template**.
+   1. 选择 **.xdp** 从 **另存为类型** 下拉列表。
 
-   1. 點選 **儲存**.
+   1. 点按 **保存**.
 
-### 將XDP範本上傳至AEM Forms伺服器 {#upload-xdp-template-to-the-aem-forms-server}
+### 将XDP模板上传到AEM Forms服务器 {#upload-xdp-template-to-the-aem-forms-server}
 
-使用Forms Designer建立XDP範本後，您必須將其上傳到AEM Forms伺服器，以便在建立互動式通訊時使用該範本。
+使用Forms Designer创建XDP模板后，必须将其上传到AEM Forms服务器，以便该模板在创建交互式通信时可用。
 
-1. 選取 **[!UICONTROL Forms]** > **[!UICONTROL Forms與檔案]**.
-1. 點選 **建立** > **檔案上傳**.
+1. 选择 **[!UICONTROL Forms]** > **[!UICONTROL Forms和文档]**.
+1. 点按 **创建** > **文件上传**.
 
-   瀏覽並選取 **create_first_ic_print_template** 範本(XDP)並點選 **開啟** 將XDP範本匯入AEM Forms伺服器。
+   导航并选择 **create_first_ic_print_template** 模板(XDP)并点按 **打开** 以将XDP模板导入AEM Forms服务器。
 
-### 為佈局片段建立XDP範本 {#create-xdp-template-for-layout-fragments}
+### 为布局片段创建XDP模板 {#create-xdp-template-for-layout-fragments}
 
-若要為互動式通訊的列印頻道建立佈局片段，請使用Forms Designer建立XDP並將其上傳到AEM Forms伺服器。
+要为交互式通信的打印渠道创建布局片段，请使用Forms Designer创建一个XDP并将其上传到AEM Forms服务器。
 
-1. 開啟Forms Designer，選取 **檔案** > **新增** > **使用空白表單，** 點選 **下一個**，然後點選 **完成** 以開啟表單以建立範本。
+1. 打开Forms Designer，选择 **文件** > **新** > **使用空白表单，** 点按 **下一个**，然后点按 **完成** 打开表单以创建模板。
 
-   確保 **物件庫** 和 **物件** 選項是從 **視窗** 功能表。
+   确保 **对象库** 和 **对象** 从以下位置选择选项 **窗口** 菜单。
 
-1. 拖放 **表格** 元件來自 **物件庫** 至表單。
-1. 在「插入表格」對話方塊中：
+1. 拖放 **表** 组件来自 **对象库** 到窗体。
+1. 在“插入表”对话框中：
 
-   1. 指定欄數為 **5**.
-   1. 指定內文列數為 **1**.
-   1. 選取 **在表格中包含標題列** 核取方塊。
-   1. 標籤 **確定**.
+   1. 指定列数为 **5**.
+   1. 将正文行数指定为 **1**.
+   1. 选择 **在表中包含标题行** 复选框。
+   1. 选项卡 **确定**.
 
-1. 點選 **+** 在左窗格旁邊 **表格** 1並按一下右鍵 **儲存格1** 並選取 **重新命名物件** 至 **日期**.
+1. 点按 **+** 在左窗格中的 **表** 1并右键单击 **单元格1** 并选择 **重命名对象** 到 **日期**.
 
-   同樣地，重新命名 **儲存格2**， **儲存格3**， **儲存格4**、和 **儲存格5** 至 **時間**， **數字**， **持續時間**、和 **費用** （分別）。
+   同样，重命名 **单元格2**， **单元格3**， **单元格4**、和 **单元格5** 到 **时间**， **数字**， **持续时间**、和 **费用** 的量度。
 
-1. 按一下「 」中的「標頭」文字欄位 **設計工具檢視** 並將它們重新命名為 **時間**， **數字**， **持續時間**、和 **費用**.
+1. 单击 **设计器视图** 并将其重命名为 **时间**， **数字**， **持续时间**、和 **费用**.
 
-   ![佈局片段](assets/layout_fragment_print_new.png)
+   ![布局片段](assets/layout_fragment_print_new.png)
 
-1. 選取 **第1列** 從左窗格中選取 **物件** > **繫結** > **對每個資料專案重複列**.
+1. 选择 **第1行** 从左窗格中选择 **对象** > **绑定** > **对每个数据项重复一行**.
 
-   ![重複佈局片段的屬性](assets/layout_fragment_print_repeat_new.png)
+   ![重复布局片段的属性](assets/layout_fragment_print_repeat_new.png)
 
-1. 拖放 **文字欄位** 元件來自 **物件庫** 至 **設計工具檢視**.
+1. 拖放 **文本字段** 组件来自 **对象库** 到 **设计器视图**.
 
-   ![佈局片段的文字欄位](assets/layout_fragment_print_text_field_new.png)
+   ![布局片段的文本字段](assets/layout_fragment_print_text_field_new.png)
 
-   同樣地，拖放 **文字欄位** 元件至 **時間**， **數字**， **持續時間**、和 **費用** 列。
+   同样，拖放 **文本字段** 组件到 **时间**， **数字**， **持续时间**、和 **费用** 行。
 
-1. 選取 **檔案** > **另存為** 若要將檔案儲存在本機檔案系統上：
+1. 选择 **文件** > **另存为** 将文件保存在本地文件系统中：
 
-   1. 導覽至儲存檔案的位置，並將名稱指定為 **table_lf**.
-   1. 選取 **.xdp** 從 **另存為型別** 下拉式清單。
+   1. 导航到保存文件的位置，并将名称指定为 **table_lf**.
+   1. 选择 **.xdp** 从 **另存为类型** 下拉列表。
 
-   1. 點選 **儲存**.
-   使用Forms Designer建立版面片段的XDP範本後，您必須 [上傳](../../forms/using/create-templates-print-web.md#upload-xdp-template-to-the-aem-forms-server) 將其傳送至AEM Forms伺服器，以便建立版面片段時可以使用範本。
+   1. 点按 **保存**.
+   在使用Forms Designer为布局片段创建XDP模板后，您必须 [上传](../../forms/using/create-templates-print-web.md#upload-xdp-template-to-the-aem-forms-server) 将其添加到AEM Forms服务器，以便该模板可在创建布局片段时使用。
 
-## 建立Web channel範本 {#create-template-for-web-channel}
+## 为Web渠道创建模板 {#create-template-for-web-channel}
 
-使用下列工作建立和管理互動式通訊Web channel的範本：
+使用以下任务为交互式通信的Web渠道创建和管理模板：
 
-* [建立範本資料夾](../../forms/using/create-templates-print-web.md#create-folder-for-templates)
-* [建立範本](../../forms/using/create-templates-print-web.md#create-the-template)
-* [啟用範本](../../forms/using/create-templates-print-web.md#enable-the-template)
-* [啟用互動式通訊中的按鈕](../../forms/using/create-templates-print-web.md#enabling-buttons-in-interactive-communications)
+* [为模板创建文件夹](../../forms/using/create-templates-print-web.md#create-folder-for-templates)
+* [创建模板](../../forms/using/create-templates-print-web.md#create-the-template)
+* [启用模板](../../forms/using/create-templates-print-web.md#enable-the-template)
+* [在交互式通信中启用按钮](../../forms/using/create-templates-print-web.md#enabling-buttons-in-interactive-communications)
 
-### 建立範本資料夾 {#create-folder-for-templates}
+### 为模板创建文件夹 {#create-folder-for-templates}
 
-若要建立Web channel範本，請定義一個資料夾，您可以在其中儲存建立的範本。 在該資料夾中建立範本後，請啟用範本以允許表單使用者根據該範本建立互動式通訊的Web channel。
+要创建Web渠道模板，请定义一个文件夹，您可以在其中保存创建的模板。 在该文件夹中创建模板后，启用该模板以允许表单用户根据该模板创建交互式通信的Web渠道。
 
-執行以下步驟，為可編輯的範本建立資料夾：
+执行以下步骤为可编辑模板创建文件夹：
 
-1. 點選 **工具** ![槌子圖示](assets/hammer-icon.svg) > **設定瀏覽器**.
-   * 請參閱 [設定瀏覽器](/help/sites-administering/configurations.md) 說明檔案以取得詳細資訊。
-1. 在「設定瀏覽器」頁面中，點選 **建立**.
-1. 在 **建立設定** 對話方塊，指定 **Create_First_IC_templates** 若為資料夾的標題，請核取 **可編輯的範本**，然後點選 **建立**.
+1. 点按 **工具** ![锤子图标](assets/hammer-icon.svg) > **配置浏览器**.
+   * 请参阅 [配置浏览器](/help/sites-administering/configurations.md) 文档，以了解更多信息。
+1. 在配置浏览器页面中，点按 **创建**.
+1. 在 **创建配置** 对话框，指定 **Create_First_IC_templates** 作为文件夹的标题，请选中 **可编辑的模板**，然后点按 **创建**.
 
-   ![設定網頁範本](assets/create_first_ic_web_template_new.png)
+   ![配置Web模板](assets/create_first_ic_web_template_new.png)
 
-   此 **Create_First_IC_templates** 資料夾建立並列於 **設定瀏覽器** 頁面。
+   此 **Create_First_IC_templates** 文件夹创建并列在 **配置浏览器** 页面。
 
-### 建立範本 {#create-the-template}
+### 创建模板 {#create-the-template}
 
-根據 [使用案例](/help/forms/using/create-your-first-interactive-communication.md) 和 [解剖學](/help/forms/using/planning-interactive-communications.md)中，在Web範本中建立下列面板：
+基于 [用例](/help/forms/using/create-your-first-interactive-communication.md) 和 [解剖学](/help/forms/using/planning-interactive-communications.md)，在Web模板中创建以下面板：
 
-* 帳單詳細資訊：包含檔案片段
-* 客戶詳細資料：包含檔案片段
-* 帳單摘要：包含檔案片段
-* 費用摘要：包含檔案片段和圖表（兩欄式配置）
-* 分項呼叫：包含表格
-* 立即付款：包含 **立即付款** 按鈕和影像
-* 增值服務：包含影像和 **訂閱** 按鈕。
+* 帐单详细信息：包括文档片段
+* 客户详细信息：包含文档片段
+* 账单摘要：包含文档片段
+* 费用摘要：包括文档片段和图表（两列式布局）
+* 分项调用：包含一个表
+* 立即支付：包括 **立即付款** 按钮和图像
+* 增值服务：包括图像和 **订阅** 按钮。
 
 ![create_web_template](assets/create_web_template.gif)
 
-建立互動式通訊時，會新增所有實體，例如檔案片段、圖表、表格、影像和按鈕。
+创建交互式通信时，会添加文档片段、图表、表格、图像和按钮等所有实体。
 
-執行以下步驟，在中建立Web通道的範本 **Create_First_IC_templates** 資料夾：
+执行以下步骤，在中为Web渠道创建模板 **Create_First_IC_templates** 文件夹：
 
-1. 選取「 」，導覽至適當的範本資料夾 **工具** > **範本** > **Create_First_IC_templates** 資料夾。
-1. 點選 **建立**.
-1. 於 **挑選範本型別** 設定精靈，選取 **互動式通訊 — Web Channel** 並點選 **下一個**.
-1. 於 **範本詳細資訊** 設定精靈，指定 **Create_First_IC_Web_Template** 作為範本標題。 指定選擇性說明並點選 **建立**.
+1. 通过选择导航到相应的模板文件夹 **工具** > **模板** > **Create_First_IC_templates** 文件夹。
+1. 点按 **创建**.
+1. 在 **选择模板类型** 配置向导，选择 **交互式通信 — Web渠道** 并点按 **下一个**.
+1. 在 **模板详细信息** 配置向导，指定 **Create_First_IC_Web_Template** 作为模板标题。 指定可选描述并点按 **创建**.
 
-   確認訊息，指明 **Create_First_IC_Web_Template** 隨即顯示。
+   确认消息，确认 **Create_First_IC_Web_Template** 将显示。
 
-1. 點選 **開啟** 以在範本編輯器中開啟範本。
-1. 選取 **初始內容** 從「 」旁邊的「 」下拉式清單 **預覽** 選項。
+1. 点按 **打开** 以在模板编辑器中打开模板。
+1. 选择 **初始内容** 下拉列表中 **预览** 选项。
 
    ![模板编辑器](assets/template_editor_initial_content_new.png)
 
-1. 點選 **根面板** 然後點選 **+** 以檢視可新增至範本的元件清單。
-1. 選取 **面板** 從清單中新增面板 **根面板**.
-1. 選取 **內容** 索引標籤進行編輯。 在步驟8中新增的新面板會顯示在 **根面板** 在內容樹狀結構中。
+1. 点按 **根面板** 然后点按 **+** 以查看可添加到模板的组件列表。
+1. 选择 **面板** 从列表中添加面板 **根面板**.
+1. 选择 **内容** 选项卡。 步骤8中添加的新面板将显示在 **根面板** 在内容树中。
 
    ![内容树](assets/content_tree_root_panel_new.png)
 
-1. 選取面板並點選 ![configure_icon](assets/configure_icon.png) （設定）。
-1. 在「屬性」窗格中：
+1. 选择面板并点按 ![configure_icon](assets/configure_icon.png) （配置）。
+1. 在“属性”窗格中：
 
-   1. 指定 **帳單詳細資訊** 名稱欄位中。
-   1. 指定 **帳單詳細資訊** 標題欄位中。
-   1. 選取 **1** 從 **欄數** 下拉式清單。
+   1. 指定 **帐单详细信息** 在“名称”字段中。
+   1. 指定 **帐单详细信息** 在标题字段中。
+   1. 选择 **1** 从 **列数** 下拉列表。
 
-   1. 點選 ![](/help/forms/using/assets/done_icon.png) 以儲存屬性。
+   1. 点按 ![](/help/forms/using/assets/done_icon.png) 以保存属性。
 
-   面板名稱會更新為 **帳單詳細資訊** 在內容樹狀結構中。
+   面板的名称将更新为 **帐单详细信息** 在内容树中。
 
-1. 重複步驟7 - 11，將具有以下屬性的面板新增至範本：
+1. 重复步骤7 - 11，向模板中添加具有以下属性的面板：
 
    | 名称 | 标题 | 列数 |
    |---|---|---|
-   | customerdetails | 客戶詳細資料 | 1 |
-   | 帳單摘要 | 帳單摘要 | 1 |
-   | 彙總費用 | 費用摘要 | 2 |
-   | itemisedcalls | 逐項列出的呼叫 | 1 |
+   | customerdetails | 客户详细信息 | 1 |
+   | billsummary | 账单汇总 | 1 |
+   | 汇总费用 | 费用汇总 | 2 |
+   | itemisedcalls | 分项调用 | 1 |
    | paynow | 立即付款 | 2 |
-   | vas | 增值服務 | 1 |
+   | vas | 增值服务 | 1 |
 
-   以下影像說明將所有面板新增至範本後的內容樹狀結構：
+   下图描述了将所有面板添加到模板后的内容树：
 
-   ![所有面板的內容樹](assets/content_tree_all_panels_new.png)
+   ![所有面板的内容树](assets/content_tree_all_panels_new.png)
 
-### 啟用範本 {#enable-the-template}
+### 启用模板 {#enable-the-template}
 
-建立Web範本後，您必須將其啟用，才能在建立互動式通訊時使用範本。
+创建Web模板后，必须将其启用才能在创建交互式通信时使用模板。
 
-執行以下步驟以啟用Web範本：
+执行以下步骤以启用Web模板：
 
-1. 點選 **工具** ![槌子圖示](assets/hammer-icon.svg) > **範本**.
-1. 導覽至 **Create_First_IC_Web_Template** 範本，選取並點選 **啟用**.
-1. 標籤 **啟用** 再次確認。
+1. 点按 **工具** ![锤子图标](assets/hammer-icon.svg) > **模板**.
+1. 导航到 **Create_First_IC_Web_Template** 模板，选择它，然后点按 **启用**.
+1. 选项卡 **启用** 再次确认。
 
-   範本已啟用，其狀態會顯示為「已啟用」。 建立Web通道的互動式通訊時，您可以使用此範本。
+   模板已启用，其状态显示为“已启用”。 在为Web渠道创建交互式通信时，可以使用此模板。
 
-### 啟用互動式通訊中的按鈕 {#enabling-buttons-in-interactive-communications}
+### 在交互式通信中启用按钮 {#enabling-buttons-in-interactive-communications}
 
-根據使用案例，您必須包含 **立即付款** 和 **訂閱** 互動式通訊中的按鈕（最適化表單元件）。 若要在互動式通訊中啟用這些按鈕，請執行下列步驟：
+根据用例，您必须包含 **立即付款** 和 **订阅** 交互式通信中的按钮（自适应表单组件）。 要在交互式通信中启用这些按钮，请执行以下步骤：
 
-1. 選取 **結構** 從「 」旁邊的「 」下拉式清單 **預覽** 選項。
-1. 選取 **檔案容器** 使用內容樹並點選根面板 **原則** 以選取可在互動式通訊中使用的元件。
+1. 选择 **结构** 下拉列表中 **预览** 选项。
+1. 选择 **文档容器** 使用内容树并点按根面板 **策略** 以选择允许在交互式通信中使用的组件。
 
-   ![設定原則](assets/structure_configure_policy_new.png)
+   ![配置策略](assets/structure_configure_policy_new.png)
 
-1. 在 **允許的元件** 索引標籤/ **屬性** 區段，選取 **按鈕** 從 **最適化表單** 元件。
+1. 在 **允许的组件** 选项卡/ **属性** 部分，选择 **按钮** 从 **自适应表单** 组件。
 
-   ![允許的元件](assets/allowed_components_af_new.png)
+   ![允许的组件](assets/allowed_components_af_new.png)
 
-1. 點選 ![done_icon](assets/done_icon.png) 以儲存屬性。
+1. 点按 ![done_icon](assets/done_icon.png) 以保存属性。

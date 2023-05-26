@@ -1,6 +1,6 @@
 ---
-title: 搭配使用者端裝置畫素比使用智慧型影像
-description: 瞭解如何透過Dynamic Media在Adobe Experience Manager as a Cloud Service中將使用者端裝置畫素比與智慧型影像搭配使用。
+title: 使用具有客户端设备像素比的智能成像
+description: 了解如何在带Dynamic Media的Adobe Experience Manager as a Cloud Service中将客户端设备像素比与智能成像结合使用。
 role: Admin,User
 exl-id: e38f522a-242a-4ea9-a866-d8d129950831
 source-git-commit: c8682118f15132063073df5cdc2b576b6e62a0c8
@@ -10,27 +10,27 @@ ht-degree: 0%
 
 ---
 
-# 關於使用使用者端裝置畫素比(DPR)的智慧型影像 {#client-side-dpr}
+# 关于使用客户端设备像素比(DPR)进行智能成像 {#client-side-dpr}
 
-目前的智慧型影像解決方案是使用使用者代理字串來判斷所使用的裝置型別（桌上型電腦、平板電腦、行動裝置等）。
+当前的智能成像解决方案使用用户代理字符串来确定正在使用的设备类型（台式机、平板电脑、移动设备等）。
 
-裝置偵測功能（以使用者代理字串為基礎的DPR）通常不準確，尤其是對Apple裝置而言。 此外，每當新裝置啟動時，都必須驗證該裝置。
+设备检测功能（基于用户代理字符串的DPR）通常不准确，特别是对于Apple设备。 此外，无论新设备何时启动，都必须对其进行验证。
 
-使用者端DPR可為您提供100%正確的值，且適用於任何裝置，不論是Apple或任何其他啟動的新裝置。
+客户端DPR可为您提供100%准确的值，并且适用于任何设备，无论是Apple还是任何其他已启动的新设备。
 
-## 使用使用者端DPR代碼
+## 使用客户端DPR代码
 
-**伺服器端轉譯的應用程式**
+**服务器端渲染的应用程序**
 
-1. 載入服務背景工作程式初始(`srvinit.js`)在HTML頁面的標頭區段中加入下列指令碼：
+1. 加载Service Worker init (`srvinit.js`)，方法是在页面HTML的标题部分中包含以下脚本：
 
    ```javascript
    <script type="text/javascript" src="srvinit.js"></script>
    ```
 
-   Adobe建議您載入此指令碼 _早於_ 任何其他指令碼，以便service worker立即開始初始化。
+   Adobe建议您加载此脚本 _早于_ 任何其他脚本，以便Service Worker立即开始初始化。
 
-1. 在HTML頁面內文區段的頂端加入下列DPR影像標籤程式碼：
+1. 将以下DPR图像标记代码包含在HTML页正文部分的顶部：
 
    ```html
    <img src="aem_dm_dpr_1x.jpg" style="width:1px;height:1px;display:none"
@@ -41,31 +41,31 @@ ht-degree: 0%
        aem_dm_dpr_5x.jpg 5x">
    ```
 
-   您必須包含此DPR影像標籤代碼 _早於_ HTML頁面中的所有靜態影像。
+   必须包含此DPR图像标记代码 _早于_ HTML页中的所有静态图像。
 
-**使用者端轉譯的應用程式**
+**客户端渲染的应用程序**
 
-1. 在HTML頁面的標頭區段中加入下列DPR指令碼：
+1. 在HTML页的标题部分中包含以下DPR脚本：
 
    ```javascript
    <script type="text/javascript" src="srvinit.js"></script>
    <script type="text/javascript" src="dprImageInjection.js"></script>
    ```
 
-   您可以將兩個DPR指令碼合併為一個，以避免多個網路請求。
+   您可以将两个DPR脚本合并到一个脚本中，以避免多个网络请求。
 
-   Adobe建議您載入這些指令碼 _早於_ HTML頁面中的任何其他指令碼。
-Adobe也建議您將應用程式Bootstrap在diffHTML標籤下，而不是在body元素下。 原因在於 `dprImageInjection.js` 動態插入HTML頁面內文區段頂端的影像標籤。
+   Adobe建议您加载这些脚本 _早于_ “HTML”页中的任何其他脚本。
+Adobe还建议您将应用程序Bootstrap在diffHTML标记下，而不是在正文元素下。 原因在于 `dprImageInjection.js` 动态注入“HTML”页面中“正文”部分顶部的图像标记。
 
-## JavaScript檔案下載 {#client-side-dpr-script}
+## JavaScript文件下载 {#client-side-dpr-script}
 
-下載中的下列JavaScript檔案僅供範例參考之用。 如果您打算在HTML頁面中使用這些檔案，請務必編輯每個檔案的程式碼，以符合您自己的需求。
+下载中的以下JavaScript文件仅作为示例引用提供给您。 如果您打算在HTML页中使用这些文件，请务必编辑每个文件的代码以满足自己的要求。
 
 * `dprImageInjection.js`
 * `srvinit.js`
 * `srvwrk.js`
 
-[JavaScript檔案下載](/help/assets/assets-dm/aem-dynamicmedia-smartimaging-dpr.zip)
+[JavaScript文件下载](/help/assets/assets-dm/aem-dynamicmedia-smartimaging-dpr.zip)
 
 >[!MORELIKETHIS]
 >

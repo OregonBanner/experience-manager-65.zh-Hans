@@ -1,6 +1,6 @@
 ---
-title: 疑難排解AEM的安裝問題
-description: 本文涵蓋您在使用AEM時可能會遇到的一些安裝問題。
+title: AEM安装问题疑难解答
+description: 本文介绍了在使用AEM时可能会遇到的一些安装问题。
 uuid: 2ca898c3-b074-4ccd-a383-b92f226e6c14
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -15,132 +15,132 @@ ht-degree: 0%
 
 ---
 
-# 疑難排解AEM的安裝問題{#troubleshooting}
+# AEM安装问题疑难解答{#troubleshooting}
 
-本節包含可協助您進行疑難排解的記錄詳細資訊，也包含您可能在AEM中遇到的一些問題的資訊。
+此部分包含有关有助于您进行故障排除的日志的详细信息，还包含有关您在AEM中可能遇到的某些问题的信息。
 
-## 疑難排解作者效能 {#troubleshoot-author-performance}
+## 作者性能疑难解答 {#troubleshoot-author-performance}
 
-在編寫執行個體上分析緩慢的效能可能會變得複雜。 第一步是弄清楚效能下降的技術棧疊層次。
+在创作实例上分析性能缓慢可能会变得复杂。 作为第一步，需要弄清楚在技术栈栈的哪个级别上性能下降。
 
-下列決策樹提供縮小瓶頸的指引。
+以下决策树为缩小瓶颈提供了指导。
 
 ![chlimage_1-75](assets/chlimage_1-75.png)
 
-## 基本最佳化 {#basic-optimization}
+## 基本优化 {#basic-optimization}
 
 ![chlimage_1-76](assets/chlimage_1-76.png)
 
-## 設定記錄檔和稽核記錄 {#configuring-log-files-and-audit-logs}
+## 配置日志文件和审核日志 {#configuring-log-files-and-audit-logs}
 
-AEM會記錄您可能想要設定以疑難排解安裝問題的詳細記錄。 如需詳細資訊，請參閱 [使用稽核記錄和記錄檔](/help/sites-deploying/monitoring-and-maintaining.md#working-with-audit-records-and-log-files) 區段。
+AEM会记录您可能需要配置以解决安装问题的详细日志。 欲了解相关信息，请参见 [使用审计记录和日志文件](/help/sites-deploying/monitoring-and-maintaining.md#working-with-audit-records-and-log-files) 部分。
 
-## 使用詳細選項 {#using-the-verbose-option}
+## 使用Verbose选项 {#using-the-verbose-option}
 
-啟動AEM WCM時，您可以將 — v (verbose)選項新增至命令列，如下所示：java -jar cq-wcm-quickstart-&lt;version>.jar -v.
+启动AEM WCM时，可以将 — v (verbose)选项添加到命令行中，如下所述：java -jar cq-wcm-quickstart-&lt;version>.jar -v.
 
-詳細資訊選項會在主控台上顯示一些「快速入門」記錄輸出，以便用於疑難排解。
+详细选项在控制台上显示一些快速入门日志输出，因此可用于故障排除。
 
-## 常見安裝問題 {#common-installation-issues}
+## 常见安装问题 {#common-installation-issues}
 
-下節將說明一些安裝問題及其解決方案。
+以下部分介绍了一些安装问题及其解决方案。
 
-### 連按兩下「快速入門jar」沒有任何效果，或使用其他程式（例如archive manager）開啟jar檔案 {#double-clicking-the-quickstart-jar-does-not-have-any-effect-or-opens-the-jar-file-with-another-program-for-example-archive-manager}
+### 双击“快速入门”jar不起作用，或使用其他程序（例如，存档管理器）打开jar文件 {#double-clicking-the-quickstart-jar-does-not-have-any-effect-or-opens-the-jar-file-with-another-program-for-example-archive-manager}
 
-此問題通常表示作業系統的案頭環境設定為開啟副檔名為.jar的檔案的方式有問題。 這也可能表示您尚未安裝Java™，或您使用不支援的Java™版本。
+此问题通常表示操作系统的桌面环境配置为打开扩展名为.jar的文件时出现问题。 它还可能表示您未安装Java™，或者您使用的是不受支持的Java™版本。
 
-由於jar檔案使用普遍存在的ZIP格式，因此某些封存程式可能會自動設定案頭以開啟jar檔案作為封存檔案。
+由于jar文件使用普遍存在的ZIP格式，因此某些存档程序可能会自动将桌面配置为打开jar文件作为存档文件。
 
-若要進行疑難排解，請執行下列動作：
+要进行故障排除，请执行以下操作：
 
-* 再次確認您至少已安裝Java™ 1.6版。
-* 在AEM WCM快速入門上嘗試快顯選單（通常是按一下滑鼠右鍵），然後選取「開啟方式」....
-* 檢查是否列出Java™或Sun Java™，並嘗試用它執行AEM WCM。 如果您已安裝多個Java™版本，請選取支援的版本。
+* 仔细检查是否至少安装了Java™ 1.6版。
+* 在AEM WCM快速入门上尝试上下文菜单（通常单击鼠标右键），然后选择“打开方式”....
+* 检查是否列出Java™或Sun Java™，并尝试用它运行AEM WCM。 如果安装了多个Java™版本，请选择支持的版本。
 
-   如果您成功完成此步驟，且您的作業系統提供選項，讓您一律使用選取的程式來執行.jar檔案，請選取它。 從現在開始，按兩下應該會正常運作。
+   如果成功完成此步骤，并且您的操作系统提供了一个选项，可以始终使用选定的程序来运行.jar文件，请选择它。 从现在开始，双击应该有效。
 
-* 有時候，重新安裝支援的Java™版本有助於還原正確的關聯。
-* 您一律可以使用命令列或啟動/停止指令碼執行CRX，如本檔案先前所述。
+* 有时，重新安装支持的Java™版本有助于恢复正确的关联。
+* 您始终可以使用命令行或启动/停止脚本运行CRX，如本文档前面所述。
 
-### 在CRX上執行的應用程式擲回記憶體不足錯誤 {#my-application-running-on-crx-throws-out-of-memory-errors}
+### 在CRX上运行的应用程序会引发内存不足错误 {#my-application-running-on-crx-throws-out-of-memory-errors}
 
 >[!NOTE]
 >
->另請參閱 [分析記憶體問題](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17482.html?lang=zh-Hans).
+>另请参阅 [分析内存问题](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17482.html?lang=zh-Hans).
 
 
-CRX本身的記憶體空間不足。 如果在CRX內執行的應用程式有更大的記憶體需求或要求記憶體密集型作業（例如大型交易），執行CRX的JVM執行個體必須以適當的記憶體設定啟動。
+CRX本身的内存占用量较低。 如果在CRX中运行的应用程序内存要求较大或请求内存密集型操作（例如，大型事务），则运行CRX的JVM实例必须以适当的内存设置启动。
 
-使用Java™命令選項來定義JVM的記憶體設定（例如，java -Xmx512m -jar crx&amp;ast；.jar可將heapsize設定為512 MB）。
+使用Java™命令选项定义JVM的内存设置（例如，java -Xmx512m -jar crx&amp;ast；.jar将heapsize设置为512 MB）。
 
-從命令列啟動AEM WCM時，請指定記憶體設定選項。 管理AEM WCM啟動的AEM WCM啟動/停止指令碼或自訂指令碼也可以修改以定義所需的記憶體設定。
+从命令行启动AEM WCM时指定内存设置选项。 也可以修改用于管理AEM WCM启动的AEM WCM启动/停止脚本或自定义脚本，以定义所需的内存设置。
 
-如果您已將棧大小定義為512 MB，則建議您建立棧積傾印以進一步分析記憶體問題：
+如果已将栈大小定义为512 MB，则可能需要通过创建栈转储来进一步分析内存问题：
 
-要在記憶體不足時自動建立棧積傾印，請使用以下命令：
+要在内存不足时自动创建栈转储，请使用以下命令：
 
 java -Xmx256m -XX：+HeapDumpOnOutOfMemoryError -jar &amp;ast；.jar
 
-此方法會產生棧積傾印檔案(**java_...hprof**)只要處理序的記憶體用盡。 產生棧積傾印後，該程式可能會繼續執行。 通常，一個棧積傾印檔案就足以分析問題。
+此方法会生成栈转储文件(**java_...hprof**)。 生成栈转储后，该进程可能会继续运行。 通常，一个栈转储文件就足以分析问题。
 
-### 連按兩下AEM Quickstart後，瀏覽器中不會顯示AEM歡迎畫面 {#the-aem-welcome-screen-does-not-display-in-the-browser-after-double-clicking-aem-quickstart}
+### 双击AEM快速入门后，浏览器中不显示AEM欢迎屏幕 {#the-aem-welcome-screen-does-not-display-in-the-browser-after-double-clicking-aem-quickstart}
 
-在某些情況下，即使存放庫本身成功執行，AEM WCM歡迎畫面也不會自動顯示。 此問題可能取決於作業系統設定、瀏覽器設定或類似因素。
+在某些情况下，即使存储库本身成功运行，AEM WCM欢迎屏幕也不会自动显示。 此问题可能取决于操作系统设置、浏览器配置或类似因素。
 
-常見症狀是AEM WCM Quickstart視窗會顯示「AEM WCM正在啟動，等待伺服器啟動」.... 如果該訊息顯示的時間相對較長，請使用預設的4502連線埠，或執行個體的連線埠http://localhost:4502/ ，手動將AEM WCM URL輸入瀏覽器視窗中。
+常见症状是AEM WCM快速启动窗口显示“AEM WCM正在启动，等待服务器启动”.... 如果该消息显示的时间相对较长，请使用默认的4502端口或正在运行实例的端口http://localhost:4502/ ，手动将AEM WCM URL输入浏览器窗口。
 
-此外，記錄可能會顯示瀏覽器未啟動的原因。
+此外，日志可能会揭示浏览器未启动的原因。
 
-有時AEM WCM快速入門視窗會顯示訊息「AEM WCM在http://localhost:port/上執行」，且瀏覽器不會自動啟動。 在此情況下，請按一下AEM WCM Quickstart視窗中的URL （超連結）或在瀏覽器中手動輸入URL。
+有时， AEM WCM快速入门窗口会显示消息“AEM WCM在http://localhost:port/上运行”，并且浏览器不会自动启动。 在这种情况下，请单击AEM WCM Quickstart窗口中的URL（它是一个超链接）或在浏览器中手动输入该URL。
 
-如果其他所有操作失敗，請檢視記錄檔以瞭解已發生的情況。
+如果其他所有操作失败，请检查日志以了解发生了什么情况。
 
-### 使用Java™ 11時，網站未載入或間歇性失敗 {#the-website-does-not-load-or-fails-intermittently-with-java11}
+### 使用Java™ 11时，网站未加载或间歇性失败 {#the-website-does-not-load-or-fails-intermittently-with-java11}
 
-在Java™ 11上執行AEM 6.5有一個已知問題，網站可能無法載入或間歇性失敗。
+在Java™ 11上运行的AEM 6.5存在一个已知问题，即网站可能无法加载或间歇性失败。
 
-如果發生此問題，請執行以下作業：
+如果出现此问题，请执行以下操作：
 
-1. 開啟 `sling.properties` 下的檔案 `crx-quickstart/conf/` 資料夾
-1. 找到下列行：
+1. 打开 `sling.properties` 文件位于 `crx-quickstart/conf/` 文件夹
+1. 找到以下行：
 
    `org.osgi.framework.bootdelegation=sun.,com.sun.`
 
-1. 以下列專案取代：
+1. 将其替换为以下内容：
 
    `org.osgi.framework.bootdelegation=sun.,com.sun.,jdk.internal.reflect,jdk.internal.reflect.*`
 
-1. 重新啟動執行個體。
+1. 重新启动实例。
 
-## 應用程式伺服器的安裝疑難排解 {#troubleshooting-installations-with-an-application-server}
+## 应用服务器的安装疑难解答 {#troubleshooting-installations-with-an-application-server}
 
-### 請求geometrixx-outdoor頁面時傳回「找不到頁面」 {#page-not-found-returned-when-requesting-a-geometrixx-outdoor-page}
+### 请求geometrixx-outdoor页面时返回“页面未找到” {#page-not-found-returned-when-requesting-a-geometrixx-outdoor-page}
 
-**適用於WebLogic 10.3.5和JBoss® 5.1**
+**适用于WebLogic 10.3.5和JBoss® 5.1**
 
-當geometrixx-outdoors/en頁面的請求傳回404 （找不到頁面）時，您可以重新檢查是否已在這些特定應用程式伺服器所需的sling.properties檔案中設定其他sling屬性。
+当geometrixx-outdoors/en页面的请求返回404（页面未找到）时，您可以重新检查是否已在这些特定应用程序服务器所需的sling.properties文件中设置其他sling属性。
 
-在中檢視 *部署AEM Web應用程式* 詳細資訊的步驟。
+在中查看 *部署AEM Web应用程序* 详细步骤。
 
-### 回應標頭大小可以大於4 KB {#response-header-size-can-be-greater-than-kb}
+### 响应标头大小可以大于4 KB {#response-header-size-can-be-greater-than-kb}
 
-502錯誤可能表示網頁伺服器無法處理AEM HTTP回應標頭的大小。 AEM可產生包含大小超過4 KB之Cookie的HTTP回應標頭。 請確定您的servlet容器已設定為回應標頭大小上限可超過4 KB。
+502错误可能表示Web服务器无法处理AEM HTTP响应标头的大小。 AEM可以生成包含大小大于4 KB的Cookie的HTTP响应标头。 确保已配置您的servlet容器，以便最大响应标头大小可以超过4 KB。
 
-例如，在Tomcat 7.0中， [HTTP聯結器](https://tomcat.apache.org/tomcat-7.0-doc/config/http.html) 控制標頭大小的限制。
+例如，对于Tomcat 7.0，将 [HTTP连接器](https://tomcat.apache.org/tomcat-7.0-doc/config/http.html) 控制标头大小限制。
 
-## 解除安裝Adobe Experience Manager {#uninstalling-adobe-experience-manager}
+## 卸载Adobe Experience Manager {#uninstalling-adobe-experience-manager}
 
-由於AEM會安裝在單一目錄中，因此不需要解除安裝公用程式。 雖然解除安裝AEM的方式取決於您想要達成的目標以及您使用的永久儲存體，但是解除安裝過程可能就像刪除整個安裝目錄一樣簡單。
+由于AEM安装在单个目录中，因此不需要卸载实用程序。 虽然卸载AEM的方式取决于要实现的目标以及使用哪些永久存储，但卸载过程可能只限于删除整个安装目录。
 
-如果永久存放區內嵌在安裝目錄中（例如，在預設的TarPM安裝中），刪除資料夾也會移除資料。
+如果永久存储嵌入在安装目录中（例如，在默认TarPM安装中），则删除文件夹也会删除数据。
 
 >[!NOTE]
 >
->Adobe建議您在刪除AEM之前先備份存放庫。 如果您刪除整個 &lt;cq-installation-directory>，您也會刪除存放庫。 若要在刪除前保留存放庫資料，請移動或複製 &lt;cq-installation-directory>/crx-quickstart/repository資料夾到其他位置，然後再刪除其他資料夾。
+>Adobe建议您在删除AEM之前备份存储库。 如果您删除整个 &lt;cq-installation-directory>，则还会删除存储库。 要在删除之前保留存储库数据，请移动或复制 &lt;cq-installation-directory>/crx-quickstart/repository文件夹中的其他位置，然后再删除其他文件夹。
 
-如果您安裝的AEM使用外部儲存空間（例如，資料庫伺服器），移除資料夾並不會自動移除資料，但會移除儲存空間組態，而使得還原JCR內容變得困難。
+如果您安装的AEM使用外部存储（例如，数据库服务器），则删除文件夹不会自动删除数据，但会删除存储配置，这会使恢复JCR内容变得困难。
 
-### JSP檔案不會在JBoss上編譯® {#jsp-files-are-not-compiled-on-jboss}
+### JSP文件未在JBoss上编译® {#jsp-files-are-not-compiled-on-jboss}
 
-如果您安裝或更新要Experience Manager在JBoss®上的JSP檔案，但未編譯對應的servlet，請確定JBoss® JSP編譯器已正確設定。 如需詳細資訊，請參閱
-[JBoss中的JSP編譯問題®](https://helpx.adobe.com/experience-manager/kb/jsps-dont-compile-jboss.html) 文章。
+如果安装或更新要Experience Manager在JBoss®上的JSP文件，并且相应的servlet未编译，请确保JBoss® JSP编译器配置正确。 欲了解相关信息，请参见
+[JBoss中的JSP编译问题®](https://helpx.adobe.com/experience-manager/kb/jsps-dont-compile-jboss.html) 文章。

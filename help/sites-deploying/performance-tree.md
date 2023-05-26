@@ -1,7 +1,7 @@
 ---
-title: 效能樹狀結構
+title: 性能树
 seo-title: Performance Tree
-description: 瞭解針對AEM中的效能問題進行疑難排解所需執行的步驟。
+description: 了解对AEM中的性能问题进行故障排除所需执行的步骤。
 uuid: ab0624f7-6b39-4255-89e0-54c74b54cd98
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -16,19 +16,19 @@ ht-degree: 8%
 
 ---
 
-# 效能樹狀結構{#performance-tree}
+# 性能树{#performance-tree}
 
 ## 范围 {#scope}
 
-下圖旨在提供疑難排解效能問題所需步驟的指引。 為了方便閱讀，它分為五個區段。
+下图旨在提供有关解决性能问题应采取的步骤的指导。 为了便于阅读，它分为五个部分。
 
-圖表中的每個步驟都連結到檔案資源或建議。
+图中的每个步骤都链接到文档资源或推荐。
 
-## 必要條件和假設 {#prerequisites-and-assumptions}
+## 先决条件和假设 {#prerequisites-and-assumptions}
 
-假設是在指定頁面(AEM主控台或網頁)上發現效能問題，且可一致地重現。 在開始調查之前，必須先測試或監控效能。
+假设在给定页面(AEM控制台或网页)上发现性能问题，并且可以一致地复制。 在开始调查之前，必须具备测试或监控性能的方法。
 
-分析從步驟0開始。 目標是要判斷哪個實體(Dispatcher、外部主機或AEM)應該對效能問題負責，然後判斷應該調查哪個區域（伺服器或網路）。
+分析从步骤0开始。 目标是确定哪个实体(Dispatcher、外部主机或AEM)应对性能问题负责，然后确定应调查哪个区域（服务器或网络）。
 
 ### 章节 1 {#section}
 
@@ -50,7 +50,7 @@ ht-degree: 8%
 
 ![chlimage_1-107](assets/chlimage_1-107.png)
 
-## 參考連結 {#reference-links}
+## 引用链接 {#reference-links}
 
 <table>
  <tbody>
@@ -61,93 +61,93 @@ ht-degree: 8%
   </tr>
   <tr>
    <td><strong>步骤 0</strong></td>
-   <td>分析請求流程</td>
-   <td><p>您可以在瀏覽器中使用標準HTTP請求分析來分析請求流程。 如需如何在Chrome上執行此分析的詳細資訊，請參閱：<br /> </p> <p><a href="https://developers.google.com/web/tools/chrome-devtools/profile/network-performance/resource-loading">https://developer.chrome.com/docs/devtools/</a><br /> </p> </td>
+   <td>分析请求流程</td>
+   <td><p>您可以在浏览器中使用标准HTTP请求分析来分析请求流。 有关如何在Chrome上执行此分析的更多信息，请参阅：<br /> </p> <p><a href="https://developers.google.com/web/tools/chrome-devtools/profile/network-performance/resource-loading">https://developer.chrome.com/docs/devtools/</a><br /> </p> </td>
   </tr>
   <tr>
    <td><strong>步骤 2</strong></td>
-   <td>請求是否來自外部主機？</td>
-   <td>您可以在瀏覽器中使用標準HTTP請求分析來分析請求流程。 請參閱上述連結，瞭解如何在Chrome上執行此分析。<br /> </td>
+   <td>请求是否来自外部主机？</td>
+   <td>您可以在浏览器中使用标准HTTP请求分析来分析请求流。 请参阅上面的链接，了解如何在Chrome上执行此分析。<br /> </td>
   </tr>
   <tr>
    <td><strong>步骤 3</strong></td>
-   <td>可以快取要求嗎？</td>
-   <td>如需可快取請求的詳細資訊和一般Dispatcher效能最佳化建議，請參閱 <a href="/help/sites-deploying/configuring-performance.md#optimizing-performance-when-using-the-dispatcher">Dispatcher效能最佳化</a>.</td>
+   <td>是否可以缓存请求？</td>
+   <td>有关可缓存请求和常规Dispatcher性能优化建议的更多信息，请参阅 <a href="/help/sites-deploying/configuring-performance.md#optimizing-performance-when-using-the-dispatcher">Dispatcher性能优化</a>.</td>
   </tr>
   <tr>
    <td><strong>步骤 4</strong></td>
-   <td>是否來自Dispatcher的請求？</td>
-   <td><p>若要檢視請求是否已正確快取，請檢查 <a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#debugging">Dispatcher偵錯檔案</a>.<br /> </p> </td>
+   <td>是否来自Dispatcher的请求？</td>
+   <td><p>要查看请求是否正确缓存，请检查 <a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#debugging">Dispatcher调试文档</a>.<br /> </p> </td>
   </tr>
   <tr>
    <td><strong>步骤 5</strong></td>
-   <td>Dispatcher是否嘗試透過AEM驗證每個請求？</td>
-   <td>檢查Dispatcher是否傳送 <code>HEAD</code> 傳送快取的資源之前，會向AEM要求驗證。 尋找 <code>HEAD</code> AEM中的請求 <code>access.log</code>. 如需詳細資訊，請參閱 <a href="/help/sites-deploying/configure-logging.md">記錄</a>.<br /> </td>
+   <td>Dispatcher是否尝试通过AEM验证每个请求？</td>
+   <td>检查Dispatcher是否发送 <code>HEAD</code> 请求在传递缓存的资源之前进行AEM身份验证。 查找 <code>HEAD</code> AEM中的请求 <code>access.log</code>. 有关更多信息，请参阅 <a href="/help/sites-deploying/configure-logging.md">日志记录</a>.<br /> </td>
   </tr>
   <tr>
    <td><strong>步骤 6</strong></td>
-   <td>Dispatcher的地理位置是否遠離使用者？</td>
-   <td>將Dispatcher移到離使用者更近的地方。</td>
+   <td>Dispatcher的地理位置是否远离用户？</td>
+   <td>将Dispatcher移到离用户更近的位置。</td>
   </tr>
   <tr>
    <td><strong>步骤 7</strong></td>
-   <td>Dispatcher的網路層是否正常？</td>
-   <td><br /> 調查網路層的飽和度和延遲問題。<p> </p> </td>
+   <td>Dispatcher的网络层是否正常？</td>
+   <td><br /> 研究网络层的饱和度和延迟问题。<p> </p> </td>
   </tr>
   <tr>
    <td><strong>步骤 8</strong></td>
-   <td>緩慢是否可在本機執行個體中重現？</td>
-   <td><br /> <p>使用 <a href="/help/sites-developing/tough-day.md">艱難的一天</a> 從生產執行個體複製「真實世界」條件。 如果這種情形不適合您的開發空間，請務必在不同網路內容中測試生產執行個體（或相同的測試執行個體）。<br /> </p> </td>
+   <td>慢度是否可以在本地实例中重现？</td>
+   <td><br /> <p>使用 <a href="/help/sites-developing/tough-day.md">艰难的一天</a> 从生产实例中复制“真实”条件。 如果这种情况对开发空间不切实际，请确保在不同的网络上下文中测试生产实例（或相同的暂存实例）。<br /> </p> </td>
   </tr>
   <tr>
    <td><strong>步骤 9</strong></td>
-   <td>伺服器的地理位置是否遠離使用者？</td>
-   <td>將伺服器移到離使用者更近的地方。</td>
+   <td>服务器的地理位置是否远离用户？</td>
+   <td>将服务器移到离用户更近的位置。</td>
   </tr>
   <tr>
-   <td><strong>步驟10和29</strong></td>
-   <td>調查網路層</td>
-   <td><p>調查網路層的飽和度和延遲問題。</p> <p>對於製作階層，建議延遲時間不要超過100毫秒。</p> <p>如需效能最佳化秘訣的詳細資訊，請參閱 <a href="https://helpx.adobe.com/customer-care-office-hours/aem/6x-performance-tuning-best-practices.html">此頁面</a>.</p> </td>
+   <td><strong>步骤10和29</strong></td>
+   <td>调查网络层</td>
+   <td><p>研究网络层的饱和度和延迟问题。</p> <p>对于创作层，建议延迟不超过100毫秒。</p> <p>有关性能优化提示的更多信息，请参阅 <a href="https://helpx.adobe.com/customer-care-office-hours/aem/6x-performance-tuning-best-practices.html">此页面</a>.</p> </td>
   </tr>
   <tr>
    <td><strong>步骤 11</strong></td>
-   <td>將伺服器移到更近的位置，或為每個區域新增一個伺服器</td>
+   <td>将服务器移到更近的位置，或为每个区域添加一个</td>
    <td> </td>
   </tr>
   <tr>
    <td><strong>步骤 12</strong></td>
-   <td>疑難排解AEM伺服器</td>
-   <td>如需詳細資訊，請檢視圖表中的以下子步驟。</td>
+   <td>AEM服务器疑难解答</td>
+   <td>有关更多信息，请查看图表中的以下子步骤。</td>
   </tr>
   <tr>
    <td><strong>步骤 13</strong></td>
-   <td>檢查硬體需求</td>
-   <td>請檢視以下專案的檔案： <a href="/help/managing/hardware-sizing-guidelines.md">硬體大小調整准則</a>.<br /> </td>
+   <td>检查硬件要求</td>
+   <td>查看文档： <a href="/help/managing/hardware-sizing-guidelines.md">硬件大小调整准则</a>.<br /> </td>
   </tr>
   <tr>
    <td><strong>步骤 14</strong></td>
-   <td>檢查效能問題的常見原因</td>
+   <td>检查性能问题的常见原因</td>
    <td> </td>
   </tr>
   <tr>
    <td><strong>步骤 15</strong></td>
-   <td>尋找緩慢的請求</td>
-   <td><p>您可以透過分析 <code>request.log</code> 或透過使用 <code>rlog.jar</code>.</p> <p>如需有關使用rlog.jar的詳細資訊，請參閱此頁面。</p> <p>另請參閱 <a href="/help/sites-deploying/monitoring-and-maintaining.md#using-rlog-jar-to-find-requests-with-long-duration-times">使用rlog.jar尋找具有長持續時間的請求</a>.<br /> </p> <p> </p> </td>
+   <td>查找慢速请求</td>
+   <td><p>您可以通过分析 <code>request.log</code> 或通过使用 <code>rlog.jar</code>.</p> <p>有关使用rlog.jar的详细信息，请参阅此页。</p> <p>参见 <a href="/help/sites-deploying/monitoring-and-maintaining.md#using-rlog-jar-to-find-requests-with-long-duration-times">使用rlog.jar查找持续时间较长的请求</a>.<br /> </p> <p> </p> </td>
   </tr>
   <tr>
    <td><strong>步骤 16</strong></td>
-   <td>設定檔伺服器</td>
-   <td><p>如需可搭配AEM使用的效能分析工具的相關資訊，請參閱 <a href="/help/sites-deploying/monitoring-and-maintaining.md#tools-for-monitoring-and-analyzing-performance">監控和分析效能的工具</a>.<br /> </p> </td>
+   <td>配置文件服务器</td>
+   <td><p>有关可与AEM一起使用的性能分析工具的信息，请参见 <a href="/help/sites-deploying/monitoring-and-maintaining.md#tools-for-monitoring-and-analyzing-performance">用于监控和分析性能的工具</a>.<br /> </p> </td>
   </tr>
   <tr>
    <td><strong>步骤 17</strong></td>
-   <td>尋找效能分析中的慢速方法</td>
+   <td>查找性能分析中的慢速方法</td>
    <td> </td>
   </tr>
   <tr>
    <td><strong>步骤 18</strong></td>
-   <td>設定檔的常見案例</td>
-   <td>另請參閱 <a href="/help/sites-deploying/monitoring-and-maintaining.md#analyzing-specific-scenarios">分析特定案例</a> 效能最佳化區段中的。<br /> </td>
+   <td>配置文件的常见方案</td>
+   <td>参见 <a href="/help/sites-deploying/monitoring-and-maintaining.md#analyzing-specific-scenarios">分析特定方案</a> 在“性能优化”部分中。<br /> </td>
   </tr>
   <tr>
    <td><strong>步骤 19</strong></td>
@@ -156,73 +156,73 @@ ht-degree: 8%
   </tr>
   <tr>
    <td><strong>步骤 20</strong></td>
-   <td>記憶體不足</td>
+   <td>内存不足</td>
    <td><br />
     <ol>
-     <li><a href="/help/sites-deploying/monitoring-and-maintaining.md#out-of-memory">記憶體不足</a></li>
-     <li><a href="/help/sites-deploying/troubleshooting.md">我的應用程式擲回記憶體不足錯誤</a></li>
-     <li><a href="https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17482.html?lang=zh-Hans">分析記憶體問題。</a><br /> </li>
+     <li><a href="/help/sites-deploying/monitoring-and-maintaining.md#out-of-memory">内存不足</a></li>
+     <li><a href="/help/sites-deploying/troubleshooting.md">我的应用程序抛出内存不足错误</a></li>
+     <li><a href="https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17482.html?lang=zh-Hans">分析内存问题。</a><br /> </li>
     </ol> </td>
   </tr>
   <tr>
    <td><strong>步骤 21</strong></td>
-   <td>磁碟I/O</td>
-   <td><p>請參閱 <a href="/help/sites-deploying/monitoring-and-maintaining.md#disk-i-o">磁碟I/O</a> 區段建立連結。</p> </td>
+   <td>磁盘I/O</td>
+   <td><p>请参阅 <a href="/help/sites-deploying/monitoring-and-maintaining.md#disk-i-o">磁盘I/O</a> 部分（位于监视和维护文档中）。</p> </td>
   </tr>
   <tr>
-   <td><strong>步驟22和22.1</strong></td>
-   <td>快取比率</td>
-   <td>另請參閱 <a href="/help/sites-deploying/configuring-performance.md#calculating-the-dispatcher-cache-ratio">計算Dispatcher快取比率</a>.<br /> <br /> </td>
+   <td><strong>步骤22和22.1</strong></td>
+   <td>缓存比率</td>
+   <td>参见 <a href="/help/sites-deploying/configuring-performance.md#calculating-the-dispatcher-cache-ratio">计算Dispatcher缓存比率</a>.<br /> <br /> </td>
   </tr>
   <tr>
    <td><strong>步骤 23</strong></td>
-   <td>查詢速度緩慢</td>
-   <td><a href="/help/sites-deploying/best-practices-for-queries-and-indexing.md">查詢和建立索引的最佳實務</a></td>
+   <td>查询速度慢</td>
+   <td><a href="/help/sites-deploying/best-practices-for-queries-and-indexing.md">有关查询和索引的最佳实践</a></td>
   </tr>
   <tr>
    <td><strong>步骤 24</strong></td>
-   <td>儲存庫調整</td>
+   <td>存储库调整</td>
    <td>
     <ul>
-     <li><a href="https://helpx.adobe.com/customer-care-office-hours/aem/6x-performance-tuning-best-practices.html">效能調整秘訣</a></li>
-     <li><a href="/help/sites-deploying/configuring-performance.md#configuring-for-performance">設定效能</a></li>
-     <li><a href="https://www.slideshare.net/jukka/repository-performance-tuning">儲存庫效能調整</a></li>
+     <li><a href="https://helpx.adobe.com/customer-care-office-hours/aem/6x-performance-tuning-best-practices.html">性能调整提示</a></li>
+     <li><a href="/help/sites-deploying/configuring-performance.md#configuring-for-performance">配置性能</a></li>
+     <li><a href="https://www.slideshare.net/jukka/repository-performance-tuning">存储库性能调整</a></li>
     </ul> </td>
   </tr>
   <tr>
    <td><strong>步骤 25</strong></td>
-   <td>工作流程執行中</td>
+   <td>工作流正在运行</td>
    <td>
     <ul>
-     <li><a href="/help/sites-deploying/configuring-performance.md#concurrent-workflow-processing">並行工作流程處理</a></li>
-     <li><a href="/help/sites-deploying/configuring-performance.md#configure-the-queue-for-a-specific-workflow">設定特定工作流程的佇列</a></li>
+     <li><a href="/help/sites-deploying/configuring-performance.md#concurrent-workflow-processing">并发工作流处理</a></li>
+     <li><a href="/help/sites-deploying/configuring-performance.md#configure-the-queue-for-a-specific-workflow">为特定工作流配置队列</a></li>
      <li><a href="/help/sites-administering/workflows-administering.md#regular-purging-of-workflow-instances">定期清除工作流实例</a></li>
      <li><a href="/help/sites-developing/workflows.md#transient-workflows">瞬态工作流</a><br /> </li>
     </ul> <p> </p> </td>
   </tr>
   <tr>
    <td><strong>步骤 26</strong></td>
-   <td>MSM基礎結構</td>
-   <td><p><a href="/help/sites-administering/msm-best-practices.md">多站台管理員最佳作法</a><br /> </p> </td>
+   <td>MSM基础架构</td>
+   <td><p><a href="/help/sites-administering/msm-best-practices.md">多站点管理器最佳实践</a><br /> </p> </td>
   </tr>
   <tr>
    <td><strong>步骤 27</strong></td>
-   <td>資產調整</td>
+   <td>资产调整</td>
    <td>
     <ol>
-     <li><a href="/help/sites-deploying/configuring-performance.md#cq-dam-asset-synchronization-service">Assets同步服務</a></li>
-     <li><a href="/help/sites-deploying/configuring-performance.md#multiple-dam-instances">多個DAM例項</a></li>
-     <li>效能調整提示文章 <a href="https://helpx.adobe.com/customer-care-office-hours/aem/6x-performance-tuning-best-practices.html">此處</a>.<br /> </li>
+     <li><a href="/help/sites-deploying/configuring-performance.md#cq-dam-asset-synchronization-service">资产同步服务</a></li>
+     <li><a href="/help/sites-deploying/configuring-performance.md#multiple-dam-instances">多个DAM实例</a></li>
+     <li>性能调整提示文章 <a href="https://helpx.adobe.com/customer-care-office-hours/aem/6x-performance-tuning-best-practices.html">此处</a>.<br /> </li>
     </ol> </td>
   </tr>
   <tr>
    <td><strong>步骤 28</strong></td>
-   <td>未關閉的工作階段</td>
-   <td><p> </p> <p><a href="/help/sites-administering/troubleshoot.md#checking-for-unclosed-jcr-sessions">檢查未關閉的JCR工作階段</a></p> <p> </p> </td>
+   <td>未关闭的会话</td>
+   <td><p> </p> <p><a href="/help/sites-administering/troubleshoot.md#checking-for-unclosed-jcr-sessions">检查未关闭的JCR会话</a></p> <p> </p> </td>
   </tr>
   <tr>
    <td><strong>步骤 30</strong></td>
-   <td>將Dispatcher靠近一點（針對每個「地區」新增一個？）</td>
+   <td>将Dispatcher靠近一点（为每个“区域”添加一个？）</td>
    <td> </td>
   </tr>
   <tr>
@@ -232,98 +232,98 @@ ht-degree: 8%
   </tr>
   <tr>
    <td><strong>步骤 32</strong></td>
-   <td>若要解除安裝AEM伺服器，請使用Dispatcher層級的工作階段管理</td>
-   <td><p><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#enabling-secure-sessions-sessionmanagement">啟用安全工作階段</a></p> </td>
+   <td>要卸载AEM服务器，请使用Dispatcher级别的会话管理</td>
+   <td><p><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#enabling-secure-sessions-sessionmanagement">启用安全会话</a></p> </td>
   </tr>
   <tr>
    <td><strong>步骤 33</strong></td>
-   <td>讓請求可快取</td>
+   <td>使请求可缓存</td>
    <td>
     <ol>
-     <li><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hans">一般Dispatcher設定</a></li>
-     <li><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#configuring-the-dispatcher-cache-cache">設定Dispatcher快取</a></li>
-    </ol> <p>如何改善快取比率；使請求可快取（Dispatcher最佳實務）</p> <p>此外，請考慮以下設定以最佳化您的快取設定<br /> </p>
+     <li><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hans">常规Dispatcher配置</a></li>
+     <li><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#configuring-the-dispatcher-cache-cache">配置Dispatcher缓存</a></li>
+    </ol> <p>如何提高缓存率；使请求可缓存（Dispatcher最佳实践）</p> <p>此外，请考虑以下设置以优化缓存配置<br /> </p>
     <ol>
-     <li>為非GET的HTTP要求設定無快取規則</li>
-     <li>設定查詢字串為不可快取</li>
-     <li>不要快取缺少副檔名的URL</li>
-     <li>快取驗證標頭（自Dispatcher版本4.1.10起可能提供）</li>
+     <li>为非GET的HTTP请求设置无缓存规则</li>
+     <li>将查询字符串配置为不可缓存</li>
+     <li>不缓存缺少扩展名的URL</li>
+     <li>缓存身份验证标头（自Dispatcher版本4.1.10以来可能存在）</li>
     </ol> </td>
   </tr>
   <tr>
    <td><strong>步骤 34</strong></td>
-   <td>升級Dispatcher版本</td>
-   <td><p>您可以在此位置下載最新的Dispatcher版本：</p> <p><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/release-notes.html?lang=en">關注連結</a></p> </td>
+   <td>升级Dispatcher版本</td>
+   <td><p>您可以在此位置下载最新的Dispatcher版本：</p> <p><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/release-notes.html?lang=en">关注链接</a></p> </td>
   </tr>
   <tr>
    <td><strong>步骤 35</strong></td>
    <td>配置 Dispatcher</td>
-   <td><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hans">設定Dispatcher</a><br /> </td>
+   <td><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hans">配置调度程序</a><br /> </td>
   </tr>
   <tr>
    <td><strong>步骤 36</strong></td>
-   <td>檢查快取失效</td>
+   <td>检查缓存失效</td>
    <td><br />
     <ul>
-     <li><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html?lang=en#invalidating-dispatcher-cache-from-the-authoring-environment">製作層級的快取失效；</a></li>
-     <li><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html?lang=en#invalidating-dispatcher-cache-from-a-publishing-instance">發佈層的快取失效。</a></li>
+     <li><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html?lang=en#invalidating-dispatcher-cache-from-the-authoring-environment">创作层的缓存失效；</a></li>
+     <li><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html?lang=en#invalidating-dispatcher-cache-from-a-publishing-instance">发布层的缓存失效。</a></li>
     </ul> </td>
   </tr>
   <tr>
-   <td><strong>步驟37和38</strong></td>
-   <td>延遲載入</td>
-   <td><a href="https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2016/aem-web-performance.html?lang=en">請參閱AEM Web效能的Gem研討會。</a><br /> </td>
+   <td><strong>步骤37和38</strong></td>
+   <td>延迟加载</td>
+   <td><a href="https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2016/aem-web-performance.html?lang=en">请参阅有关AEM Web性能的Gem会话。</a><br /> </td>
   </tr>
   <tr>
    <td><strong>步骤 39</strong></td>
-   <td>使用預先連線來減少連線額外負荷</td>
-   <td>請參閱上述Gem課程。 此外，W3c上的其他預先連線說明檔案：<a href="https://html.spec.whatwg.org/#linkTypes"> https://html.spec.whatwg.org/#linkTypes</a></td>
+   <td>使用预连接以减少连接开销</td>
+   <td>请参阅上述Gem讲座。 此外，关于W3c的其他预连接文档：<a href="https://html.spec.whatwg.org/#linkTypes"> https://html.spec.whatwg.org/#linkTypes</a></td>
   </tr>
   <tr>
-   <td><strong>步驟40和41</strong><br /> </td>
-   <td>外部主機延遲和回應時間</td>
-   <td>調查外部主機的延遲和回應時間。</td>
+   <td><strong>步骤40和41</strong><br /> </td>
+   <td>外部主机延迟和响应时间</td>
+   <td>调查外部主机的延迟和响应时间。</td>
   </tr>
   <tr>
-   <td><strong>步驟45<br /> 和47</strong><br /> </td>
+   <td><strong>步骤45<br /> 和47</strong><br /> </td>
    <td>使用HTTP/2</td>
-   <td>如需步驟37、38和39，請參閱Gem研討會。 另外，請出庫 <a href="https://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/adobe-experience-manager.topic.html/forum__kdzc-does_anyoneknowwhe.html">此</a> 支援HTTP/2的論壇貼文。<br /> </td>
+   <td>有关步骤37、38和39，请参见Gem讲座。 另外，签出 <a href="https://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/adobe-experience-manager.topic.html/forum__kdzc-does_anyoneknowwhe.html">此</a> 有关HTTP/2支持的论坛帖子。<br /> </td>
   </tr>
   <tr>
    <td><strong>步骤 49</strong></td>
-   <td>壓縮裝載大小</td>
-   <td><a href="/help/sites-deploying/osgi-configuration-settings.md">啟用Gzip</a> 和 <a href="https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2016/aem-web-performance.html?lang=en">縮小影像大小</a>.<br /> </td>
+   <td>收缩有效负载大小</td>
+   <td><a href="/help/sites-deploying/osgi-configuration-settings.md">启用Gzip</a> 和 <a href="https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2016/aem-web-performance.html?lang=en">缩小图像大小</a>.<br /> </td>
   </tr>
   <tr>
-   <td><strong>步驟42和43</strong></td>
-   <td>保持連線</td>
-   <td><p>是 <code>Keep-Alive</code> 標題存在於重複使用連線的不同請求中嗎？ 否則，這表示每個請求都會導致另一個連線建立，這會造成不必要的額外負荷。 （瀏覽器中的標準HTTP請求分析）</p> <p>您可以檢查 <a href="/help/sites-administering/proxy-jar.md">Proxy伺服器工具</a> 以檢查保持連線連線。<br /> </p> </td>
+   <td><strong>步骤42和43</strong></td>
+   <td>保持活动状态</td>
+   <td><p>是 <code>Keep-Alive</code> 标头存在于不同的请求中以重用连接？ 否则，这意味着每个请求都会导致另一个连接建立，从而带来不必要的开销。 （浏览器中的标准HTTP请求分析）</p> <p>您可以检查 <a href="/help/sites-administering/proxy-jar.md">代理服务器工具</a> 以检查保持活动连接。<br /> </p> </td>
   </tr>
   <tr>
    <td><strong>步骤 44</strong></td>
-   <td>提出多少要求？</td>
-   <td>在瀏覽器中執行標準HTTP要求分析。</td>
+   <td>提出了多少个请求？</td>
+   <td>在浏览器中执行标准HTTP请求分析。</td>
   </tr>
   <tr>
    <td><strong>步骤 46</strong></td>
-   <td>減少請求數量</td>
+   <td>减少请求数量</td>
    <td>
     <ol>
-     <li>串連資源（影像、CSS精靈、JSON）<br /> </li>
-     <li>Clientlibs內嵌：
+     <li>连接资源（图像、CSS脚本、JSON）<br /> </li>
+     <li>Clientlibs嵌入：
       <ol>
-       <li><a href="/help/sites-developing/clientlibs.md#creating-client-library-folders">建立使用者端資料庫資料夾</a>  — 請參閱標題使用內嵌將請求最小化</li>
+       <li><a href="/help/sites-developing/clientlibs.md#creating-client-library-folders">创建客户端库文件夹</a>  — 请参阅标题使用嵌入以最大限度地减少请求</li>
       </ol> </li>
     </ol> </td>
   </tr>
   <tr>
    <td><strong>步骤 48</strong></td>
-   <td>裝載的大小為何？</td>
-   <td>瀏覽器中的標準HTTP請求分析</td>
+   <td>有效负载的大小是多少？</td>
+   <td>浏览器中的标准HTTP请求分析</td>
   </tr>
   <tr>
-   <td><strong>步驟50和51</strong></td>
-   <td>JS程式碼封鎖</td>
+   <td><strong>步骤50和51</strong></td>
+   <td>JS代码阻止</td>
    <td><a href="https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2016/aem-web-performance.html?lang=en">https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2016/aem-web-performance.html?lang=en</a></td>
   </tr>
  </tbody>

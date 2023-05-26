@@ -1,7 +1,7 @@
 ---
-title: 與Adobe Dynamic Tag Management整合
+title: 与AdobeDynamic Tag Management集成
 seo-title: Integrating with Adobe Dynamic Tag Management
-description: 瞭解與Adobe Dynamic Tag Management的整合。
+description: 了解与AdobeDynamic Tag Management集成。
 seo-description: Learn about integration with Adobe Dynamic Tag Management.
 uuid: cbb9f942-44e3-4cd5-b07d-4298a7a08376
 contentOwner: Guillaume Carlino
@@ -17,78 +17,78 @@ ht-degree: 3%
 
 ---
 
-# 與Adobe Dynamic Tag Management整合 {#integrating-with-adobe-dynamic-tag-management}
+# 与AdobeDynamic Tag Management集成 {#integrating-with-adobe-dynamic-tag-management}
 
-整合 [AdobeDynamic Tag Management](https://www.adobe.com/solutions/digital-marketing/dynamic-tag-management.html) AEM，讓您能夠使用Dynamic Tag Management Web屬性來追蹤AEM網站。 Dynamic Tag Management可讓行銷人員管理用於收集資料的標籤，並在數位行銷系統之間散發資料。 例如，使用Dynamic Tag Management來收集AEM網站的使用量資料，並散發資料以在Adobe Analytics或Adobe Target中進行分析。
+集成 [Adobe动态Tag Management](https://www.adobe.com/solutions/digital-marketing/dynamic-tag-management.html) AEM ，以便您可以使用Dynamic Tag Management Web资产跟踪AEM站点。 通过Dynamic Tag Management，营销人员可以管理用于收集数据的标记，并在各种数字营销系统中分发数据。 例如，使用Dynamic Tag Management收集AEM网站的使用情况数据，并分发这些数据以供在Adobe Analytics或Adobe Target中进行分析。
 
-整合之前，您需要建立動態Tag Management [Web屬性](https://microsite.omniture.com/t2/help/en_US/dtm/#Web_Properties) 追蹤AEM網站網域的資訊。 此 [託管選項](https://microsite.omniture.com/t2/help/en_US/dtm/#Hosting__Embed_Tab) 的Web屬性，以便您可以設定AEM來存取Dynamic Tag Management程式庫。
+在集成之前，您需要创建动态Tag Management [Web属性](https://microsite.omniture.com/t2/help/en_US/dtm/#Web_Properties) 跟踪AEM站点的域。 此 [托管选项](https://microsite.omniture.com/t2/help/en_US/dtm/#Hosting__Embed_Tab) 必须配置Web属性的，以便您可以配置AEM以访问Dynamic Tag Management库。
 
-在您設定整合後，對動態Tag Management部署工具和規則的變更不需要您在AEM中變更Dynamic Tag Management設定。 這些變更可自動供AEM使用。
+配置集成后，对Dynamic Tag Management部署工具和规则的更改不需要您在AEM中更改Dynamic Tag Management配置。 这些更改可自动供AEM使用。
 
 >[!NOTE]
 >
->如果您使用具有自訂Proxy設定的DTM，您需要設定HTTP使用者端Proxy設定，因為AEM的某些功能使用3.x API，而其他功能則使用4.x API：
+>如果您使用的是带有自定义代理配置的DTM，则需要配置HTTP客户端代理配置，因为AEM的某些功能使用的是3.x API，而其他一些功能使用的是4.x API：
 >
 >* 3.x 通过 [http://localhost:4502/system/console/configMgr/com.day.commons.httpclient](http://localhost:4502/system/console/configMgr/com.day.commons.httpclient) 进行配置
 >* 4.x 通过 [http://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator](http://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator) 进行配置
 >
 
 
-## 部署選項 {#deployment-options}
+## 部署选项 {#deployment-options}
 
-下列部署選項會影響與Dynamic Tag Management整合的設定。
+以下部署选项会影响与Dynamic Tag Management集成的配置。
 
-### Dynamic Tag Management託管 {#dynamic-tag-management-hosting}
+### Dynamic Tag Management托管 {#dynamic-tag-management-hosting}
 
-AEM支援在雲端中託管或在AEM上託管的動態Tag Management。
+AEM支持在云中托管或在AEM上托管的动态Tag Management。
 
-* 雲端託管： Dynamic Tag Management JavaScript程式庫會儲存在雲端中，您的AEM頁面會直接參照這些程式庫。
-* AEM託管： Dynamic Tag Management會產生javascript程式庫。 AEM會使用工作流程模型來取得及安裝程式庫。
+* 云托管： Dynamic Tag Management JavaScript库存储在云中，您的AEM页面直接引用它们。
+* AEM托管： Dynamic Tag Management生成javascript库。 AEM使用工作流模型来获取和安装库。
 
-您的實作所使用的託管型別會決定您執行的一些設定和實作任務。 如需託管選項的相關資訊，請參閱 [託管 — 內嵌標籤](https://microsite.omniture.com/t2/help/en_US/dtm/#Hosting__Embed_Tab) (在動態Tag Management說明中)。
+您的实施使用的托管类型决定了您执行的某些配置和实施任务。 有关托管选项的信息，请参阅 [“托管 — 嵌入”选项卡](https://microsite.omniture.com/t2/help/en_US/dtm/#Hosting__Embed_Tab) 在Dynamic Tag Management帮助中。
 
-### 中繼和生產程式庫 {#staging-and-production-library}
+### 暂存和生产库 {#staging-and-production-library}
 
-決定您的AEM編寫執行個體是使用動態Tag Management測試版或生產程式碼。
+确定AEM创作实例使用的是Dynamic Tag Management暂存代码还是生产代码。
 
-通常您的製作執行個體會使用動態Tag Management測試資料庫，而生產執行個體則會使用生產資料庫。 此案例可讓您使用作者例項來測試未核准的動態Tag Management設定。
+通常，您的创作实例使用动态Tag Management暂存库，而生产实例使用生产库。 此方案允许您使用创作实例测试未批准的动态Tag Management配置。
 
-如有需要，您的作者執行個體可使用生產環境程式庫。 網頁瀏覽器外掛程式可讓您在程式庫為雲端託管時，切換使用中繼程式庫進行測試。
+如果需要，您的创作实例可以使用生产库。 通过Web浏览器插件，您可以在使用暂存库进行测试时进行切换，因为暂存库是云托管库。
 
-### 使用Dynamic Tag Management部署鉤點 {#using-the-dynamic-tag-management-deployment-hook}
+### 使用Dynamic Tag Management部署挂钩 {#using-the-dynamic-tag-management-deployment-hook}
 
-AEM託管Dynamic Tag Management程式庫時，您可以使用Dynamic Tag Management部署掛接服務自動將程式庫更新推送至AEM。 若對程式庫進行變更(例如編輯Dynamic Tag Management Web屬性時)，就會推送程式庫更新。
+当AEM托管Dynamic Tag Management库时，您可以使用Dynamic Tag Management部署挂接服务自动将库更新推送到AEM。 在对库进行更改时(例如，在编辑Dynamic Tag Management Web属性时)，将推送库更新。
 
-若要使用部署掛接，Dynamic Tag Management必須能夠連線至託管程式庫的AEM執行個體。 您必須 [啟用對AEM的存取權](/help/sites-administering/dtm.md#enabling-access-for-the-deployment-hook-service) 適用於Dynamic Tag Management伺服器。
+要使用部署挂接，Dynamic Tag Management必须能够连接到托管库的AEM实例。 您必须 [启用对AEM的访问](/help/sites-administering/dtm.md#enabling-access-for-the-deployment-hook-service) (对于Dynamic Tag Management服务器)。
 
-在某些情況下，可能無法連線AEM，例如當AEM位於防火牆後面時。 在這些情況下，您可以使用AEM polling importer選項定期擷取程式庫。 cron工作運算式會指定程式庫下載的排程。
+在某些情况下，可能无法访问AEM，例如当AEM位于防火墙后面时。 在这些情况下，您可以使用AEM轮询导入程序选项定期检索库。 cron作业表达式规定了库下载的计划。
 
-## 啟用Deployment Hook服務的存取權 {#enabling-access-for-the-deployment-hook-service}
+## 启用部署挂接服务的访问 {#enabling-access-for-the-deployment-hook-service}
 
-啟用Dynamic Tag Management部署掛接服務以存取AEM，讓該服務可以更新AEM託管的程式庫。 指定視需要更新中繼和生產程式庫的Dynamic Tag Management伺服器的IP位址：
+启用Dynamic Tag Management部署挂接服务以访问AEM，以便该服务可以更新AEM托管的库。 指定根据需要更新暂存和生产库的Dynamic Tag Management服务器的IP地址：
 
 * 暂存: `107.21.99.31`
-* 生產： `23.23.225.112` 和 `204.236.240.48`
+* 生产： `23.23.225.112` 和 `204.236.240.48`
 
-使用下列任一專案執行設定： [網頁主控台](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) 或 [`sling:OsgiConfig`](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository) 節點：
+使用 [Web控制台](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) 或 [`sling:OsgiConfig`](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository) 节点：
 
-* 在Web主控台中，使用「設定」頁面上的「DTM部署掛接設定」Adobe專案。
-* 若為OSGi設定，服務PID為 `com.adobe.cq.dtm.impl.servlets.DTMDeployHookServlet`.
+* 在Web控制台中，使用“配置”页面上的“AdobeDTM部署挂接配置”项。
+* 对于OSGi配置，服务PID为 `com.adobe.cq.dtm.impl.servlets.DTMDeployHookServlet`.
 
-下表說明要設定的特性。
+下表描述了要配置的属性。
 
-| Web主控台屬性 | OSGi屬性 | 描述 |
+| Web控制台属性 | OSGi属性 | 描述 |
 |---|---|---|
-| 分段DTM IP白名單 | `dtm.staging.ip.whitelist` | 更新中繼程式庫的動態Tag Management伺服器的IP位址。 |
-| 生產DTM IP白名單 | `dtm.production.ip.whitelist` | 更新生產程式庫的Dynamic Tag Management伺服器的IP位址。 |
+| 暂存DTM IP白名单 | `dtm.staging.ip.whitelist` | 更新暂存库的动态Tag Management服务器的IP地址。 |
+| 生产DTM IP白名单 | `dtm.production.ip.whitelist` | 更新生产库的动态Tag Management服务器的IP地址。 |
 
-## 建立動態Tag Management設定 {#creating-the-dynamic-tag-management-configuration}
+## 创建动态Tag Management配置 {#creating-the-dynamic-tag-management-configuration}
 
-建立雲端設定，讓AEM執行個體能夠使用Dynamic Tag Management進行驗證，並與您的Web屬性互動。
+创建云配置，以便AEM实例可以使用Dynamic Tag Management进行身份验证并与您的Web资产交互。
 
 >[!NOTE]
 >
->如果您的DTM Web屬性包含Adobe Analytics工具，而且您也在使用，請避免在頁面上包含兩個Adobe Analytics追蹤程式碼 [內容分析](/help/sites-authoring/content-insights.md). 在您的 [Adobe Analytics雲端設定](/help/sites-administering/adobeanalytics-connect.md#configuring-the-connection-to-adobe-analytics)，選取不包含追蹤程式碼選項。
+>当DTM Web资产包含Adobe Analytics工具并且您还在使用时，避免在页面上包含两个Adobe Analytics跟踪代码 [内容分析](/help/sites-authoring/content-insights.md). 在您的 [Adobe Analytics云配置](/help/sites-administering/adobeanalytics-connect.md#configuring-the-connection-to-adobe-analytics)中，选择不包括跟踪代码选项。
 
 ### 常规设置 {#general-settings}
 
@@ -99,35 +99,35 @@ AEM託管Dynamic Tag Management程式庫時，您可以使用Dynamic Tag Managem
    <th>描述</th>
   </tr>
   <tr>
-   <td>API權杖</td>
-   <td>Dynamic Tag Management使用者帳戶的API Token屬性值。 AEM使用此屬性來驗證動態Tag Management。</td>
+   <td>api令牌</td>
+   <td>Dynamic Tag Management用户帐户的API令牌属性的值。 AEM使用此属性来通过Dynamic Tag Management进行身份验证。</td>
   </tr>
   <tr>
    <td>公司</td>
-   <td>與您登入ID相關聯的公司。</td>
+   <td>与您的登录ID关联的公司。</td>
   </tr>
   <tr>
    <td>属性</td>
-   <td>您為管理AEM網站的標籤而建立的Web屬性名稱。</td>
+   <td>为管理AEM站点的标记而创建的Web属性的名称。</td>
   </tr>
   <tr>
    <td>包含有关作者的生产代码</td>
-   <td><p>選取此選項可讓AEM作者和發佈執行個體使用動態Tag Management程式庫的生產版本。 </p> <p>若未選取此選項，測試設定會套用至製作執行個體，生產設定則套用至發佈執行個體。</p> </td>
+   <td><p>选择此选项可使AEM创作和发布实例使用Dynamic Tag Management库的生产版本。 </p> <p>如果未选择此选项，暂存设置将应用于创作实例，生产设置将应用于发布实例。</p> </td>
   </tr>
  </tbody>
 </table>
 
-### 自行託管屬性 — 測試和生產 {#self-hosting-properties-staging-and-production}
+### 自托管资产 — 暂存和生产 {#self-hosting-properties-staging-and-production}
 
-下列動態Tag Management設定的屬性可讓AEM託管Dynamic Tag Management程式庫。 屬性可讓AEM下載及安裝程式庫。 或者，您也可以自動更新程式庫，以確保它們能反映在Dynamic Tag Management管理應用程式中所做的變更。
+通过Dynamic Tag Management配置的以下属性，AEM可以托管Dynamic Tag Management库。 利用这些属性，AEM可以下载并安装库。 （可选）您可以自动更新库，以确保它们反映在Dynamic Tag Management管理应用程序中所做的任何更改。
 
-有些屬性會使用您從Dynamic Tag Management Web屬性「內嵌」標籤的「程式庫下載」區段取得的值。 如需詳細資訊，請參閱 [程式庫下載](https://microsite.omniture.com/t2/help/en_US/dtm/#Library_Download) (在動態Tag Management說明中)。
+某些资产会使用您从Dynamic Tag Management Web资产的“嵌入”选项卡的“库下载”部分获得的值。 有关信息，请参阅 [库下载](https://microsite.omniture.com/t2/help/en_US/dtm/#Library_Download) 在Dynamic Tag Management帮助中。
 
 >[!NOTE]
 >
->當您在AEM上託管Dynamic Tag Management套件組合時，必須先在Dynamic Tag Management中啟用「程式庫下載」，才能建立設定。 此外，必須啟用Akamai，因為Akamai提供可供下載的資料庫。
+>在AEM上托管Dynamic Tag Management捆绑包时，必须先在Dynamic Tag Management中启用库下载，然后才能创建配置。 此外，必须启用Akamai，因为Akamai提供了用于下载的库。
 
-在AEM上託管Dynamic Tag Management程式庫時，AEM會根據您的設定自動設定Web屬性的某些屬性。 請參閱下表的說明。
+在AEM上托管Dynamic Tag Management库时，AEM会根据您的配置自动配置Web资产的某些属性。 请参阅下表中的说明。
 
 <table>
  <tbody>
@@ -136,45 +136,45 @@ AEM託管Dynamic Tag Management程式庫時，您可以使用Dynamic Tag Managem
    <th>描述</th>
   </tr>
   <tr>
-   <td>使用自行託管</td>
-   <td>選取在AEM上託管Dynamic Tag Management程式庫檔案的時間。 選取此選項會導致此表格中的其他屬性出現。</td>
+   <td>使用自托管</td>
+   <td>选择何时在AEM上托管Dynamic Tag Management库文件。 选择此选项将显示此表中的其他属性。</td>
   </tr>
   <tr>
    <td>DTM 包 URL</td>
-   <td>用於下載Dynamic Tag Management資料庫的URL。 從Dynamic Tag Management的「資料庫下載」頁面的「下載URL」區段取得此值。 基於安全考量，此值必須手動設定。</td>
+   <td>用于下载动态Tag Management库的URL。 从Dynamic Tag Management的“库下载”页面的“下载URL”部分获取此值。 出于安全原因，必须手动配置此值。</td>
   </tr>
   <tr>
    <td>下载工作流</td>
-   <td><p>用於下載和安裝Dynamic Tag Management程式庫的工作流程模型。 預設模式為預設DTM組合包下載。 除非您已建立自訂模型，否則請使用此模型。</p> <p>請注意，預設下載工作流程會在程式庫下載時自動啟動。</p> </td>
+   <td><p>用于下载和安装Dynamic Tag Management库的工作流模型。 默认模型为“默认DTM包下载”。 除非已创建自定义模型，否则使用此模型。</p> <p>请注意，默认下载工作流会在下载库时自动激活库。</p> </td>
   </tr>
   <tr>
    <td>域提示</td>
-   <td><p>（選用）代管Dynamic Tag Management程式庫的AEM伺服器網域。 指定值以覆寫為設定的預設網域 <a href="/help/sites-developing/externalizer.md">Day CQ Link Externalizer service</a>.</p> <p>連線至動態Tag Management時，AEM會使用此值來設定動態Tag Management Web屬性的程式庫下載屬性的測試HTTP路徑或生產HTTP路徑。</p> </td>
+   <td><p>（可选）托管Dynamic Tag Management库的AEM服务器的域。 指定一个值以覆盖为配置的默认域 <a href="/help/sites-developing/externalizer.md">Day CQ Link Externalizer服务</a>.</p> <p>连接到动态Tag Management时，AEM使用此值来配置动态Tag Management Web属性的暂存HTTP路径或库下载属性的生产HTTP路径。</p> </td>
   </tr>
   <tr>
-   <td>安全網域提示</td>
-   <td><p>（選用）透過HTTPS託管Dynamic Tag Management程式庫的AEM伺服器網域。 指定值以覆寫為設定的預設網域 <a href="/help/sites-developing/externalizer.md">Day CQ Link Externalizer service</a>.</p> <p>連線至動態Tag Management時，AEM會使用此值來設定動態Tag Management Web屬性的程式庫下載屬性的測試HTTPS路徑或生產HTTPS路徑。</p> </td>
+   <td>安全域提示</td>
+   <td><p>（可选）通过HTTPS托管Dynamic Tag Management库的AEM服务器的域。 指定一个值以覆盖为配置的默认域 <a href="/help/sites-developing/externalizer.md">Day CQ Link Externalizer服务</a>.</p> <p>连接到动态Tag Management时，AEM使用此值来配置动态Tag Management Web属性的暂存HTTPS路径或库下载属性的生产HTTPS路径。</p> </td>
   </tr>
   <tr>
    <td>共享密钥</td>
-   <td><p>（選用）用來解密下載的共用機密。 從Dynamic Tag Management之「程式庫下載」頁面的「共用機密」欄位取得此值。</p> <p><strong>注意：</strong> 您必須擁有 <a href="https://www.openssl.org/docs/apps/openssl.html">OpenSSL</a> 安裝在已安裝AEM的電腦上的程式庫，以便AEM可以解密下載的程式庫。</p> </td>
+   <td><p>（可选）用于解密下载的共享密钥。 从Dynamic Tag Management的“库下载”页面的“共享密钥”字段中获取此值。</p> <p><strong>注意：</strong> 您必须拥有 <a href="https://www.openssl.org/docs/apps/openssl.html">OpenSSL</a> 库安装在安装了AEM的计算机上，以便AEM可以解密下载的库。</p> </td>
   </tr>
   <tr>
    <td>启用轮询导入程序</td>
-   <td><p>（選用）選取以定期下載及安裝Dynamic Tag Management程式庫，確保您使用更新版本。 選取後，Dynamic Tag Management不會將HTTPPOST要求傳送至部署鉤點URL。</p> <p>AEM會自動為Dynamic Tag Management Web屬性設定程式庫下載屬性的「部署掛接URL」屬性。 選取後，屬性會設定為沒有值。 若未選取，屬性會以您的動態Tag Management設定的URL設定。</p> <p>當Dynamic Tag Management部署鉤點無法連線至AEM (例如AEM位於防火牆後)時，啟用輪詢匯入工具。</p> </td>
+   <td><p>（可选）选择此选项可定期下载和安装Dynamic Tag Management库，以确保您使用的是更新版本。 选中后，Dynamic Tag Management不会将HTTPPOST请求发送到部署挂接URL。</p> <p>AEM会自动为Dynamic Tag Management Web属性配置库下载属性的Deploy Hook URL属性。 选中后，属性将配置为无值。 如果未选择此属性，则会使用动态Tag Management配置的URL来配置此属性。</p> <p>当Dynamic Tag Management部署挂接无法连接到AEM时(例如，当AEM位于防火墙后面时)，启用轮询导入程序。</p> </td>
   </tr>
   <tr>
    <td>时间表表达式</td>
-   <td>（當選取「啟用Polling Importer」時顯示和為必要專案。） 控制何時下載Dynamic Tag Management程式庫的cron運算式。</td>
+   <td>（在选中启用轮询导入程序时显示和必需。） 控制何时下载Dynamic Tag Management库的cron表达式。</td>
   </tr>
  </tbody>
 </table>
 
 ![chlimage_1-352](assets/chlimage_1-352.png)
 
-### 雲端託管屬性 — 測試和生產 {#cloud-hosting-properties-staging-and-production}
+### 云托管属性 — 暂存和生产 {#cloud-hosting-properties-staging-and-production}
 
-當動態標籤設定是雲端託管時，您可以為動態Tag Management設定設定下列屬性。
+当Dynamic Tag Configuration是云托管时，您可以为Dynamic Tag Management配置配置配置以下属性。
 
 <table>
  <tbody>
@@ -183,63 +183,63 @@ AEM託管Dynamic Tag Management程式庫時，您可以使用Dynamic Tag Managem
    <th>描述</th>
   </tr>
   <tr>
-   <td>使用自行託管</td>
-   <td>在雲端中託管Dynamic Tag Management程式庫檔案時，請清除此選項。</td>
+   <td>使用自托管</td>
+   <td>在云中托管Dynamic Tag Management库文件时，清除此选项。</td>
   </tr>
   <tr>
    <td>页眉代码</td>
-   <td><p>從您主機的Dynamic Tag Management取得的測試頁首代碼。 此值會在您連線至Dynamic Tag Management時自動填入。</p> <p> 若要在動態Tag Management中檢視程式碼，請按一下內嵌標籤，然後按一下主機名稱。 展開頁首程式碼區段，然後視需要按一下複製測試內嵌程式碼的內嵌程式碼或生產內嵌程式碼區域。</p> </td>
+   <td><p>从Dynamic Tag Management为您的主机获取的暂存标头代码。 此值会在您连接到Dynamic Tag Management时自动填充。</p> <p> 要在Dynamic Tag Management中查看代码，请单击嵌入选项卡，然后单击主机名。 展开标题代码部分，然后根据需要单击暂存嵌入代码的复制嵌入代码或生产嵌入代码区域。</p> </td>
   </tr>
   <tr>
    <td>页脚代码</td>
-   <td><p>從您主機的Dynamic Tag Management取得的測試頁尾代碼。 此值會在您連線至Dynamic Tag Management時自動填入。</p> <p>若要在動態Tag Management中檢視程式碼，請按一下內嵌標籤，然後按一下主機名稱。 展開「頁尾代碼」區段，然後視需要按一下「複製測試內嵌程式碼」的「內嵌程式碼」或「生產內嵌程式碼」區域。</p> </td>
+   <td><p>从Dynamic Tag Management为您的主机获取的暂存页脚代码。 此值会在您连接到Dynamic Tag Management时自动填充。</p> <p>要在Dynamic Tag Management中查看代码，请单击嵌入选项卡，然后单击主机名。 展开页脚代码部分，并根据需要单击复制暂存嵌入代码的嵌入代码或生产嵌入代码区域。</p> </td>
   </tr>
  </tbody>
 </table>
 
 ![chlimage_1-353](assets/chlimage_1-353.png)
 
-下列程式會使用觸控最佳化UI來設定與Dynamic Tag Management的整合。
+以下过程使用触屏优化UI来配置与Dynamic Tag Management的集成。
 
-1. 在邊欄上，按一下「工具>作業>雲端>Cloud Services」 。
-1. 在「動態Tag Management」區域中，會顯示下列其中一個連結來新增設定：
+1. 在边栏上，单击“工具”>“操作”>“云”>“Cloud Services”。
+1. 在Dynamic Tag Management区域中，将显示以下用于添加配置的链接之一：
 
-   * 如果這是您新增的第一個設定，請按一下立即設定。
-   * 若已建立一個或多個組態，請按一下「顯示組態」，然後按一下「可用組態」旁的+連結。
+   * 如果这是您添加的第一个配置，请单击立即配置。
+   * 如果已创建一个或多个配置，请单击显示配置，然后单击可用配置旁边的+链接。
 
    ![chlimage_1-354](assets/chlimage_1-354.png)
 
-1. 輸入設定的標題，然後按一下「建立」。
-1. 在「API權杖」欄位中，輸入動態Tag Management使用者帳戶的「API權杖」屬性值。
+1. 键入配置的标题，然后单击“创建”。
+1. 在API令牌字段中，输入Dynamic Tag Management用户帐户的API令牌属性的值。
 
-   若要取得API權杖的值，請聯絡DTM客戶服務。
+   要获取API令牌的值，请联系DTM客户关怀团队。
 
    >[!NOTE]
    >
-   >Dynamic Tag Management使用者明確要求之前，API權杖不會過期。
+   >API令牌在Dynamic Tag Management用户明确请求它之前不会过期。
 
    ![chlimage_1-355](assets/chlimage_1-355.png)
 
-1. 按一下「連線至DTM」。 AEM會使用Dynamic Tag Management進行驗證，並擷取您的帳戶相關聯的公司清單。
-1. 選取公司，然後選取您要用來追蹤AEM網站的屬性。
-1. 如果您在製作執行個體上使用中繼代碼，請取消選取「在製作上包含生產代碼」 。
-1. 視需要在「測試設定」標籤和「生產設定」標籤上提供屬性的值，然後按一下「確定」。
+1. 单击连接到DTM。 AEM通过Dynamic Tag Management进行身份验证，并检索与您的帐户关联的公司列表。
+1. 选择公司，然后选择用于跟踪AEM网站的资产。
+1. 如果您在创作实例上使用暂存代码，请取消选择在创作实例上包含生产代码。
+1. 根据需要在“暂存设置”选项卡和“生产设置”选项卡上提供属性的值，然后单击“确定”。
 
-## 手動下載Dynamic Tag Management資料庫 {#manually-downloading-the-dynamic-tag-management-library}
+## 手动下载Dynamic Tag Management库 {#manually-downloading-the-dynamic-tag-management-library}
 
-手動下載Dynamic Tag Management程式庫，以立即在AEM上更新。 例如，如果您想要在排程Polling Importer自動下載程式庫之前，測試更新的程式庫，請手動下載。
+手动下载Dynamic Tag Management库以立即在AEM上更新它们。 例如，如果您想要在轮询导入程序计划自动下载库之前测试更新的库，请手动下载。
 
-1. 在邊欄上，按一下「工具>作業>雲端>Cloud Services」 。
-1. 在動態Tag Management區域中，按一下顯示設定，然後按一下您的設定。
-1. 在「測試設定」區域或「生產設定」區域中，按一下「觸發下載工作流程」按鈕以下載和部署程式庫套件。
+1. 在边栏上，单击“工具”>“操作”>“云”>“Cloud Services”。
+1. 在Dynamic Tag Management区域中，单击显示配置，然后单击您的配置。
+1. 在“暂存设置”区域或“生产设置”区域中，单击“触发下载工作流”按钮以下载和部署库捆绑包。
 
    ![chlimage_1-356](assets/chlimage_1-356.png)
 
 >[!NOTE]
 >
->下載的檔案儲存在 `/etc/clientlibs/dtm/my config/companyID/propertyID/servertype`.
+>下载的文件存储在 `/etc/clientlibs/dtm/my config/companyID/propertyID/servertype`.
 >
->以下內容直接從您的 [DTM設定](#creating-the-dynamic-tag-management-configuration).
+>以下内容直接从您的 [DTM配置](#creating-the-dynamic-tag-management-configuration).
 >
 >* `myconfig`
 >* `companyID`
@@ -248,26 +248,26 @@ AEM託管Dynamic Tag Management程式庫時，您可以使用Dynamic Tag Managem
 >
 
 
-## 將動態Tag Management設定與您的網站建立關聯 {#associating-a-dynamic-tag-management-configuration-with-your-site}
+## 将Dynamic Tag Management配置与站点关联 {#associating-a-dynamic-tag-management-configuration-with-your-site}
 
-將您的動態Tag Management設定與網站頁面建立關聯，以便AEM將所需的指令碼新增至頁面。 將網站的根頁面與設定建立關聯。 該頁面的所有子系都會繼承關聯。 如有需要，您可以覆寫下級頁面上的關聯。
+将您的动态Tag Management配置与网站页面关联，以便AEM将所需的脚本添加到页面。 将站点的根页面与配置关联。 该页面的所有后代都将继承关联。 如果需要，您可以在下级页面上覆盖关联。
 
-使用以下程式，將頁面及其子系與Dynamic Tag Management設定建立關聯。
+使用以下过程可将页面及其后代与Dynamic Tag Management配置相关联。
 
-1. 在傳統UI中開啟網站的根頁面。
-1. 使用Sidekick開啟頁面屬性。
-1. 在「Cloud Services」標籤中，按一下「新增服務」，選取「動態Tag Management」，然後按一下「確定」。
+1. 在经典UI中打开网站的根页面。
+1. 使用Sidekick打开页面属性。
+1. 在“Cloud Services”选项卡中，单击添加服务，选择动态Tag Management ，然后单击确定。
 
    ![chlimage_1-357](assets/chlimage_1-357.png)
 
-1. 使用Dynamic Tag Management下拉式選單來選取您的設定，然後按一下「確定」。
+1. 使用Dynamic Tag Management下拉菜单选择您的配置，然后单击“确定”。
 
-使用以下程式來覆寫頁面的繼承組態關聯。 覆寫會影響頁面及所有頁面子代。
+使用以下过程可覆盖页面的继承配置关联。 覆盖会影响页面和所有页面子项。
 
-1. 在傳統UI中開啟頁面。
-1. 使用Sidekick開啟頁面屬性。
-1. 在「Cloud Services」標籤上，按一下「繼承自」屬性旁的掛鎖圖示，然後在確認對話方塊中按一下「是」。
+1. 在经典UI中打开页面。
+1. 使用Sidekick打开页面属性。
+1. 在“Cloud Services”选项卡上，单击“继承自”属性旁边的挂锁图标，然后在确认对话框中单击“是”。
 
    ![chlimage_1-358](assets/chlimage_1-358.png)
 
-1. 移除或選取其他Dynamic Tag Management設定，然後按一下「確定」。
+1. 删除或选择其他Dynamic Tag Management配置，然后单击“确定”。

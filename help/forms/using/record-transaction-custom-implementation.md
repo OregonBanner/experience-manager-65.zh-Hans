@@ -1,7 +1,7 @@
 ---
-title: 記錄自訂實作的交易
+title: 记录自定义实施的交易
 seo-title: Record a transaction for custom implementations
-description: 使用TransactionRecorder API來記錄未自動入帳為交易的動作
+description: 使用TransactionRecorder API自动记录未作为事务入帐的操作
 seo-description: Use the TransactionRecorder API to record actions which are not accounted as transactions automatically
 uuid: a22b1a0b-7553-4a17-8fb4-a3bee97b4a98
 contentOwner: khsingh
@@ -16,17 +16,17 @@ ht-degree: 0%
 
 ---
 
-# 記錄自訂實作的交易 {#record-a-transaction-for-custom-implementations}
+# 记录自定义实施的交易 {#record-a-transaction-for-custom-implementations}
 
-使用TransactionRecorder API來記錄未自動入帳為交易的動作
+使用TransactionRecorder API自动记录未作为事务入帐的操作
 
-您可以使用自訂程式碼來提交PDF表單，或將代理程式UI預覽URL傳送給一般使用者，以預覽互動式通訊。 或者，您也可使用自訂方法提交表單，而不使用AEM Forms隨附的提交方法。 AEM Forms API前面提到的所有動作和自訂實作都不會計為交易。 AEM Forms提供API、 [TransactionRecorder](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/aem/transaction/core/ITransactionRecorder.html)，將這類動作記錄為交易。
+您可以使用自定义代码提交PDF表单，或将代理UI预览URL发送给最终用户以预览交互式通信。 或者，您也可以使用自定义方法提交表单，而不是使用AEM Forms提供的提交方法。 前面提到的AEM Forms API的所有操作和自定义实施都不会计为交易。 AEM Forms提供API、 [TransactionRecorder](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/aem/transaction/core/ITransactionRecorder.html)，将此类操作记录为事务处理。
 
-若要記錄交易，請寫入 [標準sling servlet](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/store-and-retrieve-af-with-2fa/create-servlet.html?lang=en) 並從使用者端呼叫servlet以記錄交易。 您可以使用AJAX或任何其他標準方法呼叫servlet。
+要记录事务处理，请编写 [标准sling servlet](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/store-and-retrieve-af-with-2fa/create-servlet.html?lang=en) 并从客户端调用servlet以记录事务。 您可以使用AJAX或任何其他标准方法调用servlet。
 
-## 伺服器端程式碼範例 {#sample-server-sided-code}
+## 服务器端代码示例 {#sample-server-sided-code}
 
-您可以使用以下範常式式碼，使用自訂OSGi套件從Java™類別執行TransactionRecorder API。
+您可以使用以下示例代码通过自定义OSGi捆绑包从Java™类运行TransactionRecorder API。
 
 ```java
 import com.adobe.aem.transaction.core.ITransactionRecorder;
@@ -72,9 +72,9 @@ private TransactionRecord extractTxRecordFromRequest(SlingHttpServletRequest req
 }
 ```
 
-## 使用者端代碼範例 {#sample-client-side-code}
+## 示例客户端代码 {#sample-client-side-code}
 
-您可以使用以下範常式式碼來呼叫具有下列專案的servlet： `TransactionRecorder`API。
+您可以使用以下示例代码调用具有以下特性的servlet： `TransactionRecorder`API。
 
 ```javascript
 $.ajax({
@@ -92,6 +92,6 @@ $.ajax({
 
 ## 相关文章 {#related-articles}
 
-* [交易報表概觀](/help/forms/using/transaction-reports-overview.md)
-* [檢視與瞭解交易報表](/help/forms/using/viewing-and-understanding-transaction-reports.md)
-* [交易報表可記帳API](/help/forms/using/transaction-reports-billable-apis.md)
+* [事务处理报表概览](/help/forms/using/transaction-reports-overview.md)
+* [查看和了解事务处理报表](/help/forms/using/viewing-and-understanding-transaction-reports.md)
+* [交易报告可记帐API](/help/forms/using/transaction-reports-billable-apis.md)

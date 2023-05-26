@@ -1,7 +1,7 @@
 ---
-title: 按一下Essentials
+title: 点赞Essentials
 seo-title: Liking Essentials
-description: 點按元件概觀
+description: 点按组件概述
 seo-description: Liking component overview
 uuid: 89f16859-c901-4090-8e16-363b95c508de
 contentOwner: msm-service
@@ -18,15 +18,15 @@ ht-degree: 1%
 
 ---
 
-# 按一下Essentials {#liking-essentials}
+# 点赞Essentials {#liking-essentials}
 
-按讚元件， [總計](tally.md) 子類別是一種有用的工具，可讓成員只要選取心形圖示，即可對特定內容發表正面意見。
+点赞组件， [总计](tally.md) 子类是一种非常有用的工具，它允许成员通过简单地选择心形图标来表示对特定内容片段的正面意见。
 
-允許將連結元件的多個例項放在相同頁面上；每個例項都必須設定為唯一 `tally name` 屬性。
+允许将链接组件的多个实例放在同一页面上；必须为每个实例配置一个唯一的 `tally name` 属性。
 
-不支援類似內容的匿名發佈。 網站訪客必須註冊並登入才能參與點讚。 登入的訪客（成員）可隨時以開啟或關閉的方式切換。
+不支持类似内容的匿名发布。 网站访客必须注册并登录才能参与点赞。 已登录的访客（成员）可随时进行打开和关闭之类的切换。
 
-## 適用於使用者端的Essentials {#essentials-for-client-side}
+## 适用于客户端的Essentials {#essentials-for-client-side}
 
 <table>
  <tbody>
@@ -35,15 +35,15 @@ ht-degree: 1%
    <td>social/tally/components/hbs/liking</td>
   </tr>
   <tr>
-   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>包含</strong></a></td>
-   <td>是 — 屬性可在下列位置編輯： <i>設計 </i>模式</td>
+   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>可包含</strong></a></td>
+   <td>是 — 属性在中可编辑 <i>设计 </i>模式</td>
   </tr>
   <tr>
    <td> <a href="client-customize.md#clientlibs-for-scf"><strong>clientlibs</strong></a></td>
    <td> cq.social.hbs.liking</td>
   </tr>
   <tr>
-   <td> <strong>範本</strong></td>
+   <td> <strong>模板</strong></td>
    <td><p> /libs/social/tally/components/hbs/liking/liking.hbs<br /> /libs/social/tally/components/hbs/liking/activity-icon.hbs<br /> /libs/social/tally/components/hbs/liking/activity-title.hbs</p> </td>
   </tr>
   <tr>
@@ -52,33 +52,33 @@ ht-degree: 1%
   </tr>
   <tr>
    <td><strong>属性</strong></td>
-   <td><p>另請參閱 <a href="liking.md">使用連結</a></p> </td>
+   <td><p>参见 <a href="liking.md">使用点赞</a></p> </td>
   </tr>
  </tbody>
 </table>
 
-* [使用者端自訂](client-customize.md)
+* [客户端自定义](client-customize.md)
 
-## 伺服器端的Essentials {#essentials-for-server-side}
+## 服务器端Essentials {#essentials-for-server-side}
 
-* [標籤API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/tally/client/api/package-summary.html)
+* [计费API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/tally/client/api/package-summary.html)
 
-* [計分端點](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/tally/client/endpoints/package-summary.html)
+* [计数端点](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/tally/client/endpoints/package-summary.html)
 
-* [伺服器端自訂](server-customize.md)
+* [服务器端自定义](server-customize.md)
 
-### 存取已張貼的投票(UGC) {#accessing-posted-voting-ugc}
+### 访问已发布的投票(UGC) {#accessing-posted-voting-ugc}
 
-UGC應使用其中一個標準仲裁方法來仲裁。
-另請參閱 [稽核使用者產生的內容](moderate-ugc.md).
+UGC应使用标准审核方法之一进行审核。
+参见 [审核用户生成的内容](moderate-ugc.md).
 
-自AEM 6.1 Communities起，使用 [公用存放區](working-with-srp.md) for UGC包含程式化存取UGC，無論選擇的儲存選項為何（例如ASRP、MSRP或JSRP）。
+自AEM 6.1社区起，使用 [公用存储](working-with-srp.md) for UGC包括对UGC的编程访问，而不管选择的存储选项（如ASRP、MSRP或JSRP）。
 
-**UGC在存放庫中的位置和格式可能會有所變更，恕不發出警告**.
+**UGC在存储库中的位置和格式可能会发生更改，恕不发出警告**.
 
 请参阅：
 
-* [儲存資源提供者概觀](srp.md)  — 簡介和存放庫使用概述。
-* [SRP和UGC Essentials](srp-and-ugc.md) - SRP公用程式方法與範例。
-* [使用SRP存取UGC](accessing-ugc-with-srp.md)  — 程式碼指南。
-* [SocialUtils重構](socialutils.md)  — 將已棄用的公用程式方法對應到目前的SRP公用程式方法。
+* [存储资源提供程序概述](srp.md)  — 简介和存储库使用概述。
+* [SRP和UGC Essentials](srp-and-ugc.md) - SRP实用程序方法和示例。
+* [使用SRP访问UGC](accessing-ugc-with-srp.md)  — 编码准则。
+* [SocialUtils重构](socialutils.md)  — 将已弃用的实用程序方法映射到当前SRP实用程序方法。

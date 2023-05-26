@@ -1,7 +1,7 @@
 ---
 title: Teaser和策略
 seo-title: Teasers and Strategies
-description: 行銷活動通常使用Teaser當作吸引特定訪客群體進入關注其興趣內容的機制。 為特定行銷活動定義一或多個Teaser。
+description: 营销活动通常使用Teaser作为吸引特定访客群体访问关注其兴趣内容的机制。 为特定营销活动定义了一个或多个Teaser。
 seo-description: Campaigns often use teasers as a mechanism to entice a specific segment of the visitor population through to content focused on their interests. One or more teasers are defined for a specific campaign.
 uuid: c78ec858-4b0a-48d5-99b2-5ddd9e15183d
 contentOwner: User
@@ -20,39 +20,39 @@ ht-degree: 5%
 
 # Teaser和策略{#teasers-and-strategies}
 
-行銷活動通常使用Teaser當作吸引特定訪客群體進入關注其興趣內容的機制。 為特定行銷活動定義一或多個Teaser。
+营销活动通常使用Teaser作为吸引特定访客群体访问关注其兴趣内容的机制。 为特定营销活动定义了一个或多个Teaser。
 
 >[!NOTE]
 >
->AEM 6.2已棄用Teaser元件。請使用 [目標元件](/help/sites-authoring/content-targeting-touch.md) 而非。
+>AEM 6.2中已弃用Teaser组件。请使用 [目标组件](/help/sites-authoring/content-targeting-touch.md) 而是。
 
-* **品牌頁面** 儲存在網站的Campaigns區段中。 品牌包含個別行銷活動。
-* **行銷活動頁面** 儲存在網站的Campaigns區段中。 每個行銷活動都有個別頁面，每個頁面底下都會儲存Teaser定義。 容器或概觀頁面也包含有關個別Teaser頁面的某些資訊和統計資料。
+* **品牌页面** 存储在网站的Campaigns部分。 品牌包含单个营销活动。
+* **Campaign页面** 存储在网站的Campaigns部分。 每个营销活动都有一个单独的页面，可保留Teaser定义。 容器或概述页面还包含有关各个Teaser页面的某些信息和统计信息。
 
-AEM內的Teaser由幾個部分組成：
+AEM中的Teaser由以下几个部分组成：
 
-* **Teaser頁面** 儲存在適當的行銷活動頁面下，並保留每個特定行銷活動可用的Teaser段落定義。 顯示Teaser段落時，會使用這些定義，包括內容變數、用於選取變數和提升因子的區段。
-* 此 **Teaser元件** 立即可用，並可讓您在內容頁面中建立特定Teaser段落的例項。 您可以從sidekick拖曳Teaser元件，然後指定您的Teaser定義以建立您自己的Teaser段落。 **注意：** AEM 6.2已棄用Teaser元件。請使用 [目標元件](/help/sites-authoring/content-targeting-touch.md) 而非。
-* **Teaser段落** 是內容頁面中Teaser的實際例項。 這些功能可吸引部分訪客前往關注其興趣的內容。
-* 包含以特定訪客區段為焦點之促銷活動內容的頁面。 通常Teaser段落會將訪客導向到這類頁面。
+* **Teaser页面** 存储在相应的营销活动页面下，其中包含可用于每个特定营销活动的Teaser段落的定义。 在显示Teaser段落时，使用这些定义；包括内容变体，用于选择变体和Boost因子的区段。
+* 此 **Teaser组件** 开箱即用，允许您在内容页面中创建特定Teaser段落的实例。 您可以从sidekick中拖动Teaser组件，然后指定您的Teaser定义以创建您自己的Teaser段落。 **注意：** AEM 6.2中已弃用Teaser组件。请使用 [目标组件](/help/sites-authoring/content-targeting-touch.md) 而是。
+* **Teaser段落** 是内容页面中Teaser的实际实例。 这些功能可吸引部分访客进入关注其兴趣的内容。
+* 包含营销活动内容的页面专注于特定访客区段。 通常，Teaser段落会将访客引向此类页面。
 
 ## 策略 {#strategies}
 
-將Teaser段落新增至頁面時，您需要定義 **策略**.
+将Teaser段落添加到页面时，您需要定义 **策略**.
 
-這是因為，當其指派的區段都成功解析時，有數個Teaser可供選擇。 此 **策略** 然後指定用於選取所顯示Teaser的額外條件：
+这适用于多个Teaser可供选择的情况，因为它们分配的区段都已成功解析。 此 **策略** 然后指定用于选择显示的Teaser的额外条件：
 
-* **點按資料流分數**，根據訪客使用者端內容中保留的標籤和相關標籤點選（顯示訪客點按包含個別標籤的頁面的頻率）。 系統會比較Teaser頁面上定義之標籤的點選率。
-* **Random**，針對「隨機」選擇；使用針對頁面產生的隨機因子，這可以透過以下方式檢視 [使用者端內容](/help/sites-administering/client-context.md).
-* **第一個** 已解析區段清單中。 順序是行銷活動容器頁面中Teaser的順序。
+* **Clickstream分数**，基于访客的客户端上下文中保存的标记和相关标记点击（显示访客点击包含相应标记的页面的频率）。 比较Teaser页面上定义的标记的命中率。
+* **Random**，用于“随机”选择；使用为页面生成的随机因子，这可以通过以下图标查看 [客户端上下文](/help/sites-administering/client-context.md).
+* **第一个** 已解析区段的列表中。 顺序是营销活动容器页面中Teaser的顺序。
 
-此 [提升因數](/help/sites-administering/campaign-segmentation.md#boost-factor) 區段的「 」也會影響選取範圍。 這是新增至區段定義的加權因子，可增加/減少選取該區段的相對可能性。
+此 [提升因子](/help/sites-administering/campaign-segmentation.md#boost-factor) 区段的选择也会受到影响。 这是添加到区段定义的权重因子，用于增加/减少选择区段的相对可能性。
 
-各種選擇標準的流程和相互關係以範例最能說明（此方法也可用來確保您的Teaser將觸及所需對象）。
+各种选择标准的流程和相互关系用一个示例进行了最佳说明（该方法也可用于确保您的Teaser将达到所需的受众）。
 
-如果已建立下列區段並指派其各自的Boost因子：
+如果已创建并分配了以下区段各自的Boost因子：
 
-| 市场细分 | 提升因數 |
+| 市场细分 | 提升因子 |
 |---|---|
 | S1 | 0 |
 | S2 | 0 |
@@ -61,21 +61,21 @@ AEM內的Teaser由幾個部分組成：
 | S5 | 0 |
 | S6 | 100 |
 
-我們使用下列Teaser定義：
+我们使用以下Teaser定义：
 
 <table>
  <tbody>
   <tr>
    <td>营销活动</td>
    <td>Teaser</td>
-   <td>指派的區段</td>
-   <td>指派的標籤 </td>
+   <td>已分配的区段</td>
+   <td>已分配的标记 </td>
   </tr>
   <tr>
    <td>C1</td>
    <td>T1</td>
    <td>S1， S2</td>
-   <td>商業、行銷</td>
+   <td>商业、营销</td>
   </tr>
   <tr>
    <td>C1</td>
@@ -99,7 +99,7 @@ AEM內的Teaser由幾個部分組成：
    <td>C1 </td>
    <td>T5</td>
    <td>S1、S2、S6</td>
-   <td>行銷</td>
+   <td>营销</td>
   </tr>
   <tr>
    <td>C1 </td>
@@ -110,37 +110,37 @@ AEM內的Teaser由幾個部分組成：
  </tbody>
 </table>
 
-那麼如果我們將此套用至訪客，其中：
+然后，如果将此参数应用于访客，其中：
 
-* **S1**， **S2** 和 **S6** 已成功解析
+* **S1**， **S2** 和 **S6** 解决成功
 
-* 標籤 **行銷** 有3個點選
-* 標籤 **企業** 有6次點選
+* 标记 **营销** 有3次点击
+* 标记 **商业** 有6次点击
 
-我們可以看到結果：
+我们可以看到结果：
 
-* 匹配成功 — 指派給Teaser的任何區段是否成功解析為目前訪客？
-* 提升因子 — 所有適用區段中的最高提升因子
-* 點按流分數 — 所有適用標籤點選的累加總數
+* 匹配成功 — 是否已成功为当前访客解析分配给Teaser的任何区段？
+* 提升因子 — 所有适用区段中的最高提升因子
+* clickstream分数 — 所有适用标记点击量的累积总数
 
-在套用適當策略之前計算得出的值：
+算之所有已确认财务资料之适当策略：
 
 <table>
  <tbody>
   <tr>
    <td>营销活动</td>
    <td>Teaser</td>
-   <td>指派的區段</td>
+   <td>已分配的区段</td>
    <td>标记 </td>
-   <td>相符成功？</td>
-   <td>產生的提升因數</td>
-   <td>產生的Clickstream分數 </td>
+   <td>是否匹配成功？</td>
+   <td>产生的提升因子</td>
+   <td>生成的Clickstream分数 </td>
   </tr>
   <tr>
    <td>C1</td>
    <td>T1</td>
    <td>S1， S2</td>
-   <td>商業、行銷</td>
+   <td>商业、营销</td>
    <td>是</td>
    <td>0</td>
    <td>9</td>
@@ -176,7 +176,7 @@ AEM內的Teaser由幾個部分組成：
    <td>C1 </td>
    <td>T5</td>
    <td>S1、S2、S6</td>
-   <td>行銷</td>
+   <td>营销</td>
    <td>是</td>
    <td>100</td>
    <td>3</td>
@@ -193,81 +193,81 @@ AEM內的Teaser由幾個部分組成：
  </tbody>
 </table>
 
-這些值用於決定訪客將看到的Teaser，取決於 **策略** 套用至Teaser段落：
+这些值用于确定访客将看到的Teaser，具体取决于 **策略** 应用于Teaser段落：
 
 <table>
  <tbody>
   <tr>
    <td>战略</td>
-   <td>產生的Teaser</td>
+   <td>生成的Teaser</td>
    <td>评论</td>
   </tr>
   <tr>
    <td>第一个</td>
    <td>T5</td>
-   <td>只有T5和T6被視為其區段全部解析 <i>和</i> 它們具有最高的提升因子。 傳回的清單順序為T5、T6；因此會選取並顯示T5。</td>
+   <td>只有T5和T6被视为其区段全部解析 <i>和</i> 它们具有最高的提升因子。 返回的列表顺序为T5、T6；因此选择并显示T5。</td>
   </tr>
   <tr>
    <td>随机</td>
    <td>T5或T6</td>
-   <td>這兩個Teaser都有完全解決和相同提升因子的區段。 因此，這兩個Teaser會以相等比例顯示。</td>
+   <td>这两个Teaser都具有所有解析度相同的提升因素。 因此，两个Teaser的比例相等。</td>
   </tr>
   <tr>
-   <td>點按資料流分數</td>
+   <td>Clickstream分数</td>
    <td>T6</td>
-   <td><p>T1、T4、T5和T6的區段都會解析給訪客。 T5和T6的較高提升因子則排除T1和T4。 最後，T6的點按資料流分數越高，系統就會選取此專案。</p> </td>
+   <td><p>T1、T4、T5和T6的区段都会解析为访客。 T5和T6的升压因子越高，T1和T4被排除在外。 最后，T6的点击流得分越高，就会导致选中此项。</p> </td>
   </tr>
  </tbody>
 </table>
 
 >[!NOTE]
 >
->如果在上述解析度技巧之後，有多個Teaser可供選擇，則內部選擇（隨機）將選擇單個Teaser進行顯示。
+>如果在上述分辨率技术之后，有多个Teaser可供选择，则内部选择（随机）将选择单个Teaser进行显示。
 >
->例如，如果策略為「點按資料流分數」，且T5的「點按資料流分數」與T6相同（即6而非3），則會使用內部選擇（隨機）來選取這兩個專案之一。
+>例如，如果策略是Clickstream得分，并且T5的Clickstream得分与T6相同（即，6而不是3），则内部选择（随机）将用于选择这两种方法之一。
 
-Teaser頁面/段落可用來將特定訪客區段引導至聚焦於其興趣的內容。 附註可呈現一系列選項供訪客選擇，或僅顯示一個根據特定訪客區段的Teaser段落；例如，顯示的Teaser段落可能取決於訪客的年齡。
+Teaser页面/段落用于引导特定访客区段访问关注其兴趣的内容。 它们可以呈现一系列供访客选择的选项，或仅显示一个基于特定访客区段的Teaser段落；例如，显示的Teaser段落可能取决于访客的年龄。
 
-通常Teaser頁面是暫時性動作，會持續一段特定時間，直到被下一個Teaser頁面取代。
+通常，Teaser页面是一种临时操作，将持续特定时段，直到它被下一个Teaser页面替换。
 
-建立您的品牌和行銷活動後，您可以建立和設定您的Teaser體驗。
+创建品牌和营销活动后，您可以创建和设置您的Teaser体验。
 
-### 為您的Teaser建立接觸點 {#creating-a-touchpoint-for-your-teaser}
+### 为Teaser创建接触点 {#creating-a-touchpoint-for-your-teaser}
 
 >[!NOTE]
 >
->AEM 6.2已棄用Teaser元件。請使用 [目標元件](/help/sites-authoring/content-targeting-touch.md) 而非。
+>AEM 6.2中已弃用Teaser组件。请使用 [目标组件](/help/sites-authoring/content-targeting-touch.md) 而是。
 
-1. 導覽至您要放置Teaser段落的內容頁面，此段落將導向您的行銷活動頁面。
-1. 新增 **Teaser** 元件(可在 **個人化** 部分)。 首次建立時，將顯示尚未設定行銷活動路徑：
+1. 导航到要放置指向活动页面的Teaser段落的内容页面。
+1. 添加 **Teaser** 组件(可在 **个性化** 部分)在所需位置。 首次创建时，将显示尚未配置营销活动路径：
 
    ![chlimage_1](assets/chlimage_1.png)
 
-1. 編輯Teaser元件以新增：
+1. 编辑Teaser组件以添加：
 
-   * **行銷活動路徑**
-包含個別Teaser頁面的促銷活動頁面路徑；區段會確切決定要顯示哪個Teaser。
+   * **营销活动路径**
+包含个别Teaser页面的营销活动页面的路径；区段确切决定要显示哪个Teaser。
 
    * **[策略](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#strategies)**
-成功解析多個區段時用於選取的方法。
+成功解析多个区段时用于选择的方法。
    ![chlimage_1-1](assets/chlimage_1-1.png)
 
-1. 按一下 **確定** 以儲存。 根據您在Teaser上設定的區段以及您目前以身分登入之使用者的設定檔，將顯示適當的內容：
+1. 单击 **确定** 以保存。 根据您在Teaser上设置的区段以及您当前以身份登录的用户的用户档案，将显示相应的内容：
 
    ![chlimage_1-2](assets/chlimage_1-2.png)
 
-1. 將滑鼠移至Teaser段落上方，以顯示問號圖示（元件的右下角）。 按一下以檢視套用的區段以及它們目前是否解析。
+1. 将鼠标悬停在Teaser段落上以显示问号图标（组件的右下角）。 单击此项可查看应用的区段以及它们当前是否解析。
 
    ![chlimage_1-3](assets/chlimage_1-3.png)
 
 ### Teaser概述 {#teaser-overview}
 
-除了MCM中的行銷活動檢視外，行銷活動頁面也會提供與其連線的Teaser的相關資訊：
+除了MCM中的营销活动视图外，营销活动页面还提供有关连接到它的Teaser的信息：
 
-1. 從 **網站** 主控台，開啟促銷活動頁面；例如：
+1. 从 **网站** 控制台中，打开促销活动页面；例如：
 
    `https://localhost:4502/content/campaigns/geometrixx-outdoors/storefront/summer.html`
 
-   以下顯示Teaser定義和檢視統計資料的概觀：
+   下面显示了Teaser定义和查看统计信息的概述：
 
    ![chlimage_1-4](assets/chlimage_1-4.png)

@@ -1,7 +1,7 @@
 ---
-title: 建立行動應用程式
+title: 构建移动应用程序
 seo-title: Building Mobile Applications
-description: 本頁提供如何使用GitHub提供的程式碼來建立行動應用程式的完整逐步文章。建立您的應用程式以安裝至裝置或模擬器，以進行測試或發佈至應用程式商店。 您可以使用PhoneGap命令列介面在本機建立應用程式，或使用PhoneGap Build在雲端中建立應用程式。
+description: 本页提供了有关如何使用GitHub中提供的代码构建移动应用程序的完整分步文章。构建您的应用程序以安装到设备或模拟器以进行测试或发布到应用商店。 您可以使用PhoneGap命令行界面在本地构建应用程序，也可以使用PhoneGap Build在云中构建应用程序。
 seo-description: This page provides a complete step-by-step article on how to build a mobile application using code available from GitHub is available here.Build your application to install to a device or simulator for testing or for publishing to app stores. You can build applications locally using the PhoneGap Command Line Interface, or in the cloud using PhoneGap Build.
 uuid: 1ff6fe1a-24cc-4973-a2cd-8d356bc649b0
 contentOwner: User
@@ -17,58 +17,58 @@ ht-degree: 1%
 
 ---
 
-# 建立行動應用程式{#building-mobile-applications}
+# 构建移动应用程序{#building-mobile-applications}
 
 >[!NOTE]
 >
->Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）專案使用SPA編輯器。 [了解详情](/help/sites-developing/spa-overview.md).
+>Adobe建议对需要基于单页应用程序框架的客户端渲染（例如React）的项目使用SPA编辑器。 [了解详情](/help/sites-developing/spa-overview.md).
 
-建置您的應用程式以安裝至裝置或模擬器，以進行測試或發佈至應用程式商店。 您可以使用PhoneGap命令列介面在本機建立應用程式，或使用PhoneGap Build在雲端中建立應用程式。
+构建您的应用程序以安装到设备或模拟器以进行测试或发布到应用商店。 您可以使用PhoneGap命令行界面在本地构建应用程序，也可以使用PhoneGap Build在云中构建应用程序。
 
-有關如何使用GitHub提供的程式碼建立行動應用程式的完整逐步文章，已可供參考 [此處](https://helpx.adobe.com/experience-manager/using/aem62_mobile.html).
+提供了有关如何使用GitHub中提供的代码构建移动应用程序的完整分步文章 [此处](https://helpx.adobe.com/experience-manager/using/aem62_mobile.html).
 
-## 將應用程式移動到發佈執行個體 {#moving-the-application-to-the-publish-instance}
+## 将应用程序移动到发布实例 {#moving-the-application-to-the-publish-instance}
 
-將應用程式檔案移至發佈執行個體，讓您可以將內容更新提供給已安裝的行動應用程式執行個體，並使用發佈的內容建置應用程式。 應用程式包含存放庫中的兩個節點分支：
+将应用程序文件移动到发布实例，以便您可以为移动应用程序的已安装实例提供内容更新，并使用已发布的内容构建应用程序。 应用程序由存储库中的两个节点分支组成：
 
-* `/content/phonegap/apps/<application name>`：作者建立和啟動的網頁。
-* `/content/phonegap/content/<application name>`：應用程式設定檔案和內容同步設定。
+* `/content/phonegap/apps/<application name>`：作者创建和激活的网页。
+* `/content/phonegap/content/<application name>`：应用程序配置文件和内容同步配置。
 
 >[!NOTE]
 >
->如果您未將應用程式檔案移至發佈執行個體，內容作者將無法更新Content Sync快取。
+>如果不将应用程序文件移动到发布实例，则内容作者无法更新内容同步缓存。
 
-您只需要移動以下位置的檔案： `/content/phonegap/content/<application name>` 分支至發佈執行個體。 中的檔案 `/content/phonegap/apps/<application name>` 分支會在作者啟動頁面時移動。
+您只需将文件 `/content/phonegap/content/<application name>` 分支到发布实例。 中的文件 `/content/phonegap/apps/<application name>` 分支会在作者激活页面时移动。
 
-AEM提供將大量內容移動到發佈執行個體的兩種方法：
+AEM提供了两种将批量内容移动到发布实例的方法：
 
-* [使用「啟動樹狀結構」指令](/help/sites-authoring/publishing-pages.md) 在復寫主控台上。
-* [建立套件](/help/sites-administering/package-manager.md) 包含內容並復寫套件的檔案。
+* [使用“激活树”命令](/help/sites-authoring/publishing-pages.md) 在复制控制台上。
+* [创建资源包](/help/sites-administering/package-manager.md) 包含内容并复制包的文件夹。
 
-例如，建立名為phonegapapp的行動應用程式。 下列節點必須移至發佈執行個體： /content/phonegap/content/phonegapapp。
+例如，创建了名为phonegapapp的移动应用程序。 必须将以下节点移动到发布实例：/content/phonegap/content/phonegapapp。
 
-**秘訣：** 若要將套件從製作執行個體移動至發佈執行個體，請在套件上使用復寫命令。
+**提示：** 要将包从创作实例移动到发布实例，请在包上使用Replicate命令。
 
 ![chlimage_1-16](assets/chlimage_1-16.png)
 
-## 使用PhoneGap命令列介面建置 {#building-using-the-phonegap-command-line-interface}
+## 使用PhoneGap命令行界面构建 {#building-using-the-phonegap-command-line-interface}
 
-使用PhoneGap命令列介面(CLI)編譯電腦上的PhoneGap應用程式。 為了將AEM內容納入您的應用程式，AEM會建立一個ZIP檔案，其中包含您行動應用程式的內容、Content Sync設定和其他必要資產。 下載ZIP檔案並將其包含在您的組建中。
+使用PhoneGap命令行界面(CLI)编译计算机上的PhoneGap应用程序。 要在应用程序中包含AEM内容，AEM会创建一个ZIP文件，其中包含移动应用程序的内容、内容同步配置和其他必需资源。 下载ZIP文件并将其包含在您的内部版本中。
 
-### 準備您的組建環境 {#preparing-your-build-environment}
+### 准备构建环境 {#preparing-your-build-environment}
 
-若要使用PhoneGap CLI建置，您必須安裝Node.js和PhoneGap使用者端公用程式。 您需要網際網路連線才能執行下列程式。
+要使用PhoneGap CLI进行构建，您需要安装Node.js和PhoneGap客户端实用程序。 您需要连接Internet才能执行以下步骤。
 
-1. 下載並安裝 [Node.js](https://nodejs.org/).
-1. 開啟終端機或命令提示字元並輸入下列節點命令以安裝PhoneGap公用程式：
+1. 下载并安装 [Node.js](https://nodejs.org/).
+1. 打开终端或命令提示符并输入以下node命令以安装PhoneGap实用程序：
 
    ```shell
    npm install -g phonegap
    ```
 
-   在Unix或Linux系統上，您可能需要在命令的前置詞中加上 `sudo`.
+   在Unix或Linux系统上，可能需要为命令添加前缀 `sudo`.
 
-   終端機會顯示一系列HTTPGET命令的結果。 安裝成功時，終端機會顯示程式庫的安裝位置，類似於以下範例：
+   终端显示了一系列HTTPGET命令的结果。 成功安装后，终端会显示库的安装位置，类似于以下示例：
 
    ```xml
    /usr/local/bin/phonegap -> /usr/local/lib/node_modules/phonegap/bin/phonegap.js
@@ -85,91 +85,91 @@ AEM提供將大量內容移動到發佈執行個體的兩種方法：
    └── cordova@3.3.0-0.1.1 (...)
    ```
 
-1. （選用）取得您鎖定目標之行動平台的SDK：
+1. （可选）获取要定位的移动平台的SDK：
 
-   * 若要為iOS平台建置應用程式，請安裝最新版本的 [Xcode](https://developer.apple.com/xcode/).
-   * 若要建置Android應用程式，請安裝 [Android SDK](https://developer.android.com/).
+   * 要为iOS平台构建应用程序，请安装最新版本的 [Xcode](https://developer.apple.com/xcode/).
+   * 要构建Android应用程序，请安装 [Android SDK](https://developer.android.com/).
 
-### 下載內容ZIP檔案 {#downloading-the-content-zip-file}
+### 下载内容ZIP文件 {#downloading-the-content-zip-file}
 
-將行動應用程式的內容移至檔案系統。
+将移动应用程序的内容移动到文件系统。
 
-1. 在行動應用程式頁面上，選取您的應用程式。
-1. （可選）若要建置應用程式以進行完整安裝，請在工具列上按一下或點選「清除快取」圖示。
+1. 在“移动设备应用程序”页面上，选择您的应用程序。
+1. （可选）要构建应用程序以进行完整安装，请在工具栏上单击或点按“清除缓存”图标。
 
    ![](do-not-localize/chlimage_1.png)
 
    >[!NOTE]
    >
-   >快取會儲存已安裝應用程式的內容更新。 清除快取會使所有快取的更新失效。
+   >缓存包含已安装应用程序的内容更新。 清除缓存将会使所有缓存更新失效。
 
-1. 在工具列上，按一下或點選「下載CLI資產」圖示。
+1. 在工具栏上，单击或点按下载CLI资产图标。
 
    ![](do-not-localize/chlimage_1-1.png)
 
-1. 儲存ZIP檔案後，按一下「成功」對話方塊上的「關閉」 。
-1. 解壓縮ZIP檔案的內容。
+1. 保存ZIP文件后，在“成功”对话框中单击“关闭”。
+1. 解压缩ZIP文件的内容。
 
-### 使用PhoneGap CLI建置 {#using-the-phonegap-cli-to-build}
+### 使用PhoneGap CLI构建 {#using-the-phonegap-cli-to-build}
 
-使用PhoneGap CLI編譯及安裝應用程式。 如需有關如何使用PhoneGap CLI的資訊，請參閱PhoneGap [命令列介面](https://docs.phonegap.com/en/3.0.0/guide_cli_index.md.html) 說明檔案。
+使用PhoneGap CLI编译和安装应用程序。 有关如何使用PhoneGap CLI的信息，请参阅PhoneGap [命令行界面](https://docs.phonegap.com/en/3.0.0/guide_cli_index.md.html) 文档。
 
-1. 開啟終端機或命令提示字元，並將目前目錄變更為下載的應用程式ZIP檔案。 例如，下列會將目錄變更為ng-app-cli.1392137825303.zip檔案：
+1. 打开终端或命令提示符并将当前目录更改为下载的应用程序ZIP文件。 例如，以下内容会将目录更改为ng-app-cli.1392137825303.zip文件：
 
    ```shell
    cd ~/Downloads/ng-app-cli.1392137825303
    ```
 
-1. 輸入您要定位之平台的phonegap指令。 例如，以下命令會建置適用於Android的應用程式：
+1. 为要定位的平台输入phonegap命令。 例如，以下命令可构建Android应用程序：
 
    ```shell
    phonegap build android
    ```
 
-## 使用PhoneGap Build建置 {#building-using-phonegap-build}
+## 使用PhoneGap Build构建 {#building-using-phonegap-build}
 
-使用PhoneGap雲端服務建置您的應用程式。 若要執行此程式，您必須先建立PhoneGap Build組態。
+使用PhoneGap云服务构建您的应用程序。 要执行此过程，必须首先创建PhoneGap Build配置。
 
 ### 正在连接到 PhoneGap Build {#connecting-to-phonegap-build}
 
-建立PhoneGap Build設定，以便您可以使用AEM中的PhoneGap Build服務。 提供您將用來建置行動應用程式之PhoneGap Build帳戶的使用者名稱和密碼。
+创建PhoneGap Build配置，以便您可以从AEM中使用PhoneGap Build服务。 提供用于构建移动应用程序的PhoneGap Build的用户名和密码。
 
-1. 開啟「工具」頁面。 ([http://localhost:4502/tools.html](http://localhost:4502/tools.html))。
-1. 在「CQ操作」區域中，按一下「Cloud Services」。
-1. 按一下PhoneGap Build的「立即設定」連結。
+1. 打开“工具”页面。 ([http://localhost:4502/tools.html](http://localhost:4502/tools.html))。
+1. 在“CQ操作”区域中，单击“Cloud Services”。
+1. 单击PhoneGap Build的“立即配置”链接。
 
    ![chlimage_1-17](assets/chlimage_1-17.png)
 
-1. 在建立設定對話方塊中，輸入Title屬性的值。 依預設，「名稱」屬性的值是從標題衍生而來，但您可以輸入名稱。 单击创建。
-1. 在「PhoneGap Build組態」對話方塊中，輸入您的PhoneGap Build使用者名稱和密碼，然後按一下「確定」。
+1. 在创建配置对话框中，为Title属性键入一个值。 默认情况下，“名称”属性的值派生自标题，但您可以输入名称。 单击创建。
+1. 在“PhoneGap Build配置”对话框中，键入您的PhoneGap Build用户名和密码，然后单击“确定”。
 
 ### 使用PhoneGap Build {#using-phonegap-build}
 
-將您的應用程式資源傳送至PhoneGap Build，以便針對各種行動平台進行編譯。
+将应用程序资源发送到PhoneGap Build，以便针对各种移动平台进行编译。
 
-1. 在行動應用程式頁面上，開啟您的行動應用程式。 ([http://localhost:4502/mobile.html/content/phonegap](http://localhost:4502/mobile.html/content/phonegap))
-1. （選擇性）若要建立應用程式以完成安裝，請選取應用程式並按一下「清除快取」圖示。
+1. 在“移动设备应用程序”页面上，打开您的移动设备应用程序。 ([http://localhost:4502/mobile.html/content/phonegap](http://localhost:4502/mobile.html/content/phonegap))
+1. （可选）要构建应用程序以进行完整安装，请选择该应用程序，然后单击“清除缓存”图标。
 
    ![](do-not-localize/chlimage_1-2.png)
 
    >[!NOTE]
    >
-   >快取會儲存已安裝應用程式的內容更新。 清除快取會使所有快取的更新失效。
+   >缓存包含已安装应用程序的内容更新。 清除缓存将会使所有缓存更新失效。
 
-1. 選取啟動顯示頁面，然後按一下「建置遠端」圖示。
+1. 选择启动页面，然后单击构建远程图标。
 
    ![](do-not-localize/chlimage_1-3.png)
 
-   **注意：** 建置成功完成時，Beta版的AEM Beta版不會建立收件匣通知。
+   **注意：** 测试版AEM Beta在构建成功完成时不会创建收件箱通知。
 
-1. 在「成功」對話方塊中，按一下「PhoneGap Build」以開啟Adobe PhoneGap Build頁面，網址為 [https://build.phonegap.com/apps](https://build.phonegap.com/apps). 如果您正等待應用程式出現，可以檢查 [PhoneGap Build狀態](https://status.build.phonegap.com/) 頁面。
+1. 在成功对话框中，单击PhoneGap Build以打开Adobe PhoneGap Build页面，网址为 [https://build.phonegap.com/apps](https://build.phonegap.com/apps). 如果您正在等待应用程序显示，则可以检查 [PhoneGap Build状态](https://status.build.phonegap.com/) 页面。
 
-   如需關於安裝組建的資訊，請參閱 [PhoneGap Build檔案](https://github.com/phonegap/phonegap-docs/tree/master/docs/4-phonegap-build).
+   有关安装内部版本的信息，请参阅 [PhoneGap Build文档](https://github.com/phonegap/phonegap-docs/tree/master/docs/4-phonegap-build).
 
    >[!NOTE]
    >
-   >允許一個私密應用程式使用自由PhoneGap Build帳戶。 如果您要建置其他私人應用程式，PhoneGap建置會失敗。
+   >允许一个私有PhoneGap Build使用自由帐户。 如果您正在构建其他私有应用程序，PhoneGap构建会失败。
 
 ### 后续步骤 {#the-next-steps}
 
-建置程式後的下一個步驟是瞭解 [應用程式的結構](/help/mobile/phonegap-structure-an-app.md).
+构建过程后的下一步是了解 [应用程序的结构](/help/mobile/phonegap-structure-an-app.md).

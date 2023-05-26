@@ -1,6 +1,6 @@
 ---
-title: 在AEM中建立Adobe Campaign Forms
-description: AEM可讓您建立並使用與您網站上的Adobe Campaign互動的表單。 特定欄位可以插入您的表單並對應至Adobe Campaign資料庫。
+title: 在AEM中创建Adobe Campaign Forms
+description: AEM允许您创建和使用与您网站上的Adobe Campaign交互的表单。 可以将特定字段插入表单并映射到Adobe Campaign数据库。
 uuid: 7b1028f3-268a-4d4d-bc9f-acd176f5ef3d
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -15,121 +15,121 @@ ht-degree: 0%
 
 ---
 
-# 在AEM中建立Adobe Campaign Forms{#creating-adobe-campaign-forms-in-aem}
+# 在AEM中创建Adobe Campaign Forms{#creating-adobe-campaign-forms-in-aem}
 
-AEM可讓您建立並使用與您網站上的Adobe Campaign互動的表單。 特定欄位可以插入您的表單並對應至Adobe Campaign資料庫。
+AEM允许您创建和使用与您网站上的Adobe Campaign交互的表单。 可以将特定字段插入表单并映射到Adobe Campaign数据库。
 
-您可以管理新的連絡人訂閱、取消訂閱和使用者設定檔資料，同時將其資料整合到您的Adobe Campaign資料庫中。
+您可以管理新的联系人订阅、退订和用户配置文件数据，同时将其数据集成到您的Adobe Campaign数据库中。
 
-若要在AEM中使用Adobe Campaign表單，您必須依照本檔案所述的步驟操作：
+要在AEM中使用Adobe Campaign表单，您需要按照本文档中描述的以下步骤操作：
 
-1. 讓範本可供使用。
-1. 建立表單。
-1. 編輯表單內容。
+1. 使模板可用。
+1. 创建表单。
+1. 编辑表单内容。
 
-預設提供三種特定於Adobe Campaign的表單型別：
+默认情况下，提供了三种特定于Adobe Campaign的表单类型：
 
-* 儲存設定檔
-* 訂閱服務
-* 取消訂閱服務
+* 保存配置文件
+* 订购服务
+* 取消订阅服务
 
-這些表單會定義一個URL引數，該引數接受Adobe Campaign設定檔的加密主要金鑰。 表單會根據此URL引數更新相關Adobe Campaign設定檔的資料。
+这些表单定义一个URL参数，该参数接受Adobe Campaign配置文件的加密主密钥。 根据此URL参数，表单会更新关联Adobe Campaign配置文件的数据。
 
-雖然您是獨立建立這些表單，但在典型的使用案例中，您會在電子報內容內產生表單頁面的個人化連結，讓收件者可以開啟連結，並調整其設定檔資料（無論是取消訂閱、訂閱或更新其設定檔）。
+尽管单独创建这些表单，但在典型用例中，您会在新闻稿内容中生成指向表单页面的个性化链接，以便收件人可以打开该链接并对其配置文件数据进行调整（无论是取消订阅、订阅还是更新其配置文件）。
 
-表單會根據使用者自動更新。 另請參閱 [編輯表單內容](#editing-form-content) 以取得詳細資訊。
+表单会根据用户自动更新。 参见 [编辑表单内容](#editing-form-content) 了解更多信息。
 
-## 讓範本可供使用 {#making-a-template-available}
+## 使模板可用 {#making-a-template-available}
 
-您必須先在AEM應用程式中提供不同的範本，才能建立Adobe Campaign專用的表單。
+在能够创建特定于Adobe Campaign的表单之前，必须在AEM应用程序中提供各种模板。
 
-若要這麼做，請參閱 [範本檔案](/help/sites-developing/page-templates-static.md#templateavailability).
+要执行此操作，请参阅 [模板文档](/help/sites-developing/page-templates-static.md#templateavailability).
 
-首先，請檢查製作和發佈執行個體之間的連線，以及Adobe Campaign是否正常運作。 另請參閱 [與Adobe Campaign Standard整合](/help/sites-administering/campaignstandard.md) 或 [與Adobe Campaign 6.1整合](/help/sites-administering/campaignonpremise.md).
+首先，检查创作实例和发布实例之间的连接，确保Adobe Campaign正常运行。 参见 [与Adobe Campaign Standard集成](/help/sites-administering/campaignstandard.md) 或 [与Adobe Campaign 6.1集成](/help/sites-administering/campaignonpremise.md).
 
 >[!NOTE]
 >
->確定 **acMapping** 頁面上的屬性 **jcr：content** 節點已設為 **mapRecipient** 或 **設定檔** 分別使用Adobe Campaign 6.1.x或Adobe Campaign Standard時
+>确保 **acMapping** 页面上的属性 **jcr：content** 节点设置为 **mapRecipient** 或 **个人资料** 分别使用Adobe Campaign 6.1.x或Adobe Campaign Standard时
 
-### 建立表單 {#creating-a-form}
+### 创建表单 {#creating-a-form}
 
-1. 在siteadmin中開始。
-1. 捲動瀏覽樹狀結構，以抵達您要在所選網站中建立表單的位置。
-1. 選取 **新增** > **新增頁面……**.
-1. 選取 **Adobe Campaign設定檔(AC 6.1)** 或 **Adobe Campaign設定檔(ACS)** 範本並輸入頁面屬性。
+1. 在siteadmin中启动。
+1. 滚动浏览树结构以转到您要在所选网站中创建表单的位置。
+1. 选择 **新** > **新建页面……**.
+1. 选择 **Adobe Campaign配置文件(AC 6.1)** 或 **Adobe Campaign配置文件(ACS)** 模板并输入页面属性。
 
    >[!NOTE]
    >
-   >如果範本無法使用，請參閱 [讓範本可供使用](/help/sites-classic-ui-authoring/classic-personalization-ac.md#activatingatemplate) 區段。
+   >如果模板不可用，请参阅 [使模板可用](/help/sites-classic-ui-authoring/classic-personalization-ac.md#activatingatemplate) 部分。
 
-1. 按一下 **建立** 以建立表單。
+1. 单击 **创建** 以创建表单。
 
    ![chlimage_1-187](assets/chlimage_1-187.png)
 
-   然後，您可以 [編輯和設定表單內容](#editing-form-content).
+   然后，您可以 [编辑和配置表单内容](#editing-form-content).
 
-## 編輯表單內容 {#editing-form-content}
+## 编辑表单内容 {#editing-form-content}
 
-Adobe Campaign專用的Forms具有特定元件。 這些元件可讓您選擇將表單的每個欄位連結到Adobe Campaign資料庫中的欄位。
+专门用于Adobe Campaign的Forms具有特定的组件。 这些组件允许您选择将表单的每个字段链接到Adobe Campaign数据库中的字段。
 
 >[!NOTE]
 >
->如果需要的範本無法使用，請參閱 [讓範本可供使用](/help/sites-classic-ui-authoring/classic-personalization-ac.md#activatingatemplate).
+>如果所需的模板不可用，请参阅 [使模板可用](/help/sites-classic-ui-authoring/classic-personalization-ac.md#activatingatemplate).
 
-本節僅詳細說明Adobe Campaign的特定連結。 如需如何在Adobe Experience Manager中使用表單的更多一般概覽資訊，請參閱 [Editmode元件](/help/sites-classic-ui-authoring/classic-page-author-edit-mode.md).
+此部分仅详细介绍指向Adobe Campaign的特定链接。 有关如何在Adobe Experience Manager中使用表单的更一般概述的更多信息，请参阅 [Editmode组件](/help/sites-classic-ui-authoring/classic-page-author-edit-mode.md).
 
-1. 導覽至您要編輯的表單。
-1. 在工具箱中，選取 **頁面** > **頁面屬性……** 然後前往 **Cloud Services** 頁簽的快顯視窗。
-1. 按一下「 」以新增Adobe Campaign服務 **新增服務**，然後在服務的下拉式清單中選取與您的Adobe Campaign執行個體對應的設定。 設定執行個體之間的連線時，會執行此設定。 如需詳細資訊，請參閱 [將AEM連線至Adobe Campaign](/help/sites-administering/campaignonpremise.md#connecting-aem-to-adobe-campaign).
+1. 导航到要编辑的表单。
+1. 在工具箱中，选择 **页面** > **页面属性……** 然后转到 **Cloud Services** 选项卡。
+1. 通过单击添加Adobe Campaign服务 **添加服务**，然后在服务的下拉列表中选择与您的Adobe Campaign实例对应的配置。 在设置实例之间的连接时执行此配置。 有关更多信息，请参阅 [将AEM连接到Adobe Campaign](/help/sites-administering/campaignonpremise.md#connecting-aem-to-adobe-campaign).
 
    >[!NOTE]
    >
-   >如有必要，請按一下掛鎖圖示以解除鎖定設定，進而新增Adobe Campaign服務。
+   >如有必要，单击挂锁图标可解锁配置，以便能够添加Adobe Campaign服务。
 
-1. 使用存取表單的一般引數 **編輯** 在表單開頭找到按鈕。 此 **表單** 索引標籤可讓您選取感謝頁面，在驗證表單後將使用者重新導向該頁面。
+1. 使用访问表单的常规参数 **编辑** 在表单开头找到的按钮。 此 **表单** 选项卡允许您选择在验证表单后用户将被重定向到的感谢页面。
 
-   此 **進階** 表單可讓您選取表單型別。 此 **張貼選項** 欄位可讓您選擇三種型別的Adobe Campaign表單：
+   此 **高级** 表单允许您选择表单类型。 此 **帖子选项** 字段允许您在三种类型的Adobe Campaign表单之间进行选择：
 
-   * **Adobe Campaign：儲存設定檔**：可讓您在Adobe Campaign （預設值）中建立或更新收件者。
-   * **Adobe Campaign：訂閱服務**：可讓您在Adobe Campaign中管理收件者的訂閱。
-   * **Adobe Campaign：取消訂閱服務**：可讓您在Adobe Campaign中取消收件者的訂閱。
+   * **Adobe Campaign：保存配置文件**：用于在Adobe Campaign中创建或更新收件人（默认值）。
+   * **Adobe Campaign：订阅服务**：用于在Adobe Campaign中管理收件人的订阅。
+   * **Adobe Campaign：取消订阅服务**：用于在Adobe Campaign中取消收件人的订阅。
 
-   此 **動作設定** 欄位可讓您指定是否想要在Adobe Campaign資料庫中建立收件者設定檔（如果尚未存在）。 若要這麼做，請核取 **如果不存在，則建立使用者** 選項。
+   此 **操作配置** 字段可让您指定是否希望在Adobe Campaign数据库中创建收件人配置文件（如果该配置文件不存在）。 要执行此操作，请查看 **创建用户（如果不存在）** 选项。
 
-1. 將選取的元件從工具箱拖放至表單中，以新增這些元件。 如需可用Adobe Campaign特定元件的詳細資訊，請參閱 [Adobe表單元件](/help/sites-classic-ui-authoring/classic-personalization-ac-components.md).
+1. 通过将所选组件从工具箱中拖放到表单中，来添加这些组件。 有关可用的Adobe Campaign特定组件的更多信息，请参阅 [Adobe表单组件](/help/sites-classic-ui-authoring/classic-personalization-ac-components.md).
 
    ![chlimage_1-188](assets/chlimage_1-188.png)
 
-1. 按兩下新增的欄位以設定它們。 此 **Adobe Campaign** 索引標籤可讓您將欄位連結至Adobe Campaign收件者表格中的欄位。 您也可以指定欄位是否為調解金鑰的一部分，以允許辨識Adobe Campaign資料庫中已存在的收件者。
+1. 通过双击添加的字段来配置它们。 此 **Adobe Campaign** 选项卡，用于将字段链接到Adobe Campaign收件人表中的字段。 您还可以指定字段是否为协调键值的一部分，该协调键值允许识别Adobe Campaign数据库中已存在的收件人。
 
    >[!CAUTION]
    >
-   >此 **元素名稱** 每個表單欄位必須不同。 如有需要，請加以變更。
+   >此 **元素名称** 每个表单字段必须不同。 根据需要进行更改。
    >
-   >每個表單都必須包含 **加密的主要金鑰** 元件，以正確管理Adobe Campaign資料庫中的收件者。
+   >每个表单必须包含 **加密的主密钥** 组件，以便在Adobe Campaign数据库中正确管理收件人。
 
-1. 選取以啟動頁面 **頁面** > **啟動頁面** 在工具箱中。 頁面已在您的網站上啟動。 您可以前往AEM發佈執行個體來檢視它。 在驗證表單後，Adobe Campaign資料庫中的資料就會更新。
+1. 通过选择激活页面 **页面** > **激活页面** 在工具箱里。 页面已在您的网站上激活。 您可以通过转到AEM发布实例来查看它。 验证表单后，Adobe Campaign数据库中的数据即会更新。
 
-## 測試表單 {#testing-a-form}
+## 测试表单 {#testing-a-form}
 
-建立表單並編輯表單內容後，您可能需要手動測試表單是否按預期運作。
+在创建表单并编辑表单内容后，您可能需要手动测试表单是否按预期工作。
 
 >[!NOTE]
 >
->您必須擁有 **加密的主要金鑰** 元件。 在「元件」中選取Adobe Campaign ，以便只顯示那些元件。
+>您必须拥有 **加密的主键** 每个表单上的组件。 在组件中，选择Adobe Campaign ，以便仅显示这些组件。
 >
->雖然在此程式中，您需手動輸入設定檔號碼，但實際上，使用者會在電子報中取得此頁面的連結（無論是取消訂閱、訂閱或更新您的設定檔）。 會根據使用者自動更新epk。
+>虽然在此过程中您手动输入用户档案编号，但实际上，用户会在新闻稿中获取指向此页面的链接（无论是取消订阅、订阅还是更新用户档案）。 根据用户，页面会自动更新。
 >
->若要建立該連結，請使用變數 **主要資源識別碼**(Adobe Campaign Standard)或 **加密的識別碼** (Adobe Campaign 6.1) (例如，在 **文字與個人化（行銷活動）** 元件)，可連結至Adobe Campaign中的epk。
+>要创建该链接，您需要使用变量 **主要资源标识符**(Adobe Campaign Standard)或 **加密标识符** (Adobe Campaign 6.1)(例如，在 **文本和个性化（营销活动）** 组件)，用于链接到Adobe Campaign中的epk。
 
-若要這麼做，您需要手動取得Adobe Campaign設定檔的EPK，然後將其附加至URL：
+为此，您需要手动获取Adobe Campaign配置文件的EPK，然后将其附加到URL：
 
-1. 若要取得Adobe Campaign設定檔的加密主要金鑰(EPK)：
+1. 要获取Adobe Campaign配置文件的加密主密钥(EPK)，请执行以下操作：
 
-   * 在Adobe Campaign Standard — 導覽至 **設定檔與對象** > **設定檔**，會列出現有的設定檔。 請確定表格顯示 **主要資源識別碼** 欄中的欄位（這可以按一下/點選來設定） **設定清單**)。 複製所需設定檔的主要資源識別碼。
-   * 在Adobe Campaign 6.11中，前往 **設定檔與目標** >  **收件者**，會列出現有的設定檔。 請確定表格顯示 **加密的識別碼** 欄中的欄位(這可以透過在專案上按一下右鍵並選取 **設定清單……**)。 複製所需設定檔的加密識別碼。
+   * 在Adobe Campaign Standard中 — 导航到 **用户档案和受众** > **配置文件**，其中列出了现有用户档案。 确保表显示 **主资源标识符** 列中的字段（这可以通过单击/点按进行配置） **配置列表**)。 复制所需配置文件的主资源标识符。
+   * 在Adobe Campaign 6.11中，转到 **配置文件和目标** >  **收件人**，其中列出了现有用户档案。 确保表显示 **加密标识符** 列中的字段(这可以通过右键单击条目并选择 **配置列表……**)。 复制所需配置文件的加密标识符。
 
-1. 在AEM中，開啟發佈執行個體上的表單頁面，並從步驟1將EPK附加為URL引數：使用您先前在編寫表單時在EPK元件中定義的相同名稱(例如： `?epk=...`)
-1. 此表單現在可用於修改與已連結Adobe Campaign設定檔相關聯的資料和訂閱。 修改部分欄位並提交表單後，您可以在Adobe Campaign中確認適當的資料已更新。
+1. 在AEM中，打开发布实例上的表单页面，并将步骤1中的EPK作为URL参数附加：在创作表单时，请使用之前在EPK组件中定义的相同名称(例如： `?epk=...`)
+1. 该表单现在可用于修改与链接的Adobe Campaign配置文件关联的数据和订阅。 修改某些字段并提交表单后，您可以在Adobe Campaign中验证适当的数据是否已更新。
 
-在驗證表單後，Adobe Campaign資料庫中的資料就會更新。
+验证表单后，Adobe Campaign数据库中的数据即会更新。

@@ -1,7 +1,7 @@
 ---
 title: 模拟器
 seo-title: Emulators
-description: AEM可讓作者在模擬一般使用者將檢視頁面的環境的模擬器中檢視頁面
+description: AEM使作者能够在模拟最终用户将查看页面的环境的模拟器中查看页面
 seo-description: AEM enables authors to view a page in an emulator that simulates the environment in which an end-user will view the page
 uuid: ee1496a5-be68-4318-b5ce-b11c41e4485c
 contentOwner: Guillaume Carlino
@@ -22,34 +22,34 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）專案使用SPA編輯器。 [了解详情](/help/sites-developing/spa-overview.md).
+>Adobe建议对需要基于单页应用程序框架的客户端渲染（例如React）的项目使用SPA编辑器。 [了解详情](/help/sites-developing/spa-overview.md).
 
-Adobe Experience Manager (AEM)可讓作者在模擬一般使用者將檢視頁面之環境的模擬器中，檢視頁面，例如在行動裝置或電子郵件使用者端中。
+Adobe Experience Manager (AEM)使作者能够在模拟最终用户查看页面的环境的模拟器中查看页面，例如在移动设备上或电子邮件客户端中。
 
-AEM模擬器架構：
+AEM模拟器框架：
 
-* 在模擬的使用者介面(UI)中提供內容製作，例如行動裝置或電子郵件使用者端（用於製作電子報）。
-* 根據模擬的UI調整頁面內容。
-* 允許建立自訂模擬器。
+* 在模拟的用户界面(UI)中提供内容创作，例如移动设备或电子邮件客户端（用于创作新闻稿）。
+* 根据模拟的UI调整页面内容。
+* 允许创建自定义模拟器。
 
 >[!CAUTION]
 >
->只有傳統UI支援此功能。
+>仅经典UI支持此功能。
 
-## 模擬器特性 {#emulators-characteristics}
+## 模拟器特性 {#emulators-characteristics}
 
-模擬器：
+模拟器：
 
-* 是以ExtJS為基礎。
-* 在頁面DOM上操作。
-* 其外觀會透過CSS加以規範。
-* 支援外掛程式（例如行動裝置旋轉外掛程式）。
-* 僅對作者有效。
-* 其基本元件位於 `/libs/wcm/emulator/components/base`.
+* 基于ExtJS。
+* 在页面DOM上运行。
+* 其外观通过CSS进行调节。
+* 支持插件（例如，移动设备旋转插件）。
+* 仅对作者有效。
+* 其基本组件位于 `/libs/wcm/emulator/components/base`.
 
-### 模擬器如何轉換內容 {#how-the-emulator-transforms-the-content}
+### 模拟器如何转换内容 {#how-the-emulator-transforms-the-content}
 
-模擬器的運作方式是將內部HTML內容包裝在模擬器DIV中。 例如，下列html程式碼：
+模拟器通过将HTML主体内容封装到模拟器DIV中来工作。 例如，以下html代码：
 
 ```xml
 <body>
@@ -62,7 +62,7 @@ AEM模擬器架構：
 </body>
 ```
 
-在模擬器啟動後，會轉換為下列html程式碼：
+在模拟器启动后，将转换为以下html代码：
 
 ```xml
 <body>
@@ -87,69 +87,69 @@ AEM模擬器架構：
 </body>
 ```
 
-已新增兩個div標籤：
+添加了两个div标记：
 
-* 具有id的div `cq-emulator` 保持模擬器為整體和
+* 具有id的div `cq-emulator` 保持模拟器整体和
 
-* 具有id的div `cq-emulator-content` 代表頁面內容所在的裝置檢視區/畫面/內容區域。
+* 具有id的div `cq-emulator-content` 表示页面内容所在的设备的视区/屏幕/内容区域。
 
-新的CSS類別也會指派給新的模擬器div：它們代表目前模擬器的名稱。
+新的CSS类也被分配给新的模拟器div：它们表示当前模拟器的名称。
 
-模擬器的外掛程式可能會進一步擴充指派的CSS類別清單，如旋轉外掛程式的範例，根據目前的裝置旋轉插入「垂直」或「水準」類別。
+模拟器的插件可以进一步扩展分配的CSS类的列表，如旋转插件的示例，根据当前设备旋转插入“垂直”或“水平”类。
 
-如此一來，可藉由具有與模擬器div的ID和CSS類別相對應的CSS類別，來控制模擬器的完整外觀。
+这样，可以通过具有与模拟器div的ID和CSS类相对应的CSS类来控制模拟器的完整外观。
 
 >[!NOTE]
 >
->建議專案HTML將內文內容包裝在單一div中，就像上面的範例一樣。 如果內文內容包含多個標籤，可能會出現無法預測的結果。
+>建议项目HTML将正文内容包装在一个div中，就像上面的示例一样。 如果正文内容包含多个标记，则可能会产生不可预测的结果。
 
-### 行動模擬器 {#mobile-emulators}
+### 移动模拟器 {#mobile-emulators}
 
-現有的行動模擬器：
+现有的移动仿真器：
 
-* 在/libs/wcm/mobile/components/emulators之下。
-* 可透過JSON servlet在以下網址取得：
+* 位于/libs/wcm/mobile/components/emulators下。
+* 可通过JSON servlet在以下位置获取：
 
    http://localhost:4502/bin/wcm/mobile/emulators.json
 
-當頁面元件依賴行動頁面元件時( `/libs/wcm/mobile/components/page`)，則模擬器功能會透過下列機制自動整合到頁面中：
+当页面组件依赖于移动页面组件时( `/libs/wcm/mobile/components/page`)，则模拟器功能将通过以下机制自动集成到页面中：
 
-* 行動頁面元件 `head.jsp` 包含裝置群組相關的模擬器初始元件（僅在製作模式下）以及裝置群組的轉譯CSS，透過：
+* 移动页面组件 `head.jsp` 包括设备组的关联模拟器init组件（仅在创作模式下）以及设备组的渲染CSS，具体方式为：
 
    `deviceGroup.drawHead(pageContext);`
 
-* 方法 `DeviceGroup.drawHead(pageContext)` 包含模擬器的init元件，也就是呼叫 `init.html.jsp` 模擬器元件的。 如果模擬器元件沒有自己的 `init.html.jsp` 並仰賴行動裝置基礎模擬器( `wcm/mobile/components/emulators/base)`，行動基本模擬器的init指令碼稱為( `/libs/wcm/mobile/components/emulators/base/init.html.jsp`)。
+* 方法 `DeviceGroup.drawHead(pageContext)` 包含模拟器的init组件，即 `init.html.jsp` 模拟器组件的。 如果模拟器组件没有自己的 `init.html.jsp` 并依赖移动基础模拟器( `wcm/mobile/components/emulators/base)`，则mobile基础模拟器的init脚本将调用( `/libs/wcm/mobile/components/emulators/base/init.html.jsp`)。
 
-* 行動基本模擬器的初始指令碼透過Javascript定義：
+* Mobile基础仿真器的init脚本通过Javascript定义：
 
-   * 為頁面定義的所有模擬器的設定(emulatorConfigs)
-   * 模擬器管理員透過以下方式將模擬器的功能整合到頁面中：
+   * 为页面定义的所有模拟器的配置(emulatorConfigs)
+   * 模拟器管理器通过以下方式将模拟器的功能集成到页面中：
 
       `emulatorMgr.launch(config)`;
 
-      模擬器管理員的定義如下：
+      模拟器管理器的定义如下：
 
       `/libs/wcm/emulator/widgets/source/EmulatorManager.js`
 
-#### 建立自訂行動模擬器 {#creating-a-custom-mobile-emulator}
+#### 创建自定义移动模拟器 {#creating-a-custom-mobile-emulator}
 
-若要建立自訂行動模擬器：
+要创建自定义移动模拟器，请执行以下操作：
 
-1. 以下 `/apps/myapp/components/emulators` 建立元件 `myemulator` (節點型別： `cq:Component`)。
+1. 以下 `/apps/myapp/components/emulators` 创建组件 `myemulator` (节点类型： `cq:Component`)。
 
-1. 設定 `sling:resourceSuperType` 屬性至 `/libs/wcm/mobile/components/emulators/base`
+1. 设置 `sling:resourceSuperType` 属性至 `/libs/wcm/mobile/components/emulators/base`
 
-1. 使用類別定義CSS使用者端資料庫 `cq.wcm.mobile.emulator` 對於模擬器外觀：名稱= `css`，節點型別= `cq:ClientLibrary`
+1. 使用类别定义CSS客户端库 `cq.wcm.mobile.emulator` 对于模拟器外观：名称= `css`，节点类型= `cq:ClientLibrary`
 
-   例如，您可以參照節點 `/libs/wcm/mobile/components/emulators/iPhone/css`
+   例如，您可以引用节点 `/libs/wcm/mobile/components/emulators/iPhone/css`
 
-1. 如有需要，請定義JS使用者端程式庫，例如定義特定外掛程式：名稱= js，節點型別= cq：ClientLibrary
+1. 如果需要，可定义JS客户端库，例如定义特定插件：名称= js，节点类型= cq：ClientLibrary
 
-   例如，您可以參照節點 `/libs/wcm/mobile/components/emulators/base/js`
+   例如，您可以引用节点 `/libs/wcm/mobile/components/emulators/base/js`
 
-1. 如果模擬器支援外掛程式定義的特定功能（例如觸控捲動），請在模擬器下方建立設定節點：名稱= `cq:emulatorConfig`，節點型別= `nt:unstructured` 並新增定義外掛程式的屬性：
+1. 如果模拟器支持由插件定义的特定功能（如触控滚动），请在模拟器下方创建一个配置节点：名称= `cq:emulatorConfig`，节点类型= `nt:unstructured` 并添加用于定义插件的属性：
 
-   * 名稱= `canRotate`，型別= `Boolean`，值= `true`：包含旋轉功能。
+   * 名称= `canRotate`，类型= `Boolean`，值= `true`：用于包含旋转功能。
 
-   * 名稱= `touchScrolling`，型別= `Boolean`，值= `true`：包含觸控捲動功能。
-   您可以定義自己的外掛程式，以新增更多功能。
+   * 名称= `touchScrolling`，类型= `Boolean`，值= `true`：用于包含触摸滚动功能。
+   通过定义您自己的插件，可以添加更多功能。

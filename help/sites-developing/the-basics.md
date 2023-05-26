@@ -1,7 +1,7 @@
 ---
 title: AEM核心概念
 seo-title: The Basics
-description: 概述AEM如何建構以及如何在其上開發的核心概念，包括瞭解JCR、Sling、OSGi、Dispatcher、工作流程和MSM
+description: 概述了AEM的结构以及如何在此基础上进行开发的核心概念，包括了解JCR、Sling、OSGi、Dispatcher、工作流和MSM
 seo-description: An overview of the core concepts of how AEM is structured and how to develop on top of it including understanding the JCR, Sling, OSGi, the dispatcher, workflows, and MSM
 uuid: e49f29db-a5d6-48a0-af32-f8785156746e
 contentOwner: msm-service
@@ -21,206 +21,206 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->在深入探討AEM的核心概念之前，Adobe建議完成 [開發AEM Sites快速入門](/help/sites-developing/getting-started.md) AEM開發程式概觀和核心概念簡介檔案。
+>在深入了解AEM的核心概念之前，Adobe建议完成 [AEM Sites开发入门](/help/sites-developing/getting-started.md) 概述AEM开发过程和核心概念介绍的文档。
 
-## 在AEM上進行開發的先決條件 {#prerequisites-for-developing-on-aem}
+## 在AEM上进行开发的先决条件 {#prerequisites-for-developing-on-aem}
 
-您需要下列技能，才能在AEM之上進行開發：
+您需要具备以下技能才能在AEM之上进行开发：
 
-* 網路應用程式技術的基本知識，包括：
+* Web应用技术的基本知识，包括：
 
-   * request -response (XMLHttpRequest / XMLHttpResponse)週期
+   * request -response (XMLHttpRequest / XMLHttpResponse)循环
    * HTML
    * CSS
    * JavaScript
 
-* Experience Server (CRX)的工作知識，包括Content Explorer
-* 若要在傳統UI中進行開發，還需要具備JSP (JavaServer Pages)的基本知識，包括理解和修改簡單JSP範例的能力。
+* Experience Server (CRX)（包括Content Explorer）的工作知识
+* 对于在经典UI中进行开发，还需要JSP (JavaServer Pages)的基本知识，包括理解和修改简单JSP示例的能力。
 
-此外，建議您閱讀並遵循 [准則和最佳實務](/help/sites-developing/dev-guidelines-bestpractices.md).
+此外，建议您阅读并遵循 [准则和最佳实践](/help/sites-developing/dev-guidelines-bestpractices.md).
 
-## Java™內容存放庫 {#java-content-repository}
+## Java™内容存储库 {#java-content-repository}
 
-Java™內容存放庫(JCR)標準、 [JSR 283](https://developer.adobe.com/experience-manager/reference-materials/spec/jcr/2.0/index.html)，會指定獨立於廠商和實作的方式，在內容存放庫內的精細層級上雙向存取內容。
+Java™内容存储库(JCR)标准、 [JSR 283](https://developer.adobe.com/experience-manager/reference-materials/spec/jcr/2.0/index.html)，指定了一种独立于供应商和实现的方法，用于在内容存储库中的粒度级别双向访问内容。
 
-規格領先者為Adobe Research （瑞士） AG。
+规范牵头机构为Adobe研究（瑞士） AG。
 
-此 [JCR API 2.0](https://developer.adobe.com/experience-manager/reference-materials/spec/javax.jcr/javadocs/jcr-2.0/index.html) 套件，javax.jcr。&amp;ast；用於直接存取及操控存放庫內容。
+此 [JCR API 2.0](https://developer.adobe.com/experience-manager/reference-materials/spec/javax.jcr/javadocs/jcr-2.0/index.html) 包javax.jcr。&amp;ast；用于直接访问和处理存储库内容。
 
 ## Experience Server (CRX)和Jackrabbit {#experience-server-crx-and-jackrabbit}
 
-Experience Server提供AEM建置的Experience Services （可用來建置自訂應用程式），並根據Jackrabbit內嵌內容存放庫。
+Experience Server提供了AEM所基于的Experience Services（可用于构建自定义应用程序），并嵌入了基于Jackrabbit的内容存储库。
 
-[Apache Jackrabbit](https://jackrabbit.apache.org/jcr/index.html) 是完全符合的開放原始碼JCR API 2.0實作。
+[Apache Jackrabbit](https://jackrabbit.apache.org/jcr/index.html) 是一个完全符合要求的开源JCR API 2.0实施。
 
-## Sling請求處理 {#sling-request-processing}
+## Sling请求处理 {#sling-request-processing}
 
-### Sling簡介 {#introduction-to-sling}
+### Sling简介 {#introduction-to-sling}
 
-AEM建置方式 [Sling](https://sling.apache.org/index.html)，此網頁應用程式架構以REST原則為基礎，可輕鬆開發內容導向的應用程式。 Sling使用JCR存放庫（例如Apache Jackrabbit）或CRX內容存放庫(如果是AEM)作為其資料存放區。 Sling已對Apache Software Foundation有所貢獻 — 如需進一步資訊，請參閱Apache 。
+AEM构建方式 [Sling](https://sling.apache.org/index.html)，这是一个基于REST原则的Web应用程序框架，它提供了易于开发的面向内容的应用程序。 Sling使用JCR存储库（如Apache Jackrabbit）或CRX内容存储库(在AEM中)作为其数据存储。 Sling已对Apache Software Foundation做出了贡献 — 有关更多信息，请参阅Apache 。
 
-使用Sling時，要呈現的內容型別不是第一個處理考量。 主要考量是URL是否解析為內容物件，然後可以找到指令碼以執行轉譯。 這為網頁內容作者提供絕佳支援，協助他們建立可輕鬆根據需求自訂的頁面。
+使用Sling时，要呈现的内容类型不是第一个处理注意事项。 相反，主要考虑的问题是URL是否解析为内容对象，然后可以找到脚本来执行渲染。 这为Web内容作者提供了极好的支持，让他们能够构建可轻松根据自己的需求进行自定义的页面。
 
-在包含各種不同內容元素的應用程式中，或是在您需要可輕鬆自訂的頁面時，此彈性優勢顯而易見。 特別是在AEM解決方案中實作WCM之類的網頁內容管理系統時。
+在包含各种不同内容元素的应用中，或者在您需要易于自定义的页面时，此灵活性的优势显而易见。 特别是在AEM解决方案中实施Web内容管理系统（如WCM）时。
 
-另請參閱 [在15分鐘內探索Sling](https://sling.apache.org/documentation/getting-started/discover-sling-in-15-minutes.html) 開始使用Sling進行開發的步驟。
+参见 [在15分钟内发现Sling](https://sling.apache.org/documentation/getting-started/discover-sling-in-15-minutes.html) 使用Sling进行开发的第一步。
 
-下圖說明Sling指令碼解析：它說明如何從HTTP請求取得內容節點、從內容節點取得資源型別、從資源型別取得指令碼，以及有哪些指令碼變數可用。
+下图说明了Sling脚本的解决方案：它显示了如何从HTTP请求获取到内容节点、从内容节点获取到资源类型、从资源类型获取到脚本，以及提供了哪些脚本变量。
 
-![瞭解Apache Sling指令碼解析](assets/sling-cheatsheet-01.png)
+![了解Apache Sling脚本解析](assets/sling-cheatsheet-01.png)
 
-下圖說明在處理SlingPostServlet時可以使用的所有隱藏但強大的要求引數，所有POST要求的預設處理常式，提供您建立、修改、刪除、複製和移動存放庫中節點的無限選項。
+下图说明了可在处理SlingPostServlet时使用的所有隐藏但功能强大的请求参数，所有POST请求的默认处理程序为您提供了用于在存储库中创建、修改、删除、复制和移动节点的无限选项。
 
 ![使用SlingPostServlet](assets/sling-cheatsheet-02.png)
 
-### Sling以內容為中心 {#sling-is-content-centric}
+### Sling以内容为中心 {#sling-is-content-centric}
 
-Sling是 *以內容為中心*. 這表示處理著重於內容，因為每個(HTTP)請求都會對應到JCR資源（存放庫節點）形式的內容：
+Sling是 *以内容为中心*. 这意味着处理侧重于内容，因为每个(HTTP)请求都映射到JCR资源（存储库节点）形式的内容：
 
-* 第一個目標是儲存內容的資源（JCR節點）
-* 其次，表示或指令碼位於與請求特定部分（例如選取器和/或擴充功能）結合的資源屬性中
+* 第一个目标是保存内容的资源（JCR节点）
+* 其次，表示法（或脚本）从与请求的某些部分（例如，选择器和/或扩展）组合的资源属性中定位
 
 ### RESTful Sling {#restful-sling}
 
-由於以內容為中心的理念，Sling實作了REST導向的伺服器，因此在Web應用程式架構中有了新概念。 優點包括：
+由于以内容为中心的理念，Sling实施了面向REST的服务器，从而在Web应用程序框架中引入了新概念。 其优点是：
 
-* 非常RESTful，而不只是在曲面上；資源和表示會在伺服器內正確建模
-* 移除一或多個資料模型
+* 非常RESTful，而不仅仅是在曲面上；资源和表示在服务器内正确建模
+* 删除一个或多个数据模型
 
-   * 以前需要下列專案：URL結構、業務物件、DB結構描述；
-   * 現在簡化為： URL =資源= JCR結構
+   * 以前需要用到的URL结构、业务对象、数据库模式；
+   * 现在简化为： URL =资源= JCR结构
 
 ### URL分解 {#url-decomposition}
 
-在Sling中，處理是由使用者請求的URL驅動。 這會定義適當的指令碼要顯示的內容。 為此，會從URL擷取資訊。
+在Sling中，处理由用户请求的URL驱动。 这会定义相应的脚本要显示的内容。 为此，将从URL中提取信息。
 
-如果我們分析下列URL：
+如果我们分析以下URL：
 
 ```xml
 https://myhost/tools/spy.printable.a4.html/a/b?x=12
 ```
 
-我們可以將其細分為複合零件：
+我们可以将其划分为复合部分：
 
-| 通訊協定 | 主機 | 內容路徑 | 選擇器 | 擴充功能 |  | 字尾 |  | 引數 |
+| 协议 | 主机 | 内容路径 | 选择器 | 扩展 |  | 后缀 |  | 参数 |
 |---|---|---|---|---|---|---|---|---|
-| https:// | myhost | tools/spy | .printable.a4. | html | / | a/b | ? | x=12 |
+| https:// | myhost | 工具/监视 | .printable.a4. | html | / | a/b | ? | x=12 |
 
-**通訊協定** HTTP
+**协议** HTTP
 
-**主機** 網站名稱。
+**主机** 网站的名称。
 
-**內容路徑** 指定要轉譯之內容的路徑。 和擴充功能搭配使用；在此範例中，它們會轉譯為tools/spy.html 。
+**内容路径** 指定要渲染的内容的路径。 与扩展结合使用；在此示例中，它们将转换为tools/spy.html。
 
-**選擇器** 用於轉譯內容的替代方法；在此範例中為A4格式的印表機易記版本。
+**选择器** 用于呈现内容的替代方法；在本例中为A4格式的打印机友好版本。
 
-**擴充功能** 內容格式；也會指定要用於轉譯的指令碼。
+**扩展** 内容格式；还指定用于渲染的脚本。
 
-**字尾** 可用來指定其他資訊。
+**后缀** 可用于指定其他信息。
 
-**引數** 動態內容所需的任何引數。
+**参数** 动态内容所需的任何参数。
 
-#### 從URL到內容和指令碼 {#from-url-to-content-and-scripts}
+#### 从URL到内容和脚本 {#from-url-to-content-and-scripts}
 
-使用下列原則：
+使用以下原则：
 
-* 對應會使用從請求中擷取的內容路徑來尋找資源
-* 找到適當的資源時，就會擷取sling資源型別，並用來找出要用於轉譯內容的指令碼
+* 映射使用从请求中提取的内容路径来定位资源
+* 在找到相应的资源时，将提取sling资源类型，并用于定位要用于呈现内容的脚本
 
-下圖說明了所使用的機制，將在以下各節中更詳細地討論。
+下图说明了所使用的机制，将在以下各节中更详细地讨论。
 
 ![chlimage_1-86](assets/chlimage_1-86a.png)
 
-使用Sling時，您可以指定哪個指令碼會轉譯特定實體(透過設定 `sling:resourceType` 屬性)。 此機制提供的自由度比指令碼存取資料實體的自由度更大（PHP指令碼中的SQL陳述式就是如此），因為資源可以有多個轉譯。
+使用Sling，您可以指定哪个脚本渲染特定实体(通过设置 `sling:resourceType` 属性)。 此机制提供的自由度比脚本访问数据实体的自由度更大（正如PHP脚本中的SQL语句所做的那样），因为资源可以具有多个演绎版。
 
-#### 將請求對應至資源 {#mapping-requests-to-resources}
+#### 将请求映射到资源 {#mapping-requests-to-resources}
 
-系統會劃分請求，並擷取必要資訊。 系統會搜尋存放庫中的請求資源（內容節點）：
+将细分请求并提取必要信息。 在存储库中搜索请求的资源（内容节点）：
 
-* 第一個Sling會檢查請求中指定的位置是否存在節點；例如， `../content/corporate/jobs/developer.html`
-* 如果找不到節點，則會捨棄擴充功能並重複搜尋；例如： `../content/corporate/jobs/developer`
-* 如果找不到節點，則Sling將傳回http代碼404 （找不到）。
+* 第一个Sling检查请求中指定的位置是否存在节点；例如， `../content/corporate/jobs/developer.html`
+* 如果没有找到节点，则删除扩展并重复搜索；例如， `../content/corporate/jobs/developer`
+* 如果未找到节点，则Sling将返回http代码404（未找到）。
 
-Sling也可讓JCR節點以外的專案成為資源，但這是進階功能。
+Sling还允许将JCR节点以外的内容作为资源，但这是一项高级功能。
 
-### 找到指令碼 {#locating-the-script}
+### 定位脚本 {#locating-the-script}
 
-找到適當的資源（內容節點）時， **sling資源型別** 「 」已擷取。 這是路徑，可找出要用於轉譯內容的指令碼。
+找到相应的资源（内容节点）后， **sling资源类型** 被提取。 这是一个路径，用于定位要用于呈现内容的脚本。
 
-指定的路徑 `sling:resourceType` 可以是：
+指定的路径 `sling:resourceType` 可以是：
 
 * 绝对
-* 相對，相對於設定引數
+* 相对，相对于配置参数
 
-   由於相對路徑會增加可移植性，因此Adobe會建議使用相對路徑。
+   由于相对路径提高了可移植性，因此Adobe会推荐相对路径。
 
-所有Sling指令碼都儲存在下列任一專案的子資料夾中： `/apps` 或 `/libs`，依此順序搜尋(請參閱 [自訂元件和其他元素](/help/sites-developing/dev-guidelines-bestpractices.md#customizing-components-and-other-elements))。
+所有Sling脚本都存储在以下任一文件夹的子文件夹中： `/apps` 或 `/libs`，将按此顺序搜索(请参阅 [自定义组件和其他元素](/help/sites-developing/dev-guidelines-bestpractices.md#customizing-components-and-other-elements))。
 
-其他需要注意的要點包括：
+其他几点需要注意的是：
 
-* 當需要方法(GET、POST)時，將根據HTTP規格以大寫指定，例如jobs.POST.esp （請參閱下文）
-* 支援各種指令碼引擎：
+* 当需要方法(GET、POST)时，将根据HTTP规范(例如jobs.job.esp.POST)以大写形式指定（见下文）
+* 支持各种脚本引擎：
 
-   * HTL (HTML範本語言 — Adobe Experience Manager偏好並建議的HTML伺服器端範本系統)： `.html`
-   * ECMAScript (JavaScript)頁面（伺服器端執行）： `.esp, .ecma`
-   * Java™ Server Pages （伺服器端執行）： `.jsp`
-   * Java™ Servlet編譯器（伺服器端執行）： `.java`
-   * JavaScript範本（使用者端執行）： `.jst`
+   * HTL(HTML模板语言 — Adobe Experience Manager首选和推荐的用于HTML的服务器端模板系统)： `.html`
+   * ECMAScript (JavaScript)页面（服务器端执行）： `.esp, .ecma`
+   * Java™ Server Pages（服务器端执行）： `.jsp`
+   * Java™ Servlet编译器（服务器端执行）： `.java`
+   * JavaScript模板（客户端执行）： `.jst`
 
-Felix管理主控台會列出指定AEM執行個體支援的指令碼引擎清單( `http://<host>:<port>/system/console/slingscripting`)。
+Felix管理控制台上列出了给定的AEM实例支持的脚本引擎列表( `http://<host>:<port>/system/console/slingscripting`)。
 
-此外，Apache Sling也支援與其他熱門指令碼引擎整合（例如Groovy、JRuby、Freemarker），並提供整合新指令碼引擎的方法。
+此外，Apache Sling还支持与其他常用脚本引擎（例如Groovy、JRuby、Freemarker）集成，并提供了一种集成新脚本引擎的方法。
 
-使用上述範例，如果 `sling:resourceType` 是 `hr/jobs` 然後針對：
+使用上面的示例，如果 `sling:resourceType` 是 `hr/jobs` 然后用于：
 
-* GET/HEAD請求，以及以.html結尾的URL （預設請求型別、預設格式）
+* 以.html结尾的GET/HEAD请求和URL（默认请求类型、默认格式）
 
-   指令碼為/apps/hr/jobs/jobs.esp；sling：resourceType的最後一個區段會形成檔案名稱。
+   脚本是/apps/hr/jobs/jobs.esp ；文件名由sling：resourceType的最后一个部分构成。
 
-* POST請求(除GET/HEAD以外的所有請求型別，方法名稱必須為大寫)
+* POST请求(除GET/HEAD之外的所有请求类型，方法名称必须大写)
 
-   指令碼名稱會使用POST。
+   POST在脚本名称中使用。
 
-   指令碼為 `/apps/hr/jobs/jobs.POST.esp`.
+   脚本为 `/apps/hr/jobs/jobs.POST.esp`.
 
-* 其他格式的URL，結尾不是.html
+* 其他格式的URL，不以.html结尾
 
    例如，`../content/corporate/jobs/developer.pdf`
 
-   指令碼會是 `/apps/hr/jobs/jobs.pdf.esp`；字尾會新增至指令碼名稱。
+   脚本将为 `/apps/hr/jobs/jobs.pdf.esp`；后缀将添加到脚本名称中。
 
-* 具有選取器的URL
+* 带有选择器的URL
 
-   選取器可用來以替代格式顯示相同的內容。 例如，適合印表機的版本、RSS摘要或摘要。
+   选择器可用于以替代格式显示相同的内容。 例如，打印机友好版本、rss馈送或摘要。
 
-   如果檢視印表機易記版本，選擇器可能是 *列印*；如在 `../content/corporate/jobs/developer.print.html`
+   如果查看适合打印的版本，则选择器可能是 *打印*；如所示 `../content/corporate/jobs/developer.print.html`
 
-   指令碼會是 `/apps/hr/jobs/jobs.print.esp`；選取器會新增至指令碼名稱。
+   脚本将为 `/apps/hr/jobs/jobs.print.esp`；选择器将添加到脚本名称中。
 
-* 如果尚未定義sling：resourceType ，則：
+* 如果未定义sling：resourceType ，则：
 
-   * 內容路徑將用於搜尋適當的指令碼（如果基於路徑的ResourceTypeProvider為作用中）。
+   * 内容路径将用于搜索适当的脚本（如果基于路径的ResourceTypeProvider处于活动状态）。
 
-      例如，的指令碼 `../content/corporate/jobs/developer.html` 會在下列位置產生搜尋： `/apps/content/corporate/jobs/`.
+      例如，的脚本 `../content/corporate/jobs/developer.html` 会在以下位置生成搜索： `/apps/content/corporate/jobs/`.
 
-   * 將使用主要節點型別。
+   * 将使用主节点类型。
 
-* 如果完全找不到指令碼，則會使用預設指令碼。
+* 如果根本找不到脚本，则将使用默认脚本。
 
-   目前支援的預設轉譯為純文字(.txt)、HTML(.html)和JSON (.json)，所有這些都會列出節點的屬性（格式適當）。 副檔名為.res或沒有副檔名的請求的預設轉譯為將資源多工緩衝處理（如果可能）。
-* 若為http錯誤處理（程式碼403或404），Sling會在以下其中一個位置尋找指令碼：
+   当前支持以纯文本(.txt)、HTML(.html)和JSON (.json)格式呈现默认演绎版，所有这些演绎版都将列出节点的属性（格式合适）。 扩展名.res或不带请求扩展名的请求的默认演绎版是假脱机资源（如果可能）。
+* 对于http错误处理（代码403或404），Sling将在以下任一位置查找脚本：
 
-   * /apps/sling/servlet/errorhandler的位置 [自訂指令碼](/help/sites-developing/customizing-errorhandler-pages.md)
-   * 或標準指令碼/libs/sling/servlet/errorhandler/403.esp或404.esp的位置。
+   * /apps/sling/servlet/errorhandler的位置 [自定义脚本](/help/sites-developing/customizing-errorhandler-pages.md)
+   * 或标准脚本/libs/sling/servlet/errorhandler/403.esp或404.esp的位置。
 
-如果特定請求套用多個指令碼，則會選取最符合的指令碼。 相符專案越具體，越好；換言之，相符的選擇器越多，相符效果越好，無論是否有任何相符的要求副檔名或方法名稱。
+如果给定请求应用了多个脚本，则会选择具有最佳匹配的脚本。 匹配项越具体，其效果就越好；换句话说，选择器越多，匹配效果就越好，无论请求扩展名或方法名是否匹配。
 
-例如，考慮存取資源的請求
+例如，考虑访问资源的请求
 `/content/corporate/jobs/developer.print.a4.html`
-型別
+类型
 `sling:resourceType="hr/jobs"`
 
-假設我們在正確位置有下列指令碼清單：
+假设我们在正确的位置包含以下脚本列表：
 
 1. `GET.esp`
 1. `jobs.esp`
@@ -231,14 +231,14 @@ Felix管理主控台會列出指定AEM執行個體支援的指令碼引擎清單
 1. `print/a4/html.esp`
 1. `print/a4.html.esp`
 
-偏好設定順序為(8) - (7) - (6) - (5) - (4) - (3) - (2) - (1)。
+那么优先顺序为(8)-(7)-(6)-(5)-(4)-(3)-(2)-(1)。
 
-除了資源型別(主要由 `sling:resourceType` 屬性)還有資源超級型別。 這通常表示為 `sling:resourceSuperType` 屬性。 嘗試尋找指令碼時，也會考慮這些超級型別。 資源超級型別的優點在於，它們可以在預設資源型別處形成資源的階層 `sling/servlet/default` （用於預設servlet）實際上是根。
+除了资源类型(主要由 `sling:resourceType` 属性)还有资源超类型。 这通常由 `sling:resourceSuperType` 属性。 在尝试查找脚本时，也会考虑这些超类型。 资源超级类型的优点在于，它们可以形成资源的层次结构，其中默认资源类型 `sling/servlet/default` （由默认servlet使用）实际上是根。
 
-資源的資源超級型別可透過兩種方式定義：
+可以通过两种方式定义资源的资源超级类型：
 
-* 依據 `sling:resourceSuperType` 資源的屬性。
-* 依據 `sling:resourceSuperType` 節點的屬性，該節點的 `sling:resourceType` 點。
+* 按 `sling:resourceSuperType` 资源的属性。
+* 按 `sling:resourceSuperType` 节点属性，该节点的 `sling:resourceType` 点数。
 
 例如：
 
@@ -262,39 +262,39 @@ Felix管理主控台會列出指定AEM執行個體支援的指令碼引擎清單
 
 
 
-型別階層：
+类型层次结构：
 
 * `/x`
    * 是 `[ c, b, a, <default>]`
-* 而為 `/y`
-   * 階層為 `[ c, a, <default>]`
+* 而为 `/y`
+   * 层次结构为 `[ c, a, <default>]`
 
-這是因為 `/y` 具有 `sling:resourceSuperType` 屬性，而 `/x` 不會，因此其超型別會取自其資源型別。
+这是因为 `/y` 具有 `sling:resourceSuperType` 属性，而 `/x` 不会，因此其超类型取自其资源类型。
 
-#### 無法直接呼叫Sling指令碼 {#sling-scripts-cannot-be-called-directly}
+#### 无法直接调用Sling脚本 {#sling-scripts-cannot-be-called-directly}
 
-在Sling中，無法直接呼叫指令碼，因為這會破壞REST伺服器的嚴格概念；您可以混合資源和表示法。
+在Sling中，不能直接调用脚本，因为这会破坏REST服务器的严格概念；您可以混合使用资源和表示法。
 
-如果您直接呼叫表示法（指令碼），會在指令碼內隱藏資源，讓框架(Sling)不知道該資源。 因此，您會遺失某些功能：
+如果直接调用表示形式（脚本），则会在脚本中隐藏资源，因此框架(Sling)不再知道该表示形式。 因此，您将丢失某些特征：
 
-* 自動處理GET以外的http方法，包括：
+* 自动处理GET以外的http方法，包括：
 
-   * 以sling預設實作處理的POST、PUT、DELETE
-   * 此 `POST.jsp` sling：resourceType位置中的指令碼
+   * 通过sling默认实现处理的POST、PUT、DELETE
+   * 此 `POST.jsp` sling：resourceType位置中的脚本
 
-* 您的程式碼架構不再像過去一樣乾淨和結構清晰；這對於大規模開發至關重要
+* 您的代码架构不再像以前那样干净和结构清晰；这对于大规模开发至关重要
 
 ### Sling API {#sling-api}
 
-這會使用Sling API套件org.apache.sling。&amp;ast；和標籤程式庫。
+这会使用Sling API包org.apache.sling。&amp;ast；和标记库。
 
-### 使用sling：include參照現有元素 {#referencing-existing-elements-using-sling-include}
+### 使用sling：include引用现有元素 {#referencing-existing-elements-using-sling-include}
 
-最後考量是需要參考指令碼中的現有元素。
+最后需要考虑的是在脚本中引用现有元素的需要。
 
-更複雜的指令碼（彙總指令碼）可能需要存取多個資源（例如導覽、側欄、頁尾、清單元素），並加入 *資源*.
+更复杂的脚本（聚合脚本）可能需要访问多个资源（例如导航、侧栏、页脚、列表元素），为此，需要包含 *资源*.
 
-若要這麼做，您可以使用sling：include(&quot;/&lt;path>/&lt;resource>「)命令。 這會有效地包含參考資源的定義，如下列陳述式所示，該陳述式會參考用於轉譯影像的現有定義：
+为此，您可以使用sling：include(&quot;/&lt;path>/&lt;resource>“)命令。 这将有效地包括引用的资源的定义，如下面的语句所示，该语句引用了用于渲染图像的现有定义：
 
 ```xml
 %><sling:include resourceType="geometrixx/components/image/img"/><%
@@ -302,178 +302,178 @@ Felix管理主控台會列出指定AEM執行個體支援的指令碼引擎清單
 
 ## OSGI {#osgi}
 
-OSGi定義了用於開發和部署模組化應用程式和程式庫的架構（也稱為Java適用的動態模組系統）。 OSGi容器可讓您將應用程式分成個別模組（是含有其他中繼資訊的jar檔案，在OSGi術語中稱為套裝），並透過以下方式管理它們之間的交叉相依性：
+OSGi定义了用于开发和部署模块化应用程序和库（也称为Dynamic Module System for Java）的体系结构。 OSGi容器允许您将应用程序分成单独的模块（包含其他元信息的jar文件，在OSGi术语中称为捆绑包），并通过以下方式管理它们之间的交叉依赖关系：
 
-* 在容器中實作的服務
-* 容器與應用程式之間的合約
+* 在容器中实现的服务
+* 容器与您的应用程序之间的合同
 
-這些服務與合約提供的架構，可讓個別元素動態地互相探索，以便共同作業。
+这些服务和合同提供了一个体系结构，使各个元素能够动态地发现彼此进行协作。
 
-接著OSGi架構會提供這些套裝的動態載入/解除安裝、設定和控制，而不需要重新啟動。
+随后，OSGi框架将为您提供这些捆绑包的动态加载/卸载、配置和控制，而无需重新启动。
 
 >[!NOTE]
 >
->有關OSGi技術的完整資訊，請參閱 [OSGi網站](https://www.osgi.org).
+>有关OSGi技术的完整信息，请访问 [OSGi网站](https://www.osgi.org).
 >
->特別值得一提的是，他們的「基礎教育」頁面包含一系列簡報和教學課程。
+>特别是，他们的“基础教育”页面包含一系列演示和教程。
 
-此架構可讓您使用應用程式特定模組來擴充Sling。 Sling和CQ5使用 [Apache Felix](https://felix.apache.org/documentation/index.html) OSGI （開放服務閘道計畫）的實作，且以OSGi Service Platform 4.2版規格為基礎。 兩者都是在OSGi架構中執行的OSGi套件組合集合。
+此架构允许您使用特定于应用程序的模块扩展Sling。 Sling和CQ5使用 [Apache Felix](https://felix.apache.org/documentation/index.html) OSGI（开放服务网关计划）的实施基于OSGi服务平台4.2版规范。 它们都是在OSGi框架内运行的OSGi捆绑包的集合。
 
-這可讓您對安裝內的任何套件執行下列動作：
+这样，您就可以对安装中的任何软件包执行以下操作：
 
-* 安裝
-* 開始
+* 安装
+* 开始
 * 停止
 * 更新
-* 解除安裝
-* 檢視目前狀態
-* 存取有關特定套裝的更詳細資訊（例如符號名稱、版本、位置等）
+* 卸载
+* 查看当前状态
+* 访问有关特定捆绑包的更多详细信息（例如符号名称、版本、位置等）
 
-另請參閱 [網頁主控台](/help/sites-deploying/web-console.md)， [OSGI設定](/help/sites-deploying/configuring-osgi.md) 和 [OSGi組態設定](/help/sites-deploying/osgi-configuration-settings.md) 以取得詳細資訊。
+参见 [Web控制台](/help/sites-deploying/web-console.md)， [OSGI配置](/help/sites-deploying/configuring-osgi.md) 和 [OSGi配置](/help/sites-deploying/osgi-configuration-settings.md) 了解更多信息。
 
-## AEM環境中的開發物件 {#development-objects-in-the-aem-environment}
+## AEM环境中的开发对象 {#development-objects-in-the-aem-environment}
 
-下列專案符合開發需求：
+以下内容对开发很有帮助：
 
-**專案** 專案是節點或屬性。
+**项目** 项是节点或属性。
 
-有關操作Item物件的詳細資訊，請參閱 [Javadocs](https://developer.adobe.com/experience-manager/reference-materials/spec/javax.jcr/javadocs/jcr-2.0/javax/jcr/Item.html) 介面javax.jcr.Item的
+有关处理Item对象的详细信息，请参阅 [Javadocs](https://developer.adobe.com/experience-manager/reference-materials/spec/javax.jcr/javadocs/jcr-2.0/javax/jcr/Item.html) 接口javax.jcr.Item的
 
-**節點（及其屬性）** 節點及其屬性在JCR API 2.0規格(JSR 283)中定義。 它們儲存內容、物件定義、演算指令碼和其他資料。
+**节点（及其属性）** 节点及其属性在JCR API 2.0规范(JSR 283)中定义。 它们存储内容、对象定义、渲染脚本和其他数据。
 
-節點會定義內容結構，其屬性會儲存實際內容和中繼資料。
+节点定义内容结构，其属性存储实际内容和元数据。
 
-內容節點會驅動轉譯。 Sling從傳入請求中取得內容節點。 此節點的屬性sling：resourceType指向要使用的Sling演算元件。
+内容节点驱动渲染。 Sling从传入请求获取内容节点。 此节点的属性sling：resourceType指向要使用的Sling渲染组件。
 
-在Sling環境中，JCR名稱節點也稱為資源。
+在Sling环境中，节点（一个JCR名称）也称为资源。
 
-例如，若要取得目前節點的屬性，您可以在指令碼中使用下列程式碼：
+例如，要获取当前节点的属性，您可以在脚本中使用以下代码：
 
 `PropertyIterator properties = currentNode.getProperties();`
 
-CurrentNode為目前節點物件。
+当前节点对象为currentNode。
 
-如需操控節點物件的詳細資訊，請參閱 [Javadocs](https://developer.adobe.com/experience-manager/reference-materials/spec/javax.jcr/javadocs/jcr-2.0/javax/jcr/Node.html).
+有关处理Node对象的更多信息，请参阅 [Javadocs](https://developer.adobe.com/experience-manager/reference-materials/spec/javax.jcr/javadocs/jcr-2.0/javax/jcr/Node.html).
 
-**Widget** 在AEM中，所有使用者輸入均由Widget管理。 這些通常用於控制內容的編輯。
+**构件** 在AEM中，所有用户输入都由小组件管理。 这些通常用于控制一段内容的编辑。
 
-對話方塊是藉由組合Widget所建置。
+对话框通过组合构件来构建。
 
-AEM是使用Widget的ExtJS資料庫開發的。
+AEM是使用ExtJS小组件库开发的。
 
-**對話方塊** 對話方塊是一種特殊型別的Widget。
+**对话框** 对话框是一种特殊类型的构件。
 
-若要編輯內容，AEM會使用應用程式開發人員定義的對話方塊。 這些功能結合一系列Widget，向使用者呈現編輯相關內容所需的所有欄位和動作。
+要编辑内容，AEM使用应用程序开发人员定义的对话框。 这些组件组合了一系列构件，向用户展示编辑相关内容所需的所有字段和操作。
 
-對話方塊也用於編輯中繼資料，以及各種管理工具。
+对话框也用于编辑元数据和各种管理工具。
 
-**元件** 軟體元件是一種系統元素，提供預先定義的服務或事件，並能與其他元件通訊。
+**组件** 软件组件是一种系统元素，提供预定义的服务或事件，并能够与其他组件通信。
 
-在AEM中，元件通常用於呈現資源的內容。 當資源為頁面時，轉譯該資源的元件稱為頂層元件或頁面元件。 不過，元件不需要呈現內容，也不需要連結至特定資源；例如，導覽元件會顯示多個資源的相關資訊。
+在AEM中，组件通常用于呈现资源的内容。 当资源是页面时，呈现它的组件称为顶级组件或页面组件。 但是，组件不必呈现内容，也不必链接到特定资源；例如，导航组件将显示有关多个资源的信息。
 
-元件的定義包括：
+组件的定义包括：
 
-* 用於呈現內容的程式碼
-* 使用者輸入和結果內容設定的對話方塊。
+* 用于呈现内容的代码
+* 用于用户输入和配置结果内容的对话框。
 
-**範本** 範本是特定頁面型別的基礎。 在網站索引標籤中建立頁面時，使用者必須選取範本。 然後複製此範本以建立新頁面。
+**模板** 模板是特定类型页面的基础。 在“网站”选项卡中创建页面时，用户必须选择模板。 然后，通过复制此模板创建新页面。
 
-範本是節點的階層，其結構與要建立的頁面相同，但沒有任何實際內容。
+模板是一种节点层次结构，其结构与要创建页面的结构相同，但没有任何实际内容。
 
-它會定義用於呈現頁面的頁面元件和預設內容（主要頂層內容）。 內容會定義其呈現方式，因為AEM是以內容為中心。
+它定义用于呈现页面的页面组件和默认内容（主要顶级内容）。 内容定义其呈现方式，因为AEM以内容为中心。
 
-**頁面元件（最上層元件）** 用於轉譯頁面的元件。
+**页面组件（顶级组件）** 用于呈现页面的组件。
 
-**頁面** 頁面是範本的「例項」。
+**页面** 页面是模板的“实例”。
 
-頁面具有cq：Page型別的階層節點和cq：PageContent型別的內容節點。 內容節點的屬性sling：resourceType指向用於呈現頁面的頁面元件。
+页面具有cq：Page类型的层次结构节点和cq：PageContent类型的内容节点。 内容节点的属性sling：resourceType指向用于呈现页面的页面组件。
 
-例如，若要取得目前頁面的名稱，您可以在指令碼中使用下列程式碼：
+例如，要获取当前页面的名称，您可以在脚本中使用以下代码：
 
 S`tring pageName = currentPage.getName();`
 
-當currentPage為目前頁面物件時。 如需操控頁面物件的詳細資訊，請參閱 [Javadocs](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/api/Page.html).
+当前页面对象为currentPage。 有关处理Page对象的更多信息，请参阅 [Javadocs](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/api/Page.html).
 
-**頁面管理員** 頁面管理員是提供頁面層級作業方法的介面。
+**页面管理器** 页面管理器是一个提供页面级别操作方法的界面。
 
-例如，若要取得資源的包含頁面，您可以在指令碼中使用下列程式碼：
+例如，要获取资源的包含页面，您可以在脚本中使用以下代码：
 
-頁面myPage = pageManager.getContainingPage(myResource)；
+页面myPage = pageManager.getContainingPage(myResource)；
 
-將pageManager作為頁面管理員物件，並將myResource作為資源物件。 如需頁面管理員所提供方法的詳細資訊，請參閱 [Javadocs](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/api/PageManager.html).
+将pageManager作为页面管理器对象，将myResource作为资源对象。 有关页面管理器所提供方法的详细信息，请参阅 [Javadocs](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/api/PageManager.html).
 
-## 存放庫內的結構 {#structure-within-the-repository}
+## 存储库中的结构 {#structure-within-the-repository}
 
-下列清單提供您在存放庫中看到的結構概覽。
-
->[!CAUTION]
->
->變更此結構或其中的檔案時，應謹慎進行。
->
->開發時需要變更，但應確保完全瞭解所做任何變更的影響。
+以下列表概述了您在存储库中看到的结构。
 
 >[!CAUTION]
 >
->請勿變更 `/libs` 路徑。 針對設定和其他變更，複製專案來源 `/libs` 至 `/apps` 並在中進行任何變更 `/apps`.
+>对此结构或其中的文件所做的更改应谨慎进行。
+>
+>虽然在开发过程中需要进行更改，但是您应该注意要完全了解所做任何更改的影响。
+
+>[!CAUTION]
+>
+>不更改中的任何内容 `/libs` 路径。 对于配置和其他更改，从复制项目 `/libs` 到 `/apps` 并在中进行任何更改 `/apps`.
 
 * `/apps`
 
-   與應用程式相關；包含您網站專用的元件定義。 您開發的元件可以依據以下位置提供的現成可用元件： `/libs/foundation/components`.
+   与应用程序相关；包括特定于您网站的组件定义。 您开发的组件可以基于以下位置提供的现成组件 `/libs/foundation/components`.
 
 * `/content`
 
-   為您的網站建立的內容。
+   为您的网站创建的内容。
 
 * `/etc`
 
 * `/home`
 
-   使用者和群組資訊。
+   用户和组信息。
 
 * `/libs`
 
-   屬於AEM核心的程式庫和定義。 中的子資料夾 `/libs` 代表現成可用的AEM功能，例如搜尋或復寫。 中的內容 `/libs` 不應修改，因為它會影響AEM的運作方式。 您網站的特定功能應開發於 `/apps` (請參閱 [自訂元件和其他元素](/help/sites-developing/dev-guidelines-bestpractices.md#customizing-components-and-other-elements))。
+   属于AEM核心的库和定义。 中的子文件夹 `/libs` 表示现成的AEM功能，例如搜索或复制。 中的内容 `/libs` 不应修改，因为它会影响AEM的工作方式。 您网站的特定功能应开发于 `/apps` (请参阅 [自定义组件和其他元素](/help/sites-developing/dev-guidelines-bestpractices.md#customizing-components-and-other-elements))。
 
 * `/tmp`
 
-   臨時工作區。
+   临时工作区。
 
 * `/var`
 
-   變更並由系統更新的檔案；例如稽核記錄、統計資料、事件處理。
+   系统更改和更新的文件；例如审核日志、统计数据、事件处理。
 
 ## 环境 {#environments}
 
-使用AEM時，生產環境通常包含兩種不同型別的執行個體： [製作和發佈執行個體](/help/sites-deploying/deploy.md#author-and-publish-installs).
+使用AEM时，生产环境通常包含两种不同类型的实例： [创作实例和发布实例](/help/sites-deploying/deploy.md#author-and-publish-installs).
 
-## 排程程式 {#the-dispatcher}
+## 调度程序 {#the-dispatcher}
 
-Dispatcher是Adobe的快取和/或負載平衡工具。 如需進一步資訊，請參閱 [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hans).
+Dispatcher是Adobe用于缓存和/或负载平衡的工具。 欲知更多信息，请访问 [调度程序](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hans).
 
-## FileVault （來源修訂系統） {#filevault-source-revision-system}
+## FileVault（源修订版系统） {#filevault-source-revision-system}
 
-FileVault為您的JCR存放庫提供檔案系統對應和版本控制。 它可用來管理AEM開發專案，並完全支援在標準版本控制系統（例如Subversion）中儲存和建立專案計畫碼、內容、設定等。
+FileVault为JCR存储库提供文件系统映射和版本控制。 它可用于管理AEM开发项目，完全支持在标准版本控制系统（例如，Subversion）中存储和版本控制项目代码、内容、配置等。
 
-請參閱 [FileVault工具](/help/sites-developing/ht-vlttool.md) 詳細資訊的檔案。
+请参阅 [FileVault工具](/help/sites-developing/ht-vlttool.md) 文档，以了解详细信息。
 
 ## 工作流 {#workflows}
 
-您的內容通常受限於組織流程，包括各種參與者的核准和簽署等步驟。 這些程式可以表示為工作流程， [在AEM中定義和開發](/help/sites-developing/workflows-models.md)，然後套用至 [適當的內容頁面](/help/sites-administering/workflows.md) 或 [數位資產](/help/assets/assets-workflow.md) 視需要。
+您的内容通常受组织流程约束，包括各个参与者的批准和签署等步骤。 这些进程可以表示为工作流， [在AEM中定义和开发](/help/sites-developing/workflows-models.md)，然后应用于 [相应的内容页面](/help/sites-administering/workflows.md) 或 [数字资产](/help/assets/assets-workflow.md) 根据需要。
 
-「工作流程引擎」用於管理工作流程的實施，及其後續對您內容的應用程式。
+工作流引擎用于管理工作流的实施，以及工作流对内容的后续应用。
 
-## 多網站管理 {#multi-site-management}
+## 多站点管理 {#multi-site-management}
 
-多網站管理員(MSM)可讓您輕鬆管理共用相同內容的多個網站。 MSM可讓您定義網站之間的關係，如此一來，一個網站中的內容變更便會自動複製到其他網站。
+多站点管理器(MSM)使您能够轻松管理共享通用内容的多个网站。 MSM允许您定义站点之间的关系，以便将一个站点中的内容更改自动复制到其他站点。
 
-例如，網站通常以多種語言提供給國際受眾。 當使用相同語言的網站數量較少時（三到五個），可以執行手動程式來同步跨網站的內容。 不過，當網站數量增加或涉及多種語言時，自動化程式會變得更有效率。
+例如，通常以多种语言为国际受众提供网站。 当使用同一语言的网站数量很少（三到五个）时，可以执行手动流程来同步网站中的内容。 但是，当网站数量增加或涉及多种语言时，自动化该过程会变得更加高效。
 
-* 有效管理網站的不同語言版本。
-* 根據來源網站自動更新一或多個網站：
+* 高效地管理网站的不同语言版本。
+* 根据源站点自动更新一个或多个站点：
 
-   * 強制執行通用基礎結構，並在多個網站間使用通用內容。
-   * 最大限度地利用可用資源。
-   * 保持共同的外觀。
-   * 集中管理網站之間不同的內容。
+   * 强制实施通用基本结构并在多个站点中使用通用内容。
+   * 最大限度地利用可用资源。
+   * 保持统一的外观。
+   * 将精力集中在管理不同站点之间的内容上。
 
-如需詳細資訊，請參閱 [多網站管理員](/help/sites-administering/msm.md).
+有关更多信息，请参阅 [多站点管理器](/help/sites-administering/msm.md).

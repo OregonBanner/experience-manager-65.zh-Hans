@@ -1,7 +1,7 @@
 ---
-title: AEM 6.5中的自訂使用者群組對應
+title: AEM 6.5中的自定义用户组映射
 seo-title: Custom User Group Mapping in AEM 6.5
-description: 瞭解自訂使用者群組對應在AEM中的運作方式。
+description: 了解自定义用户组映射在AEM中的工作方式。
 seo-description: Lear how Custom User Group Mapping works in AEM.
 uuid: 7520351a-ab71-4661-b214-a0ef012c0c93
 contentOwner: User
@@ -19,86 +19,86 @@ ht-degree: 1%
 
 ---
 
-# AEM 6.5中的自訂使用者群組對應 {#custom-user-group-mapping-in-aem}
+# AEM 6.5中的自定义用户组映射 {#custom-user-group-mapping-in-aem}
 
-## 與CUG （自訂使用者群組）相關的JCR內容比較 {#comparison-of-jcr-content-related-to-cug}
+## 与CUG（自定义用户组）相关的JCR内容比较 {#comparison-of-jcr-content-related-to-cug}
 
 <table>
  <tbody>
   <tr>
-   <td><strong>舊版AEM</strong></td>
+   <td><strong>较旧的AEM版本</strong></td>
    <td><strong>AEM 6.5</strong></td>
    <td><strong>评论</strong></td>
   </tr>
   <tr>
-   <td><p>屬性：cq：cugEnabled</p> <p>宣告節點型別： N/A、剩餘屬性</p> </td>
-   <td><p>授权:</p> <p>節點：rep：cugPolicy，節點型別rep：CugPolicy</p> <p>宣告節點型別： rep：CugMixin</p> <p> </p> <p> </p> <p> </p> 身份验证:</p> <p>Mixin型別： granite：AuthenticationRequired</p> </td>
-   <td><p>為了限制讀取存取權，會將專用的CUG原則套用至目標節點。</p> <p>注意：原則只能套用至已設定的支援路徑。</p> <p>名稱為rep：cugPolicy和型別rep：CugPolicy的節點受到保護，且不能使用一般JCR API呼叫寫入；請改用JCR存取控制管理。</p> <p>另請參閱 <a href="https://jackrabbit.apache.org/oak/docs/security/authorization/cug.html">此頁面</a> 以取得更多資訊。</p> <p>若要在節點上強制執行驗證需求，只需新增mixin型別granite：AuthenticationRequired即可。</p> <p>注意：僅遵循設定的支援路徑下方。</p> </td>
+   <td><p>属性：cq：cugEnabled</p> <p>声明节点类型： N/A，剩余属性</p> </td>
+   <td><p>授权:</p> <p>节点：rep：cugPolicy，节点类型为rep：CugPolicy</p> <p>声明节点类型： rep：CugMixin</p> <p> </p> <p> </p> <p> </p> 身份验证:</p> <p>Mixin类型： granite：AuthenticationRequired</p> </td>
+   <td><p>为了限制读取访问，将专用CUG策略应用于目标节点。</p> <p>注意：策略只能在配置的受支持路径上应用。</p> <p>名为rep：cugPolicy和类型rep：CugPolicy的节点受到保护，不能使用常规JCR API调用写入；请改用JCR访问控制管理。</p> <p>参见 <a href="https://jackrabbit.apache.org/oak/docs/security/authorization/cug.html">此页面</a> 了解更多信息。</p> <p>要在节点上强制执行身份验证要求，只需添加mixin类型granite：AuthenticationRequired即可。</p> <p>注意：仅遵循配置的受支持路径下方。</p> </td>
   </tr>
   <tr>
-   <td><p>屬性：cq：cugPrincipals</p> <p>宣告節點型別： NA，剩餘屬性</p> </td>
-   <td><p>屬性： rep：principalNames</p> <p>宣告節點型別： rep：CugPolicy</p> </td>
-   <td><p>包含允許讀取受限制CUG下方內容之主體名稱的屬性受到保護，且無法使用一般JCR API呼叫進行寫入，請改用JCR存取控制管理。</p> <p>另請參閱 <a href="https://jackrabbit.apache.org/api/2.12/org/apache/jackrabbit/api/security/authorization/PrincipalSetPolicy.html">此頁面</a> 以取得實作的詳細資訊。</p> </td>
+   <td><p>属性：cq：cugPrincipals</p> <p>声明节点类型： NA，剩余属性</p> </td>
+   <td><p>属性： rep：principalNames</p> <p>声明节点类型：rep：CugPolicy</p> </td>
+   <td><p>包含允许读取受限CUG下方内容的主体名称的属性受保护，无法使用常规JCR API调用写入；请改用JCR访问控制管理。</p> <p>参见 <a href="https://jackrabbit.apache.org/api/2.12/org/apache/jackrabbit/api/security/authorization/PrincipalSetPolicy.html">此页面</a> 以了解有关实施的更多详细信息。</p> </td>
   </tr>
   <tr>
-   <td><p>屬性：cq：cugLoginPage</p> <p>宣告節點型別： NA，剩餘屬性</p> </td>
-   <td><p>屬性： granite：loginPath （選用）</p> <p>宣告節點型別： granite：AuthenticationRequired</p> </td>
-   <td><p>已定義mixin型別granite：AuthenticationRequired的JCR節點可選擇定義替代登入路徑。</p> <p>注意：僅遵循設定的支援路徑下方。</p> </td>
+   <td><p>属性：cq：cugLoginPage</p> <p>声明节点类型： NA，剩余属性</p> </td>
+   <td><p>属性： granite：loginPath （可选）</p> <p>声明节点类型： granite：AuthenticationRequired</p> </td>
+   <td><p>定义了mixin类型granite：AuthenticationRequired的JCR节点可以选择定义替代登录路径。</p> <p>注意：仅遵循配置的受支持路径下方。</p> </td>
   </tr>
   <tr>
-   <td><p>屬性：cq：cugRealm</p> <p>宣告節點型別： NA，剩餘屬性</p> </td>
+   <td><p>属性：cq：cugRealm</p> <p>声明节点类型： NA，剩余属性</p> </td>
    <td>NA</td>
-   <td>不再支援新的實作。</td>
+   <td>新实施不再支持。</td>
   </tr>
  </tbody>
 </table>
 
-## OSGi服務的比較 {#comparison-of-osgi-services}
+## OSGi服务的比较 {#comparison-of-osgi-services}
 
-**舊版AEM**
+**较旧的AEM版本**
 
-標籤：AdobeGranite封閉式使用者群組(CUG)支援
+标签：AdobeGranite封闭用户组(CUG)支持
 
-名稱： com.day.cq.auth.impl.CugSupportImpl
+名称：com.day.cq.auth.impl.CugSupportImpl
 
 **AEM 6.5**
 
-* 標籤： Apache Jackrabbit Oak CUG設定
+* 标签：Apache Jackrabbit Oak CUG配置
 
-   名稱： org.apache.jackrabbit.oak.spi.security.authorization.cug.impl.CugConfiguration
+   名称：org.apache.jackrabbit.oak.spi.security.authorization.cug.impl.CugConfiguration
 
-   ConfigurationPolicy =必要
+   ConfigurationPolicy =必需
 
-* 標籤： Apache Jackrabbit Oak CUG排除清單
+* 标签：Apache Jackrabbit Oak CUG排除列表
 
-   名稱： org.apache.jackrabbit.oak.spi.security.authorization.cug.impl.CugExcludeImpl
+   名称：org.apache.jackrabbit.oak.spi.security.authorization.cug.impl.CugExcludeImpl
 
-   ConfigurationPolicy =必要
+   ConfigurationPolicy =必需
 
-* 名稱： com.adobe.granite.auth.requirement.impl.RequirementService
-* 標籤：AdobeGranite驗證需求和登入路徑處理常式
+* 名称：com.adobe.granite.auth.requirement.impl.RequirementService
+* 标签：AdobeGranite身份验证要求和登录路径处理程序
 
-   名稱： com.adobe.granite.auth.requirement.impl.DefaultRequirementHandler
+   名称：com.adobe.granite.auth.requirement.impl.DefaultRequirementHandler
 
-   ConfigurationPolicy =必要
+   ConfigurationPolicy =必需
 
 **评论**
 
-* 設定CUG授權及啟用/停用評估。
-此服務可設定不受CUG授權影響的主參與者排除清單。
+* 配置CUG授权和启用/禁用评估。
+用于配置不受CUG授权影响的主体排除列表的服务。
 
    >[!NOTE]
    > 
-   >如果 `CugExcludeImpl` 未設定，則 `CugConfiguration` 會回覆為預設值。
+   >如果 `CugExcludeImpl` 未配置， `CugConfiguration` 回退到默认值。
 
-   如有特殊需求，可插入自訂CugExclude實作。
+   如果有特殊需求，可以插入自定义CugExclude实施。
 
-* 實作LoginPathProvider的OSGi元件會公開與LoginSelectorHandler相符的登入路徑。 它具有對RequirementHandler的強制參考，用於註冊觀察者，該觀察者會偵聽透過granite：AuthenticationRequired mixin型別儲存在內容中的已變更驗證要求。
-* 實作RequirementHandler的OSGi元件會通知SlingAuthenticator授權需求的變更。
+* 实施LoginPathProvider的OSGi组件公开与LoginSelectorHandler匹配的登录路径。 它强制引用RequirementHandler，用于注册观察者，该观察者通过granite：AuthenticationRequired mixin类型侦听存储在内容中的已更改身份验证要求。
+* 实施RequirementHandler的OSGi组件，用于通知SlingAuthenticator有关身份验证要求的更改。
 
-   由於此元件的設定原則為REQUIRE，因此只有在指定一組支援的路徑時，才會啟動它。
+   由于此组件的配置策略是REQUIRE，因此只有在指定了一组受支持的路径时，才会激活此策略。
 
-   啟用服務會啟動RequirementService。
+   启用服务将启动RequirementService。
 
 <!-- nested tables not supported - text above is the table>
 <table>

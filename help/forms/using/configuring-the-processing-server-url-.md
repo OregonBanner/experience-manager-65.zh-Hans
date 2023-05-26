@@ -1,7 +1,7 @@
 ---
-title: 正在設定AEM DS設定
+title: 配置AEM DS设置
 seo-title: Configuring AEM DS settings
-description: 提交表單前，您必須指定處理伺服器URL。
+description: 在提交表单之前，需要指定处理服务器URL。
 seo-description: You need to specify the processing server URL before you submit a form.
 uuid: 55a6d434-7352-48a8-8387-8a5c1a48fafc
 contentOwner: amgoyal
@@ -18,44 +18,44 @@ ht-degree: 0%
 
 ---
 
-# 正在設定AEM DS設定{#configuring-aem-ds-settings}
+# 配置AEM DS设置{#configuring-aem-ds-settings}
 
-本文會說明如何設定 **AEM DS設定服務**. 此設定可用於多個情境，例如：
+本文介绍了如何配置 **AEM DS设置服务**. 此设置可用于多个场景，例如：
 
-* 在通訊管理中
+* 在通信管理中
 
-   * 設定AEM Forms工作流程
-   * 使用表單入口網站從遠端儲存草稿/提交內容時
+   * 用于配置AEM Forms工作流程
+   * 使用表单门户远程保存草稿/提交时
 
-* 在最適化表單中，適用於從發佈執行個體提交最適化表單的情況
+* 在自适应表单中，适用于从发布实例提交自适应表单的情况
 
-以下是設定 **[!UICONTROL AEM DS設定]**：
+以下是配置 **[!UICONTROL AEM DS设置]**：
 
-1. 使用URL在發佈執行個體上開啟Configuration Manager：\
+1. 使用URL在发布实例上打开配置管理器：\
    *https://localhost:port/system/console/configMgr*.
 
-   ![AEM Web主控台設定](assets/web_configuration_console_new.png)
+   ![AEM Web控制台配置](assets/web_configuration_console_new.png)
 
-1. 在 **[!UICONTROL Adobe Experience Manager Web主控台設定]** 視窗，找到並按一下 **[!UICONTROL AEM DS設定]** 選項。
+1. 在 **[!UICONTROL Adobe Experience Manager Web控制台配置]** 窗口中，找到并单击 **[!UICONTROL AEM DS设置]** 选项。
 
-   ![DS設定](assets/ds_settings_new.png)
+   ![DS设置](assets/ds_settings_new.png)
 
-1. 此 **[!UICONTROL AEM DS設定服務]** 視窗會顯示AEM DS元件的常見組態設定。
+1. 此 **[!UICONTROL AEM DS设置服务]** 窗口显示AEM DS组件的常见配置设置。
 
-   ![DS設定服務](assets/ds_settings_service_new.png)
+   ![DS设置服务](assets/ds_settings_service_new.png)
 
-1. 在個別欄位中新增下列資訊：
+1. 在相应字段中添加以下信息：
 
-   **[!UICONTROL 處理伺服器URL]**：處理伺服器是需要觸發Forms或AEM工作流程的伺服器。 這可以與AEM編寫執行個體的URL或其他伺服器URL (即https://localhost:port/)相同。
+   **[!UICONTROL 处理服务器URL]**：处理服务器是需要触发Forms或AEM工作流的服务器。 这可以与AEM创作实例的URL或其他服务器URL(即https://localhost:port/)相同。
 
-   **[!UICONTROL 處理伺服器使用者名稱]**：工作流程使用者的使用者名稱 [根據所使用的伺服器URL]
+   **[!UICONTROL 处理服务器用户名]**：工作流用户的用户名 [基于正在使用的服务器URL]
 
-   **[!UICONTROL 處理伺服器密碼]**：工作流程使用者密碼
+   **[!UICONTROL 处理服务器密码]**：工作流用户的密码
 
    >[!NOTE]
    >
    >
    >    
    >    
-   >    * 使用Forms或AEM工作流程時，從發佈伺服器提交任何內容之前，必須先設定DS設定服務。 否則，表單提交將會失敗。
+   >    * 使用Forms或AEM工作流时，在从发布服务器进行任何提交之前，需要配置DS设置服务。 否则，无法提交表单。
 

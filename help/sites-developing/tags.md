@@ -1,7 +1,7 @@
 ---
 title: 标记
 seo-title: Tagging
-description: 標籤可讓內容分類並整理
+description: 标记允许对内容进行分类和整理
 seo-description: Tagging allows content to be categorized and organized
 uuid: fbbce525-ebc4-484b-bec9-2d68314cf15a
 contentOwner: Guillaume Carlino
@@ -20,13 +20,13 @@ ht-degree: 2%
 
 # 标记{#tagging}
 
-標籤可讓內容分類並整理。 標籤可依名稱空間和分類法來分類。
+标记允许对内容进行分类和整理。 标记可以按命名空间和分类法进行分类。
 
-* 另請參閱 [管理標籤](/help/sites-administering/tags.md) 以取得關於建立和管理標籤以及已對哪些內容標籤套用的資訊。
-* 另請參閱 [使用標籤](/help/sites-authoring/tags.md) 以取得關於標籤內容的資訊。
+* 参见 [管理标记](/help/sites-administering/tags.md) 有关创建和管理标记以及已对哪些内容应用标记的信息。
+* 参见 [使用标记](/help/sites-authoring/tags.md) 以了解有关标记内容的信息。
 
-開發人員可使用下列資訊：
+以下信息可供开发人员使用：
 
-* [AEM標籤架構](/help/sites-developing/framework.md)  — 用於標籤的節點和屬性的說明
+* [AEM标记框架](/help/sites-developing/framework.md)  — 用于标记的节点和属性的描述
 
-* [將標籤建置到AEM應用程式中](/help/sites-developing/building.md)  — 從使用者端和伺服器端程式碼使用標籤架構的API說明
+* [在AEM应用程序中构建标记](/help/sites-developing/building.md)  — 从客户端和服务器端代码对与标记框架结合使用的API进行描述

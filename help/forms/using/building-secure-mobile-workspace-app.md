@@ -1,7 +1,7 @@
 ---
-title: 為iOS建立安全的AEM Forms應用程式
+title: 为iOS构建安全的AEM Forms应用程序
 seo-title: Building a secure AEM Forms app for iOS
-description: 建立安全AEM Forms應用程式的步驟。
+description: 构建安全AEM Forms应用程序的步骤。
 seo-description: Steps to build a secure AEM Forms app.
 uuid: 6c4b160f-4d0c-4976-9609-9196795b6c8e
 content-type: reference
@@ -16,28 +16,28 @@ ht-degree: 0%
 
 ---
 
-# 為iOS建立安全的AEM Forms應用程式 {#building-a-secure-aem-forms-app-for-ios}
+# 为iOS构建安全的AEM Forms应用程序 {#building-a-secure-aem-forms-app-for-ios}
 
-您需要封存AEM Forms應用程式的Xcode專案，以建置安裝程式（.ipa檔案）和屬性清單（.plist檔案）檔案。 屬性清單檔案包含託管內部應用程式的設定資訊，例如應用程式的名稱和託管位置。 如需屬性清單檔案的詳細資訊，請參閱 [關於資訊屬性清單檔案](https://developer.apple.com/library/ios/#documentation/general/Reference/InfoPlistKeyReference/Articles/AboutInformationPropertyListFiles.html).
+您需要将AEM Forms应用程序的Xcode项目存档，以生成安装程序（.ipa文件）和属性列表（.plist文件）文件。 属性列表文件包含托管内部应用程序的配置信息，例如应用程序的名称和托管位置。 有关属性列表文件的详细信息，请参阅 [关于信息属性列表文件](https://developer.apple.com/library/ios/#documentation/general/Reference/InfoPlistKeyReference/Articles/AboutInformationPropertyListFiles.html).
 
-1. 登入下列網站：
+1. 登录以下网站：
 
    [https://developer.apple.com/account/ios/identifier/bundle](https://developer.apple.com/account/ios/identifier/bundle)
 
-1. 建立應用程式ID。 如需建立應用程式ID的詳細步驟，請參閱 [建立和設定應用程式ID](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html).
-1. 若要為應用程式設定iOS應用程式的套件組合識別碼，請按一下 **[!UICONTROL 設定應用程式ID]**.
-1. 在網頁底部，選取 **[!UICONTROL 啟用資料保護]**. 指定資料保護選項。
+1. 创建应用程序ID。 有关创建应用程序ID的详细步骤，请参阅 [创建和配置应用程序ID](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html).
+1. 要为应用程序配置iOS应用程序的包标识符，请单击 **[!UICONTROL 配置应用程序ID]**.
+1. 在网页底部，选择 **[!UICONTROL 启用数据保护]**. 指定数据保护选项。
 
-   按一下 **[!UICONTROL 完成]**.
+   单击 **[!UICONTROL 完成]**.
 
-1. 導覽至布建 — >發佈，並使用步驟3中設定的應用程式ID建立新的設定檔。
-1. 下載布建設定檔並新增至Xcode和iPad。
-1. 登入已安裝並設定Xcode和iOS SDK的Mac電腦。
-1. 開啟 `AEM Forms.xcodeproj` Xcode中的專案。
-1. 按一下 **[!UICONTROL AEM Forms]**，下 **[!UICONTROL 目標]**，選取 **[!UICONTROL AEM Forms]**. 選取 **[!UICONTROL 建置設定]** 索引標籤中，找到 **[!UICONTROL 程式碼簽署權利]** 區段並在「權益」下拉式清單中，選取 **[!UICONTROL LC Enterprise]** 選項。
-1. 找到並開啟 `LC Enterprise.entitlements` 檔案進行編輯。 在 **Xcode權益**，新增與布建設定檔中呈現的相同機碼值組。
-1. 在 **[!UICONTROL 建置設定]** 標籤，按一下 **[!UICONTROL 全部]** 然後按一下 **[!UICONTROL 已合併]**.
-1. 從 **[!UICONTROL 設定]** 清單，展開 **[!UICONTROL 程式碼簽署]**.
-1. 對象 **[!UICONTROL 程式碼簽署身分]**，請選取適當的簽名。 確保為以下專案選取了相同的簽章 **[!UICONTROL 偵錯]**， **[!UICONTROL 版本]**、和 **[!UICONTROL 任何iOS SDK]**.
-1. 下 **[!UICONTROL 專案]**，選取 **[!UICONTROL AEM Forms]** 並確保已選取適當的簽章 **[!UICONTROL 程式碼簽署身分]**， **[!UICONTROL 偵錯]**， **[!UICONTROL 版本]** 和 **[!UICONTROL 任何iOS SDK]**.
-1. 建置和分發AEM Forms應用程式。 如需建置和分發AEM Forms應用程式的詳細指示，請參閱 [建立AEM Forms應用程式的安裝程式](setup-xcode-project-build-installer.md#build-the-installer-for-the-mobile-workspace-app).
+1. 导航到配置 — >分发，然后使用在步骤3中配置的应用程序ID创建新配置文件。
+1. 下载配置配置文件并将其添加到Xcode和iPad。
+1. 登录到安装了Xcode并配置了iOS SDK的Mac计算机。
+1. 打开 `AEM Forms.xcodeproj` Xcode中的项目。
+1. 单击 **[!UICONTROL AEM Forms]**，下 **[!UICONTROL 目标]**，选择 **[!UICONTROL AEM Forms]**. 选择 **[!UICONTROL 内部版本设置]** 选项卡，找到 **[!UICONTROL 代码签名权利]** 区段，然后在授权下拉列表中，选择 **[!UICONTROL LC Enterprise]** 选项。
+1. 找到并打开 `LC Enterprise.entitlements` 文件，以进行编辑。 在 **Xcode授权**，添加与预配配置文件中相同的键值对。
+1. 在 **[!UICONTROL 内部版本设置]** 选项卡，单击 **[!UICONTROL 全部]** 然后单击 **[!UICONTROL 已合并]**.
+1. 从 **[!UICONTROL 设置]** 列表，展开 **[!UICONTROL 代码签名]**.
+1. 对象 **[!UICONTROL 代码签名标识]**&#x200B;中，选择相应的签名。 确保为选择相同的签名 **[!UICONTROL 调试]**， **[!UICONTROL 版本]**、和 **[!UICONTROL 任何iOS SDK]**.
+1. 下 **[!UICONTROL 项目]**，选择 **[!UICONTROL AEM Forms]** 并确保选择适当的签名 **[!UICONTROL 代码签名标识]**， **[!UICONTROL 调试]**， **[!UICONTROL 版本]** 和 **[!UICONTROL 任何iOS SDK]**.
+1. 构建和分发AEM Forms应用程序。 有关构建和分发AEM Forms应用程序的详细说明，请参阅 [构建AEM Forms应用程序的安装程序](setup-xcode-project-build-installer.md#build-the-installer-for-the-mobile-workspace-app).

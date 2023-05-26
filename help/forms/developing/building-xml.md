@@ -1,6 +1,6 @@
 ---
-title: 如何在AEM Forms on JEE Workbench中使用執行指令碼服務來建置XML資料？
-description: 使用AEM Forms on JEE Workbench中的執行指令碼服務來建置XML資料
+title: 如何在AEM Forms on JEE Workbench中使用execute script服务构建XML数据？
+description: 使用AEM Forms on JEE Workbench中的执行脚本服务构建XML数据
 exl-id: 2ec57cd4-f41b-4e5c-849d-88ca3d2cfe19
 source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
 workflow-type: tm+mt
@@ -9,59 +9,59 @@ ht-degree: 0%
 
 ---
 
-# 使用AEM Forms on JEE Workbench中的執行指令碼服務來建置XML資料 {#using-execute-script-service-forms-jee-workbench}
+# 使用AEM Forms on JEE Workbench中的执行脚本服务构建XML数据 {#using-execute-script-service-forms-jee-workbench}
 
-JEE程式管理工作流程中AEM Forms涉及許多XML，例如：XML資訊可建置在程式中，並傳送至JEE Workspace上AEM Forms的Flex應用程式，用於系統設定，或傳遞資訊至表單。 在許多情況下，JEE上的AEM Forms開發人員需要管理XML，而且很多時候這需要透過JEE上的AEM Forms流程來管理XML。
+JEE流程管理工作流中AEM Forms涉及许多XML，例如：可以在流程中构建XML信息并将其发送到JEE Workspace中AEM Forms的Flex应用程序，用于系统设置，或者在表单之间传递信息。 在许多情况下，JEE上的AEM Forms开发人员需要管理XML，并且很多时候这需要通过JEE上的AEM Forms流程来管理XML。
 
-處理簡單XML設定時，可以使用 `Set Value` 服務，這是JEE服務的預設AEM Forms。 此服務會設定流程資料模型中一或多個資料專案的值。 對於非常簡單的條件邏輯「如果是，則是」情況，此服務可以符合目的。
+在处理简单的XML设置时，可以使用 `Set Value` 服务，它是JEE服务中的默认AEM Forms。 此服务设置流程数据模型中一个或多个数据项的值。 对于非常简单的条件逻辑“如果是，则是”方案，此服务可以符合目的。
 
-不過，在更複雜的情況下，「設定值」服務並不那麼有效。 在這些情況下，需要依賴一組更強大的程式設計指令，例如Java等程式設計語言所提供的指令。 使用Java來建置複雜的XML，會比在Set Value服務內從簡單文字建置XML檔案簡單得多，也清楚得多。 此外，在Java中包含條件式程式設計比在Set Value服務中更容易。
+但是，在更复杂的情况下，设置值服务没有那么有效。 在这些情况下，需要依赖一组更强大的编程命令，例如Java等编程语言提供的命令。 使用Java构建复杂的XML比通过Set Value服务中的简单文本构建XML文档更简单、更清晰。 此外，在Java中包含条件编程比在Set Value服务中包含更容易。
 
-## 在程式中使用執行指令碼服務 {#using-execute-script-service-in-process}
+## 在进程中使用执行脚本服务 {#using-execute-script-service-in-process}
 
-在AEM Forms on JEE Workbench提供的標準AEM Forms on JEE服務集內， `Execute Script` 服務。 此服務可讓您在程式中執行指令碼，並提供 `executeScript` 操作完成。
+在AEM Forms on JEE Workbench中提供的AEM Forms on JEE标准服务集内，是 `Execute Script` 服务。 此服务允许您在进程中执行脚本，并提供 `executeScript` 操作完成此操作。
 
-### 使用定義為活動的「執行指令碼」服務建立應用程式和程式 {#create-an-application}
+### 使用定义为活动的“执行脚本”服务创建应用程序和进程 {#create-an-application}
 
-在本教學課程中，整體應用程式和程式建立不在涵蓋範圍內，但基於此指示，我們已建立一個名為「DemoApplication02」的應用程式。 假設應用程式已建立，我們需要在此應用程式中建立程式來呼叫executeScript服務。 若要將流程新增至應用程式，其中包含 `Execute Script` 服務：
+在本教程中，整个应用程序和过程的创建超出了范围，但出于本说明的考虑，我们创建了一个名为“DemoApplication02”的应用程序。 假定已创建应用程序，我们需要在此应用程序中创建进程以调用executeScript服务。 向应用程序添加一个进程，该进程包括 `Execute Script` 服务：
 
-1. 以滑鼠右鍵按一下您的應用程式並選取 [!UICONTROL 新增]. 在 [!UICONTROL 新增] 滑出功能表，選取 [!UICONTROL 程式]. 為流程命名，並視需要新增說明，然後選取您要代表此流程的圖示。 出於本教學課程的目的，我們已建立一個流程，並將其命名為  `executeScriptDemoProcess`.
-1. 定義您的起點，或稍後新增起點的簡單選擇。
-1. 程式現在已建立，應會在以下位置自動開啟： [!UICONTROL 程式設計] 視窗。 在此視窗中，按一下「流程設計」視窗上方的「活動選擇器」圖示，並將新活動拖曳至泳道上。 此時， [!UICONTROL 定義活動視窗] （請參閱下圖）。
-   ![定義活動](assets/define-activity.jpg)
-1. executeScript服務可在 `Foundation` 服務集。 「服務」名稱會將物件列為 `Execute Script – 1.0` 具有作業名稱 `executeScript`. 按一下以選取此專案。
-1. 現在應建立此程式，且預設為 [!UICONTROL 程式屬性] 視窗應出現在左側的窗格中。
+1. 右键单击您的应用程序并选择 [!UICONTROL 新]. In [!UICONTROL 新] 滑出菜单，选择 [!UICONTROL 进程]. 相应地命名您的进程，添加说明（如有必要），然后选择您希望代表此进程的图标。 在本教程中，我们创建了一个流程，并将其命名为  `executeScriptDemoProcess`.
+1. 定义起始点，或简单地选择稍后添加起始点。
+1. 该进程现已创建，应自动在中打开 [!UICONTROL 流程设计] 窗口。 在此窗口中，单击“流程设计”窗口顶部的“活动选取器”图标，然后将新活动拖到泳道上。 此时， [!UICONTROL 定义活动窗口] （参见下图）。
+   ![定义活动](assets/define-activity.jpg)
+1. executeScript服务位于 `Foundation` 服务集。 服务名称将对象列为 `Execute Script – 1.0` 具有操作名称 `executeScript`. 单击以选择此项目。
+1. 现在应创建此流程，默认情况下， [!UICONTROL 进程属性] 窗口应显示在左侧的窗格中。
 
-#### 使用「執行指令碼」服務將指令碼新增至處理序 {#add-script-to-process-with-execute-script}
+#### 使用“Execute Script”服务向进程添加脚本 {#add-script-to-process-with-execute-script}
 
-一旦使用定義的「執行指令碼」服務活動建立處理序後，就可以將指令碼新增至此處理序。 若要將指令碼新增至此程式：
+一旦创建了定义了“执行脚本”服务活动的进程，就可以向此进程添加脚本。 要向此进程添加脚本，请执行以下操作：
 
-1. 導覽至 [!UICONTROL 程式屬性] 調色盤。 在此浮動視窗中，展開 [!UICONTROL 輸入] 區段，然後按一下「……」圖示。
+1. 导航到 [!UICONTROL 进程属性] 调色板。 在此面板中，展开 [!UICONTROL 输入] 部分中，然后单击“……”图标。
 
-1. 在出現的文字方塊中，撰寫您的指令碼。 當指令碼已撰寫時，請按[確定] （請參閱下圖）。
-   ![執行指令碼](assets/execute-script.jpg)
+1. 在显示的文本框中编写脚本。 编写脚本后，请按“确定”（参见下图）。
+   ![执行脚本](assets/execute-script.jpg)
 
-## 使用Execute Script Service建立XML {#create-xml-execute-script-service}
+## 使用Execute Script服务创建XML {#create-xml-execute-script-service}
 
-一旦建立包含Execute Script服務的處理程式後，就可以使用此指令碼來建立XML。 您可以使用將指令碼新增至處理序中所述的文字方塊來撰寫以下所述的指令碼 `Execute Script` 服務區段的上方。
+创建包含Execute Script服务的进程后，就可以使用此脚本创建XML。 可以使用将脚本添加到进程中所描述的文本框中编写以下所述的脚本 `Execute Script` “服务”部分。
 
-**關於Execute Script服務的技術**
+**关于Execute Script服务的技术**
 
-為了知道Execute Script服務的功能和限制，必須知道服務的技術基礎。 JEE上的AEM Forms使用Apache Xerces檔案物件模型(DOM)剖析器，在程式中建立和儲存XML變數。 Xerces是W3C檔案物件模型規格的Java實作；已定義 [此處](https://dom.spec.whatwg.org/). DOM規格是操作XML的標準方法，自1998年以來，XML便已出現。 Xerces的Java實作Xerces-J支援DOM Level 2 1.0版。
+要了解Execute Script服务的能力和限制，必须了解该服务的技术基础。 JEE上的AEM Forms使用Apache Xerces文档对象模型(DOM)解析器在进程中创建和存储XML变量。 Xerces是W3C的Java实现的文档对象模型规范；定义了 [此处](https://dom.spec.whatwg.org/). DOM规范是处理XML的标准方法，自1998年以来，XML一直被使用。 Xerces的Java实现Xerces-J支持DOM级别2版本1.0。
 
-用來儲存XML變數的Java類別為：
+用于存储XML变量的Java类包括：
 
 * org.apache.xerces.dom.NodeImpl和
 
 * org.apache.xerces.dom.DocumentImpl
 
-DocumentImpl是NodeImpl的子類別，因此可以假設任何XML程式變數都是NodeImpl衍生。 您可以找到NodeImpl的檔案 [此處](https://xerces.apache.org/xerces-j/apiDocs/org/apache/xerces/dom/NodeImpl.html).
+DocumentImpl是NodeImpl的子类，因此可以假定任何XML进程变量都是NodeImpl派生。 您可以找到有关NodeImpl的文档 [此处](https://xerces.apache.org/xerces-j/apiDocs/org/apache/xerces/dom/NodeImpl.html).
 
-**使用Execute Script Service建立XML的範例**
+**使用Execute Script服务创建示例XML**
 
-以下是在Execute Script服務中建立XML的範例。 處理序有一個變數（節點），其型別為XML。 此活動的最終結果將為XML檔案。 此檔案有什麼作用，或如何套用至整個程式，這在本教學課程的討論範圍之外；最終要歸結為在整個應用程式中需要使用XML做什麼。 如簡介中所述，XML可用於AEM Forms中JEE表單和程式的許多用途，這僅僅是對如何編寫執行指令碼活動代碼以輸出簡單XML檔案的說明。
+以下是在Execute Script服务中创建XML的示例。 该进程具有一个类型为XML的变量（节点）。 此活动的最终结果将是一个XML文档。 该文档的作用，或它如何应用于整个过程在本教程中超出了范围；最终要归结为在整个应用程序中需要使用XML做什么。 正如简介中所述，XML可以在AEM Forms中用于JEE表单和流程中的许多目的，这仅仅是对如何编写“执行脚本”活动的代码以输出简单XML文档的解释。
 
-輸出XML的簡單Java指令碼看起來像這樣：
+用于输出XML的简单Java脚本如下所示：
 
 ```xml
 import org.apache.xerces.dom.DocumentImpl;
@@ -91,9 +91,9 @@ patExecContext.setProcessDataValue("/process_data/node", document);
 
 >[!NOTE]
 >
->上述DOM物件必須匯入指令碼中。
+>必须将上述DOM对象导入到脚本中。
 
-此簡單指令碼的結果是新XML檔案，其中變數節點設為：
+此简单脚本的结果是新的XML文档，其变量节点设置为：
 
 ```xml
 <resources>
@@ -103,9 +103,9 @@ patExecContext.setProcessDataValue("/process_data/node", document);
 </resources>
 ```
 
-**使用反複回圈將節點新增至XML**
+**使用迭代循环将节点添加到XML**
 
-節點也可以新增至程式中的現有XML變數。 變數node包含我們剛建立的XML物件。
+节点也可以添加到流程中的现有XML变量中。 变量node包含我们刚刚创建的XML对象。
 
 ```xml
 Document document = patExecContext.getProcessDataValue("/process_data/node");

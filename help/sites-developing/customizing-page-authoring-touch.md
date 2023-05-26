@@ -1,7 +1,7 @@
 ---
-title: 自訂頁面製作
+title: 自定义页面创作
 seo-title: Customizing Page Authoring
-description: AEM提供各種機制，讓您能夠自訂頁面製作功能
+description: AEM提供了各种机制以允许您自定义页面创作功能
 seo-description: AEM provides various mechanisms to enable you to customize page authoring functionality
 uuid: 9dc72d98-c5ff-4a00-b367-688ccf896526
 contentOwner: User
@@ -17,138 +17,138 @@ ht-degree: 1%
 
 ---
 
-# 自訂頁面製作{#customizing-page-authoring}
+# 自定义页面创作{#customizing-page-authoring}
 
 >[!CAUTION]
 >
->本檔案說明如何在現代化的觸控式UI中自訂頁面編寫，而不適用於傳統UI。
+>本文档介绍如何在启用了触屏的现代化UI中自定义页面创作，并且不适用于经典UI。
 
-AEM提供多種機制，可讓您自訂頁面製作功能(以及 [主控台](/help/sites-developing/customizing-consoles-touch.md))。
+AEM提供各种机制让您能够自定义页面创作功能(以及 [控制台](/help/sites-developing/customizing-consoles-touch.md))。
 
 * Clientlibs
 
-   Clientlibs可讓您擴充預設實作以實現新功能，同時重複使用標準函式、物件和方法。 自訂時，您可以在下建立自己的clientlib `/apps.` 新clientlib必須：
+   Clientlibs允许您扩展默认实施以实现新功能，同时重用标准函数、对象和方法。 进行自定义时，您可以在下创建自己的clientlib `/apps.` 新clientlib必须：
 
-   * 取決於編寫clientlib `cq.authoring.editor.sites.page`
-   * 屬於適當的 `cq.authoring.editor.sites.page.hook` 類別
+   * 取决于创作clientlib `cq.authoring.editor.sites.page`
+   * 属于适当的 `cq.authoring.editor.sites.page.hook` 类别
 
 * 叠加
 
-   覆蓋是以節點定義為基礎，並允許您覆蓋標準功能(在 `/libs`)的自訂功能(位於 `/apps`)。 建立覆蓋圖時，不需要原始的1:1復本，因為 [sling資源合併](/help/sites-developing/sling-resource-merger.md) 允許繼承。
+   叠加基于节点定义，允许您叠加标准功能(在 `/libs`)中自行定制的功能(在 `/apps`)。 创建叠加时，不需要原始文件的1:1副本，因为 [sling资源合并器](/help/sites-developing/sling-resource-merger.md) 允许继承。
 
 >[!NOTE]
 >
->如需進一步資訊，請參閱 [JS檔案集](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/jsdoc/ui-touch/editor-core/index.html).
+>欲知更多信息，请参见 [JS文档集](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/jsdoc/ui-touch/editor-core/index.html).
 
-您可以透過多種方式使用這些工具，來延伸AEM例項中的頁面製作功能。 以下說明選取範圍（概略說明）。
+可通过多种方式使用这些组件来扩展AEM实例中的页面创作功能。 下面介绍了所选内容（概略说明）。
 
 >[!NOTE]
 >
 >有关更多信息，请参阅：
 >
->* 使用和建立 [clientlibs](/help/sites-developing/clientlibs.md).
->* 使用和建立 [覆蓋](/help/sites-developing/overlays.md).
+>* 使用和创建 [clientlibs](/help/sites-developing/clientlibs.md).
+>* 使用和创建 [叠加](/help/sites-developing/overlays.md).
 >* [Granite](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/index.html)
->* [AEM觸控式UI的結構](/help/sites-developing/touch-ui-structure.md) 以取得用於編寫頁面的結構區域的詳細資訊。
+>* [AEM触屏优化UI的结构](/help/sites-developing/touch-ui-structure.md) 有关用于页面创作的结构区域的详细信息。
 >
 
 
 
 >[!CAUTION]
 >
->您 ***必須*** 不變更中的任何專案 `/libs` 路徑。
+>您 ***必须*** 不更改 `/libs` 路径。
 >
->這是因為 `/libs` 下次升級執行個體時會被覆寫（而您在套用hotfix或feature pack時很可能會被覆寫）。
+>这是因为 `/libs` 下次升级实例时将被覆盖（在应用修补程序或功能包时很可能会被覆盖）。
 >
->設定和其他變更的建議方法是：
+>配置和其他更改的推荐方法是：
 >
->1. 重新建立所需專案（即該專案存在於中） `/libs`)下 `/apps`
->1. 進行任何變更 `/apps`
+>1. 重新创建所需项目（即该项目存在于中） `/libs`)下 `/apps`
+>1. 在中进行任何更改 `/apps`
 
 
-## 新增圖層（模式） {#add-new-layer-mode}
+## 添加新图层（模式） {#add-new-layer-mode}
 
-編輯頁面時，會有多種方式 [模式](/help/sites-authoring/author-environment-tools.md#page-modes) 可用。 這些模式的實作方式 [圖層](/help/sites-developing/touch-ui-structure.md#layer). 這些功能可讓使用者存取相同頁面內容的不同功能型別。 標準圖層包括：編輯、預覽、註釋、開發人員和目標定位。
+在编辑页面时，有各种 [模式](/help/sites-authoring/author-environment-tools.md#page-modes) 可用。 这些模式通过以下方式实现 [图层](/help/sites-developing/touch-ui-structure.md#layer). 利用这些功能，可访问同一页面内容的不同功能类型。 标准层包括：编辑、预览、注释、开发人员和定位。
 
-### 圖層範例：即時副本狀態 {#layer-example-live-copy-status}
+### 层示例：Live Copy状态 {#layer-example-live-copy-status}
 
-標準AEM例項提供MSM層。 這會存取與以下專案相關的資料： [多網站管理](/help/sites-administering/msm.md) 並在圖層中反白顯示。
+标准AEM实例提供MSM层。 这将访问与以下项相关的数据： [多站点管理](/help/sites-administering/msm.md) 并在图层中将其加亮。
 
-若要檢視其運作情況，您可以編輯任何 [We.Retail語言副本](/help/sites-developing/we-retail-globalized-site-structure.md) 頁面（或任何其他即時副本頁面）並選取 **即時副本狀態** 模式。
+要查看其实际操作情况，您可以编辑任意 [We.Retail语言副本](/help/sites-developing/we-retail-globalized-site-structure.md) 页面（或任何其他live copy页面）并选择 **Live Copy状态** 模式。
 
-您可以在下列位置找到MSM圖層定義（供參考）：
+可以在以下位置找到MSM层定义（供参考）：
 
 `/libs/wcm/msm/content/touch-ui/authoring/editor/js/msm.Layer.js`
 
-### 程式碼範例 {#code-sample}
+### 代码示例 {#code-sample}
 
-此範例套件說明如何建立新圖層（模式），這是MSM檢視的新圖層。
+这是一个示例包，显示如何创建新层（模式），即MSM视图的新层。
 
-GITHUB上的程式碼
+GITHUB上的代码
 
-您可以在GitHub上找到此頁面的程式碼
+您可以在GitHub上找到此页面的代码
 
-* [在GitHub上開啟aem-authoring-new-layer-mode專案](https://github.com/Adobe-Marketing-Cloud/aem-authoring-new-layer-mode)
-* 將專案下載為 [ZIP檔案](https://github.com/Adobe-Marketing-Cloud/aem-authoring-new-layer-mode/archive/master.zip)
+* [在GitHub上打开aem-authoring-new-layer-mode项目](https://github.com/Adobe-Marketing-Cloud/aem-authoring-new-layer-mode)
+* 将项目下载为 [ZIP文件](https://github.com/Adobe-Marketing-Cloud/aem-authoring-new-layer-mode/archive/master.zip)
 
-## 新增選擇類別至資產瀏覽器 {#add-new-selection-category-to-asset-browser}
+## 将新的选择类别添加到资源浏览器 {#add-new-selection-category-to-asset-browser}
 
-資產瀏覽器會顯示各種型別/類別（例如影像、檔案等）的資產。 這些資產也可依資產類別進行篩選。
+资产浏览器显示各种类型/类别（如图像、文档等）的资产。 资源也可以按这些资源类别进行筛选。
 
-### 程式碼範例 {#code-sample-1}
+### 代码示例 {#code-sample-1}
 
-`aem-authoring-extension-assetfinder-flickr` 是一個範例套件，說明如何將新群組新增至資產尋找器。 此範例連線到 [閃爍](https://www.flickr.com)的公開串流並在sidepanel中顯示。
+`aem-authoring-extension-assetfinder-flickr` 是一个示例包，显示如何向资产查找器添加新组。 此示例连接到 [闪烁](https://www.flickr.com)的公开流，并在侧面板中显示。
 
-GITHUB上的程式碼
+GITHUB上的代码
 
-您可以在GitHub上找到此頁面的程式碼
+您可以在GitHub上找到此页面的代码
 
-* [在GitHub上開啟aem-authoring-extension-assetfinder-flickr專案](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-assetfinder-flickr)
-* 將專案下載為 [ZIP檔案](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-assetfinder-flickr/archive/master.zip)
+* [在GitHub上打开aem-authoring-extension-assetfinder-flickr项目](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-assetfinder-flickr)
+* 将项目下载为 [ZIP文件](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-assetfinder-flickr/archive/master.zip)
 
-## 篩選資源 {#filtering-resources}
+## 筛选资源 {#filtering-resources}
 
-編寫頁面時，使用者必須經常從資源（例如頁面、元件、資產等）中進行選取。 例如，這可採取清單的形式，作者必須從中選擇專案。
+创作页面时，用户通常必须从资源（例如页面、组件、资源等）中进行选择。 这可以采用列表形式，例如，作者必须从中选择一个项目。
 
-為了將清單保持在合理的大小並與使用案例相關，可採用自訂述詞的形式實施篩選器。 例如，如果 [`pathbrowser`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html) [Granite](/help/sites-developing/touch-ui-concepts.md#granite-ui) 元件是用來讓使用者選取特定資源的路徑，可透過下列方式篩選顯示的路徑：
+为了使列表保持合理的大小并且与用例相关，可以采用自定义谓词的形式实施过滤器。 例如，如果 [`pathbrowser`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html) [Granite](/help/sites-developing/touch-ui-concepts.md#granite-ui) 组件用于允许用户选择特定资源的路径，提供的路径可通过以下方式过滤：
 
-* 實作自訂述詞 [`com.day.cq.commons.predicate.AbstractNodePredicate`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/predicate/package-summary.html) 介面。
-* 指定述詞的名稱，並在使用時參考該名稱 `pathbrowser`.
+* 通过实施自定义谓词 [`com.day.cq.commons.predicate.AbstractNodePredicate`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/predicate/package-summary.html) 界面。
+* 指定谓词的名称，并在使用 `pathbrowser`.
 
-如需建立自訂述詞的詳細資訊，請參閱 [本文](/help/sites-developing/implementing-custom-predicate-evaluator.md).
+有关创建自定义谓词的更多详细信息，请参阅 [本文](/help/sites-developing/implementing-custom-predicate-evaluator.md).
 
 >[!NOTE]
 >
->透過實作來實作自訂述詞 `com.day.cq.commons.predicate.AbstractNodePredicate` 介面在傳統UI中也可運作。
+>通过实施实施自定义谓词 `com.day.cq.commons.predicate.AbstractNodePredicate` 界面在经典UI中也有效。
 >
->另請參閱 [此知識庫文章](https://helpx.adobe.com/experience-manager/using/creating-custom-cq-tree.html) 在傳統UI中實作自訂述詞的範例。
+>参见 [此知识库文章](https://helpx.adobe.com/experience-manager/using/creating-custom-cq-tree.html) 有关在经典UI中实施自定义谓词的示例。
 
-## 將動作新增至元件工具列 {#add-new-action-to-a-component-toolbar}
+## 将新操作添加到组件工具栏 {#add-new-action-to-a-component-toolbar}
 
-每個元件（通常是）都有一個工具列，可讓您存取可對該元件執行的一系列動作。
+每个组件（通常）都有一个工具栏，通过该工具栏可访问可对该组件执行的一系列操作。
 
-### 程式碼範例 {#code-sample-2}
+### 代码示例 {#code-sample-2}
 
-`aem-authoring-extension-toolbar-screenshot` 是一個範例套件，說明如何建立自訂工具列動作來轉譯元件。
+`aem-authoring-extension-toolbar-screenshot` 是一个示例包，显示如何创建自定义工具栏操作以渲染组件。
 
-GITHUB上的程式碼
+GITHUB上的代码
 
-您可以在GitHub上找到此頁面的程式碼
+您可以在GitHub上找到此页面的代码
 
-* [在GitHub上開啟aem-authoring-extension-toolbar-screens專案](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-toolbar-screenshot)
-* 將專案下載為 [ZIP檔案](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-toolbar-screenshot/archive/master.zip)
+* [在GitHub上打开aem-authoring-extension-toolbar-screenshot项目](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-toolbar-screenshot)
+* 将项目下载为 [ZIP文件](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-toolbar-screenshot/archive/master.zip)
 
-## 新增就地編輯器 {#add-new-in-place-editor}
+## 添加新的就地编辑器 {#add-new-in-place-editor}
 
-### 標準就地編輯器 {#standard-in-place-editor}
+### 标准就地编辑器 {#standard-in-place-editor}
 
 在标准 AEM 安装中：
 
 1. `/libs/cq/gui/components/authoring/editors/clientlibs/core/js/editors/editorExample.js`
 
-   儲存各種可用編輯器的定義。
+   包含各种编辑器的可用定义。
 
-1. 編輯器與可以使用的每個資源型別（如元件中所示）之間有一個連線：
+1. 编辑器和每个可以使用它的资源类型（组件中一样）之间存在一个连接：
 
    * `cq:inplaceEditing`
 
@@ -159,11 +159,11 @@ GITHUB上的程式碼
 
          * 属性: `editorType`
 
-            定義為該元件觸發就地編輯時將使用的內嵌編輯器型別；例如 `text`， `textimage`， `image`， `title`.
+            定义当为该组件触发就地编辑时将使用的内联编辑器的类型；例如， `text`， `textimage`， `image`， `title`.
 
-1. 編輯器的其他設定詳細資料可使用 `config` 包含設定的節點以及 `plugin` 節點，以包含必要的外掛程式設定詳細資料。
+1. 可以使用配置编辑器的其他配置详细信息 `config` 包含配置的节点以及 `plugin` 节点以包含必要的插件配置详细信息。
 
-   以下是為影像元件的影像裁切外掛程式定義外觀比例的範例。 請注意，由於熒幕大小可能非常有限，裁切比例已移至全熒幕編輯器，並且只能在那裡看到。
+   以下是为图像组件的图像裁剪插件定义长宽比的示例。 请注意，由于屏幕大小可能非常有限，因此裁切比例已移至全屏编辑器，并且只能在那里看到。
 
    ```xml
    <cq:inplaceEditing
@@ -187,77 +187,77 @@ GITHUB上的程式碼
 
    >[!CAUTION]
    >
-   >請注意，在AEM中，裁切比例是由 `ratio` 屬性，定義為 **高度/寬度**. 這與傳統的寬度/高度定義不同，這麼做是出於舊版相容性的原因。 只要您定義「 」，製作使用者就不會知道任何差異 `name` 屬性明確，因為這是UI中顯示的內容。
+   >请注意，在AEM裁切比中，由设置 `ratio` 属性，定义为 **高度/宽度**. 这与宽度/高度的传统定义不同，这样做是出于旧版兼容性的原因。 只要您定义 `name` 属性清楚，因为这是UI中显示的内容。
 
-#### 建立新的就地編輯器 {#creating-a-new-in-place-editor}
+#### 创建新的就地编辑器 {#creating-a-new-in-place-editor}
 
-若要實作新的就地編輯器（在您的clientlib中）：
+要实施新的就地编辑器（在clientlib中），请执行以下操作：
 
 >[!NOTE]
 >
->例如，請參閱：
+>例如，请参阅：
 >`/libs/cq/gui/components/authoring/editors/clientlibs/core/js/editors/editorExample.js`
 
-1. 實作：
+1. 实施：
 
    * `setUp`
    * `tearDown`
 
-1. 註冊編輯器（包括建構函式）：
+1. 注册编辑器（包括构造函数）：
 
    * `editor.register`
 
-1. 提供編輯器與每個可使用它的資源型別（如元件中的）之間的連線。
+1. 提供编辑器与可以使用该编辑器的每个资源类型（组件中）之间的连接。
 
-#### 建立新就地編輯器的程式碼範例 {#code-sample-for-creating-a-new-in-place-editor}
+#### 用于创建新的就地编辑器的代码示例 {#code-sample-for-creating-a-new-in-place-editor}
 
-`aem-authoring-extension-inplace-editor` 是一個範例套件，說明如何在AEM中建立新的就地編輯器。
+`aem-authoring-extension-inplace-editor` 是一个示例包，显示如何在AEM中创建新就地编辑器。
 
-GITHUB上的程式碼
+GITHUB上的代码
 
-您可以在GitHub上找到此頁面的程式碼
+您可以在GitHub上找到此页面的代码
 
-* [在GitHub上開啟aem-authoring-extension-inplace-editor專案](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-inplace-editor)
-* 將專案下載為 [ZIP檔案](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-inplace-editor/archive/master.zip)
+* [在GitHub上打开aem-authoring-extension-inplace-editor项目](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-inplace-editor)
+* 将项目下载为 [ZIP文件](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-inplace-editor/archive/master.zip)
 
-#### 設定多個就地編輯器 {#configuring-multiple-in-place-editors}
+#### 配置多个就地编辑器 {#configuring-multiple-in-place-editors}
 
-您可以設定元件，使其有多個就地編輯器。 設定多個就地編輯器時，您可以選取適當的內容並開啟適當的編輯器。 請參閱 [設定多個就地編輯器](/help/sites-developing/multiple-inplace-editors.md) 說明檔案以取得詳細資訊。
+可以配置组件，使其具有多个就地编辑器。 配置多个就地编辑器后，您可以选择相应的内容并打开相应的编辑器。 请参阅 [配置多个就地编辑器](/help/sites-developing/multiple-inplace-editors.md) 文档，以了解更多信息。
 
-## 新增頁面動作 {#add-a-new-page-action}
+## 添加新页面操作 {#add-a-new-page-action}
 
-若要在頁面工具列中新增頁面動作，例如 **返回網站** （主控台）動作。
+要向页面工具栏中添加新页面操作，例如 **返回站点** （控制台）操作。
 
-### 程式碼範例 {#code-sample-3}
+### 代码示例 {#code-sample-3}
 
-`aem-authoring-extension-header-backtosites` 是一個範例套件，說明如何建立自訂標題列動作以跳回網站主控台。
+`aem-authoring-extension-header-backtosites` 是一个示例包，显示如何创建自定义标题栏操作以跳回站点控制台。
 
-GITHUB上的程式碼
+GITHUB上的代码
 
-您可以在GitHub上找到此頁面的程式碼
+您可以在GitHub上找到此页面的代码
 
-* [在GitHub上開啟aem-authoring-extension-header-backtosites專案](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-header-backtosites)
-* 將專案下載為 [ZIP檔案](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-header-backtosites/archive/master.zip)
+* [在GitHub上打开aem-authoring-extension-header-backtosites项目](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-header-backtosites)
+* 将项目下载为 [ZIP文件](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-header-backtosites/archive/master.zip)
 
-## 自訂啟用請求工作流程 {#customizing-the-request-for-activation-workflow}
+## 自定义激活请求工作流 {#customizing-the-request-for-activation-workflow}
 
-現成的工作流程， **請求啟用**：
+即装即用的工作流， **请求激活**：
 
-* 當有內容作者時，會自動出現在適當的功能表中 **沒有** 適當的復寫許可權，但 **有** DAM使用者和作者的成員資格。
+* 当内容作者访问时，将自动显示在相应的菜单中 **没有** 适当的复制权限，但 **确实有** DAM用户和作者的成员资格。
 
-* 否則將不會顯示任何內容，因為復寫許可權已移除。
+* 否则，将不会显示任何内容，因为复制权限已被删除。
 
-若要在發生此類啟動時具有自訂行為，您可以覆蓋 **請求啟用** 工作流程：
+要在激活时自定义行为，您可以叠加 **请求激活** 工作流：
 
-1. 在 `/apps` 覆蓋 **網站** 精靈：
+1. In `/apps` 叠加 **站点** 向导：
 
    `/libs/wcm/core/content/common/managepublicationwizard`
 
    >[!NOTE]
    >
-   >這本身會覆寫下列專案的常見例項：
+   >它本身会覆盖以下通用实例：
    >
    >`/libs/cq/gui/content/common/managepublicationwizard`
 
-1. 更新 [工作流程模型](/help/sites-developing/workflows-models.md) 以及所需的相關設定/指令碼。
-1. 移除「 」的許可權 [ `replicate` 動作](/help/sites-administering/security.md#actions) 來自所有相關頁面的所有適當使用者；當任何使用者嘗試發佈（或復寫）頁面時，將此工作流程作為預設動作觸發。
+1. 更新 [工作流模型](/help/sites-developing/workflows-models.md) 以及所需的相关配置/脚本。
+1. 删除的权限 [ `replicate` 操作](/help/sites-administering/security.md#actions) 来自所有相关页面的所有适当用户；当任何用户尝试发布（或复制）页面时，将此工作流作为默认操作触发。

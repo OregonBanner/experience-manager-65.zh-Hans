@@ -1,7 +1,7 @@
 ---
-title: 指定安全性設定
+title: 指定安全设置
 seo-title: Specifying security settings
-description: 瞭解如何指定安全性設定。
+description: 了解如何指定安全设置。
 seo-description: Learn how to specify security settings.
 uuid: 63ba7819-e4eb-4d28-8463-142ff4233a1e
 contentOwner: admin
@@ -17,12 +17,12 @@ ht-degree: 2%
 
 ---
 
-# 指定安全性設定 {#specifying-security-settings}
+# 指定安全设置 {#specifying-security-settings}
 
-Forms可讓您控制是否解析XML輸入中的外部實體。 依預設，這些問題會得到解決，但您可以變更此行為以提高AEM表單系統的安全性。
+通过Forms，您可以控制是否解析XML输入中的外部实体。 默认情况下，这些问题会得到解决，但您可以更改此行为以提高AEM表单系统的安全性。
 
-**防止處理包含外部實體參照的XML資料檔案**
+**阻止处理包含对外部实体的引用的XML数据文件**
 
-1. 在管理控制檯中，按一下 **[!UICONTROL 服務> Forms]**.
-1. 清除「解析外部圖元」核取方塊。
+1. 在管理控制台中，单击 **[!UICONTROL 服务> Forms]**.
+1. 清除“解析外部图元”复选框。
 1. 单击“**[!UICONTROL 保存]**”。

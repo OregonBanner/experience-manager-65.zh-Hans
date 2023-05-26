@@ -1,6 +1,6 @@
 ---
 title: Dynamic Media 中的辅助功能
-description: 瞭解Dynamic Media和Dynamic Media檢視器中的協助工具支援。
+description: 了解Dynamic Media和Dynamic Media查看器中的无障碍支持。
 contentOwner: Rick Brough
 topic-tags: introduction
 content-type: reference
@@ -16,26 +16,26 @@ ht-degree: 1%
 
 # [!DNL Dynamic Media] 中的辅助功能 {#working-with-three-d-assets-dm}
 
-[!DNL Dynamic Media] 在編寫使用者介面中支援鍵盤控制和輔助技術，例如JAWS和NVDA熒幕閱讀器。
+[!DNL Dynamic Media] 在整个创作用户界面中支持键盘控制和辅助技术，例如JAWS和NVDA屏幕阅读器。
 
-## 中的鍵盤協助工具支援 [!DNL Dynamic Media]
+## 中的键盘辅助功能支持 [!DNL Dynamic Media]
 
-因為 [!DNL Dynamic Media] 是外掛程式，用於 [!DNL Adobe Experience Manager Assets]，大部分的鍵盤控制行為與中的相同 [!DNL Experience Manager Assets]. 例如， `Cancel` 中的按鈕 [!DNL Dynamic Media] 與中的焦點反白顯示相同 [!DNL Experience Manager Assets]，並會對 `Spacebar` 索引鍵為 [!DNL Experience Manager Assets]. 另請參閱 [Assets中的鍵盤快速鍵](/help/assets/accessibility.md#keyboard-shortcuts).
+因为 [!DNL Dynamic Media] 是一个插件，用于 [!DNL Adobe Experience Manager Assets]，则大多数键盘控制行为与中的相同 [!DNL Experience Manager Assets]. 例如， `Cancel` 中的按钮 [!DNL Dynamic Media] 具有与中相同的焦点突出显示 [!DNL Experience Manager Assets]，并会对 `Spacebar` 键入as in [!DNL Experience Manager Assets]. 参见 [Assets中的键盘快捷键](/help/assets/accessibility.md#keyboard-shortcuts).
 
-中個別使用者介面元素支援的按鍵動作 [!DNL Dynamic Media] 清晰易懂。 中的鍵盤控制 [!DNL Dynamic Media] 內容如下：
+中的各个用户界面元素支持的击键 [!DNL Dynamic Media] 清晰易懂。 中的键盘控制 [!DNL Dynamic Media] 与以下内容有关：
 
-* 使用功能 `Tab` 和 `Shift+Tab` 按鍵以導覽頁面上的互動式元素。
-使用 `Tab` 將輸入焦點推進至Tab鍵瀏覽順序中的下一個使用者介面元素；使用 `Shift+Tab` 將輸入焦點帶回上一個使用者介面元素。
-焦點周遊會依循熒幕上的自然使用者介面元素位置，並依序由左至右、由上至下的順序移動。 此外，如果任何欄位有錯誤，您可以按下 `Tab` 將焦點移至其中。
-* 能夠使用 `Spacebar` 和 `Enter` 鍵以啟動標準使用者介面元素，例如按鈕和下拉式清單。
-* 可在作用中元素上看見鍵盤焦點反白顯示。 具有輸入焦點的使用者介面元素會接收視覺焦點指示，作為呈現於使用者介面元素周圍的邊框。
-* 在熱點編輯器中，您可以使用某些自訂按鍵（例如方向鍵）與複雜的使用者介面元素互動，以重新定位熱點。
-* 在互動式視訊編輯器中，您可以使用 `Spacebar` 以選取影像並將其新增至區段。 此外，您可以使用 `Backspace` 鍵以從中刪除選取的專案 **[!UICONTROL 內容]** 標籤。 此外，按下 `Tab` 功能視需要導覽頁面上的互動式元素。
-* 在影像裁切/智慧型裁切編輯器中，您可以執行下列動作：
-   * 使用方向鍵來裁切框架大小、重新定位影像，或兩者皆使用。
-   * 第一個 `Tab` 停止反白顯示整個影像框架。 然後您可以使用鍵盤上的方向鍵來重新定位框架。
-   * 接下來的四個 `Tab` 止點是框架的四個轉角。 將焦點放在框架轉角上時，轉角會反白顯示。 同樣地，您可以使用鍵盤上的方向鍵來移動焦點轉角。
-另請參閱 [編輯單一影像的智慧型裁切或智慧型色票](/help/assets/image-profiles.md#editing-the-smart-crop-or-smart-swatch-of-a-single-image)
+* 使用能力 `Tab` 和 `Shift+Tab` 按键在页面上的交互式元素之间导航。
+使用 `Tab` 按Tab键顺序将输入焦点前进到下一个用户界面元素；使用 `Shift+Tab` 将输入焦点带回上一个用户界面元素。
+焦点遍历会遵循屏幕上的自然用户界面元素位置，并以从左到右、从上到下的顺序移动。 此外，如果任何字段有错误，您可以按 `Tab` 将焦点移到其中。
+* 能够使用 `Spacebar` 和 `Enter` 用于激活标准用户界面元素（如按钮和下拉列表）的键。
+* 能够看到活动元素上的键盘焦点突出显示。 具有输入焦点的用户界面元素接收作为围绕用户界面元素呈现的边框的可视焦点指示。
+* 在热点编辑器中，您可以使用某些自定义按键（如箭头键）与复杂的用户界面元素交互，以重新定位热点。
+* 在交互式视频编辑器中，您可以使用 `Spacebar` 以选择图像并将其添加到区段。 此外，您还可以使用 `Backspace` 键以从中删除选定项 **[!UICONTROL 内容]** 选项卡。 此外，按下 `Tab` 会根据需要执行相应的功能，以便在页面上的交互式元素之间导航。
+* 在图像裁切/智能裁切编辑器中，您可以执行以下操作：
+   * 使用箭头键裁切框架大小、重新定位图像或同时使用两者。
+   * 第一个 `Tab` stop突出显示整个图像框架。 然后可以使用键盘上的箭头键重新定位框架。
+   * 接下来的四个 `Tab` 止点是框架的四个角。 将焦点置于框架角上时，该角会被高亮。 同样，您可以使用键盘上的箭头键移动焦点角。
+参见 [编辑单个图像的智能裁切或智能色板](/help/assets/image-profiles.md#editing-the-smart-crop-or-smart-swatch-of-a-single-image)
 
 <!-- Keyboarding is the same because Dynamic Media is using the same UI library (Coral 3 (AEM 6.5) or Coral Spectrum (in Skyline)) as entire AEM Assets.  -->
 
@@ -45,29 +45,29 @@ ht-degree: 1%
 
 <!-- I would not get into much of details of specific keyboard support logic of these editors. One of the reasons - chances are that accessibility support will receive Phase2-like attention, with more holistic approach. -->
 
-## 中的輔助技術支援 [!DNL Dynamic Media] {#assistive-technology-support-for-dm}
+## 中的辅助技术支持 [!DNL Dynamic Media] {#assistive-technology-support-for-dm}
 
-[!DNL Dynamic Media] 使用者介面元素可與熒幕閱讀器等輔助技術搭配使用。 例如，使用鍵盤快速鍵導覽地標時，它可以辨識頁面上的地標 `D` 或使用鍵盤快速鍵的區域 `R`. 它也會在使用標題鍵盤快速鍵導覽時提供標題旁白 `H`.
+[!DNL Dynamic Media] 用户界面元素可与屏幕阅读器等辅助技术配合使用。 例如，当您使用键盘快捷键导航地标时，它可以识别页面上的地标 `D` 或区域（使用键盘快捷键） `R`. 它还可以在使用标题键盘快捷键导航时讲述标题 `H`.
 
-## 中的鍵盤協助工具支援 [!DNL Dynamic Media] 檢視者 {#keyboard-accessibility-for-dm-viewers}
+## 中的键盘辅助功能支持 [!DNL Dynamic Media] 查看器 {#keyboard-accessibility-for-dm-viewers}
 
-所有現成可用功能 [!DNL Dynamic Media] 檢視器元件支援客戶的鍵盤協助功能。
+所有开箱即用 [!DNL Dynamic Media] 查看器组件支持客户的键盘辅助功能。
 
-另請參閱 [鍵盤協助工具與導覽](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/c-keyboard-accessibility.html) 在Dynamic Media檢視器參考指南中。
+参见 [键盘辅助功能和导航](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/c-keyboard-accessibility.html) 在Dynamic Media查看器参考指南中。
 
-## 中的輔助技術支援 [!DNL Dynamic Media] 檢視者 {#assistive-technology-support-for-dm-viewers}
+## 中的辅助技术支持 [!DNL Dynamic Media] 查看器 {#assistive-technology-support-for-dm-viewers}
 
-全部 [!DNL Dynamic Media] 檢視器元件支援ARIA （可存取的豐富網際網路應用程式）角色和屬性，以改進與熒幕閱讀器等輔助技術的整合。
-請參閱 **輔助技術支援** Dynamic Media檢視器參考指南中任何自訂檢視器主題的說明主題。 例如，請參閱 [輔助技術支援](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/r-html5-video-viewer-20-assistive.html) （視訊檢視器），或 [輔助技術支援](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/c-html5-aem-interactive-image-assistive.html#viewers-for-aem-assets-only) 互動式影像檢視器的。
+全部 [!DNL Dynamic Media] 查看器组件支持ARIA（可访问的富互联网应用程序）角色和属性，以改进与屏幕阅读器等辅助技术的集成。
+请参阅 **辅助技术支持** Dynamic Media查看器参考指南的任何自定义查看器主题中的帮助主题。 例如，请参阅 [辅助技术支持](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/r-html5-video-viewer-20-assistive.html) 对于视频查看器，或者 [辅助技术支持](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/c-html5-aem-interactive-image-assistive.html#viewers-for-aem-assets-only) 用于交互式图像查看器。
 
-## Dynamic Media中的隱藏式字幕支援 {#closed-caption-support}
+## Dynamic Media中的隐藏式字幕支持 {#closed-caption-support}
 
-Dynamic Media支援以隱藏式字幕傳送視訊和自我調整視訊集。 註解必須顯示在視訊內容的頂端。
+Dynamic Media支持交付带隐藏式字幕的视频和自适应视频集。 字幕必须显示在视频内容的顶部。
 
-另請參閱 [Dynamic Media中的影片 — 在影片中新增隱藏式字幕或字幕](/help/assets/video.md#adding-captions-to-video).
+参见 [Dynamic Media中的视频 — 向视频添加隐藏式字幕或字幕](/help/assets/video.md#adding-captions-to-video).
 
 >[!MORELIKETHIS]
 >
->* [Adobe解決方案的協助工具](https://www.adobe.com/accessibility.html)
+>* [Adobe解决方案的可访问性](https://www.adobe.com/accessibility.html)
 >* [ [!DNL Experience Manager Assets]](/help/assets/accessibility.md) 中的辅助功能
 

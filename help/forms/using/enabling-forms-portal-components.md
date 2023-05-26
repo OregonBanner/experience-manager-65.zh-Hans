@@ -1,7 +1,7 @@
 ---
-title: 啟用表單入口網站元件
+title: 启用Forms Portal组件
 seo-title: Enabling forms portal components
-description: 開箱即用的Forms Portal元件已停用。 啟用Document Services和Document Services述詞群組以啟用Forms Portal元件。
+description: 现成可用的Forms Portal组件已禁用。 启用Document Services和Document Services谓词组以启用Forms Portal组件。
 seo-description: Out of the box, Forms Portal components are disabled. Enable Document Services and Document Services Predicates groups to enable Forms Portal components.
 uuid: 92d25da6-f1df-4ac0-bf84-2edf9e2722b3
 content-type: reference
@@ -17,37 +17,37 @@ ht-degree: 0%
 
 ---
 
-# 啟用表單入口網站元件 {#enabling-forms-portal-components}
+# 启用Forms Portal组件 {#enabling-forms-portal-components}
 
-開箱即用的Forms Portal元件無法使用。 若要讓元件出現在AEM sidekick的可用元件清單中，請執行以下步驟：
+表单门户组件是现成可用的，无法供使用。 要使组件显示在AEM sidekick的可用组件列表中，请执行以下步骤：
 
-1. 登入網站的作者執行個體並開啟AEM Sites頁面。
+1. 登录到网站的创作实例并打开AEM Sites页面。
 
-1. 對於使用靜態範本的頁面，請執行下列步驟：
+1. 对于使用静态模板的页面，请执行以下步骤：
 
-   1. 在頁首中，點選 ![畫佈下拉式清單](assets/canvas-drop-down.png) > **設計** 以在設計模式中開啟頁面。
-   1. 點選任何元件（使用藍色邊框），然後點選 ![欄位層級](assets/field-level.png) 以選取包含目前元件的段落系統。
-   1. 在段落系統中，點選 ![settings_icon](assets/settings_icon.png) 開啟段落系統的「編輯」對話方塊。
-   1. 從清單 **[!UICONTROL 允許的元件]**，啟用核取方塊 **[!UICONTROL 檔案服務]** 和 **[!UICONTROL 檔案服務述詞]** 元件。 點選 **[!UICONTROL 確定]**.
+   1. 在页眉中，点按 ![画布下拉列表](assets/canvas-drop-down.png) > **设计** 以在“设计”模式下打开页面。
+   1. 点按任意组件（使用蓝色边框），然后点按 ![字段级](assets/field-level.png) 以选择包含当前组件的段落系统。
+   1. 在段落系统中，点按 ![settings_icon](assets/settings_icon.png) 打开段落系统的“编辑”对话框。
+   1. 从列表 **[!UICONTROL 允许的组件]**，启用复选框 **[!UICONTROL 文档服务]** 和 **[!UICONTROL 文档服务谓词]** 组件。 点按 **[!UICONTROL 确定]**.
 
-1. 對於使用動態範本的頁面，請執行下列步驟：
+1. 对于使用动态模板的页面，请执行以下步骤：
 
-   1. 在頁首中，點選 ![屬性](assets/properties.png) > **編輯範本** 以開啟頁面的範本。
-   1. 點選 **配置容器** 並點選 ![摘要管理](/help/forms/using/assets/feedmanagement.png). 在 **允許的元件** 標籤，啟用 **Document Services和Document Services述詞** 選項，然後點選 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
+   1. 在页眉中，点按 ![属性](assets/properties.png) > **编辑模板** 以打开页面的模板。
+   1. 点按 **布局容器** 并点按 ![信息源管理](/help/forms/using/assets/feedmanagement.png). 在 **允许的组件** 选项卡，启用 **文档服务和文档服务谓词** 选项，然后点按 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
 
 >[!NOTE]
 >
->您也可以選取元件，以啟用這些類別中的特定元件。 如需有關元件及其使用方式的詳細資訊，請參閱 [建立表單入口網站頁面](/help/forms/using/creating-form-portal-page.md) 和 [將連結元件內嵌在頁面中](/help/forms/using/embedding-link-component-page.md).
+>您还可以通过选择组件来启用这些类别中的特定组件。 有关组件及其用法的更多信息，请参阅 [创建表单门户页面](/help/forms/using/creating-form-portal-page.md) 和 [在页面中嵌入链接组件](/help/forms/using/embedding-link-component-page.md).
 
-現在，元件瀏覽器中提供Document Services和Document Services述詞元件類別。 元件會針對使用相同範本的所有頁面啟用。
+现在，在组件浏览器中提供了Document Services和Document Services谓词组件类别。 对于使用同一模板的所有页面，都会启用这些组件。
 
 ## 相关文章
 
-* [啟用表單入口網站元件](/help/forms/using/enabling-forms-portal-components.md)
-* [建立表單入口網站頁面](/help/forms/using/creating-form-portal-page.md)
-* [使用API的網頁上列出表單](/help/forms/using/listing-forms-webpage-using-apis.md)
-* [使用草稿和提交元件](/help/forms/using/draft-submission-component.md)
-* [自訂草稿和已提交表單的儲存](/help/forms/using/draft-submission-component.md)
-* [將草稿和提交元件與資料庫整合的範例](/help/forms/using/integrate-draft-submission-database.md)
-* [自訂表單入口網站元件的範本](/help/forms/using/customizing-templates-forms-portal-components.md)
-* [在入口網站上發佈表單的簡介](/help/forms/using/introduction-publishing-forms.md)
+* [启用表单门户组件](/help/forms/using/enabling-forms-portal-components.md)
+* [创建表单门户页面](/help/forms/using/creating-form-portal-page.md)
+* [使用API列出网页上的表单](/help/forms/using/listing-forms-webpage-using-apis.md)
+* [使用草稿和提交组件](/help/forms/using/draft-submission-component.md)
+* [自定义草稿和已提交表单的存储](/help/forms/using/draft-submission-component.md)
+* [将草稿和提交组件与数据库集成的示例](/help/forms/using/integrate-draft-submission-database.md)
+* [自定义表单门户组件的模板](/help/forms/using/customizing-templates-forms-portal-components.md)
+* [在门户上发布表单的简介](/help/forms/using/introduction-publishing-forms.md)

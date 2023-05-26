@@ -1,7 +1,7 @@
 ---
-title: 效能與擴充性
+title: 性能和可扩展性
 seo-title: Performance & Scalability
-description: 本白皮書探討可擴充性內建於AEM的方式，以及效能指標和災難回覆功能。
+description: 此白皮书讨论了可扩展性内置到AEM中的方式，以及性能指标和灾难恢复功能。
 seo-description: This white paper discusses the ways scalability has been built into AEM along with performance indicators and disaster recovery features.
 uuid: 709ed651-534d-4b80-8f9b-ac99669f6f61
 contentOwner: User
@@ -17,12 +17,12 @@ ht-degree: 2%
 
 ---
 
-# 效能與擴充性{#performance-scalability}
+# 性能和可扩展性{#performance-scalability}
 
-## 白皮書：AEM擴充性、效能和災難回覆 {#white-paper-aem-scalability-performance-and-disaster-recovery}
+## 白皮书：AEM可扩展性、性能和灾难恢复 {#white-paper-aem-scalability-performance-and-disaster-recovery}
 
-本白皮書探討可擴充性內建於Adobe Experience Manager的方式，以及優異的效能指標和優異的災難回覆功能。
+本白皮书讨论了可扩展性内置到Adobe Experience Manager中的方式，以及卓越的性能指标和卓越的灾难恢复功能。
 
-彈性、可擴充的平台，可提升技術彈性、高效能及健全的災難回覆功能。
+一个灵活、可扩展的平台，可提升技术灵活性、高性能和良好的灾难恢复功能。
 
 [获取文件](assets/aem_scalability_whitepaperfinal-06122015je.pdf)

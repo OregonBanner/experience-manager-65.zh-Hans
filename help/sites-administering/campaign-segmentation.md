@@ -1,7 +1,7 @@
 ---
-title: 設定分段
+title: 配置分段
 seo-title: Configuring Segmentation
-description: 瞭解如何設定AEM Campaign的分段。
+description: 了解如何为AEM Campaign配置分段。
 seo-description: Learn how to configure segmentation for AEM Campaign.
 uuid: 604ca34d-cdb9-49ff-8f75-02a44b60a8a2
 contentOwner: msm-service
@@ -18,36 +18,36 @@ ht-degree: 18%
 
 ---
 
-# 設定分段 {#configuring-segmentation}
+# 配置分段 {#configuring-segmentation}
 
 >[!NOTE]
 >
->本文介紹與Client Context搭配使用之區段的設定。 若要使用觸控式UI以ContextHub設定區段，請參閱 [使用ContextHub設定分段](/help/sites-administering/segmentation.md).
+>本文档介绍了与Client Context一起使用的区段的配置。 要使用触屏UI在ContextHub中配置区段，请参阅 [使用ContextHub配置分段](/help/sites-administering/segmentation.md).
 
-分段是创建营销活动时的主要考虑事项。另請參閱 [區段字彙表](/help/sites-authoring/segmentation-overview.md) 區段運作方式和主要術語的相關資訊。
+分段是创建营销活动时的主要考虑事项。参见 [分段术语表](/help/sites-authoring/segmentation-overview.md) 了解分段的工作方式和关键术语。
 
 根据您收集到的有关网站访客的信息以及要实现的目标，您将需要定义目标内容所需的区段和策略。
 
-之后，这些区段可用于为访客提供具体的目标内容。此內容維護於 [行銷活動](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md) 網站區段。 此處定義的Teaser頁面可包含在任何頁面上作為Teaser段落，並定義專用內容適用於的訪客區段。
+之后，这些区段可用于为访客提供具体的目标内容。此内容维护在 [营销活动](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md) 部分。 此处定义的Teaser页面可包含在任何页面上作为Teaser段落，并定义专用内容适用于的访客区段。
 
-AEM可讓您輕鬆建立和更新區段、Teaser和行銷活動。 它也可讓您驗證定義的結果。
+AEM允许您轻松地创建和更新区段、Teaser和营销活动。 它还允许您验证定义的结果。
 
-此 **區段編輯器** 可讓您輕鬆定義區段：
+此 **区段编辑器** 使您能够轻松定义区段：
 
 ![](assets/segmenteditor.png)
 
-您可以 **編輯** 每個區段以指定 **標題**， **說明** 和 **提升** 因數。 使用您可以新增的Sidekick **和** 和 **或** 容器以定義 **區段邏輯**，然後新增必要的 **區段特徵** 以定義選取條件。
+您可以 **编辑** 每个区段指定 **标题**， **描述** 和 **提升** 因素。 使用你可以添加的Sidekick **和** 和 **或** 容器以定义 **区段逻辑**，然后添加所需的 **区段特征** 以定义选择标准。
 
-## 提升因數 {#boost-factor}
+## 提升因子 {#boost-factor}
 
-每個區段都有 **提升** 用作加權因數的引數；數字越高表示會優先選取區段，而非數字越低的區段。
+每个区段都有一个 **提升** 用作加权因子的参数；数字越大，表示优先选择区段而不是数字越小的区段。
 
 * 最小值：`0`
 * 最大值：`1000000`
 
-## 區段邏輯 {#segment-logic}
+## 区段逻辑 {#segment-logic}
 
-下列邏輯容器可立即使用，讓您建構區段選取的邏輯。 他們可從副手拖曳到編輯者：
+以下逻辑容器是现成可用的，可让您构建区段选择的逻辑。 他们可以被从助手拖到编辑那里：
 
 <table>
  <tbody>
@@ -62,54 +62,54 @@ AEM可讓您輕鬆建立和更新區段、Teaser和行銷活動。 它也可讓�
  </tbody>
 </table>
 
-## 區段特徵 {#segment-traits}
+## 区段特征 {#segment-traits}
 
-下列區段特徵是現成可用的功能；可將它們從Sidekick拖曳至編輯器：
+以下区段特征是现成可用的；可以将它们从Sidekick拖到编辑器中：
 
 <table>
  <tbody>
   <tr>
    <td> IP 范围<br /> </td>
-   <td>定義訪客可擁有的IP位址範圍。<br /> </td>
+   <td>定义访客可以拥有的IP地址范围。<br /> </td>
   </tr>
   <tr>
    <td> 页面点击<br /> </td>
-   <td>要求頁面的頻率。 <br /> </td>
+   <td>请求页面的频率。 <br /> </td>
   </tr>
   <tr>
    <td> 页面属性<br /> </td>
-   <td>造訪頁面的任何屬性。<br /> </td>
+   <td>所访问页面的任意属性。<br /> </td>
   </tr>
   <tr>
    <td> 引用关键字<br /> </td>
-   <td>與反向連結網站資訊相符的關鍵字。 <br /> </td>
+   <td>与引用网站中的信息匹配的关键字。 <br /> </td>
   </tr>
   <tr>
    <td> 脚本</td>
-   <td>要評估的Javascript運算式。<br /> </td>
+   <td>要计算的Javascript表达式。<br /> </td>
   </tr>
   <tr>
    <td> 区段引用 <br /> </td>
-   <td>參考其他區段定義。<br /> </td>
+   <td>对其他区段定义的引用。<br /> </td>
   </tr>
   <tr>
    <td> 标记云<br /> </td>
-   <td>與瀏覽頁面標籤進行比對的標籤。<br /> </td>
+   <td>要与所访问页面中的标记匹配的标记。<br /> </td>
   </tr>
   <tr>
    <td> 用户年龄<br /> </td>
-   <td>從使用者設定檔中擷取。<br /> </td>
+   <td>从用户配置文件中获取。<br /> </td>
   </tr>
   <tr>
    <td> 用户属性<br /> </td>
-   <td>使用者設定檔中可用的任何其他資訊。 </td>
+   <td>用户配置文件中可用的任何其他信息。 </td>
   </tr>
  </tbody>
 </table>
 
-您可以使用布林運運算元OR和AND來結合這些特徵(請參閱 [建立新區段](#creating-a-new-segment))，以定義選取此區段的確切案例。
+您可以使用布尔运算符OR和AND来组合这些特征(请参阅 [创建新区段](#creating-a-new-segment))，以定义选择此区段的确切场景。
 
-當整個陳述式評估為true時，表示此區段已解決。 在适用多个区段的情况下，也将使用 **[Boost](/help/sites-administering/campaign-segmentation.md#boost-factor)** 因素。
+当整个语句的计算结果为true时，则此区段已解析。 在适用多个区段的情况下，也将使用 **[Boost](/help/sites-administering/campaign-segmentation.md#boost-factor)** 因素。
 
 >[!CAUTION]
 >
@@ -117,79 +117,79 @@ AEM可讓您輕鬆建立和更新區段、Teaser和行銷活動。 它也可讓�
 
 >[!NOTE]
 >
->具有的屬性 **_i18n** 字尾由指令碼設定，此指令碼是個人化UI clientlib的一部分。 所有與UI相關的clientlib都只在作者上載入，因為發佈時不需要使用UI。
+>具有以下特征的属性 **_i18n** 后缀由脚本设置，该脚本是个性化的UI clientlib的一部分。 所有与UI相关的clientlib仅加载到作者中，因为发布时不需要使用UI。
 >
->因此，使用這類屬性建立區段時，通常需要依賴 **browserFamily** 例如，而非 **browserFamily_i18n**.
+>因此，在创建具有此类属性的区段时，通常需要依赖 **browserFamily** 例如，而不是 **browserFamily_i18n**.
 
 ### 创建新区段 {#creating-a-new-segment}
 
 要定义新区段，请执行以下操作：
 
-1. 在邊欄中，選擇 **「工具」>「作業」>「組態」**.
-1. 按一下 **細分** 頁面，並導覽至所需位置。
-1. 建立 [新頁面](/help/sites-authoring/editing-content.md#creatinganewpage) 使用 **區段** 範本。
-1. 開啟新頁面以檢視區段編輯器：
+1. 在边栏中，选择 **“工具”>“操作”>“配置”**.
+1. 单击 **分段** 页面，然后导航到所需的位置。
+1. 创建 [新页面](/help/sites-authoring/editing-content.md#creatinganewpage) 使用 **区段** 模板。
+1. 打开新页面以查看区段编辑器：
 
    ![](assets/screen_shot_2012-02-02at101726am.png)
 
-1. 使用sidekick或內容功能表(通常是按一下滑鼠右鍵，然後選取 **新增……** 以開啟「插入新元件」視窗)來尋找所需的區段特徵。 然後將其拖曳至 **區段編輯器** 它將顯示在預設值 **和** 容器。
-1. 連按兩下新特徵以編輯特定引數；例如滑鼠位置：
+1. 使用sidekick或上下文菜单(通常是单击鼠标右键，然后选择 **新建……** 打开“插入新组件”窗口)以查找所需的区段特征。 然后将其拖动到 **区段编辑器** 它将显示在默认设置中 **和** 容器。
+1. 双击新特征以编辑特定参数；例如鼠标位置：
 
    ![](assets/screen_shot_2012-02-02at103135am.png)
 
-1. 按一下 **確定** 若要儲存您的定義：
-1. 您可以 **編輯** 為其賦予「 」的區段定義 **標題**， **說明** 和 **[提升](#boost-factor)** 因數：
+1. 单击 **确定** 要保存定义，请执行以下操作：
+1. 您可以 **编辑** 区段定义，用于为其赋值 **标题**， **描述** 和 **[提升](#boost-factor)** 因子：
 
    ![](assets/screen_shot_2012-02-02at103547am.png)
 
-1. 視需要新增更多特徵。 您可以使用 **AND容器** 和 **OR容器** 在以下位置找到元件： **區段邏輯**. 使用區段編輯器，您可以刪除不再需要的特徵或容器，或將它們拖曳至陳述式中的新位置。
+1. 根据需要添加更多特征。 您可以使用以下公式制定布尔表达式： **AND容器** 和 **OR容器** 在以下位置找到组件： **区段逻辑**. 使用区段编辑器，您可以删除不再需要的特征或容器，或将它们拖到语句中的新位置。
 
 ### 使用 AND 和 OR 容器 {#using-and-and-or-containers}
 
-您可以在AEM中建構複雜的區段。 瞭解一些基本要點會有所幫助：
+您可以在AEM中构建复杂区段。 了解一些基本要点会有所帮助：
 
-* 定義的頂層一律為最初建立的AND容器；這無法變更，但不會影響區段定義的其餘部分。
+* 定义的顶级始终是最初创建的AND容器；这不能更改，但不会影响区段定义的其余部分。
 * 确保容器的嵌套有意义。可以将容器视为布尔表达式的括号。
 
-下列範例可用來選取符合下列任一條件的訪客：
+以下示例用于选择满足以下条件的访客：
 
-男性及16至65歲
+男性和16至65岁
 
 或
 
-女性及16至62歲
+女性和16至62岁
 
-由於主要運運算元為OR，因此您需要以 **OR容器**. 其中您有2個AND陳述式，對於每個陳述式，您都需要 **AND容器**，即可將個別特徵新增至其中。
+由于主运算符为OR，因此您需要以 **OR容器**. 其中您有2个AND语句，对于每个语句，您需要 **AND容器**，您可以将各个特征添加到其中。
 
 ![](assets/screen_shot_2012-02-02at105145am.png)
 
 ## 测试区段的应用程序 {#testing-the-application-of-a-segment}
 
-定義區段後，可透過以下說明測試潛在結果 **[使用者端內容](/help/sites-administering/client-context.md)**：
+定义区段后，可以借助 **[客户端上下文](/help/sites-administering/client-context.md)**：
 
-1. 選取要測試的區段。
-1. 按下 **[Ctrl-Alt-C](/help/sites-authoring/page-authoring.md#keyboardshortcuts)** 以開啟 **[使用者端內容](/help/sites-administering/client-context.md)**，其中會顯示已收集的資料。 為了測試目的，您可以 **編輯** 特定值，或 **載入** 另一個設定檔以檢視那裡的影響。
+1. 选择要测试的区段。
+1. 按 **[Ctrl-Alt-C](/help/sites-authoring/page-authoring.md#keyboardshortcuts)** 以打开 **[客户端上下文](/help/sites-administering/client-context.md)**，其中显示已收集的数据。 出于测试目的，您可以 **编辑** 特定值，或 **加载** 另一个用户档案以查看该影响。
 
-1. 根據定義的特徵，目前頁面的可用資料可能與區段定義相符，也可能不相符。 相符的狀態會顯示在定義下方。
+1. 根据定义的特征，当前页面的可用数据可能与区段定义匹配，也可能不匹配。 匹配的状态显示在定义下方。
 
-例如，簡單的區段定義可以根據使用者的年齡和性別。 載入特定設定檔會顯示已成功解析區段：
+例如，简单的区段定义可以基于用户的年龄和性别。 加载特定配置文件时，会显示已成功解析该区段：
 
 ![](assets/screen_shot_2012-02-02at105926am.png)
 
-或非：
+或者不是：
 
 ![](assets/screen_shot_2012-02-02at110019am.png)
 
 >[!NOTE]
 >
->将立即解析所有特征，尽管大多数特征仅在页面重新加载时发生变化。滑鼠位置的變更會立即顯示，因此可用於測試目的。
+>将立即解析所有特征，尽管大多数特征仅在页面重新加载时发生变化。对鼠标位置的更改会立即可见，因此可用于测试目的。
 
-此類測試也可在內容頁面上執行，並結合 **Teaser** 元件。
+此类测试还可以在内容页面上执行，并与 **Teaser** 组件。
 
-在Teaser段落上滑鼠懸停會顯示套用的區段、這些區段目前是否解析，以及選取目前Teaser例項的原因：
+将鼠标悬停在Teaser段落上将显示应用的区段、它们当前是否解析以及选择当前Teaser实例的原因：
 
 ![](assets/chlimage_1-47.png)
 
 ### 使用区段 {#using-your-segment}
 
-區段目前使用於 [行銷活動](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md). 它們可用來控制特定目標對象看到的實際內容。 另請參閱 [瞭解區段](/help/sites-authoring/segmentation-overview.md) 以取得詳細資訊。
+区段当前使用于 [营销活动](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md). 它们用于控制特定目标受众看到的实际内容。 参见 [了解区段](/help/sites-authoring/segmentation-overview.md) 了解更多信息。

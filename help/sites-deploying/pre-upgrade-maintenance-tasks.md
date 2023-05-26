@@ -1,7 +1,7 @@
 ---
-title: 升級前維護任務
+title: 升级前维护任务
 seo-title: Pre-Upgrade Maintenance Tasks
-description: 瞭解AEM中的升級前工作。
+description: 了解AEM中的升级前任务。
 seo-description: Learn about the pre-upgrade tasks in AEM.
 uuid: 5da1cfc7-8a10-47b1-aafb-2cd112e3f818
 contentOwner: sarchiz
@@ -19,64 +19,64 @@ ht-degree: 1%
 
 ---
 
-# 升級前維護任務{#pre-upgrade-maintenance-tasks}
+# 升级前维护任务{#pre-upgrade-maintenance-tasks}
 
-在開始升級之前，請務必遵循這些維護任務，以確保系統準備就緒，並可在發生問題時回覆：
+在开始升级之前，请务必遵循这些维护任务，以确保系统已准备就绪，并且可以在出现问题时回滚：
 
-* [確保有足夠的磁碟空間](/help/sites-deploying/pre-upgrade-maintenance-tasks.md#ensure-sufficient-disk-space)
-* [完全備份AEM](/help/sites-deploying/pre-upgrade-maintenance-tasks.md#fully-back-up-aem)
-* [將變更備份至/etc](/help/sites-deploying/pre-upgrade-maintenance-tasks.md#backup-changes-etc)
-* [產生quickstart.properties檔案](/help/sites-deploying/pre-upgrade-maintenance-tasks.md#generate-quickstart-properties)
-* [設定工作流程和稽核記錄清除](/help/sites-deploying/pre-upgrade-maintenance-tasks.md#configure-wf-audit-purging)
-* [安裝、設定及執行升級前工作](/help/sites-deploying/pre-upgrade-maintenance-tasks.md#install-configure-run-pre-upgrade-tasks)
-* [停用自訂登入模組](/help/sites-deploying/pre-upgrade-maintenance-tasks.md#disable-custom-login-modules)
-* [從/install目錄移除更新](/help/sites-deploying/pre-upgrade-maintenance-tasks.md#remove-updates-install-directory)
-* [停止任何冷待命執行個體](/help/sites-deploying/pre-upgrade-maintenance-tasks.md#stop-tarmk-coldstandby-instance)
-* [停用自訂排程工作](/help/sites-deploying/pre-upgrade-maintenance-tasks.md#disable-custom-scheduled-jobs)
-* [執行離線修訂清理](/help/sites-deploying/pre-upgrade-maintenance-tasks.md#execute-offline-revision-cleanup)
-* [執行資料存放區垃圾收集](/help/sites-deploying/pre-upgrade-maintenance-tasks.md#execute-datastore-garbage-collection)
-* [視需要升級資料庫結構描述](/help/sites-deploying/pre-upgrade-maintenance-tasks.md#upgradethedatabaseschemaifneeded)
-* [刪除可能阻礙升級的使用者](/help/sites-deploying/pre-upgrade-maintenance-tasks.md#delete-users-that-might-hinder-the-upgrade)
+* [确保有足够的磁盘空间](/help/sites-deploying/pre-upgrade-maintenance-tasks.md#ensure-sufficient-disk-space)
+* [完全备份AEM](/help/sites-deploying/pre-upgrade-maintenance-tasks.md#fully-back-up-aem)
+* [将更改备份到/etc](/help/sites-deploying/pre-upgrade-maintenance-tasks.md#backup-changes-etc)
+* [生成快速入门.properties文件](/help/sites-deploying/pre-upgrade-maintenance-tasks.md#generate-quickstart-properties)
+* [配置工作流和审核日志清除](/help/sites-deploying/pre-upgrade-maintenance-tasks.md#configure-wf-audit-purging)
+* [安装、配置和运行升级前任务](/help/sites-deploying/pre-upgrade-maintenance-tasks.md#install-configure-run-pre-upgrade-tasks)
+* [禁用自定义登录模块](/help/sites-deploying/pre-upgrade-maintenance-tasks.md#disable-custom-login-modules)
+* [从/install目录中删除更新](/help/sites-deploying/pre-upgrade-maintenance-tasks.md#remove-updates-install-directory)
+* [停止任何冷备用实例](/help/sites-deploying/pre-upgrade-maintenance-tasks.md#stop-tarmk-coldstandby-instance)
+* [禁用自定义计划作业](/help/sites-deploying/pre-upgrade-maintenance-tasks.md#disable-custom-scheduled-jobs)
+* [执行脱机修订版清理](/help/sites-deploying/pre-upgrade-maintenance-tasks.md#execute-offline-revision-cleanup)
+* [执行数据存储垃圾收集](/help/sites-deploying/pre-upgrade-maintenance-tasks.md#execute-datastore-garbage-collection)
+* [根据需要升级数据库模式](/help/sites-deploying/pre-upgrade-maintenance-tasks.md#upgradethedatabaseschemaifneeded)
+* [删除可能妨碍升级的用户](/help/sites-deploying/pre-upgrade-maintenance-tasks.md#delete-users-that-might-hinder-the-upgrade)
 
-* [輪換記錄檔](/help/sites-deploying/pre-upgrade-maintenance-tasks.md#rotate-log-files)
+* [轮换日志文件](/help/sites-deploying/pre-upgrade-maintenance-tasks.md#rotate-log-files)
 
-## 確保有足夠的磁碟空間 {#ensure-sufficient-disk-space}
+## 确保有足够的磁盘空间 {#ensure-sufficient-disk-space}
 
-執行升級時，除了內容和程式碼升級活動之外，還必須執行存放庫移轉。 移轉會以新的Segment Tar格式建立存放庫的復本。 因此，您需要足夠的磁碟空間，以保留儲存庫的第二個（可能更大）版本。
+在执行升级时，除了内容和代码升级活动之外，还必须执行存储库迁移。 迁移过程会以新的Segment Tar格式创建存储库的副本。 因此，您需要足够的磁盘空间来保留存储库的第二个可能更大的版本。
 
-## 完全備份AEM {#fully-back-up-aem}
+## 完全备份AEM {#fully-back-up-aem}
 
-在開始升級之前，應該先完整備份AEM。 請務必備份存放庫、應用程式安裝、資料存放區和Mongo執行個體（如適用）。 如需有關備份和還原AEM執行個體的詳細資訊，請參閱 [備份與還原](/help/sites-administering/backup-and-restore.md).
+在开始升级之前，应完全备份AEM。 确保备份存储库、应用程序安装、数据存储和Mongo实例（如果适用）。 有关备份和恢复AEM实例的详细信息，请参阅 [备份和恢复](/help/sites-administering/backup-and-restore.md).
 
-## 將變更備份至/etc {#backup-changes-etc}
+## 将更改备份到/etc {#backup-changes-etc}
 
-升級程式能很好地維護和合併下的現有內容和設定。 `/apps` 和 `/libs` 存放庫中的路徑。 若對下列專案進行變更： `/etc` 路徑（包括Context Hub設定）通常需要在升級後重新套用這些變更。 升級時會對任何無法合併的變更建立備份復本 `/var`，Adobe建議您在開始升級前手動備份這些變更。
+升级过程很好地维护和合并了下的现有内容和配置 `/apps` 和 `/libs` 存储库中的路径。 对于所做的更改 `/etc` 路径（包括Context Hub配置），通常需要在升级后重新应用这些更改。 当升级时，会为其无法合并的任何更改创建备份副本 `/var`，Adobe建议您在开始升级之前手动备份这些更改。
 
-## 產生quickstart.properties檔案 {#generate-quickstart-properties}
+## 生成快速入门.properties文件 {#generate-quickstart-properties}
 
-從jar檔案啟動AEM時， `quickstart.properties` 檔案產生於 `crx-quickstart/conf`. 如果AEM過去僅以啟動指令碼啟動，則此檔案不存在，且升級失敗。 請確定檢查此檔案是否存在，如果不存在，請從jar檔案重新啟動AEM。
+从jar文件启动AEM时， `quickstart.properties` 文件生成于 `crx-quickstart/conf`. 如果AEM以前仅使用启动脚本启动，则此文件不存在，升级失败。 确保检查此文件是否存在，如果该文件不存在，请从jar文件重新启动AEM。
 
-## 設定工作流程和稽核記錄清除 {#configure-wf-audit-purging}
+## 配置工作流和审核日志清除 {#configure-wf-audit-purging}
 
-此 `WorkflowPurgeTask` 和 `com.day.cq.audit.impl.AuditLogMaintenanceTask` 任務需要單獨的OSGi設定，沒有它們就無法運作。 如果它們在升級前任務執行期間失敗，遺失設定是最可能的原因。 因此，請務必為這些任務新增OSGi設定，或如果您不想執行，請從升級前最佳化任務清單中將其完全移除。 有關設定工作流程清除任務的檔案，請參閱 [管理工作流程例項](/help/sites-administering/workflows-administering.md) 和稽核記錄維護任務設定可在下列網址找到： [AEM 6中的稽核記錄維護](/help/sites-administering/operations-audit-log.md).
+此 `WorkflowPurgeTask` 和 `com.day.cq.audit.impl.AuditLogMaintenanceTask` 任务需要单独的OSGi配置，没有它们无法工作。 如果它们在升级前任务执行期间失败，则缺失配置是最可能的原因。 因此，请确保为这些任务添加OSGi配置，或者如果您不想运行它们，则从升级前优化任务列表中完全删除它们。 有关配置工作流清除任务的文档，请访问 [管理工作流实例](/help/sites-administering/workflows-administering.md) 和审核日志维护任务配置位于 [AEM 6中的审核日志维护](/help/sites-administering/operations-audit-log.md).
 
-如需在CQ 5.6上清除工作流程和稽核記錄，以及在AEM 6.0上清除稽核記錄，請參閱 [清除工作流程與稽核節點](https://helpx.adobe.com/experience-manager/kb/howtopurgewf.html).
+有关CQ 5.6上的工作流和审核日志清除以及AEM 6.0上的审核日志清除，请参阅 [清除工作流和审核节点](https://helpx.adobe.com/experience-manager/kb/howtopurgewf.html).
 
-## 安裝、設定及執行升級前工作 {#install-configure-run-pre-upgrade-tasks}
+## 安装、配置和运行升级前任务 {#install-configure-run-pre-upgrade-tasks}
 
-由於AEM允許的自訂等級，環境通常不遵循統一的執行升級方式。 因此，建立標準化的升級程式會相當困難。
+由于AEM允许的自定义级别，环境通常不遵循统一的升级方式。 因此，创建标准化的升级程序是一个困难的过程。
 
-在舊版中，已停止或無法安全恢復的AEM升級也很困難。 此問題會導致需要重新啟動完整升級程式，或執行有缺陷的升級而未觸發任何警告的情況。
+在以前的版本中，对于已停止或无法安全恢复的AEM升级，也会很困难。 此问题导致需要重新启动完整升级过程，或者执行了有缺陷的升级但未触发任何警告的情况。
 
-為了解決這些問題，Adobe在升級程式中新增了數項增強功能，使其更具彈性且更方便使用。 之前必須手動執行的升級前維護任務正在最佳化並自動化。 此外，也新增了升級後報告，以便可以完全審查該過程，希望更容易發現任何問題。
+为了解决这些问题，Adobe在升级过程中增加了几项增强功能，使其更具可复原性且更便于用户使用。 优化并自动执行之前必须手动执行的升级前维护任务。 此外，还添加了升级后报告，以便可以完全检查该过程，希望更容易发现任何问题。
 
-升級前維護任務目前分散在手動執行部分或全部的各種介面中。 AEM 6.3中引入的升級前維護最佳化可讓您以統一方式觸發這些任務，並可依需求檢查其結果。
+升级前维护任务当前分散在部分或全部手动执行的各种接口上。 AEM 6.3中引入的升级前维护优化功能允许以统一的方式触发这些任务，并能够根据需要检查其结果。
 
-升級前最佳化步驟中包含的所有工作與AEM 6.0以後的所有版本相容。
+从AEM 6.0开始，升级前优化步骤中包含的所有任务都与所有版本兼容。
 
-### 如何設定 {#how-to-set-it-up}
+### 如何设置 {#how-to-set-it-up}
 
-在AEM 6.3和更新版本中，快速入門jar中包含升級前維護最佳化任務。
+在AEM 6.3及更高版本中，快速入门jar中包含升级前维护优化任务。
 
 <!-- URLs below are all 404s. This content should probably be removed because it is entirely obsolete.
 
@@ -90,19 +90,19 @@ You can find the packages at these locations:
 
 * [For upgrading from AEM 6.2](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq620/product/pre-upgrade-tasks-content-cq62) -->
 
-### 使用方式 {#how-to-use-it}
+### 如何使用 {#how-to-use-it}
 
-此 `PreUpgradeTasksMBean` OSGI元件預先設定了可一次執行所有升級前維護工作的清單。 您可以依照下列程式來設定這些工作：
+此 `PreUpgradeTasksMBean` OSGI组件预配置了一个可以一次运行所有升级前维护任务的列表。 您可以按照以下步骤配置任务：
 
-1. 瀏覽至Web主控台 *https://serveraddress:serverport/system/console/configMgr*
+1. 通过浏览至Web控制台 *https://serveraddress:serverport/system/console/configMgr*
 
-1. 搜尋&quot;**preupgradetasks**「」，然後按一下第一個相符的元件。 元件的完整名稱是 `com.adobe.aem.upgrade.prechecks.mbean.impl.PreUpgradeTasksMBeanImpl`
+1. 搜索“”**预升级任务**“”，然后单击第一个匹配的组件。 组件的全名为 `com.adobe.aem.upgrade.prechecks.mbean.impl.PreUpgradeTasksMBeanImpl`
 
-1. 修改必須執行的維護工作清單，如下所示：
+1. 修改必须运行的维护任务列表，如下所示：
 
    ![1487758925984](assets/1487758925984.png)
 
-工作清單會依用來啟動執行個體的執行模式而有所不同。 以下說明每個維護任務所針對的執行模式。
+根据用于启动实例的运行模式，任务列表会有所不同。 以下是对每个维护任务所针对的运行模式的描述。
 
 <table>
  <tbody>
@@ -119,7 +119,7 @@ You can find the packages at these locations:
   <tr>
    <td><code>DataStoreGarbageCollectionTask</code></td>
    <td>crx2</td>
-   <td>執行標籤和掃描。 針對共用資料存放區，請移除此步驟並執行<br /> 在執行之前手動或正確準備執行個體。</td>
+   <td>运行标记和整理。 对于共享数据存储，请删除此步骤并运行<br /> 在执行之前手动或正确准备实例。</td>
   </tr>
   <tr>
    <td><code>ConsistencyCheckTask</code></td>
@@ -129,7 +129,7 @@ You can find the packages at these locations:
   <tr>
    <td><code>WorkflowPurgeTask</code></td>
    <td>crx2/crx3</td>
-   <td>在執行之前，必須設定AdobeGranite工作流程清除設定OSGi。</td>
+   <td>必须在运行之前配置AdobeGranite工作流清除配置OSGi。</td>
   </tr>
   <tr>
    <td><code>GenerateBundlesListFileTask</code></td>
@@ -139,126 +139,126 @@ You can find the packages at these locations:
   <tr>
    <td><code>RevisionCleanupTask</code></td>
    <td>crx3</td>
-   <td>若為AEM 6.0至6.2上的TarMK執行個體，請改為手動執行離線修訂清除。</td>
+   <td>对于AEM 6.0到6.2上的TarMK实例，请改为手动运行脱机修订版清理。</td>
   </tr>
   <tr>
    <td><code>com.day.cq.audit.impl.AuditLogMaintenanceTask</code></td>
    <td>crx3</td>
-   <td>必須先設定[稽核記錄清除排程器]OSGi設定，才能執行。</td>
+   <td>运行之前必须配置审计日志清除计划程序OSGi配置。</td>
   </tr>
  </tbody>
 </table>
 
 >[!CAUTION]
 >
->此 `DataStoreGarbageCollectionTask` 使用標籤和掃描階段時，會呼叫資料存放區垃圾收集作業（如已使用）。 對於使用共用資料存放區的部署，請務必正確重新設定或準備執行個體，以避免刪除其他執行個體參考的專案。 此程式可能需要在觸發此升級前工作之前，在所有執行個體上手動執行標籤階段。
+>此 `DataStoreGarbageCollectionTask` 调用具有标记和扫描阶段（如果已使用）的数据存储垃圾收集操作。 对于使用共享数据存储的部署，请确保正确重新配置它或准备实例以避免删除其他实例引用的项目。 在触发此升级前任务之前，此过程可能需要在所有实例上手动运行标记阶段。
 
-### 升級前健康狀態檢查的預設設定 {#default-configuration-of-the-pre-upgrade-health-checks}
+### 升级前运行状况检查的默认配置 {#default-configuration-of-the-pre-upgrade-health-checks}
 
-此 `PreUpgradeTasksMBeanImpl` OSGI元件預先設定了升級前健康情況檢查標籤的清單，以便 `runAllPreUpgradeHealthChecks` 方法稱為：
+此 `PreUpgradeTasksMBeanImpl` OSGI组件预配置了一个预升级运行状况检查标记列表，以便 `runAllPreUpgradeHealthChecks` 方法名为：
 
-* **系統** - granite維護狀況檢查所使用的標籤
+* **系统** - granite维护运行状况检查使用的标记
 
-* **升級前**  — 可新增至所有健康情況檢查的自訂標籤，這些檢查可設定為在升級前執行
+* **预升级**  — 一个自定义标记，可添加到所有可设置为在升级前运行的运行状况检查中
 
-清單可編輯。 您可以使用加號 **(+)** 和減號 **(-)** 標籤以外的按鈕，以新增更多自訂標籤或移除預設標籤。
+该列表是可编辑的。 您可以使用加号 **(+)** 和减号 **(-)** 按钮以添加更多自定义标记，或删除默认标记。
 
 **MBean方法**
 
-Managed Bean功能可使用以下專案來存取： [JMX主控台](/help/sites-administering/jmx-console.md).
+可以使用访问受管Bean功能 [JMX控制台](/help/sites-administering/jmx-console.md).
 
-存取MBean的方法有：
+可以通过以下方式访问MBean：
 
-1. 前往位於的JMX主控台 *https://serveraddress:serverport/system/console/jmx*
-1. 搜尋 **PreUpgradeTasks** 並按一下結果
+1. 转到位于的JMX控制台 *https://serveraddress:serverport/system/console/jmx*
+1. 搜索 **PreUpgradeTasks** 并单击结果
 
-1. 從中選擇任何方法 **作業** 區段並選取 **叫用** 於下列視窗中。
+1. 从中选择任意方法 **操作** 部分并选择 **调用** 在下面的窗口中。
 
-以下列出了 `PreUpgradeTasksMBeanImpl` 公開：
+以下列出了 `PreUpgradeTasksMBeanImpl` 公开：
 
 <table>
  <tbody>
   <tr>
-   <td><strong>方法名稱</strong></td>
+   <td><strong>方法名称</strong></td>
    <td><strong>类型</strong></td>
    <td><strong>描述</strong></td>
   </tr>
   <tr>
    <td><code>getAvailablePreUpgradeTasksNames()</code></td>
    <td>信息</td>
-   <td>顯示可用的升級前維護工作名稱清單。</td>
+   <td>显示可用的升级前维护任务名称的列表。</td>
   </tr>
   <tr>
    <td><code>getAvailablePreUpgradeHealthChecksTagNames()</code></td>
    <td>信息</td>
-   <td>顯示升級前健康情況檢查標籤名稱的清單。</td>
+   <td>显示升级前运行状况检查标记名称的列表。</td>
   </tr>
   <tr>
    <td><code>runAllPreUpgradeTasks()</code></td>
    <td>动作</td>
-   <td>執行清單中的所有升級前維護任務。</td>
+   <td>运行列表中的所有升级前维护任务。</td>
   </tr>
   <tr>
    <td><code>runPreUpgradeTask(preUpgradeTaskName)</code></td>
    <td>动作</td>
-   <td>執行升級前維護任務，並將名稱指定為引數。</td>
+   <td>运行升级前维护任务，其名称作为参数给定。</td>
   </tr>
   <tr>
    <td><code>isRunAllPreUpgradeTaskRunning()</code></td>
    <td>ACTION_INFO</td>
-   <td>檢查 <code>runAllPreUpgradeTasksmaintenance</code> 工作正在執行。</td>
+   <td>检查 <code>runAllPreUpgradeTasksmaintenance</code> 任务正在运行。</td>
   </tr>
   <tr>
    <td><code>getAnyPreUpgradeTaskRunning()</code></td>
    <td>ACTION_INFO</td>
-   <td>檢查是否有任何升級前維護任務在執行中，以及<br /> 傳回包含目前執行中工作名稱的陣列。</td>
+   <td>检查是否有任何升级前维护任务正在运行，并且<br /> 返回一个数组，其中包含当前正在运行的任务的名称。</td>
   </tr>
   <tr>
    <td><code>getPreUpgradeTaskLastRunTime(preUpgradeTaskName)</code></td>
    <td>动作</td>
-   <td>顯示升級前維護工作的確切執行時間，並將名稱指定為引數。</td>
+   <td>显示升级前维护任务的确切运行时间，其名称作为参数给出。</td>
   </tr>
   <tr>
    <td><code>getPreUpgradeTaskLastRunState(preUpgradeTaskName)</code></td>
    <td>动作</td>
-   <td>顯示升級前維護任務的最後一次執行狀態，其名稱會指定為引數。</td>
+   <td>显示升级前维护任务的上次运行状态，其名称作为参数给出。</td>
   </tr>
   <tr>
    <td><code>runAllPreUpgradeHealthChecks(shutDownOnSuccess)</code></td>
    <td>动作</td>
-   <td><p>執行所有升級前的健康情況檢查，並將其狀態儲存在名為的檔案中 <code>preUpgradeHCStatus.properties</code> 在sling首頁路徑中。 如果 <code>shutDownOnSuccess</code> 引數已設為 <code>true</code>，會關閉AEM執行個體，但前提是所有升級前健康情況檢查的狀態均為「正常」。</p> <p>屬性檔案會作為任何未來升級的先決條件<br /> 而且升級前健康情況檢查會停止升級程式<br /> 執行失敗。 如果您要忽略升級前的結果<br /> 健康情況檢查並啟動升級，您可以刪除檔案。</p> </td>
+   <td><p>运行所有升级前运行状况检查，并将其状态保存在名为的文件中 <code>preUpgradeHCStatus.properties</code> 在sling home路径上。 如果 <code>shutDownOnSuccess</code> 参数设置为 <code>true</code>，AEM实例将关闭，但前提是所有升级前运行状况检查的状态均为“正常”。</p> <p>属性文件用作任何未来升级的先决条件<br /> 并且升级过程在升级前运行状况检查时停止<br /> 执行失败。 如果您要忽略预升级的结果<br /> 运行状况检查并启动升级，但您可以删除文件。</p> </td>
   </tr>
   <tr>
    <td><code>detectUsageOfUnavailableAPI(aemVersion)</code></td>
    <td>动作</td>
-   <td>列出所有匯入的套件，這些套件在<br /> 升級至指定的AEM版本。 目標AEM版本必須是<br /> 以引數形式提供。</td>
+   <td>列出在下列情况下不再满足的所有导入资源包<br /> 升级到指定的AEM版本。 目标AEM版本必须为<br /> 以参数形式给出。</td>
   </tr>
  </tbody>
 </table>
 
 >[!NOTE]
 >
->可以透過以下方式叫用MBean方法：
+>可以通过以下方式调用MBean方法：
 >
->* JMX主控台
->* 連線到JMX的任何外部應用程式
+>* JMX控制台
+>* 连接到JMX的任何外部应用程序
 >* cURL
 >
 
 
-## 停用自訂登入模組 {#disable-custom-login-modules}
+## 禁用自定义登录模块 {#disable-custom-login-modules}
 
 >[!NOTE]
 >
->唯有當您從AEM 5版本升級時，才需要執行此步驟。 從舊版AEM 6升級時，可完全略過該步驟。
+>仅当从AEM 5版本升级时，才需要执行此步骤。 从旧版AEM 6升级时，可以完全跳过该步骤。
 
-自訂方式 `LoginModules` 針對存放庫層級的驗證而設定的Apache Oak已發生根本性變更。
+自定义方式 `LoginModules` 配置为在存储库级别进行身份验证，这在Apache Oak中发生了根本性变化。
 
-在使用CRX2設定的AEM版本中，將放在 `repository.xml` 從AEM 6開始，檔案會透過Web主控台在Apache Felix JAAS Configuration Factory服務中完成。
+在使用CRX2配置的AEM版本中，将放在 `repository.xml` 文件，而从AEM 6开始，它是通过Web控制台在Apache Felix JAAS Configuration Factory服务中完成的。
 
-因此，在升級後，必須停用任何現有的設定，並重新建立Apache Oak。
+因此，在升级后，必须禁用任何现有配置并重新创建Apache Oak。
 
-若要停用的JAAS設定中定義的自訂模組 `repository.xml`，您必須編輯設定才能使用預設值 `LoginModule`，如下列範例所示：
+禁用的JAAS配置中定义的自定义模块 `repository.xml`，您必须编辑配置才能使用默认设置 `LoginModule`，如以下示例所示：
 
 ```xml
 <Security >
@@ -279,82 +279,82 @@ Managed Bean功能可使用以下專案來存取： [JMX主控台](/help/sites-a
 
 >[!NOTE]
 >
->如需詳細資訊，請參閱 [使用外部登入模組進行驗證](https://jackrabbit.apache.org/oak/docs/security/authentication/externalloginmodule.html).
+>有关更多信息，请参阅 [使用外部登录模块进行身份验证](https://jackrabbit.apache.org/oak/docs/security/authentication/externalloginmodule.html).
 >
->例如 `LoginModule` 在AEM 6中的設定，請參閱 [使用AEM 6設定LDAP](/help/sites-administering/ldap-config.md).
+>例如 `LoginModule` AEM 6中的配置，请参见 [使用AEM 6配置LDAP](/help/sites-administering/ldap-config.md).
 
-## 從/install目錄移除更新 {#remove-updates-install-directory}
+## 从/install目录中删除更新 {#remove-updates-install-directory}
 
 >[!NOTE]
 >
->在關閉AEM執行個體之後，僅從crx-quickstart/install目錄移除套件。 此步驟是開始就地升級程式之前的最後一個步驟。
+>仅在关闭AEM实例后从crx-quickstart/install目录中删除包。 此步骤是开始就地升级过程之前的最后一个步骤。
 
-移除透過部署的任何Service Pack、Feature Pack或Hotfix。 `crx-quickstart/install` 目錄。 這麼做可防止在更新完成後，在新AEM版本之上意外安裝舊版Hotfix和Service Pack。
+删除通过部署的所有Service Pack、功能包或修补程序 `crx-quickstart/install` 目录。 这样做可防止在更新完成后在新AEM版本之上意外安装旧修补程序和Service Pack。
 
-## 停止任何冷待命執行個體 {#stop-tarmk-coldstandby-instance}
+## 停止任何冷备用实例 {#stop-tarmk-coldstandby-instance}
 
-如果使用TarMK冷待命，請停止任何冷待命執行個體。 這麼做可保證在升級過程中發生問題時能以有效率的方式重新上線。 成功完成升級後，必須從升級的主要執行個體重建冷待命執行個體。
+如果使用TarMK冷备用，请停止任何冷备用实例。 这样做可以确保升级过程中出现问题时恢复在线的有效方式。 成功完成升级后，必须从升级的主实例重建冷备用实例。
 
-## 停用自訂排程工作 {#disable-custom-scheduled-jobs}
+## 禁用自定义计划作业 {#disable-custom-scheduled-jobs}
 
-停用應用程式程式碼中包含的任何OSGi排程工作。
+禁用应用程序代码中包含的任何OSGi计划作业。
 
-## 執行離線修訂清理 {#execute-offline-revision-cleanup}
-
->[!NOTE]
->
->只有TarMK安裝才需要此步驟
-
-如果使用TarMK，您應該在升級前執行離線修訂清理。 如此一來，存放庫移轉步驟和後續升級任務的執行速度就會大幅加快，有助於確保線上修訂清除在升級完成後能夠成功執行。 如需有關執行離線修訂清除的資訊，請參閱 [正在執行離線修訂清理](/help/sites-deploying/storage-elements-in-aem-6.md#performing-offline-revision-cleanup).
-
-## 執行資料存放區垃圾收集 {#execute-datastore-garbage-collection}
+## 执行脱机修订版清理 {#execute-offline-revision-cleanup}
 
 >[!NOTE]
 >
->只有執行crx3的執行個體才需要此步驟
+>只有TarMK安装才需要此步骤
 
-在CRX3執行個體上執行修訂清除後，您應該執行資料存放區垃圾收藏集，以移除資料存放區中任何未參考的blob。 如需指示，請參閱以下說明檔案： [資料存放區垃圾收集](/help/sites-administering/data-store-garbage-collection.md).
+如果使用TarMK，则在升级之前应运行脱机修订版清理。 这样做可以大大加快存储库迁移步骤和后续升级任务的执行速度，并有助于确保在线修订版清理在升级完成后可以成功执行。 有关运行脱机修订版清理的信息，请参阅 [正在执行脱机修订清理](/help/sites-deploying/storage-elements-in-aem-6.md#performing-offline-revision-cleanup).
 
-## 視需要升級資料庫結構描述 {#upgrade-the-database-schema-if-needed}
-
-通常，AEM用於持續性的基礎Apache Oak棧疊會視需要負責升級資料庫架構。
-
-但是，當結構描述無法自動升級時可能會發生這種情況。 這類情況大多是安全性高的環境，資料庫是在許可權有限的使用者下執行。 如果發生這種情況，AEM會繼續使用舊的結構描述。
-
-若要避免發生這類情況，請執行以下動作來升級結構：
-
-1. 關閉必須升級的AEM執行個體。
-1. 升級資料庫結構。 請參閱資料庫型別的檔案，瞭解需要什麼工具才能取得結果。
-
-   如需Oak如何處理架構升級的詳細資訊，請參閱 [Apache網站上的此頁面](https://jackrabbit.apache.org/oak/docs/nodestore/document/rdb-document-store.html#upgrade).
-
-1. 繼續升級AEM。
-
-## 刪除可能阻礙升級的使用者 {#delete-users-that-might-hinder-the-upgrade}
+## 执行数据存储垃圾收集 {#execute-datastore-garbage-collection}
 
 >[!NOTE]
 >
->只有在下列情況下，才需要此升級前維護任務：
+>只有运行crx3的实例才需要此步骤
+
+在CRX3实例上运行修订清理后，您应该运行数据存储垃圾收藏集以删除数据存储中的任何未引用Blob。 有关说明，请参阅以下文档： [数据存储垃圾收集](/help/sites-administering/data-store-garbage-collection.md).
+
+## 根据需要升级数据库模式 {#upgrade-the-database-schema-if-needed}
+
+通常，如果需要，AEM用于持久性的基础Apache Oak栈栈会负责升级数据库架构。
+
+但是，在架构无法自动升级时可能会出现这种情况。 此类情况大多是高安全性环境，其中数据库在权限有限的用户下运行。 如果发生这种情况，AEM将继续使用旧架构。
+
+要防止发生这种情况，请执行以下操作来升级架构：
+
+1. 关闭必须升级的AEM实例。
+1. 升级数据库模式。 请参阅数据库类型的文档，了解获得结果所需的工具。
+
+   有关Oak如何处理模式升级的更多信息，请参阅 [Apache网站上的此页面](https://jackrabbit.apache.org/oak/docs/nodestore/document/rdb-document-store.html#upgrade).
+
+1. 继续升级AEM。
+
+## 删除可能妨碍升级的用户 {#delete-users-that-might-hinder-the-upgrade}
+
+>[!NOTE]
 >
->* 您正從AEM 6.3之前的AEM版本升級
->* 在升級期間，您會遇到下列任何錯誤。
+>只有在以下情况下，才需要执行此升级前维护任务：
+>
+>* 您正在从AEM 6.3之前的AEM版本升级
+>* 在升级过程中，您会遇到以下提到的任何错误。
 >
 
 
-在例外情況下，服務使用者在舊版AEM中可能會錯誤地標籤為一般使用者。
+在极少数情况下，服务用户的最终版本较旧的AEM可能会错误地标记为常规用户。
 
-如果發生這種情況，升級會失敗，並出現以下訊息：
+如果出现这种情况，升级将失败，并出现如下消息：
 
 ```
 ERROR [Apache Sling Repository Startup Thread] com.adobe.granite.repository.impl.SlingRepositoryManager Exception in a SlingRepositoryInitializer, SlingRepository service registration aborted
 java.lang.RuntimeException: Unable to create service user [communities-utility-reader]:java.lang.RuntimeException: Existing user communities-utility-reader is not a service user.
 ```
 
-若要解決此問題，請務必執行下列動作：
+要解决此问题，请确保执行以下操作：
 
-1. 從生產流量分離執行個體
-1. 建立一個或多個造成問題的使用者的備份。 您可以透過「封裝管理員」來執行此工作。 如需詳細資訊，請參閱 [如何使用套件。](/help/sites-administering/package-manager.md)
-1. 刪除一或多個造成問題的使用者。 以下是可能屬於此類別的使用者清單：
+1. 将实例与生产流量分离
+1. 创建一个或多个导致问题的用户的备份。 您可以通过包管理器执行此任务。 有关更多信息，请参阅 [如何使用包。](/help/sites-administering/package-manager.md)
+1. 删除一个或多个导致问题的用户。 以下是可能属于此类别的用户列表：
 
    1. `dynamic-media-replication`
    1. `communities-ugc-writer`
@@ -363,6 +363,6 @@ java.lang.RuntimeException: Unable to create service user [communities-utility-r
    1. `oauthservice`
    1. `sling-scripting`
 
-## 輪換記錄檔 {#rotate-log-files}
+## 轮换日志文件 {#rotate-log-files}
 
-Adobe建議您在開始升級之前，先封存目前的記錄檔。 如此一來，升級期間和升級後，您就可以更輕鬆地監視和掃描記錄檔，以識別並解決可能發生的任何問題。
+Adobe建议在开始升级之前存档当前的日志文件。 这样，在升级期间和升级后，可以更轻松地监视和扫描日志文件，以识别并解决可能出现的任何问题。

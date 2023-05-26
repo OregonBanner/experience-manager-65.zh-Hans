@@ -1,7 +1,7 @@
 ---
-title: OSGi上以Forms為中心的工作流程 |處理使用者資料
+title: OSGi上以Forms为中心的工作流 |处理用户数据
 seo-title: Forms-centric workflows on OSGi | Handling user data
-description: OSGi上以Forms為中心的工作流程 |處理使用者資料
+description: OSGi上以Forms为中心的工作流 |处理用户数据
 uuid: 6eefbe84-6496-4bf8-b065-212aa50cd074
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -15,29 +15,29 @@ ht-degree: 0%
 
 ---
 
-# OSGi上以Forms為中心的工作流程 |處理使用者資料 {#forms-centric-workflows-on-osgi-handling-user-data}
+# OSGi上以Forms为中心的工作流 |处理用户数据 {#forms-centric-workflows-on-osgi-handling-user-data}
 
-以Forms為中心的AEM工作流程可讓您自動執行以Forms為中心的實際業務流程。 工作流程由一系列步驟組成，這些步驟會以關聯工作流程模型中指定的順序執行。 每個步驟都會執行特定動作，例如將任務指派給使用者或傳送電子郵件訊息。 工作流程可以與存放庫中的資產、使用者帳戶和服務互動。 因此，工作流程可以協調涉及Experience Manager任何方面的複雜活動。
+以Forms为中心的AEM工作流使您能够自动执行以Forms为中心的真实业务流程。 工作流由一系列步骤组成，这些步骤按照关联工作流模型中指定的顺序执行。 每个步骤都会执行特定操作，例如向用户分配任务或发送电子邮件。 工作流可以与存储库中的资产、用户帐户和服务进行交互。 因此，工作流可以协调涉及Experience Manager任何方面的复杂活动。
 
-可透過下列任何方法觸發或啟動以表單為中心的工作流程：
+可以通过以下任意方法触发或启动以表单为中心的工作流：
 
-* 從AEM收件匣提交應用程式
-* 從AEM提交申請 [!DNL Forms] 應用程式
-* 提交最適化表單
-* 使用watched資料夾
-* 提互動動式通訊或信件
+* 从AEM收件箱提交应用程序
+* 从AEM提交申请 [!DNL Forms] 应用程序
+* 提交自适应表单
+* 使用观察文件夹
+* 提交交互式通信或信件
 
-如需以Forms為中心的AEM工作流程和功能的詳細資訊，請參閱 [OSGi上以Forms為中心的工作流程](/help/forms/using/aem-forms-workflow.md).
+有关以Forms为中心的AEM工作流和功能的更多信息，请参阅 [OSGi上以Forms为中心的工作流](/help/forms/using/aem-forms-workflow.md).
 
-## 使用者資料和資料存放區 {#user-data-and-data-stores}
+## 用户数据和数据存储 {#user-data-and-data-stores}
 
-觸發工作流程時，會自動為工作流程例項產生裝載。 每個工作流程例項都會獲指派一個唯一例項ID及關聯的裝載ID。 裝載包含與工作流程例項相關聯的使用者和表單資料的存放庫位置。 此外，工作流程例項的草稿和歷史資料也會儲存在AEM存放庫中。
+触发工作流时，会自动为工作流实例生成有效负载。 每个工作流实例都分配有一个唯一的实例ID和一个关联的有效负载ID。 有效负载包含与工作流实例关联的用户和表单数据的存储库位置。 此外，工作流实例的草稿和历史数据也存储在AEM存储库中。
 
-工作流程執行個體之裝載、草稿和歷史記錄所在的預設存放庫位置如下：
+工作流实例的有效负载、草稿和历史记录所在的默认存储库位置如下所示：
 
 >[!NOTE]
 >
->建立工作流程或應用程式時，您可以設定不同的位置來儲存裝載、草稿和歷程記錄資料。 若要識別工作流程或應用程式儲存資料的位置，請檢閱工作流程。
+>在创建工作流或应用程序时，您可以配置不同的位置来存储有效负载、草稿和历史记录数据。 要确定工作流或应用程序存储数据的位置，请查看工作流。
 
 <table>
  <tbody>
@@ -47,7 +47,7 @@ ht-degree: 0%
    <td><b>AEM 6.3 [!DNL Forms]</b></td>
   </tr>
   <tr>
-   <td><strong>工作流程 <br /> 例項</strong></td>
+   <td><strong>工作流 <br /> 实例</strong></td>
    <td>/var/workflow/instances/[server_id]/&lt;date&gt;/[workflow-instance]/</td>
    <td>/etc/workflow/instances/[server_id]/[date]/[workflow-instance]/</td>
   </tr>
@@ -58,59 +58,59 @@ ht-degree: 0%
   </tr>
   <tr>
    <td><strong>草稿</strong></td>
-   <td>/var/fd/dashboard/instances/[server_id]/<br /> [date]/[workflow-instance]/draft/[workitem]/</td>
-   <td>/etc/fd/dashboard/instances/[server_id]/<br /> [date]/[workflow-instance]/draft/[workitem]/</td>
+   <td>/var/fd/dashboard/instances/[server_id]/<br /> [日期]/[工作流程实例]/draft/[工作项目]/</td>
+   <td>/etc/fd/dashboard/instances/[server_id]/<br /> [日期]/[工作流程实例]/draft/[工作项目]/</td>
   </tr>
   <tr>
    <td><strong>历史</strong></td>
-   <td>/var/fd/dashboard/instances/[server_id]/<br /> [date]/[workflow_instance]/history/</td>
-   <td>/etc/fd/dashboard/instances/[server_id]/<br /> [date]/[workflow_instance]/history/</td>
+   <td>/var/fd/dashboard/instances/[server_id]/<br /> [日期]/[workflow_instance]/history/</td>
+   <td>/etc/fd/dashboard/instances/[server_id]/<br /> [日期]/[workflow_instance]/history/</td>
   </tr>
  </tbody>
 </table>
 
-## 存取和刪除使用者資料 {#access-and-delete-user-data}
+## 访问和删除用户数据 {#access-and-delete-user-data}
 
-您可以從存放庫的工作流程例項存取和刪除使用者資料。 若要完成此操作，您必須知道與使用者相關聯的工作流程例項的執行個體ID。 您可以使用起始工作流程例項的使用者名稱或工作流程例項的目前受指派人，來尋找工作流程例項的執行個體ID。
+您可以从存储库中的工作流实例访问和删除用户数据。 要实现此目的，您必须知道与用户关联的工作流实例的实例ID。 您可以使用启动工作流实例的用户的用户名或工作流实例的当前被分配人的用户名来查找工作流实例的实例ID。
 
-不過，在下列情況下識別與啟動器相關聯的工作流程時，您無法識別或結果可能模稜兩可：
+但是，在下列情形中标识与启动器关联的工作流时，您无法识别或结果可能模棱两可：
 
-* **透過watched資料夾觸發的工作流程**：如果工作流程是由watched資料夾觸發，則無法使用工作流程執行個體的啟動器來識別工作流程執行個體。 在此情況下，使用者資訊會編碼在儲存的資料中。
-* **從發佈AEM執行個體初始的工作流程**：從AEM發佈執行個體提交調適型表單、互動式通訊或信函時，所有工作流程執行個體都是使用服務使用者建立的。 在這些情況下，不會在工作流程例項資料中擷取登入使用者的使用者名稱。
+* **通过watched文件夹触发的工作流**：如果工作流由观察文件夹触发，则无法使用工作流实例的启动器识别该工作流实例。 在这种情况下，在存储的数据中对用户信息进行编码。
+* **从发布AEM实例启动的工作流**：从AEM发布实例提交自适应表单、交互式通信或信件时，所有工作流实例都使用服务用户创建。 在这些情况下，工作流实例数据中不会捕获登录用户的用户名。
 
-### 存取使用者資料 {#access}
+### 访问用户数据 {#access}
 
-若要識別並存取為工作流程執行個體儲存的使用者資料，請執行下列步驟：
+要识别并访问为工作流实例存储的用户数据，请执行以下步骤：
 
-1. 在AEM編寫執行個體上，前往 `https://'[server]:[port]'/crx/de` 並導覽至 **[!UICONTROL 「工具」>「查詢」]**.
+1. 在AEM创作实例上，转到 `https://'[server]:[port]'/crx/de` 并导航到 **[!UICONTROL “工具”>“查询”]**.
 
-   選取 **[!UICONTROL SQL2]** 從 **[!UICONTROL 型別]** 下拉式清單。
+   选择 **[!UICONTROL SQL2]** 从 **[!UICONTROL 类型]** 下拉菜单。
 
-1. 根據可用的資訊，執行下列其中一項查詢：
+1. 根据可用的信息，执行以下查询之一：
 
-   * 如果工作流程啟動器已知，請執行以下命令：
+   * 如果工作流启动器已知，请执行以下命令：
 
    `SELECT &ast; FROM [cq:Workflow] AS s WHERE ISDESCENDANTNODE([path-to-workflow-instances]) and s.[initiator]='*initiator-ID*'`
 
-   * 如果您要尋找其資料的使用者是目前工作流程受指派人，請執行下列動作：
+   * 如果您要查找其数据的用户是当前工作流被分配人，请执行以下命令：
 
    `SELECT &ast; FROM [cq:WorkItem] AS s WHERE ISDESCENDANTNODE([path-to-workflow-instances]) and s.[assignee]='*assignee-id*'`
 
-   查詢會傳回指定之工作流程發起人或目前工作流程受指派人的所有工作流程例項位置。
+   查询会返回指定工作流发起人或当前工作流被分配人的所有工作流实例的位置。
 
-   例如，下列查詢會從以下位置傳回兩個工作流程例項路徑： `/var/workflow/instances` 工作流程發起人的節點 `srose`.
+   例如，以下查询从 `/var/workflow/instances` 工作流发起者为的节点 `srose`.
 
    ![workflow-instance](assets/workflow-instance.png)
 
-1. 前往查詢傳回的工作流程例項路徑。 status屬性顯示工作流程執行個體的目前狀態。
+1. 转到查询返回的工作流实例路径。 status属性显示工作流实例的当前状态。
 
    ![状态](assets/status.png)
 
-1. 在工作流程例項節點中，導覽至 `data/payload/`. 此 `path` 屬性會儲存工作流程例項之裝載的路徑。 您可以導覽至路徑，以存取裝載中儲存的資料。
+1. 在工作流实例节点中，导航到 `data/payload/`. 此 `path` 属性存储工作流实例的有效负荷的路径。 您可以导航到路径，以访问有效负载中存储的数据。
 
    ![payload-path](assets/payload-path.png)
 
-1. 導覽至工作流程例項的草稿與歷史記錄位置。
+1. 导航到工作流实例的草稿和历史记录位置。
 
    例如：
 
@@ -118,45 +118,45 @@ ht-degree: 0%
 
    `/var/fd/dashboard/instances/server0/2018-04-09/_var_workflow_instances_server0_2018-04-09_basicmodel_54/history/`
 
-1. 對步驟2中查詢傳回的所有工作流程例項重複步驟3 - 5。
+1. 对步骤2中查询返回的所有工作流实例重复步骤3 - 5。
 
    >[!NOTE]
    >
-   >AEM [!DNL Forms] 應用程式也會以離線模式儲存資料。 工作流程執行個體的資料可能儲存在本機個別裝置上，然後會被提交至 [!DNL Forms] server （當應用程式與伺服器同步時）。
+   >AEM [!DNL Forms] 应用程序还以离线模式存储数据。 工作流实例的数据可能存储在单个设备本地，然后提交到 [!DNL Forms] 应用程序与服务器同步时的服务器。
 
-### 刪除使用者資料 {#delete-user-data}
+### 删除用户数据 {#delete-user-data}
 
-您必須是AEM管理員，才能執行下列步驟，從工作流程例項刪除使用者資料：
+您必须是AEM管理员，才能通过执行以下步骤从工作流实例中删除用户数据：
 
-1. 請依照下列說明操作： [存取使用者資料](/help/forms/using/forms-workflow-osgi-handling-user-data.md#access) 並注意下列事項：
+1. 按照中的说明操作 [访问用户数据](/help/forms/using/forms-workflow-osgi-handling-user-data.md#access) 并注意以下事项：
 
-   * 與使用者相關聯的工作流程例項的路徑
-   * 工作流程例項狀態
-   * 工作流程例項裝載的路徑
-   * 工作流程例項的草稿和歷史記錄路徑
+   * 与用户关联的工作流实例的路径
+   * 工作流实例的状态
+   * 工作流实例的有效负荷的路径
+   * 工作流实例的草稿和历史记录路径
 
-1. 對中的工作流程例項執行此步驟 **執行中**， **已暫停**，或 **過時** 狀態：
+1. 在中为工作流实例执行此步骤 **正在运行**， **已暂停**，或 **过时** 状态：
 
-   1. 前往 `https://'[server]:[port]'/aem/start.html` 並使用管理員認證登入。
-   1. 導覽至 **[!UICONTROL 「工具」>「工作流程」>「例項」]**.
-   1. 選取使用者的相關工作流程例項，然後點選 **[!UICONTROL 終止]** 以終止執行中的執行個體。
+   1. 转到 `https://'[server]:[port]'/aem/start.html` 并使用管理员凭据登录。
+   1. 导航到 **[!UICONTROL “工具”>“工作流”>“实例”]**.
+   1. 为用户选择相关工作流实例并点按 **[!UICONTROL 终止]** 终止正在运行的实例。
 
-      如需有關使用工作流程例項的詳細資訊，請參閱 [管理工作流程例項](/help/sites-administering/workflows-administering.md).
+      有关使用工作流实例的详细信息，请参阅 [管理工作流实例](/help/sites-administering/workflows-administering.md).
 
-1. 前往 [!DNL CRXDE Lite] 主控台，導覽至工作流程例項的裝載路徑，然後刪除 `payload` 節點。
-1. 導覽至工作流程例項的草稿路徑，然後刪除 `draft` 節點。
-1. 導覽至工作流程例項的歷史記錄路徑，並刪除 `history` 節點。
-1. 導覽至工作流程例項的工作流程例項路徑，然後刪除 `[workflow-instance-ID]` 工作流程的節點。
+1. 转到 [!DNL CRXDE Lite] 导航到工作流实例的有效负载路径，然后删除 `payload` 节点。
+1. 导航到工作流实例的草稿路径，然后删除 `draft` 节点。
+1. 导航到工作流实例的历史记录路径，然后删除 `history` 节点。
+1. 导航到工作流实例的工作流实例路径，然后删除 `[workflow-instance-ID]` 工作流节点。
 
    >[!NOTE]
    >
-   >刪除工作流程例項節點將會移除所有工作流程參與者的工作流程例項。
+   >删除工作流实例节点将删除所有工作流参与者的工作流实例。
 
-1. 針對已識別給使用者的所有工作流程例項，重複步驟2至6。
-1. 識別並刪除AEM中的離線草稿和提交資料 [!DNL Forms] 工作流程參與者的應用程式寄件匣，以避擴音交至伺服器。
+1. 对于为用户标识的所有工作流实例，重复步骤2 - 6。
+1. 识别并删除AEM中的离线草稿和提交数据 [!DNL Forms] 工作流参与者的应用程序发件箱，以避免向服务器提交任何内容。
 
-您也可以使用API來存取及移除節點和屬性。 如需詳細資訊，請參閱下列檔案。
+您还可以使用API来访问和删除节点和属性。 有关更多信息，请参阅以下文档。
 
-* [如何以程式設計方式存取AEM JCR](/help/sites-developing/access-jcr.md)
-* [移除節點和屬性](https://developer.adobe.com/experience-manager/reference-materials/spec/jcr/2.0/10_Writing.html#10.9%20Removing%20Nodes%20and%20Properties)
-* [API參考](https://helpx.adobe.com/experience-manager/6-3/sites-developing/reference-materials/javadoc/overview-summary.html)
+* [如何以编程方式访问AEM JCR](/help/sites-developing/access-jcr.md)
+* [删除节点和属性](https://developer.adobe.com/experience-manager/reference-materials/spec/jcr/2.0/10_Writing.html#10.9%20Removing%20Nodes%20and%20Properties)
+* [API参考](https://helpx.adobe.com/experience-manager/6-3/sites-developing/reference-materials/javadoc/overview-summary.html)

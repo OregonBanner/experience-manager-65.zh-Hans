@@ -1,7 +1,7 @@
 ---
-title: 將資料庫成長減至最低的秘訣
+title: 最大程度地减少数据库增长的技巧
 seo-title: Tips for minimizing database growth
-description: 長期處理程式會將處理程式資料儲存在AEM表單資料庫中。 使用一些簡單的程式設計和產品設定策略，可以將AEM表單資料庫的成長減到最少。
+description: 长期进程将进程数据存储在AEM表单数据库中。 使用一些简单的流程设计和产品配置策略，可以最大限度地减少AEM表单数据库的增长。
 seo-description: Long-lived processes store process data in the AEM forms database. The growth of the AEM forms database can be minimized using a few easy process design and product configuration strategies.
 uuid: 13f99d4f-848e-451e-90d9-55e202dc0bdb
 contentOwner: admin
@@ -17,22 +17,22 @@ ht-degree: 0%
 
 ---
 
-# 將資料庫成長減至最低的秘訣 {#tips-for-minimizing-database-growth}
+# 最大程度地减少数据库增长的技巧 {#tips-for-minimizing-database-growth}
 
-長期處理程式會將處理程式資料儲存在AEM表單資料庫中。 使用一些簡單的程式設計和產品設定策略，可以將AEM表單資料庫的成長減到最少。
+长期进程将进程数据存储在AEM表单数据库中。 使用一些简单的流程设计和产品配置策略，可以最大限度地减少AEM表单数据库的增长。
 
-## 程式設計提示 {#process-design-tips}
+## 流程设计提示 {#process-design-tips}
 
-儘可能使用短期程式。 短期處理程式不會將處理程式資料儲存在資料庫中。 使用短期程式的缺點在於，其狀態和狀態不會在管理控制檯中進行追蹤，並且沒有程式的歷史記錄。
+尽可能使用短期进程。 短期进程不会将进程数据存储到数据库中。 使用短期进程的缺点是，它们的状态和状态不会在管理控制台中进行跟踪，并且没有进程的历史记录。
 
-有些服務作業(例如「指派任務」作業（使用者服務）)需要用於長期處理程式中。 在此情況下，您可以將程式分成數個子程式，並儘可能縮短其存留期。 如果您使用此策略，短期子流程應該處理大型資料專案，例如檔案值。
+某些服务操作(如“分配任务”操作（用户服务）)要求将其用于长期进程。 在这种情况下，您可以将流程划分为多个子流程，并在可能的情况下使其短暂存在。 如果使用此策略，则短期子进程应处理大型数据项，如文档值。
 
-請謹慎使用變數。 使用長效處理序時，會針對每個處理序執行個體，在資料庫上為處理序中的每個變數分配空間。 策略性使用變數可節省大量空間。 例如，您可以在程式不再需要舊值時，覆寫變數值。 並刪除您建立且未使用的任何變數。 您可以驗證程式以尋找未使用的變數。
+谨慎使用变量。 在使用长生命周期进程时，会为进程中的每个变量在数据库中分配空间。 战略性地使用变量可以节省大量空间。 例如，您可以在流程中不再需要旧值时覆盖变量值。 并删除已创建但未使用的任何变量。 您可以验证该过程以查找未使用的变量。
 
-使用簡單的變數型別（例如string或int），並儘可能避免使用複雜的變數型別。 即使變數不包含值，資料庫空間也會分配給變數。 複雜變數通常比簡單變數需要更多空間。
+使用简单的变量类型（例如，string或int），并尽可能避免使用复杂的变量类型。 即使变量不包含值，也会为变量分配数据库空间。 复杂变量通常比简单变量需要更多的空间。
 
-## 產品管理秘訣 {#product-administration-tips}
+## 产品管理提示 {#product-administration-tips}
 
-有效使用全球檔案儲存(GDS)。 表單伺服器上的GDS目錄可用來儲存傳遞至處理程式中AEM表單一部分的服務的檔案。 為了改善效能，較小的檔案會儲存在記憶體中，並儲存在資料庫中。
+有效地使用全局文档存储(GDS)。 表单服务器上的GDS目录用于存储传递给进程中AEM表单一部分的服务的文件。 为了提高性能，将较小的文档存储在内存中并保留在数据库中。
 
-管理主控台會公開Default Document Max Inline Size屬性，以設定儲存在記憶體中並儲存在資料庫中之檔案的大小上限。 (請參閱 [設定一般AEM表單設定](/help/forms/using/admin-help/configure-general-aem-forms-settings.md#configure-general-aem-forms-settings).) 如果您將此屬性設定為低值，大部分檔案都會儲存在GDS目錄中，而不是資料庫中。 優點在於，當檔案儲存在GDS目錄中時，不再需要這些檔案時，可以更輕鬆地刪除它們。
+管理控制台显示“默认文档最大内联大小”属性，用于配置存储在内存中并保留在数据库中的文档的最大大小。 (请参阅 [配置常规AEM表单设置](/help/forms/using/admin-help/configure-general-aem-forms-settings.md#configure-general-aem-forms-settings).) 如果将此属性设置为低值，则大多数文档将保留在GDS目录中，而不是数据库中。 优点在于，当文件存储在GDS目录中时，可以更轻松地删除不再需要的文件。

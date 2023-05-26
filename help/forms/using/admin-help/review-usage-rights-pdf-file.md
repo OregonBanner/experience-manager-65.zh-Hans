@@ -1,7 +1,7 @@
 ---
-title: 檢閱PDF檔案的使用許可權
+title: 查看PDF文件的使用权限
 seo-title: Review the usage rights of a PDF file
-description: 瞭解如何檢閱PDF檔案的使用許可權。
+description: 了解如何查看PDF文件的使用权限。
 seo-description: Learn how to review the usage rights of a PDF file.
 uuid: b55e945c-03e2-4b26-aacb-f1234ce163f1
 contentOwner: admin
@@ -17,11 +17,11 @@ ht-degree: 0%
 
 ---
 
-# 檢閱PDF檔案的使用許可權 {#review-the-usage-rights-of-a-pdf-file}
+# 查看PDF文件的使用权限 {#review-the-usage-rights-of-a-pdf-file}
 
-當您上傳PDF檔案至Acrobat Reader DC擴充功能Web應用程式時，可以檢視以下資訊：檢視是否已進行Reader擴充、已套用任何使用許可權，以及它們的到期日。
+将PDF文件上传到Acrobat Reader DC扩展Web应用程序时，您可以查看以下信息：查看是否已Reader扩展、是否应用了任何使用权限及其到期日期。
 
-1. 登入Acrobat Reader DC擴充功能網頁應用程式，網址為 `http://[localhost]:[port]/ReaderExtensions` (其中 *[連線埠]* 是應用程式伺服器的連線埠號碼)。
-1. 按一下「瀏覽」上傳PDF檔案，然後按一下「資訊」。 該資訊會顯示在檔案名稱下方。
+1. 登录到Acrobat Reader DC扩展Web应用程序，网址为 `http://[localhost]:[port]/ReaderExtensions` (其中 *[端口]* 是应用程序服务器的端口号)。
+1. 单击“浏览”上传PDF文件，然后单击“信息”。 该信息显示在文件名下方。
 
-   如需修改檔案使用許可權的詳細資訊，請參閱Acrobat Reader DC擴充功能說明。
+   有关修改文件使用权限的详细信息，请参阅Acrobat Reader DC扩展帮助。

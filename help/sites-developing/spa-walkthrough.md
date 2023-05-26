@@ -20,7 +20,7 @@ SPA 编辑器提供了一个全面的解决方案来支持 AEM 中的 SPA。本�
 
 >[!NOTE]
 >
->SPA編輯器是建議解決方案，適用於需要SPA架構使用者端轉譯的專案(例如React或Angular)。
+>对于需要基于SPA框架的客户端渲染(例如React或Angular)的项目，建议使用SPA编辑器。
 
 ## 简介 {#introduction}
 
@@ -34,19 +34,19 @@ SPA 编辑器提供了一个全面的解决方案来支持 AEM 中的 SPA。本�
 
 该演练基于标准 AEM 功能和示例 WKND SPA Project 应用程序。要完成本演练，您必须拥有以下资源。
 
-* [AEM 6.5.4版或更新版本](/help/release-notes/release-notes.md)
+* [AEM版本6.5.4或更高版本](/help/release-notes/release-notes.md)
    * 您必须拥有系统的管理员权限。
 * [GitHub 上提供的示例 WKND SPA Project 应用程序](https://github.com/adobe/aem-guides-wknd-spa)
-   * 下載 [最新版的React應用程式。](https://github.com/adobe/aem-guides-wknd-spa/releases) 其名稱將類似於 `wknd-spa-react.all.classic-X.Y.Z-SNAPSHOT.zip`.
-   * 下載 [最新範例影像](https://github.com/adobe/aem-guides-wknd-spa/releases) （適用於應用程式）。 其名稱將類似於 `wknd-spa-sample-images-X.Y.Z.zip`.
-   * [使用封裝管理員](/help/sites-administering/package-manager.md) 以安裝套件，如同在AEM中安裝任何其他套件一樣。
+   * 下载 [最新版本的React应用程序。](https://github.com/adobe/aem-guides-wknd-spa/releases) 其名称类似于 `wknd-spa-react.all.classic-X.Y.Z-SNAPSHOT.zip`.
+   * 下载 [最新示例图像](https://github.com/adobe/aem-guides-wknd-spa/releases) 应用程序的。 其名称类似于 `wknd-spa-sample-images-X.Y.Z.zip`.
+   * [使用包管理器](/help/sites-administering/package-manager.md) 以安装包，就像安装AEM中的任何其他包一样。
    * 在本演练中，无需使用 Maven 安装应用程序。
 
 >[!CAUTION]
 >
->本檔案使用 [WKND Spa專案應用程式](https://github.com/adobe/aem-guides-wknd-spa) 僅供展示之用。 不应将它用于任何项目工作。
+>本文档使用 [WKND Spa项目应用程序](https://github.com/adobe/aem-guides-wknd-spa) 仅供演示之用。 不应将它用于任何项目工作。
 >
->任何AEM專案都應利用 [AEM專案原型，](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) 可支援使用React或Angular的SPA專案，並運用SPA SDK。
+>任何AEM项目都应利用 [AEM项目原型，](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) 支持使用React或Angular的SPA项目，并利用SPA SDK。
 
 ### 什么是 SPA？ {#what-is-a-spa}
 
@@ -79,25 +79,25 @@ SPA 的工作方式的特性使其更快、更流畅且更类似于本机应用�
 
 ### SPA 的工作原理是什么？ {#how-does-a-spa-work}
 
-SPA的主要構想是減少伺服器呼叫和相依性，以儘可能減少伺服器呼叫造成的延遲，讓SPA接近原生應用程式的回應能力。
+SPA的主要思想是减少对服务器的调用和依赖，以便最小化由服务器调用导致的延迟，使SPA接近本机应用程序的响应能力。
 
-在传统的连续网页中，仅加载即时页面所需的数据。这意味着，当访客移至另一个页面时，将调用服务器以获取其他资源。訪客與頁面上的元素互動時，可能需要額外的呼叫。 由于页面必须与访客的请求同步，因此多次调用可能会给人一种滞后或延迟的感觉。
+在传统的连续网页中，仅加载即时页面所需的数据。这意味着，当访客移至另一个页面时，将调用服务器以获取其他资源。当访客与页面上的元素进行交互时，可能需要额外的调用。 由于页面必须与访客的请求同步，因此多次调用可能会给人一种滞后或延迟的感觉。
 
 ![screen_shot_2018-08-20at140449](assets/screen_shot_2018-08-20at140449.png)
 
-為了提供更流暢的體驗，並達到訪客對行動原生應用程式的期望，SPA會在第一次載入時載入訪客的所有必要資料。 虽然最初可能需要花费更长的时间，但随后便不再需要额外的服务器调用。
+为了获得更流畅的体验（接近访客从本机移动设备应用程序中期望的体验），SPA会在首次加载时加载访客的所有必要数据。 虽然最初可能需要花费更长的时间，但随后便不再需要额外的服务器调用。
 
-在使用者端呈現後，頁面元素會反應更快，訪客與頁面的互動也即刻發生。 系統會以非同步方式呼叫任何可能需要的額外資料，以最大化頁面速度。
+通过在客户端进行渲染，页面元素可以更快地做出反应，并且访客与页面的交互可以立即进行。 可能需要的任何其他数据都会异步调用，以最大化页面速度。
 
 >[!NOTE]
 >
->如需SPA如何在AEM中運作的技術詳細資訊，請參閱文章 [AEM中的SPA快速入門](/help/sites-developing/spa-getting-started-react.md).
+>有关SPA如何在AEM中工作的技术详细信息，请参阅文章 [AEM中的SPA快速入门](/help/sites-developing/spa-getting-started-react.md).
 >
->如需SPA編輯器的設計、架構和技術工作流程的詳細資訊，請參閱文章 [SPA編輯器概觀](/help/sites-developing/spa-overview.md).
+>要更详细地了解SPA编辑器的设计、架构和技术工作流，请参阅文章 [SPA编辑器概述](/help/sites-developing/spa-overview.md).
 
 ## SPA 的内容编辑体验 {#content-editing-experience-with-spa}
 
-當建置SPA以利用AEM SPA編輯器時，內容作者注意到編輯和建立內容時沒有差異。 提供了常用 AEM 功能，而无需更改作者的工作流。
+当构建SPA以利用AEM SPA编辑器时，内容作者注意到编辑和创建内容时没有区别。 提供了常用 AEM 功能，而无需更改作者的工作流。
 
 1. 在 AEM 中编辑 WKND SPA Project 应用程序。
 
@@ -105,25 +105,25 @@ SPA的主要構想是減少伺服器呼叫和相依性，以儘可能減少伺�
 
    ![步骤 1](assets/spa-walkthrough-step-1.png)
 
-1. 選取標題元件，並注意其他元件會出現類似的工具列。 选择&#x200B;**编辑**。
+1. 选择一个标题组件，并注意工具栏会像任何其他组件一样显示。 选择&#x200B;**编辑**。
 
-   ![步驟2](assets/spa-walkthrough-step-2.png)
+   ![步骤2](assets/spa-walkthrough-step-2.png)
 
 1. 在 AEM 中正常编辑内容，会发现更改已保存。
 
-   ![步驟3](assets/spa-walkthrough-step-3.png)
+   ![步骤3](assets/spa-walkthrough-step-3.png)
 
    >[!NOTE]
    >
-   >請參閱 [SPA編輯器概觀](spa-overview.md#requirements-limitations) 以取得就地文字編輯器和SPA的詳細資訊。
+   >请参阅 [SPA编辑器概述](spa-overview.md#requirements-limitations) 有关就地文本编辑器和SPA的更多信息。
 
 1. 使用资产浏览器将新图像拖放到图像组件中。
 
-   ![步驟4](assets/spa-walkthrough-step-4.png)
+   ![步骤4](assets/spa-walkthrough-step-4.png)
 
 1. 将保留更改。
 
-   ![步驟5](assets/spa-walkthrough-step-5.png)
+   ![步骤5](assets/spa-walkthrough-step-5.png)
 
 与在任何非 SPA 应用程序一样，支持其他创作工具，例如在页面上拖放其他组件、重新排列组件和修改版面。
 
@@ -135,7 +135,7 @@ SPA的主要構想是減少伺服器呼叫和相依性，以儘可能減少伺�
 
 ## SPA 应用程序和 AEM SPA Editor {#spa-apps-and-the-aem-spa-editor}
 
-體驗SPA對一般使用者的行為方式，然後檢查SPA頁面，有助於更清楚瞭解SAP應用程式如何在AEM中搭配SPA編輯器運作。
+体验SPA如何为最终用户执行操作，然后检查SPA页面，有助于更好地了解SAP应用程序如何与AEM中的SPA编辑器一起使用。
 
 ### 使用 SPA 应用程序 {#using-an-spa-application}
 
@@ -145,15 +145,15 @@ SPA的主要構想是減少伺服器呼叫和相依性，以儘可能減少伺�
 
    ![步骤 1](assets/spa-walkthrough-step-1-1.png)
 
-   請注意頁面結構，包括導覽至子頁面、天氣Widget和文章。
+   请注意页面结构，包括导航到子页面、天气小部件和文章。
 
 1. 使用菜单导航到子页面，可以看到页面将立即加载，而无需刷新。
 
-   ![步驟2](assets/spa-walkthrough-step-1-2.png)
+   ![步骤2](assets/spa-walkthrough-step-1-2.png)
 
 1. 打开浏览器的内置开发人员工具，并在您浏览子页面时监控网络活动。
 
-   ![步驟3](assets/spa-walkthrough-step-1-3.png)
+   ![步骤3](assets/spa-walkthrough-step-1-3.png)
 
    在应用程序中从一个页面移至另一个页面时，几乎不产生流量。不会重新加载页面，而只请求新图像。
 
@@ -161,7 +161,7 @@ SPA的主要構想是減少伺服器呼叫和相依性，以儘可能減少伺�
 
 那么，如果在子页面中导航时没有重新加载页面，如何加载页面呢？
 
-下一節， [正在載入SPA應用程式，](#loading-an-spa-application) 深入瞭解載入SPA的機制，以及如何同步與非同步載入內容。
+下一节， [正在加载SPA应用程序，](#loading-an-spa-application) 深入了解加载SPA的机制，以及如何同步和异步加载内容。
 
 ### 加载 SPA 应用程序 {#loading-an-spa-application}
 
@@ -172,32 +172,32 @@ SPA的主要構想是減少伺服器呼叫和相依性，以儘可能減少伺�
    ![步骤 1](assets/spa-walkthrough-step-1-1.png)
 
 1. 使用浏览器的内置工具可查看页面的源。
-1. 請注意，來源的內容非常有限。
+1. 请注意，源的内容非常有限。
 
    * 页面的正文中没有任何内容。它主要由样式表和对各种脚本（例如 `clientlib-react.min.js`）的调用构成。
    * 这些脚本是此应用程序的主要驱动程序，负责呈现所有内容。
 
 1. 可以使用浏览器的内置工具检查页面。查看完全加载的 DOM 的内容。
 
-   ![步驟4](assets/spa-walkthrough-step-1-4.png)
+   ![步骤4](assets/spa-walkthrough-step-1-4.png)
 
-1. 切換至 **網路** 標籤並重新載入頁面。
+1. 切换到 **网络** 选项卡，然后重新加载页面。
 
    忽略图像请求，请注意，为页面加载的主要资源包括页面本身、CSS、React Javascript、其依赖项以及页面的 JSON 数据。
 
-   ![步驟5](assets/spa-walkthrough-step-1-5.png)
+   ![步骤5](assets/spa-walkthrough-step-1-5.png)
 
 1. 在新选项卡中加载 `react.model.json`。
 
    `http://<host>:<port>/content/wknd-spa-react/us/en/home.model.json`
 
-   ![步驟6](assets/spa-walkthrough-step-1-6.png)
+   ![步骤6](assets/spa-walkthrough-step-1-6.png)
 
    AEM SPA Editor 利用 [AEM 内容服务](/help/assets/content-fragments/content-fragments.md)将页面的全部内容作为 JSON 模型交付。
 
    通过实施特定接口，Sling 模型为 SPA 提供了必要信息。将 JSON 数据的交付工作向下委派给每个组件（从页面到段落再到组件等）。
 
-   每個元件會選擇公開的內容及其演算方式（使用HTL的伺服器端或使用React的使用者端）。 本文重点介绍使用 React 进行客户端呈现。
+   每个组件都会选择它公开的内容及其呈现方式（使用HTL的服务器端或使用React的客户端）。 本文重点介绍使用 React 进行客户端呈现。
 
 1. 该模型还可以对页面进行分组以便同步加载它们，从而减少所需的页面重新加载次数。
 
@@ -205,11 +205,11 @@ SPA的主要構想是減少伺服器呼叫和相依性，以儘可能減少伺�
 
    此行为不是强制性的，而是完全可定义的。
 
-   ![步驟7](assets/spa-walkthrough-step-1-7.png)
+   ![步骤7](assets/spa-walkthrough-step-1-7.png)
 
-1. 若要檢視此行為差異，請重新載入頁面並清除開發人員工具的網路活動。 导航到页面菜单中的 `page-1`，可以看到唯一的网络活动是请求 `page-1` 的图像。`page-1` 本身无需加载。
+1. 要查看这种行为差异，请重新加载页面并清除开发人员工具的网络活动。 导航到页面菜单中的 `page-1`，可以看到唯一的网络活动是请求 `page-1` 的图像。`page-1` 本身无需加载。
 
-   ![步驟8](assets/spa-walkthrough-step-1-8.png)
+   ![步骤8](assets/spa-walkthrough-step-1-8.png)
 
 ### 与 SPA 编辑器进行交互 {#interaction-with-the-spa-editor}
 
@@ -227,7 +227,7 @@ SPA的主要構想是減少伺服器呼叫和相依性，以儘可能減少伺�
 
    请注意，该组件具有一个新的数据属性 `data-cq-data-path`。
 
-   ![步驟2](assets/spa-walkthrough-step-2-2.png)
+   ![步骤2](assets/spa-walkthrough-step-2-2.png)
 
    例如
 
@@ -241,15 +241,15 @@ SPA的主要構想是減少伺服器呼叫和相依性，以儘可能減少伺�
 
    >[!NOTE]
    >
-   >這是AEM中伺服器端轉譯頁面的行為變更，其中有 `cq` 為每個可編輯元件插入的元素。
+   >这是AEM中服务器端渲染页面的行为更改，其中有一个 `cq` 为每个可编辑组件插入的元素。
    >
    >
-   >SPA中的此方法消除了插入自訂元素的需求，僅依賴其他資料屬性，使得前端開發人員更容易標籤標籤。
+   >SPA中的此方法无需注入自定义元素，只需依赖其他数据属性，从而使前端开发人员更容易标记这些元素。
 
 ## 后续步骤 {#next-steps}
 
 现在，您已了解 AEM 中的 SPA 编辑体验以及 SPA 与 SPA 编辑器的关系，请更深入地了解 SPA 的构建方式。
 
-* [AEM中的SPA快速入門](/help/sites-developing/spa-getting-started-react.md) 顯示如何在AEM中建立基本SPA以搭配SPA編輯器使用
+* [AEM中的SPA快速入门](/help/sites-developing/spa-getting-started-react.md) 显示如何在AEM中构建基本SPA以用于SPA编辑器
 * [SPA 编辑器概述](/help/sites-developing/spa-overview.md)更深入地介绍了 AEM 和 SPA 之间的通信模型。
 * [为 AEM 开发 SPA](/help/sites-developing/spa-architecture.md) 介绍了如何让前端开发人员为 AEM 开发 SPA，以及 SPA 如何与 AEM 的架构进行交互。

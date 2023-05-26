@@ -1,7 +1,7 @@
 ---
-title: 將Adobe Sign與AEM Forms整合
+title: 将Adobe Sign与AEM Forms集成
 seo-title: Integrate Adobe Sign with AEM Forms
-description: 瞭解如何設定適用於AEM Forms的Adobe Sign
+description: 了解如何为AEM Forms配置Adobe Sign
 seo-description: Learn how to configure Adobe Sign for AEM Forms
 uuid: e5049775-fb6c-4228-9823-e6a2811460da
 contentOwner: sashanka
@@ -18,48 +18,48 @@ ht-degree: 25%
 
 ---
 
-# 整合 [!DNL Adobe Sign] 使用AEM [!DNL Forms]{#integrate-adobe-sign-with-aem-forms}
+# 集成 [!DNL Adobe Sign] 使用AEM [!DNL Forms]{#integrate-adobe-sign-with-aem-forms}
 
-[!DNL Adobe Sign] 啟用最適化表單的電子簽章工作流程。 电子签名改进了法律、销售、工资单、人力资源管理和其他许多方面的文档的处理工作流。
+[!DNL Adobe Sign] 支持自适应表单的电子签名工作流。 电子签名改进了法律、销售、工资单、人力资源管理和其他许多方面的文档的处理工作流。
 
-在一般情況下 [!DNL Adobe Sign] 在最適化表單情境下，使用者填寫最適化表單以 **申請服務**. 例如，信用卡申请表和公民权益表。在用户填写、签署和提交申请表后，该表将发送给服务提供商以执行后续操作。服务提供商将审核申请，并使用 [!DNL Adobe Sign] 将申请标记为已批准。若要啟用類似的電子簽章工作流程，您可以整合 [!DNL Adobe Sign] 使用AEM [!DNL Forms].
+在典型的 [!DNL Adobe Sign] 和自适应表单方案，用户需填写自适应表单以 **申请服务**. 例如，信用卡申请表和公民权益表。在用户填写、签署和提交申请表后，该表将发送给服务提供商以执行后续操作。服务提供商将审核申请，并使用 [!DNL Adobe Sign] 将申请标记为已批准。要启用类似的电子签名工作流，您可以集成 [!DNL Adobe Sign] 使用AEM [!DNL Forms].
 
-使用 [!DNL Adobe Sign] 使用AEM [!DNL Forms]，設定 [!DNL Adobe Sign] 在AEM雲端服務中：
+使用 [!DNL Adobe Sign] 使用AEM [!DNL Forms]，配置 [!DNL Adobe Sign] 在AEM云服务中：
 
 ## 前提条件 {#prerequisites}
 
-您需要下列專案才能整合 [!DNL Adobe Sign] 使用AEM [!DNL Forms]：
+您需要以下项才能集成 [!DNL Adobe Sign] 使用AEM [!DNL Forms]：
 
-* 作用中 [Adobe Sign開發人員帳戶。](https://acrobat.adobe.com/us/en/why-adobe/developer-form.html)
-* 一個 [SSL已啟用](/help/sites-administering/ssl-by-default.md) AEM [!DNL Forms] 伺服器。
+* 活动 [Adobe Sign开发人员帐户。](https://acrobat.adobe.com/us/en/why-adobe/developer-form.html)
+* An [已启用SSL](/help/sites-administering/ssl-by-default.md) AEM [!DNL Forms] 服务器。
 * [Adobe Sign API 应用程序](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobedocs/adobe-sign/master/gstarted/create_app.md)。
 * [!DNL Adobe Sign] API 应用程序的凭据（客户端 ID 和客户端密码）。
-* 重新設定時，移除現有的 [!DNL Adobe Sign] 來自作者和發佈執行個體的設定。
+* 重新配置时，删除现有 [!DNL Adobe Sign] 来自创作实例和发布实例的配置。
 * 针对创作实例和发布实例，使用[相同的加密密钥](/help/sites-administering/security-checklist.md#make-sure-you-properly-replicate-encryption-keys-when-needed)。
 
-## 設定 [!DNL Adobe Sign] 使用AEM [!DNL Forms] {#configure-adobe-sign-with-aem-forms}
+## 配置 [!DNL Adobe Sign] 使用AEM [!DNL Forms] {#configure-adobe-sign-with-aem-forms}
 
-已具備下列先決條件後，請執行以下步驟來設定 [!DNL Adobe Sign] 使用AEM [!DNL Forms] 在作者執行個體上：
+满足前提条件后，执行以下步骤以配置 [!DNL Adobe Sign] 使用AEM [!DNL Forms] 在创作实例上：
 
-1. 在AEM上 [!DNL Forms] 作者執行個體，導覽至 **工具** ![槌子](assets/hammer.png) > **[!UICONTROL 一般]** > **[!UICONTROL 設定瀏覽器]**.
-1. 於 **[!UICONTROL 設定瀏覽器]** 頁面，點選 **[!UICONTROL 建立]**.
-   * 請參閱 [設定瀏覽器](/help/sites-administering/configurations.md) 說明檔案以取得詳細資訊。
-1. 在 **[!UICONTROL 建立設定]** 對話方塊，指定 **[!UICONTROL 標題]** 針對設定，啟用 **[!UICONTROL 雲端設定]**，然後點選 **[!UICONTROL 建立]**. 它會建立雲端服務的設定容器。
-1. 導覽至 **工具** ![槌子](assets/hammer.png) > **[!UICONTROL Cloud Services]** > **[!UICONTROL Adobe Sign]** 並選取您在上一步中建立的設定容器。
+1. 在AEM上 [!DNL Forms] 创作实例，导航到 **工具** ![锤子](assets/hammer.png) > **[!UICONTROL 常规]** > **[!UICONTROL 配置浏览器]**.
+1. 在 **[!UICONTROL 配置浏览器]** 页面，点按 **[!UICONTROL 创建]**.
+   * 请参阅 [配置浏览器](/help/sites-administering/configurations.md) 文档，以了解更多信息。
+1. 在 **[!UICONTROL 创建配置]** 对话框，请指定 **[!UICONTROL 标题]** 对于配置，启用 **[!UICONTROL 云配置]**，然后点按 **[!UICONTROL 创建]**. 它为Cloud Services创建一个配置容器。
+1. 导航到 **工具** ![锤子](assets/hammer.png) > **[!UICONTROL Cloud Services]** > **[!UICONTROL Adobe Sign]** 并选择您在上一步中创建的配置容器。
 
    >[!NOTE]
    >
-   >您可以執行步驟1至4來建立新的設定容器並建立 [!DNL Adobe Sign] 容器中的設定或使用現有的 `global` 資料夾位於 **工具** ![槌子](assets/hammer.png) > **[!UICONTROL Cloud Services]** > **[!UICONTROL Adobe Sign]**. 如果您在新設定容器中建立設定，請務必在 **[!UICONTROL 設定容器]** 欄位建立最適化表單時。
+   >您可以执行步骤1-4以创建新的配置容器并创建 [!DNL Adobe Sign] 在容器中配置或使用现有 `global` 文件夹位置 **工具** ![锤子](assets/hammer.png) > **[!UICONTROL Cloud Services]** > **[!UICONTROL Adobe Sign]**. 如果您在新配置容器中创建配置，请确保在 **[!UICONTROL 配置容器]** 创建自适应表单时显示的字段。
 
    >[!NOTE]
-   確定雲端服務設定頁面的URL開頭為 **HTTPS**. 如果沒有， [啟用SSL](/help/sites-administering/ssl-by-default.md) 適用於AEM [!DNL Forms] 伺服器。
+   确保云服务配置页面的URL开头为 **HTTPS**. 如果没有， [启用SSL](/help/sites-administering/ssl-by-default.md) 对于AEM [!DNL Forms] 服务器。
 
-1. 在設定頁面上，點選 **[!UICONTROL 建立]** 建立 [!DNL Adobe Sign] AEM中的設定 [!DNL Forms].
-1. 在 **[!UICONTROL 一般]** 的標籤 **[!UICONTROL 建立Adobe Sign設定]** 頁面，指定 **[!UICONTROL 名稱]** 設定並點選 **[!UICONTROL 下一個]**. 您可以選擇指定標題並瀏覽以選取設定的縮圖。
+1. 在配置页面上，点按 **[!UICONTROL 创建]** 创建 [!DNL Adobe Sign] AEM中的配置 [!DNL Forms].
+1. 在 **[!UICONTROL 常规]** 的选项卡 **[!UICONTROL 创建Adobe Sign配置]** 页面，指定 **[!UICONTROL 名称]** 有关配置，请点按 **[!UICONTROL 下一个]**. 您可以选择指定标题并浏览以选择配置的缩略图。
 
-1. 将当前浏览器窗口中的 URL 复制到记事本。需要設定 [!DNL Adobe Sign] 使用AEM的應用程式[!DNL Forms].
+1. 将当前浏览器窗口中的 URL 复制到记事本。需要配置 [!DNL Adobe Sign] 使用AEM的应用程序[!DNL Forms].
 
-1. 在 **[!UICONTROL 設定]** 標籤， **[!UICONTROL OAuth URL]** 欄位包含預設URL。 URL 的格式为：
+1. 在 **[!UICONTROL 设置]** 选项卡， **[!UICONTROL OAuth URL]** 字段包含默认URL。 URL 的格式为：
 
    `https://<shard>/public/oAuth/v2`
 
@@ -73,16 +73,16 @@ ht-degree: 25%
    如果为 Adobe Experience Manager 功能或组件创建另一个 [!DNL Adobe Sign] 配置，请确保所有 [!DNL Adobe Sign] 云配置指向同一分片。
 
    >[!NOTE]
-   保留 **建立Adobe Sign設定** 頁面開啟。 不要關閉它。 您可以擷取 **使用者端ID** 和 **使用者端密碼** 設定的OAuth設定後 [!DNL Adobe Sign] 應用程式，如未來步驟所述。
+   保留 **创建Adobe Sign配置** 页面打开。 不要关闭它。 您可以检索 **客户端ID** 和 **客户端密码** 在为配置OAuth设置后 [!DNL Adobe Sign] 应用程序（如即将执行的步骤中所述）。
 
 
 1. 配置 [!DNL Adobe Sign] 应用程序的 OAuth 设置：
 
-   1. 開啟瀏覽器視窗並登入 [!DNL Adobe Sign] 開發人員帳戶。
-   1. 選取為AEM設定的應用程式 [!DNL Forms]，然後點選 **[!UICONTROL 設定應用程式的OAuth]**.
-   1. 複製 **[!UICONTROL 使用者端ID]** 和 **[!UICONTROL 使用者端密碼]** 記事本。
-   1. 在 **[!UICONTROL 重新導向URL]** 方塊中，新增在上一步中複製的HTTPS URL。
-   1. 啟用下列OAuth設定 [!DNL Adobe Sign] 應用程式並按一下 **[!UICONTROL 儲存]**.
+   1. 打开浏览器窗口并登录到 [!DNL Adobe Sign] 开发人员帐户。
+   1. 选择为AEM配置的应用程序 [!DNL Forms]，然后点按 **[!UICONTROL 为应用程序配置OAuth]**.
+   1. 复制 **[!UICONTROL 客户端ID]** 和 **[!UICONTROL 客户端密码]** 记事本。
+   1. 在 **[!UICONTROL 重定向URL]** 框中，添加在上一步中复制的HTTPS URL。
+   1. 为启用以下OAuth设置 [!DNL Adobe Sign] 应用程序并单击 **[!UICONTROL 保存]**.
    * aggrement_read
    * aggrement_write
    * aggrement_send
@@ -93,7 +93,7 @@ ht-degree: 25%
 
    ![OAuth 配置](assets/oauthconfig_new.png)
 
-1. 返回 **[!UICONTROL 建立Adobe Sign設定]** 頁面。 在 **[!UICONTROL 設定]** 標籤， **[!UICONTROL OAuth URL]** 欄位提及預設URL。 URL 的格式为：
+1. 返回至 **[!UICONTROL 创建Adobe Sign配置]** 页面。 在 **[!UICONTROL 设置]** 选项卡， **[!UICONTROL OAuth URL]** 字段提及默认URL。 URL 的格式为：
 
    `https://<shard>/public/oAuth/v2`
 
@@ -104,43 +104,43 @@ ht-degree: 25%
 
    **na1** 指默认数据库分片。
 
-   您可以修改数据库分片的值。重新啟動伺服器，以便能夠使用資料庫分片的新值。
+   您可以修改数据库分片的值。重新启动服务器以便能够使用数据库分片的新值。
 
    >[!NOTE]
-   確保您的作者和發佈執行個體設定指向相同分片。 如果您為組織建立多個Adobe Sign設定，請確定所有設定都使用相同分片。
+   确保您的创作实例和发布实例配置指向同一分片。 如果为组织创建多个Adobe Sign配置，请确保所有配置都使用相同分片。
 
-1. 返回 **[!UICONTROL 建立Adobe Sign設定]** 頁面。 在 **[!UICONTROL 設定]** 索引標籤中，指定 **使用者端ID** （也稱為應用程式ID）和 **使用者端密碼**. 使用 [Adobe Sign應用程式的使用者端ID和使用者端密碼](https://opensource.adobe.com/acrobat-sign/developer_guide/helloworld.html#get-the-app-id-and-secret) 已為AEM Forms建立。
+1. 返回至 **[!UICONTROL 创建Adobe Sign配置]** 页面。 在 **[!UICONTROL 设置]** 选项卡，指定 **客户端ID** （也称为应用程序ID）和 **客户端密码**. 使用 [Adobe Sign应用程序的客户端ID和客户端密码](https://opensource.adobe.com/acrobat-sign/developer_guide/helloworld.html#get-the-app-id-and-secret) 已为AEM Forms创建。
 
-1. 選取 **[!UICONTROL 也啟用附件的Adobe Sign]** 用於將附加到最適化表單的檔案附加至對應 [!DNL Adobe Sign] 檔案已傳送供簽署。
+1. 选择 **[!UICONTROL 另为附件启用Adobe Sign]** 用于将附加到自适应表单的文件追加到相应表单的选项 [!DNL Adobe Sign] 文档已发送供签名。
 
-1. 點選 **[!UICONTROL 連線至Adobe Sign]**. 在系统提示输入凭据时，提供在创建 [!DNL Adobe Sign] 应用程序时所用帐户的用户名和密码。
+1. 点按 **[!UICONTROL 连接到Adobe Sign]**. 在系统提示输入凭据时，提供在创建 [!DNL Adobe Sign] 应用程序时所用帐户的用户名和密码。
 
-1. 點選 **[!UICONTROL 建立]** 建立 [!DNL Adobe Sign] 設定。
+1. 点按 **[!UICONTROL 创建]** 创建 [!DNL Adobe Sign] 配置。
 
-1. 開啟AEM Web Console。 URL是 `https://'[server]:[port]'/system/console/configMgr`
-1. 開啟 **[!UICONTROL Forms通用設定服務].**
-1. 在 **[!UICONTROL 允許]** 欄位， **選取** 所有使用者 — 所有使用者（匿名或登入）都可以預覽附件、驗證和簽署表單，以及按一下 **[!UICONTROL 儲存].** 作者執行個體已設定為使用 [!DNL Adobe Sign].
-1. 發佈設定。
-1. 使用 [復寫](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/replication.html?lang=zh-Hans) 以在對應的發佈執行個體上建立相同的設定。
+1. 打开AEM Web控制台。 URL是 `https://'[server]:[port]'/system/console/configMgr`
+1. 打开 **[!UICONTROL Forms通用配置服务].**
+1. 在 **[!UICONTROL 允许]** 字段， **选择** 所有用户 — 所有用户（匿名或登录）都可以预览附件、验证和签署表单，然后单击 **[!UICONTROL 保存].** 创作实例配置为使用 [!DNL Adobe Sign].
+1. 发布配置。
+1. 使用 [复制](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/replication.html?lang=zh-Hans) 以在相应的发布实例上创建相同的配置。
 
-現在， [!DNL Adobe Sign] 與AEM整合 [!DNL Forms] 並準備用於調適型表單。 至 [在最適化表單中使用Adobe Sign服務](../../forms/using/working-with-adobe-sign.md#configure-adobe-sign-for-an-adaptive-form)，請在最適化表單屬性中指定上述建立的設定容器。
+现在， [!DNL Adobe Sign] 与AEM集成 [!DNL Forms] 并准备用于自适应表单。 至 [在自适应表单中使用Adobe Sign服务](../../forms/using/working-with-adobe-sign.md#configure-adobe-sign-for-an-adaptive-form)，指定在自适应表单属性中创建的配置容器。
 
 
 
-## 設定 [!DNL Adobe Sign] 同步簽名狀態的排程器 {#configure-adobe-sign-scheduler-to-sync-the-signing-status}
+## 配置 [!DNL Adobe Sign] 同步签名状态的计划程序 {#configure-adobe-sign-scheduler-to-sync-the-signing-status}
 
-一個 [!DNL Adobe Sign] 啟用的最適化表單只會在所有簽署者完成簽署程式後提交。 根據預設， [!DNL Adobe Sign] 排程器服務已排程為每24小時檢查（輪詢）簽署者回應。 您可以为您的环境更改此默认间隔。執行以下步驟來變更預設間隔：
+An [!DNL Adobe Sign] 仅在所有签名者完成签名过程后提交启用的自适应表单。 默认情况下， [!DNL Adobe Sign] 计划程序服务计划每24小时检查（轮询）一次签名者响应。 您可以为您的环境更改此默认间隔。执行以下步骤以更改默认间隔：
 
-1. 登入AEM [!DNL Forms] 含管理員憑證的伺服器，並導覽至 **工具** > **[!UICONTROL 作業]** > **[!UICONTROL 網頁主控台]**.
+1. 登录到AEM [!DNL Forms] 使用管理员凭据访问服务器并导航到 **工具** > **[!UICONTROL 操作]** > **[!UICONTROL Web控制台]**.
 
-   您也可以在瀏覽器視窗中開啟下列URL：
+   您还可以在浏览器窗口中打开以下URL：
    `https://[localhost]:'port'/system/console/configMgr`
 
-1. 找到並開啟 **[!UICONTROL Adobe Sign設定服務]** 選項。 指定 [cron運算式](https://en.wikipedia.org/wiki/Cron#CRON_expression) 在 **[!UICONTROL 狀態更新排程器運算式]** 欄位並按一下 **[!UICONTROL 儲存]**. 例如，若要在每日午夜12點執行設定服務，請指定 `0 0 0 1/1 * ? *` 在 **[!UICONTROL 狀態更新排程器運算式]** 欄位。
+1. 找到并打开 **[!UICONTROL Adobe Sign配置服务]** 选项。 指定 [cron表达式](https://en.wikipedia.org/wiki/Cron#CRON_expression) 在 **[!UICONTROL 状态更新计划程序表达式]** 字段并单击 **[!UICONTROL 保存]**. 例如，要在每天凌晨00:00运行配置服务，请指定 `0 0 0 1/1 * ? *` 在 **[!UICONTROL 状态更新计划程序表达式]** 字段。
 
-同步狀態的預設間隔 [!DNL Adobe Sign] 現已變更。
+同步状态的默认间隔 [!DNL Adobe Sign] 现已更改。
 
 ## 相关文章 {#related-articles}
 
-* [在最適化表單中使用Adobe Sign](../../forms/using/working-with-adobe-sign.md)
-* [將Adobe Sign與AEM Forms搭配使用（影片）](https://helpx.adobe.com/experience-manager/kt/forms/using/adobe-sign-integration-feature-video.html)
+* [在自适应表单中使用Adobe Sign](../../forms/using/working-with-adobe-sign.md)
+* [将Adobe Sign与AEM Forms结合使用（视频）](https://helpx.adobe.com/experience-manager/kt/forms/using/adobe-sign-integration-feature-video.html)

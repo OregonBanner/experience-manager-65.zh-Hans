@@ -1,6 +1,6 @@
 ---
-title: 安裝Feature Pack 18912以進行大量資產移轉
-description: Feature Pack 18912可讓您透過FTP大量擷取資產，或在Adobe Experience Manager上將資產從Dynamic Media Classic移轉至Dynamic Media。 Adobe支援提供此選用的Feature Pack。
+title: 安装功能包18912以批量迁移资产
+description: 功能包18912允许您通过FTP批量摄取资源，或在Adobe Experience Manager上将资源从Dynamic Media Classic迁移到Dynamic Media。 Adobe支持部门提供了此可选功能包。
 uuid: 45c2f5f8-4368-4d7b-a43e-fe96cfb272fd
 contentOwner: Rick Brough
 topic-tags: dynamic-media
@@ -18,32 +18,32 @@ ht-degree: 2%
 
 ---
 
-# 安裝Feature Pack 18912以進行大量資產移轉{#installing-feature-pack-for-bulk-asset-migration}
+# 安装功能包18912以批量迁移资产{#installing-feature-pack-for-bulk-asset-migration}
 
-Feature Pack 18912的安裝為 *可選*.
+功能包18912的安装是 *可选*.
 
-Feature Pack 18912可讓您透過FTP將資產直接大量擷取到Dynamic Media - Adobe Experience Manager上的Scene7模式。 它也可讓您在Experience Manager上將資產從Dynamic Media Classic移轉至Dynamic Media - Scene7模式。 此Feature Pack可從以下網址取得： [Adobe Professional Services](https://business.adobe.com/customers/consulting-services/main.html).
+功能包18912允许您通过FTP将资产直接批量摄取到Dynamic Media - Adobe Experience Manager上的Scene7模式中。 它还允许您在Experience Manager时将资产从Dynamic Media Classic迁移到Dynamic Media - Scene7模式。 功能包可从以下网址获取： [Adobe Professional Services](https://business.adobe.com/customers/consulting-services/main.html).
 
 >[!IMPORTANT]
 >
->您可以使用Feature Pack在Experience Manager中自行將資產從Dynamic Media Classic大量移轉至Dynamic Media - Scene7模式。 您也可以使用Dynamic Media Classic中的FTP功能來大量移轉資產。 不過，Adobe可以 *not* 由於其中涉及的複雜性，建議您使用其中一種方法。
+>您可以使用此功能包，在Experience Manager中自行将资产从Dynamic Media Classic批量迁移到Dynamic Media - Scene7模式。 您还可以使用Dynamic Media Classic中的FTP功能批量迁移资源。 但是，Adobe会 *非* 鉴于其中涉及到的复杂性，建议您使用这两种方法中的任何一种。
 >
->因此，此移轉Feature Pack *僅限* 透過完成時支援作為移轉專案的一部分 [Adobe Professional Services](https://business.adobe.com/customers/consulting-services/main.html).
+>因此，此迁移功能包是 *仅限* 作为迁移项目的一部分完成时受支持 [Adobe Professional Services](https://business.adobe.com/customers/consulting-services/main.html).
 
-安裝Feature Pack之前，請先建立服務使用者，並將該資訊提供給Adobe支援。
+在安装功能包之前，请创建服务用户并提供该信息以便Adobe支持。
 
 另请参阅[配置 Dynamic Media - Scene7 模式](/help/assets/config-dms7.md).
 
-**若要安裝Feature Pack 18912以進行大量資產移轉：**
+**要安装功能包18912以批量迁移资产，请执行以下操作：**
 
-1. 在您的Experience Manager例項中，導覽至 **[!UICONTROL 工具]** > **[!UICONTROL 安全性]** > **[!UICONTROL 使用者]** 並選取 **[!UICONTROL 建立使用者]**. 此服務使用者必須具備 *讀取/寫入* 許可權： `/content/dam.`
-1. 在 **[!UICONTROL ID]** 和 **[!UICONTROL 密碼]** 欄位，輸入使用者名稱和密碼；例如， **FTP使用者**. 此名稱會以建立資產之使用者的身分顯示在時間軸中。 從FTP上傳資產時，資產會在上傳至FTP伺服器並被推送至Experience Manager時被視為已建立。
-1. 連絡人 [Experience Manager的Adobe客戶支援](https://experienceleague.adobe.com/?support-solution=General#support) 以要求存取功能套件18912以進行下載。 當您聯絡支援時，可能需要下列資訊：
+1. 在您的Experience Manager实例中，导航到 **[!UICONTROL 工具]** > **[!UICONTROL 安全性]** > **[!UICONTROL 用户]** 并选择 **[!UICONTROL 创建用户]**. 此服务用户必须具有 *读/写* 权限 `/content/dam.`
+1. 在 **[!UICONTROL ID]** 和 **[!UICONTROL 密码]** 字段中，输入用户名和密码；例如， **FTP用户**. 此名称将作为创建资源的用户显示在时间轴中。 从FTP上传资源时，资源会被视为在上传到FTP服务器并被推送到Experience Manager时创建。
+1. 联系人 [针对Experience Manager的Adobe客户支持](https://experienceleague.adobe.com/?support-solution=General#support) 以请求访问功能包18912以供下载。 当您联系支持人员时，可能需要以下信息：
 
-   * 您的Author執行個體的伺服器IP位址，包括連線埠號碼（根據預設，連線埠號碼為4502。）
-   * Experience Manager上一步驟中的服務使用者名稱與密碼。
+   * 创作实例的服务器IP地址，包括端口号（默认情况下，端口号为4502。）
+   * Experience Manager上一步中的服务用户用户名和口令。
 
-1. Experience Manager的Adobe客戶支援為您提供FTP憑證和對Feature Pack 18912的存取權。
-1. 當您收到Feature Pack 18912時，請加以安裝。
+1. Experience Manager的Adobe客户支持为您提供FTP凭据以及功能包18912的访问权限。
+1. 当您收到功能包18912时，请安装它。
 
-   另請參閱 [如何使用套件](/help/sites-administering/package-manager.md) 以取得在Experience Manager中使用軟體發佈和套件的詳細資訊。
+   参见 [如何使用包](/help/sites-administering/package-manager.md) 有关在Experience Manager中使用Software Distribution和包的详细信息。

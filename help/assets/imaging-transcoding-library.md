@@ -1,6 +1,6 @@
 ---
-title: 影像轉碼程式庫
-description: 瞭解如何設定和使用Adobe的成像轉碼程式庫，這是一個可執行核心影像處理功能（包括編碼、轉碼、影像重新取樣和影像大小調整）的影像處理解決方案。
+title: 图像转码库
+description: 了解如何配置和使用Adobe的图像转码库，这是一个可执行核心图像处理功能（包括编码、转码、图像重新取样和图像大小调整）的图像处理解决方案。
 contentOwner: AG
 role: Admin
 feature: Renditions,Developer Tools,Asset Processing
@@ -12,37 +12,37 @@ ht-degree: 0%
 
 ---
 
-# 影像轉碼程式庫 {#imaging-transcoding-library}
+# 图像转码库 {#imaging-transcoding-library}
 
-Adobe的Imaging Transcoding Library是專屬的影像處理解決方案，可執行核心影像處理功能，包括：
+Adobe的图像转码库是专用的图像处理解决方案，可执行核心图像处理功能，包括：
 
 * 编码
-* 轉碼（轉換支援的格式）
-* 影像重新取樣，使用PS和Intel IPP演演算法
-* 位元深度和色彩設定檔保留
-* JPEG品質壓縮
-* 調整影像大小
+* 转码（转换支持的格式）
+* 图像重新取样，使用PS和英特尔IPP算法
+* 位深度和色彩配置文件保存
+* JPEG质量压缩
+* 调整图像大小
 
-影像轉碼程式庫提供CMYK支援和完整Alpha支援，但CMYK -Alpha除外。
+图像转码库提供CMYK支持和完整的Alpha支持，但CMYK -Alpha除外。
 
-除了支援廣泛的檔案格式與設定檔外，影像轉碼程式庫在效能、擴充性與品質方面，比其他協力廠商解決方案都具備顯著優勢。 以下是使用「影像轉碼程式庫」的一些主要優點：
+除了支持广泛的文件格式和配置文件外，在性能、可扩展性和质量方面， Imaging Transcoding Library与其他第三方解决方案相比具有显着的优势。 以下是使用图像代码转换库的一些主要优势：
 
-* **可隨檔案大小或解析度的增加而縮放**：縮放主要是透過影像轉碼程式庫的專利功能達成，以便在解碼檔案時重新調整大小。 此功能可確保執行階段記憶體使用率永遠是最佳的，而不是增加檔案大小或解析度百萬畫素的二次函式。 影像轉碼程式庫可處理較大且高解析度（包含較高百萬畫素）的檔案。 第三方工具（例如ImageMagick）在處理這類檔案時無法處理大型檔案和當機。
-* **Photoshop品質壓縮和調整演演算法大小**：向下取樣品質（平滑、銳利和自動雙立方）和壓縮品質方面與業界標準一致。 「影像轉碼程式庫」會進一步評估輸入影像的品質因數，並聰明地使用輸出影像的最佳表格和品質設定。 此功能可產生最佳大小的檔案，而不會影響視覺品質。
-* **高輸送量：** 回應時間較短，而傳輸量則持續高於ImageMagick。 因此，「影像轉碼程式庫」應可減少使用者的等待時間及託管成本。
-* **同時載入時更易於擴展：** 「影像轉碼程式庫」在同時載入的條件下執行時效果最佳。 透過最佳的CPU效能、記憶體使用率以及低回應時間，提供高傳輸量，有助於降低託管成本。
+* **可随文件大小或分辨率的增加而扩展**：缩放主要通过图像转码库的专利功能来实现，该功能可在解码文件时重新调整大小。 此功能可确保运行时内存使用始终处于最佳状态，而不是文件大小或分辨率增大百万像素的二次函数。 图像转码库可以处理更大、分辨率更高（包含更高的MB）的文件。 第三方工具（如ImageMagick）在处理此类文件时无法处理大型文件并崩溃。
+* **Photoshop质量压缩和调整大小算法**：在下采样质量（平滑、锐利和自动双三次）和压缩质量方面与行业标准保持一致。 图像转码库进一步评估输入图像的品质因子，并智能地使用输出图像的最佳表格和品质设置。 此功能可在不影响视觉质量的情况下生成最佳大小的文件。
+* **高吞吐量：** 响应时间更短，吞吐量始终高于ImageMagick。 因此，图像转码库应减少用户的等待时间和托管成本。
+* **更好地扩展并发负载：** 成像转码库在并行负载条件下最佳地执行。 它提供高吞吐量、最佳CPU性能、内存使用率和低响应时间，有助于降低托管成本。
 
-## 支援的平台 {#supported-platforms}
+## 支持的平台 {#supported-platforms}
 
-影像轉碼資料庫僅適用於RHEL 7和CentOS 7發行版本。
+图像转码库仅适用于RHEL 7和CentOS 7发行版。
 
 >[!NOTE]
 >
->不支援Mac作業系統和其他*nix發行版本（例如Debian和Ubuntu）。
+>不支持Mac OS和其他*nix分发（例如Debian和Ubuntu）。
 
 ## 用途 {#usage}
 
-影像轉碼程式庫的命令列引數可包含下列專案：
+图像转码库的命令行参数可以包括：
 
 ```shell
  -destMime PNG/JPEG: Mime type of output rendition
@@ -54,12 +54,12 @@ Adobe的Imaging Transcoding Library是專屬的影像處理解決方案，可執
  -resize
 ```
 
-您可以為以下專案設定下列選項： `-resize` 引數：
+您可以为配置以下选项 `-resize` 参数：
 
-* `X`：作用類似於 [!DNL Experience Manager]. 例如 — resize 319。
-* `WxH`：不維持外觀比例，例如 `-resize 319x319`.
-* `Wx`：修正寬度並計算保持長寬比的高度。 例如 `-resize 319x`。
-* `xH`：修正高度並計算維持外觀比例的寬度。 例如 `-resize x319`。
+* `X`：工作方式类似于 [!DNL Experience Manager]. 例如 — resize 319。
+* `WxH`：不维护宽高比，例如 `-resize 319x319`.
+* `Wx`：固定宽度并计算保持宽高比的高度。 例如 `-resize 319x`。
+* `xH`：固定高度并计算保持宽高比的宽度。 例如 `-resize x319`。
 
 ```shell
  -AllowUpsampling (Resizes smaller images)
@@ -67,21 +67,21 @@ Adobe的Imaging Transcoding Library是專屬的影像處理解決方案，可執
  -output <fileName>
 ```
 
-## 設定影像轉碼程式庫 {#configuring-imaging-transcoding-library}
+## 配置成像转码库 {#configuring-imaging-transcoding-library}
 
-若要設定ITL處理，請建立設定檔並更新工作流程以執行。
+要配置ITL处理，请创建一个配置文件并更新工作流以执行它。
 
-### 為擷取的套件組合建立設定檔 {#create-conf-file}
+### 为提取的捆绑包创建配置文件 {#create-conf-file}
 
-若要配置物件庫，請使用下列步驟建立CONF檔案來指示物件庫。 您需要管理員或根許可權。
+要配置库，请使用以下步骤创建一个CONF文件以指示库。 您需要管理员或root权限。
 
-1. 下載 [Software Distribution的Imaging Transcoding Library套件](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/aem630/product/assets/aem-assets-imaging-transcoding-library-pkg) 並使用封裝管理員進行安裝。 此套件相容於 [!DNL Experience Manager] 6.5.
+1. 下载 [来自Software Distribution的成像代码转换库包](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/aem630/product/assets/aem-assets-imaging-transcoding-library-pkg) 并使用包管理器进行安装。 包与兼容 [!DNL Experience Manager] 6.5.
 
-1. 瞭解的套件組合ID `com.day.cq.dam.cq-dam-switchengine`，登入Web主控台並按一下 **[!UICONTROL osgi]** > **[!UICONTROL 套裝]**. 或者，若要開啟套件組合主控台，請存取 `https://[aem_server:[port]/system/console/bundles/` URL。 尋找 `com.day.cq.dam.cq-dam-switchengine` 套件組合及其ID。
+1. 要了解的捆绑包ID `com.day.cq.dam.cq-dam-switchengine`，登录到Web控制台并单击 **[!UICONTROL osgi]** > **[!UICONTROL 包]**. 或者，要打开捆绑包控制台，请访问 `https://[aem_server:[port]/system/console/bundles/` URL。 查找 `com.day.cq.dam.cq-dam-switchengine` 包及其ID。
 
-1. 使用命令檢查資料夾，確保已擷取所有必要的程式庫 `ls -la /aem65/author/crx-quickstart/launchpad/felix/bundle<id>/data/binaries/`，其中資料夾名稱是使用組合ID建構。 例如，指令為 `ls -la /aem65/author/crx-quickstart/launchpad/felix/bundle588/data/binaries/` 如果套件id為 `588`.
+1. 通过使用命令检查文件夹，确保已提取所有必需的库 `ls -la /aem65/author/crx-quickstart/launchpad/felix/bundle<id>/data/binaries/`，其中使用包ID构建文件夹名称。 例如，命令为 `ls -la /aem65/author/crx-quickstart/launchpad/felix/bundle588/data/binaries/` 如果捆绑id为 `588`.
 
-1. 建立 `SWitchEngineLibs.conf` 檔案以連結至程式庫。
+1. 创建 `SWitchEngineLibs.conf` 文件以链接到库。
 
    ```shell
    cd `/etc/ld.so.conf.d`
@@ -89,58 +89,58 @@ Adobe的Imaging Transcoding Library是專屬的影像處理解決方案，可執
    vi SWitchEngineLibs.conf
    ```
 
-1. 新增 `/aem65/author/crx-quickstart/launchpad/felix/bundle<id>/data/binaries/` conf檔案的路徑，使用 `cat SWitchEngineLibs.conf` 命令。
+1. 添加 `/aem65/author/crx-quickstart/launchpad/felix/bundle<id>/data/binaries/` conf文件的路径，使用 `cat SWitchEngineLibs.conf` 命令。
 
-1. 執行 `ldconfig` 命令來建立必要的連結和快取。
+1. 执行 `ldconfig` 命令创建必要的链接和缓存。
 
-1. 在用於啟動的帳戶中 [!DNL Experience Manager]，編輯 `.bash_profile` 檔案。 新增 `LD_LIBRARY_PATH` 新增下列內容。
+1. 在用于启动的帐户中 [!DNL Experience Manager]，编辑 `.bash_profile` 文件。 添加 `LD_LIBRARY_PATH` 添加以下内容。
 
    ```shell
    LD_LIBRARY_PATH=.
    export LD_LIBRARY_PATH
    ```
 
-1. 若要確保路徑的值設定為 `.`，使用 `echo $LD_LIBRARY_PATH` 命令。 輸出應為 `.`. 如果值未設定為 `.`，重新啟動工作階段。
+1. 要确保将路径的值设置为 `.`，使用 `echo $LD_LIBRARY_PATH` 命令。 输出应为 `.`. 如果该值未设置为 `.`，请重新启动会话。
 
-### 設定 [!UICONTROL DAM更新資產] 工作流程 {#configure-dam-asset-update-workflow}
+### 配置 [!UICONTROL DAM更新资产] 工作流 {#configure-dam-asset-update-workflow}
 
-更新 [!UICONTROL DAM更新資產] 使用資料庫處理影像的工作流程。
+更新 [!UICONTROL DAM更新资产] 此工作流用于使用库处理图像。
 
-1. 在 [!DNL Experience Manager] 使用者介面，選取 **[!UICONTROL 工具]** > **[!UICONTROL 工作流程]** > **[!UICONTROL 模型]**.
+1. In [!DNL Experience Manager] 用户界面，选择 **[!UICONTROL 工具]** > **[!UICONTROL 工作流]** > **[!UICONTROL 模型]**.
 
-1. 從 **[!UICONTROL 工作流程模型]** 頁面，開啟 **[!UICONTROL DAM更新資產]** 編輯模式中的工作流程模型。
+1. 从 **[!UICONTROL 工作流模型]** 页面，打开 **[!UICONTROL DAM更新资产]** 编辑模式下的工作流模型。
 
-1. 開啟 **[!UICONTROL 程式縮圖]** 工作流程程式步驟。 在 **[!UICONTROL 縮圖]** 標籤，新增您要略過預設縮圖產生程式的MIME型別 **[!UICONTROL 略過Mime型別]** 清單。
-例如，如果要使用「影像轉碼資料庫」建立TIFF影像的縮圖，請指定 `image/tiff` 在 **[!UICONTROL 略過Mime型別]** 欄位。
+1. 打开 **[!UICONTROL 进程缩略图]** 工作流流程步骤。 在 **[!UICONTROL 缩略图]** 选项卡，添加要跳过默认缩略图生成过程的MIME类型 **[!UICONTROL 跳过Mime类型]** 列表。
+例如，如果要使用“图像转码库”为TIFF图像创建缩略图，请指定 `image/tiff` 在 **[!UICONTROL 跳过Mime类型]** 字段。
 
-1. 在 **[!UICONTROL 啟用Web的影像]** 索引標籤中，新增您要略過預設Web轉譯產生程式的MIME型別 **[!UICONTROL 略過清單]**. 例如，如果您略過MIME型別 `image/tiff` 在上述步驟中，新增 `image/tiff` 跳至跳過清單。
+1. 在 **[!UICONTROL 启用Web的图像]** 选项卡，添加要跳过默认Web演绎版生成过程的MIME类型 **[!UICONTROL 跳过列表]**. 例如，如果跳过了MIME类型 `image/tiff` 在上一步中，添加 `image/tiff` 跳至跳过列表。
 
-1. 開啟 **[!UICONTROL EPS縮圖（由ImageMagick提供技術支援）]** 步驟，導覽至 **[!UICONTROL 引數]** 標籤。 在 **[!UICONTROL Mime型別]** 清單中，新增您想要「影像轉碼」程式庫處理的MIME型別。 例如，如果您略過MIME型別 `image/tiff` 在上述步驟中，新增 `image/jpeg` 至 **[!UICONTROL Mime型別]** 清單。
+1. 打开 **[!UICONTROL EPS缩略图（由ImageMagick提供支持）]** 步骤，导航到 **[!UICONTROL 参数]** 选项卡。 在 **[!UICONTROL Mime类型]** 列表中，添加您希望映像转码库处理的MIME类型。 例如，如果跳过了MIME类型 `image/tiff` 在上一步中，添加 `image/jpeg` 到 **[!UICONTROL Mime类型]** 列表。
 
-1. 移除預設命令（如果存在）。
+1. 删除缺省命令（如果存在）。
 
-1. 切換側面板，並從步驟清單中新增 **[!UICONTROL SWitchEngine處理常式]**.
+1. 切换侧面板并从步骤列表中添加 **[!UICONTROL SWitchEngine处理程序]**.
 
-1. 將命令新增至 [!UICONTROL SwitchEngine處理常式] 根據您的自訂需求。 調整您指定的指令引數，以符合您的需求。 例如，如果要保留JPEG影像的色彩設定檔，請將下列指令新增至 **[!UICONTROL 命令]** 清單：
+1. 将命令添加到 [!UICONTROL SwitchEngine处理程序] 根据您的自定义要求。 调整您指定的命令参数以满足要求。 例如，如果要保留JPEG图像的颜色配置文件，请将以下命令添加到 **[!UICONTROL 命令]** 列表：
 
    * `SWitchEngine -input ${file} -destMime PNG -resize 48 -output ${directory}cq5dam.thumbnail.48.48.png`
    * `SWitchEngine -input ${file} -destMime PNG -resize 140x100 -output ${directory}cq5dam.thumbnail.140.100.png`
    * `SWitchEngine -input ${file} -destMime PNG -resize 319 -output ${directory}cq5dam.thumbnail.319.319.png`
    * `SWitchEngine -input ${file} -destMime JPEG -resize 1280 -preserveCMYK -output ${directory}cq5dam.web.1280.1280.jpeg`
 
-   ![chlimage](assets/chlimage_1-199.png)
+   ![水印](assets/chlimage_1-199.png)
 
-1. （選用）使用單一命令從中繼轉譯產生縮圖。 中繼轉譯會作為產生靜態和Web轉譯的來源。 此方法比先前的方法更快。 不過，使用此方法時無法將自訂引數套用至縮圖。
+1. （可选）使用单个命令从中间演绎版生成缩略图。 中间演绎版用作生成静态和Web演绎版的源。 此方法比以前的方法速度快。 但是，使用此方法时无法将自定义参数应用到缩略图。
 
-   ![chlimage](assets/chlimage_1-200.png)
+   ![水印](assets/chlimage_1-200.png)
 
-1. 若要產生Web轉譯，請在 **[!UICONTROL 可支援Web的影像]** 標籤。
+1. 要生成Web演绎版，请在 **[!UICONTROL 启用Web的图像]** 选项卡。
 
-1. 同步已更新的專案 [!UICONTROL DAM更新資產] 工作流程模型。 儲存工作流程。
+1. 同步已更新的 [!UICONTROL DAM更新资产] 工作流模型。 保存工作流。
 
-驗證設定、上傳TIFF影像並監視error.log檔案。 您會注意到 `INFO` 訊息中提及 `SwitchEngineHandlingProcess execute: executing command line`. 記錄檔會提及產生的轉譯。 工作流程完成後，您便可以在以下位置檢視新的轉譯： [!DNL Experience Manager].
+验证配置、上传TIFF映像并监视error.log文件。 您会注意到 `INFO` 提及以下项的消息： `SwitchEngineHandlingProcess execute: executing command line`. 日志中提到了生成的演绎版。 工作流完成后，您可以在中查看新的演绎版 [!DNL Experience Manager].
 
 >[!MORELIKETHIS]
 >
->* [支援的MIME型別文章](assets-formats.md#supported-image-transcoding-library)
+>* [支持的MIME类型文章](assets-formats.md#supported-image-transcoding-library)
 

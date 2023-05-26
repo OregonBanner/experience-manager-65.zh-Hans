@@ -1,7 +1,7 @@
 ---
 title: 翻译最佳实践
 seo-title: Translation Best Practices
-description: 尋找由Adobe工程和諮詢團隊編譯的最佳實務，協助您啟動並執行翻譯專案。
+description: 查找由Adobe工程和咨询团队编译的最佳实践，以帮助您启动和运行翻译项目。
 seo-description: Find best practices compiled by Adobe engineering and consulting teams to help you get up and running with translation projects.
 uuid: 3bac1d73-9696-4c9b-8bdd-6f00fac40cf7
 contentOwner: msm-service
@@ -37,7 +37,7 @@ ht-degree: 96%
 
 * 在设计站点结构时，首先要检查您的内容，然后确定内容的创作位置以及用于创作内容的语言。此位置应是站点的顶层。
 * 最佳实践是&#x200B;**基于语言的结构**，在顶层创作站点和国家/地区站点之间不超过 3 个层级。
-* 使用以下語言/國家/地區網站命名慣例 **W3C標準**.
+* 使用以下语言/国家/地区站点命名约定 **W3C标准**.
 * 确定按国家和地区分发内容的方式。考虑哪些国家/地区共享语言。建议创建语言母版，它是一个未激活的页面层，可在其中查看和修改翻译的内容，然后将该内容推送或拉取到共享该语言的国家/地区站点。
 * 可通过两种方法创建语言母版：使用语言副本和使用 MSM/Live Copy。
 

@@ -1,6 +1,6 @@
 ---
-title: 要監控的最佳實務 [!DNL Assets] 部署
-description: 監控環境與效能的最佳實務 [!DNL Adobe Experience Manager] 部署後部署。
+title: 要监控的最佳实践 [!DNL Assets] 部署
+description: 监控环境和性能的最佳实践 [!DNL Adobe Experience Manager] 部署后部署。
 contentOwner: AG
 role: Admin, Architect
 feature: Asset Management
@@ -12,192 +12,192 @@ ht-degree: 1%
 
 ---
 
-# 要監控的最佳實務 [!DNL Adobe Experience Manager Assets] 部署 {#assets-monitoring-best-practices}
+# 要监控的最佳实践 [!DNL Adobe Experience Manager Assets] 部署 {#assets-monitoring-best-practices}
 
-從 [!DNL Experience Manager Assets] 從觀點來看，監控應包括觀察和報告以下流程和技術：
+从 [!DNL Experience Manager Assets] 从这一点来看，监测应包括观察和报告以下进程和技术：
 
-* 系統CPU
-* 系統記憶體使用量
-* 系統磁碟IO和IO等候時間
-* 系統網路IO
-* 用於棧積利用和非同步程式（例如工作流程）的JMX MBean
-* OSGi主控台健康情況檢查
+* 系统CPU
+* 系统内存使用
+* 系统磁盘IO和IO等待时间
+* 系统网络IO
+* 栈利用和异步进程（如工作流）的JMX MBean
+* OSGi控制台运行状况检查
 
-通常， [!DNL Experience Manager Assets] 監控方式有兩種：即時監控和長期監控。
+通常， [!DNL Experience Manager Assets] 监测方式有两种：实时监测和长期监测。
 
-## 即時監視 {#live-monitoring}
+## 实时监控 {#live-monitoring}
 
-您應在開發的效能測試階段或高負載情況下執行即時監視，以瞭解環境的效能特性。 通常應使用一套工具來執行即時監視。 以下是一些建議：
+您应在开发的性能测试阶段或高负载情况下执行实时监控，以了解环境的性能特征。 通常，应使用一套工具执行实时监控。 以下是一些建议：
 
-* [Visual VM](https://visualvm.github.io/)：Visual VM可讓您檢視詳細的Java VM資訊，包括CPU使用量、Java記憶體使用量。 此外，它可讓您取樣並評估在部署上執行的程式碼。
-* [上](https://man7.org/linux/man-pages/man1/top.1.html)：Top是開啟控制面板的Linux命令，其中顯示使用狀況統計資料，包括CPU、記憶體和IO使用狀況。 它提供執行個體上所發生事件的整體概觀。
-* [Htop](https://hisham.hm/htop/)： Htop是互動式程式檢視器。 除了Top所提供的功能外，還提供詳細的CPU和記憶體使用量。 Htop可安裝在大多數Linux系統上，使用 `yum install htop` 或 `apt-get install htop`.
+* [Visual VM](https://visualvm.github.io/)：可视虚拟机允许您查看详细的Java VM信息，包括CPU使用率、Java内存使用率。 此外，它还允许您对部署上运行的代码进行示例和评估。
+* [顶部](https://man7.org/linux/man-pages/man1/top.1.html)：Top是一个Linux命令，它打开一个仪表板，其中显示使用情况统计数据，包括CPU、内存和IO使用情况。 它提供了实例上所发生情况的高级概述。
+* [Htop](https://hisham.hm/htop/)：Htop是一种交互式流程查看器。 除了Top可以提供的内容外，它还提供了详细的CPU和内存使用率。 Htop可以使用安装在大多数Linux系统上 `yum install htop` 或 `apt-get install htop`.
 
-* Iotop： Iotop是磁碟IO使用情況的詳細儀表板。 它會顯示長條和公尺，描繪使用磁碟IO的處理序及其使用量。 Iotop可使用安裝在大多數Linux系統上 `yum install iotop` 或 `apt-get install iotop`.
+* Iotop： Iotop是磁盘IO使用情况的详细仪表板。 它显示一些条形和计量器，这些条形和计量器描述了使用磁盘IO的进程及其使用的数量。 Iotop可以使用安装在大多数Linux系统上 `yum install iotop` 或 `apt-get install iotop`.
 
-* [Iftop](https://www.ex-parrot.com/pdw/iftop/)： Iftop顯示有關乙太網路/網路使用情況的詳細資訊。 Iftop會針對使用乙太網路的實體，顯示每個通訊通道的統計資料，以及實體使用的頻寬量。 Iftop可使用安裝在大部分的Linux系統上 `yum install iftop` 或 `apt-get install iftop`.
+* [Iftop](https://www.ex-parrot.com/pdw/iftop/)： Iftop显示有关以太网/网络使用的详细信息。 Iftop显示使用以太网的实体的每个通信信道统计数据及其使用的带宽量。 Iftop可以使用安装在大多数Linux系统上 `yum install iftop` 或 `apt-get install iftop`.
 
-* Java Flight Recorder (JFR)：Oracle的商業工具，您可在非生產環境中自由使用。 如需詳細資訊，請參閱 [如何使用Java Flight Recorder來診斷CQ執行階段問題](https://cq-ops.tumblr.com/post/73865704329/how-to-use-java-flight-recorder-to-diagnose-cq).
-* [!DNL Experience Manager] `error.log` 檔案：您可以調查 [!DNL Experience Manager] `error.log` 檔案以取得系統中記錄的錯誤詳細資料。 使用命令 `tail -F quickstart/logs/error.log` 以識別要調查的錯誤。
-* [工作流程主控台](/help/sites-administering/workflows.md)：運用工作流程主控台來監視落後或卡住的工作流程。
+* Java Flight Recorder (JFR)：Oracle中的一种商用工具，您可以在非生产环境中自由使用。 有关更多详细信息，请参阅 [如何使用Java Flight Recorder诊断CQ运行时问题](https://cq-ops.tumblr.com/post/73865704329/how-to-use-java-flight-recorder-to-diagnose-cq).
+* [!DNL Experience Manager] `error.log` 文件：您可以调查 [!DNL Experience Manager] `error.log` 文件以了解系统中记录的错误的详细信息。 使用命令 `tail -F quickstart/logs/error.log` 以找出要调查的错误。
+* [工作流控制台](/help/sites-administering/workflows.md)：利用工作流控制台监控滞后或卡住的工作流。
 
-通常，您會搭配使用這些工具，全面瞭解您的電腦的效能 [!DNL Experience Manager] 部署。
+通常，您会使用这些工具来全面了解您的应用程序的 [!DNL Experience Manager] 部署。
 
 >[!NOTE]
 >
->這些工具是標準工具，Adobe不直接支援。 它們不需要額外的授權。
+>这些工具是标准工具，不受Adobe直接支持。 它们不需要额外的许可证。
 
 ![chlimage_1-33](assets/chlimage_1-143.png)
 
-*圖：使用Visual VM工具的即時監視。*
+*图：使用Visual VM工具进行实时监控。*
 
 ![chlimage_1-32](assets/chlimage_1-142.png)
 
-## 長期監視 {#long-term-monitoring}
+## 长期监测 {#long-term-monitoring}
 
-長期監控 [!DNL Experience Manager] 部署涉及對即時監控的相同部分進行較長時間監控。 其中也包括定義特定於您環境的警報。
+长期监测 [!DNL Experience Manager] 部署涉及对实时监控的相同部分进行更长时间的监控。 它还包括定义特定于您环境的警报。
 
-### 記錄彙總與報告 {#log-aggregation-and-reporting}
+### 日志聚合和报告 {#log-aggregation-and-reporting}
 
-有數個工具可用於彙總記錄，例如Splunk(TM)和Elastic Search、Logstash和Kabana (ELK)。 若要評估您的應用程式的 [!DNL Experience Manager] 部署時，請務必瞭解系統特定的記錄事件，並根據這些事件建立警報。 瞭解您的開發和營運實務有助於您進一步瞭解如何調整記錄彙總程式，以產生嚴重警示。
+有多种工具可用于聚合日志，例如Splunk(TM)和Elastic Search、Logstash和Kabana (ELK)。 要评估贵机构的正常运行时间 [!DNL Experience Manager] 部署时，了解特定于系统的日志事件并根据这些事件创建警报非常重要。 对开发和操作实践的良好了解可以帮助您更好地了解如何调整日志聚合过程以生成关键警报。
 
-### 環境監視 {#environment-monitoring}
+### 环境监测 {#environment-monitoring}
 
-環境監控包括監控以下專案：
+环境监控包括监控以下内容：
 
-* 網路輸送量
-* 磁碟IO
+* 网络吞吐量
+* 磁盘IO
 * 内存
-* CPU使用率
-* JMX MBeans
-* 外部網站
+* CPU利用率
+* JMX MBean
+* 外部网站
 
-您需要外部工具(例如NewRelic(TM)和AppDynamics(TM))來監視每個專案。 使用這些工具，您可以定義系統特定的警示，例如高系統使用率、工作流程備份、健康情況檢查失敗，或未驗證網站存取權。 Adobe不建議使用任何特定工具來取代其他工具。 找到適合您的工具，並運用它來監控所討論的專案。
+您需要外部工具(如NewRelic(TM)和AppDynamics(TM))来监视每个项目。 使用这些工具，您可以定义特定于您的系统的警报，例如高系统利用率、工作流备份、运行状况检查失败或对您网站的未经身份验证的访问。 Adobe并不推荐使用任何优于其他工具的工具。 找到适合您的工具，并利用它来监控讨论的项目。
 
-#### 內部應用程式監視 {#internal-application-monitoring}
+#### 内部应用程序监控 {#internal-application-monitoring}
 
-內部應用程式監控包括監控組成以下專案的應用程式元件： [!DNL Experience Manager] 棧疊，包括JVM、內容存放庫，以及透過平台上建置的自訂應用程式程式碼進行監控。 一般而言，這項工作會透過JMX Mbeans執行，而許多常用的監控解決方案(例如SolarWinds (TM)、HP OpenView (TM)、Hyperic (TM)、Zabbix (TM)和其他解決方案，都可直接監控這項工作。 對於不支援直接連線至JMX的系統，您可以編寫Shell指令碼來擷取JMX資料，並以這些系統原生可理解的格式將其公開給這些系統。
+内部应用程序监控包括监控组成应用程序组件的 [!DNL Experience Manager] 栈栈，包括JVM、内容存储库以及通过基于平台构建的自定义应用程序代码进行监控。 通常，它通过JMX Mbeans执行，可由许多流行的监控解决方案直接监控，如SolarWinds (TM)、HP OpenView (TM)、Hyperic (TM)、Zabbix (TM)等。 对于不支持直接连接到JMX的系统，您可以编写shell脚本来提取JMX数据，并以这些系统本地理解的格式将其公开给这些系统。
 
-預設不會啟用JMX Mbean的遠端存取。 如需透過JMX進行監控的詳細資訊，請參閱 [使用JMX技術進行監控和管理](https://docs.oracle.com/javase/7/docs/technotes/guides/management/agent.html).
+默认情况下不启用对JMX Mbean的远程访问。 有关通过JMX进行监控的详细信息，请参见 [使用JMX技术进行监控和管理](https://docs.oracle.com/javase/7/docs/technotes/guides/management/agent.html).
 
-在許多情況下，需要基準線來有效監控統計資料。 若要建立基準線，請在正常工作條件下觀察系統預先決定的期間，然後識別正常數度。
+在许多情况下，需要基线来有效地监视统计信息。 要创建基线，请在正常工作条件下观察系统预定时间段，然后识别正常量度。
 
-**JVM監視**
+**JVM监控**
 
-和任何以Java為基礎的應用程式棧疊一樣， [!DNL Experience Manager] 取決於透過基礎Java虛擬機器器向其提供的資源。 您可以透過JVM公開的Platform MXBean監控許多這些資源的狀態。 如需有關MXBean的詳細資訊，請參閱 [使用Platform MBean Server和Platform MXBean](https://docs.oracle.com/javase/7/docs/technotes/guides/management/mxbeans.html).
+与任何基于Java的应用程序栈栈一样， [!DNL Experience Manager] 取决于通过底层Java虚拟机向其提供的资源。 您可以通过JVM公开的Platform MXBean监控许多这些资源的状态。 有关MXBean的详细信息，请参见 [使用Platform MBean服务器和Platform MXBean](https://docs.oracle.com/javase/7/docs/technotes/guides/management/mxbeans.html).
 
-以下是您可以針對JVM監控的一些基準引數：
+以下是您可以为JVM监视的一些基线参数：
 
 内存
 
 * `MBean: lava.lang:type=Memory`
 * URL: `/system/console/jmx/java.lang:type=Memory`
-* 執行個體：所有伺服器
-* 警報臨界值：當棧積或非棧積記憶體使用率超過對應最大記憶體的75%時。
-* 警報定義：可能是系統記憶體不足，或是程式碼中有記憶體遺漏。 分析執行緒傾印以得出定義。
+* 实例：所有服务器
+* 警报阈值：当栈或非栈内存利用率超过相应最大内存的75%时。
+* 警报定义：可能是系统内存不足，或者代码中存在内存泄漏。 分析线程转储以得出定义。
 
 >[!NOTE]
 >
->此Bean提供的資訊以位元組表示。
+>此Bean提供的信息以字节表示。
 
-執行緒
+线程
 
 * MBean： `java.lang:type=Threading`
 * URL: `/system/console/jmx/java.lang:type=Threading`
-* 執行個體：所有伺服器
-* 警報臨界值：執行緒數目超過基準的150%時。
-* 警報定義：可能是因為有作用中的失控程式，或是低效的作業會消耗大量資源。 分析執行緒傾印以得出定義。
+* 实例：所有服务器
+* 警报阈值：当线程数大于基线的150%时。
+* 警报定义：要么是一个活动的失控过程，要么是低效的操作占用了大量资源。 分析线程转储以得出定义。
 
-**監視[!DNL Experience Manager]**
+**监测[!DNL Experience Manager]**
 
-[!DNL Experience Manager] 也會透過JMX公開一組統計資料和作業。 這些功能有助於評估系統健康狀況，並在潛在問題影響使用者之前識別它們。 如需詳細資訊，請參閱 [檔案](/help/sites-administering/jmx-console.md) 於 [!DNL Experience Manager] JMX MBean。
+[!DNL Experience Manager] 还会通过JMX公开一组统计信息和操作。 这些功能有助于评估系统运行状况并在潜在问题影响用户之前发现它们。 有关更多信息，请参阅 [文档](/help/sites-administering/jmx-console.md) 日期 [!DNL Experience Manager] JMX MBean。
 
-以下是您可以監控的一些基準線引數 [!DNL Experience Manager]：
+以下是一些可以监视的基线参数 [!DNL Experience Manager]：
 
-復寫代理
+复制代理
 
 * MBean： `com.adobe.granite.replication:type=agent,id="<AGENT_NAME>"`
 * URL: `/system/console/jmx/com.adobe.granite.replication:type=agent,id="<AGENT_NAME>"`
-* 執行個體：一個作者和所有發佈執行個體（適用於排清代理程式）
-* 警報臨界值：當 `QueueBlocked` 是 `true` 或的值 `QueueNumEntries` 大於基準的150%。
+* 实例：一个创作实例和所有发布实例（用于刷新代理）
+* 警报阈值：当 `QueueBlocked` 是 `true` 或的值 `QueueNumEntries` 大于基线的150%。
 
-* 警報定義：系統中存在封鎖的佇列，表示複製目標已關閉或無法連線。 網路或基礎架構問題通常會造成過多專案排入佇列，進而對系統效能造成負面影響。
+* 警报定义：系统中存在阻塞的队列，指示复制目标已关闭或无法访问。 通常，网络或基础架构问题会导致过多条目排队，从而对系统性能产生负面影响。
 
 >[!NOTE]
 >
->對於MBean和URL引數，請取代 `<AGENT_NAME>` 包含您要監督之復寫代理程式的名稱。
+>对于MBean和URL参数，请替换 `<AGENT_NAME>` ，其中包含要监视的复制代理的名称。
 
-工作階段計數器
+会话计数器
 
 * MBean： `org.apache.jackrabbit.oak:id=7,name="OakRepository Statistics",type="RepositoryStats"`
 * URL： */system/console/jmx/org.apache.jackrabbit.oak：id=7，name=&quot;OakRepository Statistics&quot;，type*=&quot;RepositoryStats&quot;
-* 執行個體：所有伺服器
-* 警報臨界值：當開啟的工作階段超過基準線50%以上時。
-* 警報定義：工作階段可透過程式碼片段開啟，但永不關閉。 隨著時間推移，這種情況可能會慢慢發生，最終導致系統中的記憶體流失。 雖然系統上的工作階段數量會波動，但不應持續增加。
+* 实例：所有服务器
+* 警报阈值：当打开的会话超过基线50%以上时。
+* 警报定义：会话可以通过一段代码打开，但永远不会关闭。 随着时间的推移，这种情况可能会慢慢发生，并最终导致系统中的内存泄漏。 虽然会话的数量应在系统中波动，但不应持续增加。
 
 运行状况检查
 
-可在下列位置使用的健康情況檢查： [操作控制面板](/help/sites-administering/operations-dashboard.md#health-reports) 有對應的JMX MBean用於監視。 不過，您可以撰寫自訂健康情況檢查來公開其他系統統計資料。
+中可用的运行状况检查 [操作仪表板](/help/sites-administering/operations-dashboard.md#health-reports) 具有相应的JMX MBean用于监视。 但是，您可以编写自定义运行状况检查来公开其他系统统计信息。
 
-以下是一些現成的健康情況檢查，這些檢查對監控很有幫助：
+以下是一些现成的运行状况检查，这些检查对监控很有帮助：
 
 * 系统检查
    * MBean： `org.apache.sling.healthcheck:name=systemchecks,type=HealthCheck`
    * URL: `/system/console/jmx/org.apache.sling.healthcheck:name=systemchecks,type=HealthCheck`
-   * 例項：單一作者，所有發佈伺服器
-   * 警報臨界值：當狀態不是「正常」時
-   * 警報定義：其中一個量度的狀態為WARN或CRITICAL。 檢查記錄屬性以取得問題原因的詳細資訊。
+   * 实例：一个作者，所有发布服务器
+   * 警报阈值：当状态不是“正常”时
+   * 警报定义：其中一个量度的状态为WARN或CRITICAL。 检查日志属性以了解有关问题原因的更多信息。
 
-* 復寫佇列
+* 复制队列
 
    * MBean： `org.apache.sling.healthcheck:name=replicationQueue,type=HealthCheck`
    * URL: `/system/console/jmx/org.apache.sling.healthcheck:name=replicationQueue,type=HealthCheck`
-   * 例項：單一作者，所有發佈伺服器
-   * 警報臨界值：當狀態不是「正常」時
-   * 警報定義：其中一個量度的狀態為WARN或CRITICAL。 檢查記錄屬性，以取得造成問題的佇列詳細資訊。
+   * 实例：一个作者，所有发布服务器
+   * 警报阈值：当状态不是“正常”时
+   * 警报定义：其中一个量度的状态为WARN或CRITICAL。 检查日志属性，以了解有关导致问题的队列的更多信息。
 
-* 回應效能
+* 响应性能
 
    * MBean： `org.apache.sling.healthcheck:name=requestsStatus,type=HealthCheck`
    * URL: `/system/console/jmx/org.apache.sling.healthcheck:name=requestsStatus,type=HealthCheck`
-   * 執行個體：所有伺服器
-   * 警示持續時間：狀態不是「正常」時
-   * 警報定義：其中一個測量結果的狀態為WARN或CRITICAL。 檢查記錄屬性，以取得造成問題的佇列詳細資訊。
+   * 实例：所有服务器
+   * 警报持续时间：当状态不是“正常”时
+   * 警报定义：其中一个量度的状态为WARN或CRITICAL。 检查日志属性，以了解有关导致问题的队列的更多信息。
 
-* 查詢效能
+* 查询性能
 
    * MBean： `org.apache.sling.healthcheck:name=queriesStatus,type=HealthCheck`
    * URL: `/system/console/jmx/org.apache.sling.healthcheck:name= queriesStatus,type=HealthCheck`
-   * 例項：單一作者，所有發佈伺服器
-   * 警報臨界值：當狀態不是「正常」時
-   * 警報定義：一或多個查詢在系統中執行緩慢。 檢查記錄屬性，以取得導致問題的查詢的詳細資訊。
+   * 实例：一个作者，所有发布服务器
+   * 警报阈值：当状态不是“正常”时
+   * 警报定义：一个或多个查询在系统中运行缓慢。 有关导致问题的查询的更多信息，请查看log属性。
 
 * 活动包
 
    * MBean： `org.apache.sling.healthcheck:name=inactiveBundles,type=HealthCheck`
    * URL: `/system/console/jmx/org.apache.sling.healthcheck:name=inactiveBundles,type=HealthCheck`
-   * 執行個體：所有伺服器
-   * 警報臨界值：當狀態不是「正常」時
-   * 警報定義：系統上存在非使用中或未解析的OSGi組合。 檢查記錄屬性，以取得導致問題的套件組合的相關資訊。
+   * 实例：所有服务器
+   * 警报阈值：当状态不是“正常”时
+   * 警报定义：系统中存在不活动或未解析的OSGi包。 有关导致问题的捆绑包的更多信息，请检查log属性。
 
 * 日志错误
 
    * MBean： `org.apache.sling.healthcheck:name=logErrorHealthCheck,type=HealthCheck`
    * URL: `/system/console/jmx/org.apache.sling.healthcheck:name=logErrorHealthCheck,type=HealthCheck`
-   * 執行個體：所有伺服器
-   * 警報臨界值：當狀態不是「正常」時
-   * 警報定義：記錄檔中有錯誤。 檢查記錄屬性以取得問題原因的詳細資訊。
+   * 实例：所有服务器
+   * 警报阈值：当状态不是“正常”时
+   * 警报定义：日志文件中有错误。 检查日志属性以了解有关问题原因的更多信息。
 
-## 常見問題與解決方法  {#common-issues-and-resolutions}
+## 常见问题和解决方法  {#common-issues-and-resolutions}
 
-在監控過程中，如果您遇到問題，您可以執行以下一些疑難排解任務，以解決的常見問題 [!DNL Experience Manager] 部署：
+在监控过程中，如果您遇到问题，可以执行以下一些故障排除任务来解决的常见问题 [!DNL Experience Manager] 部署：
 
-* 如果使用TarMK，請經常執行Tar壓縮。 如需詳細資訊，請參閱 [維護存放庫](/help/sites-deploying/storage-elements-in-aem-6.md#maintaining-the-repository).
-* Check `OutOfMemoryError` 記錄。 如需詳細資訊，請參閱 [分析記憶體問題](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17482.html).
+* 如果使用TarMK，请经常运行Tar压缩。 有关更多详细信息，请参阅 [维护存储库](/help/sites-deploying/storage-elements-in-aem-6.md#maintaining-the-repository).
+* Check `OutOfMemoryError` 日志。 有关更多信息，请参阅 [分析内存问题](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17482.html).
 
-* 檢查記錄檔中是否有未編制索引的查詢、樹狀結構周遊或索引周遊的任何參考。 這些表示未索引的查詢或索引不足的查詢。 如需最佳化查詢和索引效能的最佳實務，請參閱 [查詢和建立索引的最佳實務](/help/sites-deploying/best-practices-for-queries-and-indexing.md).
-* 使用工作流程主控台，確認您的工作流程如預期般執行。 如有可能，請將多個工作流程壓縮為單一工作流程。
-* 重新造訪即時監控，並尋找任何特定資源的其他瓶頸或高使用者。
-* 調查從使用者端網路匯出的點以及匯入點到 [!DNL Experience Manager] 部署網路，包括Dispatcher。 這些通常是瓶頸區域。 如需詳細資訊，請參閱 [資產網路考量事項](/help/assets/assets-network-considerations.md).
-* 放大您的 [!DNL Experience Manager] 伺服器。 您可能沒有足夠的容量 [!DNL Experience Manager] 部署。 Adobe客戶支援可協助您識別伺服器是否大小不足。
-* 檢查 `access.log` 和 `error.log` 發生錯誤時的專案檔案。 尋找可能表示自訂程式碼異常的模式。 將它們新增至您監視的事件清單。
+* 检查日志中是否包含对未索引查询、树遍历或索引遍历的任何引用。 这些指示未索引的查询或索引不足的查询。 有关优化查询和索引性能的最佳实践，请参阅 [有关查询和索引的最佳实践](/help/sites-deploying/best-practices-for-queries-and-indexing.md).
+* 使用工作流控制台验证您的工作流是否按预期执行。 如果可能，请将多个工作流合并到单个工作流中。
+* 重新访问实时监控，并查找任何特定资源的其他瓶颈或高占用率。
+* 调查从客户端网络的入口点以及入口点到 [!DNL Experience Manager] 部署网络，包括Dispatcher。 这些通常是瓶颈领域。 有关更多信息，请参阅 [Assets网络注意事项](/help/assets/assets-network-considerations.md).
+* 放大您的 [!DNL Experience Manager] 服务器。 您的帐户可能不够大， [!DNL Experience Manager] 部署。 Adobe客户支持可以帮助您确定服务器是否过小。
+* 检查 `access.log` 和 `error.log` 出错时输入的文件。 查找可能指示自定义代码异常的模式。 将它们添加到您监视的事件列表中。

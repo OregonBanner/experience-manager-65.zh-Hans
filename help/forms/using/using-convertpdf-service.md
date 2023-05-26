@@ -1,7 +1,7 @@
 ---
-title: ConvertPDF服務
+title: ConvertPDF服务
 seo-title: ConvertPDF Service
-description: 使用AEM Forms ConvertPDF服務將PDF檔案轉換為PostScript或影像檔案。
+description: 使用AEM Forms ConvertPDF服务将PDF文档转换为PostScript或图像文件。
 seo-description: Use AEM Forms ConvertPDF service to convert PDF documents to PostScript or image files.
 uuid: 7fa94c8c-485b-4a77-bcd3-ed716e3cf316
 content-type: reference
@@ -16,30 +16,30 @@ ht-degree: 0%
 
 ---
 
-# ConvertPDF服務 {#convertpdf-service}
+# ConvertPDF服务 {#convertpdf-service}
 
 ## 概述 {#overview}
 
-「轉換PDF」服務會將PDF檔案轉換為PostScript或影像檔案(JPEG、JPEG2000、PNG和TIFF)。 將PDF檔案轉換為PostScript對於任何PostScript印表機上的自動伺服器式列印都很有用。 在不支援PDF檔案的內容管理系統中封存檔案時，將PDF檔案轉換為多頁TIFF檔案是可行的。
+转换PDF服务将PDF文档转换为PostScript或图像文件(JPEG、JPEG2000、PNG和TIFF)。 将PDF文档转换为PostScript对于任何PostScript打印机上基于服务器的无人值守打印很有用。 在不支持PDF文档的内容管理系统中归档文档时，将PDF文档转换为多页TIFF文件是一种可行的做法。
 
-您可以使用轉換PDF服務完成下列作業：
+您可以使用ConvertPDF服务完成以下操作：
 
-* 將PDF檔案轉換為PostScript。 轉換為PostScript時，您可以使用轉換作業來指定來原始檔，以及是否轉換為PostScript第2級或第3級。 您轉換成PostScript檔案的PDF檔案必須是非互動式的。
-* 將PDF檔案轉換為JPEG、JPEG2000、PNG和TIFF影像格式。 當轉換為任何這些影像格式時，您可以使用轉換操作來指定來原始檔和影像選項規格。 該規格包含各種偏好設定，例如影像轉換格式、影像解析度和色彩轉換。
+* 将PDF文档转换为PostScript。 转换为PostScript时，您可以使用转换操作指定源文档以及是否转换为PostScript级别2或3。 转换为PostScript文件的PDF文档必须是非交互式文档。
+* 将PDF文档转换为JPEG、JPEG2000、PNG和TIFF图像格式。 当转换为这些图像格式中的任意格式时，可以使用转换操作来指定源文档和图像选项规范。 该规范包含各种首选项，如图像转换格式、图像分辨率和颜色转换。
 
-## 設定服務的屬性   {#properties}
+## 配置服务的属性   {#properties}
 
-您可以使用 **AEMFD ConvertPDF服務** 在AEM Console中設定此服務的屬性。 AEM主控台的預設URL為 `https://[host]:'port'/system/console/configMgr`.
+您可以使用 **AEMFD ConvertPDF服务** 在AEM Console中配置此服务的属性。 AEM控制台的默认URL为 `https://[host]:'port'/system/console/configMgr`.
 
-## 使用服務 {#using-the-service}
+## 使用服务 {#using-the-service}
 
-ConvertPDF服務提供下列兩個API：
+ConvertPDF服务提供以下两个API：
 
-* **[toPS](https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/fd/cpdf/api/ConvertPdfService.html#toPS)**：將PDF檔案轉換為PostScript檔案。
+* **[toPS](https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/fd/cpdf/api/ConvertPdfService.html#toPS)**：将PDF文档转换为PostScript文件。
 
-* **[toImage](https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/fd/cpdf/api/ConvertPdfService.html#toImage)**：將PDF檔案轉換為影像檔案。 支援的影像格式有JPEG、JPEG2000、PNG和TIFF。
+* **[toImage](https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/fd/cpdf/api/ConvertPdfService.html#toImage)**：将PDF文档转换为图像文件。 支持的图像格式包括JPEG、JPEG2000、PNG和TIFF。
 
-### 搭配JSP或Servlet使用toPS API {#using-tops-api-with-a-jsp-or-servlets}
+### 通过JSP或Servlet使用toPS API {#using-tops-api-with-a-jsp-or-servlets}
 
 ```jsp
 <%@ page import="java.util.List, java.io.File,
@@ -83,7 +83,7 @@ String documentPath = "/content/dam/formsanddocuments/ExpenseClaimFlat.pdf";
 %>
 ```
 
-### 搭配JSP或Servlet使用toImage API {#using-toimage-api-with-a-jsp-or-servlets}
+### 通过JSP或Servlet使用toImage API {#using-toimage-api-with-a-jsp-or-servlets}
 
 ```jsp
 <%@ page import="java.util.List, java.io.File,
@@ -130,13 +130,13 @@ String documentPath = "/content/dam/formsanddocuments/ExpenseClaimFlat.pdf";
 %>
 ```
 
-### 搭配AEM工作流程使用ConvertPDF服務 {#using-convertpdf-service-with-aem-workflows}
+### 在AEM工作流中使用ConvertPDF服务 {#using-convertpdf-service-with-aem-workflows}
 
-從工作流程執行ConvertPDF服務類似於從JSP/Servlet執行。
+从工作流中运行ConvertPDF服务与从JSP/Servlet中运行类似。
 
-唯一的差異是從JSP/Servlet執行服務，檔案物件會自動從ResourceResolverHelper物件擷取ResourceResolver物件的執行個體。 從工作流程呼叫程式碼時，此自動機制無法運作。 對於工作流程，請明確將ResourceResolver物件的例項傳遞給Document類別建構函式。 然後，Document物件會使用提供的ResourceResolver物件來讀取存放庫中的內容。
+唯一的区别是从JSP/Servlet运行服务，文档对象自动从ResourceResolverHelper对象中检索ResourceResolver对象的实例。 从工作流调用代码时，此自动机制不起作用。 对于工作流，请将ResourceResolver对象的实例显式传递给Document类构造函数。 然后，Document对象使用提供的ResourceResolver对象从存储库中读取内容。
 
-下列範例工作流程程式會將輸入檔案轉換為PostScript檔案。 程式碼會以ECMAScript撰寫，而檔案會以工作流程裝載的方式傳遞：
+以下示例工作流进程将输入文档转换为PostScript文档。 该代码在ECMAScript中编写，并且文档作为工作流有效负载传递：
 
 ```javascript
 /*

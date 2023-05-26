@@ -1,6 +1,6 @@
 ---
-title: 輪播橫幅
-description: 瞭解如何在Dynamic Media中使用輪播橫幅
+title: 轮播横幅
+description: 了解如何在Dynamic Media中使用轮播横幅
 uuid: 73684a08-d84d-4665-ab89-3a1bf88ac5dd
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -18,156 +18,156 @@ ht-degree: 2%
 
 ---
 
-# 輪播橫幅{#carousel-banners}
+# 轮播横幅{#carousel-banners}
 
-輪播橫幅可讓行銷人員輕鬆建立互動式輪播促銷內容，並將其傳送至任何熒幕，進而推動轉換。
+轮播横幅通过轻松创建交互式轮播促销内容并将其交付到任何屏幕，使营销人员能够推动转化。
 
-建立和修改促銷橫幅中的特色內容可能很耗時，限制您快速發佈新內容或使其更具針對性的能力。 輪播橫幅可讓您快速建立或修改旋轉橫幅。 您可以新增互動功能，例如連結至產品詳細資料或相關資源的熱點，並將其傳送至任何畫面，讓您更快將新的促銷內容推向市場。
+创建和修改促销横幅中的特色内容可能非常耗时，从而限制您快速发布新内容或使其更具针对性的能力。 轮播横幅允许您快速创建或修改旋转横幅。 您可以添加交互功能（如链接到产品详细信息或相关资源的热点），并将它们交付到任何屏幕，从而更快地向市场推出新的促销内容。
 
-輪播橫幅由具有單字的橫幅指定 **[!UICONTROL 輪播集]**
+轮播横幅由带有单词的横幅指定 **[!UICONTROL CAROUSELSET]**
 
 ![chlimage_1-438](assets/chlimage_1-438.png)
 
-在您的網站上，輪播橫幅看起來可能如下所示：
+在您的网站上，轮播横幅可以如下所示：
 
 ![chlimage_1-439](assets/chlimage_1-439.png)
 
-您可以在此處導覽影像（按一下數字）。 此外，幻燈片會根據您可以自訂的時間間隔自動旋轉。 您在轉盤橫幅中新增的影像同時支援連結區和影像地圖，讓使用者可以選取或前往超連結或存取「快速檢視」視窗。
+您可以在此处浏览图像（通过单击数字）。 此外，幻灯片会根据您可以自定义的时间间隔自动旋转。 您在轮播横幅中添加的图像同时支持热点和图像映射，用户可以在其中选择或转到超链接或访问概览窗口。
 
-在此範例中，使用者點選或按一下影像地圖並存取快速檢視視窗以取得手套：
+在此示例中，用户点按或单击了图像映射，并访问了“概览”窗口以获取手套：
 
 ![chlimage_1-440](assets/chlimage_1-440.png)
 
-## 觀看輪播橫幅的建立方式 {#watch-how-carousel-banners-are-created}
+## 观看如何创建轮播横幅 {#watch-how-carousel-banners-are-created}
 
-在上播放逐步解說 [輪播橫幅的建立方式](https://s7d5.scene7.com/s7viewers/html5/VideoViewer.html?videoserverurl=https://s7d5.scene7.com/is/content/&amp;emailurl=https://s7d5.scene7.com/s7/emailFriend&amp;serverUrl=https://s7d5.scene7.com/is/image/&amp;config=Scene7SharedAssets/Universal_HTML5_Video_social&amp;contenturl=https://s7d5.scene7.com/skins/&amp;asset=S7tutorials/InteractiveCarouselBanner)（10分33秒）。 您也會瞭解如何預覽、編輯和傳遞輪播橫幅。
+演练 [如何创建轮播横幅](https://s7d5.scene7.com/s7viewers/html5/VideoViewer.html?videoserverurl=https://s7d5.scene7.com/is/content/&amp;emailurl=https://s7d5.scene7.com/s7/emailFriend&amp;serverUrl=https://s7d5.scene7.com/is/image/&amp;config=Scene7SharedAssets/Universal_HTML5_Video_social&amp;contenturl=https://s7d5.scene7.com/skins/&amp;asset=S7tutorials/InteractiveCarouselBanner)（10分33秒）。 您还将了解如何预览、编辑和投放轮播横幅。
 
 >[!NOTE]
 >
->必須將非管理使用者新增至 **[!UICONTROL dam-users]** 群組，以便能夠建立或編輯輪播橫幅。 如果您在建立或編輯時遇到問題，請洽詢您的系統管理員，由他為您新增 **[!UICONTROL dam-users]** 群組。
+>必须将非管理用户添加到 **[!UICONTROL dam-users]** 组才能创建或编辑轮播横幅。 如果您在创建或编辑时遇到问题，请咨询您的系统管理员，以便他们将您添加到 **[!UICONTROL dam-users]** 组。
 
-## 快速入門：輪播橫幅 {#quick-start-carousel-banners}
+## 快速入门：轮播横幅 {#quick-start-carousel-banners}
 
-若要使用輪播橫幅快速上手並執行：
+使用轮播横幅快速启动并运行：
 
-1. [識別熱點和影像地圖變數](#identifying-hotspot-and-image-map-variables) (僅適用於使用Experience Manager Assets + Dynamic Media的客戶)
+1. [识别热点和图像映射变量](#identifying-hotspot-and-image-map-variables) (仅适用于使用Experience Manager Assets + Dynamic Media的客户)
 
-   首先，請識別現有「快速檢視」實作所使用的動態變數，以便在Adobe Experience Manager Assets中的轉盤橫幅建立程式期間，正確輸入熱點和影像地圖資料。
+   首先，标识现有“快速视图”实施使用的动态变量，以便您可以在Adobe Experience Manager Assets中的轮播横幅创建过程中正确输入热点和图像映射数据。
 
    >[!NOTE]
    >
-   >如果您是Experience Manager Sites或電子商務客戶，您可以使用內建功能導覽至產品頁面，並在產品目錄中查詢現有SKU （庫存單位）。 您不需要手動輸入熱點或影像地圖變數。 檢視以下資訊： [設定電子商務](/help/commerce/cif-classic/administering/generic.md).
+   >如果您是Experience Manager Sites或电子商务客户，则可以使用内置功能导航到产品页面并在产品目录中查找现有SKU（库存单位）。 您无需手动输入热点或图像映射变量。 查看以下信息 [设置电子商务](/help/commerce/cif-classic/administering/generic.md).
    >
    >
-   >如果您是Experience Manager Assets和Dynamic Media客戶，請手動輸入連結區和影像地圖的資料，然後將發佈的URL或內嵌程式碼與您的協力廠商內容管理系統整合。
+   >如果您是Experience Manager Assets和Dynamic Media客户，请手动输入热点和图像映射的数据，然后将发布的URL或嵌入代码与第三方内容管理系统集成。
 
 1. 可选：根据需要[创建轮播集查看器预设](/help/assets/managing-viewer-presets.md)。
 
-   如果您是管理員，可以建立自己的轉盤檢視器預設集，以自訂轉盤的行為和外觀。 主要優點在於您可以針對多個輪播重複使用此自訂檢視器預設集。 不過，使用者在製作輪播時，可以選擇直接自訂輪播的行為和外觀。 如果您想要針對指定輪播進行特定設計，則此方法為偏好方法。
+   如果您是管理员，则可以通过创建自己的轮盘查看器预设来自定义轮盘的行为和外观。 主要好处是，您可以对多个轮播重用此自定义查看器预设。 但是，用户可以选择在创作轮播时直接自定义轮播的行为和外观。 当您希望为给定的轮播进行特定设计时，此方法是首选方法。
 
-1. [上傳影像橫幅](#uploading-image-banners).
+1. [上传图像横幅](#uploading-image-banners).
 
-   上傳您想要互動的影像橫幅。
+   上传要使其成为交互式图像的横幅。
 
-1. [建立輪播集](#creating-carousel-sets).
+1. [创建轮播集](#creating-carousel-sets).
 
-   在「輪播集」中，使用者可瀏覽橫幅影像，並選取熱點或影像地圖以存取相關內容。
+   在轮播集中，用户浏览横幅图像并选择热点或图像映射以访问相关内容。
 
-   若要在資產中建立轉盤集，請選取「 」 **[!UICONTROL 建立]**，然後選取 **[!UICONTROL 傳送集]**. 將資產新增至投影片並選取 **[!UICONTROL 儲存]**. 您还可以直接在编辑器中编辑轮播集的外观和行为。
+   要在Assets中创建轮播集，请选择 **[!UICONTROL 创建]**，然后选择 **[!UICONTROL 轮播集]**. 将资源添加到幻灯片并选择 **[!UICONTROL 保存]**. 您还可以直接在编辑器中编辑轮播集的外观和行为。
 
-1. [將熱點或影像地圖新增至影像橫幅](#adding-hotspots-or-image-maps-to-an-image-banner).
+1. [将热点或图像映射添加到图像横幅](#adding-hotspots-or-image-maps-to-an-image-banner).
 
-   新增一或多個熱點或影像地圖至影像橫幅，並將每個熱點或影像地圖與連結、快速檢視或體驗片段等動作建立關聯。 新增熱點或影像地圖後，您可以發佈轉盤集來完成此工作。 發佈作業會建立內嵌程式碼，您可將其複製並套用至網站登陸頁面。
+   将一个或多个热点或图像映射添加到图像横幅，并将每个热点或图像映射与链接、概览或体验片段等操作相关联。 添加热点或图像映射后，您可以通过发布轮播集来完成此任务。 发布操作将创建可用于复制并应用于您的网站登陆页面的嵌入代码。
 
-   另請參閱 [（選用）預覽輪播橫幅](#optional-previewing-carousel-banners)  — 選擇性。 如有需要，您可以檢視轉盤集的表示並測試其互動性。
+   参见 [（可选）预览轮播横幅](#optional-previewing-carousel-banners)  — 可选。 如果需要，您可以查看轮播集的表示形式并测试其交互性。
 
-1. [發佈輪播橫幅](#publishing-carousel-banners).
+1. [发布轮播横幅](#publishing-carousel-banners).
 
-   您可以像發佈任何資產一樣發佈轉盤集。 在「資產」中，導覽至「轉盤集」並選取，然後選取 **[!UICONTROL 發佈]**. 發佈轉盤集時會啟用URL和內嵌字串。
+   您可以像发布任何资源一样发布传送集。 在Assets中，导航到轮播集并将其选定，然后选择 **[!UICONTROL Publish]**. 发布轮播集将激活URL和嵌入字符串。
 
 1. 执行下列操作之一：
 
-   * [新增輪播橫幅至您的網站頁面](#adding-a-carousel-banner-to-your-website-page) 您可以將已複製的輪播橫幅URL或內嵌程式碼新增至網站頁面。
+   * [向您的网站页面添加轮播横幅](#adding-a-carousel-banner-to-your-website-page) 您可以将复制的轮播横幅URL或嵌入代码添加到网站页面。
 
-      * [將輪播橫幅與現有的快速檢視整合](#integrating-the-carousel-banner-with-an-existing-quickview). 如果您使用協力廠商Web內容管理系統，則必須將新的轉盤橫幅與網站上現有的「快速檢視」實作整合。
-   * [在Experience Manager中將輪播橫幅新增至您的網站](/help/assets/adding-dynamic-media-assets-to-pages.md) 如果您是Experience Manager Sites客戶，可以使用互動式媒體元件，直接將輪播集新增至Experience Manager中的頁面。
+      * [将轮播横幅与现有概览集成](#integrating-the-carousel-banner-with-an-existing-quickview). 如果您使用第三方Web内容管理系统，则必须将新的轮播横幅与网站上现有的概览实施集成。
+   * [在Experience Manager中将轮播横幅添加到您的网站](/help/assets/adding-dynamic-media-assets-to-pages.md) 如果您是Experience Manager Sites客户，则可以使用交互式媒体组件，直接将轮播集添加到Experience Manager中的页面。
 
 
-若要編輯轉盤集，請參閱 [編輯輪播集](#editing-carousel-sets). 此外，您也可以檢視和編輯 [傳送集屬性](manage-assets.md#editing-properties).
+要编辑传送集，请参阅 [编辑轮播集](#editing-carousel-sets). 此外，您还可以查看和编辑 [轮播集属性](manage-assets.md#editing-properties).
 
-## 識別熱點和影像地圖變數 {#identifying-hotspot-and-image-map-variables}
+## 识别热点和图像映射变量 {#identifying-hotspot-and-image-map-variables}
 
-首先，請識別現有「快速檢視」實作所使用的動態變數，以便您可以在Experience Manager Assets中的轉盤集建立程式中正確輸入熱點或影像地圖資料。
+首先，标识现有“快速视图”实施使用的动态变量，以便您可以在Experience Manager Assets中的轮播集创建过程中正确输入热点或图像映射数据。
 
-在Experience Manager Assets中將熱點或影像地圖新增至橫幅影像時，請指派SKU和選用的其他變數至每個熱點或影像地圖。 這類變數稍後會用於比對熱點或影像地圖與Quickview內容。
+在Experience Manager Assets中将热点或图像映射添加到横幅图像时，请为每个热点或图像映射分配一个SKU和可选的其他变量。 此类变量稍后用于匹配热点或图像映射与概览内容。
 
 >[!NOTE]
 >
->如果您是Experience Manager Sites和/或Experience Manager電子商務客戶，請略過此步驟。 您不需要手動識別熱點或影像地圖變數；您可以使用與電子商務的整合進行產品整合。 檢視以下資訊： [設定電子商務](/help/commerce/cif-classic/administering/generic.md). 此外，您也可以使用互動式元件，並將其新增至網頁。
+>如果您是Experience Manager Sites和/或Experience Manager电子商务客户，请跳过此步骤。 您无需手动标识热点或图像映射变量；您可以将与电子商务的集成用于产品集成。 查看以下信息 [设置电子商务](/help/commerce/cif-classic/administering/generic.md). 此外，您还可以使用交互式组件并将其添加到网页。
 >
->如果您是Experience Manager Assets或媒體客戶，您可以發佈URL或內嵌程式碼，然後與協力廠商內容管理系統整合，並手動識別熱點和影像地圖。
+>如果您是Experience Manager Assets或媒体客户，请发布URL或嵌入代码，然后与第三方内容管理系统集成，并手动识别热点和图像映射。
 
-請務必正確識別要與熱點或影像地圖資料產生關聯的變數數量和型別。 新增至橫幅影像的每個熱點或影像地圖都必須包含足夠的資訊，以明確識別現有後端系統中的產品。 同時，每個熱點或影像地圖不得包含超過必要的資料。 原因是因為這會使資料輸入程式過於複雜，且進行中的熱點或影像地圖管理更容易出錯。
+正确标识要与热点或图像映射数据关联的变量的数量和类型非常重要。 添加到横幅图像的每个热点或图像映射都必须包含足够的信息，才能明确识别现有后端系统中的产品。 同时，每个热点或图像映射所包含的数据不能超过所需数量。 这是因为这会使数据录入过程过于复杂，并且不断的热点或图像映射管理更加容易出错。
 
-有不同的方法可識別一組變數，以用於熱點或影像地圖資料。
+有多种不同的方法可标识一组用于热点或图像映射数据的变量。
 
-有時只要諮詢負責現有Quickview實作的IT專家就足夠了。 他們可能會知道在系統中識別Quickview所需的最小資料集為何。 不過，通常也可以簡單地分析前端計畫碼的現有行為。
+有时，咨询负责现有Quickview实施的IT专家就足够了。 他们可能会知道在系统中标识概览所需的最小数据集。 但是，通常也可以简单地分析前端代码的现有行为。
 
-大部分的「快速檢視」實作都使用下列範例：
+大多数概览实施都使用以下范例：
 
-* 用户在网站上激活用户界面元素。例如，點選 **[!UICONTROL 快速檢視]** 按鈕。
-* 如有需要，網站會傳送Ajax要求至後端以載入Quickview資料或內容。
-* 快速檢視資料會轉譯成內容，以準備在網頁上呈現。
-* 最後，前端程式碼會在畫面上以視覺化方式呈現此類內容。
+* 用户在网站上激活用户界面元素。例如，点按 **[!UICONTROL 概览]** 按钮。
+* 如果需要，网站会向后端发送Ajax请求以加载概览数据或内容。
+* 概览数据将转换为内容，以便在网页上呈现。
+* 最后，前端代码在屏幕上以可视方式呈现此类内容。
 
-接著，方法就是造訪已實作「快速檢視」功能的現有網站的不同區域。 觸發「快速檢視」，並擷取網頁為了載入「快速檢視」資料或內容而傳送的Ajax URL。
+然后，方法是访问实施概览功能的现有网站的不同区域。 触发概观，并捕获网页发送的Ajax URL，以加载概观数据或内容。
 
-通常您不需要使用任何專門的偵錯工具。 現代的網頁瀏覽器提供可完成適當工作的網頁檢查工具。 以下是一些包含網頁檢查器的網頁瀏覽器範例：
+通常，您无需使用任何专门的调试工具。 现代Web浏览器的功能是Web检查器，这些检查器能够完成适当的工作。 以下是一些包含Web检查器的Web浏览器示例：
 
-* 若要在Google Chrome中檢視所有傳出的HTTP請求，請按下F12 (Windows)或Command-Option-I (Mac)以開啟「開發人員工具」面板，然後選取「網路」索引標籤。
-* 在Firefox中，您可以按F12 (Windows)或Command-Option-I (Mac)並使用其「網路」標籤來啟動Firebug外掛程式，或使用內建的「偵測器」工具及其「網路」標籤。
+* 要在Google Chrome中查看所有传出的HTTP请求，请按F12 (Windows)或Command-Option-I (Mac)打开“开发人员工具”面板，然后选择“网络”选项卡。
+* 在Firefox中，您可以通过按F12 (Windows)或Command-Option-I (Mac)并使用其“网络”选项卡来激活Firebug插件，也可以使用内置的检查器工具及其“网络”选项卡。
 
-在瀏覽器中開啟網路監視時，會觸發頁面上的快速檢視。
+在浏览器中打开网络监视功能时，会在页面上触发概览。
 
-現在，請在網路記錄檔中找到Quickview Ajax URL，並複製記錄的URL以供日後分析。 通常，當您觸發「快速檢視」時，會有許多要求傳送至伺服器。 通常，快速檢視Ajax URL是清單中的第一個專案。 它具有複雜的查詢字串部分或路徑，並且其回應MIME型別是 `text/html`， `text/xml`，或 `text/javascript`.
+现在，请在网络日志中找到Quickview Ajax URL，并复制记录的URL以供将来分析。 通常，在触发概览时，会向服务器发送大量请求。 通常，快速视图Ajax URL是列表中的前几个之一。 它具有复杂的查询字符串部分或路径，并且其响应MIME类型为 `text/html`， `text/xml`，或 `text/javascript`.
 
-在此過程中，請務必使用不同的產品類別和型別，造訪您網站的不同區域。 原因在於「快速檢視」URL具有指定網站類別的共同部分，但只有在您造訪網站的其他區域時才會變更。
+在此过程中，请务必访问网站的不同区域，以及不同的产品类别和类型。 原因是概观URL具有给定网站类别共有的部分，但只有在访问网站的其他区域时才更改。
 
-最簡單的情況是，快速檢視URL中的唯一變數部分是產品SKU。 在此情況下，SKU值是您在橫幅影像中新增熱點或影像地圖時唯一需要的資料片段。
+最简单的情况是，概览URL中的唯一变量部分是产品SKU。 在这种情况下，将“热点”或“图像映射”添加到横幅图像时，SKU值是唯一需要的数据块。
 
-不過，在複雜的情況下，除了SKU之外，「快速檢視URL」還有不同的變數元素，例如類別ID、顏色代碼和大小代碼，例如。 在這種情況下，每個元素都是熱點中的獨立變數，或是輪播橫幅功能中的影像地圖資料定義。
+但是，在复杂的情况下，除了SKU之外，概览URL还有不同的变化元素，例如类别ID、颜色代码和大小代码。 在这种情况下，每个元素在热点或轮播横幅功能中的图像映射数据定义中都是单独的变量。
 
-請考量下列快速檢視URL範例及其產生的熱點或影像地圖變數：
+请考虑以下概观URL示例及其生成的热点或图像映射变量：
 
 <table>
  <tbody>
   <tr>
-   <td>單一SKU，可在查詢字串中找到。</td>
-   <td><p>錄製的快速檢視URL包含以下專案：</p>
+   <td>单个SKU，在查询字符串中找到。</td>
+   <td><p>记录的概览URL包括：</p>
     <ul>
      <li><p><code>https://server/json?productId=866558&amp;source=100</code></p> </li>
      <li><p><code>https://server/json?productId=1196184&amp;source=100</code></p> </li>
      <li><p><code>https://server/json?productId=1081492&amp;source=100</code></p> </li>
      <li><p><code>https://server/json?productId=1898294&amp;source=100</code></p> </li>
-    </ul> <p>URL中的唯一變數部分是 <code>productId=</code> 查詢字串引數，而且它顯然是SKU值。 因此，熱點或影像地圖只需要填入如下值的SKU欄位 <code>866558,</code> <code>1196184,</code> <code>1081492,</code> <code>1898294.</code></p> </td>
+    </ul> <p>URL中的唯一变量部分是 <code>productId=</code> 查询字符串参数，它显然是一个SKU值。 因此，热点或图像映射只需要使用如下值填充的SKU字段 <code>866558,</code> <code>1196184,</code> <code>1081492,</code> <code>1898294.</code></p> </td>
   </tr>
   <tr>
-   <td>在URL路徑中找到單一SKU。</td>
-   <td><p>錄製的快速檢視URL包含以下專案：</p>
+   <td>单个SKU，可在URL路径中找到。</td>
+   <td><p>记录的概览URL包括：</p>
     <ul>
      <li><p><code>https://server/product/6422350843</code></p> </li>
      <li><p><code>https://server/product/1607745002</code></p> </li>
      <li><p><code>https://server/product/0086724882</code></p> </li>
-    </ul> <p>變數部分位於路徑的最後一部分，並成為熱點/影像地圖的SKU值：<strong><code>6422350843</code>， <code>1607745002,</code> </strong><code>0086724882.</code></p> </td>
+    </ul> <p>变量部分位于路径的最后一部分，它成为热点/图像映射的SKU值：<strong><code>6422350843</code>， <code>1607745002,</code> </strong><code>0086724882.</code></p> </td>
   </tr>
   <tr>
-   <td>查詢字串中的SKU和類別識別碼。</td>
-   <td><p>錄製的快速檢視URL包含以下專案：</p>
+   <td>查询字符串中的SKU和类别ID。</td>
+   <td><p>记录的概览URL包括：</p>
     <ul>
      <li><p><code>https://server/quickView/product/?category=1100004&amp;prodId=305466</code></p> </li>
      <li><p><code>https://server/quickView/product/?category=1100004&amp;prodId=310181</code></p> </li>
      <li><p><code>https://server/quickView/product/?category=1740148&amp;prodId=308706</code></p> </li>
-    </ul> <p>在這種情況下，URL中有兩個不同的部分。 SKU會儲存在 <code>prodId</code> 引數和類別ID儲存在 <code>category=</code>引數。</p> <p>因此，熱點/影像地圖定義是配對。 即SKU值和名為的額外變數 <code>categoryId</code>. 產生的配對如下：</p>
+    </ul> <p>在这种情况下，URL包含两个不同的部分。 SKU存储在 <code>prodId</code> 参数和类别ID存储在 <code>category=</code>参数。</p> <p>因此，热点/图像映射定义是对。 即，一个SKU值和一个名为的额外变量 <code>categoryId</code>. 生成的对如下所示：</p>
     <ul>
      <li><p>SKU是 <strong><code>305466</code></strong> 和 <code>categoryId</code> 是 <code>1100004</code>.</p> </li>
      <li><p>SKU是 <strong><code>310181</code></strong> 和 <code>categoryId</code> 是 <strong><code>1100004</code></strong>.</p> </li>
@@ -177,282 +177,282 @@ ht-degree: 2%
  </tbody>
 </table>
 
-## 上傳影像橫幅 {#uploading-image-banners}
+## 上传图像横幅 {#uploading-image-banners}
 
-如果您已上傳要使用的影像，請繼續進行下一個步驟， [建立輪播集](#creating-carousel-sets). 請注意，轉盤中使用的影像必須在啟用Dynamic Media後上傳。
+如果您已上传要使用的图像，请前进到下一步， [创建轮播集](#creating-carousel-sets). 请注意，在启用Dynamic Media后，必须上传轮播中使用的图像。
 
-若要上傳影像橫幅，請參閱 [上傳資產](/help/assets/manage-assets.md).
+要上传图像横幅，请参阅 [上传资产](/help/assets/manage-assets.md).
 
-## 建立輪播集 {#creating-carousel-sets}
+## 创建轮播集 {#creating-carousel-sets}
 
 >[!NOTE]
 >
->必須將非管理使用者新增至 **[!UICONTROL dam-users]** 群組才能建立或編輯輪播橫幅。 如果您在建立或編輯時遇到問題，請洽詢您的系統管理員，由他為您新增 **[!UICONTROL dam-users]** 群組。
+>必须将非管理用户添加到 **[!UICONTROL dam-users]** 组才能创建或编辑轮播横幅。 如果您在创建或编辑时遇到问题，请咨询您的系统管理员，以便他们将您添加到 **[!UICONTROL dam-users]** 组。
 
-**若要建立轉盤集：**
+**要创建传送集，请执行以下操作：**
 
-1. 在「資產」中，導覽至您要建立轉盤集的資料夾，然後前往 **[!UICONTROL 建立]** > **[!UICONTROL 傳送集]**.
-1. 在輪播橫幅編輯器頁面上，選取 **[!UICONTROL 點選以開啟資產選擇器]** 以選取第一張幻燈片的影像。
+1. 在Assets中，导航到要创建轮播集的文件夹，然后转到 **[!UICONTROL 创建]** > **[!UICONTROL 轮播集]**.
+1. 在轮播横幅编辑器页面上，选择 **[!UICONTROL 点按以打开资产选择器]** 以选择第一张幻灯片的图像。
 
-   在輪播橫幅編輯器頁面上，執行下列任一項作業：
+   在轮播横幅编辑器页面上，执行以下任一操作：
 
-   * 在頁面的左上角附近，選取 **[!UICONTROL 新增幻燈片]** 圖示。
+   * 在页面的左上角附近，选择 **[!UICONTROL 添加幻灯片]** 图标。
 
-   * 在頁面中間附近，選取 **[!UICONTROL 點選以開啟資產選擇器]**.
-   選取以選取您要納入轉盤集的資產。 选定资产上有一个复选标记图标。完成後，在頁面的右上角附近，選取 **[!UICONTROL 選取]**.
+   * 在页面中间附近，选择 **[!UICONTROL 点按以打开资产选择器]**.
+   选择以选择要包含在轮播集中的资源。 选定资产上有一个复选标记图标。完成后，在页面的右上角附近，选择 **[!UICONTROL 选择]**.
 
-   借助资产选择器，您可以通过键入关键字并点按或单击&#x200B;**[!UICONTROL 返回]**&#x200B;来搜索资产。您还可以应用过滤器来优化搜索结果。您可以按路径、收藏集、文件类型和标记进行过滤。選取篩選，然後選取 **[!UICONTROL 篩選]** 圖示加以檢視。 点按“视图”图标并选择&#x200B;**[!UICONTROL 列视图]**、**[!UICONTROL 卡片视图]**&#x200B;或&#x200B;**[!UICONTROL 列表视图]**&#x200B;可更改视图。
+   借助资产选择器，您可以通过键入关键字并点按或单击&#x200B;**[!UICONTROL 返回]**&#x200B;来搜索资产。您还可以应用过滤器来优化搜索结果。您可以按路径、收藏集、文件类型和标记进行过滤。选择过滤器，然后选择 **[!UICONTROL 筛选条件]** 图标。 点按“视图”图标并选择&#x200B;**[!UICONTROL 列视图]**、**[!UICONTROL 卡片视图]**&#x200B;或&#x200B;**[!UICONTROL 列表视图]**&#x200B;可更改视图。
 
-   另請參閱 [使用選取器](/help/assets/working-with-selectors.md) 以取得詳細資訊。
+   参见 [使用选择器](/help/assets/working-with-selectors.md) 了解更多信息。
 
-1. 繼續新增投影片，直到在轉盤集內新增所有要旋轉的影像為止。
-1. （可選）執行下列任一項作業：
+1. 继续添加幻灯片，直到在轮播集中添加了所有要旋转的图像为止。
+1. （可选）执行以下任一操作：
 
-   * 如有必要，請拖曳投影片的以重新排序集合清單中的影像。
-   * 若要刪除影像，請選取該影像，然後選取 **[!UICONTROL 刪除幻燈片]** （在工具列上）。
+   * 如有必要，请拖动幻灯片以重新排序集合列表中的图像。
+   * 要删除图像，请选择该图像，然后选择 **[!UICONTROL 删除幻灯片]** 工具栏上。
 
-   * 若要套用預設集，在頁面右上角附近，選取預設集下拉式清單，然後選取要一次套用至預設集的預設集。
-   若要刪除幻燈片，請選取幻燈片，然後在工具列上選取 **[!UICONTROL 刪除幻燈片]**. 若要移動投影片，請選取重新排序圖示，並按住並移至所需位置。
+   * 要应用预设，请在页面右上角附近选择预设下拉列表，然后选择要应用于设置的预设。
+   要删除幻灯片，请选择幻灯片，然后在工具栏上选择 **[!UICONTROL 删除幻灯片]**. 要移动幻灯片，请选择重新排序图标，然后按住并移动到所需位置。
 
-1. 在投影片中新增影像後，您可以在影像中新增熱點、影像地圖，或兩者皆新增。 另請參閱 [將熱點或影像地圖新增至影像橫幅](#adding-hotspots-or-image-maps-to-an-image-banner).
-1. 您可以變更轉盤集的視覺設計和行為。 選取 **[!UICONTROL 行為]** 和 **[!UICONTROL 外觀]** 標籤並調整傳送橫幅的顯示方式或特定元件的行為。 另請參閱 [管理檢視器預設集](/help/assets/viewer-presets.md) 有關如何使用檢視器編輯器的詳細資訊。
+1. 在幻灯片中添加图像后，您可以向图像添加热点、图像映射，或同时添加这两者。 参见 [将热点或图像映射添加到图像横幅](#adding-hotspots-or-image-maps-to-an-image-banner).
+1. 您可以更改轮播集的视觉设计和行为。 选择 **[!UICONTROL 行为]** 和 **[!UICONTROL 外观]** 选项卡并调整轮播横幅的显示方式或特定组件的行为。 参见 [管理查看器预设](/help/assets/viewer-presets.md) 有关如何使用查看器编辑器的更多信息。
 
    >[!NOTE]
    >
-   >對於輪播橫幅，您可以調整下列專案：
+   >对于轮播横幅，您可以调整以下内容：
    >
-   >    * 影像顯示的持續時間。 依預設，每個影像會顯示9秒。
-   >    * 动画. 依預設，每個投影片切換都是淡化。 您可以將其變更為投影片切換。
-   >    * 按鈕的樣式。 使用者可以點選每個點或數字來旋轉橫幅。 您可以變更設定指標按鈕出現的位置（以及如果是數值或點狀樣式）和大小。
-   >    * 變更影像地圖的醒目提示樣式或用於連結區的圖示。
-   >    * 在編輯檢視器預設集之前，請選擇要根據預設集的樣式。 如果您未選擇樣式，當您開始編輯檢視器預設集時，如果您決定變更為其他預設集，則會遺失所有變更。
+   >    * 图像显示的持续时间。 默认情况下，每个图像会显示9秒。
+   >    * 动画. 默认情况下，每个幻灯片过渡都是淡入淡出。 您可以将其更改为幻灯片过渡。
+   >    * 按钮的样式。 用户可以通过点按每个点或数字来旋转横幅。 您可以更改设置指示器按钮的显示位置（如果是数字或点状样式，则更改其大小）。
+   >    * 更改图像映射的高亮样式或用于热点的图标。
+   >    * 在编辑查看器预设之前，请选择要使预设基于的样式。 如果未选择样式，则在开始编辑查看器预设时，如果决定更改为其他预设，则会丢失所有更改。
 
    >
-   >另請參閱 [輪播橫幅的特殊考量事項](/help/assets/managing-viewer-presets.md#special-considerations-for-creating-a-carousel-banner-viewer-preset) 以取得檢視器編輯器的詳細指示和詳細資訊。
+   >参见 [轮播横幅的特殊注意事项](/help/assets/managing-viewer-presets.md#special-considerations-for-creating-a-carousel-banner-viewer-preset) 有关查看器编辑器的详细说明和详细信息。
 
-   您也可以預覽轉盤橫幅的顯示方式。 另請參閱 [（選用）預覽輪播橫幅](#optional-previewing-carousel-banners).
+   您还可以预览轮播横幅的显示方式。 参见 [（可选）预览轮播横幅](#optional-previewing-carousel-banners).
 
-1. 選取 **[!UICONTROL 儲存]** 完成後。
+1. 选择 **[!UICONTROL 保存]** 完成后。
 
-## 將熱點或影像地圖新增至影像橫幅 {#adding-hotspots-or-image-maps-to-an-image-banner}
+## 将热点或图像映射添加到图像横幅 {#adding-hotspots-or-image-maps-to-an-image-banner}
 
-您可以使用轉盤集編輯器將熱點或影像地圖新增至橫幅。
+您可以使用轮播集编辑器将热点或图像映射添加到横幅中。
 
-新增熱點或影像地圖時，可以將它們定義為快速檢視彈出式顯示、超連結或體驗片段。
+添加热点或图像映射时，可以将它们定义为概览弹出显示、超链接或体验片段。
 
-另請參閱 [體驗片段](/help/sites-authoring/experience-fragments.md).
-
->[!NOTE]
->
->將檢視器內嵌於體驗片段時，不支援輪播橫幅中的社群媒體分享工具。
->
->若要解決此問題，您可以使用或建立沒有社群媒體分享工具的檢視器預設集。 這類檢視器預設集可讓您成功將其嵌入體驗片段中。
-
-當您新增熱點或影像地圖至影像時，請記得儲存作業。 在您目前的建立/編輯工作階段期間，支援頁面右上角附近的「還原」和「重做」選項。
-
-當您完成建立轉盤橫幅時，您可以選擇使用「預覽」來檢視向客戶呈現轉盤橫幅的顯示方式。
-
-另請參閱 [（選用）預覽輪播橫幅](#optional-previewing-carousel-banners).
+参见 [体验片段](/help/sites-authoring/experience-fragments.md).
 
 >[!NOTE]
 >
->當您新增熱點至中的影像時 [互動式影像](/help/assets/interactive-images.md) 或是輪播橫幅，熱點資訊會儲存在相同的中繼資料位置。 該位置是相對於影像的位置，無論該影像是互動式影像還是輪播橫幅。 這項功能表示您可以在任一檢視器中輕鬆重複使用相同的影像，及其定義的熱點資料。
-但是，請注意，輪播橫幅支援影像地圖，該影像也可能包含熱點；互動式影像則否。 如果您打算建立使用相同影像的互動式影像或輪播橫幅，請記住此規則。 請考慮改用相同影像的個別復本來建立互動式影像和輪播橫幅。
+>将查看器嵌入体验片段时，不支持轮播横幅中的社交媒体共享工具。
+>
+>要解决此问题，您可以使用或创建没有社交媒体共享工具的查看器预设。 通过此类查看器预设，您可以成功地将其嵌入体验片段中。
+
+在向图像添加热点或图像映射时，请记住保存所做的工作。 在当前创建/编辑会话期间，支持页面右上角附近的“撤消”和“重做”选项。
+
+创建完轮播横幅后，您可以选择使用“预览”来查看向客户显示的轮播横幅的显示方式。
+
+参见 [（可选）预览轮播横幅](#optional-previewing-carousel-banners).
 
 >[!NOTE]
-如果您使用熱點編輯互動式影像並裁切影像，則會移除熱點。
+>
+>将热点添加到中的图像时 [交互式图像](/help/assets/interactive-images.md) 对于轮播横幅，热点信息存储在相同的元数据位置。 该位置相对于图像的位置，无论图像是交互式图像还是轮播横幅。 这项功能意味着您可以轻松地在任一查看器中重用相同的图像及其定义的热点数据。
+但是，请注意，轮播横幅支持图像映射，这些图像也可能包含热点；而交互式图像则不支持。 如果您打算创建使用同一图像的交互式图像或轮播横幅，请记住此规则。 请考虑改用同一图像的单独副本来创建交互式图像和轮播横幅。
 
-另請參閱 [新增影像地圖](/help/assets/image-maps.md).
+>[!NOTE]
+如果您正在编辑具有热点的交互式图像并裁切图像，则您的热点会被删除。
 
-**若要將熱點或影像地圖新增至影像橫幅：**
+另请参阅 [添加图像映射](/help/assets/image-maps.md).
 
-1. 在Assets中，導覽至您想要產生互動式效果的轉盤集。
-1. 選取輪播集並選取 **[!UICONTROL 編輯]**. 「輪播檢視器」編輯器隨即開啟。
-1. 選取您要讓幻燈片互動的幻燈片。
-1. 在頁面的左上角附近，選取 **[!UICONTROL 熱點]** 或 **[!UICONTROL 影像地圖]**.
-1. 執行下列任一項作業：
+**要将热点或图像映射添加到图像横幅，请执行以下操作：**
 
-   * 熱點：在影像上，選取您要熱點出現的位置。
-   * 針對影像地圖：在影像上，選取「 」，然後從左上方拖曳至右下方，建立影像地圖區域。 您可以拖曳邊角來調整影像地圖的大小。
+1. 在Assets中，导航到要使其成为交互式内容的轮播集。
+1. 选择轮播集并选择 **[!UICONTROL 编辑]**. 此时将打开“轮盘查看器编辑器”。
+1. 选择要使其成为交互式幻灯片。
+1. 在页面的左上角附近，选择 **[!UICONTROL 热点]** 或 **[!UICONTROL 图像映射]**.
+1. 执行以下任一操作：
 
-   如有必要，請將熱點或影像地圖拖曳到新位置。 視需要新增其他熱點或影像地圖。
+   * 对于热点：在图像上，选择要显示热点的位置。
+   * 对于图像映射：在图像上，选择，然后从左上角拖动到右下角，以创建图像映射区域。 您可以通过拖动角来调整图像映射的大小。
 
-   若要刪除熱點或影像地圖，請選取 **[!UICONTROL 動作]** 標籤。 在&#x200B;**[!UICONTROL 映射和热点]**&#x200B;标题下，从&#x200B;**[!UICONTROL 选定类型]**&#x200B;下拉菜单中，选择要删除的热点或图像映射的名称。選取 **[!UICONTROL 垃圾桶]** 圖示並選取「 」 **[!UICONTROL 刪除]**.
+   如有必要，请将热点或图像映射拖动到新位置。 根据需要添加其他热点或图像映射。
 
-1. 在「名稱」文字欄位中，輸入熱點或影像對映的名稱。 此名稱也會出現在 **[!UICONTROL 地圖和熱點]** 下拉式清單。 提供名稱可讓您日後決定變更熱點或影像地圖時，輕鬆識別熱點或影像地圖。
-1. 請執行以下任一項作業： **[!UICONTROL 動作]** 標籤：
+   要删除热点或图像映射，请选择 **[!UICONTROL 操作]** 选项卡。 在&#x200B;**[!UICONTROL 映射和热点]**&#x200B;标题下，从&#x200B;**[!UICONTROL 选定类型]**&#x200B;下拉菜单中，选择要删除的热点或图像映射的名称。选择 **[!UICONTROL 垃圾桶]** 图标，然后选择 **[!UICONTROL 删除]**.
 
-   * 選取 **[!UICONTROL 快速檢視]**.
+1. 在“名称”文本字段中，键入热点或图像映射的名称。 此名称也会出现在 **[!UICONTROL 映射和热点]** 下拉列表。 提供名称可让您在决定将来更改热点或图像映射时轻松识别它。
+1. 在中执行以下操作之一 **[!UICONTROL 操作]** 选项卡：
 
-      * 如果您是Experience Manager Sites和電子商務客戶，請選取「產品選擇器」圖示（放大鏡）以開啟「選取產品」頁面。 選取您要使用的產品，然後選取頁面右上角的核取標籤，以便您可以返迴轉盤橫幅編輯器。
-      * 如果您不是Experience Manager Sites或電子商務客戶
+   * 选择 **[!UICONTROL 概览]**.
 
-         * 另請參閱 [識別熱點變數](#identifying-hotspot-and-image-map-variables) 如果您想要定義這些變數。
-         * 然後，手動輸入SKU值。 在「SKU值」文字欄位中，輸入產品的SKU （庫存單位），這是您提供的每個不同產品或服務的唯一識別碼。 輸入的SKU值會自動填入快速檢視範本的變數部分，讓系統知道將點選的熱點與特定SKU的快速檢視建立關聯。
-         * （選擇性）如果快速檢視中有其他變數您必須用來進一步識別產品，請選取 **[!UICONTROL 新增一般變數]**. 在文字欄位中，指定額外的變數。 例如， category=Mens是新增的變數。
+      * 如果您是Experience Manager Sites和电子商务客户，请选择产品选取器图标（放大镜）以打开“选择产品”页面。 选择要使用的产品，然后选择页面右上角的复选标记，以便您可以返回到轮盘横幅编辑器。
+      * 如果您不是Experience Manager Sites或电子商务客户
 
-         * 另請參閱 [使用選取器](/help/assets/working-with-selectors.md) 以取得詳細資訊。
-   * 選取 **[!UICONTROL 超連結]**.
+         * 参见 [识别热点变量](#identifying-hotspot-and-image-map-variables) （如果要定义这些变量）。
+         * 然后，手动输入SKU值。 在“SKU值”文本字段中，键入产品的SKU（库存单位），它是您提供的每个不同产品或服务的唯一标识符。 输入的SKU值会自动填充概览模板的变量部分，以便系统知道将点按的热点与特定SKU的概览相关联。
+         * （可选）如果概览中还有其他必须用来进一步标识产品的变量，请选择 **[!UICONTROL 添加通用变量]**. 在文本字段中，指定一个额外的变量。 例如， category=Mens是一个添加的变量。
 
-      * 如果您是Experience Manager Sites客戶，請選取「網站選擇器」圖示（資料夾）以導覽至URL。
+         * 参见 [使用选择器](/help/assets/working-with-selectors.md) 了解更多信息。
+   * 选择 **[!UICONTROL 超链接]**.
+
+      * 如果您是Experience Manager Sites客户，请选择站点选择器图标（文件夹）以导航到某个URL。
          >[!NOTE]
-         如果您的互動式內容具有具有具有相對URL的連結，尤其是指向Experience Manager Sites頁面的連結，則無法採用URL型連結方法。
+         如果您的交互式内容具有带相对URL的链接，尤其是指向Experience Manager Sites页面的链接，则无法基于URL的链接方法。
 
-      * 如果您是獨立客戶，請在HREF文字欄位中指定連結網頁的完整URL路徑。
+      * 如果您是独立客户，请在HREF文本字段中指定链接网页的完整URL路径。
 
-   請務必指定要在新的瀏覽器分頁（建議的預設值）或相同的分頁中開啟連結。
+   请确保指定是在新的浏览器选项卡（推荐的默认值）中还是同一选项卡中打开链接。
 
-   另請參閱 [使用選取器](/help/assets/working-with-selectors.md) 以取得詳細資訊。
+   参见 [使用选择器](/help/assets/working-with-selectors.md) 了解更多信息。
 
-   * 選取 **[!UICONTROL 體驗片段]**.
+   * 选择 **[!UICONTROL 体验片段]**.
 
-      * 如果您是Experience Manager Sites客戶，請選取「搜尋」圖示（放大鏡）以開啟「體驗片段」頁面。 選取您要使用的體驗片段，然後選取 **[!UICONTROL 選取]** ，以便返回「熱點管理」頁面。
-另請參閱 [體驗片段](/help/sites-authoring/experience-fragments.md).
+      * 如果您是Experience Manager Sites客户，请选择“搜索”图标（放大镜）以打开“体验片段”页面。 选择要使用的体验片段，然后选择 **[!UICONTROL 选择]** ，以便可以返回热点管理页面。
+参见 [体验片段](/help/sites-authoring/experience-fragments.md).
 
-      * 指定體驗片段出現在橫幅上的寬度和高度。
+      * 指定体验片段在横幅上显示的宽度和高度。
 
          >[!NOTE]
-         將檢視器內嵌於體驗片段時，不支援輪播橫幅中的社群媒體分享工具。
-         若要解決此問題，請建立沒有社群媒體分享工具的檢視器預設集。 這類檢視器預設集可讓您成功將其嵌入體驗片段中。
+         将查看器嵌入体验片段时，不支持轮播横幅中的社交媒体共享工具。
+         要解决此问题，请创建没有社交媒体共享工具的查看器预设。 通过此类查看器预设，您可以成功地将其嵌入体验片段中。
    ![experience_fragment-carouselbanner](assets/experience_fragment-carouselbanner.png)
 
-   您也可以預覽轉盤橫幅的顯示方式。 另請參閱 [（選用）預覽輪播橫幅](#optional-previewing-carousel-banners).
+   您还可以预览轮播横幅的显示方式。 参见 [（可选）预览轮播横幅](#optional-previewing-carousel-banners).
 
 1. 选择&#x200B;**[!UICONTROL 保存]**。
-1. 發佈輪播集。 發佈作業會建立您可在網站頁面上使用的內嵌程式碼或URL。 如果您是Experience Manager Sites客戶，可以直接將輪播集新增至您的網頁。
+1. 发布轮播集。 发布会创建可在网站页面上使用的嵌入代码或URL。 如果您是Experience Manager Sites客户，则可以直接将轮播集添加到网页。
 
-   另請參閱 [發佈資產](/help/assets/publishing-dynamicmedia-assets.md).
+   参见 [发布资产](/help/assets/publishing-dynamicmedia-assets.md).
 
-   另請參閱 [新增輪播集至您的網站登陸頁面](#adding-a-carousel-banner-to-your-website-page)
+   参见 [向网站登陆页面添加轮播集](#adding-a-carousel-banner-to-your-website-page)
 
-## 編輯輪播集 {#editing-carousel-sets}
+## 编辑轮播集 {#editing-carousel-sets}
 
 >[!NOTE]
-必須將非管理使用者新增至 **[!UICONTROL dam-users]** 群組，以便能夠建立或編輯輪播橫幅。 如果您在建立或編輯時遇到問題，請洽詢您的系統管理員，由他為您新增 **[!UICONTROL dam-users]** 群組。
+必须将非管理用户添加到 **[!UICONTROL dam-users]** 组才能创建或编辑轮播横幅。 如果您在创建或编辑时遇到问题，请咨询您的系统管理员，以便他们将您添加到 **[!UICONTROL dam-users]** 组。
 
-您可以在「轉盤集」上執行各種編輯工作，例如：
+您可以对轮播集执行各种编辑任务，如下所示：
 
-* 新增幻燈片至輪播集。 另請參閱 [使用選取器](/help/assets/working-with-selectors.md).
-* 重新排序轉盤集中的投影片。
-* 刪除轉盤集中的資產。
-* 套用檢視器預設集。
-* 刪除傳送集。
-* 新增或編輯熱點與影像地圖。 另請參閱 [使用選取器](/help/assets/working-with-selectors.md).
+* 将幻灯片添加到轮播集。 另请参阅 [使用选择器](/help/assets/working-with-selectors.md).
+* 重新排序轮播集中的幻灯片。
+* 删除轮播集中的资源。
+* 应用查看器预设。
+* 删除轮播集。
+* 添加或编辑热点和图像映射。 另请参阅 [使用选择器](/help/assets/working-with-selectors.md).
 
-**若要編輯傳送集：**
+**要编辑传送集，请执行以下操作：**
 
-1. 執行下列任一項作業：
+1. 执行以下任一操作：
 
-   * 暫留在轉盤集資產上，然後選取「 」 **[!UICONTROL 編輯]** （鉛筆圖示）。
-   * 暫留在轉盤集資產上，選取 **[!UICONTROL 選取]** （勾選圖示），然後選取 **[!UICONTROL 編輯]** （在工具列上）。
+   * 将鼠标悬停在轮播集资源上，然后选择 **[!UICONTROL 编辑]** （铅笔图标）。
+   * 将鼠标悬停在轮播集资源上，选择 **[!UICONTROL 选择]** （复选标记图标），然后选择 **[!UICONTROL 编辑]** 工具栏上。
 
-   * 選取「轉盤集」資產，然後在頁面的左上角選取 **[!UICONTROL 編輯]** （鉛筆圖示）。
+   * 选择一个轮播集资源，然后在页面的左上角选择 **[!UICONTROL 编辑]** （铅笔图标）。
 
-1. 若要編輯轉盤集，請執行下列任一項作業：
+1. 要编辑轮播集，请执行以下任一操作：
 
-   * 若要新增幻燈片，請選取 **[!UICONTROL 新增幻燈片]** 圖示然後導覽至您要新增至該幻燈片的資產，並選取核取記號。
-   * 若要重新排序幻燈片，請將幻燈片拖曳至新位置（選取重新排序圖示以移動專案）。
-   * 若要新增熱點或影像地圖，請選取熱點或影像地圖圖示並參閱 [新增連結區和影像地圖](#adding-hotspots-or-image-maps-to-an-image-banner).
-   * 若要編輯轉盤集的外觀或行為，請選取 **[!UICONTROL 外觀]** 標籤或 **[!UICONTROL 行為]** 標籤，然後設定您想要的選項。
-   * 若要編輯熱點或影像地圖，請在適當的投影片上，選取熱點或影像地圖，然後視需要在 **[!UICONTROL 動作]** 標籤。
-   * 若要刪除幻燈片，請選取幻燈片，然後選取 **[!UICONTROL 刪除幻燈片]** （在工具列上）。
-   * 若要套用預設集，在頁面右上角附近，選取 **[!UICONTROL 預設集]** 下拉式清單，然後選取檢視器預設集。
-   * 若要刪除整個輪播集，請導覽至輪播集，選取該集，然後選取 **[!UICONTROL 刪除]**.
+   * 要添加幻灯片，请选择 **[!UICONTROL 添加幻灯片]** 图标，然后导航到要添加到该幻灯片的资源并选中复选标记。
+   * 要重新排序幻灯片，请将幻灯片拖到新位置（选择重新排序图标以移动项目）。
+   * 要添加热点或图像映射，请选择热点或图像映射图标并参见 [添加热点和图像映射](#adding-hotspots-or-image-maps-to-an-image-banner).
+   * 要编辑轮播集的外观或行为，请选择 **[!UICONTROL 外观]** 选项卡或 **[!UICONTROL 行为]** 选项卡，然后设置所需的选项。
+   * 要编辑热点或图像映射，请在相应的幻灯片上选择一个热点或图像映射，然后根据需要在 **[!UICONTROL 操作]** 选项卡。
+   * 要删除幻灯片，请选择它，然后选择 **[!UICONTROL 删除幻灯片]** 工具栏上。
+   * 要应用预设，请在页面的右上角附近，选择 **[!UICONTROL 预设]** 下拉列表，然后选择查看器预设。
+   * 要删除整个轮播集，请导航到轮播集，选择它，然后选择 **[!UICONTROL 删除]**.
 
    >[!NOTE]
-   如果您使用熱點編輯互動式影像並裁切影像，則會移除熱點。
+   如果您正在编辑具有热点的交互式图像并裁切图像，则您的热点会被删除。
 
-## （選用）預覽輪播橫幅 {#optional-previewing-carousel-banners}
+## （可选）预览轮播横幅 {#optional-previewing-carousel-banners}
 
-您可以使用「預覽」來檢視轉盤橫幅對客戶的顯示方式，以及測試轉盤橫幅熱點與影像地圖，以確保它們如預期般運作。
+您可以使用“预览”来查看轮播横幅向客户显示的方式，并测试轮播横幅热点和图像映射，以确保它们按预期运行。
 
-當您滿意輪播橫幅時，可以將其發佈。
-另請參閱 [將視訊或影像檢視器內嵌在網頁上](/help/assets/embed-code.md).
-另請參閱 [將URL連結至您的網頁應用程式](/help/assets/linking-urls-to-yourwebapplication.md). 如果您的互動式內容具有具有具有相對URL的連結，尤其是指向Experience Manager Sites頁面的連結，則無法採用URL型連結方法。
-另請參閱 [將Dynamic Media資產新增至頁面](/help/assets/adding-dynamic-media-assets-to-pages.md).
+如果您对轮播横幅满意，则可以发布它。
+参见 [在网页上嵌入视频查看器或图像查看器](/help/assets/embed-code.md).
+参见 [将URL关联到您的Web应用程序](/help/assets/linking-urls-to-yourwebapplication.md). 如果您的交互式内容具有带相对URL的链接，尤其是指向Experience Manager Sites页面的链接，则无法基于URL的链接方法。
+参见 [将Dynamic Media资源添加到页面](/help/assets/adding-dynamic-media-assets-to-pages.md).
 
-您可以從輪播編輯器（偏好方法）預覽輪播橫幅，或從 **[!UICONTROL 檢視者]** 清單。
+您可以从轮播编辑器（首选方法）预览轮播横幅，也可以从 **[!UICONTROL 查看器]** 列表。
 
-**若要預覽輪播橫幅：**
+**要预览轮播横幅，请执行以下操作：**
 
-1. 在 **[!UICONTROL 資產]**，導覽至您建立的現有輪播橫幅，並選取以開啟它。
+1. In **[!UICONTROL 资产]**，导航到您创建的现有轮播横幅，然后选择以将其打开。
 1. 选择&#x200B;**[!UICONTROL 编辑]**。
-1. 在工具列右角的檢視器預設集清單中，選取檢視器以預覽輪播橫幅。
+1. 在工具栏右上角的查看器预设列表中，选择一个查看器以预览轮播横幅。
 
    ![experience_fragment-carouselbanner-viewerdropdown](assets/experience_fragment-carouselbanner-viewerdropdown.png)
 
-1. 選取 **[!UICONTROL 預覽]**.
-1. 選取影像上的熱點或影像地圖，以便測試其相關動作。
+1. 选择 **[!UICONTROL 预览]**.
+1. 选择图像上的热点或图像映射，以便测试其关联的操作。
 
-**若要從「檢視器」清單預覽輪播橫幅：**
+**要从查看器列表中预览轮播横幅，请执行以下操作：**
 
-1. 在 **[!UICONTROL 資產]**，導覽至您建立的現有輪播橫幅，並選取以開啟它。
-1. 在「預覽」頁面的左上角附近，選取「內容」圖示。
-1. 在 **[!UICONTROL 檢視者]** 在頁面左側的面板中，選取您要使用的輪播橫幅檢視器預設集名稱。
-1. 選取影像上的熱點或影像地圖，以便測試其相關動作。
+1. In **[!UICONTROL 资产]**，导航到您创建的现有轮播横幅，然后选择以将其打开。
+1. 在“预览”页面的左上角附近，选择“内容”图标。
+1. 在 **[!UICONTROL 查看器]** 在页面左侧的面板中，选择要使用的轮播横幅查看器预设的名称。
+1. 选择图像上的热点或图像映射，以便测试其关联的操作。
 
-## 發佈輪播橫幅 {#publishing-carousel-banners}
+## 发布轮播横幅 {#publishing-carousel-banners}
 
-發佈輪播以便使用。 發佈轉盤集時會啟用URL和內嵌程式碼。 此外也會將輪播發佈至Dynamic Media雲端，此雲端已與CDN整合，可提供可擴充且優異的傳送效能。
-
->[!NOTE]
-如果您針對轉盤橫幅使用具有熱點的現有互動影像，則必須在發佈轉盤橫幅後個別發佈互動影像。
-此外，如果您修改轉盤橫幅中正在使用的預先存在的已發佈互動影像，則必須先發佈互動影像，這些變更才會反映在轉盤橫幅中。
-
-另請參閱 [發佈Dynamic Media資產](/help/assets/publishing-dynamicmedia-assets.md) 以取得如何發佈輪播橫幅的資訊。
-
-## 新增輪播橫幅至您的網站頁面 {#adding-a-carousel-banner-to-your-website-page}
-
-在您上傳橫幅影像以建立轉盤、新增熱點及/或影像地圖至橫幅並發佈轉盤集後，現在就可以將其新增至您現有的網站頁面了。
+发布轮播以便您可以使用。 发布轮播集将激活URL和嵌入代码。 它还将轮播发布到与CDN集成的Dynamic Media云，以进行可扩展和性能良好的交付。
 
 >[!NOTE]
-如果您是Experience Manager Sites客戶，您可以將互動式媒體元件拖曳至頁面，直接將輪播橫幅新增至頁面。 另請參閱 [將Dynamic Media資產新增至頁面](/help/assets/adding-dynamic-media-assets-to-pages.md).
+如果为轮播横幅使用带热点的现有交互式图像，则必须在发布轮播横幅后单独发布交互式图像。
+此外，如果您修改了转盘横幅中正在使用的预先存在的已发布交互式图像，则必须先发布该交互式图像，然后这些更改才会反映在转盘横幅中。
 
-不過，如果您是獨立的Experience Manager資產客戶，可以手動將輪播橫幅新增至您的網站登陸頁面，如本節所述。
+参见 [发布Dynamic Media资源](/help/assets/publishing-dynamicmedia-assets.md) 了解有关如何发布轮播横幅的信息。
 
-1. 複製已發佈轉盤集的內嵌程式碼。
-另請參閱 [將視訊或影像檢視器內嵌在網頁上](/help/assets/embed-code.md).
+## 向您的网站页面添加轮播横幅 {#adding-a-carousel-banner-to-your-website-page}
 
-1. 將您從Experience Manager Assets複製的內嵌程式碼新增至網頁。
-複製的內嵌程式碼會回應，因此必須自動配合頁面的內嵌區域。
-
-## 將輪播橫幅與現有的快速檢視整合 {#integrating-the-carousel-banner-with-an-existing-quickview}
+在上传横幅图像以创建轮播、将热点和/或图像映射添加到横幅并发布轮播集后，您现在可以将其添加到现有网站页面。
 
 >[!NOTE]
-此步驟僅適用於獨立Experience Manager Assets客戶。
+如果您是Experience Manager Sites客户，则可以通过将交互式媒体组件拖动到页面来将轮播横幅直接添加到页面。 参见 [将Dynamic Media资源添加到页面](/help/assets/adding-dynamic-media-assets-to-pages.md).
 
-此程式的最後一步是將轉盤橫幅與網站上現有的快速檢視實作整合。 每個Quickview實作都是獨一無二的，而且需要涉及前端IT人員協助的特定方法。
+但是，如果您是独立的Experience Managerassets客户，则可以手动将轮播横幅添加到网站登陆页面，如本节所述。
 
-現有的「快速檢視」實作通常代表一連串在網頁上發生的相互關聯動作，順序如下：
+1. 复制已发布的轮播集的嵌入代码。
+参见 [将视频或图像查看器嵌入网页](/help/assets/embed-code.md).
 
-1. 使用者會在您網站的使用者介面中觸發元素。
-1. 前端程式碼會根據步驟1所觸發的使用者介面元素來取得快速檢視URL。
-1. 前端計畫碼會使用步驟2中取得的URL傳送Ajax請求。
-1. 後端邏輯會將對應的快速檢視資料或內容傳回前端程式碼。
-1. 前端程式碼會載入Quickview資料或內容。
-1. 前端程式碼可選擇性將載入的快速檢視資料轉換為HTML表示法。
-1. 前端程式碼會顯示強制回應對話方塊或面板，並在畫面上為一般使用者呈現HTML內容。
+1. 将您从Experience Manager Assets复制的嵌入代码添加到您的网页。
+复制的嵌入代码是响应式的，因此它必须自动适合页面的嵌入区域。
 
-這些呼叫不代表網頁邏輯可從任意步驟呼叫的獨立公用API呼叫。 而是鏈結式呼叫，每個下一個步驟都隱藏在上一個步驟的最後一個階段（回呼）中。
+## 将轮播横幅与现有概览集成 {#integrating-the-carousel-banner-with-an-existing-quickview}
 
-在輪播橫幅取代步驟1和部分步驟2的同時，當使用者在輪播橫幅內點選熱點或影像地圖時，這類互動會由檢視器處理。 檢視器會將事件傳回至包含先前新增之所有熱點或影像地圖資料的網頁。
+>[!NOTE]
+此步骤仅适用于Experience Manager Assets独立客户。
 
-在此類事件處理常式中，前端程式碼會執行下列動作：
+此流程的最后一步是将轮播横幅与网站上现有的概览实施集成。 每个概览实施都是独一无二的，需要涉及前端IT人员帮助的特定方法。
 
-* 接聽輪播橫幅發出的事件。
-* 根據熱點或影像地圖資料建構快速檢視URL。
-* 觸發從後端載入快速檢視並在畫面上呈現以供顯示的程式。
+现有的概览实施通常表示在网页上发生的一系列相互关联的操作，顺序如下：
 
-Experience Manager Assets傳回的內嵌程式碼已備有備註的現成可用事件處理常式。
+1. 用户在网站的用户界面中触发元素。
+1. 前端代码基于在步骤1中触发的用户界面元素获取概览URL。
+1. 前端代码使用在步骤2中获取的URL发送Ajax请求。
+1. 后端逻辑将相应的概览数据或内容返回到前端代码。
+1. 前端代码加载概览数据或内容。
+1. 前端代码可以选择将加载的概览数据转换为HTML表示形式。
+1. 前端代码显示一个模式对话框或面板，并在屏幕上为最终用户渲染HTML内容。
 
-因此，只需取消註解程式碼，並將虛擬處理常式主體取代為特定網頁專用的程式碼。
+这些调用不表示独立的公共API调用，网页逻辑可以从任意步骤调用这些API调用。 相反，它是一个链接调用，其中每个下一步都隐藏在上一步的最后阶段（回调）中。
 
-建構快速檢視URL的程式與用來識別先前涵蓋的熱點和影像地圖變數的程式相反。
+在轮播横幅替换步骤1和部分步骤2的同时，当用户点按轮播横幅内的热点或图像映射时，此类交互由查看器处理。 查看器会向包含之前添加的所有热点或图像映射数据的网页返回一个事件。
 
-另請參閱 [識別熱點和影像地圖變數](#identifying-hotspot-and-image-map-variables).
+在此类事件处理程序中，前端代码执行以下操作：
 
-觸發「快速檢視」URL和啟動「快速檢視」面板的最後一個步驟，很可能需要您IT部門的前端IT人員的協助。 他們深知如何透過適當的步驟正確觸發快速檢視實施，並擁有現成的快速檢視URL。
+* 侦听轮播横幅发出的事件。
+* 根据热点或图像映射数据构建概览URL。
+* 触发从后端加载概览并在屏幕上呈现以进行显示的过程。
+
+Experience Manager Assets返回的嵌入代码已具有现成的事件处理程序，该处理程序已被注释掉。
+
+因此，只需取消注释代码，并用特定网页特定的代码替换虚拟处理程序主体即可。
+
+构建概观URL的过程与用于标识先前覆盖的热点和图像映射变量的过程相反。
+
+参见 [识别热点和图像映射变量](#identifying-hotspot-and-image-map-variables).
+
+触发概观URL和激活概览面板的最后一步很可能需要您IT部门的前端IT人员的协助。 他们最清楚如何从适当的步骤准确触发概览实施，拥有一个现成的概观URL。
 
 ## 使用 Quickview 创建自定义弹出窗口 {#using-quickviews-to-create-custom-pop-ups}
 
-另請參閱 [使用Quickview建立自訂快顯視窗](/help/assets/custom-pop-ups.md).
+参见 [使用Quickview创建自定义弹出窗口](/help/assets/custom-pop-ups.md).

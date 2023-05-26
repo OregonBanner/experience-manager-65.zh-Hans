@@ -1,7 +1,7 @@
 ---
 title: 管理对工作流的访问权限
 seo-title: Managing Access to Workflows
-description: 瞭解如何管理工作流程存取許可權。
+description: 了解如何管理对工作流的访问。
 seo-description: Learn how to manage access to Workflows.
 uuid: 58f79b89-fe56-4565-a869-8179c1ac68de
 contentOwner: User
@@ -19,102 +19,102 @@ ht-degree: 2%
 
 # 管理对工作流的访问权限{#managing-access-to-workflows}
 
-根據使用者帳戶設定ACL，以允許（或停用）啟動和參與工作流程。
+根据用户帐户配置ACL以允许（或禁用）启动和参与工作流。
 
-## 工作流程所需的使用者許可權 {#required-user-permissions-for-workflows}
+## 工作流所需的用户权限 {#required-user-permissions-for-workflows}
 
-在下列情況下，可以對工作流程採取行動：
+在以下情况下，可以对工作流执行操作：
 
-* 您正在使用 `admin` 帳戶
-* 已將帳戶指派給預設群組 `workflow-users`：
+* 您正在使用 `admin` 帐户
+* 该帐户已分配给默认组 `workflow-users`：
 
-   * 此群組擁有您的使用者執行工作流程動作所需的所有許可權。
-   * 當帳戶在此群組中時，它只能存取它啟動的工作流程。
+   * 此组拥有用户执行工作流操作所需的所有权限。
+   * 当帐户处于此组中时，它只能访问它启动的工作流。
 
-* 已將帳戶指派給預設群組 `workflow-administrators`：
+* 该帐户已分配给默认组 `workflow-administrators`：
 
-   * 此群組擁有您的有特殊許可權使用者監視和管理工作流程所需的所有許可權。
-   * 當帳戶在此群組中時，它可以存取所有工作流程。
-
->[!NOTE]
->
->這些是最低需求。 您的帳戶也必須是指派的參與者或已指派群組的成員，才能執行特定步驟。
-
-## 設定工作流程的存取權 {#configuring-access-to-workflows}
-
-工作流程模型會繼承預設存取控制清單(ACL)，以控制使用者與工作流程互動的方式。 若要自訂工作流程的使用者存取，請修改包含工作流程模型節點之資料夾的存放庫中的「存取控制清單(ACL)」：
-
-* [將特定工作流程模型的ACL套用至/var/workflow/models](/help/sites-administering/workflows-managing.md#apply-an-acl-for-the-specific-workflow-model-to-var-workflow-models)
-* [在/var/workflow/models中建立子資料夾，並將ACL套用至該資料夾](/help/sites-administering/workflows-managing.md#create-a-subfolder-in-var-workflow-models-and-apply-the-acl-to-that)
+   * 此组拥有拥有拥有权限的用户监视和管理工作流所需的所有权限。
+   * 当帐户处于此组中时，它有权访问所有工作流。
 
 >[!NOTE]
 >
->如需有關使用CRXDE Lite來設定ACL的資訊，請參閱 [存取許可權管理](/help/sites-administering/user-group-ac-admin.md#access-right-management).
+>这些是最低要求。 您的帐户还必须为已分配参与者或已分配组的成员，才能执行特定步骤。
 
-### 將特定工作流程模型的ACL套用至/var/workflow/models {#apply-an-acl-for-the-specific-workflow-model-to-var-workflow-models}
+## 配置对工作流的访问权限 {#configuring-access-to-workflows}
 
-如果工作流程模型儲存在 `/var/workflow/models` 然後，您可以在資料夾上指派特定的ACL （僅與該工作流程相關）：
+工作流模型继承了用于控制用户如何与工作流交互的默认访问控制列表(ACL)。 要自定义工作流的用户访问权限，请在存储库中为包含工作流模型节点的文件夹修改访问控制列表(ACL)：
 
-1. 在網頁瀏覽器中開啟CRXDE Lite(例如， [http://localhost:4502/crx/de](http://localhost:4502/crx/de))。
-1. 在節點樹狀結構中，選取工作流程模型資料夾的節點：
+* [将特定工作流模型的ACL应用于/var/workflow/models](/help/sites-administering/workflows-managing.md#apply-an-acl-for-the-specific-workflow-model-to-var-workflow-models)
+* [在/var/workflow/models中创建子文件夹，并将ACL应用于该子文件夹](/help/sites-administering/workflows-managing.md#create-a-subfolder-in-var-workflow-models-and-apply-the-acl-to-that)
+
+>[!NOTE]
+>
+>有关使用CRXDE Lite配置ACL的信息，请参见 [访问权限管理](/help/sites-administering/user-group-ac-admin.md#access-right-management).
+
+### 将特定工作流模型的ACL应用于/var/workflow/models {#apply-an-acl-for-the-specific-workflow-model-to-var-workflow-models}
+
+如果工作流模型存储在中 `/var/workflow/models` 然后，您可以在文件夹上指定仅与该工作流相关的特定ACL：
+
+1. 在Web浏览器中打开CRXDE Lite(例如， [http://localhost:4502/crx/de](http://localhost:4502/crx/de))。
+1. 在节点树中，为工作流模型文件夹选择节点：
 
    `/var/workflow/models`
 
-1. 按一下 **存取控制** 標籤。
-1. 在 **本機存取控制原則** (**存取控制清單**)表格中，按一下加號圖示以 **新增專案**.
-1. 在 **新增專案** 對話方塊新增具有下列屬性的新ACE：
+1. 单击 **访问控制** 选项卡。
+1. 在 **本地访问控制策略** (**访问控制列表**)表格中，单击加号图标以 **添加条目**.
+1. 在 **添加新条目** 对话框添加具有下列属性的新ACE：
 
-   * **主體**： `content-authors`
+   * **主体**： `content-authors`
    * **类型**: `Deny`
-   * **許可權**： `jcr:read`
-   * **rep：glob**：參考特定工作流程
+   * **权限**： `jcr:read`
+   * **rep：glob**：对特定工作流的引用
 
    ![wf-108](assets/wf-108.png)
 
-   此 **存取控制清單** 表格現在包含 `content-authors` 於 `prototype-wfm-01` 工作流程模型。
+   此 **访问控制列表** 表现在包含限制 `content-authors` 在 `prototype-wfm-01` 工作流模型。
 
    ![wf-109](assets/wf-109.png)
 
-1. 按一下 **全部儲存**.
+1. 单击 **全部保存**.
 
-   此 `prototype-wfm-01` 工作流程不再適用於的會員 `content-authors` 群組。
+   此 `prototype-wfm-01` 工作流不再对的成员可用 `content-authors` 组。
 
-### 在/var/workflow/models中建立子資料夾，並將ACL套用至該資料夾 {#create-a-subfolder-in-var-workflow-models-and-apply-the-acl-to-that}
+### 在/var/workflow/models中创建子文件夹，并将ACL应用于该子文件夹 {#create-a-subfolder-in-var-workflow-models-and-apply-the-acl-to-that}
 
-您的 [開發團隊可以在子資料夾中建立工作流程](/help/sites-developing/workflows-models.md#creating-a-new-workflow) 之
+您的 [开发团队可以在子文件夹中创建工作流](/help/sites-developing/workflows-models.md#creating-a-new-workflow) 之
 
 `/var/workflow/models`
 
-與以下儲存的DAM工作流程比較：
+类似于存储在下的DAM工作流
 
 `/var/workflow/models/dam/`
 
-然後，您可以將ACL新增至資料夾本身。
+然后，您可以将ACL添加到文件夹本身。
 
-1. 在網頁瀏覽器中開啟CRXDE Lite(例如， [http://localhost:4502/crx/de](http://localhost:4502/crx/de))。
-1. 在節點樹狀結構中，選取工作流程模型資料夾中個別資料夾的節點；例如：
+1. 在Web浏览器中打开CRXDE Lite(例如， [http://localhost:4502/crx/de](http://localhost:4502/crx/de))。
+1. 在节点树中，为工作流模型文件夹中的单个文件夹选择节点；例如：
 
    `/var/workflow/models/prototypes`
 
-1. 按一下 **存取控制** 標籤。
-1. 在 **適用的存取控制原則** 表格中，按一下加號圖示以 **新增** 一個專案。
-1. 在 **本機存取控制原則** (**存取控制清單**)表格中，按一下加號圖示以 **新增專案**.
-1. 在 **新增專案** 對話方塊新增具有下列屬性的新ACE：
+1. 单击 **访问控制** 选项卡。
+1. 在 **适用的访问控制策略** 表格中，单击加号图标 **添加** 一个条目。
+1. 在 **本地访问控制策略** (**访问控制列表**)表格中，单击加号图标以 **添加条目**.
+1. 在 **添加新条目** 对话框添加具有下列属性的新ACE：
 
-   * **主體**： `content-authors`
+   * **主体**： `content-authors`
    * **类型**: `Deny`
-   * **許可權**： `jcr:read`
+   * **权限**： `jcr:read`
 
    >[!NOTE]
    >
-   >與 [將特定工作流程模型的ACL套用至/var/workflow/models](/help/sites-administering/workflows-managing.md#apply-an-acl-for-the-specific-workflow-model-to-var-workflow-models) 您可以加入rep：glob來限制對特定工作流程的存取。
+   >与 [将特定工作流模型的ACL应用于/var/workflow/models](/help/sites-administering/workflows-managing.md#apply-an-acl-for-the-specific-workflow-model-to-var-workflow-models) 您可以包含rep：glob以限制对特定工作流的访问。
 
    ![wf-110](assets/wf-110.png)
 
-   此 **存取控制清單** 表格現在包含 `content-authors` 於 `prototypes` 資料夾。
+   此 **访问控制列表** 表现在包含限制 `content-authors` 在 `prototypes` 文件夹。
 
    ![wf-111](assets/wf-111.png)
 
-1. 按一下 **全部儲存**.
+1. 单击 **全部保存**.
 
-   中的模型 `prototypes` 資料夾不再可供的成員使用。 `content-authors` 群組。
+   中的模型 `prototypes` 文件夹不再对的成员可用 `content-authors` 组。

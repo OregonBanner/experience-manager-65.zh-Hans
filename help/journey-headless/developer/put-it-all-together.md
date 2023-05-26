@@ -11,4 +11,4 @@ ht-degree: 65%
 
 # 如何汇总您的应用程序和 AEM Headless 中的内容 {#put-it-all-together}
 
-本頁旨在提供如何使用所有新AEM Headless SDK設定本機開發專案的指引。 SDK公開後，敬請留意更多詳細資訊。
+本页旨在提供有关如何使用所有新的AEM Headless SDK设置本地开发项目的指导。 在SDK公开可用后，请继续关注更多详细信息。

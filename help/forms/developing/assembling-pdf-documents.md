@@ -1,7 +1,7 @@
 ---
-title: 組裝PDF檔案
+title: 组合PDF文档
 seo-title: Assembling PDF Documents
-description: 使用「組合器」服務將多個PDF檔案組合成一個PDF檔案，或將一個PDF檔案分解成多個PDF檔案。
+description: 使用Assembler服务将多个PDF文档组合为一个PDF文档，或将一个PDF文档分解为多个PDF文档。
 seo-description: Use the Assembler service to assemble multiple PDF documents into one PDF document or disassemble one PDF document into multiple PDF documents.
 uuid: 0789feea-1bbc-4acd-9ad7-ddf4d05e1c68
 contentOwner: admin
@@ -19,16 +19,16 @@ ht-degree: 0%
 
 ---
 
-# 組裝PDF檔案 {#assembling-pdf-documents}
+# 组合PDF文档 {#assembling-pdf-documents}
 
-**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms 。**
+**本文档中的示例和示例仅适用于AEM Forms on JEE环境。**
 
-**關於組合器服務**
+**关于汇编程序服务**
 
-組合器服務可以將多個PDF檔案組合成一個PDF檔案，或將一個PDF檔案分解成多個PDF檔案。 Assembler服務可以各種方式操作檔案，例如變更頁面大小和旋轉內容。 它可以插入其他內容，例如頁首、頁尾和目錄，並可以保留、匯入或匯出現有內容，例如註解、檔案附件和書籤。
+汇编程序服务可以将多个PDF文档汇编到一个PDF文档中，或将一个PDF文档拆解到多个PDF文档中。 Assembler服务可以通过多种方式操作文档，例如更改页面大小和旋转内容。 它可以插入其他内容，如页眉、页脚和目录，还可以保留、导入或导出现有内容，如注释、文件附件和书签。
 
-從LiveCycleES 8.0和更新版本開始，Assembler服務中提供PDF套件的支援。
+从LiveCycleES 8.0及更高版本开始，Assembler服务中提供了对PDF包的支持。
 
 >[!NOTE]
 >
->如需有關組合器服務的詳細資訊，請參閱 [AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
+>有关汇编程序服务的详细信息，请参见 [AEM Forms的服务参考](https://www.adobe.com/go/learn_aemforms_services_63).

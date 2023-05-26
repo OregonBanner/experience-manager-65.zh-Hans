@@ -1,7 +1,7 @@
 ---
-title: 在離線模式下工作
+title: 在脱机模式下工作
 seo-title: Working in the offline mode
-description: 讓您的行動裝置在AEM Forms網路範圍以外或完全離線模式下離線，並在AEM Forms應用程式上運作
+description: 在AEM Forms网络范围之外或完全脱机模式下，使移动设备脱机，然后在AEM Forms应用程序上工作
 seo-description: Take your mobile device offline outside your AEM Forms network range or in a completely offline mode and work on the AEM Forms app
 uuid: b900a0f8-90ce-486a-bde6-6cdf11bd2801
 content-type: reference
@@ -16,37 +16,37 @@ ht-degree: 0%
 
 ---
 
-# 在離線模式下工作 {#working-in-the-offline-mode}
+# 在脱机模式下工作 {#working-in-the-offline-mode}
 
-AEM Forms應用程式的離線模式可讓您順暢地工作，即使應用程式離線亦然。 您可以開啟、更新和提交表單，而不需要任何網路連線。
+AEM Forms应用程序的离线模式允许您无缝工作，即使应用程序离线也是如此。 您可以打开、更新和提交表格，而无需任何网络连接。
 
-您一開始會使用AEM Forms應用程式，方法是將應用程式與AEM Forms伺服器同步。 指派給您的所有表單都會在您的應用程式中下載。 若為JEE版AEM Forms，任務會在「任務」標籤中擷取，而起點會與「Forms」標籤中的表單和其他表單相關聯。 若為OSGi上的AEM Forms，Forms標籤中只會載入Forms。
+您可通过将应用程序与AEM Forms服务器同步来开始使用AEM Forms应用程序。 分配给您的所有表单都将在您的应用程序中下载。 对于JEE上的AEM Forms，任务在“任务”选项卡中获取，起点关联表单和其他表单在“Forms”选项卡中获取。 对于OSGi上的AEM Forms，Forms选项卡中只加载Forms。
 
-如需如何同步應用程式的詳細資訊，請參閱 [同步應用程式](/help/forms/using/sync-app.md).
+有关如何同步应用程序的详细信息，请参阅 [同步应用程序](/help/forms/using/sync-app.md).
 
-## 讓Forms可離線使用 {#making-forms-available-offline}
+## 使Forms可离线使用 {#making-forms-available-offline}
 
-當您將應用程式與AEM Forms伺服器同步時，表單會下載至您的行動裝置。 不過，預設不會下載與表單相關聯的附件。 這表示如果您線上上，則可以檢視附件。 不過，若要確保您能以離線模式檢視附件，請變更應用程式中的預設設定。
+将应用程序与AEM Forms服务器同步时，表单将下载到移动设备。 但是，默认情况下，不会下载与表单关联的附件。 这意味着如果您处于联机状态，则可以查看附件。 但是，要确保您可以在脱机模式下查看附件，请更改应用程序中的默认设置。
 
-為確保每個表單都下載關聯的附件，請將「擷取附件」設定為「開啟」。 如需詳細資訊，請參閱 [更新一般設定](/help/forms/using/update-general-settings.md).
+为确保随每个表单一起下载关联的附件，请将“提取附件”设置为“启用”。 有关详细信息，请参阅 [更新常规设置](/help/forms/using/update-general-settings.md).
 
-由於下載行動裝置上的資料可能會影響裝置的效能，依預設，「擷取附件」設定會設為「關閉」。 當設定更新為「開啟」後，任何從伺服器下載的工作的附件都會擷取到裝置。 在離線模式中，使用者可在設定 **擷取附件** 選項至ON。
+由于在移动设备上下载数据可能会影响设备的性能，因此，默认情况下，提取附件设置将设置为OFF。 在设置更新为“开”后，将从服务器下载的任何任务的附件都会被提取到设备中。 在脱机模式下，用户可以在设置之后处理下载到设备的所有任务 **获取附件** 选项更改为ON。
 
-## 為AEM Forms應用程式設定離線服務 {#configuring-offline-service-for-aem-forms-app-br}
+## 为AEM Forms应用程序配置离线服务 {#configuring-offline-service-for-aem-forms-app-br}
 
-AEM Forms app離線服務會識別表單中使用的資源。 AEM Forms應用程式依賴此服務來取得表單相依性的相關資訊。 啟用離線功能需要表單相依性的相關資訊。 AEM Forms應用程式離線服務會快取表單中所使用資源的路徑或URL。 快取會根據表單中的變更以及為離線服務設定的有效期而更新。 快取表單中使用的資源的路徑或URL可改善伺服器端效能。
+AEM Forms app离线服务标识表单中使用的资源。 AEM Forms应用程序依赖此服务获取有关表单依赖项的信息。 需要有关表单依赖项的信息才能启用离线功能。 AEM Forms App离线服务可缓存表单中使用的资源的路径或URL。 缓存会根据表单中的更改以及为离线服务配置的有效期进行更新。 缓存表单中使用的资源的路径或URL可提高服务器端性能。
 
-若要設定AEM Forms應用程式的伺服器端離線元件：
+要配置AEM Forms应用程序的服务器端离线组件，请执行以下操作：
 
-1. 在作者執行個體中，導覽至 **Adobe Experience Manager** >**工具** > **Forms** > **設定Forms App離線服務**.
+1. 在创作实例中，导航到 **Adobe Experience Manager** >**工具** > **Forms** > **配置Forms App离线服务**.
 
    URL: `https://<server>:<port>/<context-path>/libs/fd/workspace-offline/gui/content/config.html`
 
-1. 在「一般設定」下，您可以執行下列動作：
+1. 在“常规设置”下，可以执行以下操作：
 
-   * **清除快取**：清除表單相依性的伺服器端快取。
-   * **重設設定**：重設AEM Forms應用程式離線設定。
-   * **快取有效性**：指定伺服器端離線快取的有效期。
-   * **資源觀察路徑**：指定離線服務監控資源變更的路徑。 如果指定路徑中發生任何變更，則會更新所有相依表單的離線快取。 例如：`/etc/clientlibs/fd,/content/dam/images`。
+   * **清除缓存**：清除表单依赖项的服务器端缓存。
+   * **重置配置**：重置AEM Forms应用程序离线配置。
+   * **缓存有效性**：指定服务器端离线缓存的有效期。
+   * **资源观察路径**：指定脱机服务用于监视资源更改的路径。 如果在指定的路径中发生任何更改，则会更新所有依赖表单的离线缓存。 例如：`/etc/clientlibs/fd,/content/dam/images`。
 
-1. 在 **手動資源快取** 索引標籤中，指定表單相依性離線服務無法識別。 您可以指定資源，例如從JavaScript內載入的影像。 AEM Forms應用程式也將以離線模式下載這些資源。
+1. 在 **手动资源缓存** 选项卡，指定表单依赖项脱机服务无法识别。 您可以指定资源，例如从JavaScript中加载的图像。 AEM Forms应用程序也将下载这些资源，以用于离线模式。

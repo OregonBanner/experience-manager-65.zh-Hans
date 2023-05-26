@@ -1,7 +1,7 @@
 ---
-title: 在AEM Forms工作區中整合第三方應用程式
+title: 在AEM Forms工作区中集成第三方应用程序
 seo-title: Integrating third-party applications in AEM Forms workspace
-description: 在AEM Forms工作區中整合協力廠商應用程式，例如通訊管理。
+description: 在AEM Forms工作区中集成第三方应用程序，例如通信管理。
 seo-description: How-to integrate third-party apps like Correspondence Management in AEM Forms workspace.
 uuid: 7654cf86-b896-4db2-8f5d-6c1b2e6c229f
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -16,55 +16,55 @@ ht-degree: 0%
 
 ---
 
-# 在AEM Forms工作區中整合第三方應用程式{#integrating-third-party-applications-in-aem-forms-workspace}
+# 在AEM Forms工作区中集成第三方应用程序{#integrating-third-party-applications-in-aem-forms-workspace}
 
-AEM Forms工作區支援管理表單與檔案的任務指派與完成活動。 這些表單和檔案可以是XDP Forms、Flex®表單或已棄用的XDP、PDF、HTML或Flex格式轉譯指南。
+AEM Forms工作区支持管理表单和文档的任务分配和完成活动。 这些表单和文档可以是以XDP、PDF、HTML或Flex格式呈现的XDP Forms、Flex®表单或指南（已弃用）。
 
-這些功能會進一步增強。 AEM Forms現在支援與協力廠商應用程式共同作業，這些應用程式支援與AEM Forms工作區類似的功能。 此功能的共同部分是任務指派和後續核准的工作流程。 AEM Forms為AEM Forms企業使用者提供單一統一的體驗，以便透過AEM Forms工作區處理受支援應用程式的所有此類任務指派或核准。
+这些功能得到了进一步增强。 AEM Forms现在支持与第三方应用程序协作，这些应用程序支持与AEM Forms工作区类似的功能。 此功能的共同部分是任务分配和后续审批的工作流。 AEM Forms为AEM Forms企业用户提供单一的统一体验，以便通过AEM Forms工作区处理所支持应用程序的所有此类任务分配或批准。
 
-例如，我們將「通訊管理」視為與AEM Forms工作區整合的候選範例。 Correspondence Management具有「信件」的概念，可以轉譯並允許動作。
+例如，让我们将通信管理视为与AEM Forms工作区集成的示例候选项。 通信管理具有“信件”的概念，可以渲染信件并允许操作。
 
-## 建立對應管理資產 {#create-correspondence-management-assets}
+## 创建相应的管理资产 {#create-correspondence-management-assets}
 
-首先，建立在AEM Forms工作區中轉譯的範例「通訊管理」範本。 如需詳細資訊，請參閱 [建立字母範本](../../forms/using/create-letter.md).
+首先，创建一个在AEM Forms工作区中渲染的示例通信管理模板。 有关更多详细信息，请参阅 [创建书信模板](../../forms/using/create-letter.md).
 
-存取「通訊管理」範本的URL以驗證「通訊管理」範本是否可以成功呈現。 URL的模式類似於 `https://'[server]:[port]'/lc/content/cm/createcorrespondence.html?cmLetterId=encodedLetterId&cmUseTestData=1&cmPreview=0;`
+访问其URL上的通信管理模板，以验证是否可以成功呈现通信管理模板。 URL的模式类似于 `https://'[server]:[port]'/lc/content/cm/createcorrespondence.html?cmLetterId=encodedLetterId&cmUseTestData=1&cmPreview=0;`
 
-位置 `encodedLetterId` 是URL編碼的字母識別碼。 在Workbench中定義工作區工作的轉譯流程時，請指定相同的字母ID。
+位置 `encodedLetterId` 是URL编码的书信ID。 在Workbench中为工作区任务定义渲染进程时，指定相同的书信ID。
 
-## 建立任務以在AEM Workspace中呈現和提交信件 {#create-a-task-to-render-and-submit-a-letter-in-aem-workspace}
+## 创建任务以在AEM Workspace中呈现和提交书信 {#create-a-task-to-render-and-submit-a-letter-in-aem-workspace}
 
-在執行這些步驟之前，請確定您是以下群組的成員：
+在执行这些步骤之前，请确保您是以下组的成员：
 
 * cm-agent-users
-* 工作區使用者
+* 工作区用户
 
-如需詳細資訊，請參閱 [新增和設定使用者](/help/forms/using/admin-help/adding-configuring-users.md).
+有关更多信息，请参阅 [添加和配置用户](/help/forms/using/admin-help/adding-configuring-users.md).
 
-使用以下步驟來建立任務，以便在AEM Workspace中轉譯和提交信件：
+使用以下步骤可创建任务以在AEM Workspace中渲染和提交书信：
 
-1. 啟動Workbench。 以管理員身分登入localhost。
-1. 按一下「檔案」>「新增」>「應用程式」。 在「應用程式名稱」欄位中，輸入 `CMDemoSample` 然後按一下[完成]。
-1. 選取 `CMDemoSample/1.0` 並按一下右鍵 `NewProcess`. 在名稱欄位中，輸入 `CMRenderer` 然後按一下[完成]。
-1. 拖曳起點活動選擇器並加以設定：
+1. 启动Workbench 以管理员身份登录到localhost。
+1. 单击“文件”>“新建”>“应用程序”。 在应用程序名称字段中，输入 `CMDemoSample` 然后单击“Finish（完成）”。
+1. 选择 `CMDemoSample/1.0` 并右键单击 `NewProcess`. 在名称字段中，输入 `CMRenderer` 然后单击“Finish（完成）”。
+1. 拖动起点活动选取器并对其进行配置：
 
-   1. 在簡報資料中，選取使用CRX資產。
+   1. 在演示文稿数据中，选择使用CRX资源。
 
       ![useacrxasset](assets/useacrxasset.png)
 
-   1. 瀏覽資產。 在「選取表單資產」對話方塊中，「字母」索引標籤會列出伺服器上的所有字母。
+   1. 浏览资产。 在“选择表单资产”对话框中，“字母”选项卡列出服务器上的所有字母。
 
-      ![字母索引標籤](assets/letter_tab_new.png)
+      ![“书信”选项卡](assets/letter_tab_new.png)
 
-   1. 選取適當的字母並按一下 **確定**.
+   1. 选择相应的书信并单击 **确定**.
 
-1. 按一下「管理動作設定檔」。 「管理動作設定檔」對話方塊隨即顯示。 請確定已正確選取轉譯程式和提交程式。
-1. 若要使用資料XML檔案開啟信件，請在「準備資料程式」中瀏覽並選取適當的資料檔案。
+1. 单击管理操作配置文件。 此时将显示“管理操作配置文件”对话框。 确保正确选择渲染进程和提交进程。
+1. 要打开带有数据XML文件的信件，请在准备数据流程中浏览并选择适当的数据文件。
 1. 单击确定。
-1. 定義起始點輸出和工作附件的變數。 定義的變數將包含「起始點輸出」和「工作附件」資料。
-1. （可選）若要在工作流程中新增其他使用者，請拖曳活動選擇器、設定活動選擇器並將其指派給使用者。 撰寫自訂包裝函式（以下提供範例）或下載並安裝DSC （以下提供）以擷取Letter範本、起點輸出和工作附件。
+1. 定义起点输出和任务附件的变量。 定义的变量将包含“起始点输出”和“任务附件”数据。
+1. （可选）要在工作流中添加其他用户，请拖动活动选取器，对其进行配置，并将其分配给用户。 编写自定义包装器（下面给出示例）或下载并安装DSC（下面给出示例）以提取书信模板、起点输出和任务附件。
 
-   自訂包裝函式的範例如下：
+   以下是自定义包装的示例：
 
    ```javascript
    public LetterInstanceInfo getLetterInstanceInfo(Document dataXML) throws Exception {
@@ -101,19 +101,19 @@ AEM Forms工作區支援管理表單與檔案的任務指派與完成活動。 �
    }
    ```
 
-   [取得檔案](assets/dscsample.zip)
-下載DSC：以上附加的DSCSample.zip檔案中提供範例DSC。 下載並解壓縮DSCSample.zip檔案。 在使用DSC服務之前，您必須先設定它。 如需詳細資訊，請參閱 [設定DSC服務](../../forms/using/add-action-button-in-create-correspondence-ui.md#p-configure-the-dsc-service-p).
+   [获取文件](assets/dscsample.zip)
+下载DSC：上面附加的DSCSample.zip文件中提供了一个示例DSC。 下载并解压缩DSCSample.zip文件。 在使用DSC服务之前，您需要对其进行配置。 有关信息，请参阅 [配置DSC服务](../../forms/using/add-action-button-in-create-correspondence-ui.md#p-configure-the-dsc-service-p).
 
-   在「定義活動」對話方塊中，選取適當的活動（例如getLetterInstanceInfo），然後按一下 **確定**.
+   在“定义活动”对话框中，选择相应的活动（如getLetterInstanceInfo），然后单击 **确定**.
 
-1. 部署應用程式。 如果出現提示，請入庫並儲存資產。
-1. 在https://&#39;登入AEM表單工作區[伺服器]：[連線埠]&#39;/lc/content/ws.
-1. 開啟您新增的工作CMRenderer。 「通訊管理」信函隨即出現。
+1. 部署应用程序。 如果出现提示，请签入并保存资产。
+1. 登录AEM表单工作区，网址为https://&#39;[服务器]：[端口]&#39;/lc/content/ws.
+1. 打开您添加的任务CMRenderer。 此时将出现“通信管理”信件。
 
    ![cminworkspace](assets/cminworkspace.png)
 
-1. 填寫所需資料並提交信件。 視窗關閉。 在此程式中，任務會指派給步驟9中工作流程中所指定的使用者。
+1. 填写所需数据并提交信件。 窗口关闭。 在此流程中，任务被分配到步骤9的工作流中指定的用户。
 
    >[!NOTE]
    >
-   >填妥信函中的所有必要變數後，才會啟用「提交」按鈕。
+   >只有在填写信件中的所有必需变量后，才会启用“提交”按钮。

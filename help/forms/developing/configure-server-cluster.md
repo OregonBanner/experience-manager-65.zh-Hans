@@ -1,6 +1,6 @@
 ---
-title: 如何在JEE伺服器叢集上設定和疑難排解AEM Forms？
-description: 瞭解如何在JEE伺服器叢集上設定和疑難排解AEM Forms
+title: 如何在JEE服务器群集中配置AEM Forms并进行故障排除？
+description: 了解如何在JEE服务器群集中配置AEM Forms并对其进行故障排除
 exl-id: 230fc2f1-e6e5-4622-9950-dae9449ed3f6
 source-git-commit: 1cdd15800548362ccdd9e70847d9df8ce93ee06e
 workflow-type: tm+mt
@@ -9,119 +9,119 @@ ht-degree: 0%
 
 ---
 
-# 在JEE伺服器叢集上設定和疑難排解AEM Forms {#configuring-troubleshooting-aem-forms-jee-server-cluster}
+# 在JEE服务器群集中配置AEM Forms并对其进行故障排除 {#configuring-troubleshooting-aem-forms-jee-server-cluster}
 
-## 必備條件知識 {#prerequisites}
+## 必备知识 {#prerequisites}
 
-熟悉JEE、JBoss、WebSphere和Webogic應用程式伺服器上的AEM Forms、Red Hat Linux、SUSE Linux、Microsoft Windows、IBM AIX或Sun Solaris作業系統、Oracle、IBM DB2或SQL Server資料庫伺服器，以及Web環境。
+熟悉JEE、JBoss、WebSphere和Webogic应用程序服务器、Red Hat Linux、SUSE Linux、Microsoft Windows、IBM AIX或Sun Solaris操作系统、Oracle、IBM DB2或SQL Server数据库服务器以及Web环境上的AEM Forms。
 
-## 使用者層級 {#user-level}
+## 用户级别 {#user-level}
 
 高级
 
-JEE Cluster上的AEM Forms是拓撲，旨在讓JEE上的AEM Forms能夠復原叢集節點的故障，並擴充系統容量，超越單一節點的能力。 叢集會將多個節點結合為單一邏輯系統，以共用資料並允許交易在執行中跨越多個節點。 在JEE上擴充AEM Forms的最常見方式是叢集，因為可以支援處理任何工作負載組合的任何服務組合。 JEE叢集上的AEM Forms不一定最適合所有型別的部署，尤其是非叢集伺服器負載平衡架構在許多情況下可能較為合適。
+JEE群集上的AEM Forms是一种拓扑，旨在使JEE上的AEM Forms能够抵御群集节点的故障，并扩展超出单个节点能力的系统容量。 群集将多个节点合并到一个逻辑系统中，该逻辑系统共享数据，并允许事务在执行中跨越多个节点。 集群是在JEE上扩展AEM Forms的最常见方式，因为可以支持处理任何工作负载组合的任何服务组合。 JEE群集上的AEM Forms不一定最适合所有类型的部署，特别是在许多情况下，非群集服务器负载平衡体系结构可能更合适。
 
-本檔案的目的是討論您在JEE叢集上使用AEM Forms時可能會遇到的具體設定需求和潛在問題區域。
+本文档旨在讨论在JEE集群上使用AEM Forms时可能遇到的具体配置要求和潜在问题领域。
 
-## 叢集中有什麼內容？ {#what-is-in-cluster}
+## 聚类中有什么？ {#what-is-in-cluster}
 
-JEE叢集節點上的AEM Forms會在彼此之間通訊，並共用資訊，讓整個叢集具有單一一致的設定和應用程式狀態。 叢集內的資訊共用是透過多種不同的方式同時完成的，這些方式會用於不同的前後關聯。 基本資訊分享方法如下圖所示：
+JEE群集节点上的AEM Forms相互通信并共享信息，以使整个群集具有单个一致的配置和应用程序状态。 集群内的信息共享是以多种不同的方式同时完成的，这些方式在不同的上下文中使用。 基本的信息共享方法如下图所示：
 
-![應用程式伺服器叢集](assets/application-server-cluster.jpg)
+![应用程序服务器群集](assets/application-server-cluster.jpg)
 
-### 應用程式伺服器叢集 {#application-server-cluster}
+### 应用程序服务器群集 {#application-server-cluster}
 
-JEE叢集上的AEM Forms仰賴基礎應用程式伺服器的叢集功能。 應用程式伺服器叢集可整體管理叢集組態，並提供低階的叢集服務，例如Java命名和目錄介面(JNDI)，讓軟體元件能在叢集中找到彼此。 叢集服務的複雜性以及應用程式伺服器所依賴的基礎技術相依性，取決於應用程式伺服器。 WebSphere和WebLogic具有適用於叢集的複雜管理功能，而JBoss則具有非常基本的方法。
+JEE群集上的AEM Forms依赖于底层应用程序服务器的群集功能。 应用程序服务器群集使群集配置能够作为一个整体进行管理，并提供低级别的群集服务(如Java命名和目录接口(JNDI))，使软件组件能够在群集内相互查找。 群集服务的复杂性和应用程序服务器所依赖的底层技术依赖性依赖于应用程序服务器。 WebSphere和WebLogic具有完善的群集管理功能，而JBoss具有非常基本的方法。
 
-### GemFire快取 {#gemfire-cache}
+### GemFire缓存 {#gemfire-cache}
 
-GemFire快取是在每個叢集節點中實作的分散式快取機制。 節點會尋找彼此，並建立單一邏輯快取，以維持節點間的一致性。 發現彼此的節點會連線在一起，以維持在圖1中顯示為雲端的單一概念快取。 與GDS和資料庫不同，快取是純粹的名義實體。 實際的快取內容會儲存在記憶體和 `LC_TEMP` 每個叢集節點的目錄。
+GemFire缓存是在每个群集节点中实现的分布式缓存机制。 节点之间相互查找并建立单个逻辑缓存，使节点之间保持一致性。 发现彼此的节点会连接在一起，以维护图1中显示为云的单个概念性缓存。 与GDS和数据库不同，缓存是一个纯概念实体。 实际缓存的内容存储在内存和 `LC_TEMP` 每个群集节点上的目录。
 
 ### 数据库 {#database}
 
-JEE上的AEM Forms資料庫（透過JDBC資料來源IDP_DS、EDC_DS和其他資料存取）由叢集的所有節點共用。 有關JEE上AEM Forms狀態的大多數持續性資料，例如正在進行的交易、與進行中交易相關聯的使用者資料、有關如何設定系統設定的資料等，都位於此資料庫中。
+JEE上的AEM Forms数据库（通过JDBC数据源IDP_DS、EDC_DS和其他数据源访问）由群集中的所有节点共享。 有关AEM Forms on JEE状态的大多数持久性数据（例如正在进行的交易、与正在进行的交易关联的用户数据、有关如何设置系统设置的数据等）都位于此数据库中。
 
-### 全域檔案儲存 {#global-document-storage}
+### 全局文档存储 {#global-document-storage}
 
-Global Document Storage (GDS)是AEM Forms on JEE中Document Manager （IDPDocument類別）使用的檔案系統儲存區域。 GDS儲存短期和長期的檔案，叢集的所有節點都必須可以存取這些檔案。
+Global Document Storage (GDS)是AEM Forms on JEE中Document Manager （IDPDocument类）使用的基于文件系统的存储区域。 GDS存储了所有群集节点都必须可访问的短期和长期文件。
 
-### 其他專案 {#other-items}
+### 其他项目 {#other-items}
 
-除了這些主要共用資源之外，還有其他專案具有特定的叢集行為，例如Quartz。 Quartz是AEM Forms on JEE所使用的排程器子系統，它使用資料庫表格來儲存其已排程的資訊以及正在執行哪些已排程活動的資訊。 對於單節點安裝和叢集，Quartz的設定必須不同，而且它會從JEE設定的其他AEM Forms獲得提示。
+除了这些主要的共享资源之外，还有具有特定群集行为的其他项目，例如Quartz。 Quartz是AEM Forms在JEE上使用的一个调度程序子系统，它使用数据库表来保存有关已调度的内容和正在运行的已调度活动的知识。 对于单节点安装和群集，Quartz必须采用不同的配置，并且它在JEE设置上从其他AEM Forms获得提示。
 
-## 常見設定問題 {#common-configuration}
+## 常见配置问题 {#common-configuration}
 
-維護或疑難排解JEE叢集上的AEM Forms最令人沮喪的事情之一，就是沒有單一位置可以明確確認叢集是否健康。 若要確認叢集中的所有專案都運作正常，需要進行一些調查和分析，而且叢集作業有幾種失敗模式，這取決於叢集設定有哪些問題。 下圖說明一個設定錯誤的叢集，其中數個共用資源被不當共用。
+维护JEE群集上的AEM Forms或对其进行故障排除最令人沮丧的事情之一是，没有单一位置可以积极确认群集运行正常。 为了确认群集中的一切正常，进行了一些调查和分析，根据群集配置出了什么问题，群集操作存在几种故障模式。 下图说明了一个配置错误的群集，其中多个共享资源被错误地共享。
 
-![設定錯誤的叢集](assets/bad-configuration-cluster.png)
+![配置错误的群集](assets/bad-configuration-cluster.png)
 
-請謹記一件有趣且重要的事情，即使使用者不打算在叢集的JEE上執行AEM Forms，也必須熟悉叢集的運作方式，以及要在叢集中尋找和驗證的種類。 這是因為JEE上AEM Forms的某些部分可能會根據他們的提示，在叢集中錯誤地操作，並出現您不期望的叢集行為。
+要记住一件有趣而重要的事情，即您需要熟悉集群的工作方式以及要在集群中查找和验证的内容类型，即使您不打算在集群中的JEE上运行AEM Forms也是如此。 这是因为JEE上AEM Forms的某些部分可能会根据它们的提示，在集群中错误地操作，并出现您不期望的集群行为。
 
-那麼上圖中的共用設定有什麼問題嗎？ 以下各節說明問題：
+那么，上图中的共享配置有什么问题呢？ 以下各节描述了问题：
 
-### (1) GemFire叢集組態 {#gemfire-cluster-configuration}
+### (1) GemFire群集配置 {#gemfire-cluster-configuration}
 
-Gemfire快取可能會發生一些問題。 兩種典型情況是：
+Gemfire缓存可能会出现一些问题。 两种典型情况是：
 
-* 應該能夠找到彼此的節點無法這麼做。
+* 本应能够相互查找的节点无法执行此操作。
 
-* 不應加入叢集的節點會在不應加入叢集時彼此尋找並共用快取。
+* 不应加入集群的节点会相互查找并在不应加入集群时共享缓存。
 
-如果您有想要叢集的節點，它們必須在網路上找到彼此。 依預設，它們會透過多點傳送UDP訊息來執行此操作。 每個節點都會傳送廣播訊息來宣告其存在，而任何收到此類訊息的節點都會開始與其找到的其他節點交談。 這種自動探索的方法非常常見，許多型別的軟體和裝置都會這麼做。
+如果您有要群集的节点，它们必须在网络上找到彼此。 默认情况下，它们通过多播UDP消息实现此目的。 每个节点发送广播消息通告其存在，并且任何接收此类消息的节点开始与其找到的其他节点通信。 这种自动发现的方法非常普遍，许多类型的软件和设备都这样做。
 
-自動探索的一個常見問題是，多點傳送訊息可能是因為網路原則或軟體防火牆規則而由網路所篩選，或是可能只是無法路由傳送到存在於節點之間的網路。 由於讓UDP自動探索在複雜網路中運作的一般困難，生產部署通常會使用替代探索方法：TCP定位器。 有關TCP定位器的一般討論可在參考資料中找到。
+自动发现的一个常见问题是，多播消息可能作为网络策略的一部分或者由于软件防火墙规则而被网络过滤，或者可能只是不能通过存在于节点之间的网络进行路由。 由于让UDP自动发现在复杂网络中工作的一般困难，生产部署通常使用替代发现方法：TCP定位器。 有关TCP定位器的一般讨论可在参考资料中找到。
 
-**我如何知道我使用定位器或UDP？**
+**如何知道我使用的是定位器还是UDP？**
 
-下列JVM屬性可控制GemFire快取用來尋找其他節點的方法。
+以下JVM属性控制GemFire缓存用于查找其他节点的方法。
 
-多點傳送設定：
+多播设置：
 
-* `adobe.cache.multicast-port`：用來與分散式系統其他成員通訊的多點傳送連線埠。 如果將此值設為0，會停用成員探索和散發的多點傳送。
+* `adobe.cache.multicast-port`：用于与分布式系统的其他成员进行通信的多播端口。 如果将此值设置为零，则对成员发现和分发都禁用多播。
 
-* `gemfire.mcast-address` （選用）：覆寫Gemfire使用的預設IP位址。
+* `gemfire.mcast-address` （可选）：覆盖Gemfire使用的默认IP地址。
 
-TCP定位器設定：
+TCP定位器设置：
 
-* `adobe.cache.cluster-locators`：系統成員用來與執行中的定位器通訊的所有定位器之TCP定位器和TCP定位器連線埠的IP位址/主機名稱。
+* `adobe.cache.cluster-locators`：系统成员用于与正在运行的定位器通信的所有定位器的TCP定位器和TCP定位器端口的IP地址/主机名。
 
-此清單必須包含目前使用中的所有定位器，且叢集系統的每個成員都必須以一致的方式設定。
+该列表必须包含当前正在使用的所有定位器，并且必须为群集系统的每个成员一致地配置。
 
-如果TCP定位器清單是空的，則不會使用定位器，而是使用多點傳送方法。
+如果TCP定位器列表为空，则不使用定位器，而是使用多播方法。
 
-**如何檢查我的TCP定位器是否正在執行？**
+**如何检查我的TCP定位器是否正在运行？**
 
-首先，如果TCP定位器正在使用中，您應該在所有叢集節點的下列JVM屬性中列出您的TCP定位器：
+首先，如果正在使用TCP定位器，则在所有群集节点上的以下JVM属性中应列出您的TCP定位器：
 
 `-Dadobe.cache.cluster-locators=aix01.adobe.com[22345],aix02.adobe.com[22345]`
 
-不需要在JEE叢集節點上的AEM Forms上執行定位器，如果需要，它們可以在獨立於叢集的其他系統上執行。 一個以上的系統可以執行定位器，一般來說，最佳作法是將定位器執行於兩個位置，避免定位器單一失敗可能導致叢集重新啟動的問題。 在每個執行定位器的系統上，您應該能夠使用下列命令來驗證這些電腦是否正在執行：
+无需在JEE群集节点上的AEM Forms上运行定位器，如果需要，它们可以在独立于群集的其他系统上运行。 多个系统可以运行定位器，通常认为最佳实践是将定位器运行在两个位置，而单个定位器故障可能会导致群集重启问题。 在每个运行定位器的系统上，您应该能够使用下列命令来验证它们是否正在运行：
 
 `netstat -an | grep 22345`
 
-預期的回應應為：
+预期的响应应为：
 
 `tcp 0 0 *.22345 *.* LISTEN`
 
-另一個驗證指令如下：
+另一个验证命令是：
 
 `ps -ef | grep gemfire`
 
-預期的回應應如下所示：
+预期的响应应如下所示：
 
 `livecycl 331984 1 0 10:14:51 pts/0 0:03 java -cp ./gemfire.jar: -Dgemfire.license-type=production -Dlocators=localhost[22345] com.gemstone.gemfire.distributed.Locator 22345`
 
-**如何檢視GemFire認為在叢集中的節點？**
+**如何查看GemFire认为群集中有哪些节点？**
 
-GemFire會產生記錄資訊，可用來診斷GemFire快取已找到並採用的叢整合員。 這可用來驗證是否找到所有正確的叢整合員，以及是否不會發生額外或不正確的叢集節點探索。 GemFire的記錄檔位於已設定的AEM Forms on JEE暫存目錄中：
+GemFire生成日志记录信息，这些信息可用于诊断GemFire缓存已找到并采用的群集成员。 这可用于验证是否找到了所有正确的群集成员，以及是否未发现额外或不正确的群集节点。 GemFire的日志文件位于配置的AEM Forms on JEE临时目录中：
 
 `.../LC_TEMP/adobeZZ__123456/Caching/Gemfire.log`
 
-之後的數值字串 `adobeZZ_` 是伺服器節點專屬的，因此您必須搜尋暫存目錄的實際內容。 之後的兩個字元 `adobe` 取決於應用程式伺服器型別： `wl`， `jb`，或 `ws`.
+之后的数字字符串 `adobeZZ_` 对于服务器节点是唯一的，因此您必须搜索临时目录的实际内容。 后面的两个字符 `adobe` 取决于应用程序服务器类型： `wl`， `jb`，或 `ws`.
 
-下列範例記錄顯示當雙節點叢集找到自身時發生的情況。
+以下示例日志显示了当双节点群集发现自身时会发生什么情况。
 
-在第一個節點上，AP-HP8：
+在第一个节点AP-HP8上：
 
 ```xml
 [config 2011/08/05 09:28:09.143 EDT GemfireCacheAdapter <server.startup : 0> tid=0x65] This member, ap-hp8(4268):18763, is becoming group coordinator.
@@ -135,7 +135,7 @@ GemFire會產生記錄資訊，可用來診斷GemFire快取已找到並採用的
 [info 2011/08/05 09:28:20.841 EDT GemfireCacheAdapter <Pooled Message Processor 1> tid=0xc4] New administration member detected at ap-hp7(2821)<v1>:19498/59136.
 ```
 
-在另一個節點上，AP-HP7：
+在另一节点上，AP-HP7：
 
 ```xml
 [info 2011/08/05 09:28:09.830 EDT GemfireCacheAdapter <server.startup : 0> tid=0x64] Attempting to join distributed system whose membership coordinator is ap-hp8(4268)<v0>:18763 using membership ID ap-hp7(2821):19498
@@ -147,11 +147,11 @@ GemFire會產生記錄資訊，可用來診斷GemFire快取已找到並採用的
 [info 2011/08/05 09:28:10.128 EDT GemfireCacheAdapter <server.startup : 0> tid=0x64] DistributionManager ap-hp7(2821)<v1>:19498/59136 started on 239.192.81.1[33456]. There were 1 other DMs. others: [ap-hp8(4268)<v0>:18763/56449]
 ```
 
-**如果GemFire找到不應該找到的節點怎麼辦？**
+**如果GemFire找到不应找到的节点，该怎么办？**
 
-共用企業網路的每個不同叢集都應該使用單獨的TCP定位器集合（如果使用TCP定位器），或使用單獨的UDP連線埠號碼（如果使用多點傳送UDP組態）。 由於UDP自動探索是JEE上AEM Forms的預設設定，而相同的預設連線埠33456可能正由多個叢集使用，所以不應該嘗試通訊的叢集可能會意外地這樣做 — 例如，生產和QA叢集應該保持獨立，但可以透過UDP多點傳送相互連線。
+共享公司网络的每个不同的群集应使用单独的TCP位置集（如果使用TCP位置），或使用单独的UDP端口号（如果使用多播UDP配置）。 由于UDP自动发现是JEE上AEM Forms的默认配置，并且多个群集可能正在使用相同的默认端口33456，因此，不应尝试通信的群集可能会意外地这样做 — 例如，生产群集和QA群集应保持独立，但可通过UDP多播相互连接。
 
-在GemFire不正確叢集的網路中，最常見的情況是在叢集的啟動載入期間，發現重複的連線埠。 您可能會發現啟動程式沒有明確原因而失敗。 通常會看到這樣的錯誤：
+在GemFire不正确群集的网络中发现重复端口时，最常见的情况是在群集的引导过程中。 您可能会发现，引导过程失败的原因不明确。 通常，会看到以下错误：
 
 ```xml
 Caused by: com.ibm.ejs.container.UnknownLocalException: nested exception is: com.adobe.pof.schema.ObjectTypeNotFoundException: Object Type: dsc.sc_service_configuration not found.
@@ -163,77 +163,77 @@ Caused by: com.ibm.ejs.container.UnknownLocalException: nested exception is: com
                 at com.adobe.livecycle.bootstrap.bootstrappers.DSCBootstrapper.bootstrap(DSCBootstrapper.java:68)
 ```
 
-在此情況下，啟動載入程式會與GemFire一起存取必要的資料表，而且透過JDBC存取的資料表與GemFire傳回的快取資料表資訊之間有不一致的情況，該資料表來自具有不同基礎資料庫的不同叢集。
+在这种情况下，引导程序将与GemFire一起访问所需的表，并且通过JDBC访问的表与GemFire返回的缓存表信息之间存在不一致，缓存表信息来自具有不同基础数据库的不同集群。
 
-雖然重複連線埠通常會在啟動時顯現，但此情況可能稍後出現，當叢集在其他叢集的啟動時關機之後重新啟動時，或當網路組態變更為讓先前被隔離的叢集彼此可見時（為了多點傳送目的）。
+虽然在引导过程中经常会明显出现重复端口，但这种情况有可能在稍后出现，例如，当某个群集在关闭后重新启动时，发生另一个群集的引导时，或者当网络配置更改为使之前为多播目的而隔离的群集彼此可见时。
 
-若要診斷這些情況，最好檢視GemFire記錄檔，並仔細考慮是否僅找到預期的節點。 若要修正問題，必須變更
+要诊断这些情况，最好查看GemFire日志，并仔细考虑是否仅找到预期的节点。 要更正此问题，必须更改
 
 `adobe.cache.multicast-port`
 
-屬性對應至一個或兩個叢集上的不同值。
+属性到不同值的一个或两个群集。
 
-### 2) GDS共用 {#gds-sharing}
+### 2) GDS共享 {#gds-sharing}
 
-GDS共用是在JEE本身的AEM Forms外部以O/S層級設定，您必須在此層級安排相同的共用目錄結構可供所有叢集節點使用。 在Windows型別系統上，這通常是通過從某個節點到另一個節點設定檔案共用，或從遠端檔案系統（例如NAS裝置）到所有節點來完成。 在UNIX系統上，GDS共用通常透過NFS檔案共用來完成，也可以從一個節點到另一個節點或從NAS裝置完成。
+GDS共享是在JEE本身的AEM Forms之外的O/S级别配置的，在该级别上，您必须安排相同的共享目录结构可供所有群集节点使用。 在Windows类型系统上，这通常是通过设置文件共享来实现的，从一个节点到另一个节点，或从远程文件系统（如NAS设备）到所有节点。 在UNIX系统上， GDS共享通常通过NFS文件共享来完成，同样也可以从一个节点到另一个节点，或通过NAS应用装置实现。
 
-叢集可能的失敗模式是這個遠端檔案共用變得無法使用，或是有細微的問題。 遠端掛載可能會因為網路問題、安全性設定或不正確的設定而失敗。 系統重新開機可能會造成設定變更在幾天或幾週前生效，這可能會導致意外情況。
+群集的故障模式可能是此远程文件共享变得不可用或有细微的问题。 由于网络问题、安全设置或不正确的配置，远程装载可能会失败。 系统重新启动可能会导致在数天或数周前进行的配置更改生效，这可能会导致意外情况。
 
-**如果NFS共用無法掛載會發生什麼情況？**
+**如果NFS共享无法装载，会发生什么情况？**
 
-在UNIX上，即使掛載失敗，NFS掛載對應到目錄結構的方式也可以允許使用顯然可用的GDS目錄。 请考虑：
+在UNIX上，NFS装载映射到目录结构的方式可允许明显可用的GDS目录可用，即使装载失败也是如此。 请考虑：
 
-* NAS伺服器：NFS共用資料夾/u01/iapply/livecycle_gds
-* 節點1：共用資料夾（託管於DB伺服器）的掛接點，位置如下： /u01/iapply/livecycle_gds
-* 節點2：共用資料夾（託管於DB伺服器）的掛接點，位置如下： /u01/iapply/livecycle_gds
+* NAS服务器： NFS共享文件夹/u01/iapply/livecycle_gds
+* 节点1：指向共享文件夹（托管在数据库服务器上）的装入点，该文件夹位于以下位置： /u01/iapply/livecycle_gds
+* 节点2：指向共享文件夹（托管在数据库服务器上）的装入点，该文件夹位于以下位置：/u01/iapply/livecycle_gds
 
-* LCES指定GDS的路徑： /u01/iapply/livecycle_gds
+* LCES指定GDS的路径： /u01/iapply/livecycle_gds
 
-如果節點1上的掛載失敗，目錄結構仍會包含到空掛載點的路徑/u01/iapply/livecycle_gds，而且節點會顯示為正確執行。 但由於GDS內容並未實際與其他節點共用，因此叢集將無法正常運作。 這有可能發生，也確實會發生，結果導致叢集以神秘的方式失敗。
+如果节点1上的装载失败，则目录结构仍将包含到空装载点的路径/u01/iapply/livecycle_gds ，并且节点看起来可以正常运行。 但是，由于GDS内容实际上并未与其他节点共享，因此群集将无法正常运行。 这种情况可能也会发生，而且确实会发生，结果是群集以神秘的方式失败。
 
-最佳作法是安排順序，讓Linux掛載點不作為GDS的根目錄，而是將其中某些目錄作為GDS根目錄：
+最佳做法是安排一些操作，以便不使用Linux挂载点作为GDS的根，而是使用其中某个目录作为GDS根：
 
-* 如果您有NFS伺服器，則它可能有目錄：/some/storage/lc_cluster_dev/LC_GDS
-* 而且您的叢集節點上有一個掛接點： /u01/iapply/shared
-* 掛載nfs_server： /some/storage/lc_cluster_dev/u01/iapply/shared
-* 將GDS指向/u01/iapply/shared/LC_GDS
+* 如果您有NFS服务器，则它可能有目录：/some/storage/lc_cluster_dev/LC_GDS
+* 在群集节点上，有一个挂载点： /u01/iapply/shared
+* 挂载nfs_server： /some/storage/lc_cluster_dev/u01/iapply/shared
+* 将GDS指向/u01/iapply/shared/LC_GDS
 
-現在，如果由於某種原因掛載失敗，裸掛載點不會包含LC_GDS目錄，而且您的叢集將會預期失敗，因為它根本找不到任何GDS。
+现在，如果由于某种原因装载不成功，裸装载点将不包含LC_GDS目录，并且您的群集将按预期失败，因为它根本找不到任何GDS。
 
-**如何確認所有節點都看到相同的GDS並具有許可權？**
+**如何验证所有节点是否都看到相同的GDS并具有权限？**
 
-若要驗證GDS存取和共用，最好以互動式使用者身分存取每個節點，可透過SSH或telnet連線至UNIX節點，或透過遠端案頭連線至Windows系統。 您應該能夠瀏覽至每個節點上已設定的GDS目錄或檔案系統，並從所有其他節點中可見的每個節點建立測試檔案。
+验证GDS访问和共享的最佳方式是作为交互式用户访问每个节点，或者通过SSH或telnet访问UNIX节点，或者通过远程桌面访问Windows系统。 您应该能够导航到每个节点上配置的GDS目录或文件系统，并从所有其他节点中可见的每个节点创建测试文件。
 
-請留意AEM Forms on JEE據以操作的使用者ID。 在Windows整套金鑰安裝中，這是以本機管理員身分執行。 在UNIX上，它可能是啟動指令碼或應用程式伺服器設定中設定的特定服務使用者。 此使用者ID必須能在所有節點上平等地建立和操作GDS檔案。
+注意AEM Forms on JEE中运行的用户ID。 在Windows统包安装中，此用户是本地管理员。 在UNIX上，它可能是启动脚本或应用程序服务器配置中配置的特定服务用户。 此用户ID必须能够在所有节点上平等地创建和处理GDS文件。
 
-在UNIX系統上，NFS設定通常預設為不信任檔案和物件的根擁有權或根存取權。 如果您以root使用者身分執行應用程式伺服器，您會發現您必須在NFS伺服器上指定選項、掛載檔案的節點，或同時指定兩者，才能允許雙邊存取和控制由某個節點建立並由另一個節點存取的檔案。
+在UNIX系统上， NFS配置通常默认为不信任对文件和对象的根所有权或根访问权限。 如果您以root用户身份运行应用程序服务器，则主要发现您需要在NFS服务器上指定选项，指定装载文件的节点，或者指定这两个选项，以允许对一个节点创建的并由另一个节点访问的文件进行双边访问和控制。
 
-### (3)資料庫共用 {#database-sharing}
+### (3)数据库共享 {#database-sharing}
 
-為了使叢集正常運作，所有叢整合員必須共用相同的資料庫。 發生錯誤的範圍大致為：
+为使群集正常工作，所有群集成员必须共享同一数据库。 出现这种错误的范围大致是：
 
-* 不小心在個別的叢集節點上以不同方式設定IDP_DS、EDC_DS、AdobeDefaultSA_DS或其他必要的資料來源，使節點指向不同的資料庫。
-* 不小心設定了多個不同的節點，讓這些節點共用一個資料庫。
+* 意外地在单独的群集节点上以不同的方式设置IDP_DS、EDC_DS、AdobeDefaultSA_DS或其他所需的数据源，以便这些节点指向不同的数据库。
+* 意外设置了多个单独的节点来共享一个数据库，而这些节点不应共享。
 
-視您的應用程式伺服器而定，在叢集範圍定義JDBC連線是很自然的事，所以在不同的節點上不可能有不同的定義。 不過，在Jboss上，完全可以設定，讓資料來源（例如IDP_DS）指向節點1上的一個資料庫，但指向節點2上的其他內容。
+根据您的应用程序服务器，在群集作用域中定义JDBC连接是很自然的事，因此在不同的节点上不可能有不同的定义。 但是，在Jboss上，完全可以设置一些内容，以便数据源（如IDP_DS）指向节点1上的一个数据库，而指向节点2上的其他数据库。
 
-相反的問題實際上更常見，也就是說，JEE節點上的多個獨立（或叢集）AEM Forms意外指向了同一個結構描述，而它們並非故意指向。 當DBA不知情地將JEE資料庫的連線資訊提供單一AEM Forms給DEV和QA設定團隊時，通常會發生這種情況，這些團隊都沒有意識到DEV和QA執行個體需要個別的資料庫。
+实际上，反向问题更常见，也就是说，JEE节点上的多个独立（或群集）AEM Forms意外指向同一架构，而它们并非故意指向该架构。 这种情况通常发生在DBA无意中向开发和QA设置团队提供单个AEM Forms on JEE数据库的连接信息时，这些设置团队都没有意识到DEV和QA实例需要单独的数据库。
 
-## 應用程式伺服器叢集 {#application-server-cluster-1}
+## 应用程序服务器群集 {#application-server-cluster-1}
 
-若要在JEE叢集上成功使用AEM Forms，應用程式伺服器必須正確設定並當做叢集運作。 在WebSphere和Weblogic中，這是一個直接明瞭的流程。 在Jboss中，叢集設定需要更多實際操作，而確保節點設定為可作為叢集，並且確實能夠找到並彼此通訊可能會很困難。 JBoss在內部依賴於JGroups，後者使用UDP多點傳送來尋找及協調對等節點，而GemFire中提到的一些問題可能會發生，例如節點在應該找到彼此時失敗，或在不應該找到彼此時失敗。
+要在JEE群集上成功AEM Forms，必须配置应用程序服务器并将其作为群集正确运行。 在WebSphere和Weblogic中，这是一个简单明了且有充分说明的流程。 在Jboss中，群集配置需要更多的操作，而确保将节点配置为充当群集，并且实际上可以相互查找和通信，可能是一项挑战。 JBoss在内部依赖于JGroups，后者使用UDP多播来查找对等节点并与之协调，而GemFire中提到的一些问题可能会发生，例如节点在应该查找时无法相互查找，或者在不应该查找时相互查找。
 
 引用:
 
-* [透過JBoss叢集提供高可用性企業服務](https://docs.jboss.org/jbossas/jboss4guide/r4/html/cluster.chapt.html)
+* [通过JBoss群集提供高可用性企业服务](https://docs.jboss.org/jbossas/jboss4guide/r4/html/cluster.chapt.html)
 
-* [oracleWebLogic Server — 使用叢集](https://docs.oracle.com/cd/E12840_01/wls/docs103/pdf/cluster.pdf)
+* [oracleWebLogic Server — 使用群集](https://docs.oracle.com/cd/E12840_01/wls/docs103/pdf/cluster.pdf)
 
-### 如何檢查JBoss是否正確建立叢集？ {#check-jboss-clustering}
+### 如何检查JBoss是否正确聚类？ {#check-jboss-clustering}
 
-當JBoss啟動時，在探索叢整合員時，有關加入叢集之節點的INFO層級訊息會記錄到記錄檔/主控台。
+当JBoss启动时，在发现群集成员时，有关加入群集的节点的INFO级别消息将记录到日志文件/控制台。
 
-如果在執行時透過 — g命令列選項指定了叢集名稱，您將會看到類似下列的訊息：
+如果在运行时通过 — g命令行选项指定了群集名称，您将看到与以下内容类似的消息：
 
 ```xml
 GMS: address is 10.36.34.44:55200 (cluster=QE_cluster)
@@ -246,34 +246,34 @@ and ones like:
 2011-07-14 11:34:03,139 INFO  [org.jboss.cache.RPCManagerImpl] (main) Cache local address is 10.36.34.44:55200
 ```
 
-### Quartz排程器 {#quartz-scheduler}
+### Quartz计划程序 {#quartz-scheduler}
 
-在大多數情況下，JEE上的AEM Forms在叢集中使用內部Quartz排程器時，在一般情況下應該自動遵循JEE上AEM Forms的全域叢集設定。 但是，如果將TCP定位器用作Gemfire而不是多點傳送自動探索，則會導致Quartz的自動叢集設定失敗。#2794033 在此情況下，Quartz將會在非叢集模式下不正確地執行。 這會在Quartz表格中造成死鎖和資料損毀。 在8.2.x版中，由於Quartz並未大量使用，但依然存在，因此其副作用比9.0版更嚴重。
+在大多数情况下，AEM Forms on JEE在集群中使用内部Quartz调度程序是为了在一般情况下自动遵循AEM Forms on JEE的全局集群配置。 但是，存在一个错误#2794033，如果将TCP定位器用于Gemfire而不是多播自动发现，则会导致Quartz的自动群集配置失败。 在这种情况下，Quartz将错误地以非群集模式运行。 这将在Quartz表中产生死锁和数据损坏。 8.2.x版比9.0版的副作用更严重，因为石英用量较少，但仍存在。
 
-此問題的修正程式如下： 8.2.1.2 QF2.143和9.0.0.2 QF2.44。
+此问题的修复如下所示：8.2.1.2 QF2.143和9.0.0.2 QF2.44。
 
-另外也有因應措施，也就是設定這兩個屬性：
+还有一个解决方法，即设置这两个属性：
 
 * `-Dadobe.cache.cluster.locators=xxx`
 
 * `-Dadobe.cache.cluster-locators=xxx`
 
-請注意，其中一個設定使用「叢集」和「位置」之間的句點，而另一個設定則使用連字型大小。 這比套用軟體修補程式容易實作，風險也較低，但需要人為建立其他令人困惑且名稱錯誤的組態設定。
+请注意，一个设置使用“cluster”和“locators”之间的句点，而另一个设置使用连字符。 与应用软件补丁相比，它易于实施，风险也较低，但需要人为地创建其他令人困惑的错误命名配置设置。
 
-### 如何檢查Quartz是否以單一節點或叢集方式執行？ {#check-quartz}
+### 如何检查Quartz是否作为单个节点或群集运行？ {#check-quartz}
 
-若要判斷Quartz本身的設定方式，您必須檢視AEM Forms on JEE Scheduler服務在啟動期間產生的訊息。 這些訊息會以INFO嚴重程度產生，可能需要調整記錄層級並重新啟動以取得訊息。 在AEM Forms on JEE啟動序列中，Quartz初始化會以下列行開始：
+要确定Quartz如何配置自身，必须查看AEM Forms on JEE计划程序服务在启动期间生成的消息。 这些消息以INFO严重性生成，可能需要调整日志级别并重新启动以获取消息。 在AEM Forms on JEE启动序列中，Quartz初始化从以下行开始：
 
-資訊  `[com.adobe.idp.scheduler.SchedulerServiceImpl]` IDPchedulerService onLoad在記錄中找出這第一行很重要，因為有些應用程式伺服器也使用Quartz，而且其Quartz執行個體不應與AEM Forms on JEE Scheduler服務所使用的執行個體混淆。 這表示「排程器」服務正在啟動，後續的文字行將告訴您它是否以叢集模式正確啟動。 此順序會顯示數個訊息，而這是最後一個「已啟動」訊息，可顯示Quartz的設定方式：
+信息  `[com.adobe.idp.scheduler.SchedulerServiceImpl]` IDPchedulerService onLoad在日志中定位第一行很重要，因为某些应用程序服务器也使用Quartz，并且其Quartz实例不应与AEM Forms on JEE Scheduler服务所使用的实例混淆。 这是调度程序服务正在启动的指示，其后面的行将告诉您调度程序服务是否以群集模式正确启动。 此序列中会显示多条消息，这是显示如何配置Quartz的最后一条“已启动”消息：
 
-以下是Quartz執行個體的名稱： `IDPSchedulerService_$_ap-hp8.ottperflab.adobe.com1312883903975`. 排程器的Quartz執行個體名稱一律以字串開頭 `IDPSchedulerService_$_`. 附加至此結尾的字串會告訴您Quartz是否以叢集模式執行。 從節點的主機名稱及長數字字串產生的長唯一識別碼，如下所述 `ap-hp8.ottperflab.adobe.com1312883903975`，表示它在叢集中運作。 如果以單一節點運作，則識別碼會是兩位數：「20」：
+此处给出Quartz实例的名称： `IDPSchedulerService_$_ap-hp8.ottperflab.adobe.com1312883903975`. 调度程序的Quartz实例的名称将始终以字符串开头 `IDPSchedulerService_$_`. 附加到此末尾的字符串可告知您Quartz是否以群集模式运行。 从节点的主机名和长字符串数字生成的长唯一标识符，此处 `ap-hp8.ottperflab.adobe.com1312883903975`，表示它正在群集中运行。 如果它作为单个节点运行，则标识符将是一个两位数“20”：
 
-資訊  `[org.quartz.core.QuartzScheduler]` 排程器 `IDPSchedulerService_$_20` 已啟動。
-這項檢查必須個別在所有叢集節點上完成，因為每個節點的排程器會獨立決定是否以叢集模式操作。
+信息  `[org.quartz.core.QuartzScheduler]` 调度程序 `IDPSchedulerService_$_20` 已启动。
+此检查必须单独在所有群集节点上完成，因为每个节点的调度程序都独立决定是否以群集模式运行。
 
-### 如果Quartz以錯誤的模式執行，會產生哪些問題？ {#quartz-running-in-wrong-mode}
+### 如果Quartz在错误模式下运行，会产生什么样的问题？ {#quartz-running-in-wrong-mode}
 
-如果將Quartz設定為以單一節點執行，但實際上在叢集中執行，並與其他節點共用Quartz資料庫表格，則會導致JEE排程器服務上的AEM Forms無法可靠運作，且通常會伴有資料庫死結。 這是相當典型的棧疊追蹤，您可能會在此情況下看到：
+如果将Quartz设置为作为单个节点运行，但实际上它在群集中运行并与其他节点共享Quartz数据库表，这将导致AEM Forms在JEE计划程序服务上的运行不可靠，并且通常会伴有数据库死锁。 这是相当典型的栈栈跟踪，在此情况下您可能会看到这种跟踪：
 
 ```xml
 [1/20/11 10:40:57:584 EST] 00000035 ErrorLogger   E org.quartz.core.ErrorLogger schedulerError An error occured while marking executed job complete. job= 'Asynchronous.TaskFormDataSaved:12955380518320.5650479324757354'
@@ -291,44 +291,44 @@ and ones like:
 Caused by: java.sql.SQLException: ORA-00060: deadlock detected while waiting for resource
 ```
 
-### 如何在叢集中同步系統時鐘？ {#ynchronize-system-clocks-cluster}
+### 如何同步群集中的系统时钟？ {#ynchronize-system-clocks-cluster}
 
-若要讓叢集順利運作，所有叢集節點上的時鐘必須密切同步。 這無法靠手動完成，且必須由定期執行的某種形式的時間同步服務完成。 所有節點的時鐘必須彼此位於一秒內。 最佳實務不僅要求同步叢集節點，還要求負載平衡器、資料庫伺服器、GDS NAS伺服器以及任何其他元件。
+为了使群集能够顺利运行，必须使所有群集节点上的时钟紧密同步。 这不能靠人工来完成，必须由定期运行的某种形式的时间同步服务来完成。 所有节点上的时钟必须位于彼此的一秒内。 最佳实践不仅要求群集节点，还要求负载平衡器、数据库服务器、 GDS NAS服务器以及任何其他组件都同步。
 
-Windows時間同步處理趨向於網域控制站。 UNIX系統可以使用NTP同步到不同的時間來源。 如果可能的話，最好將所有系統(包括JEE節點上的AEM Forms和其他系統元件)同步至相同的來源。
+Windows时间同步倾向于到域控制器。 UNIX系统可以使用NTP同步到不同的时间源。 如果可能，最好将所有系统(包括JEE节点上的AEM Forms和其他系统组件)同步到同一源。
 
-即使是在最暫時的測試環境中，手動設定節點的時鐘絕對不夠。 手動設定時鐘無法提供足夠的精確同步化，而且兩個節點上的時鐘不可避免地會彼此相對漂移，即使是在短短一天的時間內。 使用中的時間同步機制對於可靠的叢集作業至關重要。
+即使是在最临时性的测试环境中，手动设置节点上的时钟也绝对不够。 手动设置时钟无法提供足够的精确同步，两个节点上的时钟不可避免地会相互漂移，即使在一天的时间段内也是如此。 主动的时间同步机制是机群可靠运行的关键。
 
-### 負載平衡器 {#load-balancer}
+### 负载平衡器 {#load-balancer}
 
-提供使用者互動式服務之叢集的典型需求是HTTP負載平衡器，該負載平衡器會將HTTP請求分散至整個叢集。 若要在JEE叢集上成功搭配AEM Forms使用負載平衡器，需要設定下列專案：
+提供用户交互服务的群集的典型要求是将跨群集分发HTTP请求的HTTP负载平衡器。 在JEE群集上成功将负载平衡器与AEM Forms结合使用时，需要配置以下内容：
 
-* 工作階段粘著度
+* 会话粘性
 
-* URL重寫規則
+* URL重写规则
 
-* 節點健康情況檢查
+* 节点运行状况检查
 
-### 負載平衡器健康情況檢查功能該怎麼辦？ {#load-balancer-health-check}
+### 我应如何执行负载平衡器运行状况检查功能？ {#load-balancer-health-check}
 
-有些負載平衡器可設定為定期檢查負載平衡節點的健康狀況。 通常，這是負載平衡器將嘗試存取之應用程式函式的URL。 如果載入成功，則會假設節點狀況良好，並保留在負載平衡集中。 如果URL無法載入，則會假設該節點有問題並從集合中排除。 健康情況檢查URL通常只會連線至JEE AdminUI登入頁面上的AEM Forms 。 這不是叢整合員的理想狀況檢查，而且最好實作短期程式，並使用REST API URL作為狀況檢查函式。
+某些负载平衡器可以配置为对要负载平衡的节点执行定期运行状况检查。 通常，这是负载平衡器将尝试访问的应用程序函数的URL。 如果加载成功，则假定节点处于健康状态，并将其保留在负载平衡集中。 如果URL加载失败，则假定该节点有故障，并从集合中删除。 通常，运行状况检查URL只连接到JEE AdminUI登录页面上的AEM Forms 。 这不是群集成员的理想运行状况检查，最好实施一个短期进程，并使用REST API URL作为运行状况检查功能。
 
-## 暫存檔案路徑和類似的叢集設定 {#temporary-file-path-cluster-settings}
+## 临时文件路径和类似的群集设置 {#temporary-file-path-cluster-settings}
 
-JEE版AEM Forms中的某些檔案路徑設定會在整個叢集內建立，且在每個節點上具有相同的有效設定，但在每個節點上會分別解譯，以參照本機檔案。 要考慮的關鍵問題是字型路徑設定和暫存目錄設定。 前往AdminUI核心設定畫面（首頁>設定>核心系統>核心設定）
+JEE上的AEM Forms中的某些文件路径设置在群集范围内建立，并在每个节点上具有相同的有效设置，但在每个节点上单独进行解释以引用本地文件。 要考虑的关键因素是字体路径设置和临时目录设置。 转到AdminUI核心配置屏幕（主页>设置>核心系统>核心配置）
 
-應檢查下列設定：
+应检查以下设置：
 
-1. 暫存目錄的位置
-1. Adobe伺服器字型目錄的位置
-1. Customer Fonts目錄的位置
-1. System Fonts目錄的位置
-1. 資料服務組態檔的位置
+1. 临时目录的位置
+1. Adobe服务器字体目录的位置
+1. Customer Fonts目录的位置
+1. System Fonts目录的位置
+1. 数据服务配置文件的位置
 
-叢集對於這些組態設定中的每一項都只有單一路徑設定。 例如，您的臨時目錄位置可能是 `/home/project/QA2/LC_TEMP`. 在叢集中，每個節點都必須可實際存取此特定路徑。 如果一個節點具有預期的暫存檔案路徑，而另一個節點沒有，則無法正常運作的節點。
+群集中的每一个配置设置只有一个路径。 例如，您的Temp目录位置可能是 `/home/project/QA2/LC_TEMP`. 在群集中，每个节点都必须能够实际访问此特定路径。 如果一个节点具有预期的临时文件路径，而另一个节点没有该路径，则无法正常运行的节点。
 
-雖然這些檔案和路徑可以在節點之間共用，或分開放置，或是在遠端檔案系統上，但通常最佳實務是它們是本機節點磁碟儲存裝置上的本機復本。
+虽然这些文件和路径可以在节点之间共享、单独放置或在远程文件系统上共享，但通常最佳做法是将这些文件和路径作为本地节点磁盘存储上的本地副本。
 
-尤其是不應在節點之間共用暫存目錄路徑。 驗證GDS的程式應該用於驗證暫存目錄未共用：前往每個節點，在路徑設定所指示的路徑中建立暫存檔案，然後驗證其他節點未共用該檔案。 若有可能，暫存目錄路徑應該參照每個節點上的本機磁碟儲存空間，並應加以檢查。
+特别是，不应在节点之间共享临时目录路径。 应使用与验证GDS的过程类似的过程来验证临时目录是否未共享：转到每个节点，在路径设置指示的路径中创建临时文件，然后验证其他节点是否未共享该文件。 临时目录路径应该引用每个节点上的本地磁盘存储（如果可能），并且应该检查。
 
-對於每個路徑設定，請確定路徑確實存在，並且可使用執行JEE版AEM Forms的有效使用身分識別，從叢集中的每個節點進行存取。 字型目錄內容必須是可讀的。 暫存目錄必須允許讀取、寫入和控制。
+对于每个路径设置，请确保该路径确实存在，并且可以使用AEM Forms on JEE运行时所使用的有效使用身份从群集中的每个节点访问。 字体目录内容必须是可读的。 临时目录必须允许读取、写入和控制。

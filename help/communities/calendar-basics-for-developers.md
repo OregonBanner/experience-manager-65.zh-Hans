@@ -1,7 +1,7 @@
 ---
-title: 行事曆要點
+title: Calendar Essentials
 seo-title: Calendar Essentials
-description: 行事曆功能概觀
+description: 日历功能概述
 seo-description: Calendar feature overview
 uuid: 14ff7a83-b2a7-4f7e-8ee7-88f336329a1a
 contentOwner: Guillaume Carlino
@@ -17,11 +17,11 @@ ht-degree: 2%
 
 ---
 
-# 行事曆要點 {#calendar-essentials}
+# Calendar Essentials {#calendar-essentials}
 
-本頁提供使用行事曆功能的基本資訊。
+本页提供有关使用日历功能的基本信息。
 
-## 適用於使用者端的Essentials {#essentials-for-client-side}
+## 适用于客户端的Essentials {#essentials-for-client-side}
 
 <table>
  <tbody>
@@ -30,7 +30,7 @@ ht-degree: 2%
    <td>social/calendar/components/hbs/calendar</td>
   </tr>
   <tr>
-   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>包含</strong></a></td>
+   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>可包含</strong></a></td>
    <td>否</td>
   </tr>
   <tr>
@@ -38,7 +38,7 @@ ht-degree: 2%
    <td>cq.social.hbs.calendar</td>
   </tr>
   <tr>
-   <td> <strong>範本</strong></td>
+   <td> <strong>模板</strong></td>
    <td>/libs/social/calendar/components/hbs/calendar/calendar.hbs</td>
    <td> </td>
   </tr>
@@ -48,34 +48,34 @@ ht-degree: 2%
   </tr>
   <tr>
    <td><strong> 属性</strong></td>
-   <td>另請參閱 <a href="calendar.md">使用行事曆</a></td>
+   <td>参见 <a href="calendar.md">使用日历</a></td>
   </tr>
  </tbody>
 </table>
 
-* [使用者端自訂](client-customize.md)
+* [客户端自定义](client-customize.md)
 
-## 伺服器端的Essentials {#essentials-for-server-side}
+## 服务器端Essentials {#essentials-for-server-side}
 
-* [行事曆API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/calendar/client/api/package-summary.html)
+* [日历API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/calendar/client/api/package-summary.html)
 
-* [行事曆端點](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/calendar/client/endpoints/package-summary.html)
+* [日历端点](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/calendar/client/endpoints/package-summary.html)
 
-* [伺服器端自訂](server-customize.md)
+* [服务器端自定义](server-customize.md)
 
 ### 日历功能 {#calendar-function}
 
-社群網站結構包含 [行事曆功能](functions.md#calendar-function) 將會有已設定的 `calendar` 元件。 「行事曆」功能支援識別 [有特殊許可權的成員使用者群組](users.md#privileged-members-group).
+社区站点结构包括 [日历功能](functions.md#calendar-function) 将配置一个 `calendar` 组件。 Calendar功能支持识别 [拥有权限的成员用户组](users.md#privileged-members-group).
 
-### 存取行事曆貼文(UGC) {#accessing-calendar-posts-ugc}
+### 访问日历帖子(UGC) {#accessing-calendar-posts-ugc}
 
-自AEM 6.1 Communities起，使用 [公用存放區](working-with-srp.md) for UGC包含程式化存取UGC，無論選擇的儲存選項為何（例如ASRP、MSRP或JSRP）。
+自AEM 6.1社区起，使用 [公用存储](working-with-srp.md) for UGC包括对UGC的编程访问，而不管选择的存储选项（如ASRP、MSRP或JSRP）。
 
-**UGC在存放庫中的位置和格式可能會有所變更，恕不發出警告**.
+**UGC在存储库中的位置和格式可能会发生更改，恕不发出警告**.
 
 请参阅：
 
-* [儲存資源提供者概觀](srp.md)  — 簡介和存放庫使用概述
-* [SRP和UGC Essentials](srp-and-ugc.md) - SRP公用程式方法與範例
-* [使用SRP存取UGC](accessing-ugc-with-srp.md)  — 編碼准則
-* [SocialUtils重構](socialutils.md)  — 將已棄用的公用程式方法對應到目前的SRP公用程式方法
+* [存储资源提供程序概述](srp.md)  — 简介和存储库使用情况概述
+* [SRP和UGC Essentials](srp-and-ugc.md) - SRP实用程序方法和示例
+* [使用SRP访问UGC](accessing-ugc-with-srp.md)  — 编码准则
+* [SocialUtils重构](socialutils.md)  — 将已弃用的实用程序方法映射到当前SRP实用程序方法

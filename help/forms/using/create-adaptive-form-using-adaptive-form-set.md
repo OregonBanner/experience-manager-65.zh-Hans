@@ -1,7 +1,7 @@
 ---
-title: 使用一組最適化表單建立最適化表單
+title: 使用一组自适应表单创建自适应表单
 seo-title: Create an adaptive form using a set of adaptive forms
-description: 透過AEM Forms，將最適化表單集合在一起，以製作單一大型最適化表單，並瞭解其功能。
+description: 通过AEM Forms，将自适应表单汇集在一起，创作单个大型自适应表单并了解其功能。
 seo-description: With AEM Forms, bring adaptive forms together to author a single large adaptive form, and understand its features.
 uuid: e52e4f90-8821-49ec-89ff-fbf07db69bd2
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -17,29 +17,29 @@ ht-degree: 0%
 
 ---
 
-# 使用一組最適化表單建立最適化表單{#create-an-adaptive-form-using-a-set-of-adaptive-forms}
+# 使用一组自适应表单创建自适应表单{#create-an-adaptive-form-using-a-set-of-adaptive-forms}
 
 ## 概述 {#overview}
 
-在工作流程中（例如開立銀行帳戶的應用程式），您的使用者會填寫多個表單。 與其要求他們填寫一組表格，您可以將表格棧疊在一起並建置大型表格（父級表格）。 將最適化表單新增至較大表單時，會新增為面板（子表單）。 新增一組子表單以建立父表單。 您可以根據使用者輸入顯示或隱藏面板。 父表單的按鈕（例如提交和重設）會覆寫子表單的按鈕。 若要在父表單中新增自適應表單，您可以從資產瀏覽器中拖放自適應表單（如自適應表單片段）。
+在工作流（如开立银行账户的申请）中，您的用户会填写多个表单。 与其要求他们填写一组表单，您可以将表单栈叠在一起并构建大型表单（父表单）。 将自适应表单添加到较大表单时，会将其作为面板（子表单）添加。 添加一组子表单以创建父表单。 您可以根据用户输入显示或隐藏面板。 父表单的按钮（如提交和重置）将覆盖子表单的按钮。 要在父表单中添加自适应表单，您可以从资产浏览器中拖放自适应表单（如自适应表单片段）。
 
 可用的功能包括：
 
-* 獨立製作
-* 顯示/隱藏適當的表單
-* 延遲載入
+* 独立创作
+* 显示/隐藏相应的表单
+* 延迟加载
 
-與使用個別元件建立父項表單相比，獨立編寫和延遲載入等功能可提供效能改善。
+与使用单个组件创建父表单相比，独立创作和延迟加载等功能提高了性能。
 
 >[!NOTE]
 >
->您不可以使用XFA型最適化表單/片段做為子表單或父表單。
+>您无法将基于XFA的自适应表单/片段用作子表单或父表单。
 
-## 幕後 {#behind-the-scenes}
+## 幕后 {#behind-the-scenes}
 
-您可以在父表單中新增XSD型最適化表單和片段。 上層表單的結構與 [任何最適化表單](../../forms/using/prepopulate-adaptive-form-fields.md). 將最適化表單新增為子表單時，它會新增為父表單中的面板。 繫結子表單的資料儲存在 `data`的根目錄 `afBoundData` 上層表單XML結構描述的部分。
+您可以在父表单中添加基于XSD的自适应表单和片段。 父表单的结构与 [任意自适应表单](../../forms/using/prepopulate-adaptive-form-fields.md). 将自适应表单添加为子表单时，它作为面板添加到父表单中。 绑定子表单的数据存储在 `data`根目录 `afBoundData` 部分。
 
-例如，您的客戶填寫申請表。 表單的前兩個欄位是名稱和身分。 其XML為：
+例如，您的客户需填写申请表。 表单的前两个字段是名称和标识。 其XML为：
 
 ```xml
 <afData>
@@ -55,7 +55,7 @@ ht-degree: 0%
 </afData>
 ```
 
-您在應用程式中新增另一個表單，讓您的客戶填寫其辦公室地址。 子表單的結構描述根目錄為 `officeAddress`. 套用 `bindref` `/application/officeAddress` 或 `/officeAddress`. 若 `bindref`未提供，則子表單將新增為 `officeAddress` 子樹。 請參閱下列格式的XML：
+您在应用程序中添加另一张表格，让您的客户可以填写其办公室地址。 子表单的架构根目录为 `officeAddress`. 应用 `bindref` `/application/officeAddress` 或 `/officeAddress`. 如果 `bindref`未提供，子表单将添加为 `officeAddress` 子树。 请参阅以下格式的XML：
 
 ```xml
 <afData>
@@ -75,7 +75,7 @@ ht-degree: 0%
 </afData>
 ```
 
-如果您插入其他可讓客戶提供住家地址的表單，請套用 `bindref` `/application/houseAddress or /houseAddress.`XML看起來像這樣：
+如果插入另一个允许客户提供住宅地址的表单，请应用 `bindref` `/application/houseAddress or /houseAddress.`XML如下所示：
 
 ```xml
 <afData>
@@ -99,9 +99,9 @@ ht-degree: 0%
 </afData>
 ```
 
-如果要保留與結構描述根相同的子根名稱( `Address`在此範例中)，使用索引的bindrefs。
+如果要保留与架构根相同的子根名称( `Address`在此示例中)，使用索引的bindrefs。
 
-例如，套用bindrefs `/application/address[1]` 或 `/address[1]` 和 `/application/address[2]` 或 `/address[2]`. 表單的XML為：
+例如，应用bindrefs `/application/address[1]` 或 `/address[1]` 和 `/application/address[2]` 或 `/address[2]`. 表单的XML为：
 
 ```xml
 <afData>
@@ -125,23 +125,23 @@ ht-degree: 0%
 </afData>
 ```
 
-您可以使用變更最適化表單/片段的預設子樹狀結構 `bindRef` 屬性。 此 `bindRef` 屬性可讓您指定指向XML結構描述樹狀結構中某個位置的路徑。
+您可以使用更改自适应表单/片段的默认子树 `bindRef` 属性。 此 `bindRef` 属性允许您指定指向XML架构树结构中某个位置的路径。
 
-如果子表單未繫結，其資料會儲存在 `data`的根目錄 `afUnboundData` 上層表單XML結構描述的部分。
+如果子表单未绑定，则其数据存储在 `data`根目录 `afUnboundData` 部分。
 
-您可以將最適化表單新增為子表單多次。 確保 `bindRef` 已適當修改，以便適用性表單的每個已使用例項指向資料根下的不同子根。
+您可以将自适应表单多次添加为子表单。 确保 `bindRef` 进行了适当修改，以便自适应表单的每个已用实例都指向数据根下的不同子根。
 
 >[!NOTE]
 >
->如果不同的表單/片段對應到相同的子根，資料會被覆寫。
+>如果不同的表单/片段映射到相同的子根，则数据会被覆盖。
 
-## 使用資產瀏覽器將最適化表單新增為子表單 {#adding-an-adaptive-form-as-a-child-form-using-asset-browser}
+## 使用资源浏览器将自适应表单添加为子表单 {#adding-an-adaptive-form-as-a-child-form-using-asset-browser}
 
-執行以下步驟，使用資產瀏覽器將最適化表單新增為子表單。
+执行以下步骤，使用资产浏览器将自适应表单添加为子表单。
 
-1. 在編輯模式下開啟父表單。
-1. 在側邊欄中，按一下 **資產** ![資產 — 瀏覽器](assets/assets-browser.png). 在Assets下，選取 **最適化表單** 下拉式清單。
-   [ ![在Assets下選取最適化表單](assets/asset.png)](assets/asset-1.png)
+1. 在编辑模式下打开父窗体。
+1. 在侧栏中，单击 **资产** ![assets-browser](assets/assets-browser.png). 在Assets下，选择 **自适应表单** 从下拉菜单中。
+   [ ![在Assets下选择自适应表单](assets/asset.png)](assets/asset-1.png)
 
-1. 拖放您要新增為子表單的最適化表單。
-   [ ![將最適化表單拖放至您的網站](assets/drag-drop.png)](assets/drag-drop-1.png)您拖放的最適化表單會新增為子表單。
+1. 拖放要作为子表单添加的自适应表单。
+   [ ![将自适应表单拖放到网站中](assets/drag-drop.png)](assets/drag-drop-1.png)您拖放的自适应表单将添加为子表单。

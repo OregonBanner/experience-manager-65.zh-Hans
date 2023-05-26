@@ -1,7 +1,7 @@
 ---
-title: 「教學課程：建立表單資料模型」
+title: “教程：创建表单数据模型”
 seo-title: Create Form Data Model Tutorial
-description: 建立表單資料模型
+description: 创建表单数据模型
 seo-description: Create form data model
 uuid: b9d2bb1b-90f0-44f4-b1e3-0603cdf5f5b8
 contentOwner: khsingh
@@ -16,123 +16,123 @@ ht-degree: 1%
 
 ---
 
-# 教學課程：建立表單資料模型 {#tutorial-create-form-data-model}
+# 教程：创建表单数据模型 {#tutorial-create-form-data-model}
 
 ![04-create-form-data-model-main](assets/04-create-form-data-model-main.png)
 
-本教學課程是 [建立第一個最適化表單](../../forms/using/create-your-first-adaptive-form.md) 數列。 建議您依照時間順序觀看本系列，以瞭解、執行和示範完整的教學課程使用案例。
+本教程是 [创建您的第一个自适应表单](../../forms/using/create-your-first-adaptive-form.md) 系列。 建议按时间顺序关注该系列，以了解、执行和演示完整的教程用例。
 
-## 關於教學課程 {#about-the-tutorial}
+## 关于教程 {#about-the-tutorial}
 
-AEM [!DNL Forms] 資料整合模組可讓您從不同的後端資料來源(例如AEM使用者設定檔、RESTful Web服務、以SOAP為基礎的Web服務、OData服務和關聯式資料庫)建立表單資料模型。 您可以在表單資料模型中設定資料模型物件和服務，並將其與最適化表單建立關聯。 最適化表單欄位已繫結至資料模型物件屬性。 這些服務可讓您預填最適化表單，並將提交的表單資料寫入回資料模型物件。
+AEM [!DNL Forms] 数据集成模块允许您从不同的后端数据源(如AEM用户配置文件、RESTful Web服务、基于SOAP的Web服务、OData服务和关系数据库)创建表单数据模型。 您可以在表单数据模型中配置数据模型对象和服务，并将其与自适应表单关联。 自适应表单字段绑定到数据模型对象属性。 这些服务使您能够预填充自适应表单并将提交的表单数据写回数据模型对象。
 
-如需表單資料整合和表單資料模型的詳細資訊，請參閱 [AEM Forms資料整合](../../forms/using/data-integration.md).
+有关表单数据集成和表单数据模型的更多信息，请参阅 [AEM Forms数据集成](../../forms/using/data-integration.md).
 
-本教學課程將逐步引導您準備、建立、設定表單資料模型，並將其與最適化表單建立關聯的步驟。 在本教學課程結束時，您將能夠：
+本教程将指导您完成准备、创建、配置表单数据模型并将其与自适应表单关联的步骤。 在本教程结束时，您将能够：
 
-* [將MySQL資料庫設定為資料來源](#config-database)
-* [使用MySQL資料庫建立表單資料模型](#create-fdm)
-* [設定表單資料模型](#config-fdm)
-* [測試表單資料模型](#test-fdm)
+* [将MySQL数据库配置为数据源](#config-database)
+* [使用MySQL数据库创建表单数据模型](#create-fdm)
+* [配置表单数据模型](#config-fdm)
+* [测试表单数据模型](#test-fdm)
 
-表單資料模型看起來類似下列：
+表单数据模型将类似于以下内容：
 
 ![form-data-model_l](assets/form-data-model_l.png)
 
-**答：** 已設定的資料來源 **B.** 資料來源結構描述 **C.** 可用服務 **D.** 資料模型物件 **E.** 已設定的服務
+**答：** 配置的数据源 **B.** 数据源架构 **C.** 可用服务 **D.** 数据模型对象 **E.** 配置的服务
 
 ## 前提条件 {#prerequisites}
 
-開始之前，請確定您具備下列條件：
+在开始之前，请确保您具备以下条件：
 
-* [!DNL MySQL] 包含下列專案之先決條件一節所述範例資料的資料庫： [建立第一個最適化表單](../../forms/using/create-your-first-adaptive-form.md)
-* 適用於的OSGi套件組合 [!DNL MySQL] JDBC驅動程式，如中所述 [整合JDBC資料庫驅動程式](/help/sites-developing/jdbc.md#bundling-the-jdbc-database-driver)
-* 適用性表單，如第一個教學課程中所述 [建立最適化表單](/help/forms/using/create-adaptive-form.md)
+* [!DNL MySQL] 数据库，其中包含的先决条件部分所述的示例数据 [创建您的第一个自适应表单](../../forms/using/create-your-first-adaptive-form.md)
+* 的OSGi包 [!DNL MySQL] JDBC驱动程序，如中所述 [捆绑JDBC数据库驱动程序](/help/sites-developing/jdbc.md#bundling-the-jdbc-database-driver)
+* 自适应表单，如第一个教程中所述 [创建自适应表单](/help/forms/using/create-adaptive-form.md)
 
-## 步驟1：將MySQL資料庫設定為資料來源 {#config-database}
+## 步骤1：将MySQL数据库配置为数据源 {#config-database}
 
-您可以設定不同型別的資料來源，以建立表單資料模型。 在本教學課程中，我們將設定您設定的MySQL資料庫，並填入範例資料。 如需其他支援的資料來源以及如何設定這些來源的相關資訊，請參閱 [AEM Forms資料整合](../../forms/using/data-integration.md).
+您可以配置不同类型的数据源来创建表单数据模型。 在本教程中，我们将配置您配置并填充了示例数据的MySQL数据库。 有关其他受支持数据源以及如何配置它们的信息，请参阅 [AEM Forms数据集成](../../forms/using/data-integration.md).
 
-執行以下動作來設定您的 [!DNL MySQL] 資料庫：
+执行以下操作以配置 [!DNL MySQL] 数据库：
 
-1. 安裝適用於的JDBC驅動程式 [!DNL MySQL] 資料庫作為OSGi套件：
+1. 为安装JDBC驱动程序 [!DNL MySQL] 数据库作为OSGi捆绑包：
 
-   1. 下載 [!DNL MySQL] JDBC驅動程式OSGi套件組合來源 `http://www.java2s.com/ref/jar/download-orgosgiservicejdbc100jar-file.html`. <!-- This URL is an insecure link but using https is not possible -->
-   1. 登入AEM [!DNL Forms] 以管理員身分製作執行個體，並前往AEM Web主控台套件組合。 預設URL為 [https://localhost:4502/system/console/bundles](https://localhost:4502/system/console/bundles).
+   1. 下载 [!DNL MySQL] 来自的JDBC驱动程序OSGi包 `http://www.java2s.com/ref/jar/download-orgosgiservicejdbc100jar-file.html`. <!-- This URL is an insecure link but using https is not possible -->
+   1. 登录到AEM [!DNL Forms] 以管理员身份创作实例，然后转到AEM Web控制台包。 默认URL为 [https://localhost:4502/system/console/bundles](https://localhost:4502/system/console/bundles).
 
-   1. 點選 **[!UICONTROL 安裝/更新]**. 一個 [!UICONTROL 上傳/安裝套件組合] 對話方塊隨即顯示。
+   1. 点按 **[!UICONTROL 安装/更新]**. An [!UICONTROL 上传/安装包] 对话框。
 
-   1. 點選 **[!UICONTROL 選擇檔案]** 瀏覽並選取 [!DNL MySQL] JDBC驅動程式OSGi套件。 選取 **[!UICONTROL 開始套件組合]** 和 **[!UICONTROL 重新整理封裝]**，然後點選 **[!UICONTROL 安裝或更新]**. 確保 [!DNL Oracle Corporation's] 的JDBC驅動程式 [!DNL MySQL] 處於作用中狀態。 已安裝驅動程式。
+   1. 点按 **[!UICONTROL 选择文件]** 浏览并选择 [!DNL MySQL] JDBC驱动程序OSGi包。 选择 **[!UICONTROL 启动捆绑包]** 和 **[!UICONTROL 刷新包]**，然后点按 **[!UICONTROL 安装或更新]**. 确保 [!DNL Oracle Corporation's] 的JDBC驱动程序 [!DNL MySQL] 处于活动状态。 已安装驱动程序。
 
-1. 設定 [!DNL MySQL] 資料庫做為資料來源：
+1. 配置 [!DNL MySQL] 数据库作为数据源：
 
-   1. 前往AEM網頁主控台，網址為 [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr).
-   1. 尋找 **Apache Sling Connection Pooled DataSource** 設定。 點選以在編輯模式中開啟設定。
-   1. 在設定對話方塊中，指定下列詳細資訊：
+   1. 转到AEM Web控制台，网址为 [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr).
+   1. 查找 **Apache Sling连接池化数据源** 配置。 点按以在编辑模式下打开配置。
+   1. 在配置对话框中，指定以下详细信息：
 
-      * **資料來源名稱：** 您可以指定任何名稱。 例如，指定 **WeRetailMySQL**.
-      * **資料來源服務屬性名稱**：指定包含DataSource名稱的服務屬性名稱。 它是在將資料來源執行個體註冊為OSGi服務時指定的。 例如， **資料來源名稱**.
-      * **JDBC驅動程式類別**：指定JDBC驅動程式的Java類別名稱。 對象 [!DNL MySQL] 資料庫，指定 **com.mysql.jdbc.Driver**.
-      * **JDBC連線URI**：指定資料庫的連線URL。 對象 [!DNL MySQL] 資料庫執行於連線埠3306和結構描述weretail，URL為： `jdbc:mysql://'server':3306/weretail?autoReconnect=true&useUnicode=true&characterEncoding=utf-8`
-
-      >[!NOTE]
-      >
-      > 當 [!DNL MySQL] 資料庫位於防火牆之後，則資料庫主機名稱不是公用DNS。 資料庫的IP位址需要新增至 */etc/hosts* AEM主機電腦的檔案。
-
-      * **使用者名稱：** 資料庫的使用者名稱。 必須啟用JDBC驅動程式才能建立與資料庫的連線。
-      * **密碼：** 資料庫的密碼。 必須啟用JDBC驅動程式才能建立與資料庫的連線。
+      * **数据源名称：** 您可以指定任意名称。 例如，指定 **weretailMySQL**.
+      * **数据源服务属性名称**：指定包含DataSource名称的服务属性的名称。 它是在将数据源实例注册为OSGi服务时指定的。 例如， **数据源名称**.
+      * **JDBC驱动程序类**：指定JDBC驱动程序的Java类名。 对象 [!DNL MySQL] 数据库，指定 **com.mysql.jdbc.Driver**.
+      * **JDBC连接URI**：指定数据库的连接URL。 对象 [!DNL MySQL] 数据库运行在端口3306和模式weretail上，URL为： `jdbc:mysql://'server':3306/weretail?autoReconnect=true&useUnicode=true&characterEncoding=utf-8`
 
       >[!NOTE]
       >
-      >AEM Forms不支援NT驗證 [!DNL MySQL]. 前往AEM網頁主控台，網址為 [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr) 和搜尋「Apache Sling Connection Pooled Datasource」。若為「integratedSecurity」的「JDBC連線URI」屬性集值設為False，並使用建立的使用者名稱和密碼來連線 [!DNL MySQL] 資料庫。
+      > 当 [!DNL MySQL] 数据库位于防火墙之后，则数据库主机名不是公共DNS。 数据库的IP地址需要添加到 */etc/hosts* AEM主机的文件。
 
-      * **借入時測試：** 啟用 **[!UICONTROL 借入時測試]** 選項。
-      * **回訪時測試：** 啟用 **[!UICONTROL 回訪時測試]** 選項。
-      * **驗證查詢：** 指定SQL SELECT查詢來驗證集區的連線。 查詢至少必須傳回一列。 例如， **選取 &#42; 從customerdetails**.
-      * **交易隔離**：將值設為 **READ_COMMITTED**.
+      * **用户名：** 数据库的用户名。 必须启用JDBC驱动程序才能与数据库建立连接。
+      * **密码：** 数据库的密码。 必须启用JDBC驱动程序才能与数据库建立连接。
 
-         保留其他屬性為預設值 [值](https://tomcat.apache.org/tomcat-7.0-doc/jdbc-pool.html) 並點選 **[!UICONTROL 儲存]**.
+      >[!NOTE]
+      >
+      >AEM Forms不支持以下项的NT身份验证 [!DNL MySQL]. 转到AEM Web控制台，网址为 [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr) 和搜索“Apache Sling Connection Pooled Datasource”。将“integratedSecurity”的“JDBC连接URI”属性集值设置为False，并使用创建的用户名和密码进行连接 [!DNL MySQL] 数据库。
 
-         會建立類似下列的設定。
+      * **借入测试：** 启用 **[!UICONTROL 借入测试]** 选项。
+      * **返回时测试：** 启用 **[!UICONTROL 回访时测试]** 选项。
+      * **验证查询：** 指定一个SQL SELECT查询来验证池中的连接。 查询必须至少返回一行。 例如， **选择 &#42; 来自客户详细信息**.
+      * **事务隔离**：将值设置为 **READ_COMMITTED**.
 
-         ![relational-database-data-source-configuration](assets/relational-database-data-source-configuration.png)
+         将其他属性保留为默认值 [值](https://tomcat.apache.org/tomcat-7.0-doc/jdbc-pool.html) 并点按 **[!UICONTROL 保存]**.
+
+         将创建类似于以下内容的配置。
+
+         ![关系型数据库 — 数据源 — 配置](assets/relational-database-data-source-configuration.png)
 
 
 
-## 步驟2：建立表單資料模型 {#create-fdm}
+## 步骤2：创建表单数据模型 {#create-fdm}
 
-AEM [!DNL Forms] 提供直覺式使用者介面，用於 [建立表單資料模型](data-integration.md) 來自已設定的資料來源。 您可以在表單資料模型中使用多個資料來源。 在我們的使用案例中，我們將使用已設定的 [!DNL MySQL] 資料來源。
+AEM [!DNL Forms] 提供直观的用户界面，用于 [创建表单数据模型](data-integration.md) 来自配置的数据源。 您可以在表单数据模型中使用多个数据源。 对于我们的用例，我们将使用配置的 [!DNL MySQL] 数据源。
 
-執行下列操作以建立表單資料模型：
+执行以下操作以创建表单数据模型：
 
-1. 在AEM編寫執行個體中，導覽至 **[!UICONTROL Forms]** > **[!UICONTROL 資料整合]**.
-1. 點選 **[!UICONTROL 建立]** > **[!UICONTROL 表單資料模型]**.
-1. 在建立表單資料模型對話方塊中，指定 **名稱** 用於表單資料模型。 例如， **customer-shipping-billing-details**. 點選 **[!UICONTROL 下一個]**.
-1. 選取資料來源畫面會列出所有已設定的資料來源。 選取 **WeRetailMySQL** 資料來源並點選 **[!UICONTROL 建立]**.
+1. 在AEM创作实例中，导航到 **[!UICONTROL Forms]** > **[!UICONTROL 数据集成]**.
+1. 点按 **[!UICONTROL 创建]** > **[!UICONTROL 表单数据模型]**.
+1. 在创建表单数据模型对话框中，指定 **name** 表单数据模型的。 例如， **customer-shipping-billing-details**. 点按 **[!UICONTROL 下一个]**.
+1. 选择数据源屏幕列出了所有已配置的数据源。 选择 **weretailMySQL** 数据源并点按 **[!UICONTROL 创建]**.
 
-   ![data-source-selection](assets/data-source-selection.png)
+   ![数据源选择](assets/data-source-selection.png)
 
-此 **customer-shipping-billing-details** 表單資料模型已建立。
+此 **customer-shipping-billing-details** 创建表单数据模型。
 
-## 步驟3：設定表單資料模型 {#config-fdm}
+## 步骤3：配置表单数据模型 {#config-fdm}
 
-設定表單資料模型涉及：
+配置表单数据模型涉及：
 
-* 新增資料模型物件與服務
-* 設定資料模型物件的讀取和寫入服務
+* 添加数据模型对象和服务
+* 配置数据模型对象的读取和写入服务
 
-執行下列操作以設定表單資料模型：
+执行以下操作以配置表单数据模型：
 
-1. 在AEM作者執行個體上，導覽至 **[!UICONTROL Forms]** > **[!UICONTROL 資料整合]**. 預設URL為 [https://localhost:4502/aem/forms.html/content/dam/formsanddocuments-fdm](https://localhost:4502/aem/forms.html/content/dam/formsanddocuments-fdm).
-1. 此 **customer-shipping-billing-details** 此處列出您先前建立的表單資料模型。 在編輯模式下開啟它。
+1. 在AEM创作实例上，导航到 **[!UICONTROL Forms]** > **[!UICONTROL 数据集成]**. 默认URL为 [https://localhost:4502/aem/forms.html/content/dam/formsanddocuments-fdm](https://localhost:4502/aem/forms.html/content/dam/formsanddocuments-fdm).
+1. 此 **customer-shipping-billing-details** 此处列出了您之前创建的表单数据模型。 在编辑模式下将其打开。
 
-   選取的資料來源 **WeRetailMySQL** 已在表單資料模型中設定。
+   选定的数据源 **weretailMySQL** 在表单数据模型中配置。
 
    ![default-fdm](assets/default-fdm.png)
 
-1. 展開WeRailMySQL資料來源樹狀結構。 從以下資料模型物件和服務中選取 **Weretail** > **customerdetails** 要建立資料模型的結構描述：
+1. 展开WeRailMySQL数据源树。 从中选择以下数据模型对象和服务 **Weretail** > **customerdetails** 用于表单数据模型的架构：
 
-   * **資料模型物件**：
+   * **数据模型对象**：
 
       * id
       * name
@@ -145,100 +145,100 @@ AEM [!DNL Forms] 提供直覺式使用者介面，用於 [建立表單資料模�
       * get
       * 更新
 
-   點選 **新增選取專案** 將選取的資料模型物件和服務新增至表單資料模型。
+   点按 **添加选定项** 将选定的数据模型对象和服务添加到表单数据模型。
 
-   ![WeRetail結構](assets/weretail_schema_new.png)
+   ![WeRetail架构](assets/weretail_schema_new.png)
 
    >[!NOTE]
    >
-   >JDBC資料來源的預設get、update和insert服務隨表單資料模型一起提供現成可用。
+   >为JDBC数据源提供的默认get、update和insert服务是现成的表单数据模型。
 
-1. 設定資料模型物件的讀取和寫入服務。
+1. 为数据模型对象配置读取和写入服务。
 
-   1. 選取 **customerdetails** 資料模型物件並點選 **[!UICONTROL 編輯屬性]**.
-   1. 選取 **[!UICONTROL get]** 從「讀取服務」下拉式清單。 此 **id** 引數，會自動新增customerdetails資料模型物件中的主索引鍵。 點選 ![aem_6_3_edit](assets/aem_6_3_edit.png) 並依照以下方式設定引數。
+   1. 选择 **customerdetails** 数据模型对象和点按 **[!UICONTROL 编辑属性]**.
+   1. 选择 **[!UICONTROL get]** 从“读取服务”下拉列表中。 此 **id** 参数，将自动添加customerdetails数据模型对象中的主键。 点按 ![aem_6_3_edit](assets/aem_6_3_edit.png) 并按照以下方式配置参数。
 
       ![read-default](assets/read-default.png)
 
-   1. 同樣地，選取 **[!UICONTROL 更新]** 做為寫入服務。 此 **customerdetails** 物件會自動新增為引數。 引數的設定如下。
+   1. 同样，选择 **[!UICONTROL 更新]** 作为写入服务。 此 **customerdetails** 对象会自动添加为参数。 参数的配置如下所示。
 
       ![write-default](assets/write-default.png)
 
-      新增並設定 **id** 引數如下。
+      添加并配置 **id** 参数如下所示。
 
       ![id-arg](assets/id-arg.png)
 
-   1. 點選 **[!UICONTROL 完成]** 以儲存資料模型物件屬性。 然後，點選 **[!UICONTROL 儲存]** 以儲存表單資料模型。
+   1. 点按 **[!UICONTROL 完成]** 以保存数据模型对象属性。 然后，点按 **[!UICONTROL 保存]** 以保存表单数据模型。
 
-      此 **[!UICONTROL get]** 和 **[!UICONTROL 更新]** 服務會新增為資料模型物件的預設服務。
+      此 **[!UICONTROL get]** 和 **[!UICONTROL 更新]** 服务作为数据模型对象的默认服务添加。
 
       ![data-model-object](assets/data-model-object.png)
 
-1. 前往 **[!UICONTROL 服務]** 標籤並設定 **[!UICONTROL get]** 和 **[!UICONTROL 更新]** 服務。
+1. 转到 **[!UICONTROL 服务]** 选项卡和配置 **[!UICONTROL get]** 和 **[!UICONTROL 更新]** 服务。
 
-   1. 選取 **[!UICONTROL get]** 服務並點選 **[!UICONTROL 編輯屬性]**. 屬性對話方塊開啟。
-   1. 在「編輯屬性」對話方塊中指定下列專案：
+   1. 选择 **[!UICONTROL get]** 服务和点击 **[!UICONTROL 编辑属性]**. 此时将打开“属性”对话框。
+   1. 在“编辑属性”对话框中指定以下内容：
 
-      * **標題**：指定服務的標題。 例如：擷取送貨地址。
-      * **說明**：指定包含服務詳細功能的說明。 例如：
+      * **标题**：指定服务的标题。 例如：检索送货地址。
+      * **描述**：指定包含服务详细功能的描述。 例如：
 
-         此服務會從擷取送貨地址和其他客戶詳細資料 [!DNL MySQL] 資料庫
+         此服务从检索送货地址和其他客户详细信息 [!DNL MySQL] 数据库
 
-      * **輸出模型物件**：選取包含客戶資料的結構描述。 例如：
+      * **输出模型对象**：选择包含客户数据的架构。 例如：
 
-         customerdetail結構描述
+         customerdetail架构
 
-      * **傳回陣列**：停用 **傳回陣列** 選項。
-      * **引數**：選取名為的引數 **ID**.
+      * **返回数组**：禁用 **返回数组** 选项。
+      * **参数**：选择名为的参数 **ID**.
 
-      點選 **[!UICONTROL 完成]**. 已設定從MySQL資料庫擷取客戶詳細資訊的服務。
+      点按 **[!UICONTROL 完成]**. 已配置用于从MySQL数据库检索客户详细信息的服务。
 
-      ![shiping-address-retrieval](assets/shiiping-address-retrieval.png)
+      ![shiiping-address-retrieval](assets/shiiping-address-retrieval.png)
 
-   1. 選取 **[!UICONTROL 更新]** 服務並點選 **[!UICONTROL 編輯屬性]**. 屬性對話方塊開啟。
+   1. 选择 **[!UICONTROL 更新]** 服务和点击 **[!UICONTROL 编辑属性]**. 此时将打开“属性”对话框。
 
-   1. 在「 」中指定以下內容 [!UICONTROL 編輯屬性] 對話方塊：
+   1. 在中指定以下内容 [!UICONTROL 编辑属性] 对话框：
 
-      * **標題**：指定服務的標題。 例如，更新送貨地址。
-      * **說明**：指定包含服務詳細功能的說明。 例如：
+      * **标题**：指定服务的标题。 例如，更新送货地址。
+      * **描述**：指定包含服务详细功能的描述。 例如：
 
-         此服務會更新MySQL資料庫中的送貨地址和相關欄位
+         此服务更新MySQL数据库中的送货地址和相关字段
 
-      * **輸入模型物件**：選取包含客戶資料的結構描述。 例如：
+      * **输入模型对象**：选择包含客户数据的架构。 例如：
 
-         customerdetail結構描述
+         customerdetail架构
 
-      * **輸出型別**：選取 **布林值**.
+      * **输出类型**：选择 **布尔型**.
 
-      * **引數**：選取名為的引數 **ID** 和 **customerdetails**.
-      點選 **[!UICONTROL 完成]**. 此 **[!UICONTROL 更新]** 更新客戶詳細資料的服務 [!DNL MySQL] 資料庫已設定。
+      * **参数**：选择名为的参数 **ID** 和 **customerdetails**.
+      点按 **[!UICONTROL 完成]**. 此 **[!UICONTROL 更新]** 服务，以更新客户详细信息 [!DNL MySQL] 数据库已配置。
 
       ![shiping-address-update](assets/shiiping-address-update.png)
 
 
 
-已設定表單資料模型中的資料模型物件和服務。 您現在可以測試表單資料模型。
+配置表单数据模型中的数据模型对象和服务。 您现在可以测试表单数据模型。
 
-## 步驟4：測試表單資料模型 {#test-fdm}
+## 步骤4：测试表单数据模型 {#test-fdm}
 
-您可以測試資料模型物件和服務，以確認表單資料模型已正確設定。
+您可以测试数据模型对象和服务，以验证是否正确配置了表单数据模型。
 
-執行下列操作以執行測試：
+执行以下操作以运行测试：
 
-1. 前往 **[!UICONTROL 模型]** 索引標籤中，選取 **customerdetails** 資料模型物件，然後點選 **[!UICONTROL 測試模型物件]**.
-1. 在 [!UICONTROL 測試模型/服務] 視窗，選取 **[!UICONTROL 讀取模型物件]** 從 **[!UICONTROL 選取模型/服務]** 下拉式清單。
-1. 在 **customerdetails** 區段，指定 **id** 存在於設定中的引數 [!DNL MySQL] 資料庫並點選 **[!UICONTROL 測試]**.
+1. 转到 **[!UICONTROL 模型]** 选项卡，选择 **customerdetails** 数据模型对象，然后点按 **[!UICONTROL 测试模型对象]**.
+1. 在 [!UICONTROL 测试模型/服务] 窗口，选择 **[!UICONTROL 读取模型对象]** 从 **[!UICONTROL 选择模型/服务]** 下拉菜单。
+1. 在 **customerdetails** 部分，指定 **id** 已配置中存在的参数 [!DNL MySQL] 数据库并点按 **[!UICONTROL 测试]**.
 
-   系統會擷取與指定ID相關聯的客戶詳細資訊，並顯示在 **[!UICONTROL 輸出]** 區段，如下所示。
+   与指定ID关联的客户详细信息将获取并显示在 **[!UICONTROL 输出]** 部分，如下所示。
 
    ![test-read-model](assets/test-read-model.png)
 
-1. 同樣地，您可以測試Write模型物件和服務。
+1. 同样，也可以测试Write模型对象和服务。
 
-   在下列範例中，更新服務已成功更新資料庫中ID7102715位址的詳細資訊。
+   在以下示例中，更新服务成功更新了数据库中ID 7102715的地址详细信息。
 
    ![test-write-model](assets/test-write-model.png)
 
-   現在，如果您再次測試id 7107215的讀取模式服務，它將擷取並顯示更新的客戶詳細資訊，如下所示。
+   现在，如果您再次测试id 7107215的读取模型服务，它将获取并显示更新的客户详细信息，如下所示。
 
-   ![已讀取 — 已更新](assets/read-updated.png)
+   ![已读 — 已更新](assets/read-updated.png)

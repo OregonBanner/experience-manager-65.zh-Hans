@@ -1,5 +1,5 @@
 ---
-title: 編輯內容頁面屬性
+title: 编辑内容页面属性
 description: 为页面定义所需的属性.
 uuid: d3a2183b-8082-4cfc-aeed-26facbf3f3e6
 contentOwner: Chris Bohnert
@@ -28,13 +28,13 @@ ht-degree: 61%
 
 * **标题**
 
-   頁面的標題會顯示在各種位置。 例如， **網站** 索引標籤清單和 **網站** 卡片/清單檢視。
+   页面的标题会显示在各种不同的位置。 例如， **网站** 选项卡列表和 **站点** 卡片/列表视图。
 
    这是必填字段。
 
 * **标记**
 
-   您可以在此處更新選取方塊中的清單，從頁面新增或移除標籤：
+   在此，您可以通过更新选择框中的列表在页面中添加或删除标记：
 
    * 选择标记后，它会列在选择框下。您可以使用“x”从此列表中移除标记。
    * 可通过在空白选择框中键入名称输入全新标记。
@@ -60,37 +60,37 @@ ht-degree: 61%
       * 该值附加到页面标题后的竖线字符后，例如“骑行 Tuscany | 始终准备好使用 WKND”
 * **页面标题**
 
-   頁面上使用的標題。 通常由标题组件使用。如果留空，则将使用&#x200B;**标题**。
+   要在页面上使用的标题。 通常由标题组件使用。如果留空，则将使用&#x200B;**标题**。
 
 * **导航标题**
 
-   您可以指定個別標題以在導覽中使用（例如，如果您想要更簡潔的內容）。 如果為空， **標題** 將會使用。
+   您可以指定单独的标题以在导航中使用（例如，当您希望某些内容能更加简洁时）。 如果为空， **标题** 将被使用。
 
 * **子标题**
 
-   頁面上使用的副標題。
+   页面上使用的子标题。
 
 * **描述**
 
-   頁面的說明、用途或您要新增的任何其他詳細資訊。
+   页面的描述、用途或要添加的任何其他详细信息。
 
 * **开始时间**
 
-   啟動已發佈頁面的日期和時間。 發佈後，此頁面將保持休眠狀態，直到指定的時間。
+   激活已发布页面的日期和时间。 发布后，此页面将保持休眠状态，直到指定的时间。
 
-   對於您要立即發佈的頁面（一般情境），請將這些欄位留空。
+   对于要立即发布的页面（正常场景），请将这些字段留空。
 
 * **结束时间**
 
-   已發佈頁面將停用的時間。
+   将停用已发布页面的时间。
 
-   同樣地，請將這些欄位留空以便立即採取行動。
+   再次将这些字段留空以便立即执行操作。
 
 * **虚 URL**
 
    允许您输入此页面的虚 URL，以便使用更短并且/或者含意更清楚的 URL。
 
-   例如，如果虛名URL設為 `welcome`至路徑所識別的頁面 `/v1.0/startpage`適用於網站 `http://example.com,` 則 `http://example.com/welcome`會是虛名URL `http://example.com/content/v1.0/startpage`
+   例如，如果将虚URL设置为 `welcome`到由路径标识的页面 `/v1.0/startpage`用于网站 `http://example.com,` 则 `http://example.com/welcome`将成为的虚URL `http://example.com/content/v1.0/startpage`
 
    >[!CAUTION]
    >
@@ -101,7 +101,7 @@ ht-degree: 61%
    >* 不应设置为现有页面。
 
 
-   您也需要設定Dispatcher以啟用對虛名URL的存取權。 另請參閱 [啟用對虛名URL的存取權](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#enabling-access-to-vanity-urls-vanity-urls) 以取得更多詳細資料。
+   您还需要配置Dispatcher以启用对虚名URL的访问。 参见 [启用对虚名URL的访问](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#enabling-access-to-vanity-urls-vanity-urls) 了解更多详细信息。
 
 * **重定向虚 URL**
 
@@ -111,44 +111,44 @@ ht-degree: 61%
 
 * **语言**
 
-   頁面語言。
+   页面语言。
 
 * **语言根目录**
 
-   如果頁面是語言副本的根目錄，則必須核取。
+   如果页面是语言副本的根，则必须选中。
 
 * **重定向**
 
-   指出此頁面應該自動重新導向的頁面。
+   指示此页面应自动重定向到的页面。
 
 * **Design**
 
-   指出 [設計](/help/sites-developing/designer.md) 用於此頁面。
+   指示 [设计](/help/sites-developing/designer.md) 用于此页面。
 
 * **别名**
 
-   指定要用於此頁面的別名。
+   指定要用于此页面的别名。
 
    * 例如，如果您为页面 `/content/wknd/us/en/magazine/members-only` 定义别名 `private`，则也可以通过 `/content/wknd/us/en/magazine/private` 访问此页面
    * 创建别名将设置页面节点上的 `sling:alias` 属性，这只会影响资源，而不会影响存储库路径。
    * 无法发布编辑器中按别名处理的页面。编辑器中的[发布选项](/help/sites-authoring/publishing-pages.md)仅适用于通过其实际路径访问的页面。
    * 有关详细信息，请参阅[“SEO 和 URL 管理最佳实践”下的“本地化的页面名称”](/help/managing/seo-and-url-management.md#localized-page-names)。
 
-* **繼承自&lt;*路徑*>**
+* **继承自&lt;*路径*>**
 
-   指示頁面是否繼承。 以及從何處取得。
+   指示页面是否继承。 以及来自何处。
 
 * **云配置**
 
-   設定的路徑。
+   配置的路径。
 
 * **允许的模板**
 
-   [定義可用的範本清單](/help/sites-authoring/templates.md#allowingatemplate) 在此支行內。
+   [定义可用的模板列表](/help/sites-authoring/templates.md#allowingatemplate) 在该支行内。
 
-* **啟用** （驗證需求）
+* **启用** （身份验证要求）
 
-   啟用（或停用）使用驗證來存取頁面。
+   启用（或禁用）使用身份验证来访问页面。
 
    >[!NOTE]
    >
@@ -156,47 +156,47 @@ ht-degree: 61%
 
    >[!CAUTION]
    >
-   >此 **[許可權](/help/sites-authoring/editing-page-properties.md#main-pars-procedure-949394300)** 索引標籤可讓您根據以下專案是否存在，編輯CUG設定： `granite:AuthenticationRequired` mixin. 如果頁面許可權是透過已棄用的CUG設定進行設定，需依據是否存在 `cq:cugEnabled` 屬性，底下將顯示警告訊息 **驗證需求** 且選項將不可編輯，也不會編輯 [許可權](/help/sites-authoring/editing-page-properties.md#permissions) 可編輯。
+   >此 **[权限](/help/sites-authoring/editing-page-properties.md#main-pars-procedure-949394300)** 选项卡允许根据以下项的存在来编辑CUG配置 `granite:AuthenticationRequired` mixin。 如果页面权限是使用已弃用的CUG配置配置的，则根据是否存在 `cq:cugEnabled` 属性，下面将显示一条警告消息 **身份验证要求** 并且选项将不可编辑，也不会 [权限](/help/sites-authoring/editing-page-properties.md#permissions) 可编辑。
    >
    >
-   >在這種情況下，必須在以下位置編輯CUG許可權： [傳統UI](/help/sites-classic-ui-authoring/classic-page-author-edit-page-properties.md).
+   >在这种情况下，必须在中编辑CUG权限 [经典UI](/help/sites-classic-ui-authoring/classic-page-author-edit-page-properties.md).
 
 * **登录页面**
 
-   用於登入的頁面。
+   用于登录的页面。
 
 * **导出配置**
 
-   指定匯出設定。
+   指定导出配置。
 
 ### 缩略图 {#thumbnail}
 
-顯示頁面縮圖影像。 您可以：
+显示页面缩略图图像。 您可以：
 
 * **生成预览**
 
-   產生頁面預覽，以做為縮圖使用。
+   生成要用作缩略图的页面预览。
 
 * **上传图像**
 
-   上傳要當作縮圖的影像。
+   上传要用作缩略图的图像。
 
 * **选择图像**
 
-   選取現有資產以用作縮圖。
+   选择要用作缩略图的现有资源。
 
 * **还原**
 
-   在您變更縮圖後，此選項就會變為可用。 如果不想保留您的更改，可以在保存前还原更改。
+   在对缩略图进行更改后，此选项将变为可用。 如果不想保留您的更改，可以在保存前还原更改。
 
 ### 社交媒体 {#social-media}
 
 * **社交媒体共享**
 
-   定義頁面上可用的共用選項。 顯示以下專案可用的選項： [共用核心元件](https://helpx.adobe.com/experience-manager/core-components/using/sharing.html).
+   定义页面上可用的共享选项。 显示以下项可用的选项： [共享核心组件](https://helpx.adobe.com/experience-manager/core-components/using/sharing.html).
 
-   * **啟用Facebook的使用者共用**
-   * **啟用Pinterest的使用者共用**
+   * **为Facebook启用用户共享**
+   * **为Pinterest启用用户共享**
    * **首选体验片段变体**
 定义用于为页面生成元数据的体验片段变体
 
@@ -204,13 +204,13 @@ ht-degree: 61%
 
 * **Cloud Service**
 
-   定義屬性 [雲端服務](/help/sites-developing/extending-cloud-config.md).
+   定义属性 [云服务](/help/sites-developing/extending-cloud-config.md).
 
 ### 个性化 {#personalization}
 
 * **ContextHub 配置**
 
-   選取 [ContextHub設定](/help/sites-developing/ch-configuring.md) 和 [區段路徑](/help/sites-administering/segmentation.md).
+   选择 [ContextHub配置](/help/sites-developing/ch-configuring.md) 和 [区段路径](/help/sites-administering/segmentation.md).
 
 * **定位配置**
 
@@ -223,7 +223,7 @@ ht-degree: 61%
 
 * **权限**
 
-   在此索引標籤中，您可以：
+   在此选项卡中，您可以：
 
    * [添加权限](/help/sites-administering/user-group-ac-admin.md)
    * [编辑已关闭的用户组](/help/sites-administering/cug.md#applying-your-closed-user-group-to-content-pages)
@@ -231,26 +231,26 @@ ht-degree: 61%
    * 查看[有效权限](/help/sites-administering/user-group-ac-admin.md)
    >[!CAUTION]
    >
-   >此 **許可權** 索引標籤可讓您根據以下專案是否存在，編輯CUG設定： `granite:AuthenticationRequired` mixin. 如果頁面許可權是透過已棄用的CUG設定進行設定，需依據是否存在 `cq:cugEnabled` 屬性，則會顯示警告訊息，且CUG許可權將不可編輯，驗證需求也不會顯示於 [進階](/help/sites-authoring/editing-page-properties.md#advanced) 標籤可編輯。
+   >此 **权限** 选项卡允许根据以下项的存在来编辑CUG配置 `granite:AuthenticationRequired` mixin。 如果页面权限是使用已弃用的CUG配置配置的，则根据是否存在 `cq:cugEnabled` 属性，将显示一条警告消息，并且CUG权限将不可编辑，对 [高级](/help/sites-authoring/editing-page-properties.md#advanced) 选项卡可编辑。
    >
    >
-   >在這種情況下，必須在以下位置編輯CUG許可權： [傳統UI](/help/sites-classic-ui-authoring/classic-page-author-edit-page-properties.md).
+   >在这种情况下，必须在中编辑CUG权限 [经典UI](/help/sites-classic-ui-authoring/classic-page-author-edit-page-properties.md).
 
    >[!NOTE]
    >
-   >「許可權」索引標籤不允許建立空的CUG群組，這是拒絕存取每個使用者的簡單方式，會很實用。 若要這麼做，必須使用CRX Explorer。 檢視檔案 [使用者、群組和存取許可權管理](/help/sites-administering/user-group-ac-admin.md) 以取得詳細資訊。
+   >“权限”选项卡不允许创建空的CUG组，这可以作为拒绝每个用户访问的简单方法。 为此，必须使用CRX Explorer。 查看文档 [用户、组和访问权限管理](/help/sites-administering/user-group-ac-admin.md) 了解更多信息。
 
 ### Blueprint {#blueprint}
 
 * **Blueprint**
 
-   在中定義Blueprint頁面的屬性 [多網站管理](/help/sites-administering/msm.md). 控制將修改傳播至即時副本的情況。
+   在中定义Blueprint页面的属性 [多站点管理](/help/sites-administering/msm.md). 控制将修改传播到Live Copy的情况。
 
 ### Live Copy {#live-copy}
 
 * **Live Copy**
 
-   在中定義即時副本頁面的屬性 [多網站管理](/help/sites-administering/msm.md). 控制從Blueprint傳播修改的情況。
+   在中定义Live Copy页面的属性 [多站点管理](/help/sites-administering/msm.md). 控制从Blueprint传播修改的情况。
 
 ### 站点结构 {#site-structure}
 
@@ -258,7 +258,7 @@ ht-degree: 61%
 
 ## 编辑页面属性 {#editing-page-properties-1}
 
-您可以定義頁面屬性：
+您可以定义页面属性：
 
 * 从&#x200B;**站点**&#x200B;控制台中：
 
@@ -300,7 +300,7 @@ ht-degree: 61%
 
    ![screen_shot_2018-03-22at095740](assets/screen_shot_2018-03-22at095740.png)
 
-1. 選取 **開啟屬性** 而且會開啟對話方塊，讓您編輯屬性（依適當的索引標籤排序）。 工具栏右侧还提供以下按钮：
+1. 选择 **打开属性** 此时将打开一个对话框，允许您编辑按相应选项卡排序的属性。 工具栏右侧还提供以下按钮：
 
    * **取消**
    * **保存并关闭**
@@ -313,9 +313,9 @@ ht-degree: 61%
 
 >[!NOTE]
 >
->也可以对资产使用批量编辑属性功能。其操作大体相同，只有少数几点差别。另請參閱 [編輯多個資產的屬性](/help/assets/metadata.md) 以取得詳細資訊。
+>也可以对资产使用批量编辑属性功能。其操作大体相同，只有少数几点差别。参见 [编辑多个资产的属性](/help/assets/metadata.md) 了解详细信息。
 >
->此外， [大量編輯器](/help/sites-administering/bulk-editor.md)，可讓您使用GQL (Google查詢語言)從多個頁面搜尋內容，然後直接在大量編輯器中編輯內容，再將變更儲存至原始頁面。
+>还有 [批量编辑器](/help/sites-administering/bulk-editor.md)，允许您使用GQL(Google查询语言)从多个页面搜索内容，然后在将更改保存到原始页面之前，直接在批量编辑器中编辑内容。
 
 可以通过多种方法选择要批量编辑的多个页面，这些方法包括：
 
@@ -339,7 +339,7 @@ ht-degree: 61%
 
 * **查看**
 
-   檢視多個頁面的頁面屬性時，您可以看到：
+   查看多个页面的页面属性时，您可以看到：
 
    * 受影响的页面列表
 
@@ -360,7 +360,7 @@ ht-degree: 61%
 
 * **编辑**
 
-   編輯多個頁面的頁面屬性時：
+   编辑多个页面的页面属性时：
 
    * 您可以更新可用字段中的值。
 
@@ -371,4 +371,4 @@ ht-degree: 61%
 
 >[!NOTE]
 >
->可以对页面组件进行配置，以指定可批量编辑的字段。另請參閱 [設定頁面以大量編輯頁面屬性](/help/sites-developing/bulk-editing.md).
+>可以对页面组件进行配置，以指定可批量编辑的字段。参见 [配置页面以批量编辑页面属性](/help/sites-developing/bulk-editing.md).

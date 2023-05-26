@@ -1,6 +1,6 @@
 ---
 title: 预览 3D 资源
-description: 瞭解如何以Experience Manager預覽3D資產。
+description: 了解如何在Experience Manager中预览3D资源。
 contentOwner: Rick Brough
 docset: aem65
 feature: 3D Assets
@@ -14,75 +14,75 @@ ht-degree: 8%
 
 ---
 
-# 在Adobe Experience Manager中預覽3D資產 {#previewing-3d-assets-aem}
+# 在Adobe Experience Manager中预览3D资源 {#previewing-3d-assets-aem}
 
-| 版本 | 文章連結 |
+| 版本 | 文章链接 |
 | -------- | ---------------------------- |
 | AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/previewing-3d-assets.html?lang=en) |
 | AEM 6.5 | 本文 |
 
-Experience Manager支援3D資產的上傳、傳送和互動式預覽，這是製作程式的一部分。
+Experience Manager支持在创作过程中上传、交付和以交互方式预览3D资源。
 
-您可從Experience Manager的資產詳細資訊頁面使用互動式3D檢視器。 该查看器提供了各种控件，其中包括一组交互式相机控件，可让您对 3D 资产执行绕行、缩放和平移操作。
+交互式3D查看器可在Experience Manager的资源详细信息页面中找到。 该查看器提供了各种控件，其中包括一组交互式相机控件，可让您对 3D 资产执行绕行、缩放和平移操作。
 
 <!-- See also [Working with 3D assets in Dynamic Media](/help/assets/assets-3d.md). -->
 
-## 支援的Experience Manager3D預覽格式 {#supported-3d-previewing-assets}
+## Experience Manager中支持的3D预览格式 {#supported-3d-previewing-assets}
 
-互動式3D預覽支援下列檔案格式：
+交互式3D预览支持以下文件格式：
 
-| 3D副檔名 | 檔案格式 | MIME型別 | 注释 |
+| 3D文件扩展名 | 文件格式 | MIME类型 | 注释 |
 |---|---|---|---|
-| GLB | 二進位GL傳輸 | model/gltf-binary |  |
-| GLTF | 總帳傳輸格式 | model/gltf+json | 另請參閱 **注意** 下方的。 |
-| 物件 | WaveFront 3D物件檔案 | application/x-tgif |  |
-| STL | 立體光刻 | application/vnd.ms-pki.stl |  |
-| DN | Adobe Dimension | model/x-adobe-dn | 僅支援內嵌；無法預覽。 |
-| USDZ | Universal Scene說明Zip封存 | model/vnd.usdz+zip | 僅支援內嵌；無法預覽。 |
+| GLB | 二进制GL传输 | model/gltf-binary |  |
+| GLTF | GL传输格式 | model/gltf+json | 参见 **注释** 下面的。 |
+| 对象 | WaveFront 3D对象文件 | application/x-tgif |  |
+| STL | 立体光刻 | application/vnd.ms-pki.stl |  |
+| DN | Adobe Dimension | model/x-adobe-dn | 仅支持摄取；预览不可用。 |
+| USDZ | 通用场景描述Zip存档 | model/vnd.usdz+zip | 仅支持摄取；预览不可用。 |
 
 >[!NOTE]
 >
->如果材質未在gLTF模型的預覽中轉譯，請確定已在 `textures` 與模型位於相同根資料夾中的資料夾，類似於以下內容：
+>如果材料未在gLTF模型的预览中渲染，请确保在 `textures` 与模型位于同一根文件夹中的文件夹，如下所示：
 
-    資產（資料夾）
+    资产（文件夹）
     model.gltf
     model.bin
-    紋理（資料夾）
+    纹理（文件夹）
     material_0_baseColor.jpeg
     material_0_normal.jpeg
 
-## 在Experience Manager中預覽3D資產時的效能考量事項{#performance-3d-previewing-assets}
+## 在Experience Manager中预览3D资源时的性能注意事项{#performance-3d-previewing-assets}
 
-在資產詳細資料檢視頁面中開啟3D資產所需的時間取決於多種因素，例如頻寬、影像複雜性和伺服器延遲。
+在资产详细信息视图页面中打开3D资产所需的时间取决于多种因素，例如带宽、图像复杂性和到服务器的延迟。
 
-此外，使用者端電腦的功能（例如工作站、筆記型電腦或行動觸控裝置）也是您以互動方式操作相機時也必須考量的重要因素。 功能相當強大、圖形功能良好的系統，可讓互動式3D觀賞體驗更順暢、更理想。
+此外，在交互操作相机时，客户端计算机的功能（如工作站、笔记本电脑或移动触摸设备）也很重要。 一个功能相当强大、图形功能良好的系统，可以使交互式3D观看体验更顺畅、更顺畅。
 
-**若要以Experience Manager預覽3D資產：**
+**要在Experience Manager中预览3D资源，请执行以下操作：**
 
-1. 請確定您已將3D資產上傳至Experience Manager。
-另請參閱 [支援的3D預覽格式](#supported-3d-previewing-assets) 和 [上傳資產](/help/assets/manage-assets.md#uploading-assets).
-1. 從Experience Manager，在 **[!UICONTROL 導覽]** 頁面，選取 **[!UICONTROL 資產]** > **[!UICONTROL 檔案]**.
+1. 确保已将3D资源上传到Experience Manager。
+参见 [3D预览支持的格式](#supported-3d-previewing-assets) 和 [上传资产](/help/assets/manage-assets.md#uploading-assets).
+1. 从Experience Manager，在 **[!UICONTROL 导航]** 页面，选择 **[!UICONTROL 资产]** > **[!UICONTROL 文件]**.
 
-   ![導覽頁面](/help/assets/assets-dm/navigation-assets.png)
+   ![导航页面](/help/assets/assets-dm/navigation-assets.png)
 
-1. 在頁面的右上角附近，從「檢視」下拉式清單中選取 **[!UICONTROL 卡片檢視]**，然後導覽至您要預覽的3D資產。
+1. 在页面的右上角附近，从“视图”下拉列表中选择 **[!UICONTROL 卡片视图]**，然后导航到要预览的3D资产。
 
-   ![3D卡片選取](/help/assets/assets-dm/3d-card-select.png)
-   _在「卡片檢視」中，選取您要預覽之3D資產的卡片。_
+   ![3D卡选择](/help/assets/assets-dm/3d-card-select.png)
+   _在卡片视图中，选择要预览的3D资源的卡片。_
 
-1. 選取3D資產的卡片。
+1. 选择3D资产的卡。
 
-   ![互動式3D預覽](/help/assets/assets-dm/3d-preview.png)
-   _在資產詳細資料檢視頁面中互動式預覽3D資產。_
-1. 在3D資產的資產詳細資訊檢視頁面上，執行下列任一項作業：
+   ![交互式三维预览](/help/assets/assets-dm/3d-preview.png)
+   _在资源详细信息视图页面中交互式预览3D资源。_
+1. 在3D资产的资产详细信息视图页面上，执行以下任一操作：
 
-   | 查看 | 描述 | 滑鼠動作 | 觸控熒幕動作 |
+   | 查看 | 描述 | 鼠标操作 | 触摸屏操作 |
    | --- | --- | --- | --- |
-   | **轉動相機** | 围绕 3D 场景和对象旋转视图。 | 按一下左鍵+拖曳。 | 單指按下+拖曳。 |
-   | **平移相機** | 向左、向右、向上或向下平移檢視。 | 按一下滑鼠右鍵+拖曳。 | 兩指按下+拖曳。 |
-   | **縮放相機** | 在3D場景中移入和移出區域。 | 滾輪。 | 兩指捏合。 |
-   | **重新將相機置中** | 將相機重新置中至3D場景中物件上的一點。 | 按兩下。 | 點兩下。 |
-   | **重置** | 在頁面的右下角附近，選取「重設」圖示，將檢視目標點恢復到3D資產的中心。 重設也會將相機移到更近或更遠的位置，以完整的方式顯示資產，並維持合理的檢視大小。 |  |  |
-   | **全屏模式** | 若要進入全熒幕模式，請在頁面的右下角，選取「全熒幕」圖示。 |  |  |
+   | **转动相机** | 围绕 3D 场景和对象旋转视图。 | 左键单击+拖动。 | 单指按下+拖动。 |
+   | **平移相机** | 向左、向右、向上或向下平移视图。 | 右键单击+拖动。 | 两指按下+拖动。 |
+   | **缩放相机** | 在3D场景中移入和移出区域。 | 滚轮。 | 两指捏合。 |
+   | **重新居中相机** | 将相机重新居中到3D场景中对象上的某个点。 | 双击。 | 双击。 |
+   | **重置** | 在页面的右下角附近，选择“重置”图标以将视图目标点恢复到3D资产的中心。 重置也会将相机移近或移远一点，以便以合理的查看大小完整地显示资产。 |  |  |
+   | **全屏模式** | 要进入全屏模式，请在页面的右下角选择全屏图标。 |  |  |
 
-1. 完成後，在頁面的右上角附近，選取 **[!UICONTROL 關閉]**.
+1. 完成后，在页面的右上角附近，选择 **[!UICONTROL 关闭]**.

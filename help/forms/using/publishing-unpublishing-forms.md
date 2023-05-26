@@ -1,7 +1,7 @@
 ---
-title: 發佈和取消發佈表單和檔案
+title: 发布和取消发布表单和文档
 seo-title: Publishing and unpublishing forms and documents
-description: 您可以排程表單的發佈和取消發佈。 發佈的表單會在發佈執行個體上復寫。
+description: 您可以计划表单的发布和取消发布。 发布的表单将在发布实例上复制。
 seo-description: You can schedule publishing and unpublishing of forms. Published forms are replicated on the publish instance.
 uuid: 0bad5608-b7a8-4599-81cc-2cd0a3dc7dd5
 content-type: reference
@@ -18,188 +18,188 @@ ht-degree: 0%
 
 ---
 
-# 發佈和取消發佈表單和檔案{#publishing-and-unpublishing-forms-and-documents}
+# 发布和取消发布表单和文档{#publishing-and-unpublishing-forms-and-documents}
 
-AEM Forms可讓您輕鬆建立、發佈和取消發佈表單。 如需AEM Forms的詳細資訊，請參閱 [管理表單簡介](../../forms/using/introduction-managing-forms.md).
+通过AEM Forms，您可以轻松创建、发布和取消发布表单。 有关AEM Forms的更多信息，请参阅 [管理表单简介](../../forms/using/introduction-managing-forms.md).
 
-AEM Forms伺服器提供兩個例項：「作者」和「發佈」。 製作例項用於建立和管理表單資產和資源。 發佈執行個體用於保留可供一般使用者使用的資產和相關資源。 您可以在作者模式中匯入XDP和PDF forms。 如需詳細資訊，請參閱 [在AEM Forms中取得XDP和PDF檔案](../../forms/using/get-xdp-pdf-documents-aem.md).
+AEM Forms服务器提供两个实例：“创作”和“发布”。 创作实例用于创建和管理表单资源和资源。 发布实例用于保留可供最终用户使用的资源和相关资源。 您可以在“创作”模式下导入XDP和PDF forms。 有关更多信息，请参阅 [在AEM Forms中获取XDP和PDF文档](../../forms/using/get-xdp-pdf-documents-aem.md).
 
-## 支援的資產   {#supported-assets-nbsp}
+## 支持的资源   {#supported-assets-nbsp}
 
-AEM Forms支援下列資產型別：
+AEM Forms支持以下类型的资源：
 
 * 自适应表单
-* 最適化檔案
-* 最適化表單片段
+* 自适应文档
+* 自适应表单片段
 * 主题
-* 表單範本（XFA表單）
+* 表单模板（XFA表单）
 * PDF forms
-* 檔案(平面PDF檔案)
+* 单据(平面PDF单据)
 * 表单集
-* 資源（影像、結構描述和樣式表）
+* 资源（图像、架构和样式表）
 
-最初，所有資產都只能在Author例項中使用。 管理員或表單作者可以發佈資源以外的所有資產。
+最初，所有资产仅在Author实例中可用。 管理员或表单作者可以发布资源以外的所有资源。
 
-當您選取並發佈表單時，也會發佈其相關資產和資源。 但是，相依資產不會發佈。 在此上下文中，相關資產和資源是已發佈資產使用或引用的資產。 相依資產是參考已發佈資產的資產。
+当您选择并发布表单时，也会发布其相关资源和资源。 但是，依赖关系资产不会发布。 在此上下文中，相关资源和资源是已发布资源使用或引用的资源。 依赖项资产是指引用已发布资产的资产。
 
-您的Adaptive Forms可能會使用一些不會自動發佈的設定、設定和自訂。 建議您先發佈或啟用這些資源，再發佈最適化表單。
+您的自适应Forms可能会使用一些未自动发布的配置、设置和自定义设置。 建议您在发布自适应表单之前发布或激活这些资源。
 
-* 可編輯的最適化表單範本
-* Adobe Sign、Typekit、reCAPTCHA和表單資料模型的Cloud Service設定
-* 只有當使用者具有管理員許可權時，才會啟用其他雲端服務設定。
-* 自訂。 這些包括但不限於：
+* 可编辑的自适应表单模板
+* Adobe Sign、Typekit、reCAPTCHA和表单数据模型的Cloud Service配置
+* 仅当用户具有管理员权限时，才会激活其他Cloud Service配置。
+* 自定义。 这些包括但不限于：
 
-   * 自訂版面配置
-   * 自訂外觀
-   * CSS檔案 — 在最適化表單容器屬性對話方塊中作為輸入取得
-   * 使用者端程式庫類別 — 在最適化表單容器屬性對話方塊中作為輸入取得
-   * 任何其他使用者端程式庫，可能包含在調適型表單範本中。
-   * 設計路徑
+   * 自定义版面
+   * 自定义外观
+   * CSS文件 — 在自适应表单容器属性对话框中用作输入
+   * 客户端库类别 — 在自适应表单容器属性对话框中用作输入
+   * 可能包含在自适应表单模板中的任何其他客户端库。
+   * 设计路径
 
-## 資產狀態 {#asset-states}
+## 资产状态 {#asset-states}
 
-資產可以有下列狀態：
+资产可以具有以下状态：
 
-* **已取消發佈：** 從未發佈的資產(未發佈狀態僅適用於Forms資產)。 通訊管理資產沒有未發佈狀態。)
-* **已發佈**：已發佈且可在發佈執行個體上使用的資產
-* **修改時間**：發佈後修改的資產
+* **已取消发布：** 从未发布的资源(未发布状态仅适用于Forms资源)。 通信管理资产没有未发布状态。)
+* **已发布**：已发布并在发布实例上可用的资源
+* **修改时间**：发布后修改的资源
 
-## 發佈資產 {#publish-an-asset}
+## 发布资源 {#publish-an-asset}
 
-1. 登入AEM Forms伺服器。
-1. 使用下列其中一項，選取並發佈資產。
+1. 登录到AEM Forms服务器。
+1. 使用以下任一选项来选择并发布资源。
 
-   1. 將指標移至資產上並點選 **[!UICONTROL 發佈]** ![aem6forms_globe](assets/aem6forms_globe.pngasset.png).
-   1. 執行下列任一項作業，然後點選「發佈」：
+   1. 将指针移动到资产上并点按 **[!UICONTROL Publish]** ![aem6forms_globe](assets/aem6forms_globe.pngasset.png).
+   1. 执行以下操作之一，然后点按发布：
 
-      * 如果您在卡片檢視中，請點選 **[!UICONTROL 輸入選取範圍]** ![aem6forms_check-circle](assets/aem6forms_check-circle.png)，然後點選資產。 已選取資產。
-      * 如果您在清單檢視中，請選取資產的核取方塊。 已選取資產。
-      * 點選資產以顯示其詳細資料。
-      * 點選「檢視屬性」以顯示資產屬性 ![檢視屬性](assets/viewproperties.png).
+      * 如果您在卡片视图中，请点按 **[!UICONTROL 输入选择]** ![aem6forms_check-circle](assets/aem6forms_check-circle.png)，然后点按资产。 已选择资源。
+      * 如果您在列表视图中，请选中资源的复选框。 已选择资源。
+      * 点按资产以显示其详细信息。
+      * 通过点按查看属性显示资产的属性 ![viewproperties](assets/viewproperties.png).
 
       >[!NOTE]
       >
-      >請勿選取多個資產。 不支援一次發佈多個資產。
+      >请勿选择多个资源。 不支持一次发布多个资产。
 
 
-1. 當發佈程式開始時，確認對話方塊會出現，列出所有相關資產和資源。 在包含相關資產的對話方塊中，點選 **[!UICONTROL 發佈]**. 資產隨即發佈，並顯示「發佈資產成功」對話方塊。
-
-   >[!NOTE]
-   >
-   >最適化表單和相關資產也會顯示「最適化表單」頁面名稱。
-
-   ![包含所有相關資產和資源的確認對話方塊](assets/p4.png)
-
-   包含所有相關資產和資源的確認對話方塊。
+1. 当发布过程启动时，将出现一个确认对话框，其中列出所有相关资源和资源。 在包含相关资产的对话框中，点按 **[!UICONTROL Publish]**. 资产已发布，且显示发布资产成功对话框。
 
    >[!NOTE]
    >
-   >對於Forms Manager，如果使用者沒有發佈所列資產的許可權，則會停用發佈動作。 需要額外許可權的資產會以紅色顯示。
+   >对于自适应表单以及相关资产，还会显示自适应表单页面名称。
 
-   發佈資產後，資產的中繼資料屬性會複製到發佈執行個體，而資產的狀態會變更為已發佈。 已發佈的相依資產狀態也會變更為「已發佈」。
+   ![包含所有相关资源和资源的确认对话框](assets/p4.png)
 
-   發佈資產後，您可以使用Forms入口網站在網頁上顯示所有資產。 如需詳細資訊，請參閱 [在入口網站上發佈表單的簡介](../../forms/using/introduction-publishing-forms.md).
+   包含所有相关资源和资源的确认对话框。
 
-## 發佈所有對應管理資產 {#publish-all-the-correspondence-management-assets}
+   >[!NOTE]
+   >
+   >对于Forms Manager，如果用户没有发布所列资产的权限，将禁用发布操作。 需要额外权限的资产以红色显示。
 
-AEM Forms可讓您一次在伺服器上發佈所有Correspondence Management資產。 已發佈的資產包含所有「對應管理」資產和相關相依性。
+   发布资源后，资源的元数据属性将会复制到发布实例，并且资源的状态会更改为已发布。 已发布的依赖关系资产的状态也会更改为“已发布”。
 
-完成下列步驟，在伺服器上發佈所有Correspondence Management資產：
+   发布资源后，您可以使用Forms门户在网页上显示所有资源。 有关更多信息，请参阅 [在门户上发布表单的简介](../../forms/using/introduction-publishing-forms.md).
 
-1. 登入AEM Forms伺服器。
-1. 點選 **Adobe Experience Manager** 全域導覽列中的。
-1. 點選 ![工具](assets/tools.png)，然後點選 **Forms**.
-1. 點選 **發佈對應管理資產**.
+## 发布所有相应的管理资产 {#publish-all-the-correspondence-management-assets}
+
+通过AEM Forms，您可以一次性在服务器上发布所有通信管理资源。 已发布的资产包括所有相应的管理资产和相关依赖项。
+
+完成以下步骤以在服务器上发布所有通信管理资产：
+
+1. 登录到AEM Forms服务器。
+1. 点按 **Adobe Experience Manager** 全局导航栏中的。
+1. 点按 ![工具](assets/tools.png)，然后点按 **Forms**.
+1. 点按 **发布相应的管理资产**.
 
    ![publish-cmp-assets](assets/publish-cmp-assets.png)
 
-   便會顯示「發佈所有對應管理資產」頁面，並顯示上次嘗試「發佈對應管理資產」程式的相關資訊。
+   此时将显示“发布所有通信管理资产”页，其中显示有关上次尝试发布通信管理资产进程的信息。
 
    ![publish-last-run-details](assets/publish-last-run-details.png)
 
-1. 點選 **發佈** 然後，在確認訊息中，點選 **確定**.
+1. 点按 **Publish** 然后，在确认消息中，点按 **确定**.
 
-   批次處理完成後，您可以檢視上次執行的詳細資訊。 這包括管理員登入和批次是否成功執行的資訊。
-
-   >[!NOTE]
-   >
-   >發佈程式一經啟動便無法取消。 此外，在發佈作業進行時，請勿建立、刪除、修改或發佈任何資產，或啟動「匯出所有對應管理資產」作業。
-
-## 自動發佈和取消發佈Forms和檔案 {#automate-publishing-and-unpublishing-for-forms-amp-documents}
-
-AEM Forms可讓您排程Forms和檔案的資產發佈和取消發佈。 您可以在中繼資料編輯器中指定排程。 如需管理表單中繼資料的詳細資訊，請參閱 [管理表單中繼資料。](../../forms/using/manage-form-metadata.md)
-
-請依照下列步驟，排程發佈和取消發佈Forms &amp; Documents資產的日期和時間：
-
-1. 選取資產並點選 **[!UICONTROL 檢視屬性]**. 「中繼資料屬性」頁面隨即開啟。
-1. 在「中繼資料屬性」頁面中，點選 **[!UICONTROL 進階]**，然後點選 **[!UICONTROL 編輯]** ![illustratorcc_penciltool_cur_edit_2_17](assets/illustratorcc_penciltool_cur_edit_2_17.png).
-1. 在 **[!UICONTROL 準時發佈]** 和 **[!UICONTROL 發佈關閉時間]** 欄位中，選取日期和時間。\
-   點選 **[!UICONTROL 完成]** ![aem6forms_check](assets/aem6forms_check.png).
-
-## 取消發佈資產 {#unpublish-an-asset}
-
-1. 選取已發佈的資產並點選 **[!UICONTROL 取消發佈]** ![取消發佈](assets/unpublish.png).
-1. 使用下列其中一項，選取並取消發佈資產。
-
-   1. 將指標移至資產上並點選 **[!UICONTROL 取消發佈]** ![取消發佈](assets/unpublish.png).
-   1. 執行下列任一項作業，然後點選「取消發佈」：
-
-      * 如果您在卡片檢視中，請點選 **[!UICONTROL 輸入選取範圍]** ![aem6forms_check-circle](assets/aem6forms_check-circle.png)，然後點選資產。 已選取資產。
-
-      * 如果您在清單檢視中，請將滑鼠指標暫留在資產上，然後點選 ![selectassetcheckmark](assets/selectassetcheckmark.png) . 已選取資產。
-
-      * 點選資產以顯示其詳細資料。
-      * 點選「檢視屬性」以顯示資產屬性 ![檢視屬性](assets/viewproperties.png).
-
-1. 取消發佈程式啟動時，會顯示確認對話方塊。 點選 **[!UICONTROL 取消發佈]**.
+   批处理完成后，您可以查看上次运行的详细信息。 这包括管理员登录信息以及批处理是成功运行还是失败的信息。
 
    >[!NOTE]
    >
-   >只會取消發佈選取的資產，不會取消發佈其子項和參照的資產（如果有的話）。
+   >发布过程一旦启动便无法取消。 此外，在发布操作进行期间，请勿创建、删除、修改或发布任何资产，也不要启动“导出所有相应的管理资产”操作。
 
-## 將資產或字母回覆至先前發佈的版本 {#revert-an-asset-or-letter-to-the-previously-published-version}
+## 自动发布和取消发布Forms和文档 {#automate-publishing-and-unpublishing-for-forms-amp-documents}
 
-每次在編輯資產或信函後發佈資產或信函時，都會建立資產或信函的版本。 您可以將資產或信函回覆至先前發佈的版本。 如果資產或檔案的目前版本發生問題，您可能需要這樣做。
+AEM Forms允许您为Forms和文档计划资产发布和取消发布。 您可以在元数据编辑器中指定计划。 有关管理表单元数据的更多信息，请参阅 [管理表单元数据。](../../forms/using/manage-form-metadata.md)
+
+请按照以下步骤计划发布和取消发布Forms和文档资产的日期和时间：
+
+1. 选择资产并点按 **[!UICONTROL 查看属性]**. 此时将打开“元数据属性”页。
+1. 在元数据属性页面中，点按 **[!UICONTROL 高级]**，然后点按 **[!UICONTROL 编辑]** ![illustratorcc_penciltool_cur_edit_2_17](assets/illustratorcc_penciltool_cur_edit_2_17.png).
+1. 在 **[!UICONTROL 准时发布]** 和 **[!UICONTROL 发布关闭时间]** 字段中，选择日期和时间。\
+   点按 **[!UICONTROL 完成]** ![aem6forms_check](assets/aem6forms_check.png).
+
+## 取消发布资源 {#unpublish-an-asset}
+
+1. 选择已发布的资源并点按 **[!UICONTROL 取消发布]** ![取消发布](assets/unpublish.png).
+1. 使用下列选项之一选择并取消发布资源。
+
+   1. 将指针移动到资产上并点按 **[!UICONTROL 取消发布]** ![取消发布](assets/unpublish.png).
+   1. 执行以下操作之一，然后点按取消发布：
+
+      * 如果您在卡片视图中，请点按 **[!UICONTROL 输入选择]** ![aem6forms_check-circle](assets/aem6forms_check-circle.png)，然后点按资产。 已选择资源。
+
+      * 如果您在列表视图中，请将光标悬停在资产上并点按 ![selectassetcheckmark](assets/selectassetcheckmark.png) . 已选择资源。
+
+      * 点按资产以显示其详细信息。
+      * 通过点按查看属性显示资产的属性 ![viewproperties](assets/viewproperties.png).
+
+1. 取消发布过程启动时，将显示一个确认对话框。 点按 **[!UICONTROL 取消发布]**.
+
+   >[!NOTE]
+   >
+   >仅取消发布选定的资产，不会取消发布其子项和引用的资产（如果有）。
+
+## 将资源或书信还原到先前发布的版本 {#revert-an-asset-or-letter-to-the-previously-published-version}
+
+每次在编辑资产或信件后发布该资产或信件时，都会创建一个版本的资产或信件。 您可以将资源或书信还原到先前发布的版本。 如果资源或文档的当前版本出现问题，您可能需要执行此操作。
 
 >[!NOTE]
 >
->如果系統中刪除了已發佈信函中使用的任何相依資產，請勿將信函還原為上次發佈狀態。
+>如果已从系统中删除发布书信中使用的任何依赖资产，请勿将书信还原为上次发布状态。
 
-1. 選取資產並點選 **[!UICONTROL 回覆成先前發佈的版本]** ![reverttopreviouslypublishedversion](assets/reverttopreviouslypublishedversion.png).
-1. 在回覆資產之前，會顯示確認對話方塊。 點選 **[!UICONTROL 回覆]**.
+1. 选择资产并点按 **[!UICONTROL 还原到先前发布的版本]** ![reverttopreviouslypublishedversion](assets/reverttopreviouslypublishedversion.png).
+1. 在还原资源之前，会显示确认对话框。 点按 **[!UICONTROL 还原]**.
 
-   資產或信函已復原至其先前發佈的版本。
+   资产或书信将回滚到其先前发布的版本。
 
 ## 删除资源 {#delete-an-asset}
 
 >[!NOTE]
 >
->刪除資產會將其從發佈執行個體中移除。 刪除資產也會移除其版本記錄，但基礎版本除外。
+>删除资源会将其从发布实例中删除。 删除资产时，也会删除其版本历史记录（基础版本除外）。
 
-1. 選取資產並點選 **[!UICONTROL 刪除]** ![刪除](assets/delete.png).
-
-   >[!NOTE]
-   >
-   >當您點選資產來顯示資產詳細資訊，或點選檢視屬性來顯示資產屬性時，也可以使用刪除選項 ![檢視屬性](assets/viewproperties.png).
-
-1. 刪除資產之前，會顯示確認對話方塊。 點選 **[!UICONTROL 刪除]**.
+1. 选择资产并点按 **[!UICONTROL 删除]** ![delete](assets/delete.png).
 
    >[!NOTE]
    >
-   >只會刪除選取的資產，不會刪除相依資產和相依資產。 若要檢查資產的引用，請點選 ![引用](assets/references.png) 然後選取資產。
+   >通过点按资产显示资产详细信息或通过点按查看属性显示资产属性时，删除选项也可用 ![viewproperties](assets/viewproperties.png).
+
+1. 在删除资源之前，会显示确认对话框。 点按 **[!UICONTROL 删除]**.
+
+   >[!NOTE]
+   >
+   >仅删除选定的资源，并且不会删除依赖的资源和资源。 要检查资源的引用，请点按 ![引用](assets/references.png) 然后选择资产。
    >
    >
-   >如果您嘗試刪除的資產是其他資產的子資產，則不會刪除資產。 若要刪除此類資產，請從其他資產中移除此資產的參考資料，然後重試。
+   >如果您尝试删除的资源是其他资源的子资源，则不会删除它。 要删除此类资源，请从其他资源中删除此资源的引用，然后重试。
 
-## 受保護的最適化表單 {#protected-adaptive-forms}
+## 受保护的自适应表单 {#protected-adaptive-forms}
 
-您可以針對您希望選取的使用者存取的表單啟用驗證。 當您啟用表單驗證時，使用者在存取表單之前會看到登入畫面。 只有擁有已授權認證的使用者才能存取表單。
+您可以为希望选定用户访问的表单启用身份验证。 为表单启用身份验证后，用户会在访问表单之前看到登录屏幕。 只有拥有授权凭据的用户才能访问表单。
 
-若要啟用表單的驗證：
+要为表单启用身份验证，请执行以下操作：
 
-1. 在瀏覽器中，開啟發佈執行個體中的configMgr 。\
+1. 在浏览器中，打开发布实例中的configMgr 。\
    URL: `https://<hostname>:<PublishPort>/system/console/configMgr`
 
-1. 在「Adobe Experience Manager Web主控台設定」中，按一下 **Apache Sling驗證服務** 進行設定。
-1. 在出現的「Apache Sling驗證服務」對話方塊中，使用 **+** 按鈕以新增路徑。\
-   當您新增路徑時，該路徑中的表單會啟用驗證服務。
+1. 在Adobe Experience Manager Web控制台配置中，单击 **Apache Sling身份验证服务** 进行配置。
+1. 在显示的Apache Sling身份验证服务对话框中，使用 **+** 按钮以添加路径。\
+   添加路径时，将为该路径中的表单启用身份验证服务。

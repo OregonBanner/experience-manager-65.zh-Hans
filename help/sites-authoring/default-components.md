@@ -1,6 +1,6 @@
 ---
-title: 預設元件
-description: Adobe Experience Manager隨附多種現成的元件，為網站作者提供全方位功能。
+title: 默认组件
+description: Adobe Experience Manager附带多种现成的组件，可为网站作者提供全面的功能。
 uuid: 55caeec3-add7-4d05-a620-07e33901adb7
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -17,52 +17,52 @@ ht-degree: 21%
 
 # 组件{#components}
 
-Adobe Experience Manager (AEM)隨附多種現成的元件，為網站作者提供全方位功能。 在[编辑页面](/help/sites-authoring/editing-content.md)时，这些组件可供使用，并且为便于筛选，这些组件按主要功能区域（称为组件组）进行分组。
+Adobe Experience Manager (AEM)附带多种现成的组件，可为网站作者提供全面的功能。 在[编辑页面](/help/sites-authoring/editing-content.md)时，这些组件可供使用，并且为便于筛选，这些组件按主要功能区域（称为组件组）进行分组。
 
-元件在以下情況下可用： [編輯頁面](/help/sites-authoring/editing-content.md). 為協助篩選，元件會依主要功能區域（即元件群組）分組。
+组件在以下情况下可用 [编辑页面](/help/sites-authoring/editing-content.md). 为便于筛选，组件按主要功能区域（即组件组）分组。
 
 >[!NOTE]
 >
->本節僅討論標準AEM安裝中現成可用的元件。
+>本节仅讨论标准AEM安装中现成可用的组件。
 >
->根據您的執行個體，您可能已針對您的需求明確開發自訂元件。 這些元件的名稱甚至可能與此處討論的部分元件相同。
+>根据您的实例，您可能已针对您的要求明确开发了自定义组件。 这些组件甚至可能具有与此处讨论的某些组件相同的名称。
 
-## 一般使用 {#general-usage}
+## 常规用法 {#general-usage}
 
-這些元件可在 **元件** 頁面編輯器側面板的索引標籤 [編輯頁面](/help/sites-authoring/editing-content.md).
+这些组件在以下位置提供： **组件** 选项卡的页面编辑器 [编辑页面](/help/sites-authoring/editing-content.md).
 
-您可以選取元件，並將其拖曳至頁面上的所需位置。 然後，您可以使用以下方式編輯它：
+您可以选择组件并将其拖动到页面上的所需位置。 然后，您可以使用以下内容编辑它：
 
 * [配置属性](/help/sites-authoring/editing-page-properties.md)
 * [编辑内容](/help/sites-authoring/editing-content.md)
 
 * [编辑内容 – 全屏模式](/help/sites-authoring/editing-content.md#edit-content-full-screen-mode)
 
-有关将组件添加到页面的进一步信息，请参阅文章[编辑页面内容](/help/sites-authoring/editing-content.md)。元件會根據稱為元件群組的各種類別排序。 這類元件群組的範例包括：
+有关将组件添加到页面的进一步信息，请参阅文章[编辑页面内容](/help/sites-authoring/editing-content.md)。组件根据称为组件组的各种类别进行排序。 此类组件组的示例包括：
 
-* **We.Retail**：包含與搭配使用的核心元件 [We.Retail參考實作](/help/sites-developing/we-retail.md).
+* **We.Retail**：包括代理用于的核心组件 [We.Retail引用实施](/help/sites-developing/we-retail.md).
 
-* **We.Retail商務**：包括購物車和產品格線之類的商務元件
+* **We.Retail商务**：包括购物车和产品网格等商业组件
 
-* **一般**：包括佈局容器和體驗片段
+* **常规**：包括布局容器和体验片段
 
 ## 全部组件概述 {#overview-of-all-components}
 
-此 [元件主控台](/help/sites-authoring/default-components-console.md) 提供AEM安裝所提供之元件群組和元件的概觀。 您可以查看有关单个组件及其用途的关键信息。
+此 [组件控制台](/help/sites-authoring/default-components-console.md) 概述由AEM安装提供的组件组和组件。 您可以查看有关单个组件及其用途的关键信息。
 
-## 元件 — 主要區域 {#components-major-areas}
+## 组件 — 主要领域 {#components-major-areas}
 
-下列頁面提供元件部分其他重要資訊的連結：
+以下页面提供了指向一些关于组件的其他重要信息的链接：
 
-* [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)  — 核心元件提供有彈性且功能豐富的製作功能，可提供建立頁面所需的基本內容型別。
+* [核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)  — 核心组件提供灵活且功能丰富的创作功能，可提供创建页面所需的基本内容类型。
 
-* [Communities](/help/communities/author-communities.md)  — 元件為網站提供互動功能，例如論壇和評論。 當符合以下條件時，其中許多元件都會納入 [社群網站](/help/communities/overview.md) 「 」已建立。
+* [Communities](/help/communities/author-communities.md)  — 组件为网站提供交互功能，例如论坛和评论。 在以下情况下会包含这些组件中的许多： [社区站点](/help/communities/overview.md) 创建。
 
-* [電子商務](/help/commerce/cif-classic/administering/ecommerce.md) - AEM中的電子商務功能也包含一系列元件。 實際使用情形取決於所使用的商業引擎。
+* [电子商务](/help/commerce/cif-classic/administering/ecommerce.md) - AEM中的电子商务功能还包括一系列组件。 实际使用情况取决于所使用的商业引擎。
 
-### 設定元件 {#configuring-components}
+### 配置组件 {#configuring-components}
 
-除了作者在標準安裝中可存取的元件外，另有各種其他元件可供使用。
+除了作者可以在标准安装中访问的组件之外，还可以使用其他各种组件。
 
 * 如果您的页面基于建议的现代化可编辑的模板，则可以通过[编辑模板](/help/sites-authoring/templates.md)来启用/禁用这些组件以及编辑特定组件的参数。
-* 如果您的頁面以靜態範本為基礎，您可以使用 [設計模式](/help/sites-authoring/default-components-designmode.md#enable-disable-components) 以啟用/停用這些元件及編輯特定元件的引數。
+* 如果您的页面基于静态模板，则可以使用 [设计模式](/help/sites-authoring/default-components-designmode.md#enable-disable-components) 启用/禁用这些组件并编辑特定组件的参数。

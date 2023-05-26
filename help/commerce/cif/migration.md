@@ -1,6 +1,6 @@
 ---
-title: 移轉至AEM Commerce Integration Framework (CIF)附加元件
-description: 如何從舊版本移轉至AEM Commerce Integration Framework (CIF)附加元件
+title: 迁移到AEM Commerce Integration Framework (CIF)加载项
+description: 如何从旧版本迁移到AEM Commerce Integration Framework (CIF)加载项
 exl-id: c6c0c2fc-6cfa-4c64-b3d8-7e428b2a4b2e
 source-git-commit: a467009851937c4a10b165a3d253c47bf990bbc5
 workflow-type: tm+mt
@@ -9,30 +9,30 @@ ht-degree: 4%
 
 ---
 
-# Experience Manager附加元件的移轉指南 {#cif-migration}
+# Experience Manager加载项的迁移指南 {#cif-migration}
 
-本指南可協助您識別需要更新Experience Manager附加元件移轉的區域。
+本指南可帮助确定您需要为Experience Manager加载项迁移更新的区域。
 
-## CIF附加元件
+## CIF加载项
 
-CIF附加元件可透過AEM 6.5取得 [軟體發佈入口網站](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html). 它是相容的，並提供與Experience Manageras a Cloud Service的CIF附加元件相同的功能。
+AEM 6.5的CIF加载项可通过以下网址获取： [软件分发门户](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html). 它是兼容的，提供了与CIF加载项相同的功能，用于Experience Manageras a Cloud Service。
 
-另請參閱 [AEM Content and Commerce入門](getting-started.md).
+参见 [AEM Content and Commerce快速入门](getting-started.md).
 
-為了支援部署CIF的專案，Adobe提供 [AEM CIF Core Components](https://github.com/adobe/aem-core-cif-components).
+为了支持部署CIF的项目，Adobe提供了 [AEM CIF核心组件](https://github.com/adobe/aem-core-cif-components).
 
-## 產品目錄
+## 产品目录
 
-CIF附加元件不支援匯入產品目錄資料。 使用CIF附加元件主體，產品和目錄請求是透過對外部商業解決方案的即時呼叫隨選的。 前往整合一章，進一步瞭解整合商務解決方案。
+CIF加载项不支持导入产品目录数据。 使用CIF附加组件主体，可以通过实时调用外部商业解决方案按需发送产品和目录请求。 转到集成一章，了解有关集成商业解决方案的更多信息。
 
 >[!TIP]
 >
->如果沒有可用的即時API，則應使用具有API的外部產品快取進行整合。 範例 [Magento開放原始碼](https://business.adobe.com/products/magento/open-source.html).
+>如果没有可用的实时API，则应使用具有API的外部产品缓存进行集成。 示例 [Magento开源](https://business.adobe.com/products/magento/open-source.html).
 
-## 具有AEM轉譯的產品目錄體驗
+## 具有AEM渲染的产品目录体验
 
-如果您使用包含Classic CIF的目錄Blueprint，則需要更新產品目錄工作流程。 CIF附加元件現在會使用AEM目錄範本即時轉譯產品目錄體驗。 不再需要複製產品資料或產品頁面。
+如果您将目录Blueprint与Classic CIF一起使用，则需要更新产品目录工作流。 CIF加载项现在使用AEM目录模板动态呈现产品目录体验。 不再需要复制产品数据或产品页面。
 
-## 無法快取的資料與購物互動
+## 不可缓存的数据和购物交互
 
-不可快取資料和互動的使用者端請求（例如加入購物車、搜尋）應透過CDN / Dispatcher直接前往商務端點（商務解決方案或整合層）。 移除AEM只是Proxy的任何呼叫。
+不可缓存的数据和交互的客户端请求（例如添加到购物车、搜索）应通过CDN/Dispatcher直接转到商业端点（商业解决方案或集成层）。 删除AEM只是代理的任何调用。

@@ -1,6 +1,6 @@
 ---
-title: 擴展搜尋功能
-description: 擴充搜尋功能： [!DNL Adobe Experience Manager Assets] 超出預設值。
+title: 扩展搜索功能
+description: 扩展搜索功能 [!DNL Adobe Experience Manager Assets] 超出默认值。
 contentOwner: AG
 role: Developer
 feature: Search
@@ -12,55 +12,55 @@ ht-degree: 19%
 
 ---
 
-# 擴充資產搜尋 {#extending-assets-search}
+# 扩展资源搜索 {#extending-assets-search}
 
-您可以擴充 [!DNL Adobe Experience Manager Assets] 搜尋功能。 開箱即用 [!DNL Experience Manager Assets] 依字串搜尋資產。
+您可以扩展 [!DNL Adobe Experience Manager Assets] 搜索功能。 开箱即用， [!DNL Experience Manager Assets] 按字符串搜索资产。
 
-搜尋是透過QueryBuilder介面完成，因此可以使用多個述詞自訂搜尋。 您可以覆蓋下列目錄中的預設述詞集： `/apps/dam/content/search/searchpanel/facets`.
+搜索通过QueryBuilder界面完成，因此可以使用多个谓词自定义搜索。 可以在以下目录中覆盖缺省谓词集： `/apps/dam/content/search/searchpanel/facets`.
 
-您也可以將其他標籤新增至 [!DNL Assets] 管理面板。
+您还可以将其他选项卡添加到 [!DNL Assets] “管理”面板。
 
 >[!CAUTION]
 >
->截至 [!DNL Experience Manager] 6.4，已棄用傳統UI。 Adobe建議使用觸控式UI。 如需自訂資訊，請參閱 [搜尋Facet](/help/assets/search-facets.md).
+>截至 [!DNL Experience Manager] 6.4，已弃用经典UI。 Adobe建议使用触屏优化UI。 有关自定义信息，请参阅 [搜索Facet](/help/assets/search-facets.md).
 
 ## 叠加 {#overlaying}
 
-若要覆蓋預先設定的述詞，請複製 `facets` 節點來源 `/libs/dam/content/search/searchpanel` 至 `/apps/dam/content/search/searchpanel/` 或指定其他 `facetURL` 中的屬性 `searchpanel` 設定(預設為 `/libs/dam/content/search/searchpanel/facets.overlay.infinity.json`)。
+要覆盖预配置的谓词，请复制 `facets` 节点来源 `/libs/dam/content/search/searchpanel` 到 `/apps/dam/content/search/searchpanel/` 或指定另一个 `facetURL` 中的属性 `searchpanel` 配置(默认为 `/libs/dam/content/search/searchpanel/facets.overlay.infinity.json`)。
 
 ![screen_shot_2012-06-05at113619am](assets/screen_shot_2012-06-05at113619am.png)
 
 >[!NOTE]
 >
->依預設，目錄結構位於 `/apps` 不存在，請建立它。 確保節點型別與以下節點型別相符 `/libs`.
+>默认情况下，目录结构位于 `/apps` 不存在，因此请创建它。 确保节点类型与以下节点类型匹配 `/libs`.
 
-## 新增標籤 {#adding-tabs}
+## 添加选项卡 {#adding-tabs}
 
-您可以在中設定搜尋標籤，以新增其他搜尋標籤。 [!DNL Assets] 管理介面。 若要建立其他標籤：
+您可以通过在以下位置配置其他搜索选项卡： [!DNL Assets] 管理界面。 要创建其他选项卡，请执行以下操作：
 
-1. 建立資料夾結構 `/apps/wcm/core/content/damadmin/tabs,`如果尚未存在，請複製 `tabs` 節點來源 `/libs/wcm/core/content/damadmin` 並貼上。
-1. 視需要建立並設定第二個索引標籤。
+1. 创建文件夹结构 `/apps/wcm/core/content/damadmin/tabs,`如果该文件尚不存在，则复制 `tabs` 节点来源 `/libs/wcm/core/content/damadmin` 然后粘上。
+1. 根据需要创建和配置第二个选项卡。
 
    >[!NOTE]
    >
-   >當您建立第二個時 `siteadminsearchpanel`，請務必設定 `id` 屬性以防止表單衝突。
+   >当您创建第二个 `siteadminsearchpanel`，请务必设置 `id` 属性以防止表单冲突。
 
-## 建立自訂述詞 {#creating-custom-predicates}
+## 创建自定义谓词 {#creating-custom-predicates}
 
-[!DNL Assets] 隨附一組預先定義的述詞，可用於自訂「資產共用」頁面。 以這種方式自訂資產共用包含在 [建立和設定「資產共用」頁面](/help/assets/assets-finder-editor.md#creating-and-configuring-an-asset-share-page).
+[!DNL Assets] 随附一组预定义谓词，可用于自定义资产共享页面。 通过此方式自定义资产共享包含在 [创建和配置“资产共享”页面](/help/assets/assets-finder-editor.md#creating-and-configuring-an-asset-share-page).
 
-除了使用預先存在的述詞之外， [!DNL Experience Manager] 開發人員也可以使用建立自己的述詞 [查詢產生器API](/help/sites-developing/querybuilder-api.md).
+除了使用预先存在的谓词之外， [!DNL Experience Manager] 开发人员还可以使用创建自己的谓词 [查询生成器API](/help/sites-developing/querybuilder-api.md).
 
-建立自訂述詞需要基本的 [Widget框架](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html).
+创建自定义谓词需要具备以下基本知识： [Widget框架](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html).
 
-最佳實務是複製並調整現有述詞。 述詞範例位於 **/libs/cq/search/components/predicates**.
+最佳实践是复制并调整现有谓词。 示例谓词位于 **/libs/cq/search/components/predicates**.
 
-### 範例：建立簡單的屬性述詞 {#example-build-a-simple-property-predicate}
+### 示例：构建简单属性谓词 {#example-build-a-simple-property-predicate}
 
-若要建置屬性述詞：
+要构建属性谓词，请执行以下操作：
 
-1. 例如，在專案目錄中建立元件資料夾 **/apps/weretail/components/titlepredicate**.
-1. 新增 **content.xml**：
+1. 例如，在项目目录中创建组件文件夹 **/apps/weretail/components/titlepredicate**.
+1. 添加 **content.xml**：
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -140,20 +140,20 @@ ht-degree: 19%
    ```
 
 1. 为了使组件可用，您需要能够对其进行编辑。要使组件可编辑，请在 CRXDE 中添加主类型 **cq:EditConfig** 的 **cq:editConfig** 节点。为了删除段落，请添加带有单个值 **DELETE** 的多值属性 **cq:actions**。
-1. 導覽至您的瀏覽器，並在範例頁面上(例如， **press.html**)切換到設計模式並為述詞段落系統啟用新元件(例如， **left**)。
+1. 导航到浏览器，并在示例页面上导航(例如， **press.html**)切换到设计模式并为谓词段落系统启用新组件(例如， **left**)。
 
-1. 在 **編輯** 模式，新元件現在可在sidekick中使用(可在 **搜尋** 群組)。 將元件插入 **述詞** 欄並輸入搜尋字詞，例如， **菱形** 並按一下放大鏡以開始搜尋。
+1. In **编辑** 模式，新组件现在可在sidekick中使用(可在 **搜索** 组)。 将组件插入 **谓词** 列并键入搜索词，例如， **菱形** 然后单击放大镜开始搜索。
 
    >[!NOTE]
    >
-   >搜尋時，請務必準確輸入字詞，包括正確的大小寫。
+   >搜索时，请确保键入正确的术语，包括正确的大小写。
 
-### 範例：建立簡單的群組述詞 {#example-build-a-simple-group-predicate}
+### 示例：构建简单的组谓词 {#example-build-a-simple-group-predicate}
 
-若要建立群組述詞：
+要构建组谓词，请执行以下操作：
 
-1. 例如，在專案目錄中建立元件資料夾 **/apps/weretail/components/picspredicate**.
-1. 新增 **content.xml**：
+1. 例如，在项目目录中创建组件文件夹 **/apps/weretail/components/picspredicate**.
+1. 添加 **content.xml**：
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -165,7 +165,7 @@ ht-degree: 19%
        componentGroup="Search"/>
    ```
 
-1. 新增 **titlepredicate.jsp**：
+1. 添加 **titlepredicate.jsp**：
 
    ```java
    <%--
@@ -244,59 +244,59 @@ ht-degree: 19%
    ```
 
 1. 为了使组件可用，您需要能够对其进行编辑。要使组件可编辑，请在 CRXDE 中添加主类型 **cq:EditConfig** 的 **cq:editConfig** 节点。为了删除段落，请添加带有单个值 **DELETE** 的多值属性 **cq:actions**。
-1. 導覽至您的瀏覽器，並在範例頁面上(例如， **press.html**)切換到設計模式並為述詞段落系統啟用新元件(例如， **left**)。
-1. 在 **編輯** 模式，新元件現在可在sidekick中使用(可在 **搜尋** 群組)。 將元件插入 **述詞** 欄。
+1. 导航到浏览器，并在示例页面上导航(例如， **press.html**)切换到设计模式并为谓词段落系统启用新组件(例如， **left**)。
+1. In **编辑** 模式，新组件现在可在sidekick中使用(可在 **搜索** 组)。 将组件插入 **谓词** 列。
 
-## 已安裝的述詞Widget {#installed-predicate-widgets}
+## 已安装的谓词小组件 {#installed-predicate-widgets}
 
-下列述詞可作為預先設定的ExtJS Widget使用。
+以下谓词可用作预配置的ExtJS小组件。
 
-### FulltextPredicate {#fulltextpredicate}
+### 全文谓词 {#fulltextpredicate}
 
 | 属性 | 类型 | 描述 |
 |---|---|---|
-| predicateName | 字符串 | 述詞的名稱。 默认为 `fulltext` |
-| searchCallback | 函数 | 用於觸發事件搜尋的回呼 `keyup`. 默认为 `CQ.wcm.SiteAdmin.doSearch` |
+| predicatename | 字符串 | 谓词的名称。 默认为 `fulltext` |
+| searchCallback | 函数 | 用于触发事件搜索的回调 `keyup`. 默认为 `CQ.wcm.SiteAdmin.doSearch` |
 
 ### PropertyPredicate {#propertypredicate}
 
 | 属性 | 类型 | 描述 |
 |---|---|---|
-| predicateName | 字符串 | 述詞的名稱。 默认为 `property` |
-| propertyName | 字符串 | JCR屬性的名稱。 默认为 `jcr:title` |
-| 預設值 | 字符串 | 預填的預設值。 |
+| predicatename | 字符串 | 谓词的名称。 默认为 `property` |
+| propertyName | 字符串 | JCR属性的名称。 默认为 `jcr:title` |
+| defaultvalue | 字符串 | 预填充的默认值。 |
 
-### 路徑述詞 {#pathpredicate}
+### 路径谓词 {#pathpredicate}
 
 | 属性 | 类型 | 描述 |
 |---|---|---|
-| predicateName | 字符串 | 述詞的名稱。 默认为 `path` |
-| rootPath | 字符串 | 述詞的根路徑。 默认为 `/content/dam` |
+| predicatename | 字符串 | 谓词的名称。 默认为 `path` |
+| 根路径 | 字符串 | 谓词的根路径。 默认为 `/content/dam` |
 | pathFieldPredicateName | 字符串 | 默认为 `folder` |
-| showFlatOption | 布尔值 | 標幟以顯示核取方塊 `search in subfolders`. 預設為true。 |
+| showFlatOption | 布尔值 | 用于显示复选框的标记 `search in subfolders`. 默认为true。 |
 
 ### DatePredicate {#datepredicate}
 
 | 属性 | 类型 | 描述 |
 |---|---|---|
-| predicateName | 字符串 | 述詞的名稱。 默认为 `daterange` |
-| propertyname | 字符串 | JCR屬性的名稱。 默认为 `jcr:content/jcr:lastModified` |
-| 預設值 | 字符串 | 預填的預設值 |
+| predicatename | 字符串 | 谓词的名称。 默认为 `daterange` |
+| 属性名称 | 字符串 | JCR属性的名称。 默认为 `jcr:content/jcr:lastModified` |
+| defaultvalue | 字符串 | 预填充的默认值 |
 
 ### OptionsPredicate {#optionspredicate}
 
 | 属性 | 类型 | 描述 |
 |---|---|---|
-| 标题 | 字符串 | 新增其他最上層標題 |
-| predicateName | 字符串 | 述詞的名稱。 默认为 `daterange` |
-| propertyname | 字符串 | JCR屬性的名稱。 默认为 `jcr:content/metadata/cq:tags` |
-| 收合 | 字符串 | 收合層級。 默认为 `level1` |
-| triggerSearch | 布尔值 | 檢查時觸發搜尋的旗標。 預設為false |
-| searchCallback | 函数 | 用於觸發搜尋的回呼。 默认为 `CQ.wcm.SiteAdmin.doSearch` |
-| searchTimeoutTime | 数字 | 觸發searchCallback之前的逾時。 預設為800毫秒 |
+| 标题 | 字符串 | 添加其他顶部标题 |
+| predicatename | 字符串 | 谓词的名称。 默认为 `daterange` |
+| 属性名称 | 字符串 | JCR属性的名称。 默认为 `jcr:content/metadata/cq:tags` |
+| 折叠 | 字符串 | 折叠级别。 默认为 `level1` |
+| triggerSearch | 布尔值 | 用于在检查时触发搜索的标志。 默认为false |
+| searchCallback | 函数 | 用于触发搜索的回调。 默认为 `CQ.wcm.SiteAdmin.doSearch` |
+| searchTimeoutTime | 数字 | 触发searchCallback之前的超时。 默认为800毫秒 |
 
-## 自訂搜尋結果 {#customizing-search-results}
+## 自定义搜索结果 {#customizing-search-results}
 
-在「資產共用」頁面上顯示搜尋結果時，會受選取的鏡頭所控制。 [!DNL Experience Manager Assets] 隨附一組預先定義的鏡頭，可用於自訂「資產共用」頁面。 以這種方式自訂資產共用包含在 [建立和設定資產共用頁面](/help/assets/assets-finder-editor.md#creating-and-configuring-an-asset-share-page).
+资产共享页面上搜索结果的显示受所选镜头控制。 [!DNL Experience Manager Assets] 附带一组预定义镜头，可用于自定义资产共享页面。 通过此方式自定义资产共享包含在 [创建和配置资产共享页面](/help/assets/assets-finder-editor.md#creating-and-configuring-an-asset-share-page).
 
-除了使用預先存在的鏡頭， [!DNL Experience Manager] 開發人員也可以建立自己的鏡頭。
+除了使用预先存在的镜片外， [!DNL Experience Manager] 开发商也可以自己制造镜头。

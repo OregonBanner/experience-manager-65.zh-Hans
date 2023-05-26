@@ -1,7 +1,7 @@
 ---
-title: HTML5表單與PDF forms之間的功能差異
+title: HTML5表单和PDF forms之间的功能区别
 seo-title: Feature differentiation between HTML5 forms and PDF forms
-description: HTML5表單和PDF forms支援的功能
+description: HTML5表单和PDF forms中支持的功能
 seo-description: Feature supported in HTML5 forms and PDF forms
 uuid: 6ddee197-d108-4897-9976-77d115a06504
 contentOwner: robhagat
@@ -19,9 +19,9 @@ ht-degree: 2%
 
 ---
 
-# HTML5表單與PDF forms之間的功能差異 {#feature-differentiation-between-html-forms-and-pdf-forms}
+# HTML5表单和PDF forms之间的功能区别 {#feature-differentiation-between-html-forms-and-pdf-forms}
 
-下表指定為HTML5表單和PDF forms提供的功能支援：
+下表指定为HTML5表单和PDF forms提供的功能支持：
 
 <table>
  <tbody>
@@ -31,52 +31,52 @@ ht-degree: 2%
    <th>PDF</th>
   </tr>
   <tr>
-   <td>條碼<br /> </td>
-   <td>無法在使用者介面層級使用。 </td>
+   <td>条形码<br /> </td>
+   <td>在用户界面级别不可用。 </td>
    <td>支持</td>
   </tr>
   <tr>
-   <td>簽章欄位<br /> </td>
-   <td><strong>數位簽名</strong> 不支援此功能，但新增 <strong>手寫簽名</strong> 欄位會新增為類似紙本簽章的欄位。 使用者可以使用在表單上塗寫簽名 <strong>手寫簽名</strong> 欄位。 簽名會以影像形式儲存在表單上。 您可以將地理位置資訊儲存在 <strong>手寫簽名</strong> 欄位。</td>
-   <td>簽名欄位可用於 <strong>數位簽名</strong>.</td>
+   <td>签名字段<br /> </td>
+   <td><strong>数字签名</strong> 不受支持，但具有新 <strong>涂鸦签名</strong> 为类似于纸的签名添加了字段。 人们可以在表格上涂写他们的签名，使用 <strong>涂鸦签名</strong> 字段。 签名将作为图像保存在表单上。 可将地理位置信息保存在 <strong>涂鸦签名</strong> 字段。</td>
+   <td>签名字段可用于 <strong>数字签名</strong>.</td>
   </tr>
   <tr>
-   <td>資料合併</td>
+   <td>数据合并</td>
    <td>支持</td>
    <td>支持</td>
   </tr>
   <tr>
    <td>图像</td>
-   <td>資料URI配置用於顯示影像。 所有現代版的瀏覽器都支援此配置，但每個瀏覽器支援的影像格式範圍有所不同。<br /> </td>
-   <td>支援.gif、.png、.jpeg、.bmp和.tiff格式。</td>
+   <td>数据URI方案用于显示图像。 所有现代版本的浏览器都支持此方案，但每个浏览器支持的图像格式范围存在差异。<br /> </td>
+   <td>支持.gif、.png、.jpeg、.bmp和.tiff格式。</td>
   </tr>
   <tr>
    <td>分页<br /> </td>
-   <td><p>HTML5表單會分成面板和方塊，以提供類似於PDF forms的外觀。 頁面大小會以動態方式計算。 如果HTML5表單中頁面的所有內容都已刪除或標籤為隱藏，則會隱藏空白頁面，且空白頁面上方與下方的頁面之間不會顯示空白空間（空格）。</p> <p>如果資料合併或指令碼新增內容至頁面，則頁面長度會展開以容納新新增的內容。 表單中不會新增任何新頁面，以容納新新增的內容。 </p> <p><strong>注意：</strong> 刪除HTML5表單中頁面的所有內容或將其標籤為隱藏時，空白頁面（空格）在第1頁和第2頁之間保持可見，但在任何其他頁面之間不顯示。</p> </td>
-   <td>PDF中的分頁取決於合併的資料內容或使用者內容，而頁面計數會據此增加/減少。</td>
+   <td><p>HTML5窗体被分成多个面板和框，以提供类似于PDF forms的外观。 页面大小会动态计算。 如果HTML5表单中页面的所有内容都已删除或标记为隐藏，则空白页会隐藏，并且空白页的上方和下方的页面之间不显示空格（空格）。</p> <p>如果数据合并或脚本将内容添加到页面，则页面长度会展开以适应新添加的内容。 表单中不会添加任何新页面以容纳新添加的内容。 </p> <p><strong>注意：</strong> 删除HTML5表单中某页的所有内容或将其标记为隐藏时，在第1页和第2页之间仍可看到空白页（空格），但在任何其他页之间则不可见。</p> </td>
+   <td>PDF中的分页取决于合并的数据内容或用户内容，并且页面计数会因此而增加/减少。</td>
   </tr>
   <tr>
-   <td>頁首/頁尾 </td>
-   <td>支持. <br /> <br /> 由於HTML5行動表單不支援分頁符號，頁首和頁尾只會出現一次。 不過，您可以將其設定在版面中，以顯示在行動表單預覽中的多個位置。<br /> </td>
+   <td>页眉/页脚 </td>
+   <td>支持. <br /> <br /> 由于HTML5移动表单不支持分页符，因此页眉和页脚仅出现一次。 但是，您可以在布局中设置它们，以显示在移动设备表单预览中的多个位置。<br /> </td>
    <td>支持。</td>
   </tr>
   <tr>
-   <td>自訂Widget</td>
-   <td>您可以自訂Widget來增強行動裝置上的使用者體驗。<br /> </td>
-   <td>所有Widget都已鎖定，無法插入自訂Widget。<br /> </td>
+   <td>自定义构件</td>
+   <td>用户可自定义小组件以增强移动设备上的用户体验。<br /> </td>
+   <td>所有构件都已锁定，无法插入自定义构件。<br /> </td>
   </tr>
   <tr>
-   <td>XFA指令碼API</td>
-   <td>支援最常用的XFA指令碼建構。 如需支援的建構詳細資訊清單，請參閱 <a href="/help/forms/using/scripting-support.md">指令碼支援</a>.</td>
-   <td>支援所有XFA指令碼建構。</td>
+   <td>XFA脚本API</td>
+   <td>支持最常用的XFA脚本结构。 有关支持的结构的详细信息列表，请参见 <a href="/help/forms/using/scripting-support.md">脚本支持</a>.</td>
+   <td>支持所有XFA脚本结构。</td>
   </tr>
   <tr>
-   <td>Acrobat指令碼API </td>
-   <td>HTML5表單支援最常用的API。 如需詳細資訊，請參閱 <a href="/help/forms/using/scripting-support.md">指令碼支援</a>.</td>
-   <td>如果PDF檔案是在Acrobat或Reader中開啟，它也會支援Acrobat提供的所有指令碼API。</td>
+   <td>Acrobat脚本API </td>
+   <td>HTML5表单支持最常用的API。 有关详细信息，请参阅 <a href="/help/forms/using/scripting-support.md">脚本支持</a>.</td>
+   <td>如果PDF文件在Acrobat或Reader中打开，则它还支持Acrobat提供的所有脚本API。</td>
   </tr>
   <tr>
-   <td>支援由右至左語言 </td>
+   <td>支持从右至左的语言 </td>
    <td>支持</td>
    <td>支持</td>
   </tr>

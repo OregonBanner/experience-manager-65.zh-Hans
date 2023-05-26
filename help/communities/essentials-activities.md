@@ -1,7 +1,7 @@
 ---
 title: Activity Stream Essentials
 seo-title: Activity Stream Essentials
-description: 成員最近執行的活動清單，或單一內容執行緒上最近活動的清單
+description: 成员最近执行的活动的列表或单个内容线程上最近活动的列表
 seo-description: List of recent activites performed by a member or a list of recent activities on a single thread of content
 uuid: 30c5ac08-0af0-4670-9d81-0beb5c93e00a
 contentOwner: Guillaume Carlino
@@ -20,23 +20,23 @@ ht-degree: 2%
 
 # Activity Stream Essentials {#activity-stream-essentials}
 
-已登入社群成員的活動（例如張貼至論壇或部落格）會收集到資料流中，可透過活動資料流元件的設定以各種方式篩選和顯示。
+已登录社区成员的活动（例如向论坛或博客发文）被收集到流中，该流可以通过活动流组件的配置以各种方式被过滤和显示。
 
-當社群成員關注感興趣的張貼或其他社群成員時，關注功能會新增另一組活動。
+当社区成员关注感兴趣的帖子或其他社区成员时，关注功能会添加另一组活动。
 
-全部 [社群網站](/help/communities/overview.md#communitiessites) 加入已登入成員的使用者設定檔頁面，以相同方式顯示成員活動。
+全部 [社区站点](/help/communities/overview.md#communitiessites) 包括已登录成员的用户配置文件页面，该页面将以相同方式显示成员活动。
 
 ## 概念 {#concepts}
 
-一個 *活動資料流* 是成員最近執行的活動清單，或是單一內容對話串（例如論壇主題或部落格）上最近活動的清單。
+An *活动流* 是成员最近执行的活动的列表，或者单个内容线程上最近活动的列表，例如论坛主题或博客。
 
-成員可以跟隨活動資料流，方法是跟隨其他個人或內容。
+成员可以关注活动流，方法是关注另一个个人或内容。
 
-A *動態消息* 是活動串流後面跟著一個成員合併為單一串流的過程。
+A *新闻馈送* 是活动流后跟一个成员合并成一个流。
 
-A *[社交圖](/help/communities/essentials-socialgraph.md)* 擷取一個成員與另一個成員的下列關係。
+A *[社交图](/help/communities/essentials-socialgraph.md)* 捕获一个成员与另一个成员的以下关系。
 
-## 適用於使用者端的Essentials {#essentials-for-client-side}
+## 适用于客户端的Essentials {#essentials-for-client-side}
 
 <table>
  <tbody>
@@ -45,7 +45,7 @@ A *[社交圖](/help/communities/essentials-socialgraph.md)* 擷取一個成員�
    <td>social/activitystreams/components/hbs/activitystreams</td>
   </tr>
   <tr>
-   <td> <a href="/help/communities/scf.md#add-or-include-a-communities-component"><strong>包含</strong></a></td>
+   <td> <a href="/help/communities/scf.md#add-or-include-a-communities-component"><strong>可包含</strong></a></td>
    <td>否</td>
   </tr>
   <tr>
@@ -53,7 +53,7 @@ A *[社交圖](/help/communities/essentials-socialgraph.md)* 擷取一個成員�
    <td>cq.social.hbs.activitystreams</td>
   </tr>
   <tr>
-   <td> <strong>範本</strong></td>
+   <td> <strong>模板</strong></td>
    <td> /libs/social/activitystreams/components/hbs/activitystreams/activitystreams.hbs<br /> /libs/social/activitystreams/components/hbs/activitystreams/activity/activity-title.hbs<br /> /libs/social/activitystreams/components/hbs/activitystreams/activity/activity.hbs</td>
   </tr>
   <tr>
@@ -62,21 +62,21 @@ A *[社交圖](/help/communities/essentials-socialgraph.md)* 擷取一個成員�
   </tr>
   <tr>
    <td><strong> 属性</strong></td>
-   <td>另請參閱 <a href="/help/communities/activities.md">活動資料流功能</a></td>
+   <td>参见 <a href="/help/communities/activities.md">活动流功能</a></td>
   </tr>
  </tbody>
 </table>
 
-* [使用者端自訂](/help/communities/client-customize.md)
+* [客户端自定义](/help/communities/client-customize.md)
 
-## 伺服器端的Essentials {#essentials-for-server-side}
+## 服务器端Essentials {#essentials-for-server-side}
 
-* [活動串流API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/activitystreams/api/package-frame.html)
+* [活动流API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/activitystreams/api/package-frame.html)
 
-* [活動串流接聽程式API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/activitystreams/listener/api/package-frame.html)
+* [活动流侦听器API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/activitystreams/listener/api/package-frame.html)
 
-* [伺服器端自訂](/help/communities/server-customize.md)
+* [服务器端自定义](/help/communities/server-customize.md)
 
 ### 活动流功能 {#activity-stream-function}
 
-社群網站結構包含 [活動資料流功能](/help/communities/functions.md#activity-stream-function)，包括已設定的 `activity streams` 元件。
+社区站点结构包括 [活动流功能](/help/communities/functions.md#activity-stream-function)，包括已配置的 `activity streams` 组件。

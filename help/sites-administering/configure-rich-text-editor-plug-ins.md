@@ -1,6 +1,6 @@
 ---
-title: 設定RTF編輯器外掛程式
-description: 瞭解如何設定Adobe Experience Manager RTF編輯器外掛程式，以啟用個別功能。
+title: 配置富文本编辑器插件
+description: 了解如何配置Adobe Experience Manager富文本编辑器插件以启用各个功能。
 contentOwner: AG
 exl-id: 6bfd6caa-a68a-40ba-9826-4ba02cd1dbfb
 source-git-commit: 11cda989e6a28428f03a269c407a7672e6eab747
@@ -11,163 +11,163 @@ ht-degree: 5%
 ---
 
 
-# 設定RTF編輯器外掛程式 {#configure-the-rich-text-editor-plug-ins}
+# 配置富文本编辑器插件 {#configure-the-rich-text-editor-plug-ins}
 
-RTE功能可透過一系列外掛程式提供，每個外掛程式都具備功能屬性。 您可以設定功能屬性，以啟用或停用一或多個RTE功能。 本文會說明如何特別設定RTE外掛程式。
+RTE功能通过一系列插件提供，每个插件都具有功能属性。 您可以将features属性配置为启用或禁用一个或多个RTE功能。 本文介绍了如何专门配置RTE插件。
 
-如需其他RTE設定的詳細資訊，請參閱 [設定RTF編輯器](/help/sites-administering/rich-text-editor.md).
-
->[!NOTE]
->
->使用CRXDE Lite時，建議使用定期儲存變更 [!UICONTROL 全部儲存] 選項。
-
-## 啟動外掛程式並設定功能屬性 {#activateplugin}
-
-若要啟動外掛程式，請依照下列步驟操作。 只有當您第一次設定外掛程式時，才需要執行某些步驟，因為對應的節點不存在。
-
-依預設， `format`， `link`， `list`， `justify`、和 `control` 外掛程式及其所有功能皆會在RTE中啟用。
+有关其他RTE配置的详细信息，请参见 [配置富文本编辑器](/help/sites-administering/rich-text-editor.md).
 
 >[!NOTE]
 >
->個別 `rtePlugins` 節點稱為 `<rtePlugins-node>` 以避免本文中的重複專案。
+>在使用CRXDE Lite时，建议使用定期保存更改 [!UICONTROL 全部保存] 选项。
 
-1. 使用CRXDE Lite找到專案的文字元件。
-1. 建立以下專案的父節點： `<rtePlugins-node>` 如果不存在，則在設定任何RTE外掛程式之前：
+## 激活插件并配置功能属性 {#activateplugin}
 
-   * 根據您的元件，父節點為：
+要激活插件，请执行以下步骤。 仅在首次配置插件时才需要执行某些步骤，因为对应的节点不存在。
+
+默认情况下， `format`， `link`， `list`， `justify`、和 `control` 插件及其所有功能均在RTE中启用。
+
+>[!NOTE]
+>
+>各自的 `rtePlugins` 节点称为 `<rtePlugins-node>` 以避免本文中的重复。
+
+1. 使用CRXDE Lite，找到项目的文本组件。
+1. 创建父节点 `<rtePlugins-node>` 如果该文件不存在，则在配置任何RTE插件之前：
+
+   * 根据您的组件，父节点包括：
 
       * `config: .../text/cq:editConfig/cq:inplaceEditing/config`
-      * 替代設定節點： `.../text/cq:editConfig/cq:inplaceEditing/inplaceEditingTextConfig`
+      * 替代配置节点： `.../text/cq:editConfig/cq:inplaceEditing/inplaceEditingTextConfig`
       * `text: .../text/dialog/items/tab1/items/text`
-   * 屬於以下型別： **jcr：primaryType** `cq:Widget`
-   * 兩者都有以下屬性：
+   * 属于以下类型： **jcr：primaryType** `cq:Widget`
+   * 两者都具有以下属性：
 
       * **名称** `name`
       * **类型** `String`
       * **值** `./text`
 
 
-1. 根據您設定的介面，建立節點 `<rtePlugins-node>`，如果它不存在：
+1. 根据您配置的接口，创建一个节点 `<rtePlugins-node>`，如果它不存在：
 
    * **名称** `rtePlugins`
    * **类型** `nt:unstructured`
 
-1. 在下方，為要啟用的每個外掛程式建立一個節點：
+1. 在此路径下，为要激活的每个插件创建一个节点：
 
    * **类型** `nt:unstructured`
-   * **名稱** 需要外掛程式的外掛程式ID
+   * **名称** 需要此插件的插件ID
 
-啟動外掛程式後，請遵循以下准則來設定 `features` 屬性。
+激活插件后，请按照以下指南配置 `features` 属性。
 
-|  | 啟用所有功能 | 啟用幾項特定功能 | 停用所有功能 |
+|  | 启用所有功能 | 启用一些特定功能 | 禁用所有功能 |
 |---|---|---|---|
 | 名称 | 功能 | 功能 | 功能 |
-| 类型 | 字符串 | 字串[] (多字串；將Type設定為String，然後按一下Multi inCRXDE Lite) | 字符串 |
-| 价值 | `*` （星號） | 設定為一或多個特徵值 | - |
+| 类型 | 字符串 | 字符串[] (多字符串；将Type设置为String，然后单击Multi inCRXDE Lite) | 字符串 |
+| 价值 | `*` （星号） | 设置为一个或多个特征值 | - |
 
-## 瞭解findreplace外掛程式 {#findreplace}
+## 了解findreplace插件 {#findreplace}
 
-此 `findreplace` 外掛程式不需要任何設定。 開箱即用。
+此 `findreplace` 此插件不需要任何配置。 开箱即用。
 
 在使用替换功能时，要替换的替换字符串应与查找字符串同时输入。不过，您仍可以在替换字符串之前单击“查找”来搜索它。如果在单击“查找”后输入替换字符串，则搜索将重置到文本的开头。
 
-在单击“查找”时，“查找和替换”对话框变为透明；在单击“替换”时，此对话框变为不透明。这允许作者审查自己将替换的文本。如果使用者按一下全部取代，對話方塊會關閉並顯示所做的取代數量。
+在单击“查找”时，“查找和替换”对话框变为透明；在单击“替换”时，此对话框变为不透明。这允许作者审查自己将替换的文本。如果用户单击“全部替换”，对话框将关闭并显示所做的替换次数。
 
-## 設定貼上模式 {#paste-modes}
+## 配置粘贴模式 {#paste-modes}
 
-使用RTE時，作者可以下列三種模式之一貼上內容：
+使用RTE时，作者可以使用以下三种模式之一粘贴内容：
 
-* **瀏覽器模式**：使用瀏覽器的預設貼上實作貼上文字。 不建議使用此方法，因為它可能會引入不想要的標籤。
+* **浏览器模式**：使用浏览器的默认粘贴实施粘贴文本。 不建议使用此方法，因为它可能会引入不需要的标记。
 
-* **純文字模式**：以純文字形式貼上剪貼簿內容。 它會在插入之前從複製的內容中移除樣式和格式的所有元素 [!DNL Experience Manager] 元件。
+* **纯文本模式**：以纯文本形式粘贴剪贴板内容。 在插入之前，它会从复制的内容中剥离所有样式和格式元素 [!DNL Experience Manager] 组件。
 
-* **MS Word模式**：從MS Word複製時，貼上含有格式設定的文字（包括表格）。 不支援從其他來源（例如網頁或MS Excel）複製和貼上文字，且僅保留部分格式設定。
+* **MS Word模式**：从MS Word复制时粘贴带格式的文本，包括表格。 不支持从其他源（如网页或MS Excel）复制和粘贴文本，并且仅保留部分格式。
 
-### 設定RTE工具列上可用的貼上選項  {#configure-paste-options-available-on-the-rte-toolbar}
+### 配置RTE工具栏上可用的粘贴选项  {#configure-paste-options-available-on-the-rte-toolbar}
 
-您可以在RTE工具列中為作者提供以下三個圖示中的部分、全部或都不提供：
+您可以在RTE工具栏中为作者提供以下三个图标中的部分、全部或不提供：
 
-* **[!UICONTROL 貼上(Ctrl+V)]**：可預先設定為對應至上述三種貼上模式之一。
+* **[!UICONTROL 粘贴(Ctrl+V)]**：可预配置为对应于以上三种粘贴模式之一。
 
-* **[!UICONTROL 貼上成文字]**：提供純文字模式功能。
+* **[!UICONTROL 粘贴为文本]**：提供纯文本模式功能。
 
-* **[!UICONTROL 從Word貼上]**：提供MS Word模式功能。
+* **[!UICONTROL 从Word粘贴]**：提供MS Word模式功能。
 
-若要設定RTE以顯示所需的圖示，請按照以下步驟操作。
+要配置RTE以显示所需的图标，请执行以下步骤。
 
-1. 導覽至您的元件，例如 `/apps/<myProject>/components/text`.
-1. 導覽至節點 `rtePlugins/edit`. 另請參閱 [啟動外掛程式](#activateplugin) 如果節點不存在。
-1. 建立 `features` 上的屬性 `edit` 節點並新增一或多個功能。 儲存所有變更。
+1. 导航到您的组件，例如 `/apps/<myProject>/components/text`.
+1. 导航到节点 `rtePlugins/edit`. 参见 [激活插件](#activateplugin) 如果节点不存在，则为。
+1. 创建 `features` 上的属性 `edit` 节点并添加一项或多项功能。 保存所有更改。
 
-### 設定貼上(Ctrl+V)圖示和捷徑的行為 {#configure-the-behavior-of-the-paste-ctrl-v-icon-and-shortcut}
+### 配置粘贴(Ctrl+V)图标和快捷键的行为 {#configure-the-behavior-of-the-paste-ctrl-v-icon-and-shortcut}
 
-您可以預先設定 **[!UICONTROL 貼上(Ctrl+V)]** 圖示，使用下列步驟。 此設定也會定義「作者」用來貼上內容的鍵盤快速鍵Ctrl+V的行為。
+您可以预配置 **[!UICONTROL 粘贴(Ctrl+V)]** 图标，请执行以下步骤。 此配置还定义了作者用于粘贴内容的键盘快捷键Ctrl+V的行为。
 
-此設定允許以下三種使用案例：
+该配置允许使用以下三种类型的用例：
 
-* 使用瀏覽器的預設貼上實作來貼上文字。 不建議使用此方法，因為它可能會引入不想要的標籤。 設定方式 `browser` 下方的。
+* 使用浏览器的默认粘贴实施粘贴文本。 不建议使用此方法，因为它可能会引入不需要的标记。 配置方式 `browser` 下面的。
 
-* 以純文字形式貼上剪貼簿內容。 它會先從複製的內容中移除樣式和格式的所有元素，然後再插入AEM元件。 設定方式 `plaintext` 下方的。
+* 将剪贴板内容粘贴为纯文本。 在AEM组件中插入之前，它会从复制的内容中剥离样式和格式的所有元素。 配置方式 `plaintext` 下面的。
 
-* 從MS Word複製時，貼上包含格式設定的文字（包括表格）。 不支援從其他來源（例如網頁或MS Excel）複製和貼上文字，且僅保留部分格式設定。 設定方式 `wordhtml` 下方的。
+* 从MS Word复制时，粘贴包含格式设置的文本（包括表格）。 不支持从其他源（如网页或MS Excel）复制和粘贴文本，并且仅保留部分格式。 配置方式 `wordhtml` 下面的。
 
-1. 在您的元件中，導覽至 `<rtePlugins-node>/edit` 節點。 如果節點不存在，請建立節點。 如需詳細資訊，請參閱 [啟動外掛程式](#activateplugin).
-1. 在 `edit` 節點會使用下列詳細資料建立屬性：
+1. 在组件中，导航到 `<rtePlugins-node>/edit` 节点。 如果节点不存在，请创建节点。 有关更多信息，请参阅 [激活插件](#activateplugin).
+1. 在 `edit` 节点使用以下详细信息创建属性：
 
    * **名称** `defaultPasteMode`
    * **类型** `String`
-   * **值** 所需的貼上模式之一 `browser`， `plaintext`，或 `wordhtml`.
+   * **值** 所需的粘贴模式之一 `browser`， `plaintext`，或 `wordhtml`.
 
-### 設定貼上內容時允許的格式 {#pasteformats}
+### 配置粘贴内容时允许的格式 {#pasteformats}
 
-貼上Microsoft文字(`paste-wordhtml`)模式可進行進一步設定，以便您明確定義從其他程式(例如Microsoft Word)在AEM中貼上時允許的樣式。
+粘贴为Microsoft-Word (`paste-wordhtml`)模式可进行进一步配置，以便您可以明确定义在从其他程序(如Microsoft Word)粘贴到AEM时允许使用哪些样式。
 
-例如，如果在AEM中貼上時只允許使用粗體格式和清單，您可以篩選掉其他格式。 這稱為可設定的貼上篩選，這可同時針對下列兩項執行：
+例如，如果在AEM中粘贴时只允许使用粗体格式和列表，则可以筛选掉其他格式。 这称为可配置的粘贴筛选，可以对以下两项执行：
 
 * [文本](#paste-modes)
 * [链接](#linkstyles)
 
-對於連結，您也可以定義自動接受的通訊協定。
+对于链接，您还可以定义自动接受的协议。
 
-若要設定將文字從其他程式貼入AEM時允許的格式：
+要配置在将文本从其他程序粘贴到AEM时允许的格式，请执行以下操作：
 
-1. 在您的元件中，導覽至節點 `<rtePlugins-node>/edit`. 如果節點不存在，請建立節點。 如需詳細資訊，請參閱 [啟動外掛程式](#activateplugin).
-1. 在下建立節點 `edit` 用於儲存HTML貼上規則的節點：
+1. 在组件中，导航到节点 `<rtePlugins-node>/edit`. 如果节点不存在，请创建节点。 有关更多详细信息，请参阅 [激活插件](#activateplugin).
+1. 在 `edit` 用于保存HTML粘贴规则的节点：
 
    * **名称** `htmlPasteRules`
    * **类型** `nt:unstructured`
 
-1. 在下建立節點 `htmlPasteRules`，以保留允許的基本格式的詳細資訊：
+1. 在下创建节点 `htmlPasteRules`，保存允许的基本格式的详细信息：
 
    * **名称** `allowBasics`
    * **类型** `nt:unstructured`
 
-1. 若要控制所接受的個別格式，請在 `allowBasics` 節點：
+1. 要控制接受的各个格式，请在 `allowBasics` 节点：
 
    * **名称** `bold`
    * **名称** `italic`
    * **名称** `underline`
-   * **名稱** `anchor` （適用於連結和已命名的錨點）
+   * **名称** `anchor` （对于链接和已命名锚点）
    * **名称** `image`
 
-   所有屬性都是 **型別** `Boolean`，因此在適當的 **值** 您可以選取或移除核取記號來啟用或停用該功能。
+   所有属性都是 **类型** `Boolean`，因此在适当的 **值** 您可以选择或删除复选标记以启用或禁用该功能。
 
    >[!NOTE]
    >
-   >如果未明確定義，則會使用預設值true並接受格式。
+   >如果未明确定义，则使用默认值true ，并且接受格式。
 
-1. 其他格式也可以使用其他屬性或節點範圍來定義，這些屬性或節點也套用至 `htmlPasteRules` 節點。 儲存所有變更。
+1. 也可以使用一系列其他属性或节点定义其他格式，这些属性或节点也应用于 `htmlPasteRules` 节点。 保存所有更改。
 
-您可以使用下列屬性 `htmlPasteRules`.
+您可以将以下属性用于 `htmlPasteRules`.
 
 | 属性 | 类型 | 描述 |
 |---|---|---|
-| `allowBlockTags` | 字符串 | 定義允許的區塊標籤清單。 一些可能的區塊標籤包括： <ul> <li>標題(h1、h2、h3)</li> <li>段落(p)</li> <li>清單(ol、ul)</li> <li>表格（表格）</li> </ul> |
-| `fallbackBlockTag` | 字符串 | 定義區塊標籤，此標籤用於任何區塊中不包含區塊標籤 `allowBlockTags`. `p` 大多數情況下就足夠了。 |
-| 表格 | nt:unstructured | 定義貼上表格時的行為。 此節點必須具有屬性 `allow` （輸入布林值）以定義是否允許貼上表格。 如果「允許」設為 `false`，您必須指定屬性 `ignoreMode` （輸入字串）以定義如何處理貼上的表格內容。 的有效值 `ignoreMode` 為： <ul> <li>`remove`：移除表格內容。</li> <li>`paragraph`：將表格儲存格轉換為段落。</li> </ul> |
-| list | nt:unstructured | 定義貼上清單時的行為。 必須具有屬性 `allow` （輸入布林值）以定義是否允許貼上清單。 若 `allow` 設為 `false`，您必須指定屬性 `ignoreMode` （輸入String）以定義如何處理貼上的任何清單內容。 的有效值 `ignoreMode` 為： <ul><li> `remove`：移除清單內容。</li> <li>`paragraph`：將清單專案轉換為段落。</li> </ul> |
+| `allowBlockTags` | 字符串 | 定义允许的块标记列表。 一些可能的块标记包括： <ul> <li>头条(h1、h2、h3)</li> <li>第(p)款</li> <li>列表(ol， ul)</li> <li>表(table)</li> </ul> |
+| `fallbackBlockTag` | 字符串 | 定义块标记，该标记用于具有块标记但未包含到的任何块 `allowBlockTags`. `p` 大多数情况下就足够了。 |
+| 表 | nt:unstructured | 定义粘贴表时的行为。 此节点必须具有属性 `allow` （键入布尔值）以定义是否允许粘贴表。 如果“允许”设置为 `false`，您必须指定属性 `ignoreMode` （键入字符串）以定义如何处理粘贴的表内容。 的有效值 `ignoreMode` 为： <ul> <li>`remove`：删除表内容。</li> <li>`paragraph`：将表格单元格转换为段落。</li> </ul> |
+| list | nt:unstructured | 定义粘贴列表时的行为。 必须具有属性 `allow` （键入布尔值）以定义是否允许粘贴列表。 如果 `allow` 设置为 `false`，您必须指定属性 `ignoreMode` （键入字符串）以定义如何处理粘贴的任何列表内容。 的有效值 `ignoreMode` 为： <ul><li> `remove`：删除列表内容。</li> <li>`paragraph`：将列表项转换为段落。</li> </ul> |
 
-有效的範例 `htmlPasteRules` 結構如下。
+有效示例 `htmlPasteRules` 结构如下所示。
 
 ```xml
 "htmlPasteRules": {
@@ -189,61 +189,61 @@ RTE功能可透過一系列外掛程式提供，每個外掛程式都具備功�
 }
 ```
 
-## 設定文字樣式 {#textstyles}
+## 配置文本样式 {#textstyles}
 
-作者可以套用樣式來變更部分文字的外觀。 樣式是以您在CSS樣式表中預先定義的CSS類別為基礎。 樣式化內容包含在 `span` 標籤使用 `class` 屬性以參照CSS類別。 例如：`<span class=monospaced>Monospaced Text Here</span>`。
+作者可以应用样式来更改部分文本的外观。 样式基于您在CSS样式表中预定义的CSS类。 风格化的内容包含在 `span` 标记使用 `class` 属性以引用CSS类。 例如：`<span class=monospaced>Monospaced Text Here</span>`。
 
-第一次啟用樣式外掛程式時，沒有可用的預設樣式。 快顯清單是空的。 若要為作者提供樣式，請執行下列動作：
+首次启用样式插件时，没有默认样式可用。 弹出列表为空。 要向作者提供样式，请执行以下操作：
 
-* 啟用「樣式」下拉式選取器。
-* 指定樣式表的位置。
-* 指定可從「樣式」下拉式清單中選取的個別樣式。
+* 启用样式下拉选择器。
+* 指定样式表的位置。
+* 指定可从“样式”下拉列表中选择的单个样式。
 
-對於之後的設定，如要新增更多樣式，請僅依照指示參考新的樣式表並指定其他樣式。
+对于以后的配置，如要添加更多样式，请仅按照说明引用新的样式表并指定其他样式。
 
 >[!NOTE]
 >
->您可以定義樣式 [表格或表格儲存格](/help/sites-administering/configure-rich-text-editor-plug-ins.md#tablestyles). 這些設定需要單獨的程式。
+>您可以为以下对象定义样式 [表或表单元格](/help/sites-administering/configure-rich-text-editor-plug-ins.md#tablestyles). 这些配置需要单独的过程。
 
-### 啟用「樣式」下拉式選擇器清單 {#styleselectorlist}
+### 启用样式下拉选择器列表 {#styleselectorlist}
 
-若要這麼做，請啟用樣式外掛程式。
+启用样式插件即可完成此操作。
 
-1. 在您的元件中，導覽至節點 `<rtePlugins-node>/styles`. 如果節點不存在，請建立節點。 如需詳細資訊，請參閱 [啟動外掛程式](#activateplugin).
-1. 建立 `features` 上的屬性 `styles` 節點：
+1. 在组件中，导航到节点 `<rtePlugins-node>/styles`. 如果节点不存在，请创建节点。 有关更多详细信息，请参阅 [激活插件](#activateplugin).
+1. 创建 `features` 上的属性 `styles` 节点：
 
    * **名称** `features`
    * **类型** `String`
-   * **值** `*` （星號）
+   * **值** `*` （星号）
 
-1. 儲存所有變更。
+1. 保存所有更改。
 
 >[!NOTE]
 >
->啟用樣式外掛程式後，「樣式」下拉式清單會顯示在編輯對話方塊中。 但是，清單是空的，因為沒有設定樣式。
+>启用样式插件后，“样式”下拉列表将显示在“编辑”对话框中。 但是，列表为空，因为未配置样式。
 
-### 指定樣式表位置 {#locationofstylesheet}
+### 指定样式表位置 {#locationofstylesheet}
 
-然後，指定您要參照的樣式表位置：
+然后，指定要引用的样式表的位置：
 
-1. 導覽至文字元件的根節點，例如 `/apps/<myProject>/components/text`.
-1. 新增屬性 `externalStyleSheets` 至的父節點 `<rtePlugins-node>`：
+1. 导航到文本组件的根节点，例如 `/apps/<myProject>/components/text`.
+1. 添加属性 `externalStyleSheets` 至的父节点 `<rtePlugins-node>`：
 
    * **名称** `externalStyleSheets`
-   * **型別** `String[]` (多字串；按一下 **多個** 在CRXDE中)
-   * **值** 每個要包含的樣式表的路徑和檔案名稱。 使用存放庫路徑。
+   * **类型** `String[]` (多字符串；单击 **多个** 在CRXDE中)
+   * **值** 要包含的每个样式表的路径和文件名。 使用存储库路径。
 
    >[!NOTE]
    >
-   >您稍後可隨時新增參照至其他樣式表。
+   >以后可随时向其它样式表添加参照。
 
-1. 儲存所有變更。
+1. 保存所有更改。
 
 >[!NOTE]
 >
->在對話方塊（傳統UI）中使用RTE時，您可能想要指定針對RTF編輯最佳化的樣式表。 由於技術限制，編輯器中的CSS上下文會遺失，因此您可能想要模擬此上下文以改善WYSIWYG體驗。
+>在对话框（经典UI）中使用RTE时，您可能需要指定针对富文本编辑优化的样式表。 由于技术限制，编辑器中的CSS上下文丢失，因此您可能希望模拟此上下文以改进WYSIWYG体验。
 >
->RTF編輯器使用容器DOM元素，ID為 `CQrte` 可提供不同的樣式進行檢視和編輯：
+>富文本编辑器使用一个容器DOM元素，其ID为 `CQrte` 可用于提供不同的样式进行查看和编辑：
 >
 >`#CQ td {`
 >` // defines the style for viewing }`
@@ -251,61 +251,61 @@ RTE功能可透過一系列外掛程式提供，每個外掛程式都具備功�
 >`#CQrte td {`
 >` // defines the style for editing }`
 
-### 在彈出式清單中指定可用的樣式 {#stylesindropdown}
+### 在弹出列表中指定可用的样式 {#stylesindropdown}
 
-1. 在元件定義中，導覽至節點 `<rtePlugins-node>/styles`，在中建立 [啟用樣式下拉式選擇器](#styleselectorlist).
-1. 在節點下 `styles`，建立新節點(也稱為 `styles`)以保留可供使用的清單：
+1. 在组件定义中，导航到节点 `<rtePlugins-node>/styles`，如中创建的 [启用样式下拉选择器](#styleselectorlist).
+1. 在节点下 `styles`，创建新节点(也称为 `styles`)，以保存可用的列表：
 
    * **名称** `styles`
    * **类型** `cq:WidgetCollection`
 
-1. 在下建立新節點 `styles` 代表個別樣式的節點：
+1. 在 `styles` 表示单个样式的节点：
 
-   * **名稱**，您可以指定名稱，但名稱應適合樣式
+   * **名称**，您可以指定名称，但它应该适合样式
    * **类型** `nt:unstructured`
 
-1. 新增屬性 `cssName` 至此節點以參照CSS類別：
+1. 添加属性 `cssName` 要引用CSS类，请执行以下操作：
 
    * **名称** `cssName`
    * **类型** `String`
-   * **值** CSS類別的名稱(沒有前置詞&#39;.&#39;；例如， `cssClass` 而非 `.cssClass`)
+   * **值** CSS类的名称(不带前缀“。”；例如， `cssClass` 而不是 `.cssClass`)
 
-1. 新增屬性 `text` 至相同節點；這會定義選取方塊中顯示的文字：
+1. 添加属性 `text` 到同一节点；这将定义选择框中显示的文本：
 
    * **名称** `text`
    * **类型** `String`
-   * **值** 樣式的描述；顯示在「樣式」下拉式選取方塊中。
+   * **值** 样式的描述；显示在“样式”下拉选择框中。
 
 1. 保存更改。
 
-   對每個所需樣式重複上述步驟。
+   对每个所需的样式重复上述步骤。
 
-### 設定RTE以取得日文的最佳分行符號 {#jpwordwrap}
+### 配置RTE以优化日语断字 {#jpwordwrap}
 
-使用AEM編寫日文語言內容的作者可將樣式套用至字元，以避免在不需要分行符號的情況下出現分行符號。 這可讓作者讓句子在所需位置中斷。 此功能的樣式是以CSS樣式表中預先定義的CSS類別為基礎。
+使用AEM创作日语内容的作者可以将样式应用于字符，以避免在不需要换行符的情况下出现换行符。 这允许作者在所需的位置处使句子断开。 此功能的样式基于CSS样式表中预定义的CSS类。
 
 >[!NOTE]
 >
 >此功能至少需要AEM 6.5 Service Pack 1。
 
-若要建立作者可套用至日文文字的樣式，請遵循下列步驟：
+要创建作者可以应用于日语文本的样式，请执行以下步骤：
 
-1. 在styles節點下建立新節點。 另請參閱 [指定新樣式](#stylesindropdown).
+1. 在styles节点下创建新节点。 参见 [指定新样式](#stylesindropdown).
    * 名称: `jpn-word-wrap`
    * 类型: `nt:unstructure`
 
-1. 新增屬性 `cssName` 至節點以參照CSS類別。 此類別名稱是日文自動換行功能的保留名稱。
+1. 添加属性 `cssName` 到节点以引用CSS类。 此类名称是日语自动换行功能的保留名称。
    * 名称: `cssName`
    * 类型: `String`
-   * 值： `jpn-word-wrap` (無前置詞 `.`)
+   * 值： `jpn-word-wrap` (无前置词 `.`)
 
-1. 將屬性文字新增至相同的節點。 值是作者在選取樣式時看到的樣式名稱。
-   * 名稱： `text`
-*型別： 
+1. 将属性文本添加到同一节点。 值是作者在选择样式时看到的样式名称。
+   * 名称： `text`
+*类型： 
 `String`
    * 价值: `Japanese word-wrap`
 
-1. 建立樣式表並指定其路徑。 另請參閱 [指定樣式表位置](#locationofstylesheet). 將下列內容新增至樣式表。 視需要變更背景顏色。
+1. 创建样式表并指定其路径。 参见 [指定样式表的位置](#locationofstylesheet). 将以下内容添加到样式表中。 根据需要更改背景颜色。
 
    ```css
    .text span.jpn-word-wrap {
@@ -316,40 +316,40 @@ RTE功能可透過一系列外掛程式提供，每個外掛程式都具備功�
    }
    ```
 
-   ![讓作者可以使用日文自動換行功能的樣式表](assets/rte_jpwordwrap_stylesheet.jpg)
+   ![使日语自动换行功能可供作者使用的样式表](assets/rte_jpwordwrap_stylesheet.jpg)
 
-## 設定段落格式 {#paraformats}
+## 配置段落格式 {#paraformats}
 
-在RTE中編寫的任何文字都會放置在區塊標籤中，預設為 `<p>`. 藉由啟用 `paraformat` 此外掛程式，您可使用下拉式選取清單來指定可指派給段落的其他區塊標籤。 段落格式會透過指定正確的區塊標籤來決定段落型別。 作者可使用「格式」選擇器來選取和指派這些變數。 範例區塊標籤包括標準段落 &lt;p> 和標題 &lt;h1>， &lt;h2>、等等。
+在RTE中创作的任何文本都放置在块标记中，默认设置为 `<p>`. 启用 `paraformat` 插件，您可使用下拉选择列表指定可分配给段落的其他块标记。 段落格式通过分配正确的块标记来确定段落类型。 作者可以使用“格式”选择器选择和分配格式。 示例块标记包括标准段落 &lt;p> 和标题 &lt;h1>， &lt;h2>，等等。
 
 >[!CAUTION]
 >
->此外掛程式不適用於具有複雜結構的內容，例如清單或表格。
+>此插件不适用于具有复杂结构的内容，例如列表或表。
 
 >[!NOTE]
 >
->如果區塊標籤，例如 &lt;hr> 標籤，無法指派給段落，這不是引數格式外掛程式的有效使用案例。
+>如果块标记，例如 &lt;hr> 标签，无法分配给段落，它不是paraformat插件的有效用例。
 
-第一次啟用「段落格式」外掛程式時，沒有可用的預設段落格式。 快顯清單是空的。 若要為作者提供段落格式，請執行下列動作：
+首次启用段落格式插件时，没有默认的段落格式可用。 弹出列表为空。 要向作者提供段落格式，请执行以下操作：
 
-* 啟用「格式」下拉式選擇器清單。
-* 指定可從下拉式清單中選取作為段落格式的區塊標籤。
+* 启用格式下拉选择器列表。
+* 指定可从下拉列表中选择作为段落格式的块标记。
 
-對於稍後（重新）的設定，例如要新增更多格式，請僅遵循指示的相關部分。
+对于以后的（重新）配置（如添加更多格式），请仅遵循说明中的相关部分。
 
-### 啟用「格式」下拉式選取器 {#formatselectorlist}
+### 启用“格式”下拉选择器 {#formatselectorlist}
 
-首先啟用paraformat外掛程式：
+首先启用paraformat插件：
 
-1. 在您的元件中，導覽至節點 `<rtePlugins-node>/paraformat`. 如果節點不存在，請建立節點。 如需詳細資訊，請參閱 [啟動外掛程式](#activateplugin).
-1. 建立 `features` 上的屬性 `paraformat` 節點：
+1. 在组件中，导航到节点 `<rtePlugins-node>/paraformat`. 如果节点不存在，请创建节点。 有关更多详细信息，请参阅 [激活插件](#activateplugin).
+1. 创建 `features` 上的属性 `paraformat` 节点：
 
    * **名称** `features`
    * **类型** `String`
-   * **值** `*` （星號）
+   * **值** `*` （星号）
 
 >[!NOTE]
-如果未進一步設定外掛程式，則會啟用下列預設格式：
+如果未进一步配置此插件，则会启用以下默认格式：
 * 段落 ( `<p>`)
 * 标题 1 ( `<h1>`)
 * 标题 2 ( `<h2>`)
@@ -358,367 +358,367 @@ RTE功能可透過一系列外掛程式提供，每個外掛程式都具備功�
 
 
 >[!CAUTION]
-設定RTE的段落格式時，請勿移除段落標籤 &lt;p> 作為格式選項。 如果 `<p>` 標籤已移除，內容作者無法選取 **段落格式** 選項，即使已設定其他格式亦然。
+配置RTE的段落格式时，请勿删除段落标记 &lt;p> 作为格式选项。 如果 `<p>` 标记被删除，那么内容作者无法选择 **段落格式** 选项，即使配置了其他格式也是如此。
 
 ### 指定可用的段落格式 {#paraformatsindropdown}
 
-段落格式可透過以下方式選取：
+可以通过以下方式使段落格式可供选择：
 
-1. 在元件定義中，導覽至節點 `<rtePlugins-node>/paraformat`，在中建立 [啟用格式下拉式選擇器](#styleselectorlist).
-1. 在 `paraformat` 節點建立新節點，以儲存格式清單：
+1. 在组件定义中，导航到节点 `<rtePlugins-node>/paraformat`，如中创建的 [启用格式下拉选择器](#styleselectorlist).
+1. 在 `paraformat` 节点创建一个新节点，保存格式列表：
 
    * **名称** `formats`
    * **类型** `cq:WidgetCollection`
 
-1. 在下建立新節點 `formats` 節點，這會保留個別格式的詳細資料：
+1. 在 `formats` 节点，这将保存单个格式的详细信息：
 
-   * **名稱**，您可以指定名稱，但它應該適合格式（例如myparagraph、myheading1）。
+   * **名称**，您可以指定名称，但它应该适合该格式（例如myparagraph、myheading1）。
    * **类型** `nt:unstructured`
 
-1. 將屬性新增至此節點，以定義使用的區塊標籤：
+1. 在此节点中，添加属性以定义使用的块标记：
 
    * **名称** `tag`
    * **类型** `String`
-   * **值** 格式的區塊標籤；例如：p、h1、h2等。
+   * **值** 格式的块标记；例如：p、h1、h2等。
 
-      您不需要輸入分隔角括弧。
+      您无需输入分隔尖括号。
 
-1. 若要讓描述性文字出現在下拉式清單中，請在相同節點新增另一個屬性：
+1. 要添加到同一节点，请添加另一个属性，以便在下拉列表中显示描述性文本：
 
    * **名称** `description`
    * **类型** `String`
-   * **值** 此格式的描述性文字；例如，段落、標題1、標題2等。 此文字會顯示在「格式」選取項清單中。
+   * **值** 此格式的描述性文本；例如，段落、标题1、标题2等。 此文本显示在“格式”选择列表中。
 
 1. 保存更改。
 
-   針對每個所需的格式重複這些步驟。
+   对每个所需的格式重复这些步骤。
 
 >[!CAUTION]
-如果您定義自訂格式，預設格式(`<p>`， `<h1>`， `<h2>`、和 `<h3>`)已移除。 重新建立 `<p>` 格式，因為它是預設格式。
+如果定义自定义格式，则默认格式(`<p>`， `<h1>`， `<h2>`、和 `<h3>`)将被删除。 重新创建 `<p>` 格式，因为它是默认格式。
 
-## 設定特殊字元 {#spchar}
+## 配置特殊字符 {#spchar}
 
-在標準AEM安裝中，當 `misctools` 外掛程式已啟用特殊字元(`specialchars`)預設選項可立即使用；例如，版權和商標符號。
+在标准AEM安装中， `misctools` 插件已启用特殊字符(`specialchars`)默认选项可立即使用；例如，版权和商标符号。
 
-您可以設定RTE，讓自己的字元選擇可供使用；藉由定義不同的字元或整個序列。
+您可以配置RTE以使您自己的字符选择可用；通过定义不同的字符或整个序列。
 
 >[!CAUTION]
-新增您自己的特殊字元會覆寫預設選取範圍。 如有需要，可在您自己的選取範圍中（重新）定義這些字元。
+添加您自己的特殊字符会覆盖默认选项。 如果需要，可在您自己的选择中（重新）定义这些字符。
 
-### 定義單一字元 {#definesinglechar}
+### 定义单个字符 {#definesinglechar}
 
-1. 在您的元件中，導覽至節點 `<rtePlugins-node>/misctools`. 如果節點不存在，請建立節點。 如需詳細資訊，請參閱 [啟動外掛程式](#activateplugin).
-1. 建立 `features` 上的屬性 `misctools` 節點：
+1. 在组件中，导航到节点 `<rtePlugins-node>/misctools`. 如果节点不存在，请创建节点。 有关更多详细信息，请参阅 [激活插件](#activateplugin).
+1. 创建 `features` 上的属性 `misctools` 节点：
 
    * **名称** `features`
    * **类型** `String[]`
    * **值** `specialchars`
 
-          (或 `String / *` 如果套用此外掛程式的所有功能)
+          (或 `String / *` （如果为此插件应用了所有功能）
 
-1. 下 `misctools` 建立節點以儲存特殊字元設定：
+1. 下 `misctools` 创建一个节点来保存特殊字符配置：
 
    * **名称** `specialCharsConfig`
    * **类型** `nt:unstructured`
 
-1. 下 `specialCharsConfig` 建立另一個節點來儲存字元清單：
+1. 下 `specialCharsConfig` 创建另一个节点来保存字符列表：
 
    * **名称** `chars`
    * **类型** `nt:unstructured`
 
-1. 下 `chars` 新增節點以保留個別字元定義：
+1. 下 `chars` 添加新节点以保存单个字符定义：
 
-   * **名稱** 您可以指定名稱，但名稱應反映字元；例如，一半。
+   * **名称** 您可以指定名称，但名称应反映字符；例如，一半。
    * **类型** `nt:unstructured`
 
-1. 將下列屬性新增至此節點：
+1. 要添加到此节点，请添加以下属性：
 
    * **名称** `entity`
    * **类型** `String`
-   * **值** 所需字元的HTML表示；例如， `&189;` 為分數的一半。
+   * **值** 所需字符的HTML表示形式；例如， `&189;` 小数点的一半。
 
 1. 保存更改。
 
-在CRXDE中，儲存屬性後，會顯示表示的字元。 請參閱下方一半的範例。 重複上述步驟，讓作者可以使用更多特殊字元。
+在CRXDE中，保存属性后，将显示表示的字符。 请参阅下面一半的示例。 重复上述步骤以使作者可以使用更多特殊字符。
 
-![在CRXDE中，新增單一字元，以供RTE工具列使用](assets/chlimage_1-106.png "在CRXDE中，新增單一字元，以供RTE工具列使用")
+![在CRXDE中，添加单个字符以使其在RTE工具栏中可用](assets/chlimage_1-106.png "在CRXDE中，添加单个字符以使其在RTE工具栏中可用")
 
-### 定義字元範圍 {#definerangechar}
+### 定义字符范围 {#definerangechar}
 
-1. 使用中的步驟1至3 [定義單一字元](#definesinglechar).
-1. 下 `chars` 新增節點以保留字元範圍的定義：
+1. 使用中的步骤1至3 [定义单个字符](#definesinglechar).
+1. 下 `chars` 添加新节点以保存字符范围的定义：
 
-   * **名稱** 您可以指定名稱，但應反映字元範圍；例如，鉛筆。
+   * **名称** 您可以指定名称，但它应反映字符范围；例如，铅笔。
    * **类型** `nt:unstructured`
 
-1. 在此節點下（根據特殊字元範圍命名）新增以下兩個屬性：
+1. 在此节点下（根据特殊字符范围命名）添加以下两个属性：
 
    * **名称** `rangeStart`
 
       **类型** `Long`
-      **值** 此 [Unicode](https://unicode.org/) 表示範圍中第一個字元（十進位）
+      **值** 此 [Unicode](https://unicode.org/) 表示范围中第一个字符（小数）
 
    * **名称** `rangeEnd`
 
       **类型** `Long`
-      **值** 此 [Unicode](https://unicode.org/) 表示範圍中最後一個字元（十進位）
+      **值** 此 [Unicode](https://unicode.org/) 范围中最后一个字符的表示形式（小数）
 
 1. 保存更改。
 
-   例如，定義9998到10000之間的範圍時，會提供下列字元。
+   例如，定义从9998到10000之间的范围，为您提供以下字符。
 
-   ![在CRXDE中，定義要在RTE中可用的字元範圍](assets/chlimage_1-107.png)
+   ![在CRXDE中，定义要在RTE中可用的字符范围](assets/chlimage_1-107.png)
 
-   *圖：在CRXDE中，定義在RTE中可用的字元範圍*
+   *图：在CRXDE中，定义要在RTE中可用的字符范围*
 
-   ![RTE中可用的特殊字元會在快顯視窗中向作者顯示](assets/rtepencil.png "RTE中可用的特殊字元會在快顯視窗中向作者顯示")
+   ![RTE中可用的特殊字符会在弹出窗口中向作者显示](assets/rtepencil.png "RTE中可用的特殊字符会在弹出窗口中向作者显示")
 
-## 設定表格樣式 {#tablestyles}
+## 配置表样式 {#tablestyles}
 
-樣式通常會套用至文字，但也可以套用一組個別的樣式至表格或幾個表格儲存格。 作者可從「儲存格屬性」或「表格屬性」對話方塊的「樣式選取器」方塊中使用此類樣式。 在文字元件（或衍生專案）中編輯表格時，樣式而非在標準表格元件中可用。
-
->[!NOTE]
-您只能為傳統UI定義表格和儲存格的樣式。
+样式通常应用于文本，但也可以对表或几个表单元格应用单独的样式集。 作者可以在“单元格属性”或“表属性”对话框的“样式选择器”框中找到此类样式。 在文本组件（或派生项）而非标准表组件中编辑表时，可以使用样式。
 
 >[!NOTE]
-在RTE元件中或從RTE元件複製和貼上表格會依瀏覽器而定。 並非所有瀏覽器都支援此功能。 根據表格結構和瀏覽器，您可能會得到不同的結果。 例如，當您在Mozilla Firefox的Classic UI和Touch UI中複製並貼上RTE元件中的表格時，不會保留表格的版面。
+您只能为经典UI定义表和单元格的样式。
 
-1. 在您的元件內，導覽至節點 `<rtePlugins-node>/table`. 如果節點不存在，請建立節點。 如需詳細資訊，請參閱 [啟動外掛程式](#activateplugin).
-1. 建立 `features` 上的屬性 `table` 節點：
+>[!NOTE]
+在RTE组件中或从RTE组件中复制和粘贴表依赖于浏览器。 并非所有浏览器都支持开箱即用。 根据表结构和浏览器，可能会得到不同的结果。 例如，在经典UI和触屏UI中，当您在Mozilla Firefox的RTE组件中复制并粘贴表时，不会保留表的布局。
+
+1. 在组件内，导航到节点 `<rtePlugins-node>/table`. 如果节点不存在，请创建节点。 有关更多详细信息，请参阅 [激活插件](#activateplugin).
+1. 创建 `features` 上的属性 `table` 节点：
 
    * **名称** `features`
    * **类型** `String`
-   * **值** `*` （星號）
+   * **值** `*` （星号）
 
    >[!NOTE]
-   如果您不想啟用所有表格功能，您可以建立 `features` 屬性為：
+   如果不希望启用所有表格功能，可创建 `features` 属性为：
    * **类型** `String[]`
-   * **值**(s)視需要執行下列其中一項或兩項作業：
-      * `table` 允許編輯表格屬性；包括樣式。
-      * `cellprops` 允許編輯儲存格屬性，包括樣式。
+   * **值**(s)视需要提供以下一项或两项内容：
+      * `table` 允许编辑表属性；包括样式。
+      * `cellprops` 允许编辑单元格属性，包括样式。
 
 
-1. 定義CSS樣式表的位置以參考這些樣式表。 另請參閱 [指定樣式表的位置](#locationofstylesheet) 因為這與定義 [文字樣式](#textstyles). 如果您定義了其他樣式，則可以定義位置。
-1. 在 `table` 節點建立以下新節點（視需要）：
+1. 定义CSS样式表的位置以引用这些样式表。 参见 [指定样式表的位置](#locationofstylesheet) 因为这与定义 [文本样式](#textstyles). 如果定义了其他样式，则可以定义位置。
+1. 在 `table` 节点创建以下新节点（根据需要）：
 
-   * 定義整個表格的樣式(可在下列位置取得： **表格屬性**)：
+   * 为整个表定义样式(可在 **表属性**)：
 
       * **名称** `tableStyles`
       * **类型** `cq:WidgetCollection`
-   * 定義個別儲存格的樣式(位於 **儲存格屬性**)：
+   * 为各个单元格定义样式(可在 **单元格属性**)：
 
       * **名称** `cellStyles`
       * **类型** `cq:WidgetCollection`
 
 
-1. 建立新節點(在 `tableStyles` 或 `cellStyles` 節點)，以代表個別樣式：
+1. 创建新节点(在 `tableStyles` 或 `cellStyles` 节点)，以表示单个样式：
 
-   * **名稱** 您可以指定名稱，但應反映樣式。
+   * **名称** 您可以指定名称，但它应反映样式。
    * **类型** `nt:unstructured`
 
-1. 在此節點上建立屬性：
+1. 在此节点上创建属性：
 
-   * 定義要參考的CSS樣式
+   * 定义要引用的CSS样式
 
       * **名称** `cssName`
       * **类型** `String`
-      * **值** CSS類別的名稱（不含前置字元） `.`例如， `cssClass` 而非 `.cssClass`)
-   * 定義要在下拉式選擇器中顯示的描述性文字
+      * **值** CSS类的名称（不带前缀） `.`例如， `cssClass` 而不是 `.cssClass`)
+   * 定义要在下拉选择器中显示的描述性文本
 
       * **名称** `text`
       * **类型** `String`
-      * **值** 要顯示在選取專案清單中的文字
+      * **值** 要显示在选择列表中的文本
 
 
-1. 儲存所有變更。
+1. 保存所有更改。
 
-對每個所需樣式重複上述步驟。
+对每个所需的样式重复上述步骤。
 
-### 在表格中設定隱藏標題以取得協助工具 {#hiddenheader}
+### 为辅助功能配置表中的隐藏标头 {#hiddenheader}
 
-有時候，您可以建立資料表，但欄標頭中沒有視覺文字，假設標頭的目的是由欄與其他欄的視覺關係所暗示。 在此情況下，必須在標題儲存格的儲存格中提供隱藏的內部文字，以允許熒幕閱讀程式和其他輔助技術協助有各種需求的閱讀程式瞭解欄的用途。
+有时，您可以创建没有可视文本的数据表，但前提是列标题的用途隐含在列与其他列的可视关系中。 在这种情况下，有必要在标题单元格的单元格中提供隐藏的内部文本，以允许屏幕阅读器和其他辅助技术帮助有各种需求的阅读器了解列的用途。
 
-為了在這類情況下增強協助工具，RTE支援隱藏的標題儲存格。 此外，它提供與表格中隱藏標題相關的組態設定。 這些設定可讓您在編輯和預覽模式中，對隱藏的標題套用CSS樣式。 為協助作者在編輯模式中識別隱藏的標頭，請在程式碼中包含下列引數：
+为了在这种情况下增强辅助功能，RTE支持隐藏的标题单元格。 此外，它还提供与表中隐藏标头相关的配置设置。 这些设置允许您在编辑和预览模式下对隐藏的标题应用CSS样式。 为帮助作者在编辑模式下识别隐藏的标头，请在代码中包含以下参数：
 
-* `hiddenHeaderEditingCSS`：指定在編輯RTE時套用至隱藏標題儲存格的CSS類別名稱。
-* `hiddenHeaderEditingStyle`：指定在編輯RTE時套用至隱藏標題儲存格的樣式字串。
+* `hiddenHeaderEditingCSS`：指定在编辑RTE时应用于hidden-header单元格的CSS类的名称。
+* `hiddenHeaderEditingStyle`：指定在编辑RTE时应用于隐藏标题单元格的样式字符串。
 
-如果您在程式碼中同時指定CSS和Style字串，則CSS類別會優先於樣式字串，並可能覆寫Style字串所做的任何設定變更。
+如果在代码中同时指定CSS和样式字符串，则CSS类将优先于样式字符串，并可能覆盖样式字符串所做的任何配置更改。
 
-若要協助作者在預覽模式下對隱藏的標題套用CSS，您可以在程式碼中包含下列引數：
+为帮助作者在预览模式下对隐藏的标题应用CSS，您可以在代码中包含以下参数：
 
-* `hiddenHeaderClassName`：指定在預覽模式中套用至隱藏標題儲存格的CSS類別名稱。
-* `hiddenHeaderStyle`：指定在預覽模式下套用至隱藏標題儲存格的樣式字串。
+* `hiddenHeaderClassName`：指定在预览模式下应用于隐藏标题单元格的CSS类的名称。
+* `hiddenHeaderStyle`：指定在预览模式下应用于hidden-header单元格的样式字符串。
 
-如果您在程式碼中同時指定CSS和Style字串，則CSS類別會優先於樣式字串，並可能覆寫Style字串所做的任何設定變更。
+如果在代码中同时指定CSS和样式字符串，则CSS类将优先于样式字符串，并可能覆盖样式字符串所做的任何配置更改。
 
-## 新增拼字檢查器的字典 {#adddict}
+## 为拼写检查器添加词典 {#adddict}
 
-啟動spellcheck外掛程式時，RTE會使用每個適當語言的字典。 接著，系統會根據網站的語言，例如採用子樹狀結構的language屬性或從URL擷取語言，來選取這些專案。 此 `/en/` 分支會勾選為英文，而 `/de/` 分支為德文。
+激活spellcheck插件后，RTE会使用字典来表示每种相应的语言。 然后，通过获取子树的语言属性或从URL中提取语言来根据网站的语言选择这些语言；例如。 此 `/en/` 分支被选为英语， `/de/` 分支为德语。
 
 >[!NOTE]
-訊息 `Spell checking failed` 如果嘗試檢查未安裝的語言，則會顯示。 標準字典位於 `/libs/cq/spellchecker/dictionaries`，以及適當的Readme檔案。 請勿修改檔案。
+消息 `Spell checking failed` 如果尝试检查未安装的语言，则会显示。 标准词典位于 `/libs/cq/spellchecker/dictionaries`，以及相应的自述文件。 请勿修改文件。
 
-標準AEM安裝包含美式英文字典(`en_us`)和英式英文(`en_gb`)。 若要新增更多字典，請按照以下步驟操作。
+标准AEM安装包括美式英语词典(`en_us`)和英式英语(`en_gb`)。 要添加更多词典，请按照以下步骤操作。
 
-1. 導覽至頁面 [https://extensions.openoffice.org/](https://extensions.openoffice.org/).
+1. 导航到页面 [https://extensions.openoffice.org/](https://extensions.openoffice.org/).
 
-1. 執行下列任一項作業，尋找您選擇的語言字典：
+1. 执行以下操作之一，查找您选择的语言的词典：
 
-   * 搜尋您所選語言的字典。 在字典頁面上，找到原始來源或作者網頁的連結。 在這樣的頁面上找到v2.x的字典檔案。
-   * 搜尋v2.x字典檔案： [https://wiki.openoffice.org/wiki/User:Khirano/Dictionaries](https://wiki.openoffice.org/wiki/User:Khirano/Dictionaries).
+   * 搜索您选择的语言的词典。 在词典页面上，找到指向原始源或作者网页的链接。 在此类页面上找到v2.x的字典文件。
+   * 在v2.x词典文件中搜索 [https://wiki.openoffice.org/wiki/User:Khirano/Dictionaries](https://wiki.openoffice.org/wiki/User:Khirano/Dictionaries).
 
-1. 下載含有拼字定義的封存。 解壓縮檔案系統上的封存內容。
+1. 下载包含拼写定义的档案。 提取文件系统中存档的内容。
 
    >[!CAUTION]
-   僅字典 `MySpell` 支援OpenOffice.org v2.0.1或更舊版本的格式。 由於字典現在是封存檔案，建議您下載後驗證封存。
+   仅词典位于 `MySpell` 支持OpenOffice.org v2.0.1或更低版本的格式。 由于字典现在是存档文件，因此建议您在下载后验证存档。
 
-1. 找到.aff和.dic檔案。 將檔案名稱保留為小寫。 例如， `de_de.aff` 和 `de_de.dic`.
-1. 將.aff和.dic檔案載入存放庫，網址為 `/apps/cq/spellchecker/dictionaries`.
+1. 找到.aff和.dic文件。 将文件名保留为小写。 例如， `de_de.aff` 和 `de_de.dic`.
+1. 将.aff和.dic文件加载到存储库中的 `/apps/cq/spellchecker/dictionaries`.
 
 >[!NOTE]
-RTE拼字檢查程式可隨選使用。 當您開始輸入文字時，它不會自動執行。 若要執行拼字檢查程式，請按一下 [!UICONTROL 拼字檢查] （從工具列）。 RTE會檢查單字的拼字，並反白拼錯的單字。
-如果您合併拼字檢查器建議的任何變更，文字的狀態會變更，且拼字錯誤的單字不再反白。 若要執行拼字檢查程式，請再次點選/按一下「拼字檢查程式」按鈕。
+RTE拼写检查器可按需使用。 当您开始键入文本时，它不会自动运行。 要运行拼写检查器，请单击 [!UICONTROL 拼写检查程序] 工具栏中。 RTE检查单词的拼写并突出显示拼写错误的单词。
+如果合并拼写检查器建议的任何更改，则文本的状态会更改，拼写错误的单词将不再突出显示。 要运行拼写检查器，请再次点按/单击拼写检查器按钮。
 
-## 設定還原和重做動作的歷史記錄大小 {#undohistory}
+## 配置撤消和重做操作的历史记录大小 {#undohistory}
 
-RTE可讓作者還原或重做最後的幾項編輯。 依預設，歷史記錄中會儲存50項編輯。 您可以視需要設定此值。
+RTE允许作者撤消或重做最后的几次编辑。 默认情况下，历史中存储50次编辑。 您可以根据需要配置此值。
 
-1. 在您的元件內，導覽至節點 `<rtePlugins-node>/undo`. 如果節點不存在，請建立這些節點。 如需詳細資訊，請參閱 [啟動外掛程式](#activateplugin).
-1. 於 `undo` 節點建立屬性：
+1. 在组件内，导航到节点 `<rtePlugins-node>/undo`. 如果这些节点不存在，请创建它们。 有关更多详细信息，请参阅 [激活插件](#activateplugin).
+1. 在 `undo` 节点创建属性：
 
    * **名称** `maxUndoSteps`
    * **类型** `Long`
-   * **值** 您想要儲存在記錄中的還原步驟數。 預設值為50。 使用 `0` 以完全停用還原/重做。
+   * **值** 要在历史记录中保存的撤消步骤数。 默认值为50。 使用 `0` 以完全禁用撤消/重做。
 
 1. 保存更改。
 
-## 設定索引標籤大小 {#tabsize}
+## 配置选项卡大小 {#tabsize}
 
-在文字中按下Tab字元時，會插入預先定義的空格數；依預設，這是三個不間斷的空格和一個空格。
+在任意文本中按制表符字符时，会插入预定义的空格数；默认情况下，这是三个不间断的空格和一个空格。
 
-若要定義定位點大小，請執行下列動作：
+要定义制表符大小，请执行以下操作：
 
-1. 在您的元件中，導覽至節點 `<rtePlugins-node>/keys`. 如果節點不存在，請建立節點。 如需詳細資訊，請參閱 [啟動外掛程式](#activateplugin).
-1. 於 `keys` 節點建立屬性：
+1. 在组件中，导航到节点 `<rtePlugins-node>/keys`. 如果节点不存在，请创建节点。 有关更多详细信息，请参阅 [激活插件](#activateplugin).
+1. 在 `keys` 节点创建属性：
 
    * **名称** `tabSize`
    * **类型** `String`
-   * **值** 用於製表器的空格字元數
+   * **值** 用于制表符的空格字符数
 
 1. 保存更改。
 
-## 設定縮排邊界 {#indentmargin}
+## 设置缩进边距 {#indentmargin}
 
-啟用縮排（預設）時，您可以定義縮排的大小：
+启用缩进（默认）后，您可以定义缩进的大小：
 
 >[!NOTE]
-此縮排大小只會套用至文字的段落（區塊），不會影響實際清單的縮排。
+此缩进大小仅适用于文本的段落（块）；它不会影响实际列表的缩进。
 
-1. 在您的元件內，導覽至節點 `<rtePlugins-node>/lists`. 如果節點不存在，請建立這些節點。 如需詳細資訊，請參閱 [啟動外掛程式](#activateplugin).
-1. 於 `lists` 節點建立 `identSize` 引數：
+1. 在组件内，导航到节点 `<rtePlugins-node>/lists`. 如果这些节点不存在，请创建它们。 有关更多详细信息，请参阅 [激活插件](#activateplugin).
+1. 在 `lists` 节点创建 `identSize` 参数：
 
    * **名称**: `identSize`
    * **类型**: `Long`
-   * **值**：縮排邊界所需的畫素數。
+   * **值**：缩进边距所需的像素数。
 
-## 設定可編輯空間的高度 {#editablespace}
+## 配置可编辑空间的高度 {#editablespace}
 
 >[!NOTE]
-這僅適用於在對話方塊中使用RTE （而非在傳統UI中就地編輯）時。
+这仅适用于在对话框中使用RTE（而不是在经典UI中就地编辑）的情况。
 
-您可以定義元件對話方塊中顯示的可編輯空間的高度：
+您可以定义组件对话框中显示的可编辑空间的高度：
 
-1. 於 `../items/text` 節點建立新屬性：
+1. 在 `../items/text` 节点时，创建新属性：
 
    * **名称** `height`
    * **类型** `Long`
-   * **值** 編輯畫布的高度（畫素）。
+   * **值** 编辑画布的高度（像素）。
 
    >[!NOTE]
-   這不會變更對話方塊視窗的高度。
+   这不会更改对话框窗口的高度。
 
 1. 保存更改。
 
-## 設定連結的樣式和通訊協定 {#linkstyles}
+## 为链接配置样式和协议 {#linkstyles}
 
-在AEM中新增連結時，您可以定義：
+在AEM中添加链接时，您可以定义：
 
-* 要使用的CSS樣式
-* 自動接受的通訊協定
+* 要使用的CSS样式
+* 自动接受的协议
 
-若要設定如何將連結從其他程式新增至AEM，請定義HTML規則。
+要配置如何将链接从其他程序添加到AEM中，请定义HTML规则。
 
-1. 使用CRXDE Lite找到專案的文字元件。
-1. 在與相同的層級建立新節點 `<rtePlugins-node>`，也就是說，在的父節點下建立節點 `<rtePlugins-node>`：
+1. 使用CRXDE Lite，找到项目的文本组件。
+1. 在与相同的级别创建新节点 `<rtePlugins-node>`，即，在父节点下创建节点 `<rtePlugins-node>`：
 
    * **名称** `htmlRules`
    * **类型** `nt:unstructured`
 
    >[!NOTE]
-   此 `../items/text` 節點具有屬性：
+   此 `../items/text` 节点具有属性：
    * **名称** `xtype`
    * **类型** `String`
    * **值** `richtext`
 
-   的位置 `../items/text` 節點會依對話方塊的結構而有所不同；有兩個範例為 `/apps/myProject>/components/text/dialog/items/text` 和 `/apps/<myProject>/components/text/dialog/items/panel/items/text`.
+   的位置 `../items/text` 节点可能因对话框的结构而异；示例有两种 `/apps/myProject>/components/text/dialog/items/text` 和 `/apps/<myProject>/components/text/dialog/items/panel/items/text`.
 
-1. 下 `htmlRules`，建立新節點。
+1. 下 `htmlRules`，创建一个新节点。
 
    * **名称** `links`
    * **类型** `nt:unstructured`
 
-1. 在 `links` 節點會視需要定義屬性：
+1. 在 `links` 节点根据需要定义属性：
 
-   * 內部連結的CSS樣式：
+   * 内部链接的CSS样式：
 
       * **名称** `cssInternal`
       * **类型** `String`
-      * **值** CSS類別的名稱(沒有前置詞&#39;.&#39;；例如， `cssClass` 而非 `.cssClass`)
-   * 外部連結的CSS樣式
+      * **值** CSS类的名称(不带前缀“。”；例如， `cssClass` 而不是 `.cssClass`)
+   * 外部链接的CSS样式
 
       * **名称** `cssExternal`
       * **类型** `String`
-      * **值** CSS類別的名稱(沒有前置詞&#39;.&#39;；例如， `cssClass` 而非 `.cssClass`)
-   * 有效陣列 **通訊協定**. 支援的通訊協定為 `http://`， `https://`， `file://`、和 `mailto:`.
+      * **值** CSS类的名称(不带前缀“。”；例如， `cssClass` 而不是 `.cssClass`)
+   * 有效数组 **协议**. 支持的协议包括 `http://`， `https://`， `file://`、和 `mailto:`.
 
       * **名称** `protocols`
       * **类型** `String[]`
-      * **值**(s)一或多個通訊協定
-   * **defaultprotocol** (型別的屬性 **字串**)：使用者未明確指定時使用的通訊協定。
+      * **值**(s)一个或多个协议
+   * **defaultprotocol** (类型的属性 **字符串**)：用户未明确指定时使用的协议。
 
       * **名称** `defaultProtocol`
       * **类型** `String`
-      * **值**(s)一或多個預設通訊協定
-   * 如何處理連結目標屬性的定義。 建立新節點：
+      * **值**(s)一个或多个默认协议
+   * 如何处理链接的目标属性的定义。 创建新节点：
 
       * **名称** `targetConfig`
       * **类型** `nt:unstructured`
 
-      在節點上 `targetConfig`：定義必要的屬性：
+      在节点上 `targetConfig`：定义所需的属性：
 
-      * 指定目標模式：
+      * 指定目标模式：
 
          * **名称** `mode`
          * **类型** `String`)
          * **值**(s) ：
 
-            * `auto`：表示已選擇自動目標
+            * `auto`：表示选择了自动目标
 
-               (由 `targetExternal` 外部連結或的屬性 `targetInternal` 內部連結使用)。
+               (由 `targetExternal` 外部链接或的属性 `targetInternal` （对于内部链接）。
 
-            * `manual`：不適用於此內容
-            * `blank`：不適用於此內容
-      * 內部連結的目標：
+            * `manual`：不适用于此上下文
+            * `blank`：不适用于此上下文
+      * 内部链接的目标：
 
          * **名称** `targetInternal`
          * **类型** `String`
-         * **值** 內部連結的目標(僅在模式為 `auto`)
-      * 外部連結的目標：
+         * **值** 内部链接的目标(仅在模式为 `auto`)
+      * 外部链接的目标：
 
          * **名称** `targetExternal`
          * **类型** `String`
-         * **值** 外部連結的目標(僅在模式為 `auto`)。
+         * **值** 外部链接的目标(仅在模式为 `auto`)。
 
 
 
@@ -727,4 +727,4 @@ RTE可讓作者還原或重做最後的幾項編輯。 依預設，歷史記錄�
 
 
 
-1. 儲存所有變更。
+1. 保存所有更改。

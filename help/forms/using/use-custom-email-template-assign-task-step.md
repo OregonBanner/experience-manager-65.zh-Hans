@@ -1,7 +1,7 @@
 ---
-title: 在指派任務步驟中使用自訂電子郵件範本
+title: 在分配任务步骤中使用自定义电子邮件模板
 seo-title: Use custom email templates in an Assign Task step
-description: 表單工作流程電子郵件通知的自訂電子郵件範本
+description: 表单工作流电子邮件通知的自定义电子邮件模板
 seo-description: Custom email templates for forms workflow email notifications
 uuid: ba453d54-813f-4a4f-a82e-1a6a28b6939c
 topic-tags: publish
@@ -15,62 +15,62 @@ ht-degree: 1%
 
 ---
 
-# 在指派任務步驟中使用自訂電子郵件範本{#use-custom-email-templates-in-an-assign-task-step}
+# 在分配任务步骤中使用自定义电子邮件模板{#use-custom-email-templates-in-an-assign-task-step}
 
-您可以使用「指派任務」步驟來建立任務並指派給使用者或群組。 當任務指派給使用者或群組時，會傳送電子郵件通知給已定義的使用者或已定義群組的每個成員。 典型的電子郵件通知包含指派任務的連結以及與該任務相關的資訊。 下列影像顯示範例電子郵件通知：
+您可以使用“分配任务”步骤来创建任务并将其分配给用户或组。 将任务分配给用户或组时，会向定义的用户或定义的组的每个成员发送电子邮件通知。 典型的电子邮件通知包含已分配任务的链接以及与该任务相关的信息。 下图显示了一个示例电子邮件通知：
 
-![使用現成可用範本的電子郵件通知](do-not-localize/default_email_template_new.png)
+![使用现成模板发送电子邮件通知](do-not-localize/default_email_template_new.png)
 
-您可以自訂外觀，並在電子郵件通知中使用自訂中繼資料。 AEM Forms提供立即可用的電子郵件通知範本。 您可以自訂現成可用的範本或從頭開始建立新範本。
+您可以自定义外观，并在电子邮件通知中使用自定义元数据。 AEM Forms为电子邮件通知提供了一个现成的模板。 您可以自定义现成模板或从头开始创建新模板。
 
-電子郵件通知範本是根據 [HTML電子郵件](https://en.wikipedia.org/wiki/HTML_email). 這些電子郵件會因應不同的電子郵件使用者端和熒幕大小。 此外，電子郵件的樣式會在範本中定義。
+电子邮件通知模板基于 [HTML电子邮件](https://en.wikipedia.org/wiki/HTML_email). 这些电子邮件会适应不同的电子邮件客户端和屏幕大小。 此外，电子邮件的样式在模板中定义。
 
-以下影像顯示自訂的電子郵件通知：
+下图显示了自定义的电子邮件通知：
 
-![使用自訂範本的電子郵件通知](do-not-localize/customized-email.png)
+![使用自定义模板的电子邮件通知](do-not-localize/customized-email.png)
 
-## 自訂現有範本 {#customize-the-existing-template}
+## 自定义现有模板 {#customize-the-existing-template}
 
-AEM Forms提供立即可用的電子郵件通知範本。 範本提供指派任務的標題說明、到期日、優先順序、工作流程名稱和連結。 您可以自訂範本以變更外觀。 執行以下步驟來自訂範本：
+开箱即用的AEM Forms提供了电子邮件通知模板。 模板提供已分配任务的标题描述、截止日期、优先级、工作流名称和链接。 可以自定义模板以更改外观。 执行以下步骤以自定义模板：
 
-1. 使用管理員帳戶登入CRXDE。
+1. 使用管理员帐户登录CRXDE。
 
-1. 導覽至/libs/fd/dashboard/templates/email。
+1. 导航到/libs/fd/dashboard/templates/email。
 
-1. 開啟htmlEmailTemplate.txt檔案。 它包含預設範本。
+1. 打开htmlEmailTemplate.txt文件。 它包含默认模板。
 
-1. 將htmlEmailTemplate.txt檔案的內容取代為自訂內容。
+1. 将htmlEmailTemplate.txt文件的内容替换为自定义内容。
 
-   電子郵件通知範本是 [HTML電子郵件](https://en.wikipedia.org/wiki/HTML_email). 您可以使用自訂程式碼取代現有的html程式碼，以變更範本的外觀。
+   电子邮件通知模板是 [HTML电子邮件](https://en.wikipedia.org/wiki/HTML_email). 您可以使用自定义代码替换现有的html代码以更改模板的外观。
 
-1. 保存文件。現在，自訂範本已可供使用。
+1. 保存文件。现在，自定义模板已可供使用。
 
-## 建立電子郵件範本 {#create-an-email-template}
+## 创建电子邮件模板 {#create-an-email-template}
 
-AEM Forms提供立即可用的電子郵件通知範本。 範本提供指派任務的標題說明、到期日、優先順序、工作流程名稱和連結。 您也可以新增自訂電子郵件範本（您自己的範本）給指派任務步驟。 執行以下步驟以新增自訂電子郵件範本：
+开箱即用的AEM Forms提供了电子邮件通知模板。 模板提供已分配任务的标题描述、截止日期、优先级、工作流名称和链接。 您还可以为分配任务步骤添加自定义电子邮件模板（您自己的模板）。 执行以下步骤可添加自定义电子邮件模板：
 
-1. 使用管理員帳戶登入CRXDE。
+1. 使用管理员帐户登录CRXDE。
 
-1. 導覽至/libs/fd/dashboard/templates/email。
+1. 导航到/libs/fd/dashboard/templates/email。
 
-1. 建立.txt檔案。 例如，EmailOnTaskAssign.txt。
+1. 创建.txt文件。 例如，EmailOnTaskAssign.txt。
 
-1. 將自訂HTML程式碼新增至檔案。
+1. 将自定义HTML代码添加到文件中。
 
-   電子郵件通知範本是 [HTML電子郵件](https://en.wikipedia.org/wiki/HTML_email). 您可以將自訂HTML程式碼新增至檔案以建立新範本。
+   电子邮件通知模板是 [HTML电子邮件](https://en.wikipedia.org/wiki/HTML_email). 您可以将自定义HTML代码添加到文件中以创建新模板。
 
-1. 保存文件。範本已準備好用於指派任務步驟。
+1. 保存文件。该模板已准备好用于分配任务步骤。
 
-## 在指派任務步驟中使用電子郵件範本 {#use-an-email-template-in-an-assign-task-step}
+## 在“分配任务”步骤中使用电子邮件模板 {#use-an-email-template-in-an-assign-task-step}
 
-現成可用的指派工作步驟已設定為使用預設範本htmlEmailTemplate.txt。 您可以選擇使用自訂範本。 若要變更範本：
+开箱即用的“分配任务”步骤配置为使用默认模板htmlEmailTemplate.txt。 您可以选择使用自定义模板。 要更改模板，请执行以下操作：
 
-1. 開啟指派工作步驟。
+1. 打开分配任务步骤。
 
-1. 導覽至「受指派人>HTML電子郵件範本」。
+1. 导航到“被分派人”>“HTML电子邮件模板”。
 
-1. 選取新建立的HTML電子郵件範本。
+1. 选择新创建的HTML电子邮件模板。
 
-1. 单击确定。範本已變更。
+1. 单击确定。模板已更改。
 
-電子郵件通知也會使用 [中繼資料](../../forms/using/use-metadata-in-email-notifications.md). 例如，到期日、優先順序、工作流程名稱等。 您也可以設定範本以使用 [自訂中繼資料](../../forms/using/use-metadata-in-email-notifications.md#using-custom-metadata-in-an-email-notification).
+电子邮件通知还使用 [元数据](../../forms/using/use-metadata-in-email-notifications.md). 例如，到期日期、优先级、工作流名称等。 您还可以配置要使用的模板 [自定义元数据](../../forms/using/use-metadata-in-email-notifications.md#using-custom-metadata-in-an-email-notification).

@@ -1,7 +1,7 @@
 ---
-title: 設定通訊管理解決方案
+title: 配置通信管理解决方案
 seo-title: Configuring a Correspondence Management solution
-description: 設定通訊管理解決方案
+description: 配置通信管理解决方案
 uuid: 76b25004-fe47-44d7-9bed-7c0fd963306b
 topic-tags: correspondence-management
 content-type: reference
@@ -16,40 +16,40 @@ ht-degree: 1%
 
 ---
 
-# 設定通訊管理解決方案 {#configuring-a-correspondence-management-solution}
+# 配置通信管理解决方案 {#configuring-a-correspondence-management-solution}
 
-## 定義VersionRestoreManagerImpl的作者執行個體URL {#defining-author-instance-url-for-versionrestoremanagerimpl}
+## 为VersionRestoreManagerImpl定义创作实例URL {#defining-author-instance-url-for-versionrestoremanagerimpl}
 
-使用下列步驟來定義用於編寫執行個體版本還原的編寫執行個體URL：
+使用以下步骤为创作实例版本还原定义创作实例URL：
 
-1. 前往 *https://：&lt;publishhost>：&lt;publishport>/lc/system/console/configMgr*. 使用OSGi Management Console使用者憑證登入。 預設認證為admin/admin。
-1. 尋找並按一下 **[!UICONTROL 編輯]** 圖示加以存取 **[!UICONTROL com.adobe.livecycle.content.activate.impl.VersionRestoreManagerImpl.name]** 設定。
-1. 在 **[!UICONTROL VersionRestoreManager作者URL]** 欄位中，指定VersionRestoreManager的製作執行個體的URL。
+1. 转到 *https://网站：&lt;publishhost>：&lt;publishport>/lc/system/console/configMgr*. 使用OSGi Management Console用户凭据登录。 默认凭据为admin/admin。
+1. 查找并单击 **[!UICONTROL 编辑]** 图标 **[!UICONTROL com.adobe.livecycle.content.activate.impl.VersionRestoreManagerImpl.name]** 设置。
+1. 在 **[!UICONTROL VersionRestoreManager作者URL]** 字段，指定VersionRestoreManager的创作实例的URL。
 
-   **URL字串**：
+   **URL字符串**：
 
    `https://<hostname>:<port>:/libs/fd/fdm/content/crud/lc.content.remote.activate.VersionRestoreManager`
 
    >[!NOTE]
    >
-   >如果有多個作者執行個體（叢集）由負載平衡器前端，請在中指定負載平衡器的URL **[!UICONTROL VersionRestoreManager作者URL]** 欄位。
+   >如果有多个作者实例（集群）由负载平衡器提前，请在中指定指向负载平衡器的URL **[!UICONTROL VersionRestoreManager作者URL]** 字段。
 
 1. 单击“**[!UICONTROL 保存]**”。
 
-## 定義ActivationManagerImpl （公用執行個體啟動管理員）的發佈執行個體URL {#defining-the-publish-instance-url-for-activationmanagerimpl-public-instance-activation-manager}
+## 为ActivationManagerImpl（公共实例激活管理器）定义发布实例URL {#defining-the-publish-instance-url-for-activationmanagerimpl-public-instance-activation-manager}
 
-請依照下列步驟，為公用執行個體啟用管理員定義發佈執行個體URL：
+按照以下步骤为公共实例激活管理器定义发布实例URL：
 
-1. 前往 *https://：&lt;authorhost>：&lt;authorport>/lc/system/console/configMgr*. 使用OSGi Management Console使用者憑證登入。 預設認證為admin/admin。
-1. 尋找並按一下 **[!UICONTROL 編輯]** 圖示加以存取 **[!UICONTROL com.adobe.livecycle.content.activate.impl.ActivationManagerImpl.name]** 設定。
-1. 在 **[!UICONTROL ActivationManager發佈URL]** 欄位中，指定用於存取發佈執行個體ActivationManager的URL。 您可以提供下列URL。
+1. 转到 *https://网站：&lt;authorhost>：&lt;authorport>/lc/system/console/configMgr*. 使用OSGi Management Console用户凭据登录。 默认凭据为admin/admin。
+1. 查找并单击 **[!UICONTROL 编辑]** 图标 **[!UICONTROL com.adobe.livecycle.content.activate.impl.ActivationManagerImpl.name]** 设置。
+1. 在 **[!UICONTROL ActivationManager发布URL]** 字段中，指定用于访问发布实例ActivationManager的URL。 您可以提供以下URL。
 
-   * **負載平衡器URL （建議使用）**：提供負載平衡器URL，如果您的Web伺服器在發佈伺服器陣列前充當負載平衡器（多個非叢集發佈執行個體）。
-   * **發佈執行個體URL**：提供任何發佈執行個體URL，如果您有單一發佈執行個體或位於發佈伺服器陣列前端的網頁伺服器，則由於任何限制，無法從製作環境存取。 如果指定的發佈執行個體發生問題，作者端會使用備援機制來處理。
-   * **URL字串**：
+   * **负载平衡器URL（推荐）**：提供负载均衡器URL，如果您将Web服务器用作发布场（多个非群集发布实例）前的负载均衡器。
+   * **发布实例URL**：提供任意发布实例URL，如果您只有一个发布实例，或者由于任何限制，无法从创作环境访问作为发布场前端的Web服务器。 如果指定的发布实例关闭，则创作端会有一个要处理的回退机制。
+   * **URL字符串**：
 
       `https://<hostname>:<port>:/libs/fd/fdm/content/crud/lc.content.remote.activate.activationManager`
 
 1. 单击“**[!UICONTROL 保存]**”。
 
-如需有關設定通訊管理的詳細資訊，請參閱 [通訊管理設定屬性](https://helpx.adobe.com/aem-forms/6-2/cm-configuration-properties.html).
+有关配置通信管理的详细信息，请参阅 [通信管理配置属性](https://helpx.adobe.com/aem-forms/6-2/cm-configuration-properties.html).

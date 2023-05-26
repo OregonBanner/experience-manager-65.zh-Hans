@@ -1,6 +1,6 @@
 ---
-title: 資產分析
-description: 瞭解Assets Insights功能如何讓您追蹤用於協力廠商網站、行銷活動和Adobe創意解決方案之影像的使用者評分和使用情況統計資料。
+title: 资产分析
+description: 了解Assets Insights功能如何让您跟踪第三方网站、营销活动和Adobe创意解决方案中使用的图像的用户评级和使用情况统计数据。
 contentOwner: AG
 role: User, Admin
 feature: Asset Insights,Asset Reports
@@ -13,49 +13,49 @@ ht-degree: 7%
 
 ---
 
-# 資產分析 {#asset-insights}
+# 资产分析 {#asset-insights}
 
-| 版本 | 文章連結 |
+| 版本 | 文章链接 |
 | -------- | ---------------------------- |
 | AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/assets-insights.html?lang=en) |
 | AEM 6.5 | 本文 |
 
-Assets Insights功能可讓您追蹤用於協力廠商網站、行銷活動和Adobe創意解決方案之影像的使用者評等和使用情況統計資料。 這有助於獲得有關其效能和人氣的深入分析。
+通过Assets Insights功能，您可以跟踪第三方网站、营销活动和Adobe创意解决方案中使用的图像的用户评级和使用情况统计数据。 这有助于获得有关其性能和人气的见解。
 
-[!DNL Assets] Insights會擷取使用者活動詳細資訊，例如影像的評分、點按和曝光次數（影像載入網站的次數）。 系統會根據這些統計資料，將分數指派給影像。 您可以使用分數和效能統計資料來選取要包含在目錄、行銷活動等中的熱門影像。 您甚至可以根據這些統計資料制定封存和授權更新政策。
+[!DNL Assets] 分析可捕获用户活动详细信息，例如对图像进行评级、点击的次数和展示次数（图像加载到网站上的次数）。 它根据这些统计信息为图像分配分数。 您可以使用分数和性能统计信息来选择热门图像，以将其包含在目录、营销活动等中。 您甚至可以根据这些统计数据制定存档和许可证更新策略。
 
-對象 [!DNL Assets] 深入分析若要從網站擷取影像的使用狀況統計資料，您必須在網站程式碼中包含影像的內嵌程式碼。
+对象 [!DNL Assets] 分析要从网站中捕获图像的使用情况统计数据，您必须在网站代码中包含该图像的嵌入代码。
 
-若要讓Assets Insights顯示資產的使用狀況統計資料，請先設定功能以從Adobe Analytics擷取報表資料。 如需詳細資訊，請參閱 [設定資產分析](/help/assets/configure-asset-insights.md). 若要在內部部署安裝中使用此功能，請購買 [!DNL Adobe Analytics] 另外授權。 客戶於 [!DNL Managed Services] 接收 [!DNL Analytics] 隨附的授權 [!DNL Experience Manager]. 另請參閱 [Managed Services產品說明](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html).
+要让Assets Insights显示资源的使用情况统计数据，请首先配置该功能以从Adobe Analytics获取报表数据。 有关详细信息，请参阅 [配置资产分析](/help/assets/configure-asset-insights.md). 要在内部部署安装中使用此功能，请购买 [!DNL Adobe Analytics] 单独许可。 客户位于 [!DNL Managed Services] 接收 [!DNL Analytics] 与捆绑在一起的许可证 [!DNL Experience Manager]. 参见 [Managed Services产品描述](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html).
 
 >[!NOTE]
 >
->僅支援並為影像提供深入分析。
+>仅支持并为图像提供见解。
 
-## 檢視影像的統計資料 {#viewing-statistics-for-an-image}
+## 查看图像的统计信息 {#viewing-statistics-for-an-image}
 
-您可以從中繼資料頁面檢視Assets Insights分數。
+您可以从元数据页面查看资产分析得分。
 
-1. 從 [!DNL Assets] 使用者介面(UI)，選取影像，然後按一下 **[!UICONTROL 屬性]** （從工具列）。
-1. 在「屬性」頁面中，按一下 **[!UICONTROL 深入分析]** 標籤。
-1. 在中檢閱資產的使用方式詳細資訊 **[!UICONTROL 深入分析]** 標籤。 此 **[!UICONTROL 分數]** 區段說明資產的資產使用總量和效能損失。
+1. 从 [!DNL Assets] 用户界面(UI)，选择图像，然后单击 **[!UICONTROL 属性]** 工具栏中。
+1. 在“属性”页面中，单击 **[!UICONTROL 分析]** 选项卡。
+1. 在中查看资产的使用情况详细信息 **[!UICONTROL 分析]** 选项卡。 此 **[!UICONTROL 分数]** 部分介绍了资源的总资源使用情况和性能损失。
 
-   使用分數說明資產在各種解決方案中的使用次數。
+   使用情况得分描述了资产在各种解决方案中的使用次数。
 
-   此 **[!UICONTROL 曝光次數]** score是資產在網站上載入的次數。 以下顯示的數字： **[!UICONTROL 點按次數]** 是資產的點按次數。
+   此 **[!UICONTROL 展示次数]** score是资产在网站上加载的次数。 下显示的编号 **[!UICONTROL 点击次数]** 是点击资源的次数。
 
-1. 檢閱 **[!UICONTROL 使用狀況統計資料]** 區段，以瞭解資產所屬的實體，以及最近使用過資產的創意解決方案。 使用量越高，該資產在使用者中受歡迎的可能性就越大。 使用情況資料會顯示在下列標題下：
+1. 查看 **[!UICONTROL 使用情况统计数据]** 部分，了解资产所属的实体以及最近使用它的创意解决方案。 使用率越高，该资产在用户中受欢迎的可能性就越大。 使用情况数据显示在以下标题下：
 
-   * **資產**：資產成為集合或複合資產一部分的次數
-   * **網頁與行動**：資產屬於網站和應用程式的次數
-   * **社交**：資產在解決方案(例如Adobe Social和Adobe Campaign)中的使用次數
-   * **電子郵件**：資產在電子郵件行銷活動中的使用次數
+   * **资产**：资产属于收藏集或复合资产的次数
+   * **Web和移动设备**：资产属于网站和应用程序的次数
+   * **Social**：资产在解决方案(如Adobe Social和Adobe Campaign)中的使用次数
+   * **电子邮件**：资产在电子邮件营销活动中的使用次数
 
    ![usage_statistics](assets/usage_statistics.png)
 
    >[!NOTE]
    >
-   >由於Assets Insights功能通常會定期從Adobe Analytics擷取解決方案資料，因此「解決方案」區段可能不會顯示最新資料。 資料顯示的時間長度取決於Assets Insights為擷取Analytics資料而執行的擷取作業排程。
+   >由于Assets Insights功能通常会定期从Adobe Analytics获取解决方案数据，因此“解决方案”部分可能不会显示最新数据。 显示数据的时间段取决于Assets Insights为检索Analytics数据而运行的提取操作的计划。
 
 1. 要以图形方式查看一段时间内资产的性能统计信息，请在&#x200B;**[!UICONTROL 性能统计信息]**&#x200B;部分中选择时间段。包括点击次数和印象在内的详细信息将显示为图形的趋势线。
 
@@ -63,27 +63,27 @@ Assets Insights功能可讓您追蹤用於協力廠商網站、行銷活動和Ad
 
    >[!NOTE]
    >
-   >與「解決方案」段落中的資料不同，「效能統計資料」段落會顯示最新的資料。
+   >与“解决方案”部分中的数据不同，“性能统计信息”部分显示最新的数据。
 
-1. 若要取得您包含在網站中資產的內嵌程式碼，以取得效能資料，請按一下 **[!UICONTROL 取得內嵌程式碼]** 在資產縮圖下方。 如需如何在協力廠商網頁中包含內嵌程式碼的詳細資訊，請參閱 [在網頁中使用頁面追蹤器和內嵌程式碼](/help/assets/use-page-tracker.md).
+1. 要获取包括在网站中的资产的嵌入代码以获取性能数据，请单击 **[!UICONTROL 获取嵌入代码]** 资产缩略图下方。 有关如何将嵌入代码包含在第三方网页中的更多信息，请参阅 [在网页中使用页面跟踪器和嵌入代码](/help/assets/use-page-tracker.md).
 
    ![chlimage_1-98](assets/chlimage_1-303.png)
 
-## 檢視影像的彙總統計資料 {#viewing-aggregate-statistics-for-images}
+## 查看图像的聚合统计信息 {#viewing-aggregate-statistics-for-images}
 
 您可以使用&#x200B;**[!UICONTROL 分析视图]**&#x200B;同时查看文件夹中所有资产的分数。
 
-1. 在 [!DNL Assets] 在使用者介面中，導覽至包含您要檢視其見解的資產的資料夾。
-1. 按一下工具列中的「配置」 ，然後選擇 **[!UICONTROL 深入分析檢視]**.
-1. 頁面會顯示資產的使用情況分數。 比較各種資產的評等並得出深入見解。
+1. 在 [!DNL Assets] 在用户界面中，导航到包含要查看其见解的资产的文件夹。
+1. 单击工具栏中的布局，然后选择 **[!UICONTROL 分析视图]**.
+1. 页面显示资产的使用情况分数。 比较各种资产的评级并得出见解。
 
-## 排程背景工作 {#scheduling-background-job}
+## 计划后台作业 {#scheduling-background-job}
 
-Assets Insights會定期從Adobe Analytics報表套裝擷取資產的使用情況資料。 根據預設，Assets Insights會在凌晨2:00每隔24小時執行背景工作以擷取資料。 不過，您可以透過設定 **[!UICONTROL Adobe CQ DAM資產效能報表同步工作]** Web控制檯的服務。
+Assets Insights会定期从Adobe Analytics报表包中获取资源的使用情况数据。 默认情况下，Assets Insights在凌晨2点每24小时运行一次获取数据的后台作业。 但是，您可以通过配置 **[!UICONTROL Adobe CQ DAM资产性能报表同步作业]** Web控制台中的服务。
 
-1. 按一下 [!DNL Experience Manager] 標誌，並前往 **[!UICONTROL 工具]** > **[!UICONTROL 作業]** > **[!UICONTROL 網頁主控台]**.
-1. 開啟 **[!UICONTROL Adobe CQ DAM資產效能報表同步工作]** 服務設定。
+1. 单击 [!DNL Experience Manager] 徽标，然后转到 **[!UICONTROL 工具]** > **[!UICONTROL 操作]** > **[!UICONTROL Web控制台]**.
+1. 打开 **[!UICONTROL Adobe CQ DAM资产性能报表同步作业]** 服务配置。
 
    ![chlimage_1-99](assets/chlimage_1-304.png)
 
-1. 在屬性排程器運算式中指定所需的排程器頻率和工作的開始時間。 保存更改。
+1. 在属性调度程序表达式中指定所需的调度程序频率和作业的开始时间。 保存更改。

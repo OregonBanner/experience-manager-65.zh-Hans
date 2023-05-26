@@ -1,7 +1,7 @@
 ---
-title: 伺服器端自訂
+title: 服务器端自定义
 seo-title: Server-side Customization
-description: 在AEM Communities中自訂伺服器端
+description: 在AEM Communities中自定义服务器端
 seo-description: Customizing server-side in AEM Communities
 uuid: 5e9bc6bf-69dc-414c-a4bd-74a104d7bd8f
 contentOwner: Guillaume Carlino
@@ -17,9 +17,9 @@ ht-degree: 0%
 
 ---
 
-# 伺服器端自訂 {#server-side-customization}
+# 服务器端自定义 {#server-side-customization}
 
-| **[⇐ Feature Essentials](essentials.md)** | **[使用者端自訂⇒](client-customize.md)** |
+| **[⇐ Feature Essentials](essentials.md)** | **[客户端自定义⇒](client-customize.md)** |
 |---|---|
 |  | **[SCF Handlebars Helpers ⇒](handlebars-helpers.md)** |
 
@@ -27,105 +27,105 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->從一個主要版本升級至下一個主要版本時，Communities API的套件位置可能會有所變更。
+>从一个主要版本升级到下一个主要版本时，Communities API的包位置可能会发生更改。
 
-### SocialComponent介面 {#socialcomponent-interface}
+### SocialComponent界面 {#socialcomponent-interface}
 
-SocialComponents是POJO，代表AEM Communities功能的資源。 理想情況下，每個SocialComponent代表特定的resourceType，其中包含公開的GETters，可提供資料給使用者端，以便準確表示資源。 所有商業邏輯和檢視邏輯都會封裝在SocialComponent中，包括網站訪客的工作階段資訊（如有必要）。
+SocialComponents是POJO，表示AEM Communities功能的资源。 理想情况下，每个SocialComponent都表示一个特定的resourceType，其中公开的GETter向客户端提供数据，以便准确表示资源。 所有业务逻辑和视图逻辑都封装在SocialComponent中，包括网站访客的会话信息（如有必要）。
 
-介面定義了一組代表資源所需的基本GETter。 重要的是，介面中指定了&lt;string object=&quot;&quot;> 為了呈現Handlebars範本和公開資源的GETJSON端點所必需的getAsMap()和String toJSONString()方法。
+该接口定义了表示资源所需的基本GETter集。 重要的是，界面中指定了&lt;string object=&quot;&quot;> 呈现Handlebars模板和公开资源的GETJSON端点所必需的getAsMap()和String toJSONString()方法。
 
-所有SocialComponent類別都必須實作介面 `com.adobe.cq.social.scf.SocialComponent`
+所有SocialComponent类都必须实现接口 `com.adobe.cq.social.scf.SocialComponent`
 
-### SocialCollectionComponent介面 {#socialcollectioncomponent-interface}
+### SocialCollectionComponent接口 {#socialcollectioncomponent-interface}
 
-SocialCollectionComponent介面可擴充SocialComponent介面，以便更妥善地表示屬於其他資源集合的資源。
+SocialCollectionComponent接口扩展了SocialComponent接口，以更好地表示作为其他资源集合的资源。
 
-所有SocialCollectionComponent類別都必須實作介面com.adobe.cq.social.scf.SocialCollectionComponent
+所有SocialCollectionComponent类都必须实现接口com.adobe.cq.social.scf.SocialCollectionComponent
 
-### SocialComponentFactory介面 {#socialcomponentfactory-interface}
+### SocialComponentFactory接口 {#socialcomponentfactory-interface}
 
-SocialComponentFactory （工廠）會向架構註冊SocialComponent。 工廠提供一種方法，讓架構知道哪些SocialComponents適用於指定的resourceType，以及識別多個SocialComponents時它們的優先順序排名。
+SocialComponentFactory（工厂）在框架中注册SocialComponent。 工厂提供了一种方法，让框架知道哪些SocialComponents可用于给定resourceType，以及标识多个SocialComponents时它们的优先级等级。
 
-SocialComponentFactory負責建立所選SocialComponent的執行個體，以便使用DI實務從工廠插入SocialComponent所需的所有相依性。
+SocialComponentFactory负责创建所选SocialComponent的实例，从而可以使用DI实践从工厂注入SocialComponent所需的所有依赖项。
 
-SocialComponentFactory是OSGi服務，可存取其他OSGi服務，這些服務可透過建構函式傳遞給SocialComponent。
+SocialComponentFactory是一种OSGi服务，有权访问可通过构造函数传递到SocialComponent的其他OSGi服务。
 
-所有SocialComponentFactory類別都必須實作介面 `com.adobe.cq.social.scf.SocialComponentFactory`
+所有SocialComponentFactory类都必须实现接口 `com.adobe.cq.social.scf.SocialComponentFactory`
 
-SocialComponentFactory.getPriority()方法的實作應傳回最高值，才能讓Factory用於getResourceType()傳回的指定resourceType。
+SocialComponentFactory.getPriority()方法的实现应返回最高值，以便工厂能够用于getResourceType()返回的给定resourceType。
 
-### SocialComponentFactoryManager介面 {#socialcomponentfactorymanager-interface}
+### SocialComponentFactoryManager接口 {#socialcomponentfactorymanager-interface}
 
-SocialComponentFactoryManager （管理員）會管理在架構中註冊的所有SocialComponents，並負責選取要用於指定資源(resourceType)的SocialComponentFactory。 如果沒有為特定resourceType註冊工廠，則管理員會傳回給定資源具有最近超級型別的工廠。
+SocialComponentFactoryManager（经理）管理在框架中注册的所有SocialComponent，并负责选择要用于给定资源(resourceType)的SocialComponentFactory。 如果没有为特定resourceType注册工厂，经理将返回给定资源具有最近超级类型的工厂。
 
-SocialComponentFactoryManager是OSGi服務，可存取其他OSGi服務，這些服務可透過建構函式傳遞給SocialComponent。
+SocialComponentFactoryManager是一种OSGi服务，有权访问可通过构造函数传递到SocialComponent的其他OSGi服务。
 
-透過叫用取得OSGi服務的控制代碼 `com.adobe.cq.social.scf.SocialComponentFactoryManager`
+通过调用OSGi服务获取句柄 `com.adobe.cq.social.scf.SocialComponentFactoryManager`
 
-### HTTP API -POST要求 {#http-api-post-requests}
+### HTTP API -POST请求 {#http-api-post-requests}
 
-#### PostOperation類別 {#postoperation-class}
+#### Postoperation类 {#postoperation-class}
 
-HTTP APIPOST端點是由實作 `SlingPostOperation` 介面（套件） `org.apache.sling.servlets.post`)。
+HTTP APIPOST端点是通过实现 `SlingPostOperation` 界面（包） `org.apache.sling.servlets.post`)。
 
-此 `PostOperation` 端點實作集 `sling.post.operation` 操作將回應的值。 所有POST要求中的：operation引數設定為該值，都將委派給此實作類別。
+此 `PostOperation` 端点实现集 `sling.post.operation` 操作将响应的值。 所有POST请求的：operation参数均设置为该值，都将委派给此实现类。
 
-此 `PostOperation` 叫用 `SocialOperation` 會執行作業所需的動作。
+此 `PostOperation` 调用 `SocialOperation` 执行操作所需的操作。
 
-此 `PostOperation` 接收來自的結果 `SocialOperation` 並傳回適當的回應給使用者端。
+此 `PostOperation` 从接收结果 `SocialOperation` 并将相应的响应返回给客户端。
 
-#### SocialOperation類別 {#socialoperation-class}
+#### SocialOperation类 {#socialoperation-class}
 
-每個 `SocialOperation` 端點延伸AbstractSocialOperation類別並覆寫方法 `performOperation()`. 此方法會執行完成作業所需的所有動作，並傳回 `SocialOperationResult` 否則會擲回 `OperationException`在這種情況下，會傳回包含訊息的HTTP錯誤狀態（如果可用），以取代一般JSON回應或成功HTTP狀態代碼。
+每个 `SocialOperation` 端点扩展AbstractSocialOperation类并覆盖方法 `performOperation()`. 此方法执行完成操作所需的所有操作并返回 `SocialOperationResult` 否则会掷回 `OperationException`在这种情况下，将返回包含消息（如果可用）的HTTP错误状态，以代替常规JSON响应或成功HTTP状态代码。
 
-延伸 `AbstractSocialOperation` 使得重複使用 `SocialComponents` 傳送JSON回應。
+扩展 `AbstractSocialOperation` 使重复使用 `SocialComponents` 以发送JSON响应。
 
-#### SocialOperationResult類別 {#socialoperationresult-class}
+#### SocialOperationResult类 {#socialoperationresult-class}
 
-此 `SocialOperationResult` 類別會傳回，作為 `SocialOperation` 並且由 `SocialComponent`、HTTP狀態碼和HTTP狀態訊息。
+此 `SocialOperationResult` 类作为 `SocialOperation` 并且由 `SocialComponent`、HTTP状态代码和HTTP状态消息。
 
-此 `SocialComponent` 代表受作業影響的資源。
+此 `SocialComponent` 表示受该操作影响的资源。
 
-對於「建立」作業， `SocialComponent` 包含在 `SocialOperationResult` 代表剛建立的資源，而針對「更新」作業，則代表作業變更的資源。 否 `SocialComponent` 針對「刪除」作業傳回。
+对于“创建”操作， `SocialComponent` 包含在 `SocialOperationResult` 表示刚刚创建的资源，对于“更新”操作，它表示该操作更改的资源。 否 `SocialComponent` 为删除操作返回。
 
-使用的成功HTTP狀態碼為：
+使用的成功HTTP状态代码包括：
 
-* 201 （建立作業）
-* 200 （更新作業）
-* 204 （刪除作業）
+* 201用于创建操作
+* 200（更新操作）
+* 204（删除操作）
 
-#### OperationException類別 {#operationexception-class}
+#### Operationexception类 {#operationexception-class}
 
-一個 `OperationExcepton` 執行作業時，如果要求無效或發生其他錯誤（例如內部錯誤、引數值錯誤、許可權不當等），可能會擲回。 一個 `OperationException` 由HTTP狀態代碼和錯誤訊息組成，這些會作為對 `PostOperatoin`.
+An `OperationExcepton` 如果请求无效或发生其他错误（例如内部错误、参数值错误、权限不正确等），则在执行操作时可能会抛出。 An `OperationException` 由HTTP状态代码和错误消息组成，将作为对 `PostOperatoin`.
 
-#### OperationService類別 {#operationservice-class}
+#### 操作服务类 {#operationservice-class}
 
-社交元件架構建議不要在內實作負責執行作業的商業邏輯， `SocialOperation` 類別，而是委派給OSGi服務。 將OSGi服務用於商業邏輯可允許 `SocialComponent`，由 `SocialOperation` 端點，以便與其他程式碼整合併套用不同的商業邏輯。
+社交组件框架建议不要在内实施负责执行操作的业务逻辑。 `SocialOperation` 类，而是委托给OSGi服务。 将OSGi服务用于业务逻辑允许 `SocialComponent`，由 `SocialOperation` 端点，与其他代码集成并应用不同的业务逻辑。
 
-全部 `OperationService` 類別擴充 `AbstractOperationService`，允許連結至正在執行之作業的其他擴充功能。 服務中的每個操作都由 `SocialOperation` 類別。 此 `OperationExtensions` 類別可在作業執行期間透過呼叫方法叫用
+全部 `OperationService` 类扩展 `AbstractOperationService`，从而允许附加扩展，这些扩展可以挂接到正在执行的操作。 服务中的每个操作都由 `SocialOperation` 类。 此 `OperationExtensions` 可以通过调用方法在执行操作期间调用类
 
 * `performBeforeActions()`
 
-   允許預先檢查/預先處理和驗證
+   允许预先检查/预处理和验证
 * `performAfterActions()`
 
-   允許進一步修改資源或叫用自訂事件、工作流程等
+   允许进一步修改资源或调用自定义事件、工作流等
 
-#### OperationExtension類別 {#operationextension-class}
+#### 操作扩展类 {#operationextension-class}
 
-`OperationExtension` 類別是可插入作業的自訂程式碼片段，允許根據業務需求自訂作業。 元件的消費者可以動態且逐步地將功能新增至元件。 擴充功能/掛接模式可讓開發人員專注於擴充功能本身，且無須複製及覆寫整個作業和元件。
+`OperationExtension` 类是可以插入到操作的自定义代码段，允许根据业务需求自定义操作。 组件的使用者可以动态地增量向组件添加功能。 扩展/挂接模式允许开发人员专门关注扩展本身，并且消除复制和覆盖整个操作和组件的需要。
 
-## 程式碼範例 {#sample-code}
+## 示例代码 {#sample-code}
 
-程式碼範例位於 [Adobe Marketing Cloud GitHub](https://github.com/Adobe-Marketing-Cloud) 存放庫。 搜尋前置詞為的專案 `aem-communities` 或 `aem-scf`.
+示例代码位于 [Adobe Marketing Cloud GitHub](https://github.com/Adobe-Marketing-Cloud) 存储库。 搜索带有以下前缀的项目： `aem-communities` 或 `aem-scf`.
 
 ## 最佳实践 {#best-practices}
 
-檢視 [編碼准則](code-guide.md) 區段以瞭解AEM Communities開發人員的各種編碼准則和最佳作法。
+查看 [编码准则](code-guide.md) 部分，了解面向AEM Communities开发人员的各种编码准则和最佳实践。
 
-另請參閱 [UGC的儲存資源提供者(SRP)](srp.md) 以瞭解如何存取使用者產生的內容。
+另请参阅 [适用于UGC的存储资源提供程序(SRP)](srp.md) 了解有关访问用户生成的内容的信息。
 
-| **[⇐ Feature Essentials](essentials.md)** | **[使用者端自訂⇒](client-customize.md)** |
+| **[⇐ Feature Essentials](essentials.md)** | **[客户端自定义⇒](client-customize.md)** |
 |---|---|
 |  | **[SCF Handlebars Helpers ⇒](handlebars-helpers.md)** |

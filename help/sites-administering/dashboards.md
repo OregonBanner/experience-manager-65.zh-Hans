@@ -1,7 +1,7 @@
 ---
 title: 功能板
 seo-title: Dashboards
-description: 瞭解如何建立、設定和開發新的AEM儀表板。
+description: 了解如何创建、配置和开发新的AEM功能板。
 seo-description: Learn how to create, configure and develop new AEM dashboards.
 uuid: 3eadbba2-0ce1-41be-a9f8-e6cafa109893
 contentOwner: Guillaume Carlino
@@ -19,178 +19,178 @@ ht-degree: 3%
 
 # 功能板{#dashboards}
 
-使用AEM時，您可以管理許多不同型別的內容（例如頁面、資產）。 AEM儀表板提供簡單易用且可自訂的方式，來定義顯示整合資料的頁面。
+在使用AEM时，您可以管理大量不同类型的内容（例如页面、资源）。 AEM功能板提供了一种易于使用且可自定义的方式，来定义显示合并数据的页面。
 
 >[!NOTE]
 >
->AEM控制面板是根據使用者建立的，因此使用者只能存取自己的控制面板。
+>AEM功能板是按用户创建的，因此用户只能访问自己的功能板。
 >
->不過， [儀表板範本](#creating-a-dashboard-template) 可用來共用一般設定和控制面板配置。
+>但是， [功能板模板](#creating-a-dashboard-template) 可用于共享通用配置和功能板布局。
 
 ![chlimage_1-22](assets/chlimage_1-22.jpeg)
 
-## 管理儀表板 {#administering-dashboards}
+## 管理功能板 {#administering-dashboards}
 
-### 建立控制面板 {#creating-a-dashboard}
+### 创建功能板 {#creating-a-dashboard}
 
-若要建立新的控制面板，請依照下列步驟進行：
+要创建新功能板，请按照以下步骤操作：
 
-1. 在 **工具** 區段，按一下 **設定主控台**.
-1. 在樹狀結構中，按兩下 **儀表板**.
-1. 按一下 **新儀表板**.
-1. 輸入 **標題** (例如：我的儀表板)和 **名稱**.
+1. 在 **工具** 部分，单击 **配置控制台**.
+1. 在树中，双击 **仪表板**.
+1. 单击 **新建仪表板**.
+1. 键入 **标题** (例如，我的信息板)和 **名称**.
 1. 单击&#x200B;**创建**。
 
-### 複製控制面板 {#cloning-a-dashboard}
+### 克隆功能板 {#cloning-a-dashboard}
 
-您可能想要有多個控制面板，以從不同檢視快速檢視有關您內容的資訊。 為協助您建立新儀表板，AEM提供複製功能，可用來複製現有儀表板。 若要複製控制面板，請依照下列步驟進行：
+您可能希望具有多个功能板，以便从不同视图快速查看有关您的内容的信息。 为了帮助您创建新功能板，AEM提供了一个克隆功能，您可以使用它来复制现有功能板。 要克隆功能板，请按照以下步骤操作：
 
-1. 在 **工具** 區段，按一下 **設定主控台**.
+1. 在 **工具** 部分，单击 **配置控制台**.
 
-1. 在樹狀結構中，按一下 **儀表板**.
-1. 按一下您要複製的控制面板。
+1. 在树中，单击 **仪表板**.
+1. 单击要克隆的功能板。
 
-1. 按一下 **原地複製**.
+1. 单击 **克隆**.
 
-1. 輸入 **名稱** 的新儀表板。
+1. 键入 **名称** 新仪表板的。
 
-### 移除控制面板 {#removing-a-dashboard}
+### 删除功能板 {#removing-a-dashboard}
 
-1. 在 **工具** 區段，按一下 **設定主控台**.
+1. 在 **工具** 部分，单击 **配置控制台**.
 
-1. 在樹狀結構中，按一下 **儀表板**.
-1. 按一下要刪除的控制面板。
+1. 在树中，单击 **仪表板**.
+1. 单击要删除的仪表板。
 
 1. 单击&#x200B;**删除**。
 
 1. 单击&#x200B;**是**&#x200B;以确认。
 
-## 儀表板元件 {#dashboard-components}
+## 功能板组件 {#dashboard-components}
 
 ### 概述 {#overview}
 
-儀表板元件只是一般元件 [AEM元件](/help/sites-developing/developing-components-samples.md). 本節說明AEM隨附的報告元件。
+功能板组件只是常规组件 [AEM组件](/help/sites-developing/developing-components-samples.md). 本节介绍AEM附带的报表组件。
 
-### 網站分析報表元件 {#web-analytics-reporting-components}
+### 网站分析报表组件 {#web-analytics-reporting-components}
 
-AEM隨附一組元件，可轉譯您的多個量度 [SiteCatalyst](/help/sites-administering/adobeanalytics.md) 資料。 這些元件列在Sidekick中的 **儀表板** 區段。
+AEM附带一组组件，这些组件渲染您的多个量度 [SiteCatalyst](/help/sites-administering/adobeanalytics.md) 数据。 这些组件在Sidekick中列在 **仪表板** 部分。
 
-每個報表元件至少提供三個標籤：
+每个报表组件至少提供三个选项卡：
 
-* **基本**：包含主要設定。
+* **基本**：包含主配置。
 
-* **報告：** 包含每個報表的特定設定。
-* **樣式**：包含樣式設定，例如圖表大小和邊界。
+* **报告：** 包含每个报表的特定配置。
+* **样式**：包含样式配置，如图表大小和边距。
 
-報表元件會以預設設定進行初始化，以協助您快速設定儀表板。
+报表组件使用默认配置进行初始化，可帮助您快速设置功能板。
 
-#### 基本設定 {#basic-configuration}
+#### 基本配置 {#basic-configuration}
 
-此 **基本** 索引標籤提供對下列設定專案的存取：
+此 **基本** 选项卡提供对以下配置条目的访问：
 
-**標題** 控制面板上顯示的標題。
+**标题** 仪表板上显示的标题。
 
-**請求型別** 要求資料的方式。
+**请求类型** 请求数据的方式。
 
-**SiteCatalyst設定（選擇性）** 您要用來連線至SiteCatalyst的設定。 若未提供，則會假設已在儀表板頁面（透過頁面屬性）上設定設定。
+**SiteCatalyst配置（可选）** 要用于连接到SiteCatalyst的配置。 如果未提供，则假定已在功能板页面（通过页面属性）上配置配置。
 
-**報表套裝ID （選用）** 您要用來產生圖表的SiteCatalyst報表套裝。
+**报表包ID（可选）** 要用于生成图形的SiteCatalyst报表包。
 
-#### 報告設定 {#report-configuration}
+#### 报告配置 {#report-configuration}
 
-若要顯示網頁統計資料，您必須定義要收集的資料日期範圍。 此 **報告** tab提供兩個欄位來定義該範圍。
+为了显示Web统计信息，您需要定义要编辑的数据的日期范围。 此 **报告** 选项卡提供了两个字段来定义该范围。
 
 >[!NOTE]
 >
->設定較大的日期範圍可能會降低儀表板的回應能力。
+>设置较大的日期范围可能会降低仪表板的响应能力。
 
-**起始日期** 擷取資料的絕對或相對日期。
+**起始日期** 从中获取数据的绝对或相对日期。
 
-**結束日期** 擷取資料的絕對或相對日期。
+**结束日期** 获取数据的绝对或相对日期。
 
-每個元件也會定義特定設定。
+每个组件还定义特定的设置。
 
 #### 超时报表 {#overtime-report}
 
 ![chlimage_1-26](assets/chlimage_1-26a.png)
 
-**日期詳細程度** X軸的時間單位（例如天、小時）。
+**日期粒度** X轴的时间单位（例如，天、小时）。
 
-**量度** 您要顯示的事件清單。
+**量度** 要显示的事件列表。
 
-**元素** 可劃分圖形中量度資料的元素清單。
+**元素** 划分图形中量度数据的元素列表。
 
 #### 排名列表报表 {#ranked-list-report}
 
 ![chlimage_1-27](assets/chlimage_1-27a.png)
 
-**元素** 劃分圖形中量度資料的元素。
+**元素** 在图形中划分量度数据的元素。
 
-**量度** 您要顯示的事件。
+**量度** 要显示的事件。
 
-**否. 排名最前的專案** 報表顯示的專案數。
+**否. 排名最前的项目** 报表显示的项目数。
 
 #### 排名报表 {#ranked-report}
 
 ![chlimage_1-28](assets/chlimage_1-28a.png)
 
-**量度** 您要顯示的事件。
+**量度** 要显示的事件。
 
-**元素** 劃分圖形中量度資料的元素。
+**元素** 在图形中划分量度数据的元素。
 
 #### 顶级网站区域报表 {#top-site-section-report}
 
-此元件會根據下列設定，顯示網站中造訪次數較多的區段的圖表。
+此组件显示一个图形，其中根据以下配置显示网站的访问次数最多的部分。
 
 ![chlimage_1-29](assets/chlimage_1-29a.png)
 
-**否. 排名最前的專案** 報表中顯示的區段數。
+**否. 排名最前的项目** 报告中显示的节数。
 
 #### 趋势报表 {#trended-report}
 
 ![chlimage_1-30](assets/chlimage_1-30a.png)
 
-**日期詳細程度** X軸的時間單位（例如天、小時）。
+**日期粒度** X轴的时间单位（例如，天、小时）。
 
-**量度** 您要顯示的事件。
+**量度** 要显示的事件。
 
-**元素** 劃分圖形中量度資料的元素。
+**元素** 在图形中划分量度数据的元素。
 
-## 延伸控制面板 {#extending-dashboard}
+## 扩展功能板 {#extending-dashboard}
 
 ### 概述 {#overview-1}
 
-儀表板是一般頁面( `cq:Page`)，因此任何元件都可用於組裝儀表板。
+功能板是普通页面( `cq:Page`)，因此可以使用任何组件来组装功能板。
 
-有一個預設元件群組 `Dashboard` 包含依預設在範本上啟用的analytics報表元件。
+有一个默认的组件组 `Dashboard` 包含默认在模板上启用的analytics报表组件。
 
-### 建立控制面板範本 {#creating-a-dashboard-template}
+### 创建功能板模板 {#creating-a-dashboard-template}
 
-範本會定義新控制面板的預設內容。 您可以使用數個範本來建立不同型別的儀表板。
+模板定义新功能板的默认内容。 您可以使用多个模板来创建不同类型的功能板。
 
-控制面板範本的建立方式與其他頁面範本相同，只是這些範本會儲存在 `/libs/cq/dashboards/templates/`. 請參閱 [建立Contentpage範本](/help/sites-developing/website.md#creating-the-contentpage-template) 區段。
+功能板模板与其他页面模板一样创建，只是它们存储在 `/libs/cq/dashboards/templates/`. 请参阅 [正在创建Contentpage模板](/help/sites-developing/website.md#creating-the-contentpage-template) 部分。
 
 >[!NOTE]
 >
->控制面板範本會在使用者之間共用。
+>仪表板模板在用户之间共享。
 
-### 開發儀表板元件 {#developing-a-dashboard-component}
+### 开发功能板组件 {#developing-a-dashboard-component}
 
-開發Dashboard元件包含建立一般AEM元件。 本節說明顯示前10名貢獻者的元件範例。
+开发功能板组件包括创建常规AEM组件。 此部分介绍了显示前10个贡献者的组件的示例。
 
 ![chlimage_1-31](assets/chlimage_1-31a.png)
 
-主要作者元件儲存在存放庫中，位於 `/apps/geometrixx-outdoors/components/reporting` 和由：
+顶级创作组件存储在存储库中的 `/apps/geometrixx-outdoors/components/reporting` 并由：
 
-1. a `jsp` 讀取jcr資料並定義 `html` 預留位置。
+1. a `jsp` 读取jcr数据并定义 `html` 占位符。
 
-1. 包含資料庫的使用者端資料庫 `js` 擷取資料並加以排序的檔案，然後填入 `html` 預留位置。
+1. 包含客户端库的客户端库 `js` 文件，用于获取和排序数据，然后填充 `html` 占位符。
 
 ![chlimage_1-32](assets/chlimage_1-32a.png)
 
-下列Javascript檔案定義於 `geout.reporting.topauthors` [使用者端資源庫](/help/sites-developing/clientlibs.md) 作為元件本身的子項。
+以下Javascript文件是在 `geout.reporting.topauthors` [客户端库](/help/sites-developing/clientlibs.md) 作为组件本身的子项。
 
-此 [Querybuilder](/help/sites-developing/querybuilder-api.md) 用於查詢要讀取的存放庫 `cq:AuditEvent` 節點。 查詢結果是JSON物件，系統會從中擷取作者貢獻。
+此 [Querybuilder](/help/sites-developing/querybuilder-api.md) 用于查询要读取的存储库 `cq:AuditEvent` 节点。 查询结果是一个JSON对象，从中可提取作者贡献。
 
 #### top_authors.js {#top-authors-js}
 
@@ -237,7 +237,7 @@ $.ajax({
 });
 ```
 
-此 `JSP` 包含兩者 `global.jsp` 和 `clientlib`.
+此 `JSP` 包括两者 `global.jsp` 和 `clientlib`.
 
 #### top_authors.jsp {#top-authors-jsp}
 

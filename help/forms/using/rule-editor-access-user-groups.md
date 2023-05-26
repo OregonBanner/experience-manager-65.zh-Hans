@@ -1,7 +1,7 @@
 ---
 title: 向选定的用户组授予对规则编辑器的访问权限
 seo-title: Grant rule editor access to select user groups
-description: 將限制存取權授與規則編輯器以選取使用者群組。
+description: 向选定的用户组授予对规则编辑器的受限访问权限。
 seo-description: Grant restricted access to rule editor to select user groups.
 uuid: efa2570a-20ac-4b43-8a0e-38247f84d02f
 content-type: reference
@@ -22,40 +22,40 @@ ht-degree: 6%
 
 ## 概述 {#overview}
 
-您可能有不同型別的使用者，且他們的各種技能都適用於Adaptive Forms。 雖然專家使用者可能擁有使用指令碼和複雜規則的正確知識，但可能有基本級使用者需要僅使用最適化表單的版面和基本屬性。
+您可能拥有具有不同技能的不同类型的用户，能够使用自适应Forms。 虽然专家用户可能拥有处理脚本和复杂规则的正确知识，但可能有基本级别的用户只需要处理自适应表单的布局和基本属性。
 
-AEM Forms可讓您根據使用者的角色或功能，限制使用者的規則編輯器存取權。 在最適化Forms組態服務設定中，您可以指定 [使用者群組](/help/sites-administering/security.md) 可檢視和存取規則編輯器的屬性。
+AEM Forms允许您根据用户的角色或职能限制用户访问规则编辑器。 在自适应Forms配置服务设置中，您可以指定 [用户组](/help/sites-administering/security.md) 可以查看和访问规则编辑器。
 
-## 指定可存取規則編輯器的使用者群組 {#specify-user-groups-that-can-access-rule-editor}
+## 指定可以访问规则编辑器的用户组 {#specify-user-groups-that-can-access-rule-editor}
 
-1. 以管理員身分登入AEM Forms。
-1. 在作者執行個體中，按一下 ![adobeexperiencemanager](assets/adobeexperiencemanager.png)Adobe Experience Manager >工具 ![槌子](assets/hammer.png) >作業> Web主控台。 Web主控台會在新視窗中開啟。
+1. 以管理员身份登录AEM Forms。
+1. 在创作实例中，单击 ![adobeexperiencemanager](assets/adobeexperiencemanager.png)Adobe Experience Manager >工具 ![锤子](assets/hammer.png) >操作> Web控制台。 Web控制台将在新窗口中打开。
 
    ![1-2](assets/1-2.png)
 
-1. 在Web主控台視窗中，找到並按一下 **[!UICONTROL 最適化表單和互動式通訊Web頻道設定]**. **[!UICONTROL 最適化表單和互動式通訊Web頻道設定]** 對話方塊隨即顯示。 不要變更任何值並按一下 **儲存**.
+1. 在Web控制台窗口中，找到并单击 **[!UICONTROL 自适应表单和交互式通信Web渠道配置]**. **[!UICONTROL 自适应表单和交互式通信Web渠道配置]** 对话框。 不更改任何值并单击 **保存**.
 
-   它會在CRX-repository中建立檔案/apps/system/config/com.adobe.aemds.guide.service.impl.AdaptiveFormConfigurationServiceImpl.config。
+   它在CRX-repository中创建文件/apps/system/config/com.adobe.aemds.guide.service.impl.AdaptiveFormConfigurationServiceImpl.config。
 
-1. 以管理員身分登入CRXDE。 開啟檔案/apps/system/config/com.adobe.aemds.guide.service.impl.AdaptiveFormConfigurationServiceImpl.config以進行編輯。
-1. 使用下列屬性來指定可存取規則編輯器的群組名稱（例如RuleEditorsUserGroup），然後按一下 **全部儲存**.
+1. 以管理员身份登录到CRXDE。 打开文件/apps/system/config/com.adobe.aemds.guide.service.impl.AdaptiveFormConfigurationServiceImpl.config进行编辑。
+1. 使用以下属性指定可以访问规则编辑器的组的名称（例如，RuleEditorsUserGroup），然后单击 **全部保存**.
 
    `af.ruleeditor.custom.groups=["RuleEditorsUserGroup"]`
 
-   若要啟用多個群組的存取權，請指定以逗號分隔的值清單：
+   要为多个组启用访问，请指定逗号分隔值的列表：
 
    `af.ruleeditor.custom.groups=["RuleEditorsUserGroup", "PermittedUserGroup"]`
 
    ![创建用户](assets/create_user_new.png)
 
-   現在，當不屬於指定使用者群組（此處為RuleEditorsUserGroup）的使用者點選欄位時，編輯規則圖示( ![edit-rules1](assets/edit-rules1.png))在元件工具列中無法使用：
+   现在，当不属于指定用户组（此处为RuleEditorsUserGroup）的用户点击字段时，编辑规则图标( ![edit-rules1](assets/edit-rules1.png))在组件工具栏中不可用：
 
    ![componentstoolbarwithre](assets/componentstoolbarwithre.png)
 
-   具有規則編輯器存取許可權的使用者看得見的元件工具列
+   对具有规则编辑器访问权限的用户可见的组件工具栏
 
    ![componentstoolbarwithoutre](assets/componentstoolbarwithoutre.png)
 
-   沒有規則編輯器存取權的使用者看得見的元件工具列
+   对没有规则编辑器访问权限的用户可见的组件工具栏
 
-   如需新增使用者至群組的指示，請參閱 [使用者管理與安全性](/help/sites-administering/security.md).
+   有关将用户添加到组的说明，请参阅 [用户管理和安全性](/help/sites-administering/security.md).

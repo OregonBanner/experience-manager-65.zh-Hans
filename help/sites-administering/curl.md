@@ -1,7 +1,7 @@
 ---
-title: 搭配AEM使用cURL
+title: 在AEM中使用cURL
 seo-title: Using cURL with AEM
-description: 瞭解如何搭配AEM使用cURL。
+description: 了解如何将cURL与AEM结合使用。
 seo-description: Learn how to use cURL with AEM.
 uuid: 771b9acc-ff3a-41c9-9fee-7e5d2183f311
 contentOwner: Silviu Raiman
@@ -17,142 +17,142 @@ ht-degree: 2%
 
 ---
 
-# 搭配AEM使用cURL{#using-curl-with-aem}
+# 在AEM中使用cURL{#using-curl-with-aem}
 
-管理員通常需要自動化或簡化任何系統內的常見工作。 例如，在AEM中，管理使用者、安裝套件和管理OSGi套件組合是通常必須完成的任務。
+管理员通常需要自动化或简化任何系统中的常见任务。 例如，在AEM中，管理用户、安装包和管理OSGi捆绑包是通常必须完成的任务。
 
-由於AEM建置所根據之Sling架構的RESTful性質，大部分工作都可透過URL呼叫來完成。 cURL可用來執行這類URL呼叫，可做為AEM管理員的實用工具。
+由于构建AEM所基于的Sling框架的RESTful性质，大多数任务可以通过URL调用完成。 cURL可用于执行此类URL调用，可以是AEM管理员的有用工具。
 
-## 什麼是cURL {#what-is-curl}
+## 什么是cURL {#what-is-curl}
 
-cURL是用來執行URL操作的開放原始碼命令列工具。 它支援廣泛的網際網路通訊協定，包括HTTP、HTTPS、FTP、FTPS、SCP、SFTP、TFTP、LDAP、DAP、DICT、TELNET、FILE、IMAP、POP3、SMTP和RTSP。
+cURL是用于执行URL操作的开源命令行工具。 它支持各种Internet协议，包括HTTP、HTTPS、FTP、FTPS、SCP、SFTP、TFTP、LDAP、DAP、DICT、TELNET、FILE、IMAP、POP3、SMTP和RTSP。
 
-cURL是建立良好且廣泛使用的工具，用於使用URL語法取得或傳送資料，最初於1997年發行。 名稱cURL原本的意思是「參閱URL」。
+cURL是一个成熟且广泛使用的工具，用于使用URL语法获取或发送数据，最初于1997年发布。 名称cURL最初表示“查看URL”。
 
-由於AEM建置所依據的Sling架構具有RESTful性質，因此大部分工作可以簡化為URL呼叫，而透過cURL執行。 [內容操控任務](/help/sites-administering/curl.md#common-content-manipulation-aem-curl-commands) 例如啟用頁面、開始工作流程以及 [作業任務](/help/sites-administering/curl.md#common-operational-aem-curl-commands) 例如套件管理及管理使用者等，都可以使用cURL來自動化。 此外，您可以 [建立您自己的cURL](/help/sites-administering/curl.md#building-a-curl-ready-aem-command) 適用於AEM中大部分工作的命令。
+由于AEM构建所基于的Sling框架的RESTful性质，大多数任务可以简化为URL调用，该调用可以使用cURL执行。 [内容操作任务](/help/sites-administering/curl.md#common-content-manipulation-aem-curl-commands) 例如激活页面、启动工作流以及 [运行任务](/help/sites-administering/curl.md#common-operational-aem-curl-commands) 例如包管理和管理用户可以使用cURL实现自动化。 此外，您还可以 [创建您自己的cURL](/help/sites-administering/curl.md#building-a-curl-ready-aem-command) 命令，用于AEM中的大多数任务。
 
 >[!NOTE]
 >
->透過cURL執行的任何AEM命令都必須像任何使用者一樣獲得AEM的授權。 使用cURL執行AEM命令時，會考量所有ACL和存取許可權。
+>通过cURL执行的任何AEM命令都必须像任何用户一样获得AEM授权。 使用cURL执行AEM命令时，会尊重所有ACL和访问权限。
 
-## 正在下載cURL {#downloading-curl}
+## 正在下载cURL {#downloading-curl}
 
-cURL是macOS的標準部分，並且有些Linux障礙。 不過，它適用於大多數的作業系統。 您可在以下網址找到最新下載內容： [https://curl.haxx.se/download.html](https://curl.haxx.se/download.html).
+cURL是macOS和一些Linux调试器的标准部分。 但是，它适用于大多数操作系统。 最新下载内容位于 [https://curl.haxx.se/download.html](https://curl.haxx.se/download.html).
 
-cURL的來源存放庫也可以在GitHub上找到。
+cURL的源存储库也可以在GitHub上找到。
 
-## 建置cURL就緒的AEM命令 {#building-a-curl-ready-aem-command}
+## 构建cURL就绪的AEM命令 {#building-a-curl-ready-aem-command}
 
-cURL命令可建置供AEM中的大部分作業使用，例如觸發工作流程、檢查OSGi設定、觸發JMX命令、建立復寫代理程式等。
+可以为AEM中的大多数操作构建cURL命令，例如触发工作流、检查OSGi配置、触发JMX命令、创建复制代理等等。
 
-若要尋找特定操作所需的確切命令，您必須在執行AEM命令時，使用瀏覽器中的開發人員工具來擷取對伺服器的POST呼叫。
+要找到特定操作所需的确切命令，您需要在执行AEM命令时使用浏览器中的开发人员工具来捕获对服务器的POST调用。
 
-以下步驟說明如何在Chrome瀏覽器中建立新頁面，以作為範例。
+以下步骤描述了如何在Chrome浏览器中创建新页面作为示例，来完成此操作。
 
-1. 準備您要在AEM中叫用的動作。 在此案例中，我們已將推進至 **建立頁面** 精靈，但尚未點按 **建立**.
+1. 准备要在AEM中调用的操作。 在本例中，我们一直推进到 **创建页面** 向导，但尚未单击 **创建**.
 
    ![chlimage_1-66](assets/chlimage_1-66a.png)
 
-1. 啟動開發人員工具並選取 **網路** 標籤。 按一下 **保留記錄** 選項。
+1. 启动开发人员工具并选择 **网络** 选项卡。 单击 **保留日志** 选项。
 
    ![chlimage_1-67](assets/chlimage_1-67a.png)
 
-1. 按一下 **建立** 在 **建立頁面** 精靈以實際建立工作流程。
-1. 以滑鼠右鍵按一下產生的POST動作，然後選取 **複製** -> **復製為cURL**.
+1. 单击 **创建** 在 **创建页面** 向导来实际创建工作流。
+1. 右键单击生成的POST操作并选择 **复制** -> **复制为cURL**.
 
    ![chlimage_1-68](assets/chlimage_1-68a.png)
 
-1. 將cURL命令複製到文字編輯器，並從命令中移除所有標題，其開頭為 `-H` （下圖以藍色顯示）並新增適當的驗證引數，例如 `-u <user>:<password>`.
+1. 将cURL命令复制到文本编辑器并从命令中删除所有标头，这些标头以 `-H` （下图以蓝色突出显示）并添加适当的身份验证参数，例如 `-u <user>:<password>`.
 
    ![chlimage_1-69](assets/chlimage_1-69a.png)
 
-1. 透過命令列執行cURL命令並檢視回應。
+1. 通过命令行执行cURL命令并查看响应。
 
    ![chlimage_1-70](assets/chlimage_1-70a.png)
 
 ## 常用操作AEM cURL命令 {#common-operational-aem-curl-commands}
 
-以下是常見管理和操作任務的AEM cURL命令清單。
+以下是常见管理和操作任务的AEM cURL命令列表。
 
 >[!NOTE]
 >
->以下範例假設AEM執行於 `localhost` 在連線埠上 `4502` 和使用使用者 `admin` 使用密碼 `admin`. 額外的命令預留位置會設定在尖括弧中。
+>以下示例假定正在运行AEM `localhost` 在端口 `4502` 和使用用户 `admin` 使用密码 `admin`. 其他命令占位符设置在尖括号中。
 
-### 封裝管理 {#package-management}
+### 包管理 {#package-management}
 
-#### 列出所有已安裝的套件
+#### 列出所有已安装的包
 
 ```shell
 curl -u <user>:<password> http://<host>:<port>/crx/packmgr/service.jsp?cmd=ls
 ```
 
-#### 建立套裝 {#create-a-package}
+#### 创建资源包 {#create-a-package}
 
 ```shell
 curl -u <user>:<password> -X POST http://localhost:4502/crx/packmgr/service/.json/etc/packages/mycontent.zip?cmd=create -d packageName=<name> -d groupName=<name>
 ```
 
-#### 預覽套件 {#preview-a-package}
+#### 预览包 {#preview-a-package}
 
 ```shell
 curl -u <user>:<password> -X POST http://localhost:4502/crx/packmgr/service/.json/etc/packages/mycontent.zip?cmd=preview
 ```
 
-#### 列出封裝內容 {#list-package-content}
+#### 列出包内容 {#list-package-content}
 
 ```shell
 curl -u <user>:<password> -X POST http://localhost:4502/crx/packmgr/service/console.html/etc/packages/mycontent.zip?cmd=contents
 ```
 
-#### 建置套件 {#build-a-package}
+#### 生成包 {#build-a-package}
 
 ```shell
 curl -X POST http://localhost:4502/crx/packmgr/service/.json/etc/packages/mycontent.zip?cmd=build
 ```
 
-#### 將封裝折行 {#rewrap-a-package}
+#### 将包换行 {#rewrap-a-package}
 
 ```shell
 curl -u <user>:<password> -X POST http://localhost:4502/crx/packmgr/service/.json/etc/packages/mycontent.zip?cmd=rewrap
 ```
 
-#### 重新命名套裝 {#rename-a-package}
+#### 重命名包 {#rename-a-package}
 
 ```shell
 curl -u <user>:<password> -X POST -Fname=<New Name> http://localhost:4502/etc/packages/<Group Name>/<Package Name>.zip/jcr:content/vlt:definition
 ```
 
-#### 上傳套裝 {#upload-a-package}
+#### 上传包 {#upload-a-package}
 
 ```shell
 curl -u <user>:<password> -F cmd=upload -F force=true -F package=@test.zip http://localhost:4502/crx/packmgr/service/.json
 ```
 
-#### 安裝套裝 {#install-a-package}
+#### 安装包 {#install-a-package}
 
 ```shell
 curl -u <user>:<password> -F cmd=install http://localhost:4502/crx/packmgr/service/.json/etc/packages/my_packages/test.zip
 ```
 
-#### 解除安裝套裝 {#uninstall-a-package}
+#### 卸载包 {#uninstall-a-package}
 
 ```shell
 curl -u <user>:<password> -F cmd=uninstall http://localhost:4502/crx/packmgr/service/.json/etc/packages/my_packages/test.zip
 ```
 
-#### 刪除套裝 {#delete-a-package}
+#### 删除资源包 {#delete-a-package}
 
 ```shell
 curl -u <user>:<password> -F cmd=delete http://localhost:4502/crx/packmgr/service/.json/etc/packages/my_packages/test.zip
 ```
 
-#### 下載套件 {#download-a-package}
+#### 下载包 {#download-a-package}
 
 ```shell
 curl -u <user>:<password> http://localhost:4502/etc/packages/my_packages/test.zip
 ```
 
-#### 復寫封裝 {#replicate-a-package}
+#### 复制包 {#replicate-a-package}
 
 ```shell
 curl -u <user>:<password> -X POST http://localhost:4502/crx/packmgr/service/.json/etc/packages/my_packages/test.zip?cmd=replicate
@@ -160,61 +160,61 @@ curl -u <user>:<password> -X POST http://localhost:4502/crx/packmgr/service/.jso
 
 ### 用户管理 {#user-management}
 
-#### 建立新使用者 {#create-a-new-user}
+#### 创建新用户 {#create-a-new-user}
 
 ```shell
 curl -u <user>:<password> -FcreateUser= -FauthorizableId=hashim -Frep:password=hashim http://localhost:4502/libs/granite/security/post/authorizables
 ```
 
-#### 建立新群組 {#create-a-new-group}
+#### 创建新组 {#create-a-new-group}
 
 ```shell
 curl -u <user>:<password> -FcreateGroup=group1 -FauthorizableId=testGroup1 http://localhost:4502/libs/granite/security/post/authorizables
 ```
 
-#### 將屬性新增至現有使用者 {#add-a-property-to-an-existing-user}
+#### 将属性添加到现有用户 {#add-a-property-to-an-existing-user}
 
 ```shell
 curl -u <user>:<password> -Fprofile/age=25 http://localhost:4502/home/users/h/hashim.rw.html
 ```
 
-#### 使用設定檔建立使用者 {#create-a-user-with-a-profile}
+#### 使用配置文件创建用户 {#create-a-user-with-a-profile}
 
 ```shell
 curl -u <user>:<password> -FcreateUser=testuser -FauthorizableId=hashimkhan -Frep:password=hashimkhan -Fprofile/gender=male http://localhost:4502/libs/granite/security/post/authorizables
 ```
 
-#### 建立新使用者作為群組成員 {#create-a-new-user-as-a-member-of-a-group}
+#### 创建新用户作为组成员 {#create-a-new-user-as-a-member-of-a-group}
 
 ```shell
 curl -u <user>:<password> -FcreateUser=testuser -FauthorizableId=testuser -Frep:password=abc123 -Fmembership=contributor http://localhost:4502/libs/granite/security/post/authorizables
 ```
 
-#### 新增使用者至群組 {#add-a-user-to-a-group}
+#### 将用户添加到组 {#add-a-user-to-a-group}
 
 ```shell
 curl -u <user>:<password> -FaddMembers=testuser1 http://localhost:4502/home/groups/t/testGroup.rw.html
 ```
 
-#### 從群組移除使用者 {#remove-a-user-from-a-group}
+#### 从组中删除用户 {#remove-a-user-from-a-group}
 
 ```shell
 curl -u <user>:<password> -FremoveMembers=testuser1 http://localhost:4502/home/groups/t/testGroup.rw.html
 ```
 
-#### 設定使用者的群組成員資格 {#set-a-user-s-group-membership}
+#### 设置用户的组成员资格 {#set-a-user-s-group-membership}
 
 ```shell
 curl -u <user>:<password> -Fmembership=contributor -Fmembership=testgroup http://localhost:4502/home/users/t/testuser.rw.html
 ```
 
-#### 刪除使用者 {#delete-a-user}
+#### 删除用户 {#delete-a-user}
 
 ```shell
 curl -u <user>:<password> -FdeleteAuthorizable= http://localhost:4502/home/users/t/testuser
 ```
 
-#### 刪除群組 {#delete-a-group}
+#### 删除组 {#delete-a-group}
 
 ```shell
 curl -u <user>:<password> -FdeleteAuthorizable= http://localhost:4502/home/groups/t/testGroup
@@ -222,17 +222,17 @@ curl -u <user>:<password> -FdeleteAuthorizable= http://localhost:4502/home/group
 
 ### 备份 {#backup}
 
-另請參閱 [備份與還原](/help/sites-administering/backup-and-restore.md#automating-aem-online-backup) 以取得詳細資訊。
+参见 [备份和恢复](/help/sites-administering/backup-and-restore.md#automating-aem-online-backup) 了解详细信息。
 
 ### osgi {#osgi}
 
-#### 啟動套件組合 {#starting-a-bundle}
+#### 启动捆绑包 {#starting-a-bundle}
 
 ```shell
 curl -u <user>:<password> -Faction=start http://localhost:4502/system/console/bundles/<bundle-name>
 ```
 
-#### 停止套件組合 {#stopping-a-bundle}
+#### 停止捆绑包 {#stopping-a-bundle}
 
 ```shell
 curl -u <user>:<password> -Faction=stop http://localhost:4502/system/console/bundles/<bundle-name>
@@ -240,13 +240,13 @@ curl -u <user>:<password> -Faction=stop http://localhost:4502/system/console/bun
 
 ### Dispatcher {#dispatcher}
 
-#### 使快取失效 {#invalidate-the-cache}
+#### 使缓存失效 {#invalidate-the-cache}
 
 ```shell
 curl -H "CQ-Action: Activate" -H "CQ-Handle: /content/test-site/" -H "CQ-Path: /content/test-site/" -H "Content-Length: 0" -H "Content-Type: application/octet-stream" http://localhost:4502/dispatcher/invalidate.cache
 ```
 
-#### 收回快取 {#evict-the-cache}
+#### 逐出缓存 {#evict-the-cache}
 
 ```shell
 curl -H "CQ-Action: Deactivate" -H "CQ-Handle: /content/test-site/" -H "CQ-Path: /content/test-site/" -H "Content-Length: 0" -H "Content-Type: application/octet-stream" http://localhost:4502/dispatcher/invalidate.cache
@@ -254,32 +254,32 @@ curl -H "CQ-Action: Deactivate" -H "CQ-Handle: /content/test-site/" -H "CQ-Path:
 
 ### 复制代理 {#replication-agent}
 
-#### 檢查代理程式的狀態 {#check-the-status-of-an-agent}
+#### 检查代理的状态 {#check-the-status-of-an-agent}
 
 ```shell
 curl -u <user>:<password> "http://localhost:4502/etc/replication/agents.author/publish/jcr:content.queue.json?agent=publish"
 http://localhost:4502/etc/replication/agents.author/publish/jcr:content.queue.json?agent=publish
 ```
 
-#### 刪除代理程式 {#delete-an-agent}
+#### 删除代理 {#delete-an-agent}
 
 ```shell
 curl -X DELETE http://localhost:4502/etc/replication/agents.author/replication99 -u <user>:<password>
 ```
 
-#### 建立代理程式 {#create-an-agent}
+#### 创建代理 {#create-an-agent}
 
 ```shell
 curl -u <user>:<password> -F "jcr:primaryType=cq:Page" -F "jcr:content/jcr:title=new-replication" -F "jcr:content/sling:resourceType=/libs/cq/replication/components/agent" -F "jcr:content/template=/libs/cq/replication/templates/agent" -F "jcr:content/transportUri=http://localhost:4503/bin/receive?sling:authRequestLogin=1" -F "jcr:content/transportUser=admin" -F "jcr:content/transportPassword={DES}8aadb625ced91ac483390ebc10640cdf"http://localhost:4502/etc/replication/agents.author/replication99
 ```
 
-#### 暫停代理程式 {#pause-an-agent}
+#### 暂停代理 {#pause-an-agent}
 
 ```shell
 curl -u <user>:<password> -F "cmd=pause" -F "name=publish"  http://localhost:4502/etc/replication/agents.author/publish/jcr:content.queue.json
 ```
 
-#### 清除代理程式佇列 {#clear-an-agent-queue}
+#### 清除代理队列 {#clear-an-agent-queue}
 
 ```shell
 curl -u <user>:<password> -F "cmd=clear" -F "name=publish"  http://localhost:4502/etc/replication/agents.author/publish/jcr:content.queue.json
@@ -287,59 +287,59 @@ curl -u <user>:<password> -F "cmd=clear" -F "name=publish"  http://localhost:450
 
 ### 社区 {#communities}
 
-#### 指派和撤銷徽章 {#assign-and-revoke-badges}
+#### 分配和撤销徽章 {#assign-and-revoke-badges}
 
-另請參閱 [社群評分和預算](/help/communities/implementing-scoring.md#assign-and-revoke-badges) 以取得詳細資訊。
+参见 [社区评分和徽章](/help/communities/implementing-scoring.md#assign-and-revoke-badges) 了解详细信息。
 
-另請參閱 [評分和徽章要點](/help/communities/configure-scoring.md#example-setup) 以取得詳細資訊。
+参见 [评分和徽章要点](/help/communities/configure-scoring.md#example-setup) 了解详细信息。
 
 #### MSRP重新索引 {#msrp-reindexing}
 
-另請參閱 [MSRP - MongoDB儲存資源提供者](/help/communities/msrp.md#running-msrp-reindex-tool-using-curl-command) 以取得詳細資訊。
+参见 [MSRP - MongoDB存储资源提供程序](/help/communities/msrp.md#running-msrp-reindex-tool-using-curl-command) 了解详细信息。
 
 ### 安全性 {#security}
 
-#### 啟用和停用CRX DE Lite {#enabling-and-disabling-crx-de-lite}
+#### 启用和禁用CRX DE Lite {#enabling-and-disabling-crx-de-lite}
 
-另請參閱 [在AEM中啟用CRXDE Lite](/help/sites-administering/enabling-crxde-lite.md) 以取得詳細資訊。
+参见 [在AEM中启用CRXDE Lite](/help/sites-administering/enabling-crxde-lite.md) 了解详细信息。
 
 ### 数据存储垃圾收集 {#data-store-garbage-collection}
 
-另請參閱 [資料存放區垃圾收集](/help/sites-administering/data-store-garbage-collection.md#automating-data-store-garbage-collection) 以取得詳細資訊。
+参见 [数据存储垃圾收集](/help/sites-administering/data-store-garbage-collection.md#automating-data-store-garbage-collection) 了解详细信息。
 
-### Analytics與Target整合 {#analytics-and-target-integration}
+### Analytics与Target集成 {#analytics-and-target-integration}
 
-另請參閱 [選擇使用Adobe Analytics和Adobe Target](/help/sites-administering/opt-in.md#configuring-the-setup-and-provisioning-via-script) 以取得詳細資訊。
+参见 [选择使用Adobe Analytics和Adobe Target](/help/sites-administering/opt-in.md#configuring-the-setup-and-provisioning-via-script) 了解详细信息。
 
-### 單一登入 {#single-sign-on}
+### 单点登录 {#single-sign-on}
 
-#### 傳送測試標題 {#send-test-header}
+#### 发送测试标头 {#send-test-header}
 
-另請參閱 [單一登入](/help/sites-deploying/single-sign-on.md) 以取得詳細資訊。
+参见 [单点登录](/help/sites-deploying/single-sign-on.md) 了解详细信息。
 
-## 常見的Content Manipulation AEM cURL命令 {#common-content-manipulation-aem-curl-commands}
+## 通用内容操作AEM cURL命令 {#common-content-manipulation-aem-curl-commands}
 
-以下是內容操控的AEM cURL命令清單。
+以下是用于内容操作的AEM cURL命令列表。
 
 >[!NOTE]
 >
->以下範例假設AEM執行於 `localhost` 在連線埠上 `4502` 和使用使用者 `admin` 使用密碼 `admin`. 額外的命令預留位置會設定在尖括弧中。
+>以下示例假定正在运行AEM `localhost` 在端口 `4502` 和使用用户 `admin` 使用密码 `admin`. 其他命令占位符设置在尖括号中。
 
-### 頁面管理 {#page-management}
+### 页面管理 {#page-management}
 
-#### 頁面啟用 {#page-activation}
+#### 页面激活 {#page-activation}
 
 ```shell
 curl -u <user>:<password> -X POST -F path="/content/path/to/page" -F cmd="activate" http://localhost:4502/bin/replicate.json
 ```
 
-#### 頁面停用 {#page-deactivation}
+#### 页面停用 {#page-deactivation}
 
 ```shell
 curl -u <user>:<password> -X POST -F path="/content/path/to/page" -F cmd="deactivate" http://localhost:4502/bin/replicate.json
 ```
 
-#### 樹啟動 {#tree-activation}
+#### 树激活 {#tree-activation}
 
 ```shell
 curl -u <user>:<password> -F cmd=activate -F ignoredeactivated=true -F onlymodified=true -F path=/content/geometrixx http://localhost:4502/etc/replication/treeactivation.html
@@ -365,52 +365,52 @@ curl -u <user>:<password> -F cmd=copyPage -F destParentPath=/path/to/destination
 
 ### 工作流 {#workflows}
 
-另請參閱 [以程式設計方式與工作流程互動](/help/sites-developing/workflows-program-interaction.md) 以取得詳細資訊。
+参见 [以编程方式与工作流交互](/help/sites-developing/workflows-program-interaction.md) 了解详细信息。
 
-### Sling內容 {#sling-content}
+### Sling内容 {#sling-content}
 
-#### 建立資料夾 {#create-a-folder}
+#### 创建文件夹 {#create-a-folder}
 
 ```shell
 curl -u <user>:<password> -F jcr:primaryType=sling:Folder http://localhost:4502/etc/test
 ```
 
-#### 刪除節點 {#delete-a-node}
+#### 删除节点 {#delete-a-node}
 
 ```shell
 curl -u <user>:<password> -F :operation=delete http://localhost:4502/etc/test/test.properties
 ```
 
-#### 移動節點 {#move-a-node}
+#### 移动节点 {#move-a-node}
 
 ```shell
 curl -u <user>:<password> -F":operation=move" -F":applyTo=/sourceurl"  -F":dest=/target/parenturl/" https://localhost:4502/content
 ```
 
-#### 複製節點 {#copy-a-node}
+#### 复制节点 {#copy-a-node}
 
 ```shell
 curl -u <user>:<password> -F":operation=copy" -F":applyTo=/sourceurl"  -F":dest=/target/parenturl/" https://localhost:4502/content
 ```
 
-#### 使用Sling PostServlet上傳檔案 {#upload-files-using-sling-postservlet}
+#### 使用Sling PostServlet上载文件 {#upload-files-using-sling-postservlet}
 
 ```shell
 curl -u <user>:<password> -F"*=@test.properties"  http://localhost:4502/etc/test
 ```
 
-#### 使用Sling PostServlet並指定節點名稱上傳檔案 {#upload-files-using-sling-postservlet-and-specifying-node-name}
+#### 使用Sling PostServlet并指定节点名称上载文件 {#upload-files-using-sling-postservlet-and-specifying-node-name}
 
 ```shell
 curl -u <user>:<password> -F"test2.properties=@test.properties"  http://localhost:4502/etc/test
 ```
 
-#### 上載指定內容型別的檔案 {#upload-files-specifying-a-content-type}
+#### 上载文件指定内容类型 {#upload-files-specifying-a-content-type}
 
 ```shell
 curl -u <user>:<password> -F "*=@test.properties;type=text/plain" http://localhost:4502/etc/test
 ```
 
-### 資產操控 {#asset-manipulation}
+### 资产操作 {#asset-manipulation}
 
-另請參閱 [Assets HTTP API](/help/assets/mac-api-assets.md) 以取得詳細資訊。
+参见 [资源HTTP API](/help/assets/mac-api-assets.md) 了解详细信息。

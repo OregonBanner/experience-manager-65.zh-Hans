@@ -1,7 +1,7 @@
 ---
-title: XMP公用程式服務Java APIQuick啟動(SOAP)
+title: XMP实用程序服务Java APIQuick Start(SOAP)
 seo-title: XMP Utilities Service Java APIQuick Start(SOAP)
-description: 使用XMP Utilities服務匯出和匯入XMP中繼資料。
+description: 使用XMP Utilities服务导出和导入XMP元数据。
 seo-description: Use the XMP Utilities service to export and import XMP metadata.
 uuid: 5db4c623-75db-4a34-9ad2-3c917619e296
 contentOwner: admin
@@ -18,23 +18,23 @@ ht-degree: 0%
 
 ---
 
-# XMP公用程式服務Java API快速入門(SOAP) {#xmp-utilities-service-java-apiquick-start-soap}
+# XMP实用程序服务Java API快速入门(SOAP) {#xmp-utilities-service-java-apiquick-start-soap}
 
-下列「快速啟動」適用於「XMP公用程式」服務。
+以下快速启动适用于XMP Utilities服务。
 
-[快速入門（SOAP模式）：使用Java API匯出XMP中繼資料](xmp-utilities-service-java-api.md#quick-start-soap-mode-exporting-xmp-metadata-using-the-java-api)
+[快速入门（SOAP模式）：使用Java API导出XMP元数据](xmp-utilities-service-java-api.md#quick-start-soap-mode-exporting-xmp-metadata-using-the-java-api)
 
-[快速入門（SOAP模式）：使用Java API匯入XMP中繼資料](xmp-utilities-service-java-api.md#quick-start-soap-mode-importing-xmp-metadata-using-the-java-api)
+[快速入门（SOAP模式）：使用Java API导入XMP元数据](xmp-utilities-service-java-api.md#quick-start-soap-mode-importing-xmp-metadata-using-the-java-api)
 
-AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定為SOAP。
+AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应设置为SOAP。
 
 >[!NOTE]
 >
->若您使用其他作業系統（例如UNIX），以Forms伺服器為基礎，使用AEM Forms程式設計中的快速入門功能會以適用作業系統支援的路徑取代Windows特定路徑。 同樣地，如果您使用其他J2EE應用程式伺服器，請務必指定有效的連線屬性。 另請參閱 [設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>如果使用UNIX等其他操作系统，则位于“使用AEM进行编程”表单中的快速启动基于Forms服务器，并将特定于Windows的路径替换为适用操作系统支持的路径。 同样，如果您使用的是其他J2EE应用程序服务器，请确保指定有效的连接属性。 参见 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
-## 快速入門（SOAP模式）：使用Java API匯出XMP中繼資料 {#quick-start-soap-mode-exporting-xmp-metadata-using-the-java-api}
+## 快速入门（SOAP模式）：使用Java API导出XMP元数据 {#quick-start-soap-mode-exporting-xmp-metadata-using-the-java-api}
 
-下列程式碼範例會擷取、檢查並儲存XMP中繼資料。 (請參閱 [從PDF檔案匯出中繼資料](/help/forms/developing/xmp-utilities.md#exporting-metadata-from-pdf-documents).)
+以下代码示例可检索、检查和保存XMP元数据。 (请参阅 [从PDF文档导出元数据](/help/forms/developing/xmp-utilities.md#exporting-metadata-from-pdf-documents).)
 
 ```java
  /*
@@ -137,9 +137,9 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
  
 ```
 
-## 快速入門（SOAP模式）：使用Java API匯入XMP中繼資料 {#quick-start-soap-mode-importing-xmp-metadata-using-the-java-api}
+## 快速入门（SOAP模式）：使用Java API导入XMP元数据 {#quick-start-soap-mode-importing-xmp-metadata-using-the-java-api}
 
-下列程式碼範例會匯入XMP中繼資料，並將新的PDF檔案儲存至磁碟。 PDF檔案是以名為Loan.pdf的PDF檔案為基礎。 包含要匯入至PDF檔案之中繼資料的XML檔案，是以名為的XML檔案為基礎 *LoanMetaData.xml*. 如需有關此XML檔案的資訊，請參閱 [將中繼資料匯入PDF檔案](/help/forms/developing/xmp-utilities.md#importing-metadata-into-pdf-documents).
+以下代码示例导入XMP元数据并将新的PDF文件保存到磁盘。 PDF文档基于名为Loan.pdf的PDF文件。 包含要导入到PDF文档中的元数据的XML文档基于名为的XML文件 *LoanMetaData.xml*. 有关此XML文件的信息，请参见 [将元数据导入PDF文档](/help/forms/developing/xmp-utilities.md#importing-metadata-into-pdf-documents).
 
 ```java
  /*

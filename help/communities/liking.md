@@ -1,7 +1,7 @@
 ---
-title: 使用連結
+title: 使用点赞
 seo-title: Using Liking
-description: 新增和設定連結元件
+description: 添加和配置链接组件
 seo-description: Adding and configuring the Liking component
 uuid: 12103ab7-1a1c-49cd-8dad-6c7508b4550e
 contentOwner: msm-service
@@ -17,56 +17,56 @@ ht-degree: 5%
 
 ---
 
-# 使用連結 {#using-liking}
+# 使用点赞 {#using-liking}
 
-此 `Liking` 元件是實用工具，可讓使用者對特定內容發表意見，例如論壇中的評論。 使用 `Liking` 元件時，成員會選取心形圖示來表示正面意見。
+此 `Liking` 组件是一种非常有用的工具，它允许用户表达对特定内容（如论坛中的评论）的意见。 使用 `Liking` 组件时，成员选择心形图标以指示正面意见。
 
-## 新增連結至頁面 {#adding-liking-to-a-page}
+## 向页面添加点赞 {#adding-liking-to-a-page}
 
-若要新增 `Liking` 元件至作者模式下的頁面，請使用元件瀏覽器來尋找
+添加 `Liking` 组件添加到创作模式下的页面，请使用组件浏览器来查找
 
 * `Communities / Liking`
 
-並將其拖曳至頁面上某個位置，例如使用者喜歡的相對於該功能的位置。
+并将其拖动到页面上的适当位置，例如用户喜欢的相对于该功能的位置。
 
-如需必要資訊，請造訪 [Communities元件基本知識](basics.md).
+有关必要信息，请访问 [社区组件基础知识](basics.md).
 
-當 [必要的使用者端程式庫](essentials-liking.md#essentials-for-client-side) 包含，這就是 `Liking` 元件隨即出現。
+当 [所需的客户端库](essentials-liking.md#essentials-for-client-side) 包括，这就是 `Liking` 组件随即出现。
 
 ![liking-component](assets/liking-component.png)
 
-## 設定連結 {#configuring-liking}
+## 配置点赞 {#configuring-liking}
 
-選取已放置的 `Liking` 元件以存取及選取 `Configure` 圖示來開啟「編輯」對話方塊。
+选择已放置的 `Liking` 组件以访问和选择 `Configure` 图标，打开“编辑”对话框。
 
 ![configure-new](assets/configure-new.png)
 
-在 **[!UICONTROL 文字和標籤]** 索引標籤中，指定用來記錄「讚」的屬性。
+在 **[!UICONTROL 文本和标签]** 选项卡，指定用于记录“赞”的属性。
 
 ![configure-liking](assets/configure-liking.png)
 
 * **[!UICONTROL 正面响应标签]**
 
-   (*必填*)正面回應的屬性名稱。
+   (*必需*)积极响应的属性名称。
 
 * **[!UICONTROL 负面响应标签]**
 
-   (*必填*)負面回應的屬性名稱。
+   (*必需*)负响应的属性名称。
 
 * **[!UICONTROL 标签名称]**
 
-   (*必填*)此投票元件例項的內部可識別屬性名稱。
+   (*必需*)投票组件的此实例的内部可识别属性名称。
 
-## 網站訪客體驗 {#site-visitor-experience}
+## 网站访客体验 {#site-visitor-experience}
 
 ### 成员 {#members}
 
-成員可隨時變更其喜好。
+成员可随时更改其喜好。
 
 ### 匿名 {#anonymous}
 
-不支援匿名連結。 網站訪客必須註冊（成為會員）並登入才能參與點讚。
+不支持匿名点赞。 网站访客必须注册（成为会员）并登录才能参与点赞。
 
 ## 附加信息 {#additional-information}
 
-如需詳細資訊，請參閱 [按一下Essentials](essentials-liking.md) 適用於開發人員的頁面。
+欲知更多信息，请访问 [点赞Essentials](essentials-liking.md) 适用于开发人员的页面。

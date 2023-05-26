@@ -1,6 +1,6 @@
 ---
-title: 管理數位資產的中繼資料
-description: 瞭解中繼資料的型別以及如何管理資產的中繼資料，以輕鬆組織和處理資產。
+title: 管理数字资源的元数据
+description: 了解元数据的类型以及如何管理资源的元数据以轻松组织和处理资源。
 contentOwner: AG
 mini-toc-levels: 1
 feature: Tagging, Metadata
@@ -14,9 +14,9 @@ ht-degree: 11%
 
 ---
 
-# 管理數位資產的中繼資料 {#managing-metadata-for-digital-assets}
+# 管理数字资源的元数据 {#managing-metadata-for-digital-assets}
 
-| 版本 | 文章連結 |
+| 版本 | 文章链接 |
 | -------- | ---------------------------- |
 | AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/manage-metadata.html?lang=en) |
 | AEM 6.5 | 本文 |
@@ -27,178 +27,178 @@ ht-degree: 11%
 * metadata-config.md: New article. Contains all configuration and administration how-to info related to metadata of assets.
 -->
 
-[!DNL Adobe Experience Manager Assets] 保留每個資產的中繼資料。 它可讓您更輕鬆地分類及組織資產，並協助尋找特定資產的人。 能夠自上傳至的檔案擷取中繼資料 [!DNL Experience Manager Assets]，中繼資料管理與創意工作流程整合。 有了使用資產保留和管理中繼資料的功能，您可以根據資產的中繼資料自動組織和處理資產。
+[!DNL Adobe Experience Manager Assets] 保留每个资源的元数据。 它允许更轻松地分类和组织资产，并且有助于寻找特定资产的人员。 能够从上传到的文件中提取元数据 [!DNL Experience Manager Assets]，元数据管理与创作工作流集成。 利用使用资源保留和管理元数据的功能，您可以根据资源的元数据自动组织和处理资源。
 
-## 中繼資料及其來源 {#how-to-edit-or-add-metadata}
+## 元数据及其来源 {#how-to-edit-or-add-metadata}
 
-中繼資料是可搜尋資產的其他相關資訊。 它會新增至資產和中 [!DNL Experience Manager] 會在您上傳資產時加以處理。 您可以編輯現有的中繼資料，將新的中繼資料屬性新增到現有欄位。 組織需要受控且可靠的中繼資料辭彙。 因此 [!DNL Experience Manager Assets] 不允許隨選新增新的中繼資料屬性。 只有管理員和開發人員可以新增包含中繼資料的新屬性或欄位。 使用者可以使用中繼資料填入現有欄位。
+元数据是可搜索资产的其他信息。 它会被添加到资源和 [!DNL Experience Manager] 上传资源时会处理该资源。 您可以编辑现有元数据，将新的元数据属性添加到现有字段。 组织需要受控且可靠的元数据词汇。 因此 [!DNL Experience Manager Assets] 不允许按需添加新元数据属性。 只有管理员和开发人员可以添加包含元数据的新属性或字段。 用户可以使用元数据填充现有字段。
 
-下列方法可用於將中繼資料新增至數位資產：
+以下方法可用于向数字资源添加元数据：
 
-* 首先，建立資產的原生應用程式會新增一些中繼資料。 例如， [Acrobat新增一些中繼資料](https://helpx.adobe.com/acrobat/using/pdf-properties-metadata.html) 若要PDF檔案或相機，會將一些基本中繼資料新增至像片。 產生資產時，您可以在原生應用程式本身中新增中繼資料。 例如，您可以 [在Adobe Lightroom中新增IPTC中繼資料](https://helpx.adobe.com/lightroom-classic/help/metadata-basics-actions.html).
+* 首先，创建资产的本机应用程序向其添加一些元数据。 例如， [Acrobat添加了一些元数据](https://helpx.adobe.com/acrobat/using/pdf-properties-metadata.html) 要PDF文件或相机，可将一些基本元数据添加到照片中。 在生成资源时，您可以在本机应用程序本身中添加元数据。 例如，您可以 [在Adobe Lightroom中添加IPTC元数据](https://helpx.adobe.com/lightroom-classic/help/metadata-basics-actions.html).
 
-* 將資產上傳到之前 [!DNL Experience Manager]，您可使用建立資產所需的原生應用程式，或使用其他中繼資料編輯應用程式，編輯及修改中繼資料。 上傳資產至Experience Manager時，系統會處理中繼資料。 例如，瞭解如何 [在中處理中繼資料 [!DNL Adobe Bridge]](https://helpx.adobe.com/bridge/user-guide.html/bridge/using/metadata-adobe-bridge.ug.html) 並檢視 [標籤面板 [!DNL Adobe Bridge]](https://exchange.adobe.com/creativecloud.details.20009.aem-tags-panel-for-bridge-cc.html) 在 [!DNL Adobe Exchange].
+* 在将资产上传到之前 [!DNL Experience Manager]中，您可以使用用于创建资源的本机应用程序或某些其他元数据编辑应用程序来编辑和修改元数据。 将资源上传到Experience Manager时，将处理元数据。 例如，请参阅如何 [在中处理元数据 [!DNL Adobe Bridge]](https://helpx.adobe.com/bridge/user-guide.html/bridge/using/metadata-adobe-bridge.ug.html) 并查看 [标签面板 [!DNL Adobe Bridge]](https://exchange.adobe.com/creativecloud.details.20009.aem-tags-panel-for-bridge-cc.html) 在 [!DNL Adobe Exchange].
 
-* 在 [!DNL Experience Manager Assets]中，您可以手動新增或編輯資產的中繼資料 [!UICONTROL 屬性] 頁面。
+* In [!DNL Experience Manager Assets]中，您可以手动添加或编辑资源的元数据 [!UICONTROL 属性] 页面。
 
-* 您可以善用 [中繼資料設定檔](/help/assets/metadata-config.md#metadata-profiles) 的功能 [!DNL Experience Manager Assets] ，以在資產上傳至DAM時自動新增中繼資料。
+* 您可以利用 [元数据配置文件](/help/assets/metadata-config.md#metadata-profiles) 的功能 [!DNL Experience Manager Assets] 以将资产上传到DAM时自动添加元数据。
 
-## 在中新增或編輯中繼資料 [!DNL Experience Manager Assets] {#add-edit-metadata}
+## 在中添加或编辑元数据 [!DNL Experience Manager Assets] {#add-edit-metadata}
 
-若要編輯中資產的中繼資料 [!DNL Assets] 請依照下列步驟操作：
+在中编辑资源的元数据 [!DNL Assets] 用户界面，请按照以下步骤操作：
 
 1. 执行下列操作之一：
 
-   * 從 [!DNL Assets] 介面，選取資產並按一下 **[!UICONTROL 檢視屬性]** （從工具列）。
-   * 從資產縮圖中，選取 **[!UICONTROL 檢視屬性]** 快速動作。
-   * 在資產頁面中，按一下 **[!UICONTROL 檢視屬性]** ![資產資訊圖示](assets/do-not-localize/info-circle-icon.png) （從工具列）。
+   * 从 [!DNL Assets] 界面中，选择资源并单击 **[!UICONTROL 查看属性]** 工具栏中。
+   * 从资源缩略图中，选择 **[!UICONTROL 查看属性]** 快速操作。
+   * 在资源页面中，单击 **[!UICONTROL 查看属性]** ![资源信息图标](assets/do-not-localize/info-circle-icon.png) 工具栏中。
 
-   資產頁面會顯示所有資產的中繼資料。 中繼資料會在資產上傳（擷取）至時擷取 [!DNL Experience Manager].
+   资源页面显示资源的所有元数据。 将资产上传（引入）到时提取元数据 [!DNL Experience Manager].
 
-   ![選取資產的屬性以檢視其中繼資料](assets/asset-metadata.png)
+   ![选择资源的属性以查看其元数据](assets/asset-metadata.png)
 
-   *圖：在資產上編輯或新增中繼資料 [!UICONTROL 屬性] 頁面。*
+   *图：在资源上编辑或添加元数据 [!UICONTROL 属性] 页面。*
 
-1. 視需要對各種標籤下的中繼資料進行編輯，在完成時，按一下 **[!UICONTROL 儲存]** 以儲存變更。 按一下 **[!UICONTROL 關閉]** 以返回 [!DNL Assets] 網頁介面。
+1. 根据需要，在各个选项卡下对元数据进行编辑，完成后，单击 **[!UICONTROL 保存]** 以保存更改。 单击 **[!UICONTROL 关闭]** 以返回 [!DNL Assets] Web界面。
 
    >[!NOTE]
    >
-   >如果文字欄位為空，則沒有現有的中繼資料集。 您可以在欄位中輸入值，並儲存以新增該中繼資料屬性。
+   >如果文本字段为空，则不存在现有的元数据集。 您可以在字段中输入值并将其保存以添加该元数据属性。
 
-對資產中繼資料所做的任何變更，都會當作其XMP資料的一部分，回寫至原始二進位檔。 中繼資料回寫工作流程會將中繼資料新增至原始二進位。 對現有屬性進行的變更(例如 `dc:title`)被覆寫且新屬性(包括自訂屬性，例如 `cq:tags`)以結構描述新增。
+对资源元数据所做的任何更改都将作为其XMP数据的一部分写回原始二进制文件。 元数据回写工作流将元数据添加到原始二进制文件。 对现有属性进行的更改(例如 `dc:title`)被覆盖并且新属性(包括自定义属性，如 `cq:tags`)和架构一起添加。
 
-如中所述，XMP回寫功能可支援並啟用平台和檔案格式。 [技術需求。](/help/sites-deploying/technical-requirements.md)
+中所述的平台和文件格式支持并启用了XMP回写 [技术要求。](/help/sites-deploying/technical-requirements.md)
 
-## 編輯多個資產的中繼資料屬性 {#editing-metadata-properties-of-multiple-assets}
+## 编辑多个资源的元数据属性 {#editing-metadata-properties-of-multiple-assets}
 
-[!DNL Adobe Enterprise Manager Assets] 可讓您同時編輯多個資產的中繼資料，以便快速將常見的中繼資料變更大量傳播至資產。 您也可以大量編輯多個集合的中繼資料。 您可以在「特性」頁面對多個資產或集合執行中繼資料變更：
+[!DNL Adobe Enterprise Manager Assets] 允许您同时编辑多个资源的元数据，以便快速将常见的元数据更改批量传播到资源。 您还可以批量编辑多个收藏集的元数据。 使用“属性”页可对多个资源或收藏集执行元数据更改：
 
-* 將中繼資料屬性變更為通用值
-* 新增或修改標籤
+* 将元数据属性更改为通用值
+* 添加或修改标记
 
-若要自訂中繼資料屬性頁面，包括新增、修改、刪除中繼資料屬性，請使用 [結構描述編輯器](metadata-config.md#folder-metadata-schema).
+要自定义元数据属性页面（包括添加、修改和删除元数据属性），请使用 [架构编辑器](metadata-config.md#folder-metadata-schema).
 
 >[!NOTE]
 >
->大量編輯方法適用於資料夾或集合中可用的資產。 對於跨資料夾可用的資產或符合共同條件的資產，可以 [搜尋後大量更新中繼資料](search-assets.md#metadataupdates).
+>批量编辑方法适用于文件夹或收藏集中可用的资产。 对于跨文件夹可用的资源或符合通用条件的资源，可以 [搜索后批量更新元数据](search-assets.md#metadataupdates).
 
-1. 在 [!DNL Assets] 使用者介面，導覽至您要編輯的資產位置。
-1. 選取您要編輯其一般屬性的資產。
-1. 在工具列中按一下 **[!UICONTROL 屬性]** 以開啟所選資產的屬性頁面。
-1. 修改各種標籤下所選資產的中繼資料屬性。
-1. 若要檢視特定資產的中繼資料，請取消選取清單中剩餘的資產。 如果您取消選取 [!UICONTROL 屬性] 頁面，此類資產的中繼資料不會更新。
-1. 若要為資產選取不同的中繼資料結構，請按一下 **[!UICONTROL 設定]** 從工具列中，並選取結構描述。 单击“**[!UICONTROL 保存并关闭]**”。
-1. 要将新元数据与现有元数据追加到包含多个值的字段中，请选择&#x200B;**[!UICONTROL 追加模式]**。如果不选中此选项，则新元数据将替换字段中的现有元数据。按一下 **[!UICONTROL 提交]**.
+1. 在 [!DNL Assets] 用户界面中，导航到要编辑的资源的位置。
+1. 选择要编辑其公共属性的资源。
+1. 在工具栏中，单击 **[!UICONTROL 属性]** 以打开选定资产的属性页面。
+1. 在各种选项卡下修改所选资源的元数据属性。
+1. 要查看特定资源的元数据，请取消选择列表中剩余的资源。 如果您取消在 [!UICONTROL 属性] 页面，此类资源的元数据不会更新。
+1. 要为资源选择其他元数据架构，请单击 **[!UICONTROL 设置]** 从工具栏中选择架构。 单击“**[!UICONTROL 保存并关闭]**”。
+1. 要将新元数据与现有元数据追加到包含多个值的字段中，请选择&#x200B;**[!UICONTROL 追加模式]**。如果不选中此选项，则新元数据将替换字段中的现有元数据。单击 **[!UICONTROL 提交]**.
 
-![中繼資料結構描述大量套用至多個資產](assets/metadata-schema-bulk-edit.gif)
+![元数据架构批量应用于多个资源](assets/metadata-schema-bulk-edit.gif)
 
 >[!CAUTION]
 >
 >对于单值字段，即使选择&#x200B;**[!UICONTROL 追加模式]**，新元数据也不会追加到字段中的现有值中。
 
-## 匯入中繼資料 {#import-metadata}
+## 导入元数据 {#import-metadata}
 
-[!DNL Assets] 可讓您使用CSV檔案大量匯入資產中繼資料。 您可以匯入CSV檔案，對最近上傳的資產或現有資產執行大量更新。 您也可以以CSV格式從協力廠商系統大量擷取資產中繼資料。
+[!DNL Assets] 允许您使用CSV文件批量导入资源元数据。 您可以通过导入CSV文件，对最近上传的资源或现有资源执行批量更新。 您还可以以CSV格式从第三方系统批量摄取资源元数据。
 
-中繼資料匯入為非同步處理，不會阻礙系統效能。 如果勾選工作流程旗標，由於XMP回寫活動，同時更新多個資產的中繼資料可能會耗費大量資源。 在精益伺服器使用期間規劃這類匯入，以便其他使用者的效能不受影響。
+元数据导入是异步的，不会妨碍系统性能。 如果选中了工作流标志，则由于XMP写回活动，同时更新多个资源的元数据可能会占用大量资源。 在精益服务器使用期间规划此类导入，以便其他用户的性能不会受到影响。
 
 >[!NOTE]
 >
->若要在自訂名稱空間上匯入中繼資料，請先註冊名稱空間。
+>要在自定义命名空间上导入元数据，请先注册命名空间。
 
-1. 導覽至 [!DNL Assets] 使用者介面，然後按一下 **[!UICONTROL 建立]** （從工具列）。
-1. 從功能表中選取 **[!UICONTROL 中繼資料]**.
-1. 在 **[!UICONTROL 中繼資料匯入]** 頁面，按一下 **[!UICONTROL 選取檔案]**. 选择包含元数据的 CSV 文件。
-1. 指定下列引數。 請參閱範例CSV檔案： [metadata-import-sample-file.csv](/help/assets/assets/metadata-import-sample-file.csv).
+1. 导航到 [!DNL Assets] 用户界面，然后单击 **[!UICONTROL 创建]** 工具栏中。
+1. 从菜单中，选择 **[!UICONTROL 元数据]**.
+1. 在 **[!UICONTROL 元数据导入]** 页面，单击 **[!UICONTROL 选择文件]**. 选择包含元数据的 CSV 文件。
+1. 指定以下参数。 请参阅示例CSV文件，网址为 [metadata-import-sample-file.csv](/help/assets/assets/metadata-import-sample-file.csv).
 
-   | 中繼資料匯入引數 | 描述 |
+   | 元数据导入参数 | 描述 |
    |:---|:---|
-   | [!UICONTROL 批量大小] | 批次中要匯入中繼資料的資產數量。 默认值为 50。最大值為100。 |
-   | [!UICONTROL 字段分隔符] | 預設值為 `,` （逗號）。 您可以指定任何其他字元。 |
-   | [!UICONTROL 多值分隔符] | 中繼資料值的分隔符號。 默认值为 `|`. |
-   | [!UICONTROL 启动工作流] | 預設為False。 當設定為 `true` 和預設設定對有效 [!UICONTROL DAM中繼資料回寫] 工作流程(將中繼資料寫入二進位XMP資料)。 啟用工作流程會拖慢系統速度。 |
-   | [!UICONTROL 资产路径列名称] | 為含有資產的CSV檔案定義欄名稱。 |
+   | [!UICONTROL 批量大小] | 要为其导入元数据的批次中的资源数。 默认值为 50。最大值为100。 |
+   | [!UICONTROL 字段分隔符] | 默认值为 `,` （逗号）。 可以指定任何其他字符。 |
+   | [!UICONTROL 多值分隔符] | 元数据值的分隔符。 默认值为 `|`. |
+   | [!UICONTROL 启动工作流] | 默认为False。 当设置为 `true` 和默认设置对有效 [!UICONTROL DAM元数据回写] 工作流(将元数据写入二进制XMP数据)。 启用工作流会减慢系统速度。 |
+   | [!UICONTROL 资产路径列名称] | 为包含资产的CSV文件定义列名称。 |
 
-1. 按一下 **[!UICONTROL 匯入]** （從工具列）。 匯入中繼資料後，通知會顯示在 [!UICONTROL 通知] 收件匣。
+1. 单击 **[!UICONTROL 导入]** 工具栏中。 导入元数据后，通知显示在中 [!UICONTROL 通知] 收件箱。
 
-1. 若要驗證匯入是否正確，請導覽至資產的 [!UICONTROL 屬性] 頁面並驗證欄位中的值。
+1. 要验证是否正确导入，请导航到资产的 [!UICONTROL 属性] 页面，并验证字段中的值。
 
-若要在匯入中繼資料時新增日期和時間戳記，請使用 `YYYY-MM-DDThh:mm:ss.fff-00:00` 日期和時間格式。 日期和時間分隔方式 `T`， `hh` 是24小時格式的小時， `fff` 為nanoseconds，且 `-00:00` 是時區位移。 例如， `2020-03-26T11:26:00.000-07:00` 為2020年3月26日的11:26:上午00:000 （太平洋標準時間）。
+要在导入元数据时添加日期和时间戳，请使用 `YYYY-MM-DDThh:mm:ss.fff-00:00` 日期和时间的格式。 日期和时间分隔方式 `T`， `hh` 是24小时制的时数， `fff` 为纳秒，并且 `-00:00` 是时区偏移。 例如， `2020-03-26T11:26:00.000-07:00` 于2020年3月26日为11:26:太平洋标准时间上午00:000。
 
 >[!CAUTION]
 >
->如果日期格式不符 `YYYY-MM-DDThh:mm:ss.fff-00:00`時，日期值未設定。 匯出的中繼資料CSV檔案的日期格式為格式 `YYYY-MM-DDThh:mm:ss-00:00`. 如果您想要匯入它，請新增所表示的nanoseconds值，將其轉換為可接受的格式 `fff`.
+>如果日期格式不匹配 `YYYY-MM-DDThh:mm:ss.fff-00:00`时，未设置日期值。 导出的元数据CSV文件的日期格式为格式 `YYYY-MM-DDThh:mm:ss-00:00`. 如果要导入它，请通过添加表示为的纳秒值将其转换为可接受的格式 `fff`.
 
-## 匯出中繼資料 {#export-metadata}
+## 导出元数据 {#export-metadata}
 
-您可以以CSV格式匯出多個資產的中繼資料。 中繼資料會以非同步方式匯出，不會影響系統效能。 若要匯出中繼資料， [!DNL Experience Manager] 周游資產節點的屬性 `jcr:content/metadata` 及其子節點，並將中繼資料屬性匯出為CSV檔案。
+您可以以CSV格式导出多个资源的元数据。 元数据是异步导出的，不会影响系统性能。 要导出元数据， [!DNL Experience Manager] 遍历资产节点的属性 `jcr:content/metadata` 及其子节点，并将元数据属性导出为CSV文件。
 
-大量匯出中繼資料的一些使用案例包括：
+批量导出元数据的几个用例包括：
 
-* 移轉資產時，在協力廠商系統中匯入中繼資料。
-* 與更廣的專案團隊共用資產中繼資料。
-* 測試或稽核中繼資料是否符合規定。
-* 將中繼資料外部化，以便個別進行本地化。
+* 迁移资产时，在第三方系统中导入元数据。
+* 与更广泛的项目团队共享资源元数据。
+* 测试或审核元数据是否符合要求。
+* 将元数据外部化以单独对其进行本地化。
 
-1. 選取包含您要匯出中繼資料之資產的資產資料夾。 從工具列中選取 **[!UICONTROL 匯出中繼資料]**.
+1. 选择包含要导出元数据的资源的资源文件夹。 在工具栏中，选择 **[!UICONTROL 导出元数据]**.
 
-1. 在 [!UICONTROL 中繼資料匯出] 對話方塊中，指定CSV檔案的名稱。 若要匯出子資料夾中資產的中繼資料，請選取「 」 **[!UICONTROL 在子資料夾中包含資產]**.
+1. 在 [!UICONTROL 元数据导出] 对话框，请指定CSV文件的名称。 要导出子文件夹中资产的元数据，请选择 **[!UICONTROL 在子文件夹中包含资源]**.
 
-   ![匯出資料夾中所有資產中繼資料的介面和選項](assets/export_metadata_page.png "匯出資料夾中所有資產中繼資料的介面和選項")
+   ![用于导出文件夹中所有资源的元数据的界面和选项](assets/export_metadata_page.png "用于导出文件夹中所有资源的元数据的界面和选项")
 
-1. 選取所需的選項。 提供檔案名稱，並視需要提供日期。
+1. 选择所需的选项。 提供文件名和（如果需要）日期。
 
-1. 在 **[!UICONTROL 要匯出的屬性]** 欄位中，指定您要匯出所有或特定屬性。 如果您選擇要匯出的「選擇性」屬性，請新增所需的屬性。
+1. 在 **[!UICONTROL 要导出的属性]** 字段，指定是要导出所有属性还是特定属性。 如果要选择导出的“选择性属性”，请添加所需的属性。
 
-1. 在工具列中按一下 **[!UICONTROL 匯出]**. 會出現一則訊息，確認中繼資料已匯出。 關閉訊息。
+1. 在工具栏中，单击 **[!UICONTROL 导出]**. 将显示一条消息，确认元数据已导出。 关闭消息。
 
-1. 打开导出作业的收件箱通知。选择作业，然后单击工具栏中的&#x200B;**[!UICONTROL 打开]**。若要下載包含中繼資料的CSV檔案，請按一下 **[!UICONTROL CSV下載]** （從工具列）。 单击&#x200B;**[!UICONTROL 关闭]**。
+1. 打开导出作业的收件箱通知。选择作业，然后单击工具栏中的&#x200B;**[!UICONTROL 打开]**。要下载包含元数据的CSV文件，请单击 **[!UICONTROL CSV下载]** 工具栏中。 单击&#x200B;**[!UICONTROL 关闭]**。
 
-   ![用於下載包含大量匯出之中繼資料的CSV檔案的對話方塊](assets/csv_download.png)
+   ![用于下载包含批量导出的元数据的CSV文件的对话框](assets/csv_download.png)
 
-   *圖：用於下載包含大量匯出之中繼資料的CSV檔案的對話方塊。*
+   *图：用于下载包含批量导出元数据的CSV文件的对话框。*
 
-## 編輯集合的中繼資料 {#collections-metadata}
+## 编辑收藏集的元数据 {#collections-metadata}
 
-如需詳細資訊，請參閱 [檢視和編輯收藏集中繼資料](/help/assets/manage-collections.md#view-edit-collection-metadata) 和 [大量編輯多個集合的中繼資料](/help/assets/manage-collections.md#editing-collection-metadata-in-bulk).
+有关详细信息，请参阅 [查看和编辑收藏集元数据](/help/assets/manage-collections.md#view-edit-collection-metadata) 和 [批量编辑多个收藏集的元数据](/help/assets/manage-collections.md#editing-collection-metadata-in-bulk).
 
-## 將中繼資料設定檔套用至資料夾 {#applying-a-metadata-profile-to-folders}
+## 将元数据配置文件应用到文件夹 {#applying-a-metadata-profile-to-folders}
 
 <!-- TBD: Review this overview.
 -->
 
-將中繼資料描述檔指派給資料夾時，任何子資料夾都會自動從其父資料夾繼承描述檔。 這表示您只能將一個中繼資料設定檔指派給資料夾。 因此，請仔細考慮您上傳、儲存、使用和封存資產的資料夾結構。
+将元数据配置文件分配给文件夹时，任何子文件夹都会自动从其父文件夹继承配置文件。 这意味着您只能将一个元数据配置文件分配给文件夹。 因此，请仔细考虑上传、存储、使用和存档资产的位置的文件夹结构。
 
-如果您將不同的中繼資料描述檔指派給資料夾，新的描述檔會覆寫先前的描述檔。 先前現有的資料夾資產保持不變。 新設定檔會套用至稍後新增至資料夾的資產。
+如果为文件夹分配了不同的元数据配置文件，则新配置文件将覆盖以前的配置文件。 以前现有的文件夹资产保持不变。 新配置文件将应用于稍后添加到此文件夹的资产。
 
-在使用者介面中，會以卡片名稱中出現的設定檔名稱來指出已指派給其設定檔的資料夾。
+为其分配了配置文件的文件夹在用户界面中由卡片名称中显示的配置文件的名称指示。
 
-![卡片檢視會顯示套用至資料夾的中繼資料描述檔](assets/metadata-profile-card-view-display.png)
+![卡片视图显示应用于文件夹的元数据配置文件](assets/metadata-profile-card-view-display.png)
 
-您可以將中繼資料設定檔套用至特定資料夾，或全域套用至所有資產。
+您可以将元数据配置文件应用到特定文件夹，也可以全局应用到所有资源。
 
-若資料夾中已有您之後已變更的現有中繼資料設定檔，您可以重新處理該資料夾中的資產。 另請參閱 [編輯資料夾中資產的處理設定檔後，重新處理該資料夾中的資產](processing-profiles.md#reprocessing-assets).
+如果文件夹中已有您后来更改的现有元数据配置文件，您可以重新处理该文件夹中的资产。 参见 [编辑文件夹中资产的处理配置文件后，重新处理该文件夹中的资产](processing-profiles.md#reprocessing-assets).
 
 您可以从&#x200B;**[!UICONTROL 工具]**&#x200B;菜单中将元数据配置文件应用到文件夹，或者如果您在文件夹中，也可以直接从&#x200B;**[!UICONTROL 属性]**&#x200B;中应用。本节将介绍如何通过这两种方式将元数据配置文件应用到文件夹。
 
 如果文件夹已经分配了配置文件，则文件夹名称正下方会显示配置文件的名称。
 
-若資料夾中已有您之後加以變更的現有視訊設定檔，您可以重新處理該資料夾中的資產。 另請參閱 [編輯資料夾中資產的處理設定檔後，重新處理該資料夾中的資產](processing-profiles.md#reprocessing-assets).
+如果文件夹中已有您后来更改的现有视频配置文件，您可以重新处理该文件夹中的资产。 参见 [编辑文件夹中资产的处理配置文件后，重新处理该文件夹中的资产](processing-profiles.md#reprocessing-assets).
 
-### 從中套用中繼資料設定檔至資料夾 [!UICONTROL 設定檔] 使用者介面 {#applying-metadata-profiles-to-folders-from-profiles-user-interface}
+### 将元数据配置文件应用到文件夹 [!UICONTROL 配置文件] 用户界面 {#applying-metadata-profiles-to-folders-from-profiles-user-interface}
 
-請依照以下步驟套用中繼資料設定檔：
+按照以下步骤应用元数据配置文件：
 
-1. 按一下 [!DNL Experience Manager] 標誌並導覽至 **[!UICONTROL 工具]** > **[!UICONTROL 資產]** > **[!UICONTROL 中繼資料設定檔]**.
-1. 選取您要套用至一個資料夾或多個資料夾的中繼資料設定檔。
-1. 按一下 **[!UICONTROL 套用中繼資料設定檔至資料夾]** 並選取您要用來接收新上傳資產的資料夾或多個資料夾，然後按一下 **[!UICONTROL 完成]**. 如果文件夹已经分配了配置文件，则文件夹名称正下方会显示配置文件的名称。
+1. 单击 [!DNL Experience Manager] 徽标并导航到 **[!UICONTROL 工具]** > **[!UICONTROL 资产]** > **[!UICONTROL 元数据配置文件]**.
+1. 选择要应用于一个或多个文件夹的元数据配置文件。
+1. 单击 **[!UICONTROL 将元数据配置文件应用到文件夹]** 并选择一个或多个用于接收新上传资产的文件夹，然后单击 **[!UICONTROL 完成]**. 如果文件夹已经分配了配置文件，则文件夹名称正下方会显示配置文件的名称。
 
-### 從中套用中繼資料設定檔至資料夾 [!UICONTROL 屬性] {#applying-metadata-profiles-to-folders-from-properties}
+### 将元数据配置文件应用到文件夹 [!UICONTROL 属性] {#applying-metadata-profiles-to-folders-from-properties}
 
-1. 在左側邊欄中，按一下 **[!UICONTROL 資產]** 然後導覽至您要套用中繼資料設定檔的資料夾。
-1. 在資料夾上，按一下核取記號以選取資料夾，然後按一下 **[!UICONTROL 屬性]**.
+1. 在左边栏中，单击 **[!UICONTROL 资产]** 然后导航到要将元数据配置文件应用到的文件夹。
+1. 在文件夹中，单击复选标记以将其选中，然后单击 **[!UICONTROL 属性]**.
 
-1. 選取 **[!UICONTROL 中繼資料設定檔]** 標籤並從彈出式選單中選取設定檔，然後按一下 **[!UICONTROL 儲存]**.
+1. 选择 **[!UICONTROL 元数据配置文件]** 选项卡，从弹出菜单中选择配置文件并单击 **[!UICONTROL 保存]**.
 
 如果文件夹已经分配了配置文件，则文件夹名称正下方会显示配置文件的名称。
 
@@ -208,39 +208,39 @@ ht-degree: 11%
 
 For details, see [configuration to apply metadata profile globally](/help/assets/metadata-config.md#apply-a-metadata-profile-globally). -->
 
-### 從資料夾中移除中繼資料設定檔 {#removing-a-metadata-profile-from-folders}
+### 从文件夹中删除元数据配置文件 {#removing-a-metadata-profile-from-folders}
 
-當您從資料夾中移除中繼資料描述檔時，任何子資料夾都會自動繼承其父資料夾中描述檔的移除動作。 不過，在資料夾內發生的任何檔案處理作業都會維持不變。
+从文件夹中删除元数据配置文件时，任何子文件夹都会自动继承从其父文件夹中删除的配置文件。 但是，在文件夹内发生的任何文件处理都保持不变。
 
-您可以在中從資料夾中移除中繼資料描述檔 **[!UICONTROL 工具]** 功能表或從 **[!UICONTROL 屬性]** 從資料夾中。
+您可以从中的文件夹删除元数据配置文件 **[!UICONTROL 工具]** 菜单或从 **[!UICONTROL 属性]** 从文件夹中。
 
-#### 透過設定檔使用者介面從資料夾中移除中繼資料設定檔 {#removing-metadata-profiles-from-folders-via-profiles-user-interface}
+#### 通过配置文件用户界面从文件夹中删除元数据配置文件 {#removing-metadata-profiles-from-folders-via-profiles-user-interface}
 
-1. 按一下 [!DNL Experience Manager] 標誌並導覽至 **[!UICONTROL 工具]** > **[!UICONTROL 資產]** > **[!UICONTROL 中繼資料設定檔]**.
-1. 選取您要從資料夾或多個資料夾中移除的中繼資料描述檔。
-1. 按一下 **[!UICONTROL 從資料夾中移除中繼資料設定檔]** 並選取您要用來從中移除設定檔的資料夾或多個資料夾，然後按一下 **[!UICONTROL 完成]**.
+1. 单击 [!DNL Experience Manager] 徽标并导航到 **[!UICONTROL 工具]** > **[!UICONTROL 资产]** > **[!UICONTROL 元数据配置文件]**.
+1. 选择要从一个或多个文件夹中删除的元数据配置文件。
+1. 单击 **[!UICONTROL 从文件夹中删除元数据配置文件]** 并选择一个或多个要从中删除配置文件的文件夹，然后单击 **[!UICONTROL 完成]**.
 
-   您可以確認中繼資料描述檔不再套用至資料夾，因為資料夾名稱下方不再有該名稱。
+   您可以确认元数据配置文件不再应用于文件夹，因为该名称不再显示在文件夹名称下方。
 
-#### 透過「屬性」從資料夾中移除中繼資料設定檔 {#removing-metadata-profiles-from-folders-via-properties}
+#### 通过“属性”从文件夹中删除元数据配置文件 {#removing-metadata-profiles-from-folders-via-properties}
 
-1. 按一下 [!DNL Experience Manager] 標誌與導覽 **[!UICONTROL 資產]** 然後移至您要從中移除中繼資料設定檔的資料夾。
-1. 在資料夾上，按一下核取記號以選取資料夾，然後按一下 **[!UICONTROL 屬性]**.
+1. 单击 [!DNL Experience Manager] 徽标和导航 **[!UICONTROL 资产]** 然后转到要删除元数据配置文件的文件夹。
+1. 在文件夹中，单击复选标记以将其选中，然后单击 **[!UICONTROL 属性]**.
 1. 选择&#x200B;**[!UICONTROL 元数据配置文件]**&#x200B;选项卡，并从下拉菜单中选择&#x200B;**[!UICONTROL 无]**，然后单击&#x200B;**[!UICONTROL 保存]**。如果文件夹已经分配了配置文件，则文件夹名称正下方会显示配置文件的名称。
 
 ## 提示和限制 {#best-practices-limitations}
 
-* 中繼資料透過使用者介面更新，會變更 `dc` 名稱空間。 透過HTTP API所做的任何更新都會變更 `jcr` 名稱空間。 另請參閱 [如何使用HTTP API更新中繼資料](/help/assets/mac-api-assets.md#update-asset-metadata).
+* 通过用户界面更新的元数据会更改 `dc` 命名空间。 通过HTTP API所做的任何更新都会更改 `jcr` 命名空间。 参见 [如何使用HTTP API更新元数据](/help/assets/mac-api-assets.md#update-asset-metadata).
 
-* 用於匯入資產中繼資料的CSV檔案採用非常特定的格式。 為了節省時間和精力，並避免意外錯誤，您可以使用匯出的CSV檔案格式開始建立CSV。
+* 用于导入资源元数据的CSV文件的格式非常特定。 为了节省工作和时间，并避免意外错误，您可以使用导出的CSV文件格式开始创建CSV。
 
-* 使用CSV檔案匯入中繼資料時，所需的日期格式為 `YYYY-MM-DDThh:mm:ss.fff-00:00`. 如果使用任何其他格式，則不會設定日期值。 匯出的中繼資料CSV檔案的日期格式為格式 `YYYY-MM-DDThh:mm:ss-00:00`. 如果您想要匯入它，請新增所表示的nanoseconds值，將其轉換為可接受的格式 `fff`.
+* 使用CSV文件导入元数据时，所需的日期格式为 `YYYY-MM-DDThh:mm:ss.fff-00:00`. 如果使用任何其他格式，则不会设置日期值。 导出的元数据CSV文件的日期格式为格式 `YYYY-MM-DDThh:mm:ss-00:00`. 如果要导入它，请通过添加表示为的纳秒值将其转换为可接受的格式 `fff`.
 
 >[!MORELIKETHIS]
 >
->* [中繼資料概念和瞭解](metadata-concepts.md).
->* [編輯多個集合的中繼資料屬性](manage-collections.md#editing-collection-metadata-in-bulk)
->* [Experience Manager Assets中的中繼資料匯入和匯出](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/metadata-import-feature-video-use.html)
+>* [元数据概念和了解](metadata-concepts.md).
+>* [编辑多个收藏集的元数据属性](manage-collections.md#editing-collection-metadata-in-bulk)
+>* [Experience Manager Assets中的元数据导入和导出](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/metadata-import-feature-video-use.html)
 
 
 <!-- TBD: Try filling the available information in these topics to the extent possible. As and when complete, publish the sections live.

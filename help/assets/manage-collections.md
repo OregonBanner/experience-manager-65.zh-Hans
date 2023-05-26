@@ -1,6 +1,6 @@
 ---
-title: 管理數位資產集合
-description: 瞭解管理資產集合的任務，例如建立、檢視、刪除、編輯和下載集合。
+title: 管理数字资产收藏集
+description: 了解管理资产收藏集的任务，例如创建、查看、删除、编辑和下载收藏集。
 contentOwner: AG
 mini-toc-levels: 1
 role: User
@@ -16,266 +16,266 @@ ht-degree: 14%
 
 # 管理收藏集 {#managing-collections}
 
-| 版本 | 文章連結 |
+| 版本 | 文章链接 |
 | -------- | ---------------------------- |
 | AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/manage-collections.html?lang=en) |
 | AEM 6.5 | 本文 |
 
-集合是內的一組資產， [!DNL Adobe Experience Manager Assets]. 使用收藏集可在用户之间共享资源。集合可以是靜態集合或基於搜尋結果的動態集合。
+收藏集是内的一组资源 [!DNL Adobe Experience Manager Assets]. 使用收藏集可在用户之间共享资源。集合可以是静态集合，也可以是基于搜索结果的动态集合。
 
-收藏集与文件夹的不同之处是可包含来自不同位置的资源。您可以與獲指派不同許可權層級的不同使用者共用集合，包括檢視、編輯等。
+收藏集与文件夹的不同之处是可包含来自不同位置的资源。您可以与分配了不同级别权限（包括查看、编辑等）的各种用户共享收藏集。
 
 您可以与一个用户共享多个收藏集。每个收藏集都包含对资源的引用。收藏集中会保持资源的引用完整性。
 
-根據集合整理資產的方式，集合有下列型別：
+根据收藏集整理资产的方式，这些收藏集属于以下类型：
 
-* 包含資產、資料夾和其他集合的靜態參考清單的集合。
+* 包含资产、文件夹和其他收藏集的静态引用列表的收藏集。
 
-* 根據搜尋條件動態包含資產的智慧型集合。
+* 根据搜索条件动态包含资产的智能收藏集。
 
-## 存取集合主控台 {#navigating-the-collections-console}
+## 访问收藏集控制台 {#navigating-the-collections-console}
 
-若要開啟 **[!UICONTROL 集合]**，在 [!DNL Experience Manager] 介面，前往 **[!UICONTROL 資產]** > **[!UICONTROL 集合]**.
+打开 **[!UICONTROL 收藏集]**，在 [!DNL Experience Manager] 界面，转到 **[!UICONTROL 资产]** > **[!UICONTROL 收藏集]**.
 
 ## 创建收藏集 {#creating-a-collection}
 
-您可以使用以下任一專案建立集合： [靜態參考](#creating-a-collection-with-static-references) 或根據 [搜尋條件型篩選器](#creating-a-smart-collection). 您也可以從Lightbox建立集合。
+您可以使用以下任一方式创建收藏集 [静态引用](#creating-a-collection-with-static-references) 或基于 [基于搜索条件的过滤器](#creating-a-smart-collection). 您还可以从灯箱创建收藏集。
 
-### 建立具有靜態參照的集合 {#creating-a-collection-with-static-references}
+### 创建具有静态引用的收藏集 {#creating-a-collection-with-static-references}
 
-您可以建立具有靜態參照的集合，例如具有資產、資料夾、集合、迴轉集和影像集參照的集合。
+您可以创建具有静态引用的收藏集，例如具有对资产、文件夹、收藏集、旋转集和图像集的引用的收藏集。
 
-1. 導覽至 **[!UICONTROL 集合]** 主控台。
-1. 在工具列中按一下 **[!UICONTROL 建立]**.
-1. 在 **[!UICONTROL 建立集合]** 頁面，輸入集合的標題和說明（選擇性）。
+1. 导航到 **[!UICONTROL 收藏集]** 控制台。
+1. 在工具栏中，单击 **[!UICONTROL 创建]**.
+1. 在 **[!UICONTROL 创建收藏集]** 页面中，输入收藏集的标题和可选描述。
 1. 向收藏集添加成员并分配相应的权限。或者，选择&#x200B;**[!UICONTROL 公共收藏集]**，以允许所有用户访问该收藏集。
 
    >[!NOTE]
    >
-   >若要讓成員與其他使用者共用集合，請提供 `dam-users` 路徑下的群組讀取許可權 `home/users`. 將許可權授與使用者於 `/content/dam/collections` 可讓使用者在彈出式清單中檢視集合的位置。 或者，讓使用者成為 `dam-users` 群組。
+   >要允许成员与其他用户共享收藏集，请提供 `dam-users` 路径下的组读取权限 `home/users`. 将权限授予位于以下位置的用户： `/content/dam/collections` 允许用户在弹出列表中查看收藏集的位置。 或者，让用户成为 `dam-users` 组。
 
-1. （可選）為集合新增縮圖影像。
-1. 按一下 **[!UICONTROL 建立]**，然後按一下 **[!UICONTROL 確定]** 以關閉對話方塊。 具有指定标题和属性的集合将在“收藏集”控制台中打开。
+1. （可选）为收藏集添加缩略图图像。
+1. 单击 **[!UICONTROL 创建]**，然后单击 **[!UICONTROL 确定]** 以关闭对话框。 具有指定标题和属性的集合将在“收藏集”控制台中打开。
 
    >[!NOTE]
    >
-   >[!DNL Experience Manager Assets] 可讓您為集合建立稽核任務，其方式與為資產資料夾建立稽核任務類似。
+   >[!DNL Experience Manager Assets] 允许您为收藏集创建审阅任务，其方式与为资产文件夹创建审阅任务的方式类似。
 
-   若要將資產新增至收藏集，請導覽至 [!DNL Assets] 使用者介面。 如需詳細資訊，請參閱 [將資產新增至集合](#adding-assets-to-a-collection).
+   要将资源添加到收藏集，请导航到 [!DNL Assets] 用户界面。 有关详细信息，请参阅 [将资产添加到收藏集](#adding-assets-to-a-collection).
 
-### 使用dropzone建立集合 {#create-collections-using-dropzone}
+### 使用拖放区域创建收藏集 {#create-collections-using-dropzone}
 
-您可以從以下位置拖曳資產： [!DNL Assets] 集合的使用者介面。 您也可以建立收藏集的副本，並將資產拖曳至該處。
+您可以从以下位置拖动资产 [!DNL Assets] 收藏集的用户界面。 您还可以创建收藏集的副本，并将资产拖到该处。
 
-1. 從 [!DNL Assets] 使用者介面中，選取您要新增至集合的資產。
-1. 將資產拖曳至 **[!UICONTROL 放入集合]** 區域。 或者，按一下 **[!UICONTROL 至集合]** （從工具列）。
+1. 从 [!DNL Assets] 用户界面中，选择要添加到收藏集的资产。
+1. 将资源拖动到 **[!UICONTROL 放入收藏集]** 区域。 或者，单击 **[!UICONTROL 目标收藏集]** 工具栏中。
 
    ![drop_in_collection](assets/drop_in_collection.png)
 
-1. 在 **[!UICONTROL 新增至集合]** 頁面，按一下 **[!UICONTROL 建立集合]** （從工具列）。
+1. 在 **[!UICONTROL 添加到收藏集]** 页面，单击 **[!UICONTROL 创建收藏集]** 工具栏中。
 
-   如果您想要將資產新增至現有集合，請從頁面中選取資產，然後按一下 **[!UICONTROL 新增]**. 默认情况下，将选择最近更新的集合。
+   如果要将资源添加到现有收藏集，请从页面中选择它，然后单击 **[!UICONTROL 添加]**. 默认情况下，将选择最近更新的集合。
 
 1. 在&#x200B;**[!UICONTROL 创建新收藏集]**&#x200B;对话框中，指定收藏集的名称。如果希望所有用户都可以访问该收藏集，请选择&#x200B;**[!UICONTROL 公共收藏集]**。
-1. 按一下 **[!UICONTROL 繼續]** 以建立集合。
+1. 单击 **[!UICONTROL 继续]** 以创建收藏集。
 
-### 建立智慧型集合 {#creating-a-smart-collection}
+### 创建智能收藏集 {#creating-a-smart-collection}
 
-Smart Collection會使用搜尋條件以動態方式填入資產。 您可以只使用檔案來建立Smart Collection，而不使用資料夾或檔案和資料夾。
+智能收藏集使用搜索条件动态填充资产。 您可以仅使用文件（而非文件夹或文件和文件夹）创建智能收藏集。
 
-若要建立智慧型集合，請遵循下列步驟：
+要创建智能收藏集，请执行以下步骤：
 
-1. 導覽至 [!DNL Assets] 使用者介面，然後按一下「搜尋」。
+1. 导航到 [!DNL Assets] 用户界面并单击“搜索”。
 
-1. 在Omnisearch方塊中輸入搜尋關鍵字，然後選取 `Enter`. 開啟「篩選器」面板並套用搜尋篩選器。
+1. 在Omnisearch框中键入搜索关键字并选择 `Enter`. 打开“筛选器”面板并应用搜索筛选器。
 
-1. 從 **[!UICONTROL 檔案與資料夾]** 清單，選取 **[!UICONTROL 檔案]**.
+1. 从 **[!UICONTROL 文件和文件夹]** 列表，选择 **[!UICONTROL 文件]**.
 
    ![files_option](assets/files_option.png)
 
-1. 按一下 **[!UICONTROL 儲存智慧型集合]**.
+1. 单击 **[!UICONTROL 保存智能收藏集]**.
 
-1. 指定集合的名稱。 選取 **[!UICONTROL 公用]** 將具有檢視器角色的DAM Users群組新增至智慧型集合。
+1. 指定收藏集的名称。 选择 **[!UICONTROL 公共]** 将具有查看器角色的DAM用户组添加到智能收藏集。
 
    ![save_collection](assets/save_collection.png)
 
    >[!NOTE]
    >
-   >如果您選取 **[!UICONTROL 公用]**，在您建立智慧型集合後，擁有擁有擁有者角色的所有人都能使用該集合。 如果您取消 **[!UICONTROL 公用]** 選項，DAM使用者群組不再與智慧型集合相關聯。
+   >如果您选择 **[!UICONTROL 公共]**&#x200B;之后，该智能收藏集将可供具有所有者角色的所有用户使用。 如果您取消 **[!UICONTROL 公共]** 选项，DAM用户组不再与智能收藏集关联。
 
-1. 按一下 **[!UICONTROL 儲存]** 以建立智慧型集合，然後關閉訊息方塊以完成程式。
+1. 单击 **[!UICONTROL 保存]** 创建智能收藏集，然后关闭消息框以完成该过程。
 
-   新的智慧型集合也會新增至 **[!UICONTROL 已儲存的搜尋]** 清單。
+   新的智能收藏集也会添加到 **[!UICONTROL 保存的搜索]** 列表。
 
    ![collection_listing](assets/collection_listing.png)
 
-   的標籤 **[!UICONTROL 建立智慧型選取範圍]** 選項變更為 **[!UICONTROL 編輯智慧型選取範圍]**. 要编辑智能收藏集的设置，请从“文件和文 **[!UICONTROL 件夹]** ”列 **[!UICONTROL 表中选择“文件]** ”。 按一下 **[!UICONTROL 編輯智慧型選取範圍]** ![編輯智慧型集合](assets/do-not-localize/edit-smart-collection.png) 選項。
+   的标签 **[!UICONTROL 创建智能选择]** 选项更改为 **[!UICONTROL 编辑智能选择]**. 要编辑智能收藏集的设置，请从“文件和文 **[!UICONTROL 件夹]** ”列 **[!UICONTROL 表中选择“文件]** ”。 单击 **[!UICONTROL 编辑智能选择]** ![编辑智能收藏集](assets/do-not-localize/edit-smart-collection.png) 选项。
 
 ## 将资源添加到收藏集 {#adding-assets-to-a-collection}
 
-您可以將資產新增至包含參照資產或資料夾清單的集合。 智慧型集合會使用搜尋查詢來填入資產。 因此，資產和資料夾的靜態參考並不適用於它們。
+您可以将资源添加到包含引用资源或文件夹列表的收藏集。 智能收藏集使用搜索查询来填充资产。 因此，对资源和文件夹的静态引用不适用于它们。
 
-1. 在 [!DNL A]資產使用者介面，選取資產並按一下 **[!UICONTROL 至集合]** ![新增至集合](assets/do-not-localize/add-to-collection.png) （從工具列）。
-或者，您可以將資產拖曳至 **[!UICONTROL 放入集合]** 介面上的區域。 當區域的標籤變更為 **[!UICONTROL 放置以新增]**.
+1. 在 [!DNL A]设置用户界面，选择资产并单击 **[!UICONTROL 目标收藏集]** ![添加到收藏集](assets/do-not-localize/add-to-collection.png) 工具栏中。
+或者，您也可以将资产拖到 **[!UICONTROL 放入收藏集]** 界面上的区域。 当区域的标签更改为时，添加资源 **[!UICONTROL 放置以添加]**.
 
-1. 在 **[!UICONTROL 新增至集合]** 頁面上，選取您要新增資產的集合。
+1. 在 **[!UICONTROL 添加到收藏集]** 页面上，选择要将资源添加到的收藏集。
 
-1. 按一下 **[!UICONTROL 新增]**，然後關閉確認訊息。 資產會新增至集合。
+1. 单击 **[!UICONTROL 添加]**，然后关闭确认消息。 资产将添加到收藏集。
 
-## 編輯智慧型集合 {#editing-a-smart-collection}
+## 编辑智能收藏集 {#editing-a-smart-collection}
 
-智慧型集合是透過儲存搜尋來建置，因此您可以修改的搜尋引數來變更其內容 [已儲存的搜尋](#saved-searches).
+智能收藏集是通过保存搜索生成的，因此您可以通过修改的搜索参数来更改其内容。 [保存的搜索](#saved-searches).
 
-1. 在 [!DNL Assets] 使用者介面，按一下搜尋選項 ![搜尋選項](assets/do-not-localize/search_icon.png) （從工具列）。
-1. 將游標放在Omnisearch方塊中，選取 `Return` 金鑰。
-1. 在 [!DNL Experience Manager] 介面，開啟「篩選器」面板。
+1. 在 [!DNL Assets] 用户界面中，单击搜索选项 ![搜索选项](assets/do-not-localize/search_icon.png) 工具栏中。
+1. 将光标置于Omnisearch框中，选择 `Return` 键。
+1. 在 [!DNL Experience Manager] 界面中，打开过滤器面板。
 1. 从&#x200B;**[!UICONTROL 保存的搜索]**&#x200B;列表中，选择要修改的智能收藏集。“搜索”面板显示为保存的搜索配置的过滤器。
 
    ![select_smart_collection](assets/select_smart_collection.png)
 
-1. 從 **[!UICONTROL 檔案與資料夾]** 清單，選取 **[!UICONTROL 檔案]**.
-1. 視需要修改一或多個篩選器。 单击&#x200B;**[!UICONTROL “编辑智能收藏集”]**。
+1. 从 **[!UICONTROL 文件和文件夹]** 列表，选择 **[!UICONTROL 文件]**.
+1. 根据需要修改一个或多个筛选器。 单击&#x200B;**[!UICONTROL “编辑智能收藏集”]**。
 
-   您也可以編輯智慧型集合的名稱。
+   您还可以编辑智能收藏集的名称。
 
    ![edit_smart_collectiondialog](assets/edit_smart_collectiondialog.png)
 
-1. 单击“**[!UICONTROL 保存]**”。此 **[!UICONTROL 編輯智慧型集合]** 對話方塊隨即顯示。
-1. 按一下 **[!UICONTROL 覆寫]** 將原始的智慧型集合取代為已編輯的集合。 或者，選取 **[!UICONTROL 另存為]** 以個別儲存已編輯的集合。
-1. 在確認對話方塊中，按一下 **[!UICONTROL 儲存]** 以完成程式。
+1. 单击“**[!UICONTROL 保存]**”。此 **[!UICONTROL 编辑智能收藏集]** 对话框。
+1. 单击 **[!UICONTROL 覆盖]** 将原始智能收藏集替换为已编辑的收藏集。 或者，选择 **[!UICONTROL 另存为]** 以单独保存已编辑的收藏集。
+1. 在确认对话框中，单击 **[!UICONTROL 保存]** 以完成该过程。
 
 ## 查看和编辑收藏集元数据 {#view-edit-collection-metadata}
 
-收藏集中繼資料包含有關收藏集的資料，包括新增的任何標籤。
+收藏集元数据包含有关收藏集的数据，包括添加的任何标记。
 
-1. 從 [!UICONTROL 集合] 主控台，選取集合併按一下 **[!UICONTROL 屬性]** （從工具列）。
+1. 从 [!UICONTROL 收藏集] 控制台中，选择一个收藏集并单击 **[!UICONTROL 属性]** 工具栏中。
 1. 在&#x200B;**[!UICONTROL 收藏集元数据]**&#x200B;页面中，从&#x200B;**[!UICONTROL 基本]**&#x200B;和&#x200B;**[!UICONTROL 高级]**&#x200B;选项卡中查看收藏集元数据。
-1. 視需要修改中繼資料。 若要儲存變更，請按一下 **[!UICONTROL 儲存並關閉]** （從工具列）。
+1. 根据需要修改元数据。 要保存更改，请单击 **[!UICONTROL 保存并关闭]** 工具栏中。
 
-## 大量編輯多個集合的中繼資料 {#editing-collection-metadata-in-bulk}
+## 批量编辑多个收藏集的元数据 {#editing-collection-metadata-in-bulk}
 
-您可以同時編輯多個集合的中繼資料。 此功能可協助您在多個集合中快速復寫常見的中繼資料。
+您可以同时编辑多个收藏集的元数据。 此功能可帮助您在多个收藏集中快速复制常用元数据。
 
-1. 在集合控制檯中，選取兩個或多個集合。
-1. 在工具列中按一下 **[!UICONTROL 屬性]**.
+1. 在“收藏集”控制台中，选择两个或多个收藏集。
+1. 在工具栏中，单击 **[!UICONTROL 属性]**.
 1. 在&#x200B;**[!UICONTROL 收藏集元数据]**&#x200B;页面中，根据需要编辑&#x200B;**[!UICONTROL 基本]**&#x200B;和&#x200B;**[!UICONTROL 高级]**&#x200B;选项卡下的元数据。
-1. 若要檢視特定集合的中繼資料屬性，請取消選取集合清單中剩餘的集合。 中繼資料編輯器欄位會填入特定集合的中繼資料。
+1. 要查看特定收藏集的元数据属性，请取消选择收藏集列表中剩余的收藏集。 使用特定收藏集的元数据填充元数据编辑器字段。
 
    >[!NOTE]
    >
-   >* 在 [!UICONTROL 屬性] 頁面中，您可以取消選取專案，從集合清單中移除集合。 集合清單預設會選取所有集合。 [!DNL Experience Manager] 不會更新您移除之集合的中繼資料。
-   >* 在清單頂端，選取附近的核取方塊 **[!UICONTROL 標題]** 在選取集合和清除清單之間切換。
+   >* 在 [!UICONTROL 属性] 页面上，您可以通过取消选择从收藏集列表中删除收藏集。 收藏集列表默认选择了所有收藏集。 [!DNL Experience Manager] 不会更新您删除的收藏集的元数据。
+   >* 在列表顶部，选中附近的复选框 **[!UICONTROL 标题]** 可在选择收藏集和清除列表之间进行切换。
 
 
-1. 按一下 **[!UICONTROL 儲存並關閉]** ，然後關閉確認對話方塊。
-1. 若要將新中繼資料附加至現有中繼資料，請選取「 」 **[!UICONTROL 附加模式]**. 如果不选中此选项，则新元数据将替换字段中的现有元数据。按一下 **[!UICONTROL 提交]**.
+1. 单击 **[!UICONTROL 保存并关闭]** ，然后关闭确认对话框。
+1. 要将新元数据附加到现有元数据，请选择 **[!UICONTROL 附加模式]**. 如果不选中此选项，则新元数据将替换字段中的现有元数据。单击 **[!UICONTROL 提交]**.
 
    >[!NOTE]
    >
-   >您為所選集合新增的中繼資料會覆寫這些集合先前的中繼資料。 使用 [!UICONTROL 附加模式] 在可以包含多個值的欄位中，將新值新增至現有中繼資料。 一律會覆寫單值欄位。 您在中新增的任何標籤 [!UICONTROL 標籤] 欄位)會附加至中繼資料中的現有標籤清單。
+   >为所选收藏集添加的元数据会覆盖这些收藏集的先前元数据。 使用 [!UICONTROL 附加模式] 在可以包含多个值的字段中向现有元数据添加新值。 始终覆盖单值字段。 您在中添加的任何标记 [!UICONTROL 标记] 字段)会附加到元数据中的现有标记列表中。
 
-若要自訂中繼資料 [!UICONTROL 屬性] 頁面，包括新增、修改、刪除中繼資料屬性，請使用結構描述編輯器。
+自定义元数据 [!UICONTROL 属性] 页面（包括添加、修改和删除元数据属性）使用架构编辑器。
 
 >[!TIP]
 >
->大量編輯方法適用於集合中可用的資產。 對於跨資料夾可用的資產或符合共同條件的資產，可以 [搜尋後大量更新中繼資料](/help/assets/search-assets.md#metadataupdates).
+>批量编辑方法适用于收藏集中可用的资产。 对于跨文件夹可用的资源或符合通用条件的资源，可以 [搜索后批量更新元数据](/help/assets/search-assets.md#metadataupdates).
 
-## 搜尋集合 {#searching-collections}
+## 搜索收藏集 {#searching-collections}
 
-您可以從「集合」控制檯搜尋集合。 當您在Omnisearch方塊中使用關鍵字搜尋時， [!DNL Assets] 會搜尋系列名稱、中繼資料和新增至系列的標籤。
+您可以从收藏集控制台中搜索收藏集。 当您在Omnisearch框中搜索关键字时， [!DNL Assets] 搜索收藏集名称、元数据和添加到收藏集的标记。
 
-如果您從最上層搜尋集合，搜尋結果中只會傳回個別集合。 [!DNL Assets] 排除集合中的或資料夾。 在所有其他情況下（例如，在個別集合或資料夾階層中），都會傳回所有相關資產、資料夾和集合。
+如果从顶级搜索收藏集，则搜索结果中只返回单个收藏集。 [!DNL Assets] 排除收藏集中的或文件夹。 在所有其他情况下（例如，在单个收藏集内或文件夹层次结构中），将返回所有相关资产、文件夹和收藏集。
 
-## 在集合中搜尋 {#searching-within-collections}
+## 在收藏集中搜索 {#searching-within-collections}
 
-在「系列」控制檯中，按一下某個系列以開啟它。
+在“收藏集”控制台中，单击某个收藏集以将其打开。
 
-在集合中， [!DNL Experience Manager] 搜尋僅限於您檢視之集合中的資產（及其標籤和中繼資料）。 在資料夾中搜尋時，會傳回目前資料夾中所有相符的資產和子資料夾。 您在集合中搜尋時，只會傳回相符的資產、資料夾和屬於集合直接成員的其他集合。
+在收藏集中， [!DNL Experience Manager] 搜索仅限于您正在查看的收藏集中的资产（及其标记和元数据）。 在文件夹中搜索时，将返回当前文件夹中所有匹配的资源和子文件夹。 在收藏集中搜索时，仅返回匹配的资产、文件夹以及属于收藏集直接成员的其他收藏集。
 
-## 編輯集合設定 {#editing-collection-settings}
+## 编辑收藏集设置 {#editing-collection-settings}
 
-您可以編輯收藏集設定（例如標題和說明），或將成員新增至收藏集。
+您可以编辑收藏集设置（如标题和描述），也可以将成员添加到收藏集。
 
-1. 選取集合，然後按一下 **[!UICONTROL 設定]** （在工具列中）。 或者，使用 **[!UICONTROL 設定]** 集合縮圖中的快速動作。
-1. 在&#x200B;**[!UICONTROL 收藏集设置]**&#x200B;页面中修改收藏集设置。例如，修改系列標題、說明、成員和許可權，如中所述 [新增集合](#creating-a-collection).
+1. 选择一个收藏集，然后单击 **[!UICONTROL 设置]** 工具栏中。 或者，使用 **[!UICONTROL 设置]** 收藏集缩略图中的快速操作。
+1. 在&#x200B;**[!UICONTROL 收藏集设置]**&#x200B;页面中修改收藏集设置。例如，修改收藏集标题、描述、成员和权限，如中所述 [添加收藏集](#creating-a-collection).
 
-1. 若要儲存變更，請按一下 **[!UICONTROL 儲存]**.
+1. 要保存更改，请单击 **[!UICONTROL 保存]**.
 
 ## 删除收藏集 {#deleting-a-collection}
 
-1. 從「系列」控制檯中，選取一個或多個系列，然後從工具列按一下「刪除」。
+1. 从“收藏集”控制台中，选择一个或多个收藏集，然后单击工具栏中的删除。
 
-1. 在對話方塊中，按一下 **[!UICONTROL 刪除]** 以確認刪除動作。
+1. 在对话框中，单击 **[!UICONTROL 删除]** 以确认删除操作。
 
    >[!NOTE]
    >
-   >您也可以刪除智慧型集合，方法是 [刪除已儲存的搜尋](#saved-searches).
+   >您还可以通过以下方式删除智能收藏集 [删除保存的搜索](#saved-searches).
 
 ## 下载收藏集 {#downloading-a-collection}
 
-下載集合時，會下載集合中資產的整個階層，包括資料夾和子集合。
+下载收藏集时，将下载收藏集中资产的整个层次结构，包括文件夹和子收藏集。
 
-1. 從「集合」控制檯中，選取一或多個要下載的集合。
-1. 在工具列中按一下 **[!UICONTROL 下載]**.
-1. 在 **[!UICONTROL 下載]** 對話方塊，按一下 **[!UICONTROL 下載]**. 如果您想要下載收藏集中資產的轉譯，請選取 **[!UICONTROL 轉譯]**. 選取 **[!UICONTROL 電子郵件]** 傳送電子郵件通知給集合擁有者的選項。
+1. 从“收藏集”控制台中，选择要下载的一个或多个收藏集。
+1. 在工具栏中，单击 **[!UICONTROL 下载]**.
+1. 在 **[!UICONTROL 下载]** 对话框，单击 **[!UICONTROL 下载]**. 如果要下载收藏集中资产的演绎版，请选择 **[!UICONTROL 演绎版]**. 选择 **[!UICONTROL 电子邮件]** 选项，用于向收藏集所有者发送电子邮件通知。
 
-   當您選取要下載的集合時，將會下載集合下的完整資料夾階層。 若要將您下載的每個收藏集（包括父收藏集巢狀下子收藏集中的資產）納入個別資料夾，請選取 **[!UICONTROL 為每個資產建立個別的資料夾]**.
+   选择要下载的收藏集时，将下载收藏集下的完整文件夹层次结构。 要将下载的每个收藏集（包括嵌套在父收藏集下的子收藏集中的资产）包含到单个文件夹中，请选择 **[!UICONTROL 为每个资源创建单独的文件夹]**.
 
-## 建立巢狀集合 {#creating-nested-collections}
+## 创建嵌套收藏集 {#creating-nested-collections}
 
-您可以將集合新增至另一個集合，藉此建立巢狀集合。
+您可以将一个收藏集添加到另一个收藏集，从而创建嵌套收藏集。
 
-1. 從「集合」控制檯中，選取所需的集合或集合群組，然後按一下 **[!UICONTROL 至集合]** （在工具列中）。
+1. 从收藏集控制台中，选择所需的收藏集或收藏集组，然后单击 **[!UICONTROL 目标收藏集]** 工具栏中。
 
-1. 從 **[!UICONTROL 新增至集合]** 頁面上，選取要新增集合的集合。
+1. 从 **[!UICONTROL 添加到收藏集]** 页面中，选择要添加集合的集合。
 
    >[!NOTE]
    >
-   >根據預設，系統會選取最近更新的集合，位於 **[!UICONTROL 新增至集合]** 頁面。
+   >默认情况下，会选中最近更新的收藏集，位于 **[!UICONTROL 添加到收藏集]** 页面。
 
-1. 按一下 **[!UICONTROL 新增]**. 訊息會確認此集合已新增至中的目標集合。 **[!UICONTROL 選取目的地]** 頁面。 關閉訊息以完成程式。
+1. 单击 **[!UICONTROL 添加]**. 将显示一条消息，确认该收藏集已添加到中的目标收藏集 **[!UICONTROL 选择目标]** 页面。 关闭消息以完成该过程。
 
 >[!NOTE]
 >
->無法巢狀化智慧型集合。 換言之，智慧型集合不能包含任何其他集合。
+>无法嵌套智能收藏集。 换句话说，智能收藏集不能包含任何其他收藏集。
 
 ## 保存的搜索 {#saved-searches}
 
-在 [!DNL Assets] 使用者介面，您可以根據特定規則、搜尋准則或自訂搜尋Facet來搜尋或篩選資產。 如果将这些搜索另存为&#x200B;**[!UICONTROL 保存的搜索]**，则以后可以从“过滤器”面板的&#x200B;**[!UICONTROL 保存的搜索]**&#x200B;列表中访问它们。 创建保存的搜索也会创建智能收藏集。
+在 [!DNL Assets] 用户界面中，您可以根据特定规则、搜索条件或自定义搜索彩块化来搜索或筛选资源。 如果将这些搜索另存为&#x200B;**[!UICONTROL 保存的搜索]**，则以后可以从“过滤器”面板的&#x200B;**[!UICONTROL 保存的搜索]**&#x200B;列表中访问它们。 创建保存的搜索也会创建智能收藏集。
 
 ![saved_searches_list](assets/saved_searches_list.png)
 
-创建智能收藏集时将创建保存的搜索。智能收藏集会自动添加到&#x200B;**[!UICONTROL 保存的搜索]**&#x200B;列表。此 [!UICONTROL 已儲存的搜尋] 集合的查詢會儲存在 `dam:query` CRXDE中相對位置的屬性 `/content/dam/collections/`. 您可以儲存的搜尋以及清單中顯示的已儲存搜尋沒有限制。
+创建智能收藏集时将创建保存的搜索。智能收藏集会自动添加到&#x200B;**[!UICONTROL 保存的搜索]**&#x200B;列表。此 [!UICONTROL 保存的搜索] 收藏集的查询保存在 `dam:query` CRXDE中相对位置的属性 `/content/dam/collections/`. 对于可以保存的搜索以及列表中显示的已保存搜索，没有限制。
 
 >[!NOTE]
 >
->您可以使用與共用靜態集合相同的方式共用智慧型集合。
+>您可以使用与共享静态收藏集相同的方式共享智能收藏集。
 
-編輯已儲存的搜尋與編輯智慧型集合相同。 如需詳細資訊，請參閱 [編輯智慧型集合](#editing-a-smart-collection).
+编辑保存的搜索与编辑智能收藏集相同。 有关详细信息，请参阅 [编辑智能收藏集](#editing-a-smart-collection).
 
-若要刪除已儲存的搜尋，請遵循下列步驟：
+要删除保存的搜索，请执行以下步骤：
 
-1. 在 [!DNL Assets] 使用者介面，按一下搜尋 ![搜尋選項](assets/do-not-localize/search_icon.png).
-1. 將游標放在Omnisearch欄位中，選取 `Return` 金鑰。
-1. 在 [!DNL Experience Manager] 介面，開啟「篩選器」面板。
-1. 從 **[!UICONTROL 已儲存的搜尋]** 清單，按一下 **[!UICONTROL 刪除]** ，位於您要刪除的智慧型集合旁。
+1. 在 [!DNL Assets] 用户界面，单击搜索 ![搜索选项](assets/do-not-localize/search_icon.png).
+1. 将光标置于Omnisearch字段中，选择 `Return` 键。
+1. 在 [!DNL Experience Manager] 界面中，打开过滤器面板。
+1. 从 **[!UICONTROL 保存的搜索]** 列表，单击 **[!UICONTROL 删除]** 位于要删除的智能收藏集旁边。
 
    ![select_smart_collection](assets/select_smart_collection.png)
 
-1. 在對話方塊中，按一下 **[!UICONTROL 刪除]** 以刪除儲存的搜尋。
+1. 在对话框中，单击 **[!UICONTROL 删除]** 以删除保存的搜索。
 
-## 對集合執行工作流程 {#running-a-workflow-on-a-collection}
+## 对收藏集执行工作流 {#running-a-workflow-on-a-collection}
 
-您可以為集合中的資產執行工作流程。 如果集合包含巢狀集合，工作流程也會在巢狀集合內的資產上執行。 不過，如果集合和巢狀集合包含重複資產，工作流程只會針對此類資產執行一次。
+您可以为收藏集中的资产运行工作流。 如果收藏集包含嵌套收藏集，则工作流也会对嵌套收藏集中的资产运行。 但是，如果收藏集和嵌套收藏集包含重复的资产，则工作流仅会为此类资产运行一次。
 
-1. 開啟 **[!UICONTROL 資產]** > **[!UICONTROL 集合]**. 若要在特定集合上執行工作流程，請選取該集合。
-1. 開啟 **[!UICONTROL 時間表]** 邊欄。 按一下 ![V形向上](assets/do-not-localize/chevron-up-icon.png) 並按一下 **[!UICONTROL 開始工作流程]**.
+1. 打开 **[!UICONTROL 资产]** > **[!UICONTROL 收藏集]**. 要在特定收藏集上执行工作流，请选择该收藏集。
+1. 打开 **[!UICONTROL 时间线]** 边栏。 单击 ![V形向上](assets/do-not-localize/chevron-up-icon.png) 并单击 **[!UICONTROL 启动工作流]**.
 1. 在&#x200B;**[!UICONTROL 启动工作流]**&#x200B;部分，从列表中选择工作流模型。例如，选择 **[!UICONTROL DAM 更新资产]**&#x200B;模型。
-1. 輸入工作流程的標題並按一下 **[!UICONTROL 開始]**.
-1. 在對話方塊中，按一下 **[!UICONTROL 繼續]**. 工作流程會處理所選集合中的所有資產。
+1. 输入工作流的标题并单击 **[!UICONTROL 开始]**.
+1. 在对话框中，单击 **[!UICONTROL 继续]**. 该工作流会处理选定收藏集中的所有资产。
 
 >[!MORELIKETHIS]
 >
->* [設定Experience Manager Assets電子郵件通知](/help/sites-administering/notification.md#assetsconfig)
->* [建立集合的稽核任務](bulk-approval.md)
+>* [配置Experience Manager Assets电子邮件通知](/help/sites-administering/notification.md#assetsconfig)
+>* [为收藏集创建审核任务](bulk-approval.md)
 

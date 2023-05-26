@@ -1,7 +1,7 @@
 ---
-title: 仲裁社群內容
+title: 审核社区内容
 seo-title: Moderating Community Content
-description: 稽核概念和動作
+description: 审核概念和操作
 seo-description: Moderation concepts and actions
 uuid: 5c991d3a-0037-4d78-8f91-bb62e44441fa
 contentOwner: Janice Kendall
@@ -19,56 +19,56 @@ ht-degree: 2%
 
 ---
 
-# 仲裁社群內容 {#moderating-community-content}
+# 审核社区内容 {#moderating-community-content}
 
 ## 概述 {#overview}
 
-社群內容，也稱為使用者產生的內容(UGC)，是在成員（已登入網站訪客）透過與以下社群元件之一的互動從已發佈的社群網站張貼內容時建立的：
+社区内容，也称为用户生成内容(UGC)，是在成员（已登录站点访客）通过与以下社区组件之一交互而发布已发布社区站点的内容时创建的：
 
-* [部落格](/help/communities/blog-feature.md)：成員發表部落格或評論。
-* [行事曆](/help/communities/calendar.md)：成員張貼日曆事件或評論。
-* [註解](/help/communities/comments.md)：成員發表評論或回複評論。
+* [博客](/help/communities/blog-feature.md)：成员发布博客文章或评论。
+* [日历](/help/communities/calendar.md)：成员发布日历事件或评论。
+* [评论](/help/communities/comments.md)：成员发布评论或回复评论。
 
-* [論壇](/help/communities/forum.md)：成員張貼新主題或回覆主題。
-* [構思](/help/communities/ideation-feature.md)：成員發表想法或評論。
-* [QnA](/help/communities/working-with-qna.md)：成員建立問題或回答問題。
-* [評論](/help/communities/reviews.md)：成員在對專案進行評分時會發表評論。
+* [论坛](/help/communities/forum.md)：成员发布新主题或回复主题。
+* [构思](/help/communities/ideation-feature.md)：成员发布想法或评论。
+* [问题与解答](/help/communities/working-with-qna.md)：成员创建问题或回答问题。
+* [审核](/help/communities/reviews.md)：成员在对项目进行评级时发表评论。
 
-稽核UGC對於識別正面貢獻以及限制負面貢獻（例如垃圾郵件和濫用語言）很有用。 UGC可從多個環境中稽核：
+审核UGC对于识别正面贡献以及限制负面贡献（例如垃圾邮件和滥用语言）很有用。 UGC可从多个环境中审核：
 
-* [社群內容儲存](working-with-srp.md)
+* [社区内容存储](working-with-srp.md)
 
-* [大量仲裁主控台](moderation.md)
+* [批量审核控制台](moderation.md)
 
-   管理員可存取「協調」主控台，以及 [社群版主](/help/communities/users.md) 以及作者環境中的管理員。 當社群內容儲存在 [公用存放區](/help/communities/working-with-srp.md).
+   管理员可以访问“审核”控制台，并且 [社区审查方](/help/communities/users.md) 以及作者环境中的管理员。 当社区内容存储在时，这是可能的 [公用存储](/help/communities/working-with-srp.md).
 
-* [內容中稽核](in-context.md)
+* [上下文审核](in-context.md)
 
-   管理員和社群版主可直接在發佈內容的頁面上執行發佈環境中的稽核。
+   管理员和社区审查方可以直接在发布内容的页面上执行发布环境中的审查工作。
 
-## 稽核動作 {#moderation-actions}
+## 审核操作 {#moderation-actions}
 
-可對發佈內容(UGC)執行的動作會因使用者身分和環境而異。 下表使用下列術語，根據使用者身分說明各種角色：
+可以对发布的内容(UGC)执行的操作因用户身份和环境而异。 下表使用以下术语根据用户身份描述各种角色：
 
 * `Admin`
 
-   身為會員的使用者 [社群管理員](users.md) 群組。
+   作为会员的用户 [社区管理员](users.md) 组。
 
 * `Moderator`
 
-   成員隸屬於 [社群版主](users.md#publishenvironmentusersandgroups) 群組(具有 [版主許可權](in-context.md#moderatorpermissions))。
+   成员属于 [社区审查方](users.md#publishenvironmentusersandgroups) 组(具有 [审查方权限](in-context.md#moderatorpermissions))。
 
 * `Creator`
 
-   發佈內容的使用者。
+   发布内容的用户。
 
 * `Member`
 
-   沒有特殊許可權的登入使用者。
+   没有特殊权限的登录用户。
 
 * `Visitor`
 
-   匿名使用者。
+   匿名用户。
 
 <table>
  <tbody>
@@ -78,12 +78,12 @@ ht-degree: 2%
    <td><strong>审查方</strong></td>
    <td><strong>创建者</strong></td>
    <td><strong>成员</strong></td>
-   <td><strong>訪客</strong></td>
-   <td><strong>事件<br /> 已觸發</strong></td>
-   <td><strong>已預先稽核</strong></td>
+   <td><strong>访客</strong></td>
+   <td><strong>事件<br /> 已触发</strong></td>
+   <td><strong>已预审</strong></td>
   </tr>
   <tr>
-   <td><strong>編輯/<br /> 刪除</strong></td>
+   <td><strong>编辑/<br /> 删除</strong></td>
    <td>X</td>
    <td>X</td>
    <td>X</td>
@@ -113,7 +113,7 @@ ht-degree: 2%
    <td> </td>
   </tr>
   <tr>
-   <td><strong>關閉/<br /> 重新開啟</strong></td>
+   <td><strong>关闭/<br /> 重新打开</strong></td>
    <td>X</td>
    <td>X</td>
    <td> </td>
@@ -123,7 +123,7 @@ ht-degree: 2%
    <td>X<br /> </td>
   </tr>
   <tr>
-   <td><strong>標幟/<br /> 取消標幟</strong></td>
+   <td><strong>标志/<br /> 取消标记</strong></td>
    <td>X</td>
    <td>X</td>
    <td> </td>
@@ -145,158 +145,158 @@ ht-degree: 2%
  </tbody>
 </table>
 
-### 編輯/刪除 {#edit-delete}
+### 编辑/删除 {#edit-delete}
 
-貼文發表後，可由建立者、管理員或社群版主編輯或刪除。
+发布帖子后，创建者、管理员或社区审查方可以对其进行编辑或删除。
 
-刪除UGC時，它會從存放庫中移除，並且可能無法復原。
+删除UGC时，它会从存储库中删除，并且可能无法恢复。
 
 ### 剪切 {#cut}
 
-管理員或社群版主可以將一個或多個論壇主題或QnA問題從一個位置移動到另一個位置。 這包括從一個社群網站到另一個社群網站，前提是相同的成員在兩個網站上都有仲裁許可權。
+管理员或社区审查方可以将一个或多个论坛主题或QnA问题从一个位置移动到另一个位置。 这包括从一个社区站点到另一个社区站点，前提是同一成员在两个站点上具有审核权限。
 
-透過選取「剪下」動作，內容會複製到剪貼簿。 您可以將多個貼文作為一個群組複製並移動至新位置。
+通过选择“剪切”操作，内容将被复制到剪贴板。 可以将多个帖子作为一个组复制并移动到新位置。
 
 ![cutugc](assets/cutugc.png)
 
 ![putbackugc](assets/putbackugc.png)
 
-在另一個位置，當內容顯示在剪貼簿中時，「新增貼文」旁邊會顯示「貼上」按鈕，其數字可識別將貼上的貼文數量。 「貼上」按鈕包含清除剪貼簿而非貼上的選項。
+在另一个位置，当内容显示在剪贴板中时，“新建帖子”旁会显示“粘贴”按钮，其中带有一个标识将粘贴的帖子数的数字。 “粘贴”按钮包含一个选项，用于清除剪贴板而不是粘贴。
 
-![Pasteugc](assets/pasteugc.png)
+![帕斯泰于克](assets/pasteugc.png)
 
 ![pasteugc1](assets/pasteugc1.png)
 
 ### 拒绝 {#deny}
 
-版主可不允許UGC在已發佈的網站上保持可見。 對管理員和社群版主而言，該貼文仍可用，且被註釋為垃圾訊息。
+审查方可能不允许在发布的网站上显示UGC。 对于管理员和社区审查方，该帖子仍然可用，并被注释为垃圾邮件。
 
-### 關閉/重新開啟 {#close-reopen}
+### 关闭/重新打开 {#close-reopen}
 
-「關閉」動作會對交談的整個對話串（論壇主題或初始評論）運作，並包含所有後續的貼文或回覆。
+“关闭”操作作用于整个对话会话（论坛主题或初始评论），并包括所有后续帖子或回复。
 
-關閉後，不僅無法進一步回覆，也不允許稽核動作。
+关闭后，不仅无法进一步回复，还不允许审核操作。
 
-若要執行任何操作，必須重新開啟主題或註解。
+要执行任何操作，必须重新打开主题或注释。
 
-管理員或社群版主可能會執行「關閉/重新開啟」動作。
+管理员或社区审查方可以执行“关闭/重新打开”操作。
 
-### 標幟/取消標幟 {#flag-unflag}
+### 标记/取消标记 {#flag-unflag}
 
-標幟是任何登入成員（內容建立者除外）表示貼文內容存在問題的一種方式。 標幟後，取消標幟圖示將會出現，允許同一成員取消標幟內容。
+标记是除内容创建者之外的任何登录成员指示帖子内容存在问题的一种方式。 标记后，将显示取消标记图标，以允许同一成员取消标记内容。
 
-內容內稽核可設定為允許成員在標幟貼文時選取原因。 可選擇的旗標原因清單是可設定的，包括是否可以輸入自訂原因。 標幟原因會與UGC一併儲存，但原因不會觸發任何特定動作。 僅觸發通知的旗標數目。 已標幟的內容會依此進行註解，以便版主可對其採取行動。
+可以将上下文审核配置为允许成员在标记帖子时选择原因。 可选择的标志原因列表是可配置的，包括是否可以输入自定义原因。 标记原因会与UGC一起保存，但该原因不会触发任何特定操作。 只有标记的数量会触发通知。 已标记的内容会进行相应的注释，以便审查方可以对其进行处理。
 
-系統會追蹤所有標幟、已標幟及標幟原因，並在達到臨界值時傳送事件。 如果社群版主允許UGC，則會封存這些標幟。 在允許和封存後，如果有後續標幟，則會封存這些標幟，就像之前沒有標幟一樣。
+系统跟踪所有已标记的标记和标记原因，并在达到阈值时发送事件。 如果社区审查方允许UGC，则会存档这些标记。 在允许和存档之后，如果存在后续标记，则将其存档，就像之前没有标记一样。
 
 ### 允许 {#allow}
 
-「允許」動作是已標幟、已拒絕或未在預先稽核系統中核准的UGC選項。 「允許」動作會清除任何已標幟或已拒絕/垃圾訊息狀態存在，並封存任何已標幟的資料。
+对于在预审核系统中已标记、已拒绝或未批准的UGC，允许操作是一个选项。 允许操作将清除任何已标记或已拒绝/垃圾邮件状态并存档任何已标记的数据。
 
-## 常見的稽核概念 {#common-moderation-concepts}
+## 常见的审核概念 {#common-moderation-concepts}
 
-### 預審 {#premoderation}
+### 预审 {#premoderation}
 
-當UGC預先稽核時，該貼文要等到稽核動作核准後才會出現在已發佈的網站上。 在建立期間 [社群網站](/help/communities/sites-console.md)，核取方塊 [內容已預先稽核](sites-console.md#moderation) 將啟用整個網站的預先稽核。 將元件放在頁面上後，可以使用編輯對話方塊中的設定來設定支援稽核的元件，以進行預審：
+预审UGC时，帖子只有在获得审核操作批准后才会显示在已发布的网站上。 创建期间 [社区站点](/help/communities/sites-console.md)，勾选方框 [内容已预审](sites-console.md#moderation) 将为整个站点启用预审。 将组件放在页面上后，可以使用其“编辑”对话框中的设置将支持审核的组件配置为预审：
 
-* [註解](comments.md) 和 [評論](reviews.md)
-在 **[!UICONTROL 使用者稽核]** > **[!UICONTROL 預先稽核]**.
+* [注释](comments.md) 和 [审核](reviews.md)
+在 **[!UICONTROL 用户审核]** > **[!UICONTROL 预审]**.
 
-* [論壇](/help/communities/forum.md)， [構思](/help/communities/ideation-feature.md)， [QnA](/help/communities/working-with-qna.md)、和 [行事曆](/help/communities/calendar.md)
-在 **[!UICONTROL 設定]** > **[!UICONTROL 已稽核]**.
+* [论坛](/help/communities/forum.md)， [构思](/help/communities/ideation-feature.md)， [问题与解答](/help/communities/working-with-qna.md)、和 [日历](/help/communities/calendar.md)
+在 **[!UICONTROL 设置]** > **[!UICONTROL 已审核]**.
 
-### 垃圾郵件偵測 {#spam-detection}
+### 垃圾邮件检测 {#spam-detection}
 
-垃圾郵件偵測是一種自動稽核功能，可透過將使用者產生的提交內容標籤為垃圾郵件來篩選出不需要的片段。 一旦啟用，它會根據預先設定的垃圾郵件字詞集合來識別使用者產生的內容是否為垃圾郵件。 預設垃圾訊息字詞提供於
+垃圾邮件检测是一种自动审核功能，它通过将用户生成的提交内容标记为垃圾邮件来过滤掉不需要的部分。 一旦启用，它就会根据预配置的垃圾邮件词语集合来识别用户生成的内容是否为垃圾邮件。 默认垃圾邮件字词提供于
 
 `/libs/settings/community/sites/moderation/spamdetector-conf/profiles/spam_words.txt`。
 
-不過，若要自訂或擴充預設垃圾字詞，請透過以下方式，按照預設垃圾字詞的結構，在/apps目錄中建立一組字詞： [覆蓋](/help/communities/overlay-comments.md).
+但是，要自定义或扩展默认垃圾邮件单词，请按照默认垃圾邮件单词的结构在/apps目录中创建一组单词，方法是 [叠加](/help/communities/overlay-comments.md).
 
-使用者產生的貼文（涵蓋所有內容型別，例如部落格、論壇和評論）包含垃圾郵件單詞，並在貼文上方標示「此貼文被分類為垃圾郵件」。
+用户生成的包含垃圾邮件词的帖子（在所有内容类型中，例如博客、论坛和评论）在帖子上方标有“此帖子被分类为垃圾邮件”文本。
 
-版主可以看到這類貼文，並加以標示，以允許或拒絕出現在網站上。 可以在內容中或透過大量稽核UI對這些貼文執行稽核動作。
+审查方可以查看此类帖子并标记该帖子，以允许或拒绝显示在网站上。 可以在上下文中或通过批量审核UI对这些帖子执行审核操作。
 
-![垃圾郵件偵測](assets/spamdetection.png)
+![垃圾邮件检测](assets/spamdetection.png)
 
-若要啟用垃圾郵件偵測引擎，請遵循下列步驟：
+要启用垃圾邮件检测引擎，请执行以下步骤：
 
-1. 開啟 [網頁主控台](https://localhost:4502/system/console/configMgr)，前往 `/system/console/configMgr`.
+1. 打开 [Web控制台](https://localhost:4502/system/console/configMgr)，通过转到 `/system/console/configMgr`.
 
-1. 尋找 **AEM Communities自動稽核** 設定，並加以編輯。
-1. 新增 **[!UICONTROL 垃圾郵件程式]** 登入點。
+1. 查找 **AEM Communities自动审核** 配置，并编辑它。
+1. 添加 **[!UICONTROL 垃圾邮件处理]** 登入。
 
 ![spamprocess](assets/spamprocess.png)
 
 >[!NOTE]
 >
->垃圾郵件偵測僅針對英文地區設定實施。
+>垃圾邮件检测仅针对英语区域设置实施。
 
 ### 情绪 {#sentiment}
 
-情緒是根據正面和負面關鍵字的數量計算的([標語](#configuringwatchwords))出現在貼文(UGC)中。
+情绪根据正关键字和负关键字的数量计算([标语](#configuringwatchwords))存在于帖子(UGC)中。
 
-情緒分析會使用一組預先設定的規則，並計算UGC的情緒。 預設規則位於： `/libs/cq/workflow/components/workflow/social/sentiments/rules.`
+情绪分析使用一组预配置的规则并计算UGC的情绪。 默认规则位于： `/libs/cq/workflow/components/workflow/social/sentiments/rules.`
 
-規則產生的值介於1 （全是負值，沒有正字）到10 （全是正值，沒有負值）之間。 情緒值5是中性情緒，且為預設值。
+规则生成的值介于1（所有负值，无正字）到10（所有正值，无负字）之间。 情绪值为5表示中性情绪，并且是默认值。
 
-/libs元件中定義的規則包括：
+/libs组件中定义的规则包括：
 
-* 規則1：如果沒有正面字詞和至少一個負面字詞，則將值設為1。
-* 規則2：如果沒有負面字詞和至少一個正面字詞，則將值設為10。
-* 規則3：如果負面字數多於正面字數，則將值設為3。
-* 規則4：如果正面字數多於負面字數，則將值設為8。
+* 规则1：如果没有正词和至少一个负词，则将值设置为1。
+* 规则2：如果没有负词和至少一个正词，则将值设置为10。
+* 规则3：如果负词多于正词，则将值设置为3。
+* 规则4：如果正字多于负字，则将值设置为8。
 
-若要覆寫或新增規則，請依照預設規則的結構在/apps目錄中建立一組規則。 編輯情緒設定以識別規則的位置。
+要覆盖或添加规则，请按照默认规则的结构在/apps目录中创建一组规则。 编辑情绪配置以标识规则的位置。
 
-分析後，該情緒會與UGC一起儲存。
+分析完毕后，该情绪将与UGC一起存储。
 
-從 [大量仲裁主控台](/help/communities/moderation.md)，您可根據情緒是負面、中性或正面來篩選及檢視UGC。
+从 [批量审核控制台](/help/communities/moderation.md)，可以根据情绪是消极、中性还是正面来过滤和查看UGC。
 
-#### 標語 {#watchwords}
+#### 标语 {#watchwords}
 
-AEM communities提供 *關注字詞分析器* 作為評估程式中的步驟 [情緒](#sentiment). 關注字詞對情緒值的貢獻來自於對張貼內容中使用的負面和正面關注字詞以及禁止字詞的比較。
+AEM communities提供 *关注词分析器* 作为评估过程中的步骤 [情绪](#sentiment). 关注字词对情绪值的贡献是由于对发布内容中使用的负面和正面关注字词以及禁止字词的比较。
 
-#### 設定情緒和標語 {#configure-sentiment-and-watchwords}
+#### 配置情绪和标语 {#configure-sentiment-and-watchwords}
 
-正面和負面標語清單可以像情緒規則一樣進行自訂。
+可以自定义正面和负面标语列表，也可以自定义情绪规则。
 
-預設的關注字清單可以輸入為存放庫中節點的屬性，類似於預設值，或是透過設定OSGi服務來覆寫預設值 `sentimentprocess.name` 文字清單。
+可以将默认关注字列表作为存储库中节点的属性输入，这与默认列表类似，也可以通过配置OSGi服务来覆盖默认列表 `sentimentprocess.name` 和单字的清单。
 
-此 **sentimentprocess.name** 也可以修改為參考自訂情緒規則集的位置。
+此 **sentimentprocess.name** 也可以修改为引用自定义情绪规则集的位置。
 
-若要設定情緒和標語：
+要配置情绪和标语，请执行以下操作：
 
-* 以管理員身分登入您的作者執行個體。
-* 開啟 [網頁主控台](https://localhost:4502/system/console/configMgr).
-* 尋找 `sentimentprocess.name`.
-* 選取要在編輯模式下開啟的設定。
+* 以管理员身份登录到您的创作实例。
+* 打开 [Web控制台](https://localhost:4502/system/console/configMgr).
+* 查找 `sentimentprocess.name`.
+* 选择要在编辑模式下打开的配置。
 
-![情緒化程式](assets/sentimentprocess.png)
+![情绪化过程](assets/sentimentprocess.png)
 
-* **正面標語**
+* **正面标语**
 
-   逗號分隔的單詞清單，可形成正面情緒，並覆寫預設值。 預設為空白清單。
+   以逗号分隔的单词列表，这些单词有助于覆盖默认值的正面情绪。 默认列表为空。
 
-* **負面標語**
+* **负面标语**
 
-   以逗號分隔的單字清單，構成覆寫預設值的負面情緒。 預設為空白清單。
+   以逗号分隔的单词列表，这些单词会导致覆盖默认值的负面情绪。 默认列表为空。
 
-* **Watchwords節點的明確路徑**
+* **Watchwords节点的显式路径**
 
-   包含預設值的節點的存放庫位置 `positive` 和 `negative` 指定預設標語的屬性。 預設為 `/libs/settings/community/watchwords/default`.
+   包含默认值的节点的存储库位置 `positive` 和 `negative` 属性指定默认标语。 默认为 `/libs/settings/community/watchwords/default`.
 
-* **情緒規則**
+* **情绪规则**
 
-   根據正面和負面標語計算情緒的規則的存放庫位置。 預設為 `/libs/cq/workflow/components/workflow/social/sentiments/rules` （不過，不再涉及任何工作流程）。
+   用于基于正面和负面关注词计算情绪的规则的存储库位置。 默认为 `/libs/cq/workflow/components/workflow/social/sentiments/rules` （但是，不再涉及任何工作流）。
 
-以下是預設關注字詞的自訂專案範例，當 `Explicit Path to Watchwords Node` 設為 `/libs/settings/community/watchwords/default`.
+以下是默认关注字的自定义条目示例，当 `Explicit Path to Watchwords Node` 设置为 `/libs/settings/community/watchwords/default`.
 
 ![crxde](assets/crxde.png)
 
-### 版主許可權 {#moderator-permissions}
+### 审查方权限 {#moderator-permissions}
 
-下列許可權在指派給相同資源時，統稱為 `moderator permissions`：
+将以下权限分配给同一资源时，统称为 `moderator permissions`：
 
 * `Read`
 * `Modify`

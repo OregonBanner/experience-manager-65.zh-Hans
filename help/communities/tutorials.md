@@ -1,7 +1,7 @@
 ---
 title: 教程
 seo-title: Tutorials
-description: 有助於學習和使用AEM Communities社交元件架構(SCF)的範例
+description: 帮助学习和使用AEM Communities社交组件框架(SCF)的示例
 seo-description: Examples to help in learning and working with AEM Communities social component framework (SCF)
 uuid: c99a9d56-9630-4a79-bcd7-a15f01d6c13d
 contentOwner: Guillaume Carlino
@@ -19,58 +19,58 @@ ht-degree: 1%
 
 # 教程 {#tutorials}
 
-這些範例可協助您學習和使用AEM 6.1社群 [社交元件架構(SCF)](scf.md).
+这些示例有助于学习和使用AEM 6.1社区 [社交组件框架(SCF)](scf.md).
 
-## 使用者端自訂 {#client-side-customization}
+## 客户端自定义 {#client-side-customization}
 
 另请参阅：
 
-* [SCF使用者端自訂](client-customize.md)
+* [SCF客户端自定义](client-customize.md)
 
-* [社群元件指南](components-guide.md)
+* [社区组件指南](components-guide.md)
 
-* [覆蓋註解元件](overlay-comments.md)
+* [叠加注释组件](overlay-comments.md)
 
-* [延伸註解元件](extend-comments.md)
+* [扩展注释组件](extend-comments.md)
 
-## 伺服器端自訂 {#server-side-customization}
+## 服务器端自定义 {#server-side-customization}
 
-另請參閱 [SCF伺服器端自訂](server-customize.md).
+另请参阅 [SCF服务器端自定义](server-customize.md).
 
-程式碼範例位於 [Adobe Marketing Cloud GitHub](https://github.com/Adobe-Marketing-Cloud) 存放庫：
+示例代码位于 [Adobe Marketing Cloud GitHub](https://github.com/Adobe-Marketing-Cloud) 存储库：
 
-* [自訂SCF元件範例](https://github.com/Adobe-Marketing-Cloud/aem-scf-sample-components-customize)
+* [自定义SCF组件示例](https://github.com/Adobe-Marketing-Cloud/aem-scf-sample-components-customize)
 
-* [覆蓋SCF元件範例](https://github.com/Adobe-Marketing-Cloud/aem-scf-sample-components-overlay)
+* [叠加SCF组件示例](https://github.com/Adobe-Marketing-Cloud/aem-scf-sample-components-overlay)
 
-* [延伸SCF元件範例](https://github.com/Adobe-Marketing-Cloud/aem-scf-sample-components-extension)
+* [扩展SCF组件示例](https://github.com/Adobe-Marketing-Cloud/aem-scf-sample-components-extension)
 
-## 操作說明 {#how-to-instructions}
+## 操作说明 {#how-to-instructions}
 
 * [AEM Communities Todo MVC](https://github.com/Adobe-Marketing-Cloud/aem-communities-todomvc-sample)
 
-   ToDo MVC示範如何從頭開發SCF+SRP元件。
+   ToDo MVC演示了如何从头开始开发SCF+SRP组件。
 
-* [AEM Communities快速入門](getting-started.md)
+* [AEM Communities快速入门](getting-started.md)
 
-* [如何設定MongoDB以進行示範](demo-mongo.md)
+* [如何设置MongoDB以进行演示](demo-mongo.md)
 
-* [建立SCF沙箱](an-scf-sandbox.md)
+* [创建SCF沙盒](an-scf-sandbox.md)
 
-* [建立範例頁面](create-sample-page.md)
+* [创建示例页面](create-sample-page.md)
 
-## 示範使用者 {#demo-users}
+## 演示用户 {#demo-users}
 
-此Geometrixx範例套件包含示範使用者。 身為訪客（未登入）或成員（已登入）的體驗通常會有不同，只要Geometrixx範例套件保持安裝狀態，當您探索時，可以使用這些使用者來模擬登入狀態 [社群元件指南](components-guide.md).
+Geometrixx示例包中包含演示用户。 在作为访客（未登录）或成员（已登录）与只要仍安装Geometrixx示例包，当您使用进行浏览时，可以使用这些用户来模拟登录状态 [社区组件指南](components-guide.md).
 
-如需示範使用者的完整清單，請使用邊欄導覽至 **[!UICONTROL 工具]** > **[!UICONTROL 作業]** > **[!UICONTROL 安全性>使用者]**. 或使用傳統UI [安全性主控台](http://localhost:4502/useradmin) 用於管理使用者和群組。
+要获取演示用户的完整列表，请使用边栏导航至 **[!UICONTROL 工具]** > **[!UICONTROL 操作]** > **[!UICONTROL 安全>用户]**. 或者使用经典UI [安全控制台](http://localhost:4502/useradmin) 用于管理用户和组。
 
-若為 [已建立社群網站](getting-started.md)，即可將示範使用者指派至其 [社群使用者群組](users.md).
+如果 [社区站点已创建](getting-started.md)，可以将演示用户分配给其 [社区用户组](users.md).
 
-***使用者id* / *密碼***：
+***用户id* / *密码***：
 
-* aaron.mcdonald@mailinator.com /密碼
-* emily.andrews@mailinator.com /密碼
-* weston.mccall@dodgit.com /密碼
-* andrew.schaeffer@trashymail.com /密碼
-* rebekah.larsen@trashymail.com /密碼
+* aaron.mcdonald@mailinator.com /密码
+* emily.andrews@mailinator.com /密码
+* weston.mccall@dodgit.com /密码
+* andrew.schaeffer@trashymail.com /密码
+* rebekah.larsen@trashymail.com /密码

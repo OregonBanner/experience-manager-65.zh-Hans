@@ -1,7 +1,7 @@
 ---
 title: 输出服务
 seo-title: Output Service
-description: 說明輸出服務，它隸屬於AEM Document Services
+description: 描述输出服务，它是AEM Document Services的一部分
 seo-description: Describes Output Service, which is part of AEM Document Services
 uuid: edddef59-b43c-486f-8734-3f97961ecf4d
 content-type: reference
@@ -21,47 +21,47 @@ ht-degree: 6%
 
 ## 概述 {#overview}
 
-Output服務是OSGi服務，屬於AEM Document Services的一部分。 輸出服務支援各種輸出格式和AEM Forms Designer的輸出設計功能。 輸出服務可以轉換XFA範本和XML資料，以產生多種格式的列印檔案。
+Output服务是AEM Document Services中的OSGi服务。 输出服务支持AEM Forms Designer的各种输出格式和输出设计功能。 输出服务可以转换XFA模板和XML数据以生成各种格式的打印文档。
 
 Output 服务使您能够创建应用程序，这些应用程序允许您：
 
 * 使用 XML 数据填充模板文件来生成最终表单文档。
-* 產生各種格式的輸出表單，包括非互動式PDF、PostScript、PCL和ZPL列印資料流。
+* 生成各种格式的输出表单，包括非交互式PDF、PostScript、PCL和ZPL打印流。
 * 从 XFA 表单 PDF 生成打印 PDF。
-* 將多組資料與提供的範本合併，以大量產生PDF、PostScript、PCL和ZPL檔案。
+* 通过将多组数据与提供的模板合并，批量生成PDF、PostScript、PCL和ZPL文档。
 
 >[!NOTE]
 >
->輸出服務是32位元的應用程式。 在Microsoft Windows上，32位元應用程式最多可以使用2 GB的記憶體。 此限制也適用於輸出服務。
+>输出服务是32位应用程序。 在Microsoft Windows上，32位应用程序最多可以使用2 GB内存。 该限制也适用于输出服务。
 
-## 建立非互動式表單檔案 {#creating-non-interactive-form-documents}
+## 创建非交互式表单文档 {#creating-non-interactive-form-documents}
 
 ![usingoutput_modified](assets/usingoutput_modified.png)
 
-通常使用AEM Forms Designer建立範本。 此 `generatePDFOutput` 和 `generatePrintedOutput` Output服務的API可讓您直接將這些範本轉換為各種格式，包括PDF、PostScript、ZPL和PCL。
+通常使用AEM Forms Designer创建模板。 此 `generatePDFOutput` 和 `generatePrintedOutput` 通过Output服务的API，您可以直接将这些模板转换为各种格式，包括PDF、PostScript、ZPL和PCL。
 
-此 `generatePDFOutput` 作業會產生PDF，而 `generatePrintedOutput` 作業會產生PostScript、ZPL和PCL格式。 兩個操作的第一個引數都接受範本檔案的名稱(例如 `ExpenseClaim.xdp`)或包含範本的Document物件。 當您指定範本檔案的名稱時，也需指定內容根目錄作為包含範本的資料夾的路徑。 您可以使用以下任一專案指定內容根： `PDFOutputOptions` 或 `PrintedOutputOptions` 引數。 請參閱Javadoc以取得您可以使用這些引數指定之其他選項的詳細資訊。
+此 `generatePDFOutput` 操作会生成PDF，而 `generatePrintedOutput` 操作生成PostScript、ZPL和PCL格式。 两个操作的第一个参数都接受模板文件的名称(例如 `ExpenseClaim.xdp`)或包含模板的Document对象。 指定模板文件的名称时，还应指定内容根目录作为包含模板的文件夹的路径。 您可以使用以下任一方式指定内容根 `PDFOutputOptions` 或 `PrintedOutputOptions` 参数。 有关可使用这些参数指定的其他选项的详细信息，请参阅Javadoc 。
 
-第二個引數在產生輸出檔案時，接受與範本合併的XML檔案。
+第二个参数在生成输出文档时接受与模板合并的XML文档。
 
-此 `generatePDFOutput` 作業也可以接受XFA型PDF表單作為輸入，並傳回PDF表單的非互動版本作為輸出。
+此 `generatePDFOutput` 操作还可以接受基于XFA的PDF表单作为输入，并返回PDF表单的非交互版本作为输出。
 
-## 產生非互動式表單檔案 {#generating-non-interactive-form-documents}
+## 生成非交互式表单文档 {#generating-non-interactive-form-documents}
 
-假設您有一或多個範本，且每個範本有多個XML資料記錄。
+考虑以下情况：您有一个或多个模板，并且每个模板有多个XML数据记录。
 
-使用 `generatePDFOutputBatch` 和 `generatePrintedOutputBatch` Output服務的作業，用以產生每筆記錄的列印檔案。
+使用 `generatePDFOutputBatch` 和 `generatePrintedOutputBatch` Output服务为每个记录生成打印文档的操作。
 
-您也可以將記錄合併成單一檔案。 這兩個操作都需使用四個引數。
+您还可以将记录合并到单个文档中。 这两个操作都需要4个参数。
 
-第一個引數是Map，其中包含作為索引鍵的任意字串，以及作為值的範本檔案名稱。
+第一个参数是一个Map，它包含作为键的任意字符串和作为值的模板文件名称。
 
-第二個引數是不同的Map，其值是包含XML資料的Document物件。 該索引鍵與您為第一個引數指定的索引鍵相同。
+第二个参数是不同的Map，其值是包含XML数据的Document对象。 该键与为第一个参数指定的键相同。
 
-的第三個引數 `generatePDFOutputBatch` 或 `generatePrintedOutputBatch` 屬於型別 `PDFOutputOptions` 或 `PrintedOutputOptions` （分別）。
+的第三个参数 `generatePDFOutputBatch` 或 `generatePrintedOutputBatch` 属于类型 `PDFOutputOptions` 或 `PrintedOutputOptions` 的量度。
 
-引數型別與 `generatePDFOutput` 和 `generatePrintedOutput` 操作與具有相同的效果。
+参数类型与的参数类型相同 `generatePDFOutput` 和 `generatePrintedOutput` 和的操作具有相同的效果。
 
-第四個引數為型別 `BatchOptions`，用來指定是否可以為每個記錄產生個別的檔案。 此引數的預設值為false。
+第四个参数的类型为 `BatchOptions`，用于指定是否可以为每个记录生成单独的文件。 此参数的默认值为false。
 
-兩者 `generatePrintedOutputBatch` 和 `generatePDFOutputBatch` 傳回型別的值 `BatchResult`. 值包含產生的檔案清單。 它也包含XML格式的中繼資料檔案，其中包含與產生的每個檔案相關的資訊。
+两者 `generatePrintedOutputBatch` 和 `generatePDFOutputBatch` 返回类型的值 `BatchResult`. 该值包含生成的文档列表。 它还包含一个XML格式的元数据文档，该文档包含与生成的每个文档相关的信息。

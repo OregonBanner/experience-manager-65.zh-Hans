@@ -1,6 +1,6 @@
 ---
-title: 設定影像伺服器的Dynamic Media發佈設定
-description: 瞭解如何在Dynamic Media中設定發佈。
+title: 为图像服务器配置Dynamic Media发布设置
+description: 了解如何在Dynamic Media中设置发布。
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: administering
@@ -16,246 +16,246 @@ ht-degree: 3%
 
 ---
 
-# 設定影像伺服器的Dynamic Media發佈設定
+# 为图像服务器配置Dynamic Media发布设置
 
-只有符合以下條件時，才可設定Dynamic Media發佈設定：
+只有符合以下条件时，才能配置Dynamic Media发布设置：
 
-* 您正在以Scene7模式執行Dynamic Media。 另請參閱 [在Scene7模式下啟用Dynamic Media](/help/assets/config-dms7.md#enabling-dynamic-media-in-scene-mode).
-* 您有 *現有* **[!UICONTROL Dynamic Media設定]** (in **[!UICONTROL Cloud Services]**)在Adobe Experience Manager 6.5.11或更新版本中。 另請參閱 [在Cloud Services中建立Dynamic Media設定](/help/assets/config-dms7.md#configuring-dynamic-media-cloud-services).
-* 您是具有管理員許可權的Experience Manager系統管理員。
+* 您正在以Scene7模式运行Dynamic Media。 参见 [在Scene7模式下启用Dynamic Media](/help/assets/config-dms7.md#enabling-dynamic-media-in-scene-mode).
+* 您有一个 *现有* **[!UICONTROL Dynamic Media配置]** (in **[!UICONTROL Cloud Services]**)在Adobe Experience Manager 6.5.11或更高版本中。 参见 [在Cloud Services中创建Dynamic Media配置](/help/assets/config-dms7.md#configuring-dynamic-media-cloud-services).
+* 您是具有管理员权限的Experience Manager系统管理员。
 
-Dynamic Media發佈設定適用於有經驗的網站開發人員和程式設計人員。 Adobe Dynamic Media建議變更這些發佈設定的使用者熟悉AdobeDynamic Media、HTTP通訊協定標準和慣例，以及基本影像處理技術。
+Dynamic Media发布设置旨在供经验丰富的网站开发人员和程序员使用。 AdobeDynamic Media建议更改这些发布设置的用户熟悉AdobeDynamic Media、HTTP协议标准和惯例，以及基本成像技术。
 
-「Dynamic Media發佈設定」頁面會建立預設設定，以判斷如何將資產從Adobe Dynamic Media伺服器傳送至網站或應用程式。 如果未指定任何設定，AdobeDynamic Media伺服器會根據Dynamic Media Publish Setup頁面上設定的預設設定傳送資產。
+“Dynamic Media发布设置”页面可建立默认设置，以确定如何将资源从AdobeDynamic Media服务器传递到网站或应用程序。 如果未指定设置，则AdobeDynamic Media服务器会根据“Dynamic Media发布设置”页面上配置的默认设置交付资源。
 
-另請參閱 [可選 — Dynamic Media的設定和配置 — Scene7模式設定](/help/assets/config-dms7.md#optional-setup-and-configuration-of-dynamic-media-scene7-mode-settings) 以取得更多選擇性設定工作。
+另请参阅 [可选 — 设置和配置Dynamic Media - Scene7模式设置](/help/assets/config-dms7.md#optional-setup-and-configuration-of-dynamic-media-scene7-mode-settings) 了解更多可选配置任务。
 
 >[!NOTE]
 >
->在Adobe Experience Manager上從Dynamic Media Classic升級至Dynamic Media？ 此 [一般設定](/help/assets/dm-general-settings.md) Dynamic Media中的頁面和發佈設定頁面已預先填入從您的Dynamic Media Classic帳戶中取得的值。 例外情況是 **[!UICONTROL 預設上傳選項]** 「一般設定」頁面的區域。 這些值已Experience Manager。 因此，您在下列專案底下所做的任何變更 **[!UICONTROL 預設上傳選項]**&#x200B;橫跨五個標籤的任何一個，透過Experience Manager使用者介面，反映在Dynamic Media中，而不是Dynamic Media Classic中。 所有其他設定和值 [一般設定](/help/assets/dm-general-settings.md) 頁面和「發佈設定」頁面會在Dynamic Media Classic和Dynamic Media之間Experience Manager時維護。
+>在Adobe Experience Manager上从Dynamic Media Classic升级到Dynamic Media？ 此 [常规设置](/help/assets/dm-general-settings.md) Dynamic Media中的“页面和发布设置”页面已预填充从您的Dynamic Media Classic帐户中获取的值。 例外情况是 **[!UICONTROL 默认上传选项]** 区域。 这些值已在Experience Manager中。 因此，您对以下内容所做的任何更改 **[!UICONTROL 默认上传选项]**&#x200B;通过Experience Manager用户界面，这五个选项卡中的任何一个都会反映在Dynamic Media中，而不是Dynamic Media Classic中。 所有其他设置和值 [常规设置](/help/assets/dm-general-settings.md) 页面和“发布设置”页面在Dynamic Media Classic和Dynamic MediaExperience Manager时维护。
 
-**若要設定Dynamic Media Publish設定影像伺服器：**
+**要配置Dynamic Media发布设置图像服务器，请执行以下操作：**
 
-1. 在Experience Manager作者模式中，選取Experience Manager標誌以存取全域導覽主控台。
-1. 在左側欄中，選取「工具」圖示，然後前往 **[!UICONTROL 資產]** > **[!UICONTROL Dynamic Media發佈設定]**.
-1. 在「影像伺服器」頁面中，設定「影像伺服器 — 發佈」內容，然後使用五個索引標籤來設定預設發佈設定。
+1. 在Experience Manager创作模式下，选择Experience Manager徽标以访问全局导航控制台。
+1. 在左边栏中，选择工具图标，然后转到 **[!UICONTROL 资产]** > **[!UICONTROL Dynamic Media发布设置]**.
+1. 在“图像服务器”页面中，设置图像服务器 — 发布上下文，然后使用五个选项卡配置默认发布设置。
 
    * [图像服务器](#image-server)
-   * [安全性](#security-tab) 標籤
-   * [目錄管理](#catalog-management-tab) 標籤
-   * [請求屬性](#request-attributes-tab) 標籤
-   * [通用縮圖屬性](#common-thumbnail-attributes-tab) 標籤
-   * [色彩管理屬性](#color-management-attributes-tab) 標籤
+   * [安全性](#security-tab) 选项卡
+   * [目录管理](#catalog-management-tab) 选项卡
+   * [请求属性](#request-attributes-tab) 选项卡
+   * [通用缩略图属性](#common-thumbnail-attributes-tab) 选项卡
+   * [颜色管理属性](#color-management-attributes-tab) 选项卡
 
-   ![Dynamic Media發佈設定頁面](/help/assets/assets-dm/dm-publish-setup.png)
-   *Dynamic Media發佈設定頁面，使用&#x200B;**[!UICONTROL 請求屬性]**標籤已選取。*<br><br>
+   ![Dynamic Media发布设置页面](/help/assets/assets-dm/dm-publish-setup.png)
+   *Dynamic Media发布设置页面，使用&#x200B;**[!UICONTROL 请求属性]**已选择选项卡。*<br><br>
 
-1. 完成後，在頁面的右上角附近，選取 **[!UICONTROL 儲存]**.
+1. 完成后，在页面的右上角附近，选择 **[!UICONTROL 保存]**.
 
 ## 图像服务器 {#image-server}
 
-「影像伺服器」頁面會建立從影像伺服器傳送影像的預設設定。 設定分為五個類別
+“图像服务器”页面建立了从图像服务器传送图像的默认设置。 设置分为五个类别
 
 | 发布上下文 | 描述 |
 | --- | --- |
-| 图像服务 | 指定發佈設定的內容。 |
-| 提供测试图像 | 指定測試發佈設定的內容。<br>僅用於新Dynamic Media帳戶，預設值 **[!UICONTROL 使用者端位址]** 欄位已設為 `127.0.0.1` 自動。<br>另請參閱 [在公開資產之前先測試資產](#test-assets-before-making-public). |
+| 图像服务 | 指定发布设置的上下文。 |
+| 提供测试图像 | 指定用于测试发布设置的上下文。<br>仅对于新的Dynamic Media帐户，默认为 **[!UICONTROL 客户端地址]** 字段设置为 `127.0.0.1` 自动。<br>参见 [在公开资产之前测试资产](#test-assets-before-making-public). |
 
-### 安全性索引標籤 {#security-tab}
+### “安全”选项卡 {#security-tab}
 
-**[!UICONTROL 使用者端位址]**  — 可讓您指定一或多個IP位址或IP位址範圍。 指定後，系統會拒絕從未列出的IP位址之使用者端對此影像目錄提出的要求。 此規則會同時套用至影像傳送和演算後的影像。
+**[!UICONTROL 客户端地址]**  — 用于指定一个或多个IP地址或IP地址范围。 指定后，将拒绝从未列出的IP地址上的客户端对此图像目录发起的请求。 此规则适用于交付图像和渲染的图像。
 
-![安全性索引標籤&#x200B;](/help/assets/assets-dm/dm-ipallowlist.png)<br>*顯示IP「允許」欄位的安全性索引標籤。*
+![“安全”选项卡&#x200B;](/help/assets/assets-dm/dm-ipallowlist.png)<br>*显示IP“允许”字段的“安全”选项卡。*
 
-### 目錄管理標籤 {#catalog-management-tab}
+### “目录管理”选项卡 {#catalog-management-tab}
 
-**[!UICONTROL 規則集定義檔案路徑]**  — 指定包含影像目錄的規則集定義的檔案。
+**[!UICONTROL 规则集定义文件路径]**  — 指定包含图像目录的规则集定义的文件。
 
-另請參閱 [規則集檔案](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-rulesetfile.html) Dynamic Media檢視器參考指南中的引數。
+另请参阅 [规则集文件](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-rulesetfile.html) 参数(在Dynamic Media查看器参考指南中)。
 
 >[!NOTE]
 >
->如果您的Dynamic Media Classic帳戶已有 **[!UICONTROL 規則集定義檔案路徑]** 已選取（如下所設定） **[!UICONTROL 設定]** > **[!UICONTROL 應用]** > **[!UICONTROL 發佈設定]**，下 **[!UICONTROL 目錄管理]** 群組)，則您的Dynamic Media帳戶(在Experience Manager上)會從Dynamic Media Classic擷取檔案。 然後，當您開啟 **[!UICONTROL Dynamic Media發佈設定]** 第一次瀏覽頁面。
+>如果您的Dynamic Media Classic帐户已 **[!UICONTROL 规则集定义文件路径]** 选定（如下所设置） **[!UICONTROL 设置]** > **[!UICONTROL 应用程序]** > **[!UICONTROL 发布设置]**，下 **[!UICONTROL 目录管理]** 组)，则您的Dynamic MediaExperience Manager帐户将从Dynamic Media Classic中获取文件。 然后，当您打开 **[!UICONTROL Dynamic Media发布设置]** 第一次翻页。
 
-### 請求屬性標籤 {#request-attributes-tab}
+### “请求属性”选项卡 {#request-attributes-tab}
 
-這些設定與影像的預設外觀有關。
+这些设置与图像的默认外观相关。
 
 | 设置 | 描述 |
 | --- | --- |
-| **[!UICONTROL 回复图像大小限制]** | 必填.<br>僅對於新的Dynamic Media帳戶，預設大小限制會自動設定為寬度： `3000` 和高度： `3000` 兩者 **[!UICONTROL 影像伺服]** 和 **[!UICONTROL 測試影像伺服]**.<br>指定傳回給使用者端的回覆影像寬度與高度上限。 如果要求造成回覆影像的寬度或（或）高度大於此設定，則伺服器會傳回錯誤。<br>另請參閱 [MaxPix](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-maxpix.html) Dynamic Media檢視器參考指南中的引數。 |
-| **[!UICONTROL 请求混淆模式]** | 若要將base64編碼套用至有效的請求，請啟用。<br>另請參閱 [要求模糊化](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-requestobfuscation.html) Dynamic Media檢視器參考指南中的引數。 |
-| **[!UICONTROL 请求锁定模式]** | 如果您想要在要求中包含簡單的雜湊鎖定，請啟用。<br>另請參閱 [RequestLock](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-requestlock.html) Dynamic Media檢視器參考指南中的引數。 |
+| **[!UICONTROL 回复图像大小限制]** | 必填.<br>仅对于新的Dynamic Media帐户，默认大小限制会自动设置为宽度： `3000` 和高度： `3000` （对于两者） **[!UICONTROL 图像服务]** 和 **[!UICONTROL 测试图像服务]**.<br>指定返回给客户端的最大回复图像宽度和高度。 如果请求导致回复图像的宽度和/或高度大于此设置，则服务器会返回错误。<br>另请参阅 [MaxPix](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-maxpix.html) 参数(在Dynamic Media查看器参考指南中)。 |
+| **[!UICONTROL 请求混淆模式]** | 如果希望将base64编码应用于有效请求，则启用。<br>另请参阅 [请求模糊处理](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-requestobfuscation.html) 参数(在Dynamic Media查看器参考指南中)。 |
+| **[!UICONTROL 请求锁定模式]** | 如果希望在请求中包含简单哈希锁，则启用。<br>另请参阅 [Requestlock](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-requestlock.html) 参数(在Dynamic Media查看器参考指南中)。 |
 | **[!UICONTROL 默认请求属性]** |  |
-| **[!UICONTROL 默认图像文件后缀]** | 必填.<br>路徑不包含檔案字尾時，附加至目錄Path和MaskPath欄位值的預設資料檔案副檔名。<br>另請參閱 [預設分機](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultext.html) Dynamic Media檢視器參考指南中的引數。 |
-| **[!UICONTROL 默认字体名称]** | 指定如果文字圖層要求未提供任何字型時，使用哪種字型。 如果已指定，它必須是此影像目錄的字型地圖或預設目錄的字型地圖中的有效字型名稱值。<br>另請參閱 [預設字型](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultfont.html) Dynamic Media檢視器參考指南中的引數。 |
-| **[!UICONTROL 默认图像]** | 提供預設影像，以便在找不到所要求的影像時傳回。<br>另請參閱 [預設影像](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-is-cat-defaultimage.html) Dynamic Media檢視器參考指南中的引數。<br>**注意**：如果您的Dynamic Media Classic帳戶已有 **[!UICONTROL 預設影像]** 已選取（如下所設定） **[!UICONTROL 設定]** > **[!UICONTROL 應用]** > **[!UICONTROL 發佈設定]**，下 **[!UICONTROL 預設請求屬性]** 群組)，則您的Dynamic Media帳戶(在Experience Manager上)會從Dynamic Media Classic擷取檔案。 然後檔案會儲存並在您開啟 **[!UICONTROL Dynamic Media發佈設定]** 第一次瀏覽頁面。 |
-| **[!UICONTROL 默认图像模式]** | 啟用滑桿方塊（右側的滑桿）時， **[!UICONTROL 預設影像]** 會以預設影像取代來源影像中每個遺失的圖層，並照常傳回複合影像。 停用滑桿方塊（左側滑桿）時，預設影像會取代整個複合影像，即使遺失的影像隻是數個圖層中的一個圖層亦然。<br>另請參閱 [預設影像模式](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultimagemode.html) Dynamic Media檢視器參考指南中的引數。 |
-| **[!UICONTROL 默认视图大小]** | 必填.<br>僅對於新的Dynamic Media帳戶，預設檢視大小會自動設定為「寬度」： `1280` 和高度： `1280` 兩者 **[!UICONTROL 影像伺服]** 和 **[!UICONTROL 測試影像伺服]**.<br>如果要求未明確使用指定檢視大小，伺服器會將回覆影像限製為不得大於此寬度與高度。 `wid=`， `hei=`，或 `scl=`.<br>另請參閱 [預設畫素](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultpix.html) Dynamic Media檢視器參考指南中的引數。 |
-| **[!UICONTROL 默认缩略图大小]** | 必填.<br>已使用而非屬性 **[!UICONTROL 預設檢視大小]** 對於縮圖請求(`req=tmb`)。 如果縮圖要求(`req=tmb`)不會明確使用指定大小 `wid=`， `hei=`，或 `scl=`.<br>另請參閱 [DefaultthumbPix](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultthumbpix.html) Dynamic Media檢視器參考指南中的引數。 |
-| **[!UICONTROL 默认背景颜色]** | 指定用於填滿不包含實際影像資料之回覆影像的任何區域的RGB值。<br>另請參閱 [BkgColor](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-bkgcolor.html) Dynamic Media檢視器參考指南中的引數。 |
+| **[!UICONTROL 默认图像文件后缀]** | 必填.<br>如果路径不包含文件后缀，则附加到目录Path和MaskPath字段值的默认数据文件扩展名。<br>另请参阅 [默认分机](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultext.html) 参数(在Dynamic Media查看器参考指南中)。 |
+| **[!UICONTROL 默认字体名称]** | 指定在文本图层请求未提供任何字体时使用哪种字体。 如果指定，则它必须是此图像目录的字体映射或默认目录的字体映射中的有效字体名称值。<br>另请参阅 [默认字体](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultfont.html) 参数(在Dynamic Media查看器参考指南中)。 |
+| **[!UICONTROL 默认图像]** | 提供一个默认图像，为响应未找到所请求图像的请求而返回。<br>另请参阅 [默认图像](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-is-cat-defaultimage.html) 参数(在Dynamic Media查看器参考指南中)。<br>**注意**：如果您的Dynamic Media Classic帐户已经拥有 **[!UICONTROL 默认图像]** 选定（如下所设置） **[!UICONTROL 设置]** > **[!UICONTROL 应用程序]** > **[!UICONTROL 发布设置]**，下 **[!UICONTROL 默认请求属性]** 组)，则您的Dynamic MediaExperience Manager帐户将从Dynamic Media Classic中获取文件。 然后，当您打开 **[!UICONTROL Dynamic Media发布设置]** 第一次翻页。 |
+| **[!UICONTROL 默认图像模式]** | 启用滑块框（右侧的滑块）后， **[!UICONTROL 默认图像]** 将源图像中的每个缺失图层替换为默认图像，然后照常返回复合图像。 禁用滑块框（左侧滑块）后，默认图像将替换整个复合图像，即使缺少的图像只是多个图层中的一个图层也是如此。<br>另请参阅 [默认图像模式](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultimagemode.html) 参数(在Dynamic Media查看器参考指南中)。 |
+| **[!UICONTROL 默认视图大小]** | 必填.<br>仅对于新的Dynamic Media帐户，默认视图大小会自动设置为宽度： `1280` 和高度： `1280` （对于两者） **[!UICONTROL 图像服务]** 和 **[!UICONTROL 测试图像服务]**.<br>如果请求未明确使用指定视图大小，服务器将限制回复图像不超过此宽度和高度 `wid=`， `hei=`，或 `scl=`.<br>另请参阅 [Defaultpix](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultpix.html) 参数(在Dynamic Media查看器参考指南中)。 |
+| **[!UICONTROL 默认缩略图大小]** | 必填.<br>已使用而不是属性 **[!UICONTROL 默认视图大小]** 对于缩略图请求(`req=tmb`)。 如果缩略图请求(`req=tmb`)不会使用显式指定大小 `wid=`， `hei=`，或 `scl=`.<br>另请参阅 [DefaultThumbPix](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultthumbpix.html) 参数(在Dynamic Media查看器参考指南中)。 |
+| **[!UICONTROL 默认背景颜色]** | 指定用于填充不包含实际图像数据的回复图像的任意区域的RGB值。<br>另请参阅 [BkgColor](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-bkgcolor.html) 参数(在Dynamic Media查看器参考指南中)。 |
 | **[!UICONTROL JPEG 编码属性]** |  |
-| **[!UICONTROL 质量]** | <br>指定JPEG回覆影像的預設屬性。<br>僅針對新的Dynamic Media帳戶， **[!UICONTROL 品質]** 預設值會自動設定為 `80` 兩者 **[!UICONTROL 影像伺服]** 和 **[!UICONTROL 測試影像伺服]**.<br>此欄位的定義範圍介於1到100之間。<br>另請參閱 [JpegQuality](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-jpegquality.html) Dynamic Media檢視器參考指南中的引數。 |
-| **[!UICONTROL 色度降采样]** | 啟用或停用JPEG編碼器使用的色度縮減取樣。 |
-| **[!UICONTROL 默认重新取样模式]** | 指定縮放影像資料所使用的預設重新取樣與內插屬性。 使用時機 `resMode` 請求中未指定。<br>僅對於新的Dynamic Media帳戶，預設重新取樣模式會自動設定為 `Sharp2` 兩者 **[!UICONTROL 影像伺服]** 和 **[!UICONTROL 測試影像伺服]**.<br>另請參閱 [解析模式](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-is-cat-resmode.html) Dynamic Media檢視器參考指南中的引數。 |
+| **[!UICONTROL 质量]** | <br>指定JPEG回复图像的默认属性。<br>仅对于新的Dynamic Media帐户， **[!UICONTROL 质量]** 默认值自动设置为 `80` （对于两者） **[!UICONTROL 图像服务]** 和 **[!UICONTROL 测试图像服务]**.<br>此字段在1 - 100的范围内定义。<br>另请参阅 [Jpeg品质](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-jpegquality.html) 参数(在Dynamic Media查看器参考指南中)。 |
+| **[!UICONTROL 色度降采样]** | 启用或禁用JPEG编码器使用的色度缩减像素采样。 |
+| **[!UICONTROL 默认重新取样模式]** | 指定用于缩放图像数据的默认重新取样和插值属性。 使用时机 `resMode` 未在请求中指定。<br>仅对于新的Dynamic Media帐户，默认重新取样模式会自动设置为 `Sharp2` （对于两者） **[!UICONTROL 图像服务]** 和 **[!UICONTROL 测试图像服务]**.<br>另请参阅 [解析模式](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-is-cat-resmode.html) 参数(在Dynamic Media查看器参考指南中)。 |
 
-### 通用縮圖屬性索引標籤 {#common-thumbnail-attributes-tab}
+### “常用缩略图属性”选项卡 {#common-thumbnail-attributes-tab}
 
-這些設定與縮圖影像的預設外觀和對齊有關。
+这些设置与缩略图图像的默认外观和对齐有关。
 
 | 设置 | 描述 |
 | --- | --- |
-| **[!UICONTROL 缩略图的默认背景颜色]** | 指定用來對不包含實際影像資料的輸出縮圖影像區域進行填色的RGB值。 僅用於縮圖要求(`req=tmb`)和時間 **[!UICONTROL 預設縮圖型別]** 設定已設為 **[!UICONTROL 符合]** 或 **[!UICONTROL 紋理]**.<br>另請參閱 [ThumbBkgColor](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-thumbbkgcolor.html) Dynamic Media檢視器參考指南中的引數。 |
-| **[!UICONTROL 水平对齐方式]** | 指定所指定的回覆影像矩形中縮圖影像的水準對齊方式 `wid=` 和 `hei=` 值。<br>僅用於縮圖要求(`req=tmb`)和時間 **[!UICONTROL 預設縮圖型別]** 設定已設為 **[!UICONTROL 符合]**.<br>有三種水準對齊方式可供選擇： **[!UICONTROL 置中對齊]**， **[!UICONTROL 靠左對齊]**、和 **[!UICONTROL 靠右對齊]**.<br>另請參閱 [ThumbHorizAlign](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-thumbhorizalign.html) Dynamic Media檢視器參考指南中的引數。 |
-| **[!UICONTROL 垂直对齐方式]** | 指定所指定的回覆影像矩形中的縮圖影像垂直對齊方式 `wid=` 和 `hei=` 值。 僅用於縮圖要求(`req=tmb`)和時間 **[!UICONTROL 預設縮圖型別]** 設定已設為 **[!UICONTROL 符合]**.<br>有三個垂直對齊可供選擇： **[!UICONTROL 靠上對齊]**， **[!UICONTROL 置中對齊]**、和 **[!UICONTROL 靠下對齊]**.<br>另請參閱 [ThumbVertAlign](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-thumbvertalign.html) Dynamic Media檢視器參考指南中的引數。 |
-| **[!UICONTROL 默认缓存生存时间]** | 提供預設到期時間間隔（小時），以防止特定目錄記錄未包含有效的目錄Expiration值。 設定為 `-1` 標籤為永不過期。 <br>另請參閱 [有效期](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-expiration.html) Dynamic Media檢視器參考指南中的引數。 |
-| **[!UICONTROL 默认缩略图类型]** | 提供縮圖型別的預設值，以防止特定目錄記錄未包含有效的目錄ThumbType值。 僅用於縮圖要求(`req=tmb`)。<br>有三種縮圖型別可供選擇： **[!UICONTROL 裁切]**， **[!UICONTROL 符合]**、和 **[!UICONTROL 紋理]**.<br>另請參閱 [縮圖型別](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-thumbtype.html) Dynamic Media檢視器參考指南中的引數。 |
-| **[!UICONTROL 默认缩略图分辨率]** | 提供縮圖物件解析度的預設值，以防止特定目錄記錄未包含有效的目錄ThumbRes值。 僅用於縮圖要求(`req=tmb`)以及當 **[!UICONTROL 預設縮圖型別]** 設定已設為 **[!UICONTROL 紋理]**.<br>另請參閱 [縮圖](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-thumbres.html) Dynamic Media檢視器參考指南中的引數。 |
+| **[!UICONTROL 缩略图的默认背景颜色]** | 指定用于填充不包含实际图像数据的输出缩略图图像的区域的RGB值。 仅用于缩略图请求(`req=tmb`)和时间 **[!UICONTROL 默认缩略图类型]** 设置已设置为 **[!UICONTROL 适合]** 或 **[!UICONTROL 纹理]**.<br>另请参阅 [ThumbbkgColor](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-thumbbkgcolor.html) 参数(在Dynamic Media查看器参考指南中)。 |
+| **[!UICONTROL 水平对齐方式]** | 指定由指定的回复图像矩形中的缩略图图像的水平对齐方式 `wid=` 和 `hei=` 值。<br>仅用于缩略图请求(`req=tmb`)和时间 **[!UICONTROL 默认缩略图类型]** 设置已设置为 **[!UICONTROL 适合]**.<br>有三种水平对齐方式可供选择： **[!UICONTROL 居中对齐]**， **[!UICONTROL 左对齐]**、和 **[!UICONTROL 右对齐]**.<br>另请参阅 [缩略图](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-thumbhorizalign.html) 参数(在Dynamic Media查看器参考指南中)。 |
+| **[!UICONTROL 垂直对齐方式]** | 指定由指定的回复图像矩形中的缩略图图像的垂直对齐方式 `wid=` 和 `hei=` 值。 仅用于缩略图请求(`req=tmb`)和时间 **[!UICONTROL 默认缩略图类型]** 设置已设置为 **[!UICONTROL 适合]**.<br>有三种垂直对齐方式可供选择： **[!UICONTROL 顶部对齐]**， **[!UICONTROL 居中对齐]**、和 **[!UICONTROL 底部对齐]**.<br>另请参阅 [ThumbVertAlign](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-thumbvertalign.html) 参数(在Dynamic Media查看器参考指南中)。 |
+| **[!UICONTROL 默认缓存生存时间]** | 提供特定目录记录中不包含有效目录Expiration值时的默认过期时间间隔（小时）。 设置为 `-1` 标记为永不过期。 <br>另请参阅 [过期](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-expiration.html) 参数(在Dynamic Media查看器参考指南中)。 |
+| **[!UICONTROL 默认缩略图类型]** | 提供特定目录记录中不包含有效目录ThumbType值时的缩略图类型默认值。 仅用于缩略图请求(`req=tmb`)。<br>有三种缩略图类型可供选择： **[!UICONTROL 裁切]**， **[!UICONTROL 适合]**、和 **[!UICONTROL 纹理]**.<br>另请参阅 [缩略图类型](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-thumbtype.html) 参数(在Dynamic Media查看器参考指南中)。 |
+| **[!UICONTROL 默认缩略图分辨率]** | 提供特定目录记录中不包含有效目录ThumbRes值时的缩略图对象分辨率默认值。 仅用于缩略图请求(`req=tmb`)，并且当 **[!UICONTROL 默认缩略图类型]** 设置已设置为 **[!UICONTROL 纹理]**.<br>另请参阅 [缩略图](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-thumbres.html) 参数(在Dynamic Media查看器参考指南中)。 |
 
-### 色彩管理屬性標籤 {#color-management-attributes-tab}
+### “颜色管理属性”选项卡 {#color-management-attributes-tab}
 
-這些設定會決定影像要使用的ICC色彩設定檔。
+这些设置确定用于图像的ICC颜色配置文件。
 
-**色彩轉換演算色彩比對方式**
-色彩轉換演算色彩比對方式允許覆寫使用中輪廓的預設演算色彩比對方式，以決定如何調整來源顏色。 使用時機：
+**颜色转换调色**
+颜色转换渲染方法允许覆盖工作配置文件的默认渲染方法，以确定如何调整源颜色。 在以下情况下使用：
 
-1. 其中一個預設ICC設定檔是色彩轉換的目標色域。
-1. 輸出裝置（印表機或熒幕）的特點就是此設定檔。
-1. 而且，指定的演算色彩比對方式對此設定檔有效。
+1. 默认ICC配置文件之一是颜色转换的目标颜色空间。
+1. 输出设备（打印机或显示器）的特点就是此配置文件。
+1. 并且，指定的渲染方法对此配置文件有效。
 
-不同的演算意圖會使用不同的規則來決定如何調整來源顏色。
+不同的渲染意图使用不同的规则来确定如何调整源颜色。
 
-另請參閱 [IccRenderIntent](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccrenderintent.html) Dynamic Media檢視器參考指南中的引數。
+另请参阅 [IccRenderIntent](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccrenderintent.html) 参数(在Dynamic Media查看器参考指南中)。
 
 >[!NOTE]
 >
->一般而言，最好對選取的顏色設定使用預設的色彩演算比對方式，這些設定已經過Adobe測試以符合業界標準。 例如，如果您選擇北美或歐洲的色彩設定，預設的色彩轉換演算色彩比對方式為 **[!UICONTROL 相對比色]**. 如果您為日本選擇顏色設定，預設的色彩轉換演算色彩比對方式為 **[!UICONTROL 可感知]**.
+>通常，最好对选定的颜色设置使用默认的渲染方法，该设置已经过Adobe测试以符合行业标准。 例如，如果您为北美或欧洲选择颜色设置，则默认的颜色转换渲染方法为 **[!UICONTROL 相对比色]**. 如果您为日本选择了颜色设置，则默认的颜色转换渲染方法为 **[!UICONTROL 可感知]**.
 
-| 设置 | 特性 |
+| 设置 | 特征 |
 | --- | --- |
-| **[!UICONTROL CMYK 默认颜色空间]** | 指定要用作CMYK資料的使用中設定檔的ICC色彩設定檔名稱。 若 **[!UICONTROL 未指定]** 如果選擇，則在涉及CMYK來源影像時，將停用此影像目錄的色彩管理。 所有CMYK工作空間都依裝置而定，這表示它們是以實際的油墨和紙張組合為基礎。 CMYK工作區Adobe供給是根據標準商業列印條件。<br> 另請參閱 [IccProfileCMYK](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilecmyk.html) Dynamic Media檢視器參考指南中的引數。 |
-| **[!UICONTROL 灰度默认色彩空间]** | 指定用作灰階資料使用中描述檔的ICC色彩描述檔名稱。 若 **[!UICONTROL 未指定]** 如果選擇，則在涉及灰階來源影像時，將停用此影像目錄的色彩管理。<br>另請參閱 [IccProfileGray](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilegray.html) Dynamic Media檢視器參考指南中的引數。 |
-| **[!UICONTROL RGB 默认颜色空间]** | 指定要用作RGB資料的使用中設定檔的ICC色彩設定檔名稱。 若 **[!UICONTROL 未指定]** 如果選擇，則在涉及RGB來源影像時停用此影像目錄的色彩管理。 一般來說，最好選擇 **[!UICONTROL Adobe RGB]** 或 **[!UICONTROL sRGB]**，而不是特定裝置的設定檔（例如監視器設定檔）。 **[!UICONTROL sRGB]** 當您準備網頁或行動裝置的影像時，建議使用此選項，因為它會定義在網頁上檢視影像的標準監視器的色域。 **[!UICONTROL sRGB]** 當您使用消費者等級的數位相機影像時，這也是很好的選擇，因為這些相機大多使用sRGB作為預設色彩空間。<br>另請參閱 [IccProfileRBG](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilergb.html) Dynamic Media檢視器參考指南中的引數。 |
-| **[!UICONTROL 颜色转换调色]** | **[!UICONTROL 可感知]**  — 旨在保留色彩之間的視覺關係，讓人眼覺得自然，即使色彩值本身可能會變更。 此意圖適用於具有大量超出色域顏色的攝影影像。 此設定是日本印刷業的標準色彩演算方法。 |
-|  | **[!UICONTROL 相對比色]**  — 比較來源色域和目的地色域的極端反白顯示，並相應地移動所有顏色。 超出色域的顏色會移到目標色域中最接近的可複製顏色。 相對比色會保留影像中比「感應式」更多的原始顏色。 此設定是北美和歐洲列印的標準色彩演算方式。 |
-|  | **[!UICONTROL 飽和度]**  — 嘗試在影像中產生鮮豔的色彩，以犧牲色彩精確度為代價。 此演算色彩比對方式適用於圖形或圖表等商業圖形，其中明亮飽和色彩比色彩之間的確切關係更重要。 |
-|  | **[!UICONTROL 絕對比色]**  — 讓落在目的地色域內的顏色保持不變。 超出色域的顏色會被剪裁。 不會執行將顏色縮放到目標白點的動作。 此意圖旨在維持色彩精確度，但犧牲了保留色彩之間的關係，並適合用於校樣以模擬特定裝置的輸出。 此意圖對於預覽紙張顏色如何影響列印顏色非常有用。 |
+| **[!UICONTROL CMYK 默认颜色空间]** | 指定要用作CMYK数据的工作配置文件的ICC颜色配置文件的名称。 如果 **[!UICONTROL 未指定]** 选择，则在涉及CMYK源图像时对此图像目录禁用颜色管理。 所有CMYK工作空间都取决于设备，这意味着它们基于实际的油墨和纸张组合。 CMYK工作空间的Adobe供应基于标准商业印刷条件。<br> 另请参阅 [IccProfileCMYK](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilecmyk.html) 参数(在Dynamic Media查看器参考指南中)。 |
+| **[!UICONTROL 灰度默认色彩空间]** | 指定要用作灰度数据工作配置文件的ICC颜色配置文件的名称。 如果 **[!UICONTROL 未指定]** 选择，则在涉及灰度源图像时对此图像目录禁用颜色管理。<br>另请参阅 [Icc配置文件灰色](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilegray.html) 参数(在Dynamic Media查看器参考指南中)。 |
+| **[!UICONTROL RGB 默认颜色空间]** | 指定要用作RGB数据的工作配置文件的ICC颜色配置文件的名称。 如果 **[!UICONTROL 未指定]** 选择，则在涉及RGB源图像时对此图像目录禁用颜色管理。 一般来说，最好选择 **[!UICONTROL Adobe RGB]** 或 **[!UICONTROL sRGB]**，而不是特定设备（如监视器配置文件）的配置文件。 **[!UICONTROL sRGB]** 在为Web或移动设备准备图像时，建议使用此选项，因为它定义了用于在Web上查看图像的标准监视器的颜色空间。 **[!UICONTROL sRGB]** 在处理消费者级数码相机的图像时也是一个很好的选择，因为大多数数码相机都使用sRGB作为默认颜色空间。<br>另请参阅 [IccProfileRBG](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilergb.html) 参数(在Dynamic Media查看器参考指南中)。 |
+| **[!UICONTROL 颜色转换调色]** | **[!UICONTROL 可感知]**  — 旨在保持颜色之间的视觉关系，以便人眼认为它是自然的，即使颜色价值本身可能会改变。 此意图适用于具有大量超出色域颜色的照片图像。 该设置是日本印刷业的标准渲染方法。 |
+|  | **[!UICONTROL 相对比色]**  — 将源颜色空间的极高亮度和目标颜色空间的极高亮度进行比较，并相应地移动所有颜色。 将色域外颜色移动到目标色彩空间中最接近的可再现颜色。 相对比色在图像中保留的原始颜色比感知颜色多。 此设置是北美和欧洲打印的标准渲染方法。 |
+|  | **[!UICONTROL 饱和度]**  — 尝试在图像中生成鲜艳的颜色，而牺牲颜色的准确性。 此渲染方法适用于图形或图表等商业图形，其中明亮饱和颜色比颜色之间的确切关系更重要。 |
+|  | **[!UICONTROL 绝对比色]**  — 将落在目标色域内的颜色保持不变。 超出色域的颜色会被剪切。 不执行将颜色缩放到目标白点的操作。 此意图旨在以保持颜色之间的关系为代价来保持颜色的准确性，并且适用于模拟特定设备的输出的校样。 此意图对于预览纸张颜色对打印颜色的影响非常有用。 |
 
-## 在公開資產之前先測試資產 {#test-assets-before-making-public}
+## 在公开资产之前测试资产 {#test-assets-before-making-public}
 
-Secure Testing可協助您定義安全的測試環境，並根據一組可設定的IP位址和範圍，建立健全的企業對企業解決方案。 此功能可讓您將AdobeDynamic Media部署與內容管理和業務系統的架構配對。
+Secure Testing可帮助您定义安全的测试环境，并根据一组可配置的IP地址和范围构建强大的企业对企业解决方案。 此功能可让您将AdobeDynamic Media部署与内容管理和业务系统的架构相匹配。
 
-使用Secure Testing，您可以預覽含有未發佈內容的網站測試版本。
+通过Secure Testing，您可以预览包含未发布内容的网站暂存版本。
 
-如有需要，請建立中繼環境，而非讓資產公開可用，理由如下：
+如果需要，请创建暂存环境，而不是公开资产，原因如下：
 
-* 在公開啟動前預覽網站（測試網站）。
-* 提供需要限制存取的資產，例如在B2B Web應用程式中顯示價格的eCatalog。
-* 使用防火牆後的資產，做為產品資訊管理系統、客戶服務應用程式、訓練網站等的一部分。
-
->[!NOTE]
->
->安全測試不會影響對Adobe Dynamic Media Classic的存取。 Adobe Dynamic Media Classic安全性會維持一致，且需要一般憑證才能存取Adobe Dynamic Media Classic及相關網路服務。
-
-### 安全測試的運作方式 {#how-test-assets-works}
-
-大多數企業都在防火牆後面執行網際網路。 網際網路存取可透過特定路由進行，通常透過有限的公用IP位址範圍進行。
-
-透過公司網路，您可以使用以下網站找出您的公用IP位址： [https://www.whatismyip.com](https://www.whatismyip.com/) 或向您的企業IT組織索取此資訊。
-
-透過安全測試，Adobe Dynamic Media可為中繼環境或內部應用程式建立專用的影像伺服器。 對此伺服器的任何請求都會檢查原始IP位址。 如果傳入的請求不在核准的IP位址清單中，則會傳回失敗回應。 AdobeDynamic Media公司管理員會為公司的安全測試環境設定經過核准的IP位址清單。
-
-由於原始請求的位置必須確認，因此Secure Testing服務的流量不會透過內容發佈網路(例如公用Dynamic Media Image Server流量)進行路由。 向安全測試服務提出的請求與公開Dynamic Media影像伺服器的延遲相比，稍微高一些。
-
-未發佈的資產可立即從Secure Testing服務取得，而不需要發佈。 透過這種方式，您可以在資產發佈到公開顯示的影像伺服器之前執行預覽。
+* 在公开启动之前预览网站（测试网站）。
+* 提供需要受限访问的资产，例如在B2B Web应用程序中显示价格的eCatalog。
+* 使用防火墙后的资产作为产品信息管理系统、客户服务应用程序、培训网站等的一部分。
 
 >[!NOTE]
 >
->Secure Testing服務會使用已設定內部發佈內容的目錄伺服器。 因此，如果您的公司設定為發佈至Secure Testing，則AdobeDynamic Media中任何上傳的資產都可立即透過Secure Testing服務使用。 不論資產是否標示為上傳時發佈，此功能皆為true。
+>安全测试不会影响对Adobe Dynamic Media Classic的访问。 Adobe Dynamic Media Classic安全性将保持一致，并且需要使用常规凭据来访问Adobe Dynamic Media Classic和相关Web服务。
 
-Secure Testing服務目前支援下列資產型別和功能：
+### 安全测试的工作原理 {#how-test-assets-works}
+
+大多数公司都在防火墙后运行互联网。 可以通过特定路由访问Internet，通常是通过有限的公共IP地址范围访问。
+
+通过公司网络，您可以使用以下网站确定公共IP地址 [https://www.whatismyip.com](https://www.whatismyip.com/) 或向您的公司IT部门索取此信息。
+
+通过Secure Testing，AdobeDynamic Media为暂存环境或内部应用程序建立了专用的映像服务器。 对此服务器的任何请求都会检查原始IP地址。 如果传入请求不在已批准的IP地址列表中，则会返回失败响应。 AdobeDynamic Media Company Administrator为公司的Secure Testing环境配置经过批准的IP地址列表。
+
+由于必须确认原始请求的位置，因此Secure Testing服务的流量不会像公共Dynamic Media Image Server流量那样通过内容分发网络进行路由。 向Secure Testing服务发出的请求与向公共Dynamic Media图像服务器发出的请求相比，具有略高的延迟。
+
+未发布的资产可以立即从Secure Testing服务中使用，而无需发布。 通过这种方式，您可以在将资产发布到其面向公众的图像服务器之前运行预览。
+
+>[!NOTE]
+>
+>Secure Testing Services使用配置了内部发布上下文的目录服务器。 因此，如果贵公司配置为发布到Secure Testing，则在AdobeDynamic Media中上传的任何资源都将立即可在Secure Testing服务中使用。 不论资产是否在上传时标记为发布，此功能都为true。
+
+Secure Testing服务当前支持以下资产类型和功能：
 
 * 图像.
-* 暈映（轉譯器伺服器請求）。
-* 轉譯器伺服器請求（受支援，但必須由客戶明確請求）。
-* 集，包括影像集、eCatalog、演算集和媒體集。
-* 標準AdobeDynamic Media多媒體檢視器。
-* AdobeDynamic Media OnDemand JSP頁面。
-* 靜態內容，例如PDF檔案和逐步提供的視訊。
-* HTTP視訊串流。
-* 漸進式視訊串流。
+* 晕影（渲染服务器请求）。
+* 渲染服务器请求（受支持，但必须由客户明确请求）。
+* 集，包括图像集、eCatalog、渲染集和媒体集。
+* 标准AdobeDynamic Media富媒体查看器。
+* AdobeDynamic Media OnDemand JSP页。
+* 静态内容，例如PDF文件和逐步提供的视频。
+* HTTP视频流。
+* 渐进式视频流。
 
-目前不支援下列資產型別和功能：
+当前不支持以下资产类型和功能：
 
-* Adobe Dynamic Media Classic資訊或eCatalog搜尋
-* RTMP視訊串流
-* 網頁列印
-* UGC （使用者產生的內容）服務
+* Adobe Dynamic Media Classic信息或eCatalog搜索
+* RTMP视频流
+* Web打印
+* UGC（用户生成的内容）服务
 
    >[!IMPORTANT]
    >
-   >自2023年5月1日起，Dynamic Media中的UGC資產最多可在上傳日期後60天內使用。 60天後，資產將會移除。
+   >从2023年5月1日开始，Dynamic Media中的UGC资源最多可在上传日期后60天内使用。 60天后，这些资产将被删除。
 
    >[!NOTE]
    >
-   >Adobe Dynamic Media已於2021年9月30日停止支援新的或現有的UGC向量影像資產。
+   >对AdobeDynamic Media中新增或现有UGC矢量图像资源的支持已于2021年9月30日终止。
 
-### 測試Secure Testing service {#test-secure-testing-service}
+### 测试Secure Testing service {#test-secure-testing-service}
 
-若要確保Secure Testing服務如預期般運作，請執行以下操作：
+要确保Secure Testing服务按预期工作，请执行以下操作：
 
-#### 準備您的帳戶
+#### 准备帐户
 
-1. 請聯絡Adobe客戶服務，要求他們在您的帳戶上啟用安全測試。
-1. 在Adobe Experience Manager中選取 **[!UICONTROL 工具]** > **[!UICONTROL 資產]** > **[!UICONTROL Dynamic Media發佈設定]**.
-1. 在「影像伺服器」頁面的 **[!UICONTROL 發佈內容]** 下拉式清單，選取 **[!UICONTROL 測試影像伺服]**.
-1. 選取 **[!UICONTROL 安全性]** 標籤。
-1. 對於 **[!UICONTROL 使用者端位址]** 篩選，選取 **[!UICONTROL 新增]**.
-1. 在 **[!UICONTROL ip位址]** 欄位，輸入IP位址。
-1. 在 **[!UICONTROL 遮色片]** 欄位，輸入網路遮色片。
+1. 联系Adobe客户关怀部门，要求他们在您的帐户上启用安全测试。
+1. 在Adobe Experience Manager中，选择 **[!UICONTROL 工具]** > **[!UICONTROL 资产]** > **[!UICONTROL Dynamic Media发布设置]**.
+1. 在“图像服务器”页面的 **[!UICONTROL 发布上下文]** 下拉列表，选择 **[!UICONTROL 测试图像服务]**.
+1. 选择 **[!UICONTROL 安全性]** 选项卡。
+1. 对于 **[!UICONTROL 客户端地址]** 过滤器，选择 **[!UICONTROL 添加]**.
+1. 在 **[!UICONTROL IP地址]** 字段，键入IP地址。
+1. 在 **[!UICONTROL 蒙版]** 字段，键入网络掩码。
 
    >[!NOTE]
    >
-   >如果您新增一個以上的IP位址和網路遮罩，它實際上會允許 *全部* 進行資產呼叫的IP位址，這些位址都會顯示。
+   >如果添加多个IP地址和网络掩码，它将有效地允许 *所有* 用于发起资产调用的IP地址，这些地址都会显示。
 
 1. 执行下列操作之一：
 
-   * 若要新增更多IP位址，請重複前三個步驟。
-   * 繼續下一步驟。
+   * 要添加更多IP地址，请重复前三个步骤。
+   * 继续下一步骤。
 
-1. 在「影像伺服器」頁面的右上角，選取 **[!UICONTROL 儲存]**.
-1. 將所需的影像上傳至您的AdobeDynamic Media帳戶。
+1. 在“图像服务器”页面的右上角，选择 **[!UICONTROL 保存]**.
+1. 将所需的图像上传到您的AdobeDynamic Media帐户。
 
 <!--    See [Upload files](uploading-files.md#uploading_files). -->
 
-1. 請確定部分影像已標示為發佈，其他影像未標示，然後提交發佈工作。
+1. 确保将某些图像标记为发布，将其他图像标记为未标记，然后提交发布作业。
 
 <!--    See [Publish files](publishing-files.md#publishing_files). -->
 
-1. 請前往「 」，判斷Secure Testing服務的名稱 **[!UICONTROL 工具]** > **[!UICONTROL 資產]** > **[!UICONTROL Dynamic Media一般設定]**.
-1. 於 **[!UICONTROL 伺服器]** 頁面，在頁面右側尋找伺服器名稱 **[!UICONTROL 已發佈的伺服器名稱]**.
+1. 通过转到 **[!UICONTROL 工具]** > **[!UICONTROL 资产]** > **[!UICONTROL Dynamic Media常规设置]**.
+1. 在 **[!UICONTROL 服务器]** 页面上，在的右侧查找服务器名称 **[!UICONTROL 已发布的服务器名称]**.
 
-如果伺服器名稱遺失或伺服器的URL無法運作，請聯絡Adobe服務。
+如果Adobe名称缺失或指向服务器的URL不起作用，请联系服务器关怀团队。
 
-#### 準備網站變數
+#### 准备网站变体
 
-您需要連結已發佈和未發佈資產的兩個網站變體：
+您需要链接已发布和未发布资产的网站的两个变体：
 
-* 公開版本 — 使用傳統AdobeDynamic Media URL語法連結資產。
-* 測試版本 — 使用相同語法但具有安全測試網站名稱的連結資產。
+* 公共版本 — 使用传统的AdobeDynamic Media URL语法链接资源。
+* 暂存版本 — 使用相同的语法但使用安全测试站点名称链接资产。
 
-#### 執行測試
+#### 运行测试
 
-執行下列測試：
+执行以下测试：
 
-1. 檢查資產是否可從公司網路中看見。
+1. 检查资产是否在公司网络中可见。
 
-   從先前定義的IP位址範圍所識別的公司網路中，網站的測試版本會顯示所有影像，無論是否標籤為發佈。 因此，您可以在測試時避免在預覽核准或產品上市之前意外提供影像。
+   从以前定义的IP地址范围标识的公司网络内，网站的暂存版本会显示所有图像，无论是否标记为发布。 因此，您可以在测试时避免在预览批准或产品发布之前意外使图像可用。
 
-   確認您的網站公開版本會顯示已發佈的資產，如同先前在AdobeDynamic Media時所體驗的一樣。
+   确认您的网站的公共版本显示已发布的资源，就像以前在AdobeDynamic Media时所做的那样。
 
-1. 從公司網路外部，確認未發佈的資產（即未標籤為發佈）受到保護，不會受到第三方存取。
+1. 在公司网络之外，验证未发布的资产（即未标记为发布的资产）是否受到第三方访问的保护。
 
-   從外部存取您的網路（例如從您的家用電腦或透過4G/5G連線），然後確認公用版本的網站是否顯示所有已發佈的資產，但不顯示任何未發佈的內容。
+   从外部访问您的网络（例如，从您的家庭计算机或通过4G/5G连接），然后验证公共版本的网站是否显示所有已发布的资产，但不显示任何未发布的内容。
 
-   確認測試版本未顯示任何資產，因為您正從未核准的IP位址存取Secure Testing服務。
+   确认暂存版本未显示任何资产，因为您正从未批准的IP地址访问Secure Testing服务。

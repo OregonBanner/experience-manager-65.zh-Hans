@@ -1,7 +1,7 @@
 ---
-title: 設定進階系統屬性
+title: 配置高级系统属性
 seo-title: Configure advanced system attributes
-description: 您可以在「設定進階系統屬性」頁面修改組態檔中的某些設定值，而不需要匯出、編輯和匯入檔案。
+description: 使用“配置高级系统属性”页可以修改配置文件中的某些设置，而无需导出、编辑和导入文件。
 seo-description: Use the Configure Advanced System Attributes page to modify certain settings in the configuration file without the need to export, edit, and import the file.
 uuid: 6bcfbaa9-f492-46aa-97d2-00fc3e67d0d7
 contentOwner: admin
@@ -17,35 +17,35 @@ ht-degree: 1%
 
 ---
 
-# 設定進階系統屬性 {#configure-advanced-system-attributes}
+# 配置高级系统属性 {#configure-advanced-system-attributes}
 
-您可以在「設定進階系統屬性」頁面修改組態檔中的某些設定值，而不需要匯出、編輯和匯入檔案。 (請參閱 [匯入和匯出組態檔](/help/forms/using/admin-help/importing-exporting-configuration-file.md#importing-and-exporting-the-configuration-file).)
+使用“配置高级系统属性”页可以修改配置文件中的某些设置，而无需导出、编辑和导入文件。 (请参阅 [导入和导出配置文件](/help/forms/using/admin-help/importing-exporting-configuration-file.md#importing-and-exporting-the-configuration-file).)
 
-1. 在管理控制檯中，按一下 **[!UICONTROL 設定>使用者管理>設定>設定進階系統屬性]**.
-1. （可選）變更下列任一工作階段屬性：
+1. 在管理控制台中，单击 **[!UICONTROL 设置>用户管理>配置>配置高级系统属性]**.
+1. （可选）更改以下任何会话属性：
 
-   **工作階段逾時限制（分鐘）：** 使用者自動從系統登出之前經過的時間長度，以分鐘為單位。 根據預設，AEM表單元件（例如Workbench）會在兩小時後逾時（無論活動或非活動狀態為何），使用者必須重新登入。 有效值為 `1` 至 `1440`. 預設值為 `120` （2小時）。 此設定會更新 `SAML/Producer/assertionValidityInMinutes` 專案金鑰。
+   **会话超时限制（分钟）：** 用户自动注销系统之前经过的时间（以分钟为单位）。 默认情况下，AEM表单组件（如Workbench）会在两小时后超时，无论是否处于非活动状态，用户必须重新登录。 有效值为 `1` 到 `1440`. 默认值为 `120` （2小时）。 此设置将更新 `SAML/Producer/assertionValidityInMinutes` 输入键。
 
    >[!NOTE]
    >
-   >您不應該將工作階段逾時限制設定在10分鐘以下，因為系統可能無法正常運作。 建議值為10-120 （分鐘）。
+   >不应将会话超时限制设置为低于10分钟，因为系统可能无法正常运行。 建议值为10-120（分钟）。
 
-   **判斷提示臨界值（秒）：** 因叢集中AEM表單應用程式伺服器之間的系統時間差異而抵消延遲的緩衝時間。 AEM forms會根據此屬性中指定的時間量（以秒為單位），將使用者的登入時間倒推。 有效值為 `0` 至 `3600`. 默认值为 `60`。此設定會更新 `SAML/Producer/assertionThresholdInSeconds` 專案金鑰。
+   **断言阈值（秒）：** 由于集群中AEM表单应用程序服务器之间的系统时间差而抵消延迟的缓冲时间。 AEM forms根据此属性中指定的时间量（以秒为单位）来回溯用户的登录时间。 有效值为 `0` 到 `3600`. 默认值为 `60`。此设置将更新 `SAML/Producer/assertionThresholdInSeconds` 输入键。
 
-   **宣告允許的最長續約時間：** 不需登入即可透明更新使用者工作階段的最大次數。 有效值為 `0` 至 `9999`. 值 `0` 表示宣告不會續約。 默认值为 10。此設定會更新 `SAML/Producer/maxAssertionRenewalCount` 專案金鑰。
+   **允许续订断言的最大值：** 无需登录即可透明续订用户会话的最大次数。 有效值为 `0` 到 `9999`. 值 `0` 意味着断言不会更新。 默认值为 10。此设置将更新 `SAML/Producer/maxAssertionRenewalCount` 输入键。
 
-1. （選擇性）變更下列任何目錄同步處理屬性：
+1. （可选）更改以下任何目录同步属性：
 
-   **同步統計資料記錄：** 指定「使用者管理」是否在同步處理期間記錄詳細的統計資料。 (請參閱 [在同步處理期間啟用或停用詳細記錄](/help/forms/using/admin-help/synchronizing-directories.md#enable-or-disable-detailed-logging-during-synchronization).)
+   **同步统计信息日志记录：** 指定用户管理是否在同步过程中记录详细的统计信息。 (请参阅 [在同步期间启用或禁用详细日志记录](/help/forms/using/admin-help/synchronizing-directories.md#enable-or-disable-detailed-logging-during-synchronization).)
 
-   **同步完成器Cron運算式：** User Management重試同步失敗的時間間隔。 (請參閱 [設定目錄同步處理重試選項](/help/forms/using/admin-help/synchronizing-directories.md#configure-the-directory-synchronization-retry-option).)
+   **Synch Finisher Cron表达式：** User Management重试同步失败的间隔。 (请参阅 [配置目录同步重试选项](/help/forms/using/admin-help/synchronizing-directories.md#configure-the-directory-synchronization-retry-option).)
 
-   **叢集工作鎖定逾時（分鐘）：** 用於叢集環境。 如果一個節點上的同步化失敗，且叢集鎖定未釋放，此值會指定另一個節點在強製取得鎖定之前等待的分鐘數。 預設值為 `15` 分鐘。 有效值為 `1` 至 `1440` 分鐘。
+   **群集作业锁定超时（分钟）：** 在群集环境中使用。 如果一个节点上的同步失败且未释放群集锁定，该值指定另一个节点在强制获取锁定之前等待的分钟数。 默认值为 `15` 分钟。 有效值为 `1` 到 `1440` 分钟。
 
-1. （可選）變更下列屬性，然後按一下 **[!UICONTROL 確定]**：
+1. （可选）更改以下属性，然后单击 **[!UICONTROL 确定]**：
 
-   **使用者管理員事件稽核：** 選取此選項可啟用目錄同步化事件和驗證事件（例如成功、失敗和鎖定）的稽核。 依預設，除非您安裝需要稽核的元件(例如Rights Management)，否則不會選取此選項。 此設定會更新 `APSAuditService` 專案金鑰。
+   **用户管理器事件审核：** 选择此选项可启用目录同步事件和身份验证事件（如成功、失败和锁定）的审核。 默认情况下，除非安装了需要审核的组件(例如Rights Management)，否则不会选择此选项。 此设置将更新 `APSAuditService` 输入键。
 
-   **自動建立動態群組：** 啟用根據電子郵件網域自動建立動態群組。 (請參閱 [建立動態群組](/help/forms/using/admin-help/creating-configuring-groups.md#create-a-dynamic-group).)
+   **自动创建动态组：** 支持基于电子邮件域自动创建动态组。 (请参阅 [创建动态组](/help/forms/using/admin-help/creating-configuring-groups.md#create-a-dynamic-group).)
 
-您也可以按一下「重新載入」，回覆成原始的「使用者管理」設定。
+您还可以通过单击“重新加载”恢复为原始的“用户管理”设置。

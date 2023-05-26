@@ -1,6 +1,6 @@
 ---
-title: 啟用偵測重複資產
-description: 瞭解如何在Experience Manager中啟用重複資產偵測。
+title: 启用重复资产检测
+description: 了解如何在Experience Manager中启用重复资源检测。
 contentOwner: AG
 role: User, Admin
 feature: Asset Management,Asset Reports
@@ -12,21 +12,21 @@ ht-degree: 0%
 
 ---
 
-# 啟用偵測重複資產 {#enable-detection-of-duplicate-assets}
+# 启用重复资产检测 {#enable-detection-of-duplicate-assets}
 
-如果您嘗試上傳中存在的資產 [!DNL Adobe Experience Manager Assets]，重複資料偵測功能會將其識別為重複資料。 重複資料偵測預設為停用。 若要啟用此功能，請執行下列步驟：
+如果您尝试上传中存在的资产 [!DNL Adobe Experience Manager Assets]，则重复项检测功能会将其标识为重复项。 默认情况下禁用重复检测。 要启用该功能，请执行以下步骤：
 
-1. 開啟 [!DNL Experience Manager] 存取Web主控台設定頁面 `https://[aem_server]:[port]/system/console/configMgr`.
-1. 編輯servlet的設定 **[!UICONTROL Day CQ DAM建立資產]**.
-1. 選取 **[!UICONTROL 偵測重複專案]** 選項，然後按一下 **[!UICONTROL 儲存]**.
+1. 打开 [!DNL Experience Manager] 通过访问Web Console配置页 `https://[aem_server]:[port]/system/console/configMgr`.
+1. 编辑servlet的配置 **[!UICONTROL Day CQ DAM创建资产]**.
+1. 选择 **[!UICONTROL 检测重复项]** 选项，然后单击 **[!UICONTROL 保存]**.
 
-   ![選取servlet中的偵測重複選項](assets/chlimage_1-377.png)
+   ![在servlet中选择检测重复项选项](assets/chlimage_1-377.png)
 
-   *圖：選取servlet中的偵測重複選項。*
+   *图：在servlet中选择检测重复项选项。*
 
-現在已在中啟用偵測重複功能 [!DNL Assets]. 當使用者嘗試上傳中存在的資產時 [!DNL Experience Manager]，系統會檢查衝突並加以指示。 資產識別使用儲存於的SHA-1雜湊 `jcr:content/metadata/dam:sha1`，這表示不論檔案名稱為何，都會偵測到重複的資產。
+现在在中启用了检测重复项功能 [!DNL Assets]. 当用户尝试上传中存在的资产时 [!DNL Experience Manager]，系统会检查冲突并指示冲突。 使用存储在以下位置的SHA-1哈希标识资产： `jcr:content/metadata/dam:sha1`，这意味着不论文件名如何，都会检测到重复的资产。
 
 >[!MORELIKETHIS]
 >
->* [複製現有存放庫中的資產（來自社群成員的教學課程）](https://experience-aem.blogspot.com/2019/06/aem-65-find-duplicate-assets-binaries-in-existing-repository.html)
+>* [复制现有存储库中的资产（社区成员的教程）](https://experience-aem.blogspot.com/2019/06/aem-65-find-duplicate-assets-binaries-in-existing-repository.html)
 

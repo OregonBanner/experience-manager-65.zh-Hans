@@ -1,7 +1,7 @@
 ---
-title: 「Microsoft SQL Server資料庫：微調設定」
+title: “Microsoft SQL Server数据库：微调配置”
 seo-title: "Microsoft SQL Server database: Fine-tuning the configuration"
-description: 瞭解如何微調Microsoft SQL Server資料庫的設定。
+description: 了解如何微调Microsoft SQL Server数据库的配置。
 seo-description: Learn how you can fine tune the configuration of your Microsoft SQL Server database.
 uuid: 2d618aab-3c67-4edb-a28f-a20904689e6f
 contentOwner: admin
@@ -17,24 +17,24 @@ ht-degree: 0%
 
 ---
 
-# Microsoft SQL Server資料庫：微調組態 {#microsoft-sql-server-database-fine-tuning-the-configuration}
+# Microsoft SQL Server数据库：微调配置 {#microsoft-sql-server-database-fine-tuning-the-configuration}
 
-使用Microsoft SQL Server時，您應該變更預設組態設定。 在OracleEnterprise Manager中以滑鼠右鍵按一下本機伺服器，即可存取特性對話方塊。
+在使用Microsoft SQL Server时，您应该更改默认配置设置。 右键单击OracleEnterprise Manager中的本地服务器以访问“属性”对话框。
 
-## 記憶體設定 {#memory-settings}
+## 内存设置 {#memory-settings}
 
-將最小記憶體配置變更為儘可能大的數字。 如果資料庫是在另一部電腦上執行，請使用所有記憶體。 預設設定不會積極地分配記憶體，這會阻礙幾乎所有資料庫的效能。 您應該最積極地分配生產機器上的記憶體。
+将最小内存分配更改为尽可能大的数字。 如果数据库运行在单独的计算机上，请使用所有内存。 默认设置不会积极分配内存，这几乎会阻碍任何数据库的性能。 在生产计算机上分配内存时，您应该表现得最为积极。
 
-## 處理器設定 {#processor-settings}
+## 处理器设置 {#processor-settings}
 
-修改處理器設定，最重要的是選取[Boost SQL Server Priority On Windows]核取方塊，讓伺服器使用儘可能多的週期。 「使用NT光纖」設定並不重要，但您也可以選取它。
+修改处理器设置，最重要的是，选中Boost SQL Server Priority On Windows复选框，以便服务器使用尽可能多的周期。 使用NT光纤设置不太重要，但您也可以选择它。
 
-## 資料庫設定 {#database-settings}
+## 数据库设置 {#database-settings}
 
-變更資料庫設定。 最重要的設定是「復原間隔」，它指定當機後等待復原的最長時間。 預設設定為一分鐘。 使用較大的值（從5分鐘到15分鐘）可改善效能，因為可讓伺服器有更多的時間將資料庫記錄檔的變更寫入資料庫檔案。
+更改数据库设置。 最重要的设置是“恢复间隔”，它指定崩溃后等待恢复的最长时间。 默认设置为1分钟。 使用较大的值（从5分钟到15分钟）可提高性能，因为它使服务器有更多的时间将更改从数据库日志写回数据库文件。
 
 >[!NOTE]
 >
->此設定不會影響交易式行為，因為它只會變更啟動時必須執行的記錄檔重新執行長度。
+>此设置不会影响事务性行为，因为它仅更改启动时必须执行的日志文件重放的长度。
 
-將記錄檔和資料檔案的「空間配置」大小設定為比初始資料庫大得多。 考慮資料庫在一年中的成長量。 理想情況下，記錄檔和資料檔會以連續範圍配置，以免資料分散到整個磁碟上。
+将日志和数据文件的“空间已分配”大小设置为远大于初始数据库。 考虑数据库在一年中的增长量。 理想情况下，日志文件和数据文件是连续地分配的，因此数据最终不会分散到整个磁盘上。

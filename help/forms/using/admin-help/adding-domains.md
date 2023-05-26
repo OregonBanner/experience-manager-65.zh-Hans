@@ -1,7 +1,7 @@
 ---
-title: 新增網域
+title: 添加域
 seo-title: Adding domains
-description: 瞭解如何使用網域管理設定和網域名稱和ID的一般考量來新增企業、本機或混合網域。
+description: 了解如何使用域管理设置以及域名和ID的一般注意事项来添加企业、本地或混合域。
 seo-description: Learn how to add an enterprise, local, or hybrid domain using Domain Management settings and general considerations for domain names and IDs.
 uuid: 3ae1e5d4-ea5b-4e0b-be97-3957c3702d5f
 contentOwner: admin
@@ -17,72 +17,72 @@ ht-degree: 0%
 
 ---
 
-# 新增網域 {#adding-domains}
+# 添加域 {#adding-domains}
 
-## 新增企業網域 {#add-an-enterprise-domain}
+## 添加企业域 {#add-an-enterprise-domain}
 
-1. 在管理控制檯中，按一下「設定>使用者管理>網域管理」。
-1. 按一下新增企業網域。
-1. 在ID方塊中，輸入網域的唯一識別碼，然後在「名稱」方塊中，輸入網域的描述性名稱。 (請參閱 [網域名稱和ID的重要考量](adding-domains.md#important-considerations-for-domain-names-and-ids).)
-1. 指定是否啟用帳戶鎖定。 (請參閱 [設定帳戶鎖定設定](/help/forms/using/admin-help/configure-account-locking-settings.md#configure-account-locking-settings).) 依預設，會選取[啟用帳戶鎖定]。
-1. 按一下「新增驗證」，然後在「驗證提供者」清單中，根據您的組織所使用的驗證機制選取提供者。 可能的值包括LDAP、Kerberos、SAML或自訂驗證提供者。
+1. 在管理控制台中，单击设置>用户管理>域管理。
+1. 单击新建企业域。
+1. 在ID框中，键入域的唯一标识符，然后在“名称”框中，键入域的描述性名称。 (请参阅 [有关域名和ID的重要注意事项](adding-domains.md#important-considerations-for-domain-names-and-ids).)
+1. 指定是否启用帐户锁定。 (请参阅 [配置帐户锁定设置](/help/forms/using/admin-help/configure-account-locking-settings.md#configure-account-locking-settings).) 默认情况下，“启用帐户锁定”处于选中状态。
+1. 单击添加验证，然后在“验证提供方”列表中选择一个提供方，具体取决于您的组织使用的验证机制。 可能的值包括LDAP、Kerberos、SAML或自定义身份验证提供程序。
 
-   如果您選取LDAP，則可以使用目錄組態中指定的LDAP伺服器，也可以選擇不同的LDAP伺服器來用於驗證。 如果您選擇不同的伺服器，您的使用者必須存在於兩個LDAP伺服器上。
+   如果选择LDAP，可以使用目录配置中指定的LDAP服务器，也可以选择其他LDAP服务器用于身份验证。 如果选择其他服务器，您的用户必须存在于两个LDAP服务器上。
 
-1. 在頁面上提供所需的任何其他資訊。 (請參閱 [驗證設定](/help/forms/using/admin-help/configuring-authentication-providers.md#authentication-settings).)
-1. 新增目錄或自訂服務提供者介面(SPI)。 (請參閱 [新增目錄或自訂SPI](/help/forms/using/admin-help/configuring-directories.md#adding-directories-or-custom-spis).)
-1. 按一下「完成」，然後按一下「確定」。
+1. 在页面上提供所需的任何其他信息。 (请参阅 [身份验证设置](/help/forms/using/admin-help/configuring-authentication-providers.md#authentication-settings).)
+1. 添加目录或自定义服务提供者接口(SPI)。 (请参阅 [添加目录或自定义SPI](/help/forms/using/admin-help/configuring-directories.md#adding-directories-or-custom-spis).)
+1. 单击“Finish（完成）” ，然后单击“OK（确定）”。
 
-建立企業網域後，手動同步目錄或建立觸發程式以執行同步，然後「使用者管理」才能使用它。 然後，您可以設定目錄同步處理排程，並視需要執行手動同步處理。 (請參閱 [同步目錄](/help/forms/using/admin-help/synchronizing-directories.md#synchronizing-directories).)
+创建企业域后，手动同步目录或创建触发器以执行同步，然后User Management才能使用它。 然后，可以设置目录同步计划并根据需要执行手动同步。 (请参阅 [同步目录](/help/forms/using/admin-help/synchronizing-directories.md#synchronizing-directories).)
 
-## 新增本機網域 {#add-a-local-domain}
+## 添加本地域 {#add-a-local-domain}
 
-1. 在管理控制檯中，按一下「設定>使用者管理>網域管理」。
-1. 按一下「新增本機網域」。
-1. 在ID方塊中，輸入網域的唯一識別碼，並在Name方塊中，輸入網域的描述性名稱。 (請參閱 [網域名稱和ID的重要考量](adding-domains.md#important-considerations-for-domain-names-and-ids).)
-1. 指定是否啟用帳戶鎖定，然後按一下[確定]。 (請參閱 [設定帳戶鎖定設定](/help/forms/using/admin-help/configure-account-locking-settings.md#configure-account-locking-settings).) 依預設，會選取[啟用帳戶鎖定]。
+1. 在管理控制台中，单击设置>用户管理>域管理。
+1. 单击“新建本地域”。
+1. 在ID框中，键入域的唯一标识符，然后在“名称”框中，键入域的描述性名称。 (请参阅 [有关域名和ID的重要注意事项](adding-domains.md#important-considerations-for-domain-names-and-ids).)
+1. 指定是否启用帐户锁定，然后单击确定。 (请参阅 [配置帐户锁定设置](/help/forms/using/admin-help/configure-account-locking-settings.md#configure-account-locking-settings).) 默认情况下，“启用帐户锁定”处于选中状态。
 
-## 新增混合網域 {#add-a-hybrid-domain}
+## 添加混合域 {#add-a-hybrid-domain}
 
-1. 在管理控制檯中，按一下「設定>使用者管理>網域管理」。
-1. 按一下「新增混合式網域」。
-1. 在ID方塊中，輸入網域的唯一識別碼，並在Name方塊中，輸入網域的描述性名稱。 (請參閱 [網域名稱和ID的重要考量](adding-domains.md#important-considerations-for-domain-names-and-ids).)
-1. 按一下「新增驗證」，然後在「驗證提供者」清單中，根據您的組織所使用的驗證機制選取提供者。 可能的值包括LDAP、Kerberos、SAML或自訂驗證提供者。
-1. 在頁面上提供所需的任何其他資訊。 (請參閱 [驗證設定](/help/forms/using/admin-help/configuring-authentication-providers.md#authentication-settings).)
-1. 按一下「確定」，然後再次按一下「確定」。
+1. 在管理控制台中，单击设置>用户管理>域管理。
+1. 单击“新建混合域”。
+1. 在ID框中，键入域的唯一标识符，然后在“名称”框中，键入域的描述性名称。 (请参阅 [有关域名和ID的重要注意事项](adding-domains.md#important-considerations-for-domain-names-and-ids).)
+1. 单击添加验证，然后在“验证提供方”列表中选择一个提供方，具体取决于您的组织使用的验证机制。 可能的值包括LDAP、Kerberos、SAML或自定义身份验证提供程序。
+1. 在页面上提供所需的任何其他信息。 (请参阅 [身份验证设置](/help/forms/using/admin-help/configuring-authentication-providers.md#authentication-settings).)
+1. 单击“确定”，然后再次单击“确定”。
 
-## 網域名稱和ID的重要考量 {#important-considerations-for-domain-names-and-ids}
+## 有关域名和ID的重要注意事项 {#important-considerations-for-domain-names-and-ids}
 
-選擇網域名稱和ID時，請記住以下注意事項：
+选择域名和ID时，请牢记以下注意事项：
 
-### 一般考量 {#general-considerations}
+### 一般注意事项 {#general-considerations}
 
-* 當您使用DB2以外的資料庫提供者時，網域ID最多可包含50個位元組。 如果您使用單位元組ASCII字元，上限為50個字元。 如果網域識別碼包含多位元組字元，則此限制會降低。 例如，如果您建立的網域識別碼包含3個位元組字元，則限製為16個字元。 此外，您無法建立包含4位元組字元的網域。 如果您建立的網域ID超過此限制，AEM表單將處於不穩定狀態。 若要從此不穩定狀態復原，請參閱&quot; [移除包含延伸或多位元組字元的網域](adding-domains.md#remove-a-domain-that-contains-extended-or-multi-byte-characters)」在本頁上。
-* 可在AEM表單中建立的企業網域和本機網域數目，取決於每個網域ID的長度。 當您新增企業或混合式網域時，「使用者管理」會更新AEM表單組態檔(config.xml)之AuthProviders節點中的configInstance字串。 configInstance字串包含與授權提供者相關聯之所有網域的絕對路徑清單（以冒號分隔）。 此字串的大小限製為8192個字元。 當達到該限制時，您無法建立其他網域。
+* 当您使用DB2以外的数据库提供程序时，域ID最多可包含50字节。 如果使用单字节ASCII字符，则限制为50个字符。 如果域标识符包含多字节字符，则此限制会降低。 例如，如果创建的域标识符包含3字节字符，则限制为16个字符。 此外，不能创建包含4字节字符的域。 如果您创建的域ID超过此限制，则AEM表单将处于不稳定状态。 要从这种不稳定状态中恢复，请参见“ [删除包含扩展字符或多字节字符的域](adding-domains.md#remove-a-domain-that-contains-extended-or-multi-byte-characters)”。
+* 可以在AEM表单中创建的企业域和本地域的数量取决于每个域ID的长度。 添加企业域或混合域时，“用户管理”会更新AEM Forms配置文件(config.xml)的AuthProviders节点中的configInstance字符串。 configInstance字符串包含与授权提供程序关联的所有域的绝对路径列表（以冒号分隔）。 此字符串的大小限制为8192个字符。 当达到该限制时，您将无法创建其他域。
 
-### 使用DB2時的注意事項 {#considerations-when-using-db2}
+### 使用DB2时的注意事项 {#considerations-when-using-db2}
 
-在AEM表單資料庫中使用DB2時，網域ID的允許長度上限取決於使用的字元型別：
+为AEM forms数据库使用DB2时，允许的最大域ID长度取决于使用的字符类型：
 
-* 100單位元組(ASCII) （例如使用英文、法文或德文的字元）
-* 50個雙位元組（例如中文、日文或韓文使用的字元）
-* 25個四位元組（例如，繁體中文中使用的字元）
+* 100个单字节(ASCII)（例如，使用英语、法语或德语字符）
+* 50双字节（例如，用于中文、日语或韩语的字符）
+* 25个四字节（例如，繁体中文中使用的字符）
 
-### 使用MySQL時的注意事項 {#considerations-when-using-mysql}
+### 使用MySQL时的注意事项 {#considerations-when-using-mysql}
 
-使用MySQL做為AEM表單資料庫時，會套用下列限制：
+将MySQL用作AEM表单数据库时，以下限制适用：
 
-* 網域ID和網域名稱僅使用單位元組(ASCII)字元。 如果您使用擴充ASCII字元，AEM表單將會處於不穩定狀態，而且如果您嘗試刪除網域，可能會擲回例外狀況。 若要從此不穩定狀態復原，請參閱&quot; [移除包含延伸或多位元組字元的網域](adding-domains.md#remove-a-domain-that-contains-extended-or-multi-byte-characters)」主題。
-* 您無法建立兩個同名但大小寫不同的網域。 例如，嘗試建立名為 *Adobe* 當網域名為 *adobe* 已經存在導致錯誤。
-* 「使用者管理」無法區分僅在使用擴充字元時不同的兩個網域名稱。 例如，如果您建立名為 *abcde* 和名為的網域 *abcde*，則視為相同。
+* 域ID和域名仅使用单字节(ASCII)字符。 如果您使用扩展ASCII字符，AEM表单将处于不稳定状态，并且在您尝试删除域时可能会引发异常。 要从这种不稳定状态中恢复，请参见“ [删除包含扩展字符或多字节字符的域](adding-domains.md#remove-a-domain-that-contains-extended-or-multi-byte-characters)”主题。
+* 您不能创建两个同名但大小写不同的域。 例如，尝试创建名为的域 *Adobe* 当域名为 *adobe* 已存在导致错误。
+* “用户管理”无法区分仅在使用扩展字符时不同的两个域名。 例如，如果您创建一个名为 *abcde* 和名为的域 *abcde*，则它们被视为相同。
 
-### 移除包含延伸或多位元組字元的網域 {#remove-a-domain-that-contains-extended-or-multi-byte-characters}
+### 删除包含扩展字符或多字节字符的域 {#remove-a-domain-that-contains-extended-or-multi-byte-characters}
 
-1. 匯出組態檔，如所述 [匯入和匯出組態檔](/help/forms/using/admin-help/importing-exporting-configuration-file.md#importing-and-exporting-the-configuration-file).
-1. 開啟組態檔，並在「網域」節點下，找出名稱屬性與使用延伸或多位元組字元建立的網域名稱相符的節點。 刪除與該網域相關的整個節點。
-1. 在您的資料庫中，搜尋edprincipaldomainentity表格中的網域：
+1. 导出配置文件，如中所述 [导入和导出配置文件](/help/forms/using/admin-help/importing-exporting-configuration-file.md#importing-and-exporting-the-configuration-file).
+1. 打开配置文件，在“域”节点下，找到其名称属性与使用扩展字符或多字节字符创建的域名称相匹配的节点。 删除与该域相关的整个节点。
+1. 在数据库中，在edcparcipaldomainentity表中搜索域：
 
-   * 選取 `*` 來自edcparcipaldomainentity。
-   * 尋找包含延伸或多位元組字元的網域名稱，並將其狀態設定為OBSOLETE。
+   * 选择 `*` 从edcparcipaldomainentity。
+   * 查找包含扩展字符或多字节字符的域名，并将其状态设置为OBSOLETE。
 
-1. 匯入更新的組態檔，如所述 [匯入和匯出組態檔](/help/forms/using/admin-help/importing-exporting-configuration-file.md#importing-and-exporting-the-configuration-file).
+1. 导入更新的配置文件，如中所述 [导入和导出配置文件](/help/forms/using/admin-help/importing-exporting-configuration-file.md#importing-and-exporting-the-configuration-file).

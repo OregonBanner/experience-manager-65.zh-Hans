@@ -1,7 +1,7 @@
 ---
 title: 项目
 seo-title: Projects
-description: 專案可讓您將資源群組到一個實體中，其共用的共用環境可讓您輕鬆管理專案。
+description: 通过项目，您可以将资源分组到一个实体中，该实体通过共享的公共环境可轻松管理项目。
 seo-description: Projects let you group resources into one entity whose common, shared environment makes it easy to manage your projects
 uuid: 4b5b9d78-d515-46af-abe2-882da0a1c8ae
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -20,79 +20,79 @@ ht-degree: 14%
 
 # 项目 {#projects}
 
-專案可讓您將資源分組到一個實體中。 共用的共用環境可讓您輕鬆管理專案。 您可以與專案建立關聯的資源型別在AEM中稱為「圖磚」。 拼贴可以包含项目和团队信息、资产、工作流及其他类型的信息，如[项目拼贴](#project-tiles)中详述。
+通过项目，您可以将资源分组到一个实体中。 通过一个通用的共享环境，可轻松管理您的项目。 您可以与项目关联的资源类型在AEM中称为“图块”。 拼贴可以包含项目和团队信息、资产、工作流及其他类型的信息，如[项目拼贴](#project-tiles)中详述。
 
-身為使用者，您可以：
+作为用户，您可以：
 
-* 建立和刪除專案
-* 將內容和資產資料夾關聯至專案
-* 從專案移除內容連結
+* 创建和删除项目
+* 将内容和资产文件夹关联到项目
+* 从项目中删除内容链接
 
-## 存取需求 {#access-requirements}
+## 访问要求 {#access-requirements}
 
-專案標準AEM功能，不需要任何其他設定。
+项目是一项标准的AEM功能，无需任何其他设置。
 
-不過，若使用者在專案中使用專案（例如當建立專案、建立任務/工作流程或檢視和管理團隊時）時檢視其他使用者/群組，這些使用者需要擁有讀取許可權 `/home/users` 和 `/home/groups`.
+但是，对于项目中的用户，要在使用项目（如创建项目、创建任务/工作流或查看和管理团队）时查看其他用户/组，这些用户需要拥有读取权限 `/home/users` 和 `/home/groups`.
 
-最簡單的方法是提供 **projects-users** 群組讀取存取權至 `/home/users` 和 `/home/groups`.
+最简单的方法是给出 **projects — 用户** 对的组读取访问权限 `/home/users` 和 `/home/groups`.
 
-## 專案主控台 {#projects-console}
+## 项目控制台 {#projects-console}
 
-專案主控台是您在AEM中存取和管理專案的地方。
+在项目控制台中，您可以访问和管理AEM中的项目。
 
-![專案主控台](assets/screen-shot_2019-03-05at125110.png)
+![项目控制台](assets/screen-shot_2019-03-05at125110.png)
 
-「專案」主控台類似於AEM中的其他主控台，允許對個別專案執行許多動作，以及調整您的專案檢視。
+项目控制台与AEM中的其他控制台类似，允许对单个项目执行许多操作并调整项目的视图。
 
-### 切換您的模式 {#modes}
+### 切换模式 {#modes}
 
-您可以使用邊欄選擇器，在主控台模式之間變更。
+您可以使用边栏选择器来更改控制台模式。
 
 ![边栏选择器](assets/projects-rail.png)
 
 #### 仅限内容 {#content-only}
 
-開啟主控台時，「僅內容」是預設模式。 它會顯示您的所有專案。
+“仅内容”是打开控制台时的默认模式。 它将显示您的所有项目。
 
 #### 时间线 {#timeline}
 
-時間表檢視可讓您選取個別專案並檢視其上的活動。 使用邊欄選擇器或快速鍵 `alt+1` 以變更為此檢視。
+时间线视图允许您选择单个项目并查看其上的活动。 使用边栏选择器或热键 `alt+1` 以更改此视图。
 
-![時間軸模式](assets/project-timeline.png)
+![时间轴模式](assets/project-timeline.png)
 
-### 切換檢視 {#views}
+### 切换视图 {#views}
 
-您可以使用檢視選擇器，在以大型圖磚檢視專案（預設）、以清單檢視專案或是在行事曆上檢視專案之間變更。
+您可以使用视图选择器，在以大图块形式查看项目（默认）、以列表形式查看项目或在日历上查看项目之间进行更改。
 
 ![视图](assets/projects-views.png)
 
-### 篩選您的檢視 {#filter}
+### 筛选视图 {#filter}
 
-您可以使用篩選器在所有專案和僅作用中專案之間切換。
+您可以使用该过滤器在所有项目与仅活动项目之间进行切换。
 
 ![过滤器](assets/projects-filter.png)
 
-### 選取和檢視專案 {#selecting}
+### 选择和查看项目 {#selecting}
 
-將滑鼠移至專案拼貼上，並按一下核取記號以選取專案。
+通过将鼠标悬停在项目拼贴上并单击复选标记来选择项目。
 
-按一下專案以檢視專案的詳細資訊，以向下鑽研專案的詳細資訊。
+通过单击项目以深入查看其详细信息，可查看项目的详细信息。
 
-### 建立新專案 {#creating}
+### 创建新项目 {#creating}
 
-按一下 **建立** 以新增專案。
+单击 **创建** 以添加新项目。
 
-## 專案動態磚 {#project-tiles}
+## 项目拼贴 {#project-tiles}
 
-專案由您想要一起管理的不同資訊型別組成。 此資訊由不同的專案表示 **圖磚**.
+项目由您希望一起管理的不同类型的信息组成。 此信息由不同的 **磁贴**.
 
-您可以讓下列圖磚與專案相關聯。
+您可以使以下磁贴与项目关联。
 
 * [Assets](#assets)
-* [資產集合](#asset-collections)
+* [资产收藏集](#asset-collections)
 * [体验](#experiences)
 * [链接](#links)
-* [專案資訊](#project-info)
+* [项目信息](#project-info)
 * [团队](#team)
 * [登录页面](#landing-pages)
 * [电子邮件](#emails)
@@ -100,62 +100,62 @@ ht-degree: 14%
 * [启动项](#launches)
 * [任务](#tasks)
 
-按一下任何圖磚右上方的下拉式功能表，即可新增更多資料至圖磚。
+单击任何图块右上角的下拉菜单，向图块中添加更多数据。
 
-按一下任何圖磚右下方的省略符號按鈕，以在其關聯主控台中開啟圖磚的資料。
+单击任何图块右下方的省略号按钮，以在其关联控制台中打开图块的数据。
 
 ### 资产 {#assets}
 
-在 **資產** 圖磚，即可收集您用於特定專案的所有資產。
+在 **资产** 图块，您可以收集用于特定项目的所有资源。
 
 ![“资产”拼贴](assets/project-tile-assets.png)
 
-您直接在圖磚中上傳資產。
+您可以直接在图块中上传资产。
 
-### 資產集合 {#asset-collections}
+### 资产收藏集 {#asset-collections}
 
-與資產類似，您可以新增 [資產集合](/help/assets/manage-collections.md) 直接存取您的專案。 您可以在Assets中定義集合。
+与资源类似，您可以添加 [资产收藏集](/help/assets/manage-collections.md) 直接转到您的项目。 您可以在Assets中定义收藏集。
 
-![資產集合圖磚](assets/project-tile-asset-collection.png)
+![资产收藏集拼贴](assets/project-tile-asset-collection.png)
 
 通过单击&#x200B;**添加收藏集**&#x200B;并从列表中选择相应的收藏集来添加收藏集。
 
 ### 体验 {#experiences}
 
-此 **體驗** 圖磚可讓您將行動應用程式、網站或出版物新增至專案。
+此 **体验** 通过图块，您可以将移动应用程序、网站或发布添加到项目中。
 
-![體驗圖磚](assets/project-tile-experiences.png)
+![“体验”拼贴](assets/project-tile-experiences.png)
 
-這些圖示會指出所代表的體驗型別。
+这些图标指示表示的体验类型。
 
-* 網站
-* 行動應用計畫
+* 网站
+* 移动应用程序
 
 ### 链接 {#links}
 
-此 **連結** 圖磚可讓您將外部連結與專案建立關聯。
+此 **链接** 利用图块，可将外部链接与项目相关联。
 
-![連結圖磚](assets/project-tile-links.png)
+![“链接”拼贴](assets/project-tile-links.png)
 
 您可以使用易于识别的名称来命名链接并更改其缩略图。
 
 ### 项目信息 {#project-info}
 
-此 **專案資訊** 圖磚提供專案的一般資訊，包括說明、專案狀態（非使用中或作用中）、到期日和成員。 此外，您可以新增顯示在主「專案」頁面上的專案縮圖。
+此 **项目信息** 拼贴提供有关项目的一般信息，包括描述、项目状态（非活动或活动）、截止日期和成员。 此外，您还可以添加项目缩略图，该缩略图显示在主项目页面上。
 
-![專案資訊拼貼](assets/project-tile-info.png)
+![“项目信息”拼贴](assets/project-tile-info.png)
 
 ### 翻译作业 {#translation-job}
 
-此 **翻譯工作** 圖磚是您開始翻譯的地方，也是您檢視翻譯狀態的地方。
+此 **翻译作业** 图块是开始翻译的位置，也是查看翻译状态的位置。
 
 ![翻译作业拼贴](assets/project-tile-translation.png)
 
-若要設定翻譯，請參閱檔案 [建立翻譯專案。](/help/assets/translation-projects.md)
+要设置翻译，请参阅文档 [正在创建翻译项目。](/help/assets/translation-projects.md)
 
 ### 团队 {#team}
 
-您可以在此圖磚中指定專案團隊的成員。 編輯時，您可以輸入專案團隊成員的名稱並指派使用者角色。
+在此图块中，您可以指定项目团队的成员。 编辑时，您可以输入团队成员的名称并分配用户角色。
 
 ![“团队”拼贴](assets/project-tile-team.png)
 
@@ -163,83 +163,83 @@ ht-degree: 14%
 
 ### 登录页面 {#landing-pages}
 
-此 **登陸頁面** 圖磚可讓您請求新的登陸頁面。
+此 **登陆页面** 通过图块，可请求新的登陆页面。
 
-![登陸頁面動態磚](assets/project-tile-landing.png)
+![登陆页面拼贴](assets/project-tile-landing.png)
 
-本檔案將說明此工作流程[建立登入頁面工作流程。](/help/sites-authoring/projects-with-workflows.md#request-landing-page-workflow)
+文档中介绍了此工作流[创建登陆页面工作流。](/help/sites-authoring/projects-with-workflows.md#request-landing-page-workflow)
 
 ### 电子邮件 {#emails}
 
-此 **電子郵件** 圖磚可協助您管理電子郵件請求。 它會開始 **要求電子郵件** 工作流程。
+此 **电子邮件** 图块帮助您管理电子邮件请求。 它会启动 **电子邮件请求** 工作流。
 
-![電子郵件動態磚](assets/project-tile-email.png)
+![“电子邮件”拼贴](assets/project-tile-email.png)
 
-如需詳細資訊，請參閱 [請求電子郵件工作流程。](/help/sites-authoring/projects-with-workflows.md#request-email-workflow)
+欲知更多信息，请参见 [请求电子邮件工作流。](/help/sites-authoring/projects-with-workflows.md#request-email-workflow)
 
 ### 工作流 {#workflows}
 
-您可以開始專案的工作流程。 如果有任何工作流程在執行中，其狀態會顯示在 **工作流程** 圖磚。
+您可以启动项目的工作流。 如果有任何工作流正在运行，其状态会显示在 **工作流** 图块。
 
-![工作流程動態磚](assets/project-tile-workflows.png)
+![“工作流”拼贴](assets/project-tile-workflows.png)
 
-根據您建立的專案，有不同的可用工作流程。
+根据您创建的项目，有不同的可用工作流。
 
-這些內容的說明請參閱 [使用專案工作流程。](/help/sites-authoring/projects-with-workflows.md)
+有关这些功能的说明，请参见 [使用项目工作流。](/help/sites-authoring/projects-with-workflows.md)
 
 ### 启动项 {#launches}
 
-此 **啟動** 圖磚會顯示「 」要求的任何啟動 [請求啟動工作流程。](/help/sites-authoring/projects-with-workflows.md)
+此 **启动次数** 图块显示已请求的任何启动项 [请求启动工作流。](/help/sites-authoring/projects-with-workflows.md)
 
-![「啟動」圖磚](assets/project-tile-launches.png)
+![“启动项”拼贴](assets/project-tile-launches.png)
 
 ### 任务 {#tasks}
 
-任務可讓您監控任何專案相關任務的狀態，包括工作流程。 [处理任务](/help/sites-authoring/task-content.md)中详细介绍了任务。
+任务允许您监控任何与项目相关的任务（包括工作流）的状态。 [处理任务](/help/sites-authoring/task-content.md)中详细介绍了任务。
 
-![「任務」圖磚](assets/project-tile-tasks.png)
+![“任务”拼贴](assets/project-tile-tasks.png)
 
 ## 项目模板 {#project-templates}
 
-範本是啟動專案的基礎。 AEM提供這些標準專案範本。
+模板是启动项目的基础。 AEM提供这些标准项目模板。
 
-* **媒體專案**  — 此為媒體相關活動的參考範例專案。 其中包含數個與媒體相關的專案角色，也包括與媒體內容相關的工作流程。
-* **[產品拍照專案](/help/sites-authoring/managing-product-information.md)**  — 此為管理電子商務相關產品攝影的參考範例。
-* **[翻譯專案](/help/sites-administering/translation.md)**  — 此為管理翻譯相關活動的參考範例。 其中包含基本角色，並包含管理翻譯的工作流程。
-* **簡單專案**  — 這是任何不符合其他類別之專案的參考範例。 其中包含三個基本角色和四個一般AEM工作流程。
+* **媒体项目**  — 这是一个与媒体相关活动的参考示例项目。 它包括多个与媒体相关的项目角色，还包括与媒体内容相关的工作流。
+* **[产品照片拍摄项目](/help/sites-authoring/managing-product-information.md)**  — 这是用于管理电子商务相关产品摄影的参考示例。
+* **[翻译项目](/help/sites-administering/translation.md)**  — 这是用于管理翻译相关活动的参考示例。 它包括基本角色和用于管理翻译的工作流。
+* **简单项目**  — 这是任何不适合其他类别的项目的参考示例。 它包括三个基本角色和四个常规AEM工作流。
 
-根據您選取的範本，您可在專案中取得不同的選項，例如提供的使用者角色和工作流程。
+根据您选择的模板，您在项目中有不同的可用选项，例如提供的用户角色和工作流。
 
-## 專案中的使用者角色 {#user-roles-in-a-project}
+## 项目中的用户角色 {#user-roles-in-a-project}
 
-不同的使用者角色在專案範本中定義，主要原因有二：
+不同的用户角色在项目模板中定义，主要原因有二：
 
-1. 許可權：使用者角色屬於列出的三個類別之一：觀察者、編輯者、擁有者。 例如，攝影師或撰稿人將擁有與編輯者相同的許可權。 這些許可權會決定使用者可以對專案中的內容執行的操作。
-1. 工作流程：工作流程會決定指派給專案中任務的使用者。 任务可以与项目角色关联。例如，您可以將任務指派給攝影師，這樣所有擁有攝影師角色的團隊成員都會獲得任務。
+1. 权限：用户角色属于列出的三个类别之一：观察者、编辑者、所有者。 例如，摄影师或撰稿人将拥有与编辑者相同的权限。 这些权限决定用户可以对项目中的内容执行的操作。
+1. 工作流：工作流确定在项目中向谁分配任务。 任务可以与项目角色关联。例如，可以将任务分配给摄影师，以便具有摄影师角色的所有团队成员都能获得该任务。
 
-所有專案都支援下列預設角色，可讓您管理安全性及控制許可權。
+所有项目都支持以下默认角色，以便您管理安全和控制权限。
 
 | 角色 | 描述 | 权限 | 组成员资格 |
 |---|---|---|---|
-| 观察者 | 此角色的使用者可以檢視專案詳細資訊，包括專案狀態。 | 專案的唯讀許可權 | `workflow-users` 组 |
-| 编辑器 | 此角色的使用者可以上傳和編輯專案內容。 | 對專案、相關中繼資料和相關資產的讀寫存取權<br>上傳快照清單、拍照以及檢閱和核准資產的許可權<br>寫入許可權： `/etc/commerce`<br>修改特定專案的許可權 | `workflow-users` 组 |
-| 所有者 | 具有此角色的使用者可以建立專案、在專案中起始工作，並將核准的資產移至生產資料夾。 擁有者也可以檢視和執行專案中的所有其他任務。 | `/etc/commerce` 的写入权限 | `dam-users` 群組才能建立專案<br>`project-administrators` 群組以建立專案和移動資產 |
+| 观察者 | 具有此角色的用户可以查看项目详细信息，包括项目状态。 | 项目的只读权限 | `workflow-users` 组 |
+| 编辑器 | 此角色中的用户可以上传和编辑项目的内容。 | 对项目、关联的元数据和相关资源的读写访问权限<br>上传拍摄列表、照片拍摄以及查看和批准资源的权限<br>写入权限 `/etc/commerce`<br>修改特定项目的权限 | `workflow-users` 组 |
+| 所有者 | 具有此角色的用户可以创建项目、在项目中启动工作，并将批准的资产移动到生产文件夹。 所有者还可以查看和执行项目中的所有其他任务。 | `/etc/commerce` 的写入权限 | `dam-users` 组才能创建项目<br>`project-administrators` 组才能创建项目和移动资产 |
 
-對於創意專案，也會提供其他角色，例如攝影師。 您可以使用這些角色來衍生特定專案的自訂角色。
+对于创意项目，还提供了其他角色，例如摄影师。 您可以使用这些角色为特定项目派生自定义角色。
 
-### 自動群組建立 {#auto-group-creation}
+### 自动组创建 {#auto-group-creation}
 
 在创建项目并将用户添加各种角色时，将自动创建与项目关联的组以管理关联的权限。
 
 例如，名为 Myproject 的项目将有三个组，分别为 **Myproject 所有者**、**Myproject 编辑者**、**Myproject 观察者**。
 
-如果刪除專案，則只有在您選取適當的選項時，才會刪除這些群組 [刪除專案時。](/help/sites-authoring/touch-ui-managing-projects.md#deleting-a-project) 管理員也可以手動刪除中的群組 **工具** > **安全性** > **群組**.
+如果删除了项目，则只有在选择适当的选项时，才会删除这些组 [删除项目时。](/help/sites-authoring/touch-ui-managing-projects.md#deleting-a-project) 管理员还可以手动删除中的组 **工具** > **安全性** > **组**.
 
 ## 其他资源 {#additional-resources}
 
-如需有關使用專案的詳細資訊，請參閱下列附加檔案：
+有关使用项目的更多详细信息，请参阅以下附加文档：
 
 * [管理项目](/help/sites-authoring/touch-ui-managing-projects.md)
 * [处理任务](/help/sites-authoring/task-content.md)
 * [使用项目工作流](/help/sites-authoring/projects-with-workflows.md)
-* [Creative Project與PIM整合](/help/sites-authoring/managing-product-information.md)
+* [Creative Project与PIM集成](/help/sites-authoring/managing-product-information.md)

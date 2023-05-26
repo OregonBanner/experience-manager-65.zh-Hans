@@ -1,7 +1,7 @@
 ---
-title: 設定IBM Content Manager的聯結器
+title: 配置IBM Content Manager的连接器
 seo-title: Configuring Connector for IBM Content Manager
-description: 設定IBM內容管理員的聯結器，以啟用AEM表單與IBM內容管理員之間的通訊。
+description: 配置IBM Content Manager的连接器，以启用AEM Forms与IBM Content Manager之间的通信。
 seo-description: Configure the Connector for IBM Content Manager to enable communication between AEM forms and IBM Content Manager.
 uuid: 3d55169d-93e3-4d4e-b18b-2a3394e1de3b
 contentOwner: admin
@@ -17,22 +17,22 @@ ht-degree: 0%
 
 ---
 
-# 設定IBM Content Manager的聯結器{#configuring-connector-for-ibm-content-manager}
+# 配置IBM Content Manager的连接器{#configuring-connector-for-ibm-content-manager}
 
-IBM Content Manager聯結器可啟用AEM Forms與IBM Content Manager之間的通訊。 如需其他背景資訊，請參閱以下的「Connectors for ECM」： [服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
+IBM Content Manager连接器支持AEM Forms与IBM Content Manager之间的通信。 有关其他背景信息，请参阅中的“Connectors for ECM” [服务参考](https://www.adobe.com/go/learn_aemforms_services_63).
 
-## 設定IBM內容管理員連線 {#configure-the-ibm-content-manager-connection}
+## 配置IBM内容管理器连接 {#configure-the-ibm-content-manager-connection}
 
-1. 在管理控制檯中，按一下「服務> IBM Content Manager的聯結器」。
-1. 在「資料存放區名稱」方塊中，輸入您要連線的IBM Content Manager資料存放區名稱。 如果資料庫是本機資料庫，請輸入資料庫名稱。 如果資料庫是遠端資料庫，請輸入其別名。
-1. 在「使用者名稱」方塊中，輸入將連線至IBM Content Manager資料存放區之使用者的使用者ID。
-1. 在密碼方塊中，輸入使用者的密碼。
-1. （選擇性）在別名連線字串方塊中，輸入其他連線引數。 在大多數情況下，此方塊應該是空的。 如需詳細資訊，請參閱您的IBM檔案。
+1. 在管理控制台中，单击服务>IBM Content Manager的连接器。
+1. 在“数据存储名称”框中，输入要连接到的IBM Content Manager数据存储的名称。 如果数据库是本地数据库，请输入数据库的名称。 如果数据库是远程数据库，请输入其别名。
+1. 在“用户名”框中，输入将连接到IBM Content Manager数据存储区的用户的用户ID。
+1. 在“密码”框中，输入用户的密码。
+1. （可选）在“别名连接字符串”框中，输入其他连接参数。 在大多数情况下，此框应为空。 有关更多信息，请参阅您的IBM文档。
 1. 单击“保存”。
 
-## 驗證服務設定 {#validation-of-service-settings}
+## 验证服务设置 {#validation-of-service-settings}
 
-如果您輸入不正確的dataStore別名、使用者名稱或密碼，根據IBM Content Manager服務的Content Repository Connector目前是否在執行中，您會得到以下結果：
+如果您输入的dataStore别名、用户名或密码不正确，则将获得以下结果，具体取决于IBM Content Manager服务的Content Repository Connector当前是否正在运行：
 
-* 如果服務已停止，當您儲存服務組態資訊時，不會出現任何錯誤。 不過，下次啟動服務時，將會擲回例外狀況，且服務不會啟動。
-* 如果服務已啟動，當您儲存服務組態資訊時，服務會立即嘗試驗證認證資訊。 在這種情況下，會發生錯誤且未儲存設定資訊。
+* 如果服务已停止，则在保存服务配置信息时，不会出现任何错误。 但是，下次启动服务时，将会引发异常，并且服务不会启动。
+* 如果服务已启动，则在保存服务配置信息时，服务会立即尝试验证凭据信息。 在这种情况下，会发生错误，并且不会保存配置信息。

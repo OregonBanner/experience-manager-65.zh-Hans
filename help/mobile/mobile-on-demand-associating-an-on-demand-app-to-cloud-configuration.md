@@ -1,7 +1,7 @@
 ---
 title: 云配置
 seo-title: Cloud Configuration
-description: 將隨選應用程式與雲端設定建立關聯，可讓Adobe Experience Manager (AEM)建立雙向連結，直接與Mobile On-Demand託管的專案通訊。 請詳閱本頁以瞭解更多資訊。
+description: 将按需应用程序关联到云配置可允许Adobe Experience Manager (AEM)通过建立双向链接直接与托管的Mobile On-Demand项目通信。 关注此页面以了解更多信息。
 seo-description: Associating an On-Demand App to a Cloud Configuration allows Adobe Experience Manager (AEM) to communicate directly with a Mobile On-Demand hosted project by establishing a two way link. Follow this page to learn more.
 uuid: f377f2af-864b-43df-9d42-4a5fd6cd70d5
 contentOwner: User
@@ -21,66 +21,66 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）專案使用SPA編輯器。 [了解详情](/help/sites-developing/spa-overview.md).
+>Adobe建议对需要基于单页应用程序框架的客户端渲染（例如React）的项目使用SPA编辑器。 [了解详情](/help/sites-developing/spa-overview.md).
 
-將隨選應用程式與雲端設定建立關聯，可讓Adobe Experience Manager (AEM)建立雙向連結，直接與Mobile On-Demand託管的專案通訊。 將應用程式連結至Mobile On-Demand專案後，您就能在AEM內建立內容（例如文章、橫幅和集合），並將內容提供給Mobile On-Demand。
+将按需应用程序关联到云配置可允许Adobe Experience Manager (AEM)通过建立双向链接直接与托管的Mobile On-Demand项目通信。 通过将您的应用程序关联到Mobile On-Demand项目，您将能够在AEM中执行内容创建（例如文章、横幅和收藏集），但还可以将该内容提供给Mobile On-Demand。
 
-從那裡可以發佈、預覽和管理內容。 您也可以將現有的Mobile On-Demand內容匯入AEM並執行內容編輯。
+从那里，可以发布、预览和管理内容。 您还可以将现有Mobile On-Demand内容导入AEM并执行内容编辑。
 
-## 設定雲端設定 {#setting-up-cloud-configuration}
-
->[!CAUTION]
->
->開始為On-Demand應用程式設定雲端設定之前，您必須熟悉AEM Mobile布建和設定AEM Mobile On-demand Services使用者端。
->
->如需詳細資訊，請參閱 [設定AEM Mobile On-demand Services](/help/mobile/aem-mobile-setup.md) 在管理區段中。
-
-若要設定Mobile On-DemandCloud Services，請按一下 **管理連線** 從您的應用程式儀表板動態磚。
-
-您應熟悉應用程式控制面板和可用的圖磚。 另請參閱 [AEM Mobile應用程式控制面板](/help/mobile/mobile-apps-ondemand-application-dashboard.md) 以取得更多詳細資料。
-
-### 設定雲端設定的連結 {#setting-up-link-to-cloud-configuration}
+## 设置云配置 {#setting-up-cloud-configuration}
 
 >[!CAUTION]
 >
->確保您有現有的On-Demand使用者端和雲端設定。
+>在开始为On-Demand应用程序配置云配置之前，您必须熟悉AEM Mobile配置和配置AEM Mobile On-demand Services客户端。
 >
->如需詳細資訊，請參閱 [設定AEM Mobile On-demand Services](/help/mobile/aem-mobile-setup.md) 在管理區段中。
+>有关详细信息，请参阅 [设置AEM Mobile On-demand Services](/help/mobile/aem-mobile-setup.md) 在管理部分中。
 
-下列步驟說明如何設定雲端設定的連結：
+要配置Mobile On-DemandCloud Services，请单击 **管理连接** 从应用程序仪表板中拼贴。
 
-1. 從 **行動**，選擇 **應用程式** 並從目錄取得您的Mobile On-Demand應用程式。
-1. 按一下 **管理連線** 圖磚。
+您应该熟悉应用程序功能板和可用的磁贴。 参见 [AEM Mobile应用程序功能板](/help/mobile/mobile-apps-ondemand-application-dashboard.md) 了解更多详细信息。
+
+### 设置指向云配置的链接 {#setting-up-link-to-cloud-configuration}
+
+>[!CAUTION]
+>
+>确保您具有现有的按需客户端和云配置。
+>
+>有关详细信息，请参阅 [设置AEM Mobile On-demand Services](/help/mobile/aem-mobile-setup.md) 在管理部分中。
+
+以下步骤介绍了如何设置指向云配置的链接：
+
+1. 起始日期 **移动设备**，选择 **应用程序** 以及目录中的Mobile On-Demand应用程序。
+1. 单击 **管理连接** 图块。
 
    ![chlimage_1-65](assets/chlimage_1-65.png)
 
-1. 輸入現有的組態，或輸入 **設定標題**， **裝置ID**、和 **裝置Token**.
+1. 输入现有配置，或通过输入 **配置标题**， **设备ID**、和 **设备令牌**.
 
    ![chlimage_1-66](assets/chlimage_1-66.png)
 
-1. 一旦您的 **裝置ID** 和 **裝置Token** 已驗證，請從清單中選擇您的隨選專案。
+1. 一旦您的 **设备ID** 和 **设备令牌** 已验证，请从列表中选择您的按需项目。
 
-   按一下 **提交**.
+   单击 **提交**.
 
    ![chlimage_1-67](assets/chlimage_1-67.png)
 
-   此 **管理連線** 圖磚會顯示您的雲端設定。
+   此 **管理连接** 图块显示您的云配置。
 
    ![chlimage_1-68](assets/chlimage_1-68.png)
 
    >[!CAUTION]
    >
-   >如果您嘗試變更此應用程式與哪個專案相關聯，則在控制面板中切換專案時，您將會收到內容完整性問題的警告，如下圖所示：
+   >如果您尝试更改此应用程序与哪个项目相关联，则在仪表板中切换项目时，您将收到内容完整性问题警告，如下图所示：
 
    ![chlimage_1-69](assets/chlimage_1-69.png)
 
 ### 后续步骤 {#the-next-steps}
 
-為您的應用程式設定雲端設定後，請參閱以下管理內容的資源：
+为应用程序配置云配置后，请参阅以下资源以管理内容：
 
 * [管理文章](/help/mobile/mobile-on-demand-managing-articles.md)
-* [管理橫幅](/help/mobile/mobile-on-demand-managing-banners.md)
-* [管理集合](/help/mobile/mobile-on-demand-managing-collections.md)
-* [上傳共用資源](/help/mobile/mobile-on-demand-shared-resources.md)
-* [發佈/取消發佈內容](/help/mobile/mobile-on-demand-publishing-unpublishing.md)
-* [使用預檢預覽](/help/mobile/aem-mobile-manage-ondemand-services.md)
+* [管理横幅](/help/mobile/mobile-on-demand-managing-banners.md)
+* [管理收藏集](/help/mobile/mobile-on-demand-managing-collections.md)
+* [上传共享资源](/help/mobile/mobile-on-demand-shared-resources.md)
+* [发布/取消发布内容](/help/mobile/mobile-on-demand-publishing-unpublishing.md)
+* [使用Preflight预览](/help/mobile/aem-mobile-manage-ondemand-services.md)

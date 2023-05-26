@@ -1,7 +1,7 @@
 ---
-title: 應用程式建立和設定動作
+title: 应用程序创建和配置操作
 seo-title: Application Create and Configuration Actions
-description: 建立應用程式通常是建立和管理AEM Mobile On-Demand內容的第一步。 請詳閱本頁以瞭解更多資訊。
+description: 创建应用程序通常是创建和管理AEM Mobile On-Demand内容的第一步。 关注此页面以了解更多信息。
 seo-description: Creating an app is often the first step towards creating and managing AEM Mobile On-Demand content. Follow this page to learn more.
 uuid: f6b41d9a-d896-479e-9f6c-e91a88f3e74d
 contentOwner: User
@@ -17,69 +17,69 @@ ht-degree: 0%
 
 ---
 
-# 應用程式建立和設定動作{#application-create-and-configuration-actions}
+# 应用程序创建和配置操作{#application-create-and-configuration-actions}
 
 >[!NOTE]
 >
->Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）專案使用SPA編輯器。 [了解详情](/help/sites-developing/spa-overview.md).
+>Adobe建议对需要基于单页应用程序框架的客户端渲染（例如React）的项目使用SPA编辑器。 [了解详情](/help/sites-developing/spa-overview.md).
 
-## 建立隨選應用程式 {#creating-an-on-demand-application}
+## 创建按需应用程序 {#creating-an-on-demand-application}
 
-建立應用程式通常是建立和管理AEM Mobile On-Demand內容的第一步，並且通常在AEM管理員層級執行。 它代表可在行動裝置上檢視的內容殼層，可隨時顯示作者建立的內容，例如文章、影像、集合等。
+创建应用程序通常是创建和管理AEM Mobile On-Demand内容的第一步，通常在AEM管理员级别执行。 它表示可在移动设备上查看的内容外壳，可随时显示作者创建的内容，例如文章、图像、收藏集等。
 
-您可在控制面板或AEM Mobile控制中心中檢視應用程式的詳細資訊。
+您可以在功能板或AEM Mobile控制中心中查看应用程序的详细信息。
 
 >[!NOTE]
 >
->「控制面板」是一系列實用的動態磚，可提供應用程式內容、中繼資料和AEM Mobile On-Demand連線狀態的概述。
+>“功能板”是一系列有用的拼贴，可概述应用程序的内容、元数据和AEM Mobile On-Demand连接状态。
 >
->另請參閱 [AEM Mobile應用程式控制面板](/help/mobile/mobile-apps-ondemand-application-dashboard.md) 以取得詳細資訊。
+>参见 [AEM Mobile应用程序功能板](/help/mobile/mobile-apps-ondemand-application-dashboard.md) 了解详细信息。
 
-**若要建立隨選應用程式：**
+**要创建按需应用程序，请执行以下操作：**
 
-1. 選取 **行動** 從側邊欄移除。
-1. 選取 **應用程式** 從「導覽」。
-1. 按一下 **建立** 並選取 **應用程式** 從下拉式清單。
-1. 選擇行動應用程式範本並按一下 **下一個**.
-1. 輸入應用程式屬性，例如 **標題**， **名稱**， **說明**.
+1. 选择 **移动设备** 从侧边栏上删除。
+1. 选择 **应用程序** 从导航中。
+1. 单击 **创建** 并选择 **应用程序** 从下拉菜单中。
+1. 选择移动设备应用程序模板并单击 **下一个**.
+1. 输入应用程序属性，例如 **标题**， **名称**， **描述**.
 1. 单击&#x200B;**下一步**。
-1. 如果已知，請輸入雲端設定詳細資料，否則請按一下 **建立**.
-1. 按一下 **完成** 以在目錄中檢視新的AEM Mobile應用程式。
+1. 如果已知，请输入云配置详细信息，否则请单击 **创建**.
+1. 单击 **完成** 以在目录中查看新的AEM Mobile应用程序。
 
 ![chlimage_1](assets/chlimage_1.gif)
 
 >[!NOTE]
 >
->此程式可讓您在AEM中建立應用程式例項。
+>此过程允许您在AEM中创建应用程序实例。
 
-## 使用應用程式範本 {#using-app-templates}
+## 使用应用程序模板 {#using-app-templates}
 
-應用程式範本可讓您輕鬆運用開發人員建立的現有設計，以便在AEM中建立新的應用程式。
+应用程序模板提供了一种简单的方式来利用开发人员创建的现有设计，这些设计用于在AEM中创建新的应用程序。
 
-什麼是應用程式範本？ 將其視為代表應用程式基準或基礎的頁面範本和元件的集合。
-根據其他應用程式的範本建立新應用程式時，您會得到一個應用程式，其起點代表在其中建立該應用程式的起點。
+什么是应用程序模板？ 可将其视为页面模板和组件的集合，这些模板和组件表示应用程序的基线或基础。
+在基于其他应用程序的模板创建新应用程序时，您将获得一个应用程序，其起点代表从中创建该应用程序的应用程序。
 
-您必須擁有現有的行動應用程式範本（或已安裝具有應用程式範本的應用程式），才能使用此功能。
+您必须拥有现有的移动设备应用程序模板（或已安装的应用程序具有应用程序模板），才能使用此功能。
 
 ### 下一步 {#the-next-step}
 
-從應用程式儀表板建立隨選應用程式後，下一步是將應用程式與雲端設定建立關聯。
+从应用程序仪表板创建按需应用程序后，下一步是将您的应用程序与云配置相关联。
 
-另請參閱 [將應用程式與雲端設定建立關聯](/help/mobile/mobile-on-demand-associating-an-on-demand-app-to-cloud-configuration.md) 以取得更多詳細資料。
+参见 [将应用程序与云配置关联](/help/mobile/mobile-on-demand-associating-an-on-demand-app-to-cloud-configuration.md) 了解更多详细信息。
 
-### 快速入門 {#getting-ahead}
+### 快速入门 {#getting-ahead}
 
-在您熟悉建立隨選應用程式，並將該應用程式與雲端設定建立關聯後，請參閱 [內容管理動作](/help/mobile/mobile-apps-ondemand-manage-content-ondemand.md).
+在您熟悉了创建按需应用程序并将应用程序与云配置关联后，请参阅 [内容管理操作](/help/mobile/mobile-apps-ondemand-manage-content-ondemand.md).
 
-**內容管理動作** 涉及下列內容的建立和管理：
+**内容管理操作** 涉及以下内容的创建和管理：
 
 * [管理文章](/help/mobile/mobile-on-demand-managing-articles.md)
-* [管理橫幅](/help/mobile/mobile-on-demand-managing-banners.md)
-* [管理集合](/help/mobile/mobile-on-demand-managing-collections.md)
-* [上傳共用資源](/help/mobile/mobile-on-demand-shared-resources.md)
-* [發佈取消發佈內容](/help/mobile/mobile-on-demand-publishing-unpublishing.md)
+* [管理横幅](/help/mobile/mobile-on-demand-managing-banners.md)
+* [管理收藏集](/help/mobile/mobile-on-demand-managing-collections.md)
+* [上传共享资源](/help/mobile/mobile-on-demand-shared-resources.md)
+* [发布取消发布内容](/help/mobile/mobile-on-demand-publishing-unpublishing.md)
 
-若要瞭解管理員和開發人員的角色和責任，請參閱以下資源：
+要了解管理员和开发人员的角色和职责，请参阅以下资源：
 
-* [針對AEM Mobile On-demand Services開發AEM內容](/help/mobile/aem-mobile-on-demand.md)
-* [管理內容以使用AEM Mobile On-demand Services](/help/mobile/aem-mobile.md)
+* [为AEM Mobile On-demand Services开发AEM内容](/help/mobile/aem-mobile-on-demand.md)
+* [管理内容以使用AEM Mobile On-demand Services](/help/mobile/aem-mobile.md)

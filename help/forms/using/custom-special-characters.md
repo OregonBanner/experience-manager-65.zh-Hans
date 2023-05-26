@@ -1,7 +1,7 @@
 ---
-title: 通訊管理中的自訂特殊字元
+title: 通信管理中的自定义特殊字符
 seo-title: Custom special characters in Correspondence Management
-description: 瞭解如何在通訊管理中新增自訂特殊字元。
+description: 了解如何在通信管理中添加自定义特殊字符。
 seo-description: Learn how to add custom special characters in Correspondence Management.
 uuid: a1890f6d-8e0c-471f-a9bd-861acf1f17e6
 content-type: reference
@@ -18,130 +18,130 @@ ht-degree: 1%
 
 ---
 
-# 通訊管理中的自訂特殊字元{#custom-special-characters-in-correspondence-management}
+# 通信管理中的自定义特殊字符{#custom-special-characters-in-correspondence-management}
 
 ## 概述 {#overview}
 
-Correspondence Management已內建210個特殊字元的預設支援，您可以輕鬆地在信函中插入。
+Correspondence Management内置默认支持210个特殊字符，您可以轻松地在字母中插入这些字符。
 
-例如，您可以插入下列特殊字元：
+例如，可以插入以下特殊字符：
 
-* 幣別符號，例如€、¥和£
-* 數學符號，例如∑、√、∂和^
-* 標點符號為&quot;和&quot;
+* 货币符号，如€、@、英镑
+* 数学符号，如∑、√、∂和^
+* 标点符号为&quot;和&quot;
 
-您可以在字母中插入特殊字元：
+您可以在字母中插入特殊字符：
 
-* 在 [文字編輯器](/help/forms/using/document-fragments.md#createtext)
-* 在 [通訊中的可編輯內嵌模組](../../forms/using/create-correspondence.md#managecontent)
+* 在 [文本编辑器](/help/forms/using/document-fragments.md#createtext)
+* 在 [通信中的可编辑内联模块](../../forms/using/create-correspondence.md#managecontent)
 
 ![specialcharactersinlinemodule](assets/specialcharactersinlinemodule.png)
 
-管理員可以透過自訂來新增對更多/自訂特殊字元的支援。 本文提供如何新增支援其他自訂特殊字元的指示。
+管理员可以通过自定义添加对更多/自定义特殊字符的支持。 本文介绍了如何添加对其他自定义特殊字符的支持。
 
-## 新增或修改通訊管理中對自訂特殊字元的支援 {#creatingfolderstructure}
+## 在通信管理中添加或修改对自定义特殊字符的支持 {#creatingfolderstructure}
 
-使用下列步驟新增對自訂特殊字元的支援：
+使用以下步骤添加对自定义特殊字符的支持：
 
-1. 前往 `https://'[server]:[port]'/[ContextPath]/crx/de` 並以管理員身分登入。
-1. 在apps資料夾中，建立名為的資料夾 **[!UICONTROL 特殊字元]** 路徑/結構類似於specialcharacters資料夾（位於libs底下的textEditorConfig資料夾）：
+1. 转到 `https://'[server]:[port]'/[ContextPath]/crx/de` 并以管理员身份登录。
+1. 在apps文件夹中，创建一个名为 **[!UICONTROL 特殊字符]** 路径/结构与specialcharacters文件夹（位于libs下的textEditorConfig文件夹中）类似：
 
-   1. 以滑鼠右鍵按一下 **特殊字元** 資料夾並選取 **覆蓋節點**：
+   1. 右键单击 **特殊字符** 文件夹并选中 **覆盖节点**：
 
       `/libs/fd/cm/ma/gui/configuration/textEditorConfig/specialcharacters`
 
-   1. 確定「覆蓋節點」對話方塊具有下列值：
+   1. 确保“覆盖节点”对话框具有以下值：
 
-      **路徑：** /libs/fd/cm/ma/gui/configuration/textEditorConfig/specialcharacters
+      **路径：** /libs/fd/cm/ma/gui/configuration/textEditorConfig/specialcharacters
 
-      **覆蓋位置：** /apps/
+      **叠加位置：** /apps/
 
-      **符合節點型別：** 已核取
+      **匹配节点类型：** 已选中
 
       >[!NOTE]
       >
-      >請勿在/libs分支中進行變更。 您所做的任何變更都可能遺失，因為每當您：
+      >请勿在/libs分支中进行更改。 您所做的任何更改都可能会丢失，因为每当您：
       >
       >
       >
-      >    * 在您的執行個體上升級
-      >    * 套用Hot Fix
-      >    * 安裝功能套件
+      >    * 在您的实例上升级
+      >    * 应用热修复程序
+      >    * 安装功能包
 
 
-   1. 按一下 **確定** 然後按一下 **全部儲存**. Specialcharacters資料夾會在指定的路徑中建立。
+   1. 单击 **确定** 然后单击 **全部保存**. 在指定的路径中创建specialcharacters文件夹。
 
-      建立覆蓋圖後，請確認節點結構標籤。 使用覆蓋圖在/apps中建立的每個節點，都應與該節點的/libs中定義的類別和屬性相同。 如果/apps位置下方的節點結構中缺少任何屬性或標籤，請將其標籤與/libs中的對應節點同步。
+      创建叠加后，验证节点结构标记。 在/apps中使用覆盖创建的每个节点都应具有与该节点的/libs中定义的相同的类和属性。 如果/apps位置下的节点结构中缺少任何属性或标记，请将其标记与/libs中的相应节点同步。
 
-1. 確保 **[!UICONTROL textEditorConfig]** 節點具有下列屬性和值：
+1. 确保 **[!UICONTROL textEditorConfig]** 节点具有以下属性和值：
 
    | 名称 | 类型 | 价值 |
    |---|---|---|
    | cmConfigurationType | 字符串 | cmTextEditorConfiguration |
    | cssPath | 字符串 | /libs/fd/cm/ma/gui/components/admin/createasset/textcontrol/clientlibs/textcontrol |
 
-1. 以滑鼠右鍵按一下 **[!UICONTROL 特殊字元]** 資料夾並選取 **建立>子節點** 然後按一下 **全部儲存**：
+1. 右键单击 **[!UICONTROL 特殊字符]** 文件夹并选中 **创建>子节点** 然后单击 **全部保存**：
 
    /apps/fd/cm/ma/gui/configuration/textEditorConfig/specialcharacters/&lt;yourchildnode>
 
-1. 重新整理「文字編輯器\建立通訊UI」頁面。 您新增的節點是UI中特殊字元清單的最後一個節點。
-1. 按一下 **全部儲存**.
-1. 視需要對特殊字元進行變更：
+1. 刷新文本编辑器\创建通信UI页。 您添加的节点是UI中特殊字符列表的最后一个节点。
+1. 单击 **全部保存**.
+1. 根据需要更改特殊字符：
 
 <table>
  <tbody>
   <tr>
    <td><strong>收件人...</strong></td>
-   <td><strong>完成下列步驟</strong></td>
+   <td><strong>完成以下步骤</strong></td>
   </tr>
   <tr>
-   <td>新增自訂特殊字元</td>
+   <td>添加自定义特殊字符</td>
    <td>
     <ol>
-     <li>在「/apps/fd/cm/ma/gui/configuration/textEditorConfig/specialcharacters」下新增具有強制屬性的子節點。</li>
-     <li>按一下全部儲存</li>
-     <li>重新整理文字編輯器\建立通訊UI以檢視變更。</li>
+     <li>在“/apps/fd/cm/ma/gui/configuration/textEditorConfig/specialcharacters”下添加具有强制属性的子节点。</li>
+     <li>单击全部保存</li>
+     <li>刷新文本编辑器\创建通信UI以查看更改。</li>
     </ol> </td>
   </tr>
   <tr>
-   <td>更新現有的特殊字元屬性</td>
+   <td>更新现有特殊字符的属性</td>
    <td>
     <ol>
-     <li>覆蓋要更新的節點（如上所述），並驗證標籤和類別。</li>
-     <li>變更任何值，例如註解、值、endValue和多重註解。 </li>
-     <li>按一下「儲存全部」。 </li>
-     <li>重新整理文字編輯器\建立通訊UI以檢視變更。</li>
+     <li>按照上文所述覆盖要更新的节点并验证标记和类。</li>
+     <li>更改任何值，例如caption、value、endValue和multipleCaption。 </li>
+     <li>单击全部保存。 </li>
+     <li>刷新文本编辑器\创建通信UI以查看更改。</li>
     </ol> </td>
   </tr>
   <tr>
-   <td>隱藏特殊字元</td>
+   <td>隐藏特殊字符</td>
    <td>
     <ol>
-     <li>覆蓋要隱藏在「/apps/fd/cm/ma/gui/configuration/textEditorConfig/specialcharacters」下的節點</li>
-     <li>將sling：hideResource （布林值）屬性新增至要隱藏的節點（應用程式底下）。 </li>
-     <li>按一下「儲存全部」。 </li>
-     <li>重新整理文字編輯器\建立通訊UI以檢視變更。<br /> </li>
+     <li>覆盖要在“/apps/fd/cm/ma/gui/configuration/textEditorConfig/specialcharacters”下隐藏的节点</li>
+     <li>将sling：hideResource（布尔值）属性添加到节点（在应用程序下）以隐藏。 </li>
+     <li>单击全部保存。 </li>
+     <li>刷新文本编辑器\创建通信UI以查看更改。<br /> </li>
     </ol> </td>
   </tr>
   <tr>
-   <td>隱藏多個特殊字元</td>
+   <td>隐藏多个特殊字符</td>
    <td>
     <ol>
-     <li>將屬性「sling：hideChildren （String或String[]）」新增至「/apps/fd/cm/ma/gui/configuration/textEditorConfig/specialcharacters」。 </li>
-     <li>新增節點名稱（要隱藏的特殊字元）作為「sling：hideChildren」屬性的值。 </li>
-     <li>按一下「儲存全部」。 </li>
-     <li>重新整理文字編輯器\建立通訊UI以檢視變更。<br /> </li>
+     <li>将属性“sling：hideChildren （String或String[]）”添加到“/apps/fd/cm/ma/gui/configuration/textEditorConfig/specialcharacters”。 </li>
+     <li>添加节点名称（要隐藏的特殊字符）作为“sling：hideChildren”属性的值。 </li>
+     <li>单击全部保存。 </li>
+     <li>刷新文本编辑器\创建通信UI以查看更改。<br /> </li>
     </ol> </td>
   </tr>
   <tr>
-   <td>排序特殊字元</td>
+   <td>排序特殊字符</td>
    <td>
     <ol>
-     <li>在「/apps/fd/cm/ma/gui/configuration/textEditorConfig/specialcharacters」下新增具有強制屬性的子節點。 </li>
-     <li>將"sling：orderBefore (String)"屬性新增至新建立的子節點。 </li>
-     <li>將節點名稱新增為值，新加入的特殊字元會顯示在值之前。 </li>
-     <li>按一下「儲存全部」。 </li>
-     <li>重新整理文字編輯器\建立通訊UI以檢視變更。<br /> </li>
+     <li>在“/apps/fd/cm/ma/gui/configuration/textEditorConfig/specialcharacters”下添加具有强制属性的子节点。 </li>
+     <li>将“sling：orderBefore (String)”属性添加到新创建的子节点。 </li>
+     <li>将节点名称作为值添加，新添加的特殊字符将显示在该值之前。 </li>
+     <li>单击全部保存。 </li>
+     <li>刷新文本编辑器\创建通信UI以查看更改。<br /> </li>
     </ol> </td>
   </tr>
  </tbody>

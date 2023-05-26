@@ -1,7 +1,7 @@
 ---
-title: 在We.Retail中試用核心元件
+title: 在We.Retail中试用核心组件
 seo-title: Trying out Core Components in We.Retail
-description: 在We.Retail中試用核心元件
+description: 在We.Retail中试用核心组件
 seo-description: null
 uuid: 8d1cea0b-99d9-49b2-b275-41f14864b1ff
 contentOwner: User
@@ -17,76 +17,76 @@ ht-degree: 1%
 
 ---
 
-# 在We.Retail中試用核心元件{#trying-out-core-components-in-we-retail}
+# 在We.Retail中试用核心组件{#trying-out-core-components-in-we-retail}
 
-核心元件是現代、彈性的元件，易於擴充，並可輕鬆整合至您的專案。 核心元件是圍繞幾項主要設計原則建置，例如HTL、現成可用的功能、可設定性、版本設定和擴充性。 We.Retail是以核心元件為基礎所建置。
+核心组件是灵活的新式组件，具有轻松的扩展性，并允许轻松集成到项目中。 核心组件是围绕几个主要设计原则构建的，例如HTL、开箱即用可用性、可配置性、版本控制和可扩展性。 We.Retail构建在核心组件之上。
 
-## 正在試用 {#trying-it-out}
+## 正在尝试 {#trying-it-out}
 
-1. 以We.Retail範例內容開始AEM，然後開啟 [元件主控台](/help/sites-authoring/default-components-console.md).
+1. 从We.Retail示例内容开始AEM，然后打开 [组件控制台](/help/sites-authoring/default-components-console.md).
 
-   **全域導覽 — >工具 — >元件**
+   **全局导航 — >工具 — >组件**
 
-1. 在元件主控台中開啟邊欄，即可篩選特定元件群組。 核心元件可在以下網址找到：
+1. 在组件控制台中打开边栏，您可以筛选特定组件组。 核心组件可在中找到
 
-   * `.core-wcm`：標準核心元件
-   * `.core-wcm-form`：表單提交核心元件
+   * `.core-wcm`：标准核心组件
+   * `.core-wcm-form`：表单提交核心组件
 
-   選擇 `.core-wcm`.
+   选择 `.core-wcm`.
 
    ![chlimage_1-162](assets/chlimage_1-162.png)
 
-1. 請注意，所有核心元件都已命名 **v1**，反映這是此核心元件的第一個版本。 未來將發行常規版本，其版本相容於AEM，且升級容易，因此您可以利用最新功能。
-1. 按一下 **文字(v1)**.
+1. 请注意，所有核心组件都已命名 **v1**，反映这是此核心组件的第一个版本。 今后将发布常规版本，这些版本与AEM的版本兼容，并且允许轻松升级，以便您能够利用最新功能。
+1. 单击 **文本(v1)**.
 
-   請參閱 **資源型別** 元件的 `/apps/core/wcm/components/text/v1/text`. 核心元件位於 `/apps/core/wcm/components` 和會根據元件建立版本。
+   请参见 **资源类型** 组件的 `/apps/core/wcm/components/text/v1/text`. 核心组件位于 `/apps/core/wcm/components` 和是按组件进行版本控制的。
 
    ![chlimage_1-163](assets/chlimage_1-163.png)
 
-1. 按一下 **檔案** 標籤來檢視元件的開發人員檔案。
+1. 单击 **文档** 选项卡以查看组件的开发人员文档。
 
    ![chlimage_1-164](assets/chlimage_1-164.png)
 
-1. 返回「元件主控台」。 群組的篩選 **We.Retail** 並選取 **文字** 元件。
-1. 請參閱 **資源型別** 依照下的預期，指向元件 `/apps/weretail` 但 **資源超級型別** 指向核心元件 `/apps/core/wcm/components/text/v1/text`.
+1. 返回到组件控制台。 筛选组 **We.Retail** 并选择 **文本** 组件。
+1. 请参见 **资源类型** 指向下的预期组件 `/apps/weretail` 但是 **资源超级类型** 指向核心组件 `/apps/core/wcm/components/text/v1/text`.
 
    ![chlimage_1-165](assets/chlimage_1-165.png)
 
-1. 按一下 **即時使用情況** 標籤來檢視目前使用這個元件的頁面。 按一下第一個 **感謝您** 頁面以編輯頁面。
+1. 单击 **实时使用情况** 选项卡，以查看哪些页面当前正在使用此组件。 单击第一个 **谢谢** 页面以编辑该页面。
 
    ![chlimage_1-166](assets/chlimage_1-166.png)
 
-1. 在「感謝您」頁面上，選取文字元件，然後在元件的編輯選單中按一下「取消繼承」圖示。
+1. 在感谢页面上，选择文本组件，然后在组件的“编辑”菜单中，单击取消继承图标。
 
-   [We.Retail具有全球化網站結構](/help/sites-developing/we-retail-globalized-site-structure.md) 將內容從語言主版推送到 [透過稱為繼承的機制執行即時副本](/help/sites-administering/msm.md). 因此，必須取消繼承，才能讓使用者手動編輯文字。
+   [We.Retail具有全球化网站结构](/help/sites-developing/we-retail-globalized-site-structure.md) 将内容从语言母版推送到 [通过称为继承的机制创建活动副本](/help/sites-administering/msm.md). 因此，必须取消继承，以便允许用户手动编辑文本。
 
    ![chlimage_1-167](assets/chlimage_1-167.png)
 
-1. 按一下以確認取消 **是**.
+1. 单击以确认取消 **是**.
 
    ![chlimage_1-168](assets/chlimage_1-168.png)
 
-1. 取消繼承並選取文字元件後，您就可以使用更多選項。 按一下**編輯**。
+1. 取消继承并选择文本组件后，即可使用更多选项。 单击**编辑**。
 
    ![chlimage_1-169](assets/chlimage_1-169.png)
 
-1. 您現在可以看到哪些編輯選項可供文字元件使用。
+1. 您现在可以看到文本组件有哪些编辑选项可用。
 
    ![chlimage_1-170](assets/chlimage_1-170.png)
 
-1. 從 **頁面資訊** 功能表選取 **編輯範本**.
-1. 在頁面的範本編輯器中，按一下 **原則** 圖示中的文字元件 **配置容器** 頁面的。
+1. 从 **页面信息** 菜单选择 **编辑模板**.
+1. 在页面的模板编辑器中，单击 **策略** 中文本组件的图标 **布局容器** 页面的。
 
    ![chlimage_1-171](assets/chlimage_1-171.png)
 
-1. 核心元件可讓範本作者設定哪些屬性可供頁面作者使用。 這些功能包括允許貼上來源、格式選項、可用的段落樣式等功能。
+1. 利用核心组件，模板作者可以配置哪些属性可供页面作者使用。 这些功能包括允许的粘贴源、格式选项、可用的段落样式等功能。
 
-   這類設計對話方塊適用於許多核心元件，並與範本編輯器搭配使用。 在啟用後，作者就可以透過元件編輯器使用它們。
+   此类设计对话框可用于许多核心组件，并与模板编辑器携手工作。 启用后，作者可以通过组件编辑器使用它们。
 
    ![chlimage_1-172](assets/chlimage_1-172.png)
 
 ## 更多信息 {#further-information}
 
-如需核心元件的詳細資訊，請參閱撰寫檔案 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans) 核心元件和開發人員檔案的功能概觀 [開發核心元件](https://helpx.adobe.com/experience-manager/core-components/using/developing.html) 以取得技術概覽。
+有关核心组件的更多信息，请参阅创作文档 [核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans) 有关核心组件和开发人员文档的功能概述 [开发核心组件](https://helpx.adobe.com/experience-manager/core-components/using/developing.html) 了解技术概述。
 
-此外，您可能希望進一步調查 [可編輯的範本](/help/sites-developing/we-retail-editable-templates.md). 請參閱撰寫檔案 [建立頁面範本](/help/sites-authoring/templates.md) 或開發人員檔案頁面 [範本 — 可編輯](/help/sites-developing/page-templates-editable.md) 以取得可編輯範本的完整詳細資訊。
+此外，您可能希望进一步调查 [可编辑的模板](/help/sites-developing/we-retail-editable-templates.md). 请参阅创作文档 [创建页面模板](/help/sites-authoring/templates.md) 或开发人员文档页面 [模板 — 可编辑](/help/sites-developing/page-templates-editable.md) 有关可编辑模板的完整详细信息。

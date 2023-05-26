@@ -44,7 +44,7 @@ ht-degree: 97%
 
 要开始您的第一个 AEM Headless 项目，您需要确保您拥有一个内容模型，该模型将支持您希望跨所有渠道进行的个性化设置和更新。
 
-與AEM不同，如果您要建置使用者端應用程式，也要確保設定適當的開發環境，這樣您就能根據對AEM的API呼叫來測試使用者端。
+与AEM不同，如果您构建的是客户端应用程序，那么还需要确保设置正确的开发环境，以便针对对AEM的API调用测试客户端。
 
 ### 定义内容模型和 API {#defining-models}
 
@@ -147,7 +147,7 @@ Headless 项目之所以能够获得成功，既要归功于实施的技术，�
 * [AEM Headless 教程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=zh-Hans) – 使用这些动手实践教程，探究如何使用各种选项通过 AEM 将内容交付到 Headless 端点，并选择适合您的选项。
 * [使用 GraphQL API 进行 Headless 内容管理](https://experienceleague.adobe.com/?Solution=Experience+Manager&amp;Solution=Experience+Manager+Sites&amp;Solution=Experience+Manager+Forms&amp;Solution=Experience+Manager+Screens&amp;launch=ExperienceManager-D-1-2020.1.headless#courses) – 在本课程中大致了解在 AEM 中实施的 GraphQL API。需要通过 AdobeID 进行的身份验证。
 * [AEM Guides WKND - GraphQL](https://github.com/adobe/aem-guides-wknd-graphql) – 此 GitHub 项目包含突出显示 AEM 的 GraphQL API 的示例应用程序。
-* [Headless快速入門手冊](/help/sites-developing/headless/introduction.md#getting-started)  — 向已瞭解AEM的使用者快速介紹AEM Headless功能。
+* [Headless快速入门指南](/help/sites-developing/headless/introduction.md#getting-started)  — 向已了解AEM的用户简要介绍AEM Headless功能。
 * [创建内容片段模型](/help/assets/content-fragments/content-fragments-models.md) – 有关内容片段模型的技术文档
 * [创建内容片段](/help/assets/content-fragments/content-fragments.md) – 有关内容片段的技术文档
 * [使用 GraphQL 查询内容](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md) – 关于 GraphQL API 的技术文档

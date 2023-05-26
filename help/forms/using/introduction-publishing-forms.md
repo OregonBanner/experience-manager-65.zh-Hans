@@ -1,7 +1,7 @@
 ---
-title: 在入口網站上發佈表單的簡介
+title: 在门户上发布表单的简介
 seo-title: Introduction to publishing forms on a portal
-description: AEM Forms提供可用來建置表單入口網站的元件。 本文向您介紹可用的表單入口網站元件。
+description: AEM Forms提供了可用于构建表单门户的组件。 本文向您介绍可用的表单门户组件。
 seo-description: AEM Forms provides with components that you can use to build your forms portal. This articles introduces you to the available forms portal components.
 uuid: 658de12b-66e5-438b-ae8f-872ec11a9c3e
 content-type: reference
@@ -17,74 +17,74 @@ ht-degree: 0%
 
 ---
 
-# 在入口網站上發佈表單的簡介{#introduction-to-publishing-forms-on-a-portal}
+# 在门户上发布表单的简介{#introduction-to-publishing-forms-on-a-portal}
 
-## AEM Forms入口網站元件概觀 {#aem-forms-portal-components-overview}
+## AEM Forms portal组件概述 {#aem-forms-portal-components-overview}
 
-在典型的以表單為中心的入口網站部署情境中，表單開發和入口網站開發是兩個分離的活動。 當表單設計人員將表單設計和儲存在存放庫時，網頁開發人員會建立網站應用程式以列出表單並處理表單提交。 Forms會複製到Web層，因為Forms存放庫和Web應用程式之間沒有通訊。
+在以表单为中心的典型门户部署方案中，表单开发和门户开发是两个相互分离的活动。 当表单设计人员将表单设计和存储在存储库中时，Web开发人员会创建一个Web应用程序来列出表单并处理表单提交。 由于Forms存储库和Web应用程序之间没有通信，因此Forms会复制到Web层。
 
-這類情況通常會導致管理問題和生產延遲。 例如，如果儲存庫中有較新版本的表單，您需要取代Web層上的表單、修改Web應用程式，並在公用網站上重新部署表單。 重新部署Web應用程式可能會導致伺服器停機。 伺服器停機通常是計畫的活動，因此變更無法即時推送至公用網站。
+这种情形往往导致管理问题和生产延迟。 例如，如果存储库中有较新版本的表单，则需要在Web层上替换表单、修改Web应用程序并在公共站点上重新部署表单。 重新部署Web应用程序可能会导致某些服务器停机。 通常，服务器停机是一个计划活动，因此更改无法即时推送到公共站点。
 
-AEM Forms提供入口網站元件，可減少管理費用和生產延遲。 這些元件讓網頁開發人員能夠在使用Adobe Experience Manager (AEM)編寫的網站上建立和自訂表單入口網站。
+AEM Forms提供门户组件，减少管理开销和生产延迟。 这些组件让Web开发人员能够在使用Adobe Experience Manager (AEM)创作的网站上创建和自定义表单门户。
 
-![AEM Forms入口網站](assets/aem-forms-portal.png)
+![AEM Forms门户](assets/aem-forms-portal.png)
 
-表單入口網站元件可讓您新增下列功能：
+利用表单门户组件，可添加以下功能：
 
-* 以自訂版面配置列出表單。 隨附現成可用的清單檢視、卡片檢視和面板檢視版面配置。 您可以建立自己的自訂版面配置。
-* 可讓您在列出自訂中繼資料及自訂動作時顯示自訂中繼資料。
-* 列出使用AEM Forms Portal元件的發佈執行個體上Forms UI發佈的表單。
-* 允許一般使用者以HTML及PDF格式轉譯表單。
-* 使用自訂HTML設定檔來轉譯表單。
-* 啟用根據各種條件搜尋表單，例如表單屬性、中繼資料和標籤。
-* 將表單資料提交至servlet。
-* 使用自訂CSS來自訂入口網站的外觀。
-* 建立表單連結。
-* 列出一般使用者建立的最適化表單相關的草稿和提交內容。
+* 在自定义布局中列出表单。 开箱即用地提供了列表视图、卡片视图和面板视图布局。 您可以创建自己的自定义布局。
+* 允许您在列出自定义元数据和自定义操作时显示它们。
+* 列出在使用AEM Forms Portal组件的发布实例上由Forms UI发布的表单。
+* 允许最终用户以HTML和PDF格式呈现表单。
+* 使用自定义HTML配置文件渲染表单。
+* 启用基于各种条件（如表单属性、元数据和标记）的表单搜索。
+* 将表单数据提交到servlet。
+* 使用自定义CSS可自定义门户的外观。
+* 创建表单链接。
+* 列出与最终用户创建的自适应表单相关的草稿和提交。
 
-## 可用的AEM Forms入口網站元件 {#available-aem-forms-portal-components}
+## 可用的AEM Forms portal组件 {#available-aem-forms-portal-components}
 
-AEM Forms提供下列現成可用的入口網站元件，分組在 **檔案服務** 和 **檔案服務述詞** 元件群組：
+AEM Forms提供了以下现成的门户组件，这些组件分组在 **文档服务** 和 **文档服务谓词** 组件组：
 
-### 搜尋和製表人 {#search-amp-lister}
+### 搜索和列表程序 {#search-amp-lister}
 
-Search &amp; Lister元件可讓您從表單存放庫將表單列示到入口網站頁面，並提供根據指定條件列示表單的設定選項。 它也可讓您指定搜尋條件，讓入口網站使用者在表單清單中進行搜尋。
+利用Search &amp; Lister组件，可将表单存储库中的表单列出到门户页面上，并提供根据指定条件列出表单的配置选项。 它还允许您指定搜索条件，以使门户用户能够在表单列表中进行搜索。
 
 ### 草稿和提交 {#drafts-amp-submissions}
 
-雖然「搜尋和清單程式」元件會顯示由Forms作者公開的表單，但「草稿和提交」元件會顯示儲存為草稿的表單，以供稍後完成和提交的表單。 此元件可為任何登入使用者提供個人化體驗。
+虽然Search &amp; Lister组件显示由Forms作者公开的表单，但Drafts &amp; Submissions组件显示另存为草稿的表单，以供以后填写和提交的表单。 此组件可为任何登录用户提供个性化体验。
 
 ### 链接 {#link}
 
-連結元件可讓您在頁面上的任何位置建立表單的連結。 假設您提供訓練計畫，並且希望使用者提交表格以註冊訓練。 您已在您的網站上公佈此計畫的詳細資料。 在詳細資訊下方，您想要提供登錄檔單的連結。 連結元件可協助您建立該連結。
+使用链接组件，您可以创建指向页面上任何位置的表单的链接。 考虑这样一种情景：您提供培训方案，并希望用户提交表单以注册参加培训。 您已在您的网站上发布了该计划的详细信息。 在详细信息下方，您需要提供注册表单的链接。 链接组件可以帮助您创建该链接。
 
-## Forms入口網站工作流程 {#forms-portal-workflow}
+## Forms门户工作流程 {#forms-portal-workflow}
 
-Forms入口網站可讓您將表單從表單存放庫清單至入口網站頁面。 它也可讓您指定搜尋條件，讓入口網站使用者在表單清單中進行搜尋。 您也可以使用草稿和提交元件來顯示儲存為草稿的表單，以便稍後完成和提交表單。 您必須先執行一組特定作業，這些功能才能在Sites頁面上使用。 依照列出的順序執行步驟，讓元件和個別功能可在網站頁面上使用：
+通过Forms portal，可将表单从表单存储库列表到门户页面。 它还允许您指定搜索条件，以使门户用户能够在表单列表中进行搜索。 您还可以使用草稿和提交组件显示另存为草稿的表单，以供以后填写和提交表单。 在这些功能在站点页面上可用之前，您必须执行一组特定操作。 按照列出的顺序执行步骤，使组件和相应的功能在站点页面上可用：
 
-1. **啟用Forms Portal元件**：開箱即用的Forms Portal元件無法使用。 [啟用來自AEM sidekick的元件](/help/forms/using/enabling-forms-portal-components.md) 適用於AEM Sites頁面。
-1. **在頁面上列出表單（建立表單入口網站頁面）：** 您可以在AEM Sites和非AEM網站頁面上列出表單。 此清單包含發佈執行個體上可用的表單。 使用者可以開啟表單並開始填寫表單。 每當使用者開啟表單時，就會建立表單的新例項：
+1. **启用Forms Portal组件**：现成可用的Forms Portal组件不可用。 [从AEM sidekick启用组件](/help/forms/using/enabling-forms-portal-components.md) 用于AEM Sites页面。
+1. **在页面上列出表单（创建表单门户页面）：** 您可以在AEM Sites和非AEM网站页面上列出表单。 该列表包含发布实例上可用的表单。 用户可以打开表单并开始填写这些表单。 每当用户打开表单时，都会创建一个表单的新实例：
 
-   1. **在AEM Sites頁面上列出表單**：新增 **[搜尋和製表人](../../forms/using/creating-form-portal-page.md)** 元件至頁面並設定 **[清單窗格](../../forms/using/creating-form-portal-page.md#p-list-pane-p)** 在其中，列出頁面上的表單。 新增並設定 **搜尋窗格** 元件至 **搜尋和製表人** 元件以新增搜尋功能至頁面。 具有表單入口網站元件的頁面稱為 [forms portal頁面](../../forms/using/creating-form-portal-page.md).
+   1. **列出AEM Sites页面上的表单**：添加 **[搜索和列表程序](../../forms/using/creating-form-portal-page.md)** 组件到页面并配置 **[列表窗格](../../forms/using/creating-form-portal-page.md#p-list-pane-p)** 其中，用于在页面上列出表单。 添加并配置 **搜索窗格** 组件到 **搜索和列表程序** 组件向页面中添加搜索功能。 带有表单门户组件的页面称为 [forms portal page](../../forms/using/creating-form-portal-page.md).
 
-   1. **在非AEM Sites頁面上列出表單：** 使用 [forms portal search API](/help/forms/using/listing-forms-webpage-using-apis.md) 在非AEM Sites頁面上查詢、擷取及列出表單。
+   1. **在非AEM Sites页面上列出表单：** 使用 [表单门户搜索API](/help/forms/using/listing-forms-webpage-using-apis.md) 在非AEM Sites页面上查询、检索和列出表单。
 
-1. **在表單入口網站頁面上列出草稿和已提交的表單**：將草稿和提交元件新增並設定至表單入口網站頁面。 元件會列出處於草稿狀態的所有表單以及已提交的表單。
+1. **在表单门户页面上列出草稿和已提交的表单**：将草稿和提交组件添加并配置到表单门户页面。 组件列出了处于草稿状态的所有表单和已提交的表单。
 
-   若要讓提交的最適化表單出現在提交索引標籤中，請設定 **提交動作** 至 **[Forms入口網站提交動作](configuring-submit-actions.md).** 或者，啟用Forms入口網站提交選項。 每當使用者提交表單時，該表單都會新增到提交索引標籤。
+   要使提交的自适应表单显示在提交选项卡中，请设置 **提交操作** 到 **[Forms Portal提交操作](configuring-submit-actions.md).** 或者，启用Forms Portal提交选项。 每当用户提交表单时，该表单都会添加到提交选项卡。
 
-1. **設定草稿和已提交表單資料的儲存空間：** 依預設，草稿和提交資料會儲存在AEM存放庫中。 在生產環境中，建議不要將草稿或已提交的表單資料儲存在AEM存放庫中。 [設定表單入口網站元件，將資料儲存至安全位置](../../forms/using/draft-submission-component.md#customizing-the-storage).
-1. **（選用）自訂Forms Portal元件：** [自訂您的表單入口網站頁面範本](../../forms/using/customizing-templates-forms-portal-components.md) 為元件提供獨特的外觀。
-1. **（選用）新增自訂中繼資料至表單：** [新增自訂中繼資料至表單](../../forms/using/customizing-templates-forms-portal-components.md) 以改善清單和搜尋體驗。
-1. **發佈表單入口網站頁面：** 您的表單入口網站頁面現已準備就緒。 發佈頁面。
+1. **为草稿和提交的表单数据配置存储：** 默认情况下，草稿和提交数据存储在AEM存储库中。 在生产环境中，建议不要将草稿或已提交的表单数据存储在AEM存储库中。 [配置表单门户组件以将数据保存到安全位置](../../forms/using/draft-submission-component.md#customizing-the-storage).
+1. **（可选）自定义表单门户组件：** [自定义您的表单门户页面模板](../../forms/using/customizing-templates-forms-portal-components.md) 本发明的目的在于提供各部件的独特外观。
+1. **（可选）将自定义元数据添加到表单：** [将自定义元数据添加到表单](../../forms/using/customizing-templates-forms-portal-components.md) 以改善列表和搜索体验。
+1. **发布表单门户页面：** 您的表单门户页面现已准备就绪。 发布页面。
 
-## 相關文章 {#related-articles}
+## 相关文章 {#related-articles}
 
-* [啟用表單入口網站元件](/help/forms/using/enabling-forms-portal-components.md)
-* [建立表單入口網站頁面](../../forms/using/creating-form-portal-page.md)
-* [使用API的網頁上列出表單](/help/forms/using/listing-forms-webpage-using-apis.md)
-* [使用草稿和提交元件](../../forms/using/draft-submission-component.md)
-* [自訂草稿和已提交表單的儲存](../../forms/using/draft-submission-component.md#customizing-the-storage)
-* [將草稿和提交元件與資料庫整合的範例](integrate-draft-submission-database.md)
-* [自訂表單入口網站元件的範本](../../forms/using/customizing-templates-forms-portal-components.md)
-* [在入口網站上發佈表單的簡介](../../forms/using/introduction-publishing-forms.md)
+* [启用表单门户组件](/help/forms/using/enabling-forms-portal-components.md)
+* [创建表单门户页面](../../forms/using/creating-form-portal-page.md)
+* [使用API列出网页上的表单](/help/forms/using/listing-forms-webpage-using-apis.md)
+* [使用草稿和提交组件](../../forms/using/draft-submission-component.md)
+* [自定义草稿和已提交表单的存储](../../forms/using/draft-submission-component.md#customizing-the-storage)
+* [将草稿和提交组件与数据库集成的示例](integrate-draft-submission-database.md)
+* [自定义表单门户组件的模板](../../forms/using/customizing-templates-forms-portal-components.md)
+* [在门户上发布表单的简介](../../forms/using/introduction-publishing-forms.md)

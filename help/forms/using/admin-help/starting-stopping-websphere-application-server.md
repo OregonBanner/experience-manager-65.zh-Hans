@@ -1,7 +1,7 @@
 ---
-title: 啟動和停止WebSphere Application Server
+title: 启动和停止WebSphere应用程序服务器
 seo-title: Starting and stopping WebSphere Application Server
-description: 數個程式需要您停止或啟動要部署AEM表單產品的WebSphere執行個體。 本檔案說明如何啟動和停止WebSphere Application Server。
+description: 多个过程要求您停止或启动要部署AEM表单产品的WebSphere实例。 本文档介绍如何启动和停止WebSphere应用程序服务器。
 seo-description: Several procedures require you to stop or start the instance of WebSphere where you want to deploy AEM forms products. This document describes how to start and stop the WebSphere Application Server.
 uuid: e0373197-aa57-4087-933d-92a86840a11a
 contentOwner: admin
@@ -17,30 +17,30 @@ ht-degree: 0%
 
 ---
 
-# 啟動和停止WebSphere Application Server {#starting-and-stopping-websphere-application-server}
+# 启动和停止WebSphere应用程序服务器 {#starting-and-stopping-websphere-application-server}
 
-數個程式需要您停止或啟動要部署AEM表單產品的WebSphere執行個體。 如果您不確定應用程式伺服器是否已啟動，可以先檢視WebSphere Application Server的狀態。
+多个过程要求您停止或启动要部署AEM表单产品的WebSphere实例。 如果不确定应用程序服务器是否已启动，可以首先查看WebSphere应用程序服务器的状态。
 
-## 檢視WebSphere應用程式伺服器的狀態 {#view-the-status-of-websphere-application-server}
+## 查看WebSphere应用程序服务器的状态 {#view-the-status-of-websphere-application-server}
 
-1. 在命令提示字元中，前往 `[appserver root]/bin` 目錄。
-1. 輸入下列命令，取代 *server_name* 使用WebSphere Application Server的名稱：
+1. 在命令提示符下，转到 `[appserver root]/bin` 目录。
+1. 输入以下命令，替换 *server_name* 使用WebSphere应用程序服务器的名称：
 
    * (Windows) `serverStatus.bat`*server_name*
    * (Linux、UNIX) 。/ `serverStatus.sh`*server_name*
 
-## 啟動WebSphere Application Server {#start-websphere-application-server}
+## 启动WebSphere应用程序服务器 {#start-websphere-application-server}
 
-1. 在命令提示字元中，前往 `[appserver root]/bin` 目錄。
-1. 輸入下列命令，取代 *server_name* 使用WebSphere Application Server的名稱：
+1. 在命令提示符下，转到 `[appserver root]/bin` 目录。
+1. 输入以下命令，替换 *server_name* 使用WebSphere应用程序服务器的名称：
 
    * (Windows) `startServer.bat`*server_name*
    * (Linux、UNIX) 。/ `startServer.sh`*server_name*
 
-## 停止WebSphere Application Server {#stop-websphere-application-server}
+## 停止WebSphere应用程序服务器 {#stop-websphere-application-server}
 
-1. 在命令提示字元中，前往 `[appserver root]/bin` 目錄。
-1. 輸入下列命令，取代 *server_name* 使用WebSphere Application Server的名稱：
+1. 在命令提示符下，转到 `[appserver root]/bin` 目录。
+1. 输入以下命令，替换 *server_name* 使用WebSphere应用程序服务器的名称：
 
    * (Windows) `stopServer.bat`*server_name*
    * (Linux、UNIX) 。/ `stopServer.sh`*server_name*

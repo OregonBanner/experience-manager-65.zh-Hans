@@ -1,6 +1,6 @@
 ---
-title: Lightbox作為您的個人影像庫
-description: 瞭解如何在Adobe Experience Manager Assets中將Lightbox作為您的個人影像庫。
+title: Lightbox作为您的个人图像库
+description: 了解Lightbox作为您在Adobe Experience Manager Assets中的个人图像库。
 contentOwner: AG
 role: User, Admin
 feature: Developer Tools,Renditions
@@ -12,30 +12,30 @@ ht-degree: 0%
 
 ---
 
-# Lightbox {#lightbox}
+# 灯箱 {#lightbox}
 
-Lightbox是一種特殊型別的集合，可讓您輕鬆存取資產。 您可以快速存取Lightbox以新增或刪除資產。 它可作為您的個人影像庫。
+Lightbox是一种特殊类型的收藏集，可轻松访问资产。 您可以快速访问Lightbox以添加或删除资产。 它用作您的个人图像库。
 
-如果您是 [!DNL Adobe Experience Manager Assets] 使用者登入應用程式時，會自動建立Lightbox。 這是您登入時專屬的行為。 其他使用者無法存取您的Lightbox。
+如果您是 [!DNL Adobe Experience Manager Assets] 用户，首次登录应用程序时会自动创建Lightbox。 它是登录名独占的。 其他用户无法访问您的Lightbox。
 
-## 將資產新增至Lightbox {#adding-assets-to-lightbox}
+## 将资产添加到Lightbox {#adding-assets-to-lightbox}
 
-1. 從 [!DNL Assets] 使用者介面，選取您要新增至Lightbox的資產。
-1. 將資產拖曳至 **[!UICONTROL 放入Lightbox]** 區域。 當拖放區域啟動且其標籤變更為 **[!UICONTROL 放置以新增]**.
+1. 从 [!DNL Assets] 用户界面中，选择要添加到Lightbox的资源。
+1. 将资源拖动到 **[!UICONTROL 放入Lightbox]** 区域。 当拖放区域变为活动状态并且其标签变为 **[!UICONTROL 放置以添加]**.
 
    ![add_to_lightbox](assets/add_to_lightbox.png)
 
-1. 在對話方塊中，按一下 **[!UICONTROL 新增]**，然後關閉以完成此程式。 選取的資產會新增至Lightbox。
-1. 若要檢視Lightbox，請前往「集合」主控台。
-1. 按一下 **[!UICONTROL Lightbox]** 以檢視其中的資產。
+1. 在对话框中，单击 **[!UICONTROL 添加]**，然后关闭它以完成该过程。 选定的资源即添加到Lightbox。
+1. 要查看Lightbox，请转到“收藏集”控制台。
+1. 单击 **[!UICONTROL 灯箱]** 以查看其中的资源。
 
    >[!NOTE]
    >
-   >雖然Lightbox類似集合，但您無法執行通常對集合執行的所有動作。 例如，您無法刪除、共用或檢視Lightbox的設定。 此外，您無法將其新增至其他集合。 不過，您可以編輯燈箱內的資產。
+   >虽然Lightbox与某个收藏集类似，但您不能执行通常对收藏集执行的所有操作。 例如，您无法删除、共享或查看Lightbox的设置。 此外，您无法将其添加到其他收藏集。 但是，您可以编辑灯箱中的资产。
 
-## 從Lightbox中移除資產 {#removing-assets-from-lightbox}
+## 从Lightbox中删除资产 {#removing-assets-from-lightbox}
 
-1. 導覽至「系列」主控台，按一下「燈箱」以檢視其資產。
-1. 選取您要移除的資產。
-1. 在工具列中按一下 **[!UICONTROL 移除]**.
-1. 在對話方塊中，按一下 **[!UICONTROL 移除]** 以確認刪除動作。 資產會從Lightbox中刪除。
+1. 导航到“收藏集”控制台，单击Lightbox查看其资源。
+1. 选择要删除的资源。
+1. 在工具栏中，单击 **[!UICONTROL 移除]**.
+1. 在对话框中，单击 **[!UICONTROL 移除]** 以确认删除操作。 资源将从Lightbox中删除。

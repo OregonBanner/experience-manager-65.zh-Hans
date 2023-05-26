@@ -1,7 +1,7 @@
 ---
-title: 變更字元集
+title: 更改字符集
 seo-title: Change the character set
-description: 您可以指定用來編碼輸出資料流的字元集。 瞭解如何變更字元集。
+description: 您可以指定用于编码输出流的字符集。 了解如何更改字符集。
 seo-description: You can specify the character set used to encode the output stream. Learn how you can change the character set.
 uuid: ecb0c3ff-368c-4553-80e4-aa35fc15af62
 contentOwner: admin
@@ -17,15 +17,15 @@ ht-degree: 1%
 
 ---
 
-# 變更字元集 {#change-the-character-set}
+# 更改字符集 {#change-the-character-set}
 
-您可以指定用來編碼輸出資料流的字元集。
+您可以指定用于编码输出流的字符集。
 
-1. 在管理控制檯中，按一下 **[!UICONTROL 服務>輸出]**.
-1. 在「國際化」下的「字元集」清單中，選取字元集。 此設定取決於 `TransformationFormat` 和 `PrintFormat` 透過API指定。 若要指定所列字元集以外的字元集，請選取「自訂」，然後在顯示的方塊中指定編碼值。
+1. 在管理控制台中，单击 **[!UICONTROL 服务>输出]**.
+1. 在“国际化”下的“字符集”列表中，选择一个字符集。 此设置取决于 `TransformationFormat` 和 `PrintFormat` 通过API指定。 要指定列出的字符集以外的字符集，请选择自定义，然后在显示的框中指定编码值。
 
-   若 `TransformationFormat` 是PDF和PDF/A或 `PrintFormat` 是PCL、PostScript、Zebra標籤、IPL、DPL、TPCL、GenericColorPCL或GenericPSLevel3，僅支援特定字元集。
+   如果 `TransformationFormat` PDF和PDF/A或 `PrintFormat` 是PCL、PostScript、Zebra标签、IPL、DPL、TPCL、GenericColorPCL或GenericPSLevel3，仅支持特定字符集。
 
-   字元集必須是有效的正式名稱。 預設值為ISO-8859-1。
+   字符集必须是有效的规范名称。 默认值为ISO-8859-1。
 
 1. 单击“**[!UICONTROL 保存]**”。

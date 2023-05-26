@@ -1,7 +1,7 @@
 ---
-title: 擷取要轉譯的字串
+title: 提取字符串以进行翻译
 seo-title: Extracting Strings for Translating
-description: 使用xgettext-maven-plugin從您的原始程式碼中擷取需要翻譯的字串
+description: 使用xgettext-maven-plugin从源代码中提取需要翻译的字符串
 seo-description: Use xgettext-maven-plugin to extract strings from your source code that need translating
 uuid: 2c586ecb-8494-4f8f-b31a-1ed73644d611
 contentOwner: Guillaume Carlino
@@ -17,17 +17,17 @@ ht-degree: 1%
 
 ---
 
-# 擷取要轉譯的字串{#extracting-strings-for-translating}
+# 提取字符串以进行翻译{#extracting-strings-for-translating}
 
-使用xgettext-maven-plugin從您的原始程式碼中擷取需要翻譯的字串。 Maven外掛程式會將字串擷取至您傳送的XLIFF檔案進行翻譯。 字串會從下列位置擷取：
+使用xgettext-maven-plugin从源代码中提取需要翻译的字符串。 Maven插件会将字符串提取到您发送的XLIFF文件中进行翻译。 将从以下位置提取字符串：
 
-* Java來源檔案
-* Javascript來源檔案
-* SVN資源（JCR節點）的XML表示法
+* Java源文件
+* Javascript源文件
+* SVN资源（JCR节点）的XML表示形式
 
-## 設定字串擷取 {#configuring-string-extraction}
+## 配置字符串提取 {#configuring-string-extraction}
 
-設定xgettext-maven-plugin工具如何為您的專案擷取字串。
+配置xgettext-maven-plugin工具如何提取项目的字符串。
 
 ```xml
 /filter { }
@@ -47,67 +47,67 @@ ht-degree: 1%
 
 | 分区 | 描述 |
 |---|---|
-| /filter | 識別要剖析的檔案。 |
-| /parsers/vaultxml | 設定儲存庫檔案的剖析。 識別包含外部化字串和本地化提示的JCR節點。 也會識別要忽略的JCR節點。 |
-| /parsers/javascript | 識別可將字串外部化的Javascript函式。 您不需要變更此區段。 |
-| /parsers/regexp | 設定剖析Java、JSP和ExtJS範本檔案。 您不需要變更此區段。 |
-| /潛能 | 偵測要國際化的字串的公式。 |
+| /filter | 标识要解析的文件。 |
+| /parsers/vaultxml | 配置保险库文件的解析。 标识包含外部化字符串和本地化提示的JCR节点。 还会标识要忽略的JCR节点。 |
+| /parsers/javascript | 标识用于将字符串外部化的Javascript函数。 您无需更改此分区。 |
+| /parsers/regexp | 配置Java、JSP和ExtJS模板文件的解析。 您无需更改此分区。 |
+| /潜能 | 检测要国际化的字符串的公式。 |
 
-### 識別要剖析的檔案 {#identifying-the-files-to-parse}
+### 标识要解析的文件 {#identifying-the-files-to-parse}
 
-i18n.any檔案的/filter區段會識別xgettext-maven-plugin工具剖析的檔案。 新增數個包含和排除規則，分別識別已剖析和忽略的檔案。 您應該包含所有檔案，然後排除不想剖析的檔案。 通常，您會排除不貢獻UI的檔案型別，或定義UI但未翻譯的檔案。 包含和排除規則的格式如下：
+i18n.any文件的/filter部分标识xgettext-maven-plugin工具解析的文件。 添加多个包含和排除规则，分别标识被解析和忽略的文件。 您应该包含所有文件，然后排除不想分析的文件。 通常，会排除不属于UI的文件类型，或定义UI但未翻译的文件。 包含和排除规则的格式如下：
 
 ```
 { /include "pattern" }
 { /exclude "pattern" }
 ```
 
-規則的陣列部分用於比對要包含或排除的檔案名稱。 陣列首碼表示您是匹配JCR節點（其在儲存庫中表示）還是檔案系統。
+规则的模式部分用于匹配要包含或排除的文件名。 模式前缀指示您是匹配JCR节点（它在电子仓库中的表示形式）还是文件系统。
 
 | 前缀 | 效果 |
 |---|---|
-| / | 表示JCR路徑。 因此，此首碼會比對jcr_root目錄下的檔案。 |
-| &amp;ast； | 表示檔案系統上的一般檔案。 |
-| 无 | 無首碼或以資料夾或檔案名稱開頭的模式表示檔案系統上的一般檔案。 |
+| / | 指示JCR路径。 因此，该前缀与jcr_root目录下的文件匹配。 |
+| &amp;ast； | 指示文件系统中的常规文件。 |
+| 无 | 无前缀或以文件夹或文件名开头的模式表示文件系统中的常规文件。 |
 
-當在模式中使用時，/字元表示子目錄，而&amp;ast；字元符合全部。 下表列出數個規則範例。
+在模式中使用时，/字符表示子目录，&amp;ast；字符与所有匹配。 下表列出了几个规则示例。
 
 <table>
  <tbody>
   <tr>
-   <th>規則範例</th>
+   <th>示例规则</th>
    <th>效果</th>
   </tr>
   <tr>
    <td><code>{ /include "*" }</code></td>
-   <td>包含所有檔案。</td>
+   <td>包括所有文件。</td>
   </tr>
   <tr>
    <td><code>{ /exclude "*.pdf" }</code></td>
-   <td>排除所有PDF檔案。</td>
+   <td>排除所有PDF文件。</td>
   </tr>
   <tr>
    <td><code> { /exclude "*/pom.xml" }</code></td>
-   <td>排除POM檔案。</td>
+   <td>排除POM文件。</td>
   </tr>
   <tr>
    <td><code class="code">{ /exclude "/content/*" }
       { /include "/content/catalogs/geometrixx/templatepages" }
       { /include "/content/catalogs/geometrixx/templatepages/*" }</code></td>
-   <td><p>排除/content節點下的所有檔案。</p> <p>包含/content/catalogs/geometrixx/templatepages節點。</p> <p>包含/content/catalogs/geometrixx/templatepages的所有子節點。</p> </td>
+   <td><p>排除/content节点下的所有文件。</p> <p>包含/content/catalogs/geometrixx/templatepages节点。</p> <p>包含/content/catalogs/geometrixx/templatepages的所有子节点。</p> </td>
   </tr>
  </tbody>
 </table>
 
-### 擷取字串  {#extracting-the-strings}
+### 提取字符串  {#extracting-the-strings}
 
-無POM：
+无POM：
 
 ```shell
 mvn -N com.adobe.granite.maven:xgettext-maven-plugin:1.2.2:extract  -Dxgettext.verbose=true -Dxgettext.target=out -Dxgettext.rules=i18n.any -Dxgettext.root=.
 ```
 
-使用POM：將此專案新增至POM：
+使用POM：将此项添加到POM：
 
 ```xml
 <build>
@@ -133,12 +133,12 @@ mvn -N com.adobe.granite.maven:xgettext-maven-plugin:1.2.2:extract  -Dxgettext.v
 mvn xgettext:extract
 ```
 
-### 輸出檔案 {#output-files}
+### 输出文件 {#output-files}
 
-* `raw.xliff`：擷取的字串
-* `warn.log`：警告（若有的話） `CQ.I18n.getMessage()` API使用不正確。 這些一律需要修正，然後再重新執行。
+* `raw.xliff`：提取的字符串
+* `warn.log`：警告（如果有），如果 `CQ.I18n.getMessage()` API使用不正确。 它们始终需要修复，然后再重新运行。
 
-* `parserwarn.log`：剖析器警告（如有），例如js剖析器問題
-* `potentials.xliff`：未擷取的「潛在」候選項，但可能是需要翻譯的可讀取字串（可以忽略，仍會產生大量誤判）
-* `strings.xliff`：平面化的xliff檔案，將匯入ALF中
-* `backrefs.txt`：可讓您快速查詢指定字串的原始程式碼位置
+* `parserwarn.log`：解析器警告（如果有），例如js解析器问题
+* `potentials.xliff`：未提取的“潜在”候选项，这些候选项可能是人类可读的字符串，需要翻译（可以忽略，但仍会生成大量误报）
+* `strings.xliff`：拼合的xliff文件，将导入ALF
+* `backrefs.txt`：允许快速查找给定字符串的源代码位置

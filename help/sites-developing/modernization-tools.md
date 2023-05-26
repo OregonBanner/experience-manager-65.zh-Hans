@@ -1,7 +1,7 @@
 ---
 title: AEM 现代化工具
 seo-title: AEM Modernization Tools
-description: AEM現代化工具可協助您將舊版AEM功能轉換為最新技術
+description: AEM现代化工具可帮助您将旧版AEM功能转换为最新技术
 seo-description: AEM Modernization Tools help you easily convert your legacy AEM features to the latest technology
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES

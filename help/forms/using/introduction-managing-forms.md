@@ -1,7 +1,7 @@
 ---
-title: 管理表單簡介
+title: 管理表单简介
 seo-title: Introduction to managing forms
-description: AEM Forms提供管理最適化Forms和相關資產的工具。 本文向您介紹重要的表單管理功能和使用者介面元素。
+description: AEM Forms提供了用于管理自适应Forms和相关资源的工具。 本文介绍了关键表单管理功能和用户界面元素。
 seo-description: AEM Forms provides tools to manage Adaptive Forms and related assets. This article introduces you to the key forms management capabilities and user interface elements.
 uuid: 2275a0b6-b31e-4d8e-8154-ccdfff3705aa
 content-type: reference
@@ -17,20 +17,20 @@ ht-degree: 1%
 
 ---
 
-# 管理表單簡介 {#introduction-to-managing-forms}
+# 管理表单简介 {#introduction-to-managing-forms}
 
-AEM [!DNL Forms] 提供簡化但功能強大的使用者介面，用於建立和管理表單、檔案、主題、信件、檔案片段、資料字典和相關資產。 它有助於管理表單、檔案和相關資產的完整生命週期 — 從開發人員的案頭到在入口網站伺服器上為使用者提供。 您可以使用AEM [!DNL Forms] 使用者介面至：
+AEM [!DNL Forms] 提供了简化但功能强大的用户界面，用于创建和管理表单、文档、主题、信件、文档片段、数据字典和相关资产。 它有助于管理表单、文档和相关资产的完整生命周期 — 从开发人员的桌面到在门户服务器上为最终用户提供。 您可以使用AEM [!DNL Forms] 用户界面：
 
-* 存取AEM [!DNL Forms] 元件
-* 存取AEM [!DNL Forms] 設定
+* 访问AEM [!DNL Forms] 组件
+* 访问AEM [!DNL Forms] 配置
 
 >[!NOTE]
 >
->如需其他AEM工具和選項的詳細資訊，請參閱 [製作](/help/sites-authoring/author.md).
+>有关其他AEM工具和选项的详细信息，请参阅 [创作](/help/sites-authoring/author.md).
 
-## 存取AEM Forms元件 {#access-aem-forms-components}
+## 访问AEM Forms组件 {#access-aem-forms-components}
 
-除了建立表單、檔案和相關資產的選項，AEM還提供建立網站、資產、管理AEM執行個體等選項。 您可以按一下 ![adobeexperiencemanager](assets/adobeexperiencemanager.png) Experience Manager標誌，以導覽至所有可用工具。 除了其他元件主控台的連結，它也包含AEM的連結 [!DNL Forms]. 導覽至AEM [!DNL Forms]，按一下Experience Manager標誌 ![adobeexperiencemanager](assets/adobeexperiencemanager.png) >導覽 ![指南針](assets/compass.png) > **[!UICONTROL Forms]**. 下列主控台的連結隨即顯示：
+除了创建表单、文档和相关资产选项之外，AEM还提供了创建站点、资产、管理AEM实例等选项。 您可以单击 ![adobeexperiencemanager](assets/adobeexperiencemanager.png) Experience Manager徽标，可导航到所有可用的工具。 除了指向其他组件控制台的链接之外，它还包含AEM的链接 [!DNL Forms]. 导航到AEM [!DNL Forms]，单击Experience Manager徽标 ![adobeexperiencemanager](assets/adobeexperiencemanager.png) >导航 ![指南针](assets/compass.png) > **[!UICONTROL Forms]**. 将显示以下控制台的链接：
 
 * 表单和文档
 * 主题
@@ -38,90 +38,90 @@ AEM [!DNL Forms] 提供簡化但功能強大的使用者介面，用於建立和
 * 文档片段
 * 数据字典
 
-   ![AEM Forms主控台](assets/aem_forms_console_new.png)
+   ![AEM Forms控制台](assets/aem_forms_console_new.png)
 
 ### 表单和文档  {#forms-documents}
 
-Forms &amp; Documents提供建立互動式通訊、最適化表單、最適化表單片段和表單集的選項。 僅適用於AEM [!DNL Forms] 在JEE上，Forms &amp; Documents提供從本機儲存匯入檔案和同步AEM的選項 [!DNL Forms] 具有Workbench的資產。
+Forms &amp; Documents提供了创建交互式通信、自适应表单、自适应表单片段和表单集的选项。 仅适用于AEM [!DNL Forms] 在JEE上，Forms &amp; Documents提供了一个选项，用于从本地存储导入文件并同步AEM [!DNL Forms] 使用Workbench处理资产。
 
-建立按鈕是建立或上傳AEM流程的起點 [!DNL Forms] 資產。 它提供您建立以下專案的選項：
+“创建”按钮是创建或上传AEM过程的起点 [!DNL Forms] 资产。 它为您提供了创建以下内容的选项：
 
-* **互動式通訊**：互動式通訊是個人化、互動式且適合裝置使用的HTML式數位通訊、陳述或檔案。 互動式通訊本質上是回應式通訊，並根據使用者裝置和設定自動變更版面和設計。 如需詳細資訊，請參閱 [互動式通訊概述](/help/forms/using/interactive-communications-overview.md)
+* **交互式通信**：交互式通信是一种基于HTML的个性化、交互式且设备友好的数字通信、声明或文档。 交互式通信本质上是响应式的，可根据用户设备和设置自动更改布局和设计。 有关详细信息，请参阅 [交互式通信概述](/help/forms/using/interactive-communications-overview.md)
 
-* **最適化表單：** 最適化表單是吸引人且回應式表單。 您可以根據使用者回應、裝置或工作環境，透過新增或移除表單區段，撰寫最適化表單以動態調整使用者的輸入。 此 [製作調適型表單簡介](../../forms/using/introduction-forms-authoring.md) 文章提供有關最適化表單的詳細資訊。
+* **自适应表单：** 自适应表单是一种吸引人且响应式表单。 您可以创作自适应表单，以根据用户响应、设备或工作环境添加或删除表单部分，从而动态适应用户输入。 此 [自适应表单创作简介](../../forms/using/introduction-forms-authoring.md) 文章提供了有关自适应表单的详细信息。
 
-* **最適化表單片段：** 雖然每個表單都是專為特定目的而設計，但大多數表單中都有些常見的區段，例如提供個人詳細資訊，例如姓名和地址、家庭詳細資訊、收入詳細資訊等。 您可以為此類區段建立個別資產。 這些可重複使用的獨立區段稱為自適應表單片段。 如需詳細資訊，請參閱 [最適化表單片段](../../forms/using/adaptive-form-fragments.md) 文章。
+* **自适应表单片段：** 虽然每个表单都是为特定目的而设计的，但大多数表单中都存在一些通用区段，例如提供个人详细信息，如姓名和地址、家庭详细信息、收入详细信息等。 您可以为此类部分创建单个资源。 这些可重用的独立区段称为自适应表单片段。 有关详细信息，请参阅 [自适应表单片段](../../forms/using/adaptive-form-fragments.md) 文章。
 
-* **表單集：** 表單集是分組在一起的HTML5表單的集合，並以單一表單集呈現給一般使用者。 當使用者開始填寫表單集時，表單會順暢地從一個表單轉換為另一個表單。 最後，使用者只需按一下即可以單一實體形式提交所有表單。 如需詳細資訊，請參閱 [AEM Forms中的表單集](../../forms/using/formset-in-aem-forms.md).
+* **表单集：** 表单集是分组在一起的HTML5表单的集合，作为单个表单集提供给最终用户。 当最终用户开始填写表单集时，表单会无缝地从一个表单转换为另一个表单。 最后，用户只需单击一下即可作为单个实体提交所有表单。 有关详细信息，请参阅 [AEM Forms中的表单集](../../forms/using/formset-in-aem-forms.md).
 
-* **資料夾：** AEM [!DNL Forms] 使用者介面使用資料夾來排列資產。 它支援兩種型別的資料夾：
+* **文件夹：** AEM [!DNL Forms] 用户界面使用文件夹排列资产。 它支持两种类型的文件夹：
 
-   * **一般資料夾：** 這些資料夾用於在AEM內建立的資產 [!DNL Forms] 使用者介面。 這些資料夾沒有嚴格的資料夾結構。 您可以重新命名、建立子資料夾，並將最適化表單、互動式通訊、最適化表單片段、表單範本(XDP)、PDF forms、檔案和相關資產儲存在這些資料夾中。
-   * **Forms Workflow資料夾：** Forms工作流程資料夾是在Workbench程式(LiveCycle封存)移轉並與AEM同步時建立的 [!DNL Forms] 使用者介面。 不允許重新命名、建立子資料夾、建立互動式通訊、最適化表單片段或互動式通訊。 也不允許刪除版本資料夾，或建立及上傳最適化表單、最適化表單片段或與版本資料夾平行的互動式通訊。
+   * **常规文件夹：** 这些文件夹用于在AEM中创建的资源 [!DNL Forms] 用户界面。 这些文件夹没有严格的文件夹结构。 您可以重命名、创建子文件夹，并将自适应表单、交互式通信、自适应表单片段、表单模板(XDP)、PDF forms、文档和相关资源存储在这些文件夹中。
+   * **Forms Workflow文件夹：** Forms工作流文件夹是在Workbench流程(LiveCycle存档)迁移并与AEM同步时创建的 [!DNL Forms] 用户界面。 不允许重命名、创建子文件夹、创建交互式通信、自适应表单片段或交互式通信。 还不允许删除版本文件夹，也不允许创建和上传与版本文件夹平行的自适应表单、自适应表单片段或交互式通信。
 
-   ![資料夾](assets/folders.png)
+   ![文件夹](assets/folders.png)
 
-   **答：** 一般資料夾 **B.** Forms Workflow資料夾
+   **答：** 常规文件夹 **B.** Forms Workflow文件夹
 
-Forms和「檔案」面板也提供以下選項：
+Forms和“文档”面板还提供以下选项：
 
-* **從本機儲存匯入檔案：** 您可以匯入PDF forms和檔案、表單範本（XFA表單）和其他資源（XSD的影像和XML結構描述）。 如需逐步指示，請參閱 [將資產匯入及匯出至AEM Forms](../../forms/using/import-export-forms-templates.md).
-* **將AEM Forms資產與Workbench同步：** 您可以使用「來自Workbench的檔案」選項，在AEM Forms使用者介面與Workbench之間同步資產。 這可確保所有資產都可在AEM中使用 [!DNL Forms] 使用者介面和Workbench的crx存放庫資產選擇。
+* **从本地存储导入文件：** 您可以导入PDF forms和文档、表单模板（XFA表单）和其他资源（XSD的图像和XML架构）。 有关分步说明，请参阅 [将资源导入和导出到AEM Forms](../../forms/using/import-export-forms-templates.md).
+* **将AEM Forms资源与Workbench同步：** 您可以使用“来自Workbench的文件”选项在AEM Forms用户界面和Workbench之间同步资产。 它确保所有资源在AEM中均可用 [!DNL Forms] 用户界面和Workbench的crx存储库资产选择。
 
 ### 主题  {#themes}
 
-主題包含元件和面板的樣式詳細資訊。 主題具有獨立的身分。 因此，您可以在多個最適化表單上重複使用主題。 您可以指定元件的樣式，或修改用於表單中的各種元件的CSS屬性。 樣式包含背景顏色、狀態顏色、透明度及大小等屬性。 您可以將自訂內容儲存在主題中，並將其作為預設集移植到表單的元件上。 將主題新增至表單時，指定的樣式會反映在表單的對應元件上。 使用AEM 6.2 [!DNL Forms]，您可以建立主題並將其套用至您的表單。
+主题包含组件和面板的样式详细信息。 主题具有独立的标识。 因此，您可以在多个自适应表单上重用主题。 您可以为组件指定样式，或修改表单中使用的各种组件的CSS属性。 样式包括诸如背景颜色、状态颜色、透明度和大小等属性。 可将自定义项保存在主题中，并将其作为预设移植到表单的组件上。 将主题添加到表单时，指定的样式会反映在表单的相应组件上。 使用AEM 6.2 [!DNL Forms]，您可以创建主题并将其应用到表单。
 
-如需建立和使用主題的詳細資訊，請參閱 [AEM Forms中的主題](../../forms/using/themes.md).
+有关创建和使用主题的信息，请参阅 [AEM Forms中的主题](../../forms/using/themes.md).
 
 ### 书信  {#letters}
 
-一個AEM [!DNL Forms] letter是安全、個人化和互動式通訊。 您可以使用AEM [!DNL Forms] 透過簡化的程式，從預先核准和自訂內容中快速組合信件（也稱為往來信）。
+AEM [!DNL Forms] 信件是一种安全、个性化的交互式通信。 您可以使用AEM [!DNL Forms] 以通过简化的流程从预批准和自定义内容中快速汇编信件（也称为信件）。
 
-如需建立和使用字母的詳細資訊，請參閱 [建立字母](../../forms/using/create-letter.md).
+有关创建和使用字母的信息，请参阅 [创建书信](../../forms/using/create-letter.md).
 
 ### 文档片段 {#document-fragments}
 
-檔案片段是可重複使用的通訊部分或元件，您可以使用它們來撰寫信件。 檔案片段的型別為文字、清單、條件和佈局片段。 如需建立和使用檔案片段的詳細資訊，請參閱 [建立檔案片段](/help/forms/using/document-fragments.md).
+文档片段是可重用的通信部分或组件，可用于撰写信件。 文档片段的类型为文本、列表、条件和布局片段。 有关创建和使用文档片段的信息，请参阅 [创建文档片段](/help/forms/using/document-fragments.md).
 
 ### 数据字典 {#data-dictionaries}
 
-一般來說，商務使用者不需要中繼資料表示法方面的知識，例如XSD （XML結構描述）和Java類別。 但是，它們通常需要存取這些資料結構和屬性才能建置解決方案。 AEM [!DNL Forms] 使用資料字典，讓業務使用者能夠使用來自後端資料來源的資訊，而不需要瞭解其基礎資料模型的技術細節。
+通常，商业用户不需要了解元数据表示法，例如XSD（XML架构）和Java类。 但是，它们通常需要访问这些数据结构和属性才能构建解决方案。 AEM [!DNL Forms] 使用数据字典，使商业用户能够使用来自后端数据源的信息，而无需了解其基础数据模型的技术详细信息。
 
-如需建立和使用資料字典的詳細資訊，請參閱建立 [資料字典文章](../../forms/using/data-dictionary.md)
+有关创建和使用数据字典的信息，请参阅创建 [数据字典文章](../../forms/using/data-dictionary.md)
 
-## 存取AEM [!DNL Forms] 設定 {#accessing-aem-forms-configurations}
+## 访问AEM [!DNL Forms] 配置 {#accessing-aem-forms-configurations}
 
-AEM「工具」面板包含用於各種元件的工具。 若要導覽至AEM Forms專用工具，請按一下Experience Manager標誌 ![adobeexperiencemanager](assets/adobeexperiencemanager.png) >工具 ![槌子](assets/hammer.png) > **[!UICONTROL Forms]**. 會顯示執行下列功能的工具：
+“AEM工具”面板包含用于各种组件的工具。 要导航到特定于AEM Forms的工具，请单击Experience Manager徽标 ![adobeexperiencemanager](assets/adobeexperiencemanager.png) >工具 ![锤子](assets/hammer.png) > **[!UICONTROL Forms]**. 将显示用于执行以下功能的工具：
 
-* **設定Watched資料夾：** 管理員可以設定網路資料夾（也稱為watched資料夾），以便當使用者將檔案(例如PDF檔案)放入watched資料夾時，會啟動預先設定的作業並操作檔案。 如需詳細資訊，請參閱 [建立並設定watched資料夾](/help/forms/using/creating-configure-watched-folder.md).
-* **設定Forms App離線服務：** AEM [!DNL Forms] 應用程式離線服務會快取表單中所使用資源的路徑或URL。 快取表單中使用的資源的路徑或URL可改善伺服器端效能。 若要設定AEM Forms應用程式的伺服器端離線元件，請參閱 [在離線模式下工作](/help/forms/using/work-offline-mode.md).
+* **配置Watched文件夹：** 管理员可以配置网络文件夹（称为watched文件夹），以便当用户将文件(如PDF文件)放入watched文件夹时，将启动预配置的操作并操作该文件。 有关详细信息，请参阅 [创建和配置watched文件夹](/help/forms/using/creating-configure-watched-folder.md).
+* **配置Forms App离线服务：** AEM [!DNL Forms] app offline service可缓存表单中使用的资源的路径或URL。 缓存表单中使用的资源的路径或URL可提高服务器端性能。 要配置AEM Forms应用程序的服务器端离线组件，请参阅 [在脱机模式下工作](/help/forms/using/work-offline-mode.md).
 
    ![AEM Forms工具](assets/aem_forms_tools_new.png)
 
-* **設定PDF產生器：** 管理員可以設定AEM [!DNL Forms] PDF產生器設定、新增使用者帳戶，以及匯入或匯出設定至PDF產生器。
-* **發佈對應管理資產：** AEM [!DNL Forms] 可讓您一次從製作執行個體發佈所有字母、檔案片段和資料字典及相關相依性。 已發佈的資產包含所有「對應管理」資產和相關相依性。 如需詳細資訊，請參閱 [發佈和取消發佈表單與檔案](../../forms/using/publishing-unpublishing-forms.md#publishallthecorrespondencemanagementassets).
-* **匯出對應管理資產：** 您可以從AEM以套件形式下載所有「通訊管理」資產和相關相依性 [!DNL Forms] 執行個體。 如需詳細步驟，請參閱 [將資產匯入及匯出至AEM Forms](../../forms/using/import-export-forms-templates.md#importandexportassetsincorrespondencemanagement)
+* **配置PDF生成器：** 管理员可以配置AEM [!DNL Forms] PDF生成器设置、添加用户帐户以及将配置导入或导出到PDF生成器。
+* **发布相应的管理资产：** AEM [!DNL Forms] 允许您一次从创作实例发布所有字母、文档片段和数据字典及相关依赖项。 已发布的资产包括所有相应的管理资产和相关依赖项。 有关详细信息，请参阅 [发布和取消发布表单和文档](../../forms/using/publishing-unpublishing-forms.md#publishallthecorrespondencemanagementassets).
+* **导出相应的管理资产：** 您可以从AEM中作为包下载所有Correspondence Management资源和相关依赖项 [!DNL Forms] 实例。 有关详细步骤，请参阅 [将资源导入和导出到AEM Forms](../../forms/using/import-export-forms-templates.md#importandexportassetsincorrespondencemanagement)
 
-## 使用者介面的常見元素 {#commonelements}
+## 用户界面的常见元素 {#commonelements}
 
-* **左側邊欄：** 您可以按一下左側邊欄圖示 ![railleftpng](assets/railleftpng.png) 顯示AEM的時間軸和參照功能 [!DNL Forms].
+* **左边栏：** 您可以单击左边栏图标 ![railleftpng](assets/railleftpng.png) 显示AEM的时间轴和引用功能 [!DNL Forms].
 
-   * **時間表：** 您可以在時間軸中新增和檢視可供檢視的資產評論。 如需詳細指示，請參閱 [建立和管理表單中資產的稽核](../../forms/using/create-reviews-forms.md).
-   * **引用：** 一個AEM [!DNL Forms] 資產可用於多個AEM [!DNL Forms] 資產。 例如，一個檔案片段可以在多個字母中使用。 參考資料是所選資產使用的資產（其他表單或資源）清單，也是所選資產正在使用的其他資產清單。
+   * **时间轴：** 您可以在时间线中添加和查看可用于审阅的资产评论。 有关详细说明，请参阅 [在表单中创建和管理资产审核](../../forms/using/create-reviews-forms.md).
+   * **引用：** AEM [!DNL Forms] 资源可以在多个AEM中使用 [!DNL Forms] 资产。 例如，一个文档片段可以在多个字母中使用。 引用是所选资产使用的资产（其他表单或资源）列表，也是所选资产正在使用的其他资产列表。
 
-* **階層連結：** 階層連結代表目前主控台或資料夾的標題。 您可以按一下「階層連結」選項，在階層中較高的資料夾層級之間導覽。
-* **檢視切換器：** 您可以按一下檢視切換器圖示 ![檢視清單](assets/viewlist.png) 或 ![檢視卡](assets/viewcard.png) 以快速在清單和卡片檢視之間切換。 如需常見使用者介面元件的詳細資訊，請參閱 [製作](/help/sites-authoring/author.md).
-* **搜尋：** 搜尋選項 ![搜尋](assets/search.png) 提供快速尋找及跳至所需內容和工具的功能。 輸入內容或產品功能的名稱，然後從建議中選取，例如，輸入「Documents」可快速尋找和導覽至 **[!UICONTROL Forms與檔案]** 或檔案片段主控台。 如需搜尋的詳細資訊，請參閱AEM 6.2 [搜尋](/help/sites-authoring/search.md) 文章
+* **痕迹导航：** 痕迹导航表示当前控制台或文件夹的标题。 您可以单击痕迹导航选项，以在层次结构中较高的文件夹级别之间导航。
+* **视图切换器：** 您可以单击视图切换器图标 ![视图列表](assets/viewlist.png) 或 ![viewcard](assets/viewcard.png) 在列表视图和卡片视图之间快速切换。 有关常见用户界面组件的详细信息，请参见 [创作](/help/sites-authoring/author.md).
+* **搜索：** 搜索选项 ![搜索](assets/search.png) 提供快速查找和跳转到您需要的内容和工具的功能。 键入内容或产品功能的名称，然后从建议中进行选择，例如，键入“文档”可快速查找和导航到 **[!UICONTROL Forms和文档]** 或文档片段控制台。 有关搜索的详细信息，请参阅AEM 6.2 [搜索](/help/sites-authoring/search.md) 文章
 
-* **動作工具列**：選取資產時，動作工具列會出現在資產清單上方。 它包含所選資產的所有管理工具。 您可以將滑鼠停留在工具圖示上，即可檢視描述其功能的工具提示
+* **“操作”工具栏**：选择资源时，操作工具栏显示在资源列表上方。 它包含选定资源的所有管理工具。 您可以将鼠标悬停在工具图标上以查看描述其功能的工具提示
 
 >[!NOTE]
 >
->當使用者執行搜尋Forms和檔案的任何控制檯時，邊欄僅包含 **篩選和選項**. 您可以使用「篩選器和選項」來執行進階搜尋。
+>当用户执行Forms和文档的任意控制台搜索时，边栏仅包含 **筛选器和选项**. 您可以使用“筛选器和选项”来执行高级搜索。
 
-* **動作工具列**：選取資產時，動作工具列會出現在資產清單上方。 它包含所選資產的所有管理工具。 您可以將滑鼠停留在工具圖示上，即可檢視描述其功能的工具提示
+* **“操作”工具栏**：选择资源时，操作工具栏显示在资源列表上方。 它包含选定资源的所有管理工具。 您可以将鼠标悬停在工具图标上以查看描述其功能的工具提示
 
-   ![最適化表單的動作工具列](assets/action_toolbar_new.png)
+   ![自适应表单的操作工具栏](assets/action_toolbar_new.png)
 
-   最適化表單的動作工具列
+   自适应表单的操作工具栏

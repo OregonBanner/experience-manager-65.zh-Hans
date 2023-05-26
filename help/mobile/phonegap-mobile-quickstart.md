@@ -1,7 +1,7 @@
 ---
-title: 行動快速入門
+title: 移动快速入门
 seo-title: Mobile Quickstart
-description: 請依照本頁面的說明了解AEM Verify應用程式。 AEM Verify應用程式可在任何iOS或Android行動裝置上快速輕鬆地執行AEM行動應用程式。
+description: 关注此页面，了解AEM Verify应用程序。 AEM Verify应用程序是在任何iOS或Android移动设备上运行AEM移动应用程序的快速轻松的方法。
 seo-description: Follow this page to learn about AEM Verify app. The AEM Verify app is a quick and an easy way to run your AEM mobile applications on any iOS or Android mobile device.
 uuid: afae4b9d-f835-4d83-b758-39a0d7741510
 contentOwner: User
@@ -17,14 +17,14 @@ ht-degree: 2%
 
 ---
 
-# 行動快速入門 {#mobile-quickstart}
+# 移动快速入门 {#mobile-quickstart}
 
 >[!NOTE]
 >
->Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）專案使用SPA編輯器。 [了解详情](/help/sites-developing/spa-overview.md).
+>Adobe建议对需要基于单页应用程序框架的客户端渲染（例如React）的项目使用SPA编辑器。 [了解详情](/help/sites-developing/spa-overview.md).
 
-## AEM驗證應用程式 {#aem-verify-app}
+## AEM验证应用程序 {#aem-verify-app}
 
 >[!CAUTION]
 >
->AEM Verify應用程式已棄用。 應用程式已從Apple AppStore和Android PlayStore中移除。
+>AEM Verify应用程序已被弃用。 该应用程序已从Apple AppStore和Android PlayStore中删除。

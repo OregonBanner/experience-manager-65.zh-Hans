@@ -1,7 +1,7 @@
 ---
-title: 整合AdobeAdobeLearning Manager
+title: 与AdobeAdobeLearning Manager集成
 seo-title: Integrating with Adobe Learning Manager
-description: 瞭解如何將AEM與Adobe Learning Manager整合。
+description: 了解如何将AEM与AdobeLearning Manager集成。
 seo-description: Learn how to integrate AEM Adobe Learning Manager.
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration

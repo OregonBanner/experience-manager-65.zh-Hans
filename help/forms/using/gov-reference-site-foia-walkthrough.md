@@ -1,7 +1,7 @@
 ---
-title: We.Gov參考網站FOIA逐步說明
+title: We.Gov引用站点FOIA演练
 seo-title: We.Gov reference site FOIA walkthrough
-description: 請參閱We.Gov參考網站逐步說明，瞭解AEM Forms如何協助政府接收和傳授個人根據資訊自由法案所要求的資訊。
+description: 请参阅We.Gov参考网站演练，了解AEM Forms如何帮助政府接收和传播个人根据《信息自由法》请求的信息。
 seo-description: See the We.Gov reference site walkthrough to understand how AEM Forms helps governments receive and impart information requested by individuals under the Freedom of Information Act.
 uuid: 65d4233c-8dad-4e5e-8e39-22eb4f145adc
 topic-tags: introduction
@@ -15,99 +15,99 @@ ht-degree: 0%
 
 ---
 
-# We.Gov參考網站FOIA逐步說明 {#we-gov-reference-site-foia-walkthrough}
+# We.Gov引用站点FOIA演练 {#we-gov-reference-site-foia-walkthrough}
 
-## 參考網站資訊自由法案情境 {#reference-site-freedom-of-information-act-scenario}
+## 参考站点《信息自由法》场景 {#reference-site-freedom-of-information-act-scenario}
 
-We.Gov是國家營運的組織，如果養父母收養了孩子，可讓他們註冊子女撫養費。 We.Gov也可讓家長根據資訊自由法案，向下列政府部門索取資訊：
+We.Gov是一个国营组织，如果养父母收养了孩子，他们可登记子女抚养费。 We.Gov还允许家长根据《信息自由法》向以下政府部门索取信息：
 
-* 國防後勤局
-* 國防部監察長辦公室
-* 司法部 — 資訊政策辦公室
-* 海軍部
-* 環境保護局
+* 国防后勤局
+* 国防部监察长办公室
+* 司法部 — 信息政策厅
+* 海军部
+* 环境保护局
 
-如需資訊自由法的詳細資訊，請參閱 [www.foia.gov](https://www.foia.gov).
+有关《信息自由法》的更多信息，请参阅 [www.foia.gov](https://www.foia.gov).
 
-此情境涉及下列角色：
+此方案涉及以下角色：
 
-* Sarah Rose，在下要求資訊的人
-* 處理請求的人John Jacobs會將請求轉送給適當的部門
-* Gloria Rios，根據要求提供資訊的政府職員
+* Sarah Rose，索取信息的人
+* 处理请求的人员John Jacobs将请求转发给相应的部门
+* Gloria Rios，政府雇员，根据请求提供信息
 
-## Sarah根據FOIA提出資訊請求 {#sarah-initiates-request-for-information-under-foia}
+## Sarah根据FOIA提出信息请求 {#sarah-initiates-request-for-information-under-foia}
 
-根據《資訊自由法》，Sarah要求2013年至2016年兒童與家庭行政案件記錄副本(FY)。 Sarah將此要求提交給司法部 — 資訊局政策處，同時表示她願意支付高達100美元的印刷和郵資費用。
+根据《信息自由法》，Sarah要求提供2013年至2016年儿童和家庭管理局案件记录副本。 Sarah将此请求提交给司法部 — 信息政策办公室，并表明她愿意支付高达100美元的印刷和邮资费用。
 
-### 運作方式 {#how-it-works}
+### 工作原理 {#how-it-works}
 
-### 親眼看看 {#see-it-yourself}
+### 亲眼看看 {#see-it-yourself}
 
-在您的瀏覽器中，開啟 `https://<hostname>:<PublishPort>/wegov`. 在We.Gov網站中，點選「應用程式>所有應用程式」。 在「所有應用程式」頁面中，點選「FOIA要求的應用程式」下的「套用」。
+在浏览器中，打开 `https://<hostname>:<PublishPort>/wegov`. 在We.Gov站点中，点按应用程序>所有应用程序。 在所有应用程序页面中，点按FOIA请求的应用程序下的应用。
 
-## Sarah開始申請FOIA下的資訊 {#sarah-starts-her-application-for-information-under-foia}
+## Sarah根据FOIA开始她的信息申请 {#sarah-starts-her-application-for-information-under-foia}
 
-Sarah點按 **套用** 而在資訊自由法案申請表頁面中，Sarah會輸入以下資訊：
+Sarah点击量 **应用** 在《信息自由法》申请表页面中，Sarah输入的信息包括：
 
-* **機構：** Sarah指定要求所針對的機構為司法部 — 資訊政策辦公室。
+* **代理商：** Sarah指定处理该请求的机构为司法部 — 信息政策办公室。
 
-* **將支付最高至**：Sarah表示願意支付最高100美元的列印和郵資費用。
-* **詳細說明請求**：Sarah指定「要求2013至2016會計年度兒童和家庭管理個案記錄副本」。
+* **将支付最高为**：Sarah指定她愿意支付高达100美元的印刷和邮资费用。
+* **详细描述请求**：Sarah指定“请求2013至2016财年的儿童和家庭管理案例副本”。
 
-![索取2013至2016會計年度兒童及家庭管理局個案記錄副本](assets/sarahfiosform.png)
+![索取2013至2016财政年度儿童和家庭管理局案件记录副本](assets/sarahfiosform.png)
 
-索取2013至2016會計年度兒童及家庭管理局個案記錄副本
+索取2013至2016财政年度儿童和家庭管理局案件记录副本
 
-Sarah隨時都可以點選「儲存」以儲存表單草稿，稍後再回來填寫表單並提交它。 Sarah提交表單。
+Sarah可随时点按保存以保存表单草稿，稍后再回来填写表单并提交它。 Sarah提交了表格
 
 >[!NOTE]
 >
->從電子郵件恢復工作流程僅適用於登入的使用者。 在參考網站案例中，確定已新增使用者Sarah Rose。 Sarah的登入憑證為 `srose/password`.
+>从电子邮件恢复工作流仅适用于登录用户。 在引用站点场景中，确保添加了用户Sarah Rose。 Sarah的登录凭据为 `srose/password`.
 
-## John Jacobs接收並核准該申請 {#john-jacobs-receives-and-approves-the-application}
+## John Jacobs接收并批准申请 {#john-jacobs-receives-and-approves-the-application}
 
-John Jacobs會收到要求，並將其路由給合適的人。 AEM收件匣可讓她在一個位置檢視所有提交的應用程式。
+John Jacobs会收到请求并将其路由到适当的人员。 通过AEM收件箱，她可以在一个位置查看所有提交的申请。
 
-### 運作方式 {#how-it-works-1}
+### 工作原理 {#how-it-works-1}
 
-當Sarah填寫並提交FOIA應用程式時，應用程式的記錄會傳送到John Jacobs的收件匣。 John Jacobs可以檢視提交的應用程式，並接受或拒絕它。
+当Sarah填写并提交FOIA申请表时，申请表记录会发送到John Jacobs的收件箱中。 John Jacobs可以查看提交的申请，并接受或拒绝它。
 
-### 親眼看看 {#see-it-yourself-1}
+### 亲眼看看 {#see-it-yourself-1}
 
-您可以在https://存取AEM收件匣&lt;***主機名稱***>：&lt;***發佈連線埠***>/content/we-finance/global/en/login.html？resource=/aem/inbox.html. 使用jjacobs/密碼作為John Jacobs的使用者名稱/密碼登入AEM收件匣，並檢視FOIA應用程式。 如需使用AEM收件匣處理以表單為中心的工作流程工作的相關資訊，請參閱 [在AEM收件匣中管理Forms應用程式和工作](/help/forms/using/manage-applications-inbox.md).
+您可以访问AEM收件箱，网址为https://&lt;***主机名***>：&lt;***发布端口***>/content/we-finance/global/en/login.html？resource=/aem/inbox.html. 使用jjacobs/password作为John Jacobs的用户名/密码登录到AEM收件箱，并查看FOIA应用程序。 有关使用AEM收件箱处理以表单为中心的工作流任务的信息，请参阅 [在AEM收件箱中管理Forms应用程序和任务](/help/forms/using/manage-applications-inbox.md).
 
-![約翰雅各布](assets/johnjacobs.png)
+![约翰雅各布](assets/johnjacobs.png)
 
-John Jacobs可以從應用程式儀表板檢視、核准或拒絕應用程式。 John Jacobs會選取並開啟請求詳細資訊，並在檢閱請求後予以核准。
+John Jacobs可以从应用程序仪表板查看、批准或拒绝应用程序。 John Jacobs选择并打开请求详细信息，然后在查看请求后批准该请求。
 
 ![johnjacobstaskdetail-1](assets/johnjacobstaskdetail-1.png)
 
-### <strong>Sarah收到確認電子郵件</strong> {#strong-sarah-receives-an-acknowledgement-email-strong}
+### <strong>Sarah收到一封确认电子邮件</strong> {#strong-sarah-receives-an-acknowledgement-email-strong}
 
-在John Jacobs核准申請後，Sarah會收到來自We.Gov網站的確認電子郵件。 系統會通知Sarah處理申請所需的費用和時間。 電子郵件也包含電子郵件和電話詳細資料，Sarah可以聯絡以取得應用程式的更新資訊。
+在John Jacobs批准申请后， Sarah会收到来自We.Gov网站的确认电子邮件。 Sarah被告知处理她的申请所需的费用和时间。 该电子邮件还包括电子邮件和电话详细信息，sarah可以联系以获取有关其应用程序的更新。
 
-![薩拉赫羅塞梅爾](assets/sarahroseemail.png)
+![萨拉赫罗西邮件](assets/sarahroseemail.png)
 
-## Gloria會收到FOIA的第二層核准要求 {#gloria-receives-the-foia-request-for-second-level-approval}
+## Gloria收到FOIA关于二级审批的请求 {#gloria-receives-the-foia-request-for-second-level-approval}
 
-在John Jacobs填寫必填資訊並核准Sarah的請求後，該請求將轉至Gloria Rios進行最終核准。 Gloria會稽核附加的記錄檔案並核准請求。
+在John Jacobs填写必填信息并批准Sarah的请求后，该请求将转至Gloria Rios获得最终批准。 Gloria审阅附加的记录文档并批准请求。
 
 ![gloriariosinbox](assets/gloriariosinbox.png)
 
-### 運作方式 {#how-it-works-2}
+### 工作原理 {#how-it-works-2}
 
-當John Jacobs核准FOIA請求時，應用程式的PDF或記錄檔案會建立並傳送到Gloria Rios的收件匣。 Gloria可以檢視已提交的請求，並核准或拒絕該請求。
+当John Jacobs批准FOIA的请求时，将创建一个应用程序的PDF或记录文档，并发送到Gloria Rios的收件箱。 Gloria可以查看提交的请求，并批准或拒绝该请求。
 
-### 自行檢視 {#see-for-yourself}
+### 亲自查看 {#see-for-yourself}
 
-您可以在https://存取AEM收件匣&lt;***主機名稱***>：&lt;***發佈連線埠***>/content/we-finance/global/en/login.html？resource=/aem/inbox.html. 以Gloria Rios的使用者名稱/密碼登入AEM收件匣，並檢視FOIS要求。
+您可以访问AEM收件箱，网址为https://&lt;***主机名***>：&lt;***发布端口***>/content/we-finance/global/en/login.html？resource=/aem/inbox.html. 使用grios/password作为Gloria Rios的用户名/密码登录到AEM收件箱，并查看FOIS请求。
 
-Gloria會開啟要求，並檢查FOIA要求的詳細資料。 在檢閱請求的詳細資訊並檢查提供所需檔案的可行性後，Gloria核准了請求。
+Gloria打开请求并检查信息自由局请求的细节。 在查看了请求的详细信息并检查了提供所需文件的可行性之后，Gloria批准了该请求。
 
 ![gloriariosapproves](assets/gloriariosapproves.png)
 
-## Sarah會收到請求獲得核准的通知 {#sarah-receives-notification-that-her-request-is-approved}
+## Sarah会收到通知，告知其请求已被批准 {#sarah-receives-notification-that-her-request-is-approved}
 
-Gloria核准FOIA要求後，Sarah會收到電子郵件，通知她要求已核准。 此電子郵件也包含提供檔案的暫定時間表相關資訊，以及跟進請求的聯絡人詳細資訊。
+在Gloria批准FOIA的请求后，Sarah收到一封电子邮件，通知她她的请求已被批准。 该电子邮件还包括有关提供文档的暂定时间表和详细联系方式的信息，以便跟进请求。
 
-![sarahroseemailapproval](assets/sarahroseemailapproval.png)
+![萨拉赫罗西电子邮件审批](assets/sarahroseemailapproval.png)

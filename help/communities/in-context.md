@@ -1,7 +1,7 @@
 ---
-title: 內文中稽核
+title: 上下文审核
 seo-title: In-Context Moderation
-description: 如何執行版主動作
+description: 如何执行审查方操作
 seo-description: How to perform moderator actions
 uuid: 282a8bea-2822-4e5c-b9f4-4d9a5380d895
 contentOwner: Janice Kendall
@@ -18,153 +18,153 @@ ht-degree: 1%
 
 ---
 
-# 內文中稽核 {#in-context-moderation}
+# 上下文审核 {#in-context-moderation}
 
-對於AEM Communities，管理員和受信任的社群成員可直接在發佈社群內容的頁面上執行稽核。
+对于AEM Communities，审核可由管理员和受信任的社区成员直接在发布社区内容的已发布页面上执行。
 
-使用時 [稽核主控台](moderation.md)，針對內容顯示的資訊包含已發佈頁面的連結，可讓您存取在內容中進行仲裁時可用的其他仲裁動作。
+使用时 [审核控制台](moderation.md)，则为内容显示的信息包含指向已发布页面的链接，以允许访问在上下文中进行审核时可用的其他审核操作。
 
-## 稽核動作 {#moderation-actions}
+## 审核操作 {#moderation-actions}
 
-請造訪協調概述，瞭解的相關說明 [稽核動作](moderate-ugc.md#moderation-actions).
+访问审核概述，了解对的描述 [审核操作](moderate-ugc.md#moderation-actions).
 
-## 稽核UI {#moderation-ui}
+## 审核用户界面 {#moderation-ui}
 
-在發佈執行個體上向版主顯示的UI包含在用於發佈和管理使用者產生的內容(UGC)的對話方塊中。 UI的元素由網站訪客的狀態決定，無論它們是……
+在发布实例上向审查方呈现的UI包含在用于发布和管理用户生成内容(UGC)的对话框中。 UI的元素由网站访客的状态决定，即是否……
 
-1. 發佈內容的成員。
-1. 受信任的成員版主。
-1. 管理員。
-1. 已登入，但不是內容的管理員、版主，也不是作者。
-1. 未登入。
+1. 发布内容的成员。
+1. 受信任的成员审查方。
+1. 管理员。
+1. 已登录，但不是内容的管理员、审查方或作者。
+1. 未登录。
 
 ## 示例 {#example}
 
-使用 [Geometrixx參與](http://localhost:4503/content/sites/engage/en.html) 網站建立時間 [AEM Communities快速入門](getting-started.md)，您可在論壇中快速設定對話串，在發佈環境中體驗各種協調活動，如下所示。
+使用 [Geometrixx参与](http://localhost:4503/content/sites/engage/en.html) 在以下情况下创建的站点： [AEM Communities快速入门](getting-started.md)，可以在论坛中快速设置一个主题，以便在发布环境中体验各种审核活动，如下所示。
 
-Aaron McDonald (aaron.mcdonald@mailinator.com)在建立網站時加入community-engage-moderators群組，因此被確認為信任的社群成員。
+Aaron McDonald (aaron.mcdonald@mailinator.com)在创建站点时添加了community-engage-moderators组，被认定为受信任的社区成员。
 
-Rebekah Larsen (rebekah.larsen@trashymail.com)可使用以下網址新增為community-engage-members群組的成員： [成員主控台](members.md).
+Rebekah Larsen (rebekah.larsen@trashymail.com)可以使用添加为community-engage-members组的成员 [成员控制台](members.md).
 
-如需社群使用者群組的詳細資訊，請造訪 [管理使用者和使用者群組](users.md).
+有关社区用户组的更多信息，请访问 [管理用户和用户组](users.md).
 
-### 建立論壇帖子 {#create-the-forum-posts}
+### 创建论坛帖子 {#create-the-forum-posts}
 
-* 以Rebekah Larsen (rebekah.larsen@trashymail.com)登入
+* 以Rebekah Larsen (rebekah.larsen@trashymail.com)登录
 
-   * 選取論壇
-   * 選取新貼文
-   * 輸入主旨
+   * 选择论坛
+   * 选择新帖子
+   * 输入主题
 
-      何時在嗡嗡的餵鳥機中變更花蜜
+      蜂鸣喂鸟机何时更换花蜜
 
-   * 輸入內文
+   * 输入正文文本
 
-      我每年都懸掛一隻蜂鳥的餵食器，可不太成功。 他們似乎一兩天就來了，那就夠了。 我每週變更一次，會不會太長？ 我是否需要更早進行變更？
+      我每年挂一只蜂鸟喂食器时，并没有取得多少成功。 看来他们来了一两天，就这样了。 我一周换一次会不会太长了？ 我需要尽早更改它吗？
 
-   * 選取貼文
-   * 選取登出
+   * 选择帖子
+   * 选择注销
 
-* 以Aaron McDonald (aaron.mcdonald@mailinator.com)登入
+* 以Aaron McDonald (aaron.mcdonald@mailinator.com)登录
 
-   * 選取論壇
-   * 蜂鳥主題，請選取閱讀更多
-   * 輸入張貼回覆的註解
+   * 选择论坛
+   * 对于“蜂鸟”主题，选择“了解更多”
+   * 为帖子回复输入评论
 
-      我每週都會變更一次我的帳號，並且從5月到10月都會收到帳號。
+      我每周换一次衣服，从五月到十月都有。
 
-   * 選取回覆
-   * 選取登出
+   * 选择回复
+   * 选择注销
 
-* 以Andrew Schaeffer身分登入(andrew.schaeffer@trashymail.com)
+* 以Andrew Schaeffer身份登录(andrew.schaeffer@trashymail.com)
 
-   * 選取論壇
-   * 蜂鳥主題，請選取閱讀更多
-   * 輸入張貼回覆的註解
+   * 选择论坛
+   * 对于“蜂鸟”主题，选择“了解更多”
+   * 为帖子回复输入评论
 
-      我賣花蜜和飼料 — 請造訪https://my.viral.url/
+      我销售花蜜和饲料 — 请访问https://my.viral.url/
 
-   * 選取回覆
-   * 選取登出
+   * 选择回复
+   * 选择注销
 
-### 匿名網站訪客(#5) {#anonymous-site-visitor}
+### 匿名网站访客(#5) {#anonymous-site-visitor}
 
-以下是未登入的網站訪客所看到的論壇檢視(5)。
+以下是未登录(5)的网站访客所看到的论坛视图。
 
-匿名網站訪客只能檢視論壇，但不得發佈任何內容或執行任何稽核動作。
+匿名网站访客只能查看论坛，但不能发布任何内容或执行任何审核操作。
 
-![community-forum-visitor](assets/community-forum-visitor.png)
+![社区 — 论坛 — 访客](assets/community-forum-visitor.png)
 
-### 新成員(#4) {#new-member}
+### 新成员(#4) {#new-member}
 
-boyd.larsen@dodgit.com在作者上，以管理員身分登入，並使用 [成員主控台](members.md)，然後登出。
+boyd.larsen@dodgit.com在作者中，以管理员身份登录，并使用 [成员控制台](members.md)，然后注销。
 
-在發佈時，以Boyd Larsen身分登入，並透過選取以下專案存取對話串： `Forum`，然後 `Read more` 蜂鳥貼文。
+在发布时，以Boyd Larsen身份登录，并通过选择来访问线程 `Forum`，然后 `Read more` 来做蜂鸟贴文。
 
 通知:
 
-* Boyd尚未參與論壇。
-* Boyd無法刪除任何內容。
-* Boyd已登入，可以回覆或標幟內容。
+* 博伊德没有参加论坛。
+* Boyd无法删除任何内容。
+* Boyd已登录，可以回复或标记内容。
 
-讓Boyd選取Flag來標示Andrew張貼的內容。
+让Boyd选择Flag来标记Andrew发布的内容。
 
 注销
 
-![社群 — 論壇 — 成員](assets/community-forum-member.png)
+![community-forum-ember](assets/community-forum-member.png)
 
-### 管理員(#3) {#administrator}
+### 管理员(#3) {#administrator}
 
-以管理員（管理員）身分登入，並選取「論壇」，然後選取「閱讀文章的詳細資訊」來存取對話串。
+以管理员（管理员）身份登录，并通过选择“论坛”访问会话，然后选择“阅读更多内容”查看帖子。
 
 通知:
 
-* 管理員可以標幟、刪除、編輯、拒絕、剪下、關閉、釘選、功能。
-* 管理員可以選取「管理」來存取稽核主控台。
+* 管理员可以标记、删除、编辑、拒绝、剪切、关闭、固定、功能。
+* 管理员可以选择管理以访问审核控制台。
 
 ![community-admin-forum](assets/community-admin-forum.png)
 
-選取管理功能表專案以存取 [稽核主控台](moderation.md) 從發佈環境。
+选择管理菜单项以访问 [审核控制台](moderation.md) 从发布环境中。
 
-請注意，對於管理員而言，所有可稽核內容皆可見，而不僅僅是GeometrixxEngage社群網站的內容。
+请注意，对于管理员，所有可审核内容都是可见的，而不仅仅是Geometrixx参与社区网站中的内容。
 
-搜尋篩選是可切換開啟或關閉的側面板。
+搜索过滤器是切换打开或关闭的侧面板。
 
 注销.
 
 ![moderation-console-publish](assets/moderation-console-publish.png)
 
-### 社群版主(#2) {#community-moderator}
+### 社区审查方(#2) {#community-moderator}
 
-以社群版主Aaron McDonald (aaron.mcdonal@mailinator.com)身分登入，並選取「論壇」來存取對話串，然後選取Hummingbird貼文的「瞭解詳情」。
+以社区版主Aaron McDonald (aaron.mcdonal@mailinator.com)登录，并通过选择“论坛”访问主题，然后阅读蜂鸟帖子的更多信息。
 
 通知:
 
-* Aaron可以回覆、刪除、編輯或拒絕自己的貼文。
-* Aaron也可以標幟/允許、回覆、刪除、編輯、拒絕其他內容。
-* Aaron可以剪下論壇主題，將其移至他主持的另一個論壇。
-* Aaron可以選取「管理」來存取稽核主控台。
+* Aaron可以回复、删除、编辑或拒绝自己的帖子。
+* Aaron还可以标记/允许、回复、删除、编辑、拒绝其他内容。
+* Aaron可以剪切论坛主题以将其移动到他主持的另一个论坛。
+* Aaron可以选择管理以访问审核控制台。
 
-![社群 — 論壇 — 版主](assets/community-forum-moderator.png)
+![社区 — 论坛 — 审查方](assets/community-forum-moderator.png)
 
-選取管理功能表專案以存取 [稽核主控台](moderation.md) 從發佈環境。
+选择管理菜单项以访问 [审核控制台](moderation.md) 从发布环境中。
 
-請注意，對於社群版主，只會顯示來自GeometrixxEngage社群網站的可稽核內容。
+请注意，对于社区审查方，只能看到GeometrixxEngage社区站点中的可审查内容。
 
-請注意，社群版主的選項與管理員相同（影像已關閉搜尋側邊欄），但無法存取其他AEM主控台。
+请注意，社区审查方具有和管理员相同的选项（图像已关闭搜索侧栏），但无法访问其他AEM控制台。
 
 注销.
 
-![版主 — 存取](assets/moderator-access.png)
+![审查方访问](assets/moderator-access.png)
 
-### 內容作者(#1) {#content-author}
+### 内容作者(#1) {#content-author}
 
-以Rebekah Larsen (rebekah.larsen@mailinator.com)身分登入（一位開啟對話串的社群成員），並選取「論壇」來存取對話串，然後選取Hummingbird貼文的「瞭解詳情」。
+以Rebekah Larsen (rebekah.larsen@mailinator.com)登录（一位社区成员，他启动了跟帖），并通过选择“论坛”访问该跟帖，然后阅读hummingbird帖子的更多内容。
 
 通知:
 
-* Rebekah可以刪除或編輯自己的貼文。
-* Rebekah也可以回覆或標幟其他內容。
-* Rebekah無法存取稽核主控台。
+* 丽贝卡可以删除或编辑自己的帖子。
+* Rebekah还可以回复或标记其他内容。
+* Rebekah无法访问审核控制台。
 
 ![community-forum-author](assets/community-forum-author.png)

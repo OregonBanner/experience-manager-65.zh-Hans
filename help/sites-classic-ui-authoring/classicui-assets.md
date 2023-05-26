@@ -1,7 +1,7 @@
 ---
 title: 正在处理资产
 seo-title: Working with Assets
-description: 「製作環境和工具」區段提供有關在編輯頁面時使用內容尋找器尋找和使用資產的資訊。 AEM Assets提供處理資產的其他方法。
+description: 创作环境和工具部分提供有关在编辑页面时使用内容查找器查找和使用资产的信息。 AEM Assets提供了处理资源的其他方法。
 seo-description: The Author Environment and Tools section provides information about using Content Finder to find and use assets when editing pages. AEM Assets provides other methods for working with assets.
 uuid: 65d1e593-9957-45b7-8831-45055aa41a1d
 contentOwner: Chris Bohnert
@@ -19,8 +19,8 @@ ht-degree: 12%
 
 # 正在处理资产{#working-with-assets}
 
-此 [製作環境和工具](/help/sites-authoring/author-environment-tools.md) 一節提供有關使用的資訊 [!UICONTROL 內容尋找器] 以在編輯頁面時尋找和使用資產。 AEM Assets提供處理資產的其他方法：
+此 [创作环境和工具](/help/sites-authoring/author-environment-tools.md) 部分提供了有关使用 [!UICONTROL 内容查找器] 以在编辑页面时查找和使用资源。 AEM Assets提供了处理资源的其他方法：
 
-* [將Dynamic Media Classic功能新增至您的頁面](/help/sites-classic-ui-authoring/manage-assets-classic-s7.md)
+* [将Dynamic Media Classic功能添加到您的页面](/help/sites-classic-ui-authoring/manage-assets-classic-s7.md)
 * [使用 Dynamic Media](/help/sites-classic-ui-authoring/dynamic-media-assets.md)
-* [資產的命名慣例](/help/sites-classic-ui-authoring/asset-naming-conventions.md)
+* [资产的命名约定](/help/sites-classic-ui-authoring/asset-naming-conventions.md)

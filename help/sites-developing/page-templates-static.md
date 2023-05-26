@@ -1,7 +1,7 @@
 ---
-title: 頁面範本 — 靜態
+title: 页面模板 — 静态
 seo-title: Page Templates - Static
-description: 範本可用來建立頁面，並定義哪些元件可以在所選範圍內使用
+description: 模板用于创建页面，并定义可以在所选范围内使用的组件
 seo-description: A Template is used to create a Page and defines which components can be used within the selected scope
 uuid: 7a473c19-9565-476e-9e54-ab179da04d71
 contentOwner: Guillaume Carlino
@@ -18,22 +18,22 @@ ht-degree: 1%
 
 ---
 
-# 頁面範本 — 靜態{#page-templates-static}
+# 页面模板 — 静态{#page-templates-static}
 
-範本可用來建立頁面，並定義可在所選範圍內使用的元件。 範本是節點的階層，其結構與要建立的頁面相同，但沒有任何實際內容。
+模板用于创建页面，并定义可以在所选范围内使用的组件。 模板是一种节点层次结构，其结构与要创建页面的结构相同，但没有任何实际内容。
 
-每個範本都會提供您一系列可供使用的元件。
+每个模板都会为您提供一系列可供使用的组件。
 
-* 範本的建置方式 [元件](/help/sites-developing/components.md)；
-* 元件會使用並允許存取Widget，而這些元件會用於轉譯內容。
+* 模板由以下项构建： [组件](/help/sites-developing/components.md)；
+* 组件使用和允许对构件的访问，构件和构件用于呈现内容。
 
 >[!NOTE]
 >
->[可編輯的範本](/help/sites-developing/page-templates-editable.md) 也可供使用，並且是提供最大彈性和最新功能的建議範本型別。
+>[可编辑的模板](/help/sites-developing/page-templates-editable.md) 也提供，是为获得最大灵活性和最新功能推荐的模板类型。
 
-## 範本的屬性和子節點 {#properties-and-child-nodes-of-a-template}
+## 模板的属性和子节点 {#properties-and-child-nodes-of-a-template}
 
-範本是cq：Template型別的節點，具有以下屬性和子節點：
+模板是cq：Template类型的节点，具有以下属性和子节点：
 
 <table>
  <tbody>
@@ -45,173 +45,173 @@ ht-degree: 1%
   <tr>
    <td>. <br /> </td>
    <td> cq:Template</td>
-   <td>目前的範本。 範本為節點型別cq：Template。<br /> </td>
+   <td>当前模板。 模板为节点类型cq：Template。<br /> </td>
   </tr>
   <tr>
    <td> allowedChildren </td>
    <td> 字符串[]</td>
-   <td>允許作為此範本之子範本的範本路徑。<br /> </td>
+   <td>允许作为此模板的子模板的路径。<br /> </td>
   </tr>
   <tr>
    <td> allowedParents</td>
    <td> 字符串[]</td>
-   <td>允許作為此範本之父範本的範本路徑。<br /> </td>
+   <td>允许作为此模板父级的模板的路径。<br /> </td>
   </tr>
   <tr>
    <td> allowedPaths</td>
    <td> 字符串[]</td>
-   <td>允許以此範本為基礎的頁面路徑。<br /> </td>
+   <td>允许基于此模板的页面的路径。<br /> </td>
   </tr>
   <tr>
    <td> jcr:created</td>
    <td> 日期</td>
-   <td>建立範本的日期。<br /> </td>
+   <td>创建模板的日期。<br /> </td>
   </tr>
   <tr>
    <td> jcr：description</td>
    <td> 字符串</td>
-   <td>範本的說明。<br /> </td>
+   <td>模板的描述。<br /> </td>
   </tr>
   <tr>
    <td> jcr:title</td>
    <td> 字符串</td>
-   <td>範本的標題。<br /> </td>
+   <td>模板的标题。<br /> </td>
   </tr>
   <tr>
    <td> 排名</td>
    <td> 长整型</td>
-   <td>範本的排名。 用於在使用者介面中顯示範本。<br /> </td>
+   <td>模板的排名。 用于在用户界面中显示模板。<br /> </td>
   </tr>
   <tr>
    <td> jcr：content</td>
    <td> cq:PageContent</td>
-   <td>包含範本內容的節點。<br /> </td>
+   <td>包含模板内容的节点。<br /> </td>
   </tr>
   <tr>
    <td> thumbnail.png</td>
    <td> nt：file</td>
-   <td>範本的縮圖。<br /> </td>
+   <td>模板的缩略图。<br /> </td>
   </tr>
   <tr>
    <td> icon.png</td>
    <td> nt：file</td>
-   <td>範本的圖示。<br /> </td>
+   <td>模板的图标。<br /> </td>
   </tr>
  </tbody>
 </table>
 
-範本是頁面的基礎。
+模板是页面的基础。
 
-若要建立頁面，必須複製範本（節點樹） `/apps/<myapp>/template/<mytemplate>`)中的對應位置：如果頁面是使用 **網站** 標籤。
+要创建页面，必须复制模板（节点树） `/apps/<myapp>/template/<mytemplate>`)中的相应位置：如果使用以下方式创建页面，则会发生这种情况 **网站** 选项卡。
 
-此複製動作也會提供頁面的初始內容（通常是僅限頂層內容）和屬性sling：resourceType，也就是用來轉譯頁面的頁面元件路徑（子節點jcr：content中的所有專案）。
+此复制操作还会为页面提供其初始内容（通常为顶级内容）和属性sling：resourceType，用于呈现页面的页面组件的路径（子节点jcr：content中的所有内容）。
 
-## 範本的結構方式 {#how-templates-are-structured}
+## 如何构建模板 {#how-templates-are-structured}
 
-需要考慮兩個方面：
+需要考虑两个方面：
 
-* 範本本身的結構
-* 使用範本時產生的內容結構
+* 模板本身的结构
+* 使用模板时生成的内容的结构
 
-### 範本的結構 {#the-structure-of-a-template}
+### 模板的结构 {#the-structure-of-a-template}
 
-範本會在型別的節點下建立 **cq：Template**.
+在类型节点下创建模板 **cq：Template**.
 
 ![screen_shot_2012-02-13at63646pm](assets/screen_shot_2012-02-13at63646pm.png)
 
-您可以設定各種屬性，特別是：
+可以设置各种属性，特别是：
 
-* **jcr：title**  — 範本的標題；建立頁面時顯示在對話方塊中。
-* **jcr：description**  — 範本的說明；建立頁面時顯示在對話方塊中。
+* **jcr：title**  — 模板的标题；在创建页面时显示在对话框中。
+* **jcr：description**  — 模板的描述；在创建页面时显示在对话框中。
 
-此節點包含jcr：content (cq：PageContent)節點，可作為產生頁面之內容節點的基礎；此節點會使用sling：resourceType參照要用於呈現新頁面之實際內容的元件。
+此节点包含一个jcr：content (cq：PageContent)节点，用作结果页面的内容节点的基础；此节点使用sling：resourceType引用要用于呈现新页面实际内容的组件。
 
 ![screen_shot_2012-02-13at64010pm](assets/screen_shot_2012-02-13at64010pm.png)
 
-建立新頁面時，此元件可用來定義內容的結構和設計。
+此组件用于在创建新页面时定义内容的结构和设计。
 
 ![screen_shot_2012-02-13at64137pm](assets/screen_shot_2012-02-13at64137pm.png)
 
-### 範本產生的內容 {#the-content-produced-by-a-template}
+### 模板生成的内容 {#the-content-produced-by-a-template}
 
-範本是用來建立型別的頁面 `cq:Page` （如前所述，頁面是一種特殊型別的元件）。 每個AEM頁面都有一個結構化節點 `jcr:content`. 此功能：
+模板用于创建以下类型的页面 `cq:Page` （如前所述，页面是一种特殊类型的组件）。 每个AEM页都有一个结构化节点 `jcr:content`. 此功能：
 
-* 屬於cq：PageContent型別
-* 是儲存已定義內容定義的結構化節點型別
-* 具有屬性 `sling:resourceType` 以參考儲存用於轉譯內容的sling指令碼的元件
+* 类型为cq：PageContent
+* 是保存定义的内容定义的结构化节点类型
+* 具有属性 `sling:resourceType` 引用包含用于呈现内容的sling脚本的组件
 
-### 預設範本 {#default-templates}
+### 默认模板 {#default-templates}
 
-AEM隨附許多立即可用的預設範本。 在某些情況下，您可能會想要依原樣使用範本。 在此情況下，您需要確保範本可用於您的網站。
+AEM附带许多现成的默认模板。 在某些情况下，您可能希望按原样使用模板。 在这种情况下，您需要确保模板可用于您的网站。
 
-例如，AEM隨附多個範本，包括內容頁面和首頁。
+例如，AEM附带多个模板，包括一个内容页和主页。
 
 | **标题** | **Component** | **位置** | **用途** |
 |---|---|---|---|
-| 主页 | homepage | geometrixx | Geometrixx首頁範本。 |
-| 内容页 | contentpage | geometrixx | Geometrixx內容頁面範本。 |
+| 主页 | homepage | geometrixx | Geometrixx主页模板。 |
+| 内容页 | contentpage | geometrixx | Geometrixx内容页面模板。 |
 
-#### 顯示預設範本 {#displaying-default-templates}
+#### 显示默认模板 {#displaying-default-templates}
 
-若要檢視存放庫中所有範本的清單，請依照下列步驟進行：
+要查看存储库中所有模板的列表，请按照以下步骤操作：
 
-1. 在CRXDE Lite中，開啟 **工具** 功能表並按一下 **查詢**.
+1. 在CRXDE Lite中，打开 **工具** 菜单并单击 **查询**.
 
-1. 在「查詢」索引標籤中
-1. 作為 **型別**，選取 **XPath**.
+1. 在“查询”选项卡中
+1. 作为 **类型**，选择 **XPath**.
 
-1. 在 **查詢** 輸入欄位，輸入下列字串：//element(&#42;， cq：Template)
+1. 在 **查询** 输入字段，输入以下字符串：//element(&#42;， cq：Template)
 
-1. 按一下 **執行**. 清單會顯示在結果方塊中。
+1. 单击 **执行**. 该列表显示在结果框中。
 
-在大多數情況下，您將取得現有範本並開發新的範本供您自己使用。 另請參閱 [開發頁面範本](#developing-page-templates) 以取得詳細資訊。
+在大多数情况下，您将采用现有模板并开发一个新模板供您自己使用。 参见 [开发页面模板](#developing-page-templates) 了解更多信息。
 
-若要啟用您網站的現有範本，並且希望範本顯示在 **建立頁面** 建立頁面時的對話方塊 **網站** 從 **網站** 主控台，將範本節點的allowedPaths屬性設定為： **/content(/.&#42;)？**
+要为您的网站启用现有模板，并且希望该模板显示在 **创建页面** 创建页面时的对话框 **网站** 从 **网站** 控制台中，将模板节点的allowedPaths属性设置为： **/content(/.&#42;)？**
 
-## 範本設計的套用方式 {#how-template-designs-are-applied}
+## 模板设计的应用方式 {#how-template-designs-are-applied}
 
-使用在UI中定義樣式時 [設計模式](/help/sites-authoring/default-components-designmode.md)，則設計會持續保留在定義樣式的內容節點的確切路徑上。
+在UI中使用定义样式时 [设计模式](/help/sites-authoring/default-components-designmode.md)，则设计将保留在为其定义样式的内容节点的确切路径上。
 
 >[!CAUTION]
 >
->Adobe建議僅套用設計至 [設計模式](/help/sites-authoring/default-components-designmode.md).
+>Adobe建议仅通过应用设计 [设计模式](/help/sites-authoring/default-components-designmode.md).
 >
->例如，在CRX DE中修改設計不是最佳做法，此類設計的應用可能與預期行為不同。
+>例如，在CRX DE中修改设计不是最佳做法，此类设计的应用可能与预期行为有所不同。
 
-如果設計僅使用「設計模式」套用，則下列各節 [設計路徑解析](/help/sites-developing/page-templates-static.md#design-path-resolution)， [決策樹](/help/sites-developing/page-templates-static.md#decision-tree)，以及 [範例](/help/sites-developing/page-templates-static.md#example) 不適用。
+如果设计仅使用“设计模式”应用，则以下部分： [设计路径解析](/help/sites-developing/page-templates-static.md#design-path-resolution)， [决策树](/help/sites-developing/page-templates-static.md#decision-tree)，以及 [示例](/help/sites-developing/page-templates-static.md#example) 不适用。
 
-### 設計路徑解析 {#design-path-resolution}
+### 设计路径解析 {#design-path-resolution}
 
-根據靜態範本呈現內容時，AEM會嘗試根據內容階層的周遊情況，將最相關的設計和樣式套用至內容。
+在基于静态模板渲染内容时，AEM将尝试根据内容层级的遍历将最相关的设计和样式应用于内容。
 
-AEM會依下列順序決定內容節點最相關的樣式：
+AEM按照以下顺序确定与内容节点最相关的样式：
 
-* 如果內容節點的完整和確切路徑有設計（當設計在「設計」模式中定義時），則使用該設計。
-* 如果父系的內容節點有設計，則使用該設計。
-* 如果內容節點的路徑上有任何節點的設計，則使用該設計。
+* 如果存在内容节点的完整和精确路径的设计（当设计在“设计”模式下定义时），则使用该设计。
+* 如果存在父级内容节点的设计，则使用该设计。
+* 如果内容节点的路径上有任何节点的设计，则使用该设计。
 
-在後兩種情況下，如果有多個適用的設計，請使用最接近內容節點的設計。
+在后两种情况下，如果有多个适用的设计，则使用最接近内容节点的设计。
 
-### 決策樹 {#decision-tree}
+### 决策树 {#decision-tree}
 
-此為下列專案的圖形表示： [設計路徑解析](/help/sites-developing/page-templates-static.md#design-path-resolution) 邏輯。
+这是 [设计路径解析](/help/sites-developing/page-templates-static.md#design-path-resolution) 逻辑。
 
 ![design_path_resolution](assets/design_path_resolution.png)
 
 ### 示例 {#example}
 
-請考量下列簡單內容結構，其中設計可套用至任何節點：
+请考虑以下简单的内容结构，其中设计可以应用于任何节点：
 
 `/root/branch/leaf`
 
-下表說明AEM如何選擇設計。
+下表描述了AEM如何选择设计。
 
 <table>
  <tbody>
   <tr>
-   <td><strong>尋找設計<br /> </strong></td>
-   <td><strong>存在以下專案的設計：<br /> </strong></td>
-   <td><strong>已選擇設計<br /> </strong></td>
+   <td><strong>查找设计<br /> </strong></td>
+   <td><strong>存在以下设计：<br /> </strong></td>
+   <td><strong>已选择设计<br /> </strong></td>
    <td><strong>注释</strong></td>
   </tr>
   <tr>
@@ -219,19 +219,19 @@ AEM會依下列順序決定內容節點最相關的樣式：
       </code></td>
    <td><p><code>root</code></p> <p><code>branch</code></p> <p><code>leaf</code></p> </td>
    <td><code>leaf</code></td>
-   <td>一律會採用最精確的相符項。<br /> </td>
+   <td>始终采用最精确的匹配。<br /> </td>
   </tr>
   <tr>
    <td><code>leaf</code></td>
    <td><p><code>root</code></p> <p><code>branch</code></p> </td>
    <td><code>branch</code></td>
-   <td>回復到樹狀結構中最接近的匹配項。</td>
+   <td>回退到树中距离最近的匹配项。</td>
   </tr>
   <tr>
    <td><code>leaf</code></td>
    <td><code>root</code></td>
    <td><code>root</code></td>
-   <td>如果其他所有操作失敗，則採取剩餘的部分。<br /> </td>
+   <td>如果其他所有方法都失败，则采取剩余的方法。<br /> </td>
   </tr>
   <tr>
    <td><code>branch</code></td>
@@ -258,63 +258,63 @@ AEM會依下列順序決定內容節點最相關的樣式：
    <td><p><code>root</code></p> <p><code class="code">leaf
        </code></p> </td>
    <td><code>root</code></td>
-   <td><p>如果沒有完全相符的專案，請取樹狀結構中較低的一個。</p> <p>假設這永遠適用，但樹狀結構往上可能太具體。<br /> </p> </td>
+   <td><p>如果没有完全匹配项，则取树中较低的一个。</p> <p>假设这始终适用，但树的上方可能太具体。<br /> </p> </td>
   </tr>
  </tbody>
 </table>
 
-## 開發頁面範本 {#developing-page-templates}
+## 开发页面模板 {#developing-page-templates}
 
-AEM頁面範本只是用來建立新頁面的模型。 視需要它們可以包含儘可能少或儘可能多的初始內容，其角色是建立正確的初始節點結構，並將所需的屬性（主要是sling：resourceType）設定為允許編輯和呈現。
+AEM页面模板只是用于创建新页面的模型。 它们可以根据需要包含尽可能少或尽可能多的初始内容，其角色是创建正确的初始节点结构，并将所需的属性（主要是sling：resourceType）设置为允许编辑和渲染。
 
-### 建立新範本（根據現有範本） {#creating-a-new-template-based-on-an-existing-template}
+### 创建新模板（基于现有模板） {#creating-a-new-template-based-on-an-existing-template}
 
-不用說，新範本可以從頭開始完全建立，但現有範本通常會經過複製和更新，以節省您的時間和精力。 例如，Geometrixx中的範本可以用來協助您開始使用。
+无需说明完全可以从头开始创建新模板，但通常现有模板将被复制和更新，以节省您的时间和精力。 例如，可以使用Geometrixx中的模板开始操作。
 
-若要根據現有範本建立新範本，請執行下列動作：
+要基于现有模板创建新模板，请执行以下操作：
 
-1. 將現有範本（最好使用儘可能接近您要達到的定義）複製到新節點。
+1. 将现有模板（最好使用尽可能接近您要实现的定义）复制到新节点。
 
-   範本通常儲存在 **/apps/&lt;website-name>/templates/&lt;template-name>**.
-
-   >[!NOTE]
-   >
-   >可用範本的清單取決於新頁面的位置及每個範本中指定的版位限制。 另請參閱 [範本可用性](#templateavailibility).
-
-1. 變更 **jcr：title** ，以反映其新角色。 您也可以更新 **jcr：description** 視情況而定。 請務必視需要變更頁面的範本可用性。
+   模板通常存储在中 **/apps/&lt;website-name>/templates/&lt;template-name>**.
 
    >[!NOTE]
    >
-   >如果您希望範本顯示在 **建立頁面** 建立頁面時的對話方塊 **網站** 從 **網站** 主控台，設定 `allowedPaths` 範本節點的屬性至： `/content(/.*)?`
+   >可用模板的列表取决于新页面的位置以及在每个模板中指定的放置限制。 参见 [模板可用性](#templateavailibility).
+
+1. 更改 **jcr：title** ，以反映其新角色。 您还可以更新 **jcr：description** 如果适用。 请确保根据需要更改页面的模板可用性。
+
+   >[!NOTE]
+   >
+   >如果您希望模板显示在 **创建页面** 创建页面时的对话框 **网站** 从 **网站** 控制台，设置 `allowedPaths` 模板节点的属性： `/content(/.*)?`
 
    ![chlimage_1-88](assets/chlimage_1-88.png)
 
-1. 複製範本所依據的元件(這由 **sling：resourceType** 的屬性 **jcr：content** 節點)，以建立新執行個體。
+1. 复制模板所基于的组件(这由 **sling：resourceType** 的属性 **jcr：content** 节点)，以创建新实例。
 
-   元件通常儲存在 **/apps/&lt;website-name>/components/&lt;component-name>**.
+   组件通常存储在 **/apps/&lt;website-name>/components/&lt;component-name>**.
 
-1. 更新 **jcr：title** 和 **jcr：description** 新元件的ID。
-1. 如果您想要在範本選取範圍清單中顯示新的縮圖圖片（大小為128 x 98畫素），請取代thumbnail.png。
-1. 更新 **sling：resourceType** 範本的 **jcr：content** 節點來參照新元件。
-1. 對範本及/或其基礎元件的功能或設計進行任何進一步的變更。
+1. 更新 **jcr：title** 和 **jcr：description** 新组件的ID。
+1. 如果您希望在模板选择列表（大小128 x 98像素）中显示新的缩略图，请替换thumbnail.png。
+1. 更新 **sling：resourceType** 模板的 **jcr：content** 节点来引用新组件。
+1. 对模板和/或其基础组件的功能或设计进行任何进一步更改。
 
    >[!NOTE]
    >
-   >對所做的變更 **/apps/&lt;website>/templates/&lt;template-name>** 節點將會影響範本例項（如選取專案清單中所示）。
-   對所做的變更 **/apps/&lt;website>/components/&lt;component-name>** 節點會影響使用範本時建立的內容頁面。
+   >对所做的更改 **/apps/&lt;website>/templates/&lt;template-name>** 节点将影响模板实例（在选择列表中一样）。
+   对所做的更改 **/apps/&lt;website>/components/&lt;component-name>** 节点将影响使用模板时创建的内容页面。
 
-   您現在可以使用新範本在您的網站中建立頁面。
+   您现在可以使用新模板在您的网站中创建页面。
 
 >[!NOTE]
-編輯器使用者端程式庫假設存在 `cq.shared` 名稱空間時，如果不存在，則會發生JavaScript錯誤 `Uncaught TypeError: Cannot read property 'shared' of undefined` 將產生。
-所有範例內容頁面都包含 `cq.shared`，因此任何以它們為基礎的內容都會自動包含 `cq.shared`. 但是，如果您決定從頭開始建立自己的內容頁面，而不是以範例內容為基礎，則必須確保包含 `cq.shared` 名稱空間。
-另請參閱 [使用使用者端資料庫](/help/sites-developing/clientlibs.md) 以取得進一步資訊。
+编辑器客户端库假定存在 `cq.shared` 名称空间，如果它不存在，则会出现JavaScript错误 `Uncaught TypeError: Cannot read property 'shared' of undefined` 都会有结果。
+所有示例内容页面都包含 `cq.shared`，因此任何基于它们的内容都会自动包含 `cq.shared`. 但是，如果您决定从头开始创建自己的内容页面，而不基于示例内容，则必须确保包含 `cq.shared` 命名空间。
+参见 [使用客户端库](/help/sites-developing/clientlibs.md) 以进一步了解。
 
-## 讓現有範本可供使用 {#making-an-existing-template-available}
+## 使现有模板可用 {#making-an-existing-template-available}
 
-此範例說明如何允許範本用於特定內容路徑。 建立新頁面時可供頁面作者使用的範本由中定義的邏輯決定 [範本可用性](/help/sites-developing/templates.md#template-availability).
+此示例说明如何允许将模板用于特定内容路径。 页面作者在创建新页面时可用的模板由中定义的逻辑决定 [模板可用性](/help/sites-developing/templates.md#template-availability).
 
-1. 在CRXDE Lite中，導覽至您要用於頁面的範本，例如Newsletter範本。
-1. 變更 `allowedPaths` 屬性及其他用於下列專案的屬性： [範本可用性](/help/sites-developing/templates.md#template-availability). 例如， `allowedPaths`： `/content/geometrixx-outdoors/[^/]+(/.*)?` 表示此範本允許位於下的任何路徑中 `/content/geometrixx-outdoors`.
+1. 在CRXDE Lite中，导航到要用于页面的模板，例如新闻稿模板。
+1. 更改 `allowedPaths` 物业及其他物业用于： [模板可用性](/help/sites-developing/templates.md#template-availability). 例如， `allowedPaths`： `/content/geometrixx-outdoors/[^/]+(/.*)?` 表示允许在任何路径下使用此模板 `/content/geometrixx-outdoors`.
 
    ![chlimage_1-89](assets/chlimage_1-89.png)

@@ -1,7 +1,7 @@
 ---
-title: 安裝和設定檔案服務
+title: 安装和配置文档服务
 seo-title: Installing and configuring document services
-description: 安裝AEM Forms檔案服務，以建立、彙編、散佈、封存PDF檔案、新增數位簽名以限制對檔案的存取，以及解碼條碼Forms。
+description: 安装AEM Forms文档服务以创建、汇编、分发、存档PDF文档，添加数字签名以限制对文档的访问，以及解码条形码Forms。
 seo-description: Install AEM Forms document services to create, assemble, distribute, archive PDF documents, add digital signatures to limit access to documents, and decode barcoded forms.
 uuid: 908806a9-b0d4-42d3-9fe4-3eae44cf4326
 topic-tags: installing
@@ -16,86 +16,86 @@ ht-degree: 2%
 ---
 
 
-# 安裝和設定檔案服務 {#installing-and-configuring-document-services}
+# 安装和配置文档服务 {#installing-and-configuring-document-services}
 
-AEM Forms提供了一組OSGi服務來完成不同的檔案層級操作，例如，建立、彙編、散發和封存PDF檔案的服務，新增數位簽名以限制對檔案的存取以及解碼條碼Forms的服務。 AEM Forms附加元件套件包含這些服務。 這些服務統稱為檔案服務。 可用檔案服務及其主要功能的清單如下：
+AEM Forms提供一套OSGi服务来完成不同的文档级别操作，例如，创建、汇编、分发和存档PDF文档，添加数字签名以限制对文档的访问，以及对条形码Forms进行解码的服务。 这些服务包含在AEM Forms附加组件包中。 这些服务统称为文档服务。 可用文档服务及其主要功能的列表如下：
 
-* **組合器服務：** 可讓您組合、重新排列和增加PDF和XDP檔案，並取得有關PDF檔案的資訊。 它還有助於將PDF檔案轉換和驗證為PDF/A標準，將PDF forms、XML表單和PDF forms轉換為PDF/A-1b、PDF/A-2b和PDFA/A-3b。 如需詳細資訊，請參閱 [組合器服務](/help/forms/using/assembler-service.md).
+* **汇编程序服务：** 使您能够组合、重新排列和增大PDF和XDP文档，并获取有关PDF文档的信息。 它还有助于将PDF文档转换和验证为PDF/A标准，将PDF forms、XML表单和PDF forms转换为PDF/A-1b、PDF/A-2b和PDFA/A-3b。 有关更多信息，请参阅 [汇编程序服务](/help/forms/using/assembler-service.md).
 
-* **ConvertPDF服務：** 可讓您將PDF檔案轉換為PostScript或影像檔案(JPEG、JPEG2000、PNG和TIFF)。 如需詳細資訊，請參閱 [ConvertPDF服務](/help/forms/using/using-convertpdf-service.md).
+* **ConvertPDF服务：** 允许您将PDF文档转换为PostScript或图像文件(JPEG、JPEG2000、PNG和TIFF)。 有关更多信息，请参阅 [ConvertPDF服务](/help/forms/using/using-convertpdf-service.md).
 
-* **條碼式Forms服務：** 可讓您從條碼的電子影像擷取資料。 此服務接受包含一或多個條碼作為輸入的TIFF和PDF檔案，並擷取條碼資料。 如需詳細資訊，請參閱 [條碼式Forms服務](/help/forms/using/using-barcoded-forms-service.md).
+* **条形码Forms服务：** 使您能够从条形码的电子图像中提取数据。 该服务接受包含一个或多个条形码的TIFF和PDF文件作为输入，并提取条形码数据。 有关更多信息，请参阅 [条形码Forms服务](/help/forms/using/using-barcoded-forms-service.md).
 
-* **DocAssurance服務：** 可讓您加密和解密檔案、透過其他使用許可權來擴充Adobe Reader的功能，以及將數位簽名新增至您的檔案。 Doc Assurance服務包含三種服務：簽名、加密和讀取器延伸。 如需詳細資訊，請參閱 [DocAssurance服務](/help/forms/using/overview-aem-document-services.md).
+* **文档保证服务：** 使您能够加密和解密文档，使用附加使用权限扩展Adobe Reader的功能，以及向文档添加数字签名。 文档保证服务包含三个服务：签名、加密和读取器扩展。 有关更多信息，请参阅 [文档保证服务](/help/forms/using/overview-aem-document-services.md).
 
-* **加密服務：** 可讓您加密和解密檔案。 檔案加密後，其內容會變得無法讀取。 授權的使用者可以解密檔案以取得其內容的存取權。 如需詳細資訊，請參閱 [加密服務](/help/forms/using/overview-aem-document-services.md#encryption-service).
+* **加密服务：** 使您能够加密和解密文档。 文档加密后，其内容变得不可读。 授权用户可以解密文档以获取对其内容的访问权限。 有关更多信息，请参阅 [加密服务](/help/forms/using/overview-aem-document-services.md#encryption-service).
 
-* **Forms服務：** 可讓您建立互動式資料擷取使用者端應用程式，以驗證、處理、轉換及傳遞通常在Forms Designer中建立的表單。 Forms服務會轉譯您為PDF檔案所開發的任何表單設計。 如需詳細資訊，請參閱 [Forms服務](/help/forms/using/forms-service.md).
+* **Forms服务：** 允许您创建交互式数据捕获客户端应用程序，以验证、处理、转换和交付通常在Forms Designer中创建的表单。 Forms服务可呈现您为PDF文档而开发的任何表单设计。 有关更多信息，请参阅 [Forms服务](/help/forms/using/forms-service.md).
 
-* **輸出服務：** 可讓您建立不同格式的檔案，包括PDF、雷射印表機格式和標籤印表機格式。 雷射印表機格式為PostScript和印表機控制語言(PCL)。 如需詳細資訊，請參閱 [輸出服務](/help/forms/using/output-service.md).
+* **输出服务：** 使您能够创建各种格式的文档，包括PDF、激光打印机格式和标签打印机格式。 激光打印机格式为PostScript和打印机控制语言(PCL)。 有关更多信息，请参阅 [输出服务](/help/forms/using/output-service.md).
 
-* **PDF產生器服務：** PDF產生器服務提供API，將原生檔案格式轉換為PDF。 它也會將PDF轉換為其他檔案格式，並最佳化PDF檔案的大小。 如需詳細資訊，請參閱 [PDF產生器服務](aem-document-services-programmatically.md#pdfgeneratorservice).
+* **PDF生成器服务：** PDF生成器服务提供了将本机文件格式转换为PDF的API。 它还会将PDF转换为其他文件格式并优化PDF文档的大小。 有关更多信息，请参阅 [PDF生成器服务](aem-document-services-programmatically.md#pdfgeneratorservice).
 
-* **Reader擴充功能服務：** 透過擴充具有額外使用許可權的Adobe Reader功能，讓您的組織輕鬆共用互動式PDF檔案。 此服務會啟動使用Adobe Reader開啟PDF檔案時無法使用的功能，例如新增註釋至檔案、填寫表單和儲存檔案。 如需詳細資訊，請參閱 [Reader延伸服務](/help/forms/using/overview-aem-document-services.md#reader-extension-service).
+* **Reader扩展服务：** 通过扩展Adobe Reader的功能（赋予额外的使用权限），您的组织可以轻松共享交互式PDF文档。 该服务激活使用Adobe Reader打开PDF文档时不可用的功能，例如向文档添加注释、填写表单和保存文档。 有关更多信息，请参阅 [Reader扩展服务](/help/forms/using/overview-aem-document-services.md#reader-extension-service).
 
-* **簽章服務：** 可讓您在AEM伺服器上處理數位簽名和檔案。 例如，簽章服務通常用於下列情況：
+* **签名服务：** 允许您在AEM服务器上处理数字签名和文档。 例如，签名服务通常在以下情况下使用：
 
-   * AEM伺服器會在表單傳送給使用者以使用Acrobat或Adobe Reader開啟之前驗證表單。
-   * AEM伺服器會使用Acrobat或Adobe Reader驗證已新增至表單的簽名。
-   * AEM伺服器代表公證人簽署表格。
+   * AEM服务器在发送表单给用户以使用Acrobat或Adobe Reader打开该表单之前对其进行身份验证。
+   * AEM服务器使用Acrobat或Adobe Reader验证添加到表单中的签名。
+   * AEM服务器代表公共公证人签署表单。
 
-   簽章服務會存取儲存在信任存放區中的憑證和認證。 如需詳細資訊，請參閱 [簽章服務](/help/forms/using/aem-document-services-programmatically.md).
+   签名服务访问存储在信任存储中的证书和凭据。 有关更多信息，请参阅 [签名服务](/help/forms/using/aem-document-services-programmatically.md).
 
-AEM Forms是功能強大的企業級平台，而document services只是AEM Forms的其中一項功能。 如需完整的功能清單，請參閱 [AEM Forms簡介](/help/forms/using/introduction-aem-forms.md).
+AEM Forms是一个功能强大的企业级平台，而document services只是AEM Forms的功能之一。 有关功能的完整列表，请参见 [AEM Forms简介](/help/forms/using/introduction-aem-forms.md).
 
-## 部署拓撲 {#deployment-topology}
+## 部署拓扑 {#deployment-topology}
 
-AEM Forms附加元件套件是部署至AEM的應用程式。 一般而言，您只需要一個AEM例項（製作或發佈）即可執行AEM Forms檔案服務。 建議使用下列拓撲來執行AEM Forms檔案服務。 如需有關拓撲的詳細資訊，請參閱 [AEM Forms的架構和部署拓撲](/help/forms/using/aem-forms-architecture-deployment.md).
+AEM Forms附加组件包是部署在AEM上的应用程序。 通常，您只需一个AEM实例（创作或发布）即可运行AEM Forms文档服务。 建议通过以下拓扑来运行AEM Forms文档服务。 有关拓扑的详细信息，请参阅 [AEM Forms的架构和部署拓扑](/help/forms/using/aem-forms-architecture-deployment.md).
 
-![AEM Forms的架構和部署拓撲](do-not-localize/document-services.png)
+![AEM Forms的架构和部署拓扑](do-not-localize/document-services.png)
 
 >[!NOTE]
 >
->雖然AEM Forms可讓您從單一伺服器設定並執行所有功能，但您應執行容量規劃、負載平衡，並為生產環境中的特定功能設定專用伺服器。 例如，若環境使用PDF產生器服務每天轉換數千頁頁面，並使用多個調適型表單來擷取資料，請為PDF產生器服務和調適型表單功能設定個別的AEM Forms伺服器。 它有助於提供最佳效能，並獨立擴充伺服器。
+>虽然AEM Forms允许您从一台服务器设置和运行所有功能，但您应该执行容量规划、负载平衡，并为生产环境中的特定功能设置专用服务器。 例如，对于使用PDF生成器服务每天转换数千页以及使用多个自适应表单捕获数据的环境，请为PDF生成器服务和自适应表单功能设置单独的AEM Forms服务器。 它有助于提供最佳性能并扩展彼此独立的服务器。
 
 ## 系统要求 {#system-requirements}
 
-開始安裝及設定AEM Forms檔案服務前，請確定：
+在开始安装和配置AEM Forms文档服务之前，请确保：
 
-* 硬體與軟體基礎架構已準備就緒。 如需支援的硬體和軟體詳細清單，請參閱 [技術需求](/help/sites-deploying/technical-requirements.md).
+* 硬件和软件基础架构已就绪。 有关支持的硬件和软件的详细列表，请参见 [技术要求](/help/sites-deploying/technical-requirements.md).
 
-* AEM執行個體的安裝路徑未包含空格。
-* AEM執行個體已啟動且正在執行。 在AEM術語中，「例項」是在伺服器上以製作或發佈模式執行的AEM的副本。 一般而言，您只需要一個AEM例項（製作或發佈）即可執行AEM Forms檔案服務：
+* AEM实例的安装路径不包含空格。
+* AEM实例已启动并正在运行。 在AEM术语中，“实例”是在创作或发布模式下在服务器上运行的AEM的副本。 通常，您只需一个AEM实例（创作或发布）即可运行AEM Forms文档服务：
 
-   * **作者**：AEM執行個體，用來建立、上傳和編輯內容以及管理網站。 一旦內容準備好上線，就會將其復寫到發佈執行個體。
-   * **發佈**：透過網際網路或內部網路，向公眾提供已發佈內容的AEM例項。
+   * **作者**：用于创建、上传和编辑内容以及管理网站的AEM实例。 一旦内容准备好上线，就会将其复制到发布实例。
+   * **Publish**：通过Internet或内部网络向公众提供已发布内容的AEM实例。
 
-* 符合記憶體需求。 AEM Forms附加元件套件需要：
+* 满足内存要求。 AEM Forms附加组件包需要：
 
-   * 15 GB的暫存空間，適用於Microsoft® Windows安裝。
-   * UNIX安裝需要6 GB的暫存空間。
+   * 15 GB的临时空间，用于基于Microsoft® Windows的安装。
+   * 用于基于UNIX的安装的6 GB临时空间。
 
-* 已安裝在Microsoft®Windows和Linux®上執行PDF產生器轉換所需的使用者端軟體：
+* 已安装在Microsoft®Windows和Linux®上执行PDF生成器转换所需的客户端软件：
 
-   * **Microsoft® Windows**：安裝 [Microsoft® Office](/help/forms/using/aem-forms-jee-supported-platforms.md#p-software-support-for-pdf-generator-p) 或 [Apache OpenOffice](/help/forms/using/aem-forms-jee-supported-platforms.md#software-support-for-pdf-generator)
-   * **Linux®**：安裝 [Apache OpenOffice](/help/forms/using/aem-forms-jee-supported-platforms.md#p-software-support-for-pdf-generator-p)
+   * **Microsoft® Windows**：安装 [Microsoft® Office](/help/forms/using/aem-forms-jee-supported-platforms.md#p-software-support-for-pdf-generator-p) 或 [Apache OpenOffice](/help/forms/using/aem-forms-jee-supported-platforms.md#software-support-for-pdf-generator)
+   * **Linux®**：安装 [Apache OpenOffice](/help/forms/using/aem-forms-jee-supported-platforms.md#p-software-support-for-pdf-generator-p)
 
 >[!NOTE]
 >
->* 在Microsoft® Windows上，PDF產生器支援WebKit、Acrobat WebCapture和PhantomJS轉換路由，以將HTML檔案轉換為PDF檔案。
->* 在UNIX作業系統上，PDF產生器支援WebKit和PhantomJS轉換路由，將HTML檔案轉換為PDF檔案。
+>* 在Microsoft® Windows上，PDF生成器支持WebKit、Acrobat WebCapture和PhantomJS转换路由，以将HTML文件转换为PDF文档。
+>* 在基于UNIX的操作系统上，PDF生成器支持WebKit和PhantomJS转换路由，以将HTML文件转换为PDF文档。
 >
 
 
-### UNIX作業系統的額外需求 {#extrarequirements}
+### 基于UNIX的操作系统的额外要求 {#extrarequirements}
 
-如果您使用UNIX作業系統，請從個別作業系統的安裝媒體安裝下列32位元套件：
+如果您使用的是基于UNIX的操作系统，请从相应操作系统的安装介质安装以下32位软件包：
 <table>
  <tbody>
   <tr>
    <td>
     <ul>
-     <li>外傳</li>
+     <li>外派人员</li>
     </ul> </td>
    <td>
     <ul>
@@ -103,7 +103,7 @@ AEM Forms附加元件套件是部署至AEM的應用程式。 一般而言，您�
     </ul> </td>
    <td>
     <ul>
-     <li>自由文字</li>
+     <li>自由类型</li>
     </ul> </td>
    <td>
     <ul>
@@ -167,13 +167,13 @@ AEM Forms附加元件套件是部署至AEM的應用程式。 一般而言，您�
  </tbody>
 </table>
 
-* **(僅限PDF產生器**)安裝32位元版本的libcurl、libcrypto和libssl程式庫，並建立下列symlink。 符號連結指向個別程式庫的最新版本：
+* **(仅限PDF生成器**)安装32位版本的libcurl、libcrypto和libssl库并创建以下符号链接。 符号链接指向各个库的最新版本：
 
    * /usr/lib/libcurl.so
    * /usr/lib/libcrypto.so
    * /usr/lib/libssl.so
 
-* **(僅限PDF產生器)** PDF產生器服務支援WebKit和PhantomJS路由，以將HTML檔案轉換為PDF檔案。 若要啟用PhantomJS路由的轉換，請安裝下列列出的64位元程式庫。 一般來說，這些程式庫已經安裝。 如果缺少任何程式庫，請手動安裝：
+* **(仅限PDF生成器)** PDF生成器服务支持将HTML文件转换为PDF文档的WebKit和PhantomJS路由。 要启用PhantomJS路由的转换，请安装下面列出的64位库。 通常，这些库已经安装。 如果缺少任何库，请手动安装：
 
    * linux-gate.so.1
    * libz.so.1
@@ -189,79 +189,79 @@ AEM Forms附加元件套件是部署至AEM的應用程式。 一般而言，您�
    * ld-linux.so.2
    * libexpat.so.1
 
-## 安裝前設定 {#preinstallationconfigurations}
+## 安装前配置 {#preinstallationconfigurations}
 
-安裝前組態區段中列出的組態僅適用於PDF產生器服務。 如果您未設定PDF產生器服務，可以略過安裝前設定區段。
+预安装配置部分中列出的配置仅适用于PDF生成器服务。 如果未配置PDF生成器服务，则可以跳过安装前配置部分。
 
-### 安裝Adobe Acrobat和第三方應用程式 {#install-adobe-acrobat-and-third-party-applications}
+### 安装Adobe Acrobat和第三方应用程序 {#install-adobe-acrobat-and-third-party-applications}
 
-如果您要使用PDF產生器服務將原生檔案格式(例如Microsoft® Word、Microsoft®Excel、Microsoft®PowerPoint、OpenOffice、WordPerfect X7和Adobe Acrobat)轉換為PDF檔案，請確定這些應用程式已安裝在AEM Forms伺服器上。
+如果您要使用PDF生成器服务将本机文件格式(如Microsoft® Word、Microsoft®Excel、Microsoft®PowerPoint、OpenOffice、WordPerfect X7和Adobe Acrobat)转换为PDF文档，请确保在AEM Forms Server上安装了这些应用程序。
 
 >[!NOTE]
 >
->* 如果您的AEM Forms伺服器處於離線或安全的環境，且無法透過網際網路啟動Adobe Acrobat，請參閱 [離線啟用](https://exception.licenses.adobe.com/aoes/aoes/v1/t1?locale=en) 以取得啟用此類Adobe Acrobat例項的指示。
->* Adobe Acrobat、Microsoft®Word、Excel和Powerpoint僅適用於Microsoft® Windows。 如果您使用UNIX作業系統，請安裝OpenOffice，將RTF文字檔和支援的Microsoft® Office檔案轉換為PDF檔案。
->* 為所有設定要使用PDF產生器服務的使用者關閉安裝Adobe Acrobat和協力廠商軟體後顯示的所有對話方塊。
->* 至少啟動一次所有已安裝的軟體。 關閉所有設定為使用PDF產生器服務之使用者的所有對話方塊。
->* [檢查Adobe Acrobat序號的到期日](https://helpx.adobe.com/enterprise/kb/volume-license-expiration-check.html) 並設定更新授權的日期，或 [移轉您的序號](https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/licensing.html#migrating-your-serial-number) 根據到期日。
+>* 如果您的AEM Forms服务器处于离线或安全环境中，并且Internet无法激活Adobe Acrobat，请参阅 [脱机激活](https://exception.licenses.adobe.com/aoes/aoes/v1/t1?locale=en) 获取有关激活此类Adobe Acrobat实例的说明。
+>* Adobe Acrobat、Microsoft®Word、Excel和Powerpoint仅适用于Microsoft® Windows。 如果您使用的是基于UNIX的操作系统，请安装OpenOffice以将RTF文本文件和支持的Microsoft® Office文件转换为PDF文档。
+>* 为所有配置为使用PDF生成器服务的用户关闭安装Adobe Acrobat和第三方软件后显示的所有对话框。
+>* 至少启动一次所有已安装的软件。 关闭所有配置为使用PDF生成器服务的用户的所有对话框。
+>* [检查Adobe Acrobat序列号的到期日期](https://helpx.adobe.com/enterprise/kb/volume-license-expiration-check.html) 并设置更新许可证的日期或 [迁移序列号](https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/licensing.html#migrating-your-serial-number) 根据到期日。
 
 
-安裝Acrobat後，請開啟Microsoft® Word。 於 **Acrobat** 標籤，按一下 **建立PDF** 並將電腦上可用的.doc或.docx檔案轉換為PDF檔案。 如果轉換成功，AEM Forms即可搭配PDF產生器服務使用Acrobat。
+安装Acrobat后，打开Microsoft® Word。 在 **Acrobat** 选项卡，单击 **创建PDF** 并将计算机上可用的.doc或.docx文件转换为PDF文档。 如果转换成功，AEM Forms可以将Acrobat与PDF生成器服务结合使用。
 
-### 設定環境變數 {#setup-environment-variables}
+### 设置环境变量 {#setup-environment-variables}
 
-設定32位元和64位元Java Development Kit、協力廠商應用程式和Adobe Acrobat的環境變數。 環境變數應包含用來啟動對應應用程式的可執行檔的絕對路徑，例如，下表列出一些應用程式的環境變數：
+为32位和64位Java开发工具包、第三方应用程序和Adobe Acrobat设置环境变量。 环境变量应包含用于启动相应应用程序的可执行文件的绝对路径，例如，下表列出了一些应用程序的环境变量：
 
 <table>
  <tbody>
   <tr>
    <td><p><strong>应用程序</strong></p> </td>
-   <td><p><strong>環境變數</strong></p> </td>
+   <td><p><strong>环境变量</strong></p> </td>
    <td><p><strong>示例</strong></p> </td>
   </tr>
   <tr>
-   <td><p><strong>JDK （64位元）</strong></p> </td>
+   <td><p><strong>JDK（64位）</strong></p> </td>
    <td><p>JAVA_HOME</p> </td>
    <td><p>C:\Program Files\Java\jdk1.8.0_74</p> </td>
   </tr>
   <tr>
    <td><p><strong>Adobe Acrobat</strong></p> </td>
    <td><p>Acrobat_PATH</p> </td>
-   <td><p>C:\Program檔案(x86)\Adobe\Acrobat 2015\Acrobat\Acrobat.exe</p> </td>
+   <td><p>C:\Program Files (x86)\Adobe\Acrobat 2015\Acrobat\Acrobat.exe</p> </td>
   </tr>
   <tr>
-   <td><p><strong>筆記本</strong></p> </td>
+   <td><p><strong>笔记本</strong></p> </td>
    <td><p>Notepad_PATH</p> </td>
    <td><p>C:\WINDOWS\notepad.exe<br /> <strong></strong></p> </td>
   </tr>
   <tr>
    <td><p><strong>OpenOffice</strong></p> </td>
    <td><p>OpenOffice_PATH</p> </td>
-   <td><p>C:\Program檔案(x86)\OpenOffice.org4</p> </td>
+   <td><p>C:\Program Files (x86)\OpenOffice.org4</p> </td>
   </tr>
  </tbody>
 </table>
 
 >[!NOTE]
 >
->* 所有環境變數和各自的路徑都會區分大小寫。
->* JAVA_HOME、JAVA_HOME_32和Acrobat_PATH （僅限Windows）是強制環境變數。
->* 環境變數OpenOffice_PATH設定為安裝資料夾，而不是可執行檔的路徑。
->* 請勿為Microsoft® Office應用程式（例如Word、PowerPoint、Excel和Project）或AutoCAD設定環境變數。 如果這些應用程式安裝在伺服器上，則產生PDF服務會自動啟動這些應用程式。
->* 在UNIX平台上，以/root安裝OpenOffice。 如果OpenOffice未安裝為root，則PDF產生器服務無法將OpenOffice檔案轉換為PDF檔案。 如果您需要以非root使用者的身分安裝及執行OpenOffice，請為非root使用者提供sudo許可權。
->* 如果您在以UNIX為基礎的平台上使用OpenOffice，請執行以下命令來設定路徑變數：
+>* 所有环境变量和相应的路径都区分大小写。
+>* JAVA_HOME、JAVA_HOME_32和Acrobat_PATH（仅限Windows）是强制环境变量。
+>* 环境变量OpenOffice_PATH被设置为安装文件夹，而不是可执行文件的路径。
+>* 请勿为Microsoft® Office应用程序（如Word、PowerPoint、Excel和Project）或AutoCAD设置环境变量。 如果这些应用程序安装在服务器上，则生成PDF服务会自动启动这些应用程序。
+>* 在基于UNIX的平台上，将OpenOffice安装为/root。 如果OpenOffice未安装为root，则PDF生成器服务无法将OpenOffice文档转换为PDF文档。 如果需要以非根用户身份安装和运行OpenOffice，请向非根用户提供sudo权限。
+>* 如果在基于UNIX的平台上使用OpenOffice，请运行以下命令来设置路径变量：
 >
 >  `export OpenOffice_PATH=/opt/openoffice.org4`
 
-### (僅適用於IBM® WebSphere®)設定IBM® SSL通訊端提供者 {#only-for-ibm-websphere-configure-ibm-ssl-socket-provider}
+### (仅适用于IBM® WebSphere®)配置IBM® SSL套接字提供程序 {#only-for-ibm-websphere-configure-ibm-ssl-socket-provider}
 
-執行以下步驟來設定IBM® SSL通訊端提供者：
+执行以下步骤来配置IBM® SSL套接字提供程序：
 
-1. 建立java.security檔案的復本。 檔案的預設位置為 `[WebSphere_installation_directory]\Appserver\java_[version]\jre\lib\security`.
-1. 開啟複製的java.security檔案以進行編輯。
-1. 變更預設的SSL通訊端工廠以使用JSSE2工廠，而非預設的IBM® WebSphere®工廠：
+1. 创建java.security文件的副本。 文件的默认位置为 `[WebSphere_installation_directory]\Appserver\java_[version]\jre\lib\security`.
+1. 打开复制的java.security文件进行编辑。
+1. 将默认SSL套接字工厂更改为使用JSSE2工厂，而不是默认的IBM® WebSphere®工厂：
 
-   **預設內容：**
+   **默认内容：**
 
    ```shell
    #ssl.SocketFactory.provider=com.ibm.jsse2.SSLSocketFactoryImpl
@@ -271,7 +271,7 @@ AEM Forms附加元件套件是部署至AEM的應用程式。 一般而言，您�
    ssl.ServerSocketFactory.provider=com.ibm.websphere.ssl.protocol.SSLServerSocketFactory
    ```
 
-   **修改的內容：**
+   **修改的内容：**
 
    ```shell
    ssl.SocketFactory.provider=com.ibm.jsse2.SSLSocketFactoryImpl
@@ -282,71 +282,71 @@ AEM Forms附加元件套件是部署至AEM的應用程式。 一般而言，您�
    #ssl.ServerSocketFactory.provider=com.ibm.websphere.ssl.protocol.SSLServerSocketFactory
    ```
 
-1. 若要讓AEM Forms伺服器使用更新後的java.security檔案，請在啟動AEM Forms伺服器時新增下列java引數：
+1. 要使AEM Forms服务器能够使用更新后的java.security文件，请在启动AEM Forms服务器时添加以下java参数：
 
    `-Djava.security.properties= [path of newly created Java.security file].`
 
-### （僅限Windows）設定Microsoft® Office的檔案封鎖設定 {#configure-the-file-block-settings-for-microsoft-office}
+### （仅限Windows）配置Microsoft® Office的文件块设置 {#configure-the-file-block-settings-for-microsoft-office}
 
-變更Microsoft® Office信任中心設定，以啟用PDF產生器服務，轉換使用舊版Microsoft® Office建立的檔案。
+更改Microsoft® Office信任中心设置，以启用PDF生成器服务来转换使用旧版Microsoft® Office创建的文件。
 
-1. 開啟Microsoft® Office應用程式。 例如，Microsoft® Word。 導覽至 **[!UICONTROL 檔案]**> **[!UICONTROL 選項]**. 「選項」對話方塊隨即顯示。
+1. 打开Microsoft® Office应用程序。 例如，Microsoft® Word。 导航到 **[!UICONTROL 文件]**> **[!UICONTROL 选项]**. 出现“选项”对话框。
 
-1. 按一下 **[!UICONTROL 信任中心]**，然後按一下 **[!UICONTROL 信任中心設定]**.
-1. 在 **[!UICONTROL 信任中心設定]**，按一下 **[!UICONTROL 檔案區塊設定]**.
-1. 在 **[!UICONTROL 檔案型別]** 清單，取消選取 **[!UICONTROL 開啟]** 應允許PDF產生器服務轉換為PDF檔案的檔案型別。
+1. 单击 **[!UICONTROL 托管中心]**，然后单击 **[!UICONTROL 信任中心设置]**.
+1. 在 **[!UICONTROL 信任中心设置]**，单击 **[!UICONTROL 文件块设置]**.
+1. 在 **[!UICONTROL 文件类型]** 列表，取消选择 **[!UICONTROL 打开]** PDF生成器服务应允许转换为PDF文档的文件类型。
 
-### （僅限Windows）授予Replace a process level token許可權 {#grant-the-replace-a-process-level-token-privilege}
+### （仅限Windows）授予Replace a process level token权限 {#grant-the-replace-a-process-level-token-privilege}
 
-用來啟動應用程式伺服器的使用者帳戶需要 **取代程式層級權杖** 許可權。 本機系統帳戶具有 **取代程式層級權杖** 預設許可權。 對於以Local Administrators群組的使用者執行的伺服器，必須明確授與許可權。 執行以下步驟來授與許可權：
+用于启动应用程序服务器的用户帐户需要 **替换进程级别令牌** 特权。 本地系统帐户具有 **替换进程级别令牌** 默认权限。 对于使用Local Administrators组的用户运行的服务器，必须明确授予权限。 执行以下步骤以授予权限：
 
-1. 開啟Microsoft® Windows的群組原則編輯器。 若要開啟群組原則編輯器，請按一下 **[!UICONTROL 開始]**，型別 **gpedit.msc** ，然後按一下 **[!UICONTROL 群組原則編輯器]**.
-1. 導覽至 **[!UICONTROL 本機電腦原則]** > **[!UICONTROL 電腦設定]** > **[!UICONTROL Windows設定]** > **[!UICONTROL 安全性設定]** > **[!UICONTROL 本機原則]** > **[!UICONTROL 使用者許可權指派]** 並編輯 **[!UICONTROL 取代程式層級權杖]** 原則並包含管理員群組。
-1. 將使用者新增至「取代程式層級權杖」專案。
+1. 打开Microsoft® Windows的组策略编辑器。 要打开组策略编辑器，请单击 **[!UICONTROL 开始]**，类型 **gpedit.msc** 在“开始搜索”框中，单击 **[!UICONTROL 组策略编辑器]**.
+1. 导航到 **[!UICONTROL 本地计算机策略]** > **[!UICONTROL 计算机配置]** > **[!UICONTROL Windows设置]** > **[!UICONTROL 安全设置]** > **[!UICONTROL 本地策略]** > **[!UICONTROL 用户权限分配]** 并编辑 **[!UICONTROL 替换进程级别令牌]** 策略并包括管理员组。
+1. 将用户添加到“替换进程级令牌”条目。
 
-### （僅限Windows）為非管理員啟用PDF產生器服務 {#enable-the-pdf-generator-service-for-non-administrators}
+### （仅限Windows）为非管理员启用PDF生成器服务 {#enable-the-pdf-generator-service-for-non-administrators}
 
-您可以讓非管理員使用者使用PDF產生器服務。 通常只有具有管理許可權的使用者才能使用服務：
+您可以允许非管理员用户使用PDF生成器服务。 通常，只有具有管理权限的用户才能使用服务：
 
-1. 建立環境變數PDFG_NON_ADMIN_ENABLED。
-1. 將環境變數的值設定為TRUE。
-1. 重新啟動AEM Forms執行個體。
+1. 创建环境变量PDFG_NON_ADMIN_ENABLED。
+1. 将环境变量的值设置为TRUE。
+1. 重新启动AEM Forms实例。
 
-### （僅限Windows）停用使用者帳戶控制(UAC) {#disable-user-account-control-uac}
+### （仅限Windows）禁用用户帐户控制(UAC) {#disable-user-account-control-uac}
 
-1. 若要存取系統組態公用程式，請前往 **[!UICONTROL 開始>執行]** 然後輸入 **[!UICONTROL MSCONFIG]**.
-1. 按一下 **[!UICONTROL 工具]** Tab鍵並向下捲動並選取 **[!UICONTROL 變更UAC設定]**. 按一下 **[!UICONTROL Launch]** 在新視窗中執行指令。
-1. 將滑桿調整至永不通知層級。 完成後，關閉命令視窗並關閉「系統組態」視窗。
-1. 確認UAC的登入設定設為0 （零）。 執行以下步驟以進行驗證：
+1. 要访问系统配置实用程序，请转到 **[!UICONTROL “开始”>“运行”]** 然后输入 **[!UICONTROL MSCONFIG]**.
+1. 单击 **[!UICONTROL 工具]** 制表符，向下滚动并选择 **[!UICONTROL 更改UAC设置]**. 单击 **[!UICONTROL Launch]** 在新窗口中运行命令。
+1. 将滑块调整为从不通知级别。 完成后，关闭命令窗口并关闭“System Configuration（系统配置）”窗口。
+1. 验证UAC的注册表设置是否设置为0（零）。 执行以下步骤进行验证：
 
-   1. Microsoft®建議您在修改登入之前先備份登入。 如需詳細步驟，請參閱 [如何在Windows中備份及還原登入](https://support.microsoft.com/en-us/help/322756).
-   1. 開啟Microsoft® Windows登入編輯器。 若要開啟登入編輯程式，請前往「開始>執行」，輸入regedit，然後按一下「確定」。
-   1. 导航到 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\policies\system\`。請確定EnableLUA的值設為0 （零）。
-   1. 確保值 **EnableLUA** 設為0 （零）。 如果值不是0，請將值變更為0。 关闭注册表编辑器。
+   1. Microsoft®建议在修改注册表之前对其进行备份。 有关详细步骤，请参阅 [如何在Windows中备份和还原注册表](https://support.microsoft.com/en-us/help/322756).
+   1. 打开Microsoft® Windows注册表编辑器。 要打开注册表编辑器，请转到“开始”>“运行”，键入regedit ，然后单击“确定”。
+   1. 导航到 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\policies\system\`。确保EnableLUA的值设置为0 （零）。
+   1. 确保值 **EnableLUA** 设置为0（零）。 如果值不为0，则将值更改为0。 关闭注册表编辑器。
 
-1. 重新啟動電腦。
+1. 重新启动计算机。
 
-### （僅限Windows）停用錯誤報告服務 {#disable-error-reporting-service}
+### （仅限Windows）禁用错误报告服务 {#disable-error-reporting-service}
 
-在Windows Server上使用PDF產生器服務將檔案轉換為PDF時，Windows Server偶爾會報告可執行檔遇到問題且必須關閉。 但是，它不會影響PDF轉換，因為它會在背景中繼續。
+在Windows Server上使用PDF生成器服务将文档转换为PDF时，Windows Server偶尔会报告可执行文件遇到问题且必须关闭。 但是，它不会影响PDF转换，因为它会在后台继续。
 
-若要避免收到錯誤，您可以停用Windows錯誤報告。 如需停用錯誤報告的詳細資訊，請參閱 [https://technet.microsoft.com/en-us/library/cc754364.aspx](https://technet.microsoft.com/en-us/library/cc754364.aspx).
+为避免收到错误，您可以禁用Windows错误报告。 有关禁用错误报告的详细信息，请参阅 [https://technet.microsoft.com/en-us/library/cc754364.aspx](https://technet.microsoft.com/en-us/library/cc754364.aspx).
 
-### （僅限Windows）設定HTML以PDF轉換 {#configure-html-to-pdf-conversion}
+### （仅限Windows）配置HTML到PDF的转换 {#configure-html-to-pdf-conversion}
 
-PDF產生器服務提供將HTML檔案轉換為PDF檔案的WebKit、WebCapture和PhantomJS路由或方法。 在Windows上，若要啟用WebKit和Acrobat WebCapture路由的轉換，請將Unicode字型複製到%windir%\fonts目錄。
+PDF生成器服务提供WebKit、WebCapture和PhantomJS路由或将HTML文件转换为PDF文档的方法。 在Windows上，要启用WebKit和Acrobat WebCapture路由的转换，请将Unicode字体复制到%windir%\fonts目录。
 
 >[!NOTE]
 >
->每當您將新字型安裝至字型資料夾時，請重新啟動AEM Forms例項。
+>每当您将新字体安装到fonts文件夹时，请重新启动AEM Forms实例。
 
-### （僅限UNIX平台）額外的HTML至PDF轉換設定  {#extra-configurations-for-html-to-pdf-conversion}
+### （仅限基于UNIX的平台）用于HTML到PDF转换的额外配置  {#extra-configurations-for-html-to-pdf-conversion}
 
-在UNIX平台上，PDF產生器服務支援WebKit和PhantomJS路由，將HTML檔案轉換為PDF檔案。 若要啟用HTML至PDF轉換，請執行以下適用於您偏好的轉換路由的設定：
+在基于UNIX的平台上，PDF生成器服务支持WebKit和PhantomJS路由将HTML文件转换为PDF文档。 要启用HTML到PDF的转换，请执行以下适用于您的首选转换路由的配置：
 
-### （僅限UNIX平台）啟用Unicode字型支援（僅限WebKit） {#enable-support-for-unicode-fonts-webkit-only}
+### （仅限基于UNIX的平台）启用对Unicode字体的支持（仅限WebKit） {#enable-support-for-unicode-fonts-webkit-only}
 
-根據您的系統將Unicode字型複製到下列任何目錄：
+根据您的系统将Unicode字体复制到以下任何目录中：
 
 * /usr/lib/X11/fonts/TrueType
 * /usr/share/fonts/default/TrueType
@@ -358,83 +358,83 @@ PDF產生器服務提供將HTML檔案轉換為PDF檔案的WebKit、WebCapture和
 
 >[!NOTE]
 >
->* 在Red Hat® Enterprise Linux® 6.x和更新版本上，Courier字型無法使用。 若要安裝Courier字型，請下載font-ibm-type1-1.0.3.zip封存。 在/usr/share/fonts解壓縮封存。 從/usr/share/X11/fonts建立符號連結至/usr/share/fonts。
->* 刪除Html2PdfSvc/bin和/usr/share/fonts目錄中的所有.lst字型快取檔案。
->* 確定目錄/usr/lib/X11/fonts和/usr/share/fonts存在。 如果目錄不存在，則使用ln命令建立從/usr/share/X11/fonts到/usr/lib/X11/fonts的符號連結，以及從/usr/share/fonts到/usr/share/X11/fonts的另一個符號連結。 也請確定在/usr/lib/X11/fonts中可以使用快遞。
->* 請確定/usr/share/fonts或/usr/share/X11/fonts目錄中的所有字型（Unicode和非Unicode）都可用。
->* 當您以非根使用者身分執行PDF產生器服務時，請為非根使用者提供所有字型目錄的讀寫存取權。
->* 每當您將新字型安裝至字型資料夾時，請重新啟動AEM Forms例項。
+>* 在Red Hat® Enterprise Linux® 6.x及更高版本上，Courier字体不可用。 要安装courier字体，请下载font-ibm-type1-1.0.3.zip档案。 在/usr/share/fonts处提取存档。 创建从/usr/share/X11/fonts到/usr/share/fonts的符号链接。
+>* 从Html2PdfSvc/bin和/usr/share/fonts目录中删除所有.lst字体缓存文件。
+>* 确保目录/usr/lib/X11/fonts和/usr/share/fonts存在。 如果目录不存在，则使用ln命令创建从/usr/share/X11/fonts到/usr/lib/X11/fonts的符号链接，以及从/usr/share/fonts到/usr/share/X11/fonts的另一个符号链接。 还要确保在/usr/lib/X11/fonts中提供courier字体。
+>* 确保/usr/share/fonts或/usr/share/X11/fonts目录中的所有字体（Unicode和非Unicode）均可用。
+>* 以非root用户身份运行PDF生成器服务时，向非root用户提供对所有字体目录的读写访问权限。
+>* 每当您将新字体安装到fonts文件夹时，请重新启动AEM Forms实例。
 >
 
 
-## 安裝AEM Forms附加元件套件 {#install-aem-forms-add-on-package}
+## 安装AEM Forms附加组件包 {#install-aem-forms-add-on-package}
 
-AEM Forms附加元件套件是部署至AEM的應用程式。 此套件包含AEM Forms Document Services和其他AEM Forms功能。 執行以下步驟來安裝套裝軟體：
+AEM Forms附加组件包是部署在AEM上的应用程序。 该资源包中包含AEM Forms Document Services和其他AEM Forms功能。 执行以下步骤来安装软件包：
 
 1. 打开 [Software Distribution](https://experience.adobe.com/downloads)。您需要 Adobe ID 才能登录 Software Distribution。
 1. 点按标题菜单中的 **[!UICONTROL Adobe Experience Manager]**。
-1. 在 **[!UICONTROL 篩選器]** 區段：
-   1. 選取 **[!UICONTROL Forms]** 從 **[!UICONTROL 解決方案]** 下拉式清單。
-   2. 選取套件的版本和型別。 您也可以使用 **[!UICONTROL 搜尋下載]** 篩選結果的選項。
-1. 點選適用於您的作業系統的套件名稱，然後選取 **[!UICONTROL 接受EULA條款]**，然後點選 **[!UICONTROL 下載]**.
+1. 在 **[!UICONTROL 筛选器]** 部分：
+   1. 选择 **[!UICONTROL Forms]** 从 **[!UICONTROL 解决方案]** 下拉列表。
+   2. 选择包的版本和类型。 您还可以使用 **[!UICONTROL 搜索下载]** 用于筛选结果的选项。
+1. 点按适用于您的操作系统的包名称，然后选择 **[!UICONTROL 接受EULA条款]**，然后点按 **[!UICONTROL 下载]**.
 1. 打开[包管理器](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html)，并单击&#x200B;**[!UICONTROL 上传包]**&#x200B;以上传包。
-1. 選取套件並按一下 **[!UICONTROL 安裝]**.
+1. 选择资源包并单击 **[!UICONTROL 安装]**.
 
-   您也可以透過下列連結下載套件： [AEM Forms發行版本](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) 文章。
+   您还可以通过中列出的直接链接下载包 [AEM Forms版本](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) 文章。
 
-1. 安裝套件後，系統會提示您重新啟動AEM執行個體。 **請勿立即停止伺服器。** 在停止AEM Forms伺服器之前，請等待ServiceEvent REGISTERED和ServiceEvent UNREGISTERED訊息停止出現在 `[AEM-Installation-Directory]/crx-quickstart/logs/error`.log檔案且記錄穩定。
+1. 安装软件包后，系统会提示您重新启动AEM实例。 **不要立即停止服务器。** 在停止AEM Forms服务器之前，请等待ServiceEvent REGISTERED和ServiceEvent UNREGISTERED消息停止出现在 `[AEM-Installation-Directory]/crx-quickstart/logs/error`.log文件，日志稳定。
 
-## 安裝後設定 {#post-installation-configurations}
+## 安装后配置 {#post-installation-configurations}
 
-### 設定RSA/BouncyCastle程式庫的開機委派  {#configure-boot-delegation-for-rsa-bouncycastle-libraries}
+### 为RSA/BouncyCastle库配置引导委派  {#configure-boot-delegation-for-rsa-bouncycastle-libraries}
 
-1. 停止AEM執行個體。 導覽至 [AEM安裝目錄]\crx-quickstart\conf\資料夾。 開啟sling.properties檔案以進行編輯。
+1. 停止AEM实例。 导航到 [AEM安装目录]\crx-quickstart\conf\文件夹。 打开sling.properties文件进行编辑。
 
-   如果您使用 `[AEM installation directory]\crx-quickstart\bin\start.bat` 若要啟動AEM執行個體，請編輯位於的sling.properties `[AEM_root]\crx-quickstart\`.
+   如果您使用 `[AEM installation directory]\crx-quickstart\bin\start.bat` 要启动AEM实例，请编辑位于的sling.properties `[AEM_root]\crx-quickstart\`.
 
-1. 將下列屬性新增至sling.properties檔案：
+1. 将以下属性添加到sling.properties文件：
 
    ```shell
    sling.bootdelegation.class.com.rsa.jsafe.provider.JsafeJCE=com.rsa.*
    ```
 
-1. (僅限AIX®)將以下屬性新增到sling.properties檔案：
+1. (仅限AIX®)将以下属性添加到sling.properties文件：
 
    ```shell
    sling.bootdelegation.xerces=org.apache.xerces.*
    ```
 
-1. 儲存並關閉檔案。
+1. 保存并关闭文件。
 
-### 設定Font Manager服務  {#configuring-the-font-manager-service}
+### 配置字体管理器服务  {#configuring-the-font-manager-service}
 
-1. 登入 [AEM Configuration Manager](http://localhost:4502/system/console/configMgr) 作為管理員。
-1. 找到並開啟 **[!UICONTROL CQ-DAM-Handler-Gibson字型管理員]** 服務。 指定System Fonts、System Server Fonts和Customer Fonts目錄的Adobe。 单击“**[!UICONTROL 保存]**”。
+1. 登录 [AEM Configuration Manager](http://localhost:4502/system/console/configMgr) 作为管理员。
+1. 找到并打开 **[!UICONTROL CQ-DAM-Handler-Gibson字体管理器]** 服务。 指定System Fonts、System Server Fonts和Customer Fonts目录的Adobe。 单击“**[!UICONTROL 保存]**”。
 
    >[!NOTE]
    >
-   >您使用Adobe以外各方所提供字型的權利受這些各方所提供之授權合約所規範，且不受您使用Adobe軟體的授權所涵蓋。 Adobe建議您先檢閱並確保符合所有適用的非Adobe授權合約，然後再搭配Adobe軟體使用非Adobe字型，尤其是有關在伺服器環境中使用字型的問題。
-   >將新字型安裝至字型資料夾時，請重新啟動AEM Forms例項。
+   >您对Adobe以外的其他各方提供的字体的使用权受这些各方提供给您的许可协议的约束，而您对Adobe软件的使用权不在许可范围内。 Adobe建议您先查看并确保遵守所有适用的非Adobe许可协议，然后再将非Adobe字体用于Adobe软件，尤其是有关在服务器环境中使用字体的问题。
+   >在将新字体安装到fonts文件夹时，请重新启动AEM Forms实例。
 
-### 設定本機使用者帳戶以執行PDF產生器服務  {#configure-a-local-user-account-to-run-the-pdf-generator-service}
+### 配置本地用户帐户以运行PDF生成器服务  {#configure-a-local-user-account-to-run-the-pdf-generator-service}
 
-需要本機使用者帳戶才能執行PDF產生器服務。 如需建立本機使用者的步驟，請參閱 [在Windows中建立使用者帳戶](https://support.microsoft.com/en-us/help/13951/windows-create-user-account) 或在UNIX平台中建立使用者帳戶。
+需要本地用户帐户才能运行PDF生成器服务。 有关创建本地用户的步骤，请参阅 [在Windows中创建用户帐户](https://support.microsoft.com/en-us/help/13951/windows-create-user-account) 或在基于UNIX的平台上创建用户帐户。
 
-1. 開啟 [AEM FormsPDF產生器設定](http://localhost:4502/libs/fd/pdfg/config/ui.html) 頁面。
+1. 打开 [AEM FormsPDF生成器配置](http://localhost:4502/libs/fd/pdfg/config/ui.html) 页面。
 
-1. 在 **[!UICONTROL 使用者帳戶]** 標籤，提供本機使用者帳戶的認證，然後按一下 **[!UICONTROL 提交]**. 如果Microsoft® Windows提示，請允許使用者存取。 成功新增後，設定的使用者會顯示在 **[!UICONTROL 您的使用者帳戶]** 中的區段 **[!UICONTROL 使用者帳戶]** 標籤。
+1. 在 **[!UICONTROL 用户帐户]** 选项卡，提供本地用户帐户的凭据，然后单击 **[!UICONTROL 提交]**. 如果Microsoft® Windows提示，则允许用户访问。 成功添加后，配置的用户将显示在 **[!UICONTROL 您的用户帐户]** 中的部分 **[!UICONTROL 用户帐户]** 选项卡。
 
-### 設定逾時設定 {#configure-the-time-out-settings}
+### 配置超时设置 {#configure-the-time-out-settings}
 
-1. 在 [AEM設定管理員](http://localhost:4502/system/console/configMgr)，找到並開啟 **[!UICONTROL Jacorb ORB提供者]** 服務。
+1. In [AEM配置管理器](http://localhost:4502/system/console/configMgr)，找到并打开 **[!UICONTROL Jacorb ORB提供程序]** 服务。
 
-   將下列專案新增至 **[!UICONTROL 自訂屬性.name]** 欄位並按一下 **[!UICONTROL 儲存]**. 它會將擱置中的回覆逾時（也稱為CORBA使用者端逾時）設定為600秒。
+   将以下内容添加到 **[!UICONTROL 自定义Properties.name]** 字段并单击 **[!UICONTROL 保存]**. 它将挂起回复超时（也称为CORBA客户端超时）设置为600秒。
 
    `jacorb.connection.client.pending_reply_timeout=600000`
 
-1. 登入AEM編寫執行個體並導覽至 **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL 工具]** > **[!UICONTROL Forms]** > **[!UICONTROL 設定PDF產生器]**. 預設URL為 <http://localhost:4502/libs/fd/pdfg/config/ui.html>.
+1. 登录到AEM创作实例并导航到 **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL 工具]** > **[!UICONTROL Forms]** > **[!UICONTROL 配置PDF生成器]**. 默认URL为 <http://localhost:4502/libs/fd/pdfg/config/ui.html>.
 
-   開啟 **[!UICONTROL 一般設定]** 標籤並修改下列欄位對您環境的值：
+   打开 **[!UICONTROL 常规配置]** 选项卡，并修改以下字段对环境的值：
 
 <table>
  <tbody>
@@ -445,98 +445,98 @@ AEM Forms附加元件套件是部署至AEM的應用程式。 此套件包含AEM 
   </tr>
   <tr>
    <td>服务器转换超时</td>
-   <td>PDFG轉換會在伺服器轉換逾時中定義的秒數內保持作用中</td>
+   <td>PDFG转换在服务器转换超时中定义的秒数内保持活动状态</td>
    <td>270秒<br /> </td>
   </tr>
   <tr>
    <td>PDFG 清理扫描秒数</td>
-   <td>執行轉換後作業所需的秒數。<br /> </td>
+   <td>执行转换后操作所需的秒数。<br /> </td>
    <td>3600 秒</td>
   </tr>
   <tr>
    <td>作业盗取秒数</td>
-   <td>允許PDF產生器服務執行轉換的持續時間。 請確定作業過期秒數的值大於PDFG清除掃描秒數的值。</td>
+   <td>允许PDF生成器服务运行转换的持续时间。 确保“作业过期秒数”的值大于“PDFG清理扫描秒数”值。</td>
    <td>7200 秒</td>
   </tr>
  </tbody>
 </table>
 
-### （僅限Windows）為PDF產生器服務設定Acrobat {#configure-acrobat-for-the-pdf-generator-service}
+### （仅限Windows）为PDF生成器服务配置Acrobat {#configure-acrobat-for-the-pdf-generator-service}
 
-在Microsoft® Windows上，PDF產生器服務會使用Adobe Acrobat將支援的檔案格式轉換為PDF檔案。 執行以下步驟，為PDF產生器服務設定Adobe Acrobat：
+在Microsoft® Windows上，PDF生成器服务使用Adobe Acrobat将支持的文件格式转换为PDF文档。 执行以下步骤为PDF生成器服务配置Adobe Acrobat：
 
-1. 開啟Acrobat並選取 **[!UICONTROL 編輯]**> **[!UICONTROL 偏好設定]**> **[!UICONTROL 更新程式]**. 在檢查更新中，取消選取 **[!UICONTROL 自動安裝更新]**，然後按一下 **[!UICONTROL 確定]**. 關閉Acrobat。
-1. 連按兩下您系統上的PDF檔案。 當Acrobat首次啟動時，會出現登入、歡迎畫面和EULA的對話方塊。 為所有設定為使用PDF產生器的使用者關閉這些對話方塊。
-1. 執行PDF產生器公用程式批次檔案，為PDF產生器服務設定Acrobat：
+1. 打开Acrobat并选择 **[!UICONTROL 编辑]**> **[!UICONTROL 首选项]**> **[!UICONTROL 更新程序]**. 在检查更新中，取消选择 **[!UICONTROL 自动安装更新]**，然后单击 **[!UICONTROL 确定]**. 关闭Acrobat。
+1. 双击系统上的PDF文档。 当Acrobat首次启动时，将显示登录、欢迎屏幕和EULA对话框。 为所有配置为使用PDF生成器的用户关闭这些对话框。
+1. 运行PDF生成器实用程序批处理文件，为PDF生成器服务配置Acrobat：
 
-   1. 開啟 [AEM封裝管理員](http://localhost:4502/crx/packmgr/index.jsp) 並下載 `adobe-aemfd-pdfg-common-pkg-[version].zip` 封裝管理員中的檔案。
-   1. 將下載的.zip檔案解壓縮。 以管理許可權開啟命令提示字元。
-   1. 導覽至 `[extracted-zip-file]\jcr_root\etc\packages\day\cq60\fd\adobe-aemds-common-pkg-[version]\jcr_root\etc\packages\day\cq60\fd\`
-   1. 解壓縮 `adobe-aemfd-pdfg-common-pkg-[version]`.
-   1. 導覽至 `[downloaded-adobe-aemfd-pdfg-common-pkg]\jcr_root\libs\fd\pdfg\tools\adobe-aemfd-pdfg-utilities-[version]` 目錄。 執行以下批次檔案：
+   1. 打开 [AEM包管理器](http://localhost:4502/crx/packmgr/index.jsp) 并下载 `adobe-aemfd-pdfg-common-pkg-[version].zip` 包管理器中的文件。
+   1. 解压缩下载的.zip文件。 使用管理权限打开命令提示符。
+   1. 导航到 `[extracted-zip-file]\jcr_root\etc\packages\day\cq60\fd\adobe-aemds-common-pkg-[version]\jcr_root\etc\packages\day\cq60\fd\`
+   1. 解压缩 `adobe-aemfd-pdfg-common-pkg-[version]`.
+   1. 导航到 `[downloaded-adobe-aemfd-pdfg-common-pkg]\jcr_root\libs\fd\pdfg\tools\adobe-aemfd-pdfg-utilities-[version]` 目录。 运行以下批处理文件：
 
       `Acrobat_for_PDFG_Configuration.bat`
 
-      Acrobat已設定為搭配PDF產生器服務執行。
+      Acrobat配置为使用PDF生成器服务运行。
 
-1. 執行 [系統整備工具(SRT)](#SRT) 驗證Acrobat安裝。
+1. 运行 [系统就绪工具(SRT)](#SRT) 以验证Acrobat安装。
 
-### （僅限Windows）設定HTML至PDF轉換的主要路由 {#configure-primary-route-for-html-to-pdf-conversion-windows-only}
+### （仅限Windows）为HTML到PDF的转换配置主路由 {#configure-primary-route-for-html-to-pdf-conversion-windows-only}
 
-PDF產生器服務提供將HTML檔案轉換為PDF檔案的多種途徑：Webkit、Acrobat WebCapture （僅限Windows）和PhantomJS。 Adobe建議使用PhantomJS路由，因為它有能力處理動態內容，並且不依賴32位元程式庫、32位元JDK，或不需要額外字型。 此外，PhantomJS路由不需要sudo或root存取權即可執行轉換。
+PDF生成器服务提供了将HTML文件转换为PDF文档的多种途径：Webkit、Acrobat WebCapture（仅限Windows）和PhantomJS。 Adobe建议使用PhantomJS路由，因为它能够处理动态内容，并且不依赖于32位库、32位JDK，或者不需要额外字体。 此外，PhantomJS路由不需要sudo或root访问权限即可运行转换。
 
-HTML至PDF轉換的預設主要路徑為Webkit。 若要變更轉換路線，請執行下列動作：
+HTML到PDF转换的默认主要路由是Webkit。 要更改转换路线，请执行以下操作：
 
-1. 在AEM作者執行個體上，導覽至 **[!UICONTROL 工具]**> **[!UICONTROL Forms]**> **[!UICONTROL 設定PDF產生器]**.
+1. 在AEM创作实例上，导航到 **[!UICONTROL 工具]**> **[!UICONTROL Forms]**> **[!UICONTROL 配置PDF生成器]**.
 
-1. 在 **[!UICONTROL 一般設定]** 索引標籤中，選取偏好的轉換路線 **[!UICONTROL HTML至PDF轉換的主要路線]** 下拉式清單。
+1. 在 **[!UICONTROL 常规配置]** 选项卡，从中选择首选的转换路由 **[!UICONTROL HTML到PDF转换的主要路径]** 下拉菜单。
 
-### 初始化全域信任存放區 {#intialize-global-trust-store}
+### 初始化全局信任存储区 {#intialize-global-trust-store}
 
-使用「信任存放區管理」，您可以匯入、編輯和刪除您信任在伺服器上的憑證，以驗證數位簽名和憑證驗證。 您可以匯入和匯出任意數量的憑證。 匯入憑證後，您可以編輯信任設定和信任存放區型別。 執行以下步驟來初始化信任存放區：
+使用信任存储区管理，您可以导入、编辑和删除信任在服务器上的证书，以验证数字签名和证书身份验证。 您可以导入和导出任意数量的证书。 导入证书后，可以编辑信任设置和信任存储类型。 执行以下步骤可初始化信任存储区：
 
-1. 以管理員身分登入AEM Forms執行個體。
-1. 前往  **[!UICONTROL 工具]** >  **[!UICONTROL 安全性]** >  **[!UICONTROL 信任存放區]**.
-1. 按一下  **[!UICONTROL 建立信任存放區]**. 設定密碼並點選 **[!UICONTROL 儲存]**.
+1. 以管理员身份登录到AEM Forms实例。
+1. 转到  **[!UICONTROL 工具]** >  **[!UICONTROL 安全性]** >  **[!UICONTROL 信任存储区]**.
+1. 单击  **[!UICONTROL 创建TrustStore]**. 设置密码并点按 **[!UICONTROL 保存]**.
 
-### 設定Reader延伸與加密服務的憑證 {#set-up-certificates-for-reader-extension-and-encryption-service}
+### 为Reader扩展和加密服务设置证书 {#set-up-certificates-for-reader-extension-and-encryption-service}
 
-DocAssurance服務可套用使用許可權至PDF檔案。 若要套用使用許可權至PDF檔案，請設定憑證。
+DocAssurance服务可以对PDF文档应用使用权限。 要对PDF文档应用使用权限，请配置证书。
 
-在設定憑證之前，請確定您擁有：
+在设置证书之前，请确保您拥有：
 
-* 憑證檔案(.pfx)。
+* 证书文件(.pfx)。
 
-* 憑證隨附的私密金鑰密碼。
+* 证书附带的私钥密码。
 
-* 私钥别名. 您可以執行Java keytool指令來檢視「私密金鑰別名」：
+* 私钥别名. 您可以执行Java keytool命令以查看私钥别名：
    `keytool -list -v -keystore [keystore-file] -storetype pkcs12`
 
-* 金鑰存放區檔案密碼。 如果您使用Adobe的Reader延伸憑證，Keystore檔案密碼一律與私密金鑰密碼相同。
+* 密钥库文件密码。 如果您使用Adobe的Reader扩展证书，则Keystore文件密码始终与Private Key密码相同。
 
-執行以下步驟來設定憑證：
+执行以下步骤来配置证书：
 
-1. 以管理員身分登入AEM作者執行個體。 前往 **[!UICONTROL 工具]** > **[!UICONTROL 安全性]** > **[!UICONTROL 使用者]**.
-1. 按一下 **[!UICONTROL 名稱]** 使用者帳戶的欄位。 此 **[!UICONTROL 編輯使用者設定]** 頁面隨即開啟。 在AEM Author執行個體上，憑證位於KeyStore中。 如果您先前尚未建立KeyStore，請按一下 **[!UICONTROL 建立KeyStore]** 並設定KeyStore的新密碼。 如果伺服器已包含KeyStore，請略過此步驟。  如果您使用Adobe的Reader延伸憑證，Keystore檔案密碼一律與私密金鑰密碼相同。
-1. 於 **[!UICONTROL 編輯使用者設定]** 頁面，選取 **[!UICONTROL 金鑰存放區]** 標籤。 展開 **[!UICONTROL 從金鑰庫檔案新增私密金鑰]** 選項並提供別名。 別名可用來執行Reader擴充功能作業。
-1. 若要上傳憑證檔案，請按一下 **[!UICONTROL 選取金鑰庫檔案]** 並上傳 &lt;filename>.pfx檔案。
+1. 以管理员身份登录AEM创作实例。 转到 **[!UICONTROL 工具]** > **[!UICONTROL 安全性]** > **[!UICONTROL 用户]**.
+1. 单击 **[!UICONTROL name]** 用户帐户的字段。 此 **[!UICONTROL 编辑用户设置]** 页面打开。 在AEM创作实例上，证书驻留在KeyStore中。 如果您之前未创建KeyStore，请单击 **[!UICONTROL 创建密钥库]** 并为KeyStore设置新密码。 如果服务器已包含KeyStore，请跳过此步骤。  如果您使用Adobe的Reader扩展证书，则Keystore文件密码始终与Private Key密码相同。
+1. 在 **[!UICONTROL 编辑用户设置]** 页面上，选择 **[!UICONTROL 密钥库]** 选项卡。 展开 **[!UICONTROL 从密钥存储文件添加私钥]** 选项并提供别名。 别名用于执行Reader扩展操作。
+1. 要上传证书文件，请单击 **[!UICONTROL 选择密钥存储文件]** 并上传 &lt;filename>.pfx文件。
 
-   新增 **[!UICONTROL 金鑰庫密碼]**， **[!UICONTROL 私密金鑰密碼]**、和 **[!UICONTROL 私密金鑰別名]** 與對應欄位之憑證相關聯的內容區段。 按一下 **[!UICONTROL 提交]**.
+   添加 **[!UICONTROL 密钥存储密码]**， **[!UICONTROL 私钥密码]**、和 **[!UICONTROL 私钥别名]** 将证书关联到相应字段的数据。 单击 **[!UICONTROL 提交]**.
 
    >[!NOTE]
    >
-   >在生產環境中，將評估認證替換為生產認證。 在更新過期的認證或評估認證之前，請務必刪除舊的Reader擴充功能認證。
+   >在生产环境中，将评估凭据替换为生产凭据。 在更新已过期或评估凭据之前，请确保删除旧的Reader扩展凭据。
 
-1. 按一下 **[!UICONTROL 儲存並關閉]** 於 **[!UICONTROL 編輯使用者設定]** 頁面。
+1. 单击 **[!UICONTROL 保存并关闭]** 在 **[!UICONTROL 编辑用户设置]** 页面。
 
-### 啟用AES-256 {#enable-aes}
+### 启用AES-256 {#enable-aes}
 
-若要對PDF檔案使用AES 256加密，請取得並安裝Java Cryptography Extension (JCE) Unlimited Strength Jurishment Policy檔案。 取代jre/lib/security資料夾中的local_policy.jar和US_export_policy.jar檔案。 例如，如果您使用Sun JDK，請將下載的檔案複製到 `[JAVA_HOME]/jre/lib/security` 資料夾。
+要对PDF文件使用AES 256加密，请获取并安装Java加密扩展(JCE)无限制强度管辖策略文件。 替换jre/lib/security文件夹中的local_policy.jar和US_export_policy.jar文件。 例如，如果您使用的是Sun JDK，请将下载的文件复制到 `[JAVA_HOME]/jre/lib/security` 文件夹。
 
-Assembler服務取決於Reader擴充功能服務、簽名服務、Forms服務和輸出服務。 執行以下步驟，確認必要的服務已啟動且正在執行：
+Assembler服务依赖于Reader扩展服务、签名服务、Forms服务和输出服务。 执行以下步骤，验证所需的服务是否已启动并正在运行：
 
-1. 登入URL `https://'[server]:[port]'/system/console/bundles` 作為管理員。
-1. 搜尋下列服務，並確定服務已啟動且正在執行：
+1. 登录到URL `https://'[server]:[port]'/system/console/bundles` 作为管理员。
+1. 搜索以下服务并确保服务已启动并正在运行：
 
 <table>
  <tbody>
@@ -563,46 +563,46 @@ Assembler服務取決於Reader擴充功能服務、簽名服務、Forms服務和
  </tbody>
 </table>
 
-## 已知問題和疑難排解 {#known-issues-and-troubleshooting}
+## 已知问题和疑难解答 {#known-issues-and-troubleshooting}
 
-* 如果壓縮的輸入檔案包含檔案名稱中含有雙位元組字元的HTML檔案，則PDF轉換的HTML會失敗。 為避免此問題，命名HTML檔案時請勿使用雙位元組字元。
+* 如果压缩的输入文件包含文件名中包含双字节字符的HTML文件，则PDF转换HTML失败。 为避免出现此问题，在命名HTML文件时不要使用双字节字符。
 
-* 在基於UNIX的作業系統上，執行下列操作來尋找任何遺漏的程式庫：
+* 在基于UNIX的操作系统上，执行以下操作以查找任何缺失的库：
 
 1. 导航到 `[crx-repository]/bedrock/svcnative/HtmlToPdfSvc/bin/`。
 
-1. 執行以下命令，列出PhantomJS需要HTML到PDF轉換的所有程式庫。
+1. 运行以下命令以列出PhantomJS需要用于HTML到PDF转换的所有库。
 
    `ldd phantomjs`
 
-   執行以下命令以列出遺失的程式庫。
+   运行以下命令列出缺少的库。
 
    `ldd phantomjs | grep not`
 
-1. 手動安裝遺失的程式庫。
+1. 手动安装缺少的库。
 
-## 系統整備工具(SRT) {#SRT}
+## 系统就绪工具(SRT) {#SRT}
 
-此 [系統整備工具](#srt-configuration) 檢查電腦是否已正確設定為執行PDF產生器轉換。 工具會在指定的路徑產生報表。 若要執行工具：
+此 [系统就绪工具](#srt-configuration) 检查计算机是否已正确配置为运行PDF生成器转换。 该工具在指定的路径处生成报告。 要运行该工具，请执行以下操作：
 
-1. 開啟命令提示。 導覽至 `[extracted-adobe-aemfd-pdfg-common-pkg]\jcr_root\libs\fd\pdfg\tools` 資料夾。
+1. 打开命令提示符。 导航到 `[extracted-adobe-aemfd-pdfg-common-pkg]\jcr_root\libs\fd\pdfg\tools` 文件夹。
 
-1. 從命令提示字元執行下列命令：
+1. 从命令提示符运行以下命令：
 
    `java -jar forms-srt-[version].jar [Path_of_reports_folder] en`
 
-   該命令會產生報告，也會建立srt_config.yaml檔案。 您可以使用它來設定SRT工具的選項。 可選擇性設定SRT工具的選項。
+   该命令会生成报告并创建srt_config.yaml文件。 可以使用它配置SRT工具的选项。 可以为SRT工具配置选项。
 
    >[!NOTE]
    >
-   >* 如果「系統整備工具」報告指出pdfgen.api檔案在Acrobat外掛程式資料夾中無法使用，請從 `[extracted-adobe-aemfd-pdfg-common-pkg]\jcr_root\libs\fd\pdfg\tools\adobe-aemfd-pdfg-utilities-[version]\plugins\x86_win32` 目錄到 `[Acrobat_root]\Acrobat\plug_ins` 目錄。
+   >* 如果系统就绪工具报告pdfgen.api文件在Acrobat插件文件夹中不可用，则从 `[extracted-adobe-aemfd-pdfg-common-pkg]\jcr_root\libs\fd\pdfg\tools\adobe-aemfd-pdfg-utilities-[version]\plugins\x86_win32` 目录到 `[Acrobat_root]\Acrobat\plug_ins` 目录。
 
 
-1. 导航到 `[Path_of_reports_folder]`。開啟SystemReadinessTool.html檔案。 驗證報告並修正上述問題。
+1. 导航到 `[Path_of_reports_folder]`。打开SystemReadinessTool.html文件。 验证报告并修复上述问题。
 
-### 設定SRT工具的選項 {#srt-configuration}
+### 配置SRT工具的选项 {#srt-configuration}
 
-您可以使用srt_config.yaml檔案來設定SRT工具的各種設定。 檔案的格式為：
+可以使用srt_config.yaml文件为SRT工具配置各种设置。 文件的格式为：
 
 ```shell
    # =================================================================
@@ -629,25 +629,25 @@ Assembler服務取決於Reader擴充功能服務、簽名服務、Forms服務和
    outputDir:
 ```
 
-* **地區設定：** 此為必要引數。 它支援英文(en)、德文(de)、法文(fr)和日文(ja)。 預設值為en。 對於在OSGi上的AEM Forms上執行的PDF產生器服務沒有影響。
-* **aemTempDir：** 此為選用引數。 它會指定Adobe Experience Manager的暫存位置。
-* **使用者：** 此為選用引數。 您可以指定使用者來檢查使用者是否具有執行PDF產生器所需的目錄許可權和讀取/寫入存取權。 如果未指定使用者，則會略過使用者特定檢查，並在報表中顯示為失敗。
-* **outputdir：** 指定儲存SRT報表的位置。 預設位置是SRT工具的目前工作目錄。
+* **区域设置：** 它是必需参数。 它支持英语(en)、德语(de)、法语(fr)和日语(ja)。 默认值为en。 这对OSGi上的AEM Forms上运行的PDF生成器服务没有影响。
+* **aemTempDir：** 它是一个可选参数。 它指定Adobe Experience Manager的临时存储位置。
+* **用户：** 它是一个可选参数。 您可以指定一个用户来检查该用户是否具有运行PDF生成器所需的目录所需的权限和读/写访问权限。 如果未指定用户，则会跳过特定于用户的检查，并在报表中显示为失败。
+* **输出目录：** 指定保存SRT报表的位置。 缺省位置是SRT工具的当前工作目录。
 
 ## 疑难解答
 
-如果在修復SRT工具報告的所有問題後仍遇到問題，請執行以下檢查：
+如果在修复SRT工具报告的所有问题后仍遇到问题，请执行以下检查：
 
-執行以下檢查之前，請確定 [系統整備工具](#SRT) 不會回報任何錯誤。
+执行以下检查之前，请确保 [系统就绪工具](#SRT) 不报告任何错误。
 
 +++ Adobe Acrobat
 
-* 僅確認 [支援的版本](aem-forms-jee-supported-platforms.md#software-support-for-pdf-generator) 已安裝Microsoft® Office （32位元）和Adobe Acrobat，且已取消開啟對話方塊。
-* 請確定Adobe Acrobat更新服務已停用。
-* 確保 [Acrobat_for_PDFG_Configuration.bat](#configure-acrobat-for-the-pdf-generator-service) 批次檔案是以管理員許可權執行。
-* 確認已在PDF設定UI中新增PDF產生器使用者。
-* 確保 [取代程式層級權杖](#grant-the-replace-a-process-level-token-privilege) 已為PDF產生器使用者新增許可權。
-* 確認已為Microsoft Office應用程式啟用Acrobat PDFMaker Office COM增益集。
+* 仅确保 [支持的版本](aem-forms-jee-supported-platforms.md#software-support-for-pdf-generator) Microsoft® Office（32位）和Adobe Acrobat的版本，并且已取消打开对话框。
+* 确保已禁用Adobe Acrobat更新服务。
+* 确保 [Acrobat_for_PDFG_Configuration.bat](#configure-acrobat-for-the-pdf-generator-service) 批处理文件以管理员权限运行。
+* 确保在PDF配置UI中添加了PDF生成器用户。
+* 确保 [替换进程级别令牌](#grant-the-replace-a-process-level-token-privilege) 已为PDF生成器用户添加权限。
+* 确保为Acrobat Office应用程序启用了Microsoft PDFMaker Office COM加载项。
 
 +++
 
@@ -655,46 +655,46 @@ Assembler服務取決於Reader擴充功能服務、簽名服務、Forms服務和
 
 **Microsoft® Windows**
 
-* 請確定32位元 [支援的版本 ](aem-forms-jee-supported-platforms.md#software-support-for-pdf-generator) 已安裝Microsoft Office，且已取消開啟所有應用程式的對話方塊。
-* 確認已在PDF設定UI中新增PDF產生器使用者。
-* 確保PDF產生器使用者是管理員群組的成員，並且 [取代程式層級權杖](#grant-the-replace-a-process-level-token-privilege) 已為使用者設定許可權。
-* 確定已在PDF產生器UI中設定使用者，並執行下列動作：
-   1. 使用PDF產生器使用者登入Microsoft® Windows。
-   1. 開啟Microsoft® Office或OpenOffice應用程式並取消所有對話方塊。
-   1. 將AdobePDF設為預設印表機。
-   1. 將Acrobat設為PDF檔案的預設程式。
-   1. 使用Microsoft Office應用程式中的選項「檔案>列印」和Acrobat功能區來執行手動轉換，並取消所有對話方塊。
-   1. 結束與轉換相關的所有程式，例如winword.exe、powerpoint.exe和excel.exe。
-   1. 重新啟動AEM Forms伺服器。
+* 确保32位 [支持的版本 ](aem-forms-jee-supported-platforms.md#software-support-for-pdf-generator) 已安装Microsoft Office，并且已取消打开所有应用程序的对话框。
+* 确保在PDF配置UI中添加了PDF生成器用户。
+* 确保PDF生成器用户是管理员组的成员，并且 [替换进程级别令牌](#grant-the-replace-a-process-level-token-privilege) 已为用户设置权限。
+* 确保已在PDF生成器UI中配置用户，并执行以下操作：
+   1. 使用PDF生成器用户登录Microsoft® Windows。
+   1. 打开Microsoft® Office或OpenOffice应用程序并取消所有对话框。
+   1. 将AdobePDF设置为默认打印机。
+   1. 将Acrobat设置为PDF文件的默认程序。
+   1. 在Microsoft Office应用程序中使用选项“文件”>“打印”和“Acrobat”功能区执行手动转换，并取消所有对话框。
+   1. 结束与转换相关的所有进程，如winword.exe、powerpoint.exe和excel.exe。
+   1. 重新启动AEM Forms服务器。
 
 **Linux®**
 
-* 安裝 [支援的版本](aem-forms-jee-supported-platforms.md#software-support-for-pdf-generator) OpenOffice的。 AEM Forms支援32位元和64位元版本。 安裝之後，請開啟所有OpenOffice應用程式、取消所有對話視窗，然後關閉應用程式。 重新開啟應用程式，並確保開啟OpenOffice應用程式時不會顯示任何對話方塊。
+* 安装 [支持的版本](aem-forms-jee-supported-platforms.md#software-support-for-pdf-generator) OpenOffice的。 AEM Forms支持32位和64位版本。 安装后，打开所有OpenOffice应用程序，取消所有对话框窗口，然后关闭应用程序。 重新打开应用程序，并确保打开OpenOffice应用程序时不会显示任何对话框。
 
-* 建立環境變數 `OpenOffice_PATH` 並將它設定為指向OpenOffice安裝設定於 [主控台](https://linuxize.com/post/how-to-set-and-list-environment-variables-in-linux/) 或dt （裝置樹狀結構）設定檔。
-* 如果安裝OpenOffice時發生問題，請確定 [32位元程式庫](#extrarequirements) 提供OpenOffice安裝的必要專案。
+* 创建环境变量 `OpenOffice_PATH` 并将它设置为指向在 [控制台](https://linuxize.com/post/how-to-set-and-list-environment-variables-in-linux/) 或dt（设备树）配置文件。
+* 如果安装OpenOffice时出现问题，请确保 [32位库](#extrarequirements) OpenOffice安装所必需的。
 
 +++
 
-+++HTML至PDF轉換問題
++++HTML到PDF的转换问题
 
-* 請確定已在PDF產生器設定UI中新增字型目錄。
+* 确保在PDF生成器配置UI中添加了fonts目录。
 
-**Linux和Solaris （PhantomJS轉換路由）**
+**Linux和Solaris（PhantomJS转换途径）**
 
-* 確保可用於基於Webkit的HTMLToPDF轉換的32位元資料庫(libicudata.so.42)和可用於基於PhantomJS的HTMLToPDF轉換的64位元（libicudata.so.42資料庫）。
+* 确保对于基于Webkit的HTMLToPDF转换有32位库(libicudata.so.42)可用，对于基于PhantomJS的HTMLToPDF转换有64位(libicudata.so.42库可用。
 
-* 執行以下命令以列出phantomjs的缺少程式庫：
+* 运行以下命令可列出phantomjs的缺失库：
 
    ```
    ldd phantomjs | grep not
    ```
 
-* 請確定JAVA_HOME_32環境變數指向正確的位置。
+* 确保JAVA_HOME_32环境变量指向正确的位置。
 
-**Linux®和Solaris™ （WebKit轉換路由）**
+**Linux®和Solaris™（WebKit转换途径）**
 
-* 確定目錄 `/usr/lib/X11/fonts` 和 `/usr/share/fonts` 存在。 如果目錄不存在，請從建立符號連結 `/usr/share/X11/fonts` 至 `/usr/lib/X11/fonts` 和另一個符號連結 `/usr/share/fonts` 至 `/usr/share/X11/fonts`.
+* 确保目录 `/usr/lib/X11/fonts` 和 `/usr/share/fonts` 存在。 如果目录不存在，请从创建符号链接 `/usr/share/X11/fonts` 到 `/usr/lib/X11/fonts` 和另一个符号链接 `/usr/share/fonts` 到 `/usr/share/X11/fonts`.
 
    ```
    ln -s /usr/share/fonts /usr/share/X11/fonts
@@ -702,16 +702,16 @@ Assembler服務取決於Reader擴充功能服務、簽名服務、Forms服務和
    ln -s /usr/share/X11/fonts /usr/lib/X11/fonts
    ```
 
-* 請確定IBM字型複製於usr/share/fonts之下。
-* 確定電腦上有Ghost弱點修正Glibc。 使用您的預設封裝管理員以更新至最新版本的glibc。 其中包括Ghost漏洞修正。
-* 確保系統上已安裝最新版的32位元lib curl、libcrypto和libssl程式庫。 同時建立符號連結 `/usr/lib/libcurl.so` (或適用於AIX®的libcurl.a)、 `/usr/lib/libcrypto.so` (或適用於AIX®的libcrypto.a)和 `/usr/lib/libssl.so` (或libssl.a (適用於AIX®))指向個別程式庫的最新版本（32位元）。
+* 确保IBM字体复制到usr/share/fonts下。
+* 确保计算机上有幽灵漏洞修复glibc。 使用默认包管理器更新到最新版本的glibc。 它包括Ghost漏洞修复。
+* 确保系统上安装了最新版本的32位lib curl、libcrypto和libssl库。 同时创建符号链接 `/usr/lib/libcurl.so` (对于AIX®，则为libcurl.a)， `/usr/lib/libcrypto.so` (或libcrypto.a for AIX®)和 `/usr/lib/libssl.so` (对于AIX®，则为libssl.a)，指向各个库的最新版本（32位）。
 
-* 針對IBM® SSL通訊端提供者執行以下步驟：
-   1. 複製java.security檔案來源 `<WAS_Installed_JAVA>\jre\lib\security` 至您AEM Forms伺服器上的任何位置。 預設位置為預設位置為= `<WAS_Installed>\Appserver\java_[version]\jre\lib\security`.
+* 对IBM® SSL套接字提供程序执行以下步骤：
+   1. 从以下位置复制java.security文件 `<WAS_Installed_JAVA>\jre\lib\security` 到AEM Forms服务器上的任何位置。 默认位置为“默认位置”= `<WAS_Installed>\Appserver\java_[version]\jre\lib\security`.
 
-   1. 編輯複製位置的java.security檔案，並變更預設的SSL通訊端工廠與JSSE2工廠(使用JSSE2工廠而非WebSphere®)。
+   1. 在复制的位置编辑java.security文件，并使用JSSE2工厂更改默认的SSL套接字工厂(使用JSSE2工厂而不是WebSphere®)。
 
-      變更下列預設JSSE通訊端工廠：
+      更改以下默认JSSE套接字工厂：
 
       ```
       #ssl.SocketFactory.provider=com.ibm.jsse2.SSLSocketFactoryImpl
@@ -733,76 +733,76 @@ Assembler服務取決於Reader擴充功能服務、簽名服務、Forms服務和
 
 +++
 
-+++ 無法新增PDF產生器(PDFG)使用者
++++ 无法添加PDF生成器(PDFG)用户
 
-* 請確定Windows上已安裝Microsoft® Visual C++ 2012 x86和Microsoft® Visual C++ 2013 x86 （32位元）可轉散發套件。
-
-+++
-
-+++自動化測試失敗
-
-* 對於Microsoft® Office和OpenOffice，請手動執行至少一個轉換（以每位使用者的身分），以確保轉換期間不會彈出任何對話方塊。 如果出現任何對話方塊，則會將其關閉。 自動轉換期間不應出現這類對話方塊。
-
-* 在OSGi環境的AEM Forms上執行自動化之前，請確定測試套件已安裝且作用中。
+* 确保在Windows上安装了Microsoft® Visual C++ 2012 x86和Microsoft® Visual C++ 2013 x86 （32位）可再发行软件包。
 
 +++
 
-+++多個使用者轉換失敗
++++自动化测试失败
 
-* 驗證伺服器記錄以檢查特定使用者的轉換是否失敗。（程式總管可以幫助您檢查不同使用者的執行程式）
+* 对于Microsoft® Office和OpenOffice，请手动执行至少一个转换（作为每个用户），以确保在转换期间不会弹出任何对话框。 如果出现任何对话框，则将其关闭。 在自动转换期间不应显示此类对话框。
 
-* 請確定為PDF產生器設定的使用者擁有本機管理員許可權。
-
-* 確保PDF產生器使用者對LC臨時和PDFG臨時使用者具有讀取、寫入和執行許可權。
-
-* 對於Microsoft® Office和OpenOffice，請手動執行至少一個轉換（以每位使用者的身分），以確保轉換期間不會彈出任何對話方塊。 如果出現任何對話方塊，則會將其關閉。 自動轉換期間不應出現這類對話方塊。
-
-* 執行範例轉換。
+* 在OSGi环境上的AEM Forms上运行自动化之前，请确保已安装并激活测试包。
 
 +++
 
-+++安裝在AEM Forms伺服器上的Adobe Acrobat授權到期
++++多个用户转换失败
 
-* 如果您已有Adobe Acrobat的授權，且該授權已過期， [下載最新版Adobe Application Manager](https://helpx.adobe.com/in/creative-suite/kb/aam-troubleshoot-download-install.html)，並移轉您的序號。 早於 [正在移轉您的序號](https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/licensing.html#migrating-your-serial-number).
+* 验证服务器日志，以检查特定用户的转换是否失败。（进程资源管理器可以帮助您检查不同用户的运行进程）
 
-   * 使用以下命令產生prov.xml，並使用prov.xml檔案（而非中提供的命令）重新序列化現有的安裝 [正在移轉您的序號](https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/licensing.html#migrating-your-serial-number) 數字文章。
+* 确保为PDF生成器配置的用户具有本地管理员权限。
+
+* 确保PDF生成器用户对LC temp和PDFG temp用户具有读取、写入和执行权限。
+
+* 对于Microsoft® Office和OpenOffice，请手动执行至少一个转换（作为每个用户），以确保在转换期间不会弹出任何对话框。 如果出现任何对话框，则将其关闭。 在自动转换期间不应显示此类对话框。
+
+* 执行示例转换。
+
++++
+
++++AEM Forms Server上安装的Adobe Acrobat的许可证已过期
+
+* 如果您现有的Adobe Acrobat许可证已过期， [下载最新版本的Adobe Application Manager](https://helpx.adobe.com/in/creative-suite/kb/aam-troubleshoot-download-install.html)，并迁移您的序列号。 早于 [迁移序列号](https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/licensing.html#migrating-your-serial-number).
+
+   * 使用以下命令生成prov.xml，并使用prov.xml文件（而不是中提供的命令）重新序列化现有安装 [迁移序列号](https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/licensing.html#migrating-your-serial-number) 编号文章。
 
           ```
           
-          adobe_prtk —tool=VolumeSerialize —generate —serial=&lt;serialnum> [—leid=&lt;leid>] [—regsuppress=ss] [—eulasuppress] [—locales=xx_XX格式或ALL格式的有限語言環境清單>] [—provfile=&lt;absolute path=&quot;&quot; to=&quot;&quot; prov.xml=&quot;&quot;>]
+          adobe_prtk —tool=VolumeSerialize —generate —serial=&lt;serialnum> [—leid=&lt;leid>] [—regsuppress=ss] [—eulasuppress] [—locales=受限的xx_XX格式或ALL格式的区域设置列表>] [—provfile=&lt;absolute path=&quot;&quot; to=&quot;&quot; prov.xml=&quot;&quot;>]
           
           ```
       
-   * 磁碟區序列化套件（使用prov.xml檔案和新的序列重新序列化現有的安裝）：以管理員身分從PRTK安裝資料夾執行下列命令，序列化並啟動使用者端機器上部署的套件：
+   * 卷序列化包（使用prov.xml文件和新序列重新序列化现有安装）：以管理员身份从PRTK安装文件夹运行以下命令，序列化和激活客户端计算机上已部署的包：
 
           ```
           adobe_prtk —tool=VolumeSerialize —provfile=C:\prov.xml -stream
           
           ```
       
-* 若為大型安裝，請使用 [AcrobatCustomization Wizard](https://www.adobe.com/devnet-docs/acrobatetk/tools/Wizard/index.html) 以移除舊版Reader和Acrobat。 自訂安裝程式，並將其部署至貴組織的所有電腦。
+* 对于大规模安装，请使用 [AcrobatCustomization Wizard](https://www.adobe.com/devnet-docs/acrobatetk/tools/Wizard/index.html) 以删除Reader和Acrobat的早期版本。 自定义安装程序并将其部署到组织中的所有计算机。
 
 +++
 
-+++ AEM Forms伺服器處於離線或安全的環境中，且無法透過網際網路啟動Acrobat。
++++ AEM Forms Server处于脱机或安全环境中，并且Internet无法激活Acrobat。
 
-* 您可以在Adobe產品首次上市後的7天內上線，完成線上啟用和註冊，或使用具備網際網路功能的裝置和產品的序號來完成此程式。 如需詳細指示，請參閱 [離線啟用](https://exception.licenses.adobe.com/aoes/aoes/v1/t1?locale=en).
+* 您可以在首次启动Adobe产品后的7天内联机完成联机激活和注册，也可以使用支持Internet的设备以及产品的序列号来完成此过程。 有关详细说明，请参阅 [脱机激活](https://exception.licenses.adobe.com/aoes/aoes/v1/t1?locale=en).
 
 +++
 
-+++ 無法在Windows Server上將Word或Excel檔案轉換為PDF
++++ 无法在Windows Server上将Word或Excel文件转换为PDF
 
-當使用者嘗試在Microsoft Windows Server上將Word或Excel檔案轉換為PDF時，會遇到以下錯誤：
+当用户尝试在Microsoft Windows Server上将Word或Excel文件转换为PDF时，遇到以下错误：
 
-*來自主要轉換器的錯誤訊息：ALC-PDG-015-003 — 系統無法開啟輸入檔案。 請再次提交您的檔案或連絡您的系統管理員。*
+*来自主转换器的错误消息： ALC-PDG-015-003 — 系统无法打开输入文件。 请再次提交文件或联系系统管理员。*
 
-若要解決問題，請參閱 [無法在Windows Server上將Word或Excel檔案轉換為PDF](/help/forms/using/disable-uac-for-pdfgconfiguration.md).
+要解决此问题，请参阅 [无法在Windows Server上将Word或Excel文件转换为PDF](/help/forms/using/disable-uac-for-pdfgconfiguration.md).
 
 
 ## 后续步骤 {#next-steps}
 
-您有一個運作中的AEM Forms檔案服務環境。 您可以透過以下方式使用檔案服務：
+您有一个有效的AEM Forms文档服务环境。 您可以通过以下方式使用文档服务：
 
-* [OSGi上的表單中心工作流程](/help/forms/using/aem-forms-workflow.md)
+* [OSGi上以表单为中心的工作流](/help/forms/using/aem-forms-workflow.md)
 * [观察文件夹](/help/forms/using/watched-folder-in-aem-forms.md)
-* [檔案服務API](/help/forms/using/aem-document-services-programmatically.md)
+* [Document Services API](/help/forms/using/aem-document-services-programmatically.md)

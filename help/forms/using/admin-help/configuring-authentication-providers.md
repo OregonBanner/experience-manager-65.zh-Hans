@@ -1,7 +1,7 @@
 ---
-title: 設定驗證服務提供者
+title: 配置身份验证提供程序
 seo-title: Configuring authentication providers
-description: 新增、編輯或刪除驗證提供者、變更驗證設定，以及閱讀有關即時布建使用者的資訊。
+description: 添加、编辑或删除身份验证提供程序，更改身份验证设置，并阅读有关及时配置用户的内容。
 seo-description: Add, edit, or delete authentication providers, change authentication settings, and read about just-in-time provisioning of users.
 uuid: 90e7690b-1ce0-4604-b58f-6dca4f2372cf
 contentOwner: admin
@@ -17,145 +17,145 @@ ht-degree: 0%
 
 ---
 
-# 設定驗證服務提供者 {#configuring-authentication-providers}
+# 配置身份验证提供程序 {#configuring-authentication-providers}
 
-混合式網域至少需要一個驗證提供者，而企業網域至少需要一個驗證提供者或目錄提供者。
+混合域至少需要一个身份验证提供程序，企业域至少需要一个身份验证提供程序或目录提供程序。
 
-如果您使用SPNEGO啟用SSO，請新增已啟用SPNEGO的Kerberos驗證提供者和LDAP提供者作為備份。 如果SPNEGO無法運作，此設定會啟用具有使用者ID和密碼的使用者驗證。 (請參閱 [使用SPNEGO啟用SSO](/help/forms/using/admin-help/enabling-single-sign-on-aem.md#enable-sso-using-spnego).)
+如果使用SPNEGO启用SSO，请添加启用SPNEGO的Kerberos身份验证提供程序和LDAP提供程序作为备份。 如果SPNEGO无法正常工作，此配置将启用使用用户ID和密码进行用户身份验证。 (请参阅 [使用SPNEGO启用SSO](/help/forms/using/admin-help/enabling-single-sign-on-aem.md#enable-sso-using-spnego).)
 
-## 新增驗證提供者 {#add-an-authentication-provider}
+## 添加身份验证提供程序 {#add-an-authentication-provider}
 
-1. 在管理控制檯中，按一下「設定>使用者管理>網域管理」。
-1. 按一下清單中的現有網域。 如果您要新增新網域的驗證，請參閱 [新增企業網域](/help/forms/using/admin-help/adding-domains.md#add-an-enterprise-domain) 或 [新增混合網域](/help/forms/using/admin-help/adding-domains.md#add-a-hybrid-domain).
-1. 按一下「新增驗證」，然後在「驗證提供者」清單中，根據您的組織所使用的驗證機制選取提供者。
-1. 在頁面上提供所需的任何其他資訊。 (請參閱 [驗證設定](configuring-authentication-providers.md#authentication-settings).)
-1. （選用）按一下「測試」以測試設定。
-1. 按一下「確定」，然後再次按一下「確定」。
+1. 在管理控制台中，单击设置>用户管理>域管理。
+1. 单击列表中的现有域。 如果要为新域添加身份验证，请参阅 [添加企业域](/help/forms/using/admin-help/adding-domains.md#add-an-enterprise-domain) 或 [添加混合域](/help/forms/using/admin-help/adding-domains.md#add-a-hybrid-domain).
+1. 单击添加验证，然后在“验证提供方”列表中选择一个提供方，具体取决于您的组织使用的验证机制。
+1. 在页面上提供所需的任何其他信息。 (请参阅 [身份验证设置](configuring-authentication-providers.md#authentication-settings).)
+1. （可选）单击测试以测试配置。
+1. 单击“确定”，然后再次单击“确定”。
 
-## 編輯現有的驗證提供者 {#edit-an-existing-authentication-provider}
+## 编辑现有的身份验证提供程序 {#edit-an-existing-authentication-provider}
 
-1. 在管理控制檯中，按一下「設定>使用者管理>網域管理」。
-1. 按一下清單中適當的網域。
-1. 在出現的頁面上，從清單中選取適當的驗證提供者，並視需要進行變更。 (請參閱 [驗證設定](configuring-authentication-providers.md#authentication-settings).)
+1. 在管理控制台中，单击设置>用户管理>域管理。
+1. 单击列表中的相应域。
+1. 在显示的页面上，从列表中选择相应的身份验证提供程序，并根据需要进行更改。 (请参阅 [身份验证设置](configuring-authentication-providers.md#authentication-settings).)
 1. 单击确定。
 
-## 刪除驗證提供者 {#delete-an-authentication-provider}
+## 删除身份验证提供程序 {#delete-an-authentication-provider}
 
-1. 在管理控制檯中，按一下「設定>使用者管理>網域管理」。
-1. 按一下清單中適當的網域。
-1. 選取要刪除的驗證提供者核取方塊，然後按一下刪除。
-1. 在出現的確認頁面上按一下「確定」，然後再次按一下「確定」。
+1. 在管理控制台中，单击设置>用户管理>域管理。
+1. 单击列表中的相应域。
+1. 选中要删除的身份验证提供程序的复选框，然后单击删除。
+1. 在显示的确认页上单击确定，然后再次单击确定。
 
-## 驗證設定 {#authentication-settings}
+## 身份验证设置 {#authentication-settings}
 
-根據您選擇的網域型別和驗證型別，可使用下列設定。
+以下设置可用，具体取决于域类型和您选择的身份验证类型。
 
-### LDAP設定 {#ldap-settings}
+### LDAP设置 {#ldap-settings}
 
-如果您要設定企業或混合式網域的驗證，並選取LDAP驗證，您可以選擇使用目錄組態中指定的LDAP伺服器，或者選擇不同的LDAP伺服器來用於驗證。 如果您選擇不同的伺服器，您的使用者必須存在於兩個LDAP伺服器上。
+如果要配置企业域或混合域的验证并选择LDAP验证，可以选择使用在目录配置中指定的LDAP服务器，也可以选择其他LDAP服务器用于验证。 如果选择其他服务器，您的用户必须存在于两个LDAP服务器上。
 
-若要使用目錄組態中指定的LDAP伺服器，請選取LDAP作為驗證提供者，然後按一下確定。
+要使用目录配置中指定的LDAP服务器，请选择LDAP作为验证提供程序，然后单击“确定”。
 
-若要使用不同的LDAP伺服器來執行驗證，請選取LDAP作為驗證提供者，然後選取「自訂LDAP驗證」核取方塊。 下列組態設定會顯示。
+要使用其他LDAP服务器执行身份验证，请选择LDAP作为身份验证提供程序，然后选中“自定义LDAP身份验证”复选框。 将显示以下配置设置。
 
-**伺服器：** （必要）目錄伺服器的完整網域名稱(FQDN)。 例如，在example.com網路上名為x的電腦，FQDN是x.example.com。 可以使用IP位址取代FQDN伺服器名稱。
+**服务器：** （必需）目录服务器的完全限定域名(FQDN)。 例如，对于example.com网络上名为x的计算机，FQDN为x.example.com。 可以使用IP地址代替FQDN服务器名称。
 
-**連線埠：** （必要）目錄伺服器使用的連線埠。 通常為389，如果安全通訊端層(SSL)通訊協定用於透過網路傳送驗證資訊，則為636。
+**端口：** （必需）目录服务器使用的端口。 通常为389，如果安全套接字层(SSL)协议用于通过网络发送身份验证信息，则为636。
 
-**SSL：** （必要）指定在透過網路傳送資料時，目錄伺服器是否使用SSL。 預設值為「否」。 設定為Yes時，應用程式伺服器的Java™執行階段環境(JRE)必須信任對應的LDAP伺服器憑證。
+**SSL：** （必需）指定目录服务器通过网络发送数据时是否使用SSL。 默认值为“否”。 当设置为“是”时，相应的LDAP服务器证书必须受到应用程序服务器的Java™运行时环境(JRE)的信任。
 
-**繫結** （必要）指定存取目錄的方式。
+**绑定** （必需）指定如何访问目录。
 
-**匿名：** 不需要使用者名稱或密碼。
+**匿名：** 不需要用户名或密码。
 
-**使用者：** 需要驗證。 在「名稱」方塊中，指定可存取目錄的使用者記錄名稱。 最好輸入使用者帳戶的完整辨別名稱(DN)，例如cn=Jane Doe、ou=user、dc=can、dc=com。 在「密碼」方塊中，指定相關的密碼。 當您選取「使用者」作為「繫結」選項時，需要這些設定。
+**用户：** 需要身份验证。 在“名称”框中，指定可以访问目录的用户记录的名称。 最好输入用户帐户的完整可分辨名称(DN)，例如cn=Jane Doe、ou=user、dc=can、dc=com。 在“密码”框中，指定关联的密码。 选择“用户”作为“绑定”选项时，需要这些设置。
 
-**擷取基本DN：** （非必要）擷取基本DN並在下拉式清單中顯示它們。 當您有多個基本DN且需要選取值時，此設定很有用。
+**检索基本DN：** （非必需）检索基本DN并在下拉列表中显示它们。 当您有多个基本DN并且需要选择一个值时，此设置很有用。
 
-**基本DN：** （必要）用來作為從LDAP階層同步化使用者和群組的起點。 最好在階層的最低層級指定基本DN，該階層包含需要同步處理服務的所有使用者和群組。 請勿在此設定中包含使用者的DN。 若要同步特定使用者，請使用「搜尋篩選器」設定。
+**基本DN：** （必需）用作从LDAP层次结构同步用户和组的起点。 最好在层次结构的最低级别指定一个基本DN，该级别包含需要为服务同步的所有用户和组。 请勿在此设置中包含用户的DN。 要同步特定用户，请使用“搜索过滤器”设置。
 
-**將以下專案填入頁面：** （非必要）選取時，會使用對應的預設LDAP值填入「使用者」和「群組」設定頁面上的屬性。
+**使用以下内容填充页面：** （非必需）在选中时，会使用相应的默认LDAP值填充“用户”和“组”设置页面上的属性。
 
-**搜尋篩選器：** （必要）用來尋找與使用者相關聯之記錄的搜尋篩選器。 請參閱搜尋篩選語法。
+**搜索筛选器：** （必需）用于查找与用户关联的记录的搜索过滤器。 请参阅搜索筛选器语法。
 
-### Kerberos設定 {#kerberos-settings}
+### Kerberos设置 {#kerberos-settings}
 
-如果您要設定企業或混合式網域的驗證，並選取Kerberos驗證，則可使用下列設定。
+如果要配置企业域或混合域的身份验证，并选择Kerberos身份验证，则以下设置可用。
 
-**DNS IP：** 執行AEM表單的伺服器的DNS IP位址。 在Windows上，您可以在命令列執行ipconfig /all來判斷此IP位址。
+**DNS IP：** 运行AEM表单的服务器的DNS IP地址。 在Windows上，可通过在命令行运行ipconfig /all来确定此IP地址。
 
-**KDC主機：** 用於驗證的Active Directory伺服器的完整主機名稱或IP位址。
+**KDC主机：** 用于身份验证的Active Directory服务器的完全限定主机名或IP地址。
 
-**服務使用者：** 如果您使用的是Active Directory 2003，此值是在表單中為服務主體建立的對應 `HTTP/<server name>`. 如果您使用Active Directory 2008，這個值就是服務主體的登入ID。 例如，假設服務主體名為um spnego，使用者ID為spnegedemo，對應為HTTP/example.yourcompany.com。 使用Active Directory 2003時，您可以將「服務使用者」設定為HTTP/example.yourcompany.com。 使用Active Directory 2008時，您可以將「服務使用者」設定為spnegodemo。 （請參閱使用SPNEGO啟用SSO。）
+**服务用户：** 如果您使用的是Active Directory 2003，则此值是在表单中为服务主体创建的映射 `HTTP/<server name>`. 如果您使用的是Active Directory 2008，则此值是服务主体的登录ID。 例如，假定服务主体名为um spnego，用户ID为spnegedemo，映射为HTTP/example.yourcompany.com。 使用Active Directory 2003时，可以将Service User设置为HTTP/example.yourcompany.com。 使用Active Directory 2008时，可以将Service User设置为spnegodemo。 （请参阅使用SPNEGO启用SSO。）
 
-**服務範圍：** 主動式目錄的網域名稱
+**服务领域：** 活动目录的域名
 
-**服務密碼：** 服務使用者的密碼
+**服务密码：** 服务用户的密码
 
-**啟用SPNEGO：** 允許使用SPNEGO進行單一登入(SSO)。 （請參閱使用SPNEGO啟用SSO。）
+**启用SPNEGO：** 允许将SPNEGO用于单点登录(SSO)。 （请参阅使用SPNEGO启用SSO。）
 
-### SAML設定 {#saml-settings}
+### SAML设置 {#saml-settings}
 
-如果您要設定企業或混合網域的驗證，並選取SAML驗證，則可使用下列設定。 如需其他SAML設定的相關資訊，請參閱 [設定SAML服務提供者設定](/help/forms/using/admin-help/configure-saml-service-provider-settings.md#configure-saml-service-provider-settings).
+如果要配置企业域或混合域的身份验证，并选择SAML身份验证，则以下设置可用。 有关其他SAML设置的信息，请参见 [配置SAML服务提供程序设置](/help/forms/using/admin-help/configure-saml-service-provider-settings.md#configure-saml-service-provider-settings).
 
-**請選取要匯入的SAML身分提供者中繼資料檔案：** 按一下「瀏覽」選取從IDP產生的SAML身分提供者中繼資料檔案，然後按一下「匯入」。 顯示來自IDP的詳細資訊。
+**请选择要导入的SAML身份提供程序元数据文件：** 单击浏览选择从IDP生成的SAML身份提供方元数据文件，然后单击导入。 显示来自IDP的详细信息。
 
-**標題：** EntityID所表示之URL的別名。 企業及本機使用者的登入頁面上也會顯示標題。
+**标题：** EntityID表示的URL的别名。 企业用户和本地用户的登录页面上也会显示标题。
 
-**身分提供者支援使用者端基本驗證：** 當IDP使用SAML成品解析設定檔時，會使用使用者端基本驗證。 在此設定檔中，「使用者管理」會連回在IDP上執行的Web服務，以擷取實際的SAML判斷提示。 IDP可能需要驗證。 如果IDP確實需要驗證，請選取此選項，並在提供的方塊中指定使用者名稱和密碼。
+**身份提供程序支持客户端基本身份验证：** 当IDP使用SAML工件解析配置文件时，将使用客户端基本身份验证。 在此配置文件中，用户管理连接回在IDP上运行的Web服务，以检索实际的SAML断言。 IDP可能需要身份验证。 如果IDP需要身份验证，请选择此选项，并在提供的框中指定用户名和密码。
 
-**自訂屬性：** 可讓您指定其他屬性。 其他屬性是以新行分隔的名稱=值組。
+**自定义属性：** 允许您指定其他属性。 其他属性是以新行分隔的名称=值对。
 
-如果使用成品繫結，則需要下列自訂屬性。
+如果使用工件绑定，则需要以下自定义属性。
 
-* 新增下列自訂屬性，以指定代表AEM Forms服務提供者的使用者名稱，該使用者名稱將用於驗證IDP成品解析服務。
+* 添加以下自定义属性以指定表示AEM Forms服务提供程序的用户名，该用户名将用于对IDP工件解析服务进行身份验证。
    `saml.idp.resolve.username=<username>`
 
-* 新增以下自訂屬性，為中指定的使用者指定密碼 `saml.idp.resolve.username`.
+* 添加以下自定义属性，以指定中指定的用户的密码 `saml.idp.resolve.username`.
    `saml.idp.resolve.password=<password>`
 
-* 新增下列自訂屬性，以允許服務提供者在透過SSL建立與成品解析服務的連線時忽略憑證驗證。
+* 添加以下自定义属性，以允许服务提供商在建立通过SSL与工件解析服务的连接时忽略证书验证。
    `saml.idp.resolve.ignorecert=true`
 
-### 自訂設定 {#custom-settings}
+### 自定义设置 {#custom-settings}
 
-如果您要設定企業或混合網域的驗證，並選取自訂驗證，請選取自訂驗證提供者的名稱。
+如果要配置企业域或混合域的身份验证，并选择自定义身份验证，请选择自定义身份验证提供程序的名称。
 
-## 使用者即時布建 {#just-in-time-provisioning-of-users}
+## 及时配置用户 {#just-in-time-provisioning-of-users}
 
-即時布建會在使用者透過驗證提供者成功驗證後，自動在「使用者管理」資料庫中建立使用者。 相關角色和群組也會動態指派給新使用者。 您可以啟用企業網域和混合網域的即時布建。
+即时设置在用户通过身份验证提供程序成功进行身份验证后，会在User Management数据库中自动创建用户。 相关的角色和组也会动态分配给新用户。 您可以为企业域和混合域启用及时资源调配。
 
-此程式說明傳統驗證在AEM Forms中的運作方式：
+此过程描述了传统身份验证在AEM Forms中的工作方式：
 
-1. 當使用者嘗試登入AEM表單時，「使用者管理」會依序將其憑證傳遞給所有可用的驗證服務提供者。 （登入憑證包括使用者名稱/密碼組合、Kerberos票證、PKCS7簽名等。）
-1. 驗證提供者會驗證認證。
-1. 驗證提供者接著會檢查使用者是否存在於使用者管理資料庫中。 可能的狀態如下：
+1. 当用户尝试登录AEM表单时，用户管理会按顺序将其凭据传递给所有可用的身份验证提供程序。 （登录凭据包括用户名/密码组合、Kerberos票证、PKCS7签名等。）
+1. 身份验证提供程序验证凭据。
+1. 然后，验证提供程序会检查用户是否存在于用户管理数据库中。 可能存在以下状态：
 
-   **存在** 如果使用者為最新狀態且已解除鎖定，「使用者管理」會傳回驗證成功。 但是，如果使用者不是最新使用者或已鎖定，「使用者管理」會傳回驗證失敗。
+   **存在** 如果用户是当前用户且已解锁，则“用户管理”返回身份验证成功。 但是，如果用户不是最新用户或被锁定，则“用户管理”返回身份验证失败。
 
-   **不存在** User Management傳回驗證失敗。
+   **不存在** 用户管理返回身份验证失败。
 
-   **無效** User Management傳回驗證失敗。
+   **无效** 用户管理返回身份验证失败。
 
-1. 會評估驗證提供者傳回的結果。 如果驗證提供者傳回驗證成功，則允許使用者登入。 否則，「使用者管理」會檢查下一個驗證提供者（步驟2-3）。
-1. 如果沒有可用的驗證提供者驗證使用者認證，則會傳回驗證失敗。
+1. 将评估身份验证提供程序返回的结果。 如果身份验证提供程序返回身份验证成功，则允许用户登录。 否则，“用户管理”会检查下一个身份验证提供程序（步骤2-3）。
+1. 如果没有可用的身份验证提供程序验证用户凭据，则返回身份验证失败。
 
-啟用即時布建時，如果其中一個驗證提供者驗證其認證，則會在「使用者管理」中動態建立新使用者。 （上述程式中的步驟3之後。）
+启用实时设置后，如果其中一个身份验证提供程序验证其凭据，则将在“用户管理”中动态创建新用户。 （上述过程中的步骤3之后。）
 
-如果沒有即時布建，當使用者成功通過驗證，但在「使用者管理」資料庫中找不到時，驗證會失敗。 即時布建會在驗證程式中新增一個步驟，以建立使用者並為使用者指派角色和群組。
+如果没有及时设置，则当用户成功进行身份验证但在用户管理数据库中未找到时，身份验证将失败。 即时设置会在身份验证过程中添加一个步骤，用于创建用户并为用户分配角色和组。
 
-### 為網域啟用即時布建 {#enable-just-in-time-provisioning-for-a-domain}
+### 为域启用及时资源调配 {#enable-just-in-time-provisioning-for-a-domain}
 
-1. 編寫實作IdentityCreator和AssignmentProvider介面的服務容器。 (請參閱 [使用AEM表單程式設計](https://www.adobe.com/go/learn_aemforms_programming_63).)
-1. 將服務容器部署至表單伺服器。
-1. 在管理控制檯中，按一下「設定>使用者管理>網域管理」。
+1. 编写实现IdentityCreator和AssignmentProvider接口的服务容器。 (请参阅 [使用AEM表单编程](https://www.adobe.com/go/learn_aemforms_programming_63).)
+1. 将服务容器部署到表单服务器。
+1. 在管理控制台中，单击设置>用户管理>域管理。
 
-   選取現有網域，或按一下「新增企業網域」。
+   选择现有域或单击“新建企业域”。
 
-1. 若要建立網域，請按一下[新增企業網域]或[新增混合網域]。 若要編輯現有網域，請按一下網域名稱。
-1. 選取「啟用及時布建」。
+1. 要创建域，请单击“新建企业域”或“新建混合域”。 要编辑现有域，请单击该域的名称。
+1. 选择启用及时预配。
 
-   ***注意&#x200B;**：如果缺少「啟用及時布建」核取方塊，請按一下「首頁>設定>使用者管理>設定>進階系統屬性」 ，然後按一下「重新載入」。*
+   ***注释&#x200B;**：如果缺少“启用及时预配”复选框，请单击主页>设置>用户管理>配置>高级系统属性，然后单击重新加载。*
 
-1. 新增驗證服務提供者。 新增驗證提供者時，請在[新增驗證]畫面上，選取已註冊的[身分建立者]和[指派提供者]。 (請參閱 [設定驗證服務提供者](configuring-authentication-providers.md#configuring-authentication-providers).)
-1. 儲存網域。
+1. 添加身份验证提供程序。 添加身份验证提供程序时，在“新建身份验证”屏幕上，选择已注册的身份创建者和分配提供程序。 (请参阅 [配置身份验证提供程序](configuring-authentication-providers.md#configuring-authentication-providers).)
+1. 保存域。

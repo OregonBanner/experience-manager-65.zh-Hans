@@ -1,6 +1,6 @@
 ---
-title: 開始使用Adobe Experience Manager Mobile On-Demand服務
-description: 開始管理AEM Mobile On-Demand服務應用程式。 它提供AEM管理員對On-Demand服務的角色和責任的概觀。
+title: Adobe Experience Manager Mobile On-Demand服务入门
+description: 管理AEM Mobile On-Demand Services应用程序入门。 它概述了AEM管理员对On-Demand Services的角色和职责。
 uuid: fd99c032-287a-489b-9690-b18980c55c29
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
@@ -19,11 +19,11 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）專案使用SPA編輯器。 [了解详情](/help/sites-developing/spa-overview.md).
+>Adobe建议对需要基于单页应用程序框架的客户端渲染（例如React）的项目使用SPA编辑器。 [了解详情](/help/sites-developing/spa-overview.md).
 
 >[!NOTE]
 >
->如果您沒有使用AEM作為內容管理來源，請參閱 [AEM Mobile On-demand Services說明](https://helpx.adobe.com/digital-publishing-solution/topics.html).
+>如果您没有使用AEM作为内容管理源，请参阅 [AEM Mobile On-demand Services帮助](https://helpx.adobe.com/digital-publishing-solution/topics.html).
 
 ## AEM 管理员 {#aem-administrator}
 
@@ -31,30 +31,30 @@ ht-degree: 2%
 >
 >**先决条件:**
 >
->開始設定AEM Mobile On-demand Services的環境之前，請參閱 [AEM Mobile應用程式儀表板或控制中心](/help/mobile/mobile-apps-ondemand-application-dashboard.md).
+>在开始为AEM Mobile On-demand Services设置环境之前，请参阅 [AEM Mobile Application Dashboard或控制中心](/help/mobile/mobile-apps-ondemand-application-dashboard.md).
 
-一個 ***AEM管理員*** 負責透過使用建立精靈建立新應用程式，或匯入現有應用程式，將新應用程式新增至AEM Mobile目錄。 使用AEM Mobile建立新應用程式的AEM管理員 *建立精靈* 通常會從我們現成的參考範例或（大多數情況下）建立的自訂應用程式範本中，選取其中一個所需的應用程式範本 *AEM開發人員。*
+An ***AEM管理员*** 负责向AEM Mobile目录中添加新应用程序，方法是使用创建向导创建新应用程序，或导入现有应用程序。 使用AEM Mobile创建新应用程序的AEM管理员 *创建向导* 通常情况下，从我们现成的参考示例中选择一个所需的应用程序模板，或者（在大多数情况下）从以下对象创建的自定义应用程序模板中进行选择 *AEM开发人员。*
 
 >[!NOTE]
 >
->如需設定AEM群組和許可權的詳細資訊，請按一下 [建立使用者角色並授與存取權](https://helpx.adobe.com/digital-publishing-solution/help/account-admin-dps.html) 在「線上說明」中。
+>有关设置AEM组和权限的详细信息，请单击 [创建用户角色和授予访问权限](https://helpx.adobe.com/digital-publishing-solution/help/account-admin-dps.html) 在线帮助中。
 
-使用AEM Mobile On-demand Services建立應用程式時，AEM管理員會負責下列工作：
+使用AEM Mobile On-demand Services创建应用程序时，AEM管理员负责以下任务：
 
-* [設定AEM Mobile](/help/mobile/aem-mobile-setup.md)，涵蓋
+* [设置AEM Mobile](/help/mobile/aem-mobile-setup.md)，涵盖
 
-   * AEM Mobile布建
-   * 建立AEM Mobile專案
-   * 設定AEM Mobile聯結器
-   * 新增AEM Mobile使用者角色及指派許可權
+   * AEM Mobile配置
+   * 为AEM Mobile创建项目
+   * 配置AEM Mobile连接器
+   * 添加AEM Mobile用户角色和分配权限
 
-* [設定您的使用者和使用者群組](/help/mobile/aem-mobile-configure-users.md)
-* [使用預檢預覽](/help/mobile/aem-mobile-manage-ondemand-services.md)
-* [管理內容服務](/help/mobile/developing-content-services.md)
+* [配置用户和用户组](/help/mobile/aem-mobile-configure-users.md)
+* [使用Preflight预览](/help/mobile/aem-mobile-manage-ondemand-services.md)
+* [管理内容服务](/help/mobile/developing-content-services.md)
 
 ## 其他资源 {#additional-resources}
 
-若要進一步瞭解建立AEM Mobile On-demand Services應用程式的其他兩個角色和責任，請參閱下列資源：
+要详细了解创建AEM Mobile On-demand Services应用程序的其他两个角色和职责，请参阅以下资源：
 
-* [針對AEM Mobile On-demand Services開發AEM內容](/help/mobile/aem-mobile-on-demand.md)
-* [為AEM Mobile On-demand Services應用程式編寫AEM內容](/help/mobile/mobile-apps-ondemand.md)
+* [为AEM Mobile On-demand Services开发AEM内容](/help/mobile/aem-mobile-on-demand.md)
+* [为AEM Mobile On-demand Services应用程序创作AEM内容](/help/mobile/mobile-apps-ondemand.md)

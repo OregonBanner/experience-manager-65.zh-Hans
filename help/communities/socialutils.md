@@ -1,7 +1,7 @@
 ---
-title: SocialUtils重構
+title: SocialUtils重构
 seo-title: SocialUtils Refactoring
-description: AEM 6.1已棄用套件com.adobe.cq.social.ugcbase.SocialUtils
+description: com.adobe.cq.social.ugcbase.SocialUtils包在AEM 6.1中已弃用
 seo-description: The package com.adobe.cq.social.ugcbase.SocialUtils was deprecated in AEM 6.1
 uuid: 54a0d98e-5ead-4c12-850f-8252ea9b3263
 contentOwner: Guillaume Carlino
@@ -17,74 +17,74 @@ ht-degree: 1%
 
 ---
 
-# SocialUtils重構 {#socialutils-refactoring}
+# SocialUtils重构 {#socialutils-refactoring}
 
-## 已棄用SocialUtils套件 {#socialutils-package-deprecated}
+## 已弃用SocialUtils包 {#socialutils-package-deprecated}
 
-套件 `com.adobe.cq.social.ugcbase.SocialUtils` 在AEM 6.1中已過時。
+包 `com.adobe.cq.social.ugcbase.SocialUtils` 在AEM 6.1中已弃用。
 
-下表列出取代的方法 `SocialUtils` 方法。
+下表列出了取代的方法 `SocialUtils` 方法。
 
-## SocialResourceUtilities套件  {#socialresourceutilities-package}
+## SocialResourceUtilities包  {#socialresourceutilities-package}
 
 | com.adobe.cq.social.srp.utilities.api.SocialResourceUtilities中的方法 |
 |---|
-| 布林值checkPermission(ResourceResolver resolver， String path， String action) |  |
+| 布尔checkPermission(ResourceResolver resolver， String path， String action) |  |
 | SocialResourceProvider getSocialResourceProvider(Resource) |  |
 | SocialResourceConfiguration getStorageConfig(Resource) |  |
-| 資源getUGCResource(Resource userResource) |  |
-| 資源getUGCResource(Resource userResource， ResourceResolverFactory rrf) | 新建 |
-| 資源getUGCResource(Resource userResource， ResourceResolverFactory rrf， String resourceTypeHint) | 新建 |
-| 資源getUGCResource(Resource userResource， String resourceTypeHint) |  |
-| 布林值hasModeratePermissions(Resource) |  |
-| 字串resourceToACLPath(Resource) |  |
-| 字串resourceToUGCStoragePath(Resource) | 取代String resourceToUGCPath（資源） |
-| 字串UGCToResourcePath(Resource) |  |
-| 字串UGCToResourcePath（字串ugcPath） | 方法簽章已變更 |
-| 字串UGCToResourcePath（字串ugcPath， ResourceResolver resolver） | 新建 |
+| 资源getUGCResource(Resource userResource) |  |
+| 资源getUGCResource(Resource userResource， ResourceResolverFactory rrf) | 新建 |
+| 资源getUGCResource(Resource userResource， ResourceResolverFactory rrf， String resourceTypeHint) | 新建 |
+| 资源getUGCResource(Resource userResource， String resourceTypeHint) |  |
+| boolean hasModeratePermissions(Resource) |  |
+| String resourceToACLPath(Resource) |  |
+| String resourceToUGCStoragePath(Resource) | 替换String resourceToUGCPath（资源） |
+| 字符串UGCToResourcePath(Resource) |  |
+| 字符串UGCToResourcePath（字符串ugcPath） | 方法签名已更改 |
+| 字符串UGCToResourcePath（字符串ugcPath， ResourceResolver resolver） | 新建 |
 
 | 中的方法 `com.adobe.cq.social.`utilities.resource.api.SocialResourceUtilities |
 |---|
-| SocialResourceProvider getSocialResourceProvider(Resource) | 取代SocialResourceProvider getConfiguredProvider(Resource) |
+| SocialResourceProvider getSocialResourceProvider(Resource) | 替换SocialResourceProvider getConfiguredProvider(Resource) |
 
-## SCFUtilities套件 {#scfutilities-package}
+## SCFUtilities包 {#scfutilities-package}
 
 | 中的方法 `com.adobe.cq.social.`utilities.scf.api.SCFUtitles |
 |---|
-| 字串getAvatar(UserProperties userProperties) |
-| 字串getAvatar(UserProperties userProperties， int size) |
-| 字串getAvatar(UserProperties userProperties， String absoluteDefaultAvatar) |
-| 字串getAvatar(UserProperties userProperties， String absoluteDefaultAvatar， SocialUtils.AVATAR_SIZE) |
-| 頁面getContainingPage(Resource) |
-| 字串getSocialProfileURL（字串使用者名稱、ResourceResolver解析器、頁面頁面） |
+| 字符串getAvatar(UserProperties userProperties) |
+| 字符串getAvatar(UserProperties userProperties， int size) |
+| 字符串getAvatar(UserProperties userProperties， String absoluteDefaultAvatar) |
+| 字符串getAvatar(UserProperties userProperties， String absoluteDefaultAvatar， SocialUtils.AVATAR_SIZE) |
+| Page getContainingPage(Resource) |
+| 字符串getSocialProfileURL（字符串用户名、资源解析程序、页面页面） |
 | UserProperties getUserProperties(ResourceResolver resolver， String userId) |
 
-## 僅供內部使用 {#for-internal-use-only}
+## 仅供内部使用 {#for-internal-use-only}
 
-| 布林值canAddNode（工作階段，字串路徑） |
+| 布尔值canAddNode（会话，字符串路径） |
 |---|
-| 字串createUniqueNameHint（字串訊息） |
-| 字串createUniqueNameHint(String message， int numRandomChars) |
-| 字串generateRandomString(int length) |
+| 字符串createUniqueNameHint（String消息） |
+| 字符串createUniqueNameHint(String message， int numRandomChars) |
+| 字符串generateRandomString(int length) |
 | SocialResourceConfiguration getDefaultStorageConfig() |
-| 頁面getPage（字串路徑， ResourceResolver resolver） |
-| 字串getPagePath（資源） |
-| 字串getPagePath（字串路徑） |
-| 字串getResourceTypeForIncludedResource（資源元件，字串defaultResourceType，字串designPropertyName） |
-| 字串getResourceTypeFromDesign(Resource， String styleProperty， String defaultValue) |
-| 布林值isResourceOwner(Resource) |
-| 字串mapUGCPath（資源） |
-| 字串mapUGCPath(String ugcPath， ResourceResolver resolver) |
-| 布林值mayPost(ResourceResolver resolver， Resource) |
-| 字串prepareUserGeneratedContent（ResourceResolver resolver，字串路徑） |
+| Page getPage(String path， ResourceResolver resolver) |
+| 字符串getPagePath（资源） |
+| 字符串getPagePath(String path) |
+| 字符串getResourceTypeForIncludedResource（资源组件，字符串defaultResourceType，字符串designPropertyName） |
+| 字符串getResourceTypeFromDesign（资源，String styleProperty，字符串defaultValue） |
+| boolean isResourceOwner(Resource) |
+| 字符串mapUGCPath（资源） |
+| 字符串mapUGCPath(String ugcPath， ResourceResolver resolver) |
+| 布尔值mayPost(ResourceResolver resolver， Resource) |
+| String prepareUserGeneratedContent(ResourceResolver resolver， String path) |
 
-## 方法已無法使用 {#methods-no-longer-available}
+## 方法不再可用 {#methods-no-longer-available}
 
-| 節點createNode(ResourceResolver resolver， String path， String nodeType) |
+| 节点createNode（ResourceResolver resolver，字符串路径，字符串nodeType） |
 |---|
-| 資源getResourceAtPath（ResourceResolver resolver，字串路徑） |
-| 資源getResourceAtPath（ResourceResolver resolver，字串路徑，字串資源型別） |
-| 設定getStorageCloudServiceConfig（資源） |
+| 资源getResourceAtPath(ResourceResolver resolver， String path) |
+| 资源getResourceAtPath（ResourceResolver resolver，字符串路径，字符串资源类型） |
+| 配置getStorageCloudServiceConfig（资源） |
 | TranslationManager getTranslationManager() |
 | TranslationSaveQueue getTranslationSaveQueue() |
-| 布林值mayAccessUGC(ResourceResolver resolver) |
+| 布尔值mayAccessUGC(ResourceResolver resolver) |

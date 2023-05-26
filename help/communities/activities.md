@@ -1,7 +1,7 @@
 ---
-title: 活動資料流功能
+title: 活动流功能
 seo-title: Activity Streams Feature
-description: 已登入社群成員的活動
+description: 已登录社区成员的活动
 seo-description: Activities of a signed-in community member
 uuid: decd2d6c-4d4b-4698-a92c-2b5b441458cf
 contentOwner: User
@@ -18,84 +18,84 @@ ht-degree: 4%
 
 ---
 
-# 活動資料流功能 {#activity-streams-feature}
+# 活动流功能 {#activity-streams-feature}
 
 ## 简介 {#introduction}
 
-已登入社群成員的活動（例如張貼至論壇或部落格）會收集到資料流中，並可透過設定的以各種方式篩選和顯示。 `Activity Streams` 元件。
+已登录社区成员的活动（如在论坛或博客上发帖）被收集到流中，该流可以通过配置以各种方式过滤和显示 `Activity Streams` 组件。
 
-當社群成員關注感興趣的張貼或關注其他社群成員的活動時，關注功能會新增另一個活動檢視。
+当社区成员关注感兴趣的帖子或关注其他社区成员的活动时，关注功能会为活动添加另一个视图。
 
-本檔案說明：
+本文档描述了：
 
-* 將「活動串流」元件新增至AEM網站
-* 活動串流元件的組態設定
+* 将活动流组件添加到AEM站点
+* 活动流组件的配置设置
 
-### 新增活動資料流至頁面 {#adding-activity-streams-to-a-page}
+### 将活动流添加到页面 {#adding-activity-streams-to-a-page}
 
-如果需要新增 `Activity Streams` 元件至作者模式下的頁面，請使用元件瀏覽器來尋找
+如果需要添加 `Activity Streams` 组件添加到创作模式下的页面，请使用组件浏览器来查找
 
 * `Communities / Activity Streams`
 
-並將其拖曳至應顯示活動資料流的頁面上。
+并将其拖动到应该显示活动流的页面上的适当位置。
 
-如需必要資訊，請造訪 [Communities元件基本知識](/help/communities/basics.md).
+有关必要信息，请访问 [社区组件基础知识](/help/communities/basics.md).
 
-當 [必要的使用者端程式庫](/help/communities/essentials-activities.md#essentials-for-client-side) 包含，這就是 `Activity Streams` 元件隨即出現：
+当 [所需的客户端库](/help/communities/essentials-activities.md#essentials-for-client-side) 包括，这就是 `Activity Streams` 组件将显示：
 
-![活動資料流](assets/activity-component.png)
+![活动流](assets/activity-component.png)
 
-### 設定活動資料流 {#configuring-activity-streams}
+### 配置活动流 {#configuring-activity-streams}
 
-選取已放置的 `Activity Streams` 元件以存取及選取 `Configure` 圖示來開啟「編輯」對話方塊。
+选择已放置的 `Activity Streams` 组件以访问和选择 `Configure` 图标，打开“编辑”对话框。
 
-![設定](assets/configure-new.png)
+![配置](assets/configure-new.png)
 
-在 **使用者活動** 索引標籤中，指定要顯示的活動：
+在 **用户活动** 选项卡，指定要显示的活动：
 
 ![user-activities](assets/user-activities.png)
 
 * **活动最大数量**
 
-   要顯示的活動數
+   要显示的活动数
 
 * **流资源路径**
 
-   留空則預設為社群網站或社群群組。 串流資源路徑可識別活動的來源。 預設為空白。
+   留空将默认使用社区站点或社区组。 流资源路径标识活动的源。 默认值为空白。
 
 * **显示“用户活动”视图**
 
-   如果勾選，活動頁面將包含一個標籤，該標籤會根據目前成員在社群內產生的活動來篩選活動。 預設為已核取。
+   如果选中，活动页面将包含一个选项卡，该选项卡根据当前成员在社区内生成的活动来筛选活动。 默认值为已选中。
 
 * **显示“全部活动”视图**
 
-   如果勾選，活動頁面將包含一個標籤，其中包含目前成員有權存取的社群內產生的所有活動。 預設為已核取。
+   如果选中，活动页面将包含一个选项卡，其中包含当前成员有权访问的社区内生成的所有活动。 默认值为已选中。
 
 * **显示“关注”视图**
 
-   如果勾選，活動頁面將包含一個索引標籤，該索引標籤會根據目前成員所關注的活動來篩選活動。 預設為已核取。
+   如果选中，活动页面将包含一个选项卡，该选项卡根据当前成员所关注的活动进行筛选。 默认值为已选中。
 
-### 下列檢視 {#following-view}
+### 关注视图 {#following-view}
 
-元件必須設定為啟用下列功能。 允許追蹤的功能包括 [部落格](/help/communities/blog-feature.md)， [論壇](/help/communities/forum.md)， [QnA](/help/communities/working-with-qna.md)， [行事曆](/help/communities/calendar.md)， [檔案庫](/help/communities/file-library.md)、和 [評論](/help/communities/comments.md).
+必须配置组件才能启用以下功能。 允许跟踪的功能包括 [博客](/help/communities/blog-feature.md)， [论坛](/help/communities/forum.md)， [问题与解答](/help/communities/working-with-qna.md)， [日历](/help/communities/calendar.md)， [文件库](/help/communities/file-library.md)、和 [评论](/help/communities/comments.md).
 
 ![following-view](assets/following-activities.png)
 
-此 **追隨** 按鈕提供將專案視為活動來追蹤的方法， [通知](/help/communities/notifications.md)，或 [訂閱](/help/communities/subscriptions.md). 每次 **追隨** 按鈕已選取，可以開啟或關閉選取專案。 此 `Email Subscriptions` 選取範圍只有在設定後才存在。
+此 **关注** 按钮提供了一种将条目作为活动来关注的方法， [通知](/help/communities/notifications.md)，或 [订阅](/help/communities/subscriptions.md). 每次 **关注** 按钮时，可以打开或关闭选择。 此 `Email Subscriptions` 仅在配置时存在选择。
 
-如果選取了任何跟隨方法，按鈕的文字將變更為 **關注**. 為方便起見，您可以選取 `Unfollow All` 以關閉所有方法。
+如果选择了任何跟随方法，按钮的文本将更改为 **关注**. 为方便起见，可以选择 `Unfollow All` 以关闭所有方法。
 
-此 **追隨** 按鈕隨即出現：
+此 **关注** 按钮将显示：
 
-* 檢視其他成員的設定檔時。
-* 在主要功能頁面上，例如論壇、QnA和部落格。
+* 查看其他成员的配置文件时。
+* 在主要功能页面上，例如论坛、问题与解答和博客。
 
-   * 遵循該一般功能的所有活動。
+   * 关注该常规功能的所有活动。
 
-* 適用於特定專案，例如論壇主題、QnA問題或部落格。
+* 特定条目，例如论坛主题、问题与解答问题或博客文章。
 
-   * 追蹤該特定專案的所有活動。
+   * 关注该特定条目的所有活动。
 
 ### 附加信息 {#additional-information}
 
-如需詳細資訊，請參閱 [活動串流Essentials](/help/communities/essentials-activities.md) 適用於開發人員的頁面。
+欲知更多信息，请访问 [Activity Streams Essentials](/help/communities/essentials-activities.md) 适用于开发人员的页面。

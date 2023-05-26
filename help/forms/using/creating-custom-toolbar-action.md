@@ -1,7 +1,7 @@
 ---
-title: 建立自訂工具列動作
+title: 创建自定义工具栏操作
 seo-title: Creating a custom toolbar action
-description: 表單開發人員可以在AEM Forms中建立最適化表單的自訂工具列動作。 使用自訂動作表單作者，可為使用者提供更多工作流程和選項。
+description: 表单开发人员可以在AEM Forms中为自适应表单创建自定义工具栏操作。 使用来自作者的自定义操作，可为最终用户提供更多工作流和选项。
 seo-description: Form developers can create custom toolbar actions for adaptive forms in AEM Forms. Using custom actions form authors can provide more workflows and options to their end users.
 uuid: cd785cfb-e1bb-4158-be9b-d99e04eccc02
 content-type: reference
@@ -17,44 +17,44 @@ ht-degree: 0%
 
 ---
 
-# 建立自訂工具列動作{#creating-a-custom-toolbar-action}
+# 创建自定义工具栏操作{#creating-a-custom-toolbar-action}
 
 ## 前提条件 {#prerequisite}
 
-在建立自訂工具列動作之前，請先熟悉 [使用使用者端資料庫](/help/sites-developing/clientlibs.md) 和 [使用CRXDE Lite開發](/help/sites-developing/developing-with-crxde-lite.md).
+在创建自定义工具栏操作之前，请熟悉 [使用客户端库](/help/sites-developing/clientlibs.md) 和 [使用CRXDE Lite进行开发](/help/sites-developing/developing-with-crxde-lite.md).
 
-## 什麼是動作 {#what-is-an-action-br}
+## 什么是操作 {#what-is-an-action-br}
 
-最適化表單提供工具列，讓表單作者設定一組選項。 這些選項被定義為最適化表單的動作。 按一下面板工具列中的「編輯」按鈕以設定調適型表單支援的動作。
+自适应表单提供了一个工具栏，表单作者可以使用该工具栏配置一组选项。 这些选项被定义为自适应表单的操作。 单击面板工具栏中的编辑按钮以设置自适应表单支持的操作。
 
-![預設工具列動作](assets/default_toolbar_actions.png)
+![默认工具栏操作](assets/default_toolbar_actions.png)
 
-除了預設提供的動作集之外，您還可以在工具列中建立自訂動作。 例如，您可以新增動作，讓使用者在提交表單前檢閱所有最適化表單欄位。
+除了默认提供的一组操作外，您还可以在工具栏中创建自定义操作。 例如，您可以添加一项操作，以便用户在提交表单之前查看所有自适应表单字段。
 
-## 在最適化表單中建立自訂動作的步驟 {#steps}
+## 在自适应表单中创建自定义操作的步骤 {#steps}
 
-為了說明自訂工具列動作的建立，以下步驟將指導您建立按鈕，以便終端使用者在提交填寫的表單之前檢視所有最適化表單欄位。
+为了说明自定义工具栏操作的创建，以下步骤指导您创建一个按钮，以便最终用户在提交填写的表单之前查看所有自适应表单字段。
 
-1. 最適化表單支援的所有預設動作都會出現在 `/libs/fd/af/components/actions` 資料夾。 在CRXDE中，複製 `fileattachmentlisting` 節點來源 `/libs/fd/af/components/actions/fileattachmentlisting` 至 `/apps/customaction`.
+1. 自适应表单支持的所有默认操作都存在于 `/libs/fd/af/components/actions` 文件夹。 在CRXDE中，复制 `fileattachmentlisting` 节点来源 `/libs/fd/af/components/actions/fileattachmentlisting` 到 `/apps/customaction`.
 
-1. 將節點複製到之後 `apps/customaction` 資料夾，將節點名稱重新命名為 `reviewbeforesubmit`. 此外，請變更 `jcr:title` 和 `jcr:description` 節點的屬性。
+1. 将节点复制到 `apps/customaction` 文件夹，将节点名称重命名为 `reviewbeforesubmit`. 此外，更改 `jcr:title` 和 `jcr:description` 节点的属性。
 
-   此 `jcr:title` 屬性包含工具列對話方塊中顯示的動作名稱。 此 `jcr:description` 屬性包含當使用者將指標暫留在動作上時顯示的更多資訊。
+   此 `jcr:title` 属性包含在工具栏对话框中显示的操作的名称。 此 `jcr:description` 属性包含当用户将指针悬停在操作上时显示的更多信息。
 
-   ![用於自訂工具列的節點階層](assets/action3.png)
+   ![用于自定义工具栏的节点层次结构](assets/action3.png)
 
-1. 選取 `cq:template` 中的節點 `reviewbeforesubmit` 節點。 請確定 `guideNodeClass` 屬性為 `guideButton` 和變更 `jcr:title` 屬性。
-1. 變更中的型別屬性 `cq:Template` 節點。 對於目前的範例，將type屬性變更為button。
+1. 选择 `cq:template` 中的节点 `reviewbeforesubmit` 节点。 确保 `guideNodeClass` 属性为 `guideButton` 和更改 `jcr:title` 产之权益。
+1. 在中更改type属性 `cq:Template` 节点。 对于当前示例，请将type属性更改为button。
 
-   型別值會在元件的產生HTML中新增為CSS類別。 使用者可以使用該CSS類別來設定其動作的樣式。 按鈕、提交、重設和儲存型別值都會提供行動裝置和案頭裝置的預設樣式。
+   类型值将作为组件生成的HTML中的CSS类添加。 用户可以使用该CSS类来设置其操作的样式。 为按钮、提交、重置和保存类型值提供了移动设备和桌面设备的默认样式。
 
-1. 從最適化表單編輯工具列對話方塊中選取自訂動作。 「審閱」按鈕會顯示在面板的工具列中。
+1. 从自适应表单编辑工具栏对话框中选择自定义操作。 “审阅”按钮显示在面板的工具栏中。
 
-   ![自訂動作在工具列中可供使用](assets/custom_action_available_in_toolbar.png) ![顯示自訂建立的工具列動作](assets/action7.png)
+   ![自定义操作在工具栏中可用](assets/custom_action_available_in_toolbar.png) ![显示自定义创建的工具栏操作](assets/action7.png)
 
-1. 若要為「複查」按鈕提供功能，請在init.jsp檔案中新增一些JavaScript和CSS程式碼以及伺服器端程式碼，這些程式碼會出現在內部 `reviewbeforesubmit` 節點。
+1. 要为“审阅”按钮提供功能，请在init.jsp文件中添加一些JavaScript和CSS代码以及服务器端代码，这些文件位于 `reviewbeforesubmit` 节点。
 
-   在中新增下列程式碼 `init.jsp`.
+   在中添加以下代码 `init.jsp`.
 
    ```jsp
    <%@include file="/libs/fd/af/components/guidesglobal.jsp" %>
@@ -112,7 +112,7 @@ ht-degree: 0%
    </div><!-- /.modal -->
    ```
 
-   將下列程式碼新增至 `ReviewBeforeSubmit.js` 檔案。
+   将以下代码添加到 `ReviewBeforeSubmit.js` 文件。
 
    ```javascript
    /*anonymous function to handle show of review before submit view */
@@ -147,7 +147,7 @@ ht-degree: 0%
    });
    ```
 
-   將下列程式碼新增至 `ReviewBeforeSubmit.css` 檔案。
+   将以下代码添加到 `ReviewBeforeSubmit.css` 文件。
 
    ```css
    .modal-list .reviewlabel {
@@ -176,16 +176,16 @@ ht-degree: 0%
    }
    ```
 
-1. 若要驗證自訂動作的功能，請在預覽模式下開啟最適化表單，然後按一下工具列中的「檢閱」 。
+1. 要验证自定义操作的功能，请在预览模式下打开自适应表单，然后单击工具栏中的审核。
 
    >[!NOTE]
    >
-   >此 `GuideBridge` 程式庫未以編寫模式載入。 因此，此自訂動作無法在編寫模式下運作。
+   >此 `GuideBridge` 在创作模式下未加载库。 因此，此自定义操作在创作模式下不起作用。
 
-   ![自訂評論按鈕的動作示範](assets/action9.png)
+   ![自定义审核按钮操作的演示](assets/action9.png)
 
-## 範例 {#samples}
+## 示例 {#samples}
 
-以下封存包含內容套件。 此套件包含與上述自訂工具列動作示範相關的最適化表單。
+以下存档包含一个内容包。 该资源包中包含一个与以上自定义工具栏操作演示相关的自适应表单。
 
 [获取文件](assets/customtoolbaractiondemo.zip)

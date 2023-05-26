@@ -1,7 +1,7 @@
 ---
-title: 擴充和設定登入頁面的Design Importer
+title: 为登陆页面扩展和配置设计导入程序
 seo-title: Extending and Configuring the Design Importer for Landing Pages
-description: 瞭解如何設定登入頁面的Design Importer。
+description: 了解如何为登陆页面配置设计导入程序。
 seo-description: Learn how to configure the Design Importer for landing pages.
 uuid: a2dd0c30-03e4-4e52-ba01-6b0b306c90fc
 contentOwner: msm-service
@@ -18,68 +18,68 @@ ht-degree: 0%
 
 ---
 
-# 擴充和設定登入頁面的Design Importer{#extending-and-configuring-the-design-importer-for-landing-pages}
+# 为登陆页面扩展和配置设计导入程序{#extending-and-configuring-the-design-importer-for-landing-pages}
 
-本節說明如何設定，並視需要擴充登入頁面的設計匯入工具。 有關匯入後使用登入頁面的資訊，請參閱 [登陸頁面。](/help/sites-classic-ui-authoring/classic-personalization-campaigns-landingpage.md)
+本节介绍如何配置，并根据需要扩展登陆页面的设计导入程序。 中涵盖导入后使用登陆页面 [登陆页面。](/help/sites-classic-ui-authoring/classic-personalization-campaigns-landingpage.md)
 
-**讓設計匯入工具提取您的自訂元件**
+**使设计导入程序提取您的自定义组件**
 
-以下是讓設計匯入工具識別自訂元件的邏輯步驟
+以下是使设计导入程序识别您的自定义组件的逻辑步骤
 
-1. 建立TagHandler
+1. 创建TagHandler
 
-   * 標籤處理常式是處理特定型別HTML標籤的POJO。 您的TagHandler可以處理的HTML標籤「種類」是透過TagHandlerFactory的OSGi屬性&quot;tagpattern.name&quot;來定義。 此OSGi屬性基本上是規則運算式，應該符合您要處理的輸入html標籤。 所有巢狀標籤都會擲回標籤處理常式進行處理。 例如，如果您註冊的div包含巢狀 &lt;p> 標籤， &lt;p> 標籤也會擲回至您的TagHandler，而由您自行決定如何處理它。
-   * 標籤處理常式介面類似於SAX內容處理常式介面。 它會接收每個html標籤的SAX事件。 作為標籤處理常式提供者，您需要實作由設計匯入工具架構自動呼叫的特定生命週期方法。
+   * 标记处理程序是一个POJO，用于处理特定类型的HTML标记。 您的TagHandler可以处理的HTML标记的“种类”是通过TagHandlerFactory的OSGi属性“tagpattern.name”定义的。 此OSGi属性本质上是一个正则表达式，应当匹配您要处理的输入html标记。 所有嵌套的标记都将抛到标记处理程序中以供处理。 例如，如果注册包含嵌套的div &lt;p> 标记， &lt;p> 标记也会被抛到您的TagHandler中，具体取决于您希望如何处理它。
+   * 标记处理程序界面类似于SAX内容处理程序界面。 它会接收每个html标记的SAX事件。 作为标记处理程序提供程序，您需要实施某些生命周期方法，这些方法由设计导入程序框架自动调用。
 
-1. 建立其對應的TagHandlerFactory。
+1. 创建相应的TagHandlerFactory。
 
-   * 標籤處理常式工廠是OSGi元件(singleton)，負責產生標籤處理常式的例項。
-   * 您的標籤處理常式處理常式工廠必須公開名為「tagpattern.name」的OSGi屬性，該屬性的值與輸入html標籤相符。
-   * 如果有多個標籤處理常式符合輸入html標籤，則會挑選排名較高的處理常式。 排名本身會顯示為OSGi屬性 **service.ranking**.
-   * TagHandlerFactory是OSGi元件。 您要提供給TagHandler的任何參考都必須透過此工廠提供。
+   * 标记处理程序工厂是一个OSGi组件(singleton)，负责派生标记处理程序的实例。
+   * 您的标记处理程序工厂必须公开名为“tagpattern.name”的OSGi属性，该属性的值与输入html标记匹配。
+   * 如果有多个标记处理程序与输入html标记匹配，则会选择排名较高的处理程序。 排名本身会显示为OSGi资产 **service.ranking**.
+   * TagHandlerFactory是OSGi组件。 要提供给TagHandler的任何引用都必须通过此工厂进行。
 
-1. 如果您想要覆寫預設值，請確定TagHandlerFactory有更好的排名。
+1. 如果要覆盖默认值，请确保TagHandlerFactory具有更好的排名。
 
 >[!CAUTION]
 >
->Design Importer，用於匯入登入頁面， [已由AEM 6.5取代](/help/release-notes/deprecated-removed-features.md#deprecated-features).
+>设计导入器，用于导入登陆页面， [已在AEM 6.5中弃用](/help/release-notes/deprecated-removed-features.md#deprecated-features).
 
-## 準備匯入的HTML {#preparing-the-html-for-import}
+## 准备HTML以进行导入 {#preparing-the-html-for-import}
 
-建立匯入工具頁面後，您可以匯入完整的HTML登陸頁面。 若要匯入HTML登入頁面，您必須先將其內容壓縮至設計封裝。 設計套件包含您的HTML登陸頁面以及參考的資產（影像、css、圖示、指令碼等）。
+创建导入程序页面后，您可以导入完整的HTML登录页面。 要导入HTML登录页面，您需要首先将其内容压缩到设计包中。 设计包包含您的HTML登陆页面以及引用的资源（图像、css、图标、脚本等）。
 
-下列速查表提供如何準備匯入HTML的範例：
+下面的备忘单提供了有关如何准备HTML以进行导入的示例：
 
-登陸頁面速查表
+登陆页面备忘单
 
 [获取文件](assets/cheatsheet.zip)
 
-### Zip檔案版面配置與需求 {#zip-file-layout-and-requirements}
+### Zip文件布局和要求 {#zip-file-layout-and-requirements}
 
 >[!NOTE]
 >
->此時，ZIP檔案只能包含一個HTML頁面或頁面的一部分。
+>此时，ZIP文件只能包含一个HTML页面或页面的一部分。
 
-zip的範例版面配置如下：
+zip文件的示例布局如下：
 
-* /index.html ->登陸頁面HTML檔案
-* /css ->以新增至CSS clientlib
-* /img ->所有影像和資產
-* /js ->以新增至JS clientlib
+* /index.html ->登录页HTML文件
+* /css ->以添加到CSS clientlib
+* /img ->所有图像和资产
+* /js ->以添加到JS clientlib
 
-配置以HTML5樣板最佳實務配置為基礎。 如需詳細資訊，請參閱 [https://html5boilerplate.com/](https://html5boilerplate.com/)
+布局基于HTML5样板最佳实践布局。 有关更多信息，请参阅 [https://html5boilerplate.com/](https://html5boilerplate.com/)
 
 >[!NOTE]
 >
->至少，設計封裝 **必須** 包含 **index.html** 根層級的檔案。 如果要匯入的登入頁面也有行動版本，則zip檔案必須包含 **mobile.index.html** 以及 **index.html** 在根層級。
+>至少，设计包 **必须** 包含 **index.html** 文件。 如果要导入的登陆页面也有移动设备版本，则zip文件中必须包含 **mobile.index.html** 以及 **index.html** 在根级别。
 
-### 準備登入頁面HTML {#preparing-the-landing-page-html}
+### 准备登录页面HTML {#preparing-the-landing-page-html}
 
-若要匯入HTML，您必須將畫布div新增至登入頁面HTML。
+为了能够导入HTML，您需要向登陆页面HTML添加画布div。
 
-畫布div是html **div** 替換為 `id="cqcanvas"` 必須插入至HTML中 `<body>` 標籤包住，且必須包含要進行轉換的內容。
+画布div是一个html **div** 替换为 `id="cqcanvas"` 必须插入到HTML中的 `<body>` 标记并且必须包含用于转换的内容。
 
-新增畫布div後，登入頁面HTML的範常式式碼片段如下：
+添加画布div后登陆页面HTML的示例代码片段如下所示：
 
 ```xml
 <!doctype html>
@@ -97,81 +97,81 @@ zip的範例版面配置如下：
 </html>
 ```
 
-### 準備HTML以包含可編輯的AEM元件 {#preparing-the-html-to-include-editable-aem-components}
+### 准备HTML以包含可编辑的AEM组件 {#preparing-the-html-to-include-editable-aem-components}
 
-匯入登入頁面時，您可以選擇按原樣匯入頁面，這表示在登入頁面匯入後，您無法在AEM中編輯任何匯入的專案(您仍然可以在頁面上新增其他AEM元件)。
+导入登陆页面时，您可以选择按原样导入页面，这意味着在导入登陆页面后，您无法在AEM中编辑任何导入的项目(您仍然可以在页面上添加其他AEM组件)。
 
-在匯入登入頁面之前，您可能想要轉換登入頁面的某些部分，以使其成為可編輯的AEM元件。 這可讓您快速編輯登陸頁面的部分，即使在已匯入登陸頁面設計之後也是如此。
+在导入登陆页面之前，您可能需要转换登陆页面的某些部分，以便它们是可编辑的AEM组件。 这样，您就可以快速编辑登陆页面的各个部分，即使在已导入登陆页面设计之后也是如此。
 
-您可以透過新增 `data-cq-component` 至您匯入之HTML檔案中的適當元件。
+要执行此操作，请添加 `data-cq-component` 到导入的HTML文件中的相应组件。
 
-下節將說明如何編輯HTML檔案，以便將登入頁面的某些部分轉換為不同的可編輯AEM元件。 如需元件的詳細說明，請參閱 [登陸頁面元件](/help/sites-classic-ui-authoring/classic-personalization-campaigns-landingpage.md).
+以下部分将介绍如何编辑HTML文件，以便将登陆页面的某些部分转换为各种可编辑的AEM组件。 在以下位置详细介绍了组件： [登陆页面组件](/help/sites-classic-ui-authoring/classic-personalization-campaigns-landingpage.md).
 
 >[!NOTE]
 >
->將部分登入頁面轉換為AEM元件的HTML標籤同時具有長格式和速記標籤宣告。 針對每個元件會說明這兩者。
+>用于将部分登录页转换为AEM组件的HTML标记同时具有长格式和简写标签声明。 对每个组件都进行了描述。
 
 ### 限制 {#limitations}
 
-匯入之前，請注意下列限制：
+在导入之前，请注意以下限制：
 
-### 不會保留套用在&amp;lt；body>標籤上的任何屬性，例如類別或ID {#any-attribute-like-class-or-id-applied-on-the-amp-lt-body-tag-is-not-preserved}
+### 不保留应用于&amp;lt；body>标记的任何属性，如类或ID {#any-attribute-like-class-or-id-applied-on-the-amp-lt-body-tag-is-not-preserved}
 
-如果有任何屬性（例如id或類別）套用在body標籤上 `<body id="container">` 則在匯入後不會保留。 因此，匯入的設計不應與套用至的屬性有任何相依性 `<body>` 標籤之間。
+如果将任何属性（如id或类）应用于body标记，例如 `<body id="container">` 则在导入后不会保留该值。 因此，要导入的设计不应与应用于的属性有任何依赖关系。 `<body>` 标记之前。
 
-### 拖放zip {#drag-and-drop-zip}
+### 拖放zip文件 {#drag-and-drop-zip}
 
-Internet Explorer和Firefox 3.6版及舊版不支援拖放zip上傳。 若要在使用這些瀏覽器時上傳設計，請按一下拖放檔案區域以開啟檔案上傳對話方塊，然後使用該對話方塊上傳您的設計。
+Internet Explorer和Firefox版本3.6及更低版本不支持拖放zip上传。 要在使用这些浏览器时上传设计，请单击放置文件区域以打开文件上传对话框，然后使用该对话框上传您的设计。
 
-支援「拖放」設計zip的瀏覽器為Chrome、Safari5.x、Firefox 4及更高版本。
+支持设计zip文件“拖放”的浏览器包括Chrome、Safari5.x、Firefox 4及更高版本。
 
-### 不支援Modernizer {#modernizr-is-not-supported}
+### 不支持Modernizr {#modernizr-is-not-supported}
 
-`Modernizr.js` 是以javascript為基礎的工具，可偵測瀏覽器的原生功能，並偵測這些功能是否適用於html5元素。 設計若使用Modernizer來增強舊版不同瀏覽器的支援，可能會導致登陸頁面解決方案中出現匯入問題。 `Modernizr.js` Design Importer不支援指令碼。
+`Modernizr.js` 是一个基于javascript的工具，可检测浏览器的本机功能，并检测这些功能是否适用于html5元素。 使用Modernizer增强不同浏览器旧版本中的支持的设计可能会导致登陆页面解决方案中出现导入问题。 `Modernizr.js` 设计导入程序不支持脚本。
 
-### 匯入設計封裝時未保留頁面屬性 {#page-properties-are-not-preserved-at-the-time-of-importing-design-package}
+### 导入设计包时未保留页面属性 {#page-properties-are-not-preserved-at-the-time-of-importing-design-package}
 
-任何頁面屬性（例如自訂網域、強制執行HTTPS等） 在設計匯入後，在匯入設計套件之前為頁面（使用空白登陸頁面範本）設定的將會遺失。 因此，建議您在匯入設計套件後設定頁面屬性。
+任何页面属性（例如，自定义域、实施HTTPS等） 在导入设计包之前为页面（使用空白登陆页面模板）设置的设计会在导入设计后丢失。 因此，建议的做法是在导入设计包后设置页面属性。
 
-### 假設僅HTML標籤 {#html-only-markup-assumed}
+### 假定仅HTML标记 {#html-only-markup-assumed}
 
-匯入時，標籤會因為安全性原因而經過消毒，以避免匯入和發佈無效的標籤。 這假設僅限HTML的標籤和所有其他形式的元素(例如內嵌SVG或Web元件)將被篩選掉。
+在导入时，出于安全原因并且为了避免导入和发布无效标记，将清除标记。 这假定仅HTML标记以及所有其他形式的元素(例如内联SVG或Web组件)将被过滤掉。
 
 ### 文本 {#text}
 
-插入文字元件的HTML標示( `foundation/components/text`)在design package的HTML中：
+用于插入文本组件的HTML标记( `foundation/components/text`)，位于design package的HTML中：
 
 ```xml
 <div data-cq-component="text"> <p>This is some editable text</p> </div>
 ```
 
-在HTML中加入上述標籤，會執行下列動作：
+在HTML中包含上述标记，会执行以下操作：
 
-* 建立可編輯的AEM文字元件( `sling:resourceType=foundation/components/text`)，此頁面位於匯入設計套件後建立的登陸頁面中。
-* 設定 `text` 內含之HTML的已建立文字元件的屬性 `div`.
+* 创建可编辑的AEM文本组件( `sling:resourceType=foundation/components/text`)，该页面为导入设计包后创建的登陆页面。
+* 设置 `text` HTML创建的文本组件的属性，该属性包含在 `div`.
 
-**速記元件標籤宣告**：
+**简写组件标记声明**：
 
 ```xml
 <p data-cq-component="text">Text component shorthand</p>
 ```
 
-**含清單的文字**
+**带有列表的文本**
 
-若要新增包含清單的文字：
+添加带有列表的文本：
 
 * 1st
 * 2nd
 
-可以在RTE編輯器中編輯的專案：
+可以在RTE编辑器中编辑的区段：
 
 ```xml
 <div data-cq-component="text"><p>This is text with a list:</p><ul><li>1st</li><li>2nd</li></ul><p>It can be edited with the RTE editor</p></div>
 ```
 
-**含顏色的文字**
+**带颜色的文本**
 
-若要新增可在RTE編輯器中編輯的顏色（粉紅色）文字：
+要添加包含可在RTE编辑器中编辑的颜色（粉红色）的文本，请执行以下操作：
 
 ```xml
 <div class="pink" data-cq-component="text"><p>This is pink text.</p><p>It can be edited with the RTE editor</p></div>
@@ -179,21 +179,21 @@ Internet Explorer和Firefox 3.6版及舊版不支援拖放zip上傳。 若要在
 
 ### 标题 {#title}
 
-HTML標籤可插入標題元件( `wcm/landingpage/components/title`)在design package的HTML中：
+用于插入标题组件的HTML标记( `wcm/landingpage/components/title`)，位于design package的HTML中：
 
 ```xml
 <div data-cq-component="title"> <h1>This is some editable title text</h1> </div>
 ```
 
-在HTML中加入上述標籤，會執行下列動作：
+在HTML中包含上述标记，会执行以下操作：
 
-* 建立可編輯的AEM標題元件( `sling:resourceType=wcm/landingpage/components/title`)，此頁面位於匯入設計套件後建立的登陸頁面中。
-* 設定 `jcr:title` 將建立的標題元件屬性改成包在div中的標題標籤內的文字。
-* 設定 `type` 屬性至標題標籤，在此案例中為 `h1`.
+* 创建可编辑的AEM标题组件( `sling:resourceType=wcm/landingpage/components/title`)，该页面为导入设计包后创建的登陆页面。
+* 设置 `jcr:title` 将创建的标题组件的属性匹配到封装在div中的标题标记中的文本。
+* 设置 `type` 属性到标题标记，在本例中为 `h1`.
 
-標題元件支援7種型別 —  `h1, h2, h3, h4, h5, h6` 和 `default`.
+标题组件支持7种类型 —  `h1, h2, h3, h4, h5, h6` 和 `default`.
 
-**速記元件標籤宣告**：
+**简写组件标记声明**：
 
 ```xml
 <h1 data-cq-component="title">Title component shorthand</h1>
@@ -201,7 +201,7 @@ HTML標籤可插入標題元件( `wcm/landingpage/components/title`)在design pa
 
 ### 图像 {#image}
 
-在design package內的HTML中插入影像元件(foundation/components/image)的HTML標籤：
+HTML标记，可在设计包内的HTML中插入图像组件(foundation/components/image)：
 
 ```xml
 <div data-cq-component="image">
@@ -209,24 +209,24 @@ HTML標籤可插入標題元件( `wcm/landingpage/components/title`)在design pa
 </div>
 ```
 
-在HTML中加入上述標籤，會執行下列動作：
+在HTML中包含上述标记，会执行以下操作：
 
-* 建立可編輯的AEM影像元件( `sling:resourceType=foundation/components/image`)，此頁面位於匯入設計套件後建立的登陸頁面中。
-* 設定 `fileReference` 建立之影像元件的屬性，可匯入src屬性中指定的影像的路徑。
-* 設定 `alt` 屬性變更為img標籤中alt屬性的值。
-* 設定 `title` 屬性前往img標籤中title屬性的值。
-* 設定 `width` 屬性變更為img標籤中width屬性的值。
-* 設定 `height` 屬性前往img標籤中height屬性的值。
+* 创建可编辑的AEM图像组件( `sling:resourceType=foundation/components/image`)，该页面为导入设计包后创建的登陆页面。
+* 设置 `fileReference` 创建的图像组件的属性，该属性指向导入src属性中指定的图像的路径。
+* 设置 `alt` 属性，该值位于img标记中的alt属性值。
+* 设置 `title` 属性。
+* 设置 `width` 属性，该值是img标记中width属性的值。
+* 设置 `height` 属性，该属性为img标记中height属性的值。
 
-**速記元件標籤宣告：**
+**简写组件标记声明：**
 
 ```xml
 <img data-cq-component="image" src="test.png" alt="Image component shorthand"/>
 ```
 
-#### 影像元件Div中不支援絕對URL img src {#absolute-url-img-src-not-supported-within-image-component-div}
+#### 图像组件Div中不支持绝对URL img src {#absolute-url-img-src-not-supported-within-image-component-div}
 
-如果 `<img>` 已嘗試使用絕對url src的標籤進行元件轉換，適當的 **UnsupportedTagContentException** 會引發。 例如，不支援下列專案：
+如果 `<img>` 已尝试使用绝对url src标记进行组件转换，适当的 **UnsupportedTagContentException** 会抬高。 例如，不支持以下内容：
 
 `<div data-cq-component="image">`
 
@@ -234,26 +234,26 @@ HTML標籤可插入標題元件( `wcm/landingpage/components/title`)在design pa
 
 `</div>`
 
-否則，不屬於影像元件div的img標籤會支援絕對URL影像。
+否则，不属于图像组件div的img标记支持绝对URL图像。
 
-### 行動號召元件 {#call-to-action-components}
+### 行动号召组件 {#call-to-action-components}
 
-您可以將部分登入頁面標籤為匯入為「可編輯的呼叫動作元件」 — 在匯入登入頁面後，可以編輯這類匯入的呼叫動作元件。 AEM包含下列CTA元件：
+您可以将导入的登陆页面部分标记为“可编辑的行动号召组件” — 在导入登陆页面后，可以编辑此类导入的行动号召组件。 AEM包括以下CTA组件：
 
-* 點進連結 — 可讓您新增文字連結，當按一下連結時，會將訪客導向至目標URL。
-* 圖形連結 — 可讓您新增影像，在按一下時讓訪客前往目標URL。
+* 点进链接 — 允许您添加文本链接，单击该链接会将访客转到目标URL。
+* 图形链接 — 允许您添加图像，单击该图像可将访客转到目标URL。
 
-#### 點進連結 {#click-through-link}
+#### 点进链接 {#click-through-link}
 
-此CTA元件可用來在登入頁面上新增文字連結。
+此CTA组件可用于在登陆页面上添加文本链接。
 
-支援的屬性
+支持的属性
 
-* 標籤，包含粗體、斜體和底線選項
-* 目標URL，支援第三方和AEM URL
-* 頁面呈現選項（相同視窗、新視窗等）
+* 标签，带粗体、斜体和下划线选项
+* 目标URL，支持第三方和AEM URL
+* 页面渲染选项（同一窗口、新窗口等）
 
-HTML標籤，以在匯入的zip檔案中包含點進元件。 此處href對應至目標URL，「檢視產品詳細資料」對應至標籤，以此類推。
+HTML标记，用于在导入的zip文件中包含点进组件。 此处，href映射到目标URL，“查看产品详细信息”映射到标签，等等。
 
 ```xml
 <div id="cqcanvas">
@@ -267,9 +267,9 @@ HTML標籤，以在匯入的zip檔案中包含點進元件。 此處href對應�
 </div>
 ```
 
-此元件可用於任何獨立應用程式，或可從zip匯入。
+此组件可用于任何独立应用程序，也可以从zip文件导入。
 
-**速記元件標籤宣告**：
+**简写组件标记声明**：
 
 ```xml
 <a href="/somelink.html" data-cq-component="clickThroughLink">Click Through Link shorthand</a>
@@ -277,16 +277,16 @@ HTML標籤，以在匯入的zip檔案中包含點進元件。 此處href對應�
 
 #### 图形链接 {#graphical-link}
 
-此CTA元件可用來新增登陸頁面上具有連結的任何圖形影像。 影像可以是簡單的按鈕，也可以是任何圖形影像作為背景。 按一下影像時，使用者將被帶往元件屬性中指定的目標URL。 它是「號召性用語」群組的一部分。
+此CTA组件可用于添加登陆页面上带有链接的任何图形图像。 图像可以是简单的按钮或任何图形图像作为背景。 单击图像时，用户将被转到组件属性中指定的目标URL。 它是“行动号召”小组的一部分。
 
-支援的屬性
+支持的属性
 
-* 影像裁切、旋轉
-* 暫留文字、說明、大小（以畫素為單位）
-* 目標URL，支援第三方和AEM URL
-* 頁面呈現選項（相同視窗、新視窗等）
+* 图像裁剪、旋转
+* 悬停文本、说明、大小（以像素为单位）
+* 目标URL，支持第三方和AEM URL
+* 页面渲染选项（同一窗口、新窗口等）
 
-HTML標籤，在匯入的zip檔案中包含圖形連結元件。 這裡href將對應到目標url，img src將是轉譯影像，「title」將被視為暫留文字等。
+HTML标记，以在导入的zip文件中包含图形链接组件。 此处href将映射到目标url，img src将是渲染图像，“title”将被视为悬停文本等。
 
 ```xml
 <div id="cqcanvas">
@@ -294,7 +294,7 @@ HTML標籤，在匯入的zip檔案中包含圖形連結元件。 這裡href將�
 </div>
 ```
 
-**速記元件標籤宣告**：
+**简写组件标记声明**：
 
 ```xml
 <a href="/somelink.html" data-cq-component="clickThroughGraphicalLink"><img src="linkimage.png" alt="Click Through Graphical Link shorthand"/></a>
@@ -302,11 +302,11 @@ HTML標籤，在匯入的zip檔案中包含圖形連結元件。 這裡href將�
 
 >[!NOTE]
 >
->若要建立點進圖形連結，您必須使用將錨點標籤和影像標籤包裹在div中 `data-cq-component="clickthroughgraphicallink"` 屬性。
+>要创建点进图形链接，您需要使用将锚点标记和图像标记包裹在div中 `data-cq-component="clickthroughgraphicallink"` 属性。
 >
->例如： `<div data-cq-component="clickthroughlink"> <a href="https://myURLhere/"><img src="image source here"></a> </div>`
+>例如 `<div data-cq-component="clickthroughlink"> <a href="https://myURLhere/"><img src="image source here"></a> </div>`
 >
->不支援使用CSS將影像與錨點標籤建立關聯的其他方法，例如，下列標籤將無法運作：
+>不支持使用CSS将图像与锚点标记关联的其他方法，例如，以下标记不起作用：
 >
 >`<div data-cq-component="clickthroughgraphicallink">`
 >
@@ -314,28 +314,28 @@ HTML標籤，在匯入的zip檔案中包含圖形連結元件。 這裡href將�
 >
 >`</div>`
 >
->與相關聯的 `css .hasbackground { background-image: pathtoimage }`
+>具有关联的 `css .hasbackground { background-image: pathtoimage }`
 
 ### 潜在客户表单 {#lead-form}
 
-潛在客戶表單是用於收集訪客/潛在客戶設定檔資訊的表單。 此資訊可以儲存並稍後使用，以根據資訊進行有效的行銷。 這些資訊通常包括標題、名稱、電子郵件、出生日期、地址、興趣等。 它是「CTA銷售機會表單」群組的一部分。
+商机表单是用于收集访客/商机的配置文件信息的表单。 此信息可以存储并用于以后根据此信息执行有效的营销。 此信息通常包括标题、姓名、电子邮件、出生日期、地址、兴趣等。 它是“CTA潜在客户”组的一部分。
 
-**支援的功能**
+**支持的功能**
 
-* 預先定義的銷售機會欄位 — 名字、姓氏、地址、dob、性別、關於、userId、emailId、提交按鈕可在sidekick中使用。 只需在潛在客戶表單中拖放所需的元件即可。
-* 在這些元件的協助下，作者可以設計獨立的銷售機會表單，這些欄位對應到銷售機會表單欄位。 在獨立或匯入的zip應用程式中，使用者可以使用cq：form或cta潛在客戶表單欄位來新增額外欄位，並根據要求命名和設計。
-* 使用CTA潛在客戶表單的特定預先定義名稱對應潛在客戶表單欄位，例如 — 潛在客戶表單中名字的firstName等。
-* 未對應到潛在客戶表單的欄位將對應到cq：form元件 — 文字、單選按鈕、核取方塊、下拉選單、隱藏、密碼。
-* 使用者可以使用「label」標籤提供標題，也可以使用樣式屬性「class」提供樣式（僅適用於CTA銷售機會表單元件）。
-* 感謝頁面和訂閱清單可作為表單的隱藏引數提供（出現在index.htm中），或從「潛在客戶表單開始」的編輯列新增/編輯
+* 预定义的潜在客户字段 — 名字、姓氏、地址、dob、性别、关于、用户ID、电子邮件ID、提交按钮在Sidekick中可用。 只需将所需的组件拖放到潜在客户表单中。
+* 借助这些组件，作者可以设计独立的潜在客户表单，这些字段对应于潜在客户表单字段。 在独立或导入的zip应用程序中，用户可以使用cq：form或cta潜在客户表单字段添加额外的字段，并根据要求命名和设计。
+* 使用CTA潜在客户表单的特定预定义名称映射潜在客户表单字段，例如 — 潜在客户表单中名字的firstName等。
+* 未映射到潜在客户表单的字段将映射到cq：form组件 — 文本、单选框、复选框、下拉列表、隐藏、密码。
+* 用户可以使用“label”标记提供标题，也可以使用样式属性“class”提供样式（仅适用于CTA潜在客户表单组件）。
+* 感谢页面和订阅列表可作为表单的隐藏参数提供（位于index.htm中），也可以从“潜在客户表单开始”的编辑栏添加/编辑
 
    &lt;input type=&quot;hidden&quot; name=&quot;redirectUrl&quot; value=&quot;/content/we-retail/en/user/register/thank_you&quot;/>
 
    &lt;input type=&quot;hidden&quot; name=&quot;groupName&quot; value=&quot;leadForm&quot;/>
 
-* 可透過每個元件的編輯設定提供如下的限制：必要。
+* 可以通过编辑每个组件的配置来提供约束，例如必需。
 
-HTML標籤，在匯入的zip檔案中包含圖形連結元件。 這裡「firstName」對應至銷售機會表單firstName等，但核取方塊除外 — 這兩個核取方塊對應至cq：form下拉式清單元件。
+HTML标记，以在导入的zip文件中包含图形链接组件。 此处“firstName”映射到潜在客户表单firstName等，但复选框 — 这两个复选框映射到cq：form下拉组件。
 
 ```xml
 <div id="cqcanvas">
@@ -368,11 +368,11 @@ HTML標籤，在匯入的zip檔案中包含圖形連結元件。 這裡「firstN
 
 ### Parsys {#parsys}
 
-AEM parsys元件是可包含其他AEM元件的容器元件。 可以在匯入的HTML中新增parsys元件。 這可讓使用者在登入頁面匯入後，也能新增/刪除可編輯的AEM元件。
+AEM parsys组件是可以包含其他AEM组件的容器组件。 可以在导入的HTML中添加parsys组件。 这允许用户向登陆页面添加/删除可编辑的AEM组件，即使该页面已在导入之后。
 
-段落系統可讓使用者使用Sidekick新增元件。
+段落系统使用户能够使用Sidekick添加组件。
 
-插入parsys元件的HTML標示( `foundation/components/parsys`)在design package的HTML中：
+用于插入parsys组件的HTML标记( `foundation/components/parsys`)，位于design package的HTML中：
 
 ```xml
 <div data-cq-component="parsys">
@@ -381,17 +381,17 @@ AEM parsys元件是可包含其他AEM元件的容器元件。 可以在匯入的
 </div>
 ```
 
-在HTML中包含上述標籤會執行下列動作：
+在HTML中包含上述标记会执行以下操作：
 
-* 在匯入設計套件後建立的登入頁面中插入AEM parsys元件(foundation/components/parsys)。
-* 使用預設元件初始化Sidekick。 新元件可透過將元件從sidekick拖曳至parsys元件來新增至登入頁面。
-* 兩個標題元件也是parsys的一部分。
+* 在导入设计包后创建的登陆页面中插入AEM parsys组件(foundation/components/parsys)。
+* 使用默认组件初始化sidekick。 通过将组件从Sidekick拖动到Parsys组件，可以将新组件添加到登陆页面。
+* 两个标题组件也是parsys的一部分。
 
 ### 目标 {#target}
 
-目標元件會顯示頁面上的體驗內容。 您可以在行銷活動中建立許多體驗，且目標元件可動態地向造訪頁面的不同使用者顯示不同體驗的內容。
+目标组件显示页面上某个体验的内容。 可以在营销活动中创建许多体验，并且目标组件可以动态地向访问页面的各种用户显示不同体验的内容。
 
-用於插入目標元件以及在行銷活動中建立不同體驗的html標籤：
+用于插入目标组件并在营销活动中创建不同体验的html标记：
 
 ```xml
 <div data-cq-component="target">
@@ -409,27 +409,27 @@ AEM parsys元件是可包含其他AEM元件的容器元件。 可以在匯入的
 </div>
 ```
 
-## 其他匯入選項 {#additional-importing-options}
+## 其他导入选项 {#additional-importing-options}
 
-除了指定匯入的元件是否為可編輯的AEM元件外，您也可以在匯入設計封裝之前設定下列專案：
+除了指定导入的组件是否为可编辑的AEM组件之外，您还可以在导入设计包之前配置以下内容：
 
-* 擷取匯入HTML中定義的中繼資料，以設定頁面屬性。
-* 在HTML中指定charset編碼。
-* 覆蓋匯入工具頁面範本。
+* 通过提取在导入的HTML中定义的元数据来设置页面属性。
+* 指定HTML中的charset编码。
+* 覆盖导入程序页面模板。
 
-### 透過擷取匯入HTML中定義的中繼資料來設定頁面屬性 {#setting-page-properties-by-extracting-metadata-defined-in-imported-html}
+### 通过提取导入的HTML中定义的元数据来设置页面属性 {#setting-page-properties-by-extracting-metadata-defined-in-imported-html}
 
-下列在匯入HTML標頭中宣告的中繼資料應由設計匯入工具擷取並保留為屬性&quot;jcr：description&quot;：
+设计导入器应提取并保留在导入HTML头中声明的以下元数据，作为属性“jcr：description”：
 
 * &lt;meta name=&quot;description&quot; content=&quot;&quot;>
 
-在HTML標籤中設定的Lang屬性應由設計匯入工具擷取並保留為屬性&quot;jcr：language&quot;
+设计导入程序应提取并保留HTML标记中设置的Lang属性作为属性“jcr：language”
 
 * &lt;html lang=&quot;en&quot;>
 
-### 指定html中的charset編碼 {#specifying-the-charset-encoding-in-the-html}
+### 指定html中的charset编码 {#specifying-the-charset-encoding-in-the-html}
 
-設計匯入工具會讀取匯入HTML中指定的編碼。 編碼可依照以下方式指定：
+设计导入程序读取导入的HTML中指定的编码。 可以按如下方式指定编码：
 
 `<meta charset="UTF-8">`
 
@@ -437,142 +437,142 @@ AEM parsys元件是可包含其他AEM元件的容器元件。 可以在匯入的
 
 `<meta http-equiv="content-type" content="text/html;charset=utf-8">`
 
-如果在匯入的HTML中未指定編碼，則設計匯入工具設定的預設編碼為UTF-8。
+如果未在导入的HTML中指定编码，则设计导入程序设置的默认编码为UTF-8。
 
-### 覆蓋範本 {#overlaying-template}
+### 覆盖模板 {#overlaying-template}
 
-您可以在下列位置建立新範本，以覆蓋「空白登陸頁面」範本： `/apps/<appName>/designimporter/templates/<templateName>`
+可以通过在下列位置创建新模板来覆盖空白登陆页面模板： `/apps/<appName>/designimporter/templates/<templateName>`
 
-說明在AEM中建立新範本的步驟 [此處](/help/sites-developing/templates.md).
+说明了在AEM中创建新模板的步骤 [此处](/help/sites-developing/templates.md).
 
-### 從登入頁面反向連結元件 {#referring-a-component-from-landing-page}
+### 从登陆页面引用组件 {#referring-a-component-from-landing-page}
 
-假設您有想要在HTML中使用data-cq-component屬性參照的元件，這樣設計匯入工具就會在此呈現元件。 例如，您想要參照表元件( `resourceType = /libs/foundation/components/table`)。 需要在HTML中新增下列內容：
+假设您有一个组件，且您要使用data-cq-component属性在HTML中引用该组件，这样设计导入器就会在此呈现一个组件include。 例如，要引用表组件( `resourceType = /libs/foundation/components/table`)。 需要在HTML中添加以下内容：
 
 `<div data-cq-component="/libs/foundation/components/table">foundation table</div>`
 
-data-cq-component中的路徑應為元件的resourceType。
+data-cq-component中的路径应为组件的resourceType。
 
 ### 最佳实践 {#best-practices}
 
-對於在匯入時標籤為進行元件轉換的元素，不建議使用類似於以下專案的CSS選取器。
+对于在导入时标记为组件转换的元素，不建议使用类似于以下内容的CSS选择器。
 
-| E > F | E元素的F元素子項 | [子組合子](https://www.w3.org/TR/css3-selectors/#child-combinators) |
+| E > F | E元素的F元素子项 | [子组合器](https://www.w3.org/TR/css3-selectors/#child-combinators) |
 |---|---|---|
-| E + F | 緊接在E元素前面的F元素 | [相鄰同層級組合器](https://www.w3.org/TR/css3-selectors/#adjacent-sibling-combinators) |
-| E ~ F | 前面有E元素的F元素 | [一般同層級組合器](https://www.w3.org/TR/css3-selectors/#general-sibling-combinators) |
-| E：root | E元素，檔案的根目錄 | [結構化的虛擬類別](https://www.w3.org/TR/css3-selectors/#structural-pseudos) |
-| E：nth-child(n) | E元素，其父項的第n個子項 | [結構化的虛擬類別](https://www.w3.org/TR/css3-selectors/#structural-pseudos) |
-| E：nth-last-child(n) | E元素，其父項的第n個子項，從最後一個專案開始計數 | [結構化的虛擬類別](https://www.w3.org/TR/css3-selectors/#structural-pseudos) |
-| E：nth-of-type(n) | E元素，其型別的第n個同層級 | [結構化的虛擬類別](https://www.w3.org/TR/css3-selectors/#structural-pseudos) |
-| E：nth-last-of-type(n) | E元素，其型別的第n個同層級，從最後一個同層級開始計數 | [結構化的虛擬類別](https://www.w3.org/TR/css3-selectors/#structural-pseudos) |
+| E + F | F元素前面紧跟一个E元素 | [相邻同级组合器](https://www.w3.org/TR/css3-selectors/#adjacent-sibling-combinators) |
+| E ~ F | F元素前面有E元素 | [常规同级组合器](https://www.w3.org/TR/css3-selectors/#general-sibling-combinators) |
+| E：root | E元素，文档的根 | [结构伪类](https://www.w3.org/TR/css3-selectors/#structural-pseudos) |
+| E：nth-child(n) | E元素，其父元素的第n个子元素 | [结构伪类](https://www.w3.org/TR/css3-selectors/#structural-pseudos) |
+| E：nth-last-child(n) | E元素，其父项的第n个子项，从最后一个子项开始计数 | [结构伪类](https://www.w3.org/TR/css3-selectors/#structural-pseudos) |
+| E：nth-of-type(n) | E元素，其类型的第n个同级 | [结构伪类](https://www.w3.org/TR/css3-selectors/#structural-pseudos) |
+| E：nth-last-of-type(n) | E元素，其类型的第n个同级元素，从最后一个元素开始计数 | [结构伪类](https://www.w3.org/TR/css3-selectors/#structural-pseudos) |
 
-這是因為其他html元素，例如 &lt;div> 標籤會新增至匯入後產生的Html。
+这是因为其他html元素如 &lt;div> 标记会添加到导入后生成的Html中。
 
-* 此外，不建議將依賴上述類似結構的指令碼與標示為要轉換至AEM元件的元素搭配使用。
-* 在標籤標籤上使用樣式以進行元件轉換，例如 &lt;div data-cq-component=&quot;&amp;ast;&quot;> 不建議使用。
-* 設計版面配置應遵循HTML5 Boilerplate的最佳實務。 深入瞭解： [https://html5boilerplate.com/](https://html5boilerplate.com/).
+* 此外，对于标记为转换为AEM组件的元素，也不建议使用依赖于与上述结构类似的结构的脚本。
+* 在标记标记上使用样式进行组件转换，例如 &lt;div data-cq-component=&quot;&amp;ast;&quot;> 不推荐。
+* 设计布局应遵循HTML5样板中的最佳实践。 详细了解： [https://html5boilerplate.com/](https://html5boilerplate.com/).
 
-## 設定OSGI模組 {#configuring-osgi-modules}
+## 配置OSGI模块 {#configuring-osgi-modules}
 
-公開可透過OSGI主控台設定的屬性的元件如下：
+公开通过OSGI控制台配置的属性的组件如下：
 
-* 登陸頁面設計匯入工具
-* 登陸頁面產生器
-* 行動登陸頁面產生器
-* 登陸頁面登入前置處理器
+* 登陆页面设计导入程序
+* 登陆页面生成器
+* 移动设备登陆页面生成器
+* 登陆页面条目预处理程序
 
-下表簡要說明屬性：
+下表简要描述了这些属性：
 
 <table>
  <tbody>
   <tr>
    <td><strong>组件</strong></td>
    <td><strong>属性名称</strong></td>
-   <td><strong>屬性說明 </strong></td>
+   <td><strong>属性描述 </strong></td>
   </tr>
   <tr>
-   <td>登陸頁面設計匯入工具</td>
-   <td>擷取篩選器</td>
-   <td>用於篩選擷取檔案的規則運算式清單。 <br /> 符合任何指定模式的壓縮專案會從擷取中排除</td>
+   <td>登陆页面设计导入程序</td>
+   <td>提取筛选器</td>
+   <td>用于从提取中筛选文件的正则表达式列表。 <br /> 与任何指定模式匹配的压缩条目将从提取中排除</td>
   </tr>
   <tr>
-   <td>登陸頁面產生器</td>
-   <td>檔案模式</td>
-   <td>登入頁面產生器可設定為處理符合檔案模式所定義之規則運算式的HTML檔案。</td>
+   <td>登陆页面生成器</td>
+   <td>文件模式</td>
+   <td>可以将Landing Page Builder配置为处理与由文件模式定义的正则表达式匹配的HTML文件。</td>
   </tr>
   <tr>
-   <td>行動登陸頁面產生器</td>
-   <td>檔案模式</td>
-   <td>登入頁面產生器可設定為處理符合檔案模式所定義之規則運算式的HTML檔案。</td>
+   <td>移动设备登陆页面生成器</td>
+   <td>文件模式</td>
+   <td>可以将Landing Page Builder配置为处理与由文件模式定义的正则表达式匹配的HTML文件。</td>
   </tr>
   <tr>
    <td> </td>
    <td>设备组</td>
-   <td>要支援的裝置群組清單。</td>
+   <td>要支持的设备组的列表。</td>
   </tr>
   <tr>
-   <td>登陸頁面登入前置處理器</td>
-   <td>搜尋模式 </td>
-   <td>要在封存專案內容中搜尋的模式。 此規則運算式與專案內容逐行比對。 相符時，相符的文字會以指定的取代模式取代。<br /> <br /> 請參閱下方關於登陸頁面登入前置處理器目前限制的附註。</td>
+   <td>登陆页面条目预处理程序</td>
+   <td>搜索模式 </td>
+   <td>存档条目内容中要搜索的模式。 此正则表达式与条目内容逐行匹配。 匹配后，匹配的文本将替换为指定的替换模式。<br /> <br /> 有关登陆页面条目预处理器的当前限制，请参阅下面的注释。</td>
   </tr>
   <tr>
    <td> </td>
-   <td>取代圖樣</td>
-   <td>用來取代找到之相符的模式。 您可以使用$1、$2等規則運算式群組參考。 此外，此模式支援在匯入期間以實際值解析的{designPath}等關鍵字。</td>
+   <td>替换模式</td>
+   <td>替换找到的匹配项的模式。 您可以使用正则表达式组引用，如$1、$2。 此外，此模式还支持在导入期间使用实际值解析的关键字，如{designPath}。</td>
   </tr>
  </tbody>
 </table>
 
 >[!NOTE]
 >
->**登陸頁面登入前置處理器目前的限制：**
->如果您需要對搜尋模式進行任何變更，在開啟felix屬性編輯器時，您需要手動新增反斜線字元以逸出規則運算式中繼字元。 如果您未手動新增反斜線字元，則規則運算式會被視為無效，且不會取代舊的。
+>**登陆页面条目预处理器的当前限制：**
+>如果需要更改搜索模式，则打开felix属性编辑器时，需要手动添加反斜杠字符以转义正则表达式元字符。 如果不手动添加反斜杠字符，则正则表达式被视为无效，且不会替换旧正则表达式。
 >
->例如，如果預設設定為
+>例如，如果默认配置为
 >`/\* *CQ_DESIGN_PATH *\*/ *(['"])`
 >
->而且您需要更換 >`CQ_DESIGN_PATH` 替換為 `VIPURL` 在搜尋模式中，您的搜尋模式應如下所示：
+>而且你需要更换 >`CQ_DESIGN_PATH` 替换为 `VIPURL` 在搜索模式中，您的搜索模式应如下所示：
 `/\* *VIPURL *\*/ *(['"])`
 
 ## 疑难解答 {#troubleshooting}
 
-匯入設計封裝時，您可能會遇到數個錯誤，如本節所述。
+在导入设计包时，您可能会遇到几个错误，如本节所述。
 
-### 使用登陸頁面相關元件初始化Sidekick {#initialization-of-sidekick-with-landing-page-relevant-components}
+### 使用登陆页面相关组件初始化Sidekick {#initialization-of-sidekick-with-landing-page-relevant-components}
 
-如果設計套件包含parsys元件標籤，則在匯入後，sidekick會開始顯示登入頁面相關的元件。 您可以將新元件拖放至登陸頁面內的parsys元件上。 您也可以前往設計模式並將新元件新增到Sidekick。
+如果设计包包含parsys组件标记，则在导入后，sidekick将开始显示登陆页面相关的组件。 您可以将新组件拖放到登陆页面中的parsys组件上。 您还可以转到设计模式并将新组件添加到Sidekick。
 
-### 匯入期間顯示的錯誤訊息 {#error-messages-displayed-during-import}
+### 导入期间显示的错误消息 {#error-messages-displayed-during-import}
 
-萬一發生任何錯誤（例如匯入的封裝不是有效的zip檔），設計匯入將不會匯入封裝，而是會在頁面上方拖放方塊上方顯示錯誤訊息。 此處提供錯誤情況的範例。 更正錯誤後，您可以將更新後的zip重新匯入至相同的空白登陸頁面。 擲回錯誤的不同情況如下：
+如果发生任何错误（例如，导入的包不是有效的zip文件），设计导入将不会导入包，而是会在页面顶部拖放框的正上方显示错误消息。 此处列出了错误情况的示例。 更正错误后，您可以将更新后的zip文件重新导入到同一个空白登陆页面上。 抛出错误的不同情况如下：
 
-* 匯入的設計封裝不是有效的zip封存。
-* 匯入的設計封裝在頂層不包含index.html。
+* 导入的设计包不是有效的zip存档。
+* 导入的设计包不包含顶级的index.html。
 
-### 匯入後顯示警告 {#warnings-displayed-after-import}
+### 导入后显示的警告 {#warnings-displayed-after-import}
 
-萬一出現任何警告(例如HTML是指封裝內不存在的影像)，設計匯入工具會匯入zip，但同時在結果窗格中顯示問題/警告清單，按一下問題連結會顯示警告清單，指出設計封裝內的任何問題。 設計匯入工具攔截到警告並顯示警告的不同情況如下：
+出现任何警告时(例如，HTML是指包中不存在的图像)，设计导入程序将导入zip文件，但同时在结果窗格中显示问题/警告列表，单击“问题”链接将显示警告列表，指出设计包中的任何问题。 设计导入程序捕获并显示警告的不同情况如下：
 
-* HTML是指封裝內不存在的影像。
-* HTML是指套件中不存在的指令碼。
-* HTML是指封裝內不存在的樣式。
+* HTML是指包中不存在的图像。
+* HTML是指包中不存在的脚本。
+* HTML是指包中不存在的样式。
 
-### ZIP檔案的檔案儲存在AEM中的何處？ {#where-are-the-files-of-the-zip-file-being-stored-in-aem}
+### ZIP文件的文件存储在AEM中的什么位置？ {#where-are-the-files-of-the-zip-file-being-stored-in-aem}
 
-匯入登入頁面後，檔案（影像、css、js等） 在設計封裝內，儲存在AEM的以下位置：
+导入登陆页面后，文件（图像、css、js等） 在设计包中，存储在AEM的以下位置：
 
 `/etc/designs/default/canvas/content/campaigns/<name of brand>/<name of campaign>/<name of landing page>`
 
-假設登入頁面是在We.Retail促銷活動下建立，且登入頁面的名稱為 **myBlankLandingPage** 則Zip檔案的儲存位置如下：
+假设登陆页面是在营销活动We.Retail下创建的，且登陆页面的名称为 **myBlankLandingPage** 则Zip文件的存储位置如下所示：
 
 `/etc/designs/default/canvas/content/campaigns/geometrixx/myBlankLandingPage`
 
-### 未保留格式設定 {#formatting-not-preserved}
+### 未保留格式 {#formatting-not-preserved}
 
-建立CSS時，請注意下列限制：
+创建CSS时，请注意以下限制：
 
-如果文字和（可編輯的）影像如下所示：
+如果文本和（可编辑的）图像如下所示：
 
 ```xml
 <div class="box">
@@ -581,7 +581,7 @@ height="116" /></div>Some Text </p>
 </div>
 ```
 
-在類別上套用CSS `box` 如下所示：
+将CSS应用于类时 `box` 如下所示：
 
 ```xml
 .box
@@ -589,7 +589,7 @@ height="116" /></div>Some Text </p>
 { width: 450px; padding:10px; border: 1px #C5DBE7 solid; margin: 0px auto 0 auto; background-image:url(assets/box.gif); background-repeat:repeat-x,y; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:12px; color:#6D6D6D; }
 ```
 
-則 `box img` 用於design importer，因此產生的登陸頁面似乎並未保留格式。 若要解決此問題，請注意AEM會在CSS中新增div標籤，並據此重寫程式碼。 否則，某些CSS規則將無效。
+则 `box img` 在设计导入程序中使用，生成的登陆页面似乎未保留格式。 要解决此问题，请注意AEM会在CSS中添加div标记，并相应地重写代码。 否则，某些CSS规则将无效。
 
 ```xml
 .box img
@@ -598,4 +598,4 @@ height="116" /></div>Some Text </p>
 ```
 
 >[!NOTE]
-此外，設計人員應注意，只有內部的程式碼 **id=cqcanvas** 標籤會由匯入工具識別，否則不會保留設計。
+此外，设计人员应该注意，只有中的代码 **id=cqcanvas** 标记由导入器识别，否则不保留设计。

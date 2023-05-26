@@ -1,7 +1,7 @@
 ---
 title: 使用 ContextHub 配置分段
 seo-title: Configuring Segmentation with ContextHub
-description: 瞭解如何使用Context Hub設定分段。
+description: 了解如何使用Context Hub配置分段。
 seo-description: Learn how to configure segmentation with Context Hub.
 uuid: 196cfb18-317c-443d-b6f1-f559e4221baa
 contentOwner: msm-service
@@ -21,41 +21,41 @@ ht-degree: 79%
 
 >[!NOTE]
 >
->本節說明如何使用ContextHub設定分段。 如果您使用Client Context功能，請參閱 [為Client Context設定分段](/help/sites-administering/campaign-segmentation.md).
+>本节介绍在使用ContextHub时配置分段。 如果您使用的是Client Context功能，请参阅相关的文档 [为Client Context配置分段](/help/sites-administering/campaign-segmentation.md).
 
-分段是创建营销活动时的主要考虑事项。另請參閱 [管理對象](/help/sites-authoring/managing-audiences.md) 區段運作方式和主要術語的相關資訊。
+分段是创建营销活动时的主要考虑事项。参见 [管理受众](/help/sites-authoring/managing-audiences.md) 了解分段的工作方式和关键术语。
 
 根据您收集到的有关网站访客的信息以及要实现的目标，您将需要定义目标内容所需的区段和策略。
 
-之后，这些区段可用于为访客提供具体的目标内容。此內容維護於 [個人化](/help/sites-authoring/personalization.md) 網站區段。 此处定义的[活动](/help/sites-authoring/activitylib.md)可以包含在任何页面上，并定义专用内容适用于的访客区段。
+之后，这些区段可用于为访客提供具体的目标内容。此内容维护在 [个性化](/help/sites-authoring/personalization.md) 部分。 此处定义的[活动](/help/sites-authoring/activitylib.md)可以包含在任何页面上，并定义专用内容适用于的访客区段。
 
-AEM可讓您輕鬆個人化使用者體驗。 它还允许您验证区段定义的结果。
+AEM允许您轻松个性化用户体验。 它还允许您验证区段定义的结果。
 
 ## 访问区段 {#accessing-segments}
 
-此 [受眾](/help/sites-authoring/managing-audiences.md) console可用來管理ContextHub或Client Context的區段，以及Adobe Target帳戶的受眾。 本文档介绍了如何管理 ContextHub 的区段。對象 [Client Context區段](/help/sites-administering/campaign-segmentation.md) 和Adobe Target區段，請參閱相關檔案。
+此 [受众](/help/sites-authoring/managing-audiences.md) console用于管理ContextHub或Client Context的区段以及Adobe Target帐户的受众。 本文档介绍了如何管理 ContextHub 的区段。对象 [客户端上下文区段](/help/sites-administering/campaign-segmentation.md) 和Adobe Target区段，请参阅相关文档。
 
-若要存取區段，您需要選取設定。 在全域導覽中選取 **導覽>個人化>對象**. 您將會看到可用的設定：
+要访问区段，您需要选择配置。 在全局导航中，选择 **导航>个性化>受众**. 您将看到可用的配置：
 
-![Audiences — 設定](assets/segmentation-access-confs.png)
+![受众 — 配置](assets/segmentation-access-confs.png)
 
-選取您的設定以檢視區段，例如WKND Site：
+选择您的配置以查看区段，例如WKND站点：
 
-![受眾 — 區段](assets/segmentation-access-segments.png)
+![受众 — 区段](assets/segmentation-access-segments.png)
 
 ## 区段编辑器 {#segment-editor}
 
-**区段编辑器**&#x200B;可让您轻松修改区段。若要編輯區段，請在 [區段清單](/help/sites-administering/segmentation.md#accessing-segments) 並按一下 **編輯** 按鈕。
+**区段编辑器**&#x200B;可让您轻松修改区段。要编辑区段，请在 [区段列表](/help/sites-administering/segmentation.md#accessing-segments) 并单击 **编辑** 按钮。
 
 ![segmenteditor](assets/segmenteditor.png)
 
 利用组件浏览器，您可以添加 **AND** 和 **OR** 容器来定义区段逻辑，然后添加其他组件以比较属性和值，或参考脚本和其他区段以定义选择标准（请参阅[创建新区段](#creating-a-new-segment)），从而定义选择区段的确切场景。
 
-当整个语句的计算结果为 true 时，表示该区段已解析。在适用多个区段的情况下，也将使用 **Boost** 因素。另請參閱 [建立新區段](#creating-a-new-segment) 以瞭解 [提升因數。](/help/sites-administering/campaign-segmentation.md#boost-factor)
+当整个语句的计算结果为 true 时，表示该区段已解析。在适用多个区段的情况下，也将使用 **Boost** 因素。参见 [创建新区段](#creating-a-new-segment) ，以了解有关 [提升因子。](/help/sites-administering/campaign-segmentation.md#boost-factor)
 
 >[!CAUTION]
 >
->区段编辑器不检查任何循环引用。例如，區段A參照另一個區段B，而後者又參照區段A。您必須確保區段不包含任何循環參考。
+>区段编辑器不检查任何循环引用。例如，区段A引用另一个区段B，后者又引用区段A。您必须确保区段不包含任何循环引用。
 
 ### 容器 {#containers}
 
@@ -136,7 +136,7 @@ AEM可讓您輕鬆個人化使用者體驗。 它还允许您验证区段定义�
 
 1. 在[访问区段](/help/sites-administering/segmentation.md#accessing-segments)后，[导航到文件夹](#organizing-segments)，您要在该文件夹中创建区段。
 
-1. 按一下或點選「建立」按鈕並選取 **建立ContextHub區段**.
+1. 单击或点按创建按钮并选择 **创建ContextHub区段**.
 
    ![chlimage_1-311](assets/chlimage_1-311.png)
 
@@ -150,13 +150,13 @@ AEM可讓您輕鬆個人化使用者體驗。 它还允许您验证区段定义�
    * 最大值：`1000000`
 
 1. 将比较或引用拖动到区段编辑器中，它将显示在默认的 AND 容器中。
-1. 双击或点按新引用或区段的配置选项以编辑特定参数。在此範例中，我們正在聖荷西測試人員。
+1. 双击或点按新引用或区段的配置选项以编辑特定参数。在此示例中，我们正在测试圣何塞的人员。
 
    ![screen_shot_2012-02-02at103135am](assets/screen_shot_2012-02-02at103135ama.png)
 
    始终设置&#x200B;**数据类型**（如果可能）以确保正确评估比较。有关更多信息，请参阅[比较](/help/sites-administering/segmentation.md#comparisons)。
 
-1. 按一下 **確定** 若要儲存您的定義：
+1. 单击 **确定** 要保存定义，请执行以下操作：
 1. 根据需要添加更多组件。您可以使用用于 AND 和 OR 比较的容器组件来制定布尔表达式（请参阅下面的[使用 AND 和 OR 容器](/help/sites-administering/segmentation.md#using-and-and-or-containers)）。利用区段编辑器，您可以删除不再需要的组件，或将它们拖到语句中的新位置。
 
 ### 使用 AND 和 OR 容器 {#using-and-and-or-containers}
@@ -166,15 +166,15 @@ AEM可讓您輕鬆個人化使用者體驗。 它还允许您验证区段定义�
 * 定义的顶层始终是最初创建的 AND 容器。虽然这是无法更改的，但不会影响区段定义的其余部分。
 * 确保容器的嵌套有意义。可以将容器视为布尔表达式的括号。
 
-下列範例可用來選取主要年齡群組中的訪客：
+以下示例用于选择主要年龄组中考虑的访客：
 
-男性，30至59歲
+男性，30至59岁
 
 或
 
-女性，30至59歲
+女性，30至59岁
 
-首先，在默认的 AND 容器中放置一个 OR 容器组件。在OR容器中，您可以新增兩個AND容器，並在兩者中新增屬性或參照元件。
+首先，在默认的 AND 容器中放置一个 OR 容器组件。在OR容器中，您可以添加两个AND容器，并且在这两个容器中都可以添加属性或引用组件。
 
 ![screen_shot_2012-02-02at105145am](assets/screen_shot_2012-02-02at105145ama.png)
 
@@ -308,7 +308,7 @@ this.dependOn(ContextHub.SegmentEngine.Property('profile/age'));
 1. 选择与您创建的区段匹配的角色
 1. ContextHub 将为所选角色解析适用的区段
 
-例如，我們用來識別主要年齡群組中的使用者的簡單區段定義，是根據使用者的年齡和性別來定義的簡單區段。 加载符合这些条件的特定角色会显示是否已成功解析该区段：
+例如，我们用来标识主要年龄组中的用户的简单区段定义是基于用户年龄和性别的简单区段定义。 加载符合这些条件的特定角色会显示是否已成功解析该区段：
 
 ![screen_shot_2012-02-02at105926am](assets/screen_shot_2012-02-02at105926am.png)
 
@@ -322,7 +322,7 @@ this.dependOn(ContextHub.SegmentEngine.Property('profile/age'));
 
 此类测试也可在内容页面上执行，并与目标内容以及相关的&#x200B;**活动**&#x200B;和&#x200B;**体验**&#x200B;相结合。
 
-如果您已使用上述主要年齡群組區段範例設定了活動和體驗，即可透過活動輕鬆測試區段。 有关设置活动的详细信息，请参阅[有关创作目标内容的文档](/help/sites-authoring/content-targeting-touch.md)。
+如果您使用上述主要年龄组区段示例设置了活动和体验，则可以轻松地使用活动测试区段。 有关设置活动的详细信息，请参阅[有关创作目标内容的文档](/help/sites-authoring/content-targeting-touch.md)。
 
 1. 在已设置目标内容的页面的编辑模式下，您可以看到已通过内容上的箭头图标来目标内容。
 
@@ -338,4 +338,4 @@ this.dependOn(ContextHub.SegmentEngine.Property('profile/age'));
 
 ## 使用区段 {#using-your-segment}
 
-區段是用來控制特定目標對象所看到的實際內容。 请参阅[管理受众](/help/sites-authoring/managing-audiences.md)以详细了解受众和区段，并查看[创作目标内容](/help/sites-authoring/content-targeting-touch.md)以了解如何使用受众和区段来目标内容。
+区段可用于控制特定目标受众看到的实际内容。 请参阅[管理受众](/help/sites-authoring/managing-audiences.md)以详细了解受众和区段，并查看[创作目标内容](/help/sites-authoring/content-targeting-touch.md)以了解如何使用受众和区段来目标内容。

@@ -1,6 +1,6 @@
 ---
 title: 富文本编辑器
-description: RTF編輯器是將文字內容輸入至AEM的基本建置區塊。
+description: 富文本编辑器是用于向AEM输入文本内容的基本构建基块。
 uuid: 4bcce45a-e14f-41b7-8c6f-89d1e1bb595c
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 # 富文本编辑器 {#rich-text-editor}
 
-RTF編輯器是將文字內容輸入至AEM的基本建置區塊。 它構成各種元件的基礎，包括：
+富文本编辑器是用于向AEM输入文本内容的基本构建基块。 它构成各种组件的基础，包括：
 
 * 文本
 * 文本图像
@@ -24,111 +24,111 @@ RTF編輯器是將文字內容輸入至AEM的基本建置區塊。 它構成各�
 
 ## 富文本编辑器 {#rich-text-editor-1}
 
-所見即所得編輯對話方塊提供廣泛的功能：
+所见即所得编辑对话框提供了广泛的功能：
 
 ![cq55_rte_basicchars](assets/cq55_rte_basicchars.png)
 
 >[!NOTE]
 >
->可用的功能可針對個別專案進行設定，因此安裝時可能會有所不同。
+>可用的功能可以针对各个项目进行配置，因此您的安装可能会有所不同。
 
 ## 就地编辑 {#in-place-editing}
 
-除了對話方塊式RTF編輯模式外，AEM還提供就地編輯模式，允許直接編輯顯示在頁面版面中的文字。
+除了基于对话框的富文本编辑模式外，AEM还提供就地编辑模式，该模式允许直接编辑显示在页面布局中的文本。
 
-在段落上按兩下（緩慢連按兩下）以進入就地編輯模式（元件邊框現在將為橘色）。
+在段落上单击两次（缓慢双击）以进入就地编辑模式（组件边框现在将为橙色）。
 
-您將能夠直接編輯頁面上的文字，而不是在對話方塊視窗內。 只需進行變更，系統就會自動儲存變更。
+您将能够直接编辑页面上的文本，而不是在对话框窗口中编辑。 只需进行更改，更改将自动保存。
 
 ![cq55_rte_inlineediting](assets/cq55_rte_inlineediting.png)
 
 >[!NOTE]
 >
->如果您已開啟內容尋找器，則含有RTE格式選項的工具列將顯示在索引標籤的頂端（如上所述）。
+>如果打开了内容查找器，则选项卡顶部将显示一个包含RTE格式选项的工具栏（如上所述）。
 >
->如果內容尋找器未開啟，則不會顯示工具列。
+>如果未打开内容查找器，则不会显示工具栏。
 
-目前，系統已為產生的頁面元素啟用就地編輯模式。 **文字** 和 **標題** 元件。
+目前，已为生成的页面元素启用就地编辑模式。 **文本** 和 **标题** 组件。
 
 >[!NOTE]
 >
->此 [!UICONTROL 標題] 元件設計為包含不含分行符號的簡短文字。 在「就地編輯」模式下編輯標題時，輸入分行符號將會開啟新的 **文字** 標題下方的元件。
+>此 [!UICONTROL 标题] 组件设计为包含不带换行符的短文本。 在“就地编辑”模式下编辑标题时，输入换行符将打开一个新标题 **文本** 标题下面的组件。
 
-## RTF編輯器的功能 {#features-of-the-rich-text-editor}
+## 富文本编辑器的功能 {#features-of-the-rich-text-editor}
 
-RTF編輯器提供了一系列功能，包括 [視設定而定](/help/sites-administering/rich-text-editor.md) 個別元件的ID。 這些功能適用於觸控最佳化的UI和傳統UI。
+富文本编辑器提供了一系列功能，包括 [取决于配置](/help/sites-administering/rich-text-editor.md) 单个组件的ID。 这些功能适用于触屏优化和经典UI。
 
-### 基本字元格式 {#basic-character-formats}
+### 基本字符格式 {#basic-character-formats}
 
 ![](do-not-localize/cq55_rte_basicchars.png)
 
-您可以在此處將格式套用至您選取（反白顯示）的字元；有些選項也有快捷鍵：
+在这里，您可以对已选择（高亮显示）的字符应用格式；某些选项还有快捷键：
 
-* 粗體(Ctrl-B)
-* 斜體(Ctrl-I)
-* 底線(Ctrl-U)
+* 粗体(Ctrl-B)
+* 斜体(Ctrl-I)
+* 下划线(Ctrl-U)
 * 下标
 * 上标
 
 ![cq55_rte_basicchars_use](assets/cq55_rte_basicchars_use.png)
 
-所有內容都會以切換方式運作，因此重新選取會移除格式。
+所有内容都作为切换操作，因此重新选择将删除格式。
 
-### 預先定義的樣式和格式 {#predefined-styles-and-formats}
+### 预定义的样式和格式 {#predefined-styles-and-formats}
 
-![cq55_rte_stylesparagraph](assets/cq55_rte_stylesparagraph.png)
+![cq55_rte_stylesparagment](assets/cq55_rte_stylesparagraph.png)
 
-您的安裝可包含預先定義的樣式和格式。 這些功能可搭配 **[!UICONTROL 樣式]** 和 **[!UICONTROL 格式]** 下拉式清單，並可套用至您已選取的文字。
+您的安装可以包括预定义的样式和格式。 这些组件可与 **[!UICONTROL 样式]** 和 **[!UICONTROL 格式]** 下拉列表，并且可以应用于您已选择的文本。
 
-樣式可套用至特定字串（與CSS相關的樣式）：
+样式可以应用于特定字符串（与CSS关联的样式）：
 
 ![cq55_rte_styles_use](assets/cq55_rte_styles_use.png)
 
-而格式會套用至整個文欄位落(格式是以HTML為基礎)：
+而格式应用于整个文本段落(格式基于HTML)：
 
 ![cq55_rte_paragraph_use](assets/cq55_rte_paragraph_use.png)
 
-特定格式只能變更(預設為 **[!UICONTROL 段落]**)。
+只能更改特定格式(默认为 **[!UICONTROL 段落]**)。
 
-可以移除樣式；將游標置於已套用樣式的文字內，然後按一下移除圖示：
+可以移除样式；将光标置于已应用样式的文本中，然后单击移除图标：
 
 >[!CAUTION]
 >
->實際上不要重新選取已套用樣式的文字，否則圖示會停用。
+>实际上，不要重新选择已应用样式的文本或图标将被停用。
 
-### 剪下、複製、貼上 {#cut-copy-paste}
+### 剪切、复制、粘贴 {#cut-copy-paste}
 
 ![](do-not-localize/cq55_rte_cutcopypaste.png)
 
-的標準函式 **[!UICONTROL 剪下]** 和 **[!UICONTROL 複製]** 可用。 幾種口味 **[!UICONTROL 貼上]** 提供以滿足不同格式的需求。
+的标准功能 **[!UICONTROL 剪切]** 和 **[!UICONTROL 复制]** 可用。 几种口味 **[!UICONTROL 粘贴]** 提供以适应不同的格式。
 
-* 剪下(Ctrl-X)
-* 複製(Ctrl-C)
-* 貼上這是元件的預設貼上機制(Ctrl-V)；當現成安裝時，此機制會設定為 [!UICONTROL 從Word貼上].
+* 剪切(Ctrl-X)
+* 复制(Ctrl-C)
+* 粘贴这是组件的默认粘贴机制(Ctrl-V)；当现成安装时，此机制配置为 [!UICONTROL 从Word粘贴].
 
-* 貼上成文字：將所有的樣式和格式都刪除，只貼上純文字。
+* 粘贴为文本：剥离所有样式和格式以仅粘贴纯文本。
 
-* 從Word貼上：這樣會將內容貼上為HTML（包含一些必要的重新格式化）。
+* 从Word粘贴：此操作会将内容粘贴为HTML（进行一些必要的重新格式设置）。
 
-### 還原，重做 {#undo-redo}
+### 撤消，重做 {#undo-redo}
 
 ![](do-not-localize/cq55_rte_undoredo.png)
 
-AEM會依時間順序保留目前元件中最後50個動作的記錄。 如有需要，這些動作可以嚴格順序復原（然後重做）。
+AEM会按时间顺序保留当前组件中最后50个操作的记录。 如果需要，可以严格按照顺序撤消（然后重新完成）这些操作。
 
 >[!CAUTION]
 >
->歷史記錄僅會保留目前的編輯工作階段。 每次開啟元件進行編輯時，都會重新啟動它。
+>历史记录仅保留当前编辑会话的历史记录。 每次打开组件进行编辑时，都会重新启动该组件。
 
 >[!NOTE]
 >
->預設任務數為50。 您的安裝可能會有所不同。
+>五十是默认的任务数。 对于您的安装，这可能有所不同。
 
 ### 对齐方式 {#alignment}
 
 ![](do-not-localize/cq55_rte_alignment.png)
 
-文字可以靠左、置中或靠右對齊。
+文本可以左对齐、居中对齐或右对齐。
 
 ![cq55_rte_alignment_use](assets/cq55_rte_alignment_use.png)
 
@@ -136,7 +136,7 @@ AEM會依時間順序保留目前元件中最後50個動作的記錄。 如有�
 
 ![](do-not-localize/cq55_rte_indent.png)
 
-段落的縮排可以增加或減少。 所選段落將縮排，輸入的任何新文字將保留目前的縮排層級。
+可以增加或减少段落的缩进。 所选段落将缩进，输入的任何新文本都将保留当前缩进级别。
 
 ![cq55_rte_indent_use](assets/cq55_rte_indent_use.png)
 
@@ -144,11 +144,11 @@ AEM會依時間順序保留目前元件中最後50個動作的記錄。 如有�
 
 ![](do-not-localize/cq55_rte_lists.png)
 
-專案符號和編號清單都可以在文字中建立。 選取清單型別並開始鍵入或反白要轉換的文字。 在這兩種情況下，換行字元都會開始新的清單專案。
+可以在文本中创建项目符号和编号列表。 选择列表类型并开始键入或突出显示要转换的文本。 在这两种情况下，换行符都会启动新的列表项。
 
-巢狀清單可以透過縮排一個或多個清單專案來達成。
+可通过缩进一个或多个列表项实现嵌套列表。
 
-只需將游標置於清單內，然後選取其他樣式，即可變更清單的樣式。 子清單也可以有與包含清單不同的樣式。 一旦建立子清單後（透過縮排），即可套用此選項。
+只需将光标置于列表内，然后选择其他样式，即可更改列表的样式。 子列表也可以与容器列表具有不同的样式。 创建子列表后（通过缩进），可以应用此项。
 
 ![cq55_rte_lists_use](assets/cq55_rte_lists_use.png)
 
@@ -156,27 +156,27 @@ AEM會依時間順序保留目前元件中最後50個動作的記錄。 如有�
 
 ![](do-not-localize/cq55_rte_links.png)
 
-反白必要文字，然後按一下超連結圖示，會產生指向URL的連結（位於您的網站內或外部位置）：
+通过突出显示所需的文本，然后单击超链接图标，生成指向URL（网站内或外部位置）的链接：
 
 ![](do-not-localize/chlimage_1-9.png)
 
-對話方塊可讓您指定目標URL，以及是否應在新視窗中開啟。
+通过对话框可指定目标URL；以及是否应在新窗口中打开目标URL。
 
 ![cq55_rte_link_use](assets/cq55_rte_link_use.png)
 
 您可以：
 
-* 直接輸入URI
-* 使用網站地圖在您的網站內選取頁面
-* 輸入URI，然後附加目標錨點；例如。 `www.TargetUri.org#AnchorName`
-* 僅輸入錨點（參照「目前頁面」）；例如， `#anchor`
-* 在內容尋找器中搜尋頁面，然後將頁面圖示拖放至「超連結」對話方塊中
+* 直接键入URI
+* 使用站点地图选择网站中的页面
+* 输入URI，然后附加目标锚点；例如， `www.TargetUri.org#AnchorName`
+* 仅输入一个锚点（引用“当前页面”）；例如， `#anchor`
+* 在内容查找器中搜索页面，然后将页面图标拖放到超链接对话框中
 
 >[!NOTE]
 >
->URI可附加任何針對您的安裝所設定的通訊協定。 在標準安裝中，這些是 `https://`， `ftp://`、和 `mailto:`. 未針對您的安裝設定的通訊協定將被拒絕並標籤為無效。
+>URI可以在任何为您的安装配置的协议前加上。 在标准安装中，这些选项包括 `https://`， `ftp://`、和 `mailto:`. 未为您的安装配置的协议将被拒绝并标记为无效。
 
-若要中斷連結位置，將游標置於連結文字中的任何位置，然後按一下 [!UICONTROL 取消連結] 圖示：
+要断开链接位置，将光标置于链接文本中的任何位置，然后单击 [!UICONTROL 取消链接] 图标：
 
 ![](do-not-localize/chlimage_1-10.png)
 
@@ -184,215 +184,215 @@ AEM會依時間順序保留目前元件中最後50個動作的記錄。 如有�
 
 ![](do-not-localize/cq55_rte_anchor.png)
 
-您可以透過定位游標或選取某些文字，在文字內的任何位置建立錨點。 然後按一下 **錨點** 圖示以開啟對話方塊。
+可以通过定位光标或选择某些文本在文本中的任何位置创建锚点。 然后，单击 **锚点** 图标以打开对话框。
 
-輸入錨點的名稱，然後按一下 **確定** 以儲存。
+输入锚点的名称，然后单击 **确定** 以保存。
 
 ![cq55_rte_anchor_use](assets/cq55_rte_anchor_use.png)
 
-當編輯元件時會顯示錨點，且現在可以在連結的目標中使用。
+编辑组件时会显示锚点，现在可以在链接的目标中使用锚点。
 
 ![chlimage_1-104](assets/chlimage_1-104.png)
 
-### 尋找和取代 {#find-and-replace}
+### 查找和替换 {#find-and-replace}
 
 ![](do-not-localize/cq55_rte_findreplace.png)
 
-AEM同時提供 **尋找** 和 **Replace** （尋找和取代）函式。
+AEM同时提供 **查找** 和 **Replace** （查找和替换）函数。
 
-兩者都有 **尋找下一個** 按鈕來搜尋所指定文字的開啟元件。 您也可以指定是否需要比對大小寫（大/小）。
+两者都有 **查找下一个** 按钮，在打开的组件中搜索指定的文本。 您还可以指定是否需要匹配大小写（大/小）。
 
-搜尋一律會從文字內目前的游標位置開始。 到達元件結尾時，會出現一則訊息，通知您下一個搜尋操作將從頂部開始。
+搜索将始终从文本中的当前光标位置开始。 到达组件结尾时，将显示一条消息，通知您下一个搜索操作将从顶部开始。
 
 ![cq55_rte_find_use](assets/cq55_rte_find_use.png)
 
-此 **Replace** 選項可讓您 **尋找**，則 **Replace** 具有指定文字的個別執行個體，或 **全部取代** 目前元件中的例證。
+此 **Replace** 选项允许您 **查找**，则 **Replace** 具有指定文本的单个实例，或者 **全部替换** 当前组件中的实例。
 
 ![cq55_rte_findreplace_use](assets/cq55_rte_findreplace_use.png)
 
 ### 图像 {#images}
 
-您可以從內容尋找器拖曳影像，以將影像新增至文字。
+可以从内容查找器中拖动图像以将其添加到文本中。
 
 ![cq55_rte_image_use](assets/cq55_rte_image_use.png)
 
 >[!NOTE]
 >
->AEM也提供專門的元件，以提供更詳細的影像設定。 例如 **影像** 和 **文字影像** 元件可供使用。
+>AEM还提供专门的组件，用于更详细的图像配置。 例如， **图像** 和 **文本图像** 组件可用。
 
-### 拼字檢查 {#spelling-checker}
+### 拼写检查程序 {#spelling-checker}
 
 ![](do-not-localize/cq55_rte_spellchecker.png)
 
-拼字檢查程式會檢查目前元件中的所有文字。
+拼写检查器将检查当前组件中的所有文本。
 
-任何錯誤的拼字都會反白顯示：
+任何错误的拼写都将突出显示：
 
 ![cq55_rte_spellchecker_use](assets/cq55_rte_spellchecker_use.png)
 
 >[!NOTE]
 >
->拼字檢查程式會使用子樹狀結構的language屬性或從URL擷取語言，以在網站的語言中運作。 例如 `en` 將檢查分支的英文和 `de` 德文分支。
+>拼写检查器将通过获取子树的语言属性或从URL中提取语言来以网站的语言进行操作。 例如， `en` 将检查分支的英语和 `de` 德语分支。
 
-### 表格 {#tables}
+### 表 {#tables}
 
-表格可供兩種方式使用：
+表可用于以下两种情况：
 
-* 作為 **表格** 元件
+* 作为 **表** 组件
 
    ![chlimage_1-105](assets/chlimage_1-105.png)
 
-* 從 **文字** 元件
+* 从 **文本** 组件
 
    ![](do-not-localize/chlimage_1-11.png)
 
    >[!NOTE]
    >
-   >雖然RTE中已有表格，但建議您使用 **表格** 建立表格時的元件。
+   >虽然RTE中提供了表格，但建议使用 **表** 组件。
 
-在 **文字** 和 **表格** 元件表格功能可透過在表格內按一下前後關聯選單（通常是按滑鼠右鍵）來使用；例如：
+在 **文本** 和 **表** “组件”表格功能可通过在表格内单击上下文菜单（通常是鼠标右键）来使用；例如：
 
 ![cq55_rte_tablemenu](assets/cq55_rte_tablemenu.png)
 
 >[!NOTE]
 >
->在 **表格** 元件外，也提供專門的工具列，包括各種標準RTF編輯器功能，以及表格特定功能的子集。
+>在 **表** 组件时，还提供了专门的工具栏，包括各种标准的富文本编辑器功能以及特定于表的功能的子集。
 
-表格的特定功能包括：
+该表的特定功能包括：
 
-* [表格屬性](#table-properties)
-* [儲存格屬性](#cell-properties)
-* [新增或刪除列](#add-or-delete-rows)
-* [新增或刪除欄](#add-or-delete-columns)
-* [選取整列或整欄](#selecting-entire-rows-or-columns)
-* [合併儲存格](#merge-cells)
+* [表属性](#table-properties)
+* [单元格属性](#cell-properties)
+* [添加或删除行](#add-or-delete-rows)
+* [添加或删除列](#add-or-delete-columns)
+* [选择整个行或列](#selecting-entire-rows-or-columns)
+* [合并单元格](#merge-cells)
 * [拆分单元格](#split-cells)
-* [巢狀表格](#creating-nested-tables)
-* [移除表格](#remove-table)
+* [嵌套表](#creating-nested-tables)
+* [删除表](#remove-table)
 
-#### 表格屬性 {#table-properties}
+#### 表属性 {#table-properties}
 
 ![cq55_rte_tableproperties_icon](assets/cq55_rte_tableproperties_icon.png)
 
-在按一下之前，可以設定表格的基本屬性 **確定** 若要儲存：
+单击之前，可以配置表的基本属性 **确定** 要保存，请执行以下操作：
 
 ![cq55_rte_tableproperties_dialog](assets/cq55_rte_tableproperties_dialog.png)
 
-* **寬度**：表格的總寬度。
+* **宽度**：表的总宽度。
 
-* **高度**：表格的總高度。
+* **高度**：表的总高度。
 
-* **邊框**：表格邊框的大小。
+* **边框**：表边框的大小。
 
-* **儲存格邊距**：這會定義儲存格內容與其邊界之間的空白字元。
+* **单元格边距**：此属性定义单元格内容与其边框之间的空格。
 
-* **儲存格間距**：這會定義儲存格之間的距離。
+* **单元格间距**：定义单元格之间的距离。
 
 >[!NOTE]
 >
->有些儲存格屬性（例如「寬度」和「高度」）可定義為畫素或百分比。
+>一些单元格属性（如“宽度”和“高度”）可以定义为像素或百分比。
 
 >[!CAUTION]
 >
->Adobe建議您為表格定義寬度。
+>Adobe建议您为表格定义宽度。
 
-#### 儲存格屬性 {#cell-properties}
+#### 单元格属性 {#cell-properties}
 
 ![cq55_rte_cellproperties_icon](assets/cq55_rte_cellproperties_icon.png)
 
-可以設定特定儲存格或一系列儲存格的屬性：
+可以配置特定单元格或一系列单元格的属性：
 
 ![cq55_rte_cellproperties_dialog](assets/cq55_rte_cellproperties_dialog.png)
 
 * **宽度**
 * **高度**
-* **水準對齊**  — 左、中或右
-* **垂直對齊**  — 頂端、中間、底部或基準線
-* **儲存格型別** — 資料或標題
-* **套用至：** 單一儲存格、整列、整欄
+* **水平对齐**  — 左、中或右
+* **垂直对齐**  — 顶部、中间、底部或基线
+* **单元格类型** — 数据或标题
+* **应用到：** 单个单元格、整行、整列
 
-#### 新增或刪除列 {#add-or-delete-rows}
+#### 添加或删除行 {#add-or-delete-rows}
 
 ![cq55_rte_rows](assets/cq55_rte_rows.png)
 
-可在目前列上方或下方新增列。
+可以在当前行的上方或下方添加行。
 
-也可以刪除目前列。
+也可以删除当前行。
 
-#### 新增或刪除欄 {#add-or-delete-columns}
+#### 添加或删除列 {#add-or-delete-columns}
 
 ![cq55_rte_columns](assets/cq55_rte_columns.png)
 
-欄可以新增到目前欄的左側或右側。
+可以将列添加到当前列的左侧或右侧。
 
-也可以刪除目前欄。
+也可以删除当前列。
 
-#### 選取整列或整欄 {#selecting-entire-rows-or-columns}
+#### 选择整个行或列 {#selecting-entire-rows-or-columns}
 
 ![chlimage_1-106](assets/chlimage_1-106.png)
 
-選取整個目前列或欄。 然後可以使用特定動作（例如合併）。
+选择整个当前行或列。 随后便可使用特定操作（例如合并）。
 
-#### 合併儲存格 {#merge-cells}
+#### 合并单元格 {#merge-cells}
 
 ![cq55_rte_cellmerge](assets/cq55_rte_cellmerge.png) ![cq55_rte_cellmerge-1](assets/cq55_rte_cellmerge-1.png)
 
-* 如果您選取了儲存格群組，可以將這些儲存格合併為一個儲存格。
-* 如果您只選取了一個儲存格，則可以將它與右側或下方的儲存格合併。
+* 如果您选择了一组单元格，则可以将这些单元格合并为一个单元格。
+* 如果您只选择了一个单元格，则可以将其与右侧或下方的单元格合并。
 
 #### 拆分单元格 {#split-cells}
 
 ![cq55_rte_cellsplit](assets/cq55_rte_cellsplit.png)
 
-選取要分割的單一儲存格：
+选择要拆分的单个单元格：
 
-* 水準分割儲存格會在目前欄內產生目前儲存格右側的新儲存格。
-* 垂直分割儲存格會在目前儲存格下產生新儲存格，但會在目前列內產生。
+* 水平拆分单元格将在当前列的当前单元格右侧生成一个新单元格。
+* 垂直拆分单元格将在当前单元格下但在当前行内生成一个新单元格。
 
-#### 建立巢狀表格 {#creating-nested-tables}
+#### 创建嵌套表 {#creating-nested-tables}
 
 ![chlimage_1-107](assets/chlimage_1-107.png)
 
-建立巢狀表格時，會在目前儲存格內建立新的獨立表格。
+创建嵌套表将在当前单元格中创建一个新的自包含表。
 
 >[!NOTE]
 >
->某些其他行為取決於瀏覽器：
+>某些其他行为取决于浏览器：
 >
->* Windows IE：使用Ctrl+按住滑鼠鍵（通常是左鍵）以選取多個儲存格。
->* Firefox：拖曳指標以選取儲存格範圍。
+>* Windows IE：按住Ctrl键并按住鼠标键（通常位于左侧）可选择多个单元格。
+>* Firefox：拖动指针以选择单元格范围。
 
 
-#### 移除表格 {#remove-table}
+#### 删除表 {#remove-table}
 
 ![cq55_rte_removetable](assets/cq55_rte_removetable.png)
 
-使用選項將表格從 **[!UICONTROL 文字]** 元件。
+使用选项，将表从 **[!UICONTROL 文本]** 组件。
 
 ### 特殊字符 {#special-characters}
 
 ![](do-not-localize/cq55_rte_specialchars.png)
 
-RTF編輯器可使用特殊字元；這些字元可能會因您的安裝而異。
+特殊字符可用于富文本编辑器；这些字符可能会因您的安装而异。
 
 ![cq55_rte_specialchars_use](assets/cq55_rte_specialchars_use.png)
 
-使用滑鼠懸停來檢視字元的放大版本，然後按一下以將其包含在文字中的目前位置。
+使用鼠标悬停可查看字符的放大版本，然后单击以将其包含在文本中的当前位置。
 
-### 來源編輯模式 {#source-editing-mode}
+### 源编辑模式 {#source-editing-mode}
 
 ![](do-not-localize/cq55_rte_sourceedit.png)
 
-來源編輯模式可讓您檢視及編輯元件的基礎HTML。
+利用源编辑模式，可查看和编辑组件的基础HTML。
 
-所以文字：
+因此，文本：
 
 ![cq55_rte_sourcemode_1](assets/cq55_rte_sourcemode_1.png)
 
-在來源模式中看起來會像這樣（來源通常更長，所以您必須捲動）：
+在源模式下，将如下所示（源通常更长，因此您必须滚动）：
 
 ![cq55_rte_sourcemode_2](assets/cq55_rte_sourcemode_2.png)
 
 >[!CAUTION]
 >
->離開來源模式時，AEM會進行某些驗證檢查（例如，確保文字正確包含/巢狀內嵌在區塊中）。 這可能會導致編輯內容變更。
+>离开源模式时，AEM会进行某些验证检查（例如，确保文本正确包含/嵌套在块中）。 这可能会导致编辑内容发生更改。

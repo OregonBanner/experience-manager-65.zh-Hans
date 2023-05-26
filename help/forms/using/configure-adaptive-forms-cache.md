@@ -1,7 +1,7 @@
 ---
-title: 設定最適化表單快取
+title: 配置自适应表单缓存
 seo-title: Configure adaptive forms cache
-description: 調適型表單快取是專為調適型表單和檔案所設計。 它會快取最適化表單和最適化檔案，目標是減少在使用者端上轉譯最適化表單或檔案所需的時間。
+description: 自适应表单缓存专为自适应表单和文档设计。 它缓存自适应表单和自适应文档，旨在减少在客户端渲染自适应表单或文档所需的时间。
 seo-description: The adaptive forms cache is designed specifically for adaptive forms and documents. It caches adaptive forms and adaptive documents with the objective of reducing the time required to render an adaptive form or document on the client.
 uuid: ba8f79fd-d8dc-4863-bc0d-7c642c45505c
 content-type: reference
@@ -18,54 +18,54 @@ ht-degree: 1%
 
 ---
 
-# 設定最適化表單快取 {#configure-adaptive-forms-cache}
+# 配置自适应表单缓存 {#configure-adaptive-forms-cache}
 
-快取是一種可縮短資料存取時間、減少延遲以及改善輸入/輸出(I/O)速度的機制。 調適型表單快取只會儲存調適型表單的HTML內容和JSON結構，不會儲存任何預先填入的資料。 它有助於減少在使用者端上轉譯最適化表單所需的時間。 專為適用性表單而設計。
+缓存是一种缩短数据访问时间、减少延迟并提高输入/输出(I/O)速度的机制。 自适应表单缓存仅存储自适应表单的HTML内容和JSON结构，而不保存任何预填数据。 它有助于减少在客户端渲染自适应表单所需的时间。 它专为自适应表单而设计。
 
-## 在製作和發佈執行個體設定調適型表單快取 {#configure-adaptive-forms-caching-at-author-and-publish-instances}
+## 在创作实例和发布实例处配置自适应表单缓存 {#configure-adaptive-forms-caching-at-author-and-publish-instances}
 
-1. 前往AEM Web主控台組態管理員，位於 `https://[server]:[port]/system/console/configMgr`.
-1. 按一下 **[!UICONTROL 最適化表單和互動式通訊Web頻道設定]** 以編輯其組態值。
-1. 在 [!UICONTROL 編輯設定值] 對話方塊，指定AEM例項的表單或檔案數目上限 [!DNL Forms] 伺服器可以在以下位置快取： **[!UICONTROL 最適化Forms數量]** 欄位。 默认值为 100。
+1. 转到AEM Web控制台配置管理器，网址为 `https://[server]:[port]/system/console/configMgr`.
+1. 单击 **[!UICONTROL 自适应表单和交互式通信Web渠道配置]** 以编辑其配置值。
+1. 在 [!UICONTROL 编辑配置值] 对话框，指定AEM实例的最大表单或文档数 [!DNL Forms] 服务器可以在以下位置缓存： **[!UICONTROL 自适应Forms的数量]** 字段。 默认值为 100。
 
    >[!NOTE]
    >
-   >若要停用快取，請將「最適化Forms數目」欄位中的值設為 **0**. 當您停用或變更快取設定時，快取會重設，所有表單和檔案都會從快取中移除。
+   >要禁用缓存，请将自适应Forms的数量字段中的值设置为 **0**. 当您禁用或更改缓存配置时，将重置缓存并从缓存中删除所有表单和文档。
 
-   ![最適化表單HTML快取的設定對話方塊](assets/cache-configuration-edit.png)
+   ![自适应表单HTML缓存的配置对话框](assets/cache-configuration-edit.png)
 
-1. 按一下 **[!UICONTROL 儲存]** 以儲存設定。
+1. 单击 **[!UICONTROL 保存]** 以保存配置。
 
-您的環境已設定為使用快取最適化表單和相關資產。
+您的环境配置为使用缓存自适应表单和相关资产。
 
 
-## （可選）在Dispatcher設定最適化表單快取 {#configure-the-cache}
+## （可选）在Dispatcher上配置自适应表单缓存 {#configure-the-cache}
 
-您也可以在Dispatcher設定最適化表單快取，以額外提升效能。
+您还可以在Dispatcher上配置自适应表单缓存，以实现额外的性能提升。
 
-### 先決條件 {#pre-requisites}
+### 先决条件 {#pre-requisites}
 
-* 啟用 [在使用者端合併或預填資料](prepopulate-adaptive-form-fields.md#prefill-at-client) 選項。 它有助於合併預填表單的每個例項的不重複資料。
+* 启用 [在客户端合并或预填充数据](prepopulate-adaptive-form-fields.md#prefill-at-client) 选项。 它有助于合并预填充表单的每个实例的唯一数据。
 
-### 在Dispatcher上快取自適應表單的考量事項 {#considerations}
+### 在Dispatcher上缓存自适应表单的注意事项 {#considerations}
 
-* 使用調適型表單快取時，請使用AEM [!DNL Dispatcher] 快取最適化表單的使用者端資料庫（CSS和JavaScript）。
-* 開發自訂元件時，在用於開發的伺服器上，停用最適化表單快取。
-* 不會快取沒有副檔名的URL。 例如，具有模式模式的URL`/content/forms/[folder-structure]/[form-name].html` 快取，而且快取會忽略具有模式的URL `/content/dam/formsanddocument/[folder-name]/<form-name>/jcr:content`. 因此，請使用具有擴充功能的URL，以享有快取的優點。
-* 本地化適用性表單的考量事項：
-   * 使用URL格式 `http://host:port/content/forms/af/<afName>.<locale>.html` 請求最適化表單的當地語系化版本，而不是 `http://host:port/content/forms/af/afName.html?afAcceptLang=<locale>`
-   * [停用使用瀏覽器地區設定](supporting-new-language-localization.md#how-localization-of-adaptive-form-works) 格式為的URL `http://host:port/content/forms/af/<adaptivefName>.html`.
-   * 當您使用URL格式時 `http://host:port/content/forms/af/<adaptivefName>.html`、和 **[!UICONTROL 使用瀏覽器地區設定]** 在configuration manager中，會停用非當地語系化版本的最適化表單。 非當地語系化語言是開發最適化表單時使用的語言。 系統不會考慮為瀏覽器設定的地區設定（瀏覽器地區設定），而是提供最適化表單的非當地語系化版本。
-   * 當您使用URL格式時 `http://host:port/content/forms/af/<adaptivefName>.html`、和 **[!UICONTROL 使用瀏覽器地區設定]** 在configuration manager中，會啟用最適化表單的當地語系化版本（如果有的話）。 當地語系化最適化表單的語言取決於為您的瀏覽器設定的地區設定（瀏覽器地區設定）。 這可能導致 [僅快取最適化表單的第一個執行個體]. 若要防止執行個體發生問題，請參閱 [疑難排解](#only-first-insatnce-of-adptive-forms-is-cached).
+* 使用自适应表单缓存时，请使用AEM [!DNL Dispatcher] 缓存自适应表单的客户端库（CSS和JavaScript）。
+* 在开发自定义组件时，在用于开发的服务器上，将禁用自适应表单缓存。
+* 不缓存不带扩展名的URL。 例如，具有模式模式的URL`/content/forms/[folder-structure]/[form-name].html` 缓存，缓存会忽略具有模式的URL `/content/dam/formsanddocument/[folder-name]/<form-name>/jcr:content`. 因此，请使用带有扩展名的URL来获得缓存的好处。
+* 本地化自适应表单的注意事项：
+   * 使用URL格式 `http://host:port/content/forms/af/<afName>.<locale>.html` 要请求自适应表单的本地化版本，而不是 `http://host:port/content/forms/af/afName.html?afAcceptLang=<locale>`
+   * [禁用使用浏览器区域设置](supporting-new-language-localization.md#how-localization-of-adaptive-form-works) 对于格式为的URL `http://host:port/content/forms/af/<adaptivefName>.html`.
+   * 当您使用URL格式时 `http://host:port/content/forms/af/<adaptivefName>.html`、和 **[!UICONTROL 使用浏览器区域设置]** 在configuration manager中处于禁用状态时，会提供自适应表单的非本地化版本。 非本地化语言是开发自适应表单时使用的语言。 不会考虑为您的浏览器配置的区域设置（浏览器区域设置），并且会提供自适应表单的非本地化版本。
+   * 当您使用URL格式时 `http://host:port/content/forms/af/<adaptivefName>.html`、和 **[!UICONTROL 使用浏览器区域设置]** 在configuration manager中，会提供自适应表单的本地化版本（如果可用）。 本地化的自适应表单的语言基于为您的浏览器配置的区域设置（浏览器区域设置）。 它可能会导致 [仅缓存自适应表单的第一个实例]. 要防止问题在实例中发生，请参阅 [故障排除](#only-first-insatnce-of-adptive-forms-is-cached).
 
-### 在Dispatcher上啟用快取
+### 在Dispatcher上启用缓存
 
-執行以下列出的步驟，在Dispatcher上啟用和設定快取調適型表單：
+执行以下列出的步骤以在Dispatcher上启用和配置缓存自适应表单：
 
-1. 為您環境的每個發佈執行個體開啟以下URL，並 [為您的環境的發佈執行個體啟用排清代理程式](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html#invalidating-dispatcher-cache-from-a-publishing-instance)：
+1. 为环境的每个发布实例打开以下URL，并 [为环境的发布实例启用刷新代理](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html#invalidating-dispatcher-cache-from-a-publishing-instance)：
    `http://[server]:[port]]/etc/replication/agents.publish/flush.html`
 
-1. [將以下內容新增到您的dispatcher.any檔案](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#automatically-invalidating-cached-files)：
+1. [将以下内容添加到您的dispatcher.any文件](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#automatically-invalidating-cached-files)：
 
    ```JSON
       /invalidate
@@ -89,12 +89,12 @@ ht-degree: 1%
       }
    ```
 
-   當您新增上述專案時：
+   添加以上内容时：
 
-   * 最適化表單會保留在快取中，直到更新版本的表單未發佈為止。
+   * 自适应表单会保留在缓存中，直到未发布该表单的更新版本。
 
-   * 發佈最適化表單中參考的較新版本資源時，受影響的自適應表單會自動失效。 參考資源的自動失效有一些例外。 如需例外的因應措施，請參閱 [疑難排解](#troubleshooting) 區段。
-1. [新增以下rules dispatcher.any或自訂規則檔案](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#specifying-the-documents-to-cache). 它不包括不支援快取的URL。 例如，互動式通訊。
+   * 发布自适应表单中引用的较新版本的资源时，受影响的自适应表单会自动失效。 引用资源的自动失效有一些例外。 有关例外的解决方法，请参见 [故障排除](#troubleshooting) 部分。
+1. [添加以下规则dispatcher.any或自定义规则文件](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#specifying-the-documents-to-cache). 它不包括不支持缓存的URL。 例如，交互式通信。
 
    ```JSON
       /0000 {
@@ -118,7 +118,7 @@ ht-degree: 1%
       }
    ```
 
-1. [將下列引數新增至忽略URL引數清單](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#ignoring-url-parameters)：
+1. [将以下参数添加到忽略URL参数列表](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#ignoring-url-parameters)：
 
    ```JSON
       /ignoreUrlParams {
@@ -128,33 +128,33 @@ ht-degree: 1%
       }
    ```
 
-您的AEM環境已設定為快取最適化表單。 它會快取所有型別的調適型表單。 如果您需要在傳遞快取頁面之前檢查頁面的使用者存取許可權，請參閱 [快取安全內容](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/permissions-cache.html?lang=zh-Hans).
+您的AEM环境配置为缓存自适应表单。 它会缓存所有类型的自适应表单。 如果您需要在交付缓存页面之前检查页面的用户访问权限，请参阅 [缓存受保护内容](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/permissions-cache.html?lang=zh-Hans).
 
 ## 疑难解答 {#troubleshooting}
 
-### 某些包含影像或影片的最適化表單不會從Dispatcher快取中自動失效 {#videos-or-images-not-auto-invalidated}
+### 某些包含图像或视频的自适应表单不会从Dispatcher缓存中自动失效 {#videos-or-images-not-auto-invalidated}
 
 #### 问题 {#issue1}
 
-當您透過資產瀏覽器選擇影像或視訊並新增至調適型表單時，且這些影像和視訊是在Assets編輯器中編輯，包含這類影像的調適型表單不會自動從Dispatcher快取中失效。
+当您通过资产浏览器选择图像或视频并将其添加到自适应表单并在资产编辑器中编辑这些图像或视频时，包含此类图像的自适应表单不会自动从Dispatcher缓存中失效。
 
 #### 解决方案 {#Solution1}
 
-發佈影像和影片後，請明確取消發佈並發佈參照這些資產的最適化表單。
+发布图像和视频后，明确取消发布并发布引用这些资产的自适应表单。
 
-### 僅快取最適化表單的第一個執行個體 {#only-first-instance-of-adaptive-forms-is-cached}
+### 仅缓存自适应表单的第一个实例 {#only-first-instance-of-adaptive-forms-is-cached}
 
 #### 问题 {#issue3}
 
-最適化表單URL沒有任何本地化資訊時，以及 **[!UICONTROL 使用瀏覽器地區設定]** 在configuration manager中啟用，會提供最適化表單的本地化版本，而且只會快取最適化表單的第一個執行個體，並傳送給每個後續使用者。
+当自适应表单URL没有任何本地化信息时，以及 **[!UICONTROL 使用浏览器区域设置]** 在启用configuration manager时，会提供自适应表单的本地化版本，并且只缓存自适应表单的第一个实例并将其交付给每个后续用户。
 
 #### 解决方案 {#Solution3}
 
-執行以下步驟以解決問題：
+执行以下步骤来解决问题：
 
-1. 開啟「conf.d/httpd-dispatcher.conf」或任何其他設定為在執行階段載入的設定檔。
+1. 打开conf.d/httpd-dispatcher.conf或配置为在运行时加载的任何其他配置文件。
 
-1. 將下列程式碼新增至您的檔案並儲存。 此範常式式碼會加以修改以符合您的環境。
+1. 将以下代码添加到文件中并保存。 它是一个示例代码，可对其进行修改以适合您的环境。
 
 ```XML
    <VirtualHost *:80>

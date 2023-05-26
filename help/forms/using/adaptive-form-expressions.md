@@ -1,7 +1,7 @@
 ---
-title: 最適化表單運算式
+title: 自适应表单表达式
 seo-title: Adaptive Form Expressions
-description: 使用調適型表單運算式來新增自動驗證、計算，以及開啟或關閉區段的可見度。
+description: 使用自适应表单表达式可添加自动验证、计算以及打开或关闭部分的可见性。
 seo-description: Use adaptive forms expressions to add automatic validation, calculation, and turn visibility of a section on or off.
 uuid: c274dce5-8b87-472f-bff5-53b246fa6584
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -17,221 +17,221 @@ ht-degree: 0%
 
 ---
 
-# 最適化表單運算式{#adaptive-form-expressions}
+# 自适应表单表达式{#adaptive-form-expressions}
 
-適用性表單透過動態指令碼功能，為使用者提供最佳化和簡化的表單填寫體驗。 它可讓您編寫運算式以新增各種行為，例如動態顯示/隱藏欄位和面板。 它也可讓您新增計算欄位、讓欄位成為唯讀、新增驗證邏輯等。 動態行為取決於使用者輸入或預填的資料。
+自适应表单为具有动态脚本编写功能的最终用户提供经过优化、简化的表单填写体验。 它允许您编写表达式以添加各种行为，如动态显示/隐藏字段和面板。 它还允许您添加计算字段、使字段只读、添加验证逻辑等。 动态行为基于用户输入或预填充的数据。
 
-JavaScript是適用性表單的運算式語言。 所有運算式都是有效的JavaScript運算式，且使用適用性表單指令碼模型API。 這些運算式會傳回某些型別的值。 如需最適化表單類別、事件、物件和公用API的完整清單，請參閱 [適用性表單的JavaScript資料庫API參考](https://helpx.adobe.com/experience-manager/6-5/forms/javascript-api/index.html).
+JavaScript是自适应表单的表达式语言。 所有表达式都是有效的JavaScript表达式，并且使用自适应表单脚本模型API。 这些表达式返回某些类型的值。 有关自适应表单类、事件、对象和公共API的完整列表，请参阅 [自适应表单的JavaScript库API参考](https://helpx.adobe.com/experience-manager/6-5/forms/javascript-api/index.html).
 
-## 撰寫運算式的最佳作法 {#best-practices-for-writing-expressions}
+## 编写表达式的最佳实践 {#best-practices-for-writing-expressions}
 
-* 在撰寫運算式時，若要存取欄位和面板，您可以使用欄位或面板的名稱。 若要存取欄位的值，請使用value屬性。 例如，`field1.value`
-* 對表單中的欄位和面板使用唯一名稱。 它有助於避免在撰寫運算式時所使用的欄位名稱發生任何可能的衝突。
-* 撰寫多行運算式時，請使用分號來終止陳述式。
+* 在编写表达式时，要访问字段和面板，您可以使用字段或面板的名称。 要访问字段的值，请使用value属性。 例如，`field1.value`
+* 为表单中的字段和面板使用唯一名称。 它有助于避免在编写表达式时所使用的字段名称发生任何可能的冲突。
+* 编写多行表达式时，请使用分号终止语句。
 
-## 涉及重複面板之運算式的最佳作法 {#best-practices-for-expressions-involving-repeating-panel}
+## 涉及重复面板的表达式的最佳实践 {#best-practices-for-expressions-involving-repeating-panel}
 
-重複面板是使用指令碼API或預先填入的資料，以動態方式新增或移除的面板例項。 如需有關使用重複面板的詳細資訊，請參閱 [建立具有可重複區段的表單](/help/forms/using/creating-forms-repeatable-sections.md).
+重复面板是使用脚本API或预填充数据动态添加或移除的面板的实例。 有关使用重复面板的详细信息，请参阅 [创建包含可重复部分的表单](/help/forms/using/creating-forms-repeatable-sections.md).
 
-* 若要建立重複面板，請在面板對話方塊中開啟設定，並將最大計數欄位的值設定為大於1。
-* 面板重複設定的最小計數值可以是一個或多個，但不能超過最大計數值。
-* 當運算式參考重複面板的欄位時，運算式中的欄位名稱會解析為最接近的重複元素。
-* 調適型表單提供一些特殊函式，可簡化可重複面板的計算，例如sum、count、min、max、filter等等。 如需完整的函式清單，請參閱 [適用性表單的JavaScript資料庫API參考](https://helpx.adobe.com/aem-forms/6/javascript-api/af.html)
-* 用於操作重複面板例項的API包括：
+* 要创建重复面板，请在面板对话框中，打开设置，并将最大计数字段的值设置为大于1。
+* 面板重复设置的最小计数值可以是一个或多个，但不能超过最大计数值。
+* 当表达式引用重复面板的字段时，表达式中的字段名称解析为最接近的重复元素。
+* 自适应表单提供了一些特殊函数来简化可重复面板的计算，例如sum、count、min、max、filter等。 有关函数的完整列表，请参见 [自适应表单的JavaScript库API参考](https://helpx.adobe.com/aem-forms/6/javascript-api/af.html)
+* 用于处理重复面板的实例的API包括：
 
-   * 若要新增面板執行個體： `panel1.instanceManager.addInstance()`
-   * 若要取得面板重複索引： `panel1.instanceIndex`
-   * 若要取得面板的instanceManager： `_panel1 or panel1.instanceManager`
-   * 若要移除面板的執行個體： `_panel1.removeInstance(panel1.instanceIndex)`
+   * 要添加面板实例，请执行以下操作： `panel1.instanceManager.addInstance()`
+   * 要获取面板重复索引，请执行以下操作： `panel1.instanceIndex`
+   * 获取面板的instanceManager： `_panel1 or panel1.instanceManager`
+   * 要删除面板的实例，请执行以下操作： `_panel1.removeInstance(panel1.instanceIndex)`
 
-## 運算式型別 {#expression-types}
+## 表达式类型 {#expression-types}
 
-在調適型表單中，您可以撰寫運算式來新增行為，例如動態顯示/隱藏欄位和面板。 您也可以撰寫運算式來新增計算欄位、將欄位設為唯讀、驗證邏輯等等。 調適型表單支援下列運算式：
+在自适应表单中，您可以编写表达式以添加行为，如动态显示/隐藏字段和面板。 您还可以编写表达式以添加计算字段、使字段只读、验证逻辑等。 自适应表单支持以下表达式：
 
-* **[存取運算式](#access-expression-enablement-expression)**：啟用/停用欄位。
-* **[計算運算式](#calculate-expression)**：用於自動計算欄位的值。
-* **[點按運算式](#click-expression)**：處理按鈕點選事件的動作。
-* **[初始化指令碼](#initialization-script)：** 在欄位初始化時執行動作。
-* **[選項運算式](#options-expression)**：以動態填入下拉式清單。
-* **[摘要運算式](#summary)**：動態計算摺疊式功能表的標題。
-* **[驗證運算式](#validate-expression)**：驗證欄位。
-* **[值認可指令碼](#value-commit-script)：** 在欄位值變更後變更表單元件。
-* **[可見度運算式](#visibility-expression)**：控制欄位和面板的可見度。
-* **[步驟完成運算式](#step-completion-expression)**：防止使用者進入精靈的下一個步驟。
+* **[访问表达式](#access-expression-enablement-expression)**：启用/禁用字段。
+* **[计算表达式](#calculate-expression)**：用于自动计算字段的值。
+* **[单击表达式](#click-expression)**：用于处理按钮的单击事件上的操作。
+* **[初始化脚本](#initialization-script)：** 初始化字段时执行操作。
+* **[Options表达式](#options-expression)**：用于动态填充下拉列表。
+* **[摘要表达式](#summary)**：动态计算折叠的标题。
+* **[验证表达式](#validate-expression)**：验证字段。
+* **[值提交脚本](#value-commit-script)：** 在字段值更改后更改表单的组件。
+* **[可见性表达式](#visibility-expression)**：控制字段和面板的可见性。
+* **[步骤完成表达式](#step-completion-expression)**：防止用户执行向导的下一步。
 
-### 存取運算式（啟用運算式） {#access-expression-enablement-expression}
+### 访问表达式（启用表达式） {#access-expression-enablement-expression}
 
-您可以使用存取運算式來啟用或停用欄位。 如果運算式使用欄位的值，則每當欄位的值變更時，就會擷取運算式。
+您可以使用访问表达式来启用或禁用字段。 如果表达式使用字段的值，则每当字段的值更改时，都会触发表达式。
 
-**套用至**：欄位
+**应用于**：字段
 
-**傳回型別**：運算式會傳回布林值，代表欄位已啟用或已停用。 **true** 表示欄位已啟用，而且 **false** 表示欄位已停用。
+**返回类型**：表达式返回布尔值，表示字段是启用还是禁用。 **true** 表示该字段已启用，并且 **false** 表示字段已禁用。
 
-**範例**：若要僅在 **欄位1** 設為 **X**，存取運算式為： `field1.value == "X"`
+**示例**：仅在的值为时启用字段 **字段1** 设置为 **X**，访问表达式为： `field1.value == "X"`
 
-### 計算運算式 {#calculate-expression}
+### 计算表达式 {#calculate-expression}
 
-計算運算式可用來使用運算式自動計算欄位的值。 通常，這類運算式會使用其他欄位的值屬性。 例如， `field2.value + field3.value`. 每當值 `field2`或 `field3`會變更、重新觸發運算式並重新計算值。
+计算表达式用于使用表达式自动计算字段的值。 通常，此类表达式使用其他字段的值属性。 例如， `field2.value + field3.value`. 每当值 `field2`或 `field3`更改、重新触发表达式并重新计算值。
 
-**套用至**：欄位
+**应用于**：字段
 
-**傳回型別**：運算式會傳回與顯示運算式結果的欄位相容的值（例如decimal）。
+**返回类型**：表达式返回与显示表达式结果的字段兼容的值（例如，decimal）。
 
-**範例**：計算運算式會顯示中兩個欄位的總和 **欄位1** 為：
+**示例**：用于显示中两个字段总和的计算表达式 **字段1** 为：
 `field2.value + field3.value`
 
-### 按一下運算式 {#click-expression}
+### 单击表达式 {#click-expression}
 
-click運算式會處理對按鈕的點選事件執行的動作。 GuideBridge開箱即用地提供API來執行各種功能，例如提交、驗證和點選運算式一起使用。 如需API的完整清單，請參閱 [GuideBridge API](https://helpx.adobe.com/aem-forms/6/javascript-api/GuideBridge.html).
+click表达式处理对按钮的单击事件执行的操作。 GuideBridge开箱即用地提供API来执行各种功能，例如提交、验证与click表达式一起使用的功能。 有关API的完整列表，请参阅 [GuideBridge API](https://helpx.adobe.com/aem-forms/6/javascript-api/GuideBridge.html).
 
-**套用至**：按鈕欄位
+**应用于**：按钮字段
 
-**傳回型別**：click運算式未傳回任何值。 如果有任何運算式傳回值，則會忽略該值。
+**返回类型**：click表达式未返回任何值。 如果有任何表达式返回一个值，则忽略该值。
 
-**範例**：填入文字方塊 **textbox1** 具有值的按鈕的點選動作 **AEM Forms**，則按鈕的點選運算式為 `textbox1.value="AEM Forms"`
+**示例**：填充文本框 **textbox1** 具有值的按钮的点击操作 **AEM Forms**，则按钮的click表达式为 `textbox1.value="AEM Forms"`
 
 ### 初始化脚本 {#initialization-script}
 
-初始化最適化表單時會觸發初始化指令碼。 視情況而定，初始化指令碼會以下列方式運作：
+初始化自适应表单时会触发初始化脚本。 根据场景，初始化脚本的行为方式如下：
 
-* 當適用性表單在轉譯時沒有資料預填，初始化指令碼會在表單初始化後執行。
-* 使用資料預填來轉譯調適型表單時，指令碼會在預填作業完成後執行。
-* 觸發最適化表單的伺服器端重新驗證時，會執行初始化指令碼。
+* 在渲染自适应表单时没有数据预填充，初始化脚本在表单初始化后运行。
+* 使用数据预填充呈现自适应表单时，脚本会在预填充操作完成后运行。
+* 触发自适应表单的服务器端重新验证时，执行初始化脚本。
 
-**套用至：** 欄位和面板
+**适用于：** 字段和面板
 
-**傳回型別：** 初始化指令碼運算式未傳回任何值。 如果有任何運算式傳回值，則會忽略該值。
+**返回类型：** 初始化脚本表达式未返回任何值。 如果有任何表达式返回一个值，则忽略该值。
 
-**範例：** 在資料預填案例中，以預設值填入欄位 `'Adaptive Forms'` 當它們的值儲存為null時，初始化指令碼運算式為：
+**示例：** 在数据预填充方案中，使用默认值填充字段 `'Adaptive Forms'` 当它们的值保存为null时，初始化脚本表达式为：
 `if(this.value==null) this.value='Adaptive Forms';`
 
-### 選項運算式 {#options-expression}
+### 选项表达式 {#options-expression}
 
-選項運算式可用來動態填入下拉式清單欄位的選項。
+选项表达式用于动态填充下拉列表字段的选项。
 
-**套用至**：下拉式清單欄位
+**应用于**：下拉列表字段
 
-**傳回型別**：選項運算式會傳回字串值的陣列。 每個值都可以是簡單字串，例如 **男性**，或採用索引鍵=值配對格式，例如 **1=男性**
+**返回类型**：options表达式返回字符串值的数组。 每个值都可以是一个简单的字符串，例如 **男性**，或者采用键=值对格式，例如 **1=男性**
 
-**範例**：若要根據其他欄位的值填入欄位的值，請提供簡單的選項運算式。 例如，若要填入欄位， **兒童數量**，根據 **婚姻狀況** 在另一個欄位中表達，運算式為：
+**示例**：要根据其他字段的值填充字段的值，请提供简单的选项表达式。 例如，要填充字段， **儿童数量**，基于 **婚姻状况** 在另一个字段中表示，其表达式为：
 
 **`marital_status.value == "married" ? ["1=One", "2=two"] : ["0=Zero"]`.**
 
-每當值 **writeral_status** 欄位變更，則會擷取運算式。 您也可以填入REST服務的下拉式清單。 如需詳細資訊，請參閱 [動態填入下拉式清單](../../forms/using/dynamically-populate-dropdowns.md).
+每当值 **markin_status** 字段发生更改时，将检索表达式。 您还可以从REST服务填充下拉列表。 有关详细信息，请参阅 [动态填充下拉列表](../../forms/using/dynamically-populate-dropdowns.md).
 
-### 摘要運算式 {#summary}
+### 摘要表达式 {#summary}
 
-摘要運算式會動態計算摺疊式功能表版面面板的子面板標題。 您可以在規則中指定摘要運算式，這會使用表單欄位或自訂邏輯來評估標題。 運算式會在表單初始化時執行。 如果您要預先填寫表單，運算式會在資料預先填寫後或運算式中使用的相依欄位值變更時執行。
+摘要表达式可动态计算折叠布局面板的子面板的标题。 您可以在规则中指定摘要表达式，该表达式使用表单字段或自定义逻辑来评估标题。 表达式在表单初始化时执行。 如果您预填表单，则表达式会在预填数据后或表达式中使用的依赖字段的值发生更改时执行。
 
-摘要運算式通常用於重複摺疊式功能表配置面板的子項，以為每個子項面板提供有意義的標題。
+摘要表达式通常用于重复折叠布局面板的子面板，以便为每个子面板提供有意义的标题。
 
-**套用至：** 面板是版面配置為Accordion之面板的直接子系。
+**适用于：** 作为其布局配置为Accordion的面板的直接子项的面板。
 
-**傳回型別：** 運算式會傳回成為摺疊式功能表標題的字串。
+**返回类型：** 表达式返回一个字符串，它将成为折叠的标题。
 
-**範例：** &quot;帳號：&quot; + textbox1.value
+**示例：** &quot;帐号：&quot; + textbox1.value
 
-### 驗證運算式 {#validate-expression}
+### 验证表达式 {#validate-expression}
 
-驗證運算式是使用給定的運算式來驗證欄位。 通常，這類運算式會使用規則運算式以及欄位值來驗證欄位。 系統會擷取運算式，並在欄位值發生任何變更時，重新計算欄位的驗證狀態。
+验证表达式用于使用给定的表达式验证字段。 通常，此类表达式使用正则表达式以及字段值来验证字段。 将检索表达式，并根据字段值的任何更改重新计算字段的验证状态。
 
-**套用至**：欄位
+**应用于**：字段
 
-**傳回型別**：運算式傳回布林值，代表欄位的驗證狀態。 值 **false** 表示欄位無效，並且 **true** 表示欄位有效。
-**範例**：對於代表UK郵遞區號的欄位，驗證運算式為：
+**返回类型**：表达式返回布尔值，表示字段的验证状态。 值 **false** 表示该字段无效，并且 **true** 表示字段有效。
+**示例**：对于表示UK邮政编码的字段，验证表达式为：
 
 (**this.value** &amp;&amp; `this.value.match(/^(GIR 0AA|[A-Z]{1,2}\d[A-Z0-9]? ?[0-9][A-Z]{2}\s*)$/i) == null) ? false : true`
 
-在上述範例中，如果非空白值不符合模式，運算式會傳回 **false** 表示欄位無效。
+在上例中，如果非空值与模式不匹配，则表达式将返回 **false** 表示该字段无效。
 
 >[!NOTE]
 >
->如果您撰寫非必要或必要欄位的驗證運算式，則無論欄位的可見度狀態為何，都會評估運算式。 若要停止隱藏欄位的驗證，請將Initialization或Value Commit指令碼中的validationsDisabled屬性設定為true。 例如，`this.validationsDisabled=true`
+>如果您为非必填或必填字段编写验证表达式，则无论字段的可见性状态如何，都将计算该表达式。 要停止对隐藏字段的验证，请将Initialization或Value Commit脚本中的validationsDisabled属性设置为true。 例如，`this.validationsDisabled=true`
 
 ### 值提交脚本 {#value-commit-script}
 
-當出現下列情況時，就會觸發「值認可」指令碼：
+值提交脚本在以下情况下触发：
 
-* 使用者從UI變更欄位的值。
-* 欄位的值會因其他欄位的變更而以程式設計方式變更。
+* 用户从UI更改字段的值。
+* 字段的值会因其他字段中的更改而以编程方式更改。
 
-**套用至：** 欄位
+**适用于：** 字段
 
-**傳回型別：** 值認可指令碼運算式未傳回任何值。 如果有任何運算式傳回值，則會忽略該值。
+**返回类型：** 值commit脚本表达式未返回任何值。 如果有任何表达式返回一个值，则忽略该值。
 
-**範例：** 若要在認可時將欄位中輸入的字母大小寫轉換為大寫，值認可運算式為：
+**示例：** 要在提交时将字段中输入的字母大小写转换为大写，值commit表达式为：
 `this.value=this.value.toUpperCase()`
 
 >[!NOTE]
 >
->當欄位的值以程式設計方式變更時，您可以停用值認可指令碼的執行。 若要這麼做，請前往https://&#39;[伺服器]：[連線埠]&#39;/system/console/configMgr和變更 **最適化Forms版本相容性** 至 **AEM Forms 6.1**. 此後，只有當使用者從UI變更欄位的值時，才會執行值認可指令碼。
+>以编程方式更改字段的值时，您可以禁用值提交脚本的执行。 为此，请访问https://&#39;[服务器]：[端口]&#39;/system/console/configMgr和更改 **用于兼容性的自适应Forms版本** 到 **AEM Forms 6.1**. 之后，仅当用户从UI更改字段的值时执行值提交脚本。
 
 ### 可见性表达式 {#visibility-expression}
 
-「可見性」運算式可用來控制欄位/面板的可見性。 通常，可見性運算式會使用欄位的值屬性，每當該值變更時就會重新觸發。
+“可见性”表达式用于控制字段/面板的可见性。 通常，可见性表达式使用字段的值属性，并且每当该值更改时都会被触发。
 
-**套用至**：欄位和面板
+**应用于**：字段和面板
 
-**傳回型別**：運算式傳回布林值，代表欄位/面板是否可見。 **false** 表示欄位或面板不可見，而true表示欄位或面板可見。
+**返回类型**：表达式返回布尔值，表示字段/面板是否可见。 **false** 表示字段或面板不可见，true表示字段或面板可见。
 
-**範例**：適用於只有當 **欄位1** 設為 **男性**，可見度運算式為： `field1.value == "Male"`
+**示例**：对于仅在值为时才可见的面板 **字段1** 设置为 **男性**，可见性表达式为： `field1.value == "Male"`
 
-### 步驟完成運算式 {#step-completion-expression}
+### 步骤完成表达式 {#step-completion-expression}
 
-步驟完成運算式用於防止使用者進入精靈配置的下一個步驟。 當面板具有精靈版面配置（一次顯示一個步驟的多步驟表單）時，會使用這些運算式。 只有當目前區段中的所有必要值都已填滿且有效時，使用者才能移至下一個步驟、面板或子區段。
+步骤完成表达式用于防止用户进入向导布局的下一步。 当面板具有向导布局（多步表单，一次显示一个步骤）时，将使用这些表达式。 仅当当前部分中的所有必需值均已填写且有效时，用户才能移动到下一步、面板或子部分。
 
-**套用至**：專案版面設定為精靈的面板。
+**应用于**：项目布局设置为向导的面板。
 
-**傳回型別**：運算式傳回布林值，代表目前面板是否有效。 **True** 表示目前面板有效，且使用者可導覽至下一個面板。
+**返回类型**：表达式返回一个布尔值，表示当前面板是否有效。 **True** 表示当前面板有效，用户可以导航到下一个面板。
 
-**範例**：在以各種面板組織的表單中，在導覽至下一個面板之前，會驗證目前的面板。 在這種情況下，會使用步驟完成運算式。 一般而言，這些運算式會使用GuideBridge驗證API。 步驟完成運算式的範例為：
+**示例**：在以各种面板组织的表单中，在导航到下一个面板之前，将验证当前面板。 在这种情况下，将使用步骤完成表达式。 通常，这些表达式使用GuideBridge验证API。 步骤完成表达式的示例如下：
 `window.guideBridge.validate([],this.panel.navigationContext.currentItem.somExpression)`
 
-## 最適化表單中的驗證 {#validations-in-adaptive-form}
+## 自适应表单中的验证 {#validations-in-adaptive-form}
 
-有多種方法可以將欄位驗證新增至最適化表單。 如果在欄位上新增驗證檢查， **True** 表示在欄位中輸入的值有效。 **False** 表示值無效。 如果您在欄位中或欄位外執行Tab鍵，則不會產生錯誤訊息。
+有多种方法可以将字段验证添加到自适应表单。 如果向字段添加验证检查， **True** 表示在字段中输入的值有效。 **False** 表示值无效。 如果在字段中执行跳出和插入操作，则不会生成错误消息。
 
-在欄位上新增驗證的方法如下：
+在字段中添加验证的方法包括：
 
 ### 必填 {#required}
 
-若要將元件設為必要元件，請在 **編輯** 元件對話方塊中，您可以選取選項 **標題和文字>必填**. 您也可以新增適當的 **必要訊息** （選擇性）。.
+要将组件设为必需，请在 **编辑** 对话框，您可以选择选项 **标题和文本>必需**. 您还可以添加相应的 **必需消息** （可选）以及。.
 
-### 驗證模式 {#validation-patterns}
+### 验证模式 {#validation-patterns}
 
-一個欄位有多個現成的驗證模式。 若要選取驗證模式，請在 **編輯** 在元件的對話方塊中，找到 **模式** 區段並選取 **圖樣**. 您可以在中建立自己的自訂驗證模式 **圖樣** 文字方塊。 已傳回驗證狀態 **True** 僅當填入的資料符合驗證模式時，否則 **False** 會傳回。 若要撰寫您自己的自訂驗證模式，請參閱 [HTML5表單的Picture子句支援](/help/forms/using/picture-clause-support.md).
+字段有多个现成的验证模式。 要选择验证模式，请在 **编辑** 在组件的对话框中，找到 **模式** 部分并选择 **模式**. 您可以在中创建自己的自定义验证模式 **图案** 文本框。 返回验证状态 **True** 仅当填写的数据符合验证模式时，否则 **False** 会返回。 要编写您自己的自定义验证模式，请参阅 [HTML5表单的Picture子句支持](/help/forms/using/picture-clause-support.md).
 
-### 驗證運算式 {#validation-expressions}
+### 验证表达式 {#validation-expressions}
 
-欄位驗證也可使用不同欄位上的運算式來計算。 這些運算式會寫入內部 **驗證指令碼** 的欄位 **指令碼** 索引標籤/ **編輯** 元件的對話方塊。 欄位的驗證狀態取決於運算式傳回的值。 如需如何撰寫這類運算式的詳細資訊，請參閱 [驗證運算式](../../forms/using/adaptive-form-expressions.md#p-validate-expression-p).
+字段的验证也可以使用不同字段上的表达式来计算。 这些表达式在内部编写 **验证脚本** 字段 **脚本** 选项卡/ **编辑** 组件的对话框。 字段的验证状态取决于表达式返回的值。 有关如何编写此类表达式的信息，请参见 [验证表达式](../../forms/using/adaptive-form-expressions.md#p-validate-expression-p).
 
 ## 附加信息 {#additional-information}
 
-### 使用欄位顯示格式 {#using-field-display-format}
+### 使用字段显示格式 {#using-field-display-format}
 
-「顯示格式」可用於以不同格式顯示資料。 例如，您可以使用顯示格式來顯示含有連字型大小、郵遞區號格式或日期選擇器的電話號碼。 這些顯示模式可從 **模式** 元件之「編輯」對話方塊的區段。 您可以撰寫與上述驗證模式類似的自訂顯示模式。
+“显示格式”可用于以不同格式显示数据。 例如，您可以使用显示格式显示带有连字符的电话号码、邮政编码格式或日期选取器。 这些显示模式可从 **模式** 组件的“编辑”对话框的一部分。 您可以编写与上述验证模式类似的自定义显示模式。
 
 ### GuideBridge - API和事件 {#guidebridge-apis-and-events}
 
-GuideBridge是API的集合，可用來與瀏覽器中記憶體模型中的調適型表單互動。 如需Guide Bridge API、類別方法、公開事件的詳細介紹，請參閱 [適用性表單的JavaScript資料庫API參考](https://helpx.adobe.com/aem-forms/6/javascript-api/).
+GuideBridge是API的集合，可用于与浏览器内存模型中的自适应表单交互。 有关Guide Bridge API、类方法、公开事件的详细介绍，请参阅 [自适应表单的JavaScript库API参考](https://helpx.adobe.com/aem-forms/6/javascript-api/).
 
 >[!NOTE]
 >
->建議不要在運算式中使用GuideBridge事件接聽程式。
+>建议不要在表达式中使用GuideBridge事件侦听器。
 
-#### 在各種運算式中使用GuideBridge {#guidebridge-usage-in-various-expressions}
+#### GuideBridge在各种表达式中的用法 {#guidebridge-usage-in-various-expressions}
 
-* 若要重設表單欄位，您可以觸發 `guideBridge.reset()` 按鈕的點選運算式上的API。 同樣地，也有提交API，可作為click運算式呼叫 `guideBridge.submit()`**.**
+* 要重置表单字段，您可以触发 `guideBridge.reset()` 按钮的点击表达式上的API。 同样，还有一个提交API，它可以用点击表达式来调用 `guideBridge.submit()`**.**
 
-* 您可以使用 `setFocus()` 用於跨不同欄位或面板設定焦點的API （面板的焦點會自動設定為第一個欄位）。 `setFocus()`提供廣泛的導覽選項，例如跨面板導覽、上一個/下一個周遊、將焦點設定為特定欄位等等。 例如，若要移至下一個面板，您可以使用： `guideBridge.setFocus(this.panel.somExpression, 'nextItem').`
+* 您可以使用 `setFocus()` 用于跨不同字段或面板设置焦点的API（对于面板焦点，自动设置为第一个字段）。 `setFocus()`提供了一系列导航选项，例如跨面板导航、上一个/下一个遍历、将焦点设置为特定字段等等。 例如，要移到下一个面板，您可以使用： `guideBridge.setFocus(this.panel.somExpression, 'nextItem').`
 
-* 若要驗證最適化表單或其特定面板，請使用 `guideBridge.validate(errorList, somExpression).`
+* 要验证自适应表单或其特定面板，请使用 `guideBridge.validate(errorList, somExpression).`
 
-#### 在運算式外部使用GuideBridge  {#using-guidebridge-outside-expressions-nbsp}
+#### 在表达式外部使用GuideBridge  {#using-guidebridge-outside-expressions-nbsp}
 
-您也可以在運算式之外使用GuideBridge API。 例如，您可以使用GuideBridge API來設定託管最適化表單和表單模型的頁面HTML之間的通訊。 此外，您也可以設定來自託管表單之Iframe父級的值。
+您还可以在表达式之外使用GuideBridge API。 例如，您可以使用GuideBridge API设置托管自适应表单的页面HTML与表单模型之间的通信。 此外，您还可以设置来自托管表单的Iframe父级的值。
 
-若要針對上述範例使用GuideBridge API，請擷取GuideBridge的例項。 若要擷取執行處理，請接聽 `bridgeInitializeStart`事件 `window`物件：
+要将GuideBridge API用于上述示例，请捕获GuideBridge的一个实例。 要捕获实例，请侦听 `bridgeInitializeStart`事件 `window`对象：
 
 ```javascript
 window.addEventListener("bridgeInitializeStart", function(evnt) {
@@ -253,15 +253,15 @@ window.addEventListener("bridgeInitializeStart", function(evnt) {
 
 >[!NOTE]
 >
->在AEM中，最好在clientLib中撰寫程式碼，並將其包含在頁面（頁面的header.jsp或footer.jsp）中
+>在AEM中，最好在clientLib中编写代码并将其包含在页面（页面的header.jsp或footer.jsp）中
 
-若要在初始化表單後使用GuideBridge (請 `bridgeInitializeComplete` 事件已傳送)，請使用取得GuideBridge例項 `window.guideBridge`. 您可以使用檢查GuideBridge初始化狀態 `guideBride.isConnected` API。
+在初始化表单后使用GuideBridge(在 `bridgeInitializeComplete` 事件已调度)，使用以下方式获取GuideBridge实例 `window.guideBridge`. 您可以使用检查GuideBridge初始化状态 `guideBride.isConnected` API。
 
-#### GuideBridge事件 {#guidebridge-events}
+#### GuideBridge活动 {#guidebridge-events}
 
-GuideBridge也會在託管頁面上提供某些外部指令碼事件。 外部指令碼可監聽這些事件並執行各種作業。 例如，每當表單中的使用者名稱變更時，頁面標頭中顯示的名稱也會變更。 如需此類事件的詳細資訊，請參閱 [適用性表單的JavaScript資料庫API參考](https://helpx.adobe.com/aem-forms/6/javascript-api/GuideBridge.html).
+GuideBridge还为托管页面上的外部脚本提供了某些事件。 外部脚本可以侦听这些事件并执行各种操作。 例如，每当表单中的用户名发生更改时，页面标题中显示的名称也会更改。 有关此类事件的更多详细信息，请参阅 [自适应表单的JavaScript库API参考](https://helpx.adobe.com/aem-forms/6/javascript-api/GuideBridge.html).
 
-使用下列程式碼來註冊處理常式：
+使用以下代码注册处理程序：
 
 ```javascript
 guideBridge.on("elementValueChanged", function (event, data)  {
@@ -271,19 +271,19 @@ guideBridge.on("elementValueChanged", function (event, data)  {
 });
 ```
 
-### 建立欄位的自訂模式 {#creating-custom-patterns-for-a-field}
+### 为字段创建自定义模式 {#creating-custom-patterns-for-a-field}
 
-如上所述，調適型表單可讓作者提供驗證或顯示格式的模式。 除了使用現成可用的模式外，您還可以為最適化表單元件定義可重複使用的自訂模式。 例如，您可以定義文字欄位或數值欄位。 定義之後，您可以在指定元件型別的所有表單中使用這些模式。 例如，您可以為文字欄位建立自訂模式，並在其最適化表單的文字欄位中使用它。 您可以存取元件之「編輯」對話方塊中的「模式」區段，以選取自訂模式。 如需有關陣列定義或格式的詳細資訊，請參閱 [HTML5表單的Picture子句支援](/help/forms/using/picture-clause-support.md).
+如上所述，自适应表单允许作者提供验证模式或显示格式。 除了使用开箱即用模式外，您还可以为自适应表单组件定义可重用的自定义模式。 例如，您可以定义文本字段或数字字段。 定义后，可以在指定类型组件的所有表单中使用这些模式。 例如，您可以为文本字段创建自定义模式，并在其自适应表单的文本字段中使用该模式。 通过访问组件的“编辑”对话框中的“模式”部分，可选择自定义模式。 有关阵列定义或格式的详细信息，请参见 [HTML5表单的Picture子句支持](/help/forms/using/picture-clause-support.md).
 
-執行以下步驟來建立特定欄位型別的自訂模式，並重複用於相同型別的其他欄位：
+执行以下步骤可以为特定字段类型创建自定义模式，并将其重新用于相同类型的其他字段：
 
-1. 導覽至您編寫執行個體上的CRXDE Lite。
-1. 建立資料夾以維護您的自訂模式。 在/apps目錄下，建立sling：folder型別的節點。 例如，以名稱建立節點 `customPatterns`. 在此節點下，建立另一個型別節點 `nt:unstructed` 並為其命名 `textboxpatterns`. 此節點包含您要新增的各種自訂模式。
-1. 開啟已建立節點的「屬性」標籤。 例如，開啟的「屬性」標籤 `textboxpatterns`. 新增 `guideComponentType` 屬性並設定其值為 *fd/af/components/formatter/guideTextBox*.
+1. 在创作实例上导航到CRXDE Lite。
+1. 创建一个文件夹以保留您的自定义模式。 在/apps目录下，创建类型为sling：folder的节点。 例如，创建一个名为的节点 `customPatterns`. 在此节点下，创建另一个类型节点 `nt:unstructed` 并为其命名 `textboxpatterns`. 此节点包含要添加的各种自定义模式。
+1. 打开已创建节点的“属性”选项卡。 例如，打开的“属性”选项卡 `textboxpatterns`. 添加 `guideComponentType` 属性，并将其值设置为 *fd/af/components/formatter/guideTextBox*.
 
-1. 此屬性的值會依您要定義模式的欄位而有所不同。 數值欄位中， `guideComponentType` 屬性為 *fd/af/components/formatter/guideNumericBox*. 「日期挑選器」欄位的值為 *fd/af/components/formatter/guideDatepicker*.&quot;
-1. 您可以將屬性指派給，以新增自訂模式 `textboxpatterns` 節點。 以名稱新增屬性(例如 `pattern1`)，並將其值設定為您要新增的模式。 例如，新增屬性 `pattern1` 值為Fax=text{99-999-9999999}。 此模式適用於您在Adaptive Forms中使用的所有文字方塊。
+1. 此属性的值因要定义模式的字段而异。 对于数字字段，其值 `guideComponentType` 属性为 *fd/af/components/formatter/guideNumericBox*. “日期选取器”字段的值为 *fd/af/components/formatter/guideDatepicker*.”
+1. 您可以通过为添加自定义模式分配属性 `textboxpatterns` 节点。 添加具有名称的属性(例如 `pattern1`)，并将其值设置为要添加的pattern。 例如，添加属性 `pattern1` 值为Fax=text{99-999-9999999}。 该模式适用于您在自适应Forms中使用的所有文本框。
 
-   ![為CrxDe中的欄位建立自訂模式](assets/creating-custom-patterns.png)
+   ![为CrxDe中的字段创建自定义模式](assets/creating-custom-patterns.png)
 
-   建立自訂圖樣
+   创建自定义模式

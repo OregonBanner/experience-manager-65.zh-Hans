@@ -1,7 +1,7 @@
 ---
-title: SPA的動態模型到元件對應
+title: SPA的动态模型到组件映射
 seo-title: Dynamic Model to Component Mapping for SPAs
-description: 本文說明在AEM適用的Javascript SPA SDK中，元件對映動態模型的發生方式。
+description: 本文介绍了在Javascript SPA SDK for AEM中如何实现动态模型到组件的映射。
 seo-description: This article describes how the dynamic model to component mapping occurs in the Javascript SPA SDK for AEM.
 uuid: 337b8d90-efd7-442e-9fac-66c33cc26212
 contentOwner: bohnert
@@ -17,42 +17,42 @@ ht-degree: 0%
 
 ---
 
-# SPA的動態模型到元件對應{#dynamic-model-to-component-mapping-for-spas}
+# SPA的动态模型到组件映射{#dynamic-model-to-component-mapping-for-spas}
 
-本檔案說明在AEM適用的Javascript SPA SDK中，如何進行動態模型與元件對應。
+本文档介绍动态模型到组件的映射如何在Javascript SPA SDK for AEM中发生。
 
 >[!NOTE]
 >
->SPA編輯器是建議解決方案，適用於需要SPA架構使用者端轉譯的專案(例如React或Angular)。
+>对于需要基于SPA框架的客户端渲染(例如React或Angular)的项目，建议使用SPA编辑器。
 
-## 元件對應模組 {#componentmapping-module}
+## 组件映射模块 {#componentmapping-module}
 
-此 `ComponentMapping` 模組以NPM封裝形式提供給前端專案。 它會儲存前端元件，並提供讓單頁應用程式將前端元件對應到AEM資源型別的方法。 如此一來，在剖析應用程式的JSON模型時，便可啟用元件的動態解析度。
+此 `ComponentMapping` 模块作为NPM包提供给前端项目。 它存储前端组件，并为单页应用程序提供一种将前端组件映射到AEM资源类型的方法。 这可以在分析应用程序的JSON模型时启用组件的动态分辨率。
 
-模型中呈現的每個專案都包含 `:type` 公開AEM資源型別的欄位。 掛載後，前端元件可使用從基礎程式庫收到的模型片段來呈現自身。
+模型中显示的每个项目都包含 `:type` 公开AEM资源类型的字段。 安装后，前端组件可以使用从基础库收到的模型片段来渲染自身。
 
-請參閱 [SPA Blueprint](/help/sites-developing/spa-blueprint.md) 檔案，以取得有關模型剖析和模型的前端元件存取權的詳細資訊。
+请参阅 [SPA Blueprint](/help/sites-developing/spa-blueprint.md) 文档，了解有关模型解析和前端组件访问模型的更多信息。
 
-另請參閱npm套件： [https://www.npmjs.com/package/@adobe/aem-spa-component-mapping](https://www.npmjs.com/package/@adobe/aem-spa-component-mapping)
+另请参阅npm包： [https://www.npmjs.com/package/@adobe/aem-spa-component-mapping](https://www.npmjs.com/package/@adobe/aem-spa-component-mapping)
 
-## 模型導向的單頁應用程式 {#model-driven-single-page-application}
+## 模型驱动的单页应用程序 {#model-driven-single-page-application}
 
-運用AEM適用的Javascript SPA SDK的單頁應用程式是模型導向的：
+利用Javascript SPA SDK for AEM的单页应用程序是模型驱动的：
 
-1. 前端元件需自行註冊至 [元件對應存放區](/help/sites-developing/spa-dynamic-model-to-component-mapping.md#componentmapping-module).
-1. 然後 [容器](/help/sites-developing/spa-blueprint.md#container)，在模型由提供之後， [模型提供者](/help/sites-developing/spa-blueprint.md#the-model-provider)，反複執行其模型內容( `:items`)。
+1. 前端组件向 [组件映射存储](/help/sites-developing/spa-dynamic-model-to-component-mapping.md#componentmapping-module).
+1. 然后 [容器](/help/sites-developing/spa-blueprint.md#container)，在模型由 [模型提供程序](/help/sites-developing/spa-blueprint.md#the-model-provider)，遍历其模型内容( `:items`)。
 
-1. 若是頁面，其子項( `:children`)首先從取得元件類別 [元件對應](/help/sites-developing/spa-blueprint.md#componentmapping) 然後將其例項化。
+1. 对于页面，其子页面( `:children`)首先从获取组件类 [组件映射](/help/sites-developing/spa-blueprint.md#componentmapping) 然后实例化它。
 
-## 應用程式初始化 {#app-initialization}
+## 应用程序初始化 {#app-initialization}
 
-每個元件都可藉由以下功能擴展： [ `ModelProvider`](/help/sites-developing/spa-blueprint.md#the-model-provider). 因此，初始化會採取下列一般形式：
+每个组件都通过 [ `ModelProvider`](/help/sites-developing/spa-blueprint.md#the-model-provider). 因此，初始化采用以下常规形式：
 
-1. 每個模型提供者會自我初始化，並監聽對應到其內部元件的模型片段所做的變更。
-1. 此 [ `PageModelManager`](/help/sites-developing/spa-blueprint.md#pagemodelmanager) 必須初始化，如以下所示 [初始化流程](/help/sites-developing/spa-blueprint.md).
+1. 每个模型提供程序都会初始化自身，并监听对与其内部组件对应的模型段所做的更改。
+1. 此 [ `PageModelManager`](/help/sites-developing/spa-blueprint.md#pagemodelmanager) 必须初始化，表示为 [初始化流程](/help/sites-developing/spa-blueprint.md).
 
-1. 儲存後，頁面模型管理員會傳回應用程式的完整模型。
-1. 然後，此模型會傳遞至前端根目錄 [容器](/help/sites-developing/spa-blueprint.md#container) 應用程式的元件。
-1. 模型片段最後會傳播到每個個別的子元件。
+1. 存储后，页面模型管理器会返回应用程序的完整模型。
+1. 然后，将此模型传递到前端根 [容器](/help/sites-developing/spa-blueprint.md#container) 应用程序的组件。
+1. 最终会将模型的片段传播到每个单独的子元件。
 
 ![app_model_initialization](assets/app_model_initialization.png)

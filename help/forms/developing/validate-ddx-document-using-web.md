@@ -1,7 +1,7 @@
 ---
-title: 使用網站服務API驗證DDX檔案
+title: 使用Web服务API验证DDX文档
 seo-title: Validate a DDX document using theweb service API
-description: 使用組合器服務API來驗證DDX檔案。
+description: 使用Assembler服务API验证DDX文档。
 seo-description: Use the Assembler Service API to validate a DDX document.
 uuid: f6125746-6138-4e46-a1c4-fb24fd7399c5
 contentOwner: admin
@@ -18,71 +18,71 @@ ht-degree: 0%
 
 ---
 
-# 使用網站服務API驗證DDX檔案 {#validate-a-ddx-document-using-theweb-service-api}
+# 使用Web服务API验证DDX文档 {#validate-a-ddx-document-using-theweb-service-api}
 
-**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms 。**
+**本文档中的示例和示例仅适用于AEM Forms on JEE环境。**
 
-使用組合器服務API （Web服務）驗證DDX檔案：
+使用Assembler服务API （Web服务）验证DDX文档：
 
-1. 包含專案檔案。
+1. 包括项目文件。
 
-   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/AssemblerService?WSDL&lc_version=9.0.1`.
-
-   >[!NOTE]
-   >
-   >將localhost取代為表單伺服器的IP位址。
-
-1. 建立PDF組合器使用者端。
-
-   * 建立 `AssemblerServiceClient` 物件（使用其預設建構函式）。
-   * 建立 `AssemblerServiceClient.Endpoint.Address` 物件，使用 `System.ServiceModel.EndpointAddress` 建構函式。 將指定WSDL的字串值傳遞至AEM Forms服務(例如， `http://localhost:8080/soap/services/AssemblerService?blob=mtom`)。 您不需要使用 `lc_version` 屬性。 當您建立服務參考時，會使用此屬性。
-   * 建立 `System.ServiceModel.BasicHttpBinding` 物件，方法是取得 `AssemblerServiceClient.Endpoint.Binding` 欄位。 將傳回值轉換為 `BasicHttpBinding`.
-   * 設定 `System.ServiceModel.BasicHttpBinding` 物件的 `MessageEncoding` 欄位至 `WSMessageEncoding.Mtom`. 此值可確保使用MTOM。
-   * 執行下列工作來啟用基本HTTP驗證：
-
-      * 將AEM表單使用者名稱指派給欄位 `AssemblerServiceClient.ClientCredentials.UserName.UserName`.
-      * 將對應的密碼值指派給欄位 `AssemblerServiceClient.ClientCredentials.UserName.Password`.
-      * 指派常數值 `HttpClientCredentialType.Basic` 至欄位 `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
-      * 指派常數值 `BasicHttpSecurityMode.TransportCredentialOnly` 至欄位 `BasicHttpBindingSecurity.Security.Mode`.
-
-1. 參考現有的DDX檔案。
-
-   * 建立 `BLOB` 物件（使用其建構函式）。 此 `BLOB` 物件可用來儲存DDX檔案。
-   * 建立 `System.IO.FileStream` 物件，方法是叫用其建構函式，並傳遞代表DDX檔案檔案位置的字串值，以及用來開啟檔案的模式。
-   * 建立位元組陣列，儲存 `System.IO.FileStream` 物件。 您可以取得 `System.IO.FileStream` 物件的 `Length` 屬性。
-   * 叫用 `System.IO.FileStream` 物件的 `Read` 方法，並傳遞位元組陣列、起始位置以及要讀取的資料流長度。
-   * 填入 `BLOB` 物件，透過指派其 `MTOM` 具有位元組陣列內容的屬性。
-
-1. 設定執行階段選項以驗證DDX檔案。
-
-   * 建立 `AssemblerOptionSpec` 物件，使用其建構函式來儲存執行階段選項。
-   * 將值true指派給，設定執行階段選項，指示Assembler服務驗證DDX檔案。 `AssemblerOptionSpec` 物件的 `validateOnly` 資料成員。
-   * 將字串值指派給，設定Assembler服務寫入記錄檔的資訊量。 `AssemblerOptionSpec` 物件的 `logLevel` 資料成員。 方法驗證DDX檔案時，您想要將更多資訊寫入記錄檔，以協助進行驗證程式。 因此，您可以指定值 `FINE` 或 `FINER`. 如需您可以設定的執行階段選項的相關資訊，請參閱 `AssemblerOptionSpec` 中的類別參考 [AEM Forms API參考](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
-
-1. 執行驗證。
-
-   叫用 `AssemblerServiceClient` 物件的 `invokeDDX` 方法並傳遞下列值：
-
-   * A `BLOB` 代表DDX檔案的物件。
-   * 值 `null` 的 `Map` 通常儲存PDF檔案的物件。
-   * 一個 `AssemblerOptionSpec` 指定執行階段選項的物件。
-
-   此 `invokeDDX` 方法傳回 `AssemblerResult` 包含指定DDX檔案是否有效的資訊的物件。
-
-1. 將驗證結果儲存在記錄檔中。
-
-   * 建立 `System.IO.FileStream` 物件，方法是叫用其建構函式，並傳遞代表記錄檔檔案位置的字串值，以及用來開啟檔案的模式。 確認副檔名為.xml。
-   * 建立 `BLOB` 物件，透過取得 `AssemblerResult` 物件的 `jobLog` 資料成員。
-   * 建立位元組陣列，儲存 `BLOB` 物件。 透過取得 `BLOB` 物件的 `MTOM` 欄位。
-   * 建立 `System.IO.BinaryWriter` 物件，方法是叫用其建構函式並傳遞 `System.IO.FileStream` 物件。
-   * PDF透過叫用 `System.IO.BinaryWriter` 物件的 `Write` 方法並傳遞位元組陣列。
+   创建使用MTOM的Microsoft .NET项目。 确保使用以下WSDL定义： `http://localhost:8080/soap/services/AssemblerService?WSDL&lc_version=9.0.1`.
 
    >[!NOTE]
    >
-   >如果DDX檔案無效，請 `OperationException` 擲回。 在catch陳述式中，您可以取得 `OperationException` 物件的 `jobLog` 成員。
+   >将localhost替换为表单服务器的IP地址。
+
+1. 创建PDF汇编程序客户端。
+
+   * 创建 `AssemblerServiceClient` 对象。
+   * 创建 `AssemblerServiceClient.Endpoint.Address` 对象 `System.ServiceModel.EndpointAddress` 构造函数。 将指定WSDL的字符串值传递给AEM Forms服务(例如， `http://localhost:8080/soap/services/AssemblerService?blob=mtom`)。 您无需使用 `lc_version` 属性。 创建服务引用时使用此属性。
+   * 创建 `System.ServiceModel.BasicHttpBinding` 对象，方法是获取 `AssemblerServiceClient.Endpoint.Binding` 字段。 将返回值强制转换为 `BasicHttpBinding`.
+   * 设置 `System.ServiceModel.BasicHttpBinding` 对象的 `MessageEncoding` 字段至 `WSMessageEncoding.Mtom`. 此值可确保使用MTOM。
+   * 通过执行以下任务启用基本HTTP身份验证：
+
+      * 将AEM表单用户名分配给字段 `AssemblerServiceClient.ClientCredentials.UserName.UserName`.
+      * 将相应的密码值分配给字段 `AssemblerServiceClient.ClientCredentials.UserName.Password`.
+      * 分配常量值 `HttpClientCredentialType.Basic` 到字段 `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
+      * 分配常量值 `BasicHttpSecurityMode.TransportCredentialOnly` 到字段 `BasicHttpBindingSecurity.Security.Mode`.
+
+1. 引用现有DDX文档。
+
+   * 创建 `BLOB` 对象。 此 `BLOB` 对象用于存储DDX文档。
+   * 创建 `System.IO.FileStream` 对象，方法是调用其构造函数并传递一个字符串值，该字符串值表示DDX文档的文件位置以及用于打开文件的模式。
+   * 创建一个字节数组，用于存储 `System.IO.FileStream` 对象。 您可以通过获取 `System.IO.FileStream` 对象的 `Length` 属性。
+   * 通过调用 `System.IO.FileStream` 对象的 `Read` 方法，并传递字节数组、起始位置和要读取的流长度。
+   * 填充 `BLOB` 对象(通过指定其 `MTOM` 属性与字节数组的内容。
+
+1. 设置运行时选项以验证DDX文档。
+
+   * 创建 `AssemblerOptionSpec` 使用其构造函数存储运行时选项的对象。
+   * 通过将值true赋给，设置指示Assembler服务验证DDX文档的运行时选项 `AssemblerOptionSpec` 对象的 `validateOnly` 数据成员。
+   * 通过为指定字符串值，设置Assembler服务写入日志文件的信息量 `AssemblerOptionSpec` 对象的 `logLevel` 数据成员。 方法验证DDX文档时，您需要将更多信息写入日志文件，以协助进行验证过程。 因此，您可以指定值 `FINE` 或 `FINER`. 有关可设置的运行时选项的信息，请参见 `AssemblerOptionSpec` 中的类引用 [AEM Forms API参考](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
+
+1. 执行验证。
+
+   调用 `AssemblerServiceClient` 对象的 `invokeDDX` 方法，并传递以下值：
+
+   * A `BLOB` 表示DDX文档的对象。
+   * 值 `null` 对于 `Map` 通常存储PDF文档的对象。
+   * An `AssemblerOptionSpec` 指定运行时选项的对象。
+
+   此 `invokeDDX` 方法返回 `AssemblerResult` 包含指定DDX文档是否有效的信息的对象。
+
+1. 将验证结果保存在日志文件中。
+
+   * 创建 `System.IO.FileStream` 对象，方法是调用其构造函数并传递一个字符串值，该字符串值表示日志文件的文件位置以及用于打开文件的模式。 确保文件扩展名为.xml。
+   * 创建 `BLOB` 通过获取的值，存储日志信息的对象 `AssemblerResult` 对象的 `jobLog` 数据成员。
+   * 创建一个字节数组，用于存储 `BLOB` 对象。 通过获取的值填充字节数组 `BLOB` 对象的 `MTOM` 字段。
+   * 创建 `System.IO.BinaryWriter` 对象，方法是调用其构造函数 `System.IO.FileStream` 对象。
+   * PDF通过调用 `System.IO.BinaryWriter` 对象的 `Write` 方法和传递字节数组。
+
+   >[!NOTE]
+   >
+   >如果DDX文档无效，则 `OperationException` 被抛出。 在catch语句中，您可以获取 `OperationException` 对象的 `jobLog` 会员。
 
 **另请参阅**
 
-[驗證DDX檔案](/help/forms/developing/validating-ddx-documents.md#validating-ddx-documents)
+[验证DDX文档](/help/forms/developing/validating-ddx-documents.md#validating-ddx-documents)
 
-[使用MTOM叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[使用MTOM调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)

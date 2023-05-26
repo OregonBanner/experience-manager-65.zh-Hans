@@ -1,7 +1,7 @@
 ---
-title: 變更「應用程式」與「服務」頁面上顯示的專案數
+title: 更改“应用程序和服务”页面上显示的项目数
 seo-title: Change the number of items displayed on the Applications and Services pages
-description: 瞭解如何變更「應用程式」和「服務」頁面上顯示的專案數量。
+description: 了解如何更改“应用程序和服务”页面上显示的项目数。
 seo-description: Learn how to change the number of items displayed on the Applications and Services pages.
 uuid: fa42fbf7-dcd2-46cb-a16c-148d05581705
 contentOwner: admin
@@ -17,9 +17,9 @@ ht-degree: 0%
 
 ---
 
-# 變更「應用程式」與「服務」頁面上顯示的專案數 {#change-the-number-of-items-displayed-on-the-applications-and-services-pages}
+# 更改“应用程序和服务”页面上显示的项目数 {#change-the-number-of-items-displayed-on-the-applications-and-services-pages}
 
-在「偏好設定」頁面上，您可以控制顯示在每個「應用程式」和「服務」網頁上的服務、端點、類別和封存數目。
+在“首选项”页上，您可以控制每个“应用程序和服务”网页上显示的服务、端点、类别和存档的数量。
 
-1. 在管理主控台中， **[!UICONTROL 按一下服務>應用程式和服務>偏好設定]**.
-1. 在「偏好設定」頁面上，輸入可在每個頁面上顯示的服務、端點、類別和封存數目，然後按一下 **[!UICONTROL 儲存]**.
+1. 在管理控制台中， **[!UICONTROL 单击服务>应用程序和服务>首选项]**.
+1. 在“首选项”页面上，键入可在每个页面上显示的服务、端点、类别和存档的数量，然后单击 **[!UICONTROL 保存]**.

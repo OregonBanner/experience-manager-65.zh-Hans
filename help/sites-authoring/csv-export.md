@@ -1,7 +1,7 @@
 ---
 title: 导出到 CSV
 seo-title: Export to CSV
-description: 將頁面的相關資訊匯出至本機系統上的CSV檔案
+description: 将页面相关信息导出到本地系统上的CSV文件
 seo-description: Export information about your pages to a CSV file on your local system
 uuid: 6eee607b-3510-4f6a-ba82-b27480a4fbe1
 contentOwner: Chris Bohnert
@@ -55,7 +55,7 @@ ht-degree: 75%
 
 ![etc-01](assets/etc-01.png)
 
-建立 **CSV報表** 瀏覽「 」時可使用「 」選項 **網站** 控制檯（在清單檢視中）：它是 **建立** 下拉式功能表：
+创建 **CSV报表** 选项在浏览 **站点** 控制台（在列表视图中）：它是 **创建** 下拉菜单：
 
 ![etc-02](assets/etc-02.png)
 
@@ -66,5 +66,5 @@ ht-degree: 75%
 
    ![etc-03](assets/etc-03.png)
 
-1. 選取要匯出的必要屬性。
+1. 选择要导出的所需属性。
 1. 选择&#x200B;**创建**。

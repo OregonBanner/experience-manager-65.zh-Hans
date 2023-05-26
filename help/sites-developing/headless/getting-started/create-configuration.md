@@ -1,6 +1,6 @@
 ---
-title: 建立設定Headless快速入門手冊
-description: 建立設定作為在AEM 6.5中開始使用Headless的第一步。
+title: 创建配置Headless快速入门指南
+description: 创建配置作为在AEM 6.5中开始使用Headless的第一步。
 exl-id: f1df97a1-164f-4ed4-bb63-34caf35ae27c
 source-git-commit: 7355c149500f9e5044c9ff78af208d36ee681f56
 workflow-type: tm+mt
@@ -9,9 +9,9 @@ ht-degree: 69%
 
 ---
 
-# 建立設定Headless快速入門手冊 {#creating-configuration}
+# 创建配置Headless快速入门指南 {#creating-configuration}
 
-在AEM 6.5中開始使用Headless的第一步，是您必須建立設定。
+作为在AEM 6.5中开始使用Headless的第一步，您需要创建配置。
 
 ## 什么是配置？ {#what-is-a-configuration}
 
@@ -27,9 +27,9 @@ ht-degree: 69%
 
 管理员只需要创建配置一次，或者在极少数情况下，需要新工作区用于组织内容模型时进行创建。对于本指南快速入门，我们只需要创建一个配置。
 
-1. 登入AEM，並從主功能表選取 **工具 — >一般 — >設定瀏覽器**.
-1. 提供 **標題** 以取得設定。
-   * 系統會根據標題自動產生名稱，並根據 [AEM命名慣例。](/help/sites-developing/naming-conventions.md). 它會成為存放庫中的節點名稱。
+1. 登录AEM，从主菜单选择 **工具 — >常规 — >配置浏览器**.
+1. 提供 **标题** 用于您的配置。
+   * 名称将根据标题自动生成，并根据以下内容进行调整 [AEM命名约定。](/help/sites-developing/naming-conventions.md). 它将成为存储库中的节点名称。
 1. 查看以下选项：
    * **内容片段模型**
    * **GraphQL 持久查询**

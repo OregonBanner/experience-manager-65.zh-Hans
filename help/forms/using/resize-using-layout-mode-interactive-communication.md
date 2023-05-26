@@ -1,6 +1,6 @@
 ---
-title: 使用版面模式調整互動式通訊的元件大小
-description: 使用版面配置模式中可用的回應式格線來定義元件位置
+title: 使用布局模式调整交互式通信组件的大小
+description: 使用在布局模式下可用的响应式网格定义组件的位置
 feature: Interactive Communication
 exl-id: 9534fcb2-4260-4dd0-9f7e-779b10fd3a22
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
@@ -12,93 +12,93 @@ ht-degree: 1%
 
 # 使用版面模式调整组件大小 {#use-layout-mode-to-resize-components}
 
-互動式通訊Web Channel製作介面可讓您使用「版面」模式調整元件大小。 拖放欄內的藍點以定義起始點和終止點來定位元件。 點選回應式格線內的元件後，會顯示藍點。 回應式格線由12個相等的欄組成。 替代欄中的白色和藍色陰影可區分一欄與另一欄。
+交互式通信Web渠道创作界面允许您使用布局模式调整组件大小。 在列中拖放蓝点以定义起始点和终点来定位组件。 点按响应式网格中的组件后，会显示蓝点。 响应式网格由12列相等组成。 备用列中的白色和蓝色阴影将一列与另一列区分开来。
 
-您可以使用「配置」模式為所有裝置型別（例如桌上型電腦、平板電腦、手機和其他小型裝置）調整元件大小。 平板電腦會自動從桌上型電腦版本衍生配置組態，而較小的裝置則會從電話衍生配置組態。 不過，您可以覆寫自動衍生的組態，以針對每種裝置型別定義不同的組態。
+您可以使用“布局”模式为所有设备类型（如台式机、平板电脑、手机和其他较小的设备）调整组件大小。 平板电脑会自动从台式机版本获取布局配置，而较小的设备则从电话获取布局配置。 但是，您可以覆盖自动派生的配置以针对每种设备类型定义不同的配置。
 
 >[!NOTE]
 >
->如果您使用建立Web管道 [將頻道列印為主版](../../forms/using/create-interactive-communication.md) 對於互動式通訊，可用於調整大小的元件也包括使用Print channel在Web channel中自動產生的子表單和欄位。 Web channel會保留「版面」模式中列印管道元素的版面。
+>如果您使用创建Web渠道 [将渠道打印为主控](../../forms/using/create-interactive-communication.md) 对于交互式通信，可用于调整大小的组件还包括使用Print channel在Web channel中自动生成的子表单和字段。 Web渠道在布局模式下保留打印渠道元素的布局。
 
-## 存取配置模式 {#access-layout-mode}
+## 访问布局模式 {#access-layout-mode}
 
-選取 **版面** 下拉式清單中的「互動式通訊」製作介面頂端的 **預覽** 選項。 表單會以「版面」模式顯示。
+选择 **版面** 从“交互式通信”创作界面顶部旁边的下拉列表中 **预览** 选项。 表单以“布局”模式显示。
 
-1. 登入AEM編寫執行個體並導覽至 **Adobe Experience Manager** > **Forms** > **Forms與檔案**.
-1. 建立新的或開啟現有的 [互動式通訊](../../forms/using/create-interactive-communication.md).
-1. 選取 **版面** 下拉式清單的下拉式清單(顯示在頂端的 **預覽** 選項。 表單會以「版面」模式顯示。
+1. 登录到AEM创作实例并导航到 **Adobe Experience Manager** > **Forms** > **Forms和文档**.
+1. 创建新或打开现有 [交互式通信](../../forms/using/create-interactive-communication.md).
+1. 选择 **版面** 从顶部显示的下拉列表中 **预览** 选项。 表单以“布局”模式显示。
 
-   ![互動式通訊的佈局模式](assets/layout_mode_ic_new.png)
+   ![交互式通信的布局模式](assets/layout_mode_ic_new.png)
 
 ## 调整组件大小 {#resize-components}
 
-1. 在「版面」模式中，點選元件以調整大小。 藍點會顯示在回應式格線的開始和結尾。
-1. 拖放藍點以定義元件在回應式格線中的位置。
+1. 在布局模式下，点按组件以调整大小。 蓝点显示在响应式网格的开头和结尾。
+1. 拖放蓝点以定义组件在响应式网格中的位置。
 
-   ![使用版面模式調整大小](assets/layout_mode_resize_new_updated.png)
+   ![使用布局模式调整大小](assets/layout_mode_resize_new_updated.png)
 
-   點選元件後顯示的工具列包含下列選項：
+   点按组件后显示的工具栏包含以下选项：
 
-   * **父系：** 選取元件的父件。
-   * **浮動至新行：** 如果同一行中有多個元件，請將元件移至下一行。
+   * **父级：** 选择组件的父项。
+   * **浮动到新行：** 如果同一行中有多个元件，则将元件移动到下一行。
 
-   您可以復原所有調整大小變更，並使用將預設版面配置套用至包含已調整大小元件的面板 **[!UICONTROL 還原中斷點配置]** ( ![還原中斷點](assets/reverttopreviouslypublishedversion.png))選項。 點選已調整大小元件的父元件以檢視選項。
+   您可以撤消所有调整大小的更改，并使用将默认布局应用到包含已调整大小组件的面板 **[!UICONTROL 还原断点布局]** ( ![还原断点](assets/reverttopreviouslypublishedversion.png))选项。 点按已调整大小的组件的父组件以查看选项。
 
    >[!NOTE]
    >
-   >您無法使用「版面」模式調整表格欄、工具列、工具列按鈕和目標區域元件的大小。 使用「樣式」模式調整這些元件的大小。
+   >无法使用“布局”模式调整表格列、工具栏、工具栏按钮和目标区域组件的大小。 使用样式模式调整这些组件的大小。
 
 ### 示例 {#example}
 
-**目標：** 您要在互動式通訊中插入表格元件和影像元件，並將它們彼此平行放置。
+**目标：** 要在交互式通信中插入表组件和图像组件，并将它们彼此平行放置。
 
-1. 在互動式通訊的Web channel中使用「編輯」模式插入表格和影像元件。 影像元件會顯示在表格元件之後。
-1. 切換至版面模式，然後點選「表格」元件。 調整元件大小的藍點會顯示在欄1和12。
-1. 將第12欄的藍色圓點拖放至回應式格線的第6欄。
+1. 在交互式通信的Web渠道中使用“编辑”模式插入表和图像组件。 图像组件显示在表组件之后。
+1. 切换到布局模式并点按表组件。 用于调整组件大小的蓝点显示在列1和12。
+1. 将第12列中的蓝色圆点拖放到响应式网格的第6列。
 
-   ![定義表格的端點](assets/layout_mode_end_point_table_new.png)
+   ![定义表的端点](assets/layout_mode_end_point_table_new.png)
 
-1. 同樣地，選取「影像」元件，並將回應式格線第1欄的藍色圓點拖放至第7欄。 表格和影像元件彼此平行顯示。
+1. 同样，选择图像组件并将响应式网格的第1列上的蓝色圆点拖放到第7列。 表格和图像组件彼此平行显示。
 
-   ![在「版面」模式中同時顯示表格和影像](assets/table_image_parallel_new.png)
+   ![在“布局”模式下并行处理表和图像](assets/table_image_parallel_new.png)
 
-   您可以選取影像元件並點選 **浮動至新行** 工具列中的可用選項，將影像元件移至下一行。
+   您可以选择图像组件并点按 **浮动到新行** 工具栏中可用的选项以将图像组件移动到下一行。
 
-## 調整面板大小 {#resize-panels-layout-mode}
+## 调整面板大小 {#resize-panels-layout-mode}
 
-如果您想要調整整個面板而非個別元件的大小，請執行以下步驟：
+如果要调整整个面板而不是单个组件的大小，请执行以下步骤：
 
-1. 在面板中點選任何您想要調整大小的元件，選取 ![選取父系](assets/select_parent_icon.svg)，並選取下拉式清單中的第一個選項（如果面板為元件的直接父項）。
+1. 点按面板中要调整大小的任何组件，选择 ![选择父级](assets/select_parent_icon.svg)，然后选择下拉列表中的第一个选项（如果面板是组件的直接父级）。
 
-   藍點會顯示在回應式格線的開始和結尾。
+   蓝点显示在响应式网格的开头和结尾。
 
-1. 拖放藍點以定義面板在回應式格線中的位置。
-您可以重複步驟1和2，然後選取 ![選取父系](assets/float_to_new_line_icon.svg) 將調整大小的面板移至下一行。
+1. 拖放蓝点以定义面板在响应式网格中的位置。
+您可以重复步骤1和2，然后选择 ![选择父级](assets/float_to_new_line_icon.svg) 将调整大小的面板移动到下一行。
 
-## 定義面板的多欄配置
+## 为面板定义多列布局
 
-執行以下步驟來定義面板的欄數：
+执行以下步骤可定义面板的列数：
 
-1. 在 **[!UICONTROL 編輯]** 模式，點選面板，選取 ![設定](assets/configure_icon.png)，並選取 **[!UICONTROL 回應式 — 頁面上的所有內容，無需導覽]** 選項來自 **[!UICONTROL 面板配置]** 下拉式清單。
+1. In **[!UICONTROL 编辑]** 模式，点按面板，选择 ![配置](assets/configure_icon.png)，并选择 **[!UICONTROL 响应式 — 页面上的所有内容，无需导航]** 选项来自 **[!UICONTROL 面板布局]** 下拉列表。
 
-1. 點選 ![儲存](assets/save_icon.svg) 以儲存屬性。
+1. 点按 ![保存](assets/save_icon.svg) 以保存属性。
 
-1. 在 **[!UICONTROL 版面]** 模式，點選面板中的任何元件，然後選取 ![選取父系](assets/select_parent_icon.svg)，然後選取面板。
+1. 在 **[!UICONTROL 版面]** 模式，点按面板中的任何组件，选择 ![选择父级](assets/select_parent_icon.svg)，然后选择面板。
 
-1. 點選 ![多欄](assets/multi-column.svg) 並從下拉式清單中選取欄數。 欄數可以介於1到12之間。 面板會分成多欄版面。
+1. 点按 ![多列](assets/multi-column.svg) 并从下拉列表中选择列数。 列数可以介于1到12之间。 面板被划分为多列布局。
 
-![在版面配置模式中的多欄](assets/multi-column-layout.png)
+![布局模式下的多列](assets/multi-column-layout.png)
 
-## 停用具有舊回應式佈局的表單的佈局模式 {#disable-layout-mode-for-forms-with-old-responsive-layout}
+## 禁用具有旧响应布局的表单的布局模式 {#disable-layout-mode-for-forms-with-old-responsive-layout}
 
-您可以編輯表單中使用的範本屬性，以停用具有舊回應式版面的表單的版面模式。
+您可以通过编辑表单中使用的模板的属性来禁用具有旧响应布局的表单的布局模式。
 
-執行以下步驟以停用「配置」模式：
+执行以下步骤可禁用布局模式：
 
-1. 選取 **[!UICONTROL 工具]** > **[!UICONTROL 一般]** > **[!UICONTROL 範本]** 然後開啟表單中使用的範本，位置在 **[!UICONTROL 編輯]** 模式。
-1. 在左窗格中選取檔案容器並點選 **[!UICONTROL 原則。]**
+1. 选择 **[!UICONTROL 工具]** > **[!UICONTROL 常规]** > **[!UICONTROL 模板]** 并打开表单中使用的模板，位置如下： **[!UICONTROL 编辑]** 模式。
+1. 在左窗格中选择文档容器并点按 **[!UICONTROL 策略。]**
 
-   ![停用佈局模式](assets/policy_disable_layout_mode.png)
+   ![禁用布局模式](assets/policy_disable_layout_mode.png)
 
-1. 點選 **[!UICONTROL 版面設定]** 標籤並選取 **[!UICONTROL 停用佈局模式]**.
-1. 點選 ![儲存變更](assets/save_icon.png) 以儲存範本屬性。
+1. 点按 **[!UICONTROL 布局设置]** 选项卡并选择 **[!UICONTROL 禁用布局模式]**.
+1. 点按 ![保存更改](assets/save_icon.png) 以保存模板属性。

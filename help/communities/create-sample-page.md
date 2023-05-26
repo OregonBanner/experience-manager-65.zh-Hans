@@ -1,7 +1,7 @@
 ---
-title: 建立範例頁面
+title: 创建示例页面
 seo-title: Create a Sample Page
-description: 建立範例社群網站
+description: 创建示例社区站点
 seo-description: Create a Sample community site
 uuid: 04a8f027-b7d8-493a-a9bd-5c4a6715d754
 contentOwner: Guillaume Carlino
@@ -17,71 +17,71 @@ ht-degree: 2%
 
 ---
 
-# 建立範例頁面 {#create-a-sample-page}
+# 创建示例页面 {#create-a-sample-page}
 
-自AEM 6.1 Communities起，建立範例頁面的最簡單方式是建立簡單的社群網站，由Page函陣列成。
+自AEM 6.1 Communities起，创建示例页面的最简单方法是创建一个简单的社区站点，其中只包含Page函数。
 
-這將包括parsys元件，以便您可以 [啟用元件以供編寫](basics.md#accessing-communities-components).
+这将包含一个parsys组件，以便您可以 [为创作启用组件](basics.md#accessing-communities-components).
 
-使用範例元件進行探索的另一個選項是使用 [社群元件指南](components-guide.md).
+使用示例组件进行探索的另一个选项是使用 [社区组件指南](components-guide.md).
 
-## 建立社群網站 {#create-a-community-site}
+## 创建社区站点 {#create-a-community-site}
 
-這非常類似於建立中所述的新網站 [AEM Communities快速入門](getting-started.md).
+这非常类似于创建中所述的新站点 [AEM Communities快速入门](getting-started.md).
 
-主要差異在於此教學課程將建立新的社群網站範本，其中僅包含 [Page函式](functions.md#page-function) 以建立不含其他功能的簡單社群網站（除了所有社群網站的基本預先有線功能）。
+主要区别在于，本教程将创建一个新的社区站点模板，其中仅包含 [Page函数](functions.md#page-function) 以创建一个简单的社区站点，其中不包含其他功能（除了所有社区站点均通用的预布线功能之外）。
 
-### 建立新網站範本 {#create-new-site-template}
+### 创建新站点模板 {#create-new-site-template}
 
-若要開始使用，請建立 [社群網站範本](sites.md).
+要开始配置，请创建一个 [社区站点模板](sites.md).
 
-從作者執行個體的全域導覽中選取 **[!UICONTROL 工具]** > **[!UICONTROL Communities]** > **[!UICONTROL 網站範本]**.
+在创作实例的全局导航中，选择 **[!UICONTROL 工具]** > **[!UICONTROL Communities]** > **[!UICONTROL 站点模板]**.
 
 ![create-site-template](assets/create-site-template1.png)
 
 * 选择 `Create button`
-* 基本資訊
+* 基本信息
 
-   * `Name`：單頁範本
-   * `Description`：由單頁函陣列成的範本。
+   * `Name`：单页模板
+   * `Description`：由单页函数组成的模板。
    * 选择 `Enabled`
 
 ![site-template-editor](assets/site-template-editor.png)
 
-* 結構
+* 结构
 
-   * 拖曳 `Page` 範本產生器的函式
-   * 如需組態功能詳細資訊，請輸入
+   * 拖动 `Page` 函数到模板生成器
+   * 有关配置功能详细信息，请输入
 
-      * `Title`：單頁
+      * `Title`：单页
       * `URL`: 页
 
 ![site-template-editor-structure](assets/site-template-editor1.png)
 
-* 選取 **`Save`** 用於設定
-* 選取 **`Save`** 適用於網站範本
+* 选择 **`Save`** 用于配置
+* 选择 **`Save`** 对于站点模板
 
-### 建立新社群網站 {#create-new-community-site}
+### 创建新社区站点 {#create-new-community-site}
 
-現在根據簡單的網站範本建立新的社群網站。
+现在，基于简单站点模板创建新的社区站点。
 
-建立網站範本後，從全域導覽選取 **[!UICONTROL 社群>網站]**.
+创建站点模板后，从全局导航中选择 **[!UICONTROL 社区>站点]**.
 
 ![create-community-site](assets/create-community-site1.png)
 
-* 選取 **`Create`** 圖示
+* 选择 **`Create`** 图标
 
 * 步骤 `1 - Site Template`
 
-   * `Title`：簡單社群網站
-   * `Description`：包含實驗所需單一頁面的社群網站。
+   * `Title`：简单社区站点
+   * `Description`：由单个试验页面组成的社区站点。
    * `Community Site Root: (leave blank)`
    * `Community Site Base Language: English`
-   * `Name`：範例
+   * `Name`：示例
 
       * url = http://localhost:4502/content/sites/sample
 
-      * `Template`：選擇 `Single Page Template`
+      * `Template`：选择 `Single Page Template`
 
       ![create-community-site-template](assets/create-community-site-template.png)
 
@@ -89,35 +89,35 @@ ht-degree: 2%
 * 选择 `Next`
 * 步骤 `2 - Design`
 
-   * 選取任何設計
+   * 选择任意设计
 
 * 选择 `Next`
 * 选择 `Next`
 
-   （接受所有預設設定）
+   （接受所有默认设置）
 
 * 选择 `Create`
 
    ![create-community-site](assets/create-community-site.png)
 
-## 發佈網站 {#publish-the-site}
+## 发布站点 {#publish-the-site}
 
 ![publish-site](assets/publish-site.png)
 
-從 [社群網站主控台](sites-console.md)，選取發佈圖示以發佈網站，預設為http://localhost:4503。
+从 [社区站点控制台](sites-console.md)，选择发布图标以发布站点，默认情况下为http://localhost:4503。
 
-## 在編輯模式下開啟作者網站 {#open-the-site-on-author-in-edit-mode}
+## 在编辑模式下打开作者网站 {#open-the-site-on-author-in-edit-mode}
 
 ![open-site](assets/open-site.png)
 
-選取開啟網站圖示以在編輯模式下檢視網站。
+选择打开站点图标以在编辑模式下查看站点。
 
-URL將會是 [http://localhost:4502/editor.html/content/sites/sample/en.html](http://localhost:4502/editor.html/content/sites/sample/en.html)
+URL将为 [http://localhost:4502/editor.html/content/sites/sample/en.html](http://localhost:4502/editor.html/content/sites/sample/en.html)
 
 ![author-site](assets/author-site.png)
 
-在簡單首頁上，您可以透過社群功能和範本檢視預先佈線的內容，並嘗試新增和設定社群元件。
+在简单的主页上，可以看到通过社区功能和模板预先连接了哪些内容，并可以在添加和配置社区组件方面有所作为。
 
-## 在發佈時檢視網站 {#view-site-on-publish}
+## 在发布时查看站点 {#view-site-on-publish}
 
-發佈頁面後，請開啟 [發佈執行個體](http://localhost:4503/content/sites/sample/en.html) 以匿名網站訪客、登入會員或管理員身分來實驗功能。 除非管理員登入，否則作者環境中可見的管理連結不會出現在發佈環境中。
+发布页面后，在 [发布实例](http://localhost:4503/content/sites/sample/en.html) 以匿名网站访客、已登录成员或管理员身份试验这些功能。 除非管理员登录，否则在创作环境中可见的管理链接将不会显示在发布环境中。

@@ -1,7 +1,7 @@
 ---
-title: 設定驗證訊息
+title: 配置验证消息
 seo-title: Configuring validation messages
-description: 瞭解如何指定驗證訊息的顯示方式及其相對於網頁瀏覽器中傳回之表單的位置。
+description: 了解如何指定验证消息的显示方式及其相对于Web浏览器中返回表单的位置。
 seo-description: Learn how to specify how validation messages are displayed and their location relative to the form returned in the web browser.
 uuid: f6bff4fa-f90f-4135-ae40-7ab3d3613122
 contentOwner: admin
@@ -17,51 +17,51 @@ ht-degree: 2%
 
 ---
 
-# 設定驗證訊息 {#configuring-validation-messages}
+# 配置验证消息 {#configuring-validation-messages}
 
-對於呈現為HTML的表單，會為使用者顯示發生的表單驗證錯誤。 您可以自訂驗證訊息的顯示方式。 根據驗證訊息的顯示位置，您也可以控制訊息在表單中的位置以及框架邊框的大小。
+对于呈现为HTML的表单，将为用户显示出现的表单验证错误。 您可以自定义验证消息的显示方式。 根据验证消息显示的位置，您还可以控制消息在表单中的位置和帧边框的大小。
 
-## 指定驗證訊息的顯示方式 {#specify-how-validation-messages-are-displayed}
+## 指定验证消息的显示方式 {#specify-how-validation-messages-are-displayed}
 
-1. 在Administration Console中，按一下Services > forms。
-1. 在「驗證輸出」下的「報表」清單中，選取下列其中一個選項：
+1. 在管理控制台中，单击服务>表单。
+1. 在“验证输出”下的“报告”列表中，选择以下选项之一：
 
-   **訊息方塊：** 在個別的對話方塊中顯示驗證訊息。
+   **消息框：** 在单独的对话框中显示验证消息。
 
-   **影格：** 在相同視窗的框架中顯示驗證訊息。
+   **帧：** 在同一窗口的框架中显示验证消息。
 
-   **無框架：** 若要在同一視窗中顯示驗證訊息，請執行下列步驟： 此值為預設值。
+   **无帧：** 在同一窗口中显示验证消息。 此值为默认值。
 
-   **透過API （含資料）：** 透過API （包含資料）傳回驗證訊息的方式。 驗證訊息不會顯示在畫面上。
+   **通过API（包含数据）：** 通过API（包含数据）返回验证消息。 验证消息不显示在屏幕上。
 
-   **透過API （透過表單）：** 透過API （連同表單）傳回驗證訊息的方式。 驗證訊息不會顯示在畫面上。
+   **通过API（通过表单）：** 通过API（通过表单）返回验证消息。 验证消息不显示在屏幕上。
 
-   **無：** 不顯示驗證訊息。
-
-1. 单击“保存”。
-
-## 指定相對於網頁瀏覽器中傳回之表單的驗證訊息位置 {#specify-the-location-of-validation-messages-relative-to-the-form-returned-in-the-web-browser}
-
-當「報告」設定為「框架」或「無框架」時，您可以指定驗證訊息的位置。
-
-1. 在「驗證輸出」下的「位置」清單中，選取下列其中一個選項：
-
-   **左：** 在網頁瀏覽器的左側顯示驗證訊息。
-
-   **右：** 在網頁瀏覽器的右側顯示驗證訊息。
-
-   **上**：在網頁瀏覽器頂端顯示驗證訊息。 此值為預設值。
-
-   **下**：在網頁瀏覽器底部顯示驗證訊息。
+   **无：** 不显示验证消息。
 
 1. 单击“保存”。
 
-## 指定框架邊框大小 {#specify-the-frame-border-size}
+## 指定与Web浏览器中返回的表单相关的验证消息的位置 {#specify-the-location-of-validation-messages-relative-to-the-form-returned-in-the-web-browser}
 
-當「報表」設定為「框架」時，您可以指定框架邊框大小。
+当Reporting设置为Frame或No Frame时，可以指定验证消息的位置。
 
-1. 在「驗證輸出」下方的「邊框大小」方塊中，輸入框架邊框的大小（畫素）。
+1. 在“验证输出”下的“位置”列表中，选择以下选项之一：
 
-   邊框大小必須等於或大於0。 默认值为 1。
+   **左：** 在Web浏览器的左侧显示验证消息。
+
+   **右：** 在Web浏览器的右侧显示验证消息。
+
+   **顶部**：在Web浏览器顶部显示验证消息。 此值为默认值。
+
+   **底部**：在Web浏览器底部显示验证消息。
+
+1. 单击“保存”。
+
+## 指定框架边框大小 {#specify-the-frame-border-size}
+
+当“报表”设置为“帧”时，可以指定帧边框大小。
+
+1. 在“验证输出”下的“边框大小”框中，键入框架边框的大小（以像素为单位）。
+
+   边框大小必须等于或大于0。 默认值为 1。
 
 1. 单击“保存”。

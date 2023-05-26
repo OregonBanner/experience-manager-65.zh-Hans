@@ -20,133 +20,133 @@ ht-degree: 2%
 
 # 工作流步骤参考 {#workflow-step-reference}
 
-工作流程模型包含一系列各種型別的步驟。 根據型別，您可以使用引數和指令碼來設定和擴展這些步驟，以提供您需要的功能和控制。
+工作流模型由一系列各种类型的步骤组成。 根据类型，可以使用参数和脚本配置并扩展这些步骤，以提供所需的功能和控制。
 
 >[!NOTE]
 >
->本節介紹標準工作流程步驟。
+>本节介绍标准工作流步骤。
 >
->如需模組特定的步驟，請參閱下列內容：
+>有关特定于模块的步骤，请参阅以下内容：
 >
->* [AEM Forms工作流程步驟參考](/help/forms/using/aem-forms-workflow-step-reference.md)
->* [使用媒體處理常式和工作流程處理資產](/help/assets/media-handlers.md)
+>* [AEM Forms工作流步骤参考](/help/forms/using/aem-forms-workflow-step-reference.md)
+>* [使用媒体处理程序和工作流处理资源](/help/assets/media-handlers.md)
 >
 
 
 ## 步骤属性 {#step-properties}
 
-每個步驟元件都有 **步驟屬性** 對話方塊，可讓您定義及編輯所需的屬性。
+每个步骤组件都有一个 **步骤属性** 用于定义和编辑所需属性的对话框。
 
-### 步驟屬性 — 一般標籤 {#step-properties-common-tab}
+### 步骤属性 — “常用”选项卡 {#step-properties-common-tab}
 
-下列屬性的組合適用於大多數工作流程步驟元件，位於 **通用** 屬性對話方塊的「 」標籤：
+以下属性的组合可用于大多数工作流步骤组件，位于 **公共** 属性对话框的选项卡：
 
-* **標題**
-步驟的標題。
+* **标题**
+步骤的标题。
 
-* **說明**
-步驟的說明。
+* **描述**
+步骤的描述。
 
 * **工作流暂存**
 
-   要套用的下拉式選擇器 [階段](/help/sites-developing/workflows.md#workflow-stages) 移至步驟。
+   用于应用 [暂存](/help/sites-developing/workflows.md#workflow-stages) 跳到台阶。
 
 * **超时**
 
-   步驟「逾時」之前的期間。
-您可以選取： **關閉**， **立即**， **1h**， **6h**， **12h**， **24h**.
+   步骤“超时”之前的一段时间。
+您可以在以下选项之间进行选择： **关闭**， **立即**， **1h**， **6h**， **12h**， **24h**.
 
 * **超时处理程序**
 
-   控制步驟逾時時工作流程的處理常式。 例如，`Auto Advancer`
+   步骤超时时控制工作流的处理程序。 例如，`Auto Advancer`
 
 * **处理程序前进**
 
-   選取此選項可自動將工作流程推進至執行後的下一個步驟。 如果未選取，實作指令碼必須處理工作流程推進。
+   选择此选项可自动将工作流前进到执行后的下一个步骤。 如果未选中，则实施脚本必须处理工作流提升。
 
-### 步驟屬性 — 使用者/群組標籤 {#step-properties-user-group-tab}
+### 步骤属性 — 用户/组选项卡 {#step-properties-user-group-tab}
 
-下列屬性適用於許多工作流程步驟元件，位於 **使用者/群組** 屬性對話方塊的「 」標籤：
+以下属性适用于许多工作流步骤组件，位于 **用户/组** 属性对话框的选项卡：
 
-* **透過電子郵件通知使用者**
+* **通过电子邮件通知用户**
 
-   * 當工作流程到達步驟時，您可以傳送電子郵件通知參與者。
-   * 如果啟用，系統會傳送電子郵件給屬性所定義的使用者 **使用者/群組**，或至群組的每個成員（若已定義群組）。
+   * 当工作流到达步骤时，您可以通过向参与者发送电子邮件来通知参与者。
+   * 如果启用，则会向属性定义的用户发送电子邮件 **用户/组**，或者组中的每个成员（如果已定义组）。
 
 * **用户/组**
 
-   * 下拉式選取方塊可讓您導覽至並選取使用者或群組。
-   * 如果您將步驟指派給特定使用者，則只有此使用者可以在該步驟上操作。
-   * 如果您將步驟指派給整個群組，則當工作流程達到此步驟時，此群組中的所有使用者都會在其 **工作流程收件匣**.
-   * 另請參閱 [參與工作流程](/help/sites-authoring/workflows-participating.md) 以取得詳細資訊。
+   * 下拉选择框允许您导航到用户或组并将其选定。
+   * 如果将步骤分配给特定用户，则只有此用户才能执行该步骤。
+   * 如果将步骤分配给整个组，则当工作流达到此步骤时，该组中的所有用户都会在其 **工作流收件箱**.
+   * 参见 [参与工作流](/help/sites-authoring/workflows-participating.md) 了解更多信息。
 
 ## AND 拆分 {#and-split}
 
-此 **AND拆分** 會在工作流程中建立分割，之後兩個分支都會啟用。 您可視需要將工作流程步驟新增至每個分支。 此步驟可讓您在工作流程中引進多個處理路徑。 例如，您可以允許同時執行某些稽核步驟，以節省時間。
+此 **AND拆分** 在工作流中创建拆分，然后两个分支均处于活动状态。 您可以根据需要向每个分支添加工作流步骤。 此步骤可让您将多个处理路径引入工作流。 例如，您可以允许并行执行某些审阅步骤，从而节省时间。
 
 ![wf-26](assets/wf-26.png)
 
-### AND拆分 — 設定 {#and-split-configuration}
+### AND拆分 — 配置 {#and-split-configuration}
 
-若要設定分割：
+要配置拆分，请执行以下操作：
 
-* 編輯 **AND分割屬性**：
+* 编辑 **AND拆分属性**：
 
-   * **分割名稱**：指派名稱以利說明
-   * 選取所需的分支數；2、3、4或5。
+   * **拆分名称**：分配名称以进行说明
+   * 选择所需的分支数；2、3、4或5。
 
-* 視需要將工作流程步驟新增至分支。
+* 根据需要将工作流步骤添加到分支。
 
    ![wf-27](assets/wf-27.png)
 
 ## 容器步骤 {#container-step}
 
-容器步驟會啟動另一個作為子工作流程執行的工作流程模型。
+容器步骤会启动另一个作为子工作流执行的工作流模型。
 
-此容器可讓您重複使用工作流程模型，以實作步驟的共同順序。 例如，翻譯工作流程模型可用於多個編輯工作流程。
+利用此容器，可重用工作流模型以实施步骤的通用顺序。 例如，翻译工作流模型可用于多个编辑工作流。
 
 ![wf-28](assets/wf-28.png)
 
-### 容器步驟 — 設定 {#container-step-configuration}
+### 容器步骤 — 配置 {#container-step-configuration}
 
-若要設定步驟，請編輯並使用下列標籤：
+要配置该步骤，请编辑并使用以下选项卡：
 
 * [通用](#step-properties-common-tab)
 * **容器**
 
-   * **子工作流程**：選取要啟動的工作流程。
+   * **子工作流**：选择要启动的工作流。
 
 ## 跳转步骤 {#goto-step}
 
-此 **移至步驟** 可讓您指定要在工作流程模型中執行的下一個步驟。 您可以指定規則定義、外部指令集或ECMA指令集作為路由運算式，以評估工作流程模型的下一個步驟。
+此 **跳转步骤** 允许您指定要在工作流模型中执行的下一步。 您可以将规则定义、外部脚本或ECMA脚本指定为路由表达式，以评估工作流模型的下一步。
 
-* 如果您指定的條件為true，則 **移至步驟** 完成，工作流程引擎就會執行指定的步驟。
-* 如果您指定的條件不成立，則 **移至步驟** 完成，而一般製程邏輯會決定下一個要執行的步驟。
+* 如果您指定的条件为true，则 **跳转步骤** 完成，工作流引擎将执行指定的步骤。
+* 如果您指定的条件不成立，则 **跳转步骤** 完成，并且正常的路由逻辑确定下一个要执行的步骤。
 
-此 **移至步驟** 可讓您在工作流程模型中匯入進階路由結構。 例如，若要實作回圈， **移至步驟** 可定義以執行工作流程中的先前步驟，而路由運算式會評估回圈條件。
+此 **跳转步骤** 允许您在工作流模型中实施高级工艺路线结构。 例如，要实施循环， **跳转步骤** 可以定义为在工作流中执行前一个步骤，路由表达式用于评估循环条件。
 
-### 移至步驟 — 設定 {#goto-step-configuration}
+### 转到步骤 — 配置 {#goto-step-configuration}
 
-若要設定步驟，請編輯並使用下列標籤：
+要配置该步骤，请编辑并使用以下选项卡：
 
 * [通用](#step-properties-common-tab)
 * **进程**
 
-   * **目標步驟**：在評估路由運算式的條件後，選取要執行的步驟。
-   * **路由運算式**：選取規則定義、外部指令碼或決定是否執行的ECMA指令碼 **目標步驟**.
+   * **Target步骤**：选择评估路由表达式的条件后要执行的步骤。
+   * **路由表达式**：选择规则定义、外部脚本或确定是否执行 **Target步骤**.
 
-      * **規則定義：** 使用 [運算式編輯器](/help/forms/using/variable-in-aem-workflows.md#use-expression-editor) 以定義規則。
-      * **外部指令碼：** 外部指令碼的路徑。
-      * **ECMA指令碼**：判斷是否要執行 **移至步驟**.
+      * **规则定义：** 使用 [表达式编辑器](/help/forms/using/variable-in-aem-workflows.md#use-expression-editor) 以定义规则。
+      * **外部脚本：** 外部脚本的路径。
+      * **ECMA脚本**：确定是否执行 **跳转步骤**.
 
-#### 模擬回圈的 {#simulating-a-for-loop}
+#### 模拟for循环 {#simulating-a-for-loop}
 
-模擬「for回圈」需要您維持已發生回圈迭代次數的計數：
+模拟“for循环”要求您保持已发生循环迭代次数的计数：
 
-* 計數通常代表工作流程中執行之專案的索引。
-* 此計數會評估為回圈的退出條件。
+* 计数通常表示在工作流中操作的项目的索引。
+* 计数将作为循环的退出条件评估。
 
-例如，若要實作在數個JCR節點上執行動作的工作流程，您可以使用回圈計數器作為節點的索引。 若要保留計數，請儲存 `integer` 工作流程例項的資料地圖中的值。 若要遞增計數並將計數與退出條件比較，請使用 **移至步驟**.
+例如，要实施一个在多个JCR节点上执行操作的工作流，您可以使用循环计数器作为节点的索引。 若要保留计数，请存储 `integer` 工作流实例的数据映射中的值。 要递增计数并将计数与退出条件进行比较，请使用 **跳转步骤**.
 
 ```
 function check(){
@@ -172,141 +172,141 @@ function check(){
 }
 ```
 
-### 使用規則定義模擬for回圈 {#simulateforloop}
+### 使用规则定义模拟for循环 {#simulateforloop}
 
-您也可以使用「規則定義」作為路由運算式來模擬for回圈。 [建立 **count** 變數](/help/forms/using/variable-in-aem-workflows.md#create-a-variable) 長資料型別的URL。 使用 **運算式** 作為中的對應模式 **[設定變數](/help/sites-developing/using-variables-in-aem-workflows.md#set-a-variable)** 設定下列專案值的步驟： **count** 變數至 **count + 1** 每次執行 **設定變數** 步驟。
+也可以使用“规则定义”作为路由表达式来模拟for循环。 [创建 **count** 变量](/help/forms/using/variable-in-aem-workflows.md#create-a-variable) （属于长数据类型）。 使用 **表达式** 作为中的映射模式 **[设置变量](/help/sites-developing/using-variables-in-aem-workflows.md#set-a-variable)** 步骤以设置值 **count** 变量为 **count + 1** 每次执行 **设置变量** 步骤。
 
-![模擬for回圈](assets/variable_use_case_count_new.png)
+![模拟for循环](assets/variable_use_case_count_new.png)
 
-在 **移至步驟**，使用 **設定變數** 作為 **目標步驟** 和 **計數&lt; 5** 作為路由運算式。
+在 **跳转步骤**，使用 **设置变量** 作为 **Target步骤** 和 **计数&lt; 5** 作为路由表达式。
 
-![模擬for回圈的條件](assets/variable_use_case_count1_new.png)
+![模拟for循环的条件](assets/variable_use_case_count1_new.png)
 
-此 **設定變數** 步驟重複執行，增加 **count** 變數乘以1，直到值達到5。
+此 **设置变量** 步骤重复运行，增加 **count** 变量值1，直至该值达到5。
 
 ## OR 拆分 {#or-split}
 
-此 **OR分割** 會在工作流程中建立分割，之後只有一個分支處於作用中狀態。 此步驟可讓您在工作流程中匯入條件式處理路徑。 您可視需要將工作流程步驟新增至每個分支。
+此 **OR拆分** 在工作流中创建拆分，之后只有一个分支处于活动状态。 通过此步骤，您可以将条件处理路径引入工作流。 您可以根据需要向每个分支添加工作流步骤。
 
 >[!NOTE]
 >
->另請參閱 [OR分割步驟](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/using-variables-in-aem-workflows.html?lang=en#use-a-variable)
+>参见 [OR拆分步骤](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/using-variables-in-aem-workflows.html?lang=en#use-a-variable)
 
-![使用OR分割來分支](assets/variables_orsplit_new.png)
+![使用OR拆分进行分支](assets/variables_orsplit_new.png)
 
-### OR拆分 — 設定 {#or-split-configuration}
+### OR拆分 — 配置 {#or-split-configuration}
 
-若要設定分割：
+要配置拆分，请执行以下操作：
 
-* 編輯 **OR拆分屬性**：
+* 编辑 **OR拆分属性**：
 
    * **通用**
 
-      * 指定分割名稱。
+      * 指定拆分名称。
    * **分支(*x)***
 
-      * **新增分支：** 在步驟中新增更多分支。
-      * **選取路由運算式**：若要評估作用中分支，請選取路由運算式。 可能的值包括：規則定義、外部指令碼和ECMA指令碼。
-      * **按一下以新增運算式**：新增運算式以評估作用中分支（如果您選取） **規則定義** 作為路由運算式。
-      * **指令碼路徑**：包含計算作用中分支之指令碼的檔案的路徑（如果您選取） **外部指令碼** 作為路由運算式。
-      * **指令碼**：在方塊中新增指令碼，以評估活動分支（如果您選取） **ECMA指令碼** 作為路由運算式。
-      * **預設路由**：如果有多個分支，則遵循預設分支。 您只能指定一個分支作為預設值。
+      * **添加分支：** 向步骤中添加更多分支。
+      * **选择路由表达式**：要计算活动分支，请选择路由表达式。 可能的值包括：规则定义、外部脚本和ECMA脚本。
+      * **单击以添加表达式**：添加表达式以计算活动分支，如果您选择 **规则定义** 作为路由表达式。
+      * **脚本路径**：包含计算活动分支的脚本的文件的路径，如果您选择 **外部脚本** 作为路由表达式。
+      * **脚本**：如果选中，则在框中添加脚本以计算活动分支 **ECMA脚本** 作为路由表达式。
+      * **默认路由**：如果有多个分支，则使用默认分支。 只能指定一个分支作为缺省分支。
 
    >[!NOTE]
    >
-   >    * 系統會根據路由運算式一次評估一個分支。
-   >    * 系統會從上到下評估分支。
-   >    * 系統會執行第一個評估為true的指令碼。
-   >    * 如果沒有分支評估為true，則工作流程不會前進。
+   >    * 每次根据路由表达式评估一个分支。
+   >    * 从上到下评估分支。
+   >    * 将执行第一个评估为true的脚本。
+   >    * 如果没有分支的计算结果为true，则工作流不会前进。
 
 
    >[!NOTE]
    >
-   >另請參閱 [定義OR分割的規則](/help/sites-developing/workflows-models.md#defineruleecmascript).
+   >参见 [定义OR拆分的规则](/help/sites-developing/workflows-models.md#defineruleecmascript).
 
-* 視需要將工作流程步驟新增至分支。
+* 根据需要将工作流步骤添加到分支。
 
-## 參與者步驟與選擇器 {#participant-steps-and-choosers}
+## 参与者步骤和选择器 {#participant-steps-and-choosers}
 
 ### 参与者步骤 {#participant-step}
 
-A **參與者步驟** 可讓您指派特定動作的所有權。 工作流程僅在使用者手動確認步驟時進行。 如果您希望某人執行工作流程，請使用此工作流程。 例如，複查步驟。
+A **参与者步骤** 允许您为特定操作分配所有权。 仅当用户手动确认该步骤时，工作流才会继续。 当您希望某个人对工作流执行操作时，可使用此工作流。 例如，查看步骤。
 
-雖然不直接相關，但在指派動作時必須考慮使用者授權；使用者必須擁有工作流程有效負載頁面的存取權。
+虽然不直接相关，但在分配操作时必须考虑用户授权；用户必须有权访问工作流有效负载所在的页面。
 
-#### 參與者步驟 — 設定 {#participant-step-configuration}
+#### 参与者步骤 — 配置 {#participant-step-configuration}
 
-若要設定步驟，請編輯並使用下列標籤：
+要配置该步骤，请编辑并使用以下选项卡：
 
 * [通用](#step-properties-common-tab)
 * [用户/组](#step-properties-user-group-tab)
 
 >[!NOTE]
 >
->當發生下列情況時，一律會通知工作流程發起人：
+>在以下情况下，将始终通知工作流启动器：
 >
->* 工作流程已完成（完成）。
->* 工作流程已中止（已終止）。
+>* 工作流已完成（已完成）。
+>* 工作流已中止（已终止）。
 >
 
 
 >[!NOTE]
 >
->必須設定部分屬性以啟用電子郵件通知。 您也可以自訂電子郵件範本，或新增新語言的電子郵件範本。 若要在AEM中設定電子郵件通知，請參閱 [設定電子郵件通知](/help/sites-administering/notification.md#configuringemailnotification).
+>必须配置某些属性以启用电子邮件通知。 您还可以自定义电子邮件模板或添加新语言的电子邮件模板。 要在AEM中配置电子邮件通知，请参阅 [配置电子邮件通知](/help/sites-administering/notification.md#configuringemailnotification).
 
 ### 对话框参与者步骤 {#dialog-participant-step}
 
-使用 **對話方塊參與者步驟** 以向被指派工作專案的使用者收集資訊。 此步驟對於收集稍後在工作流程中使用的少量資料很有用。
+使用 **对话框参与者步骤** 从分配了工作项的用户那里收集信息。 此步骤可用于收集稍后在工作流中使用的少量数据。
 
-完成步驟後， **完成工作專案** 對話方塊包含您在對話方塊中定義的欄位。 在欄位中收集的資料會儲存在工作流程裝載的節點中。 之後，後續的工作流程步驟可以從存放庫讀取值。
+完成此步骤后， **完成工作项** 对话框包含您在对话框中定义的字段。 在字段中收集的数据存储在工作流有效负荷的节点中。 然后，后续工作流步骤可以从存储库中读取值。
 
-若要設定步驟，您可以指定要指派工作專案的群組或使用者，以及對話方塊的路徑。
+要配置该步骤，需指定要为其分配工作项的组或用户，以及对话框的路径。
 
-#### 對話方塊參與者步驟 — 設定 {#dialog-participant-step-configuration}
+#### 对话框参与者步骤 — 配置 {#dialog-participant-step-configuration}
 
-若要設定步驟，請編輯並使用下列標籤：
+要配置该步骤，请编辑并使用以下选项卡：
 
 * [通用](#step-properties-common-tab)
 * [用户/组](#step-properties-user-group-tab)
 * **对话框**
 
-   * **對話方塊路徑**：的對話方塊節點路徑 [您建立的對話方塊](#dialog-participant-step-creating-a-dialog).
+   * **对话框路径**：的对话框节点的路径 [创建的对话框](#dialog-participant-step-creating-a-dialog).
 
-#### 對話方塊參與者步驟 — 建立對話方塊 {#dialog-participant-step-creating-a-dialog}
+#### 对话框参与者步骤 — 创建对话框 {#dialog-participant-step-creating-a-dialog}
 
-若要建立對話方塊，您必須建立對話方塊：
+要创建对话框，必须创建对话框：
 
-* 決定產生的資料在何處 [儲存在承載中](#dialog-participant-step-storing-data-in-the-payload).
-* [定義對話方塊；包括定義用來收集和儲存資料的欄位](#dialog-participant-step-dialog-definition).
+* 确定生成数据的位置 [存储在有效负载中](#dialog-participant-step-storing-data-in-the-payload).
+* [定义对话框；包括定义用于收集和保存数据的字段](#dialog-participant-step-dialog-definition).
 
-#### 對話方塊參與者步驟 — 將資料儲存在承載中 {#dialog-participant-step-storing-data-in-the-payload}
+#### 对话框参与者步骤 — 在有效负荷中存储数据 {#dialog-participant-step-storing-data-in-the-payload}
 
-您可以將Widget資料儲存在工作流程裝載或工作專案中繼資料中。 的格式 `name` widget節點的屬性會決定資料儲存的位置。
+您可以将小部件数据存储到工作流有效负载或工作项元数据中。 的格式 `name` widget节点的属性确定数据存储的位置。
 
-* **使用承載儲存資料**
+* **使用有效负载存储数据**
 
-   * 若要將Widget資料儲存為工作流程裝載的屬性，請為Widget節點的name屬性值使用下列格式：
+   * 要将小部件数据存储为工作流有效负载的属性，请为小部件节点的name属性的值使用以下格式：
       `./jcr:content/nodename`
 
-   * 資料會儲存在 `nodename` 裝載節點的屬性。 如果節點不包含該屬性，則會建立屬性。
-   * 與裝載一併儲存時，後續使用具有相同裝載的對話方塊會覆寫屬性的值。
+   * 数据存储在中 `nodename` 有效负载节点的属性。 如果节点不包含该属性，则会创建该属性。
+   * 与有效负载一起存储时，后续使用具有相同有效负载的对话框会覆盖属性的值。
 
-* **使用工作專案儲存資料**
+* **使用工作项存储数据**
 
-   * 若要將Widget資料儲存為工作專案中繼資料的屬性，請為name屬性的值使用下列格式：
+   * 要将小部件数据存储为工作项元数据的属性，请为name属性的值使用以下格式：
       `nodename`
 
-   * 資料會儲存在 `nodename` 工作專案的屬性 `metadata`. 如果之後將對話方塊用於相同的裝載，則會保留資料。
+   * 数据存储在中 `nodename` 工作项的属性 `metadata`. 如果稍后对同一有效负载使用该对话框，则数据将保留。
 
-#### 對話方塊參與者步驟 — 對話方塊定義 {#dialog-participant-step-dialog-definition}
+#### 对话框参与者步骤 — 对话框定义 {#dialog-participant-step-dialog-definition}
 
-1. **對話方塊結構**
+1. **对话框结构**
 
-   對話方塊參與者步驟對話方塊類似於您為編寫元件所建立的對話方塊。 它們儲存在下列位置：
+   对话框参与者步骤对话框类似于为创作组件创建的对话框。 它们存储在以下位置：
 
    `/apps/myapp/workflow/dialogs`
 
-   標準、觸控式UI的對話方塊具有下列節點結構：
+   标准触屏UI的对话框具有以下节点结构：
 
    ```xml
    newComponent (cq:Component)
@@ -323,25 +323,25 @@ A **參與者步驟** 可讓您指派特定動作的所有權。 工作流程僅
 
    >[!NOTE]
    >
-   >另請參閱 [建立和設定對話方塊](/help/sites-developing/developing-components.md#creating-and-configuring-a-dialog).
+   >参见 [创建和配置对话框](/help/sites-developing/developing-components.md#creating-and-configuring-a-dialog).
 
-1. **對話方塊路徑屬性**
+1. **对话框路径属性**
 
-   此 **對話方塊參與者步驟** 具有 **對話方塊路徑** 屬性(連同屬性 [參與者步驟](#participant-step))。 的值 **對話方塊路徑** property是 `dialog` 對話方塊的節點。
+   此 **对话框参与者步骤** 具有 **对话框路径** 资产(连同已终止经营业务之 [参与者步骤](#participant-step))。 的值 **对话框路径** 属性是 `dialog` 对话框的节点。
 
-   例如，對話方塊包含在名為的元件中 `EmailWatch` 儲存在節點中的變數：
+   例如，对话框包含在名为的组件中 `EmailWatch` 存储在节点中的内容：
 
    `/apps/myapp/workflows/dialogs`
 
-   對於觸控式UI，下列值會用於 **對話方塊路徑** 屬性：
+   对于触屏优化UI，以下值用于 **对话框路径** 属性：
 
    `/apps/myapp/workflow/dialogs/EmailWatch/cq:dialog`
 
    ![wf-30](assets/wf-30.png)
 
-1. **對話方塊定義範例**
+1. **示例对话框定义**
 
-   下列XML程式碼片段代表儲存 `String` 中的值 `watchEmail` 裝載內容的節點。 標題節點代表 [文字欄位](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/form/textfield/index.html) 元件：
+   以下XML代码段表示一个对话框，该对话框存储 `String` 中的值 `watchEmail` 有效负荷内容的节点。 标题节点表示 [文本字段](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/form/textfield/index.html) 组件：
 
    ```xml
    jcr:primaryType="nt:unstructured"
@@ -369,53 +369,53 @@ A **參與者步驟** 可讓您指派特定動作的所有權。 工作流程僅
    </cq:dialog>
    ```
 
-   在觸控式UI中，此範例會產生如下的對話方塊：
+   在触屏优化UI中，此示例会生成一个对话框，如下所示：
 
    ![chlimage_1-70](assets/chlimage_1-70.png)
 
 ### 动态参与者步骤 {#dynamic-participant-step}
 
-此 **動態參與者步驟** 元件類似於 **[參與者步驟](#participant-step)** 不同之處在於，參與者會在執行階段自動選取。
+此 **动态参与者步骤** 组件类似于 **[参与者步骤](#participant-step)** 与运行时自动选择参与者的不同之处。
 
-若要設定步驟，請選取 **參與者選擇器** 會識別指派工作專案給的參與者，以及對話方塊。
+要配置该步骤，请选择 **参与者选择器** 标识要为其分配工作项的参与者，以及对话框。
 
-#### 動態參與者步驟 — 設定 {#dynamic-participant-step-configuration}
+#### 动态参与者步骤 — 配置 {#dynamic-participant-step-configuration}
 
-若要設定步驟，請編輯並使用下列標籤：
+要配置该步骤，请编辑并使用以下选项卡：
 
 * [通用](#step-properties-common-tab)
 * **参与者选择器**
 
-   * **參與者選擇器**：的名稱 [您建立的參與者選擇器](#developingtheparticipantchooser).
-   * **引數**：任何必要的引數。
-   * **電子郵件**：是否應將電子郵件通知傳送給使用者。
+   * **参与者选择器**：的名称 [您创建的参与者选择器](#developingtheparticipantchooser).
+   * **参数**：任何必需的参数。
+   * **电子邮件**：是否应向用户发送电子邮件通知。
 
 * **对话框**
 
-   * **對話方塊路徑**：的對話方塊節點路徑 [您建立的對話方塊(與 **對話方塊參與者步驟**)](#dialog-participant-step-creating-a-dialog).
+   * **对话框路径**：的对话框节点的路径 [您创建的对话框(与 **对话框参与者步骤**)](#dialog-participant-step-creating-a-dialog).
 
-#### 動態參與者步驟 — 開發參與者選擇器 {#dynamic-participant-step-developing-the-participant-chooser}
+#### 动态参与者步骤 — 开发参与者选择器 {#dynamic-participant-step-developing-the-participant-chooser}
 
-您可以建立參與者選擇器。 因此，您可以使用任何選取邏輯或條件。 例如，您的參與者選擇器可以選取工作專案最少的使用者（在群組內）。 您可以建立任意數量的參與者選擇器，以搭配的不同執行個體使用 **動態參與者步驟** 元件建立的工作流程模型。
+创建参与者选择器。 因此，您可以使用任何选择逻辑或标准。 例如，参与者选择器可以选择（在组内）工作项最少的用户。 您可以创建任意数量的参与者选择器以用于 **动态参与者步骤** 组件。
 
-建立可選取使用者以指派工作專案的OSGi服務或ECMAScript。
+创建一个OSGi服务或一个ECMAScript ，用于选择要将工作项分配到的用户。
 
 * **ECMAscript**
 
-   指令碼必須包含名為getParticipant的函式，此函式會將使用者ID傳回為 `String` 值。 將自訂指令碼儲存在中，例如 `/apps/myapp/workflow/scripts` 資料夾或子資料夾。
+   脚本必须包含一个名为getParticipant的函数，该函数将用户ID作为 `String` 值。 将自定义脚本存储在 `/apps/myapp/workflow/scripts` 文件夹或子文件夹。
 
-   範例指令碼包含在標準AEM例項中：
+   标准AEM实例中包含一个示例脚本：
 
    `/libs/workflow/scripts/initiator-participant-chooser.ecma`
 
    >[!CAUTION]
    >
-   >請勿變更 `/libs` 路徑。
+   >请勿更改 `/libs` 路径。
    >
    >
-   >原因是因為內容屬於 `/libs` 下次升級執行個體時會被覆寫（並在套用hotfix或feature pack時可能被覆寫）。
+   >原因在于 `/libs` 下次升级实例时将被覆盖（并且在应用修补程序或功能包时可能被覆盖）。
 
-   此指令碼會選取工作流程發起人作為參與者：
+   此脚本选择工作流发起者作为参与者：
 
    ```
    function getParticipant() {
@@ -425,33 +425,33 @@ A **參與者步驟** 可讓您指派特定動作的所有權。 工作流程僅
 
    >[!NOTE]
    >
-   >此 **工作流程發起人參與者選擇器** 元件延伸 **動態參與者步驟** 和會使用此指令碼作為步驟實作。
+   >此 **工作流发起者参与者选择器** 组件扩展 **动态参与者步骤** 和使用此脚本作为步骤实施。
 
-* **OSGi服務**
+* **OSGi服务**
 
-   服務必須實作 [com.day.cq.workflow.exec.ParticipantStepChooser](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/workflow/exec/ParticipantStepChooser.html) 介面。 介面會定義下列成員：
+   服务必须实施 [com.day.cq.workflow.exec.ParticipantStepChooser](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/workflow/exec/ParticipantStepChooser.html) 界面。 该界面定义了以下成员：
 
-   * `SERVICE_PROPERTY_LABEL` 欄位：使用此欄位可指定參與者選擇器的名稱。 該名稱會顯示在中可用的參與者選擇器清單中 **動態參與者步驟** 屬性。
+   * `SERVICE_PROPERTY_LABEL` 字段：使用此字段可指定参与者选择器的名称。 该名称会显示在中可用参与者选择器的列表中 **动态参与者步骤** 属性。
 
-   * `getParticipant` 方法：傳回動態解析的主體ID為 `String` 值。
+   * `getParticipant` 方法：返回动态解析的主体ID作为 `String` 值。
    >[!CAUTION]
    >
-   >此 `getParticipant` 方法會傳回動態解析的主體id。 此ID可以是群組ID或使用者ID。
+   >此 `getParticipant` 方法会返回动态解析的主体ID。 此id可以是组id或用户id。
    >
    >
-   >不過，群組ID只能用於 **參與者步驟**，則會在傳回參與者清單時。 對於 **動態參與者步驟**，會傳回空白清單且無法用於委派。
+   >但是，组ID只能用于 **参与者步骤**，返回参与者列表时。 对于 **动态参与者步骤**，返回空列表，无法用于委派。
 
-   若要讓您的實作可供 **動態參與者步驟** 元件、將您的Java™類別新增至匯出服務的OSGi套件組合，然後將套件組合部署至AEM伺服器。
+   使您的实施可用于 **动态参与者步骤** 组件，将您的Java™类添加到导出服务的OSGi捆绑包中，并将该捆绑包部署到AEM服务器。
 
    >[!NOTE]
    >
-   >**隨機參與者選擇器** 是選取隨機使用者的範例服務( `com.day.cq.workflow.impl.process.RandomParticipantChooser`)。 此 **隨機參與者選擇** r步驟元件範例延伸 **動態參與者步驟** 和會使用此服務作為步驟實作。
+   >**随机参与者选择器** 是一个选择随机用户的示例服务( `com.day.cq.workflow.impl.process.RandomParticipantChooser`)。 此 **随机参与者选择** r step组件示例扩展 **动态参与者步骤** 并将此服务用作实施步骤。
 
-#### 動態參與者步驟 — 參與者選擇器服務範例 {#dynamic-participant-step-example-participant-chooser-service}
+#### 动态参与者步骤 — 参与者选择器服务示例 {#dynamic-participant-step-example-participant-chooser-service}
 
-以下Java™類別實作 `ParticipantStepChooser` 介面。 類別會傳回起始工作流程的參與者名稱。 程式碼使用的邏輯與範例指令碼(`initiator-participant-chooser.ecma`)使用。
+以下Java™类实现 `ParticipantStepChooser` 界面。 类会返回启动工作流的参与者的名称。 该代码使用的逻辑与示例脚本(`initiator-participant-chooser.ecma`)使用。
 
-此 `@Property` annotation設定 `SERVICE_PROPERTY_LABEL` 欄位至 `Workflow Initiator Participant Chooser`.
+此 `@Property` 注释设置 `SERVICE_PROPERTY_LABEL` 字段至 `Workflow Initiator Participant Chooser`.
 
 ```java
 package com.adobe.example;
@@ -490,124 +490,124 @@ public class InitiatorParticipantChooser implements ParticipantStepChooser {
 }
 ```
 
-在 **動態參與者步驟** 屬性對話方塊， **參與者選擇器** 清單包含專案 `Workflow Initiator Participant Chooser (script)`，代表此服務。
+在 **动态参与者步骤** 属性对话框， **参与者选择器** 列表包含项目 `Workflow Initiator Participant Chooser (script)`，表示此服务。
 
-啟動工作流程模型時，記錄會指出啟動工作流程的使用者ID以及工作專案的指派者。 在此範例中， `admin` 使用者已啟動工作流程。
+启动工作流模型时，日志会指示启动工作流的用户的ID以及分配了工作项的用户ID。 在此示例中， `admin` 用户已启动工作流。
 
 `13.09.2015 15:48:53.037 *INFO* [10.176.129.223 [1347565733037] POST /etc/workflow/instances HTTP/1.1] com.adobe.example.InitiatorParticipantChooser Assigning Dynamic Participant Step work item to admin`
 
 ### 表单参与者步骤 {#form-participant-step}
 
-此 **表單參與者步驟** 在工作專案開啟時顯示表單。 當使用者填寫並提交表單時，欄位資料會儲存在工作流程裝載的節點中。
+此 **表单参与者步骤** 在工作项打开时显示表单。 当用户填写并提交表单时，字段数据会存储在工作流有效负荷的节点中。
 
-若要設定此步驟，您可以指定要指派工作專案的群組或使用者，以及表單的路徑。
+要配置该步骤，需指定要为其分配工作项的组或用户，以及表单的路径。
 
 >[!CAUTION]
 >
->本節將說明 [用於頁面製作的基礎元件的Forms區段](/help/sites-authoring/default-components-foundation.md#form).
+>本节将介绍 [用于页面创作的基础组件的Forms部分](/help/sites-authoring/default-components-foundation.md#form).
 
-#### 表單參與者步驟 — 設定 {#form-participant-step-configuration}
+#### 表单参与者步骤 — 配置 {#form-participant-step-configuration}
 
-若要設定步驟，請編輯並使用下列標籤：
+要配置该步骤，请编辑并使用以下选项卡：
 
 * [通用](#step-properties-common-tab)
 * [用户/组](#step-properties-user-group-tab)
 * **表单**
 
-   * **表單路徑**：的路徑 [您建立的表單](#form-participant-step-creating-the-form).
+   * **表单路径**：的路径 [您创建的表单](#form-participant-step-creating-the-form).
 
-#### 表單參與者步驟 — 建立表單 {#form-participant-step-creating-the-form}
+#### 表单参与者步骤 — 创建表单 {#form-participant-step-creating-the-form}
 
-建立表單以用於 **表單參與者步驟** 如往常一樣。 不過，「表單參與者步驟」的表單必須具備下列設定：
+创建用于的表单 **表单参与者步骤** 象平常一样。 但是，表单参与者步骤的表单必须具有以下配置：
 
-* 此 **表單的開頭** 元件必須具有 **動作型別** 屬性設定為 `Edit Workflow Controlled Resource(s)`.
-* 此 **表單的開頭** 元件必須有一個值 `Form Identifier` 屬性。
-* 表單元件必須具備 **元素名稱** 屬性會設定為儲存欄位資料的節點的路徑。 路徑必須在工作流程裝載內容中找出節點。 值會使用以下格式：
+* 此 **表单的开头** 组件必须具有 **操作类型** 属性设置为 `Edit Workflow Controlled Resource(s)`.
+* 此 **表单的开头** 组件必须具有值 `Form Identifier` 属性。
+* 表单组件必须具有 **元素名称** 属性设置为存储字段数据的节点的路径。 路径必须在工作流有效负载内容中找到节点。 值使用以下格式：
 
    `./jcr:content/path_to_node`
 
-* 表單必須包含 **工作流程提交按鈕** 元件。 您未設定元件的任何屬性。
+* 表单必须包含 **工作流提交按钮** 组件。 您未配置组件的任何属性。
 
-工作流程的要求會決定您應將欄位資料儲存的位置。 例如，欄位資料可用於設定頁面內容的屬性。 下列值 **元素名稱** 屬性會將欄位資料儲存為 `redirectTarget` 的屬性 `jcr:content` 節點：
+工作流的要求决定了字段数据的存储位置。 例如，字段数据可用于配置页面内容的属性。 以下值 **元素名称** 属性将字段数据存储为 `redirectTarget` 的属性 `jcr:content` 节点：
 
 `./jcr:content/redirectTarget`
 
-在以下範例中，欄位資料會當作 **文字** 承載頁面上的元件：
+在以下示例中，字段数据用作 **文本** 有效负载页面上的组件：
 
 `./jcr:content/par/text_3/text`
 
-第一個範例可用於 `cq:Page` 元件呈現。 第二個範例只能用於裝載頁面包含 **文字** ID為的元件 `text_3`.
+第一个示例可用于 `cq:Page` 组件渲染。 第二个示例只能在有效负荷页面包含 **文本** ID为的组件 `text_3`.
 
-表單可位於存放庫中的任何位置，但工作流程使用者必須獲得讀取表單的授權。
+表单可以位于存储库中的任意位置，但工作流用户必须获得读取表单的授权。
 
 ### 随机参与者选择器 {#random-participant-chooser}
 
-此 **隨機參與者選擇器** 步驟是一個參與者選擇器，可將產生的工作專案指派給從清單中隨機選取的使用者。
+此 **随机参与者选择器** 步骤是一个参与者选择器，用于将生成的工作项分配给从列表中随机选择的用户。
 
 ![wf-31](assets/wf-31.png)
 
-#### 隨機參與者選擇器 — 設定 {#random-participant-chooser-configuration}
+#### 随机参与者选择器 — 配置 {#random-participant-chooser-configuration}
 
-若要設定步驟，請編輯並使用下列標籤：
+要配置该步骤，请编辑并使用以下选项卡：
 
 * [通用](#step-properties-common-tab)
 * **参数**
 
-   * **參與者**：指定可供選取的使用者清單。 若要新增使用者至清單，請按一下 **新增專案** 和輸入使用者節點的主目錄路徑或使用者ID。 使用者的順序不會影響被指派工作專案的可能性。
+   * **参与者**：指定可供选择的用户列表。 要将用户添加到列表，请单击 **添加项目** 和键入用户节点的主目录路径或用户ID。 用户的顺序不会影响为工作项分配的可能性。
 
 ### 工作流发起者参与人选择器 {#workflow-initiator-participant-chooser}
 
-此 **工作流程發起人參與者選擇器** 步驟是一個參與者選擇器，可將產生的工作專案指派給啟動工作流程的使用者。 除了以下專案外，沒有可設定的屬性 **通用** 屬性。
+此 **工作流发起者参与者选择器** 步骤是一个参与者选择器，用于将生成的工作项分配给启动工作流的用户。 除属性之外，没有要配置的属性 **公共** 属性。
 
-#### 工作流程發起人參與者選擇器 — 設定 {#workflow-initiator-participant-chooser-configuration}
+#### 工作流发起者参与者选择器 — 配置 {#workflow-initiator-participant-chooser-configuration}
 
-若要設定此步驟，請使用下列標籤進行編輯：
+要配置该步骤，请使用以下选项卡进行编辑：
 
 * [通用](#step-properties-common-tab)
 
 ## 流程步骤 {#process-step}
 
-A **程式步驟** 執行ECMAScript或呼叫OSGi服務以執行自動處理。
+A **流程步骤** 执行ECMAScript或调用OSGi服务以执行自动处理。
 
 ![wf-32](assets/wf-32.png)
 
-### 程式步驟 — 設定 {#process-step-configuration}
+### 流程步骤 — 配置 {#process-step-configuration}
 
-若要設定步驟，請編輯並使用下列標籤：
+要配置该步骤，请编辑并使用以下选项卡：
 
 * [通用](#step-properties-common-tab)
 * **进程**
 
-   * **程式**：要執行的程式實作。 使用下拉式功能表選取ECMAScript或OSGi服務。 有关信息:
+   * **进程**：要执行的进程实施。 使用下拉菜单选择ECMAScript或OSGi服务。 有关信息:
 
-      * 標準ECMAScripts和OSGi服務，請參閱 [內建程式步驟流程](/help/sites-developing/workflows-process-ref.md).
-      * 建立「處理」步驟的ECMAScript，請參閱 [使用ECMAScript實作流程步驟](/help/sites-developing/workflows-customizing-extending.md#using-ecmascript).
-      * 為程式步驟建立OSGi服務，請參閱 [使用Java™類別實作程式步驟](/help/sites-developing/workflows-customizing-extending.md#implementing-a-process-step-with-a-java-class).
-   * **處理常式前進**：選取此選項可自動將工作流程推進至執行後的下一個步驟。 如果未選取，實作指令碼必須處理工作流程推進。
-   * **引數**：要傳遞給處理序的引數。
+      * 标准ECMAScript和OSGi服务，请参见 [内置流程步骤](/help/sites-developing/workflows-process-ref.md).
+      * 为流程步骤创建ECMAScript，请参见 [使用ECMAScript实施流程步骤](/help/sites-developing/workflows-customizing-extending.md#using-ecmascript).
+      * 为流程步骤创建OSGi服务，请参见 [使用Java™类实施流程步骤](/help/sites-developing/workflows-customizing-extending.md#implementing-a-process-step-with-a-java-class).
+   * **处理程序前进**：选择此选项可自动将工作流前进到执行后的下一个步骤。 如果未选中，则实施脚本必须处理工作流提升。
+   * **参数**：要传递给进程的参数。
 
 
 ## 设置变量 {#set-variable}
 
-「設定變數」步驟可讓您設定變數的值，並定義設定值的順序。 變數的設定順序，是變數對應在「設定變數」步驟中列出的順序。
+“设置变量”步骤允许您设置变量的值并定义值的设置顺序。 变量将按照变量映射在“设置变量”步骤中列出的顺序进行设置。
 
-![新增對應以設定變數](assets/set_variable_addmappingnew.png)
+![添加映射以设置变量](assets/set_variable_addmappingnew.png)
 
-### 設定變數 — 設定 {#setvariable}
+### 设置变量 — 配置 {#setvariable}
 
-若要設定步驟，請編輯並使用下列標籤：
+要配置该步骤，请编辑并使用以下选项卡：
 
 * [通用](/help/sites-developing/workflows-step-ref.md#step-properties-common-tab)
 * **映射**
 
-   * **選取變數：** 使用此選項可選取變數以設定其值。
-   * **選取對應模式：**  若要設定變數的值，請選取對應模式。 根據變數的資料型別，您可以使用下列選項來設定變數的值：
+   * **选择变量：** 使用此选项可选择变量以设置其值。
+   * **选择映射模式：**  要设置变量的值，请选择映射模式。 根据变量的数据类型，您可以使用以下选项设置变量的值：
 
-      * **常值：** 知道要指定的確切值時使用選項。
-      * **運算式：** 根據運算式計算要使用的值時，請使用選項。 運算式會在提供的運算式編輯器中建立。
-      * **JSON點標籤法：** 使用選項從JSON或FDM型別變數擷取值。
-      * **XPATH：** 使用選項從XML型別變數擷取值。
-      * **相對於裝載：** 當要儲存至變數的值可在相對於承載的路徑取得時，請使用選項。
-      * **絕對路徑：** 當要儲存至變數的值可在絕對路徑取得時，請使用選項。
-   * **指定值：** 若要對應至變數，請指定值。 您在此欄位中指定的值取決於對應模式。
-   * **新增對應：** 使用此選項可新增更多對應，以設定變數的值。
+      * **文本：** 知道要指定的确切值时使用选项。
+      * **表达式：** 在根据表达式计算要使用的值时，使用选项。 表达式是在提供的表达式编辑器中创建的。
+      * **JSON点表示法：** 使用选项从JSON或FDM类型变量检索值。
+      * **XPATH：** 使用选项可从XML类型变量中检索值。
+      * **相对于有效负载：** 当要保存到变量的值在有效负荷的相对路径上可用时，使用选项。
+      * **绝对路径：** 当要保存到变量的值在绝对路径上可用时，请使用选项。
+   * **指定值：** 要映射到变量，请指定值。 在此字段中指定的值取决于映射模式。
+   * **添加映射：** 使用此选项可添加更多映射以设置变量的值。

@@ -1,7 +1,7 @@
 ---
-title: 下載XFA或PDF表單範本
+title: 下载XFA或PDF表单模板
 seo-title: Download an XFA or a PDF form template
-description: 您可以將表單從存放庫匯出至本機系統，然後將下載的表單移轉至新的存放庫。
+description: 您可以将表单从存储库导出到本地系统，然后将下载的表单迁移到新存储库。
 seo-description: You can export forms from the repository to the local system and migrate the downloaded forms to new repository.
 uuid: 5f7fbd14-cb9d-4749-8708-7efe49df89d7
 content-type: reference
@@ -17,42 +17,42 @@ ht-degree: 0%
 
 ---
 
-# 下載XFA或PDF表單範本 {#download-an-xfa-or-a-pdf-form-template}
+# 下载XFA或PDF表单模板 {#download-an-xfa-or-a-pdf-form-template}
 
-如名稱所示，下載作業可讓您將表單從存放庫匯出至本機系統。 結合上傳操作，此操作可幫助您將表單從一個存放庫移轉至另一個存放庫。
+顾名思义，下载操作允许您将表单从存储库导出到本地系统。 结合上载操作，此操作可帮助您将表单从一个存储库迁移到另一个存储库。
 
-在AEM Forms中，下列資產型別支援下載操作：
+在AEM Forms中，以下资源类型支持下载操作：
 
-* 表單範本(XFA Forms)
+* 表单模板(XFA Forms)
 * PDF forms
-* 檔案(平面PDF檔案)
+* 文档(平面PDF文件)
 
-AEM Forms支援個別下載這些表單型別，或是以包含一或多個受支援表單的資料夾下載。
+AEM Forms支持单独下载这些表单类型，或将其下载到包含一个或多个受支持表单的文件夹中。
 
-除了這些資產外，您也可以下載 `Resource` 資產型別（如果存在於資料夾中）。 提供此功能是為了讓您下載XFA表單與表單一起引用的資源。
+除了这些资源外，您还可以下载 `Resource` 资源类型（如果文件夹中存在该资源）。 此功能允许您下载XFA表单引用的资源以及表单。
 
-## 下載一或多個表單 {#download-one-or-more-forms}
+## 下载一个或多个表单 {#download-one-or-more-forms}
 
-1. 登入AEM Forms使用者介面，網址為 `https://<server>:<port>/aem/forms.html`.
+1. 登录到AEM Forms用户界面，网址为 `https://<server>:<port>/aem/forms.html`.
 
-1. 導覽至您要下載的資產位置。
+1. 导航到要下载的资源的位置。
 
-1. 選取資產。 按一下 **[!UICONTROL 下載]** ![aem6forms_download](assets/aem6forms_download.png) 圖示加以檢視。
+1. 选择资源。 单击 **[!UICONTROL 下载]** ![aem6forms_download](assets/aem6forms_download.png) 图标。
 
    >[!NOTE]
    >
-   >您只能選取一個表單進行下載。 如果您想要下載多個表單，則必須將它們下載為資料夾。
+   >您只能选择一个要下载的表单。 如果要下载多个表单，必须将它们下载为文件夹。
 
-1. 在出現的對話方塊中，按一下 **[!UICONTROL 下載]**.
+1. 在出现的对话框中，单击 **[!UICONTROL 下载]**.
 
-   AEM Forms會產生一個包含所選檔案或所選資料夾的ZIP檔案。
+   AEM Forms会生成一个包含选定文件或选定文件夹的ZIP文件。
 
-   如果您正在下載資料夾，資料夾中支援的資產會以現有的階層下載。
+   如果您正在下载文件夹，则该文件夹中支持的资源将下载到其现有层次结构中。
 
-   ZIP檔案會儲存至 `Downloads` 資料夾。
+   ZIP文件将保存到 `Downloads` 个文件夹。
 
-## 上傳作業的相關考量事項 {#related-considerations-for-the-upload-operation}
+## 上载操作的相关注意事项 {#related-considerations-for-the-upload-operation}
 
-* 您可以將ZIP檔案上傳至相同存放庫或其他存放庫中的任何其他位置
-* 上傳作業期間會保留資料夾中資產的階層
-* 上傳時會反映下載前對已下載資產所做的任何中繼資料變更
+* 您可以将ZIP文件上传到同一存储库或其他存储库中的任何其他位置
+* 上传操作期间，将保留文件夹中资产的层次结构
+* 上传时会反映下载前对下载的资产所做的任何元数据更改

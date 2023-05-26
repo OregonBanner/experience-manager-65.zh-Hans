@@ -1,7 +1,7 @@
 ---
-title: 在HTML5表單中建立可存取的複雜表格
+title: 在HTML5表单中创建可访问的复杂表
 seo-title: Create accessible complex tables in HTML5 forms
-description: 瞭解如何在HTML5表單中建立無障礙表格。
+description: 了解如何在HTML5表单中创建无障碍的表。
 seo-description: Learn how to create accessible tables in HTML5 forms.
 uuid: e52562d2-4dc3-4359-9dbb-c18614921808
 content-type: reference
@@ -17,16 +17,16 @@ ht-degree: 0%
 
 ---
 
-# 在HTML5表單中建立可存取的複雜表格 {#create-accessible-complex-tables-in-html-forms}
+# 在HTML5表单中创建可访问的复杂表 {#create-accessible-complex-tables-in-html-forms}
 
-HTML5 Forms中表格的預設實作使用HTMLDIV元素來轉譯表格。 轉譯涉及使用ARIA角色來滿足協助工具需求。
+HTML5 Forms中表的默认实现使用HTMLDIV元素渲染表。 渲染包括使用ARIA角色来满足辅助功能要求。
 
-為了避免熒幕助讀程式無法完整支援資料表格所用ARIA角色的協助工具問題，HTML5 Forms提供表格的替代轉譯。 這些表格以Designer中匯入的新表格格式為基礎，也支援：
+为了避免屏幕阅读器出现辅助功能问题（该屏幕阅读器不完全支持与数据表一起使用的ARIA角色），HTML5 Forms提供了表的替代演绎版。 这些表基于Designer中引入的新表格式，该格式还支持：
 
-* 列標題
-* 列跨度
+* 行标题
+* 行跨度
 
-若要在HTML5 Forms中使用新格式，請將表格標示為複雜。 若要將表格標籤為複雜，請新增 `extras` 標籤的位置，如下所示：
+要在HTML5 Forms中使用新格式，请将表标记为复杂。 要将表标记为复杂，请添加 `extras` 表子表单的XML源中的标记，如下所示：
 
 ```xml
 </extras>
@@ -34,20 +34,20 @@ HTML5 Forms中表格的預設實作使用HTMLDIV元素來轉譯表格。 轉譯�
  </extras>
 ```
 
-標示為的表格 *complextable* 遵循原生HTML轉譯，並為某些熒幕朗讀程式提供更好的協助工具支援。  若要建立列範圍，請選取相同欄中表格的連續儲存格，以滑鼠右鍵按一下選取範圍，然後按一下 **[!UICONTROL 合併儲存格]**.
+标记为的表 *complextable* 遵循本机HTML演绎版，并为某些屏幕阅读器提供更好的无障碍支持。  要创建行范围，请选择同一列中表的连续单元格，右键单击所选内容，然后单击 **[!UICONTROL 合并单元格]**.
 
 >[!NOTE]
 >
->建立列跨距僅適用於最左側的儲存格。
+>创建行范围仅适用于最左侧的单元格。
 
-若要將列標示為列標題，請選取列中的所有儲存格，以滑鼠右鍵按一下選取範圍，然後按一下 **[!UICONTROL 標頭標籤]**.
+要将行标记为行标题，请选择行中的所有单元格，右键单击选定内容，然后单击 **[!UICONTROL 标记标题]**.
 
-若要將儲存格標示為欄標題，請選取欄中的任何儲存格，以滑鼠右鍵按一下選取範圍，然後按一下 **[!UICONTROL 標頭標籤]**.
+要将单元格标记为列标题，请选择列中的任意单元格，右键单击所选内容，然后单击 **[!UICONTROL 标记标题]**.
 
-新限制 *Accessibletable* 格式：
+新增限制 *Accessibletable* 格式：
 
-* 表格中使用rowspan時，不支援可成長的欄位
-* 不支援巢狀表格（表格儲存格內的表格）
-* rowspan的支援僅限於標題列和標題儲存格
-* 僅支援一般表格
-* rowspan > 1的表格不支援資料預填
+* 如果在表中使用rowspan，则不支持可增长的字段
+* 不支持嵌套表（表单元格中的表）
+* 仅对标题行和标题单元格支持rowspan
+* 仅支持常规表
+* 不支持在rowspan > 1的表中预填充数据

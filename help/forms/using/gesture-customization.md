@@ -1,7 +1,7 @@
 ---
-title: 手勢自訂
+title: 手势自定义
 seo-title: Gesture customization
-description: 自訂AEM Forms應用程式上的手勢
+description: 自定义AEM Forms应用程序上的手势
 seo-description: Customize the gestures on your AEM Forms app
 uuid: 117e0e21-66bd-42f1-879c-6c1443991974
 contentOwner: robhagat
@@ -17,59 +17,59 @@ ht-degree: 0%
 
 ---
 
-# 手勢自訂 {#gesture-customization}
+# 手势自定义 {#gesture-customization}
 
-您可以自訂AEM Forms應用程式的手勢，以提供與應用程式互動的獨特方法。 例如，您可以新增手勢以開啟或關閉任務或起點。
+您可以自定义AEM Forms应用程序的手势，以提供与应用程序交互的不同方法。 例如，您可以添加新手势以打开或关闭任务或起点。
 
-## 若要在AEM Forms應用程式中自訂手勢 {#to-customize-gestures-in-aem-forms-app}
+## 在AEM Forms应用程序中自定义手势 {#to-customize-gestures-in-aem-forms-app}
 
-在AEM Forms應用程式中，向左撥動可開啟新任務或起點，而向右撥動則不會執行任何動作。 以下範例提供在AEM Forms應用程式中執行滑鼠右鍵手勢時，開啟新任務或起點的步驟。
+在AEM Forms应用程序中，向左轻扫可打开新任务或起点，而向右轻扫则不执行任何操作。 以下示例提供了在AEM Forms应用程序中执行右键单击手势时打开新任务或起点的步骤。
 
-1. 開啟您的專案。
+1. 打开您的项目。
 
-   * 若為iOS，請開啟 `Capture.xcodeproj` 在Xcode中
-   * 若是Android，請在Eclipse中開啟Android專案。
-   * 若是Windows，請開啟 `MWSWindows.sln` 在Visual Studio中。
+   * 对于iOS，请打开 `Capture.xcodeproj` 在Xcode中
+   * 对于Android，在Eclipse中打开Android项目。
+   * 对于Windows，打开 `MWSWindows.sln` 在Visual Studio中。
 
-1. 導覽至檢視資料夾，然後開啟 `task.js` 檔案進行編輯。
+1. 导航到视图文件夹，然后打开 `task.js` 要编辑的文件。
 
-   * 在Xcode中，導覽至 **擷取> www > wsmobile > js >執行階段>檢視** 資料夾。
-   * 在Eclipse中，導覽至 **資產> www > wsmobile > js >執行階段>檢視** 資料夾。
-   * 在Visual Studio中，導覽至 **MWSWindows > www > wsmobile > js >執行階段>檢視** 資料夾。
+   * 在Xcode中，导航到 **捕获> www > wsmobile > js >运行时>视图** 文件夹。
+   * 在Eclipse中，导航到 **资产> www > wsmobile > js >运行时>视图** 文件夹。
+   * 在Visual Studio中，导航到 **MWSWindows > www > wsmobile > js >运行时>视图** 文件夹。
 
    >[!NOTE]
    >
-   >task.js檔案包含與任務或「起點」清單中列出的每個任務或「起點」相關聯的骨幹檢視。
+   >task.js文件包含与任务或起点列表中列出的每个任务或起点关联的骨干视图。
 
-1. 在 `task.js` 檔案中，搜尋檢視的events屬性。
+1. 在 `task.js` 文件，搜索视图的events属性。
 
-   events屬性是一個對應，每個專案的格式為：
+   events属性是一个映射，每个条目的格式为：
 
    `"EventName Selector": "Function"`
 
-   當您觸發名為的Javascript事件時 `EventName`於指定的HTML元素上 `Selector`，則 `Function`稱為。
+   当您触发名为的Javascript事件时 `EventName`在指定的HTML元素上 `Selector`，则 `Function`称为。
 
 1. 查找
 
-   * &quot;點選.taskContentArea&quot; ： &quot;onTaskClick&quot;，
+   * &quot;点按.taskContentArea&quot; ： &quot;onTaskClick&quot;，
 
-      &quot;點選.taskOpenArea&quot; ： &quot;onTaskClick&quot;，
+      &quot;点按.taskOpenArea&quot; ： &quot;onTaskClick&quot;，
 
-      &quot;點選.task-content&quot; ： &quot;onTaskClick&quot;，
+      &quot;点按.task-content&quot; ： &quot;onTaskClick&quot;，
 
-      &quot;點選.last_empty_div&quot; ： &quot;onTaskClick&quot;，
-   和取代為
+      &quot;点按.last_empty_div&quot; ： &quot;onTaskClick&quot;，
+   和替换为
 
-   * &quot;撥動.taskContentArea&quot; ： &quot;onTaskClick&quot;，
+   * &quot;轻扫.taskContentArea&quot; ：&quot;onTaskClick&quot;，
 
-      &quot;撥動.taskOpenArea&quot; ： &quot;onTaskClick&quot;，
+      &quot;轻扫.taskOpenArea&quot; ：&quot;onTaskClick&quot;，
 
-      &quot;撥動.task-content&quot; ： &quot;onTaskClick&quot;，
+      &quot;轻扫.task-content&quot; ：&quot;onTaskClick&quot;，
 
       &quot;swipe .last_empty_div&quot; ： &quot;onTaskClick&quot;，
 
 
-1. 儲存並關閉 `task.js` 檔案。
-1. 建置並執行AEM Forms應用程式。 現在您可以使用向左撥動和向右撥動來開啟。
+1. 保存并关闭 `task.js` 文件。
+1. 构建并运行AEM Forms应用程序。 现在，您可以使用向左轻扫和向右轻扫来打开。
 
-同樣地，您可以針對各種手勢、HTML元素和函式的組合，在其他檢視中進行變更。
+同样，您可以更改其他视图中的手势、HTML元素和函数的各种组合。

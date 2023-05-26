@@ -1,7 +1,7 @@
 ---
-title: 適用於AEM Forms的AEM案頭應用程式
+title: 适用于AEM Forms的AEM桌面应用程序
 seo-title: AEM desktop app for AEM Forms
-description: 適用於AEM Forms的AEM案頭應用程式
+description: 适用于AEM Forms的AEM桌面应用程序
 uuid: 99e0f2fb-8623-45bb-8e2e-5c5d6f482366
 contentOwner: khsingh
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -17,29 +17,29 @@ ht-degree: 0%
 
 ---
 
-# 適用於AEM Forms的AEM案頭應用程式 {#aem-desktop-app-for-aem-forms}
+# 适用于AEM Forms的AEM桌面应用程序 {#aem-desktop-app-for-aem-forms}
 
-AEM案頭應用程式可讓您將Adobe Experience Manager (AEM) Assets存放庫和AEM Forms二進位檔案對應到您系統上的網路目錄。 您可以在檔案總管中檢視同步的資產和二進位檔案，並視需要使用各種應用程式來編輯檔案。 除了檢視檔案之外，您也可以建立、上傳和刪除二進位檔案。 您也可以直接從軟體開啟、編輯和儲存檔案。 例如，您可以從Designer直接開啟和編輯XDP檔案。 您對本機資產所做的變更，會反映在AEM Assets存放庫和AEM Forms UI中。
+AEM桌面应用程序允许您将Adobe Experience Manager (AEM) Assets存储库和AEM Forms二进制文件映射到您系统中的网络目录。 您可以在文件资源管理器中查看同步的资源和二进制文件，并根据需要使用各种应用来编辑文件。 除了查看文件之外，您还可以创建、上传和删除二进制文件。 您还可以直接从软件打开、编辑和保存文件。 例如，您可以从Designer直接打开和编辑XDP文件。 您在本地对资源所做的更改将反映在AEM Assets存储库和AEM Forms UI中。
 
-您可以從AEM執行個體下載應用程式。 如需下載應用程式的詳細資訊，請參閱 [AEM案頭應用程式發行說明](https://helpx.adobe.com/experience-manager/desktop-app/release-notes.html).
+您可以从AEM实例下载应用程序。 有关下载应用程序的详细信息，请参阅 [AEM桌面应用程序发行说明](https://helpx.adobe.com/experience-manager/desktop-app/release-notes.html).
 
-## AEM案頭應用程式支援的AEM Forms資產 {#aem-forms-assets-supported-in-aem-desktop-app}
+## AEM桌面应用程序支持的AEM Forms资产 {#aem-forms-assets-supported-in-aem-desktop-app}
 
-您可以使用應用程式來同步下列型別的AEM Forms二進位檔案：表單範本(.xdp)、PDF表單(.pdf)、檔案(.pdf)、影像、XML結構描述(.xsd)、樣式表(.xfs)。 應用程式會將所有其他檔案（不支援的檔案）列為0位元組檔案。 將不支援的檔案列為0位元組檔案，可確保使用者知道AEM Forms伺服器上存在其他可用的資產。
+您可以使用应用程序同步以下类型的AEM Forms二进制文件：表单模板(.xdp)、PDF表单(.pdf)、文档(.pdf)、图像、XML架构(.xsd)、样式表(.xfs)。 应用程序会将所有其他文件（不受支持的文件）列为0字节文件。 将不受支持的文件列为0字节文件可确保用户了解AEM Forms服务器上存在其他可用资源。
 
 >[!NOTE]
 >
->檔案名稱只能包含英數字元、連字型大小或底線。
+>文件名只能包含字母数字字符、连字符或下划线。
 
-## 為AEM案頭應用程式啟用AEM Forms {#enable-aem-forms-for-aem-desktop-app}
+## 为AEM桌面应用程序启用AEM Forms {#enable-aem-forms-for-aem-desktop-app}
 
-AEM案頭應用程式在Microsoft Windows上使用WebDAV通訊協定，在Mac OS X上使用SMB1連線至AEM Forms伺服器。 開箱即用的AEM Forms伺服器不會將二進位檔案和其他資產與WebDAV或SMB使用者端同步。 執行以下步驟，為AEM案頭應用程式啟用AEM Forms：
+AEM桌面应用程序在Microsoft Windows上使用WebDAV协议，在Mac OS X上使用SMB1连接到AEM Forms服务器。 开箱即用的AEM Forms服务器不能将二进制文件和其他资源与WebDAV或SMB客户端同步。 执行以下步骤以启用AEM Forms for AEM桌面应用程序：
 
-1. 以管理員身分登入AEM Forms。
-1. 在作者執行個體中，按一下 ![adobeexperiencemanager](assets/adobeexperiencemanager.png) **[!UICONTROL Adobe Experience Manager >工具]** ![槌子](assets/hammer.png) **[!UICONTROL >部署>作業> Web主控台]**. Web主控台會在新視窗中開啟。
-1. 在Web主控台視窗中，找到並開啟 **[!UICONTROL FormsManager AddOn設定]** 選項。
-1. 在FormsManager AddOn設定對話方塊中，取消選取 **[!UICONTROL 非同步同步資源]** 核取方塊，然後按一下 **[!UICONTROL 儲存]**.
-1. 重新啟動AEM Forms伺服器。 重新啟動後，AEM Forms伺服器會啟用，以接受內容並與AEM案頭應用程式共用。
-1. 開啟應用程式並連線至AEM Forms伺服器。
+1. 以管理员身份登录AEM Forms。
+1. 在创作实例中，单击 ![adobeexperiencemanager](assets/adobeexperiencemanager.png) **[!UICONTROL Adobe Experience Manager >工具]** ![锤子](assets/hammer.png) **[!UICONTROL >部署>操作> Web控制台]**. Web控制台将在新窗口中打开。
+1. 在Web控制台窗口中，找到并打开 **[!UICONTROL FormsManager加载项配置]** 选项。
+1. 在FormsManager加载项配置对话框中，取消选择 **[!UICONTROL 异步同步资源]** 复选框，然后单击 **[!UICONTROL 保存]**.
+1. 重新启动AEM Forms服务器。 重新启动后，将启用AEM Forms服务器以接受内容并与AEM桌面应用程序共享内容。
+1. 打开应用程序并连接到AEM Forms服务器。
 
-   成功連線時，應用程式會填入 `content/dam` 和 `content/dam/formsanddocuments` 資料夾。 除了將檔案從上方資料夾移至本機資料夾（反之亦然）外，您也可以使用應用程式在自動填入的資料夾之間移動內容。
+   成功连接后，应用程序将填充 `content/dam` 和 `content/dam/formsanddocuments` 文件夹。 除了将文件从上述文件夹移动到本地文件夹（反之亦然）之外，您还可以使用应用程序在自动填充的文件夹之间移动内容。

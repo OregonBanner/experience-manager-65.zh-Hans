@@ -1,7 +1,7 @@
 ---
-title: JEE版AEM Forms的一般安全性考量事項
+title: JEE上AEM Forms的一般安全注意事项
 seo-title: General Security Considerations for AEM Forms on JEE
-description: 瞭解如何準備在JEE環境中強化AEM Forms。
+description: 了解如何准备在JEE环境中强化AEM Forms。
 seo-description: Learn how to prepare for hardening your AEM Forms on JEE environment.
 uuid: 4d098731-fc8f-41d7-98b5-5c2e31211614
 content-type: reference
@@ -18,144 +18,144 @@ ht-degree: 1%
 
 ---
 
-# JEE版AEM Forms的一般安全性考量事項{#general-security-considerations-for-aem-forms-on-jee}
+# JEE上AEM Forms的一般安全注意事项{#general-security-considerations-for-aem-forms-on-jee}
 
-本文提供的簡介資訊可協助您為強化AEM Forms環境做好準備。 其中包含有關JEE版AEM Forms、作業系統、應用程式伺服器和資料庫安全性的必要條件資訊。 在繼續鎖定環境之前，請先檢閱此資訊。
+本文提供了可帮助您准备强化AEM Forms环境的介绍性信息。 其中包括有关JEE上的AEM Forms、操作系统、应用程序服务器和数据库安全的先决条件信息。 在继续锁定环境之前，请查看此信息。
 
-## 廠商特定安全性資訊 {#vendor-specific-security-information}
+## 特定于供应商的安全信息 {#vendor-specific-security-information}
 
-本節包含整合至AEM Forms on JEE解決方案中的作業系統、應用程式伺服器和資料庫的安全性相關資訊。
+本节包含有关合并到AEM Forms on JEE解决方案中的操作系统、应用程序服务器和数据库的安全相关信息。
 
-使用本節中的連結，為您的作業系統、資料庫和應用程式伺服器尋找廠商特定的安全性資訊。
+使用本节中的链接查找特定于供应商的操作系统、数据库和应用程序服务器的安全信息。
 
-### 作業系統安全性資訊 {#operating-system-security-information}
+### 操作系统安全信息 {#operating-system-security-information}
 
-保護作業系統時，請仔細考慮實施作業系統供應商所說明的措施，包括：
+保护操作系统时，请仔细考虑实施操作系统供应商所述的措施，其中包括：
 
-* 定義和控制使用者、角色和許可權
-* 監控日誌和稽核追蹤
-* 移除不必要的服務和應用程式
-* 備份檔案
+* 定义和控制用户、角色和权限
+* 监控日志和审核跟踪
+* 删除不必要的服务和应用程序
+* 备份文件
 
-如需AEM Forms on JEE支援之作業系統的安全性資訊，請參閱表格中的資源：
+有关AEM Forms on JEE支持的操作系统的安全信息，请参阅表中的资源：
 
 <table>
  <thead>
   <tr>
    <th><p>操作系统</p> </th>
-   <th><p>安全性資源</p> </th>
+   <th><p>安全资源</p> </th>
   </tr>
  </thead>
  <tbody>
   <tr>
    <td><p>IBM® AIX® 7.2</p> </td>
-   <td><p><a href="https://www.ibm.com/support/knowledgecenter/ssw_aix_72/com.ibm.aix.security/security-kickoff.htm" target="_blank">IBM® AIX®安全性優點</a></p> </td>
+   <td><p><a href="https://www.ibm.com/support/knowledgecenter/ssw_aix_72/com.ibm.aix.security/security-kickoff.htm" target="_blank">IBM® AIX®安全优势</a></p> </td>
   </tr>
   <tr>
    <td><p>Microsoft® Windows Server® 2016 </p> </td>
-   <td><p><a href="https://cloudblogs.microsoft.com/windowsserver/2017/08/22/now-available-windows-server-2016-security-guide/">Windows Server 2016安全性指南</a></p> </td>
+   <td><p><a href="https://cloudblogs.microsoft.com/windowsserver/2017/08/22/now-available-windows-server-2016-security-guide/">Windows Server 2016安全指南</a></p> </td>
   </tr>
   <tr>
    <td><p>Red Hat® Linux® AP或ES</p> </td>
-   <td><p><a href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/pdf/security_guide/Red_Hat_Enterprise_Linux-7-Security_Guide-en-US.pdf" target="_blank">Red Hat® Enterprise Linux®安全性指南</a></p> </td>
+   <td><p><a href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/pdf/security_guide/Red_Hat_Enterprise_Linux-7-Security_Guide-en-US.pdf" target="_blank">Red Hat® Enterprise Linux®安全指南</a></p> </td>
   </tr>
   <tr>
    <td><p>Sun Solaris™ 11</p> </td>
-   <td><p><a href="https://docs.oracle.com/cd/E53394_01/html/E54807/index.html" target="_blank">安全性與強化准則</a></p> </td>
+   <td><p><a href="https://docs.oracle.com/cd/E53394_01/html/E54807/index.html" target="_blank">安全性和强化准则</a></p> </td>
   </tr>
   <tr>
    <td>oracleLinux® 7 Update 3</td>
-   <td><a href="https://docs.oracle.com/en/operating-systems/oracle-linux/7/security/" target="_blank">第7版安全性指南</a><br /> </td>
+   <td><a href="https://docs.oracle.com/en/operating-systems/oracle-linux/7/security/" target="_blank">版本7的安全指南</a><br /> </td>
   </tr>
   <tr>
    <td>CentOS 7<sup> </sup></td>
-   <td><a href="https://wiki.centos.org/HowTos/OS_Protection" target="_blank">保護檔案</a></td>
+   <td><a href="https://wiki.centos.org/HowTos/OS_Protection" target="_blank">保护文档</a></td>
   </tr>
  </tbody>
 </table>
 
-### 應用程式伺服器安全性資訊 {#application-server-security-information}
+### 应用程序服务器安全信息 {#application-server-security-information}
 
-保護應用程式伺服器時，請仔細考慮實施伺服器供應商所述的措施，包括：
+保护应用程序服务器时，请仔细考虑实施服务器供应商所述的措施，其中包括：
 
-* 使用不顯眼的管理員使用者名稱
-* 停用不必要的服務
-* 保護主控台管理員
-* 啟用安全Cookie
-* 關閉不需要的連線埠
-* 依IP位址或網域限制使用者端
-* 使用Java™安全管理員以程式設計方式限制許可權
+* 使用不明显的管理员用户名
+* 禁用不必要的服务
+* 保护控制台管理器
+* 启用安全Cookie
+* 关闭不需要的端口
+* 按IP地址或域限制客户端
+* 使用Java™安全管理器以编程方式限制权限
 
-如需AEM Forms on JEE支援的應用程式伺服器相關安全性資訊，請參閱此表格中的資源。
+有关AEM Forms on JEE支持的应用程序服务器的安全信息，请参阅此表中的资源。
 
 <table>
  <thead>
   <tr>
-   <th><p>應用程式伺服器</p> </th>
-   <th><p>安全性資源</p> </th>
+   <th><p>应用程序服务器</p> </th>
+   <th><p>安全资源</p> </th>
   </tr>
  </thead>
  <tbody>
   <tr>
-   <td><p>oracleWebLogic®</p> </td>
-   <td><p>搜尋瞭解WebLogic安全性的網址 <a href="https://docs.oracle.com/">https://docs.oracle.com/</a>.</p> </td>
+   <td><p>WebLogicOracle®</p> </td>
+   <td><p>搜索以了解以下位置的WebLogic安全性： <a href="https://docs.oracle.com/">https://docs.oracle.com/</a>.</p> </td>
   </tr>
   <tr>
    <td><p>IBM® WebSphere®</p> </td>
-   <td><p><a href="https://www.ibm.com/developerworks/websphere/zones/was/security/" target="_blank">保護應用程式及其環境</a></p> </td>
+   <td><p><a href="https://www.ibm.com/developerworks/websphere/zones/was/security/" target="_blank">保护应用程序及其环境</a></p> </td>
   </tr>
   <tr>
    <td><p>Red Hat® JBoss®</p> </td>
-   <td><p><a href="https://docs.jboss.org/author/display/AS7/Security%20subsystem%20configuration.html">安全性子系統設定</a></p> </td>
+   <td><p><a href="https://docs.jboss.org/author/display/AS7/Security%20subsystem%20configuration.html">安全子系统配置</a></p> </td>
   </tr>
  </tbody>
 </table>
 
-### 資料庫安全性資訊 {#database-security-information}
+### 数据库安全信息 {#database-security-information}
 
-保護資料庫時，請考慮實施資料庫供應商所述的措施，包括：
+在保护数据库时，请考虑实施数据库供应商所述的措施，其中包括：
 
-* 使用存取控制清單(ACL)限制操作
-* 使用非標準連線埠
-* 隱藏防火牆後的資料庫
-* 將敏感資料寫入資料庫之前先加以加密（請參閱資料庫製造商的檔案）
+* 使用访问控制列表(ACL)限制操作
+* 使用非标准端口
+* 将数据库隐藏在防火墙之后
+* 在将敏感数据写入数据库之前对其进行加密（请参阅数据库制造商的文档）
 
-如需AEM Forms on JEE支援之資料庫的安全性資訊，請參閱此表格中的資源。
+有关AEM Forms on JEE支持的数据库的安全信息，请参阅此表中的资源。
 
 <table>
  <thead>
   <tr>
    <th><p>数据库</p> </th>
-   <th><p>安全性資源</p> </th>
+   <th><p>安全资源</p> </th>
   </tr>
  </thead>
  <tbody>
   <tr>
    <td><p>IBM® DB2® 11.1</p> </td>
-   <td><p><a href="https://www-01.ibm.com/software/data/db2/library/">DB2®產品系列資料庫</a></p> </td>
+   <td><p><a href="https://www-01.ibm.com/software/data/db2/library/">DB2®产品系列库</a></p> </td>
   </tr>
   <tr>
    <td><p>Microsoft® SQL Server 2016</p> </td>
-   <td>在Web上搜尋「SQL Server 2016：安全性」</td>
+   <td>在Web中搜索“SQL Server 2016：安全性”</td>
   </tr>
   <tr>
    <td><p>MySQL 5</p> </td>
-   <td><p><a href="https://dev.mysql.com/doc/refman/5.0/en/security.html">MySQL 5.0一般安全性問題</a></p> <p><a href="https://dev.mysql.com/doc/refman/5.1/en/security.html">MySQL 5.1一般安全性問題</a></p> </td>
+   <td><p><a href="https://dev.mysql.com/doc/refman/5.0/en/security.html">MySQL 5.0一般安全问题</a></p> <p><a href="https://dev.mysql.com/doc/refman/5.1/en/security.html">MySQL 5.1一般安全问题</a></p> </td>
   </tr>
   <tr>
    <td><p>oracle® 12c</p> </td>
-   <td><p>請參閱安全性一章，位置在： <a href="https://docs.oracle.com/database/121/TDPSG/GUID-6E2F4E53-5D87-4FCD-9C9C-6792217D7014.htm#TDPSG94426" target="_blank">oracle12g檔案</a></p> </td>
+   <td><p>请参阅《 》中的“安全”一章 <a href="https://docs.oracle.com/database/121/TDPSG/GUID-6E2F4E53-5D87-4FCD-9C9C-6792217D7014.htm#TDPSG94426" target="_blank">oracle12g文档</a></p> </td>
   </tr>
  </tbody>
 </table>
 
-此表格說明在AEM Forms on JEE設定程式期間需要開啟的預設連線埠。 如果您要透過https連線，請相應地調整連線埠資訊和IP位址。 如需有關設定連線埠的詳細資訊，請參閱 *在JEE上安裝和部署AEM Forms* 應用程式伺服器的檔案。
+此表描述了在AEM Forms on JEE配置过程中需要打开的默认端口。 如果通过https进行连接，请相应地调整端口信息和IP地址。 有关配置端口的详细信息，请参见 *在JEE上安装和部署AEM Forms* 应用程序服务器的文档。
 
 <table>
  <thead>
   <tr>
-   <th><p>產品或服務</p> </th>
-   <th><p>連線埠號碼</p> </th>
+   <th><p>产品或服务</p> </th>
+   <th><p>端口号</p> </th>
   </tr>
  </thead>
  <tbody>
@@ -168,15 +168,15 @@ ht-degree: 1%
    <td><p>7001</p> </td>
   </tr>
   <tr>
-   <td>&gt;<p>WebLogic Managed Server</p> </td>
-   <td><p>由管理員在設定期間設定</p> </td>
+   <td>&gt;<p>WebLogic托管服务器</p> </td>
+   <td><p>由管理员在配置期间设置</p> </td>
   </tr>
   <tr>
    <td>&gt;<p>WebSphere®</p> </td>
-   <td><p>9060，如果已啟用全域安全性，預設SSL連線埠值為9043。</p> <p>9080</p> </td>
+   <td><p>9060，如果启用了全局安全，则默认SSL端口值为9043。</p> <p>9080</p> </td>
   </tr>
   <tr>
-   <td>&gt;<p>BAM伺服器</p> </td>
+   <td>&gt;<p>BAM服务器</p> </td>
    <td><p>7001</p> </td>
   </tr>
   <tr>
@@ -201,52 +201,52 @@ ht-degree: 1%
   </tr>
   <tr>
    <td>&gt;<p>LDAP</p> </td>
-   <td><p>執行LDAP伺服器的連線埠。 預設連線埠通常為389。 不過，如果您選取SSL選項，預設連線埠通常是636。 向您的LDAP管理員確認要指定哪個連線埠。</p> </td>
+   <td><p>运行LDAP服务器的端口。 默认端口通常为389。 但是，如果选择SSL选项，则默认端口通常为636。 向您的LDAP管理员确认要指定的端口。</p> </td>
   </tr>
  </tbody>
 </table>
 
-### 設定JBoss®使用非預設HTTP連線埠 {#configuring-jboss-to-use-a-non-default-http-port}
+### 配置JBoss®以使用非默认HTTP端口 {#configuring-jboss-to-use-a-non-default-http-port}
 
-JBoss® Application Server使用8080作為預設的HTTP連線埠。 JBoss®也有預先設定的連線埠8180、8280和8380，這些連線埠在jboss-service.xml檔案中被註釋掉。 如果您的電腦上有已使用此連線埠的應用程式，請依照下列步驟變更AEM Forms on JEE使用的連線埠：
+JBoss®应用程序服务器使用8080作为默认HTTP端口。 JBoss®还具有预配置的端口8180、8280和8380，这些端口在jboss-service.xml文件中被注释掉。 如果您的计算机上有一个应用程序已使用此端口，请按照以下步骤更改AEM Forms on JEE使用的端口：
 
-1. 開啟下列檔案進行編輯：
+1. 打开以下文件以进行编辑：
 
-   單一伺服器安裝： [JBoss® root]/standalone/configuration/standalone.xml
+   单服务器安装： [JBoss® root]/standalone/configuration/standalone.xml
 
-   叢集安裝： [JBoss® root]/domain/configuration/domain.xml
+   群集安装： [JBoss® root]/domain/configuration/domain.xml
 
-1. 變更值 **連線埠** 中的屬性 **&lt;socket-binding>** 標籤至自訂連線埠號碼。 例如，下列專案使用連線埠8090：
+1. 更改值 **端口** 中的属性 **&lt;socket-binding>** 标记到自定义端口号。 例如，以下端口使用端口8090：
 
    &lt;socket-binding name=&quot;http&quot; port=&quot;8090&quot;/>
 
-1. 儲存並關閉檔案。
-1. 重新啟動JBoss®應用程式伺服器。
+1. 保存并关闭文件。
+1. 重新启动JBoss®应用程序服务器。
 
-## AEM Forms on JEE安全性考量事項 {#aem-forms-on-jee-security-considerations}
+## AEM Forms on JEE安全注意事项 {#aem-forms-on-jee-security-considerations}
 
-本節說明有關JEE特定安全性問題的部分AEM Forms，您應瞭解這些問題。
+本节介绍了一些关于JEE特定安全问题的部分AEM Forms，您应该了解这些问题。
 
-### 資料庫中未加密電子郵件認證 {#email-credentials-not-encrypted-in-database}
+### 数据库中未加密电子邮件凭据 {#email-credentials-not-encrypted-in-database}
 
-應用程式儲存的電子郵件認證在儲存至JEE資料庫的AEM Forms之前不會加密。 當您設定服務端點使用電子郵件時，當它儲存在資料庫中時，作為端點設定一部分使用的任何密碼資訊都不會加密。
+应用程序存储的电子邮件凭据在存储在JEE数据库的AEM Forms中之前不会进行加密。 当您将服务端点配置为使用电子邮件时，在该端点配置中使用的任何密码信息存储在数据库中时都不会加密。
 
-### 資料庫中Rights Management的敏感內容 {#sensitive-content-for-rights-management-in-the-database}
+### 数据库中的敏感内容Rights Management {#sensitive-content-for-rights-management-in-the-database}
 
-JEE上的AEM Forms使用JEE上的AEM Forms資料庫來儲存敏感檔案金鑰資訊和用於原則檔案的其他密碼編譯材料。 保護資料庫不受入侵有助於保護這些敏感資訊。
+JEE上的AEM Forms使用JEE上的AEM Forms数据库来存储敏感文档密钥信息以及用于策略文档的其他加密材料。 保护数据库免受入侵有助于保护此敏感信息。
 
-### 以純文字格式輸入密碼 {#password-in-clear-text-format-in-adobe-ds-xml}
+### 明文形式的密码 {#password-in-clear-text-format-in-adobe-ds-xml}
 
-在JEE上執行AEM Forms所用的應用程式伺服器，需要自行設定，才能透過應用程式伺服器上設定的資料來源存取資料庫。 確保應用程式伺服器不會在資料來源組態檔中以純文字公開您的資料庫密碼。
+用于在JEE上运行AEM Forms的应用程序服务器需要其自身的配置，以便通过在该应用程序服务器上配置的数据源访问数据库。 确保应用程序服务器不会在其数据源配置文件中以明文形式公开数据库密码。
 
-lc_[資料庫].xml檔案不應包含純文字格式的密碼。 請洽詢您的應用程式伺服器廠商，瞭解如何為應用程式伺服器加密這些密碼。
+lc_[数据库].xml文件不应包含明文格式的密码。 有关如何为应用程序服务器加密这些密码的信息，请咨询应用程序服务器供应商。
 
 >[!NOTE]
 >
->AEM Forms on JEE JBoss®全包安裝程式會加密資料庫密碼。
+>AEM Forms on JEE JBoss®统包安装程序加密数据库密码。
 
-IBM® WebSphere® Application Server和OracleWebLogic Server預設可加密資料來源密碼。 不過，您應透過應用程式伺服器檔案確認，以確保確實發生。
+默认情况下，IBM® WebSphere® Application Server和OracleWebLogic Server可以加密数据源密码。 但是，您应使用应用程序服务器文档进行确认，以确保发生这种情况。
 
-### 保護儲存在信任存放區中的私密金鑰 {#protecting-the-private-key-stored-in-trust-store}
+### 保护存储在信任存储区中的私钥 {#protecting-the-private-key-stored-in-trust-store}
 
-在信任存放區中匯入的私密金鑰或認證會儲存在JEE資料庫的AEM Forms中。 若要保護資料庫安全並限制僅供指定的管理員存取，請採取適當的預防措施。
+在信任存储中导入的私钥或凭据存储在JEE数据库上的AEM Forms中。 要保护数据库并限制仅访问指定的管理员，请采取适当的预防措施。

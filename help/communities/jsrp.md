@@ -1,7 +1,7 @@
 ---
-title: JSRP - JCR儲存資源提供者
+title: JSRP - JCR存储资源提供程序
 seo-title: JSRP - JCR Storage Resource Provider
-description: JSRP通常最適合用於一個發佈執行個體和一個作者執行個體的示範或開發環境
+description: JSRP通常最适合用于一个发布实例和一个创作实例的演示或开发环境
 seo-description: JSRP is generally best suited for demonstration or development environments of one publish instance and one author instance
 uuid: 358a43c1-4137-4300-8443-c0d7166968ad
 contentOwner: Janice Kendall
@@ -18,73 +18,73 @@ ht-degree: 0%
 
 ---
 
-# JSRP - JCR儲存資源提供者 {#jsrp-jcr-storage-resource-provider}
+# JSRP - JCR存储资源提供程序 {#jsrp-jcr-storage-resource-provider}
 
-## 關於JSRP {#about-jsrp}
+## 关于JSRP {#about-jsrp}
 
-當AEM Communities使用JSRP作為其儲存選項（預設）時，社群內容儲存在JCR中，使用者產生的內容(UGC)只能從發佈它的作者或發佈執行個體存取。
+当AEM Communities使用JSRP作为其存储选项（默认）时，社区内容存储在JCR中，并且用户生成的内容(UGC)只能从发布该内容的创作或发布实例中访问。
 
-由於部署簡單，JSRP通常最適合用於一個發佈執行個體和一個作者執行個體的示範或開發環境。
+由于部署简单，JSRP通常最适合用于一个发布实例和一个创作实例的演示或开发环境。
 
-另請參閱 [SRP選項的特性](working-with-srp.md#characteristics-of-srp-options) 和 [建議的拓撲](topologies.md).
+另请参阅 [SRP选项的特性](working-with-srp.md#characteristics-of-srp-options) 和 [推荐的拓扑](topologies.md).
 
 ## 配置 {#configuration}
 
-### 選取JSRP {#select-jsrp}
+### 选择JSRP {#select-jsrp}
 
-依預設，JSRP是UGC的儲存選項。
+默认情况下，JSRP是UGC的存储选项。
 
-此 [儲存設定主控台](srp-config.md) 允許選取預設儲存設定，以識別要使用的SRP實作。
+此 [存储配置控制台](srp-config.md) 允许选择默认存储配置，该配置标识要使用的SRP实现。
 
-在製作環境中，若要存取儲存設定主控台
+在创作环境中，访问“存储配置”控制台
 
-* 從全域導覽： **[!UICONTROL 工具]** > **[!UICONTROL Communities]** > **[!UICONTROL 儲存設定]**
+* 从全局导航： **[!UICONTROL 工具]** > **[!UICONTROL Communities]** > **[!UICONTROL 存储配置]**
 
-* 選取 **[!UICONTROL JCR儲存資源提供者(JSRP)]**
+* 选择 **[!UICONTROL JCR存储资源提供程序(JSRP)]**
 
-* 選取 **[!UICONTROL 提交]**
+* 选择 **[!UICONTROL 提交]**
 
-![jsrp-configuration](assets/jsrp-configuration.png)
+![jsrp配置](assets/jsrp-configuration.png)
 
-### 發佈設定 {#publishing-the-configuration}
+### 发布配置 {#publishing-the-configuration}
 
-雖然JSRP是預設設定，但要確保在發佈環境中設定了相同的設定：
+虽然JSRP是默认配置，但为确保发布环境中设置了相同的配置：
 
-* 從全域導覽： **[!UICONTROL 工具]** > **[!UICONTROL 部署]** > **[!UICONTROL 復寫]**
-* 選取 **[!UICONTROL 啟動樹狀結構]** > **[!UICONTROL 開始路徑]**：
+* 从全局导航： **[!UICONTROL 工具]** > **[!UICONTROL 部署]** > **[!UICONTROL 复制]**
+* 选择 **[!UICONTROL 激活树]** > **[!UICONTROL 起始路径]**：
 
-   * 瀏覽至 `/conf/global/settings/community/srpc/`
+   * 浏览到 `/conf/global/settings/community/srpc/`
 
-* 選取 **[!UICONTROL 啟動]**
+* 选择 **[!UICONTROL 激活]**
 
-## 管理使用者資料 {#managing-user-data}
+## 管理用户数据 {#managing-user-data}
 
-有關以下專案的資訊： *使用者*， *使用者設定檔* 和 *使用者群組*，通常輸入發佈環境中，請造訪：
+有关信息 *用户*， *用户配置文件* 和 *用户组*，通常在发布环境中输入，请访问：
 
-* [使用者同步](sync.md)
-* [管理使用者和使用者群組](users.md)
+* [用户同步](sync.md)
+* [管理用户和用户组](users.md)
 
 ## 疑难解答 {#troubleshooting}
 
-### UGC在JCR中不可見 {#ugc-not-visible-in-jcr}
+### UGC在JCR中不可见 {#ugc-not-visible-in-jcr}
 
-檢查儲存選項的設定，確認JSRP已設定為預設提供者。 依預設，儲存資源提供者為JSRP。
+通过检查存储选项的配置，确保JSRP已配置为默认提供程序。 默认情况下，存储资源提供程序为JSRP。
 
-在所有作者和發佈AEM執行個體上，重新造訪「儲存體設定」主控台或檢查AEM存放庫：
+在所有创作和发布AEM实例上，重新访问Storage Configuration控制台或检查AEM存储库：
 
 * 在JCR中，如果 [/conf/global/settings/community](http://localhost:4502/crx/de/index.jsp#/conf/global/settings/community)
 
-   * 不包含 [srpc](http://localhost:4502/crx/de/index.jsp#/conf/global/settings/community/srpc) 節點，這表示儲存提供者為JSRP。
-   * 如果srpc節點存在且包含節點 [default設定](http://localhost:4502/crx/de/index.jsp#/conf/global/settings/community/srpc/defaultconfiguration)，defaultconfiguration的屬性應將JSRP定義為預設提供者。
+   * 不包含 [srpc](http://localhost:4502/crx/de/index.jsp#/conf/global/settings/community/srpc) 节点，这意味着存储提供程序是JSRP。
+   * 如果srpc节点存在且包含节点 [默认配置](http://localhost:4502/crx/de/index.jsp#/conf/global/settings/community/srpc/defaultconfiguration)，defaultconfiguration的属性应将JSRP定义为默认提供程序。
 
-### UGC在作者執行個體上不可見 {#ugc-not-visible-on-author-instance}
+### UGC在创作实例上不可见 {#ugc-not-visible-on-author-instance}
 
-這不是錯誤。 JSRP的一個特點是在發佈環境中輸入的社群內容將只會顯示在發佈環境中。
+这不是错误。 JSRP的一个特点是在发布环境中输入的社区内容仅在发布环境中可见。
 
-### UGC在發佈執行個體上不可見 {#ugc-not-visible-on-publish-instance}
+### UGC在发布实例上不可见 {#ugc-not-visible-on-publish-instance}
 
-如果部署了單一發佈執行個體或發佈叢集，請遵循以下指示： [UGC在JCR中不可見](#ugc-not-visible-in-jcr).
+如果部署了单个发布实例或发布群集，请按照 [UGC在JCR中不可见](#ugc-not-visible-in-jcr).
 
-如果部署了發佈陣列，JSRP的一個特徵是社群內容將只會顯示在它發佈到的發佈執行個體上。
+如果部署了发布场，则JSRP的一个特征是社区内容将仅在发布该内容的发布实例上可见。
 
-若要讓任何發佈執行個體都能看到UGC，則需要發佈叢集。
+要使UGC在任何发布实例中可见，需要发布集群。

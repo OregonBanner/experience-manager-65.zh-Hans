@@ -1,7 +1,7 @@
 ---
-title: 健康情況監視概觀
+title: 运行状况监视程序概述
 seo-title: Overview of Health Monitor
-description: 本檔案提供健康情況監視器的概觀，以及有關如何存取它的詳細資訊。
+description: 本文档概述了运行状况监控器，并详细介绍了如何访问该监控器。
 seo-description: This document provides the overview of the Health monitor, and details about how you can access it.
 uuid: 5934fd2d-80a5-4c6d-b3ee-882c2865705b
 contentOwner: admin
@@ -17,23 +17,23 @@ ht-degree: 0%
 
 ---
 
-# 健康情況監視概觀 {#overview-of-health-monitor}
+# 运行状况监视程序概述 {#overview-of-health-monitor}
 
-健康狀態監視器提供有關AEM表單系統的重要資訊，例如伺服器資訊、記憶體使用量和處理器使用量。 也可以使用Work Manager統計資料，例如工作專案或工作在佇列中的數量及其狀態。 您可以使用「健康情況監視器」執行下列工作：
+运行状况监视器提供有关AEM Forms系统的关键信息，如服务器信息、内存使用情况和处理器使用情况。 还有工作管理器统计信息，例如队列中的工作项或作业数量及其状态。 您可以使用运行状况监视器执行以下任务：
 
-* 確認您的系統正在正確執行
-* 檢視資訊以協助診斷系統問題
-* 對顯示問題的工作專案或工單執行作業
-* 從「工作管理員」資料庫中永久刪除過時記錄
+* 验证系统是否正常运行
+* 查看信息以帮助诊断系统问题
+* 对显示问题的工作项或任务执行操作
+* 从Job Manager数据库中清除过时记录
 
-Administration Console中的「健康情況監視」頁面有三個頁簽：
+管理控制台中的“运行状况监视器”页面有三个选项卡：
 
-* 「系統」標籤會顯示資源監督圖表以及表單伺服器（或叢集環境中的節點）的相關資訊。 (請參閱 [檢視系統資訊](/help/forms/using/admin-help/view-system-information.md#view-system-information).)
-* 「工作管理員」標籤會顯示與「工作管理員」相關的資料，例如「工作管理員」佇列中的工作專案數。 您可以使用各種條件篩選資訊，或使用作業工具管理個別工作專案。 (請參閱 [檢視與工作管理員相關的統計資料](/help/forms/using/admin-help/view-statistics-related-manager.md#view-statistics-related-to-work-manager).)
-* 您可以使用「工作永久刪除排程器」頁標從「工作管理員」資料庫永久刪除過時的記錄。 (請參閱 [從「工作管理員」資料庫中清除記錄](/help/forms/using/admin-help/purge-records-job-manager-database.md#purge-records-from-the-job-manager-database).)
+* “系统”选项卡显示资源监视图表和有关表单服务器（或群集环境中的节点）的信息。 (请参阅 [查看系统信息](/help/forms/using/admin-help/view-system-information.md#view-system-information).)
+* “工作管理器”选项卡显示与“工作管理器”相关的数据，例如“工作管理器”队列中的工作项数。 您可以使用各种标准筛选信息，或使用操作工具管理单个工作项。 (请参阅 [查看与工作管理器相关的统计信息](/help/forms/using/admin-help/view-statistics-related-manager.md#view-statistics-related-to-work-manager).)
+* 您可以使用“作业清除计划程序”选项卡从Job Manager数据库中清除过时的记录。 (请参阅 [从作业管理器数据库中清除记录](/help/forms/using/admin-help/purge-records-job-manager-database.md#purge-records-from-the-job-manager-database).)
 
-健康情況監視網頁會填入透過Gemfire API收集的統計資料。 此API會自動探索叢集中的所有節點。 它也能解決從Proxy伺服器或負載平衡器後面收集統計資料時發生的安全性問題。 Java選項可用於微調健康情況監視器，減少對AEM表單環境效能的影響。 (請參閱 [微調健康狀態監視器效能](/help/forms/using/admin-help/fine-tuning-health-monitor-performance.md#fine-tuning-health-monitor-performance).)
+“运行状况监视器”网页中填充了通过Gemfire API收集的统计数据。 此API会自动发现群集中的所有节点。 它还解决了从代理服务器或负载平衡器后面收集统计信息时出现的安全问题。 Java选项可用于微调运行状况监视器，从而减少对AEM Forms环境性能的影响。 (请参阅 [微调运行状况监视器性能](/help/forms/using/admin-help/fine-tuning-health-monitor-performance.md#fine-tuning-health-monitor-performance).)
 
-**存取狀況監視器**
+**访问运行状况监视器**
 
-1. 在管理控制檯中，按一下頁面右上角的「健全狀況監視器」 。
+1. 在管理控制台中，单击页面右上角的运行状况监视器。

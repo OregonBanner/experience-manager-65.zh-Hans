@@ -1,7 +1,7 @@
 ---
-title: 搜尋功能
+title: 搜索功能
 seo-title: Search Feature
-description: 將搜尋新增及設定至社群網站
+description: 向社区站点添加和配置搜索
 seo-description: Adding and configuring Search to a Communities site
 uuid: ca633456-911f-447f-881e-653533125d5f
 contentOwner: Guillaume Carlino
@@ -17,85 +17,85 @@ ht-degree: 2%
 
 ---
 
-# 搜尋功能 {#search-feature}
+# 搜索功能 {#search-feature}
 
-搜尋功能可與各種其他功能（例如論壇）搭配使用，以提供搜尋內容的功能。
+搜索功能可与各种其他功能（如论坛）配合使用，以提供搜索内容的功能。
 
-新增搜尋社群成員輸入的貼文(稱為使用者產生的內容(UGC))的功能時，有兩個元件： [搜尋](#search) 和 [搜尋結果](#search-results).
+当添加搜索由社区成员输入的帖子(称为用户生成内容(UGC))的功能时，有两个组件： [搜索](#search) 和 [搜索结果](#search-results).
 
-包含下列專案的頁面 `Search Results` 元件支援搜尋和顯示結果。
+包含 `Search Results` 组件支持搜索和显示结果。
 
-包含下列專案的頁面 `Search` 元件會提供位置來啟動搜尋，搜尋結果會顯示在 `Search Results` 頁面。
+包含 `Search` 组件提供了一个位置来启动搜索，搜索结果会显示在 `Search Results` 页面。
 
-搜尋功能可搭配任何其他功能使用，以允許網站訪客和成員檢視內容。
+搜索功能可与允许网站访客和成员查看内容的任何其他功能一起使用。
 
 ## 搜索 {#search-features}
 
-### 將搜尋新增至頁面 {#add-search-to-a-page}
+### 将搜索添加到页面 {#add-search-to-a-page}
 
-若要新增 `Search` 元件至作者模式下的頁面，請使用元件瀏覽器來尋找 `Communities / Search` 並將其拖曳至頁面上的適當位置。 使用 `Search` 需要「 」的第二個頁面 `Search Results.`
+添加 `Search` 组件添加到创作模式下的页面，请使用组件浏览器来查找 `Communities / Search` 并将其拖动到页面上的适当位置。 使用 `Search` 需要“ ”的第二页 `Search Results.`
 
-如需必要資訊，請造訪 [Communities元件基本知識](basics.md).
+有关必要信息，请访问 [社区组件基础知识](basics.md).
 
-當需要使用者端程式庫時， `cq.social.hbs.search`，包含，這就是 `Search` 元件隨即出現。
+当需要客户端库时， `cq.social.hbs.search`，包括，这就是 `Search` 组件随即出现。
 
 ![add-search](assets/add-search.png)
 
-### 設定新增的搜尋 {#configure-the-added-search}
+### 配置添加的搜索 {#configure-the-added-search}
 
-選取已放置的 `Search` 元件以存取及選取 `Configure` 圖示來開啟「編輯」對話方塊。
+选择已放置的 `Search` 组件以访问和选择 `Configure` 图标，打开“编辑”对话框。
 
-![設定](assets/configure-new.png)
+![配置](assets/configure-new.png)
 
-在 **[!UICONTROL 搜尋設定]** 索引標籤中，指定當訪客輸入查詢時，要如何搜尋路徑。
+在 **[!UICONTROL 搜索设置]** 选项卡，指定访客输入查询时搜索路径的方式。
 
-![search-settings](assets/search-settings.png)
+![搜索设置](assets/search-settings.png)
 
-* **[!UICONTROL 搜尋路徑]**
-使用「新增專案」按鈕新增搜尋路徑，會限制內容搜尋。 例如，若要將搜尋限制在特定論壇，請選取置於頁面內的論壇元件：
+* **[!UICONTROL 搜索路径]**
+通过使用“添加项目”按钮添加搜索路径，内容搜索受到限制。 例如，要将搜索限制到特定论坛，请选择放置在页面中的论坛组件：
 
    * `/content/community-components/en/forum/jcr:content/content/forum`
 
-* **[!UICONTROL 結果頁面]**
-結果會顯示在透過使用瀏覽器來選取包含 
+* **[!UICONTROL 结果页]**
+结果将显示在使用浏览器选择包含 
 `Search Results` 组件.
 
 ## 搜索结果 {#search-results}
 
-### 將搜尋結果新增至頁面 {#add-search-results-to-a-page}
+### 将搜索结果添加到页面 {#add-search-results-to-a-page}
 
-若要新增 `Search Results` 元件至作者模式下的頁面，請使用元件瀏覽器來尋找
+添加 `Search Results` 组件添加到创作模式下的页面，请使用组件浏览器来查找
 
 * `Communities / Search Results`
 
-並將其拖曳至頁面上的適當位置。 與搜尋元件不同，不需要第二個頁面，因為結果將顯示在相同頁面上。
+并将其拖动到页面上的适当位置。 与搜索组件不同，不需要第二页，因为结果将显示在同一页上。
 
-如果在網站內的其他位置使用「搜尋」，此頁面會顯示 `Search Results` 可設定為 `Result Page` 的任何或所有例項 `Search`.
+如果在网站内的其他位置使用“搜索”，则此页面具有 `Search Results` 可以配置为 `Result Page` 的任何或所有实例 `Search`.
 
-如需必要資訊，請造訪 [Communities元件基本知識](basics.md).
+有关必要信息，请访问 [社区组件基础知识](basics.md).
 
-當需要使用者端程式庫時， `cq.social.hbs.search`，包含，這就是 `Search Result` 元件將會出現：
+当需要客户端库时， `cq.social.hbs.search`，包括，这就是 `Search Result` 组件将显示：
 
 ![search-result](assets/search-result1.png)
 
-### 設定新增的搜尋結果 {#configure-the-added-search-result}
+### 配置添加的搜索结果 {#configure-the-added-search-result}
 
-選取已放置的 `Search Results` 元件以存取及選取 `Configure` 圖示來開啟「編輯」對話方塊。
+选择已放置的 `Search Results` 组件以访问和选择 `Configure` 图标，打开“编辑”对话框。
 
-![設定](assets/configure-new.png)
+![配置](assets/configure-new.png)
 
-在 **[!UICONTROL 搜尋結果設定]** 索引標籤中，可指定當訪客輸入查詢時搜尋中包含哪些路徑。
+在 **[!UICONTROL 搜索结果设置]** 选项卡中，可以指定当访客输入查询时，搜索中包含哪些路径。
 
 ![search-result-settings](assets/search-result-settings.png)
 
 * **[!UICONTROL 每页的搜索结果数]**
 
-   定義每頁顯示的主題/帖子數。 預設值為10。
+   定义每个页面显示的主题/帖子数。 默认值为10。
 
-* **[!UICONTROL 搜尋路徑]**
+* **[!UICONTROL 搜索路径]**
 
-   使用「新增專案」按鈕新增搜尋路徑，會限制內容搜尋。
+   通过使用“添加项目”按钮添加搜索路径，内容搜索受到限制。
 
 ## 附加信息 {#additional-information}
 
-如需詳細資訊，請參閱 [搜尋Essentials](search-implementation.md) 適用於開發人員的頁面。
+欲知更多信息，请访问 [Search Essentials](search-implementation.md) 适用于开发人员的页面。

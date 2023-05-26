@@ -1,7 +1,7 @@
 ---
-title: 草稿和提交元件的自訂儲存
+title: 草稿和提交组件的自定义存储
 seo-title: Custom storage for drafts and submissions component
-description: 瞭解如何自訂草稿和提交的使用者資料儲存。
+description: 了解如何自定义草稿和提交的用户数据的存储。
 seo-description: See how to customize the storage of user data for drafts and submissions.
 uuid: ac2e80ee-a9c7-44e6-801e-fe5a840cb7f8
 content-type: reference
@@ -17,24 +17,24 @@ ht-degree: 0%
 
 ---
 
-# 草稿和提交元件的自訂儲存 {#custom-storage-for-drafts-and-submissions-component}
+# 草稿和提交组件的自定义存储 {#custom-storage-for-drafts-and-submissions-component}
 
 ## 概述 {#overview}
 
-AEM Forms可讓您將表單儲存為草稿。 草稿功能可讓您維護進行中表單，您可稍後從任何裝置完成並提交此表單。
+AEM Forms允许您将表单另存为草稿。 草稿功能允许您维护正在处理的表单，您可以稍后从任何设备完成并提交该表单。
 
-根據預設，AEM Forms會將與表單草稿和提交相關聯的使用者資料儲存在 `/content/forms/fp` 節點。 此外，AEM Forms入口網站元件也提供資料服務，您可透過這些服務自訂儲存草稿和提交之使用者資料的實作。 例如，您可以將使用者資料儲存在資料存放區中。
+默认情况下，AEM Forms会将与表单草稿和提交关联的用户数据存储在 `/content/forms/fp` 节点。 此外，AEM Forms门户组件提供数据服务，您可以使用这些数据服务来自定义存储用于草稿和提交的用户数据的实现。 例如，您可以将用户数据存储到数据存储中。
 
 ## 前提条件  {#prerequisites}
 
-* 啟用 [forms portal元件](/help/forms/using/enabling-forms-portal-components.md)
-* 建立 [forms portal頁面](/help/forms/using/creating-form-portal-page.md)
-* 啟用 [適用於forms portal的最適化表單](/help/forms/using/draft-submission-component.md)
-* 瞭解 [自訂儲存的實作詳細資料](/help/forms/using/draft-submission-component.md#customizing-the-storage)
+* 启用 [forms portal组件](/help/forms/using/enabling-forms-portal-components.md)
+* 创建 [forms portal page](/help/forms/using/creating-form-portal-page.md)
+* 启用 [表单门户自适应表单](/help/forms/using/draft-submission-component.md)
+* 了解 [自定义存储的实施详细信息](/help/forms/using/draft-submission-component.md#customizing-the-storage)
 
-## 草稿資料服務 {#draft-data-service}
+## 草稿数据服务 {#draft-data-service}
 
-若要自訂草稿的使用者資料儲存，您必須實作的所有方法 `DraftDataService` 介面。 下列程式碼範例說明方法和引數。
+要自定义草稿的用户数据存储，您需要实施的所有方法 `DraftDataService` 界面。 以下示例代码描述了方法和参数。
 
 ```java
 /**
@@ -99,11 +99,11 @@ public interface DraftDataService {
 
 >[!NOTE]
 >
->草稿ID欄位長度的最小值是26個字元。 Adobe建議將草稿ID長度設定為26個或更多字元。
+>草稿ID字段的最小长度值为26个字符。 Adobe建议将草稿ID长度设置为26个或更多字符。
 
-## 提交資料服務 {#submission-data-service}
+## 提交数据服务 {#submission-data-service}
 
-若要自訂提交時之使用者資料的儲存，您必須實作的所有方法 `SubmitDataService` 介面。 下列程式碼範例說明方法和引數。
+要自定义用于提交的用户数据的存储，您需要实施的所有方法 `SubmitDataService` 界面。 以下示例代码描述了方法和参数。
 
 ```java
 /**
@@ -188,7 +188,7 @@ public interface SubmitDataService {
 }
 ```
 
-Forms入口網站使用通用唯一識別碼(UUID)概念，為每個草稿和提交的表單產生唯一ID。 您也可以產生自己的唯一ID。 您可以實作介面FPKeyGeneratorService、覆寫其方法，並開發自訂邏輯來為每個草稿和提交的表單產生自訂唯一ID。 此外，將自訂ID產生實作的服務排名設定為高於0。 這可確保使用自訂實作，而非預設實作。
+Forms portal使用通用唯一标识符(UUID)概念为每个草稿和提交的表单生成唯一ID。 您还可以生成自己的唯一ID。 您可以实施接口FPKeyGeneratorService，覆盖其方法，并开发自定义逻辑以便为每个草稿和提交的表单生成自定义唯一ID。 此外，将自定义ID生成实施的服务排名设置为大于0。 它可确保使用自定义实施，而不是默认实施。
 
 ```java
 public interface FPKeyGeneratorService {
@@ -203,11 +203,11 @@ public interface FPKeyGeneratorService {
 }
 ```
 
-您可以使用以下註解來增加透過上述程式碼產生的自訂ID的服務排名：
+您可以使用以下注释来提高通过上述代码生成的自定义ID的服务排名：
 
 `@Properties(value = { @Property(name = "service.ranking", intValue = 15) } )`
 
-若要使用上述註解，請將下列專案匯入您的專案：
+要使用上述注释，请将以下内容导入您的项目：
 
 ```java
 import org.apache.felix.scr.annotations.Properties;

@@ -1,7 +1,7 @@
 ---
-title: 報表主控台
+title: 报表控制台
 seo-title: Reports Console
-description: 瞭解如何存取報告
+description: 了解如何访问报告
 seo-description: Learn how to access reports
 uuid: 7bb15a15-077b-4bfb-aaf4-50fddc67f237
 contentOwner: Janice Kendall
@@ -19,112 +19,112 @@ ht-degree: 9%
 
 ---
 
-# 報表主控台 {#reports-console}
+# 报表控制台 {#reports-console}
 
 ## 概述 {#overview}
 
-對於AEM Communities，有多種報表可從作者環境以數種方式存取。
+对于AEM Communities，可以通过多种方式从创作环境访问各种报表。
 
-一般而言，各種報表包括：
+通常，各种报告包括：
 
 * [查看次数报表](#views-report)
 
-   提供社群成員和網站訪客檢視任何社群網站內容的圖表。
+   按社区成员和站点访客提供任意社区站点的内容视图图表。
 
 * [发布报表](#posts-report)
 
-   提供社群成員在任何社群網站的各種型別貼文的圖表。
+   提供社区成员在任何社区站点上发表的各种类型的帖子的图表。
 
-表格報表可匯出為.csv格式，以供後續處理。
+表格报表可以导出为.csv格式，以供后续处理。
 
-## 報告主控台 {#reporting-consoles}
+## 报表控制台 {#reporting-consoles}
 
-### 社群網站報表 {#reports-for-community-sites}
+### 社区站点报表 {#reports-for-community-sites}
 
-* 從全域導覽： **[!UICONTROL 導覽]** > **[!UICONTROL Communities]** >  **[!UICONTROL 報表]**
+* 从全局导航： **[!UICONTROL 导航]** > **[!UICONTROL Communities]** >  **[!UICONTROL 报告]**
 
-* 選擇自：
+* 选择自：
 
    * **[!UICONTROL 指定报表]**
 
-      * 為選取的社群網站、使用者或群組以及指派專案產生報告。
+      * 为选定的社区站点、用户或组以及分配生成报告。
    * **[!UICONTROL 发布报表]**
 
-      * 為選取的社群網站、內容型別和時段產生報表。
+      * 为选定的社区站点、内容类型和时间段生成报告。
    * **[!UICONTROL 查看次数报表]**
 
-      * 針對選取的社群網站、內容型別和時段產生報表。
+      * 为选定的社区站点、内容类型和时间段生成报告。
 
 
 
-![報告](assets/reports1.png)
+![报告](assets/reports1.png)
 
 ## 查看次数报表 {#views-report}
 
-「檢視」主控台可讓社群功能在指定時段內針對頁面檢視產生報表。
+通过“查看次数”控制台，可按社区功能生成给定时间段内的页面查看次数报表。
 
-![檢視報告](assets/view-report.png)
+![view-report](assets/view-report.png)
 
-選取報告的條件：
+选择报告的标准：
 
 * **[!UICONTROL 站点]**
 
-   選取社群網站。
+   选择社区站点。
 
 * **[!UICONTROL 内容类型]**
 
-   可以選擇「所有內容」或選取網站上提供的其中一項功能。
+   可以选择“所有内容”或选择网站上存在的功能之一。
 
-* **[!UICONTROL 時間範圍]**
+* **[!UICONTROL 期限]**
 
-   選取下列其中一項：
+   选择以下选项之一：
 
    * 过去 7 天
    * 过去 30 天
    * 过去 90 天
    * 去年
 
-選取 **[!UICONTROL 產生]** 以建立報表。
+选择 **[!UICONTROL 生成]** 以创建报告。
 
 ![generate-view](assets/generate-views.png)
 
 ## 发布报表 {#posts-report}
 
-「貼文」主控台可讓您針對指定時段內社群功能的貼文數量產生報表。
+通过“帖子”控制台，可生成给定时间段内社区功能的帖子数量报告。
 
-![posts-report](assets/posts-report.png)
+![帖子报表](assets/posts-report.png)
 
-選取報告的條件：
+选择报告的标准：
 
 * **[!UICONTROL 站点]**
 
-   選取社群網站。
+   选择社区站点。
 
 * **[!UICONTROL 内容类型]**
 
-   可以選擇「所有內容」或選取網站上提供的其中一項功能。
+   可以选择“所有内容”或选择网站上存在的功能之一。
 
-* **[!UICONTROL 時間範圍]**
+* **[!UICONTROL 期限]**
 
-   選取下列其中一項：
+   选择以下选项之一：
 
    * 过去 7 天
    * 过去 30 天
    * 过去 90 天
    * 去年
 
-選取 **[!UICONTROL 產生]** 以建立報表。
+选择 **[!UICONTROL 生成]** 以创建报告。
 
 ![generate-report](assets/generate-posts-report.png)
 
 ## 疑难解答 {#troubleshooting}
 
-### 未列出任何社群網站 {#no-community-sites-listed}
+### 未列出社区站点 {#no-community-sites-listed}
 
-如果未列出任何社群網站，請確認已為網站啟用Adobe Analytics。 如果選擇工作分派的報告，請確保工作分派功能在社群網站的結構中。
+如果未列出任何社区站点，请确保已为站点启用Adobe Analytics。 如果选择分配报表，请确保分配功能在社区站点的结构中。
 
-### 報告未顯示在AEM作者執行個體中 {#reports-do-not-show-in-aem-author-instance}
+### 报告未显示在AEM创作实例中 {#reports-do-not-show-in-aem-author-instance}
 
-如果報表未顯示在AEM編寫執行個體中，請檢查是否有自訂，例如發佈執行個體上的URL對應。 如果URL對應僅在Communities網站的AEM Publish執行個體上完成，請確定已在AEM Author執行個體中設定相同的 **網站趨勢報表社交元件工廠** 設定。
+如果报表未显示在AEM创作实例中，请检查自定义设置，例如发布实例上的URL映射。 如果仅在Communities站点的AEM发布实例上完成URL映射，请确保已在的AEM创作实例中配置相同的URL映射 **网站趋势报表社交组件工厂** 配置。
 
-![AEM作者上的URL對應](assets/sitetrend.png)
+![AEM作者上的URL映射](assets/sitetrend.png)

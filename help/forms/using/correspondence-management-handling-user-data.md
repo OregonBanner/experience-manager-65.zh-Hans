@@ -1,7 +1,7 @@
 ---
-title: 通訊管理 |處理使用者資料
+title: 通信管理 |处理用户数据
 seo-title: Correspondence Management | Handling user data
-description: 通訊管理 |處理使用者資料
+description: 通信管理 |处理用户数据
 uuid: d5bb190b-d668-4da3-95da-b7705ad302d9
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -15,72 +15,72 @@ ht-degree: 0%
 
 ---
 
-# 通訊管理 |處理使用者資料 {#correspondence-management-handling-user-data}
+# 通信管理 |处理用户数据 {#correspondence-management-handling-user-data}
 
-AEM Forms Correspondence Management可讓您建立、管理及簡化安全且個人化的客戶信函。 它提供直覺式使用者介面，供商業使用者使用預先核准的內容區塊和媒體元素來建立對應。 如需建立對應的詳細資訊，請參閱 [建立對應](/help/forms/using/create-correspondence.md).
+AEM Forms Correspondence Management使您能够创建、管理和简化安全和个性化的客户信函。 它为企业用户提供了一个直观的用户界面，以使用预批准的内容块和媒体元素创建对应。 有关创建对方的详细信息，请参阅 [创建通信](/help/forms/using/create-correspondence.md).
 
-當業務使用者或代理程式將信件儲存為草稿或提交時，信件例項會儲存在AEM存放庫中。 信件例項包含通訊資料和中繼資料。
+当业务用户或代理将信件保存为草稿或提交时，信件实例将保存在AEM存储库中。 信件实例包括通信数据和元数据。
 
 >[!NOTE]
 >
->在AEM 6.5 Forms中，無法立即使用通訊管理。 如果您從舊版AEM Forms升級，請安裝相容性套件並移轉通訊管理資產，以繼續在AEM 6.5 Forms中使用它們。 如需詳細資訊，請參閱 [相容性套件](/help/forms/using/compatibility-package.md).
+>在AEM 6.5 Forms中，通信管理是无法开箱即用的。 如果您从以前的AEM Forms版本升级，请安装兼容包并迁移通信管理资产，以继续在AEM 6.5 Forms中使用它们。 有关更多信息，请参阅 [兼容包](/help/forms/using/compatibility-package.md).
 
-## 使用者資料和資料存放區 {#data}
+## 用户数据和数据存储 {#data}
 
-只有當發佈執行個體設定為管理信函執行個體時，通訊管理才會將草稿和已提交信函的資料儲存在AEM存放庫中。 如需有關設定的詳細資訊，請參閱 [Correspondence Management設定屬性](/help/forms/using/cm-configuration-properties.md).
+仅当将发布实例配置为管理信件实例时，通信管理才会将草稿和已提交信件的数据存储在AEM存储库中。 有关配置的详细信息，请参见 [通信管理配置属性](/help/forms/using/cm-configuration-properties.md).
 
-根據為您的AEM部署設定的資料存放區持續性，草稿和提交的通訊資料會儲存在以下位置。
+根据为AEM部署配置的数据存储持久性，草稿和提交的通信数据将存储在以下位置。
 
 <table>
  <tbody>
   <tr>
-   <td><p><strong>持續性型別</strong></p> </td>
-   <td><p><strong>資料存放區</strong></p> </td>
+   <td><p><strong>持久性类型</strong></p> </td>
+   <td><p><strong>数据存储</strong></p> </td>
    <td><p><strong>位置</strong></p> </td>
   </tr>
   <tr>
    <td><p>默认</p> </td>
-   <td><p>反向復寫設定中所指定的發佈執行個體和作者執行個體的AEM存放庫</p> </td>
+   <td><p>反向复制配置中指定的发布实例和创作实例的AEM存储库</p> </td>
    <td><p><code>/content/apps/cm/letterInstances/[yyyy]/[mm]/[dd]/[node-id]/[letter-instance-name]/</code> </p> </td>
   </tr>
   <tr>
    <td><p>远程</p> </td>
-   <td><p>遠端處理作者執行個體的AEM存放庫</p> </td>
+   <td><p>远程处理创作实例的AEM存储库</p> </td>
    <td><p><code>/content/apps/cm/letterInstances/[yyyy]/[mm]/[dd]/[node-id]/[letter-instance-name]/</code></p> </td>
   </tr>
  </tbody>
 </table>
 
-在上述指定的AEM存放庫位置：
+在上面指定的AEM存储库位置中：
 
-* `[yyyy]/[mm]/[dd]` 是以信件例項的建立日期為基礎的節點結構
-* `[node-id]` 是指派給包含字母的資料夾的ID
-* `[letter-instance-name]` 是儲存或提交信件時指定的名稱
+* `[yyyy]/[mm]/[dd]` 是基于书信实例创建日期的节点结构
+* `[node-id]` 是分配给包含书信的文件夹的ID
+* `[letter-instance-name]` 是保存或提交书信时指定的名称
 
-在 [letter-instance-name] 節點，則會建立下列節點結構，並將每個信件例項的資料儲存在AEM存放庫中：
+在 [letter-instance-name] 节点，创建以下节点结构，并将每个信件实例的数据存储在AEM存储库中：
 
-| 節點 | 描述 |
+| 节点 | 描述 |
 |---|---|
-| `extendedProperties` | 儲存信件例項的中繼資料屬性。 |
-| `dataXML` | 以二進位格式儲存包含對應資料的可下載的dataXML檔案。 |
-| `processedXDP` | 包含用來建立已提交信件的XDP範本的詳細資訊。 此節點僅針對已提交的交易建立。 |
-| `submittedLetter` | 以可下載的二進位格式儲存提交的字母資料。 此節點僅針對已提交的交易建立。 |
+| `extendedProperties` | 存储信件实例的元数据属性。 |
+| `dataXML` | 以二进制格式存储包含对应数据的可下载的dataXML文件。 |
+| `processedXDP` | 包含用于创建提交的书信的XDP模板的详细信息。 此节点仅为已提交的交易创建。 |
+| `submittedLetter` | 以可下载的二进制格式存储提交的书信数据。 此节点仅为已提交的交易创建。 |
 
-## 存取和刪除使用者資料 {#access-and-delete-user-data}
+## 访问和删除用户数据 {#access-and-delete-user-data}
 
-您可以存取已設定資料存放區中的草稿和已提交的通訊資料，並在必要時將其刪除。
+您可以在配置的数据存储中访问草稿和已提交的通信数据，并在必要时将其删除。
 
-### 存取使用者資料 {#access-user-data}
+### 访问用户数据 {#access-user-data}
 
-通訊管理提供API，您可以使用這些API來尋找和存取草稿和已提交的信件例項。 使用API，您可以使用信件例項ID或儲存或提交信件的使用者來尋找和開啟信件例項。 如需詳細資訊，請參閱 [存取信件例項的API](/help/forms/using/cm-apis-to-access-letter-instances.md).
+通信管理提供API，您可以使用这些API查找和访问草稿和已提交的信件实例。 通过使用API，您可以使用信件实例ID或保存或提交信件的用户查找和打开信件实例。 有关更多信息，请参阅 [用于访问书信实例的API](/help/forms/using/cm-apis-to-access-letter-instances.md).
 
-或者，您可以使用CRX DELite導覽至AEM存放庫中的信件例項。 另請參閱 [使用者資料和資料存放區](/help/forms/using/correspondence-management-handling-user-data.md#data) 瞭解儲存的資料和存放庫位置的相關資訊。
+或者，您可以使用CRX DELite导航到AEM存储库中的书信实例。 参见 [用户数据和数据存储](/help/forms/using/correspondence-management-handling-user-data.md#data) 以了解有关存储的数据和存储库位置的信息。
 
-### 刪除使用者資料 {#delete-user-data}
+### 删除用户数据 {#delete-user-data}
 
-若要尋找包含特定使用者資料的信件例項，您可以：
+要查找包含特定用户数据的信件实例，您可以：
 
-* 如果信函例項名稱或儲存草稿或提交信函的使用者已知，則使用信函管理API
-* 使用電子郵件ID或名稱等個人識別資訊進行AEM存放庫搜尋，以尋找儲存資訊的節點
+* 如果信件实例名称或保存草稿或提交信件的用户是已知的，则使用信件管理API
+* 使用电子邮件ID或名称等个人身份信息搜索AEM存储库，以查找存储信息的节点
 
-若要從AEM系統完全刪除草稿與已提交對映中的使用者資料，您必須從所有適用的AEM執行處理中手動刪除信件執行處理節點。
+要从AEM系统中完全删除草稿和已提交交易中的用户数据，您必须从所有适用的AEM实例中手动删除信件实例节点。

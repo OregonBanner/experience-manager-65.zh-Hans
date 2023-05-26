@@ -1,7 +1,7 @@
 ---
-title: 自訂主控台
+title: 自定义控制台
 seo-title: Customizing the Consoles
-description: AEM提供各種機制，讓您能夠自訂編寫執行個體的主控台
+description: AEM提供了各种机制，使您能够自定义创作实例的控制台
 seo-description: AEM provides various mechanisms to enable you to customize the consoles of your authoring instance
 uuid: 8ecce9ff-5907-41e1-af3b-a8646352d633
 contentOwner: User
@@ -18,26 +18,26 @@ ht-degree: 1%
 
 ---
 
-# 自訂主控台 {#customizing-the-consoles}
+# 自定义控制台 {#customizing-the-consoles}
 
 >[!CAUTION]
 >
->本檔案說明如何在現代、觸控式UI中自訂主控台，且不適用於傳統UI。
+>本文档介绍如何在启用触屏的现代化UI中自定义控制台，并且这些控制台不适用于经典UI。
 
-AEM提供各種機制，讓您能夠自訂主控台(以及 [頁面製作功能](/help/sites-developing/customizing-page-authoring-touch.md))。
+AEM提供各种机制使您能够自定义控制台(和 [页面创作功能](/help/sites-developing/customizing-page-authoring-touch.md))。
 
-* Clientlibs Clientlibs可讓您擴充預設實作以實現新功能，同時重複使用標準函式、物件和方法。 自訂時，您可以在下建立自己的clientlib `/apps.` 例如，它可以儲存自訂元件所需的程式碼。
+* Clientlibs Clientlibs允许您扩展默认实施以实现新功能，同时重用标准函数、对象和方法。 进行自定义时，您可以在下创建自己的clientlib `/apps.` 例如，它可以保存自定义组件所需的代码。
 
-* 覆蓋圖覆蓋圖以節點定義為基礎，可讓您覆蓋標準功能(在 `/libs`)的自訂功能(位於 `/apps`)。 建立覆蓋時不需要1:1的原始副本，因為Sling資源合併允許繼承。
+* 叠加叠加基于节点定义，允许您叠加标准功能(在 `/libs`)中自行定制的功能(在 `/apps`)。 创建叠加时，不需要原始文件的1:1副本，因为Sling资源合并器允许继承。
 
-您可以透過多種方式使用這些來擴充AEM主控台。 下面會覆蓋一個小的選取範圍（高階）。
+可通过多种方式使用这些参数来扩展AEM控制台。 下面包含少量选区（高层）。
 
 >[!NOTE]
 >
 >有关更多信息，请参阅：
 >
->* 使用和建立 [clientlibs](/help/sites-developing/clientlibs.md).
->* 使用和建立 [覆蓋](/help/sites-developing/overlays.md).
+>* 使用和创建 [clientlibs](/help/sites-developing/clientlibs.md).
+>* 使用和创建 [叠加](/help/sites-developing/overlays.md).
 >* [Granite](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html)
 >
 
@@ -45,121 +45,121 @@ AEM提供各種機制，讓您能夠自訂主控台(以及 [頁面製作功能](
 
 >[!CAUTION]
 >
->您 ***必須*** 不變更中的任何專案 `/libs` 路徑。
+>您 ***必须*** 不更改 `/libs` 路径。
 >
->這是因為 `/libs` 下次升級執行個體時會被覆寫（而您在套用hotfix或feature pack時很可能會被覆寫）。
+>这是因为 `/libs` 下次升级实例时将被覆盖（在应用修补程序或功能包时很可能会被覆盖）。
 >
->設定和其他變更的建議方法是：
+>配置和其他更改的推荐方法是：
 >
->1. 重新建立所需專案（即該專案存在於中） `/libs`)下 `/apps`
+>1. 重新创建所需项目（即该项目存在于中） `/libs`)下 `/apps`
 >
->1. 進行任何變更 `/apps`
+>1. 在中进行任何更改 `/apps`
 
 >
 
 
-例如，下列位置位於 `/libs` 結構可以重疊：
+例如，以下位置位于 `/libs` 结构可以重叠：
 
-* 主控台（任何以Granite UI頁面為基礎的控制檯）；例如：
+* 控制台（任何基于Granite UI页面的控制台）；例如：
 
    * `/libs/wcm/core/content`
 
 >[!NOTE]
 >
->請參閱知識庫文章， [疑難排解AEM TouchUI問題](https://helpx.adobe.com/experience-manager/kb/troubleshooting-aem-touchui-issues.html)，以取得進一步的提示和工具。
+>请参阅知识库文章， [AEM TouchUI问题疑难解答](https://helpx.adobe.com/experience-manager/kb/troubleshooting-aem-touchui-issues.html)，以获取更多提示和工具。
 
-## 自訂主控台的預設檢視 {#customizing-the-default-view-for-a-console}
+## 自定义控制台的默认视图 {#customizing-the-default-view-for-a-console}
 
-您可以自訂主控台的預設檢視（欄、卡片、清單）：
+您可以自定义控制台的默认视图（列、卡片、列表）：
 
-1. 您可以從下列位置覆蓋所需專案，以重新排序檢視：
+1. 可通过从以下位置覆盖所需条目来重新排序视图：
 
    `/libs/wcm/core/content/sites/jcr:content/views`
 
-   第一個專案將是預設值。
+   第一个条目将是默认条目。
 
-   可用的節點與可用的檢視選項相關：
+   可用的节点与可用的视图选项相关联：
 
    * `column`
    * `card`
    * `list`
 
-1. 例如，在清單的覆蓋中：
+1. 例如，在列表的覆盖中：
 
    `/apps/wcm/core/content/sites/jcr:content/views/list`
 
-   定義下列屬性：
+   定义以下属性：
 
    * **名称**: `sling:orderBefore`
    * **类型**: `String`
    * **值**: `column`
 
-### 將新動作新增至工具列 {#add-new-action-to-the-toolbar}
+### 将新操作添加到工具栏 {#add-new-action-to-the-toolbar}
 
-1. 您可以建置自己的元件，並包含自訂動作的對應使用者端程式庫。 例如， **提升至Twitter** 動作時間：
+1. 您可以构建自己的组件，并为自定义操作包含相应的客户端库。 例如， **提升至Twitter** 操作位置：
 
    `/apps/wcm/core/clientlibs/sites/js/twitter.js`
 
-   然後，即可將此連結至主控台上的工具列專案：
+   然后，可以将其连接到控制台上的工具栏项目：
 
    `/apps/<yourProject>/admin/ext/launches`
 
-   例如，在選擇模式中：
+   例如，在选择模式中：
 
    `content/jcr:content/body/content/header/items/selection/items/twitter`
 
-### 將工具列動作限制在特定群組 {#restrict-a-toolbar-action-to-a-specific-group}
+### 将工具栏操作限制为特定组 {#restrict-a-toolbar-action-to-a-specific-group}
 
-1. 您可以使用自訂演算條件來覆蓋標準動作，並施加演算前必須滿足的特定條件。
+1. 您可以使用自定义渲染条件来叠加标准操作，并施加在渲染之前必须满足的特定条件。
 
-   例如，建立元件以根據群組控制轉譯條件：
+   例如，创建一个组件以根据组控制渲染条件：
 
    `/apps/myapp/components/renderconditions/group`
 
-1. 若要將這些套用至Sites主控台上的「建立網站」動作：
+1. 要将这些方法应用于站点控制台上的创建站点操作，请执行以下操作：
 
    `/libs/wcm/core/content/sites`
 
-   建立覆蓋：
+   创建叠加：
 
    `/apps/wcm/core/content/sites`
 
-1. 然後新增動作的rendercondition：
+1. 然后为操作添加rendercondition：
 
    `jcr:content/body/content/header/items/default/items/create/items/createsite/rendercondition`
 
-   使用此節點上的屬性，您可以定義 `groups` 有權執行特定動作；例如， `administrators`
+   使用此节点上的属性，您可以定义 `groups` 允许执行特定操作；例如， `administrators`
 
-### 自訂清單檢視中的欄 {#customizing-columns-in-the-list-view}
+### 在列表视图中自定义列 {#customizing-columns-in-the-list-view}
 
 >[!NOTE]
 >
->此功能已針對文字欄位欄位進行最佳化；對於其他資料型別，可以覆蓋 `cq/gui/components/siteadmin/admin/listview/columns/analyticscolumnrenderer` 在 `/apps`.
+>此功能针对文本字段列进行了优化；对于其他数据类型，可以叠加 `cq/gui/components/siteadmin/admin/listview/columns/analyticscolumnrenderer` 在 `/apps`.
 
-若要自訂清單檢視中的欄：
+要自定义列表视图中的列：
 
-1. 覆蓋可用欄的清單。
+1. 覆盖可用列的列表。
 
-   * 在節點上：
+   * 在节点上：
 
       ```
              /apps/wcm/core/content/common/availablecolumns
       ```
 
-   * 新增欄或移除現有欄。
-   另請參閱 [使用覆蓋（和Sling資源合併）](/help/sites-developing/overlays.md) 以取得詳細資訊。
+   * 添加新列 — 或删除现有列。
+   参见 [使用叠加（和Sling资源合并器）](/help/sites-developing/overlays.md) 了解更多信息。
 
-1. 選擇性：
+1. （可选）：
 
-   * 如果您想要插入其他資料，您需要撰寫 [PageInforProvider](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/PageInfoProvider.html) 搭配
+   * 如果要插入其他数据，需要编写 [PageInforProvider](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/PageInfoProvider.html) 带有
       `pageInfoProviderType` 属性.
 
-   例如，請參閱下方的附加類別/套件（來自GitHub）。
+   例如，请参阅下面的附加类/捆绑包（来自GitHub）。
 
-1. 您現在可以在清單檢視的欄配置器中選取欄。
+1. 现在，您可以在列表视图的列配置器中选择该列。
 
-### 篩選資源 {#filtering-resources}
+### 筛选资源 {#filtering-resources}
 
-使用主控台時，常見的使用案例是使用者必須從資源（例如頁面、元件、資產等）中進行選擇。 例如，這可採取清單的形式，作者必須從中選擇專案。
+使用控制台时，常见的用例是用户必须从资源（例如页面、组件、资源等）中进行选择的情况。 这可以采用列表形式，例如，作者必须从中选择一个项目。
 
-為了將清單保持在合理的大小並與使用案例相關，可採用自訂述詞的形式實施篩選器。 另請參閱 [本文](/help/sites-developing/customizing-page-authoring-touch.md#filtering-resources) 以取得詳細資訊。
+为了使列表保持合理的大小并且与用例相关，可以采用自定义谓词的形式实施过滤器。 参见 [本文](/help/sites-developing/customizing-page-authoring-touch.md#filtering-resources) 了解详细信息。

@@ -1,7 +1,7 @@
 ---
-title: 「教學課程：發佈最適化表單」
+title: “教程：发布自适应表单”
 seo-title: "Tutorial: Publish your adaptive form"
-description: 將最適化表單發佈為AEM頁面、將表單內嵌至AEM Sites頁面，或將最適化表單內嵌至外部網頁
+description: 将自适应表单发布为AEM页面，将表单嵌入到AEM Sites页面，或将自适应表单嵌入到外部网页中
 seo-description: Publish the adaptive form as an AEM page, embed the form to an AEM Sites page, or embed the adaptive form in an external webpage
 uuid: 1b164376-e61a-40aa-9f16-c79d24a72e20
 contentOwner: khsingh
@@ -17,61 +17,61 @@ ht-degree: 1%
 
 ---
 
-# 教學課程：發佈最適化表單 {#tutorial-publish-your-adaptive-form}
+# 教程：发布自适应表单 {#tutorial-publish-your-adaptive-form}
 
 ![](do-not-localize/13-publish-your-adaptive-form-small.png)
 
-本教學課程是 [建立第一個最適化表單](https://helpx.adobe.com/cn/experience-manager/6-3/forms/using/create-your-first-adaptive-form.html) 數列。 建議您依照時間順序觀看本系列，以瞭解、執行和示範完整的教學課程使用案例。
+本教程是 [创建您的第一个自适应表单](https://helpx.adobe.com/cn/experience-manager/6-3/forms/using/create-your-first-adaptive-form.html) 系列。 建议按时间顺序关注该系列，以了解、执行和演示完整的教程用例。
 
-最適化表單準備就緒後，您可以發佈表單，以供一般使用者使用。 使用者可在任何裝置和網際網路瀏覽器上開啟已發佈的表單。 發佈最適化表單時，表單和相關內容會從AEM製作例項複製到AEM發佈例項。 一般使用者可透過發佈執行個體使用此表單。
+在自适应表单准备就绪后，您可以发布表单以使其对最终用户可用。 最终用户可以在任何设备和互联网浏览器上打开已发布的表单。 发布自适应表单时，表单和相关内容会从AEM创作实例复制到AEM发布实例。 该表单通过发布实例提供给最终用户。
 
-您有以下方法可發佈調適型表單：
+您可以通过以下方法发布自适应表单：
 
-* [將最適化表單發佈為AEM頁面](../../forms/using/publish-your-adaptive-form.md#publish-the-adaptive-form-as-an-aem-page)
-* [將最適化表單內嵌至AEM Sites頁面](#embed-the-adaptive-form-in-an-aem-sites-page)
-* [將最適化表單內嵌於外部網頁(託管在AEM外部的非AEM網頁)中](../../forms/using/publish-your-adaptive-form.md)
+* [将自适应表单发布为AEM页面](../../forms/using/publish-your-adaptive-form.md#publish-the-adaptive-form-as-an-aem-page)
+* [将自适应表单嵌入到AEM Sites页面中](#embed-the-adaptive-form-in-an-aem-sites-page)
+* [将自适应表单嵌入外部网页(托管在AEM外部的非AEM网页)](../../forms/using/publish-your-adaptive-form.md)
 
 ## 开始之前 {#before-you-start}
 
-* **[設定AEM Forms發佈執行個體](https://helpx.adobe.com/cn/experience-manager/6-3/forms/using/installing-configuring-aem-forms-osgi.html)**：發佈執行個體是AEM的公開執行個體 [!DNL Forms] 在發佈模式下執行。 在生產環境中，發佈執行個體位於組織的防火牆之外。
-* **[設定復寫與反向復寫](https://helpx.adobe.com/experience-manager/6-3/help/sites-deploying/replication.html)**：復寫會將內容從製作例項複製到發佈例項，並將使用者輸入（例如表單輸入）從發佈例項傳回製作例項。
+* **[设置AEM Forms发布实例](https://helpx.adobe.com/cn/experience-manager/6-3/forms/using/installing-configuring-aem-forms-osgi.html)**：发布实例是AEM的面向公众的实例 [!DNL Forms] 在发布模式下运行。 在生产环境中，发布实例位于组织的防火墙之外。
+* **[设置复制和反向复制](https://helpx.adobe.com/experience-manager/6-3/help/sites-deploying/replication.html)**：复制操作将内容从创作实例复制到发布实例，并将用户输入（例如，表单输入）从发布实例返回到创作实例。
 
-## 將最適化表單發佈為AEM頁面 {#publish-the-adaptive-form-as-an-aem-page}
+## 将自适应表单发布为AEM页面 {#publish-the-adaptive-form-as-an-aem-page}
 
-將最適化表單發佈為AEM頁面時，整個網頁僅包含已發佈的表單。 您可以使用最適化表單的URL，從其他網頁連結它。 若要發佈 **shipping-address-add-update-form** 最適化表單作為AEM頁面：
+将自适应表单发布为AEM页面时，整个网页仅包含已发布的表单。 您可以使用自适应表单的URL从其他网页链接它。 要发布 **shipping-address-add-update-form** 自适应表单作为AEM页面：
 
-1. 登入AEM [!DNL Forms] 編寫執行個體並在AEM中找到shipping-address-add-update-form調適型表單 [!DNL Forms] UI。
+1. 登录到AEM [!DNL Forms] 创作实例并在AEM中找到shipping-address-add-update-form自适应表单 [!DNL Forms] UI。
    `https://localhost:4502/aem/forms.html/content/dam/formsanddocuments`
-1. 選取shipping-address-add-update-form最適化表單並點選 **[!UICONTROL 發佈]**. 隨即顯示對話方塊，其中包含與最適化表單相關的資產。 點選 **[!UICONTROL 發佈]**. 最適化表單已發佈，且成功對話方塊隨即顯示。
-1. 在發佈執行個體上開啟表單。 一般使用者可填寫並提交表單。
+1. 选择shipping-address-add-update-form自适应表单并点按 **[!UICONTROL Publish]**. 此时将显示一个对话框，其中包含与自适应表单相关的资产。 点按 **[!UICONTROL Publish]**. 自适应表单已发布，且显示成功对话框。
+1. 在发布实例上打开表单。 该表单可供最终用户填写和提交。
    `https://localhost:4503/content/forms/af/shipping-address-add-update-form.html`
 
-## 將最適化表單內嵌至AEM Sites頁面 {#embed-the-adaptive-form-in-an-aem-sites-page}
+## 将自适应表单嵌入到AEM Sites页面中 {#embed-the-adaptive-form-in-an-aem-sites-page}
 
-AEM [!DNL Forms] 可讓表單開發人員在AEM中順暢地內嵌最適化表單 [!DNL Sites] 頁面。 內嵌的最適化表單功能齊全，使用者無須離開頁面即可填寫和提交表單。 它有助於使用者停留在網頁上其他元素的內容中，同時與表單互動。
+AEM [!DNL Forms] 允许表单开发人员将自适应表单无缝嵌入到AEM中 [!DNL Sites] 页面。 嵌入式自适应表单功能齐全，用户无需离开页面即可填写和提交表单。 它有助于用户停留在网页上其他元素的上下文中，同时与表单交互。
 
-AEM [!DNL Forms] 提供元件AEM [!DNL Forms] 容器，用於將最適化表單內嵌至AEM [!DNL Sites] 頁面。 依預設，元件在AEM中不可見 [!DNL Sites] 容器。 執行以下步驟以啟用AEM [!DNL Forms] 容器元件以及將最適化表單內嵌到AEM中 [!DNL Sites] 頁面：
+AEM [!DNL Forms] 提供组件AEM [!DNL Forms] 容器，用于将自适应表单嵌入到AEM [!DNL Sites] 页面。 默认情况下，该组件在AEM中不可见 [!DNL Sites] 容器。 执行以下步骤以启用AEM [!DNL Forms] 将自适应表单嵌入到AEM中的容器组件和 [!DNL Sites] 页面：
 
-1. 在We.Retail網站中建立並開啟頁面以進行編輯。 例如， [https://localhost:4502/editor.html/content/we-retail/us/en/user/shipping-and-billing-address.html](https://localhost:4502/editor.html/content/we-retail/us/en/user/shipping-and-billing-address.html). 最適化表單內嵌至 [!DNL Sites] 頁面。
+1. 在We.Retail网站中创建并打开页面以进行编辑。 例如， [https://localhost:4502/editor.html/content/we-retail/us/en/user/shipping-and-billing-address.html](https://localhost:4502/editor.html/content/we-retail/us/en/user/shipping-and-billing-address.html). 自适应表单将嵌入到 [!DNL Sites] 页面。
 
-   您也可以將最適化表單內嵌在現有的We.Retail中 [!DNL Site's] 頁面。 例如，「關於我們」頁面 [https://localhost:4502/editor.html/content/we-retail/us/en/about-us.html](https://localhost:4502/editor.html/content/we-retail/us/en/about-us.html). 這可節省您建立頁面的時間。 以下步驟使用新建立的頁面。
+   您还可以将自适应表单嵌入到现有We.Retail中 [!DNL Site's] 页面。 例如，“关于我们”页面 [https://localhost:4502/editor.html/content/we-retail/us/en/about-us.html](https://localhost:4502/editor.html/content/we-retail/us/en/about-us.html). 这样可节省创建页面的时间。 以下步骤使用新创建的页面。
 
-   We.Retail網站隨附AEM。 如果您尚未安裝We.Retail網站，請參閱 [We.Retail參考實作](https://helpx.adobe.com/experience-manager/6-3/help/sites-developing/we-retail.html) 安裝網站。
+   We.Retail网站随AEM一起提供。 如果您未安装We.Retail网站，请参阅 [We.Retail参考实施](https://helpx.adobe.com/experience-manager/6-3/help/sites-developing/we-retail.html) 安装站点。
 
-1. 點選 ![屬性](assets/properties.png) 頁面資訊，並選取 **[!UICONTROL 編輯範本]** 選項建立的We.Retail網站頁面。 頁面範本會在瀏覽器的新標籤中開啟。
-1. 在內點選 **[!UICONTROL 配置容器]** 方塊並點選 ![feedmanagement](assets/feedmanagement.png). 在 **[!UICONTROL 允許的元件]** 標籤中，展開 **[!UICONTROL 一般]** 摺疊式功能表，選取 **[!UICONTROL AEM表單]** 選項，然後點選 ![save_icon](assets/save_icon.svg). AEM [!DNL Forms] 已為頁面啟用容器元件。
+1. 点按 ![属性](assets/properties.png) 页面信息并选择 **[!UICONTROL 编辑模板]** 新创建的We.Retail网站页面中的选项。 页面模板将在浏览器的新选项卡中打开。
+1. 点按内部 **[!UICONTROL 布局容器]** 框和点按 ![反馈管理](assets/feedmanagement.png). 在 **[!UICONTROL 允许的组件]** 选项卡，展开 **[!UICONTROL 常规]** 折叠面板，选择 **[!UICONTROL AEM表单]** 选项，然后点按 ![save_icon](assets/save_icon.svg). AEM [!DNL Forms] 已为页面启用容器组件。
 
-1. 開啟包含AEM的瀏覽器索引標籤 [!DNL Sites] 步驟1中開啟的頁面。 點選 **[!UICONTROL 將元件拖曳到這裡]** 方塊並點選 **+.** 在 **[!UICONTROL 插入新元件]** 方塊，點選 **[!UICONTROL AEM表單]**. 此 **[!UICONTROL AEM Forms容器]** 元件會新增至頁面。
-1. 點選 **[!UICONTROL AEM Forms容器]** 元件並點選 ![configure-icon](assets/configure-icon.svg). 具有AEM屬性的對話方塊 [!DNL Forms] 容器隨即顯示。 在 **[!UICONTROL 資產路徑]** 欄位，瀏覽並選取shipping-address-add-update-form最適化表單。 點選 ![save_icon](assets/save_icon.svg). 最適化表單已內嵌在頁面中。
-1. 發佈最適化表單和 [!DNL Sites] 頁面。 以下是一些需要考量的要點：
+1. 打开包含AEM的浏览器选项卡 [!DNL Sites] 第1步中打开的页面。 点按 **[!UICONTROL 将组件拖动到此处]** 框和点按 **+.** 在 **[!UICONTROL 插入新组件]** 框，点按 **[!UICONTROL AEM表单]**. 此 **[!UICONTROL AEM Forms容器]** 组件将添加到页面中。
+1. 点按 **[!UICONTROL AEM Forms容器]** 组件和点按 ![configure-icon](assets/configure-icon.svg). 带有AEM属性的对话框 [!DNL Forms] 此时会显示容器。 在 **[!UICONTROL 资源路径]** 字段，浏览并选择shipping-address-add-update-form自适应表单。 点按 ![save_icon](assets/save_icon.svg). 自适应表单将嵌入到页面中。
+1. 发布自适应表单和 [!DNL Sites] 页面。 以下是需要考虑的一些要点：
 
-   * 如果您發佈AEM [!DNL Sites] 首次登入頁面，且包含內嵌表單，發佈 [!DNL Sites] 頁面和內嵌表單。
-   * 如果您只修改已發佈網站頁面中的內嵌表單，請發佈原始表單，所做的變更會反映在已發佈的網站頁面中。 已發佈的網站頁面包含對表單的引用，不需要重新發佈頁面。
-   * 如果您修改 [!DNL Sites] 頁面和內嵌表單，重新發佈 [!DNL Sites] 頁面和表單。
+   * 如果您发布AEM [!DNL Sites] 首次访问该页面，并且它包含一个嵌入式表单，请发布 [!DNL Sites] 页面和嵌入的表单。
+   * 如果仅修改已发布站点页面中的嵌入表单，请发布原始表单，所做的更改将反映在已发布的站点页面中。 已发布的网站页面包含对表单的引用，无需重新发布页面。
+   * 如果您修改了 [!DNL Sites] 页面和嵌入的表单，重新发布 [!DNL Sites] 页面和表单。
 
       ![embed-in-aem-sites](assets/embed-in-aem-sites.png)
-   將送貨與帳單地址變更表單新增至AEM [!DNL Sites] 頁面。
+   已将送货和帐单地址更改表单添加到AEM [!DNL Sites] 页面。
 
-## 將最適化表單內嵌於外部網頁 {#embed-the-adaptive-form-in-an-external-webpage}
+## 将自适应表单嵌入外部网页 {#embed-the-adaptive-form-in-an-external-webpage}
 
-您可以在外部網頁中插入幾行JavaScript，將調適型表單內嵌至外部網頁(託管在AEM外部的非AEM網頁)。 JavaScript程式碼會傳送HTTP要求給AEM [!DNL Forms] 最適化表單和相關資源的伺服器，並將最適化表單新增至網頁。 如需詳細步驟，請參閱 [將最適化表單內嵌至外部網頁](/help/forms/using/embed-adaptive-form-external-web-page.md).
+通过在外部网页中插入几行JavaScript，您可以将自适应表单嵌入到外部网页(托管在AEM外部的非AEM网页)中。 JavaScript代码向AEM发送HTTP请求 [!DNL Forms] 自适应表单和相关资源的服务器，并将自适应表单添加到网页。 有关详细步骤，请参阅 [将自适应表单嵌入到外部网页](/help/forms/using/embed-adaptive-form-external-web-page.md).

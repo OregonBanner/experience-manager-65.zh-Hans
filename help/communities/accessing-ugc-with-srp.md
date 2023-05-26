@@ -1,7 +1,7 @@
 ---
-title: 使用SRP存取UGC
+title: 使用SRP访问UGC
 seo-title: Accessing UGC with SRP
-description: 當網站設定為使用ASRP或MSRP時，實際的UGC不會儲存在AEM節點存放區(JCR)中
+description: 当站点配置为使用ASRP或MSRP时，实际的UGC不会存储在AEM节点存储(JCR)中
 seo-description: When a site is configured to use ASRP or MSRP, the actual UGC is not be stored in AEM's node store (JCR)
 uuid: 30549f93-e370-4b8b-a35a-69e05884227e
 contentOwner: Guillaume Carlino
@@ -18,63 +18,63 @@ ht-degree: 0%
 
 ---
 
-# 使用SRP存取UGC {#accessing-ugc-with-srp}
+# 使用SRP访问UGC {#accessing-ugc-with-srp}
 
-## 關於SRP {#about-srp}
+## 关于SRP {#about-srp}
 
-所有AEM Communities元件和功能都建立在 [社交元件架構(SCF)](/help/communities/scf.md)，會呼叫SocialResourceProvider API以存取所有使用者產生的內容(UGC)。
+所有AEM Communities组件和功能都基于 [社交组件框架(SCF)](/help/communities/scf.md)，用于调用SocialResourceProvider API以访问所有用户生成的内容(UGC)。
 
-在建立社群網站之前， [儲存資源提供者(SRP)](/help/communities/working-with-srp.md) 必須設定為選取與基礎實施一致的實施 [拓撲](/help/communities/topologies.md). SRP實施會根據三個儲存選項：
+在创建社区站点之前， [存储资源提供程序(SRP)](/help/communities/working-with-srp.md) 必须配置为选择与基础实施一致的实施 [拓扑](/help/communities/topologies.md). SRP实施基于三个存储选项：
 
-1. [ASRP](/help/communities/asrp.md)  — 隨選Adobe儲存
+1. [ASRP](/help/communities/asrp.md)  — 按需Adobe存储
 1. [MSRP](/help/communities/msrp.md) - MongoDb
 1. [JSRP](/help/communities/jsrp.md) - JCR
 
-## 關於UGC儲存 {#about-ugc-storage}
+## 关于UGC存储 {#about-ugc-storage}
 
-有關UGC儲存的重要須知，是當網站設定為使用ASRP或MSRP時，實際的UGC不會儲存於AEM [節點存放區](/help/sites-deploying/data-store-config.md) (JCR)。
+对于UGC的存储，务必要了解的是，当站点配置为使用ASRP或MSRP时，实际的UGC不会存储在AEM中 [节点存储](/help/sites-deploying/data-store-config.md) (JCR)。
 
-雖然JCR中可能有遮蔽UGC以提供有用中繼資料的節點，但請勿將這些節點與實際UGC混淆。
+虽然JCR中可能有一些节点遮蔽UGC以提供有用的元数据，但不要将这些节点与实际的UGC混淆。
 
-另請參閱 [儲存資源提供者概觀。](/help/communities/srp.md)
+参见 [存储资源提供程序概述。](/help/communities/srp.md)
 
-## 最佳實務 {#best-practice}
+## 最佳实践 {#best-practice}
 
-開發自訂元件時，開發人員應謹慎編寫程式碼，避免使用目前選擇的拓撲，以便日後能靈活地改用新拓撲。
+在开发自定义组件时，开发人员应小心独立于当前选择的拓扑进行编码，从而保留将来迁移到新拓扑的灵活性。
 
-### 假設JCR不可用 {#assume-jcr-not-available}
+### 假设JCR不可用 {#assume-jcr-not-available}
 
-應避免使用JCR專屬的方法。
+应避免特定于JCR的方法。
 
 使用的方法：
 
-* Sling API （Sling資源）
+* Sling API（Sling资源）
 
-   * 請勿假設有JCR節點
+   * 不要假定存在JCR节点
 
 * OSGi事件
 
-   * 請勿假設有JCR事件
+   * 不要假定存在JCR事件
 
 * [SocialResourceUtilities](/help/communities/socialutils.md#socialresourceutilities-package)
 * [SCFUtilities](/help/communities/socialutils.md#scfutilities-package)
 
 避免的方法：
 
-* 節點API
+* 节点API
 * JCR事件
-* 工作流程啟動器（使用JCR事件）
+* 工作流启动器（使用JCR事件）
 
-### 使用搜尋集合 {#use-search-collections}
+### 使用搜索收藏集 {#use-search-collections}
 
-不同的SRP可以有不同的原生查詢語言。 建議使用來自以下專案的方法： [com.adobe.cq.social.ugc.api](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/ugc/api/package-summary.html) 封裝以執行適當的查詢語言。
+不同的SRP可以有不同的本地查询语言。 建议使用来自以下项的方法： [com.adobe.cq.social.ugc.api](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/ugc/api/package-summary.html) 包以运行适当的查询语言。
 
-如需詳細資訊，請參閱 [搜尋Essentials](/help/communities/search-implementation.md).
+有关更多信息，请参阅 [Search Essentials](/help/communities/search-implementation.md).
 
 ## 资源 {#resources}
 
-* [社群內容儲存](/help/communities/working-with-srp.md)  — 討論UGC一般存放區可用的服務請求選項
-* [儲存資源提供者概觀](/help/communities/srp.md)  — 簡介和存放庫使用概述
-* [SRP和UGC Essentials](/help/communities/srp-and-ugc.md) - SRP公用程式方法與範例
-* [搜尋Essentials](/help/communities/search-implementation.md)  — 搜尋UGC的基本資訊
-* [SocialUtils重構](/help/communities/socialutils.md)  — 將已棄用的公用程式方法對應到目前的SRP公用程式方法
+* [社区内容存储](/help/communities/working-with-srp.md)  — 讨论UGC公用存储的可用SRP选择
+* [存储资源提供程序概述](/help/communities/srp.md)  — 简介和存储库使用情况概述
+* [SRP和UGC Essentials](/help/communities/srp-and-ugc.md) - SRP实用程序方法和示例
+* [Search Essentials](/help/communities/search-implementation.md)  — 搜索UGC的基本信息
+* [SocialUtils重构](/help/communities/socialutils.md)  — 将已弃用的实用程序方法映射到当前SRP实用程序方法

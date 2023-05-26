@@ -1,6 +1,6 @@
 ---
 title: Dynamic Media 中的视频
-description: 瞭解如何在Dynamic Media中使用視訊，例如編碼視訊、將視訊發佈到YouTube以及檢視視訊報表的最佳實務。 也會瞭解如何在視訊中新增隱藏式字幕、字幕或章節標籤。
+description: 了解如何在Dynamic Media中使用视频，例如编码视频、将视频发布到YouTube以及查看视频报表的最佳实践。 还可了解如何向视频添加隐藏式字幕、字幕或章节标记。
 mini-toc-levels: 3
 uuid: 97f311a3-a227-479a-91bf-fb54ecd1a55d
 contentOwner: Rick Brough
@@ -21,275 +21,275 @@ ht-degree: 3%
 
 # Dynamic Media 中的视频 {#video}
 
-本節說明如何在Dynamic Media中使用視訊。
+本节介绍如何在Dynamic Media中使用视频。
 
-## 快速入門：影片 {#quick-start-videos}
+## 快速入门：视频 {#quick-start-videos}
 
-下列逐步工作流程說明可協助您快速上手並執行Dynamic Media中的最適化視訊集。 每個步驟之後，都有主題標題的互動參照，您可以在其中找到更多資訊。
+以下分步工作流描述旨在帮助您快速启动和运行Dynamic Media中的自适应视频集。 每个步骤之后，都有对主题标题的交叉引用，您可以在其中查找更多信息。
 
 >[!IMPORTANT]
 >
->在Dynamic Media中使用視訊之前，請確定Adobe Experience Manager管理員已在Dynamic Media - Scene7模式或Dynamic Media — 混合模式中啟用並設定Dynamic MediaCloud Services。
+>在Dynamic Media中使用视频之前，请确保您的Adobe Experience Manager管理员已在Dynamic Media - Scene7模式或Dynamic Media — 混合模式下启用和配置Dynamic MediaCloud Services。
 >
->* 另請參閱 [設定Dynamic MediaCloud Services](/help/assets/config-dms7.md#configuring-dynamic-media-cloud-services) 在設定Dynamic Media - Scene7模式和 [疑難排解Dynamic Media - Scene7模式](/help/assets/troubleshoot-dms7.md).
+>* 参见 [配置Dynamic MediaCloud Services](/help/assets/config-dms7.md#configuring-dynamic-media-cloud-services) 在配置Dynamic Media - Scene7模式和 [Dynamic Media - Scene7模式疑难解答](/help/assets/troubleshoot-dms7.md).
 >
->* 另請參閱 [設定Dynamic MediaCloud Services](/help/assets/config-dynamic.md#configuring-dynamic-media-cloud-services) 設定Dynamic Media — 混合模式。
+>* 参见 [配置Dynamic MediaCloud Services](/help/assets/config-dynamic.md#configuring-dynamic-media-cloud-services) 在配置Dynamic Media — 混合模式中。
 >
->Dynamic Media中目前已知的視訊播放問題 *僅適用於Experience Manager6.5.9.0*：
+>Dynamic Media中当前已知的视频播放问题 *仅在Experience Manager6.5.9.0上*：
 >
->* 如果發佈的視訊已更新，則必須再次發佈以反映傳送上的變更。
+>* 如果发布的视频已更新，则必须再次发布该视频以反映投放中的更改。
 >
 
 
-1. **上傳您的Dynamic Media影片** 方法是執行下列動作：
+1. **上传Dynamic Media视频** ，方法是：
 
-   * 建立您自己的視訊編碼設定檔。 或者，您只需使用預先定義的 _自我調整視訊編碼_ Dynamic Media隨附的設定檔。
+   * 创建您自己的视频编码配置文件。 或者，您只需使用预定义的 _自适应视频编码_ Dynamic Media随附的资料。
 
-      * [建立視訊編碼設定檔](/help/assets/video-profiles.md#creating-a-video-encoding-profile-for-adaptive-streaming).
-      * 進一步瞭解 [視訊編碼的最佳作法](#best-practices-for-encoding-videos).
-   * 將視訊處理設定檔與您要上傳主要來源視訊的一或多個資料夾建立關聯。
+      * [创建视频编码配置文件](/help/assets/video-profiles.md#creating-a-video-encoding-profile-for-adaptive-streaming).
+      * 详细了解 [视频编码的最佳实践](#best-practices-for-encoding-videos).
+   * 将视频处理配置文件与一个或多个要上传主源视频的文件夹关联。
 
-      * [將視訊設定檔套用至資料夾](/help/assets/video-profiles.md#applying-a-video-profile-to-folders).
-      * 進一步瞭解 [組織數位資產以使用處理設定檔的最佳實務](/help/assets/organize-assets.md).
-      * 進一步瞭解 [組織數位資產](/help/assets/organize-assets.md).
-   * 將您的主要來源視訊上傳至資料夾。 將視訊新增至資料夾時，會根據您指派至資料夾的視訊處理設定檔來編碼視訊。
+      * [将视频配置文件应用到文件夹](/help/assets/video-profiles.md#applying-a-video-profile-to-folders).
+      * 详细了解 [组织数字资产以使用处理配置文件的最佳实践](/help/assets/organize-assets.md).
+      * 详细了解 [组织数字资源](/help/assets/organize-assets.md).
+   * 将您的主源视频上传到文件夹。 将视频添加到文件夹时，会根据您分配给该文件夹的视频处理配置文件对它们进行编码。
 
-      * Dynamic Media主要支援長度上限為30分鐘，最小解析度大於25 x 25的短影片。
-      * 您可以上傳每個檔案最多15 GB的視訊檔案。
-      * [上傳您的影片](/help/assets/managing-video-assets.md#upload-and-preview-video-assets).
-      * 進一步瞭解 [支援的輸入檔案格式](/help/assets/assets-formats.md#supported-multimedia-formats).
-   * 監視方式 [視訊編碼正在進行](#monitoring-video-encoding-and-youtube-publishing-progress) 從資產或工作流程檢視。
-
-
+      * Dynamic Media主要支持最长30分钟、最小分辨率大于25 x 25的短格式视频。
+      * 您可以上传每个大小不超过15 GB的视频文件。
+      * [上传您的视频](/help/assets/managing-video-assets.md#upload-and-preview-video-assets).
+      * 详细了解 [支持的输入文件格式](/help/assets/assets-formats.md#supported-multimedia-formats).
+   * 监视方式 [视频编码正在进行](#monitoring-video-encoding-and-youtube-publishing-progress) 从资产或工作流视图中。
 
 
-1. **管理您的Dynamic Media影片** 執行下列任一項作業：
 
-   * 組織、瀏覽和搜尋視訊資產
 
-      * [組織數位資產](/help/assets/organize-assets.md)
-進一步瞭解 [組織數位資產以使用處理設定檔的最佳實務](organize-assets.md)
+1. **管理您的Dynamic Media视频** 通过执行以下任一操作：
 
-      * [搜尋視訊資產](search-assets.md#custompredicates) 或 [搜尋資產](/help/assets/search-assets.md)
-   * 預覽和發佈視訊資產
+   * 组织、浏览和搜索视频资产
 
-      * 檢視視訊的來源視訊和已編碼轉譯專案及其相關縮圖：
-         [預覽影片](managing-video-assets.md#upload-and-preview-video-assets) 或 [預覽資產](previewing-assets.md)
-         [檢視視訊轉譯](video-renditions.md)
-         [管理視訊轉譯](manage-assets.md#managing-renditions)
+      * [组织数字资源](/help/assets/organize-assets.md)
+详细了解 [组织数字资产以使用处理配置文件的最佳实践](organize-assets.md)
 
-      * [管理檢視器預設集](managing-viewer-presets.md)
-      * [發佈資產](publishing-dynamicmedia-assets.md)
-   * 使用視訊中繼資料
+      * [搜索视频资产](search-assets.md#custompredicates) 或 [搜索资源](/help/assets/search-assets.md)
+   * 预览和发布视频资产
 
-      * 檢視已編碼視訊轉譯的屬性，例如影格速率、音訊和視訊位元速率以及轉碼器：
-         [檢視視訊轉譯屬性](video-renditions.md)
+      * 查看源视频、视频的编码演绎版及其相关缩略图：
+         [预览视频](managing-video-assets.md#upload-and-preview-video-assets) 或 [预览资源](previewing-assets.md)
+         [查看视频演绎版](video-renditions.md)
+         [管理视频演绎版](manage-assets.md#managing-renditions)
 
-      * 編輯視訊的屬性，例如標題、說明和標籤、自訂中繼資料欄位：
-         [編輯視訊屬性](manage-assets.md#editing-properties)
+      * [管理查看器预设](managing-viewer-presets.md)
+      * [发布资产](publishing-dynamicmedia-assets.md)
+   * 使用视频元数据
 
-      * [管理數位資產的中繼資料](metadata.md)
+      * 查看已编码视频演绎版的属性，如帧速率、音频和视频比特率以及编解码器：
+         [查看视频演绎版属性](video-renditions.md)
+
+      * 编辑视频的属性，如标题、描述和标记、自定义元数据字段：
+         [编辑视频属性](manage-assets.md#editing-properties)
+
+      * [管理数字资源的元数据](metadata.md)
       * [元数据架构](metadata-schemas.md)
-   * 檢閱、核准和註釋視訊，並維持完整的版本控制
+   * 审查、批准和注释视频，并保持完整的版本控制
 
-      * [為影片加上註釋](managing-video-assets.md#annotate-video-assets) 或 [為資產加上註釋](manage-assets.md#annotating)
+      * [为视频添加批注](managing-video-assets.md#annotate-video-assets) 或 [为资源作批注](manage-assets.md#annotating)
 
       * [创建一个版本](manage-assets.md#asset-versioning)
-      * [將工作流程套用至資產](assets-workflow.md) 或參閱 [在資產上開始工作流程](manage-assets.md#starting-a-workflow-on-an-asset)
+      * [将工作流应用于资产](assets-workflow.md) 或参阅 [在资产上启动工作流](manage-assets.md#starting-a-workflow-on-an-asset)
 
-      * [檢閱資料夾資產](bulk-approval.md)
+      * [查看文件夹资产](bulk-approval.md)
       * [项目](../sites-authoring/projects.md)
 
 
 
 
-1. **發佈您的Dynamic Media影片** 執行下列任一項作業：
+1. **发布Dynamic Media视频** 通过执行以下操作之一：
 
-   * 如果您使用Adobe Experience Manager作為網頁內容管理系統，可以直接將影片新增至網頁。
+   * 如果您使用Adobe Experience Manager作为Web内容管理系统，则可以直接将视频添加到网页。
 
-      * [新增視訊至您的網頁](adding-dynamic-media-assets-to-pages.md).
-   * 如果您使用協力廠商網站內容管理系統，您可以將影片連結或內嵌至網頁。
+      * [将视频添加到网页](adding-dynamic-media-assets-to-pages.md).
+   * 如果您使用的是第三方Web内容管理系统，则可以将视频链接或嵌入到网页。
 
-      * 使用URL整合視訊：
+      * 使用URL集成视频：
          [将 URL 关联到您的 Web 应用程序](linking-urls-to-yourwebapplication.md).
 
-      * 使用網頁上的內嵌程式碼整合視訊：
-         [將視訊檢視器內嵌在網頁上](embed-code.md).
-   * [產生視訊報表](#viewing-video-reports).
+      * 在网页上使用嵌入代码集成视频：
+         [在网页上嵌入视频查看器](embed-code.md).
+   * [生成视频报表](#viewing-video-reports).
 
-   * [新增註解至視訊](#adding-captions-to-video).
+   * [向视频添加字幕](#adding-captions-to-video).
 
 
 
-## 在Dynamic Media中使用視訊 {#working-with-video-in-dynamic-media}
+## 在Dynamic Media中处理视频 {#working-with-video-in-dynamic-media}
 
-Dynamic Media中的視訊是端對端解決方案，可讓您輕鬆發佈高品質的最適化視訊，以便在多個熒幕(包括桌上型電腦、iOS、Android™、BlackBerry®和Windows行動裝置)上串流。 「自我調整視訊集」會將使用不同位元速率和格式（例如400 kbps、800 kbps和1000 kbps）編碼的相同視訊版本分組。 桌上型電腦或行動裝置會偵測到可用的頻寬。
+Dynamic Media中的视频是一款端到端解决方案，可让您轻松地发布高质量的自适应视频，以便在多个屏幕(包括台式机、iOS、Android™、BlackBerry®和Windows移动设备)上实现流式传输。 自适应视频集对使用不同比特率和格式（如400 kbps、800 kbps和1000 kbps）编码的相同视频的版本进行分组。 台式计算机或移动设备检测可用带宽。
 
-例如，在iOS行動裝置上，它會偵測3G、4G或Wi-Fi等頻寬。 之後，它會從「自我調整視訊集」內的各種視訊位元速率中，自動選取正確的編碼視訊。 影片會串流至桌上型電腦、行動裝置或平板電腦。
+例如，在iOS移动设备上，它会检测3G、4G或Wi-Fi等带宽。 然后，它自动从自适应视频集内的各种视频比特率中选择正确的编码视频。 视频将流式传输到台式机、移动设备或平板电脑。
 
-此外，如果桌上型電腦或行動裝置上的網路狀況改變，視訊品質會自動動態切換。 此外，如果客戶在桌上型電腦進入全熒幕模式，Adaptive Video Set會使用更好的解析度來回應，以改善客戶的觀看體驗。 對於在多個熒幕和裝置上播放Dynamic Media視訊的客戶，使用「最適化視訊集」可提供最佳播放方式。
+此外，如果桌面或移动设备上的网络状况发生变化，则视频质量会自动进行动态切换。 此外，如果客户在桌面上进入全屏模式，自适应视频集将使用更好的分辨率进行响应，从而改善客户的观看体验。 通过使用自适应视频集，客户可以在多个屏幕和设备上播放Dynamic Media视频，您可以获得最佳播放体验。
 
-視訊播放器用來決定要播放或播放期間要選取已編碼視訊的邏輯，是根據下列演演算法：
+视频播放器用来确定在播放期间要播放或选择的已编码视频的逻辑基于以下算法：
 
-1. 視訊播放器會根據位元速率（最接近在播放器本身中為「初始位元速率」設定的值）載入初始視訊片段。
-1. 視訊播放器會根據使用下列條件的頻寬速度變更進行切換：
+1. 视频播放器根据比特率加载初始视频片段，该比特率最接近在播放器本身中为“初始比特率”设置的值。
+1. 视频播放器根据对带宽速度的更改进行切换，使用的标准如下：
 
-   1. 播放器會挑選低於或等於預估頻寬的最高頻寬資料流。
-   1. 播放器只考慮80%的可用頻寬。 不過，如果調高，則比較保守的設定是70%，以避免高估並立即調回。
+   1. 播放器选择低于或等于估计带宽的最高带宽流。
+   1. 播放器只考虑了80%的可用带宽。 然而，如果它调高了，它更保守，只有70%，以避免高估并立即回调。
 
-如需演演算法的詳細技術資訊，請參閱 [https://android.googlesource.com/platform/frameworks/av/+/master/media/libstagefright/httplive/LiveSession.cpp](https://android.googlesource.com/platform/frameworks/av/+/master/media/libstagefright/httplive/LiveSession.cpp)
+有关算法的详细技术信息，请参阅 [https://android.googlesource.com/platform/frameworks/av/+/master/media/libstagefright/httplive/LiveSession.cpp](https://android.googlesource.com/platform/frameworks/av/+/master/media/libstagefright/httplive/LiveSession.cpp)
 
-若用於管理單一視訊和自我調整視訊集，支援下列專案：
+对于管理单个视频和自适应视频集，支持以下内容：
 
-* 從多種支援的視訊格式和音訊格式上傳視訊，並將視訊編碼為MP4 H.264格式，以便跨多個熒幕播放。 您可以使用預先定義的自我調整視訊預設集、單一視訊編碼預設集，或自訂您自己的編碼來控制視訊的品質和大小。
+* 从多种支持的视频格式和音频格式上传视频并将视频编码为MP4 H.264格式以便在多个屏幕上播放。 您可以使用预定义的自适应视频预设、单个视频编码预设或自定义自己的编码来控制视频的质量和大小。
 
-   * 產生最適化視訊集時，其中會包含MP4視訊。
-   * **注意**：主要/來源視訊未新增至最適化視訊集。
+   * 生成自适应视频集时，该视频集包含MP4视频。
+   * **注释**：主控/源视频未添加到自适应视频集。
 
-* 所有HTML5視訊檢視器中的視訊字幕。
-* 使用完整的中繼資料支援來組織、瀏覽和搜尋視訊，以有效管理視訊資產。
-* 將最適化視訊集傳送至網路、桌上型電腦和行動裝置，包括iPhone、iPad、Android™、BlackBerry®和Windows Phone。
+* 所有HTML5视频查看器中的视频字幕。
+* 组织、浏览和搜索视频，全面支持元数据，以便有效管理视频资产。
+* 将自适应视频集交付到Web、桌面和移动设备，包括iPhone、iPad、Android™、BlackBerry®和Windows phone。
 
-各種iOS平台均支援最適化視訊串流。 另請參閱 [Dynamic Media檢視器參考指南](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/c-html5-video-reference.html#video).
+各种iOS平台均支持自适应视频流。 参见 [Dynamic Media查看器参考指南](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/c-html5-video-reference.html#video).
 
-Dynamic Media支援MP4 H.264視訊的行動視訊播放。 您可以在下列位置找到支援此視訊格式的BlackBerry®裝置： [BlackBerry®支援的視訊格式](https://support.blackberry.com/kb/articleDetail?ArticleNumber=000005482).
+Dynamic Media支持MP4 H.264视频的移动视频播放。 您可以在以下位置找到支持此视频格式的BlackBerry®设备： [BlackBerry®支持的视频格式](https://support.blackberry.com/kb/articleDetail?ArticleNumber=000005482).
 
-您可以在下列位置找到支援此視訊格式的Windows裝置： [Windows Phone 8支援的媒體轉碼器](https://learn.microsoft.com/en-us/windows/uwp/audio-video-camera/supported-codecs)
+您可以在以下位置找到支持此视频格式的Windows设备： [Windows Phone 8支持的媒体编解码器](https://learn.microsoft.com/en-us/windows/uwp/audio-video-camera/supported-codecs)
 
-* 使用Dynamic Media視訊檢視器預設集播放視訊，包括下列專案：
+* 使用Dynamic Media视频查看器预设播放视频，包括以下内容：
 
-   * 單一視訊檢視器。
-   * 結合視訊和影像內容的混合媒體檢視器。
+   * 单个视频查看器。
+   * 结合了视频和图像内容的混合媒体查看器。
 
-* 設定視訊播放器以符合您的品牌需求。
-* 使用簡單URL或內嵌程式碼將視訊整合至您的網站、行動網站或行動應用程式。
+* 配置视频播放器以满足您的品牌推广需求。
+* 使用简单的URL或嵌入代码将视频集成到您的网站、移动网站或移动应用程序。
 
 <!-- See [Dynamic video playback](https://s7d9.scene7.com/s7/uvideo.jsp?asset=GeoRetail/Mop_AVS&config=GeoRetail/Universal_Video1&stageSize=640,480) sample. -->
 
-另請參閱 [Experience Manager Assets和Dynamic Media Classic的檢視器](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/c-html5-s7-aem-asset-viewers.html#viewers-aem-assets-dmc) 和 [僅適用於Experience Manager資產的檢視器](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/c-html5-aem-asset-viewers.html#viewers-for-aem-assets-only).
+另请参阅 [Experience Manager Assets和Dynamic Media Classic查看器](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/c-html5-s7-aem-asset-viewers.html#viewers-aem-assets-dmc) 和 [仅适用于Experience Manager资源的查看器](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/c-html5-aem-asset-viewers.html#viewers-for-aem-assets-only).
 
-## 最佳實務：使用HTML5視訊檢視器 {#best-practice-using-the-html-video-viewer}
+## 最佳实践：使用HTML5视频查看器 {#best-practice-using-the-html-video-viewer}
 
-Dynamic Media HTML5視訊檢視器預設集是強大的視訊播放器。 您可以使用它們來避免許多與HTML5視訊播放相關的常見問題。 此外，行動裝置相關問題，例如缺乏最適化位元速率串流傳送以及案頭瀏覽器觸及範圍有限。
+Dynamic Media HTML5视频查看器预设是可靠的视频播放器。 您可以使用它们来避免与HTML5视频播放相关的许多常见问题。 此外，还存在着与移动设备相关的问题，例如缺乏自适应比特率流交付以及桌面浏览器访问范围有限。
 
-在播放器的設計方面，您可以使用標準Web開發工具來設計視訊播放器的功能。 例如，您可以使用HTML5和CSS來設計按鈕、控制項和自訂海報影像背景，以幫助您透過自訂外觀觸及客戶。
+在播放器的设计方面，您可以使用标准Web开发工具来设计视频播放器的功能。 例如，您可以使用HTML5和CSS设计按钮、控件和自定义海报图像背景，以帮助您通过自定义外观触及客户。
 
-在檢視器的播放端，會自動偵測瀏覽器的視訊功能。 接著，影片會使用HLS （HTTP即時資料流）或DASH （HTTP動態最適化資料流） （也稱為最適化位元速率資料流）提供視訊。 或者，如果這些傳送方法不存在，則改用HTML5 progressive。
+在查看器的播放方面，它会自动检测浏览器的视频功能。 然后，它使用HLS（HTTP实时流）或DASH（HTTP上的动态自适应流）提供视频，也称为自适应比特率流。 或者，如果不存在这些投放方法，则改用HTML5 progressive。
 
-將下列專案結合至單一播放器：
+通过将以下内容组合到单个播放器中：
 
-* 能夠使用HTML5和CSS設計播放元件
-* 具有內嵌式播放
-* 根據瀏覽器的功能使用最適化和漸進式串流
+* 能够使用HTML5和CSS设计播放组件
+* 具有嵌入式播放
+* 根据浏览器的功能使用自适应流和渐进式流
 
-您可以將多媒體內容延伸至桌上型電腦和行動使用者，並確保簡化的視訊體驗。
+您可以将富媒体内容的范围扩展到桌面和移动设备用户，并确保提供简化的视频体验。
 
-另請參閱 [關於HTML5檢視器](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/c-html5-aem-asset-viewers.html#viewers-for-aem-assets-only).
+另请参阅 [关于HTML5查看器](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/c-html5-aem-asset-viewers.html#viewers-for-aem-assets-only).
 
-### 使用HTML5視訊檢視器在桌上型電腦和行動裝置上播放視訊 {#playback-of-video-on-desktop-computers-and-mobile-devices-using-the-html-video-viewer}
+### 使用HTML5视频查看器在桌面计算机和移动设备上播放视频 {#playback-of-video-on-desktop-computers-and-mobile-devices-using-the-html-video-viewer}
 
-就桌上型電腦和行動最適化視訊串流而言，用於位元速率切換的視訊均以最適化視訊集中的所有MP4視訊為基礎。
+对于桌面和移动设备自适应视频流，用于比特率切换的视频基于自适应视频集中的所有MP4视频。
 
-使用DASH或HLS或漸進式視訊下載進行視訊播放。 在舊版Experience Manager（例如6.0、6.1和6.2）中，影片會透過HTTP進行串流處理。
+使用DASH或HLS或者渐进式视频下载进行视频播放。 在早期版本的Experience Manager（如6.0、6.1和6.2）中，视频是通过HTTP进行流式传输的。
 
-在Experience Manager6.3及更新版本中，視訊現在會透過HTTPS （亦即DASH或HLS）進行串流，因為DM閘道服務URL也一律使用HTTPS。 此預設行為不會影響客戶。 也就是說，除非瀏覽器不支援，否則視訊串流一律會透過HTTPS發生。 （請參閱下表）。 因此，
+在Experience Manager6.3及更高版本中，视频现在通过HTTPS（即DASH或HLS）进行流式传输，因为DM网关服务URL也始终使用HTTPS。 此默认行为对客户没有影响。 也就是说，除非浏览器不支持HTTPS，否则始终会通过HTTPS进行视频流。 （见下表）。 因此，
 
-* 如果您的HTTPS網站有HTTPS視訊串流，則資料流沒有問題。
-* 如果您的HTTP網站具有HTTPS視訊串流，則串流沒有問題，而且網頁瀏覽器中沒有混合式內容問題。
+* 如果您的HTTPS网站支持HTTPS视频流，则可以使用流式传输。
+* 如果您的HTTP网站包含HTTPS视频流，则可以使用流处理，并且Web浏览器中没有出现混合内容问题。
 
-DASH是國際標準，HLS是Apple標準。 兩者都用於自我調整視訊串流。 此外，這兩種技術都會根據網路頻寬容量自動調整播放。 它也可讓客戶「搜尋」視訊中的任何位置，而不需要等候視訊的其餘部分下載。
+DASH是国际标准，HLS是Apple标准。 两者都用于自适应视频流。 而且，这两种技术都会根据网络带宽容量自动调整播放。 它还允许客户在视频中的任何位置“搜寻”，而无需等待视频的其余部分下载。
 
-漸進式視訊的傳送方式，是將視訊下載並儲存在使用者的案頭系統或行動裝置上。
+渐进式视频是通过将视频下载并存储到用户的桌面系统或移动设备上的方式交付的。
 
-下表說明使用Dynamic Media Video Viewer在桌上型電腦和行動裝置上播放視訊的裝置、瀏覽器和方法。
+下表介绍了使用Dynamic Media Video Viewer在桌面计算机和移动设备上播放视频的设备、浏览器和方法。
 
 <table>
  <tbody>
   <tr>
    <td><strong>设备</strong></td>
    <td><strong>浏览器</strong></td>
-   <td><strong>視訊播放模式</strong></td>
+   <td><strong>视频播放模式</strong></td>
   </tr>
   <tr>
    <td>桌面</td>
    <td>Internet Explorer 9和10</td>
-   <td>漸進式下載。</td>
+   <td>渐进式下载。</td>
   </tr>
   <tr>
    <td>桌面</td>
    <td>Internet Explorer 11+</td>
-   <td>在Windows 8和Windows 10上 — 只要要求DASH*或HLS，就強制使用HTTPS。 已知限制：DASH*或HLS上的HTTP在此瀏覽器/作業系統組合中無法運作<br /> <br /> 在Windows 7上 — 漸進式下載。 使用標準邏輯來選取HTTP與HTTPS通訊協定。</td>
+   <td>在Windows 8和Windows 10上 — 每当请求DASH*或HLS时，强制使用HTTPS。 已知限制：DASH*或HLS上的HTTP在此浏览器/操作系统组合中不起作用<br /> <br /> 在Windows 7上 — 渐进式下载。 使用标准逻辑选择HTTP与HTTPS协议。</td>
   </tr>
   <tr>
    <td>桌面</td>
    <td>Firefox 23-44</td>
-   <td>漸進式下載。</td>
+   <td>渐进式下载。</td>
   </tr>
   <tr>
    <td>桌面</td>
-   <td>Firefox 45或更新版本</td>
-   <td>DASH*或HLS最適化位元速率串流。</td>
+   <td>Firefox 45或更高版本</td>
+   <td>DASH*或HLS自适应比特率流。</td>
   </tr>
   <tr>
    <td>桌面</td>
-   <td>鉻黃</td>
-   <td>DASH*或HLS最適化位元速率串流。</td>
+   <td>铬黄</td>
+   <td>DASH*或HLS自适应比特率流。</td>
   </tr>
   <tr>
    <td>桌面</td>
    <td>Safari (Mac)</td>
-   <td>HLS最適化位元速率串流。</td>
+   <td>HLS自适应比特率流。</td>
   </tr>
   <tr>
    <td>移动设备</td>
-   <td>Chrome (Android™ 6或更舊版本)</td>
-   <td>漸進式下載。</td>
+   <td>Chrome (Android™ 6或更低版本)</td>
+   <td>渐进式下载。</td>
   </tr>
   <tr>
    <td>移动设备</td>
-   <td>Chrome (Android™ 7或更新版本)</td>
-   <td>DASH*或HLS最適化位元速率串流。</td>
+   <td>Chrome (Android™ 7或更高版本)</td>
+   <td>DASH*或HLS自适应比特率流。</td>
   </tr>
   <tr>
    <td>移动设备</td>
-   <td>Android™ （預設瀏覽器）</td>
-   <td>漸進式下載。</td>
+   <td>Android™（默认浏览器）</td>
+   <td>渐进式下载。</td>
   </tr>
   <tr>
    <td>移动设备</td>
    <td>Safari (iOS)</td>
-   <td>HLS最適化位元速率串流。</td>
+   <td>HLS自适应比特率流。</td>
   </tr>
   <tr>
    <td>移动设备</td>
    <td>Chrome (iOS)</td>
-   <td>HLS最適化位元速率串流。</td>
+   <td>HLS自适应比特率流。</td>
   </tr>
   <tr>
    <td>移动设备</td>
    <td>BlackBerry®</td>
-   <td>DASH*或HLS最適化位元速率串流。/td&gt;
+   <td>DASH*或HLS自适应比特率流。/td&gt;
   </tr>
  </tbody>
 </table>
 
 >[!IMPORTANT]
 >
->*若要在視訊中使用DASH，必須先由您帳戶上的Adobe技術支援啟用。 另請參閱 [在您的帳戶上啟用DASH](#enable-dash).
+>*要在视频中使用DASH，必须首先由您帐户上的Adobe技术支持启用。 参见 [在您的帐户上启用DASH](#enable-dash).
 
-## Dynamic Media視訊解決方案的架構 {#architecture-of-dynamic-media-video-solution}
+## Dynamic Media视频解决方案的架构 {#architecture-of-dynamic-media-video-solution}
 
-下圖顯示透過DMGateway (在Dynamic Media混合模式)上傳及編碼且可供公眾使用的影片整體製作工作流程。
+下图显示了通过DMGateway(在Dynamic Media混合模式下)上传和编码并可供公众使用的视频的整体创作工作流。
 
 ![chlimage_1-427](assets/chlimage_1-427.png)
 
-## 視訊的混合式發佈架構 {#hybrid-publishing-architecture-for-videos}
+## 视频的混合发布架构 {#hybrid-publishing-architecture-for-videos}
 
 ![chlimage_1-428](assets/chlimage_1-428.png)
 
-## 視訊編碼最佳作法 {#best-practices-for-encoding-videos}
+## 视频编码最佳实践 {#best-practices-for-encoding-videos}
 
-此 **Dynamic Media編碼影片** 如果您已啟用Dynamic Media並設定視訊雲端服務，工作流程會對視訊進行編碼。 此工作流会捕获工作流进程历史记录和失败信息。如果您已啟用Dynamic Media並設定視訊雲端服務， **[!UICONTROL Dynamic Media編碼影片]** 上傳視訊時，工作流程會自動生效。 (如果您沒有使用Dynamic Media，請 **[!UICONTROL DAM更新資產]** 工作流程會生效。)
+此 **Dynamic Media编码视频** 如果您已启用Dynamic Media并设置了视频云服务，则工作流会对视频进行编码。 此工作流会捕获工作流进程历史记录和失败信息。如果您已启用Dynamic Media并设置了视频云服务，则 **[!UICONTROL Dynamic Media编码视频]** 上传视频时，工作流会自动生效。 (如果您没有使用Dynamic Media，则 **[!UICONTROL DAM更新资产]** 工作流将生效。)
 
 <!-- DEAD The following are best-practice tips for encoding source video files.
 
@@ -297,358 +297,358 @@ For advice about video encoding, see [Video Encoding Basics](https://www.adobe.c
 
 * [Streaming 101: The Basics — Codecs, Bandwidth, Data Rate, and Resolution](https://www.adobe.com/go/learn_s7_streaming101_en). -->
 
-### 來源視訊檔案 {#source-video-files}
+### 源视频文件 {#source-video-files}
 
-編碼視訊檔案時，請使用最高品質的來源視訊檔案。 避免使用先前編碼的視訊檔案，因為這些檔案已經壓縮，進一步編碼會建立品質不佳的視訊。
+在编码视频文件时，请使用可能具有最高质量的源视频文件。 避免使用以前编码的视频文件，因为这些文件已压缩，进一步编码会创建质量缺佳的视频。
 
-* Dynamic Media主要支援長度上限為30分鐘，最小解析度大於25 x 25的短影片。
-* 您可以上傳每個最多15 GB的主要來源視訊檔案。
+* Dynamic Media主要支持最长30分钟、最小分辨率大于25 x 25的短格式视频。
+* 您可以上传每个大小最大为15 GB的主源视频文件。
 
-下表說明編碼來源視訊檔案之前，其建議大小、外觀比例和最低位元速率等設定：
+下表描述了源视频文件在编码之前必须具有的建议大小、长宽比和最小比特率：
 
-| 大小 | 宽高比 | 最小位元速率 |
+| 大小 | 宽高比 | 最小比特率 |
 |--- |--- |--- |
-| 1024 X 768 | 4:3 | 大多數影片為4500 kbps。 |
-| 1280 X 720 | 16:9 | 3000 - 6000 kbps （視視訊中的移動量而定）。 |
-| 1920 X 1080 | 16:9 | 6000 - 8000 kbps （視視訊中的移動量而定）。 |
+| 1024 X 768 | 4:3 | 大多数视频为4500 kbps。 |
+| 1280 X 720 | 16:9 | 3000 - 6000 kbps，具体取决于视频中的移动量。 |
+| 1920 X 1080 | 16:9 | 6000 - 8000 kbps，具体取决于视频中的移动量。 |
 
-### 取得檔案的中繼資料 {#obtaining-a-file-s-metadata}
+### 获取文件的元数据 {#obtaining-a-file-s-metadata}
 
-您可以使用視訊編輯工具檢視檔案的中繼資料，或使用專為取得中繼資料而設計的應用程式來取得檔案的中繼資料。 以下是使用MediaInfo （協力廠商應用程式）來取得視訊檔案中繼資料的指示：
+您可以通过以下方式获取文件的元数据：使用视频编辑工具查看其元数据，或使用专为获取元数据而设计的应用程序。 以下是使用第三方应用程序MediaInfo获取视频文件元数据的说明：
 
-1. 前往 [MediaInfo下載](https://mediaarea.net/en/MediaInfo/Download).
-1. 選取並下載GUI版本的安裝程式，然後依照安裝指示操作。
-1. 安裝後，請以滑鼠右鍵按一下視訊檔案（僅限Windows）並選取MediaInfo，或開啟MediaInfo並將視訊檔案拖曳到應用程式中。 您會看到與視訊檔案相關的所有中繼資料，包括其寬度、高度和FPS。
+1. 转到 [MediaInfo下载](https://mediaarea.net/en/MediaInfo/Download).
+1. 选择并下载GUI版本的安装程序，然后按照安装说明操作。
+1. 安装后，右键单击视频文件（仅限Windows）并选择MediaInfo，或者打开MediaInfo并将视频文件拖到应用程序中。 您可以看到与视频文件关联的所有元数据，包括其宽度、高度和FPS。
 
 ### 宽高比 {#aspect-ratio}
 
-當您選擇或建立主要來源視訊檔案的視訊編碼預設集時，請確定預設集具有與主要來源視訊檔案相同的外觀比例。 外觀比例是視訊的寬度與高度的比例。
+当您选择或创建主源视频文件的视频编码预设时，请确保预设具有与主源视频文件相同的纵横比。 宽高比是视频的宽高比。
 
-若要判斷視訊檔案的外觀比例，請取得檔案的中繼資料，並注意檔案的寬度和高度（請參閱上述取得檔案的中繼資料）。 然後使用此公式來決定長寬比：
+要确定视频文件的纵横比，请获取文件的元数据并记下文件的宽度和高度（请参阅上面获取文件的元数据）。 然后使用此公式确定纵横比：
 
-寬度/高度=外觀比例
+宽度/高度=纵横比
 
-下表說明公式結果如何轉換成常見的外觀比例選擇：
+下表描述了公式结果如何转换为常见的宽高比选项：
 
-| 公式結果 | 宽高比 |
+| 公式结果 | 宽高比 |
 |--- |--- |
 | 1.33 | 4:3 |
 | 0.75 | 3:4 |
 | 1.78 | 16:9 |
 | 0.56 | 9:16 |
 
-例如，1440寬度x 1080高度的視訊外觀比例為1440/1080，即1.33。在這種情況下，您可以選擇長寬比為4:3的視訊編碼預設集，來編碼視訊檔案。
+例如，1440宽度x 1080高度的视频的长宽比为1440/1080，即1.33。在这种情况下，您可以选择具有4:3纵横比的视频编码预设来编码视频文件。
 
 ### 比特率 {#bitrate}
 
-Bitrate是經過編碼，構成視訊播放一秒的資料量。 位元速率是以每秒千位元(Kbps)來測量。
+Bitrate是经过编码以构成视频播放一秒的数据量。 比特率以千位/秒(Kbps)为测量单位。
 
 >[!NOTE]
 >
->由於所有轉碼器都使用有失真壓縮，因此位元速率是視訊品質中最重要的因素。 有失真壓縮越是壓縮視訊檔案，品質就越會降低。 因此，其他所有特性（解析度、影格速率和轉碼器）相等時，位元速率越低，壓縮檔案的品質就越低。
+>由于所有的编解码器都使用有损压缩，因此比特率是决定视频质量的最重要因素。 有损压缩时，越是压缩视频文件，质量就越低。 因此，所有其他特性（分辨率、帧速率和编解码器）相等，比特率越低，压缩文件的质量就越低。
 
-選取位元速率編碼時，您可以選擇兩種型別：
+在选择比特率编码时，可以选择以下两种类型：
 
-* **[!UICONTROL 固定位元速率編碼]** (CBR) — 在CBR編碼期間，位元速率或每秒位元數在整個編碼過程中都會保持相同。 CBR編碼會在整個視訊中將設定的資料速率儲存至您的設定。 此外，CBR編碼不會最佳化媒體檔案的品質，但會節省儲存空間。
-如果您的視訊在整個視訊中包含類似的移動層級，請使用CBR。 CBR最常用於串流視訊內容。 另請參閱 [使用自訂新增的視訊編碼引數](/help/assets/video-profiles.md#using-custom-added-video-encoding-parameters).
+* **[!UICONTROL 恒定比特率编码]** (CBR) — 在CBR编码期间，比特率或每秒比特数在整个编码过程中保持不变。 CBR编码会在整个视频中将设置的数据速率保留到您的设置中。 此外，CBR编码不会优化媒体文件的质量，但会节省存储空间。
+如果您的视频在整个视频中包含类似的运动级别，请使用CBR。 CBR最常用于流视频内容。 另请参阅 [使用添加自定义的视频编码参数](/help/assets/video-profiles.md#using-custom-added-video-encoding-parameters).
 
-* **[!UICONTROL 變數位元速率編碼]** (VBR) - VBR編碼會根據壓縮器所需的資料，向下調整資料速率，並調整至您設定的上限。 此功能表示在VBR編碼程式期間，媒體檔案的位元速率會根據媒體檔案的位元速率需求動態增加或減少。
-VBR花較長的時間進行編碼，但會產生最有利的結果；媒體檔案的品質優異。 VBR最常用於http漸進式傳送視訊內容。
+* **[!UICONTROL 可变比特率编码]** (VBR) - VBR编码根据压缩程序所需的数据来向下调整数据速率，并将其调整到您设置的上限。 此功能意味着在VBR编码过程中，媒体文件的比特率会根据媒体文件的比特率需求动态增加或减少。
+VBR的编码时间较长，但产生的结果最理想；媒体文件的质量也更好。 VBR最常用于http渐进式视频内容交付。
 
-何時使用VBR或CRB？
-選取VBR與CBR時，幾乎總是建議您使用VBR處理媒體檔案。 VBR以具競爭力的位元速率提供更高品質的檔案。 使用VBR時，請務必使用兩階段編碼，並將最大位元速率設定為目標視訊位元速率的1.5倍。
+您何时使用VBR还是CRB？
+在选择VBR与CBR时，几乎总是建议您将VBR用于媒体文件。 VBR以具有竞争力的比特率提供更高质量的文件。 使用VBR时，请确保使用两遍编码，并将最大比特率设置为目标视频比特率的1.5倍。
 
-當您選擇視訊編碼預設集時，請記住目標使用者的連線速度。 選擇資料速率為該速度80%的預設集。 例如，如果目標使用者的連線速度是1000 Kbps，則最佳預設集是視訊資料速率為800 Kbps的預設集。
+选择视频编码预设时，请记住目标最终用户的连接速度。 选择数据速率为该速度80%的预设。 例如，如果目标最终用户的连接速度为1000 Kbps，则最佳预设为视频数据速率为800 Kbps的预设。
 
-此表格說明一般連線速度的資料速率。
+此表描述了典型连接速度的数据速率。
 
-| 速度(Kbps) | 連線型別 |
+| 速度(Kbps) | 连接类型 |
 |--- |--- |
-| 256 | 撥號連線。 |
-| 800 | 一般行動連線。 針對此連線，針對3G體驗將資料速率目標定在400到800之間。 |
-| 2000 | 典型的寬頻案頭連線。 針對此連線，將資料速率目標設定在800到2000 Kbps範圍內，大部分目標平均為1200到1500 Kbps。 |
-| 5000 | 典型的高寬頻連線。 不建議在此上限範圍內進行編碼，因為大多數消費者無法使用此速度的視訊傳送。 |
+| 256 | 拨号连接。 |
+| 800 | 典型的移动连接。 对于此连接，请将3G体验的数据速率目标定在400到800之间。 |
+| 2000 | 典型的宽带台式机连接。 对于这种连接，数据速率目标在800-2000 Kbps范围内，大多数目标平均为1200-1500 Kbps。 |
+| 5000 | 典型的高宽带连接。 不建议在此上限范围内进行编码，因为大多数消费者无法使用此速度的视频交付。 |
 
 ### 解决方法 {#resolution}
 
-**解析度** 說明視訊檔案的高度和寬度（畫素）。 大部分的來源視訊都是以高解析度儲存（例如1920 x 1080）。 為了串流用途，來源視訊會壓縮成較小的解析度（640 x 480或更小）。
+**分辨率** 描述视频文件的高度和宽度（以像素为单位）。 大多数源视频以高分辨率存储（例如，1920 x 1080）。 出于流传输目的，源视频被压缩成较小的分辨率（640 x 480或更小）。
 
-解析度和資料速率是決定視訊品質的兩個整合因素。 若要維持相同的視訊品質，視訊檔案中的畫素數越高（解析度越高），資料速率就必須越高。 例如，假設320 x 240解析度和640 x 480解析度視訊檔案的每幀畫素數：
+分辨率和数据速率是决定视频质量的两个相互关联的因素。 要保持相同的视频质量，视频文件中的像素数越高（分辨率越高），数据速率必须越高。 例如，假定每帧的像素数在320 x 240分辨率和640 x 480分辨率视频文件中：
 
-| 解决方法 | 每個影格的畫素 |
+| 解决方法 | 每帧的像素 |
 |--- |--- |
 | 320 x 240 | 76,800 |
 | 640 x 480 | 307,200 |
 
-640 x 480檔案的每個影格畫素會多出4倍。 若要在這兩個範例解析度上達到相同的資料速率，您可以對640 x 480檔案套用4倍的壓縮，這會降低視訊品質。 因此，250 Kbps的視訊資料速率可以320 x 240的解析度提供高品質的觀賞效果，但無法以640 x 480的解析度提供。
+640 x 480文件的每帧像素数是前者的四倍。 要使这两个示例分辨率达到相同的数据速率，可以对640 x 480文件应用四倍的压缩，这会降低视频质量。 因此，250 Kbps的视频数据速率可在320 x 240分辨率下产生高质量观看，但不会在640 x 480分辨率下产生高质量观看。
 
-一般而言，您使用的資料速率越高、視訊外觀越好、使用的解析度越高，您必須維持的檢視品質資料速率就越高（與解析度較低相比）。
+通常，使用的数据速率越高，视频的外观越好，使用的分辨率越高，必须保持的查看质量的数据速率越高（与分辨率较低相比）。
 
-由於解析度和資料速率是相互關聯的，因此在編碼視訊時，您有兩個選項：
+由于分辨率和数据速率是相互关联的，因此在编码视频时，您有两个选项：
 
-* 選擇資料速率，然後以最高解析度編碼，看起來就像您所選擇的資料速率。
-* 選擇解析度，然後以您選擇的解析度進行必要的資料速率編碼，以獲得高品質的視訊。
+* 选择一个数据速率，然后以最高分辨率进行编码，该分辨率适合您选择的数据速率。
+* 选择分辨率，然后按照您选择的分辨率进行编码，以获得高质量视频。
 
-當您選擇（或建立）主要來源視訊檔案的視訊編碼預設集時，請使用此表格來鎖定正確的解析度：
+当为主源视频文件选择（或创建）视频编码预设时，请使用此表定位正确的分辨率：
 
-| 解决方法 | 高度(像素) | 熒幕大小 |
+| 解决方法 | 高度(像素) | 屏幕大小 |
 |--- |--- |--- |
-| 240p | 240 | 超小熒幕 |
-| 300p | 300 | 通常適用於行動裝置的小熒幕 |
-| 360p | 360 | 小熒幕 |
-| 480p | 480 | 中熒幕 |
-| 720p | 720 | 大熒幕 |
-| 1080p | 1080 | 高解析度大熒幕 |
+| 240p | 240 | 小屏幕 |
+| 300p | 300 | 通常用于移动设备的小屏幕 |
+| 360p | 360 | 小屏幕 |
+| 480p | 480 | 中屏 |
+| 720p | 720 | 大屏幕 |
+| 1080p | 1080 | 高清大屏幕 |
 
-### Fps （每秒影格數） {#fps-frames-per-second}
+### Fps（每秒帧数） {#fps-frames-per-second}
 
-在美國和日本，大部分的影片是以每秒29.97幀(fps)的速率拍攝；在歐洲，大部分的影片是以每秒25fps的速率拍攝。 電影的拍攝速度為24 fps。
+在美国和日本，大多数视频的拍摄速度是每秒29.97帧(fps)；在欧洲，大多数视频的拍摄速度是25帧/秒。 电影的拍摄速度是24帧/秒。
 
-選擇符合主要來源視訊檔案的fps速率的視訊編碼預設集。 例如，如果您的主要來源視訊是25 fps，請選擇具有25 fps的編碼預設集。 依預設，所有自訂編碼都會使用主要來源視訊檔案的fps。 因此，當您建立視訊編碼預設集時，不需要明確指定fps設定。
+选择与主源视频文件的fps速率匹配的视频编码预设。 例如，如果主源视频为25 fps，请选择一个编码预设为25 fps。 默认情况下，所有自定义编码都使用主源视频文件的fps。 因此，在创建视频编码预设时，无需明确指定fps设置。
 
-### 視訊編碼維度 {#video-encoding-dimensions}
+### 视频编码维度 {#video-encoding-dimensions}
 
-為了獲得最佳結果，請選取編碼維度，使來源視訊是所有已編碼視訊的整數倍。
+要获得最佳结果，请选择编码维度，以便源视频是所有已编码视频的整数倍。
 
-若要計算此比率，請將來源寬度除以編碼的寬度，得出寬度比率。 然後，將來源高度除以編碼的高度來得到高度比率。
+要计算此比率，请将源宽度除以编码宽度以获得宽度比率。 然后，将源高度除以编码的高度以获得高度比。
 
-如果產生的比例是整數，表示影片會最佳地調整比例。 如果產生的比率不是整數，則會藉由在顯示器上留下多餘的畫素不自然感來影響視訊品質。 當視訊中含有文字時，此效果最為明顯。
+如果生成的比例是整数，则意味着视频得到最佳缩放。 如果生成的比例不是整数，则会通过在显示器上留下多余的像素伪像来影响视频质量。 当视频包含文本时，这种效果最为明显。
 
-例如，假設您的來源視訊是1920 x 1080。 在下表中，三個已編碼的視訊提供要使用的最佳編碼設定。
+例如，假设源视频为1920 x 1080。 在下表中，三个经过编码的视频提供了要使用的最佳编码设置。
 
-| 視訊型別 | 寬度x高度 | 宽度比例 | 高度比例 |
+| 视频类型 | 宽度x高度 | 宽度比例 | 高度比 |
 |--- |--- |--- |--- |
 | 源 | 1920x1080 | 1 | 1 |
-| 已編碼 | 960 x 540 | 2 | 2 |
-| 已編碼 | 640 x 360 | 3 | 3 |
-| 已編碼 | 480 x 270 | 4 | 4 |
+| 已编码 | 960 x 540 | 2 | 2 |
+| 已编码 | 640 x 360 | 3 | 3 |
+| 已编码 | 480 x 270 | 4 | 4 |
 
-### 編碼的視訊檔案格式 {#encoded-video-file-format}
+### 编码的视频文件格式 {#encoded-video-file-format}
 
-Dynamic Media建議使用MP4 H.264視訊編碼預設集。 由於MP4檔案使用H.264視訊轉碼器，因此可提供高品質的視訊，但採用壓縮檔案大小。
+Dynamic Media建议使用MP4 H.264视频编码预设。 由于MP4文件使用H.264视频编解码器，因此它以压缩文件大小提供高品质视频。
 
-### 在您的帳戶上啟用DASH {#enable-dash}
+### 在您的帐户上启用DASH {#enable-dash}
 
-DASH (Digital Adaptive Streaming over HTTP)是視訊串流的國際標準，被廣泛採用於不同的視訊檢視器中。 當您的帳戶啟用DASH時，您可以選擇使用DASH或HLS進行最適化視訊串流。 或者，您可以在以下情況下選擇兩個選項，並在播放器之間自動切換： **[!UICONTROL 自動]** 在檢視器預設集中選取為播放型別。
+DASH(Digital Adaptive Streaming over HTTP)是视频流的国际标准，被广泛用于各种视频观看者。 在您的帐户上启用DASH后，您可以选择使用DASH或HLS进行自适应视频流。 或者，您可以在以下情况下通过自动在播放器之间切换来选择两者 **[!UICONTROL 自动]** 在查看器预设中选择作为播放类型。
 
-在您的帳戶上啟用DASH的一些主要優點包括：
+在您的帐户上启用DASH的一些主要优势包括：
 
-* 封裝DASH串流視訊，以進行最適化位元速率串流。 此方法可帶來更高的傳遞效率。 最適化串流可確保為客戶提供最佳檢視體驗。
-* 使用Dynamic Media播放器將瀏覽器最佳化的串流在HLS和DASH串流之間切換，以確保最佳的服務品質。 使用Safari瀏覽器時，視訊播放器會自動切換至HLS。
-* 您可以編輯視訊檢視器預設集，以設定您偏好的串流方法（HLS或DASH）。
-* 最佳化的視訊編碼可確保啟用DASH功能時不會使用額外的儲存空間。 系統會為HLS和DASH建立單一視訊編碼集，以最佳化視訊儲存成本。
-* 協助讓客戶更容易存取視訊傳送。
-* 也透過API取得串流URL。
+* 打包用于自适应比特率流的DASH流视频。 这种方法可以提高投放效率。 自适应流媒体可确保为客户提供最佳观看体验。
+* 使用Dynamic Media播放器优化浏览器流会在HLS和DASH流之间切换，以确保最佳服务质量。 使用Safari浏览器时，视频播放器会自动切换到HLS。
+* 您可以通过编辑视频查看器预设来配置首选的流方法（HLS或DASH）。
+* 优化的视频编码确保在启用DASH功能时不会使用额外的存储。 为HLS和DASH创建一组视频编码，以优化视频存储成本。
+* 帮助让您的客户更容易访问视频交付。
+* 也通过API获取流URL。
 
-在您的帳戶上啟用DASH需要兩個步驟：
+在您的帐户中启用DASH需要两个步骤：
 
-* 設定Dynamic Media以使用DASH，讓您自行輕鬆操作。
-* 將Experience Manager6.5設定為使用DASH，這是透過您建立和提交的Adobe客戶支援案例來完成的。
+* 将Dynamic Media配置为使用DASH，以便您自行完成此操作。
+* 将Experience Manager6.5配置为使用DASH，这是通过您创建和提交的Adobe客户支持案例来完成的。
 
-**若要在您的帳戶上啟用DASH：**
+**要在您的帐户上启用DASH，请执行以下操作：**
 
-1. **設定Dynamic Media**  — 在Experience Manager 6.5的Dynamic Media中，導覽至 [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr).
-1. 搜尋 **AEM Assets Dynamic Media影片進階資料流** 功能標幟。
-1. 若要啟用（開啟）虛線，請選取核取方塊。
+1. **配置Dynamic Media**  — 在Experience Manager6.5上的Dynamic Media中，导航到 [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr).
+1. 搜索 **AEM Assets Dynamic Media视频高级流** 功能标记。
+1. 要启用（打开）短划线，请选中复选框。
 1. 选择&#x200B;**[!UICONTROL 保存]**。
-1. **設定Experience Manager6.5** - [使用Admin Console開始建立新的支援案例](https://helpx.adobe.com/cn/enterprise/using/support-for-experience-cloud.html).
-1. 若要建立支援案例，請遵循指示，同時確保您提供下列資訊：
+1. **配置Experience Manager6.5** - [使用Admin Console开始创建新的支持案例](https://helpx.adobe.com/cn/enterprise/using/support-for-experience-cloud.html).
+1. 要创建支持案例，请按照说明操作，同时确保提供以下信息：
 
-   * 主要連絡人姓名、電子郵件、電話。
-   * 您的Dynamic Media帳戶名稱。
-   * 指定您要在Experience Manager6.5上啟用虛線。
+   * 主要联系人姓名、电子邮件、电话。
+   * 您的Dynamic Media帐户的名称。
+   * 指定您希望在Experience Manager6.5上启用短划线。
 
-1. Adobe客戶支援會根據提交請求的順序，將您新增至DASH客戶等候清單。
-1. 當Adobe準備好處理您的請求時，客戶支援會聯絡您以協調並設定DASH啟用的目標日期。
-1. 客戶支援會在完成後通知您。
-1. 建立您的 [視訊檢視器預設集](/help/assets/managing-viewer-presets.md#creating-a-new-viewer-preset) 一如既往。
+1. Adobe客户支持根据提交请求的顺序将您添加到DASH客户等待列表。
+1. 当Adobe准备好处理您的请求时，客户支持将联系您以协调并设置启用DASH的目标日期。
+1. 客户支持团队会在完成后通知您。
+1. 创建您的 [视频查看器预设](/help/assets/managing-viewer-presets.md#creating-a-new-viewer-preset) 和往常一样。
 
-## 檢視視訊報表 {#viewing-video-reports}
+## 查看视频报表 {#viewing-video-reports}
 
 >[!NOTE]
 >
->視訊報表僅適用於執行Dynamic Media — 混合模式時。
+>视频报表仅在运行Dynamic Media — 混合模式时可用。
 
-視訊報表會顯示指定時間內的數個彙總量度，以幫助您監視 *已發佈* 個別和彙總影片如預期般執行。 系統會針對您整個網站的所有已發佈影片，彙總下列排名在前的量度資料：
+视频报表会显示指定时间内的多个聚合量度，以帮助您监控 *已发布* 单个和聚合视频正在按预期执行。 系统会汇总您整个网站中所有已发布视频的以下热门量度数据：
 
 * 视频开始
 * 完成率
-* 視訊平均逗留時間
-* 影片花費的總時間
-* 每次造訪的視訊數
+* 视频平均逗留时间
+* 视频花费的总时间
+* 每次访问的视频数
 
-全部的表格 *已發佈* 也會列出影片，讓您能根據影片開始播放總數，追蹤網站上最常檢視的影片。
+全部的表 *已发布* 此外，还列出了视频，以便您可以根据视频总开始次数来跟踪网站上最常查看的视频。
 
-點選清單中的影片名稱時，會以折線圖的形式顯示影片的「對象保留率（流失）」報表。 此圖表顯示視訊播放期間任何指定時間的檢視次數。 當您播放視訊時，垂直列會與播放器中的時間指示器同步追蹤。 折線圖資料中的下降會指出您的對象因不感興趣而消失的位置。
+点按列表中的视频名称时，会以折线图的形式显示视频的受众维系（流失）报表。 该图表显示在视频播放期间任何给定时间的查看次数。 在播放视频时，垂直条与播放器中的时间指示器同步跟踪。 折线图数据中的下降指示受众从无兴趣到何时消失。
 
-如果影片是在Adobe Experience Manager Dynamic Media之外編碼，則無法使用表格中的對象保留率（流失）圖表和播放百分比資料。
+如果视频是在Adobe Experience Manager Dynamic Media之外进行编码，则受众维系（流失）图表和表中的播放百分比数据将不可用。
 
-另請參閱 [設定Dynamic MediaCloud Services](/help/assets/config-dynamic.md).
+另请参阅 [配置Dynamic MediaCloud Services](/help/assets/config-dynamic.md).
 
 >[!NOTE]
 >
->追蹤和報告資料完全以Dynamic Media自己的視訊播放器及相關聯的視訊播放器預設集為基礎。 因此，您無法追蹤和報告透過其他視訊播放器播放的視訊。
+>跟踪和报告数据完全基于Dynamic Media自己的视频播放器及相关视频播放器预设的使用。 因此，您无法跟踪和报告通过其他视频播放器播放的视频。
 
-依預設，第一次輸入「視訊報表」時，報表會顯示從目前月份的第一天開始，到目前月份的日期結束的視訊資料。 不過，您可以指定自己的日期範圍來覆寫預設日期範圍。 下次輸入「視訊報表」時，系統會使用您指定的日期範圍。
+默认情况下，首次输入视频报表时，该报表显示从当前月份的第一天开始到当前月份的日期结束的视频数据。 但是，您可以通过指定自己的日期范围来覆盖默认日期范围。 下次输入视频报表时，将使用指定的日期范围。
 
-為了讓視訊報表正常運作，設定Dynamic MediaCloud Services時會自動建立報表套裝ID。 同時，報表套裝ID會推送至發佈伺服器，以便您在預覽資產時可用於複製URL功能。 不過，此功能需要發佈伺服器已經設定。 如果發佈伺服器未設定，您仍可以發佈以檢視視訊報表。 不過，您必須返回Dynamic Media雲端設定並點選 **[!UICONTROL 確定]**.
+为了使视频报表正常工作，会在配置Dynamic MediaCloud Services时自动创建报表包ID。 同时，报表包ID会推送到发布服务器，以便在您预览资产时可用于复制URL功能。 但是，此功能要求已设置发布服务器。 如果未设置发布服务器，您仍可以发布以查看视频报表。 但是，您必须返回到Dynamic Media云配置并点按 **[!UICONTROL 确定]**.
 
-**若要檢視視訊報表：**
+**要查看视频报表，请执行以下操作：**
 
-1. 在Experience Manager的左上角，點選Experience Manager標誌，然後在左側導軌中，點選 **[!UICONTROL 工具]** （槌子圖示） > **[!UICONTROL 資產]** > **[!UICONTROL 視訊報表]**.
-1. 在「視訊報表」頁面上，執行下列任一項作業：
+1. 点按Experience Manager左上角的Experience Manager徽标，然后点按左边栏中的徽标 **[!UICONTROL 工具]** （锤子图标）> **[!UICONTROL 资产]** > **[!UICONTROL 视频报表]**.
+1. 在“视频报表”页面上，执行以下操作之一：
 
-   * 在右上角附近，點選 **重新整理視訊報表** 圖示。
-只有在報表的結束日期為當天時，才使用「重新整理」。 這麼做可確保您看到自上次執行報表後發生的視訊追蹤。
+   * 在右上角附近，点按 **刷新视频报告** 图标。
+仅当报表的结束日期为当天时，才使用刷新。 这样做可确保您查看自上次运行报表以来发生的视频跟踪。
 
-   * 在右上角附近，點選 **日期選擇器** 圖示。
-指定您要視訊資料的開始和結束日期範圍，然後點選 **[!UICONTROL 執行報告]**.
+   * 在右上角附近，点按 **日期选取器** 图标。
+指定要获取其视频数据的开始和结束日期范围，然后点按 **[!UICONTROL 运行报告]**.
 
-   「排名在前的量度」群組方塊可識別所有量度的各種彙總測量 *已發佈* 您網站上的影片。
+   “排名最前的量度”组框标识所有量度的各种聚合量度 *已发布* 您网站上的视频。
 
-1. 在列出最熱門發佈影片的表格中，點選影片名稱以播放影片，也可以檢視影片的對象保留率（流失）報表。
+1. 在列出最热门发布的视频的表中，点按视频名称以播放视频，还可以查看视频的受众维系（流失）报表。
 
-### 根據您使用Dynamic Media HTML5 Viewer SDK建立的視訊檢視器檢視視訊報表 {#viewing-video-reports-based-on-a-video-viewer-that-you-created-using-the-scene-hmtl-viewer-sdk}
+### 查看基于您使用Dynamic Media HTML5查看器SDK创建的视频查看器的视频报表 {#viewing-video-reports-based-on-a-video-viewer-that-you-created-using-the-scene-hmtl-viewer-sdk}
 
-如果您使用Dynamic Media提供的現成視訊檢視器，或您根據現成視訊檢視器建立自訂檢視器預設集，則不需要進行其他步驟即可檢視視訊報表。 不過，如果您已根據HTML5 Viewer SDK API建立自己的視訊檢視器，則請使用以下步驟來確保視訊檢視器會將追蹤事件傳送至Dynamic Media視訊報表。
+如果您使用Dynamic Media提供的开箱即用视频查看器，或者您基于开箱即用视频查看器创建了自定义查看器预设，则无需执行其他步骤即可查看视频报表。 但是，如果您已根据HTML5 Viewer SDK API创建自己的视频查看器，则请使用以下步骤确保视频查看器向Dynamic Media视频报表发送跟踪事件。
 
-使用 [AdobeDynamic Media檢視器參考指南](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources.html) 和 [HTML5檢視器SDK API](https://s7d1.scene7.com/s7sdk/3.10/docs/jsdoc/index.html) 以建立您自己的視訊檢視器。
+使用 [AdobeDynamic Media查看器参考指南](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources.html) 和 [HTML5查看器SDK API](https://s7d1.scene7.com/s7sdk/3.10/docs/jsdoc/index.html) 创建自己的视频查看器。
 
-**若要根據您使用Dynamic Media HTML5 Viewer SDK建立的視訊檢視器檢視視訊報表：**
+**要查看基于您使用Dynamic Media HTML5查看器SDK创建的视频查看器的视频报表，请执行以下操作：**
 
-1. 導覽至任何已發佈的視訊資產。
+1. 导航到任何已发布的视频资产。
 1. 在资产页面的左上角附近，从下拉列表中选择&#x200B;**[!UICONTROL 查看器]**。
-1. 選取任何視訊檢視器預設集，並複製內嵌程式碼。
-1. 在內嵌程式碼中，找到包含以下內容的行：
+1. 选择任意视频查看器预设并复制嵌入代码。
+1. 在嵌入代码中，找到包含以下内容的行：
 
    `videoViewer.setParam("config2", "<value>");`
 
-   此 `config2` 引數會在HTML5檢視器中啟用追蹤。 它也是公司專屬的預設集，其中包含視訊報表的設定資訊，以及客戶專屬的Adobe Analytics設定。
+   此 `config2` 参数可在HTML5查看器中启用跟踪。 它还是一个特定于公司的预设，其中包含用于视频报表的配置信息，以及用于特定于客户的Adobe Analytics配置的信息。
 
    config2 参数的正确值可在&#x200B;**[!UICONTROL 嵌入代码]**&#x200B;和复制 **[!UICONTROL URL]** 函数中找到。在复制 **[!UICONTROL URL]** 命令的 URL 中，要查找的参数为 `&config2=<value>`。该值几乎总是 `companypreset`，但在某些情况下，也可以是 `companypreset-1`、`companypreset-2` 等。
 
-1. 在您的自訂視訊檢視器程式碼中，執行下列動作，將AppMeasurementBridge .jsp新增至檢視器頁面：
+1. 在自定义视频查看器代码中，通过执行以下操作将AppMeasurementBridge .jsp添加到查看器页面：
 
-   * 首先，判斷您是否需要 `&preset` 引數。
+   * 首先，确定您是否需要 `&preset` 参数。
 
-      如果 `config2` 引數為 `companypreset`，您可以 *not* 需要 `&preset=parameter`.
+      如果 `config2` 参数为 `companypreset`，您需要 *非* 需要 `&preset=parameter`.
 
-      若 `config2` 若為其他任何專案，請將預設集引數設定為與 `config2` 引數。 例如，如果 `config2=companypreset-2`，新增 `&param2=companypreset-2` 至AppMeasurementBridge.jsp URL。
+      如果 `config2` 是其他内容，请将预设参数设置为与 `config2` 参数。 例如，如果 `config2=companypreset-2`，添加 `&param2=companypreset-2` 到AppMeasurementBridge.jsp URL。
 
-   * 接著，新增AppMeasurementBridge.jsp指令碼：
+   * 然后，添加AppMeasurementBridge.jsp脚本：
 
       `<script language="javascript" type="text/javascript" src="https://s7d1.scene7.com/s7viewers/AppMeasurementBridge.jsp?company=robindallas&preset=companypreset-2"></script>`
 
-1. 執行下列操作建立TrackingManager元件：
+1. 通过执行以下操作创建TrackingManager组件：
 
-   * 在您呼叫之後 `s7sdk.Util.init();`，新增下列內容以建立TrackingManager例項來追蹤事件：
+   * 在您调用之后 `s7sdk.Util.init();`，通过添加以下内容创建TrackingManager实例以跟踪事件：
 
       `var trackingManager = new s7sdk.TrackingManager();`
 
-   * 執行下列操作將元件連結至TrackingManager：
+   * 通过执行以下操作将组件连接到TrackingManager：
 
-      在 `s7sdk.Event.SDK_READY` 事件處理常式，將您要追蹤的元件附加至TrackingManager。
+      在 `s7sdk.Event.SDK_READY` 事件处理程序，将您要跟踪的组件附加到TrackingManager。
 
-      例如，如果元件為 `videoPlayer`，新增
+      例如，如果组件为 `videoPlayer`，添加
 
       `trackingManager.attach(videoPlayer);`
 
-      將元件附加至trackingManager。 若要追蹤頁面上的多個檢視器，請使用多個追蹤管理員元件。
+      以将组件附加到trackingManager。 要跟踪页面上的多个查看器，请使用多个跟踪管理器组件。
 
-   * 新增下列內容以建立AppMeasurementBridge物件：
+   * 通过添加以下内容创建AppMeasurementBridge对象：
 
       ```
       var appMeasurementBridge = new AppMeasurementBridge(); appMeasurementBridge.setVideoPlayer(videoPlayer);
       ```
 
-   * 新增下列專案以新增追蹤函式：
+   * 通过添加以下内容来添加跟踪函数：
 
       ```
       trackingManager.setCallback(appMeasurementBridge.track, 
        appMeasurementBridge);
       ```
-   appMeasurementBridge物件有內建的追蹤函式。 不過，您可以自行提供支援，以支援多個追蹤系統或其他功能。
+   appMeasurementBridge对象具有内置跟踪函数。 但是，您可以自行提供以支持多个跟踪系统或其他功能。
 
 <!--    For more information, see *Using the TrackingManager Component* in the *Scene7 HTML5 Viewer SDK User Guide* available for download from [Adobe Developer Connection](https://help.adobe.com/en_US/scene7/using/WSef8d5860223939e2-43dedf7012b792fc1d5-8000.html). -->
 
-## 新增隱藏式字幕或字幕至視訊 {#adding-captions-to-video}
+## 向视频添加隐藏式字幕或字幕 {#adding-captions-to-video}
 
-您可以將隱藏式字幕新增至單一視訊或「最適化視訊集」，將視訊觸及全球市場。 藉由新增隱藏式字幕，您無需對音訊進行配音，或需要使用母語者重新錄製每種不同語言的音訊。 視訊是以其錄製語言播放。 出現外文字幕，讓不同語言的人仍可瞭解音訊部分。
+通过将隐藏式字幕添加到单个视频或自适应视频集，您可以将视频扩展到全球市场。 通过添加隐藏式字幕，您无需对音频进行混音，也无需使用母语人士重新录制每种语言的音频。 视频以所录制的语言播放。 出现外语字幕是为了让不同语言的人仍然能够理解音频部分。
 
-隱藏式字幕還能讓耳聾或聽力缺佳的人更容易使用。
+隐藏式字幕还可以让耳聋或听力缺佳的用户更容易使用。
 
 >[!NOTE]
 >
->您使用的視訊播放器必須支援顯示註解。
+>您使用的视频播放器必须支持显示字幕。
 
-另請參閱 [Dynamic Media中的協助工具](/help/assets/accessibility-dm.md).
+另请参阅 [Dynamic Media中的辅助功能](/help/assets/accessibility-dm.md).
 
-Dynamic Media會將註解檔案轉換為JSON （JavaScript物件標籤法）格式。 此轉換表示您可以將JSON文字內嵌至網頁，做為隱藏但完整的視訊轉錄。 搜尋引擎接著可以編目和索引內容，讓影片更容易被發現，並為客戶提供更多關於影片內容的詳細資訊。
+Dynamic Media将字幕文件转换为JSON（JavaScript对象表示法）格式。 此转换意味着，您可以将JSON文本作为隐藏但完整的视频转录内容嵌入到网页中。 然后，搜索引擎可以对内容进行爬网和索引，以使视频更容易被发现，并为客户提供有关视频内容的更多详细信息。
 
-另請參閱 [提供靜態（非影像）內容](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/c-serving-static-nonimage-contents.html#image-serving-api) 在 *Dynamic Media影像提供與轉譯API說明* 以取得在URL中使用JSON函式的詳細資訊。
+参见 [提供静态（非图像）内容](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/c-serving-static-nonimage-contents.html#image-serving-api) 在 *Dynamic Media图像服务和渲染API帮助* 有关在URL中使用JSON函数的更多信息。
 
-**若要在視訊中新增註解或字幕：**
+**要在视频中添加字幕或字幕，请执行以下操作：**
 
-1. 使用協力廠商應用程式或服務來建立您的視訊標題/字幕檔案。
+1. 使用第三方应用程序或服务创建视频字幕/字幕文件。
 
-   確保您建立的檔案遵循WebVTT （網頁視訊文字追蹤）標準。 字幕副檔名為.vtt。 您可以進一步瞭解WebVTT字幕標準。
+   确保您创建的文件遵循WebVTT（Web视频文本跟踪）标准。 字幕文件扩展名为.vtt。 您可以了解有关WebVTT字幕标准的更多信息。
 
-   另請參閱 [WebVTT：網頁視訊文字追蹤格式](https://w3c.github.io/webvtt/).
+   参见 [WebVTT： Web视频字幕格式](https://w3c.github.io/webvtt/).
 
-   您可以在Dynamic Media外部使用免費和優質的工具和服務來撰寫註解/字幕檔案。 例如，若要建立不含樣式的簡單視訊註解檔案，您可以使用下列免費線上註解製作與編輯工具：
+   在Dynamic Media之外，您可以使用免费和高级的工具和服务来创作题注/字幕文件。 例如，要创建不带样式的简单视频字幕文件，您可以使用以下免费的在线字幕创作和编辑工具：
 
-   [WebVTT註解製作器](https://testdrive-archive.azurewebsites.net/Graphics/CaptionMaker/Default.html)
+   [WebVTT题注生成器](https://testdrive-archive.azurewebsites.net/Graphics/CaptionMaker/Default.html)
 
-   為達到最佳效果，請在Internet Explorer 9或更新版本、Google Chrome或Safari中使用工具。
+   为了获得最佳结果，请在Internet Explorer 9或更高版本、Google Chrome或Safari中使用该工具。
 
-   在工具中，在 **[!UICONTROL 輸入視訊檔案的URL]** 欄位，貼上視訊檔案的複製URL，然後按一下 **[!UICONTROL 載入]**. 另請參閱 [取得資產的URL](/help/assets/linking-urls-to-yourwebapplication.md#obtaining-a-url-for-an-asset) 以取得視訊檔案本身的URL，然後您可將它貼入 **[!UICONTROL 輸入視訊檔案欄位的URL]**. 随后，Internet Explorer、Chrome 或 Safari 可以本机播放视频。
+   在工具中， **[!UICONTROL 输入视频文件的URL]** 字段中，粘贴复制的视频文件URL，然后单击 **[!UICONTROL 加载]**. 参见 [获取资产的URL](/help/assets/linking-urls-to-yourwebapplication.md#obtaining-a-url-for-an-asset) 以获取视频文件本身的URL，然后您可以将其粘贴到 **[!UICONTROL 输入视频文件的URL字段]**. 随后，Internet Explorer、Chrome 或 Safari 可以本机播放视频。
 
-   現在請依照網站熒幕上的指示，製作並儲存您的WebVTT檔案。 完成後，複製註解檔案內容並將其貼到純文字編輯器中，然後儲存 `.vtt` 副檔名。
+   现在，按照站点中的屏幕说明创作并保存WebVTT文件。 完成后，复制字幕文件内容并将其粘贴到纯文本编辑器中，然后保存 `.vtt` 文件扩展名。
 
    >[!NOTE]
    >
-   >為了在全球支援多種語言的視訊字幕，WebVTT標準要求您建立個別的.vtt檔案，並針對您想要支援的每種語言呼叫。
+   >为了在全球范围内支持多种语言的视频字幕，WebVTT标准要求您创建单独的.vtt文件，并为要支持的每种语言调用。
 
-   通常，您會想要將註解VTT檔案命名為與視訊檔案相同的名稱，然後附加語言地區設定，例如 — EN、-FR或 — DE。 如此一來，便可協助您使用現有的網頁內容管理系統，自動化視訊URL的產生。
+   通常，您希望将字幕VTT文件的名称与视频文件相同，并将其附加到语言区域设置，如 — EN、-FR或 — DE。 这样，它可以帮助您使用现有Web内容管理系统自动生成视频URL。
 
-1. 在Experience Manager中，將您的WebVTT插圖示題檔案上傳至DAM。
-1. 導覽至 *已發佈* 您想要與您上傳的註解檔案相關聯的視訊資產。
+1. 在Experience Manager中，将您的WebVTT字幕文件上传到DAM。
+1. 导航到 *已发布* 要与上传的字幕文件关联的视频资源。
 
    请注意，只有在首次&#x200B;*发布*&#x200B;资产&#x200B;*后*，才可复制 URL。
 
-   另請參閱 [發佈資產](/help/assets/publishing-dynamicmedia-assets.md).
+   参见 [发布资产](/help/assets/publishing-dynamicmedia-assets.md).
 
 1. 执行下列操作之一：
 
-   * 若要取得快顯視訊檢視器體驗，請點選 **[!UICONTROL URL]**. 在URL對話方塊中，選取URL並複製到剪貼簿，然後將URL通過簡單文字編輯器。 使用以下語法附加複製的視訊URL：
+   * 要获得弹出式视频查看器体验，请点按 **[!UICONTROL URL]**. 在URL对话框中，选择URL并将其复制到剪贴板，然后将URL粘贴到简单的文本编辑器中。 使用以下语法附加复制的视频URL：
 
       `&caption=<server_path>/is/content/<path_to_caption.vtt_file,1>`
 
-      請注意 `,1` 註解路徑結尾處。 緊接在 `.vtt` 路徑中的副檔名，您可以選擇啟用（開啟）或停用（關閉）視訊播放器列上的隱藏式字幕按鈕，方法是設定為 `,1` 或 `,0`（分別）。
+      请注意 `,1` 标题路径末尾。 紧跟在 `.vtt` 文件扩展名在路径中，您可以选择启用（打开）或禁用（关闭）视频播放器栏上的隐藏式字幕按钮，方法是将 `,1` 或 `,0`，则不会显示任何内容。
 
-   * 若要取得內嵌視訊檢視器體驗，請點選 **[!UICONTROL 內嵌程式碼]**. 在「內嵌程式碼」對話方塊中，選取「 」，並將內嵌程式碼複製到剪貼簿，然後將程式碼貼到簡單的文字編輯器中。 使用下列語法附加複製的內嵌程式碼：
+   * 要获得嵌入式视频查看器体验，请点按 **[!UICONTROL 嵌入代码]**. 在“嵌入代码”对话框中，选择，然后将嵌入代码复制到剪贴板，然后将该代码粘贴到简单的文本编辑器中。 使用以下语法附加复制的嵌入代码：
 
       `videoViewer.setParam("caption","<path_to_caption.vtt_file,1>");`
 
-      請注意 `,1` 註解路徑結尾處。 緊接在 `.vtt` 路徑中的副檔名，您可以選擇啟用（開啟）或停用（關閉）視訊播放器列上的隱藏式字幕按鈕，方法是設定為 `,1` 或 `,0`（分別）。
+      请注意 `,1` 标题路径末尾。 紧跟在 `.vtt` 文件扩展名在路径中，您可以选择启用（打开）或禁用（关闭）视频播放器栏上的隐藏式字幕按钮，方法是将 `,1` 或 `,0`，则不会显示任何内容。
 
-## 將章節標籤新增至視訊 {#adding-chapter-markers-to-video}
+## 向视频添加章节标记 {#adding-chapter-markers-to-video}
 
-您可以將章節標籤新增至單一視訊或「最適化視訊集」，讓長格式視訊更易於觀看和導覽。 當使用者播放視訊時，他們可以按一下視訊時間軸上的章節標籤（也稱為視訊筆畫壓感器）以輕鬆導覽至其興趣點。 或者，他們可以立即跳至新內容、示範和教學課程。
+您可以通过将章节标记添加到单个视频或自适应视频集，使长格式视频更容易观看和导航。 当用户播放视频时，他们可以单击视频时间轴上的章节标记（也称为视频洗刷器）以轻松导航到其目标点。 或者，他们可以立即跳转到新内容、演示和教程。
 
 >[!NOTE]
 >
->使用的視訊播放器必須支援使用章節標籤。 Dynamic Media影片播放器不支援章節標籤，但使用協力廠商影片播放器可能不支援。
+>使用的视频播放器必须支持使用章节标记。 Dynamic Media视频播放器支持章节标记，但使用第三方视频播放器可能不支持。
 
-如有需要，您可以建立自己的自訂視訊檢視器，並將其品牌化為章節，而不使用視訊檢視器預設集。 如需使用章節導覽建立您自己的HTML5檢視器的指示，請在AdobeHTML5檢視器SDK API中，參考類別下的「使用修飾元自訂行為」標題 `s7sdk.video.VideoPlayer` 和 `s7sdk.video.VideoScrubber`. 請參閱 [HTML5檢視器SDK API](https://s7d1.scene7.com/s7sdk/3.10/docs/jsdoc/index.html) 說明檔案。
+如果需要，您可以创建自己的自定义视频查看器，并将其品牌化为章节，而不是使用视频查看器预设。 有关通过章节导航创建您自己的HTML5查看器的说明，请在AdobeHTML5查看器SDK API中，引用类下的“使用修饰符自定义行为”标题 `s7sdk.video.VideoPlayer` 和 `s7sdk.video.VideoScrubber`. 请参阅 [HTML5查看器SDK API](https://s7d1.scene7.com/s7sdk/3.10/docs/jsdoc/index.html) 文档。
 
 <!-- If desired, you can create and brand your own custom video viewer with chapters instead of using a video viewer preset. For instructions on creating your own HTML5 viewer with chapter navigation, in the Adobe Scene7 Viewer SDK for HTML5 guide, reference the heading "Customizing Behavior Using Modifiers" under the classes `s7sdk.video.VideoPlayer` and `s7sdk.video.VideoScrubber`. The Adobe Scene7 Viewer SDK is available as a download from [Adobe Developer Connection](https://help.adobe.com/en_US/scene7/using/WSef8d5860223939e2-43dedf7012b792fc1d5-8000.html). -->
 
-您建立視訊章節清單的方式與建立註解的方式大致相同。 也就是說，您會建立WebVTT檔案。 但是請注意，此檔案必須與您也在使用的任何WebVTT註解檔案分開；您無法將註解和章節合併到一個WebVTT檔案中。
+您可以像创建字幕一样为视频创建章节列表。 即，创建一个WebVTT文件。 但请注意，此文件必须与您也在使用的任何WebVTT字幕文件分开；不能将字幕和章节合并到一个WebVTT文件中。
 
-您可以使用以下範例作為使用章節導覽來建立WebVTT檔案的格式範例：
+您可以使用以下示例作为使用章节导航创建WebVTT文件时所使用的格式示例：
 
-### 具有視訊章節導覽的WebVTT檔案 {#webvtt-file-with-video-chapter-navigation}
+### 包含视频章节导航的WebVTT文件 {#webvtt-file-with-video-chapter-navigation}
 
 ```xml
 WEBVTT
@@ -666,184 +666,184 @@ Chapter 4
 Cost-efficient access to rapidly evolving technology.
 ```
 
-在上述範例中， `Chapter 1` 是提示識別碼，且為選用。 的提示時間 `00:00:000 --> 01:04:364` 指定章節的開始時間和結束時間，單位為 `00:00:000` 格式。 最後三位數為毫秒，可保留為 `000`，若建議使用。 的章節標題 `The bicycle store behind it all` 是章節內容的實際說明。 當使用者將其滑鼠指標停留在視訊時間軸中的視覺提示點上時，提示識別碼、開始提示時間和章節標題都會顯示在視訊播放器快顯視窗中。
+在上面的示例中， `Chapter 1` 是提示标识符，并且是可选的。 的提示时间 `00:00:000 --> 01:04:364` 指定章节的开始时间和结束时间，单位为 `00:00:000` 格式。 最后三位数是毫秒，可保留为 `000`（如果首选）。 的章节标题 `The bicycle store behind it all` 是章节内容的实际描述。 当用户将鼠标指针悬停在视频时间轴中的可视提示点上时，提示标识符、开始提示时间和章节标题都会显示在视频播放器弹出窗口中。
 
-由於您使用的是HTML5視訊檢視器，請確定您建立的章節檔案遵循WebVTT （網頁視訊文字追蹤）標準。 章節副檔名為 `.vtt`. 您可以進一步瞭解WebVTT字幕標準。
+由于您使用的是HTML5视频查看器，因此请确保您创建的章节文件遵循WebVTT（Web视频文本跟踪）标准。 章节文件扩展名为 `.vtt`. 您可以了解有关WebVTT字幕标准的更多信息。
 
-另請參閱 [WebVTT：網頁視訊文字追蹤格式](https://w3c.github.io/webvtt/)
+参见 [WebVTT： Web视频字幕格式](https://w3c.github.io/webvtt/)
 
-**若要新增視訊章節導覽：**
+**要添加视频章节导航，请执行以下操作：**
 
-1. 儲存 `.vtt` UTF8編碼的檔案，以避免章節標題文字中的字元轉譯發生問題。
+1. 保存 `.vtt` 文件，以避免章节标题文本中的字符演绎版出现问题。
 
-   通常，您會想要將章節VTT檔案命名為與視訊檔案相同的名稱，並附加章節。 如此一來，便可協助您使用現有的網頁內容管理系統，自動化視訊URL的產生。
-1. 在Experience Manager中，上傳您的WebVTT章節檔案。
+   通常，您希望将章节VTT文件的名称与视频文件相同，并附加章节。 这样，它可以帮助您使用现有Web内容管理系统自动生成视频URL。
+1. 在Experience Manager中，上传WebVTT章节文件。
 
-   另請參閱 [正在上傳資產](/help/assets/manage-assets.md#uploading-assets).
+   参见 [正在上传资产](/help/assets/manage-assets.md#uploading-assets).
 
 1. 执行下列操作之一：
 
    <table>
      <tbody>
       <tr>
-       <td>適用於快顯視訊檢視器體驗</td>
+       <td>用于弹出视频查看器体验</td>
        <td>
        <ol>
-       <li>導覽至 <i>已發佈 </i>您想要與您上傳的章節檔案建立關聯的視訊資產。 请注意，只有在首次<i>发布</i>资产<i>后</i>，才可复制 URL。另請參閱 <a href="/help/assets/publishing-dynamicmedia-assets.md">正在發佈資產。</a></li>
-       <li>從下拉式功能表，然後按一下或點選 <strong>檢視者</strong>.</li>
-       <li>在左側欄中，點選或按一下視訊檢視器預設集名稱。 視訊的預覽會在另一個頁面中開啟。</li>
-       <li>在左側欄的底部，按一下 <strong>URL</strong>.</li>
-       <li>在URL對話方塊中，選取URL並複製到剪貼簿，然後將URL通過至簡單的文字編輯器。</li>
-       <li>使用以下語法附加複製的視訊URL，以便將其與複製的章節檔案URL建立關聯：<br /> <br /> <code>&navigation=<<i>full_copied_URL_path_to_chapter_file</i>.vtt></code><br /> </li>
+       <li>导航到 <i>已发布 </i>要与上载的章节文件关联的视频资产。 请注意，只有在首次<i>发布</i>资产<i>后</i>，才可复制 URL。参见 <a href="/help/assets/publishing-dynamicmedia-assets.md">正在发布资产。</a></li>
+       <li>从下拉菜单中，单击或点按 <strong>查看器</strong>.</li>
+       <li>在左边栏中，点按或单击视频查看器预设名称。 视频预览在单独的页面中打开。</li>
+       <li>在左边栏的底部，单击 <strong>URL</strong>.</li>
+       <li>在URL对话框中，选择URL并将其复制到剪贴板，然后将URL粘贴到简单的文本编辑器中。</li>
+       <li>使用以下语法附加复制的视频的URL，以便将其与复制的URL关联到章节文件：<br /> <br /> <code>&navigation=<<i>full_copied_URL_path_to_chapter_file</i>.vtt></code><br /> </li>
        </ol> </td>
       </tr>
       <tr>
-       <td>適用於內嵌視訊檢視器體驗<br /> </td>
+       <td>用于嵌入式视频查看器体验<br /> </td>
        <td>
        <ol>
-       <li>導覽至 <i>已發佈 </i>您想要與您上傳的章節檔案建立關聯的視訊資產。 请注意，只有在首次<i>发布</i>资产<i>后</i>，才可复制 URL。另請參閱 <a href="/help/assets/publishing-dynamicmedia-assets.md">正在發佈資產。</a></li>
-       <li>從下拉式功能表，然後按一下或點選 <strong>檢視者</strong>.</li>
-       <li>在左側欄中，點選或按一下視訊檢視器預設集名稱。 視訊的預覽會在另一個頁面中開啟。</li>
-       <li>在左側欄的底部，按一下 <strong>內嵌</strong>.</li>
-       <li>在「內嵌程式碼」對話方塊中，選取「 」，並將整個程式碼複製到剪貼簿，然後貼到簡單的文字編輯器中。</li>
-       <li>使用以下語法附加視訊的內嵌程式碼，以便將其與複製的URL關聯至章節檔案：<br /> <br /> <code>videoViewer.setParam("navigation","&lt;<i>full_copied_URL_path_to_chapter_file</i>.vtt&gt;"</code></li>
+       <li>导航到 <i>已发布 </i>要与上载的章节文件关联的视频资产。 请注意，只有在首次<i>发布</i>资产<i>后</i>，才可复制 URL。参见 <a href="/help/assets/publishing-dynamicmedia-assets.md">正在发布资产。</a></li>
+       <li>从下拉菜单中，单击或点按 <strong>查看器</strong>.</li>
+       <li>在左边栏中，点按或单击视频查看器预设名称。 视频预览在单独的页面中打开。</li>
+       <li>在左边栏的底部，单击 <strong>嵌入</strong>.</li>
+       <li>在“嵌入代码”对话框中，选择并将整个代码复制到剪贴板，然后将其粘贴到简单的文本编辑器中。</li>
+       <li>使用以下语法附加视频的嵌入代码，以便将其与复制的URL关联到章节文件：<br /> <br /> <code>videoViewer.setParam("navigation","&lt;<i>full_copied_URL_path_to_chapter_file</i>.vtt&gt;"</code></li>
        </ol> </td>
       </tr>
      </tbody>
    </table>
 
-## 關於Dynamic Media - Scene7模式中的視訊縮圖 {#about-video-thumbnails-in-dynamic-media-scene-mode}
+## 关于Dynamic Media - Scene7模式中的视频缩略图 {#about-video-thumbnails-in-dynamic-media-scene-mode}
 
-視訊縮圖是視訊影格的縮減版本，或是向客戶表示視訊的影像資產。 縮圖可鼓勵客戶選取影片。
+视频缩略图是视频帧的缩减版本，或者向客户表示视频的图像资产。 缩略图用于鼓励客户选择视频。
 
-Experience Manager中的所有視訊都必須有關聯的縮圖；您必須取代縮圖，才能刪除縮圖。 根據預設，上傳視訊至Experience Manager時，會使用第一個影格作為縮圖。 不過，例如，您可以自訂縮圖以用於品牌或視覺搜尋。 自訂視訊縮圖時，您可以播放視訊並在要使用的影格上暫停。 或者，您可以選取已上傳的影像資產，然後 *已發佈* （在您的數位資產管理器中）。
+Experience Manager中的所有视频都必须有关联的缩略图；如果不替换缩略图，则无法删除缩略图。 默认情况下，将视频上传到Experience Manager时，会使用第一帧作为缩略图。 但是，您可以自定义缩略图，例如，用于品牌推广或视觉搜索目的。 自定义视频缩略图时，可以播放视频并在要使用的帧上暂停。 或者，您可以选择已上传的图像资产，并且 *已发布* 在您的数字资产管理器中。
 
-您從視訊中選擇的自訂視訊縮圖影像不會擷取並儲存在DAM中，作為獨立且不同的資產。 不過，您從現有影像資產中選取的自訂視訊縮圖會儲存至JCR。 選取資產的路徑會儲存在視訊資產的節點下，如下列範例路徑所示：
+您从视频中选择的自定义视频缩略图图像不会提取并保存在DAM中，作为单独的独特资产。 但是，您从现有图像资源中选择的自定义视频缩略图会保存到JCR中。 所选资源的路径将存储在视频资源的节点下，如以下示例路径所示：
 
 `/content/dam/*<folder_name*>/<*video_name*>/jcr:content/manualThumbnail`
 
-只有在您將視訊設定檔套用至視訊所在的資料夾後，才能使用自訂視訊縮圖的功能。
+自定义视频缩略图的功能仅在您将视频配置文件应用到视频所在的文件夹之后才可用。
 
-另請參閱 [關於Dynamic Media — 混合模式中的視訊縮圖](#about-video-thumbnails-in-dynamic-media-hybrid-mode).
+另请参阅 [关于Dynamic Media — 混合模式中的视频缩略图](#about-video-thumbnails-in-dynamic-media-hybrid-mode).
 
-### 新增自訂視訊縮圖 {#adding-a-custom-video-thumbnail}
+### 添加自定义视频缩略图 {#adding-a-custom-video-thumbnail}
 
-這些步驟僅適用於以「Dynamicmedia_Scene7」模式執行的Dynamic Media。
+这些步骤仅适用于在“Dynamicmedia_Scene7”模式下运行的Dynamic Media。
 
-**若要新增自訂視訊縮圖：**
+**要添加自定义视频缩略图，请执行以下操作：**
 
-1. 請確定您已完成下列操作：
+1. 确保您已完成以下操作：
 
-   * 為您的視訊資產建立資料夾。
-   * [將視訊設定檔套用至資料夾](/help/assets/video-profiles.md#applying-a-video-profile-to-folders).
+   * 已为您的视频资产创建文件夹。
+   * [将视频配置文件应用到文件夹](/help/assets/video-profiles.md#applying-a-video-profile-to-folders).
 
-   * [已將您的視訊上傳至資料夾](/help/assets/managing-video-assets.md#upload-and-preview-video-assets).
+   * [已将您的视频上传到文件夹](/help/assets/managing-video-assets.md#upload-and-preview-video-assets).
 
-1. 導覽至您要變更其縮圖影像的上傳視訊資產。
-1. 在資產選擇模式中，從 **[!UICONTROL 清單檢視]** 或 **[!UICONTROL 卡片檢視]**，點選視訊資產。
-1. 在工具列上，點選 **[!UICONTROL 屬性]** 圖示（內有「i」的圓形）。
-1. 在視訊的「屬性」頁面上，點選 **[!UICONTROL 變更縮圖]**.
-1. 在「變更縮圖」頁面上，執行下列任一項作業：
+1. 导航到要更改其缩略图图像的已上传视频资产。
+1. 在资源选择模式下，可以从 **[!UICONTROL 列表视图]** 或 **[!UICONTROL 卡片视图]**，点按视频资产。
+1. 在工具栏上，点按 **[!UICONTROL 属性]** 图标（一个圆圈，内有“i”）。
+1. 在视频的“属性”页面上，点按 **[!UICONTROL 更改缩略图]**.
+1. 在“更改缩略图”页面上，执行下列操作之一：
 
-   * 若要使用視訊中的影格作為新縮圖：
+   * 要将视频中的帧用作新缩略图，请执行以下操作：
 
-      * 在工具列上，點選 **[!UICONTROL 從視訊選取影格]**.
-      * 點選「播放」按鈕，然後點選「暫停」按鈕，在您要擷取為視訊新縮圖的影格上點選。
-   * 若要使用影像資產作為新縮圖：
+      * 在工具栏上，点按 **[!UICONTROL 从视频中选择帧]**.
+      * 点按“播放”按钮，然后点按要捕获为视频新缩略图的帧上的“暂停”按钮。
+   * 要将图像资源用作新缩略图，请执行以下操作：
 
-      * 在工具列上，點選 **[!UICONTROL 從「資產」選取縮圖]**.
-      * 點選 **[!UICONTROL 選取縮圖]**.
-      * 導覽至您想要使用的先前上傳和發佈的影像資產。 資產會自動調整大小，以做為視訊的縮圖影像。
-      * 選取影像資產，然後點選 **[!UICONTROL 選取]**.
+      * 在工具栏上，点按 **[!UICONTROL 从资源中选择缩略图]**.
+      * 点按 **[!UICONTROL 选择缩略图]**.
+      * 导航到您想要使用的之前上传和发布的图像资产。 资源会自动调整大小以用作视频的缩略图。
+      * 选择图像资源，然后点按 **[!UICONTROL 选择]**.
 
 
-1. 在「變更縮圖」頁面上，點選 **[!UICONTROL 儲存變更]**.
-1. 在影片的「屬性」頁面右上角，點選 **[!UICONTROL 儲存並關閉]**.
+1. 在更改缩略图页面上，点按 **[!UICONTROL 保存更改]**.
+1. 在视频的“属性”页面的右上角，点按 **[!UICONTROL 保存并关闭]**.
 
-## 關於Dynamic Media — 混合模式中的視訊縮圖 {#about-video-thumbnails-in-dynamic-media-hybrid-mode}
+## 关于Dynamic Media — 混合模式中的视频缩略图 {#about-video-thumbnails-in-dynamic-media-hybrid-mode}
 
-您可以從Dynamic Media自動產生的10個縮圖影像中選擇一個，以新增至您的視訊。 在Experience Manager Sites、Experience Manager Mobile或Experience Manager Screens的製作環境中，視訊資產與Dynamic Media元件搭配使用時，視訊播放器會顯示您選取的縮圖。 縮圖可做為靜態圖片，最能代表您整個視訊的內容，並進一步鼓勵使用者按一下「播放」按鈕。
+您可以从Dynamic Media自动生成的十个缩略图图像中选择一个添加到视频中。 当视频资源在Experience Manager Sites、Experience Manager移动设备或Experience Manager Screens的创作环境中与Dynamic Media组件一起使用时，视频播放器会显示您选择的缩略图。 缩略图用作最能代表整个视频内容的静态图片，进一步鼓励用户单击“播放”按钮。
 
-Dynamic Media會根據視訊的總時間，擷取10個（預設）縮圖影像。 影像的擷取百分比分別為1%、11%、21%、31%、41%、51%、61%、71%、81%和91%。 這10個縮圖持續存在，這表示如果您稍後決定選擇不同的縮圖，就不需要重新產生序列。 您可以預覽10個縮圖影像，然後選取您要用於視訊的影像。 如果您想要變更為預設值，可以使用CRXDE Lite來設定產生縮圖影像的時間間隔。 例如，如果您只想從視訊產生一系列四個均勻間隔的縮圖影像，您可以將間隔時間設定為24%、49%、74%和99%。
+根据视频的总时间，Dynamic Media会捕获10个（默认）缩略图。 在视频中捕获的图像比例为1%、11%、21%、31%、41%、51%、61%、71%、81%和91%。 这10个缩略图仍然存在，这意味着如果您稍后决定选择其他缩略图，则无需重新生成系列。 您可以预览10个缩略图，然后选择要用于视频的缩略图。 如果要更改为默认值，可以使用CRXDE Lite配置生成缩略图图像的时间间隔。 例如，如果只想从视频中生成一系列四个等间距的缩略图，可以将间隔时间配置为24%、49%、74%和99%。
 
-理想情況下，上傳視訊後、在網站上發佈視訊之前，您隨時都可以新增視訊縮圖。
+理想情况下，您可以在上传视频之后但在网站上发布视频之前随时添加视频缩略图。
 
-您也可以選擇上傳自訂縮圖來代表視訊，而不使用Dynamic Media產生的縮圖。 例如，您可以建立具有視訊標題、搶眼的開頭影像或從視訊擷取的特定影像的自訂縮圖影像。 您上傳的自訂視訊縮圖影像的最大解析度必須是1280 x 720畫素（最小寬度為640畫素），並且不得大於2 MB。
+如果您愿意，可以选择上传自定义缩略图来表示您的视频，而不是使用Dynamic Media生成的缩略图。 例如，您可以创建一个自定义缩略图图像，其中包含视频标题、引人注目的开场图像或从视频中捕获的特定图像。 您上传的自定义视频缩略图图像的最大分辨率必须为1280 x 720像素（最小宽度为640像素），并且不得大于2 MB。
 
-另請參閱 [關於Dynamic Media - Scene7模式中的視訊縮圖](/help/assets/video.md#about-video-thumbnails-in-dynamic-media-scene-mode).
+另请参阅 [关于Dynamic Media - Scene7模式中的视频缩略图](/help/assets/video.md#about-video-thumbnails-in-dynamic-media-scene-mode).
 
-### 新增視訊縮圖 {#adding-a-video-thumbnail}
+### 添加视频缩略图 {#adding-a-video-thumbnail}
 
-這些步驟僅適用於以混合模式執行的Dynamic Media。
+这些步骤仅适用于以混合模式运行的Dynamic Media。
 
-**若要新增視訊縮圖：**
+**要添加视频缩略图，请执行以下操作：**
 
-1. 導覽至您要新增視訊縮圖的已上傳視訊資產。
-1. 在資產選取模式中，從「清單檢視」或「卡片檢視」，點選視訊資產。
-1. 在工具列上，點選 **[!UICONTROL 檢視屬性]** 圖示（內有「i」的圓形）。
-1. 在視訊的「屬性」頁面上，點選 **[!UICONTROL 變更縮圖]**.
-1. 在「變更縮圖」頁面的工具列上，點選 **[!UICONTROL 選取影格]**.
+1. 导航到要添加视频缩略图的已上传视频资产。
+1. 在资产选择模式下，从“列表视图”或“卡片视图”中，点按视频资产。
+1. 在工具栏上，点按 **[!UICONTROL 查看属性]** 图标（一个圆圈，内有“i”）。
+1. 在视频的“属性”页面上，点按 **[!UICONTROL 更改缩略图]**.
+1. 在更改缩略图页面的工具栏上，点按 **[!UICONTROL 选择帧]**.
 
-   Dynamic Media會根據您自訂的預設時間間隔或時間間隔，從視訊產生一系列縮圖影像。
+   Dynamic Media会根据您自定义的默认时间间隔或时间间隔，从视频中生成一系列缩略图图像。
 
-1. 預覽產生的縮圖影像，然後選取要新增至視訊的縮圖影像。
-1. 點選 **[!UICONTROL 儲存變更]**.
+1. 预览生成的缩略图图像，然后选择要添加到视频中的图像。
+1. 点按 **[!UICONTROL 保存更改]**.
 
-   視訊的縮圖影像會更新，以使用您選取的縮圖。 如果您稍後決定變更縮圖影像，可以返回 **[!UICONTROL 變更縮圖]** 並選取新的頁面。
+   视频的缩略图图像会更新以使用您选择的缩略图。 如果您稍后决定更改缩略图图像，则可以返回到 **[!UICONTROL 更改缩略图]** 页面并选择新页面。
 
-   如果您已設定新的預設時間間隔，或已上傳新視訊來取代現有視訊，請讓Dynamic Media重新產生縮圖。
+   如果您配置了新的默认时间间隔，或者您上传了一个新视频来替换现有视频，则由Dynamic Media重新生成缩略图。
 
-   另請參閱 [設定產生視訊縮圖的預設時間間隔](#configuring-the-default-time-interval-that-video-thumbnails-are-generated).
+   参见 [配置生成视频缩略图的默认时间间隔](#configuring-the-default-time-interval-that-video-thumbnails-are-generated).
 
-#### 設定產生視訊縮圖的預設時間間隔 {#configuring-the-default-time-interval-that-video-thumbnails-are-generated}
+#### 配置生成视频缩略图的默认时间间隔 {#configuring-the-default-time-interval-that-video-thumbnails-are-generated}
 
-當您設定並儲存新的預設時間間隔時，您的變更只會自動套用至您未來上傳的視訊。 不會自動將新預設套用至您先前上傳的影片。 對於現有影片，您必須重新產生縮圖。
+当您配置和保存新的默认时间间隔时，所做的更改只会自动应用于您将来上传的视频。 它不会自动将新的默认设置应用于您之前上传的视频。 对于现有视频，必须重新生成缩略图。
 
-另請參閱 [新增視訊縮圖](#adding-a-video-thumbnail).
+参见 [添加视频缩略图](#adding-a-video-thumbnail).
 
-**若要設定產生視訊縮圖的預設時間間隔：**
+**要配置生成视频缩略图的默认时间间隔，请执行以下操作：**
 
-1. 在Experience Manager中，點選 **[!UICONTROL 工具]** > **[!UICONTROL 一般]** > **[!UICONTROL CRXDE Lite]**.
+1. 在Experience Manager中，点按 **[!UICONTROL 工具]** > **[!UICONTROL 常规]** > **[!UICONTROL CRXDE Lite]**.
 
-1. 在CRXDE Lite頁面的左側目錄面板中，導覽至 `o etc/dam/imageserver/configuration/jcr:content/settings.`
+1. 在“CRXDE Lite”页面的左侧目录面板中，导航到 `o etc/dam/imageserver/configuration/jcr:content/settings.`
 
-   如果看不到「目錄」面板，請點選「首頁」標籤左側的>>圖示。
+   如果目录面板不可见，请点按“主页”选项卡左侧的>>图标。
 
-1. 在右下角面板的「屬性」標籤中，點兩下 `thumbnailtime`.
-1. 在 **[!UICONTROL 編輯縮圖時間]** 對話方塊中，使用文字欄位，以百分比輸入間隔值。
+1. 在右下面板的“属性”选项卡中，双击 `thumbnailtime`.
+1. 在 **[!UICONTROL 编辑缩略图]** 对话框中，使用文本字段以百分比形式输入间隔值。
 
-   * 如果您想要新增一或多個間隔值欄位，請點選加號(+)圖示。 如有必要，請捲動至對話方塊底部以檢視圖示。
-   * 如果您想要從清單中刪除間隔值欄位，請點選其右邊的減號(-)圖示。
-   * 如果要重新排序間隔值，請點選向上箭頭圖示和向下箭頭圖示。
+   * 如果要添加一个或多个间隔值字段，请点击加号(+)图标。 如有必要，请滚动到对话框的底部以查看图标。
+   * 如果要从列表中删除间隔值字段，请点按该字段右侧的减号(-)图标。
+   * 如果要重新排序间隔值，请点按向上箭头图标和向下箭头图标。
 
-1. 點選 **[!UICONTROL 確定]** 並返回「屬性」標籤。
-1. 在CRXDE Lite頁面的左上角附近，點選 **[!UICONTROL 全部儲存]**，然後點選左上角的「返回首頁」圖示以返回Experience Manager。
+1. 点按 **[!UICONTROL 确定]** 并返回到“属性”选项卡。
+1. 在“CRXDE Lite”页面的左上角附近，点按 **[!UICONTROL 全部保存]**，然后点按左上角的“返回主页”图标以返回Experience Manager。
 
-   另請參閱 [新增視訊縮圖](#adding-a-video-thumbnail).
+   参见 [添加视频缩略图](#adding-a-video-thumbnail).
 
-### 新增自訂視訊縮圖 {#adding-a-custom-video-thumbnail-1}
+### 添加自定义视频缩略图 {#adding-a-custom-video-thumbnail-1}
 
-這些步驟僅適用於以混合模式執行的Dynamic Media。
+这些步骤仅适用于以混合模式运行的Dynamic Media。
 
-**若要新增自訂視訊縮圖：**
+**要添加自定义视频缩略图，请执行以下操作：**
 
-1. 導覽至您要新增自訂視訊縮圖的已上傳視訊資產。
-1. 在資產選取模式中，從「清單檢視」或「卡片檢視」，點選視訊資產。
-1. 在工具列上，點選 **[!UICONTROL 檢視屬性]** 圖示（內有「i」的圓形）。
-1. 在視訊的「屬性」頁面上，點選 **[!UICONTROL 變更縮圖]**.
-1. 在「變更縮圖」頁面的工具列上，點選 **[!UICONTROL 上傳新的縮圖]**.
-1. 導覽至您要使用的縮圖影像，選取它，然後點選 **[!UICONTROL 開啟]** 以開始將影像上傳至Experience Manager。 上傳後，請務必發佈影像。
-1. 成功上傳和發佈影像後，在「變更縮圖」頁面中，點選 **[!UICONTROL 儲存變更]**.
+1. 导航到要添加自定义视频缩略图的已上传视频资产。
+1. 在资产选择模式下，从“列表视图”或“卡片视图”中，点按视频资产。
+1. 在工具栏上，点按 **[!UICONTROL 查看属性]** 图标（一个圆圈，内有“i”）。
+1. 在视频的“属性”页面上，点按 **[!UICONTROL 更改缩略图]**.
+1. 在更改缩略图页面的工具栏上，点按 **[!UICONTROL 上传新的缩略图]**.
+1. 导航到要使用的缩略图图像，选择它，然后点按 **[!UICONTROL 打开]** 以开始将图像上传到Experience Manager。 上传后，请确保发布图像。
+1. 成功上传和发布图像后，在更改缩略图页面中，点按 **[!UICONTROL 保存更改]**.
 
-   自訂縮圖會新增至您的視訊。
+   自定义缩略图将会添加到您的视频中。
 
-## 變更Dynamic Media資產的Dynamic Media URL {#manifest-urls}
+## 更改Dynamic Media资源的Dynamic Media URL {#manifest-urls}
 
-處理至Dynamic Media的視訊可供現成可用的檢視器使用，也可以直接存取資訊清單URL並透過您自己的自訂檢視器播放。 以下是擷取視訊資訊清單URL的API。
+处理到Dynamic Media中的视频可以通过现成的查看器使用，也可以直接访问清单URL并通过您自己的自定义查看器播放它们。 以下是获取视频清单URL的API。
 
-### 關於getVideoManifestURI API
+### 关于getVideoManifestURI API
 
-此 `getVideoManifestURI`API透過c公開`q-scene7-api:com.day.cq.dam.scene7.api` 和可用來產生下列資訊清單URL：
+此 `getVideoManifestURI`API通过c公开`q-scene7-api:com.day.cq.dam.scene7.api` 和可用于生成以下清单URL：
 
 ```java
 /**   
@@ -859,40 +859,40 @@ Dynamic Media會根據視訊的總時間，擷取10個（預設）縮圖影像�
 String getVideoManifestURI(Resource resource, ManifestType manifestType, boolean onlyIfPublished) throws Exception;
 ```
 
-#### getVideoManifestURI API引數
+#### getVideoManifestURI API参数
 
-此API會採用下列三個引數：
+此API采用以下三个参数：
 
 | 参数 | 描述 |
 | --- | --- |
-| `resource` | 與Dynamic Media已擷取的視訊對應的資源。 |
+| `resource` | 与Dynamic Media已摄取的视频对应的资源。 |
 | `manifestType` | 可以是 `ManifestType.DASH` 或 `ManifestType.HLS` |
-| `onlyIfPublished` | 如果資訊清單URI只有在發佈並在傳遞層級上可用時才會產生，則設為true。 |
+| `onlyIfPublished` | 如果清单URI仅在投放层上发布且可用时生成，则设置为true。 |
 
-若要使用上述方法擷取視訊的資訊清單URL，請新增 [視訊編碼設定檔](/help/assets/video-profiles.md#creating-a-video-encoding-profile-for-adaptive-streaming) 移至「上傳影片」資料夾。 Dynamic Media會根據在指派給資料夾的視訊編碼檔案中找到的編碼，來處理這些視訊。 現在，您可以叫用上述API來擷取已上傳影片的資訊清單URL。
+要使用上述方法获取视频的清单URL，请添加 [视频编码配置文件](/help/assets/video-profiles.md#creating-a-video-encoding-profile-for-adaptive-streaming) 到“上传视频”文件夹。 Dynamic Media会根据在分配给文件夹的视频编码文件中找到的编码来处理这些视频。 现在，您可以调用上述API以获取已上传视频的清单URL。
 
-### 錯誤案例
+### 错误方案
 
-如果發生錯誤，API會傳回null。 例外狀況會記錄在Experience Manager錯誤記錄檔中。 所有此類記錄錯誤的開頭為 `Could not generate Video Manifest URI`. 下列情況可能會導致此類錯誤發生：
+如果出现错误，则API返回null。 异常记录在Experience Manager错误日志中。 所有此类记录错误都开始于 `Could not generate Video Manifest URI`. 以下情况可能会导致出现此类错误：
 
-* 一個 `IllegalArgumentException` 會針對下列任一專案進行記錄：
+* An `IllegalArgumentException` 因以下任一情况被记录：
 
-   * 此 `resource` 傳遞的引數為null。
-   * 此 `resource` 傳遞的引數不是影片。
-   * 此 `manifestType` 傳遞的引數為null。
-   * 此 `onlyIfPublished` 引數會傳遞為true，但視訊不會發佈。
-   * 未使用Dynamic Media中的最適化視訊集擷取視訊。
+   * 此 `resource` 传递的参数为null。
+   * 此 `resource` 传递的参数不是视频。
+   * 此 `manifestType` 传递的参数为null。
+   * 此 `onlyIfPublished` 参数作为true传递，但视频未发布。
+   * 未使用Dynamic Media中的自适应视频集摄取视频。
 
-* `IOException` 在連線到Dynamic Media時發生問題時記錄。
-* `UnsupportedOperationException` 於以下情況時記錄： `manifestType` 傳遞的引數為 `ManifestType.DASH`，而視訊尚未使用DASH格式處理。
+* `IOException` 在连接到Dynamic Media时出现问题时记录。
+* `UnsupportedOperationException` 在以下情况下被记录： `manifestType` 传递的参数为 `ManifestType.DASH`，而视频尚未使用DASH格式进行处理。
 
-以下範例為上述API使用中撰寫的servlet *HTTPWhiteBoard* 規格。 選取每個索引標籤以取得程式碼語法。
+以下是使用中编写的servlet的上述API示例 *HTTPWhiteBoard* 规范。 选择每个选项卡以了解代码语法。
 
 >[!BEGINTABS]
 
->[!TAB 在pom.xml中新增相依性]
+>[!TAB 在pom.xml中添加依赖项]
 
-+++**在pom.xml中新增相依性**
++++**在pom.xml中添加依赖项**
 
 ```java
 dependency> 
@@ -905,9 +905,9 @@ dependency>
 
 +++
 
->[!TAB 範例servlet]
+>[!TAB 示例servlet]
 
-+++**範例servlet**
++++**示例servlet**
 
 ```java
 @Component
@@ -984,9 +984,9 @@ public class ManifestServlet extends HttpServlet {
 
 +++
 
->[!TAB servlet的回應類別]
+>[!TAB servlet的响应类]
 
-+++**servlet的回應類別**
++++**servlet的响应类**
 
 ```java
 public class ManifestUrl extends VideoResponse { 
@@ -1014,9 +1014,9 @@ public abstract class VideoResponse {
 
 +++
 
->[!TAB servlet中參照的常數檔案]
+>[!TAB servlet中引用的常量文件]
 
-+++**servlet中參照的常數檔案**
++++**servlet中引用的常量文件**
 
 ```java
 public final class Constants { 
@@ -1037,7 +1037,7 @@ public final class Constants {
 
 +++**ServletContext**
 
-使用掛載上述servlet `servletContext`. 以下範例為 `servletContext`.
+使用装载上述servlet `servletContext`. 以下示例为 `servletContext`.
 
 ```java
 public class DMSampleApiHttpContext extends ServletContextHelper { 
@@ -1145,29 +1145,29 @@ public class DMSampleApiHttpContext extends ServletContextHelper {
 
 >[!ENDTABS]
 
-### 使用範例servlet
+### 使用示例servlet
 
-您可以透過執行 `GET` 作業位置 `/dmSample/dynamicmedia/video/manifestUrl`. 傳遞下列查詢引數：
+通过执行 `GET` 操作位置 `/dmSample/dynamicmedia/video/manifestUrl`. 传递了以下查询参数：
 
-| 查詢引數 | 描述 |
+| 查询参数 | 描述 |
 | --- | --- |
-| `assetPath` | 强制. 視訊的路徑，針對 `manifestUrl` 「 」產生。 |
-| `manifestType` | 可选. 引數可以是DASH或HLS。 如果未傳遞，則預設為DASH。 |
-| `onlyIfPublished` | 可选. 如果通過， `manifestUrl` 只有在視訊發佈後才會傳回。 |
+| `assetPath` | 强制. 针对以下项访问视频的路径： `manifestUrl` 生成。 |
+| `manifestType` | 可选. 参数可以是DASH或HLS。 如果未传递，则默认为DASH。 |
+| `onlyIfPublished` | 可选. 如果通过， `manifestUrl` 仅当发布视频时返回。 |
 
-在此範例中，我們假設下列設定：
+在本例中，我们假定进行以下设置：
 
 * 公司是 `samplecompany`.
-* 編寫執行個體為 `http://sample-aem-author.com`.
-* 資料夾 `/content/dam/video-example` 已套用視訊編碼設定檔。
-* 影片 `scenery.mp4` 已上傳至資料夾 `/content/dam/video-example`.
+* 创作实例为 `http://sample-aem-author.com`.
+* 文件夹 `/content/dam/video-example` 应用了视频编码配置文件。
+* 视频 `scenery.mp4` 已上传到文件夹 `/content/dam/video-example`.
 
-您可以透過下列方式叫用servlet：
+可以通过以下方式调用servlet：
 
 | 类型 | 描述 |
 | :--- | --- |
-| HLS | `http://sample-aem-author.com/dmSample/dynamicmedia/video/manifestUrl?manifestType=HLS&assetPath=/content/dam/video-example/scenery.mp4`<br><br>啟用DASH傳送時：<br>`{"manifestUrl":"https://s7d1.scene7.com/is/content/samplecompany/scenery-AVS.m3u8?packagedStreaming=true"}`<br><br>如果停用DASH傳遞：<br>`{"manifestUrl":"https://s7d1.scene7.com/is/content/samplecompany/scenery-AVS.m3u8"}` |
-| 虛線 | `http://sample-aem-author.com/dmSample/dynamicmedia/video/manifestUrl?manifestType=DASH&assetPath=/content/dam/video-example/scenery.mp4`<br><br>啟用DASH傳送時：<br>`{"manifestUrl":"https://s7d1.scene7.com/is/content/samplecompany/scenery-AVS.mpd"}`<br><br>如果停用DASH傳遞：<br>`{}` |
-| 錯誤：資產路徑錯誤 | `http://sample-aem-author.com/dmSample/dynamicmedia/video/manifestUrl?manifestType=DASH&assetPath=/content/dam/video-example/scennnnnnery.mp4`<br><br>`{"errorString":"could not retrieve the resource from JCR"}` |
+| HLS | `http://sample-aem-author.com/dmSample/dynamicmedia/video/manifestUrl?manifestType=HLS&assetPath=/content/dam/video-example/scenery.mp4`<br><br>如果启用DASH投放：<br>`{"manifestUrl":"https://s7d1.scene7.com/is/content/samplecompany/scenery-AVS.m3u8?packagedStreaming=true"}`<br><br>在禁用DASH投放的情况下：<br>`{"manifestUrl":"https://s7d1.scene7.com/is/content/samplecompany/scenery-AVS.m3u8"}` |
+| 短划线 | `http://sample-aem-author.com/dmSample/dynamicmedia/video/manifestUrl?manifestType=DASH&assetPath=/content/dam/video-example/scenery.mp4`<br><br>如果启用DASH投放：<br>`{"manifestUrl":"https://s7d1.scene7.com/is/content/samplecompany/scenery-AVS.mpd"}`<br><br>在禁用DASH投放的情况下：<br>`{}` |
+| 错误：资源路径错误 | `http://sample-aem-author.com/dmSample/dynamicmedia/video/manifestUrl?manifestType=DASH&assetPath=/content/dam/video-example/scennnnnnery.mp4`<br><br>`{"errorString":"could not retrieve the resource from JCR"}` |
 
 

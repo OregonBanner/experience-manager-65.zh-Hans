@@ -1,6 +1,6 @@
 ---
-title: 無法還原適用於JEE叢集伺服器的損毀CRX存放庫
-description: 還原損毀CRX存放庫的步驟
+title: 无法恢复适用于JEE群集服务器的损坏CRX存储库
+description: 恢复损坏的CRX存储库的步骤
 exl-id: 212f61f1-360f-4abe-b874-055ec65454c7
 source-git-commit: c4f776b08cb8cc8c6eea78a3757735e063bec20c
 workflow-type: tm+mt
@@ -9,30 +9,30 @@ ht-degree: 2%
 
 ---
 
-# 無法還原損毀的CRX存放庫 {#unable-to-restore-corrupt-crx-repository}
+# 无法恢复损坏的CRX存储库 {#unable-to-restore-corrupt-crx-repository}
 
 ## 问题 {#issue}
 
-對於使用關聯式資料庫的JEE版AEM Forms，主控AEM Forms和關聯式資料庫的電腦時間應一律絕對同步。 如果這些電腦上的時間不同步，JEE伺服器上AEM Forms的CRX存放庫可能會變得無法存取。 它可能已損毀，且無法透過URL存取。 此 `AuthenticationsupportService missing` 錯誤已記錄。
+对于使用关系数据库的JEE上的AEM Forms，托管AEM Forms和关系数据库的计算机上的时间应始终绝对同步。 如果这些计算机上的时间不同步，则JEE服务器上的AEM Forms的CRX存储库可能会变得无法访问。 它可能已损坏，并且无法通过URL访问。 此 `AuthenticationsupportService missing` 将记录错误。
 
 ## 前提条件 {#prerequisites}
 
-在執行下列步驟之前，請先備份CRX存放庫。
+在执行以下步骤之前，请备份CRX存储库。
 
 ## 解决方案 {#solution}
 
-執行以下步驟以解決問題：
+执行以下步骤来解决问题：
 1. 转到  `https://[AEM Forms Server]:[port]/system/console/bundles`.
 
-1. 找到 `oak-core` 套件組合併檢查其是否正在執行。
+1. 找到 `oak-core` 捆绑包并检查它是否正在运行。
 
-1. 重新啟動 `oak-core` 套件組合未執行時套用。 若  ![暫停按鈕](/help/forms/using/assets/stop.png) 圖示出現在 `oak-core` 束，則表示該束處於執行狀態。
+1. 重新启动 `oak-core` 捆绑（如果它未运行）。 如果  ![暂停按钮](/help/forms/using/assets/stop.png) 图标显示在之前 `oak-core` 捆绑，则表明捆绑处于运行状态。
 
-1. 如果問題仍未解決，請從備份中從CRX存放庫還原，或在備份不可用時重建CRX存放庫。
+1. 如果问题仍未解决，请从备份中恢复CRX存储库，或者在备份不可用时重建CRX存储库。
 
 
-## 套用至 {#applies-to}
+## 应用于 {#applies-to}
 
-此解決方案適用於：
+此解决方案适用于：
 
-* JEE叢集上的AEM Forms
+* JEE群集上的AEM Forms

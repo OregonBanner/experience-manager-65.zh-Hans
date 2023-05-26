@@ -1,7 +1,7 @@
 ---
-title: 測試和追蹤工具
+title: 测试和跟踪工具
 seo-title: Testing and Tracking Tools
-description: AEM提供測試元件UI的架構，以及測試和偵錯元件的機制
+description: AEM提供了用于测试组件UI的框架和用于测试和调试组件的机制
 seo-description: AEM provides a framework for testing component UI and a mechanism for testing and debugging components
 uuid: 12abedb5-4ee7-4389-9340-e628adbbc053
 contentOwner: Guillaume Carlino
@@ -18,50 +18,50 @@ ht-degree: 1%
 
 ---
 
-# 測試和追蹤工具{#testing-and-tracking-tools}
+# 测试和跟踪工具{#testing-and-tracking-tools}
 
 ## 测试 {#testing}
 
 AEM 提供：
 
-* [測試元件UI的架構](/help/sites-developing/hobbes.md).
-* [用於測試和偵錯元件的機制](/help/sites-developing/developer-mode.md).
+* [用于测试组件UI的框架](/help/sites-developing/hobbes.md).
+* [用于测试和调试组件的机制](/help/sites-developing/developer-mode.md).
 
-以下是兩種開放原始碼測試工具：
+以下是两个开源测试工具：
 
-**Selenium**
+**硒元素**
 
-Selenium可用於瀏覽器中的功能測試，每個活動有一個使用者。 測試步驟（點按）會記錄為HTML表格或Java類別。
+Selenium用于在浏览器中测试功能，每个活动有一个用户。 它将测试步骤（单击次数）记录为HTML表或Java类。
 
-如需詳細資訊，請參閱 [https://www.seleniumhq.org/](https://www.seleniumhq.org/).
+有关详细信息，请参阅 [https://www.seleniumhq.org/](https://www.seleniumhq.org/).
 
-**Jmeter**
+**JMet**
 
-JMeter可用來追蹤要求，也可用於功能、效能和壓力測試。
+JMeter用于跟踪请求，并可用于功能、性能和压力测试。
 
-如需詳細資訊，請參閱 [https://jakarta.apache.org/jmeter/](https://jakarta.apache.org/jmeter).
+有关详细信息，请参阅 [https://jakarta.apache.org/jmeter/](https://jakarta.apache.org/jmeter).
 
-還有許多自動化測試和管理測試計畫的專有工具。
+还有许多用于自动化测试和管理测试计划的专有工具。
 
-### 追蹤 {#tracking}
+### 跟踪 {#tracking}
 
-您可輕鬆使用下列工具。 不過，所有案例中的關鍵問題是專案團隊的所有成員（合作夥伴和客戶）都能取得資料。
+以下工具可轻松使用。 但是，在所有情况下，关键问题是向项目团队的所有成员（合作伙伴和客户）提供数据。
 
 **Bugzilla**
 
-可依您自己的需求設定的錯誤追蹤系統。
+可以根据自己的要求配置的错误跟踪系统。
 
 **电子表格**
 
-雖然不是專門用於追蹤錯誤的工具，但試算表通常 *mis*&#x200B;用於此目的，因為它們容易理解，且大多數使用者對其功能有體驗。
+虽然不是专门用于错误跟踪的工具，但电子表格通常 *mis*&#x200B;用于此目的，因为它们易于理解，并且大多数用户都对其功能具有体验。
 
-如果這些是用於追蹤，則：
+如果这些内容用于跟踪，则：
 
-* 應該儘量保持簡單。
-* 個別試算表的數量應維持在最低限度。
-* 必須定期更新。
-* 只應維護一個主版副本，而且每個人都應知道主版副本的位置。
-* 所有專案成員都應該可存取這些檔案。
-* 如果安全性是個問題（通常發生在大公司）且無法共同存取，只要每個人都知道這些是復本且無法更新，就可以發佈復本。
+* 它们应该保持简单。
+* 应尽量减少单个电子表格的数量。
+* 它们必须定期更新。
+* 只应维护一个主控副本，每个人都应知道主控副本的位置。
+* 它们应可供所有项目成员访问。
+* 如果安全性是一个问题（通常发生在大公司）并且无法进行通用访问，那么只要每个人都知道这些是副本并且不能更新，就可以分发副本。
 
-同樣地，也有許多追蹤錯誤和功能要求的專有工具。
+同样，还有许多用于跟踪错误和功能要求的专有工具。

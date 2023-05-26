@@ -1,7 +1,7 @@
 ---
-title: 開發Forms (Classic UI)
+title: 开发Forms（经典UI）
 seo-title: Developing Forms (Classic UI)
-description: 瞭解如何開發表單
+description: 了解如何开发表单
 seo-description: Learn how to develop forms
 uuid: 33859f29-edc5-4bd5-a634-35549f3b5ccf
 contentOwner: Guillaume Carlino
@@ -18,309 +18,309 @@ ht-degree: 0%
 
 ---
 
-# 開發Forms (Classic UI){#developing-forms-classic-ui}
+# 开发Forms（经典UI）{#developing-forms-classic-ui}
 
-表單的基本結構為：
+表单的基本结构是：
 
-* 表單開始
-* 表單元素
-* 表單結尾
+* 表单开始
+* 表单元素
+* 表单结尾
 
-所有這些都是透過一系列預設值實現的 [表單元件](/help/sites-authoring/default-components.md#form)，適用於標準AEM安裝。
+所有这些功能都通过一系列默认设置实现 [表单组件](/help/sites-authoring/default-components.md#form)，在标准AEM安装中提供。
 
-除了 [開發新元件](/help/sites-developing/developing-components-samples.md) 若要在表單上使用，您也可以：
+除此之外 [开发新组件](/help/sites-developing/developing-components-samples.md) 要在表单上使用，您还可以：
 
-* [使用值預先載入您的表單](#preloading-form-values)
-* [預先載入（特定）具有多個值的欄位](#preloading-form-fields-with-multiple-values)
-* [開發新動作](#developing-your-own-form-actions)
-* [開發新的限制](#developing-your-own-form-constraints)
-* [顯示或隱藏特定表單欄位](#showing-and-hiding-form-components)
+* [使用值预加载表单](#preloading-form-values)
+* [预加载（特定）具有多个值的字段](#preloading-form-fields-with-multiple-values)
+* [开发新操作](#developing-your-own-form-actions)
+* [制定新的限制](#developing-your-own-form-constraints)
+* [显示或隐藏特定表单字段](#showing-and-hiding-form-components)
 
-[使用指令碼](#developing-scripts-for-use-with-forms) 以視需要擴充功能。
-
->[!NOTE]
->
->本檔案著重於使用開發表單 [基礎元件](/help/sites-authoring/default-components-foundation.md) 在傳統UI中。 Adobe建議使用新的 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans) 和 [隱藏條件](/help/sites-developing/hide-conditions.md) 用於觸控式UI中的表單開發。
-
-## 預先載入表單值 {#preloading-form-values}
-
-表單開始元件提供 **載入路徑**，指向存放庫中節點的可選路徑。
-
-載入路徑是節點屬性的路徑，用於將預先定義的值載入表單上的多個欄位中。
-
-此選擇性欄位指定存放庫中節點的路徑。 當此節點具有符合欄位名稱的屬性時，則表單上的適當欄位將使用這些屬性的值預先載入。 如果不存在相符專案，則欄位包含預設值。
+[使用脚本](#developing-scripts-for-use-with-forms) 以根据需要扩展功能。
 
 >[!NOTE]
 >
->A [表單動作](#developing-your-own-form-actions) 也可以設定載入初始值的來源。 這是使用來完成的 `FormsHelper#setFormLoadResource` 裡面 `init.jsp`.
+>本文档重点介绍如何使用开发表单 [基础组件](/help/sites-authoring/default-components-foundation.md) 在经典UI中。 Adobe建议利用新的 [核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans) 和 [隐藏条件](/help/sites-developing/hide-conditions.md) 用于触屏UI中的表单开发。
+
+## 预载表单值 {#preloading-form-values}
+
+表单开始组件为 **加载路径**，指向存储库中节点的可选路径。
+
+加载路径是指向节点属性的路径，用于将预定义值加载到表单上的多个字段中。
+
+这是一个可选字段，用于指定存储库中节点的路径。 如果此节点具有匹配字段名称的属性，则表单上的相应字段将预加载这些属性的值。 如果不存在匹配项，则字段包含默认值。
+
+>[!NOTE]
 >
->只有未設定時，才會從作者在起始表單元件中設定的路徑填入表單。
+>A [表单操作](#developing-your-own-form-actions) 还可以设置从中加载初始值的资源。 可使用以下方式完成 `FormsHelper#setFormLoadResource` 内部 `init.jsp`.
+>
+>仅当未设置时，才会从作者在起始表单组件中设置的路径填充表单。
 
-### 預先載入具有多個值的表單欄位 {#preloading-form-fields-with-multiple-values}
+### 预载具有多个值的表单字段 {#preloading-form-fields-with-multiple-values}
 
-各種表單欄位也具有 **專案載入路徑**，也是指向存放庫中的節點的可選路徑。
+各种表单字段还具有 **项目加载路径**，同样是指向存储库中节点的可选路径。
 
-此 **專案載入路徑** 是節點屬性的路徑，用來將預先定義的值載入表單上的特定欄位，例如 [下拉式清單](/help/sites-authoring/default-components-foundation.md#dropdown-list)， [核取方塊群組](/help/sites-authoring/default-components-foundation.md#checkbox-group) 或 [選項群組](/help/sites-authoring/default-components-foundation.md#radio-group).
+此 **项目加载路径** 是节点属性的路径，用于将预定义值加载到表单上的特定字段中，例如， [下拉列表](/help/sites-authoring/default-components-foundation.md#dropdown-list)， [复选框组](/help/sites-authoring/default-components-foundation.md#checkbox-group) 或 [单选按钮组](/help/sites-authoring/default-components-foundation.md#radio-group).
 
-#### 範例 — 預先載入含有多個值的下拉式清單 {#example-preloading-a-dropdown-list-with-multiple-values}
+#### 示例 — 预载具有多个值的下拉列表 {#example-preloading-a-dropdown-list-with-multiple-values}
 
-下拉式清單可設定您選取的值範圍。
+下拉列表可使用您选择的值范围进行配置。
 
-此 **專案載入路徑** 可用來從存放庫中的資料夾存取清單，並將清單預先載入欄位中：
+此 **项目加载路径** 可用于从存储库中的文件夹访问列表，并将这些列表预加载到字段中：
 
-1. 建立新的sling資料夾( `sling:Folder`)例如， `/etc/designs/<myDesign>/formlistvalues`
+1. 创建新的sling文件夹( `sling:Folder`)例如， `/etc/designs/<myDesign>/formlistvalues`
 
-1. 新增屬性(例如， `myList`)的字串( `String[]`)以包含下拉式清單中的專案。 也可以使用指令碼匯入內容，例如使用JSP指令碼或shell指令碼中的cURL。
+1. 添加新属性(例如， `myList`)类型为多值字符串( `String[]`)以包含下拉项目的列表。 内容也可以使用脚本导入，例如通过JSP脚本或shell脚本中的cURL导入。
 
-1. 在中使用完整路徑 **專案載入路徑** 欄位：例如， `/etc/designs/geometrixx/formlistvalues/myList`
+1. 在中使用完整路径 **项目加载路径** 字段：例如， `/etc/designs/geometrixx/formlistvalues/myList`
 
-請注意，如果 `String[]` 格式如下：
+请注意，如果 `String[]` 的格式如下所示：
 
 * `AL=Alabama`
 * `AK=Alaska`
 * 以此类推。
 
-然後AEM將產生「 」清單為：
+则AEM将生成列表为：
 
 * `<option value="AL">Alabama</option>`
 * `<option value="AK">Alaska</option>`
 
-舉例來說，這項功能可以在多語言設定中妥善運用。
+例如，可以在多语言设置中很好地使用此功能。
 
-### 開發您自己的表單動作 {#developing-your-own-form-actions}
+### 开发您自己的表单操作 {#developing-your-own-form-actions}
 
-表單需要動作。 動作會定義隨使用者資料提交表單時執行的操作。
+表单需要操作。 操作定义随用户数据提交表单时执行的操作。
 
-標準AEM安裝提供了一系列動作，這些動作可在下列位置檢視：
+标准AEM安装中提供了一系列操作，这些操作可在以下位置查看：
 
 `/libs/foundation/components/form/actions`
 
-和 **動作型別** 以下專案的清單 **表單** 元件：
+和 **操作类型** 列表 **表单** 组件：
 
 ![chlimage_1-8](assets/chlimage_1-8.png)
 
-本節說明如何開發自己的表單動作以包含在此清單中。
+本节介绍如何开发您自己的表单操作以包含在此列表中。
 
-您可以在底下新增自己的動作 `/apps` 如下所示：
+您可在下添加自己的操作 `/apps` 如下所示：
 
-1. 建立型別的節點 `sling:Folder`. 指定要實作之動作的名稱。
+1. 创建节点类型 `sling:Folder`. 指定反映要实施的操作的名称。
 
    例如：
 
    `/apps/myProject/components/customFormAction`
 
-1. 在此節點上定義下列屬性，然後按一下 **全部儲存** 若要保留您的變更：
+1. 在此节点上定义以下属性，然后单击 **全部保存** 要保留更改，请执行以下操作：
 
-   * `sling:resourceType`  — 設為 `foundation/components/form/action`
+   * `sling:resourceType`  — 设置为 `foundation/components/form/action`
 
-   * `componentGroup`  — 定義為 `.hidden`
+   * `componentGroup`  — 定义为 `.hidden`
 
-   * 選擇性：
+   * （可选）：
 
-      * `jcr:title`  — 指定您選擇的標題，這會顯示在下拉式選擇清單中。 如果未設定，則會顯示節點名稱
+      * `jcr:title`  — 指定您选择的标题，该标题将显示在下拉选择列表中。 如果未设置，则会显示节点名称
 
-      * `jcr:description`  — 輸入您選擇的說明
+      * `jcr:description`  — 输入所选内容的描述
 
-1. 在資料夾中建立對話方塊節點：
+1. 在文件夹中创建对话框节点：
 
-   1. 新增欄位，以便在選擇動作後，作者可以編輯表單對話方塊。
+   1. 添加字段，以便在选择操作后，作者可以编辑表单对话框。
 
-1. 在資料夾中建立：
+1. 在文件夹中，创建：
 
-   1. 貼文指令碼。
-指令碼的名稱為 `post.POST.<extension>`，例如 `post.POST.jsp`
-提交表單以處理表單時會叫用貼文指令碼，其中包含處理表單所傳送資料的程式碼 
+   1. 后处理脚本。
+脚本的名称为 `post.POST.<extension>`，例如 `post.POST.jsp`
+提交表单以处理表单时会调用后脚本，该脚本包含处理从表单到达的数据的代码 
 `POST`。
 
-   1. 新增在提交表單時叫用的轉寄指令碼。
-指令碼的名稱為 `forward.<extension`>，例如 `forward.jsp`
-此指令碼可定義路徑。 然後會將目前的請求轉送至指定的路徑。
-   必要的呼叫是 `FormsHelper#setForwardPath` （2種變體）。 典型案例是執行一些驗證或邏輯，以尋找目標路徑，然後前進到該路徑，讓預設的SlingPOSTservlet在JCR中執行實際儲存。
+   1. 添加在提交表单时调用的转发脚本。
+脚本的名称为 `forward.<extension`>，例如 `forward.jsp`
+此脚本可以定义路径。 然后，当前请求将转发到指定的路径。
+   必要的调用是 `FormsHelper#setForwardPath` （2种变体）。 典型的情况是执行一些验证或逻辑来查找目标路径，然后转发到该路径，让默认的SlingPOSTservlet在JCR中执行实际存储。
 
-   也可能會有另一個servlet執行實際處理，在這種情況下，表單動作和 `forward.jsp` 只能當作「粘合」程式碼。 這方面的範例為郵件動作： `/libs/foundation/components/form/actions/mail`，會將詳細資料轉送至 `<currentpath>.mail.html`郵件servlet所在的位置。
+   还可以有另一个servlet执行实际处理，在这种情况下，表单操作和 `forward.jsp` 只能作为“胶水”代码。 例如，以下位置的mail操作 `/libs/foundation/components/form/actions/mail`，可将详细信息转发到 `<currentpath>.mail.html`邮件servlet所在的位置。
 
-   所以：
+   那么：
 
-   * a `post.POST.jsp` 對於完全由動作本身完成的小型作業非常有用
-   * 而 `forward.jsp` 在只需要委派時很有用。
+   * a `post.POST.jsp` 对于完全由操作本身完成的小型操作非常有用
+   * 而 `forward.jsp` 在只需要委派时非常有用。
 
-   指令碼的執行順序為：
+   脚本的执行顺序为：
 
-   * 呈現表單時( `GET`)：
-
-      1. `init.jsp`
-      1. 對於所有欄位的限制： `clientvalidation.jsp`
-      1. 表單的validationRt： `clientvalidation.jsp`
-      1. 表單已透過載入資源載入（如果已設定）
-      1. `addfields.jsp` 在演算內時 `<form></form>`
-   * 處理表單時 `POST`：
+   * 呈现表单时( `GET`)：
 
       1. `init.jsp`
-      1. 對於所有欄位的限制： `servervalidation.jsp`
-      1. 表單的validationRt： `servervalidation.jsp`
+      1. 对于所有字段的约束： `clientvalidation.jsp`
+      1. 表单的validationRT： `clientvalidation.jsp`
+      1. 表单通过加载资源加载（如果已设置）
+      1. `addfields.jsp` 在内部渲染时 `<form></form>`
+   * 处理表单时 `POST`：
+
+      1. `init.jsp`
+      1. 对于所有字段的约束： `servervalidation.jsp`
+      1. 表单的validationRT： `servervalidation.jsp`
       1. `forward.jsp`
-      1. 若已設定正向路徑( `FormsHelper.setForwardPath`)、轉送請求，然後呼叫 `cleanup.jsp`
+      1. 如果已设置正向路径( `FormsHelper.setForwardPath`)，转发请求，然后调用 `cleanup.jsp`
 
-      1. 如果未設定轉送路徑，請呼叫 `post.POST.jsp` (結尾為，否 `cleanup.jsp` called)
-
-
+      1. 如果未设置转发路径，则调用 `post.POST.jsp` (到此结束，否 `cleanup.jsp` called)
 
 
-1. 再次在資料夾中選擇性新增：
 
-   1. 用於新增欄位的指令碼。
-指令碼的名稱為 `addfields.<extension>`，例如 `addfields.jsp`
-一個 
-`addfields` 在寫入表單開頭的HTML後，會立即叫用指令碼。 這可讓動作在表單內新增自訂輸入欄位或其他此類HTML。
 
-   1. 初始化指令碼。
-指令碼的名稱為 `init.<extension>`，例如 `init.jsp`
-此指令碼會在表單轉譯時叫用。 它可用來初始化動作細節。
+1. 再次在文件夹中（可选）添加：
 
-   1. 清除指令碼。
-指令碼的名稱為 `cleanup.<extension>`，例如 `cleanup.jsp`
-此指令碼可用於執行清理。
+   1. 用于添加字段的脚本。
+脚本的名称为 `addfields.<extension>`，例如 `addfields.jsp`
+An 
+`addfields` 在写入表单起始HTML后，将立即调用脚本。 这允许操作在表单中添加自定义输入字段或其他此类HTML。
 
-1. 使用 **Forms** parsys中的元件。 此 **動作型別** 下拉式清單現在會包含您的新動作。
+   1. 初始化脚本。
+脚本的名称为 `init.<extension>`，例如 `init.jsp`
+此脚本在渲染表单时调用。 它可用于初始化操作细节。
+
+   1. 清理脚本。
+脚本的名称为 `cleanup.<extension>`，例如 `cleanup.jsp`
+此脚本可用于执行清理。
+
+1. 使用 **Forms** parsys中的组件。 此 **操作类型** 下拉列表现在将包含您的新操作。
 
    >[!NOTE]
    >
-   >若要檢視屬於產品一部分的預設動作：
+   >要查看属于产品一部分的默认操作，请执行以下操作：
    >
    >
    >`/libs/foundation/components/form/actions`
 
-### 開發您自己的表單限制 {#developing-your-own-form-constraints}
+### 开发您自己的表单限制 {#developing-your-own-form-constraints}
 
-限制可施加於兩個層級：
+可在两个级别施加约束：
 
-* 對象 [個別欄位（請參閱下列程式）](#constraints-for-individual-fields)
-* 作為 [表單全域驗證](#form-global-constraints)
+* 对象 [单个字段（请参阅以下过程）](#constraints-for-individual-fields)
+* 作为 [表单全局验证](#form-global-constraints)
 
-#### 個別欄位的限制 {#constraints-for-individual-fields}
+#### 单个字段的约束 {#constraints-for-individual-fields}
 
-您可以為個別欄位新增自己的限制(在 `/apps`)如下所示：
+您可以为单个字段添加自己的约束(在 `/apps`)，如下所示：
 
-1. 建立型別的節點 `sling:Folder`. 指定反映要實作之限制的名稱。
+1. 创建节点类型 `sling:Folder`. 指定反映要实施的约束的名称。
 
    例如：
 
    `/apps/myProject/components/customFormConstraint`
 
-1. 在此節點上定義下列屬性，然後按一下 **全部儲存** 若要保留您的變更：
+1. 在此节点上定义以下属性，然后单击 **全部保存** 要保留更改，请执行以下操作：
 
-   * `sling:resourceType`  — 設定為 `foundation/components/form/constraint`
+   * `sling:resourceType`  — 设置为 `foundation/components/form/constraint`
 
-   * `constraintMessage`  — 提交表單時，根據限制，如果欄位無效將顯示自訂訊息
+   * `constraintMessage`  — 自定义消息，在提交表单时，如果字段无效（根据约束），将显示该消息
 
-   * 選擇性：
+   * （可选）：
 
-      * `jcr:title`  — 指定您選擇的標題，這會顯示在選擇清單中。 如果未設定，則會顯示節點名稱
-      * `hint`  — 使用者如何使用該欄位的額外資訊
+      * `jcr:title`  — 指定您选择的标题，该标题将显示在选择列表中。 如果未设置，则会显示节点名称
+      * `hint`  — 用户有关如何使用字段的其他信息
 
-1. 在此資料夾中，您可能需要下列指令碼：
+1. 在此文件夹内，可能需要以下脚本：
 
-   * 使用者端驗證指令碼：指令碼的名稱為 `clientvalidation.<extension>`，例如 `clientvalidation.jsp`
-這會在表單欄位轉譯時叫用。 它可用來建立使用者端JavaScript來驗證使用者端上的欄位。
+   * 客户端验证脚本：脚本的名称为 `clientvalidation.<extension>`，例如 `clientvalidation.jsp`
+在渲染表单字段时调用此项。 它可用于创建客户端javascript，以验证客户端上的字段。
 
-   * 伺服器驗證指令碼：指令碼的名稱為 `servervalidation.<extension>`，例如 `servervalidation.jsp`
-這會在提交表單時叫用。 提交欄位後，可使用它來驗證伺服器上的欄位。
+   * 服务器验证脚本：脚本的名称为 `servervalidation.<extension>`，例如 `servervalidation.jsp`
+在提交表单时会调用此项。 提交字段后，可使用它验证服务器上的字段。
 
 >[!NOTE]
 >
->範例限制可見於：
+>示例约束可见于：
 >
 >`/libs/foundation/components/form/constraints`
 
-#### 表單全域限制 {#form-global-constraints}
+#### 表单全局约束 {#form-global-constraints}
 
-透過在起始表單元件( `validationRT`)。 例如：
+通过配置起始表单组件( `validationRT`)。 例如：
 
 `apps/myProject/components/form/validation`
 
-然後，您可以定義：
+然后，您可以定义：
 
-* a `clientvalidation.jsp`  — 插入在欄位的使用者端驗證指令碼之後
-* 和 `servervalidation.jsp`  — 也是在個別欄位伺服器驗證之後呼叫 `POST`.
+* a `clientvalidation.jsp`  — 在字段的客户端验证脚本之后插入
+* 和 `servervalidation.jsp`  — 也在对进行单个字段服务器验证后调用 `POST`.
 
-### 顯示和隱藏表單元件 {#showing-and-hiding-form-components}
+### 显示和隐藏表单组件 {#showing-and-hiding-form-components}
 
-您可以根據表單中其他欄位的值，設定表單以顯示或隱藏表單元件。
+您可以根据表单中其他字段的值配置表单以显示或隐藏表单组件。
 
-只有在特定條件下才需要表單欄位時，變更欄位的可見度會很有用。 例如，在意見回饋表單上，系統會詢問客戶是否希望以電子郵件傳送產品資訊。 選取「是」後，會出現文字欄位，讓客戶輸入其電子郵件地址。
+仅在特定条件下需要表单字段时，更改该字段的可见性很有用。 例如，在反馈表单上，系统会询问客户是否希望通过电子邮件将产品信息发送给他们。 选择“是”后，系统会显示一个文本字段，以便客户键入其电子邮件地址。
 
-使用 **編輯顯示/隱藏規則** 對話方塊來指定顯示或隱藏表單元件的條件。
+使用 **编辑显示/隐藏规则** 对话框指定显示或隐藏表单组件的条件。
 
 ![showhideeditor](assets/showhideeditor.png)
 
-使用對話方塊頂端的欄位來指定下列資訊：
+使用对话框顶部的字段指定以下信息：
 
-* 指定隱藏或顯示元件的條件。
-* 顯示或隱藏元件是否需要任何或全部條件為true。
+* 指定隐藏或显示组件的条件。
+* 显示或隐藏组件需要满足任何或所有条件。
 
-一或多個條件會顯示在這些欄位下方。 條件會將另一個表單元件（在相同表單上）的值與一個值比較。 如果欄位中的實際值符合條件，則條件的評估結果為true。 條件包括下列資訊：
+一个或多个条件将显示在这些字段下方。 条件会将另一个表单组件（在相同表单上）的值与一个值进行比较。 如果字段中的实际值满足条件，则该条件的计算结果为true。 条件包括以下信息：
 
-* 測試的表單欄位的標題。
-* 運運算元。
-* 比對的值會與欄位值比較。
+* 测试的表单字段的标题。
+* 运算符。
+* 将对照值与字段值进行比较。
 
-例如，標題為「 」的選項群組元件 `Receive email notifications?`* *包含 `Yes` 和 `No` 選項按鈕。 標題為「 」的文字欄位元件 `Email Address` 會使用以下條件，以便在以下情況下可見： `Yes` 已選取：
+例如，标题为的单选按钮组组件 `Receive email notifications?`* *包含 `Yes` 和 `No` 单选按钮。 标题为的文本字段组件 `Email Address` 使用以下条件，使其在以下情况下可见： `Yes` 已选中：
 
-![SHOWHIDECONDITION](assets/showhidecondition.png)
+![光照条件](assets/showhidecondition.png)
 
-在Javascript中，條件會使用Element Name屬性的值來參照欄位。 在上一個範例中，「選項群組」元件的「元素名稱」屬性是 `contact`. 下列程式碼為該範例的等效Javascript程式碼：
+在Javascript中，条件使用元素名称属性的值来引用字段。 在上一个示例中，单选按钮组组件的Element Name属性为 `contact`. 以下代码是该示例的等效Javascript代码：
 
 `((contact == "Yes"))`
 
-**若要顯示或隱藏表單元件：**
+**要显示或隐藏表单组件，请执行以下操作：**
 
-1. 編輯特定的表單元件。
+1. 编辑特定的表单组件。
 
-1. 選取 **顯示/隱藏** 以開啟 **編輯顯示/隱藏規則** 對話方塊：
+1. 选择 **显示/隐藏** 以打开 **编辑显示/隐藏规则** 对话框：
 
-   * 在第一個下拉式清單中選取 **顯示** 或 **隱藏** 以指定條件是否決定要顯示或隱藏元件。
+   * 在第一个下拉列表中，选择 **显示** 或 **隐藏** 以指定您的条件是否决定显示或隐藏组件。
 
-   * 在頂端行尾的下拉式清單中選取：
+   * 在顶行末尾的下拉列表中，选择：
 
-      * **全部**  — 如果所有條件都必須為true才能顯示或隱藏元件
-      * **任何**  — 如果只有一個或多個條件必須為true以顯示或隱藏元件
-   * 在條件行（預設為其中一行）中，選取元件、運運算元，然後指定值。
-   * 視需要按一下「 」，以新增更多條件 **新增條件**.
+      * **所有**  — 如果所有条件都必须为true才能显示或隐藏组件
+      * **任意**  — 如果只有一个或多个条件必须为true以显示或隐藏组件
+   * 在条件行（默认显示一个）中，选择组件、运算符，然后指定一个值。
+   * 如果需要，通过单击 **添加条件**.
 
    例如：
 
    ![chlimage_1-9](assets/chlimage_1-9.png)
 
-1. 按一下 **確定** 以儲存定義。
+1. 单击 **确定** 以保存定义。
 
-1. 儲存定義後， **編輯規則** 連結會出現在 **顯示/隱藏** 選項中設定的預設值。 按一下此連結以開啟 **編輯顯示/隱藏規則** 進行變更的對話方塊。
+1. 保存定义后， **编辑规则** 链接显示在旁边 **显示/隐藏** 选项。 单击此链接以打开 **编辑显示/隐藏规则** 对话框进行更改。
 
-   按一下 **確定** 以儲存所有變更。
+   单击 **确定** 以保存所有更改。
 
    ![chlimage_1-10](assets/chlimage_1-10.png)
 
    >[!CAUTION]
    >
-   >可以看見並測試「顯示/隱藏」定義的效果：
+   >可以查看和测试“显示/隐藏”定义的效果：
    >
-   >* 在 **預覽** 作者環境上的模式（第一次切換為預覽時需要重新載入頁面）
+   >* 在 **预览** 创作环境上的模式（首次切换到预览时需要重新加载页面）
    >
-   >* 在發佈環境中
+   >* 在发布环境中
 
 
-#### 處理損壞的元件參照 {#handling-broken-component-references}
+#### 处理损坏的组件引用 {#handling-broken-component-references}
 
-顯示/隱藏條件會使用Element Name屬性的值來參照表單中的其他元件。 當任何條件引用已刪除或已變更Element Name屬性的元件時，顯示/隱藏設定無效。 發生這種情況時，您需要手動更新條件，否則表單載入時發生錯誤。
+显示/隐藏条件使用Element Name属性的值来引用表单中的其他组件。 当任何条件引用了已删除或已更改Element Name属性的组件时，显示/隐藏配置无效。 发生这种情况时，您需要手动更新条件，否则在加载表单时出现错误。
 
-當「顯示/隱藏」設定無效時，設定僅以JavaScript程式碼形式提供。 編輯程式碼以修正問題。程式碼會使用原本用來參考元件的Element Name屬性。
+当“显示/隐藏”配置无效时，该配置仅以JavaScript代码的形式提供。 编辑代码以更正问题。该代码使用最初用于引用组件的Element Name属性。
 
-### 開發指令碼以與Forms搭配使用 {#developing-scripts-for-use-with-forms}
+### 开发用于Forms的脚本 {#developing-scripts-for-use-with-forms}
 
-如需可在編寫指令碼時使用的API元素的詳細資訊，請參閱 [與表單相關的javadoc](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/foundation/forms/package-summary.html).
+有关编写脚本时可以使用的API元素的更多信息，请参阅 [与表单相关的javadoc](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/foundation/forms/package-summary.html).
 
-您可以將此用於動作，例如在提交表單前呼叫服務，以及在服務失敗時取消服務：
+您可以将其用于各种操作，例如在提交表单之前调用服务，并在服务失败时取消服务：
 
-* 定義驗證資源型別
-* 包含用於驗證的指令碼：
+* 定义验证资源类型
+* 包含用于验证的脚本：
 
-   * 在您的JSP中，呼叫您的Web服務並建立 `com.day.cq.wcm.foundation.forms.ValidationInfo` 包含錯誤訊息的物件。 如果出現錯誤，將不會發佈表單資料。
+   * 在JSP中，调用Web服务并创建 `com.day.cq.wcm.foundation.forms.ValidationInfo` 包含错误消息的对象。 如果出现错误，将不会发布表单数据。

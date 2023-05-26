@@ -1,7 +1,7 @@
 ---
-title: 設定Android Studio專案並建置Android應用程式
+title: 设置Android Studio项目并构建Android应用程序
 seo-title: Set up the Android studio project and build the Android app
-description: 設定Android Studio專案和建置AEM Forms應用程式安裝程式的步驟
+description: 设置Android Studio项目和构建AEM Forms应用程序安装程序的步骤
 seo-description: Steps to set up the Android Studio project and build the installer for the AEM Forms app
 uuid: 4c966cdc-d0f5-4b5b-b21f-f11e8a35ec8a
 content-type: reference
@@ -16,94 +16,94 @@ ht-degree: 7%
 
 ---
 
-# 設定Android Studio專案並建置Android應用程式 {#set-up-the-android-studio-project-and-build-the-android-app}
+# 设置Android Studio项目并构建Android应用程序 {#set-up-the-android-studio-project-and-build-the-android-app}
 
-本文章適用於建置AEM Forms應用程式6.3.1.1和更新版本。 若要從AEM Forms應用程式6.3的原始程式碼建立應用程式，請參閱 [設定Eclipse專案並建置Android™應用程式](/help/forms/using/setup-eclipse-project-build-installer.md).
+本文适用于构建AEM Forms应用程序6.3.1.1及更高版本。 有关从AEM Forms应用程序6.3的源代码构建应用程序的详细信息，请参阅 [设置Eclipse项目并构建Android™应用程序](/help/forms/using/setup-eclipse-project-build-installer.md).
 
-AEM Forms提供AEM Forms應用程式的完整原始碼。 來源包含建立自訂AEM Forms應用程式的所有元件。 原始程式碼封存， `adobe-lc-mobileworkspace-src-<version>.zip` 是 `adobe-aemfd-forms-app-src-pkg-<version>.zip` 軟體發佈上的套件。
+AEM Forms提供AEM Forms应用程序的完整源代码。 源包含用于构建自定义AEM Forms应用程序的所有组件。 源代码存档， `adobe-lc-mobileworkspace-src-<version>.zip` 是 `adobe-aemfd-forms-app-src-pkg-<version>.zip` Software Distribution上的包。
 
-若要取得AEM Forms應用程式來源，請執行下列步驟：
+要获取AEM Forms应用程序源，请执行以下步骤：
 
 1. 打开 [Software Distribution](https://experience.adobe.com/downloads)。您需要 Adobe ID 才能登录 Software Distribution。
 1. 点按标题菜单中的 **[!UICONTROL Adobe Experience Manager]**。
-1. 在 **[!UICONTROL 篩選器]** 區段：
-   1. 選取 **[!UICONTROL Forms]** 從 **[!UICONTROL 解決方案]** 下拉式清單。
-   2. 選取套件的版本和型別。 您也可以使用 **[!UICONTROL 搜尋下載]** 篩選結果的選項。
-1. 點選適用於您的作業系統的套件名稱，然後選取 **[!UICONTROL 接受EULA條款]**，然後點選 **[!UICONTROL 下載]**.
+1. 在 **[!UICONTROL 筛选器]** 部分：
+   1. 选择 **[!UICONTROL Forms]** 从 **[!UICONTROL 解决方案]** 下拉列表。
+   2. 选择包的版本和类型。 您还可以使用 **[!UICONTROL 搜索下载]** 用于筛选结果的选项。
+1. 点按适用于您的操作系统的包名称，然后选择 **[!UICONTROL 接受EULA条款]**，然后点按 **[!UICONTROL 下载]**.
 1. 打开[包管理器](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html)，并单击&#x200B;**[!UICONTROL 上传包]**&#x200B;以上传包。
-1. 選取套件並按一下 **[!UICONTROL 安裝]**.
+1. 选择资源包并单击 **[!UICONTROL 安装]**.
 
-下圖顯示擷取的 `adobe-lc-mobileworkspace-src-<version>.zip`.
+下图显示了提取的 `adobe-lc-mobileworkspace-src-<version>.zip`.
 
-![已擷取壓縮的Android™來源內容](assets/mws-content-1.png)
+![提取压缩的Android™源的内容](assets/mws-content-1.png)
 
-下列影像顯示 `android`中的資料夾 `src`資料夾。
+下图显示了 `android`中的文件夹 `src`文件夹。
 
-![src中android資料夾的目錄結構](assets/android-folder.png)
+![src中android文件夹的目录结构](assets/android-folder.png)
 
-## 建置標準AEM Forms應用程式 {#set-up-the-xcode-project}
+## 构建标准AEM Forms应用程序 {#set-up-the-xcode-project}
 
-1. 執行以下步驟，在Android™ Studio中設定專案並提供簽署身分：
+1. 执行以下步骤可在Android™ Studio中设置项目并提供签名标识：
 
-   登入已安裝並設定Android™ Studio的電腦。
+   登录到已安装并配置Android™ Studio的计算机。
 
-1. 複製下載的 `adobe-lc-mobileworkspace-src-<version>.zip` 封存至：
+1. 复制下载的 `adobe-lc-mobileworkspace-src-<version>.zip` 存档到：
 
-   **適用於MAC使用者**： `[User_Home]/Projects`
+   **对于MAC用户**： `[User_Home]/Projects`
 
-   **針對Windows®使用者**： `%HOMEPATH%\Projects`
-
-   >[!NOTE]
-   >
-   >若為Windows®，建議將Android專案保留在系統磁碟機中。
-
-1. 解壓縮下列目錄中的封存：
-
-   **適用於MAC使用者**： `[User_Home]/Projects/[your-project]`
-
-   **針對Windows®使用者**： `%HOMEPATH%\Projects\[your-project]`
+   **对于Windows®用户**： `%HOMEPATH%\Projects`
 
    >[!NOTE]
    >
-   >建議您將擷取的Android專案匯入Android Studio之前，先保留在系統磁碟機中。
+   >对于Windows®，建议将android项目保留在系统驱动器中。
 
-1. 啟動Android™ Studio。
+1. 在以下目录中解压缩归档：
 
-   **適用於MAC使用者**：更新 `local.properties` 檔案存在於 `[User_Home]/Projects/[your-project]/android` 資料夾並指向 `sdk.dir` 變數至 `SDK` 在案頭上的位置。
+   **对于MAC用户**： `[User_Home]/Projects/[your-project]`
 
-   **針對Windows®使用者**：更新 `local.properties` 檔案存在於 `%HOMEPATH%\Projects\[your-project]\android` 資料夾並指向 `sdk.dir` 變數至 `SDK` 在案頭上的位置。
+   **对于Windows®用户**： `%HOMEPATH%\Projects\[your-project]`
 
-1. 按一下 **[!UICONTROL 完成]** 以建置專案。
+   >[!NOTE]
+   >
+   >建议在将提取的Android项目导入Android Studio之前，先将其保留在系统驱动器中。
 
-   此專案可在ADT Project Explorer中使用。
+1. 启动Android™ Studio。
 
-   ![建立應用程式後執行eclipse專案](assets/eclipsebuildmws.png)
+   **对于MAC用户**：更新 `local.properties` 文件存在于 `[User_Home]/Projects/[your-project]/android` 文件夹并指向 `sdk.dir` 变量为 `SDK` 桌面上的位置。
 
-1. 在Android™ Studio中，選取 **[!UICONTROL 匯入專案（Eclipse ADT、Gradle等）]**.
-1. 在專案總管中，選取您想在中建立的專案根目錄 **根目錄** 文字方塊：
+   **对于Windows®用户**：更新 `local.properties` 文件存在于 `%HOMEPATH%\Projects\[your-project]\android` 文件夹并指向 `sdk.dir` 变量为 `SDK` 桌面上的位置。
 
-   **若為Mac使用者：** [User_Home]/Projects/MobileWorkspace/src/android
+1. 单击 **[!UICONTROL 完成]** 以构建项目。
 
-   **對於Windows®使用者：** %HOMEPATH%\Projects\MobileWorkspace\src\android
+   该项目在ADT项目资源管理器中可用。
 
-1. 匯入專案後，快顯視窗中會顯示更新Android™外掛程式Gradle的選項。 視您的需求按一下適當的按鈕。
+   ![构建应用程序后的eclipse项目](assets/eclipsebuildmws.png)
+
+1. 在Android™ Studio中，选择 **[!UICONTROL 导入项目（Eclipse ADT、Gradle等）]**.
+1. 在项目资源管理器中，选择要在中生成的项目的根目录 **根目录** 文本框：
+
+   **对于Mac用户：** [User_Home]/Projects/MobileWorkspace/src/android
+
+   **对于Windows®用户：** %HOMEPATH%\Projects\MobileWorkspace\src\android
+
+1. 导入项目后，会显示一个包含用于更新Android™插件Gradle的选项的弹出窗口。 根据您的要求，单击相应的按钮。
 
    ![dontremindmeagainforthisproject](assets/dontremindmeagainforthisproject.png)
 
-1. 成功建置Gradle後，會出現下列畫面。 將適當的裝置或模擬器連線至系統，然後按一下 **[!UICONTROL 執行Android™]**.
+1. 成功构建Gradle后，将显示以下屏幕。 将相应的设备或模拟器连接到系统，然后单击 **[!UICONTROL 运行安卓系统™]**.
 
    ![gradleconsole](assets/gradleconsole.png)
 
-1. Android™ Studio會顯示連線的裝置和可用的模擬器。 選取您要執行應用程式的裝置，然後按一下 **確定**.
+1. Android™ Studio显示连接的设备和可用的模拟器。 选择要运行应用程序的设备，然后单击 **确定**.
 
    ![connecteddevice](assets/connecteddevice.png)
 
-建立專案後，您可以選擇使用Android™ Debug Bridge或Android™ Studio安裝應用程式。
+生成项目后，您可以选择使用Android™ Debug Bridge或Android™ Studio安装应用程序。
 
 ### 使用Android™ Debug Bridge {#andriod-debug-bridge}
 
-您可以透過，在Android™裝置上安裝應用程式 [Android™ Debug Bridge](https://developer.android.com/tools/help/adb.html) 使用下列指令：
+您可以通过以下方式在Android™设备上安装应用程序 [Android™ Debug Bridge](https://developer.android.com/tools/help/adb.html) 使用以下命令：
 
-**適用於MAC使用者**： `adb install [User_Home]/Projects/[your-project]/adobe-lc-mobileworkspace-src-[version]/android/build/outputs/apk/android-debug.apk`
+**对于MAC用户**： `adb install [User_Home]/Projects/[your-project]/adobe-lc-mobileworkspace-src-[version]/android/build/outputs/apk/android-debug.apk`
 
-**針對Windows®使用者**： `adb install %HOMEPATH%\Projects\[your-project]\adobe-lc-mobileworkspace-src-[version]\android\build\outputs\apk\android-debug.apk`
+**对于Windows®用户**： `adb install %HOMEPATH%\Projects\[your-project]\adobe-lc-mobileworkspace-src-[version]\android\build\outputs\apk\android-debug.apk`

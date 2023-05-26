@@ -1,7 +1,7 @@
 ---
-title: 設定Visual Studio專案並建置Windows應用程式
+title: 设置Visual Studio项目并构建Windows应用程序
 seo-title: Set up the Visual Studio project and build the Windows app
-description: 瞭解如何設定Visual Studio專案以建置AEM Forms Windows行動裝置應用程式。
+description: 了解如何设置Visual Studio项目以构建AEM Forms Windows移动设备应用程序。
 seo-description: Learn how to set up a Visual Studio project to build the AEM Forms Windows mobile device app.
 uuid: 9559e584-2a40-4740-a29a-d7ad66220224
 topic-tags: forms-app
@@ -15,150 +15,150 @@ ht-degree: 5%
 
 ---
 
-# 設定Visual Studio專案並建置Windows應用程式{#set-up-the-visual-studio-project-and-build-the-windows-app}
+# 设置Visual Studio项目并构建Windows应用程序{#set-up-the-visual-studio-project-and-build-the-windows-app}
 
-AEM Forms提供AEM Forms應用程式的完整原始碼。 來源包含建立自訂工作區應用程式的所有元件。 原始程式碼封存， `adobe-lc-mobileworkspace-src-<version>.zip`是 `adobe-aemfd-forms-app-src-pkg-<version>.zip` 軟體發佈上的套件。
+AEM Forms提供AEM Forms应用程序的完整源代码。 源包含用于构建自定义工作区应用程序的所有组件。 源代码存档， `adobe-lc-mobileworkspace-src-<version>.zip`是 `adobe-aemfd-forms-app-src-pkg-<version>.zip` Software Distribution上的包。
 
-若要取得AEM Forms應用程式來源，請執行下列步驟：
+要获取AEM Forms应用程序源，请执行以下步骤：
 
 1. 打开 [Software Distribution](https://experience.adobe.com/downloads)。您需要 Adobe ID 才能登录 Software Distribution。
 1. 点按标题菜单中的 **[!UICONTROL Adobe Experience Manager]**。
-1. 在 **[!UICONTROL 篩選器]** 區段：
-   1. 選取 **[!UICONTROL Forms]** 從 **[!UICONTROL 解決方案]** 下拉式清單。
-   2. 選取套件的版本和型別。 您也可以使用 **[!UICONTROL 搜尋下載]** 篩選結果的選項。
-1. 點選適用於您的作業系統的套件名稱，然後選取 **[!UICONTROL 接受EULA條款]**，然後點選 **[!UICONTROL 下載]**.
+1. 在 **[!UICONTROL 筛选器]** 部分：
+   1. 选择 **[!UICONTROL Forms]** 从 **[!UICONTROL 解决方案]** 下拉列表。
+   2. 选择包的版本和类型。 您还可以使用 **[!UICONTROL 搜索下载]** 用于筛选结果的选项。
+1. 点按适用于您的操作系统的包名称，然后选择 **[!UICONTROL 接受EULA条款]**，然后点按 **[!UICONTROL 下载]**.
 1. 打开[包管理器](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html)，并单击&#x200B;**[!UICONTROL 上传包]**&#x200B;以上传包。
-1. 選取套件並按一下 **[!UICONTROL 安裝]**.
+1. 选择资源包并单击 **[!UICONTROL 安装]**.
 
-1. 若要下載原始程式碼封存，請開啟 `https://<server>:<port>/crx/de/content/forms/mobileapps/src/adobe-lc-mobileworkspace-src-<version>.zip` 在您的瀏覽器中。\
-   來源套件會下載到您的裝置上。
+1. 要下载源代码存档，请打开 `https://<server>:<port>/crx/de/content/forms/mobileapps/src/adobe-lc-mobileworkspace-src-<version>.zip` 在浏览器中。\
+   源包将在您的设备上下载。
 
-下圖顯示擷取的 `adobe-lc-mobileworkspace-src-<version>.zip`.
+下图显示了提取的 `adobe-lc-mobileworkspace-src-<version>.zip`.
 
 ![mws-content-1](assets/mws-content-1.png)
 
-下列影像顯示 `windows` 中的資料夾 `src` 資料夾。
+下图显示了 `windows` 中的文件夹 `src` 文件夹。
 
 ![win-dir](assets/win-dir.png)
 
-## 設定環境 {#setting-up-the-environment}
+## 设置环境 {#setting-up-the-environment}
 
-若是Windows裝置，您需要：
+对于Windows设备，您需要：
 
 * Microsoft Windows 8.1或Windows 10
 * Microsoft Visual Studio 2015
 * Microsoft Visual Studio Tools for Apache Cordova
 
-## 設定Visual Studio Project for AEM Forms應用程式 {#setting-up-visual-studio-project-for-aem-forms-app}
+## 设置Visual Studio Project for AEM Forms应用程序 {#setting-up-visual-studio-project-for-aem-forms-app}
 
-執行以下步驟，在Visual Studio中設定AEM Forms應用程式專案。
+执行以下步骤，在Visual Studio中设置AEM Forms应用程序项目。
 
-1. 複製 `adobe-lc-mobileworkspace-src-<version>.zip` 封存至 `%HOMEPATH%\Projects` 資料夾（在已安裝及設定Visual Studio 2015的Windows 8.1或Windows 10裝置上）。
-1. 在中擷取封存 `%HOMEPATH%\Projects\MobileWorkspace` 目錄。
-1. 導覽至 `%HOMEPATH%\Projects\MobileWorkspace\adobe-lc-mobileworkspace-src-[versionsrc]\windows` 目錄。
-1. 開啟 `CordovaApp.sln` 使用Visual Studio 2015建立檔案並繼續建置AEM Forms應用程式。
+1. 复制 `adobe-lc-mobileworkspace-src-<version>.zip` 存档到 `%HOMEPATH%\Projects` 安装并配置了Visual Studio 2015的Windows 8.1或Windows 10设备中的文件夹。
+1. 在中提取存档 `%HOMEPATH%\Projects\MobileWorkspace` 目录。
+1. 导航到 `%HOMEPATH%\Projects\MobileWorkspace\adobe-lc-mobileworkspace-src-[versionsrc]\windows` 目录。
+1. 打开 `CordovaApp.sln` 使用Visual Studio 2015生成文件并继续构建AEM Forms应用程序。
 
-## 建置AEM Forms應用程式 {#build-aem-forms-app}
+## 构建AEM Forms应用程序 {#build-aem-forms-app}
 
-執行以下步驟來建置和部署AEM Forms應用程式。
+执行以下步骤来构建和部署AEM Forms应用程序。
 
 >[!NOTE]
 >
->AEM Forms應用程式的Windows檔案系統上儲存的資料未加密。 建議您使用Windows BitLocker磁碟機加密之類的協力廠商工具來加密磁碟資料。
+>AEM Forms应用程序的Windows文件系统上存储的数据未加密。 建议您使用第三方工具（如Windows BitLocker驱动器加密）来加密磁盘数据。
 
-1. 在Visual Studio Standard工具列中，選取 **版本** 從「建置模式」下拉式清單中選取。
+1. 在Visual Studio Standard工具栏中，选择 **版本** 构建模式的下拉列表。
 
-1. 根據您的平台選取Windows-AnyCPU、Windows-x64或Windows-x86。 建議使用Windows-AnyCPU。
-1. 在Visual Studio解決方案總管中，以滑鼠右鍵按一下專案 **CordovaApp.Windows** 並選取 **商店>建立應用程式套件**.
+1. 根据您的平台选择Windows-AnyCPU、Windows-x64或Windows-x86。 建议使用Windows-AnyCPU。
+1. 在Visual Studio解决方案资源管理器中，右键单击项目 **CordovaApp.Windows** 并选择 **商店>创建应用程序包**.
 
    ![createapppackages](assets/createapppackages.png)
 
-   便會顯示「建立應用程式套件」精靈。
+   此时将显示“创建应用程序包”向导。
 
-   CordovaApp.Windows_3.0.2.0_anycpu.appx安裝程式檔案是在platforms\windows\AppPackages\CordovaApp.Windows_3.0.2.0_anycpu_Test目錄中建立。
+   CordovaApp.Windows_3.0.2.0_anycpu.appx安装程序文件在platforms\windows\AppPackages\CordovaApp.Windows_3.0.2.0_anycpu_Test目录中创建。
 
-   如果您遇到錯誤 `Retarget to windows 8.1 required`，以滑鼠右鍵按一下錯誤，然後在快顯功能表中選取 **重新鎖定目標至Windows 8.1**.
+   如果您遇到错误 `Retarget to windows 8.1 required`，右键单击错误，然后在弹出菜单中选择 **重新定位到Windows 8.1**.
 
-   ![重新鎖定目標 — 解決方案](assets/retarget-solution.png)
+   ![重新定位解决方案](assets/retarget-solution.png)
 
-1. 在「建立應用程式套件」精靈中，選取天氣或不想將應用程式上傳至Windows市集，然後按一下 **下一個**.
+1. 在“创建应用程序包”向导中，选择您是否要将应用程序上传到Windows应用商店，然后单击 **下一个**.
 
    ![createapppackageswizard1](assets/createapppackageswizard1.png)
 
-1. 視需要在引數中進行變更，例如應用程式組建的版本和輸出位置。
+1. 根据需要更改参数，例如应用程序内部版本的版本和输出位置。
 
    ![createapppackageswizard2](assets/createapppackageswizard2.png)
 
-1. 專案建立後，您可以使用以下方式安裝應用程式：
+1. 生成项目后，您可以使用以下方式安装应用程序：
 
    * Windows PowerShell
    * Visual Studio
 
-   此 `.appx` 套件需要下列專案才能成功安裝：
+   此 `.appx` 包需要以下项目才能成功安装：
 
-   1. WinJS資料庫
-   1. 確保套件包含自我簽署的憑證，或受信任的授權單位簽署的公開憑證，例如VeriSign。
-   1. 開發人員授權
+   1. WinJS库
+   1. 确保该软件包附带自签名证书，或受信任机构签名的公共证书，如VeriSign。
+   1. 开发人员许可证
 
-   目錄Platforms\windows\AppPackages\CordovaApp.Windows_3.0.2.0_anycpu_Test包含四個主要元件：
+   目录Platforms\windows\AppPackages\CordovaApp.Windows_3.0.2.0_anycpu_Test包含四个主要组件：
 
-   1. `.appx` 檔案
-   1. 憑證（目前是Apache Cordova的自簽憑證）
-   1. 相依性資料夾
-   1. PowerShell檔案（.ps1副檔名）
+   1. `.appx` 文件
+   1. 证书（当前是Apache Cordova的自签名证书）
+   1. 依赖关系文件夹
+   1. PowerShell文件（.ps1扩展名）
 
 
 
-## 使用Windows PowerShell部署應用程式 {#deploying-an-app-using-windows-powershell}
+## 使用Windows PowerShell部署应用程序 {#deploying-an-app-using-windows-powershell}
 
-在Windows裝置上安裝應用程式有兩種方式。
+在Windows设备上安装应用程序有两种方法。
 
-### 透過取得開發人員授權 {#by-acquiring-the-developer-license}
+### 通过获取开发人员许可证 {#by-acquiring-the-developer-license}
 
-1. 以滑鼠右鍵按一下PowerShell檔案( `Add-AppDevPackage.ps1)`，並選擇 **使用PowerShell執行**.
+1. 右键单击PowerShell文件( `Add-AppDevPackage.ps1)`，并选择 **使用PowerShell运行**.
 
-1. 安裝程式會提示您取得開發人員授權。 使用Microsoft帳戶憑證取得開發人員授權。\
-   本授權的有效期為30天，您可以免費續約。
-1. 當您取得開發人員授權時，安裝程式會在系統上安裝自我簽署憑證，且應用程式會成功安裝。
+1. 安装程序会提示您获取开发人员许可证。 使用Microsoft帐户凭据获取开发人员许可证。\
+   此许可证的有效期为30天，您可以免费续订。
+1. 当您获取开发人员许可证时，安装程序会在系统上安装自签名证书，并成功安装应用程序。
 
-### 透過使用企業擁有的裝置 {#by-using-enterprise-owned-devices}
+### 使用企业拥有的设备 {#by-using-enterprise-owned-devices}
 
-對於已加入企業網域的企業擁有裝置，不需要取得開發人員授權。
+对于已加入企业域的企业自有设备，不需要获取开发人员许可证。
 
-企業擁有的裝置使用Professional和Enterprise版本的Windows。
+企业拥有的设备使用Professional版和Enterprise版的Windows。
 
-Microsoft建議您安裝受信任的授權單位，例如VeriSign。
+Microsoft建议您安装受信任的颁发机构，颁发公共证书，如VeriSign。
 
-若要部署應用程式：
+要部署应用程序，请执行以下操作：
 
-* 確保裝置已加入企業的網域。
-* 啟用群組原則設定。
+* 确保设备已加入企业的域。
+* 启用组策略设置。
 
-**若要啟用群組原則設定：**
+**启用组策略设置：**
 
-1. 在您的裝置中，執行 `gpedit.msc`.
-1. 導覽至 **電腦設定>系統管理範本> Windows元件>應用程式套件部署**.
-1. 按一下右鍵 **允許安裝所有信任的應用程式**.
-1. 按一下 **編輯** 並選取 **已啟用**.
+1. 在您的设备中，运行 `gpedit.msc`.
+1. 导航到 **计算机配置>管理模板> Windows组件>应用程序包部署**.
+1. 右键单击 **允许安装所有受信任的应用程序**.
+1. 单击 **编辑** 并选择 **已启用**.
 
 1. 单击&#x200B;**确定**。
 
-編輯Visual Studio產生的PowerShell指令碼，以停止其取得開發人員授權。
+编辑Visual Studio生成的PowerShell脚本，以阻止其获取开发人员许可证。
 
-在PowerShell指令碼中，設定變數： `$NeedDeveloperLicense = $false`.
+在PowerShell脚本中，设置变量： `$NeedDeveloperLicense = $false`.
 
-對於未加入網域的裝置，需要側載產品啟用金鑰。 您可以向Windows經銷商購買。
+对于未加入域的设备，需要侧加载产品激活密钥。 您可以从Windows经销商处购买。
 
-對於Windows 8.1 Home Edition，沒有群組原則，不允許企業端載入，而且您無法將其加入企業網域。 使用開發人員授權在Windows 8.1 Home Edition裝置上部署應用程式。
+对于Windows 8.1 Home版，没有组策略，不允许企业端加载，并且不能将其与企业域联接。 使用开发人员许可证在Windows 8.1 Home Edition设备上部署应用程序。
 
-如需詳細資訊，請按一下 [此處](https://blogs.msdn.com/b/mvpawardprogram/archive/2014/03/24/side-loading-deployment-of-windows-store-apps-in-enterprises-step-by-step.aspx).
+有关详细信息，请单击 [此处](https://blogs.msdn.com/b/mvpawardprogram/archive/2014/03/24/side-loading-deployment-of-windows-store-apps-in-enterprises-step-by-step.aspx).
 
-## 使用Visual Studio部署應用程式 {#deploying-an-app-using-visual-studio}
+## 使用Visual Studio部署应用程序 {#deploying-an-app-using-visual-studio}
 
-若要使用Visual Studio在Windows上安裝應用程式：
+要使用Visual Studio在Windows上安装应用程序，请执行以下操作：
 
-1. 使用遠端偵錯工具連線裝置。\
-   如需詳細資訊，請參閱 [在遠端電腦上執行Windows市集應用程式](https://docs.microsoft.com/en-us/visualstudio/debugger/run-windows-store-apps-on-a-remote-machine).
+1. 使用远程调试器连接设备。\
+   有关更多信息，请参阅 [在远程计算机上运行Windows应用商店应用](https://docs.microsoft.com/en-us/visualstudio/debugger/run-windows-store-apps-on-a-remote-machine).
 
-1. 在Visual Studio中開啟您的應用程式後，從「解決方案平台」清單中選擇Windows-x64、Windows-x86或Windows-AnyCPU，然後選取 **遠端電腦**.
-1. 您的應用程式已部署在遠端電腦上。
+1. 在Visual Studio中打开应用程序后，从“解决方案平台”列表中选择Windows-x64、Windows-x86或Windows-AnyCPU，然后选择 **远程计算机**.
+1. 您的应用程序已部署到远程计算机上。

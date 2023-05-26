@@ -1,7 +1,7 @@
 ---
-title: 設定分析和報表
+title: 配置分析和报表
 seo-title: Configuring analytics and reports
-description: 瞭解如何設定Adobe Analytics以發現使用者在使用最適化表單、最適化檔案和HTML5表單時面臨的互動模式和問題。
+description: 了解如何配置Adobe Analytics以发现用户在使用自适应表单、自适应文档和HTML5表单时面临的交互模式和问题。
 seo-description: Learn how to configure Adobe Analytics to discover interaction patterns and problems users face while using adaptive forms, adaptive documents, and HTML5 forms.
 uuid: ac5d1300-f303-40e8-a33e-4859a54ac10d
 content-type: reference
@@ -17,175 +17,175 @@ ht-degree: 3%
 
 ---
 
-# 使用Cloud Service架構的Analytics {#analyticsusingcloudframework}
+# 使用Cloud Service框架进行分析 {#analyticsusingcloudframework}
 
-AEM Forms與Analytics整合，可讓您擷取及追蹤已發佈表單和檔案的績效量度。 分析这些指标的目的在于，根据有关使表单或文档更有用所需的更改的数据做出明智的决策。
+AEM Forms与Analytics集成，允许您捕获和跟踪已发布表单和文档的性能指标。 分析这些指标的目的在于，根据有关使表单或文档更有用所需的更改的数据做出明智的决策。
 
 >[!NOTE]
 >
->AEM Forms中的分析功能屬於AEM Forms附加元件套件的一部分。 如需有關安裝附加元件套件的資訊，請參閱 [安裝和設定AEM Forms](../../forms/using/installing-configuring-aem-forms-osgi.md).
+>AEM Forms中的Analytics功能作为AEM Forms附加组件包的一部分提供。 有关安装附加组件包的信息，请参阅 [安装和配置AEM Forms](../../forms/using/installing-configuring-aem-forms-osgi.md).
 >
->除了附加元件套件之外，您還需要Adobe Analytics帳戶和AEM執行個體的管理員許可權。 如需解決方案的相關資訊，請參閱 [Adobe Analytics](https://www.adobe.com/solutions/digital-analytics.html).
+>除了附加组件包之外，您还需要Adobe Analytics帐户和AEM实例的管理员权限。 有关解决方案的信息，请参见 [Adobe Analytics](https://www.adobe.com/solutions/digital-analytics.html).
 
-您也可以使用Analytics Launch執行Adobe。 如需如何將AEM Forms與Adobe Launch整合的詳細資訊，請參閱 [使用Adobe啟動的Analytics](/help/forms/using/integrate-aem-forms-with-adobe-analytics.md).
+您还可以使用Adobe启动项执行分析。 有关如何将AEM Forms与AdobeLaunch集成的详细信息，请参阅 [使用Adobe启动项的Analytics](/help/forms/using/integrate-aem-forms-with-adobe-analytics.md).
 
 ## 概述 {#overview}
 
-您可以使用Adobe Analytics來探索使用者在使用最適化表單、HTML5表單和互動式通訊時遇到的互動模式和問題。 Adobe分析可立即追蹤並儲存下列引數的相關資訊：
+您可以使用Adobe Analytics发现用户在使用自适应表单、HTML5表单和交互式通信时面临的交互模式和问题。 Adobe分析可开箱即用地跟踪和存储有关以下参数的信息：
 
-* **平均填滿時間**：填寫表單所花的平均時間。
-* **轉譯**：表單開啟次數。
-* **草稿**：表單以草稿狀態儲存的次數。
-* **提交內容**：表單提交次數。
-* **中止**：使用者未完成表單而離開的次數。
+* **平均填充时间**：填写表单所花费的平均时间。
+* **演绎版**：打开表单的次数。
+* **草稿**：表单在草稿状态中保存的次数。
+* **提交内容**：提交表单的次数。
+* **中止**：用户未完成表单而离开的次数。
 
-您可以自訂Adobe Analytics以新增/移除更多引數。 除了上述資訊外，報表還包含有關HTML5每個面板和調適型表單的下列資訊：
+您可以自定义Adobe Analytics以添加/删除更多参数。 除上述信息外，此报表还包含有关HTML5和自适应表单各个面板的以下信息：
 
-* **時間**：面板和面板欄位逗留時間。
-* **錯誤**：在面板和面板欄位上遇到的錯誤數。
-* **說明**：使用者開啟面板說明及面板欄位的次數。
+* **时间**：在面板和面板的字段上花费的时间。
+* **错误**：在面板和面板的字段中遇到的错误数。
+* **帮助**：用户打开面板帮助和面板字段的次数。
 
-## 建立報表套裝 {#creating-report-suite}
+## 创建报表包 {#creating-report-suite}
 
-Analytics資料會儲存在客戶特定的存放庫（稱為報表套裝）。 若要建立報表套裝並使用Adobe Analytics，您必須具備有效的Adobe Marketing Cloud帳戶。 執行以下步驟之前，請確定您擁有有效的Adobe Marketing Cloud帳戶。
+Analytics数据存储在特定于客户的存储库中，称为报表包。 要创建报表包并使用Adobe Analytics，您必须拥有有效的Adobe Marketing Cloud帐户。 执行以下步骤之前，请确保您拥有有效的Adobe Marketing Cloud帐户。
 
-執行以下步驟來建立報表套裝。
+执行以下步骤可创建报表包。
 
-1. 登入： [https://sc.omniture.com/login/](https://sc.omniture.com/login/)
-1. 在Marketing Cloud中，選取 **管理員** > **Admin Console** > **報表套裝**.
-1. 選取 **新建** > **報表套裝** 在「報表套裝管理器」中。
+1. 登录于 [https://sc.omniture.com/login/](https://sc.omniture.com/login/)
+1. 在Marketing Cloud中，选择 **管理员** > **Admin Console** > **报表包**.
+1. 选择 **新建** > **报表包** 在“报表包管理器”中。
 
-   ![建立新的報表套裝](assets/newreportsuite_new.png)
+   ![创建新报表包](assets/newreportsuite_new.png)
 
-   建立新的報表套裝
+   创建新报表包
 
-1. 確定第一個下拉式清單已設為 **從範本建立** 然後選取 **商務**.
-1. 找到 **報表套裝ID** 並新增報表套裝ID。 例如，JJEsquire。 報表套裝ID會顯示在「報表套裝ID」欄位下方。 它包含自動前置詞，通常是公司名稱。
-1. 新增 **網站標題**. 例如，JJEsquire Getting Started Suite。 此標題用於Analytics UI。 在程式碼中使用報表套裝ID。
-1. 選取 **時區** 下拉式清單中的。 所有進入此報表套裝的資料都會根據定義的時區進行記錄。
-1. 離開 **基本URL** 和 **預設頁面** 欄位空白。 這兩個值只會從Adobe Marketing Cloud介面用來連結至您的網站。
-1. 離開 **上線日期** 設定為今天。 上線日期會決定報表套裝的啟動日期。
-1. 在 **預估的每日頁面檢視次數** 欄位，輸入100。 使用此欄位來預估您預計網站每天的頁面檢視次數。 此估算可讓Adobe放置適當的硬體數量，以處理您將要收集的資料。
-1. 選取 **基本貨幣** 下拉式清單中的。 所有進入此報表套裝的貨幣資料都會轉換並儲存為此貨幣格式。
-1. 按一下 **建立報告** 套裝。 您應該會看到頁面重新整理，並顯示已成功建立報表套裝的訊息。
-1. 選取新建立的報表套裝。 導覽至 **編輯設定** > **一般** > **一般帳戶設定**.
+1. 确保第一个下拉列表设置为 **从模板创建** 然后选择 **商务**.
+1. 找到 **报表包ID** 字段，并添加新的报表包ID。 例如，JJEsquire。 报表包ID显示在报表包ID字段的下方。 它包括一个自动前缀，通常是公司名称。
+1. 新增 **站点标题**. 例如，JJEsquire入门套件。 此标题在Analytics UI中使用。 在代码中使用报表包ID。
+1. 选择 **时区** 从下拉菜单中查找。 进入此报表包的所有数据将按照定义的时区进行记录。
+1. 保留 **基本URL** 和 **默认页面** 字段为空。 这两个值只能从Adobe Marketing Cloud界面用于链接到您的网站。
+1. 保留 **上线日期** 设置为今天。 上线日期确定激活报表包的日期。
+1. 在 **预计每日页面查看次数** 字段，键入100。 使用此字段可估计您预计网站每天的页面查看次数。 此估算允许Adobe安装适当数量的硬件来处理您将收集的数据。
+1. 选择 **基础货币** 从下拉菜单中查找。 所有进入此报表包的货币数据都会转换并存储为此货币格式。
+1. 单击 **创建报告** 套装。 您应该会在页面刷新中看到一条消息，指出您的报表包已成功创建。
+1. 选择新创建的报表包。 导航到 **编辑设置** > **常规** > **一般帐户设置**.
 
-   ![一般帳戶設定](assets/geographic_settings.png)
+   ![一般帐户设置](assets/geographic_settings.png)
 
-   一般帳戶設定
+   一般帐户设置
 
-1. 在一般帳戶設定畫面中，啟用 **地理位置報表**，然後按一下 **儲存。**
-1. 導覽至 **編輯設定** > **流量** > **流量變數**.
-1. 在報表套裝中，設定並啟用以下流量變數。
+1. 在“常规帐户设置”屏幕中，启用 **地理位置报表**，然后单击 **保存。**
+1. 导航到 **编辑设置** > **流量** > **流量变量**.
+1. 在报表包中，配置和启用以下流量变量。
 
-   * **formName**：最適化表單的識別碼。
-   * **formInstance**：最適化表單執行個體的識別碼。 為此變數啟用路徑報表。
-   * **fieldName**：最適化表單欄位的識別碼。 為此變數啟用路徑報表。
-   * **panelName**：最適化表單面板的識別碼。 為此變數啟用路徑報表。
-   * **formTitle**：表單標題。
-   * **fieldTitle**：表單欄位的標題。
-   * **panelTitle**：表單面板的標題。
-   * **analyticsVersion**：表單分析的版本。
+   * **formName**：自适应表单的标识符。
+   * **formInstance**：自适应表单实例的标识符。 为此变量启用路径报表。
+   * **fieldName**：自适应表单字段的标识符。 为此变量启用路径报表。
+   * **panelName**：自适应表单面板的标识符。 为此变量启用路径报表。
+   * **formTitle**：表单标题。
+   * **字段标题**：表单字段的标题。
+   * **paneltitle**：表单面板的标题。
+   * **analyticsVersion**：表单分析的版本。
 
-1. 導覽至 **編輯設定** > **轉換** > **成功事件**. 定義並啟用下列成功事件：
+1. 导航到 **编辑设置** > **转化** > **成功事件**. 定义并启用以下成功事件：
 
    | 成功事件 | 类型 |
    |---|---|
-   | 捨棄 | 计数器 |
-   | 轉譯 | 计数器 |
+   | 放弃 | 计数器 |
+   | 渲染 | 计数器 |
    | panelVisit | 计数器 |
    | fieldVisit | 计数器 |
    | 保存 | 计数器 |
    | 错误 | 计数器 |
    | 帮助 | 计数器 |
    | 提交 | 计数器 |
-   | 逗留時間 | 数字 |
+   | 逗留时间 | 数字 |
 
    >[!NOTE]
    >
-   >用來設定AEM Forms Analytics的事件編號和Prop編號，必須不同於中使用的事件編號和Prop編號 [AEM分析](/help/sites-administering/adobeanalytics.md) 設定。
+   >用于配置AEM Forms Analytics的事件编号和prop编号必须不同于中使用的事件编号和prop编号 [AEM分析](/help/sites-administering/adobeanalytics.md) 配置。
 
-1. 登出Adobe Marketing Cloud帳戶。
+1. 注销Adobe Marketing Cloud帐户。
 
-## 建立Cloud Service設定 {#creating-cloud-service-configuration}
+## 创建Cloud Service配置 {#creating-cloud-service-configuration}
 
-Cloud Service設定是有關Adobe Analytics帳戶的資訊。 此設定可讓Adobe Experience Manager (AEM)連線至Adobe Analytics。 為您使用的每個Analytics帳戶建立個別設定。
+Cloud Service配置是有关Adobe Analytics帐户的信息。 通过配置，Adobe Experience Manager (AEM)可以连接到Adobe Analytics。 为您使用的每个Analytics帐户创建单独的配置。
 
-1. 以管理員身分登入您的AEM編寫執行個體。
-1. 在左上角，按一下 **Adobe Experience Manager** > **工具** ![](/help/forms/using/assets/tools.png) > **Cloud Services** > **舊版Cloud Services**.
-1. 尋找 **Adobe Analytics** 圖示。 按一下 **顯示設定** 然後繼續按一下 **[+]** 以新增設定。
+1. 以管理员身份登录到您的AEM创作实例。
+1. 在左上角，单击 **Adobe Experience Manager** > **工具** ![](/help/forms/using/assets/tools.png) > **Cloud Services** > **旧版Cloud Services**.
+1. 查找 **Adobe Analytics** 图标。 单击 **显示配置** 然后继续单击 **[+]** 以添加新配置。
 
-   如果您是首次使用的使用者，請按一下 **立即設定**.
+   如果您是首次使用的用户，请单击 **立即配置**.
 
-1. 將標題新增到新設定（填寫名稱欄位是選擇性的）。 例如，我的分析設定。 单击&#x200B;**创建**。
+1. 向新配置添加标题（填写名称字段是可选的）。 例如，我的分析配置。 单击&#x200B;**创建**。
 
-1. 在設定頁面上開啟「編輯」面板時，請填寫欄位：
+1. 在配置页面上打开“编辑”面板时，填写以下字段：
 
-   * **公司**：貴公司在Adobe Analytics上的名稱。
-   * **使用者名稱**：用來登入Adobe Analytics的名稱。
-   * **密碼**：上述帳戶的Adobe Analytics密碼。
-   * **資料中心**：Adobe Analytics帳戶的資料中心。
+   * **公司**：您在Adobe Analytics中精选的公司名称。
+   * **用户名**：用于登录到Adobe Analytics的名称。
+   * **密码**：上述帐户的Adobe Analytics密码。
+   * **数据中心**：Adobe Analytics帐户的数据中心。
 
-1. 按一下 **連線至Analytics**. 會出現一個對話方塊，其中包含連線成功的訊息。 单击&#x200B;**确定**。
+1. 单击 **连接到Analytics**. 将出现一个对话框，其中显示连接成功的消息。 单击&#x200B;**确定**。
 
-## 建立Cloud Service架構 {#creating-cloud-service-framework}
+## 创建Cloud Service框架 {#creating-cloud-service-framework}
 
-Adobe Analytics架構是Adobe Analytics變數與AEM變數之間的一組對應。 使用架構來設定表單如何填入資料到Adobe Analytics報表。 架構與Adobe Analytics設定相關聯。 您可以為每個設定建立多個架構。
+Adobe Analytics框架是Adobe Analytics变量与AEM变量之间的一组映射。 使用框架配置表单如何将数据填充到Adobe Analytics报表中。 框架与Adobe Analytics配置关联。 您可以为每个配置创建多个框架。
 
-1. 在AEM雲端服務主控台上，按一下 **顯示設定**，位於Adobe Analytics下。
-1. 按一下 **[+]** Analytics設定旁的連結。
+1. 在AEM Cloud Services控制台上，单击 **显示配置**，位于Adobe Analytics下。
+1. 单击 **[+]** Analytics配置旁边的链接。
 
-   ![Adobe Analytics設定](assets/adobe-analytics-cloud-services.png)
+   ![Adobe Analytics配置](assets/adobe-analytics-cloud-services.png)
 
-   Adobe Analytics設定
+   Adobe Analytics配置
 
-1. 輸入a **標題** 和 **名稱** 對於框架，選取 **Adobe Analytics** 框架，然後按一下 **建立**. 框架隨即開啟以進行編輯。
-1. 在側邊面板的「報表套裝」區段中，按一下 **新增專案**，然後使用下拉式清單選取框架會與之互動的報表套裝ID （例如JJEsquire）。
-1. 在報表套裝ID旁邊，選取您要傳送資訊至報表套裝的伺服器執行個體。
+1. 键入a **标题** 和 **名称** 对于框架，选择 **Adobe Analytics** 框架，然后单击 **创建**. 此时将打开框架进行编辑。
+1. 在侧面板的报表包部分中，单击 **添加项目**，然后使用下拉菜单选择与框架交互的报表包ID（例如JJEsquire）。
+1. 在报表包ID旁边，选择要向报表包发送信息的服务器实例。
 
    ![information_to_send_to_report_suite](assets/information_to_send_to_report_suite.png)
 
-1. 拖曳 **表單分析元件** 從 **其他** 類別至SideKick至框架。
-1. 若要將Analytics變數與元件中定義的變數對應，請將變數從AEM Content Finder拖曳至追蹤元件上的欄位。
+1. 拖动 **Form Analytics组件** 从 **其他** 类别从SideKick转到框架。
+1. 要将Analytics变量与组件中定义的变量进行映射，请将变量从AEM Content Finder拖动到跟踪组件上的字段。
 
-   ![將AEM變數與Adobe Analytics變數對應](assets/analytics_new.png)
+   ![将AEM变量与Adobe Analytics变量映射](assets/analytics_new.png)
 
-1. 使用啟動框架 **頁面索引標籤** 在sidekick中，按一下 **啟動框架**.
+1. 使用激活框架 **页面选项卡** 在sidekick中，单击 **激活框架**.
 
-## 設定AEM Forms Analytics設定服務 {#configuring-aem-forms-analytics-configuration-service}
+## 配置AEM Forms Analytics配置服务 {#configuring-aem-forms-analytics-configuration-service}
 
-1. 在製作執行個體上，開啟AEM Web主控台設定管理員，網址為 `https://<server>:<port>;/system/console/configMgr`.
-1. 找到並開啟AEM Forms Analytics設定
+1. 在创作实例上，打开AEM Web控制台配置管理器，网址为 `https://<server>:<port>;/system/console/configMgr`.
+1. 找到并打开AEM Forms Analytics配置
 
-   ![AEM Forms Analytics設定服務](assets/analytics_configuration.png)
+   ![AEM Forms Analytics配置服务](assets/analytics_configuration.png)
 
-   AEM Forms Analytics設定服務
+   AEM Forms Analytics配置服务
 
-1. 為下列欄位指定適當的值，然後按一下 **儲存**.
+1. 为以下字段指定适当的值，然后单击 **保存**.
 
-   * **SiteCatalyst架構**：選取您在設定追蹤架構區段中定義的架構/設定。
-   * **欄位時間追蹤基準線**：以秒數指定必須追蹤欄位造訪的持續時間。 默认值为 0。當值大於0 （零）時，會將兩個個別的追蹤事件傳送至Adobe Analytics伺服器。 第一個事件會指示Analytics伺服器停止追蹤退出欄位。 第二個事件會在指定的持續時間過後傳送。 第二個事件會指示Analytics伺服器開始追蹤已造訪的欄位。 使用兩個不同的事件有助於準確測量在欄位上逗留的時間。 當值為0 （零）時，單一追蹤事件會傳送至Adobe Analytics伺服器。
+   * **SiteCatalyst框架**：选择您在设置跟踪框架部分中定义的框架/配置。
+   * **字段时间跟踪基线**：以秒为单位，指定必须跟踪字段访问的持续时间。 默认值为 0。如果该值大于0（零），则会向Adobe Analytics服务器发送两个单独的跟踪事件。 第一个事件指示Analytics服务器停止跟踪退出字段。 第二个事件在指定的持续时间过后发送。 第二个事件指示Analytics服务器开始跟踪已访问的字段。 使用两个不同的事件有助于准确测量在字段上花费的时间。 当值为0（零）时，单个跟踪事件将发送到Adobe Analytics服务器。
 
-   * **Analytics報表同步cron**：指定從Adobe Analytics擷取報表的cron運算式。 預設值為0 0 2 ？ &#42; &#42;.
+   * **Analytics报表同步cron**：指定用于从Adobe Analytics获取报表的cron表达式。 默认值为0 0 2 ？ &#42; &#42;.
 
-   * **擷取報表逾時：** 以秒數指定等候伺服器回應分析報告的持續時間。 預設時間為120秒。
+   * **获取报表超时：** 以秒为单位，指定等待服务器响应分析报表的持续时间。 默认时间为120秒。
    >[!NOTE]
    >
-   >逾時報表擷取作業最多可能需要10秒，而不是指定的秒數。
+   >超时报表提取操作可能比指定的秒数多花10秒。
 
-1. 在發佈執行個體上重複步驟1-3以設定Analytics。
+1. 在发布实例上重复步骤1-3以配置Analytics。
 
-現在，您可以為表單啟用分析並產生分析報表。
+现在，您可以为表单启用分析并生成分析报告。
 
-## 為表單或檔案啟用分析 {#enabling-analytics-for-a-form-or-document}
+## 为表单或文档启用分析 {#enabling-analytics-for-a-form-or-document}
 
-1. 登入AEM入口網站： `https://[hostname]:'port'`.
-1. 按一下 **Forms > Forms與檔案**，選取表單或檔案，然後按一下 **啟用Analytics**. 已啟用Analytics。
+1. 登录到AEM门户： `https://[hostname]:'port'`.
+1. 单击 **Forms > Forms和文档**，选择表单或文档，然后单击 **启用Analytics**. 已启用Analytics。
 
-   ![為表單或檔案啟用分析](assets/enable-analytics-1.png)
+   ![为表单或文档启用分析](assets/enable-analytics-1.png)
 
-   為表單啟用分析
+   为表单启用分析
 
-   **答：** 啟用Analytics按鈕 **B.** 選取的表單
+   **答：** “启用Analytics”按钮 **B.** 选定的表单
 
-   如需檢視表單分析報表的詳細資訊，請參閱 [檢視和瞭解AEM Forms Analytics報表](../../forms/using/view-understand-aem-forms-analytics-reports.md).
+   有关查看表单分析报表的详细信息，请参阅 [查看和了解AEM Forms Analytics报表](../../forms/using/view-understand-aem-forms-analytics-reports.md).

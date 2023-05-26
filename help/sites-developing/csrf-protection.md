@@ -1,7 +1,7 @@
 ---
-title: CSRF保護架構
+title: CSRF保护框架
 seo-title: The CSRF Protection Framework
-description: 此框架會使用代號來保證使用者端請求是合法的
+description: 该框架使用令牌来保证客户端请求的合法性
 seo-description: The framework makes use of tokens to guarantee that the client request is legitimate
 uuid: 7cb222ba-fc7a-46ee-8b49-a5f39a53580b
 contentOwner: Guillaume Carlino
@@ -17,32 +17,32 @@ ht-degree: 0%
 
 ---
 
-# CSRF保護架構{#the-csrf-protection-framework}
+# CSRF保护框架{#the-csrf-protection-framework}
 
-除了Apache Sling反向連結篩選條件外，Adobe還提供新的CSRF保護架構，可抵禦此類攻擊。
+除了Apache Sling Referrer Filter之外，Adobe还提供了一个新的CSRF Protection Framework来抵御此类攻击。
 
-此框架會使用代號來保證使用者端請求是合法的。 代號會在表單傳送至使用者端時產生，並在表單傳回伺服器時驗證。
+该框架使用令牌来保证客户端请求的合法性。 令牌在表单发送到客户端时生成，并在表单发送回服务器时进行验证。
 
 >[!NOTE]
 >
->匿名使用者的發佈執行個體上沒有任何權杖。
+>发布实例上没有匿名用户的令牌。
 
 ## 要求 {#requirements}
 
 ### 依赖项 {#dependencies}
 
-任何依賴 `granite.jquery` 相依性會自動受益於CSRF保護架構。 若您的任何元件不是這種情況，您必須將相依性宣告至 `granite.csrf.standalone` 之後才能使用架構。
+任何依赖于 `granite.jquery` 依赖项将自动从CSRF保护框架中受益。 如果任何组件均不是这种情况，则必须将依赖关系声明到 `granite.csrf.standalone` 才能使用该框架。
 
-### 複製加密金鑰 {#replicating-crypto-keys}
+### 复制加密密钥 {#replicating-crypto-keys}
 
-為了使用權杖，您需要將HMAC二進位檔復寫至部署中的所有執行個體。 另請參閱 [複製HMAC金鑰](/help/sites-administering/encapsulated-token.md#replicating-the-hmac-key) 以取得更多詳細資料。
-
->[!NOTE]
->
->請確定您也做了必要的 [Dispatcher設定變更](https://helpx.adobe.com/experience-manager/dispatcher/user-guide.html) 以使用CSRF保護架構。
+为了使用令牌，您需要将HMAC二进制文件复制到部署中的所有实例。 参见 [复制HMAC密钥](/help/sites-administering/encapsulated-token.md#replicating-the-hmac-key) 了解更多详细信息。
 
 >[!NOTE]
 >
->如果您使用資訊清單快取搭配網頁應用程式，請務必新增&quot;**&amp;ast；**」至資訊清單，以確保權杖不會使CSRF權杖產生呼叫離線。 如需詳細資訊，請參閱此 [連結](https://www.w3.org/TR/offline-webapps/).
+>确保您还需要 [Dispatcher配置更改](https://helpx.adobe.com/experience-manager/dispatcher/user-guide.html) 以使用CSRF保护框架。
+
+>[!NOTE]
 >
->如需有關CSRF攻擊及緩解這些攻擊之方法的詳細資訊，請參閱 [跨網站請求偽造OWASP頁面](https://owasp.org/www-community/attacks/csrf).
+>如果您在Web应用程序中使用清单缓存，请确保添加“**&amp;ast；**”到清单，以确保令牌不会使CSRF令牌生成调用脱机。 有关更多信息，请参阅此 [链接](https://www.w3.org/TR/offline-webapps/).
+>
+>有关CSRF攻击以及缓解这些攻击方法的更多信息，请参阅 [跨站点请求伪造OWASP页面](https://owasp.org/www-community/attacks/csrf).

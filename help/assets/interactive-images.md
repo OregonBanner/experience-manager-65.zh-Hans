@@ -1,6 +1,6 @@
 ---
-title: 互動式影像
-description: 瞭解如何在Dynamic Media中使用互動式影像
+title: 交互式图像
+description: 了解如何在Dynamic Media中使用交互式图像
 uuid: 0bdb73f7-6ce9-4cdf-b6b5-a4d3d4e19a23
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -18,135 +18,135 @@ ht-degree: 1%
 
 ---
 
-# 互動式影像{#interactive-images}
+# 交互式图像{#interactive-images}
 
-您可以將「可購物」熱點拖放至影像上，輕鬆讓靜態影像豐富，吸引客戶體驗。 可購物熱點結合有關產品或服務的其他資訊與直接的銷售點「加入購物車」或「購買」功能。 客戶可以選取這些熱點並直接連結至產品或服務、將其新增至購物車，或連結至網頁。 這類直接體驗會增加客戶參與度和您網站上的轉換率。
+通过将“可购物”热点拖放到图像上，您可以轻松使静态图像丰富并吸引客户体验。 可购物热点将有关产品或服务的其他信息与直接的销售点“添加到购物车”或“购买”功能相结合。 客户可以选择这些热点并直接链接到产品或服务、将其添加到购物车或链接到网页。 这样的直接体验可提高客户参与度和网站上的转化率。
 
-以下是具有「快速檢視」快顯視窗的可購物橫幅。 使用者可透過選取模型上的圓形或「熱點」來啟動快速檢視。
+以下是带有概览弹出窗口的可购物横幅。 用户通过在模型上选择圆或“热点”来激活概览。
 
 ![chlimage_1-152](assets/chlimage_1-368.png)
 
-請前往下列網址，檢視互動式影像在上述網頁上的運作中：
+通过转到以下位置，查看上面网页上正在运行的交互式图像：
 
 [https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion-QVzoom/index2-shoppable.html](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion-QVzoom/index2-shoppable.html)
 
-## 觀看互動式影像橫幅的建立方式 {#watch-how-interactive-image-banners-are-created}
+## 观看如何创建交互式图像横幅 {#watch-how-interactive-image-banners-are-created}
 
-在上播放逐步解說 [如何建立互動式影像橫幅](https://s7d5.scene7.com/s7viewers/html5/VideoViewer.html?videoserverurl=https://s7d5.scene7.com/is/content/&amp;emailurl=https://s7d5.scene7.com/s7/emailFriend&amp;serverUrl=https://s7d5.scene7.com/is/image/&amp;config=Scene7SharedAssets/Universal_HTML5_Video_social&amp;contenturl=https://s7d5.scene7.com/skins/&amp;asset=S7tutorials/InteractiveCarouselBanner) （10分33秒）。 您也會瞭解如何預覽、編輯及傳遞互動式影像橫幅。
+演练 [如何创建交互式图像横幅](https://s7d5.scene7.com/s7viewers/html5/VideoViewer.html?videoserverurl=https://s7d5.scene7.com/is/content/&amp;emailurl=https://s7d5.scene7.com/s7/emailFriend&amp;serverUrl=https://s7d5.scene7.com/is/image/&amp;config=Scene7SharedAssets/Universal_HTML5_Video_social&amp;contenturl=https://s7d5.scene7.com/skins/&amp;asset=S7tutorials/InteractiveCarouselBanner) （10分33秒）。 您还将了解如何预览、编辑和交付交互式图像横幅。
 
-## 快速入門：互動式影像 {#quick-start-interactive-images}
+## 快速入门：交互式图像 {#quick-start-interactive-images}
 
-下列逐步工作流程說明可協助您在Adobe Experience Manager Assets中快速啟動並執行互動式影像。
+以下分步工作流描述旨在帮助您在Adobe Experience Manager Assets中快速启动和运行交互式图像。
 
-尋找 **範例** 部分快速入門任務中的標題。 此教學課程內容簡短，以下列尚未新增互動影像的網頁範例為基礎：
+查找 **示例** 标题。 它包含一个简短教程，该教程基于以下尚未向其添加交互式图像的网页示例：
 
 [https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-0.html](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-0.html)
 
-本教學課程有助於說明在您的網站上整合互動式影像的步驟。
+本教程有助于说明在您的网站上集成交互式图像的步骤。
 
-互動式影像步驟：
+交互式图像步骤：
 
-1. **（可選）識別熱點變數**  — 如果您單獨使用Experience Manager Assets和Dynamic Media，請先識別現有Quickview實作中使用的動態變數。 之後，您就可以在建立互動式影像時輸入熱點資料。 另請參閱 [（可選）識別熱點變數](#optional-identifying-hotspot-variables).
-不過，如果您使用Adobe Experience Manager Sites或Adobe Experience Manager電子商務，或兩者都使用，則不需要執行此步驟。
-另請參閱 [Experience Manager Assets中的電子商務概念](/help/commerce/cif-classic/administering/concepts.md).
+1. **（可选）标识热点变量**  — 如果单独使用Experience Manager Assets和Dynamic Media，则首先要标识在现有Quickview实施中使用的动态变量。 然后，您可以在创建交互式图像时输入热点数据。 参见 [（可选）标识热点变量](#optional-identifying-hotspot-variables).
+但是，如果您使用Adobe Experience Manager Sites或Adobe Experience Manager电子商务，或者同时使用两者，则无需执行此步骤。
+参见 [Experience Manager Assets中的电子商务概念](/help/commerce/cif-classic/administering/concepts.md).
 
-1. **（可選）建立互動式影像檢視器預設集**  — 自訂用來表示熱點的圖形影像。 如果您打算使用現成的互動影像檢視器預設集，則不需要建立自己的互動影像檢視器預設集，該預設集名為 `Shoppable_Banner` 而非。
-另請參閱 [（可選）建立互動式影像檢視器預設集](/help/assets/managing-viewer-presets.md#creating-a-new-viewer-preset).
+1. **（可选）创建交互式图像查看器预设**  — 自定义用于表示热点的图形图像。 如果您打算使用名为的现成交互式图像查看器预设，则无需创建自己的交互式图像查看器预设 `Shoppable_Banner` 而是。
+参见 [（可选）创建交互式图像查看器预设](/help/assets/managing-viewer-presets.md#creating-a-new-viewer-preset).
 
-1. **上傳影像橫幅**  — 上傳您想要互動的影像橫幅。
-另請參閱 [上傳影像橫幅](#uploading-an-image-banner).
+1. **上传图像横幅**  — 上传要使其成为交互式图像的横幅。
+参见 [上传图像横幅](#uploading-an-image-banner).
 
-1. **將熱點新增至影像橫幅**  — 新增一或多個熱點至影像橫幅，並將每個熱點與超連結、快速檢視或體驗片段等動作建立關聯。 新增熱點後，您就可以發佈互動式影像來完成這項工作。
+1. **将热点添加到图像横幅**  — 向图像横幅添加一个或多个热点，并将每个热点与超链接、概览或体验片段等操作相关联。 添加热点后，将通过发布交互式图像来完成此任务。
 
-   * 另請參閱 [將熱點新增至影像橫幅](#adding-hotspots-to-an-image-banner).
-   * 另請參閱 [預覽互動式影像](#optional-previewing-interactive-images)  — 選擇性。 如有需要，您可以檢視可購物橫幅的呈現方式，並測試其互動性。
-   * 另請參閱 [發佈資產](/help/assets/publishing-dynamicmedia-assets.md) 以取得如何發佈互動式影像資產的詳細資訊。
+   * 参见 [将热点添加到图像横幅](#adding-hotspots-to-an-image-banner).
+   * 参见 [预览交互式图像](#optional-previewing-interactive-images)  — 可选。 如果需要，您可以查看可购物横幅的表示形式并测试其交互性。
+   * 参见 [发布资产](/help/assets/publishing-dynamicmedia-assets.md) 以了解有关如何发布交互式图像资源的详细信息。
 
-1. **新增互動式影像至您的網站**  — 如果您使用Experience Manager Sites或eCommerce （或兩者），可以將互動式影像以Experience Manager新增至網頁。 將互動式媒體元件拖曳至頁面上。 另請參閱 [將Dynamic Media資產新增至頁面](/help/assets/adding-dynamic-media-assets-to-pages.md).
+1. **向网站添加交互式图像**  — 如果您使用Experience Manager Sites和/或电子商务，则可以以Experience Manager将交互式图像添加到网页。 将交互式媒体组件拖动到页面上。 参见 [将Dynamic Media资源添加到页面](/help/assets/adding-dynamic-media-assets-to-pages.md).
 
-   如果您使用Experience Manager Assets和Dynamic Media獨立版，您必須複製網站上的內嵌程式碼，然後將其與現有的快速檢視整合。 另請參閱 [將互動式影像與您的網站整合](#integrating-an-interactive-image-with-your-website).
+   如果您单独使用Experience Manager Assets和Dynamic Media，则必须复制网站上的嵌入代码，然后将其与现有的概览集成。 参见 [将交互式图像与您的网站集成](#integrating-an-interactive-image-with-your-website).
 
-   如果您使用協力廠商WCM （Web內容管理員），您必須將新的互動式視訊與網站上使用的現有Quickview實作整合。 另請參閱 [將互動式影像與現有的快速檢視整合](#integrating-an-interactive-image-with-an-existing-quickview).
+   如果您使用的是第三方WCM（Web内容管理器），则必须将新的交互式视频与网站上使用的现有Quickview实施集成。 参见 [将交互式图像与现有的概览集成](#integrating-an-interactive-image-with-an-existing-quickview).
 
-## （可選）識別熱點變數 {#optional-identifying-hotspot-variables}
+## （可选）标识热点变量 {#optional-identifying-hotspot-variables}
 
 >[!NOTE]
 >
->只有符合下列條件時，才需要執行此工作：
+>仅当满足以下条件时，才需要此任务：
 >
->* 您想要藉由觸發至「快速檢視」，將互動性新增至影像。
->* 您實作的Experience Manager可以 *not* 使用電子商務整合架構，將產品資料從任何電子商務解決方案(例如IBM®WebSphere®Commerce、Elastic Path、hybris或Intershop)提取至Experience Manager。 另請參閱 [Experience Manager Assets中的電子商務概念](/help/commerce/cif-classic/administering/concepts.md).
+>* 要通过触发概览向图像添加交互性。
+>* 您实施的Experience Manager可以 *非* 使用电子商务集成框架，将产品数据从任何电子商务解决方案(如IBM®WebSphere®Commerce、Elastic Path、hybris或Intershop)提取到Experience Manager中。 参见 [Experience Manager Assets中的电子商务概念](/help/commerce/cif-classic/administering/concepts.md).
 >
->如果您的Experience Manager實作使用電子商務，您可以略過此任務並繼續下一項任務。
+>如果您的Experience Manager实施使用的是电子商务，则可以跳过此任务并继续执行下一个任务。
 
-首先，請識別您現有Quickview實作所使用的動態變數，以便您可以輸入熱點資料來建立互動式影像。
+首先，标识由您现有的概览实施使用的动态变量，以便您可以输入热点数据来创建交互式图像。
 
-在Experience Manager Assets中將熱點新增至橫幅影像時，您必須將SKU （庫存單位）和選用的其他變數指派至每個熱點。 這類熱點變數稍後會用於比對熱點與Quickview內容。
+在Experience Manager Assets中将热点添加到横幅图像时，必须为每个热点分配一个SKU（库存保管单元）和可选的其他变量。 此类热点变量稍后用于匹配热点与概览内容。
 
-請務必正確識別要與熱點資料產生關聯的變數數量和型別。 新增至橫幅影像的每個熱點都必須攜帶足夠的資訊，以明確識別現有後端系統中的產品。
+正确标识要与热点数据关联的变量的数量和类型非常重要。 添加到横幅图像的每个热点都必须携带足够的信息，以便明确标识现有后端系统中的产品。
 
-有不同的方法可識別一組變數，以用於熱點資料。
+有不同的方法可标识一组用于热点数据的变量。
 
-有時只要諮詢負責現有Quickview實作的IT專家就足夠了。 IT專家可能會知道在系統中識別Quickview所需的最小資料集為何。 但是，也可以只分析前端計畫碼的現有行為。
+有时，咨询负责现有Quickview实施的IT专家就足够了。 IT专家可能会知道在系统中标识概览所需的最小数据集。 但是，也可以简单地分析前端代码的现有行为。
 
-大部分的「快速檢視」實作都使用下列範例：
+大多数概览实施都使用以下范例：
 
-* 用户在网站上激活用户界面元素。例如，選取「快速檢視」按鈕。
-* 如有需要，網站會傳送Ajax要求至後端以載入Quickview資料或內容。
-* 快速檢視資料會轉譯成內容，以準備在網頁上呈現。
-* 最後，前端程式碼會在畫面上以視覺化方式呈現此類內容。
+* 用户在网站上激活用户界面元素。例如，选择“概览”按钮。
+* 如果需要，网站会向后端发送Ajax请求以加载概览数据或内容。
+* 概览数据将转换为内容，以便在网页上呈现。
+* 最后，前端代码在屏幕上以可视方式呈现此类内容。
 
-接著，方法就是造訪已實作「快速檢視」功能的現有網站的不同區域。 然後您觸發Quickview，並擷取網頁傳送的Ajax URL以載入Quickview資料或內容。
+然后，方法是访问实施概览功能的现有网站的不同区域。 然后，触发概览并捕获网页发送的Ajax URL，以加载概览数据或内容。
 
-通常您不需要使用任何專門的偵錯工具。 現代的網頁瀏覽器提供可完成適當工作的網頁檢查工具。 以下是一些包含網頁檢查器的網頁瀏覽器範例：
+通常，您无需使用任何专门的调试工具。 现代Web浏览器的功能是Web检查器，这些检查器能够完成适当的工作。 以下是一些包含Web检查器的Web浏览器示例：
 
-* 若要在Google Chrome中檢視所有傳出的HTTP請求，請按F12開啟「開發人員工具」面板，然後選取「網路」索引標籤。
-在Mac上，按Command+Option+I開啟「開發人員工具」面板，然後選取「網路」標籤。
+* 要在Google Chrome中查看所有传出的HTTP请求，请按F12打开“开发人员工具”面板，然后选择“网络”选项卡。
+在Mac上，按Command + Option + I以打开“开发人员工具”面板，然后选择“网络”选项卡。
 
-* 在Firefox中，您可以按下F12並使用其「網路」標籤來啟動Firebug外掛程式，或使用內建的「偵測器」工具及其「網路」標籤。
-在Mac上，按Command+Option+I開啟「開發人員工具」面板，然後選取「檢測器」索引標籤。
+* 在Firefox中，您可以通过按F12并使用其“网络”选项卡来激活Firebug插件，也可以使用内置的检查器工具及其“网络”选项卡。
+在Mac上，按Command + Option + I以打开“开发人员工具”面板，然后选择“检查器”选项卡。
 
-在瀏覽器中開啟網路監視時，會觸發頁面上的快速檢視。
+在浏览器中打开网络监视功能时，会在页面上触发概览。
 
-現在，請在網路記錄檔中找到Quickview Ajax URL，並複製記錄的URL以供日後分析。 通常，當您觸發「快速檢視」時，會有許多要求傳送至伺服器。 通常，快速檢視Ajax URL是清單中的第一個專案。 它具有複雜的查詢字串部分或路徑，並且其回應MIME型別是 `text/html`， `text/xml`，或 `text/javascript`.
+现在，请在网络日志中找到Quickview Ajax URL，并复制记录的URL以供将来分析。 通常，在触发概览时，会向服务器发送大量请求。 通常，快速视图Ajax URL是列表中的前几个之一。 它具有复杂的查询字符串部分或路径，并且其响应MIME类型为 `text/html`， `text/xml`，或 `text/javascript`.
 
-在此過程中，請務必使用不同的產品類別和型別，造訪您網站的不同區域。 原因在於「快速檢視」URL可以包含指定網站類別的共同部分，但只有在您造訪網站的其他區域時才會變更。
+在此过程中，请务必访问网站的不同区域，以及不同的产品类别和类型。 原因在于“概览”URL可以包含给定网站类别通用的部分，但只有在访问网站的其他区域时才发生更改。
 
-最簡單的情況是，快速檢視URL中的唯一變數部分是產品SKU。 在此情況下，SKU值是您將熱點新增至橫幅影像時唯一需要的資料片段。
+最简单的情况是，概览URL中的唯一变量部分是产品SKU。 在这种情况下，SKU值是向横幅图像添加热点所需的唯一数据段。
 
-不過，在複雜的情況下，除了SKU之外，「快速檢視URL」還有不同的變數元素，例如類別ID、顏色代碼和大小代碼。 在這種情況下，在Experience Manager Assets的可購物互動影像功能中，每個元素在熱點資料定義中都是一個單獨的變數。
+但是，在复杂的情况下，除了SKU之外，概览URL还有不同的变化元素，例如类别ID、颜色代码和大小代码。 在这种情况下，在Experience Manager Assets的可购物交互式图像功能中，每个元素在热点数据定义中都是一个单独的变量。
 
-請考量下列快速檢視URL範例及其產生的熱點變數：
+请考虑以下概观URL示例及其生成的热点变量：
 
 <table>
   <tbody>
   <tr>
-    <td><p>單一SKU，可在查詢字串中找到。</p> </td>
-    <td><p>錄製的快速檢視URL包含以下專案：</p>
+    <td><p>单个SKU，在查询字符串中找到。</p> </td>
+    <td><p>记录的概览URL包括：</p>
     <ul>
       <li><p><code>https://server/json?productId=866558&amp;source=100</code></p> </li>
       <li><p><code>https://server/json?productId=1196184&amp;source=100</code></p> </li>
       <li><p><code>https://server/json?productId=1081492&amp;source=100</code></p> </li>
       <li><p><code>https://server/json?productId=1898294&amp;source=100</code></p> </li>
-    </ul> <p>URL中的唯一變數部分是productId=查詢字串引數的值，這顯然是SKU值。 因此，您的熱點只需要填入如下值的SKU欄位 <strong><code>866558</code></strong>， <strong><code>1196184</code></strong>， <strong><code>1081492</code></strong>， <strong><code>1898294</code></strong>.</p> </td>
+    </ul> <p>URL中的唯一变量部分是productId=查询字符串参数的值，它显然是一个SKU值。 因此，您的热点只需要使用如下值填充的SKU字段 <strong><code>866558</code></strong>， <strong><code>1196184</code></strong>， <strong><code>1081492</code></strong>， <strong><code>1898294</code></strong>.</p> </td>
   </tr>
   <tr>
-    <td><p>在URL路徑中找到單一SKU。</p> </td>
-    <td><p>錄製的快速檢視URL包含以下專案：</p>
+    <td><p>单个SKU，可在URL路径中找到。</p> </td>
+    <td><p>记录的概览URL包括：</p>
     <ul>
       <li><p><code>https://server/product/6422350843</code></p> </li>
       <li><p><code>https://server/product/1607745002</code></p> </li>
       <li><p><code>https://server/product/0086724882</code></p> </li>
-    </ul> <p>變數部分位於路徑的最後一部分，並成為熱點的SKU值： <strong><code>6422350843</code></strong>， <strong><code>1607745002</code></strong>， <strong><code>0086724882</code></strong>.</p> </td>
+    </ul> <p>变量部分位于路径的最后一部分，它成为热点的SKU值： <strong><code>6422350843</code></strong>， <strong><code>1607745002</code></strong>， <strong><code>0086724882</code></strong>.</p> </td>
   </tr>
   <tr>
-    <td><p>查詢字串中的SKU和類別識別碼。</p> </td>
-    <td><p>錄製的快速檢視URL包含以下專案：</p>
+    <td><p>查询字符串中的SKU和类别ID。</p> </td>
+    <td><p>记录的概览URL包括：</p>
     <ul>
       <li><p><code>https://server/quickView/product/?category=1100004&amp;prodId=305466</code></p> </li>
       <li><p><code>https://server/quickView/product/?category=1100004&amp;prodId=310181</code></p> </li>
       <li><p><code>https://server/quickView/product/?category=1740148&amp;prodId=308706</code></p> </li>
-    </ul> <p>在這種情況下，URL中有兩個不同的部分。 SKU會儲存在 <code>prodId</code> 引數和類別ID<code></code> 儲存在 <code>category=</code> 引數。</p> <p>因此，熱點定義是配對。 即SKU值和名為的額外變數 <code>categoryId</code>. 產生的配對如下：</p>
+    </ul> <p>在这种情况下，URL包含两个不同的部分。 SKU存储在 <code>prodId</code> 参数和类别ID<code></code> 存储在 <code>category=</code> 参数。</p> <p>因此，热点定义是对的。 即，一个SKU值和一个名为的额外变量 <code>categoryId</code>. 生成的对如下所示：</p>
     <ul>
       <li><p>SKU是 <strong><code>305466</code></strong> 和 <code>categoryId</code> 是 <code>1100004</code>.</p> </li>
       <li><p>SKU是 <strong><code>310181</code></strong> 和 <code>categoryId</code> 是 <strong><code>1100004</code></strong>.</p> </li>
@@ -158,253 +158,253 @@ ht-degree: 1%
 
 **示例**
 
-您可以將上述三個範例中所使用的方法套用至示範網頁：
+您可以将上述三个示例中使用的相同方法应用于演示网页：
 
 [https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-0.html](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-0.html)
 
-示範網頁具有多個產品縮圖，每個縮圖都有一個標示為「檢視更多」的「快速檢視」按鈕。 當您仍啟動網頁瀏覽器的偵錯工具時，請選取每個按鈕並記下錄製的「快速檢視」URL。 啟用頁面上可用的所有四個產品快速檢視後，您會看到向後端發出的快速檢視請求清單，如下所示：
+演示网页具有多个产品缩略图，每个产品缩略图都有一个标记为“查看更多”的“快速查看”按钮。 在Web浏览器的调试工具仍处于激活状态的情况下，选择每个按钮并记下记录的概览URL。 在激活页面上可用的所有四个产品概览后，您会看到向后端发出的概览请求列表，如下所示：
 
 * `/datafeed/Male-Windbreaker.json`
 * `/datafeed/Male-SimpleHenley.json`
 * `/datafeed/Male-CamoPullover.json`
 * `/datafeed/Female-QuiltedDownJacket.json`
 
-檢視伺服器呼叫，您會發現要求路徑中只會出現產品特定資訊。 您也注意到根本不會使用查詢字串，而且其中涉及兩種不同型別的資料片段：
+查看服务器调用时，您会发现特定于产品的信息仅显示在请求路径中。 您还会注意到根本未使用查询字符串，并且涉及两种不同类型的数据段：
 
-* 第一個型別是「男性」或「女性」。 您可以將此區段稱為「產品類別」。
-* 第二個型別是產品名稱，例如CamoPullover。 您可以假設此資訊是產品SKU。
+* 第一种类型是“男性”或“女性”。 您可以将此区段命名为“产品类别”。
+* 第二种类型是产品名称，如CamoPullover。 您可以假设此信息是产品SKU。
 
-根據此資訊，整個快速檢視URL的模式如下：
+根据此信息，整个概览URL具有以下模式：
 
 `/datafeed/$categoryId$-$SKU$.json`
 
-根據此類分析，您應使用 `categoryId` 和 `SKU` 用於熱點。
+基于此类分析，您应使用 `categoryId` 和 `SKU` 用于热点。
 
-您現在可以使用Experience Manager Assets中的可購物互動影像功能，上傳影像橫幅及新增熱點。
+您现在可以使用Experience Manager Assets中的可购物交互式图像功能，上传图像横幅并向其中添加热点。
 
-## （可選）建立互動式影像檢視器預設集 {#optional-creating-an-interactive-image-viewer-preset}
+## （可选）创建交互式图像查看器预设 {#optional-creating-an-interactive-image-viewer-preset}
 
-您可以選擇使用預設的現成互動式影像檢視器預設集，稱為 `Shoppable_Banner` Experience Manager Assets隨附的其他功能。 或者，您也可以建立自己的自訂檢視器預設集，以用於互動式影像。
+您可以选择使用默认的现成交互式图像查看器预设，其名称为 `Shoppable_Banner` Experience Manager Assets随附的。 或者，您也可以创建自己的自定义查看器预设以用于交互式图像。
 
-建立自訂互動式影像檢視器預設集時，您可以決定影像橫幅上的熱點外觀。 在建立檢視器預設集時，您可以選擇使用來自預先定義影像庫的熱點圖形。
+创建自定义交互式图像查看器预设时，可以确定图像横幅上的热点外观。 在创建查看器预设时，您可以选择使用来自预定义图像库的热点图形。
 
-儲存檢視器預設集後，它就會在Experience Manager Assets的「檢視器預設集」清單頁面上自動啟動（開啟）。 這項功能表示只要您檢視資產，互動媒體元件中都能看到這項功能。 但是，到 *deliver* 此檢視器預設集的互動式橫幅，您必須 *發佈* 您的檢視器預設集也是。 此規則適用於自訂或現成可用的檢視器預設集。
+保存查看器预设后，查看器预设将在Experience Manager Assets中的“查看器预设”列表页面上自动激活（打开）。 这项功能意味着在交互式媒体组件中以及查看资产时，都可看到该资产。 但是，到 *deliver* 具有此查看器预设的交互式横幅，您必须 *发布* 您的查看器预设也一样。 此规则适用于自定义或现成的查看器预设。
 
-**若要建立互動式影像檢視器預設集：**
+**要创建交互式图像查看器预设，请执行以下操作：**
 
-1. 在左側邊欄中，導覽至 **[!UICONTROL 工具]** > **[!UICONTROL 資產]** > **[!UICONTROL 檢視器預設集]**.
-1. 在頁面的右上角附近，選取 **[!UICONTROL 建立]**.
-1. 在「新增檢視器預設集」對話方塊中，輸入描述互動式橫幅檢視器預設集的名稱。
+1. 在左边栏中，导航到 **[!UICONTROL 工具]** > **[!UICONTROL 资产]** > **[!UICONTROL 查看器预设]**.
+1. 在页面的右上角附近，选择 **[!UICONTROL 创建]**.
+1. 在“新建查看器预设”对话框中，键入用于描述交互式横幅查看器预设的名称。
 
-   儲存後，標題會顯示在「檢視器預設集」清單頁面中。
+   保存后，标题将显示在“查看器预设”列表页面中。
 
 1. 在“富媒体类型”下拉菜单中，选择&#x200B;**[!UICONTROL 交互式图像]**。
 1. 选择&#x200B;**[!UICONTROL 创建]**。
-1. 在「編輯檢視器預設集」頁面上，選取 **[!UICONTROL 外觀]** 標籤。
+1. 在“编辑查看器预设”页面上，选择 **[!UICONTROL 外观]** 选项卡。
 1. 执行下列操作之一：
 
-   * 若要上傳您想要用於影像的熱點影像，請選取「資產選取器」圖示。 在「選取內容」頁面中，導覽至您要使用的熱點影像，選取熱點影像，然後選取右上角的「勾號」圖示。
-   * 若要選取預先定義的熱點影像，請選取「熱點庫」圖示。 在熱點相簿調色盤上，選取您要使用的熱點影像。
+   * 要上传您自己的要在图像中使用的热点图像，请选择资产选取器图标。 在“选择内容”页面中，导航到要使用的热点图像，选择它，然后选择右上角的“复选标记”图标。
+   * 要选择预定义的热点图像，请选择热点库图标。 在热点库调色板上，选择要使用的热点图像。
 
-1. 在頁面的右上角附近，選取 **[!UICONTROL 儲存]**.
+1. 在页面的右上角附近，选择 **[!UICONTROL 保存]**.
 
-   請確定您發佈新的檢視器預設集。
+   确保发布新的查看器预设。
 
-   另請參閱 [發佈您已新增的檢視器預設集](/help/assets/managing-viewer-presets.md#publishing-viewer-presets).
+   参见 [发布已添加的查看器预设](/help/assets/managing-viewer-presets.md#publishing-viewer-presets).
 
-   您現在已準備好上傳影像橫幅。
+   您现在可以上传图像横幅了。
 
-## 上傳影像橫幅 {#uploading-an-image-banner}
+## 上传图像横幅 {#uploading-an-image-banner}
 
-如果您已上傳要使用的影像，請繼續進行下一個步驟， [新增熱點至影像橫幅](#adding-hotspots-to-an-image-banner).
+如果您已上传要使用的图像，请前进到下一步， [将热点添加到图像横幅](#adding-hotspots-to-an-image-banner).
 
-**若要上傳影像橫幅：**
+**上传图像横幅：**
 
-1. 上傳您想要互動的影像橫幅。
+1. 上传要使其成为交互式图像的横幅。
 
-   另請參閱 [正在上傳資產](/help/assets/manage-assets.md#uploading-assets).
+   参见 [正在上传资产](/help/assets/manage-assets.md#uploading-assets).
 
-   您現在已準備好將熱點新增至影像橫幅；請參閱下方的下一個工作。
+   您现在可以将热点添加到图像横幅中；请参阅下面的下一个任务。
 
-## 將熱點新增至影像橫幅 {#adding-hotspots-to-an-image-banner}
+## 将热点添加到图像横幅 {#adding-hotspots-to-an-image-banner}
 
-您可以使用「熱點管理」頁面上的編輯器，將熱點新增至影像橫幅。
+您可以使用“热点管理”页面上的编辑器将热点添加到图像横幅中。
 
-新增熱點時，可將熱點定義為「快速檢視」彈出式顯示、超連結或體驗片段。
+添加热点时，可以将它们定义为概览弹出显示、超链接或体验片段。
 
-另請參閱 [體驗片段](/help/sites-authoring/experience-fragments.md).
+参见 [体验片段](/help/sites-authoring/experience-fragments.md).
 
 >[!NOTE]
 >
->將檢視器嵌入體驗片段時，不支援互動式影像中的社群媒體分享工具。 若要解決此問題，您可以使用或建立沒有社群媒體分享工具的檢視器預設集。 這類檢視器預設集可讓您成功將其嵌入體驗片段中。
+>将查看器嵌入体验片段时，不支持交互式图像中的社交媒体共享工具。 要解决此问题，您可以使用或创建没有社交媒体共享工具的查看器预设。 通过此类查看器预设，您可以成功地将其嵌入体验片段中。
 
-在您目前的建立/編輯工作階段期間，支援頁面右上角附近的「還原」和「重做」選項。
+在当前创建/编辑会话期间，支持页面右上角附近的“撤消”和“重做”选项。
 
-當您完成互動式影像的建立時，可以使用「預覽」來檢視向客戶呈現互動式影像的方式。
+创建完交互式图像后，可以使用“预览”来查看向客户展示交互式图像的方式。
 
-另請參閱 [（可選）預覽互動式影像](#optional-previewing-interactive-images).
+参见 [（可选）预览交互式图像](#optional-previewing-interactive-images).
 
 >[!NOTE]
 >
->當您將熱點新增至互動式影像或轉盤橫幅中的影像時，熱點資訊會儲存在相同的中繼資料位置。 該位置是相對於影像的位置，無論該影像是互動式影像還是輪播橫幅。 這項功能表示您可以在任一檢視器中輕鬆重複使用相同的影像，及其定義的熱點資料。
-轉盤橫幅支援影像上也可能包含熱點的影像地圖，互動式影像則否。 如果您打算建立使用相同影像的互動式影像或輪播橫幅，請記住此規則。 您可以使用相同影像的個別復本，建立互動式影像和輪播橫幅。
-另請參閱 [輪播橫幅](/help/assets/carousel-banners.md).
+>将热点添加到交互式图像或轮播横幅中的图像时，热点信息存储在相同的元数据位置。 该位置相对于图像的位置，无论图像是交互式图像还是轮播横幅。 这项功能意味着您可以轻松地在任一查看器中重用相同的图像及其定义的热点数据。
+轮播横幅支持图像映射，这些图像也可能包含热点；而交互式图像则不支持。 如果您打算创建使用同一图像的交互式图像或轮播横幅，请记住此规则。 您可以使用同一图像的单独副本来创建交互式图像和轮播横幅。
+另请参阅 [轮播横幅](/help/assets/carousel-banners.md).
 
 >[!NOTE]
-如果您使用熱點編輯互動式影像並裁切影像，則會移除熱點。
+如果您正在编辑具有热点的交互式图像并裁切图像，则您的热点会被删除。
 
-**若要新增熱點至影像橫幅：**
+**要将热点添加到图像横幅，请执行以下操作：**
 
-1. 在「資產」檢視中，導覽至您要產生互動式效果的影像橫幅。
+1. 在“资产”视图中，导航到要使其成为交互式内容的图像横幅。
 1. 执行下列操作之一：
 
-   * 暫留在影像上，然後選取 **[!UICONTROL 選取]** （勾選圖示）。 在工具列上，選取 **[!UICONTROL 編輯]**.
+   * 将鼠标悬停在图像上，然后选择 **[!UICONTROL 选择]** （复选标记图标）。 在工具栏上，选择 **[!UICONTROL 编辑]**.
 
-   * 暫留在影像上，然後選取 **[!UICONTROL 更多動作]** （三點圖示） **[!UICONTROL 編輯]**.
+   * 将鼠标悬停在图像上，然后选择 **[!UICONTROL 更多操作]** （三个圆点图标） **[!UICONTROL 编辑]**.
 
-   * 選取影像，以便在「詳細資料檢視」頁面中將其開啟。 在工具列上，選取 **[!UICONTROL 編輯]**.
+   * 选择图像，以便在“详细信息视图”页面中将其打开。 在工具栏上，选择 **[!UICONTROL 编辑]**.
 
-1. 在頁面的左上角附近，選取 **[!UICONTROL 新增熱點]** （手指點選圖示）以開啟「熱點」管理頁面。
-1. 在頁面的左上角附近，選取 **[!UICONTROL 熱點]**.
+1. 在页面的左上角附近，选择 **[!UICONTROL 添加热点]** （手指点按图标）以打开“热点”管理页面。
+1. 在页面的左上角附近，选择 **[!UICONTROL 热点]**.
 
-   1. 在「熱點管理」頁面的左上角附近，選取「 」 **[!UICONTROL 熱點]**.
-   1. 在影像上，選取您要熱點出現的位置。 如有必要，可拖动热点以调整其位置。
-   1. 重複步驟a和b，視需要新增其他熱點。
-   1. （可選）若要刪除熱點，請在影像上選取它，然後選取 **[!UICONTROL 刪除]** （垃圾桶圖示），在 **[!UICONTROL 熱點]** 標題。
+   1. 在“热点管理”页面的左上角附近，选择 **[!UICONTROL 热点]**.
+   1. 在图像上，选择要显示热点的位置。 如有必要，可拖动热点以调整其位置。
+   1. 重复步骤a和b，根据需要添加其他热点。
+   1. （可选）要删除热点，请在图像上选择该热点，然后选择 **[!UICONTROL 删除]** （垃圾桶图标） **[!UICONTROL 热点]** 标题。
 
-1. 在「名稱」文字欄位中，輸入連結區的名稱。 此名稱也會顯示在選取的熱點下拉式清單中。
+1. 在“名称”文本字段中，键入热点的名称。 此名称也会显示在选定热点下拉列表中。
 1. 执行下列操作之一：
 
-   * 選取 **[!UICONTROL 快速檢視]**.
+   * 选择 **[!UICONTROL 概览]**.
 
-      * 如果您是Experience Manager Sites或電子商務客戶，請選取「產品選擇器」圖示（放大鏡）以開啟「選取產品」頁面。 選取您要使用的產品，然後選取 **[!UICONTROL 選取]** ，以便返回「熱點」管理頁面。
-      * 如果您是 *not* Experience Manager Sites或電子商務客戶
+      * 如果您是Experience Manager Sites或电子商务客户，请选择产品选取器图标（放大镜）以打开“选择产品”页面。 选择要使用的产品，然后选择 **[!UICONTROL 选择]** ，以便您可以返回热点管理页面。
+      * 如果您是 *非* Experience Manager Sites或电子商务客户
 
-         * 另請參閱 [識別熱點變數](#optional-identifying-hotspot-variables)；您必須定義這些變數。
-         * 然後，手動輸入SKU值。 在「SKU值」文字欄位中，輸入產品的SKU （庫存單位），這是您提供的每個不同產品或服務的唯一識別碼。 輸入的SKU值會自動填入快速檢視範本的變數部分，讓系統知道將選取的熱點與特定SKU的快速檢視建立關聯。
-         * （選擇性）如果快速檢視中有其他變數您必須用來進一步識別產品，請選取 **[!UICONTROL 新增一般變數]**. 在文字欄位中，指定額外的變數。 例如， `category=Males` 是新增的變數。
-   * 選取 **[!UICONTROL 超連結]**.
+         * 参见 [识别热点变量](#optional-identifying-hotspot-variables)；您必须定义这些变量。
+         * 然后，手动输入SKU值。 在“SKU值”文本字段中，键入产品的SKU（库存单位），它是您提供的每个不同产品或服务的唯一标识符。 输入的SKU值会自动填充概览模板的变量部分，以便系统知道将选定的热点与特定SKU的概览相关联。
+         * （可选）如果概览中还有其他必须用来进一步标识产品的变量，请选择 **[!UICONTROL 添加通用变量]**. 在文本字段中，指定一个额外的变量。 例如， `category=Males` 是添加的变量。
+   * 选择 **[!UICONTROL 超链接]**.
 
-      * 如果您是Experience Manager Sites客戶，請選取「網站選擇器」圖示（資料夾）以導覽至URL。 如果您的互動式內容具有具有具有相對URL的連結，尤其是指向Experience Manager Sites頁面的連結，則無法採用URL型連結方法。
-      * 如果您是獨立客戶，請在HREF文字欄位中指定連結網頁的完整URL路徑。
+      * 如果您是Experience Manager Sites客户，请选择站点选择器图标（文件夹）以导航到某个URL。 如果您的交互式内容具有带相对URL的链接，尤其是指向Experience Manager Sites页面的链接，则无法基于URL的链接方法。
+      * 如果您是独立客户，请在HREF文本字段中指定链接网页的完整URL路径。
 
-   請務必指定要在新的瀏覽器分頁（建議的預設值）或相同的分頁中開啟連結。
+   请确保指定是在新的浏览器选项卡（推荐的默认值）中还是同一选项卡中打开链接。
 
-   另請參閱 [使用選取器](/help/assets/working-with-selectors.md) 以取得詳細資訊。
+   参见 [使用选择器](/help/assets/working-with-selectors.md) 了解更多信息。
 
-   * 選取 **[!UICONTROL 體驗片段]**.
+   * 选择 **[!UICONTROL 体验片段]**.
 
-      * 如果您是Experience Manager Sites客戶，請選取「搜尋」圖示（放大鏡）以開啟「體驗片段」頁面。 選取您要使用的體驗片段，然後選取 **[!UICONTROL 選取]** ，以便返回「熱點」管理頁面。
-另請參閱 [體驗片段](/help/sites-authoring/experience-fragments.md).
+      * 如果您是Experience Manager Sites客户，请选择“搜索”图标（放大镜）以打开“体验片段”页面。 选择要使用的体验片段，然后选择 **[!UICONTROL 选择]** ，以便您可以返回热点管理页面。
+参见 [体验片段](/help/sites-authoring/experience-fragments.md).
 
-      * 指定您希望體驗片段在橫幅上顯示的寬度和高度。
+      * 指定您希望体验片段在横幅上显示的宽度和高度。
 
          >[!NOTE]
-         將檢視器嵌入體驗片段時，不支援互動式影像中的社群媒體分享工具。 若要解決此問題，您可以使用或建立沒有社群媒體分享工具的檢視器預設集。 這類檢視器預設集可讓您成功將其嵌入體驗片段中。
+         将查看器嵌入体验片段时，不支持交互式图像中的社交媒体共享工具。 要解决此问题，您可以使用或创建没有社交媒体共享工具的查看器预设。 通过此类查看器预设，您可以成功地将其嵌入体验片段中。
 
 
 
-1. 選取 **[!UICONTROL 儲存]** 以儲存您的工作並返回「瀏覽」頁面。
-1. 發佈互動式影像。 發佈可讓您透過雲端傳遞橫幅，也可在您需要與協力廠商網站整合時產生內嵌程式碼。
+1. 选择 **[!UICONTROL 保存]** 以保存您的工作并返回到“浏览”页面。
+1. 发布交互式图像。 发布功能允许通过云交付横幅，并且如果您需要与第三方网站集成，还可以生成嵌入代码。
 
-   另請參閱 [發佈資產](/help/assets/manage-assets.md#publishing-assets).
+   参见 [发布资产](/help/assets/manage-assets.md#publishing-assets).
 
-   新增熱點並發佈互動式影像後，您現在就可以將其新增至現有網站了。
+   添加热点并发布交互式图像后，您现在可以将其添加到现有网站。
 
-   另請參閱 [將互動式影像與您的網站整合](#integrating-an-interactive-image-with-your-website).
+   参见 [将交互式图像与您的网站集成](#integrating-an-interactive-image-with-your-website).
 
    >[!NOTE]
-   如果您使用熱點編輯互動式影像並裁切影像，則會刪除您的熱點。
+   如果您正在编辑具有热点的交互式图像并裁切图像，则您的热点会被删除。
 
-### （可選）預覽互動式影像 {#optional-previewing-interactive-images}
+### （可选）预览交互式图像 {#optional-previewing-interactive-images}
 
-您可以使用「預覽」來檢視向客戶呈現互動式影像的方式，以及測試影像的熱點以確保其如預期般運作。
+您可以使用“预览”来查看向客户展示交互式图像的方式，并测试图像的热点以确保其行为符合预期。
 
-當您對互動式影像感到滿意時，可以發佈該影像。
-另請參閱 [將視訊或影像檢視器內嵌在網頁上](/help/assets/embed-code.md).
-另請參閱 [將URL連結至您的網頁應用程式](/help/assets/linking-urls-to-yourwebapplication.md). 如果您的互動式內容具有具有具有相對URL的連結，尤其是指向Experience Manager Sites頁面的連結，則無法採用URL型連結方法。
-另請參閱 [將Dynamic Media資產新增至頁面](/help/assets/adding-dynamic-media-assets-to-pages.md).
+如果对交互式图像满意，则可以发布该图像。
+参见 [在网页上嵌入视频查看器或图像查看器](/help/assets/embed-code.md).
+参见 [将URL链接到您的Web应用程序](/help/assets/linking-urls-to-yourwebapplication.md). 如果您的交互式内容具有带相对URL的链接，尤其是指向Experience Manager Sites页面的链接，则无法基于URL的链接方法。
+参见 [将Dynamic Media资源添加到页面](/help/assets/adding-dynamic-media-assets-to-pages.md).
 
-**若要預覽互動式影像：**
+**要预览交互式图像，请执行以下操作：**
 
-1. 在「資產」檢視中，導覽至您已建立的現有互動式影像，並選取以在「預覽」中開啟。
-1. 在「預覽」頁面的左上角附近，從「內容」下拉式清單中選取 **[!UICONTROL 檢視者]**.
-1. 在「檢視器」清單中，選取 **[!UICONTROL Shoppable_Banner]** 或您已建立的互動式影像檢視器預設集名稱。
-1. 如果您要測試其相關動作，請選取影像上的熱點。
+1. 在“资产”视图中，导航到已创建的现有交互式图像，然后选择在“预览”中打开该图像。
+1. 在“预览”页面的左上角附近的“内容”下拉列表中，选择 **[!UICONTROL 查看器]**.
+1. 在“查看器”列表中，选择 **[!UICONTROL Shoppable_Banner]** 或您已创建的交互式图像查看器预设的名称。
+1. 如果要测试其相关操作，请选择图像上的热点。
 
-## 發佈互動式影像資產 {#publishing-interactive-image-assets}
+## 发布交互式图像资产 {#publishing-interactive-image-assets}
 
-另請參閱 [發佈資產](/help/assets/publishing-dynamicmedia-assets.md) 以取得如何發佈互動式影像資產的詳細資訊。
+参见 [发布资产](/help/assets/publishing-dynamicmedia-assets.md) 以了解有关如何发布交互式图像资源的详细信息。
 
-## 將互動式影像與您的網站整合 {#integrating-an-interactive-image-with-your-website}
+## 将交互式图像与您的网站集成 {#integrating-an-interactive-image-with-your-website}
 
-上傳橫幅影像、將熱點新增至影像，並發佈互動式影像後，您就可以將其新增至網站頁面了。
+在上传横幅图像、将热点添加到图像并发布交互式图像后，您现在可以将其添加到网站页面。
 
-如果您是Experience Manager Sites客戶，您可以將互動式媒體元件拖曳至頁面上，以新增互動式影像。 另請參閱 [將Dynamic Media資產新增至頁面](/help/assets/adding-dynamic-media-assets-to-pages.md).
+如果您是Experience Manager Sites客户，则可以通过将交互式媒体组件拖动到页面上来添加交互式图像。 参见 [将Dynamic Media资源添加到页面](/help/assets/adding-dynamic-media-assets-to-pages.md).
 
-如果您是獨立Experience Manager Assets客戶，您可以依照本節所述，手動將互動式影像新增至您的網站。
+如果您是独立Experience Manager Assets客户，则可以手动将交互式图像添加到您的网站，如本节所述。
 
-1. 複製已發佈的互動式影像的內嵌程式碼。
-另請參閱 [將視訊或影像檢視器內嵌在網頁上](/help/assets/embed-code.md).
+1. 复制发布的交互式图像的嵌入代码。
+参见 [在网页上嵌入视频查看器或图像查看器](/help/assets/embed-code.md).
 
-1. 將複製的內嵌程式碼新增至網頁內所需的位置。
-複製的內嵌程式碼是為回應式環境所設定，因此會自動符合指派的區域。
+1. 将复制的嵌入代码添加到网页中的所需位置。
+复制的嵌入代码是为响应式环境设置的，因此会自动适应分配的区域。
 
 **示例**
 
-以示範網站為例：
+以演示网站为例：
 
 [https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-0.html](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-0.html)
 
-請注意，這三名男性的圖片是靜態的 `IMG` 標籤：
+注意三只公熊的照片是静态的 `IMG` 标记：
 
 ```xml
 <img class="img-responsive" width="100%" title="Hero Image 2" alt="Hero Image 2" src="images/shoppable-banner.jpg">
 ```
 
-整合就像移除 `IMG` 標籤並將其取代為從Experience Manager Assets複製的內嵌程式碼。 您可在下列URL中看到結果，該URL會在具有三個圓形熱點的頁面上顯示可購物互動影像：
+集成就像删除 `IMG` 标记并将其替换为Experience Manager Assets中复制的嵌入代码。 您可以在以下URL中看到结果，该URL显示页面上带有三个圆热点的可购物交互式图像：
 
 [https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-1.html](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-1.html)
 
 >[!NOTE]
-此時，示範網站可購物互動影像上的熱點僅供顯示；尚未與現有的Quickview整合。
+鉴于此，演示网站的可购物交互式图像上的热点仅用于显示；它们尚未与现有的Quickview集成。
 
-若要針對回應式環境將「裁切」套用至可購物互動影像，您可以包含互動影像設定屬性 `ZoomView.iscommand` 至路徑。 元件 `ZoomView` 稱為和 `iscommand` 是您套用的「裁切」影像伺服命令。
+要在响应式环境中将“裁切”应用于购物交互式图像，您可以包含交互式图像配置属性 `ZoomView.iscommand` 到那条路。 组件 `ZoomView` 名为和 `iscommand` 是您应用的“裁切”图像服务命令。
 
-另請參閱 [ZoomView.iscommand](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/command-reference-configuration-attributes-interactive-images/r-html5-aem-interactive-image-config-attrib-zoomview-iscommand.html) 設定屬性。
+参见 [ZoomView.iscommand](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/command-reference-configuration-attributes-interactive-images/r-html5-aem-interactive-image-config-attrib-zoomview-iscommand.html) 配置属性。
 
-另請參閱 [裁切](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-crop.html) 影像伺服命令。
+参见 [裁切](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-crop.html) 图像服务命令。
 
-您現在已準備好將互動式影像與網站上現有的快速檢視整合。
+现在，您已经准备好将交互式图像与网站上的现有概览集成。
 
-## 將互動式影像與現有的快速檢視整合 {#integrating-an-interactive-image-with-an-existing-quickview}
+## 将交互式图像与现有的概览集成 {#integrating-an-interactive-image-with-an-existing-quickview}
 
 >[!NOTE]
-此工作僅適用於獨立Experience Manager Assets客戶。
+此任务仅适用于独立Experience Manager Assets客户。
 
-此程式的最後一步是將互動式影像與網站上現有的快速檢視實作整合。 整合沒有適用於所有情況的解決方案。 每個Quickview實作都是獨一無二的，而且需要特定方法。 這可能需要前端IT人員的協助。
+此过程的最后一步是将交互式图像与网站上现有的概览实施集成。 集成没有适用于所有情况的解决方案。 每个概览实施都是独一无二的，需要特定的方法。 它可能需要前端IT人员的帮助。
 
-現有的「快速檢視」實作通常代表一連串在網頁上發生的相互關聯動作，順序如下：
+现有的概览实施通常表示在网页上发生的一系列相互关联的操作，顺序如下：
 
-1. 使用者會在您網站的使用者介面中觸發元素。
-1. 前端程式碼會根據步驟1所觸發的使用者介面元素來取得快速檢視URL。
-1. 前端計畫碼會使用步驟2中取得的URL傳送Ajax請求。
-1. 後端邏輯會將對應的快速檢視資料或內容傳回前端程式碼。
-1. 前端程式碼會載入Quickview資料或內容。
-1. 前端程式碼可選擇性將載入的快速檢視資料轉換為HTML表示法。
-1. 前端程式碼會顯示強制回應對話方塊或面板，並在畫面上為一般使用者呈現HTML內容。
+1. 用户在网站的用户界面中触发元素。
+1. 前端代码基于在步骤1中触发的用户界面元素获取概览URL。
+1. 前端代码使用在步骤2中获取的URL发送Ajax请求。
+1. 后端逻辑将相应的概览数据或内容返回到前端代码。
+1. 前端代码加载概览数据或内容。
+1. 前端代码可以选择将加载的概览数据转换为HTML表示形式。
+1. 前端代码显示一个模式对话框或面板，并在屏幕上为最终用户渲染HTML内容。
 
-這些呼叫不代表網頁邏輯可從任意步驟呼叫的獨立公用API呼叫。 而是鏈結式呼叫，每個下一個步驟都隱藏在上一個步驟的最後一個階段（回呼）中。
+这些调用不表示独立的公共API调用，网页逻辑可以从任意步骤调用这些API调用。 相反，它是一个链接调用，其中每个下一步都隐藏在上一步的最后阶段（回调）中。
 
-同時，可購物互動影像正在取代步驟1和部分步驟2，當使用者選擇可購物影像內的熱點時，此類使用者互動由檢視器處理。 檢視器會將事件傳回至包含先前新增至Experience Manager Assets之所有熱點資料的網頁。
+在替换步骤1和部分步骤2的可购物交互式图像的同时，当用户选择可购物图像内的热点时，这种用户交互由查看者处理。 查看器会向网页返回一个事件，其中包含之前添加到Experience Manager Assets的所有热点数据。
 
-在此類事件處理常式中，前端程式碼會執行下列動作：
+在此类事件处理程序中，前端代码执行以下操作：
 
-* 聆聽可購物互動影像所發出的事件。
-* 根據熱點資料建構快速檢視URL。
-* 觸發從後端載入快速檢視並在畫面上呈現以供顯示的程式。
+* 侦听由可购物交互式图像发出的事件。
+* 根据热点数据构建概览URL。
+* 触发从后端加载概览并在屏幕上呈现以进行显示的过程。
 
-Experience Manager Assets傳回的內嵌程式碼已有備註的現成可用事件處理常式，如下列醒目提示的程式碼片段所示：
+Experience Manager Assets返回的嵌入代码已具有已注释掉的现成可用事件处理程序，如下面高亮显示的代码片段所示：
 
 ```xml
         var s7interactiveimageviewer = new s7viewers.InteractiveImage({
@@ -428,18 +428,18 @@ Experience Manager Assets傳回的內嵌程式碼已有備註的現成可用事�
         s7interactiveimageviewer.init();
 ```
 
-因此，只需取消註解程式碼，並將虛擬處理常式主體取代為特定網頁專用的程式碼。
+因此，只需取消注释代码，并用特定网页特定的代码替换虚拟处理程序主体即可。
 
-建構快速檢視URL的程式與用來識別先前涵蓋之熱點變數的程式相反。
+构建概观URL的过程与用于标识之前涵盖的热点变量的过程相反。
 
-另請參閱 [識別熱點變數](#optional-identifying-hotspot-variables).
+参见 [识别热点变量](#optional-identifying-hotspot-variables).
 
-使用先前的快速檢視URL範例，您可以檢視下列範例，瞭解快速檢視URL在各種情況下的建構方式：
+通过前面的“概览URL”示例，您可以看到以下示例中概览在各种情况下是如何构建的：
 
 <table>
  <tbody>
   <tr>
-   <td><p>單一SKU，可在查詢字串中找到</p> </td>
+   <td><p>单个SKU，在查询字符串中找到</p> </td>
    <td><code class="code">s7interactiveimageviewer.setHandlers({
       "quickViewActivate": function(inData) {
       var quickViewUrl = "https://server/json?productId=" + inData.sku + "&amp;amp;source=100";
@@ -447,7 +447,7 @@ Experience Manager Assets傳回的內嵌程式碼已有備註的現成可用事�
       });</code></td>
   </tr>
   <tr>
-   <td><p>單一SKU，可在URL路徑中找到</p> </td>
+   <td><p>单个SKU，可在URL路径中找到</p> </td>
    <td><code class="code">s7interactiveimageviewer.setHandlers({
       "quickViewActivate": function(inData) {
       var quickViewUrl = "https://server/product/" + inData.sku;
@@ -455,7 +455,7 @@ Experience Manager Assets傳回的內嵌程式碼已有備註的現成可用事�
       });</code></td>
   </tr>
   <tr>
-   <td><p>查詢字串中的SKU和類別ID</p> </td>
+   <td><p>查询字符串中的SKU和类别标识</p> </td>
    <td><code class="code">s7interactiveimageviewer.setHandlers({
       "quickViewActivate": function(inData) {
       var quickViewUrl = "https://server/quickView/product/?category=" + inData.categoryId + "&amp;amp;prodId=" + inData.sku;
@@ -465,15 +465,15 @@ Experience Manager Assets傳回的內嵌程式碼已有備註的現成可用事�
  </tbody>
 </table>
 
-觸發「快速檢視」URL和啟動「快速檢視」面板的最後一個步驟，很可能需要您IT部門的前端IT人員的協助。 他們深知如何透過適當的步驟正確觸發快速檢視實施，並擁有現成的快速檢視URL。
+触发概观URL和激活概览面板的最后一步很可能需要您IT部门的前端IT人员的协助。 他们最清楚如何从适当的步骤准确触发概览实施，拥有一个现成的概观URL。
 
-您可以檢視這些步驟如何套用至示範網站，以將可購互動影像與快速檢視程式碼完全整合。 之前，快速檢視URL的結構識別如下：
+您可以看到如何将这些步骤应用于演示网站，以将可购物交互式图像与概览代码完全集成。 之前，概观URL的结构标识如下：
 
 ```xml
 /datafeed/$categoryId$-$SKU$.json
 ```
 
-若要在內部重新建構此URL `quickViewActivate` 處理常式，您可以使用 `categoryId` 和 `SKU` 中的可用欄位 `inData` 檢視器程式碼傳遞至處理常式的物件：
+要在中重构此URL，请执行以下操作 `quickViewActivate` 处理程序，您可以使用 `categoryId` 和 `SKU` 中的可用字段 `inData` 通过查看器的代码传递给处理程序的对象：
 
 ```xml
 var sku=inData.sku;
@@ -481,13 +481,13 @@ var categoryId=inData.categoryId;
 var quickViewUrl = "datafeed/" + categoryId + "-" + sku + ".json";
 ```
 
-示範網站正在使用簡單的「 」觸發「快速檢視」對話方塊 `loadQuickView()` 函式呼叫。 此函式僅接受一個引數，即快速檢視資料URL。 因此，整合可購物互動影像的最後一步是將下列程式碼行新增至 `quickViewActivate` 處理常式：
+演示网站正在使用简单的 `loadQuickView()` 函数调用。 此函数仅接受一个参数，即概览数据URL。 因此，集成可购物交互式图像的最后一步是将以下代码行添加到 `quickViewActivate` 处理程序：
 
 ```xml
 loadQuickView(quickViewUrl);
 ```
 
-以下是完整的原始程式碼：
+以下是完整的源代码：
 
 ```xml
  var s7interactiveimageviewer = new s7viewers.InteractiveImage({
@@ -509,10 +509,10 @@ loadQuickView(quickViewUrl);
  s7interactiveimageviewer.init();
 ```
 
-具備完全整合互動式影像的最終示範網站看起來如下所示：
+具有完全集成的交互式图像的最终演示网站如下所示：
 
 [https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-3.html](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-3.html)
 
-## 使用快速檢視建立自訂快顯視窗 {#using-quickviews-to-create-custom-pop-ups}
+## 使用概览创建自定义弹出窗口 {#using-quickviews-to-create-custom-pop-ups}
 
-另請參閱 [使用Quickview建立自訂快顯視窗](/help/assets/custom-pop-ups.md).
+参见 [使用Quickview创建自定义弹出窗口](/help/assets/custom-pop-ups.md).

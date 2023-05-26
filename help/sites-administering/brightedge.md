@@ -1,7 +1,7 @@
 ---
-title: 與BrightEdge Content Optimizer整合
+title: 与BrightEdge Content Optimizer集成
 seo-title: Integrating with BrightEdge Content Optimizer
-description: 瞭解如何整合AEM與BrightEdge Content Optimizer。
+description: 了解如何将AEM与BrightEdge Content Optimizer集成。
 seo-description: Learn about integrating AEM with BrightEdge Content Optimizer.
 uuid: 7075dd3c-2fd6-4050-af1c-9b16ad4366ec
 contentOwner: Guillaume Carlino
@@ -17,57 +17,57 @@ ht-degree: 0%
 
 ---
 
-# 與BrightEdge Content Optimizer整合{#integrating-with-brightedge-content-optimizer}
+# 与BrightEdge Content Optimizer集成{#integrating-with-brightedge-content-optimizer}
 
-建立BrightEdge雲端設定，讓AEM可以使用您BrightEdge帳戶的憑證連線。 如果您使用多個帳戶，則可以建立多個設定。
+创建BrightEdge云配置，以便AEM可以使用您的BrightEdge帐户的凭据进行连接。 如果使用多个帐户，则可以创建多个配置。
 
-建立設定時，需指定標題。 標題應為描述性，以便讓使用者可將設定與BrightEdge帳戶建立關聯。 當頁面作者或管理員將網頁與BrightEdge帳戶建立關聯時，此標題會顯示在下拉式清單中。
+在创建配置时，需要指定标题。 标题应为描述性的，以便人们能够将配置与BrightEdge帐户关联。 当页面作者或管理员将网页与BrightEdge帐户关联时，此标题会显示在下拉列表中。
 
-1. 在邊欄上，按一下「工具>作業>雲端>Cloud Services」 。
-1. 按一下BrightEdge Content Optimizer區段中顯示的連結。 是否已建立BrightEdge設定會決定連結文字：
+1. 在边栏上，单击“工具”>“操作”>“云”>“Cloud Services”。
+1. 单击BrightEdge Content Optimizer部分中显示的链接。 是否已创建BrightEdge配置将决定链接文本：
 
-   * 立即設定：尚未建立設定時，此連結就會顯示。
-   * 顯示設定：建立一個或多個設定後，就會出現此連結。
+   * 立即配置：如果未创建任何配置，则会显示此链接。
+   * 显示配置：创建一个或多个配置后，将显示此链接。
 
    ![chlimage_1-4](assets/chlimage_1-4a.png)
 
-1. 如果您按一下「顯示組態」 ，請按一下「可用組態」旁邊的+連結。
-1. 輸入設定的標題。 或者，輸入節點名稱，該節點用於將設定儲存在存放庫中。 单击创建。
-1. 在「BrightEdge Content Optimizer設定」對話方塊中，輸入BrightEdge帳戶的使用者名稱和密碼，然後按一下「確定」。
+1. 如果单击显示配置，请单击可用配置旁边的+链接。
+1. 键入配置的标题。 （可选）键入用于将配置存储在存储库中的节点的名称。 单击创建。
+1. 在“BrightEdge Content Optimizer配置”对话框中，键入BrightEdge帐户的用户名和密码，然后单击“确定”。
 
-## 編輯BrightEdge設定 {#editing-a-brightedge-configuration}
+## 编辑BrightEdge配置 {#editing-a-brightedge-configuration}
 
-視需要修改BrightEdge組態的使用者名稱和密碼。 修改會影響使用設定的所有頁面。
+根据需要修改BrightEdge配置的用户名和密码。 修改会影响使用该配置的所有页面。
 
-1. 在邊欄上，按一下「工具>作業>雲端>Cloud Services」 。
-1. 在BrightEdge Content Optimizer區段中，按一下「顯示設定」。
+1. 在边栏上，单击“工具”>“操作”>“云”>“Cloud Services”。
+1. 在BrightEdge Content Optimizer部分中，单击显示配置。
 
    ![chlimage_1-5](assets/chlimage_1-5a.png)
 
-1. 按一下您要編輯的組態名稱。
-1. 按一下「編輯」，修改屬性值，然後按一下「確定」。
+1. 单击要编辑的配置名称。
+1. 单击“编辑”，修改属性值，然后单击“确定”。
 
-## 將頁面與BrightEdge設定建立關聯 {#associating-pages-with-a-brightedge-configuration}
+## 将页面与BrightEdge配置关联 {#associating-pages-with-a-brightedge-configuration}
 
-將頁面與BrightEdge設定建立關聯，以將頁面資料傳送至BrightEdge服務進行分析。 將頁面與設定建立關聯時，子頁面會繼承關聯。 通常您會建立網站首頁的關聯，以便將所有頁面的資料傳送到BrightEdge。
+将页面与BrightEdge配置关联以将页面数据发送到BrightEdge服务进行分析。 将页面与配置关联时，子页面将继承该关联。 通常，您需要关联网站的主页，以便将所有页面中的数据发送到BrightEdge。
 
-1. 開啟Classic網站主控台。 ([http://localhost:4502/siteadmin#/content](http://localhost:4502/siteadmin#/content))
-1. 在「網站」樹狀結構中，選取包含您要與BrightEdge設定建立關聯的頁面的資料夾或頁面。
-1. 在頁面清單中，以滑鼠右鍵按一下要設定的頁面，然後按一下「屬性」。
-1. 在「Cloud Services」標籤上，按一下「新增服務」按鈕，然後在「Cloud Services」對話方塊中選取「BrightEdge Content Optimizer」，然後按一下「確定」。
-1. 在BrightEdge Content Optimizer清單中，選取要與頁面建立關聯的BrightEdge設定，然後按一下「確定」。
+1. 打开经典“网站”控制台。 ([http://localhost:4502/siteadmin#/content](http://localhost:4502/siteadmin#/content))
+1. 在网站树中，选择包含要与BrightEdge配置关联的页面的文件夹或页面。
+1. 在页面列表中，右键单击要配置的页面，然后单击“属性”。
+1. 在“Cloud Services”选项卡上，单击“添加服务”按钮，然后在“Cloud Services”对话框中选择BrightEdge Content Optimizer ，然后单击确定。
+1. 在BrightEdge Content Optimizer列表中，选择要与页面关联的BrightEdge配置，然后单击“确定”。
 
    ![chlimage_1-6](assets/chlimage_1-6a.png)
 
-## 啟用BrightEdge設定 {#activating-a-brightedge-configuration}
+## 激活BrightEdge配置 {#activating-a-brightedge-configuration}
 
-啟動BrightEdge設定，將其復寫到發佈執行個體上，並啟用已發佈頁面與BrightEdge服務互動。
+激活BrightEdge配置以将其复制到发布实例上，并启用已发布的页面以与BrightEdge服务交互。
 
-1. 在邊欄上，按一下「網站」，然後瀏覽並選取您與BrightEdge設定相關聯的頁面。
-1. 按一下或點選「發佈」圖示，然後按一下或點選「發佈」。
+1. 在边栏上，单击站点，然后浏览并选择与BrightEdge配置关联的页面。
+1. 单击或点按发布图标，然后单击或点按发布。
 
    ![chlimage_1-7](assets/chlimage_1-7a.png)
 
-1. 在出現的設定清單中，確定已選取您的BrightEdge設定，然後按一下「發佈」。
+1. 在显示的配置列表中，确保已选择BrightEdge配置，然后单击“发布”。
 
    ![chlimage_1-8](assets/chlimage_1-8a.png)

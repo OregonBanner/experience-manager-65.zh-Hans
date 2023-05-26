@@ -1,7 +1,7 @@
 ---
-title: 自訂表單事件追蹤
+title: 自定义表单事件跟踪
 seo-title: Customizing form event tracking
-description: 如果使用者在欄位上花費超過60秒，則會觸發欄位瀏覽事件，並將欄位的詳細資訊傳送到Adobe SiteCatalyst。
+description: 如果用户花费在字段上的时间超过60秒，则会触发fieldvisit事件，并将字段的详细信息发送到Adobe SiteCatalyst。
 seo-description: If a user spends more than 60 seconds on a field, a fieldvisit event is triggered and the details of the field are sent to Adobe SiteCatalyst.
 uuid: 2f790085-2f1a-45be-9a69-6100c76dcae0
 content-type: reference
@@ -16,31 +16,31 @@ ht-degree: 1%
 
 ---
 
-# 自訂表單事件追蹤 {#customizing-form-event-tracking}
+# 自定义表单事件跟踪 {#customizing-form-event-tracking}
 
-下列現成事件會在啟用Analytics的最適化表單中受到追蹤：
+在支持Analytics的自适应表单中，开箱即用地跟踪以下事件：
 
 <table>
  <tbody>
   <tr>
    <th>Event</th>
-   <th>可用變數</th>
+   <th>可用变量</th>
   </tr>
   <tr>
-   <td>轉譯</td>
-   <td>formName， formTitle， formInstance， source</td>
+   <td>渲染</td>
+   <td>formName、formTitle、formInstance、source</td>
   </tr>
   <tr>
-   <td>捨棄</td>
+   <td>放弃</td>
    <td>formName、formTitle、formInstance、panelName、panelTitle</td>
   </tr>
   <tr>
    <td>保存</td>
-   <td>formName， formTitle， formInstance， panelName， source</td>
+   <td>formName、formTitle、formInstance、panelName、source</td>
   </tr>
   <tr>
    <td>提交</td>
-   <td>formName， formTitle， formInstance， source</td>
+   <td>formName、formTitle、formInstance、source</td>
   </tr>
   <tr>
    <td>错误</td>
@@ -61,25 +61,25 @@ ht-degree: 1%
  </tbody>
 </table>
 
-## 自訂欄位造訪事件逾時 {#customizing-the-field-visit-event-timeout}
+## 自定义字段访问事件超时 {#customizing-the-field-visit-event-timeout}
 
-在預設AEM表單設定中，如果使用者在欄位上花費超過60秒，則 `fieldvisit` 事件會觸發，而欄位的詳細資料會傳送至Adobe Analytics。 您可以在AEM設定控制檯(/system/console/configMgr)的AEM Forms Analytics設定下自訂欄位時間追蹤基準線，以增加或減少逾時限制。
+在默认的AEM表单设置中，如果用户在一个字段上花费超过60秒，则 `fieldvisit` 触发事件，并将字段的详细信息发送到Adobe Analytics。 您可以在AEM配置控制台(/system/console/configMgr)的AEM Forms Analytics配置下自定义字段时间跟踪基线，以增加或减少超时限制。
 
-## 自訂追蹤事件 {#customizing-the-tracking-events}
+## 自定义跟踪事件 {#customizing-the-tracking-events}
 
-您可以修改 `trackEvent`中可用的函式 `/libs/afanalytics/js/custom.js` 檔案來自訂事件追蹤。 每當要追蹤的事件以最適化表單發生時， `trackEvent`函式已呼叫。 此 `trackEvent` 函式接受兩個引數： `eventName`和 `variableValueMap`.
+您可以修改 `trackEvent`中可用的函数 `/libs/afanalytics/js/custom.js` 文件，以自定义事件跟踪。 每当以自适应表单发生被跟踪的事件时， `trackEvent`调用函数。 此 `trackEvent` 函数接受两个参数： `eventName`和 `variableValueMap`.
 
-您可以評估下列專案的值： *事件名稱* 和 *variableValueMap* 引數來變更事件的追蹤行為。 例如，您可以選擇在發生特定數量的錯誤事件後，將資訊傳送至Analytics伺服器。 您也可以選擇執行下列任何自訂專案：
+您可以计算 *事件名称* 和 *variableValueMap* 用于更改事件的跟踪行为的参数。 例如，您可以选择在发生一定数量的错误事件后将信息发送到Analytics服务器。 您还可以选择执行以下任何自定义项：
 
-* 您可以在傳送事件之前設定臨界值時間。
-* 您可以維護狀態以決定動作，例如， *fieldVisit* 根據上一個事件的時間戳記推送一個虛擬事件。
-* 您可以使用 `pushEvent` 將事件傳送至analytics伺服器的函式 *.*
+* 您可以在发送事件之前设置阈值时间。
+* 您可以维护一个状态以决定操作，例如， *fieldVisit* 根据上一个事件的时间戳推送一个虚拟事件。
+* 您可以使用 `pushEvent` 用于将事件发送到analytics服务器的函数 *.*
 
-* 您可以選擇完全不將事件推送至分析伺服器。
+* 您可以选择根本不将事件推送到Analytics服务器。
 
 ### 样本 {#sample}
 
-在下列範例中， *錯誤* 每個的事件 *fieldName* 屬性已維護。 只有在再次發生錯誤時，才會將事件傳送至Analytics伺服器。
+在以下示例中，表示了 *错误* 每个的事件 *fieldName* 属性保持不变。 仅当再次发生错误时，才会将该事件发送到Analytics服务器。
 
 ```javascript
 case 'error':
@@ -90,12 +90,12 @@ case 'error':
         break;
 ```
 
-## 自訂面板造訪事件 {#customizing-the-panelvisit-event}
+## 自定义面板访问事件 {#customizing-the-panelvisit-event}
 
-在預設的AEM Forms設定中，每60秒後，會檢查包含最適化表單的視窗是否處於作用中狀態。 如果視窗處於作用中狀態， `panelVisit`事件會觸發至Adobe Analytics。 它有助於確定檔案或表單是否作用中，並計算在相應表單或檔案上的逗留時間。
+在默认的AEM Forms设置中，每60秒后，将检查包含自适应表单的窗口是否处于活动状态。 如果窗口处于活动状态，则 `panelVisit`事件会触发至Adobe Analytics。 它有助于确定文档或表单是否处于活动状态，并计算在相应表单或文档上花费的时间。
 
 >[!NOTE]
 >
->用來存取活動和計算逗留時間的事件名稱為「panelVisit」。 此事件與上表所列面板瀏覽事件不同。
+>用于确定活动和计算逗留时间的事件名称为“panelVisit”。 此事件与上表中所列的面板访问事件不同。
 
-您可以修改scheduleHeartBeatCheck函式，該函式可在 `/libs/afanalytics/js/custom.js` 檔案來變更或停止定期傳送至Adobe Analytics的事件。
+您可以修改scheduleHeartBeatCheck函数，该函数可在 `/libs/afanalytics/js/custom.js` 文件来更改或停止定期发送到Adobe Analytics的事件。

@@ -1,7 +1,7 @@
 ---
-title: 在最適化表單中使用驗證碼
+title: 在自适应表单中使用CAPTCHA
 seo-title: Using CAPTCHA in adaptive forms
-description: 瞭解如何在適用性表單中設定AEM CAPTCHA或Google reCAPTCHA服務。
+description: 了解如何在自适应表单中配置AEM验证码或Google reCAPTCHA服务。
 seo-description: Learn how to configure AEM CAPTCHA or Google reCAPTCHA service in adaptive forms.
 uuid: 0e11e98a-12ac-484c-b77f-88ebdf0f40e5
 contentOwner: vishgupt
@@ -18,117 +18,117 @@ ht-degree: 0%
 
 ---
 
-# 在最適化表單中使用驗證碼{#using-captcha-in-adaptive-forms}
+# 在自适应表单中使用CAPTCHA{#using-captcha-in-adaptive-forms}
 
-CAPTCHA （完全自動化的公用圖靈測試，用於區分電腦和人類）是一種常用於線上交易的程式，用來區分人類和自動化程式或機器人。 這會帶來挑戰，並評估使用者回應，以判斷它是人類還是機器人與網站互動。 它可防止使用者在測試失敗時繼續進行，並透過防止機器人張貼垃圾郵件或惡意目的來確保線上交易的安全。
+CAPTCHA（完全自动化公共图灵测试，用于区分计算机和人类）是一种在线交易中常用的程序，用于区分人类和自动化程序或机器人。 它会提出挑战，并评估用户响应以确定是人类还是机器人与网站交互。 它可以在测试失败时阻止用户继续操作，并通过阻止机器人发送垃圾邮件或恶意目的，帮助确保在线交易的安全。
 
-AEM Forms支援最適化表單中的驗證碼。 您可以使用Google的reCAPTCHA服務來實作CAPTCHA。
+AEM Forms支持自适应表单中的验证码。 您可以使用Google的reCAPTCHA服务来实施CAPTCHA。
 
 >[!NOTE]
 >
->* AEM Forms僅支援reCaptcha v2。 不支援任何其他版本。
->* AEM Forms應用程式上的離線模式不支援適用性表單中的驗證碼。
+>* AEM Forms仅支持reCaptcha v2。 不支持任何其他版本。
+>* AEM Forms应用程序在离线模式下不支持自适应表单中的验证码。
 >
 
 
-## 透過Google設定ReCAPTCHA服務 {#google-recaptcha}
+## 通过Google配置ReCAPTCHA服务 {#google-recaptcha}
 
-表單作者可使用Google的reCAPTCHA服務，在最適化表單中實作CAPTCHA。 它提供進階的驗證碼功能，以保護您的網站。 如需reCAPTCHA運作方式的詳細資訊，請參閱 [Google reCAPTCHA](https://developers.google.com/recaptcha/).
+表单作者可以使用Google的reCAPTCHA服务在自适应表单中实施CAPTCHA。 它提供高级验证码功能以保护您的站点。 有关reCAPTCHA工作方式的更多信息，请参阅 [Google reCAPTCHA](https://developers.google.com/recaptcha/).
 
 ![Recaptcha](assets/recaptcha_new.png)
 
-若要在AEM Forms中實作reCAPTCHA服務：
+要在AEM Forms中实施reCAPTCHA服务，请执行以下操作：
 
-1. 取得 [recaptcha API金鑰組](https://www.google.com/recaptcha/admin) 來自Google。 它包含網站金鑰和密碼。
-1. 建立雲端服務的設定容器。
+1. 获取 [reCAPTCHA API密钥对](https://www.google.com/recaptcha/admin) 来自Google的。 它包括站点密钥和密钥。
+1. 为云服务创建配置容器。
 
-   1. 前往 **[!UICONTROL 「工具」>「一般」>「設定瀏覽器」]**.
-      * 請參閱 [設定瀏覽器](/help/sites-administering/configurations.md) 說明檔案以取得詳細資訊。
-   1. 請執行以下操作來啟用雲端設定的全域資料夾，或跳過此步驟來建立和設定雲端服務設定的另一個資料夾。
+   1. 转到 **[!UICONTROL “工具”>“常规”>“配置浏览器”]**.
+      * 请参阅 [配置浏览器](/help/sites-administering/configurations.md) 文档，以了解更多信息。
+   1. 执行以下操作可为云配置启用全局文件夹，或跳过此步骤为云服务配置创建和配置其他文件夹。
 
-      1. 在設定瀏覽器中，選取 **[!UICONTROL 全域]** 資料夾並點選 **[!UICONTROL 屬性]**.
+      1. 在配置浏览器中，选择 **[!UICONTROL 全局]** 文件夹并点按 **[!UICONTROL 属性]**.
 
-      1. 在「組態屬性」對話方塊中，啟用 **[!UICONTROL 雲端設定]**.
-      1. 點選 **[!UICONTROL 儲存並關閉]** 以儲存設定並結束對話方塊。
-   1. 在設定瀏覽器中，點選 **[!UICONTROL 建立]**.
-   1. 在建立設定對話方塊中，指定資料夾的標題並啟用 **[!UICONTROL 雲端設定]**.
-   1. 點選 **[!UICONTROL 建立]** 以建立為雲端服務設定啟用的資料夾。
+      1. 在配置属性对话框中，启用 **[!UICONTROL 云配置]**.
+      1. 点按 **[!UICONTROL 保存并关闭]** 保存配置并退出对话框。
+   1. 在配置浏览器中，点按 **[!UICONTROL 创建]**.
+   1. 在创建配置对话框中，指定文件夹的标题并启用 **[!UICONTROL 云配置]**.
+   1. 点按 **[!UICONTROL 创建]** 以创建为云服务配置启用的文件夹。
 
 
-1. 設定reCAPTCHA的雲端服務。
+1. 为reCAPTCHA配置云服务。
 
-   1. 在您的AEM編寫執行個體上，前往 ![tools-1](assets/tools-1.png) > **Cloud Services**.
-   1. 點選 **[!UICONTROL reCAPTCHA]**. 「組態」頁面隨即開啟。 選取在上一步建立的設定容器並點選 **[!UICONTROL 建立]**.
-   1. 指定reCAPTCHA服務的名稱、網站金鑰和秘密金鑰，然後點選 **[!UICONTROL 建立]** 以建立雲端服務設定。
-   1. 在「編輯元件」對話方塊中，指定在步驟1中取得的場地和秘密金鑰。 點選 **儲存設定** 然後點選 **確定** 以完成設定。
+   1. 在您的AEM创作实例上，转到 ![tools-1](assets/tools-1.png) > **Cloud Services**.
+   1. 点按 **[!UICONTROL reCAPTCHA]**. 此时将打开“配置”页。 选择在上一步中创建的配置容器并点按 **[!UICONTROL 创建]**.
+   1. 指定reCAPTCHA服务的名称、站点密钥和密钥，然后点按 **[!UICONTROL 创建]** 以创建云服务配置。
+   1. 在“编辑组件”对话框中，指定在步骤1中获取的站点密钥和密钥。 点按 **保存设置** 然后点按 **确定** 以完成配置。
 
-   設定reCAPTCHA服務後，就可在調適型表單中使用。 如需詳細資訊，請參閱 [在最適化表單中使用驗證碼](#using-captcha).
+   配置reCAPTCHA服务后，便可在自适应表单中使用。 有关更多信息，请参阅 [在自适应表单中使用CAPTCHA](#using-captcha).
 
-## 在最適化表單中使用驗證碼 {#using-captcha}
+## 在自适应表单中使用CAPTCHA {#using-captcha}
 
-若要在最適化表單中使用驗證碼：
+要在自适应表单中使用验证码，请执行以下操作：
 
-1. 在編輯模式下開啟最適化表單。
-
-   >[!NOTE]
-   >
-   >確定建立最適化表單時選取的設定容器包含reCAPTCHA雲端服務。 您也可以編輯最適化表單屬性，以變更與表單相關聯的設定容器。
-
-1. 在元件瀏覽器中，拖放 **驗證碼** 元件至最適化表單。
+1. 在编辑模式下打开自适应表单。
 
    >[!NOTE]
    >
-   >不支援在最適化表單中使用多個Captcha元件。 此外，不建議在標示為延遲載入的面板或片段中使用驗證碼。
+   >确保在创建自适应表单时选择的配置容器包含reCAPTCHA云服务。 您还可以编辑自适应表单属性，以更改与表单关联的配置容器。
+
+1. 在组件浏览器中，拖放 **验证码** 组件到自适应表单上。
 
    >[!NOTE]
    >
-   >驗證碼會區分大小寫，且約一分鐘後過期。 因此，建議將驗證碼元件放在最適化表單中提交按鈕之前。
-
-1. 選取您新增的Captcha元件並點選 ![cmppr](assets/cmppr.png) 以編輯其屬性。
-1. 指定驗證碼介面工具集的標題。 預設值為 **驗證碼**. 選取 **隱藏標題** 如果您不想顯示標題。
-1. 從 **驗證碼服務** 下拉式清單，選取 **recaptcha** 啟用reCAPTCHA服務（若您已依照中的說明進行設定） [Google的ReCAPTCHA服務](#google-recaptcha). 從「設定」下拉式清單中選取設定。 此外，請選取大小為 **一般** 或 **壓縮** 用於reCAPTCHA小工具。
+   >不支持在自适应表单中使用多个验证码组件。 此外，不建议在标记为延迟加载的面板或片段中使用验证码。
 
    >[!NOTE]
    >
-   >不要選取 **[!UICONTROL 預設]** Captcha服務下拉式清單中，預設的AEM驗證碼服務已過時。
+   >验证码对时间敏感，大约一分钟后过期。 因此，建议在自适应表单中将Captcha组件放在提交按钮之前。
 
-1. 儲存屬性。
+1. 选择您添加的验证码组件并点按 ![cmppr](assets/cmppr.png) 以编辑其属性。
+1. 指定CAPTCHA小部件的标题。 默认值为 **验证码**. 选择 **隐藏标题** 如果您不想显示标题。
+1. 从 **验证码服务** 下拉列表，选择 **recaptcha** 启用reCAPTCHA服务（如果已按中的说明进行配置） [Google的ReCAPTCHA服务](#google-recaptcha). 从“设置”下拉列表中选择一个配置。 此外，选择大小为 **普通** 或 **紧凑** 用于reCAPTCHA构件。
 
-已在最適化表單上啟用reCAPTCHA服務。 您可以預覽表單並檢視驗證碼運作中。
+   >[!NOTE]
+   >
+   >不选择 **[!UICONTROL 默认]** 从Captcha服务下拉列表中，默认的AEM CAPTCHA服务已弃用。
 
-### 根據規則顯示或隱藏驗證碼元件 {#show-hide-captcha}
+1. 保存属性。
 
-您可以根據在最適化表單中套用至元件的規則，選擇顯示或隱藏驗證碼元件。 點選元件，選取 ![編輯規則](assets/edit-rules-icon.svg)，然後點選 **[!UICONTROL 建立]** 以建立規則。 如需建立規則的詳細資訊，請參閱 [規則編輯器](rule-editor.md).
+已在自适应表单上启用reCAPTCHA服务。 您可以预览表单并查看验证码是否正常工作。
 
-例如，只有在表單中的「貨幣值」欄位的值超過25000時，CAPTCHA元件才會顯示在調適型表單中。
+### 根据规则显示或隐藏验证码组件 {#show-hide-captcha}
 
-點選 **[!UICONTROL 貨幣值]** 欄位並建立以下規則：
+您可以选择根据应用于自适应表单中组件的规则显示或隐藏CAPTCHA组件。 点按组件，选择 ![编辑规则](assets/edit-rules-icon.svg)，然后点按 **[!UICONTROL 创建]** 创建规则。 有关创建规则的更多信息，请参阅 [规则编辑器](rule-editor.md).
 
-![顯示或隱藏規則](assets/rules-show-hide-captcha.png)
+例如，仅当表单中的货币值字段的值超过25000时，CAPTCHA组件才必须在自适应表单中显示。
+
+点按 **[!UICONTROL 货币值]** 字段，并创建以下规则：
+
+![显示或隐藏规则](assets/rules-show-hide-captcha.png)
 
 ### 验证验证码 {#validate-captcha}
 
-您可以在提交表單時驗證最適化表單中的驗證碼，或依據使用者動作和條件進行驗證碼驗證。
+您可以在提交表单时验证自适应表单中的CAPTCHA，也可以根据用户操作和条件进行CAPTCHA验证。
 
-#### 在表單提交時驗證驗證碼 {#validation-form-submission}
+#### 在提交表单时验证验证码 {#validation-form-submission}
 
-若要在提交最適化表單時自動驗證碼：
+要在提交自适应表单时自动验证验证码，请执行以下操作：
 
-1. 點選CAPTCHA元件並選取 ![cmppr](assets/configure-icon.svg) 以檢視元件屬性。
-1. 在 **[!UICONTROL 驗證碼驗證]** 區段，選取 **[!UICONTROL 在表單提交時驗證驗證碼]**.
-1. 點選 ![完成](assets/save_icon.svg) 以儲存元件屬性。
+1. 点按CAPTCHA组件并选择 ![cmppr](assets/configure-icon.svg) 查看组件属性。
+1. 在 **[!UICONTROL 验证验证码]** 部分，选择 **[!UICONTROL 在提交表单时验证验证码]**.
+1. 点按 ![完成](assets/save_icon.svg) 以保存组件属性。
 
-#### 驗證使用者動作和條件的驗證碼 {#validate-captcha-user-action}
+#### 在用户操作和条件上验证验证码 {#validate-captcha-user-action}
 
-若要根據條件和使用者動作來驗證驗證碼：
+要根据条件和用户操作验证验证码，请执行以下操作：
 
-1. 點選CAPTCHA元件並選取 ![cmppr](assets/configure-icon.svg) 以檢視元件屬性。
-1. 在 **[!UICONTROL 驗證碼驗證]** 區段，選取 **[!UICONTROL 使用者動作時驗證驗證碼]**.
-1. 點選 ![完成](assets/save_icon.svg) 以儲存元件屬性。
+1. 点按CAPTCHA组件并选择 ![cmppr](assets/configure-icon.svg) 查看组件属性。
+1. 在 **[!UICONTROL 验证验证码]** 部分，选择 **[!UICONTROL 在用户操作时验证验证码]**.
+1. 点按 ![完成](assets/save_icon.svg) 以保存组件属性。
 
-[!DNL Experience Manager Forms] 提供 `ValidateCAPTCHA` 使用預先定義的條件來驗證驗證碼的API。 您可以使用自訂提交動作或透過在調適型表單中定義元件規則來叫用API。
+[!DNL Experience Manager Forms] 提供 `ValidateCAPTCHA` 用于使用预定义条件验证CAPTCHA的API。 您可以使用自定义提交操作或通过定义自适应表单中组件的规则来调用API。
 
-以下範例為 `ValidateCAPTCHA` 使用預先定義條件來驗證驗證碼的API：
+以下示例为 `ValidateCAPTCHA` 用于使用预定义条件验证CAPTCHA的API：
 
 ```javascript
 if (slingRequest.getParameter("numericbox1614079614831").length() >= 5) {
@@ -142,35 +142,35 @@ if (slingRequest.getParameter("numericbox1614079614831").length() >= 5) {
     }
 ```
 
-此範例表示 `ValidateCAPTCHA` 只有在使用者在填寫表單時指定的數字方塊位數大於5時，API才會驗證表單中的驗證碼。
+此示例表明 `ValidateCAPTCHA` 仅当用户在填写表单时指定的数字框中的数字位数大于5时，API才会验证表单中的验证码。
 
-**選項1：使用 [!DNL Experience Manager Forms] ValidateCAPTCHA API可使用自訂提交動作來驗證CAPTCHA**
+**选项1：使用 [!DNL Experience Manager Forms] ValidateCAPTCHA API使用自定义提交操作验证验证码**
 
-執行以下步驟以使用 `ValidateCAPTCHA` 使用自訂提交動作驗證驗證碼的API：
+执行以下步骤以使用 `ValidateCAPTCHA` 使用自定义提交操作验证CAPTCHA的API：
 
-1. 新增包含 `ValidateCAPTCHA` 自訂提交動作的API。 如需自訂提交動作的詳細資訊，請參閱 [建立最適化Forms的自訂提交動作](custom-submit-action-form.md).
-1. 從中選擇自訂提交動作的名稱 **[!UICONTROL 提交動作]** 中的下拉式清單 **[!UICONTROL 提交]** 最適化表單的屬性。
-1. 點選 **[!UICONTROL 提交]**. 系統會根據中定義的條件來驗證驗證碼 `ValidateCAPTCHA` 自訂提交動作的API。
+1. 添加脚本以包含 `ValidateCAPTCHA` 用于自定义提交操作的API。 有关自定义提交操作的更多信息，请参阅 [为自适应Forms创建自定义提交操作](custom-submit-action-form.md).
+1. 从中选择自定义提交操作的名称 **[!UICONTROL 提交操作]** 中的下拉列表 **[!UICONTROL 提交]** 自适应表单的属性。
+1. 点按 **[!UICONTROL 提交]**. 验证码将根据 `ValidateCAPTCHA` 自定义提交操作的API。
 
-**選項2：使用 [!DNL Experience Manager Forms] ValidateCAPTCHA API可在提交表單前，依使用者動作驗證驗證碼**
+**选项2：使用 [!DNL Experience Manager Forms] ValidateCAPTCHA API用于在提交表单之前对用户操作验证验证码**
 
-您也可以叫用 `ValidateCAPTCHA` API的方式是對調適型表單中的元件套用規則。
+您还可以调用 `ValidateCAPTCHA` API，方法是对自适应表单中的组件应用规则。
 
-例如，您新增 **[!UICONTROL 驗證碼驗證]** 最適化表單中的按鈕，並建立規則以在按一下按鈕時叫用服務。
+例如，您添加 **[!UICONTROL 验证验证码]** 按钮，并创建规则以在单击按钮时调用服务。
 
-下圖說明如何在 **[!UICONTROL 驗證碼驗證]** 按鈕：
+下图说明了在单击服务时如何调用服务 **[!UICONTROL 验证验证码]** 按钮：
 
 ![验证验证码](assets/captcha-validation1.gif)
 
-您可以叫用包含的自訂servlet `ValidateCAPTCHA` API使用規則編輯器，並根據驗證結果啟用或停用最適化表單的提交按鈕。
+您可以调用包含以下内容的自定义servlet `ValidateCAPTCHA` 使用规则编辑器的API，并根据验证结果启用或禁用自适应表单的提交按钮。
 
-同樣地，您可以使用規則編輯器在適用性表單中包含驗證CAPTCHA的自訂方法。
+同样，您可以使用规则编辑器在自适应表单中包含用于验证验证码的自定义方法。
 
-### 新增自訂驗證碼服務 {#add-custom-captcha-service}
+### 添加自定义验证码服务 {#add-custom-captcha-service}
 
-[!DNL Experience Manager Forms] 提供reCAPTCHA作為CAPTCHA服務。 不過，您可以新增自訂服務，以顯示於 **[!UICONTROL 驗證碼服務]** 下拉式清單。
+[!DNL Experience Manager Forms] 提供reCAPTCHA作为CAPTCHA服务。 但是，您可以添加自定义服务以在 **[!UICONTROL CAPTCHA服务]** 下拉列表。
 
-以下是將其他CAPTCHA服務新增至最適化表單的介面實作範例：
+以下是向自适应表单添加其他CAPTCHA服务的界面的实现示例：
 
 ```javascript
 package com.adobe.aemds.guide.service;
@@ -200,6 +200,6 @@ public interface GuideCaptchaValidator {
 }
 ```
 
-`captchaPropertyNodePath` 指的是Sling存放庫中驗證碼元件的資源路徑。 此屬性用於包含驗證碼元件的特定詳細資料。 例如， `captchaPropertyNodePath` 包含在CAPTCHA元件上設定的reCAPTCHA雲端設定資訊。 雲端設定資訊提供 **[!UICONTROL 網站金鑰]** 和 **[!UICONTROL 秘密金鑰]** 實作reCAPTCHA服務的設定。
+`captchaPropertyNodePath` 指Sling存储库中CAPTCHA组件的资源路径。 此属性用于包含特定于CAPTCHA组件的详细信息。 例如， `captchaPropertyNodePath` 包含有关在CAPTCHA组件上配置的reCAPTCHA云配置的信息。 云配置信息提供 **[!UICONTROL 站点密钥]** 和 **[!UICONTROL 密钥]** 用于实施reCAPTCHA服务的设置。
 
-`userResponseToken` 是指 `g_recaptcha_response` 在表單中解決驗證碼後產生的驗證碼。
+`userResponseToken` 是指 `g_recaptcha_response` 在表单中求解验证码后生成的验证码。

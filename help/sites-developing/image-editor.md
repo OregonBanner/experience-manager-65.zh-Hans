@@ -1,6 +1,6 @@
 ---
 title: 图像编辑器
-description: 影像編輯器是AEM的一項核心功能，元件可使用它來協助內容作者操作影像。
+description: 图像编辑器是AEM的一个核心部分，组件可以使用它来促进内容作者对图像的操作。
 uuid: de6ac71b-380a-4b67-b697-ac34a79a9cc4
 contentOwner: bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -17,25 +17,25 @@ ht-degree: 16%
 
 # 图像编辑器{#image-editor}
 
-影像編輯器是AEM的一項核心功能，元件可使用它來協助內容作者操作影像。
+图像编辑器是AEM的一个核心部分，组件可以使用它来促进内容作者对图像的操作。
 
 >[!CAUTION]
 >
->若要使用本文所述影像編輯器的功能， [feature pack 24267](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq640/featurepack/cq-6.4.0-featurepack-24267) 必須安裝。
+>要使用本文中介绍的图像编辑器的功能， [功能包24267](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq640/featurepack/cq-6.4.0-featurepack-24267) 必须安装。
 
-## 影像地圖的相對單位 {#relative-units-for-image-map}
+## 图像映射的相对单位 {#relative-units-for-image-map}
 
-「影像編輯器」會將影像地圖區域以絕對和相對單位持續儲存。 當提供相對單位作為資料屬性以動態調整回應式影像元件中使用者端影像地圖（相對於影像大小）的大小時，相對單位會很有用。
+图像编辑器将图像映射区域保留为绝对和相对单位。 当提供相对单位作为数据属性用于动态地调整响应式图像组件中客户端上的图像映射（相对于图像大小）的大小时，相对单位很有用。
 
-### imageMap屬性 {#imagemap-property}
+### imageMap属性 {#imagemap-property}
 
-影像地圖座標會持續儲存至JCR做為 `imageMap` 屬性。 其格式如下。
+图像映射坐标作为 `imageMap` 属性。 其格式如下。
 
-屬性會將地圖區域儲存如下：
+物业按下列方式储存地图区域：
 
 `[area1][area2][...]`
 
-區域格式：
+区域格式：
 
 `[SHAPE(COORDINATES)"HREF"|"TARGET"|"ALT"|(RELATIVE_COORDINATES)]`
 
@@ -44,23 +44,23 @@ ht-degree: 16%
 `[rect(0,0,10,10)"https://www.adobe.com"|"_self"|"alt"|(0,0,0.8,0.8)]`
 `[circle(10,10,10)"https://www.adobe.com"|"_self"|"alt"|(0.8,0.8,0.8)]`
 
-## 支援SVG影像 {#support-for-svg-images}
+## 支持SVG图像 {#support-for-svg-images}
 
-影像編輯器支援可縮放向量圖形(SVG)。
+图像编辑器支持可缩放矢量图形(SVG)。
 
 * 从 DAM 拖放上传 SVG 资源以及从本地文件系统上传 SVG 文件均受支持。
 
-## 依MIME型別啟用外掛程式 {#enabling-plugins-by-mime-type}
+## 按MIME类型启用插件 {#enabling-plugins-by-mime-type}
 
-在某些情況下，由於伺服器端處理缺乏支援，因此必須限制特定MIME型別的編寫動作。 例如，可能不允許編輯SVG影像。
+在某些情况下，由于缺少服务器端处理支持，必须限制某些MIME类型的创作操作。 例如，可能不允许编辑SVG图像。
 
-MIME型別可以設定影像編輯器中的外掛程式，選擇性地啟用 `supportedMimeTypes` 屬性（在個別外掛程式的設定節點上）。
+MIME类型可以通过设置 `supportedMimeTypes` 属性。
 
 ### 示例 {#example}
 
-例如，我們假設僅允許裁切功能用於GIF、JPEG、PNG、WEBP和TIFF影像。
+例如，我们假设仅允许对GIF、JPEG、PNG、WEBP和TIFF图像进行裁切的功能。
 
-此 `supportedMimeTypes` 然後，屬性必須設定為外掛程式之設定節點上允許的MIME型別字串， `cq:editConfig` 影像元件的節點。
+此 `supportedMimeTypes` 然后，必须在上的插件的配置节点上将属性设置为允许的MIME类型的字符串。 `cq:editConfig` 图像组件的节点。
 
 `/apps/core/wcm/components/image/v2/image/cq:editConfig`
 

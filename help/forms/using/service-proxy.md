@@ -1,7 +1,7 @@
 ---
-title: HTML5表單服務Proxy
+title: HTML5表单服务代理
 seo-title: HTML5 forms service proxy
-description: HTML5 Forms Service Proxy是註冊提交服務Proxy的設定。 若要設定服務Proxy，請透過要求引數submissionServiceProxy指定提交服務的URL。
+description: HTML5表单服务代理是用于注册提交服务的代理的配置。 要配置服务代理，请通过请求参数submissionServiceProxy指定提交服务的URL。
 seo-description: HTML5 forms Service Proxy is a configuration to register a proxy for the submission service. To configure Service Proxy, specify the URL of submission service through request parameter submissionServiceProxy.
 uuid: 42d6c1da-3945-469d-b429-c33e563ed70c
 content-type: reference
@@ -18,35 +18,35 @@ ht-degree: 1%
 
 ---
 
-# HTML5表單服務Proxy{#html-forms-service-proxy}
+# HTML5表单服务代理{#html-forms-service-proxy}
 
-HTML5 Forms Service Proxy是註冊提交服務Proxy的設定。 若要設定服務Proxy，請透過請求引數指定提交服務的URL *submissionServiceProxy*.
+HTML5表单服务代理是用于注册提交服务的代理的配置。 要配置服务代理，请通过请求参数指定提交服务的URL *submissionServiceProxy*.
 
-## Service Proxy的優點 {#benefits-of-service-proxy-br}
+## 服务代理的好处 {#benefits-of-service-proxy-br}
 
-服務Proxy可消除下列專案：
+服务代理消除了以下情况：
 
-* HTML5表單工作流程需要為HTML5表單使用者開啟提交服務「/content/xfaforms/submission/default」。 這會向更廣大的非預期受眾公開AEM伺服器。
-* 服務URL內嵌於表單的執行階段模型中。 無法變更服務URL路徑。
-* 提交分為兩個步驟。 若要提交表單資料，提交作業至少需要兩次前往伺服器的歷程。 因此，會增加伺服器的負載。
-* HTML5表單會在POST要求中傳送資料，而非PDF要求。 對於同時涉及PDF和HTML5表單的工作流程，需要兩種不同的處理提交的方法。
+* HTML5表单工作流需要为HTML5表单用户打开提交服务“/content/xfaforms/submission/default”。 它向更广泛的意外受众公开AEM服务器。
+* 服务URL将嵌入到表单的运行时模型中。 无法更改服务URL路径。
+* 提交分为两步。 要提交表单数据，提交至少需要两次历程才能到达服务器。 因此，会增加服务器的负载。
+* HTML5表单在POST请求而不是PDF请求中发送数据。 对于涉及PDF和HTML5表单的工作流，需要两种不同的方法来处理提交。
 
-### 拓撲 {#topologies-br}
+### 拓扑 {#topologies-br}
 
-HTML5表單可以使用以下拓撲來連線到AEM伺服器。
+HTML5表单可以使用以下拓扑连接到AEM服务器。
 
-* AEM Server或HTML5表單用來透過POST將資料傳送至伺服器的拓撲。
-* Proxy伺服器將POST資料傳送至伺服器的拓撲。
+* AEM Server或HTML5表单通过POST将数据发送到服务器的拓扑。
+* 代理服务器向服务器发送POST数据的拓扑。
 
-![HTML5 forms服務Proxy拓撲](assets/topology.png)
+![HTML5 forms服务代理拓扑](assets/topology.png)
 
-HTML5 forms服務Proxy拓撲
+HTML5 forms服务代理拓扑
 
-HTML5表單會連線至AEM伺服器，以執行伺服器端的指令碼、網頁服務和提交內容。 HTML5表單的XFA執行階段使用「/bin/xfaforms/submitaction」端點上的Ajax呼叫搭配各種引數來連線至AEM伺服器。 HTML5 forms連線AEM伺服器以執行下列操作：
+HTML5表单连接到AEM服务器以运行服务器端脚本、Web服务和提交。 HTML5表单的XFA运行时使用对“/bin/xfaforms/submitaction”端点的Ajax调用和各种参数连接到AEM服务器。 HTML5 forms connect AEM服务器可执行以下操作：
 
-#### 執行伺服器端指令碼和Web服務 {#execute-server-sided-scripts-and-web-services}
+#### 执行服务器端脚本和Web服务 {#execute-server-sided-scripts-and-web-services}
 
-標示為在伺服器上執行的指令碼稱為伺服器端指令碼。 下表列出伺服器端指令碼和Web服務中使用的所有引數。
+标记为要在服务器上运行的脚本称为服务器端脚本。 下表列出了服务器端脚本和Web服务中使用的所有参数。
 
 <table>
  <tbody>
@@ -55,43 +55,43 @@ HTML5表單會連線至AEM伺服器，以執行伺服器端的指令碼、網頁
    <td><p><strong>描述</strong></p> </td>
   </tr>
   <tr>
-   <td><p>活動</p> </td>
-   <td><p>活動包含觸發請求的事件。 例如點按、退出或變更</p> </td>
+   <td><p>活动</p> </td>
+   <td><p>活动包含触发请求的事件。 例如，单击、退出或更改</p> </td>
   </tr>
   <tr>
    <td><p>contextSom</p> </td>
-   <td><p>contextSom包含執行事件的物件的SOM運算式。</p> </td>
+   <td><p>contextSom包含执行事件的对象的SOM表达式。</p> </td>
   </tr>
   <tr>
    <td><p>模板</p> </td>
-   <td><p>範本包含用於呈現表單的範本。</p> </td>
+   <td><p>模板包含用于呈现表单的模板。</p> </td>
   </tr>
   <tr>
    <td><p>contentRoot</p> </td>
-   <td><p>contentRoot包含用來呈現表單的範本根目錄。</p> </td>
+   <td><p>contentRoot包含用于呈现表单的模板根目录。</p> </td>
   </tr>
   <tr>
    <td><p>数据</p> </td>
-   <td><p>資料包含用於轉譯表單的bata位元組。</p> </td>
+   <td><p>数据包含用于渲染表单的bata字节。</p> </td>
   </tr>
   <tr>
    <td><p>formDom</p> </td>
-   <td><p>formDom包含JSON格式的HTML5表單的DOM。</p> </td>
+   <td><p>formDom包含JSON格式的HTML5表单的DOM。</p> </td>
   </tr>
   <tr>
-   <td><p>封包</p> </td>
-   <td><p>封包指定為表單。</p> </td>
+   <td><p>数据包</p> </td>
+   <td><p>数据包被指定为表单。</p> </td>
   </tr>
   <tr>
    <td><p>debugDir</p> </td>
-   <td><p>debugDir包含用來轉譯表單的偵錯目錄。</p> </td>
+   <td><p>debugDir包含用于呈现表单的调试目录。</p> </td>
   </tr>
  </tbody>
 </table>
 
-#### 提交資料 {#submit-data}
+#### 提交数据 {#submit-data}
 
-按一下提交按鈕後，HTML5表單會將資料傳送至伺服器。 下表列出HTML5表單傳送至伺服器的所有引數。
+单击“提交”按钮后，HTML5表单会将数据发送到服务器。 下表列出了HTML5表单发送到服务器的所有参数。
 
 <table>
  <tbody>
@@ -101,38 +101,38 @@ HTML5表單會連線至AEM伺服器，以執行伺服器端的指令碼、網頁
   </tr>
   <tr>
    <td><p>模板</p> </td>
-   <td><p>用於呈現表單的範本。</p> </td>
+   <td><p>用于呈现表单的模板。</p> </td>
   </tr>
   <tr>
    <td><p>contentRoot</p> </td>
-   <td><p>用於呈現表單的範本根目錄。</p> </td>
+   <td><p>用于呈现表单的模板根目录。</p> </td>
   </tr>
   <tr>
    <td><p>数据</p> </td>
-   <td><p>用於呈現表單的bata位元組。</p> </td>
+   <td><p>用于呈现表单的bata字节。</p> </td>
   </tr>
   <tr>
    <td><p>formDom</p> </td>
-   <td><p>JSON格式的HTML5表單的DOM。</p> </td>
+   <td><p>JSON格式的HTML5表单的DOM。</p> </td>
   </tr>
   <tr>
    <td><p>submiturl</p> </td>
-   <td><p>張貼資料XML的URL。</p> </td>
+   <td><p>发布数据XML的URL。</p> </td>
   </tr>
   <tr>
    <td><p>debugDir</p> </td>
-   <td><p>用於呈現表單的偵錯目錄。</p> </td>
+   <td><p>用于呈现表单的调试目录。</p> </td>
   </tr>
  </tbody>
 </table>
 
-#### 提交代理的運作方式？ {#how-nbsp-the-nbsp-submit-proxy-works}
+#### 提交代理的工作原理 {#how-nbsp-the-nbsp-submit-proxy-works}
 
-如果請求引數中不存在submiturl，則提交服務Proxy會作為傳遞。 它可作為傳遞。 它會傳送要求至/bin/xfaforms/submitaction端點，並將回應傳送至XFA執行階段。
+如果请求参数中不存在submiturl，则提交服务代理将充当传递。 它充当传递函数。 它将请求发送到/bin/xfaforms/submitaction终结点，并将响应发送到XFA运行时。
 
-如果要求引數中存在送出URL，送出服務Proxy會選取拓撲。
+如果submiturl存在于请求参数中，则提交服务代理会选择拓扑。
 
-* 如果AEM伺服器發佈資料，Proxy服務會作為傳遞機制。 它會傳送要求至/bin/xfaforms/submitaction端點，並將回應傳送至XFA執行階段。
-* 如果Proxy張貼資料，Proxy服務會將除submitUrl以外的所有引數傳遞給 */bin/xfaforms/submitaction* 結束點並接收xml位元組在回應資料流中。 接著，Proxy服務會將資料xml位元組張貼到submitUrl進行處理。
+* 如果AEM服务器发布数据，则代理服务将充当传递服务。 它将请求发送到/bin/xfaforms/submitaction终结点，并将响应发送到XFA运行时。
+* 如果代理发布数据，则代理服务会将除submitUrl之外的所有参数传递给 */bin/xfaforms/submitaction* 终结点并接收响应流中的xml字节。 然后，代理服务将数据xml字节发布到submitUrl进行处理。
 
-* 在將資料(POST要求)傳送至伺服器之前，HTML5表單會驗證伺服器的連線能力和可用性。 為了驗證連線能力和可用性，HTML表單會傳送空白標頭請求給伺服器。 如果伺服器可用，HTML5表單會將資料(POST請求)傳送至伺服器。 如果伺服器無法使用，則會出現錯誤訊息， *無法連線到伺服器，* 隨即顯示。 進階偵測可避免使用者重新填寫表單的麻煩。 Proxy servlet會處理head要求，不會擲回例外狀況。
+* 在发送数据(POST请求)到服务器之前，HTML5表单验证服务器的连接性和可用性。 为了验证连接和可用性，HTML表单向服务器发送一个空标头请求。 如果服务器可用，HTML5表单向服务器发送数据(POST请求)。 如果服务器不可用，将显示错误消息， *无法连接到服务器，* 将显示。 该进阶检测可防止用户重新填写表单的麻烦。 代理servlet处理head请求并且不会引发异常。

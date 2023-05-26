@@ -1,7 +1,7 @@
 ---
-title: 建立共用資源匯出設定
+title: 创建共享资源导出配置
 seo-title: Creating Shared Resources Export Configuration
-description: 請依照本頁所述操作，瞭解如何從Adobe Experience Manager (AEM)匯出共用資源，以便上傳至AEM Mobile。
+description: 请按照本页面了解如何从Adobe Experience Manager (AEM)导出共享资源以上传到AEM Mobile。
 seo-description: Follow this page to learn about exporting shared resources from Adobe Experience Manager (AEM) for upload to AEM Mobile.
 uuid: 99b8ff94-8135-4643-a15b-aa6fb91f5401
 contentOwner: User
@@ -17,47 +17,47 @@ ht-degree: 0%
 
 ---
 
-# 建立共用資源匯出設定{#creating-shared-resources-export-configuration}
+# 创建共享资源导出配置{#creating-shared-resources-export-configuration}
 
 >[!NOTE]
 >
->Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）專案使用SPA編輯器。 [了解详情](/help/sites-developing/spa-overview.md).
+>Adobe建议对需要基于单页应用程序框架的客户端渲染（例如React）的项目使用SPA编辑器。 [了解详情](/help/sites-developing/spa-overview.md).
 
 >[!CAUTION]
 >
 >**先决条件**:
 >
->在瞭解如何建立和修改共用資源之前，請參閱 [內容同步](/help/mobile/mobile-ondemand-contentsync.md) 以瞭解基本概念。
+>要了解有关创建和修改共享资源的信息，请参阅 [内容同步](/help/mobile/mobile-ondemand-contentsync.md) 了解基本概念。
 
-AEM Mobile使用者會使用Content Sync將即時內容匯出至靜態內容，以供行動應用程式使用，此匯出會在內容從AEM Mobile上傳至Mobile On-Demand Services時發生。
+AEM Mobile用户使用Content Sync将实时内容导出到静态内容，以供在Mobile Apps中使用，当内容从AEM Mobile上传到Mobile On-Demand Services时，会发生此导出。
 
-屬性 ***dps-exportTemplate*** 以上表格所述，會定義應用程式匯出設定的路徑。 設定此屬性以建立和修改共用資源。
+属性 ***dps-exportTemplate*** 在上表中提到，可定义应用程序导出配置的路径。 设置此属性以创建和修改共享资源。
 
-下列資源說明如何從Adobe Experience Manager (AEM)匯出共用資源以上傳至AEM Mobile。
+以下资源介绍了如何从Adobe Experience Manager (AEM)导出共享资源以供上传到AEM Mobile。
 
-「共用HTML資源」可讓文章共用原本需要為所有文章複製的HTML資源，並可包含圖示、字型、javascript和css。
+共享的HTML资源允许文章共享在其他情况下需要为所有文章复制的HTML资源，并且可以包括图标、字体、javascript和css。
 
-內容同步設定位於 **&lt;dps-exporttemplate>/dps-HTMLResources>** 應設定為匯出內容以及裝置上靜態呈現屬性所需的文章。
+内容同步配置位于 **&lt;dps-exporttemplate>/dps-HTMLResources>** 应配置为导出设备上属性静态渲染所需的文章中的所有内容。
 
 >[!CAUTION]
 >
->只有具備下列條件時，您才可以執行下列步驟來檢視範例共用資源：
+>只有在具备以下条件时，您才可以执行以下步骤查看共享资源的示例：
 >
->* 已安裝範例內容
->* 執行AEM執行個體
->* 沒有已設定的自訂內容或其他連線埠
+>* 已安装示例内容
+>* 运行AEM实例
+>* 没有已配置的自定义上下文或其他端口
 >
 
 
-若要檢視範例共用資源，請參閱下列步驟：
+要查看共享资源示例，请参阅以下步骤：
 
-1. 在您的AEM伺服器上開啟CRXDE Lite。
-1. 瀏覽至此路徑 *[/etc/contentsync/templates/dps-we-unlimited-app/dps-HTMLResources](http://localhost:4502/crx/de/index.jsp#/etc/contentsync/templates/dps-we-unlimited-app/dps-HTMLResources)*，以檢視範例共用資源。
+1. 在AEM服务器上打开CRXDE Lite。
+1. 浏览到此路径 *[/etc/contentsync/templates/dps-we-unlimited-app/dps-HTMLResources](http://localhost:4502/crx/de/index.jsp#/etc/contentsync/templates/dps-we-unlimited-app/dps-HTMLResources)*，以查看示例共享资源。
 
-   您可以檢視建立共用資源所需的所有屬性，如下圖所示：
+   您可以查看创建共享资源所需的所有属性，如下图所示：
 
    ![chlimage_1-145](assets/chlimage_1-145.png)
 
 >[!NOTE]
 >
->共用資源發生變更時，應將共用資源上傳或匯出至AEM Mobile On-demand Services。
+>当任何共享资源发生更改时，应将共享资源上传或导出到AEM Mobile On-demand Services。

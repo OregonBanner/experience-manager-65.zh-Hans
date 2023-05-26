@@ -1,7 +1,7 @@
 ---
-title: 建立自訂表單對應
+title: 创建自定义表单映射
 seo-title: Creating Custom Form Mappings
-description: 在Adobe Campaign中建立自訂表格時，您可能想要在AEM中建立對應至該自訂表格的表單
+description: 在Adobe Campaign中创建自定义表时，您可能希望在AEM中构建映射到该自定义表的表单
 seo-description: When you create a custom table in Adobe Campaign, you may want to build a form in AEM that maps to that custom table
 uuid: f3bde513-6edb-4eb6-9048-40045ee08c4a
 contentOwner: User
@@ -17,35 +17,35 @@ ht-degree: 0%
 
 ---
 
-# 建立自訂表單對應{#creating-custom-form-mappings}
+# 创建自定义表单映射{#creating-custom-form-mappings}
 
-在Adobe Campaign中建立自訂表格時，您可能想要在AEM中建立對應至該自訂表格的表單。
+在Adobe Campaign中创建自定义表时，您可能希望在AEM中构建映射到该自定义表的表单。
 
-本檔案說明如何建立自訂表單對應。 完成本檔案中的步驟後，您將會為使用者提供事件頁面，讓他們註冊即將舉行的事件。 然後您可以透過Adobe Campaign跟進這些使用者。
+本文档介绍如何创建自定义表单映射。 完成本文档中的步骤后，您将为用户提供一个事件页面，用户可以在其中注册即将举行的事件。 然后，您可以通过Adobe Campaign跟进这些用户。
 
 ## 前提条件 {#prerequisites}
 
-您必須安裝下列專案：
+您需要安装以下组件：
 
 * Adobe Experience Manager
 * Adobe Campaign Classic
 
-另請參閱 [將AEM與Adobe Campaign Classic整合](/help/sites-administering/campaignonpremise.md) 以取得詳細資訊。
+参见 [将AEM与Adobe Campaign Classic集成](/help/sites-administering/campaignonpremise.md) 了解更多信息。
 
-## 建立自訂表單對應 {#creating-custom-form-mappings-2}
+## 创建自定义表单映射 {#creating-custom-form-mappings-2}
 
-若要建立自訂表單對應，您必須依照以下各節中詳細說明的這些高階步驟操作：
+要创建自定义表单映射，您需要遵循以下各节中详述的这些高级步骤：
 
-1. 建立自訂表格。
-1. 擴充 **種子** 表格。
-1. 建立自訂對應。
-1. 根據自訂對應建立傳遞。
-1. 在AEM中建立表單，此表單將使用建立的傳送。
-1. 提交表單以進行測試。
+1. 创建自定义表。
+1. 扩展 **种子** 表格。
+1. 创建自定义映射。
+1. 根据自定义映射创建投放。
+1. 在AEM中构建表单，该表单将使用创建的投放。
+1. 提交表单以进行测试。
 
-### 在Adobe Campaign中建立自訂表格 {#creating-the-custom-table-in-adobe-campaign}
+### 在Adobe Campaign中创建自定义表 {#creating-the-custom-table-in-adobe-campaign}
 
-首先，在Adobe Campaign中建立自訂表格。 在此範例中，我們使用以下定義來建立事件表格：
+首先，在Adobe Campaign中创建自定义表。 在此示例中，我们使用以下定义来创建事件表：
 
 ```xml
 <element autopk="true" label="Event" labelSingular="Event" name="event">
@@ -56,15 +56,15 @@ ht-degree: 0%
 </element>
 ```
 
-建立事件表格後，請執行 **更新資料庫結構精靈** 以建立表格。
+创建事件表后，运行 **更新数据库结构向导** 创建表。
 
-### 延伸種子表 {#extending-the-seed-table}
+### 扩展种子表 {#extending-the-seed-table}
 
-在Adobe Campaign中，點選/按一下 **新增** 若要建立 **種子地址(nms)** 表格。
+在Adobe Campaign中，点按/单击 **添加** 要创建 **种子地址(nms)** 表格。
 
 ![chlimage_1-194](assets/chlimage_1-194.png)
 
-現在，使用 **事件** 表格以擴充 **種子** 表格：
+现在，使用 **事件** 表以扩展 **种子** 表：
 
 ```xml
 <element label="Event" name="custom_cus_event">
@@ -75,56 +75,56 @@ ht-degree: 0%
  </element>
 ```
 
-之後，執行 **更新資料庫精靈** 以套用變更。
+之后，运行 **更新数据库向导** 以应用更改。
 
-### 建立自訂目標對應 {#creating-custom-target-mapping}
+### 创建自定义目标映射 {#creating-custom-target-mapping}
 
-在 **管理/行銷活動管理** t，前往 **目標對應** 並新增一個T **目標對應。**
+In **管理/营销活动管理** t，转到 **目标映射** 并添加新的T **目标映射。**
 
 >[!NOTE]
 >
->請務必使用有意義的名稱 **內部名稱**.
+>请确保对以下内容使用有意义的名称 **内部名称**.
 
 ![chlimage_1-195](assets/chlimage_1-195.png)
 
-### 建立自訂傳遞範本 {#creating-a-custom-delivery-template}
+### 创建自定义投放模板 {#creating-a-custom-delivery-template}
 
-在此步驟中，您會新增使用建立的傳遞範本 **目標對應**.
+在此步骤中，您将添加一个使用创建的 **目标映射**.
 
-在 **資源/範本**，導覽至傳遞範本並複製現有的AEM傳遞。 當您按一下 **至**，選取建立事件 **目標對應**.
+In **资源/模板**，导航到投放模板并复制现有AEM投放。 当您单击 **至**，选择创建事件 **目标映射**.
 
 ![chlimage_1-196](assets/chlimage_1-196.png)
 
-### 在AEM中建立表單 {#building-the-form-in-aem}
+### 在AEM中构建表单 {#building-the-form-in-aem}
 
-在AEM中，確定您已設定Cloud Service於 **頁面屬性**.
+在AEM中，确保您已在以下位置配置了Cloud Service： **页面属性**.
 
-然後，在 **Adobe Campaign** 索引標籤中，選取在中建立的傳遞 [建立自訂傳遞範本](#creating-a-custom-delivery-template).
+然后，在 **Adobe Campaign** 选项卡，选择在中创建的投放 [创建自定义投放模板](#creating-a-custom-delivery-template).
 
 ![chlimage_1-197](assets/chlimage_1-197.png)
 
-設定欄位時，請務必為表單欄位指定唯一的元素名稱。
+配置字段时，请确保为表单字段指定唯一的元素名称。
 
-設定欄位後，您需要手動變更對應。
+配置字段后，您需要手动更改映射。
 
-在CRXDE-lite中，移至 **jcr：content** （頁面）節點並變更 **acMapping** 的內部名稱的值 **目標對應**.
+在CRXDE-lite中，转到 **jcr：content** （页面）节点并更改 **acMapping** 的内部名称的值 **目标映射**.
 
 ![chlimage_1-198](assets/chlimage_1-198.png)
 
-在表單的設定中，確定勾選核取方塊以建立（如果不存在）
+在表单的配置中，确保选中要创建的复选框（如果不存在）
 
 ![chlimage_1-199](assets/chlimage_1-199.png)
 
-### 提交表單 {#submitting-the-form}
+### 提交表单 {#submitting-the-form}
 
-您現在可以提交表單，並在Adobe Campaign端驗證值是否已儲存。
+您现在可以提交表单，并在Adobe Campaign端验证值是否已保存。
 
 ![chlimage_1-200](assets/chlimage_1-200.png)
 
 ## 疑难解答 {#troubleshooting}
 
-**「元素&#39;@eventdate&#39;的值&#39;02/02/2015&#39;的型別無效(型別為&#39;Event ([adb：event])&#39;)」**
+**“元素‘@eventdate’的值‘02/02/2015’的类型无效(类型为‘Event ([adb：event])&#39;)”**
 
-提交表單時，此錯誤會記錄在 **error.log** 在AEM中。
+提交表单时，此错误将记录在 **error.log** 在AEM中。
 
-這是由於日期欄位的格式無效。 因應措施是提供 **yyyy-mm-dd** 做為值。
+这是由于日期字段的格式无效。 解决方法是提供 **yyyy-mm-dd** 作为值。
