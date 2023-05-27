@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 200f51ab-f9bf-4989-91af-c3904fc673e5
 feature: Language Copy
 exl-id: 7562754b-d9fd-441b-8ae5-c7eebe458cef
-source-git-commit: 6dea3a23c70fdb5f07bdf724547e799776002c61
+source-git-commit: 3d1959a1a81293b51257d99d32c9576866c8a308
 workflow-type: tm+mt
-source-wordcount: '1553'
+source-wordcount: '1569'
 ht-degree: 47%
 
 ---
@@ -106,6 +106,10 @@ ht-degree: 47%
   <tr>
    <td>内容类别</td>
    <td>（仅限机器翻译）描述正在翻译的内容的类别。 在翻译内容时，类别可能会影响术语和措辞的选择。</td>
+  </tr>
+  <tr>
+   <td>翻译组件字符串</td>
+   <td>选择以翻译与页面关联的组件的组件字符串。</td>
   </tr>
   <tr>
    <td>翻译标记</td>

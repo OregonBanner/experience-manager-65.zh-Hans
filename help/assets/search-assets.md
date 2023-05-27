@@ -7,9 +7,9 @@ feature: Search, Metadata
 role: User
 exl-id: 588433b2-564a-430f-9d04-480465ece2ad
 hide: true
-source-git-commit: eac578f8c8ef3bfc3c94929814398486777094f0
+source-git-commit: b138bc434ecad849b2c588864868cab6666d50c9
 workflow-type: tm+mt
-source-wordcount: '5601'
+source-wordcount: '5741'
 ht-degree: 5%
 
 ---
@@ -419,6 +419,10 @@ ht-degree: 5%
 * 下载一个或多个资源。
 * 使用桌面操作在桌面应用程序中打开这些资产。
 * 创建智能收藏集。
+* 创建一个版本
+* 启动工作流
+* 关联或取消关联资产
+* 使用执行搜索后自动显示的过滤器面板应用过滤器以缩小搜索结果范围。
 
 ### 对搜索结果排序 {#sort}
 
@@ -458,6 +462,18 @@ ht-degree: 5%
 * 根据搜索条件填充收藏集中资产的动态列表（智能收藏集）。
 
 您可以根据搜索条件创建智能收藏集。从&#x200B;**[!UICONTROL 过滤器]**&#x200B;面板中，选择&#x200B;**[!UICONTROL 文件]**，然后单击&#x200B;**[!UICONTROL 保存智能收藏集]**。请参阅[管理收藏集](/help/assets/manage-collections.md)。
+
+### 创建一个版本 {#create-version}
+
+为搜索结果中显示的资源创建版本。 选择资源并单击 **[!UICONTROL 创建]** > **[!UICONTROL 版本]**. 添加可选标签或注释，然后单击 **[!UICONTROL 创建]**. 您还可以选择多个资源并同时为其创建版本。
+
+### 创建工作流 {#create-workflow}
+
+与创建版本功能类似，您还可以为搜索结果中显示的资产创建工作流。 选择资源并单击 **[!UICONTROL 创建]** > **[!UICONTROL 工作流]**. 选择工作流模型，指定工作流的标题，然后单击 **[!UICONTROL 开始]**.
+
+### 关联和取消关联资产 {#relate-unrelate-assets}
+
+关联和取消关联搜索结果中显示的资源。 选择资源并单击 **[!UICONTROL 相关]** 或 **[!UICONTROL 取消关联]**.
 
 ## 意外的搜索结果和问题 {#unexpected-results}
 

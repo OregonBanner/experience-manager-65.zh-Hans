@@ -10,9 +10,9 @@ discoiquuid: 4f9301db-edf8-480b-886c-b5e8fca5bf5c
 feature: Image Profiles
 role: User, Admin
 exl-id: 67240ad0-1a7c-4e58-a518-1e36d771f1a1
-source-git-commit: bb0658ef33736587fbc191738d57cf586e5cba9d
+source-git-commit: 16ea73e9e75ddee25d7d348d4220a0e0f96a9ae8
 workflow-type: tm+mt
-source-wordcount: '3045'
+source-wordcount: '3033'
 ht-degree: 6%
 
 ---
@@ -45,23 +45,13 @@ ht-degree: 6%
 **定义图像配置文件中智能裁剪的准则**
 为了控制智能裁切的使用，并优化裁切的处理时间和存储，Adobe建议以下准则和提示：
 
-* 避免创建具有相同宽度和高度值的重复智能裁剪配置文件。
+* 要对其应用智能裁剪的图像资源必须至少为50 x 50像素或更大。
+* 理想情况下，每个图像应有10-15个智能裁剪，以优化屏幕比例和处理时间。
 * 根据裁切维度而不是最终用途命名智能裁切。 这样做有助于优化在多个页面上使用单个维度的重复项。
 * 为特定文件夹和子文件夹创建基于页面/资源类型的图像配置文件，而不是创建应用于所有文件夹或所有资源的通用智能裁剪配置文件。
 * 应用于子文件夹的图像配置文件将覆盖应用于该文件夹的图像配置文件。
-* 为特定文件夹和子文件夹创建页面/资源类型的图像配置文件，而不是创建应用于所有文件夹或所有资源的通用智能裁剪配置文件。
-* 应用于子文件夹的图像配置文件将覆盖应用于该文件夹的图像配置文件。
-* 理想情况下，每个图像应有10-15个智能裁剪，以优化屏幕比例和处理时间。
-
-<!--
-* Image assets that are going to have a smart crop applied to them must be a minimum of 50 x 50 pixels or larger. CQDOC-20087
-* An Image Profile that contains duplicate smart crop dimensions is not permitted. CQDOC-20087
-* Duplicate named Image Profiles that have smart crop options set are not permitted. CQDOC-20087
-* Create page-wise/asset type-wise Image Profiles for specific folders and subfolders instead of a common smart crop profile that is applied to all folders or all assets.
-* An Image Profile that you apply to subfolders overrides an Image Profile that is applied to the folder.
-* Ideally, have 10-15 smart crops per image to optimize for screen ratios and processing time. -->
-<!-- * Avoid creating duplicate smart crop profiles that have the same width and height values. 
-* Name smart crops based on crop dimensions, not on end usage. Doing so helps to optimize for duplicates where a single dimension is used on multiple pages. -->
+* 不允许包含重复的智能裁剪维度的图像配置文件。
+* 不允许设置智能裁剪选项的重复命名图像配置文件。
 
 您有两个图像裁切选项可供选择：像素裁切或智能裁切。 您还可以选择自动创建颜色和图像样本。
 
