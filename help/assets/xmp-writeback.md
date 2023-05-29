@@ -6,9 +6,9 @@ role: User, Admin
 feature: Metadata
 exl-id: 82148ae5-37e9-4fc5-ada9-db3d91b29c33
 hide: true
-source-git-commit: 3d5e9ad8ee19756b05e5a77a3f748bc647fcf734
+source-git-commit: 8bd103e392bf5630cb2db654dedcfe4f926b2c9d
 workflow-type: tm+mt
-source-wordcount: '807'
+source-wordcount: '808'
 ht-degree: 5%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 5%
 
 中的此XMP写回功能 [!DNL Adobe Experience Manager Assets] 将元数据更改复制到原始资源的演绎版。 当您从Assets中更改资源的元数据或上传资源时，所做的更改最初存储在资源层次结构中的元数据节点中。
 
-XMP写回功能允许您将元数据更改传播到资源的所有或特定演绎版。 该功能仅回写那些使用的元数据属性 `jcr` namespace，即名为的属性 `dc:title` 写回，但有一个名为 `mytitle` 不是。
+XMP写回功能允许您将元数据更改传播到资源的所有或特定演绎版。 该功能仅回写那些使用注册的命名空间的元数据属性，即名为的属性 `dc:title` 写回，但有一个名为 `mytitle` 不是。
 
 考虑一个方案，在其中修改了 [!UICONTROL 标题] 标题为的资产属性 `Classic Leather` 到 `Nylon`.
 
