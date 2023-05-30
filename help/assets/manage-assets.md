@@ -7,9 +7,9 @@ feature: Asset Management,Search
 mini-toc-levels: 4
 exl-id: 158607e6-b4e9-4a3f-b023-4023d60c97d2
 hide: true
-source-git-commit: 3d5e9ad8ee19756b05e5a77a3f748bc647fcf734
+source-git-commit: 7bfa9a9e143f199c42161b92dcba66ae441ad1fb
 workflow-type: tm+mt
-source-wordcount: '9970'
+source-wordcount: '9993'
 ht-degree: 4%
 
 ---
@@ -402,6 +402,9 @@ Photoshop文档(PSD)文件最常用于创建图像模板。 上传PSD文件时�
    ![日期时间选取器或在“开启时间”字段中使用键盘键来添加用于资产激活的日期和时间](assets/datepicker.png)
 
    *图：使用日期选取器计划资产激活。*
+
+1. 您需要检查 **[!UICONTROL 已达到开启/关闭时间]** 选项。
+   ![代理设置](assets-dm/Agent-settings.png)
 
 1. 要在特定持续时间后停用资产，请从日期选择器旁边的停用日期/时间 **[!UICONTROL 关闭时间]** 字段。 停用日期应晚于资源的激活日期。 在 [!UICONTROL 关闭时间]，资源及其演绎版无法通过 [!DNL Assets] Web界面或通过HTTP API。
 
