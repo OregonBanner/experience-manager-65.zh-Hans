@@ -3,10 +3,10 @@ title: 的发行说明 [!DNL Adobe Experience Manager] 6.5
 description: 查找版本信息、新增功能、安装操作方法和详细更改列表 [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 3
 exl-id: fed4e110-9415-4740-aba1-75da522039a9
-source-git-commit: efd2a41b6b53a72b941ac23386b6aa4c41c9da15
+source-git-commit: 2391eb74979b7ee9ed148763ffebf125ef09fc88
 workflow-type: tm+mt
-source-wordcount: '2683'
-ht-degree: 2%
+source-wordcount: '3475'
+ht-degree: 1%
 
 ---
 
@@ -30,7 +30,9 @@ ht-degree: 2%
 
 ## 中包括的内容 [!DNL Experience Manager] 6.5.17.0 {#what-is-included-in-aem-6517}
 
-[!DNL Experience Manager] 6.5.17.0包括自2019年4月首次推出6.5以来发布的新功能、客户请求的关键增强功能、错误修复以及性能、稳定性和安全性改进。 [安装此Service Pack](#install) 日期 [!DNL Experience Manager] 6.5. <!-- UPDATE FOR EACH NEW RELEASE -->
+[!DNL Experience Manager] 6.5.17.0包括自2019年4月首次推出6.5以来发布的新功能、客户请求的关键增强功能、错误修复以及性能、稳定性和安全性改进。 [安装此Service Pack](#install) 日期 [!DNL Experience Manager] 6.5.
+
+<!-- UPDATE FOR EACH NEW RELEASE -->
 
 <!-- Some of the key features and improvements are the following:
 
@@ -46,6 +48,13 @@ ht-degree: 2%
    您无需导航到资产位置并查看其属性即可执行这些操作。
 * **Dynamic Media _快照_**— 试验测试图像或Dynamic Media URL，以查看各种图像修饰符的输出，并对文件大小（使用WebP和AVIF交付）、网络带宽和设备像素比进行智能成像优化。 参见 [Dynamic Media快照](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-snapshot.html).
 * **使用Dynamic Media进行DASH流**  — 为Dynamic Media视频交付中的自适应流推出了新协议(DASH - Dynamic Adaptive Streaming over HTTP)支持（已启用CMAF）。 现在向所有地区提供， [通过支持票证启用](/help/assets/video.md#enable-dash-on-your-account-enable-dash).
+
+* **自适应Forms在AEM网站页面上的集成**：通过使用 — Adaptive Forms Container和Adaptive Forms - Embed(v2)组件，利用AEM Sites编辑器中的自适应Forms组件无缝创建数字注册体验。
+* **AEM Forms中的reCAPTCHA Enterprise支持**：在AEM Forms中增加了对reCAPTCHA Enterprise的支持，针对欺诈性活动和垃圾邮件提供了增强的保护，此外还有现有的Google reCAPTCHA v2支持。
+* **通过AEM Forms支持面向政府的Adobe Acrobat Sign**：允许AEM Forms与面向政府的Adobe Sign（符合FedRAMP）的安全且合规的集成。
+* **启用Salesforce与AEM Forms的集成以便进行数据交换**： OAuth 2.0客户端凭据流用于Salesforce应用程序中的安全和直接的应用程序身份验证和授权，从而实现应用程序之间的无缝通信，而无需用户参与。
+* **工作流引擎的优化和增强功能**：最大限度地减少工作流实例的数量，可提高工作流引擎的性能。 除此之外 `COMPLETED` 和 `RUNNING` 状态值，工作流还支持三个新的状态值： `ABORTED`， `SUSPENDED`、和 `FAILED`.
+* ZPL输出格式支持不同的纸张大小，例如letter、A4和A5。
 
 <!-- UPDATE BELOW FOR EACH NEW RELEASE -->
 
@@ -95,9 +104,41 @@ ht-degree: 2%
 
 ## [!DNL Forms]{#forms-6517}
 
->[!NOTE]
->
->中的修复 [!DNL Experience Manager] Forms在计划日期后一周通过单独的附加组件包提供 [!DNL Experience Manager] Service Pack发行日期。 在本例中，附加组件包于2023年6月1日星期四发布。 此外，此部分还添加了Forms修复和增强功能的列表。
+* 当用户升级到AEM 6.5.16.0 Service Pack时，无法正确检索附加文件。 (FORMS-8906)
+* 更新到AEM 6.5.15.0 Service Pack后，HTML5表单在具有IE兼容模式的Edge浏览器中无法正常运行或正确加载。 (FORMS-8526、FORMS-8523)
+* 当用户应用AEM 6.5.16.0 Service Pack时，规则编辑器无法打开。 (FORMS-8290)
+* 对数字框组件应用最大位数验证时，该操作将失败。 (FORMS-7938)
+* 创建交互式通信语句时，PDF中的图表组件未正确生成。 (FORMS-7827、FORMS-8297)
+* Java垃圾收藏集无法清除AEM Forms OSGi服务器上的旧生成栈。 (FORMS-8207)
+* 当用户升级到AEM 6.5.16.0 Service Pack时，提交后缺少CRX元数据属性。 (FORMS-8205)
+* 当用户禁用自适应表单中的日期选取器组件时，它仍可编辑。 (FORMS-7804)
+* 在AEM 6.5.16.0 Forms Service Pack中，当用户尝试编辑策略集协调员时，Manager Document Publisher始终保持未选中状态。 (FORMS-7775、FORMS-8599)
+* 当用户升级到AEM 6.5.16.0 Service Pack时，处理必须翻译的字符串的“GuideNode.externalize”方法停止工作。 (FORMS-7709)
+* 在 `Assign task` 步骤，当用户选择“发送通知电子邮件”并调用工作流时，文本未正确显示在收到的电子邮件中。 接收问号而不是接收的电子邮件中的文本。 (FORMS-7675)
+* 记录文档正在部分本地化。 (FORMS-7674、FORMS-7573)
+* 用户无法编辑策略集，即使分配了特定权限也是如此。 (FORMS-7665)
+* 当用户在 `forms-users` 组尝试创建新表单，AEM Forms实例崩溃。 (FORMS-7629)
+* 当用户单击自适应表单上的“重置”、“保存”或“提交”按钮时，屏幕上不显示任何消息。 (FORMS-7524)
+* 为了提高AEM 6.5.16.0 Service Pack上PDFG转换的性能，可以配置休眠间隔。 (FORMS-6752)
+* 切换选项保持不变，但字段的可见性会更改，即使用户稍微拖动光标也是如此。 (FORMS-6728)
+* 当用户升级到AEM 6.5.15.0 Service Pack时，重定向在Internet Explorer中呈现自适应表单时停止工作。 (FORMS-6725)
+* 对于由AEM Designer创建的PDF表单中的所有背景对象，PAC 2021工具会返回以下错误 `Path object not tagged`. (FORMS-6707)
+* 当用户在收件箱中应用过滤器时，会抛出 `NullPointerException` 错误。 (FORMS-6706)
+* 当用户导入包含引用片段的模板(.tds)文件时，AEM Designer崩溃。  (FORMS-6702)
+* 如果用户在AEM Forms Designer 6.5中使用“输出”服务创建静态PDF，则会出现以下错误 `OCCD (optional content configuration dictionary) contains AS key`. (FORMS-6691)
+* 当用户创建简单工作流并添加简单变量时， `set variable mapping` 出现错误。 (FORMS-5819)
+* 当用户尝试使用输出服务生成PDF时，即使它标记为 `PDF/A-1a`，合规性检查，使用`Preflight` 服务失败。 (LC-3920837)
+* 安装AEM 6.5.16.0 Service Pack后，AEM Designer无法打开。 (LC-3921000)
+* 当用户添加复选框和单选按钮时，未根据PDF标准生成Tag树的结构。 (LC-3920838)
+* 如果用户通过输出服务使用字体的嵌入和子设置来生成静态PDF，则生成的PDF仅包含嵌入的字体。 (LC-3920963)
+* 希伯来文本以RTL格式显示不正确。 (LC-3919632)
+* 当用户在JBoss Turnkey服务器上升级到AEM 6.5.16.0 Service Pack时，签名服务无法调用。 遇到的错误是： `java.lang.ClassCastException: com.adobe.xfa.TextNode cannot be cast to com.adobe.xfa.Element`. (FORMS-7833)
+* 升级到AEM 6.5.14.0 Service Pack后，Workbench无法处理CRX节点从一个位置移动到另一个位置的操作。 错误发生于 `ALC-CRX-30000-000: com.adobe.ep.crx.client.exceptions.CRCException: ALC-CRX-030-000-[Internal Server Error]`.(FORMS-7713)
+* 当用户更新到AEM 6.5.16.0 Service Pack时， `Usage Rights` 无法应用。 (FORMS-7892)
+* 当用户尝试生成PDF文档时，PDF/A-1b验证失败。 (FORMS-7615)
+* 当用户单击 `Configure` 的选项 `Form Container` 组件时，浏览器将变得无响应(FORMS-7605)。
+* 当用户更新到AEM Forms 6.5.16.0 Service Pack并尝试更改 `LicenseType` 到 `Production`时，更改不会反映出来。 (FORMS-7594)
+* 当用户尝试使用包含以下PDF的LCA进程时 `Chinese Full Width Characters`，出现问题 `ValidateForm` 进程。 (FORMS-7464)
 
 ## 集成{#integrations-6517}
 
@@ -351,8 +392,7 @@ To retrieve your runtime copy, Adobe recommends to synchronize the design-time c
    "refresh": true
    ```
 
-* 在AEM Forms中，POP3协议不适用于Microsoft® Office 365的电子邮件端点。
-* 在JBoss® 7.1.4平台上，当用户安装AEM 6.5.16.0 Service Pack时， `adobe-livecycle-jboss.ear` 部署失败。
+* 在JBoss® 7.1.4平台上，当用户安装AEM 6.5.16.0或更高版本Service Pack时， `adobe-livecycle-jboss.ear` 部署失败。
 
 ## 包含的OSGi包和内容包{#osgi-bundles-and-content-packages-included}
 

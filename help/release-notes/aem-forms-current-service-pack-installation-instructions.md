@@ -2,9 +2,9 @@
 title: 适用于AEM Forms的AEM Forms修补程序安装说明
 description: 适用于OSGi和JEE环境的AEM Forms Service Pack安装说明
 exl-id: ae4c7e9d-9af8-4288-a6f9-e3bcbe7d153d
-source-git-commit: 01bf12ec46966ab2c78e2e825840230ea1bd3395
+source-git-commit: 57ead48ba3211075ae4b85801ba8cf6394582a9d
 workflow-type: tm+mt
-source-wordcount: '1726'
+source-wordcount: '1728'
 ht-degree: 9%
 
 ---
@@ -15,9 +15,9 @@ ht-degree: 9%
 
 | 产品 | Adobe Experience Manager 6.5 Forms |
 |---|---|
-| 版本 | 6.5.16.0 |
+| 版本 | 6.5.17.0 |
 | 类型 | Service Pack版本 |
-| 日期 | 2023年3月2日 |
+| 日期 | 2023年6月1日 |
 | 下载 URL | [最新AEM Forms版本](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) |
 
 >[!NOTE]
@@ -240,4 +240,4 @@ Adobe Experience Manager (AEM) Forms service pack包括新增和升级的功能�
 
 * 安装完成后，检查监控器日志(error.log)中是否有任何活动。 等待几分钟，直到日志中没有活动。 重新启动AEM实例。
 
-* 万一你得到一个 **service-unavailable错误** 安装AEM Forms 6.5.15.0 Service Pack后， [安装servlet片段和捆绑包](/help/forms/using/aem-service-pack-installation-solution.md) 以修复错误。
+* 万一你得到一个 **service-unavailable错误** 安装AEM Forms 6.5.15.0或更高版本的Service Pack后， [安装servlet片段和捆绑包](/help/forms/using/aem-service-pack-installation-solution.md) 以修复错误。
