@@ -3,9 +3,9 @@ title: 使用OAuth 2.0客户端凭据流将Salesforce与AEM Forms集成
 seo-title: Salesforce integration with AEM Forms using OAuth 2.0 client credentials flow
 description: 使用OAuth 2.0客户端凭据流将Salesforce集成与AEM Forms集成的步骤
 seo-description: Steps to integrate Salesforce integration with AEM Forms using OAuth 2.0 client credentials flow
-source-git-commit: f03513c98455e00beef37819a5a47ba56dfa5028
+source-git-commit: cc0375f5b5616f82a73bd983a9da95225c51db99
 workflow-type: tm+mt
-source-wordcount: '503'
+source-wordcount: '502'
 ht-degree: 0%
 
 ---
@@ -40,9 +40,9 @@ ht-degree: 0%
 
 Swagger是一组用于开发和描述RESTful API的开源规则、规范和工具。 [创建swagger文件](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/integrate-with-salesforce/describe-rest-api.html) 将Salesforce与AEM Forms集成之前。
 
-    >[！注意]
-    >
-    > AEM 6.5仅支持Swagger 2.0文件规范。
+>[!NOTE]
+>
+> AEM 6.5仅支持Swagger 2.0文件规范。
 
 +++
 
