@@ -3,9 +3,9 @@ title: 的发行说明 [!DNL Adobe Experience Manager] 6.5
 description: 查找版本信息、新增功能、安装操作方法和详细更改列表 [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 3
 exl-id: fed4e110-9415-4740-aba1-75da522039a9
-source-git-commit: 2391eb74979b7ee9ed148763ffebf125ef09fc88
+source-git-commit: a54d75ba653f469495203fa4643dbd78dbd7c38f
 workflow-type: tm+mt
-source-wordcount: '3475'
+source-wordcount: '3499'
 ht-degree: 1%
 
 ---
@@ -52,9 +52,9 @@ ht-degree: 1%
 * **自适应Forms在AEM网站页面上的集成**：通过使用 — Adaptive Forms Container和Adaptive Forms - Embed(v2)组件，利用AEM Sites编辑器中的自适应Forms组件无缝创建数字注册体验。
 * **AEM Forms中的reCAPTCHA Enterprise支持**：在AEM Forms中增加了对reCAPTCHA Enterprise的支持，针对欺诈性活动和垃圾邮件提供了增强的保护，此外还有现有的Google reCAPTCHA v2支持。
 * **通过AEM Forms支持面向政府的Adobe Acrobat Sign**：允许AEM Forms与面向政府的Adobe Sign（符合FedRAMP）的安全且合规的集成。
-* **启用Salesforce与AEM Forms的集成以便进行数据交换**： OAuth 2.0客户端凭据流用于Salesforce应用程序中的安全和直接的应用程序身份验证和授权，从而实现应用程序之间的无缝通信，而无需用户参与。
-* **工作流引擎的优化和增强功能**：最大限度地减少工作流实例的数量，可提高工作流引擎的性能。 除此之外 `COMPLETED` 和 `RUNNING` 状态值，工作流还支持三个新的状态值： `ABORTED`， `SUSPENDED`、和 `FAILED`.
-* ZPL输出格式支持不同的纸张大小，例如letter、A4和A5。
+* **启用Salesforce与AEM Forms的集成以便进行数据交换**：使用OAuth 2.0客户端凭据流配置AEM表单与Salesforce应用程序之间的集成。 这实现了应用程序的安全且直接的身份验证和授权，并允许无缝通信，而无需用户参与。
+* **工作流引擎的优化和增强功能**：通过最大限度地减少工作流实例的数量来提高工作流引擎的性能。 除此之外 `COMPLETED` 和 `RUNNING` 状态值，工作流还支持三个新的状态值： `ABORTED`， `SUSPENDED`、和 `FAILED`.
+* **ZPL输出的纸张大小支持**：在AEM Forms Designer中，XMLFM为基于XDP的模板生成纸张大小不同的ZPL输出，例如信纸、A4和A5。
 
 <!-- UPDATE BELOW FOR EACH NEW RELEASE -->
 
