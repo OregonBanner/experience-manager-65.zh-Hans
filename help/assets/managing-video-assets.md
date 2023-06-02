@@ -6,7 +6,7 @@ role: User
 feature: Asset Management
 exl-id: 21d3e0bd-5955-470a-8ca2-4d995c17eb4c
 hide: true
-source-git-commit: 3d5e9ad8ee19756b05e5a77a3f748bc647fcf734
+source-git-commit: d6587ef59332d6b4d419c7d7b6e29930f366d171
 workflow-type: tm+mt
 source-wordcount: '5499'
 ht-degree: 8%
@@ -524,9 +524,9 @@ Google会定期更改其用户界面。 因此，将视频发布到YouTube的步
    >
    >由于上的多个工作流配置，最终记录失败/错误可能需要较长时间 **[!UICONTROL 重试]**， **[!UICONTROL 重试延迟]**、和 **[!UICONTROL timeout]** 起始日期 [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)例如：
    >
-   >    * Apache Sling作业队列配置
-   >    * AdobeGranite工作流外部进程作业处理程序
-   >    * Granite工作流超时队列
+   >* Apache Sling作业队列配置
+   >* AdobeGranite工作流外部进程作业处理程序
+   >* Granite工作流超时队列
 
    >
    >您可以调整 **[!UICONTROL 重试]**， **[!UICONTROL 重试延迟]**、和 **[!UICONTROL timeout]** 属性。
@@ -557,13 +557,10 @@ Google会定期更改其用户界面。 因此，将视频发布到YouTube的步
    >
    >由于上的多个工作流配置，最终记录错误消息可能需要较长时间 **[!UICONTROL 重试]**， **[!UICONTROL 重试延迟]**、和 **[!UICONTROL timeout]** 起始日期 [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)例如：
    >
-   >
-   >
-   >    * Apache Sling作业队列配置
-   >    * AdobeGranite工作流外部进程作业处理程序
-   >    * Granite工作流超时队列
+   >* Apache Sling作业队列配置
+   >* AdobeGranite工作流外部进程作业处理程序
+   >* Granite工作流超时队列
 
-   >
    >
    >您可以调整 **[!UICONTROL 重试]**， **[!UICONTROL 重试延迟]**、和 **[!UICONTROL timeout]** 属性。
 
