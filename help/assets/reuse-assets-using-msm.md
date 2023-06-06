@@ -7,9 +7,9 @@ role: User, Admin, Architect
 feature: Asset Management,Multi Site Manager
 exl-id: 4d0367c4-88aa-4aef-b23d-828609b0df09
 hide: true
-source-git-commit: 3d5e9ad8ee19756b05e5a77a3f748bc647fcf734
+source-git-commit: 56632bd6ce9fc90f0bc61f903f84f7ea8bbcd12d
 workflow-type: tm+mt
-source-wordcount: '3389'
+source-wordcount: '3288'
 ht-degree: 10%
 
 ---
@@ -287,22 +287,6 @@ Live Copy是创建时原始源的复制副本。 Live Copy的元数据值继承�
    ![从Live Copy概述控制台轻松更新Live Copy文件夹中的许多资产](assets/livecopyconsole_update_many_assets.png)
 
    *图：从轻松更新Live Copy文件夹中的许多资产 [!UICONTROL Live Copy概述] 控制台。*
-
-## 扩展MSM [!DNL Assets] {#extend-api}
-
-[!DNL Experience Manager] 允许您使用MSM Java API扩展功能。 对象 [!DNL Assets]，则扩展的工作方式与它与MSM的相同， [!DNL Sites]. 有关详细信息，请参阅 [扩展MSM](/help/sites-developing/extending-msm.md) 和以下内容，以了解有关特定任务的信息：
-
-* [API概述](/help/sites-developing/extending-msm.md#overview-of-the-java-api)
-* [创建同步操作](/help/sites-developing/extending-msm.md#creating-a-new-synchronization-action)
-* [创建转出配置](/help/sites-developing/extending-msm.md#creating-a-new-rollout-configuration)
-* [创建并使用简单的LiveActionFactory类](/help/sites-developing/extending-msm.md#creating-and-using-a-simple-liveactionfactory-class)
-
->[!NOTE]
->
->* MSM中的Blueprint用于 [!DNL Sites] 在MSM中称为Live Copy源 [!DNL Assets].
->* MSM不支持删除创建站点向导中的章节步骤 [!DNL Assets].
->* MSM不支持在页面属性（触屏UI）上配置MSM锁定 [!DNL Assets].
-
 
 ## 资产管理任务对活动副本的影响 {#manage-assets}
 
