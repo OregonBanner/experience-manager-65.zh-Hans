@@ -3,9 +3,9 @@ title: 的发行说明 [!DNL Adobe Experience Manager] 6.5
 description: 查找版本信息、新增功能、安装操作方法和详细更改列表 [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 3
 exl-id: fed4e110-9415-4740-aba1-75da522039a9
-source-git-commit: 7f152c3b7b80c78bb73b45e83cc566e9bbb0c393
+source-git-commit: 206242583fcbf651dbc6234dc01be5140d0cfca7
 workflow-type: tm+mt
-source-wordcount: '3494'
+source-wordcount: '3537'
 ht-degree: 1%
 
 ---
@@ -48,7 +48,7 @@ ht-degree: 1%
    您无需导航到资产位置并查看其属性即可执行这些操作。
 * **Dynamic Media _快照_**— 试验测试图像或Dynamic Media URL，以查看各种图像修饰符的输出，并对文件大小（使用WebP和AVIF交付）、网络带宽和设备像素比进行智能成像优化。 参见 [Dynamic Media快照](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-snapshot.html).
 * **使用Dynamic Media进行DASH流**  — 为Dynamic Media视频交付中的自适应流推出了新协议(DASH - Dynamic Adaptive Streaming over HTTP)支持（已启用CMAF）。 现在向所有地区提供， [通过支持票证启用](/help/assets/video.md#enable-dash-on-your-account-enable-dash).
-
+* **AEM Sites和内容片段与AEM Assets新一代Dynamic Media的集成**：AEM Assetsas a Cloud Service的新一代Dynamic Media的用户现在可以使用这些云托管资源通过AEM Sites 6.5的内部部署或托管服务实例进行创作和交付。
 * **自适应Forms在AEM网站页面上的集成**：通过使用 — Adaptive Forms Container和Adaptive Forms - Embed(v2)组件，利用AEM Sites编辑器中的自适应Forms组件无缝创建数字注册体验。
 * **AEM Forms中的reCAPTCHA Enterprise支持**：在AEM Forms中增加了对reCAPTCHA Enterprise的支持，针对欺诈性活动和垃圾邮件提供了增强的保护，此外还有现有的Google reCAPTCHA v2支持。
 * **通过AEM Forms支持面向政府的Adobe Acrobat Sign**：允许AEM Forms与面向政府的Adobe Sign（符合FedRAMP）的安全且合规的集成。
