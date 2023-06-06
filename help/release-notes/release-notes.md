@@ -3,9 +3,9 @@ title: 的发行说明 [!DNL Adobe Experience Manager] 6.5
 description: 查找版本信息、新增功能、安装操作方法和详细更改列表 [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 3
 exl-id: fed4e110-9415-4740-aba1-75da522039a9
-source-git-commit: 206242583fcbf651dbc6234dc01be5140d0cfca7
+source-git-commit: 46e76c36db3396a013c8610b62f5cff9f1ea14d9
 workflow-type: tm+mt
-source-wordcount: '3537'
+source-wordcount: '3548'
 ht-degree: 1%
 
 ---
@@ -394,6 +394,7 @@ To retrieve your runtime copy, Adobe recommends to synchronize the design-time c
    ```
 
 * 在JBoss® 7.1.4平台上，当用户安装AEM 6.5.16.0或更高版本Service Pack时， `adobe-livecycle-jboss.ear` 部署失败。
+* WebLogic JEE服务器不支持高于1.8.0_281的JDK版本。
 
 ## 包含的OSGi包和内容包{#osgi-bundles-and-content-packages-included}
 
