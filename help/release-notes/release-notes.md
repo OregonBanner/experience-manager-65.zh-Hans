@@ -3,9 +3,9 @@ title: 的发行说明 [!DNL Adobe Experience Manager] 6.5
 description: 查找版本信息、新增功能、安装操作方法和详细更改列表 [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 3
 exl-id: fed4e110-9415-4740-aba1-75da522039a9
-source-git-commit: 2c9337af99811d7b58712e1d0def7b5af5661c11
+source-git-commit: 36edc2507d9acd7d5f94e433a654ccc1647bb58a
 workflow-type: tm+mt
-source-wordcount: '3567'
+source-wordcount: '3568'
 ht-degree: 1%
 
 ---
@@ -187,7 +187,7 @@ org.h2.mvstore.MVStoreException: The write format 1 is smaller than the supporte
 * 页面的语言副本未按预期更新。 (SITES-11191)
 * 打开非营销活动页面调用 `targeteditor.html` 不必要的。 删除 `targeteditor` 必要时调用。 (SITES-12469)
 * 无法为带有批注的页面创建活动副本。 (SITES-12154)
-* 页面转出已在Experience Manager6.5.16上运行。 (SITES-12008)
+* 页面转出在Experience Manager6.5.16中不起作用。 (SITES-12008)
 * 内存不足；由于以下原因，垃圾收集活动频繁 `NotificationManagerImpl`. `NotificationManager` 捆绑包升级到Experience Manager6.5。 (SITES-11440)
 * 修复了阻止Service Pack 17的WCM IT测试。 (SITES-13089)
 * 在servlet上检索站点引用失败。 (SITES-10901)
