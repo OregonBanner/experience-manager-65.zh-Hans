@@ -7,10 +7,10 @@ feature: Asset Management,Search
 mini-toc-levels: 4
 exl-id: 158607e6-b4e9-4a3f-b023-4023d60c97d2
 hide: true
-source-git-commit: 7bfa9a9e143f199c42161b92dcba66ae441ad1fb
+source-git-commit: 0afd721ff02f2c9abeed40c4b8f4fdf169523c35
 workflow-type: tm+mt
-source-wordcount: '9993'
-ht-degree: 4%
+source-wordcount: '10068'
+ht-degree: 3%
 
 ---
 
@@ -33,7 +33,6 @@ In [!DNL Adobe Experience Manager Assets]，您不仅可以存储和管理资源
 >
 >* 共享 [!DNL Assets] 类型的文件夹 `sling:OrderedFolder` 共享到Experience Cloud时不受支持。 如果要共享文件夹，请不要选择 [!UICONTROL 已排序] 创建文件夹时。
 >* [!DNL Experience Manager] 不允许使用 `subassets` 单词作为文件夹的名称。 它是为包含复合资产的子资产的节点保留的关键字。
-
 
 1. 导航到数字资产文件夹中要创建文件夹的位置。 在菜单中，单击 **[!UICONTROL 创建]**. 选择 **[!UICONTROL 新建文件夹]**.
 1. 在 **[!UICONTROL 标题]** 字段中，提供文件夹名称。 默认情况下，DAM使用您提供的标题作为文件夹名称。 创建文件夹后，您可以覆盖默认名称并指定其他文件夹名称。
@@ -58,6 +57,12 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
 >[!NOTE]
 >
 >在Dynamic Media - Scene7模式下，默认的资源上传文件大小为2 GB或更小。 要配置大于2 GB、最大为15 GB的资产，请参阅 [（可选）配置Dynamic Media - Scene7模式以上传大于2 GB的资源](/help/assets/config-dms7.md#optional-config-dms7-assets-larger-than-2gb).
+
+>[!IMPORTANT]
+>
+>您上传到Experience Manager中的资源的文件名超过100个字符，在Dynamic Media中使用这些资源时名称会缩短。
+>
+>文件名中的前100个字符按原样使用；其余任何字符都替换为字母数字字符串。 在Dynamic Media中使用资产时，此重命名方法可确保唯一的名称。 它还旨在适应Dynamic Media中允许的最大资源文件名长度。
 
 您可以选择将资产上传到文件夹，无论是否分配了处理配置文件。
 
@@ -104,7 +109,6 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
 >* 确保在上传过程中，对于可能导致凭据过期的文件启用区块上传。
 >
 >* 确保每个区块在凭据过期之前完成。
-
 
 如果您上传的资源的名称与上传该资源的位置已可用的资源名称相同，则会显示警告对话框。
 
@@ -198,22 +202,22 @@ Dynamic Media允许通过FTP服务器批量上传资产。 如果您打算上载
 
 | 上传选项 | 子选项 | 描述 |
 |---|---|---|
-| 作业名称 |  | 在文本字段中预填充的默认名称包括用户输入的名称部分以及日期和时间戳。 您可以为此上载作业使用默认名称或输入您自己的创建名称。 <br>作业和其他上载和发布作业记录在“作业”页面上，您可以在其中检查作业的状态。 |
-| 上传后发布 |  | 自动发布您上传的资产。 |
-| 在任意文件夹内，使用相同的基本资源名称（不区分扩展名）进行覆盖 |  | 如果希望上载的文件以相同的名称替换现有文件，请选择此选项。 此选项的名称可能有所不同，具体取决于中的设置 **[!UICONTROL 应用程序设置]** > **[!UICONTROL 常规设置]** > **[!UICONTROL 上载到应用程序]** > **[!UICONTROL 覆盖图像]**. |
-| 上传时解压缩Zip或Tar文件 |  |  |
-| 作业选项 |  | 单击 **[!UICONTROL 作业选项]** 这样你就可以打开 [!UICONTROL 上载作业选项] 对话框并选择影响整个上载作业的选项。 这些选项对于所有文件类型都相同。<br>您可以从“应用程序常规设置”页面开始选择上传文件的默认选项。 要打开此页面，请选择 **[!UICONTROL 设置]** > **[!UICONTROL 应用程序设置]**. 选择 **[!UICONTROL 默认上传选项]** 用于打开 [!UICONTROL 上载作业选项] 对话框。 |
-|  | 时间 | 选择“一次性”或“循环”。 要设置循环作业，请选择重复选项（每日、每周、每月或自定义），以指定希望FTP上载作业重复的时间。 然后，根据需要指定计划选项。 |
-|  | 包括子文件夹 | 上传要上传的文件夹中的所有子文件夹。 您上传的文件夹及其子文件夹的名称会自动输入到 [!DNL Experience Manager Assets]. |
-|  | 裁剪选项 | 若要从图像的侧面手动裁切，请选择“裁切”菜单，然后选择“手动”。 然后输入要从图像的任意一侧或每侧裁切的像素数。 裁切图像的量取决于图像文件中的ppi（像素/英寸）设置。 例如，如果图像显示150 ppi，并且您在“顶部”、“右侧”、“底部”和“左侧”文本框中输入75，则每侧会裁剪半英寸。<br> 要自动裁切图像中的空白像素，请打开“裁切”菜单，选择“手动”，然后在“顶部”、“右侧”、“底部”和“左侧”字段中输入像素度量以从侧面裁切。 您也可以在“裁切”菜单中选择“裁切”，然后选择以下选项：<br> **裁切依据** <ul><li>**颜色**  — 选择颜色选项。 然后选择“边角”菜单，然后选择图像边角的颜色，该颜色最能代表要裁切的空白颜色。</li><li>**透明度**  — 选择透明度选项。<br> **容差**  — 拖动滑块以指定从0到1的容差。对于基于颜色的修剪，指定0以仅裁切与您在图像角选择的颜色完全匹配的像素。 数字越接近1，则允许存在更多的色差。<br>对于基于透明度的修剪，请指定0以仅在像素为透明时裁切像素。 数字越接近1，透明度越高。</li></ul><br>这些裁切选项不具有破坏性。 |
-|  | 颜色配置文件选项 | 在创建用于交付的优化文件时选择颜色转换：<ul><li>默认颜色保留：当图像包含色彩空间信息时，保留源图像颜色；不进行颜色转换。 目前几乎所有图像都已嵌入了相应的颜色配置文件。 但是，如果CMYK源图像不包含嵌入的颜色配置文件，则颜色将转换为sRGB（标准红绿蓝）颜色空间。 sRGB是在网页上显示图像的推荐颜色空间。</li><li>保留原始颜色空间：保留原始颜色而不进行任何颜色转换。 对于没有嵌入颜色配置文件的图像，使用在“发布”设置中配置的默认颜色配置文件完成任何颜色转换。 颜色配置文件可能与使用此选项创建的文件中的颜色不一致。 因此，建议您使用“默认颜色保留”选项。</li><li>自定义自>至<br> 打开菜单，以便选择“转换自”和“转换至”色彩空间。 此高级选项会覆盖嵌入到源文件中的任何颜色信息。 当您提交的所有图像包含不正确或缺少颜色配置文件数据时，请选择此选项。</li></ul> |
-|  | 图像编辑选项 | 可以将剪贴蒙版保留在图像中，并选择颜色配置文件。<br> 参见 [设置上传时图像编辑的选项](#setting-image-editing-options-at-upload). |
-|  | Postscript选项 | 可以栅格化PostScript®文件、裁切文件、保持透明背景、选择分辨率以及选择颜色空间。<br> 参见 [设置PostScript和Illustrator上传选项](#setting-postscript-and-illustrator-upload-options). |
-|  | Photoshop选项 | 您可以从Adobe®Photoshop®文件创建模板、维护图层、指定图层的命名方式、提取文本以及指定将图像锚定到模板中的方式。<br> 不支持模板 [!DNL Experience Manager].<br> 参见 [设置Photoshop上传选项](#setting-photoshop-upload-options). |
-|  | PDF选项 | 您可以栅格化文件、提取搜索词和链接、自动生成eCatalog、设置分辨率以及选择颜色空间。<br>不支持中的eCatalog [!DNL Experience Manager]. <br> 参见 [设置PDF上传选项](#setting-pdf-upload-options).<br>**注释**：PDF的最大页数考虑进行提取，对于新上传为5000。 2022年12月31日，此限制将更改为100页(适用于所有PDF)。 另请参阅 [Dynamic Media限制](/help/assets/limitations.md). |
-|  | Illustrator选项 | 可以栅格化Adobe Illustrator®文件、保持透明背景、选择分辨率以及选择颜色空间。<br> 参见 [设置PostScript和Illustrator上传选项](#setting-postscript-and-illustrator-upload-options). |
-|  | EVideo选项 | 您可以通过选择视频预设来转码视频文件。<br> 参见 [设置eVideo上传选项](#setting-evideo-upload-options). |
-|  | 批次集预设 | 要从上传的文件创建图像集或旋转集，请单击要使用的预设的“活动”列。 您可以选择多个预设。 您可以在Dynamic Media Classic的“应用程序设置/批量集预设”页面中创建预设。<br> 参见 [配置批次集预设以自动生成图像集和旋转集](config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets) 了解有关创建批次集预设的更多信息。<br> 参见 [在上载时设置批次集预设](#setting-batch-set-presets-at-upload). |
+| 作业名称 | | 在文本字段中预填充的默认名称包括用户输入的名称部分以及日期和时间戳。 您可以为此上载作业使用默认名称或输入您自己的创建名称。 <br>作业和其他上载和发布作业记录在“作业”页面上，您可以在其中检查作业的状态。 |
+| 上传后发布 | | 自动发布您上传的资产。 |
+| 在任意文件夹内，使用相同的基本资源名称（不区分扩展名）进行覆盖 | | 如果希望上载的文件以相同的名称替换现有文件，请选择此选项。 此选项的名称可能有所不同，具体取决于中的设置 **[!UICONTROL 应用程序设置]** > **[!UICONTROL 常规设置]** > **[!UICONTROL 上载到应用程序]** > **[!UICONTROL 覆盖图像]**. |
+| 上传时解压缩Zip或Tar文件 | | |
+| 作业选项 | | 单击 **[!UICONTROL 作业选项]** 这样你就可以打开 [!UICONTROL 上载作业选项] 对话框并选择影响整个上载作业的选项。 这些选项对于所有文件类型都相同。<br>您可以从“应用程序常规设置”页面开始选择上传文件的默认选项。 要打开此页面，请选择 **[!UICONTROL 设置]** > **[!UICONTROL 应用程序设置]**. 选择 **[!UICONTROL 默认上传选项]** 用于打开 [!UICONTROL 上载作业选项] 对话框。 |
+| | 时间 | 选择“一次性”或“循环”。 要设置循环作业，请选择重复选项（每日、每周、每月或自定义），以指定希望FTP上载作业重复的时间。 然后，根据需要指定计划选项。 |
+| | 包括子文件夹 | 上传要上传的文件夹中的所有子文件夹。 您上传的文件夹及其子文件夹的名称会自动输入到 [!DNL Experience Manager Assets]. |
+| | 裁剪选项 | 若要从图像的侧面手动裁切，请选择“裁切”菜单，然后选择“手动”。 然后输入要从图像的任意一侧或每侧裁切的像素数。 裁切图像的量取决于图像文件中的ppi（像素/英寸）设置。 例如，如果图像显示150 ppi，并且您在“顶部”、“右侧”、“底部”和“左侧”文本框中输入75，则每侧会裁剪半英寸。<br> 要自动裁切图像中的空白像素，请打开“裁切”菜单，选择“手动”，然后在“顶部”、“右侧”、“底部”和“左侧”字段中输入像素度量以从侧面裁切。 您也可以在“裁切”菜单中选择“裁切”，然后选择以下选项：<br> **裁切依据** <ul><li>**颜色**  — 选择颜色选项。 然后选择“边角”菜单，然后选择图像边角的颜色，该颜色最能代表要裁切的空白颜色。</li><li>**透明度**  — 选择透明度选项。<br> **容差**  — 拖动滑块以指定从0到1的容差。对于基于颜色的修剪，指定0以仅裁切与您在图像角选择的颜色完全匹配的像素。 数字越接近1，则允许存在更多的色差。<br>对于基于透明度的修剪，请指定0以仅在像素为透明时裁切像素。 数字越接近1，透明度越高。</li></ul><br>这些裁切选项不具有破坏性。 |
+| | 颜色配置文件选项 | 在创建用于交付的优化文件时选择颜色转换：<ul><li>默认颜色保留：当图像包含色彩空间信息时，保留源图像颜色；不进行颜色转换。 目前几乎所有图像都已嵌入了相应的颜色配置文件。 但是，如果CMYK源图像不包含嵌入的颜色配置文件，则颜色将转换为sRGB（标准红绿蓝）颜色空间。 sRGB是在网页上显示图像的推荐颜色空间。</li><li>保留原始颜色空间：保留原始颜色而不进行任何颜色转换。 对于没有嵌入颜色配置文件的图像，使用在“发布”设置中配置的默认颜色配置文件完成任何颜色转换。 颜色配置文件可能与使用此选项创建的文件中的颜色不一致。 因此，建议您使用“默认颜色保留”选项。</li><li>自定义自>至<br> 打开菜单，以便选择“转换自”和“转换至”色彩空间。 此高级选项会覆盖嵌入到源文件中的任何颜色信息。 当您提交的所有图像包含不正确或缺少颜色配置文件数据时，请选择此选项。</li></ul> |
+| | 图像编辑选项 | 可以将剪贴蒙版保留在图像中，并选择颜色配置文件。<br> 参见 [设置上传时图像编辑的选项](#setting-image-editing-options-at-upload). |
+| | Postscript选项 | 可以栅格化PostScript®文件、裁切文件、保持透明背景、选择分辨率以及选择颜色空间。<br> 参见 [设置PostScript和Illustrator上传选项](#setting-postscript-and-illustrator-upload-options). |
+| | Photoshop选项 | 您可以从Adobe®Photoshop®文件创建模板、维护图层、指定图层的命名方式、提取文本以及指定将图像锚定到模板中的方式。<br> 不支持模板 [!DNL Experience Manager].<br> 参见 [设置Photoshop上传选项](#setting-photoshop-upload-options). |
+| | PDF选项 | 您可以栅格化文件、提取搜索词和链接、自动生成eCatalog、设置分辨率以及选择颜色空间。<br>不支持中的eCatalog [!DNL Experience Manager]. <br> 参见 [设置PDF上传选项](#setting-pdf-upload-options).<br>**注释**：PDF的最大页数考虑进行提取，对于新上传为5000。 2022年12月31日，此限制将更改为100页(适用于所有PDF)。 另请参阅 [Dynamic Media限制](/help/assets/limitations.md). |
+| | Illustrator选项 | 可以栅格化Adobe Illustrator®文件、保持透明背景、选择分辨率以及选择颜色空间。<br> 参见 [设置PostScript和Illustrator上传选项](#setting-postscript-and-illustrator-upload-options). |
+| | EVideo选项 | 您可以通过选择视频预设来转码视频文件。<br> 参见 [设置eVideo上传选项](#setting-evideo-upload-options). |
+| | 批次集预设 | 要从上传的文件创建图像集或旋转集，请单击要使用的预设的“活动”列。 您可以选择多个预设。 您可以在Dynamic Media Classic的“应用程序设置/批量集预设”页面中创建预设。<br> 参见 [配置批次集预设以自动生成图像集和旋转集](config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets) 了解有关创建批次集预设的更多信息。<br> 参见 [在上载时设置批次集预设](#setting-batch-set-presets-at-upload). |
 
 #### 设置上传时图像编辑的选项 {#setting-image-editing-options-at-upload}
 
@@ -247,14 +251,14 @@ Dynamic Media允许通过FTP服务器批量上传资产。 如果您打算上载
 
 | 选项 | 子选项 | 描述 |
 |---|---|---|
-| 正在处理 |  | 选择 **[!UICONTROL 栅格化]** 将文件中的矢量图形转换为位图格式。 |
-| 在渲染的图像中保持透明背景 |  | 保持文件的背景透明度。 |
-| 解决方法 |  | 确定分辨率设置。 此设置确定文件中每英寸显示的像素数。 |
-| 色彩空间 |  | 选择“色彩空间”菜单，然后从以下色彩空间选项中进行选择： |
-|  | 自动检测 | 保留文件的颜色空间。 |
-|  | 强制作为RGB | 转换为RGB色彩空间。 |
-|  | 强制为CMYK | 转换为CMYK颜色空间。 |
-|  | 强制为灰度 | 转换为灰度颜色空间。 |
+| 正在处理 | | 选择 **[!UICONTROL 栅格化]** 将文件中的矢量图形转换为位图格式。 |
+| 在渲染的图像中保持透明背景 | | 保持文件的背景透明度。 |
+| 解决方法 | | 确定分辨率设置。 此设置确定文件中每英寸显示的像素数。 |
+| 色彩空间 | | 选择“色彩空间”菜单，然后从以下色彩空间选项中进行选择： |
+| | 自动检测 | 保留文件的颜色空间。 |
+| | 强制作为RGB | 转换为RGB色彩空间。 |
+| | 强制为CMYK | 转换为CMYK颜色空间。 |
+| | 强制为灰度 | 转换为灰度颜色空间。 |
 
 #### 设置Photoshop上传选项 {#setting-photoshop-upload-options}
 
@@ -270,15 +274,15 @@ Photoshop文档(PSD)文件最常用于创建图像模板。 上传PSD文件时�
 
 | 选项 | 子选项 | 描述 |
 |---|---|---|
-| 保留图层 |  | 将PSD中的图层（如果有）拆分为单独的资源。 资源层仍与PSD相关联。 通过在“详细信息”视图中打开PSD文件并选择图层面板，可以查看它们。 |
-| 创建模板 |  | 从PSD文件中的图层创建模板。 |
-| 提取文本 |  | 提取文本，以便用户能够在查看器中搜索文本。 |
-| 将图层扩展至背景大小 |  | 将翻录图像图层的大小扩展到背景图层的大小。 |
-| 图层命名 |  | PSD文件中的图层将作为单独的图像上传。 |
-|  | 图层名称 | 将图像命名为PSD文件中的图层名称。 例如，原始PSD文件中名为“Price Tag”的图层会变成名为“Price Tag”的图像。 但是，如果PSD文件中的图层名称是默认的Photoshop图层名称（“背景”、“图层1”、“图层2”等），则图像将根据PSD文件中的图层编号进行命名。 它们不会以默认图层名称命名。 |
-|  | Photoshop和图层编号 | 将图像命名为PSD文件中的图层编号，而忽略原始图层名称。 图像使用Photoshop文件名和附加的图层编号进行命名。 例如，名为Spring Ad.psd的文件第二层的名称为Spring Ad_2，即使它在Photoshop中具有非默认名称。 |
-|  | Photoshop和图层名称 | 在PSD文件后面加上图层名称或图层编号来命名图像。 如果PSD文件中的图层名称是默认的Photoshop图层名称，则使用图层编号。 例如，在名为SpringAd的PSD文件中，名为Price Tag的图层名为Spring Ad_Price Tag。 缺省名称为Layer 2的层称为Spring Ad_2。 |
-| 锚点 |  | 指定如何在模板中定位图像，该模板是根据PSD文件生成的图层合成生成的。 默认情况下，锚点是中心。 中心锚点允许替换图像以最佳方式填充相同的空间，而不管替换图像的长宽比如何。 当引用模板并使用参数替换时，替换此图像的不同方面的图像有效地占用了相同的空间。 如果您的应用程序要求替换图像填充模板中分配的空间，请更改为其他设置。 |
+| 保留图层 | | 将PSD中的图层（如果有）拆分为单独的资源。 资源层仍与PSD相关联。 通过在“详细信息”视图中打开PSD文件并选择图层面板，可以查看它们。 |
+| 创建模板 | | 从PSD文件中的图层创建模板。 |
+| 提取文本 | | 提取文本，以便用户能够在查看器中搜索文本。 |
+| 将图层扩展至背景大小 | | 将翻录图像图层的大小扩展到背景图层的大小。 |
+| 图层命名 | | PSD文件中的图层将作为单独的图像上传。 |
+| | 图层名称 | 将图像命名为PSD文件中的图层名称。 例如，原始PSD文件中名为“Price Tag”的图层会变成名为“Price Tag”的图像。 但是，如果PSD文件中的图层名称是默认的Photoshop图层名称（“背景”、“图层1”、“图层2”等），则图像将根据PSD文件中的图层编号进行命名。 它们不会以默认图层名称命名。 |
+| | Photoshop和图层编号 | 将图像命名为PSD文件中的图层编号，而忽略原始图层名称。 图像使用Photoshop文件名和附加的图层编号进行命名。 例如，名为Spring Ad.psd的文件第二层的名称为Spring Ad_2，即使它在Photoshop中具有非默认名称。 |
+| | Photoshop和图层名称 | 在PSD文件后面加上图层名称或图层编号来命名图像。 如果PSD文件中的图层名称是默认的Photoshop图层名称，则使用图层编号。 例如，在名为SpringAd的PSD文件中，名为Price Tag的图层名为Spring Ad_Price Tag。 缺省名称为Layer 2的层称为Spring Ad_2。 |
+| 锚点 | | 指定如何在模板中定位图像，该模板是根据PSD文件生成的图层合成生成的。 默认情况下，锚点是中心。 中心锚点允许替换图像以最佳方式填充相同的空间，而不管替换图像的长宽比如何。 当引用模板并使用参数替换时，替换此图像的不同方面的图像有效地占用了相同的空间。 如果您的应用程序要求替换图像填充模板中分配的空间，请更改为其他设置。 |
 
 #### 设置PDF上传选项 {#setting-pdf-upload-options}
 
@@ -296,14 +300,14 @@ Photoshop文档(PSD)文件最常用于创建图像模板。 上传PSD文件时�
 |---|---|---|
 | 正在处理 | 栅格化 | （默认）翻录PDF文件中的页面，并将矢量图形转换为位图图像。 如果要创建eCatalog，请选择此选项。 |
 | 提取 | 搜索词 | 从PDF文件中提取单词，以便在eCatalog查看器中按关键字搜索该文件。 |
-|  | 链接 | 从PDF文件中提取链接，并将其转换为在eCatalog查看器中使用的图像映射。 |
-| 从多页PDF自动生成eCatalog |  | 自动从PDF文件创建eCatalog。 eCatalog以您上传的PDF文件命名。 (只有在上传时栅格化PDF文件时，此选项才可用。) |
-| 解决方法 |  | 确定分辨率设置。 此设置确定PDF文件中每英寸显示的像素数。 默认值为150。 |
-| 色彩空间 |  | 选择“色彩空间”菜单，并为PDF文件选择一个色彩空间。 大多数PDF文件都有RGB和CMYK彩色图像。 RGB色彩空间更适合在线观看。 |
-|  | 自动检测 | 保留PDF文件的色彩空间。 |
-|  | 强制渲染为 RGB | 转换为RGB色彩空间。 |
-|  | 强制渲染为 CMYK | 转换为CMYK颜色空间。 |
-|  | 强制渲染为灰度 | 转换为灰度颜色空间。 |
+| | 链接 | 从PDF文件中提取链接，并将其转换为在eCatalog查看器中使用的图像映射。 |
+| 从多页PDF自动生成eCatalog | | 自动从PDF文件创建eCatalog。 eCatalog以您上传的PDF文件命名。 (只有在上传时栅格化PDF文件时，此选项才可用。) |
+| 解决方法 | | 确定分辨率设置。 此设置确定PDF文件中每英寸显示的像素数。 默认值为150。 |
+| 色彩空间 | | 选择“色彩空间”菜单，并为PDF文件选择一个色彩空间。 大多数PDF文件都有RGB和CMYK彩色图像。 RGB色彩空间更适合在线观看。 |
+| | 自动检测 | 保留PDF文件的色彩空间。 |
+| | 强制渲染为 RGB | 转换为RGB色彩空间。 |
+| | 强制渲染为 CMYK | 转换为CMYK颜色空间。 |
+| | 强制渲染为灰度 | 转换为灰度颜色空间。 |
 
 #### 设置eVideo上传选项 {#setting-evideo-upload-options}
 
@@ -311,11 +315,11 @@ Photoshop文档(PSD)文件最常用于创建图像模板。 上传PSD文件时�
 
 | 选项 | 子选项 | 描述 |
 |---|---|---|
-| 自适应视频 |  | 可与任何纵横比配合使用的单个编码预设，用于创建要交付到移动设备、平板电脑和桌面的视频。 使用此预设编码的上传源视频将设置为固定高度。 但是，宽度会自动缩放以保留视频的长宽比。 <br>最佳实践是使用自适应视频编码。 |
+| 自适应视频 | | 可与任何纵横比配合使用的单个编码预设，用于创建要交付到移动设备、平板电脑和桌面的视频。 使用此预设编码的上传源视频将设置为固定高度。 但是，宽度会自动缩放以保留视频的长宽比。 <br>最佳实践是使用自适应视频编码。 |
 | 单个编码预设 | 编码预设排序 | 选择 **[!UICONTROL 名称]** 或 **[!UICONTROL 大小]** 如果要按名称或分辨率大小对“桌面”、“移动设备”和“平板电脑”下列出的编码预设进行排序。 |
-|  | 桌面 | 创建一个MP4文件，为台式计算机提供流视频或渐进式视频体验。 选择具有所需分辨率大小和目标数据速率的一个或多个长宽比。 |
-|  | 移动设备 | 创建一个MP4文件，以在iPhone或Android™移动设备上交付。 选择具有所需分辨率大小和目标数据速率的一个或多个长宽比。 |
-|  | 平板电脑 | 创建一个MP4文件，以便在iPad或Android™平板电脑设备上交付。 选择具有所需分辨率大小和目标数据速率的一个或多个长宽比。 |
+| | 桌面 | 创建一个MP4文件，为台式计算机提供流视频或渐进式视频体验。 选择一个或多个具有所需分辨率大小和目标数据速率的长宽比。 |
+| | 移动设备 | 创建一个MP4文件，以在iPhone或Android™移动设备上交付。 选择一个或多个具有所需分辨率大小和目标数据速率的长宽比。 |
+| | 平板电脑 | 创建一个MP4文件，以便在iPad或Android™平板电脑设备上交付。 选择一个或多个具有所需分辨率大小和目标数据速率的长宽比。 |
 
 #### 在上载时设置批次集预设 {#setting-batch-set-presets-at-upload}
 
@@ -382,7 +386,6 @@ Photoshop文档(PSD)文件最常用于创建图像模板。 上传PSD文件时�
 >* [预览Dynamic Media资源](/help/assets/previewing-assets.md).
 >* [查看子资产](managing-linked-subassets.md#viewing-subassets).
 
-
 ## 编辑属性和元数据 {#editing-properties}
 
 1. 导航到要编辑其元数据的资源的位置。
@@ -403,7 +406,7 @@ Photoshop文档(PSD)文件最常用于创建图像模板。 上传PSD文件时�
 
    *图：使用日期选取器计划资产激活。*
 
-1. 您需要检查 **[!UICONTROL 已达到开启/关闭时间]** 选项。
+1. Check **[!UICONTROL 已达到开启/关闭时间]** 选项。
    ![代理设置](assets-dm/Agent-settings.png)
 
 1. 要在特定持续时间后停用资产，请从日期选择器旁边的停用日期/时间 **[!UICONTROL 关闭时间]** 字段。 停用日期应晚于资源的激活日期。 在 [!UICONTROL 关闭时间]，资源及其演绎版无法通过 [!DNL Assets] Web界面或通过HTTP API。
@@ -482,11 +485,11 @@ Photoshop文档(PSD)文件最常用于创建图像模板。 上传PSD文件时�
    * 在移动资源后指定资源的名称。 然后单击 **[!UICONTROL 下一个]** 以继续。
 
    * 单击 **[!UICONTROL 取消]** 以停止该过程。
+
    >[!NOTE]
    >
    >* 如果新位置中没有同名的资源，则可以为该资源指定相同的名称。 但是，如果将资产移动到具有相同名称的资产存在的位置，则应该使用其他名称。 如果使用相同的名称，系统会自动生成该名称的变体。 例如，如果资产的名称为Square，则系统会为其副本生成名称Square1。
    >* 重命名时，文件名中不允许使用空格。
-
 
 1. 在 **[!UICONTROL 选择目标]** 对话框，请执行以下操作之一：
 
@@ -576,11 +579,11 @@ Photoshop文档(PSD)文件最常用于创建图像模板。 上传PSD文件时�
    * 如果资源没有引用，则会删除该资源。
 
    * 如果资产具有引用，则会出现一条错误消息，通知您 **一个或多个资产被引用**. 您可以选择 **[!UICONTROL 强制删除]** 或 **[!UICONTROL 取消]**.
+
    >[!NOTE]
    >
    >* 要从其他页面解析或删除传入引用，请在删除资产之前更新相关引用。 此外，使用叠加禁用强制删除选项，以禁止用户删除引用的资产并留下断开的链接。
    >* 可以删除 *文件夹* 包含已签出的资源文件。 在删除文件夹之前，请确保用户未签出任何数字资产。
-
 
 >[!NOTE]
 >
@@ -683,7 +686,7 @@ CUG是限制对资源的访问的额外方法。 您还可以为文件夹配置�
 
 1. 要裁切图像，请单击 **[!UICONTROL 裁切]** ![裁切图像的选项](assets/do-not-localize/crop.png).
 
-1. 从列表中选择所需的选项。图像上会根据您选择的选项显示裁剪区域。利用&#x200B;**手绘**&#x200B;选项，您可以不受纵横比限制裁剪图像。
+1. 从列表中选择所需的选项。裁切区域会根据您选择的选项显示在图像上。 利用&#x200B;**手绘**&#x200B;选项，您可以不受纵横比限制裁剪图像。
 
 1. 选择要裁剪的区域，并在图像上调整大小或重新定位该区域。
 
@@ -863,9 +866,9 @@ CUG是限制对资源的访问的额外方法。 您还可以为文件夹配置�
 
 1. 从以下链接下载Google Noto CJK字体，并将其存储在Font Manager Service中配置的font目录中。
 
-   * 全部用一种超级CJK字体： [https://www.google.com/get/noto/help/cjk/](https://www.google.com/get/noto/help/cjk/)
-   * Noto Sans（用于欧洲语言）： [https://www.google.com/get/noto/](https://www.google.com/get/noto/)
-   * 不要为您选择的语言设置字体： [https://www.google.com/get/noto/](https://www.google.com/get/noto/)
+   * 全部用一种超级CJK字体： [https://fonts.google.com/noto/use](https://fonts.google.com/noto/use)
+   * Noto Sans（用于欧洲语言）： [https://fonts.google.com/noto](https://fonts.google.com/noto)
+   * 不要为您选择的语言设置字体： [https://fonts.google.com/noto](https://fonts.google.com/noto)
 
 1. 通过将font-family参数设置为，配置注释PDF文件 `Arial Unicode MS, Noto Sans, Noto Sans CJK JP, sans-serif`. 此配置默认可用，适用于所有欧洲语言和CJK语言。
 1. 如果您选择的语言与步骤2中提到的语言不同，请将相应的（逗号分隔）条目附加到默认字体系列。
@@ -879,7 +882,7 @@ CUG是限制对资源的访问的额外方法。 您还可以为文件夹配置�
 * 上传具有相同文件名、且位于相同位置的资源。 它可以是新资源，也可以是同一资源的修改版本。
 * 在中编辑图像 [!DNL Experience Manager] 并保存更改。
 * 编辑资源的元数据。
-* 使用 [!DNL Experience Manager] 用于签出现有资产并对其进行编辑的桌面应用程序，以及 [上传您的更改](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#edit-assets-upload-updated-assets).
+* 使用 [!DNL Experience Manager] 桌面应用程序，用于签出和编辑现有资产，以及 [上传您的更改](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#edit-assets-upload-updated-assets).
 
 您还可以通过工作流启用自动版本控制。 在为资源创建版本时，元数据和演绎版将随版本一起保存。 呈现版本是相同图像的替代版本，例如，已上传JPEG文件的PNG呈现版本。
 
@@ -895,9 +898,9 @@ CUG是限制对资源的访问的额外方法。 您还可以为文件夹配置�
    * 单击 **[!UICONTROL 另存为版本]** 以便您可以为资源创建版本。 （可选）添加标签和注释。
    * 单击 **[!UICONTROL 创建]** 以创建版本。
 
-      ![从侧栏创建资源版本](assets/create-new-version-from-timeline.png)
+     ![从侧栏创建资源版本](assets/create-new-version-from-timeline.png)
 
-      *图：从创建资源的版本 [!UICONTROL 时间线] 左侧边栏。*
+     *图：从创建资源的版本 [!UICONTROL 时间线] 左侧边栏。*
 
 1. 要查看资源的版本，请执行以下操作：
 
@@ -911,9 +914,9 @@ CUG是限制对资源的访问的额外方法。 您还可以为文件夹配置�
    * 单击资源的某个版本。 （可选）添加标签和注释。
    * 单击 **[!UICONTROL 还原到此版本]**.
 
-      ![选择要还原到该版本的版本](assets/select_version.png)
+     ![选择要还原到该版本的版本](assets/select_version.png)
 
-      *图：选择一个版本并还原到该版本。 它会成为当前版本，然后可供DAM用户使用。*
+     *图：选择一个版本并还原到该版本。 它会成为当前版本，然后可供DAM用户使用。*
 
 1. 要比较图像的两个版本，请执行以下步骤：
    * 单击要与当前版本进行比较的版本。
@@ -934,7 +937,7 @@ CUG是限制对资源的访问的额外方法。 您还可以为文件夹配置�
 * 收藏集可以包含来自不同位置的资产，因为它们仅包含对这些资产的引用。 每个收藏集均保持资源的引用完整性。
 * 您可以与具有不同权限级别（包括编辑、查看等）的多个用户共享收藏集。
 
-要了解收藏集管理的详细信息，请参阅 [管理收藏集](/help/assets/manage-collections.md).
+要了解收藏集管理的详细信息，请参阅 [管理数字资产收藏集](/help/assets/manage-collections.md).
 
 ## 在桌面应用程序或Adobe资源链接中查看资源时隐藏已过期的资源 {#hide-expired-assets-via-acp-api}
 
@@ -954,4 +957,4 @@ curl -v -u admin:admin --location --request POST 'http://localhost:4502/conf/glo
 --data-urlencode '../../jcr:primaryType=sling:Folder'
 ```
 
-要了解更多信息，请参阅如何 [使用桌面应用程序浏览DAM资产](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#browse-search-preview-assets) 和 [如何使用AdobeAsset Link](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/manage-assets-using-adobe-asset-link.ug.html).
+要了解更多信息，请参阅如何 [使用桌面应用程序浏览DAM资产](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#browse-search-preview-assets) 和 [如何使用AdobeAsset Link](https://helpx.adobe.com/enterprise/using/manage-assets-using-adobe-asset-link.html).
