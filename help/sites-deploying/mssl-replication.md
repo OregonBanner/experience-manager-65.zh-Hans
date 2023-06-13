@@ -11,9 +11,9 @@ topic-tags: configuring
 discoiquuid: 8bc307d9-fa5c-44c0-bff9-2d68d32a253b
 feature: Configuring
 exl-id: 0a8d7831-d076-45cf-835c-8063ee13d6ba
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: b8027a8564f2dce408e7cd5b01f3b86c703c9e3a
 workflow-type: tm+mt
-source-wordcount: '1409'
+source-wordcount: '1392'
 ht-degree: 3%
 
 ---
@@ -202,8 +202,7 @@ ht-degree: 3%
 ### 安装作者证书 {#install-the-author-certificate}
 
 1. 打开发布实例的“用户管理”页面。 ([http://localhost:4503/libs/granite/security/content/useradmin.html](http://localhost:4503/libs/granite/security/content/useradmin.html))
-1. 找到用于执行复制请求的用户帐户，然后单击或点按用户名。
-1. 如果“Create TrustStore”链接出现在“帐户设置”区域中，请单击该链接，为TrustStore创建密码，然后单击“确定”。
+1. 如果Create TrustStore链接出现在Global Trust Store区域中，请单击该链接，为TrustStore创建密码，然后单击OK。
 1. 在“帐户设置”区域中，单击“管理TrustStore”。
 1. 单击从CER文件添加证书。
 1. 确保选中将证书映射到用户选项。 单击选择证书文件，选择author.cer ，然后单击打开。
