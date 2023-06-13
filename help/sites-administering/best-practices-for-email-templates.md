@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 2418777e-4eb2-4d82-aa9e-8d1b0bf740f3
 docset: aem65
 exl-id: 6666eddc-dc17-4bd4-9d55-e6522f40a680
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 70be796a50a93267b965d00db1b359d9a809ec08
 workflow-type: tm+mt
-source-wordcount: '1116'
+source-wordcount: '1070'
 ht-degree: 1%
 
 ---
@@ -22,9 +22,9 @@ ht-degree: 1%
 
 >[!CAUTION]
 >
->已弃用AEM电子邮件组件。 由于电子邮件将内容和样式结合在了一起，因此由AEM提供的现成可用电子邮件组件对于客户的重用受到限制，因为需要将自定义样式实施到项目所需的任何组件中。
+>本文适用于已弃用的基于Foundation组件的AEM电子邮件组件。
 >
->可以在项目级别实施电子邮件组件，已弃用的AEM电子邮件组件说明了如何实现这一点。 但是，这些已弃用的组件不应在项目中使用。
+>鼓励用户利用现代 [核心组件电子邮件组件。](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/email/introduction.html)
 
 本文档介绍了一些有关电子邮件设计的最佳实践，这些实践最终形成了完善的电子邮件营销活动模板。
 

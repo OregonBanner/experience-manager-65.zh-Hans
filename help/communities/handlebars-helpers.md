@@ -10,9 +10,9 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 8b6c1697-d693-41f4-8337-f41658465107
 exl-id: bfb95cae-4b0f-4521-a113-042dc4005a63
-source-git-commit: 1d334c42088342954feb34f6179dc5b134f81bb8
+source-git-commit: fe731e1a8866fbdd1f982d67d6ff29cbf7f0cd7c
 workflow-type: tm+mt
-source-wordcount: '1508'
+source-wordcount: '1509'
 ht-degree: 2%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 2%
 
 | **[⇐ Feature Essentials](essentials.md)** | **[服务器端自定义⇒](server-customize.md)** |
 |---|---|
-|  | **[客户端自定义⇒](client-customize.md)** |
+|   | **[客户端自定义⇒](client-customize.md)** |
 
 Handlebars帮助程序（帮助程序）是可从Handlebars脚本中调用的方法，以便使用SCF组件。
 
@@ -49,19 +49,19 @@ Handlebars帮助程序（帮助程序）是可从Handlebars脚本中调用的方
 
 * **上下文**：字符串
 
-   （可选）默认值为空字符串
+  （可选）默认值为空字符串
 
 * **maxLength**：数字
 
-   （可选）默认值是上下文的长度。
+  （可选）默认值是上下文的长度。
 
 * **maxWords**：数字
 
-   （可选）默认值为修剪字符串中的字数。
+  （可选）默认值为修剪字符串中的字数。
 
 * **安全字符串**：布尔值
 
-   （可选）如果为true，则返回Handlebars.SafeString()。 默认值为false。
+  （可选）如果为true，则返回Handlebars.SafeString()。 默认值为false。
 
 ### 示例 {#examples}
 
@@ -97,23 +97,23 @@ Then abbreviate would return
 
 * **上下文**：字符串
 
-   （可选）默认值为空字符串。
+  （可选）默认值为空字符串。
 
 * **numChars**：数字
 
-   （可选）不显示全文时显示的字符数。 默认值为100。
+  （可选）不显示全文时显示的字符数。 默认值为100。
 
 * **更多文本**：字符串
 
-   （可选）要显示的文本，指示要显示的文本更多。 默认值为“更多”。
+  （可选）要显示的文本，指示要显示的文本更多。 默认值为“更多”。
 
 * **省略号文本**：字符串
 
-   （可选）要显示的文本，指示存在隐藏文本。 默认值为“……”。
+  （可选）要显示的文本，指示存在隐藏文本。 默认值为“……”。
 
 * **安全字符串**：布尔值
 
-   （可选）布尔值，指示在返回结果之前是否应用Handlebars.SafeString()。 默认值为false。
+  （可选）布尔值，指示在返回结果之前是否应用Handlebars.SafeString()。 默认值为false。
 
 ### 示例 {#example}
 
@@ -137,11 +137,11 @@ Then content-loadmore would return
 
 * **上下文**：数字
 
-   （可选）从1970年1月1日起偏移的毫秒值（纪元）。 默认值为当前日期。
+  （可选）从1970年1月1日起偏移的毫秒值（纪元）。 默认值为当前日期。
 
 * **格式**：字符串
 
-   （可选）要应用的日期格式。 默认值为“YYYY-MM-DDTHH”:mm:ss.sssZ”，结果将显示为“2015-03-18T18”:17:13-07:00英寸
+  （可选）要应用的日期格式。 默认值为“YYYY-MM-DDTHH”:mm:ss.sssZ”，结果将显示为“2015-03-18T18”:17:13-07:00英寸
 
 ### 示例 {#examples-1}
 
@@ -165,11 +165,11 @@ Then content-loadmore would return
 
 * **值**：字符串
 
-   要比较的左侧值。
+  要比较的左侧值。
 
 * **rvalue**：字符串
 
-   要比较的右侧值。
+  要比较的右侧值。
 
 ### 示例 {#example-1}
 
@@ -189,11 +189,11 @@ Then content-loadmore would return
 
 * **上下文**：字符串
 
-   （可选）要翻译的字符串。 如果未提供默认值，则此为必填字段。
+  （可选）要翻译的字符串。 如果未提供默认值，则此为必填字段。
 
 * **模式**：字符串
 
-   （可选）逗号分隔的列表 [WCM模式](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/WCMMode.html) 以测试是否设置。
+  （可选）逗号分隔的列表 [WCM模式](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/WCMMode.html) 以测试是否设置。
 
 ### 示例 {#example-2}
 
@@ -215,15 +215,15 @@ Then content-loadmore would return
 
 * **上下文**：字符串
 
-   （可选）要翻译的字符串。 如果未提供默认值，则此为必填字段。
+  （可选）要翻译的字符串。 如果未提供默认值，则此为必填字段。
 
 * **默认**：字符串
 
-   （可选）要翻译的默认字符串。 如果未提供上下文，则此为必填字段。
+  （可选）要翻译的默认字符串。 如果未提供上下文，则此为必填字段。
 
 * **注释**：字符串
 
-   （可选）翻译提示
+  （可选）翻译提示
 
 ### 示例 {#example-3}
 
@@ -246,27 +246,27 @@ Then content-loadmore would return
 
 * **上下文**：字符串或对象
 
-   （可选，除非提供相对路径）
+  （可选，除非提供相对路径）
 
-   使用 `this` 以传递当前上下文。
+  使用 `this` 以传递当前上下文。
 
-   使用 `this.id` 获取资源： `id` 用于呈现所请求的resourceType。
+  使用 `this.id` 获取资源： `id` 用于呈现所请求的resourceType。
 
 * **resourceType**：字符串
 
-   （可选）资源类型默认为上下文中的资源类型。
+  （可选）资源类型默认为上下文中的资源类型。
 
 * **模板**：字符串
 
-   组件脚本的路径。
+  组件脚本的路径。
 
 * **路径**：字符串
 
-   （必需）资源的路径。 如果路径是相对路径，则必须提供上下文，否则返回空字符串。
+  （必需）资源的路径。 如果路径是相对路径，则必须提供上下文，否则返回空字符串。
 
 * **authoringDisabled**：布尔值
 
-   （可选）默认值为false。 仅供内部使用。
+  （可选）默认值为false。 仅供内部使用。
 
 ### 示例 {#example-4}
 
@@ -286,19 +286,19 @@ Then content-loadmore would return
 
 * **类别**：字符串
 
-   （可选）以逗号分隔的客户端库类别的列表。 这将包含给定类别的所有Javascript和CSS库。 主题名称是从请求中提取的。
+  （可选）以逗号分隔的客户端库类别的列表。 这将包含给定类别的所有Javascript和CSS库。 主题名称是从请求中提取的。
 
 * **主题**：字符串
 
-   （可选）以逗号分隔的客户端库类别的列表。 这将包含给定类别的所有主题相关库（CSS和JS）。 主题名称是从请求中提取的。
+  （可选）以逗号分隔的客户端库类别的列表。 这将包含给定类别的所有主题相关库（CSS和JS）。 主题名称是从请求中提取的。
 
 * **js**：字符串
 
-   （可选）以逗号分隔的客户端库类别的列表。 这将包含给定类别的所有Javascript库。
+  （可选）以逗号分隔的客户端库类别的列表。 这将包含给定类别的所有Javascript库。
 
 * **css**：字符串
 
-   （可选）以逗号分隔的客户端库类别的列表。 这将包含给定类别的所有CSS库。
+  （可选）以逗号分隔的客户端库类别的列表。 这将包含给定类别的所有CSS库。
 
 ### 示例 {#examples-2}
 
@@ -353,11 +353,11 @@ Then content-loadmore would return
 
 * **上下文**：数字
 
-   要与“现在”进行比较的过去时间。 时间表示为从1970年1月1日起偏移的毫秒值（纪元）。
+  要与“现在”进行比较的过去时间。 时间表示为从1970年1月1日起偏移的毫秒值（纪元）。
 
 * **daysCutoff**：数字
 
-   切换到实际日期之前的天数。 默认值为60。
+  切换到实际日期之前的天数。 默认值为60。
 
 ### 示例 {#example-5}
 
@@ -385,7 +385,7 @@ Depending on how long in the past, may return
 
 * **上下文**：对象
 
-   要编码的HTML。
+  要编码的HTML。
 
 ### 示例 {#example-6}
 
@@ -403,7 +403,7 @@ Depending on how long in the past, may return
 
 * **上下文**：对象
 
-   要编码的HTML。
+  要编码的HTML。
 
 ### 示例 {#example-7}
 
@@ -421,7 +421,7 @@ Depending on how long in the past, may return
 
 * **上下文**：对象
 
-   要编码的HTML。
+  要编码的HTML。
 
 ### 示例 {#example-8}
 
@@ -439,7 +439,7 @@ var input = {{xss-jsString topic-title}}
 
 * **上下文**：对象
 
-   要清理的URL。
+  要清理的URL。
 
 ### 示例 {#example-9}
 
@@ -457,7 +457,7 @@ var input = {{xss-jsString topic-title}}
 * 上下文可以是字符串、数字、布尔值或JSON数据对象。
 * 可以将嵌套在当前上下文中的对象作为上下文传递，例如 `this.url` 或 `this.id` （请参阅以下简单帮助程序和块帮助程序的示例）。
 
-* 块帮助程序是从模板中的任何位置调用的函数。 它们每次可使用不同的上下文调用模板块零次或多次。 它们包含以下内容之间的上下文： {{#*name*}} and {{/*name*}}.
+* 块帮助程序是从模板中的任何位置调用的函数。 它们每次可使用不同的上下文调用模板块零次或多次。 它们包含以下内容之间的上下文： `{{#*name*}}` 和 `{{/*name*}}`.
 
 * Handlebars为帮助程序提供了一个名为“options”的最终参数。 特殊对象“options”包括
 
@@ -603,4 +603,4 @@ clientlib必须：
 
 | **[⇐ Feature Essentials](essentials.md)** | **[服务器端自定义⇒](server-customize.md)** |
 |---|---|
-|  | **[客户端自定义⇒](client-customize.md)** |
+|   | **[客户端自定义⇒](client-customize.md)** |
