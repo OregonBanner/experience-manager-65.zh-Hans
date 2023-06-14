@@ -1,13 +1,11 @@
 ---
 title: AEM 6.5用户指南中心
-seo-title: AEM 6.5 User Guide Hub
-description: 了解、安装、管理和使用AEM 6.5的所有基本资源概述
-seo-description: An overview of all of the essential resources for understanding, installing, managing, and using AEM 6.5
+description: 了解、安装、管理和使用AEM 6.5的基本资源概述
 exl-id: 51788662-6214-408e-98d9-692950c366be
-source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
+source-git-commit: 78c584db8c35ea809048580fe5b440a0b73c8eea
 workflow-type: tm+mt
-source-wordcount: '214'
-ht-degree: 9%
+source-wordcount: '212'
+ht-degree: 15%
 
 ---
 
@@ -15,7 +13,7 @@ ht-degree: 9%
 
 ## 简介 {#introduction}
 
-| [首要步骤](https://helpx.adobe.com/cn/experience-manager/get-started.html) | [功能视频](https://helpx.adobe.com/experience-manager/kt/index/aem-6-5-videos.html) | [发行说明](https://helpx.adobe.com/cn/experience-manager/6-5/release-notes.html) |
+| [首要步骤](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/home.html) | [教程](https://experienceleague.adobe.com/docs/experience-manager-tutorials.html) | [发行说明](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html?lang=zh-Hans) |
 |:-:|:-:|:-:|
 | 探索AEM快速入门教程和文章 | 重点介绍6.5版新增功能的一系列视频 | 了解AEM 6.5的新增功能 |
 
@@ -38,11 +36,11 @@ ht-degree: 9%
 支持代表可以通过以下方式获得辅助支持：
 
 * Web：Experience Manager支持门户
-* 电话： [查找您所在地区的电话号码。](https://helpx.adobe.com/contact/dma-external/DMACustomeCareRegionalPhoneNumbers.html)
+* 电话： [查找您所在地区的电话号码。](https://experienceleague.adobe.com/?support-tab=home#support)
 
 >[!NOTE]
 >
->不确定您是否为 **支持委派**？ 了解此项 [用户类型适用于您](https://helpx.adobe.com/experience-cloud/supported-users.html) 了解我们的 [企业支持条款](https://helpx.adobe.com/support/programs/enterprise-support-terms.html).
+>不确定您是否为 **支持委派**？ 了解此项 [用户类型适用于您](https://helpx.adobe.com/experience-cloud/supported-users.html) 并了解Adobe [企业支持条款](https://helpx.adobe.com/support/programs/enterprise-support-terms.html).
 
 ## 社区 {#community}
 
@@ -52,4 +50,4 @@ ht-degree: 9%
 * [AEM Communities论坛](https://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/aem-communities.html)
 * [AEM Forms论坛](https://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/aem-forms.html)
 * [AEM Assets论坛](https://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/aem-assets.html)
-* [AEM Mobile论坛](https://forums.adobe.com/community/experiencemanagermobile)
+* [AEM Mobile论坛](https://experienceleaguecommunities.adobe.com/)

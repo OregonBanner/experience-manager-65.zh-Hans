@@ -1,8 +1,6 @@
 ---
 title: 为AEM Forms应用程序设置环境
-seo-title: Set up environment for AEM Forms app
 description: 用于构建和部署AEM Forms应用程序的硬件、软件和许可证。
-seo-description: Hardware, software, and licenses to build and deploy the AEM Forms app.
 uuid: 4123a6b7-5766-476c-9afb-f57029b148ad
 contentOwner: robhagat
 content-type: reference
@@ -11,9 +9,9 @@ topic-tags: forms-app
 discoiquuid: e6b01ade-7ea3-42a7-872d-cc35a3d2782a
 docset: aem65
 exl-id: 1d1f9db2-83cf-4612-ac8c-d2638c3bbaea
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 78c584db8c35ea809048580fe5b440a0b73c8eea
 workflow-type: tm+mt
-source-wordcount: '209'
+source-wordcount: '207'
 ht-degree: 0%
 
 ---
@@ -24,24 +22,24 @@ ht-degree: 0%
 
 ## 对于Windows设备 {#for-windows-devices}
 
-* Microsoft Windows 10
-* Microsoft Visual Studio 2015
-* Microsoft Visual Studio Tools for Apache Cordova
+* Microsoft® Windows 10
+* Microsoft® Visual Studio 2015
+* Microsoft® Visual Studio Tools for Apache Cordova
 
 ## 对于iOS设备 {#for-ios-devices}
 
-* 运行Mac OS X 10.9.5或更高版本的基于英特尔的Apple Mac
+* 运行macOS X 10.9.5或更高版本的基于英特尔的Apple Mac
 * iOS SDK 8.4或更高版本
 * Xcode版本：适用于OS X或更高版本的Xcode 6.4
 * iOS开发人员企业计划成员资格
 * 用于分发内部iOS应用程序的企业证书
 * Apple iPad与iOS 8.4或更高版本
 
-## 对于Android设备 {#for-android-devices}
+## 对于Android™设备 {#for-android-devices}
 
-* Android Development Toolkit （ADT包），可从以下位置下载： [https://developer.android.com/sdk/index.html](https://developer.android.com/sdk/index.html)
-* 如果在MAC系统上设置了环境，则应将ADT安装在Applications文件夹中。
-* 如果ADT安装在MAC上的任何其他位置，或者如果在Windows系统上设置了环境，则需要更新ADT SDK路径 `local.properties` 中可用的文件 `src\android` 文件夹中的已提取源存档 `mobileworkspace-src.zip`. 在此文件中，指向 `sdk.dir` 变量到桌面上的ADT SDK位置。
+* Android™ Development Toolkit （ADT包），可从以下位置下载： [https://developer.android.com/studio](https://developer.android.com/studio)
+* 如果在Mac系统上设置了环境，则应将ADT安装在Applications文件夹中。
+* 如果ADT安装在Mac上的任何其他位置，或者如果在Windows系统上设置了环境，则必须更新ADT SDK路径。 `local.properties` 文件。 此文件位于 `src\android` 文件夹中的已提取源存档 `mobileworkspace-src.zip`. 在此文件中，指向 `sdk.dir` 变量到桌面上的ADT SDK位置。
 
 >[!NOTE]
 >

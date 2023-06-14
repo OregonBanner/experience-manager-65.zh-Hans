@@ -1,8 +1,6 @@
 ---
 title: 使用PhoneGap CLI开发应用程序
-seo-title: Developing Apps with PhoneGap CLI
-description: 按照本页了解如何使用PhoneGap CLI开发应用程序。
-seo-description: Follow this page to learn about developing apps with PhoneGap CLI.
+description: 了解如何使用PhoneGap CLI开发应用程序。
 uuid: 9a66171d-19af-40db-9c07-f5dd9561e1b5
 contentOwner: User
 content-type: reference
@@ -10,9 +8,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: 4a034e15-3394-4be3-9e8e-bc894668946a
 exl-id: fbeceb70-b199-478b-907b-253ed212ff99
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 78c584db8c35ea809048580fe5b440a0b73c8eea
 workflow-type: tm+mt
-source-wordcount: '696'
+source-wordcount: '689'
 ht-degree: 0%
 
 ---
@@ -21,11 +19,11 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe建议对需要基于单页应用程序框架的客户端渲染（例如React）的项目使用SPA编辑器。 [了解详情](/help/sites-developing/spa-overview.md).
+>对于需要基于单页应用程序框架的客户端渲染（例如React）的项目，Adobe建议使用SPA编辑器。 [了解详情](/help/sites-developing/spa-overview.md).
 
-在任何给定时间，作为开发人员，您可以在设备上或模拟器中运行应用程序，前提是您已配置开发环境。
+在任何指定时间，作为开发人员，您可以在设备上或模拟器中运行应用程序，前提是您已配置开发环境。
 
-要运行以下示例，您需要运行带有Xcode的OSx (Mac)的系统，或安装了Android SDK的Mac/Win/Linux系统。
+要运行以下示例，您需要运行带有Xcode的OS X (Mac)的系统，或安装了Android™ SDK的Mac/Win/Linux系统。
 
 ## Bootstrap开发环境 {#bootstrap-your-development-environment}
 
@@ -33,13 +31,13 @@ ht-degree: 0%
 
 对于iOS：要针对iPhone和iPad进行开发，您需要Apple的Xcode IDE。
 
-* 免费下载 [此处](https://developer.apple.com/xcode/downloads/).
+* 免费下载 [此处](https://idmsa.apple.com/IDMSWebAuth/signin?appIdKey=891bd3417a7776362562d2197f89480a8547b108fd934911bcbea0110d07f757&amp;path=%2Fdownload%2F&amp;rv=1).
 * [PhoneGap iOS平台指南](https://docs.phonegap.com/en/4.0.0/guide_platforms_ios_index.md.html#iOS%20Platform%20Guide)
 
-对于Android：要针对iPhone和iPad进行开发，您需要Google的Android Stuido IDE。
+对于Android™：要针对iPhone和iPad进行开发，您需要Google的Android™ Stuido IDE。
 
-* 免费下载 [此处](https://developer.android.com/sdk/index.html).
-* [PhoneGap Android平台指南](https://docs.phonegap.com/en/4.0.0/guide_platforms_android_index.md.html#Android%20Platform%20Guide)
+* 免费下载 [此处](https://developer.android.com/studio).
+* [PhoneGap Android™平台指南](https://docs.phonegap.com/en/4.0.0/guide_platforms_android_index.md.html#Android%20Platform%20Guide)
 
 ## 下载源 {#download-the-source}
 
@@ -58,9 +56,9 @@ ht-degree: 0%
 >
 >开发源包含应用程序的最新状态，同时包含未暂存的更改。 使用暂存源构建候选版本，以供提交到应用商店供应商。
 >
->如果从未暂存应用程序，则选择暂存将触发暂存工作流(提示：这将在AppStore和Google PlayStore提供的PhoneGap Enterprise Viewer应用程序中显示为暂存应用程序)。
+>如果从未暂存应用程序，则选择暂存会触发暂存工作流(提示：在AppStore和Google PlayStore提供的PhoneGap Enterprise Viewer应用程序中显示为暂存应用程序)。
 
-* 单击“Download（下载）” ，然后将ZIP文件保存到您的计算机。
+* 单击“Download（下载）”并将ZIP文件保存到您的计算机。
 * 将下载的zip文件解压缩到工作区。
 
 ## 构建和加载应用程序（从源） {#build-and-load-the-app-from-source}
@@ -85,21 +83,20 @@ phonegap run ios
 
 >[!NOTE]
 >
->如果此时遇到问题，请返回到基础知识以进行故障排除 — 
+>如果您目前遇到问题，请返回基础知识以进行故障排除 — 
 >
->1. 创建新文件夹（mkdir测试）
+>1. 创建文件夹（mkdir测试）
 >1. 导航到此新文件夹（cd测试）
->1. 运行&#39;phonegap create helloWorld&#39;
+>1. 运行 `phonegap create helloWorld`
 >1. 导航到helloWorld (cd helloWorld)
->1. 运行“phonegap run android”（或将android替换为ios，如上所述）。
->1. 运行新创建的PhoneGap应用程序的模拟器将打开，并显示“设备就绪”（如果到本机的JavaScript桥接器可运行）。
-
+>1. 运行 `phonegap run android` (或将android替换为iOS，如上所述)。
+>1. 运行新创建的PhoneGap应用程序时，模拟器会打开，并显示“设备就绪”（如果到本机的JavaScript桥接器可运行）。
 >
->这将验证您的PhoneGap CLI开发环境是否已启动并正常运行。
+>此故障诊断验证您的PhoneGap CLI开发环境是否正常运行。
 
-## 使用Safari和IOS Debug调试Javascript {#debug-javascripts-with-safari-and-ios-debug}
+## 使用Safari和IOS调试JavaScript {#debug-javascripts-with-safari-and-ios-debug}
 
-您可以使用Safari的开发人员工具调试应用程序的JavaScripts，操作方式与Web应用程序相同。
+您可以使用Safari的开发人员工具调试应用程序的JavaScript，就像调试Web应用程序一样。
 
 ## 启用Safari开发人员工具 {#enable-safari-developer-tools}
 
@@ -122,7 +119,7 @@ phonegap run ios
 您可以将Safari连接到iOS设备或模拟器。
 
 * 在控制台窗口中，导航到已提取源的根目录。
-* 输入以下命令以在设备或模拟器上启动应用程序。
+* 输入以下命令，以便在设备或模拟器上启动应用程序。
 
 ```xml
 phonegap run <platform> --device
@@ -141,11 +138,11 @@ phonegap run <platform> --emulator
 
 ## 使用Safari的Web检查器调试JavaScript {#debug-javascript-with-safari-s-web-inspector}
 
-您可以在源中的任意位置设置断点。 当您与模拟器或设备交互时，应用程序将在这些断点处停止执行。 您可以逐步执行并检查变量中的值。
+您可以在源中的任意位置设置断点。 当您与模拟器或设备交互时，应用程序的运行将在这些断点处停止。 您可以逐步完成运行并检查变量中的值。
 
 * 在Web检查器窗口中单击“资源”
 * 导航到源树并单击所需的源文件
-* 单击旁边的行号以添加断点
+* 单击添加断点旁边的行号
 * 与设备或模拟器交互
 
 ![chlimage_1-49](assets/chlimage_1-49.png)
@@ -160,4 +157,4 @@ phonegap run <platform> --emulator
 
 ## 后续步骤 {#the-next-steps}
 
-了解了使用PhoneGap CLI开发应用程序后，请参阅 [访问设备功能](/help/mobile/phonegap-access-device-features.md).
+了解如何使用PhoneGap CLI开发应用程序后，请参阅 [访问设备功能](/help/mobile/phonegap-access-device-features.md).

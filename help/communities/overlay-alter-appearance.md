@@ -1,8 +1,6 @@
 ---
 title: 更改外观
-seo-title: Alter the Appearance
 description: 修改脚本
-seo-description: Modify the script
 uuid: 30555b9f-da29-4115-9ed5-25f80a247bd6
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -11,9 +9,9 @@ content-type: reference
 discoiquuid: c9d31ed8-c105-453b-bd3c-4660dfd81272
 docset: aem65
 exl-id: cb8f6967-216c-46d3-a7ba-068b0f5e3b94
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 78c584db8c35ea809048580fe5b440a0b73c8eea
 workflow-type: tm+mt
-source-wordcount: '213'
+source-wordcount: '218'
 ht-degree: 0%
 
 ---
@@ -44,7 +42,7 @@ comment.hbs脚本负责为每个评论创建整体HTML。
         <img class="scf-comment-avatar {{#if topLevel}}withTopLevel{{/if}}" src="{{author.avatarUrl}}"></img>
 ```
 
-删除这些行，或者用以下内容将它们围起来 `<!--` 和 `-->` 让他们置之不理。 此外，字符“xxx”将被添加为显示头像位置的可视指示器。
+删除这些行，或者用以下内容将它们围起来 `<!--` 和 `-->` 所以你别再说了。 此外，字符“xxx”将被添加为显示头像位置的可视指示器。
 
 ```xml
    xxx
@@ -69,8 +67,8 @@ comment.hbs脚本负责为每个评论创建整体HTML。
 
 ### 查看结果 {#view-results}
 
-如果您以管理员身份(例如，以admin/admin身份登录https://localhost:4503/crx/de )登录到发布实例，则可以验证是否存在覆盖的组件。
+如果您以管理员身份(例如，以admin/admin身份登录https://localhost:4503/crx/de )登录到发布实例，则可以验证覆盖的组件是否存在。
 
-如果您注销并重新登录为 `aaron.mcdonald@mailinator.com/password` 并刷新页面，您会发现发布的评论不再显示头像，而是显示一个简单的“xxx”。
+如果您注销，然后以 `aaron.mcdonald@mailinator.com/password` 并刷新页面，您注意到某个头像未与发布的评论一起显示。 而是显示简单的“xxx”。
 
 ![create-template-component](assets/create-template-component.png)

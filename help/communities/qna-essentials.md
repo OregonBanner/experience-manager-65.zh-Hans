@@ -1,8 +1,6 @@
 ---
 title: 问题与解答要点
-seo-title: QnA Essentials
 description: 问题与解答论坛功能
-seo-description: Questions and answers forum feature
 uuid: c718a8e3-b3bd-4db9-8c0f-6dd973d40583
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -10,9 +8,9 @@ topic-tags: developing
 content-type: reference
 discoiquuid: ceace3aa-78a5-485e-b519-630479e087d8
 exl-id: a7b295c1-cc9d-4881-8016-804b21fc1098
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 78c584db8c35ea809048580fe5b440a0b73c8eea
 workflow-type: tm+mt
-source-wordcount: '249'
+source-wordcount: '239'
 ht-degree: 2%
 
 ---
@@ -30,7 +28,7 @@ ht-degree: 2%
    <td>social/qna/components/hbs/qnaforum</td>
   </tr>
   <tr>
-   <td> <a href="scf.md#add-or-include-a-communities-component">可包含</a></td>
+   <td> <a href="scf.md#add-or-include-a-communities-component">include</a></td>
    <td>否</td>
   </tr>
   <tr>
@@ -56,22 +54,22 @@ ht-degree: 2%
 
 ## 服务器端Essentials {#essentials-for-server-side}
 
-* [问题与解答API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/qna/client/api/package-summary.html)
+* [问题与解答API](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/qna/client/api/package-summary.html)
 
-* [问题与解答端点](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/qna/client/endpoints/package-summary.html)
+* [问题与解答端点](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/qna/client/endpoints/package-summary.html)
 
 * [服务器端自定义](server-customize.md)
 
 ### 问题与解答功能 {#qna-function}
 
-社区站点结构包括 [问题与解答功能](functions.md#qna-function) 将配置一个 `QnA` 以及影响审核和标记的设置。 QnA函数支持识别 [拥有权限的成员用户组](users.md#privileged-members-group).
+社区站点结构包括 [问题与解答功能](functions.md#qna-function) 已配置 `QnA` 影响审核和标记的组件和设置。 QnA函数支持识别 [拥有权限的成员用户组](users.md#privileged-members-group).
 
 ### 访问QnA论坛帖子(UGC) {#accessing-qna-forum-posts-ugc}
 
 UGC应使用标准审核方法之一进行审核。
 参见 [审核用户生成的内容](moderate-ugc.md).
 
-自AEM 6.1社区起，使用 [公用存储](working-with-srp.md) for UGC包括对UGC的编程访问，而不管选择的存储选项（如ASRP、MSRP或JSRP）。
+自AEM 6.1社区起，使用 [公用存储](working-with-srp.md) for UGC包括对UGC的编程访问，而不考虑选择的存储选项（如ASRP、MSRP或JSRP）。
 
 **UGC在存储库中的位置和格式可能会发生更改，恕不发出警告**.
 
