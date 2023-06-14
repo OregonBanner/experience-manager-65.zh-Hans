@@ -8,9 +8,9 @@ topic-tags: integration
 content-type: reference
 discoiquuid: b1d45f01-78de-423c-8f6b-5cb7067c3a2f
 exl-id: 317bab41-3504-4e46-9ddc-72e291a34e06
-source-git-commit: 0d91e54fde32f2fafb9a616ed4e957e9590fff26
+source-git-commit: d673a447e9ce2377c8645c87f12be81cbad06238
 workflow-type: tm+mt
-source-wordcount: '803'
+source-wordcount: '806'
 ht-degree: 0%
 
 ---
@@ -24,20 +24,20 @@ ht-degree: 0%
 
 ## 一般疑难解答提示 {#general-troubleshooting-tips}
 
-检查两个解决方案(AEM > Adobe Campaign Classic、Adobe Campaign Classic > AEM)是否发送和接收HTTP调用。 这是为了避免防火墙/SSL问题。
+检查两个解决方案(AEM > Adobe Campaign Classic、Adobe Campaign Classic > AEM)是否发送和接收HTTP调用。 此提示可帮助您避免防火墙/SSL问题。
 
-* 对于AEM功能，您将看到已从AEM创作界面请求JSON调用
-   * 这些不应导致HTTP-500错误。
-   * 如果您看到HTTP-500错误，请检查 `error.log` 了解更多相关信息。
+* 对于AEM功能，您可以看到已从AEM创作界面请求JSON调用
+   * 这些调用不应导致HTTP-500错误。
+   * 如果您看到HTTP-500错误，请检查 `error.log` 了解更多信息。
 * 提高AEM中促销活动类的调试级别也有助于排除问题。
 
 ## 如果连接失败 {#when-the-connection-fails}
 
-检查您是否已配置 **aemserver** Adobe Campaign Classic运算符。
+检查您是否已配置 **`aemserver`** Adobe Campaign Classic运算符。
 
 ## 如果图像未显示在Adobe Campaign Classic控制台中 {#if-images-do-not-appear-in-the-adobe-campaign-console}
 
-检查HTML源并验证是否可以从客户端计算机中打开URL。 如果URL具有 `localhost:4503` 在其中，更改AEM创作实例上Day CQ Link Externalizer的配置，以指向可从Adobe Campaign Classic控制台计算机访问的发布实例。
+检查HTML源并验证是否可以从客户端计算机中打开URL。 如果URL具有 `localhost:4503` 在其中，然后更改AEM创作实例上Day CQ Link Externalizer的配置。 使其指向可从Adobe Campaign Classic控制台计算机访问的发布实例。
 
 参见 [配置外部化器。](/help/sites-administering/campaignstandard.md#configuring-the-externalizer)
 
@@ -66,11 +66,11 @@ ht-degree: 0%
 确保您拥有 `en_CA.ISO-8859-15 locale` 安装在您的Adobe Campaign Classic服务器上。
 
 * 您可以使用检查是否已安装它 `local -a`.
-* 如果未安装，您可以修补 `/usr/local/neolane/nl6/env.sh` 脚本并将区域设置更改为已安装的区域设置。
+* 如果尚未安装，您可以修补 `/usr/local/neolane/nl6/env.sh` 脚本并将区域设置更改为已安装的区域设置。
 
 ## 编译脚本&#39;get_nms_amcGetSeedMetaData_jssp&#39;时出错 {#if-you-get-an-error-while-compiling-script-get-nms-amcgetseedmetadata-jssp}
 
-如果您在AEM日志文件中看到以下错误消息。
+如果您在AEM日志文件中看到以下错误消息：
 
 `com.day.cq.mcm.campaign.impl.CampaignConnectorImpl Internal Adobe Campaign error: response body is Error while compiling script 'get_nms_amcGetSeedMetaData_jssp' line 45: String.prototype.toJSON called on incompatible XML.`
 
@@ -86,7 +86,7 @@ ht-degree: 0%
 
 单击 **同步** Adobe Campaign Classic按钮时，您可能会看到以下错误。
 
-* `Error while executing the method ‘aemListContent' of service [nms:delivery](https://nmsdelivery/)`
+* `Error while executing the method 'aemListContent' of service [nms:delivery](https://nmsdelivery/)`
 
 要解决此问题，请确保在中配置了AEM连接URL **外部帐户** Adobe Campaign Classic中的“禁止访问”按钮时，可使用计算机访问。
 
@@ -98,11 +98,11 @@ ht-degree: 0%
 
 * `Cannot parse XTK Date+Time 'undefined': not a valid XTK value.`
 
-如果AEM实例上存在过期的Adobe Campaign Classic信息，则会发生这种情况。 您可以通过以下方式解决此问题：
+如果AEM实例上存在过期的Adobe Campaign Classic信息，则会发生此错误。 您可以通过执行以下操作来解决此问题：
 
-1. 正在删除AEM上的所有Adobe Campaign Classic集成配置。
+1. 删除AEM上的所有Adobe Campaign Classic集成配置。
 1. 重建集成。
-1. 创建新模板。
+1. 创建模板.
 
 ## 如果与SSL的连接在设置Cloud Service时显示错误 {#if-a-connection-to-ssl-displays-an-error-when-setting-up-the-cloud-service}
 
@@ -120,27 +120,27 @@ at sun.security.ssl.AppOutputStream.write(Unknown Source)
 
 ## 如果您在同步对话框中看到HTTP而不是预期的HTTPS链接 {#if-you-see-http-instead-of-an-expected-https-links-in-the-synchronization-dialog}
 
-尝试同步Adobe Campaign Classic投放中的内容时，AEM会返回新闻稿列表。 但是，列表中新闻稿的URL可以是HTTP地址而不是HTTPS。 选择列表中的项目之一时出现错误。 以下设置可能会发生这种情况。
+尝试同步Adobe Campaign Classic投放中的内容时，AEM会返回新闻稿列表。 但是，列表中新闻稿的URL可以是HTTP地址而不是HTTPS。 选择列表中的项目之一时出现错误。 以下设置可能会发生此错误。
 
 * 使用https托管Adobe Campaign以与AEM作者进行通信
 * 反向代理终止SSL
 * 内部部署AEM创作实例
 
-要解决此问题：
+要解决此问题，请执行以下操作：
 
-* 需要将AEM Dispatcher或反向代理配置为将原始协议作为标头传递。
-* 此 **Apache Felix Http服务SSL过滤器** 在AEM的OSGi配置中，需要使用所需的标头设置进行配置。
+* 必须将AEM Dispatcher或反向代理配置为将原始协议作为标头传递。
+* 此 **Apache Felix Http服务SSL过滤器** 在AEM的OSGi配置中，必须使用所需的标头设置进行配置。
    * `https://<host>:<port>/system/console/configMgr`
-   * 参见 [https://felix.apache.org/documentation/subprojects/apache-felix-http-service.html#using-the-ssl-filter](https://felix.apache.org/documentation/subprojects/apache-felix-http-service.html#using-the-ssl-filter)
+   * 参见 [https://github.com/apache/felix-dev/tree/master/http#using-the-ssl-filter](https://github.com/apache/felix-dev/tree/master/http#using-the-ssl-filter)
 
 ## 无法在页面属性中选择自定义模板 {#if-the-custom-template-i-created-cannot-be-selected-in-page-properties}
 
-在AEM for Adobe Campaign Classic中创建邮件模板时，必须包含资产 `acMapping` 具有值 `mapRecipient` 在 `jcr:content` 节点，否则您将无法在中选择Adobe Campaign Classic模板 **页面属性** 的AEM。 该字段将显示为禁用。
+在AEM for Adobe Campaign Classic中创建邮件模板时，必须包含资产 `acMapping` 具有值 `mapRecipient` 在 `jcr:content` 模板的节点。 如果不包含，则无法在中选择Adobe Campaign Classic模板 **页面属性** 的AEM。 该字段显示为禁用。
 
 ## 如果您在AEM日志中看到错误“com.day.cq.mcm.campaign.servlets.util.ParameterMapper” {#if-you-get-the-error-com-day-cq-mcm-campaign-servlets-util-parametermapper-in-your-logs}
 
 您可能会看到此错误 `com.day.cq.mcm.campaign.servlets.util.ParameterMapper` 使用自定义模板时，不会显示在AEM日志中。
 
-这是一个问题，如果 `acMapping` 属性被设置为值而不是 `recipient.firstName`，则会在Adobe Campaign Manager中创建一个空白值。
+此错误发生于 `acMapping` 属性被设置为值而不是 `recipient.firstName`，则会在Adobe Campaign Manager中创建一个空白值。
 
-如果发生这种情况，请从安装AEM功能包6576 [包共享](/help/sites-administering/package-manager.md#package-share).
+如果出现此错误，请从安装AEM功能包6576 [包共享](/help/sites-administering/package-manager.md#package-share).

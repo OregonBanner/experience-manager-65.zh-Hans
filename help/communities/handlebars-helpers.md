@@ -1,8 +1,6 @@
 ---
 title: SCF Handlebars助手
-seo-title: SCF Handlebars Helpers
 description: 便于使用SCF的Handlebars帮助程序方法
-seo-description: Handlebars Helper methods to facilitate work with SCF
 uuid: 9c514199-871e-4b68-8147-2052d2eeda15
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -10,9 +8,9 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 8b6c1697-d693-41f4-8337-f41658465107
 exl-id: bfb95cae-4b0f-4521-a113-042dc4005a63
-source-git-commit: fe731e1a8866fbdd1f982d67d6ff29cbf7f0cd7c
+source-git-commit: d673a447e9ce2377c8645c87f12be81cbad06238
 workflow-type: tm+mt
-source-wordcount: '1509'
+source-wordcount: '1473'
 ht-degree: 2%
 
 ---
@@ -183,7 +181,7 @@ Then content-loadmore would return
 
 ## If-wcm-mode {#if-wcm-mode}
 
-一个块帮助程序，用于测试当前值 [WCM模式](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/WCMMode.html) 以字符串分隔的模式列表。
+一个块帮助程序，用于测试当前值 [WCM模式](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/api/WCMMode.html) 以字符串分隔的模式列表。
 
 ### 参数 {#parameters-4}
 
@@ -193,7 +191,7 @@ Then content-loadmore would return
 
 * **模式**：字符串
 
-  （可选）逗号分隔的列表 [WCM模式](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/WCMMode.html) 以测试是否设置。
+  （可选）以逗号分隔的 [WCM模式](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/api/WCMMode.html) 以测试是否设置。
 
 ### 示例 {#example-2}
 
@@ -236,9 +234,9 @@ Then content-loadmore would return
 
 用于将组件作为非现有资源包含在模板中的辅助函数。
 
-与添加为JCR节点的资源相比，这允许以编程方式更轻松地自定义资源。 参见 [添加或包含社区组件](scf.md#add-or-include-a-communities-component).
+与添加为JCR节点的资源相比，此方法使资源更容易以编程方式自定义。 参见 [添加或包含社区组件](scf.md#add-or-include-a-communities-component).
 
-只能包括少量Communities组件。 对于AEM 6.1，可包含的内容包括 [评论](essentials-comments.md)， [评级](rating-basics.md)， [审核](reviews-basics.md)、和 [投票](essentials-voting.md).
+只有少数几个社区组件可供包含。 <!-- OBSOLETE/OLD  NEED TO UPDATE FOR 6.5  For AEM 6.1, those that are includable are [comments](essentials-comments.md), [rating](rating-basics.md), [reviews](reviews-basics.md), and [voting](essentials-voting.md). -->
 
 此帮助程序仅适用于服务器端，它提供的功能与 [cq：include](../../help/sites-developing/taglib.md) 用于JSP脚本。
 
@@ -274,11 +272,11 @@ Then content-loadmore would return
 {{include this.id path="comments" resourceType="social/commons/components/hbs/comments"}}
 ```
 
-这将在以下位置包括新的注释组件： `this.id` + /comments.
+在中包含新的注释组件 `this.id` + /comments.
 
 ## IncludeClientLib {#includeclientlib}
 
-包含AEM html客户端库的帮助程序，该客户端库可以是js、css或主题库。 对于不同类型的多个包含项（例如js和css），需要在Handlebars脚本中多次使用此标记。
+包含AEM html客户端库的帮助程序，该客户端库可以是js、css或主题库。 对于不同类型的多个包含项（例如js和css），必须在Handlebars脚本中多次使用此标记。
 
 此帮助程序仅适用于服务器端，它提供的功能与 [ui：includeClientLib](../../help/sites-developing/taglib.md) 用于JSP脚本。
 
@@ -286,19 +284,19 @@ Then content-loadmore would return
 
 * **类别**：字符串
 
-  （可选）以逗号分隔的客户端库类别的列表。 这将包含给定类别的所有Javascript和CSS库。 主题名称是从请求中提取的。
+  （可选）以逗号分隔的客户端库类别的列表。 包含给定类别的所有JavaScript和CSS库。 主题名称是从请求中提取的。
 
 * **主题**：字符串
 
-  （可选）以逗号分隔的客户端库类别的列表。 这将包含给定类别的所有主题相关库（CSS和JS）。 主题名称是从请求中提取的。
+  （可选）以逗号分隔的客户端库类别的列表。 包含给定类别的所有与主题相关的库（CSS和JS）。 主题名称是从请求中提取的。
 
 * **js**：字符串
 
-  （可选）以逗号分隔的客户端库类别的列表。 这将包含给定类别的所有Javascript库。
+  （可选）以逗号分隔的客户端库类别的列表。 包含给定类别的所有JavaScript库。
 
 * **css**：字符串
 
-  （可选）以逗号分隔的客户端库类别的列表。 这将包含给定类别的所有CSS库。
+  （可选）以逗号分隔的客户端库类别的列表。 包含给定类别的所有CSS库。
 
 ### 示例 {#examples-2}
 
@@ -379,7 +377,7 @@ Depending on how long in the past, may return
 
 一个帮助程序，用于为HTML元素内容编码源字符串，以帮助防范XSS。
 
-注意：这不是验证器，不用于写入属性值。
+注意：此帮助程序不是验证程序，不用于写入属性值。
 
 ### 参数 {#parameters-9}
 
@@ -397,7 +395,7 @@ Depending on how long in the past, may return
 
 帮助程序对源字符串进行编码，以便写入HTML属性值，帮助防范XSS。
 
-注意：这不是验证器，不用于编写可操作属性（href、src、事件处理程序）。
+注意：此帮助程序不是验证器，不用于编写可操作属性（href、src、事件处理程序）。
 
 ### 参数 {#parameters-10}
 
@@ -415,7 +413,7 @@ Depending on how long in the past, may return
 
 一个帮助程序，对用于写入JavaScript字符串内容的源字符串进行编码，以帮助防范XSS。
 
-注意：这不是验证器，不用于写入任意JavaScript。
+注意：此帮助程序不是验证器，不用于写入任意JavaScript。
 
 ### 参数 {#parameters-11}
 
@@ -433,7 +431,7 @@ var input = {{xss-jsString topic-title}}
 
 一个帮助程序，用于对作为HTMLhref或srce属性值写入的URL进行清理以帮助防范XSS。
 
-注意：这可能返回空字符串
+注意：此帮助程序可能返回空字符串。
 
 ### 参数 {#parameters-12}
 
@@ -450,7 +448,7 @@ var input = {{xss-jsString topic-title}}
 ## Handlebars.js基本概述 {#handlebars-js-basic-overview}
 
 * Handlebars帮助程序调用是一个简单标识符(即 *name* )，后面跟零个或多个空格分隔参数。
-* 参数可以是简单字符串、数字、布尔值或JSON对象，也可以是键值对（哈希参数）的可选序列作为最后一个参数。
+* 参数可以是简单字符串、数字、布尔值或JSON对象，以及键值对（哈希参数）的可选序列作为最后一个参数。
 * 哈希参数中的键必须是简单标识符。
 * 散列参数中的值是Handlebars表达式：简单标识符、路径或字符串。
 * 当前上下文， `this`，始终可供Handlebars帮助程序使用。
@@ -526,7 +524,7 @@ template(data);
 
 ### 服务器端自定义帮助程序 {#server-side-custom-helpers}
 
-要在服务器端实施和注册自定义SCF帮助程序，只需实施Java接口 [TemplateHelper](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/handlebars/api/TemplateHelper.html)，使其成为 [OSGi服务](../../help/sites-developing/the-basics.md#osgi) 并将其作为OSGi捆绑包的一部分安装。
+要在服务器端实施和注册自定义SCF帮助程序，只需实施Java™接口即可 [TemplateHelper](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/handlebars/api/TemplateHelper.html)，使其成为 [OSGi服务](../../help/sites-developing/the-basics.md#osgi) 并将其作为OSGi捆绑包的一部分安装。
 
 例如：
 

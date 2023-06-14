@@ -1,8 +1,6 @@
 ---
 title: 文件库功能
-seo-title: File Library Feature
 description: 利用文件库功能，已登录的网站访客可以上传、管理和下载文件
-seo-description: The File Library feature lets signed-in site visitors upload, manage, and download files
 uuid: e78a90bd-f1d3-44f8-98eb-1498a55e8217
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -11,9 +9,9 @@ content-type: reference
 discoiquuid: ea2b23af-49c3-409b-a041-43c42d846f21
 docset: aem65
 exl-id: 05cfaab5-a12d-475f-9095-a9fb13571d0a
-source-git-commit: fe731e1a8866fbdd1f982d67d6ff29cbf7f0cd7c
+source-git-commit: d673a447e9ce2377c8645c87f12be81cbad06238
 workflow-type: tm+mt
-source-wordcount: '735'
+source-wordcount: '733'
 ht-degree: 7%
 
 ---
@@ -39,13 +37,13 @@ ht-degree: 7%
 
 有关必要信息，请访问 [社区组件基础知识](/help/communities/basics.md).
 
-当 [所需的客户端库](/help/communities/essentials-file-library.md#essentials-for-client-side) 包括，这就是 `File Library` 组件将显示：
+当 [所需的客户端库](/help/communities/essentials-file-library.md#essentials-for-client-side) 包括，它是 `File Library` 组件出现：
 
 ![file-library1](assets/file-library1.png)
 
 ### 配置文件库 {#configuring-file-library}
 
-选择已放置的 `File Library` 组件以访问和选择 `Configure` 图标，打开“编辑”对话框。
+选择已放置的 `File Library` 组件，以便您可以访问和选择 `Configure` 图标，打开“编辑”对话框。
 
 ![configure-new](assets/configure-new.png)
 
@@ -61,11 +59,11 @@ ht-degree: 7%
 
 * **每页的评论数**
 
-  限制每页显示的评论数以及显示的回复数。 默认为 **10**.
+  限制每页显示的评论数和显示的回复数。 默认为 **10**.
 
 * **最大文件大小**
 
-  此值将限制上传的文件大小。 默认限制为104857600 (10 Mb)。
+  此值限制上传的文件大小。 默认限制为104857600 (10 MB)。
 
 * **最大消息长度**
 
@@ -73,7 +71,7 @@ ht-degree: 7%
 
 * **允许的文件类型**
 
-  包含“点”分隔符的逗号分隔文件扩展名列表。 例如： .jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定了任何文件类型，则将不允许未指定的文件类型。 默认值未指定，因此允许所有文件类型。
+  包含“点”分隔符的逗号分隔文件扩展名列表。 例如，.jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定了任何文件类型，则不允许指定任何文件类型。 默认值未指定，因此允许所有文件类型。
 
 * **富文本编辑器**
 
@@ -89,7 +87,7 @@ ht-degree: 7%
 
 * **允许的命名空间**
 
-  如果选中了“允许标记”，则可用标记将限制为已勾选的命名空间。 如果未选中任何项，则允许所有项。 默认值为所有命名空间。
+  如果选中了“允许标记”，则可用标记将仅限于已选中命名空间。 如果未检查任何命名空间，则允许使用所有命名空间。 默认值为所有命名空间。
 
 * **建议限制**
 
@@ -97,7 +95,7 @@ ht-degree: 7%
 
 * **允许投票**
 
-  如果选中，将启用为文件投票的功能。 默认值为未选中。
+  如果选中，则启用对文件投票的功能。 默认值为未选中。
 
 * **允许关注**
 
@@ -113,7 +111,7 @@ ht-degree: 7%
 
 * **UI 提及模式**
 
-  指定允许的模式字符串，以标记(@mention)帖子中的注册用户。 例如 `~{{familyName}}{{givenName}}`。
+  指定允许的模式字符串，以便在帖子中标记(@mention)已注册的用户。 例如：`~{{familyName}}{{givenName}}`。
 
 * **允许主题回复**
 
@@ -129,7 +127,7 @@ ht-degree: 7%
 
 * **删除评论**
 
-  如果选中，则为发布评论的访客提供删除评论的功能。 默认值为已选中。
+  如果选中，发布评论的访客可以根据需要删除评论。 默认值为已选中。
 
 * **拒绝评论**
 

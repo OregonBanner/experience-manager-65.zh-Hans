@@ -1,8 +1,6 @@
 ---
 title: 博客功能
-seo-title: Blog Feature
 description: 日志格式的社区信息
-seo-description: Community information in a journaling format
 uuid: 7323063f-81e8-45c3-9035-bf7df6124830
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -11,9 +9,9 @@ content-type: reference
 discoiquuid: cf8b3d72-30ba-40ca-ae48-b61abbb28802
 docset: aem65
 exl-id: 4650ac36-5506-4efc-be35-fac9e5a58f3d
-source-git-commit: fe731e1a8866fbdd1f982d67d6ff29cbf7f0cd7c
+source-git-commit: d673a447e9ce2377c8645c87f12be81cbad06238
 workflow-type: tm+mt
-source-wordcount: '1666'
+source-wordcount: '1652'
 ht-degree: 6%
 
 ---
@@ -55,17 +53,17 @@ AEM Communities的博客功能已从创作活动转变为在发布环境中发�
 * `Communities / Blog`
 * `Communities / Blog Sidebar`
 
-并将它们拖动到应显示博客的页面上。
+并将它们拖动到应显示博客的页面上的适当位置。
 
 有关必要信息，请访问 [社区组件基础知识](/help/communities/basics.md).
 
-当 [所需的客户端库](/help/communities/blog-developer-basics.md#essentials-for-client-side) 包括，这就是 `Blog` 组件将显示：
+当 [所需的客户端库](/help/communities/blog-developer-basics.md#essentials-for-client-side) 包括 `Blog` 组件如下所示：
 
 ![add-blog-component](assets/add-blog-component.png)
 
 ### 配置博客 {#configuring-blog}
 
-选择已放置的 `Blog` 组件以访问和选择 `Configure` 图标，打开“编辑”对话框。
+选择已放置的 `Blog` 组件，以便您可以访问和选择 `Configure` 图标，打开“编辑”对话框。
 
 ![配置](assets/configure-new.png)
 
@@ -99,7 +97,7 @@ AEM Communities的博客功能已从创作活动转变为在发布环境中发�
 
   添加有权创建内容的成员。
 
-* **在作者编辑模式下阻止“用户生成内容”**
+* **在作者编辑模式下阻止用户生成的内容**
 
   如果启用，则在创作模式下编辑时会阻止用户生成的内容。
 
@@ -143,11 +141,11 @@ AEM Communities的博客功能已从创作活动转变为在发布环境中发�
 
 * **最大文件大小**
 
-  相关条件仅限于 `Allow File Uploads` 已选中。 此字段将限制已上传文件的大小（以字节为单位）。 默认值为104857600 (10 Mb)。
+  相关条件仅限于 `Allow File Uploads` 已选中。 此字段限制已上传文件的大小（以字节为单位）。 默认值为104857600 (10 Mb)。
 
 * **允许的文件类型**
 
-  相关条件仅限于 `Allow File Uploads` 已选中。 包含“点”分隔符的逗号分隔文件扩展名列表。 例如： .jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定了任何文件类型，则不允许上传未指定的文件类型。 缺省值为none以便允许所有文件类型。
+  相关条件仅限于 `Allow File Uploads` 已选中。 包含“点”分隔符的逗号分隔文件扩展名列表。 例如： .jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定了任何文件类型，则无法上载未指定这些文件类型。 缺省值为none以便允许所有文件类型。
 
 * **附加图像文件最大大小**
 
@@ -181,11 +179,11 @@ AEM Communities的博客功能已从创作活动转变为在发布环境中发�
 
 * **允许专题内容**
 
-  如果选中，该创意能够被标识为 [专题内容](/help/communities/featured.md). 默认值为未选中。
+  如果选中，则将该创意标识为 [专题内容](/help/communities/featured.md). 默认值为未选中。
 
 * **启用提及功能**
 
-  如果启用，则允许注册社区用户标识其他注册成员（使用名字、姓氏、用户名），并使用通用@user-name语法标记它们。 标记的用户会收到有关其提及的通知。
+  如果启用，则允许注册社区用户标识其他注册成员（使用名字、姓氏、用户名），并使用通用@user-name语法标记它们。 标记的用户会收到关于他们自己提及的通知。
 
 * **最大提及次数**
 
@@ -193,7 +191,7 @@ AEM Communities的博客功能已从创作活动转变为在发布环境中发�
 
 * **UI 提及模式**
 
-  指定允许的模式字符串以在帖子中标记(@mention)已注册用户。 例如 `~{{familyName}}{{givenName}}`。
+  指定允许的模式字符串以在帖子中标记(@mention)已注册用户。 例如：`~{{familyName}}{{givenName}}`。
 
 #### “用户审核”选项卡 {#user-moderation-tab}
 
@@ -201,7 +199,7 @@ AEM Communities的博客功能已从创作活动转变为在发布环境中发�
 
 * **拒绝帖子**
 
-  如果选中，将允许受信任的成员版主拒绝帖子并阻止帖子出现在公共论坛上。 默认值为未选中。
+  如果选中，则允许受信任的成员版主拒绝帖子，并阻止帖子出现在公共论坛中。 默认值为未选中。
 
 * **关闭/重新打开主题**
 
@@ -233,7 +231,7 @@ AEM Communities的博客功能已从创作活动转变为在发布环境中发�
 
 * **允许的命名空间**
 
-  相关，如果 `Allow Tagging` 已检查 **设置** 选项卡。 可以应用的标记仅限于已检查的命名空间类别中的标记。 命名空间列表包括“标准标记”（默认命名空间）和“包括所有标记”。 默认设置为none选中，这意味着允许使用所有命名空间。
+  相关，如果 `Allow Tagging` 已检查 **设置** 选项卡。 可以应用的标记仅限于已检查的命名空间类别中的那些标记。 命名空间列表包括“标准标记”（默认命名空间）和“包括所有标记”。 默认设置为none选中，这意味着允许使用所有命名空间。
 
 * **建议限制**
 
@@ -249,7 +247,7 @@ AEM Communities的博客功能已从创作活动转变为在发布环境中发�
 
 * **日期格式**
 
-  用于显示博客条目存档的格式。 格式遵循Java约定，使用占位符。
+  用于显示博客条目存档的格式。 该格式遵循Java™约定，使用占位符。
 
    * yyyy ：全年，如“2015”
    * yy ：短年，如“15”
@@ -267,9 +265,9 @@ AEM Communities的博客功能已从创作活动转变为在发布环境中发�
    * 类别
    * 归档
 
-* **Blopg组件路径**
+* **博客组件路径**
 
-  *（可选）* 从中列出博客文章的博客资源的位置。 如果留空，将使用resourceType的组件 `social/journal/components/hbs/journal` 显示在同一页面上。
+  *（可选）* 从中列出博客文章的博客资源的位置。 如果保留为空，则使用resourceType组件 `social/journal/components/hbs/journal` 显示在同一页面上。
 
    * 例如，`/content/sites/engage/en/blog/jcr:content/content/primary/blog`
 
@@ -279,7 +277,7 @@ AEM Communities的博客功能已从创作活动转变为在发布环境中发�
 
 ## 网站访客体验 {#site-visitor-experience}
 
-在发布环境中，博客功能将以创建顺序的降序显示最新博客文章，其后是较早的博客文章。 博客侧栏允许网站访客应用过滤器以限制显示的博客文章的选择。
+在发布环境中，博客功能按创建顺序显示最近的博客文章，其后是较早的博客文章。 博客侧栏允许网站访客应用过滤器以限制显示的博客文章的选择。
 
 博客文章后跟一个链接，用于发表或查看评论。
 
@@ -289,13 +287,13 @@ AEM Communities的博客功能已从创作活动转变为在发布环境中发�
 
 ### 使用文章 {#working-with-articles}
 
-创建新博客文章时，可以选择执行以下操作：
+创建博客文章时，可以选择执行以下操作：
 
 1. 立即发布
 1. 发布草稿
 1. 在计划的日期和时间发布
 
-博客文章将显示在相应的选项卡（“已发布”、“草稿”或“已计划”）下，以供成员在发布时创作。
+博客文章显示在相应的选项卡（“已发布”、“草稿”或“已计划”）下，以供成员在发布时创作。
 
 #### 版主和管理员 {#moderators-and-administrators}
 
@@ -309,7 +307,7 @@ AEM Communities的博客功能已从创作活动转变为在发布环境中发�
 
 具体而言，他们可以：
 
-* 新建博客文章
+* 创建博客文章
 * 代表其他成员发布新的博客文章
 * 在博客文章中发表评论
 * 编辑他们自己的博客文章或评论
