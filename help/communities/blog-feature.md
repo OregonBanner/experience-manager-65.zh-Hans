@@ -191,7 +191,7 @@ AEM Communities的博客功能已从创作活动转变为在发布环境中发�
 
 * **UI 提及模式**
 
-  指定允许的模式字符串以在帖子中标记(@mention)已注册用户。 例如：`~{{familyName}}{{givenName}}`。
+  指定允许的模式字符串以在帖子中标记(@mention)已注册用户。 例如： `~{{familyName}}{{givenName}}`。
 
 #### “用户审核”选项卡 {#user-moderation-tab}
 
