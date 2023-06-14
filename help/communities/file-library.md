@@ -111,7 +111,7 @@ ht-degree: 7%
 
 * **UI 提及模式**
 
-  指定允许的模式字符串，以便在帖子中标记(@mention)已注册的用户。 例如：`~{{familyName}}{{givenName}}`。
+  指定允许的模式字符串，以便在帖子中标记(@mention)已注册的用户。 例如： `~{{familyName}}{{givenName}}`。
 
 * **允许主题回复**
 
