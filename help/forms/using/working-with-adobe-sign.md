@@ -11,9 +11,9 @@ discoiquuid: f79828d8-2230-4477-8ffa-eeb6a0413acd
 docset: aem65
 feature: Adaptive Forms, Acrobat Sign
 exl-id: a8decba9-229d-40a2-992a-3cc8ebefdd6d
-source-git-commit: 4714554609a10e58b1c7141696d694fac46887a6
+source-git-commit: 66674f0e2621d8786ab4d662cddad373122d8b51
 workflow-type: tm+mt
-source-wordcount: '3826'
+source-wordcount: '3855'
 ht-degree: 0%
 
 ---
@@ -122,7 +122,8 @@ ht-degree: 0%
    >
    >    * 使用 [!DNL Adobe Sign] 块不是强制使用的 [!DNL Adobe Sign] 在自适应表单中。 如果您不使用 [!DNL Adobe Sign] 为签名者阻止并添加字段，则默认签名字段显示在签名文档的底部。
    >    * 使用 [!DNL Adobe Sign] 仅阻止自动生成记录文档的自适应表单。 如果您使用自定义XDP生成记录文档或基于表单模板的自适应表单， [!DNL Adobe Sign] 不支持块。
-
+   >
+   >
 
 1. 选择 **[!UICONTROL Adobe Sign块]** 组件并点按 **编辑** ![aem_6_3_edit](assets/aem_6_3_edit.png) 图标。 它显示用于添加字段和设置字段外观格式的选项。
 
@@ -194,11 +195,13 @@ ht-degree: 0%
 
    * **[!UICONTROL 签名者电子邮件地址]：** 指定签名者的电子邮件地址。 签名者在指定的电子邮件地址上接收要签名的文档/表单。 您可以选择使用表单字段、登录用户的AEM用户配置文件中提供的电子邮件地址，也可以手动输入电子邮件地址。 这是强制性步骤。 确保第一个签名者或唯一签名者（如果是单个签名者）的电子邮件地址与 [!DNL Adobe Sign] 用于配置AEM云服务的帐户。
 
-   * **[!UICONTROL 签名者身份验证方法]：** 指定在打开表单进行签名之前对用户进行身份验证的方法。 您可以在电话、知识库和基于社会身份的身份验证之间进行选择。
+   * **[!UICONTROL 签名者身份验证方法]：** 指定在打开表单进行签名之前对用户进行身份验证的方法。 您可以在电话、知识库和基于社会身份的身份验证之间进行选择。 对于Adobe Acrobat Sign Solutions for Government，仅提供电话和基于知识的身份验证选项。
+
    >[!NOTE]
    >
    >    * 默认情况下，基于社交身份的身份验证提供使用Facebook、Google和LinkedIn进行身份验证的选项。 您可以联系 [!DNL Adobe Sign] 支持启用其他社交身份验证提供程序。
-
+   >
+   >
 
    * **[!DNL Adobe Sign]要填写或签名的字段：** 选择 [!DNL Adobe Sign] 签名者的字段。 自适应表单可以有多个 [!DNL Adobe Sign] 字段。 您可以选择为签名者启用特定字段。 字段显示所有可用的 [!DNL Adobe Sign] 块。 选择块时，将选择块的所有字段。 您可以使用X图标取消选择字段。
 
@@ -248,7 +251,8 @@ ht-degree: 0%
 
    使用以下方式将数字签名应用于自适应表单：
 
-   * 云签名：使用 [数字标识](https://helpx.adobe.com/sign/kb/digital-certificate-providers.html) 由信任服务提供程序托管。
+   * 云签名：使用 [数字标识](https://helpx.adobe.com/sign/kb/digital-certificate-providers.html) 由信任服务提供程序托管。 云签名选项不适用于Adobe Acrobat Sign Solutions政府版。
+
    * Adobe Acrobat或Reader：使用Adobe Acrobat或Reader下载并打开文档，以使用智能卡、USB令牌或基于文件的数字ID进行签名。
 
    将云签名字段添加到自适应表单后，执行以下步骤以完成配置过程：
@@ -257,7 +261,6 @@ ht-degree: 0%
    * [为自适应表单选择Adobe Sign Cloud Service](../../forms/using/working-with-adobe-sign.md#selectadobesigncloudserviceforanadaptiveform)
    * [将Adobe Sign签名者添加到自适应表单](../../forms/using/working-with-adobe-sign.md#addsignerstoanadaptiveform)
    * [为自适应表单选择提交操作](../../forms/using/working-with-adobe-sign.md#selectsubmitactionforanadaptiveform)
-
 
 ## 创建表单内签名体验 {#create-in-form-signing-experience}
 
@@ -297,7 +300,6 @@ ht-degree: 0%
    >
    >* 当您拖放 **[!UICONTROL 签名步骤]** 表单的组件， **[!UICONTROL 签名者与填写表单的人员是否相同？]** 选项自动设置为 **是**. 需要保持表单正常工作。
    >* 在签名步骤组件后使用摘要步骤组件以获得最佳体验。 在签名步骤组件中完成表单签名后，“摘要”步骤会自动并立即提交表单。 如果不使用摘要步骤，则只有在使用设置的间隔后，才会触发自动提交 [Adobe Sign配置服务](../../forms/using/adobe-sign-integration-adaptive-forms.md#configure-adobe-sign-scheduler-to-sync-the-signing-status).
-
    >
    >一些最佳实践包括：
    >
@@ -306,7 +308,6 @@ ht-degree: 0%
    >* 包含签名步骤的自适应表单不能有提交按钮。
    >* 包含签名步骤的自适应表单的提交通过后台服务或摘要步骤进行处理。 如果有一个已配置的签名者也在填写表单，则使用“摘要”步骤处理自适应表单提交的优点是会立即评估签名者是否已签名表单并调用提交操作。 后台服务需要更多时间来评估是否所有配置的签名者都签名了表单并延迟了自适应表单的提交。
    >* 将表单设计为不允许用户从包含“签名”或“摘要”步骤的面板向后导航。
-
 
 
 ### 配置感谢页面或摘要步骤组件 {#configure-the-thank-you-page-or-summary-step-component}
