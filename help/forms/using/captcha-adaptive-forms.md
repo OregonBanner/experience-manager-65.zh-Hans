@@ -11,9 +11,9 @@ discoiquuid: 4c53dfc0-25ca-419d-abfe-cf31fc6ebf61
 docset: aem65
 feature: Adaptive Forms
 exl-id: 9b4219b8-d5eb-4099-b205-d98d84e0c249
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 73271612633ec349ee1c002044724f408324e5a2
 workflow-type: tm+mt
-source-wordcount: '1271'
+source-wordcount: '1925'
 ht-degree: 0%
 
 ---
@@ -26,20 +26,25 @@ AEM Forms支持自适应表单中的验证码。 您可以使用Google的reCAPTC
 
 >[!NOTE]
 >
->* AEM Forms仅支持reCaptcha v2。 不支持任何其他版本。
+>* AEM Forms支持reCaptcha v2和enterprise。 不支持任何其他版本。
+>* 默认的AEM CAPTCHA服务已弃用。
 >* AEM Forms应用程序在离线模式下不支持自适应表单中的验证码。
 >
 
+## 通过Google配置reCAPTCHA服务 {#google-recaptcha}
 
-## 通过Google配置ReCAPTCHA服务 {#google-recaptcha}
+表单作者可以使用Google的reCAPTCHA服务在自适应表单中实施CAPTCHA。 它提供高级验证码功能以保护您的站点。 有关reCAPTCHA工作方式的更多信息，请参阅 [Google reCAPTCHA](https://developers.google.com/recaptcha/). reCAPTCHA服务（包括reCAPTCHA v2和reCAPTCHA Enterprise）集成到AEM Forms中。 根据要求，您可以配置reCAPTCHA服务以启用：
 
-表单作者可以使用Google的reCAPTCHA服务在自适应表单中实施CAPTCHA。 它提供高级验证码功能以保护您的站点。 有关reCAPTCHA工作方式的更多信息，请参阅 [Google reCAPTCHA](https://developers.google.com/recaptcha/).
+* [AEM表单中的reCAPTCHA enterprise](#steps-to-implement-recaptcha-enterprise-in-forms)
+* [AEM表单中的reCAPTCHA v2](#steps-to-implement-recaptcha-v2-in-forms)
 
 ![Recaptcha](assets/recaptcha_new.png)
 
-要在AEM Forms中实施reCAPTCHA服务，请执行以下操作：
+## 在Forms中实施reCAPTCHA Enterprise的步骤  {#steps-to-implement-recaptcha-enterprise-in-forms}
 
-1. 获取 [reCAPTCHA API密钥对](https://www.google.com/recaptcha/admin) 来自Google的。 它包括站点密钥和密钥。
+1. 新建 [reCAPTCHA企业项目](https://cloud.google.com/recaptcha-enterprise/docs/set-up-non-google-cloud-environments-api-keys#before-you-begin) 启用方式 [reCaptcha Enterprise API](https://cloud.google.com/recaptcha-enterprise/docs/set-up-non-google-cloud-environments-api-keys#enable-the-recaptcha-enterprise-api).
+1. [获取](https://support.google.com/googleapi/answer/7014113?hl=en#:~:text=To%20locate%20your%20project%20ID,a%20member%20of%20are%20displayed) 项目ID
+1. 创建 [API密钥](https://cloud.google.com/recaptcha-enterprise/docs/set-up-non-google-cloud-environments-api-keys#create_an_api_key) 和 [网站的站点密钥](https://cloud.google.com/recaptcha-enterprise/docs/create-key#create-key).
 1. 为云服务创建配置容器。
 
    1. 转到 **[!UICONTROL “工具”>“常规”>“配置浏览器”]**.
@@ -50,23 +55,64 @@ AEM Forms支持自适应表单中的验证码。 您可以使用Google的reCAPTC
 
       1. 在配置属性对话框中，启用 **[!UICONTROL 云配置]**.
       1. 点按 **[!UICONTROL 保存并关闭]** 保存配置并退出对话框。
+
+   1. 在配置浏览器中，点按 **[!UICONTROL 创建]**.
+   1. 在创建配置对话框中，指定文件夹的标题并启用 **[!UICONTROL 云配置]**.
+   1. 点按 **[!UICONTROL 创建]** 以创建为云服务配置启用的文件夹。
+1. 为reCAPTCHA Enterprise配置云服务。
+
+   1. 在您的Experience Manager创作实例上，转到 ![tools-1](assets/tools-1.png) > **[!UICONTROL Cloud Services]**.
+   1. 点按 **[!UICONTROL reCAPTCHA]**. 此时将打开“配置”页。 选择在上一步中创建的配置容器并点按 **[!UICONTROL 创建]**.
+   1. 选择version作为reCAPTCHA Enterprise ，并为reCAPTCHA Enterprise服务指定名称、项目ID、站点密钥和API密钥（在步骤2和3中获得）。
+   1. 选择密钥类型，则密钥类型应与在Google云项目中配置的站点密钥相同，例如， **复选框站点键** 或 **基于得分的网站密钥**.
+   1. 指定介于0到1之间的阈值分数([单击以了解有关得分的更多信息](https://cloud.google.com/recaptcha-enterprise/docs/interpret-assessment#interpret_scores))。 分数大于或等于阈值分数标识人交互，否则被视为机器人交互。
+
+      > 注意:
+      >
+      > * 表单作者可以在适合不间断表单提交的范围中指定分数。
+
+   1. 点按 **[!UICONTROL 创建]** 以创建云服务配置。
+
+   1. 在“编辑组件”对话框中，指定名称、项目ID、站点密钥、API密钥（在步骤2和3中获得），选择密钥类型，然后输入阈值分数。 点按 **[!UICONTROL 保存设置]** 然后点按 **[!UICONTROL 确定]** 以完成配置。
+
+启用reCAPTCHA Enterprise服务后，就可以在自适应表单中使用。 参见 [在自适应表单中使用CAPTCHA](#using-recaptcha).
+
+![Recaptcha企业](assets/recaptcha1-enterprise.png)
+
+
+## 在表单中实施reCAPTCHA v2的步骤 {#steps-to-implement-recaptcha-v2-in-forms}
+
+1. 获取 [reCAPTCHA API密钥对](https://www.google.com/recaptcha/admin) 来自Google的。 它包括 **站点密钥** 和 **密钥**.
+1. 为云服务创建配置容器。
+
+   1. 转到 **[!UICONTROL “工具”>“常规”>“配置浏览器”]**.
+      * 请参阅 [配置浏览器](/help/sites-administering/configurations.md) 文档，以了解更多信息。
+   1. 执行以下操作可为云配置启用全局文件夹，或跳过此步骤为云服务配置创建和配置其他文件夹。
+
+      1. 在配置浏览器中，选择 **[!UICONTROL 全局]** 文件夹并点按 **[!UICONTROL 属性]**.
+
+      1. 在配置属性对话框中，启用 **[!UICONTROL 云配置]**.
+      1. 点按 **[!UICONTROL 保存并关闭]** 保存配置并退出对话框。
+
    1. 在配置浏览器中，点按 **[!UICONTROL 创建]**.
    1. 在创建配置对话框中，指定文件夹的标题并启用 **[!UICONTROL 云配置]**.
    1. 点按 **[!UICONTROL 创建]** 以创建为云服务配置启用的文件夹。
 
-
-1. 为reCAPTCHA配置云服务。
+1. 为reCAPTCHA v2配置云服务。
 
    1. 在您的AEM创作实例上，转到 ![tools-1](assets/tools-1.png) > **Cloud Services**.
    1. 点按 **[!UICONTROL reCAPTCHA]**. 此时将打开“配置”页。 选择在上一步中创建的配置容器并点按 **[!UICONTROL 创建]**.
-   1. 指定reCAPTCHA服务的名称、站点密钥和密钥，然后点按 **[!UICONTROL 创建]** 以创建云服务配置。
-   1. 在“编辑组件”对话框中，指定在步骤1中获取的站点密钥和密钥。 点按 **保存设置** 然后点按 **确定** 以完成配置。
+   1. 将version选择为reCAPTCHA v2，指定reCAPTCHA服务（在步骤1中获得）的名称、站点密钥和密钥，然后点击 **[!UICONTROL 创建]** 以创建云服务配置。
+   1. 在“编辑组件”对话框中，指定在步骤1中获取的站点密钥和密钥。 点按 **[!UICONTROL 保存设置]** 然后点按 **确定** 以完成配置。
 
    配置reCAPTCHA服务后，便可在自适应表单中使用。 有关更多信息，请参阅 [在自适应表单中使用CAPTCHA](#using-captcha).
 
-## 在自适应表单中使用CAPTCHA {#using-captcha}
+![Recaptcha v2](assets/recaptcha-v2.png)
 
-要在自适应表单中使用验证码，请执行以下操作：
+
+## 在自适应表单中使用reCAPTCHA {#using-recaptcha}
+
+要在自适应表单中使用reCAPTCHA，请执行以下操作：
 
 1. 在编辑模式下打开自适应表单。
 
@@ -86,15 +132,100 @@ AEM Forms支持自适应表单中的验证码。 您可以使用Google的reCAPTC
 
 1. 选择您添加的验证码组件并点按 ![cmppr](assets/cmppr.png) 以编辑其属性。
 1. 指定CAPTCHA小部件的标题。 默认值为 **验证码**. 选择 **隐藏标题** 如果您不想显示标题。
-1. 从 **验证码服务** 下拉列表，选择 **recaptcha** 启用reCAPTCHA服务（如果已按中的说明进行配置） [Google的ReCAPTCHA服务](#google-recaptcha). 从“设置”下拉列表中选择一个配置。 此外，选择大小为 **普通** 或 **紧凑** 用于reCAPTCHA构件。
+1. 从 **验证码服务** 下拉列表，选择 **recaptcha** 启用reCAPTCHA服务（如果已按中的说明进行配置） [Google的ReCAPTCHA服务](#google-recaptcha).
+1. 从“设置”下拉列表中选择一个配置。
+1. **如果所选配置具有reCAPTCHA Enterprise版本**：
+   1. 您可以通过选择reCAPTCHA云配置 **键类型** 作为 **复选框**. 在复选框键中，如果验证码验证失败，自定义错误消息将作为内联消息显示。 您可以选择大小为 **[!UICONTROL 普通]** 和 **[!UICONTROL 紧凑]**.
+   1. 您可以通过选择reCAPTCHA云配置 **键类型** 作为 **基于得分**. 在基于得分的键类型中，如果captcha验证失败，自定义错误消息将显示为弹出消息。
+   1. 当您选择 **[!UICONTROL 绑定引用]** 提交的数据是绑定的数据，否则就是未绑定的数据。 下面是提交表单时未绑定数据和绑定数据（将绑定引用作为SSN）的XML示例。
 
-   >[!NOTE]
-   >
-   >不选择 **[!UICONTROL 默认]** 从Captcha服务下拉列表中，默认的AEM CAPTCHA服务已弃用。
+      ```xml
+          <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+          <afData>
+          <afUnboundData>
+              <data>
+                  <captcha16820607953761>
+                      <captchaType>reCaptchaEnterprise</captchaType>
+                      <captchaScore>0.9</captchaScore>
+                  </captcha16820607953761>
+              </data>
+          </afUnboundData>
+          <afBoundData>
+              <Root
+                  xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                  <PersonalDetails>
+                      <SSN>371237912</SSN>
+                      <FirstName>Sarah </FirstName>
+                      <LastName>Smith</LastName>
+                  </PersonalDetails>
+                  <OtherInfo>
+                      <City>California</City>
+                      <Address>54 Residency</Address>
+                      <State>USA</State>
+                      <Zip>123112</Zip>
+                  </OtherInfo>
+              </Root>
+          </afBoundData>
+          <afSubmissionInfo>
+              <stateOverrides/>
+              <signers/>
+              <afPath>/content/dam/formsanddocuments/captcha-form</afPath>
+              <afSubmissionTime>20230608034928</afSubmissionTime>
+          </afSubmissionInfo>
+          </afData>
+      ```
+
+
+      ```xml
+          <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+          <afData>
+          <afUnboundData>
+              <data/>
+          </afUnboundData>
+          <afBoundData>
+              <Root
+                  xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                  <PersonalDetails>
+                      <SSN>
+                          <captchaType>reCaptchaEnterprise</captchaType>
+                          <captchaScore>0.9</captchaScore>
+                      </SSN>
+                      <FirstName>Sarah</FirstName>
+                      <LastName>Smith</LastName>
+                  </PersonalDetails>
+                  <OtherInfo>
+                      <City>California</City>
+                      <Address>54 Residency</Address>
+                      <State>USA</State>
+                      <Zip>123112</Zip>
+                  </OtherInfo>
+              </Root>
+          </afBoundData>
+          <afSubmissionInfo>
+              <stateOverrides/>
+              <signers/>
+              <afPath>/content/dam/formsanddocuments/captcha-form</afPath>
+              <afSubmissionTime>20230608035111</afSubmissionTime>
+          </afSubmissionInfo>
+          </afData>
+      ```
+
+
+   **如果所选配置具有reCAPTCHA v2版本**：
+   1. 选择大小为 **[!UICONTROL 普通]** 或 **[!UICONTROL 紧凑]** 用于reCAPTCHA构件。 您也可以选择 **[!UICONTROL 不可见]** 选项仅在可疑活动的情况下显示CAPTCHA质询。 此 **受reCAPTCHA保护** 徽章，如下所示，显示在受保护的表单上。
+
+      ![受reCAPTCHA徽章保护的Google](assets/google-recaptcha-v2.png)
+
+
+   已在自适应表单上启用reCAPTCHA服务。 您可以预览表单并查看验证码是否正常工作。
 
 1. 保存属性。
 
-已在自适应表单上启用reCAPTCHA服务。 您可以预览表单并查看验证码是否正常工作。
+>[!NOTE]
+> 
+> 不选择 **[!UICONTROL 默认]** 从Captcha服务下拉列表中，默认的AEM CAPTCHA服务已弃用。
 
 ### 根据规则显示或隐藏验证码组件 {#show-hide-captcha}
 
@@ -105,6 +236,10 @@ AEM Forms支持自适应表单中的验证码。 您可以使用Google的reCAPTC
 点按 **[!UICONTROL 货币值]** 字段，并创建以下规则：
 
 ![显示或隐藏规则](assets/rules-show-hide-captcha.png)
+
+>[!NOTE]
+>
+> * 如果选择reCAPTCHA v2配置且大小为 **[!UICONTROL 不可见]** 或reCAPTCHA基于企业得分的键值，则显示/隐藏选项不适用。
 
 ### 验证验证码 {#validate-captcha}
 
@@ -125,6 +260,10 @@ AEM Forms支持自适应表单中的验证码。 您可以使用Google的reCAPTC
 1. 点按CAPTCHA组件并选择 ![cmppr](assets/configure-icon.svg) 查看组件属性。
 1. 在 **[!UICONTROL 验证验证码]** 部分，选择 **[!UICONTROL 在用户操作时验证验证码]**.
 1. 点按 ![完成](assets/save_icon.svg) 以保存组件属性。
+
+   > 注意:
+   >
+   > * 如果选择reCAPTCHA v2配置且大小为 **[!UICONTROL 不可见]** 或reCAPTCHA Enterprise基于得分的密钥，则用户操作上的“有效Captcha”不适用。
 
 [!DNL Experience Manager Forms] 提供 `ValidateCAPTCHA` 用于使用预定义条件验证CAPTCHA的API。 您可以使用自定义提交操作或通过定义自适应表单中组件的规则来调用API。
 

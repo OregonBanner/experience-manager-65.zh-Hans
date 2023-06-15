@@ -8,9 +8,9 @@ user-guide-title: Adobe Experience Manager 6.5 Forms 指南
 breadcrumb-title: Forms 指南
 user-guide-description: 创建、管理、发布和更新数字表单。
 role: User
-source-git-commit: f0ffa552bd4a5b8b20a58aed7847c4de07acc4f4
+source-git-commit: 73271612633ec349ee1c002044724f408324e5a2
 workflow-type: tm+mt
-source-wordcount: '3860'
+source-wordcount: '3870'
 ht-degree: 4%
 
 ---
@@ -134,6 +134,7 @@ ht-degree: 4%
 + 自适应Forms — 基本创作 {#adaptive-forms-basic-authoring}
    + [使用自适应表单的最佳实践](using/adaptive-forms-best-practices.md)
    + [创建自适应表单](using/creating-adaptive-form.md)
+   + [创建自适应表单或将自适应表单添加到 AEM Sites 页面](using/create-or-add-an-adaptive-form-to-aem-sites-page.md)
    + [自适应表单片段](using/adaptive-form-fragments.md)
    + [配置提交操作](using/configuring-submit-actions.md)
    + [在自适应表单中使用CAPTCHA](using/captcha-adaptive-forms.md)
@@ -468,7 +469,7 @@ ht-degree: 4%
       + [为Adobe Reader Web浏览器插件启用在线注释](/help/forms/using/admin-help/enabling-online-commenting-reader-web.md)
       + [设置超时值以用于Acrobat Reader DC扩展](/help/forms/using/admin-help/setting-timeout-values-acrobat-reader.md)
       + [正在更新过期的Reader扩展服务证书](/help/forms/using/admin-help/updating-expired-reader-extension-certificates.md)
-   + 使用PDF生成器 {#work-with-pdf-generator}
+   + 使用PDF Generator {#work-with-pdf-generator}
       + [使用PDF生成器简介](/help/forms/using/admin-help/overview-5.md)
       + [启用多线程文件转换](/help/forms/using/admin-help/enabling-multi-threaded-file-conversions.md)
       + [配置Adobe PDF设置](/help/forms/using/admin-help/configuring-pdf-settings.md)
