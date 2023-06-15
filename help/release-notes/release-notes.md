@@ -3,9 +3,9 @@ title: 的发行说明 [!DNL Adobe Experience Manager] 6.5
 description: 查找版本信息、新增功能、安装操作方法和详细更改列表 [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 3
 exl-id: fed4e110-9415-4740-aba1-75da522039a9
-source-git-commit: 36edc2507d9acd7d5f94e433a654ccc1647bb58a
+source-git-commit: 8f2c8964c2a6c2f0fcb446b7bca1f8cb822906f7
 workflow-type: tm+mt
-source-wordcount: '3568'
+source-wordcount: '3738'
 ht-degree: 1%
 
 ---
@@ -45,14 +45,20 @@ ht-degree: 1%
    * 创建一个版本
    * 关联或取消关联资源
 
-   您无需导航到资产位置并查看其属性即可执行这些操作。
+  您无需导航到资产位置并查看其属性即可执行这些操作。
 * **Dynamic Media _快照_**— 试验测试图像或Dynamic Media URL，以查看各种图像修饰符的输出，并对文件大小（使用WebP和AVIF交付）、网络带宽和设备像素比进行智能成像优化。 参见 [Dynamic Media快照](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-snapshot.html).
 * **使用Dynamic Media进行DASH流**  — 为Dynamic Media视频交付中的自适应流推出了新协议(DASH - Dynamic Adaptive Streaming over HTTP)支持（已启用CMAF）。 现在向所有地区提供， [通过支持票证启用](/help/assets/video.md#enable-dash-on-your-account-enable-dash).
 * **Experience Manager Sites和内容片段与Assets新一代Dynamic Media的集成** -Experience Manager Assetsas a Cloud Service的新一代Dynamic Media的用户现在可以通过Experience Manager Sites 6.5的内部部署或Managed Services实例，使用这些云托管资源进行创作和交付。
-* **自适应Forms在Experience Manager Sites页面上的集成**：通过使用Experience Manager Sites编辑器中的自适应Forms组件，无缝创建数字注册体验，这些组件使用： — 自适应Forms容器和自适应Forms — 嵌入(v2)组件。
-* **Experience Manager Forms中的reCAPTCHA Enterprise支持**：在Experience Manager Forms中增加了对reCAPTCHA Enterprise的支持，针对欺诈性活动和垃圾邮件提供了增强的保护，此外还有现有的Google reCAPTCHA v2支持。
-* **通过Experience Manager Forms支持面向政府的Adobe Acrobat Sign**：允许Experience Manager Forms与面向政府的Adobe Sign（符合FedRAMP）的安全且合规的集成。
-* **启用Salesforce与Experience Manager Forms的集成以便进行数据交换**：使用OAuth 2.0客户端凭据流配置Experience Manager Forms与Salesforce应用程序之间的集成。 此功能实现了应用程序的安全且直接的身份验证和授权，并允许无缝通信而无需用户参与。
+
+**AEM Forms**
+
+* **[AEM页面编辑器中的自适应Forms](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)**：您现在可以使用AEM页面编辑器快速创建多个表单并将其添加到站点页面。 此功能允许内容作者利用自适应表单组件的强大功能（包括动态行为、验证、数据集成、生成记录文档以及业务流程自动化），在Sites页面内创建无缝的数据捕获体验。 您可以：
+   * 通过将表单组件拖放到AEM Sites编辑器或体验片段中的自适应Forms容器组件来创建自适应表单。
+   * 在AEM Sites编辑器中使用“自适应Forms向导”，以便您可以独立于任何Sites页面创建表单，同时让您能够在多个页面中重用此类表单。
+   * 将多个表单添加到Sites页面，从而简化用户体验并提供更大的灵活性。
+* **[Experience Manager Forms中的reCAPTCHA Enterprise支持](/help/forms/using/captcha-adaptive-forms.md)**：在Experience Manager Forms中增加了对reCAPTCHA Enterprise的支持，针对欺诈性活动和垃圾邮件提供了增强的保护，此外还有现有的Google reCAPTCHA v2支持。
+* **[通过Experience Manager Forms支持面向政府的Adobe Acrobat Sign](/help/forms/using/adobe-sign-integration-adaptive-forms.md)**：AEM Forms现在与面向政府的Adobe Acrobat Sign集成（符合FedRAMP）。 这种集成通过为政府关联帐户（政府部门和机构）提交自适应表单，为电子签名提供了高级的合规性和安全性。 与面向政府的Adobe Acrobat Sign集成使Adobe的合作伙伴和政府客户能够在Adaptive Forms中使用电子签名处理一些任务最关键和最敏感的业务线。 这一额外的安全层确保所有电子签名完全符合FedRAMP Moderate合规性，从而让Adobe的政府客户高枕无忧。
+* **[启用Salesforce与Experience Manager Forms的集成以便进行数据交换](/help/forms/using/oauth2-client-credentials-flow-for-server-to-server-integration.md)**：使用OAuth 2.0客户端凭据流配置Experience Manager Forms与Salesforce应用程序之间的集成。 此功能实现了应用程序的安全且直接的身份验证和授权，并允许无缝通信而无需用户参与。
 * **工作流引擎的优化和增强功能**：通过最大限度地减少工作流实例的数量来提高工作流引擎的性能。 除此之外 `COMPLETED` 和 `RUNNING` 状态值，工作流还支持三个新的状态值： `ABORTED`， `SUSPENDED`、和 `FAILED`.
 
 
@@ -357,14 +363,14 @@ To retrieve your runtime copy, Adobe recommends to synchronize the design-time c
 
 * GraphQL查询可以使用 `damAssetLucene` 索引而非 `fragments` 索引。 此操作可能会导致GraphQL查询失败或需要很长时间才能运行。
 
-   要更正此问题， `damAssetLucene` 必须配置为包含以下两个属性：
+  要更正此问题， `damAssetLucene` 必须配置为包含以下两个属性：
 
    * `contentFragment`
    * `model`
 
-   更改索引定义后，需要重新索引(`reindex` = `true`)。
+  更改索引定义后，需要重新索引(`reindex` = `true`)。
 
-   执行这些步骤后，GraphQL查询应该可以更快地执行。
+  执行这些步骤后，GraphQL查询应该可以更快地执行。
 
 * 作为 [!DNL Microsoft® Windows Server 2019] 不支持 [!DNL MySQL 5.7] 和 [!DNL JBoss® EAP 7.1]， [!DNL Microsoft® Windows Server 2019] 不支持的全包安装 [!DNL Experience Manager Forms 6.5.10.0].
 
@@ -385,12 +391,12 @@ To retrieve your runtime copy, Adobe recommends to synchronize the design-time c
 * 尝试移动、删除或发布内容片段、站点或页面时，在获取内容片段引用时出现问题，因为后台查询失败。 也就是说，功能无法正常工作。
 为确保操作正确，必须将以下属性添加到索引定义节点 `/oak:index/damAssetLucene` （无需重新索引）：
 
-   ```xml
-   "tags": [
-       "visualSimilaritySearch"
-     ]
-   "refresh": true
-   ```
+  ```xml
+  "tags": [
+      "visualSimilaritySearch"
+    ]
+  "refresh": true
+  ```
 
 * 在JBoss® 7.1.4平台上，当用户安装Experience Manager6.5.16.0或更高版本Service Pack时， `adobe-livecycle-jboss.ear` 部署失败。
 * WebLogic JEE服务器不支持高于1.8.0_281的JDK版本。
@@ -414,4 +420,3 @@ To retrieve your runtime copy, Adobe recommends to synchronize the design-time c
 >* [[!DNL Experience Manager] 产品页面](https://business.adobe.com/products/experience-manager/adobe-experience-manager.html)
 >* [[!DNL Experience Manager] 6.5文档](https://experienceleague.adobe.com/docs/experience-manager-65.html?lang=zh-Hans)
 >* [订阅 Adobe 产品更新早知道](https://www.adobe.com/cn/subscription/priority-product-update.html)
-

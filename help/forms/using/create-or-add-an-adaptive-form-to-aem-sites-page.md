@@ -2,19 +2,15 @@
 title: 创建自适应表单或将自适应表单添加到 AEM Sites 页面
 description: 了解如何轻松创建自适应表单或将自适应表单无缝添加到 AEM Sites 页面。分步学习将动态且可自定义的表单集成到您的网站中并优化您的数字体验以尽量提高影响力的方法和最佳实践。
 feature: Adaptive Forms
-source-git-commit: 73271612633ec349ee1c002044724f408324e5a2
+source-git-commit: 8f2c8964c2a6c2f0fcb446b7bca1f8cb822906f7
 workflow-type: tm+mt
-source-wordcount: '2874'
+source-wordcount: '2862'
 ht-degree: 23%
 
 ---
 
 
 # 创建自适应表单或将自适应表单添加到 AEM Sites 页面 {#create-or-add-an-adaptive-form-to-aem-sites-page}
-
-[!BADGE 预发行文档]{type=Caution tooltip="黄色状态"}
-
-<span class="preview"> 这是预发行文档，可能会发生更改。</span>
 
 借助 AEM Forms，您可以将自适应表单无缝整合到您的网页中。这使得您的访问者无需离开其所在的页面，即可方便地填写和提交表格。这样，他们即可在主动与表单交互的同时轻松地与网站的其他元素保持互动。
 
@@ -236,8 +232,6 @@ AEM Forms 会提供自适应表单容器和自适应表单嵌入组件。您可�
 1. 单击自适应表单容器属性 ![自适应表单容器属性](/help/forms/using/assets/configure-icon.svg) 图标。 随即会打开用于配置数据模型的自适应表单容器对话框。
    ![](/help/forms/using/assets/prefill-service-fdm-aem-sites-page-editor.png)
 1. 选择表单数据模型. 打开 **[!UICONTROL 基本]** 选项卡。 在预填充服务中，选择 **[!UICONTROL Forms Portal草稿预填充服务]**.
-
-
 1. 单击&#x200B;**[!UICONTROL 完成]**。
 
 ## 在提交表单时将用户重定向到新用户，或显示感谢消息

@@ -11,10 +11,10 @@ discoiquuid: 1f28b257-5419-4a21-a54a-b20bf35530ac
 docset: aem65
 feature: Adaptive Forms, Acrobat Sign
 exl-id: 52146038-1582-41b8-aee0-215d04bb91d7
-source-git-commit: 66674f0e2621d8786ab4d662cddad373122d8b51
+source-git-commit: 8f2c8964c2a6c2f0fcb446b7bca1f8cb822906f7
 workflow-type: tm+mt
-source-wordcount: '1953'
-ht-degree: 18%
+source-wordcount: '1972'
+ht-degree: 19%
 
 ---
 
@@ -91,9 +91,9 @@ ht-degree: 18%
    1. 在 **[!UICONTROL 重定向URL]** 框中，添加在上一步中复制的HTTPS URL。
    1. 为启用以下OAuth设置 [!DNL Adobe Sign] 应用程序并单击 **[!UICONTROL 保存]**.
 
-   * aggrement_read
-   * aggrement_write
-   * aggrement_send
+   * agreement_read
+   * agreement_write
+   * agreement_send
    * widget_write
    * workflow_read
 
@@ -136,9 +136,6 @@ ht-degree: 18%
 
 ## 将AEM Forms与适用于政府的Adobe Acrobat Sign Solutions连接 {#adobe-acrobat-sign-for-government}
 
-[!BADGE 测试版文档]{type=Caution tooltip="黄色状态"}
-<span class="preview"> 本部分包含测试版文档，这些信息可能会发生更改。</span>
-
 将AEM Forms与面向政府的Adobe Acrobat Sign Solutions连接是一个多步骤的过程。 它涉及：
 
 * 为您的AEM实例创建重定向URL
@@ -168,25 +165,24 @@ ht-degree: 18%
 1. 在配置页面上，点按 **[!UICONTROL 创建]** 创建 [!DNL Adobe Acrobat Sign] AEM Forms配置。
 1. 将当前浏览器窗口的URL从URL复制到记事本。 此URL称为 `re-direct URL`. 在下一部分中，您共享 `re-direct URL` 和 `Scopes` 包含Adobe Sign团队和请求凭据（客户端ID和客户端密钥）。
 
+>[!NOTE]
 >
 >
->
-* 使用 [顶级](https://en.wikipedia.org/wiki/Top-level_domain) 域为 `re-direct URL`. 例如，`https://adobe.com/libs/adobesign/cloudservices/adobesign/createcloudconfigwizard/cloudservices.html/conf/global`
-* 请勿将本地URL用作 `re-direct URL`. 例如：`https://localhost:4502/libs/adobesign/cloudservices/adobesign/createcloudconfigwizard/cloudservices.html/conf/SignConfig`。
-> 
+* A `re-direct URL` 应包含 [顶级](https://en.wikipedia.org/wiki/Top-level_domain) 域。 例如，`https://adobe.com/libs/adobesign/cloudservices/adobesign/createcloudconfigwizard/cloudservices.html/conf/global`
+* 请勿将本地URL用作 `re-direct URL`. 例如：`https://localhost:4502/libs/adobesign/cloudservices/adobesign/createcloudconfigwizard/cloudservices.html/conf/global`。
 
 
 #### 与Adobe Sign团队共享重定向URL和作用域并接收凭据
 
 Adobe Acrobat Sign政府解决方案团队要求 `re-direct URL` 以及要为您的Adobe Acrobat Sign应用程序启用的特定范围（如下所列），以生成凭据（客户端ID和客户端密钥），从而允许您将AEM Forms与适用于政府的Adobe Acrobat Sign Solutions连接。
 
-共享 `scopes` （如下所列）和 `re-direct URL` 与您的Adobe Acrobat Sign政府解决方案代表([Adobe Professional Services团队成员](https://opensource.adobe.com/acrobat-sign/signgov/gstarted.html#password))。
+共享 `scopes` （如下所列）和 `re-direct URL` 与您的Adobe Acrobat Sign政府解决方案代表一起创建并记下上一节的最后一步 [Adobe Professional Services团队成员](https://opensource.adobe.com/acrobat-sign/signgov/gstarted.html#password).
 
 **_范围_**
 
-* [!DNL aggrement_read]
-* [!DNL aggrement_write]
-* [!DNL aggrement_send]
+* [!DNL agreement_read]
+* [!DNL agreement_write]
+* [!DNL agreement_send]
 * [!DNL widget_read]
 * [!DNL widget_write]
 * [!DNL workflow_read]
@@ -212,11 +208,11 @@ Adobe Acrobat Sign政府解决方案团队要求 `re-direct URL` 以及要为您
 
 1. 选择 **[!UICONTROL 为附件启用Adobe Acrobat Sign]** 用于将附加到自适应表单的文件追加到相应表单的选项 [!DNL Adobe Acrobat Sign] 文档已发送供签名。
 
-1. 点按 **[!UICONTROL 连接到Adobe Sign]**. 在系统提示输入凭据时，提供在创建 [!DNL Adobe Acrobat Sign] 应用程序时所用帐户的用户名和密码。当要求确认访问时 `your developer account`，单击 **[!UICONTROL 允许访问]**. 如果凭据正确，并且您允许 [!DNL AEM Forms] 访问您的 [!DNL Adobe Acrobat Sign] 开发人员帐户，系统会显示一条与以下内容类似的成功消息。
+1. 点按 **[!UICONTROL 连接到Adobe Sign]**. 在系统提示输入凭据时，提供在创建 [!DNL Adobe Acrobat Sign] 应用程序时所用帐户的用户名和密码。当要求确认访问时 `Adobe Acrobat Sign for Government Solutions` 和，单击 **[!UICONTROL 允许访问]**. 如果凭据正确，并且您允许 [!DNL AEM Forms] 访问您的 [!DNL Adobe Acrobat Sign] 开发人员帐户，系统会显示一条与以下内容类似的成功消息。
 
    ![Adobe Acrobat Sign云配置成功](/help/forms/using/assets/adobe-sign-cloud-configuration-success.png)
 
-   <!-- > When prompted for credentials, provide username and password of the account used while creating [!DNL Adobe Acrobat Sign] application. When asked to confirm access for `your developer account`, Click **[!UICONTROL Allow Access]**. -->
+   在系统提示输入凭据时，提供在创建 [!DNL Adobe Acrobat Sign] 应用程序时所用帐户的用户名和密码。当要求确认访问时 `your account`，然后单击 **[!UICONTROL 允许访问]**.
 
 1. 点按 **[!UICONTROL 创建]** 以创建配置。
 1. 打开AEM Web控制台。 URL是 `https://'[server]:[port]'/system/console/configMgr`
@@ -245,4 +241,5 @@ An [!DNL Adobe Sign] 仅在所有签名者完成签名过程后提交启用的�
 ## 相关文章 {#related-articles}
 
 * [在自适应表单中使用Adobe Sign](../../forms/using/working-with-adobe-sign.md)
+* [Adobe Sign具有以表单为中心的工作流](/help/forms/using/aem-forms-workflow-step-reference.md#sign-document-step-sign-document-step)
 * [将Adobe Sign与AEM Forms结合使用（视频）](https://helpx.adobe.com/experience-manager/kt/forms/using/adobe-sign-integration-feature-video.html)
