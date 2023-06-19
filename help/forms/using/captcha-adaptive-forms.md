@@ -11,7 +11,7 @@ discoiquuid: 4c53dfc0-25ca-419d-abfe-cf31fc6ebf61
 docset: aem65
 feature: Adaptive Forms
 exl-id: 9b4219b8-d5eb-4099-b205-d98d84e0c249
-source-git-commit: 8f2c8964c2a6c2f0fcb446b7bca1f8cb822906f7
+source-git-commit: 4e6521f0d40fc10e016bf197d5b31033192e3214
 workflow-type: tm+mt
 source-wordcount: '1915'
 ht-degree: 0%
@@ -31,7 +31,7 @@ AEM Forms支持自适应表单中的验证码。 您可以使用Google的reCAPTC
 
 ## 通过Google为自适应Forms配置reCAPTCHA服务 {#google-reCAPTCHA}
 
-AEM Forms用户可以使用Google的reCAPTCHA服务在自适应表单中实施CAPTCHA。 它提供高级验证码功能以保护您的站点。 有关reCAPTCHA工作方式的更多信息，请参阅 [Google reCAPTCHA](https://developers.google.com/reCAPTCHA/). reCAPTCHA服务（包括reCAPTCHA v2和reCAPTCHA Enterprise）集成到AEM Forms中。 根据要求，您可以配置reCAPTCHA服务以启用：
+AEM Forms用户可以使用Google的reCAPTCHA服务在自适应表单中实施CAPTCHA。 它提供高级验证码功能以保护您的站点。 有关reCAPTCHA工作方式的更多信息，请参阅 [Google reCAPTCHA](https://developers.google.com/recaptcha/). reCAPTCHA服务（包括reCAPTCHA v2和reCAPTCHA Enterprise）集成到AEM Forms中。 根据要求，您可以配置reCAPTCHA服务以启用：
 
 * [AEM Forms中的reCAPTCHA Enterprise](#steps-to-implement-reCAPTCHA-enterprise-in-forms)
 * [AEM Forms中的reCAPTCHA v2](#steps-to-implement-reCAPTCHA-v2-in-forms)
