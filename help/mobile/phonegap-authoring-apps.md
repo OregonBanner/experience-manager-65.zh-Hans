@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: authoring-adobe-phonegap-enterprise
 discoiquuid: abfeea65-102d-4800-abeb-304d61afcc13
 exl-id: 073daff7-0c1d-4715-bfd4-3e2336e4cb88
-source-git-commit: 85d39e59b82fdfdcd310be61787a315668aebe38
+source-git-commit: 17d13e9b201629d9d1519fde4740cf651fe89d2c
 workflow-type: tm+mt
-source-wordcount: '1015'
+source-wordcount: '1005'
 ht-degree: 0%
 
 ---
@@ -93,9 +93,9 @@ AEM Mobile功能板允许您创建、构建和部署移动应用程序，创建�
 
 ### PhoneGap Build拼贴 {#the-phonegap-build-tile}
 
-此 **PhoneGap Build拼贴** 连接方式 [https://build.phonegap.com](https://build.phonegap.com) 构建和托管远程构建。 构建后，该内部版本可作为下载使用，或通过二维码直接提供给您的设备。
+此 **PhoneGap Build拼贴** 连接方式 `https://build.phonegap.com` 构建和托管远程构建。 构建后，该内部版本可作为下载使用，或通过二维码直接提供给您的设备。
 
-或者，您也可以下载设备源，以通过在本地构建 [PhoneGap CLI](https://docs.phonegap.com/en/3.5.0/guide_cli_index.md.html).
+或者，您可以下载设备源以通过PhoneGap CLI在本地构建(`https://docs.phonegap.com/en/3.5.0/guide_cli_index.md.html`)。
 
 ![PhoneGap Build拼贴](assets/chlimage_1-140.png)
 

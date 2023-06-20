@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: administering-adobe-phonegap-enterprise
 discoiquuid: 3c84f4ec-d89b-4ad4-802e-ee3e2d49d916
 exl-id: d91a00d1-12fa-4c84-a426-49413f61c126
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 17d13e9b201629d9d1519fde4740cf651fe89d2c
 workflow-type: tm+mt
-source-wordcount: '676'
+source-wordcount: '660'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 0%
 
 内定义的所有受支持平台 **管理应用程序** 使用PhoneGap Build推送远程构建时，将使用 **PhoneGap Build** 平铺。
 
-您可以将远程内部版本推送到 [https://build.phonegap.com](https://build.phonegap.com) 或下载源以使用本地构建 [PhoneGap CLI](https://docs.phonegap.com/references/phonegap-cli/).
+您可以将远程内部版本推送到 `https://build.phonegap.com` 或下载源以使用PhoneGap CLI在本地构建，网址为 `https://docs.phonegap.com/references/phonegap-cli/`.
 
 ![PhoneGap Build拼贴](assets/chlimage_1-60.png)
 
@@ -35,7 +35,7 @@ ht-degree: 0%
 
 为了充分利用PhoneGap Build，您需要使用PhoneGap Build帐户信息配置AEMPhoneGap BuildCloud Service。
 
-如果您当前没有帐户，请导航到 [https://build.phonegap.com](https://build.phonegap.com) 注册！ 如果您拥有Adobe Creative Cloud会员资格，则最多可以支持25个私有应用程序（非开源应用程序）。
+如果您当前没有帐户，请导航到 `https://build.phonegap.com` 注册！ 如果您拥有Adobe Creative Cloud会员资格，则最多可以支持25个私有应用程序（非开源应用程序）。
 
 在验证PhoneGap Build帐户处于活动状态后，请导航到您的AEM Cloud Management Console，特别是 [PhoneGap BuildCloud Service](http://localhost:4502/etc/cloudservices/phonegap-build.html) (http://localhost:4502/etc/cloudservices/phonegap-build.html)。
 
@@ -73,7 +73,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->如果构建由于任何原因(下面的红色iOS图标表示平台失败)而失败，您可以将鼠标悬停在该图标上以获取错误消息。 或者，您可以单击图块底部的三点图标“……”以直接导航到https://build.phonegap.com（您必须进行身份验证），并直接查看和管理您的内部版本。
+>如果构建由于任何原因(下面的红色iOS图标表示平台失败)而失败，您可以将鼠标悬停在该图标上以获取错误消息。 或者，您可以单击图块底部的三点图标“……”，以直接导航到 `https://build.phonegap.com` （您必须进行身份验证）并直接查看和管理您的内部版本。
 
 ### 使用PhoneGap CLI构建应用程序 {#building-your-application-with-phonegap-cli}
 
@@ -86,7 +86,7 @@ PhoneGap提供了一个命令行界面，用于在本地构建应用程序。
 1. Platform SDK (iOS、Android、WindowsPhone...)和
 1. PhoneGap CLI
 
-您可以阅读更多内容 [此处](https://docs.phonegap.com/references/phonegap-cli/).
+您可以在此处阅读更多内容 `https://docs.phonegap.com/references/phonegap-cli/`.
 
 安装完前提条件后，请从终端创建一个简单的应用程序，然后让它在您的模拟器中或更好的设备上运行，以进行简单的测试：
 

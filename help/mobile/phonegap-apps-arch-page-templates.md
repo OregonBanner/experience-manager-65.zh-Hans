@@ -8,9 +8,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: f45d8a9b-14d6-468f-a44c-3933e962922c
 exl-id: 7f00d426-4d28-41ee-8c54-636349e48669
-source-git-commit: 85d39e59b82fdfdcd310be61787a315668aebe38
+source-git-commit: 17d13e9b201629d9d1519fde4740cf651fe89d2c
 workflow-type: tm+mt
-source-wordcount: '2657'
+source-wordcount: '2653'
 ht-degree: 0%
 
 ---
@@ -369,7 +369,7 @@ www目录包含实施应用程序外观和行为的所有Web内容(HTML、JS和C
 
 ### www/config.xml {#www-config-xml}
 
-此 [PhoneGap文档](https://docs.phonegap.com) 将此文件称为“全局配置文件”。 config.xml包含许多应用程序属性，例如应用程序名称、应用程序“首选项”(例如iOS Webview是否允许过度滚动)以及 *仅限* 已被PhoneGap Build使用。
+PhoneGap文档(`https://docs.phonegap.com`)将此文件称为“全局配置文件”。 config.xml包含许多应用程序属性，例如应用程序名称、应用程序“首选项”(例如iOS Webview是否允许过度滚动)以及 *仅限* 已被PhoneGap Build使用。
 
 config.xml文件是AEM中的静态文件，通过内容同步按原样导出。
 
@@ -381,7 +381,7 @@ config.xml文件包含 `content` 元素：
 
 `<content src="content/phonegap/weretail/apps/ng-we-retail/en.html" />`
 
-In [PhoneGap文档](https://docs.phonegap.com)，此元素将描述为“可选 &lt;content> 元素定义应用程序在顶级web assets目录中的起始页面。 默认值为index.html，通常显示在项目的顶级www目录中。”
+在PhoneGap文档中(`https://docs.phonegap.com`)，此元素被描述为“可选 &lt;content> 元素定义应用程序在顶级web assets目录中的起始页面。 默认值为index.html，通常显示在项目的顶级www目录中。”
 
 如果没有index.html文件，PhoneGap Build将失败。 因此，此文件包含在内。
 

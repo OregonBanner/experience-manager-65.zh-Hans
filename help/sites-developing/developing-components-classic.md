@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: c68f724f-f9b3-4018-8d3a-1680c53d73f8
 legacypath: /content/docs/en/aem/6-2/develop/components/components-classic
 exl-id: 3f078139-73fd-4913-9d67-264fb2515f8a
-source-git-commit: 43a30b5ba76ea470cc50a962d4f04b4a1508964d
+source-git-commit: 17d13e9b201629d9d1519fde4740cf651fe89d2c
 workflow-type: tm+mt
 source-wordcount: '2392'
 ht-degree: 1%
@@ -85,23 +85,23 @@ JSP脚本文件 `global.jsp` 用于提供对用于呈现组件的任何JSP脚本
 
 * 通过中引入的属性对象 `global.jsp`：
 
-   properties对象是ValueMap的实例(请参阅 [Sling API](https://sling.apache.org/apidocs/sling5/org/apache/sling/api/resource/ValueMap.html))并包含当前资源的所有属性。
+  properties对象是ValueMap的实例(请参阅 [Sling API](https://sling.apache.org/apidocs/sling5/org/apache/sling/api/resource/ValueMap.html))并包含当前资源的所有属性。
 
-   示例： `String pageTitle = properties.get("jcr:title", "no title");` 在页面组件的渲染脚本中使用。
+  示例： `String pageTitle = properties.get("jcr:title", "no title");` 在页面组件的渲染脚本中使用。
 
-   示例： `String paragraphTitle = properties.get("jcr:title", "no title");` 在标准段落组件的渲染脚本中使用。
+  示例： `String paragraphTitle = properties.get("jcr:title", "no title");` 在标准段落组件的渲染脚本中使用。
 
 * 通过 `currentPage` 引入的对象 `global.jsp`：
 
-   此 `currentPage` 对象是页面的实例(请参阅 [AEM API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/Page.mhtml))。 Page类提供了一些访问内容的方法。
+  此 `currentPage` 对象是页面的实例(请参阅 [AEM API](https://helpx.adobe.com/cn/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/Page.html))。 Page类提供了一些访问内容的方法。
 
-   示例: `String pageTitle = currentPage.getTitle();`
+  示例: `String pageTitle = currentPage.getTitle();`
 
 * Via `currentNode` 引入的对象 `global.jsp`：
 
-   此 `currentNode` 对象是节点的实例(请参阅 [JCR API](https://jackrabbit.apache.org/api/2.16/org/apache/jackrabbit/standalone/cli/core/CurrentNode.html))。 可以通过以下方式访问节点的属性 `getProperty()` 方法。
+  此 `currentNode` 对象是节点的实例(请参阅 [JCR API](https://jackrabbit.apache.org/api/2.16/org/apache/jackrabbit/standalone/cli/core/CurrentNode.html))。 可以通过以下方式访问节点的属性 `getProperty()` 方法。
 
-   示例: `String pageTitle = currentNode.getProperty("jcr:title");`
+  示例: `String pageTitle = currentNode.getProperty("jcr:title");`
 
 ## JSP标记库 {#jsp-tag-libraries}
 
@@ -167,6 +167,7 @@ JSP脚本文件 `global.jsp` 用于提供对用于呈现组件的任何JSP脚本
 
       * `cq:dialog`  — 触屏UI的对话框
       * `dialog`  — 经典UI的对话框
+
    * 替换 `.jsp` 文件（将其命名为新组件的后缀）
    * 或者完全重新工作整个组件（如果需要）
 
@@ -178,7 +179,6 @@ JSP脚本文件 `global.jsp` 用于提供对用于呈现组件的任何JSP脚本
    >
    >* 触屏优化UI使用 [Granite](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/index.html) 组件
    >* 经典UI [ExtJS构件](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html)
-
 
    >[!NOTE]
    >
@@ -215,9 +215,9 @@ JSP脚本文件 `global.jsp` 用于提供对用于呈现组件的任何JSP脚本
 
    * 添加 `?wcmmode=design` 前往URL的末尾，然后再次访问，例如：
 
-      `<contextPath>/ Test.html?wcmmode=design`
+     `<contextPath>/ Test.html?wcmmode=design`
 
-   * 单击Sidekick中的Design
+   * 在Sidekick中单击设计
 
    您现在处于设计模式，可以编辑段落系统。
 
@@ -275,16 +275,17 @@ JSP脚本文件 `global.jsp` 用于提供对用于呈现组件的任何JSP脚本
    >* 触屏优化UI： `textimage/cq:dialog`
    >* 经典 UI: `textimage/dialog`
 
-
 1. 编辑组件元数据：
 
    * 组件名称
 
       * 设置 `jcr:description` 到 `Text Image Component (Extended)`
       * 设置 `jcr:title` 到 `Text Image (Extended)`
+
    * 组，其中组件在sidekick中列出（保持原样）
 
       * 离开 `componentGroup` 设置为 `General`
+
    * 新组件的父组件（标准文本时间组件）
 
       * 设置 `sling:resourceSuperType` 到 `foundation/components/textimage`
@@ -308,6 +309,7 @@ JSP脚本文件 `global.jsp` 用于提供对用于呈现组件的任何JSP脚本
       * 将xtype更改为cqinclude（继承自标准组件）。
       * 添加带有值的路径属性 `/libs/foundation/components/textimage/dialog/items/tab1.infinity.json`和 `/libs/foundation/components/textimage/dialog/items/tab2.infinity.json`，则不会显示任何内容。
       * 删除所有其他属性或子节点。
+
    * 对于选项卡3：
 
       * 不更改属性和子节点
@@ -318,9 +320,11 @@ JSP脚本文件 `global.jsp` 用于提供对用于呈现组件的任何JSP脚本
          * `xtype`: `selection`
          * `fieldLabel`: `Image Position`
          * `type`: `select`
+
       * 添加子节点 `position/options` 类型 `cq:WidgetCollection` 表示两个图像放置选项，并在其下创建两个类型节点o1和o2 `nt:unstructured`.
       * 用于节点 `position/options/o1` 设置属性： `text` 到 `Left` 和 `value` 到 `left.`
       * 用于节点 `position/options/o2` 设置属性： `text` 到 `Right` 和 `value` 到 `right`.
+
    * 删除选项卡4。
 
    图像位置作为保留在内容中 `imagePosition`表示节点的属性 `textimage` 段落。 执行这些步骤后，“组件”对话框将如下所示：
@@ -381,7 +385,7 @@ JSP脚本文件 `global.jsp` 用于提供对用于呈现组件的任何JSP脚本
 1. 添加新属性:
 
    * **名称**: `allowUpload`
-   * **类型**: `String`
+   * **类型**： `String`
    * **值**: `false`
 
    ![chlimage_1-63](assets/chlimage_1-63a.png)

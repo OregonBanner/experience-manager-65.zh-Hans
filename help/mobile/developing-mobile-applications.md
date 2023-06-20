@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: fd7bcf17-af7e-4bd6-8137-48401d9743c5
 exl-id: cf8ba05c-6dcd-4880-b8bf-72382118cd80
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: 17d13e9b201629d9d1519fde4740cf651fe89d2c
 workflow-type: tm+mt
-source-wordcount: '583'
+source-wordcount: '581'
 ht-degree: 1%
 
 ---
@@ -32,7 +32,7 @@ AEM可利用Adobe PhoneGap和Adobe发布解决方案，使您能够创建和管�
 * 将HTML5 Web视图引入新的或预先存在的 **原生** 应用程序通过Cordova WebViews。
 * 跨所有交付渠道（包括Web、移动Web、移动应用程序和打印）创建、策划和共享丰富的多媒体内容。
 
-AEM与Adobe集成 **[PhoneGap Build服务](https://build.phonegap.com/)** 以简化应用程序构建和部署过程。
+AEM与Adobe PhoneGap Build服务(`https://build.phonegap.com/`)以简化应用程序构建和部署过程。
 
 **AdobeContentSync** 使用户能够轻松地将Over-The-Air (OTA)页面和内容更新下载到其设备，而无需重新安装应用程序或从appStore、Google Play或其他应用程序源下载。
 

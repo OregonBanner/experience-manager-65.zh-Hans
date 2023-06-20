@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: c614a7ff-0d13-4407-bda0-c0a402a13dcd
 exl-id: f37f239f-065b-44f8-acb1-93485b713b49
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 17d13e9b201629d9d1519fde4740cf651fe89d2c
 workflow-type: tm+mt
-source-wordcount: '940'
+source-wordcount: '939'
 ht-degree: 0%
 
 ---
@@ -53,7 +53,7 @@ AEM Mobile项目涉及多种内容类型，包括页面、JavaScript和CSS客户
 
 ## PhoneGap配置 {#phonegap-configuration}
 
-每个AEM Mobile应用程序都包含一个目录，其中托管PhoneGap使用的配置文件 [命令行界面](https://github.com/phonegap/phonegap-cli) 和 [PhoneGap Build](https://build.phonegap.com/) 将Web内容转换为可运行的应用程序。 例如，在Geometrixx示例中，此目录(/content/phonegap/geometrixx-outdoors/shell/jcr：content/pge-app/app-content)作为Shell的一部分进行定位；之所以做出设计决策，是因为该目录仅包含无法动态更新的内容，例如处理设备API和应用程序本身配置的插件。
+每个AEM Mobile应用程序都包含一个目录，其中托管PhoneGap使用的配置文件 [命令行界面](https://github.com/phonegap/phonegap-cli) 和PhoneGap Build的位置 `https://build.phonegap.com/` 将Web内容转换为可运行的应用程序。 例如，在Geometrixx示例中，此目录(/content/phonegap/geometrixx-outdoors/shell/jcr：content/pge-app/app-content)作为Shell的一部分进行定位；之所以做出设计决策，是因为该目录仅包含无法动态更新的内容，例如处理设备API和应用程序本身配置的插件。
 
 在此目录中，您还将找到许多 [Cordova挂钩](https://cordova.apache.org/docs/en/edge/guide_appdev_hooks_index.md.html#Hooks%20Guide) ，可用于安装插件、将资源文件放置在其平台特定的位置，以及应在生成过程中执行的其他操作。 注意：除了在内部版本中下载每个插件之外，您还可以遵循厨房水槽应用程序的模式，并且 [包含插件源代码](https://github.com/blefebvre/aem-phonegap-kitchen-sink/tree/master/content/src/main/content/jcr_root/content/phonegap/kitchen-sink/shell/_jcr_content/pge-app/app-content/phonegap/plugins) 应用程序项目的其余部分。
 

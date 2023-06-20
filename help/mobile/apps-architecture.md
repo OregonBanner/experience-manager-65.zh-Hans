@@ -8,9 +8,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-on-demand-services-app
 discoiquuid: cfc7ad16-965e-4075-bc4d-5630abeaba55
 exl-id: 397def36-45b2-47a7-b103-99ca22b6dae1
-source-git-commit: 85d39e59b82fdfdcd310be61787a315668aebe38
+source-git-commit: 17d13e9b201629d9d1519fde4740cf651fe89d2c
 workflow-type: tm+mt
-source-wordcount: '2671'
+source-wordcount: '2667'
 ht-degree: 0%
 
 ---
@@ -61,7 +61,7 @@ angular根据是否检测到wcmMode (！= WCMMode.DISABLED)，以确定是打开
 
 在创作模式下，每个页面将单独呈现。 angular不处理页面之间的路由，也不能使用ng-view加载包含页面组件的部分模板。 相反，页面模板(template.jsp)的内容通过包含在服务器端 `cq:include` 标记之前。
 
-此策略可启用作者功能（例如在段落系统、Sidekick、设计模式等中添加和编辑组件） 无需修改即可正常运行。 依赖客户端渲染的页面（例如应用程序的页面）在AEM创作模式下性能不佳。
+此策略可启用作者功能(例如在段落系统、Sidekick、设计模式等中添加和编辑组件) 无需修改即可正常运行。 依赖客户端渲染的页面（例如应用程序的页面）在AEM创作模式下性能不佳。
 
 请注意，template.jsp include封装在 `div` 包含 `ng-controller` 指令。 此结构允许DOM内容与控制器的链接。 因此，虽然在客户端呈现自身的页面会失败，但可以正常工作的各个组件可以正常使用（请参阅下面关于组件的部分）。
 
@@ -369,7 +369,7 @@ www目录包含实施应用程序外观和行为的所有Web内容(HTML、JS和C
 
 #### www/config.xml {#www-config-xml}
 
-此 [PhoneGap文档](https://docs.phonegap.com) 将此文件称为“全局配置文件”。 config.xml包含许多应用程序属性，例如应用程序名称、应用程序“首选项”(例如iOS Webview是否允许过度滚动)以及 *仅限* 已被PhoneGap Build使用。
+PhoneGap文档(`https://docs.phonegap.com`)将此文件称为“全局配置文件”。 config.xml包含许多应用程序属性，例如应用程序名称、应用程序“首选项”(例如iOS Webview是否允许过度滚动)以及 *仅限* 已被PhoneGap Build使用。
 
 config.xml文件是AEM中的静态文件，通过内容同步按原样导出。
 
@@ -381,7 +381,7 @@ config.xml文件包含 `content` 元素：
 
 `<content src="content/phonegap/geometrixx/apps/ng-geometrixx-outdoors/en.html" />`
 
-In [PhoneGap文档](https://docs.phonegap.com)，此元素将描述为“可选 &lt;content> 元素定义应用程序在顶级web assets目录中的起始页面。 默认值为index.html，通常显示在项目的顶级www目录中。”
+在PhoneGap文档中(`https://docs.phonegap.com`)，此元素被描述为“可选 &lt;content> 元素定义应用程序在顶级web assets目录中的起始页面。 默认值为index.html，通常显示在项目的顶级www目录中。”
 
 如果没有index.html文件，PhoneGap Build将失败。 因此，此文件包含在内。
 

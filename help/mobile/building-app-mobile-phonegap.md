@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: b2778086-8280-4306-bf3a-f6ec2a0e04df
 exl-id: 7c2e5ed8-9f8e-4a81-b736-589ef4089f29
-source-git-commit: 85d39e59b82fdfdcd310be61787a315668aebe38
+source-git-commit: 17d13e9b201629d9d1519fde4740cf651fe89d2c
 workflow-type: tm+mt
-source-wordcount: '1036'
+source-wordcount: '1022'
 ht-degree: 1%
 
 ---
@@ -112,7 +112,7 @@ AEM提供了两种将批量内容移动到发布实例的方法：
 
 ### 使用PhoneGap CLI构建 {#using-the-phonegap-cli-to-build}
 
-使用PhoneGap CLI编译和安装应用程序。 有关如何使用PhoneGap CLI的信息，请参阅PhoneGap [命令行界面](https://docs.phonegap.com/en/3.0.0/guide_cli_index.md.html) 文档。
+使用PhoneGap CLI编译和安装应用程序。 有关如何使用PhoneGap CLI的信息，请参阅PhoneGap命令行界面(`https://docs.phonegap.com/en/3.0.0/guide_cli_index.md.html`)文档。
 
 1. 打开终端或命令提示符并将当前目录更改为下载的应用程序ZIP文件。 例如，以下内容会将目录更改为ng-app-cli.1392137825303.zip文件：
 
@@ -162,7 +162,7 @@ AEM提供了两种将批量内容移动到发布实例的方法：
 
    **注意：** 测试版AEM Beta在构建成功完成时不会创建收件箱通知。
 
-1. 在成功对话框中，单击PhoneGap Build以打开Adobe PhoneGap Build页面，网址为 [https://build.phonegap.com/apps](https://build.phonegap.com/apps). 如果您正在等待应用程序显示，则可以检查 [PhoneGap Build状态](https://status.build.phonegap.com/) 页面。
+1. 在成功对话框中，单击PhoneGap Build以打开Adobe PhoneGap Build页面，网址为 `https://build.phonegap.com/apps`. 如果您正在等待应用程序显示，可以查看PhoneGap Build状态，网址为 `https://status.build.phonegap.com/`.
 
    有关安装内部版本的信息，请参阅 [PhoneGap Build文档](https://github.com/phonegap/phonegap-docs/tree/master/docs/4-phonegap-build).
 

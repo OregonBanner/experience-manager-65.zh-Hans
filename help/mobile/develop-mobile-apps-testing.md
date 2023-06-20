@@ -10,9 +10,9 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 5a98e1bd-f5c1-4f2f-ac02-dbd005dc1de7
 exl-id: e10e1904-7016-4eb0-9408-36297285f378
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 17d13e9b201629d9d1519fde4740cf651fe89d2c
 workflow-type: tm+mt
-source-wordcount: '1025'
+source-wordcount: '1023'
 ht-degree: 0%
 
 ---
@@ -46,7 +46,7 @@ ht-degree: 0%
 
 ## 手动测试 {#manual-testing}
 
-除了自动测试之外，您的应用程序还应经历一个手动测试周期。 脚本无法复制在实际设备上运行应用程序的客户。 在这里，您也有许多选择。 您可以使用诸如HockeyApp之类的平台来定义有权访问和收集反馈的人员。 或者，您可以将整个过程外包给UTest、ElusiveStars或Testn等服务。 如果您有一组内部测试人员，但缺少各种设备，则可以利用云服务对其设备池执行手动测试。 SauceLabs就是提供此服务的一种工具。 您还可以远程将应用程序构建到PhoneGap Enterprise，并作为验收测试或降级级别安装到本地设备上。 请参阅 [PhoneGap](https://phonegap.com/) 网站以了解其最新功能和文档。 无论采用何种方法，都应采用手动测试；
+除了自动测试之外，您的应用程序还应经历一个手动测试周期。 脚本无法复制在实际设备上运行应用程序的客户。 在这里，您也有许多选择。 您可以使用诸如HockeyApp之类的平台来定义有权访问和收集反馈的人员。 或者，您可以将整个过程外包给UTest、ElusiveStars或Testn等服务。 如果您有一组内部测试人员，但缺少各种设备，则可以利用云服务对其设备池执行手动测试。 SauceLabs就是提供此服务的一种工具。 您还可以远程将应用程序构建到PhoneGap Enterprise，并作为验收测试或降级级别安装到本地设备上。 查看PhoneGap (`https://phonegap.com/`)网站以了解其最新功能和文档。 无论采用何种方法，都应采用手动测试；
 
 * 击中了一大群测试者，
 * 针对大量设备进行测试（理想情况下是真实的设备，但如果真实的设备不可用，则为模拟器/模拟器），

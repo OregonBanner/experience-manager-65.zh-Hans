@@ -8,9 +8,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: 4a034e15-3394-4be3-9e8e-bc894668946a
 exl-id: fbeceb70-b199-478b-907b-253ed212ff99
-source-git-commit: 78c584db8c35ea809048580fe5b440a0b73c8eea
+source-git-commit: 17d13e9b201629d9d1519fde4740cf651fe89d2c
 workflow-type: tm+mt
-source-wordcount: '689'
+source-wordcount: '656'
 ht-degree: 0%
 
 ---
@@ -27,17 +27,17 @@ ht-degree: 0%
 
 ## Bootstrap开发环境 {#bootstrap-your-development-environment}
 
-[设置PhoneGap CLI](https://docs.phonegap.com/en/4.0.0/guide_cli_index.md.html#The%20Command-Line%20Interface)
+设置PhoneGap CLI (`https://docs.phonegap.com/en/4.0.0/guide_cli_index.md.html#The%20Command-Line%20Interface`)
 
 对于iOS：要针对iPhone和iPad进行开发，您需要Apple的Xcode IDE。
 
 * 免费下载 [此处](https://idmsa.apple.com/IDMSWebAuth/signin?appIdKey=891bd3417a7776362562d2197f89480a8547b108fd934911bcbea0110d07f757&amp;path=%2Fdownload%2F&amp;rv=1).
-* [PhoneGap iOS平台指南](https://docs.phonegap.com/en/4.0.0/guide_platforms_ios_index.md.html#iOS%20Platform%20Guide)
+* PhoneGap iOS平台指南(`https://docs.phonegap.com/en/4.0.0/guide_platforms_ios_index.md.html#iOS%20Platform%20Guide`)
 
 对于Android™：要针对iPhone和iPad进行开发，您需要Google的Android™ Stuido IDE。
 
 * 免费下载 [此处](https://developer.android.com/studio).
-* [PhoneGap Android™平台指南](https://docs.phonegap.com/en/4.0.0/guide_platforms_android_index.md.html#Android%20Platform%20Guide)
+* PhoneGap Android™平台指南(`https://docs.phonegap.com/en/4.0.0/guide_platforms_android_index.md.html#Android%20Platform%20Guide`)
 
 ## 下载源 {#download-the-source}
 
@@ -67,7 +67,7 @@ PhoneGap CLI可以通过单个命令创建平台项目、编译源以及部署�
 
 >[!NOTE]
 >
->您可以单独执行所有这些步骤，请参见 [PhoneGap CLI文档](https://phonegap.com/blog/2014/11/13/phonegap-cli-3-6-3/).
+>您可以单独完成所有这些步骤，请参阅PhoneGap CLI文档(`https://phonegap.com/blog/2014/11/13/phonegap-cli-3-6-3/`)。
 
 1. 确保您已安装PhoneGap CLI，请参阅上文。
 1. 在控制台（或终端）窗口中，导航到已提取源的根目录。
