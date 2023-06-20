@@ -11,7 +11,7 @@ discoiquuid: 4c53dfc0-25ca-419d-abfe-cf31fc6ebf61
 docset: aem65
 feature: Adaptive Forms
 exl-id: 9b4219b8-d5eb-4099-b205-d98d84e0c249
-source-git-commit: 4e6521f0d40fc10e016bf197d5b31033192e3214
+source-git-commit: 031c683029c61f8f49c07d276c27e05b3fcfd5fc
 workflow-type: tm+mt
 source-wordcount: '1915'
 ht-degree: 0%
@@ -40,9 +40,9 @@ AEM Forms用户可以使用Google的reCAPTCHA服务在自适应表单中实施CA
 
 ### 配置reCAPTCHA Enterprise  {#steps-to-implement-reCAPTCHA-enterprise-in-forms}
 
-1. 创建 [reCAPTCHA企业项目](https://cloud.google.com/reCAPTCHA-enterprise/docs/set-up-non-google-cloud-environments-api-keys#before-you-begin) 启用方式 [reCAPTCHA Enterprise API](https://cloud.google.com/reCAPTCHA-enterprise/docs/set-up-non-google-cloud-environments-api-keys#enable-the-reCAPTCHA-enterprise-api).
+1. 创建 [reCAPTCHA企业项目](https://cloud.google.com/recaptcha-enterprise/docs/set-up-non-google-cloud-environments-api-keys#before-you-begin) 启用方式 [reCAPTCHA Enterprise API](https://cloud.google.com/recaptcha-enterprise/docs/set-up-non-google-cloud-environments-api-keys#enable-the-recaptcha-enterprise-api).
 1. [获取](https://support.google.com/googleapi/answer/7014113?hl=en#:~:text=To%20locate%20your%20project%20ID,a%20member%20of%20are%20displayed) 项目ID
-1. 创建 [API密钥](https://cloud.google.com/reCAPTCHA-enterprise/docs/set-up-non-google-cloud-environments-api-keys#create_an_api_key) 和 [网站的站点密钥](https://cloud.google.com/reCAPTCHA-enterprise/docs/create-key#create-key).
+1. 创建 [API密钥](https://cloud.google.com/recaptcha-enterprise/docs/set-up-non-google-cloud-environments-api-keys#create_an_api_key) 和 [网站的站点密钥](https://cloud.google.com/recaptcha-enterprise/docs/create-key#create-key).
 1. 为云服务创建配置容器。
 
    1. 转到 **[!UICONTROL “工具”>“常规”>“配置浏览器”]**. 请参阅 [配置浏览器](/help/sites-administering/configurations.md) 文档，以了解更多信息。
@@ -60,7 +60,7 @@ AEM Forms用户可以使用Google的reCAPTCHA服务在自适应表单中实施CA
    1. 点按 **[!UICONTROL reCAPTCHA]**. 此时将打开“配置”页。 选择在上一步中创建的配置容器并点按 **[!UICONTROL 创建]**.
    1. 选择version作为reCAPTCHA Enterprise ，并为reCAPTCHA Enterprise服务指定名称、项目ID、站点密钥和API密钥（在步骤2和3中获得）。
    1. 选择密钥类型，则密钥类型应与在Google云项目中配置的站点密钥相同，例如， **复选框站点键** 或 **基于得分的网站密钥**.
-   1. 指定介于0到1之间的阈值分数([单击以了解有关得分的更多信息](https://cloud.google.com/reCAPTCHA-enterprise/docs/interpret-assessment#interpret_scores))。 分数大于或等于阈值分数标识人交互，否则被视为机器人交互。
+   1. 指定介于0到1之间的阈值分数([单击以了解有关得分的更多信息](https://cloud.google.com/recaptcha-enterprise/docs/interpret-assessment#interpret_scores))。 分数大于或等于阈值分数标识人交互，否则被视为机器人交互。
 
       > 注意:
       >
@@ -77,7 +77,7 @@ AEM Forms用户可以使用Google的reCAPTCHA服务在自适应表单中实施CA
 
 ## 配置Google reCAPTCHA v2 {#steps-to-implement-reCAPTCHA-v2-in-forms}
 
-1. 获取 [reCAPTCHA API密钥对](https://www.google.com/reCAPTCHA/admin) 来自Google的。 它包括 **站点密钥** 和 **密钥**.
+1. 获取 [reCAPTCHA API密钥对](https://www.google.com/recaptcha/admin) 来自Google的。 它包括 **站点密钥** 和 **密钥**.
 1. 为云服务创建配置容器。
    1. 转到 **[!UICONTROL “工具”>“常规”>“配置浏览器”]**. 请参阅 [配置浏览器](/help/sites-administering/configurations.md) 文档，以了解更多信息。
    1. 执行以下操作可为云配置启用全局文件夹，或跳过此步骤为云服务配置创建和配置其他文件夹。
