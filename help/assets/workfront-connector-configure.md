@@ -5,7 +5,7 @@ role: Admin
 feature: Integrations
 exl-id: 2660de7c-0281-4884-98d9-e78f20cf571c
 hide: true
-source-git-commit: 3d5e9ad8ee19756b05e5a77a3f748bc647fcf734
+source-git-commit: 39930967e2f423b7fbbc79bcb85f78d15809e97d
 workflow-type: tm+mt
 source-wordcount: '1737'
 ht-degree: 1%
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 | 版本 | 文章链接 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/integrations/workfront-connector-configure.html?lang=en) |
+| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets-view/integrations/workfront-connector-configure.html?lang=en) |
 | AEM 6.5 | 本文 |
 
 在中具有管理员访问权限的用户 [!DNL Adobe Experience Manager] 在安装增强型连接器后对其进行配置。 有关安装说明，请参阅 [安装连接器](/help/assets/workfront-integrations.md).
@@ -27,10 +27,9 @@ ht-degree: 1%
 >
 >* Adobe可能会将更新发布到 [!DNL Adobe Workfront] 和 [!DNL Adobe Experience Manager] 使此连接器成为冗余连接器；如果发生这种情况，客户可能需要从使用此连接器过渡。
 >
->* Adobe支持增强型连接器版本1.7.4及更高版本。 不支持以前的预发行版和自定义版本。 要检查增强型连接器版本，请导航至 `digital.hoodoo` 组在左窗格中可用 [包管理器](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html?lang=zh-Hans).
+>* Adobe支持增强型连接器版本1.7.4及更高版本。 不支持以前的预发行版和自定义版本。 要检查增强型连接器版本，请导航至 `digital.hoodoo` 组在左窗格中可用 [包管理器](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html?lang=en).
 >
 >* 参见 [Workfront for Experience Manager Assets增强型连接器的合作伙伴认证考试](https://solutionpartners.adobe.com/solution-partners/home/applications/experience_cloud/workfront/journey/dev_core.html). 有关考试的信息，请参见 [考试指南](https://express.adobe.com/page/Tc7Mq6zLbPFy8/).
-
 
 ## 配置事件订阅 {#event-subscriptions}
 
@@ -46,7 +45,7 @@ ht-degree: 1%
 * 选择 [!UICONTROL Workfront自定义集成] 您在第6节中创建了。
 * 单击 [!UICONTROL 启用Workfront事件订阅].
 
-   ![事件订阅](/help/assets/assets/event-subs.png)
+  ![事件订阅](/help/assets/assets/event-subs.png)
 
 ## 配置链接的文件夹 {#linked-folders}
 
