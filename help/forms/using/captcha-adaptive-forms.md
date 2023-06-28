@@ -11,7 +11,7 @@ discoiquuid: 4c53dfc0-25ca-419d-abfe-cf31fc6ebf61
 docset: aem65
 feature: Adaptive Forms
 exl-id: 9b4219b8-d5eb-4099-b205-d98d84e0c249
-source-git-commit: 031c683029c61f8f49c07d276c27e05b3fcfd5fc
+source-git-commit: 294a7de1c777c49acf8590ec0900b0342f01e7eb
 workflow-type: tm+mt
 source-wordcount: '1915'
 ht-degree: 0%
@@ -75,7 +75,7 @@ AEM Forms用户可以使用Google的reCAPTCHA服务在自适应表单中实施CA
 ![reCAPTCHA Enterprise](/help/forms/using/assets/recaptcha1-enterprise.png)
 
 
-## 配置Google reCAPTCHA v2 {#steps-to-implement-reCAPTCHA-v2-in-forms}
+### 配置Google reCAPTCHA v2 {#steps-to-implement-reCAPTCHA-v2-in-forms}
 
 1. 获取 [reCAPTCHA API密钥对](https://www.google.com/recaptcha/admin) 来自Google的。 它包括 **站点密钥** 和 **密钥**.
 1. 为云服务创建配置容器。
