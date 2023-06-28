@@ -2,9 +2,10 @@
 title: Assets HTTP API中的Adobe Experience Manager内容片段支持
 description: 了解Assets HTTP API中对内容片段的支持，这是AEM Headless投放功能的重要部分。
 feature: Content Fragments,Assets HTTP API
+role: Developer
 exl-id: 0f9efb47-a8d1-46d9-b3ff-a6c0741ca138
 hide: true
-source-git-commit: 3d5e9ad8ee19756b05e5a77a3f748bc647fcf734
+source-git-commit: 48131c5accfe73b83197bd581ed5a22bc4890a56
 workflow-type: tm+mt
 source-wordcount: '1957'
 ht-degree: 24%
@@ -38,7 +39,7 @@ ht-degree: 24%
 
 例如，基于框架或自定义的单页应用程序(SPA)需要通过HTTP API提供的内容，通常采用JSON格式。
 
-While [AEM核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans) 提供非常全面、灵活且可自定义的API，该API可为此目的提供所需的读取操作，并且其JSON输出可自定义，因此它们确实需要AEM WCM（Web内容管理）专门知识才能实施，因为它们必须托管在基于专用AEM模板的页面中。 并非每个SPA开发组织都能直接获得这些知识。
+While [AEM核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) 提供非常全面、灵活且可自定义的API，该API可为此目的提供所需的读取操作，并且其JSON输出可自定义，因此它们确实需要AEM WCM（Web内容管理）专门知识才能实施，因为它们必须托管在基于专用AEM模板的页面中。 并非每个SPA开发组织都能直接获得这些知识。
 
 此时可以使用Assets REST API。 它允许开发人员直接访问资产（例如图像和内容片段），而无需先将资产嵌入页面，然后以序列化JSON格式交付其内容。
 
@@ -76,7 +77,6 @@ Assets REST API提供 [REST](https://en.wikipedia.org/wiki/Representational_stat
 >
 >* `/api/assets`**不**&#x200B;需要使用 `.model` 选择器。
 >* `/content/path/to/page`**需要**&#x200B;使用 `.model` 选择器。
-
 
 HTTP 方法决定了要执行的操作：
 
@@ -155,7 +155,6 @@ HTTP 方法决定了要执行的操作：
 >* [已说明 CORS/AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html)
 >* [视频 – 使用 AEM 针对 CORS 进行开发](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/develop-for-cross-origin-resource-sharing.html)
 >
-
 
 在具有特定身份验证要求的环境中，建议使用OAuth。
 
@@ -331,49 +330,52 @@ A [内容片段](/help/assets/content-fragments/content-fragments.md) 是一种�
 
 * **500** （内部服务器错误）
 
-   >[!NOTE]
-   >
-   >返回此错误：
-   >
-   >* 当发生无法使用特定代码标识的错误时
-   >* 当给定的有效负载无效时
+  >[!NOTE]
+  >
+  >返回此错误：
+  >
+  >* 当发生无法使用特定代码标识的错误时
+  >* 当给定的有效负载无效时
 
-
-   下面列出了返回此错误状态并生成错误消息（等宽）的常见情况：
+  下面列出了返回此错误状态并生成错误消息（等宽）的常见情况：
 
    * 父文件夹不存在（在通过创建内容片段时） `POST`)
    * 未提供内容片段模型（缺少cq：model）、无法读取（由于路径无效或权限问题）或没有有效的片段模型：
 
       * `No content fragment model specified`
       * `Cannot create a resource of given model '/foo/bar/qux'`
+
    * 无法创建内容片段（可能是权限问题）：
 
       * `Could not create content fragment`
+
    * 无法更新标题和/或描述：
 
       * `Could not set value on content fragment`
+
    * 无法设置元数据：
 
       * `Could not set metadata on content fragment`
+
    * 无法找到或无法更新内容元素
 
       * `Could not update content element`
       * `Could not update fragment data of element`
 
-   详细错误消息通常以下列方式返回：
+  详细错误消息通常以下列方式返回：
 
-   ```xml
-   {
-     "class": "core/response",
-     "properties": {
-       "path": "/api/assets/foo/bar/qux",
-       "location": "/api/assets/foo/bar/qux.json",
-       "parentLocation": "/api/assets/foo/bar.json",
-       "status.code": 500,
-       "status.message": "...{error message}.."
-     }
-   }
-   ```
+  ```xml
+  {
+    "class": "core/response",
+    "properties": {
+      "path": "/api/assets/foo/bar/qux",
+      "location": "/api/assets/foo/bar/qux.json",
+      "parentLocation": "/api/assets/foo/bar.json",
+      "status.code": 500,
+      "status.message": "...{error message}.."
+    }
+  }
+  ```
 
 ## API 引用 {#api-reference}
 
