@@ -1,8 +1,6 @@
 ---
 title: 使用应用程序控制台创建和编辑应用程序
-seo-title: Creating and Editing Apps Using the Apps Console
 description: 关注此页面，了解如何使用应用程序控制台创建和编辑应用程序。
-seo-description: Follow this page to learn about creating and editing apps using apps console.
 uuid: 4f7db978-ae2b-4ca6-89f1-26e091d9140a
 contentOwner: User
 content-type: reference
@@ -10,9 +8,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: 9890d045-cead-4d70-b797-95319284e0d8
 exl-id: 49e0b3f6-7ac7-4417-9c31-cc3d3c2305f3
-source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
+source-git-commit: 4fd5e9a1bc603202ee52e85a1c09125b13cec315
 workflow-type: tm+mt
-source-wordcount: '2615'
+source-wordcount: '2695'
 ht-degree: 0%
 
 ---
@@ -21,7 +19,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe建议对需要基于单页应用程序框架的客户端渲染（例如React）的项目使用SPA编辑器。 [了解详情](/help/sites-developing/spa-overview.md).
+>对于需要基于单页应用程序框架的客户端渲染（例如React）的项目，Adobe建议使用SPA编辑器。 [了解详情](/help/sites-developing/spa-overview.md).
 
 AEM移动应用程序开发过程认识到，拥有不同专业知识的用户对移动应用程序的开发做出了贡献。 以下流程图说明了内容作者和应用程序开发人员执行任务的一般顺序。
 
@@ -62,7 +60,7 @@ AEM Mobile提供了用于创建移动应用程序的Phonegap应用程序Blueprin
 
 ### 主页 {#the-home-page}
 
-打开应用程序时，将显示应用程序语言变体的home页或index.html页。主页为用户提供了指向应用程序中各个页面的链接菜单。 段落系统允许您向页面添加组件以创建内容。
+打开应用程序时，将显示应用程序语言变体的Home页或index.html页。 主页为用户提供了一个菜单，其中包含指向应用程序中各个页面的链接。 段落系统允许您向页面添加组件以创建内容。
 
 ## 创建移动应用程序 {#creating-a-mobile-application}
 
@@ -89,9 +87,9 @@ AEM Mobile提供了用于创建移动应用程序的Phonegap应用程序Blueprin
 以下过程使用触屏UI创建移动应用程序。
 
 1. 在边栏上，单击应用程序。
-1. 单击或点按“创建”图标。
+1. 单击创建图标。
 
-   ![](do-not-localize/chlimage_1-7.png)
+   ![正方形内由加号表示的“创建”图标。](do-not-localize/chlimage_1-7.png)
 
 1. （可选）在高级选项卡上，提供应用程序的说明，并根据需要更改服务器URL。
 1. （可选）如果使用PhoneGap Build编译应用程序，请在“生成”选项卡上选择要使用的配置。
@@ -114,30 +112,30 @@ AEM Mobile提供了用于创建移动应用程序的Phonegap应用程序Blueprin
 1. 在边栏上，单击或点按应用程序。
 1. 选择要配置的应用程序，然后单击查看页面属性图标。
 
-   ![](do-not-localize/chlimage_1-8.png)
+   ![圆圈中的字母I表示的“查看页面属性”图标。](do-not-localize/chlimage_1-8.png)
 
 1. 要更改属性值，请单击或点按编辑图标。
 
-   ![](do-not-localize/chlimage_1-9.png)
+   ![铅笔指示的“编辑”图标。](do-not-localize/chlimage_1-9.png)
 
 1. 配置基本和高级属性，然后单击或点按完成图标。
 
-   ![](do-not-localize/chlimage_1-10.png)
+   ![由复选标记符号指示的“完成”图标。](do-not-localize/chlimage_1-10.png)
 
 #### 配置应用程序的语言变体 {#configure-a-language-variation-of-the-application}
 
-1. 在边栏上，单击或点按应用程序。
-1. 单击以深入查看要在应用程序管理控制台中编辑的移动应用程序。 选择要配置的应用程序的语言版本，然后单击查看应用程序属性图标。
+1. 在边栏上，单击应用程序。
+1. 单击以深入查看要在应用程序Admin Console中编辑的移动应用程序。 选择要配置的应用程序的语言版本，然后单击查看应用程序属性图标。
 
-   ![](do-not-localize/chlimage_1-11.png)
+   ![圆圈中的字母I表示的“查看应用程序属性”图标。](do-not-localize/chlimage_1-11.png)
 
 1. 要更改属性值，请单击或点按编辑图标。
 
-   ![](do-not-localize/chlimage_1-12.png)
+   ![铅笔指示的“编辑”图标。](do-not-localize/chlimage_1-12.png)
 
 1. 在“基本”、“高级”、“生成”和“Analytics”选项卡上配置属性，然后单击或点按完成图标。
 
-   ![](do-not-localize/chlimage_1-13.png)
+   ![由复选标记符号指示的“完成”图标。](do-not-localize/chlimage_1-13.png)
 
 ### 创作移动应用程序的内容 {#authoring-the-content-of-a-mobile-application}
 
@@ -167,7 +165,7 @@ AEM发布实例上的内容同步缓存用作移动设备应用程序的内容�
 1. 在边栏上，单击或点按应用程序，然后单击或点按您的应用程序。
 1. 选择启动页面，然后单击或点按更新缓存图标。
 
-   ![](do-not-localize/chlimage_1-14.png)
+   ![“更新缓存”图标由一个带条状的条形图指示，上面有一个循环符号。](do-not-localize/chlimage_1-14.png)
 
 ### 使用应用程序模板 {#using-app-templates}
 
@@ -222,7 +220,7 @@ Geometrixx Outdoors应用程序是一个PhoneGap示例应用程序，用于演�
 移动设备应用程序的每个页面都包含以下功能：
 
 * 用于返回到父页面的返回按钮。 请注意，“Home page（主页）”上不显示“back（上一步）”按钮。
-* 一个可扩展的边栏，提供命令和链接菜单：
+* 提供命令和链接菜单的消耗性边栏：
 
    * 打开“位置”页面。
    * 打开购物车。
@@ -251,7 +249,7 @@ Geometrixx Outdoors应用程序是一个PhoneGap示例应用程序，用于演�
 
 ### “产品”页面 — Geometrixx移动应用程序 {#the-products-page-geometrixx-mobile-app}
 
-产品页面及其子页面的层次结构实施产品页面的分类系统。 层次结构的每个分支中的最低页面是包含ng Product组件的产品页面。
+“产品”页面及其子页面的层次结构实施产品页面的分类系统。 层次结构的每个分支中的最低页面是包含ng Product组件的产品页面。
 
 应用程序用户无法使用“产品”页面。 通过“齿轮”页面可访问每个产品页面。
 
@@ -269,7 +267,7 @@ Geometrixx Outdoors应用程序是一个PhoneGap示例应用程序，用于演�
 
 ### “关于我们”页面 — Geometrixx移动应用程序 {#the-about-us-page-geometrixx-mobile-app}
 
-“关于我们”页包含多个双列行组件。 每列都包含一个图像组件或文本组件。 组件是可编辑的，并且段落系统允许您添加组件。
+“关于我们”页包含两个列行组件。 每列都包含一个图像组件或文本组件。 组件是可编辑的，并且段落系统允许您添加组件。
 
 使用应用程序时，可通过英语页面上的轮盘访问“关于我们”页面。
 
@@ -281,7 +279,7 @@ Geometrixx Outdoors应用程序是一个PhoneGap示例应用程序，用于演�
 
 ## 示例移动组件 {#sample-mobile-components}
 
-在创作移动应用程序的页面时，Sidekick中可立即使用几个组件。 这些组件属于PhoneGap组件组。
+在创作移动应用程序的页面时，Sidekick中会立即提供几个组件。 这些组件属于PhoneGap组件组。
 
 ### 轻扫传送 {#swipe-carousel}
 

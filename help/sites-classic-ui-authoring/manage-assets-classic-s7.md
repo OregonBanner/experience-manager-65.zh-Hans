@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: dc0191d0-f181-4e1e-b3f4-73427aa22073
 docset: aem65
 exl-id: bc9c864b-8bc3-42b4-ba25-6c5108be4f65
-source-git-commit: f4b7566abfa0a8dbb490baa0e849de6c355a3f06
+source-git-commit: 4fd5e9a1bc603202ee52e85a1c09125b13cec315
 workflow-type: tm+mt
-source-wordcount: '3511'
+source-wordcount: '3532'
 ht-degree: 0%
 
 ---
@@ -49,6 +49,7 @@ ht-degree: 0%
 >[!NOTE]
 >
 >Experience Manager以异步方式发布到Dynamic Media Classic (Scene7)。 选择后 **[!UICONTROL Publish]**，您的资源可能需要几秒钟才能发布到Dynamic Media Classic (Scene7)。
+>
 
 ### 从Assets控制台发布 {#publishing-from-the-assets-console}
 
@@ -205,7 +206,7 @@ Adobe建议仅从Dynamic Media Classic (Scene7)目标文件夹中的资源将资
 
 资产底部有缩放工具。 选择 **[!UICONTROL +]** 放大。 选择 **[!UICONTROL -]** 减少。 选择 **[!UICONTROL x]** 或者使用重置缩放箭头将图像恢复为导入图像的原始大小。 选择对角线箭头，以便全屏显示。 选择 **[!UICONTROL 编辑]** 以便配置组件。 通过此组件，您可以配置 [所有Dynamic Media Classic (Scene7)组件的通用设置](#settings-common-to-all-scene-components).
 
-![](do-not-localize/chlimage_1-3.png)
+![HTML5缩放组件中的郁金香花朵图像。](do-not-localize/chlimage_1-3.png)
 
 ### 弹出 {#flyout}
 
@@ -223,7 +224,7 @@ Adobe建议仅从Dynamic Media Classic (Scene7)目标文件夹中的资源将资
 
 Dynamic Media Classic (Scene7)图像组件允许您将Dynamic Media Classic (Scene7)功能添加到图像，例如Dynamic Media Classic (Scene7)修饰符、图像或查看器预设和锐化。 Dynamic Media Classic (Scene7)图像组件类似于通过特殊的Dynamic Media Classic (Scene7)功能Experience Manager的其他图像组件。 在此示例中，图像具有Dynamic Media Classic (Scene7) URL修饰符， `&op_invert=1` 已应用。
 
-![](do-not-localize/chlimage_1-4.png)
+![Dynamic Media Classic (Scene 7)图像组件中的球体图像](do-not-localize/chlimage_1-4.png)
 
 **标题，替换文本**  — 在“高级”选项卡中，为已关闭图形的用户添加图像标题和替换文本。
 
@@ -331,16 +332,15 @@ Dynamic Media Classic (Scene7)内容浏览器允许您直接在Experience Manage
 >* 时间 [已启用安全预览](/help/sites-administering/scene7.md#configuring-the-state-published-unpublished-of-assets-pushed-to-scene)中，Dynamic Media Classic (Scene7)上已发布和未发布的资源都会显示在Dynamic Media Classic (Scene7)内容浏览器中。
 >* 如果您没有看到 **[!UICONTROL Dynamic Media Classic (Scene7)]** 或 **[!UICONTROL S7]** 图标作为内容浏览器中的选项，您必须 [配置Dynamic Media Classic (Scene7)以使用Experience Manager](/help/sites-administering/scene7.md).
 >* 对于视频，Dynamic Media Classic (Scene7)内容浏览器支持：
-   >   * 自适应视频集：包含跨多个屏幕无缝播放所需的所有视频演绎版的容器
-   >   * 单个MP4视频
-   >   * 单个F4V视频
-
+>   * 自适应视频集：包含跨多个屏幕无缝播放所需的所有视频演绎版的容器
+>   * 单个MP4视频
+>   * 单个F4V视频
 
 ### 浏览内容 {#browsing-content-in-the-classic-ui}
 
 通过在Dynamic Media Classic (Scene7)中选择 **[!UICONTROL S7]** 选项卡。
 
-您可以通过选择配置来更改正在访问的配置。 文件夹会根据您选择的配置而发生更改。
+您可以通过选择配置来更改正在访问的配置。 文件夹会根据所选配置而更改。
 
 ![chlimage_1-64](assets/chlimage_1-64.png)
 
@@ -357,7 +357,6 @@ Dynamic Media Classic (Scene7)内容浏览器允许您直接在Experience Manage
 >* 单个F4V视频
 >
 
-
 ### 使用内容浏览器搜索Dynamic Media Classic (Scene7)资源 {#searching-for-scene-assets-with-the-content-browser}
 
 搜索Dynamic Media Classic (Scene7)资源与搜索Experience Manager资源类似。 但有一个例外，即当您搜索时，您实际上会看到Dynamic Media Classic (Scene7)系统中资源的远程视图，而不是直接将资源导入Experience Manager。
@@ -366,11 +365,11 @@ Dynamic Media Classic (Scene7)内容浏览器允许您直接在Experience Manage
 
 在任一UI中搜索时，您可以按以下条件进行筛选（如触屏优化UI中此处所示）：
 
-**输入关键字**  — 您可以按名称搜索资源。 在搜索关键字时，您输入的是文件名开头为。 例如，键入“swimming”一词会查找任何以相应顺序的字母开头的资产文件名。 在键入搜索词以查找资源后，请务必选择Enter。
+**输入关键字**  — 您可以按名称搜索资源。 在搜索关键字时，您输入的是文件名开头为。 例如，键入“swimming”一词会查找任何以相应顺序的字母开头的资产文件名。 确保选择 `Enter` 键入搜索词以查找资源后。
 
 ![chlimage_1-65](assets/chlimage_1-65.png)
 
-**文件夹/路径**  — 文件夹的名称基于您选择的配置。 通过选择文件夹图标并选择子文件夹，然后选择复选标记以将其选中，可以向下钻取到更低级别。
+**文件夹/路径**  — 文件夹名称基于您选择的配置。 通过选择文件夹图标并选择子文件夹，然后选择复选标记以将其选中，可以向下钻取到更低级别。
 
 如果输入关键字并选择文件夹，则Experience Manager将搜索该文件夹及其所有子文件夹。 但是，如果在搜索时未输入任何关键字，则选择该文件夹只会显示该文件夹中的资产，而不包括任何子文件夹。
 
@@ -397,7 +396,6 @@ Dynamic Media Classic (Scene7)内容浏览器允许您直接在Experience Manage
 >* 搜索视频时，您搜索的是单个演绎版。 结果将返回原始演绎版(仅 &#42;.mp4)和编码的演绎版。
 >* 搜索自适应视频集时，您将搜索文件夹和所有子文件夹，但前提是已向搜索添加了关键词。 如果尚未添加关键字，则Experience Manager不会搜索子文件夹。
 >
-
 
 **发布状态**  — 您可以根据发布状态筛选资产：未发布或已发布。 如果未选择任何发布状态，则Experience Manager会默认搜索所有发布状态。
 

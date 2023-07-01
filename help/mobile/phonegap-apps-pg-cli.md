@@ -8,9 +8,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: 4a034e15-3394-4be3-9e8e-bc894668946a
 exl-id: fbeceb70-b199-478b-907b-253ed212ff99
-source-git-commit: 17d13e9b201629d9d1519fde4740cf651fe89d2c
+source-git-commit: 4fd5e9a1bc603202ee52e85a1c09125b13cec315
 workflow-type: tm+mt
-source-wordcount: '656'
+source-wordcount: '666'
 ht-degree: 0%
 
 ---
@@ -89,10 +89,10 @@ phonegap run ios
 >1. 导航到此新文件夹（cd测试）
 >1. 运行 `phonegap create helloWorld`
 >1. 导航到helloWorld (cd helloWorld)
->1. 运行 `phonegap run android` (或将android替换为iOS，如上所述)。
->1. 运行新创建的PhoneGap应用程序时，模拟器会打开，并显示“设备就绪”（如果到本机的JavaScript桥接器可运行）。
+>1. 运行 `phonegap run android` (或将Android™替换为iOS，如上所述)。
+1. 运行新创建的PhoneGap应用程序时，模拟器会打开，并显示“设备就绪”（如果到本机的JavaScript桥接器可运行）。
 >
->此故障诊断验证您的PhoneGap CLI开发环境是否正常运行。
+此故障诊断验证您的PhoneGap CLI开发环境是否正常运行。
 
 ## 使用Safari和IOS调试JavaScript {#debug-javascripts-with-safari-and-ios-debug}
 
@@ -147,13 +147,13 @@ phonegap run <platform> --emulator
 
 ![chlimage_1-49](assets/chlimage_1-49.png)
 
-* 使用控制按钮可继续执行、逐步、逐步执行或逐步退出方法：
+* 使用控制按钮可继续执行、逐步、逐步执行和逐步退出方法：
 
-![](do-not-localize/chlimage_1-4.png)
+![将五个功能不同的控制按钮对齐到水平行。](do-not-localize/chlimage_1-4.png)
 
 >[!NOTE]
 >
->要查看变量值，请在当前方法中将鼠标悬停在光标上。
+要查看变量值，请在当前方法中将鼠标悬停在光标上。
 
 ## 后续步骤 {#the-next-steps}
 

@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: de321869-ebf9-41a1-8203-e12bdb088678
 docset: aem65
 exl-id: e1b5aea0-983c-4e7b-9d35-d7beeee45dc7
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
+source-git-commit: 4fd5e9a1bc603202ee52e85a1c09125b13cec315
 workflow-type: tm+mt
-source-wordcount: '1755'
+source-wordcount: '1836'
 ht-degree: 13%
 
 ---
@@ -207,19 +207,19 @@ Sidekick是创作页面时的关键工具。 在创作页面时，它会浮动�
 
 Sidekick的底部边框中有两个图标，它们对预览页面很重要：
 
-![](do-not-localize/chlimage_1-5.png)
+![侧栏的底部边框，水平行包含七个图标。 行开头的两个图标（编辑图标和预览模式图标）分别由铅笔符号和放大镜符号表示。](do-not-localize/chlimage_1-5.png)
 
 * 铅笔图标显示您当前处于编辑模式，您可以在其中添加、修改、移动或删除内容。
 
-   ![](do-not-localize/chlimage_1-6.png)
+  ![铅笔符号指示的编辑图标。](do-not-localize/chlimage_1-6.png)
 
 * 放大镜图标允许您选择预览模式，其中页面会显示在发布环境中（有时还需要刷新页面）：
 
-   ![](do-not-localize/chlimage_1-7.png)
+  ![由放大镜符号指示的预览模式图标。](do-not-localize/chlimage_1-7.png)
 
-   在预览模式下，Sidekick将被减小，单击向下箭头图标以返回编辑模式：
+  在预览模式下，Sidekick将被减小，单击向下箭头图标以返回编辑模式：
 
-   ![](do-not-localize/chlimage_1-8.png)
+  ![以AEM为标题的条形图，标题右侧显示一个编辑模式图标，该图标由向下箭头符号指示。](do-not-localize/chlimage_1-8.png)
 
 ## 查找并替换 {#find-replace}
 
@@ -286,7 +286,6 @@ AEM存储您执行的操作的历史记录以及执行操作的顺序。 因此�
 >* 撤消最多20个编辑操作（默认设置）。
 >* 还使用 [键盘快捷键](/help/sites-classic-ui-authoring/classic-page-author-keyboard-shortcuts.md) 用于撤消和重做。
 >
-
 
 可以对以下类型的页面更改使用撤消和重做：
 

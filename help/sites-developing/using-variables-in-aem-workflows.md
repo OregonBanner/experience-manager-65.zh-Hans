@@ -8,9 +8,9 @@ content-type: reference
 discoiquuid: bbb9936e-ecd2-44b3-b4ae-dd62a3160641
 docset: aem65
 exl-id: c8aeceec-860c-49ee-b681-d7107e52020d
-source-git-commit: 936b636819eaef595fcdf9f1f3446d4ac0c28b2f
+source-git-commit: 4fd5e9a1bc603202ee52e85a1c09125b13cec315
 workflow-type: tm+mt
-source-wordcount: '2048'
+source-wordcount: '2096'
 ht-degree: 0%
 
 ---
@@ -62,7 +62,7 @@ ht-degree: 0%
    * 表单数据模型 — 指定表单数据模型路径。
    * ArrayList — 指定集合的子类型。
 
-1. 为变量指定可选描述，然后点按 ![](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/chart-component/Done_Icon.png) 以保存更改。 变量显示在左窗格中可用的列表中。
+1. 为变量指定可选描述，然后点按 ![框内复选标记指示的保存图标。](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/chart-component/Done_Icon.png) 以保存更改。 变量显示在左窗格中可用的列表中。
 
 在创建变量时，请考虑以下实践：
 
@@ -92,10 +92,10 @@ ht-degree: 0%
 要添加变量之间的映射，请执行以下操作：
 
 1. 在工作流编辑页面上，点按工作流模型Sidekick中可用的步骤图标。
-1. 拖放 **设置变量** 步骤到工作流编辑器，点按该步骤，然后选择 ![](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/configure_icon.png) （配置）。
+1. 拖放 **设置变量** 步骤到工作流编辑器，点按该步骤，然后选择 ![“配置”图标，由扳手指示。](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/configure_icon.png) (配置).
 1. 在设置变量对话框中，选择 **[!UICONTROL 映射]** > **[!UICONTROL 添加映射]**.
 1. 在 **映射变量** 部分，选择要存储数据的变量，选择映射模式，然后指定要存储在变量中的值。 映射模式因变量类型而异。
-1. 映射更多变量，以便生成有意义的表达式。 点按 ![](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/chart-component/Done_Icon.png) 以保存更改。
+1. 映射更多变量，以便生成有意义的表达式。 点按 ![框内复选标记指示的保存图标。](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/chart-component/Done_Icon.png) 以保存更改。
 
 ### 示例1：查询XML变量以设置字符串变量的值 {#example-query-an-xml-variable-to-set-value-for-a-string-variable}
 
@@ -250,8 +250,8 @@ workflowSession.startWorkflow(model, wfData, metaData);
 ## 编辑变量 {#edit-a-variable}
 
 1. 在编辑工作流页面上，点按工作流模型Sidekick中可用的“变量”图标。 左窗格中的“变量”部分显示所有现有变量。
-1. 点按 ![](https://helpx.adobe.com/content/dam/help/images/en/edit.png) （编辑）图标。
-1. 编辑变量信息并点按 ![](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/chart-component/Done_Icon.png) 以保存更改。 您无法编辑 **[!UICONTROL 名称]** 和 **[!UICONTROL 类型]** 变量对应的字段。
+1. 点按 ![铅笔符号指示的编辑图标。](https://helpx.adobe.com/content/dam/help/images/en/edit.png) （编辑）图标。
+1. 编辑变量信息并点按 ![由复选标记指示的保存图标。](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/chart-component/Done_Icon.png) 以保存更改。 您无法编辑 **[!UICONTROL 名称]** 和 **[!UICONTROL 类型]** 变量对应的字段。
 
 ## 删除变量 {#delete-a-variable}
 
@@ -261,4 +261,4 @@ workflowSession.startWorkflow(model, wfData, metaData);
 
 1. 在编辑工作流页面上，点按工作流模型Sidekick中可用的“变量”图标。 左窗格中的“变量”部分显示所有现有变量。
 1. 点按要删除的变量名称旁边的删除图标。
-1. 点按 ![](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/chart-component/Done_Icon.png) 以确认和删除变量。
+1. 点按 ![由复选标记符号指示的“完成”图标。](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/chart-component/Done_Icon.png) 以确认和删除变量。

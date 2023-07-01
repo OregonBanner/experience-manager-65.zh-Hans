@@ -1,8 +1,6 @@
 ---
 title: 创建功能全面的网站(JSP)
-seo-title: Create a Fully-Featured Website (JSP)
 description: 通过本教程，您可以使用AEM创建一个功能齐全的网站
-seo-description: This tutorial enables you to create a fully featured website with AEM
 uuid: ec76ad5e-af6c-43ad-ae57-a4ae4ac7029f
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,7 +9,7 @@ content-type: reference
 discoiquuid: 90bc05c9-e971-4e75-bc07-5e137c6c913e
 docset: aem65
 exl-id: d7cf843c-c837-4b97-b6c5-0fbd6793bdd4
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 4fd5e9a1bc603202ee52e85a1c09125b13cec315
 workflow-type: tm+mt
 source-wordcount: '4935'
 ht-degree: 2%
@@ -24,7 +22,7 @@ ht-degree: 2%
 >
 >本文介绍了如何使用JSP并基于经典UI创建网站。 Adobe建议为您的网站使用最新的AEM技术，如文章中详细介绍 [AEM Sites开发入门](/help/sites-developing/getting-started.md).
 
-通过本教程，您可以使用Adobe Experience Manager (AEM)创建一个功能齐全的网站。 该网站将基于通用网站，主要面向Web开发人员。 所有开发都将在创作环境中进行。
+通过本教程，您可以使用Adobe Experience Manager (AEM)创建一个功能齐全的网站。 该网站将基于通用网站，主要面向Web开发人员。 所有开发都在创作环境中进行。
 
 本教程介绍如何：
 
@@ -293,8 +291,8 @@ ht-degree: 2%
       * **名称：** sling：resourceSuperType
       * **类型：** 字符串
       * **值：** foundation/components/page
-   1. 单击全部保存。
 
+   1. 单击全部保存。
 
 1. 打开 `contentpage.jsp` 文件位于 `/apps/mywebsite/components/contentpage` 和将现有代码替换为以下代码：
 
@@ -313,7 +311,7 @@ ht-degree: 2%
 
    ![chlimage_1-1](assets/chlimage_1-1.jpeg)
 
-   打开页面源以查看head.jsp和body.jsp脚本生成的javascript和HTML元素。 以下脚本片段将在您打开页面时打开Sidekick：
+   打开页面源以查看head.jsp和body.jsp脚本生成的javascript和HTML元素。 打开页面时，以下脚本片段将Sidekick打开：
 
    ```java
    CQ.WCM.launchSidekick("/content/mywebsite/en/products",
@@ -481,7 +479,7 @@ ht-degree: 2%
 页面组件定义属性，这些属性使您能够为页面提供字幕。 添加提供有关页面内容信息的字幕。
 
 1. 在浏览器中，打开 **产品** 页面。
-1. 在Sidekick **页面** 选项卡，单击 **页面属性**.
+1. 在Sidekick上 **页面** 选项卡，单击 **页面属性**.
 1. 在对话框的“基本”选项卡上，展开 **更多标题和描述，** 和 **字幕** 属性，类型 **我们的工作**. 单击&#x200B;**确定**。
 1. 重复上述步骤以添加字幕 **关于我们的服务** 到 **服务** 页面。
 1. 重复上述步骤以添加字幕 **我们获得的信任** 到 **客户** 页面。
@@ -524,9 +522,9 @@ ht-degree: 2%
 
 1. 将以下代码复制到 `navimage.png.java.`该代码扩展AbstractImageServlet类：
 
-   * [AbstractImageServlet](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/commons/AbstractImageServlet.html) 创建用于存储当前资源属性的ImageContext对象。
+   * [AbstractImageServlet](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/commons/AbstractImageServlet.html) 创建用于存储当前资源属性的ImageContext对象。
    * 资源的父页面从ImageContext对象中提取。 然后获取页面标题和字幕。
-   * [ImageHelper](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/ImageHelper.html) 用于从站点设计的navimage_bg.jpg文件、页面标题和页面子标题生成图像。
+   * [ImageHelper](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/commons/ImageHelper.html) 用于从站点设计的navimage_bg.jpg文件、页面标题和页面子标题生成图像。
 
    ```java
    package apps.mywebsite.components.contentpage;
@@ -679,6 +677,7 @@ ht-degree: 2%
       * 名称: `jcr:description`
       * 类型: `String`
       * 价值: `This is a description of the Product 1!.`
+
    1. 单击 **添加**.
    1. 在 **属性** 选项卡，使用以下值创建另一个属性：
 
@@ -686,9 +685,8 @@ ht-degree: 2%
       * 类型：字符串
       * 值：2008年2月14日
       * 单击“添加”。
+
    1. 单击全部保存。
-
-
 
 1. 在CRXDE Lite中，设置“产品2”页面的说明和日期：
 
@@ -698,6 +696,7 @@ ht-degree: 2%
       * 名称：jcr：description
       * 类型：字符串
       * 值：这是对产品2的说明！。
+
    1. 单击 **添加**.
    1. 在同一文本框中，将先前的值替换为以下值：
 
@@ -705,9 +704,8 @@ ht-degree: 2%
       * 类型：字符串
       * 值：2012年5月11日
       * 单击“添加”。
+
    1. 单击全部保存。
-
-
 
 #### 创建列表子组件 {#creating-the-list-children-component-1}
 
@@ -939,7 +937,7 @@ ht-degree: 2%
 
 创建脚本以检索徽标图像并将其写入页面。
 
-1. 右键单击logo组件节点，然后单击“创建”>“创建文件”以创建名为img.java的脚本文件GET。
+1. 右键单击徽标组件节点，然后单击创建>创建文件，以创建名为img.java的脚本文件GET。
 1. 打开文件，将以下代码复制到文件中，然后单击“全部保存”：
 
 ```java
@@ -1033,14 +1031,14 @@ public class img_GET extends AbstractImageServlet {
 
 1. 在浏览器中打开“产品”页面后，单击Sidekick底部的“设计”按钮以进入设计模式。
 
-   ![](do-not-localize/chlimage_1-1.png)
+   ![右方表示的“设计”按钮。](do-not-localize/chlimage_1-1.png)
 
 1. 在“设计徽标”栏中，单击“编辑”以使用此对话框编辑徽标组件的设置。
 1. 在对话框中，单击“图像”选项卡的面板，浏览从mywebsite.zip文件中提取的logo.png图像，然后单击“确定”。
 
    ![chlimage_1-49](assets/chlimage_1-49.png)
 
-1. 单击Sidekick标题栏上的三角形以返回到“编辑”模式。
+1. 单击Sidekick标题栏上的三角形以返回“编辑”模式。
 
    ![chlimage_1-3](assets/chlimage_1-3.jpeg)
 
@@ -1281,10 +1279,10 @@ public class img_GET extends AbstractImageServlet {
       * 标题：我的搜索组件
       * 描述：这是我的搜索组件
       * 组：我的网站
+
    1. 单击“下一步”，然后再次单击“下一步”。
    1. 在“允许的父项”面板上，单击+按钮并键入 `*/parsys`.
    1. 单击“下一步”，然后单击“确定”。
-
 
 1. 单击全部保存。
 1. 复制以下节点并将其粘贴到apps/mywebsite/components/search节点：
@@ -1503,7 +1501,7 @@ public class img_GET extends AbstractImageServlet {
 1. 在Sidekick中，单击设计模式图标。
 1. 在“设计”分块中（在“搜索”标题下），单击“编辑”。
 1. 在对话框中，向下滚动到  **我的网站** 组，选择 **我的搜索组件** 并单击 **确定**.
-1. 在Sidekick上，单击三角形以返回编辑模式。
+1. 在Sidekick时，单击三角形以返回编辑模式。
 1. 将我的搜索组件从Sidekick拖动到parsys框中。 它看起来如下所示：
 
    ![chlimage_1-58](assets/chlimage_1-58.png)

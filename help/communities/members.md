@@ -1,8 +1,6 @@
 ---
 title: 成员和组管理控制台
-seo-title: Members & Groups Management Consoles
 description: 如何访问成员和组管理控制台
-seo-description: How to access Members and Groups Management consoles
 uuid: 2e93e861-a066-4189-91db-f8b784bc5aea
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -11,9 +9,9 @@ content-type: reference
 discoiquuid: ccabf301-b417-48aa-8501-8360fd9f3e36
 role: Admin
 exl-id: b64e24d2-8407-484c-8216-8d328ef5fa4f
-source-git-commit: 4dbbcc41757843d3b2d5a3bbb2656ef587e83d2c
+source-git-commit: 4fd5e9a1bc603202ee52e85a1c09125b13cec315
 workflow-type: tm+mt
-source-wordcount: '946'
+source-wordcount: '942'
 ht-degree: 4%
 
 ---
@@ -55,7 +53,7 @@ AEM Communities功能通常要求网站访客在注册并登录后才可参与�
 
 选择左侧面板图标 `Members` 标题以切换打开搜索侧面板。
 
-![](assets/leftpanel-icon.png)
+![搜索侧面板图标。](assets/leftpanel-icon.png)
 
 
 ![member-console2](assets/member-console2.png)
@@ -76,7 +74,7 @@ AEM Communities功能通常要求网站访客在注册并登录后才可参与�
 
 ## 创建新成员 {#create-new-member}
 
-选择 `Create Member` 以便在发布环境中创建用户。
+选择 `Create Member` 以在发布环境中创建用户。
 
 ![create-member1](assets/create-member1.png)
 
@@ -97,19 +95,19 @@ AEM Communities功能通常要求网站访客在注册并登录后才可参与�
 
 * **[!UICONTROL 密码]**
 
-   (*必需*)登录密码。
+  (*必需*)登录密码。
 
 * **[!UICONTROL 重新键入密码]**
 
-   (*必需*)重新输入密码以进行验证。
+  (*必需*)重新输入密码以进行验证。
 
 * **[!UICONTROL 将成员添加到站点]**
 
-   (*可选*)从现有社区站点中选择，以将成员添加到社区站点的成员组。
+  (*可选*)从现有社区站点中选择以将该成员添加到社区站点的成员组。
 
 * **[!UICONTROL 将成员添加到组]**
 
-   (*可选*)从现有成员组中进行选择，以将成员添加到该组。
+  (*可选*)从现有成员组中选择以将该成员添加到该组。
 
 * 选择 **[!UICONTROL 保存]**
 
@@ -122,17 +120,17 @@ AEM Communities功能通常要求网站访客在注册并登录后才可参与�
 
    * 未禁止成员具有对社区站点的完全访问权限。
 
-   默认为 `Not Banned`.
+  默认为 `Not Banned`.
 
 * **[!UICONTROL 贡献限制]**
 
-   如果选中，则成员发布内容的能力有限。
+  如果选中，则成员发布内容的能力有限。
 默认值取决于贡献限制的配置。
 参见 [成员缴款限制](limits.md).
 
 * **[!UICONTROL 更改密码]**
 
-   修改现有成员时显示的链接。 使社区管理员能够重置成员的密码。
+  修改现有成员时显示的链接。 使社区管理员能够重置成员的密码。
 
 ### 常规 — 照片 {#general-photo}
 
@@ -173,7 +171,7 @@ AEM Communities功能通常要求网站访客在注册并登录后才可参与�
 
 ### 创建新组 {#create-new-group}
 
-选择 `Add Group` 以便在发布环境中创建组。
+选择 `Add Group` 以在发布环境中创建组。
 
 ![group-console1](assets/group-console1.png)
 
@@ -181,23 +179,23 @@ AEM Communities功能通常要求网站访客在注册并登录后才可参与�
 
 * **[!UICONTROL ID]**
 
-   (*必需*)组的唯一ID。
+  (*必需*)组的唯一ID。
 
-   *ID创建后即不可修改。*
+  *ID创建后即不可修改。*
 
 * **[!UICONTROL 名称]**
 
-   (*可选*)组的显示名称。
+  (*可选*)组的显示名称。
 
-   默认值为ID。
+  默认值为ID。
 
 * **[!UICONTROL 描述]**
 
-   (*可选*)对组用途和权限的描述。
+  (*可选*)对组用途和权限的描述。
 
 * **[!UICONTROL 将成员添加到组]**
 
-   (*可选*)选择要作为组的初始成员包含的发布端成员。
+  (*可选*)选择要作为组的初始成员包含的发布端成员。
 
 * 选择 **[!UICONTROL 保存]**
 

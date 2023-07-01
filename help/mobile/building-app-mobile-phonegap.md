@@ -1,8 +1,6 @@
 ---
 title: 构建移动应用程序
-seo-title: Building Mobile Applications
-description: 本页提供了有关如何使用GitHub中提供的代码构建移动应用程序的完整分步文章。构建您的应用程序以安装到设备或模拟器以进行测试或发布到应用商店。 您可以使用PhoneGap命令行界面在本地构建应用程序，也可以使用PhoneGap Build在云中构建应用程序。
-seo-description: This page provides a complete step-by-step article on how to build a mobile application using code available from GitHub is available here.Build your application to install to a device or simulator for testing or for publishing to app stores. You can build applications locally using the PhoneGap Command Line Interface, or in the cloud using PhoneGap Build.
+description: 此页面提供了有关如何使用GitHub中提供的代码构建移动应用程序的完整分步文章，请单击此处获得。 构建您的应用程序以安装到设备或模拟器以进行测试或发布到应用商店。 您可以使用PhoneGap命令行界面在本地构建应用程序，也可以使用PhoneGap Build在云中构建应用程序。
 uuid: 1ff6fe1a-24cc-4973-a2cd-8d356bc649b0
 contentOwner: User
 content-type: reference
@@ -10,9 +8,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: b2778086-8280-4306-bf3a-f6ec2a0e04df
 exl-id: 7c2e5ed8-9f8e-4a81-b736-589ef4089f29
-source-git-commit: 17d13e9b201629d9d1519fde4740cf651fe89d2c
+source-git-commit: 4fd5e9a1bc603202ee52e85a1c09125b13cec315
 workflow-type: tm+mt
-source-wordcount: '1022'
+source-wordcount: '1058'
 ht-degree: 1%
 
 ---
@@ -21,7 +19,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->Adobe建议对需要基于单页应用程序框架的客户端渲染（例如React）的项目使用SPA编辑器。 [了解详情](/help/sites-developing/spa-overview.md).
+>对于需要基于单页应用程序框架的客户端渲染（例如React）的项目，Adobe建议使用SPA编辑器。 [了解详情](/help/sites-developing/spa-overview.md).
 
 构建您的应用程序以安装到设备或模拟器以进行测试或发布到应用商店。 您可以使用PhoneGap命令行界面在本地构建应用程序，也可以使用PhoneGap Build在云中构建应用程序。
 
@@ -59,16 +57,16 @@ AEM提供了两种将批量内容移动到发布实例的方法：
 
 要使用PhoneGap CLI进行构建，您需要安装Node.js和PhoneGap客户端实用程序。 您需要连接Internet才能执行以下步骤。
 
-1. 下载并安装 [Node.js](https://nodejs.org/).
+1. 下载并安装 [Node.js](https://nodejs.org/en).
 1. 打开终端或命令提示符并输入以下node命令以安装PhoneGap实用程序：
 
    ```shell
    npm install -g phonegap
    ```
 
-   在Unix或Linux系统上，可能需要为命令添加前缀 `sudo`.
+   在UNIX®或Linux®系统上，可能需要为命令添加前缀 `sudo`.
 
-   终端显示了一系列HTTPGET命令的结果。 成功安装后，终端会显示库的安装位置，类似于以下示例：
+   终端显示了一系列HTTPGET命令的结果。 安装成功后，终端会显示库的安装位置，类似于以下示例：
 
    ```xml
    /usr/local/bin/phonegap -> /usr/local/lib/node_modules/phonegap/bin/phonegap.js
@@ -88,16 +86,16 @@ AEM提供了两种将批量内容移动到发布实例的方法：
 1. （可选）获取要定位的移动平台的SDK：
 
    * 要为iOS平台构建应用程序，请安装最新版本的 [Xcode](https://developer.apple.com/xcode/).
-   * 要构建Android应用程序，请安装 [Android SDK](https://developer.android.com/).
+   * 要构建Android™应用程序，请安装 [Android™ SDK](https://developer.android.com/).
 
 ### 下载内容ZIP文件 {#downloading-the-content-zip-file}
 
 将移动应用程序的内容移动到文件系统。
 
 1. 在“移动设备应用程序”页面上，选择您的应用程序。
-1. （可选）要构建应用程序以进行完整安装，请在工具栏上单击或点按“清除缓存”图标。
+1. （可选）要构建应用程序以进行完整安装，请在工具栏上单击清除缓存图标。
 
-   ![](do-not-localize/chlimage_1.png)
+   ![清除由断开的链接符号指示的缓存图标。](do-not-localize/chlimage_1.png)
 
    >[!NOTE]
    >
@@ -105,7 +103,7 @@ AEM提供了两种将批量内容移动到发布实例的方法：
 
 1. 在工具栏上，单击或点按下载CLI资产图标。
 
-   ![](do-not-localize/chlimage_1-1.png)
+   ![“下载CLI资产”图标，以重叠的平板电脑符号表示。](do-not-localize/chlimage_1-1.png)
 
 1. 保存ZIP文件后，在“成功”对话框中单击“关闭”。
 1. 解压缩ZIP文件的内容。
@@ -120,7 +118,7 @@ AEM提供了两种将批量内容移动到发布实例的方法：
    cd ~/Downloads/ng-app-cli.1392137825303
    ```
 
-1. 为要定位的平台输入phonegap命令。 例如，以下命令可构建Android应用程序：
+1. 为要定位的平台输入phonegap命令。 例如，以下命令可构建Android™应用程序：
 
    ```shell
    phonegap build android
@@ -150,7 +148,7 @@ AEM提供了两种将批量内容移动到发布实例的方法：
 1. 在“移动设备应用程序”页面上，打开您的移动设备应用程序。 ([http://localhost:4502/mobile.html/content/phonegap](http://localhost:4502/mobile.html/content/phonegap))
 1. （可选）要构建应用程序以进行完整安装，请选择该应用程序，然后单击“清除缓存”图标。
 
-   ![](do-not-localize/chlimage_1-2.png)
+   ![清除由断开的链接符号指示的缓存图标。](do-not-localize/chlimage_1-2.png)
 
    >[!NOTE]
    >
@@ -158,7 +156,7 @@ AEM提供了两种将批量内容移动到发布实例的方法：
 
 1. 选择启动页面，然后单击构建远程图标。
 
-   ![](do-not-localize/chlimage_1-3.png)
+   ![由两个倒圆角齿轮表示的“构建远程”图标。](do-not-localize/chlimage_1-3.png)
 
    **注意：** 测试版AEM Beta在构建成功完成时不会创建收件箱通知。
 

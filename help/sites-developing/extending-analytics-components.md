@@ -1,8 +1,6 @@
 ---
 title: 将Adobe Analytics跟踪添加到组件
-seo-title: Adding Adobe Analytics Tracking to Components
 description: 将Adobe Analytics跟踪添加到组件
-seo-description: null
 uuid: 447b140c-678c-428d-a1c9-ecbdec75cd42
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,9 +8,9 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: a11c39b4-c23b-4207-8898-33aea25f2ad0
 exl-id: e6c1258c-81d5-48e4-bdf1-90d7cc13a22d
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 4fd5e9a1bc603202ee52e85a1c09125b13cec315
 workflow-type: tm+mt
-source-wordcount: '1261'
+source-wordcount: '1267'
 ht-degree: 0%
 
 ---
@@ -21,7 +19,7 @@ ht-degree: 0%
 
 ## 在页面组件中包含Adobe Analytics模块 {#including-the-adobe-analytics-module-in-a-page-component}
 
-页面模板组件(例如 `head.jsp, body.jsp`)需要JSP包含才能加载ContextHub和Adobe Analytics集成(它是Cloud Services的一部分)。 全部包括加载JavaScript文件。
+页面模板组件(例如， `head.jsp, body.jsp`)需要JSP include来加载ContextHub和Adobe Analytics集成(它是Cloud Services的一部分)。 全部包括加载JavaScript文件。
 
 ContextHub条目应直接包含在 `<head>` 标签中，而Cloud Services应包含在 `<head>` 并且早于 `</body>` 部分；例如：
 
@@ -42,7 +40,7 @@ ContextHub条目应直接包含在 `<head>` 标签中，而Cloud Services应包�
 
 此 `cloudservices` 您在中添加的脚本 `<head>` 和 `<body>` 部分适用于添加到该页面的cloud services配置。 (如果页面使用多个Cloud Services配置，则只需包含ContextHub jsp和Cloud Servicesjsp一次。)
 
-将Adobe Analytics框架添加到页面时， `cloudservices` 脚本会生成与Adobe Analytics相关的javascript和对客户端库的引用，类似于以下示例：
+将Adobe Analytics框架添加到页面时， `cloudservices` 脚本会生成与Adobe Analytics相关的JavaScript和对客户端库的引用，类似于以下示例：
 
 ```xml
 <div class="sitecatalyst cloudservice">
@@ -130,16 +128,16 @@ $CQ(document).trigger("sitecatalystAfterCollect");
 
 启用您的AEM组件以与Adobe Analytics框架交互。 然后，配置框架，以便Adobe Analytics跟踪组件数据。
 
-在编辑框架时，与Adobe Analytics框架交互的组件会显示在SideKick中。 将组件拖到框架中后，将显示组件属性，然后可以使用Adobe Analytics属性映射这些属性。 (请参阅 [设置基本跟踪的框架](/help/sites-administering/adobeanalytics-connect.md#creating-a-adobe-analytics-framework).)
+在编辑框架时，与Adobe Analytics框架交互的组件会显示在Sidekick中。 将组件拖到框架中后，将显示组件属性，然后可以使用Adobe Analytics属性映射这些属性。 (请参阅 [设置基本跟踪的框架](/help/sites-administering/adobeanalytics-connect.md#creating-a-adobe-analytics-framework).)
 
 当组件具有名为的子节点时，组件可以与Adobe Analytics框架进行交互 `analytics`. 此 `analytics` 节点具有以下属性：
 
 * `cq:trackevents`：标识组件公开的CQ事件。 （请参阅自定义事件。）
 * `cq:trackvars`：命名通过Adobe Analytics属性映射的CQ变量。
-* `cq:componentName`：显示在Sidekick中的组件的名称。
-* `cq:componentGroup`：Sidekick中包含该组件的组。
+* `cq:componentName`：Sidekick中显示的组件的名称。
+* `cq:componentGroup`：Sidekick中包含组件的组。
 
-组件JSP中的代码会将javascript添加到触发跟踪的页面，并定义跟踪的数据。 Javascript中使用的事件名称和数据名称必须与 `analytics` 节点属性。
+组件JSP中的代码会将JavaScript添加到触发跟踪的页面，并定义跟踪的数据。 JavaScript中使用的事件名称和数据名称必须匹配 `analytics` 节点属性。
 
 * 使用data-tracking属性可在页面加载时跟踪事件数据。 (请参阅 [跟踪页面加载中的自定义事件](/help/sites-developing/extending-analytics.md#tracking-custom-events-on-page-load).)
 * 使用CQ_Analytics.record函数可在用户与页面功能交互时跟踪事件数据。 (请参阅 [在页面加载后跟踪自定义事件](/help/sites-developing/extending-analytics.md#tracking-custom-events-after-page-load).)
@@ -153,7 +151,7 @@ $CQ(document).trigger("sitecatalystAfterCollect");
 以下过程要求您已执行以下任务：
 
 * 已创建CQ应用程序。
-* 创建了Adobe Analytics配置和Adobe Analytics框架。
+* 创建了Adobe Analytics配置和Adobe Analytics Framework。
 
 #### 复制topnav组件 {#copy-the-topnav-component}
 
@@ -184,13 +182,13 @@ $CQ(document).trigger("sitecatalystAfterCollect");
    * 类型：字符串
    * 值： topnavTarget，topnavLocation
 
-1. 将以下属性添加到Analytics节点以将Sidekick的组件命名为：
+1. 将以下属性添加到Analytics节点以命名要Sidekick的组件：
 
    * 名称：cq：componentName
    * 类型：字符串
    * 值： topnav (tracking)
 
-1. 将以下属性添加到Analytics节点以将Sidekick的组件组命名为：
+1. 将以下属性添加到Analytics节点以命名要Sidekick的组件组：
 
    * 名称：cq：componentGroup
    * 类型：字符串
@@ -204,7 +202,7 @@ $CQ(document).trigger("sitecatalystAfterCollect");
    onclick = "tracknav('<%= child.getPath() %>.html')"
    ```
 
-1. 在页面底部，添加以下javascript代码：
+1. 在页面底部，添加以下JavaScript代码：
 
    ```xml
    <script type="text/javascript">
@@ -289,16 +287,16 @@ $CQ(document).trigger("sitecatalystAfterCollect");
 
 >[!NOTE]
 >
->通常需要从ContextHub跟踪数据。 有关使用javascript获取此信息的信息，请参阅 [访问ContextHub中的值](/help/sites-developing/extending-analytics.md#accessing-values-in-the-contexthub).
+>通常需要从ContextHub跟踪数据。 有关使用JavaScript获取此信息的信息，请参阅 [访问ContextHub中的值](/help/sites-developing/extending-analytics.md#accessing-values-in-the-contexthub).
 
 #### 将跟踪组件添加到Sidekick {#adding-the-tracking-component-to-sidekick}
 
-将启用通过Adobe Analytics进行跟踪的组件添加到Sidekick，以便将其添加到您的框架中。
+将启用Adobe Analytics跟踪的组件添加到Sidekick，以便将其添加到框架中。
 
 1. 从Adobe Analytics配置中打开Adobe Analytics框架。 ([http://localhost:4502/etc/cloudservices/sitecatalyst.html](http://localhost:4502/etc/cloudservices/sitecatalyst.html))
 1. 在Sidekick上，单击“设计”按钮。
 
-   ![](assets/chlimage_1a.png)
+   ![设计按钮具有直角正方形。](assets/chlimage_1a.png)
 
 1. 在链接跟踪配置区域中，单击配置继承。
 
@@ -328,7 +326,7 @@ Adobe Analytics s.products变量使用以下语法：
 s.products="category;product;quantity;price;eventY={value}|eventZ={value};evarA={value}|evarB={value}"
 ```
 
-Adobe Analytics集成模块构建 `s.products` 变量使用 `product` AEM组件生成的值。 此 `product` AEM组件生成的javascript中的值是具有以下结构的值数组：
+Adobe Analytics集成模块构建 `s.products` 变量使用 `product` AEM组件生成的值。 此 `product` AEM组件生成的JavaScript中的值是具有以下结构的值数组：
 
 ```
 "product": [{
@@ -364,7 +362,7 @@ Adobe Analytics集成模块构建 `s.products` 变量使用 `product` AEM组件�
 * product.evars.eVarName1
 * product.evars.eVarName_n
 
-电子商务模块提供了多个用于生成s.products变量数据的组件。 例如，提交订单组件([http://localhost:4502/crx/de/index.jsp#/libs/commerce/components/submitorder/submitorder.jsp](http://localhost:4502/crx/de/index.jsp#/libs/commerce/components/submitorder/submitorder.jsp))生成与以下示例类似的javascript：
+电子商务模块提供了多个用于生成s.products变量数据的组件。 例如，提交订单组件([http://localhost:4502/crx/de/index.jsp#/libs/commerce/components/submitorder/submitorder.jsp](http://localhost:4502/crx/de/index.jsp#/libs/commerce/components/submitorder/submitorder.jsp))生成与以下示例类似的JavaScript：
 
 ```
 <script type="text/javascript">

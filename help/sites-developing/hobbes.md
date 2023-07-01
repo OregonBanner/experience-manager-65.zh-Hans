@@ -1,8 +1,6 @@
 ---
 title: 测试您的UI
-seo-title: Testing Your UI
 description: AEM提供了一个框架，用于实现AEM UI测试的自动化
-seo-description: AEM provides a framework for automating tests for your AEM UI
 uuid: 408a60b5-cba9-4c9f-abd3-5c1fb5be1c50
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,9 +9,9 @@ topic-tags: components, testing
 discoiquuid: 938100ad-94f9-408a-819d-72657dc115f7
 docset: aem65
 exl-id: 2d28cee6-31b0-4288-bad3-4d2ecad7b626
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 4fd5e9a1bc603202ee52e85a1c09125b13cec315
 workflow-type: tm+mt
-source-wordcount: '737'
+source-wordcount: '771'
 ht-degree: 1%
 
 ---
@@ -26,13 +24,13 @@ ht-degree: 1%
 >
 >参见 [已弃用和已删除的功能](/help/release-notes/deprecated-removed-features.md).
 
-AEM提供了一个框架，用于实现AEM UI测试的自动化。 使用该框架，您可以直接在Web浏览器中编写和运行UI测试。 该框架提供了用于创建测试的javascript API。
+AEM提供了一个框架，用于实现AEM UI测试的自动化。 使用该框架，您可以直接在Web浏览器中编写和运行UI测试。 该框架提供了用于创建测试的JavaScript API。
 
-AEM测试框架使用Hobbes.js，这是一个使用Javascript编写的测试库。 Hobbes.js框架是为了在开发过程中测试AEM而开发的。 该框架现在可公开用于测试您的AEM应用程序。
+AEM测试框架使用以JavaScript编写的测试库Hobbes.js。 Hobbes.js框架是为了在开发过程中测试AEM而开发的。 该框架现在可公开用于测试您的AEM应用程序。
 
 >[!NOTE]
 >
->请参阅Hobbes.js [文档](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/test-api/index.html) 以了解API的完整详细信息。
+>请参阅Hobbes.js [文档](https://developer.adobe.com/experience-manager/reference-materials/6-5/test-api/index.html) 以了解API的完整详细信息。
 
 ## 测试结构 {#structure-of-tests}
 
@@ -53,7 +51,7 @@ AEM测试框架使用Hobbes.js，这是一个使用Javascript编写的测试库�
 
 ![chlimage_1-63](assets/chlimage_1-63.png)
 
-打开控制台时，左侧列出测试包，并附带按顺序运行所有测试包的选项。 右侧显示有方格背景的空间是一个占位符，用于在测试运行时显示页面内容。
+打开控制台时，左侧列出测试包，并附带按顺序运行所有测试包的选项。 带有方格背景的右侧显示的空间是一个占位符，用于在测试运行时显示页面内容。
 
 ![chlimage_1-64](assets/chlimage_1-64.png)
 
@@ -63,11 +61,11 @@ AEM测试框架使用Hobbes.js，这是一个使用Javascript编写的测试库�
 
 复选标记图标表示已通过测试：
 
-![](do-not-localize/chlimage_1-2.png)
+![复选标记图标。](do-not-localize/chlimage_1-2.png)
 
 “X”图标表示测试失败：
 
-![](do-not-localize/chlimage_1-3.png)
+![圆环内由X表示的失败测试图标。](do-not-localize/chlimage_1-3.png)
 
 要运行测试包，请执行以下操作：
 
@@ -75,9 +73,9 @@ AEM测试框架使用Hobbes.js，这是一个使用Javascript编写的测试库�
 
    ![chlimage_1-65](assets/chlimage_1-65.png)
 
-1. 单击或点按 **运行测试** 按钮。
+1. 单击 **运行测试**.
 
-   ![](do-not-localize/chlimage_1-4.png)
+   ![“运行测试”按钮的图像，由圆圈内面向右的指针指示。](do-not-localize/chlimage_1-4.png)
 
 1. 在执行测试时，占位符会被替换为页面内容。
 
@@ -95,9 +93,9 @@ AEM测试框架使用Hobbes.js，这是一个使用Javascript编写的测试库�
 
 1. 在测试面板上，点按或单击 **运行所有测试** 按钮或 **运行测试** 按钮时，单击要运行的测试包标题下方的“测试包”按钮。
 
-   ![](do-not-localize/chlimage_1-5.png)
+   ![“Run all tests（运行所有测试）”按钮和“Run tests（运行测试）”按钮的图像，由圆圈内面向右的指针指示。](do-not-localize/chlimage_1-5.png)
 
-1. 要查看每个测试用例的结果，请点按或单击测试用例的标题。 在中点击或单击测试名称 **结果** 面板显示所有详细信息。
+1. 要查看每个测试用例的结果，请单击测试用例的标题。 单击中测试的名称 **结果** 面板显示所有详细信息。
 
    ![chlimage_1-69](assets/chlimage_1-69.png)
 
@@ -105,7 +103,7 @@ AEM测试框架使用Hobbes.js，这是一个使用Javascript编写的测试库�
 
 以下过程会逐步引导您使用创建和执行测试包 [We.Retail内容](/help/sites-developing/we-retail.md)，但您可以轻松地将测试修改为使用其他网页。
 
-有关创建您自己的测试包的完整详细信息，请参阅 [Hobbes.js API文档](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/test-api/index.html).
+有关创建您自己的测试包的完整详细信息，请参阅 [Hobbes.js API文档](https://developer.adobe.com/experience-manager/reference-materials/6-5/test-api/index.html).
 
 1. 打开CRXDE Lite。 ([https://localhost:4502/crx/de](https://localhost:4502/crx/de))
 1. 右键单击 `/etc/clientlibs` 文件夹并单击 **“创建”>“创建文件夹”**. 类型 `myTests` 名称，然后单击 **确定**.
@@ -118,8 +116,8 @@ AEM测试框架使用Hobbes.js，这是一个使用Javascript编写的测试库�
 
    | 名称 | 类型 | 价值 |
    |---|---|---|
-   | `categories` | 字符串[] | `granite.testing.hobbes.tests` |
-   | `dependencies` | 字符串[] | `granite.testing.hobbes.testrunner` |
+   | `categories` | String[] | `granite.testing.hobbes.tests` |
+   | `dependencies` | String[] | `granite.testing.hobbes.testrunner` |
 
    >[!NOTE]
    >

@@ -1,8 +1,6 @@
 ---
 title: 网页的响应式设计
-seo-title: Responsive design for web pages
-description: 通过响应式设计，可以在多个设备上以多个方向有效地显示相同的页面
-seo-description: With responsive design, the same pages can be effectively displayed on multiple devices in multiple orientations
+description: 通过响应式设计，可以在多个设备上以多个方向有效地显示相同的页面。
 uuid: 3d324557-e7ff-4c82-920f-9b5a906925e8
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,9 +9,9 @@ content-type: reference
 discoiquuid: 532544b0-1932-419a-b6bd-ecf57a926fef
 legacypath: /content/docs/en/aem/6-0/develop/mobile/responsive
 exl-id: c705710b-a94a-4f4f-affa-ddd4fc6cb0ec
-source-git-commit: e05f6cd7cf17f4420176cf76f28cb469bcee4a0a
+source-git-commit: 4fd5e9a1bc603202ee52e85a1c09125b13cec315
 workflow-type: tm+mt
-source-wordcount: '5336'
+source-wordcount: '5375'
 ht-degree: 0%
 
 ---
@@ -23,6 +21,7 @@ ht-degree: 0%
 >[!NOTE]
 >
 >AdobeSPA建议对需要基于单页应用程序框架的客户端渲染(例如 _React_)。 [了解详情](/help/sites-developing/spa-overview.md).
+>
 
 >[!NOTE]
 >
@@ -201,7 +200,7 @@ JSP脚本生成引用样式表的以下HTML代码：
 * 父文件夹： `/apps/application_name/config`
 * 名称: `com.day.cq.wcm.mobile.core.impl.MobileEmulatorProvider-*alias*`
 
-   此 —  `*alias*` 后缀是必需的，因为MobileEmulatorProvider服务是工厂服务。 使用对此工厂唯一的任何别名。
+  此 —  `*alias*` 后缀是必需的，因为MobileEmulatorProvider服务是工厂服务。 使用对此工厂唯一的任何别名。
 
 * jcr:primaryType: `sling:OsgiConfig`
 
@@ -211,12 +210,12 @@ JSP脚本生成引用样式表的以下HTML代码：
 * 类型: `String[]`
 * 值：呈现网页的页面组件的路径。 例如， geometrixx-media应用程序使用以下值：
 
-   ```
-   geometrixx-media/components/page
-    geometrixx-unlimited/components/pages/page
-    geometrixx-unlimited/components/pages/coverpage
-    geometrixx-unlimited/components/pages/issue
-   ```
+  ```
+  geometrixx-media/components/page
+   geometrixx-unlimited/components/pages/page
+   geometrixx-unlimited/components/pages/coverpage
+   geometrixx-unlimited/components/pages/issue
+  ```
 
 ### 指定设备组 {#specifying-the-device-groups}
 
@@ -235,6 +234,7 @@ JSP脚本生成引用样式表的以下HTML代码：
 >[!NOTE]
 >
 >对于用于响应式设计的设备组，请编辑设备组，然后在“常规”选项卡上选择“禁用模拟器”。 此选项可防止出现与响应式设计无关的模拟器轮播。
+>
 
 ## 使用自适应图像 {#using-adaptive-images}
 
@@ -326,6 +326,7 @@ W3C [图片元素](https://html.spec.whatwg.org/multipage/embedded-content.html#
 >* 生成HTML的脚本： `/libs/foundation/components/adaptiveimage/adaptiveimage.jsp`
 >
 >后续部分提供了有关此组件的详细信息。
+>
 
 ### 了解AEM中的图像渲染 {#understanding-image-rendering-in-aem}
 
@@ -366,6 +367,7 @@ W3C [图片元素](https://html.spec.whatwg.org/multipage/embedded-content.html#
 >[!NOTE]
 >
 >Web客户端使用matchMedia和Picturefill JavaScript库（或类似的库）来评估媒体选择器。
+>
 
 处理图像请求的servlet必须执行以下任务：
 
@@ -657,6 +659,7 @@ info.geometrixx.commons.impl.servlets.ImageReferenceModificationServlet类扩展
 
 >[!NOTE]
 >此 [com.day.cq.commons.DownloadResource](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/commons/DownloadResource.html) 类提供getFileReferencemethod。
+>
 
 ## 开发流体网格 {#developing-a-fluid-grid}
 
@@ -698,6 +701,7 @@ AEM使您能够高效实施流式网格。 本页说明如何集成流动网格�
 >[!NOTE]
 >
 >当组件包含多个时 `cq:include` 引用parsys组件的元素，每个 `path` 特性必须具有不同的值。
+>
 
 #### 缩放页面组件网格 {#scaling-the-page-component-grid}
 
@@ -862,13 +866,13 @@ AEM使您能够高效实施流式网格。 本页说明如何集成流动网格�
 
 使用网格来缩放内容块，以适应不同的视区大小。 内容块跨越特定数量的列。 随着列宽度的增加或减少以适合不同的视区大小，内容块的宽度将相应地增加或减少。 缩放功能可以支持宽到足以容纳并排放置内容块的大中型视区。
 
-![](do-not-localize/chlimage_1-1a.png)
+![两个网格的图像，一个网格的缩放比例小于另一个网格。](do-not-localize/chlimage_1-1a.png)
 
 #### 在网格中重新定位内容 {#repositioning-content-in-the-grid}
 
 内容块的大小可以通过最小宽度来限制，超过该宽度缩放不再有效。 对于较小的视区，可以使用网格垂直分布内容块，而不是水平分布。
 
-![](do-not-localize/chlimage_1-2a.png)
+![两个网格的图像，其中一个网格被重新定位得小于另一个网格。](do-not-localize/chlimage_1-2a.png)
 
 ### 设计网格 {#designing-the-grid}
 
@@ -953,7 +957,7 @@ CSS包含一系列使用以下结构的媒体查询：
 
 将样式添加到 `.row-fluid` 每个媒体查询中的选择器。 根据用于该媒体查询的页面布局设置值。 例如，下图说明了一个行，该行将宽视区水平分发内容，窄视区垂直分发内容。
 
-![](do-not-localize/chlimage_1-3a.png)
+![一行中有两个内容块的图像，第二张显示行的图像已重新定位。](do-not-localize/chlimage_1-3a.png)
 
 以下CSS可以实施此行为：
 

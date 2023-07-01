@@ -1,8 +1,6 @@
 ---
 title: 创作移动应用程序
-seo-title: Authoring Mobile Applications
 description: AEM Mobile Dashboard允许您创建、构建和部署移动应用程序，创建、删除和编辑应用程序元数据。 关注此页面以了解更多信息。
-seo-description: he AEM Mobile Dashboard allows you to create, build and deploy your mobile application, create, delete and edit application metadata. Follow this page to learn more.
 uuid: 293b5d29-df7e-42dd-ae64-8c677317e7a5
 contentOwner: User
 content-type: reference
@@ -10,9 +8,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: authoring-adobe-phonegap-enterprise
 discoiquuid: abfeea65-102d-4800-abeb-304d61afcc13
 exl-id: 073daff7-0c1d-4715-bfd4-3e2336e4cb88
-source-git-commit: 17d13e9b201629d9d1519fde4740cf651fe89d2c
+source-git-commit: 4fd5e9a1bc603202ee52e85a1c09125b13cec315
 workflow-type: tm+mt
-source-wordcount: '1005'
+source-wordcount: '1016'
 ht-degree: 0%
 
 ---
@@ -87,7 +85,7 @@ AEM Mobile功能板允许您创建、构建和部署移动应用程序，创建�
 
 此图标表示应用程序Shell的内容发行包
 
-![](do-not-localize/chlimage_1-6.png)
+![内容发布包图标，由两个重叠的正方形包符号指示。](do-not-localize/chlimage_1-6.png)
 
 这些图标表示应用程序内容的内容发行包
 

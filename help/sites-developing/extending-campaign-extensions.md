@@ -8,9 +8,9 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: f536bcc1-7744-4f05-ac6a-4cec94a1ffb6
 exl-id: 0702858e-5e46-451f-9ac3-40a4fec68ca0
-source-git-commit: 78c584db8c35ea809048580fe5b440a0b73c8eea
+source-git-commit: 4fd5e9a1bc603202ee52e85a1c09125b13cec315
 workflow-type: tm+mt
-source-wordcount: '510'
+source-wordcount: '525'
 ht-degree: 0%
 
 ---
@@ -42,7 +42,7 @@ AEM和Campaign之间的标准集成基于JSON和JSSP (JavaScript Server Page)。
 
 1. 在Adobe Campaign中，要创建JSSP文件，请单击 **新** 图标。
 
-   ![](do-not-localize/chlimage_1-4a.png)
+   ![“新建”图标，如左上角附近带有星号的页面所指示。](do-not-localize/chlimage_1-4a.png)
 
 1. 输入此JSSP文件的名称。 在此示例中， **cus：custom.jssp** 被使用(这意味着它在 **cus** 命名空间)。
 
