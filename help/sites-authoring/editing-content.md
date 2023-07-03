@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: f92ed674-5865-4a53-8c3a-369536861f14
 docset: aem65
 exl-id: d5cf4478-51e4-4ca8-b3f8-6d7caed7d515
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
+source-git-commit: d9155cdac183acbdd190da552512a1e9bcc43d64
 workflow-type: tm+mt
-source-wordcount: '3047'
+source-wordcount: '3082'
 ht-degree: 40%
 
 ---
@@ -46,51 +46,51 @@ ht-degree: 40%
 
 * **切换侧面板**
 
-   这将打开/关闭侧面板，侧面板中包含 [资产浏览器](/help/sites-authoring/author-environment-tools.md#assets-browser)， [组件浏览器](/help/sites-authoring/author-environment-tools.md#components-browser)、和 [内容树](/help/sites-authoring/author-environment-tools.md#content-tree).
+  这将打开/关闭侧面板，侧面板中包含 [资产浏览器](/help/sites-authoring/author-environment-tools.md#assets-browser)， [组件浏览器](/help/sites-authoring/author-environment-tools.md#components-browser)、和 [内容树](/help/sites-authoring/author-environment-tools.md#content-tree).
 
-   ![](do-not-localize/screen_shot_2018-03-22at111425.png)
+  ![切换侧面板](do-not-localize/screen_shot_2018-03-22at111425.png)
 
 * **页面信息**
 
-   提供对的访问 [页面信息](/help/sites-authoring/author-environment-tools.md#page-information) 菜单，其中包含页面详细信息以及可在页面上执行的操作，包括查看和编辑页面信息、查看页面属性以及发布/取消发布页面。
+  提供对的访问 [页面信息](/help/sites-authoring/author-environment-tools.md#page-information) 菜单，其中包含页面详细信息以及可在页面上执行的操作，包括查看和编辑页面信息、查看页面属性以及发布/取消发布页面。
 
-   ![](do-not-localize/screen_shot_2018-03-22at111437.png)
+  ![页面信息](do-not-localize/screen_shot_2018-03-22at111437.png)
 
 * **模拟器**
 
-   切换 [模拟器工具栏](/help/sites-authoring/responsive-layout.md#selecting-a-device-to-emulate)，用于模拟页面在其他设备上的外观。 在布局模式下会自动切换。
+  切换 [模拟器工具栏](/help/sites-authoring/responsive-layout.md#selecting-a-device-to-emulate)，用于模拟页面在其他设备上的外观。 在布局模式下会自动切换。
 
-   ![](do-not-localize/screen_shot_2018-03-22at111442.png)
+  ![模拟器](do-not-localize/screen_shot_2018-03-22at111442.png)
 
 * **ContextHub**
 
-   打开 [上下文中心](/help/sites-authoring/ch-previewing.md). 仅在预览模式下可用。
+  打开 [上下文中心](/help/sites-authoring/ch-previewing.md). 仅在预览模式下可用。
 
-   ![screen_shot_2018-03-22at111543](assets/screen_shot_2018-03-22at111543.png)
+  ![screen_shot_2018-03-22at111543](assets/screen_shot_2018-03-22at111543.png)
 
 * **页面标题**
 
-   这仅供参考。
+  这仅供参考。
 
-   ![screen_shot_2018-03-22at111554](assets/screen_shot_2018-03-22at111554.png)
+  ![screen_shot_2018-03-22at111554](assets/screen_shot_2018-03-22at111554.png)
 
 * **模式选择器**
 
-   显示当前 [模式](/help/sites-authoring/author-environment-tools.md#page-modes) 并允许您选择其他模式，例如编辑、布局、时间扭曲或定位。
+  显示当前 [模式](/help/sites-authoring/author-environment-tools.md#page-modes) 并允许您选择其他模式，例如编辑、布局、时间扭曲或定位。
 
-   ![chlimage_1-120](assets/chlimage_1-120.png)
+  ![chlimage_1-120](assets/chlimage_1-120.png)
 
 * **预览**
 
-   启用 [预览模式](/help/sites-authoring/editing-content.md#preview-mode). 这会显示发布后显示的页面。
+  启用 [预览模式](/help/sites-authoring/editing-content.md#preview-mode). 这会显示发布后显示的页面。
 
-   ![chlimage_1-121](assets/chlimage_1-121.png)
+  ![chlimage_1-121](assets/chlimage_1-121.png)
 
 * **批注**
 
-   允许您添加 [批注](/help/sites-authoring/annotations.md) 查看页面时跳转到页面。 在第一个批注之后，图标将切换到指示页面上批注数量的数字。
+  允许您添加 [批注](/help/sites-authoring/annotations.md) 查看页面时跳转到页面。 在第一个批注之后，图标将切换到指示页面上批注数量的数字。
 
-   ![](do-not-localize/screen_shot_2018-03-22at111638.png)
+  ![批注](do-not-localize/screen_shot_2018-03-22at111638.png)
 
 ### 状态通知 {#status-notification}
 
@@ -122,11 +122,11 @@ ht-degree: 40%
 
 * 将新组件添加到页面时（从组件浏览器中拖动）：
 
-   ![screen_shot_2018-03-22at111928](assets/screen_shot_2018-03-22at111928.png)
+  ![screen_shot_2018-03-22at111928](assets/screen_shot_2018-03-22at111928.png)
 
 * 移动现有组件时：
 
-   ![screen_shot_2018-03-22at112445](assets/screen_shot_2018-03-22at112445.png)
+  ![screen_shot_2018-03-22at112445](assets/screen_shot_2018-03-22at112445.png)
 
 ## 插入组件 {#inserting-a-component}
 
@@ -230,77 +230,77 @@ ht-degree: 40%
 
 * **编辑**
 
-   [根据组件类型](/help/sites-authoring/default-components.md)，此操作将允许您[编辑组件的内容](#edit-content)。通常会提供一个工具栏。
+  [根据组件类型](/help/sites-authoring/default-components.md)，此操作将允许您[编辑组件的内容](#edit-content)。通常会提供一个工具栏。
 
-   ![](do-not-localize/screen_shot_2018-03-22at112936.png)
+  ![编辑](do-not-localize/screen_shot_2018-03-22at112936.png)
 
 * **配置**
 
-   [根据组件类型](/help/sites-authoring/default-components.md)，此操作将允许您编辑和配置组件的属性。通常会打开一个对话框。
+  [根据组件类型](/help/sites-authoring/default-components.md)，此操作将允许您编辑和配置组件的属性。通常会打开一个对话框。
 
-   ![](do-not-localize/screen_shot_2018-03-22at112955.png)
+  ![配置](do-not-localize/screen_shot_2018-03-22at112955.png)
 
 * **复制**
 
-   这会将组件复制到剪贴板。 执行粘贴操作后，原始组件将保留。
+  这会将组件复制到剪贴板。 执行粘贴操作后，原始组件将保留。
 
-   ![](do-not-localize/screen_shot_2018-03-22at113000.png)
+  ![复制](do-not-localize/screen_shot_2018-03-22at113000.png)
 
 * **剪切**
 
-   这会将组件复制到剪贴板。 执行粘贴操作后，将删除原始组件。
+  这会将组件复制到剪贴板。 执行粘贴操作后，将删除原始组件。
 
-   ![screen_shot_2018-03-22at113007](assets/screen_shot_2018-03-22at113007.png)
+  ![screen_shot_2018-03-22at113007](assets/screen_shot_2018-03-22at113007.png)
 
 * **删除**
 
-   这将从页面中删除包含您确认的组件。
+  这将从页面中删除包含您确认的组件。
 
-   ![](do-not-localize/screen_shot_2018-03-22at113012.png)
+  ![删除](do-not-localize/screen_shot_2018-03-22at113012.png)
 
 * **插入组件**
 
-   这将打开对话框，您可以 [添加新组件](/help/sites-authoring/editing-content.md#inserting-a-component-from-the-paragraph-system).
+  这将打开对话框，您可以 [添加新组件](/help/sites-authoring/editing-content.md#inserting-a-component-from-the-paragraph-system).
 
-   ![](do-not-localize/screen_shot_2018-03-22at113017.png)
+  ![插入组件](do-not-localize/screen_shot_2018-03-22at113017.png)
 
 * **粘贴**
 
-   这会将组件从剪贴板粘贴到页面。 原始是否保留，取决于您使用的是复制还是剪切。
+  这会将组件从剪贴板粘贴到页面。 原始是否保留，取决于您使用的是复制还是剪切。
 
    * 您可以粘贴到同一页面或不同页面。
    * 粘贴的项目将粘贴到您选择粘贴操作的项目上方。
    * 仅当剪贴板上有内容时，才会显示粘贴操作。
 
-   ![screen_shot_2018-03-22at113553](assets/screen_shot_2018-03-22at113553.png)
+  ![screen_shot_2018-03-22at113553](assets/screen_shot_2018-03-22at113553.png)
 
-   >[!NOTE]
-   >
-   >如果在剪切/复制操作之前粘贴到已打开的其他页面，则必须刷新该页面才能查看粘贴的内容。
+  >[!NOTE]
+  >
+  >如果在剪切/复制操作之前粘贴到已打开的其他页面，则必须刷新该页面才能查看粘贴的内容。
 
 * **组**
 
-   这允许您同时选择多个组件。 在桌面设备上，可以通过以下方式实现相同目的 **按住Ctrl并单击** 或 **按住Command并单击**.
+  这允许您同时选择多个组件。 在桌面设备上，可以通过以下方式实现相同目的 **按住Ctrl并单击** 或 **按住Command并单击**.
 
-   ![](do-not-localize/screen_shot_2018-03-22at113240.png)
+  ![组](do-not-localize/screen_shot_2018-03-22at113240.png)
 
 * **父项**
 
-   用于选择所选组件的父组件。
+  用于选择所选组件的父组件。
 
-   ![screen_shot_2018-03-22at113028](assets/screen_shot_2018-03-22at113028.png)
+  ![screen_shot_2018-03-22at113028](assets/screen_shot_2018-03-22at113028.png)
 
 * **布局**
 
-   这允许您修改 [布局](/help/sites-authoring/editing-content.md#edit-component-layout) 选定组件的ID。 这仅适用于选定的组件，不会激活 [布局模式](/help/sites-authoring/author-environment-tools.md#page-modes) 整个页面。
+  这允许您修改 [布局](/help/sites-authoring/editing-content.md#edit-component-layout) 选定组件的ID。 这仅适用于选定的组件，不会激活 [布局模式](/help/sites-authoring/author-environment-tools.md#page-modes) 整个页面。
 
-   ![](do-not-localize/screen_shot_2018-03-22at113044.png)
+  ![布局](do-not-localize/screen_shot_2018-03-22at113044.png)
 
 * **转换为体验片段变体**
 
-   允许您从选定的组件创建一个新的[体验片段](/help/sites-authoring/experience-fragments.md)，或将其添加到现有的体验片段中。
+  允许您从选定的组件创建一个新的[体验片段](/help/sites-authoring/experience-fragments.md)，或将其添加到现有的体验片段中。
 
-   ![](do-not-localize/screen_shot_2018-03-22at113033.png)
+  ![转换为体验片段变量](do-not-localize/screen_shot_2018-03-22at113033.png)
 
 ## 编辑（内容） {#edit-content}
 
@@ -317,28 +317,28 @@ ht-degree: 40%
 
 * [文本组件](/help/sites-authoring/rich-text-editor.md#main-pars-title-24)
 
-   ![screen_shot_2018-03-22at120215](assets/screen_shot_2018-03-22at120215.png)
+  ![screen_shot_2018-03-22at120215](assets/screen_shot_2018-03-22at120215.png)
 
 * 图像组件
 
-   ![screen_shot_2018-03-22at120252](assets/screen_shot_2018-03-22at120252.png)
+  ![screen_shot_2018-03-22at120252](assets/screen_shot_2018-03-22at120252.png)
 
-   >[!NOTE]
-   >
-   >无法对空的图像组件执行编辑操作。
-   >
-   >
-   >您必须 [拖动或上传图像（使用“配置”）](/help/sites-authoring/default-components-foundation.md#image) 才能开始编辑它。
+  >[!NOTE]
+  >
+  >无法对空的图像组件执行编辑操作。
+  >
+  >
+  >您必须 [拖动或上传图像（使用“配置”）](/help/sites-authoring/default-components-foundation.md#image) 才能开始编辑它。
 
 * 图像组件 — 全屏
 
-   [进入图像组件的全屏模式](/help/sites-authoring/editing-content.md#edit-content-full-screen-mode) ，可以留出更多空间来编辑图像，并显示额外的编辑选项，如“启动映射”和“重 **置缩放”******。 此外，全屏模式还允许选择裁剪预设。
+  [进入图像组件的全屏模式](/help/sites-authoring/editing-content.md#edit-content-full-screen-mode) ，可以留出更多空间来编辑图像，并显示额外的编辑选项，如“启动映射”和“重 **置缩放”******。 此外，全屏模式还允许选择裁剪预设。
 
-   ![screen_shot_2018-03-22at120529](assets/screen_shot_2018-03-22at120529.png)
+  ![screen_shot_2018-03-22at120529](assets/screen_shot_2018-03-22at120529.png)
 
 * 由多个基本组件构建的组件，例如 [文本和图像基础组件](/help/sites-authoring/default-components-foundation.md#text-image)，首先要求您确认所需的编辑选项集：
 
-   ![chlimage_1-123](assets/chlimage_1-123.png)
+  ![chlimage_1-123](assets/chlimage_1-123.png)
 
 ### 将资产拖放到组件中 {#drag-and-drop-assets-into-component}
 
@@ -356,7 +356,7 @@ ht-degree: 40%
 
 对于所有组件，都可以通过以下图标进入（和退出）全屏模式：
 
-![](do-not-localize/chlimage_1-20.png)
+![编辑全屏模式](do-not-localize/chlimage_1-20.png)
 
 例如，**文本**&#x200B;组件：
 
@@ -391,7 +391,7 @@ ht-degree: 40%
 
    单击或点按&#x200B;**布局**&#x200B;操作可调整组件的布局。
 
-   ![](do-not-localize/chlimage_1-21.png)
+   ![组件工具栏](do-not-localize/chlimage_1-21.png)
 
 1. 选择“布局”操作后：
 
@@ -405,7 +405,7 @@ ht-degree: 40%
 
 1. 在进行必要的布局更改后，单击组件操作菜单中的&#x200B;**关闭**&#x200B;按钮以停止修改组件的布局。组件的工具栏会返回到其正常的编辑状态。
 
-   ![](do-not-localize/screen_shot_2018-03-22at133920.png)
+   ![关闭](do-not-localize/screen_shot_2018-03-22at133920.png)
 
 >[!NOTE]
 >
@@ -425,27 +425,27 @@ ht-degree: 40%
 
 * **Live Copy**
 
-   组件工具栏(如果组件位于Live Copy或启动项所属的页面（基于Live Copy）)。 例如：
+  组件工具栏(如果组件位于Live Copy或启动项所属的页面（基于Live Copy）)。 例如：
 
-   ![screen_shot_2018-03-22at134339](assets/screen_shot_2018-03-22at134339.png)
+  ![screen_shot_2018-03-22at134339](assets/screen_shot_2018-03-22at134339.png)
 
-   取消继承选项可用：
+  取消继承选项可用：
 
-   ![](do-not-localize/screen_shot_2018-03-22at134406.png)
+  ![取消继承](do-not-localize/screen_shot_2018-03-22at134406.png)
 
-   或者重新启用继承（如果已取消）：
+  或者重新启用继承（如果已取消）：
 
-   ![](do-not-localize/screen_shot_2018-03-22at134417.png)
+  ![重新启用继承](do-not-localize/screen_shot_2018-03-22at134417.png)
 
-   转出操作也在Blueprint或Live Copy源中可用：
+  转出操作也在Blueprint或Live Copy源中可用：
 
-   ![](do-not-localize/screen_shot_2018-03-22at134516.png)
+  ![转出](do-not-localize/screen_shot_2018-03-22at134516.png)
 
 * **继承的段落系统**
 
-   配置对话框。 例如，与继承的段落系统一样：
+  配置对话框。 例如，与继承的段落系统一样：
 
-   ![chlimage_1-124](assets/chlimage_1-124.png)
+  ![chlimage_1-124](assets/chlimage_1-124.png)
 
 ## 编辑页面模板 {#editing-the-page-template}
 
@@ -485,7 +485,6 @@ ht-degree: 40%
 >* 使用[键盘快捷键](/help/sites-authoring/keyboard-shortcuts.md) `Ctrl-Shift-M` 可在预览和最后选择的模式之间切换。
 >
 
-
 >[!NOTE]
 >
 >这两个选项都设置了WCM模式Cookie。
@@ -517,7 +516,7 @@ AEM 允许您锁定页面，这样其他人就无法修改页面内容。当您�
    1. 使用以下方式选择页面 [选择模式](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources).
    1. 选择锁图标。
 
-   ![screen_shot_2018-03-22at134928](assets/screen_shot_2018-03-22at134928.png)
+  ![screen_shot_2018-03-22at134928](assets/screen_shot_2018-03-22at134928.png)
 
 * **页面编辑器**
 
@@ -552,7 +551,7 @@ AEM 允许您锁定页面，这样其他人就无法修改页面内容。当您�
 
 通过以下图标可撤消或重做某项操作。这些图标会适时地出现在工具栏中：
 
-![](do-not-localize/screen_shot_2018-03-23at093614.png)
+![撤消和重做](do-not-localize/screen_shot_2018-03-23at093614.png)
 
 >[!NOTE]
 >
@@ -584,7 +583,6 @@ AEM 会按照您执行操作的顺序来存储这些操作的历史记录，这�
 >* 撤消最多20个编辑操作（默认设置）。
 >* 还使用 [键盘快捷键](/help/sites-authoring/page-authoring-keyboard-shortcuts.md) 用于撤消和重做。
 >
-
 
 可以对以下类型的页面更改使用撤消和重做：
 
