@@ -8,10 +8,10 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 8ae6817a-16d3-4740-b67a-498e75adf350
 exl-id: 5e232886-75c1-4f0f-b359-4739ae035fd3
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
+source-git-commit: cae9890cd61d6d894f34c7299e2e15ee70e14ac9
 workflow-type: tm+mt
-source-wordcount: '907'
-ht-degree: 4%
+source-wordcount: '913'
+ht-degree: 12%
 
 ---
 
@@ -68,13 +68,13 @@ ht-degree: 4%
 
 1. 单击或点按 **父级** 图标。
 
-   ![](do-not-localize/screen_shot_2018-03-22at103204.png)
+   ![父项](do-not-localize/screen_shot_2018-03-22at103204.png)
 
    这将选择包含当前组件的段落系统。
 
 1. 此 **配置** 段落系统的图标将显示在父项的操作栏中。
 
-   ![](do-not-localize/screen_shot_2018-03-22at103256.png)
+   ![配置](do-not-localize/screen_shot_2018-03-22at103256.png)
 
    选择此项以显示对话框。
 
@@ -91,10 +91,10 @@ ht-degree: 4%
 
    在 **允许的组件** 选项卡，定义哪些组件可用于parsys。
 
-   * 组件按其组件组进行分组，这些组件组可展开和折叠。
-   * 通过选中组名可选择整个组，通过取消选中可取消选择所有组。
-   * 减号表示至少选择了一个项目，但并非选择组中的所有项目。
-   * 搜索可用于按名称筛选组件。
+   * 这些组件按其组件组分组，各组可以展开和折叠。
+   * 可以通过选中组名称选择整个组，通过取消选中全部取消选择。
+   * 减号表示至少选中了组中的一个而并非所有项目。
+   * 可按名称进行搜索来筛选组件。
    * 无论是否应用了过滤器，组件组名称右侧列出的数字都表示这些组中选定组件的总数。
 
    您可以按页面组件定义配置。 如果子页面使用相同的模板和/或页面组件（通常对齐），则相同的配置将应用于相应的段落系统。
@@ -121,7 +121,7 @@ ht-degree: 4%
 
 1. 使用 **配置** 图标以打开对话框。
 
-   ![](do-not-localize/screen_shot_2018-03-22at103256-1.png)
+   ![“配置”图标](do-not-localize/screen_shot_2018-03-22at103256-1.png)
 
    在“设计”对话框中，可根据可用的设计参数配置组件。
 
@@ -139,7 +139,7 @@ ht-degree: 4%
 
    **功能**
 
-   此 **功能** 选项卡允许您启用或禁用组件的其他功能。 例如，对于图像组件，您可以定义图像的方向、可用的裁切选项以及是否可以上传图像。
+   **功能**&#x200B;选项卡允许您启用或禁用组件的其他功能。例如，对于图像组件，您可以定义图像的方向、可用的裁切选项以及是否可以上传图像。
 
    **样式**
 
@@ -151,12 +151,12 @@ ht-degree: 4%
 
    ![chlimage_1-94](assets/chlimage_1-94.png)
 
-   使用**删除**图标从多条目对话框列表中删除条目。
+   使用 **删除** 图标，用于从多条目对话框列表中删除条目。
 
-   ![](do-not-localize/screen_shot_2018-03-22at103809.png)
+   ![删除](do-not-localize/screen_shot_2018-03-22at103809.png)
 
    使用 **移动** 图标，以重新排列多条目对话框列表中的条目顺序。
 
-   ![](do-not-localize/screen_shot_2018-03-22at103816.png)
+   ![移动](do-not-localize/screen_shot_2018-03-22at103816.png)
 
 1. 单击或点按 **完成** 图标以保存并关闭对话框。
