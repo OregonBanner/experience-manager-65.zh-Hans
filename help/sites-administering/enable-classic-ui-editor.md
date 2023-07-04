@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 54903f3a-1e7e-4083-a2c9-b2ea4555d7fc
 docset: aem65
 exl-id: 8540e1f0-22d7-4f48-85d9-7c44eb7185df
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: ab6399d2d3b4ea0e77a017a34b953864ecadb10c
 workflow-type: tm+mt
-source-wordcount: '100'
-ht-degree: 7%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -44,4 +44,4 @@ ht-degree: 7%
 
 1. 此 **在经典用户界面中打开** 选项在中再次可用 **页面信息** 菜单。
 
-   ![](assets/syui-03-2019-02-27-15-19-48.png)
+   ![在经典UI中打开页面信息中的选项](assets/syui-03-2019-02-27-15-19-48.png)

@@ -8,10 +8,10 @@ topic-tags: e-commerce
 content-type: reference
 docset: aem65
 exl-id: c29f6213-1df6-45af-91c8-14b255276d82
-source-git-commit: 58594be73372e128ba999a8290615fbcb447084e
+source-git-commit: 6ebcc7bd5c72c01672244fdfba353a8949f6e331
 workflow-type: tm+mt
-source-wordcount: '2910'
-ht-degree: 3%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -43,7 +43,7 @@ AEM通用解决方案提供了管理存储库中存储的商务信息的方法�
 
 每种不同的产品类型都需要一个基架。 适当的基架通过以下任一方式与产品相关联：
 
-* 路径
+* path
 * 产品可以引用基架
 
 >[!NOTE]
@@ -66,21 +66,22 @@ AEM通用解决方案提供了管理存储库中存储的商务信息的方法�
 1. 使用 **产品** 控制台导航到所需的位置。
 1. 使用 **导入产品** 图标以打开向导。
 
-   ![chlimage_1-1](/help/sites-administering/do-not-localize/chlimage_1-13.png)
+   ![“导入产品”图标](/help/sites-administering/do-not-localize/chlimage_1-13.png)
 
 1. 指定：
 
    * **导入程序**
 
-      特定的导入程序 [商业提供程序](/help/commerce/cif-classic/administering/concepts.md#commerce-providers)，默认情况下 `Geometrixx`.
+     特定的导入程序 [商业提供程序](/help/commerce/cif-classic/administering/concepts.md#commerce-providers)，默认情况下 `Geometrixx`.
 
    * **来源**
 
-      要导入的文件；可使用浏览器选择文件。
+     要导入的文件；可使用浏览器选择文件。
 
    * **增量导入**
 
-      指示这是否为增量导入（而不是完全导入）。
+     指示这是否为增量导入（而不是完全导入）。
+
    >[!NOTE]
    >
    >增量导入（示例geometrixx-outdoor导入程序的）在产品级别运行。
@@ -104,27 +105,27 @@ AEM通用解决方案提供了管理存储库中存储的商务信息的方法�
 1. 使用 **工具** 控制台打开 **商务** 文件夹。
 1. 双击以打开 **产品导入程序**：
 
-   ![chlimage_1-22](/help/sites-administering/assets/chlimage_1-22.jpeg)
+   ![产品导入程序控制台](/help/sites-administering/assets/chlimage_1-22.jpeg)
 
 1. 指定：
 
    * **存储名称**
 
-      产品将导入到：
+     产品将导入到：
 
-      `/etc/commerce/products/<*store name*>/`
+     `/etc/commerce/products/<*store name*>/`
 
    * **商业提供程序**
 
-      您的导入程序 [商业提供程序](/help/commerce/cif-classic/administering/concepts.md#commerce-providers)；默认Geometrixx。
+     您的导入程序 [商业提供程序](/help/commerce/cif-classic/administering/concepts.md#commerce-providers)；默认Geometrixx。
 
    * **源文件**
 
-      要导入的文件在存储库中的位置。
+     要导入的文件在存储库中的位置。
 
    * **增量导入**
 
-      指示这是否为增量导入（而不是完全导入）。
+     指示这是否为增量导入（而不是完全导入）。
 
 1. 单击 **导入产品**.
 
@@ -142,7 +143,7 @@ AEM通用解决方案提供了管理存储库中存储的商务信息的方法�
    * **创建产品**
    * **创建产品变体**
 
-   ![chlimage_1-14](/help/sites-administering/do-not-localize/chlimage_1-14.png)
+   ![加号形状创建图标](/help/sites-administering/do-not-localize/chlimage_1-14.png)
 
 1. 此时将打开向导。 使用 **基本** 和 **产品选项卡** 输入 [产品属性](/help/commerce/cif-classic/administering/concepts.md#product-attributes) 用于新产品或产品变型。
 
@@ -178,7 +179,7 @@ AEM通用解决方案提供了管理存储库中存储的商务信息的方法�
 
    选择 **查看产品数据** 图标：
 
-   ![chlimage_1-3](/help/sites-administering/do-not-localize/chlimage_1-15.png)
+   ![查看产品数据图标 — 信息图标](/help/sites-administering/do-not-localize/chlimage_1-15.png)
 
 1. 此 [产品属性](/help/commerce/cif-classic/administering/concepts.md#product-attributes) 将显示为。 使用 **编辑** 和 **完成** 进行更改。
 
@@ -189,11 +190,11 @@ AEM通用解决方案提供了管理存储库中存储的商务信息的方法�
 1. 使用 **产品** 控制台(通过 **商务**)导航到您的产品信息。
 1. 使用图标打开“引用”的辅助边栏：
 
-   ![chlimage_1-4](/help/sites-administering/do-not-localize/chlimage_1-16.png)
+   ![双箭头图标](/help/sites-administering/do-not-localize/chlimage_1-16.png)
 
 1. 选择所需的产品 — 辅助边栏将更新以显示可用的引用类型：
 
-   ![chlimage_1-88](/help/sites-administering/assets/chlimage_1-88.png)
+   ![打开引用的products控制台](/help/sites-administering/assets/chlimage_1-88.png)
 
 1. 单击/点按引用类型（如产品页面）以展开列表。
 1. 选择特定引用以显示以下选项：
@@ -201,18 +202,18 @@ AEM通用解决方案提供了管理存储库中存储的商务信息的方法�
    * 导航到产品页面
    * 编辑产品页面
 
-   ![chlimage_1-89](/help/sites-administering/assets/chlimage_1-89.png)
+   ![产品控制台引用面板](/help/sites-administering/assets/chlimage_1-89.png)
 
 ### 搜索产品 {#search-for-products}
 
 1. 导航到 **产品** 控制台，通过 **商务**.
 1. 使用图标打开用于搜索的辅助边栏：
 
-   ![](/help/sites-administering/do-not-localize/chlimage_1-17.png)
+   ![放大镜图标](/help/sites-administering/do-not-localize/chlimage_1-17.png)
 
 1. 有多个Facet可供您搜索产品。 搜索只能使用一个或多个Facet。 将会显示找到的产品：
 
-   ![chlimage_1-90](/help/sites-administering/assets/chlimage_1-90.png)
+   ![产品控制台中的产品数据](/help/sites-administering/assets/chlimage_1-90.png)
 
 1. 单击/点按产品可将其打开。 您还可以发布或查看产品数据。
 
@@ -250,7 +251,7 @@ AEM通用解决方案提供了管理存储库中存储的商务信息的方法�
 1. 点按/单击编辑图标。
 1. 滚动到 **添加**.
 
-   ![chlimage_1-91](/help/sites-administering/assets/chlimage_1-91.png)
+   ![添加产品数据屏幕快照](/help/sites-administering/assets/chlimage_1-91.png)
 
 1. 点按/单击 **添加**. 此时将显示一个新的资产占位符。
 1. 点按/单击**更改**打开一个对话框，允许您选择资产。
@@ -337,7 +338,7 @@ AEM通用解决方案提供了管理存储库中存储的商务信息的方法�
 
    选择 **Publish** 或 **取消发布** 图标（根据需要）：
 
-   ![chlimage_1-6](/help/sites-administering/do-not-localize/chlimage_1-18.png) ![chlimage_1-7](/help/sites-administering/do-not-localize/chlimage_1-19.png)
+   ![世界图标](/help/sites-administering/do-not-localize/chlimage_1-18.png) ![带十字符号的世界图标 — 无符号](/help/sites-administering/do-not-localize/chlimage_1-19.png)
 
    将根据需要发布或取消发布产品信息。
 
@@ -367,7 +368,7 @@ AEM通用解决方案提供了管理存储库中存储的商务信息的方法�
 
 您可以在OSGI事件的Web控制台中查看它们( `/system/console/events`)，例如：
 
-![](/help/sites-administering/do-not-localize/chlimage_1-20.png)
+![OSGI事件示例](/help/sites-administering/do-not-localize/chlimage_1-20.png)
 
 >[!NOTE]
 >
@@ -389,15 +390,15 @@ AEM通用解决方案提供了管理存储库中存储的商务信息的方法�
 
 1. 单击全屏图标。
 
-   ![chlimage_1-92](/help/sites-administering/assets/chlimage_1-92.png)
+   ![全屏图标](/help/sites-administering/assets/chlimage_1-92.png)
 
 1. 单击“启动项映射”图标。
 
-   ![chlimage_1-93](/help/sites-administering/assets/chlimage_1-93.png)
+   ![启动映射图标](/help/sites-administering/assets/chlimage_1-93.png)
 
 1. 单击其中一个形状图标。
 
-   ![chlimage_1-21](/help/sites-administering/do-not-localize/chlimage_1-21.png)
+   ![形状图标](/help/sites-administering/do-not-localize/chlimage_1-21.png)
 
 1. 根据需要修改和移动形状。
 1. 单击形状。
@@ -407,17 +408,17 @@ AEM通用解决方案提供了管理存储库中存储的商务信息的方法�
    >
    >或者，您可以直接键入必须在产品级别（而非变体级别）的产品路径。
 
-   ![chlimage_1-94](/help/sites-administering/assets/chlimage_1-94.png)
+   ![键入路径](/help/sites-administering/assets/chlimage_1-94.png)
 
 1. 单击两次确认图标，然后单击退出全屏。
 1. 单击页面中组件旁边的某个位置。 页面应刷新，您应会在图像上看到以下符号：
 
-   ![](/help/sites-administering/do-not-localize/chlimage_1-22.png)
+   ![加号](/help/sites-administering/do-not-localize/chlimage_1-22.png)
 
 1. 切换到 [预览](/help/sites-authoring/editing-content.md#previewingpagestouchoptimizedui) 模式。
 1. 单击+热点。 此时将打开一个对话框，您可以在其中选择输入的产品的大小和数量 **路径**.
 
-   ![chlimage_1-95](/help/sites-administering/assets/chlimage_1-95.png)
+   ![产品示例： poncho](/help/sites-administering/assets/chlimage_1-95.png)
 
 1. 输入大小和数量。
 1. 单击添加到购物车按钮。 对话框关闭。
@@ -429,15 +430,15 @@ AEM通用解决方案提供了管理存储库中存储的商务信息的方法�
 
 1. 单击组件，然后单击配置图标。
 
-   ![chlimage_1-96](/help/sites-administering/assets/chlimage_1-96.png)
+   ![配置图标](/help/sites-administering/assets/chlimage_1-96.png)
 
 1. 向下滚动. 有一个 **添加到购物车** 选项卡。
 
-   ![chlimage_1-97](/help/sites-administering/assets/chlimage_1-97.png)
+   ![添加到购物车选项卡](/help/sites-administering/assets/chlimage_1-97.png)
 
 1. 单击 **添加到购物车**. 有3个配置选项可供您使用。
 
-   ![chlimage_1-98](/help/sites-administering/assets/chlimage_1-98.png)
+   ![配置选项](/help/sites-administering/assets/chlimage_1-98.png)
 
 1. 单击完成图标。
 
@@ -461,18 +462,18 @@ AEM通用解决方案提供了管理存储库中存储的商务信息的方法�
 
 1. 从列表中选择 **创建目录**，此时将打开创建目录向导。
 
-   ![chlimage_1-99](/help/sites-administering/assets/chlimage_1-99.png)
+   ![创建目录向导](/help/sites-administering/assets/chlimage_1-99.png)
 
 1. 导航到所需的目录Blueprint。
 1. 点按/单击 **选择** 按钮并点按/单击所需的目录Blueprint。
 1. 点按/单击 **下一个**.
 
-   ![chlimage_1-100](/help/sites-administering/assets/chlimage_1-100.png)
+   ![目录属性向导](/help/sites-administering/assets/chlimage_1-100.png)
 
 1. 键入a **标题** 和 **名称**.
 1. 点按/单击 **创建** 按钮。 将创建目录并打开一个对话框。
 
-   ![chlimage_1-101](/help/sites-administering/assets/chlimage_1-101.png)
+   ![“已创建目录”对话框](/help/sites-administering/assets/chlimage_1-101.png)
 
 1. 点按/单击 **完成** 按钮会将您带回站点控制台，您可以在其中查看您的目录。
 
@@ -548,11 +549,11 @@ AEM通用解决方案提供了管理存储库中存储的商务信息的方法�
 1. 导航到要导入目录Blueprint的位置。
 1. 点按/单击 **导入Blueprint** 图标。
 
-   ![](/help/sites-administering/do-not-localize/chlimage_1-13.png)
+   ![导入Blueprint图标](/help/sites-administering/do-not-localize/chlimage_1-13.png)
 
 1. 在向导中，根据需要选择源，然后点按/单击 **下一个**.
 
-   ![chlimage_1-340](/help/sites-administering/assets/chlimage_1-102.png)
+   ![Blueprint向导](/help/sites-administering/assets/chlimage_1-102.png)
 
 1. 点按/单击 **完成** 导入完成后。
 
@@ -661,7 +662,7 @@ AEM通用解决方案提供了管理存储库中存储的商务信息的方法�
 1. 使用 **订单** 控制台导航到所需的位置。
 1. 使用 **创建** 要选择的图标 **创建订单**.
 
-   ![](/help/sites-administering/do-not-localize/chlimage_1-14.png)
+   ![加号形状创建图标](/help/sites-administering/do-not-localize/chlimage_1-14.png)
 
 1. 此时将打开向导。 使用 **基本**， **内容**， **付款** 和 **完成** 选项卡以输入 [有关新订单的信息](/help/commerce/cif-classic/administering/concepts.md#order-information).
 
@@ -679,7 +680,7 @@ AEM通用解决方案提供了管理存储库中存储的商务信息的方法�
 
    选择 **查看订单数据** 图标：
 
-   ![](/help/sites-administering/do-not-localize/chlimage_1-15.png)
+   ![信息图标](/help/sites-administering/do-not-localize/chlimage_1-15.png)
 
 1. 此 [订单信息](/help/commerce/cif-classic/administering/concepts.md#order-information) 将显示为。 使用 **编辑** 和 **完成** 进行更改。
 

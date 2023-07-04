@@ -10,10 +10,10 @@ topic-tags: integrations
 discoiquuid: 96a77980-4213-4779-a540-00905ea8f7e3
 docset: aem65
 exl-id: 72f0f8e3-e70b-4f78-aa0e-b31768b536f7
-source-git-commit: 66631fd0813f623f3321072fc00fd90f7fa33d21
+source-git-commit: fef4f47794942b1fca4b30ce518b2faa8951f482
 workflow-type: tm+mt
-source-wordcount: '1531'
-ht-degree: 3%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -112,7 +112,7 @@ Analytics数据存储在特定于客户的存储库中，称为报表包。 要�
 Cloud Service配置是有关Adobe Analytics帐户的信息。 通过配置，Adobe Experience Manager (AEM)可以连接到Adobe Analytics。 为您使用的每个Analytics帐户创建单独的配置。
 
 1. 以管理员身份登录到您的AEM创作实例。
-1. 在左上角，单击 **Adobe Experience Manager** > **工具** ![](/help/forms/using/assets/tools.png) > **Cloud Services** > **旧版Cloud Services**.
+1. 在左上角，单击 **Adobe Experience Manager** > **工具** ![锤子图标](/help/forms/using/assets/tools.png) > **Cloud Services** > **旧版Cloud Services**.
 1. 查找 **Adobe Analytics** 图标。 单击 **显示配置** 然后继续单击 **[+]** 以添加新配置。
 
    如果您是首次使用的用户，请单击 **立即配置**.
@@ -145,7 +145,7 @@ Adobe Analytics框架是Adobe Analytics变量与AEM变量之间的一组映射�
 
    ![information_to_send_to_report_suite](assets/information_to_send_to_report_suite.png)
 
-1. 拖动 **Form Analytics组件** 从 **其他** 类别从SideKick转到框架。
+1. 拖动 **Form Analytics组件** 从 **其他** 类别从Sidekick到框架。
 1. 要将Analytics变量与组件中定义的变量进行映射，请将变量从AEM Content Finder拖动到跟踪组件上的字段。
 
    ![将AEM变量与Adobe Analytics变量映射](assets/analytics_new.png)
@@ -169,6 +169,7 @@ Adobe Analytics框架是Adobe Analytics变量与AEM变量之间的一组映射�
    * **Analytics报表同步cron**：指定用于从Adobe Analytics获取报表的cron表达式。 默认值为0 0 2 ？ &#42; &#42;.
 
    * **获取报表超时：** 以秒为单位，指定等待服务器响应分析报表的持续时间。 默认时间为120秒。
+
    >[!NOTE]
    >
    >超时报表提取操作可能比指定的秒数多花10秒。

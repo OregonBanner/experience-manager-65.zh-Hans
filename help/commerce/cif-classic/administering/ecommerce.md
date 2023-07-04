@@ -5,10 +5,10 @@ topic-tags: e-commerce
 content-type: reference
 docset: aem65
 exl-id: d995f0d6-9e48-4228-ac82-f33a0b25b9d3
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
+source-git-commit: 745ca1aa7bc96d0938ec550a357d9edcbea341db
 workflow-type: tm+mt
-source-wordcount: '731'
-ht-degree: 2%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -137,11 +137,11 @@ AEM eCommerce提供：
    * 优惠券
    * 和其他
 
-   ![](/help/sites-administering/assets/chlimage_1-130.png)
+  ![geometrixx组件示例](/help/sites-administering/assets/chlimage_1-130.png)
 
-   >[!NOTE]
-   >
-   >AEM提供的集成框架还允许您为商业功能构建其他AEM组件，而不依赖于特定的电子商务引擎。
+  >[!NOTE]
+  >
+  >AEM提供的集成框架还允许您为商业功能构建其他AEM组件，而不依赖于特定的电子商务引擎。
 
 * **搜索**  — 使用：
 
@@ -150,28 +150,28 @@ AEM eCommerce提供：
    * 第三方搜索
    * 或两者的组合。
 
-   ![](/help/sites-administering/assets/chlimage_1-131.png)
+  ![搜索示例](/help/sites-administering/assets/chlimage_1-131.png)
 
 * 使用AEM的功能来 **在多个渠道上展示您的内容**，可以是完整浏览器窗口或移动设备。 这将以访客所需的格式提供您的内容。
 
-   ![](/help/sites-administering/assets/chlimage_1-132.png)
+  ![移动视图示例](/help/sites-administering/assets/chlimage_1-132.png)
 
 * 能够 **根据以下内容开发您自己的集成实施： [AEM电子商务框架](#the-framework)**.
 
-   当前可用的两个实施均基于相同的基础构建 — 基于常规API（框架）。 实施新集成仅涉及实施您的集成所需的功能。 前端组件可供任何新实施使用，因为它们使用接口（因此独立于实施）。
+  当前可用的两个实施均基于相同的基础构建 — 基于常规API（框架）。 实施新集成仅涉及实施您的集成所需的功能。 前端组件可供任何新实施使用，因为它们使用接口（因此独立于实施）。
 
 * 开发的可能性 **基于购物者数据和活动的体验驱动型商务**. 这允许您实现许多场景：
 
    * 例如，当订单总额超过特定金额时，可以降低运费。
    * 另一种方法可能会允许您提供使用用户档案数据的季节性选件（例如位置）。 然后，可以突出显示这些内容，同样在必要时取决于其他因素。
 
-   在以下示例中，显示了一个Teaser，因为购物车的内容不到$75：
+  在以下示例中，显示了一个Teaser，因为购物车的内容不到$75：
 
-   ![](/help/sites-administering/assets/chlimage_1-133.png)
+  ![具有客户上下文的购物车](/help/sites-administering/assets/chlimage_1-133.png)
 
-   当购物车内容超过$75时，可以更改此值：
+  当购物车内容超过$75时，可以更改此值：
 
-   ![](/help/sites-administering/assets/chlimage_1-134.png)
+  ![更改后具有客户上下文的购物车](/help/sites-administering/assets/chlimage_1-134.png)
 
 * 以及其他功能，包括：
 
