@@ -12,10 +12,10 @@ discoiquuid: c061b358-8c0d-40d3-8090-dc9800309ab3
 docset: aem65
 exl-id: 89f55598-e749-42b8-8f2a-496f45face66
 feature: Security
-source-git-commit: 002b9035f37a1379556378686b64d26bbbc30288
+source-git-commit: 7803f1df1e05dc838cb458026f8dbd27de9cb924
 workflow-type: tm+mt
-source-wordcount: '2445'
-ht-degree: 5%
+source-wordcount: '2527'
+ht-degree: 4%
 
 ---
 
@@ -90,6 +90,7 @@ ht-degree: 5%
    * 访问 [Web控制台](/help/sites-deploying/configuring-osgi.md)
 
       * 例如，[https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)
+
    * 定位 `Apache Sling Distribution Agent - Sync Agents Factory`
 
       * 选择现有配置以打开进行编辑（铅笔图标）验证 `name`： **`socialpubsync`**
@@ -97,8 +98,7 @@ ht-degree: 5%
       * 选择 `Enabled` 复选框
       * 选择 `Save`
 
-
-![](assets/chlimage_1-20.png)
+![Apache Sling分发代理](assets/chlimage_1-20.png)
 
 ### 2.创建授权用户 {#createauthuser}
 
@@ -111,15 +111,15 @@ ht-degree: 5%
    * 访问 [安全控制台](/help/sites-administering/security.md)
 
       * 例如， [https://localhost:4503/useradmin](https://localhost:4503/useradmin)
+
    * 创建新用户
 
       * 例如， `usersync-admin`
+
    * 将此用户添加到 **`administrators`** 用户组
    * [将此用户的ACL添加到/home](#howtoaddacl)
 
       * `Allow jcr:all` 具有限制 `rep:glob=*/activities/*`
-
-
 
 >[!CAUTION]
 >
@@ -128,7 +128,6 @@ ht-degree: 5%
 >* 分配的默认用户为 **`admin`**.
 >* 不使用 `communities-user-admin user.`
 >
-
 
 #### 如何添加ACL {#addacls}
 
@@ -141,14 +140,14 @@ ht-degree: 5%
 * 选择 `+` 添加ACL项的按钮
 
    * **主体**： *搜索为用户同步创建的用户*
-   * **类型**: `Allow`
+   * **类型**： `Allow`
    * **权限**： `jcr:all`
    * **限制** rep:glob: `*/activities/*`
    * 选择 **确定**
 
 * 选择 **全部保存**
 
-![](assets/chlimage_1-21.png)
+![添加ACL窗口](assets/chlimage_1-21.png)
 
 另请参阅
 
@@ -167,6 +166,7 @@ ht-degree: 5%
    * 访问 [Web控制台](/help/sites-deploying/configuring-osgi.md)
 
       * 例如，[https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)
+
    * 定位 `com.adobe.granite.distribution.core.impl.CryptoDistributionTransportSecretProvider.name`
    * 选择现有配置以打开进行编辑（铅笔图标）验证 `property name`： **`socialpubsync-publishUser`**
 
@@ -174,8 +174,7 @@ ht-degree: 5%
 
       * 例如， `usersync-admin`
 
-
-![](assets/chlimage_1-22.png)
+![加密的密码传输密钥提供程序](assets/chlimage_1-22.png)
 
 ### 4. Apache Sling分发代理 — 队列代理工厂 {#apache-sling-distribution-agent-queue-agents-factory}
 
@@ -187,17 +186,17 @@ ht-degree: 5%
    * 访问 [Web控制台](/help/sites-deploying/configuring-osgi.md)
 
       * 例如，[https://localhost:4503/system/console/configMgr](https://localhost:4503/system/console/configMgr)
+
    * 定位 `Apache Sling Distribution Agent - Queue Agents Factory`
 
       * 选择现有配置以打开进行编辑（铅笔图标）验证 `Name`： `socialpubsync-reverse`
 
       * 选择 `Enabled` 复选框
       * 选择 `Save`
+
    * **repeat** 针对每个发布实例
 
-
-
-![](assets/chlimage_1-23.png)
+![队列代理工厂](assets/chlimage_1-23.png)
 
 ### 5. Adobe Social同步 — 观察者工厂差异 {#diffobserver}
 
@@ -209,17 +208,17 @@ ht-degree: 5%
    * 访问 [Web控制台](/help/sites-deploying/configuring-osgi.md)
 
       * 例如，[https://localhost:4503/system/console/configMgr](https://localhost:4503/system/console/configMgr)
+
    * 定位 **`Adobe Social Sync - Diff Observer Factory`**
 
       * 选择要打开的现有配置以进行编辑（铅笔图标）
 
-         验证 `agent name`: `socialpubsync-reverse`
+        验证 `agent name`: `socialpubsync-reverse`
 
       * 选择 `Enabled` 复选框
       * 选择 `Save`
 
-
-![](assets/screen-shot_2019-05-24at090809.png)
+![观察者工厂差异](assets/screen-shot_2019-05-24at090809.png)
 
 ### 6. Apache Sling Distribution Trigger — 计划触发器工厂 {#apache-sling-distribution-trigger-scheduled-triggers-factory}
 
@@ -233,17 +232,17 @@ ht-degree: 5%
    * 访问 [Web控制台](/help/sites-deploying/configuring-osgi.md)
 
       * 例如，[https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)
+
    * 定位 `Apache Sling Distribution Trigger - Scheduled Triggers Factory`
 
       * 选择要打开的现有配置以进行编辑（铅笔图标）
 
          * 验证 `Name`: `socialpubsync-scheduled-trigger`
+
       * 设置 `Interval in Seconds` 到所需的间隔
       * 选择 `Save`
 
-
-
-![](assets/chlimage_1-24.png)
+![计划触发器工厂](assets/chlimage_1-24.png)
 
 ## 为多个发布实例配置 {#configure-for-multiple-publish-instances}
 
@@ -259,12 +258,12 @@ ht-degree: 5%
    * 访问 [Web控制台](/help/sites-deploying/configuring-osgi.md)
 
       * 例如，[https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)
+
    * 定位 `Apache Sling Distribution Agent - Sync Agents Factory`
 
       * 选择现有配置以打开进行编辑（铅笔图标）验证 `Name`： `socialpubsync`
 
-
-![](assets/chlimage_1-25.png)
+![同步代理工厂](assets/chlimage_1-25.png)
 
 * **导出程序端点**
 每个发布实例都应该有一个导出程序端点。 例如，如果存在2个发布实例localhost：4503和4504，则应该有2个条目：
@@ -292,11 +291,11 @@ ht-degree: 5%
    * 访问 [Web控制台](/help/sites-deploying/configuring-osgi.md)
 
       * 例如， `https://localhost:4503/system/console/configMgr`
+
    * 定位 `AEM Communities User Sync Listener`
    * 选择现有配置以打开进行编辑（铅笔图标）验证 `Name`： `socialpubsync-scheduled-trigger`
 
-
-![](assets/chlimage_1-26.png)
+![AEM Communities用户同步侦听器](assets/chlimage_1-26.png)
 
 * **节点类型**
 这是将同步的节点类型列表。 需要在此处列出sling：Folder以外的任何节点类型（sling：folder单独处理）。
@@ -340,7 +339,7 @@ ht-degree: 5%
 1. 浏览到 `http://<host>:<port>/system/console/status-slingsettings`
 1. 检查值 **Sling ID**
 
-![](assets/chlimage_1-27.png)
+![检查Sling ID的值](assets/chlimage_1-27.png)
 
 如果发布实例的Sling ID与任何其他发布实例的Sling ID匹配，则：
 
@@ -350,10 +349,10 @@ ht-degree: 5%
    * 搜索并删除名为的文件 *sling.id.file*
 
       * 例如，在Linux系统上：
-         `rm -i $(find . -type f -name sling.id.file)`
+        `rm -i $(find . -type f -name sling.id.file)`
 
       * 例如，在Windows系统上：
-         `use windows explorer and search for *sling.id.file*`
+        `use windows explorer and search for *sling.id.file*`
 
 1. 启动发布实例
 
@@ -387,10 +386,10 @@ ht-degree: 5%
    * 要使用新节点覆盖现有rep：policy节点，请添加第三个包过滤器：
 
       * `/home/users|+.*/rep:policy`
+
    * 要防止策略被分发，请设置
 
       * `Acl Handling:` `IGNORE`
-
 
 ![保险库包生成器工厂](assets/vault-package-builder-factory.png)
 
@@ -423,13 +422,13 @@ ht-degree: 5%
       * 在中查找条目 `/var/sling/distribution/packages`
 
          * 使用模式命名的文件夹节点 `distrpackage_*`
+
    * 使用 [包管理器](/help/sites-administering/package-manager.md)
 
       * 查找挂起的包（尚未安装）
 
          * 使用模式命名 `socialpubsync-vlt*`
          * 创建者 `communities-user-admin`
-
 
 当分发队列为空时，禁用用户同步：
 
@@ -453,7 +452,7 @@ ht-degree: 5%
 
 这是未启用用户同步时显示的内容：
 
-![](assets/chlimage_1-28.png)
+![未启用用户同步诊断的警告](assets/chlimage_1-28.png)
 
 #### 如何为发布实例运行诊断 {#how-to-run-diagnostics-for-publish-instances}
 
@@ -463,7 +462,7 @@ ht-degree: 5%
 
 **注释**：在启动URL之前， *授权同步用户* 必须已登录到发布实例。
 
-![](assets/chlimage_1-29.png)
+![发布实例的诊断](assets/chlimage_1-29.png)
 
 ### 未正确添加配置 {#configuration-improperly-added}
 
@@ -473,23 +472,23 @@ ht-degree: 5%
 
 #### （作者）一个Apache Sling分发代理 — 同步代理工厂 {#author-one-apache-sling-distribution-agent-sync-agents-factory}
 
-![](assets/chlimage_1-30.png)
+![已编辑，Web控制台中的默认配置视图](assets/chlimage_1-30.png)
 
 #### （作者）一个Apache Sling分发传输凭据 — 基于用户凭据的DistributionTransportSecretProvider {#author-one-apache-sling-distribution-transport-credentials-user-credentials-based-distributiontransportsecretprovider}
 
-![](assets/chlimage_1-31.png)
+![已编辑，Web控制台中的默认配置视图](assets/chlimage_1-31.png)
 
 #### （发布）一个Apache Sling分发代理 — 队列代理工厂 {#publish-one-apache-sling-distribution-agent-queue-agents-factory}
 
-![](assets/chlimage_1-32.png)
+![已编辑，Web控制台中的默认配置视图](assets/chlimage_1-32.png)
 
 #### （发布）一个Adobe Social同步 — 观察者工厂差异 {#publish-one-adobe-social-sync-diff-observer-factory}
 
-![](assets/chlimage_1-33.png)
+![已编辑，Web控制台中的默认配置视图](assets/chlimage_1-33.png)
 
 #### （作者）一个Apache Sling分发触发器 — 计划触发器工厂 {#author-one-apache-sling-distribution-trigger-scheduled-triggers-factory}
 
-![](assets/chlimage_1-34.png)
+![已编辑，Web控制台中的默认配置视图](assets/chlimage_1-34.png)
 
 ### 处理响应期间发生修改操作异常 {#modify-operation-exception-during-response-processing}
 
@@ -507,7 +506,7 @@ ht-degree: 5%
 
 授权用户应明确对所有发布实例具有以下权限和限制：
 
-| **路径** | **jcr：all** | **rep：glob** |
+| **path** | **jcr：all** | **rep：glob** |
 |---|---|---|
 | /home | X | &#42;/活动/&#42; |
 | /home/users | X | &#42;/活动/&#42; |
@@ -515,7 +514,7 @@ ht-degree: 5%
 
 作为 `administrators` 组，授权用户应具有对所有发布实例的以下权限：
 
-| **路径** | **jcr：all** | **jcr：read** | **rep：write** |
+| **path** | **jcr：all** | **jcr：read** | **rep：write** |
 |---|---|---|---|
 | /etc/packages/sling/distribution |  |  | X |
 | /libs/sling/distribution |  | X |  |
@@ -540,8 +539,8 @@ ht-degree: 5%
 
          * 过滤器选项卡：添加过滤器：根路径： `/home`
          * 高级选项卡：AC处理： `Overwrite`
-   * [导出资源包](/help/sites-administering/package-manager.md#downloading-packages-to-your-file-system)
 
+   * [导出资源包](/help/sites-administering/package-manager.md#downloading-packages-to-your-file-system)
 
 * 在其他发布实例上：
 
@@ -576,6 +575,7 @@ ht-degree: 5%
 
       * `Exporter Endpoints`
       * `Importer Endpoints`
+
    * 重新启用用户同步
 
       * 检查 `Enabled` 复选框 [Apache Sling分发代理 — 同步代理工厂](#apache-sling-distribution-agent-sync-agents-factory)

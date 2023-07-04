@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 994a5751-7267-4a61-9bc7-01440a256c65
 docset: aem65
 exl-id: acb5b235-523e-4c01-9bd2-0cc2049f88e2
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 7803f1df1e05dc838cb458026f8dbd27de9cb924
 workflow-type: tm+mt
-source-wordcount: '1222'
+source-wordcount: '1226'
 ht-degree: 2%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 2%
 * [AEM Communities](/help/communities/overview.md)站点访客需要登录才能将内容发布到社区。
 * [封闭用户组](/help/sites-administering/cug.md)
 
-   您可能需要限制特定访客访问您的网站（或部分网站）。
+  您可能需要限制特定访客访问您的网站（或部分网站）。
 
 * [个性化](/help/sites-administering/personalization.md) 允许访客配置访问网站方式的某些方面。
 
@@ -33,15 +33,15 @@ ht-degree: 2%
 
 * 从网站自助注册
 
-   A [社区站点](/help/communities/sites-console.md) 可以配置为允许访客使用其Facebook或Twitter帐户自助注册或登录。
+  A [社区站点](/help/communities/sites-console.md) 可以配置为允许访客使用其Facebook或Twitter帐户自助注册或登录。
 
 * 网站注册申请
 
-   对于封闭用户组，您可能允许访客请求注册，但通过工作流强制执行授权。
+  对于封闭用户组，您可能允许访客请求注册，但通过工作流强制执行授权。
 
 * 从创作环境注册每个帐户
 
-   如果您的配置文件数量较少（无论如何都需要授权），则可以决定直接注册每个配置文件。
+  如果您的配置文件数量较少（无论如何都需要授权），则可以决定直接注册每个配置文件。
 
 要允许访客注册，可使用一系列组件和表单来收集所需的标识信息，然后收集其他（通常是可选的）配置文件信息。 完成注册后，他们还应能够查看并更新已提交的详细信息。
 
@@ -106,7 +106,7 @@ http://localhost:4502/content/geometrixx-outdoors/en/user/profile.html
 1. 按 **control-alt-C** 以打开客户端上下文。
 1. 在客户端上下文的左上角，单击 **加载配置文件** 按钮。
 
-   ![](do-not-localize/loadprofile.png)
+   ![“加载配置文件”按钮](do-not-localize/loadprofile.png)
 
 1. 从对话框窗口的下拉列表中选择另一个配置文件；例如， **艾莉森·帕克**.
 1. 单击&#x200B;**确定**。
@@ -156,11 +156,11 @@ http://localhost:4502/content/geometrixx-outdoors/en/user/profile.html
 
 * [状态提供程序](#state-providers)
 
-   管理特定属性的两种状态以及这两种状态之间的过渡。
+  管理特定属性的两种状态以及这两种状态之间的过渡。
 
 * [工作流](#workflows)
 
-   用于管理与状态相关的操作。
+  用于管理与状态相关的操作。
 
 可以定义多个状态；例如，在Geometrixx中，这些状态包括：
 

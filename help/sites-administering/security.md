@@ -10,9 +10,9 @@ discoiquuid: e72da81b-4085-49b0-86c3-11ad48978a8a
 docset: aem65
 exl-id: 53d8c654-8017-4528-a44e-e362d8b59f82
 feature: Security
-source-git-commit: 3430897fc98aecbcf6cc7bf6bdc9b3df24e92366
+source-git-commit: 7803f1df1e05dc838cb458026f8dbd27de9cb924
 workflow-type: tm+mt
-source-wordcount: '5398'
+source-wordcount: '5402'
 ht-degree: 1%
 
 ---
@@ -284,14 +284,14 @@ AEM WCM使用访问控制列表(ACL)来组织应用于各种页面的权限。
 
 * 不要将权限直接分配给用户。 仅将它们分配给组。
 
-   这样做简化了维护，因为组的数量比用户数量少得多，而且波动性也小。
+  这样做简化了维护，因为组的数量比用户数量少得多，而且波动性也小。
 
 * 如果您希望组/用户只能修改页面，请不要授予他们创建或拒绝权限。 仅授予他们修改和读取权限。
 * 请谨慎使用“拒绝”。 尽可能仅使用“允许”。
 
-   如果以与预期顺序不同的顺序应用权限，则使用deny可能会导致意外效果。 如果用户是多个组的成员，则来自一个组的Deny语句可以取消来自另一个组的Allow语句，反之亦然。 发生此类事件时，很难保持概述，并且容易导致不可预见的结果，而允许分配不会导致此类冲突。
+  如果以与预期顺序不同的顺序应用权限，则使用deny可能会导致意外效果。 如果用户是多个组的成员，则来自一个组的Deny语句可以取消来自另一个组的Allow语句，反之亦然。 发生此类事件时，很难保持概述，并且容易导致不可预见的结果，而允许分配不会导致此类冲突。
 
-   Adobe建议您使用“允许”而不是“拒绝”，请参见 [最佳实践](#best-practices).
+  Adobe建议您使用“允许”而不是“拒绝”，请参见 [最佳实践](#best-practices).
 
 在修改任一权限之前，请确保您了解它们的工作方式和相互关系。 请参阅说明AEM WCM方式的CRX文档 [评估访问权限](/help/sites-administering/user-group-ac-admin.md#how-access-rights-are-evaluated)、以及有关设置访问控制列表的示例。
 
@@ -391,7 +391,7 @@ AEM WCM使用访问控制列表(ACL)来组织应用于各种页面的权限。
 
 * 在AEM的欢迎屏幕或各种位置中，单击安全图标：
 
-![](do-not-localize/wcmtoolbar.png)
+![“AEM WCM安全”选项卡](do-not-localize/wcmtoolbar.png)
 
 * 直接导航到 `https://<server>:<port>/useradmin`. 确保您以管理员身份登录AEM。
 
@@ -640,7 +640,6 @@ AEM提供了三种从组中删除用户或组的不同方式：
 >* 用户的复制权限取代了组的复制权限。
 >* 允许复制权限的优先级高于拒绝复制权限。 参见 [AEM中的权限](#permissions-in-aem) 了解更多信息。
 >
-
 
 要设置复制权限，请执行以下操作：
 

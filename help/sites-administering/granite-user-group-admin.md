@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 95ab2e54-0f8d-49e0-ad20-774875f6f80a
 exl-id: f3477d21-7e9a-4588-94e8-496bc42434a8
 feature: Security
-source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
+source-git-commit: 7803f1df1e05dc838cb458026f8dbd27de9cb924
 workflow-type: tm+mt
-source-wordcount: '923'
+source-wordcount: '945'
 ht-degree: 4%
 
 ---
@@ -32,9 +32,9 @@ Granite用户和组管理控制台均可从 **[工具](/help/sites-administering
 
 * [用户管理](#user-administration)
 
-   ![chlimage_1-73](assets/chlimage_1-73a.png)
+  ![chlimage_1-73](assets/chlimage_1-73a.png)
 
-   此 **用户** 控制台列表：
+  此 **用户** 控制台列表：
 
    * 用户名
    * 用户登录名（帐户名）
@@ -42,9 +42,9 @@ Granite用户和组管理控制台均可从 **[工具](/help/sites-administering
 
 * [组管理](#group-administration)
 
-   ![chlimage_1-74](assets/chlimage_1-74a.png)
+  ![chlimage_1-74](assets/chlimage_1-74a.png)
 
-   此 **组** 控制台列表：
+  此 **组** 控制台列表：
 
    * 组名称
    * 组描述
@@ -56,7 +56,7 @@ Granite用户和组管理控制台均可从 **[工具](/help/sites-administering
 
 1. 使用 **添加用户** 图标：
 
-   ![](do-not-localize/chlimage_1-1.png)
+   ![添加用户](do-not-localize/chlimage_1-1.png)
 
 1. 此 **创建用户** 表单将打开：
 
@@ -66,16 +66,16 @@ Granite用户和组管理控制台均可从 **[工具](/help/sites-administering
 
    * **ID**
 
-      这是用户帐户的唯一标识。 它是必填项，不能包含空格。
+     这是用户帐户的唯一标识。 它是必填项，不能包含空格。
 
    * **电子邮件地址**
    * **密码**
 
-      必须输入密码。
+     必须输入密码。
 
    * **重新键入密码**
 
-      这是强制性的，因为确认密码时需要它。
+     这是强制性的，因为确认密码时需要它。
 
    * **名字**
    * **姓氏**
@@ -93,24 +93,23 @@ Granite用户和组管理控制台均可从 **[工具](/help/sites-administering
    * **帐户设置**
 
       * **状态**
-您可以将帐户标记为以下任一项 
-**活动** 或 **不活动**.
+您可以将帐户标记为以下任一项 **活动** 或 **不活动**.
+
    * **照片**
 
-      您可以在此处上传照片以用作头像。
+     您可以在此处上传照片以用作头像。
 
-      接受的文件类型: `.jpg .png .tif .gif`
+     接受的文件类型: `.jpg .png .tif .gif`
 
-      首选大小： `240x240px`
+     首选大小： `240x240px`
 
    * **将用户添加到组**
 
-      使用选择下拉列表选择用户应成为其成员的组。 选择后，使用 **X** ，名称在保存前取消选择。
+     使用选择下拉列表选择用户应成为其成员的组。 选择后，使用 **X** ，名称在保存前取消选择。
 
    * **组**
 
-      用户当前所属的组的列表。 使用 **X** ，名称在保存前取消选择。
-
+     用户当前所属的组的列表。 使用 **X** ，名称在保存前取消选择。
 
 1. 定义用户帐户后，使用：
 
@@ -146,7 +145,7 @@ Granite用户和组管理控制台均可从 **[工具](/help/sites-administering
 1. 使用点击框标记一个或多个用户。
 1. 使用 **组** 图标：
 
-   ![](do-not-localize/chlimage_1-2.png)
+   ![使用“组”图标](do-not-localize/chlimage_1-2.png)
 
    要打开组选择下拉列表，请执行以下操作：
 
@@ -164,7 +163,7 @@ Granite用户和组管理控制台均可从 **[工具](/help/sites-administering
 1. 使用点击框标记一个或多个用户。
 1. 使用 **删除** 图标以删除用户详细信息：
 
-   ![](do-not-localize/chlimage_1-3.png)
+   ![删除现有用户详细信息](do-not-localize/chlimage_1-3.png)
 
 1. 系统会要求您确认删除，然后会显示一条消息，确认已执行实际删除。
 
@@ -174,7 +173,7 @@ Granite用户和组管理控制台均可从 **[工具](/help/sites-administering
 
 1. 使用“添加群组”图标：
 
-   ![](do-not-localize/chlimage_1-4.png)
+   ![添加新组](do-not-localize/chlimage_1-4.png)
 
 1. 此 **创建组** 表单将打开：
 
@@ -184,23 +183,23 @@ Granite用户和组管理控制台均可从 **[工具](/help/sites-administering
 
    * **ID**
 
-      这是组的唯一标识符。 这是必填项，不能包含空格。
+     这是组的唯一标识符。 这是必填项，不能包含空格。
 
    * **名称**
 
-      组的名称；将显示在组控制台中。
+     组的名称；将显示在组控制台中。
 
    * **描述**
 
-      组的描述。
+     组的描述。
 
    * **将成员添加到组**
 
-      使用选择下拉列表选择要添加到组的用户。 选择后，使用 **X** ，名称在保存前取消选择。
+     使用选择下拉列表选择要添加到组的用户。 选择后，使用 **X** ，名称在保存前取消选择。
 
    * **组成员**
 
-      组中的用户列表。 使用 **X** ，名称在保存前取消选择。
+     组中的用户列表。 使用 **X** ，名称在保存前取消选择。
 
 1. 定义组后，使用：
 
@@ -218,7 +217,7 @@ Granite用户和组管理控制台均可从 **[工具](/help/sites-administering
 1. 使用点击框标记组。
 1. 使用 **复制** 图标以复制组详细信息：
 
-   ![](do-not-localize/chlimage_1-5.png)
+   ![复制现有组](do-not-localize/chlimage_1-5.png)
 
 1. 此 **编辑组设置** 将打开窗体。
 
@@ -231,6 +230,6 @@ Granite用户和组管理控制台均可从 **[工具](/help/sites-administering
 1. 使用点击框标记一个或多个组。
 1. 使用 **删除** 图标以删除组详细信息：
 
-   ![](do-not-localize/chlimage_1-6.png)
+   ![删除现有组](do-not-localize/chlimage_1-6.png)
 
 1. 系统会要求您确认删除，然后会显示一条消息，确认已执行实际删除。
