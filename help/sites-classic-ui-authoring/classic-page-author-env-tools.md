@@ -9,10 +9,10 @@ content-type: reference
 discoiquuid: 67625e62-7035-4eb5-8dd5-6840d775a547
 docset: aem65
 exl-id: 5d7b6b2e-d1d8-4efe-b9ff-c9542b4e67d7
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
+source-git-commit: 75c6bb87bb06c5ac9378ccebf193b5416c080bb1
 workflow-type: tm+mt
-source-wordcount: '898'
-ht-degree: 5%
+source-wordcount: '902'
+ht-degree: 6%
 
 ---
 
@@ -40,7 +40,7 @@ AEM 的创作环境提供了各种可用于组织和编辑内容的机制. 可�
 
 以及访问 [控制台工具栏中的帮助](/help/sites-classic-ui-authoring/author-env-basic-handling.md#accessing-help)，您还可以从sidekick中访问帮助(使用？ 图标)在编辑页面时：
 
-![](do-not-localize/sidekick-collapsed-2.png)
+![Sidekick已折叠](do-not-localize/sidekick-collapsed-2.png)
 
 或者使用 **帮助** 按钮；这将显示上下文相关帮助。
 
@@ -188,7 +188,7 @@ AEM允许您查看哪些页面已链接到您当前处理的页面。
 
 使用经典UI编辑页面时，可以使用Sidekick底部的图标访问各种模式：
 
-![](do-not-localize/chlimage_1-12.png)
+![页面模式](do-not-localize/chlimage_1-12.png)
 
 Sidekick底部的一行图标用于切换使用页面的模式：
 
@@ -209,7 +209,6 @@ Sidekick底部的一行图标用于切换使用页面的模式：
 >* [ClientContext](/help/sites-administering/client-context.md)
 >* 网站 — 将打开网站控制台。
 >* 重新加载 — 将刷新页面。
-
 
 ## 键盘快捷键 {#keyboard-shortcuts}
 

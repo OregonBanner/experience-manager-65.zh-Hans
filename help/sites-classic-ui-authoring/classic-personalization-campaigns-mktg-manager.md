@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 11ff8bb3-39eb-4f77-b3dc-720262fa7f3f
 docset: aem65
 exl-id: 0e13112b-d9df-4ba6-bd73-431c87890b79
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 75c6bb87bb06c5ac9378ccebf193b5416c080bb1
 workflow-type: tm+mt
-source-wordcount: '1175'
-ht-degree: 0%
+source-wordcount: '1179'
+ht-degree: 1%
 
 ---
 
@@ -148,7 +148,7 @@ AEM提供不同的报告，以帮助您分析和监控实例的状态。 此MCM�
 
    使用图标：
 
-   ![](do-not-localize/mcm_iconcalendarview.png)
+   ![日历视图](do-not-localize/mcm_iconcalendarview.png)
 
    这会显示所有接触点（灰色）的列表，其中包含连接到该接触点的体验的水平时间范围（绿色）：
 
@@ -166,7 +166,7 @@ AEM提供不同的报告，以帮助您分析和监控实例的状态。 此MCM�
 
    使用图标：
 
-   ![](do-not-localize/mcm_icon_listview.png)
+   ![列表视图](do-not-localize/mcm_icon_listview.png)
 
    下面列出了选定营销活动的所有体验（例如Teaser和新闻稿）：
 

@@ -9,9 +9,9 @@ topic-tags: site-features
 discoiquuid: f170613c-329e-446b-9ac3-350615f1bfb6
 docset: aem65
 exl-id: e47270e8-bace-4d0f-a088-7269b6356315
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
+source-git-commit: b3889b1897f0ec0c5bbf60c346b77b2906175904
 workflow-type: tm+mt
-source-wordcount: '1524'
+source-wordcount: '1526'
 ht-degree: 39%
 
 ---
@@ -33,11 +33,11 @@ ht-degree: 39%
 
 * 您的 [通知](/help/sites-authoring/inbox.md) 指示器（工具栏）将递增：
 
-   ![](do-not-localize/wf-57.png)
+  ![通知指示器](do-not-localize/wf-57.png)
 
 * 该工作项将在您的通知[收件箱](/help/sites-authoring/inbox.md)中列出：
 
-   ![wf-58](assets/wf-58.png)
+  ![wf-58](assets/wf-58.png)
 
 * 使用页面编辑器时，状态栏将显示：
 
@@ -48,18 +48,18 @@ ht-degree: 39%
       * 使用左/右箭头浏览各种工作流的状态信息。
       * 单击/点按实际数字以打开所有适用工作流的下拉列表，然后选择要在状态栏中显示的工作流。
 
-   ![wf-59](assets/wf-59.png)
+  ![wf-59](assets/wf-59.png)
 
-   >[!NOTE]
-   >
-   >状态栏只对拥有工作流权限的用户可见；例如，`workflow-users` 组的成员。
-   >
-   >
-   >当当前用户直接参与工作流的当前步骤时，将显示操作。
+  >[!NOTE]
+  >
+  >状态栏只对拥有工作流权限的用户可见；例如，`workflow-users` 组的成员。
+  >
+  >
+  >当当前用户直接参与工作流的当前步骤时，将显示操作。
 
 * 当打开资源的&#x200B;**时间线**&#x200B;时，将会显示工作流步骤。单击/点按警报横幅时，也会显示可用的操作：
 
-   ![screen-shot_2019-03-05at120453](assets/screen-shot_2019-03-05at120453.png)
+  ![screen-shot_2019-03-05at120453](assets/screen-shot_2019-03-05at120453.png)
 
 ### 完成参与者步骤 {#completing-a-participant-step}
 
@@ -229,19 +229,19 @@ ht-degree: 39%
 
 * **工作项**&#x200B;选项卡：
 
-   ![wf-72](assets/wf-72.png)
+  ![wf-72](assets/wf-72.png)
 
 * **工作流信息**&#x200B;选项卡：
 
-   ![wf-73](assets/wf-73.png)
+  ![wf-73](assets/wf-73.png)
 
-   如果 [工作流暂存](/help/sites-developing/workflows.md#workflow-stages) 已为模型配置了，您可以根据以下内容查看进度：
+  如果 [工作流暂存](/help/sites-developing/workflows.md#workflow-stages) 已为模型配置了，您可以根据以下内容查看进度：
 
-   ![wf-107](assets/wf-107.png)
+  ![wf-107](assets/wf-107.png)
 
 * **评论**&#x200B;选项卡：
 
-   ![wf-75](assets/wf-75.png)
+  ![wf-75](assets/wf-75.png)
 
 您可以通过以下任一方式打开工作项详细信息：
 

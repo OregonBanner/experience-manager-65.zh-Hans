@@ -11,9 +11,9 @@ topic-tags: personalization
 discoiquuid: 9d940744-3b00-4721-829a-96d17bb738e8
 docset: aem65
 exl-id: edde225d-0be7-4306-8dda-d18d46fae977
-source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
+source-git-commit: b3889b1897f0ec0c5bbf60c346b77b2906175904
 workflow-type: tm+mt
-source-wordcount: '5349'
+source-wordcount: '5390'
 ht-degree: 33%
 
 ---
@@ -99,7 +99,7 @@ ht-degree: 33%
 
    * 如果您选择 **ContextHub AEM**，则其余字段会变暗且不再可用。单击或点按&#x200B;**创建**。
 
-   * 如果您选择 **Adobe Target**，您可以选择配置(默认情况下，它是您在执行以下操作时 [已配置帐户](/help/sites-administering/opt-in.md))和活动类型。
+   * 如果您选择 **Adobe Target**，您可以选择配置(默认情况下，它是您在执行以下操作时提供的配置： [已配置帐户](/help/sites-administering/opt-in.md))和活动类型。
 
    * 如果您使用AEM/Adobe Campaign集成并发送目标内容（新闻稿），请选择 **Adobe Campaign**. 参见 [与Adobe Campaign集成](/help/sites-administering/campaign.md) 了解更多信息。
 
@@ -253,7 +253,7 @@ ht-degree: 33%
 
 1. 单击或点按“定位”图标。
 
-   ![](do-not-localize/chlimage_1.png)
+   ![目标](do-not-localize/chlimage_1.png)
 
    该组件内容随即会成为默认体验的选件。定位某个组件后，其默认节点会被复制到每个体验中。在进行特定于体验的创作时，需要具有此默认节点，才能编辑正确的内容节点。对于默认体验之外的其他体验，可[添加自定义选件](/help/sites-authoring/content-targeting-touch.md#adding-a-custom-offer)或[添加库选件](/help/sites-authoring/content-targeting-touch.md#adding-an-offer-from-an-offer-library)。
 
@@ -275,7 +275,7 @@ ht-degree: 33%
 
 在编辑模式下，Target 组件具有一个靶心图标。
 
-![](do-not-localize/chlimage_1-1.png)
+![编辑模式下的目标组件](do-not-localize/chlimage_1-1.png)
 
 将组件拖放到 Target 组件后，它们即成为目标组件。
 
@@ -296,6 +296,8 @@ ht-degree: 33%
    >
    >
    >管理员可以决定是否需要在以下位置设置此配置：**https://&lt;host>：&lt;port>/system/console/configMgr/com.day.cq.personalization.impl.servlets.TargetingConfigurationServlet**
+   >
+   >
    要要求用户输入位置，请选中**强制位置**复选框。
 
 1. 选择要为其创建选件的体验。
@@ -321,7 +323,7 @@ ht-degree: 33%
 
 1. 单击或点按选件以显示选件菜单，然后单击或点按编辑图标。
 
-   ![](do-not-localize/chlimage_1-2.png)
+   ![选件菜单](do-not-localize/chlimage_1-2.png)
 
 1. 编辑组件的内容。
 
@@ -338,7 +340,7 @@ ht-degree: 33%
 
 1. 单击或点按文件夹图标。
 
-   ![](do-not-localize/chlimage_1-3.png)
+   ![文件夹图标](do-not-localize/chlimage_1-3.png)
 
 1. 从库中选择选件，然后单击或点按复选标记图标。
 
@@ -371,7 +373,7 @@ ht-degree: 33%
 1. 选择体验以显示自定义选件。
 1. 单击或点按自定义选件以显示选件菜单，然后单击或点按 **将选件保存到选件库** 图标。
 
-   ![](do-not-localize/chlimage_1-4.png)
+   ![将选件保存到选件库](do-not-localize/chlimage_1-4.png)
 
 1. 键入选件的名称，选择要向其中添加选件的库，然后单击或点按复选标记图标。
 
@@ -382,7 +384,7 @@ ht-degree: 33%
 1. 选择体验以显示库选件。
 1. 单击或点按库选件以显示选件菜单，然后单击或点按转换为内联选件图标。
 
-   ![](do-not-localize/chlimage_1-5.png)
+   ![转换为内联选件](do-not-localize/chlimage_1-5.png)
 
 #### 编辑库选件 {#editing-a-library-offer}
 
@@ -410,7 +412,7 @@ ht-degree: 33%
 
 受众不得由多个体验使用。 当体验映射到映射到映射到另一个体验的受众时，该体验旁边会显示一个警告符号。
 
-![](do-not-localize/chlimage_1-6.png)
+![映射到映射到映射到其他体验的受众时的警告符号](do-not-localize/chlimage_1-6.png)
 
 ### 将体验与受众关联(AEM或Adobe Target) {#associating-experiences-with-audiences-aem-or-adobe-target}
 
@@ -577,11 +579,13 @@ ht-degree: 33%
    此外，所有量度都具有您可以定义的高级设置。 选择 **高级设置** 以访问这些文件。 请参阅上一个表中的成功量度计数方式的定义以及 [Adobe Target 文档](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/success-metrics.html)。
 
    >[!NOTE]
+   >
    您必须至少定义一个目标。
 
    ![chlimage_1-34](assets/chlimage_1-34.png)
 
    >[!NOTE]
+   >
    如果您的量度中缺少信息，则该量度周围会显示一条红线。
 
 1. 单击 **添加新量度** 以配置其他成功量度。
@@ -589,6 +593,7 @@ ht-degree: 33%
    ![chlimage_1-35](assets/chlimage_1-35.png)
 
    >[!NOTE]
+   >
    您可以通过单击或点按三个圆点并单击或点按来删除其他目标 **删除**. AEM要求您至少定义一个目标。
 
 1. 如果您想要更好地控制成功量度的计数方式，请单击或点按&#x200B;**高级设置**&#x200B;以访问相应的设置。
@@ -611,6 +616,7 @@ ht-degree: 33%
 如果在加载配置文件时页面上出现意外内容，请检查此列表中每个项目的配置。
 
 >[!NOTE]
+>
 如果您使用的是A/B测试，则在模拟体验时将会根据流量百分比显示。 这项操作由Adobe Target控制，这可能会给作者带来意外的结果。 (作者活动与允许在模拟期间重新评估的特定设置同步(_A)。) 作者可能需要刷新才能根据其流量设置查看其他体验。
 
 要模拟访客的体验，请使用以下工具：
@@ -621,7 +627,7 @@ ht-degree: 33%
 1. 要切换到预览模式，请在工具栏中单击或点按&#x200B;**预览**。
 1. 在工具栏上，单击或点按 Context Hub 图标。
 
-   ![](do-not-localize/chlimage_1-7.png)
+   ![上下文中心](do-not-localize/chlimage_1-7.png)
 
 1. 使用Context Hub更改上下文属性。 例如，单击或点按Persona属性以选择其他用户。
 
@@ -637,7 +643,7 @@ ht-degree: 33%
 
 1. 定位组件后，在Target组件中，单击或点按该组件，然后单击或点按设置图标(cog)。
 
-   ![](do-not-localize/chlimage_1-8.png)
+   ![目标组件菜单](do-not-localize/chlimage_1-8.png)
 
    AEM 随即会显示 Target 组件选项窗口。
 
@@ -645,7 +651,7 @@ ht-degree: 33%
 
 1. 或者，要在全屏模式下访问这些设置，请在 Target 组件选项窗口中，单击或点按全屏图标。
 
-   ![](do-not-localize/chlimage_1-9.png)
+   ![“目标组件选项”窗口](do-not-localize/chlimage_1-9.png)
 
    AEM 随即会显示 Target 组件选项全屏窗口。
 
@@ -704,6 +710,7 @@ ht-degree: 33%
 </table>
 
 >[!NOTE]
+>
 当您选择某个组件并使其可定位时，AEM还会替换该组件并注入Adobe Target组件。 (Adobe Target组件不仅在手动添加到页面时使用，还可用于定位现有组件。)
 
 如果选择Client Context (client side)作为引擎：

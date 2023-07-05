@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 10466b49-f8bd-4c2c-8106-b0c7ba054989
 docset: aem65
 exl-id: cb2d2d0d-feb4-4b89-8325-80f735816904
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
+source-git-commit: 75c6bb87bb06c5ac9378ccebf193b5416c080bb1
 workflow-type: tm+mt
-source-wordcount: '500'
+source-wordcount: '509'
 ht-degree: 0%
 
 ---
@@ -43,9 +43,9 @@ ht-degree: 0%
 
 在设计模式下，sidekick被最小化，您可以配置可用于创作的组件：
 
-1. 要进入设计模式，请打开一个页面进行编辑，并使用Sidekick图标：
+1. 要进入设计模式，请打开页面进行编辑，并使用Sidekick图标：
 
-   ![](do-not-localize/chlimage_1.png)
+   ![设计模式](do-not-localize/chlimage_1.png)
 
 1. 单击 **编辑** 在段落系统(**杆件设计**)。
 
@@ -59,7 +59,7 @@ ht-degree: 0%
 
 1. 在设计模式下，Sidekick会最小化。 通过单击箭头，您可以最大化Sidekick并返回到编辑模式：
 
-   ![](do-not-localize/sidekick-collapsed.png)
+   ![Sidekick已最小化](do-not-localize/sidekick-collapsed.png)
 
 ## 配置组件设计 {#configuring-the-design-of-a-component}
 
@@ -67,7 +67,7 @@ ht-degree: 0%
 
 1. 要进入设计模式，请打开一个页面进行编辑，并使用Sidekick图标：
 
-   ![](do-not-localize/chlimage_1-1.png)
+   ![设计模式 — Sidekick](do-not-localize/chlimage_1-1.png)
 
 1. 您可以配置组件的设计。
 
@@ -79,4 +79,4 @@ ht-degree: 0%
 
 1. 在设计模式下，Sidekick会最小化。 通过单击箭头，您可以最大化Sidekick并返回到编辑模式：
 
-   ![](do-not-localize/sidekick-collapsed-1.png)
+   ![Sidekick已最小化](do-not-localize/sidekick-collapsed-1.png)

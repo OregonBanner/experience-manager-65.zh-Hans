@@ -11,9 +11,9 @@ topic-tags: site-features
 discoiquuid: 57cd61d5-78f2-4f8c-99ee-75e100c052ef
 docset: aem65
 exl-id: 14484a90-4e44-4c85-9411-b78ed11dc70d
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 75c6bb87bb06c5ac9378ccebf193b5416c080bb1
 workflow-type: tm+mt
-source-wordcount: '662'
+source-wordcount: '666'
 ht-degree: 0%
 
 ---
@@ -54,7 +54,7 @@ ht-degree: 0%
 
 1. 如果时间范围未出现在页面顶部，请单击或点按切换时间范围图标。
 
-   ![](do-not-localize/chlimage_1-22.png)
+   ![切换时间范围](do-not-localize/chlimage_1-22.png)
 
 1. 要更改报告时段的开始日期，请将阴影区域左侧的圆拖动到所需的开始日期。
 
@@ -92,7 +92,7 @@ SEO推荐的状态表示任务已创建但尚未完成。
 
 1. 单击或点按SEO推荐的信息图标。
 
-   ![](do-not-localize/chlimage_1-23.png)
+   ![“信息”图标](do-not-localize/chlimage_1-23.png)
 
 1. 单击信息图标旁边显示的环绕三角形图标。
 

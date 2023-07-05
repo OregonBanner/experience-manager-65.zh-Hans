@@ -9,9 +9,9 @@ topic-tags: personalization
 discoiquuid: 9da34dab-7e89-4127-ab26-532687746b2a
 docset: aem65
 exl-id: d1132fcd-e6a0-44a2-8753-d250f68fbd78
-source-git-commit: f4b6eb2ded17ec641f23a1fc3b977ce77169c8a1
+source-git-commit: b3889b1897f0ec0c5bbf60c346b77b2906175904
 workflow-type: tm+mt
-source-wordcount: '2828'
+source-wordcount: '2839'
 ht-degree: 4%
 
 ---
@@ -85,7 +85,7 @@ ht-degree: 4%
 
 上传图像后（而不是上传之前），您可以使用 [就地编辑](/help/sites-authoring/editing-content.md#editcontenttouchoptimizedui) 要根据需要裁切/旋转图像：
 
-![](do-not-localize/chlimage_1-10.png)
+![就地编辑工具栏](do-not-localize/chlimage_1-10.png)
 
 >[!NOTE]
 >
@@ -95,7 +95,7 @@ ht-degree: 4%
 
 全屏编辑模式中提供了多个其他选项；例如，映射和缩放：
 
-![](do-not-localize/chlimage_1-11.png)
+![全屏编辑模式](do-not-localize/chlimage_1-11.png)
 
 加载图像时，可以配置以下内容：
 
@@ -132,6 +132,7 @@ ht-degree: 4%
 >您必须在 **替换文字** 中的字段 **高级** 选项卡，或图像无法保存，此时您会看到以下错误消息：
 >
 >`Validation failed. Verify the values of the marked fields.`
+>
 
 以下示例显示了正在显示的图像（营销活动）组件。
 
@@ -150,8 +151,7 @@ ht-degree: 4%
 添加了关于如何使用链接的其他信息。
 
 * **链接类型**
-在下拉列表中，选择 
-**自定义URL** 和 **自适应文档**. 此字段为必填字段. 如果选择“自定义URL”，则可以提供链接URL。 如果选择“自适应文档”，则可以提供文档路径。
+在下拉列表中，选择 **自定义URL** 和 **自适应文档**. 此字段为必填字段. 如果选择“自定义URL”，则可以提供链接URL。 如果选择“自适应文档”，则可以提供文档路径。
 
 * **其他URL参数**
 添加任何其他URL参数。 单击“添加项目”可添加多个项目。
@@ -161,6 +161,7 @@ ht-degree: 4%
 >您必须在 **链接类型** 中的字段 **URL信息** 选项卡，或组件无法保存，此时您会看到以下错误消息：
 >
 >`Validation failed. Verify the values of the marked fields.`
+>
 
 以下示例显示了正在显示的链接(Campaign)组件。
 
@@ -168,7 +169,7 @@ ht-degree: 4%
 
 ### Dynamic Media Classic (Scene7)图像模板（营销活动） {#scene-image-template-campaign}
 
-Dynamic Media Classic (Scene7)图像模板是分层图像文件，其中的内容和属性可以参数化以便有所不同。 此 **[!UICONTROL 图像模板]** 组件允许您在新闻稿中使用Scene7模板并更改模板参数的值。 此外，您可以在参数中使用Adobe Campaign元数据变量，以便每个用户都能以个性化的方式体验图像。
+Dynamic Media Classic (Scene7)图像模板是分层图像文件，其中的内容和属性可以参数化以便变性。 此 **[!UICONTROL 图像模板]** 组件允许您在新闻稿中使用Scene7模板并更改模板参数的值。 此外，您可以在参数中使用Adobe Campaign元数据变量，以便每个用户都能以个性化的方式体验图像。
 
 ![chlimage_1-49](assets/chlimage_1-49.png)
 
@@ -196,11 +197,11 @@ Dynamic Media Classic (Scene7)图像模板是分层图像文件，其中的内�
 
 选择 **文本** 显示内联编辑器：
 
-![](do-not-localize/chlimage_1-12.png)
+![文本工具栏](do-not-localize/chlimage_1-12.png)
 
 选择 **图像** 显示图像的就地编辑器：
 
-![](do-not-localize/chlimage_1-13.png)
+![图像工具栏](do-not-localize/chlimage_1-13.png)
 
 参见 [图像（营销活动）组件](#image-campaign) 以了解有关使用图像的更多信息。 参见 [文本和个性化（营销活动）组件](#text-personalization-campaign) 以了解有关使用文本的详细信息。
 
@@ -234,6 +235,7 @@ Dynamic Media Classic (Scene7)图像模板是分层图像文件，其中的内�
 >此 **替换文字** 中的字段 **高级** 选项卡为必填项，否则组件无法保存，并且您会看到以下错误消息：
 >
 >`Validation failed. Verify the values of the marked fields.`
+>
 
 以下示例显示了正在显示的文本和图像(Campaign)组件。
 
@@ -300,7 +302,7 @@ Dynamic Media Classic (Scene7)图像模板是分层图像文件，其中的内�
   <tr>
    <td><p>复选框（营销活动）</p> </td>
    <td><p>布尔型</p> </td>
-   <td><p>不再联系（通过任何渠道）</p> </td>
+   <td><p>否 更多联系人（通过任何渠道）</p> </td>
   </tr>
   <tr>
    <td><p>日期字段（营销活动）</p> <p>日期字段/HTML 5（营销活动）</p> </td>
@@ -391,7 +393,7 @@ Adobe Campaign组件具有所有组件中通用的设置（加密的主密钥和
 
 * **约束 — 约束** 下拉菜单您可以选择 —  **无** 或 **日期 —** 添加日期限制或无限制。 如果选择日期，则用户在字段中输入的答案必须为日期格式。
 
-* **约束消息** 此外，您还可以添加一条限制消息，以便用户知道如何正确设置答案的格式。
+* **约束消息** 此外，您还可以添加一条约束消息，以便用户知道如何正确设置答案的格式。
 * **样式 — 宽度** 通过单击或点按 **+** 和 **-** 图标或输入数字。
 
 下方的示例显示了一个已调整宽度的日期字段（营销活动）组件。
@@ -485,7 +487,7 @@ Adobe Campaign组件具有所有组件中通用的设置（加密的主密钥和
 
 * **约束 — 约束** 下拉菜单您可以选择 —  **无，** **电子邮件**，或 **名称** （无变音） — 添加电子邮件地址、名称或无限制的约束。 如果选择电子邮件，则用户在字段中输入的答案必须是电子邮件地址。 如果选择名称，则必须为名称（不允许使用变音）。
 
-* **约束消息** 此外，您还可以添加一条约束消息，以便用户知道如何正确设置答案的格式。
+* **约束消息** 此外，您还可以添加一条限制消息，以便用户知道如何正确设置答案的格式。
 * **样式 — 宽度** 通过单击或点按 **+** 和 **-** 图标或输入数字。
 
 以下示例显示了正在显示的文本字段（营销活动）组件。

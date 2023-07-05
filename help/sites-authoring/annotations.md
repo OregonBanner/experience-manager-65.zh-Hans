@@ -8,9 +8,9 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: aa89326a-ad33-4b0b-8d09-c68c5a5c790a
 exl-id: de1ae7e3-db3a-4b5e-8a4f-ae111227181f
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
+source-git-commit: 75c6bb87bb06c5ac9378ccebf193b5416c080bb1
 workflow-type: tm+mt
-source-wordcount: '634'
+source-wordcount: '641'
 ht-degree: 40%
 
 ---
@@ -53,14 +53,13 @@ ht-degree: 40%
 >* [对视频资产添加注释](/help/assets/managing-video-assets.md#annotate-video-assets)
 >
 
-
 ### 对组件添加注释 {#annotating-a-component}
 
 “注释”模式允许您在内容上创建、编辑、移动或删除注释：
 
 1. 编辑页面时，您可以使用工具栏（右上方）中的图标进入注释模式：
 
-   ![](do-not-localize/screen_shot_2018-03-22at110414.png)
+   ![批注](do-not-localize/screen_shot_2018-03-22at110414.png)
 
    此时，您可以查看任何现有的注释。
 
@@ -84,16 +83,17 @@ ht-degree: 40%
    * 创建草图（线和形状）以突出显示组件的某个区域。
 
 
-      创建草绘时，光标将变为十字线。 您可以绘制多条不同的线。草图线反映注释颜色，可为箭头、圆环或椭圆环。
-   ![](do-not-localize/screen_shot_2018-03-22at110640.png)
+     创建草绘时，光标将变为十字线。 您可以绘制多条不同的线。草图线反映注释颜色，可为箭头、圆环或椭圆环。
+
+     ![素描](do-not-localize/screen_shot_2018-03-22at110640.png)
 
    * 选择/更改颜色：
 
-   ![](do-not-localize/chlimage_1-19.png)
+     ![选择/更改颜色](do-not-localize/chlimage_1-19.png)
 
    * 删除注释。
 
-   ![](do-not-localize/screen_shot_2018-03-22at110647.png)
+     ![删除注释](do-not-localize/screen_shot_2018-03-22at110647.png)
 
 1. 通过单击/点按注释对话框外部可关闭该对话框。 将显示截断的注释视图（第一个字）以及任何草图：
 
@@ -104,12 +104,12 @@ ht-degree: 40%
    * 单击/点按文本标记以打开注释。打开后，您可以查看全文、进行更改或删除注释。
 
       * 不能独立于注释删除草图。
+
    * 调整文本标记位置。
    * 单击/点按草图线以选择该草图，然后将其拖动到所需位置。
    * 移动或复制组件
 
       * 还将移动或复制任何相关注释及其草图，并且它们相对于段落的位置将保持不变。
-
 
 1. 要退出“注释”模式并返回以前使用的模式，请点按/单击顶部工具栏右侧的“注释”图标（x符号）。
 

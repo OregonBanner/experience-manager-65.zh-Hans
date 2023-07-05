@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 69ca5acb-83f9-4e1b-9639-ec305779c931
 docset: aem65
 exl-id: a1d8b74e-67eb-4338-9e8e-fd693b1dbd48
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 75c6bb87bb06c5ac9378ccebf193b5416c080bb1
 workflow-type: tm+mt
-source-wordcount: '1758'
+source-wordcount: '1760'
 ht-degree: 1%
 
 ---
@@ -56,7 +56,7 @@ ht-degree: 1%
 
 1. 使用图标选择列表视图：
 
-   ![](do-not-localize/mcm_icon_listview-1.png)
+   ![列表视图](do-not-localize/mcm_icon_listview-1.png)
 
 1. 单击 **新建……**
 
@@ -92,6 +92,7 @@ ht-degree: 1%
 
    * **默认收件人列表**
 应接收新闻稿的默认列表。
+
    可在稍后的阶段从 **属性……** 对话框。
 
 1. 单击 **确定** 以保存。

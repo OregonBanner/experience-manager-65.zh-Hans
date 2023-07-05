@@ -10,10 +10,10 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: e26bf608-c57c-4346-88fb-32a82cfa82d2
 exl-id: 46c2fbd0-7eff-4a6c-a088-57560ad2c5e4
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 75c6bb87bb06c5ac9378ccebf193b5416c080bb1
 workflow-type: tm+mt
-source-wordcount: '91'
-ht-degree: 6%
+source-wordcount: '93'
+ht-degree: 8%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 6%
 1. 在左窗格中选择新营销活动，或在右窗格中双击该营销活动。
 1. 使用图标选择列表视图：
 
-   ![](do-not-localize/chlimage_1-11.png)
+   ![列表视图](do-not-localize/chlimage_1-11.png)
 
 1. 单击 **新建……**
 1. 您可以指定 **标题**， **名称** 和类型的体验；在本例中，为Test&amp;Target选件。

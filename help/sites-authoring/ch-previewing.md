@@ -10,9 +10,9 @@ content-type: reference
 topic-tags: personalization
 discoiquuid: f281ef8c-0831-470c-acb7-189f20452a50
 exl-id: 78673609-8cbc-4b4b-953e-56c31ea1b4ea
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 75c6bb87bb06c5ac9378ccebf193b5416c080bb1
 workflow-type: tm+mt
-source-wordcount: '365'
+source-wordcount: '369'
 ht-degree: 30%
 
 ---
@@ -42,7 +42,7 @@ ContextHub工具栏在预览模式下可用。 该工具栏仅在创作实例中
 
 1. 要显示工具栏，请单击或点按 ContextHub 图标。
 
-   ![](do-not-localize/screen_shot_2018-03-23at093621.png)
+   ![上下文中心](do-not-localize/screen_shot_2018-03-23at093621.png)
 
 ## UI模块功能 {#ui-module-features}
 
@@ -68,4 +68,4 @@ UI 模块可以在工具栏中显示一个或多个 ContextHub 存储区中的�
 
 弹出窗口叠加图可以包含图标，单击或点按该图标可展开弹出内容以覆盖整个浏览器窗口或屏幕。
 
-![](do-not-localize/chlimage_1-18.png)
+![全屏](do-not-localize/chlimage_1-18.png)

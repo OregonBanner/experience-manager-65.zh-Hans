@@ -8,9 +8,9 @@ content-type: reference
 topic-tags: site-features
 discoiquuid: 42d2195a-1327-45c0-a14c-1cf5ca196cfc
 exl-id: 554b10c2-6157-4821-a6a7-f2fb6666cdff
-source-git-commit: a2fd3c0c1892ac648c87ca0dec440e22144c37a2
+source-git-commit: 75c6bb87bb06c5ac9378ccebf193b5416c080bb1
 workflow-type: tm+mt
-source-wordcount: '634'
+source-wordcount: '638'
 ht-degree: 4%
 
 ---
@@ -78,7 +78,7 @@ Analytics-administrators用户组的成员可以配置Sites控制台，以便作
 1. 在站点控制台中，选择要查看其内容分析的页面。
 1. 在工具栏上，单击Analytics和Recommendations图标。
 
-   ![](do-not-localize/chlimage_1-16a.png)
+   ![Analytics和Recommendations图标](do-not-localize/chlimage_1-16a.png)
 
 ## 在页面编辑器中可见的Analytics(Activity Map) {#analytics-visible-from-the-page-editor-activity-map}
 
