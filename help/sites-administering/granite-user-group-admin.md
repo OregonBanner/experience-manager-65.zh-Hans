@@ -11,12 +11,13 @@ content-type: reference
 discoiquuid: 95ab2e54-0f8d-49e0-ad20-774875f6f80a
 exl-id: f3477d21-7e9a-4588-94e8-496bc42434a8
 feature: Security
-source-git-commit: 7803f1df1e05dc838cb458026f8dbd27de9cb924
+source-git-commit: 4dd216167f97eb6f6181586b57694b139872c5ef
 workflow-type: tm+mt
-source-wordcount: '945'
+source-wordcount: '958'
 ht-degree: 4%
 
 ---
+
 
 # Granite操作 — 用户和组管理{#granite-operations-user-and-group-administration}
 
@@ -26,7 +27,7 @@ ht-degree: 4%
 
 Granite用户和组管理控制台均可从 **[工具](/help/sites-administering/tools-consoles.md)** 触屏优化UI的控制台：
 
-![chlimage_1-72](assets/chlimage_1-72a.png)
+![工具控制台](assets/chlimage_1-72a.png)
 
 选择 **用户** 或 **组** 从“工具”控制台中，将打开相应的控制台。 在这两种情况下，您可以通过以下方式执行操作：使用点击框，然后从工具栏执行操作，或通过下面的链接打开帐户详细信息 **名称**.
 
@@ -42,7 +43,7 @@ Granite用户和组管理控制台均可从 **[工具](/help/sites-administering
 
 * [组管理](#group-administration)
 
-  ![chlimage_1-74](assets/chlimage_1-74a.png)
+  ![用户管理控制台](assets/chlimage_1-74a.png)
 
   此 **组** 控制台列表：
 
@@ -56,11 +57,11 @@ Granite用户和组管理控制台均可从 **[工具](/help/sites-administering
 
 1. 使用 **添加用户** 图标：
 
-   ![添加用户](do-not-localize/chlimage_1-1.png)
+   ![“添加用户”图标](do-not-localize/chlimage_1-1.png)
 
 1. 此 **创建用户** 表单将打开：
 
-   ![chlimage_1-75](assets/chlimage_1-75a.png)
+   ![“用户详细信息”表单](assets/chlimage_1-75a.png)
 
    您可以在此处输入帐户的用户详细信息（大多数是标准信息，可以自行解释）：
 
@@ -132,11 +133,11 @@ Granite用户和组管理控制台均可从 **[工具](/help/sites-administering
 
 1. 您现在可以编辑详细信息，如下所示 [添加新用户](#adding-a-new-user). 下 **帐户设置** 有一个链接 **更改密码**.
 
-   ![chlimage_1-76](assets/chlimage_1-76a.png)
+   ![“帐户设置”对话框](assets/chlimage_1-76a.png)
 
 1. 此 **更改密码** 此时将打开对话框。 输入并重新键入新密码以及您的密码。 使用 **确定** 以确认更改。
 
-   ![chlimage_1-77](assets/chlimage_1-77a.png)
+   ![“更改密码”对话框](assets/chlimage_1-77a.png)
 
    将显示一条消息，确认密码已更改。
 
@@ -149,7 +150,7 @@ Granite用户和组管理控制台均可从 **[工具](/help/sites-administering
 
    要打开组选择下拉列表，请执行以下操作：
 
-   ![chlimage_1-78](assets/chlimage_1-78a.png)
+   ![组选择器](assets/chlimage_1-78a.png)
 
 1. 在选择框中，您可以选择或取消选择用户帐户应属于的组。
 
@@ -177,7 +178,7 @@ Granite用户和组管理控制台均可从 **[工具](/help/sites-administering
 
 1. 此 **创建组** 表单将打开：
 
-   ![chlimage_1-79](assets/chlimage_1-79a.png)
+   ![“组详细信息”表单](assets/chlimage_1-79a.png)
 
    您可以在此处输入组详细信息：
 

@@ -13,12 +13,13 @@ feature: Brand Portal
 role: Admin
 exl-id: ae33181c-9eec-421c-be55-4bd019de40b8
 hide: true
-source-git-commit: 3d5e9ad8ee19756b05e5a77a3f748bc647fcf734
+source-git-commit: 14988b55c21131391fdcb033373774ee170f5305
 workflow-type: tm+mt
-source-wordcount: '2076'
+source-wordcount: '2124'
 ht-degree: 8%
 
 ---
+
 
 # 使用 Brand Portal 配置 AEM Assets {#configure-integration-65}
 
@@ -103,6 +104,7 @@ AEM Assets是通过Brand Portal控制台使用Adobe Developer配置的，该控�
 >AEM Assets创作实例只能配置一个Brand Portal租户。
 
 如果您是首次使用Brand Portal配置AEM Assets，请按照列出的顺序执行以下步骤：
+
 1. [获取公共证书](#public-certificate)
 1. [创建服务帐户(JWT)连接](#createnewintegration)
 1. [配置IMS帐户](#create-ims-account-configuration)
@@ -274,7 +276,7 @@ Adobe I/O integration generates API Key, Client Secret, and Payload (JWT) which 
 
    单击 **[!UICONTROL Check]** 对话框中。 成功配置后，将显示一条消息，指出 *已成功检索令牌*.
 
-   ![](assets/create-new-integration5.png)
+   ![配置正常确认对话框](assets/create-new-integration5.png)
 
 >[!CAUTION]
 >
@@ -298,7 +300,7 @@ Adobe I/O integration generates API Key, Client Secret, and Payload (JWT) which 
 
    在 **[!UICONTROL 服务URL]** 字段中，指定您的Brand Portal租户（组织）URL。
 
-   ![](assets/create-cloud-service.png)
+   ![“Brand Portal配置”窗口](assets/create-cloud-service.png)
 
 1. 单击“**[!UICONTROL 保存并关闭]**”。将创建云配置。
 
@@ -312,17 +314,17 @@ Adobe I/O integration generates API Key, Client Secret, and Payload (JWT) which 
 
 1. 从 **工具** ![工具](assets/do-not-localize/tools.png) 面板，导航到 **[!UICONTROL 部署]** > **[!UICONTROL 复制]**.
 
-   ![](assets/test-integration1.png)
+   ![“工具”面板](assets/test-integration1.png)
 
 1. 在“复制”页中，单击 **[!UICONTROL 作者代理]**.
 
-   ![](assets/test-integration2.png)
+   ![复制页面](assets/test-integration2.png)
 
    您可以看到为您的Brand Portal租户创建的四个复制代理。
 
    找到Brand Portal租户的复制代理，然后单击复制代理URL。
 
-   ![](assets/test-integration3.png)
+   ![资产复制配置](assets/test-integration3.png)
 
    >[!NOTE]
    >
@@ -330,11 +332,11 @@ Adobe I/O integration generates API Key, Client Secret, and Payload (JWT) which 
 
 1. 要验证AEM Assets与Brand Portal之间的连接，请单击 **[!UICONTROL 测试连接]** 图标。
 
-   ![](assets/test-integration4.png)
+   ![验证资产复制设置](assets/test-integration4.png)
 
    此时将显示一条消息，表明 *测试包已成功交付*.
 
-   ![](assets/test-integration5.png)
+   ![测试确认输出](assets/test-integration5.png)
 
 1. 验证所有四个复制代理的测试结果。
 
@@ -362,6 +364,7 @@ Adobe I/O integration generates API Key, Client Secret, and Payload (JWT) which 
 ## 升级配置 {#upgrade-integration-65}
 
 按照列出的顺序执行以下步骤，将现有配置升级到Adobe Developer Console：
+
 1. [验证正在运行的作业](#verify-jobs)
 1. [删除现有配置](#delete-existing-configuration)
 1. [创建配置](#configure-new-integration-65)
@@ -376,13 +379,13 @@ Adobe I/O integration generates API Key, Client Secret, and Payload (JWT) which 
 
 1. 在“复制”页中，单击 **[!UICONTROL 作者代理]**.
 
-   ![](assets/test-integration2.png)
+   ![资产复制代理](assets/test-integration2.png)
 
 1. 找到Brand Portal租户的复制代理。
 
    确保 **队列空闲** 对于所有复制代理，没有处于活动状态的发布作业。
 
-   ![](assets/test-integration3.png)
+   ![复制队列设置](assets/test-integration3.png)
 
 ### 删除现有配置 {#delete-existing-configuration}
 
@@ -395,15 +398,15 @@ Adobe I/O integration generates API Key, Client Secret, and Payload (JWT) which 
 
 1. 导航到 `/etc/replications/agents.author` 并删除Brand Portal租户的所有四个复制代理。
 
-   ![](assets/delete-replication-agent.png)
+   ![CRXDE中的复制代理](assets/delete-replication-agent.png)
 
 1. 导航到 `/etc/cloudservices/mediaportal` 并删除Brand Portal云服务配置。
 
-   ![](assets/delete-cloud-service.png)
+   ![CRXDE中复制代理的详细信息](assets/delete-cloud-service.png)
 
 1. 导航到 `/home/users/mac` 并删除 **Mac用户** 您的Brand Portal租户的。
 
-   ![](assets/delete-mac-user.png)
+   ![CRXDE中复制代理的更多详细信息](assets/delete-mac-user.png)
 
 
 您现在可以 [创建配置](#configure-new-integration-65) 通过AEM 6.5创作实例上的Adobe Developer控制台。

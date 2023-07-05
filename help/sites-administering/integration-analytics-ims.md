@@ -2,12 +2,13 @@
 title: 使用IMS与Adobe Analytics集成
 description: 了解如何使用IMS将AEM与Adobe Analytics集成
 exl-id: 2833a6df-ef32-48ab-8395-0f26816f8443
-source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+source-git-commit: 5789954afea2d42444b6f6f9f185d7926624e7f0
 workflow-type: tm+mt
-source-wordcount: '1040'
-ht-degree: 66%
+source-wordcount: '1056'
+ht-degree: 65%
 
 ---
+
 
 # 使用IMS与Adobe Analytics集成 {#integration-with-adobe-analytics-using-ims}
 
@@ -51,7 +52,7 @@ ht-degree: 66%
 1. 激活&#x200B;**新建证书**&#x200B;并输入新别名。
 1. 选择&#x200B;**创建证书**&#x200B;来确认。
 
-   ![](assets/integrate-analytics-io-01.png)
+   ![Adobe IMS技术帐户配置向导](assets/integrate-analytics-io-01.png)
 
 1. 选择&#x200B;**下载**（或&#x200B;**下载公钥**）将文件下载到本地驱动器，以便在[为 Adobe Analytics 与 AEM 的集成配置 IMS](#configuring-ims-for-adobe-analytics-integration-with-aem) 时方便使用。
 
@@ -59,7 +60,7 @@ ht-degree: 66%
    >
    >将此配置保持开放状态，供[在 AEM 中完成 IMS 配置](#completing-the-ims-configuration-in-aem)时再次使用。
 
-   ![](assets/integrate-analytics-io-02.png)
+   ![用于向Adobe I/O添加密钥的信息对话框](assets/integrate-analytics-io-02.png)
 
 ## 为 Adobe Analytics 与 AEM 的集成配置 IMS {#configuring-ims-for-adobe-analytics-integration-with-aem}
 
@@ -76,9 +77,9 @@ ht-degree: 66%
 1. 将显示您拥有的任何项目。选择&#x200B;**新建项目** – 位置和使用将取决于：
 
    * 如果您不具有任何项目，**新建项目**将位于底部中心。
-      ![新建项目 – 第一个项目](assets/integration-analytics-io-02.png)
+     ![新建项目 – 第一个项目](assets/integration-analytics-io-02.png)
    * 如果您已拥有项目，这些项目将列出，**新建项目**将位于右上方。
-      ![新建项目 – 多个项目](assets/integration-analytics-io-03.png)
+     ![新建项目 – 多个项目](assets/integration-analytics-io-03.png)
 
 
 1. 依次选择 **添加到项目**&#x200B;和 **API**：
@@ -177,7 +178,6 @@ ht-degree: 66%
    例如：
 
    * `https://localhost:4502/libs/cq/adobeims-configuration/content/configurations.html`
-
 
 1. 选择您的配置。
 1. 从工具栏中选择&#x200B;**检查运行状况**，然后选择&#x200B;**查看**。

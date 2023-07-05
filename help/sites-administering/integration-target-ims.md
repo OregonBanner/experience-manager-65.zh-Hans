@@ -2,12 +2,13 @@
 title: 使用IMS与Adobe Target集成
 description: 了解如何使用IMS将AEM与Adobe Target集成
 exl-id: 8ddd86d5-a5a9-4907-b07b-b6552d7afdc8
-source-git-commit: 5c3de9c272030b3e258aea95899a58553c3b33db
+source-git-commit: 2f5f6a94a20feb2813b6da1b71e22f8675529ea5
 workflow-type: tm+mt
-source-wordcount: '1503'
-ht-degree: 55%
+source-wordcount: '1548'
+ht-degree: 54%
 
 ---
+
 
 # 使用IMS与Adobe Target集成{#integration-with-adobe-target-using-ims}
 
@@ -50,7 +51,7 @@ ht-degree: 55%
 1. 激活&#x200B;**新建证书**&#x200B;并输入新别名。
 1. 选择&#x200B;**创建证书**&#x200B;来确认。
 
-   ![](assets/integrate-target-io-01.png)
+   ![Adobe IMS技术帐户配置向导](assets/integrate-target-io-01.png)
 
 1. 选择&#x200B;**下载**（或&#x200B;**下载公钥**）以将文件下载到本地驱动器，以便在[为 Adobe Target 与 AEM 的集成配置 IMS](#configuring-ims-for-adobe-target-integration-with-aem) 时方便使用。
 
@@ -58,7 +59,7 @@ ht-degree: 55%
    >
    >将此配置保持开放状态，供[在 AEM 中完成 IMS 配置](#completing-the-ims-configuration-in-aem)时再次使用。
 
-   ![](assets/integrate-target-io-02.png)
+   ![用于在Adobe I/O上添加证书的信息消息](assets/integrate-target-io-02.png)
 
 ## 为 Adobe Target 与 AEM 的集成配置 IMS {#configuring-ims-for-adobe-target-integration-with-aem}
 
@@ -75,14 +76,14 @@ ht-degree: 55%
 1. 将显示您拥有的任何项目。选择&#x200B;**新建项目** – 位置和使用将取决于：
 
    * 如果您不具有任何项目，**新建项目**将位于底部中心。
-      ![新建项目 – 第一个项目](assets/integration-target-io-02.png)
+     ![新建项目 – 第一个项目](assets/integration-target-io-02.png)
    * 如果您已拥有项目，这些项目将列出，**新建项目**将位于右上方。
-      ![新建项目 – 多个项目](assets/integration-target-io-03.png)
+     ![新建项目 – 多个项目](assets/integration-target-io-03.png)
 
 
 1. 依次选择 **添加到项目**&#x200B;和 **API**：
 
-   ![](assets/integration-target-io-10.png)
+   ![Adobe Developer Console](assets/integration-target-io-10.png)
 
 1. 依次选择 **Adobe Target** 和&#x200B;**下一步**：
 
@@ -90,15 +91,15 @@ ht-degree: 55%
    >
    >如果您已订阅Adobe Target，但它并未列出，您应查看 [先决条件](#prerequisites).
 
-   ![](assets/integration-target-io-12.png)
+   ![单击下一步](assets/integration-target-io-12.png)
 
 1. **上传公钥**，完成后，选择&#x200B;**下一步**：
 
-   ![](assets/integration-target-io-13.png)
+   ![使用开发人员控制台添加集成](assets/integration-target-io-13.png)
 
 1. 查看凭据，然后选择&#x200B;**下一步**：
 
-   ![](assets/integration-target-io-15.png)
+   ![创建新项目](assets/integration-target-io-15.png)
 
 1. 选择所需的产品配置文件，然后选择&#x200B;**保存配置的 API**：
 
@@ -109,8 +110,7 @@ ht-degree: 55%
    >* Adobe Target Standard – 仅&#x200B;**默认工作区**&#x200B;可用
    >* Adobe Target Premium – 列出了所有可用的工作区，如下所示
 
-
-   ![](assets/integration-target-io-16.png)
+   ![选择要添加的API](assets/integration-target-io-16.png)
 
 1. 这将确认创建。
 
@@ -173,7 +173,7 @@ ht-degree: 55%
 
 1. 您的 Adobe Target 配置将显示在 AEM 控制台中。
 
-   ![](assets/integrate-target-io-11.png)
+   ![Adobe IMS 技术帐户配置](assets/integrate-target-io-11.png)
 
 ## 确认 IMS 配置 {#confirming-the-ims-configuration}
 
@@ -187,15 +187,14 @@ ht-degree: 55%
 
    * `https://localhost:4502/libs/cq/adobeims-configuration/content/configurations.html`
 
-
 1. 选择您的配置。
 1. 从工具栏中选择&#x200B;**检查运行状况**，然后选择&#x200B;**查看**。
 
-   ![](assets/integrate-target-io-12.png)
+   ![Adobe IMS 配置](assets/integrate-target-io-12.png)
 
 1. 如果成功，您将看到以下消息：
 
-   ![](assets/integrate-target-io-13.png)
+   ![检查配置](assets/integrate-target-io-13.png)
 
 ## 配置Adobe TargetCloud Service {#configuring-the-adobe-target-cloud-service}
 
@@ -220,15 +219,15 @@ ht-degree: 55%
 
    * **租户ID**：Adobe IMS租户ID。 另请参阅 [租户ID和客户端代码](#tenant-client) 部分。
 
-      >[!NOTE]
-      >
-      >对于IMS，此值需要取自Target本身。 您可以登录Target并从URL中提取租户ID。
-      >
-      >例如，如果URL为：
-      >
-      >`https://experience.adobe.com/#/@yourtenantid/target/activities`
-      >
-      >然后您使用 `yourtenantid`.
+     >[!NOTE]
+     >
+     >对于IMS，此值需要取自Target本身。 您可以登录Target并从URL中提取租户ID。
+     >
+     >例如，如果URL为：
+     >
+     >`https://experience.adobe.com/#/@yourtenantid/target/activities`
+     >
+     >然后您使用 `yourtenantid`.
 
    * **客户端代码**：请参阅 [租户ID和客户端代码](#tenant-client) 部分。
 
@@ -247,6 +246,7 @@ ht-degree: 55%
    * **使用Tag Management System交付客户端库**：使用DTM（已弃用）、AdobeLaunch或任何其他标签管理系统。
 
    * **自定义AT.js**：如果选中了Tag Management框或使用默认的AT.js，则保留为空。 或者，上传您的自定义AT.js。 仅当您选择了AT.js时才显示。
+
    >[!NOTE]
    >
    >[使用Target Classic API的Cloud Service配置](/help/sites-administering/target-configuring.md#manually-integrating-with-adobe-target) 已弃用(使用“Adobe Recommendations设置”选项卡)。
@@ -283,4 +283,3 @@ ht-degree: 55%
 >1. 重新输入租户 ID。
 >2. 重新连接到 Target。
 >3. 保存配置。
-

@@ -6,12 +6,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
 exl-id: f82391d7-e30d-48d2-8f66-88fcae3dfb5f
-source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
+source-git-commit: 1a3e0f90bbe133a7b0fc383b997e69b10ca82478
 workflow-type: tm+mt
-source-wordcount: '2042'
+source-wordcount: '2067'
 ht-degree: 10%
 
 ---
+
 
 # 配置搜索表单{#configuring-search-forms}
 
@@ -29,7 +30,7 @@ A [谓词范围](#predicates-and-their-settings)s是现成的。 您可以添加
 
 首次访问此控制台时，您可以看到所有配置都有一个挂锁符号。 这表示相应的配置是默认（现成）配置 — 无法删除。 自定义配置后，锁定将消失 — 除非您 [删除自定义配置](#deleting-a-configuration-to-reinstate-the-default)，则默认（和挂锁指示器）将恢复。
 
-![chlimage_1-374](assets/chlimage_1-374.png)
+![搜索表单窗口](assets/chlimage_1-374.png)
 
 ## 配置 {#configurations}
 
@@ -37,63 +38,63 @@ A [谓词范围](#predicates-and-their-settings)s是现成的。 您可以添加
 
 * **页面编辑器（文档搜索）：**
 
-   此配置定义在资产浏览器中搜索文档时（编辑页面时）可用的选项。
+  此配置定义在资产浏览器中搜索文档时（编辑页面时）可用的选项。
 
 * **页面编辑器（图像搜索）：**
 
-   此配置定义在资产浏览器中搜索图像时（编辑页面时）可用的选项。
+  此配置定义在资产浏览器中搜索图像时（编辑页面时）可用的选项。
 
 * **页面编辑器（手稿搜索）：**
 
-   此配置定义在资产浏览器中搜索手稿时（编辑页面时）可用的选项。
+  此配置定义在资产浏览器中搜索手稿时（编辑页面时）可用的选项。
 
 * **页面编辑器（页面搜索）：**
 
-   此配置定义在资产浏览器中搜索页面时（编辑页面时）可用的选项。
+  此配置定义在资产浏览器中搜索页面时（编辑页面时）可用的选项。
 
 * **页面编辑器（段落搜索）：**
 
-   此配置定义在资产浏览器中搜索段落时（编辑页面时）可用的选项。
+  此配置定义在资产浏览器中搜索段落时（编辑页面时）可用的选项。
 
 * **页面编辑器（产品搜索）：**
 
-   此配置定义在资产浏览器中搜索产品时（编辑页面时）可用的选项。
+  此配置定义在资产浏览器中搜索产品时（编辑页面时）可用的选项。
 
 * **页面编辑器(Dynamic Media Classic) [以前称为Scene7] search)**：
 
-   此配置定义在资源浏览器中搜索Scene7资源（编辑页面时）时可用的选项。
+  此配置定义在资源浏览器中搜索Scene7资源（编辑页面时）时可用的选项。
 
 * **站点管理员搜索边栏**:
 
-   此配置定义用户在使用站点控制台的搜索边栏时可用的搜索选项。
+  此配置定义用户在使用站点控制台的搜索边栏时可用的搜索选项。
 
 * **页面编辑器（视频搜索）：**
 
-   此配置定义在资产浏览器中搜索视频时（编辑页面时）可用的选项。
+  此配置定义在资产浏览器中搜索视频时（编辑页面时）可用的选项。
 
 * **资产管理员搜索边栏:**
 
-   此配置定义用户在使用Assets控制台时可用的搜索选项。
+  此配置定义用户在使用Assets控制台时可用的搜索选项。
 
 * **目录管理员搜索边栏:**
 
-   此配置定义用户在搜索商务目录时可用的搜索选项。
+  此配置定义用户在搜索商务目录时可用的搜索选项。
 
 * **订单管理员搜索边栏:**
 
-   此配置定义用户在搜索商务订单时可用的搜索选项。
+  此配置定义用户在搜索商务订单时可用的搜索选项。
 
 * **产品收藏集管理员搜索边栏:**
 
-   此配置定义用户在搜索商务产品收藏集时可用的搜索选项。
+  此配置定义用户在搜索商务产品收藏集时可用的搜索选项。
 
 * **产品管理员搜索边栏:**
 
-   此配置定义用户在搜索商务产品时可用的搜索选项。
+  此配置定义用户在搜索商务产品时可用的搜索选项。
 
 * **项目管理员搜索边栏:**
 
-   此配置定义用户在搜索项目时可用的搜索选项。
+  此配置定义用户在搜索项目时可用的搜索选项。
 
 ## 谓词及其设置 {#predicates-and-their-settings}
 
@@ -329,11 +330,11 @@ A [谓词范围](#predicates-and-their-settings)s是现成的。 您可以添加
 >[!NOTE]
 >
 >* 常见的搜索谓词定义于：
-   >  `/libs/cq/gui/components/common/admin/customsearch/searchpredicates`
+>  `/libs/cq/gui/components/common/admin/customsearch/searchpredicates`
 >
 >* 仅与站点管理员（经典UI）相关的搜索谓词位于以下位置：
-   >  `/libs/cq/gui/components/siteadmin/admin/searchpanel/searchpredicates`
-   >   * 这些功能已弃用，仅可用于向后兼容。
+>  `/libs/cq/gui/components/siteadmin/admin/searchpanel/searchpredicates`
+>   * 这些功能已弃用，仅可用于向后兼容。
 >
 >此信息仅供参考，您不得对 `/libs`.
 
@@ -343,47 +344,46 @@ A [谓词范围](#predicates-and-their-settings)s是现成的。 您可以添加
 
 * **字段标签**
 
-   将显示为可折叠标题或谓词字段标签的标签。
+  将显示为可折叠标题或谓词字段标签的标签。
 
 * **描述**
 
-   用户的描述性详细信息。
+  用户的描述性详细信息。
 
 * **占位符**
 
-   空文本或谓词的占位符（如果未输入过滤文本）。
+  空文本或谓词的占位符（如果未输入过滤文本）。
 
 * **属性名称**
 
-   要搜索的属性。 它使用相对路径和通配符 `*/*/*` 指定属性相对于的深度 `jcr:content` 节点（每个星号表示一个节点级别）。
+  要搜索的属性。 它使用相对路径和通配符 `*/*/*` 指定属性相对于的深度 `jcr:content` 节点（每个星号表示一个节点级别）。
 
-   如果只想搜索具有下列条件的资源的第一级子节点： `x` 上的属性 `jcr:content` 节点使用 `*/jcr:content/x`
+  如果只想搜索具有下列条件的资源的第一级子节点： `x` 上的属性 `jcr:content` 节点使用 `*/jcr:content/x`
 
 * **属性深度**
 
-   在资源中搜索该属性的最大深度。 因此，可以对该资源子项和递归子项执行该属性搜索，直到子项的级别等于指定的深度。
+  在资源中搜索该属性的最大深度。 因此，可以对该资源子项和递归子项执行该属性搜索，直到子项的级别等于指定的深度。
 
 * **属性值**
 
-   作为绝对字符串或表达式语言的属性值；例如， `cq:Page` 或
+  作为绝对字符串或表达式语言的属性值；例如， `cq:Page` 或
 
-   `${empty requestPathInfo.suffix ? "/content" : requestPathInfo.suffix}`。
+  `${empty requestPathInfo.suffix ? "/content" : requestPathInfo.suffix}`。
 
 * **范围文本**
 
-   中范围字段的标签 **日期范围** 谓词。
+  中范围字段的标签 **日期范围** 谓词。
 
 * **选项路径**
 
-   用户可以使用谓词设置选项卡中的路径浏览器选择路径。 选择 **+** 图标用于将选定内容添加到有效选项列表(然后 **-** 图标（如果需要，可删除）。
+  用户可以使用谓词设置选项卡中的路径浏览器选择路径。 选择 **+** 图标用于将选定内容添加到有效选项列表(然后 **-** 图标（如果需要，可删除）。
 
-   这些选项是由用户创建的内容节点，具有以下结构：
+  这些选项是由用户创建的内容节点，具有以下结构：
 
-   `(jcr:primaryType = nt:unstructured, value (String), jcr:title (String))`
+  `(jcr:primaryType = nt:unstructured, value (String), jcr:title (String))`
 
 * **选项节点路径**
-实际上与 
-**选项路径**，只有公用谓词字段中包含此字段，其他字段则特定于资产。
+实际上与 **选项路径**，只有公用谓词字段中包含此字段，其他字段则特定于资产。
 
 * **单选**
 如果选中，这些选项将呈现为仅允许单个选择的复选框。 如果错误地选中了复选框，则可以取消选中该复选框。
@@ -411,7 +411,6 @@ A [谓词范围](#predicates-and-their-settings)s是现成的。 您可以添加
    >* `/apps/cq/gui/content/facets/<option>`
    >* `/apps/commerce/gui/content/facets/<option>`
 
-
 ### 添加/编辑谓词字段并定义字段设置 {#add-edit-a-predicate-field-and-define-field-settings}
 
 您可以添加或编辑字段并定义/更新其设置：
@@ -419,20 +418,21 @@ A [谓词范围](#predicates-and-their-settings)s是现成的。 您可以添加
 1. [打开自定义配置](#creating-opening-a-customized-configuration) 以进行更新。
 1. 如果要添加新字段，请打开 **选择谓词** 制表符并将所需的谓词拖到所需的位置。 例如， **日期范围谓词**：
 
-   ![chlimage_1-375](assets/chlimage_1-375.png)
+   ![编辑搜索表单](assets/chlimage_1-375.png)
 
 1. 取决于是否：
 
    * 您正在添加新字段：
 
-      添加谓词后 **设置** 选项卡将打开并显示可定义的属性。
+     添加谓词后 **设置** 选项卡将打开并显示可定义的属性。
 
    * 要更新现有谓词：
 
-      选择谓词字段（位于右侧），然后打开 **设置** 选项卡。
+     选择谓词字段（位于右侧），然后打开 **设置** 选项卡。
+
    例如， **日期范围谓词**：
 
-   ![chlimage_1-376](assets/chlimage_1-376.png)
+   ![日期范围谓词的属性](assets/chlimage_1-376.png)
 
 1. 根据需要进行更改并通过进行确认 **完成**.
 
@@ -440,11 +440,11 @@ A [谓词范围](#predicates-and-their-settings)s是现成的。 您可以添加
 
 1. 选择预览图标：
 
-   ![](do-not-localize/chlimage_1-31.png)
+   ![“预览”图标](do-not-localize/chlimage_1-31.png)
 
 1. 这将显示搜索表单，因为它们将显示（完全展开）在相应控制台的“搜索”列中。
 
-   ![chlimage_1-377](assets/chlimage_1-377.png)
+   ![预览搜索表单](assets/chlimage_1-377.png)
 
 1. **关闭** 预览以返回并完成配置。
 
@@ -453,7 +453,7 @@ A [谓词范围](#predicates-and-their-settings)s是现成的。 您可以添加
 1. [打开自定义配置](#creating-opening-a-customized-configuration) 以进行更新。
 1. 选择谓词字段（位于右侧），打开 **设置** 选项卡，然后选择 **删除** 图标（左下方）。
 
-   ![](do-not-localize/chlimage_1-32.png)
+   ![“删除”图标](do-not-localize/chlimage_1-32.png)
 
 1. 此时将显示一个对话框，要求确认删除操作。
 
@@ -471,7 +471,7 @@ A [谓词范围](#predicates-and-their-settings)s是现成的。 您可以添加
 
 1. 选择所需的配置(例如， **页面编辑器（段落搜索）**)，然后 **删除** 工具栏中的图标：
 
-   ![chlimage_1-378](assets/chlimage_1-378.png)
+   ![删除表单](assets/chlimage_1-378.png)
 
 1. 自定义配置将被删除，默认配置将恢复（控制台中挂锁符号的重新显示可指示此情况）。
 
@@ -490,7 +490,7 @@ A [谓词范围](#predicates-and-their-settings)s是现成的。 您可以添加
    * `jcr:title`  — 要在搜索边栏中显示的字段标签
    * `value`  — 要搜索的属性值
 
-   ![chlimage_1-379](assets/chlimage_1-379.png)
+   ![在CRXDE中添加选项](assets/chlimage_1-379.png)
 
    >[!NOTE]
    >
@@ -504,7 +504,6 @@ A [谓词范围](#predicates-and-their-settings)s是现成的。 您可以添加
    >1. `/libs/cq/gui/content/common/options/predicates`
    >1. 在中进行任何更改 `/apps.`
 
-
 1. 打开 **搜索Forms** 控制台并选择要更新的配置。 例如， **站点管理员搜索边栏**.
 
    然后单击/点按 **编辑搜索表单** 图标。
@@ -514,21 +513,22 @@ A [谓词范围](#predicates-and-their-settings)s是现成的。 您可以添加
 
    * **属性名称**
 
-      指定要在目标节点上搜索的节点属性。 例如：
+     指定要在目标节点上搜索的节点属性。 例如：
 
-      `jcr:content/cq:template`
+     `jcr:content/cq:template`
 
    * **选项节点路径**
 
-      选择保留选项的路径。 例如：
+     选择保留选项的路径。 例如：
 
-      `/apps/cq/gui/content/common/options/predicates/templatetype`
-   ![chlimage_1-380](assets/chlimage_1-380.png)
+     `/apps/cq/gui/content/common/options/predicates/templatetype`
+
+   ![添加属性路径](assets/chlimage_1-380.png)
 
 1. 选择 **完成** 以保存您的配置。
 1. 导航到相应的控制台(在本例中， **站点**)并打开 **搜索** 边栏。 新定义的搜索表单以及各种选项将可见。 选择所需的选项以查看搜索结果：
 
-   ![chlimage_1-381](assets/chlimage_1-381.png)
+   ![最终结果](assets/chlimage_1-381.png)
 
 ## 用户权限 {#user-permissions}
 

@@ -11,12 +11,13 @@ content-type: reference
 discoiquuid: 7a3322fe-554e-479e-a27c-4259cdd3ba2e
 docset: aem65
 exl-id: 69c66c82-fbd6-406e-aefd-b85480a62109
-source-git-commit: 02afc4eb78acaacc40d3ba1830ccb1e9c3907d0f
+source-git-commit: aaeef8fcc0ed5f205aeb7ab40cc61f60912c9869
 workflow-type: tm+mt
-source-wordcount: '1877'
+source-wordcount: '1973'
 ht-degree: 0%
 
 ---
+
 
 # ClientContext{#client-context}
 
@@ -26,9 +27,9 @@ ht-degree: 0%
 
 Client Context是一种机制，可为您提供有关当前页面和访客的特定信息。 可使用以下方式打开它 **Ctrl-Alt-c** (windows)或 **control-option-c** (Mac)：
 
-![](assets/clientcontext_alisonparker.png)
+![“客户端上下文”窗口的示例](assets/clientcontext_alisonparker.png)
 
-在 [发布和创作环境它显示信息](#propertiesavailableintheclientcontext) 关于：
+在发布和创作环境中，它会显示以下相关信息：
 
 * 访客；根据您的实例，会请求或派生某些信息。
 * 页面标记以及当前访客访问这些标记的次数（当您将鼠标移动到特定标记上时显示） 。
@@ -38,7 +39,7 @@ Client Context是一种机制，可为您提供有关当前页面和访客的特
 
 利用图标（仅在创作环境中可用），可配置客户端上下文的详细信息：
 
-![](do-not-localize/clientcontext_icons.png)
+![“客户机上下文”窗口的“编辑”、“加载”和“重置”图标](do-not-localize/clientcontext_icons.png)
 
 * **编辑**
 此时将打开一个新页面，允许您执行以下操作 [编辑、添加或删除配置文件属性](#editingprofiledetails).
@@ -116,6 +117,7 @@ JSONP存储区与任何其他存储区一样，但它加载来自其他域的信
 **标记云** 显示在当前页面上设置的标记以及浏览网站时收集的标记。 将鼠标移动到标记上方会显示当前用户访问包含该特定标记的页面的次数。
 
 >[!NOTE]
+>
 在已访问页面上显示的DAM资产上设置的标记将不会被计数。
 
 **Technographics商店** 此组件取决于您的安装。
@@ -127,6 +129,7 @@ JSONP存储区与任何其他存储区一样，但它加载来自其他域的信
 有关其他信息，请参阅 [客户端上下文详细信息](/help/sites-developing/client-context.md).
 
 >[!NOTE]
+>
 页面数据不再作为默认组件存在于客户端上下文中。 如果需要，可以通过编辑客户端上下文、添加 **通用存储属性** 组件，然后配置此项以定义 **存储** 作为 `pagedata`.
 
 ## 更改客户端上下文配置文件 {#changing-the-client-context-profile}
@@ -149,11 +152,11 @@ Client Context允许您以交互方式更改详细信息：
 
 1. 单击Load Profile图标：
 
-   ![](do-not-localize/clientcontext_loadprofile.png)
+   ![Client Context的“加载配置文件”图标](do-not-localize/clientcontext_loadprofile.png)
 
 1. 这将打开对话框，您可以在此处选择要加载的配置文件：
 
-   ![](assets/clientcontext_profileloader.png)
+   ![配置文件加载器对话框显示用于选择配置文件的下拉列表](assets/clientcontext_profileloader.png)
 
 1. 单击 **确定** 以加载。
 
@@ -163,7 +166,7 @@ Client Context允许您以交互方式更改详细信息：
 
 1. 双击表示当前用户的图标。 将打开选择器，使用箭头导航并查看可用的配置文件：
 
-   ![](assets/clientcontext_profileselector.png)
+   ![用户选择器](assets/clientcontext_profileselector.png)
 
 1. 单击要加载的配置文件。 加载详细信息后，单击选择器外部以关闭。
 
@@ -171,13 +174,13 @@ Client Context允许您以交互方式更改详细信息：
 
 1. 使用重置图标将Client Context中的配置文件返回到当前用户的配置文件：
 
-   ![](do-not-localize/clientcontext_resetprofile.png)
+   ![重置图标](do-not-localize/clientcontext_resetprofile.png)
 
 ### 更改浏览器平台 {#changing-the-browser-platform}
 
 1. 双击表示浏览器平台的图标。 将打开选择器，使用箭头导航并查看可用的平台/浏览器：
 
-   ![](assets/clientcontext_browserplatform.png)
+   ![浏览器平台选择器](assets/clientcontext_browserplatform.png)
 
 1. 单击要加载的平台浏览器。 加载详细信息后，单击选择器外部以关闭。
 
@@ -185,7 +188,7 @@ Client Context允许您以交互方式更改详细信息：
 
 1. 双击地理位置图标。 此时将打开一个展开的地图，您可以在此处将标记拖动到新位置：
 
-   ![](assets/clientcontext_geomocationrelocate.png)
+   ![地理位置详细信息](assets/clientcontext_geomocationrelocate.png)
 
 1. 单击地图外部以关闭。
 
@@ -193,7 +196,7 @@ Client Context允许您以交互方式更改详细信息：
 
 1. 双击Client Context的Tag Cloud部分。 此时将打开对话框，您可以在此处选择标记：
 
-   ![](assets/clientcontext_tagselection.png)
+   ![标记云对话框](assets/clientcontext_tagselection.png)
 
 1. 单击“确定”以加载到Client Context中。
 
@@ -205,13 +208,13 @@ Client Context允许您以交互方式更改详细信息：
 
 编辑客户端上下文可用于设置（或重置）某些属性的值。 这允许您测试特定场景(尤其有用 [分段](/help/sites-administering/campaign-segmentation.md) 和 [营销活动](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md))。
 
-![](assets/clientcontext_alisonparker_edit.png)
+![编辑客户端上下文](assets/clientcontext_alisonparker_edit.png)
 
 ### 添加属性组件 {#adding-a-property-component}
 
 在您打开 **ClientContext设计页面**，您还可以 **添加** 使用可用组件(组件在sidekick或 **插入新组件** 对话框，该对话框在 **将组件或资产拖动到此处** box)：
 
-![](assets/clientcontext_alisonparker_new.png)
+![向“客户端上下文”窗口添加属性](assets/clientcontext_alisonparker_new.png)
 
 ### 删除属性组件 {#removing-a-property-component}
 
@@ -231,11 +234,11 @@ Client Context允许您以交互方式更改详细信息：
 1. 要打开“客户端上下文”，请按Ctrl-Alt-c (windows)或control-option-c (Mac)。
 1. 单击Client Context顶部的编辑图标以打开Client Context Designer。
 
-   ![](do-not-localize/chlimage_1.png)
+   ![链接图标](do-not-localize/chlimage_1.png)
 
 1. 将JSONP存储组件拖动到客户端上下文。
 
-   ![](assets/chlimage_1-4.jpeg)
+   ![将JSONP存储组件拖放到客户端上下文中](assets/chlimage_1-4.jpeg)
 
 1. 双击该组件以打开“编辑”对话框。
 1. 在“JSONP服务URL”框中，输入以下URL，然后单击“获取存储”：
@@ -244,12 +247,12 @@ Client Context允许您以交互方式更改详细信息：
 
    该组件调用JSONP服务并列出返回数据包含的所有属性。 该列表中的属性是那些将在Client Context中可用的属性。
 
-   ![](assets/chlimage_1-40.png)
+   ![JSONP服务的属性](assets/chlimage_1-40.png)
 
 1. 单击确定。
 1. 返回到“Geometrixx Outdoors”主页并刷新该页。 Client Context现在包含来自JSONP存储组件的信息。
 
-   ![](assets/chlimage_1-41.png)
+   ![填充了数据的JSONP组件示例](assets/chlimage_1-41.png)
 
 ### 创建区段 {#create-the-segment}
 
@@ -270,7 +273,7 @@ Client Context允许您以交互方式更改详细信息：
 1. 右键单击Winter区段，然后单击“打开”。
 1. 将通用存储属性拖到默认的AND容器中。
 
-   ![](assets/chlimage_1-5.jpeg)
+   ![将组件添加到区段编辑器](assets/chlimage_1-5.jpeg)
 
 1. 双击该组件以打开“编辑”对话框，指定以下属性值，然后单击“确定”：
 

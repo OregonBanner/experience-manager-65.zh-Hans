@@ -11,12 +11,13 @@ content-type: reference
 discoiquuid: 994a5751-7267-4a61-9bc7-01440a256c65
 docset: aem65
 exl-id: acb5b235-523e-4c01-9bd2-0cc2049f88e2
-source-git-commit: 7803f1df1e05dc838cb458026f8dbd27de9cb924
+source-git-commit: 1036127ae508ec76c868db5fb67709c104c51123
 workflow-type: tm+mt
-source-wordcount: '1226'
+source-wordcount: '1250'
 ht-degree: 2%
 
 ---
+
 
 # Identity Management{#identity-management}
 
@@ -61,11 +62,11 @@ A [表单](/help/sites-authoring/default-components.md#form-component) 可用于
 例如，用户可以使用“Geometrixx”页面请求新的配置文件
 `http://localhost:4502/content/geometrixx-outdoors/en/user/register.html`
 
-![registerform](assets/registerform.png)
+![示例注册表](assets/registerform.png)
 
 提交请求后，将打开用户档案页面，用户可在其中提供个人详细信息。
 
-![个人资料页](assets/profilepage.png)
+![示例配置文件页面](assets/profilepage.png)
 
 新帐户也显示在 [用户控制台](/help/sites-administering/security.md).
 
@@ -79,7 +80,7 @@ A [表单](/help/sites-authoring/default-components.md#form-component) 可用于
 
 `http://localhost:4502/content/geometrixx-outdoors/en/user/sign-in.html`
 
-![登录](assets/login.png)
+![登录页面示例](assets/login.png)
 
 ## 注销 {#logging-out}
 
@@ -106,13 +107,13 @@ http://localhost:4502/content/geometrixx-outdoors/en/user/profile.html
 1. 按 **control-alt-C** 以打开客户端上下文。
 1. 在客户端上下文的左上角，单击 **加载配置文件** 按钮。
 
-   ![“加载配置文件”按钮](do-not-localize/loadprofile.png)
+   ![“加载配置文件”图标](do-not-localize/loadprofile.png)
 
 1. 从对话框窗口的下拉列表中选择另一个配置文件；例如， **艾莉森·帕克**.
 1. 单击&#x200B;**确定**。
 1. 再次单击 **我的个人资料**. 将使用Alison的详细信息更新表单。
 
-   ![用户档案](assets/profilealison.png)
+   ![Alison的示例配置文件](assets/profilealison.png)
 
 1. 您现在可以使用 **编辑个人资料** 或 **更改密码** 以更新详细信息。
 
@@ -136,11 +137,11 @@ http://localhost:4502/content/geometrixx-outdoors/en/user/profile.html
 
    下次查看配置文件时，您可以选择最喜爱的颜色：
 
-   ![aparkerfavcolor](assets/aparkerfavcolour.png)
+   ![Alison Parker最喜爱的颜色示例字段](assets/aparkerfavcolour.png)
 
    该字段将保存在 **个人资料** 相关用户帐户的部分：
 
-   ![aparkercrxdelite](assets/aparkercrxdelite.png)
+   ![Alison Parker在CRXDE中的数据](assets/aparkercrxdelite.png)
 
 ## 配置文件状态 {#profile-states}
 
@@ -188,7 +189,7 @@ http://localhost:4502/content/geometrixx-outdoors/en/user/profile.html
 
 配置文件位于 `/home/users/geometrixx`：
 
-![chlimage_1-138](assets/chlimage_1-138.png)
+![在CRXDE中看到的配置文件](assets/chlimage_1-138.png)
 
 在标准安装（创作或发布）中，每个人都具有对所有用户整个配置文件信息的读取权限。 每个人都是“*内置组自动包含所有现有用户和组。 无法编辑成员列表*“。
 
@@ -205,7 +206,7 @@ http://localhost:4502/content/geometrixx-outdoors/en/user/profile.html
 
 这可以使用以下代码来完成 **[访问控制](/help/sites-administering/user-group-ac-admin.md#access-right-management)** 选项卡：
 
-![aclmanager](assets/aclmanager.png)
+![在CRXDE中管理ACL](assets/aclmanager.png)
 
 ## 配置文件组件 {#profile-components}
 
@@ -220,22 +221,22 @@ http://localhost:4502/content/geometrixx-outdoors/en/user/profile.html
 
 在默认设置下，组件将按如下方式显示：
 
-![dc_profiles_checkedpassword](assets/dc_profiles_checkedpassword.png)
+![检查密码对话框](assets/dc_profiles_checkedpassword.png)
 
 ### 个人资料头像照片 {#profile-avatar-photo}
 
 此组件为用户提供了一种选择和上传头像照片文件的机制。
 
-![dc_profiles_avatarphoto](assets/dc_profiles_avatarphoto.png)
+![头像选择器](assets/dc_profiles_avatarphoto.png)
 
 ### 个人资料详细姓名 {#profile-detailed-name}
 
 此组件允许用户输入详细名称。
 
-![dc_profiles_detailedname](assets/dc_profiles_detailedname.png)
+![详细名称对话框](assets/dc_profiles_detailedname.png)
 
 ### 个人资料性别 {#profile-gender}
 
 此组件允许用户输入其性别。
 
-![dc_profiles_gender](assets/dc_profiles_gender.png)
+![性别选择器](assets/dc_profiles_gender.png)

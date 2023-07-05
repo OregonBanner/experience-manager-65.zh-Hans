@@ -11,12 +11,13 @@ content-type: reference
 discoiquuid: 69ca5acb-83f9-4e1b-9639-ec305779c931
 docset: aem65
 exl-id: a1d8b74e-67eb-4338-9e8e-fd693b1dbd48
-source-git-commit: 75c6bb87bb06c5ac9378ccebf193b5416c080bb1
+source-git-commit: 1ba34f95cf3ce3f136482075802d2e4372f28917
 workflow-type: tm+mt
-source-wordcount: '1760'
+source-wordcount: '1770'
 ht-degree: 1%
 
 ---
+
 
 # 电子邮件营销{#e-mail-marketing}
 
@@ -56,13 +57,13 @@ ht-degree: 1%
 
 1. 使用图标选择列表视图：
 
-   ![列表视图](do-not-localize/mcm_icon_listview-1.png)
+   ![列表视图图标](do-not-localize/mcm_icon_listview-1.png)
 
 1. 单击 **新建……**
 
    您可以指定 **标题**， **名称** 和要创建的体验类型；在本例中，为“新闻稿”。
 
-   ![mcm_createnewsletter](assets/mcm_createnewsletter.png)
+   ![“创建体验”对话框](assets/mcm_createnewsletter.png)
 
 1. 单击&#x200B;**创建**。
 
@@ -70,7 +71,7 @@ ht-degree: 1%
 
    此 **默认收件人列表** 是必填字段，因为这会形成新闻稿的接触点(请参阅 [使用列表](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#workingwithlists) （以了解有关列表的详细信息）。
 
-   ![mcm_newsletterdialog](assets/mcm_newnewsletterdialog.png)
+   ![“页面属性”对话框](assets/mcm_newnewsletterdialog.png)
 
    * **发件人名称**
 应显示为Newsletter发件人的名称。
@@ -110,7 +111,7 @@ ht-degree: 1%
    >
    >您可以使用变量对新闻稿进行个性化设置。 在Geometrixx新闻稿中，变量位于文本组件中。 变量的值继承自用户配置文件中的信息。
 
-   ![mcm_newsletter_content](assets/mcm_newsletter_content.png)
+   ![编辑新闻稿内容](assets/mcm_newsletter_content.png)
 
 1. 要插入变量，请从列表中选择该变量并单击 **插入**. 变量从配置文件中填充。
 
@@ -128,13 +129,13 @@ ht-degree: 1%
 
 1. 将光标放在要显示变量的位置，然后从下拉列表中选择一个变量，然后单击 **插入**. 根据需要为任意数量的变量执行此操作，然后单击 **确定**.
 
-   ![mcm_newsletter_variables](assets/mcm_newsletter_variables.png)
+   ![添加变量](assets/mcm_newsletter_variables.png)
 
 1. 要模拟发送变量时的外观，请按CTRL+ALT+c打开客户端上下文并选择 **加载**. 从列表中选择要加载其配置文件的用户，然后单击 **确定**.
 
    您加载的配置文件中的信息已填充变量。
 
-   ![mc_newsletter_testvariables](assets/mc_newsletter_testvariables.png)
+   ![测试变量](assets/mc_newsletter_testvariables.png)
 
 ## 在不同电子邮件客户端中测试新闻稿 {#testing-newsletters-in-different-e-mail-clients}
 
@@ -161,11 +162,11 @@ ht-degree: 1%
 
 1. 单击顶部栏中的电子邮件客户端，可查看新闻稿在该客户端中的外观。
 
-   ![chlimage_1-119](assets/chlimage_1-119.png)
+   ![切换电子邮件客户端](assets/chlimage_1-119.png)
 
 1. 对您希望查看的任何其他电子邮件客户端重复此步骤。
 
-   ![chlimage_1-120](assets/chlimage_1-120.png)
+   ![更改电子邮件客户端](assets/chlimage_1-120.png)
 
 ## 自定义新闻稿设置 {#customizing-newsletter-settings}
 
@@ -178,11 +179,11 @@ ht-degree: 1%
 
 1. 从MCM中，打开要自定义其设置的新闻稿。
 
-   ![mcm_newsletter_open](assets/mcm_newsletter_open.png)
+   ![打开新闻稿](assets/mcm_newsletter_open.png)
 
 1. 在新闻稿的顶部，单击 **设置**.
 
-   ![mcm_newsletter_settings](assets/mcm_newsletter_settings.png)
+   ![编辑新闻稿设置](assets/mcm_newsletter_settings.png)
 1. 输入 **起始日期** 电子邮件地址
 
 1. 修改 **主题** （如有必要）。
@@ -213,7 +214,7 @@ ht-degree: 1%
 
 1. 在新闻稿的顶部，单击 **测试** 以在发送之前进行测试。
 
-   ![mcm_newsletter_testsettings](assets/mcm_newsletter_testsettings.png)
+   ![测试新闻稿的设置](assets/mcm_newsletter_testsettings.png)
 
 1. 输入要发送新闻稿的测试邮件地址，然后单击 **发送**. 如果要更改配置文件，请在客户端上下文中加载另一个配置文件。 要执行此操作，请按CTRL+ALT+c并选择“加载”并加载配置文件。
 
@@ -253,11 +254,11 @@ ht-degree: 1%
 
 1. 在收件人列表中，选择要接收新闻稿的列表，然后单击 **下一个**.
 
-   ![mcm_newslettersend](assets/mcm_newslettersend.png)
+   ![发送新闻稿](assets/mcm_newslettersend.png)
 
 1. 已确认安装完成。 单击 **发送** 才能真正发送新闻稿。
 
-   ![mcm_newslettersendconfirm](assets/mcm_newslettersendconfirm.png)
+   ![新闻稿已发送确认](assets/mcm_newslettersendconfirm.png)
 
    >[!NOTE]
    >
@@ -277,15 +278,15 @@ ht-degree: 1%
 
 1. 在 **工具** 菜单，选择 **发送新闻稿**. 此 **发送新闻稿** 窗口打开。
 
-   ![mcm_newslettersendfromlist](assets/mcm_newslettersendfromlist.png)
+   ![Newletter控制台](assets/mcm_newslettersendfromlist.png)
 
 1. 在 **新闻稿** 字段中，选择要发送的新闻稿，然后单击 **下一个**.
 
-   ![mcm_newslettersenddialog](assets/mcm_newslettersenddialog.png)
+   ![“发送新闻稿”对话框](assets/mcm_newslettersenddialog.png)
 
 1. 已确认安装完成。 单击 **发送** 将所选新闻稿发送到指定的潜在客户列表。
 
-   ![mcm_newslettersenddialog_confirmation](assets/mcm_newslettersenddialog_confirmation.png)
+   ![发送确认](assets/mcm_newslettersenddialog_confirmation.png)
 
    新闻稿将发送给选定的收件人。
 
@@ -299,6 +300,6 @@ ht-degree: 1%
 
 1. 单击 **网站** 并导航到Geometrixx **工具栏** 打开它。
 
-   ![chlimage_1-121](assets/chlimage_1-121.png)
+   ![订阅示例](assets/chlimage_1-121.png)
 
 1. 在Geometrixx新闻稿中 **注册** 字段中，输入您的电子邮件地址，然后单击 **注册**. 您现已订阅了新闻稿。

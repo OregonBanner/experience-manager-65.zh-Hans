@@ -11,12 +11,13 @@ content-type: reference
 discoiquuid: 3649cffb-418a-4ad6-862f-56346a831b0b
 docset: aem65
 exl-id: c63e044c-4d2a-44d3-853b-8e7337e1ee03
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: feef7362b832f2ddef1902ef2a25d55323b6be26
 workflow-type: tm+mt
-source-wordcount: '1143'
+source-wordcount: '1167'
 ht-degree: 1%
 
 ---
+
 
 # 批量编辑器{#the-bulk-editor}
 
@@ -46,11 +47,11 @@ Geometrixx网站中包含一个说明此类用例的示例：
 1. 导航到 **支持** 页面，然后转到 **客户服务满意度** 调查。
 1. **编辑** 此 **表单的开头** 段落。 在对话框中，单击 **高级** 选项卡，展开 **操作配置**，然后单击 **查看数据……**.
 
-   ![](assets/custsatsurvey.png)
+   ![客户满意度调查示例](assets/custsatsurvey.png)
 
 1. 批量编辑器是完全可自定义的。尽管在此示例中，批量编辑器不允许用户编辑内容，但仅允许用户将信息导出到电子表格。
 
-   ![](assets/bulkeditor.png)
+   ![批量编辑器控制台](assets/bulkeditor.png)
 
 ## 如何使用批量编辑器 {#how-to-use-the-bulk-editor}
 
@@ -100,16 +101,16 @@ Geometrixx网站中包含一个说明此类用例的示例：
 
 例如：
 
-![](assets/searchfilter.png)
+![批量编辑器过滤器选项](assets/searchfilter.png)
 
 1. 单击 **搜索**. 批量编辑器将显示结果。
 对于上面的示例，将返回符合搜索条件的所有页面，并显示所请求的列。
 
-   ![](assets/chlimage_1-39.png)
+   ![批量编辑器结果](assets/chlimage_1-39.png)
 
 1. 在单元格中双击以进行所需的任何更改。
 
-   ![](assets/srchresultedit.png)
+   ![批量编辑](assets/srchresultedit.png)
 
 1. 单击 **保存** 以保存更改( **保存** 编辑单元格后，按钮将被激活)。
 
@@ -137,12 +138,12 @@ Geometrixx网站中包含一个说明此类用例的示例：
    >
    >默认情况下，更改将编码为 [Windows-1252](https://en.wikipedia.org/wiki/Windows-1252) （也称为CP-1252）。 您可以选中UTF-8以将UTF-8中的更改导出。
 
-   ![](assets/srchrsesultexport.png)
+   ![导出结果](assets/srchrsesultexport.png)
 
 1. 选择位置并确认要下载文件。
 1. 下载文件后，您可以从电子表格程序(例如Microsoft Excel)打开它。 电子表格程序会导入文件并将其转换为电子表格格式。
 
-   ![](assets/exportinexcel.png)
+   ![电子表格中的导出结果](assets/exportinexcel.png)
 
 ### 导入内容 {#importing-content}
 

@@ -11,12 +11,13 @@ content-type: reference
 discoiquuid: b279c033-bc93-4e62-81ad-123c40b9fdd2
 docset: aem65
 exl-id: 8c6ba22f-5555-4e3c-998a-9353bd44715b
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 21330d460d1080ab1dee3e82bc3c3877677c1420
 workflow-type: tm+mt
-source-wordcount: '860'
-ht-degree: 0%
+source-wordcount: '889'
+ht-degree: 1%
 
 ---
+
 
 # 经典UI标记控制台{#classic-ui-tagging-console}
 
@@ -30,7 +31,7 @@ ht-degree: 0%
 * 使用管理权限登录
 * 浏览到控制台，例如， [https://localhost:4502/tagging](https://localhost:4502/tagging)
 
-![](assets/managing_tags_usingthetagasministrationconsole.png)
+![经典控制台窗口](assets/managing_tags_usingthetagasministrationconsole.png)
 
 ## 创建标记和命名空间 {#creating-tags-and-namespaces}
 
@@ -38,33 +39,29 @@ ht-degree: 0%
 
    如果您选择 **标记** 您可以创建命名空间：
 
-   ![](assets/creating_tags_andnamespaces.png)
+   ![创建命名空间对话框](assets/creating_tags_andnamespaces.png)
 
    如果您选择命名空间(例如 **演示**)您可以在该命名空间中创建标记：
 
-   ![](assets/creating_tags_andnamespacesinnewnamespace.png)
+   ![创建标记对话框](assets/creating_tags_andnamespacesinnewnamespace.png)
 
 1. 在这两种情况下，请输入
 
    * **标题**
-(
-*必需*)标记的显示标题。 虽然可以输入任何字符，但建议不要使用以下特殊字符：
+(*必需*)标记的显示标题。 虽然可以输入任何字符，但建议不要使用以下特殊字符：
 
       * `colon (:)`  — 命名空间分隔符
       * `forward slash (/)`  — 子标记分隔符
 
-      如果输入，将不显示这些字符。
+     如果输入，将不显示这些字符。
 
    * **名称**
-(
-*必需*)标记的节点名称。
+(*必需*)标记的节点名称。
 
    * **描述**
-(
-*可选*)标记的描述。
+(*可选*)标记的描述。
 
    * 选择 **创建**
-
 
 ## 编辑标记 {#editing-tags}
 
@@ -73,7 +70,7 @@ ht-degree: 0%
 1. 您可以修改 **标题** 和 **描述**.
 1. 单击 **保存** 以关闭对话框。
 
-## 删除标记 {#deleting-tags}
+## 正在删除标记 {#deleting-tags}
 
 1. 在右侧窗格中，选择要删除的标记。
 1. 单击&#x200B;**删除**。
@@ -90,7 +87,7 @@ ht-degree: 0%
 
 **列表** 打开一个新窗口，其中显示使用高亮显示的标记的所有页面的路径：
 
-![](assets/list_showing_wheretagsarereferenced.png)
+![查找引用标记的位置](assets/list_showing_wheretagsarereferenced.png)
 
 ## 移动标记 {#moving-tags}
 
@@ -107,7 +104,7 @@ ht-degree: 0%
 
 此 **移动标记** 对话框如下所示：
 
-![](assets/move_tag.png)
+![移动标记](assets/move_tag.png)
 
 >[!NOTE]
 >
@@ -129,7 +126,7 @@ ht-degree: 0%
 
 此 **合并标记** 对话框如下所示：
 
-![](assets/mergetag.png)
+![合并标记](assets/mergetag.png)
 
 ## 对标记的使用进行计数 {#counting-usage-of-tags}
 
@@ -158,7 +155,7 @@ ht-degree: 0%
 
 该对话框如下所示：
 
-![](assets/edit_tag.png)
+![编辑标记](assets/edit_tag.png)
 
 “标记”控制台使用用户语言设置，因此对于Animal标记，对于在用户属性中将语言设置为“法语”的用户，将显示“Animaux”。
 
@@ -175,11 +172,11 @@ ht-degree: 0%
 
    选择 **动物** (**阿尼莫**)，然后选择对话框外部以将其关闭并将标记添加到页面属性。
 
-   ![](assets/french_tag.png)
+   ![编辑其他标记](assets/french_tag.png)
 
 默认情况下，“页面属性”对话框会显示标记 `titles`根据页面语言。
 
-通常，如果页面语言可用，则从页面语言中获取标记的语言。 当 [ `tag` 构件](/help/sites-developing/building.md#tagging-on-the-client-side) 在其他情况下（例如在表单或对话框中）使用，标记语言取决于上下文。
+通常，如果页面语言可用，则从页面语言中获取标记的语言。 当 [`tag` 构件](/help/sites-developing/building.md#tagging-on-the-client-side) 在其他情况下（例如在表单或对话框中）使用，标记语言取决于上下文。
 
 >[!NOTE]
 >

@@ -9,12 +9,13 @@ content-type: reference
 discoiquuid: ccabf301-b417-48aa-8501-8360fd9f3e36
 role: Admin
 exl-id: b64e24d2-8407-484c-8216-8d328ef5fa4f
-source-git-commit: 4fd5e9a1bc603202ee52e85a1c09125b13cec315
+source-git-commit: 201c87da1316944e594ade6d95800326b1e6667c
 workflow-type: tm+mt
-source-wordcount: '942'
-ht-degree: 4%
+source-wordcount: '961'
+ht-degree: 3%
 
 ---
+
 
 # 成员和组管理控制台 {#members-groups-management-consoles}
 
@@ -47,7 +48,7 @@ AEM Communities功能通常要求网站访客在注册并登录后才可参与�
 >
 >在以下情况下，将无法使用成员控制台： [隧道服务](deploy-communities.md#tunnel-service-on-author) 未启用。
 
-![member-console1](assets/member-console1.png)
+![成员控制台](assets/member-console1.png)
 
 ### 搜索 {#search-features}
 
@@ -56,7 +57,7 @@ AEM Communities功能通常要求网站访客在注册并登录后才可参与�
 ![搜索侧面板图标。](assets/leftpanel-icon.png)
 
 
-![member-console2](assets/member-console2.png)
+![成员控制台的筛选器选项](assets/member-console2.png)
 
 选择左侧的搜索图标 `Members` 标题以关闭搜索侧面板。
 
@@ -76,7 +77,7 @@ AEM Communities功能通常要求网站访客在注册并登录后才可参与�
 
 选择 `Create Member` 以在发布环境中创建用户。
 
-![create-member1](assets/create-member1.png)
+![“创建新成员”窗口](assets/create-member1.png)
 
 ### 常规 — 成员详细信息 {#general-member-details}
 
@@ -150,7 +151,7 @@ AEM Communities功能通常要求网站访客在注册并登录后才可参与�
 
 另请参阅 [评分和徽章](implementing-scoring.md).
 
-![create-member2](assets/create-member2.png)
+![编辑成员资格设置窗口](assets/create-member2.png)
 
 * **[!UICONTROL 添加徽章]**
    * 开始键入以从中进行选择 [可用徽章](badges.md). 选择徽章后，选择每个网站或所有网站，其中徽章应随成员的头像一起显示。
@@ -173,7 +174,7 @@ AEM Communities功能通常要求网站访客在注册并登录后才可参与�
 
 选择 `Add Group` 以在发布环境中创建组。
 
-![group-console1](assets/group-console1.png)
+![“创建新组”窗口](assets/group-console1.png)
 
 创建新发布端成员组的必填字段包括：
 

@@ -9,12 +9,13 @@ content-type: reference
 discoiquuid: 2418777e-4eb2-4d82-aa9e-8d1b0bf740f3
 docset: aem65
 exl-id: 6666eddc-dc17-4bd4-9d55-e6522f40a680
-source-git-commit: d673a447e9ce2377c8645c87f12be81cbad06238
+source-git-commit: 3f48e059ec8b0b255caf7d29749930e0534a37f7
 workflow-type: tm+mt
-source-wordcount: '1077'
+source-wordcount: '1081'
 ht-degree: 1%
 
 ---
+
 
 # 电子邮件模板的最佳实践 {#best-practices-for-email-templates}
 
@@ -141,7 +142,7 @@ AEM提供了一些现成的模板和组件，可供您创建Campaign新闻稿。
 
 所有客户都拥有 **标头**， a **页脚**，和 **正文** 部分。 在正文部分的下方，每个模板的不同之处在于 **列设计** （一、二或三列）。
 
-![](assets/chlimage_1-69.png)
+![可能的新闻稿的变体](assets/chlimage_1-69.png)
 
 ### 组件 {#components}
 

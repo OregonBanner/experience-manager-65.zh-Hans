@@ -10,12 +10,13 @@ topic-tags: integration
 content-type: reference
 discoiquuid: fe6ba6af-f500-4c0d-b984-fb617d4bf48a
 exl-id: 9fa3e531-11b3-4b8d-a87c-a08faf06f5b7
-source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
+source-git-commit: 5e94a0cdb363e95ce398ea4ed0bce4a6aba9e7ce
 workflow-type: tm+mt
-source-wordcount: '1600'
+source-wordcount: '1612'
 ht-degree: 1%
 
 ---
+
 
 # 为 Adobe Analytics 配置链接跟踪{#configuring-link-tracking-for-adobe-analytics}
 
@@ -28,7 +29,7 @@ ht-degree: 1%
 1. 使用 **显示配置**，打开所需的Adobe Analytics framework。
 1. 展开 **链接跟踪配置** 部分，并根据需要进行配置（此页提供了更多详细信息）：
 
-   ![aa-08](assets/aa-08.png)
+   ![Analytics框架](assets/aa-08.png)
 
 ## 跟踪文件下载 {#tracking-file-downloads}
 
@@ -80,19 +81,19 @@ s.linkDownloadFileTypes= 'exe,zip,wav,mp3,mov,mpg,avi,wmv,doc,pdf,xls';
 * **外部筛选器**
 （可选）定义用于匹配链接目标的外部URL的过滤器。 当链接目标与过滤器匹配时，将跟踪该链接。 外部过滤器仅可用于跟踪页面上的某些外部链接。
 
-   要指定要跟踪的外部链接，请键入链接目标的全部或部分URL。 用逗号分隔多个过滤器。 将字符串文字括在单引号中。 无值(默认值 `''`，两个单引号)导致跟踪所有外部链接。
+  要指定要跟踪的外部链接，请键入链接目标的全部或部分URL。 用逗号分隔多个过滤器。 将字符串文字括在单引号中。 无值(默认值 `''`，两个单引号)导致跟踪所有外部链接。
 
 * **内部筛选器**
 定义用于匹配内部链接URL的过滤器。 当链接定向与此过滤器匹配的URL时，不会跟踪该链接。 默认值是一个javascript命令，该命令返回当前窗口地址的URL的主机名。
 
-   要指定未跟踪的内部链接，请键入链接目标的全部或部分内部URL。 用逗号分隔多个过滤器。 将字符串文字括在单引号中。
+  要指定未跟踪的内部链接，请键入链接目标的全部或部分内部URL。 用逗号分隔多个过滤器。 将字符串文字括在单引号中。
 
-   默认值为 `'javascript:,'+window.location.hostname`
+  默认值为 `'javascript:,'+window.location.hostname`
 
 * **保留查询字符串**
 在评估与内部和外部筛选器的匹配项时包含URL参数。
 
-   启用后可在根据外部和内部过滤器评估链接目标URL时包含URL参数。
+  启用后可在根据外部和内部过滤器评估链接目标URL时包含URL参数。
 
 外部链接跟踪属性在中作为代码实施 `analytics.sitecatalyst.js` 为页面生成的文件。 为与通过以下配置启用外部链接跟踪的框架关联的页面生成以下示例代码：
 
@@ -123,14 +124,14 @@ s.linkLeaveQueryString= false;
 * **链接跟踪事件**
 输入要用于对链接点击次数进行计数的Adobe Analytics事件变量。
 
-   用逗号分隔多个变量名称。
+  用逗号分隔多个变量名称。
 
-   默认值 `None` 导致无事件跟踪。
+  默认值 `None` 导致无事件跟踪。
 
 * **链接跟踪变量**
 输入您希望在单击链接时发送到Adobe Analytics的Adobe Analytics变量。 用逗号分隔多个变量名称。
 
-   默认值 `None` 导致不发送任何变量数据。
+  默认值 `None` 导致不发送任何变量数据。
 
 指定要发送的事件和变量时，配置将作为代码实施到 `analytics.sitecatalyst.js` 为页面生成的文件。 当框架跟踪以下内容时，将为页面生成以下示例代码 `event10` 事件和 `prop4` 属性：
 
@@ -236,7 +237,7 @@ s.linkTrackVars= 'prop4';
 
 使用Adobe Marketing Cloud Debugger查看时，发出的调用将如下所示：
 
-![aa-leavequerysearch-blank](assets/aa-leavequerysearch-blank.png)
+![Adobe Marketing Cloud调试器](assets/aa-leavequerysearch-blank.png)
 
 >[!NOTE]
 >
@@ -250,7 +251,7 @@ s.linkTrackVars= 'prop4';
 
 Adobe Marketing Cloud Debugger中显示的调用详细信息类似于以下示例：
 
-![aa-leavequerysearch-active](assets/aa-leavequerysearch-active.png)
+![再次使用Adobe Marketing Cloud Debugger](assets/aa-leavequerysearch-active.png)
 
 >[!NOTE]
 >
@@ -323,7 +324,7 @@ Adobe Marketing Cloud Debugger中显示的调用详细信息类似于以下示�
 
 1. 选择要用作超文本的文本，然后单击“超链接”按钮。
 
-   ![](do-not-localize/chlimage_1.png)
+   ![链接图标](do-not-localize/chlimage_1.png)
 
 1. 在链接至框中添加目标URL，然后展开链接跟踪区域。
 
@@ -333,7 +334,7 @@ Adobe Marketing Cloud Debugger中显示的调用详细信息类似于以下示�
    >
    >仅当您在RTE中选择了有效的链接时，才会启用它。
 
-   ![aa-17](assets/aa-17.png)
+   ![启用链接跟踪](assets/aa-17.png)
 
 1. 启用 **自定义链接跟踪** 覆盖Adobe Analytics框架的链接跟踪配置，并为当前链接启用链接跟踪。
 

@@ -10,12 +10,13 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: e8b70971-4f23-45f8-8c23-e147413243c2
 exl-id: d1741525-a475-4a76-bd16-55318023495e
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1ba34f95cf3ce3f136482075802d2e4372f28917
 workflow-type: tm+mt
-source-wordcount: '628'
-ht-degree: 2%
+source-wordcount: '629'
+ht-degree: 1%
 
 ---
+
 
 # Campaign Management{#campaign-management}
 
@@ -36,62 +37,58 @@ Campaign管理为数字营销人员提供了交付个性化内容并为访客创
 营销活动管理由各种元素组成：
 
 * **品牌**
-在AEM中，品牌是顶层单位，构成一个集合 
-**营销活动**.
+在AEM中，品牌是顶层单位，构成一个集合 **营销活动**.
 
 * **营销活动**
-营销活动是个人的集合 
-**体验**.
+营销活动是个人的集合 **体验**.
 
 * **体验**
-重点内容构成了各种体验，在提供给访客的 
-**Touchpoints**. 有多种类型的体验可用：
+重点内容构成了各种体验，在提供给访客的 **接触点**. 有多种类型的体验可用：
 
    * **Teaser**
-      [Teaser页面/段落](#teasers) 用于引导特定访客 **区段** 关注他们兴趣的内容。
+     [Teaser页面/段落](#teasers) 用于引导特定访客 **区段** 关注他们兴趣的内容。
 
-      Teaser页面可以：
+     Teaser页面可以：
 
       * 提供一系列可供访客选择的选项
       * 仅显示基于特定访客区段的Teaser段落；例如，显示的Teaser段落可能取决于访客的年龄。
 
-      通常，Teaser页面是一种临时操作，将持续特定时段，直到它被下一个Teaser页面替换。
+     通常，Teaser页面是一种临时操作，将持续特定时段，直到它被下一个Teaser页面替换。
 
    * **快讯**
 
-      [电子邮件通信](#emailmarketing) 用于吸引用户并鼓励他们访问您的网站。 这些通知通常采用新闻稿的形式，发送给贵机构的 **潜在客户** (通常分为 **列表**)。 **注意：** Adobe不打算进一步增强此功能。 建议为 [利用Adobe Campaign以及与AEM的集成](/help/sites-administering/campaign.md).
+     [电子邮件通信](#emailmarketing) 用于吸引用户并鼓励他们访问您的网站。 这些通知通常采用新闻稿的形式，发送给贵机构的 **潜在客户** (通常分为 **列表**)。 **注意：** Adobe不打算进一步增强此功能。 建议为 [利用Adobe Campaign以及与AEM的集成](/help/sites-administering/campaign.md).
 
    * **Adobe Target**
 
-      这允许与Adobe Target（以前称为Test&amp;Target）集成，后者为营销人员提供了一个转化网站优化工具，该工具提供了必要的功能，以便始终提供与其客户更密切相关的在线内容和选件，从而提高了转化率。 Adobe Target提供了一个直观的界面，可用于设计和执行测试、创建受众区段以及定位内容 — 所有这些都可通过单个应用程序实现。
-
+     这允许与Adobe Target（以前称为Test&amp;Target）集成，后者为营销人员提供了一个转化网站优化工具，该工具提供了必要的功能，让他们能够不断提供与其客户更相关的在线内容和选件，从而带来更高的转化。 Adobe Target提供了一个直观的界面，可用于从单个应用程序设计和执行测试、创建受众区段以及定位内容。
 
 * **Touchpoints**
 
-   这些是访客与营销活动之间的联系点。 接触点会连接到您创建的体验。
+  这些是访客与营销活动之间的联系点。 接触点会连接到您创建的体验。
 
-   例如，对于Teaser，它是Teaser段落所在的内容页面；对于新闻稿，它是邮寄列表。
+  例如，对于Teaser，它是Teaser段落所在的内容页面；对于新闻稿，它是邮寄列表。
 
 * **潜在客户**
 
-   您收集到的有关访客以及如何联系这些访客的信息构成了潜在客户的基础。 **注意：** Adobe不打算进一步增强此功能。
+  您收集到的有关访客以及如何联系这些访客的信息构成了潜在客户的基础。 **注意：** Adobe不打算进一步增强此功能。
 
-   建议为 [利用Adobe Campaign以及与AEM的集成](/help/sites-administering/campaign.md).
+  建议为 [利用Adobe Campaign以及与AEM的集成](/help/sites-administering/campaign.md).
 
 * **列表**
 
-   潜在客户通常会分组到列表中，以便您能够对其采取集体行动。 注意： **注意：** Adobe不打算进一步增强此功能。
+  潜在客户通常会分组到列表中，以便您能够对其采取集体行动。 注意： **注意：** Adobe不打算进一步增强此功能。
 
-   建议为 [利用Adobe Campaign以及与AEM的集成。](/help/sites-administering/campaign.md)
+  建议为 [利用Adobe Campaign以及与AEM的集成。](/help/sites-administering/campaign.md)
 
 * **区段**
 
-   网站访客访问网站时具有不同的兴趣和目标。 根据网站上的活动、注册的用户档案信息和其他网站上的活动等因素对此进行分析，可帮助您定义区段。 然后，可以根据访客匹配的区段，专门将内容定位到访客的需求和兴趣上。
+  网站访客访问网站时具有不同的兴趣和目标。 根据网站上的活动、注册的用户档案信息和其他网站上的活动等因素对此进行分析，可帮助您定义区段。 然后，可以根据访客匹配的区段，专门将内容定位到访客的需求和兴趣上。
 
 * **MCM**
 
-   营销活动管理器(MCM)是一个控制台，允许您访问创建和控制营销活动、品牌、体验、接触点、潜在客户、列表、区段和报告所需的所有功能。
+  营销活动管理器(MCM)是一个控制台，允许您访问创建和控制营销活动、品牌、体验、接触点、潜在客户、列表、区段和报告所需的所有功能。
 
-   可从各种位置访问(标记为 **营销活动**)，或者使用URL进行访问：
+  可从各种位置访问(标记为 **营销活动**)，或者使用URL进行访问：
 
-   `http://localhost:4502/libs/mcm/content/admin.html`
+  `http://localhost:4502/libs/mcm/content/admin.html`
