@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 3763e985-7dd8-47fd-bfdf-2368b424c270
 feature: Multi Site Manager
 exl-id: 0c3488bd-5f32-4956-882c-93326a45b379
-source-git-commit: 53c39e4aa250b18d4fae0327b313b18901677f2c
+source-git-commit: 785d4897263bfeae6a0cd235abca3c96f2231392
 workflow-type: tm+mt
-source-wordcount: '534'
-ht-degree: 28%
+source-wordcount: '553'
+ht-degree: 27%
 
 ---
 
@@ -34,7 +34,7 @@ ht-degree: 28%
 
 您可以从以下位置打开 Live Copy 概述：
 
-* [Blueprint 页面（站点控制台）的引用侧面板](#opening-live-copy-overview-references-for-a-blueprint-page)
+* [Blueprint 页面（ Sites 控制台）的引用侧面板](#opening-live-copy-overview-references-for-a-blueprint-page)
 * [Blueprint 页面的属性](#opening-live-copy-overview-properties-of-a-blueprint-page)
 
 ### 打开Live Copy概述 — Blueprint页面的引用 {#opening-live-copy-overview-references-for-a-blueprint-page}
@@ -44,14 +44,14 @@ ht-degree: 28%
 1. 在 **站点** 控制台， [导航到您的Blueprint页面并将其选定](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources).
 1. 打开 **[引用](/help/sites-authoring/basic-handling.md#references)** 面板并选择 **活动副本**.
 
-   ![chlimage_1-359](assets/chlimage_1-359.png)
+   ![引用面板 — 活动副本](assets/chlimage_1-359.png)
 
    >[!NOTE]
    >
    >您还可以先打开引用，然后选择Blueprint。
 
 1. 选择 **Live Copy概述** 以显示和使用与所选Blueprint相关的所有活动副本的概述。
-1. 使用&#x200B;**关闭**&#x200B;以退出，并返回到&#x200B;**站点**&#x200B;控制台。
+1. 使用&#x200B;**关闭**&#x200B;以退出，并返回到&#x200B;**Sites**&#x200B;控制台。
 
 ### 打开Live Copy概述 — Blueprint页面的属性 {#opening-live-copy-overview-properties-of-a-blueprint-page}
 
@@ -60,7 +60,7 @@ ht-degree: 28%
 1. 打开相应的 Blueprint 页面的&#x200B;**属性**。
 1. 打开 **Blueprint** 选项卡 – **Live Copy 概述**&#x200B;选项将显示在顶部工具栏中：
 
-   ![chlimage_1-360](assets/chlimage_1-360.png)
+   ![Blueprint选项卡 — Live Copy概述](assets/chlimage_1-360.png)
 
 1. 选择 **Live Copy概述** 以显示和使用与当前Blueprint相关的所有活动副本的概述。
 
@@ -68,7 +68,7 @@ ht-degree: 28%
    >
    >有关详细信息，另请参阅知识库文章 [Livecopy状态消息 — 最新/绿色/正在同步](https://helpx.adobe.com/experience-manager/kb/livecopy-status-message---up-to-date-green-in-sync.html).
 
-1. 使用&#x200B;**关闭**&#x200B;以退出，并返回到&#x200B;**站点**&#x200B;控制台。
+1. 使用&#x200B;**关闭**&#x200B;以退出，并返回到&#x200B;**Sites**&#x200B;控制台。
 
 ## 使用 Live Copy 概述 {#using-the-live-copy-overview}
 
@@ -81,7 +81,7 @@ ht-degree: 28%
 
 在选择 Blueprint 页面时，以下操作可用：
 
-![chlimage_1-361](assets/chlimage_1-361.png)
+![已选择Blueprint — 可用的操作](assets/chlimage_1-361.png)
 
 * 编辑
 
@@ -95,7 +95,7 @@ ht-degree: 28%
 
 选择Live Copy页面时，以下操作可用：
 
-![chlimage_1-362](assets/chlimage_1-362.png)
+![已选择Live Copy页面 — 可用操作](assets/chlimage_1-362.png)
 
 * 编辑
 
@@ -136,10 +136,10 @@ ht-degree: 28%
 
 此选项卡提供有关Blueprint和Live Copy之间关系的状态的详细信息：
 
-![chlimage_1-363](assets/chlimage_1-363.png)
+![关系状态信息](assets/chlimage_1-363.png)
 
 ### Live Copy信息 {#live-copy-information}
 
 利用此选项卡，可查看和编辑Live Copy配置：
 
-![chlimage_1-364](assets/chlimage_1-364.png)
+![Live Copy信息](assets/chlimage_1-364.png)

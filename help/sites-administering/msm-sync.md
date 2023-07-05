@@ -12,10 +12,10 @@ discoiquuid: 6bcf0fcc-481a-4283-b30d-80b517701280
 docset: aem65
 feature: Multi Site Manager
 exl-id: ac24b8b4-b3ed-47fa-9a73-03f0c9e68ac8
-source-git-commit: 96aa75dec7433aa3961944fa57a80c4719316ba5
+source-git-commit: 785d4897263bfeae6a0cd235abca3c96f2231392
 workflow-type: tm+mt
-source-wordcount: '2696'
-ht-degree: 25%
+source-wordcount: '2702'
+ht-degree: 36%
 
 ---
 
@@ -26,9 +26,9 @@ ht-degree: 25%
 * 确定现有转出配置是否符合您的要求，或者您是否需要创建一个或多个转出配置。
 * 指定要用于活动副本的转出配置。
 
-## 已安装和自定义转出配置 {#installed-and-custom-rollout-configurations}
+## 已安装的自定义转出配置 {#installed-and-custom-rollout-configurations}
 
-此部分提供有关已安装的转出配置和它们使用的同步操作的信息，以及根据需要如何创建自定义配置的信息。
+本部分提供有关已安装转出配置、其所使用的同步操作以及如何在需要时创建自定义配置的信息。
 
 >[!CAUTION]
 >
@@ -36,7 +36,7 @@ ht-degree: 25%
 
 ### 转出触发器 {#rollout-triggers}
 
-每个转出配置都使用导致转出的转出触发器。 转出配置可以使用以下触发器之一：
+每个转出配置都使用一个可执行转出的转出触发器。转出配置可以使用以下触发器之一：
 
 * **转出**：此 **转出** 命令用于blue print页，或者 **同步** 命令用于live copy页面。
 
@@ -271,7 +271,7 @@ ht-degree: 25%
 
 使用AEM时，可通过多种方法管理此类服务的配置设置；请参阅 [配置OSGi](/help/sites-deploying/configuring-osgi.md) 了解更多详细信息和建议的做法。
 
-下表列出了您可以指定要排除的节点的同步操作。 该表提供了要使用Web控制台配置的服务的名称，以及使用存储库节点进行配置的PID。
+下表列出了可以为其指定要排除节点的同步操作。该表提供了要使用 Web 控制台进行配置的服务名称以及要使用存储库节点进行配置的 PID。
 
 | 同步操作 | Web 控制台中的服务名称 | 服务 PID |
 |---|---|---|
@@ -316,13 +316,13 @@ ht-degree: 25%
 >
 >在触控优化的UI中，另请参阅 [在页面属性上配置MSM锁定（触屏优化UI）](/help/sites-developing/extending-msm.md#configuring-msm-locks-on-pagep-roperties-touch-optimized-ui).
 
-#### CQ MSM内容更新操作 — 排除项 {#cq-msm-content-update-action-exclusions}
+#### CQ MSM 内容更新操作 – 排除 {#cq-msm-content-update-action-exclusions}
 
-默认情况下会排除多个属性和节点类型，这些属性和节点类型在的OSGi配置中定义 **CQ MSM内容更新操作**，下 **排除的页面属性**.
+默认情况下，将排除多个属性和节点类型，这些属性和节点类型在 **CQ MSM 内容更新操作**&#x200B;的&#x200B;**已排除页面属性**&#x200B;下的 OSGi 配置中定义。
 
-默认情况下，转出时排除匹配以下正则表达式的属性（即不更新）：
+默认情况下，在转出时排除（即不更新）与以下正则表达式匹配的属性：
 
-![chlimage_1](assets/chlimage_1.png)
+![CQ MSM 内容更新操作](assets/chlimage_1.png)
 
 您可以根据需要更改定义排除列表的表达式。
 
@@ -336,7 +336,7 @@ ht-degree: 25%
 
 使用AEM时，可通过多种方法管理此类服务的配置设置；请参阅 [配置OSGi](/help/sites-deploying/configuring-osgi.md) 了解更多详细信息和建议的做法。
 
-下表列出了可为其指定参照更新的同步操作。 该表提供了要使用Web控制台配置的服务的名称，以及使用存储库节点进行配置的PID。
+下表列出了可以为其指定引用更新的同步操作。该表提供了要使用 Web 控制台进行配置的服务名称以及要使用存储库节点进行配置的 PID。
 
 <table>
  <tbody>
@@ -366,7 +366,7 @@ MSM允许您指定通常使用的转出配置集，并且您可以在需要时�
 * **Live Copy父页面属性：** 当Live Copy页面和Blueprint源页面均未配置转出配置时，将使用适用于Live Copy页面的父页面的转出配置。
 * **[系统默认值](/help/sites-administering/msm-sync.md#setting-the-system-default-rollout-configuration)：** 当无法确定Live Copy父页面的转出配置时，将使用系统默认转出配置。
 
-例如，Blueprint使用We.Retail引用站点作为源内容。 从Blueprint创建站点。 以下列表中的每一项都描述了有关使用转出配置的不同方案：
+例如，Blueprint使用We.Retail引用站点作为源内容。 从该 Blueprint 创建一个网站。以下列表中的每个项都描述了有关使用转出配置的不同场景：
 
 * 所有Blueprint页面或Live Copy页面均未配置为使用转出配置。 MSM对所有Live Copy页面使用系统默认转出配置。
 * We.Retail引用站点的根页面配置了多个转出配置。 MSM对所有Live Copy页面使用这些转出配置。
@@ -384,23 +384,23 @@ MSM允许您指定通常使用的转出配置集，并且您可以在需要时�
 
    **配置**&#x200B;部分将显示页面继承的转出配置。
 
-   ![chlimage_1-1](assets/chlimage_1-1.png)
+   ![配置](assets/chlimage_1-1.png)
 
 1. 如果需要，可调整 **Live Copy 继承**&#x200B;标记。如果选中，Live Copy配置将在所有子项上都有效。
 
-1. 清除 **从父项继承转出配置** 属性，然后从列表中选择一个或多个转出配置。
+1. 清除&#x200B;**继承父项的转出配置**&#x200B;属性，然后从列表中选择一个或多个转出配置。
 
-   选定的转出配置显示在下拉列表下方。
+   选择的转出配置将显示在下拉列表下。
 
-   ![chlimage_1-2](assets/chlimage_1-2.png)
+   ![选定的转出配置](assets/chlimage_1-2.png)
 
 1. 单击或点按 **保存**.
 
-### 设置Blueprint页面的转出配置 {#setting-the-rollout-configuration-for-a-blueprint-page}
+### 为 Blueprint 页面设置转出配置 {#setting-the-rollout-configuration-for-a-blueprint-page}
 
-使用转出配置配置Blueprint页面，以便在转出Blueprint页面时使用。
+使用要在转出 Blueprint 页面时使用的转出配置对 Blueprint 页面进行配置。
 
-请注意，Blueprint页面的子页面继承配置。 在配置要使用的转出配置时，可能会覆盖页面从其父页面继承的配置。
+请注意，Blueprint 页面的子页面将继承该配置。在配置要使用的转出配置时，可能会覆盖页面从其父页面继承的配置。
 
 1. 使用&#x200B;**站点**&#x200B;控制台选择 Blueprint 的根页面。
 1. 从工具栏中选择&#x200B;**属性**。
@@ -413,8 +413,7 @@ MSM允许您指定通常使用的转出配置集，并且您可以在需要时�
 指定要用作系统默认值的转出配置。 要指定默认值，请配置OSGi服务：
 
 * **Day CQ WCM实时关系管理器**
-服务PID为 
-`com.day.cq.wcm.msm.impl.LiveRelationshipManagerImpl`
+服务PID为 `com.day.cq.wcm.msm.impl.LiveRelationshipManagerImpl`
 
 使用以下任一方式配置服务 [Web控制台](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) 或 [存储库节点](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository).
 

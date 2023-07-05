@@ -9,10 +9,10 @@ topic-tags: site-features
 discoiquuid: 4ec6b408-a165-4617-8d90-e89d8a415bb3
 legacypath: /content/docs/en/aem/6-0/author/site-page-features/launches
 exl-id: bc7897da-15f6-4de4-a9fd-9dd84e6c7eed
-source-git-commit: 7f595bec8ea138d5a73a17d0548320a31544dcd1
+source-git-commit: e85aacd45a2bbc38f10d03915e68286f0a55364e
 workflow-type: tm+mt
-source-wordcount: '1018'
-ht-degree: 49%
+source-wordcount: '1040'
+ht-degree: 47%
 
 ---
 
@@ -41,6 +41,7 @@ ht-degree: 49%
    * **启动项**：
 
       1. 选择 **创建启动项** 以打开向导。
+
    * **站点**：
 
       1. 从工具栏中选择&#x200B;**“创建”**&#x200B;以打开选择框。
@@ -59,7 +60,7 @@ ht-degree: 49%
 
    根据需要重复执行上述步骤。
 
-   ![chlimage_1-225](assets/chlimage_1-225.png)
+   ![选择源并添加页面](assets/chlimage_1-225.png)
 
    >[!NOTE]
    >
@@ -77,7 +78,7 @@ ht-degree: 49%
 
    继续&#x200B;**“下一步”**。
 
-   ![chlimage_1-226](assets/chlimage_1-226.png)
+   ![指定是否包含页面](assets/chlimage_1-226.png)
 
 1. 在向导的&#x200B;**“属性”**&#x200B;步骤中，您可以指定：
 
@@ -86,11 +87,11 @@ ht-degree: 49%
    * **使用新模板替换页面**：有关更多详细信息，请参阅[使用新模板创建启动项](#create-launch-with-new-template)。
    * **继承源页面活动数据**：选中此选项，可在源页面发生更改时自动更新启动页面的内容。此选项通过将启动项设为 [live copy](/help/sites-administering/msm.md).
 
-      默认情况下，此选项处于选中状态。
+     默认情况下，此选项处于选中状态。
 
    * **启动日期**：激活启动副本的日期和时间（取决于&#x200B;**生产就绪**&#x200B;标记；请参阅[启动项 – 事件的顺序](/help/sites-authoring/launches.md#launches-the-order-of-events)）。
 
-   ![chlimage_1-227](assets/chlimage_1-227.png)
+   ![指定属性](assets/chlimage_1-227.png)
 
 1. 使用&#x200B;**“创建”**&#x200B;完成该过程并创建新启动项。确认对话框将询问您是否要立即打开启动项。
 
@@ -101,22 +102,20 @@ ht-degree: 49%
 
 ### 使用新模板创建启动项 {#create-launch-with-new-template}
 
-时间 [创建启动项](/help/sites-authoring/launches-creating.md#create-launch-with-new-template) 您可以选择是否使用新模板：
-
-**使用新模板替换页面**
+时间 [创建启动项](/help/sites-authoring/launches-creating.md#create-launch-with-new-template) 您可以通过以下选项选择是否使用新模板： **使用新模板替换页面**
 
 >[!CAUTION]
 >
 >此选项仅在从&#x200B;**站点**&#x200B;控制台中创建启动项时可用。在从&#x200B;**启动项**&#x200B;控制台中创建启动项时，此选项不可用。
 
-![chlimage_1-228](assets/chlimage_1-228.png)
+![使用新模板替换页面](assets/chlimage_1-228.png)
 
 如果选中此选项，则将会：
 
 * 更新其他可用选项，
 * 包括一个新步骤，您可以在其中选择所需的模板。
 
-![chlimage_1-229](assets/chlimage_1-229.png)
+![选择模板](assets/chlimage_1-229.png)
 
 >[!CAUTION]
 >
@@ -139,11 +138,11 @@ ht-degree: 49%
 1. 在&#x200B;**启动项**&#x200B;控制台中，选择&#x200B;**“创建”**。
 1. 选择 **添加页面**，然后通过在筛选器中指定来导航到启动 `/content/launches` 项分支。 选择所需的启动项，并通过&#x200B;**“选择”**&#x200B;进行确认：
 
-   ![chlimage_1-230](assets/chlimage_1-230.png)
+   ![选择启动项](assets/chlimage_1-230.png)
 
 1. 继续 **下一个** 并完成 **属性** 与任何其他启动项一样。
 
-   ![chlimage_1-231](assets/chlimage_1-231.png)
+   ![指定属性](assets/chlimage_1-231.png)
 
 #### 创建嵌套启动项 – 站点控制台 {#creating-a-nested-launch-sites-console}
 

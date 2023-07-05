@@ -10,10 +10,10 @@ topic-tags: site-features
 content-type: reference
 discoiquuid: fabaa3e8-1657-4ed4-abb2-990117bec39c
 exl-id: 8f11f5de-f5af-4ce7-a448-2b4299de2930
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 785d4897263bfeae6a0cd235abca3c96f2231392
 workflow-type: tm+mt
-source-wordcount: '341'
-ht-degree: 42%
+source-wordcount: '348'
+ht-degree: 41%
 
 ---
 
@@ -45,7 +45,7 @@ ht-degree: 42%
 
 下图说明了主要概念的相交部分（但未显示涉及的所有级别/元素）：
 
-![chlimage_1-71](assets/chlimage_1-71a.png)
+![显示MSM和翻译主要概念的图](assets/chlimage_1-71a.png)
 
 >[!NOTE]
 >
@@ -61,9 +61,8 @@ ht-degree: 42%
 >对于所有用例，建议阅读以下最佳实践：
 >
 >* [MSM 的最佳实践](/help/sites-administering/msm-best-practices.md)；特别是：
-   >
-   >   * [创建站点](/help/sites-administering/msm-best-practices.md#create-site)
-   >   * [MSM 和多语言网站](/help/sites-administering/msm-best-practices.md#msm-and-multilingual-websites)
+>
+>   * [创建站点](/help/sites-administering/msm-best-practices.md#create-site)
+>   * [MSM 和多语言网站](/help/sites-administering/msm-best-practices.md#msm-and-multilingual-websites)
 >
 >* [翻译的最佳实践](/help/sites-administering/tc-bp.md)
-

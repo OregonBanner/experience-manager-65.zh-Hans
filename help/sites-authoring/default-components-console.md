@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: b657f95d-7be3-4409-a31b-d47fb2bfa550
 docset: aem65
 exl-id: d79107b9-dfa4-4e80-870e-0b7ea72f0bc7
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e85aacd45a2bbc38f10d03915e68286f0a55364e
 workflow-type: tm+mt
-source-wordcount: '262'
-ht-degree: 54%
+source-wordcount: '263'
+ht-degree: 55%
 
 ---
 
@@ -42,35 +42,37 @@ ht-degree: 54%
 
 * **属性**
 
-   ![screen_shot_2018-03-27at165847](assets/screen_shot_2018-03-27at165847.png)
+  ![screen_shot_2018-03-27at165847](assets/screen_shot_2018-03-27at165847.png)
 
-   在“属性”选项卡上，您可以：
+  在“属性”选项卡上，您可以：
 
    * 查看组件的常规属性。
    * 查看 [图标或缩写](/help/sites-developing/components-basics.md#component-icon-in-touch-ui) 对于组件。
 
       * 单击图标的来源将转到该组件。
+
    * 查看 **资源类型** 和 **资源超级类型** （如果已定义）。
 
       * 单击“资源超级类型”将转到该组件。
-   >[!NOTE]
-   >
-   >由于 `/apps` 在运行时不可编辑，因此组件控制台为只读。
+
+  >[!NOTE]
+  >
+  >由于 `/apps` 在运行时不可编辑，因此组件控制台为只读。
 
 * **策略**
 
-   ![chlimage_1-169](assets/chlimage_1-169.png)
+  ![策略](assets/chlimage_1-169.png)
 
 * **实时使用情况**
 
-   ![chlimage_1-170](assets/chlimage_1-170.png)
+  ![实时使用情况](assets/chlimage_1-170.png)
 
-   >[!CAUTION]
-   >
-   >由于为此视图收集的信息的性质所致，它可能需要一段时间才能进行整理/显示。
+  >[!CAUTION]
+  >
+  >由于为此视图收集的信息的性质所致，它可能需要一段时间才能进行整理/显示。
 
 * **文档**
 
-   如果开发人员提供了 [组件的文档](/help/sites-developing/developing-components.md#documenting-your-component)，它将显示在 **文档** 选项卡。 如果没有可用文档，则不会显示&#x200B;**文档**&#x200B;选项卡。
+  如果开发人员提供了 [组件的文档](/help/sites-developing/developing-components.md#documenting-your-component)，它将显示在 **文档** 选项卡。 如果没有可用文档，则不会显示&#x200B;**文档**&#x200B;选项卡。
 
-   ![chlimage_1-171](assets/chlimage_1-171.png)
+  ![文档](assets/chlimage_1-171.png)

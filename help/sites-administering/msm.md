@@ -10,9 +10,9 @@ topic-tags: site-features
 content-type: reference
 discoiquuid: c21debc3-ecf4-4aa9-ab5a-18ddd5cf2fff
 exl-id: 1e839845-fb5c-4200-8ec5-6ff744a96943
-source-git-commit: 53c39e4aa250b18d4fae0327b313b18901677f2c
+source-git-commit: 785d4897263bfeae6a0cd235abca3c96f2231392
 workflow-type: tm+mt
-source-wordcount: '2664'
+source-wordcount: '2667'
 ht-degree: 31%
 
 ---
@@ -45,80 +45,79 @@ MSM和活动副本有许多用例，一些情况包括：
 
 * **跨国 – 全球到本地公司**
 
-   MSM 支持的一个典型用例是在多个采用同一语言的跨国站点中重用内容。这允许重复使用核心内容，同时允许国家差异。
+  MSM 支持的一个典型用例是在多个采用同一语言的跨国站点中重用内容。这允许重复使用核心内容，同时允许国家差异。
 
-   例如，We.Retail参考网站示例的英语部分是为美国客户创建的。 此网站中的大多数内容也可用于其他面向不同国家/地区和文化的讲英语客户的We.Retail网站。 虽然所有站点的核心内容都相同，但可以进行区域调整。
+  例如，We.Retail参考网站示例的英语部分是为美国客户创建的。 此网站中的大多数内容也可用于其他面向不同国家/地区和文化的讲英语客户的We.Retail网站。 虽然所有站点的核心内容都相同，但可以进行区域调整。
 
-   以下结构可用于美国、英国、加拿大和澳大利亚的站点：
+  以下结构可用于美国、英国、加拿大和澳大利亚的站点：
 
-   ```xml
-   /content
-       |- we.retail
-           |- language-masters
-               |- en
-       |- we.retail
-           |- us
-               |- en
-       |- we.retail
-           |- gb
-               |- en
-       |- we.retail
-           |- ca
-               |- en
-       |- we.retail
-           |- au
-               |- en
-   ```
+  ```xml
+  /content
+      |- we.retail
+          |- language-masters
+              |- en
+      |- we.retail
+          |- us
+              |- en
+      |- we.retail
+          |- gb
+              |- en
+      |- we.retail
+          |- ca
+              |- en
+      |- we.retail
+          |- au
+              |- en
+  ```
 
-   >[!NOTE]
-   >
-   >MSM 不翻译内容。它用于创建所需的结构和部署内容。
-   >
-   >
-   >参见 [翻译多语言站点的内容](/help/sites-administering/translation.md) 如果要扩展此类示例，请执行以下操作。
+  >[!NOTE]
+  >
+  >MSM 不翻译内容。它用于创建所需的结构和部署内容。
+  >
+  >
+  >参见 [翻译多语言站点的内容](/help/sites-administering/translation.md) 如果要扩展此类示例，请执行以下操作。
 
 * **国内 – 总部到地区分支机构**
 
-   或者，拥有经销商网络的公司可能希望为其各个经销商提供单独的网站 — 每个网站都是总部提供的主站点的变体。 这可能适用于拥有多个地区办事处的单一公司，或由中央特许专营授权公司和多个当地特许经营人构成的全国特许经营体系。
+  或者，拥有经销商网络的公司可能希望为其各个经销商提供单独的网站 — 每个网站都是总部提供的主站点的变体。 这可能适用于拥有多个地区办事处的单一公司，或由中央特许专营授权公司和多个当地特许经营人构成的全国特许经营体系。
 
-   总部可以提供核心信息，而区域实体可以添加本地信息，例如详细联系方式、营业时间和活动。
+  总部可以提供核心信息，而区域实体可以添加本地信息，例如详细联系方式、营业时间和活动。
 
-   ```xml
-   /content
-       |- head-office-Berlin
-       |- branch-Hamburg
-       |- branch-Stuttgart
-       |- branch-Munich
-       |- branch-Frankfurt
-   ```
+  ```xml
+  /content
+      |- head-office-Berlin
+      |- branch-Hamburg
+      |- branch-Stuttgart
+      |- branch-Munich
+      |- branch-Frankfurt
+  ```
 
 * **多个版本**
 
-   或者，您可以使用MSM创建特定子分支的版本。例如，包含特定产品不同版本详细信息的支持子站点，其中基本信息保持不变，只需更改更新的功能：
+  或者，您可以使用MSM创建特定子分支的版本。例如，包含特定产品不同版本详细信息的支持子站点，其中基本信息保持不变，只需更改更新的功能：
 
-   ```xml
-   /content
-       |- support
-           |- product X
-               |- v5.0
-               |- v4.0
-               |- v3.0
-               |- v2.0
-               |- v1.0
-   ```
+  ```xml
+  /content
+      |- support
+          |- product X
+              |- v5.0
+              |- v4.0
+              |- v3.0
+              |- v2.0
+              |- v1.0
+  ```
 
-   >[!NOTE]
-   >
-   >在此类场景中，始终存在是直接复制还是使用活动副本的问题。
-   >
-   >有一个平衡点：
-   >
-   >  * 需要在多个版本上更新的核心内容量。
-   >
-   >相较于：
-   >
-   >  * 需要调整的单个副本数量。
-
+  >[!NOTE]
+  >
+  >在此类场景中，始终存在是直接复制还是使用活动副本的问题。
+  >
+  >有一个平衡点：
+  >
+  >  * 需要在多个版本上更新的核心内容量。
+  >
+  >相较于：
+  >
+  >  * 需要调整的单个副本数量。
 
 ## 从 UI 访问 MSM {#msm-from-the-ui}
 
@@ -304,7 +303,7 @@ Live Copy的基本形式具有：
 
 * 可以根据要求[同步](/help/sites-administering/msm-livecopy.md#synchronizing-your-live-copy)更改。
 
-![chlimage_1-367](assets/chlimage_1-367.png)
+![同步](assets/chlimage_1-367.png)
 
 #### 具有非 Live Copy 页面的 Live Copy {#live-copy-with-non-live-copy-pages}
 
@@ -313,7 +312,7 @@ Live Copy的基本形式具有：
 * 此类资源与源/Blueprint 页面没有实时关系，并且不会同步。
 * 可能会出现 MSM 作为特殊情况处理的场景。例如，当您（或流程）在源/Blueprint和Live Copy分支中创建具有相同位置和名称的页面时。 有关此类情况，请参阅 [MSM 转出冲突](/help/sites-administering/msm-rollout-conflicts.md)以了解更多信息。
 
-![chlimage_1-368](assets/chlimage_1-368.png)
+![转出冲突](assets/chlimage_1-368.png)
 
 #### 嵌套式 Live Copy {#nested-live-copies}
 
@@ -322,9 +321,9 @@ Live Copy的基本形式具有：
 * 为顶级Live Copy触发的深层转出可以继续进入嵌套式Live Copy（例如，如果触发器匹配）。
 * 源之间的任何链接都将在活动副本中重写。
 
-   例如，从第二个到第一个Blueprint的链接将被重写为从嵌套/第二个Live Copy到第一个Live Copy的链接。
+  例如，从第二个到第一个Blueprint的链接将被重写为从嵌套/第二个Live Copy到第一个Live Copy的链接。
 
-![chlimage_1-369](assets/chlimage_1-369.png)
+![源之间的链接](assets/chlimage_1-369.png)
 
 >[!NOTE]
 >
@@ -350,13 +349,13 @@ Live Copy的源可以是常规页面，也可以是Blueprint配置包含的页�
 
 * [创建Blueprint配置](/help/sites-administering/msm-livecopy.md#creating-a-blueprint-configuration)
 
-   该配置会预先定义用于创建Live Copy的页面。
+  该配置会预先定义用于创建Live Copy的页面。
 
 * [创建页面的Live Copy](/help/sites-administering/msm-livecopy.md#creating-a-live-copy-of-a-page)
 
-   用于创建Live Copy的页面（源页面）是Blueprint页面。
+  用于创建Live Copy的页面（源页面）是Blueprint页面。
 
-   源页面是否可由Blueprint配置引用。
+  源页面是否可由Blueprint配置引用。
 
 ### 转出和同步 {#rollout-and-synchronize}
 
@@ -365,15 +364,15 @@ Live Copy的源可以是常规页面，也可以是Blueprint配置包含的页�
 * 可以定义[转出配置](#rollout-configurations)，以便特定[事件](/help/sites-administering/msm-sync.md#rollout-triggers)能够促使自动进行转出。
 * 在创作Blueprint页面时，您可以使用 [转出](/help/sites-administering/msm-livecopy.md#rolling-out-a-blueprint) 用于将更改推送到Live Copy的命令。
 
-   **转出**&#x200B;命令适用于 Blueprint 配置引用的 Blueprint 页面。
+  **转出**&#x200B;命令适用于 Blueprint 配置引用的 Blueprint 页面。
 
-   ![chlimage_1-370](assets/chlimage_1-370.png)
+  ![转出](assets/chlimage_1-370.png)
 
 * 在创作Live Copy页面时，您可以使用 [同步](/help/sites-administering/msm-livecopy.md#synchronizing-a-live-copy) 命令以将更改从源拉入Live Copy。
 
-   此 **同步** 命令始终适用于live copy页面（无论源/Blueprint页面是否由Blueprint配置包含）。
+  此 **同步** 命令始终适用于live copy页面（无论源/Blueprint页面是否由Blueprint配置包含）。
 
-   ![chlimage_1-371](assets/chlimage_1-371.png)
+  ![同步](assets/chlimage_1-371.png)
 
 ### 转出配置 {#rollout-configurations}
 
@@ -381,15 +380,15 @@ Live Copy的源可以是常规页面，也可以是Blueprint配置包含的页�
 
 * **触发器**
 
-   触发器是触发实时操作同步的事件，例如源页面的激活。 MSM 定义您可以使用的触发器。
+  触发器是触发实时操作同步的事件，例如源页面的激活。 MSM 定义您可以使用的触发器。
 
 * **同步操作**
 
-   对Live Copy执行以将其与源同步。 示例操作包括复制内容、对子节点排序和激活Live Copy页面。 MSM提供了许多同步操作。
+  对Live Copy执行以将其与源同步。 示例操作包括复制内容、对子节点排序和激活Live Copy页面。 MSM提供了许多同步操作。
 
-   >[!NOTE]
-   >
-   >您可以使用 Java API 为实例创建自定义操作。
+  >[!NOTE]
+  >
+  >您可以使用 Java API 为实例创建自定义操作。
 
 可以重复使用转出配置，以便多个Live Copy可以使用相同的转出配置。 标准安装包含了多个[转出配置](/help/sites-administering/msm-sync.md#installed-rollout-configurations)。
 
@@ -440,10 +439,10 @@ Live Copy中的每个页面和组件都通过Live关系与其源页面和组件�
 MSM提供了一些工具，以便您的实施能够适应共享内容时可能存在的特殊复杂性：
 
 * **自定义转出配置**
-   [创建转出配置](/help/sites-administering/msm-sync.md#creating-a-rollout-configuration) 当安装的转出配置不符合您的要求时。 您可以使用任何可用的转出触发器和同步操作。
+  [创建转出配置](/help/sites-administering/msm-sync.md#creating-a-rollout-configuration) 当安装的转出配置不符合您的要求时。 您可以使用任何可用的转出触发器和同步操作。
 
 * **自定义同步操作**
-   [创建自定义同步操作](/help/sites-developing/extending-msm.md#creating-a-new-synchronization-action) 当安装的操作不符合您的特定应用程序要求时。 MSM提供了用于创建自定义同步操作的Java API。
+  [创建自定义同步操作](/help/sites-developing/extending-msm.md#creating-a-new-synchronization-action) 当安装的操作不符合您的特定应用程序要求时。 MSM提供了用于创建自定义同步操作的Java API。
 
 ## 最佳实践 {#best-practices}
 
