@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 21181a6f-b434-40ed-8eb1-ebdfc98964dd
 docset: aem65
 exl-id: ef1a3997-feb4-4cb0-9396-c8335b69bb10
-source-git-commit: 3802eb71dc6d17db4b1158d8d433ba1c516e54f2
+source-git-commit: d045fc1ac408f992d594a4cb68d1c4eeae2b0de1
 workflow-type: tm+mt
-source-wordcount: '3011'
+source-wordcount: '3024'
 ht-degree: 69%
 
 ---
@@ -178,7 +178,7 @@ ht-degree: 69%
 
 * [边栏选择器](/help/sites-authoring/basic-handling.md#rail-selector)
 
-  ![](do-not-localize/screen_shot_2018-03-23at103943.png)
+  ![边栏选择器列表显示在Adobe Experience Manager屏幕的左侧。](do-not-localize/screen_shot_2018-03-23at103943.png)
 
   显示的选项取决于您当前所在的控制台。例如，在 **站点** 您可以选择“仅限内容”（默认）、“时间轴”、“引用”或“筛选器”侧面板。
 

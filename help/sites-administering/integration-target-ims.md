@@ -2,7 +2,7 @@
 title: 使用IMS与Adobe Target集成
 description: 了解如何使用IMS将AEM与Adobe Target集成
 exl-id: 8ddd86d5-a5a9-4907-b07b-b6552d7afdc8
-source-git-commit: 2f5f6a94a20feb2813b6da1b71e22f8675529ea5
+source-git-commit: d045fc1ac408f992d594a4cb68d1c4eeae2b0de1
 workflow-type: tm+mt
 source-wordcount: '1548'
 ht-degree: 54%
@@ -117,7 +117,7 @@ ht-degree: 54%
 <!--
 1. The creation will be confirmed, you can now **Continue to integration details**; these are needed for [Completing the IMS Configuration in AEM](#completing-the-ims-configuration-in-aem).
 
-   ![](assets/integrate-target-io-07.png)
+   ![integrate-target-io-07](assets/integrate-target-io-07.png)
 -->
 
 ### 将权限分配给集成 {#assigning-privileges-to-the-integration}

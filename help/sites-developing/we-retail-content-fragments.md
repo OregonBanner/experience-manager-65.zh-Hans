@@ -10,7 +10,7 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: d1326737-f378-46d0-9916-61ead4d31639
 exl-id: 1e5d8184-7164-4984-b43e-421015e8bf52
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: d045fc1ac408f992d594a4cb68d1c4eeae2b0de1
 workflow-type: tm+mt
 source-wordcount: '452'
 ht-degree: 21%
@@ -60,7 +60,7 @@ We.Retail中有多个示例内容片段；导航到 **资产**， **文件**， 
 
 在这里，您可以 [编辑和管理](/help/assets/content-fragments/content-fragments.md) 使用选项卡（左侧面板）的片段：
 
-<!--![](do-not-localize/cf-45-aa.png) ![](do-not-localize/cf-45-a.png) ASSET does not exist-->
+<!--![cf-45-aa](do-not-localize/cf-45-aa.png) ![cf-45-a](do-not-localize/cf-45-a.png) ASSET does not exist-->
 
 * **[变体](/help/assets/content-fragments/content-fragments-variations.md)** 包括 [Markdown](/help/assets/content-fragments/content-fragments-markdown.md)
 * **[关联的内容](/help/assets/content-fragments/content-fragments-assoc-content.md)**

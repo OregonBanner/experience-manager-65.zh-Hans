@@ -8,9 +8,9 @@ uuid: 62a6c379-a460-4f8f-a909-03d04fa8944b
 contentOwner: sarchiz
 discoiquuid: 47c2a80f-78ac-4372-86b4-06351a1dd58f
 docset: aem65
-source-git-commit: 4b965d8f7814816126601f6366c1ba313e404538
+source-git-commit: d045fc1ac408f992d594a4cb68d1c4eeae2b0de1
 workflow-type: tm+mt
-source-wordcount: '377'
+source-wordcount: '511'
 ht-degree: 2%
 
 ---
@@ -43,33 +43,33 @@ ht-degree: 2%
 
 ### 信息卡视图 {#card-view}
 
-![](assets/unu.png)
+![显示各种图像资源的缩略图的卡片视图。](assets/unu.png)
 
 ### 卡片视图中的批量选择 {#bulk-selection-in-card-view}
 
 可以使用批量选择资源或页面 **全选** 右上角的按钮：
 
-![](assets/doi.png) ![](assets/trei.png)
+![选择卡片视图右上角显示的“全部”按钮。](assets/doi.png) ![卡片视图中图像资源的所有缩略图图像均显示为选中状态，并带有复选标记。](assets/trei.png)
 
 ### 列表视图 {#list-view}
 
 列表视图也是如此：
 
-![](assets/patru_modified.png)
+![“列表视图”右上角的“全选”选项会突出显示。](assets/patru_modified.png)
 
 ### 列表视图中的批量选择 {#bulk-selection-in-list-view}
 
 在列表视图中，使用 **全选** 按钮，或使用左侧的复选框批量选择。
 
-![](assets/cinci.png) ![](assets/sase.png)
+![显示图像资产缩略图图像的实时视图会以水平行显示。](assets/cinci.png) ![显示图像资产的缩略图图像的列表框和“名称”左侧的复选框。](assets/sase.png)
 
 ### 列视图 {#column-view}
 
-![](assets/sapte.png)
+![列视图，显示以垂直列显示的图像资源的缩略图图像。](assets/sapte.png)
 
 ### 列视图中的批量选择 {#bulk-selection-in-column-view}
 
-![](assets/opt.png)
+![列视图中图像资源的所有缩略图图像均显示为选中状态，并带有复选标记。](assets/opt.png)
 
 ## 批量启用的操作 {#bulk-enabled-operations}
 
@@ -77,8 +77,8 @@ ht-degree: 2%
 
 此处， **移动** 操作会对上面选择的资产执行。 在任何视图中，这都会导致所有资产被移动到所选位置，而不仅仅是屏幕上的加载资产。
 
-![](assets/noua.png)
+![在列视图中移动显示选定文件夹的资产。](assets/noua.png)
 
 对于未批量启用的其他操作，如 **下载，** 此时将显示一条警告，仅说明该操作中将包含浏览器中加载的元素。
 
-![](assets/zece.png)
+![资源视图显示选定的图像资源和“不支持批量操作”弹出对话框。](assets/zece.png)

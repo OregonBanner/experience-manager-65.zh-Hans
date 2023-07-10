@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 2d35a2a4-0c8c-4b16-99a6-c6e6d66446dc
 docset: aem65
 exl-id: a7e16555-9bbe-4da2-817c-4495a0193f3f
-source-git-commit: b3889b1897f0ec0c5bbf60c346b77b2906175904
+source-git-commit: d045fc1ac408f992d594a4cb68d1c4eeae2b0de1
 workflow-type: tm+mt
-source-wordcount: '1580'
-ht-degree: 80%
+source-wordcount: '1558'
+ht-degree: 72%
 
 ---
 
@@ -40,17 +40,17 @@ ht-degree: 80%
 
 * **创建**
 
-   * 此按钮在许多控制台中可用 - 出现的选项是上下文相关的，因此在不同的情况下可能有所改变。
+   * 此按钮在许多控制台中可用 — 显示的选项是上下文相关的，因此可以因场景而异。
 
-* 在文件夹中对页面重新排序
+* 在文件夹中重新排序页面
 
-   * 此操作可在[列表视图](/help/sites-authoring/basic-handling.md#list-view)中完成。更改将在其他视图中应用并可见。
+   * 这可以在[列表视图](/help/sites-authoring/basic-handling.md#list-view)中完成。更改已应用并在其他视图中可见。
 
 #### 页面创作 {#page-authoring}
 
 * 导航链接
 
-   * 当您处于&#x200B;***编辑***&#x200B;模式下时，**链接不可用于导航**。要通过链接导航，您需要使用以下任一方式来[预览页面](/help/sites-authoring/editing-content.md#previewing-pages)：
+   * 当您处于&#x200B;***编辑***&#x200B;模式下时，**链接不可用于导航**。要通过链接进行导航，您需要 [预览页面](/help/sites-authoring/editing-content.md#previewing-pages) 使用：
 
       * [预览模式](/help/sites-authoring/editing-content.md#preview-mode)
       * [以发布的形式查看](/help/sites-authoring/editing-content.md#view-as-published)
@@ -59,7 +59,7 @@ ht-degree: 80%
 
 >[!NOTE]
 >
->有许多键盘快捷键可帮助您更轻松地创作体验。
+>有几个键盘快捷键可以使创作体验更轻松。
 >
 >* [编辑页面时的键盘快捷键](/help/sites-authoring/page-authoring-keyboard-shortcuts.md)
 >* [控制台的键盘快捷键](/help/sites-authoring/keyboard-shortcuts.md)
@@ -69,7 +69,7 @@ ht-degree: 80%
 
 查找页面时存在很多方面；您可以导航和/或搜索：
 
-1. 打开&#x200B;**站点**&#x200B;控制台（使用&#x200B;**全局导航**&#x200B;中的[站点](/help/sites-authoring/basic-handling.md#global-navigation)选项 - 它将在您选择 Adobe Experience Manager（左上方）时以下拉菜单的形式触发）。
+1. 打开 **站点** 控制台(使用 **站点** 中的选项 [全局导航](/help/sites-authoring/basic-handling.md#global-navigation)) — 当您选择Adobe Experience Manager链接（左上方）时，就会触发（下拉列表）。
 
 1. 通过点按/单击相应的页面，在树中向下导航。页面资源的显示方式取决于您所使用的视图 - [卡片视图、列表视图或列视图](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)：
 
@@ -85,9 +85,9 @@ ht-degree: 80%
 
 ### 创建新页面 {#creating-a-new-page}
 
-要[创建新的页面](/help/sites-authoring/managing-pages.md#creating-a-new-page)，请执行以下操作：
+至 [创建页面](/help/sites-authoring/managing-pages.md#creating-a-new-page)：
 
-1. [导航到要创建新页面的位置](#finding-your-page)。
+1. [导航到位置](#finding-your-page) 要在其中创建页面的位置。
 1. 使用&#x200B;**创建**&#x200B;图标，然后从列表中选择&#x200B;**页面**：
 
    ![qgtap-02](assets/qgtap-02.png)
@@ -134,8 +134,6 @@ ht-degree: 80%
 
 ### 编辑页面内容 {#editing-your-page-content}
 
-要编辑您的页面，请执行以下操作：
-
 1. [导航](#finding-your-page)到要编辑的页面。
 1. 使用“编辑”（铅笔）图标[打开要编辑的页面](/help/sites-authoring/managing-pages.md#opening-a-page-for-editing)：
 
@@ -143,12 +141,12 @@ ht-degree: 80%
 
    可以从以下位置访问该图标：
 
-   * [快速操作（仅限卡片视图/桌面）](#quick-actions-card-view-desktop-only) 适合的资源。
+   * 所需资源的[快速操作（仅限卡片视图/桌面）](#quick-actions-card-view-desktop-only)。
    * [选择页面](#selectiingyourpageforfurtheraction)后显示的工具栏。
 
-1. 编辑器打开后，您可以：
+1. 打开编辑器后，您可以：
 
-   * [向页面中添加新组件](/help/sites-authoring/editing-content.md#inserting-a-component) 方式：
+   * 通过以下方式[向页面中添加新组件](/help/sites-authoring/editing-content.md#inserting-a-component)：
 
       * 打开侧面板
       * 选择“组件”选项卡( [组件浏览器](/help/sites-authoring/author-environment-tools.md#components-browser))
@@ -161,7 +159,7 @@ ht-degree: 80%
    * [编辑页面中现有组件的内容](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste)：
 
       * 通过点按或单击打开组件工具栏。使用&#x200B;**编辑**（铅笔）图标打开对话框。
-      * 通过点按住或慢速双击打开组件的就地编辑器。将显示可用的操作（对于某些组件，这将是有限的选择）。
+      * 通过点按住或慢速双击打开组件的就地编辑器。此时会显示可用的操作（对于某些组件，该选择将受到限制）。
       * 要查看所有可用的操作，请使用以下图标进入全屏模式：
 
      ![全屏模式](do-not-localize/screen_shot_2018-03-21at160706.png)
@@ -201,7 +199,7 @@ ht-degree: 80%
 
    >[!NOTE]
    >
-   >要使用内容中的链接导航，您必须使用[预览模式](/help/sites-authoring/editing-content.md#preview-mode)。
+   >要使用内容中的链接进行导航，您必须使用 [预览模式](/help/sites-authoring/editing-content.md#preview-mode).
 
 ### 编辑页面属性 {#editing-the-page-properties}
 
@@ -212,7 +210,7 @@ ht-degree: 80%
    1. [导航](#finding-your-page)到要发布的页面。
    1. 从以下任一位置选择&#x200B;**属性**&#x200B;图标：
 
-      * [快速操作（仅限卡片视图/桌面）](#quick-actions-card-view-desktop-only) 适合的资源。
+      * 所需资源的[快速操作（仅限卡片视图/桌面）](#quick-actions-card-view-desktop-only)。
       * [选择页面](#selectiingyourpageforfurtheraction)后显示的工具栏。
 
   ![screen_shot_2018-03-21at160850](assets/screen_shot_2018-03-21at160850.png)
@@ -235,7 +233,7 @@ ht-degree: 80%
    1. [导航](#finding-your-page)到要发布的页面。
    1. 从以下任一位置选择&#x200B;**快速发布**&#x200B;图标：
 
-      * [快速操作（仅限卡片视图/桌面）](#quick-actions-card-view-desktop-only) 适合的资源。
+      * 所需资源的[快速操作（仅限卡片视图/桌面）](#quick-actions-card-view-desktop-only)。
       * [选择页面](#selectiingyourpageforfurtheraction)后显示的工具栏（还可以访问[稍后发布](/help/sites-authoring/publishing-pages.md#main-pars-title-12)）。
 
   ![screen_shot_2018-03-21at160957](assets/screen_shot_2018-03-21at160957.png)
@@ -269,15 +267,15 @@ ht-degree: 80%
 
    * 复制：
 
-      * 复制后，您将需要导航到新位置并进行粘贴。
+      * 导航到新位置并粘贴。
 
    * 移动：
 
-      * 将打开相应的向导来收集移动页面时所需的信息。按照屏幕上的说明操作。
+      * 此时将打开向导，收集移动页面所需的信息。 按照屏幕上的说明操作。
 
    * 删除：
 
-      * 系统将要求您确认该操作。
+      * 系统会要求您确认该操作。
 
    >[!NOTE]
    >
@@ -288,7 +286,7 @@ ht-degree: 80%
 [锁定页面](/help/sites-authoring/editing-content.md#locking-a-page) ，可阻止其他作者在您处理页面时对其进行处理。 可以找到“锁定”（和“解锁”）图标／按钮：
 
 * [选择页面](#selecting-your-page-for-further-action)后显示的工具栏。
-* 编辑页面时显示的[“页面信息”下拉菜单](#editing-the-page-properties)。
+* 此 [“页面信息”下拉菜单](#editing-the-page-properties) 编辑页面时。
 * 编辑页面（页面处于锁定状态）时显示的页面工具栏
 
 例如，“锁定”图标如下所示：
@@ -297,7 +295,7 @@ ht-degree: 80%
 
 ### 访问页面引用 {#accessing-page-references}
 
-在“引用”边栏中，可以[快速访问对页面的引用/从页面进行的引用](/help/sites-authoring/author-environment-tools.md#references)。
+[快速访问引用](/help/sites-authoring/author-environment-tools.md#references) “引用”边栏中提供了页面的URL或页面的URL路径。
 
 1. 使用工具栏图标选择&#x200B;**引用**（在[选择您的页面](#selecting-your-page-for-further-action)之前或之后）：
 
@@ -331,14 +329,14 @@ ht-degree: 80%
 
    ![screen_shot_2018-03-21at161355-1](assets/screen_shot_2018-03-21at161355-1.png)
 
-   如果页面的某个版本已经保存，则会在“时间线”中列出该版本。
+   如果页面的某个版本已经保存，则会在“时间轴”中列出该版本。
 
 1. 点按/单击要恢复的版本 - 这将显示其他操作按钮：
 
    * **恢复到此版本**
 
-      * 将恢复该版本。
+      * 版本已恢复。
 
    * **显示差异**
 
-      * 将打开该页面，并突出显示（两个版本之间的）差异。
+      * 打开页面时，会高亮显示（两个版本之间的）差异。

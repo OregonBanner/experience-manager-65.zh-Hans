@@ -5,7 +5,7 @@ role: Admin
 feature: Integrations
 exl-id: 2660de7c-0281-4884-98d9-e78f20cf571c
 hide: true
-source-git-commit: 39930967e2f423b7fbbc79bcb85f78d15809e97d
+source-git-commit: 6f01f5725ed2b0533756830c1a5e55b7464708f6
 workflow-type: tm+mt
 source-wordcount: '1737'
 ht-degree: 1%
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 | 版本 | 文章链接 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets-view/integrations/workfront-connector-configure.html?lang=en) |
+| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/integrations/workfront-connector-configure.html?lang=en) |
 | AEM 6.5 | 本文 |
 
 在中具有管理员访问权限的用户 [!DNL Adobe Experience Manager] 在安装增强型连接器后对其进行配置。 有关安装说明，请参阅 [安装连接器](/help/assets/workfront-integrations.md).
@@ -162,7 +162,7 @@ Adobe Workfront文档与资源之间的元数据映射在AEM元数据架构中�
 
    ![在Workfront中发表评论](/help/assets/assets/comments-sync2.png)
 
-1. 导航到AEM中的同一链接文档，选择该文档并打开 [!UICONTROL 时间线] 选项，然后选择 [!UICONTROL 注释]. 左侧边栏显示从中进行同步的注释 [!DNL Workfront].
+1. 导航到AEM中的同一链接文档，选择该文档并打开 [!UICONTROL 时间线] 选项，然后选择 [!UICONTROL 评论]. 左侧边栏显示从中进行同步的注释 [!DNL Workfront].
 
 ## 资源版本 {#asset-versions}
 

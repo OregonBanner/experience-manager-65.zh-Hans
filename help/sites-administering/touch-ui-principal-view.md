@@ -11,9 +11,9 @@ topic-tags: Security
 discoiquuid: db8665fa-353f-45c2-8e37-169d5c1df873
 docset: aem65
 exl-id: 4ce19c95-32cb-4bb8-9d6f-a5bc08a3688d
-source-git-commit: ddd908ed8287d77d9009633399c1e0bc1a12fe1b
+source-git-commit: d045fc1ac408f992d594a4cb68d1c4eeae2b0de1
 workflow-type: tm+mt
-source-wordcount: '760'
+source-wordcount: '774'
 ht-degree: 1%
 
 ---
@@ -75,7 +75,7 @@ AEM 6.5引入了用户和组的权限管理。 主要功能与经典UI相同，�
 >
 >有关权限和说明的完整列表，请参阅 [此页面](/help/sites-administering/user-group-ac-admin.md#access-right-management).
 
-![给定路径的搜索权限](assets/image2019-3-21_0-5-47.png) ![](assets/image2019-3-21_0-6-53.png)
+![给定路径的搜索权限。](assets/image2019-3-21_0-5-47.png) ![为“dam-users”添加新条目，如在垂直列中选择的路径所示。](assets/image2019-3-21_0-6-53.png)
 
 选择权限列表后，用户可以选择权限类型：拒绝或允许，如下所示。
 
