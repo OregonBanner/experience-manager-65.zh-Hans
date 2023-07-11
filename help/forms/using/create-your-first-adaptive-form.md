@@ -9,9 +9,9 @@ discoiquuid: 1142bcd4-e3a7-41ce-a710-132ae6c21dbe
 docset: aem65
 feature: Adaptive Forms
 exl-id: 77a05f83-ac9a-4221-85ac-439e82623a28
-source-git-commit: 318347178fd626dea8e5a15caa7cdad8fe353eba
+source-git-commit: e9f64722ba7df0a7f43aaf1005161483e04142f5
 workflow-type: tm+mt
-source-wordcount: '965'
+source-wordcount: '966'
 ht-degree: 9%
 
 ---
@@ -95,7 +95,7 @@ ht-degree: 9%
 
 ## 步骤4：为自适应表单设置样式 {#step-style-your-adaptive-form}
 
-![](/help/forms/using/assets/09-style-your-adaptive-form-small.png)
+![自适应表单样式](/help/forms/using/assets/09-style-your-adaptive-form-small.png)
 
 自适应表单提供主题和 [编辑者](../../forms/using/themes.md) 创建自适应表单的主题。 主题包含组件和面板的样式详细信息，您可以在不同的表单中重用主题。 样式包括诸如背景颜色、状态颜色、透明度、对齐方式和大小等属性。 将主题应用于表单时，指定的样式会反映在表单的相应组件上。 自适应表单还支持特定于表单的样式的内联样式。
 

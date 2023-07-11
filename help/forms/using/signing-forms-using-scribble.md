@@ -10,9 +10,9 @@ discoiquuid: 76d178d1-8e40-41b3-80d4-66b2f8d04211
 docset: aem65
 feature: Adaptive Forms
 exl-id: 096f61b0-59f4-4699-9093-8fb1ed81fded
-source-git-commit: 9ee8e79777b89fbf4d6e5b5fd1dbb1ef3bc9ad5d
+source-git-commit: e9f64722ba7df0a7f43aaf1005161483e04142f5
 workflow-type: tm+mt
-source-wordcount: '638'
+source-wordcount: '639'
 ht-degree: 0%
 
 ---
@@ -43,6 +43,7 @@ ht-degree: 0%
 >[!NOTE]
 >
 >签名始终以PNG格式保存。
+>
 
 ## 配置自适应表单以使用涂鸦签名 {#configure-an-adaptive-form-to-use-scribble-signature}
 
@@ -54,12 +55,14 @@ ht-degree: 0%
    >[!NOTE]
    >
    >签名步骤组件占据可用于表单的完整宽度。 建议在包含签名步骤组件的部分中没有任何其他组件。
+   >
 
-1. 在内容浏览器中，点按 **表单容器**，然后点按 **配置** ![](/help/forms/using/assets/configure.png) 图标。 它可打开属性浏览器并显示自适应表单容器属性。 导航到 **自适应表单容器** > **电子签名** 并取消选择 **启用Adobe Sign** 选项。 点按完成 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) 图标以保存更改。
+1. 在内容浏览器中，点按 **表单容器**，然后点按 **配置** ![配置](/help/forms/using/assets/configure.png) 图标。 它可打开属性浏览器并显示自适应表单容器属性。 导航到 **自适应表单容器** > **电子签名** 并取消选择 **启用Adobe Sign** 选项。 点按完成 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) 图标以保存更改。
 
    >[!NOTE]
    >
    >将签名步骤组件添加到自适应表单时，会自动选择启用Adobe Sign选项。
+   >
 
 1. 点按 **配置** ![配置](assets/configure.png) 图标。 它打开属性浏览器并显示签名步骤属性。 配置以下属性：
 

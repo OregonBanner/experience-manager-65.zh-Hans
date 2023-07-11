@@ -10,7 +10,7 @@ discoiquuid: 879ff6ca-e5f3-451d-acc2-f75142101ddd
 docset: aem65
 feature: Interactive Communication
 exl-id: bef1f05e-aea2-433e-b3d5-0b7ad8163fa7
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e9f64722ba7df0a7f43aaf1005161483e04142f5
 workflow-type: tm+mt
 source-wordcount: '1796'
 ht-degree: 0%
@@ -93,6 +93,7 @@ Web渠道的模板是在AEM中创建的。 模板作者和管理员可以创建�
 
       * 费用
       * 图表
+
    * ItemisedCalls
    * PayNow
    * ValueAddedServices
@@ -162,6 +163,7 @@ Web渠道的模板是在AEM中创建的。 模板作者和管理员可以创建�
    1. 选择 **.xdp** 从 **另存为类型** 下拉列表。
 
    1. 点按 **保存**.
+
    在使用Forms Designer为布局片段创建XDP模板后，您必须 [上传](../../forms/using/create-templates-print-web.md#upload-xdp-template-to-the-aem-forms-server) 将其添加到AEM Forms服务器，以便该模板可在创建布局片段时使用。
 
 ## 为Web渠道创建模板 {#create-template-for-web-channel}
@@ -231,7 +233,7 @@ Web渠道的模板是在AEM中创建的。 模板作者和管理员可以创建�
    1. 指定 **帐单详细信息** 在标题字段中。
    1. 选择 **1** 从 **列数** 下拉列表。
 
-   1. 点按 ![](/help/forms/using/assets/done_icon.png) 以保存属性。
+   1. 点按 ![保存](/help/forms/using/assets/done_icon.png) 以保存属性。
 
    面板的名称将更新为 **帐单详细信息** 在内容树中。
 
@@ -275,4 +277,4 @@ Web渠道的模板是在AEM中创建的。 模板作者和管理员可以创建�
 
    ![允许的组件](assets/allowed_components_af_new.png)
 
-1. 点按 ![done_icon](assets/done_icon.png) 以保存属性。
+1. 点按 ![保存](assets/done_icon.png) 以保存属性。

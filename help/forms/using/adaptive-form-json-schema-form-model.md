@@ -5,10 +5,10 @@ feature: Adaptive Forms
 role: User, Developer
 level: Beginner, Intermediate
 exl-id: 1b402aef-a319-4d32-8ada-cadc86f5c872
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: e9f64722ba7df0a7f43aaf1005161483e04142f5
 workflow-type: tm+mt
-source-wordcount: '1448'
-ht-degree: 5%
+source-wordcount: '1718'
+ht-degree: 4%
 
 ---
 
@@ -393,163 +393,163 @@ JavaScript是自适应表单的表达式语言。 所有表达式都是有效的
   </tr>
   <tr>
    <td>文本字段</td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
    <td> </td>
    <td> </td>
   </tr>
   <tr>
    <td>数值字段</td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
    <td> </td>
    <td> </td>
   </tr>
   <tr>
    <td>数值步进器</td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
    <td> </td>
    <td> </td>
   </tr>
   <tr>
    <td>单选按钮</td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
    <td> </td>
    <td> </td>
   </tr>
   <tr>
    <td>电话</td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
    <td> </td>
    <td> </td>
   </tr>
   <tr>
    <td>开关</td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
    <td> </td>
    <td> </td>
   </tr>
   <tr>
    <td>按钮</td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
    <td> </td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
    <td> </td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
    <td> </td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
    <td> </td>
   </tr>
   <tr>
    <td>复选框</td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
    <td> </td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
   </tr>
   <tr>
    <td>下拉面板</td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
    <td> </td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
   </tr>
   <tr>
    <td>图像选择</td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
    <td> </td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
   </tr>
   <tr>
    <td>数据输入字段</td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
    <td> </td>
    <td> </td>
   </tr>
   <tr>
    <td>日期选取器</td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
    <td> </td>
    <td> </td>
   </tr>
   <tr>
    <td>电子邮件</td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
    <td> </td>
    <td> </td>
   </tr>
   <tr>
    <td>文件附件</td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
    <td> </td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
    <td> </td>
    <td> </td>
   </tr>
   <tr>
    <td>图像</td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
    <td> </td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
    <td> </td>
    <td> </td>
    <td> </td>
@@ -558,9 +558,9 @@ JavaScript是自适应表单的表达式语言。 所有表达式都是有效的
   </tr>
   <tr>
    <td>Draw</td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
    <td> </td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
    <td> </td>
    <td> </td>
    <td> </td>
@@ -569,9 +569,9 @@ JavaScript是自适应表单的表达式语言。 所有表达式都是有效的
   </tr>
   <tr>
    <td>面板</td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
    <td> </td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
+   <td><img alt="“是”勾选图标" src="assets/yes_tick.png" /></td>
    <td> </td>
    <td> </td>
    <td> </td>

@@ -9,9 +9,9 @@ geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: e745033f-8015-4fae-9d82-99d35802c0a6
 role: Admin
 exl-id: 722e75a0-bcb3-465e-bb74-ea94a3b99fd3
-source-git-commit: a2fd3c0c1892ac648c87ca0dec440e22144c37a2
+source-git-commit: e9f64722ba7df0a7f43aaf1005161483e04142f5
 workflow-type: tm+mt
-source-wordcount: '377'
+source-wordcount: '382'
 ht-degree: 1%
 
 ---
@@ -26,7 +26,7 @@ JEE上的AEM 6.5.12.0 Forms提供两种类型的安装程序：完整安装程�
 
 下表描述了使用完整安装程序和修补程序安装程序的方案。
 
-![](assets/full-and-patch-installer.png)
+![完整安装程序和修补程序安装程序方案](assets/full-and-patch-installer.png)
 
 执行以下过程，使用完整安装程序将JEE上的现有AEM 6.3 Forms或JEE上的AEM 6.4 Forms升级到JEE上的AEM 6.5.12.0 Forms：
 

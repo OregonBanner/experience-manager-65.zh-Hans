@@ -10,16 +10,16 @@ discoiquuid: e24dbd0e-4481-4f9d-9570-3a4046b3ef35
 docset: aem65
 feature: Adaptive Forms
 exl-id: c039faec-f832-43d5-8a86-22afa3bef2a4
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e9f64722ba7df0a7f43aaf1005161483e04142f5
 workflow-type: tm+mt
-source-wordcount: '936'
+source-wordcount: '937'
 ht-degree: 1%
 
 ---
 
 # 教程：发布自适应表单 {#tutorial-publish-your-adaptive-form}
 
-![](do-not-localize/13-publish-your-adaptive-form-small.png)
+![Hero-image](do-not-localize/13-publish-your-adaptive-form-small.png)
 
 本教程是 [创建您的第一个自适应表单](https://helpx.adobe.com/cn/experience-manager/6-3/forms/using/create-your-first-adaptive-form.html) 系列。 建议按时间顺序关注该系列，以了解、执行和演示完整的教程用例。
 
@@ -69,7 +69,8 @@ AEM [!DNL Forms] 提供组件AEM [!DNL Forms] 容器，用于将自适应表单�
    * 如果仅修改已发布站点页面中的嵌入表单，请发布原始表单，所做的更改将反映在已发布的站点页面中。 已发布的网站页面包含对表单的引用，无需重新发布页面。
    * 如果您修改了 [!DNL Sites] 页面和嵌入的表单，重新发布 [!DNL Sites] 页面和表单。
 
-      ![embed-in-aem-sites](assets/embed-in-aem-sites.png)
+     ![embed-in-aem-sites](assets/embed-in-aem-sites.png)
+
    已将送货和帐单地址更改表单添加到AEM [!DNL Sites] 页面。
 
 ## 将自适应表单嵌入外部网页 {#embed-the-adaptive-form-in-an-external-webpage}

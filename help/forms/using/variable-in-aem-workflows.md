@@ -10,9 +10,9 @@ topic-tags: publish
 discoiquuid: cbf4e35a-7905-44ab-ab68-fb443443f02d
 docset: aem65
 exl-id: beb2b83e-e8db-40bb-915f-cb6ba3140947
-source-git-commit: 936b636819eaef595fcdf9f1f3446d4ac0c28b2f
+source-git-commit: e9f64722ba7df0a7f43aaf1005161483e04142f5
 workflow-type: tm+mt
-source-wordcount: '2208'
+source-wordcount: '2209'
 ht-degree: 0%
 
 ---
@@ -50,7 +50,7 @@ ht-degree: 0%
 
 执行以下步骤可创建变量：
 
-1. 在AEM实例上，导航到工具 ![](/help/forms/using/assets/hammer.png) >工作流>模型。
+1. 在AEM实例上，导航到工具 ![工具](/help/forms/using/assets/hammer.png) >工作流>模型。
 1. 点按 **[!UICONTROL 创建]** 和为工作流模型指定标题和可选名称。 选择模型并点按 **[!UICONTROL 编辑]**.
 1. 点按工作流模型Sidekick中可用的变量图标，然后点按 **[!UICONTROL 添加变量]**.
 

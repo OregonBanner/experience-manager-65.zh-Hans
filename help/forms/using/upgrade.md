@@ -11,9 +11,9 @@ discoiquuid: f89921ef-c638-4a07-88d5-3dd8614c5166
 docset: aem65
 role: Admin
 exl-id: 2fc8abec-8ba6-40b7-bbb1-4288eeea7c86
-source-git-commit: a98550c11405e6d0f43ff7ed8905644a3aedd78c
+source-git-commit: e9f64722ba7df0a7f43aaf1005161483e04142f5
 workflow-type: tm+mt
-source-wordcount: '330'
+source-wordcount: '333'
 ht-degree: 2%
 
 ---
@@ -26,7 +26,7 @@ AEM 6.5 Forms包括多项新增功能和增强功能，可简化表单和交易�
 
 下图显示了OSGi上AEM Forms的可用升级路径：
 
-![](do-not-localize/osgi-upgrade-path.png)
+![OSGi升级流程](do-not-localize/osgi-upgrade-path.png)
 
 您可以从以下位置执行直接升级：
 

@@ -10,9 +10,9 @@ topic-tags: forms-workspace
 discoiquuid: 538591fe-29e4-40c4-a045-06095cc0c6b8
 docset: aem65
 exl-id: 8fd9770b-6ec4-4b09-b6b2-47a5e5d40f79
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e9f64722ba7df0a7f43aaf1005161483e04142f5
 workflow-type: tm+mt
-source-wordcount: '434'
+source-wordcount: '438'
 ht-degree: 0%
 
 ---
@@ -47,7 +47,7 @@ Backbone是一个库，有助于在Web应用程序中创建和遵循MVC架构。
 
 初始化视图后，该视图会调用其相应模型以从服务器获取数据。 视图所需的所有数据都可用后，视图将按照HTML模板指定的格式呈现数据。 多个视图可以共享相同的通信模型。
 
-![](do-not-localize/aem_forms_workflow.png)
+![AEM forms主干视图](do-not-localize/aem_forms_workflow.png)
 
 示例：
 

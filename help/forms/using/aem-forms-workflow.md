@@ -9,16 +9,16 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 73e63493-e821-443f-b50d-10797360f5d1
 docset: aem65
 exl-id: c3e5f8fc-d2b9-4f76-9a3d-4bc5733f5a5c
-source-git-commit: d9608d584e822accc0c198fcf1d1b706d065938e
+source-git-commit: e9f64722ba7df0a7f43aaf1005161483e04142f5
 workflow-type: tm+mt
-source-wordcount: '3681'
+source-wordcount: '3682'
 ht-degree: 2%
 
 ---
 
 # OSGi上以Forms为中心的工作流{#forms-centric-workflow-on-osgi}
 
-![](do-not-localize/header.png)
+![hero-image](do-not-localize/header.png)
 
 企业从成千上万个表单、各种后端系统以及在线或离线数据源中收集数据。 他们还拥有一组动态的用户，可就数据做出决策，这涉及反复的审查和批准流程。
 
@@ -236,7 +236,7 @@ AEM Forms应用程序与AEM Forms服务器同步，并允许您更改帐户中�
   </tr>
   <tr>
    <td><span class="uicontrol">文件处理方法</code></td>
-   <td>选择 <span class="uicontrol">工作流 </code>选项。 </code></td>
+   <td>选择 <span class="uicontrol">工作流 </code>选项。 </td>
   </tr>
   <tr>
    <td><span class="uicontrol">工作流模型</code></td>

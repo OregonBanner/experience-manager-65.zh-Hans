@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 110c86ea-9bd8-4018-bfcc-ca33e6b3f3ba
 feature: Interactive Communication
 exl-id: 4fb82e9b-f870-47db-ac92-2d7510acace8
-source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
+source-git-commit: e9f64722ba7df0a7f43aaf1005161483e04142f5
 workflow-type: tm+mt
-source-wordcount: '2021'
+source-wordcount: '2022'
 ht-degree: 0%
 
 ---
@@ -75,6 +75,7 @@ ht-degree: 0%
 
       * [复制粘贴来自其他应用程序的格式化文本](#pasteformattedtext)
       * [突出显示文本的各个部分](#highlightemphasize)
+
    * [特殊字符](#specialcharacters)
    * [键盘快捷键](/help/forms/using/keyboard-shortcuts.md)
 
@@ -147,7 +148,7 @@ ht-degree: 0%
 
 ### 文档片段 {#document-fragments}
 
-![](do-not-localize/contentoptionsdocfragments.png)
+![document-fragments-ui-operations](do-not-localize/contentoptionsdocfragments.png)
 
 * **向上/向下箭头**：用于在交互式通信中向上或向下移动文档片段的箭头。
 * **删除**：如果允许，从交互式通信中删除文档片段。
@@ -324,20 +325,20 @@ public class CCRDraftService implements CCRDocumentInstanceService {
   <td><p><strong>数据库服务示例</strong></p></td> 
    </tr>
   <tr>
-   <td><p>您可以为交互式通信创建草稿，也可以直接提交草稿。 保存操作的API检查交互式通信是否作为草稿提交，并包括草稿名称。 然后，API使用Save作为输入方法调用mySQLDataBaseServiceCRUD服务。</p></br><img src="assets/save-as-draft-save-operation.png"/></br>[#$sd1_sf1_dp9]</td>
-   <td><p>mySQLDataBaseServiceCRUD服务验证Save作为输入方法，并生成自动生成的草稿ID并将其返回给AEM。 生成草稿ID的逻辑可能会因数据库而异。</p></br><img src="assets/save-operation-service.png"/></br>[#$sd1_sf1_dp13]</td>
+   <td><p>您可以为交互式通信创建草稿，也可以直接提交草稿。 保存操作的API检查交互式通信是否作为草稿提交，并包括草稿名称。 然后，API使用Save作为输入方法调用mySQLDataBaseServiceCRUD服务。</p></br><img src="assets/save-as-draft-save-operation.png"/></td>
+   <td><p>mySQLDataBaseServiceCRUD服务验证Save作为输入方法，并生成自动生成的草稿ID并将其返回给AEM。 生成草稿ID的逻辑可能会因数据库而异。</p></br><img src="assets/save-operation-service.png"/></td>
    </tr>
   <tr>
-   <td><p>更新操作的API可检索交互式通信草稿的状态，并检查交互式通信是否包含草稿名称。 API调用mySQLDataBaseServiceCRUD服务来更新数据库中的该状态。</p></br><img src="assets/save-as-draft-update-operation.png"/></br>[#$sd1_sf1_dp17]</td>
+   <td><p>更新操作的API可检索交互式通信草稿的状态，并检查交互式通信是否包含草稿名称。 API调用mySQLDataBaseServiceCRUD服务来更新数据库中的该状态。</p></br><img src="assets/save-as-draft-update-operation.png"/></td>
    <td><p>mySQLDataBaseServiceCRUD服务验证Update作为输入方法，并将交互式通信草稿的状态保存到数据库中。</br></p><img src="assets/update-operation-service.png"/></td>
    </tr>
    <tr>
    <td><p>获取操作的API检查交互式通信是否包含草稿ID。 然后，API使用Get作为输入方法调用mySQLDataBaseServiceCRUD服务，以检索交互式通信的数据。</br></p><img src="assets/save-as-draft-get-operation.png"/></td>
-   <td><p>mySQLDataBaseServiceCRUD服务验证Get作为输入方法，并根据草稿ID检索交互式通信的数据。</p></br><img src="assets/get-operation-service.png"/></br>[#$sd1_sf1_dp29]</td>
+   <td><p>mySQLDataBaseServiceCRUD服务验证Get作为输入方法，并根据草稿ID检索交互式通信的数据。</p></br><img src="assets/get-operation-service.png"/></td>
    </tr>
    <tr>
    <td><p>getAll操作的API调用mySQLGetALLData服务以检索数据库中保存的所有交互式通信的数据。</br></p><img src="assets/save-as-draft-getall-operation.png"/></td>
-   <td><p>mySQLGetALLData服务检索数据库中保存的所有交互式通信的数据。</p></br><img src="assets/getall-operation-service.png"/></br>[#$sd1_sf1_dp37]</td>
+   <td><p>mySQLGetALLData服务检索数据库中保存的所有交互式通信的数据。</p></br><img src="assets/getall-operation-service.png"/></td>
    </tr>
   </tbody>
 </table>

@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
 exl-id: f82391d7-e30d-48d2-8f66-88fcae3dfb5f
-source-git-commit: 1a3e0f90bbe133a7b0fc383b997e69b10ca82478
+source-git-commit: e9f64722ba7df0a7f43aaf1005161483e04142f5
 workflow-type: tm+mt
-source-wordcount: '2067'
+source-wordcount: '2068'
 ht-degree: 10%
 
 ---
@@ -397,7 +397,7 @@ A [谓词范围](#predicates-and-their-settings)s是现成的。 您可以添加
 
 ### 创建/打开自定义配置 {#creating-opening-a-customized-configuration}
 
-1. 导航到 **工具**， **常规**， **搜索Forms**.
+1. 导航到 **工具** >>  **常规** >> **搜索Forms**.
 
 1. 选择要自定义的配置。
 1. 使用 **编辑** 图标以打开配置以进行更新。
@@ -440,7 +440,7 @@ A [谓词范围](#predicates-and-their-settings)s是现成的。 您可以添加
 
 1. 选择预览图标：
 
-   ![“预览”图标](do-not-localize/chlimage_1-31.png)
+   ![预览搜索表单](do-not-localize/chlimage_1-31.png)
 
 1. 这将显示搜索表单，因为它们将显示（完全展开）在相应控制台的“搜索”列中。
 
