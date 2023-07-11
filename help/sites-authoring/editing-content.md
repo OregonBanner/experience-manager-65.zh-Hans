@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: f92ed674-5865-4a53-8c3a-369536861f14
 docset: aem65
 exl-id: d5cf4478-51e4-4ca8-b3f8-6d7caed7d515
-source-git-commit: e9f64722ba7df0a7f43aaf1005161483e04142f5
+source-git-commit: f6d6fcd1f174cc32a172f70ee3da8eff15156c15
 workflow-type: tm+mt
 source-wordcount: '3080'
 ht-degree: 41%
@@ -270,7 +270,7 @@ ht-degree: 41%
 
    * 您可以粘贴到同一页面或不同页面。
    * 粘贴的项目将粘贴到您选择粘贴操作的项目上方。
-   * 仅当剪贴板上有内容时，才会显示粘贴操作。
+   * 仅当剪贴板上有内容时，才会显示“粘贴”操作。
 
   ![粘贴](assets/screen_shot_2018-03-22at113553.png)
 
