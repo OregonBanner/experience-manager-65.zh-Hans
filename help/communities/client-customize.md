@@ -10,9 +10,9 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 24b6d1d2-c118-4a25-959f-2783961c4ae3
 exl-id: bf34f564-ac93-4c8c-95f7-8690d99d85cb
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: b9c164321baa3ed82ae87a97a325fcf0ad2f6ca0
 workflow-type: tm+mt
-source-wordcount: '1228'
+source-wordcount: '1232'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 | **[⇐ Feature Essentials](essentials.md)** | **[服务器端自定义⇒](server-customize.md)** |
 |---|---|
-|  | **[SCF Handlebars Helpers ⇒](handlebars-helpers.md)** |
+|   | **[SCF Handlebars Helpers ⇒](handlebars-helpers.md)** |
 
 要自定义客户端上AEM Communities组件的外观和/或行为，有多种方法。
 
@@ -53,7 +53,7 @@ ht-degree: 0%
 
 有关扩展注释组件的快速示例，请尝试 [扩展注释组件教程](extend-comments.md).
 
-## Javascript绑定 {#javascript-binding}
+## JavaScript绑定 {#javascript-binding}
 
 组件的HBS脚本必须绑定到实施此功能的JavaScript对象、模型和视图。
 
@@ -63,7 +63,7 @@ ht-degree: 0%
 
 * `data-component-id`=”{{id}}”
 
-   解析为上下文中的id属性
+  解析为上下文中的id属性
 
 * `data-scf-component`=”*&lt;resourcetype>*
 
@@ -87,7 +87,7 @@ ht-degree: 0%
 
 ## 设置CSS外观 {#skinning-css}
 
-通过“外观设置”（更改颜色、字体、图像、按钮、链接、间距甚至一定程度的定位）可以实现自定义组件以匹配网站的整体主题。
+通过“设置外观”（更改颜色、字体、图像、按钮、链接、间距，甚至在一定程度上进行定位）可以实现自定义组件以匹配网站的整体主题。
 
 可以通过有选择地覆盖框架样式或通过编写全新的样式表来实现外观设置。 SCF组件定义影响构成组件的各种元素的命名空间、模块化和语义CSS类。
 
@@ -104,17 +104,17 @@ ht-degree: 0%
 
 >[!CAUTION]
 >
->任何带有前缀的CSS类名称 `scf-js` 在javascript代码中具有特定用途。 这些类影响组件的状态（例如，从隐藏切换到可见），并且既不应覆盖也不应删除。
+>任何带有前缀的CSS类名称 `scf-js` 在JavaScript代码中具有特定用途。 这些类影响组件的状态（例如，从隐藏切换到可见），并且既不应覆盖也不应删除。
 >
->而 `scf-js` 类不影响样式，类名可用于样式表中，但请注意，由于类名控制元素的状态，因此可能会产生副作用。
+>而 `scf-js` 类不影响样式，类名可在样式表中使用，但请注意，由于类名控制元素的状态，因此可能会产生副作用。
 
-## 扩展Javascript {#extending-javascript}
+## 扩展JavaScript {#extending-javascript}
 
-要扩展组件Javascript实施，您需要：
+要扩展组件JavaScript实施，您需要：
 
 1. 为应用程序创建一个组件，并将jcr：resourceSuperType设置为扩展组件的jcr：resourceType的值，例如social/forum/components/hbs/forum。
-1. 检查默认SCF组件的Javascript以确定需要使用SCF.registerComponent()注册哪些方法。
-1. 复制扩展组件的Javascript或从头开始。
+1. 检查默认SCF组件的JavaScript以确定需要使用SCF.registerComponent()注册哪些方法。
+1. 复制扩展组件的JavaScript或从头开始。
 1. 扩展方法。
 1. 使用SCF.registerComponent()以缺省值或定制的对象和视图注册所有方法。
 
@@ -151,7 +151,7 @@ ht-degree: 0%
 
 ## 适用于SCF的Clientlibs {#clientlibs-for-scf}
 
-使用 [客户端库](../../help/sites-developing/clientlibs.md) (clientlibs)提供了一种方法，用于组织和优化在客户端上渲染内容的Javascript和CSS。
+使用 [客户端库](../../help/sites-developing/clientlibs.md) (clientlibs)提供了一种方法，用于组织和优化在客户端上渲染内容的JavaScript和CSS。
 
 SCF的clientlibs遵循两个变体的非常特定的命名模式，这些模式仅在类别名称中存在“author”时发生变化：
 
@@ -179,7 +179,7 @@ SCF的clientlibs遵循两个变体的非常特定的命名模式，这些模式�
 
 ### 创作Clientlibs {#author-clientlibs}
 
-作者版本clientlibs会被精简为实施组件所需的最小Javascript。
+作者版本clientlibs将被精简为实施组件所需的最小JavaScript。
 
 这些clientlibs绝不应该直接包含在内，而是可以嵌入到为网站手工创建的其他clientlibs中。
 
@@ -200,10 +200,10 @@ SCF的clientlibs遵循两个变体的非常特定的命名模式，这些模式�
 
 每个站点在管理客户端库的方式上各不相同。 各种因素包括：
 
-* 整体速度：也许是因为希望网站具有响应性，但可以接受第一页加载缓慢。 如果许多页面使用相同的Javascript，则各种Javascript可以嵌入到一个clientlib中，并从要加载的第一个页面中引用。 此单次下载中的Javascript仍保持缓存状态，从而最大限度地减少后续页面要下载的数据量。
-* 首页所用时间较短：可能希望快速加载第一页。 在这种情况下，Javascript位于多个小文件中，仅在需要时引用。
+* 整体速度：也许是因为希望网站具有响应性，但可以接受第一页加载缓慢。 如果许多页面使用相同的JavaScript，则各种JavaScript可以嵌入到一个clientlib中，并从要加载的第一个页面中引用。 此单次下载中的JavaScript仍保持缓存状态，从而最大限度地减少为后续页面下载的数据量。
+* 首页所用时间较短：可能希望快速加载第一页。 在这种情况下，JavaScript位于多个小文件中，仅在需要时引用。
 * 第一页加载和后续下载之间的平衡。
 
 | **[⇐ Feature Essentials](essentials.md)** | **[服务器端自定义⇒](server-customize.md)** |
 |---|---|
-|  | **[SCF Handlebars Helpers ⇒](handlebars-helpers.md)** |
+|   | **[SCF Handlebars Helpers ⇒](handlebars-helpers.md)** |

@@ -1,20 +1,16 @@
 ---
 title: 创作
-seo-title: Authoring
-description: 在 AEM 中进行创作的概念
-seo-description: Concepts of authoring in AEM
-uuid: eaa5f613-a138-4215-8f84-dfc962fe7fa7
+description: Adobe Experience Manager中的创作概念
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: introduction
 content-type: reference
-discoiquuid: 81ff6f6f-11b3-4f8e-80e6-b3e104158394
 docset: aem65
 exl-id: dcda537a-1bb2-4ce3-9904-40d158b47556
-source-git-commit: e85aacd45a2bbc38f10d03915e68286f0a55364e
+source-git-commit: b9c164321baa3ed82ae87a97a325fcf0ad2f6ca0
 workflow-type: tm+mt
-source-wordcount: '540'
-ht-degree: 32%
+source-wordcount: '551'
+ht-degree: 20%
 
 ---
 
@@ -29,24 +25,24 @@ AEM为您提供了两个环境：
 
 通过这些交互，您可以在网站上提供内容，以便访客能够阅读这些内容。
 
-创作环境提供了用于在实际发布此内容之前创建、更新和审阅此内容的机制：
+创作环境提供了用于在实际发布内容前创建、更新和审核该内容的机制：
 
 * 作者创建和查看内容（可以是多种类型；例如，页面、资产、出版物等）
 * 在某个时候，它会发布到您的网站。
 
 ![环境概述](assets/chlimage_1-132.png)
 
-在创作环境中，AEM的功能可通过两个UI使用。 对于发布环境，可以设计提供给用户使用的界面的整体外观。
+在创作环境中，AEM的功能可通过两个UI使用。 对于发布环境，您可以设计提供给用户使用的界面的整体外观。
 
 ### 创作环境 {#author-environment}
 
-作者在称为&#x200B;**创作环境**&#x200B;的环境中工作。这为创建内容提供了易于使用的界面（图形用户界面（GUI 或 UI））。它通常位于公司防火墙的后面，可提供全面保护，并要求作者使用分配了相应访问权限的帐户登录。
+作者在称为&#x200B;**创作环境**&#x200B;的环境中工作。这为创建内容提供了易于使用的界面（图形用户界面（GUI 或 UI））。它位于公司防火墙的后面，可提供全面保护，并要求作者使用已分配了适当访问权限的帐户登录。
 
 >[!NOTE]
 >
->您的帐户需要适当的访问权限才能创建、编辑或发布内容。
+>您的帐户需要具有相应的访问权限才能创建、编辑或发布内容。
 
-根据您的实例和个人访问权限的配置方式，您可以对内容执行许多任务，其中包括（但不限于）：
+根据实例和个人访问权限的配置方式，您可以对内容执行多项任务，包括（其中包括）：
 
 * 在页面上生成新内容或编辑现有内容
 * 使用预定义模板创建新内容页面
@@ -55,16 +51,16 @@ AEM为您提供了两个环境：
 * 开发您的营销活动和相关资源
 * 开发和管理社区站点
 * 移动、复制或删除内容页面、资产等
-* 发布（或取消发布）页面、资产等
+* 发布（或取消发布）页面、资源等
 
-此外，还有一些管理任务可帮助管理内容：
+此外，还有一些管理任务可帮助您管理内容：
 
-* 控制更改管理方式的工作流；例如。 发布前强制执行审核
+* 控制更改管理方式的工作流；例如，在发布之前实施审核
 * 协调各个任务的项目
 
 >[!NOTE]
 >
->AEM也是 [已管理](/help/sites-administering/home.md) （适用于大多数任务）来自创作环境。
+>AEM也是 [已管理](/help/sites-administering/home.md) （对于大多数任务）来自创作环境。
 
 #### 发布环境 {#publish-environment}
 
@@ -85,9 +81,9 @@ AEM为您提供了两个环境：
 >  这两个术语与发布/取消发布同义。
 >
 >* **复制**
->  这些是技术术语，用于指示数据（如页面内容、文件、代码、用户注释）从一个环境移动到另一个环境；即发布或反向复制用户注释时。
+>  这些是技术术语，用于指示数据（例如，页面内容、文件、代码、用户注释）从一个环境移动到另一个环境；即在发布或反向复制用户注释时。
 >
 
 #### Dispatcher {#dispatcher}
 
-为了优化网站访客体验，**[Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/user-guide.html) 实施了负载平衡和缓存。**
+要优化网站访客体验，请 **[调度程序](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hans)** 实施负载平衡和缓存。

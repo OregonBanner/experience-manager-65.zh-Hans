@@ -5,9 +5,9 @@ contentOwner: Guillaume Carlino
 topic-tags: e-commerce
 content-type: reference
 exl-id: ecbd0097-c407-4581-bab2-4729a71df4a3
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
+source-git-commit: b9c164321baa3ed82ae87a97a325fcf0ad2f6ca0
 workflow-type: tm+mt
-source-wordcount: '724'
+source-wordcount: '714'
 ht-degree: 2%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 2%
 >
 >`Geometrixx Outdoors Site English (US)`
 
-部署 [必要的电子商务包](#packages-needed-for-ecommerce-with-hybris) 将提供电子商务框架的完整功能，以及随hybris实施提供的电子商务功能的参考实施（包括演示目录）
+部署 [必要的电子商务包](#packages-needed-for-ecommerce-with-hybris) 提供电子商务框架的完整功能，以及随hybris实施提供的电子商务功能的参考实施（包括演示目录）
 
 可在英语（美国）分支( `/content/geometrixx-outdoors/en_US`Geometrixx Outdoors )，其网址为：
 
@@ -44,10 +44,9 @@ ht-degree: 2%
 >[!NOTE]
 >
 >* 支持版本18.11及更高版本。
->* 您需要使用Java 7来运行 [hybris 5服务器。](https://www.hybris.com/en/architecture-technology)
->* hybris附加模块 [电信加速器](https://www.hybris.com/en/products/telecommunication)AEM扩展不支持。
+>* 您需要Java™ 7来运行 [hybris 5服务器。](https://www.sap.com/products/crm.html)
+* hybris附加模块 [电信加速器](https://www.sap.com/products/crm.html)AEM扩展不支持。
 >
-
 
 ### 带有hybris的电子商务所需的包 {#packages-needed-for-ecommerce-with-hybris}
 
@@ -92,29 +91,29 @@ ht-degree: 2%
 
 >[!CAUTION]
 >
->使用hybris服务器需要单独的hybris许可证。
+使用hybris服务器需要单独的hybris许可证。
 
 >[!NOTE]
 >
->面向开发人员 [API文档](/help/commerce/cif-classic/developing/ecommerce.md#api-documentation) 也可供下载。
+面向开发人员 [API文档](/help/commerce/cif-classic/developing/ecommerce.md#api-documentation) 也可供下载。
 
 ### 下载并构建hybris服务器 {#download-and-build-your-hybris-server}
 
-此过程中的步骤将下载并构建hybris服务器。 它还将进行hybris和cq之间的连接所需的初始配置。 随后，该扩展将可与默认设置一起使用。
+此过程中的步骤是下载和构建hybris服务器。 它还创建了hybris和cq之间的连接所需的初始配置。 随后，该扩展将可用于默认设置。
 
 >[!CAUTION]
 >
->不支持5.5.1之前的Hybris版本。
+不支持5.5.1之前的Hybris版本。
 
 >[!NOTE]
 >
->要完成此操作，您需要 [Groovy](https://groovy-lang.org/) 安装在系统上。
+要完成此操作，您需要 [Groovy](https://groovy-lang.org/) 安装在系统上。
 
 1. 下载 **hybris Commerce Suite** 从hybris下载站点分发。
 
    >[!CAUTION]
    >
-   >您需要一个帐户（来自hybris）才能访问它。
+   您需要一个帐户（来自hybris）才能访问它。
 
 1. 将分发文件解压缩到所需的位置(称为 &lt;hybris-root-directory>)。
 1. 在命令行中，执行以下命令：
@@ -128,11 +127,11 @@ ht-degree: 2%
 
    >[!NOTE]
    >
-   >执行时：
+   运行时：
    >
-   >`ant clean all`
+   `ant clean all`
    >
-   >按 `Return` 需要时。
+   按 `Return` 需要时。
 
 1. 将以下文件下载到解压缩的hybris分发的根文件夹，
 
@@ -145,7 +144,7 @@ ht-degree: 2%
 
    >[!NOTE]
    >
-   >对于hybris 5.6.0及更高版本，请使用以下setup.groovy。
+   对于hybris 5.6.0及更高版本，请使用以下setup.groovy。
 
    5.6.0及更高版本
 
@@ -166,23 +165,23 @@ ht-degree: 2%
 
    >[!NOTE]
    >
-   >根据您的系统，其中几个步骤可能需要几分钟才能完成。
+   根据您的系统，其中几个步骤可能需要几分钟才能完成。
 
 1. 在浏览器中，导航到 **hybris管理控制台** 在：
 
    [http://localhost:9002](http://localhost:9002)
 
-1. 单击 **初始化** 然后确认初始化操作（因为它将删除现有数据）。
+1. 单击 **初始化** 然后确认初始化操作（因为它删除了现有数据）。
 
-   进度将显示在控制台中，带有 `FINISHED` 指示完成。
+   进度显示在控制台中，带有 `FINISHED` 指示完成。
 
    >[!NOTE]
    >
-   >根据您的系统，这可能需要几分钟才能完成。
+   根据您的系统，这可能需要几分钟才能完成。
 
 ### 设置Geometrixx Outdoors商店 {#setup-the-geometrixx-outdoors-store}
 
-此过程将上载并配置演示存储 — 联机Geometrixx。
+此过程可上传和配置Experience Store - “Online(联机Geometrixx)”。
 
 1. 启动hybris实例。 在命令行中，执行以下命令：
 
@@ -204,7 +203,7 @@ ht-degree: 2%
 
 [获取文件](/help/sites-deploying/assets/geometrixx-outdoors-export.csv)
 
-1. 设置 **区域设置** 至：
+1. 设置 **区域设置** 到：
 
    `en_US - English (United States)`
 
@@ -213,7 +212,7 @@ ht-degree: 2%
 
 [获取文件](/help/sites-deploying/assets/geometrixx-outdoors-images.zip)
 
-1. 单击 **开始** 以导入指定的文件。 此 **结果** 选项卡将显示任何日志条目。
+1. 单击 **开始** 以导入指定的文件。 此 **结果** 选项卡显示任何日志条目。
 
 1. 单击 **完成** 以关闭导入窗口。
 
@@ -223,7 +222,7 @@ ht-degree: 2%
 
 [获取文件](/help/sites-deploying/assets/base-store.csv)
 
-   对于hybris 5.7，请使用以下代码：
+   对于hybris 5.7，使用以下内容：
 
 [获取文件](/help/sites-deploying/assets/base-store-5_7.csv)
 
@@ -231,7 +230,7 @@ ht-degree: 2%
 
    `en_US - English (United States)`
 
-1. 单击 **开始** 以导入指定的文件。 此 **结果** 选项卡将显示任何日志条目。
+1. 单击 **开始** 以导入指定的文件。 此 **结果** 选项卡显示任何日志条目。
 
 1. 单击 **完成** 以关闭导入窗口。
 

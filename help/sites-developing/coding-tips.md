@@ -1,18 +1,14 @@
 ---
 title: 编码提示
-seo-title: Coding Tips
 description: AEM的编码提示
-seo-description: Tips for coding for AEM
-uuid: 1bb1cc6a-3606-4ef4-a8dd-7c08a7cf5189
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
-discoiquuid: 4adce3b4-f209-4a01-b116-a5e01c4cc123
 exl-id: 85ca35e5-6e2b-447a-9711-b12601beacdd
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: b9c164321baa3ed82ae87a97a325fcf0ad2f6ca0
 workflow-type: tm+mt
-source-wordcount: '867'
+source-wordcount: '856'
 ht-degree: 0%
 
 ---
@@ -25,23 +21,23 @@ ht-degree: 0%
 
 ### 可写可读代码 {#write-readable-code}
 
-代码只写入一次，但读取多次。 花一些时间来清理我们编写的代码将带来回报，因为我们和其他开发人员以后需要阅读它。
+代码只写入一次，但读取多次。 花一些时间提前清理编写的代码，会随着您和其他开发人员稍后阅读该代码，为以后的工作带来回报。
 
 ### 选择意图揭示型姓名 {#choose-intention-revealing-names}
 
-理想情况下，另一个程序员不必打开模块就能了解它的功能。 类似地，他们应该能够在不阅读方法的情况下判断方法的用途。 我们订阅这些想法得越好，代码读取越容易，编写和更改代码的速度就越快。
+理想情况下，另一个程序员不必打开模块就能了解它的功能。 类似地，他们应该能够在不阅读方法的情况下判断方法的用途。 您能更好地订阅这些想法，越容易阅读代码，就能越快地编写和更改代码。
 
 在AEM代码库中，使用以下约定：
 
 
-* 接口的单个实现名为 `<Interface>Impl`，即 `ReaderImpl`.
-* 接口的多个实现已命名 `<Variant><Interface>`，即 `JcrReader` 和 `FileSystemReader`.
+* 接口的单个实现名为 `<Interface>Impl`，即， `ReaderImpl`.
+* 接口的多个实现已命名 `<Variant><Interface>`，即， `JcrReader` 和 `FileSystemReader`.
 * 抽象基类被命名 `Abstract<Interface>` 或 `Abstract<Variant><Interface>`.
-* 包已命名 `com.adobe.product.module`.  每个Maven工件或OSGi捆绑包必须具有自己的包。
-* Java实施放置在其API下的实施包中。
+* 包已命名 `com.adobe.product.module`. 每个Maven工件或OSGi捆绑包必须具有自己的包。
+* Java™实施放置在其API下的实施包中。
 
 
-请注意，这些约定不一定需要应用于客户实施，但请务必定义并遵守约定，以便代码可持续维护。
+这些约定不一定适用于客户实施，但请务必定义约定并遵守这些约定，以便代码可持续维护。
 
 理想情况下，姓名应表明其意图。 当名称不够清晰时，常见的代码测试是存在解释变量或方法的用途的注释：
 
@@ -68,7 +64,7 @@ DRY声明同一组代码绝不应重复。 这也适用于字符串文本等。 
 
 ### 避免使用裸的CSS规则 {#avoid-naked-css-rules}
 
-CSS规则应特定于应用程序上下文中的目标元素。 例如，应用于 *.content .center* 过于广泛，最终可能会影响您系统中的许多内容，从而要求其他人将来覆盖此样式。 *.myapp-centertext* 将是一个更具体的规则，因为它指定居中 *text* 在应用程序的上下文中。
+CSS规则应特定于应用程序上下文中的目标元素。 例如，应用于 *.content .center* 过于广泛，最终可能会影响您系统中的许多内容，从而要求其他人将来覆盖此样式。 但是， *.myapp-centertext* 将是一个更具体的规则，因为它指定居中 *text* 在应用程序的上下文中。
 
 ### 消除使用已弃用的API {#eliminate-usage-of-deprecated-apis}
 
@@ -88,9 +84,9 @@ AEM提供了一个XSS API，用于轻松清除参数并确保免受跨站点脚�
 
 ### 实施适当的日志记录 {#implement-appropriate-logging}
 
-对于Java代码，AEM支持slf4j作为用于记录消息的标准API，并且应该与通过OSGi控制台提供的配置结合使用，以确保管理的一致性。 Slf4j公开五个不同的日志记录级别。 我们建议在选择记录消息的级别时遵循以下准则：
+对于Java™代码，AEM支持slf4j作为用于记录消息的标准API，并且应该与通过OSGi控制台提供的配置一起使用，以确保管理的一致性。 Slf4j公开五个不同的日志记录级别。 Adobe建议在选择记录消息的级别时遵循以下准则：
 
-* 错误：当代码中的某些内容损坏时，处理无法继续。 此问题通常因意外异常而发生。 在这些场景中包含栈栈跟踪通常很有帮助。
+* 错误：当代码中的某些内容损坏时，处理无法继续。 此问题通常因意外异常而发生。 在这些场景中包含栈栈跟踪很有帮助。
 * 警告：当某些内容未正确工作时，可以继续处理。 这通常是由于我们预期的例外情况所致，例如 *PathNotFoundException*.
 * 信息：监视系统时有用的信息。 请记住，这是默认设置，大多数客户将在其环境中保留此设置。 因此，请勿过度使用它。
 * DEBUG：有关处理的较低级别信息。 在调试支持问题时很有用。

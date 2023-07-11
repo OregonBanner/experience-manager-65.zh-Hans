@@ -1,21 +1,17 @@
 ---
 title: Oak查询和索引
-seo-title: Oak Queries and Indexing
 description: 了解如何在AEM中配置索引。
-seo-description: Learn how to configure indexes in AEM.
-uuid: a1233d2e-1320-43e0-9b18-cd6d1eeaad59
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: deploying
-discoiquuid: 492741d5-8d2b-4a81-8f21-e621ef3ee685
 legacypath: /content/docs/en/aem/6-0/deploy/upgrade/queries-and-indexing
 feature: Configuring
 exl-id: d9ec7728-84f7-42c8-9c80-e59e029840da
-source-git-commit: b27a7a1cc2295b1640520dcb56be4f3eb4851499
+source-git-commit: b9c164321baa3ed82ae87a97a325fcf0ad2f6ca0
 workflow-type: tm+mt
-source-wordcount: '2674'
-ht-degree: 2%
+source-wordcount: '2619'
+ht-degree: 1%
 
 ---
 
@@ -27,7 +23,7 @@ ht-degree: 2%
 
 ## 简介 {#introduction}
 
-与Jackrabbit 2不同，默认情况下，Oak不索引内容。 在必要时需要创建自定义索引，与传统关系数据库非常相似。 如果特定查询没有索引，则可能会遍历许多节点。 查询可能仍然有效，但速度可能非常慢。
+与Jackrabbit 2不同，默认情况下，Oak不索引内容。 必要时必须创建自定义索引，与传统关系数据库非常相似。 如果特定查询没有索引，则可能会遍历许多节点。 这个查询可能仍然有效，但速度可能非常慢。
 
 如果Oak遇到没有索引的查询，则会打印WARN级别日志消息：
 
@@ -70,42 +66,42 @@ Oak查询引擎支持以下语言：
 >
 >对于大型存储库而言，构建索引是一项耗时的操作。 这适用于索引的初始创建和重新索引（更改定义后重建索引）。 另请参阅 [Oak索引疑难解答](/help/sites-deploying/troubleshooting-oak-indexes.md) 和 [防止重新索引缓慢](/help/sites-deploying/troubleshooting-oak-indexes.md#preventing-slow-re-indexing).
 
-如果在非常大的存储库中需要重新索引，尤其是使用MongoDB和进行全文索引时，请考虑文本预提取，并使用oak-run构建初始索引和重新索引。
+如果大型存储库中需要重新索引，尤其是使用MongoDB和进行全文索引时，请考虑文本预提取，并使用oak-run构建初始索引和重新索引。
 
-索引被配置为存储库中位于下的节点。 **oak：index** 节点。
+索引被配置为存储库中位于下的节点。 **Oak：index** 节点。
 
 索引节点的类型必须是 **oak：QueryIndexDefinition。** 每个索引器都有多个配置选项作为节点属性使用。 有关更多信息，请参阅下面每种索引器类型的配置详细信息。
 
 ### 属性索引 {#the-property-index}
 
-属性索引通常对具有属性约束但不是全文的查询很有用。 可以按照以下步骤对其进行配置：
+属性索引对于具有属性约束但不是全文的查询非常有用。 可以按照以下步骤对其进行配置：
 
 1. 打开CRXDE，方法是转到 `http://localhost:4502/crx/de/index.jsp`
-1. 在下创建新节点 **oak：index**
+1. 在下创建节点 **oak：index**
 1. 命名节点 **PropertyIndex**，并将节点类型设置为 **oak：QueryIndexDefinition**
 1. 为新节点设置以下属性：
 
    * **类型：**  `property` （属于字符串类型）
    * **属性名称：**  `jcr:uuid` （属于名称类型）
 
-   此特定示例将 `jcr:uuid` 属性，其任务是公开它所附加节点的通用唯一标识符(UUID)。
+   此特定示例将 `jcr:uuid` 属性，其工作是公开其所附加节点的通用唯一标识符(UUID)。
 
 1. 保存更改。
 
 属性索引具有以下配置选项：
 
-* 此 **type** 属性将指定索引的类型，在这种情况下，必须将其设置为 **属性**
+* 此 **type** 属性指定索引的类型，在这种情况下，必须将其设置为 **属性**
 
-* 此 **属性名称** 属性指明将存储在索引中的属性的列表。 如果缺少该名称，则将使用节点名称作为属性名称引用值。 在此示例中， **jcr：uuid** 其作业是公开其节点的唯一标识符(UUID)的属性将添加到索引中。
+* 此 **属性名称** 属性指明将存储在索引中的属性的列表。 如果缺少节点名称，则使用节点名称作为属性名称引用值。 在此示例中， **jcr：uuid** 其作业是公开其节点的唯一标识符(UUID)的属性将添加到索引中。
 
 * 此 **独特** 标记（如果设置为） **true** 在属性索引中添加唯一性约束。
 
 * 此 **声明节点类型** 属性允许您指定仅应用索引的特定节点类型。
-* 此 **重新索引** 标记设置为 **true**，将触发完全内容重新索引。
+* 此 **重新索引** 标记设置为 **true**，会触发完整的内容重新索引。
 
 ### 有序索引 {#the-ordered-index}
 
-Ordered索引是Property索引的扩展。 但是，它已被弃用。 此类型的索引需要替换为 [Lucene属性索引](#the-lucene-property-index).
+Ordered索引是Property索引的扩展。 但是，它已被弃用。 必须将此类型的索引替换为 [Lucene属性索引](#the-lucene-property-index).
 
 ### Lucene全文索引 {#the-lucene-full-text-index}
 
@@ -115,11 +111,11 @@ AEM 6中提供了基于Apache Lucene的全文索引器。
 
 如果未配置全文索引，则具有全文条件的查询将无法按预期工作。
 
-由于索引是通过异步后台线程更新的，因此在后台进程完成之前，某些全文搜索将在很短的时间内不可用。
+由于索引是通过异步后台线程更新的，因此在后台进程完成之前的很短时间内，某些全文搜索不可用。
 
 您可以按照以下步骤配置Lucene全文索引：
 
-1. 打开CRXDE并在下创建新节点 **oak：index**.
+1. 打开CRXDE并在下创建节点 **oak：index**.
 1. 命名节点 **LuceneIndex** 并将节点类型设置为 **oak：QueryIndexDefinition**
 1. 将以下属性添加到节点：
 
@@ -130,17 +126,17 @@ AEM 6中提供了基于Apache Lucene的全文索引器。
 
 Lucene索引具有以下配置选项：
 
-* 此 **type** 将指定索引类型的属性必须设置为 **lucene**
+* 此 **type** 指定索引类型的属性必须设置为 **lucene**
 * 此 **异步** 必须设置为的属性 **异步**. 这会将索引更新进程发送到后台线程。
-* 此 **includePropertyTypes** 属性，用于定义将包含在索引中的属性类型的子集。
-* 此 **excludePropertyNames** 将定义属性名称列表的属性 — 应从索引中排除的属性。
-* 此 **重新索引** 标记在设置为时显示的对象 **true**，会触发完全内容重新索引。
+* 此 **includePropertyTypes** 属性，定义索引中包含哪些属性类型的子集。
+* 此 **excludePropertyNames** 定义属性名称列表的属性 — 应从索引中排除的属性。
+* 此 **重新索引** 标记在设置为时显示的对象 **true**，会触发完整的内容重新索引。
 
 ### Lucene属性索引 {#the-lucene-property-index}
 
 从 **Oak 1.0.8**，Lucene可用于创建涉及非全文属性约束的索引。
 
-为了实现Lucene属性索引， **fulltextEnabled** 属性必须始终设置为false。
+要实现Lucene属性索引，请 **fulltextEnabled** 属性必须始终设置为false。
 
 以以下示例查询为例：
 
@@ -148,30 +144,30 @@ Lucene索引具有以下配置选项：
 select * from [nt:base] where [alias] = '/admin'
 ```
 
-要为上述查询定义Lucene属性索引，您可以通过在下创建新节点来添加以下定义 **Oak:index:**
+要为上述查询定义Lucene属性索引，可通过在下创建节点来添加以下定义 **Oak:index:**
 
 * **名称:** `LucenePropertyIndex`
-* **类型:** `oak:QueryIndexDefinition`
+* **类型：** `oak:QueryIndexDefinition`
 
 创建节点后，添加以下属性：
 
 * **类型:**
 
-   ```xml
-   lucene (of type String)
-   ```
+  ```xml
+  lucene (of type String)
+  ```
 
 * **异步:**
 
-   ```xml
-   async (of type String)
-   ```
+  ```xml
+  async (of type String)
+  ```
 
 * **fulltextEnabled：**
 
-   ```xml
-   false (of type Boolean)
-   ```
+  ```xml
+  false (of type Boolean)
+  ```
 
 * **includePropertyNames：** `["alias"] (of type String)`
 
@@ -203,30 +199,30 @@ select * from [nt:base] where [alias] = '/admin'
 
 如果要使用任何开箱即用的分析器，可以按照以下步骤对其进行配置：
 
-1. 在下，找到要与分析器一起使用的索引。 `oak:index` 节点。
+1. 在下，找到要与分析器一起使用的索引 `oak:index` 节点。
 
 1. 在索引下，创建一个名为的子节点 `default` 类型 `nt:unstructured`.
 
 1. 将属性添加到具有以下属性的默认节点：
 
    * **名称:** `class`
-   * **类型:** `String`
+   * **类型：** `String`
    * **值:** `org.apache.lucene.analysis.standard.StandardAnalyzer`
 
    值是要使用的分析器类的名称。
 
-   您还可以使用选项，将分析器设置为与特定Lucene版本一起使用 `luceneMatchVersion` 字符串属性。 要将其与Lucene 4.7一起使用，有效合成法应为：
+   您还可以使用选项，将分析器设置为与特定Lucene版本一起使用 `luceneMatchVersion` 字符串属性。 将其与Lucene 4.7一起使用的有效语法为：
 
    * **名称:** `luceneMatchVersion`
-   * **类型:** `String`
+   * **类型：** `String`
    * **值:** `LUCENE_47`
 
-   如果 `luceneMatchVersion` 如果未提供，则Oak将使用随附的Lucene版本。
+   如果 `luceneMatchVersion` 未提供，Oak使用随附的Lucene版本。
 
-1. 如果要将stopwords文件添加到分析器配置，可以在下创建新节点 `default` 一个具有以下属性：
+1. 如果要将stopwords文件添加到分析器配置，可以在下创建节点 `default` 一个具有以下属性：
 
    * **名称:** `stopwords`
-   * **类型:** `nt:file`
+   * **类型：** `nt:file`
 
 #### 通过组合创建分析器 {#creating-analyzers-via-composition}
 
@@ -239,36 +235,36 @@ select * from [nt:base] where [alias] = '/admin'
    * **名称:** `default`
 
       * **名称:** `charFilters`
-      * **类型:** `nt:unstructured`
+      * **类型：** `nt:unstructured`
 
          * **名称:** `HTMLStrip`
          * **名称:** `Mapping`
+
       * **名称:** `tokenizer`
 
          * **属性名称:** `name`
 
-            * **类型:** `String`
+            * **类型：** `String`
             * **值:** `Standard`
+
       * **名称:** `filters`
-      * **类型:** `nt:unstructured`
+      * **类型：** `nt:unstructured`
 
          * **名称:** `LowerCase`
          * **名称:** `Stop`
 
             * **属性名称:** `words`
 
-               * **类型:** `String`
+               * **类型：** `String`
                * **值:** `stop1.txt, stop2.txt`
+
             * **名称:** `stop1.txt`
 
-               * **类型:** `nt:file`
+               * **类型：** `nt:file`
+
             * **名称:** `stop2.txt`
 
-               * **类型:** `nt:file`
-
-
-
-
+               * **类型：** `nt:file`
 
 过滤器、charFilters和tokenizer的名称是通过删除出厂后缀形成的。 因此：
 
@@ -284,7 +280,7 @@ select * from [nt:base] where [alias] = '/admin'
 
 ### Solr索引 {#the-solr-index}
 
-Solr索引的主要用途是全文搜索，但也可以按路径、属性限制和主类型限制来索引搜索。 这意味着Oak中的Solr索引可用于任何类型的JCR查询。
+Solr索引的用途是全文搜索，但它也可用于按路径、属性限制和主类型限制对搜索进行索引。 这意味着Oak中的Solr索引可用于任何类型的JCR查询。
 
 AEM中的集成发生在存储库级别，因此Solr是可用于Oak(AEM随附的新存储库实施)中的可能索引之一。
 
@@ -294,7 +290,7 @@ AEM中的集成发生在存储库级别，因此Solr是可用于Oak(AEM随附的
 
 也可以将AEM配置为与远程Solr服务器实例一起使用：
 
-1. 下载并解压缩最新版本的Solr。 欲知如何执行此操作的更多信息，请查阅 [Apache Solr安装文档](https://cwiki.apache.org/confluence/display/solr/Installing+Solr).
+1. 下载并解压缩最新版本的Solr。 有关如何执行此操作的更多信息，请参阅 [Apache Solr安装文档](https://cwiki.apache.org/confluence/display/solr/Installing+Solr).
 1. 现在，创建两个Solr分片。 为此，您可以为Solr解压缩文件夹中的每个分区创建文件夹：
 
    * 对于第一个分片，创建文件夹：
@@ -305,7 +301,7 @@ AEM中的集成发生在存储库级别，因此Solr是可用于Oak(AEM随附的
 
    `<solrunpackdirectory>\aemsolr2\node2`
 
-1. 在Solr软件包中找到示例实例。 它通常位于名为“”的文件夹中 `example`”在包的根目录下。
+1. 在Solr软件包中找到示例实例。 它位于名为“”的文件夹中。 `example`”在包的根目录下。
 1. 将以下文件夹从示例实例复制到两个分片文件夹( `aemsolr1\node1` 和 `aemsolr2\node2`)：
 
    * `contexts`
@@ -317,7 +313,7 @@ AEM中的集成发生在存储库级别，因此Solr是可用于Oak(AEM随附的
    * `webapps`
    * `start.jar`
 
-1. 创建一个名为“”的新文件夹 `cfg`”存储在两个分片文件夹的每个文件夹中。
+1. 创建一个名为“”的文件夹 `cfg`”存储在两个分片文件夹的每个文件夹中。
 1. 将Solr和Zookeeper配置文件放入新创建的 `cfg` 文件夹。
 
    >[!NOTE]
@@ -345,7 +341,7 @@ AEM中的集成发生在存储库级别，因此Solr是可用于Oak(AEM随附的
 1. 选择 **远程Solr** 在下拉列表中的 **Oak Solr** 服务器提供程序。
 
 1. 转到CRXDE并以管理员身份登录。
-1. 创建一个名为的新节点 **solrIndex** 下 **oak：index**，并设置以下属性：
+1. 创建一个名为的节点 **solrIndex** 下 **oak：index**，并设置以下属性：
 
    * **类型：** solr（属于字符串类型）
    * **异步：** 异步（属于字符串类型）
@@ -357,7 +353,7 @@ AEM中的集成发生在存储库级别，因此Solr是可用于Oak(AEM随附的
 
 以下是可用于本文所述所有三个Solr部署的基本配置示例。 它包含AEM中已存在的专用属性索引，这些索引不应与其他应用程序一起使用。
 
-要正确使用它，您需要将归档文件的内容直接放在Solr主目录中。 在多节点部署中，它应直接位于每个节点的根文件夹下。
+要正确使用它，必须将归档文件的内容直接放在Solr主目录中。 在多节点部署中，它应直接位于每个节点的根文件夹下。
 
 推荐的Solr配置文件
 
@@ -386,7 +382,7 @@ ACS Commons包还公开可用于创建属性索引的OSGi配置。
 
 可能会出现查询执行时间较长，且一般系统响应时间缓慢的情况。
 
-本节提供了一系列建议，说明需要执行哪些操作来跟踪此类问题的原因，并提供如何解决这些问题的建议。
+本节提供了一系列关于必须执行什么操作来跟踪此类问题原因的建议以及如何解决这些问题的建议。
 
 #### 正在准备调试信息以供分析 {#preparing-debugging-info-for-analysis}
 
@@ -396,7 +392,7 @@ ACS Commons包还公开可用于创建属性索引的OSGi配置。
 
 #### 启用日志记录 {#enable-logging}
 
-要启用日志记录，您需要启用 **调试** 与Oak索引和查询相关的类别的级别日志。 这些类别包括：
+要启用日志记录，必须启用 **调试** 与Oak索引和查询相关的类别的级别日志。 这些类别包括：
 
 * org.apache.jackrabbit.oak.plugins.index
 * org.apache.jackrabbit.oak.query
@@ -406,7 +402,7 @@ ACS Commons包还公开可用于创建属性索引的OSGi配置。
 
 >[!NOTE]
 >
->请务必仅在要排除故障的查询执行期间将日志设置为DEBUG ，否则日志中会随着时间而产生大量事件。 因此，在收集到所需的日志后，请切换回上述类别的INFO级别日志记录。
+>请务必仅在要排除故障的查询运行期间将日志设置为DEBUG。 否则，日志中会随时间生成大量事件。 因此，在收集到所需的日志后，请切换回上述类别的INFO级别日志记录。
 
 您可以按照以下步骤启用日志记录：
 
@@ -420,9 +416,9 @@ ACS Commons包还公开可用于创建属性索引的OSGi配置。
 
 #### 索引配置 {#index-configuration}
 
-查询的评估方式在很大程度上受索引配置的影响。 获取索引配置对于分析或发送支持很重要。 您可以将配置作为内容包获取，也可以获取JSON演绎版。
+查询的评估方式在很大程度上受索引配置的影响。 分析索引配置或将其发送给支持人员是非常重要的。 您可以将配置作为内容包获取，也可以获取JSON演绎版。
 
-因为大多数情况下，索引配置存储在 `/oak:index` 节点，您可以在以下位置获取JSON版本：
+通常，索引配置存储在 `/oak:index` 节点，您可以在以下位置获取JSON版本：
 
 `https://serveraddress:port/oak:index.tidy.-1.json`
 
@@ -430,7 +426,7 @@ ACS Commons包还公开可用于创建属性索引的OSGi配置。
 
 #### MBean输出 {#mbean-output}
 
-在某些情况下，提供索引相关MBean的输出以进行调试很有帮助。 您可以执行以下操作来实现此目标：
+有时，提供与索引相关的MBean的输出用于调试会很有用。 您可以执行以下操作来实现此目标：
 
 1. 转到JMX控制台：
    `https://serveraddress:port/system/console/jmx`
@@ -457,5 +453,5 @@ ACS Commons包还公开可用于创建属性索引的OSGi配置。
 
 您可以收集其他详细信息以帮助解决问题，例如：
 
-1. 您的实例正在运行的Oak版本。 您可以通过打开CRXDE并查看欢迎页面右下角的版本来查看此内容，也可以通过检查的版本 `org.apache.jackrabbit.oak-core` 捆绑。
+1. 运行实例的Oak版本。 您可以通过打开CRXDE并查看欢迎页面右下角的版本来查看此内容，也可以通过检查的版本 `org.apache.jackrabbit.oak-core` 捆绑。
 1. 有问题的查询的QueryBuilder Debugger输出。 可在以下位置访问该调试器： `https://serveraddress:port/libs/cq/search/content/querydebug.html`

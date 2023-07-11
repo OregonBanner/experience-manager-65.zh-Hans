@@ -1,14 +1,10 @@
 ---
 title: 员工招聘参考网站演练
-seo-title: Employee recruitment
 description: AEM Forms参考网站展示了组织如何使用AEM Forms功能实施员工招聘工作流程。
-seo-description: AEM Forms reference site showcases how organizations can use AEM Forms features to implement employee recruitment workflow.
-uuid: 27e456ba-3c08-4c43-ad54-1ba0070995ad
 topic-tags: introduction
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 5f04b13e-ea40-4c86-9168-e020c52435a2
 exl-id: bdfc0a20-1e98-47f9-a1d1-5af5b3ef15db
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: b9c164321baa3ed82ae87a97a325fcf0ad2f6ca0
 workflow-type: tm+mt
 source-wordcount: '1416'
 ht-degree: 0%
@@ -86,13 +82,13 @@ We.Finance主页和职业主页都是AEM Sites页面。 职业页面包含一个
 
 ### 亲眼看看 {#see-it-yourself}
 
-转到 `https://[publishHost]:[publishPort]/content/we-finance/global/en.html` 并单击 **[!UICONTROL 职业]**. 单击 **[!UICONTROL 搜索]** 以填充作业列表，然后单击 **[!UICONTROL 应用]** 找一份工作。 在表格中填写详情并提交申请。
+转到 `https://[publishHost]:[publishPort]/content/we-finance/global/en.html` 并单击 **[!UICONTROL 职业]**. 单击 **[!UICONTROL 搜索]** 以便填充作业列表，然后单击 **[!UICONTROL 应用]** 找一份工作。 在表格中填写详情并提交申请。
 
-请确保在应用程序中指定有效的电子邮件ID，因为通过此演练进行的任何通信都将发送到指定的电子邮件ID。
+请确保在应用程序中指定有效的电子邮件ID，因为通过此演练进行的任何通信都会发送到指定的电子邮件ID。
 
 ## 约翰·雅各布斯将莎拉·罗斯入围该招聘经理的名单 {#john-jacobs-shortlists-sarah-rose-s-profile-for-the-hiring-manager-s-screening}
 
-该组织将接收Sarah提交的工作申请。 招聘人员John Jacobs被指派检查Sarah的资料。 他查看其AEM收件箱中的任务，找到与工作要求匹配的配置文件，然后单击“短列表”。 莎拉的资料被转发给招聘经理格洛丽亚·里奥斯，等待她批准。
+该组织将接收Sarah提交的工作申请。 招聘人员John Jacobs被指派检查Sarah的资料。 John查看其AEM收件箱中的任务，找到与工作要求匹配的配置文件，然后单击“短列表”。 莎拉的资料被转发给招聘经理格洛丽亚·里奥斯，等待她批准。
 
 ![jjacobs-inbox-1](assets/jjacobs-inbox-1.png)
 
@@ -138,7 +134,7 @@ John Doe的收件箱中会安排面试。 John Doe选择并打开任务，并以
 
 ![johnjacobsaeminbox](assets/johnjacobsaeminbox.png)
 
-约翰·多伊的AEM收件箱
+John Doe的AEM收件箱
 
 ![johndoescheduleinterview](assets/johndoescheduleinterview.png)
 
@@ -146,7 +142,7 @@ John Doe安排了面试，并向Sarah Rose发送了详细信息
 
 ## Sarah Rose收到包含面试安排的电子邮件 {#sarah-rose-receives-the-email-with-interview-schedule}
 
-Sarah Rose收到一封电子邮件，其中包含面试时间表、地点和其他详细信息。 她点击“接受”，表示她同意面试的时间表和地点。 在精确信息的指引下，莎拉接受了采访。
+Sarah Rose收到一封电子邮件，其中包含面试时间表、地点和其他详细信息。 Sarah点击“接受”表示她同意面试的时间表和地点。 在精确信息的指引下，莎拉接受了采访。
 
 ![萨拉赫罗塞维耶韦韦韦邮件](assets/sarahroseinterviewemail.png)
 
@@ -166,7 +162,7 @@ Gloria的AEM收件箱
 
 ## John Doe请求更多信息 {#john-doe-requests-more-information}
 
-在邀请候选人加入该组织之前，需要核实其背景。 John Doe打开并查看选定申请人的详细信息，发现她的一些雇佣和教育详细信息尚未填写。 John Doe点击需要更多信息。
+在邀请候选人加入该组织之前，必须核实莎拉的背景。 John Doe打开并查看选定申请人的详细信息，发现她的一些雇佣和教育详细信息尚未填写。 John Doe点击需要更多信息。
 
 ![Johndoeinbox](assets/johndoeinbox.png) ![johndoeneedmoreinformation](assets/johndoeneedmoreinformation.png)
 
@@ -208,7 +204,7 @@ John Jacobs在其收件箱中看到背景检查请求。 John Jacobs打开任务
 
 ![johnjacobsbackgroundcheckinbox](assets/johnjacobsbackgroundcheckinbox.png)
 
-约翰·雅各布斯的AEM收件箱
+John Jacobs的AEM收件箱
 
 ![johnjacobsbackgroundcheckgoahead](assets/johnjacobsbackgroundcheckgoahead.png)
 
@@ -220,7 +216,7 @@ John Doe在其AEM收件箱中收到发送加入信件的请求。 John打开请�
 
 ![johndoejoiningletterinbox](assets/johndoejoiningletterinbox.png)
 
-约翰·多伊的AEM收件箱
+John Doe的AEM收件箱
 
 ![johndoejoiningletterattachandsend](assets/johndoejoiningletterattachandsend.png)
 
@@ -234,7 +230,7 @@ Sarah Rose收到签字信。 Sarah点击此处查看并签署加入信。 加入
 
 Sarah Rose收到加入信要求签名
 
-Sarah可以选择键入、使用draw手写、插入签名图像或使用她的手机触摸屏绘制签名。 Sarah键入她的名字，单击“Click To Sign（单击签名）” ，然后下载加入信函的签名副本。
+Sarah可以选择键入、使用draw手写、插入签名图像或使用她的手机触摸屏绘制签名。 Sarah键入她的名字，单击Click To Sign，然后下载加入信的签名副本。
 
 ![sarahrosejoininglettersign](assets/sarahrosejoininglettersign.png)
 

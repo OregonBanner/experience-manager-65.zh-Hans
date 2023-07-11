@@ -1,19 +1,15 @@
 ---
 title: 适用于社区组件的Clientlibs
-seo-title: Clientlibs for Communities Components
 description: 适用于社区的客户端库
-seo-description: Client-side libraries for Communities
-uuid: d2a9f986-96cf-4ee8-81e6-36a96f45ddcb
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: 68ce47c8-a03f-40d6-a7f3-2cc64aee0594
 docset: aem65
 exl-id: 94415926-a273-4f03-b7b6-57fdac12c741
-source-git-commit: 1d334c42088342954feb34f6179dc5b134f81bb8
+source-git-commit: b9c164321baa3ed82ae87a97a325fcf0ad2f6ca0
 workflow-type: tm+mt
-source-wordcount: '382'
+source-wordcount: '373'
 ht-degree: 0%
 
 ---
@@ -26,7 +22,7 @@ ht-degree: 0%
 
 有关基本信息，请访问：
 
-* [使用客户端库](/help/sites-developing/clientlibs.md) 其中提供了使用详细信息以及调试工具
+* [使用客户端库](/help/sites-developing/clientlibs.md) 其中提供了使用详细信息和调试工具
 * [适用于SCF的Clientlibs](/help/communities/client-customize.md#clientlibs) 在自定义SCF组件时，它提供了有用的信息
 
 
@@ -34,9 +30,9 @@ ht-degree: 0%
 
 组件的正常功能(JavaScript)和样式(CSS)需要Clientlibs。
 
-当存在 [社区功能](/help/communities/functions.md) 对于功能，社区站点中将显示所有必需的组件和配置，包括所需的clientlibs。 只有在作者可以使用其他组件时，才需要添加其他clientlib。
+当存在 [社区功能](/help/communities/functions.md) 对于功能，社区站点中会显示所有必需的组件和配置，包括所需的clientlibs。 只有在作者可以使用其他组件时，才需要添加其他clientlibs。
 
-当缺少所需的clientlibs时， [将Communities组件添加到页面](/help/communities/author-communities.md) 可能会导致javascript错误以及意外外观。
+当缺少所需的clientlibs时， [将Communities组件添加到页面](/help/communities/author-communities.md) 可能会导致JavaScript错误和意外外观。
 
 ### 示例：置入的审阅没有Clientlibs {#example-placed-reviews-without-clientlibs}
 
@@ -52,7 +48,7 @@ ht-degree: 0%
 
 此外，从AEM实例浏览到 [社区组件指南](/help/communities/components-guide.md) 提供对组件所需的clientlib类别列表的访问。
 
-例如，位于 [“审核”页面](https://localhost:4502/content/community-components/en/reviews.html) 列出的所需clientlibs包括
+例如，在 [“审核”页面](https://localhost:4502/content/community-components/en/reviews.html) 列出的所需clientlibs包括
 
 * cq.ckeditor
 * cq.social.hbs.reviews
@@ -61,7 +57,7 @@ ht-degree: 0%
 
 ## 添加所需的Clientlibs {#adding-required-clientlibs}
 
-当需要将Communities组件添加到页面时，如果组件尚不存在，则需要添加该组件所需的clientlibs。
+当需要将Communities组件添加到页面时，如果组件尚不存在，则必须添加该组件所需的clientlibs。
 
 使用 [CRXDE|Lite](#using-crxde-lite) 修改社区站点页面的现有clientlibslist。
 
@@ -83,12 +79,12 @@ ht-degree: 0%
          * 重复以上步骤以添加更多客户端库。
 
          * 选择 **确定**.
-   * 选择 **全部保存**.
 
+   * 选择 **全部保存**.
 
 >[!NOTE]
 >
->如果站点不是社区站点，则需要发现用于该站点的客户端库的存在或位置。
+>如果站点不是社区站点，则必须发现站点所使用的客户端库是否存在或位置。
 
 使用 [AEM Communities快速入门](/help/communities/getting-started.md) 示例，其中 `site-name` 是 *参与*，在添加审阅组件时，将以下列方式显示clientliblist：
 
