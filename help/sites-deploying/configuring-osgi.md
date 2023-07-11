@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: d701e4ba-417f-4b57-b103-27fd25290736
 feature: Configuring
 exl-id: 5ecd09a3-c4be-4361-9816-03106435346f
-source-git-commit: 2981f11565db957fac323f81014af83cab2c0a12
+source-git-commit: bf55fcb855cbdad72c669058662ca70fe57e6632
 workflow-type: tm+mt
-source-wordcount: '1949'
+source-wordcount: '1973'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ OSGi ”*提供标准化的基元，允许使用小型、可重用和协作组�
 
    * Web控制台是OSGi配置的标准界面。 它提供了一个用于编辑各种属性的UI，其中可以从预定义列表中选择可能的值。
 
-      因此，这是最简单的方法。
+     因此，这是最简单的方法。
 
    * 使用Web控制台所做的任何配置都将立即应用并适用于当前实例，而不管当前运行模式或运行模式的任何后续更改。
 
@@ -86,11 +86,12 @@ OSGi ”*提供标准化的基元，允许使用小型、可重用和协作组�
 
    * 通过上的链接打开Web控制台 **工具 — >操作** 菜单。 登录到控制台后，您可以使用下拉菜单：
 
-      **OSGi >**
+     **OSGi >**
 
    * 直接URL；例如：
 
-      `http://localhost:4502/system/console/configMgr`
+     `http://localhost:4502/system/console/configMgr`
+
    此时将显示一个列表。
 
 1. 通过以下任一方式选择您要配置的包：
@@ -124,7 +125,9 @@ OSGi ”*提供标准化的基元，允许使用小型、可重用和协作组�
 
 >[!NOTE]
 >
->配置文件的格式是特定的 — 请参阅 [Sling Apache文档](https://sling.apache.org/documentation/development/slingstart.html#default-configuration-format) 以了解完整的详细信息。
+>配置文件的格式是特定的 — 请参阅Sling Apache文档以了解以下内容：
+>* 的完整详细信息 [Apache Sling配置模型和Apache SlingStart](https://sling.apache.org/documentation/development/slingstart.html#default-configuration-format).
+>* 教程和示例 [在Sling中获取资源和属性](https://sling.apache.org/documentation/tutorials-how-tos/getting-resources-and-properties-in-sling.html).
 >
 >因此，建议通过在Web控制台中进行实际更改来创建和维护配置文件。
 
@@ -230,7 +233,8 @@ Web控制台不显示存储库中已保存更改的位置，但可以轻松地�
    * 类型: `sling:OsgiConfig`
    * 名称：永久标识(PID)；
 
-      例如，AEM WCM版本管理器使用 `com.day.cq.wcm.core.impl.VersionManagerImpl`
+     例如，AEM WCM版本管理器使用 `com.day.cq.wcm.core.impl.VersionManagerImpl`
+
    >[!NOTE]
    >
    >在附加工厂配置时 `-<identifier>` 到名称。
@@ -310,15 +314,15 @@ Web控制台不显示存储库中已保存更改的位置，但可以轻松地�
 
 * 作者 — AEM WCM过滤器：
 
-   `libs/wcm/core/config.author/com.day.cq.wcm.core.WCMRequestFilter`
+  `libs/wcm/core/config.author/com.day.cq.wcm.core.WCMRequestFilter`
 
 * 发布 — AEM WCM过滤器：
 
-   `libs/wcm/core/config.publish/com.day.cq.wcm.core.WCMRequestFilter`
+  `libs/wcm/core/config.publish/com.day.cq.wcm.core.WCMRequestFilter`
 
 * 发布 — AEM WCM页面统计信息：
 
-   `libs/wcm/core/config.publish/com.day.cq.wcm.core.stats.PageViewStatistics`
+  `libs/wcm/core/config.publish/com.day.cq.wcm.core.stats.PageViewStatistics`
 
 >[!NOTE]
 >
@@ -332,25 +336,25 @@ Web控制台不显示存储库中已保存更改的位置，但可以轻松地�
 
 * 如果通过Web控制台更改配置，则它通常（通常）会写入存储库的以下位置：
 
-   `/apps/{somewhere}`
+  `/apps/{somewhere}`
 
    * 默认情况下 `{somewhere}` 是 `system/config` 因此该配置将写入
 
-      `/apps/system/config`
+     `/apps/system/config`
 
    * 但是，如果您编辑的配置最初来自存储库中的其他位置，例如：
 
-      /libs/foo/config/someconfig
+     /libs/foo/config/someconfig
 
-      然后将更新的配置写入原始位置下；例如：
+     然后将更新的配置写入原始位置下；例如：
 
-      `/apps/foo/config/someconfig`
+     `/apps/foo/config/someconfig`
 
 * 由更改的设置 `admin` 保存在 `*.config` 文件位于：
 
-   ```
-      /crx-quickstart/launchpad/config
-   ```
+  ```
+     /crx-quickstart/launchpad/config
+  ```
 
    * 此区域是OSGi配置管理员的专用数据，保存了指定的所有配置详细信息 `admin`，无论他们如何进入系统。
    * 此区域是一个实施详细信息，您绝不能直接编辑此目录。
@@ -358,11 +362,11 @@ Web控制台不显示存储库中已保存更改的位置，但可以轻松地�
 
       * Apache Felix OSGi管理控制台
 
-         `../crx/org/apache/felix/webconsole/internal/servlet/OsgiManager.config`
+        `../crx/org/apache/felix/webconsole/internal/servlet/OsgiManager.config`
 
       * CRX Sling客户端存储库
 
-         `../com/day/crx/sling/client/impl/CRXSlingClientRepository/<pid-nr>.config`
+        `../com/day/crx/sling/client/impl/CRXSlingClientRepository/<pid-nr>.config`
 
 >[!CAUTION]
 >
