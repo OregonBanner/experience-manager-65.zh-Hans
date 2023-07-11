@@ -1,18 +1,14 @@
 ---
 title: We.Retail参考实施
-seo-title: We.Retail Reference Implementation
 description: We.Retail是参考实施的技术预览，它说明了使用AEM设置在线展示的推荐方法
-seo-description: We.Retail is a technology preview of a reference implementation that illustrates the recommended way of setting up an online presence with AEM
-uuid: d8833192-b592-4812-bf9b-bd882e8ee7f0
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
-discoiquuid: f50150af-deff-4c29-bfe0-1cfc67b29d51
 exl-id: 504c61c7-dcd3-412c-9239-d24a2b78e4b9
-source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
+source-git-commit: 1ef5593495b4bf22d2635492a360168bccc1725d
 workflow-type: tm+mt
-source-wordcount: '750'
+source-wordcount: '749'
 ht-degree: 9%
 
 ---
@@ -39,17 +35,17 @@ We.Retail使用最新的AEM技术，例如HTL、响应式布局、可编辑模�
 | [HTML 模板语言](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html) | 所有组件都基于HTL |  |
 | [电子商务功能](/help/commerce/cif-classic/developing/ecommerce.md) | 功能产品目录 |  |
 | [社区站点](/help/communities/overview.md) | 允许访客加入社区讨论、阅读博客等 |  |
-| [核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans) | 所有组件都基于新的核心组件，更易于使用且用户可立即配置 | [试试看！](/help/sites-developing/we-retail-core-components.md) |
+| [核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) | 所有组件都基于新的核心组件，更易于使用且用户可立即配置 | [试试看！](/help/sites-developing/we-retail-core-components.md) |
 | [内容片段](/help/assets/content-fragments/content-fragments.md) | We.Retail体验部分展示了通过内容片段重用内容的强大功能。 | [试试看！](/help/sites-developing/we-retail-content-fragments.md) |
 | [体验片段](/help/sites-authoring/experience-fragments.md) | 体验片段是由一个或多个组件组成的组，其中包括可在页面中引用的内容和布局。 | [试试看！](/help/sites-developing/we-retail-experience-fragments.md) |
 
 ## 快速入门 {#getting-started}
 
-We.Retail作为AEM示例内容提供。 为了使用，只需 [像往常一样启动AEM](/help/sites-deploying/deploy.md#getting-started)，确保未禁用示例内容。
+We.Retail作为AEM示例内容提供。 要使用，只需使用 [像往常一样启动AEM](/help/sites-deploying/deploy.md#getting-started)，确保未禁用示例内容。
 
 >[!CAUTION]
 >
->不应在生产实例上安装We.Retail。 生产实例应在中启动 `nosamplecontent` [运行模式](/help/sites-deploying/configure-runmodes.md).
+>请勿在生产实例上安装We.Retail。 生产实例应在中启动 `nosamplecontent` [运行模式](/help/sites-deploying/configure-runmodes.md).
 
 >[!CAUTION]
 >
@@ -109,11 +105,11 @@ GITHUB上的代码
 您可以在GitHub上找到此页面的代码
 
 * [在GitHub上打开aem-sample-we-retail项目](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail)
-* 将项目下载为 [ZIP文件](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/archive/master.zip)
+* 将项目下载为 [ZIP文件](https://codeload.github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/zip/refs/heads/master)
 
-最新版本也可以是 [已直接下载](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/releases/latest) 作为可安装的包。
+最新版本也可以是 [已直接下载](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/releases/tag/we.retail.reactor-4.0.0) 作为可安装的包。
 
-如果遇到问题，请归档 [GitHub问题](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/issues).
+如果遇到问题，请将 [GitHub问题](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/issues).
 
 您可以随意取舍，也可以参与其中 [拉取请求](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/pulls).
 

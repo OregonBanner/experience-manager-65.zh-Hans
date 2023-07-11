@@ -1,37 +1,33 @@
 ---
 title: 在生产就绪模式下运行AEM
-seo-title: Running AEM in Production Ready Mode
 description: 了解如何在生产就绪模式下运行AEM。
-seo-description: Learn how to run AEM in Production Ready Mode.
-uuid: f48c8bae-c72f-4772-967e-f1526f096399
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: Security
 content-type: reference
-discoiquuid: 32da99f0-f058-40ae-95a8-2522622438ce
 exl-id: 3c342014-f8ec-4404-afe5-514bdb651aae
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1ef5593495b4bf22d2635492a360168bccc1725d
 workflow-type: tm+mt
-source-wordcount: '383'
+source-wordcount: '378'
 ht-degree: 3%
 
 ---
 
 # 在生产就绪模式下运行AEM{#running-aem-in-production-ready-mode}
 
-通过AEM 6.1，Adobe推出了新的 `"nosamplecontent"` runmode旨在自动执行准备AEM实例以在生产环境中部署所需的步骤。
+通过AEM 6.1，Adobe推出了新的 `"nosamplecontent"` 运行模式旨在自动执行准备AEM实例以在生产环境中部署所需的步骤。
 
-新的运行模式不仅会自动配置实例以遵循安全清单中所述的安全最佳实践，而且还会在此过程中删除所有示例geometrixx应用程序和配置。
+新的运行模式不仅会自动配置实例以遵循安全清单中所述的安全最佳实践，而且还会删除流程中的所有示例Geometrixx应用程序和配置。
 
 >[!NOTE]
 >
->由于实际原因，AEM Production Ready模式将仅涵盖保护实例所需的大多数任务，因此强烈建议您查阅 [安全核对清单](/help/sites-administering/security-checklist.md) 在生产环境上线之前。
+>由于实际原因，AEM生产就绪模式仅涵盖保护实例所需的大多数任务，因此强烈建议您参阅 [安全核对清单](/help/sites-administering/security-checklist.md) 在生产环境上线之前。
 >
 >此外，请注意，在生产就绪模式下运行AEM将有效地禁用对CRXDE Lite的访问。 如果您出于调试目的而需要它，请参阅 [在AEM中启用CRXDE Lite](/help/sites-administering/enabling-crxde-lite.md).
 
 ![chlimage_1-83](assets/chlimage_1-83a.png)
 
-要在生产就绪模式下运行AEM，您只需添加 `nosamplecontent` 通过 `-r` runmode切换到现有的启动参数：
+要在生产就绪模式下运行AEM，您只需添加 `nosamplecontent` 通过 `-r` 运行模式切换到现有的启动参数：
 
 ```shell
 java -jar aem-quickstart.jar -r nosamplecontent
@@ -52,7 +48,7 @@ java -jar aem-quickstart.jar -r author,crx3,crx3mongo,nosamplecontent -Doak.mong
 1. 此 **Apache Sling对存储库的简单WebDAV访问** ( `org.apache.sling.jcr.webdav`)包将仅在 **作者** 实例。
 
 1. 新创建的用户需要在首次登录时更改密码。 这不适用于管理员用户。
-1. **生成调试信息** 已为禁用 **Apache Sling Java脚本处理程序**.
+1. **生成调试信息** 已为禁用 **Apache Sling JavaScript处理程序**.
 
 1. **映射的内容** 和 **生成调试信息** 已为禁用 **Apache Sling JSP脚本处理程序**.
 

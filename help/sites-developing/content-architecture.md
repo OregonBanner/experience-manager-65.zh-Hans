@@ -1,18 +1,14 @@
 ---
 title: 内容架构
-seo-title: Content Architecture
 description: 关于内容架构的提示（提示 — 一切都是内容）
-seo-description: Tips for architecting your content in Adobe Experience Manager (AEM). (hint - everything is content)
-uuid: fef2bf0f-70ec-4621-8479-a62b7e1fbc07
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
-discoiquuid: ca46b74c-6114-458b-98c0-2a93abffcdc3
 exl-id: bcebbdb4-20b9-4c2d-8a87-013549d686c1
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1ef5593495b4bf22d2635492a360168bccc1725d
 workflow-type: tm+mt
-source-wordcount: '432'
+source-wordcount: '427'
 ht-degree: 0%
 
 ---
@@ -35,7 +31,7 @@ David&#39;s Model可在Jackrabbit维基百科上找到，网址为 [https://wiki
 
 ### 一切都是内容 {#everything-is-content}
 
-所有内容都应存储在存储库中，而不是依赖单独的第三方数据源，例如数据库。 这适用于创作内容以及图像、代码、配置等二进制数据。 这样，我们就可以使用一组API来管理所有内容，并通过复制管理此内容的促销活动。 我们还可以获得备份、日志记录等的单一来源。
+所有内容都应存储在存储库中，而不是依赖单独的第三方数据源，例如数据库。 这适用于创作内容以及图像、代码和配置等二进制数据。 这使我们可以使用一组API来管理所有内容并通过复制管理此内容的提升。 还可以获得备份、日志记录等操作的单一来源。
 
 ### 采用“内容模型优先”的设计原则 {#use-the-content-model-first-design-principle}
 
@@ -47,11 +43,11 @@ Servlet应基于resourceTypes而不是路径进行定义。 这使得使用JCR�
 
 ### 避免定义新节点类型 {#avoid-defining-new-node-types}
 
-节点类型在基础结构层中处于较低级别，大多数需求可以通过使用分配给nt：unstructured、oak：Unstructured、sling：Folder或cq：Page节点类型的sling：resourceType来满足。 节点类型等同于存储库中的架构，今后更改节点类型可能会非常昂贵。
+节点类型在基础结构层中处于较低级别，大多数需求可以通过使用分配给nt：unstructured、oak：Unstructured、sling：Folder或cq：Page节点类型的sling：resourceType来满足。 节点类型等同于存储库中的架构，今后更改节点类型可能成本高昂。
 
 ### 遵守JCR中的命名惯例 {#adhere-to-naming-conventions-in-the-jcr}
 
-遵守命名惯例将增强代码库的一致性，从而降低缺陷发生率，并提高开发人员在系统中工作的速度。 Adobe在开发AEM时使用以下约定：
+遵守命名惯例可为代码库增加一致性，从而降低缺陷发生率，并提升开发人员在系统中工作的速度。 Adobe在开发AEM时使用以下约定：
 
 * 节点名称
 

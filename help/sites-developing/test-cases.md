@@ -1,19 +1,15 @@
 ---
 title: 定义测试用例
-seo-title: Defining your Test Cases
 description: 您的测试用例应基于用例和详细要求规范
-seo-description: Your test cases should be based upon the use cases and the detailed requirements specification
-uuid: daaa5370-bcd3-45a6-9974-f9b5af6a1529
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: testing
 content-type: reference
-discoiquuid: f01eb2aa-6891-4f5d-8a4a-43fc1534c222
 docset: aem65
 exl-id: c09cde0d-401c-437f-9ec8-a0530c1312d5
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1ef5593495b4bf22d2635492a360168bccc1725d
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '514'
 ht-degree: 0%
 
 ---
@@ -38,7 +34,7 @@ ht-degree: 0%
 * 预期结果。
 * 清除通过或失败的标准。
 
-自动化测试用例的前景是显而易见的，因为它可以消除重复任务。
+自动化测试用例的前景很有吸引力，因为它消除了重复任务。
 
 ## 手动与自动化测试 {#manual-versus-automated-tests}
 
@@ -46,24 +42,24 @@ ht-degree: 0%
 
 * 设置和配置需要时间、精力和经验。
 * 如果是基于浏览器的，则安装浏览器更新时出现问题的风险会增加；需要更多时间来更正。
-* 只对大型项目真正可行。
-* 当生成多个版本用于测试或长期发布计划时良好。
+* 仅适用于大型项目。
+* 当生成多个版本用于测试或在长期发行计划中时良好。
 
 ## 测试特定方面 {#testing-specific-aspects}
 
-在测试AEM时，一些特定详细信息特别令人感兴趣：
+在测试AEM时，一些特定详细信息尤其令人感兴趣：
 
 **创作和发布环境**
 
-不过，涵盖范围 [环境](/help/sites-developing/the-basics.md#environments) 值得强调的是AEM在测试方面的一个决定性因素。
+尽管涵盖在 [环境](/help/sites-developing/the-basics.md#environments)，这值得重点说明AEM测试的一个决定性因素。
 
-必须将AEM视为两个应用程序：
+将AEM视为两个应用程序：
 
 * 此 *作者* 环境此实例允许作者输入和发布内容。
 这拥有一小部分可预测的用户，对他们来说，特定的功能和性能至关重要。
 
 * 此 *Publish* 环境此实例以发布的形式显示网站，以供访客访问。
-这通常包含更多用户，其中流量并不总是100%可预测。 在响应请求时，性能仍然至关重要。 还必须考虑缓存和负载平衡。
+这通常包含更多用户，其中流量并不总是100%可预测。 在响应请求时，性能仍然至关重要。 还要考虑缓存和负载平衡。
 
 尽管是相同的软件，但它们：
 
@@ -71,7 +67,7 @@ ht-degree: 0%
 * 对功能和性能有不同的要求
 * 配置方式不同
 * 单独调整
-* 将各自拥有一组验收测试
+* 每个测试都有自己的一组验收测试
 
 换言之，它们必须单独进行测试，并使用不同的测试用例进行测试。
 
@@ -79,11 +75,11 @@ ht-degree: 0%
 
 在测试个性化时，应使用多个用户帐户重复每个单独的用例以证明行为。
 
-还必须检查缓存是否行为正确。
+还要检查缓存是否行为正确。
 
 **调度程序**
 
-大多数项目将安装Dispatcher以进行缓存和负载平衡。
+大多数项目都安装Dispatcher以进行缓存和负载平衡。
 
 测试很困难（缓存发生在不同的级别和位置），并且必须黑盒进行。 要测试的关键方面包括：
 
@@ -94,7 +90,7 @@ ht-degree: 0%
 确保关闭一台服务器后，网站仍然可用。
 
 * **集群**
-群集用于提供：
+用于提供以下内容：
 
    * **故障转移**
 如果一台服务器出现故障，群集中的其他服务器将接管处理。

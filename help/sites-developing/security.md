@@ -1,12 +1,10 @@
 ---
 title: 安全性
-seo-title: Security
 description: 应用程序安全在开发阶段启动
-seo-description: Application Security starts during the development phase
 exl-id: c4f7f45f-224b-4fc3-b4b0-f5b21b8a466f
-source-git-commit: c55b70ec11842d3f7d82adbf552b2624c1dcc599
+source-git-commit: 1ef5593495b4bf22d2635492a360168bccc1725d
 workflow-type: tm+mt
-source-wordcount: '426'
+source-wordcount: '416'
 ht-degree: 0%
 
 ---
@@ -25,15 +23,15 @@ Application Security在开发阶段启动。 Adobe建议应用以下安全最佳
 
 AEM应用了在输出时筛选所有用户提供的内容的原则。 在开发和测试过程中，防御XSS被列为最高优先事项。
 
-AEM提供的XSS保护机制基于 [AntiSamy Java库](https://www.owasp.org/index.php/Category:OWASP_AntiSamy_Project) 提供者 [OWASP（开放Web应用程序安全项目）](https://www.owasp.org/). 默认AntiSamy配置位于
+AEM提供的XSS保护机制基于 [AntiSamy Java™库](https://wiki.owasp.org/index.php/Category:OWASP_AntiSamy_Project) 提供者 [OWASP（开放Web应用程序安全项目）](https://owasp.org/). 默认AntiSamy配置位于
 
 `/libs/cq/xssprotection/config.xml`
 
-请务必通过覆盖配置文件来调整此配置，以满足您自己的安全需求。 官方的 [AntiSamy文档](https://www.owasp.org/index.php/Category:OWASP_AntiSamy_Project) 将为您提供实施安全要求所需的所有信息。
+请务必通过覆盖配置文件来调整此配置，以满足您自己的安全需求。 官方的 [AntiSamy文档](https://wiki.owasp.org/index.php/Category:OWASP_AntiSamy_Project) 为您提供实施安全要求所需的所有信息。
 
 >[!NOTE]
 >
->我们强烈建议您始终使用访问XSS保护API [AEM提供的XSSAPI](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/xss/XSSAPI.html).
+>Adobe建议您始终使用访问XSS保护API [AEM提供的XSSAPI](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/granite/xss/XSSAPI.html).
 
 此外，Web应用程序防火墙，例如 [适用于Apache的mod_security](https://www.modsecurity.org)提供了对部署环境的安全性的可靠集中控制，并抵御以前未检测到的跨站点脚本攻击。
 
@@ -41,9 +39,9 @@ AEM提供的XSS保护机制基于 [AntiSamy Java库](https://www.owasp.org/index
 
 >[!NOTE]
 >
->Cloud Service信息的ACL以及保护实例所需的OSGi设置作为 [生产就绪模式](/help/sites-administering/production-ready.md). 虽然这意味着您无需手动更改配置，但仍建议您在开始部署之前查看这些更改。
+>Cloud Service信息的ACL和确保实例安全所需的OSGi设置作为 [生产就绪模式](/help/sites-administering/production-ready.md). 虽然这意味着您无需手动更改配置，但仍建议您在开始部署之前查看配置。
 
-当您 [将AEM实例与Adobe Marketing Cloud集成](/help/sites-administering/marketing-cloud.md) 您使用 [Cloud Service配置](/help/sites-developing/extending-cloud-config.md). 有关这些配置的信息以及收集的任何统计信息都存储在存储库中。 我们建议您检查此信息的默认安全性是否符合您的要求。
+当您 [将AEM实例与Adobe Experience Cloud集成](/help/sites-administering/marketing-cloud.md)，您使用 [Cloud Service配置](/help/sites-developing/extending-cloud-config.md). 有关这些配置的信息以及收集的任何统计信息都存储在存储库中。 Adobe建议，如果使用此功能，应检查此信息的默认安全性是否符合您的要求。
 
 webservicesupport模块将统计信息和配置信息写入以下位置：
 

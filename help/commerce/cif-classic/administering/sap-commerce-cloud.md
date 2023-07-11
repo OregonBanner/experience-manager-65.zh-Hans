@@ -1,14 +1,13 @@
 ---
 title: 在SAPCommerce Cloud中使用AEM
 description: 了解如何将AEM与SAPCommerce Cloud结合使用。
-uuid: cee1a781-fcba-461e-a0a4-c561a1dbcbf3
 contentOwner: Guillaume Carlino
 topic-tags: e-commerce
 content-type: reference
 exl-id: c342f789-2ff7-4802-99c7-c3699218fe47
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
+source-git-commit: 1ef5593495b4bf22d2635492a360168bccc1725d
 workflow-type: tm+mt
-source-wordcount: '1717'
+source-wordcount: '1702'
 ht-degree: 1%
 
 ---
@@ -17,7 +16,7 @@ ht-degree: 1%
 
 安装后，您可以配置实例：
 
-1. [配置Geometrixx Outdoors的面向搜索](#configure-the-facetted-search-for-geometrixx-outdoors).
+1. [配置Geometrixx Outdoors的分面搜索](#configure-the-facetted-search-for-geometrixx-outdoors).
 1. [配置目录版本](#configure-the-catalog-version).
 1. [配置导入结构](#configure-the-import-structure).
 1. [配置要加载的产品属性](#configure-the-product-attributes-to-load).
@@ -25,7 +24,7 @@ ht-degree: 1%
 1. [配置目录导入程序](#configure-the-catalog-importer).
 1. 使用 [导入程序导入目录](#catalog-import) 到AEM中的特定位置。
 
-## 配置Geometrixx Outdoors的面向搜索 {#configure-the-facetted-search-for-geometrixx-outdoors}
+## 配置Geometrixx Outdoors的分面搜索 {#configure-the-facetted-search-for-geometrixx-outdoors}
 
 >[!NOTE]
 >
@@ -56,23 +55,23 @@ ht-degree: 1%
 
    ![chlimage_1-36](/help/sites-administering/assets/chlimage_1-36a.png)
 
-1. 在 **索引类型** 选项卡设置 **撰写类型** 至：
+1. 在 **索引类型** 选项卡，设置 **撰写类型** 至：
 
    `Product - Product`
 
-1. 在 **索引类型** 选项卡调整 **索引器查询** 对象 `full`：
+1. 在 **索引类型** 选项卡，调整 **索引器查询** 对象 `full`：
 
    ```shell
    SELECT {pk} FROM {Product} WHERE {pk} NOT IN ({{SELECT {baseProductpk} FROM {variantproduct}}})
    ```
 
-1. 在 **索引类型** 选项卡调整 **索引器查询** 对象 `incremental`：
+1. 在 **索引类型** 选项卡，调整 **索引器查询** 对象 `incremental`：
 
    ```shell
    SELECT {pk} FROM {Product} WHERE {pk} NOT IN ({{SELECT {baseProductpk} FROM {variantproduct}}}) AND {modifiedtime} <= ?lastIndexTime
    ```
 
-1. 在 **索引类型** 选项卡调整 `category` 方面。 双击类别列表中的最后一个条目以打开 **索引属性** 选项卡：
+1. 在 **索引类型** 选项卡，调整 `category` 方面。 双击类别列表中的最后一个条目以打开 **索引属性** 选项卡：
 
    >[!NOTE]
    >
@@ -106,7 +105,7 @@ ht-degree: 1%
 **Day CQ Commerce Hybris配置**
 ( `com.adobe.cq.commerce.hybris.common.DefaultHybrisConfigurationService`)
 
-**目录版本** 通常设置为 `Online` 或 `Staged` （默认）。
+**目录版本** 设置为 `Online` 或 `Staged` （默认）。
 
 >[!NOTE]
 >
@@ -199,15 +198,15 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->hybris实施(即 `geometrixx-outdoors/en_US`)仅将产品ID和其他基本信息存储在中 `/etc/commerce`.
+>hybris实施(即， `geometrixx-outdoors/en_US`)仅将产品ID和其他基本信息存储在中 `/etc/commerce`.
 >
 >每次请求有关产品的信息时，都会引用hybris服务器。
 
 ### 完全导入 {#full-import}
 
-1. 如果需要，请使用CRXDE Lite删除所有现有的产品数据。
+1. 如有必要，请使用CRXDE Lite删除所有现有的产品数据。
 
-   1. 导航到保存产品数据的子树：
+   1. 导航到包含产品数据的子树：
 
       `/etc/commerce/products`
 
@@ -252,7 +251,7 @@ ht-degree: 1%
 
    [http://localhost:4502/crx/de/index.jsp#/etc/commerce/products](http://localhost:4502/crx/de/index.jsp#/etc/commerce/products)
 
-1. 在hybris中，更新相关产品上的信息。
+1. 在hybris中，更新有关产品的信息。
 
 1. 在AEM中打开hybris导入程序：
 
@@ -262,7 +261,7 @@ ht-degree: 1%
 
    [http://localhost:4502/etc/importers/hybris.html](http://localhost:4502/etc/importers/hybris.html)
 
-1. 选择点击框 **增量导入**.
+1. 选中复选框 **增量导入**.
 1. 单击 **导入目录** 以开始导入。
 
    完成后，您可以在以下位置验证AEM中更新的数据：
@@ -284,9 +283,9 @@ ht-degree: 1%
 
    [http://localhost:4502/crx/de/index.jsp#/etc/commerce/products](http://localhost:4502/crx/de/index.jsp#/etc/commerce/products)
 
-1. 在hybris中，更新相关产品上的信息。
+1. 在hybris中，更新有关产品的信息。
 
-1. 在hybris中，将产品添加到快速队列；例如：
+1. 在hybris中，将一个或多个产品添加到Express队列；例如：
 
    ![chlimage_1-43](/help/sites-administering/assets/chlimage_1-43a.png)
 
@@ -298,7 +297,7 @@ ht-degree: 1%
 
    [http://localhost:4502/etc/importers/hybris.html](http://localhost:4502/etc/importers/hybris.html)
 
-1. 选择点击框 **快速更新**.
+1. 选中复选框 **快速更新**.
 1. 单击 **导入目录** 以开始导入。
 
    完成后，您可以在以下位置验证AEM中更新的数据：
@@ -356,8 +355,8 @@ hybris包附带一个目录导入程序，用于设置初始页面结构。
 
 1. 通过执行两次增量更新初始化导入程序(请参阅 [目录导入](#catalog-import))：
 
-   * 首次运行会导致一组更改的产品 — 如日志列表中所示。
-   * 这是第一次不更新任何产品。
+   * 首次运行会产生一组已更改的产品 — 如日志列表中所示。
+   * 这是有史以来第二次不更新任何产品。
 
    >[!NOTE]
    >
@@ -369,7 +368,7 @@ hybris包附带一个目录导入程序，用于设置初始页面结构。
 
    [http://localhost:4502/editor.html/content/geometrixx-outdoors/en_US/equipment/biking.html](http://localhost:4502/editor.html/content/geometrixx-outdoors/en_US/equipment/biking.html)
 
-1. 在hybris控制台中删除该产品。 使用选项 **更改审批状态** 将状态设置为 `unapproved`. 将从实时信息源中删除该产品。
+1. 在hybris控制台中删除该产品。 使用选项 **更改审批状态** 将状态设置为 `unapproved`. 产品将从实时信息源中删除。
 
    例如：
 
@@ -378,23 +377,23 @@ hybris包附带一个目录导入程序，用于设置初始页面结构。
    * 搜索 `Cajamara`
    * 选择此产品并将审批状态更改为 `unapproved`
 
-1. 执行其他增量更新(请参阅 [目录导入](#catalog-import))。 日志将列出已删除的产品。
-1. [转出](/help/commerce/cif-classic/administering/generic.md#rolling-out-a-catalog) 相应的目录。 产品和产品页面将从AEM中删除。
+1. 执行其他增量更新(请参阅 [目录导入](#catalog-import))。 日志中列出了已删除的产品。
+1. [转出](/help/commerce/cif-classic/administering/generic.md#rolling-out-a-catalog) 相应的目录。 产品和产品页面已从AEM中删除。
 
    例如：
 
    * 打开：
 
-      [http://localhost:4502/aem/catalogs.html/content/catalogs/geometrixx-outdoors-hybris](http://localhost:4502/aem/catalogs.html/content/catalogs/geometrixx-outdoors-hybris)
+     [http://localhost:4502/aem/catalogs.html/content/catalogs/geometrixx-outdoors-hybris](http://localhost:4502/aem/catalogs.html/content/catalogs/geometrixx-outdoors-hybris)
 
    * 转出 `Hybris Base` 目录
    * 打开：
 
-      [http://localhost:4502/editor.html/content/geometrixx-outdoors/en_US/equipment/biking.html](http://localhost:4502/editor.html/content/geometrixx-outdoors/en_US/equipment/biking.html)
+     [http://localhost:4502/editor.html/content/geometrixx-outdoors/en_US/equipment/biking.html](http://localhost:4502/editor.html/content/geometrixx-outdoors/en_US/equipment/biking.html)
 
-   * 此 `Cajamara` 产品将被从 `Bike` 类别
+   * 此 `Cajamara` 产品已从 `Bike` 类别
 
-1. 要重新声明产品，请执行以下操作：
+1. 要恢复产品，请执行以下操作：
 
    1. 在hybris中，将审批状态设回 **已批准**
    1. 在AEM中：
@@ -436,4 +435,3 @@ hybris包附带一个目录导入程序，用于设置初始页面结构。
    >* 单击区段([http://localhost:4502/etc/segmentation/geometrixx-outdoors/returning-customer.html](http://localhost:4502/etc/segmentation/geometrixx-outdoors/returning-customer.html))
    >
    >* 区段是使用 **订单历史记录属性** 特征。
-

@@ -5,9 +5,9 @@ contentOwner: AG
 role: Developer
 feature: Asset Management
 exl-id: 2a08a7c1-8be9-42d1-9983-f9c8b12ea4e8
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1ef5593495b4bf22d2635492a360168bccc1725d
 workflow-type: tm+mt
-source-wordcount: '267'
+source-wordcount: '262'
 ht-degree: 0%
 
 ---
@@ -18,11 +18,11 @@ ht-degree: 0%
 
 ## 性能注意事项和默认行为 {#performance-considerations-and-default-behavior}
 
-例如，在执行批量导入时，此集成可能会占用CPU和磁盘空间。 出于这些原因， [!DNL Assets] 默认情况下禁用与活动流的集成。
+例如，在执行批量导入时，这种集成可能会占用大量CPU和磁盘空间。 基于这些原因， [!DNL Assets] 默认情况下禁用与活动流的集成。
 
 ## 支持的操作事件 {#supported-action-events}
 
-可以将以下事件配置为记录：
+您可以配置要记录的以下事件：
 
 * 已接受许可证（已接受）
 * 已创建资产(ASSET_CREATED)
@@ -37,8 +37,8 @@ ht-degree: 0%
 * 资产的原始更新(ORIGINAL_UPDATED)
 * 资源演绎版已更新(RENDITION_UPDATED)
 * 已删除资源演绎版(RENDITION_REMOVED)
-* 子资产已更新(SUBASSET_UPDATED)
-* 子资产已移除(SUBASSET_REMOVED)
+* 已更新子资产(SUBASSET_UPDATED)
+* 已删除子资产(SUBASSET_REMOVED)
 
 ## 配置 [!DNL Assets] 事件记录 {#configuring-aem-assets-events-recording}
 
@@ -52,10 +52,10 @@ ht-degree: 0%
 
 1. Check **[!UICONTROL 启用此服务]**.
 
-1. 检查哪个 **[!UICONTROL 事件类型]** 您希望在用户活动流中记录。
+1. 检查哪个 **[!UICONTROL 事件类型]** 您希望在用户活动流中记录的内容（选件大小、受众、配置文件、参数等）。
 
 1. 单击“**[!UICONTROL 保存]**”。
 
 ## 读取记录的事件 {#reading-recorded-events}
 
-记录的事件将存储为活动。 您可以使用以下代码以编程方式阅读它们 [ActivityManager API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/activitystreams/ActivityManager.html).
+记录的事件将存储为活动。 您可以使用以下代码以编程方式阅读它们 [ActivityManager API](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/granite/activitystreams/ActivityManager.html).

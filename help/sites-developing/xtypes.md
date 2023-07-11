@@ -1,16 +1,14 @@
 ---
 title: 使用xtype（经典UI）
-description: 了解AEM可用的所有xtype
-uuid: 6497caa4-2f9b-4f21-9023-88d485fd1d78
+description: 了解Adobe Experience Manager提供的所有xtype
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: components
 content-type: reference
-discoiquuid: adb70b43-1b0b-4302-905a-c7612675dabb
 exl-id: 06ca4e6d-9ab7-4c5b-905c-07c448632f2b
-source-git-commit: 78c584db8c35ea809048580fe5b440a0b73c8eea
+source-git-commit: 1ef5593495b4bf22d2635492a360168bccc1725d
 workflow-type: tm+mt
-source-wordcount: '6400'
+source-wordcount: '6384'
 ht-degree: 0%
 
 ---
@@ -31,17 +29,17 @@ ht-degree: 0%
 >
 >本页介绍在经典UI中ExtJS xtype的使用。
 >
->Adobe建议您采用标准、现代、 [触屏优化UI](/help/sites-developing/touch-ui-concepts.md) 基于 [Coral UI](/help/sites-developing/touch-ui-concepts.md#coral-ui) 和 [Granite UI](/help/sites-developing/touch-ui-concepts.md#granite-ui-foundation-components).
+>Adobe建议使用标准、现代、 [触屏优化UI](/help/sites-developing/touch-ui-concepts.md) 基于 [Coral UI](/help/sites-developing/touch-ui-concepts.md#coral-ui) 和 [Granite UI](/help/sites-developing/touch-ui-concepts.md#granite-ui-foundation-components).
 
 ## xtypes {#xtypes}
 
-请在下面找到Adobe Experience Manager中可用的xtype列表：
+以下列出了Adobe Experience Manager中可用的xtype：
 
 * 注释
 
   [CQ.wcm.Annotation](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.Annotation)
 
-  “对话框”是一种特殊类型的窗口，正文中有一个表单，页脚中有一个按钮组。 它通常用于编辑内容，但也可以只显示信息。
+  “对话框”是一种特殊类型的窗口，正文中有一个表单，页脚中有一个按钮组。 它通常用于编辑内容，但也只能显示信息。
 
 * 数组存储
 
@@ -49,7 +47,7 @@ ht-degree: 0%
 
   以前称为“SimpleStore”。
 
-  用于创建的小帮助程序类 [CQ.Ext.data.Store](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.Store)从阵列数据更轻松。 ArrayStore将自动配置 [CQ.Ext.data.ArrayReader](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.ArrayReader).
+  用于创建的小帮助程序类 [CQ.Ext.data.Store](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.Store)从阵列数据更轻松。 ArrayStore自动配置有 [CQ.Ext.data.ArrayReader](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.ArrayReader).
 
 * asseteditor
 
@@ -73,7 +71,7 @@ ht-degree: 0%
 
   [CQ.wcm.msm.BlueprintStatus](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.msm.BlueprintStatus)
 
-  BlueprintStatus提供了一个面板来查看和编辑Blueprint及其活动副本关系。 浏览是通过 [CQ.wcm.msm.BlueprintStatus.Tree](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.msm.BlueprintStatus.Tree)，编辑通过 [CQ.wcm.msm.BlueprintConfig](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.msm.BlueprintConfig) 和a [CQ.wcm.msm.LiveCopyProperties](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.msm.LiveCopyProperties).
+  BlueprintStatus提供了一个面板来查看和编辑Blueprint及其活动副本关系。 浏览是通过 [CQ.wcm.msm.BlueprintStatus.Tree](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.msm.BlueprintStatus.Tree)，编辑通过 [CQ.wcm.msm.BlueprintConfig](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.msm.BlueprintConfig) 和 [CQ.wcm.msm.LiveCopyProperties](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.msm.LiveCopyProperties).
 
 * 框
 
@@ -181,7 +179,7 @@ ht-degree: 0%
 
   [CQ.Ext.Component](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Component)
 
-  所有外部组件的基类。 组件的所有子类都可参与创建、渲染和销毁的自动化外部组件生命周期，该生命周期由 [容器](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Container) 类。 组件可以通过添加到容器中 [个项目](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Container) 创建容器时的配置选项。
+  所有外部组件的基类。 组件的所有子类都可参与创建、渲染和销毁的自动化外部组件生命周期，该生命周期由提供 [容器](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Container) 类。 组件可以通过添加到容器中 [个项目](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Container) 创建容器时的配置选项。
 
 * componentextracter
 
@@ -211,13 +209,13 @@ ht-degree: 0%
 
   任何的基类 [CQ.Ext.BoxComponent](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.BoxComponent) 可能包含其他组件的组件。 容器处理包含项目的基本行为，即添加、插入和删除项目。
 
-  最常用的容器类包括 [CQ.Ext.Panel](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Panel)， [CQ.Ext.Window](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Window) 和 [CQ.Ext.TabPanel](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.TabPanel).
+  最常用的容器类包括 [CQ.Ext.Panel](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Panel)， [CQ.Ext.Window](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Window)、和 [CQ.Ext.TabPanel](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.TabPanel).
 
 * contentfinder
 
   [CQ.wcm.ContentFinder](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.ContentFinder)
 
-  ContentFinder是一个专门化的两列 [视区](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Viewport) 左侧包含实际的Content Finder ，右侧包含内容框架。
+  ContentFinder是一个专用的两列式 [视区](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Viewport) 左侧包含实际的Content Finder ，右侧包含内容框架。
 
 * contentfindertab
 
@@ -295,7 +293,7 @@ ht-degree: 0%
 
   [CQ.Dialog](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Dialog)
 
-  “对话框”是一种特殊类型的窗口，正文中有一个表单，页脚中有一个按钮组。 它通常用于编辑内容，但也可以只显示信息。
+  “对话框”是一种特殊类型的窗口，正文中有一个表单，页脚中有一个按钮组。 它通常用于编辑内容，但也只能显示信息。
 
 * dialogfieldset
 
@@ -391,7 +389,7 @@ ht-degree: 0%
 
   [CQ.Ext.data.GroupingStore](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.GroupingStore)
 
-  一种专门的存储实施，它提供按可用字段之一对记录进行分组。 这通常与 [CQ.Ext.grid.GroupingView](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.grid.GroupingView) 以证明已分组的GridPanel的数据模型。
+  一种专门的存储实施，它提供按可用字段之一对记录进行分组。 此函数用于 [CQ.Ext.grid.GroupingView](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.grid.GroupingView) 以证明已分组的GridPanel的数据模型。
 
 * heavymovedialog
 
@@ -403,7 +401,7 @@ ht-degree: 0%
 
   [CQ.Ext.form.Hidden](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.Hidden)
 
-  一个基本隐藏字段，用于在需要在表单提交中传递的表单中存储隐藏值。
+  一个基本隐藏字段，用于存储必须在表单提交中传递的表单中的隐藏值。
 
 * 历史按钮
 
@@ -441,7 +439,7 @@ ht-degree: 0%
 
   [CQ.Ext.data.JsonStore](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.JsonStore)
 
-  用于创建的小帮助程序类 [CQ.Ext.data.Store](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.Store)从JSON数据更轻松。 JsonStore将自动配置 [cq.Ext.data.JsonReader](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.JsonReader).
+  用于创建的小帮助程序类 [CQ.Ext.data.Store](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.Store)从JSON数据更轻松。 JsonStore会自动配置 [cq.Ext.data.JsonReader](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.JsonReader).
 
 * 标签
 
@@ -517,7 +515,7 @@ ht-degree: 0%
 
   [CQ.Ext.menu.BaseItem](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.menu.BaseItem)
 
-  呈现到菜单中的所有项目的基类。 BaseItem提供默认渲染、激活状态管理和所有菜单组件共享的基本配置选项。
+  呈现到菜单中的所有项目的基类。 BaseItem提供默认渲染、激活状态管理和由所有菜单组件共享的基本配置选项。
 
 * menucheckitem
 
@@ -535,19 +533,19 @@ ht-degree: 0%
 
   [CQ.Ext.menu.Separator](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.menu.Separator)
 
-  在菜单中添加分隔条，用于划分菜单项的逻辑组。 通常，您要在调用add()或在项目配置中使用“ — ”添加其中之一，而不是直接创建一个。
+  在菜单中添加分隔条，用于划分菜单项的逻辑组。 通常，在调用add()或在项目配置中使用“ — ”添加其中之一，而不是直接创建一个。
 
 * menutextitem
 
   [CQ.Ext.menu.TextItem](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.menu.TextItem)
 
-  向菜单添加静态文本字符串，通常用作标题或组分隔符。
+  向菜单添加静态文本字符串，用作标题或组分隔符。
 
 * 元数据
 
   [CQ.dam.form.Metadata](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.dam.form.Metadata)
 
-  元数据提供了一组字段，用于确定例如在资产编辑器页面上使用的元数据字段所需的信息。
+  元数据提供了一组字段，用于确定元数据字段所需的信息，例如在资产编辑器页面上。
 
   它提供以下字段：
 
@@ -561,7 +559,7 @@ ht-degree: 0%
 
   [CQ.form.MVT](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.MVT)
 
-  多变量测试组件可用于定义和编辑显示为交替横幅的一组图像。 按横幅收集点进率统计数据。
+  Multivariate Testing组件可用于定义和编辑显示为交替横幅的一组图像。 按横幅收集点进率统计数据。
 
 * 通知收件箱
 
@@ -579,7 +577,7 @@ ht-degree: 0%
 
   [cq.wcm.OfflineImporter](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.OfflineImporter)
 
-  OfflineImporter是一种用于将Microsoft Word文档导入并转换为AEM页面的工具。 此功能允许使用文字处理器离线编辑内容。
+  OfflineImporter是一种用于将Microsoft® Word文档导入并转换为AEM页面的工具。 此功能允许使用文字处理器离线编辑内容。
 
 * ownerdraw
 
@@ -591,7 +589,7 @@ ht-degree: 0%
 
   [CQ.Ext.PagingToolbar](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.PagingToolbar)
 
-  随着记录数量的增加，浏览器渲染记录所需的时间也会增加。 分页用于减少与客户端交换的数据量。
+  随着记录数的增加，浏览器渲染记录所需的时间也会增加。 分页用于减少与客户端交换的数据量。
 
 * 面板
 
@@ -605,7 +603,7 @@ ht-degree: 0%
 
   [cq.form.ParagraphReference](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.ParagraphReference)
 
-  段落引用字段允许浏览页面并选择其中一个段落。 它由一个触发器字段和一个关联的段落浏览对话框组成。
+  段落引用字段允许您浏览页面并选择其中一个段落。 它由一个触发器字段和一个关联的段落浏览对话框组成。
 
 * 密码
 
@@ -765,7 +763,7 @@ ht-degree: 0%
 
   SmartImage是一种智能图像上传程序。 它提供用于处理上传图像的工具，例如用于定义图像映射的工具和图像裁剪器。
 
-  请注意，该组件主要设计用于单独的对话框选项卡。
+  该组件设计为可在单独的对话框选项卡上使用。
 
 * 分隔符
 
@@ -777,7 +775,7 @@ ht-degree: 0%
 
   [CQ.form.Spinner](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.Spinner)
 
-  旋转图标是用于数字、日期或时间值的触发器字段。 通过使用提供的上下触发器、滚轮或按键，可以增加或减少值。
+  旋转图标是数字、日期或时间值的触发器字段。 通过使用提供的上下触发器、滚轮或按键，可以增加或减少值。
 
 * 拆分按钮
 
@@ -945,6 +943,6 @@ ht-degree: 0%
 
   [CQ.Ext.data.XmlStore](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.XmlStore)
 
-  用于创建的小帮助程序类 [CQ.Ext.data.Store](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.Store)从XML数据更轻松。 XmlStore将自动配置 [CQ.Ext.data.XmlReader](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.XmlReader).
+  用于创建的小帮助程序类 [CQ.Ext.data.Store](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.Store)从XML数据更轻松。 XmlStore自动配置有 [CQ.Ext.data.XmlReader](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.XmlReader).
 
   **cqinclude** 包含来自存储库中不同路径的小组件定义的伪xtype。 它最常用于页面对话框。 此xtype没有实际的JavaScript构件类。 它由CQ.Util类的formatData()函数处理。 有关更多信息，请参阅此知识库文章。

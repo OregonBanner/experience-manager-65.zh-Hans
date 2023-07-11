@@ -1,38 +1,34 @@
 ---
 title: AEM 标记框架
-seo-title: AEM Tagging Framework
-description: 标记内容并利用AEM标记基础架构
-seo-description: Tag content and leverage the AEM Tagging infrastructure
-uuid: f80a2cb1-359f-41dd-a70b-626d92cc3d4c
+description: 标记内容并使用AEM标记基础架构
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
 content-type: reference
-discoiquuid: f69db472-9f5c-4c0d-9292-2920ef69feeb
 docset: aem65
 feature: Tagging
 exl-id: 53a37449-ef87-4fa6-82de-88fdc24cf988
-source-git-commit: efb4f9f8a97baf8d3d02160226e4f4d3f8f64c89
+source-git-commit: 1ef5593495b4bf22d2635492a360168bccc1725d
 workflow-type: tm+mt
-source-wordcount: '1883'
+source-wordcount: '1884'
 ht-degree: 0%
 
 ---
 
 # AEM 标记框架 {#aem-tagging-framework}
 
-要标记内容并利用AEM标记基础架构，请执行以下操作：
+要标记内容并使用AEM标记基础结构，请执行以下操作：
 
 * 标记必须作为类型的节点存在 ` [cq:Tag](#tags-cq-tag-node-type)` 在 [分类根节点](#taxonomy-root-node)
 
-* 标记的内容节点的NodeType必须包括 [ `cq:Taggable`](#taggable-content-cq-taggable-mixin) mixin
-* 此 [标记ID](#tagid) 添加到内容节点的 [ `cq:tags`](#tagged-content-cq-tags-property) 属性并解析为类型的节点 ` [cq:Tag](#tags-cq-tag-node-type)`
+* 标记的内容节点的NodeType必须包括 [`cq:Taggable`](#taggable-content-cq-taggable-mixin) mixin
+* 此 [标记ID](#tagid) 添加到内容节点的 [`cq:tags`](#tagged-content-cq-tags-property) 属性并解析为类型的节点 ` [cq:Tag](#tags-cq-tag-node-type)`
 
 ## 标记：cq：Tag节点类型  {#tags-cq-tag-node-type}
 
 标记声明在存储库中捕获的节点类型为 `cq:Tag.`
 
-标记可以是一个简单的单词（例如sky），也可以表示一个分级分类法（例如fruit/apple，表示普通fruit和更具体的苹果）。
+标记可以是一个简单的单词（例如，sky），也可以表示分层分类法（例如，水果/苹果，表示普通水果和更具体的苹果）。
 
 标记由唯一的TagID标识。
 
@@ -61,7 +57,7 @@ TagID标识解析为存储库中标记节点的路径。
 
 标记内容时，如果内容尚不存在，则 ` [cq:tags](#tagged-content-cq-tags-property)` 属性将添加到内容节点，TagID将添加到属性的String数组值。
 
-TagID包含 [命名空间](#tag-namespace) 后跟本地TagID。 [容器标记](#container-tags) 具有表示分类法中层次结构顺序的子标记。 子标记可用于引用与任何本地TagID相同的标记。 例如，允许使用“水果”标记内容，即使它是具有子标记的容器标记，例如“水果/苹果”和“水果/香蕉”。
+TagID包含 [命名空间](#tag-namespace) 后跟本地TagID。 [容器标记](#container-tags) 具有表示分类法中层次结构顺序的子标记。 子标记可用于引用与任何本地TagID相同的标记。 例如，允许使用“fruit”标记内容，即使它是带有子标记的容器标记，例如“fruit/apple”和“fruit/banana”。
 
 ### 分类根节点 {#taxonomy-root-node}
 
@@ -71,7 +67,7 @@ TagID包含 [命名空间](#tag-namespace) 后跟本地TagID。 [容器标记](#
 
 ### 标记命名空间 {#tag-namespace}
 
-命名空间允许对事物进行分组。 最典型的用例是每个（网站）或大型应用程序（例如WCM、Assets、Communities）都有一个命名空间，但命名空间可用于各种其他需求。 命名空间在用户界面中仅用于显示适用于当前内容的标记（即特定命名空间的标记）的子集。
+命名空间允许您对事物进行分组。 最典型的使用案例是每个（网站）或大型应用程序（例如，WCM、Assets、Communities）都有一个命名空间，但命名空间可用于各种其他需求。 命名空间在用户界面中仅用于显示适用于当前内容的标记（即特定命名空间的标记）的子集。
 
 标记的命名空间是分类子树中的第一级，即紧接在 [分类根节点](#taxonomy-root-node). 命名空间是类型的节点 `cq:Tag` 其父项不是 `cq:Tag`节点类型。
 
@@ -81,7 +77,7 @@ TagID包含 [命名空间](#tag-namespace) 后跟本地TagID。 [容器标记](#
 
 容器标记是类型的节点 `cq:Tag` 包含任意数量和类型的子节点，这使得使用自定义元数据增强标记模型成为可能。
 
-此外，分类法中的容器标签（或超级标签）充当所有子标签的亚总：例如，以水果/苹果标记的内容也被视为以水果标记，即搜索仅以水果标记的内容也将找到以水果/苹果标记的内容。
+此外，分类法中的容器标记（或超级标记）充当所有子标记的总和。 例如，以水果/苹果标记的内容也被视为以水果标记。 也就是说，搜索带有水果标记的内容还可以找到带有水果/苹果标记的内容。
 
 ### 解析标记ID {#resolving-tagids}
 
@@ -161,7 +157,7 @@ TagID包含 [命名空间](#tag-namespace) 后跟本地TagID。 [容器标记](#
 
 标记作为节点存在于下的存储库中 [分类根节点](#taxonomy-root-node). 通过在存储库中设置适当的ACL，可以允许或拒绝作者和网站访客在给定的命名空间中创建标记。
 
-此外，拒绝某些标记或命名空间的读取权限将控制将标记应用于特定内容的能力。
+此外，拒绝某些标记或命名空间的读取权限会控制将标记应用于特定内容的能力。
 
 典型做法包括：
 
@@ -172,7 +168,7 @@ TagID包含 [命名空间](#tag-namespace) 后跟本地TagID。 [容器标记](#
 
 ## 可标记内容：cq：Taggable Mixin {#taggable-content-cq-taggable-mixin}
 
-为了使应用程序开发人员将标记附加到内容类型，节点的注册([CND](https://jackrabbit.apache.org/node-type-notation.html))必须包括 `cq:Taggable` mixin或 `cq:OwnerTaggable` mixin。
+对于要将标记附加到内容类型的应用程序开发人员，节点的注册([CND](https://jackrabbit.apache.org/jcr/node-type-notation.html))必须包括 `cq:Taggable` mixin或 `cq:OwnerTaggable` mixin。
 
 此 `cq:OwnerTaggable` mixin，继承自 `cq:Taggable`，用于指示内容可以按所有者/作者进行分类。 在AEM中，它只是 `cq:PageContent` 节点。 此 `cq:OwnerTaggable` 标记框架不需要mixin。
 
@@ -185,10 +181,9 @@ TagID包含 [命名空间](#tag-namespace) 后跟本地TagID。 [容器标记](#
 >* 资产( `cq:Asset`)，其中 `jcr:content/metadata` 节点始终具有 `cq:Taggable` mixin。
 >
 
-
 ### 节点类型表示法(CND) {#node-type-notation-cnd}
 
-节点类型定义作为CND文件存在于存储库中。 CND表示法定义为JCR文档的一部分 [此处](https://jackrabbit.apache.org/node-type-notation.html).
+节点类型定义作为CND文件存在于存储库中。 CND表示法定义为JCR文档的一部分 [此处](https://jackrabbit.apache.org/jcr/node-type-notation.html).
 
 AEM中包含的节点类型的基本定义如下：
 
@@ -213,7 +208,7 @@ AEM中包含的节点类型的基本定义如下：
 
 >[!NOTE]
 >
->要利用AEM标记功能，自定义开发的应用程序不应定义以外的标记属性 `cq:tags`.
+>要使用AEM标记功能，自定义开发的应用程序不应定义以外的标记属性 `cq:tags`.
 
 ## 移动和合并标记 {#moving-and-merging-tags}
 
@@ -222,28 +217,26 @@ AEM中包含的节点类型的基本定义如下：
 * 将标记A移动或合并到标记B中时， `/content/cq:tags`：
 
    * 标记A未删除，将获得 `cq:movedTo` 属性。
-   * 创建标记B（发生移动时）并获取 `cq:backlinks` 属性。
+   * 创建标记B（如果移动）并获取 `cq:backlinks` 属性。
 
-* `cq:movedTo` 指向标记B。此属性表示标记A已移动或合并到标记B中。移动标记B将相应地更新此属性。 标记A因此而隐藏，并且仅保留在存储库中以解决指向标记A的内容节点中的标记ID。标记垃圾收集器会删除标记A等标记，内容节点不再指向这些标记。
+* `cq:movedTo` 指向标记B。此属性表示标记A已移动或合并到标记B中。移动标记B会相应地更新此属性。 标记A因此而隐藏，并且仅保留在存储库中以解决指向标记A的内容节点中的标记ID。标记垃圾收集器会删除标记A等标记，内容节点不再指向这些标记。
 的特殊值 `cq:movedTo` 属性为 `nirvana`：它会在删除标记时应用，但无法从存储库中删除，因为存在带有标记的子标记 `cq:movedTo` 必须保留下来。
 
-   >[!NOTE]
-   >
-   >此 `cq:movedTo` 仅当满足以下任一条件时，属性才会添加到已移动或已合并的标记中：
-   >
-   >1. 标记用在内容中（这意味着它包含引用）或
-   >1. 标记具有已移动的子项。
+  >[!NOTE]
+  >
+  >此 `cq:movedTo` 仅当满足以下任一条件时，属性才会添加到已移动或已合并的标记中：
+  >
+  >1. 标记用在内容中（这意味着它包含引用）或
+  >1. 标记具有已移动的子项。
 
+* `cq:backlinks` 使参照保持向另一个方向。 也就是说，它会保留已移动到标记B或与标记B合并的所有标记的列表。这通常需要保留 `cq:movedTo`属性是标记B移动/合并/删除或标记B激活时的最新属性，在这种情况下，还必须激活其所有反向链接标记。
 
-* `cq:backlinks` 保持对另一方向的引用，即保留已移动到标记B或与标记B合并的所有标记的列表。这通常需要保留 `cq:movedTo`属性是标记B移动/合并/删除或标记B激活时的最新属性，在这种情况下，还必须激活其所有反向链接标记。
-
-   >[!NOTE]
-   >
-   >此 `cq:backlinks` 仅当满足以下任一条件时，属性才会添加到已移动或已合并的标记中：
-   >
-   >1. 标记用在内容中（这意味着它包含引用）或
-   >1. 标记具有已移动的子项。
-
+  >[!NOTE]
+  >
+  >此 `cq:backlinks` 仅当满足以下任一条件时，属性才会添加到已移动或已合并的标记中：
+  >
+  >1. 标记用在内容中（这意味着它包含引用）或
+  >1. 标记具有已移动的子项。
 
 * 阅读 `cq:tags` 内容节点的属性涉及以下解析：
 
@@ -263,7 +256,7 @@ AEM中包含的节点类型的基本定义如下：
 
 ## 标记迁移 {#tags-migration}
 
-从6.4开始的Experience Manager存储于 `/content/cq:tags`，它们之前存储在 `/etc/tags`. 但是，如果Adobe Experience Manager已从以前的版本升级，则标记仍会显示在旧位置下 `/etc/tags`. 在升级的系统中，标记需要迁移至 `/content/cq:tags`.
+从6.4开始的Experience Manager存储于 `/content/cq:tags`，它们之前存储在 `/etc/tags`. 但是，如果Adobe Experience Manager已从以前的版本升级，则标记仍会显示在旧位置下 `/etc/tags`. 在升级后的系统中，标记必须迁移至 `/content/cq:tags`.
 
 >[!NOTE]
 >
@@ -341,9 +334,9 @@ println "---------------------------------Success-------------------------------
 
 >[!NOTE]
 >
->经典UI不符合零停机要求，并且不支持新的标记库路径。 如果要使用经典UI，则 `/etc/tags` 需要先创建，然后再创建 `cq-tagging` 组件重新启动。
+>经典UI不符合零停机要求，并且不支持新的标记库路径。 如果要使用经典UI，则 `/etc/tags` 必须创建，后接 `cq-tagging` 组件重新启动。
 
-如果升级后的AEM实例受TagManager API支持并在经典UI中运行，则：
+如果TagManager API支持并且在Classic UI中运行已升级的AEM实例：
 
 1. 引用旧标记基本路径一次 `/etc/tags` 替换为使用tagId或新标记位置 `/content/cq:tags`，您可以将标记迁移到新位置 `/content/cq:tags` CRX中，然后重新启动组件。
 
