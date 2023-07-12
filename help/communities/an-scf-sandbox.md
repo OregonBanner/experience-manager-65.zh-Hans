@@ -1,24 +1,19 @@
 ---
 title: 创建SCF沙盒
-seo-title: Create An SCF Sandbox
-description: 本教程主要面向不熟悉AEM且有兴趣使用SCF组件的开发人员。  它介绍如何创建SCF沙盒站点
-seo-description: This tutorial is primarily for developers, new to AEM, who are interested in using SCF components.  It walks through the creation of An SCF Sandbox site
-uuid: ee52e670-e1e6-4bcd-9548-c963142e6704
+description: 本教程主要面向不熟悉AEM且有兴趣使用SCF组件的开发人员。 它介绍如何创建SCF沙盒站点
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: e1b5c25d-cbdd-421c-b81a-feb6039610a3
 exl-id: 89858814-6625-4a56-8359-cc1eca402816
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: fd937341e26edd0c3edfced8e862066ebc30f9a3
 workflow-type: tm+mt
-source-wordcount: '506'
+source-wordcount: '501'
 ht-degree: 0%
 
 ---
 
 # 创建SCF沙盒  {#create-an-scf-sandbox}
-
 
 从AEM 6.1 Communities开始，快速创建沙盒的最简单方法是创建社区站点。 参见 [AEM Communities快速入门](getting-started.md).
 
@@ -26,7 +21,7 @@ ht-degree: 0%
 
 创建网站的练习有助于了解AEM网站的结构（可能包括Communities功能），同时还提供了一些简单页面，可在其上探索如何使用 [社交组件框架(SCF)](scf.md).
 
-本教程主要面向不熟悉AEM且有兴趣使用SCF组件的开发人员。 它介绍如何创建SCF沙盒站点，与的教程类似 [如何创建功能齐全的Internet网站](../../help/sites-developing/website.md) 它侧重于站点结构，例如导航、徽标、搜索、工具栏和列出子页面。
+本教程主要面向不熟悉AEM且有兴趣使用SCF组件的开发人员。 它介绍如何创建SCF沙盒站点，与的教程类似 [如何创建功能齐全的Internet网站](../../help/sites-developing/website.md) 它侧重于站点上的结构，例如导航、徽标、搜索、工具栏和列出子页面。
 
 开发发生在作者实例上，而试验网站是在发布实例上最佳的。
 
@@ -41,7 +36,7 @@ ht-degree: 0%
 
 >[!CAUTION]
 >
->本教程不会使用创建的功能创建社区站点 [社区站点控制台](sites-console.md). 例如，本教程未介绍如何设置登录、自注册、 [社交登录](social-login.md)、消息传送、用户档案等。
+>本教程不会使用创建的功能创建社区站点 [社区站点控制台](sites-console.md). 例如，本教程未介绍如何设置登录、自助注册、 [社交登录](social-login.md)、消息传送、用户档案等。
 >
 >如果建议使用简单的社区站点，请按照 [创建示例页面](create-sample-page.md) 教程。
 
@@ -80,7 +75,7 @@ AEM开发人员将大部分时间花在 [CRXDE Lite](../../help/sites-developing
 * `password: admin`
 
 
-**注意** 此登录将超时，您需要使用CRXDe Lite工具栏右端的下拉菜单定期重新登录。
+此登录超时，您必须使用CRXDE Lite工具栏右端的下拉菜单定期重新登录。
 
 如果未登录，您将无法浏览JCR存储库或执行任何编辑/保存操作。
 

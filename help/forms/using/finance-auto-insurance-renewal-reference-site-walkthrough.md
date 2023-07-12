@@ -1,17 +1,14 @@
 ---
 title: We.Finance车险续保参考网站演练
-seo-title: We.Finance Auto Insurance Renewal reference site walkthrough
 description: We.Finance车险续保参考网站演练
-uuid: c749a6f7-71f1-4f47-b824-9c7b699072c7
 contentOwner: dekalra
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 content-type: reference
-discoiquuid: ad450124-49a5-4afb-aac3-ed3733d6504b
 docset: aem65
 exl-id: b6ded6ac-4fb1-49f9-b272-16774c3e89a3
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: fd937341e26edd0c3edfced8e862066ebc30f9a3
 workflow-type: tm+mt
-source-wordcount: '741'
+source-wordcount: '743'
 ht-degree: 0%
 
 ---
@@ -22,11 +19,11 @@ ht-degree: 0%
 
 We.Finance站点是一个金融服务站点，旨在帮助您学习AEM Forms的交互式通信功能。
 
-阅读We.Finance车险使用案例的详细演练，该用例展示了AEM表单及其与Microsoft Dynamics的集成如何帮助个性化金融服务公司的客户体验。 交互式演练旨在简化在金融公司中复杂数字交易和客户通信的实施。
+阅读We.Finance车险使用案例的详细演练，该用例展示了AEM表单及其与Microsoft® Dynamics的集成如何帮助个性化金融服务公司的客户体验。 交互式演练旨在简化在金融公司中复杂数字交易和客户通信的实施。
 
 **历程从用例开始：**
 
-Sarah Rose是We.Finance的现有客户，并购买了汽车保险单。 现在是她续保的时候了。 We.Finance的保险代理Gloria Rios向Sarah发送了关于保单续期的提醒。 Sarah按照电子邮件中提供的说明进行操作，并成功完成此过程。
+Sarah Rose是We.Finance的现有客户，并购买了汽车保险单。 现在是一年当中延长莎拉保险单的时候。 We.Finance的保险代理Gloria Rios向Sarah发送了关于保单续期的提醒。 Sarah按照电子邮件中提供的说明进行操作，并成功完成此过程。
 
 ## 自动保险申请演练 {#auto-insurance-application-walkthrough}
 
@@ -45,15 +42,15 @@ Sarah收到一封电子邮件，主题是“您的汽车保险续订”。
 
 #### 亲眼看看 {#see-it-yourself}
 
-转到 **Adobe Experience Manager** > **Forms** > **Forms和文档** > **We.Finance** > **汽车保险**. 选择车险续订 **交互式通信** 并单击 **打开代理UI**. 交互式通信在Agent UI中打开。 输入有效的电子邮件地址以接收附加策略文档的电子邮件，然后单击“提交”。
+转到 **Adobe Experience Manager** > **Forms** > **Forms和文档** > **We.Finance** > **汽车保险**. 选择车险续订 **交互式通信** 并单击 **打开代理UI**. 交互式通信在Agent UI中打开。 输入有效的电子邮件地址，以便他们可以接收带有附加策略文档的电子邮件，然后单击“提交”。
 
 您可以直接从访问和查看“自动保险续订”交互式通信 `https://[authorHost]: authorPort]/aem/formdetails.html/content/dam/formsanddocuments/we-finance/autoinsurance/auto-insurance-renewal.`
 
 ### Sarah收到来自We.Finance的保单续订通信并决定续订 {#sarah-receives-an-insurance-policy-renewal-communication-from-we-finance-and-decides-to-renew}
 
-Sarah收到一封电子邮件，其中包含We.Finance的附件，提醒她汽车保险单即将到期。 附件是她的车险信件的打印版。
+Sarah收到We.Finance的一封电子邮件，其中附有附件，提醒Sarah她的车险保单即将到期。 附件是Sarah汽车保险信的打印版。
 
-Sarah点击量 **立即续订** 并定向至其车险信件的网络版本。 在此信的顶部，Sarah查找其策略到期的剩余天数。 此页面为Sarah提供了有关其保单详细信息（如保单编号、到期金额）的基本概述，以及其他信息（如折扣优惠和忠诚度奖励）。 Sarah再次单击 **立即续订** 在政策的底部。
+Sarah点击量 **立即续订** 并定向至其车险信件的网络版本。 在此信的顶部，Sarah查找保单过期前剩余的时间。 此页面为Sarah提供了有关其保单详细信息（如保单编号、到期金额）的基本概述，以及其他信息（如折扣优惠和忠诚度奖励）。 Sarah再次单击 **立即续订** 在政策的底部。
 
 ![ref1](assets/ref1.png)
 
@@ -67,7 +64,7 @@ Sarah点击量 **立即续订** 并定向至其车险信件的网络版本。 �
 
 您必须已收到一封包含附加PDF的电子邮件。 该PDF是汽车保险单的打印版本。 单击 **立即续订** 以访问策略的Web版本。 检查您的个人信息和策略详细信息，然后单击 **立即续订** 它会带您进入另一个交互式通信。
 
-此 **立即续订** 电子邮件中的按钮会将Sarah引导至策略的Web版本。 您可以访问以下URL：
+此 **立即续订** 电子邮件中的按钮会将Sarah引导至Web上的策略。 您可以访问以下URL：
 
 `https://[authorServer]:[authorPort]/content/document.html?schema=fdm&documentId=/content/forms/af/we-finance/autoinsurance/auto-insurance-renewal/channels/web.html&customerId=1`
 

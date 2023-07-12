@@ -1,29 +1,25 @@
 ---
 title: 部署最佳实践
-seo-title: Deploying Best Practices
 description: 部署和维护最佳实践。
-seo-description: Deploying and maintaining best practices.
-uuid: 4546ed2c-43d5-40f3-874f-567b324e78c2
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
-discoiquuid: 4b5c0677-c630-4fae-867e-4f4583ac8507
 exl-id: 4cbc0a30-d5f6-40ff-b7f6-8d64762e1970
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: fd937341e26edd0c3edfced8e862066ebc30f9a3
 workflow-type: tm+mt
-source-wordcount: '430'
-ht-degree: 9%
+source-wordcount: '434'
+ht-degree: 11%
 
 ---
 
 # 部署最佳实践{#deploying-best-practices}
 
-部署最佳实践描述了如何以尽可能高效和最有效的方式部署或维护AEM。 这一不断增加的主题列表包括AEM中的多个领域。
+部署最佳实践描述了如何以尽可能高效和最有效的方式部署或维护Adobe Experience Manager (AEM)。 不断增加的主题列表包括AEM中的各个领域。
 
 以下区域提供了有关部署和维护最佳实践和建议的文档：
 
-* [OAK](#oak)
+* [Oak](#oak)
 * [社区](#communities)
 * [UI](#ui)
 * [性能](#performance)
@@ -36,7 +32,7 @@ ht-degree: 9%
 
 下面的表格中介绍了特定文档并将其链接到该文档。
 
-## OAK {#oak}
+## Oak {#oak}
 
 [Oak](/help/sites-deploying/platform.md) 是一个可扩展且性能良好的分层内容存储库，它是AEM的基础。
 
@@ -48,7 +44,7 @@ ht-degree: 9%
    <td>提供一份白皮书，讨论技术灵活性、高性能和良好的灾难恢复功能</td>
   </tr>
   <tr>
-   <td>推荐的OAK部署</td>
+   <td>推荐的Oak部署</td>
    <td><a href="/help/sites-deploying/recommended-deploys.md">建议的部署</a></td>
    <td>描述部署方案</td>
   </tr>
@@ -60,10 +56,10 @@ ht-degree: 9%
   <tr>
    <td>数据存储选项</td>
    <td><a href="/help/sites-deploying/data-store-config.md">配置节点和数据存储</a></td>
-   <td>本文档介绍了有关存储二进制数据和内容节点的最佳实践。 包括有关使用Amazon S3数据存储的信息。</td>
+   <td>本文档介绍了有关存储二进制数据和内容节点的最佳实践。 包含有关使用Amazon S3数据存储的信息。</td>
   </tr>
   <tr>
-   <td>在OAK中搜索</td>
+   <td>在Oak中搜索</td>
    <td><a href="/help/sites-deploying/best-practices-for-queries-and-indexing.md">有关查询和索引的最佳实践</a><br /> </td>
    <td>描述有关如何为内容编制索引的最佳实践。</td>
   </tr>
@@ -95,11 +91,11 @@ AEM当前在同一个版本中具有两个UI：经典UI和触控优化UI。 因�
   <tr>
    <td>质量保证最佳实践</td>
    <td><a href="/help/sites-deploying/configuring-performance.md#best-practices-for-quality-assurance">质量保证最佳实践</a></td>
-   <td>对定义测试概念时涉及的问题的标准化概述，专门用于对 <em>发布</em> 环境。 这主要与QA工程师、项目经理和系统管理员有关。</td>
+   <td>对定义测试概念时涉及的问题的标准化概述，专门用于对 <em>发布</em> 环境。 这主要是QA工程师、项目经理和系统管理员的兴趣。</td>
   </tr>
   <tr>
    <td>将 Dispatcher 与 CDN 结合使用</td>
-   <td><a href="https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html#using-dispatcher-with-a-cdn">将 Dispatcher 与 CDN 结合使用</a></td>
+   <td><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hans#using-dispatcher-with-a-cdn">将 Dispatcher 与 CDN 结合使用</a></td>
    <td>内容交付网络 (CDN)（如 Akamai Edge Delivery 或 Amazon Cloud Front）从距离最终用户较近的站点交付内容。</td>
   </tr>
   <tr>

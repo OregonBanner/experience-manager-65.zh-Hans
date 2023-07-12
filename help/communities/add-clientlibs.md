@@ -1,19 +1,15 @@
 ---
 title: 添加Clientlibs
-seo-title: Add Clientlibs
 description: 添加ClientLibraryFolder
-seo-description: Add a ClientLibraryFolder
-uuid: 2944923d-caca-4607-81a4-4122a2ce8e41
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: 46f81c3f-6512-43f1-8ec1-cc717ab6f6ff
 docset: aem65
 exl-id: 569f2052-b4fe-4f7f-aec9-657217cba091
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: fd937341e26edd0c3edfced8e862066ebc30f9a3
 workflow-type: tm+mt
-source-wordcount: '682'
+source-wordcount: '672'
 ht-degree: 1%
 
 ---
@@ -45,7 +41,7 @@ ht-degree: 1%
 * 单击 **添加**
 * 单击 **全部保存**
 
-注意：在类别值前面加上“apps”。 是一个约定，用于将“拥有的应用程序”标识为/apps文件夹中的内容，而不是/libs中的内容。  重要信息：添加占位符 `js.tx`t和 **`css.txt`** 文件。 （正式来说，它不是cq：ClientLibraryFolder，没有它们。）
+注意：在类别值前面加上“apps”。 是一个约定，用于将“拥有的应用程序”标识为/apps文件夹中的内容，而不是/libs中的内容。 重要：添加占位符 `js.tx`t和 **`css.txt`** 文件。 （正式来说，它不是cq：ClientLibraryFolder，没有它们。）
 
 1. 右键单击 **`/etc/designs/an-scf-sandbox/clientlibs`**
 1. 选择 **创建文件……**
@@ -77,13 +73,13 @@ css.txt和js.txt的第一行标识了找到以下文件列表的基本位置。
 
 在 **属性** 选项卡 `clientlibs` 节点，输入多值字符串属性 **嵌入**. 这嵌入了必需的 [用于SCF组件的客户端库(clientlibs)](/help/communities/client-customize.md#clientlibs-for-scf). 在本教程中，添加了社区组件所需的许多clientlibs。
 
-**注释** 由于需要考虑便利性与针对每个页面下载的clientlibs的大小/速度，因此这不一定是生产站点所需的使用方法。
+这可能是也可能不是用于生产站点的所需方法，因为需要考虑便利性与为每个页面下载的clientlibs的大小/速度。
 
-如果仅在一个页面上使用一个功能，则可以直接在页面上包括该功能的完整clientlib，例如，
+如果仅在一个页面上使用一个功能，则可以直接在页面上包含该功能的完整clientlib，例如，
 
 `% ui:includeClientLib categories=cq.social.hbs.forum" %`
 
-在本例中，包括所有这些库以及更基本的SCF clientlibs（创作库的clientlibs）：
+在这种情况下，请将它们全部包含在内，因此首选使用更基本的SCF clientlibs，即创作clientlibs：
 
 * 名称 : **`embed`**
 * 类型 : **`String`**
@@ -110,7 +106,7 @@ css.txt和js.txt的第一行标识了找到以下文件列表的基本位置。
 
 ### 在播放页面模板中包含Clientlibs {#include-clientlibs-in-playpage-template}
 
-不包括 `apps.an-scf-sandbox` ClientLibraryFolder类别中，由于必需的Javascript和样式将不可用，因此SCF组件将无法正常工作或设置样式。
+不包括 `apps.an-scf-sandbox` ClientLibraryFolder类别中，由于必要的JavaScript和样式不可用，因此SCF组件无法正常工作或样式设置不正确。
 
 例如，如果不包含clientlibs，SCF注释组件将无样式显示：
 
@@ -155,7 +151,7 @@ include语句属于 `head` 部分 `html` 脚本。 默认 **`foundation head.jsp
 
 此时，存在一个极简沙盒，可能值得另存为包，这样在播放时，如果您的存储库损坏并且您想要重新开始，则可以关闭服务器，重命名或删除文件夹crx-quickstart/ ，打开服务器，上载并安装此保存的包，而不必重复这些最基本的步骤。
 
-此包已存在于 [创建示例页面](/help/communities/create-sample-page.md) 教程适用于迫不及待地想跳进来开始玩游戏的人！...
+此包已存在于 [创建示例页面](/help/communities/create-sample-page.md) 教程适用于迫不及待想要加入并开始播放的人！...
 
 要创建资源包，请执行以下操作：
 
@@ -180,9 +176,9 @@ include语句属于 `head` 部分 `html` 脚本。 默认 **`foundation head.jsp
       * 单击 **添加筛选器**
       * 根路径：浏览到 `/content/an-scf-sandbox**`
       * 单击 **完成**
-   * 单击 **保存**
 
+   * 单击 **保存**
 
 * 单击 **生成**
 
-现在，您可以选择 **下载** 将其保存到磁盘，并 **上传包** 其他位置，以及选择 **更多>复制** 以将沙盒推送到本地主机发布实例以扩展沙盒的领域。
+现在，您可以选择 **下载** 将其保存到磁盘，并 **上传包** 其他位置，并选择 **更多>复制** 将沙盒推送到localhost发布实例以扩展沙盒的领域。

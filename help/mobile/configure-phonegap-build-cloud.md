@@ -1,18 +1,14 @@
 ---
 title: 配置Adobe PhoneGap BuildCloud Service
-seo-title: Configure your Adobe PhoneGap Build Cloud Service
-description: 按照此页面配置云服务并使用PhoneGap Build构建应用程序。
-seo-description: Follow this page for configuring the cloud services and building your application with PhoneGap build.
-uuid: 59aa99c3-1425-4cc5-9839-a57a6a545d45
+description: 按照本页进行操作，以配置Cloud Service并使用PhoneGap Build构建应用程序。
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: administering-adobe-phonegap-enterprise
-discoiquuid: 3c84f4ec-d89b-4ad4-802e-ee3e2d49d916
 exl-id: d91a00d1-12fa-4c84-a426-49413f61c126
-source-git-commit: 17d13e9b201629d9d1519fde4740cf651fe89d2c
+source-git-commit: fd937341e26edd0c3edfced8e862066ebc30f9a3
 workflow-type: tm+mt
-source-wordcount: '660'
+source-wordcount: '648'
 ht-degree: 0%
 
 ---
@@ -21,11 +17,11 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe建议对需要基于单页应用程序框架的客户端渲染（例如React）的项目使用SPA编辑器。 [了解详情](/help/sites-developing/spa-overview.md).
+>对于需要基于单页应用程序框架的客户端渲染（例如React）的项目，Adobe建议使用SPA编辑器。 [了解详情](/help/sites-developing/spa-overview.md).
 
 此 **PhoneGap Build拼贴** 通过应用程序仪表板，您可以通过Adobe PhoneGap Build服务构建和分发PhoneGap移动应用程序。
 
-内定义的所有受支持平台 **管理应用程序** 使用PhoneGap Build推送远程构建时，将使用 **PhoneGap Build** 平铺。
+内定义的所有受支持平台 **管理应用程序** 使用PhoneGap Build构建图块 **PhoneGap Build** 平铺。
 
 您可以将远程内部版本推送到 `https://build.phonegap.com` 或下载源以使用PhoneGap CLI在本地构建，网址为 `https://docs.phonegap.com/references/phonegap-cli/`.
 
@@ -33,7 +29,7 @@ ht-degree: 0%
 
 ## 配置Cloud Service {#configuring-the-cloud-service}
 
-为了充分利用PhoneGap Build，您需要使用PhoneGap Build帐户信息配置AEMPhoneGap BuildCloud Service。
+要利用PhoneGap Build功能，您必须使用PhoneGap Build帐户信息配置AEMPhoneGap BuildCloud Service。
 
 如果您当前没有帐户，请导航到 `https://build.phonegap.com` 注册！ 如果您拥有Adobe Creative Cloud会员资格，则最多可以支持25个私有应用程序（非开源应用程序）。
 
@@ -47,7 +43,7 @@ ht-degree: 0%
 
 要为应用程序配置云服务，请执行以下步骤：
 
-1. 单击右上角的 **管理Cloud Services** 图块。
+1. 单击 **管理Cloud Services** 图块。
 
    ![chlimage_1-61](assets/chlimage_1-61.png)
 
@@ -57,7 +53,7 @@ ht-degree: 0%
 
    ![chlimage_1-62](assets/chlimage_1-62.png)
 
-1. 输入您的凭据以创建新的云配置。
+1. 输入您的凭据，以便创建云配置。
 
    验证后，单击 **提交**. 此配置的云配置现在显示在中 **管理Cloud Services** 图块。
 
@@ -65,7 +61,7 @@ ht-degree: 0%
 
 ### 使用PhoneGap Build构建应用程序 {#building-your-application-with-phonegap-build}
 
-配置云服务后，您可以使用构建应用程序 **PhoneGap Build** 图块。 单击右上角的，从 **构建远程** 或 **下载源** 选项。
+配置云服务后，您可以使用构建应用程序 **PhoneGap Build** 图块。 单击右上角，以便从 **构建远程** 或 **下载源** 选项。
 
 ![chlimage_1-64](assets/chlimage_1-64.png)
 
@@ -81,9 +77,9 @@ PhoneGap提供了一个命令行界面，用于在本地构建应用程序。
 
 使用PhoneGap命令行界面(CLI)编译计算机上的PhoneGap应用程序。 要在应用程序中包含AEM内容，AEM会创建一个ZIP文件，其中包含移动应用程序的内容、内容同步配置和其他必需资源。 下载ZIP文件并将其包含在您的内部版本中。
 
-为了利用PhoneGap的命令行界面，您需要设置本地环境以包括：
+要利用PhoneGap的CLI，您必须将本地环境设置为包括：
 
-1. Platform SDK (iOS、Android、WindowsPhone...)和
+1. Platform SDK (iOS、Android™、WindowsPhone...)和
 1. PhoneGap CLI
 
 您可以在此处阅读更多内容 `https://docs.phonegap.com/references/phonegap-cli/`.
@@ -98,7 +94,7 @@ phonegap run ios (or android, ...)
 
 >[!NOTE]
 >
->add — 如果您不想在连接的设备上运行该行，则在该行的末尾进行模拟。
+>添加 — 如果不想在连接的设备上运行该行，则在该行的末尾进行模拟。
 
 一旦您确认以上各项均有效，请使用 **PhoneGap Build** 平铺到 **下载源**. 将文件保存并解压缩到本地系统中。 完成此操作后：
 
