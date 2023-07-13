@@ -1,16 +1,12 @@
 ---
 title: 设置和配置We.Gov和We.Finance引用站点
-seo-title: Set up and configure We.Gov reference site
 description: 安装、配置和自定义AEM Forms演示包。
-seo-description: Install, configure, and customize an AEM Forms demo package.
-uuid: 0a6ad8f9-0d38-40c3-ad8d-e705edef55f8
 contentOwner: anujkapo
-discoiquuid: fe5da0aa-d3a8-4b77-a447-9e429fdc2816
 docset: aem65
 exl-id: 1fee474e-7da5-4ab2-881a-34b8e055aa29
-source-git-commit: 3d713021ac410ca2925a282c5dfca98ed4e483ee
+source-git-commit: e068cee192c0837f1473802143e0793674d400e8
 workflow-type: tm+mt
-source-wordcount: '4663'
+source-wordcount: '4622'
 ht-degree: 3%
 
 ---
@@ -34,7 +30,7 @@ ht-degree: 3%
 | 云提供商 | 服务版本 | 状态 |
 |---|---|---|
 | Adobe Sign | v5 API | **支持** |
-| Microsoft Dynamics 365 | 1710 (9.1.0.3020) | **支持** |
+| Microsoft® Dynamics 365 | 1710 (9.1.0.3020) | **支持** |
 | Adobe Analytics | v1.4 Rest API | **支持** |
 **软件包安装注意事项：**
 
@@ -56,12 +52,12 @@ ht-degree: 3%
       * **core.wcm.components.all-2.0.4.zip** - *示例WCM组件的集合*
 
       * **grid-aem.ui.apps-1.0-SNAPSHOT.zip** - *站点页列控件的AEM Sites网格布局包*
-   * **we-gov-forms.ui.content-&lt;version>.zip** - *包含所有内容、页面、图像、表单、交互式通信资产等。*
+
+   * **we-gov-forms.ui.content-&lt;version>.zip** - *包含所有内容、页面、图像、表单、交互式通信资源等。*
 
    * **we-gov-forms.ui.ananalytics-&lt;version>.zip** - *包含要存储在存储库中的所有We.Gov Forms Analytics数据。*
 
    * **we-gov-forms.config.public-&lt;version>.zip** - *包含所有默认配置节点，包括占位符云配置以帮助避免表单数据模型和服务绑定问题。*
-
 
 此包中包含的资源包括：
 
@@ -69,7 +65,7 @@ ht-degree: 3%
 * AEM Forms自适应Forms
 * AEM Forms交互式通信（打印和Web Channel）
 * AEM Forms XDP记录文档
-* AEM Forms MS Dynamics Forms数据模型
+* AEM Forms MS® Dynamics Forms数据模型
 * Adobe Sign集成
 * AEM工作流模型
 * AEM Assets示例图像
@@ -115,7 +111,7 @@ ht-degree: 3%
 
 ### 安装新包版本 {#installing-new-package-versions}
 
-要安装新的软件包版本，请按照4.1和4.2中定义的步骤操作。虽然可以在已安装其他旧软件包时安装较新的软件包版本，但建议先卸载较旧的软件包版本。 为此，请执行以下步骤。
+要安装新的软件包版本，请按照4.1和4.2中定义的步骤操作。虽然可以在已安装其他旧软件包的同时安装较新的软件包版本，但建议先卸载旧软件包版本。 为此，请执行以下步骤。
 
 1. 导航到 *https://&lt;aemserver>：&lt;port>/crx/packmgr/index.jsp*
 1. 查找旧的 **we-gov-forms.pkg.all-&lt;version>.zip** 文件。
@@ -133,10 +129,10 @@ ht-degree: 3%
 ### 虚构的用户配置 {#fictional-user-configuration}
 
 1. 导航到 *https://&lt;aemserver>：&lt;port>/libs/granite/security/content/groupadmin.html*
-1. 以管理员身份登录，以便执行以下任务。
+1. 以管理员身份登录以执行以下任务。
 1. 向下滚动到页面末尾以加载所有用户组。
 1. 搜索“”**工作流**“。
-1. 选择&quot;**workflow-users**”组，然后单击“属性”。
+1. 选择&quot;**workflow-users**&#x200B;组并单击“属性”。
 1. 导航到“成员”选项卡。
 1. 键入 **wegov** 在“选择用户或组”字段中。
 1. 从下拉列表中选择&quot;**We.Gov Forms用户**“。
@@ -178,7 +174,7 @@ ht-degree: 3%
 
 **注释:**
 
-1. 导航到https://&lt;aemserver>：&lt;port>/aem/inbox ，您将能够完成上述参考文档链接中说明的过程。
+1. 导航到https://&lt;aemserver>：&lt;port>/aem/inbox ，您可以在此处完成上述参考文档链接中说明的过程。
 1. 此 `we-gov-forms.pkg.all-[version].zip` 该软件包包含示例SSL密钥和证书，可通过解压 `we-gov-forms.pkg.all-[version].zip/ssl` 属于包的文件夹。
 
 1. SSL证书和密钥详细信息：
@@ -209,7 +205,7 @@ ht-degree: 3%
 
    >[!NOTE]
    >
-   >用于访问AEM服务器的URL应与Adobe Sign OAuth重定向URI中配置的URL匹配，以避免配置问题(例如 *https://&lt;aemserver>：&lt;port>/mnt/overlay/adobesign/cloudservices/adobesign/properties.html*)
+   >用于访问AEM服务器的URL应与Adobe Sign OAuth重定向URI中配置的URL匹配，以避免配置问题(例如， *https://&lt;aemserver>：&lt;port>/mnt/overlay/adobesign/cloudservices/adobesign/properties.html*)
 
 1. 选择“We.gov Adobe Sign”配置。
 1. 单击“属性”。
@@ -219,24 +215,24 @@ ht-degree: 3%
 1. 单击“连接到Adobe Sign”。
 1. 成功连接后，单击“保存并关闭”以完成集成。
 
-### （可选）MS Dynamics云配置 {#ms-dynamics-cloud-configuration}
+### （可选）MS® Dynamics云配置 {#ms-dynamics-cloud-configuration}
 
-此部分包含有关MS Dynamics云配置的详细信息和说明。
+此部分包含有关MS® Dynamics云配置的详细信息和说明。
 
 **引用:**
 
-1. [Microsoft Dynamics OData配置](/help/forms/using/ms-dynamics-odata-configuration.md)
-1. [配置Microsoft Dynamics for AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/adaptive-forms/using-ms-dynamics-with-aem-forms.html)
+1. [Microsoft](/help/forms/using/ms-dynamics-odata-configuration.md)
+1. [配置Microsoft® Dynamics for AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/adaptive-forms/using-ms-dynamics-with-aem-forms.html)
 
-#### MS Dynamics OData云服务 {#ms-dynamics-odata-cloud-service}
+#### MS® Dynamics OData云服务 {#ms-dynamics-odata-cloud-service}
 
 1. 导航至：
 
    https://&lt;aemserver>：&lt;port>/libs/fd/fdm/gui/components/admin/fdmcloudservice/fdm.html/conf/we-gov
 
-   1. 确保您使用的重定向URL与MS Dynamics应用程序注册中配置的相同。
+   1. 确保您使用的重定向URL与MS® Dynamics应用程序注册中配置的相同。
 
-1. 选择“Microsoft Dynamics ODataCloud Service”配置。
+1. 选择“Microsoft® Dynamics ODataCloud Service”配置。
 1. 单击“属性”。
 
    ![Microsoft ODataCloud Service的属性](assets/properties_odata_cloud_service.jpg)
@@ -246,24 +242,24 @@ ht-degree: 3%
 
    1. **服务根目录：** 例如 `https://msdynamicsserver.api.crm3.dynamics.com/api/data/v9.1/`
    1. **身份验证类型：** OAuth 2.0
-   1. **身份验证设置** (请参阅 [MS Dynamics云配置设置](../../forms/using/forms-install-configure-gov-reference-site.md#dynamicsconfig) 以收集此信息)：
+   1. **身份验证设置** (请参阅 [MS® Dynamics云配置设置](../../forms/using/forms-install-configure-gov-reference-site.md#dynamicsconfig) 以收集此信息)：
 
       1. 客户端ID — 也称为应用程序ID
       1. 客户端密钥
-      1. OAuth URL — 例如 [https://login.windows.net/common/oauth2/authorize](https://login.windows.net/common/oauth2/authorize)
-      1. 刷新令牌URL — 例如 [https://login.windows.net/common/oauth2/token](https://login.windows.net/common/oauth2/token)
-      1. 访问令牌URL — 例如 [https://login.windows.net/common/oauth2/token](https://login.windows.net/common/oauth2/token)
+      1. Oauth URL — 例如， [https://login.microsoftonline.com/common/oauth2/authorize](https://login.microsoftonline.com/common/oauth2/authorize)
+      1. 刷新令牌URL — 例如， [https://login.windows.net/common/oauth2/token](https://login.windows.net/common/oauth2/token)
+      1. 访问令牌URL — 例如， [https://login.windows.net/common/oauth2/token](https://login.windows.net/common/oauth2/token)
       1. 授权范围 —  **openid**
       1. 身份验证标头 —  **授权持有者**
       1. 资源 — 例如 `https://msdynamicsserver.api.crm3.dynamics.com`
-   1. 单击“连接到OAuth”。
 
+   1. 单击“连接到OAuth”。
 
 1. 在成功进行身份验证后，单击“保存并关闭”以完成集成。
 
-#### MS Dynamics云配置设置 {#dynamicsconfig}
+#### MS® Dynamics云配置设置 {#dynamicsconfig}
 
-包括本节中详述的步骤，以帮助您从MS Dynamics Cloud实例中查找客户端ID、客户端密钥和详细信息。
+包括本节中详述的步骤，以帮助您从MS® Dynamics Cloud实例中查找客户端ID、客户端密钥和详细信息。
 
 1. 导航到 [https://portal.azure.com/](https://portal.azure.com/) 和登录。
 1. 从左侧菜单中选择“所有服务”。
@@ -274,20 +270,20 @@ ht-degree: 3%
 
    1. 配置OData服务时，此URL必须与用于访问AEM服务器的URL匹配。
 
-1. 在“设置”视图中，单击“密钥”以查看创建新密钥(在AEM中用作客户端密钥)。
+1. 在“设置”视图中，单击“密钥”以查看新密钥(在AEM中用作客户端密钥)。
 
    1. 请确保保留密钥的副本，因为以后将无法在Azure或AEM中查看它。
 
-1. 要找到资源URL/服务根URL，请导航到MS Dynamics实例仪表板。
+1. 要找到资源URL/服务根URL，请导航到MS® Dynamics实例仪表板。
 1. 在顶部导航栏中，单击“Sales”或您自己的实例类型和“Select Settings”。
-1. 单击右下角附近的“自定义项”和“开发人员资源”。
-1. 您将在该处找到服务根URL：例如
+1. 单击右下角附近的“自定义”和“开发人员资源”。
+1. 在此，您可以找到服务根URL：例如
 
    *`https://msdynamicsserver.api.crm3.dynamics.com/api/data/v9.1/`
 
 1. 有关刷新和访问令牌URL的详细信息，请参阅此处：
 
-   *[https://docs.microsoft.com/en-us/rest/api/datacatalog/authenticate-a-client-app](https://docs.microsoft.com/en-us/rest/api/datacatalog/authenticate-a-client-app)*
+   *[https://learn.microsoft.com/en-us/rest/api/datacatalog/authenticate-a-client-app](https://learn.microsoft.com/en-us/rest/api/datacatalog/authenticate-a-client-app)*
 
 #### 测试Forms数据模型(Dynamics) {#testing-the-form-data-model}
 
@@ -297,7 +293,7 @@ ht-degree: 3%
 
    *https://&lt;aemserver>：&lt;port>/aem/forms.html/content/dam/formsanddocuments-fdm/we-gov*
 
-1. 选择“We.gov Microsoft Dynamics CRM FDM”并选择“属性”。
+1. 选择“We.gov Microsoft® Dynamics CRM FDM”并选择“属性”。
 
    ![Dynamics CRM FDM的属性](assets/properties_dynamics_crm.jpg)
 
@@ -311,9 +307,11 @@ ht-degree: 3%
 1. 测试服务以确保它们成功连接到配置的数据源。
 
    >[!NOTE]
+   >
    测试服务后，单击 **取消** 以确保非自愿更改不会传播到表单数据模型。
 
    >[!NOTE]
+   >
    据报告，需要重新启动AEM Server才能成功将数据源绑定到FDM。
 
 #### 测试Forms数据模型(Derby) {#test-fdm-derby}
@@ -332,7 +330,7 @@ ht-degree: 3%
 
    ![Dynamics CRM FDM的属性](assets/aftia-update-data-source.jpg)
 
-1. 单击 **保存并关闭**.
+1. 选择&#x200B;**保存并关闭**。
 
 1. [测试服务](work-with-form-data-model.md#test-data-model-objects-and-services) 以确保它们成功连接到配置的数据源
 
@@ -354,7 +352,7 @@ ht-degree: 3%
 
 * [查看和了解AEM Forms analytics报表](view-understand-aem-forms-analytics-reports.md)
 
-### Adobe Analytics cloud service配置 {#adobe-analytics-cloud-service-configuration}
+### Adobe Analytics Cloud服务配置 {#adobe-analytics-cloud-service-configuration}
 
 此包预配置为连接到Adobe Analytics。 提供了以下步骤以允许更新此配置。
 
@@ -372,7 +370,7 @@ ht-degree: 3%
 
 #### Adobe Analytics查找用户凭据 {#analytics-locating-user-credentials}
 
-要找到Adobe Analytics帐户的用户凭据，帐户管理员必须执行以下任务。
+要查找帐户管理员必须执行以下任务的Adobe Analytics帐户的用户凭据，请执行以下操作：
 
 1. 导航到Adobe Experience Cloud门户。
    * 使用管理员凭据登录
@@ -385,8 +383,8 @@ ht-degree: 3%
 1. 从用户列表中选择所需的用户。
 1. 滚动到页面底部，用户身份验证信息将显示在页面底部。
    ![管理访问权限](assets/aftia-admin-user-access.jpg)
-1. 用户名和共享密钥信息将显示在权限框的右侧。
-1. 请注意，用户名在名称中有一个冒号，冒号左侧的所有信息都是用户名，冒号右侧的所有信息都是公司名称。
+1. 用户名和共享密钥信息显示在权限框的右侧。
+1. 用户名在名称中带有冒号，冒号左侧的所有信息都是用户名，冒号右侧的所有信息都是公司名称。
    * 下面是一个示例： *用户名：公司名称*
 
 #### 在Adobe Analytics中设置用户身份验证 {#setup-user-authentication}
@@ -411,18 +409,19 @@ ht-degree: 3%
 
    ![编辑权限](assets/aftia-admin-access-edit.jpg)
 
-1. 请注意，一旦映射了权限之后用户即可登录，这可能需要几个小时。
+1. 一旦映射了权限之后用户登录的功能可能需要几个小时。
 
 ### Adobe Analytics报表 {#adobe-analytics-reporting}
 
 #### 查看Adobe Analytics站点报表 {#view-adobe-analytics-sites-reporting}
 
 >[!NOTE]
-AEM Forms Analytics数据在离线时或没有Adobe Analytics云配置的情况下可用，如果 `we-gov-forms.ui.analytics-<version>.zip` 虽然已安装包，但AEM Sites数据需要活动的cloud配置。
+>
+AEM Forms Analytics数据在离线时或没有Adobe Analytics Cloud配置的情况下可用，如果 `we-gov-forms.ui.analytics-<version>.zip` 虽然已安装包，但AEM Sites数据需要活动的cloud配置。
 
 1. 导航到 *https://&lt;aemserver>：&lt;port>/sites.html/content*
 1. 选择“AEM Forms We.Gov网站”以查看网站页面。
-1. 选择一个站点页面（例如“主页”），然后选择“Analytics和Recommendations”。
+1. 选择一个网站页面（例如“主页”），然后选择“Analytics和Recommendations”。
 
    ![Analysis和Recommendations](assets/analytics_recommendations.jpg)
 
@@ -446,7 +445,8 @@ AEM Forms Analytics数据在离线时或没有Adobe Analytics云配置的情况�
 #### 查看Adobe Analytics Forms报表 {#view-adobe-analytics-forms-reporting}
 
 >[!NOTE]
-AEM Forms Analytics数据在离线时或没有Adobe Analytics云配置的情况下可用，如果 `we-gov-forms.ui.analytics-<version>.zip` 虽然已安装包，但AEM Sites数据需要活动的cloud配置。
+>
+AEM Forms Analytics数据在离线时或没有Adobe Analytics Cloud配置的情况下可用，如果 `we-gov-forms.ui.analytics-<version>.zip` 虽然已安装包，但AEM Sites数据需要活动的cloud配置。
 
 1. 导航至
 
@@ -464,13 +464,13 @@ AEM Forms Analytics数据在离线时或没有Adobe Analytics云配置的情况�
 
 要使用AdobeForms安装和配置AEM Forms，转化工具用户必须具备以下条件。
 
-1. Adobe I/O访问权限。
+1. 访问Adobe Developer。
 
 1. 创建与AdobeForms转换服务集成的权限。
 
 1. Adobe以创作方式运行的最新AEM 6.5 Service Pack。
 
-请在阅读进一步说明之前阅读以下内容：
+在阅读更多说明之前，请查看以下内容：
 
 * [配置自动化表单转换服务](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/configure-service.html)
 
@@ -491,19 +491,20 @@ AEM Forms Analytics数据在离线时或没有Adobe Analytics云配置的情况�
 1. 不要继续进行配置的其余部分 — 查看部分 [在Adobe I/O中创建集成](#create-integration-adobeio)
 
 >[!NOTE]
+>
 在此部分中创建的证书将用于在Adobe I/O中创建集成服务。一旦用户在集成服务中创建了，用户就可以使用Adobe I/O中的该信息完成配置。
 
 #### 在Adobe I/O中创建集成 {#create-integration-adobeio}
 
 如果不联系系统管理员以创建集成，请确保您能够在Adobe域中创建集成。
 
-1. 导航到 [Adobe I/O控制台](https://console.adobe.io/).
+1. 导航到 [Adobe I/O控制台](https://developer.adobe.com/console/).
 
 1. 单击创建集成。
 
 1. 选择访问API。
 
-1. 确保您位于正确的组中（右上方的下拉列表）。
+1. 确保您位于正确的组中（右上角的下拉列表）。
 
 1. 在Experience Cloud部分中，选择Forms转换工具。
 
@@ -521,7 +522,7 @@ AEM Forms Analytics数据在离线时或没有Adobe Analytics云配置的情况�
 
 现在，您已创建集成，接下来让我们完成IMS配置的安装。
 
-1. 单击Adobe I/O中的集成，以显示连接详细信息。
+1. 单击Adobe I/O中的集成以显示连接详细信息。
 
 1. 导航到AEM中的IMS配置（“工具”>“安全”>“IMS”）
 
@@ -543,7 +544,7 @@ AEM Forms Analytics数据在离线时或没有Adobe Analytics云配置的情况�
 
 #### 配置云配置（We.Gov AFC生产） {#configure-cloud-configuration}
 
-IMS配置完成后，我们可以继续查看AEM中的云配置。 如果配置不存在，请使用以下步骤在AEM中创建云配置：
+IMS配置完成后，您可以继续查看AEM中的云配置。 如果配置不存在，请使用以下步骤在AEM中创建云配置：
 
 1. 打开浏览器并导航到系统URL https://&lt;domain_name>：&lt;system_port>
 
@@ -611,7 +612,7 @@ IMS配置完成后，我们可以继续在AEM中创建云配置。
 
 1. 选择We.Gov注册申请PDF。
 
-1. 单击 **启动自动转换** 按钮进行修改。
+1. 单击 **启动自动转换** 在右上角。
 
 1. 用户应该能够看到如下所示的选项。
 
@@ -641,7 +642,7 @@ IMS配置完成后，我们可以继续在AEM中创建云配置。
 
 automated forms conversion服务包括 [最佳实践，已知的复杂模式](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/styles-and-pattern-considerations-and-best-practices.html)、和 [已知问题](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/known-issues.html). 在开始使用AEM FormsAutomated forms conversion服务之前，请查看这些内容。
 
-1. 如果要在转换后将表单绑定到FDM，请生成没有启用数据绑定的自适应表单的表单。
+1. 如果要在转换后将表单绑定到FDM，请生成表单并生成自适应表单，但不启用数据绑定。
 
 1. 确保模板文件夹已启用jcr：read for everyone权限，否则服务用户将无法从存储库中读取模板，并且转换将失败。
 
@@ -665,7 +666,7 @@ automated forms conversion服务包括 [最佳实践，已知的复杂模式](ht
 
 *https://&lt;aemserver>：&lt;port>/crx/de/index.jsp#/apps/we-gov/clientlibs/clientlib-base/css/bootstrap*
 
-此包中包含的可编辑模板也预配置了模板/页面策略，这些策略使用Bootstrap4 CSS类进行分页、样式设置等。 并非所有类都已添加到模板策略中，但可以将Bootstrap4支持的任何类添加到策略中。 有关可用类的列表，请参阅入门页面：
+此包中包含的可编辑模板也预配置了template/page策略，这些策略使用Bootstrap4 CSS类进行分页、样式设置等。 并非所有类都已添加到模板策略中，但可以将Bootstrap4支持的任何类添加到策略中。 有关可用类的列表，请参阅入门页面：
 
 [https://getbootstrap.com/docs/4.1/getting-started/introduction/](https://getbootstrap.com/docs/4.1/getting-started/introduction/)
 
@@ -707,13 +708,13 @@ automated forms conversion服务包括 [最佳实践，已知的复杂模式](ht
 
 *https://&lt;aemserver>：&lt;port>/aem/forms.html/content/dam/formsanddocuments/adobe-gov-forms*
 
-这些表单可定制以适合特定用例。 请注意，不应修改某些字段和提交逻辑以确保表单继续正常运行。 这包括：
+这些表单可定制以适合特定用例。 不应修改某些字段和提交逻辑以确保表单继续正常运行。 这包括：
 
 **健康福利登记申请：**
 
-* contact_id — 隐藏字段，用于在提交期间接收MS Dynamics联系人ID
-* 提交 — 需要自定义提交按钮逻辑才能支持回调。 虽然已记录自定义设置，但在通过Forms数据模型向MS Dynamics执行POST和GET操作时，需要编写一个大型脚本来提交表单。
-* 根面板 — “初始化”事件用于以尽可能少的侵入方式将MS Dynamics按钮添加到AEM收件箱，因为所有AEM收件箱Granite UI组件都不可修改。
+* contact_id — 隐藏字段，用于在提交期间接收MS® Dynamics联系人ID
+* 提交 — 需要自定义提交按钮逻辑才能支持回调。 虽然已记录自定义，但在通过Forms数据模型向MS® Dynamics执行POST和GET操作时提交表单需要大脚本。
+* 根面板 — “初始化”事件用于以尽可能少的侵入方式将MS® Dynamics按钮添加到AEM收件箱，因为所有AEM收件箱Granite UI组件都是不可修改的。
 
 #### 自适应表单样式 {#adaptive-form-styling}
 
@@ -728,7 +729,7 @@ automated forms conversion服务包括 [最佳实践，已知的复杂模式](ht
 
 由于某些限制，此工作流包含多个脚本和自定义OSGI工作流流程步骤。 这些工作流步骤是作为通用步骤创建的，尚未通过配置对话框创建。 目前，工作流步骤的配置依赖于进程参数。
 
-所有工作流步骤Java代码都包含在 **we-gov-forms.core-&lt;version>.jar** 捆绑。
+所有工作流步骤Java™代码都包含在 **we-gov-forms.core-&lt;version>.jar** 捆绑。
 
 ## 演示注意事项和已知问题 {#demo-considerations-and-known-issues}
 
@@ -741,8 +742,8 @@ automated forms conversion服务包括 [最佳实践，已知的复杂模式](ht
 
 ### 已知问题 {#known-issues}
 
-* (AGRS-120)站点导航组件当前不支持深度超过2级的嵌套子页面。
-* (AGRS-159)当前MS Dynamics FDM需要执行2项操作，以首先将“注册自适应表单”数据POST到Dynamics，然后提取用户记录以检索联系人ID。 在其当前状态下，如果Dynamics中存在两个以上同名用户，则将无法提取联系人ID，因为该用户不允许提交注册自适应表单。
+* (AGRS-120)站点导航组件当前不支持深度超过两级的嵌套子页面。
+* (AGRS-159)当前MS® Dynamics FDM需要执行两项操作，即首先将“注册自适应表单”数据POST到Dynamics，然后提取用户记录以检索联系人ID。 在其当前状态下，如果Dynamics中存在两个以上同名用户，则获取联系人ID失败，这将不允许提交注册自适应表单。
 
 ## 配置辅助功能测试 {#configure-accessibility-testing}
 
@@ -750,8 +751,7 @@ automated forms conversion服务包括 [最佳实践，已知的复杂模式](ht
 
 要执行辅助功能测试，请安装此处提供的Chrome插件 `https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb?hl=en`. <!-- This URL is a 404. As such, please fix and update this entire topic. We ought not to be writing about third-party software that we have no control over to avoid these 404s. Consider making this topic entirely generic and leaving it up to the user to choose their own Accessibility Testing add-on. -->
 
-安装后，在Chrome浏览器中加载要测试的页面（注意：打开多个选项卡可能会影响您的得分，最好只打开一个选项卡）。 加载页面后
-**右键单击** ，然后选择 **审核** 选项卡。 开发人员可以选择要由辅助功能插件执行的审核类型。 选择所有需要的选项后，用户可以单击“生成报告”按钮。 这将生成一个PDF文档，其中显示总体无障碍等级以及可用于提高总体无障碍等级的内容。
+安装后，在Chrome浏览器中加载要测试的页面（注意：打开多个选项卡可能会影响您的得分，最好只打开一个选项卡）。 加载页面后， **右键单击** ，然后选择 **审核** 选项卡。 开发人员可以选择要由辅助功能插件执行的审核类型。 选择所有需要的选项后，用户可以单击“生成报告”按钮。 这将生成一个PDF文档，其中显示整体无障碍等级以及可用于提高整体无障碍等级的内容。
 
 运行报告后，用户可能会看到以下内容：
 
@@ -759,7 +759,7 @@ automated forms conversion服务包括 [最佳实践，已知的复杂模式](ht
 
 显示在用户面前的数字是他们已获得的总体无障碍评级。 此外，还提供了有关如何在分数后计算此值的描述。
 
-如果用户希望导出此内容，可以单击屏幕右侧的三个按钮，然后从插件提供的其他选项中进行选择。
+如果用户要导出此内容，可以单击屏幕右侧的三个按钮，然后从插件提供的其他选项中进行选择。
 
 ![辅助功能报告](assets/aftia-accessibility-report.jpg)
 
@@ -776,12 +776,12 @@ AEM Forms包管理器，用户可以通过导航到 **Forms** > **主题** > **�
 
 用户能够配置各种工作流服务选项，其中包括：
 
-1. Microsoft Dynamics条目
+1. Microsoft® Dynamics条目
 1. Adobe Sign
 1. AEM自定义通信管理
 1. Adobe Analytics
 
-要将它们配置为在工作流中启用，用户需要执行以下任务。
+要将它们配置为在工作流中启用，用户必须执行以下任务。
 
 1. 导航到https://&#39;[服务器]：[端口]&#39;/system/console/configMgr.
 
@@ -790,11 +790,12 @@ AEM Forms包管理器，用户可以通过导航到 **Forms** > **主题** > **�
 1. 打开服务定义，并在工作流中调用选定的服务。
 
    >[!NOTE]
-   仅仅因为用户在Configuration Manager页面中启用该服务，用户仍需要设置服务配置才能与请求的外部服务通信。
+   >
+   仅仅因为用户在Configuration Manager页面中启用该服务，用户仍需要设置服务配置才能与请求的外部服务进行通信。
 
    ![我们管理表单包](assets/aftia-configuration-options.jpg)
 
-1. 完成后，单击保存按钮以保存设置。
+1. 完成后，单击保存以保存设置。
 
 ## 后续步骤 {#next-steps}
 

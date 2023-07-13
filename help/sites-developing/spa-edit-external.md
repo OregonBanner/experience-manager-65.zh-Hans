@@ -1,17 +1,17 @@
 ---
-title: 在 AEM 中编辑外部 SPA
-description: 本文档介绍了将独立SPA上传到AEM实例、添加可编辑的内容部分和启用创作的建议步骤。
+title: 在Adobe Experience Manager中编辑外部SPA
+description: 本文档介绍了将独立SPA上传到Adobe Experience Manager实例、添加可编辑的内容部分和启用创作的推荐步骤。
 exl-id: 25236af4-405a-4152-8308-34d983977e9a
-source-git-commit: 90f3fb05581820167ea0dcf50fb23048609af31d
+source-git-commit: e068cee192c0837f1473802143e0793674d400e8
 workflow-type: tm+mt
-source-wordcount: '2446'
+source-wordcount: '2441'
 ht-degree: 1%
 
 ---
 
-# 在 AEM 中编辑外部 SPA {#editing-external-spa-within-aem}
+# 在Adobe Experience Manager中编辑外部SPA {#editing-external-spa-within-aem}
 
-在决定外部SPA与AEM之间的集成级别时，您通常需要能够在AEM中编辑和查看SPA。
+在决定外部SPA与Adobe Experience Manager (AEM)之间的集成级别时，您通常需要能够在AEM中编辑和查看SPA。
 
 ## 概述 {#overview}
 
@@ -22,9 +22,9 @@ ht-degree: 1%
 先决条件很简单。
 
 * 确保AEM的实例正在本地运行。
-* 使用以下方式创建基本AEM SPA项目 [AEM项目原型。](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?#available-properties)
+* 使用以下方式创建基本AEM SPA项目 [AEM项目原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?#available-properties).
    * 这将构成AEM项目的基础，该项目将进行更新以包含外部SPA。
-   * 对于本文档中的示例，我们使用 [wknd SPA项目。](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/spa-editor/spa-editor-framework-feature-video-use.html#spa-editor)
+   * 本文档中的示例使用 [WKND SPA项目](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/spa-editor/spa-editor-framework-feature-video-use.html#spa-editor).
 * 准备好您想要集成的工作中的外部React SPA。
 
 ## 将SPA上传到AEM项目 {#upload-spa-to-aem-project}
@@ -33,13 +33,13 @@ ht-degree: 1%
 
 1. Replace `src` 在 `/ui.frontend` 使用React应用程序的 `src` 文件夹。
 1. 在应用程序的 `package.json` 在 `/ui.frontend/package.json` 文件。
-   * 确保SPA SDK依赖项为 [推荐的版本。](spa-getting-started-react.md#dependencies)
+   * 确保SPA SDK依赖项为 [推荐版本](spa-getting-started-react.md#dependencies).
 1. 将任何自定义项包含在 `/public` 文件夹。
 1. 包括任何添加到的内联脚本或样式 `/public/index.html` 文件。
 
 ## 配置远程SPA {#configure-remote-spa}
 
-现在，外部SPA已成为AEM项目的一部分，因此需要在AEM中对其进行配置。
+现在，外部SPA已成为AEM项目的一部分，因此必须在AEM中对其进行配置。
 
 ### 包含AdobeSPA SDK包 {#include-spa-sdk-packages}
 
@@ -49,7 +49,7 @@ ht-degree: 1%
 * [`@adobe/aem-spa-component-mapping`](https://www.npmjs.com/package/@adobe/aem-spa-component-mapping)
 * [`@adobe/aem-spa-page-model-manager`](https://www.npmjs.com/package/@adobe/aem-spa-model-manager)
 
-`@adobe/aem-spa-page-model-manager` 提供用于初始化模型管理器和从AEM实例检索模型的API。 然后，此模型可用于使用来自的API渲染AEM组件 `@adobe/aem-react-editable-components` 和 `@adobe/aem-spa-component-mapping`.
+此 `@adobe/aem-spa-page-model-manager` 提供用于初始化模型管理器和从AEM实例检索模型的API。 然后，此模型可用于使用来自的API渲染AEM组件 `@adobe/aem-react-editable-components` 和 `@adobe/aem-spa-component-mapping`.
 
 #### 安装 {#installation}
 
@@ -61,19 +61,19 @@ npm install --save @adobe/aem-spa-component-mapping @adobe/aem-spa-page-model-ma
 
 ### ModelManager初始化 {#model-manager-initialization}
 
-在应用程序渲染之前， [`ModelManager`](spa-blueprint.md#pagemodelmanager) 需要初始化才能处理AEM的创建 `ModelStore`.
+在应用程序渲染之前， [`ModelManager`](spa-blueprint.md#pagemodelmanager) 必须初始化才能处理AEM的创建 `ModelStore`.
 
 这需要在以下时间内完成： `src/index.js` 应用程序的文件，或在呈现应用程序根目录的位置。
 
-为此，我们可以使用 `initializationAsync` API由提供 `ModelManager`.
+为此，请使用 `initializationAsync` API由提供 `ModelManager`.
 
-以下屏幕截图显示了如何启用 `ModelManager` 在简单的React应用程序中。 唯一的限制是 `initializationAsync` 需要先调用 `ReactDOM.render()`.
+以下屏幕截图显示了如何启用 `ModelManager` 在简单的React应用程序中。 唯一的限制是 `initializationAsync` 必须在之前调用 `ReactDOM.render()`.
 
 ![初始化ModelManager](assets/external-spa-initialize-modelmanager.png)
 
 在此示例中， `ModelManager` 已初始化并且为空 `ModelStore` 创建。
 
-`initializationAsync` 可以选择接受 `options` 对象作为参数：
+此 `initializationAsync` 可以选择接受 `options` 对象作为参数：
 
 * `path`  — 初始化时，将获取定义路径处的模型并将其存储在 `ModelStore`. 这可用于获取 `rootModel` 初始化时（如果需要）。
 * `modelClient`  — 允许提供负责提取模型的自定义客户端。
@@ -81,7 +81,7 @@ npm install --save @adobe/aem-spa-component-mapping @adobe/aem-spa-page-model-ma
 
 ### AEM可创作叶组件 {#authorable-leaf-components}
 
-1. 创建/标识将为其创建可授权的React组件的AEM组件。 在本例中，我们使用的是WKND项目的文本组件。
+1. 创建/标识将为其创建可授权的React组件的AEM组件。 在此示例中，WKND项目使用文本组件。
 
    ![WKND文本组件](assets/external-spa-text-component.png)
 
@@ -99,7 +99,7 @@ npm install --save @adobe/aem-spa-component-mapping @adobe/aem-spa-page-model-ma
 
    ![使用withMappable](assets/external-spa-withmappable.png)
 
-   此包装函数将React组件映射到AEM `resourceType` 在配置中指定，并在AEM编辑器中打开时启用编辑功能。 对于独立组件，它还将获取特定节点的模型内容。
+   此包装函数将React组件映射到AEM `resourceType` 在配置中指定，并在AEM编辑器中打开时启用编辑功能。 对于独立组件，它还会获取特定节点的模型内容。
 
    >[!NOTE]
    >
@@ -147,18 +147,18 @@ npm install --save @adobe/aem-spa-component-mapping @adobe/aem-spa-page-model-ma
 
    >[!NOTE]
    >
-   >在此示例中，我们对渲染的组件进行了进一步的自定义以匹配现有的文本组件。 但是，这与AEM中的创作无关。
+   >在此示例中，已对渲染的组件进行进一步的自定义以匹配现有的文本组件。 但是，这与AEM中的创作无关。
 
 #### 将可创作组件添加到页面 {#add-authorable-component-to-page}
 
-一旦创建了可创作的React组件，我们便可以在整个应用程序中使用它们。
+一旦创建了可创作的React组件，就可以在整个应用程序中使用它们。
 
-让我们举一个示例页面，在该页面中，我们需要从WKND SPA项目添加文本。 对于此示例，我们希望显示文本“Hello World！” 开启 `/content/wknd-spa-react/us/en/home.html`.
+让我们举一个示例页面，该页面需要添加来自WKND SPA项目的文本。 对于此示例，您希望显示文本“Hello World！” 开启 `/content/wknd-spa-react/us/en/home.html`.
 
 1. 确定要显示的节点的路径。
 
-   * `pagePath`：在我们的示例中，包含节点的页面 `/content/wknd-spa-react/us/en/home`
-   * `itemPath`：在我们的示例中，指向页面中节点的路径 `root/responsivegrid/text`
+   * `pagePath`：示例中包含节点的页面 `/content/wknd-spa-react/us/en/home`
+   * `itemPath`：页面中节点的路径，如示例 `root/responsivegrid/text`
       * 这包括页面上包含项目的名称。
 
    ![节点的路径](assets/external-spa-path.png)
@@ -171,7 +171,7 @@ npm install --save @adobe/aem-spa-component-mapping @adobe/aem-spa-page-model-ma
 
 #### 验证在AEM上编辑文本内容 {#verify-text-edit}
 
-我们现在可以在运行的AEM实例上测试组件。
+现在，请在正在运行的AEM实例上测试该组件。
 
 1. 从运行以下Maven命令 `aem-guides-wknd-spa` 目录，以生成项目并将其部署到AEM。
 
@@ -188,8 +188,8 @@ mvn clean install -PautoInstallSinglePackage
 ### AEM可创作页面 {#aem-authorable-pages}
 
 1. 标识要在SPA中添加以进行创作的页面。 此示例使用 `/content/wknd-spa-react/us/en/home.html`.
-1. 创建新文件(例如， `Page.js`)。 在此，我们可以重用中提供的页面组件 `@adobe/cq-react-editable-components`.
-1. 在部分中重复步骤4 [AEM可授权的叶组件。](#authorable-leaf-components) 使用包装函数 `withMappable` 在组件上。
+1. 创建文件(例如， `Page.js`)。 在这里，可以重用中提供的页面组件 `@adobe/cq-react-editable-components`.
+1. 在部分中重复步骤4 [AEM可授权的叶组件](#authorable-leaf-components). 使用包装函数 `withMappable` 在组件上。
 1. 与之前一样，应用 `MapTo` 页中所有子组件的AEM资源类型。
 
    ```javascript
@@ -203,13 +203,13 @@ mvn clean install -PautoInstallSinglePackage
 
    >[!NOTE]
    >
-   >在此示例中，我们使用未包装的React文本组件，而不是包装的 `AEMText` 之前创建。 这是因为当组件是页面/容器的一部分并且不是独立组件时，容器将负责递归映射组件并启用创作功能，并且每个子组件不需要额外的包装器。
+   >在此示例中，使用未包装的React文本组件，而不是包装的 `AEMText` 之前创建。 这是因为当组件是页面/容器的一部分并且不是独立组件时，容器将负责递归映射组件并启用创作功能，并且每个子组件不需要额外的包装器。
 
-1. 要在SPA中添加可创作页面，请执行部分中的相同步骤 [将可创作组件添加到页面。](#add-authorable-component-to-page) 我们可以跳过 `itemPath` 属性。
+1. 要在SPA中添加可创作页面，请执行部分中的相同步骤 [将可创作组件添加到页面](#add-authorable-component-to-page). 我们可以跳过 `itemPath` 属性。
 
 #### 验证AEM上的页面内容 {#verify-page-content}
 
-要验证是否可以编辑页面，请执行部分中的相同步骤 [验证是否在AEM上编辑文本内容。](#verify-text-edit)
+要验证是否可以编辑页面，请执行部分中的相同步骤 [验证在AEM上编辑文本内容](#verify-text-edit).
 
 ![在AEM中编辑页面](assets/external-spa-edit-page.png)
 
@@ -217,7 +217,7 @@ mvn clean install -PautoInstallSinglePackage
 
 ### 虚拟叶组件 {#virtual-leaf-components}
 
-在前面的示例中，我们使用现有AEM内容将组件添加到SPA。 但是，在某些情况下，内容尚未在AEM中创建，但需要由内容作者稍后添加。 为了适应这种情况，前端开发人员可以在SPA内的适当位置添加组件。 在AEM的编辑器中打开这些组件时，将显示占位符。 内容作者将内容添加到这些占位符中后，将在JCR结构中创建节点并保留内容。 创建的元件将允许执行与独立叶元件相同的操作。
+在前面的示例中，我们使用现有AEM内容将组件添加到SPA。 但是，在某些情况下，内容尚未在AEM中创建，但需要由内容作者稍后添加。 为了适应这种情况，前端开发人员可以在SPA内的适当位置添加组件。 在AEM的编辑器中打开这些组件时，将显示占位符。 内容作者将内容添加到这些占位符中后，将在JCR结构中创建节点并保留内容。 创建的组件将允许执行与独立叶组件相同的一组操作。
 
 在本例中，我们将重用 `AEMText` 之前创建的组件。 我们希望在WKND主页上的现有文本组件下方添加新文本。 各组分的添加与普通叶组分相同。 但是， `itemPath` 可以更新到需要添加新组件的路径。
 
@@ -237,7 +237,7 @@ mvn clean install -PautoInstallSinglePackage
 >
 >确保 `AEMText` 组件具有其 `resourceType` 在配置中设置以启用此功能。
 
-现在，您可以按照一节中的步骤将更改部署到AEM [验证是否在AEM上编辑文本内容。](#verify-text-edit) 将显示当前不存在的占位符 `text_20` 节点。
+现在，您可以按照一节中的步骤将更改部署到AEM [验证在AEM上编辑文本内容](#verify-text-edit). 将显示当前不存在的占位符 `text_20` 节点。
 
 ![aem中的text_20节点](assets/external-spa-text20-aem.png)
 
@@ -247,13 +247,13 @@ mvn clean install -PautoInstallSinglePackage
 
 #### 要求和限制 {#limitations}
 
-添加虚拟叶组件有许多要求，但也存在一些限制。
+添加虚拟叶组件有几项要求以及一些限制。
 
 * 此 `pagePath` 属性是创建虚拟组件的必需属性。
 * 中的路径中提供的页面节点 `pagePath` 必须存在于AEM项目中。
 * 要创建的节点的名称必须提供在 `itemPath`.
 * 可以在任何级别创建组件。
-   * 如果我们提供 `itemPath='text_20'` 在上一个示例中，将直接在页面下创建新节点，即 `/content/wknd-spa-react/us/en/home/jcr:content/text_20`
+   * 如果我们提供 `itemPath='text_20'` 在上一个示例中，将直接在页面(即 `/content/wknd-spa-react/us/en/home/jcr:content/text_20`
 * 通过提供的指向在其中创建新节点的节点的路径必须有效 `itemPath`.
    * 在此示例中， `root/responsivegrid` 必须存在，以便新节点 `text_20` 可以在那里创建。
 * 仅支持创建叶组件。 未来版本将支持虚拟容器和页面。
@@ -286,7 +286,7 @@ mvn clean install -PautoInstallSinglePackage
 
 #### 要求和限制 {#container-limitations}
 
-添加虚拟容器有许多要求，但也存在一些限制。
+添加虚拟容器有几项要求以及一些限制。
 
 * 将从父容器继承用于确定可添加哪些组件的策略。
 * 要创建的容器的直接父级必须已存在于AEM中。
@@ -324,7 +324,7 @@ mvn clean install -PautoInstallSinglePackage
 
 ### 编辑React SPA和路由 {#editing-react-spa-with-routing}
 
-如果外部React SPA应用程序有多个页面， [它可以使用路由确定要渲染的页面/组件。](spa-routing.md) 基本用例是将当前活动的URL与为路由提供的路径进行匹配。 要在此类启用路由的应用程序中启用编辑，需要转换要匹配的路径以适应AEM特定的信息。
+如果外部React SPA应用程序有多个页面， [它可以使用路由来确定要渲染的页面/组件](spa-routing.md). 基本用例是将当前活动的URL与为路由提供的路径进行匹配。 要在此类启用路由的应用程序中启用编辑，需要转换要匹配的路径以适应AEM特定的信息。
 
 在以下示例中，我们有一个包含两个页面的简单React应用程序。 要渲染的页面是通过将提供给路由器的路径与活动URL进行匹配来确定的。 例如，如果为 `mydomain.com/test`， `TestPage` 将呈现。
 
@@ -351,9 +351,8 @@ mvn clean install -PautoInstallSinglePackage
       * 路由所需的路径
       * 编辑SPA的AEM实例的源URL
       * 第一步中确定的AEM上的项目根目录
+
    * 可以将这些值设置为环境变量，以获得更大的灵活性。
-
-
 
 1. 验证是否在AEM中编辑页面。
 
@@ -361,13 +360,13 @@ mvn clean install -PautoInstallSinglePackage
 
 ## 框架限制 {#framework-limitations}
 
-RemotePage组件要求实施提供与资产清单类似的资产清单 [此处找到。](https://github.com/shellscape/webpack-manifest-plugin) 但是，RemotePage组件仅经过测试，可以与React框架（和通过remote-page-next组件的Next.js）配合使用，因此不支持从其他框架(如Angular)远程加载应用程序。
+RemotePage组件要求实施提供与资产清单类似的资产清单 [在此处找到](https://github.com/shellscape/webpack-manifest-plugin). 但是，RemotePage组件仅经过测试，可以与React框架（和通过remote-page-next组件的Next.js）配合使用，因此不支持从其他框架(如Angular)远程加载应用程序。
 
 ## 其他资源 {#additional-resources}
 
 以下参考资料可能有助于了解AEM上下文中的SPA。
 
-* [AEM项目原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)
+* [AEM项目原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=zh-Hans)
 * [WKND SPA项目](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/spa-editor/spa-editor-framework-feature-video-use.html?lang=zh-Hans)
 * [利用 React 在 AEM 中开始使用 SPA](spa-getting-started-react.md)
 * [SPA参考资料（API参考）](spa-reference-materials.md)

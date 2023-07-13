@@ -1,18 +1,14 @@
 ---
 title: 如何使用代理服务器工具
-seo-title: How to use the Proxy Server Tool
 description: 代理服务器充当在客户端和服务器之间中继请求的中间服务器
-seo-description: The proxy server acts as an intermediate server that relays requests between a client and a server
-uuid: 30f4f46d-839e-4d23-a511-12f29b3cc8aa
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: development-tools
 content-type: reference
-discoiquuid: dfbc1d2f-80c1-4564-a01c-a5028b7257d7
 exl-id: 7222a0c3-cdb9-4c73-9d53-26f00792e439
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e068cee192c0837f1473802143e0793674d400e8
 workflow-type: tm+mt
-source-wordcount: '943'
+source-wordcount: '937'
 ht-degree: 0%
 
 ---
@@ -44,7 +40,7 @@ ht-degree: 0%
 
 `<host>`
 
-这是要连接到的CRX实例的主机地址。 如果实例位于本地计算机上，则它将 `localhost`.
+这是要连接到的CRX实例的主机地址。 如果实例位于本地计算机上，则这是 `localhost`.
 
 `<remoteport>`
 
@@ -52,7 +48,7 @@ ht-degree: 0%
 
 `<localport>`
 
-这是本地计算机上的端口，您希望连接到该端口以通过代理访问CRX实例。
+这是本地计算机上的端口，您希望连接该端口以通过代理访问CRX实例。
 
 **选项**
 
@@ -106,11 +102,11 @@ S-6-Finished: 665 bytes (1.0 kb/s)
 
 ### 示例 {#example}
 
-例如，请考虑位于存储库中的一个非常简单的html文档
+例如，假定存储库中的简单html文档位于
 
 `/content/test.html`
 
-图像文件位于
+图像文件旁边：
 
 `/content/test.jpg`
 
@@ -128,13 +124,13 @@ S-6-Finished: 665 bytes (1.0 kb/s)
 </html>
 ```
 
-假定AEM实例正在运行 `localhost:4502` 我们将启动代理，如下所示：
+假定AEM实例正在运行 `localhost:4502`，代理的启动方式如下：
 
 `java -jar proxy.jar localhost 4502 4444 -logfile test.log`
 
-现在可以通过以下位置的代理访问CQ/CRX实例： `localhost:4444` 通过此端口进行的所有通信都会记录到 `test.log`.
+现在可以通过以下位置的代理访问CQ/CRX实例： `localhost:4444` 通过此端口进行的所有通信都记录到 `test.log`.
 
-如果我们现在查看代理的输出，则会看到浏览器与AEM实例之间的交互。
+如果您现在查看代理的输出，则会看到浏览器与AEM实例之间的交互。
 
 启动时，代理输出以下内容：
 
@@ -143,11 +139,11 @@ starting proxy for localhost:4502 on port 4444
 using logfile: <some-dir>/crx-quickstart/opt/helpers/test.log
 ```
 
-然后，我们打开浏览器并访问测试页面：
+现在，打开浏览器并访问测试页面：
 
 `http://localhost:4444/content/test.html`
 
-而我们看到浏览器做了一个 `GET` 页面的请求：
+而且你看到浏览器会做出 `GET` 页面的请求：
 
 ```shell
 C-0-#000000 -> [GET /content/test.html HTTP/1.1 ]
@@ -219,7 +215,7 @@ Keep-alive是HTTP的一项功能，它允许客户端重新使用与服务器的
 
 **查找丢失的请求**
 
-如果在复杂的服务器设置中丢失请求，例如防火墙和Dispatcher，则可以使用代理服务器查找请求丢失的位置。 如果是防火墙：
+如果在复杂的服务器设置中丢失请求，例如防火墙和Dispatcher，则可以使用代理服务器查找请求丢失的位置。 如果有防火墙：
 
 * 在防火墙之前启动代理
 * 在防火墙后启动另一个代理
@@ -231,4 +227,4 @@ Keep-alive是HTTP的一项功能，它允许客户端重新使用与服务器的
 
 * 启动代理。
 * 等待或将访问日志写入一个文件，其中每个条目都有时间戳。
-* 当请求开始挂起时，您可以看到打开了多少连接，以及哪个请求引起了问题。
+* 当请求开始挂起时，您可以看到打开了多少个连接以及哪个请求引起了问题。

@@ -1,27 +1,23 @@
 ---
 title: 注释要点
-seo-title: Comments Essentials
 description: 注释组件概述
-seo-description: Comments component overview
-uuid: 58b7bb58-f598-4bcb-93ae-b7795cab51cd
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: 18f54a1c-52aa-414d-b494-1f19b5c10345
 exl-id: 8b4034f7-2f97-45ad-96d4-51cfbeae5991
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e068cee192c0837f1473802143e0793674d400e8
 workflow-type: tm+mt
-source-wordcount: '344'
+source-wordcount: '335'
 ht-degree: 3%
 
 ---
 
 # 注释要点 {#comments-essentials}
 
-此页面提供了使用评论系统（评论组件）的要点，以及管理用户在发表评论或回复时生成的内容(UGC)的选项。
+此页面提供了使用评论系统（评论组件）的要点，以及管理用户生成的内容(UGC)的选项，该内容在成员发布评论或回复时生成。
 
-评论部件建立一个评论系统，使得每个单独的帖子由一个评论部件（单数）表示。 它是包含在页面上的评论系统。 当调用时，注释系统将创建单个注释。
+评论部件建立一个评论系统，使得每个单独的帖子由一个评论部件（单数）表示。 它是包含在页面上的评论系统。 注释系统在调用时创建单个注释。
 
 ## 适用于客户端的Essentials {#essentials-for-client-side}
 
@@ -79,9 +75,9 @@ ht-degree: 3%
 
 ## 服务器端Essentials {#essentials-for-server-side}
 
-* [注释API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/commons/comments/api/package-summary.html)
+* [注释API](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/commons/comments/api/package-summary.html)
 
-* [评论端点](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/commons/comments/endpoints/package-summary.html)
+* [评论端点](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/commons/comments/endpoints/package-summary.html)
 
 * [服务器端自定义](server-customize.md)
 
@@ -90,7 +86,7 @@ ht-degree: 3%
 UGC应使用标准审核方法之一进行审核。
 参见 [审核用户生成的内容](moderate-ugc.md).
 
-自AEM 6.1社区起，使用 [公用存储](working-with-srp.md) for UGC包括对UGC的编程访问，而不管选择的存储选项（如ASRP、MSRP或JSRP）。
+自AEM 6.1社区起，使用 [公用存储](working-with-srp.md) for UGC包括对UGC的编程访问，而不考虑选择的存储选项（如ASRP、MSRP或JSRP）。
 
 **UGC在存储库中的位置和格式可能会发生更改，恕不发出警告**.
 
