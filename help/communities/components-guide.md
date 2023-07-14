@@ -1,25 +1,21 @@
 ---
 title: 社区组件指南
-seo-title: Community Components Guide
 description: 用于开始使用社交组件框架(SCF)的交互式开发工具
-seo-description: An interactive development tool to get started with the social component framework (SCF)
-uuid: 120e56d1-b93c-4f92-bab4-6bb5e40e0ddf
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: a777a3f1-b39f-4d90-b9b6-02d3e321a86f
 exl-id: 12c0eae5-fd76-4480-a012-25d3312f3570
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 681d1e6bd885b801b930e580d95645f160f17cea
 workflow-type: tm+mt
-source-wordcount: '1187'
+source-wordcount: '1181'
 ht-degree: 2%
 
 ---
 
 # 社区组件指南  {#community-components-guide}
 
-“社区组件”指南是一款互动式开发工具，专门用于 [社交组件框架(SCF)](scf.md). 它提供了可用AEM Communities组件或由多个组件构建的更复杂功能的列表。
+“社区组件”指南是一款互动式开发工具，专门用于 [社交组件框架(SCF)](scf.md). 它提供了可用Adobe Experience Manager (AEM) Communities组件的列表，以及由多个组件构建的更复杂功能的列表。
 
 除了每个组件的基本信息外，本指南还允许试验SCF组件/功能的工作方式以及如何对其进行配置或自定义。
 
@@ -27,28 +23,28 @@ ht-degree: 2%
 
 ## 快速入门 {#getting-started}
 
-本指南适用于创作(localhost：4502)和发布(localhost：4503)实例的开发安装。
+本指南适用于创作实例(localhost：4502)和发布实例(localhost：4503)的开发安装。
 
 通过浏览以访问社区组件站点
 
 * [https://&lt;server>：&lt;port>/content/community-components/en.html](http://localhost:4502/content/community-components/en.html)
 
-与社区组件的交互将因以下因素而异：
+与Communities组件的交互因以下因素而异：
 
 * 服务器（创作或发布）。
 * 网站访客是否已登录。
 * 如果已登录，则为成员分配权限。
-* 无论是否使用默认SRP， [JSRP](jsrp.md)，正在使用中。
+* 无论是默认SRP、 [JSRP](jsrp.md)，正在使用中。
 
 在创作时，要进入编辑模式，请插入以下任一内容 `editor.html` 或 `cf#` 作为服务器名称后的第一个路径段：
 
 * 标准 UI:
 
-   [https://&lt;server>：&lt;port>/editor.html/content/community-components/en.html](http://localhost:4502/editor.html/content/community-components/en.html)
+  [https://&lt;server>：&lt;port>/editor.html/content/community-components/en.html](http://localhost:4502/editor.html/content/community-components/en.html)
 
 * 经典 UI:
 
-   [https://&lt;server>：&lt;port>/cf#/content/community-components/en.html](http://localhost:4502/cf#/content/community-components/en.html)
+  [https://&lt;server>：&lt;port>/cf#/content/community-components/en.html](http://localhost:4502/cf#/content/community-components/en.html)
 
 >[!NOTE]
 >
@@ -56,7 +52,7 @@ ht-degree: 2%
 >
 >要导航到组件页面，请首先选择预览模式以激活链接。
 >
->在浏览器中显示组件页面后，返回到编辑模式以打开组件的“编辑”对话框。
+>在浏览器中显示组件页面后，返回编辑模式以打开组件的“编辑”对话框。
 >
 >有关一般创作信息，请查看 [页面创作快速指南](../../help/sites-authoring/qg-page-authoring.md).
 >
@@ -84,7 +80,7 @@ ht-degree: 2%
 
    * 如果添加，则显示的文本为：“此组件通过其par节点包含。”
    * 如果包含，则显示的文本为：“此组件是动态包含的。”
-   * 如果不可包含，则不会显示任何文本
+   * 如果不可包含，则不会显示文本
 
 1. 示例元件或特征：元件或特征的活动实例。 如果组件，则它可能会随对选项卡部分中提供的模板、CSS和数据所做的更改而更改。
 
@@ -96,7 +92,7 @@ ht-degree: 2%
 
 在创作实例上使用指南时，可以通过打开组件对话框来体验配置组件的过程。 有关开发人员的信息，请参见 [组件和功能要点](essentials.md) 部分，而对话框设置在中进行了描述 [Communities组件](author-communities.md) 部分。
 
-对于“社区组件”指南，某些组件对话框设置会由 [可包含](scf.md#add-or-include-a-communities-component) 切换状态。 要在使用现有资源或动态包含的资源之间进行切换，请在编辑模式下同时选择组件和可包含文本，然后双击以打开“编辑”对话框：
+在社区组件指南中，某些组件对话框设置上覆盖了 [可包含](scf.md#add-or-include-a-communities-component) 切换状态。 要在使用现有资源或动态包含的资源之间进行切换，请在编辑模式下同时选择组件和可包含文本，然后双击以打开“编辑”对话框：
 
 ![community-component3](assets/community-component3.png)
 
@@ -106,15 +102,15 @@ ht-degree: 2%
 
 * **通过 sling:include 包含子组件**
 
-   如果未选中，《组件指南》将使用存储库中的现有资源（一个jcr节点，它是par节点的子节点）。
+  如果未选中，《组件指南》将使用存储库中的现有资源（一个jcr节点，它是par节点的子节点）。
 
    * 显示的文本为：“通过其par节点包含此组件。”
 
-   如果选中，组件指南将使用sling动态包含子节点的resourceType（非现有资源）的组件。
+  如果选中，组件指南会使用sling动态包含子节点的resourceType（非现有资源）的组件。
 
    * 显示的文本为：“此组件是动态包含的。”
 
-   默认值为未选中。
+  默认值为未选中。
 
 ### 发布交互 {#publish-interactions}
 
@@ -126,7 +122,7 @@ ht-degree: 2%
 
 ## 客户端库 {#client-side-libraries}
 
-为每个组件列出的客户端库(clientlibs)为 *必需* 组件放在页面上时要引用的对象。 clientlibs提供了一种方法，用于管理和优化用于在浏览器中呈现组件的Javascript和CSS的下载。
+为每个组件列出的客户端库(clientlibs)为 *必需* 组件放在页面上时要引用的对象。 clientlibs提供了一种方法，用于管理和优化用于在浏览器中呈现组件的JavaScript和CSS的下载。
 
 有关详细信息，请访问 [适用于社区组件的Clientlibs](clientlibs.md).
 
@@ -169,7 +165,7 @@ ht-degree: 2%
 
    [http://localhost:4503/content/community-components/en/comments.html](http://localhost:4503/content/community-components/en/comments.html)
 
-1. 请注意，现在有3个选项卡，分别用于“模板”、“CSS”和“数据”。
+1. 请注意，现在有三个选项卡，分别用于“模板”、“CSS”和“数据”。
 
 ![community-component5](assets/community-component5.png)
 

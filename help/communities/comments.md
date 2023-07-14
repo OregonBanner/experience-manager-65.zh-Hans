@@ -1,17 +1,13 @@
 ---
 title: 使用注释
-seo-title: Using Comments
 description: “评论”功能允许登录的网站访客分享其意见和知识
-seo-description: Comments feature lets signed-in site visitors share their opinions and knowledge
-uuid: 40acd962-846c-483c-b789-aab3a7d2b31b
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: authoring
 content-type: reference
-discoiquuid: 216cfb3e-777e-4773-afba-749debdca000
 docset: aem65
 exl-id: 30baebd9-13c5-4fde-a494-85601abc32a5
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 681d1e6bd885b801b930e580d95645f160f17cea
 workflow-type: tm+mt
 source-wordcount: '980'
 ht-degree: 4%
@@ -65,43 +61,43 @@ ht-degree: 4%
 
 * **允许回复**
 
-   如果选中，则允许成员回复现有注释。 默认已取消选中。
+  如果选中，则允许成员回复现有注释。 默认已取消选中。
 
 * **每页的评论数**
 
-   限制每页显示的评论数和显示的回复数。 默认值为10。
+  限制每页显示的评论数和显示的回复数。 默认值为10。
 
 * **允许文件上传**
 
-   如果选中，上载文件的选项将显示为文本输入框。 默认已取消选中。
+  如果选中，上载文件的选项将显示为文本输入框。 默认已取消选中。
 
 * **最大文件大小**
 
-   仅在选中允许文件上传时才相关。 此值限制上传的文件大小。 默认限制为10 MB。
+  仅在选中允许文件上传时才相关。 此值限制上传的文件大小。 默认限制为10 MB。
 
 * **最大消息长度**
 
-   文本框中可以输入的最大字符数。 默认值为4096个字符。
+  文本框中可以输入的最大字符数。 默认值为4096个字符。
 
 * **允许的文件类型**
 
-   仅在选中允许文件上传时才相关。 以“点”分隔符分隔的文件名扩展名列表。 例如： .jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定了任何文件类型，则不允许未指定的文件类型。 缺省值为none以便允许所有文件类型。
+  仅在选中允许文件上传时才相关。 以“点”分隔符分隔的文件名扩展名列表。 例如： .jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定了任何文件类型，则不允许未指定的文件类型。 缺省值为none以便允许所有文件类型。
 
 * **富文本编辑器**
 
-   如果选中，则输入注释时带有标记。 默认已取消选中。
+  如果选中，则输入注释时带有标记。 默认已取消选中。
 
 * **允许投票**
 
-   如果选中，则会显示文本输入框中的向上或向下投票选项。 默认已取消选中。
+  如果选中，则会显示文本输入框中的向上或向下投票选项。 默认已取消选中。
 
 * **允许关注**
 
-   如果选中，则允许成员关注注释。 默认已取消选中。
+  如果选中，则允许成员关注注释。 默认已取消选中。
 
 * **显示徽章**
 
-   如果选中，则允许显示已获得和已授予的徽章。 默认已取消选中。
+  如果选中，则允许显示已获得和已授予的徽章。 默认已取消选中。
 
 #### “用户审核”选项卡 {#user-moderation-tab}
 
@@ -109,39 +105,39 @@ ht-degree: 4%
 
 * **预审**
 
-   如果选中，评论必须先获得批准，然后才能显示在发布网站上。 默认已取消选中。
+  如果选中，评论必须先获得批准，然后才能显示在发布网站上。 默认已取消选中。
 
 * **删除评论**
 
-   如果选中，则为发布评论的成员提供删除评论的功能。 默认已取消选中。
+  如果选中，则为发布评论的成员提供删除评论的功能。 默认已取消选中。
 
 * **拒绝评论**
 
-   如果选中，则允许审查方拒绝评论。 默认已取消选中。
+  如果选中，则允许审查方拒绝评论。 默认已取消选中。
 
 * **关闭/重新打开注释**
 
-   如果选中，则允许审查方关闭和重新打开注释。 默认已取消选中。
+  如果选中，则允许审查方关闭和重新打开注释。 默认已取消选中。
 
 * **标记注释**
 
-   如果选中，则允许成员将评论标记为不适当。 默认已取消选中。
+  如果选中，则允许成员将评论标记为不适当。 默认已取消选中。
 
 * **标记原因列表**
 
-   如果选中，则允许成员从下拉列表中选择将评论标记为不适当的原因。 默认已取消选中。
+  如果选中，则允许成员从下拉列表中选择将评论标记为不适当的原因。 默认已取消选中。
 
 * **自定义标志原因**
 
-   如果选中，则允许成员输入将评论标记为不适当的原因。 默认已取消选中。
+  如果选中，则允许成员输入将评论标记为不适当的原因。 默认已取消选中。
 
 * **审核阈值**
 
-   输入在通知版主之前，评论必须由成员标记的次数。 默认值为一次(1)。
+  输入在通知版主之前，评论必须由成员标记的次数。 默认值为一次(1)。
 
 * **标记限制**
 
-   输入在将评论从公开视图隐藏之前必须对其标记的次数。 此数字必须大于或等于 **审核阈值**. 默认值为5。
+  输入在将评论从公开视图隐藏之前必须对其标记的次数。 此数字必须大于或等于 **审核阈值**. 默认值为5。
 
 #### “排序设置”选项卡 {#sort-settings-tab}
 
@@ -149,11 +145,11 @@ ht-degree: 4%
 
 * **排序字段**
 
-   下拉以选择其中一项 `Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed`，或 `Most Liked`.
+  下拉以选择其中一项 `Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed`，或 `Most Liked`.
 
 * **排序顺序**
 
-   下拉以选择其中一项 `Ascending` 或 `Descending`.
+  下拉以选择其中一项 `Ascending` 或 `Descending`.
 
 ### 更改为自定义评论类型 {#changing-to-a-custom-comment-type}
 
@@ -167,19 +163,19 @@ ht-degree: 4%
 
 * **评论资源类型**
 
-   导航到扩展的资源类型 `comment` /apps中的组件（单个注释）。 例如，`/apps/social/commons/components/hbs/comments/comment`
+  导航到扩展的资源类型 `comment` /apps中的组件（单个注释）。 例如，`/apps/social/commons/components/hbs/comments/comment`
 
-   此资源标识访客发表评论时创建的UGC的resourceType。
+  此资源标识访客发表评论时创建的UGC的resourceType。
 
 * **投票资源类型**
 
-   导航到扩展的资源类型 `voting` /apps中的组件 例如，`/apps/social/components/hbs/voting`
+  导航到扩展的资源类型 `voting` /apps中的组件 例如，`/apps/social/components/hbs/voting`
 
-   此资源标识访客发表投票时创建的UGC的资源类型。
+  此资源标识访客发表投票时创建的UGC的资源类型。
 
 * **评论系统资源类型**
 
-   导航到扩展的资源类型 `comments`/apps中的组件（注释系统）。 除非页面模板，否则保留为空 [动态包括](/help/communities/scf.md#add-or-include-a-communities-component) 基础脚本中的注释系统，而不是作为资源（注释节点）添加到页面中。 通过阅读有关 [{{include}} 辅助函数](/help/communities/handlebars-helpers.md#include).
+  导航到扩展的资源类型 `comments`/apps中的组件（注释系统）。 除非页面模板，否则保留为空 [动态包括](/help/communities/scf.md#add-or-include-a-communities-component) 基础脚本中的注释系统，而不是作为资源（注释节点）添加到页面中。 通过阅读有关 [{{include}} 辅助函数](/help/communities/handlebars-helpers.md#include).
 
 ### 网站访客体验 {#site-visitor-experience}
 

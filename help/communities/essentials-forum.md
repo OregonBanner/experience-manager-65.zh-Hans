@@ -1,19 +1,15 @@
 ---
 title: 论坛要点
-seo-title: Forum Essentials
 description: 论坛概述
-seo-description: Forum overview
-uuid: 68849582-8742-40be-9e7e-0b574ae38815
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: 059c5bbe-07eb-4873-8157-2196df887b27
 exl-id: 622cf6ca-f119-4310-ad14-537576bd6f6d
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 681d1e6bd885b801b930e580d95645f160f17cea
 workflow-type: tm+mt
-source-wordcount: '253'
-ht-degree: 1%
+source-wordcount: '246'
+ht-degree: 2%
 
 ---
 
@@ -56,22 +52,22 @@ ht-degree: 1%
 
 ## 服务器端Essentials {#essentials-for-server-side}
 
-* [论坛API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/forum/client/api/package-summary.html)
+* [论坛API](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/forum/client/api/package-summary.html)
 
-* [论坛端点](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/forum/client/endpoints/package-summary.html)
+* [论坛端点](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/forum/client/endpoints/package-summary.html)
 
 * [服务器端自定义](server-customize.md)
 
 ### 论坛功能 {#forum-function}
 
-社区站点结构包括 [论坛功能](functions.md#forum-function)，包括已配置的 `forum` 以及影响审核、标记和翻译的设置。
+社区站点结构包括 [论坛功能](functions.md#forum-function)，包括已配置的 `forum` 影响审核、标记和翻译的组件和设置。
 
 ### 访问论坛帖子(UGC) {#accessing-forum-posts-ugc}
 
 UGC应使用标准审核方法之一进行审核。
 参见 [审核用户生成的内容](moderate-ugc.md).
 
-自AEM 6.1社区起，使用 [公用存储](working-with-srp.md) for UGC包括对UGC的编程访问，而不管选择的存储选项（如ASRP、MSRP或JSRP）。
+自Adobe Experience Manager 6.1社区起，使用 [公用存储](working-with-srp.md) for UGC包括对UGC的编程访问，而不考虑选择的存储选项（如ASRP、MSRP或JSRP）。
 
 **UGC在存储库中的位置和格式可能会发生更改，恕不发出警告**.
 
