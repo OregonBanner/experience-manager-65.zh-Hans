@@ -1,20 +1,16 @@
 ---
 title: 单点登录
-seo-title: Single Sign On
-description: 了解如何为AEM实例配置单点登录(SSO)。
-seo-description: Learn how to configure Single Sign On (SSO) for an AEM instance.
-uuid: b8dcb28e-4604-4da5-b8dd-4e1e2cbdda18
+description: 了解如何为Adobe Experience Manager (AEM)实例配置单点登录(SSO)。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: configuring, Security
 content-type: reference
-discoiquuid: 86e8dc12-608d-4aff-ba7a-5524f6b4eb0d
 feature: Configuring
 exl-id: 7d2e4620-c3a5-4f5a-9eb6-42a706479d41
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 69346a710708ee659ee97e9fdc193c8ea2658fe6
 workflow-type: tm+mt
-source-wordcount: '740'
-ht-degree: 0%
+source-wordcount: '742'
+ht-degree: 1%
 
 ---
 
@@ -22,7 +18,7 @@ ht-degree: 0%
 
 单点登录(SSO)允许用户在提供一次身份验证凭据（如用户名和密码）后访问多个系统。 一个独立的系统（称为可信验证器）执行验证并向Experience Manager提供用户凭证。 Experience Manager检查并强制用户的访问权限（即确定允许用户访问哪些资源）。
 
-SSO身份验证处理程序服务( `com.adobe.granite.auth.sso.impl.SsoAuthenticationHandler`)处理受信任的验证器提供的验证结果。 SSO身份验证处理程序按以下顺序在下列位置搜索ssid （SSO标识符）作为特殊属性的值：
+SSO身份验证处理程序服务( `com.adobe.granite.auth.sso.impl.SsoAuthenticationHandler`)处理受信任的验证器提供的验证结果。 SSO身份验证处理程序按以下顺序在下列位置搜索SSO标识符(SSID)作为特殊属性的值：
 
 1. 请求标头
 1. Cookie
@@ -30,12 +26,12 @@ SSO身份验证处理程序服务( `com.adobe.granite.auth.sso.impl.SsoAuthentic
 
 找到某个值后，即完成搜索并使用该值。
 
-配置以下两个服务以识别存储ssid的属性的名称：
+配置以下两个服务以识别存储SSID的属性的名称：
 
 * 登录模块。
 * SSO身份验证服务。
 
-您必须为两个服务指定相同的属性名称。 该属性包含在 `SimpleCredentials` 提供给 `Repository.login`. 属性的值是无关的和被忽略的，它的存在就是重要的，也是被验证的。
+为两个服务指定相同的属性名称。 该属性包含在 `SimpleCredentials` 提供给 `Repository.login`. 属性的值是无关的和被忽略的，它的存在就是重要的，也是被验证的。
 
 ## 配置SSO {#configuring-sso}
 
@@ -49,7 +45,8 @@ SSO身份验证处理程序服务( `com.adobe.granite.auth.sso.impl.SsoAuthentic
    * **标题名称**： `LOGON_USER`
    * **ID格式**： `^<DOMAIN>\\(.+)$`
 
-      位置 `<*DOMAIN*>` 将由您自己的域名替换。
+     位置 `<*DOMAIN*>` 将由您自己的域名称替换。
+
    对于CoSign：
 
    * **路径：** 根据需要；例如， `/`
@@ -62,8 +59,6 @@ SSO身份验证处理程序服务( `com.adobe.granite.auth.sso.impl.SsoAuthentic
    * **标头名称：** SM_USER
    * **ID格式**：原样
 
-
-
 1. 确认单点登录可按要求工作；包括授权。
 
 >[!CAUTION]
@@ -75,31 +70,30 @@ SSO身份验证处理程序服务( `com.adobe.granite.auth.sso.impl.SsoAuthentic
 >任何无需通过Web服务器即可直接访问您的AEM实例的用户都可以通过发送标头、Cookie或参数（如果名称已知）来充当任何用户。
 >
 >另外，请确保在标头、Cookie和请求参数名称中，您仅配置设置单点登录所需的名称。
+>
 
 >[!NOTE]
 >
->单点登录通常与 [LDAP](/help/sites-administering/ldap-config.md).
+>单点登录通常用于 [LDAP](/help/sites-administering/ldap-config.md).
 
 >[!NOTE]
 >
->如果您还使用 [调度程序](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html) 使用Microsoft Internet Information Server (IIS)时，需要在以下位置进行其他配置：
+>如果您还使用 [调度程序](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hans) 使用Microsoft® Internet Information Server (IIS)时，需要在以下位置进行其他配置：
 >
->* `disp_iis.ini`
->* IIS
+* `disp_iis.ini`
+* IIS
 >
->In `disp_iis.ini` 设置：
->(请参阅 [在Microsoft Internet Information Server中安装Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-install.html#microsoft-internet-information-server) 以了解完整的详细信息)
+In `disp_iis.ini` set： (请参阅 [在Microsoft® Internet Information Server中安装Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install.html?lang=en#microsoft-internet-information-server) 以了解完整的详细信息)
 >
->* `servervariables=1` （将IIS服务器变量作为请求标头转发到远程实例）
->* `replaceauthorization=1` （将除“Basic”以外的任何名为“Authorization”的标头替换为其“Basic”等效标头）
+* `servervariables=1` （将IIS服务器变量作为请求标头转发到远程实例）
+* `replaceauthorization=1` （将除“Basic”以外的任何名为“Authorization”的标头替换为其“Basic”等效标头）
 >
->在IIS中：
+在IIS中：
 >
->* disable **匿名访问**
+* disable **匿名访问**
 >
->* 启用 **集成的Windows身份验证**
+* 启用 **集成的Windows身份验证**
 >
-
 
 您可以使用查看将哪个身份验证处理程序应用于内容树的任何部分 **验证者** Felix控制台选项，例如：
 
@@ -157,7 +151,7 @@ Transfer-Encoding: chunked
 
 >[!NOTE]
 >
->在浏览器中使用请求参数时，您只会看到部分HTML（不带CSS）。 这是因为所有来自HTML的请求都是在没有请求参数的情况下发出的。
+在浏览器中使用请求参数时，您只能看到部分HTML（不带CSS）。 这是因为所有来自HTML的请求都是在没有请求参数的情况下发出的。
 
 ## 删除AEM注销链接 {#removing-aem-sign-out-links}
 
@@ -170,7 +164,7 @@ Transfer-Encoding: chunked
 
    `<a href="#" onclick="signout('<%= request.getContextPath() %>');" class="signout"><%= i18n.get("sign out", "welcome screen") %>`
 
-要删除用户右上角个人菜单中可用的注销链接，请执行以下步骤：
+要删除用户右上角个人菜单中的注销链接，请执行以下步骤：
 
 1. 叠加 `/libs/cq/ui/widgets/source/widgets/UserInfo.js` 到 `/apps/cq/ui/widgets/source/widgets/UserInfo.js`
 

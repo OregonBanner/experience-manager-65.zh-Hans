@@ -1,27 +1,23 @@
 ---
 title: 在We.Retail中尝试内容片段
-seo-title: Trying out Content Fragments in We.Retail
 description: 在We.Retail中尝试内容片段
-seo-description: null
-uuid: 66daddfe-8e98-47b6-8499-db055887ac17
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
-discoiquuid: d1326737-f378-46d0-9916-61ead4d31639
 exl-id: 1e5d8184-7164-4984-b43e-421015e8bf52
-source-git-commit: d045fc1ac408f992d594a4cb68d1c4eeae2b0de1
+source-git-commit: 69346a710708ee659ee97e9fdc193c8ea2658fe6
 workflow-type: tm+mt
-source-wordcount: '452'
-ht-degree: 21%
+source-wordcount: '455'
+ht-degree: 16%
 
 ---
 
 # 在We.Retail中尝试内容片段{#trying-out-content-fragments-in-we-retail}
 
-内容片段允许您创建渠道中性内容，以及各种（特定于渠道的）变量。**We.Retail** (在AEM的现成实例中可用)提供片段 **罗福滕北极冲浪** 作为基本样本。 这说明：
+内容片段允许您创建渠道中性内容，以及各种（特定于渠道的）变量。**We.Retail** (在Adobe Experience Manager的现成实例中可用)提供片段 **罗福滕北极冲浪** 作为基本样本。 这说明：
 
-* Adobe Experience Manager (AEM) 内容片段[作为独立于页面的资产而创建和管理](/help/assets/content-fragments/content-fragments.md)。这允许您创建渠道中性内容，以及各种（特定于渠道的）变体。
+* Adobe Experience Manager (AEM) 内容片段[作为独立于页面的资产而创建和管理](/help/assets/content-fragments/content-fragments.md)。它们允许您创建渠道中性内容，以及各种（特定于渠道的）变体。
 
    * 参见 [在We.Retail中的何处查找内容片段资产](#where-to-find-content-fragments-in-we-retail)
 
@@ -37,7 +33,7 @@ ht-degree: 21%
 >
 >**内容片段**&#x200B;和&#x200B;**[体验片段](/help/sites-authoring/experience-fragments.md)**&#x200B;是 AEM 中的两个不同功能：
 >
->* **内容片段**&#x200B;是可编辑内容，主要为文本和相关图像。它们是纯内容，没有设计和布局。
+>* **内容片段** 是可编辑内容，主要为文本和相关图像。 它们是纯内容，没有设计和布局。
 >* **体验片段**&#x200B;是经过充分布局的内容；例如，网页的一个片段。
 >
 >体验片段可以包含内容片段形式的内容，反之则不行。
@@ -48,7 +44,7 @@ We.Retail中有多个示例内容片段；导航到 **资产**， **文件**， 
 
 其中包括 **罗福滕北极冲浪**，片段以及相关的可视资产：
 
-* 导航方式 **资产**， **文件**， **We.Retail**， **英语**， **体验**， **洛富登的北极海浪**：
+* 导航方式 **资产**， **文件**， **We.Retail**， **英语**， **体验**， **罗福滕北极冲浪**：
 
    * [http://localhost:4502/assets.html/content/dam/we-retail/en/experiences/arctic-surfing-in-lofoten](http://localhost:4502/assets.html/content/dam/we-retail/en/experiences/arctic-surfing-in-lofoten)
 
@@ -88,7 +84,7 @@ We.Retail中有多个示例内容片段；导航到 **资产**， **文件**， 
 
 * [使用内容片段](/help/assets/content-fragments/content-fragments.md)
 
-   * 了解如何创建、编辑和管理您的内容片段资产。
+   * 了解如何创建、编辑和管理内容片段资产。
 
 * [使用内容片段进行页面创作](/help/sites-authoring/content-fragments.md)
 

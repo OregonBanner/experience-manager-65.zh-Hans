@@ -1,18 +1,14 @@
 ---
 title: 应用程序服务器安装
-seo-title: Application Server Install
-description: 了解如何在应用程序服务器中安装AEM。
-seo-description: Learn how to install AEM with an application server.
-uuid: c9571f80-6ed1-46fe-b7c3-946658dfc3f4
+description: 了解如何在应用程序服务器中安装Adobe Experience Manager。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: deploying
-discoiquuid: 6fdce35d-2709-41cc-87fb-27a4b867e960
 exl-id: 3a90f1d2-e53f-4cc4-8122-024ad6500de0
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 69346a710708ee659ee97e9fdc193c8ea2658fe6
 workflow-type: tm+mt
-source-wordcount: '1163'
+source-wordcount: '1162'
 ht-degree: 0%
 
 ---
@@ -21,14 +17,15 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->`JAR` 和 `WAR` 是AEM发布时所用的文件类型。 这些格式正在进行质量保证，以满足Adobe承诺的支持级别。
+>`JAR` 和 `WAR` Adobe Experience Manager (AEM)是在中发布的文件类型。 这些格式正在进行质量保证，以满足Adobe承诺的支持级别。
+>
 
 本节将介绍如何通过应用程序服务器安装Adobe Experience Manager (AEM)。 请参阅 [支持的平台](/help/sites-deploying/technical-requirements.md#servlet-engines-application-servers) 部分，以了解为各个应用程序服务器提供的特定支持级别。
 
 以下应用程序服务器的安装步骤已说明：
 
-* [WebSphere 8.5](#websphere)
-* [JBoss EAP 6.3.0/6.4.0](#jboss-eap)
+* [WebSphere](#websphere)
+* [Jboss](#jboss-eap)
 * [oracleWebLogic 12.1.3/12.2](#oracle-weblogic)
 * [Tomcat 8/8.5](#tomcat)
 
@@ -47,7 +44,7 @@ AEM只提供一个war文件来进行部署。
 如果部署，则默认情况下会发生以下情况：
 
 * 运行模式为 `author`
-* 实例（存储库、Felix OSGI环境、捆绑包等） 安装在 `${user.dir}/crx-quickstart`位置 `${user.dir}` 是当前工作目录，将调用crx-quickstart的此路径 `sling.home`
+* 实例（存储库、Felix OSGI环境、捆绑包等）安装在中 `${user.dir}/crx-quickstart`位置 `${user.dir}` 是当前工作目录，将调用crx-quickstart的此路径 `sling.home`
 
 * 上下文根目录是war文件名，例如： `aem-6`
 
@@ -86,8 +83,8 @@ AEM只提供一个war文件来进行部署。
 1. 将sling.home参数更改为其他路径（可以使用绝对路径和相对路径）。
 1. 将sling.run.modes更改为发布实例的发布。
 1. 重新打包web.xml文件。
-1. 重命名war文件，使其具有不同的名称：例如，一个重命名为aemauthor.war，另一个重命名为aempublish.war。
-1. 使用更高的内存设置，例如，默认AEM实例使用 — Xmx3072m
+1. 请重命名war文件，以便它们有不同的名称。 例如，一个重命名为aemauthor.war，另一个重命名为aempublish.war。
+1. 使用更高的内存设置。 例如，默认AEM实例使用 `-Xmx3072m`
 1. 部署两个Web应用程序。
 1. 部署后，停止两个Web应用程序。
 1. 在创作实例和发布实例中，均确保在sling.properties文件中，属性felix.service.urlhandlers=false设置为false（默认设置为true）。
@@ -95,7 +92,7 @@ AEM只提供一个war文件来进行部署。
 
 ## 应用程序服务器安装过程 {#application-servers-installation-procedures}
 
-### WebSphere 8.5 {#websphere}
+### WebSphere® 8.5 {#websphere}
 
 在部署之前，请阅读 [常规描述](#general-description) 上面。
 
@@ -103,10 +100,10 @@ AEM只提供一个war文件来进行部署。
 
 * 让基本身份验证标头通过：
 
-   * 允许AEM对用户进行身份验证的一种方法是禁用WebSphere服务器的全局管理安全性，方法是转到“安全性” — >“全局安全性”，然后取消选中“启用管理安全性”复选框，保存并重新启动服务器。
+   * 允许AEM对用户进行身份验证的一种方法是禁用WebSphere®服务器的全局管理安全性，方法是转到“安全性” — >“全局安全性”，然后取消选中“启用管理安全性”复选框，保存并重新启动服务器。
 
 * set `"JAVA_OPTS= -Xmx2048m"`
-* 如果要使用上下文根= /安装AEM，则必须首先更改现有默认Web应用程序的上下文根
+* 如果要使用上下文根= /安装AEM，请更改现有默认Web应用程序的上下文根。
 
 **部署AEM Web应用程序**
 
@@ -124,13 +121,13 @@ AEM只提供一个war文件来进行部署。
 
 * 启动AEM Web应用程序
 
-#### JBoss EAP 6.3.0/6.4.0 {#jboss-eap}
+#### JBoss® EAP 6.3.0/6.4.0 {#jboss-eap}
 
 在部署之前，请阅读 [常规描述](#general-description) 上面。
 
-**准备JBoss服务器**
+**准备JBoss®服务器**
 
-在conf文件中设置内存参数(例如 `standalone.conf`)
+在conf文件中设置内存参数(例如， `standalone.conf`)
 
 * JAVA_OPTS=&quot;-Xms64m -Xmx2048m&quot;
 
@@ -144,7 +141,7 @@ AEM只提供一个war文件来进行部署。
 
 **部署AEM Web应用程序**
 
-* 在JBoss管理控制台中上传AEM Web应用程序。
+* 在JBoss®管理控制台中上传AEM Web应用程序。
 
 * 启用AEM Web应用程序。
 
@@ -162,7 +159,7 @@ AEM只提供一个war文件来进行部署。
 
 * 增加VM内存设置：
 
-   * open `${myDomain}/bin/setDomainEnv.cmd` (resp .sh)搜索WLS_MEM_ARGS，设置例如 `WLS_MEM_ARGS_64BIT=-Xms256m -Xmx2048m`
+   * open `${myDomain}/bin/setDomainEnv.cmd` (resp .sh)搜索WLS_MEM_ARGS，设置，例如，设置 `WLS_MEM_ARGS_64BIT=-Xms256m -Xmx2048m`
    * 重新启动WebLogic Server
 
 * 在中创建 `${myDomain}` 包文件夹，cq文件夹内和计划文件夹内
@@ -170,7 +167,7 @@ AEM只提供一个war文件来进行部署。
 **部署AEM Web应用程序**
 
 * 下载AEM war文件
-* 将AEM war文件放入${myDomain}/packages/cq文件夹中
+* 将AEM war文件放入${myDomain}/packages/cq文件夹
 * 在中进行配置 `WEB-INF/web.xml` 如果需要（请参阅上文“一般说明”中的）
 
    * 解包 `WEB-INF/web.xml`文件
@@ -191,48 +188,48 @@ AEM只提供一个war文件来进行部署。
 
    * 增加VM内存设置：
 
-      * In `bin/catalina.bat` (响应 `catalina.sh` 在unix上)添加以下设置：
+      * In `bin/catalina.bat` (响应 `catalina.sh` 在UNIX®上)添加以下设置：
       * `set "JAVA_OPTS= -Xmx2048m`
+
    * 在安装时，Tomcat不启用管理员或管理员访问权限。 因此，您必须手动编辑 `tomcat-users.xml` 要允许这些帐户访问，请执行以下操作：
 
       * 编辑 `tomcat-users.xml` 以包括管理员和经理的访问权限。 该配置应类似于以下示例：
 
-         ```xml
-         <?xml version='1.0' encoding='utf-8'?>
-         <tomcat-users>
-         role rolename="manager"/>
-         role rolename="tomcat"/>
-         <role rolename="admin"/>
-         <role rolename="role1"/>
-         <role rolename="manager-gui"/>
-         <user username="both" password="tomcat" roles="tomcat,role1"/>
-         <user username="tomcat" password="tomcat" roles="tomcat"/>
-         <user username="admin" password="admin" roles="admin,manager-gui"/>
-         <user username="role1" password="tomcat" roles="role1"/>
-         </tomcat-users>
-         ```
+        ```xml
+        <?xml version='1.0' encoding='utf-8'?>
+        <tomcat-users>
+        role rolename="manager"/>
+        role rolename="tomcat"/>
+        <role rolename="admin"/>
+        <role rolename="role1"/>
+        <role rolename="manager-gui"/>
+        <user username="both" password="tomcat" roles="tomcat,role1"/>
+        <user username="tomcat" password="tomcat" roles="tomcat"/>
+        <user username="admin" password="admin" roles="admin,manager-gui"/>
+        <user username="role1" password="tomcat" roles="role1"/>
+        </tomcat-users>
+        ```
+
    * 如果要使用上下文根“/”部署AEM，则必须更改现有ROOT Web应用程序的上下文根：
 
       * 停止和取消部署ROOT Web应用程序
       * 重命名tomcat webapps文件夹中的ROOT.war文件夹
       * 再次启动Web应用程序
+
    * 如果使用管理器gui安装AEM Web应用程序，则需要增加已上传文件的最大大小，因为默认仅允许50MB上传大小。 对于打开管理器Web应用程序的web.xml，
 
-      `webapps/manager/WEB-INF/web.xml`
+     `webapps/manager/WEB-INF/web.xml`
 
-      并将max-file-size和max-request-size增加到至少500MB，请参见以下内容 `multipart-config` 此类的示例 `web.xml` 文件。
+     并将max-file-size和max-request-size增加到至少500MB，请参见以下内容 `multipart-config` 此类示例 `web.xml` 文件。
 
-      ```xml
-      <multipart-config>
-      <!-- 500MB max -->
-      <max-file-size>524288000</max-file-size>
-      <max-request-size>524288000</max-request-size>
-      <file-size-threshold>0</file-size-threshold>
-      </multipart-config>
-      ```
-
-
-
+     ```xml
+     <multipart-config>
+     <!-- 500MB max -->
+     <max-file-size>524288000</max-file-size>
+     <max-request-size>524288000</max-request-size>
+     <file-size-threshold>0</file-size-threshold>
+     </multipart-config>
+     ```
 
 * **部署AEM Web应用程序**
 
@@ -243,10 +240,10 @@ AEM只提供一个war文件来进行部署。
       * 将sling.run.modes参数更改为发布
       * 取消对sling.home初始参数的注释，并根据需要设置此路径
       * 重新打包web.xml文件
+
    * 将AEM war文件重命名为ROOT.war如果要将其部署为根Web应用程序，请将其重命名为aemauthor.war例如，如果要将aemauthor作为上下文根
    * 将其复制到tomcat的webapps文件夹中
    * 等待安装AEM
-
 
 ## 疑难解答 {#troubleshooting}
 
