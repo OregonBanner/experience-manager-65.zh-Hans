@@ -1,16 +1,14 @@
 ---
 title: AEM Mobile On-demand Services的最佳实践
 description: 了解可帮助经验丰富的AEM网站开发人员构建移动应用程序模板和组件的最佳实践和准则。
-uuid: 7733c8b1-a88c-455c-8080-f7add4205b92
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-on-demand-services-app
-discoiquuid: a0647696-72c3-409b-85ba-9275d8f99cff
 exl-id: 63ceaba6-b796-4c13-a86d-f0609ec679c9
-source-git-commit: a2fd3c0c1892ac648c87ca0dec440e22144c37a2
+source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
 workflow-type: tm+mt
-source-wordcount: '596'
+source-wordcount: '592'
 ht-degree: 1%
 
 ---
@@ -19,11 +17,11 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->Adobe建议对需要基于单页应用程序框架的客户端渲染（例如React）的项目使用SPA编辑器。 [了解详情](/help/sites-developing/spa-overview.md).
+>对于需要基于单页应用程序框架的客户端渲染（例如React）的项目，Adobe建议使用SPA编辑器。 [了解详情](/help/sites-developing/spa-overview.md).
 
 构建AEM Mobile On-demand Services应用程序与构建直接在Cordova（或PhoneGap）外壳中运行的应用程序不同。 开发人员应该熟悉：
 
-* 现成支持的插件以及特定于AEM Mobile的插件。
+* 现成支持的插件和特定于AEM Mobile的插件。
 
 >[!NOTE]
 >
@@ -33,20 +31,19 @@ ht-degree: 1%
 >* [使用特定于AEM Mobile且启用了Cordova的插件](https://helpx.adobe.com/digital-publishing-solution/help/app-runtime-api.html)
 >
 
-
 * 使用插件功能的模板应以一种可在浏览器中创作（无需插件桥）的方式编写。
 
    * 例如，确保等待 *deviceready* 函数。
 
 ## AEM开发人员指南 {#guidelines-for-aem-developers}
 
-以下准则将帮助经验丰富的AEM网站开发人员构建移动应用程序模板和组件：
+以下准则可帮助经验丰富的AEM网站开发人员构建移动应用程序模板和组件：
 
 **构建AEM站点模板以鼓励重复使用和可扩展性**
 
 * 与单个整体脚本文件相比，更喜欢多个组件脚本文件
 
-   * 提供了许多空扩展点，例如 *customheaderlibs.html* 和 *customfooterlibs.html*，这允许开发人员更改页面模板，同时尽可能少地复制核心代码
+   * 提供了多个空扩展点，例如 *customheaderlibs.html* 和 *customfooterlibs.html*，这允许开发人员更改页面模板，同时尽可能少地复制核心代码
    * 随后，可通过Sling的 *sling：resourceSuperType* 机制
 
 * 与将JSP作为模板语言相比，更倾向于使用Sightly/HTL
@@ -55,8 +52,8 @@ ht-degree: 1%
 
 **优化设备上性能**
 
-* 应使用dps-article contentsync模板将特定于文章的脚本和样式表包含在文章有效负荷中
-* 由多个项目共享的脚本和样式表应通过dps-HTMLResources contentsync模板包含在共享资源中
+* 文章特定的脚本和样式表应使用dps-article contentsync模板包含在文章有效负荷中
+* 共享资源中应通过dps-HTMLResources contentsync模板包含由多个文章共享的脚本和样式表
 * 请勿引用任何渲染阻止的外部脚本
 
 >[!NOTE]
@@ -74,13 +71,13 @@ ht-degree: 1%
 
 **与全栈库相比，更喜欢微库**
 
-* 您的文章所依赖的每个库都会减慢将内容放到设备玻璃杯上所需的时间。 当使用新的Webview呈现每篇文章时，这种放缓会加剧，因此必须从头开始再次初始化每个库
+* 您的文章所依赖的每个库都会减慢将内容放到设备玻璃上所需的时间。 当使用新的Webview呈现每篇文章时，这种放缓会加剧，因此必须从头开始再次初始化每个库
 * 如果您的文章未构建为SPA（单页应用程序），则可能不需要包含Angular等全栈库
 * 首选更小的单用途库，以帮助添加页面所需的交互性，例如 [Fastclick](https://github.com/ftlabs/fastclick) 或 [Velocity.js](https://velocityjs.org)
 
 **最小化文章有效负载的大小**
 
-* 使用尽可能最小的资产，以合理的分辨率有效地覆盖您将支持的最大视区
+* 以合理的分辨率使用尽可能最小的资产，该资产可以有效地覆盖您支持的最大视区
 * 使用工具，例如 *ImageOptim* ，以删除任何多余的元数据
 
 ## 快速入门 {#getting-ahead}

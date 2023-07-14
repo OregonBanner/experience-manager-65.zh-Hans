@@ -1,28 +1,24 @@
 ---
 title: 迁移到触控UI
-seo-title: Migration to the Touch UI
 description: 迁移到触控UI
-seo-description: Migration to the Touch UI
-uuid: 47c43b56-532b-4ada-8503-04d66bab3564
 contentOwner: AEM Docs
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: introduction
-discoiquuid: b315720f-e9b8-4063-99e2-1b9aa6bba460
 docset: aem65
 exl-id: 33dc1ee7-1e34-43d8-9265-c66535f5e002
-source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
+source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
 workflow-type: tm+mt
-source-wordcount: '667'
+source-wordcount: '659'
 ht-degree: 5%
 
 ---
 
 # 迁移到触控UI{#migration-to-the-touch-ui}
 
-从版本6.0开始，Adobe Experience Manager (AEM)引入了一个新的用户界面，称为 *触屏优化UI* (也简称为 *触控UI*)。 它与Adobe Marketing Cloud和整个Adobe用户界面准则保持一致。 这已成为AEM中的标准UI，具有称为 *经典UI*.
+从版本6.0开始，Adobe Experience Manager (AEM)引入了一个新的用户界面，称为 *触屏优化UI* (也简称为 *触控UI*)。 它与Adobe Experience Cloud和整个Adobe用户界面准则保持一致。 这已成为AEM中的标准UI，具有称为 *经典UI*.
 
-如果您一直在将AEM与经典UI一起使用，则需要采取措施来迁移实例。 本页旨在通过提供指向单个资源的链接来充当跳板。
+如果您一直在将AEM与经典UI一起使用，请采取措施迁移您的实例。 本页旨在通过提供指向单个资源的链接来充当跳板。
 
 >[!NOTE]
 >
@@ -30,7 +26,7 @@ ht-degree: 5%
 
 ## 基础知识 {#the-basics}
 
-在迁移时，您应了解经典用户界面与触屏UI之间的以下（主要）差异：
+迁移时，请注意经典用户界面和触屏UI之间的以下主要差异：
 
 <table>
  <tbody>
@@ -66,11 +62,11 @@ ht-degree: 5%
     </ul> </td>
   </tr>
   <tr>
-   <td><p>Javascript位置：</p>
+   <td><p>JavaScript位置：</p>
     <ul>
      <li>命令部件直接使用侦听器嵌入或在clientlibs中管理。</li>
     </ul> </td>
-   <td><p>Javascript位置：</p>
+   <td><p>JavaScript位置：</p>
     <ul>
      <li>必须部分不能嵌入对话定义中；责任分离。</li>
     </ul> </td>
@@ -78,11 +74,11 @@ ht-degree: 5%
   <tr>
    <td><p>事件处理：</p>
     <ul>
-     <li>对话框构件直接引用Javascript代码。</li>
+     <li>对话框构件直接引用JavaScript代码。</li>
     </ul> </td>
    <td><p>事件处理：</p>
     <ul>
-     <li>Javascript观察对话框事件。</li>
+     <li>JavaScript观察对话框事件。</li>
     </ul> </td>
   </tr>
   <tr>
@@ -107,7 +103,7 @@ ht-degree: 5%
 * [触屏UI功能状态](/help/release-notes/touch-ui-features-status.md)
 * [客户的用户界面Recommendations](/help/sites-deploying/ui-recommendations.md)
 
-触屏UI开发的基础知识将为您提供坚实的基础：
+触屏UI的开发基础提供了坚实的基础：
 
 * [AEM触屏优化UI的概念](/help/sites-developing/touch-ui-concepts.md)
 * [AEM触屏优化UI的结构](/help/sites-developing/touch-ui-structure.md)
@@ -137,7 +133,7 @@ ht-degree: 5%
 尽管与迁移到触屏UI没有直接关系，但有一些相关问题值得同时考虑，因为它们也是推荐的实践：
 
 * [模板](/help/sites-developing/templates.md) - [可编辑的模板](/help/sites-developing/page-templates-editable.md)
-* [核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)
+* [核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
 * [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)
 
 >[!NOTE]
@@ -149,12 +145,12 @@ ht-degree: 5%
 有关开发AEM的完整信息，请参阅以下内容下的资源收集：
 
 * [开发用户指南](/help/sites-developing/home.md)
-* [Granite UI文档](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/index.html)
+* [Granite UI文档](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html)
 * [AEM 6.5 SitesTutorials和视频](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/overview.html)
 * [AEM Sites 开发快速入门 – WKND 教程](/help/sites-developing/getting-started.md)
-* [AEM Gems](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/aem-index.html)
+* [AEM Gems](https://experienceleague.adobe.com/docs/events/experience-manager-gems-recordings/overview.html?lang=en)
 * [AEM 现代化工具](https://opensource.adobe.com/aem-modernize-tools/)
 
 >[!CAUTION]
 >
->AEM现代化工具是社区共同努力的结果，Adobe不为其提供支持或保证。
+>AEM现代化工具是社区共同努力的结果，Adobe不支持或不保证这些工具。

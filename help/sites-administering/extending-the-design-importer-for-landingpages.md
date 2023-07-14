@@ -1,19 +1,15 @@
 ---
 title: 为登陆页面扩展和配置设计导入程序
-seo-title: Extending and Configuring the Design Importer for Landing Pages
 description: 了解如何为登陆页面配置设计导入程序。
-seo-description: Learn how to configure the Design Importer for landing pages.
-uuid: a2dd0c30-03e4-4e52-ba01-6b0b306c90fc
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
-discoiquuid: e02f5484-fbc2-40dc-8d06-ddb53fd9afc2
 docset: aem65
 exl-id: 1b8c6075-13c6-4277-b726-8dea7991efec
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
 workflow-type: tm+mt
-source-wordcount: '3503'
+source-wordcount: '3502'
 ht-degree: 0%
 
 ---
@@ -35,7 +31,7 @@ ht-degree: 0%
 
    * 标记处理程序工厂是一个OSGi组件(singleton)，负责派生标记处理程序的实例。
    * 您的标记处理程序工厂必须公开名为“tagpattern.name”的OSGi属性，该属性的值与输入html标记匹配。
-   * 如果有多个标记处理程序与输入html标记匹配，则会选择排名较高的处理程序。 排名本身会显示为OSGi资产 **service.ranking**.
+   * 如果有多个标记处理程序与输入的html标记匹配，则会选择排名较高的处理程序。 排名本身会显示为OSGi资产 **service.ranking**.
    * TagHandlerFactory是OSGi组件。 要提供给TagHandler的任何引用都必须通过此工厂进行。
 
 1. 如果要覆盖默认值，请确保TagHandlerFactory具有更好的排名。
@@ -127,15 +123,15 @@ Internet Explorer和Firefox版本3.6及更低版本不支持拖放zip上传。 �
 
 ### 不支持Modernizr {#modernizr-is-not-supported}
 
-`Modernizr.js` 是一个基于javascript的工具，可检测浏览器的本机功能，并检测这些功能是否适用于html5元素。 使用Modernizer增强不同浏览器旧版本中的支持的设计可能会导致登陆页面解决方案中出现导入问题。 `Modernizr.js` 设计导入程序不支持脚本。
+`Modernizr.js` 是一个基于JavaScript的工具，可检测浏览器的本机功能，并检测这些功能是否适用于html5元素。 使用Modernizer增强不同浏览器旧版本中的支持的设计可能会导致登陆页面解决方案中出现导入问题。 `Modernizr.js` 设计导入程序不支持脚本。
 
 ### 导入设计包时未保留页面属性 {#page-properties-are-not-preserved-at-the-time-of-importing-design-package}
 
-任何页面属性（例如，自定义域、实施HTTPS等） 在导入设计包之前为页面（使用空白登陆页面模板）设置的设计会在导入设计后丢失。 因此，建议的做法是在导入设计包后设置页面属性。
+导入设计包之前，为页面（使用空白登陆页面模板）设置的任何页面属性（例如，自定义域、强制实施HTTPS等）在导入设计包后都将丢失。 因此，建议的做法是在导入设计包后设置页面属性。
 
 ### 假定仅HTML标记 {#html-only-markup-assumed}
 
-在导入时，出于安全原因并且为了避免导入和发布无效标记，将清除标记。 这假定仅HTML标记以及所有其他形式的元素(例如内联SVG或Web组件)将被过滤掉。
+导入时，出于安全原因，将清理标记，以避免导入和发布无效的标记。 这假定仅HTML标记以及所有其他形式的元素(例如内联SVG或Web组件)将被过滤掉。
 
 ### 文本 {#text}
 
@@ -191,7 +187,7 @@ Internet Explorer和Firefox版本3.6及更低版本不支持拖放zip上传。 �
 * 设置 `jcr:title` 将创建的标题组件的属性匹配到封装在div中的标题标记中的文本。
 * 设置 `type` 属性到标题标记，在本例中为 `h1`.
 
-标题组件支持7种类型 —  `h1, h2, h3, h4, h5, h6` 和 `default`.
+标题组件支持七种类型 —  `h1, h2, h3, h4, h5, h6` 和 `default`.
 
 **简写组件标记声明**：
 
@@ -286,7 +282,7 @@ HTML标记，用于在导入的zip文件中包含点进组件。 此处，href�
 * 目标URL，支持第三方和AEM URL
 * 页面渲染选项（同一窗口、新窗口等）
 
-HTML标记，以在导入的zip文件中包含图形链接组件。 此处href将映射到目标url，img src将是渲染图像，“title”将被视为悬停文本等。
+HTML标记，以在导入的zip文件中包含图形链接组件。 此处href映射到目标url，img src是渲染图像，“title”是作为悬停文本等。
 
 ```xml
 <div id="cqcanvas">
@@ -304,9 +300,9 @@ HTML标记，以在导入的zip文件中包含图形链接组件。 此处href�
 >
 >要创建点进图形链接，您需要使用将锚点标记和图像标记包裹在div中 `data-cq-component="clickthroughgraphicallink"` 属性。
 >
->例如 `<div data-cq-component="clickthroughlink"> <a href="https://myURLhere/"><img src="image source here"></a> </div>`
+>例如，`<div data-cq-component="clickthroughlink"> <a href="https://myURLhere/"><img src="image source here"></a> </div>`
 >
->不支持使用CSS将图像与锚点标记关联的其他方法，例如，以下标记不起作用：
+>不支持使用CSS将图像与锚点标记关联的其他方法。 例如，以下标记不起作用：
 >
 >`<div data-cq-component="clickthroughgraphicallink">`
 >
@@ -315,6 +311,7 @@ HTML标记，以在导入的zip文件中包含图形链接组件。 此处href�
 >`</div>`
 >
 >具有关联的 `css .hasbackground { background-image: pathtoimage }`
+>
 
 ### 潜在客户表单 {#lead-form}
 
@@ -323,19 +320,19 @@ HTML标记，以在导入的zip文件中包含图形链接组件。 此处href�
 **支持的功能**
 
 * 预定义的潜在客户字段 — 名字、姓氏、地址、dob、性别、关于、用户ID、电子邮件ID、提交按钮在Sidekick中可用。 只需将所需的组件拖放到潜在客户表单中。
-* 借助这些组件，作者可以设计独立的潜在客户表单，这些字段对应于潜在客户表单字段。 在独立或导入的zip应用程序中，用户可以使用cq：form或cta潜在客户表单字段添加额外的字段，并根据要求命名和设计。
+* 借助这些组件，作者可以设计独立的潜在客户表单，这些字段对应于潜在客户表单字段。 在独立或导入的zip应用程序中，用户可以使用cq：form或cta潜在客户表单字段、名称添加额外的字段，并根据要求进行设计。
 * 使用CTA潜在客户表单的特定预定义名称映射潜在客户表单字段，例如 — 潜在客户表单中名字的firstName等。
-* 未映射到潜在客户表单的字段将映射到cq：form组件 — 文本、单选框、复选框、下拉列表、隐藏、密码。
+* 未映射到潜在客户表单的字段映射到cq：form组件 — 文本、单选框、复选框、下拉列表、隐藏、密码。
 * 用户可以使用“label”标记提供标题，也可以使用样式属性“class”提供样式（仅适用于CTA潜在客户表单组件）。
 * 感谢页面和订阅列表可作为表单的隐藏参数提供（位于index.htm中），也可以从“潜在客户表单开始”的编辑栏添加/编辑
 
-   &lt;input type=&quot;hidden&quot; name=&quot;redirectUrl&quot; value=&quot;/content/we-retail/en/user/register/thank_you&quot;/>
+  &lt;input type=&quot;hidden&quot; name=&quot;redirectUrl&quot; value=&quot;/content/we-retail/en/user/register/thank_you&quot;/>
 
-   &lt;input type=&quot;hidden&quot; name=&quot;groupName&quot; value=&quot;leadForm&quot;/>
+  &lt;input type=&quot;hidden&quot; name=&quot;groupName&quot; value=&quot;leadForm&quot;/>
 
 * 可以通过编辑每个组件的配置来提供约束，例如必需。
 
-HTML标记，以在导入的zip文件中包含图形链接组件。 此处“firstName”映射到潜在客户表单firstName等，但复选框 — 这两个复选框映射到cq：form下拉组件。
+HTML标记，以在导入的zip文件中包含图形链接组件。 此处“firstName”映射到潜在客户表单firstName，依此类推，但复选框除外 — 这两个复选框映射到cq：form下拉组件。
 
 ```xml
 <div id="cqcanvas">
@@ -467,7 +464,7 @@ data-cq-component中的路径应为组件的resourceType。
 | E：nth-of-type(n) | E元素，其类型的第n个同级 | [结构伪类](https://www.w3.org/TR/css3-selectors/#structural-pseudos) |
 | E：nth-last-of-type(n) | E元素，其类型的第n个同级元素，从最后一个元素开始计数 | [结构伪类](https://www.w3.org/TR/css3-selectors/#structural-pseudos) |
 
-这是因为其他html元素如 &lt;div> 标记会添加到导入后生成的Html中。
+这是因为其他html元素，如 &lt;div> 标记会添加到导入后生成的Html中。
 
 * 此外，对于标记为转换为AEM组件的元素，也不建议使用依赖于与上述结构类似的结构的脚本。
 * 在标记标记上使用样式进行组件转换，例如 &lt;div data-cq-component=&quot;&amp;ast;&quot;> 不推荐。
@@ -519,7 +516,7 @@ data-cq-component中的路径应为组件的resourceType。
   <tr>
    <td> </td>
    <td>替换模式</td>
-   <td>替换找到的匹配项的模式。 您可以使用正则表达式组引用，如$1、$2。 此外，此模式还支持在导入期间使用实际值解析的关键字，如{designPath}。</td>
+   <td>替换找到的匹配项的模式。 您可以使用正则表达式组引用，如$1、$2。 此外，此模式支持的关键字包括 {designPath} 在导入期间使用实际值解析的规则。</td>
   </tr>
  </tbody>
 </table>
@@ -530,10 +527,12 @@ data-cq-component中的路径应为组件的resourceType。
 >如果需要更改搜索模式，则打开felix属性编辑器时，需要手动添加反斜杠字符以转义正则表达式元字符。 如果不手动添加反斜杠字符，则正则表达式被视为无效，且不会替换旧正则表达式。
 >
 >例如，如果默认配置为
->`/\* *CQ_DESIGN_PATH *\*/ *(['"])`
 >
->而且你需要更换 >`CQ_DESIGN_PATH` 替换为 `VIPURL` 在搜索模式中，您的搜索模式应如下所示：
-`/\* *VIPURL *\*/ *(['"])`
+>>`/\* *CQ_DESIGN_PATH *\*/ *(['"])`
+>
+>而且你需要更换 `CQ_DESIGN_PATH` 替换为 `VIPURL` 在搜索模式中，您的搜索模式应如下所示：
+>
+>`/\* *VIPURL *\*/ *(['"])`
 
 ## 疑难解答 {#troubleshooting}
 
@@ -545,14 +544,14 @@ data-cq-component中的路径应为组件的resourceType。
 
 ### 导入期间显示的错误消息 {#error-messages-displayed-during-import}
 
-如果发生任何错误（例如，导入的包不是有效的zip文件），设计导入将不会导入包，而是会在页面顶部拖放框的正上方显示错误消息。 此处列出了错误情况的示例。 更正错误后，您可以将更新后的zip文件重新导入到同一个空白登陆页面上。 抛出错误的不同情况如下：
+如果有任何错误（例如，导入的包不是有效的zip文件），则设计导入不会导入包。 而是会在页面顶部拖放框的正上方显示一条错误消息。 此处列出了错误情况的示例。 更正错误后，您可以将更新后的zip文件重新导入到同一个空白登陆页面上。 抛出错误的不同情况如下：
 
 * 导入的设计包不是有效的zip存档。
 * 导入的设计包不包含顶级的index.html。
 
 ### 导入后显示的警告 {#warnings-displayed-after-import}
 
-出现任何警告时(例如，HTML是指包中不存在的图像)，设计导入程序将导入zip文件，但同时在结果窗格中显示问题/警告列表，单击“问题”链接将显示警告列表，指出设计包中的任何问题。 设计导入程序捕获并显示警告的不同情况如下：
+如果出现任何警告(例如，HTML是指包中不存在的图像)，设计导入程序会导入zip文件，但同时会在“结果窗格”中显示问题/警告列表，单击“问题”链接将显示警告列表，指出设计包中的任何问题。 设计导入程序捕获并显示警告的不同情况如下：
 
 * HTML是指包中不存在的图像。
 * HTML是指包中不存在的脚本。
@@ -560,7 +559,7 @@ data-cq-component中的路径应为组件的resourceType。
 
 ### ZIP文件的文件存储在AEM中的什么位置？ {#where-are-the-files-of-the-zip-file-being-stored-in-aem}
 
-导入登陆页面后，文件（图像、css、js等） 在设计包中，存储在AEM的以下位置：
+导入登陆页面后，设计包中的文件（图像、css、js等）存储在AEM的以下位置：
 
 `/etc/designs/default/canvas/content/campaigns/<name of brand>/<name of campaign>/<name of landing page>`
 
@@ -589,7 +588,7 @@ height="116" /></div>Some Text </p>
 { width: 450px; padding:10px; border: 1px #C5DBE7 solid; margin: 0px auto 0 auto; background-image:url(assets/box.gif); background-repeat:repeat-x,y; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:12px; color:#6D6D6D; }
 ```
 
-则 `box img` 在设计导入程序中使用，生成的登陆页面似乎未保留格式。 要解决此问题，请注意AEM会在CSS中添加div标记，并相应地重写代码。 否则，某些CSS规则将无效。
+则 `box img` 在设计导入器中使用，则生成的登陆页面似乎未保留格式。 要解决此问题，AEM会在CSS中添加div标记，并相应地重写代码。 否则，某些CSS规则将无效。
 
 ```xml
 .box img
@@ -598,4 +597,5 @@ height="116" /></div>Some Text </p>
 ```
 
 >[!NOTE]
-此外，设计人员应该注意，只有中的代码 **id=cqcanvas** 标记由导入器识别，否则不保留设计。
+>
+>此外，设计人员应该注意，只有中的代码 **id=cqcanvas** 标记由导入器识别，否则不保留设计。

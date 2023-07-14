@@ -1,18 +1,14 @@
 ---
 title: 发布取消发布内容
-seo-title: Publish UnPublish Content
 description: 熟悉文章、横幅和收藏集的内容管理操作后，请按照此页面了解如何发布内容。 您还可以取消发布内容。
-seo-description: Once you are familiar with content management actions on articles, banners, and collections, follow this page to learn about how you can publish your content. Also you can unpublish your content.
-uuid: 75179aa8-022c-4876-9664-6dd2b826174c
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: authoring-on-demand-services-app
-discoiquuid: 8c88a2ff-766f-481b-b6dc-0b3e2eed8596
 exl-id: 3924bb8f-27cb-4648-8be2-9444e9a58c66
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
 workflow-type: tm+mt
-source-wordcount: '268'
+source-wordcount: '274'
 ht-degree: 1%
 
 ---
@@ -21,17 +17,17 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->Adobe建议对需要基于单页应用程序框架的客户端渲染（例如React）的项目使用SPA编辑器。 [了解详情](/help/sites-developing/spa-overview.md).
+>对于需要基于单页应用程序框架的客户端渲染（例如React）的项目，Adobe建议使用SPA编辑器。 [了解详情](/help/sites-developing/spa-overview.md).
 
 熟悉文章、横幅和收藏集的内容管理操作后，即可发布内容。 您还可以取消发布内容。
 
 >[!NOTE]
 >
->要详细了解AEM Mobile应用程序的设计注意事项，请参阅 [AEM Mobile应用程序的设计注意事项](https://helpx.adobe.com/digital-publishing-solution/help/design-app.html) 在线帮助中。
+>要详细了解AEM Mobile应用程序的设计注意事项，请参阅 [AEM Mobile应用程序的设计注意事项](https://helpx.adobe.com/digital-publishing-solution/help/aem-mobile-end-of-life-faq.html) 在线帮助中。
 
 ## 发布/取消发布内容 {#publishing-unpublishing-the-content}
 
-这与“AEM发布”不同。 我们不会将内容推送到AEM发布服务器实例以使内容可公开查看。 在本例中，我们将通知Mobile On-Demand，选定的内容应在实时Mobile On-Demand应用程序中公开。
+这与“AEM发布”不同。 您未将内容推送到AEM发布服务器实例以使其可公开查看。 在这里，您告知Mobile On-Demand选定的内容应在实时Mobile On-Demand应用程序中公开。
 
 >[!NOTE]
 >
@@ -53,11 +49,9 @@ ht-degree: 1%
 
 ### 后续步骤 {#the-next-steps}
 
-了解如何创建和发布内容后，请参阅
+了解如何创建和发布内容后，请参阅以下内容：
 
 * [为AEM Mobile On-demand Services开发AEM内容](/help/mobile/aem-mobile-on-demand.md)
 * [管理内容以使用AEM Mobile On-demand Services](/help/mobile/aem-mobile.md)
 
-或者，您仍需要了解创作主题，请参阅
-
-[为AEM Mobile On-demand Services应用程序创作AEM内容](/help/mobile/mobile-apps-ondemand.md)
+或者，如果您仍想了解有关创作主题的更多信息，请参阅 [为AEM Mobile On-demand Services应用程序创作AEM内容](/help/mobile/mobile-apps-ondemand.md).

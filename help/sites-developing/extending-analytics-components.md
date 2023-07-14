@@ -1,16 +1,14 @@
 ---
 title: 将Adobe Analytics跟踪添加到组件
 description: 将Adobe Analytics跟踪添加到组件
-uuid: 447b140c-678c-428d-a1c9-ecbdec75cd42
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
-discoiquuid: a11c39b4-c23b-4207-8898-33aea25f2ad0
 exl-id: e6c1258c-81d5-48e4-bdf1-90d7cc13a22d
-source-git-commit: 4fd5e9a1bc603202ee52e85a1c09125b13cec315
+source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
 workflow-type: tm+mt
-source-wordcount: '1267'
+source-wordcount: '1266'
 ht-degree: 0%
 
 ---
@@ -38,7 +36,7 @@ ContextHub条目应直接包含在 `<head>` 标签中，而Cloud Services应包�
 
 此 `contexthub` 您插入到的脚本位于 `<head>` 元素将ContextHub功能添加到页面。
 
-此 `cloudservices` 您在中添加的脚本 `<head>` 和 `<body>` 部分适用于添加到该页面的cloud services配置。 (如果页面使用多个Cloud Services配置，则只需包含ContextHub jsp和Cloud Servicesjsp一次。)
+此 `cloudservices` 您在中添加的脚本 `<head>` 和 `<body>` 部分适用于添加到该页面的cloud services配置。 (如果页面使用多个Cloud Services配置，则必须仅包含ContextHub jsp和Cloud Servicesjsp一次。)
 
 将Adobe Analytics框架添加到页面时， `cloudservices` 脚本会生成与Adobe Analytics相关的JavaScript和对客户端库的引用，类似于以下示例：
 
@@ -128,7 +126,7 @@ $CQ(document).trigger("sitecatalystAfterCollect");
 
 启用您的AEM组件以与Adobe Analytics框架交互。 然后，配置框架，以便Adobe Analytics跟踪组件数据。
 
-在编辑框架时，与Adobe Analytics框架交互的组件会显示在Sidekick中。 将组件拖到框架中后，将显示组件属性，然后可以使用Adobe Analytics属性映射这些属性。 (请参阅 [设置基本跟踪的框架](/help/sites-administering/adobeanalytics-connect.md#creating-a-adobe-analytics-framework).)
+在编辑框架时，与Adobe Analytics框架交互的组件会显示在SideKick中。 将组件拖到框架中后，将显示组件属性，然后可以使用Adobe Analytics属性映射这些属性。 (请参阅 [设置基本跟踪的框架](/help/sites-administering/adobeanalytics-connect.md#creating-a-adobe-analytics-framework).)
 
 当组件具有名为的子节点时，组件可以与Adobe Analytics框架进行交互 `analytics`. 此 `analytics` 节点具有以下属性：
 
@@ -170,13 +168,13 @@ $CQ(document).trigger("sitecatalystAfterCollect");
    * 名称: `analytics`
    * 类型: `nt:unstructured`
 
-1. 将以下属性添加到Analytics节点以命名跟踪事件：
+1. 将以下属性添加到Analytics节点，以便您可以命名跟踪事件：
 
    * 名称：cq：trackevents
    * 类型：字符串
    * 值： topnavClick
 
-1. 将以下属性添加到Analytics节点以命名数据变量：
+1. 将以下属性添加到Analytics节点，以便您可以将数据变量命名为：
 
    * 名称：cq：trackvars
    * 类型：字符串
@@ -362,7 +360,7 @@ Adobe Analytics集成模块构建 `s.products` 变量使用 `product` AEM组件�
 * product.evars.eVarName1
 * product.evars.eVarName_n
 
-电子商务模块提供了多个用于生成s.products变量数据的组件。 例如，提交订单组件([http://localhost:4502/crx/de/index.jsp#/libs/commerce/components/submitorder/submitorder.jsp](http://localhost:4502/crx/de/index.jsp#/libs/commerce/components/submitorder/submitorder.jsp))生成与以下示例类似的JavaScript：
+电子商务模块提供了多个用于生成s.products变量数据的组件。 例如， `submitorder` 组件([http://localhost:4502/crx/de/index.jsp#/libs/commerce/components/submitorder/submitorder.jsp](http://localhost:4502/crx/de/index.jsp#/libs/commerce/components/submitorder/submitorder.jsp))生成与以下示例类似的JavaScript：
 
 ```
 <script type="text/javascript">
@@ -438,6 +436,6 @@ Adobe Analytics集成模块构建 `s.products` 变量使用 `product` AEM组件�
 
 #### 限制跟踪调用的大小 {#limiting-the-size-of-tracking-calls}
 
-通常，Web浏览器会限制GET请求的大小。 由于CQ产品和SKU值是存储库路径，因此包含多个值的产品阵列可能会超过请求大小限制。 因此，组件应限制 `product` 每个的数组 `CQ_Analytics.record function`. 如果您需要跟踪的项目数可能超过限制，请创建多个函数。
+通常，Web浏览器会限制GET请求的大小。 由于CQ产品和SKU值是存储库路径，因此包含多个值的产品阵列可能会超过请求大小限制。 因此，组件应限制 `product` 每个的数组 `CQ_Analytics.record function`. 如果必须跟踪的项目数可能超过限制，请创建多个函数。
 
-例如，电子商务提交订单组件将限制 `product` 调用中的项目数。 当购物车包含四个以上的产品时，将生成多个产品 `CQ_Analytics.record` 函数。
+例如，电子商务 `submitorder` 组件限制的数量 `product` 调用中的项目数。 当购物车包含四个以上的产品时，将生成多个产品 `CQ_Analytics.record` 函数。

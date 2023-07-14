@@ -1,17 +1,15 @@
 ---
 title: 默认组件
 description: Adobe Experience Manager附带多种现成的组件，可为网站作者提供全面的功能。
-uuid: 55caeec3-add7-4d05-a620-07e33901adb7
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
-discoiquuid: 53c37f8c-eb75-4134-9f91-8adb0a574360
 exl-id: 85463610-8461-4c1f-bfe7-72229a31ea40
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
+source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
 workflow-type: tm+mt
-source-wordcount: '430'
-ht-degree: 21%
+source-wordcount: '425'
+ht-degree: 18%
 
 ---
 
@@ -19,7 +17,7 @@ ht-degree: 21%
 
 Adobe Experience Manager (AEM)附带多种现成的组件，可为网站作者提供全面的功能。 在[编辑页面](/help/sites-authoring/editing-content.md)时，这些组件可供使用，并且为便于筛选，这些组件按主要功能区域（称为组件组）进行分组。
 
-组件在以下情况下可用 [编辑页面](/help/sites-authoring/editing-content.md). 为便于筛选，组件按主要功能区域（即组件组）分组。
+组件在以下情况下可用 [编辑页面](/help/sites-authoring/editing-content.md). 为便于筛选，按主要功能区域（即组件组）对组件进行分组。
 
 >[!NOTE]
 >
@@ -38,7 +36,8 @@ Adobe Experience Manager (AEM)附带多种现成的组件，可为网站作者�
 
 * [编辑内容 – 全屏模式](/help/sites-authoring/editing-content.md#edit-content-full-screen-mode)
 
-有关将组件添加到页面的进一步信息，请参阅文章[编辑页面内容](/help/sites-authoring/editing-content.md)。组件根据称为组件组的各种类别进行排序。 此类组件组的示例包括：
+有关向页面添加组件的更多信息，请参阅 [编辑页面内容](/help/sites-authoring/editing-content.md).
+组件根据称为组件组的各种类别进行排序。 此类组件组的示例包括：
 
 * **We.Retail**：包括代理用于的核心组件 [We.Retail引用实施](/help/sites-developing/we-retail.md).
 
@@ -48,13 +47,13 @@ Adobe Experience Manager (AEM)附带多种现成的组件，可为网站作者�
 
 ## 全部组件概述 {#overview-of-all-components}
 
-此 [组件控制台](/help/sites-authoring/default-components-console.md) 概述由AEM安装提供的组件组和组件。 您可以查看有关单个组件及其用途的关键信息。
+此 [组件控制台](/help/sites-authoring/default-components-console.md) 概述了AEM安装提供的组件组和组件。 您可以查看有关单个组件及其用途的关键信息。
 
 ## 组件 — 主要领域 {#components-major-areas}
 
 以下页面提供了指向一些关于组件的其他重要信息的链接：
 
-* [核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)  — 核心组件提供灵活且功能丰富的创作功能，可提供创建页面所需的基本内容类型。
+* [核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)  — 核心组件提供灵活且功能丰富的创作功能，可提供创建页面所需的基本内容类型。
 
 * [Communities](/help/communities/author-communities.md)  — 组件为网站提供交互功能，例如论坛和评论。 在以下情况下会包含这些组件中的许多： [社区站点](/help/communities/overview.md) 创建。
 

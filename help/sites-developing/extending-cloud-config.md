@@ -1,18 +1,14 @@
 ---
 title: Cloud Service 配置
-seo-title: Cloud Service Configurations
 description: 您可以扩展现有实例以创建您自己的配置
-seo-description: You can extend the existing instances to create your own configurations
-uuid: 9d20c3a4-2a12-4d3c-80c3-fcac3137a675
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
-discoiquuid: d25c03bf-6eaa-45f4-ab60-298865935a62
 exl-id: 20a19ee5-7113-4aca-934a-a42c415a8d93
-source-git-commit: 58594be73372e128ba999a8290615fbcb447084e
+source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
 workflow-type: tm+mt
-source-wordcount: '564'
+source-wordcount: '563'
 ht-degree: 3%
 
 ---
@@ -28,11 +24,11 @@ ht-degree: 3%
 开发配置时采用的原则基于以下概念：
 
 * 服务/适配器用于检索配置。
-* 配置（例如属性/段落）继承自父项。
+* 配置（例如，属性/段落）继承自父项。
 * 按路径从Analytics节点引用。
 * 易于扩展。
 * 能够灵活地满足更复杂的配置需求，例如 [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics).
-* 支持依赖项(例如 [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics) 插件需要 [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics) 配置)。
+* 支持依赖项(例如， [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics) 插件需要 [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics) 配置)。
 
 ## 结构 {#structure}
 
@@ -40,13 +36,13 @@ ht-degree: 3%
 
 `/etc/cloudservices`。
 
-将为每种类型的配置提供一个模板和一个组件。这使得在自定义后可以拥有可满足大多数需求的配置模板。
+对于每种类型的配置，都会提供模板和组件。 这使得在自定义后能够满足大多数需求的配置模板成为可能。
 
-要为新服务提供配置，您需要：
+要为新服务提供配置，请执行以下操作：
 
-* 在中创建服务包
+* 在中创建服务区
 
-   `/etc/cloudservices`
+  `/etc/cloudservices`
 
 * 在此下：
 
@@ -57,7 +53,7 @@ ht-degree: 3%
 
 `cq/cloudserviceconfigs/templates/configpage`
 
-或基础组件分别
+或基本组件分别
 
 `cq/cloudserviceconfigs/components/configpage`
 
@@ -67,7 +63,7 @@ ht-degree: 3%
 
 ### 模板 {#template}
 
-您的模板将扩展基本模板：
+您的模板扩展了基本模板：
 
 `cq/cloudserviceconfigs/templates/configpage`
 
@@ -137,7 +133,7 @@ propertyname
 
 ### API {#api}
 
-有关API的参考文档，请参阅 [com.day.cq.wcm.webservicesupport](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/webservicesupport/package-summary.html).
+有关API的参考文档，请参阅 [com.day.cq.wcm.webservicesupport](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/webservicesupport/package-summary.html).
 
 ### AEM集成 {#aem-integration}
 
@@ -176,7 +172,7 @@ propertyname
   </tr>
   <tr>
    <td>componentreference</td>
-   <td>自动包含在页面中的组件的引用路径。<br /> 这用于其他功能和JS包含。<br /> 这包括页面上的组件，其中<br /> <code> cq/cloudserviceconfigs/components/servicecomponents</code><br /> 包含(通常早于 <code>body</code> 标记)。<br /> 对于Analytics和Target，我们使用它来包含其他功能，例如用于跟踪访客行为的JavaScript调用。</td>
+   <td>自动包含在页面中的组件的引用路径。<br /> 这用于其他功能和JS包含。<br /> 这包括页面上的组件，其中<br /> <code> cq/cloudserviceconfigs/components/servicecomponents</code><br /> 包含(通常早于 <code>body</code> 标记)。<br /> 对于Adobe Analytics和Adobe Target，我们使用它来包含其他功能，例如用于跟踪访客行为的JavaScript调用。</td>
   </tr>
   <tr>
    <td>说明</td>
@@ -220,7 +216,6 @@ propertyname
 * [跟踪器代码片段](/help/sites-administering/external-providers.md) (Google、WebTrends等)
 * [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics)
 * [Test&amp;Target](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-target)
-
 <!-- Search&Promote is end of life as of September 1, 2022 * [Search&Promote](/help/sites-administering/marketing-cloud.md#integrating-with-search-promote) -->
 * [Dynamic Media](/help/sites-administering/marketing-cloud.md#integrating-with-scene)
 

@@ -1,18 +1,14 @@
 ---
 title: 管理应用程序磁贴
-seo-title: Manage App Tile
 description: 关注此页面，了解应用程序功能板上的“管理应用程序”拼贴，该功能板提供了修改有关应用程序的详细信息的功能。
-seo-description: Follow this page to learn about the Manage App Tile on the app dashboard that provides the ability to modify details about the Application.
-uuid: bde75ecd-8694-427c-9b16-2c4ab2fd4d8b
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: authoring-adobe-phonegap-enterprise
-discoiquuid: a87834c9-247c-49fa-9978-a969230db91c
 exl-id: 8bcf70ef-94d2-4958-90b5-bc375b360916
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
 workflow-type: tm+mt
-source-wordcount: '1263'
+source-wordcount: '1252'
 ht-degree: 1%
 
 ---
@@ -21,7 +17,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->Adobe建议对需要基于单页应用程序框架的客户端渲染（例如React）的项目使用SPA编辑器。 [了解详情](/help/sites-developing/spa-overview.md).
+>对于需要基于单页应用程序框架的客户端渲染（例如React）的项目，Adobe建议使用SPA编辑器。 [了解详情](/help/sites-developing/spa-overview.md).
 
 此 **管理应用程序** 通过应用程序仪表板上的图块，可以修改有关应用程序的详细信息。 要打开“详细信息”页面，请单击“管理应用程序”拼贴的详细信息链接。 在“管理应用程序”页面中，您可以编辑PhoneGap应用程序配置(config.xml)设置，并准备应用程序以提交到各种应用程序商店。
 
@@ -50,7 +46,7 @@ ht-degree: 1%
 </widget>
 ```
 
-每个供应商应用程序商店(如Apple App Store或Google Play Store)都需要移动应用程序的一个或多个屏幕快照，才能向客户显示应用程序详细信息。 这些屏幕截图可能对维度和内容有严格的要求（基本上它们必须真正代表应用程序）。 AEM Apps支持选择和管理受支持平台的这些屏幕截图，并根据每个供应商的应用程序存储区的要求查看端口维度。
+每个供应商应用程序商店(例如，Apple App Store或Google Play Store)都需要移动应用程序的一个或多个屏幕截图，才能向客户显示您的应用程序详细信息。 这些屏幕截图可能对维度和内容有严格的要求（基本上它们必须真正代表应用程序）。 AEM Apps支持选择和管理受支持平台的这些屏幕截图，并根据每个供应商的应用程序存储区的要求查看端口维度。
 
 >[!NOTE]
 >
@@ -112,9 +108,9 @@ Apple AppStore需要其他元数据才能提交您的应用程序以进行分发
 
 ![chlimage_1-120](assets/chlimage_1-120.png)
 
-#### Android 元数据 {#android-metadata}
+#### Android™元数据 {#android-metadata}
 
-选择Android平台时，此时无法设置自定义元数据。 在单击下载按钮时，将生成一个zip文件，其中包含一个所有元数据和相关屏幕截图的属性文件。
+选择Android™平台时，此时无法设置自定义元数据。 单击下载按钮时，将生成一个包含所有元数据和相关屏幕截图的属性文件的zip文件。
 
 导出功能用于提供一种收集屏幕快照和元数据的便利方法，可以将屏幕快照和元数据传递给应用程序发布者，以输入到供应商特定的应用程序存储中。
 
@@ -150,13 +146,13 @@ AEM Apps的一项重要功能是，移动应用程序可以通过ContentSync请�
 
 ### “身份验证”选项卡 {#the-authentication-tab}
 
-此 **身份验证** 选项卡允许您选择要与应用程序关联的OAuth客户端，并使开发人员能够利用Adobe Experience Manager的OAuth身份验证。
+此 **身份验证** 选项卡，可让您选择要与应用程序关联的OAuth客户端，并使开发人员能够使用Adobe Experience Manager的OAuth身份验证。
 
 ![chlimage_1-124](assets/chlimage_1-124.png)
 
 ### 后续步骤 {#the-next-steps}
 
-了解了如何在应用程序仪表板中管理应用程序图块后，请参阅以下资源以了解其他创作角色：
+在应用程序仪表板中了解了管理应用程序图块后，请参阅以下资源以了解其他创作角色：
 
 * [编辑应用程序元数据](/help/mobile/phonegap-editmetadata.md)
 * [应用程序定义](/help/mobile/phonegap-app-definitions.md)

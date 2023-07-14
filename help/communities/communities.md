@@ -1,18 +1,14 @@
 ---
 title: 发展中的社区
-seo-title: Developing Communities
-description: 创建和自定义社区功能，如论坛、用户组等
-seo-description: Create and customize community features such as forums, user groups, and more
-uuid: 51dc54da-9090-4d36-adf9-72d5479062a5
+description: 创建和自定义社区功能，例如论坛、用户组等。
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: fbfe8097-3c3f-4a05-97ad-1ce526362a26
 exl-id: 3ed3768a-1b3c-45a1-a34c-61694cd407d9
-source-git-commit: 4dbbcc41757843d3b2d5a3bbb2656ef587e83d2c
+source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
 workflow-type: tm+mt
-source-wordcount: '385'
+source-wordcount: '391'
 ht-degree: 5%
 
 ---
@@ -21,7 +17,7 @@ ht-degree: 5%
 
 ## 概述 {#overview}
 
-AEM Communities简化了社区功能（如论坛、用户组、博客、Q&amp;A、日历、评论、评论、投票、评级和分配）的创建和自定义。 这些功能导致在发布环境中输入用户生成的内容(UGC)。
+Adobe Experience Manager (AEM) Communities简化了社区功能（如论坛、用户组、博客、Q&amp;A、日历、评论、评论、投票、评级和分配等）的创建和自定义。 这些功能导致在发布环境中输入用户生成的内容(UGC)。
 
 的基础 [社区站点](overview.md#communitiessites) 是 [社交组件框架](scf.md) (SCF)。 社区站点的创建从选择开始 [社区站点模板](sites-console.md) 由以下各项组成 [社区功能](functions.md).
 
@@ -36,7 +32,7 @@ AEM Communities简化了社区功能（如论坛、用户组、博客、Q&amp;A�
 
 ## 建议的部署 {#recommended-deployments}
 
-* [社区内容存储](working-with-srp.md)：讨论UGC公用存储的可用SRP选择
+* [社区内容存储](working-with-srp.md)：讨论UGC公用存储可用的社交资源提供程序(SRP)选择
 * [推荐的社区拓扑](topologies.md)：讨论基于用例和SRP选择的拓扑
 
 ## 社交组件框架 {#social-component-framework}
@@ -49,9 +45,9 @@ AEM Communities简化了社区功能（如论坛、用户组、博客、Q&amp;A�
 * [编码准则](code-guide.md)：指南、提示和技巧。
 * [社区组件指南](components-guide.md)：交互式开发工具。
 
-## 组件、功能和功能要点 {#component-function-and-feature-essentials}
+## Component、Function和Feature Essentials {#component-function-and-feature-essentials}
 
-AEM Communities组件、功能和特性提供了构建块， [社区站点](sites-console.md).
+AEM Communities组件、功能和功能提供了构建块， [社区站点](sites-console.md).
 
 * [组件、功能和功能要点](essentials.md)
 * [适用于社区组件的Clientlibs](clientlibs.md)

@@ -1,18 +1,14 @@
 ---
 title: 启动AEM PhoneGap
-seo-title: Starting AEM PhoneGap
-description: 关注此页面，了解面向开发人员的starterkit。
-seo-description: Follow this page to learn about the starterkit for developers.
-uuid: 952bf9f9-5c79-4212-91b7-1d3850ec2402
+description: 了解面向开发人员的starterkit。
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
-discoiquuid: 2ecf05ed-4e56-4e0b-89cf-5161741f9001
 exl-id: 7d56b9f0-5aa5-4b68-a85e-7e80415cbc76
-source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
 workflow-type: tm+mt
-source-wordcount: '407'
+source-wordcount: '396'
 ht-degree: 1%
 
 ---
@@ -21,20 +17,20 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->Adobe建议对需要基于单页应用程序框架的客户端渲染（例如React）的项目使用SPA编辑器。 [了解详情](/help/sites-developing/spa-overview.md).
+>对于需要基于单页应用程序框架的客户端渲染（例如React）的项目，Adobe建议使用SPA编辑器。 [了解详情](/help/sites-developing/spa-overview.md).
 
-对于开发人员而言，最好的起点是查看github中的Adobe Experience Manager Mobile Starterkit
+对于开发人员来说，最好的起点是查看github中的Adobe Experience Manager Mobile Starterkit
 
 https://github.com/Adobe-Marketing-Cloud-Apps/aem-phonegap-starter-kit
 
-Starterkit将帮助您快速了解AEM Mobile开发的基础知识，从项目创建和治理开始，安装必要的工具，定义Maven原型，构建、部署，然后创建您自己的体验。
+starterkit可帮助您快速了解AEM Mobile开发的基础知识，从项目创建和治理开始，安装必要的工具，定义Maven原型，构建、部署，然后创建您自己的体验。
 
-开发人员可以使用此示例作为使用PhoneGap试用AEM Mobile应用程序的起点。 通过运行starterkit和参考应用程序，将深入了解创建丰富移动应用程序的基础知识。
+开发人员可以使用此示例作为使用PhoneGap试用AEM Mobile应用程序的起点。 通过starterkit和参考应用程序运行，可以深入了解创建丰富移动应用程序的基础知识。
 
 * 使用 [AEM PhoneGap入门工具包](https://github.com/Adobe-Marketing-Cloud-Apps/aem-phonegap-starter-kit) 创建适用于AEM Mobile目录的应用程序。
 * A [引用应用程序](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference) 创建的具有完整源的文件演示了AEM Mobile中的许多新功能，无论您是将现有应用程序迁移到AEM Mobile还是从头开始。
-* 我们所有的示例都可以在github上找到： [https://github.com/Adobe-Marketing-Cloud-Apps](https://github.com/Adobe-Marketing-Cloud-Apps) 并且包括使用Maven引导您的项目。
-* 大多数会议将利用 [厨房水槽教程](https://github.com/blefebvre/aem-phonegap-kitchen-sink)，您也可以在Github中找到它，它侧重于使用Apache Cordova的本机可扩展性。
+* 所有示例均可在github上找到： [https://github.com/Adobe-Marketing-Cloud-Apps](https://github.com/Adobe-Marketing-Cloud-Apps) 并且包括使用Maven引导您的项目。
+* 大多数会议会谈都使用 [厨房水槽教程](https://github.com/blefebvre/aem-phonegap-kitchen-sink)，您也可以在GitHub中找到它，它侧重于使用Apache Cordova的本机可扩展性。
 
 >[!NOTE]
 >
@@ -42,7 +38,7 @@ Starterkit将帮助您快速了解AEM Mobile开发的基础知识，从项目创
 
 ## 模板和组件 {#templates-and-components}
 
-AEM *模板* 和 *组件* 使业务线所有者能够创建自定义体验。 两者*模板*和 *组件* 开箱即用或者可以由开发人员(通过扩展现有组件或创建greenfield（高级）)自行开发。 *模板* 和 *组件* 是允许AEM作者通过拖放操作来创建有吸引力且相关的体验的要素。
+AEM *模板* 和 *组件* 使业务线所有者能够创建自定义体验。 两者*模板*和 *组件* 开箱即用或者可以由开发人员(通过扩展现有组件或创建greenfield（高级）)自行开发。 *模板* 和 *组件* 是允许AEM作者通过拖放操作来创建引人入胜的相关体验的要素。
 
 1. [创建组件](/help/sites-developing/components.md)
 1. [创建模板](/help/sites-developing/templates.md)

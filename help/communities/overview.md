@@ -1,33 +1,29 @@
 ---
 title: AEM Communities概述
-seo-title: AEM Communities Overview
 description: AEM Communities功能和设置概述
-seo-description: An overview of AEM Communities features and setup
-uuid: 14405847-36ae-4958-bdc6-d799ecd05f06
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
-discoiquuid: 44374006-f711-4af8-a1fe-f89164f79581
 docset: aem65
 exl-id: d6243dff-a067-455c-a326-5f451f225efd
-source-git-commit: 9f9f80eb4cb74b687c7fadd41d0f8ea4ee967865
+source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
 workflow-type: tm+mt
-source-wordcount: '1273'
+source-wordcount: '1265'
 ht-degree: 1%
 
 ---
 
 # AEM Communities概述 {#aem-communities-overview}
 
-Adobe Experience Manager (AEM) Communities提供快速创建内部部署社区站点的功能，该站点提高了性能、改进了站点管理，并鼓励将站点访客转化为有价值的社区成员。
+Adobe Experience Manager (AEM) Communities提供快速创建内部部署社区站点的功能，该站点提高了性能、改进了站点管理，并鼓励站点访客转化为有价值的社区成员。
 
 ## Communities功能 {#communities-features}
 
 AEM Communities支持与网站访客建立关系，这可以：
 
 * **通知** 通过博客、问答和活动日历，
-* While **获得洞察** 通过论坛、评论和其他社区内容，通常称为用户生成内容(UGC)。
+* While **获得洞察** 通过论坛、评论和其他社区内容(通常称为用户生成内容(UGC))。
 * 它允许 **审核** 发布环境中的受信任成员，
 * **社交登录** 通过Twitter和Facebook，
 * **内联翻译** 社区内容，
@@ -35,7 +31,7 @@ AEM Communities支持与网站访客建立关系，这可以：
 * **评分** 授予徽章，
 * **文件共享**，
 * **通知** 和 **活动流**，
-* 允许 **标记** (@mention)用户生成内容中的其他注册会员，请其注意。
+* 允许 **标记** (@mention)其他关注用户生成内容的注册会员。
 
 社区功能可以通过以下工具进行演示 [AEM演示计算机](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki) 可在GitHub.com上公开获取，也可以通过新的We.Retail参考实施获取。
 
@@ -62,7 +58,7 @@ AEM Communities支持与网站访客建立关系，这可以：
 
    * 登录：自助注册， [社交登录](/help/communities/social-login.md)，用户配置文件
 
-      * 通知：成员查看与其相关的事件，以及用户生成的内容 [@mentioned](/help/communities/overview.md#mentionssupport).
+      * 通知：成员可以查看与其相关的事件，以及用户生成的内容 [@mentioned](/help/communities/overview.md#mentionssupport).
 
       * 消息：成员可以在社区站点中发送或接收消息。
       * 搜索：可在社区站点内搜索。
@@ -75,19 +71,19 @@ AEM Communities支持与网站访客建立关系，这可以：
    * 品牌策略：可选择性上传横幅图像以在社区站点的所有页面上显示
    * 导航菜单：为社区站点模板中包含的功能提供了导航链接。
 
-要体验快速创建新社区站点的便利性，请访问 [AEM Communities快速入门](/help/communities/getting-started.md).
+要体验快速创建社区站点的简便性，请访问 [AEM Communities快速入门](/help/communities/getting-started.md).
 
 ## 社区内容持久性 {#community-content-persistence}
 
-为了改进社区内容的性能和同步，AEM Communities需要专门针对在所有AEM（创作和发布）实例之间共享的用户生成内容(UGC)的公用存储。
+为了改进社区内容的性能和同步，AEM Communities要求专门为在所有AEM（创作和发布）实例之间共享的用户生成内容(UGC)设置一个公共存储区。
 
 通过存储资源提供程序(SRP)可轻松访问社区内容，SRP提供了一个将访问与底层拓扑分离的层，并支持UGC的公共存储。
 
 要了解有关社区内容持久性和建议部署的更多信息，请参阅：
 
-* [社区内容存储](/help/communities/working-with-srp.md)，其中讨论了UGC的可用SRP存储选项。
-* [推荐的拓扑](/help/communities/topologies.md)，其中讨论了基于用例和SRP选择的拓扑。
-* [升级到AEM 6.5 Communities](/help/communities/upgrade.md)，在迁移到AEM 6.5时，它会提供有关UGC的有用信息。
+* [社区内容存储](/help/communities/working-with-srp.md) — 讨论可用于UGC的SRP存储选项。
+* [推荐的拓扑](/help/communities/topologies.md) — 讨论基于用例和SRP选择的拓扑。
+* [升级到AEM 6.5 Communities](/help/communities/upgrade.md) — 在迁移到AEM 6.5时提供有关UGC的有用信息。
 
 ## Communities控制台 {#communities-consoles}
 
@@ -135,7 +131,7 @@ AEM Communities支持与网站访客建立关系，这可以：
 
 * [组件指南](/help/communities/components-guide.md)
 
-   * 一个示例站点， [社区组件](https://localhost:4502/editor.html/content/community-components/en.html)，提供了一个包含所有Communities组件及其默认配置和试验这些组件的能力的示例。
+   * 一个示例站点， [社区组件](https://localhost:4502/editor.html/content/community-components/en.html) 提供了一个包含所有Communities组件及其默认配置和试验这些组件的功能的示例。
 
 ## 社区站点模板 {#community-site-templates}
 
@@ -155,7 +151,7 @@ AEM Communities支持与网站访客建立关系，这可以：
 
 ## 社区组和组模板 {#community-groups-and-group-templates}
 
-社区组功能允许来自创作和发布环境的授权用户和社区成员在社区站点中动态创建子社区。
+社区组功能允许作者和发布环境中的授权用户和社区成员在社区站点中动态创建子社区。
 
 在创作环境中，当模板的结构包含 [组功能](/help/communities/functions.md#groups-function).
 
@@ -195,7 +191,7 @@ AEM Communities支持与网站访客建立关系，这可以：
 * 评分和徽章
 * Analytics报表
 
-要体验快速创建新参与社区的简便性，请访问 [AEM Communities快速入门](/help/communities/getting-started.md).
+要体验快速创建参与社区的简便性，请访问 [AEM Communities快速入门](/help/communities/getting-started.md).
 
 ## AEM演示计算机 {#aem-demo-machine}
 
@@ -208,7 +204,7 @@ AEM演示计算机包括：
 
 * 要安装的包。
 
-在Windows、MacOS和Linux上成功测试了AEM演示计算机的CQ 5.5、CQ 5.6.1、AEM 6.0、AEM 6.1、AEM 6.2、AEM 6.3和AEM 6.4。
+在Windows、MacOS和Linux®上成功测试了AEM演示计算机的CQ 5.5、CQ 5.6.1、AEM 6.0、AEM 6.1、AEM 6.2、AEM 6.3和AEM 6.4。
 
 AEM演示计算机需要有效的AEM许可证。
 

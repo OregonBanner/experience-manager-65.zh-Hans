@@ -1,25 +1,21 @@
 ---
-title: AEM触屏优化UI的结构
-seo-title: Structure of the AEM Touch-Enabled UI
-description: 在AEM中实现的触屏优化UI具有几个基础原则，并且由几个关键元素组成
-seo-description: The touch-optimized UI, as implemented in AEM, has several underlying principles and is made up of several key elements
-uuid: 9a255238-1adc-4a40-9c37-30cb53ffb26c
+title: Adobe Experience Manager触屏优化UI的结构
+description: 在Adobe Experience Manager中实现的触屏优化UI具有几个基础原则，并且由几个关键元素组成
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: introduction
 content-type: reference
-discoiquuid: 55dba890-4847-4986-b272-33480bc1d573
 exl-id: e562b289-5d8b-4fa8-ad1c-fff5f807a45e
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
 workflow-type: tm+mt
-source-wordcount: '861'
+source-wordcount: '857'
 ht-degree: 2%
 
 ---
 
-# AEM触屏优化UI的结构{#structure-of-the-aem-touch-enabled-ui}
+# Adobe Experience Manager触屏优化UI的结构{#structure-of-the-aem-touch-enabled-ui}
 
-AEM触屏优化UI具有几个基本原则，并且由几个关键元素组成：
+Adobe Experience Manager (AEM)触屏优化UI具有几个基本原则，并且由几个关键元素组成：
 
 ## 控制台 {#consoles}
 
@@ -33,7 +29,7 @@ UI同时适用于移动设备和桌面设备，不过，Adobe决定使用一种�
 
 布局遵循响应式设计样式，并根据您所使用的设备/窗口的大小进行调整。
 
-例如，当分辨率低于1024px（在移动设备上一样）时，显示器将相应地调整：
+例如，当分辨率低于1024 px（在移动设备上一样）时，显示器将相应地调整：
 
 ![chlimage_1-143](assets/chlimage_1-143.png)
 
@@ -52,13 +48,13 @@ UI同时适用于移动设备和桌面设备，不过，Adobe决定使用一种�
 
 ### 工具栏 {#toolbar}
 
-这与您的位置及界面工具相关，这些工具与控制以下页面中的视图或资产相关。 工具栏是特定于产品的，但是与元素有一些共同之处。
+这与您的位置及界面工具相关，这些工具与控制以下页面中的视图或资产相关。 工具栏是特定于产品的，但是这些元素有一些共同之处。
 
 在任意位置，工具栏都会显示当前可用的操作：
 
 ![chlimage_1-145](assets/chlimage_1-145.png)
 
-还取决于当前是否选择了资源：
+还取决于是否选择了资源：
 
 ![chlimage_1-146](assets/chlimage_1-146.png)
 
@@ -80,7 +76,7 @@ UI同时适用于移动设备和桌面设备，不过，Adobe决定使用一种�
 
 ### 内容框架 {#content-frame}
 
-页面内容在内容框架中呈现。 内容框架完全独立于编辑器 — 以确保不会因CSS或javascript而发生冲突。
+页面内容在内容框架中呈现。 内容框架独立于编辑器，可确保不会因CSS或JavaScript而发生冲突。
 
 内容框架位于窗口的右侧部分工具栏下。
 
@@ -101,9 +97,9 @@ UI同时适用于移动设备和桌面设备，不过，Adobe决定使用一种�
 
 ### 侧面板 {#side-panel}
 
-该页面包含两个默认选项卡，允许您选择资源和组件；可以从此处将资源和组件拖放到页面上。
+它包含两个默认选项卡，允许您选择资源和组件。 可以将它们从此处拖放到页面上。
 
-默认情况下，侧面板处于隐藏状态。 选中后，它将显示在左侧，或滑入以覆盖整个窗口（当窗口大小低于1024像素的宽度时；例如，在移动设备上时）。
+默认情况下，侧面板处于隐藏状态。 选中后，它将显示在左侧，或滑入以覆盖整个窗口（当窗口大小低于1024像素的宽度时；例如，在移动设备上）。
 
 ![chlimage_1-150](assets/chlimage_1-150.png)
 
@@ -127,7 +123,7 @@ UI同时适用于移动设备和桌面设备，不过，Adobe决定使用一种�
 
 ### 叠加 {#overlays}
 
-这些标记覆盖内容框架，并由 [图层](#layer) 实现与组件及其内容交互（完全透明）的机制。
+这些标记覆盖内容框架，并由 [图层](#layer) 实现如何（透明）与组件及其内容交互的机制。
 
 叠加在编辑器框架中处于活动状态（包含所有其他页面创作元素），但它们实际上叠加了内容框架中的相应组件。
 
@@ -146,13 +142,13 @@ AEM附带了已为页面创作实施的多个图层；例如，编辑、预览�
 
 >[!NOTE]
 >
->层是一个强大的概念，它影响用户对页面内容的查看以及与页面内容的交互。 在开发自己的层时，您需要确保层在退出时进行清理。
+>层是一个强大的概念，它影响用户对页面内容的查看以及与页面内容的交互。 在开发自己的层时，必须确保层在退出时进行清理。
 
 ### 图层切换器 {#layer-switcher}
 
 层切换器允许您选择要使用的层。 关闭时，它表示当前使用的图层。
 
-图层切换器可以从工具栏的下拉菜单（在窗口顶部、编辑器框架中）中使用。
+图层切换器可从工具栏（位于窗口顶部的编辑器框架中）作为下拉菜单使用。
 
 ![chlimage_1-155](assets/chlimage_1-155.png)
 
@@ -166,6 +162,6 @@ AEM附带了已为页面创作实施的多个图层；例如，编辑、预览�
 
 ## 更多信息 {#further-information}
 
-有关触屏UI相关概念的更多详细信息，请继续文章 [AEM触屏优化UI的概念](/help/sites-developing/touch-ui-concepts.md).
+有关触屏UI相关概念的更多详细信息，请阅读 [AEM触屏优化UI的概念](/help/sites-developing/touch-ui-concepts.md).
 
-欲知更多技术信息，请参见 [JS文档集](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/jsdoc/ui-touch/editor-core/index.html) （触屏启用页面编辑器）。
+有关详细信息，请参阅 [JS文档集](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/jsdoc/ui-touch/editor-core/index.html) （触屏启用页面编辑器）。

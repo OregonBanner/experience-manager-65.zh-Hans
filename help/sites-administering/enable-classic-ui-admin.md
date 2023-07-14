@@ -1,17 +1,13 @@
 ---
 title: Admin Console
-seo-title: Admin Consoles
 description: 了解如何使用AEM中提供的Admin Console。
-seo-description: Lear how to use the Admin Consoles available in AEM.
-uuid: 82ab5267-2f2a-4772-85d5-678d883a0294
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
-discoiquuid: 6dbe82c2-7a25-49ab-a980-3635f0344817
 docset: aem65
 exl-id: d4de517e-50bc-4ca5-89b1-295d259fd5bb
-source-git-commit: 729e5eb99b0c14f3d2fd8c3f4ec636f7fb52124f
+source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
 workflow-type: tm+mt
 source-wordcount: '226'
 ht-degree: 2%
@@ -21,13 +17,13 @@ ht-degree: 2%
 
 # Admin Console{#admin-consoles}
 
-默认情况下，通过管理控制台切换到经典UI的功能已被禁用。 因此，当鼠标悬停在特定控制台图标上时看到的弹出图标将不再显示，这些图标允许访问经典UI。
+默认情况下，通过管理控制台切换到经典UI的功能已被禁用。 因此，将鼠标悬停在特定控制台图标上时看到的弹出图标将不再显示，这些图标允许访问经典UI。
 
 中每个具有经典UI版本的控制台 `/libs/cq/core/content/nav` 可以单独重新启用，以便 **经典Ui** 将选项悬停在控制台图标上时，该选项会再次弹出。
 
 在本例中，我们将为站点控制台重新启用经典UI。
 
-1. 使用CRXDE Lite，查找与要为其重新启用经典UI的Admin Console对应的节点。 它们位于以下位置：
+1. 使用CRXDE Lite，查找与要为其重新启用Classic UI的Admin Console对应的节点。 它们位于以下位置：
 
    `/libs/cq/core/content/nav`
 
@@ -49,7 +45,7 @@ ht-degree: 2%
 
    `enableDesktopOnly = {Boolean}true`
 
-1. 此 **经典Ui** 选项在admin console中再次作为弹出窗口选项提供。
+1. 此 **经典Ui** 选项再次作为Admin Console中的弹出窗口选项提供。
 
    ![经典UI弹出窗口选项](assets/syui-01-2019-02-27-15-16-55.png)
 

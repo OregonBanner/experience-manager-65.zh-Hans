@@ -1,19 +1,15 @@
 ---
 title: 建立组件数据与 Adobe Analytics 属性的映射
-seo-title: Mapping Component Data with Adobe Analytics Properties
 description: 了解如何使用SiteCatalyst属性映射组件数据。
-seo-description: Learn how to map component data with SiteCatalyst properties.
-uuid: b08ab37f-ad58-4c04-978f-8e21a3823ae8
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
-discoiquuid: 6c1f8869-62d9-4fac-aa0d-b99bb0e86d6b
 docset: aem65
 exl-id: c7c0c705-ec16-40f5-ad08-193f82d01263
-source-git-commit: 58594be73372e128ba999a8290615fbcb447084e
+source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
 workflow-type: tm+mt
-source-wordcount: '1445'
+source-wordcount: '1440'
 ht-degree: 1%
 
 ---
@@ -39,7 +35,7 @@ ht-degree: 1%
 
 使用以下过程可将CQ组件变量与Adobe Analytics报表属性进行映射。
 
-1. 在 **AEM视图**，将跟踪组件从sidekick拖动到框架上。 例如，拖动 **页面** 组件组件来自 **常规** 类别。
+1. 在 **AEM视图**，将跟踪组件从sidekick拖动到框架上。 例如，拖动 **页面** 组件来自 **常规** 类别。
 
    ![aa-13](assets/aa-13.png)
 
@@ -57,7 +53,7 @@ ht-degree: 1%
 
    >[!NOTE]
    >
-   >您可以映射多个Analytics变量(例如， `props`， `eVars`， `events`)到同一CQ变量(例如， `pagedata.title`)
+   >您可以映射多个Analytics变量(例如， `props`， `eVars`， `events`)，以匹配相同的CQ变量(例如， `pagedata.title`)
 
    >[!CAUTION]
    >
@@ -65,7 +61,6 @@ ht-degree: 1%
    >
    >* `eVars` 和 `props` 映射到以以下任一开头的CQ变量： `pagedata.X` 或 `eventdata.X`
    >* 而事件应映射到以开头的变量 `eventdata.events.X`
-
 
 1. 要使框架在网站的发布实例上可用，请打开 **页面** 选项卡，然后单击 **激活框架。**
 
@@ -111,7 +106,7 @@ AEM使用约定来命名与产品相关的变量和事件，这些变量和事�
 
 可通过以下方式操作列表：
 
-1. 时间 **AEM视图**&#x200B;之后，可以根据使用3个过滤器按钮选择的变量类型对列表进行过滤：
+1. 时间 **AEM视图**&#x200B;之后，可以根据使用三个筛选按钮选择的变量类型对列表进行筛选：
 
    * 如果 *无按钮* 选中时，列表会显示完整列表。
    * 如果 **流量** 按钮时，列表将仅显示属于流量部分的变量。
@@ -127,23 +122,23 @@ AEM使用约定来命名与产品相关的变量和事件，这些变量和事�
    1. 可以使用“旋转箭头”按钮随时重新加载列表。
    1. 如果在框架中选择了多个RSID，则列表中的所有变量将使用选定RSID内使用的所有标签显示。
 
-
 1. 在Adobe Analytics视图中时，内容查找器显示属于在CQ视图中拖动的跟踪组件的所有CQ变量。
 
    * 例如，如果 **下载组件** 是 *只有一个拖动* 在CQ视图（具有两个可映射变量）中 *eventdata.downloadLink* 和 *eventdata.events.startDownload*)，则当切换到Adobe Analytics视图时，内容查找器将如下所示：
 
    ![aa-22](assets/aa-22.png)
 
-   * 可以将变量拖放到属于以下三个变量部分之一的任何Adobe Analytics变量上(**流量**， **转化** 和 **事件**)。
+   * Adobe Analytics可以将变量拖放到属于三个变量部分(**流量**， **转化** 和 **事件**)。
 
    * 在CQ视图中将新跟踪组件拖动到框架上时，属于该组件的CQ变量会自动添加到Adobe Analytics视图中的内容查找器(cf#)。
+
    >[!NOTE]
    >
    >在任意给定时间，只能将一个CQ变量映射到Adobe Analytics变量。
 
 ## 使用AEM视图和Analytics视图 {#using-aem-view-and-analytics-view}
 
-在任何给定时间，用户都可选择在框架页面上以两种方式查看Adobe Analytics映射。 从2个不同的角度来看，这2个视图更好地概述了框架中的映射。
+在任何给定时间，用户可以在框架页面上以两种方式查看Adobe Analytics映射。 从两个不同的角度来看，这两种视图提供了框架中映射的更好概述。
 
 ### AEM视图 {#aem-view}
 
@@ -160,15 +155,15 @@ AEM使用约定来命名与产品相关的变量和事件，这些变量和事�
    1. 如果框架具有从其父框架继承的组件，则在此处列出这些组件，以及映射到这些组件的变量。
 
       1. 继承的组件将被锁定。
-      1. 要解锁继承的组件，只需双击组件名称旁边的挂锁
-      1. 为了恢复继承，您必须删除已解锁的组件；之后，该组件将重新获得其锁定状态。
-   1. **将组件拖动到此处以包含在分析框架中**：组件可以从Sidekick拖放到此处。
+      1. 要解锁继承的组件，请双击该组件名称旁边的挂锁
+      1. 要恢复继承，请删除已解锁的组件；之后，该组件将重新获得其锁定状态。
+
+   1. **将组件拖动到此处以包含在分析框架中**：组件可以从Sidekick中拖动并放置在此处。
    1. 您可以找到当前包含在分析框架中的所有组件：
 
       1. 要添加组件，请从Sidekick的“组件”选项卡中拖动一个组件
       1. 要删除组件及其所有映射，请从组件的上下文菜单中选择删除，然后在确认对话框上接受删除。
       1. 请记住，组件只能从在其中创建的框架中删除，而不能从传统意义上的子框架中删除（它们只能被覆盖）。
-
 
 ### Analytics视图 {#analytics-view}
 
@@ -185,24 +180,26 @@ AEM使用约定来命名与产品相关的变量和事件，这些变量和事�
       * 流量变量( `prop1`)映射到CQ变量( `eventdata.downloadLink`)
 
       * 当组件旁边有挂锁时，这意味着该组件继承自父框架，因此无法编辑
+
    * **转化**:
 
       * 转化变量( `eVar1`)映射到CQ变量( `pagedata.title`)
 
-      * 转化变量( `eVar3`)，通过双击CQ变量字段并手动输入代码，映射到内联添加的javascript表达式
+      * 转化变量( `eVar3`)，通过双击CQ变量字段并手动输入代码，映射到内联添加的JavaScript表达式
+
    * **Event**:
 
       * 事件变量( `event1`)映射到CQ事件( `eventdata.events.pageView`)
 
-
-
 >[!NOTE]
 >
->任何表的CQ变量列也可以内联填充，方法是双击该字段并向其添加文本。 这些字段接受javascript作为输入。
+>也可以内联填充任何表的CQ变量列，方法是双击该字段并向其添加文本。 这些字段接受JavaScript作为输入。
 >
 >例如，在 `prop3` 您可以添加：
 >     `'`* `Adobe:'+pagedata.title+':'+pagedata.sitesection`\
 发送 *标题* 与其连接的页面的 *sitesection* 使用 *：* （冒号）和前缀 *Adobe* 作为 `prop3`
+>
 
 >[!CAUTION]
+>
 在任意给定时间，只能将一个CQ变量映射到Adobe Analytics变量。
