@@ -1,5 +1,5 @@
 ---
-title: Jave内容存储库中节点的命名约定
+title: Java内容存储库中节点的命名约定
 description: 存储库中的节点遵循Java内容存储库的命名约定
 uuid: 0515c5c5-3e93-4710-983f-c08c146467fc
 contentOwner: Guillaume Carlino
@@ -8,14 +8,14 @@ topic-tags: platform
 content-type: reference
 discoiquuid: 198098c0-432b-4a93-a94e-2552337435dd
 exl-id: 01c6bb29-1d2d-4a45-b291-0e8d97c01a08
-source-git-commit: a2fd3c0c1892ac648c87ca0dec440e22144c37a2
+source-git-commit: 8cfc42dc8fdf4dc0bfd3f002385f100c81b15993
 workflow-type: tm+mt
 source-wordcount: '308'
 ht-degree: 7%
 
 ---
 
-# 命名约定{#naming-conventions}
+# 命名约定 {#naming-conventions}
 
 存储库中的节点遵循的命名约定 [Java内容存储库](/help/sites-developing/the-basics.md#java-content-repository). 但是，AEM对页面节点名称施加了进一步的约定。
 

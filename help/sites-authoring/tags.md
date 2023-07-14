@@ -1,5 +1,5 @@
 ---
-title: 使用标记对网站中的内容进行分类
+title: 使用标记
 description: 标记是一种对网站中的内容进行分类的快速轻松的方法。
 uuid: 5d922443-f924-426e-acf4-27dffd1053f6
 contentOwner: Chris Bohnert
@@ -9,14 +9,15 @@ topic-tags: site-features
 discoiquuid: 9fb6d603-eb17-4192-bfa6-6c316f14ac7d
 docset: aem65
 exl-id: 49f95b31-92cd-4124-8c0f-c9802099fd0b
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
+source-git-commit: 8dafa901bc628ee5e4823e9f8811bf4d09b7e072
 workflow-type: tm+mt
-source-wordcount: '575'
-ht-degree: 66%
+source-wordcount: '569'
+ht-degree: 67%
 
 ---
 
-# 使用标记{#using-tags}
+
+# 使用标记 {#using-tags}
 
 标记是一种对网站中的内容进行分类的快速轻松的方法。 标记可以被视为关键字或标签，它们可以附加到页面、资产或其他内容以启用搜索来查找该内容和相关内容。
 
@@ -54,7 +55,7 @@ ht-degree: 66%
 
 * 激活单个标记。
 
-   与页面一样，新创建的标记需要先激活，然后才能在发布环境中使用。
+  与页面一样，新创建的标记需要先激活，然后才能在发布环境中使用。
 
 >[!NOTE]
 >
