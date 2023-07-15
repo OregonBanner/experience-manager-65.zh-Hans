@@ -1,25 +1,23 @@
 ---
 title: Adobe Experience Manager 6.5 Communities指南
-seo-title: Adobe Experience Manager 6.5 Communities Guide
-description: 创建在线体验，如论坛、用户组、学习资源和其他社交功能。浏览我们的指南，了解如何部署、管理、开发和创作社区。
-seo-description: Covers all AEM Communities tasks, such as creating online experiences such as forums, user groups, learning resources, and other social features.
+description: 创建在线体验，如论坛、用户组、学习资源和其他社交功能。浏览本指南，了解如何部署、管理、开发和创作社区。
 exl-id: 63040353-d34c-4306-9e7a-584ba48d8ad5
-source-git-commit: a51a863a4edf7e8b951a8361c5c7f0517b09f12a
+source-git-commit: e161c37544c3391607cbe495644f3353b9f77fe3
 workflow-type: tm+mt
-source-wordcount: '355'
+source-wordcount: '352'
 ht-degree: 34%
 
 ---
 
-# Adobe Experience Manager 6.5 Communities指南
+# Adobe Experience Manager (AEM) 6.5 Communities指南
 
-创建在线体验，如论坛、用户组、学习资源和其他社交功能。浏览我们的指南，了解如何部署、管理、开发和创作社区。
+创建在线体验，如论坛、用户组、学习资源和其他社交功能。浏览本指南，了解如何部署、管理、开发和创作社区。
 
 ## 重要AEM文章
 
 * [AEM快速入门](https://experienceleague.adobe.com/docs/experience-manager-65.html?lang=zh-Hans)
 * [AEM 6.5发行说明](/help/release-notes/home.md)
-* [近期文档更新](https://helpx.adobe.com/experience-manager/documentation-updates.html)
+* [近期文档更新](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html?lang=en)
 * [AEM安全核对清单](/help/sites-administering/security-checklist.md)
 
 ## AEM 6.5用户指南
@@ -42,11 +40,11 @@ ht-degree: 34%
 
 ## 重要AEM资源
 
-* [AEM教程](https://helpx.adobe.com/experience-manager/kt/index/aem-6-4-videos.html)
+* [AEM教程](https://experienceleague.adobe.com/docs/experience-manager-tutorials.html)
 * [Dispatcher用户指南](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hans)
 * [HTL用户指南](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)
-* [核心组件用户指南](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)
+* [核心组件用户指南](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
 * [Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html?lang=zh-Hans)
 * [GDPR 就绪](/help/managing/data-protection-and-privacy.md)
-* [Experience League](https://guided.adobe.com/?promoid=K42KVXHD&amp;mv=other#solutions/experience-manager)
-* [AEM 社区论坛](https://forums.adobe.com/community/experience-cloud/marketing-cloud/experience-manager)
+* [Experience League](https://experienceleague.adobe.com/#home)
+* [AEM 社区论坛](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community)

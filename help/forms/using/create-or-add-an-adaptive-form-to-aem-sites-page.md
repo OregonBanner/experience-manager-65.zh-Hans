@@ -3,9 +3,9 @@ title: 创建自适应表单或将自适应表单添加到 AEM Sites 页面
 description: 了解如何轻松创建自适应表单或将自适应表单无缝添加到 AEM Sites 页面。分步学习将动态且可自定义的表单集成到您的网站中并优化您的数字体验以尽量提高影响力的方法和最佳实践。
 feature: Adaptive Forms
 exl-id: 1813ccfc-87ce-46fa-a1d5-5edffd91efb0
-source-git-commit: cd6d9b4d019e24002e4fe1cc8679d270b24c2934
+source-git-commit: 762e918a2c65898fc518f131d44421fb82ce4d6f
 workflow-type: tm+mt
-source-wordcount: '2883'
+source-wordcount: '2913'
 ht-degree: 23%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 23%
 
 AEM Forms 会提供自适应表单容器和自适应表单嵌入组件。您可以使用自适应表单容器在体验片段或AEM Sites页面中创建新表单，而自适应Forms — 嵌入组件允许您添加现有自适应表单或使用自适应Forms编辑器创建新表单。
 
-![](/help/forms/using/assets/adaptive-form-in-sites-page.png)
+![站点页面中的自适应表单](/help/forms/using/assets/adaptive-form-in-sites-page.png)
 
 ## 在AEM页面编辑器或体验片段中使用自适应表单容器组件的好处
 
@@ -177,7 +177,7 @@ AEM Forms 会提供自适应表单容器和自适应表单嵌入组件。您可�
 1. 在编辑模式下打开包含自适应表单的AEM Sites页面(在自适应Forms容器组件中)。
 1. 打开内容树，然后选择 **[!UICONTROL 自适应Forms容器]** ，用于托管您的自适应表单。 一个AEM Sites页面可以托管多个自适应Forms。 因此，请仔细选择正确的自适应Forms容器。
 1. 在菜单栏上，选择 ![“转换为体验片段变量”图标](/help/forms/using/assets/Smock_FilingCabinet_18_N.svg) “转换为体验片段”变量图标。
-   ![](/help/forms/using/assets/convert-form-in-sites-page-to-an-experience-fragment.png)
+   ![将站点页面中的表单转换为体验片段](/help/forms/using/assets/convert-form-in-sites-page-to-an-experience-fragment.png)
 
    出现一个对话框，用于将自适应表单容器转换为新的体验片段或添加到现有的体验片段
 1. 在转换为体验片段变体对话框中，设置以下选项的值：
@@ -195,7 +195,7 @@ AEM Forms 会提供自适应表单容器和自适应表单嵌入组件。您可�
 1. 打开包含自适应表单的AEM页面编辑器或体验片段。
 1. 打开内容树，然后选择 **[!UICONTROL 自适应Forms容器]** ，用于托管您的自适应表单。 一个AEM Sites页面可以托管多个自适应Forms。 因此，请仔细选择正确的自适应Forms容器。
 1. 单击自适应表单容器属性 ![自适应表单容器属性](/help/forms/using/assets/configure-icon.svg) 图标。 随即会打开用于配置提交操作的“自适应表单容器”对话框。
-   ![](/help/forms/using/assets/adaptive-forms-container.png)
+   ![自适应表单容器](/help/forms/using/assets/adaptive-forms-container.png)
 1. 根据您的要求，选择并配置提交操作。 有关提交操作的详细信息，请参阅 [自适应表单提交操作](configuring-submit-actions.md)
 
 
@@ -213,7 +213,7 @@ AEM Forms 会提供自适应表单容器和自适应表单嵌入组件。您可�
 1. 打开包含自适应表单的AEM页面编辑器或体验片段。
 1. 打开内容树，然后选择 **[!UICONTROL 自适应Forms容器]** ，用于托管您的自适应表单。 一个AEM Sites页面可以托管多个自适应Forms。 因此，请仔细选择正确的自适应Forms容器。
 1. 单击自适应表单容器属性 ![自适应表单容器属性](/help/forms/using/assets/configure-icon.svg) 图标。 随即会打开用于配置数据模型的自适应表单容器对话框。
-   ![](/help/forms/using/assets/form-data-model-adaptive-forms-container.png)
+   ![表单数据模型自适应表单容器](/help/forms/using/assets/form-data-model-adaptive-forms-container.png)
 1. 根据您的要求，选择并配置JSON架构或表单数据模型。 有关提交操作的详细信息，请参阅 [自适应表单提交操作](configuring-submit-actions.md).
 
    * 当您选择 **[!UICONTROL 表单模型]** 选项，使用 **[!UICONTROL 选择表单数据模型]** 选项以选择预配置的表单数据模型。
@@ -235,7 +235,7 @@ AEM Forms 会提供自适应表单容器和自适应表单嵌入组件。您可�
 1. 打开包含自适应表单的AEM页面编辑器或体验片段。
 1. 打开内容树，然后选择 **[!UICONTROL 自适应Forms容器]** ，用于托管您的自适应表单。 一个AEM Sites页面可以托管多个自适应Forms。 因此，请仔细选择正确的自适应Forms容器。
 1. 单击自适应表单容器属性 ![自适应表单容器属性](/help/forms/using/assets/configure-icon.svg) 图标。 随即会打开用于配置数据模型的自适应表单容器对话框。
-   ![](/help/forms/using/assets/prefill-service-fdm-aem-sites-page-editor.png)
+   ![预填充服务fdm aem sites页面编辑器](/help/forms/using/assets/prefill-service-fdm-aem-sites-page-editor.png)
 1. 选择表单数据模型. 打开 **[!UICONTROL 基本]** 选项卡。 在预填充服务中，选择 **[!UICONTROL Forms Portal草稿预填充服务]**.
 1. 单击&#x200B;**[!UICONTROL 完成]**。
 

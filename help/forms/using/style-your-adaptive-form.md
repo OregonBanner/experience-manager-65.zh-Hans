@@ -9,9 +9,9 @@ topic-tags: introduction
 discoiquuid: 655303a4-99bb-4ba3-9d50-a178f5edcf85
 feature: Adaptive Forms
 exl-id: 7742c3ca-1755-44c5-b70f-61309f09d1b8
-source-git-commit: e9f64722ba7df0a7f43aaf1005161483e04142f5
+source-git-commit: 762e918a2c65898fc518f131d44421fb82ce4d6f
 workflow-type: tm+mt
-source-wordcount: '2038'
+source-wordcount: '2041'
 ht-degree: 8%
 
 ---
@@ -234,7 +234,7 @@ ht-degree: 8%
 
 1. 点按“ ”上方的空白区域 **[!UICONTROL 客户ID]** 字段并点按 **[!UICONTROL 响应面板容器]**. 设置 **[!UICONTROL 背景]** > **[!UICONTROL 背景颜色]** 到F1F2F2。 点按 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
 
-   ![](do-not-localize/responsive-panel-container.png)
+   ![响应面板容器](do-not-localize/responsive-panel-container.png)
 
 ### 设置按钮的样式 {#style-the-buttons}
 

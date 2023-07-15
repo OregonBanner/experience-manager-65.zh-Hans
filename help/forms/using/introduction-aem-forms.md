@@ -11,9 +11,9 @@ discoiquuid: a20383f2-f86a-45bf-a39e-725ee764503b
 docset: aem65
 feature: Adaptive Forms
 exl-id: e5533b4f-93b7-4ea9-a01d-fdf9528652c8
-source-git-commit: e9f64722ba7df0a7f43aaf1005161483e04142f5
+source-git-commit: 762e918a2c65898fc518f131d44421fb82ce4d6f
 workflow-type: tm+mt
-source-wordcount: '894'
+source-wordcount: '898'
 ht-degree: 10%
 
 ---
@@ -96,7 +96,7 @@ AEM Forms提供了Forms Workspace，这是一个移动应用程序，可将您�
 * 可自定义的仪表板，用于实时洞察业务运营
 * 用于连接第三方报告工具的API
 
-![](do-not-localize/3rd-draft.gif)
+![第三稿](do-not-localize/3rd-draft.gif)
 
 ## 个性化通信 {#personalized-communication}
 
@@ -115,6 +115,6 @@ AEM Forms提供了Forms Workspace，这是一个移动应用程序，可将您�
 * 支持数字签名以验证内容完整性和签名者的身份
 * AEM Forms的Document Security附加组件，包括加密、使用策略、跟踪和审核
 
-![](do-not-localize/layout-02.png)
+![布局二](do-not-localize/layout-02.png)
 
 优化的个性化通信工作流

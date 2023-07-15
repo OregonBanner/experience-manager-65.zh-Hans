@@ -1,16 +1,12 @@
 ---
 title: 使用Maven for Communities
-seo-title: Using Maven for Communities
-description: AEM Uber API jar
-seo-description: AEM Uber API jar
-uuid: ea37a89a-db6c-4018-8ab9-f5717e6c0421
+description: Adobe Experience Manager Uber API jar
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: a726c904-aadd-4678-be84-9e05808ab8be
 exl-id: 3df90511-e43e-442b-bf73-44c22c1886b7
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e161c37544c3391607cbe495644f3353b9f77fe3
 workflow-type: tm+mt
 source-wordcount: '109'
 ht-degree: 0%
@@ -21,7 +17,7 @@ ht-degree: 0%
 
 ## 概述 {#overview}
 
-此外，AEM Communities文档的此部分还包含：
+此外，Adobe Experience Manager (AEM) Communities文档的此部分还包含：
 
 * [使用Apache Maven构建AEM项目](../../help/sites-developing/ht-projects-maven.md).
 
@@ -33,7 +29,7 @@ ht-degree: 0%
 >
 >从AEM 6.4开始，Communities API未明确发布。 现在，所有社区API都包含在Uber jar本身中。
 >
->建议及时了解最新的Communities版本。
+>及时了解最新的Communities版本。
 >
 >参见 [最新版本](deploy-communities.md#latest-releases) 部分，以标识最新版本。
 
