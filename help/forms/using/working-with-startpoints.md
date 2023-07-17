@@ -1,18 +1,14 @@
 ---
 title: 使用起点
-seo-title: Working with Startpoints
-description: 通过Workbench中定义的移动设备使用AEM Forms进程的步骤。
-seo-description: Steps to work with a AEM Forms process from your Mobile device defined in Workbench.
-uuid: 1c4b4c86-cbdb-4e72-b0eb-7f8a2f5dcdde
+description: 通过Workbench中定义的移动设备使用Adobe Experience Manager Forms进程的步骤。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
-discoiquuid: 1ea60fb2-cf9f-4a87-bd8e-98150e668456
 docset: aem65
 exl-id: d5970f90-2899-43a5-a3a0-61a2c844d919
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 60924e7ee204e43a2ff833fbc394beca8db9c9d9
 workflow-type: tm+mt
-source-wordcount: '235'
+source-wordcount: '238'
 ht-degree: 0%
 
 ---
@@ -23,9 +19,9 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->在提及此概念时，术语起点、起始过程和形式可互换使用。
+>在引用此概念时，术语起点、开始过程和形式可互换使用。
 
-要从AEM Forms应用程序启动流程，您需要具有类型的起点 **工作区** 在您的流程中。 此外，您需要选择 **[!UICONTROL 移动工作区中的可见性]** 起始点选项。
+要从Adobe Experience Manager (AEM) Forms应用程序启动流程，您必须具有类型的起点 **工作区** 在您的流程中。 此外，您必须选择 **[!UICONTROL 在移动工作区中可见]** 起始点选项。
 
 ![mws_startpoint_select_option](assets/mws_startpoint_select_option.png)
 
@@ -46,6 +42,6 @@ ht-degree: 0%
 
 如果应用程序处于离线状态，则表单及其数据将保存在“发件箱”文件夹中。
 
-如果应用程序处于联机状态，则任务将与AEM Forms服务器同步，并分配给进程中指定的用户。
+如果应用程序处于联机状态，则任务将与AEM Forms Server同步，并分配给进程中指定的用户。
 
 要使用任务列表中的任务，请参阅 [打开任务](/help/forms/using/open-task.md).

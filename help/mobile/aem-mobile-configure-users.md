@@ -1,16 +1,14 @@
 ---
 title: 配置用户和用户组
-description: 关注此页面，了解用户角色以及如何配置用户和组以支持创作和管理Mobile On-Demand Services应用程序。
-uuid: 461e1725-41dd-4883-92b9-a7e175660401
+description: 关注此页面，了解用户角色以及如何配置用户和组以支持创作和管理您的Mobile On-Demand Services应用程序。
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: administering-on-demand-services-app
-discoiquuid: c3c73e67-7f85-4308-b4cd-1b42d4f3f2d9
 exl-id: 58b7d1b9-a851-442a-9d02-212cad8abbed
-source-git-commit: f4b6eb2ded17ec641f23a1fc3b977ce77169c8a1
+source-git-commit: 60924e7ee204e43a2ff833fbc394beca8db9c9d9
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '512'
 ht-degree: 0%
 
 ---
@@ -19,7 +17,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe建议对需要基于单页应用程序框架的客户端渲染（例如React）的项目使用SPA编辑器。 [了解详情](/help/sites-developing/spa-overview.md).
+>对于需要基于单页应用程序框架的客户端渲染（例如React）的项目，Adobe建议使用SPA编辑器。 [了解详情](/help/sites-developing/spa-overview.md).
 
 本章介绍用户角色以及如何配置用户和组以支持移动设备应用程序的创作和管理。
 
@@ -31,7 +29,7 @@ ht-degree: 0%
 
 #### 组配置 — 应用程序作者 {#group-configuration-app-authors}
 
-1. 创建一个名为“app-authors”的新用户组：
+1. 创建一个名为“app-authors”的用户组：
 
    导航到用户Admin Console： [http://localhost:4502/libs/granite/security/content/groupadmin.html](http://localhost:4502/libs/granite/security/content/groupadmin.html)
 
@@ -43,7 +41,7 @@ ht-degree: 0%
 
    ![chlimage_1-167](assets/chlimage_1-167.png)
 
-1. 现在您已经创建了应用程序作者用户组，接下来可以通过 [用户管理控制台](http://localhost:4502/libs/granite/security/content/useradmin.md).
+1. 现在您已经创建了应用程序作者用户组，接下来可以通过 [用户Admin Console](http://localhost:4502/libs/granite/security/content/useradmin.md).
 
    ![chlimage_1-168](assets/chlimage_1-168.png)
 
@@ -66,11 +64,11 @@ app-admins组的成员可以使用与应用程序作者相同的权限来创作�
 >
 >权限决定AEM App Command Center中某些用户操作的可用性。
 >
->您会注意到，某些选项不适用于可供应用程序管理员使用的应用程序作者。
+>请注意，某些选项不适用于可供应用程序管理员使用的应用程序作者。
 
 ### 组配置 — 应用程序管理员 {#group-configuration-app-admins}
 
-1. 创建一个名为app-admins的新组。
+1. 创建一个名为app-admins的组。
 1. 将以下组添加到新的app-admins组：
 
    * content-author
@@ -104,8 +102,8 @@ app-admins组的成员可以使用与应用程序作者相同的权限来创作�
 1. 根据需要向此组添加成员
 1. 导出内容或上传
 
-   * （读取） /etc/contentsync上的，以访问导出模板
-   * /var上的（读取），路径在读取时遍历
+   * /etc/contentsync上的（读取）以访问导出模板
+   * /var上的（读取）路径在读取时遍历
    * /var/contentsync上的（读取、写入、修改、删除）以写入、读取和清理ContentSync缓存的导出内容
 
 ### 其他资源 {#additional-resources}
