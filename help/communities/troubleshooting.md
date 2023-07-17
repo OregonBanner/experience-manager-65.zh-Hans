@@ -1,16 +1,14 @@
 ---
 title: 社区故障诊断
 description: 社区疑难解答，包括已知问题
-uuid: 99225430-fa2a-4393-ae5a-18b19541c358
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: cdb2d80a-2fbf-4ee6-b89b-b5d74e6d3bfc
 exl-id: ef4f4108-c485-4e2e-a58f-ff64eee9937e
-source-git-commit: a2fd3c0c1892ac648c87ca0dec440e22144c37a2
+source-git-commit: 3d80ea6a6fbad05afcdd1f41f4b9de70921ab765
 workflow-type: tm+mt
-source-wordcount: '359'
+source-wordcount: '350'
 ht-degree: 1%
 
 ---
@@ -42,24 +40,24 @@ at org.apache.sling.scripting.core.impl.DefaultSlingScript.eval(DefaultSlingScri
 
 问题是com.day.cq.commons.date.RelativeTimeFormat的格式字符串在5.4和5.5之间发生了更改，因此不再接受“ago”的“a”。
 
-因此，任何使用RelativeTimeFormat() API的代码都需要更改：
+因此，必须更改任何使用RelativeTimeFormat() API的代码：
 
 * 发件人: `final RelativeTimeFormat fmt = new RelativeTimeFormat("r a", resourceBundle);`
 * 收件人: `final RelativeTimeFormat fmt = new RelativeTimeFormat("r", resourceBundle);`
 
 创作和发布上的失败是不同的。 在创作时，它静默地失败，只是不显示论坛主题。 发布时，会在页面上引发错误。
 
-请参阅 [com.day.cq.commons.date.RelativeTimeFormat](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/date/RelativeTimeFormat.html) API以了解更多信息。
+请参阅 [com.day.cq.commons.date.RelativeTimeFormat](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/commons/date/RelativeTimeFormat.html) API以了解更多信息。
 
 ## 常见问题 {#common-concerns}
 
 ### 日志中的警告：已弃用Handlebars {#warning-in-logs-handlebars-deprecated}
 
-在启动期间（不是第一次，但之后每次启动），日志中可能会显示以下警告：
+在启动期间（不是第一个，但之后的每一个），日志中可能会显示以下警告：
 
 * `11.04.2014 08:38:07.223 WARN [FelixStartLevel]com.github.jknack.handlebars.Handlebars Helper 'i18n'` 已替换为 `com.adobe.cq.social.handlebars.I18nHelper@15bac645`
 
-可以安全地忽略此警告，因为 `jknack.handlebars.Handlebars`，用于 [SCF](scf.md#handlebarsjavascripttemplatinglanguage)，附带自己的i18n助手实用程序。 启动时，它会被替换为AEM特定的 [i18n助手](handlebars-helpers.md#i-n). 此警告由第三方库生成，用于确认覆盖现有帮助程序。
+可以安全地忽略此警告，因为 `jknack.handlebars.Handlebars`，用于 [SCF](scf.md#handlebarsjavascripttemplatinglanguage)，附带自己的i18n助手实用程序。 启动时，它会被替换为特定于AEM的 [i18n助手](handlebars-helpers.md#i-n). 此警告由第三方库生成，用于确认覆盖现有帮助程序。
 
 ### 日志中的警告： OakResourceListener processOsgiEventQueue {#warning-in-logs-oakresourcelistener-processosgieventqueue}
 

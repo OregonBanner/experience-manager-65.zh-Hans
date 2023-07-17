@@ -1,26 +1,22 @@
 ---
 title: 术语表
-seo-title: Glossary
 description: 此术语表按字母顺序列出了项目核对清单中所有可交付结果文档的详细信息。
-seo-description: This glossary lists (alphabetically) details of all Deliverable documents from the Project Checklist.
-uuid: 5f919b05-3ec5-4b18-b966-5dcf706407f4
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/MANAGING
 topic-tags: managing-checklist
 content-type: reference
-discoiquuid: cca21688-40b1-433d-93dc-cd62e5558507
 docset: aem65
 exl-id: 9672f7a4-82b7-4175-874d-181846115442
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: f21b0b5cb4246ffb22c9d9a219a622f36741d9b8
 workflow-type: tm+mt
-source-wordcount: '7036'
+source-wordcount: '6949'
 ht-degree: 0%
 
 ---
 
 # 术语表{#glossary}
 
-此术语表按字母顺序列出 [项目核对清单](/help/managing/best-practices-checklist.md).
+此词汇表按字母顺序列出了所有交付项文档的详细信息，这些文档来自 [项目核对清单](/help/managing/best-practices-checklist.md).
 
 ## 来自业务利益相关者的接受 {#acceptance-from-business-stakeholders}
 
@@ -37,7 +33,7 @@ ht-degree: 0%
 * 用户接受该解决方案，并可以设想使用该解决方案。
 * 客户接受项目。
 
-计划并设计验收测试的时间越早，最终部署就越容易。 它们应与客户和您的质量保证团队一起定义。
+计划并设计验收测试的时间越早，最终部署就越轻松。 它们应与客户和您的质量保证团队一起定义。
 
 虽然您可能无法在本项目一开始就定义所有详细信息，但应讨论并商定初始定义。 验收测试可能基于基本要求（功能和性能）。
 
@@ -47,7 +43,7 @@ ht-degree: 0%
 
 ### Adobe安全核对清单 {#adobe-security-checklist}
 
-此 [Adobe安全核对清单](/help/sites-administering/security-checklist.md) 是提供的官方核对清单，用于确保AEM在安装时安全。 它包含为确保实例的完整性所需执行的安全措施和验证步骤。
+此 [Adobe安全核对清单](/help/sites-administering/security-checklist.md) 是提供的官方核对清单，用于确保Adobe Experience Manager (AEM)在安装时安全。 它包含为确保实例的完整性而必须执行的安全措施和验证步骤。
 
 ### Adobe支持门户项目设置 {#adobe-support-portal-project-set-up}
 
@@ -77,7 +73,7 @@ Adobe支持门户使实施合作伙伴和客户能够在支持门户中将AEM实
 
 ### 同意定义为项目目标的KPI {#agreement-on-kpis-defined-as-goals-for-the-project}
 
-关键绩效指标(KPI)可帮助组织定义和衡量实现组织目标和宗旨的进度。 一旦一个组织分析了它的使命并确定了它的目标，它就需要衡量实现这些目标的进展情况。 KPI提供了一种衡量机制。
+关键绩效指标(KPI)可帮助组织定义和衡量实现组织目标的进度。 一旦一个组织分析了它的使命并确定了它的目标，它就必须衡量实现这些目标的进展情况。 KPI提供了一种衡量机制。
 
 ### 协调业务和性能KPI {#align-business-and-performance-kpis}
 
@@ -89,7 +85,7 @@ Adobe支持门户使实施合作伙伴和客户能够在支持门户中将AEM实
 
 ### 使客户路线图与项目时间表保持一致 {#alignment-of-the-customer-roadmap-with-project-timeline}
 
-客户路线图由高级别的里程碑和业务目标组成。 项目时间表必须遵循并符合此策略，因此必须突出显示并跟踪任何潜在风险和/或可能存在的偏差。
+“客户路线图”由高层级里程碑和业务目标组成。 项目时间表必须遵循并符合此策略，因此必须突出显示并跟踪任何潜在风险和/或可能存在的偏差。
 
 ### 应用程序架构定义 {#application-architecture-definition}
 
@@ -97,12 +93,12 @@ Adobe支持门户使实施合作伙伴和客户能够在支持门户中将AEM实
 
 其重点是：
 
-* 他们如何彼此互动以及如何与用户互动。
+* 他们如何彼此交互以及如何与用户交互。
 * 由应用程序使用和生成的数据，而不是其内部结构。
 
 ### 已定义特定于应用程序的维护任务 {#application-specific-maintenance-tasks-defined}
 
-除了标准Adobe Experience Manager (AEM)维护任务外，您还需要定义为持续维护解决方案而需要执行的任何其他操作任务。
+除了标准Adobe Experience Manager (AEM)维护任务外，您必须定义为持续维护解决方案而必须运行的任何其他操作任务。
 
 ### 经过适当培训的工作人员 {#appropriately-trained-staff}
 
@@ -183,7 +179,7 @@ Adobe支持门户使实施合作伙伴和客户能够在支持门户中将AEM实
 
 基于备份和恢复概念的完整端到端测试。
 
-### 商业论证 {#business-case-s}
+### 业务案例 {#business-case-s}
 
 业务案例文档提供了与采取操作、采取替代操作（如果可用）或不采取任何操作相关的论据。 应当平衡各种论点，以具体事实为基础（只要有可能/相关），并突出所有情况的好处和风险。
 
@@ -211,9 +207,9 @@ Adobe支持门户使实施合作伙伴和客户能够在支持门户中将AEM实
 
 ### 对已确定并根据ROI和KPI预期进行调整的解决方案或体系结构进行必要的调整，由业务部门签收 {#business-sign-off-on-any-required-adjustments-to-the-solution-or-architecture-identified-and-aligned-against-roi-and-kpi-expectations}
 
-风险评估和渗透测试流程可能会产生需要在解决方案体系结构或开发过程中解决的问题和结果。
+风险评估和渗透测试过程可能会产生一些必须在解决方案体系结构或开发过程中加以解决的问题和结果。
 
-任何因该等流程而引致之调整须由业务部门审阅及批准，并按整体目标衡量。
+任何因该等流程而引致之调整必须经业务部门审阅及批准，并按整体目标衡量。
 
 ### 缓存策略 {#caching-strategy}
 
@@ -223,7 +219,7 @@ Adobe支持门户使实施合作伙伴和客户能够在支持门户中将AEM实
 
 ### 编码准则 {#coding-guidelines}
 
-编码指南定义了开发人员在开发解决方案时应遵循的基本原则。 这些可能包括：
+编码指南定义了开发人员在开发解决方案时应遵循的基本原则。 除其他外，这些可能包括：
 
 * 命名约定
 * 服务使用情况
@@ -259,7 +255,7 @@ Adobe支持门户使实施合作伙伴和客户能够在支持门户中将AEM实
 
 ### 组件和模板关系概念 {#components-and-templates-relationship-concept}
 
-将在新应用程序中使用的模板和组件的概要。 包括继承规则、权限和关系等详细信息。
+新应用程序中使用的模板和组件的大纲。 包括继承规则、权限和关系等详细信息。
 
 ### 组件和模板关系规范 {#components-and-templates-relationship-specification}
 
@@ -277,7 +273,7 @@ Adobe支持门户使实施合作伙伴和客户能够在支持门户中将AEM实
 
 ### 内容架构文档 {#content-architecture-document}
 
-建议的内容架构的文档。 详情应包括（及其他）：
+建议的内容架构的文档。 具体细节应包括：
 
 * 内容树
 * 标记概念
@@ -302,7 +298,7 @@ Adobe支持门户使实施合作伙伴和客户能够在支持门户中将AEM实
 * 针对数据和解决方案的备份过程
 * 备份存储
 * 确认备份按预期运行
-* 故障时的恢复
+* 恢复（如果发生故障）
 
 ### 客户编码准则 {#customer-coding-guidelines}
 
@@ -312,7 +308,7 @@ Adobe支持门户使实施合作伙伴和客户能够在支持门户中将AEM实
 
 客户提供的策略，用于定义何时以及如何进行部署/发布。
 
-这些通常包括时间线、时间安排和签核要求。
+这些要求通常包括时间线、时间安排和签核要求。
 
 ### 客户监控策略或要求 {#customer-monitoring-policies-or-requirements}
 
@@ -324,7 +320,7 @@ Adobe支持门户使实施合作伙伴和客户能够在支持门户中将AEM实
 
 ### 客户报告策略和要求 {#customer-reporting-policies-and-requirements}
 
-客户关于报告的任何政策和/或要求。 这些可能包括：
+客户有关报表的任何策略、要求或两者。 这些可能包括：
 
 * 提交特定报告的频率
 * 特定报告的格式
@@ -344,7 +340,7 @@ Adobe支持门户使实施合作伙伴和客户能够在支持门户中将AEM实
 
 ### 客户规格指南 {#customer-specification-guidelines}
 
-客户对规范的格式、交付和签核有任何指导。
+客户制定的任何与规格格式、交付和签核相关的准则。
 
 ### 客户测试报告 {#customer-test-reports}
 
@@ -375,7 +371,7 @@ Adobe支持门户使实施合作伙伴和客户能够在支持门户中将AEM实
 
 ### 部署/发布策略和流程 {#deployment-release-policies-and-processes}
 
-规范化的策略，涵盖项目的部署和版本。 这些可能包括：
+规范化的策略，涵盖项目的部署和发布。 这些可能包括：
 
 * 发布时间
 * 假日规划
@@ -406,7 +402,7 @@ Adobe支持门户使实施合作伙伴和客户能够在支持门户中将AEM实
 
 * 项目范围
 * 所有客户期望
-* 这是项目中每个角色和每个阶段所做所有决策的基础
+* 每个角色在项目中每个阶段做出所有决策的基础
 
 ### 对话框规范 {#dialogs-specification}
 
@@ -430,7 +426,7 @@ Adobe支持门户使实施合作伙伴和客户能够在支持门户中将AEM实
 
 ### 已执行耐久性测试 {#durability-test-executed}
 
-耐久性测试的执行。
+耐久性试验的执行。
 
 ### 错误处理概念 {#error-handling-concept}
 
@@ -472,7 +468,7 @@ Adobe支持门户使实施合作伙伴和客户能够在支持门户中将AEM实
 
 ### 体验设计要求 {#experience-designs-requirements}
 
-对解决方案整个体验的要求。 这包括个性化、跨设备持久性和用户体验等因素。
+对解决方案整个体验的要求。 这涵盖了个性化、跨设备持久性和用户体验等因素。
 
 ### 体验规范 {#experience-specifications}
 
@@ -487,7 +483,7 @@ Adobe支持门户使实施合作伙伴和客户能够在支持门户中将AEM实
 后备系统的定义：
 
 * 在发生严重故障时必须保持运行的关键业务功能
-* 回退时所需的流程
+* 存在回退时所需的流程
 
 ### 已测试后备系统和过程 {#fallback-system-and-procedure-tested}
 
@@ -495,7 +491,7 @@ Adobe支持门户使实施合作伙伴和客户能够在支持门户中将AEM实
 
 ### 备用系统从业务利益相关者处注销 {#fallback-system-sign-off-from-business-stakeholders}
 
-从业务利益相关者处签署备用系统和相关程序将确保关键业务功能。
+从业务利益相关者处签署备用系统和相关程序可确保关键业务功能。
 
 ### KPI的可行性确认 {#feasibility-confirmation-on-kpis}
 
@@ -536,20 +532,20 @@ Adobe支持门户使实施合作伙伴和客户能够在支持门户中将AEM实
 
 ### 高层次要求 {#high-level-requirements}
 
-高层要求的定义提供了对系统要求的概括性细分，包括以下方面：
+高层要求的定义提供了对系统要求的广义细分，包括以下方面：
 
 * 业务流程
 * 主要系统功能
 
-有关这些功能的基本详细信息通常是已知的，因此本文档不应作为估计值。
+有关这些功能的基本详细信息通常是已知的，因此本文档不应是估计值。
 
 ### 高级解决方案设计 {#high-level-solution-design}
 
-高级解决方案设计说明了用于开发解决方案的体系结构。 架构图提供了整个系统的概述，确定了将为产品开发的主要组件及其界面。
+高级解决方案设计说明了用于开发解决方案的体系结构。 架构图提供了整个系统的概览，标识了为产品及其界面开发的主要组件。
 
 ### 高级系统图 {#high-level-system-map}
 
-此系统图应提供非常高级别的系统图。 它与解决方案上下文的不同之处在于，它是所有涉及系统的广义映射，此图上没有接口。
+此系统图应提供系统的高级图表。 它与解决方案上下文的不同之处在于，它是所有涉及系统的广义映射，此图上没有接口。
 
 ### 历史内容结构 {#historical-content-structure}
 
@@ -557,7 +553,7 @@ Adobe支持门户使实施合作伙伴和客户能够在支持门户中将AEM实
 
 ### 历史绩效和历史绩效KPI {#historical-performance-and-historical-performance-kpis}
 
-您需要从旧版系统中收集和记录性能统计信息和性能KPI。 然后，这些指标将用作参考点并用于设定新解决方案的基准。
+您必须从旧版系统中收集并记录性能统计信息和性能KPI。 然后，这些指标将用作参考点并用于设定新解决方案的基准。
 
 ### 确定关键解决方案/功能 {#identify-critical-key-solutions-functionalities}
 
@@ -621,7 +617,7 @@ URL处理概念的实施。
 
 ### 实施概念 {#implementation-concept}
 
-实施概念为整个实施提供了指导原则。 它应考虑到：
+实施概念为整个实施提供了指导原则。 它应考虑：
 
 * 运营
 * 维护
@@ -630,7 +626,7 @@ URL处理概念的实施。
 * 安全性
 * 可扩展性
 
-此概念还可以概述解决方案中使用的框架、库和其他工件。
+此概念还概述了解决方案中使用的框架、库和其他工件。
 
 ### 通知Adobe支持人员上线计划 {#inform-adobe-support-about-the-go-live-schedule}
 
@@ -654,9 +650,9 @@ URL处理概念的实施。
 
 一个跟踪系统和所需程序，记录遇到的所有问题并跟踪正在进行的活动，以确保解决所有问题。
 
-所有项目利害关系方都应有权进入，以促进项目状况的透明度。
+所有项目利益攸关方都应有机会促进项目状况的透明度。
 
-示例包括Atlassian JIRA和HP Quality Center。
+例如Atlassian JIRA和HP Quality Center。
 
 ### 问题跟踪系统流程已设置并集成 {#issue-tracking-system-process-is-set-up-and-integrated}
 
@@ -685,7 +681,7 @@ URL处理概念的实施。
 
 ### 日志文件分析 {#log-file-analysis}
 
-分析以及由此产生的建议，定义监控解决方案所需的记录内容：
+分析以及由此产生的建议，定义监测解决方案所必须记录的内容：
 
 * 要记录的活动
 * 粒度级别
@@ -790,7 +786,7 @@ URL处理概念的实施。
 
 应确定和定义可能会发生失败的特定点。 任何与这些任务相关的监控任务也应进行定义。
 
-示例包括（其中包括）：
+例如：
 
 * 关键工作流
 * 事务处理
@@ -864,7 +860,7 @@ URL处理概念的实施。
 
 ### 基于角色的测试概念 {#persona-based-testing-concept}
 
-基于角色的测试是基于体验设计中概述的不同角色的方法。 它还会测试帐户及其相关权限级别。
+基于角色的测试是一种基于体验设计中概述的不同角色的方法。 它还会测试帐户及其相关权限级别。
 
 这通常用于用户验收测试(UAT)。
 
@@ -890,7 +886,7 @@ URL处理概念的实施。
 
 ### 从业务利益相关者处签发生产许可证 {#production-sign-off-from-business-stakeholders}
 
-在投入生产环境之前，必须授予生产注销(PSO)权限。 这是对将投入生产的版本以及任何已知问题进行的审查的结果。 注销作为上线计划的一部分提供。
+在生产环境中上线之前，必须授予生产注销(PSO)权限。 这是对将投入生产的版本以及任何已知问题进行的审查的结果。 签核作为上线计划的一部分提供。
 
 ### 生产注销流程和策略 {#production-sign-off-process-and-policy}
 
@@ -902,15 +898,15 @@ URL处理概念的实施。
 
 ### 项目工作 — 最终估计 {#project-efforts-final-estimates}
 
-此 [初步估计](#project-efforts-initial-estimates) 高水平，并根据实施的高水平要求制定。
+此 [初步估计](#project-efforts-initial-estimates) 都是高级别的，并根据执行工作的高级别要求制定的。
 
-这些报告现在经过审查、完善和扩充，以提供最终估计数。 应由每个适当的项目牵头方提供估计数，包括项目管理、咨询、架构、测试和开发。
+这些报告现在经过审查、完善和扩充，以提供最终估计数。 估算应由每个适当的项目负责人提供，包括项目管理、咨询、架构、测试和开发。
 
 该等估计用于资源配置及预算编制。
 
 ### 项目工作 — 初步估计 {#project-efforts-initial-estimates}
 
-初步估计数数额较大，而且是根据执行工作的高额要求作出的。 这将在以后阶段进行审查和完善。
+初步估计数数额较大，是根据执行工作的高额要求作出的。 这将在以后阶段进行审查和完善。
 
 ### 项目组织 {#project-organization}
 
@@ -975,7 +971,7 @@ AEM维护多个版本的资源和内容。 清除规则的设计和配置可定�
 
 ### 相关合同条款 {#relevant-contract-terms}
 
-您应突出显示与项目实施相关的具体合同条款；例如合同里程碑、发票期限或员工要求。
+突出显示与项目实施相关的具体合同条款；例如合同里程碑、发票期或工作人员要求。
 
 ### 报告节奏 {#reporting-cadence}
 
@@ -1001,7 +997,7 @@ tar文件中的数据永远不会被覆盖，即使只更新现有数据，磁�
 
 ### 风险评估 {#risk-assessment}
 
-风险评估由客户的IT和/或安全部门执行。
+风险评估由客户的IT部门或安全部门（或两者）运行。
 
 评估项目的技术和业务风险。 该解决方案需要进行评估以确保符合安全策略。
 
@@ -1026,7 +1022,7 @@ tar文件中的数据永远不会被覆盖，即使只更新现有数据，磁�
 * 组
 * 用户
 * 权限
-* 以及用户管理和配置
+* 以及用户管理和资源调配
 
 ### 角色和权限概念符合安全准则 {#roles-and-rights-concept-meets-security-guidelines}
 
@@ -1099,7 +1095,7 @@ Recommendations与软件和硬件架构的安全性相关。
 
 ### 解决方案审查委员会已成立，会议节奏已设定 {#solution-review-board-established-and-meeting-cadence-set}
 
-解决方案审查委员会通常由客户利益相关者组成。
+解决方案审查委员会由客户利益相关者组成。
 
 董事会定期举行会议，以持续检讨目前界定的规定及有关规格。 目的是确保与成功定义和标准保持一致，并为制定要求提供投入。
 
@@ -1127,7 +1123,7 @@ Recommendations与软件和硬件架构的安全性相关。
 
 ### 已定义和传达的规格审查和批准流程 {#specification-review-and-approval-process-defined-and-communicated}
 
-应制定明确的流程，让客户签发规格。 此过程确保要求范围的明确和固定。
+应建立客户签发规范的明确流程。 此过程确保要求范围的明确和固定。
 
 ### 为AEM管理员培训选定的员工 {#staff-selected-for-aem-administrator-training}
 
@@ -1162,7 +1158,7 @@ Recommendations与软件和硬件架构的安全性相关。
 
 客户、项目发起人和项目经理或顾问应指定：
 
-* 决定项目成功结果的因素。
+* 什么决定了项目的成功结果？
 * 满足成功定义所需的具体标准。
 
 它们用于确保满足成功标准：
@@ -1172,7 +1168,7 @@ Recommendations与软件和硬件架构的安全性相关。
 
 ### 支持验证报告的问题 {#support-in-validation-of-reported-issues}
 
-Quality Lead的部分职责是确保有资源在测试时支持任何用户。 例如，在测试时帮助用户、在报告问题时帮助用户，以及帮助根据测试环境验证问题。
+Quality Lead的部分职责是确保在测试时有足够的资源支持任何用户。 例如，在测试时帮助用户、在报告问题时帮助用户，以及帮助根据测试环境验证问题。
 
 ### 支持流程和访问Adobe支持门户 {#support-processes-and-access-to-adobe-support-portal}
 
@@ -1186,11 +1182,11 @@ Quality Lead的部分职责是确保有资源在测试时支持任何用户。 �
 
 ### 系统架构文档 {#system-architecture-documentation}
 
-详细说明系统架构的文档；包括所有环境的接口、网络位置和集成以及其他信息。
+详细说明系统架构的文档；包括接口、网络位置和所有环境的集成以及其他信息。
 
 ### 系统架构安全概念 {#system-architecture-security-concept}
 
-有关如何使系统体系结构符合任何安全策略的简要概述。 这可能包括：
+有关如何使系统体系结构符合任何安全策略的概要性说明。 这可能包括：
 
 * 防火墙和防火墙规则
 * 安全区域
@@ -1200,7 +1196,7 @@ Quality Lead的部分职责是确保有资源在测试时支持任何用户。 �
 
 ### 系统风险因素确定和验证 {#system-risk-factors-identified-and-verified}
 
-任何在风险评估（或其他检讨）中发现的风险因素会被识别及评估：
+任何在风险评估（或其他审查）中发现的风险因素被确定和评估：
 
 * 每一种风险所隐含的风险水平
 * 以及对实施进行任何必要更改所需的估计工作量。
@@ -1234,7 +1230,7 @@ Quality Lead的部分职责是确保有资源在测试时支持任何用户。 �
 
 ### 技术规范 {#technical-specification}
 
-技术规范涵盖（及其他信息中）：
+技术规范包括（除其他信息外）：
 
 * 界面
 * 配置
@@ -1243,7 +1239,7 @@ Quality Lead的部分职责是确保有资源在测试时支持任何用户。 �
 
 ### 模板规范 {#template-specification}
 
-所需模板的规范。 这些内容应涵盖详细信息，包括parsys、Blueprint和继承映射等。
+所需模板的规范。 这些资源应涵盖详细信息，包括parsys、Blueprint和继承映射等。
 
 这些规范基于业务要求和体验要求。
 
@@ -1274,7 +1270,7 @@ Quality Lead的部分职责是确保有资源在测试时支持任何用户。 �
 
 ### 测试套件 {#test-suite}
 
-选择自动化套件和工具。 这些内容将用于自动进行测试，包括用例的测试。
+选择自动化套件和工具。 这些组件用于自动化测试，包括用例的测试。
 
 ### 已选择测试工具套件 {#test-tooling-suite-selected}
 
@@ -1282,7 +1278,7 @@ Quality Lead的部分职责是确保有资源在测试时支持任何用户。 �
 
 ### 测试概念 {#testing-concept}
 
-测试概念是项目测试的高层次概述；包括QA、UAT、性能、安全性和集成测试。
+测试概念是项目测试的高级概述；包括QA、UAT、性能、安全性和集成测试。
 
 ### 测试计划 {#testing-plans}
 
@@ -1298,7 +1294,7 @@ Quality Lead的部分职责是确保有资源在测试时支持任何用户。 �
 
 ### 第三方集成概念 {#third-party-integration-concept}
 
-与第三方系统集成的架构和系统级别概念。
+与第三方系统集成的架构和系统级概念。
 
 ### 第三方集成规范 {#third-party-integration-specification}
 
@@ -1310,11 +1306,11 @@ Quality Lead的部分职责是确保有资源在测试时支持任何用户。 �
 
 ### 用于集成的第三方系统 {#third-party-system-for-integration}
 
-确保所有第三方系统都可获取并附带相应文档，用于集成实施。
+确保所有第三方系统都可获取并附带相应文档以用于集成实施。
 
 ### 已启用第三方系统访问 {#third-party-systems-access-enabled}
 
-向与第三方系统结合使用的各个角色授予所需的访问权限。
+向第三方系统使用的各个角色授予所需的访问权限。
 
 ### 第三方测试概念 {#third-party-testing-concept}
 
@@ -1341,13 +1337,13 @@ Quality Lead的部分职责是确保有资源在测试时支持任何用户。 �
 
 ### 项目工作总量 {#total-project-efforts}
 
-项目各牵头方的所有工作估计都应合并；包括管理费用、开发、系统工程、建筑和测试工作。
+应合并项目每个领导的所有工作估计；包括开销、开发、系统工程、建筑和测试工作。
 
 如果协议中包含了某个支持级别，则还应该包括支持和业务工作。
 
 ### 培训材料 {#training-materials}
 
-培训课程中使用的材料。 这些资料应专门为解决方案创建，并设计成与用户指南结合使用。
+培训课程中使用的材料。 这些资料应专门针对解决方案创建，并设计用于用户指南。
 
 ### 了解项目范围和期望 {#understands-scope-of-project-and-expectations}
 
@@ -1391,15 +1387,15 @@ Quality Lead的部分职责是确保有资源在测试时支持任何用户。 �
 
 ### 已验证的预算计划 {#validated-budget-plan}
 
-预算计划必须由所有利益相关者审查和验证。 他们需要检查发票开具、金额和预算报告方法/时间等详细信息。
+预算计划必须由所有利益相关者审查和验证。 他们必须检查发票开具、金额以及预算报告的方法/时间等详细信息。
 
 ### 白盒测试结果 {#white-box-test-results}
 
-“白盒测试”是一种测试应用程序的内部结构或工作方式（相对于其功能）的方法。 白盒测试可以应用在单元、集成和系统等层级的软件测试过程。
+“白盒测试”是一种测试应用程序的内部结构或工作方式（相对于其功能）的方法。 白盒测试可以应用在单元、集成、系统等层级的软件测试过程。
 
 ### 工作流规范 {#workflow-specifications}
 
-基于工作流概念，这些规范应详细定义将创建完整工作流的步骤。
+基于工作流概念，这些规范应详细定义创建完整工作流的步骤。
 
 每个工作流的规范应包括（至少）：
 
