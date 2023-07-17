@@ -1,16 +1,14 @@
 ---
 title: Adobe Experience Manager Mobile On-Demand服务入门
-description: 管理AEM Mobile On-Demand Services应用程序入门。 它概述了AEM管理员对On-Demand Services的角色和职责。
-uuid: fd99c032-287a-489b-9690-b18980c55c29
+description: 开始管理Adobe Experience Manager (AEM) mobile On-Demand Services应用程序。 它概述了AEM管理员对On-Demand Services的角色和职责。
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 content-type: reference
 topic-tags: administering-on-demand-services-app
-discoiquuid: 5e1e6a51-67e1-42e3-bcb0-e16bc92c9cb3
 exl-id: 95cbedaf-9a94-45fa-8ddb-15be7a09f86d
-source-git-commit: ff7e37f24990a94510331a33cb05b7b44b3bfe85
+source-git-commit: 96e2e945012046e6eac878389b7332985221204e
 workflow-type: tm+mt
-source-wordcount: '296'
+source-wordcount: '298'
 ht-degree: 2%
 
 ---
@@ -19,11 +17,11 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->Adobe建议对需要基于单页应用程序框架的客户端渲染（例如React）的项目使用SPA编辑器。 [了解详情](/help/sites-developing/spa-overview.md).
+>对于需要基于单页应用程序框架的客户端渲染（例如React）的项目，Adobe建议使用SPA编辑器。 [了解详情](/help/sites-developing/spa-overview.md).
 
 >[!NOTE]
 >
->如果您没有使用AEM作为内容管理源，请参阅 [AEM Mobile On-demand Services帮助](https://helpx.adobe.com/digital-publishing-solution/topics.html).
+>如果您没有使用Adobe Experience Manager (AEM)作为内容管理源，请参阅 [AEM Mobile On-demand Services帮助](https://helpx.adobe.com/digital-publishing-solution/topics.html).
 
 ## AEM 管理员 {#aem-administrator}
 
@@ -33,7 +31,7 @@ ht-degree: 2%
 >
 >在开始为AEM Mobile On-demand Services设置环境之前，请参阅 [AEM Mobile Application Dashboard或控制中心](/help/mobile/mobile-apps-ondemand-application-dashboard.md).
 
-An ***AEM管理员*** 负责向AEM Mobile目录中添加新应用程序，方法是使用创建向导创建新应用程序，或导入现有应用程序。 使用AEM Mobile创建新应用程序的AEM管理员 *创建向导* 通常情况下，从我们现成的参考示例中选择一个所需的应用程序模板，或者（在大多数情况下）从以下对象创建的自定义应用程序模板中进行选择 *AEM开发人员。*
+An ***AEM管理员*** 负责将应用程序添加到AEM Mobile目录，方法是使用创建向导创建应用程序，或导入现有应用程序。 使用AEM Mobile创建应用程序的AEM管理员 *创建向导* 通常从Adobe的开箱即用参考示例或（通常）由创建的自定义应用程序模板中选择所需的应用程序模板之一 *AEM开发人员。*
 
 >[!NOTE]
 >
@@ -41,7 +39,7 @@ An ***AEM管理员*** 负责向AEM Mobile目录中添加新应用程序，方法
 
 使用AEM Mobile On-demand Services创建应用程序时，AEM管理员负责以下任务：
 
-* [设置AEM Mobile](/help/mobile/aem-mobile-setup.md)，涵盖
+* [设置AEM Mobile](/help/mobile/aem-mobile-setup.md) 涵盖
 
    * AEM Mobile配置
    * 为AEM Mobile创建项目

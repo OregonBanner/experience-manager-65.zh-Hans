@@ -1,16 +1,14 @@
 ---
 title: 配置用户和用户组
 description: 关注此页面，了解用户角色以及如何配置用户和组以支持移动应用程序的创作和管理。
-uuid: 55cea2b3-d7e6-4174-92b3-ee97e46b59c4
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: administering-adobe-phonegap-enterprise
-discoiquuid: 167f3bd9-7dbc-4e6b-9868-3ee53935641b
 exl-id: 9f814204-8cd4-4ba9-9e25-3ff1b25c1955
-source-git-commit: f4b6eb2ded17ec641f23a1fc3b977ce77169c8a1
+source-git-commit: 96e2e945012046e6eac878389b7332985221204e
 workflow-type: tm+mt
-source-wordcount: '633'
+source-wordcount: '632'
 ht-degree: 0%
 
 ---
@@ -19,7 +17,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe建议对需要基于单页应用程序框架的客户端渲染（例如React）的项目使用SPA编辑器。 [了解详情](/help/sites-developing/spa-overview.md).
+>对于需要基于单页应用程序框架的客户端渲染（例如React）的项目，Adobe建议使用SPA编辑器。 [了解详情](/help/sites-developing/spa-overview.md).
 
 本章介绍用户角色以及如何配置用户和组以支持移动设备应用程序的创作和管理。
 
@@ -36,7 +34,7 @@ ht-degree: 0%
 
 #### 组配置 — 应用程序作者 {#group-configuration-app-authors}
 
-1. 创建一个名为“app-authors”的新用户组：
+1. 创建一个名为“app-authors”的用户组：
 
    导航到用户Admin Console： [http://localhost:4502/libs/granite/security/content/groupadmin.html](http://localhost:4502/libs/granite/security/content/groupadmin.html)
 
@@ -50,7 +48,7 @@ ht-degree: 0%
 
    将应用程序作者添加到“作者”组
 
-1. 现在您已经创建了应用程序作者用户组，接下来可以通过 [用户管理控制台](http://localhost:4502/libs/granite/security/content/useradmin.md).
+1. 现在您已经创建了应用程序作者用户组，接下来可以通过 [用户Admin Console](http://localhost:4502/libs/granite/security/content/useradmin.md).
 
    ![chlimage_1-19](assets/chlimage_1-19.png)
 
@@ -59,9 +57,10 @@ ht-degree: 0%
 1. 导航到 [权限控制台](http://localhost:4502/useradmin) 并添加权限以管理cloudservices
 
    * /etc/cloudservices上的（读取）
+
    >[!NOTE]
    >
-   >应用程序作者扩展了AEM中的默认内容作者（作者）组，从而继承了在/content/phonegap下创建内容的能力
+   >应用程序作者扩展了AEM中的默认内容作者（作者）组，以便他们继承在/content/phonegap下创建内容的能力
 
 ### AEM Mobile应用程序管理员组（app-admins组） {#aem-mobile-application-administrators-group-app-admins-group}
 
@@ -74,11 +73,11 @@ app-admins组的成员可以使用与应用程序作者相同的权限来创作�
 >
 >权限决定AEM App Command Center中某些用户操作的可用性。
 >
->您会注意到，某些选项不适用于可供应用程序管理员使用的应用程序作者。
+>请注意，某些选项不适用于可供应用程序管理员使用的应用程序作者。
 
 #### 组配置 — 应用程序管理员 {#group-configuration-app-admins}
 
-1. 创建一个名为app-admins的新组。
+1. 创建一个名为app-admins的组。
 1. 将以下组添加到新的app-admins组：
 
    * content-author
@@ -112,14 +111,14 @@ app-admins组的成员可以使用与应用程序作者相同的权限来创作�
 
 仪表板磁贴可能会根据用户拥有的权限公开不同的操作。 下面描述了每个图块可用的操作。
 
-除了这些权限之外，还可以根据当前应用程序的配置方式显示/隐藏操作。 例如，如果尚未将PhoneGap云配置分配给应用程序，则公开“远程构建”操作没有任何意义。 这些项目将列在下面的“**配置条件**”部分。
+除了这些权限之外，还可以根据当前应用程序的配置方式显示/隐藏操作。 例如，如果尚未将PhoneGap云配置分配给应用程序，则公开“远程构建”操作没有任何意义。 下面列出了&#39;**配置条件**”部分。
 
 ### 管理应用程序磁贴 {#manage-app-tile}
 
 图块当前没有需要权限的操作，但应用程序的详细信息页面具有以下操作：
 
-* *编辑* 适用于app-author和app-admin （UI触发器 — jcr：write - on /content/phonegap/{suffix}）
-* *下载* 对于app-author和app-admin (UI Trigger - on /content/phonegap/{suffix})
+* *编辑* 对于app-author和app-admin (UI触发器 — jcr：write - on /content/phonegap/{suffix})
+* *下载* 对于app-author和app-admin (UI触发器 — on /content/phonegap/{suffix})
 
 下图显示了应用程序的“下载”和“编辑”选项：
 

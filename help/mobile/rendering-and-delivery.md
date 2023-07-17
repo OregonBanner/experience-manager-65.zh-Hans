@@ -1,17 +1,13 @@
 ---
 title: 呈现和交付
-seo-title: Rendering and Delivery
 description: 呈现和交付
-seo-description: null
-uuid: 1253b6a5-6bf3-42b1-be3a-efa23b6ddb51
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
-discoiquuid: 672d5b1e-6b2f-4afe-ab04-c398e5ef45d5
 exl-id: f0c543ae-33ed-40bb-9eb7-0dc3bdea69e0
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 96e2e945012046e6eac878389b7332985221204e
 workflow-type: tm+mt
-source-wordcount: '573'
+source-wordcount: '580'
 ht-degree: 6%
 
 ---
@@ -20,13 +16,13 @@ ht-degree: 6%
 
 >[!NOTE]
 >
->Adobe建议对需要基于单页应用程序框架的客户端渲染（例如React）的项目使用SPA编辑器。 [了解详情](/help/sites-developing/spa-overview.md).
+>对于需要基于单页应用程序框架的客户端渲染（例如React）的项目，Adobe建议使用SPA编辑器。 [了解详情](/help/sites-developing/spa-overview.md).
 
-AEM内容可以通过以下方式轻松呈现 [Sling默认Servlet](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html) 要渲染 [JSON](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html#default-json-rendering) 和其他格式。
+Adobe Experience Manager (AEM)内容可以通过以下方式轻松渲染 [Sling默认Servlet](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html) 要渲染 [JSON](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html#default-json-rendering) 和其他格式。
 
 这些开箱即用的渲染通常在存储库中导航，并按原样返回内容。
 
-AEM通过Sling还支持开发和部署自定义sling渲染器，以完全控制渲染的架构和内容。
+通过Sling，AEM还支持开发和部署自定义Sling渲染器，以完全控制渲染的架构和内容。
 
 Content Services Default Renderer填补了开箱即用的Sling Defaults和Custom Development之间的空白，允许在不进行开发的情况下对渲染内容的许多方面进行自定义和控制。
 
@@ -120,14 +116,14 @@ Content Services Default Renderer填补了开箱即用的Sling Defaults和Custom
   </tr>
   <tr>
    <td>excludechildren</td>
-   <td>字符串[]<br /> <br /> </td>
+   <td>String[]<br /> <br /> </td>
    <td>不排除任何内容</td>
    <td>子名称</td>
    <td>从JSON导出中仅包括指定的子项，排除其他</td>
   </tr>
   <tr>
    <td>rename属性</td>
-   <td>字符串[]<br /> <br /> </td>
+   <td>String[]<br /> <br /> </td>
    <td>不重命名任何内容</td>
    <td>&lt;actual_property_name&gt;，&lt;replacement_property_name&gt;</td>
    <td>使用替换项重命名属性</td>
@@ -143,7 +139,7 @@ Content Services Default Renderer填补了开箱即用的Sling Defaults和Custom
 |---|---|
 | jcr:primaryType | nt:unstructured |
 
-下表显示了属性：
+下表显示了这些属性：
 
 <table>
  <tbody>
@@ -173,7 +169,7 @@ Content Services包括两个导出配置：
 
 #### 默认导出配置 {#default-export-configuration}
 
-如果在请求的URI中指定了配置，则将应用Content Services默认导出配置。
+如果在请求的URI中指定了配置，则会应用Content Services默认导出配置。
 
 &lt;resource>.caas[.&lt;depth-int>].json
 
@@ -220,7 +216,7 @@ Content Services包括两个导出配置：
 
 #### 页面导出配置 {#page-export-configuration}
 
-此配置扩展了默认设置，以包含子节点下的分组子节点。
+此配置扩展了缺省设置，以包含子节点下的分组子节点。
 
 &lt;site_page>.caas.page[.&lt;depth-int>].json
 

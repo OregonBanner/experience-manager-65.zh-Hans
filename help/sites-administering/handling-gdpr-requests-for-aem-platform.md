@@ -1,20 +1,16 @@
 ---
-title: 处理AEM Foundation的GDPR请求
-seo-title: Handling GDPR Requests for the AEM Foundation
-description: 处理AEM Foundation的GDPR请求
-seo-description: null
-uuid: d470061c-bbcf-4d86-9ce3-6f24a764ca39
+title: 处理Adobe Experience Manager Foundation的GDPR请求
+description: 处理Adobe Experience Manager Foundation的GDPR请求
 contentOwner: sarchiz
-discoiquuid: 8ee843b6-8cea-45fc-be6c-99c043f075d4
 exl-id: 411d40ab-6be8-4658-87f6-74d2ac1a4913
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 96e2e945012046e6eac878389b7332985221204e
 workflow-type: tm+mt
-source-wordcount: '435'
-ht-degree: 53%
+source-wordcount: '436'
+ht-degree: 45%
 
 ---
 
-# 处理AEM Foundation的GDPR请求{#handling-gdpr-requests-for-the-aem-foundation}
+# 处理Adobe Experience Manager (AEM) Foundation的GDPR请求{#handling-gdpr-requests-for-the-aem-foundation}
 
 >[!IMPORTANT]
 >
@@ -76,7 +72,7 @@ curl -u user:password  'http://localhost:4502/home/users/we-retail/DSCP-athB1NYL
 ### 禁用用户 {#disable-user}
 
 1. 如上所述，打开用户管理控制台并搜索有问题的用户。
-1. 将鼠标悬停在用户上方并单击选择图标。配置文件将灰显，表明它已被选中。
+1. 将鼠标悬停在用户上方并单击选择图标。配置文件显示为灰色，表明它已被选中。
 
 1. 按上方菜单中的禁用按钮禁用用户：
 
@@ -86,7 +82,7 @@ curl -u user:password  'http://localhost:4502/home/users/we-retail/DSCP-athB1NYL
 
    ![image2018-2-6_1-40-58](assets/image2018-2-6_1-40-58.png)
 
-   然后，用户界面将通过灰显配置文件卡并添加锁定来指示用户已被停用：
+   用户界面指示用户已停用，方法是灰显配置文件卡并添加锁定：
 
    ![disableduser](assets/disableduser.png)
 
@@ -109,7 +105,7 @@ curl -u user:password  'http://localhost:4502/home/users/we-retail/DSCP-athB1NYL
 
 ### HTTP API {#http-api-1}
 
-以下过程使用 `curl` 命令行工具说明如何使用 **[!UICONTROL cavery]** `userId` 禁用用户，并删除默认位置提供的配置文件。
+以下过程使用 `curl` 命令行工具，说明如何使用 **[!UICONTROL cavery]** `userId` 并删除配置文件 `cavery` 在默认位置可用的文件。
 
 * *发现用户主页*
 

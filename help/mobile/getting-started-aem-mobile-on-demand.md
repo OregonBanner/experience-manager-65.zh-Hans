@@ -1,16 +1,14 @@
 ---
 title: Adobe Experience Manager Mobile On-Demand
-description: 在开始新的AEM Mobile应用程序体验之前，需要多个角色相互融合，然后才能编辑内容。 关注此页面以开始使用AEM Mobile On-Demand Services。
-uuid: 175c609d-3cb8-4a1b-bfea-278df272e500
+description: 要开始新的Adobe Experience Manager (AEM)移动设备应用程序体验，需要先凝聚多个角色，然后才能编辑内容。 关注此页面以开始使用AEM Mobile On-Demand Services。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: introduction
 content-type: reference
-discoiquuid: dc6891cd-19cc-4dff-8bda-a41ed8af8bfb
 exl-id: 4be199d8-963d-4807-b9bb-e23fa577c5f2
-source-git-commit: f4b6eb2ded17ec641f23a1fc3b977ce77169c8a1
+source-git-commit: 96e2e945012046e6eac878389b7332985221204e
 workflow-type: tm+mt
-source-wordcount: '773'
+source-wordcount: '772'
 ht-degree: 1%
 
 ---
@@ -19,11 +17,11 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->Adobe建议对需要基于单页应用程序框架的客户端渲染（例如React）的项目使用SPA编辑器。 [了解详情](/help/sites-developing/spa-overview.md).
+>对于需要基于单页应用程序框架的客户端渲染（例如React）的项目，Adobe建议使用SPA编辑器。 [了解详情](/help/sites-developing/spa-overview.md).
 
 >[!NOTE]
 >
->如果您没有使用AEM作为内容管理源，请参阅 [AEM Mobile On-demand Services帮助](https://helpx.adobe.com/digital-publishing-solution/topics.html).
+>如果您没有使用Adobe Experience Manager (AEM)作为内容管理源，请参阅 [AEM Mobile On-demand Services帮助](https://helpx.adobe.com/digital-publishing-solution/topics.html).
 
 AEM提供了多种工具，使您能够将内容集成到移动应用程序中。
 
@@ -45,7 +43,7 @@ AEM提供了多种工具，使您能够将内容集成到移动应用程序中�
 
 AEM Mobile只是构成整个AEM平台的支柱之一。
 
-在开始新的AEM Mobile应用程序体验之前，需要多个角色相互融合，然后才能编辑内容。 以下角色为创建新的AEM Mobile应用程序提供了一个起点：
+在开始新的AEM Mobile应用程序体验之前，需要多个角色相互融合，然后才能编辑内容。 以下角色为创建AEM Mobile应用程序提供了起点：
 
 * **管理员**
 * **开发人员**
@@ -57,11 +55,11 @@ AEM Mobile只是构成整个AEM平台的支柱之一。
 
 ### 了解AEM Mobile应用程序功能板 {#understanding-the-aem-mobile-application-dashboard}
 
-在了解角色和责任之前，用户应充分了解 **AEM Mobile控制中心** 或 **应用程序功能板**. 单击 [此处](/help/mobile/mobile-apps-ondemand-application-dashboard.md) 以深入了解。
+在了解角色和职责之前，用户应充分了解 **AEM Mobile控制中心** 或 **应用程序功能板**. 单击 [此处](/help/mobile/mobile-apps-ondemand-application-dashboard.md) 以深入了解。
 
 ### AEM 管理员 {#aem-administrator}
 
-An ***AEM管理员*** 负责向AEM Mobile目录中添加新应用程序，方法是使用创建向导创建新应用程序，或导入现有应用程序。 使用AEM Mobile创建新应用程序的AEM管理员 *创建向导* 通常情况下，从我们现成的参考示例中选择一个所需的应用程序模板，或者（在大多数情况下）从以下对象创建的自定义应用程序模板中进行选择 *AEM开发人员。*
+An ***AEM管理员*** 负责将应用程序添加到AEM Mobile目录，方法是使用创建向导创建应用程序，或导入现有应用程序。 使用AEM Mobile创建应用程序的AEM管理员 *创建向导* 通常从Adobe的开箱即用参考示例或（通常）由创建的自定义应用程序模板中选择所需的应用程序模板之一 *AEM开发人员。*
 
 使用AEM Mobile On-demand Services创建应用程序时，AEM管理员负责以下任务：
 
@@ -74,7 +72,7 @@ An ***AEM管理员*** 负责向AEM Mobile目录中添加新应用程序，方法
 
 ## AEM开发人员 {#aem-developer}
 
-An **AEM开发人员** 扩展和创建自定义Web模板和组件，以使*AEM创作*创建精美而引人入胜的移动体验。 这些模板和组件不仅针对移动应用程序世界进行了优化，而且还与设备通信，并与全渠道服务端点的AEM服务器（任何远程服务器）通信。 AEM内置内容编辑器由使用 *AEM作者* 在应用程序中创建丰富的相关体验，包括与Adobe Marketing Cloud其余部分的集成。
+An **AEM开发人员** 扩展和创建自定义Web模板和组件，以使*AEM创作*创建精美而引人入胜的移动体验。 这些模板和组件不仅针对移动应用程序世界进行了优化，而且还与设备通信，并与全渠道服务端点的AEM服务器（任何远程服务器）通信。 AEM内置内容编辑器由使用 *AEM作者* 在应用程序中创建丰富的相关体验，包括与Adobe Experience Cloud其余部分的集成。
 
 AEM开发人员在使用AEM Mobile On-demand Services创建应用程序时负责以下任务：
 
@@ -91,7 +89,7 @@ AEM开发人员在使用AEM Mobile On-demand Services创建应用程序时负责
 
 ## AEM Author {#aem-author}
 
-An ***AEM创作* (或 *营销人员*)**使用自定义开发或现成的模板和组件来添加和编辑页面、拖放组件以及从DAM添加所有类型的媒体，包括图像、视频和文本片段（内容片段）。 随后，使用AEM内置内容编辑器的是 *AEM作者* 在应用程序中创建丰富的相关体验，包括与Adobe Marketing Cloud其余部分的集成。
+An ***AEM创作* (或 *营销人员*)**使用自定义开发或现成的模板和组件来添加和编辑页面、拖放组件以及从DAM添加所有类型的媒体，包括图像、视频和文本片段（内容片段）。 随后，使用AEM内置内容编辑器的是 *AEM作者* 在应用程序中创建丰富的相关体验，包括与Adobe Experience Cloud其余部分的集成。
 
 使用AEM Mobile On-demand Services创建应用程序时，AEM作者必须了解以下主题：
 

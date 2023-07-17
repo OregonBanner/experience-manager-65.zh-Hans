@@ -1,24 +1,20 @@
 ---
-title: AEM中的服务用户
-seo-title: Service Users in AEM
-description: 了解AEM中的服务用户。
-seo-description: Learn about Service Users in AEM.
-uuid: 4efab5fb-ba11-4922-bd68-43ccde4eb355
+title: Adobe Experience Manager中的服务用户
+description: 了解Adobe Experience Manager中的服务用户。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: Security
 content-type: reference
-discoiquuid: 9cfe5f11-8a0e-4a27-9681-a8d50835c864
 exl-id: ccd8577b-3bbf-40ba-9696-474545f07b84
 feature: Security
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: 96e2e945012046e6eac878389b7332985221204e
 workflow-type: tm+mt
-source-wordcount: '1778'
+source-wordcount: '1766'
 ht-degree: 0%
 
 ---
 
-# AEM中的服务用户{#service-users-in-aem}
+# Adobe Experience Manager (AEM)中的“服务用户” {#service-users-in-aem}
 
 ## 概述 {#overview}
 
@@ -66,7 +62,7 @@ ht-degree: 0%
 
 * **尊重隐私设置**
 
-   * 对于私人用户档案，一个示例是不公开私人用户档案的图片、电子邮件或全名 `/profile` 节点。
+   * 如果存在私人用户档案，则示例是不公开私人用户档案图片、电子邮件或全名 `/profile` 节点。
 
 ## 严格访问控制 {#strict-access-control}
 
@@ -86,9 +82,9 @@ ht-degree: 0%
 如果上述操作失败，则Sling 7提供服务用户映射服务，该服务允许配置捆绑包到用户的映射和两种相应的API方法： ` [SlingRepository.loginService()](https://sling.apache.org/apidocs/sling7/org/apache/sling/jcr/api/SlingRepository.html#loginService-java.lang.String-java.lang.String-)` 和 ` [ResourceResolverFactory.getServiceResourceResolver()](https://sling.apache.org/apidocs/sling7/org/apache/sling/api/resource/ResourceResolverFactory.html#getServiceResourceResolver-java.util.Map-)` 返回仅具有已配置用户权限的会话/资源解析程序。 这些方法具有以下特点：
 
 * 它们允许将服务映射到用户
-* 这使得定义子服务用户成为可能
+* 它们使得定义子服务用户成为可能
 * 中心配置点为： `org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl`
-* `service-id` = `service-name` [ “：”子服务名称 ] 
+* `service-id` = `service-name` [“：”子服务名称]
 
 * `service-id` 映射到资源解析程序和/或JCR存储库用户ID以进行身份验证
 * `service-name` 是提供服务的包的符号名称
@@ -104,7 +100,7 @@ ht-degree: 0%
 要将管理会话替换为服务用户，您应该执行以下步骤：
 
 1. 确定服务的必要权限，并牢记最小权限原则。
-1. 检查是否存在完全符合您所需权限设置的用户。 如果没有现有用户符合您的需求，请创建新的系统服务用户。 创建新服务用户需要RTC。 有时，创建多个子服务用户（例如，一个用于写入，一个用于读取）以进一步划分访问是明智的。
+1. 检查是否存在完全符合您所需权限设置的用户。 如果没有现有用户符合您的需求，请创建系统服务用户。 创建服务用户需要RTC。 有时，创建多个子服务用户（例如，一个用于写入，一个用于读取）以进一步划分访问权限是有意义的。
 1. 为用户设置和测试ACE。
 1. 添加 `service-user` 服务与的映射 `user/sub-users`
 
@@ -112,7 +108,7 @@ ht-degree: 0%
 
 1. 更换 `admin-session` 在代码中使用 `loginService` 或 `getServiceResourceResolver` API。
 
-## 创建新服务用户 {#creating-a-new-service-user}
+## 创建服务用户 {#creating-a-new-service-user}
 
 在您验证AEM服务用户列表中没有任何用户适用于您的用例并且相应的RTC问题已被批准后，您可以继续并将新用户添加到默认内容。
 
@@ -124,7 +120,7 @@ ht-degree: 0%
 
 1. 转到存储库资源管理器： *https://&lt;server>：&lt;port>/crx/explorer/index.jsp*
 1. 以管理员身份登录，按 **登录** 屏幕左上角的链接。
-1. 接下来，创建并命名您的系统用户。 要将用户创建为系统用户，请将中间路径设置为 `system` 并根据需要添加可选的子文件夹：
+1. 接下来，创建您的系统用户并为其命名。 要将用户创建为系统用户，请将中间路径设置为 `system` 并根据需要添加可选的子文件夹：
 
    ![chlimage_1-102](assets/chlimage_1-102a.png)
 
@@ -134,7 +130,7 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >请注意，没有与服务用户关联的mixin类型。 这意味着系统用户将没有访问控制策略。
+   >没有与服务用户关联的mixin类型。 这意味着系统用户将没有访问控制策略。
 
 将相应的.content.xml添加到包的内容时，请确保已设置 `rep:authorizableId` 而且主要类型是 `rep:SystemUser`. 它应如下所示：
 
@@ -149,15 +145,15 @@ ht-degree: 0%
 
 ## 向ServiceUserMapper配置添加配置修正 {#adding-a-configuration-amendment-to-the-serviceusermapper-configuration}
 
-要添加从服务到相应系统用户的映射，您需要为创建工厂配置 ` [ServiceUserMapper](https://sling.apache.org/apidocs/sling7/org/apache/sling/serviceusermapping/ServiceUserMapper.html)` 服务。 要保持此模块化，可以使用 [Sling修正机构](https://issues.apache.org/jira/browse/SLING-3578). 建议使用将此类配置与捆绑包一起安装的方法，即 [Sling初始内容加载](https://sling.apache.org/documentation/bundles/content-loading-jcr-contentloader.html)：
+要添加从服务到相应系统用户的映射，请为创建工厂配置 ` [ServiceUserMapper](https://sling.apache.org/apidocs/sling7/org/apache/sling/serviceusermapping/ServiceUserMapper.html)` 服务。 要保持此模块化，可以使用 [Sling修正机构](https://issues.apache.org/jira/browse/SLING-3578). 建议使用将此类配置与捆绑包一起安装的方法，即 [Sling初始内容加载](https://sling.apache.org/documentation/bundles/content-loading-jcr-contentloader.html)：
 
 1. 在包的src/main/resources文件夹下创建子文件夹SLING-INF/content
-1. 在此文件夹中，创建一个名为org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.supported-&lt;some unique=&quot;&quot; name=&quot;&quot; for=&quot;&quot; your=&quot;&quot; factory=&quot;&quot; configuration=&quot;&quot;>.xml以及工厂配置的内容（包括所有子服务用户映射）。 示例:
+1. 在此文件夹中，创建一个名为org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.modified-&lt;some unique=&quot;&quot; name=&quot;&quot; for=&quot;&quot; your=&quot;&quot; factory=&quot;&quot; configuration=&quot;&quot;>.xml以及工厂配置的内容（包括所有子服务用户映射）。 示例：
 
 1. 创建 `SLING-INF/content` 文件夹下 `src/main/resources` 文件夹的位置；
 1. 在此文件夹中创建文件 `named org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended-<a unique name for your factory configuration>.xml` 包含工厂配置的内容，包括所有子服务用户映射。
 
-   为了便于说明，请取一个名为 `org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended-com.adobe.granite.auth.saml.xml`：
+   为了方便说明，请获取名为的文件 `org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended-com.adobe.granite.auth.saml.xml`：
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -176,7 +172,7 @@ ht-degree: 0%
    </node>
    ```
 
-1. 在的配置中引用Sling初始内容 `maven-bundle-plugin` 在 `pom.xml` 捆绑包中。 示例:
+1. 在的配置中引用Sling初始内容 `maven-bundle-plugin` 在 `pom.xml` 捆绑包中。 示例：
 
    ```xml
    <Sling-Initial-Content>
@@ -195,7 +191,7 @@ ht-degree: 0%
 调用 `loginAdministrative()` 通常与共享会话同时出现。 这些会话是在服务激活时获取的，仅在服务停止后注销。 尽管这是常见的做法，但会导致两个问题：
 
 * **安全性：** 此类管理会话用于缓存和返回绑定到共享会话的资源或其他对象。 在调用栈栈的后面部分，这些对象可能会适应具有提升权限的会话或资源解析器，并且调用者通常不知道它们是与其一起操作的管理会话。
-* **性能：** 在Oak共享会话中，可能会导致性能问题，当前不建议使用它们。
+* **性能：** 在Oak中，共享会话可能会导致性能问题，建议您不要使用它们。
 
 对于安全风险，最显而易见的解决方案是直接替换 `loginAdministrative()` 通过调用 `loginService()` 一对一分配给具有受限权限的用户。 但是，这不会对任何潜在的性能下降产生任何影响。 一种缓解方法是将所有请求的信息封装在与会话无关联的对象中。 然后，根据需要创建（或销毁）会话。
 
@@ -214,19 +210,19 @@ JSP无法使用 `loginService()`，因为没有关联的服务。 但是，JSP�
 
 ## 处理事件、复制预处理程序和作业 {#processing-events-replication-preprocessors-and-jobs}
 
-在处理事件或作业时，以及在某些情况下处理工作流时，触发事件的相应会话通常会丢失。 这会导致事件处理程序和作业处理程序经常使用管理会话来完成其工作。 解决这个问题有各种各样的方法，每种方法各有优缺点：
+在处理事件或作业（有时是工作流）时，触发事件的相应会话将丢失。 这会导致事件处理程序和作业处理程序经常使用管理会话来完成其工作。 解决这一问题有各种可行的方法，各有其优缺点：
 
 1. 传递 `user-id` 在事件有效负载中，并使用模拟。
 
    **优点：** 易于使用。
 
-   **缺点：** 仍使用 `loginAdministrative()`. 它会对已经过身份验证的请求重新进行身份验证。
+   **缺点：** 仍使用 `loginAdministrative()`. 它会对已经过身份验证的请求进行重新身份验证。
 
 1. 创建或重用有权访问数据的服务用户。
 
    **优点：** 与当前设计一致。 只需很少的更改。
 
-   **缺点：** 需要功能非常强大的服务用户灵活使用，这很容易导致权限提升。 绕过安全模型。
+   **缺点：** 需要功能强大的服务用户灵活，这很容易导致权限提升。 绕过安全模型。
 
 1. 传递序列化 `Subject` 在事件有效负载中，并创建 `ResourceResolver` 基于这个主题。 例如，使用JAAS `doAsPrivileged` 在 `ResourceResolverFactory`.
 
@@ -234,13 +230,13 @@ JSP无法使用 `loginService()`，因为没有关联的服务。 但是，JSP�
 
    **缺点：** 需要重构。 安全相关代码对事件的消费者透明这一事实也可能导致问题。
 
-第三种方法是当前首选的处理技术。
+第三种方法是首选的处理技术。
 
 ## 工作流进程 {#workflow-processes}
 
-在工作流进程实施中，触发工作流的相应用户会话通常会丢失。 这会导致工作流进程通常使用管理会话来执行其工作。
+在工作流进程实施中，触发工作流的相应用户会话丢失。 这会导致工作流进程经常使用管理会话来执行其工作。
 
-为了解决这些问题，建议采用中提到的相同方法 [处理事件、复制预处理程序和作业](/help/sites-administering/security-service-users.md#processing-events-replication-preprocessors-and-jobs) 使用。
+要解决这些问题，建议采用中提到的相同方法 [处理事件、复制预处理程序和作业](/help/sites-administering/security-service-users.md#processing-events-replication-preprocessors-and-jobs) 使用。
 
 ## SlingPOST处理器和删除的页面 {#sling-post-processors-and-deleted-pages}
 
