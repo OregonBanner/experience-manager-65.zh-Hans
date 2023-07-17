@@ -3,7 +3,7 @@ title: 的发行说明 [!DNL Adobe Experience Manager] 6.5
 description: 查找版本信息、新增功能、安装操作方法和详细更改列表 [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 3
 exl-id: fed4e110-9415-4740-aba1-75da522039a9
-source-git-commit: d244fb50ad0f165d31bc51ee671b80bdd13c860e
+source-git-commit: daf97f3d5c5f3c92ff5caeccff583e54f3f57364
 workflow-type: tm+mt
 source-wordcount: '3777'
 ht-degree: 9%
@@ -57,8 +57,8 @@ ht-degree: 9%
    * 使用 AEM Sites 编辑器中的自适应表单向导创建独立于任何 Sites 页面的表单，让您可以自由地在多个页面中重复使用此类表单。
    * 将多个表单添加到 Sites 页面，简化用户体验并提供更大的灵活性。
 * **[Experience Manager Forms中的reCAPTCHA Enterprise支持](/help/forms/using/captcha-adaptive-forms.md)**：在Experience Manager Forms中增加了对reCAPTCHA Enterprise的支持，针对欺诈性活动和垃圾邮件提供了增强的保护，此外还有现有的Google reCAPTCHA v2支持。
-* **[通过Experience Manager Forms支持面向政府的Adobe Acrobat Sign](/help/forms/using/adobe-sign-integration-adaptive-forms.md)**：AEM Forms现在与面向政府的Adobe Acrobat Sign集成（符合FedRAMP）。 这种集成为政府型账户（政府部门和机构）的自适应表单提交提供了高级的电子签名合规性和安全性。与 Adob&#x200B;&#x200B;e Acrobat Sign 政府版的集成使 Adobe 的合作伙伴和政府客户能够在一些最关键和敏感的业务领域使用自适应表单中的电子签名功能。这层额外的安全保障机制确保所有电子签名完全符合 FedRAMP Moderate 合规性，使 Adobe 的政府客户能够安心使用。
-* **[启用Salesforce与Experience Manager Forms的集成以便进行数据交换](/help/forms/using/oauth2-client-credentials-flow-for-server-to-server-integration.md)**：使用OAuth 2.0客户端凭据流配置Experience Manager Forms与Salesforce应用程序之间的集成。 此功能实现了应用程序的安全且直接的身份验证和授权，并允许无缝通信而无需用户参与。
+* **[通过Experience Manager Forms支持面向政府的Adobe Acrobat Sign](/help/forms/using/adobe-sign-integration-adaptive-forms.md)**：AEM Forms现在与面向政府的Adobe Acrobat Sign集成（符合FedRAMP）。 这种集成为政府型账户（政府部门和机构）的自适应表单提交提供了高级的电子签名合规性和安全性。与 Adobe Acrobat Sign 政府版的集成使 Adobe 的合作伙伴和政府客户能够在一些最关键和敏感的业务领域使用自适应表单中的电子签名功能。这层额外的安全保障机制确保所有电子签名完全符合 FedRAMP Moderate 合规性，使 Adobe 的政府客户能够安心使用。
+* **启用Salesforce与Experience Manager Forms的集成以便进行数据交换**：使用OAuth 2.0客户端凭据流配置Experience Manager Forms与Salesforce应用程序之间的集成。 此功能实现了应用程序的安全且直接的身份验证和授权，并允许无缝通信而无需用户参与。
 * **工作流引擎的优化和增强功能**：通过最大限度地减少工作流实例的数量来提高工作流引擎的性能。 除此之外 `COMPLETED` 和 `RUNNING` 状态值，工作流还支持三个新的状态值： `ABORTED`， `SUSPENDED`、和 `FAILED`.
 
 

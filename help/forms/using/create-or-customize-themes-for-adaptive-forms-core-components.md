@@ -8,9 +8,9 @@ contentOwner: Khushwant Singh
 topic-tags: Adaptive Forms
 docset: aem65
 role: Admin, Developer
-source-git-commit: 85f423b98ff680d7ed7cdbdde65e2dec1cfe4c03
+source-git-commit: daf97f3d5c5f3c92ff5caeccff583e54f3f57364
 workflow-type: tm+mt
-source-wordcount: '2066'
+source-wordcount: '2072'
 ht-degree: 4%
 
 ---
@@ -68,7 +68,7 @@ AEM Forms 6.5提供了以下基于核心组件的自适应Forms的参考主题�
 
 ### 自定义主题的先决条件 {#prerequisites}
 
-* [为您的环境启用自适应表单核心组件.](/help/forms/using/installing-core-components.md)
+* [为您的环境启用自适应表单核心组件.](/help/forms/using/enable-adaptive-forms-core-components.md)
 
 * 安装最新版本的 [Apache Maven。](https://maven.apache.org/download.cgi) Apache Maven是一种常用于Java™项目的构建自动化工具。 安装最新版本可确保您具有主题自定义所需的依赖性。
 
@@ -145,20 +145,17 @@ AEM Forms 6.5提供了以下基于核心组件的自适应Forms的参考主题�
 
 1. 打开 `<your-theme-sources>/src/site/_variables.scss` 文件以供编辑。
 1. 更改任何属性的值。 例如，缺省错误颜色为红色。 要将错误颜色从红色更改为蓝色，请将 `$error`变量。 例如：`$error: #196ee5`。
+
+   ![示例：错误颜色设置为蓝色](/help/forms/using/assets/theme-level-changes.png)
+
 1. 保存并关闭该文件。
 
-<!--
-
-![Example: Error color set to blue](/help/forms/using/assets/variable-customization.png)
-
--->
 
 同样，您可以使用 `variable.scss` 文件，用于设置字体系列和类型、主题和字体颜色、字体大小、主题间距、错误图标、主题边框样式以及影响多个自适应表单组件的更多变量。
 
 ##### 设置组件级别样式 {#component-based-customization}
 
 您还可以选择自定义特定自适应表单核心组件的字体、颜色、大小和其他CSS属性，如按钮、复选框、容器、页脚等。 通过编辑与特定组件关联的CSS文件，您可以将其样式与组织的品牌保持一致。 要自定义组件的样式，请执行以下步骤：
-
 
 1. 打开文件 `<your-theme-sources>/src/components/<component>/<component.scss>` 进行编辑。 例如，要更改按钮组件的字体颜色，请打开 `<your-theme-sources>/src/components/button/button.scss`，文件。
 1. 根据您的要求更改any的值。 例如，要将鼠标悬停时按钮组件的颜色更改为绿色，请将 `color: $white` 中的属性 `cmp-adaptiveform-button__widget:hover` 类到十六进制代码#12b453或任何其他绿色阴影。 最终代码如下所示：
@@ -326,9 +323,9 @@ AEM Forms 6.5提供了以下基于核心组件的自适应Forms的参考主题�
 
 ## 另请参阅
 
-* [创建基于核心组件的自适应表单](/help/forms/using/create-an-adaptive-form-core-components.md)
+* [创建基于核心组件的自适应表单](create-an-adaptive-form-core-components.md)
 * [使用规则编辑器向表单添加动态行为](rule-editor.md)
 * [创建或自定义基于核心组件的自适应Forms的主题](create-or-customize-themes-for-adaptive-forms-core-components.md)
 * [为基于核心组件的自适应Forms创建模板](template-editor.md)
-* [创建自适应表单或将其添加到AEM Sites页面或体验片段](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)
+* [创建自适应表单或将其添加到AEM Sites页面或体验片段](create-or-add-an-adaptive-form-to-aem-sites-page.md)
 

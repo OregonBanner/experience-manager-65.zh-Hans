@@ -9,7 +9,7 @@ contentOwner: Khushwant Singh
 topic-tags: Adaptive Forms
 docset: aem65
 role: Admin, Developer
-source-git-commit: 85f423b98ff680d7ed7cdbdde65e2dec1cfe4c03
+source-git-commit: daf97f3d5c5f3c92ff5caeccff583e54f3f57364
 workflow-type: tm+mt
 source-wordcount: '1869'
 ht-degree: 3%
@@ -30,13 +30,13 @@ ht-degree: 3%
 
 * [自适应Forms核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=zh-Hans)：这些是标准化数据捕获组件。 这些组件为您的数字注册体验提供自定义功能、缩短开发时间并降低维护成本。 开发人员可以轻松自定义这些组件并为它们设置样式。 Adobe建议利用这些现代化的、可扩展的组件来开发自适应Forms。
 
-* [自适应Forms Foundation组件](creating-adaptive-form.md)：它们是经典（旧）数据捕获组件。 您可以继续使用这些组件来编辑现有的基于基础组件的自适应表单。 如果您正在创建表单，Adobe建议使用  [自适应Forms核心组件](creating-adaptive-form-core-components.md) 创建自适应Forms。
+* [自适应Forms Foundation组件](creating-adaptive-form.md)：它们是经典（旧）数据捕获组件。 您可以继续使用这些组件来编辑现有的基于基础组件的自适应表单。 如果您正在创建表单，Adobe建议使用  [自适应Forms核心组件](/help/forms/using/create-adaptive-form.md) 创建自适应Forms。
 
 ## 先决条件
 
 创建自适应表单需要满足以下条件：
 
-* **为您的环境启用自适应Forms核心组件**：需要AEM Archetype项目版本41或更高版本， [为您的环境启用核心组件](/help/forms/using/installing-core-components.md). 在为您的环境启用核心组件时， **自适应Forms（核心组件）** 模板和画布主题将添加到您的环境中。
+* **为您的环境启用自适应Forms核心组件**：需要AEM Archetype项目版本41或更高版本， [为您的环境启用核心组件](/help/forms/using/enable-adaptive-forms-core-components.md). 在为您的环境启用核心组件时， **自适应Forms（核心组件）** 模板和画布主题将添加到您的环境中。
 
 * **自适应表单模板**：模板提供基本结构并定义自适应表单的外观（布局和样式）。 它具有包含特定属性和内容结构的预格式化的组件。 它还提供定义主题和提交操作的选项。 主题定义外观，提交操作定义在提交自适应表单时要执行的操作。 例如，将收集的数据发送到数据源。 指定的模板 `blank` 受支持的OOTB：
 
@@ -46,7 +46,7 @@ ht-degree: 3%
 
   >[!NOTE]
   >
-  > 如果你没有， **自适应Forms（核心组件）** 环境模板， [为您的环境启用自适应Forms核心组件](/help/forms/using/installing-core-components.md). 在为您的环境启用核心组件时， **自适应Forms（核心组件）** 模板即添加到您的环境中。
+  > 如果你没有， **自适应Forms（核心组件）** 环境模板， [为您的环境启用自适应Forms核心组件](/help/forms/using/enable-adaptive-forms-core-components.md). 在为您的环境启用核心组件时， **自适应Forms（核心组件）** 模板即添加到您的环境中。
 
 * **自适应表单主题**：主题包含组件和面板的样式详细信息。 样式包括诸如背景颜色、状态颜色、透明度、对齐方式和大小等属性。 应用主题时，指定的样式反映在相应的组件上。  此 `Canvas` 在为环境启用核心组件时，默认添加主题。 您还可以 [下载和自定义参考主题](create-or-customize-themes-for-adaptive-forms-core-components.md).
 
@@ -91,7 +91,7 @@ ht-degree: 3%
 
    ![单击扳手图标以打开自适应表单容器对话框以配置提交操作](/help/forms/using/assets/adaptive-forms-submit-message.png)
 
-1. 选择并配置 **[!UICONTROL 提交操作]**，具体取决于您的要求。 有关提交操作的详细信息，请参阅 [自适应表单提交操作](/help/forms/configuring-submit-actions.md)
+1. 选择并配置 **[!UICONTROL 提交操作]**，具体取决于您的要求。 有关提交操作的详细信息，请参阅 [自适应表单提交操作](/help/forms/using/configuring-submit-actions.md)
 
 <!--
     
@@ -117,8 +117,8 @@ ht-degree: 3%
 
 您可以使用表单数据模型将表单连接到数据源，以根据用户操作发送和接收数据。 您还可以将表单连接到JSON架构，以预定义格式接收提交的数据。 根据要求，将表单连接到JSON架构或表单数据模型：
 
-* [创建JSON架构并上传到您的环境](/help/forms/adaptive-form-json-schema-form-model.md)
-* [创建表单数据模型](/help/forms/create-form-data-models.md)
+* [创建JSON架构并上传到您的环境](/help/forms/using/adaptive-form-json-schema-form-model.md)
+* [创建表单数据模型](/help/forms/using/create-form-data-models.md)
 
 ### 为表单配置JSON架构或表单数据模型
 
@@ -141,7 +141,7 @@ ht-degree: 3%
 
 您可以使用预填充服务使用现有数据自动填充自适应表单的字段。 当用户打开表单时，这些字段的值会预先填充。 您可以：
 
-* [创建自定义预填充服务](/help/forms/prepopulate-adaptive-form-fields.md)
+* [创建自定义预填充服务](/help/forms/using/prepopulate-adaptive-form-fields.md)
 * [使用表单数据模型预填充服务](#fdm-prefill-service)
 
 ### 使用表单数据模型预填充服务预填充自适应表单的字段 {#fdm-prefill-service}
@@ -171,6 +171,6 @@ ht-degree: 3%
 
 ## 另请参阅
 
-* [创建基于核心组件的自适应表单](/help/forms/using/create-an-adaptive-form-core-components.md)
-* [创建自适应表单或将其添加到AEM Sites页面或体验片段](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)
+* [创建基于核心组件的自适应表单](create-an-adaptive-form-core-components.md)
+* [创建自适应表单或将其添加到AEM Sites页面或体验片段](create-or-add-an-adaptive-form-to-aem-sites-page.md)
 
