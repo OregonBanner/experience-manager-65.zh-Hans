@@ -1,17 +1,17 @@
 ---
-title: 可选 – 如何使用 AEM 创建单页应用程序 (SPA)
-description: 在 AEM Headless 开发人员历程的这一可选延续部分中，您将了解 AEM 如何将 Headless 交付与传统的全栈 CMS 功能相结合，以及您如何使用 AEM 的 SPA 编辑器框架来创建可编辑的 SPA。
+title: 可选 — 如何使用Adobe Experience Manager创建单页应用程序(SPA)
+description: 在Adobe Experience Manager (AEM) Headless开发人员历程的这一可选续集中，您可以了解AEM如何将Headless交付与传统的全栈CMS功能相结合，以及如何使用AEM SPA编辑器框架创建可编辑的SPA。
 exl-id: 91eadda2-b881-4e4a-867f-8c5c54e8f8b4
-source-git-commit: a2ababa9dd9115e963b91a7271d204d287557c40
+source-git-commit: d3c40d1452217983b01245ec1c81111a3c4e7295
 workflow-type: tm+mt
-source-wordcount: '1273'
-ht-degree: 100%
+source-wordcount: '1267'
+ht-degree: 78%
 
 ---
 
 # 如何使用 AEM 创建单页应用程序 (SPA) {#create-spa}
 
-在 [AEM Headless 开发人员历程](overview.md)的这一可选延续部分中，您将了解 AEM 如何将 Headless 交付与传统的全栈 CMS 功能相结合，您如何使用 AEM 的 SPA 编辑器框架来创建可编辑的 SPA，如何集成外部 SPA，以及根据需要启用编辑功能。
+在此可选的接续部分中， [AEM Headless开发人员历程，](overview.md) 您了解了Adobe Experience Manager (AEM)如何将headless交付与传统全栈CMS功能相结合，以及如何使用AEM SPA Editor框架创建可编辑SPA，并集成外部SPA，从而根据需要启用编辑功能。
 
 ## 迄今为止的故事 {#story-so-far}
 
@@ -26,9 +26,9 @@ ht-degree: 100%
 
 您现在要么已使用第一个 AEM Headless 项目上线，要么已具备执行此操作所需的所有知识。恭喜！
 
-那么，为什么您需要阅读此历程的这一附加可选延续部分呢？您可能还记得，在[快速入门](getting-started.md#integration-levels)中，我们简要讨论了 AEM 如何支持 Headless 交付和传统全栈模型，并支持结合了两者优点的混合模型。虽然此混合模型不是传统 Headless 模型，但它可以为某些项目提供前所未有的灵活性。
+那么，为什么您需要阅读此历程的这一附加可选延续部分呢？您可能还记得 [快速入门](getting-started.md#integration-levels) 我们简要地讨论了AEM如何支持headless投放和传统的全栈模型，以及如何支持将两者的优势相结合的混合模型。 虽然此混合模型不是传统 Headless 模型，但它可以为某些项目提供前所未有的灵活性。
 
-本文基于您对 AEM Headless 的了解，深入探究您如何创建自己的单页应用程序 (SPA)，实际上可在 AEM 中编辑这些应用程序。通过这种方式，您可以创建内容并以 Headless 方式将它交付给 SPA，但仍可在 AEM 中编辑此 SPA。
+本文基于您对 AEM Headless 的了解，深入探讨如何创建自己的可在 AEM 中编辑的单页应用程序 (SPA)。通过这种方式，您可以创建内容并将其无头交付到SPA，但该SPA在AEM中保持可编辑状态。
 
 ## 目标 {#objective}
 
@@ -37,17 +37,17 @@ ht-degree: 100%
 * 了解 SPA 编辑器的基本功能。
 * 了解为 AEM 构建完全可编辑的 SPA 的要求。
 * 了解如何将外部 SPA 集成到 AEM 中。
-* 了解应该或不应该如何实施服务器端呈现。
+* 了解应该如何实施或不应该实施服务器端渲染。
 
 ## 要求和先决条件 {#requirements-prerequisites}
 
-开始在 AEM 中使用 SPA 之前，需要满足许多要求。
+开始在 AEM 中使用 SPA 之前，需要满足多项要求。
 
 ### 知识 {#knowledge}
 
 * 有关使用 React 或 Angular 框架创建 SPA 的开发经验
 * 有关创建内容片段和使用编辑器的基本 AEM 技能
-* 请务必查看文档 [AEM 中的 Headful 和 Headless](/help/sites-developing/headful-headless.md)，了解可能的 SPA 集成的各种级别。
+* 请务必查看文档 [AEM中的Headful和Headless](/help/sites-developing/headful-headless.md) 以尽可能了解各种级别的SPA集成。
 
 ### 工具 {#tools}
 
@@ -58,7 +58,7 @@ ht-degree: 100%
 
 ## 什么是 SPA？ {#what-is-a-spa}
 
-单页应用程序 (SPA) 与传统页面的不同之处在于，它在客户端呈现且主要由 Javascript 驱动，并且依靠 Ajax 调用来加载数据和动态更新页面。大多数内容或所有内容在单个页面加载中检索一次，并基于用户与页面的交互按需异步加载其他资源。
+单页应用程序 (SPA) 与传统页面的不同之处在于，它在客户端呈现且主要由 JavaScript 驱动，并且依靠 Ajax 调用来加载数据和动态更新页面。大多数内容或所有内容在单个页面加载中检索一次，并基于用户与页面的交互按需异步加载其他资源。
 
 这减少了页面刷新需求，并为用户提供了一种无缝、快速且更类似于本机应用程序体验的体验。
 
@@ -66,13 +66,13 @@ ht-degree: 100%
 
 ## 为什么使用 SPA？ {#why-spa}
 
-SPA 的工作方式的特性使其更快、更流畅且更类似于本机应用程序，从而为网页访客以及营销人员和开发人员提供一种极具吸引力的体验。
+由于SPASPA的工作方式性质，它更快、更流畅，并且更像本机应用程序，因此不仅对于网页访客，对于营销人员和开发人员而言，它都成为一种极具吸引力的体验。
 
 有关 SPA 的完整说明以及使用 SPA 的原因，请参阅[其他资源](#additional-resources)部分，获取指向更深入文档的链接。
 
 ## AEM 如何处理 SPA
 
-在 AEM 上开发单页应用程序时，假定前端开发人员在创建 SPA 时遵循标准最佳实践。作为前端开发人员，如果您遵循这些一般最佳实践以及一些特定于 AEM 的原则，您的 SPA 将能够使用 AEM 及其内容创作功能。
+在 AEM 上开发单页应用程序时，假定前端开发人员在创建 SPA 时遵循标准最佳实践。作为前端开发人员，如果您遵循这些常规最佳实践和一些AEM特定原则，您的SPA将可用于AEM及其内容创作功能。
 
 * **可移植性** – 与任何组件一样，应构建尽可能可移植的 SPA 组件。应使用可移植且可重用的组件构建 SPA。
 * **AEM 推动站点结构** – 前端开发人员创建组件并拥有其内部结构，但依赖 AEM 来定义站点的内容结构。
@@ -93,7 +93,7 @@ AEM 中的 SPA 支持引入了一个薄的 JS 层，该层在页面编辑器中�
 
 ## 适应现有 SPA {#existing-spas}
 
-如果您目前拥有 SPA，AEM 支持将其嵌入 AEM 中，以便内容作者能够在 AEM 编辑器中看到它。对于在将使用通过内容片段创建的内容的最终应用程序的上下文中查看该内容，这很有用。
+如果您目前拥有 SPA，AEM 支持将其嵌入 AEM 中，以便内容作者能够在 AEM 编辑器中看到它。对于在最终应用程序的前后环境中通过内容片段查看他们创建的内容来说，这将很有用。
 
 此外，只需进行少量更改，即可在 AEM 编辑器中启用对外部 SPA 的某些编辑功能。
 

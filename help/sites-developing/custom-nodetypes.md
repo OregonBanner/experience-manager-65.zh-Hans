@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
 content-type: reference
 exl-id: bfd50aa9-579e-47d5-997d-ec764c782497
-source-git-commit: 939132e8b461b51e1c49237e481243bcc5de3bf6
+source-git-commit: d3c40d1452217983b01245ec1c81111a3c4e7295
 workflow-type: tm+mt
-source-wordcount: '1883'
+source-wordcount: '1866'
 ht-degree: 9%
 
 ---
@@ -17,10 +17,10 @@ ht-degree: 9%
 
 由于Adobe Experience Manager (AEM)基于Sling并使用JCR存储库，因此这两者提供的节点类型均可供使用：
 
-* [JCR节点类型](https://www.adobe.io/experience-manager/reference-materials/spec/jcr/2.0/3_Repository_Model.html#3.1.7-Node-Types)
+* [JCR节点类型](https://developer.adobe.com/experience-manager/reference-materials/spec/jcr/2.0/3_Repository_Model.html#3.1.7-Node-Types)
 * [Sling节点类型](https://cwiki.apache.org/confluence/display/SLING/Sling+Node+Types)
 
-除此之外。 AEM提供了一系列自定义节点类型。
+除了这些节点类型之外，AEM还提供了一系列自定义节点类型。
 
 ## 审核 {#audit}
 
@@ -145,7 +145,7 @@ ht-degree: 9%
 
 **描述**
 
-定义将节点标记为伪页面的mixin类型。 这意味着它们可以适应页面和WCM编辑支持。
+定义将节点标记为伪页面的mixin类型。 换句话说，这意味着它们可以适应页面和WCM编辑支持。
 
 **定义**
 
@@ -161,8 +161,8 @@ ht-degree: 9%
 * `@prop jcr:description`  — 此页面的描述。
 * `@prop cq:template`  — 用于创建页面的模板的路径。
 * `@prop cq:allowedTemplates`  — 用于确定允许模板的路径的正则表达式列表。
-* `@prop pageTitle`  — 标题通常显示在 `<title>` 标记之前。
-* `@prop navTitle`  — 导航中通常使用的标题。
+* `@prop pageTitle`  — 标题显示在 `<title>` 标记之前。
+* `@prop navTitle`  — 导航中使用的标题。
 * `@prop hideInNav`  — 指定是否应在导航中隐藏页面。
 * `@prop onTime`  — 此页面生效的时间。
 * `@prop offTime`  — 此页面失效的时间。
@@ -197,7 +197,7 @@ ht-degree: 9%
 * `@node jcr:content`  — 新页面的默认内容。
 * `@node icon.png`  — 包含特征图标的文件。
 * `@node thumbnail.png`  — 包含特征缩略图图像的文件。
-* `@node workflows`  — 自动分配工作流配置。 配置将遵循以下结构：
+* `@node workflows`  — 自动分配工作流配置。 配置遵循以下结构：
    * `+ workflows`
       * `+ name1`
          * `- cq:path`
@@ -232,14 +232,14 @@ ht-degree: 9%
 * `@prop dialogPath`  — 主对话框路径（对话框的替代方法）。
 * `@node design_dialog`  — “设计”对话框。
 * `@prop cq:cellName`  — 设计单元格的名称。
-* `@prop cq:isContainer`  — 指示这是否为容器组件。 这会强制使用子组件的单元格名称而不是路径名称。 例如， `parsys` 是一个容器组件。 如果未定义此值，则会根据是否存在 `cq:childEditConfig`.
+* `@prop cq:isContainer`  — 指示它是否为容器组件。 强制使用子组件的单元格名称而不是路径名称。 例如， `parsys` 是一个容器组件。 如果未定义此值，则会根据是否存在 `cq:childEditConfig`.
 * `@prop cq:noDecoration`  — 如果为true，则无修饰 `div` 标记在包含此组件时绘制。
 * `@node cq:editConfig`  — 定义编辑栏参数的配置。
 * `@node cq:childEditConfig`  — 由子组件继承的编辑配置。
 * `@node cq:htmlTag`  — 定义添加到“周围”的其他标记属性 `div` 标记。
 * `@node icon.png` — 包含特征图标的文件。
 * `@node thumbnail.png`  — 包含特征缩略图图像的文件。
-* `@prop allowedParents`  — 用于确定允许作为父组件的组件的路径的正则表达式模式。
+* `@prop allowedParents`  — 用于确定允许作为父组件的组件的组件的路径的正则表达式模式。
 * `@prop allowedChildren`  — 用于确定允许作为子组件的组件的组件的路径的正则表达式模式。
 * `@node virtual`  — 包含反映用于组件拖放的虚拟组件的子节点。
 * `@prop componentGroup`  — 组件组的名称，用于组件拖放。
@@ -314,9 +314,9 @@ ht-degree: 9%
 
 **描述**
 
-配置组件的一个放置目标。 此节点的名称将用作拖放的ID。
+配置组件的一个放置目标。 此节点的名称用作拖放的ID。
 
-* `@prop accept`  — 此放置目标接受的MIME类型列表；例如 `["image/*"]`
+* `@prop accept`  — 此放置目标接受的mime类型列表；例如， `["image/*"]`
 * `@prop groups`  — 接受源的拖放组列表。
 * `@prop propertyName`  — 用于存储引用的属性的名称。
 
@@ -332,7 +332,7 @@ ht-degree: 9%
 
 **描述**
 
-定义虚拟CQ组件。 它们当前仅用于新组件拖放向导。
+定义虚拟CQ组件。 当前仅用于新组件拖放向导。
 
 * `@prop jcr:title`  — 此组件的标题。
 * `@prop jcr:description`  — 此组件的描述。
@@ -340,7 +340,7 @@ ht-degree: 9%
 * `@node cq:childEditConfig` — 编辑由子组件继承的配置。
 * `@node icon.png`  — 包含特征图标的文件。
 * `@node thumbnail.png`  — 包含特征缩略图图像的文件。
-* `@prop allowedParents`  — 用于确定允许作为父组件的组件的路径的正则表达式模式。
+* `@prop allowedParents`  — 用于确定作为父组件的组件路径的正则表达式模式。
 * `@prop allowedChildren`  — 用于确定允许作为子组件的组件的组件的路径的正则表达式模式。
 * `@prop componentGroup`  — 用于组件拖放的组件组的名称。
 
@@ -444,7 +444,7 @@ DAM资产。
 
 **描述**
 
-`cq:attributes` 是ContentBus版本标记的节点类型。 此节点只有一系列属性；其中三个属性是预定义的“created”、“csd”和“timestampe”。
+节点类型 `cq:attributes` 用于ContentBus版本标记。 此节点只有一系列属性；其中三个属性是预定义的“created”、“csd”和“timestamp”。
 
 * `@prop created (long) mandatory copy`  — 创建版本信息的时间戳，通常是以前版本的签入时间或页面创建时间。
 * `@prop csd (string) mandatory copy` - csd标准属性，页面节点的cq：csd属性的副本
@@ -485,9 +485,9 @@ DAM资产。
 
 轮询配置。
 
-* `@prop source (String) mandatory`  — 数据源URI，这是必需项，不得为空
-* `@prop target (String)`  — 存储从数据源检索的数据的目标位置。 这是可选的，默认为cq：PollConfig节点。
-* `@prop interval (Long)`  — 轮询数据源中新数据或更新数据的时间间隔（以秒为单位）。 这是可选设置，默认为30分钟（1800秒）。
+* `@prop source (String) mandatory`  — 数据源URI。 必需，不得为空。
+* `@prop target (String)`  — 存储从数据源检索的数据的目标位置。 可选，默认为cq：PollConfig节点。
+* `@prop interval (Long)`  — 轮询数据源中新数据或更新数据的时间间隔（以秒为单位）。 可选，默认为30分钟（1800秒）。
 * [为Adobe Experience Manager创建自定义数据导入器服务](https://helpx.adobe.com/experience-manager/using/polling.html)
 
 **定义**
@@ -578,7 +578,7 @@ MailerService节点类型 邮件程序使用具有此mixin的节点作为消息�
 
 **描述**
 
-定义LiveSyncCanceled mixin。 取消LiveCopy（受控）节点的LiveSync行为，该节点可能因其父节点之一而包含在LiveRelationship中。
+定义LiveSyncCanceled mixin。 取消LiveRelationship中可能涉及的Live Copy（受控）节点的LiveSync行为，因为该节点的一个父节点有关。
 
 * `@prop cq:isCancelledForChildren`  — 定义是否取消了LiveSync；也适用于子项。
 
@@ -1062,7 +1062,7 @@ Wiki属性
 
 **描述**
 
-自动分配工作流配置。 配置将遵循以下结构：
+自动分配工作流配置。 配置遵循以下结构：
 * `workflows`
    * `+ name1`
       * `- cq:path`

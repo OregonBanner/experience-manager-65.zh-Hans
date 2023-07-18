@@ -1,14 +1,12 @@
 ---
 title: 推送通知
 description: 关注此页面，了解如何在Adobe Experience Manager Mobile应用程序中使用推送通知。
-uuid: 0ed8b183-ef81-487f-8f35-934d74ec82af
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
-discoiquuid: ed8c51d2-5aac-4fe8-89e8-c175d4ea1374
 exl-id: 375f2f40-1b98-4e21-adee-cbea274e6a2a
-source-git-commit: 17d13e9b201629d9d1519fde4740cf651fe89d2c
+source-git-commit: d3c40d1452217983b01245ec1c81111a3c4e7295
 workflow-type: tm+mt
 source-wordcount: '3280'
 ht-degree: 1%
@@ -19,7 +17,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->Adobe建议对需要基于单页应用程序框架的客户端渲染（例如React）的项目使用SPA编辑器。 [了解详情](/help/sites-developing/spa-overview.md).
+>对于需要基于单页应用程序框架的客户端渲染（例如React）的项目，Adobe建议使用SPA编辑器。 [了解详情](/help/sites-developing/spa-overview.md).
 
 能够通过重要通知即时提醒AEM Mobile应用程序用户，这对于移动应用程序的价值及其营销活动至关重要。 在本例中，我们将介绍允许应用程序接收推送通知所需执行的步骤，以及如何配置推送并将其从AEM Mobile发送到安装在手机上的应用程序。 此外，本节还介绍如何配置 [深层链接](#deeplinking) 功能添加到推送通知中。
 
