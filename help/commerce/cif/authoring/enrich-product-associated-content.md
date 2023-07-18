@@ -1,6 +1,6 @@
 ---
 title: 用关联的AEM内容扩充产品数据
-description: 了解营销人员如何使用Adobe Experience Manager中的关联内容扩充产品数据。 AEM中的资产、体验片段等内容可以与商业产品相关联。 关联后，这些内容类型可以动态插入到产品页面或类别页面中的占位符上。 这为营销人员提供了广泛的可能性，使他们可以通过图像和视频等附加内容来定位特定的产品页面。
+description: 了解营销人员如何通过向产品页面动态添加营销内容，利用Adobe Experience Manager中的关联内容扩充产品数据。 这为营销人员提供了广泛的可能性，使他们可以通过图像和视频等附加内容来定位特定的产品页面。
 sub-product: Commerce
 version: 6.5
 doc-type: feature-video
@@ -10,9 +10,9 @@ feature: Commerce Integration Framework
 kt: 7065
 thumbnail: 333205.jpg
 exl-id: 1a069fbc-c036-419a-b585-6aa43e15de16
-source-git-commit: a2ababa9dd9115e963b91a7271d204d287557c40
+source-git-commit: a600acb7d65fbfa1806ef582642a6c5ac7859890
 workflow-type: tm+mt
-source-wordcount: '375'
+source-wordcount: '350'
 ht-degree: 2%
 
 ---
