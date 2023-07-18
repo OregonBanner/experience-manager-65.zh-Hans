@@ -1,17 +1,15 @@
 ---
-title: AEM Sites开发中的体验片段
+title: Adobe Experience Manager Sites开发中的体验片段
 description: 了解如何自定义体验片段。
-uuid: fc9f7e59-bd7c-437a-8c63-de8559b5768d
 contentOwner: AEM Docs
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
-discoiquuid: c02e713e-15f3-408b-879a-d5eb014aef02
 docset: aem65
 exl-id: c4fb1b5e-e15e-450e-b882-fe27b165ff9f
-source-git-commit: a8616b3b30ac04ea24c4a869cabd47518af1a35f
+source-git-commit: 26c0411d6cc16f4361cfa9e6b563eba0bfafab1e
 workflow-type: tm+mt
-source-wordcount: '1781'
+source-wordcount: '1777'
 ht-degree: 1%
 
 ---
@@ -71,7 +69,7 @@ HTML演绎版是使用Sling重写器管道生成的。 管道定义于 `/libs/ex
 
 ## 社交变体 {#social-variations}
 
-可以在社交媒体（文本和图像）上发布社交变体。 在AEM中，这些社交变体可以包含组件；例如，文本组件、图像组件。
+可以在社交媒体（文本和图像）上发布社交变体。 在Adobe Experience Manager (AEM)中，这些社交变体可以包含组件；例如，文本组件、图像组件。
 
 社交帖子的图像和文本可从任何深度级别的任何图像资源类型或文本资源类型中获取（在构建基块或布局容器中）。
 
@@ -98,7 +96,7 @@ HTML演绎版是使用Sling重写器管道生成的。 管道定义于 `/libs/ex
 >
 >***仅*** [可编辑的模板](/help/sites-developing/page-templates-editable.md) 受体验片段支持。
 
-在开发体验片段的新模板时，您可以遵循的标准实践 [可编辑模板](/help/sites-developing/page-templates-editable.md).
+为体验片段开发新模板时，您可以遵循的标准实践 [可编辑模板](/help/sites-developing/page-templates-editable.md).
 
 创建由检测到的体验片段模板 **创建体验片段** 向导中，必须遵循以下规则集之一：
 
@@ -109,11 +107,9 @@ HTML演绎版是使用Sling重写器管道生成的。 管道定义于 `/libs/ex
 
    1. 模板名称必须以下列内容开头：
       `experience-fragments`
-这允许用户在/content/experience-fragments中创建体验片段作为 
-`cq:allowedTemplates` 此文件夹的属性包括名称以开头的所有模板 `experience-fragment`. 客户可以更新此属性以包含他们自己的命名方案或模板位置。
+这允许用户在/content/experience-fragments中创建体验片段作为 `cq:allowedTemplates` 此文件夹的属性包括名称以开头的所有模板 `experience-fragment`. 客户可以更新此属性以包含他们自己的命名方案或模板位置。
 
 1. [允许的模板](/help/sites-authoring/experience-fragments.md#configure-allowed-templates-folder) 可以在体验片段控制台中配置。
-
 <!--
 1. Add the template details manually in `cq:allowedTemplates` on the `/content/experience-fragment` node.
 -->
@@ -148,7 +144,7 @@ HTML演绎版是使用Sling重写器管道生成的。 管道定义于 `/libs/ex
 
 此功能可以是 [在AEM的创作实例上启用](/help/sites-administering/experience-fragments-target.md#Prerequisites). 它需要有效的Adobe Target配置以及Link Externalizer配置。
 
-链接外部化器用于确定在创建Target选件的HTML版本(随后将发送到Adobe Target)时所需的正确URL。 这是必需的，因为Adobe Target要求可以公开访问TargetHTML选件中的所有链接；这意味着链接引用的任何资源以及体验片段本身必须在使用之前发布。
+链接外部化器用于确定在创建Target选件的HTML版本时所需的正确URL，然后会将该URL发送到Adobe Target。 这是必需的，因为Adobe Target要求可以公开访问TargetHTML选件中的所有链接；这意味着链接引用的任何资源以及体验片段本身必须在使用之前发布。
 
 默认情况下，当您构建TargetHTML选件时，会向AEM中的自定义Sling选择器发送请求。 此选择器名为 `.nocloudconfigs.html`. 顾名思义，它创建了体验片段的纯HTML渲染，但不包括云配置（这会是多余的信息）。
 
@@ -165,13 +161,13 @@ HTML演绎版是使用Sling重写器管道生成的。 管道定义于 `/libs/ex
    1. `src` 属性
    1. `href` 属性
    1. `*-src` 属性（如data-src、custom-src等）
-   1. `*-href` 属性(如 `data-href`， `custom-href`， `img-href`、等)
+   1. `*-href` 属性(如 `data-href`， `custom-href`， `img-href`，等等)
 
    >[!NOTE]
    >
-   >在大多数情况下，HTML中的内部链接是相对链接，但在某些情况下，自定义组件可能会在HTML中提供完整的URL。 默认情况下，AEM会忽略这些完全成熟的URL并且不会进行任何修改。
+   >通常，HTML中的内部链接是相对链接，但在某些情况下，自定义组件可能会在HTML中提供完整的URL。 默认情况下，AEM会忽略这些完全成熟的URL并且不会进行任何修改。
 
-   这些属性中的链接通过AEM链接外部化器运行 `publishLink()` 以便重新创建URL，就像它位于已发布的实例上一样，并且是公开可用的。
+   这些属性中的链接通过AEM链接外部化器运行 `publishLink()` 以重新创建URL，就像在已发布的实例上一样，并且该URL是公开可用的。
 
 使用现成实施时，上述流程应足以从体验片段生成Target选件，然后将其导出到Adobe Target。 但是，有一些用例未在此流程中说明；这些用例包括：
 
@@ -214,9 +210,9 @@ public interface ExperienceFragmentLinkRewriterProvider {
 
 ### 如何使用链接重写器提供程序界面 {#how-to-use-the-link-rewriter-provider-interface}
 
-要使用接口，您首先需要创建一个包，其中包含用于实现链接重写器提供程序接口的新服务组件。
+要使用该接口，您首先需要创建一个包，其中包含实现链接重写器提供程序接口的新服务组件。
 
-此服务将用于插入Experience Fragment Export to Target重写，以便访问各种链接。
+此服务用于插入“体验片段导出到Target”重写，以便有权访问各种链接。
 
 例如， `ComponentService`：
 
@@ -281,7 +277,7 @@ public boolean shouldRewrite(ExperienceFragmentVariation experienceFragment) {
 * `href` 仅限属性
 
 * 对于特定体验片段：
-   `/content/experience-fragment/master`
+  `/content/experience-fragment/master`
 
 任何通过“导出到Target”系统的其他体验片段将被忽略，并且不受此服务中实施的更改的影响。
 
@@ -293,16 +289,16 @@ public boolean shouldRewrite(ExperienceFragmentVariation experienceFragment) {
 
 作为输入，方法接收参数：
 
-* `link`不为目标组件考虑  
-`String` 表示当前正在处理的链接。 这通常是指向创作实例上资源的相对URL。
+* `link`
+此 `String` 表示正在处理的链接。 这通常是指向创作实例上资源的相对URL。
 
 * `tag`
-当前正在处理的HTML元素的名称。
+正在处理的HTML元素的名称。
 
 * `attribute`
 确切的属性名称。
 
-例如，如果“导出到目标”系统当前正在处理此元素，则可以定义 `CSSInclude` 作为：
+例如，如果“导出至目标”系统正在处理此元素，则可以定义 `CSSInclude` 作为：
 
 ```java
 <link rel="stylesheet" href="/etc.clientlibs/foundation/clientlibs/main.css" type="text/css">
@@ -349,7 +345,7 @@ public String rewriteLink(String link, String tag, String attribute) {
 
 >[!NOTE]
 >
->如果上述方法返回 `null`，则Export to Target系统将保持链接不变，即指向资源的相对链接。
+>如果上述方法返回 `null`之后，导出到Target系统会将链接保持原样，即指向资源的相对链接。
 
 #### 优先级 — getPriority {#priorities-getpriority}
 

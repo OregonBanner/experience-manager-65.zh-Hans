@@ -1,18 +1,14 @@
 ---
 title: 创建新的Granite UI字段组件
-seo-title: Creating a New Granite UI Field Component
 description: Granite UI提供了一系列旨在用于表单的组件，称为字段
-seo-description: Granite UI provides a range of components designed to be used in forms, called fields
-uuid: cf26e057-4b0c-45f4-8975-2c658517f20e
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
 content-type: reference
-discoiquuid: 94b9eeee-aae3-4b28-9d6f-1be0e4acd982
 exl-id: e4820330-2ee6-4eca-83fd-462aa0b83647
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 26c0411d6cc16f4361cfa9e6b563eba0bfafab1e
 workflow-type: tm+mt
-source-wordcount: '539'
+source-wordcount: '527'
 ht-degree: 0%
 
 ---
@@ -29,7 +25,7 @@ Granite UI提供了一系列旨在用于表单的组件；这些组件称为 *�
 
 >[!NOTE]
 >
->有关字段的完整详细信息，请参阅 [Granite UI文档](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html).
+>有关字段的完整详细信息，请参阅 [Granite UI文档](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html).
 
 使用Granite UI Foundation框架开发和/或扩展Granite组件。 这包含两个元素：
 
@@ -39,19 +35,19 @@ Granite UI提供了一系列旨在用于表单的组件；这些组件称为 *�
 
       * 基础 — 模块化、可组合、可分层、可重用
       * 组件 — Sling组件
-   * 帮助应用程序开发的帮助程序
 
+   * 帮助应用程序开发的帮助程序
 
 * 客户端：
 
-   * 提供一些词汇(即HTML语言的扩展)的clientlibs集合，以通过Hypermedia驱动的UI实现通用交互模式
+   * 提供一些词汇(即HTML语言的扩展)的clientlibs集合，以通过超媒体驱动的用户界面实现通用的交互模式。
 
 通用Granite UI组件 `field` 由两个感兴趣的文件组成：
 
-* `init.jsp`：处理常规处理；设置标签、描述，并提供呈现字段时所需的表单值。
-* `render.jsp`：这是执行字段实际渲染的位置，需要为自定义字段覆盖；包含在 `init.jsp`.
+* `init.jsp`：处理常规处理；标记、描述，并提供呈现字段时所需的表单值。
+* `render.jsp`：这是执行字段实际渲染的位置，并且必须为自定义字段覆盖；包含于 `init.jsp`.
 
-请参阅 [Granite UI文档 — 字段](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/components/foundation/form/field/index.html) 如果您想了解更多详细信息。
+参见 [Granite UI文档 — 字段](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/components/foundation/form/field/index.html) 了解详细信息。
 
 有关示例，请参阅：
 
@@ -63,7 +59,7 @@ Granite UI提供了一系列旨在用于表单的组件；这些组件称为 *�
 
 >[!NOTE]
 >
->由于此机制使用JSP，因此i18n和XSS不是现成的。 这意味着您需要国际化并逃避“字符串”。 以下目录包含来自标准实例的通用字段，您可以将这些字段用作引用：
+>由于此机制使用JSP，因此i18n和XSS不是现成的。 这意味着您必须国际化并避开“字符串”。 以下目录包含来自标准实例的通用字段，您可以将这些字段用作引用：
 >
 >`/libs/granite/ui/components/foundation/form` 目录
 
@@ -79,7 +75,7 @@ Granite UI提供了一系列旨在用于表单的组件；这些组件称为 *�
 
    `render.jsp`
 
-   在此脚本中，您需要生成超媒体标记（即包含超媒体可供性的扩充标记），以便客户端知道如何与生成的元素进行交互。 这应遵循Granite UI服务器端编码样式。
+   在此脚本中，生成超媒体标记（即，包含超媒体可供性的扩充标记），以便客户端知道如何与生成的元素交互。 这应遵循Granite UI服务器端编码样式。
 
    在自定义时，您唯一的 *必须* fullable为读取表单值(初始化于 `init.jsp`)从请求访问：
 
@@ -89,11 +85,11 @@ Granite UI提供了一系列旨在用于表单的组件；这些组件称为 *�
    vm.get("value, String.class");
    ```
 
-   有关更多详细信息，请参阅现成可用的Granite UI字段的实施；例如， `/libs/granite/ui/components/foundation/form/textfield`.
+   有关更多详细信息，请参阅现成Granite UI字段的实施；例如， `/libs/granite/ui/components/foundation/form/textfield`.
 
    >[!NOTE]
    >
-   >目前，JSP是首选的脚本编写方法，因为在HTL中不太容易将信息从一个组件传递到另一个组件（在表单/字段的上下文中非常频繁）。
+   >目前，JSP是首选的脚本编写方法，因为在HTL中不太容易实现将信息从一个组件传递到另一个组件（在表单/字段的上下文中频繁发生）。
 
 ## 为组件创建客户端库 {#creating-the-client-library-for-the-component}
 
