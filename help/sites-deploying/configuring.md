@@ -1,30 +1,26 @@
 ---
 title: 基本配置概念
-seo-title: Basic Configuration Concepts
-description: 了解如何配置AEM。
-seo-description: Learn how to configure AEM.
-uuid: edcdd4bd-5917-417e-8913-40d488383ea9
+description: 了解如何配置Adobe Experience Manager。
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: configuring
 content-type: reference
-discoiquuid: 2673ea92-1651-4b1b-9aac-f4ba8b36782e
 feature: Configuring
 exl-id: 3777a1ba-cc4e-41b9-9098-236f8141925f
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: ae08247c7be0824151637d744f17665c3bd82f2d
 workflow-type: tm+mt
-source-wordcount: '2124'
+source-wordcount: '2112'
 ht-degree: 1%
 
 ---
 
 # 基本配置概念{#basic-configuration-concepts}
 
-Adobe Experience Manager (AEM)安装时使用了所有参数的默认设置，这使它可以“开箱即用”运行。 但是，您可以根据自己的特定要求配置AEM。
+Adobe Experience Manager (AEM)安装时使用了所有参数的默认设置，这些设置允许它“开箱即用”。 但是，您可以根据自己的特定要求配置AEM。
 
 可以配置AEM的许多方面：
 
-* 有些是 [通常为每个项目安装配置](#primary-configuration-considerations) 并且必须经过审核以确认它们是否适用于您的项目。
+* 有些是 [通常为每个项目安装配置](#primary-configuration-considerations) 并且必须接受审核以确认它们是否适用于您的项目。
 * [其他配置](#further-configuration-considerations) 可能是通用的，但不是必须的；与功能或系统性能和稳定性相关。
 * 只有AEM的某些可选功能才需要其他功能（这些功能与相应的功能一起进行记录）。
 
@@ -32,23 +28,23 @@ Adobe Experience Manager (AEM)安装时使用了所有参数的默认设置，�
 
 * **Adobe CQ Web控制台**
 
-   这是配置OSGi捆绑包和服务的标准位置。
+  这是配置OSGi捆绑包和服务的标准位置。
 
-   参见 [配置OSGi](/help/sites-deploying/configuring-osgi.md) 了解更多详情和建议的做法。
+  参见 [配置OSGi](/help/sites-deploying/configuring-osgi.md) 了解更多详情和建议的做法。
 
 * **存储库**
 
-   存储库中提供了OSGi配置的子集。 这可以确保复制或复制存储库内容重新创建相同的配置。 您还可以将自己的配置（取决于运行模式）添加到存储库中。
+  存储库中提供了OSGi配置的子集。 这可以确保复制或复制存储库内容重新创建相同的配置。 您还可以将自己的配置（取决于运行模式）添加到存储库中。
 
-   参见 [存储库中的OSGi配置](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository) 尤其是 [向存储库添加新配置](/help/sites-deploying/configuring-osgi.md#adding-a-new-configuration-to-the-repository) 了解更多详细信息。
+  参见 [存储库中的OSGi配置](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository) 尤其是 [向存储库添加新配置](/help/sites-deploying/configuring-osgi.md#adding-a-new-configuration-to-the-repository) 了解更多详细信息。
 
 * **文件系统**
 
-   文件系统中驻留着一些配置文件。
+  文件系统中驻留着一些配置文件。
 
 * **AEM WCM**
 
-   可以在AEM WCM本身中配置各个方面，其中许多方面使用 [工具](/help/sites-administering/tools-consoles.md) 控制台；例如，复制代理。
+  可以在AEM WCM本身中配置各个方面，其中许多方面使用 [工具](/help/sites-administering/tools-consoles.md) 控制台；例如，复制代理。
 
 >[!NOTE]
 >
@@ -58,9 +54,7 @@ Adobe Experience Manager (AEM)安装时使用了所有参数的默认设置，�
 
 >[!NOTE]
 >
->配置AEM很简单，但您必须了解：
->
->某些更改可能会对应用程序产生重大影响。 因此，在开始配置AEM之前，请确保您拥有必要的经验和知识，并只进行您知道是必需的更改。 通过OSGi控制台所做的任何更改包括 **立即** 应用于正在运行的系统（无需重新启动）。
+>配置AEM非常简单。 但是，请注意，某些更改可能会对应用程序产生重大影响。 因此，在开始配置AEM之前，请确保您拥有必要的经验和知识，并只进行您知道是必需的更改。 通过OSGi控制台所做的任何更改包括 **立即** 应用于正在运行的系统（无需重新启动）。
 
 ## 主要配置注意事项 {#primary-configuration-considerations}
 
@@ -70,7 +64,7 @@ Adobe Experience Manager (AEM)安装时使用了所有参数的默认设置，�
 
 ### 安全核对清单 {#security-checklist}
 
-中列出了几个关键配置问题 [安全核对清单](/help/sites-administering/security-checklist.md). 请确保您阅读了本文并采取了安装所需的任何措施。
+中列出了几个关键配置问题 [安全核对清单](/help/sites-administering/security-checklist.md). 请务必阅读本文，并采取安装所必需的任何操作。
 
 ### 配置默认UI — 触屏优化或经典 {#configuring-the-default-ui-touch-optimized-or-classic}
 
@@ -87,33 +81,33 @@ Adobe Experience Manager (AEM)安装时使用了所有参数的默认设置，�
 
 ### IPv4和IPv6 {#ipv-and-ipv}
 
-AEM的所有元素（例如存储库、Dispatcher等）都可以安装在IPv4和IPv6网络中。
+AEM的所有元素（例如，存储库和Dispatcher）都可以安装在IPv4和IPv6网络中。
 
 操作是无缝的，无需特殊配置，如果需要，您只需使用适合您网络类型的格式指定IP地址即可。
 
-这意味着当需要指定IP地址时，您可以根据需要从以下项中选择：
+这意味着当必须指定IP地址时，您可以根据需要从以下项中选择：
 
 * IPv6地址
 
-   例如 `https://[ab12::34c5:6d7:8e90:1234]:4502`
+  例如 `https://[ab12::34c5:6d7:8e90:1234]:4502`
 
 * IPv4地址
 
-   例如 `https://123.1.1.4:4502`
+  例如 `https://123.1.1.4:4502`
 
 * 服务器名称
 
-   例如， `https://www.yourserver.com:4502`
+  例如， `https://www.yourserver.com:4502`
 
 * 默认大小写为 `localhost` 将解释为IPv4和IPv6网络安装
 
-   例如， `http://localhost:4502`
+  例如， `http://localhost:4502`
 
 ### 版本清除 {#version-purging}
 
-在标准安装中，每当激活页面时（更新内容后），AEM都会创建新版本的页面或节点。您也可以使用根据请求创建其他版本 **版本控制** 帮他搭便车。 所有这些版本都存储在存储库中，并且可以在需要时恢复。
+在标准安装中，每当激活页面时（更新内容后），AEM都会创建页面或节点的版本。 您还可以使用以下工具根据请求创建其他版本 **版本控制** 帮他搭便车。 所有这些版本都存储在存储库中，如有必要，可以恢复。
 
-这些版本永远不会被清除，因此存储库大小会随着时间的推移而增长，因此需要管理。
+这些版本永远不会被清除，因此存储库大小会随着时间的推移而增长，因此必须对其进行管理。
 
 参见 [版本清除](/help/sites-deploying/version-purging.md) 了解全部详细信息，特别是 [版本管理器](/help/sites-deploying/version-purging.md#version-manager) 了解有关如何配置AEM以在创建新版本时清除旧版本的详细信息。
 
@@ -129,7 +123,7 @@ AEM使您能够配置：
 
 ### 运行模式 {#run-modes}
 
-运行模式允许您针对特定目的调整AEM实例；例如，创作或发布、测试、开发或Intranet等。
+运行模式允许您针对特定目的调整AEM实例。 例如，创作或发布、测试、开发或Intranet等。
 
 这是通过为每个运行模式定义配置参数集合来完成的。 基本配置参数集适用于所有运行模式，然后您可以根据特定环境的目的调整其他配置集。 然后根据需要应用这些规则。
 
@@ -182,17 +176,17 @@ LDAP身份验证发生在存储库级别，因此它直接由存储库处理。 
 
 ### 配置调度程序 {#configuring-the-dispatcher}
 
-Dispatcher 是 Adobe Experience Manager 的缓存和/或负载平衡工具，可与企业级 Web 服务器结合使用。
+Dispatcher是Adobe Experience Manager用于缓存和/或负载平衡的工具。 它可以与企业级Web服务器一起使用。
 
-参见 [调度程序](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html) 了解全部详细信息，特别是 [配置调度程序](https://helpx.adobe.com/cn/experience-manager/dispatcher/using/dispatcher-configuration.html) 了解更多配置详细信息。
+参见 [调度程序](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hans) 了解全部详细信息，特别是 [配置调度程序](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hans) 了解更多配置详细信息。
 
 ### 配置AEMLiveCycle连接器 {#configuring-aem-livecycle-connector}
 
-随着AEM Doc Services和AEM Doc Security的发布，我们现在能够调用LiveCycle文档服务来呈现XFA表单、将文档转换为PDF以及策略保护文档。 请阅读 [AEMLiveCycle连接器](https://helpx.adobe.com/livecycle/help/aem/aem-livecycle-connector.html) 了解更多详细信息。
+随着AEM Doc Services和AEM Doc Security的发布，AEM现在能够调用LiveCycle文档服务来呈现XFA表单、将文档转换为PDF以及策略保护文档。 参见 [AEMLiveCycle连接器](https://helpx.adobe.com/livecycle/help/aem/aem-livecycle-connector.html) 了解更多详细信息。
 
 ### 作业卸载和拓扑管理 {#job-offloading-and-topology-administration}
 
-[卸载](/help/sites-deploying/offloading.md) 将处理任务分发到拓扑中的Experience Manager实例。 通过卸载，您可以使用特定的Experience Manager实例来执行特定类型的处理。 专用处理使您能够最大限度地利用可用的服务器资源。
+[卸载](/help/sites-deploying/offloading.md) 在拓扑中的Experience Manager实例之间分发处理任务。 通过卸载，您可以使用特定的Experience Manager实例来执行特定类型的处理。 专用处理使您能够最大限度地利用可用的服务器资源。
 
 拓扑是参与卸载的松耦合Experience Manager集群。 集群由一个或多个Experience Manager服务器实例组成（单个实例被视为集群）。
 
@@ -244,17 +238,17 @@ Scaling a CQ installation correctly depends greatly on the details of your parti
 
 参见 [静态对象过期](/help/sites-deploying/expiration-static-objects.md) 了解更多详细信息。
 
-### Java进程中的打开文件 {#open-files-in-the-java-process}
+### Java™进程中的打开文件 {#open-files-in-the-java-process}
 
-每个java进程都可以访问文件 — 这需要系统资源。 因此，上限被定义为每个进程可以同时访问的文件数。 如果超出此限制，则可能会发生异常错误。
+每个Java™进程都可以访问文件 — 这需要系统资源。 因此，上限被定义为允许每个进程并发访问的文件数。 如果超出此限制，则可能会发生异常错误。
 
-如果AEM进程超过此最大值，则消息&#39;&#39; `too many open files`“”将显示在 `error.log`.
+如果AEM进程超过此最大值，则消息&#39;&#39; `too many open files`在中看到“ `error.log`.
 
-要避免此类例外，您需要：
+要避免此类异常，请执行以下操作：
 
 1. 检查AEM进程正在使用多少个打开的文件。
 
-   如何进行此检查将取决于实例运行的平台。 可以使用lsof (Unix)或Process Explorer (Windows)等实用程序。
+   此检查取决于实例运行的平台。 可以使用lsof (UNIX®)或Process Explorer (Windows)等实用程序。
 
    在开发和测试过程中应监控此值，以便：
 
@@ -301,7 +295,7 @@ CQ会向符合以下条件的用户发送电子邮件通知：
 
 ### 启用页面展示 {#enabling-page-impressions}
 
-页面展示会显示在 **展示次数** 经典UI站点管理控制台的列。 要启用页面展示的捕获，您需要配置：
+页面展示会显示在 **展示次数** 经典UI站点管理控制台的列。 要启用页面展示的捕获，请配置以下内容：
 
 * 在发布实例上：
 
@@ -309,8 +303,8 @@ CQ会向符合以下条件的用户发送电子邮件通知：
 
 * 在创作实例上：
 
-   * [Adobe页面展示次数跟踪](/help/sites-deploying/osgi-configuration-settings.md)
+   * [Adobe页面展示次数跟踪器](/help/sites-deploying/osgi-configuration-settings.md)
 
 >[!CAUTION]
 >
->在创作环境中配置Adobe页面展示次数跟踪器将允许向跟踪服务发出匿名请求。
+>在创作环境中，Adobe页面展示次数跟踪器的配置允许向跟踪服务发出匿名请求。

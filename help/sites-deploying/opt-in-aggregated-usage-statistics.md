@@ -1,19 +1,15 @@
 ---
 title: 选择收集汇总的使用情况统计数据
-seo-title: Opting Into Aggregated Usage Statistics Collection
 description: 了解如何选择使用汇总的使用情况统计数据。
-seo-description: Learn how to opt into aggregated usage statistics.
-uuid: 8bd0b870-4bea-42e1-8179-e900164591b6
 contentOwner: raiman
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: deploying
-discoiquuid: 075f53cc-146b-4eea-bfbb-54beaed97915
 docset: aem65
 exl-id: e626bdd8-b7ae-4de5-a0a0-47fb74c080d7
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: ae08247c7be0824151637d744f17665c3bd82f2d
 workflow-type: tm+mt
-source-wordcount: '298'
+source-wordcount: '300'
 ht-degree: 3%
 
 ---
@@ -22,7 +18,7 @@ ht-degree: 3%
 
 ## 简介 {#introduction}
 
-您可以通过发送有关您如何与AEM交互的Adobe统计数据来帮助改进Adobe Marketing Cloud。 此信息不包含有关贵公司网站访客的任何数据，并且仅用于帮助Adobe交付、支持和改善用户体验。
+您可以发送有关您如何与Adobe Experience Cloud (AEM)交互的Adobe统计数据，以帮助改进Adobe Experience Manager。 此信息不包含有关贵公司网站访客的任何数据，并且仅用于帮助Adobe交付、支持和改善用户体验。
 
 您可以使用Touch UI或Web控制台选择收集使用情况统计数据。
 
@@ -34,7 +30,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->您还可以随时通过使用 [Web控制台](/help/sites-deploying/opt-in-aggregated-usage-statistics.md#opt-in-by-using-the-web-console) 或者通过在AEM选择加入屏幕上不选择选择加入选项。
+>您随时可以使用以下任一方式选择退出： [Web控制台](/help/sites-deploying/opt-in-aggregated-usage-statistics.md#opt-in-by-using-the-web-console) 或者通过在AEM选择加入屏幕上不选择选择加入选项。
 
 ## 使用触屏UI选择加入 {#opt-in-by-using-the-touch-ui}
 
