@@ -11,14 +11,20 @@ discoiquuid: ce65cb5f-94ec-4423-9fa9-d617e9703091
 docset: aem65
 feature: Adaptive Forms
 exl-id: 7240897f-6b3a-427a-abc6-66310c2998f3
-source-git-commit: 85189a4c35d1409690cbb93946369244e8848340
+source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
 workflow-type: tm+mt
-source-wordcount: '3466'
-ht-degree: 2%
+source-wordcount: '3488'
+ht-degree: 3%
 
 ---
 
 # 为自适应表单生成记录文档{#generate-document-of-record-for-adaptive-forms}
+
+| 版本 | 文章链接 |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/generate-document-of-record-for-non-xfa-based-adaptive-forms.html) |
+| AEM 6.5 | 本文 |
+
 
 ## 概述 {#overview}
 
@@ -287,7 +293,8 @@ ht-degree: 2%
    >
    >    * 您的自适应表单基于架构
    >    * 您正在使用 **将表单模板关联为记录文档模板** 记录文档选项
-
+   >
+   >
 
 1. 单击 **完成。**
 

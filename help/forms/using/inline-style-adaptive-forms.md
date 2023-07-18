@@ -10,14 +10,19 @@ discoiquuid: 21dec713-c76d-408b-baea-fc585377b429
 docset: aem65
 feature: Adaptive Forms
 exl-id: 67cfecb8-c31d-4192-904d-7bfaa1a31ea5
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
 workflow-type: tm+mt
-source-wordcount: '525'
-ht-degree: 2%
+source-wordcount: '548'
+ht-degree: 4%
 
 ---
 
 # 自适应表单组件的内联样式 {#inline-styling-of-adaptive-form-components}
+
+| 版本 | 文章链接 |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/configure-layout-of-an-adaptive-form/inline-style-adaptive-forms.html) |
+| AEM 6.5 | 本文 |
 
 可通过以下方式指定样式，来定义自适应表单的整体外观和样式： [主题编辑器](../../forms/using/themes.md). 此外，您还可以将内联CSS样式应用于各个自适应表单组件并动态预览更改。 内联样式会覆盖主题中提供的样式。
 

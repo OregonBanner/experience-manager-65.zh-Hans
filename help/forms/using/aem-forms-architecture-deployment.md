@@ -11,14 +11,19 @@ geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: 0156b5c3-3bef-4213-9ada-c7b6ae96ada4
 role: Admin
 exl-id: d4421d46-cfc9-424e-8a88-9d0a2994a5cf
-source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
+source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
 workflow-type: tm+mt
-source-wordcount: '2460'
+source-wordcount: '2481'
 ht-degree: 0%
 
 ---
 
 # AEM Forms的架构和部署拓扑 {#architecture-and-deployment-topologies-for-aem-forms}
+
+| 版本 | 文章链接 |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/forms-overview/aem-forms-cloud-service-architecture.html) |
+| AEM 6.5 | 本文 |
 
 ## 架构 {#architecture}
 
@@ -74,9 +79,9 @@ OSGi上的AEM Forms和JEE上的AEM Forms都具有工作流功能。 您可以在
 * **处理从Publish实例到达的原始表单数据：** 这主要是在处理实例上通过AEM工作流实现，该工作流会在数据到达时触发。 工作流可以使用提供的现成表单数据模型步骤，将数据或文档存档到适当的数据存储中。
 * **安全存储表单数据**：处理过程为与用户隔离的原始表单数据提供了一个防火墙后的存储库。 创作实例上的表单设计人员或发布实例上的最终用户均无法访问此存储库。
 
-   >[!NOTE]
-   >
-   >Adobe建议使用第三方数据存储来保存最终处理数据，而不是使用AEM存储库。
+  >[!NOTE]
+  >
+  >Adobe建议使用第三方数据存储来保存最终处理数据，而不是使用AEM存储库。
 
 * **对从Publish实例到达的对应数据的存储和后处理：** AEM工作流对相应的书信定义执行可选的后处理。 这些工作流可以将最终处理的数据保存到合适的外部数据存储中。
 
@@ -95,7 +100,7 @@ OSGi上的AEM Forms和JEE上的AEM Forms都具有工作流功能。 您可以在
 
 计划仅使用Document Services或Document Security功能的AEM Forms客户可以具有与下面显示的拓扑类似的拓扑。 此拓扑建议使用单个AEM Forms实例。 如有必要，您还可以创建AEM Forms服务器的群集或场。 当大多数用户以编程方式访问AEM Forms服务器的功能且通过用户界面进行干预最小时，建议使用此拓扑。 该拓扑有助于文档服务的批处理操作。 例如，使用输出服务每天创建数百个不可编辑的PDF文档。
 
-虽然AEM Forms允许您从一台服务器设置和运行所有功能，但您应该进行容量规划、负载平衡，并为生产环境中的特定功能设置专用服务器。 例如，对于使用PDF生成器服务每天转换数千页并添加数字签名以限制访问文档的环境，请为PDF生成器服务和数字签名功能设置单独的AEM Forms服务器。 它有助于提供最佳性能并扩展彼此独立的服务器。
+虽然AEM Forms允许您从一台服务器设置和运行所有功能，但您应该进行容量规划、负载平衡，并为生产环境中的特定功能设置专用服务器。 例如，对于使用PDF Generator服务每天转换数千页并添加数字签名以限制访问文档的环境，请为PDF Generator服务和数字签名功能设置单独的AEM Forms服务器。 它有助于提供最佳性能并扩展彼此独立的服务器。
 
 ![基本功能](assets/basic-features.png)
 
@@ -140,8 +145,8 @@ OSGi上的AEM Forms和JEE上的AEM Forms都具有工作流功能。 您可以在
 
 ### 使用文档服务功能进行基于API的脱机处理的拓扑 {#topology-for-using-document-services-capabilities-for-offline-api-based-processing}
 
-计划仅使用document services功能的AEM Forms客户可以具有与下面显示的拓扑类似的拓扑。 此拓扑建议在OSGi服务器上使用AEM Forms集群。 当大多数用户以编程方式（使用API）访问AEM Forms服务器的功能并通过用户界面进行干预最小时，建议使用此拓扑。 该拓扑在多个软件客户端场景中非常有用。 例如，多个客户端使用PDF生成器服务按需创建PDF文档。
+计划仅使用document services功能的AEM Forms客户可以具有与下面显示的拓扑类似的拓扑。 此拓扑建议在OSGi服务器上使用AEM Forms集群。 当大多数用户以编程方式（使用API）访问AEM Forms服务器的功能并通过用户界面进行干预最小时，建议使用此拓扑。 该拓扑在多个软件客户端场景中非常有用。 例如，多个客户端使用PDF Generator服务按需创建PDF文档。
 
-虽然AEM Forms允许您从一台服务器设置和运行所有功能，但您应该执行容量规划、负载平衡，并为生产环境中的特定功能设置专用服务器。 例如，对于使用PDF生成器服务每天转换数千页以及使用多个自适应表单捕获数据的环境，请为PDF生成器服务和自适应表单功能设置单独的AEM Forms服务器。 它有助于提供最佳性能并扩展彼此独立的服务器。
+虽然AEM Forms允许您从一台服务器设置和运行所有功能，但您应该执行容量规划、负载平衡，并为生产环境中的特定功能设置专用服务器。 例如，对于使用PDF Generator服务每天转换数千页以及使用多个自适应表单捕获数据的环境，请为PDF Generator服务和自适应表单功能设置单独的AEM Forms服务器。 它有助于提供最佳性能并扩展彼此独立的服务器。
 
 ![离线基于api的处理](assets/offline-api-based-processing.png)

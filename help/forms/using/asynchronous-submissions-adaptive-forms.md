@@ -11,14 +11,19 @@ discoiquuid: 0a0d2109-ee1f-43f6-88e5-1108cd215da6
 docset: aem65
 feature: Adaptive Forms
 exl-id: bd0589e2-b15a-4f0e-869c-2da4760b1ff4
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
 workflow-type: tm+mt
-source-wordcount: '712'
-ht-degree: 0%
+source-wordcount: '735'
+ht-degree: 1%
 
 ---
 
 # 异步提交自适应表单{#asynchronous-submission-of-adaptive-forms}
+
+| 版本 | 文章链接 |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/configure-submit-actions-and-metadata-submission/asynchronous-submissions-adaptive-forms.html) |
+| AEM 6.5 | 本文 |
 
 传统上，Web窗体配置为同步提交。 在同步提交时，当用户提交表单时，会被重定向到确认页面、感谢页面或在提交失败的情况下被重定向到错误页面。 但是，像单页应用程序这样的现代Web体验正在变得流行起来，这是因为网页保持静态，而客户端 — 服务器交互发生在后台。 您现在可以通过配置异步提交来通过自适应表单提供此体验。
 

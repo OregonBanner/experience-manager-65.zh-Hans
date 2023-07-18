@@ -10,14 +10,19 @@ discoiquuid: 627507f5-1ffc-48f8-8cc9-5dbc5e409ae3
 docset: aem65
 feature: Form Data Model
 exl-id: 90cc9452-e107-4e57-80a3-f44f0bde132e
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: 5ca6c5abeb5ed09d8929d1986aa24c1416e0cc06
 workflow-type: tm+mt
-source-wordcount: '1206'
-ht-degree: 0%
+source-wordcount: '1227'
+ht-degree: 1%
 
 ---
 
 # Microsoft Dynamics OData配置{#microsoft-dynamics-odata-configuration}
+
+| 版本 | 文章链接 |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/ms-dynamics-odata-configuration.html) |
+| AEM 6.5 | 本文 |
 
 ![数据集成](assets/data-integeration.png)
 
@@ -25,7 +30,7 @@ Microsoft Dynamics是一款客户关系管理(CRM)和企业资源规划(ERP)软�
 
 * 查询Microsoft Dynamics服务器以获取数据并预填充自适应表单
 * 提交自适应表单时将数据写入Microsoft Dynamics
-* 通过表单数据模型中定义的自定义实体将数据写入Microsoft Dynamics，反之亦然
+* 通过表单数据模型中定义的自定义实体在Microsoft Dynamics中写入数据，反之亦然
 
 AEM Forms附加组件包还包括引用OData配置，您可以利用它将Microsoft Dynamics与AEM Forms快速集成。
 
@@ -100,7 +105,7 @@ Microsoft Dynamics使用基于声明的身份验证向外部用户提供对Micro
 
    * `Client-ID` 是一个可以使用任何GUID生成器生成的客户端ID。
    * `redirect-uri` 是AEM Forms上Microsoft Dynamics OData云服务的URL。 与AEM Forms包一起安装的默认Cloud Service部署在以下URL：
-      `https://'[server]:[port]'/libs/fd/fdm/gui/components/admin/fdmcloudservice/createcloudconfigwizard/cloudservices.html`
+     `https://'[server]:[port]'/libs/fd/fdm/gui/components/admin/fdmcloudservice/createcloudconfigwizard/cloudservices.html`
 
 1. 运行以下命令以授予对AD FS计算机的访问权限：
 

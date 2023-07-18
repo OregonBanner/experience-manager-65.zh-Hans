@@ -10,14 +10,20 @@ discoiquuid: fc418da9-496f-4a2b-bfe4-2add3ac4f468
 docset: aem65
 feature: Adaptive Forms
 exl-id: 1a139530-27bd-44da-8bf4-5b375e75cf32
-source-git-commit: 840ea373537799af995c3b8ce0c8bf575752775b
+source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
 workflow-type: tm+mt
-source-wordcount: '2398'
+source-wordcount: '2421'
 ht-degree: 0%
 
 ---
 
 # 自适应表单中的表{#tables-in-adaptive-forms}
+
+| 版本 | 文章链接 |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/add-components-to-an-adaptive-form/adaptive-forms-tables.html) |
+| AEM 6.5 | 本文 |
+
 
 使用表格是呈现复杂数据的一种有效、简化且组织有序的方式。 它帮助用户轻松识别信息并按行和列的顺序排列提供输入。 金融服务和政府机构的大多数表单都需要大型数据表来输入数字和执行计算。
 
@@ -75,7 +81,7 @@ AEM Forms在组件浏览器侧栏中提供表组件，允许您在自适应表�
 
 1. 选择表并点按 ![cmppr](assets/cmppr.png) 以在侧栏中查看其属性。
 1. 在“辅助功能”选项卡中指定摘要。
-1. 单击 **完成**.
+1. 单击&#x200B;**完成**。
 
 ### 对表中的列进行排序 {#sortcolumnstable}
 
@@ -137,7 +143,7 @@ AEM Forms在组件浏览器侧栏中提供表组件，允许您在自适应表�
 
 1. 选择表格行并点按 ![cmppr](assets/cmppr.png).
 1. 在重复设置选项卡中，指定最小和最大计数，以限制表中的行数。
-1. 单击 **完成**.
+1. 单击&#x200B;**完成**。
 
 在运行时，您将看到 **+** 和 *-* 按钮以添加或删除行。
 
@@ -312,4 +318,4 @@ XFA表元素将映射到表组件，并在自适应表单中开箱即用。 XDP�
 * 如果在创作基于XSD的表时上下移动行，则在提交表单时生成的数据XML中会看到表行丢失的一些数据。
 * 默认表中的每个正文单元格都有一个与其关联的预定义元素名称。 如果在自适应表单中添加另一个表，则新表中的默认正文单元格将与第一个表中的元素名称相同。 在这种情况下，提交表单时生成的数据将仅包含其中一个表的默认正文单元格中的数据。 因此，请确保重命名默认正文单元格的元素名称，以使其在表中保持唯一并避免数据丢失。
 
-   请注意，这仅适用于默认正文单元格。 如果向表添加更多行或列，则将自动为非默认正文单元格生成唯一的元素名称。
+  请注意，这仅适用于默认正文单元格。 如果向表添加更多行或列，则将自动为非默认正文单元格生成唯一的元素名称。

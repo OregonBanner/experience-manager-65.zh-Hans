@@ -3,15 +3,21 @@ title: 使用OAuth 2.0客户端凭据流将Salesforce与AEM Forms集成
 seo-title: Salesforce integration with AEM Forms using OAuth 2.0 client credentials flow
 description: 使用OAuth 2.0客户端凭据流将Salesforce集成与AEM Forms集成的步骤
 seo-description: Steps to integrate Salesforce integration with AEM Forms using OAuth 2.0 client credentials flow
-source-git-commit: cc0375f5b5616f82a73bd983a9da95225c51db99
+exl-id: 31f2ccf8-1f4f-4d88-8c5f-ef1b7d1bfb4f
+source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
 workflow-type: tm+mt
-source-wordcount: '502'
-ht-degree: 0%
+source-wordcount: '524'
+ht-degree: 2%
 
 ---
 
-
 # 使用OAuth 2.0客户端凭据流集成Salesforce  {#configure-salesforce-with-ouath-2.0-client-credential}
+
+| 版本 | 文章链接 |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/configure-msdynamics-salesforce.html) |
+| AEM 6.5 | 本文 |
+
 
 要将AEM Forms与Salesforce应用程序集成，请使用OAuth 2.0客户端凭据流。 这是一种标准化的安全方法，无需用户参与即可进行直接通信。 在此流程中，客户端应用程序(AEM Form)交换在Salesforce连接的应用程序中定义的客户端凭据以获取访问令牌。 所需的客户端凭据包括使用者密钥和使用者密钥。
 
@@ -74,5 +80,3 @@ Swagger是一组用于开发和描述RESTful API的开源规则、规范和工�
 1. 如果连接成功，请单击 **[!UICONTROL 创建]** 按钮。
 
 现在，您可以 [创建表单数据模型](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html?lang=en) 将配置的数据源与您的自适应表单集成。
-
-

@@ -9,14 +9,20 @@ discoiquuid: 9d8d7044-ffce-4ab4-9543-a2d2f9da31e3
 docset: aem65
 feature: Adaptive Forms
 exl-id: 04efb4ad-cff6-4e05-bcd2-98102f052452
-source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
+source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
 workflow-type: tm+mt
-source-wordcount: '1870'
-ht-degree: 0%
+source-wordcount: '1893'
+ht-degree: 1%
 
 ---
 
 # 配置提交操作{#configuring-the-submit-action}
+
+| 版本 | 文章链接 |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/configure-submit-actions-and-metadata-submission/configuring-submit-actions.html) |
+| AEM 6.5 | 本文 |
+
 
 ## 提交操作简介 {#introduction-to-submit-actions}
 
@@ -68,6 +74,7 @@ ht-degree: 0%
 配置Rest端点提交操作
 
 >[!NOTE]
+>
 要在REST URL中将这些字段作为参数传递，所有字段必须具有不同的元素名称，即使这些字段位于不同的面板上也是如此。
 
 ### 将提交的数据发布到资源或外部Rest端点  {#post-submitted-data-to-a-resource-or-external-rest-end-point-nbsp}
@@ -98,6 +105,7 @@ ht-degree: 0%
 此 **发送电子邮件** 提交操作会在成功提交表单时向一个或多个收件人发送电子邮件。 生成的电子邮件可以包含预定义格式的表单数据。
 
 >[!NOTE]
+>
 所有表单字段必须具有不同的元素名称（即使它们位于不同的面板上），才能在电子邮件中包含表单数据。
 
 ## 通过电子邮件发送PDF {#send-pdf-via-email}
@@ -105,6 +113,7 @@ ht-degree: 0%
 此 **通过电子邮件发送PDF** 提交操作会在成功提交表单时，向一个或多个收件人发送一封包含表单数据PDF的电子邮件。
 
 >[!NOTE]
+>
 此提交操作适用于具有记录文档模板的基于XFA的自适应表单和基于XSD的自适应表单。
 
 ## 调用Forms Workflow {#invoke-a-forms-workflow}
@@ -138,6 +147,7 @@ ht-degree: 0%
 * **数据文件**：它包含提交到自适应表单的数据。 您可以使用 **[!UICONTROL 数据文件路径]** 选项，用于指定文件的名称以及相对于有效负荷的文件路径。 例如， `/addresschange/data.xml` path创建一个名为的文件夹 `addresschange` 并将其相对于有效负荷放置。 您也可仅指定 `data.xml` 只发送已提交的数据而不创建文件夹层次结构。 使用变量选项，然后从可用于工作流模型的变量列表中选择变量。
 
 >[!NOTE]
+>
 无论是否将工作流模型标记为外部数据存储，都可以使用变量。
 
 * **附件**：您可以使用 **[!UICONTROL 附件路径]** 选项，用于指定用于存储已上载到自适应表单的附件的文件夹名称。 将创建相对于有效负荷的文件夹。 如果工作流标记为外部数据存储，请使用变量选项，并从工作流模型的可用变量列表中选择变量。
@@ -154,7 +164,7 @@ ht-degree: 0%
 
 在服务器上重新运行的自适应表单的所有开箱即用(OOTB)字段验证包括：
 
-* 必填
+* 必需
 * 验证图片子句
 * 验证表达式
 
@@ -169,6 +179,7 @@ ht-degree: 0%
 如果最终用户绕过这些验证并提交表单，服务器将再次执行验证。 如果验证在服务器端失败，则提交事务将停止。 最终用户将再次看到原始表单。 捕获的数据和提交的数据将作为错误呈现给用户。
 
 >[!NOTE]
+>
 服务器端验证验证表单模型。 建议为验证创建单独的客户端库，并且不要在同一客户端库中将其与HTML样式和DOM操作等其他内容混合。
 
 ### 在验证表达式中支持自定义函数 {#supporting-custom-functions-in-validation-expressions-br}

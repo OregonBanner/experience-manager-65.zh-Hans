@@ -11,14 +11,19 @@ discoiquuid: ba571f8e-8bd3-48eb-82e1-c93b14ffe44a
 docset: aem65
 role: Admin
 exl-id: f82bbd39-b655-47a9-bca9-21d7cd30c082
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
 workflow-type: tm+mt
-source-wordcount: '1972'
-ht-degree: 1%
+source-wordcount: '1995'
+ht-degree: 2%
 
 ---
 
 # 管理表单元数据{#manage-form-metadata}
+
+| 版本 | 文章链接 |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/manage-metadata/manage-form-metadata.html) |
+| AEM 6.5 | 本文 |
 
 ## 概述  {#overview-nbsp}
 
@@ -203,7 +208,6 @@ AEM Forms支持以下资源类型：
    * 左侧面板包含表单的缩略图
    * 右侧面板以只读模式包含元数据属性，这些属性分布在不同的选项卡中。
 
-
 ## 添加/更新表单元数据值 {#add-update-form-metadata-values}
 
 您可以编辑现有元数据属性的值或向现有元数据属性字段添加新值（例如，当元数据字段为空时）。
@@ -240,7 +244,6 @@ AEM Forms支持以下资源类型：
 >* 缩略图使用正方形图像。 当您使用非正方形图像并在列表视图中查看缩略图时，缩略图显示为已剪切。
 >* 上传或生成新图像后，缩略图将被此图像替换，并且无法重置为上一个图像。
 >
-
 
 ## 添加自定义元数据 {#add-custom-metadata}
 

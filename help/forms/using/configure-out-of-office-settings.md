@@ -4,14 +4,19 @@ seo-title: Configure Out of Office settings
 description: RConfigure外出设置
 seo-description: Configure Out of Office settings
 exl-id: e4c9d74c-e08d-4675-91f2-4f9fc2f1bcea
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
 workflow-type: tm+mt
-source-wordcount: '799'
-ht-degree: 0%
+source-wordcount: '820'
+ht-degree: 1%
 
 ---
 
 # 配置外出设置 {#configure-out-of-office-settings}
+
+| 版本 | 文章链接 |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/create-form-centric-workflows/configure-out-of-office-settings.html) |
+| AEM 6.5 | 本文 |
 
 如果您计划不在办公室，则可以指定在该期间分配给您的物料会发生什么情况。
 
@@ -28,7 +33,6 @@ ht-degree: 0%
 >* 当您关闭外出设置时，委派的项目不会自动分派回您。 您可以使用索赔功能将物料分配给您。
 >* 当用户A将项目委派给用户B且用户B进一步委派给用户C时，项目仅被分配给用户C，而不是用户B。
 >* 当分配中存在循环时，任务将保留为原始用户。 例如，当用户A将项目分配给用户B时，用户B将项目分配给用户C，用户C将项目分配给用户D，而用户D将项目分配给用户B时，则会出现循环。 在这种情况下，项目仍保留在原始用户中。 在上述示例中，用户A是原始用户。
-
 
 ## 为您的帐户启用“外出”设置 {#enable-out-of-office}
 

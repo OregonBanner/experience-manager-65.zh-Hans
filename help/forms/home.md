@@ -4,14 +4,20 @@ seo-title: AEM 6.5 Forms Guide
 description: 使用本AEM 6.5指南创建、管理、发布和更新数字表单。 查找有关安装、升级和配置这些表单的帮助，并了解如何创作自适应表单。
 seo-description: Covers all AEM Forms tasks, including how to create, manage, publish, and update digital forms.
 exl-id: e66383b0-ae58-4cfe-8f1b-28b4e124fd06
-source-git-commit: a51a863a4edf7e8b951a8361c5c7f0517b09f12a
+source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
 workflow-type: tm+mt
-source-wordcount: '348'
+source-wordcount: '369'
 ht-degree: 29%
 
 ---
 
 # Adobe Experience Manager 6.5 Forms 指南
+
+| 版本 | 文章链接 |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/setup-configure-migrate/setup-forms-cloud-service.html) |
+| AEM 6.5 | 本文 |
+
 
 使用本AEM 6.5指南创建、管理、发布和更新数字表单。 查找有关安装、升级和配置这些表单的帮助，并了解如何创作自适应表单。
 
@@ -45,7 +51,7 @@ ht-degree: 29%
 * [AEM教程](https://helpx.adobe.com/experience-manager/kt/index/aem-6-5-videos.html)
 * [Dispatcher用户指南](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)
 * [HTL用户指南](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)
-* [核心组件用户指南](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)
+* [核心组件用户指南](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
 * [Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html)
 * [GDPR 就绪](/help/managing/data-protection-and-privacy.md)
 * [Experience League](https://guided.adobe.com/?promoid=K42KVXHD&amp;mv=other#solutions/experience-manager)

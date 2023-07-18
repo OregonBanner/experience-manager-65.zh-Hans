@@ -10,14 +10,19 @@ discoiquuid: c47ef627-261e-4b4b-8846-873d3d84234b
 docset: aem65
 feature: Form Data Model
 exl-id: 16b76265-9ec4-4993-9ac0-b7aef1b1e5f1
-source-git-commit: e4aaef48ce7d6e49e9a76f78a74b7dea127f6cce
+source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
 workflow-type: tm+mt
-source-wordcount: '4165'
+source-wordcount: '4187'
 ht-degree: 0%
 
 ---
 
 # 使用表单数据模型{#work-with-form-data-model}
+
+| 版本 | 文章链接 |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/work-with-form-data-model.html) |
+| AEM 6.5 | 本文 |
 
 ![数据集成](do-not-localize/data-integeration.png)
 
@@ -204,10 +209,9 @@ ht-degree: 0%
    >[!NOTE]
    >
    >* 如果使用静态模板，请将head.jsp覆盖在：
-      >  `/libs/fd/af/components/page2/afStaticTemplatePage/head.jsp`
+   >  `/libs/fd/af/components/page2/afStaticTemplatePage/head.jsp`
    >* 如果您使用可编辑的模板，请在以下位置叠加aftemplatedpage.jsp：
-      >  `/libs/fd/af/components/page2/aftemplatedpage/aftemplatedpage.jsp`
-
+   >  `/libs/fd/af/components/page2/aftemplatedpage/aftemplatedpage.jsp`
 
 1. 设置 [!DNL paramMap] 请求属性的。 例如，将以下代码包含在apps文件夹的.jsp文件中：
 

@@ -10,14 +10,20 @@ topic-tags: author, interactive-communications
 discoiquuid: 43362643-69cd-4006-a613-f998c79eeddc
 feature: Adaptive Forms
 exl-id: 00ee7929-649f-4cbb-be79-ba13ac73a16d
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
 workflow-type: tm+mt
-source-wordcount: '1083'
+source-wordcount: '1105'
 ht-degree: 0%
 
 ---
 
 # 在AEM sites页面中嵌入自适应表单或交互式通信 {#embed-an-adaptive-form-or-interactive-communication-in-aem-sites-page}
+
+| 版本 | 文章链接 |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/services/embed-adaptive-form-aem-sites.html) |
+| AEM 6.5 | 本文 |
+
 
 ## 概述 {#overview}
 
@@ -62,10 +68,10 @@ AEM Forms提供了一个您可以添加到网站页面的组件。 AEM Forms容�
       * **感谢信息**：使用富文本编辑器编写消息，以在表单提交时显示。 仅当您选择显示感谢消息时，此选项才可用。
       * **感谢页面**：浏览并选择要在表单提交时显示的页面。 仅当您选择显示感谢页面时，此选项才可用。
       * **提交时刷新页面**：启用可刷新包含嵌入的自适应表单的页面以显示感谢页面。 否则，“感谢”页面将替换AEM Forms容器中的自适应表单，而不刷新页面。 仅当您选择显示感谢页面时，此选项才可用。
+
    * **主题**：选择为自适应表单或交互式通信组件定义样式的主题。 样式设置包括外观属性，如字体样式、背景颜色、尺寸和对齐方式。
    * **高度**：指定容器的高度。 将其留空可自动调整容器大小。
    * **CSS客户端库**：指定CSS客户端库的路径。
-
 
 1. 保存设置。 自适应表单或交互式通信现已嵌入到页面中。
 

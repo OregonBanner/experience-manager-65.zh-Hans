@@ -12,14 +12,19 @@ docset: aem65
 feature: Adaptive Forms
 role: Admin
 exl-id: 2ed4d99e-0e90-4b21-ac17-aa6707a3ba7d
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 5ca6c5abeb5ed09d8929d1986aa24c1416e0cc06
 workflow-type: tm+mt
-source-wordcount: '794'
-ht-degree: 0%
+source-wordcount: '815'
+ht-degree: 1%
 
 ---
 
 # 支持自适应表单本地化的新区域设置{#supporting-new-locales-for-adaptive-forms-localization}
+
+| 版本 | 文章链接 |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/supporting-new-language-localization.html) |
+| AEM 6.5 | 本文 |
 
 ## 关于区域设置词典 {#about-locale-dictionaries}
 
@@ -38,9 +43,8 @@ ht-degree: 0%
 * 按指定顺序查看以下参数：
 
    * 请求参数 `afAcceptLang`
-要覆盖用户的浏览器区域设置，您可以传递 
-`afAcceptLang` 请求参数以强制设置区域设置。 例如，以下URL将强制以日语区域设置呈现表单：
-      `https://'[server]:[port]'/<contextPath>/<formFolder>/<formName>.html?wcmmode=disabled&afAcceptLang=ja`
+要覆盖用户的浏览器区域设置，您可以传递 `afAcceptLang` 请求参数以强制设置区域设置。 例如，以下URL将强制以日语区域设置呈现表单：
+     `https://'[server]:[port]'/<contextPath>/<formFolder>/<formName>.html?wcmmode=disabled&afAcceptLang=ja`
 
    * 用户的浏览器区域设置，在请求中使用 `Accept-Language` 标头。
 

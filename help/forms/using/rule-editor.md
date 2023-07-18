@@ -10,14 +10,19 @@ discoiquuid: 1b905e66-dc05-4f14-8025-62a78feef12a
 docset: aem65
 feature: Adaptive Forms
 exl-id: c611a1f8-9d94-47f3-bed3-59eef722bf98
-source-git-commit: 26403941129f3a80fdb3e9b964cb943a04b3bfa1
+source-git-commit: 5ca6c5abeb5ed09d8929d1986aa24c1416e0cc06
 workflow-type: tm+mt
-source-wordcount: '6888'
+source-wordcount: '6884'
 ht-degree: 0%
 
 ---
 
 # 自适应表单规则编辑器{#adaptive-forms-rule-editor}
+
+| 版本 | 文章链接 |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/add-rules-and-use-expressions-in-an-adaptive-form/rule-editor.html) |
+| AEM 6.5 | 本文 |
 
 ## 概述 {#overview}
 
@@ -65,11 +70,11 @@ Adobe Experience Manager Forms中的规则编辑器功能使表单业务用户�
 
 * 创建规则时，一个典型的经验法则是在您编写规则的对象的上下文中考虑它。 假定您要根据用户在字段A中指定的值隐藏或显示字段B。在这种情况下，您将评估字段A的条件，并根据它返回的值，触发对字段B的操作。
 
-   因此，如果您在字段B（评估条件的对象）上编写规则，请使用condition-action结构或When规则类型。 同样，在字段A上使用操作条件结构或显示或隐藏规则类型。
+  因此，如果您在字段B（评估条件的对象）上编写规则，请使用condition-action结构或When规则类型。 同样，在字段A上使用操作条件结构或显示或隐藏规则类型。
 
 * 有时，您需要根据一个条件执行多个操作。 在这种情况下，建议使用condition-action构造。 在此构造中，您可以计算一个条件一次，并指定多个操作语句。
 
-   例如，要根据检查用户在字段A中指定的值的条件隐藏字段B、C和D，请编写一条规则，其中具有条件 — 操作结构或字段A上的规则类型When，并指定操作以控制字段B、C和D的可见性。否则，您需要对字段B、C和D使用三个单独的规则，其中每个规则检查条件并显示或隐藏各自的字段。 在此示例中，在一个对象上编写When规则类型比在三个对象上编写Show或Hide规则类型更有效。
+  例如，要根据检查用户在字段A中指定的值的条件隐藏字段B、C和D，请编写一条规则，其中具有条件 — 操作结构或字段A上的规则类型When，并指定操作以控制字段B、C和D的可见性。否则，您需要对字段B、C和D使用三个单独的规则，其中每个规则检查条件并显示或隐藏各自的字段。 在此示例中，在一个对象上编写When规则类型比在三个对象上编写Show或Hide规则类型更有效。
 
 * 要根据多个条件触发操作，建议使用action-condition构造。 例如，要通过评估字段B、C和D的条件来显示和隐藏字段A，请在字段A中使用显示或隐藏规则类型。
 * 如果规则中包含适用于一个条件的一个操作，请使用条件 — 操作或操作条件构造。
@@ -83,8 +88,8 @@ Adobe Experience Manager Forms中的规则编辑器功能使表单业务用户�
 
 * **等于**
 * **不等于**
-* **开头为**
-* **结束于**
+* **开始于**
+* **结束**
 * **包含**
 * **为空**
 * **不为空**
@@ -372,7 +377,7 @@ _
 
 ### E.可视代码编辑器切换器 {#e-visual-code-editors-switcher}
 
-表单超级用户组中的用户可以访问代码编辑器。 对于其他用户，代码编辑器不可用。 如果您拥有权限，则可以使用规则编辑器右上方的切换器，从可视编辑器模式切换到规则编辑器的代码编辑器模式，反之亦然。 首次启动规则编辑器时，它将在可视编辑器模式下打开。 您可以在可视编辑器模式下编写规则，也可以切换到代码编辑器模式来编写规则脚本。 但是，请注意，如果在代码编辑器中修改规则或编写规则，则除非清除代码编辑器，否则无法切换回该规则的可视编辑器。
+表单超级用户组中的用户可以访问代码编辑器。 对于其他用户，代码编辑器不可用。 如果您拥有权限，则可以从可视编辑器模式切换到规则编辑器的代码编辑器模式，反之，可以使用规则编辑器右上方的切换器。 首次启动规则编辑器时，它将在可视编辑器模式下打开。 您可以在可视编辑器模式下编写规则，也可以切换到代码编辑器模式来编写规则脚本。 但是，请注意，如果在代码编辑器中修改规则或编写规则，则除非清除代码编辑器，否则无法切换回该规则的可视编辑器。
 
 AEM Forms会跟踪您上次用于编写规则的规则编辑器模式。 当您下次启动规则编辑器时，它将在相应模式下打开。 但是，您还可以配置默认模式以在指定模式下打开规则编辑器。 为此，请执行以下操作：
 
@@ -550,68 +555,67 @@ AEM Forms会跟踪您上次用于编写规则的规则编辑器模式。 当您�
 支持 `jsdoc` 标记：
 
 * **私人**
-语法：私有函数不作为自定义函数包括在内。`@private`
+语法： `@private`
 专用函数未作为自定义函数包含在内。
 
 * **名称**
-语法：可选 `@name funcName <Function Name>`
+语法： `@name funcName <Function Name>`
 或者 `,` 您可以使用： `@function funcName <Function Name>` **或** `@func` `funcName <Function Name>`.
-   `funcName` 是函数的名称（不允许有空格）。
-   `<Function Name>` 是函数的显示名称。
+  `funcName` 是函数的名称（不允许有空格）。
+  `<Function Name>` 是函数的显示名称。
 
 * **会员**
-语法：将命名空间附加到函数。`@memberof namespace`
+语法： `@memberof namespace`
 将命名空间附加到函数。
 
 * **参数**
-语法：或者，您可以使用： `@param {type} name <Parameter Description>`
+语法： `@param {type} name <Parameter Description>`
 或者，您可以使用： `@argument` `{type} name <Parameter Description>` **或** `@arg` `{type}` `name <Parameter Description>`.
 显示函数使用的参数。 一个函数可以有多个参数标记，每个参数按其出现顺序具有一个标记。
-   `{type}` 表示参数类型。 允许的参数类型包括：
+  `{type}` 表示参数类型。 允许的参数类型包括：
 
    1. 字符串
    1. 数字
    1. 布尔型
    1. 范围
 
-   范围用于引用自适应表单的字段。 当表单使用延迟加载时，您可以使用 `scope` 以访问其字段。 您可以在加载字段时访问字段，也可以将字段标记为全局字段。
+  范围用于引用自适应表单的字段。 当表单使用延迟加载时，您可以使用 `scope` 以访问其字段。 您可以在加载字段时访问字段，也可以将字段标记为全局字段。
 
-   所有其他参数类型均归类于上述参数类型之一。 不支持无。 确保选择以上类型之一。 类型不区分大小写。 参数中不允许有空格 `name`. `<Parameter Descrption>` `<parameter>  can have multiple words. </parameter>`
+  所有其他参数类型均归类于上述参数类型之一。 不支持无。 确保选择以上类型之一。 类型不区分大小写。 参数中不允许有空格 `name`. `<Parameter Descrption>` `<parameter>  can have multiple words. </parameter>`
 
 * **返回类型**
-语法：或者，您可以使用 `@return {type}`
+语法： `@return {type}`
 或者，您可以使用 `@returns {type}`.
 添加有关函数的信息，例如其目标。
-{type}表示函数的返回类型。 允许的返回类型包括：
+{type} 表示函数的返回类型。 允许的返回类型包括：
 
    1. 字符串
    1. 数字
    1. 布尔型
 
-   所有其他退货类型均归入上述任一类型之下。 不支持无。 确保选择以上类型之一。 返回类型不区分大小写。
+  所有其他退货类型均归入上述任一类型之下。 不支持无。 确保选择以上类型之一。 返回类型不区分大小写。
 
 * **此**
-语法： 
-`@this currentComponent`
+语法： `@this currentComponent`
 
-   使用@this可引用在其中写入规则的自适应表单组件。
+  使用@this可引用在其中写入规则的自适应表单组件。
 
-   以下示例基于字段值。 在以下示例中，规则隐藏了表单中的一个字段。 此 `this` 部分 `this.value` 是指用于编写规则的底层自适应表单组件。
+  以下示例基于字段值。 在以下示例中，规则隐藏了表单中的一个字段。 此 `this` 部分 `this.value` 是指用于编写规则的底层自适应表单组件。
 
-   ```
-      /**
-      * @function myTestFunction
-      * @this currentComponent
-      * @param {scope} scope in which code inside function will be executed.
-      */
-      myTestFunction = function (scope) {
-         if(this.value == "O"){
-               scope.age.visible = true;
-         } else {
-            scope.age.visible = false;
-         }
-      }
-   ```
+  ```
+     /**
+     * @function myTestFunction
+     * @this currentComponent
+     * @param {scope} scope in which code inside function will be executed.
+     */
+     myTestFunction = function (scope) {
+        if(this.value == "O"){
+              scope.age.visible = true;
+        } else {
+           scope.age.visible = false;
+        }
+     }
+  ```
 
 >[!NOTE]
 >
@@ -641,7 +645,7 @@ AEM Forms会跟踪您上次用于编写规则的规则编辑器模式。 当您�
 
 1. 选择输入数字框，然后点按 ![edit-rules](assets/edit-rules.png) 以打开规则编辑器。
 1. 点按 **创建规则**. 使用下面显示的选项，创建一个规则以在表单的“输出”字段中保存输入的平方值。
-   [ ![使用自定义函数创建规则](assets/add_custom_rule_new.png)](assets/add-custom-rule.png)点按 **完成**. 您的自定义函数已添加。
+   [![使用自定义函数创建规则](assets/add_custom_rule_new.png)](assets/add-custom-rule.png)点按 **完成**. 您的自定义函数已添加。
 
 #### 函数声明支持的类型 {#function-declaration-supported-types}
 

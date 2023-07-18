@@ -6,16 +6,22 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 docset: aem65
 exl-id: 240ed4d8-b21b-46eb-80a9-9e8093b77235
-source-git-commit: 60924e7ee204e43a2ff833fbc394beca8db9c9d9
+source-git-commit: 5ca6c5abeb5ed09d8929d1986aa24c1416e0cc06
 workflow-type: tm+mt
-source-wordcount: '1032'
+source-wordcount: '1054'
 ht-degree: 0%
 
 ---
 
 # 在门户上发布表单的简介{#introduction-to-publishing-forms-on-a-portal}
 
-## AEM Forms Portal组件概述 {#aem-forms-portal-components-overview}
+| 版本 | 文章链接 |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/configure-forms-portal.html) |
+| AEM 6.5 | 本文 |
+
+
+## AEM Forms portal组件概述 {#aem-forms-portal-components-overview}
 
 在以表单为中心的典型门户部署方案中，表单开发和门户开发是两个相互分离的活动。 当表单设计人员将表单设计和存储在存储库中时，Web开发人员会创建一个Web应用程序来列出表单并处理表单提交。 由于Forms存储库和Web应用程序之间没有通信，因此Forms会复制到Web层。
 

@@ -10,14 +10,20 @@ discoiquuid: 9d78a6dc-fc9c-415b-b817-164fe6648b30
 docset: aem65
 feature: Form Data Model
 exl-id: 7a1d9d57-66f4-4f20-91c2-ace5a71a52f2
-source-git-commit: db4b432a95856302eb2e80b6386eee557d6afd17
+source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
 workflow-type: tm+mt
-source-wordcount: '2090'
+source-wordcount: '2112'
 ht-degree: 1%
 
 ---
 
 # 配置数据源{#configure-data-sources}
+
+| 版本 | 文章链接 |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/configure-data-sources.html) |
+| AEM 6.5 | 本文 |
+
 
 ![数据集成](do-not-localize/data-integeration.png)
 
@@ -51,7 +57,6 @@ AEM Forms数据集成允许您配置并连接到不同的数据源。 支持开�
    >
    > 1. 转到https://&#39;[服务器]：[端口]&#39;/system/console/crypto.
    > 1. 在 **[!UICONTROL 纯文本]** 字段，指定要加密和点按的密码或任意字符串 **[!UICONTROL Protect]**.
-
    >
    >加密的文本将显示在可在配置中指定的受保护文本字段中。
 
@@ -131,7 +136,8 @@ AEM中的所有云服务配置都整合在 `/conf` AEM存储库中的文件夹�
       * 方案： REST API使用的传输协议。 下拉列表中显示的方案类型数量取决于Swagger源中定义的方案。
       * 主机：提供REST API的主机的域名或IP地址。 它是必填字段。
       * 基本路径：所有API路径的URL前缀。 它是一个可选字段。\
-         如有必要，请编辑这些字段的预填充值。
+        如有必要，请编辑这些字段的预填充值。
+
    * 选择身份验证类型 — None、OAuth2.0([授权码](https://oauth.net/2/grant-types/authorization-code/)， [客户端凭据](https://oauth.net/2/grant-types/client-credentials/))、基本身份验证、API密钥、自定义身份验证或相互身份验证 — 用于访问RESTful服务，并相应地提供身份验证的详细信息。
 
    如果您选择 **[!UICONTROL API密钥]** 作为身份验证类型，请指定API密钥的值。 API密钥可作为请求标头或查询参数发送。 从中选择以下选项之一 **[!UICONTROL 位置]** 下拉列表，并在中指定标头的名称或查询参数 **[!UICONTROL 参数名称]** 字段。
@@ -176,10 +182,10 @@ AEM中的所有云服务配置都整合在 `/conf` AEM存储库中的文件夹�
    * 服务端点. 在此字段中指定一个值以覆盖WSDL中提到的服务端点。
    * 选择身份验证类型 — None、OAuth2.0([授权码](https://oauth.net/2/grant-types/authorization-code/)， [客户端凭据](https://oauth.net/2/grant-types/client-credentials/))、基本身份验证、自定义身份验证、X509令牌或相互身份验证 — 用于访问SOAP服务，并相应地提供身份验证的详细信息。
 
-      如果您选择 **[!UICONTROL X509令牌]** 作为身份验证类型，配置X509证书。 有关更多信息，请参阅 [设置证书](install-configure-document-services.md#set-up-certificates-for-reader-extension-and-encryption-service).
+     如果您选择 **[!UICONTROL X509令牌]** 作为身份验证类型，配置X509证书。 有关更多信息，请参阅 [设置证书](install-configure-document-services.md#set-up-certificates-for-reader-extension-and-encryption-service).
 在中指定X509证书的KeyStore别名 **[!UICONTROL 密钥别名]** 字段。 指定身份验证请求保持有效的时间（以秒为单位），在 **[!UICONTROL 生存时间]** 字段。 （可选）选择对消息正文或时间戳标头进行签名，或同时选择两者。
 
-      如果您选择 **[!UICONTROL 相互认证]** 对于身份验证类型，请参阅 [用于RESTful和SOAP Web服务的基于证书的双向身份验证](#mutual-authentication).
+     如果您选择 **[!UICONTROL 相互认证]** 对于身份验证类型，请参阅 [用于RESTful和SOAP Web服务的基于证书的双向身份验证](#mutual-authentication).
 
 1. 点按 **[!UICONTROL 创建]** 创建SOAP Web服务的云配置。
 

@@ -11,14 +11,20 @@ discoiquuid: f79828d8-2230-4477-8ffa-eeb6a0413acd
 docset: aem65
 feature: Adaptive Forms, Acrobat Sign
 exl-id: a8decba9-229d-40a2-992a-3cc8ebefdd6d
-source-git-commit: 66674f0e2621d8786ab4d662cddad373122d8b51
+source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
 workflow-type: tm+mt
-source-wordcount: '3855'
-ht-degree: 0%
+source-wordcount: '3878'
+ht-degree: 1%
 
 ---
 
 # 使用 [!DNL Adobe Sign] 在自适应表单中{#using-adobe-sign-in-an-adaptive-form}
+
+| 版本 | 文章链接 |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/use-adobe-sign/working-with-adobe-sign.html) |
+| AEM 6.5 | 本文 |
+
 
 [!DNL Adobe Sign] 支持自适应表单的电子签名工作流。 电子签名改进了法律、销售、工资单、人力资源管理和其他领域的文档处理工作流。
 
