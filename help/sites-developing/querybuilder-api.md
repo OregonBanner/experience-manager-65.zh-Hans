@@ -1,35 +1,31 @@
 ---
 title: 查询生成器 API
-seo-title: Query Builder API
-description: 资产共享查询生成器的功能通过Java API和REST API公开。
-seo-description: The functionality of the Asset Share Query Builder is exposed through a Java API and a REST API.
-uuid: 6928c3e9-96a1-44ad-9785-350d95f1869a
+description: 资产共享查询生成器的功能通过Java&trade； API和REST API公开。
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
 content-type: reference
-discoiquuid: 7965b7ef-dec4-441a-a012-daf1d60df0fb
 pagetitle: Query Builder API
 tagskeywords: querybuilder
 exl-id: b2288442-d055-4966-8057-8b7b7b6bff28
-source-git-commit: 13f15bee38b6b4af4cd59376849810a788f0c467
+source-git-commit: a66814fa065b7545ec39fe9109b4c5815fa199da
 workflow-type: tm+mt
-source-wordcount: '2313'
+source-wordcount: '2288'
 ht-degree: 0%
 
 ---
 
 # 查询生成器 API{#query-builder-api}
 
-的功能 [资产共享查询生成器](/help/assets/assets-finder-editor.md) 通过Java API和REST API公开。 本节介绍了这些API。
+的功能 [资产共享查询生成器](/help/assets/assets-finder-editor.md) 通过Java™ API和REST API公开。 本节介绍了这些API。
 
-服务器端查询生成器( [`QueryBuilder`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/QueryBuilder.html))将接受查询描述，创建并运行XPath查询，可以选择筛选结果集，并根据需要提取Facet。
+服务器端查询生成器( [`QueryBuilder`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/QueryBuilder.html))接受查询描述，创建并运行XPath查询，可以选择筛选结果集，并根据需要提取Facet。
 
 查询描述只是一组谓词([`Predicate`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/Predicate.html))。 示例包括一个全文谓词，该谓词对应于 `jcr:contains()` 函数。
 
-对于每个谓词类型，都有一个计算器组件([`PredicateEvaluator`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/eval/PredicateEvaluator.html))，知道如何处理XPath、筛选和Facet提取的特定谓词。 创建自定义评估器非常简单，这些评估器通过OSGi组件运行时插入。
+对于每个谓词类型，都有一个计算器组件([`PredicateEvaluator`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/eval/PredicateEvaluator.html))，知道如何处理XPath、筛选和Facet提取的特定谓词。 可以轻松创建自定义评估器，这些评估器通过OSGi组件运行时插入。
 
-REST API通过HTTP提供对完全相同的功能的访问，响应以JSON发送。
+REST API通过HTTP提供对相同功能的访问，响应以JSON发送。
 
 >[!NOTE]
 >
@@ -37,21 +33,21 @@ REST API通过HTTP提供对完全相同的功能的访问，响应以JSON发送�
 
 ## Gem会话 {#gem-session}
 
-[AEM Gems](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/overview.html) 是Adobe专家对Adobe Experience Manager进行的一系列深入技术探讨。 此专门用于查询生成器的会话对于概述和使用工具非常有用。
+[Adobe Experience Manager (AEM) Gems](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/overview.html) 是Adobe专家对Adobe Experience Manager进行的一系列深入技术探讨。 此专门用于查询生成器的会话对于该工具的概述和使用非常有用。
 
 >[!NOTE]
 >
->请参阅AEM Gem会话 [使用AEM查询生成器轻松搜索表单](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2017/aem-search-forms-using-querybuilder.html) 有关查询生成器的详细概述。
+>AEM Gem会话 [使用AEM查询生成器轻松搜索表单](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2017/aem-search-forms-using-querybuilder.html) 有关查询生成器的详细概述。
 
 ## 示例查询 {#sample-queries}
 
-这些示例以Java属性样式表示法提供。 要将其与Java API结合使用，请使用Java `HashMap` 与下面的API示例中一样。
+这些示例以Java™属性样式表示法提供。 要将其与Java™ API结合使用，请使用Java™ `HashMap` 与下面的API示例中一样。
 
-对于 `QueryBuilder` JSON Servlet，每个示例都包含一个指向您的本地CQ安装的链接(位于默认位置， `http://localhost:4502`)。 请注意，您必须先登录CQ实例，然后才能使用这些链接。
+对于 `QueryBuilder` JSON Servlet，每个示例都包含一个指向您的本地CQ安装的链接(位于默认位置， `http://localhost:4502`)。 在使用这些链接之前，您必须登录到CQ实例。
 
 >[!CAUTION]
 >
->默认情况下，查询生成器json servlet最多显示10次点击。
+>默认情况下，查询生成器json servlet最多可显示10次点击。
 >
 >添加以下参数可让servlet显示所有查询结果：
 >
@@ -63,7 +59,7 @@ REST API通过HTTP提供对完全相同的功能的访问，响应以JSON发送�
 
 ### 返回所有结果 {#returning-all-results}
 
-以下查询将 **返回十个结果** （精确地说，最多为10个），但通知您 **点击次数：** 实际可用的URL路径：
+以下查询 **返回十个结果** （确切地说，最多为10个），但请注意 **点击次数：** 可用的：
 
 `http://localhost:4502/bin/querybuilder.json?path=/content&1_property=sling:resourceType&1_property.value=foundation/components/text&1_property.operation=like&orderby=path`
 
@@ -90,7 +86,7 @@ orderby=path
 
 ### 使用p.guessTotal返回结果 {#using-p-guesstotal-to-return-the-results}
 
-目的 `p.guessTotal` 参数是返回通过组合最小可行偏移和p限制值可以显示的适当数量的结果。 使用该参数的优点是改善了性能，且结果集大。 这样可避免计算完整总计(例如，调用result.getSize())和读取整个结果集，从而可优化一直到OAK引擎和索引。 当执行时间和内存使用量都有10万个结果时，这可能存在显着差异。
+目的 `p.guessTotal` 参数是返回适当数量的结果，这些结果可以通过组合最小可行p偏移量和p限制值来显示。 使用该参数的优点是改善了性能，且结果集大。 这样可避免计算完整总计(例如，调用result.getSize())和读取整个结果集，从而可优化一直到Oak引擎和索引。 当执行时间和内存使用量都有10万个结果时，这可能存在显着差异。
 
 该参数的缺点是用户看不到确切的总数。 但您可以设置一个最小值，如p.guessTotal=1000，以便它始终可读取多达1000个结果，这样您便可获得较小结果集的精确总计，但是如果大于此值，则只能显示“和更多”。
 
@@ -107,7 +103,7 @@ p.guessTotal=true
 orderby=path
 ```
 
-查询将返回 `p.limit` 默认 `10` 结果带有 `0` 偏移：
+查询返回 `p.limit` 默认 `10` 结果带有 `0` 偏移：
 
 ```xml
 "success": true,
@@ -121,7 +117,7 @@ orderby=path
 
 `http://localhost:4502/bin/querybuilder.json?path=/content&1_property=sling:resourceType&1_property.value=foundation/components/text&1_property.operation=like&p.guessTotal=50&orderby=path`
 
-它将返回一个数字，该数字与10个结果的默认限制相同，偏移量为0，但最多只显示50个结果：
+它返回一个数字，该数字与偏移量为0的十个结果的缺省限制相同，但最多只显示50个结果：
 
 ```xml
 "success": true,
@@ -145,7 +141,7 @@ orderby=path
    * `total=43`， `more=false`  — 表示点击总数为43。 UI可以在第一个页面中显示最多十个结果，并为接下来的三个页面提供分页。 您还可以使用此实施来显示描述性文本，如 **“找到43个结果”**.
    * `total=100`， `more=true`  — 表示点击总数大于100，但确切计数未知。 UI最多可以显示10个作为第一页的一部分，并为接下来的10个页面提供分页。 您还可以使用此选项来显示文本，例如 **“找到100个以上的结果”**. 当用户转到下一页时，调用查询生成器将增加限制 `guessTotal` 以及 `offset` 和 `limit` 参数。
 
-`guessTotal` 在UI需要使用无限滚动的情况下也应使用，以避免Query Builder确定确切的点击计数。
+`guessTotal` 在UI需要使用无限滚动以避免Query Builder确定确切点击计数的情况下应使用。
 
 ### 查找jar文件并对其进行排序，最新的先排序 {#find-jar-files-and-order-them-newest-first}
 
@@ -201,7 +197,7 @@ tagid.property=jcr:content/cq:tags
 
 使用 `tag` 标记标题路径的谓词（不含空格）。
 
-因为在上一个示例中，您正在搜索页面( `cq:Page` 节点)，则需要使用该节点的相对路径 `tagid.property` 谓词，即 `jcr:content/cq:tags`. 默认情况下， `tagid.property` 就只是 `cq:tags`.
+在上一个示例中，由于您正在搜索页面( `cq:Page` 节点)，使用该节点的相对路径 `tagid.property` 谓词，即 `jcr:content/cq:tags`. 默认情况下， `tagid.property` 就只是 `cq:tags`.
 
 ### 在多个路径下搜索（使用组） {#search-under-multiple-paths-using-groups}
 
@@ -291,7 +287,7 @@ property.3_value=bar
 
 ## 优化返回的内容 {#refining-what-is-returned}
 
-默认情况下，QueryBuilder JSON Servlet将返回搜索结果中每个节点的默认属性集（例如路径、名称、标题等）。 要获得对返回哪些属性的控制权，您可以执行以下操作之一：
+默认情况下，QueryBuilder JSON Servlet返回搜索结果中每个节点的默认属性集（例如，路径、名称和标题）。 要获得对返回哪些属性的控制权，您可以执行以下操作之一：
 
 指定
 
@@ -325,7 +321,7 @@ p.properties
 
 `http://localhost:4502/bin/querybuilder.json?p.hits=selective&property=jcr%3atitle&property.value=Triangle`
 
-[ `http://localhost:4502/bin/querybuilder.json?`](http://localhost:4502/bin/querybuilder.json?p.hits=selective&amp;p.properties=sling%3aresourceType%20jcr%3aprimaryType&amp;property=jcr%3atitle&amp;property.value=Triangle) [p.hits=selective&amp;](http://localhost:4502/bin/querybuilder.json?p.hits=selective&amp;p.nodedepth=5&amp;p.properties=sling%3aresourceType%20jcr%3apath&amp;property=jcr%3atitle&amp;property.value=Triangle)p.properties=sling%3aresourceType%20jcr%3aprimaryType&amp;property=jcr%3atitle&amp;property.value=三角形
+[`http://localhost:4502/bin/querybuilder.json?`](http://localhost:4502/bin/querybuilder.json?p.hits=selective&amp;p.properties=sling%3aresourceType%20jcr%3aprimaryType&amp;property=jcr%3atitle&amp;property.value=Triangle) [p.hits=selective&amp;](http://localhost:4502/bin/querybuilder.json?p.hits=selective&amp;p.nodedepth=5&amp;p.properties=sling%3aresourceType%20jcr%3apath&amp;property=jcr%3atitle&amp;property.value=Triangle)p.properties=sling%3aresourceType%20jcr%3aprimaryType&amp;property=jcr%3atitle&amp;property.value=三角形
 
 ```xml
 property=jcr:title
@@ -334,19 +330,19 @@ p.hits=selective
 p.properties=sling:resourceType jcr:primaryType
 ```
 
-另一种做法是在QueryBuilder响应中包含子节点。 为此，您需要指定
+另一种做法是在QueryBuilder响应中包含子节点。 为此，您必须指定
 
 ```
 p.nodedepth=n
 ```
 
-位置 `n` 是您希望查询返回的级别数。 请注意，为了返回子节点，它必须由属性选择器指定
+位置 `n` 是您希望查询返回的级别数。 对于要返回的子节点，必须由属性选择器指定
 
 ```
 p.hits=full
 ```
 
-示例:
+示例：
 
 `http://localhost:4502/bin/querybuilder.json?p.hits=full&p.nodedepth=5&property=jcr%3atitle&property.value=Triangle`
 
@@ -439,7 +435,7 @@ p.nodedepth=5
 void storeQuery(Query query, String path, boolean createFile, Session session) throws RepositoryException, IOException;
 ```
 
-使用时 [ `QueryBuilder#storeQuery`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/QueryBuilder.html#storequerycomdaycqsearchqueryjavalangstringbooleanjavaxjcrsession) 方法，给定 `Query` 作为文件或属性存储在存储库中，具体情况如下： `createFile` 参数值。 以下示例说明如何保存 `Query` 到路径 `/mypath/getfiles` 作为文件：
+使用时 [`QueryBuilder#storeQuery`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/QueryBuilder.html#storequerycomdaycqsearchqueryjavalangstringbooleanjavaxjcrsession) 方法，给定 `Query` 作为文件或属性存储在存储库中，具体情况如下： `createFile` 参数值。 以下示例说明如何保存 `Query` 到路径 `/mypath/getfiles` 作为文件：
 
 ```java
 builder.storeQuery(query, "/mypath/getfiles", true, session);
@@ -463,7 +459,7 @@ Query loadedQuery = builder.loadQuery("/mypath/getfiles", session);
 
 `http://localhost:4502/libs/cq/search/content/querydebug.html`
 
-或者查询生成器json servlet位于
+或者，查询生成器json servlet位于
 
 `http://localhost:4502/bin/querybuilder.json?path=/tmp`
 
@@ -477,9 +473,9 @@ Query loadedQuery = builder.loadQuery("/mypath/getfiles", session);
 
 * 为QueryBuilder启用DEBUG日志，以获取基础、可解释的XPath查询
 
-   * 导航到https://&lt;serveraddress>：&lt;serverport>/system/console/slinglog. 为创建新的记录器 `com.day.cq.search.impl.builder.QueryImpl` 在 **调试**.
+   * 导航到https://&lt;serveraddress>：&lt;serverport>/system/console/slinglog. 为创建记录器 `com.day.cq.search.impl.builder.QueryImpl` 在 **调试**.
 
-* 为上述类启用DEBUG后，日志将显示查询生成器生成的XPath。
+* 为上述类启用DEBUG后，日志显示由Query Builder生成的XPath。
 * 从关联的QueryBuilder查询的日志条目中复制XPath查询，例如：
 
    * `com.day.cq.search.impl.builder.QueryImpl XPath query: /jcr:root/content//element(*, cq:Page)[(jcr:contains(jcr:content, "Geometrixx") or jcr:contains(jcr:content/@cq:tags, "Geometrixx"))]`
@@ -496,9 +492,9 @@ Query loadedQuery = builder.loadQuery("/mypath/getfiles", session);
 
 * 为QueryBuilder启用DEBUG日志，以获取基础、可解释的XPath查询
 
-   * 导航到https://&lt;serveraddress>：&lt;serverport>/system/console/slinglog. 为创建新的记录器 `com.day.cq.search.impl.builder.QueryImpl` 在 **调试**.
+   * 导航到https://&lt;serveraddress>：&lt;serverport>/system/console/slinglog. 为创建记录器 `com.day.cq.search.impl.builder.QueryImpl` 在 **调试**.
 
-* 为上述类启用DEBUG后，日志将显示查询生成器生成的XPath。
+* 为上述类启用DEBUG后，日志显示由Query Builder生成的XPath。
 * 从关联的QueryBuilder查询的日志条目中复制XPath查询，例如：
 
    * `com.day.cq.search.impl.builder.QueryImpl XPath query: /jcr:root/content//element(*, cq:Page)[(jcr:contains(jcr:content, "Geometrixx") or jcr:contains(jcr:content/@cq:tags, "Geometrixx"))]`
@@ -511,7 +507,7 @@ Query loadedQuery = builder.loadQuery("/mypath/getfiles", session);
 
 ![chlimage_1-66](assets/chlimage_1-66a.png)
 
-1. 在Query Builder Debugger中提供Query Builder查询
+1. 在Query Builder Debugger中提供查询生成器查询
 1. 执行搜索
 1. 获取生成的XPath
 1. 将XPath查询粘贴到Explain Query中作为XPath以获取查询计划
