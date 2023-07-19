@@ -8,9 +8,9 @@ contentOwner: Khushwant Singh
 topic-tags: Adaptive Forms
 docset: aem65
 role: Admin, Developer
-source-git-commit: 90731516671ee0681ff91f2ac47888b1febee199
+source-git-commit: a5d38ef6b3281992fd9ac3121cdb6c998631b205
 workflow-type: tm+mt
-source-wordcount: '1968'
+source-wordcount: '1961'
 ht-degree: 4%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 4%
 
 在AEM Forms 6.5中，主题是一个AEM客户端库，您可以使用它定义自适应表单的样式（外观）。 主题包含组件和面板的样式详细信息。 样式包括诸如背景颜色、状态颜色、透明度、对齐方式和大小等属性。 应用主题时，指定的样式反映在相应的组件上。 主题无需引用自适应表单即可独立管理，并且可以跨多个自适应Forms重复使用。
 
-## 可用主题 {#available-standard-theme}
+## 可用主题 {#available-theme}
 
 AEM 6.5环境为基于核心组件的自适应Forms提供了以下列出的主题：
 
@@ -51,13 +51,13 @@ AEM 6.5环境为基于核心组件的自适应Forms提供了以下列出的主�
 
 ## 创建主题
 
-AEM Forms 6.5提供了下面列出的基于核心组件的自适应Forms的标准主题。
+AEM Forms 6.5提供了下面列出的基于核心组件的自适应Forms的主题。
 
 * [画布主题](https://github.com/adobe/aem-forms-theme-canvas)
 * [WKND主题](https://github.com/adobe/aem-forms-theme-wknd)
 * [画架主题](https://github.com/adobe/aem-forms-theme-easel)
 
-您可以 [自定义这些标准主题中的任意主题以创建主题](#customize-a-theme-core-components).
+您可以 [自定义这些主题中的任意主题以创建主题](#customize-a-theme-core-components).
 
 ## 自定义主题 {#customize-a-theme-core-components-based-adaptive-forms}
 
@@ -92,7 +92,7 @@ AEM Forms 6.5提供了下面列出的基于核心组件的自适应Forms的标�
 
 创建或自定义主题是一个多步骤过程。 按照列出的顺序执行步骤，以创建/自定义主题：
 
-1. [克隆标准主题](#clone-git-repo-of-theme)
+1. [克隆主题](#clone-git-repo-of-theme)
 1. [自定义主题的外观](#customize-the-theme)
 1. [准备好本地部署的主题](#generate-the-clientlib)
 1. [在本地环境中部署主题](#deploy-the-theme-on-a-local-environment)
@@ -102,17 +102,17 @@ AEM Forms 6.5提供了下面列出的基于核心组件的自适应Forms的标�
  ![Theme Customization workflow](/help/forms/using/assets/custom-theme-steps.png)
 -->
 
-文档中提供的示例基于 **画布** 主题，但您可以克隆任何标准主题并使用相同的说明对其进行自定义。 这些说明适用于任何主题，允许您根据特定需求修改主题。
+文档中提供的示例基于 **画布** 主题，但您可以克隆任何主题并使用相同的说明对其进行自定义。 这些说明适用于任何主题，允许您根据特定需求修改主题。
 
 #### 1.克隆主题的Git存储库 {#clone-git-repo-of-theme}
 
-要克隆基于核心组件的自适应Forms的标准主题，请选择以下标准主题之一：
+要克隆基于核心组件的自适应Forms的主题，请选择以下主题之一：
 
 * [画布主题](https://github.com/adobe/aem-forms-theme-canvas)
 * [WKND主题](https://github.com/adobe/aem-forms-theme-wknd)
 * [画架主题](https://github.com/adobe/aem-forms-theme-easel)
 
-执行以下说明以克隆标准主题：
+执行以下说明以克隆主题：
 
 1. 在本地开发环境中打开命令提示符或终端窗口。
 
