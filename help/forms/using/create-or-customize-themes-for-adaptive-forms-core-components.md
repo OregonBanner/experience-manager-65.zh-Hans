@@ -8,7 +8,7 @@ contentOwner: Khushwant Singh
 topic-tags: Adaptive Forms
 docset: aem65
 role: Admin, Developer
-source-git-commit: 00f8b2c72aab37a57ab76e684f432250d2de3470
+source-git-commit: 90731516671ee0681ff91f2ac47888b1febee199
 workflow-type: tm+mt
 source-wordcount: '1968'
 ht-degree: 4%
@@ -179,10 +179,9 @@ AEM Forms 6.5提供了下面列出的基于核心组件的自适应Forms的标�
 
 -->
 
->
+>[!NOTE]
 >
 > 在主题和组件级别上同时定义样式时，在组件级别上定义的样式优先。
-
 
 #### 3.准备好部署主题 {#generate-the-clientlib}
 
@@ -275,9 +274,10 @@ The selected theme is applied to the Adaptive Form.
 
 ![主题客户端库](/help/forms/using/assets/themeclientlibrary.png)
 
+>[!NOTE]
 >
 >
->如果您在通过包管理器访问发布实例的登录对话框时遇到困难，请尝试通过以下URL登录： `http://[Publish Server URL]:[PORT]/system/console`. 这允许访问以登录Publish实例，允许您继续安装程序。
+> 如果您在通过包管理器访问发布实例的登录对话框时遇到困难，请尝试通过以下URL登录： `http://[Publish Server URL]:[PORT]/system/console`. 这允许访问以登录Publish实例，允许您继续安装程序。
 
 ## 将主题应用于自适应表单 {#using-theme-in-adaptive-form}
 
