@@ -8,17 +8,15 @@ contentOwner: Khushwant Singh
 topic-tags: Adaptive Forms
 docset: aem65
 role: Admin, Developer
-source-git-commit: 1b97dc536550da8904bc7da09e983e0722c42a3d
+source-git-commit: 00f8b2c72aab37a57ab76e684f432250d2de3470
 workflow-type: tm+mt
-source-wordcount: '1988'
+source-wordcount: '1968'
 ht-degree: 4%
 
 ---
 
 
 # 创建或自定义自适应表单主题 {#introduction-to-theme}
-
-<span class="preview"> Adobe建议使用核心组件来 [将自适应Forms添加到AEM Sites页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md) 或 [创建独立的自适应Forms](/help/forms/using/create-an-adaptive-form-core-components.md). </span>
 
 | 版本 | 文章链接 |
 | -------- | ---------------------------- |
@@ -290,6 +288,7 @@ The selected theme is applied to the Adaptive Form.
 1. 单击 **创建** > **自适应Forms**.
 1. 选择自适应Forms核心组件模板并单击 **下一个**. 此 **添加属性** 显示
 1. 指定 **名称** 用于您的自适应表单。
+
 
    >[!NOTE]
    >
