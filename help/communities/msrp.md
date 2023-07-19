@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 048f7b30-20c3-4567-bd32-38cf2643cf39
 role: Admin
 exl-id: 799d5ae1-caac-4c92-8835-696ad25de553
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1191'
+source-wordcount: '1190'
 ht-degree: 1%
 
 ---
@@ -64,41 +64,39 @@ ht-degree: 1%
 
    * **[!UICONTROL mongoDB URI]**
 
-      *默认*： mongodb://localhost/?maxPoolSize=10&amp;waitQueueMultiple=5&amp;readPreference=secondaryPreferred
+     *默认*： mongodb://localhost/?maxPoolSize=10&amp;waitQueueMultiple=5&amp;readPreference=secondaryPreferred
 
    * **[!UICONTROL mongoDB 数据库]**
 
-      *默认*：社区
+     *默认*：社区
 
    * **[!UICONTROL mongoDB UGC 收藏集]**
 
-      *默认*：内容
+     *默认*：内容
 
    * **[!UICONTROL mongoDB 附件收藏集]**
 
-      *默认*：附件
+     *默认*：附件
 
 * **[!UICONTROL Solr配置]**
 
    * **[](https://cwiki.apache.org/confluence/display/solr/Using+ZooKeeper+to+Manage+Configuration+Files)Zookeeper 主机**
 
-      在中运行时 [SolrCloud模式](solr.md#solrcloud-mode) 使用外部ZooKeeper，将此值设置为 `HOST:PORT` 对于动物园管理员，例如 *my.server.com:2181*
+     在中运行时 [SolrCloud模式](solr.md#solrcloud-mode) 使用外部ZooKeeper，将此值设置为 `HOST:PORT` 对于动物园管理员，例如 *my.server.com:2181*
 
-      对于ZooKeeper Ensemble，请输入逗号分隔 `HOST:PORT` 值，例如 *host1:2181，host2:2181*
+     对于ZooKeeper Ensemble，请输入逗号分隔 `HOST:PORT` 值，例如 *host1:2181，host2:2181*
 
-      如果使用内部ZooKeeper在独立模式下运行Solr，则保留为空。
-      *默认*： *&lt;blank>*
+     如果使用内部ZooKeeper在独立模式下运行Solr，则保留为空。
+     *默认*： *&lt;blank>*
 
       * **[!UICONTROL Solr URL]**
 用于在独立模式下与Solr通信的URL。
 如果在SolrCloud模式下运行，则保留为空。
-
-         *默认*： https://127.0.0.1:8983/solr/
+        *默认*： https://127.0.0.1:8983/solr/
 
       * **[!UICONTROL Solr收藏集]**
 Solr收藏集名称。
-
-         *默认*：收藏集1
+        *默认*：收藏集1
 
 * 选择 **[!UICONTROL 提交]**
 
@@ -198,7 +196,7 @@ cURL -u *登录* -d *数据* *reindex-url*
 *路径* =要重新索引的UGC树的根位置
 
 * 要重新索引所有UGC，请指定 `asipath`属性
-   `/etc/socialconfig/srpc/defaultconfiguration`
+  `/etc/socialconfig/srpc/defaultconfiguration`
 * 要将索引限制为某些UGC，请指定子树 `asipath`
 
 *reindex-url* = SRP重新索引的端点

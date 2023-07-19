@@ -5,7 +5,7 @@ contentOwner: AG
 role: User, Admin
 feature: Asset Insights,Asset Reports
 exl-id: 80e8f84e-3235-4212-9dcd-6acdb9067893
-source-git-commit: afc72fb6b324cf2e0ad8168f783d9c1a6f96c614
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
 source-wordcount: '647'
 ht-degree: 1%
@@ -54,7 +54,6 @@ AdobeDynamic Tag Management是一款可激活您的数字营销工具的工具�
    >* 根据托管Assets Insights页面跟踪器的位置(例如Experience Manager、CDN等)，可能需要更改脚本源的来源。
    >* 对于Experience Manager托管的页面跟踪器，源应指向使用Dispatcher实例的主机名的发布实例。
 
-
 1. 访问 `https://dtm.adobe.com`. 单击 **[!UICONTROL 概述]** 在Web属性中，然后单击 **[!UICONTROL 添加工具]** 或打开现有的Adobe Analytics工具。 创建工具时，可以设置 **[!UICONTROL 配置方法]** 到 **[!UICONTROL 自动]**.
 
    ![添加Adobe Analytics工具](assets/Add-Adobe-Analytics-Tool.png)
@@ -91,10 +90,10 @@ AdobeDynamic Tag Management是一款可激活您的数字营销工具的工具�
              "",  /** RSID to send tracking-call to */
              "",  /** Tracking Server to send tracking-call to */
              "",  /** Visitor Namespace to send tracking-call to */
-             "",  /** listVar to put comma-separated-list of Asset IDs for Asset Impression Events in tracking-call, e.g. 'listVar1' */
-             "",  /** eVar to put Asset ID for Asset Click Events in, e.g. 'eVar3' */
-             "",  /** event to include in tracking-calls for Asset Impression Events, e.g. 'event8' */
-             "",  /** event to include in tracking-calls for Asset Click Events, e.g. 'event7' */
+             "",  /** listVar to put comma-separated-list of Asset IDs for Asset Impression Events in tracking-call, for example, 'listVar1' */
+             "",  /** eVar to put Asset ID for Asset Click Events in, for example, 'eVar3' */
+             "",  /** event to include in tracking-calls for Asset Impression Events, for example, 'event8' */
+             "",  /** event to include in tracking-calls for Asset Click Events, for example, 'event7' */
              sObj  /** [OPTIONAL] if the webpage already has an AppMeasurement object, include the object here. If unspecified, Pagetracker Core shall create its own AppMeasurement object */
              );
        sObj.usePlugins = true;
@@ -110,7 +109,7 @@ AdobeDynamic Tag Management是一款可激活您的数字营销工具的工具�
    * DTM中的页面加载规则仅包含 `pagetracker.js` 代码。 任意 `assetAnalytics` 字段被视为默认值的覆盖。 默认情况下，它们不是必需的。
    * 代码调用 `assetAnalytics.dispatcher.init()` 在确保 `_satellite.getToolsByType('sc')[0].getS()` 已初始化，并且 `assetAnalytics,dispatcher.init` 可用。 因此，您可以跳过在步骤11中添加此代码。
    * 如分析页面跟踪器代码(**[!UICONTROL 工具>资产>分析页面跟踪器]**)，此时页面跟踪器不会创建 `AppMeasurement` 对象、前三个参数（RSID、跟踪服务器和访客命名空间）无关。 而是传递空字符串以突出显示此内容。\
-      其余参数对应于“分析配置”页面中配置的参数(**[!UICONTROL 工具>资产>分析配置]**)。
+     其余参数对应于“分析配置”页面中配置的参数(**[!UICONTROL 工具>资产>分析配置]**)。
    * 通过查询检索AppMeasurement对象 `satelliteLib` 所有可用的SiteCatalyst引擎的开销。 如果配置了多个标记，请相应地更改数组选择器的索引。 数组中的条目按DTM界面中提供的SiteCatalyst工具排序。
 
 1. 保存并关闭代码编辑器窗口，然后在工具配置中保存更改。

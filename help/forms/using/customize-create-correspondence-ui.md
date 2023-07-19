@@ -11,9 +11,9 @@ discoiquuid: 13a93111-c08c-4457-b69a-a6f6eb6da330
 docset: aem65
 feature: Correspondence Management
 exl-id: 9593ca2a-7f9e-4487-a1a5-ca44114bff17
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1088'
+source-wordcount: '1087'
 ht-degree: 0%
 
 ---
@@ -82,7 +82,8 @@ ht-degree: 0%
       >    * 在您的实例上升级
       >    * 应用热修复程序
       >    * 安装功能包
-
+      >    
+      >
 
    1. 单击&#x200B;**确定**。在指定的路径中创建css文件夹。
 
@@ -140,7 +141,7 @@ ht-degree: 0%
 
    此时将显示编辑jcr：data对话框。
 
-   现在，单击newlogo.png文件夹，双击jcr：content （dim选项），并设置nt：resource类型。 如果不存在，请创建名为jcr：content的属性。
+   现在单击newlogo.png文件夹，双击jcr：content （dim选项），并设置nt：resource类型。 如果不存在，请创建名为jcr：content的属性。
 
 1. 在“编辑jcr：data”对话框中，单击 **浏览** 并选择要用作徽标的图像文件（此处为CustomLogo.png）。
 

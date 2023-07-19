@@ -10,9 +10,9 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: 23a5a65e-774d-4789-9659-09e8be0c2bcd
 exl-id: 56af5362-78de-4308-8958-63a45e8573cc
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '558'
+source-wordcount: '557'
 ht-degree: 5%
 
 ---
@@ -57,19 +57,19 @@ ht-degree: 5%
    * `From page and child pages`
    * `All tags`
 
-   默认为 `From page and child pages`，其中“page”是指 **页面** 设置。
+  默认为 `From page and child pages`，其中“page”是指 **页面** 设置。
 
 * **[!UICONTROL 页面]**
 
-   (如果不是，则为必需 `All tags)` 页面的UGC路径。 如果留空，则默认是当前页面。
+  (如果不是，则为必需 `All tags)` 页面的UGC路径。 如果留空，则默认是当前页面。
 
 * **[!UICONTROL 标记上无链接]**
 
-   如果选中，标记将以纯文本形式显示在标记云中。 如果未选中，则标记将显示为活动链接，该链接会搜索应用了标记的所有内容。 默认值为未选中，需要 **[!UICONTROL 搜索结果路径]** 待定。
+  如果选中，标记将以纯文本形式显示在标记云中。 如果未选中，则标记将显示为活动链接，该链接会搜索应用了标记的所有内容。 默认值为未选中，需要 **[!UICONTROL 搜索结果路径]** 待定。
 
 * **[!UICONTROL 搜索结果路径]**
 
-   页面的路径，其中 `Search Result` 组件已放置，配置为引用UGC，该UGC包含由指定的UGC路径 **页面** 设置。
+  页面的路径，其中 `Search Result` 组件已放置，配置为引用UGC，该UGC包含由指定的UGC路径 **页面** 设置。
 
 ## 更改社交标签云的显示 {#change-display-of-social-tag-cloud}
 
@@ -81,43 +81,43 @@ ht-degree: 5%
 
 * **[!UICONTROL 显示完整的标题路径]**
 
-   如果选中，则显示父标记的标题和每个已应用标记的命名空间。
+  如果选中，则显示父标记的标题和每个已应用标记的命名空间。
 
-   例如：
+  例如：
 
    * 已选中: `Geometrixx Media: Gadgets / Cars`
    * 未选中: `Cars`
 
-   简单的标记没有区别。
+  简单的标记没有区别。
 
-   默认值为未选中。
+  默认值为未选中。
 
 * **[!UICONTROL 仅显示叶标记]**
 
-   如果选中，则仅显示不包含其他标记的应用标记。
+  如果选中，则仅显示不包含其他标记的应用标记。
 
-   例如，假定的TagID为：
+  例如，假定的TagID为：
 
-   `Geometrixx Media: Gadgets / Cars`
+  `Geometrixx Media: Gadgets / Cars`
 
-   有3个标记可以应用：
+  有3个标记可以应用：
 
-   `Geometrixx Media (the namespace)`, `Gadgets`, 和 `Cars`
+  `Geometrixx Media (the namespace)`, `Gadgets`, 和 `Cars`
 
    * 已选中：仅 `Cars` 将显示（如果应用）。
    * 未选中： `Geometrixx Media` 和 `Gadgets`以及 `Cars` 将显示（如果应用）。
 
-   简单标记是叶标记。
+  简单标记是叶标记。
 
-   默认值为未选中。
+  默认值为未选中。
 
 * **[!UICONTROL 链接模板]**
 
-   通过组件编辑对话框启用链接时，用于显示标记云中链接的模板（默认模板除外）。
+  通过组件编辑对话框启用链接时，用于显示标记云中链接的模板（默认模板除外）。
 
 * **[!UICONTROL 所有标记相同尺寸]**
 
-   如果选中，则标记云中的所有单词的样式都相同。 如果未选中，则单词的样式将根据其使用情况而有所不同。 默认值为未选中。
+  如果选中，则标记云中的所有单词的样式都相同。 如果未选中，则单词的样式将根据其使用情况而有所不同。 默认值为未选中。
 
 ## 附加信息 {#additional-information}
 

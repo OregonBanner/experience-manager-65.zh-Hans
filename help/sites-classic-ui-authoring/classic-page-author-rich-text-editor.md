@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 discoiquuid: ccc0e434-8847-4e12-8a18-84b55fb2964b
 docset: aem65
 exl-id: 5623dcf4-bda9-4dee-ace3-5a1f6057e96c
-source-git-commit: 75c6bb87bb06c5ac9378ccebf193b5416c080bb1
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1841'
+source-wordcount: '1843'
 ht-degree: 2%
 
 ---
@@ -331,7 +331,7 @@ AEM同时提供 **查找** 和 **Replace** （查找和替换）函数。
 
 ![chlimage_1-106](assets/chlimage_1-106.png)
 
-选择整个当前行或列。 随后便可使用特定操作（例如合并）。
+选择整个当前行或列。 随后便可使用特定操作（例如，合并）。
 
 #### 合并单元格 {#merge-cells}
 

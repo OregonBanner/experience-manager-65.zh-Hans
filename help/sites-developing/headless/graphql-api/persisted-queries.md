@@ -1,11 +1,11 @@
 ---
 title: 持久 GraphQL 查询
-description: 了解如何在 Adobe Experience Manager 中使用持久 GraphQL 查询优化性能。持久查询可以由客户端应用程序使用HTTPGET方法请求，响应可以缓存在Dispatcher和CDN层，最终提高客户端应用程序的性能。
+description: 了解如何在Adobe Experience Manager中使用持久GraphQL查询优化性能。 持久查询可以由客户端应用程序使用HTTPGET方法请求，响应可以缓存在Dispatcher和CDN层，最终提高客户端应用程序的性能。
 exl-id: d7a1955d-b754-4700-b863-e9f66396cbe1
-source-git-commit: a8616b3b30ac04ea24c4a869cabd47518af1a35f
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1424'
-ht-degree: 91%
+source-wordcount: '1423'
+ht-degree: 90%
 
 ---
 
@@ -23,12 +23,12 @@ ht-degree: 91%
 
 ## 持久查询及端点 {#persisted-queries-and-endpoints}
 
-持久查询必须始终使用与[相应站点配置](/help/sites-developing/headless/graphql-api/graphql-endpoint.md)相关的端点，因此它们可以使用以下项之一或全部：
+持久查询必须始终使用与[相应 Sites 配置](/help/sites-developing/headless/graphql-api/graphql-endpoint.md)相关的端点，因此它们可以使用以下项之一或全部：
 
 * 全球配置和端点
 查询具有对所有内容片段模型的访问权限。
-* 特定站点配置和端点
-为特定站点配置创建持久查询需要对应的站点配置特定的端点（用于提供对相关内容片段模型的访问权限）。
+* 特定 Sites 配置和端点
+为特定 Sites 配置创建持久查询需要对应的 Sites 配置特定的端点（用于提供对相关内容片段模型的访问权限）。
 例如，要创建特定于 WKND Sites 配置的持久查询，必须预先创建对应的 WKND 特定的端点。
 
 >[!NOTE]
@@ -37,12 +37,12 @@ ht-degree: 91%
 >
 >对于适当的 Sites 配置，**需要启用 GraphQL 持久查询**。
 
-例如，如果存在名为 `my-query` 的特定查询，使用来自站点配置 `my-conf` 的模型 `my-model`：
+例如，如果存在名为 `my-query` 的特定查询，使用来自 Sites 配置 `my-conf` 的模型 `my-model`：
 
 * 您可以使用 `my-conf` 特定的端点创建查询，然后查询将保存如下：
-   `/conf/my-conf/settings/graphql/persistentQueries/my-query`
+  `/conf/my-conf/settings/graphql/persistentQueries/my-query`
 * 您可以使用 `global` 端点创建相同的查询，但然后查询将保存如下：
-   `/conf/global/settings/graphql/persistentQueries/my-query`
+  `/conf/global/settings/graphql/persistentQueries/my-query`
 
 >[!NOTE]
 >
@@ -266,7 +266,7 @@ query getAdventuresByActivity($activity: String!) {
 
 默认情况下，AEM 将根据生存时间 (TTL) 定义使缓存失效。可通过以下参数定义这些 TTL。可通过多种方式访问这些参数，其名称因所使用的机制而异：
 
-| 缓存类型 | [HTTP 标头](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control)  | cURL  | OSGi 配置  |
+| 缓存类型 | [HTTP 标头](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/Cache-Control)  | cURL  | OSGi 配置  |
 |--- |--- |--- |--- |
 | 浏览器 | `max-age` | `cache-control : max-age` | `cacheControlMaxAge` |
 | CDN | `s-maxage` | `surrogate-control : max-age` | `surrogateControlMaxAge` |

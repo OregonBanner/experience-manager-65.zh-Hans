@@ -10,7 +10,7 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: b9618913-5433-4baf-9ff6-490a26860505
 exl-id: c07692f7-3618-4e8c-96d7-4db09f2d9896
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
 source-wordcount: '1108'
 ht-degree: 3%
@@ -112,7 +112,6 @@ ht-degree: 3%
 >* 需要以下两种电子邮件工具： **邮寄地址（必需）** 和 **配置文件中心（必需）**. 将电子邮件发布到ExactTarget后，默认情况下会将这两个电子邮件工具添加到每封邮件的底部。
 >
 
-
 ### 向电子邮件添加文本和个性化工具 {#adding-text-and-personalization-tool-to-your-e-mail}
 
 您可以通过添加 **文本和个性化** 页面组件：
@@ -157,9 +156,10 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->如果电子邮件/新闻稿的发布名称与电子邮件/新闻稿的发布名称相同，则不会替换之前的电子邮件/新闻稿。 而是使用相同的名称创建新的电子邮件/新闻稿（但两个新闻稿的ID不同）。
+>如果电子邮件/新闻稿的发布名称与已发布的电子邮件/新闻稿的名称相同，则不会替换之前的电子邮件/新闻稿。 而是使用相同的名称创建新的电子邮件/新闻稿（但两个新闻稿的ID不同）。
 >
 >将电子邮件/新闻稿发布到电子邮件服务提供商还会将电子邮件/新闻稿发布到AEM发布实例。
+>
 
 ### 更新已发布的电子邮件 {#updating-a-published-e-mail}
 

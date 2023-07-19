@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: ef253905-87da-4fa2-9f6c-778f1b12bd58
 docset: aem65
 exl-id: 72cbe589-14a1-40f5-a7cb-8960f02e0ebb
-source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '774'
+source-wordcount: '776'
 ht-degree: 0%
 
 ---
@@ -52,7 +52,7 @@ GITHUB上的代码
 
 谓词计算器处理某些谓词的计算，这些谓词是查询的定义约束。
 
-它将更高级别的搜索限制（例如“宽度> 200”）映射到适合实际内容模型的特定JCR查询(例如，元数据/@width > 200)。 或者，它可以手动筛选节点并检查其约束。
+它将更高级别的搜索限制（例如“宽度> 200”）映射到适合实际内容模型(例如，元数据/@width > 200)的特定JCR查询。 或者，它可以手动筛选节点并检查其约束。
 
 >[!NOTE]
 >
@@ -66,7 +66,7 @@ GITHUB上的代码
 
 * `cq:lastReplicatedBy` 用于存储触发上次复制操作的用户的id
 
-* `cq:lastReplicationAction` 存储上次复制操作（例如，激活、停用）的用户
+* `cq:lastReplicationAction` 用于存储上次的复制操作（例如，激活、停用）
 
 #### 使用默认谓词求值器查询复制元数据 {#querying-replication-metadata-with-default-predicate-evaluators}
 

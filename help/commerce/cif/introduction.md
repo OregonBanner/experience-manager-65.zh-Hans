@@ -3,10 +3,10 @@ title: 简介和概述
 description: Content and Commerce 的简介和概述。Experience Manager Commerce Integration Framework (CIF) 是 Adobe 推荐的模式，用于通过 Experience Cloud 集成和扩展来自 Adobe Commerce 和其他第三方商务解决方案的商务服务。
 thumbnail: introducing-aem-commerce.jpg
 exl-id: 52dad8f9-1812-42a3-8106-92b23f8517cd
-source-git-commit: a467009851937c4a10b165a3d253c47bf990bbc5
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '870'
-ht-degree: 92%
+source-wordcount: '871'
+ht-degree: 94%
 
 ---
 
@@ -64,7 +64,7 @@ CIF 旨在通过始终保持最新的加载项持续创新，使客户能够访�
 
 ### 集成
 
-使用以下方式将您的生态系统（例如，商业解决方案）与Experience Cloud连接  [Adobe I/O Runtime](https://www.adobe.io/apis/experienceplatform/runtime.html)，一种基于微服务的无服务器PaaS，以及 [CIF的参考实施](https://github.com/adobe/commerce-cif-graphql-integration-reference).
+使用 [Adobe I/O Runtime](https://www.adobe.io/apis/experienceplatform/runtime.html)（一项基于微服务的无服务器 PaaS）和 [CIF 的引用实施](https://github.com/adobe/commerce-cif-graphql-integration-reference)，将生态系统（例如商务解决方案）与 Experience Cloud 互联。
 
 ## 经过验证的模式和最佳实践
 

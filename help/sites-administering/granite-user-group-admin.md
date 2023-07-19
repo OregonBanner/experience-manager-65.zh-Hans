@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 95ab2e54-0f8d-49e0-ad20-774875f6f80a
 exl-id: f3477d21-7e9a-4588-94e8-496bc42434a8
 feature: Security
-source-git-commit: 4dd216167f97eb6f6181586b57694b139872c5ef
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '958'
+source-wordcount: '959'
 ht-degree: 4%
 
 ---
@@ -43,7 +43,7 @@ Granite用户和组管理控制台均可从 **[工具](/help/sites-administering
 
 * [组管理](#group-administration)
 
-  ![用户管理控制台](assets/chlimage_1-74a.png)
+  ![User Management 控制台](assets/chlimage_1-74a.png)
 
   此 **组** 控制台列表：
 

@@ -8,10 +8,10 @@ topic-tags: e-commerce
 content-type: reference
 docset: aem65
 exl-id: c29f6213-1df6-45af-91c8-14b255276d82
-source-git-commit: 6ebcc7bd5c72c01672244fdfba353a8949f6e331
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '2979'
+ht-degree: 2%
 
 ---
 
@@ -196,7 +196,7 @@ AEM通用解决方案提供了管理存储库中存储的商务信息的方法�
 
    ![打开引用的products控制台](/help/sites-administering/assets/chlimage_1-88.png)
 
-1. 单击/点按引用类型（如产品页面）以展开列表。
+1. 单击/点按引用类型（例如，产品页面）以展开列表。
 1. 选择特定引用以显示以下选项：
 
    * 导航到产品页面

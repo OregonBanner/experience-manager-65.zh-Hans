@@ -5,9 +5,9 @@ contentOwner: AG
 role: User
 feature: Collaboration,Asset Management
 exl-id: ddb69727-74a0-4a4d-a14e-7d3bb5ceea2a
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '632'
+source-wordcount: '631'
 ht-degree: 0%
 
 ---
@@ -56,7 +56,7 @@ ht-degree: 0%
 
 1. 要取消资产关联，请单击 **[!UICONTROL 取消关联]** ![取消资产关联](assets/do-not-localize/link-unrelate-icon.png) 工具栏中。
 
-1. 从中选择要取消关联的资产 **[!UICONTROL 删除关系]** 对话框，然后单击 **[!UICONTROL 取消关联]**.
+1. 从中选择要取消关联的资源 **[!UICONTROL 删除关系]** 对话框，然后单击 **[!UICONTROL 取消关联]**.
 
    ![chlimage_1-280](assets/chlimage_1-280.png)
 

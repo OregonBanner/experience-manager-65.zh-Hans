@@ -9,9 +9,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 discoiquuid: ec4ada04-e429-4ad4-a060-2dccac847cf0
 exl-id: 5f050baa-fe10-4acc-ad32-de20793edc13
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1159'
+source-wordcount: '1160'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe建议对需要基于单页应用程序框架的客户端渲染（例如React）的项目使用SPA编辑器。 [了解详情](/help/sites-developing/spa-overview.md).
+>对于需要基于单页应用程序框架的客户端渲染（例如React）的项目，Adobe建议使用SPA编辑器。 [了解详情](/help/sites-developing/spa-overview.md).
 
 AEM Mobile On-Demand提供完全配置的应用程序模板、文章模板和文章组件。
 
@@ -62,6 +62,7 @@ We.Unlimited应用程序是一个示例模板，它表示可完全配置和管�
 >此 ***redirecttarget*** 如果在应用程序模板中提供了redirectTarget属性，并且redirectTarget的值被定义为相对值，则作为创建应用程序操作的一部分进行计算，并尝试解析路径。 当创建应用程序进程在应用程序模板中找到redirectTarget的相对值时，该值将附加到创建应用程序的解析位置。
 >
 >例如，如果应用程序模板定义 ***redirecttarget*** 值为&quot;*lanugage-masters/en*“”，并且应用程序是在“”中创建的&#x200B;*/content/mobileapps/fooApp*“，在创建应用程序后，redirectTarget的最终值将为”*/content/mobileapps/fooApp/language-masters/en*“。
+>
 
 ## 创建内容模板 {#creating-content-templates}
 
@@ -124,6 +125,7 @@ Unlimited文章是一个示例模板，表示典型的AEM Mobile On-Demand文章
 >[!NOTE]
 >
 >目前没有为AEM Mobile提供现成的组件。
+>
 
 您可以将组件添加到页面。 任何组件都可以在AEM Mobile应用程序中使用，但在应用时，可能无法正确呈现。
 

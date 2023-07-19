@@ -12,9 +12,9 @@ discoiquuid: 6bcf0fcc-481a-4283-b30d-80b517701280
 docset: aem65
 feature: Multi Site Manager
 exl-id: ac24b8b4-b3ed-47fa-9a73-03f0c9e68ac8
-source-git-commit: 785d4897263bfeae6a0cd235abca3c96f2231392
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '2702'
+source-wordcount: '2701'
 ht-degree: 36%
 
 ---
@@ -88,7 +88,7 @@ ht-degree: 36%
   </tr>
   <tr>
    <td>修改时推送（简略）</td>
-   <td><p>修改Blueprint页面时将内容推送到Live Copy，而不更新引用（例如，简略副本引用）。</p> <p>谨慎使用此转出配置，因为它使用“修改”触发器。</p> </td>
+   <td><p>修改Blueprint页面时将内容推送到Live Copy，而不更新引用（例如，对于浅层副本）。</p> <p>谨慎使用此转出配置，因为它使用“修改”触发器。</p> </td>
    <td>修改</td>
    <td>contentupdate<br /> contentcopy<br /> contentDelete<br /> orderchildren</td>
   </tr>
@@ -394,7 +394,7 @@ MSM允许您指定通常使用的转出配置集，并且您可以在需要时�
 
    ![选定的转出配置](assets/chlimage_1-2.png)
 
-1. 单击或点按 **保存**.
+1. 单击或点按&#x200B;**保存**。
 
 ### 为 Blueprint 页面设置转出配置 {#setting-the-rollout-configuration-for-a-blueprint-page}
 
@@ -402,7 +402,7 @@ MSM允许您指定通常使用的转出配置集，并且您可以在需要时�
 
 请注意，Blueprint 页面的子页面将继承该配置。在配置要使用的转出配置时，可能会覆盖页面从其父页面继承的配置。
 
-1. 使用&#x200B;**站点**&#x200B;控制台选择 Blueprint 的根页面。
+1. 使用&#x200B;**Sites**&#x200B;控制台选择 Blueprint 的根页面。
 1. 从工具栏中选择&#x200B;**属性**。
 1. 打开 **Blueprint** 选项卡。
 1. 使用下拉选择器选择一个或多个&#x200B;**转出配置**。

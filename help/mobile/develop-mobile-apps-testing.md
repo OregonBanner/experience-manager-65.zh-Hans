@@ -10,9 +10,9 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 5a98e1bd-f5c1-4f2f-ac02-dbd005dc1de7
 exl-id: e10e1904-7016-4eb0-9408-36297285f378
-source-git-commit: 17d13e9b201629d9d1519fde4740cf651fe89d2c
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1023'
+source-wordcount: '1024'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe建议对需要基于单页应用程序框架的客户端渲染（例如React）的项目使用SPA编辑器。 [了解详情](/help/sites-developing/spa-overview.md).
+>对于需要基于单页应用程序框架的客户端渲染（例如React）的项目，Adobe建议使用SPA编辑器。 [了解详情](/help/sites-developing/spa-overview.md).
 
 鉴于市场上有各种各样的设备和正在发布的设备，测试您的应用程序变得极其重要。 在这个领域，功能和可用性可能会让应用商店获得较低的评价，但一个缺陷可能会导致卸载您的应用程序。 在测试计划和质量保证方面需要引起注意。 以下链接涵盖了许多需要一般解决的主题，例如，识别您的环境、定义测试用例、测试类型、假设、客户参与等。 此外，还讨论了有助于测试工作的工具。 内部工具，如 [霍布斯](/help/sites-developing/hobbes.md)可帮助进行基于Web的UI测试。 [艰难的一天](/help/sites-developing/tough-day.md) 可以在模拟载荷下使实例受力。 如果您的测试环境已有使用第三方工具（如Selenium）的经验，也可以使用这些工具。
 

@@ -12,9 +12,9 @@ discoiquuid: 9559e837-a87e-4ee7-8ca6-13b42c74e6bf
 docset: aem65
 feature: Configuring
 exl-id: dadde3ee-d60c-4b87-9af0-a12697148161
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '2730'
+source-wordcount: '2729'
 ht-degree: 0%
 
 ---
@@ -163,11 +163,13 @@ Tar微内核的冷备用容量允许一个或多个备用AEM实例连接到主�
 
       * `org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.config`
       * `org.apache.jackrabbit.oak.segment.standby.store.StandbyStoreService.config`
+
    1. 创建一个名为的新文件夹 `crx3` 下 `aem-standby/crx-quickstart/install`
 
    1. 创建数据存储配置并将其放在 `aem-standby/crx-quickstart/install/crx3`. 对于此示例，您需要创建的文件是：
 
       * org.apache.jackrabbit.oak.plugins.blob.datastore.FileDataStore.config
+
    1. 编辑文件并创建必要的配置。
 
    以下是典型备用实例的示例配置文件：

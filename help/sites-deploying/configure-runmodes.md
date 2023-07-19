@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 12329e26-40bc-4c94-bc60-6d9cbd01345f
 feature: Configuring
 exl-id: 6d03cb1d-500e-4a23-80e5-347a43dff30e
-source-git-commit: 7d91fbdaae7ade27e9d6bf42bbcd5b16d3f6e358
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '747'
+source-wordcount: '748'
 ht-degree: 1%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 1%
 
 * [为每个运行模式定义配置参数集合](#defining-configuration-properties-for-a-run-mode).
 
-   基本配置参数集适用于所有运行模式，然后您可以根据特定环境的目的调整其他配置集。 根据需要应用这些规则。
+  基本配置参数集适用于所有运行模式，然后您可以根据特定环境的目的调整其他配置集。 根据需要应用这些规则。
 
 * [定义要为特定模式安装的其他包](#defining-additional-bundles-to-be-installed-for-a-run-mode).
 
@@ -89,25 +89,25 @@ nosamplecontent运行模式专为生产安装而设计。
 
 * `config`
 
-   适用于所有运行模式
+  适用于所有运行模式
 
 * `config.author`
 
-   用于作者运行模式
+  用于作者运行模式
 
 * `config.publish`
 
-   用于发布运行模式
+  用于发布运行模式
 
 * `config.<run-mode>`
 
-   用于适用的运行模式；例如，配置
+  用于适用的运行模式；例如，配置
 
 参见 [存储库中的OSGi配置](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository) 有关定义这些文件夹中的各个配置节点以及为多个运行模式的组合创建配置的更多详细信息。
 
 >[!NOTE]
 >
->对象 [安装运行模式](#installation-run-modes) 安装后无法更改运行模式（例如，作者）。 但是，对单个配置属性的更改将在重新启动后生效。
+>对象 [安装运行模式](#installation-run-modes) （例如，作者）安装后无法更改运行模式。 但是，对单个配置属性的更改将在重新启动后生效。
 
 ## 定义要为运行模式安装的其他包 {#defining-additional-bundles-to-be-installed-for-a-run-mode}
 
@@ -123,8 +123,8 @@ nosamplecontent运行模式专为生产安装而设计。
 如果您为多个运行模式定义了配置，则需要定义要在启动时使用的配置。 有多种方法可指定要使用的运行模式；分辨率的顺序为：
 
 1. [系统属性(](#using-a-system-property-in-the-start-script)
-1. [ ](#using-the-sling-properties-file)
-1. [ ](#using-the-r-option)
+1. [](#using-the-sling-properties-file)
+1. [](#using-the-r-option)
 1. [文件名检测](#filename-detection-renaming-the-jar-file)
 
 在使用应用程序服务器时，您还可以 [在web.xml中定义运行模式](#defining-the-run-mode-in-web-xml-with-application-server).
@@ -155,7 +155,7 @@ java -jar cq-56-p4545.jar -r dev
 
 * 例如，使用以下内容将实例作为位于美国的生产发布实例启动：
 
-   `-Dsling.run.modes=publish,prod,us`
+  `-Dsling.run.modes=publish,prod,us`
 
 ### 文件名检测 — 重命名jar文件 {#filename-detection-renaming-the-jar-file}
 

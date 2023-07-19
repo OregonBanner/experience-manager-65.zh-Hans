@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: f488ba79-5bda-46e9-9c15-9a8c3dbfa2ce
 docset: aem65
 exl-id: 3b3c118b-ca35-484b-a62e-7bec98953123
-source-git-commit: d9155cdac183acbdd190da552512a1e9bcc43d64
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '2242'
+source-wordcount: '2245'
 ht-degree: 79%
 
 ---
@@ -55,7 +55,7 @@ AEM 的创作环境提供了各种可用于组织和编辑内容的机制. 可�
 
 组件浏览器会显示当前页面上可用的所有组件。这些组件可拖动至相应的位置，然后进行编辑以添加您的内容。
 
-组件浏览器是侧面板中的一个选项卡（侧面板中还有[资产浏览器](/help/sites-authoring/author-environment-tools.md#assets-browser)和[内容树](/help/sites-authoring/author-environment-tools.md#content-tree)）。要打开（或关闭）侧面板，请使用工具栏左上方的图标：
+组件浏览器是侧面板中的一个选项卡（侧面板中还有[资源浏览器](/help/sites-authoring/author-environment-tools.md#assets-browser)和[内容树](/help/sites-authoring/author-environment-tools.md#content-tree)）。要打开（或关闭）侧面板，请使用工具栏左上方的图标：
 
 ![ateat-03](assets/ateat-03.png)
 
@@ -67,7 +67,7 @@ AEM 的创作环境提供了各种可用于组织和编辑内容的机制. 可�
 >
 >系统能够检测到宽度小于 1024 像素的移动设备。这种情况也可能出现在较小的桌面窗口中。
 
-* **移动设备(例如iPad)**
+* **移动设备（例如 iPad）**
 
   组件浏览器完整覆盖了编辑的页面。
 
@@ -103,44 +103,44 @@ AEM 的创作环境提供了各种可用于组织和编辑内容的机制. 可�
 
   有关可供您使用的组件的更多信息，请参阅[组件控制台](/help/sites-authoring/default-components-console.md)。
 
-## 资产浏览器 {#assets-browser}
+## 资源浏览器 {#assets-browser}
 
-资产浏览器会显示当前页面上可直接使用的所有[资产](/help/assets/home.md)。
+资源浏览器会显示当前页面上可直接使用的所有[资源](/help/assets/home.md)。
 
 资产浏览器是侧面板中的一个选项卡，侧面板中还包含 [组件浏览](/help/sites-authoring/author-environment-tools.md#components-browser)r和 [内容树](/help/sites-authoring/author-environment-tools.md#content-tree). 要打开或关闭侧面板，请使用工具栏左上角的图标：
 
 ![ateat-03-1](assets/ateat-03-1.png)
 
-打开侧面板时，它将从左侧滑开。根据需要选择&#x200B;**资产**&#x200B;选项卡。
+打开侧面板时，它将从左侧滑开。根据需要选择&#x200B;**资源**&#x200B;选项卡。
 
 ![ateat-07](assets/ateat-07.png)
 
-打开资产浏览器后，您可以浏览所有可用于页面的资产。如果需要，可使用无限滚动展开列表。
+打开资源浏览器后，您可以浏览所有可用于页面的资源。如果需要，可使用无限滚动展开列表。
 
 ![ateat-08](assets/ateat-08.png)
 
-要向页面添加资产，请选择资产并将其拖动到所需的位置。可以添加的资产包括：
+要向页面添加资源，请选择资源并将其拖动到所需的位置。可以添加的资源包括：
 
 * 相应类型的现有组件。
 
-   * 例如，可以将图像类型的资产拖动到图像组件上。
+   * 例如，可以将图像类型的资源拖动到图像组件上。
 
 * 段落系统中用于创建相应类型新组件的[占位符](/help/sites-authoring/editing-content.md#component-placeholder)。
 
-   * 例如，可以将图像类型的资产拖动到段落系统中，以创建图像组件。
+   * 例如，可以将图像类型的资源拖动到段落系统中，以创建图像组件。
 
 >[!NOTE]
 >
->此功能适用于特定资产和组件类型。有关更多详细信息，请参阅[使用资产浏览器插入组件](/help/sites-authoring/editing-content.md#inserting-a-component-using-the-assets-browser)。
+>此功能适用于特定资源和组件类型。有关更多详细信息，请参阅[使用资源浏览器插入组件](/help/sites-authoring/editing-content.md#inserting-a-component-using-the-assets-browser)。
 
-从资产浏览器的顶部工具栏中，可以按以下条件筛选资产：
+从资源浏览器的顶部工具栏中，可以按以下条件筛选资源：
 
 * 名称
 * 路径
 * 资产类型，如图像、手稿、文档、视频、页面、段落和产品
 * 资产特征，如方向（纵向、横向、正方形）和样式（颜色、单色、灰度）
 
-   * 仅适用于某些资产类型
+   * 仅适用于某些资源类型
 
 实际外观和操作取决于您所使用的设备类型：
 
@@ -150,21 +150,21 @@ AEM 的创作环境提供了各种可用于组织和编辑内容的机制. 可�
 
 * **移动设备，如iPad**
 
-  资产浏览器完全覆盖了所编辑的页面。
+  资源浏览器完全覆盖了所编辑的页面。
 
-  要向页面添加资产，请长按所需的资产，然后将其向右移动 - 资产浏览器将关闭以重新显示该页面，此时您便可以向所需的组件添加资产。
+  要向页面添加资源，请长按所需的资源，然后将其向右移动 - 资源浏览器将关闭以重新显示该页面，此时您便可以向所需的组件添加资源。
 
   ![ateat-09](assets/ateat-09.png)
 
 * **桌面设备**
 
-  将在窗口左侧打开资产浏览器。
+  将在窗口左侧打开资源浏览器。
 
-  要向页面添加资产，请单击所需的资产，然后将其拖动到所需的组件或位置。
+  要向页面添加资源，请单击所需的资源，然后将其拖动到所需的组件或位置。
 
   ![ateat-10](assets/ateat-10.png)
 
-如果您需要快速更改资产，可以直接从资产浏览器启动[资产编辑器](/help/assets/manage-assets.md)，方法是单击资产名称旁边显示的编辑图标。
+如果您需要快速更改资源，可以直接从资源浏览器启动[资源编辑器](/help/assets/manage-assets.md)，方法是单击资源名称旁边显示的编辑图标。
 
 ![资产浏览器桌面设备](do-not-localize/screen_shot_2018-03-22at142448.png)
 
@@ -172,7 +172,7 @@ AEM 的创作环境提供了各种可用于组织和编辑内容的机制. 可�
 
 **内容树**&#x200B;概述了层次结构中页面上的所有组件，以便您能够快速了解页面的组成方式。
 
-内容树是侧面板中的一个选项卡（侧面板中还有组件浏览器和资产浏览器）。要打开（或关闭）侧面板，请使用工具栏左上方的图标：
+内容树是侧面板中的一个选项卡（侧面板中还有组件浏览器和资源浏览器）。要打开（或关闭）侧面板，请使用工具栏左上方的图标：
 
 ![内容树](do-not-localize/screen_shot_2018-03-22at142042.png)
 
@@ -252,7 +252,7 @@ AEM 的创作环境提供了各种可用于组织和编辑内容的机制. 可�
 
 ## 事件 – 时间线 {#events-timeline}
 
-对于相应的资源（例如&#x200B;**站点**&#x200B;控制台中的页面或&#x200B;**资产**&#x200B;控制台中的资产），[可使用时间线显示任何选定项目上的近期活动](/help/sites-authoring/basic-handling.md#timeline)。
+对于相应的资源（例如，**Sites**&#x200B;控制台中的页面或&#x200B;**资源**&#x200B;控制台中的资源），[可使用时间轴显示任何选定项目上的近期活动](/help/sites-authoring/basic-handling.md#timeline)。
 
 打开所需的控制台，然后导航到需要的资源并使用以下方法打开&#x200B;**时间线**：
 

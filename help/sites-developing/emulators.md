@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: c51fca81-5dfc-4838-9672-acb6de62778b
 legacypath: /content/docs/en/aem/6-0/develop/mobile/emulators
 exl-id: 009b7e2c-ac37-4acc-a656-0a34d3853dfd
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '631'
+source-wordcount: '634'
 ht-degree: 0%
 
 ---
@@ -22,13 +22,13 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe建议对需要基于单页应用程序框架的客户端渲染（例如React）的项目使用SPA编辑器。 [了解详情](/help/sites-developing/spa-overview.md).
+>对于需要基于单页应用程序框架的客户端渲染（例如React）的项目，Adobe建议使用SPA编辑器。 [了解详情](/help/sites-developing/spa-overview.md).
 
 Adobe Experience Manager (AEM)使作者能够在模拟最终用户查看页面的环境的模拟器中查看页面，例如在移动设备上或电子邮件客户端中。
 
 AEM模拟器框架：
 
-* 在模拟的用户界面(UI)中提供内容创作，例如移动设备或电子邮件客户端（用于创作新闻稿）。
+* 在模拟的用户界面(UI)中提供内容创作，例如，移动设备或电子邮件客户端（用于创作新闻稿）。
 * 根据模拟的UI调整页面内容。
 * 允许创建自定义模拟器。
 
@@ -110,26 +110,26 @@ AEM模拟器框架：
 * 位于/libs/wcm/mobile/components/emulators下。
 * 可通过JSON servlet在以下位置获取：
 
-   http://localhost:4502/bin/wcm/mobile/emulators.json
+  http://localhost:4502/bin/wcm/mobile/emulators.json
 
 当页面组件依赖于移动页面组件时( `/libs/wcm/mobile/components/page`)，则模拟器功能将通过以下机制自动集成到页面中：
 
 * 移动页面组件 `head.jsp` 包括设备组的关联模拟器init组件（仅在创作模式下）以及设备组的渲染CSS，具体方式为：
 
-   `deviceGroup.drawHead(pageContext);`
+  `deviceGroup.drawHead(pageContext);`
 
 * 方法 `DeviceGroup.drawHead(pageContext)` 包含模拟器的init组件，即 `init.html.jsp` 模拟器组件的。 如果模拟器组件没有自己的 `init.html.jsp` 并依赖移动基础模拟器( `wcm/mobile/components/emulators/base)`，则mobile基础模拟器的init脚本将调用( `/libs/wcm/mobile/components/emulators/base/init.html.jsp`)。
 
-* Mobile基础仿真器的init脚本通过Javascript定义：
+* Mobile基础仿真器的init脚本通过JavaScript定义：
 
    * 为页面定义的所有模拟器的配置(emulatorConfigs)
    * 模拟器管理器通过以下方式将模拟器的功能集成到页面中：
 
-      `emulatorMgr.launch(config)`;
+     `emulatorMgr.launch(config)`;
 
-      模拟器管理器的定义如下：
+     模拟器管理器的定义如下：
 
-      `/libs/wcm/emulator/widgets/source/EmulatorManager.js`
+     `/libs/wcm/emulator/widgets/source/EmulatorManager.js`
 
 #### 创建自定义移动模拟器 {#creating-a-custom-mobile-emulator}
 
@@ -152,4 +152,5 @@ AEM模拟器框架：
    * 名称= `canRotate`，类型= `Boolean`，值= `true`：用于包含旋转功能。
 
    * 名称= `touchScrolling`，类型= `Boolean`，值= `true`：用于包含触摸滚动功能。
+
    通过定义您自己的插件，可以添加更多功能。

@@ -9,10 +9,10 @@ content-type: reference
 discoiquuid: 21181a6f-b434-40ed-8eb1-ebdfc98964dd
 docset: aem65
 exl-id: ef1a3997-feb4-4cb0-9396-c8335b69bb10
-source-git-commit: d045fc1ac408f992d594a4cb68d1c4eeae2b0de1
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '3024'
-ht-degree: 69%
+source-wordcount: '3025'
+ht-degree: 70%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 69%
 
 >[!NOTE]
 >
->* 本页旨在概述使用AEM创作环境时的基本处理。 它使用&#x200B;**站点**&#x200B;控制台作为基础。
+>* 本页旨在概述使用AEM创作环境时的基本处理。 它使用&#x200B;**Sites**&#x200B;控制台作为基础。
 >
 >* 某些功能并不是在所有控制台中均可用，而且某些控制台可能会提供额外的功能。其他页面中会更详细地介绍有关具体控制台及其相关功能的特定信息。
 >* 用户在整个 AEM 环境中都可以使用各种键盘快捷键，尤其是在[使用控制台](/help/sites-authoring/keyboard-shortcuts.md)和[编辑页面](/help/sites-authoring/page-authoring-keyboard-shortcuts.md)时。
@@ -42,7 +42,7 @@ ht-degree: 69%
 
 >[!NOTE]
 >
->为了使您更好地了解 AEM 的基本用法，本文档基于&#x200B;**站点**&#x200B;控制台进行了介绍。
+>为了使您更好地了解 AEM 的基本用法，本文档基于&#x200B;**Sites**&#x200B;控制台进行了介绍。
 >
 >请单击或点按&#x200B;**站点**&#x200B;以开始操作。
 
@@ -269,7 +269,7 @@ ht-degree: 69%
 
 ## “操作”工具栏 {#actions-toolbar}
 
-每当选择资源（例如页面或资产）时，工具栏中都会显示一些带有说明性文本的图标来指示各种操作。 这些操作取决于以下要素：
+每当选择资源（例如，一个页面或资源）时，工具栏中都会显示一些包含说明性文本的图标以指示各种操作。 这些操作取决于以下要素：
 
 * 当前控制台.
 * 当前上下文.
@@ -308,7 +308,7 @@ ht-degree: 69%
 
 >[!NOTE]
 >
->默认情况下，AEM Assets 不会在 UI 中将资产的原始呈现版本显示为任何视图中的缩略图。如果您是管理员，可以使用叠加来配置 AEM Assets，以将原始呈现版本显示为缩略图。
+>默认情况下，AEM Assets 不会在 UI 中将资源的原始呈现版本显示为任何视图中的缩略图。如果您是管理员，可以使用叠加来配置 AEM Assets，以将原始呈现版本显示为缩略图。
 
 ### 选择资源 {#selecting-resources}
 

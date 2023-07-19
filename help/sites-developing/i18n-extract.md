@@ -10,9 +10,9 @@ content-type: reference
 topic-tags: components
 discoiquuid: 034f70f1-fbd2-4f6b-b07a-5758f0461a5b
 exl-id: 4acc5f7f-0bcb-4b5a-8531-52e146cffeae
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '476'
+source-wordcount: '477'
 ht-degree: 1%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 1%
 使用xgettext-maven-plugin从源代码中提取需要翻译的字符串。 Maven插件会将字符串提取到您发送的XLIFF文件中进行翻译。 将从以下位置提取字符串：
 
 * Java源文件
-* Javascript源文件
+* JavaScript源文件
 * SVN资源（JCR节点）的XML表示形式
 
 ## 配置字符串提取 {#configuring-string-extraction}
@@ -49,7 +49,7 @@ ht-degree: 1%
 |---|---|
 | /filter | 标识要解析的文件。 |
 | /parsers/vaultxml | 配置保险库文件的解析。 标识包含外部化字符串和本地化提示的JCR节点。 还会标识要忽略的JCR节点。 |
-| /parsers/javascript | 标识用于将字符串外部化的Javascript函数。 您无需更改此分区。 |
+| /parsers/javascript | 标识用于将字符串外部化的JavaScript函数。 您无需更改此分区。 |
 | /parsers/regexp | 配置Java、JSP和ExtJS模板文件的解析。 您无需更改此分区。 |
 | /潜能 | 检测要国际化的字符串的公式。 |
 

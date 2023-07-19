@@ -11,7 +11,7 @@ topic-tags: coding
 discoiquuid: 0ff30df7-b3ad-4c34-9644-87c689acc294
 role: Developer
 exl-id: 7f1f49e6-028c-47b6-a24d-a83bed40242e
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
 source-wordcount: '1796'
 ht-degree: 0%
@@ -71,7 +71,7 @@ ht-degree: 0%
 
 **登录过程**
 
-POST当客户端应用程序启动时，您可以向 `/um/login` 安全servlet。 例如， `https://<your_serverhost>:<your_port>/um/login?um_no_redirect=true`. 当请求到达User Manager安全servlet时，它将执行以下步骤：
+POST当客户端应用程序启动时，您可以向 `/um/login` 安全servlet。 例如：`https://<your_serverhost>:<your_port>/um/login?um_no_redirect=true`。当请求到达User Manager安全servlet时，它将执行以下步骤：
 
 1. 它查找名为的Cookie `lcAuthToken`. 如果用户已登录到另一个Forms应用程序，则此Cookie存在。 如果找到Cookie，则会验证其内容。
 1. 如果启用了基于标头的SSO，则servlet会查找已配置的标头以确定用户的身份。
@@ -410,7 +410,7 @@ POST当客户端应用程序启动时，您可以向 `/um/login` 安全servlet�
          /**
           * Constructs an SSOManager with the given server url.
           *
-          * @param serverUrl - The uri of the server to connect to. it must be without any context path e.g
+          * @param serverUrl - The uri of the server to connect to. it must be without any context path for example,
           * http://localhost:8080/. The SSOManager would directly append the path of UM exposed SSO url to it
           * for its operations
           */

@@ -10,9 +10,9 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 6e913190-be92-4862-a8b9-517f8bde0044
 exl-id: f6f32290-422e-4037-89d8-d9f414332e8e
-source-git-commit: 4fa868f3ae4778d3a637e90b91f7c5909fe5f8aa
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '3324'
+source-wordcount: '3327'
 ht-degree: 1%
 
 ---
@@ -137,8 +137,8 @@ https://myhost/tools/spy.printable.a4.html/a/b?x=12
 
 将细分请求并提取必要信息。 在存储库中搜索请求的资源（内容节点）：
 
-* 第一个Sling检查请求中指定的位置是否存在节点；例如， `../content/corporate/jobs/developer.html`
-* 如果没有找到节点，则删除扩展并重复搜索；例如， `../content/corporate/jobs/developer`
+* 第一个Sling检查节点是否存在于请求中指定的位置；例如， `../content/corporate/jobs/developer.html`
+* 如果未找到节点，则将丢弃扩展并重复搜索；例如， `../content/corporate/jobs/developer`
 * 如果未找到节点，则Sling将返回http代码404（未找到）。
 
 Sling还允许将JCR节点以外的内容作为资源，但这是一项高级功能。
@@ -152,7 +152,7 @@ Sling还允许将JCR节点以外的内容作为资源，但这是一项高级功
 * 绝对
 * 相对，相对于配置参数
 
-   由于相对路径提高了可移植性，因此Adobe会推荐相对路径。
+  由于相对路径提高了可移植性，因此Adobe会推荐相对路径。
 
 所有Sling脚本都存储在以下任一文件夹的子文件夹中： `/apps` 或 `/libs`，将按此顺序搜索(请参阅 [自定义组件和其他元素](/help/sites-developing/dev-guidelines-bestpractices.md#customizing-components-and-other-elements))。
 
@@ -175,39 +175,39 @@ Felix管理控制台上列出了给定的AEM实例支持的脚本引擎列表( `
 
 * 以.html结尾的GET/HEAD请求和URL（默认请求类型、默认格式）
 
-   脚本是/apps/hr/jobs/jobs.esp ；文件名由sling：resourceType的最后一个部分构成。
+  脚本是/apps/hr/jobs/jobs.esp ；文件名由sling：resourceType的最后一个部分构成。
 
 * POST请求(除GET/HEAD之外的所有请求类型，方法名称必须大写)
 
-   POST在脚本名称中使用。
+  POST在脚本名称中使用。
 
-   脚本为 `/apps/hr/jobs/jobs.POST.esp`.
+  脚本为 `/apps/hr/jobs/jobs.POST.esp`.
 
 * 其他格式的URL，不以.html结尾
 
-   例如，`../content/corporate/jobs/developer.pdf`
+  例如，`../content/corporate/jobs/developer.pdf`
 
-   脚本将为 `/apps/hr/jobs/jobs.pdf.esp`；后缀将添加到脚本名称中。
+  脚本将为 `/apps/hr/jobs/jobs.pdf.esp`；后缀将添加到脚本名称中。
 
 * 带有选择器的URL
 
-   选择器可用于以替代格式显示相同的内容。 例如，打印机友好版本、rss馈送或摘要。
+  选择器可用于以替代格式显示相同的内容。 例如，打印机友好版本、rss馈送或摘要。
 
-   如果查看适合打印的版本，则选择器可能是 *打印*；如所示 `../content/corporate/jobs/developer.print.html`
+  如果查看适合打印的版本，则选择器可能是 *打印*；如所示 `../content/corporate/jobs/developer.print.html`
 
-   脚本将为 `/apps/hr/jobs/jobs.print.esp`；选择器将添加到脚本名称中。
+  脚本将为 `/apps/hr/jobs/jobs.print.esp`；选择器将添加到脚本名称中。
 
 * 如果未定义sling：resourceType ，则：
 
    * 内容路径将用于搜索适当的脚本（如果基于路径的ResourceTypeProvider处于活动状态）。
 
-      例如，的脚本 `../content/corporate/jobs/developer.html` 会在以下位置生成搜索： `/apps/content/corporate/jobs/`.
+     例如，的脚本 `../content/corporate/jobs/developer.html` 会在以下位置生成搜索： `/apps/content/corporate/jobs/`.
 
    * 将使用主节点类型。
 
 * 如果根本找不到脚本，则将使用默认脚本。
 
-   当前支持以纯文本(.txt)、HTML(.html)和JSON (.json)格式呈现默认演绎版，所有这些演绎版都将列出节点的属性（格式合适）。 扩展名.res或不带请求扩展名的请求的默认演绎版是假脱机资源（如果可能）。
+  当前支持以纯文本(.txt)、HTML(.html)和JSON (.json)格式呈现默认演绎版，所有这些演绎版都将列出节点的属性（格式合适）。 扩展名.res或不带请求扩展名的请求的默认演绎版是假脱机资源（如果可能）。
 * 对于http错误处理（代码403或404），Sling将在以下任一位置查找脚本：
 
    * /apps/sling/servlet/errorhandler的位置 [自定义脚本](/help/sites-developing/customizing-errorhandler-pages.md)
@@ -248,19 +248,19 @@ Felix管理控制台上列出了给定的AEM实例支持的脚本引擎列表( `
    * b
 
       * sling：resourceSuperType = a
+
    * c
 
       * sling：resourceSuperType = b
+
    * x
 
       * sling：resourceType = c
+
    * y
 
       * sling：resourceType = c
       * sling：resourceSuperType = a
-
-
-
 
 类型层次结构：
 
@@ -327,7 +327,7 @@ OSGi定义了用于开发和部署模块化应用程序和库（也称为Dynamic
 * 更新
 * 卸载
 * 查看当前状态
-* 访问有关特定捆绑包的更多详细信息（例如符号名称、版本、位置等）
+* 访问有关特定捆绑包的更多详细信息（例如，符号名称、版本、位置等）
 
 参见 [Web控制台](/help/sites-deploying/web-console.md)， [OSGI配置](/help/sites-deploying/configuring-osgi.md) 和 [OSGi配置](/help/sites-deploying/osgi-configuration-settings.md) 了解更多信息。
 
@@ -418,29 +418,29 @@ S`tring pageName = currentPage.getName();`
 
 * `/apps`
 
-   与应用程序相关；包括特定于您网站的组件定义。 您开发的组件可以基于以下位置提供的现成组件 `/libs/foundation/components`.
+  与应用程序相关；包括特定于您网站的组件定义。 您开发的组件可以基于以下位置提供的现成组件 `/libs/foundation/components`.
 
 * `/content`
 
-   为您的网站创建的内容。
+  为您的网站创建的内容。
 
 * `/etc`
 
 * `/home`
 
-   用户和组信息。
+  用户和组信息。
 
 * `/libs`
 
-   属于AEM核心的库和定义。 中的子文件夹 `/libs` 表示现成的AEM功能，例如搜索或复制。 中的内容 `/libs` 不应修改，因为它会影响AEM的工作方式。 您网站的特定功能应开发于 `/apps` (请参阅 [自定义组件和其他元素](/help/sites-developing/dev-guidelines-bestpractices.md#customizing-components-and-other-elements))。
+  属于AEM核心的库和定义。 中的子文件夹 `/libs` 表示现成的AEM功能，例如搜索或复制。 中的内容 `/libs` 不应修改，因为它会影响AEM的工作方式。 您网站的特定功能应开发于 `/apps` (请参阅 [自定义组件和其他元素](/help/sites-developing/dev-guidelines-bestpractices.md#customizing-components-and-other-elements))。
 
 * `/tmp`
 
-   临时工作区。
+  临时工作区。
 
 * `/var`
 
-   系统更改和更新的文件；例如审核日志、统计数据、事件处理。
+  系统更改和更新的文件；例如审核日志、统计数据、事件处理。
 
 ## 环境 {#environments}
 

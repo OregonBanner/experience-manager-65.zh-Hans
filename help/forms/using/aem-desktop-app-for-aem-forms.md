@@ -10,9 +10,9 @@ discoiquuid: c30332b6-e012-442d-8e84-28832c116c7b
 noindex: true
 role: Admin
 exl-id: b87e07b1-4a19-4888-bad0-c0f5327b9ad3
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '419'
+source-wordcount: '418'
 ht-degree: 0%
 
 ---
@@ -42,4 +42,4 @@ AEM桌面应用程序在Microsoft Windows上使用WebDAV协议，在Mac OS X上�
 1. 重新启动AEM Forms服务器。 重新启动后，将启用AEM Forms服务器以接受内容并与AEM桌面应用程序共享内容。
 1. 打开应用程序并连接到AEM Forms服务器。
 
-   成功连接后，应用程序将填充 `content/dam` 和 `content/dam/formsanddocuments` 文件夹。 除了将文件从上述文件夹移动到本地文件夹（反之亦然）之外，您还可以使用应用程序在自动填充的文件夹之间移动内容。
+   成功连接后，应用程序将填充 `content/dam` 和 `content/dam/formsanddocuments` 文件夹。 除了将文件从上述文件夹移动到本地文件夹外，您还可以使用应用程序在自动填充的文件夹之间移动内容。

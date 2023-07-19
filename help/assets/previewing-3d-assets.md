@@ -7,9 +7,9 @@ feature: 3D Assets
 role: User
 exl-id: fdebbc2b-c04d-4cdd-b7c2-8e9a2a854e79
 hide: true
-source-git-commit: 3d5e9ad8ee19756b05e5a77a3f748bc647fcf734
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '580'
+source-wordcount: '579'
 ht-degree: 8%
 
 ---
@@ -33,10 +33,10 @@ Experience Manager支持在创作过程中上传、交付和以交互方式预�
 
 | 3D文件扩展名 | 文件格式 | MIME类型 | 注释 |
 |---|---|---|---|
-| GLB | 二进制GL传输 | model/gltf-binary |  |
+| GLB | 二进制GL传输 | model/gltf-binary | |
 | GLTF | GL传输格式 | model/gltf+json | 参见 **注释** 下面的。 |
-| 对象 | WaveFront 3D对象文件 | application/x-tgif |  |
-| STL | 立体光刻 | application/vnd.ms-pki.stl |  |
+| 对象 | WaveFront 3D对象文件 | application/x-tgif | |
+| STL | 立体光刻 | application/vnd.ms-pki.stl | |
 | DN | Adobe Dimension | model/x-adobe-dn | 仅支持摄取；预览不可用。 |
 | USDZ | 通用场景描述Zip存档 | model/vnd.usdz+zip | 仅支持摄取；预览不可用。 |
 
@@ -82,7 +82,7 @@ Experience Manager支持在创作过程中上传、交付和以交互方式预�
    | **平移相机** | 向左、向右、向上或向下平移视图。 | 右键单击+拖动。 | 两指按下+拖动。 |
    | **缩放相机** | 在3D场景中移入和移出区域。 | 滚轮。 | 两指捏合。 |
    | **重新居中相机** | 将相机重新居中到3D场景中对象上的某个点。 | 双击。 | 双击。 |
-   | **重置** | 在页面的右下角附近，选择“重置”图标以将视图目标点恢复到3D资产的中心。 重置也会将相机移近或移远一点，以便以合理的查看大小完整地显示资产。 |  |  |
-   | **全屏模式** | 要进入全屏模式，请在页面的右下角选择全屏图标。 |  |  |
+   | **重置** | 在页面的右下角附近，选择“重置”图标以将视图目标点恢复到3D资产的中心。 重置也会将相机移近或移远一点，以便以合理的查看大小完整地显示资产。 |   |   |
+   | **全屏模式** | 要进入全屏模式，请在页面的右下角选择全屏图标。 |   |   |
 
 1. 完成后，在页面的右上角附近，选择 **[!UICONTROL 关闭]**.

@@ -10,7 +10,7 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: acf5c17a-95b7-43ba-9734-241e20f4f374
 exl-id: 3fd50655-7461-4900-a3b8-c01b04c7ba7a
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
 source-wordcount: '286'
 ht-degree: 1%
@@ -19,7 +19,7 @@ ht-degree: 1%
 
 # ContextHub{#contexthub}
 
-ContextHub是一个用于存储、操作和呈现上下文数据的框架。 通过客户端Javascript API，可访问数据以个性化内容。
+ContextHub是一个用于存储、操作和呈现上下文数据的框架。 通过客户端JavaScript API，可访问数据以个性化内容。
 
 >[!NOTE]
 >
@@ -33,18 +33,18 @@ ContextHub是一个用于存储、操作和呈现上下文数据的框架。 通
 
 ## 持久性 {#persistence}
 
-ContextHub存储保留在客户端上的上下文数据。 通过ContextHub Javascript API，您可以访问存储区，以根据需要创建、更新和删除数据。 因此，ContextHub表示页面上的数据层。
+ContextHub存储保留在客户端上的上下文数据。 通过ContextHub JavaScript API，您可以访问存储区，以根据需要创建、更新和删除数据。 因此，ContextHub表示页面上的数据层。
 
 每个ContextHub存储都是预定义存储类型的实例：
 
 * ContextHub提供了多个 [示例存储类型](/help/sites-developing/ch-samplestores.md).
 * 使用AEM控制台可以 [创建商店](ch-configuring.md#creating-a-contexthub-store).
 * 开发人员可以 [创建自定义商店类型](/help/sites-developing/ch-extend.md#creating-custom-store-candidates).
-* 开发人员可以 [访问存储数据](/help/sites-developing/ch-adding.md#interacting-with-contexthub-stores) 通过Javascript。
+* 开发人员可以 [访问存储数据](/help/sites-developing/ch-adding.md#interacting-with-contexthub-stores) 通过JavaScript。
 
 ## 分段 {#segmentation}
 
-ContextHub包括一个分段引擎，该引擎管理区段并确定在当前上下文中解析哪些区段。 定义了多个区段。 您可以使用Javascript API执行以下操作 [确定已解析的区段](/help/sites-developing/ch-adding.md#determining-resolved-contexthub-segments).
+ContextHub包括一个分段引擎，该引擎管理区段并确定在当前上下文中解析哪些区段。 定义了多个区段。 您可以使用JavaScript API执行以下操作 [确定已解析的区段](/help/sites-developing/ch-adding.md#determining-resolved-contexthub-segments).
 
 ## 演示文稿 {#presentation}
 

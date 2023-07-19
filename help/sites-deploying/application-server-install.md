@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: deploying
 exl-id: 3a90f1d2-e53f-4cc4-8122-024ad6500de0
-source-git-commit: 69346a710708ee659ee97e9fdc193c8ea2658fe6
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1162'
+source-wordcount: '1165'
 ht-degree: 0%
 
 ---
@@ -46,7 +46,7 @@ AEM只提供一个war文件来进行部署。
 * 运行模式为 `author`
 * 实例（存储库、Felix OSGI环境、捆绑包等）安装在中 `${user.dir}/crx-quickstart`位置 `${user.dir}` 是当前工作目录，将调用crx-quickstart的此路径 `sling.home`
 
-* 上下文根目录是war文件名，例如： `aem-6`
+* 上下文根是war文件名，例如： `aem-6`
 
 #### 配置 {#configuration}
 
@@ -131,7 +131,7 @@ AEM只提供一个war文件来进行部署。
 
 * JAVA_OPTS=&quot;-Xms64m -Xmx2048m&quot;
 
-如果您使用的部署扫描程序来安装AEM Web应用程序，则增加 `deployment-timeout,` 对于该集 `deployment-timeout` 实例的xml文件中的属性(例如 `configuration/standalone.xml)`：
+如果您使用的部署扫描程序来安装AEM Web应用程序，则增加 `deployment-timeout,` 对于该集 `deployment-timeout` 实例xml文件中的属性(例如， `configuration/standalone.xml)`：
 
 ```xml
 <subsystem xmlns="urn:jboss:domain:deployment-scanner:1.1">
@@ -241,7 +241,7 @@ AEM只提供一个war文件来进行部署。
       * 取消对sling.home初始参数的注释，并根据需要设置此路径
       * 重新打包web.xml文件
 
-   * 将AEM war文件重命名为ROOT.war如果要将其部署为根Web应用程序，请将其重命名为aemauthor.war例如，如果要将aemauthor作为上下文根
+   * 如果要将AEM war文件部署为根Web应用程序，请将其重命名为ROOT.war；如果要将aemauthor作为上下文根，请将其重命名为aemauthor.war
    * 将其复制到tomcat的webapps文件夹中
    * 等待安装AEM
 

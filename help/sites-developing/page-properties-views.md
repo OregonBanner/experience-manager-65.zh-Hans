@@ -10,9 +10,9 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: 6f8e08d1-831e-441a-ad1a-f5c8788f32d7
 exl-id: 292874bf-2ee6-4638-937c-f8f26c93ca65
-source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '479'
+source-wordcount: '483'
 ht-degree: 1%
 
 ---
@@ -71,12 +71,15 @@ ht-degree: 1%
    >作为参考，请参阅：
    >
    >    `/libs/wcm/foundation/components/basicpage/v1/basicpage/cq:dialog`
+   >
    但是，您 ***必须*** 不更改 `/libs` 路径。
+   >
    这是因为 `/libs` 下次升级实例时将被覆盖（在应用修补程序或功能包时很可能会被覆盖）。
+   >
    配置和其他更改的推荐方法是：
+   >
    1. 重新创建所需项目（即该项目存在于中） `/libs`)下 `/apps`
    1. 在中进行任何更改 `/apps`
-
 
 1. 设置 `path` 属性 `basic` 指向基本选项卡的覆盖（另请参阅下一步）。 例如：
 
@@ -93,12 +96,13 @@ ht-degree: 1%
 1. 应用相应的节点属性：
 
    * **名称**: `cq:showOnCreate`
-   * **类型**: `Boolean`
+   * **类型**： `Boolean`
    * **值**: `false`
 
    此 **更多标题和描述** 部分将不再显示在 **创建页面** 向导。
 
 >[!NOTE]
+>
 配置页面属性以与活动副本一起使用时，请参阅 [在页面属性上配置MSM锁定](/help/sites-developing/extending-msm.md#configuring-msm-locks-on-page-properties-touch-enabled-ui) 了解更多详细信息。
 
 ## 页面属性的示例配置 {#sample-configuration-of-page-properties}

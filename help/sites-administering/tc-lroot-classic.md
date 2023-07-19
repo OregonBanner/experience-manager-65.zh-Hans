@@ -12,9 +12,9 @@ discoiquuid: b88edad4-2a2e-429b-86a2-cc68ba69697e
 docset: aem65
 feature: Language Copy
 exl-id: 1ae21d80-0683-4ab9-afaa-4d733ff47720
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '316'
+source-wordcount: '318'
 ht-degree: 0%
 
 ---
@@ -31,6 +31,7 @@ ht-degree: 0%
 
       * 支持的语言代码是由ISO-639-1定义的小写双字母代码
       * 支持的国家/地区代码是由ISO 3166定义的小写或大写形式的双字母代码
+
    1. 选择模板并单击创建。
 
    ![newpagefr](assets/newpagefr.png)
@@ -54,7 +55,7 @@ ht-degree: 0%
    |---|---|
    | auto | 使用父页面的行为 |
    | 忽略 | 不创建此页面及其子页面的副本 |
-   | `<language>+` （例如，法语+） | 从该语言复制页面及其所有子页面 |
+   | `<language>+` （例如，French+） | 从该语言复制页面及其所有子页面 |
    | `<language>` （例如，法语） | 仅复制该语言的页面 |
 
 1. 单击“确定”关闭对话框。

@@ -10,9 +10,9 @@ content-type: reference
 topic-tags: repo_restructuring
 discoiquuid: 80bd707f-c02d-4616-9b45-90f6c726abea
 exl-id: 2d852d9d-9be3-487a-966a-4902bd7df7f9
-source-git-commit: 3f64bd7f5b4eb43aeefb9277a94e10ef1f0df59c
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '2690'
+source-wordcount: '2691'
 ht-degree: 2%
 
 ---
@@ -63,7 +63,7 @@ ht-degree: 2%
 
 此外，在ContextHub配置中， `sling:resourceType` 需要更新为相对路径而不是绝对路径。
 
-1. 在CRX DE Lite中打开ContextHub配置节点的属性，例如 `/apps/settings/cloudsettings/legacy/contexthub`
+1. 在CRX DE Lite中打开ContextHub配置节点的属性，例如， `/apps/settings/cloudsettings/legacy/contexthub`
 1. 更改 `sling:resourceType` 起始日期 `/libs/granite/contexthub/cloudsettings/components/baseconfiguration` 到 `granite/contexthub/cloudsettings/components/baseconfiguration`
 
 即 `sling:resourceType` ContextHub配置的项必须是相对项而不是绝对项。
@@ -99,7 +99,7 @@ ht-degree: 2%
       <ol>
        <li>例如，导出：
         <ul>
-         <li><code>/conf/global/settings/workflow/models/dam/my_workflow_model</code> 和 </li>
+         <li><code>/conf/global/settings/workflow/models/dam/my_workflow_model</code><br /> 和 </li>
          <li><code>/var/workflow/models/dam/my_workflow_model</code></li>
         </ul> </li>
       </ol> </li>

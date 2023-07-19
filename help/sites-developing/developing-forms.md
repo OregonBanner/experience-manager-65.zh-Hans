@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 6ee3bd3b-51d1-462f-b12e-3cbe24898b85
 docset: aem65
 exl-id: f43e9491-aa8f-40af-9800-123695142559
-source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1940'
+source-wordcount: '1947'
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->本文档重点介绍如何使用开发表单 [基础组件](/help/sites-authoring/default-components-foundation.md) 在经典UI中。 Adobe建议利用新的 [核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans) 和 [隐藏条件](/help/sites-developing/hide-conditions.md) 用于触屏UI中的表单开发。
+>本文档重点介绍如何使用开发表单 [基础组件](/help/sites-authoring/default-components-foundation.md) 在经典UI中。 Adobe建议利用新的 [核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) 和 [隐藏条件](/help/sites-developing/hide-conditions.md) 用于触屏UI中的表单开发。
 
 ## 预载表单值 {#preloading-form-values}
 
@@ -128,13 +128,13 @@ ht-degree: 0%
 1. 在文件夹中，创建：
 
    1. 后处理脚本。
-脚本的名称为 `post.POST.<extension>`，例如 `post.POST.jsp`
-提交表单以处理表单时会调用后脚本，该脚本包含处理从表单到达的数据的代码 
-`POST`。
+脚本的名称为 `post.POST.<extension>`例如， `post.POST.jsp`
+提交表单以处理表单时会调用后脚本，该脚本包含处理从表单到达的数据的代码 `POST`.
 
    1. 添加在提交表单时调用的转发脚本。
-脚本的名称为 `forward.<extension`>，例如 `forward.jsp`
+脚本的名称为 `forward.<extension`>，例如， `forward.jsp`
 此脚本可以定义路径。 然后，当前请求将转发到指定的路径。
+
    必要的调用是 `FormsHelper#setForwardPath` （2种变体）。 典型的情况是执行一些验证或逻辑来查找目标路径，然后转发到该路径，让默认的SlingPOSTservlet在JCR中执行实际存储。
 
    还可以有另一个servlet执行实际处理，在这种情况下，表单操作和 `forward.jsp` 只能作为“胶水”代码。 例如，以下位置的mail操作 `/libs/foundation/components/form/actions/mail`，可将详细信息转发到 `<currentpath>.mail.html`邮件servlet所在的位置。
@@ -153,6 +153,7 @@ ht-degree: 0%
       1. 表单的validationRT： `clientvalidation.jsp`
       1. 表单通过加载资源加载（如果已设置）
       1. `addfields.jsp` 在内部渲染时 `<form></form>`
+
    * 处理表单时 `POST`：
 
       1. `init.jsp`
@@ -163,22 +164,18 @@ ht-degree: 0%
 
       1. 如果未设置转发路径，则调用 `post.POST.jsp` (到此结束，否 `cleanup.jsp` called)
 
-
-
-
 1. 再次在文件夹中（可选）添加：
 
    1. 用于添加字段的脚本。
-脚本的名称为 `addfields.<extension>`，例如 `addfields.jsp`
-An 
-`addfields` 在写入表单起始HTML后，将立即调用脚本。 这允许操作在表单中添加自定义输入字段或其他此类HTML。
+脚本的名称为 `addfields.<extension>`例如， `addfields.jsp`
+An `addfields` 在写入表单起始HTML后，将立即调用脚本。 这允许操作在表单中添加自定义输入字段或其他此类HTML。
 
    1. 初始化脚本。
-脚本的名称为 `init.<extension>`，例如 `init.jsp`
+脚本的名称为 `init.<extension>`例如， `init.jsp`
 此脚本在渲染表单时调用。 它可用于初始化操作细节。
 
    1. 清理脚本。
-脚本的名称为 `cleanup.<extension>`，例如 `cleanup.jsp`
+脚本的名称为 `cleanup.<extension>`例如， `cleanup.jsp`
 此脚本可用于执行清理。
 
 1. 使用 **Forms** parsys中的组件。 此 **操作类型** 下拉列表现在将包含您的新操作。
@@ -220,10 +217,10 @@ An
 
 1. 在此文件夹内，可能需要以下脚本：
 
-   * 客户端验证脚本：脚本的名称为 `clientvalidation.<extension>`，例如 `clientvalidation.jsp`
+   * 客户端验证脚本：脚本的名称为 `clientvalidation.<extension>`例如， `clientvalidation.jsp`
 在渲染表单字段时调用此项。 它可用于创建客户端javascript，以验证客户端上的字段。
 
-   * 服务器验证脚本：脚本的名称为 `servervalidation.<extension>`，例如 `servervalidation.jsp`
+   * 服务器验证脚本：脚本的名称为 `servervalidation.<extension>`例如， `servervalidation.jsp`
 在提交表单时会调用此项。 提交字段后，可使用它验证服务器上的字段。
 
 >[!NOTE]
@@ -240,7 +237,7 @@ An
 
 然后，您可以定义：
 
-* a `clientvalidation.jsp`  — 在字段的客户端验证脚本之后插入
+* a `clientvalidation.jsp`  — 在字段的客户端验证脚本后插入
 * 和 `servervalidation.jsp`  — 也在对进行单个字段服务器验证后调用 `POST`.
 
 ### 显示和隐藏表单组件 {#showing-and-hiding-form-components}
@@ -268,7 +265,7 @@ An
 
 ![光照条件](assets/showhidecondition.png)
 
-在Javascript中，条件使用元素名称属性的值来引用字段。 在上一个示例中，单选按钮组组件的Element Name属性为 `contact`. 以下代码是该示例的等效Javascript代码：
+在JavaScript中，条件使用元素名称属性的值来引用字段。 在上一个示例中，单选按钮组组件的Element Name属性为 `contact`. 以下代码是该示例的等效JavaScript代码：
 
 `((contact == "Yes"))`
 
@@ -284,6 +281,7 @@ An
 
       * **所有**  — 如果所有条件都必须为true才能显示或隐藏组件
       * **任意**  — 如果只有一个或多个条件必须为true以显示或隐藏组件
+
    * 在条件行（默认显示一个）中，选择组件、运算符，然后指定一个值。
    * 如果需要，通过单击 **添加条件**.
 
@@ -306,7 +304,6 @@ An
    >* 在 **预览** 创作环境上的模式（首次切换到预览时需要重新加载页面）
    >
    >* 在发布环境中
-
 
 #### 处理损坏的组件引用 {#handling-broken-component-references}
 

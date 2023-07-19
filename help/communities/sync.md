@@ -12,9 +12,9 @@ discoiquuid: 97286c2c-f6e3-43ec-b1a9-2abb58616778
 docset: aem65
 role: Admin
 exl-id: ecd30f5d-ad31-4482-96d3-c92f1cf91336
-source-git-commit: 1d334c42088342954feb34f6179dc5b134f81bb8
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '2483'
+source-wordcount: '2482'
 ht-degree: 2%
 
 ---
@@ -53,11 +53,11 @@ ht-degree: 2%
 
 * **vlt包**
 
-   它是一个zip文件，其中包含对发布者所做的所有更改，这些更改需要跨发布者分发。 发布服务器的更改会生成由更改事件侦听器挑选的事件。 这将创建一个包含所有更改的vlt包。
+  它是一个zip文件，其中包含对发布者所做的所有更改，这些更改需要跨发布者分发。 发布服务器的更改会生成由更改事件侦听器挑选的事件。 这将创建一个包含所有更改的vlt包。
 
 * **分发包**
 
-   它包含Sling的分发信息。 这是有关内容需要分发到何处以及最后分发时间的信息。
+  它包含Sling的分发信息。 这是有关内容需要分发到何处以及最后分发时间的信息。
 
 ## 当……出现以下情况时会发生什么情况： {#what-happens-when}
 
@@ -79,7 +79,7 @@ ht-degree: 2%
 
 ### 用户或用户组是使用安全控制台创建的 {#users-or-user-groups-are-created-using-security-console}
 
-根据设计，在发布环境中创建的用户数据不会显示在创作环境中，反之亦然。
+根据设计，在发布环境中创建的用户数据不会出现在创作环境中，反之亦然。
 
 当 [用户管理和安全性](/help/sites-administering/security.md) console用于在发布环境中添加新用户，如有必要，用户同步会将新用户及其组成员资格同步到其他发布实例。 用户同步还将同步通过安全控制台创建的用户组。
 
@@ -124,13 +124,14 @@ ht-degree: 2%
 
    * 选择要打开的现有配置以进行编辑（铅笔图标）。
 
-      验证名称： **socialpubsync。**
+     验证名称： **socialpubsync。**
 
    * 选中&#x200B;**启用**&#x200B;复选框。
    * 选择 **使用多个队列。**
    * 指定 **导出程序端点** 和 **导入程序端点** （您可以添加更多导出程序和导入程序端点）。
 
-      这些端点定义要从何处获取内容以及要将内容推送到何处。 作者从指定的导出程序终结点获取内容，并将内容推送到发布者（而不是从中获取内容的发布者）。
+     这些端点定义要从何处获取内容以及要将内容推送到何处。 作者从指定的导出程序终结点获取内容，并将内容推送到发布者（而不是从中获取内容的发布者）。
+
    ![sync-agent-fact](assets/sync-agent-fact.png)
 
 ### AdobeGranite分发 — 加密的密码传输密钥提供程序 {#adobe-granite-distribution-encrypted-password-transport-secret-provider}
@@ -216,7 +217,7 @@ ht-degree: 2%
 
    * 选择要打开的现有配置以进行编辑（铅笔图标）。
 
-      验证 **socialpubsync -scheduled-trigger**
+     验证 **socialpubsync -scheduled-trigger**
 
    * 将“Interval in Seconds（间隔）”设置为所需的间隔，然后保存。
 
@@ -266,7 +267,7 @@ ht-degree: 2%
 
    `activities`
 
-1. 设置 **ignorablenodes** 至：
+1. 设置 **ignorablenodes** 到：
 
    `.tokens`
 

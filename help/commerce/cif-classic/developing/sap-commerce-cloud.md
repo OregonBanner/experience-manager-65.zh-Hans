@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: platform
 exl-id: b3de1a4a-f334-44bd-addc-463433204c99
-source-git-commit: 1ef5593495b4bf22d2635492a360168bccc1725d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '2298'
+source-wordcount: '2297'
 ht-degree: 0%
 
 ---
@@ -286,7 +286,7 @@ public interface Product extends Adaptable {
  * Interface for filtering variants and AxisFilter provided as common implementation
  *
  * The <code>VariantFilter</code> is used to filter variants,
- * e.g. when using {@link Product#getVariants(VariantFilter filter)}.
+ * for example, when using {@link Product#getVariants(VariantFilter filter)}.
  */
 public interface VariantFilter {
     public boolean includes(Product product);
@@ -548,7 +548,7 @@ public class AxisFilter implements VariantFilter {
 
 ### 用户集成 {#user-integration}
 
-在AEM和各种电子商务系统之间提供集成。 这需要一种在不同系统之间同步购物者的策略，以便特定于AEM的代码只需了解AEM，反之亦然：
+在AEM和各种电子商务系统之间提供集成。 这要求使用一种策略在不同系统之间同步购买者，以便特定于AEM的代码只需了解AEM，反之亦然：
 
 * 身份验证
 

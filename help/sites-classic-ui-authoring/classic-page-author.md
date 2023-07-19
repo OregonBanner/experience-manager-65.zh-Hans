@@ -8,9 +8,9 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 3fe5b6cc-1494-43e1-add7-2f7828b676ad
 exl-id: a3606d72-1bd8-4886-9285-6457dae66486
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '298'
+source-wordcount: '297'
 ht-degree: 0%
 
 ---
@@ -45,7 +45,7 @@ ht-degree: 0%
 在每个可创作页面的左侧，内容查找器允许快速访问一系列资源，包括数字资源(如其他图像、Flash元素和文档)、其他页面和段落。 可以将这些项目拖到页面上；例如，放置资产或创建指向其他页面的链接。
 
 * **上下文菜单**
-右键单击大多数屏幕元素（例如，页面上的段落）会打开一个上下文菜单，其中包含相应的操作选项。
+右键单击大多数屏幕元素（例如，页面上的段落）可显示一个上下文菜单，其中包含相应的操作选项。
 
 * **键入时搜索**
 在某些情况下（例如，编辑对话框中的路径选择），通过AEM界面搜索内容会在您键入查询时显示动态匹配。

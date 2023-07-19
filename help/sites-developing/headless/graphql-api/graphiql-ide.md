@@ -2,10 +2,10 @@
 title: 在 AEM 中使用 GraphiQL IDE
 description: 了解如何在 Adobe Experience Manager 中使用 GraphiQL IDE。
 exl-id: d4b01485-658b-4245-b2e6-04be8abc8ecf
-source-git-commit: b8c9e5cd3192b51954091b677d700c51617c9460
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '792'
-ht-degree: 94%
+source-wordcount: '791'
+ht-degree: 93%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 94%
 
 **GraphiQL** 工具允许您测试和调试 GraphQL 查询，方法是：
 
-* 选择适用于您要用于查询的站点配置的&#x200B;**端点**
+* 选择适用于您要用于查询的 Sites 配置的&#x200B;**端点**
 * 直接输入新查询
 * 创建并访问&#x200B;**[持久查询](/help/sites-developing/headless/graphql-api/persisted-queries.md)**
 * 运行查询以立即查看结果
@@ -45,7 +45,7 @@ ht-degree: 94%
 
 ## 选择您的端点 {#selecting-endpoint}
 
-第一步，您需要选择您想用于查询的&#x200B;**[端点](/help/sites-developing/headless/graphql-api/graphql-endpoint.md)**。该端点适用于您要用于查询的站点配置。
+第一步，您需要选择您想用于查询的&#x200B;**[端点](/help/sites-developing/headless/graphql-api/graphql-endpoint.md)**。该端点适用于您要用于查询的 Sites 配置。
 
 这可以从右上角的下拉列表中获得。
 

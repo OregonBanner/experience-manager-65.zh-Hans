@@ -12,9 +12,9 @@ discoiquuid: c061b358-8c0d-40d3-8090-dc9800309ab3
 docset: aem65
 exl-id: 89f55598-e749-42b8-8f2a-496f45face66
 feature: Security
-source-git-commit: f0acb130e1c68b927356c4e0ea625bbd88a6fc19
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '2527'
+source-wordcount: '2526'
 ht-degree: 4%
 
 ---
@@ -404,7 +404,7 @@ ht-degree: 4%
 
 ### 用户或用户组是使用安全控制台创建的 {#users-or-user-groups-are-created-using-security-console}
 
-根据设计，在发布环境中创建的用户数据不会显示在创作环境中，反之亦然。
+根据设计，在发布环境中创建的用户数据不会出现在创作环境中，反之亦然。
 
 当 [用户管理和安全性](/help/sites-administering/security.md) console用于在发布环境中添加新用户，如有必要，用户同步会将新用户及其组成员资格同步到其他发布实例。 用户同步还将同步通过安全控制台创建的用户组。
 

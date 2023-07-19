@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 3d14837d-41a8-480a-83ba-392e32f84c65
 docset: aem65
 exl-id: 408ac30c-60ab-4d6c-855c-d544af8d5cf9
-source-git-commit: 7ceee6819618d785f04029b9ac1c6f763995b3ac
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '2861'
+source-wordcount: '2862'
 ht-degree: 1%
 
 ---
@@ -67,7 +67,7 @@ ht-degree: 1%
 
 ### 使用HTL {#using-htl}
 
-在HTL中，通过AEM提供的帮助程序模板来加载客户端库，可通过访问模板 [ `data-sly-use`](https://helpx.adobe.com/experience-manager/htl/using/block-statements.html#use). 此文件中提供了三个模板，可通过来调用它们 [ `data-sly-call`](https://helpx.adobe.com/experience-manager/htl/using/block-statements.html#template-call)：
+在HTL中，通过AEM提供的帮助程序模板来加载客户端库，可通过访问模板 [`data-sly-use`](https://helpx.adobe.com/experience-manager/htl/using/block-statements.html#use). 此文件中提供了三个模板，可通过来调用它们 [`data-sly-call`](https://helpx.adobe.com/experience-manager/htl/using/block-statements.html#template-call)：
 
 * **css**  — 仅加载引用的客户端库的CSS文件。
 * **js**  — 仅加载引用的客户端库的JavaScript文件。
@@ -102,7 +102,7 @@ ht-degree: 1%
 
 >[!CAUTION]
 >
->`<cq:includeClientLib>`过去通常用于包含客户端库，但自AEM 5.6起已弃用。 [ `<ui:includeClientLib>`](/help/sites-developing/taglib.md#lt-ui-includeclientlib) 应改用，如上所述。
+>`<cq:includeClientLib>`过去通常用于包含客户端库，但自AEM 5.6起已弃用。 [`<ui:includeClientLib>`](/help/sites-developing/taglib.md#lt-ui-includeclientlib) 应改用，如上所述。
 
 ## 创建客户端库文件夹 {#creating-client-library-folders}
 
@@ -115,7 +115,7 @@ ht-degree: 1%
 * 要合并的JS和/或CSS源文件。
 * 支持CSS样式的资源，例如图像文件。
 
-   **注意：** 您可以使用子文件夹来组织源文件。
+  **注意：** 您可以使用子文件夹来组织源文件。
 * 一个 `js.txt` 文件和/或一个 `css.txt` 标识要合并到生成的JS和/或CSS文件中的源文件的文件。
 
 ![clientlibarch](assets/clientlibarch.png)
@@ -399,7 +399,7 @@ compilationLevel (defaults to "simple") (can be "whitespace", "simple", "advance
 1. 启用 **Minify** 选项（如果尚未启用）。
 1. 设置值 **JS处理器默认配置** 到 `min:gcc`.
 
-   如果用分号分隔，例如，可以传递选项。 `min:gcc;obfuscate=true`.
+   如果用分号分隔，则可以传递选项，例如， `min:gcc;obfuscate=true`.
 
 1. 单击 **保存** 以保存更改。
 

@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: ee104f6f-123b-4a6e-9031-849fc1318cc5
 role: Admin
 exl-id: 47b3c19c-5228-4b72-b78c-7ed71b308921
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '789'
+source-wordcount: '788'
 ht-degree: 1%
 
 ---
@@ -42,7 +42,7 @@ ht-degree: 1%
 
 使用 [Geometrixx参与](http://localhost:4503/content/sites/engage/en.html) 在以下情况下创建的站点： [AEM Communities快速入门](getting-started.md)，可以在论坛中快速设置一个主题，以便在发布环境中体验各种审核活动，如下所示。
 
-Aaron McDonald (aaron.mcdonald@mailinator.com)在创建站点时添加了community-engage-moderators组，被认定为受信任的社区成员。
+Aaron McDonald (aaron.mcdonald@mailinator.com)在创建站点时添加了community-engage-moderators组，从而被认定为受信任的社区成员。
 
 Rebekah Larsen (rebekah.larsen@trashymail.com)可以使用添加为community-engage-members组的成员 [成员控制台](members.md).
 
@@ -56,11 +56,11 @@ Rebekah Larsen (rebekah.larsen@trashymail.com)可以使用添加为community-eng
    * 选择新帖子
    * 输入主题
 
-      蜂鸣喂鸟机何时更换花蜜
+     蜂鸣喂鸟机何时更换花蜜
 
    * 输入正文文本
 
-      我每年挂一只蜂鸟喂食器时，并没有取得多少成功。 看来他们来了一两天，就这样了。 我一周换一次会不会太长了？ 我需要尽早更改它吗？
+     我每年都挂一只蜂鸟喂食器，可不太成功。 看来他们来了一两天，就这样了。 我一周换一次会不会太长了？ 我需要尽早更改它吗？
 
    * 选择帖子
    * 选择注销
@@ -71,7 +71,7 @@ Rebekah Larsen (rebekah.larsen@trashymail.com)可以使用添加为community-eng
    * 对于“蜂鸟”主题，选择“了解更多”
    * 为帖子回复输入评论
 
-      我每周换一次衣服，从五月到十月都有。
+     我每周换一次衣服，从五月到十月都有。
 
    * 选择回复
    * 选择注销
@@ -82,7 +82,7 @@ Rebekah Larsen (rebekah.larsen@trashymail.com)可以使用添加为community-eng
    * 对于“蜂鸟”主题，选择“了解更多”
    * 为帖子回复输入评论
 
-      我销售花蜜和饲料 — 请访问https://my.viral.url/
+     我销售花蜜和饲料 — 请访问https://my.viral.url/
 
    * 选择回复
    * 选择注销

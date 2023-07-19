@@ -6,7 +6,7 @@ seo-description: Learn about the options available when installing a standalone 
 content-type: reference
 topic-tags: deploying
 exl-id: d6484bb7-8123-4f42-96e8-aa441b1093f3
-source-git-commit: 53c39e4aa250b18d4fae0327b313b18901677f2c
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
 source-wordcount: '1622'
 ht-degree: 0%
@@ -38,7 +38,6 @@ AEM的默认端口为4502。 如果该端口不可用或已在使用中，则Qui
 >* 如果文件名中有任何其他数字，则必须为端口号添加前缀 `-p`
 >* 文件名开头的“cq5”前缀将被忽略
 >
-
 
 >[!NOTE]
 >
@@ -231,7 +230,7 @@ Usage:
   Options for executing Quickstart extensions:
                                                                                 
     -xargs <arg> [<arg> ...]
-         Construct an arguments list for a Quickstart extension (e.g. -xargs -- 
+         Construct an arguments list for a Quickstart extension (for example, -xargs -- 
          -arg1 val1 -arg2 val2).                                                
 --------------------------------------------------------------------------------
 Quickstart filename options                                                     

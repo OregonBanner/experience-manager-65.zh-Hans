@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 110c86ea-9bd8-4018-bfcc-ca33e6b3f3ba
 feature: Interactive Communication
 exl-id: 4fb82e9b-f870-47db-ac92-2d7510acace8
-source-git-commit: f6d6fcd1f174cc32a172f70ee3da8eff15156c15
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '2021'
+source-wordcount: '2020'
 ht-degree: 0%
 
 ---
@@ -51,7 +51,7 @@ ht-degree: 0%
 
 1. 在“数据”选项卡中，根据需要输入变量、表单数据模型属性和打印模板(XDP)字段的数据。 填写所有标有星号(&amp;ast；)的必填字段以启用 **提交** 按钮。
 
-   点按交互式通信预览中的数据字段值，以高亮显示“数据”选项卡中的相应数据字段，反之亦然。
+   点按交互式通信预览中的数据字段值，以高亮显示数据选项卡中对应的数据字段，反之亦然。
 
 ### 管理内容 {#manage-content}
 

@@ -8,10 +8,10 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 6a3c69b5-6df6-4b8f-afa4-7d3e9dd458b5
 exl-id: f4ca5c11-e3ff-4da5-bc4a-fd7e0aefffb5
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '222'
-ht-degree: 80%
+source-wordcount: '219'
+ht-degree: 69%
 
 ---
 
@@ -32,7 +32,7 @@ ht-degree: 80%
 |  | `Ctrl-y` | [重做最后一次更改](/help/sites-authoring/editing-content.md#undoing-and-redoing-page-edits) |
 |  | `Ctrl-Click` | 选择多个段落 |
 |  | `Ctrl-c` | 复制所选段落 |
-|  | `Ctrl-x` | 剪切选定段落（剪切的段落在粘贴之前仍会显示在 UI 中） |
+|  | `Ctrl-x` | 剪切所选段落，（剪切的段落在粘贴之前不会在UI中消失） |
 |  | `Ctrl-v` | 粘贴先前剪切或复制的段落 |
 |  | `Ctrl-Backspace` | 删除所选段落 |
 | **编辑**&#x200B;模式 - 富文本编辑器 | `Ctrl-b` | 粗体 |

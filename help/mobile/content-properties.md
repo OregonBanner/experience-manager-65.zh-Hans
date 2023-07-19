@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-on-demand-services-app
 discoiquuid: f5721ddc-df5c-496c-be61-38d1cab63ad4
 exl-id: 05c8c846-69cc-4075-9149-33890b3d1e08
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '355'
+source-wordcount: '356'
 ht-degree: 21%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 21%
 
 >[!NOTE]
 >
->Adobe建议对需要基于单页应用程序框架的客户端渲染（例如React）的项目使用SPA编辑器。 [了解详情](/help/sites-developing/spa-overview.md).
+>对于需要基于单页应用程序框架的客户端渲染（例如React）的项目，Adobe建议使用SPA编辑器。 [了解详情](/help/sites-developing/spa-overview.md).
 
 在AEM中，文章、横幅和收藏集表示为cq：Pages。
 
@@ -50,9 +50,9 @@ ht-degree: 21%
 | dps-shortAbstract | 字符串 |  |
 | dps-department | 字符串 |  |
 | dps-category | 字符串 |  |
-| dps-keywords | 字符串[] |  |
-| dps-internalKeywords | 字符串[] |  |
-| dps-importance | 字符串[] | 重要性来自{“低”、“正常”、“高”} |
+| dps-keywords | String[] |  |
+| dps-internalKeywords | String[] |  |
+| dps-importance | String[] | 重要性来自{“低”、“正常”、“高”} |
 
 ### 文章 {#articles}
 
@@ -71,7 +71,7 @@ ht-degree: 21%
 
 | **属性名称** | **类型** | **默认值或预期值** |
 |---|---|---|
-| dps-tapAction |  | 来自{webLink}的TapAction |
+| dps-tapAction |  | 点按操作来源 {webLink} |
 | dps-tapActionUrl |  |  |
 
 ### 收藏集 {#collections}

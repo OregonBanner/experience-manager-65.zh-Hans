@@ -10,9 +10,9 @@ content-type: reference
 topic-tags: components
 discoiquuid: adf3364c-11f1-45c6-b41d-2c7d48b626f9
 exl-id: a8d50c09-72d0-406e-874e-50a985227a56
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '2325'
+source-wordcount: '2327'
 ht-degree: 0%
 
 ---
@@ -85,11 +85,11 @@ AEM提供了一个控制台，用于管理组件UI中使用的文本的各种翻
    >
    >这是来自 [Sling i18n模块](https://sling.apache.org/site/internationalization-support.html).
 
-1. 重新加载翻译器和词典路径(例如 `/apps/myProject/i18n`)将显示在工具栏的下拉选择器中。 选择此项以开始添加字符串及其翻译。
+1. 重新加载翻译器和字典路径(例如， `/apps/myProject/i18n`)将显示在工具栏的下拉选择器中。 选择此项以开始添加字符串及其翻译。
 
    >[!NOTE]
    >
-   >翻译人员将只保存路径下实际存在的语言的翻译(例如 `/apps/myProject/i18n`)。
+   >翻译人员将只保存路径下实际存在的语言的翻译(例如， `/apps/myProject/i18n`)。
    >
    >确保这些语言与网格中显示的语言对应。
 
@@ -290,7 +290,7 @@ Translator工具底部的搜索栏提供了字符串选择选项：
 1. 在此节点上，创建一个属性：
 
    * **名称**: `languages`
-   * **类型**: `Multi-String`
+   * **类型**： `Multi-String`
    * **值**：要显示的语言列表。 例如：
 
       * fr
@@ -337,7 +337,7 @@ Translator工具底部的搜索栏提供了字符串选择选项：
 
 不同的国家使用相同的语言，例如，美国、英国和澳大利亚都使用英语。 这由指示语言和国家/地区的代码指示，例如 `en_US`， `en_GB` 和 `en_AU`.
 
-显示标记时使用默认国家/地区（例如，在语言复制对话框中），它们用于解析语言代码的国家/地区。
+显示标记时（例如，在语言复制对话框中），将使用默认国家/地区来解析语言代码的国家/地区。
 
 >[!NOTE]
 >
@@ -359,11 +359,12 @@ Translator工具底部的搜索栏提供了字符串选择选项：
 
    * **语言列表**：
 
-      存储库中语言列表的路径。 将其设置为用于叠加的位置：
+     存储库中语言列表的路径。 将其设置为用于叠加的位置：
 
-      ```
-             /apps/wcm/core/resources/languages
-      ```
+     ```
+            /apps/wcm/core/resources/languages
+     ```
+
    您可以使用OSGi Web控制台执行此操作：
 
    ```shell

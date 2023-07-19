@@ -11,16 +11,16 @@ content-type: reference
 discoiquuid: 99528fda-5c8c-4034-bcbe-a4cea42f694b
 docset: aem65
 exl-id: b5f3d3a6-39c0-4aa5-8562-3cc6fa2b9e46
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '6086'
+source-wordcount: '6088'
 ht-degree: 0%
 
 ---
 
 # AEM Portals和Portlet{#aem-portals-and-portlets}
 
-本文档描述了以下内容：
+本文档将介绍以下内容：
 
 * AEM Portal架构
 * 管理和配置AEM as a portal
@@ -216,7 +216,7 @@ Portlet可以配置自己的缓存，以便显示Portlet中的内容而不需要
    ![screen_shot_2012-02-15at42515pm](assets/screen_shot_2012-02-15at42515pm.png)
 
 1. 在 **HTTP方法** 字段，类型 **GET**.
-1. 在 **HTTP标头** 字段，请单击 **+** 以添加新条目并键入 **路径：{path}**.
+1. 在 **HTTP标头** 字段，请单击 **+** 以添加新条目并键入 **路径： {path}**.
 1. 如有必要，请单击 **代理** 选项卡，并输入代理的代理信息。
 1. 单击 **确定** 以保存更改。
 1. 要测试连接，请单击 **测试连接** 链接。 将显示一条日志消息，指示复制测试是否成功。 例如：
@@ -355,7 +355,7 @@ Portlet可以使用单点登录(SSO)方案为AEM WCM进行身份验证。 在此
 
 1. 单击保存为Portlet启用SSO。
 
-   出于测试目的，在AEM WCM中创建具有管理员权限的同一个用户后，请使用您门户的管理用户访问Portlet。
+   出于测试目的，在AEM WCM中创建具有管理员权限的同一个用户后，请使用您门户的管理用户访问portlet。
 
 执行此过程后，使用SSO对请求进行身份验证。 HTTP通信中的典型代码片段显示存在以下SSO和Portlet特定标头：
 
@@ -509,7 +509,7 @@ portlet的工具栏基本上有两种视图状态。 每个视图和关联的按
 | {id} | 按钮的CSS ID。 |
 | {url} | 按钮目标的URL。 |
 | {text} | 按钮的标签。 |
-| {onclick} | Javascript **onclick** 函数（包含{url}）。 |
+| {onclick} | JavaScript **onclick** 函数(包含 {url})。 |
 
 button.html文件示例：
 
@@ -590,7 +590,7 @@ AEM内容Portlet具有内置的本地化功能，可确保AEM中的内容使用�
   </tr>
   <tr>
    <td>TextMapper</td>
-   <td>允许您发布处理HTML、CSS和Javascript文件。</td>
+   <td>允许您发布处理HTML、CSS和JavaScript文件。</td>
   </tr>
   <tr>
    <td>ToolbarButton</td>
@@ -708,7 +708,7 @@ AEM快速入门JAR文件包含Portlet组件文件。 要获取文件(cq-portlet-
 
 使用门户组件向网页添加portlet窗口。 使用组件属性指定要显示的portlet。
 
-1. 在网页上，拖动 **Portlet** 组件从Sidekick中的General组复制到页面。
+1. 在网页上，拖动 **Portlet** 组件从“常规”组Sidekick到页面。
 
    >[!NOTE]
    >

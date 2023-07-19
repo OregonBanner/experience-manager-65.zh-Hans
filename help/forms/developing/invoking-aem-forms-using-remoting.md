@@ -11,9 +11,9 @@ topic-tags: coding
 discoiquuid: 3d8bb2d3-b1f8-49e1-a529-b3e7a28da4bb
 role: Developer
 exl-id: 94a48776-f537-4b4e-8d71-51b08e463cba
-source-git-commit: c47b4dcfd2fbdcb0b98ad815f5b04d8f593e4f64
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '4599'
+source-wordcount: '4597'
 ht-degree: 0%
 
 ---
@@ -84,7 +84,7 @@ ht-degree: 0%
 
 * *&lt;install_directory>\Adobe_Experience_Manager_forms\sdk\misc\DataServices\Client-Libraries*
 
-   其中&lt;*install_directory*>是AEM Forms的安装目录。
+  其中&lt;*install_directory*>是AEM Forms的安装目录。
 
 **另请参阅**
 
@@ -133,6 +133,7 @@ docRef.text = "Text for my document";  // Optionally, you can override the ser
 * 当文档不在服务器上时，使用远程上传servlet将文档上传到AEM Forms。 AEM Forms的新增功能是上传安全文档。 上传安全文档时，您必须使用具有 *文档上传应用程序用户* 角色。 没有此角色，用户无法上传安全文档。 建议您使用单点登录上载安全文档。 (请参阅 [使用远程处理传递安全文档以调用进程](invoking-aem-forms-using-remoting.md#passing-secure-documents-to-invoke-processes-using-remoting).)
 
 >[!NOTE]
+>
 如果将AEM Forms配置为允许上传不安全的文档，则您可以使用不具有文档上传应用程序用户角色的用户来上传文档。 用户还可以具有“文档上传”权限。 但是，如果将AEM Forms配置为仅允许安全文档，请确保用户具有“文档上传应用程序用户”角色或“文档上传”权限。 (请参阅 [配置AEM Forms以接受安全和不安全的文档](invoking-aem-forms-using-remoting.md#configuring-aem-forms-to-accept-secure-and-unsecure-documents).
 
 您对指定的上传URL使用标准Flash上传功能： `https://SERVER:PORT/remoting/lcfileupload`. 然后，您可以使用 `DocumentReference` 输入参数类型为 `Document` 预期
@@ -197,6 +198,7 @@ function completeHandler(event: DataEvent): void  { 
 1. 处理返回值。
 
 >[!NOTE]
+>
 本节讨论如何调用AEM Forms进程，以及当AEM Forms配置为上传不安全的文档时如何上传文档。 有关如何调用AEM Forms进程和上传安全文档以及如何配置AEM Forms以接受安全和不安全文档的信息，请参阅 [使用远程处理传递安全文档以调用进程](invoking-aem-forms-using-remoting.md#passing-secure-documents-to-invoke-processes-using-remoting).
 
 **创建mx：RemoteObject实例**
@@ -302,6 +304,7 @@ AEM Forms用户管理器可通过多种方式对来自Flex应用程序的远程�
 对于自定义身份验证，服务器向客户端发送一个错误，指示需要身份验证。
 
 >[!NOTE]
+>
 有关使用HTTP令牌执行身份验证的信息，请参阅 [创建使用HTTP令牌执行SSO身份验证的Flash Builder应用程序](/help/forms/developing/creating-flash-builder-applications-perform.md#creating-flash-builder-applications-that-perform-sso-authentication-using-http-tokens).
 
 ### 使用自定义身份验证 {#using-custom-authentication}
@@ -309,6 +312,7 @@ AEM Forms用户管理器可通过多种方式对来自Flex应用程序的远程�
 您可通过在远程端点上将身份验证方法从“基本”更改为“自定义”，在管理控制台中启用自定义身份验证。 如果您使用自定义身份验证，您的客户端应用程序将调用 `ChannelSet.login` 登录方法和 `ChannelSet.logout` 注销的方法。
 
 >[!NOTE]
+>
 在AEM Forms的早期版本中，您可以通过调用 `RemoteObject.setCredentials` 方法。 此 `setCredentials` 在组件第一次尝试连接到服务器之前，方法实际上并未将凭据传递到服务器。 因此，如果组件发出故障事件，则不能确定该故障是由于身份验证错误还是由于其他原因而发生。 此 `ChannelSet.login` 方法会在您调用服务器时连接到该服务器，以便您可以立即处理身份验证问题。 虽然您可以继续使用 `setCredentials` 方法，建议您使用 `ChannelSet.login` 方法。
 
 由于多个目标可以使用相同的渠道和相应的ChannelSet对象，因此登录到某个目标会将用户登录到使用相同渠道或渠道的任何其他目标。 如果两个组件对同一ChannelSet对象应用不同的凭据，则使用应用的最后一个凭据。 如果多个组件使用相同的已验证ChannelSet对象，则调用 `logout` 方法会从目标中记录所有组件。
@@ -454,6 +458,7 @@ AEM Forms开发人员编写客户端应用程序以扩展表单指南（已弃�
 使用(不适用于AEM表单)AEM Forms Remoting调用AEM Forms服务时，客户端应用程序在请求过程中传递身份验证Cookie。 由于用户已经过身份验证，因此从客户端应用程序连接到AEM Forms服务不需要其他登录。
 
 >[!NOTE]
+>
 如果Cookie无效或缺失，则不会隐式重定向到登录页面。 因此，您仍然可以调用匿名服务。
 
 您可以通过编写自行登录和注销的客户端应用程序来绕过AEM Forms单点登录机制。 如果绕过单点登录机制，则可以对应用程序使用基本身份验证或自定义身份验证。
@@ -548,6 +553,7 @@ AEM Forms开发人员编写客户端应用程序以扩展表单指南（已弃�
 AEM传递安全文档时，请使用单点登录并指定具有 *文档上传应用程序用户* 角色。 没有此角色，用户无法上传安全文档。 您可以通过编程方式为用户分配角色。 (请参阅 [管理角色和权限](/help/forms/developing/users.md#managing-roles-and-permissions).)
 
 >[!NOTE]
+>
 创建新角色并希望该角色的成员上传安全文档时，请确保指定“文档上传”权限。
 
 AEM Forms支持名为的操作 `getFileUploadToken` 返回传递给上传servlet的令牌。 此 `DocumentReference.constructRequestForUpload` 方法需要指向AEM Forms的URL以及返回的令牌 `LC.FileUploadAuthenticator.getFileUploadToken` 方法。 此方法会返回 `URLRequest` 在上载servlet调用中使用的对象。 以下代码演示了此应用程序逻辑。
@@ -616,6 +622,7 @@ AEM Forms支持名为的操作 `getFileUploadToken` 返回传递给上传servlet
 1. 确保取消选中允许从Flex应用程序上传非安全文档选项。
 
 >[!NOTE]
+>
 要将AEM Forms配置为接受不安全的文档，请选择允许从Flex应用程序上传不安全的文档选项。 然后重新启动应用程序或服务以确保设置生效。
 
 ### 快速入门：通过使用远程处理传递安全文档来调用短暂的进程 {#quick-start-invoking-a-short-lived-process-by-passing-a-secure-document-using-remoting}
@@ -969,6 +976,7 @@ AEM Forms复杂类型的完全限定数据类型会分配给别名标记。
 ActionScript类的字段与属于AEM Forms复杂类型的字段匹配。 客户ActionScript类中的六个字段与属于的字段匹配 `com.adobe.livecycle.sample.customer.Customer`.
 
 >[!NOTE]
+>
 确定属于Forms复杂类型的字段名称的一个好方法是在Web浏览器中查看服务的WSDL。 WSDL指定服务的复杂类型和相应的数据成员。 客户服务使用以下WSDL： `https://[yourServer]:[yourPort]/soap/services/CustomerService?wsdl.`
 
 CustomerActionScript类属于名为customer的软件包。 建议您将映射到复杂AEM Forms数据类型的所有ActionScript类放置在其自己的包中。 在Flex项目的src文件夹中创建一个文件夹，然后将ActionScript文件置于该文件夹中，如下图所示。
@@ -980,6 +988,7 @@ CustomerActionScript类属于名为customer的软件包。 建议您将映射到
 以下代码示例调用Customer service并创建客户。 运行此代码示例时，请确保填写所有文本框。 此外，确保您创建映射到 `com.adobe.livecycle.sample.customer.Customer`.
 
 >[!NOTE]
+>
 在执行此快速入门之前，您必须创建和部署Bank自定义组件。
 
 ```java

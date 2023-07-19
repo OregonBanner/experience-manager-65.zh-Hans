@@ -10,9 +10,9 @@ geptopics: SG_AEMFORMS/categories/configuring_workspace
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 72fe5749-2fa2-442f-b679-7889faeafcac
 exl-id: cdb7ff54-7891-45b1-a921-10b01ef5188d
-source-git-commit: 0c7dba43dad8608b4a5de271e1e44942c950fb16
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1245'
+source-wordcount: '1246'
 ht-degree: 0%
 
 ---
@@ -131,7 +131,7 @@ For additional information on JGroups and Workspace, see [JGroups and AEM forms 
 
 **client_pollingInterval：** 设置(JEE上已弃用的AEM forms) Flex Workspace上使用的轮询间隔（以秒为单位），以检测新的和修改过的任务。 默认值为3秒。 这在AEM Forms Workspace中无效。
 
-**client_systemContext_name：** 为AEM Forms Workspace中任务的附件指定要显示在“添加者”字段（在“附件”选项卡中）中的自定义名称（例如“公民”）。
+**client_systemContext_name：** 为AEM Forms Workspace中任务的附件指定要显示在“添加者”字段（在“附件”选项卡中）中的自定义名称（例如，“公民”）。
 
 要定义自定义名称，请执行以下操作：
 

@@ -9,9 +9,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 discoiquuid: 3d65cc6b-5721-472f-a805-588d50f3571b
 exl-id: 85e73679-684e-402f-8186-8b56d8bd9372
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '968'
+source-wordcount: '969'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe建议对需要基于单页应用程序框架的客户端渲染（例如React）的项目使用SPA编辑器。 [了解详情](/help/sites-developing/spa-overview.md).
+>对于需要基于单页应用程序框架的客户端渲染（例如React）的项目，Adobe建议使用SPA编辑器。 [了解详情](/help/sites-developing/spa-overview.md).
 
 移动设备应用程序应能够根据需要使用AEM中的任意和所有内容来提供目标应用程序体验。
 
@@ -32,13 +32,13 @@ ht-degree: 0%
 
 Content Services提供了三种主要类型的资料：
 
-1. **Assets**
+1. **资源**
 1. **打包的HTML内容(HTML/CSS/JS)**
 1. **独立于渠道的内容**
 
 ![chlimage_1-154](assets/chlimage_1-154.png)
 
-## Assets {#assets}
+## 资源 {#assets}
 
 资源收藏集是包含对其他收藏集引用的AEM构造。
 

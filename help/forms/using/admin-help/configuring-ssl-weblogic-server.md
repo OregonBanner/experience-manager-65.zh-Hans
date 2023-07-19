@@ -9,9 +9,9 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_ssl
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 968c2574-ec9a-45ca-9c64-66f4caeec285
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1049'
+source-wordcount: '1048'
 ht-degree: 0%
 
 ---
@@ -84,7 +84,7 @@ keytool命令通常位于Java jre/bin目录中，并且必须包含下表中所�
   <tr>
    <td><p>-keypass</p></td>
    <td><p>保护密钥对私钥的密码。</p></td>
-   <td><p>使用您用于 <code>-storepass</code> 选项。 密钥密码必须至少为6个字符。</p></td>
+   <td><p>使用您用于的相同密码 <code>-storepass</code> 选项。 密钥密码必须至少为6个字符。</p></td>
   </tr>
   <tr>
    <td><p>-dname</p></td>
@@ -176,7 +176,7 @@ keytool命令通常位于Java jre/bin目录中，并且必须包含下表中所�
 1. 在环境下的域配置中，单击 **服务器> [*受控服务器*] >配置>常规**.
 1. 在“常规”下的“配置”中，选择 **密钥库**.
 1. 在“更改中心”下，单击 **锁定和编辑** 修改选项和值。
-1. 单击 **更改** 要以下拉列表形式获取keystore列表并选择 **自定义身份和自定义信任**.
+1. 单击 **更改** 要将密钥库列表作为下拉列表获取，请选择 **自定义身份和自定义信任**.
 1. 在“标识”下，指定以下值：
 
    **自定义身份密钥库**： *[appserverdomain]*/adobe/*[服务器名称]*/ads-credentials.jks，其中*[appserverdomain] *是实际路径，并且 *[服务器名称]* 是应用程序服务器的名称。

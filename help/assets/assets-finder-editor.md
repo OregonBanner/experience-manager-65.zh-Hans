@@ -5,7 +5,7 @@ contentOwner: AG
 role: User, Admin
 feature: Developer Tools,Asset Management
 exl-id: 53e310a9-c511-447a-91bd-8c5b2760dc03
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
 source-wordcount: '2125'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # 创建和配置资产编辑器页面 {#creating-and-configuring-asset-editor-pages}
 
-本文档描述了以下内容：
+本文档将介绍以下内容：
 
 * 为什么要创建自定义的资产编辑器页面。
 * 如何创建和自定义Asset Editor页面，这些页面是WCM页面，允许您查看和编辑元数据以及对资源执行操作。
@@ -181,7 +181,7 @@ The following predicates are available:
 | **[!UICONTROL Date Predicate]** |Lets users search for assets that were modified before and after certain dates. |
 | **[!UICONTROL Options Predicate]** |The site owner can specify a property to search for (as in the property predicate, for example cq:tags) and a content tree to populate the options from (for example the tag tree). Doing so generates a list of options where the users can select the values (tags) that the selected property (tag property) should have. This predicate lets you build list controls like the list of tags, file types, image orientations, and so on. It is great for a fixed set of options. |
 | **[!UICONTROL Path Predicate]** |Lets users define the path and subfolders, if desired. |
-| **[!UICONTROL Property Predicate]** |The site owner specifies a property to search for, e.g. tiff:ImageLength and the user can then enter a value, e.g. 800. This returns all images that are 800 pixels high. Useful predicate if your property can have arbitrary values. |
+| **[!UICONTROL Property Predicate]** |The site owner specifies a property to search for, for example, tiff:ImageLength and the user can then enter a value, for example, 800. This returns all images that are 800 pixels high. Useful predicate if your property can have arbitrary values. |
 
 For more information, see the [predicate Javadocs](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/eval/package-summary.html).
 

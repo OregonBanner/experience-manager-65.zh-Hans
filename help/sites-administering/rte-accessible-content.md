@@ -3,9 +3,9 @@ title: 配置富文本编辑器以创建无障碍网页和网站。
 description: 配置富文本编辑器以创建无障碍网页和网站。
 contentOwner: AG
 exl-id: d2451710-5abf-4816-8052-57d8f04a228e
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '933'
+source-wordcount: '932'
 ht-degree: 0%
 
 ---
@@ -59,7 +59,7 @@ RTE包含在启用了触屏操作的用户界面和Classic用户界面的各种�
 
 ## 使用源编辑功能 {#use-of-the-source-edit-feature}
 
-在某些情况下，内容作者会发现有必要检查和调整使用RTE创建的HTML源代码。 例如，在RTE内创建的一段内容可能需要额外的标记以确保符合WCAG 2.0。这可以通过以下方式完成 [编辑源文件](/help/sites-administering/rich-text-editor.md#aboutplugins) RTE选项。 您可以指定 [ `sourceedit` 上的功能 `misctools` 插件](/help/sites-administering/rich-text-editor.md#aboutplugins).
+在某些情况下，内容作者会发现有必要检查和调整使用RTE创建的HTML源代码。 例如，在RTE内创建的一段内容可能需要额外的标记以确保符合WCAG 2.0。这可以通过以下方式完成 [编辑源文件](/help/sites-administering/rich-text-editor.md#aboutplugins) RTE选项。 您可以指定 [`sourceedit` 上的功能 `misctools` 插件](/help/sites-administering/rich-text-editor.md#aboutplugins).
 
 >[!CAUTION]
 >
@@ -193,9 +193,7 @@ RTE可以使用 `strong` 和 `em` 标记取代 `b` 和 `i`. 将以下节点作�
 >* 此 `itemId` 每个相应字段的属性均设置为相应DOM属性的名称(`TablePropertiesDialog`)。
 >* 在DOM元素上显式设置和/或移除属性(`Table`)。
 
-
 >[!MORELIKETHIS]
 >
 >* [WCAG 2.0快速指南](/help/managing/qg-wcag.md)
 >* [创建无障碍内容（符合WCAG 2.0）](/help/sites-authoring/creating-accessible-content.md)
-

@@ -7,9 +7,9 @@ topic-tags: extending-aem
 content-type: reference
 docset: aem65
 exl-id: 08c88e70-4df9-4627-8a66-1fabe3aee50b
-source-git-commit: 9ad531738ac5e3c9d888f685b47c8b322712a89e
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '2778'
+source-wordcount: '2782'
 ht-degree: 2%
 
 ---
@@ -53,9 +53,9 @@ ht-degree: 2%
    * 模型由数据类型构建。
    * 添加新变体的函数等必须相应地更新片段。
 
-   >[!CAUTION]
-   >
-   >对现有内容片段模型所做的任何更改都会影响从属片段；这可能会导致这些片段中的属性孤立。
+  >[!CAUTION]
+  >
+  >对现有内容片段模型所做的任何更改都会影响从属片段；这可能会导致这些片段中的属性孤立。
 
 * 内容片段模板：
 
@@ -63,7 +63,7 @@ ht-degree: 2%
    * 模板在创建内容片段时定义内容片段的（基本、纯文本）结构。
    * 模板在创建时复制到片段；因此对模板的进一步更改将不会反映在现有片段中。
    * 添加新变体的函数等必须相应地更新片段。
-   * [内容片段模板](/help/sites-developing/content-fragment-templates.md) 以不同于AEM生态系统内其他模板机制（如页面模板等）的方式运作。 因此，应单独审议这些问题。
+   * [内容片段模板](/help/sites-developing/content-fragment-templates.md) 以不同于AEM生态系统内其他模板机制（例如，页面模板等）的方式运行。 因此，应单独审议这些问题。
    * 当基于模板时，内容的MIME类型根据实际内容进行管理；这意味着每个元素和变体可以具有不同的类型。
 
 ### 与Assets集成 {#integration-with-assets}
@@ -83,15 +83,14 @@ ht-degree: 2%
 * 所有内容都存储在 `jcr:content/data` 资源的节点：
 
    * 元素数据存储在主控子节点下：
-      `jcr:content/data/master`
+     `jcr:content/data/master`
 
-   * 变体存储在子节点下，该子节点带有变体的名称：例如 `jcr:content/data/myvariation`
+   * 变量存储在子节点下，该子节点带有变量的名称：例如， `jcr:content/data/myvariation`
 
-   * 每个元素的数据作为具有元素名称（例如，元素的内容）的属性存储在相应的子节点中 `text` 存储为属性 `text` 日期 `jcr:content/data/master`
+   * 每个元素的数据作为具有元素名称的属性存储在相应的子节点中：例如，元素的内容 `text` 存储为属性 `text` 日期 `jcr:content/data/master`
 
 * 元数据和关联内容存储在下方 `jcr:content/metadata`
-除了标题和描述之外，它们不被视为传统元数据并存储于 
-`jcr:content`
+除了标题和描述之外，它们不被视为传统元数据并存储于 `jcr:content`
 
 #### 将简单内容片段映射到资产 {#mapping-simple-content-fragments-to-assets}
 
@@ -162,8 +161,7 @@ ht-degree: 2%
 其参数可在 [Web控制台](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)，表示OSGi捆绑包 **内容片段组件配置**.
 
 * **资源类型**
-列表 
-`sling:resourceTypes` 可用于定义用于呈现内容片段的组件以及后台处理应应用于的位置。
+列表 `sling:resourceTypes` 可用于定义用于呈现内容片段的组件以及后台处理应应用于的位置。
 
 * **引用属性**
 可以配置属性列表，以指定在相应组件中存储片段引用的位置。
@@ -199,43 +197,44 @@ ht-degree: 2%
 
 * **翻译**
 
-   内容片段与完全集成 [AEM翻译工作流](/help/sites-administering/tc-manage.md). 在架构级别，这意味着：
+  内容片段与完全集成 [AEM翻译工作流](/help/sites-administering/tc-manage.md). 在架构级别，这意味着：
 
    * 内容片段的各个翻译实际上是单独的片段；例如：
 
       * 它们位于不同的语言根下：
 
-         `/content/dam/<path>/en/<to>/<fragment>`
+        `/content/dam/<path>/en/<to>/<fragment>`
 
-         对比
+        对比
 
-         `/content/dam/<path>/de/<to>/<fragment>`
+        `/content/dam/<path>/de/<to>/<fragment>`
 
       * 但它们共享语言根下的完全相同的相对路径：
 
-         `/content/dam/<path>/en/<to>/<fragment>`
+        `/content/dam/<path>/en/<to>/<fragment>`
 
-         对比
+        对比
 
-         `/content/dam/<path>/de/<to>/<fragment>`
+        `/content/dam/<path>/de/<to>/<fragment>`
+
    * 除了基于规则的路径之外，内容片段的不同语言版本之间没有进一步的连接；它们作为两个单独的片段处理，尽管UI提供了在语言变体之间导航的方法。
-   >[!NOTE]
-   >
-   >AEM翻译工作流程适用于 `/content`：
-   >
-   >* 由于内容片段模型驻留在 `/conf`，这些不会包含在此类翻译中。 您可以 [国际化UI字符串](/help/sites-developing/i18n-dev.md).
-   >
-   >* 复制模板以创建片段，因此这是隐式的。
 
+  >[!NOTE]
+  >
+  >AEM翻译工作流程适用于 `/content`：
+  >
+  >* 由于内容片段模型驻留在 `/conf`，这些不会包含在此类翻译中。 您可以 [国际化UI字符串](/help/sites-developing/i18n-dev.md).
+  >
+  >* 复制模板以创建片段，因此这是隐式的。
 
 * **元数据架构**
 
    * 内容片段（重新）使用 [元数据架构](/help/assets/metadata-schemas.md)，这些资源可使用标准资源定义。
    * CFM提供了自己的特定架构：
 
-      `/libs/dam/content/schemaeditors/forms/contentfragment`
+     `/libs/dam/content/schemaeditors/forms/contentfragment`
 
-      如果需要，可以扩展此功能。
+     如果需要，可以扩展此功能。
 
    * 相应的架构表单与片段编辑器集成。
 
@@ -255,20 +254,20 @@ ht-degree: 2%
 
 * **片段模板** ([FragmentTemplate](https://www.adobe.io/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/dam/cfm/FragmentTemplate.html))
 
-   使用 `FragmentTemplate.createFragment()` 用于创建新片段。
+  使用 `FragmentTemplate.createFragment()` 用于创建新片段。
 
-   ```
-   Resource templateOrModelRsc = resourceResolver.getResource("...");
-   FragmentTemplate tpl = templateOrModelRsc.adaptTo(FragmentTemplate.class);
-   ContentFragment newFragment = tpl.createFragment(parentRsc, "A fragment name", "A fragment description.");
-   ```
+  ```
+  Resource templateOrModelRsc = resourceResolver.getResource("...");
+  FragmentTemplate tpl = templateOrModelRsc.adaptTo(FragmentTemplate.class);
+  ContentFragment newFragment = tpl.createFragment(parentRsc, "A fragment name", "A fragment description.");
+  ```
 
-   此界面表示：
+  此界面表示：
 
    * 从中创建内容片段的内容片段模型或内容片段模板，
    * 以及（创建后）该片段的结构信息
 
-   此信息可包括：
+  此信息可包括：
 
    * 访问基本数据（标题、描述）
    * 访问片段元素的模板/模型：
@@ -276,37 +275,35 @@ ht-degree: 2%
       * 列表元素模板
       * 获取给定元素的结构信息
       * 访问元素模板(请参阅 `ElementTemplate`)
+
    * 访问片段变体的模板：
 
       * 列出变体模板
       * 获取给定变体的结构信息
       * 访问变体模板(请参阅 `VariationTemplate`)
+
    * 获取初始关联内容
 
-   表示重要信息的界面：
+  表示重要信息的界面：
 
    * `ElementTemplate`
 
       * 获取基本数据（名称、标题）
       * 获取初始元素内容
+
    * `VariationTemplate`
 
       * 获取基本数据（名称、标题、描述）
 
-
-
-
-
-
 * **内容片段** ([内容片段](https://www.adobe.io/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/dam/cfm/ContentFragment.html))
 
-   利用此界面，可采用抽象方式处理内容片段。
+  利用此界面，可采用抽象方式处理内容片段。
 
-   >[!CAUTION]
-   >
-   >强烈建议通过此界面访问片段。 应避免直接更改内容结构。
+  >[!CAUTION]
+  >
+  >强烈建议通过此界面访问片段。 应避免直接更改内容结构。
 
-   该界面为您提供了以下方法：
+  该界面为您提供了以下方法：
 
    * 管理基本数据（例如，获取名称；获取/设置标题/描述）
    * 访问元数据
@@ -317,6 +314,7 @@ ht-degree: 2%
       * 创建新元素(请参阅 [注意事项](#caveats))
 
       * 访问元素数据(请参阅 `ContentElement`)
+
    * 为片段定义的列表变量
    * 全局创建新变体
    * 管理关联内容：
@@ -324,9 +322,10 @@ ht-degree: 2%
       * 列出收藏集
       * 添加收藏集
       * 删除收藏集
+
    * 访问片段的模型或模板
 
-   表示片段的主要元素的界面包括：
+  表示片段的主要元素的界面包括：
 
    * **内容元素** ([内容元素](https://www.adobe.io/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/dam/cfm/ContentElement.html))
 
@@ -339,24 +338,20 @@ ht-degree: 2%
          * 创建新变体(请参阅 [注意事项](#caveats))
          * 删除变体(请参阅 [注意事项](#caveats))
          * 访问变量数据(请参阅 `ContentVariation`)
+
       * 解析变体的快捷方式（如果指定的变体不适用于元素，则应用一些其他特定于实施的回退逻辑）
+
    * **内容变体** ([Contentvariation](https://www.adobe.io/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/dam/cfm/ContentVariation.html))
 
       * 获取基本数据（名称、标题、描述）
       * 获取/设置内容
       * 基于上次修改信息的简单同步
 
-   所有三个接口( `ContentFragment`， `ContentElement`， `ContentVariation`)扩展 `Versionable` 界面，添加了内容片段所需的版本控制功能：
+  所有三个接口( `ContentFragment`， `ContentElement`， `ContentVariation`)扩展 `Versionable` 界面，添加了内容片段所需的版本控制功能：
 
    * 创建新版本的元素
    * 列出元素的版本
    * 获取版本化元素的特定版本的内容
-
-
-
-
-
-
 
 ### 适应 — 使用adaptTo() {#adapting-using-adaptto}
 
@@ -408,7 +403,7 @@ ht-degree: 2%
 
 * `filter.xml`
 
-   此 `filter.xml` 用于内容片段管理的配置为不与Assets核心内容包重叠。
+  此 `filter.xml` 用于内容片段管理的配置为不与Assets核心内容包重叠。
 
 ## 编辑会话 {#edit-sessions}
 
@@ -441,11 +436,11 @@ ht-degree: 2%
 
       * 上次修改的信息已更新。
       * Cookie将被删除。
+
    * 回滚时：
 
       * 恢复在编辑会话启动时创建的内容片段的版本。
       * Cookie将被删除。
-
 
 * 编辑
 
@@ -464,10 +459,10 @@ ht-degree: 2%
 
          * 如果为当前片段，则重新建立会话。
          * 如果没有，请尝试取消编辑以前编辑的内容片段并删除Cookie（之后不存在编辑会话）。
+
       * 如果不存在编辑会话，请等待用户所做的首次更改（请参阅下文）。
+
    * 检查页面上是否已引用内容片段，如果是，则显示相应的信息。
-
-
 
 * 内容更改
 

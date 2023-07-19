@@ -10,9 +10,9 @@ topic-tags: development-tools
 content-type: reference
 discoiquuid: 8231a30a-dcb7-4156-bb45-c5a23e5b56ef
 exl-id: 829d8256-b415-4a44-a353-455ac16950f3
-source-git-commit: 43a30b5ba76ea470cc50a962d4f04b4a1508964d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '925'
+source-wordcount: '930'
 ht-degree: 1%
 
 ---
@@ -71,7 +71,7 @@ AEM Brackets扩展支持Brackets 1.0或更高版本。
 
 1. a `jcr_root` 文件夹(例如， `myproject/jcr_root`)
 
-1. a `filter.xml` 文件(例如 `myproject/META-INF/vault/filter.xml`)；了解更多有关 `filter.xml` 文件，请参阅 [工作区筛选器定义](https://jackrabbit.apache.org/filevault/filter.html).
+1. a `filter.xml` 文件(例如， `myproject/META-INF/vault/filter.xml`)；了解更多有关 `filter.xml` 文件，请参阅 [工作区筛选器定义](https://jackrabbit.apache.org/filevault/filter.html).
 
 在括号中&#39; **文件** 菜单，选择 **打开文件夹……** 然后选取 `jcr_root` 文件夹或父项目文件夹。
 
@@ -92,7 +92,7 @@ AEM Brackets扩展支持Brackets 1.0或更高版本。
 1. 服务器URL(例如， `http://localhost:4502`)
 1. 是否容忍没有有效HTTPS证书的服务器（除非需要，否则保持未选中状态）
 1. 用于同步内容的用户名(例如， `admin`)
-1. 用户的密码(例如 `admin`)
+1. 用户的密码(例如， `admin`)
 
 ## 同步内容 {#synchronizing-content}
 

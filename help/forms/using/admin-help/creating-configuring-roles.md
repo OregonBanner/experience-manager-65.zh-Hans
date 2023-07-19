@@ -10,9 +10,9 @@ geptopics: SG_AEMFORMS/categories/setting_up_and_organizing_users
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 737fb4d1-adef-47e1-9a0d-8cddd13132cb
 exl-id: b447e545-f73e-4fde-a001-86e0e1cf4a12
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '2526'
+source-wordcount: '2525'
 ht-degree: 0%
 
 ---
@@ -85,9 +85,9 @@ ht-degree: 0%
 
 **输出管理员：** 可以在Administration Console的“输出”页中查看和修改设置
 
-**PDFG管理员：** 可以在管理控制台的“PDF生成器”页中查看和修改设置
+**PDFG管理员：** 可以在管理控制台的“PDF Generator”页中查看和修改设置
 
-**PDFG用户：** 可以访问PDF生成器的所有非管理功能
+**PDFG用户：** 可以访问PDF Generator的所有非管理功能
 
 **Acrobat Reader DC扩展Web应用程序：** 可以使用Acrobat Reader DC扩展Web应用程序
 

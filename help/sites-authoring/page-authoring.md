@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 2d4cda3d-3270-4294-a146-e5712746aebb
 docset: aem65
 exl-id: 07528cf0-e67a-46b5-a3b2-d1b74ad2228f
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '315'
+source-wordcount: '314'
 ht-degree: 0%
 
 ---
@@ -48,7 +48,7 @@ ht-degree: 0%
 在可编辑页面的左侧，可以打开一个滑动浏览器；可以从此处将资产拖动到页面上；例如，放置资产或创建指向其他页面的链接。
 
 * **组件工具栏**
-单击/点按一次或缓慢双击都会显示相应的工具栏（单击/点按一次可显示就地编辑工具栏，单击/点按缓慢双击可显示整个工具栏）。
+单击/点按一次或缓慢双击都会显示相应的工具栏（单击/点按一次表示就地编辑工具栏，单击/点按缓慢双击表示整个工具栏）。
 
 * **[响应式布局](/help/sites-authoring/responsive-layout.md)**
 这提供了一个段落系统，允许您在响应式网格内放置组件。

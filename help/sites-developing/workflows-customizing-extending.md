@@ -10,9 +10,9 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: f23408c3-6b37-4047-9cce-0cab97bb6c5c
 exl-id: 9e205912-50a6-414a-b8d4-a0865269d0e0
-source-git-commit: 13f15bee38b6b4af4cd59376849810a788f0c467
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '3583'
+source-wordcount: '3584'
 ht-degree: 2%
 
 ---
@@ -52,27 +52,26 @@ ht-degree: 2%
 >1. 重新创建所需项目（即该项目存在于中） `/libs` 下 `/apps`
 >2. 在中进行任何更改 `/apps`
 
-
 此 `/libs/cq/workflow/components/model/step` component是 **流程步骤**， **参与者步骤**、和 **动态参与者步骤**，它们将继承以下项：
 
 * `step.jsp`
 
-   此 `step.jsp` 脚本在添加到模型时呈现步骤组件的标题。
+  此 `step.jsp` 脚本在添加到模型时呈现步骤组件的标题。
 
-   ![wf-22-1](assets/wf-22-1.png)
+  ![wf-22-1](assets/wf-22-1.png)
 
 * [cq：dialog](/help/sites-developing/developing-components.md#creating-and-configuring-a-dialog)
 
-   包含以下选项卡的对话框：
+  包含以下选项卡的对话框：
 
    * **公共**：用于编辑标题和描述。
    * **高级**：用于编辑电子邮件通知属性。
 
-   ![wf-44](assets/wf-44.png) ![wf-45](assets/wf-45.png)
+  ![wf-44](assets/wf-44.png) ![wf-45](assets/wf-45.png)
 
-   >[!NOTE]
-   >
-   >当步骤组件的“编辑”对话框的选项卡与此默认外观不匹配时，步骤组件已定义脚本、节点属性或对话框选项卡，这些选项卡会覆盖这些继承的选项卡。
+  >[!NOTE]
+  >
+  >当步骤组件的“编辑”对话框的选项卡与此默认外观不匹配时，步骤组件已定义脚本、节点属性或对话框选项卡，这些选项卡会覆盖这些继承的选项卡。
 
 ### ECMA脚本 {#ecma-scripts}
 
@@ -92,7 +91,7 @@ ht-degree: 2%
 
 有三种类型的MetaDataMap对象 — for `Workflow`， `WorkflowData` 和 `WorkItem` 对象。 它们都具有相同的预期用途 — 存储元数据。
 
-工作项具有自己的MetaDataMap，只能在该工作项（例如步骤）运行时使用。
+工作项具有自己的元数据映射，该元数据映射只能在该工作项（例如，步骤）运行时使用。
 
 两者 `Workflow` 和 `WorkflowData` 元数据映射在整个工作流中共享。 对于这些情况，建议仅使用 `WorkflowData` 元数据映射。
 
@@ -125,7 +124,6 @@ ht-degree: 2%
 >  当“编辑”对话框使用“常用”选项卡时， `/libs/cq/flow/components/step/step` 组件实现。
 >
 >* 步骤组件或组件的上级不会覆盖 `step.jsp` 编写脚本以便 `/libs/cq/flow/components/step/step` 组件实现。
-
 
 1. 在 `cq:Component` 节点，添加以下节点：
 
@@ -669,7 +667,6 @@ function getParticipant() {
 >* [`com.day.cq.wcm.workflow.process.DeactivatePageProcess`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/workflow/process/DeactivatePageProcess.html)
 >
 
-
 您可以开发工作流步骤以获取资源包资源并对其进行处理。 以下成员属于 `com.day.cq.workflow.collection` 包提供对工作流包的访问：
 
 * `ResourceCollection`：工作流包类。
@@ -826,21 +823,21 @@ private List<String> getPaths(String path, ResourceCollection rcCollection) {
 
    * `sling:resourceSuperType`
 
-      必须继承自现有步骤。
+     必须继承自现有步骤。
 
-      在本例中，我们继承自以下位置的基本步骤： `cq/workflow/components/model/step`，但您可以使用其他超类型，例如 `participant`， `process`等。
+     在本例中，我们继承自以下位置的基本步骤： `cq/workflow/components/model/step`，但您可以使用其他超类型，例如 `participant`， `process`等。
 
    * `jcr:title`
 
-      是组件在步骤浏览器（工作流模型编辑器的左侧面板）中列出时显示的标题。
+     是组件在步骤浏览器（工作流模型编辑器的左侧面板）中列出时显示的标题。
 
    * `cq:icon`
 
-      用于指定 [Coral图标](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html) 完成步骤。
+     用于指定 [Coral图标](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html) 完成步骤。
 
    * `componentGroup`
 
-      必须为以下任一项：
+     必须为以下任一项：
 
       * 协作工作流
       * DAM 工作流
@@ -873,11 +870,12 @@ private List<String> getPaths(String path, ResourceCollection rcCollection) {
 
    * `cq:inherit`
 
-      当设置为 `true`，则步骤组件将继承您在中指定的步骤的属性 `sling:resourceSuperType`.
+     当设置为 `true`，则步骤组件将继承您在中指定的步骤的属性 `sling:resourceSuperType`.
 
    * `cq:disableTargeting`
 
-      根据需要设置。
+     根据需要设置。
+
    ![wf-39](assets/wf-39.png)
 
 1. 在节点上配置属性 `cq:formsParameter` 如下所示：
@@ -886,7 +884,7 @@ private List<String> getPaths(String path, ResourceCollection rcCollection) {
 
    * `jcr:title`
 
-      在模型图中的步骤卡和中设置默认标题 **标题** 字段 **我的自定义 — 步骤属性** 配置对话框。
+     在模型图中的步骤卡和中设置默认标题 **标题** 字段 **我的自定义 — 步骤属性** 配置对话框。
 
    * 您还可以定义自己的自定义属性。
 

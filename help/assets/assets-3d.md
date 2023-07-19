@@ -8,9 +8,9 @@ content-type: reference
 feature: 3D Assets,Asset Management
 role: User, Admin
 exl-id: 01c96f1e-c0e6-497d-bd7a-c0fd547a34da
-source-git-commit: 787c0c25da2258f234d3c821038d62bf8ef68932
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '2358'
+source-wordcount: '2348'
 ht-degree: 3%
 
 ---
@@ -70,16 +70,16 @@ Dynamic Media支持以下3D格式。
       * [组织数字资源](/help/assets/organize-assets.md#organize-digital-assets).
       * [搜索三维资产](/help/assets/search-assets.md).
       * [使用自定义谓词筛选搜索结果](/help/assets/search-assets.md#custompredicates).
+
    * 查看3D资产
 
       * [查看3D资源并与之交互](#viewing-three-d-assets).
       * [管理维查看器预设](/help/assets/managing-viewer-presets.md).
+
    * 使用3D资源元数据
 
       * [管理数字资源的元数据](/help/assets/metadata.md).
       * [元数据架构](/help/assets/metadata-schemas.md).
-
-
 
 1. **发布三维资产**
 
@@ -128,8 +128,8 @@ Dynamic Media支持以下3D格式。
    | **平移相机** | 向左、向右、向上或向下平移视图。 | 右键单击+拖动。 | 两指按下+拖动。 |
    | **缩放相机** | 在3D场景中移入和移出区域。 | 滚轮。 | 两指捏合。 |
    | **重新居中相机** | 将相机重新居中到3D场景中对象上的某个点。 | 双击。 | 双击。 |
-   | **重置** | 在页面的右下角附近，选择“重置”图标以将视图目标点恢复到3D资产的中心。 重置也会将相机移近或移远一点，以便以合理的查看大小完整地显示资产。 |  |  |
-   | **全屏模式** | 要进入全屏模式，请在页面的右下角选择全屏图标。 |  |  |
+   | **重置** | 在页面的右下角附近，选择“重置”图标以将视图目标点恢复到3D资产的中心。 重置也会将相机移近或移远一点，以便以合理的查看大小完整地显示资产。 |   |   |
+   | **全屏模式** | 要进入全屏模式，请在页面的右下角选择全屏图标。 |   |   |
 
 1. 在页面的右上角，选择 **[!UICONTROL 关闭]** 以返回到“资源”页面。
 
@@ -150,7 +150,7 @@ Dynamic Media支持以下3D格式。
    * 在页面的右上角附近，选择 **[!UICONTROL 预览]** 输入 **[!UICONTROL 预览]** 模式。
    * 删除 `/editor.html` 从浏览器中的页面URL。
 
-完全交互式的3D资产，如中所示    ![3D资产显示在3D媒体组件内](/help/assets/assets-dm/3d-asset-in-3d-media.png)
+   ![3D资产显示在3D媒体组件内](/help/assets/assets-dm/3d-asset-in-3d-media.png)
 完全交互式的3D资产，如中所示 **[!UICONTROL 预览]** 模式。
 
 1. While in **[!UICONTROL 预览]** 模式，执行以下任一操作：
@@ -161,8 +161,8 @@ Dynamic Media支持以下3D格式。
    | **平移相机** | 向左、向右、向上或向下平移视图。 | 右键单击+拖动。 | 两指按下+拖动。 |
    | **缩放相机** | 在3D场景中移入和移出区域。 | 滚轮。 | 两指捏合。 |
    | **重新居中相机** | 将相机重新居中到3D场景中对象上的某个点。 | 双击。 | 双击。 |
-   | **重置** | 在页面的右下角附近，选择“重置”图标以将视图目标点恢复到3D资产的中心。 重置也会将相机移近或移远一点，以便以合理的查看大小完整地显示资产。 |  |  |
-   | **全屏模式** | 要进入全屏模式，请在页面的右下角选择全屏图标。 |  |  |
+   | **重置** | 在页面的右下角附近，选择“重置”图标以将视图目标点恢复到3D资产的中心。 重置也会将相机移近或移远一点，以便以合理的查看大小完整地显示资产。 |   |   |
+   | **全屏模式** | 要进入全屏模式，请在页面的右下角选择全屏图标。 |   |   |
 
 ## 关于使用3D媒体组件 {#working-with-three-d-media-component}
 
@@ -287,8 +287,8 @@ Dynamic Media接受支持的各种3D文件格式 *静态内容* 在Dynamic Media
 
 * **[!UICONTROL URL]**  — 使用 **[!UICONTROL URL]** 如果您使用的是第三方Web内容管理系统，并且希望使用维度查看器将Dynamic Media 3D资产链接到网页。
 
-   参见 [将URL链接到您的Web应用程序](/help/assets/linking-urls-to-yourwebapplication.md#obtaining-a-url-for-an-asset).
+  参见 [将URL链接到您的Web应用程序](/help/assets/linking-urls-to-yourwebapplication.md#obtaining-a-url-for-an-asset).
 
 * **[!UICONTROL 嵌入]**  — 使用 **[!UICONTROL 嵌入]** 当您想要使用维度查看器查看嵌入到网页中的Dynamic Media 3D资源时。 将嵌入代码复制到剪贴板，以便将其粘贴到网页中。 中不允许编辑代码 **[!UICONTROL 嵌入]** 对话框。
 
-   参见 [在网页上嵌入Dynamic Media视频、图像查看器或维度查看器](/help/assets/embed-code.md#embedding-the-video-or-image-viewer-on-a-web-page).
+  参见 [在网页上嵌入Dynamic Media视频、图像查看器或维度查看器](/help/assets/embed-code.md#embedding-the-video-or-image-viewer-on-a-web-page).

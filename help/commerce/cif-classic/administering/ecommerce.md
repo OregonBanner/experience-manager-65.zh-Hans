@@ -5,10 +5,10 @@ topic-tags: e-commerce
 content-type: reference
 docset: aem65
 exl-id: d995f0d6-9e48-4228-ac82-f33a0b25b9d3
-source-git-commit: 745ca1aa7bc96d0938ec550a357d9edcbea341db
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '753'
+ht-degree: 2%
 
 ---
 
@@ -42,7 +42,7 @@ Adobe提供了两个版本的Commerce Integration Framework：
    <td>
     <ul>
      <li>Adobe Commerce</li>
-     <li>Java和Javascript</li>
+     <li>Java和JavaScript</li>
      <li>JCR存储库中未存储商业数据</li>
     </ul> </td>
   </tr>
@@ -163,7 +163,7 @@ AEM eCommerce提供：
 * 开发的可能性 **基于购物者数据和活动的体验驱动型商务**. 这允许您实现许多场景：
 
    * 例如，当订单总额超过特定金额时，可以降低运费。
-   * 另一种方法可能会允许您提供使用用户档案数据的季节性选件（例如位置）。 然后，可以突出显示这些内容，同样在必要时取决于其他因素。
+   * 另一种方法可能会允许您提供使用配置文件数据的季节性优惠（例如，位置）。 然后，可以突出显示这些内容，同样在必要时取决于其他因素。
 
   在以下示例中，显示了一个Teaser，因为购物车的内容不到$75：
 

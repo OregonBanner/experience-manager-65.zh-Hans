@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
 discoiquuid: 747d13d3-e7cc-4aa1-bcc8-4b57157e71ed
 exl-id: 6debb1a7-7889-4fdd-87c7-ecb87cc0b1f5
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
 source-wordcount: '296'
 ht-degree: 0%
@@ -47,27 +47,27 @@ ht-degree: 0%
 
    `"EventName Selector": "Function"`
 
-   当您触发名为的Javascript事件时 `EventName`在指定的HTML元素上 `Selector`，则 `Function`称为。
+   当您触发名为的JavaScript事件时 `EventName`在指定的HTML元素上 `Selector`，则 `Function`称为。
 
 1. 查找
 
    * &quot;点按.taskContentArea&quot; ： &quot;onTaskClick&quot;，
 
-      &quot;点按.taskOpenArea&quot; ： &quot;onTaskClick&quot;，
+     &quot;点按.taskOpenArea&quot; ： &quot;onTaskClick&quot;，
 
-      &quot;点按.task-content&quot; ： &quot;onTaskClick&quot;，
+     &quot;点按.task-content&quot; ： &quot;onTaskClick&quot;，
 
-      &quot;点按.last_empty_div&quot; ： &quot;onTaskClick&quot;，
+     &quot;点按.last_empty_div&quot; ： &quot;onTaskClick&quot;，
+
    和替换为
 
    * &quot;轻扫.taskContentArea&quot; ：&quot;onTaskClick&quot;，
 
-      &quot;轻扫.taskOpenArea&quot; ：&quot;onTaskClick&quot;，
+     &quot;轻扫.taskOpenArea&quot; ：&quot;onTaskClick&quot;，
 
-      &quot;轻扫.task-content&quot; ：&quot;onTaskClick&quot;，
+     &quot;轻扫.task-content&quot; ：&quot;onTaskClick&quot;，
 
-      &quot;swipe .last_empty_div&quot; ： &quot;onTaskClick&quot;，
-
+     &quot;swipe .last_empty_div&quot; ： &quot;onTaskClick&quot;，
 
 1. 保存并关闭 `task.js` 文件。
 1. 构建并运行AEM Forms应用程序。 现在，您可以使用向左轻扫和向右轻扫来打开。

@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: c68d5853-684f-42f2-a215-c1eaee06f58a
 docset: aem65
 exl-id: 6d759907-8796-4749-bd80-306ec7f2c819
-source-git-commit: 8f98d018518f2491f29211552863d3fa005cc0b7
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
 source-wordcount: '1140'
 ht-degree: 17%
@@ -87,7 +87,7 @@ AEM允许您轻松地创建和更新区段、Teaser和营销活动。 它还允�
   </tr>
   <tr>
    <td> 脚本</td>
-   <td>要计算的Javascript表达式。<br /> </td>
+   <td>要计算的JavaScript表达式。<br /> </td>
   </tr>
   <tr>
    <td> 区段引用 <br /> </td>

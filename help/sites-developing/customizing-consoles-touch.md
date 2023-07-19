@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 61a4e196-bd53-4ef0-816b-c14401462457
 docset: aem65
 exl-id: 6e67f2b3-78b9-45f2-b496-61776b9fd9cc
-source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '670'
+source-wordcount: '671'
 ht-degree: 1%
 
 ---
@@ -42,7 +42,6 @@ AEM提供各种机制使您能够自定义控制台(和 [页面创作功能](/he
 >
 
 
-
 >[!CAUTION]
 >
 >您 ***必须*** 不更改 `/libs` 路径。
@@ -54,9 +53,7 @@ AEM提供各种机制使您能够自定义控制台(和 [页面创作功能](/he
 >1. 重新创建所需项目（即该项目存在于中） `/libs`)下 `/apps`
 >
 >1. 在中进行任何更改 `/apps`
-
 >
-
 
 例如，以下位置位于 `/libs` 结构可以重叠：
 
@@ -91,7 +88,7 @@ AEM提供各种机制使您能够自定义控制台(和 [页面创作功能](/he
    定义以下属性：
 
    * **名称**: `sling:orderBefore`
-   * **类型**: `String`
+   * **类型**： `String`
    * **值**: `column`
 
 ### 将新操作添加到工具栏 {#add-new-action-to-the-toolbar}
@@ -142,17 +139,18 @@ AEM提供各种机制使您能够自定义控制台(和 [页面创作功能](/he
 
    * 在节点上：
 
-      ```
-             /apps/wcm/core/content/common/availablecolumns
-      ```
+     ```
+            /apps/wcm/core/content/common/availablecolumns
+     ```
 
    * 添加新列 — 或删除现有列。
+
    参见 [使用叠加（和Sling资源合并器）](/help/sites-developing/overlays.md) 了解更多信息。
 
 1. （可选）：
 
    * 如果要插入其他数据，需要编写 [PageInforProvider](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/PageInfoProvider.html) 带有
-      `pageInfoProviderType` 属性.
+     `pageInfoProviderType` 属性.
 
    例如，请参阅下面的附加类/捆绑包（来自GitHub）。
 
@@ -160,6 +158,6 @@ AEM提供各种机制使您能够自定义控制台(和 [页面创作功能](/he
 
 ### 筛选资源 {#filtering-resources}
 
-使用控制台时，常见的用例是用户必须从资源（例如页面、组件、资源等）中进行选择的情况。 这可以采用列表形式，例如，作者必须从中选择一个项目。
+使用控制台时，常见的用例是用户必须从资源（例如，页面、组件、资产等）中进行选择的情况。 这可以采用列表形式，例如，作者必须从中选择一个项目。
 
 为了使列表保持合理的大小并且与用例相关，可以采用自定义谓词的形式实施过滤器。 参见 [本文](/help/sites-developing/customizing-page-authoring-touch.md#filtering-resources) 了解详细信息。

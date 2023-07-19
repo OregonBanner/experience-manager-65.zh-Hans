@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 73f37b3c-5dbe-4132-bb60-daa8de871884
 feature: Configuring
 exl-id: bfd5441c-19cc-4fa8-b597-b1221465f75d
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '414'
+source-wordcount: '416'
 ht-degree: 0%
 
 ---
@@ -53,7 +53,7 @@ ht-degree: 0%
    </Location>
    ```
 
-   这允许中间缓存（例如浏览器缓存）将CSS、Javascript、PNG和GIF文件存储长达一个月，直到它们过期为止。 这意味着它们不需要从AEM或Web服务器请求，但可以保留在浏览器缓存中。
+   这允许中间缓存（例如，浏览器缓存）将CSS、JavaScript、PNG和GIF文件存储长达一个月，直到这些文件过期。 这意味着它们不需要从AEM或Web服务器请求，但可以保留在浏览器缓存中。
 
    网站的其他部分不应缓存在创作实例上，因为它们随时可能更改。
 
@@ -75,7 +75,7 @@ ht-degree: 0%
    </Location>
    ```
 
-   这允许中间缓存（例如浏览器缓存）将CSS、Javascript、PNG和GIF文件存储在客户端缓存中长达一天。 尽管此示例说明了以下所有内容的全局设置 `/content` 和 `/etc/designs`，您应该让它更细微。
+   这允许中间缓存（例如，浏览器缓存）将CSS、JavaScript、PNG和GIF文件存储在客户端缓存中长达一天。 尽管此示例说明了以下所有内容的全局设置 `/content` 和 `/etc/designs`，您应该让它更细微。
 
    根据站点更新的频率，您还可以考虑缓存HTML页面。 一个合理的时间段是1小时：
 

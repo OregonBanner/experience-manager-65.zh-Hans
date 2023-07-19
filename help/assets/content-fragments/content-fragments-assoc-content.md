@@ -4,9 +4,9 @@ description: 了解AEM关联内容功能如何提供连接，以便在将资产�
 feature: Content Fragments
 role: User
 exl-id: 8b93fd6e-47d1-46fd-901b-621caa25be7b
-source-git-commit: de38dbb9d0ce523543c11e665c02034f4b38f1e6
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '244'
+source-wordcount: '245'
 ht-degree: 60%
 
 ---
@@ -19,9 +19,9 @@ AEM关联内容功能提供了连接，以便在将资产添加到内容页面�
 
 >[!NOTE]
 >
->可以通过多种方法向片段和/或页面中添加[可视资产（例如图像）](/help/assets/content-fragments/content-fragments.md#fragments-with-visual-assets)。
+>可以通过多种方法向片段和/或页面中添加[可视资源（例如图像）](/help/assets/content-fragments/content-fragments.md#fragments-with-visual-assets)。
 
-要建立关联，您首先需要 [将媒体资产添加到收藏集](/help/assets/manage-collections.md)。 完成该操作后，您可以：
+要建立关联，您首先需要 [将媒体资源添加到收藏集](/help/assets/manage-collections.md)。 完成该操作后，您可以：
 
 1. 打开片段，然后从侧面板中选择&#x200B;**关联的内容**。
 
@@ -47,6 +47,6 @@ AEM关联内容功能提供了连接，以便在将资产添加到内容页面�
 关联收藏集后，您可以：
 
 * **删除**&#x200B;关联。
-* **添加资产**&#x200B;到收藏集。
-* 选择资产以执行进一步操作。
-* 编辑资产。
+* **添加资源**&#x200B;到收藏集。
+* 选择资源以执行进一步操作。
+* 编辑资源。

@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 11ff8bb3-39eb-4f77-b3dc-720262fa7f3f
 docset: aem65
 exl-id: 0e13112b-d9df-4ba6-bd73-431c87890b79
-source-git-commit: 75c6bb87bb06c5ac9378ccebf193b5416c080bb1
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1179'
+source-wordcount: '1180'
 ht-degree: 1%
 
 ---
@@ -168,7 +168,7 @@ AEM提供不同的报告，以帮助您分析和监控实例的状态。 此MCM�
 
    ![列表视图](do-not-localize/mcm_icon_listview.png)
 
-   下面列出了选定营销活动的所有体验（例如Teaser和新闻稿）：
+   这将列出选定营销活动的所有体验（例如，Teaser和新闻稿）：
 
    ![mcm_banner_listview](assets/mcm_banner_listview.png)
 

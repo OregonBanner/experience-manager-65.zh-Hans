@@ -5,10 +5,10 @@ contentOwner: AG
 role: Architect, Admin
 feature: Translation
 exl-id: 8990feca-cfda-4974-915e-27aa9d8f2ee1
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1874'
-ht-degree: 16%
+source-wordcount: '1870'
+ht-degree: 15%
 
 ---
 
@@ -24,7 +24,6 @@ ht-degree: 16%
 >
 >* 创建翻译项目的用户是组的成员 `projects-administrators`.
 >* 翻译服务提供商支持二进制文件的翻译。
-
 
 ## 创建和翻译工作流 {#create-and-translate-workflow}
 
@@ -67,7 +66,7 @@ ht-degree: 16%
 
 1. 单击 **[!UICONTROL 创建并翻译]** 在底部。
 
-1. 从&#x200B;**[!UICONTROL 目标语言]**&#x200B;列表中，选择要为其创建文件夹结构的语言。
+1. 从 **[!UICONTROL 目标语言]** 列表中，选择要为其创建文件夹结构的语言。
 
 1. 从 **[!UICONTROL 项目]** 列表，选择 **[!UICONTROL 创建新翻译项目]**.
 
@@ -118,7 +117,7 @@ ht-degree: 16%
 1. 单击 **[!UICONTROL 语言副本]** 下 **[!UICONTROL 副本]**. 此时将显示可用翻译副本列表。
 1. 单击 **[!UICONTROL 创建并翻译]** 在底部。
 
-1. 从&#x200B;**[!UICONTROL 目标语言]**&#x200B;列表中，选择要为其创建文件夹结构的语言。
+1. 从 **[!UICONTROL 目标语言]** 列表中，选择要为其创建文件夹结构的语言。
 
 1. 从“项 **[!UICONTROL 目]** ”列表中，选择 **[!UICONTROL 添加到现有翻译项目]** ，以在文件夹上运行翻译工作流。
 
@@ -137,7 +136,7 @@ ht-degree: 16%
 
    ![chlimage_1-80](assets/chlimage_1-80.png)
 
-1. 单击底部的省略号 **翻译作业** 用于在翻译工作流中查看资产的拼贴。 翻译作业列表还会显示资产元数据和标记条目。这些条目指示资产的元数据和标记也会被翻译。
+1. 单击底部的省略号 **翻译作业** 用于在翻译工作流中查看资产的拼贴。 翻译作业列表还会显示资源元数据和标记条目。这些条目指示资源的元数据和标记也会被翻译。
 
    >[!NOTE]
    >
@@ -235,7 +234,7 @@ ht-degree: 16%
 
 ## 创建临时语言副本 {#creating-temporary-language-copies}
 
-运行翻译工作流以使用原始资产的编辑版本更新语言副本时，会保留现有的语言副本，直到您批准翻译的资产为止。 [!DNL Adobe Experience Manager Assets] 将新翻译的资产存储在临时位置，并在您明确批准资产后更新现有语言副本。 如果拒绝资产，则语言副本将保持不变。
+运行翻译工作流以使用原始资产的编辑版本更新语言副本时，会保留现有的语言副本，直到您批准翻译的资产为止。 [!DNL Adobe Experience Manager Assets] 将新翻译的资产存储在临时位置，并在您明确批准资产后更新现有语言副本。 如果您拒绝资产，则语言副本将保持不变。
 
 1. 单击下的源根文件夹 **[!UICONTROL 语言副本]** ，您已为其创建了语言副本，然后单击 **[!UICONTROL 在资产中展现]** 在中打开文件夹 [!DNL Experience Manager Assets].
 

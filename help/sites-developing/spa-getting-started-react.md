@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: cc1e5c20-cc9c-4222-8a11-ec5a963d4466
 docset: aem65
 exl-id: 552649e7-6054-4ae8-b570-5ba7230e6f19
-source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1166'
+source-wordcount: '1167'
 ht-degree: 5%
 
 ---
@@ -157,7 +157,7 @@ ReactDOM.render(
 
 #### 静态实例化 {#static-instantiation}
 
-使用组件模板（例如JSX）静态实例化组件时，必须将值从模型传递到组件的属性。
+使用组件模板（例如，JSX）静态实例化组件时，必须将值从模型传递到组件的属性。
 
 ### App.js {#app-js}
 
@@ -226,7 +226,7 @@ class Image extends Component {
 MapTo('my-react-app/components/content/image')(Image, ImageEditConfig);
 ```
 
-AEM中SPA的核心思想是：将SPA组件映射到AEM组件，并在修改内容时更新组件（反之亦然）。 查看文档 [SPA编辑器概述](/help/sites-developing/spa-overview.md) 以获取该通信模型的摘要。
+AEM中SPA的核心思想是：将SPA组件映射到AEM组件，并在内容被修改时更新组件（反之亦然）。 查看文档 [SPA编辑器概述](/help/sites-developing/spa-overview.md) 以获取该通信模型的摘要。
 
 `MapTo('my-react-app/components/content/image')(Image, ImageEditConfig);`
 

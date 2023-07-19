@@ -10,9 +10,9 @@ discoiquuid: 1e95c66b-d132-4c44-a1dc-31fd09af8113
 docset: aem65
 feature: Adaptive Forms
 exl-id: e755159f-374f-42b8-b28b-e8864df44f9d
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '2055'
+source-wordcount: '2054'
 ht-degree: 0%
 
 ---
@@ -127,7 +127,6 @@ Ultramine-Accessible主题是参考主题。 它有助于演示如何在自适�
 >* 单选按钮和复选框只能有两个辅助功能选项，即“自定义文本”和“标题”。
 >* 对于基于XFA的自适应表单，可访问性选项继承自XDP中设置的可访问性选项。 XDP中的工具提示映射到简短描述，而标题映射到标题。 其他选项按原样工作。
 
-
 ### 3.为图像提供等效文本 {#provide-text-equivalents-for-images}
 
 图像有助于提高某些用户的理解。 但是，对于使用屏幕阅读器的用户，图像会降低表单的可访问性。 如果选择使用图像，请为所有图像提供文本说明。
@@ -144,7 +143,7 @@ Ultramine-Accessible主题是参考主题。 它有助于演示如何在自适�
 
 视力障碍的用户依靠文本和背景之间的高对比度来阅读数字内容。 如果没有足够的对比度，对于某些用户来说，表单可能会变得很难（如果不是不可能的话）阅读。
 
-建议使用默认字体和背景颜色 — 白色背景上的黑色内容。 如果更改默认颜色，请在浅色背景颜色上选择深色前景颜色，反之亦然。
+建议使用默认字体和背景颜色 — 白色背景上的黑色内容。 如果更改默认颜色，请在浅色背景颜色上选择深色前景颜色，或反之。
 
 参见 [创建自适应表单的自定义主题](/help/forms/using/creating-custom-adaptive-form-themes.md)，以了解有关更改自适应表单的颜色对比度和主题的更多信息。
 

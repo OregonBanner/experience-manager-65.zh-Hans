@@ -8,9 +8,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: f45d8a9b-14d6-468f-a44c-3933e962922c
 exl-id: 7f00d426-4d28-41ee-8c54-636349e48669
-source-git-commit: 17d13e9b201629d9d1519fde4740cf651fe89d2c
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '2653'
+source-wordcount: '2654'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe建议对需要基于单页应用程序框架的客户端渲染（例如React）的项目使用SPA编辑器。 [了解详情](/help/sites-developing/spa-overview.md).
+>对于需要基于单页应用程序框架的客户端渲染（例如React）的项目，Adobe建议使用SPA编辑器。 [了解详情](/help/sites-developing/spa-overview.md).
 
 ## 移动应用程序的页面模板 {#page-templates-for-mobile-apps-1}
 
@@ -61,7 +61,7 @@ angular根据是否检测到wcmMode (！= WCMMode.DISABLED)，以确定是打开
 
 在创作模式下，每个页面将单独呈现。 angular不处理页面之间的路由，也不能使用ng-view加载包含页面组件的部分模板。 相反，页面模板(template.jsp)的内容通过包含在服务器端 `cq:include` 标记之前。
 
-此策略可启用作者功能（例如在段落系统、Sidekick、设计模式等中添加和编辑组件） 无需修改即可正常运行。 依赖客户端渲染的页面（例如应用程序的页面）在AEM创作模式下性能不佳。
+此策略可启用作者功能(例如在段落系统、Sidekick、设计模式等中添加和编辑组件) 无需修改即可正常运行。 依赖客户端渲染的页面（例如应用程序的页面）在AEM创作模式下性能不佳。
 
 请注意，template.jsp include封装在 `div` 包含 `ng-controller` 指令。 此结构允许DOM内容与控制器的链接。 因此，虽然在客户端呈现自身的页面会失败，但可以正常工作的各个组件可以正常使用（请参阅下面关于组件的部分）。
 

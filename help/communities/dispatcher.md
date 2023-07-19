@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 content-type: reference
 topic-tags: deploying
 exl-id: fb4e3973-2193-4bb5-8120-bf2f3ec80112
-source-git-commit: 1ef5593495b4bf22d2635492a360168bccc1725d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
 source-wordcount: '644'
 ht-degree: 11%
@@ -86,7 +86,7 @@ OSGi配置 **ACS AEM Commons - Dispatcher缓存控制标头 — Max Age** 设置
 
 >[!CAUTION]
 >
->请参阅 [Dispatcher 安全检查清单](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/security-checklist.html)以了解使用 Dispatcher 限制访问时的更多注意事项。有关 AEM 安装的其他安全详细信息，另请阅读 [AEM 安全检查清单](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hans)。
+>请参阅 [Dispatcher 安全检查清单](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/security-checklist.html)以了解使用 Dispatcher 限制访问时的更多注意事项。有关 AEM 安装的其他安全详细信息，另请阅读 [AEM 安全检查清单](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html)。
 >
 
 应将以下条目添加到/filter部分的末尾，尤其是在所有拒绝条目之后。
@@ -328,14 +328,14 @@ OSGi配置 **ACS AEM Commons - Dispatcher缓存控制标头 — Max Age** 设置
     #
     # Entries can be either specified using urls, or elements of the request line:
     #
-    # (1) urls will be compared against the entire request line, e.g.:
+    # (1) urls will be compared against the entire request line, for example,:
     #
     #     /0001 { /type "deny" /url "* /index.html *" }
     #
     #   matches request "GET /index.html HTTP/1.1" but not "GET /index.html?a=b HTTP/1.1".
     #
     # (2) method/url/query/protocol will be compared againts the respective elements of
-    #   the request line, e.g.:
+    #   the request line, for example,:
     #
     #     /0001 { /type "deny" /method "GET" /url "/index.html" }
     #
@@ -641,14 +641,14 @@ OSGi配置 **ACS AEM Commons - Dispatcher缓存控制标头 — Max Age** 设置
     #
     # Entries can be either specified using globs, or elements of the request line:
     #
-    # (1) globs will be compared against the entire request line, e.g.:
+    # (1) globs will be compared against the entire request line, for example,:
     #
     #     /0001 { /type "deny" /glob "* /index.html *" }
     #
     #   matches request "GET /index.html HTTP/1.1" but not "GET /index.html?a=b HTTP/1.1".
     #
     # (2) method/url/query/protocol will be compared againts the respective elements of
-    #   the request line, e.g.:
+    #   the request line, for example,:
     #
     #     /0001 { /type "deny" /method "GET" /url "/index.html" }
     #

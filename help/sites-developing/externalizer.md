@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 938469ad-f466-42f4-8b6f-bfc060ae2785
 docset: aem65
 exl-id: 971d6c25-1fbe-4c07-944e-be6b97a59922
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '500'
+source-wordcount: '501'
 ht-degree: 0%
 
 ---
@@ -54,6 +54,7 @@ ht-degree: 0%
 
       * 如果需要，可使用https实施https链接
       * 如果客户端代码在请求URL外部化时未覆盖方案，则将使用该架构。
+
    * **服务器** 是主机名（可以是域名或ip地址）。
    * **端口** （可选）是端口号。
    * **contextpath** （可选）仅当AEM作为Web应用程序安装在其他上下文路径下时，才会设置。
@@ -100,7 +101,6 @@ ht-degree: 0%
 
    * `https://www.website.com/contextpath/my/page.html`
 
-
 1. **要将具有“作者”域的路径外部化，请执行以下操作：**
 
    ```java
@@ -115,7 +115,6 @@ ht-degree: 0%
 
    * `https://author.website.com/contextpath/my/page.html`
 
-
 1. **要将具有“本地”域的路径外部化，请执行以下操作：**
 
    ```java
@@ -129,6 +128,5 @@ ht-degree: 0%
    `myExternalizedUrl` 最终得到值：
 
    * `https://publish-3.internal/contextpath/my/page.html`
-
 
 1. 有关更多示例，请参见 [Javadocs](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/Externalizer.html).

@@ -2,10 +2,10 @@
 title: 异步作业
 description: Adobe Experience Manager 通过异步完成某些资源密集型任务来优化性能。
 exl-id: 4af1bcfe-9f2e-44a4-8666-881f2dccc3bc
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '891'
-ht-degree: 98%
+source-wordcount: '895'
+ht-degree: 96%
 
 ---
 
@@ -101,7 +101,7 @@ AEM 每天 01:00 运行清除作业，以删除已完成的已超过一天的异
 
    ![资产删除阈值](assets/async-delete-threshold.png)
 
-1. 选中选项&#x200B;**启用电子邮件通知**，以接收此作业状态的电子邮件通知。例如，“成功”、“失败”。
+1. 选中选项&#x200B;**启用电子邮件通知**，以接收此作业状态的电子邮件通知。例如，成功、失败。
 1. 保存更改。
 
 ### 配置异步资产移动操作 {#configuring-asynchronous-move-operations}
@@ -114,7 +114,7 @@ AEM 每天 01:00 运行清除作业，以删除已完成的已超过一天的异
 
    ![资产移动阈值](assets/async-move-threshold.png)
 
-1. 选中选项&#x200B;**启用电子邮件通知**，以接收此作业状态的电子邮件通知。例如，“成功”、“失败”。
+1. 选中选项&#x200B;**启用电子邮件通知**，以接收此作业状态的电子邮件通知。例如，成功、失败。
 1. 保存更改。
 
 ### 配置异步页面移动操作 {#configuring-asynchronous-page-move-operations}
@@ -127,14 +127,14 @@ AEM 每天 01:00 运行清除作业，以删除已完成的已超过一天的异
 
    ![页面移动阈值](assets/async-page-move.png)
 
-1. 选中选项&#x200B;**启用电子邮件通知**，以接收此作业状态的电子邮件通知。例如，“成功”、“失败”。
+1. 选中选项&#x200B;**启用电子邮件通知**，以接收此作业状态的电子邮件通知。例如，成功、失败。
 1. 保存更改。
 
 ### 配置异步 MSM 操作 {#configuring-asynchronous-msm-operations}
 
 1. 在“全局导航”中，单击&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 操作]** > **[!UICONTROL Web 控制台]**。
 1. 从 Web 控制台中，打开&#x200B;**[!UICONTROL 异步页面移动操作作业处理配置。]**
-1. 选中选项&#x200B;**启用电子邮件通知**，以接收此作业状态的电子邮件通知。例如，“成功”、“失败”。
+1. 选中选项&#x200B;**启用电子邮件通知**，以接收此作业状态的电子邮件通知。例如，成功、失败。
 
    ![MSM 配置](assets/async-msm.png)
 
@@ -148,4 +148,3 @@ AEM 每天 01:00 运行清除作业，以删除已完成的已超过一天的异
 >* [导入资源元数据](/help/assets/metadata.md#import-metadata).
 >* [导出资源元数据](/help/assets/metadata.md#export-metadata).
 >* [使用“连接的资产”从远程部署中共享 DAM 资产](/help/assets/use-assets-across-connected-assets-instances.md)。
-

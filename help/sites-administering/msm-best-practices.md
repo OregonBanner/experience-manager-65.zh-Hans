@@ -4,10 +4,10 @@ description: 查找由Adobe工程和咨询团队编译的最佳实践，以帮�
 topic-tags: site-features, best-practices
 feature: Multi Site Manager
 exl-id: 3fedc1ba-64f5-4fbe-9ee5-9b96b75dda58
-source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1616'
-ht-degree: 41%
+source-wordcount: '1617'
+ht-degree: 42%
 
 ---
 
@@ -32,15 +32,13 @@ MSM 是用于自动化内容部署的可配置框架。实施通常涉及网站�
 >* [解决 MSM 问题和常见问题](troubleshoot-msm.md)
 >
 
-
 >[!NOTE]
 >
 >您还可以使用 [引用组件](/help/sites-authoring/default-components-foundation.md#reference) 重复使用单个页面或段落。 但请记住：
 >
 >* MSM更加灵活，允许对同步的内容以及同步时间进行细粒度控制。
->* [核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans) 现在建议使用基础组件。
+>* [核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) 现在建议使用基础组件。
 >
-
 
 ## Live Copy 源和 Blueprint 配置 {#live-copy-sources-and-blueprint-configurations}
 
@@ -81,11 +79,11 @@ MSM 是用于自动化内容部署的可配置框架。实施通常涉及网站�
 
 * 时间 [创建Live Copy](/help/sites-administering/msm-livecopy.md#creating-a-live-copy-of-a-page)
 
-   这可以被视为更通用的方法，允许您从任何页面创建活动副本。 Live Copy的内容结构与源完全匹配。
+  这可以被视为更通用的方法，允许您从任何页面创建活动副本。 Live Copy的内容结构与源完全匹配。
 
 * 时间 [创建站点](/help/sites-administering/msm-livecopy.md#creating-a-live-copy-of-a-site-from-a-blueprint-configuration)
 
-   这是一种更专业的方法，主要用于创建具有多语言结构的网站。
+  这是一种更专业的方法，主要用于创建具有多语言结构的网站。
 
 以下是创建站点时要牢记的几个注意事项：
 
@@ -93,7 +91,7 @@ MSM 是用于自动化内容部署的可配置框架。实施通常涉及网站�
 * 要允许选择在新站点中创建的语言路径，相应的语言根必须存在于 Blueprint（源）中。
 * 一次 [新站点已创建为Live Copy](/help/sites-administering/msm-livecopy.md#creating-a-live-copy-of-a-site-from-a-blueprint-configuration) (使用 **创建**，则 **站点**)，此Live Copy的前两个级别为 *浅*. 页面的子级不属于实时关系，但如果找到与触发器匹配的实时关系，则转出仍会下降。
 
-   这有助于避免：
+  这有助于避免：
 
    * 在Blueprint中手动添加语言（第一个级别下）
    * 直接在语言根下手动添加内容，
@@ -110,7 +108,7 @@ MSM 可通过两种方式来帮助创建多语言网站：
       * MSM允许您在页面和/或组件级别取消继承。 这有助于防止在下一次转出时覆盖已翻译的内容（来自Live Copy，以及来自Blueprint的尚未翻译的内容）。
       * 一些第三方翻译连接器会自动实施对 MSM 继承的管理。
 
-         请与您的翻译服务提供商联系以获取更多信息。
+        请与您的翻译服务提供商联系以获取更多信息。
 
       * 创建并翻译语言母版的另一种方法是将语言副本与 AEM 的现成的翻译集成框架结合使用。
 
@@ -118,7 +116,7 @@ MSM 可通过两种方式来帮助创建多语言网站：
 
    * 例如，从主控的法语站点到特定于国家/地区的站点，如法国/法语、加拿大/法语、瑞士/法语。
 
-有关详细信息，请参阅 [翻译多语言站点的内容](/help/sites-administering/translation.md) 和 [翻译最佳实践](/help/sites-administering/tc-bp.md).
+有关更多信息，请参阅[翻译多语言站点的内容](/help/sites-administering/translation.md)和[翻译最佳实践。](/help/sites-administering/tc-bp.md)
 
 ## 结构更改和转出 {#structure-changes-and-rollouts}
 
@@ -142,9 +140,9 @@ MSM 可通过两种方式来帮助创建多语言网站：
 
    * 此新配置必须包含操作：
 
-      `PageMoveAction`
+     `PageMoveAction`
 
-      不要向此配置添加其他操作。
+     不要向此配置添加其他操作。
 
 * 定位新配置：
 
@@ -152,13 +150,13 @@ MSM 可通过两种方式来帮助创建多语言网站：
 
       * 将新创建的配置放置在标准转出配置的前面。
 
-         标准转出配置将负责删除旧位置的页面。
+        标准转出配置将负责删除旧位置的页面。
+
    * 要转出页面移动，同时将相应页面保留在活动副本中的旧位置（本质上复制内容），请执行以下操作：
 
       * 将新创建的配置放置在标准转出配置的后面。
 
-         这将确保不会在Live Copy中删除内容或从发布中停用内容。
-
+        这将确保不会在Live Copy中删除内容或从发布中停用内容。
 
 ## 自定义转出 {#customizing-rollouts}
 

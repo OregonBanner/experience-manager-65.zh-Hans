@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 907316d1-3d23-4c46-bccb-bad6fe1bd1bb
 docset: aem65
 exl-id: 10ea7d2e-6e44-4d5c-a2b2-63c73b18f172
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1562'
+source-wordcount: '1563'
 ht-degree: 3%
 
 ---
@@ -37,6 +37,7 @@ SharePoint连接器支持以下基本功能：
 >AEM 6.1 Service Pack 2还支持SharePoint Connector。 连接器不再支持虚拟存储库装载，因此无法装载。 如果要使用Java API访问Sharepoint存储库，请在项目中使用Sharepoint连接器的JCR存储库实施。
 >
 >SharePoint服务器和相关IT基础架构的安装、配置、管理和IT操作不在本文档的涵盖范围内。 请参阅供应商文档，网址为 [SharePoint](https://www.microsoft.com/sharepoint) 以了解有关这些主题的信息。 连接器要求正确安装、配置和操作基础架构的这些部分。
+>
 
 ## 快速入门 {#getting-started}
 

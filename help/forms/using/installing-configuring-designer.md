@@ -12,9 +12,9 @@ discoiquuid: f3a5b5ce-2262-4d5d-a8ae-d59a3a4229e7
 docset: aem65
 role: Admin
 exl-id: 90503d29-e079-43f4-a5dc-ce90ed7844c6
-source-git-commit: 1b2d743f8f2172c4e4663917d598734cb1ea1ea4
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '477'
+source-wordcount: '476'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,6 @@ Designer作为独立的安装程序提供，并且与WorkBench捆绑在一起。
    >[!NOTE]
    >
    > * 从Adobe Experience Manager 6.5 Forms Service Pack 15 (6.5.15.0)版本开始，Forms Designer版本还包含Service Pack版本。 例如，对于Service Pack 15，版本号为6.5.15.20221112.1.0。在此示例中，6.5.15是Service Pack版本。
-
 
 1. 通过双击setup.exe启动AEM Forms Designer安装程序。
 1. 继续并在“个性化”屏幕上提供您的详细信息和序列号。

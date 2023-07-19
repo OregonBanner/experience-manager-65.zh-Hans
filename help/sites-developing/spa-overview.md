@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 06b8c0be-4362-4bd1-ad57-ea5503616b17
 docset: aem65
 exl-id: 7b34be66-bb61-4697-8cc8-428f7c63a887
-source-git-commit: a547b2e24205c63284a0e77f2e7f5678ae24968b
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1657'
-ht-degree: 89%
+source-wordcount: '1659'
+ht-degree: 90%
 
 ---
 
@@ -102,7 +102,6 @@ SPA 的页面组件不通过 JSP 或 HTL 文件提供其子组件的 HTML 元素
 >* 在生产（发布）中，从不加载 SPA 编辑器。
 >
 
-
 ### 客户端服务器页面编辑工作流 {#client-server-page-editing-workflow}
 
 这是对编辑 SPA 时的客户端-服务器交互的更详细概述。
@@ -183,7 +182,7 @@ SPA 编辑器 SDK 支持以下最低版本：
 如果您想使用在 SPA 中创建的文本组件的就地编辑器，则需要进行额外配置。
 
 1. 在包含文本 HTML 的容器包装器元素上设置属性（可以是任意属性）。对于WKND日志示例内容，它是 `<div>` 元素和已使用的选择器为 `data-rte-editelement`.
-1. 设置配置 `editElementQuery` 在对应AEM文本组件的 `cq:InplaceEditingConfig` 指向该选择器，例如 `data-rte-editelement`. 这可让编辑器知道哪个 HTML 元素包装了 HTML 文本。
+1. 在指向该选择器的相应 AEM 文本组件的 `cq:InplaceEditingConfig` 上设置配置 `editElementQuery`，例如 `data-rte-editelement`。这可让编辑器知道哪个 HTML 元素包装了 HTML 文本。
 
 有关如何执行此操作的示例，请参见 [WKND日志示例内容。](https://github.com/adobe/aem-sample-we-retail-journal/pull/16/files)
 

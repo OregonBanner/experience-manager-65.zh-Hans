@@ -8,10 +8,10 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: aa89326a-ad33-4b0b-8d09-c68c5a5c790a
 exl-id: de1ae7e3-db3a-4b5e-8a4f-ae111227181f
-source-git-commit: e85aacd45a2bbc38f10d03915e68286f0a55364e
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '642'
-ht-degree: 40%
+source-wordcount: '643'
+ht-degree: 42%
 
 ---
 
@@ -77,7 +77,7 @@ ht-degree: 40%
 
    ![screen_shot_2018-03-22at110606](assets/screen_shot_2018-03-22at110606.png)
 
-   在此，您可以使用相应的字段和/或图标来：
+   在此，可使用相应的字段和/或图标执行以下操作：
 
    * 输入注释文本。
    * 创建草图（线和形状）以突出显示组件的某个区域。

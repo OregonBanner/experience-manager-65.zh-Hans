@@ -1,8 +1,8 @@
 ---
-title: ContextHub Javascript API参考
-seo-title: ContextHub Javascript API Reference
-description: 将ContextHub组件添加到页面后，ContextHub Javascript API将可用于您的脚本
-seo-description: The ContextHub Javascript API is available to your scripts when the ContextHub component has been added to the page
+title: ContextHub JavaScript API参考
+seo-title: ContextHub JavaScript API Reference
+description: 将ContextHub组件添加到页面后，ContextHub JavaScript API将可用于您的脚本
+seo-description: The ContextHub JavaScript API is available to your scripts when the ContextHub component has been added to the page
 uuid: 296d6c8e-517f-4837-9e86-ae571ea8aa17
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,20 +11,20 @@ content-type: reference
 discoiquuid: 90605f41-1861-4891-a7c8-b8b5918cd5c6
 feature: Context Hub
 exl-id: b472d96f-b1a5-40b7-be2a-52f3396f6884
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '5006'
+source-wordcount: '5007'
 ht-degree: 2%
 
 ---
 
-# ContextHub Javascript API参考{#contexthub-javascript-api-reference}
+# ContextHub JavaScript API参考{#contexthub-javascript-api-reference}
 
-在以下情况下，您的脚本可以使用ContextHub Javascript API： [已将ContextHub组件添加到页面](/help/sites-developing/ch-adding.md#adding-contexthub-to-a-page-component).
+在以下情况下，您的脚本可以使用ContextHub JavaScript API： [已将ContextHub组件添加到页面](/help/sites-developing/ch-adding.md#adding-contexthub-to-a-page-component).
 
 ## contexthub常量 {#contexthub-constants}
 
-ContextHub Javascript API定义的常量值。
+ContextHub JavaScript API定义的常量值。
 
 ### 事件常量 {#event-constants}
 
@@ -71,7 +71,7 @@ ContextHub Javascript API定义的常量值。
 | ContextHub.Constants.EVENT_UI_INITIALIZED | 在UI容器初始化时触发 | ui已初始化 |
 | ContextHub.Constants.ACTIVE_UI_MODE | 指示活动的UI模式 | /_/active-ui-mode |
 
-## ContextHub Javascript API参考 {#contexthub-javascript-api-reference-2}
+## ContextHub JavaScript API参考 {#contexthub-javascript-api-reference-2}
 
 ContextHub对象提供对所有存储的访问。
 
@@ -98,7 +98,7 @@ var geoloc = allStores.geolocation
 
 #### getStore(name) {#getstore-name}
 
-将存储检索为Javascript对象。
+将存储检索为JavaScript对象。
 
 **参数**
 
@@ -391,9 +391,9 @@ A `boolean` 值：
 
 ## ContextHub.Store.JSONPStore {#contexthub-store-jsonpstore}
 
-包含JSON数据的存储。 数据检索自外部JSONP服务，或者可选地检索自返回JSON数据的服务。 使用指定服务详细信息 [ `init`](/help/sites-developing/contexthub-api.md#init-name-config) 函数创建此类的实例。
+包含JSON数据的存储。 数据检索自外部JSONP服务，或者可选地检索自返回JSON数据的服务。 使用指定服务详细信息 [`init`](/help/sites-developing/contexthub-api.md#init-name-config) 函数创建此类的实例。
 
-存储使用内存中持久性（Javascript变量）。 存储数据仅在页面的生命周期内可用。
+存储使用内存中持久性（JavaScript变量）。 存储数据仅在页面的生命周期内可用。
 
 ContextHub.Store.JSONPStore扩展 [ContextHub.Store.Core](/help/sites-developing/contexthub-api.md#contexthub-store-core) 并继承了该类的函数。
 
@@ -471,7 +471,7 @@ A `string` 表示服务URL的值。
 
    * eventDeferring： 32。
    * 事件：此存储的ContextHub.Utils.Eventing对象。 默认值为 `ContextHub.eventing` 对象。
-   * 持久性：此存储的ContextHub.Utils.Persistence对象。 默认情况下，使用内存持久性（Javascript对象）。
+   * 持久性：此存储的ContextHub.Utils.Persistence对象。 默认情况下，使用内存持久性（JavaScript对象）。
    * 服务： （对象）
 
       * host： （字符串）服务器名称或IP地址。
@@ -484,9 +484,9 @@ A `string` 表示服务URL的值。
          * auto: //
          * true： https://
          * false： https://
+
       * timeout： (Number)超时前等待JSONP服务响应的时间（以毫秒为单位）。
       * ttl：在对JSONP服务的调用之间经过的最小时间（以毫秒为单位）。 (请参阅 [查询服务](/help/sites-developing/contexthub-api.md#queryservice-reload) 函数)。
-
 
 #### queryService(reload) {#queryservice-reload}
 
@@ -522,7 +522,7 @@ ContextHub.Store.PersistedStore扩展 [ContextHub.Store.Core](/help/sites-develo
 
 ## ContextHub.Store.SessionStore {#contexthub-store-sessionstore}
 
-ContextHub.Store.SessionStore扩展 [ContextHub.Store.Core](/help/sites-developing/contexthub-api.md#contexthub-store-core) 所以它继承了类的所有功能。 使用内存中持久性（Javascript对象）保留此存储中的数据。
+ContextHub.Store.SessionStore扩展 [ContextHub.Store.Core](/help/sites-developing/contexthub-api.md#contexthub-store-core) 所以它继承了类的所有功能。 使用内存中持久性（JavaScript对象）保留此存储中的数据。
 
 ## ContextHub.UI {#contexthub-ui}
 
@@ -816,7 +816,7 @@ ContextHub.Utils.Cookie.setItem("name", "mycookie", {
 
 **返回**
 
-Javascript对象。
+JavaScript对象。
 
 **示例**
 
@@ -832,7 +832,7 @@ Object {
 
 #### strinify(data) {#stringify-data}
 
-将Javascript值和对象序列化为JSON格式的字符串值。
+将JavaScript值和对象序列化为JSON格式的字符串值。
 
 **参数**
 
@@ -900,7 +900,7 @@ ContextHub.Utils.JSON.stringify({
 
 **示例**
 
-请考虑以下Javascript对象：
+请考虑以下JavaScript对象：
 
 ```
 myObject {
@@ -1074,7 +1074,7 @@ ContextHub.Utils.JSON.tree.sanitizeKey(key)
 
 **示例**
 
-请考虑以下Javascript代码：
+请考虑以下JavaScript代码：
 
 ```
 var myObject = {
@@ -1109,7 +1109,7 @@ myObject对象具有以下值：
 
 **参数**
 
-* **storeType：** （字符串）存储类型的名称。 请参阅 `storeType` 的参数 [ `ContextHub.Utils.storeCandidates.registerStoreCandidate`](/help/sites-developing/contexthub-api.md#contexthub-utils-storecandidates) 函数。
+* **storeType：** （字符串）存储类型的名称。 请参阅 `storeType` 的参数 [`ContextHub.Utils.storeCandidates.registerStoreCandidate`](/help/sites-developing/contexthub-api.md#contexthub-utils-storecandidates) 函数。
 
 **返回**
 
@@ -1121,7 +1121,7 @@ myObject对象具有以下值：
 
 **参数**
 
-* storeType： （字符串）存储候选的名称。 请参阅 `storeType` 的参数 [ `ContextHub.Utils.storeCandidates.registerStoreCandidate`](/help/sites-developing/contexthub-api.md#registerstorecandidate-store-storetype-priority-applies) 函数。
+* storeType： （字符串）存储候选的名称。 请参阅 `storeType` 的参数 [`ContextHub.Utils.storeCandidates.registerStoreCandidate`](/help/sites-developing/contexthub-api.md#registerstorecandidate-store-storetype-priority-applies) 函数。
 
 **返回**
 
@@ -1133,7 +1133,7 @@ myObject对象具有以下值：
 
 **返回**
 
-一个字符串值数组，其中每个字符串是用来注册存储候选项的存储类型。 请参阅 `storeType` 的参数 [ `ContextHub.Utils.storeCandidates.registerStoreCandidate`](/help/sites-developing/contexthub-api.md#contexthub-utils-storecandidates) 函数。
+一个字符串值数组，其中每个字符串是用来注册存储候选项的存储类型。 请参阅 `storeType` 的参数 [`ContextHub.Utils.storeCandidates.registerStoreCandidate`](/help/sites-developing/contexthub-api.md#contexthub-utils-storecandidates) 函数。
 
 #### registerStoreCandidate(store， storeType， priority， applices) {#registerstorecandidate-store-storetype-priority-applies}
 

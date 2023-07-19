@@ -10,9 +10,9 @@ content-type: reference
 discoiquuid: 04ac8203-320b-4671-aaad-6e1397b12b6f
 docset: aem65
 exl-id: 383f84fd-455c-49a4-9e2b-1c4757cc188b
-source-git-commit: afd2afe182d65e64c0ad851b86021886078a9dd5
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '2079'
+source-wordcount: '2080'
 ht-degree: 1%
 
 ---
@@ -61,7 +61,7 @@ ht-degree: 1%
 
 #### 对组件映射进行动态建模 {#dynamic-model-to-component-mapping}
 
-有关如何在Javascript SPA SDK for AEM中发生动态模型到组件映射的详细信息，请参阅文章 [SPA的动态模型到组件映射](/help/sites-developing/spa-dynamic-model-to-component-mapping.md).
+有关如何在JavaScript SPA SDK for AEM中发生动态模型到组件映射的详细信息，请参阅文章 [SPA的动态模型到组件映射](/help/sites-developing/spa-dynamic-model-to-component-mapping.md).
 
 ### 特定于Framework的层 {#framework-specific-layer}
 
@@ -118,7 +118,7 @@ npm模块： [@adobe/aem-angular-editable-components](https://www.npmjs.com/pack
 
 项目组件必须将模型片段的访问权限委派给模型提供程序。 然后，模型提供程序负责侦听对模型的指定片段所做的更改，并将更新的模型返回到委托组件。
 
-为此，模型提供程序必须注册到 ` [PageModelManager](/help/sites-developing/spa-blueprint.md#pagemodelmanager)`. 然后，当发生更改时，它会接收更新后的数据，并将其传递到委托组件。 按照惯例，提供给将承载模型片段的委托组件的属性被命名为 `cqModel`. 实施可以免费为组件提供此属性，但应考虑与框架架构集成、可发现性和易用性等方面。
+为此，模型提供程序必须注册到 ` [PageModelManager](/help/sites-developing/spa-blueprint.md#pagemodelmanager)`. 然后，当发生更改时，它会接收更新的数据并将该数据传递到委托组件。 按照惯例，提供给将承载模型片段的委托组件的属性被命名为 `cqModel`. 实施可以免费为组件提供此属性，但应考虑与框架架构集成、可发现性和易用性等方面。
 
 ### 组件HTML装饰器 {#the-component-html-decorator}
 
@@ -184,7 +184,6 @@ SPA组件将映射到图形容器（如响应式网格），并且必须在创�
 >* `"new section"`：指示当前元素是容器的占位符
 >* `"aem-Grid-newComponent"`：标准化布局创作的组件
 >
-
 
 #### 组件映射 {#component-mapping}
 
@@ -272,7 +271,7 @@ ComponentMapping.map = function map (resourceTypes, clazz, editConfig) {};
 
 应用程序拥有路由。 前端开发人员首先需要实施导航组件(映射到AEM导航组件)。 此组件将渲染要与一系列显示或隐藏内容片段的路由一起使用的URL链接。
 
-基础 [ `PageModelManager`](/help/sites-developing/spa-blueprint.md#pagemodelmanager) 库及其 ` [ModelRouter](/help/sites-developing/spa-routing.md)` 模块（默认启用）负责预获取并提供对与给定资源路径关联的模型的访问。
+基础 [`PageModelManager`](/help/sites-developing/spa-blueprint.md#pagemodelmanager) 库及其 ` [ModelRouter](/help/sites-developing/spa-routing.md)` 模块（默认启用）负责预获取并提供对与给定资源路径关联的模型的访问。
 
 这两个图元与路由的概念有关，但 ` [ModelRouter](/help/sites-developing/spa-routing.md)` 只负责执行 ` [PageModelManager](/help/sites-developing/spa-blueprint.md#pagemodelmanager)` 加载的数据模型与当前应用程序状态的结构同步。
 

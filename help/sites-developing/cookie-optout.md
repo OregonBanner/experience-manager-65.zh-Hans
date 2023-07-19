@@ -10,7 +10,7 @@ topic-tags: platform
 content-type: reference
 discoiquuid: 5773ec1a-f15b-462d-8f9f-54ee1d7ead44
 exl-id: 42e8d804-6b6a-432e-a651-940b9f45db4e
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
 source-wordcount: '554'
 ht-degree: 2%
@@ -64,7 +64,7 @@ function writeCookie(value){
 }
 ```
 
-## Granite.OptOutUtil Javascript对象 {#the-granite-optoututil-javascript-object}
+## Granite.OptOutUtil JavaScript对象 {#the-granite-optoututil-javascript-object}
 
 Granite.OptOutUtil允许您确定是否允许使用Cookie。
 

@@ -10,10 +10,10 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: fe61ee4b-51b6-4a6f-91d8-1c02b29cc1db
 exl-id: 1787e643-fc8e-40e0-8e14-97b222a7c320
-source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '414'
-ht-degree: 5%
+source-wordcount: '415'
+ht-degree: 4%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 5%
 * 某些字段通常是唯一的；例如页面标题。 您必须确定在应用一个值时启用此类字段进行批量编辑是否有意义。
 * 某些字段可能具有多个值 — 这在呈现时需要有意义的表示形式。
 
-   例如，显示“准备发布”的复选框。 在批量编辑之前，这可能会有多个值（例如，就绪、正在审核、正在进行）。
+  例如，显示“准备发布”的复选框。 在批量编辑之前，这可能会有多个值（例如，就绪、正在审核、正在进行）。
 
 >[!CAUTION]
 >
@@ -36,7 +36,6 @@ ht-degree: 5%
 >* 对Live Copy中的页面不可用。
 >* 仅适用于具有相同资源类型的页面。
 >
-
 
 >[!NOTE]
 >
@@ -56,7 +55,6 @@ ht-degree: 5%
 >* `/libs/granite/ui/components/foundation/form/checkbox`
 >
 
-
 在页面组件中启用了字段(*非* （在模板上）：
 
 1. 使用CRXDE Lite（或等效方法）打开页面组件。
@@ -65,13 +63,13 @@ ht-degree: 5%
 
    >[!NOTE]
    >
-   >此示例假定已在实例上安装核心组件，如果实例正在与We.Retail示例内容一起运行，则属于此情况。 请参阅 [核心组件文档](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans) 了解更多信息。
+   >此示例假定已在实例上安装核心组件，如果实例正在与We.Retail示例内容一起运行，则属于此情况。 请参阅 [核心组件文档](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) 了解更多信息。
 
 1. 导航到 `cq:dialog` 定义。
 1. 在字段节点上定义以下属性：
 
    * **名称**: `allowBulkEdit`
-   * **类型**: `Boolean`
+   * **类型**： `Boolean`
    * **值**: `true`
 
    例如，对于标准页面 [基础组件](/help/sites-authoring/default-components-foundation.md)：
@@ -92,6 +90,5 @@ ht-degree: 5%
    >
    >    1. 重新创建所需项目（即该项目存在于中） `/libs`)下 `/apps`
    >    1. 在中进行任何更改 `/apps`
-
 
 1. 选择 **全部保存** 以保留您的更新。

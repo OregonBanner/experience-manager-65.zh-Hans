@@ -1,8 +1,8 @@
 ---
 title: 将ContextHub添加到页面并访问存储
-description: 将ContextHub添加到您的页面以启用ContextHub功能并链接到ContextHub Javascript库
+description: 将ContextHub添加到您的页面以启用ContextHub功能并链接到ContextHub JavaScript库
 exl-id: ae745af9-b49f-46b9-ab48-2fd256e9a681
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
 source-wordcount: '927'
 ht-degree: 0%
@@ -11,13 +11,13 @@ ht-degree: 0%
 
 # 将ContextHub添加到页面并访问存储 {#adding-contexthub-to-pages-and-accessing-stores}
 
-将ContextHub添加到您的页面以启用ContextHub功能并链接到ContextHub Javascript库。
+将ContextHub添加到您的页面以启用ContextHub功能并链接到ContextHub JavaScript库。
 
-ContextHub Javascript API提供了对ContextHub管理的上下文数据的访问权限。 本页简要描述了用于访问和处理上下文数据的API的主要功能。 请访问指向API参考文档的链接，以查看详细信息和代码示例。
+ContextHub JavaScript API提供了对ContextHub管理的上下文数据的访问权限。 本页简要描述了用于访问和处理上下文数据的API的主要功能。 单击API参考文档的链接可查看详细信息和代码示例。
 
 ## 将ContextHub添加到页面组件 {#adding-contexthub-to-a-page-component}
 
-要启用ContextHub功能并链接到ContextHub Javascript库，请包含 `contexthub` 中的组件 `head` 部分。 页面组件的HTL代码应类似于以下示例：
+要启用ContextHub功能并链接到ContextHub JavaScript库，请包含 `contexthub` 中的组件 `head` 部分。 页面组件的HTL代码应类似于以下示例：
 
 ```xml
 <sly data-sly-resource="${'contexthub' @ resourceType='granite/contexthub/components/contexthub'}"/>
@@ -44,7 +44,7 @@ Context Hub存储使用以下持久性模式之一：
 * **会话：** 使用HTML5 sessionStorage保留数据。 会话存储会在浏览器会话期间持续保留，并且可用于所有浏览器窗口。
 * **Cookie：** 使用浏览器对数据存储的Cookie的本机支持。 Cookie数据通过HTTP请求发送到服务器，或从服务器发送。
 * **Window.name：** 使用window.name属性保留数据。
-* **内存：** 使用Javascript对象来保留数据。
+* **内存：** 使用JavaScript对象来保留数据。
 
 默认情况下，Context Hub使用本地持久性模式。 如果浏览器不支持或不允许HTML5 localStorage，则使用会话持久性。 如果浏览器不支持或不允许HTML5 sessionStorage，则使用Window.name持久性。
 
@@ -83,17 +83,17 @@ Object {
 
 ### 处理对象 {#manipulating-objects}
 
-ContextHub提供 [`ContextHub.Utils.JSON.tree`](contexthub-api.md#contexthub-utils-json-tree) 用于处理Javascript对象的类。 在将Javascript对象添加到存储中或从存储中获取它们之前，使用此类的函数对其进行处理。
+ContextHub提供 [`ContextHub.Utils.JSON.tree`](contexthub-api.md#contexthub-utils-json-tree) 用于处理JavaScript对象的类。 在将JavaScript对象添加到存储中或从存储中获取它们之前，使用此类的函数对其进行处理。
 
 此外， [`ContextHub.Utils.JSON`](contexthub-api.md#contexthub-utils-json) 类提供了将对象序列化为字符串以及将字符串反序列化为对象的函数。 此类用于处理JSON数据，以支持本身不包含 `JSON.parse` 和 `JSON.stringify` 函数。
 
 ## 与ContextHub存储区交互 {#interacting-with-contexthub-stores}
 
-使用 [`ContextHub`](contexthub-api.md#ui-event-constants) 用于获取存储作为Javascript对象的Javascript对象。 获取存储对象后，您可以处理它包含的数据。 使用 [`getAllStores`](contexthub-api.md#getallstores) 或 [`getStore`](contexthub-api.md#getstore-name) 函数以获取存储。
+使用 [`ContextHub`](contexthub-api.md#ui-event-constants) 用于作为JavaScript对象获取存储的JavaScript对象。 获取存储对象后，您可以处理它包含的数据。 使用 [`getAllStores`](contexthub-api.md#getallstores) 或 [`getStore`](contexthub-api.md#getstore-name) 函数以获取存储。
 
 ### 访问存储数据 {#accessing-store-data}
 
-此 [`ContexHub.Store.Core`](contexthub-api.md#contexthub-store-core) Javascript类定义了用于与存储数据交互的多个函数。 以下函数存储和检索对象中包含的多个数据项：
+此 [`ContexHub.Store.Core`](contexthub-api.md#contexthub-store-core) JavaScript类定义了用于与存储数据交互的多个函数。 以下函数存储和检索对象中包含的多个数据项：
 
 * [addAllItems](contexthub-api.md#addallitems-tree-options)
 * [getTree](contexthub-api.md#gettree-includeinternals)
@@ -113,11 +113,11 @@ ContextHub提供 [`ContextHub.Utils.JSON.tree`](contexthub-api.md#contexthub-uti
 
 ### ContextHub事件 {#contexthub-eventing}
 
-ContextHub包括一个事件框架，可让您自动对存储事件做出反应。 每个存储对象包含 [`ContextHub.Utils.Eventing`](contexthub-api.md#contexthub-utils-eventing) 可用作商店的对象 [`eventing`](contexthub-api.md#eventing) 属性。 使用 [`on`](contexthub-api.md#on-name-handler-selector-triggerforpastevents) 或 [`once`](contexthub-api.md#once-name-handler-selector-triggerforpastevents) 函数将Javascript函数绑定到存储事件。
+ContextHub包括一个事件框架，可让您自动对存储事件做出反应。 每个存储对象包含 [`ContextHub.Utils.Eventing`](contexthub-api.md#contexthub-utils-eventing) 可用作商店的对象 [`eventing`](contexthub-api.md#eventing) 属性。 使用 [`on`](contexthub-api.md#on-name-handler-selector-triggerforpastevents) 或 [`once`](contexthub-api.md#once-name-handler-selector-triggerforpastevents) 函数将JavaScript函数绑定到存储事件。
 
 ## 使用Context Hub处理Cookie {#using-context-hub-to-manipulate-cookies}
 
-Context Hub Javascript API为处理浏览器Cookie提供了跨浏览器支持。 此 [`ContextHub.Utils.Cookie`](contexthub-api.md#contexthub-utils-cookie) 命名空间定义了用于创建、处理和删除Cookie的多个函数。
+Context Hub JavaScript API为处理浏览器Cookie提供了跨浏览器支持。 此 [`ContextHub.Utils.Cookie`](contexthub-api.md#contexthub-utils-cookie) 命名空间定义了用于创建、处理和删除Cookie的多个函数。
 
 ## 确定已解析的ContextHub区段 {#determining-resolved-contexthub-segments}
 

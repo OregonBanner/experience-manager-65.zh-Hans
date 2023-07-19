@@ -11,9 +11,9 @@ discoiquuid: 79437b96-7b57-4581-b7e7-fcaedc3d05de
 docset: aem65
 feature: Correspondence Management
 exl-id: ba2e145d-51ee-4844-a9e1-9927971d25a1
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '4443'
+source-wordcount: '4435'
 ht-degree: 4%
 
 ---
@@ -356,7 +356,7 @@ ht-degree: 4%
            <td><strong>价值</strong></td>
          </tr>
          <tr>
-           <td>路径<br /> </td>
+           <td>path<br /> </td>
            <td>字符串</td>
            <td>fd/cm/ma/gui/content/cmmetadataproperties/commontab<br /> </td>
          </tr>
@@ -561,7 +561,7 @@ ht-degree: 4%
    <td><strong>价值</strong></td>
   </tr>
   <tr>
-   <td>路径</td>
+   <td>path</td>
    <td>字符串</td>
    <td><p>此路径是指向在中创建的列的指针：</p>
     <ul>
@@ -803,7 +803,7 @@ ht-degree: 4%
            <td><strong>价值</strong></td>
          </tr>
          <tr>
-           <td>路径</td>
+           <td>path</td>
            <td>字符串</td>
            <td>extendedproperties<br /> </td>
          </tr>

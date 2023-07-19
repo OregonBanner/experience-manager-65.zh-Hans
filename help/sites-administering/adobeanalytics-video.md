@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: a18ddac1-9e4c-4857-9cb3-4d5eeb8dd9ec
 docset: aem65
 exl-id: 5d51f898-b6d1-40ac-bdbf-127cda1dc777
-source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1743'
+source-wordcount: '1747'
 ht-degree: 2%
 
 ---
@@ -97,7 +97,7 @@ XX后缀是定义里程碑的轨道偏移。 例如，指定4、8、16、20和28
   </tr>
   <tr>
    <td>eventdata.events.a.media.timePlayed</td>
-   <td>每次触发里程碑时都会发送，用户观看给定区段所花费的秒数也会与此事件一起发送。 例如eventX=21<br /> </td>
+   <td>每次触发里程碑时都会发送，用户观看给定区段所花费的秒数也会与此事件一起发送。 例如， eventX=21<br /> </td>
   </tr>
   <tr>
    <td>eventdata.events.a.media.view </td>
@@ -290,7 +290,7 @@ eventdata.events.milestoneXX
 
 1. 设置“跟踪”偏移。
 
-   * e.g.10,50,75,100
+   * 例如，10,50,75,100
 
    此外，发送到Adobe Analytics的信息的可自定义性较低；只有3个变量可用于映射：
 
@@ -343,7 +343,8 @@ eventdata.events.milestoneXX
 
 1. 将“跟踪偏移”设置为任意秒数，
 
-   * 例如6
+   * 例如， 6
+
    >[!NOTE]
    >
    >“跟踪偏移”字段仅接受大于0的整数

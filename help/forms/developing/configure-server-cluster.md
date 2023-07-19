@@ -2,9 +2,9 @@
 title: 如何在JEE服务器群集中配置AEM Forms并进行故障排除？
 description: 了解如何在JEE服务器群集中配置AEM Forms并对其进行故障排除
 exl-id: 230fc2f1-e6e5-4622-9950-dae9449ed3f6
-source-git-commit: 1cdd15800548362ccdd9e70847d9df8ce93ee06e
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '4033'
+source-wordcount: '4032'
 ht-degree: 0%
 
 ---
@@ -184,7 +184,7 @@ GDS共享是在JEE本身的AEM Forms之外的O/S级别配置的，在该级别�
 在UNIX上，NFS装载映射到目录结构的方式可允许明显可用的GDS目录可用，即使装载失败也是如此。 请考虑：
 
 * NAS服务器： NFS共享文件夹/u01/iapply/livecycle_gds
-* 节点1：指向共享文件夹（托管在数据库服务器上）的装入点，该文件夹位于以下位置： /u01/iapply/livecycle_gds
+* 节点1：指向共享文件夹（托管在数据库服务器上）的装入点，该文件夹位于此处： /u01/iapply/livecycle_gds
 * 节点2：指向共享文件夹（托管在数据库服务器上）的装入点，该文件夹位于以下位置：/u01/iapply/livecycle_gds
 
 * LCES指定GDS的路径： /u01/iapply/livecycle_gds

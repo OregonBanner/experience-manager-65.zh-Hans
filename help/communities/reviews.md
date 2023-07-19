@@ -10,9 +10,9 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: bf4e7809-8def-4647-aaa6-3ac36865511f
 exl-id: 170414a6-c40b-4ad2-9294-7c2266850c3d
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1294'
+source-wordcount: '1293'
 ht-degree: 2%
 
 ---
@@ -49,11 +49,11 @@ ht-degree: 2%
 
 * **[!UICONTROL 允许的评级]**
 
-   成员可以从中进行选择的评级列表。
+  成员可以从中进行选择的评级列表。
 
-   使用向上箭头、向下箭头和删除按钮修改可见选择。
+  使用向上箭头、向下箭头和删除按钮修改可见选择。
 
-   单击 **[!UICONTROL 添加项目]** 以添加其他评级选择。
+  单击 **[!UICONTROL 添加项目]** 以添加其他评级选择。
 
 在 **[!UICONTROL 所需评级]** 选项卡，从列表中重新输入项目 **[!UICONTROL 允许的评级]** 需要进行评级的。 如果仅在“允许的评级”选项卡上指定了项目，则成员提交该项目时，该项目可能会保持未标记状态。
 
@@ -63,11 +63,11 @@ ht-degree: 2%
 
 * **[!UICONTROL 所需的评级]**
 
-   允许的评级子集，指示所需的评级。
+  允许的评级子集，指示所需的评级。
 
-   使用向上箭头、向下箭头和删除按钮修改可见选择。
+  使用向上箭头、向下箭头和删除按钮修改可见选择。
 
-   单击 **[!UICONTROL 添加项目]** 以添加其他响应选择。
+  单击 **[!UICONTROL 添加项目]** 以添加其他响应选择。
 
 >[!NOTE]
 >
@@ -79,35 +79,35 @@ ht-degree: 2%
 
 * **[!UICONTROL 允许回复]**
 
-   如果选中，则允许回复审核。 默认值为未选中。
+  如果选中，则允许回复审核。 默认值为未选中。
 
 * **[!UICONTROL 已关闭]**
 
-   如果选中，则对于新审阅和回复，审阅将被关闭。 默认值为未选中。
+  如果选中，则对于新审阅和回复，审阅将被关闭。 默认值为未选中。
 
 * **[!UICONTROL 允许文件上传]**
 
-   如果选中，则允许上载文件附件以供审阅。 默认值为未选中。
+  如果选中，则允许上载文件附件以供审阅。 默认值为未选中。
 
 * **最大文件大小**
 
-   相关条件仅限于 **[!UICONTROL 允许文件上传]** 已选中。 此字段限制已上传文件的大小（以字节为单位）。 默认值为10 MB。
+  相关条件仅限于 **[!UICONTROL 允许文件上传]** 已选中。 此字段限制已上传文件的大小（以字节为单位）。 默认值为10 MB。
 
 * **[!UICONTROL 最大消息长度]**
 
-   文本框中可以输入的最大字符数。 默认值为4096个字符。
+  文本框中可以输入的最大字符数。 默认值为4096个字符。
 
 * **[!UICONTROL 允许的文件类型]**
 
-   相关条件仅限于 **[!UICONTROL 允许文件上传]** 已选中。 包含“点”分隔符的逗号分隔文件扩展名列表。 例如： .jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定了任何文件类型，则将不允许未指定的文件类型。 缺省值为none以便允许所有文件类型。
+  相关条件仅限于 **[!UICONTROL 允许文件上传]** 已选中。 包含“点”分隔符的逗号分隔文件扩展名列表。 例如： .jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定了任何文件类型，则将不允许未指定的文件类型。 缺省值为none以便允许所有文件类型。
 
 * **[!UICONTROL 富文本编辑器]**
 
-   如果选中，则可以使用标记输入帖子。 默认值为未选中。
+  如果选中，则可以使用标记输入帖子。 默认值为未选中。
 
 * **[!UICONTROL 允许投票]**
 
-   如果选中，则为主题包含投票功能。 默认值为未选中。
+  如果选中，则为主题包含投票功能。 默认值为未选中。
 
 在 **[!UICONTROL 用户审核]** 选项卡，指定如何管理已发布的审核。 有关更多信息，请参阅 [审核用户生成的内容](moderate-ugc.md).
 
@@ -115,39 +115,39 @@ ht-degree: 2%
 
 * **[!UICONTROL 预审]**
 
-   如果选中，审阅必须先获得批准，然后才能显示在发布网站上。 默认值为未选中。
+  如果选中，审阅必须先获得批准，然后才能显示在发布网站上。 默认值为未选中。
 
 * **[!UICONTROL 删除审核]**
 
-   如果选中，则为发布审阅的成员提供删除审阅的功能。 默认值为未选中。
+  如果选中，则为发布审阅的成员提供删除审阅的功能。 默认值为未选中。
 
 * **[!UICONTROL 拒绝审核]**
 
-   如果选中，则允许审查方拒绝审核。 默认值为未选中。
+  如果选中，则允许审查方拒绝审核。 默认值为未选中。
 
 * **[!UICONTROL 关闭/重新打开审阅]**
 
-   如果选中，则允许审查方关闭和重新打开审查。 默认值为未选中。
+  如果选中，则允许审查方关闭和重新打开审查。 默认值为未选中。
 
 * **[!UICONTROL 标记审核]**
 
-   如果选中，则允许成员将审核标记为不适当。 默认值为未选中。
+  如果选中，则允许成员将审核标记为不适当。 默认值为未选中。
 
 * **[!UICONTROL 标记原因列表]**
 
-   如果选中，则允许成员从下拉列表中选择将审核标记为不适当的原因。 默认值为未选中。
+  如果选中，则允许成员从下拉列表中选择将审核标记为不适当的原因。 默认值为未选中。
 
 * **[!UICONTROL 自定义标志原因]**
 
-   如果选中，则允许成员输入他们自己的原因，将审核标记为不适当。 默认值为未选中。
+  如果选中，则允许成员输入他们自己的原因，将审核标记为不适当。 默认值为未选中。
 
 * **[!UICONTROL 审核阈值]**
 
-   输入在通知审查方之前，成员必须标记审查的次数。 默认值为一次(1)。
+  输入在通知审查方之前，成员必须标记审查的次数。 默认值为一次(1)。
 
 * **[!UICONTROL 标记限制]**
 
-   输入在将审阅从公众视野中隐藏之前必须将其标记的次数。 此数字必须大于或等于 **[!UICONTROL 审核阈值]**. 默认值为5。
+  输入在将审阅从公众视野中隐藏之前必须将其标记的次数。 此数字必须大于或等于 **[!UICONTROL 审核阈值]**. 默认值为5。
 
 ### 向页面添加审核摘要（显示） {#adding-a-review-summary-display-to-a-page}
 
@@ -179,13 +179,13 @@ ht-degree: 2%
 
 * `Review Path`
 
-   输入或浏览到放置的实例 `reviews`要总结的组件，例如，如果添加到 [Geometrixx参与网站，](getting-started.md) 路径将为：
+  输入或浏览到放置的实例 `reviews`要总结的组件，例如，如果添加到 [Geometrixx参与网站，](getting-started.md) 路径将为：
 
-   `/content/sites/engage/en/page/jcr:content/content/primary/reviews`
+  `/content/sites/engage/en/page/jcr:content/content/primary/reviews`
 
 * `Include histogram`
 
-   如果选中，则显示一个条形图，指示所总结的评论中存在多少个星级。 默认值为未选中。
+  如果选中，则显示一个条形图，指示所总结的评论中存在多少个星级。 默认值为未选中。
 
 ### 更改为自定义审核类型 {#changing-to-a-custom-review-type}
 
@@ -201,19 +201,19 @@ ht-degree: 2%
 
 * **[!UICONTROL 评论资源类型]**
 
-   导航到扩展的资源类型 `comment`/apps中的组件（单个注释）。 例如：`/apps/social/commons/components/hbs/comments/comment`。
+  导航到扩展的资源类型 `comment`/apps中的组件（单个注释）。 例如：`/apps/social/commons/components/hbs/comments/comment`。
 
-   此资源将标识访客发表评论时创建的UGC的resourceType。
+  此资源将标识访客发表评论时创建的UGC的resourceType。
 
 * **[!UICONTROL 投票资源类型]**
 
-   导航到扩展的资源类型 `voting`/apps中的组件 例如：`/apps/social/components/hbs/voting`。
+  导航到扩展的资源类型 `voting`/apps中的组件 例如：`/apps/social/components/hbs/voting`。
 
-   此资源将标识访客发表投票时创建的UGC的资源类型。
+  此资源将标识访客发表投票时创建的UGC的资源类型。
 
 * **[!UICONTROL 评论系统资源类型]**
 
-   导航到扩展的资源类型 `comments`/apps中的组件（注释系统）。 除非页面模板，否则保留为空 [动态包括](scf.md#add-or-include-a-communities-component) 基础脚本中的注释系统，而不是作为资源（注释节点）添加到页面中。 通过阅读有关 [{{include}} 辅助函数](handlebars-helpers.md#include).
+  导航到扩展的资源类型 `comments`/apps中的组件（注释系统）。 除非页面模板，否则保留为空 [动态包括](scf.md#add-or-include-a-communities-component) 基础脚本中的注释系统，而不是作为资源（注释节点）添加到页面中。 通过阅读有关 [{{include}} 辅助函数](handlebars-helpers.md#include).
 
 ## 网站访客体验 {#site-visitor-experience}
 

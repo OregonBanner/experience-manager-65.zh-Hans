@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 752235d2-21ac-46d2-82ed-5fec09c645e9
 docset: aem65
 exl-id: 55803b7a-9064-4392-9cc2-9f113fa8dc29
-source-git-commit: 1074843a0105df39382b64defe66fc262986b9c9
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '584'
+source-wordcount: '583'
 ht-degree: 4%
 
 ---
@@ -52,7 +52,7 @@ ht-degree: 4%
    * **[!UICONTROL 社区组标题]**：艺术
    * **[!UICONTROL 社区组描述]**：各种艺术团体的父组
    * **[!UICONTROL 社区组根目录]**： *保留为默认值*
-   * **[!UICONTROL 其他可用的社区组语言]**：使用下拉菜单选择可用的社区组语言。 该菜单显示创建父社区站点所用的所有语言。 用户可以在这些语言中进行选择，以便通过此单一步骤在多个区域设置中创建组。 在相应社区站点的“组”控制台中，使用多种指定语言创建同一个组。
+   * **[!UICONTROL 其他可用的社区组语言]**：使用下拉菜单选择可用的社区组语言。 该菜单显示创建父社区站点时采用的所有语言。 用户可以在这些语言中进行选择，以便通过此单一步骤在多个区域设置中创建组。 在相应社区站点的“组”控制台中，使用多种指定语言创建同一个组。
    * **[!UICONTROL 社区组名称]**：艺术
    * **[!UICONTROL 模板]**：下拉菜单以选择 `Reference Group`
    * 选择 **[!UICONTROL 下一个]**
@@ -71,15 +71,15 @@ ht-degree: 4%
    * **[!UICONTROL 审核]**
 
       * 留空（继承自父站点）。
+
    * **[!UICONTROL 成员资格]**
 
       * 使用默认值 `Optional Membership.`
 
       * **[!UICONTROL 缩略图]**
          * `optional.*`
+
       * **[!UICONTROL 选择下一步]**。
-
-
 
 * 选择&#x200B;**[!UICONTROL 创建]**。
 

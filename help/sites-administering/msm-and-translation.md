@@ -10,9 +10,9 @@ topic-tags: site-features
 content-type: reference
 discoiquuid: fabaa3e8-1657-4ed4-abb2-990117bec39c
 exl-id: 8f11f5de-f5af-4ce7-a448-2b4299de2930
-source-git-commit: 785d4897263bfeae6a0cd235abca3c96f2231392
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '348'
+source-wordcount: '351'
 ht-degree: 41%
 
 ---
@@ -51,7 +51,7 @@ ht-degree: 41%
 >
 >在此场景以及类似场景中，MSM 不会管理不同的语言版本。
 >
->* [MSM](/help/sites-administering/msm.md) 管理在语言边界内从Blueprint(例如全局主控)到活动副本（例如本地站点）的已翻译内容部署。
+>* [MSM](/help/sites-administering/msm.md) 管理在语言边界内从Blueprint(例如，全局主控)到活动副本（例如，本地站点）的翻译内容部署。
 >* AEM 的[翻译](/help/sites-administering/translation.md)集成功能与第三方翻译管理服务相结合，可以管理语言并将内容翻译成这些不同的语言。
 >
 >在更高级的用例中，也可以跨语言母版使用 MSM。

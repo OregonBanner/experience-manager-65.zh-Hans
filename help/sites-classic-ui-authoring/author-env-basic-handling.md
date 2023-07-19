@@ -1,6 +1,6 @@
 ---
 title: 基本操作
-description: 使用AEM创作环境时基本处理的概述。 它使用站点控制台作为基础。
+description: 使用AEM创作环境时基本处理的概述。 它使用 Sites 控制台作为基础。
 uuid: ab488d7c-7b7f-4a23-a80c-99d37ac84246
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -8,10 +8,10 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 9737ead9-e324-43c9-9780-7abd292f4e5b
 exl-id: 2981dc20-b2ba-4ea2-a53b-8b5fe526aa9c
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
 source-wordcount: '1194'
-ht-degree: 6%
+ht-degree: 8%
 
 ---
 
@@ -19,12 +19,11 @@ ht-degree: 6%
 
 >[!NOTE]
 >
->* 本页旨在概述使用AEM创作环境时的基本处理。 它使用&#x200B;**站点**&#x200B;控制台作为基础。
+>* 本页旨在概述使用AEM创作环境时的基本处理。 它使用&#x200B;**Sites**&#x200B;控制台作为基础。
 >
->* 某些功能并非在所有控制台中均可用，并且/或者某些控制台中提供了其他功能。 其他页面上将更详细地介绍有关各个控制台及其相关功能的特定信息。
+>* 某些功能并非在所有控制台中均可用，并且/或者某些控制台中提供了其他功能。 其他页面中会更详细地介绍有关具体控制台及其相关功能的特定信息。
 >* 用户在整个 AEM 环境中都可以使用各种键盘快捷键，尤其是在[使用控制台](/help/sites-classic-ui-authoring/author-env-keyboard-shortcuts.md)和[编辑页面](/help/sites-classic-ui-authoring/classic-page-author-keyboard-shortcuts.md)时。
 >
-
 
 ## 欢迎屏幕 {#the-welcome-screen}
 
@@ -87,13 +86,13 @@ ht-degree: 6%
 
 * 左窗格
 
-   这显示了您网站的树结构以及这些网站中的页面。
+  这显示了您网站的树结构以及这些网站中的页面。
 
-   它还显示有关其他方面或AEM的信息，包括项目、Blueprint和资源。
+  它还显示有关其他方面或AEM的信息，包括项目、Blueprint和资源。
 
 * 右窗格
 
-   这会显示页面（在左窗格中选择的位置），并可用于执行操作。
+  这会显示页面（在左窗格中选择的位置），并可用于执行操作。
 
 从这里，您可以 [管理您的页面](/help/sites-authoring/managing-pages.md) 使用工具栏、上下文菜单或通过打开页面执行进一步操作。
 
@@ -105,7 +104,7 @@ ht-degree: 6%
 
 ## 访问帮助 {#accessing-help}
 
-在各种控制台（例如Web站点）上， **帮助** 按钮可用，这将打开包共享或文档站点。
+在各种控制台（例如Websites）上，还有 **帮助** 按钮可用，这将打开包共享或文档站点。
 
 ![chlimage_1-10](assets/chlimage_1-10a.png)
 
@@ -120,7 +119,7 @@ ht-degree: 6%
    * 在右侧窗格中列出子页面
    * 同时展开左窗格中的结构。
 
-      出于性能原因，此操作取决于子节点的数量。 在标准安装中，此扩展方法适用于 `30` 或较少的子节点。
+     出于性能原因，此操作取决于子节点的数量。 在标准安装中，此扩展方法适用于 `30` 或较少的子节点。
 
 * 双击页面名称（左窗格）也会展开树，不过由于该页面同时打开，因此这种效果并不明显。
 

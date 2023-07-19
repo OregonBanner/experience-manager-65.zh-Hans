@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 1554010e-a1d1-4edf-b28f-9eead8f83b4a
 feature: Language Copy
 exl-id: 01a81c4b-cb30-4f7e-b281-7194ebb5fc70
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '836'
-ht-degree: 96%
+source-wordcount: '837'
+ht-degree: 97%
 
 ---
 
@@ -37,7 +37,7 @@ ht-degree: 96%
 
 * 在设计站点结构时，首先要检查您的内容，然后确定内容的创作位置以及用于创作内容的语言。此位置应是站点的顶层。
 * 最佳实践是&#x200B;**基于语言的结构**，在顶层创作站点和国家/地区站点之间不超过 3 个层级。
-* 使用以下语言/国家/地区站点命名约定 **W3C标准**.
+* 使用遵循 **W3C 标准**&#x200B;的语言/国家/地区站点命名惯例。
 * 确定按国家和地区分发内容的方式。考虑哪些国家/地区共享语言。建议创建语言母版，它是一个未激活的页面层，可在其中查看和修改翻译的内容，然后将该内容推送或拉取到共享该语言的国家/地区站点。
 * 可通过两种方法创建语言母版：使用语言副本和使用 MSM/Live Copy。
 

@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: fec86f03-f81e-460a-9f84-d6304c95128c
 exl-id: e2ddf5d1-0f5b-4f3b-9666-0f388915730e
-source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1409'
+source-wordcount: '1410'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe建议对需要基于单页应用程序框架的客户端渲染（例如React）的项目使用SPA编辑器。 [了解详情](/help/sites-developing/spa-overview.md).
+>对于需要基于单页应用程序框架的客户端渲染（例如React）的项目，Adobe建议使用SPA编辑器。 [了解详情](/help/sites-developing/spa-overview.md).
 
 请参阅以下有关开发内容同步处理程序的准则：
 
@@ -52,7 +52,7 @@ ht-degree: 0%
 
 * ***includeModifiedPagesOnly — 布尔值***  — 如果为false或忽略，则渲染所有页面并检查渲染中的更新。 如果为true，则根据对页面lastModified的更改进行差值。
 * ***+重写（节点）***
-   ***- relativeParentPath — 字符串***  — 写入所有其他相对路径的路径。
+  ***- relativeParentPath — 字符串***  — 写入所有其他相对路径的路径。
 
 >[!NOTE]
 >

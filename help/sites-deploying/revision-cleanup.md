@@ -11,9 +11,9 @@ topic-tags: deploying
 discoiquuid: f03ebe60-88c0-4fc0-969f-949490a8e768
 feature: Configuring
 exl-id: e53c4c81-f62e-4b6d-929a-6649c8ced23c
-source-git-commit: 24a64e603d460c659467c7679934bbdfd381aaa8
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '5903'
+source-wordcount: '5902'
 ht-degree: 0%
 
 ---
@@ -182,7 +182,7 @@ TarMK GC: no base state available, running full compaction instead
   </tr>
   <tr>
    <td><strong>如果我意外针对错误的存储库格式运行，会发生什么情况？</strong></td>
-   <td>如果您尝试对oak-segment-tar存储库运行oak-segment模块（反之亦然），则启动将失败 <em>IllegalstateException</em> 并显示“区段格式无效”消息。 不会发生数据损坏。</td>
+   <td>如果您尝试对oak-segment-tar存储库运行oak-segment模块（反之亦然），启动将失败 <em>IllegalstateException</em> 并显示“区段格式无效”消息。 不会发生数据损坏。</td>
    <td> </td>
   </tr>
   <tr>
@@ -400,7 +400,7 @@ TarMK GC: no base state available, running full compaction instead
       </ul> </li>
      <li>通过修订清理获得的磁盘空间
       <ul>
-       <li>仅在清理阶段完成时才回收空间。 清理阶段的结束用日志消息“T”标记<code>arMK GC #{}: cleanup completed in {} ({} ms</code>“。 后处理清理大小为{} （{}字节），回收的空间为{} （{}字节）。 压缩映射权重/深度为{}/{} （{}字节/{}）。”</li>
+       <li>仅在清理阶段完成时才回收空间。 清理阶段的结束用日志消息“T”标记<code>arMK GC #{}: cleanup completed in {} ({} ms</code>“。 后清理大小为 {} ({} 字节)和回收的空间 {} ({} 字节)。 压缩图粗细/深度为 {}/{} ({} 字节/{})。”。</li>
       </ul> </li>
      <li>修订清理期间出现问题
       <ul>
@@ -534,7 +534,7 @@ TarMK GC: no base state available, running full compaction instead
   </tr>
   <tr>
     <td>不适用</td>
-    <td>TarMK GC #2：估计中断： ${REASON}。 正在跳过压缩。</td>
+    <td>TarMK GC #2：估计中断： ${REASON}. 正在跳过压缩。</td>
     <td>估计相位提前终止。 可能中断估计阶段的一些事件示例：主机系统上的内存或磁盘空间不足。</td>
     <td>这取决于你的原因</td>
   </td>
@@ -548,7 +548,7 @@ TarMK GC: no base state available, running full compaction instead
   </tr>
    <tr>
     <td>不适用</td>
-    <td>TarMK GC #2：压缩已取消： ${REASON}。</td>
+    <td>TarMK GC #2：压缩已取消： ${REASON}.</td>
     <td>压缩阶段提前终止。 可能中断压缩阶段的一些事件示例：主机系统上的内存或磁盘空间不足。 此外，还可以通过关闭系统或通过管理界面（如操作仪表板中的维护窗口）显式取消系统来取消压缩。</td>
     <td>这取决于你的原因</td>
   </td>

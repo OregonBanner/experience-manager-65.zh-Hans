@@ -7,9 +7,9 @@ feature: Search, Metadata
 role: User
 exl-id: 588433b2-564a-430f-9d04-480465ece2ad
 hide: true
-source-git-commit: b138bc434ecad849b2c588864868cab6666d50c9
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '5741'
+source-wordcount: '5739'
 ht-degree: 5%
 
 ---
@@ -33,10 +33,10 @@ ht-degree: 5%
 | [了解搜索结果和行为](#searchbehavior) | [修改搜索彩块化](#searchfacets) | [批量元数据更新](#metadataupdates) |
 | [搜索排名和提升](#searchrank) | [文本提取](#extracttextupload) | [智能收藏集](#collections) |
 | [高级搜索：筛选条件和搜索范围](#scope) | [自定义谓词](#custompredicates) | [了解意外结果并排除其故障](#unexpected-results) |
-| [从其他解决方案和应用程序进行搜索](#search-assets-other-surfaces)：<ul><li>[Adobe Asset Link](#aal)</li><li>[Brand Portal](#brand-portal)</li><li>[Experience Manager桌面应用程序](#desktop-app)</li><li>[Adobe Stock图像](#adobe-stock)</li><li>[Dynamic Media资源](#dynamic-media)</li></ul> |  |  |
-| [资源选择器](#asset-picker) |  |  |
-| [限制](#limitations) 和 [提示](#tips) |  |  |
-| [说明示例](#samples) |  |  |
+| [从其他解决方案和应用程序进行搜索](#search-assets-other-surfaces)：<ul><li>[Adobe Asset Link](#aal)</li><li>[Brand Portal](#brand-portal)</li><li>[Experience Manager桌面应用程序](#desktop-app)</li><li>[Adobe Stock图像](#adobe-stock)</li><li>[Dynamic Media资源](#dynamic-media)</li></ul> | | |
+| [资源选择器](#asset-picker) | | |
+| [限制](#limitations) 和 [提示](#tips) | | |
+| [说明示例](#samples) | | |
 
 使用顶部的Omnisearch字段搜索数字资产 [!DNL Experience Manager] Web界面。 转到 **[!UICONTROL 资产]** > **[!UICONTROL 文件]** 在 [!DNL Experience Manager]，单击 ![search_icon](assets/do-not-localize/search_icon.png) 在顶部栏中，输入搜索关键字，然后选择 `Return`. 或者，使用关键字快捷键 `/` （正斜杠）以打开Omnisearch字段。 `Location:Assets` 已预选中，以将搜索限制在DAM资产。 [!DNL Experience Manager] 在开始键入搜索关键词时提供建议。
 
@@ -252,7 +252,7 @@ ht-degree: 5%
 | `mode` | 单个，多个 | <ul><li>`https://localhost:4502/aem/assetpicker.html?mode=single`</li><li>`https://localhost:4502/aem/assetpicker.html?mode=multiple`</li></ul> | 在多个模式下，您可以使用资源选择器同时选择多个资源。 |
 | `dialog` | true， false | [https://localhost:4502/aem/assetpicker.html?dialog=true](https://localhost:4502/aem/assetpicker.html?dialog=true) | 使用这些参数以Granite对话框形式打开资产选择器。 仅当通过Granite路径字段启动资产选择器，并将其配置为pickerSrc URL时，此选项才适用。 |
 | `root` | &lt;folder_path> | `https://localhost:4502/aem/assetpicker.html?assettype=images&root=/content/dam/we-retail/en/activities` | 使用此选项可指定资源选择器的根文件夹。 在这种情况下，资产选择器允许您仅选择根文件夹下的子资产（直接/间接）。 |
-| `viewmode` | 搜索 |  | 要在搜索模式下启动资产选择器，请执行以下操作 `assettype` 和 `mimetype` 参数。 |
+| `viewmode` | 搜索 | | 要在搜索模式下启动资产选择器，请执行以下操作 `assettype` 和 `mimetype` 参数。 |
 | `assettype` | 图像、文档、多媒体、存档。 | <ul><li>`https://localhost:4502/aem/assetpicker.html?viewmode=search&assettype=images`</li><li> `https://localhost:4502/aem/assetpicker.html?viewmode=search&assettype=documents` </li><li> `https://localhost:4502/aem/assetpicker.html?viewmode=search&assettype=multimedia` </li><li> `https://localhost:4502/aem/assetpicker.html?viewmode=search&assettype=archives` </li></ul> | 使用选项可根据提供的值筛选资源类型。 |
 | `mimetype` | MIME类型(`/jcr:content/metadata/dc:format`)（也支持通配符）。 | <ul><li>`https://localhost:4502/aem/assetpicker.html?mimetype=image/png`</li><li>`https://localhost:4502/aem/assetpicker.html?mimetype=*png`</li><li>`https://localhost:4502/aem/assetpicker.html?mimetype=*presentation`</li><li>`https://localhost:4502/aem/assetpicker.html?mimetype=*presentation&mimetype=*png`</li></ul> | 使用它根据MIME类型筛选资源。 |
 
@@ -291,7 +291,7 @@ ht-degree: 5%
 * 全文搜索支持运算符，例如 `-` 和 `^`. 要将这些字母搜索为字符串文字，请用双引号将搜索表达式括起来。 例如，使用 `"Notebook - Beauty"` 而不是 `Notebook - Beauty`.
 * 如果搜索结果太多，请限制 [搜索范围](#scope) 零入所需的资产。 当您了解如何更好地查找所需资源（例如，特定文件类型、特定位置、特定元数据等）时，此工具将发挥最佳作用。
 
-* **标记**：标记可帮助您对可以更高效地浏览和搜索的资源进行分类。 标记有助于将相应的分类传播给其他用户和工作流。 [!DNL Experience Manager] 提供了一些方法，可使用Adobe Sensei的人工智能服务自动标记资产，从而更好地通过使用和培训来标记资产。 搜索资产时，如果您的帐户中启用了智能标记，则会将智能标记考虑在内。 它与内置搜索功能配合使用。 参见 [搜索行为](#searchbehavior). 要优化搜索结果的显示顺序，您可以 [提升搜索排名](#searchrank) 少数精选资源的。
+* **标记**：标记可帮助您对可以更高效地浏览和搜索的资源进行分类。 标记有助于将适当的分类传播给其他用户和工作流程。[!DNL Experience Manager] 提供了一些方法，可使用Adobe Sensei的人工智能服务自动标记资产，从而更好地通过使用和培训来标记资产。 搜索资产时，如果您的帐户中启用了智能标记，则会将智能标记考虑在内。 它与内置搜索功能配合使用。 参见 [搜索行为](#searchbehavior). 要优化搜索结果的显示顺序，您可以 [提升搜索排名](#searchrank) 少数精选资源的。
 
 * **索引**：搜索结果中仅返回索引元数据和资源。 为了获得更好的覆盖率和性能，请确保正确编制索引并遵循最佳实践。 参见 [索引](#searchindex).
 
@@ -487,11 +487,10 @@ ht-degree: 5%
 | 搜索过滤器或谓词不可用。 | <ul><li>未配置搜索筛选器。</li><li>它不可用于您的登录。</li><li>（不太可能）未在您使用的部署中自定义搜索选项。</li></ul> | <ul><li>联系管理员以检查搜索自定义项是否可用。</li><li>联系管理员以检查您的帐户是否具有使用自定义设置的权限。</li><li>联系管理员并查看可用的自定义项 [!DNL Assets] 您正在使用的部署。</li></ul> |
 | 搜索视觉上相似的图片时，缺少预期的图片。 | <ul><li>图像在中不可用 [!DNL Experience Manager].</li><li>图像未编入索引。 通常是在最近上传时。</li><li>图像未智能标记。</li></ul> | <ul><li>将图像添加到 [!DNL Assets].</li><li>请与管理员联系以重新索引存储库。 此外，请确保您使用的是适当的索引。</li><li>请联系您的管理员以智能标记相关资产。</li></ul> |
 | 在搜索视觉上相似的图像时，显示不相关的图像。 | 视觉搜索行为。 | [!DNL Experience Manager] 尽可能多地显示潜在相关的资产。 不太相关的图像（如果有）会添加到结果中，但搜索排名较低。 向下滚动搜索结果时，搜索资产的匹配质量和相关性会降低。 |
-| 选择并操作搜索结果时，不会操作所有搜索到的资产。 | 此 [!UICONTROL 全选] 选项仅选择卡片视图中的前100个搜索结果和列表视图中的前200个搜索结果。 |  |
+| 选择并操作搜索结果时，不会操作所有搜索到的资产。 | 此 [!UICONTROL 全选] 选项仅选择卡片视图中的前100个搜索结果和列表视图中的前200个搜索结果。 | |
 
 >[!MORELIKETHIS]
 >
 >* [[!DNL Experience Manager] 搜索实施指南](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/developing/search-tutorial-develop.html)
 >* [用于提升搜索结果的高级配置](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/search-and-discovery/search-boost.html)
 >* [配置智能翻译搜索](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/translation/smart-translation-search-technical-video-setup.html)
-

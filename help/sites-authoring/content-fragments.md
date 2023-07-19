@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 4049a7a5-4b33-4462-a25f-3c0daeb6a8a9
 docset: aem65
 exl-id: d5dad844-80ca-4ace-a082-38d892d9ffe2
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1140'
+source-wordcount: '1141'
 ht-degree: 91%
 
 ---
@@ -45,7 +45,7 @@ Adobe Experience Manager (AEM) 内容片段[作为独立于页面的资产而创
 
 * **Creative Pro**
 
-   * 通过与内容片段关联的收藏集跟踪创意资产。
+   * 通过与内容片段关联的收藏集跟踪创意资源。
 
 * **撰稿人**
 
@@ -59,7 +59,7 @@ Adobe Experience Manager (AEM) 内容片段[作为独立于页面的资产而创
 * **生成器和旅行管理器**
 
    * 从 AEM 内的预定义片段和具有创作功能的变体中选择。
-   * 可以依赖始终保持最新的片段和关联内容，因为撰稿人和创意人员会在集中管理的片段和资产中进行更新。
+   * 可以依赖始终保持最新的片段和关联内容，因为撰稿人和创意人员会在集中管理的片段和资源中进行更新。
    * 可以依赖为了相关性而进行管理的关联媒体内容。
    * 可以快速创建随机内容变体，同时仍然确保这些变体在片段中受到集中管理。
 
@@ -71,9 +71,10 @@ Adobe Experience Manager (AEM) 内容片段[作为独立于页面的资产而创
 
 1. 您可以：
 
-   * 打开&#x200B;**资产**&#x200B;浏览器并筛选&#x200B;**内容片段**（默认为图像）。然后，将所需的片段拖到组件实例上。
+   * 打开&#x200B;**资源**&#x200B;浏览器并筛选&#x200B;**内容片段**（默认为图像）。然后，将所需的片段拖到组件实例上。
 
    * 选择内容片段组件，然后从工具栏中选择&#x200B;**配置**。在对话框中，您可以打开选择对话框以浏览并选择所需的&#x200B;**内容片段**。
+
    >[!NOTE]
    >
    >备选方法是将特定的内容片段直接拖到页面上。这将自动创建关联的组件（内容片段）。
@@ -90,7 +91,8 @@ Adobe Experience Manager (AEM) 内容片段[作为独立于页面的资产而创
    >
    >    * [响应式布局](/help/sites-authoring/responsive-layout.md)
    >    * [编辑页面内容](/help/sites-authoring/editing-content.md)
-
+   >
+   >
 
 ### 选择元素或变体 {#selecting-the-element-or-variation}
 
@@ -100,7 +102,7 @@ Adobe Experience Manager (AEM) 内容片段[作为独立于页面的资产而创
 
 * **内容片段**
 
-   指定要使用的片段。
+  指定要使用的片段。
 
 * **显示模式**：
 
@@ -113,9 +115,9 @@ Adobe Experience Manager (AEM) 内容片段[作为独立于页面的资产而创
    * 默认 **主要** 将始终可用。
    * 如果片段是使用相应的模板创建的，将有可选择的内容可用。
 
-   >[!NOTE]
-   >
-   >可用的元素取决于使用的模板。
+  >[!NOTE]
+  >
+  >可用的元素取决于使用的模板。
 
 * **变体**
 
@@ -133,7 +135,7 @@ Adobe Experience Manager (AEM) 内容片段[作为独立于页面的资产而创
 
 ### 到片段编辑器的快速连接 {#quick-connection-to-fragment-editor}
 
-您可以打开片段源，以使用组件工具栏中的&#x200B;**编辑**&#x200B;图标编辑（资产）。这将允许您[编辑和管理内容片段](/help/assets/content-fragments/content-fragments.md)。
+您可以打开片段源，以使用组件工具栏中的&#x200B;**编辑**&#x200B;图标编辑（资源）。这将允许您[编辑和管理内容片段](/help/assets/content-fragments/content-fragments.md)。
 
 >[!CAUTION]
 >
@@ -148,7 +150,7 @@ Adobe Experience Manager (AEM) 内容片段[作为独立于页面的资产而创
 对于中间内容，您可以：
 
 * 从[组件浏览器](/help/sites-authoring/author-environment-tools.md#components-browser)添加组件。
-* 从[资产浏览器](/help/sites-authoring/author-environment-tools.md#assets-browser)添加资产。
+* 从[资源浏览器](/help/sites-authoring/author-environment-tools.md#assets-browser)添加资源。
 * 使用[关联内容](#using-associated-content)作为中间内容的源。
 
 >[!CAUTION]
@@ -159,9 +161,9 @@ Adobe Experience Manager (AEM) 内容片段[作为独立于页面的资产而创
 
 >[!NOTE]
 >
->您还可以[在片段本身中插入可视资产（图像）](/help/assets/content-fragments/content-fragments-variations.md#inserting-assets-into-your-fragment)。
+>您还可以[在片段本身中插入可视资源（图像）](/help/assets/content-fragments/content-fragments-variations.md#inserting-assets-into-your-fragment)。
 >
->在片段本身中插入的可视资产会附加到片段中的前一段落后面。这意味着无法在可视资产与前一段落之间放置中间内容。
+>在片段本身中插入的可视资源会附加到片段中的前一段落后面。这意味着无法在可视资源与前一段落之间放置中间内容。
 
 >[!CAUTION]
 >
@@ -175,18 +177,17 @@ Adobe Experience Manager (AEM) 内容片段[作为独立于页面的资产而创
 >* 除非两个段落结构产生冲突；在这种情况下，将不会显示中间内容（尽管它在内部依然存在）。
 >
 
-
 ### 使用关联内容 {#using-associated-content}
 
 如果您有与[内容片段关联的](/help/assets/content-fragments/content-fragments-assoc-content.md)[内容](/help/assets/content-fragments/content-fragments.md) ，则这些资产将从侧面板（在将片段放置到内容页面后）中可用。 关联内容实际上是中间内容的[特殊内容源](#adding-in-between-content)。
 
 >[!NOTE]
 >
->可以通过多种方法向片段和/或页面中添加[可视资产（例如图像）](/help/assets/content-fragments/content-fragments.md#fragments-with-visual-assets)。
+>可以通过多种方法向片段和/或页面中添加[可视资源（例如图像）](/help/assets/content-fragments/content-fragments.md#fragments-with-visual-assets)。
 
 >[!NOTE]
 >
->如果您在一个页面中拥有多个内容片段，**关联内容**&#x200B;选项卡将显示适用于所有片段的资产。
+>如果您在一个页面中拥有多个内容片段，**关联内容**&#x200B;选项卡将显示适用于所有片段的资源。
 
 在将具有关联内容的片段添加到页面之后，将会在侧面板中打开一个新的选项卡（**关联内容**）。
 
@@ -194,7 +195,7 @@ Adobe Experience Manager (AEM) 内容片段[作为独立于页面的资产而创
 
 ![cfm-6420-03](assets/cfm-6420-03.png)
 
-### 插入到片段中的资产 {#assets-inserted-into-the-fragment}
+### 插入到片段中的资源 {#assets-inserted-into-the-fragment}
 
 如果已在片段本身中插入资产（例如图像），则页面编辑器中用于编辑这些资产的选项会受到限制。 <!-- Removed link as it was a 404 on helpx -->
 

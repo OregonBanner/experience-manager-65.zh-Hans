@@ -10,9 +10,9 @@ content-type: reference
 discoiquuid: 2aef9048-9d6e-4f5d-b443-5e73f8066d76
 docset: aem65
 exl-id: 9ef9ae75-cd8c-4adb-9bcb-e951d200d492
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '455'
+source-wordcount: '460'
 ht-degree: 7%
 
 ---
@@ -76,7 +76,7 @@ OSGi配置为：
   <tr>
    <td><strong>资源类型</strong></td>
    <td><code>dam.cfm.component.resourceType</code></td>
-   <td>要注册的资源类型；例如 <br /> <p><span class="cmp-examples-demo__property-value"><code>core/wcm/components/contentfragment/v1/contentfragment</code></code></p> </td>
+   <td>要注册的资源类型；例如， <br /> <p><span class="cmp-examples-demo__property-value"><code>core/wcm/components/contentfragment/v1/contentfragment</code></code></p> </td>
   </tr>
   <tr>
    <td><strong>引用属性</strong></td>
@@ -96,7 +96,7 @@ OSGi配置为：
  </tbody>
 </table>
 
-对于某些功能（例如，仅呈现段落范围），您必须遵守某些惯例：
+对于某些功能（例如，要仅呈现段落范围），您必须遵守某些惯例：
 
 <table>
  <tbody>

@@ -10,7 +10,7 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: be2aa297-5b78-4b1d-8ff1-e6a585a177dd
 exl-id: 17a4e4dc-804e-44a9-9942-c37dbfc8016f
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
 source-wordcount: '858'
 ht-degree: 0%
@@ -25,7 +25,7 @@ Adobe Analytics使用 `s.pageName` 属性，用于唯一标识页面并关联为
 
 * 设计页面组件，使其包含映射到的CQ变量 `s.pageName` 属性。 (请参阅 [为自定义组件实施Adobe Analytics跟踪](/help/sites-developing/extending-analytics-components.md).)
 
-要在“站点”控制台和“内容分析”中显示Analytics报表数据，AEM需要 `s.pageName` 属性。 AEM Analytics Java API定义 `AnalyticsPageNameProvider` 您为提供站点控制台和内容分析而实施的界面，其值为 `s.pageName` 属性。 您的 `AnaltyicsPageNameProvider` 服务解析服务器上的pageName属性以用于生成报告，因为它可以在客户端上使用Javascript动态设置以进行跟踪。
+要在“站点”控制台和“内容分析”中显示Analytics报表数据，AEM需要 `s.pageName` 属性。 AEM Analytics Java API定义 `AnalyticsPageNameProvider` 您为提供站点控制台和内容分析而实施的界面，其值为 `s.pageName` 属性。 您的 `AnaltyicsPageNameProvider` 服务解析服务器上的pageName属性以用于生成报告，因为它可以在客户端上使用JavaScript动态设置以用于跟踪目的。
 
 ## 默认的Analytics页面名称提供程序服务 {#the-default-analytics-page-name-provider-service}
 
@@ -43,7 +43,7 @@ Adobe Analytics使用 `s.pageName` 属性，用于唯一标识页面并关联为
 
 * `pagedata.navTitle`：服务使用 `page.getNavigationTitle()`
 
-此 `page` 对象是 [ `com.day.cq.wcm.api.Page`](https://helpx.adobe.com/experience-manager/6-3/sites-developing/reference-materials/javadoc/com/day/cq/wcm/api/Page.html) 页面的Java对象。
+此 `page` 对象是 [`com.day.cq.wcm.api.Page`](https://helpx.adobe.com/experience-manager/6-3/sites-developing/reference-materials/javadoc/com/day/cq/wcm/api/Page.html) 页面的Java对象。
 
 如果不将CQ变量映射到 `s.pageName` 框架中的属性，的值 `s.pageName` 是从页面路径生成的。 例如，路径为 `/content/geometrixx/en` 使用值 `content:geometrixx:en` 对象 `s.pageName`.
 

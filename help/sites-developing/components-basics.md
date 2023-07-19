@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 1f9867f1-5089-46d0-8e21-30d62dbf4f45
 legacypath: /content/docs/en/aem/6-0/develop/components/components-develop
 exl-id: 7ff92872-697c-4e66-b654-15314a8cb429
-source-git-commit: 43a30b5ba76ea470cc50a962d4f04b4a1508964d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '4948'
+source-wordcount: '4953'
 ht-degree: 1%
 
 ---
@@ -49,7 +49,7 @@ ht-degree: 1%
 在就开发组件展开任何严肃讨论之前，您需要知道作者将使用哪种UI：
 
 * **触屏优化UI**
-   [标准用户界面](/help/sites-developing/touch-ui-concepts.md) 基于Adobe Marketing Cloud的统一用户体验，使用以下底层技术： [Coral UI](/help/sites-developing/touch-ui-concepts.md#coral-ui) 和 [Granite UI](/help/sites-developing/touch-ui-concepts.md#granite-ui).
+  [标准用户界面](/help/sites-developing/touch-ui-concepts.md) 基于Adobe Marketing Cloud的统一用户体验，使用以下底层技术： [Coral UI](/help/sites-developing/touch-ui-concepts.md#coral-ui) 和 [Granite UI](/help/sites-developing/touch-ui-concepts.md#granite-ui).
 * **经典Ui**
 基于ExtJS技术的用户界面，AEM 6.4已弃用。
 
@@ -103,7 +103,7 @@ HTL和JSP都可用于为经典用户界面和触屏优化UI开发组件。 尽�
 
 >[!NOTE]
 >
->这些机制还可用于在其他实例之间传输组件，例如，从开发实例传输到测试实例。
+>这些机制还可用于在其他实例之间转移组件，例如，从开发实例转移到测试实例。
 
 ### 从头开始要注意的组件 {#components-to-be-aware-of-from-the-start}
 
@@ -161,15 +161,15 @@ AEM组件的结构强大而灵活，主要考虑因素包括：
 
    * jcr属性：
 
-      jcr属性的列表；这些属性是变量的，有些可能是可选的，但组件节点的基本结构、其属性和子节点由定义。 `cq:Component` 定义
+     jcr属性的列表；这些属性是变量的，有些可能是可选的，但组件节点的基本结构、其属性和子节点由定义。 `cq:Component` 定义
 
    * 资源:
 
-      这些定义组件使用的静态元素。
+     这些定义组件使用的静态元素。
 
    * 脚本:
 
-   用于实施组件的结果实例的行为。
+  用于实施组件的结果实例的行为。
 
 * **根节点**：
 
@@ -183,27 +183,27 @@ AEM组件的结构强大而灵活，主要考虑因素包括：
 
       * `icon.png`  — 此组件的图标。
       * `thumbnail.png`  — 如果此组件在段落系统中列出，则显示图像。
+
    * 触屏 UI
 
       * 请参阅部分 [触屏UI中的组件图标](/help/sites-developing/components-basics.md#component-icon-in-touch-ui) 了解详细信息。
-
 
 * **重要子节点**：
 
    * `cq:editConfig (cq:EditConfig)`  — 定义组件的编辑属性，并使组件显示在组件浏览器或Sidekick中。
 
-      注意：如果组件有对话框，它将自动显示在组件浏览器或Sidekick中，即使cq：editConfig不存在。
+     注意：如果组件有对话框，它将自动显示在组件浏览器或Sidekick中，即使cq：editConfig不存在也是如此。
 
    * `cq:childEditConfig (cq:EditConfig)`  — 控制子组件的创作UI方面，这些组件未定义自己的组件 `cq:editConfig`.
    * 触屏优化UI：
 
       * `cq:dialog` ( `nt:unstructured`) — 此组件的对话框。 定义允许用户配置组件和/或编辑内容的界面。
       * `cq:design_dialog` ( `nt:unstructured`) — 此组件的设计编辑
+
    * 经典 UI:
 
       * `dialog` ( `cq:Dialog`) — 此组件的对话框。 定义允许用户配置组件和/或编辑内容的界面。
       * `design_dialog` ( `cq:Dialog`) — 此组件的设计编辑。
-
 
 #### 触屏UI中的组件图标 {#component-icon-in-touch-ui}
 
@@ -270,7 +270,7 @@ AEM组件的结构强大而灵活，主要考虑因素包括：
   <tr>
    <td><code>componentGroup</code></td>
    <td><code>String</code></td>
-   <td>可以在组件浏览器（触屏UI）或Sidekick（经典UI）中选择组件的组。<br /> 值 <code>.hidden</code> 用于无法从UI中选择的组件，例如实际段落系统。</td>
+   <td>可在组件浏览器（触屏UI）或Sidekick（经典UI）中选择组件的组。<br /> 值 <code>.hidden</code> 用于无法从UI中选择的组件，例如实际段落系统。</td>
   </tr>
   <tr>
    <td><code>cq:isContainer</code></td>
@@ -284,7 +284,7 @@ AEM组件的结构强大而灵活，主要考虑因素包括：
   </tr>
   <tr>
    <td><code>cq:dialog</code></td>
-   <td><code>nt:unstructured</code> </td>
+   <td><code>nt:unstructured</code><br /> </td>
    <td>触屏UI的“编辑”对话框的定义。</td>
   </tr>
   <tr>
@@ -374,7 +374,7 @@ AEM组件的结构强大而灵活，主要考虑因素包括：
   </tr>
   <tr>
    <td><code>&lt;breadcrumb.jsp&gt;</code></td>
-   <td><code>nt:file</code> </td>
+   <td><code>nt:file</code><br /> </td>
    <td>脚本文件。<br /> </td>
   </tr>
   <tr>
@@ -394,11 +394,11 @@ AEM组件的结构强大而灵活，主要考虑因素包括：
 
 * HTL ( `/libs/wcm/foundation/components/text`)
 
-   ![chlimage_1-241](assets/chlimage_1-241.png)
+  ![chlimage_1-241](assets/chlimage_1-241.png)
 
 * JSP ( `/libs/foundation/components/text`)
 
-   ![screen_shot_2012-02-13at60457pm](assets/screen_shot_2012-02-13at60457pm.png)
+  ![screen_shot_2012-02-13at60457pm](assets/screen_shot_2012-02-13at60457pm.png)
 
 特别感兴趣之物业包括：
 
@@ -433,7 +433,6 @@ AEM组件的结构强大而灵活，主要考虑因素包括：
 >* 此 [AEM现代化工具](/help/sites-developing/modernization-tools.md) 此外，还帮助您扩展/转换仅具有为经典UI定义的对话框的组件。
 >
 
-
 * 触屏优化UI
    * `cq:dialog` ( `nt:unstructured`)节点：
       * 定义用于编辑此组件内容的对话框
@@ -444,11 +443,11 @@ AEM组件的结构强大而灵活，主要考虑因素包括：
          * 对于开箱即用的组件，这通常会引用文档中的页面。
          * 如果否 `helpPath` 指定时，将显示默认URL（文档概述页面）。
 
-   ![chlimage_1-242](assets/chlimage_1-242.png)
+  ![chlimage_1-242](assets/chlimage_1-242.png)
 
-   在该对话框中，定义了各个字段：
+  在该对话框中，定义了各个字段：
 
-   ![screen_shot_2012-02-13at60937pm](assets/screen_shot_2012-02-13at60937pm.png)
+  ![screen_shot_2012-02-13at60937pm](assets/screen_shot_2012-02-13at60937pm.png)
 
 * 经典 UI
    * `dialog` ( `cq:Dialog`)节点
@@ -460,23 +459,22 @@ AEM组件的结构强大而灵活，主要考虑因素包括：
          * 对于开箱即用的组件，这通常会引用文档中的页面。
          * 如果否 `helpPath` 指定时，将显示默认URL（文档概述页面）。
 
-   ![chlimage_1-243](assets/chlimage_1-243.png)
+  ![chlimage_1-243](assets/chlimage_1-243.png)
 
-   在该对话框中，定义了各个字段：
+  在该对话框中，定义了各个字段：
 
-   ![chlimage_1-244](assets/chlimage_1-244.png)
+  ![chlimage_1-244](assets/chlimage_1-244.png)
 
-   在Classic对话框中：
+  在Classic对话框中：
 
    * 您可以创建对话框为 `cq:Dialog`，这将提供单个选项卡 — 与文本组件中一样，或者如果您需要多个选项卡（与文本时间组件一样），则可以将该对话框定义为 `cq:TabPanel`.
    * a `cq:WidgetCollection` ( `items`)为任一输入字段提供基础( `cq:Widget`)或其他选项卡( `cq:Widget`)。 此层次结构可以扩展。
-
 
 ### 设计对话框 {#design-dialogs}
 
 “设计”对话框与用于编辑和配置内容的对话框非常相似，但它们为作者提供了配置该组件并提供其设计详细信息的界面。
 
-[设计对话框在设计模式下可用](/help/sites-authoring/default-components-designmode.md)，尽管并非所有组件都需要它们，例如 **标题** 和 **图像** 两者都具有设计对话框，而 **文本** 不会。
+[设计对话框在设计模式下可用](/help/sites-authoring/default-components-designmode.md)，尽管并非所有组件都需要，例如， **标题** 和 **图像** 两者都具有设计对话框，而 **文本** 不会。
 
 段落系统的“设计”对话框（例如parsys）是一种特殊情况，因为它允许用户在页面上选择特定的其他组件（从组件浏览器或sidekick）。
 
@@ -501,11 +499,11 @@ AEM组件的结构强大而灵活，主要考虑因素包括：
 
 * 触屏优化UI
 
-   ![chlimage_1-246](assets/chlimage_1-246.png)
+  ![chlimage_1-246](assets/chlimage_1-246.png)
 
 * 经典 UI
 
-   ![screen_shot_2012-02-01at34257pm](assets/screen_shot_2012-02-01at34257pm.png)
+  ![screen_shot_2012-02-01at34257pm](assets/screen_shot_2012-02-01at34257pm.png)
 
 然后，我们可以查看在存储库中创建的内容的结构：
 
@@ -528,7 +526,7 @@ AEM中的组件遵循3个不同的层次结构：
 
 * **资源类型层次结构**
 
-   这用于使用属性扩展组件 `sling:resourceSuperType`. 这将使组件能够继承。 例如，文本组件将继承标准组件的各种属性。
+  这用于使用属性扩展组件 `sling:resourceSuperType`. 这将使组件能够继承。 例如，文本组件将继承标准组件的各种属性。
 
    * 脚本（由Sling解析）
    * 对话框
@@ -536,17 +534,17 @@ AEM中的组件遵循3个不同的层次结构：
 
 * **容器层次结构**
 
-   这用于向子组件填充配置设置，并且最常用于parsys场景。
+  这用于向子组件填充配置设置，并且最常用于parsys场景。
 
-   例如，可以在父组件上定义编辑栏按钮的配置设置、控件集布局（编辑栏、变换）、对话框布局（内联、浮动）并传播到子组件。
+  例如，可以在父组件上定义编辑栏按钮的配置设置、控件集布局（编辑栏、变换）、对话框布局（内联、浮动）并传播到子组件。
 
-   中的配置设置（与编辑功能相关） `cq:editConfig` 和 `cq:childEditConfig` 都会被传播。
+  中的配置设置（与编辑功能相关） `cq:editConfig` 和 `cq:childEditConfig` 都会被传播。
 
 * **包括层次结构**
 
-   这是在运行时由include序列施加的。
+  这是在运行时由include序列施加的。
 
-   设计器使用此层级，而此层级又用作呈现的各个设计方面的基础；包括布局信息、css信息、parsys中的可用组件等。
+  设计器使用此层级，而此层级又用作呈现的各个设计方面的基础；包括布局信息、css信息、parsys中的可用组件等。
 
 ## 编辑行为 {#edit-behavior}
 
@@ -556,29 +554,29 @@ AEM中的组件遵循3个不同的层次结构：
 
 组件的编辑行为可通过添加 `cq:editConfig` 类型节点 `cq:EditConfig` 在组件节点下(类型为 `cq:Component`)，并添加特定属性和子节点。 以下属性和子节点可用：
 
-* [ `cq:editConfig` 节点属性](#configuring-with-cq-editconfig-properties)：
+* [`cq:editConfig` 节点属性](#configuring-with-cq-editconfig-properties)：
 
    * `cq:actions` ( `String array`)：定义可以对组件执行的操作。
    * `cq:layout` ( `String`)： ：定义如何在经典UI中编辑组件。
    * `cq:dialogMode` ( `String`)：定义如何在经典UI中打开组件对话框
 
       * 在触屏优化UI中，对话框在桌面模式下始终处于浮动状态，并在移动设备中自动作为全屏打开。
+
    * `cq:emptyText` ( `String`)：定义不存在可视内容时显示的文本。
    * `cq:inherit` ( `Boolean`)：定义缺少的值是否从它继承的组件继承。
    * `dialogLayout` （字符串）：定义应如何打开对话框。
 
-
-* [ `cq:editConfig` 子节点](#configuring-with-cq-editconfig-child-nodes)：
+* [`cq:editConfig` 子节点](#configuring-with-cq-editconfig-child-nodes)：
 
    * `cq:dropTargets` (节点类型 `nt:unstructured`)：定义可以接受从内容查找器的资源进行放置的放置目标的列表
 
       * 多个放置目标仅在经典UI中可用。
       * 在触屏优化UI中，允许使用单个放置目标。
+
    * `cq:actionConfigs` (节点类型 `nt:unstructured`)：定义附加到cq：actions列表的新操作的列表。
    * `cq:formParameters` (节点类型 `nt:unstructured`)：定义添加到对话框表单的其他参数。
    * `cq:inplaceEditing` (节点类型 `cq:InplaceEditingConfig`)：定义组件的就地编辑配置。
    * `cq:listeners` (节点类型 `cq:EditListenersConfig`)：定义在组件上发生操作之前或之后发生的情况。
-
 
 >[!NOTE]
 >
@@ -598,13 +596,13 @@ AEM中的组件遵循3个不同的层次结构：
 
 存储库中有许多现有配置。 您可以轻松搜索特定属性或子节点：
 
-* 要查找 `cq:editConfig` 节点，例如 `cq:actions`中，您可以使用查询工具 **CRXDE Lite** 和搜索以下XPath查询字符串：
+* 要查找 `cq:editConfig` 节点，例如， `cq:actions`中，您可以使用查询工具 **CRXDE Lite** 和搜索以下XPath查询字符串：
 
-   `//element(cq:editConfig, cq:EditConfig)[@cq:actions]`
+  `//element(cq:editConfig, cq:EditConfig)[@cq:actions]`
 
-* 查找的子节点 `cq:editConfig`，例如，您可以搜索 `cq:dropTargets`，属于类型 `cq:DropTargetConfig`；您可以使用查询工具在**CRXDE Lite**和搜索中使用以下XPath查询字符串：
+* 查找的子节点 `cq:editConfig`例如，您可以搜索 `cq:dropTargets`，属于类型 `cq:DropTargetConfig`；您可以使用查询工具在**CRXDE Lite**和搜索中使用以下XPath查询字符串：
 
-   `//element(cq:dropTargets, cq:DropTargetConfig)`
+  `//element(cq:dropTargets, cq:DropTargetConfig)`
 
 ### 组件占位符 {#component-placeholders}
 
@@ -1032,7 +1030,6 @@ AEM中的组件遵循3个不同的层次结构：
 >  * `aftermove`
 >  * `aftercopy`
 
-
 事件处理程序可以通过自定义实施来实施。 例如(其中 `project.customerAction` 是静态方法)：
 
 `afteredit = "project.customerAction"`
@@ -1043,7 +1040,7 @@ AEM中的组件遵循3个不同的层次结构：
 
 >[!NOTE]
 >
->对于经典UI，要查看哪些参数可以在处理程序中使用，请参阅 `before<action>` 和 `after<action>` 的事件部分 [ `CQ.wcm.EditBar`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.EditBar) 和 [ `CQ.wcm.EditRollover`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.EditRollover) 构件文档。
+>对于经典UI，要查看哪些参数可以在处理程序中使用，请参阅 `before<action>` 和 `after<action>` 的事件部分 [`CQ.wcm.EditBar`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.EditBar) 和 [`CQ.wcm.EditRollover`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.EditRollover) 构件文档。
 
 使用下列配置，在删除、编辑、插入或移动组件后刷新页面：
 

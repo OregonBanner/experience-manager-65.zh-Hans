@@ -11,9 +11,9 @@ topic-tags: coding
 discoiquuid: d5722281-bea9-4fc7-abdc-e678899e0a15
 role: Developer
 exl-id: 3139564f-9346-4933-8e39-2e1642bff097
-source-git-commit: 135f50cc80f8bb449b2f1621db5e2564f5075968
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '9905'
+source-wordcount: '9902'
 ht-degree: 0%
 
 ---
@@ -231,7 +231,7 @@ A `BLOB` 对象向AEM Forms服务发送二进制数据(例如，PDF文件、XML�
 
    * 服务的SOAP端点参数“输出Blob对象的默认协议”设置为“智能”。
 
-      对于具有SOAP端点的每个服务，管理控制台允许您为任何返回的blob指定传输协议。 (请参阅 [管理帮助](https://www.adobe.com/go/learn_aemforms_admin_63).)
+     对于具有SOAP端点的每个服务，管理控制台允许您为任何返回的blob指定传输协议。 (请参阅 [管理帮助](https://www.adobe.com/go/learn_aemforms_admin_63).)
 
    * AEM Forms服务将一个或多个文档作为输入。
 
@@ -685,7 +685,7 @@ A `BLOB` 对象向AEM Forms服务发送二进制数据(例如，PDF文件、XML�
 
    * 将WSDL端点和编码类型分配给 `javax.xml.ws.BindingProvider` 对象的 `ENDPOINT_ADDRESS_PROPERTY` 字段。 要调用 `MyApplication/EncryptDocument` 服务使用Base64编码，请指定以下URL值：
 
-      `https://hiro-xp:8080/soap/services/MyApplication/EncryptDocument?blob=base64`
+     `https://hiro-xp:8080/soap/services/MyApplication/EncryptDocument?blob=base64`
 
    * 将AEM表单用户分配给 `javax.xml.ws.BindingProvider` 对象的 `USERNAME_PROPERTY` 字段。
    * 将相应的密码值分配给 `javax.xml.ws.BindingProvider` 对象的 `PASSWORD_PROPERTY` 字段。
@@ -880,7 +880,7 @@ Replace `localhost` ，其中包含托管AEM Forms的J2EE应用程序服务器�
 
    * 将WSDL端点和编码类型分配给 `javax.xml.ws.BindingProvider` 对象的 `ENDPOINT_ADDRESS_PROPERTY` 字段。 要调用 `MyApplication/EncryptDocument` 服务使用SwaRef编码，请指定以下URL值：
 
-      ` https://hiro-xp:8080/soap/services/MyApplication/EncryptDocument?blob=swaref`
+     ` https://hiro-xp:8080/soap/services/MyApplication/EncryptDocument?blob=swaref`
 
    * 将AEM表单用户分配给 `javax.xml.ws.BindingProvider` 对象的 `USERNAME_PROPERTY` 字段。
    * 将相应的密码值分配给 `javax.xml.ws.BindingProvider` 对象的 `PASSWORD_PROPERTY` 字段。
@@ -1003,7 +1003,7 @@ Replace `localhost` ，其中包含托管AEM Forms的J2EE应用程序服务器�
 
    * 将WSDL端点和编码类型分配给 `javax.xml.ws.BindingProvider` 对象的 `ENDPOINT_ADDRESS_PROPERTY` 字段。 要调用 `MyApplication/EncryptDocument` 服务使用BLOB over HTTP编码，请指定以下URL值：
 
-      `https://hiro-xp:8080/soap/services/MyApplication/EncryptDocument?blob=http`
+     `https://hiro-xp:8080/soap/services/MyApplication/EncryptDocument?blob=http`
 
    * 将AEM表单用户分配给 `javax.xml.ws.BindingProvider` 对象的 `USERNAME_PROPERTY` 字段。
    * 将相应的密码值分配给 `javax.xml.ws.BindingProvider` 对象的 `PASSWORD_PROPERTY` 字段。

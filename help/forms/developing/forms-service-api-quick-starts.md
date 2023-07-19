@@ -11,7 +11,7 @@ topic-tags: develop
 discoiquuid: 9fe48243-24c6-4e08-9886-148cd99dec87
 role: Developer
 exl-id: acb33000-25b3-4471-9df9-b6e039ab2bda
-source-git-commit: 0c7dba43dad8608b4a5de271e1e44942c950fb16
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
 source-wordcount: '1549'
 ht-degree: 0%
@@ -1974,7 +1974,7 @@ ht-degree: 0%
 * `convertDataSource`：转换 `org.w3c.dom.Document` 对象到 `com.adobe.idp.Document` 对象。 此方法接受 `org.w3c.dom.Document` 对象，作为输入参数并返回 `com.adobe.idp.Document` 对象。
 * `renderPOForm`：使用Forms服务Java API渲染动态采购订单表单。 此 `com.adobe.idp.Document` 返回的对象 `convertDataSource` 方法用于预填充表单。
 
-   所有这些方法都是从Java servlet的 `doPost` 方法。 (请参阅 [使用可流布局预填充Forms](/help/forms/developing/rendering-forms.md#prepopulating-forms-with-flowable-layouts).)
+  所有这些方法都是从Java servlet的 `doPost` 方法。 (请参阅 [使用可流布局预填充Forms](/help/forms/developing/rendering-forms.md#prepopulating-forms-with-flowable-layouts).)
 
 ```java
 /*
@@ -2346,7 +2346,7 @@ public class RenderDynamicForm extends HttpServlet implements Servlet {
              if (processState == 1)
              {
  
-                 //Write the data back to to the client web browser
+                 //Write the data back to the client web browser
                  ServletOutputStream oOutput = resp.getOutputStream();
                  Document calData = formOut.getOutputContent();
  

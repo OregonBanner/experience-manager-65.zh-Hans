@@ -8,9 +8,9 @@ content-type: reference
 docset: aem65
 feature: Tagging
 exl-id: 53a37449-ef87-4fa6-82de-88fdc24cf988
-source-git-commit: 8dafa901bc628ee5e4823e9f8811bf4d09b7e072
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1642'
+source-wordcount: '1645'
 ht-degree: 0%
 
 ---
@@ -76,7 +76,7 @@ TagID包含 [命名空间](#tag-namespace) 后跟本地TagID。 [容器标记](#
 
 ### 标记命名空间 {#tag-namespace}
 
-命名空间允许您对事物进行分组。 最典型的使用案例是每个站点（例如，公共、内部和门户）或大型应用程序（例如，WCM、资产、社区）的命名空间。 但命名空间可用于各种其他需求。 命名空间在用户界面中仅用于显示适用于当前内容的标记（即特定命名空间的标记）的子集。
+命名空间允许您对事物进行分组。 最典型的使用案例是每个站点（例如，公共、内部和门户）或大型应用程序（例如，WCM、Assets、Communities）的命名空间。 但命名空间可用于各种其他需求。 命名空间在用户界面中仅用于显示适用于当前内容的标记（即特定命名空间的标记）的子集。
 
 标记的命名空间是分类子树中的第一级，即紧接在 [分类根节点](#taxonomy-root-node). 命名空间是类型的节点 `cq:Tag` 其父项不是 `cq:Tag` 节点类型。
 

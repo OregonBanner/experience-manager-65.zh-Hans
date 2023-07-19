@@ -11,9 +11,9 @@ discoiquuid: 6378ae30-a351-49f7-8e9a-f0bd4287b9d3
 docset: aem65
 feature: Correspondence Management
 exl-id: bf6d3edb-6bf7-4d3e-b042-d75cb8e39e3f
-source-git-commit: 4fa868f3ae4778d3a637e90b91f7c5909fe5f8aa
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1355'
+source-wordcount: '1354'
 ht-degree: 3%
 
 ---
@@ -95,7 +95,7 @@ ht-degree: 3%
         <tr>
         <td><strong>名称</strong></td>
         <td><strong>类型</strong></td>
-        <td><strong>价值 和描述</strong></td>
+        <td><strong>值和描述</strong></td>
         </tr>
         <tr>
         <td>class</td>
@@ -110,7 +110,7 @@ ht-degree: 3%
         <tr>
         <td>图标</td>
         <td>字符串</td>
-        <td>图标 — 下载<br /> <br /> “通信管理”显示在命令/菜单左侧的图标。 有关可用的不同图标和设置，请参阅 <a href="https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hans" target="_blank">CoralUI图标文档</a>.<br /> </td>
+        <td>图标 — 下载<br /> <br /> “通信管理”显示在命令/菜单左侧的图标。 有关可用的不同图标和设置，请参阅 <a href="https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html" target="_blank">CoralUI图标文档</a>.<br /> </td>
         </tr>
         <tr>
         <td>jcr:primaryType</td>
@@ -279,7 +279,7 @@ ht-degree: 3%
    1. 双击 **POST.jsp** 文件以在CRX中打开。
    1. 将以下代码添加到POST.jsp文件，然后单击 **全部保存**：
 
-      此代码特定于信件渲染服务。 对于任何其他资源，请将该资源的Java™库添加到此代码中。 有关AEM Forms API的更多信息，请参阅 [AEM FORMS API](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hans).
+      此代码特定于信件渲染服务。 对于任何其他资源，请将该资源的Java™库添加到此代码中。 有关AEM Forms API的更多信息，请参阅 [AEM FORMS API](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html).
 
       有关AEM库的详细信息，请参阅AEM [组件](/help/sites-developing/components.md).
 

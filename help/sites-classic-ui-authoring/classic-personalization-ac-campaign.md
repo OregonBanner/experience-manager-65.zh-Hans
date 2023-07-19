@@ -10,9 +10,9 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: 61b2bd47-dcef-4107-87b1-6bf7bfd3043b
 exl-id: a4717cb8-b70c-4150-b816-35e9b871e792
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1170'
+source-wordcount: '1169'
 ht-degree: 0%
 
 ---
@@ -50,6 +50,7 @@ ht-degree: 0%
 >[!NOTE]
 >
 >添加电子邮件模板时，请务必将其添加到 **/content/campaigns** 以便使用。
+>
 
 1. 在AEM中，选择 **网站** 文件夹，然后浏览资源管理器以查找管理电子邮件营销活动的位置。 在以下示例中，相关节点为 **网站** > **营销活动** > **Geometrixx Outdoors** > **电子邮件营销活动**.
 
@@ -124,7 +125,6 @@ ht-degree: 0%
 >* 仅Adobe Campaign的字段 **配置文件** 定向维度已考虑在内。
 >* 从查看属性时 **站点**&#x200B;中，您无权访问Adobe Campaign上下文字段。 编辑时，您可以直接从电子邮件访问这些内容。
 >
-
 
 1. 插入新内容 **新闻稿** > **文本和个性化（营销活动）** 组件。
 1. 双击组件以将其打开。 此 **编辑** 窗口具有一项功能，可让您插入个性化元素。

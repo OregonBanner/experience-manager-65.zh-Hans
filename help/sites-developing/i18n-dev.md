@@ -1,8 +1,8 @@
 ---
 title: 国际化UI字符串
 seo-title: Internationalizing UI Strings
-description: Java和Javascript API使您能够国际化字符串
-seo-description: Java and Javascript APIs enable you to internationalize strings
+description: Java和JavaScript API使您能够国际化字符串
+seo-description: Java and JavaScript APIs enable you to internationalize strings
 uuid: 1cfa409f-9b1e-466f-8b03-5628db42bc57
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,7 +10,7 @@ content-type: reference
 topic-tags: components
 discoiquuid: 9da8823c-13a4-4244-bfab-a910a4fd44e7
 exl-id: bc5b1cb7-a011-42fe-8759-3c7ee3068aad
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
 source-wordcount: '1100'
 ht-degree: 0%
@@ -19,11 +19,11 @@ ht-degree: 0%
 
 # 国际化UI字符串 {#internationalizing-ui-strings}
 
-Java和Javascript API使您能够国际化以下资源类型中的字符串：
+Java和JavaScript API使您能够国际化以下资源类型中的字符串：
 
 * Java源文件。
 * jsp脚本。
-* 客户端库或页面源中的Javascript。
+* 客户端库或页面源中的JavaScript。
 * 对话框和组件配置属性中使用的JCR节点属性值。
 
 有关国际化和本地化过程的概述，请参见 [国际化组件](/help/sites-developing/i18n.md).
@@ -110,16 +110,16 @@ i18n.get("Welcome back {0}. You have {1} messages.", "user name, number of messa
 
 * 使用用户的语言首选项：提供SlingHttpRequest作为第一个参数。
 
-   `I18n.get(slingHttpRequest, "Welcome back {}. You have {} messages.", "user name, number of messages", user.getDisplayName(), numItems);`
+  `I18n.get(slingHttpRequest, "Welcome back {}. You have {} messages.", "user name, number of messages", user.getDisplayName(), numItems);`
 * 使用页面语言：提供ResourceBundle作为第一个参数。
 
-   `I18n.get(resourceBundle,"Welcome back {}. You have {} messages.", "user name, number of messages", user.getDisplayName(), numItems);`
+  `I18n.get(resourceBundle,"Welcome back {}. You have {} messages.", "user name, number of messages", user.getDisplayName(), numItems);`
 
-### 在Javascript代码中国际化字符串 {#internationalizing-strings-in-javascript-code}
+### 在JavaScript代码中国际化字符串 {#internationalizing-strings-in-javascript-code}
 
-Javascript API允许您在客户端上本地化字符串。 与 [Java和JSP](#internationalizing-strings-in-java-and-jsp-code) 代码，Javascript API使您能够识别要本地化的字符串，提供本地化提示，并在本地化的字符串中包含变量。
+JavaScript API允许您在客户端上本地化字符串。 与 [Java和JSP](#internationalizing-strings-in-java-and-jsp-code) 代码，JavaScript API使您能够识别要本地化的字符串，提供本地化提示，并在本地化的字符串中包含变量。
 
-此 `granite.utils` [客户端库文件夹](/help/sites-developing/clientlibs.md) 提供Javascript API。 要使用API，请在您的页面上包含此客户端库文件夹。 本地化函数使用 `Granite.I18n` 命名空间。
+此 `granite.utils` [客户端库文件夹](/help/sites-developing/clientlibs.md) 提供JavaScript API。 要使用API，请在您的页面上包含此客户端库文件夹。 本地化函数使用 `Granite.I18n` 命名空间。
 
 在显示本地化的字符串之前，您需要使用 `Granite.I18n.setLocale` 函数。 函数要求区域设置的语言代码作为参数：
 
@@ -146,7 +146,7 @@ Granite.I18n.get("string to localize", [variables], "localization hint");
 * 第二个参数是注入到字符串文本中的值数组。
 * 第三个参数是本地化提示。
 
-以下示例使用Javascript本地化“欢迎回来管理员”。 您的收件箱中有2封邮件。” 句子：
+以下示例使用JavaScript本地化“欢迎回来管理员”。 您的收件箱中有2封邮件。” 句子：
 
 ```
 Granite.I18n.setLocale("fr");

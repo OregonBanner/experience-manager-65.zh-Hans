@@ -10,9 +10,9 @@ topic-tags: development-tools
 content-type: reference
 discoiquuid: aa58cfb8-ec15-4698-a8f0-97683b0de51c
 exl-id: 9d421599-0417-4329-a528-9cda4e3716f5
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '435'
+source-wordcount: '436'
 ht-degree: 0%
 
 ---
@@ -52,7 +52,7 @@ ht-degree: 0%
 
 ## 为Eclipse准备JSP支持 {#prepare-jsp-support-for-eclipse}
 
-Eclipse还可以在使用JSP时提供支持，例如
+Eclipse还可以在使用JSP时提供支持，例如，
 
 * 自动完成标记库
 * 定义的对象的省略感知 &lt;cq:defineobjects /> 和 &lt;sling:defineobjects />

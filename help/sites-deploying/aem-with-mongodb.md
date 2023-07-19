@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: cd3b979f-53d4-4274-b4eb-a9533329192a
 docset: aem65
 exl-id: 70a39462-8584-4c76-a097-05ee436247b7
-source-git-commit: af60428255fb883265ade7b2d9f363aacb84b9ad
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
 source-wordcount: '6408'
 ht-degree: 0%
@@ -165,7 +165,7 @@ mongodburi=mongodb://aem:aempassword@mongodbserver1.customer.com:27000,mongodbse
 #Name of MongoDB database to use
 db=aem
 
-#Store binaries in custom BlobStore e.g. FileDataStore
+#Store binaries in custom BlobStore for example, FileDataStore
 customBlobStore=true
 
 cache=2048
@@ -178,16 +178,13 @@ blobCacheSize=1024
 MongoDB服务器AEM必须连接到。 与默认副本集的所有已知成员建立连接。 如果使用MongoDB Cloud Manager，则启用服务器安全性。 因此，连接字符串必须包含合适的用户名和密码。 非企业版本的MongoDB仅支持用户名和密码身份验证。 有关连接字符串语法的更多信息，请参阅 [文档](https://docs.mongodb.org/manual/reference/connection-string/).
 
 * `db`
-数据库的名称。 AEM的默认值为 
-`aem-author`。
+数据库的名称。 AEM的默认值为 `aem-author`.
 
 * `customBlobStore`
-如果部署将二进制文件存储在数据库中，则它们是工作集的一部分。 因此，建议不要在MongoDB中存储二进制文件，而是选择替代数据存储，如 
-`FileSystem` NAS上的数据存储。
+如果部署将二进制文件存储在数据库中，则它们是工作集的一部分。 因此，建议不要在MongoDB中存储二进制文件，而是选择替代数据存储，如 `FileSystem` NAS上的数据存储。
 
 * `cache`
-缓存大小（以MB为单位）。 此空间分布在 
-`DocumentNodeStore`. 默认值为256 MB。 但是，Oak读取性能受益于较大的缓存。
+缓存大小（以MB为单位）。 此空间分布在 `DocumentNodeStore`. 默认值为256 MB。 但是，Oak读取性能受益于较大的缓存。
 
 * `blobCacheSize`
 AEM可能会缓存常用的Blob，以避免从数据存储中重新获取它们。 这样做对性能的影响更大，尤其是在MongoDB数据库中存储Blob时。 所有基于文件系统的Data Stores都受益于操作系统级别的磁盘缓存。
@@ -210,16 +207,13 @@ cacheSizeInMB=128
 其中：
 
 * `minRecordLength`
-大小（字节）. 小于或等于此大小的二进制文件存储在文档节点存储中。 存储的是二进制文件的内容，而不是存储blob的ID。 对于大于此大小的二进制文件，二进制文件的ID作为文档的属性存储在节点集合中。 而且，二进制文件的正文存储在 
-`FileDataStore` 在磁盘上。 4096字节是典型的文件系统块大小。
+大小（字节）. 小于或等于此大小的二进制文件存储在文档节点存储中。 存储的是二进制文件的内容，而不是存储blob的ID。 对于大于此大小的二进制文件，二进制文件的ID作为文档的属性存储在节点集合中。 而且，二进制文件的正文存储在 `FileDataStore` 在磁盘上。 4096字节是典型的文件系统块大小。
 
 * `path`
-数据存储根的路径。 对于MongoMK部署，此路径必须是所有AEM实例都可用的共享文件系统。 通常使用网络连接存储(NAS)服务器。 对于Amazon Web Services等云部署， 
-`S3DataFileStore` 也可用。
+数据存储根的路径。 对于MongoMK部署，此路径必须是所有AEM实例都可用的共享文件系统。 通常使用网络连接存储(NAS)服务器。 对于Amazon Web Services等云部署， `S3DataFileStore` 也可用。
 
 * `cacheSizeInMB`
-二进制缓存的总大小（以MB为单位）。 它用于缓存小于以下值的二进制文件 
-`maxCacheBinarySize` 设置。
+二进制缓存的总大小（以MB为单位）。 它用于缓存小于以下值的二进制文件 `maxCacheBinarySize` 设置。
 
 * `maxCachedBinarySize`
 二进制缓存中缓存的二进制文件的最大大小（字节）。 如果使用基于文件系统的数据存储，则建议不要为数据存储缓存使用高值，因为操作系统已缓存二进制文件。
@@ -550,6 +544,7 @@ echo "{nThreads:32,fileSizeMB:1000,r:true,mmf:true}" | mongoperf
 第二次测试的输出应比第一次测试高很多，这表示内存转移性能。
 
 >[!NOTE]
+>
 执行测试时，请检查操作系统监控系统中相关虚拟机的I/O使用情况统计数据。 如果指示的值低于100%，则表示I/O读取可能存在问题。
 
 **测试主MongoDB实例的写入性能**
@@ -660,6 +655,7 @@ Header setifempty Content-Type application/javascript env=jsonp_request
 CSP允许对策略进行微调。 但是，在复杂的应用程序中，开发CSP标头时必须小心，因为过于受限的策略可能会破坏部分用户界面。
 
 >[!NOTE]
+>
 欲了解其工作原理的更多信息，请参见 [有关内容安全策略的OWASP页面](https://owasp.deteact.com/cheat/cheatsheets/Content_Security_Policy_Cheat_Sheet.html).
 
 ### 大小调整 {#sizing}
@@ -683,4 +679,5 @@ CSP允许对策略进行微调。 但是，在复杂的应用程序中，开发C
 如果AEM在MongoMK持久性管理器部署上运行， [页面名称限制为150个字符。](/help/sites-authoring/managing-pages.md)
 
 >[!NOTE]
+>
 请参阅 [MongoDB文档](https://docs.mongodb.com/manual/reference/limits/) 以便您熟悉MongoDB的已知限制和阈值。

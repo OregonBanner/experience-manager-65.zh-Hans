@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 6ed15763-02cc-45d1-adf6-cf9e5e8ebdb0
 docset: aem65
 exl-id: f4959c12-54c5-403a-9973-7a4ab5f16bed
-source-git-commit: afd2afe182d65e64c0ad851b86021886078a9dd5
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '546'
+source-wordcount: '547'
 ht-degree: 11%
 
 ---
@@ -30,7 +30,7 @@ SPA创作功能提供了一个全面的解决方案，用于在AEM中支持SPA�
 
 ## 简介 {#introduction}
 
-由于AEM需要并在SPA和SPA编辑器之间建立简单且轻量的合同，采用现有Javascript应用程序并将其调整为用于AEM中的SPA是一件简单的事情。
+由于AEM需要并在SPA和SPA编辑器之间建立简单且轻量的合同，采用现有JavaScript应用程序并将其调整为用于AEM中的SPA是一件简单的事情。
 
 本文说明了We.Retail Journal示例SPA上的天气组件示例。
 

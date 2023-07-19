@@ -10,16 +10,16 @@ topic-tags: operations
 content-type: reference
 discoiquuid: 40560e06-2508-45a4-a648-39629ed54f28
 exl-id: 5b934e3a-f554-46ec-a913-8d570abb1503
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '835'
+source-wordcount: '839'
 ht-degree: 3%
 
 ---
 
 # 功能板{#dashboards}
 
-在使用AEM时，您可以管理大量不同类型的内容（例如页面、资源）。 AEM功能板提供了一种易于使用且可自定义的方式，来定义显示合并数据的页面。
+在使用AEM时，您可以管理大量不同类型的内容（例如，页面、资产）。 AEM功能板提供了一种易于使用且可自定义的方式，来定义显示合并数据的页面。
 
 >[!NOTE]
 >
@@ -38,7 +38,7 @@ ht-degree: 3%
 1. 在 **工具** 部分，单击 **配置控制台**.
 1. 在树中，双击 **仪表板**.
 1. 单击 **新建仪表板**.
-1. 键入 **标题** (例如，我的信息板)和 **名称**.
+1. 键入 **标题** （例如，“我的仪表板”）和 **名称**.
 1. 单击&#x200B;**创建**。
 
 ### 克隆功能板 {#cloning-a-dashboard}
@@ -188,7 +188,7 @@ AEM附带一组组件，这些组件渲染您的多个量度 [SiteCatalyst](/hel
 
 ![chlimage_1-32](assets/chlimage_1-32a.png)
 
-以下Javascript文件是在 `geout.reporting.topauthors` [客户端库](/help/sites-developing/clientlibs.md) 作为组件本身的子项。
+以下JavaScript文件是在 `geout.reporting.topauthors` [客户端库](/help/sites-developing/clientlibs.md) 作为组件本身的子项。
 
 此 [Querybuilder](/help/sites-developing/querybuilder-api.md) 用于查询要读取的存储库 `cq:AuditEvent` 节点。 查询结果是一个JSON对象，从中可提取作者贡献。
 

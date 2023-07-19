@@ -2,9 +2,9 @@
 title: 在Adobe Experience Manager中编辑外部SPA
 description: 本文档介绍了将独立SPA上传到Adobe Experience Manager实例、添加可编辑的内容部分和启用创作的推荐步骤。
 exl-id: 25236af4-405a-4152-8308-34d983977e9a
-source-git-commit: e068cee192c0837f1473802143e0793674d400e8
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '2441'
+source-wordcount: '2440'
 ht-degree: 1%
 
 ---
@@ -343,7 +343,7 @@ mvn clean install -PautoInstallSinglePackage
 
 1. 在SPA路由中添加帮助程序。
 
-   * 新创建的页面尚未在AEM中呈现预期内容。 这是因为路由器需要 `/test` 而AEM活动路径为 `/wknd-spa-react/us/en/test`. 为了适应URL的特定于AEM的部分，我们需要在SPA端添加一些帮助程序。
+   * 新创建的页面尚未在AEM中呈现预期的内容。 这是因为路由器需要 `/test` 而AEM活动路径为 `/wknd-spa-react/us/en/test`. 为了适应URL的特定于AEM的部分，我们需要在SPA端添加一些帮助程序。
 
    ![路由帮助程序](assets/external-spa-router-helper.png)
 
@@ -366,7 +366,7 @@ RemotePage组件要求实施提供与资产清单类似的资产清单 [在此�
 
 以下参考资料可能有助于了解AEM上下文中的SPA。
 
-* [AEM项目原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=zh-Hans)
+* [AEM项目原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)
 * [WKND SPA项目](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/spa-editor/spa-editor-framework-feature-video-use.html?lang=zh-Hans)
 * [利用 React 在 AEM 中开始使用 SPA](spa-getting-started-react.md)
 * [SPA参考资料（API参考）](spa-reference-materials.md)

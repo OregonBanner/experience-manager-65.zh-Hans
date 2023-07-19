@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: platform
 exl-id: 1138a548-d112-4446-b0e1-b7a9ea7c7604
-source-git-commit: 58594be73372e128ba999a8290615fbcb447084e
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1862'
+source-wordcount: '1863'
 ht-degree: 0%
 
 ---
@@ -49,8 +49,8 @@ ht-degree: 0%
 
       * 如果找到，则使用值筛选Commerce服务查找。
       * 如果未找到，则使用排名最高的商务服务。
-   * A `cq:Commerce` mixin用于 `cq:commerceProvider` 可以添加到强类型资源中。
 
+   * A `cq:Commerce` mixin用于 `cq:commerceProvider` 可以添加到强类型资源中。
 
 * 此 `cq:commerceProvider` 属性还用于引用相应的商务工厂定义。
 
@@ -97,11 +97,11 @@ ht-degree: 0%
    * 执行添加/删除等操作
    * 在购物车上执行各种计算；
 
-      `commerceSession.getProductPriceInfo(Product product, Predicate filter)`
+     `commerceSession.getProductPriceInfo(Product product, Predicate filter)`
 
 * 拥有的持久性 **订购** 数据：
 
-   `CommerceSession.getUserContext()`
+  `CommerceSession.getUserContext()`
 
 * 可以使用检索/更新投放详细信息 `updateOrder(Map<String, Object> delta)`
 * 还拥有 **付款** 正在处理连接
@@ -129,7 +129,6 @@ ht-degree: 0%
 >
 >1. `size`
 >1. 再加一个
-
 >
 >   通过以下方式选择此附加变体： `variationAxis` 产品引用的属性(通常 `color` (对于Geometrixx Outdoors)。
 
@@ -197,7 +196,7 @@ public interface Product extends Adaptable {
  * Interface for filtering variants and AxisFilter provided as common implementation
  *
  * The <code>VariantFilter</code> is used to filter variants,
- * e.g. when using {@link Product#getVariants(VariantFilter filter)}.
+ * for example, when using {@link Product#getVariants(VariantFilter filter)}.
  */
 public interface VariantFilter {
     public boolean includes(Product product);
@@ -249,11 +248,11 @@ public class AxisFilter implements VariantFilter {
          * 产品引用包含 `productData` 属性，指向产品数据(通常位于 `/etc/commerce/products`)。
          * 产品数据是分层的；产品属性继承自产品数据节点的祖先。
          * 产品引用还可以包含本地属性，这些属性会覆盖产品数据中指定的属性。
+
       * 产品本身：
 
          * 不带 `productData` 属性。
          * 在本地保存所有属性（且不包含productData属性）的product节点直接从自己的祖先继承产品属性。
-
 
 * **AEM-generic产品结构**
 
@@ -321,11 +320,11 @@ public class AxisFilter implements VariantFilter {
       * 数量折扣。
       * 不同的货币。
       * 应缴纳增值税且免纳增值税。
+
    * 修改量完全开放，界面如下：
 
       * `int CommerceSession.getQuantityBreakpoints(Product product)`
       * `String CommerceSession.getProductPrice(Product product)`
-
 
 **存储**
 
@@ -432,36 +431,37 @@ public class AxisFilter implements VariantFilter {
 
    * 凭单是基于页面的组件，使用“网站”控制台创建/编辑并存储在以下位置：
 
-      `/content/campaigns`
+     `/content/campaigns`
 
    * 优惠券供应：
 
       * 优惠券代码（由购物者键入购物车中）。
       * 优惠券标签（在购物者将其输入购物车后显示）。
       * 提升路径（定义凭证应用的操作）。
+
    * 优惠券没有自己的开始和结束日期/时间，但会使用父营销活动的日期/时间。
    * 外部商业引擎还可以提供优惠券；这些优惠券至少需要：
 
       * 优惠券代码
       * An `isValid()` 方法
+
    * 此 **优惠券** 组件( `/libs/commerce/components/voucher`)提供：
 
       * 凭证管理的呈现器；这将显示当前购物车中的任何凭证。
       * 用于管理（添加/删除）优惠券的编辑对话框（表单）。
       * 在购物车中添加/删除优惠券所需的操作。
 
-
-
 * 促销活动:
 
    * 促销活动是一个基于页面的组件，它使用“网站”控制台创建/编辑并存储在以下位置：
 
-      `/content/campaigns`
+     `/content/campaigns`
 
    * 促销供应：
 
       * 优先级
       * 提升处理程序路径
+
    * 您可以将促销活动关联到促销活动，以定义其打开/关闭日期/时间。
    * 您可以将促销活动连接到体验以定义其区段。
    * 未与体验关联的促销活动将不会自行触发，但优惠券仍可以触发。
@@ -469,17 +469,16 @@ public class AxisFilter implements VariantFilter {
 
       * 用于提升管理的渲染器和对话框
       * 用于呈现和编辑特定于提升处理程序的配置参数的子组件
+
    * 提供了两个现成的提升处理程序：
 
       * `DiscountPromotionHandler`，应用购物车范围的绝对折扣或百分比折扣
       * `PerfectPartnerPromotionHandler`，如果合作伙伴产品也在购物车中，则应用产品绝对折扣或百分比折扣
+
    * ClientContext `SegmentMgr` 解析区段和ClientContext `CartMgr` 解析促销活动。 至少受一个已解析区段约束的每个促销活动都将触发。
 
       * 已触发的促销活动会通过AJAX调用发送回服务器以重新计算购物车。
       * ClientContext面板中还会显示触发的促销活动（和添加的优惠券）。
-
-
-
 
 在购物车中添加/删除优惠券是通过 `CommerceSession` API：
 
@@ -522,7 +521,7 @@ public List<Voucher> getVouchers() throws CommerceException;
 
 * `jcr:title` （字符串） — 用于优惠券的描述
 * `code` （字符串） — 用户必须输入以应用此优惠券的代码
-* `promotion` （字符串） — 要应用的促销活动；例如 `/content/campaigns/geometrixx-outdoors/article/10-bucks-off`
+* `promotion` （字符串） — 要应用的促销活动；例如， `/content/campaigns/geometrixx-outdoors/article/10-bucks-off`
 
 促销处理程序是修改购物车的OSGi服务。 购物车将支持将在中定义的多个挂钩 `PromotionHandler` 界面。
 

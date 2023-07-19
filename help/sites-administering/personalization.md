@@ -10,9 +10,9 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: 03ebc494-8baa-4741-b8de-dac5ace743c8
 exl-id: 3a550a33-b54b-4217-b9a6-b5a7971276ee
-source-git-commit: d6b595b6b5477b5cad662e219f1abd483491897f
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1686'
+source-wordcount: '1687'
 ht-degree: 2%
 
 ---
@@ -69,7 +69,7 @@ ht-degree: 2%
 
 * 用户需要登录才能获得授权；这将链接到提供个性化所需信息的配置文件；可能还有详细信息，例如其位置、与产品的关系、使用历史记录、预算责任等。
 * 此类实例可以跨以下网站范围：
-* 为市场的高度专业化部分提供网站的公司，例如为医生提供专业网站的制药公司。
+* 向市场高度专业化的部分提供网站的公司，例如，为医生提供专业网站的制药公司。
 * 提供允许客户查看当前帐户和账单信息的网站的公司；例如电话提供商。
 
 ### 销售与分销网站 {#sales-site}

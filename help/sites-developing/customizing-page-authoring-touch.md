@@ -10,9 +10,9 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: 6825dcd6-fa75-4410-b6b2-e7bd4a391224
 exl-id: 90594588-db8e-4d4c-a208-22c1c6ea2a2d
-source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1354'
+source-wordcount: '1357'
 ht-degree: 1%
 
 ---
@@ -27,14 +27,14 @@ AEM提供各种机制让您能够自定义页面创作功能(以及 [控制台](
 
 * Clientlibs
 
-   Clientlibs允许您扩展默认实施以实现新功能，同时重用标准函数、对象和方法。 进行自定义时，您可以在下创建自己的clientlib `/apps.` 新clientlib必须：
+  Clientlibs允许您扩展默认实施以实现新功能，同时重用标准函数、对象和方法。 进行自定义时，您可以在下创建自己的clientlib `/apps.` 新clientlib必须：
 
    * 取决于创作clientlib `cq.authoring.editor.sites.page`
    * 属于适当的 `cq.authoring.editor.sites.page.hook` 类别
 
 * 叠加
 
-   叠加基于节点定义，允许您叠加标准功能(在 `/libs`)中自行定制的功能(在 `/apps`)。 创建叠加时，不需要原始文件的1:1副本，因为 [sling资源合并器](/help/sites-developing/sling-resource-merger.md) 允许继承。
+  叠加基于节点定义，允许您叠加标准功能(在 `/libs`)中自行定制的功能(在 `/apps`)。 创建叠加时，不需要原始文件的1:1副本，因为 [sling资源合并器](/help/sites-developing/sling-resource-merger.md) 允许继承。
 
 >[!NOTE]
 >
@@ -53,7 +53,6 @@ AEM提供各种机制让您能够自定义页面创作功能(以及 [控制台](
 >
 
 
-
 >[!CAUTION]
 >
 >您 ***必须*** 不更改 `/libs` 路径。
@@ -64,7 +63,6 @@ AEM提供各种机制让您能够自定义页面创作功能(以及 [控制台](
 >
 >1. 重新创建所需项目（即该项目存在于中） `/libs`)下 `/apps`
 >1. 在中进行任何更改 `/apps`
-
 
 ## 添加新图层（模式） {#add-new-layer-mode}
 
@@ -93,7 +91,7 @@ GITHUB上的代码
 
 ## 将新的选择类别添加到资源浏览器 {#add-new-selection-category-to-asset-browser}
 
-资产浏览器显示各种类型/类别（如图像、文档等）的资产。 资源也可以按这些资源类别进行筛选。
+资产浏览器显示各种类型/类别的资产（例如，图像、文档等）。 资源也可以按这些资源类别进行筛选。
 
 ### 代码示例 {#code-sample-1}
 
@@ -108,7 +106,7 @@ GITHUB上的代码
 
 ## 筛选资源 {#filtering-resources}
 
-创作页面时，用户通常必须从资源（例如页面、组件、资源等）中进行选择。 这可以采用列表形式，例如，作者必须从中选择一个项目。
+在创作页面时，用户通常必须从资源（例如，页面、组件、资产等）中进行选择。 这可以采用列表形式，例如，作者必须从中选择一个项目。
 
 为了使列表保持合理的大小并且与用例相关，可以采用自定义谓词的形式实施过滤器。 例如，如果 [`pathbrowser`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html) [Granite](/help/sites-developing/touch-ui-concepts.md#granite-ui) 组件用于允许用户选择特定资源的路径，提供的路径可通过以下方式过滤：
 
@@ -152,14 +150,14 @@ GITHUB上的代码
 
    * `cq:inplaceEditing`
 
-      例如：
+     例如：
 
       * `/libs/foundation/components/text/cq:editConfig`
       * `/libs/foundation/components/image/cq:editConfig`
 
          * 属性: `editorType`
 
-            定义当为该组件触发就地编辑时将使用的内联编辑器的类型；例如， `text`， `textimage`， `image`， `title`.
+           定义当为该组件触发就地编辑时将使用的内联编辑器的类型；例如， `text`， `textimage`， `image`， `title`.
 
 1. 可以使用配置编辑器的其他配置详细信息 `config` 包含配置的节点以及 `plugin` 节点以包含必要的插件配置详细信息。
 
@@ -260,4 +258,4 @@ GITHUB上的代码
    >`/libs/cq/gui/content/common/managepublicationwizard`
 
 1. 更新 [工作流模型](/help/sites-developing/workflows-models.md) 以及所需的相关配置/脚本。
-1. 删除的权限 [ `replicate` 操作](/help/sites-administering/security.md#actions) 来自所有相关页面的所有适当用户；当任何用户尝试发布（或复制）页面时，将此工作流作为默认操作触发。
+1. 删除的权限 [`replicate` 操作](/help/sites-administering/security.md#actions) 来自所有相关页面的所有适当用户；当任何用户尝试发布（或复制）页面时，将此工作流作为默认操作触发。
