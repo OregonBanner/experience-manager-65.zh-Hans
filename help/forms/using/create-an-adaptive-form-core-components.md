@@ -9,20 +9,26 @@ contentOwner: Khushwant Singh
 topic-tags: Adaptive Forms
 docset: aem65
 role: Admin, Developer
-source-git-commit: daf97f3d5c5f3c92ff5caeccff583e54f3f57364
+source-git-commit: 1b97dc536550da8904bc7da09e983e0722c42a3d
 workflow-type: tm+mt
-source-wordcount: '1869'
-ht-degree: 3%
+source-wordcount: '1725'
+ht-degree: 4%
 
 ---
 
 
 # 创建基于核心组件的自适应Forms {#creating-an-adaptive-form-core-components}
 
+
+<span class="preview"> Adobe建议使用核心组件来 [将自适应Forms添加到AEM Sites页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md) 或 [创建独立的自适应Forms](/help/forms/using/create-an-adaptive-form-core-components.md). </span>
+
 | 版本 | 文章链接 |
 | -------- | ---------------------------- |
 | AEM 6.5 | 本文 |
 | AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/creating-adaptive-form-core-components.html) |
+
+**适用于：** ✅自适应表单核心组件❎ [自适应表单基础组件](/help/forms/using/create-adaptive-form.md).
+
 
 自适应表单可让您创建引人入胜、响应式、动态和自适应的表单。AEM Forms为商业用户提供易于使用的UI以快速创建自适应Forms。 UI提供快速选项卡导航，以轻松选择预配置的模板、样式、字段和提交选项以创建自适应表单。
 
@@ -38,17 +44,13 @@ ht-degree: 3%
 
 * **为您的环境启用自适应Forms核心组件**：需要AEM Archetype项目版本41或更高版本， [为您的环境启用核心组件](/help/forms/using/enable-adaptive-forms-core-components.md). 在为您的环境启用核心组件时， **自适应Forms（核心组件）** 模板和画布主题将添加到您的环境中。
 
-* **自适应表单模板**：模板提供基本结构并定义自适应表单的外观（布局和样式）。 它具有包含特定属性和内容结构的预格式化的组件。 它还提供定义主题和提交操作的选项。 主题定义外观，提交操作定义在提交自适应表单时要执行的操作。 例如，将收集的数据发送到数据源。 指定的模板 `blank` 受支持的OOTB：
-
-   * 此 `blank` 模板包含在每个新的AEM Forms内部部署和AMS环境中。
-   * 您可以通过包管理器安装参考包，以添加 `blank` 模板到您的AEM Forms内部部署和AMS环境。
-   * 您还可以 [创建新的自适应Forms模板（核心组件）](template-editor.md) 从头开始。
+* **自适应表单模板**：模板提供基本结构并定义自适应表单的外观（布局和样式）。 它具有包含特定属性和内容结构的预格式化的组件。 它还提供定义主题和提交操作的选项。 主题定义外观，提交操作定义在提交自适应表单时要执行的操作。
 
   >[!NOTE]
   >
   > 如果你没有， **自适应Forms（核心组件）** 环境模板， [为您的环境启用自适应Forms核心组件](/help/forms/using/enable-adaptive-forms-core-components.md). 在为您的环境启用核心组件时， **自适应Forms（核心组件）** 模板即添加到您的环境中。
 
-* **自适应表单主题**：主题包含组件和面板的样式详细信息。 样式包括诸如背景颜色、状态颜色、透明度、对齐方式和大小等属性。 应用主题时，指定的样式反映在相应的组件上。  此 `Canvas` 在为环境启用核心组件时，默认添加主题。 您还可以 [下载和自定义参考主题](create-or-customize-themes-for-adaptive-forms-core-components.md).
+* **自适应表单主题**：主题包含组件和面板的样式详细信息。 样式包括诸如背景颜色、状态颜色、透明度、对齐方式和大小等属性。 应用主题时，指定的样式反映在相应的组件上。  此 `Canvas` 在为环境启用核心组件时，默认添加主题。 您还可以 [下载和自定义标准主题](create-or-customize-themes-for-adaptive-forms-core-components.md).
 
 * **权限**：将您的用户添加到 [!DNL forms-users] 组。 董事会成员 [!DNL forms-users] 组有权创建自适应表单。 有关特定于表单的用户组的详细列表，请参阅 [组和权限](forms-groups-privileges-tasks.md).
 
@@ -137,6 +139,10 @@ ht-degree: 3%
 
 1. 单击&#x200B;**[!UICONTROL 完成]**。
 
+>[!NOTE]
+>
+> 您可以使用指南容器属性编辑自适应表单的JSON架构或表单数据模型。
+
 ## 配置预填充服务  {#configure-prefill-service-for-form}
 
 您可以使用预填充服务使用现有数据自动填充自适应表单的字段。 当用户打开表单时，这些字段的值会预先填充。 您可以：
@@ -155,13 +161,15 @@ ht-degree: 3%
 1. 选择表单数据模型. 打开 **[!UICONTROL 基本]** 选项卡。 在预填充服务中，选择 **[!UICONTROL 表单数据模型预填充服务]**.
 1. 单击&#x200B;**[!UICONTROL 完成]**。您的自适应表单现在配置为使用表单数据模型预填充。 您现在可以使用 [规则编辑器](rule-editor.md) 创建规则以预填充表单的字段。
 
-## 编辑自适应表单的表单模型属性 {#edit-form-model}
+<!--
+## Edit Form Model properties of an Adaptive Form {#edit-form-model}
 
-1. 选择自适应表单并点按 ![页面信息](/help/forms/using/assets/configure-icon.svg) > **[!UICONTROL 打开属性]**. 此时将打开“表单属性”页面。
+1. Select the Adaptive Form and tap ![Page information](/help/forms/using/assets/configure-icon.svg) > **[!UICONTROL Open Properties]**. The Form Properties page opens. 
 
-1. 转到 **[!UICONTROL 表单模型]** 选项卡并选择表单模型。 如果自适应表单没有表单模型，您可以自由选择JSON架构或表单数据模型。 另一方面，如果自适应表单已基于表单模型，则可以选择切换到相同类型的另一个表单模型。 例如，如果表单使用JSON架构，您可以轻松切换到另一个JSON架构，同样，如果表单使用表单数据模型，您可以切换到另一个表单数据模型。
+1. Go to the **[!UICONTROL Form Model]** tab and choose a form model. If the Adaptive Form is without a form model, you have the freedom to choose either a JSON schema or a form data model. On the other hand, if the Adaptive Form is already based on a form model, you have the option to switch to another form model of the same type. For instance, if the form is using a JSON schema, you can easily switch to another JSON schema, and similarly if the form is using a Form Data Model, you can switch to another Form Data Model. 
 
-1. 点按 **[!UICONTROL 保存]** 以保存属性。
+1. Tap **[!UICONTROL Save]** to save the properties.
+-->
 
 ## 后续内容
 

@@ -8,26 +8,30 @@ contentOwner: Khushwant Singh
 topic-tags: Adaptive Forms
 docset: aem65
 role: Admin, Developer
-source-git-commit: daf97f3d5c5f3c92ff5caeccff583e54f3f57364
+source-git-commit: 1b97dc536550da8904bc7da09e983e0722c42a3d
 workflow-type: tm+mt
-source-wordcount: '2072'
+source-wordcount: '1988'
 ht-degree: 4%
 
 ---
 
 
-# 主题简介 {#introduction-to-theme}
+# 创建或自定义自适应表单主题 {#introduction-to-theme}
+
+<span class="preview"> Adobe建议使用核心组件来 [将自适应Forms添加到AEM Sites页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md) 或 [创建独立的自适应Forms](/help/forms/using/create-an-adaptive-form-core-components.md). </span>
 
 | 版本 | 文章链接 |
 | -------- | ---------------------------- |
 | AEM 6.5 | 本文 |
 | AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/using-themes-in-core-components.html) |
 
+**适用于：** ✅自适应表单核心组件❎ [自适应表单基础组件](/help/forms/using/themes.md).
+
 在AEM Forms 6.5中，主题是一个AEM客户端库，您可以使用它定义自适应表单的样式（外观）。 主题包含组件和面板的样式详细信息。 样式包括诸如背景颜色、状态颜色、透明度、对齐方式和大小等属性。 应用主题时，指定的样式反映在相应的组件上。 主题无需引用自适应表单即可独立管理，并且可以跨多个自适应Forms重复使用。
 
-## 可用的参考主题 {#available-reference-theme}
+## 可用主题 {#available-standard-theme}
 
-AEM 6.5环境提供了以下基于核心组件的自适应Forms的参考主题：
+AEM 6.5环境为基于核心组件的自适应Forms提供了以下列出的主题：
 
 * [画布主题](https://github.com/adobe/aem-forms-theme-canvas)
 * [WKND主题](https://github.com/adobe/aem-forms-theme-wknd)
@@ -49,13 +53,13 @@ AEM 6.5环境提供了以下基于核心组件的自适应Forms的参考主题�
 
 ## 创建主题
 
-AEM Forms 6.5提供了以下基于核心组件的自适应Forms的参考主题。
+AEM Forms 6.5提供了下面列出的基于核心组件的自适应Forms的标准主题。
 
 * [画布主题](https://github.com/adobe/aem-forms-theme-canvas)
 * [WKND主题](https://github.com/adobe/aem-forms-theme-wknd)
 * [画架主题](https://github.com/adobe/aem-forms-theme-easel)
 
-您可以 [自定义任意这些引用主题以创建主题](#customize-a-theme-core-components).
+您可以 [自定义这些标准主题中的任意主题以创建主题](#customize-a-theme-core-components).
 
 ## 自定义主题 {#customize-a-theme-core-components-based-adaptive-forms}
 
@@ -90,26 +94,27 @@ AEM Forms 6.5提供了以下基于核心组件的自适应Forms的参考主题�
 
 创建或自定义主题是一个多步骤过程。 按照列出的顺序执行步骤，以创建/自定义主题：
 
-1. [克隆引用主题](#clone-git-repo-of-theme)
+1. [克隆标准主题](#clone-git-repo-of-theme)
 1. [自定义主题的外观](#customize-the-theme)
 1. [准备好本地部署的主题](#generate-the-clientlib)
-1. [在本地测试环境中部署主题](#deploy-the-theme-on-a-local-testing-environment)
-1. [使用本地自适应表单测试主题](#test-the-theme-with-a-local-adaptive-form)
-1. 在生产环境中部署主题
+1. [在本地环境中部署主题](#deploy-the-theme-on-a-local-environment)
+1. [在生产环境中部署主题](#5-deploy-a-theme-on-your-production-environment)
 
-![主题自定义工作流](/help/forms/using/assets/custom-theme-steps.png)
+<!--
+ ![Theme Customization workflow](/help/forms/using/assets/custom-theme-steps.png)
+-->
 
-文档中提供的示例基于 **画布** 主题，但您可以克隆任何引用主题并使用相同的说明对其进行自定义。 这些说明适用于任何主题，允许您根据特定需求修改主题。
+文档中提供的示例基于 **画布** 主题，但您可以克隆任何标准主题并使用相同的说明对其进行自定义。 这些说明适用于任何主题，允许您根据特定需求修改主题。
 
 #### 1.克隆主题的Git存储库 {#clone-git-repo-of-theme}
 
-要克隆基于核心组件的自适应Forms的引用主题，请选择以下引用主题之一：
+要克隆基于核心组件的自适应Forms的标准主题，请选择以下标准主题之一：
 
 * [画布主题](https://github.com/adobe/aem-forms-theme-canvas)
 * [WKND主题](https://github.com/adobe/aem-forms-theme-wknd)
 * [画架主题](https://github.com/adobe/aem-forms-theme-easel)
 
-执行以下说明以克隆引用主题：
+执行以下说明以克隆标准主题：
 
 1. 在本地开发环境中打开命令提示符或终端窗口。
 
@@ -206,7 +211,7 @@ AEM Forms 6.5提供了以下基于核心组件的自适应Forms的参考主题�
 
    ![客户端库位置](/help/forms/using/assets/adaptiveform.theme.easel.png)
 
-#### 4.将主题部署到本地测试环境中 {#deploy-the-theme-on-a-local-testing-environment}
+#### 4.将主题部署到本地环境中 {#deploy-the-theme-on-a-local-environment}
 
 要将主题部署到本地开发或测试环境，请执行以下步骤：
 
@@ -222,38 +227,40 @@ AEM Forms 6.5提供了以下基于核心组件的自适应Forms的参考主题�
 
    ![客户端库构建](/help/forms/using/assets/mvndeploy.png)
 
-#### 5.使用本地自适应表单测试主题 {#test-the-theme-with-a-local-adaptive-form}
+<!--
 
-要使用自适应表单应用和测试自定义主题，请执行以下操作：
+#### 5. Test the theme with a local Adaptive Form {#test-the-theme-with-a-local-adaptive-form}
 
-**创建自适应表单时应用主题**
+To apply and test the customized theme with an Adaptive Form:
 
-1. 登录到您的AEM Forms创作实例。
+**Apply theme while creating an Adaptive Form**
 
-1. 点按 **Adobe Experience Manager** > **Forms** > **Forms和文档**.
+1. Log in to your AEM Forms author instance. 
 
-1. 单击 **创建** > **自适应Forms**. 随即会打开创建自适应表单的向导。
+1. Tap **Adobe Experience Manager** > **Forms** > **Forms & Documents**.
 
-1. 在中选择核心组件模板 **来源** 选项卡。
-1. 选择中的主题 **样式** 选项卡。
-1. 单击&#x200B;**创建**。
+1. Click **Create** > **Adaptive Forms**. The wizard for creating Adaptive Form opens.
 
-将创建带有选定主题的自适应表单。
+1. Select the core component template in the **Source** tab.
+1. Select the theme in the **Style** tab.
+1. Click **Create**.
 
-**将主题应用于现有自适应表单**
+An Adaptive Form with the selected theme is created. 
 
-1. 登录到您的AEM Forms创作实例。
+**Apply theme to an existing Adaptive Form**
 
-1. 点按 **Adobe Experience Manager** > **Forms** > **Forms和文档**.
+1. Log in to your AEM Forms author instance. 
 
-1. 选择一个自适应表单，然后单击“属性”。
+1. Tap **Adobe Experience Manager** > **Forms** > **Forms & Documents**.
 
-1. 对于 **主题客户端库** 选项，选择主题。
+1. Select an Adaptive Form and click Properties. 
 
-1. 单击“**保存并关闭**”。
+1. For the **Theme Client Library** option, select the theme. 
 
-选定的主题将应用于自适应表单。
+1. Click **Save & Close**.
 
+The selected theme is applied to the Adaptive Form. 
+-->
 
 #### 5.在生产环境中部署主题 {#deploy-theme}
 
@@ -278,14 +285,17 @@ AEM Forms 6.5提供了以下基于核心组件的自适应Forms的参考主题�
 
 将主题应用于自适应表单的步骤包括：
 
-1. 登录到您的AEM Forms创作实例。
+1. 登录到本地AEM创作实例。
+1. 在“Experience Manager登录”页上输入您的凭据。 点按 **Adobe Experience Manager** > **Forms** > **Forms和文档**.
+1. 单击 **创建** > **自适应Forms**.
+1. 选择自适应Forms核心组件模板并单击 **下一个**. 此 **添加属性** 显示
+1. 指定 **名称** 用于您的自适应表单。
 
-1. 点按 **Adobe Experience Manager** > **Forms** > **Forms和文档**.
+   >[!NOTE]
+   >
+   > * 默认情况下， `adaptiveform.theme.canvas3` 已选择主题。
+   > * 您可以从中选择不同的主题 **主题客户端库** 下拉菜单。
 
-1. 单击 **创建** > **自适应Forms**. 随即会打开创建自适应表单的向导。
-
-1. 在中选择核心组件模板 **来源** 选项卡。
-1. 选择中的主题 **样式** 选项卡。
 1. 单击&#x200B;**创建**。
 
 创建自适应表单时，自适应表单主题用作自适应表单模板的一部分来定义样式。

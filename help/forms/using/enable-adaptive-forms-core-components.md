@@ -8,15 +8,24 @@ contentOwner: Khushwant Singh
 topic-tags: Adaptive Forms
 docset: aem65
 role: Admin, Developer
-source-git-commit: daf97f3d5c5f3c92ff5caeccff583e54f3f57364
+source-git-commit: 1b97dc536550da8904bc7da09e983e0722c42a3d
 workflow-type: tm+mt
-source-wordcount: '858'
-ht-degree: 20%
+source-wordcount: '911'
+ht-degree: 21%
 
 ---
 
 
 # 在AEM 6.5 Forms上启用自适应Forms核心组件 {#enable-adaptive-forms-core-components}
+
+<span class="preview"> Adobe建议使用核心组件来 [将自适应Forms添加到AEM Sites页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md) 或 [创建独立的自适应Forms](/help/forms/using/create-an-adaptive-form-core-components.md). </span>
+
+| 版本 | 文章链接 |
+| -------- | ---------------------------- |
+| AEM 6.5 | 本文 |
+| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/using-themes-in-core-components.html) |
+
+**适用于：** ✅用自适应表单核心组件❎自适应表单基础组件。
 
 启用自适应Forms核心组件允许您开始创建、发布和交付 [基于核心组件的自适应Forms](create-an-adaptive-form-core-components.md) 和 [Headless自适应Forms](https://experienceleague.adobe.com/docs/experience-manager-headless-adaptive-forms/using/overview.html) 从AEM 6.5 Forms环境中。
 
