@@ -1,10 +1,10 @@
 ---
-title: AEM Content and Commerce 2021版发行说明
-description: AEM Content and Commerce 2021版发行说明
+title: Adobe Experience Manager Content and Commerce 2021版发行说明
+description: Adobe Experience Manager Content and Commerce 2021版发行说明
 exl-id: ec47c5f8-d4dd-469f-94df-5ee28f25d696
-source-git-commit: a467009851937c4a10b165a3d253c47bf990bbc5
+source-git-commit: 2810e34f642f4643fa4dc24b31a57a68e9194e39
 workflow-type: tm+mt
-source-wordcount: '1314'
+source-wordcount: '1318'
 ht-degree: 13%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 13%
 
 | 组件 | 系统要求 |
 |:-------|:-----:|
-| CIF加载项 | 最低配置：AEM 6.5.7、Adobe Commerce 2.3.5 GraphQL架构 |
+| CIF加载项 | 最低配置：Adobe Experience Manager (AEM) 6.5.7、Adobe Commerce 2.3.5 GraphQL架构 |
 | CIF核心组件 | [系统要求](https://github.com/adobe/aem-core-cif-components/blob/master/VERSIONS.md) |
 | AEM 项目原型 | [系统要求](https://github.com/adobe/aem-project-archetype/blob/master/VERSIONS.md) |
 
@@ -51,7 +51,7 @@ ht-degree: 13%
 
 * CIF加载项支持具有新GraphQL API和架构的最新Commerce v2.4.3
 
-* 作者可以使用富文本编辑器(RTE)在文本字段中添加指向产品和目录页面的链接。 RTE工具栏中添加了一个CIF图标，该图标将打开选取器，以便在不离开上下文的情况下快速搜索和选择产品或类别。
+* 作者可以使用富文本编辑器(RTE)在文本字段中添加指向产品和目录页面的链接。 RTE工具栏中添加了一个CIF图标，该图标会打开选取器，以便在不离开上下文的情况下快速搜索和选择产品或类别。
 
 * 现有的弹出购物车和结帐页面已替换为专用的AEM购物车和结帐页面。 这些页面上的组件是使用Adobe Commerce的可扩展Peregrine组件构建的
 
@@ -71,11 +71,11 @@ ht-degree: 13%
 
 * 站点编辑器中新的“关联的商业内容”选项卡通过快速访问当前上下文的相关AEM产品内容来提高创作效率
 
-   ![关联的商务内容](/help/assets/CIF/associated-commerce-content.png)
+  ![关联的商务内容](/help/assets/CIF/associated-commerce-content.png)
 
-* 改进了产品选取器UI，提供了更好的用户体验、更高的效率和对复杂产品目录的支持
+* 改进了产品选取器UI，以提供更好的用户体验、更高的效率并支持复杂的产品目录
 
-   ![新产品选取器](/help/assets/CIF/product-picker.png)
+  ![新产品选取器](/help/assets/CIF/product-picker.png)
 
 * 在导航组件中遵守“include_in_menu”属性
 
@@ -83,7 +83,7 @@ ht-degree: 13%
 
 * 菜单缓存刷新未按预期工作
 
-* AEM CS部署步骤期间以及不使用客户端组件时出现JS错误
+* AEM CS部署步骤和不使用客户端组件时出现JS错误
 
 * 无法在具有sling：configs节点的文件夹中创建CIF云配置
 
@@ -97,9 +97,9 @@ ht-degree: 13%
 
 ### 新增功能 {#what-is-new-august}
 
-* 新的类别选择器UI改善了用户体验、提高了效率并更好地支持复杂的产品目录
+* 新的类别选择器UI改善了用户体验、提高了效率，并更好地支持复杂的产品目录
 
-   ![新建类别选取器](/help/assets/CIF/category-picker.png)
+  ![新建类别选取器](/help/assets/CIF/category-picker.png)
 
 * 对CIF核心组件的更佳A11Y支持
 
@@ -175,7 +175,7 @@ ht-degree: 13%
 
 ### 新增功能 {#what-is-new-april}
 
-* 支持类别UID — 这可为将字符串用作类别ID的系统解锁第三方商业集成
+* 支持类别UID — 对于将字符串用作类别ID的系统，这为他们解锁了第三方商业集成
 
 * 用于PWA Studio的AEM扩展，包括 示例集成
 
