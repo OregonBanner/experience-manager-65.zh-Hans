@@ -8,9 +8,9 @@ user-guide-title: Adobe Experience Manager 6.5 Forms 指南
 breadcrumb-title: Forms 指南
 user-guide-description: 创建、管理、发布和更新数字表单。
 role: User
-source-git-commit: daf97f3d5c5f3c92ff5caeccff583e54f3f57364
+source-git-commit: 91683330024fbf1059715447073f35cecde45b0a
 workflow-type: tm+mt
-source-wordcount: '3881'
+source-wordcount: '3889'
 ht-degree: 4%
 
 ---
@@ -127,6 +127,7 @@ ht-degree: 4%
    + [AEM Forms数据集成简介](using/data-integration.md)
    + [配置数据源](using/configure-data-sources.md)
    + [Microsoft Dynamics Odata配置](using/ms-dynamics-odata-configuration.md)
+   + [使用OAuth 2.0客户端凭据流授权的Salesforce集成](/help/forms/using/oauth2-client-credentials-flow-for-server-to-server-integration.md)
    + [创建表单数据模型](using/create-form-data-models.md)
    + [使用表单数据模型](using/work-with-form-data-model.md)
    + [使用表单数据模型](using/using-form-data-model.md)
@@ -472,7 +473,7 @@ ht-degree: 4%
       + [为Adobe Reader Web浏览器插件启用在线注释](/help/forms/using/admin-help/enabling-online-commenting-reader-web.md)
       + [设置超时值以用于Acrobat Reader DC扩展](/help/forms/using/admin-help/setting-timeout-values-acrobat-reader.md)
       + [正在更新过期的Reader扩展服务证书](/help/forms/using/admin-help/updating-expired-reader-extension-certificates.md)
-   + 使用PDF生成器 {#work-with-pdf-generator}
+   + 使用PDF Generator {#work-with-pdf-generator}
       + [使用PDF生成器简介](/help/forms/using/admin-help/overview-5.md)
       + [启用多线程文件转换](/help/forms/using/admin-help/enabling-multi-threaded-file-conversions.md)
       + [配置Adobe PDF设置](/help/forms/using/admin-help/configuring-pdf-settings.md)
@@ -483,7 +484,7 @@ ht-degree: 4%
       + [设置PDFG网络打印机（仅限Windows）](/help/forms/using/admin-help/setting-pdfg-network-printer-windows.md)
       + [配置回退字体](/help/forms/using/admin-help/configuring-fallback-fonts.md)
       + [修改PDF导出转换设置](/help/forms/using/admin-help/modifying-pdf-export-conversion-settings.md)
-      + [使用PDF生成器转换文件](/help/forms/using/admin-help/converting-files-using-pdf-generator.md)
+      + [使用PDF Generator转换文件](/help/forms/using/admin-help/converting-files-using-pdf-generator.md)
    + 配置SSL {#configure-ssl}
       + [配置SSL概述](/help/forms/using/admin-help/overview-6.md)
       + [为JBoss应用程序服务器配置SSL](/help/forms/using/admin-help/configuring-ssl-jboss-application-server.md)
@@ -567,7 +568,7 @@ ht-degree: 4%
       + [备份AEM表单数据](/help/forms/using/admin-help/backing-aem-forms-data.md)
       + [要备份和恢复的文件](/help/forms/using/admin-help/files-back-recover.md)
       + [AEM表单备份和恢复策略](/help/forms/using/admin-help/backup-recovery-strategy-aem-forms.md)
-      + [PDF Generator备份限制](/help/forms/using/admin-help/pdf-generator-backup-limitations.md)
+      + [PDF生成器备份限制](/help/forms/using/admin-help/pdf-generator-backup-limitations.md)
       + [监视文件夹的备份策略](/help/forms/using/admin-help/backup-strategies-watched-folders.md)
       + [恢复AEM表单数据](/help/forms/using/admin-help/recovering-aem-forms-data.md)
       + [针对EMC Documentum用户的Connector备份战略](/help/forms/using/admin-help/backup-strategy-connector-emc-documentum.md)
