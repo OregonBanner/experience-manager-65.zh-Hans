@@ -1,19 +1,15 @@
 ---
 title: 静态对象过期
-seo-title: Expiration of Static Objects
-description: 了解如何配置AEM以使静态对象在合理的时间内不过期。
-seo-description: Learn how to configure AEM so that static objects do not expire (for a reasonable period of time).
-uuid: ee019a3d-4133-4d40-98ec-e0914b751fb3
+description: 了解如何配置Adobe Experience Manager以使静态对象在合理的时间段内不过期。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: configuring
 content-type: reference
-discoiquuid: 73f37b3c-5dbe-4132-bb60-daa8de871884
 feature: Configuring
 exl-id: bfd5441c-19cc-4fa8-b597-b1221465f75d
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 3885cc51f7e821cdb352737336a29f9c4f0c2f41
 workflow-type: tm+mt
-source-wordcount: '416'
+source-wordcount: '419'
 ht-degree: 0%
 
 ---
@@ -31,9 +27,9 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->此配置与Dispatcher完全不同（并且不起作用）。
+>此配置与Dispatcher不同（并且不起作用）。
 >
->Dispatcher的用途是将数据缓存到AEM之前。
+>Dispatcher的用途是将数据缓存到Adobe Experience Manager (AEM)之前。
 
 所有非动态且不会随时间变化的文件，都可以并且应该进行缓存。 Apache HTTPD服务器的配置可能类似于以下内容之一，具体取决于环境：
 
@@ -77,7 +73,7 @@ ht-degree: 0%
 
    这允许中间缓存（例如，浏览器缓存）将CSS、JavaScript、PNG和GIF文件存储在客户端缓存中长达一天。 尽管此示例说明了以下所有内容的全局设置 `/content` 和 `/etc/designs`，您应该让它更细微。
 
-   根据站点更新的频率，您还可以考虑缓存HTML页面。 一个合理的时间段是1小时：
+   根据站点更新的频率，您还可以考虑缓存HTML页面。 一个合理的时间段应该是一小时：
 
    ```xml
    <Location /content>

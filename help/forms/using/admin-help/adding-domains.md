@@ -1,16 +1,12 @@
 ---
 title: 添加域
-seo-title: Adding domains
 description: 了解如何使用域管理设置以及域名和ID的一般注意事项来添加企业、本地或混合域。
-seo-description: Learn how to add an enterprise, local, or hybrid domain using Domain Management settings and general considerations for domain names and IDs.
-uuid: 3ae1e5d4-ea5b-4e0b-be97-3957c3702d5f
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/setting_up_and_managing_domains
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: d4004ffe-c981-487d-b803-dc4492ae5998
 exl-id: c708936d-7aa7-4b92-be2d-d97008f187d2
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 3885cc51f7e821cdb352737336a29f9c4f0c2f41
 workflow-type: tm+mt
 source-wordcount: '922'
 ht-degree: 0%

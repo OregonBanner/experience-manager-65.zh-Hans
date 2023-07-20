@@ -1,27 +1,24 @@
 ---
-title: 适用于AEM Forms的AEM桌面应用程序
-seo-title: AEM desktop app for AEM Forms
-description: 适用于AEM Forms的AEM桌面应用程序
-uuid: 99e0f2fb-8623-45bb-8e2e-5c5d6f482366
+title: 适用于AEM Forms的Adobe Experience Manager (AEM)桌面应用程序
+description: 适用于AEM Forms的Adobe Experience Manager (AEM)桌面应用程序
 contentOwner: khsingh
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: manage
-discoiquuid: c30332b6-e012-442d-8e84-28832c116c7b
 noindex: true
 role: Admin
 exl-id: b87e07b1-4a19-4888-bad0-c0f5327b9ad3
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 3885cc51f7e821cdb352737336a29f9c4f0c2f41
 workflow-type: tm+mt
-source-wordcount: '418'
+source-wordcount: '430'
 ht-degree: 0%
 
 ---
 
-# 适用于AEM Forms的AEM桌面应用程序 {#aem-desktop-app-for-aem-forms}
+# 适用于AEM Forms的Adobe Experience Manager (AEM)桌面应用程序 {#aem-desktop-app-for-aem-forms}
 
 AEM桌面应用程序允许您将Adobe Experience Manager (AEM) Assets存储库和AEM Forms二进制文件映射到您系统中的网络目录。 您可以在文件资源管理器中查看同步的资源和二进制文件，并根据需要使用各种应用来编辑文件。 除了查看文件之外，您还可以创建、上传和删除二进制文件。 您还可以直接从软件打开、编辑和保存文件。 例如，您可以从Designer直接打开和编辑XDP文件。 您在本地对资源所做的更改将反映在AEM Assets存储库和AEM Forms UI中。
 
-您可以从AEM实例下载应用程序。 有关下载应用程序的详细信息，请参阅 [AEM桌面应用程序发行说明](https://helpx.adobe.com/experience-manager/desktop-app/release-notes.html).
+您可以从AEM实例下载应用程序。 有关下载应用程序的详细信息，请参阅 [AEM桌面应用程序发行说明](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/release-notes.html?lang=en).
 
 ## AEM桌面应用程序支持的AEM Forms资产 {#aem-forms-assets-supported-in-aem-desktop-app}
 

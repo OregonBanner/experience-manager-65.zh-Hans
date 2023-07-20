@@ -1,18 +1,14 @@
 ---
 title: 应用程序模板和组件
-seo-title: App Templates and Components
 description: 关注此页面，了解应用程序模板和组件。 它提供有关模板结构的详细信息。
-seo-description: Follow this page to learn about App Templates and Components. It provides detailed information on the structure of templates.
-uuid: ba2fd91b-de5a-4f39-a976-5455f9983669
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-on-demand-services-app
-discoiquuid: 7f31c6a7-92d5-4a87-a9f0-68a82b834d5a
 exl-id: 58d95325-7cb1-4204-842d-17add70e1fbf
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 3885cc51f7e821cdb352737336a29f9c4f0c2f41
 workflow-type: tm+mt
-source-wordcount: '406'
+source-wordcount: '408'
 ht-degree: 1%
 
 ---
@@ -25,14 +21,14 @@ ht-degree: 1%
 
 模板用于创建页面，并定义可以在所选范围内使用的组件。 模板是一种节点层次结构，其结构与要创建页面的结构相同，但没有任何实际内容。
 
-每个模板都会为您提供一系列可供使用的组件。
+每个模板都为您提供一系列可供使用的组件。
 
 * 模板由以下项构建： [组件](/help/sites-developing/components.md)；
 * 组件使用和允许对构件的访问，构件和构件用于呈现内容。
 
 >[!NOTE]
 >
->要了解如何使用CRXDE Lite开发AEM应用程序，请参阅 [使用CRXDE Lite进行开发](/help/sites-developing/developing-with-crxde-lite.md).
+>要了解如何使用CRXDE Lite开发Adobe Experience Manager (AEM)应用程序，请参阅 [使用CRXDE Lite进行开发](/help/sites-developing/developing-with-crxde-lite.md).
 
 模板是页面的基础。
 
@@ -54,7 +50,7 @@ ht-degree: 1%
 * **jcr：title**  — 模板的标题；在创建页面时显示在对话框中。
 * **jcr：description**  — 模板的描述；在创建页面时显示在对话框中。
 
-此节点包含 *jcr：content (cq：PageContent)* 用作结果页面的内容节点基础的节点；此参考使用 *sling：resourceType*，用于呈现新页面的实际内容的组件。
+此节点包含 *jcr：content (cq：PageContent)* 用作结果页面的内容节点的基的节点。 此引用，使用 *sling：resourceType*，用于呈现新页面的实际内容的组件。
 
 >[!NOTE]
 >
