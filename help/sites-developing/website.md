@@ -1,17 +1,15 @@
 ---
 title: 创建功能全面的网站(JSP)
-description: 通过本教程，您可以使用AEM创建一个功能齐全的网站
-uuid: ec76ad5e-af6c-43ad-ae57-a4ae4ac7029f
+description: 本教程将指导您如何使用Adobe Experience Manager (AEM)创建功能齐全的网站。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: introduction
 content-type: reference
-discoiquuid: 90bc05c9-e971-4e75-bc07-5e137c6c913e
 docset: aem65
 exl-id: d7cf843c-c837-4b97-b6c5-0fbd6793bdd4
-source-git-commit: 4fd5e9a1bc603202ee52e85a1c09125b13cec315
+source-git-commit: a56d5121a6ce11b42a6c30dae9e479564d16af27
 workflow-type: tm+mt
-source-wordcount: '4935'
+source-wordcount: '4941'
 ht-degree: 2%
 
 ---
@@ -20,9 +18,9 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->本文介绍了如何使用JSP并基于经典UI创建网站。 Adobe建议为您的网站使用最新的AEM技术，如文章中详细介绍 [AEM Sites开发入门](/help/sites-developing/getting-started.md).
+>本文介绍了如何使用JSP并基于经典UI创建网站。 Adobe建议为您的网站使用最新的Adobe Experience Manager (AEM)技术，如文章中详述 [AEM Sites开发入门](/help/sites-developing/getting-started.md).
 
-通过本教程，您可以使用Adobe Experience Manager (AEM)创建一个功能齐全的网站。 该网站将基于通用网站，主要面向Web开发人员。 所有开发都在创作环境中进行。
+通过本教程，您可以使用AEM创建一个功能齐全的网站。 该网站将基于通用网站，主要面向Web开发人员。 所有开发都在创作环境中进行。
 
 本教程介绍如何：
 
@@ -42,7 +40,7 @@ ht-degree: 2%
 
 1. 包括各种基础组件。
 
-执行完所有步骤后，页面将如下所示：
+执行完所有步骤后，页面应如下所示：
 
 ![chlimage_1-24](assets/chlimage_1-24.png)
 
@@ -50,7 +48,7 @@ ht-degree: 2%
 
 要随附教程而不是执行练习，请下载website-1.0.zip。 此文件是一个AEM内容包，其中包含本教程的结果。 使用 [包管理器](/help/sites-administering/package-manager.md) 以将包安装到创作实例。
 
-**注意：** 安装此包将覆盖您使用本教程创建的创作实例上的任何资源。
+**注意：** 安装此包将覆盖您使用本教程创建的创作实例上的所有资源。
 
 网站内容包
 
@@ -110,9 +108,9 @@ ht-degree: 2%
 
 在此部分中，您将创建以下内容：
 
-* 用于在示例网站中创建内容页面的内容页面模板
-* 将用于呈现内容页面的contentpage组件
-* contentpage脚本
+* 用于在示例网站中创建内容页面的内容页面模板。
+* 用于呈现内容页面的contentpage组件。
+* contentpage脚本。
 
 #### 创建内容页模板 {#creating-the-contentpage-template}
 
@@ -229,7 +227,7 @@ ht-degree: 2%
    ![chlimage_1-35](assets/chlimage_1-35.png)
 
 1. 单击&#x200B;**创建**。在文件夹树中，选择 **/Websites/My网站** 页面并单击 **新** > **新页面**.
-1. 在“创建页”对话框中，输入以下属性值，然后单击“创建”：
+1. 在“创建页面”对话框中，输入以下属性值，然后单击“创建”：
 
    * 标题：英语
    * 名称：en
@@ -273,7 +271,7 @@ ht-degree: 2%
 
 本节介绍如何使用AEM foundation组件脚本并通过编写您自己的脚本来增强contentpage脚本。
 
-此 **产品** 页面将如下所示：
+完成后， **产品** 页面应如下所示：
 
 ![chlimage_1](assets/chlimage_1.jpeg)
 
@@ -311,7 +309,7 @@ ht-degree: 2%
 
    ![chlimage_1-1](assets/chlimage_1-1.jpeg)
 
-   打开页面源以查看head.jsp和body.jsp脚本生成的javascript和HTML元素。 打开页面时，以下脚本片段将Sidekick打开：
+   打开页面源以查看head.jsp和body.jsp脚本生成的JavaScript和HTML元素。 打开页面时，以下脚本片段将Sidekick打开：
 
    ```java
    CQ.WCM.launchSidekick("/content/mywebsite/en/products",
@@ -409,7 +407,7 @@ ht-degree: 2%
 
 在顶部导航组件(topnav)的第一个版本中，导航项仅为文本链接。 在第二个版本中，您使用图像导航链接实施topnav。
 
-顶部导航将如下所示：
+完成后，顶部导航应如下所示：
 
 ![chlimage_1-39](assets/chlimage_1-39.png)
 
@@ -518,7 +516,7 @@ ht-degree: 2%
 1. 右键单击 `/apps/mywebsite/components/contentpage` 节点并单击 **创建** > **创建文件**.
 1. 在 **创建文件** 窗口，作为 **名称**，类型 `navimage.png.java`.
 
-   .java文件扩展名向Sling指示，应使用Apache Sling脚本Java支持编译脚本和创建servlet。
+   .java文件扩展名向Sling指示，应使用Apache Sling脚本Java™支持编译脚本和创建servlet。
 
 1. 将以下代码复制到 `navimage.png.java.`该代码扩展AbstractImageServlet类：
 
@@ -657,7 +655,7 @@ ht-degree: 2%
 创建位于“产品”页面下方的两个页面。 对于每个描述两个特定产品的页面，您可以设置标题、描述和日期。
 
 1. 在“Websites”页面的文件夹树中，选择“Websites/My Website/English/Products”项目，然后单击“New”>“New Page”。
-1. 在对话框中，输入以下属性值，然后单击创建：
+1. 在对话框中，输入以下属性值，然后单击“创建”：
 
    * 标题：产品1。
    * 名称： product1。
@@ -804,7 +802,7 @@ ht-degree: 2%
 
 #### 在Contentpage组件中包含列表子项 {#including-list-children-in-the-contentpage-component}
 
-要在内容页面组件中包含listchildren组件，请执行以下操作：
+要在内容页面组件中包含listchildren组件，请执行以下步骤：
 
 1. 在CRXDE Lite中，打开文件 `left.jsp` 下 `/apps/mywebsite/components/contentpage` 并找到以下代码（第4行）：
 
@@ -844,9 +842,9 @@ ht-degree: 2%
 * 属性值适用于添加到使用该设计的页面的所有组件实例。
 * 可以使用使用该设计的页面上的任何组件实例来配置属性。
 
-设计模式对话框包含用于设置图像和链接路径的属性。 徽标组件将放置在网站中所有页面的左上角。
+设计模式对话框包含用于设置图像和链接路径的属性。 徽标组件位于网站中所有页面的左上角。
 
-它将如下所示：
+完成后，它应如下所示：
 
 ![chlimage_1-46](assets/chlimage_1-46.png)
 
@@ -921,7 +919,7 @@ ht-degree: 2%
       * **标题:** `Logo (Design)`
 
 1. 右键单击design_dialog分支中的tab1节点，然后单击“删除”。 单击全部保存。
-1. 在 `design_dialog/items/items`节点，创建一个名为的新节点 `img` 类型 `cq:Widget`. 添加以下属性，然后单击“全部保存”：
+1. 在 `design_dialog/items/items`节点，创建名为的节点 `img` 类型 `cq:Widget`. 添加以下属性，然后单击“全部保存”：
 
    | 名称 | 类型 | 价值 |
    |---|---|---|
@@ -1050,7 +1048,7 @@ public class img_GET extends AbstractImageServlet {
 
 在此部分中，您将包含痕迹导航（跟踪）组件，该组件是基础组件之一。
 
-1. 在CRXDE Lite中，浏览至 `/apps/mywebsite/components/contentpage`，打开文件 `center.jsp` 和替换：
+1. 在CRXDE Lite中，浏览至 `/apps/mywebsite/components/contentpage`，打开文件 `center.jsp`，并替换：
 
    ```java
    <div>trail</div>
@@ -1071,7 +1069,7 @@ public class img_GET extends AbstractImageServlet {
 
 在本节中，您将包含标题组件，它是基础组件之一。
 
-1. 在CRXDE Lite中，浏览至 `/apps/mywebsite/components/contentpage`，打开文件 `center.jsp` 和替换：
+1. 在CRXDE Lite中，浏览至 `/apps/mywebsite/components/contentpage`，打开文件 `center.jsp`，并替换：
 
    ```xml
    <div>title</div>
@@ -1096,7 +1094,7 @@ public class img_GET extends AbstractImageServlet {
 
 将parsys组件（基础组件之一）添加到contentpage组件。
 
-1. 在CRXDE Lite中，浏览至 `/apps/mywebsite/components/contentpage`，打开文件 `center.jsp` 并找到以下代码行：
+1. 在CRXDE Lite中，浏览至 `/apps/mywebsite/components/contentpage`，打开文件 `center.jsp`，并找到以下代码行：
 
    ```xml
    <div>parsys</div>
@@ -1177,17 +1175,17 @@ public class img_GET extends AbstractImageServlet {
 
 在此部分中，您可以使用cq：editConfig节点将资产从Content Finder拖到图像组件中。
 
-1. 在CRXDE Lite中的/apps/mywebsite/components/image节点下，创建一个新节点，如下所示：
+1. 在CRXDE Lite中的/apps/mywebsite/components/image节点下，创建一个节点，如下所示：
 
    * 名称：cq：editConfig。
    * 类型：cq：EditConfig。
 
-1. 在节点cq：editConfig下，创建一个新节点，如下所示：
+1. 在节点cq：editConfig下，创建一个节点，如下所示：
 
    * 名称：cq：dropTargets。
    * 类型：cq：DropTargetConfig。
 
-1. 在节点cq：dropTargets下，创建一个新节点，如下所示：
+1. 在节点cq：dropTargets下，创建一个节点，如下所示：
 
    * 名称：图像。
    * 类型： nt：unstructured。
@@ -1211,12 +1209,12 @@ public class img_GET extends AbstractImageServlet {
 
 #### 使用图像组件 {#using-the-image-component}
 
-在此部分中，您将看到 **产品** 页面并将图像组件添加到段落系统。
+在此部分中，您会查看 **产品** 页面并将图像组件添加到段落系统。
 
 1. 在浏览器中，重新加载 **产品** 页面。
 1. 在Sidekick中，单击 **设计模式** 图标。
 1. 单击“编辑”按钮可编辑段落的“设计”对话框。
-1. 在对话框中，列表 **允许的组件** 显示；导航到 **我的网站**，选择 **我的图像组件** 并单击 **好的。**
+1. 在对话框中，列表 **允许的组件** 显示；导航到 **我的网站**，选择 **我的图像组件**，然后单击 **好的。**
 1. 返回到 **编辑模式。**
 1. 双击parsys框架(打开 **将组件或资产拖动到此处**)。 此 **插入新组件** 和 **Sidekick** 选择器如下所示：
 
@@ -1228,7 +1226,7 @@ public class img_GET extends AbstractImageServlet {
 
 在编辑模式和设计模式中，您有多个选项。
 
-1. 在CRXDE Lite中，导航到 `/apps/mywebsite/components/contentpage`，打开 `body.jsp` 文件并找到以下代码：
+1. 在CRXDE Lite中，导航到 `/apps/mywebsite/components/contentpage`，打开 `body.jsp` 文件，并找到以下代码：
 
    ```java
    <div class="toolbar">toolbar</div>
@@ -1264,7 +1262,7 @@ public class img_GET extends AbstractImageServlet {
 
 在此部分中，您将创建组件以搜索网站上的内容。 此搜索组件可以放置在任何页面的段落系统中（例如，在专门的搜索结果页面上）。
 
-您的搜索输入框将如下所示 **英语** 页面：
+完成后，您的搜索输入框应如下所示 **英语** 页面：
 
 ![chlimage_1-56](assets/chlimage_1-56.png)
 
@@ -1500,9 +1498,9 @@ public class img_GET extends AbstractImageServlet {
 1. 在浏览器中，打开“搜索”页面。
 1. 在Sidekick中，单击设计模式图标。
 1. 在“设计”分块中（在“搜索”标题下），单击“编辑”。
-1. 在对话框中，向下滚动到  **我的网站** 组，选择 **我的搜索组件** 并单击 **确定**.
-1. 在Sidekick时，单击三角形以返回编辑模式。
-1. 将我的搜索组件从Sidekick拖动到parsys框中。 它看起来如下所示：
+1. 在对话框中，向下滚动到  **我的网站** 组，选择 **我的搜索组件**，然后单击 **确定**.
+1. 在Sidekick上，单击三角形以返回编辑模式。
+1. 将My Search组件从Sidekick拖动到parsys框架中。 它看起来如下所示：
 
    ![chlimage_1-58](assets/chlimage_1-58.png)
 
@@ -1514,9 +1512,9 @@ public class img_GET extends AbstractImageServlet {
 
 在此部分中，您将包含继承段落系统(iparsys)组件，该组件是基础组件之一。 利用此组件，可在父页面上创建段落结构，并让子页面继承段落。
 
-对于此组件，您可以在编辑模式和设计模式下设置多个参数。
+对于此组件，可在编辑模式和设计模式下设置多个参数。
 
-1. 在CRXDE Lite中，导航到 `/apps/mywebsite/components/contentpage`，打开文件 `right.jsp` 和替换：
+1. 在CRXDE Lite中，导航到 `/apps/mywebsite/components/contentpage`，打开文件 `right.jsp`，并替换：
 
    ```java
    <div>iparsys</div>

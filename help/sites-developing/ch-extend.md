@@ -1,18 +1,14 @@
 ---
 title: 扩展 ContextHub
-seo-title: Extending ContextHub
 description: 定义新类型的ContextHub存储和模块（如果提供的存储和模块不符合您的解决方案要求）
-seo-description: Define new types of ContextHub stores and modules when the ones provided do not meet your solution requirements
-uuid: 1d80c01d-ec5d-4e76-849d-bec0e1c3941a
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
-discoiquuid: 13a908ae-6965-4438-96d0-93516b500884
 exl-id: 41898fa7-a369-4c63-8ccb-69eb3fa146a1
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: a56d5121a6ce11b42a6c30dae9e479564d16af27
 workflow-type: tm+mt
-source-wordcount: '650'
+source-wordcount: '637'
 ht-degree: 0%
 
 ---
@@ -23,9 +19,9 @@ ht-degree: 0%
 
 ## 创建自定义商店候选者 {#creating-custom-store-candidates}
 
-ContextHub存储是从已注册的候选存储创建的。 要创建自定义商店，您需要创建并注册商店候选项。
+ContextHub存储是从已注册的候选存储创建的。 要创建自定义商店，请创建并注册商店候选商店。
 
-包含创建和注册商店候选的代码的javascript文件必须包含在 [客户端库文件夹](/help/sites-developing/clientlibs.md#creating-client-library-folders). 文件夹的类别必须与以下模式匹配：
+包含创建和注册商店候选的代码的JavaScript文件必须包含在 [客户端库文件夹](/help/sites-developing/clientlibs.md#creating-client-library-folders). 文件夹的类别必须与以下模式匹配：
 
 ```xml
 contexthub.store.[storeType]
@@ -42,7 +38,7 @@ contexthub.store.[storeType]
 * [&#39;ContextHub.Store.JSONPStore&#39;](/help/sites-developing/contexthub-api.md#contexthub-store-jsonpstore)
 * [&#39;ContextHub.Store.PersistedJSONPStore&#39;](/help/sites-developing/contexthub-api.md#contexthub-store-persistedjsonpstore)
 
-请注意，每个基础存储区都扩展 [`ContextHub.Store.Core`](/help/sites-developing/contexthub-api.md#contexthub-store-core) 商店。
+每个基础存储区扩展 [`ContextHub.Store.Core`](/help/sites-developing/contexthub-api.md#contexthub-store-core) 商店。
 
 以下示例创建 `ContextHub.Store.PersistedStore` 商店候选者：
 
@@ -51,7 +47,7 @@ myStoreCandidate = function(){};
 ContextHub.Utils.inheritance.inherit(myStoreCandidate,ContextHub.Store.PersistedStore);
 ```
 
-实际上，您的自定义商店候选者将定义其他功能或覆盖商店的初始配置。 多个 [示例存储候选项](/help/sites-developing/ch-samplestores.md) 安装在以下存储库中 `/libs/granite/contexthub/components/stores`. 要学习这些示例，请使用CRXDE Lite打开javascript文件。
+实际上，您的自定义商店候选者定义了其他功能或覆盖商店的初始配置。 多个 [示例存储候选项](/help/sites-developing/ch-samplestores.md) 安装在以下存储库中 `/libs/granite/contexthub/components/stores`. 要学习这些示例，请使用CRXDE Lite打开JavaScript文件。
 
 ### 注册ContextHub存储候选项 {#registering-a-contexthub-store-candidate}
 
@@ -66,7 +62,7 @@ ContextHub.Utils.storeCandidates.registerStoreCandidate(myStoreCandidate,
                                 'contexthub.mystorecandidate', 0);
 ```
 
-在大多数情况下，只需要一个候选，并且优先级可以设置为 `0`，但是如果您有兴趣，可以了解 [更高级的注册，](/help/sites-developing/contexthub-api.md#registerstorecandidate-store-storetype-priority-applies) 这允许根据javascript条件选择少数存储实现之一(`applies`)和候选优先级。
+通常，只需一个候选，并且优先级可以设置为 `0`. 但如果你有兴趣，你可以了解 [更高级的注册，](/help/sites-developing/contexthub-api.md#registerstorecandidate-store-storetype-priority-applies) 这允许根据JavaScript条件(`applies`)和候选优先级。
 
 ## 创建ContextHub UI模块类型 {#creating-contexthub-ui-module-types}
 
@@ -78,7 +74,7 @@ ContextHub.Utils.storeCandidates.registerStoreCandidate(myStoreCandidate,
 
 * 提供默认配置。 创建 `defaultConfig` 属性。 此属性是一个对象，其中包含为定义的属性 [`contexthub.base`](/help/sites-developing/ch-samplemodules.md#contexthub-base-ui-module-type) UI模块以及您需要的任何其他属性。
 
-的源 `ContextHub.UI.BaseModuleRenderer` 位于/libs/granite/contexthub/code/ui/container/js/ContextHub.UI.BaseModuleRenderer.js。  要注册渲染器，请使用 [`registerRenderer`](/help/sites-developing/contexthub-api.md#registerrenderer-moduletype-renderer-dontrender) 方法 `ContextHub.UI` 类。 您需要提供模块类型的名称。 当管理员基于此渲染器创建UI模块时，他们会指定此名称。
+的源 `ContextHub.UI.BaseModuleRenderer` 位于/libs/granite/contexthub/code/ui/container/js/ContextHub.UI.BaseModuleRenderer.js。 要注册渲染器，请使用 [`registerRenderer`](/help/sites-developing/contexthub-api.md#registerrenderer-moduletype-renderer-dontrender) 方法 `ContextHub.UI` 类。 提供模块类型的名称。 当管理员基于此渲染器创建UI模块时，他们会指定此名称。
 
 在自动执行的匿名函数中创建并注册渲染器类。 以下示例基于contexthub.browserinfo UI模块的源代码。 此UI模块是 `ContextHub.UI.BaseModuleRenderer` 类。
 
@@ -107,7 +103,7 @@ ContextHub.Utils.storeCandidates.registerStoreCandidate(myStoreCandidate,
 }());
 ```
 
-包含创建和注册渲染器的代码的javascript文件必须包含在 [客户端库文件夹](/help/sites-developing/clientlibs.md#creating-client-library-folders). 文件夹的类别必须与以下模式匹配：
+包含创建和注册渲染器的代码的JavaScript文件必须包含在 [客户端库文件夹](/help/sites-developing/clientlibs.md#creating-client-library-folders). 文件夹的类别必须与以下模式匹配：
 
 ```xml
 contexthub.module.[moduleType]

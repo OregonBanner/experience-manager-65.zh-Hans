@@ -1,16 +1,12 @@
 ---
 title: 内容服务的 JSON 导出器
-seo-title: JSON Exporter for Content Services
 description: AEM 内容服务旨在概括 AEM 中/来自 AEM 的内容的描述和投放，而不只是关注网页。它们使用可供任何客户使用的标准化方法，将内容投放到非传统 AEM 网页的渠道。
-seo-description: AEM Content Services are designed to generalize the description and delivery of content in/from AEM beyond a focus on web pages. They provide the delivery of content to channels that are not traditional AEM web pages, using standardized methods that can be consumed by any client.
-uuid: be6457b1-fa9c-4f3b-b219-01a4afc239e7
 contentOwner: User
 content-type: reference
 topic-tags: components
 products: SG_EXPERIENCEMANAGER/6.5/SITES
-discoiquuid: 4c7e33ea-f2d3-4d69-b676-aeb50c610d70
 exl-id: 647395c0-f392-427d-a998-e9ddf722b9f9
-source-git-commit: 3d713021ac410ca2925a282c5dfca98ed4e483ee
+source-git-commit: a56d5121a6ce11b42a6c30dae9e479564d16af27
 workflow-type: tm+mt
 source-wordcount: '431'
 ht-degree: 36%
@@ -61,21 +57,21 @@ AEM 内容服务旨在概括 AEM 中/来自 AEM 的内容的描述和投放，�
 
 * 例如，URL，例如：
 
-   ```shell
-   http://localhost:4502/content/we-retail/language-masters/en/manchester-airport/jcr:content/root/responsivegrid/contentfragment.model.json
-   ```
+  ```shell
+  http://localhost:4502/content/we-retail/language-masters/en/manchester-airport/jcr:content/root/responsivegrid/contentfragment.model.json
+  ```
 
 * 提供以下内容：
 
-   ![chlimage_1-193](assets/chlimage_1-193.png)
+  ![chlimage_1-193](assets/chlimage_1-193.png)
 
-   >[!NOTE]
-   >
-   >您可以 [调整您自己的组件](/help/sites-developing/json-exporter-components.md) 以访问和使用此数据。
+  >[!NOTE]
+  >
+  >您可以 [调整您自己的组件](/help/sites-developing/json-exporter-components.md) 以访问和使用此数据。
 
-   >[!NOTE]
-   >
-   >虽然不是标准实施， [支持多个选择器，](json-exporter-components.md#multiple-selectors) 但是 `model` 必须是第一个。
+  >[!NOTE]
+  >
+  >虽然不是标准实施， [支持多个选择器，](json-exporter-components.md#multiple-selectors) 但是 `model` 必须是第一个。
 
 ### 更多信息 {#further-information}
 
@@ -103,4 +99,4 @@ AEM 内容服务旨在概括 AEM 中/来自 AEM 的内容的描述和投放，�
 * [使用内容片段创作](/help/sites-authoring/content-fragments.md)
 * [为组件启用 JSON 导出](/help/sites-developing/json-exporter-components.md)
 
-* [核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans) 和 [内容片段组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/content-fragment-component.html?lang=en)
+* [核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) 和 [内容片段组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/content-fragment-component.html?lang=en)

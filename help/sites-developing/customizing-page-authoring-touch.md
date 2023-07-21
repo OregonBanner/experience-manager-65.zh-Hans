@@ -1,19 +1,15 @@
 ---
 title: 自定义页面创作
-seo-title: Customizing Page Authoring
-description: AEM提供了各种机制以允许您自定义页面创作功能
-seo-description: AEM provides various mechanisms to enable you to customize page authoring functionality
-uuid: 9dc72d98-c5ff-4a00-b367-688ccf896526
+description: Adobe Experience Manager (AEM)提供了各种机制，让您能够自定义页面创作功能。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
-discoiquuid: 6825dcd6-fa75-4410-b6b2-e7bd4a391224
 exl-id: 90594588-db8e-4d4c-a208-22c1c6ea2a2d
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: a56d5121a6ce11b42a6c30dae9e479564d16af27
 workflow-type: tm+mt
-source-wordcount: '1357'
-ht-degree: 1%
+source-wordcount: '1340'
+ht-degree: 2%
 
 ---
 
@@ -23,7 +19,7 @@ ht-degree: 1%
 >
 >本文档介绍如何在启用了触屏的现代化UI中自定义页面创作，并且不适用于经典UI。
 
-AEM提供各种机制让您能够自定义页面创作功能(以及 [控制台](/help/sites-developing/customizing-consoles-touch.md))。
+Adobe Experience Manager (AEM)提供了各种机制，让您能够自定义页面创作功能(以及 [控制台](/help/sites-developing/customizing-consoles-touch.md))。
 
 * Clientlibs
 
@@ -38,30 +34,30 @@ AEM提供各种机制让您能够自定义页面创作功能(以及 [控制台](
 
 >[!NOTE]
 >
->欲知更多信息，请参见 [JS文档集](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/jsdoc/ui-touch/editor-core/index.html).
+>有关更多信息，请参阅 [JS文档集](https://developer.adobe.com/experience-manager/reference-materials/6-5/jsdoc/ui-touch/editor-core/index.html).
 
-可通过多种方式使用这些组件来扩展AEM实例中的页面创作功能。 下面介绍了所选内容（概略说明）。
+可通过多种方式使用这些组件来扩展AEM实例中的页面创作功能。 下面的内容介绍了所做的选择（概括）。
 
 >[!NOTE]
 >
->有关更多信息，请参阅：
+>有关更多信息，请参阅以下内容：
 >
 >* 使用和创建 [clientlibs](/help/sites-developing/clientlibs.md).
 >* 使用和创建 [叠加](/help/sites-developing/overlays.md).
->* [Granite](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/index.html)
+>* [Granite](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html)
 >* [AEM触屏优化UI的结构](/help/sites-developing/touch-ui-structure.md) 有关用于页面创作的结构区域的详细信息。
 >
 
 
 >[!CAUTION]
 >
->您 ***必须*** 不更改 `/libs` 路径。
+>***不要*** 更改 `/libs` 路径。
 >
->这是因为 `/libs` 下次升级实例时将被覆盖（在应用修补程序或功能包时很可能会被覆盖）。
+>原因在于 `/libs` 下次升级实例时将被覆盖（在应用修补程序或功能包时很可能会被覆盖）。
 >
 >配置和其他更改的推荐方法是：
 >
->1. 重新创建所需项目（即该项目存在于中） `/libs`)下 `/apps`
+>1. 重新创建所需项目(即，它存在于 `/libs`)下 `/apps`
 >1. 在中进行任何更改 `/apps`
 
 ## 添加新图层（模式） {#add-new-layer-mode}
@@ -72,7 +68,7 @@ AEM提供各种机制让您能够自定义页面创作功能(以及 [控制台](
 
 标准AEM实例提供MSM层。 这将访问与以下项相关的数据： [多站点管理](/help/sites-administering/msm.md) 并在图层中将其加亮。
 
-要查看其实际操作情况，您可以编辑任意 [We.Retail语言副本](/help/sites-developing/we-retail-globalized-site-structure.md) 页面（或任何其他live copy页面）并选择 **Live Copy状态** 模式。
+要查看其实际操作情况，您可以编辑任何 [We.Retail语言副本](/help/sites-developing/we-retail-globalized-site-structure.md) 页面（或任何其他live copy页面）并选择 **Live Copy状态** 模式。
 
 可以在以下位置找到MSM层定义（供参考）：
 
@@ -80,7 +76,7 @@ AEM提供各种机制让您能够自定义页面创作功能(以及 [控制台](
 
 ### 代码示例 {#code-sample}
 
-这是一个示例包，显示如何创建新层（模式），即MSM视图的新层。
+这是一个示例包，显示如何创建层（模式），即MSM视图的新层。
 
 GITHUB上的代码
 
@@ -91,11 +87,11 @@ GITHUB上的代码
 
 ## 将新的选择类别添加到资源浏览器 {#add-new-selection-category-to-asset-browser}
 
-资产浏览器显示各种类型/类别的资产（例如，图像、文档等）。 资源也可以按这些资源类别进行筛选。
+资产浏览器显示各种类型/类别的资产（例如图像和文档）。 资源也可以按这些资源类别进行筛选。
 
 ### 代码示例 {#code-sample-1}
 
-`aem-authoring-extension-assetfinder-flickr` 是一个示例包，显示如何向资产查找器添加新组。 此示例连接到 [闪烁](https://www.flickr.com)的公开流，并在侧面板中显示。
+`aem-authoring-extension-assetfinder-flickr` 是一个示例包，显示如何将组添加到资产查找器。 此示例连接到 [闪烁](https://www.flickr.com)的公开流，并将其显示在侧面板中。
 
 GITHUB上的代码
 
@@ -106,11 +102,11 @@ GITHUB上的代码
 
 ## 筛选资源 {#filtering-resources}
 
-在创作页面时，用户通常必须从资源（例如，页面、组件、资产等）中进行选择。 这可以采用列表形式，例如，作者必须从中选择一个项目。
+在创作页面时，用户通常必须从资源（例如，页面、组件和资产）中进行选择。 这可以采用列表形式，例如，作者必须从中选择一个项目。
 
-为了使列表保持合理的大小并且与用例相关，可以采用自定义谓词的形式实施过滤器。 例如，如果 [`pathbrowser`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html) [Granite](/help/sites-developing/touch-ui-concepts.md#granite-ui) 组件用于允许用户选择特定资源的路径，提供的路径可通过以下方式过滤：
+要使列表保持合理的大小并符合用例，可以采用自定义谓词的形式实施过滤器。 例如，如果 [`pathbrowser`](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html) [Granite](/help/sites-developing/touch-ui-concepts.md#granite-ui) 组件用于允许用户选择特定资源的路径，提供的路径可通过以下方式过滤：
 
-* 通过实施自定义谓词 [`com.day.cq.commons.predicate.AbstractNodePredicate`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/predicate/package-summary.html) 界面。
+* 通过实施自定义谓词 [`com.day.cq.commons.predicate.AbstractNodePredicate`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/commons/predicate/package-summary.html) 界面。
 * 指定谓词的名称，并在使用 `pathbrowser`.
 
 有关创建自定义谓词的更多详细信息，请参阅 [本文](/help/sites-developing/implementing-custom-predicate-evaluator.md).
@@ -157,11 +153,11 @@ GITHUB上的代码
 
          * 属性: `editorType`
 
-           定义当为该组件触发就地编辑时将使用的内联编辑器的类型；例如， `text`， `textimage`， `image`， `title`.
+           定义为该组件触发就地编辑时使用的内联编辑器的类型；例如， `text`， `textimage`， `image`， `title`.
 
-1. 可以使用配置编辑器的其他配置详细信息 `config` 包含配置的节点以及 `plugin` 节点以包含必要的插件配置详细信息。
+1. 可以使用配置编辑器的其他配置详细信息 `config` 包含配置和 `plugin` 节点以包含必要的插件配置详细信息。
 
-   以下是为图像组件的图像裁剪插件定义长宽比的示例。 请注意，由于屏幕大小可能非常有限，因此裁切比例已移至全屏编辑器，并且只能在那里看到。
+   以下是为图像组件的图像裁剪插件定义长宽比的示例。 由于屏幕大小有限的可能性，裁切长宽比已移至全屏编辑器，并且只能在那里看到。
 
    ```xml
    <cq:inplaceEditing
@@ -185,7 +181,7 @@ GITHUB上的代码
 
    >[!CAUTION]
    >
-   >请注意，在AEM裁切比中，由设置 `ratio` 属性，定义为 **高度/宽度**. 这与宽度/高度的传统定义不同，这样做是出于旧版兼容性的原因。 只要您定义 `name` 属性清楚，因为这是UI中显示的内容。
+   >AEM裁切比率，由设置 `ratio` 属性，定义为 **高度/宽度**. 这与常见的宽高比的定义不同，这样做是出于对旧版兼容性的考虑。只要您定义 `name` 属性清楚，因为这是UI中显示的内容。
 
 #### 创建新的就地编辑器 {#creating-a-new-in-place-editor}
 
@@ -209,7 +205,7 @@ GITHUB上的代码
 
 #### 用于创建新的就地编辑器的代码示例 {#code-sample-for-creating-a-new-in-place-editor}
 
-`aem-authoring-extension-inplace-editor` 是一个示例包，显示如何在AEM中创建新就地编辑器。
+`aem-authoring-extension-inplace-editor` 是一个示例包，显示如何在AEM中创建就地编辑器。
 
 GITHUB上的代码
 
@@ -243,9 +239,9 @@ GITHUB上的代码
 
 * 当内容作者访问时，将自动显示在相应的菜单中 **没有** 适当的复制权限，但 **确实有** DAM用户和作者的成员资格。
 
-* 否则，将不会显示任何内容，因为复制权限已被删除。
+* 否则，不会显示任何内容，因为复制权限已被删除。
 
-要在激活时自定义行为，您可以叠加 **请求激活** 工作流：
+要在此类激活中进行自定义行为，您可以叠加 **请求激活** 工作流：
 
 1. In `/apps` 叠加 **站点** 向导：
 

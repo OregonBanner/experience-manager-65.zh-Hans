@@ -1,26 +1,22 @@
 ---
-title: AEM组件 — 基础知识
-seo-title: AEM Components - The Basics
-description: 在开始开发新组件时，您需要了解其结构和配置的基础知识
-seo-description: When you start to develop new components you need to understand the basics of their structure and configuration
-uuid: 0225b34d-5ac4-40c3-b226-0c9b24bdf782
+title: Adobe Experience Manager组件 — 基础知识
+description: 开始开发新组件时，您需要了解其结构和配置的基础知识。
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: components
 content-type: reference
-discoiquuid: 1f9867f1-5089-46d0-8e21-30d62dbf4f45
 legacypath: /content/docs/en/aem/6-0/develop/components/components-develop
 exl-id: 7ff92872-697c-4e66-b654-15314a8cb429
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: a56d5121a6ce11b42a6c30dae9e479564d16af27
 workflow-type: tm+mt
-source-wordcount: '4953'
+source-wordcount: '4913'
 ht-degree: 1%
 
 ---
 
-# AEM组件 — 基础知识{#aem-components-the-basics}
+# Adobe Experience Manager (AEM)组件 — 基础知识{#aem-components-the-basics}
 
-在开始开发新组件时，您需要了解其结构和配置的基础知识。
+开始开发新组件时，您需要了解其结构和配置的基础知识。
 
 此过程包括阅读相关理论，并查看标准AEM实例中的各种组件实施。 尽管AEM已转移到新的标准、现代、触屏优化UI，但它继续支持经典UI，这一事实使后一种方法稍微复杂一些。
 
@@ -30,14 +26,14 @@ ht-degree: 1%
 
 ### 规划 {#planning}
 
-在开始实际配置或编码组件之前，您应该询问：
+在开始实际配置组件或对其进行编码之前，您应该询问：
 
 * 您到底需要新组件做什么？
    * 明确的规范有助于开发、测试和移交的所有阶段。 详细信息可能会随着时间的推移而改变，但规范可以更新（尽管更改也应记录在案）。
 * 您是需要从头开始创建组件，还是可以从现有组件继承基础知识？
    * 不需要重新发明轮子。
    * AEM提供了多种机制，允许您从其他组件定义继承和扩展详细信息，包括覆盖、叠加和 [Sling资源合并器](/help/sites-developing/sling-resource-merger.md).
-* 您的组件是否需要逻辑来选择/处理内容？
+* 您的组件是否需要逻辑才能选择或操作内容？
    * 逻辑应与用户界面层分开。 HTL旨在帮助确保实现此目的。
 * 您的组件是否需要CSS格式？
    * CSS格式应与组件定义分开。 定义用于命名HTML元素的约定，以便您可以通过外部CSS文件修改这些约定。
@@ -46,10 +42,10 @@ ht-degree: 1%
 
 ### 触屏优化vs经典UI {#touch-enabled-vs-classic-ui}
 
-在就开发组件展开任何严肃讨论之前，您需要知道作者将使用哪种UI：
+在有关开发组件的任何严肃讨论开始之前，您必须知道作者使用的是哪种UI：
 
 * **触屏优化UI**
-  [标准用户界面](/help/sites-developing/touch-ui-concepts.md) 基于Adobe Marketing Cloud的统一用户体验，使用以下底层技术： [Coral UI](/help/sites-developing/touch-ui-concepts.md#coral-ui) 和 [Granite UI](/help/sites-developing/touch-ui-concepts.md#granite-ui).
+  [标准用户界面](/help/sites-developing/touch-ui-concepts.md) 基于Adobe Experience Cloud的统一用户体验，使用以下底层技术： [Coral UI](/help/sites-developing/touch-ui-concepts.md#coral-ui) 和 [Granite UI](/help/sites-developing/touch-ui-concepts.md#granite-ui).
 * **经典Ui**
 基于ExtJS技术的用户界面，AEM 6.4已弃用。
 
@@ -57,23 +53,23 @@ ht-degree: 1%
 
 可以实施组件以支持触屏UI和/或经典UI。 在查看标准实例时，您还会看到最初为经典UI或触屏UI或两者而设计的现成组件。
 
-因此，在本页中，我们将介绍这两个规则的基本知识以及如何识别它们。
+本页介绍了这两个函数的基本知识以及如何识别它们。
 
 >[!NOTE]
 >
->Adobe建议利用触屏优化UI来从最新技术中获益。 [AEM现代化工具](modernization-tools.md) 可以更轻松地迁移。
+>Adobe建议使用触屏优化UI以从最新技术中获益。 [AEM现代化工具](modernization-tools.md) 可以更轻松地迁移。
 
 ### 内容逻辑和渲染标记  {#content-logic-and-rendering-markup}
 
-建议将负责标记和渲染的代码与控制用于选择组件内容的逻辑的代码分开。
+Adobe建议将负责标记和渲染的代码与控制用于选择组件内容的逻辑的代码分开。
 
-这一理念得到以下支持 [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)，一种模板化语言，专门用于确保使用真正的编程语言来定义底层业务逻辑。 此（可选）逻辑通过特定命令从HTL调用。 此机制会突出显示为给定视图调用的代码，如果需要，还允许为同一组件的不同视图使用特定逻辑。
+这一理念得到以下支持 [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)，一种模板化语言，旨在确保使用真正的编程语言来定义底层业务逻辑。 此（可选）逻辑通过特定命令从HTL调用。 此机制会突出显示为给定视图调用的代码，如有必要，还允许为同一组件的不同视图使用特定逻辑。
 
 ### HTL与JSP {#htl-vs-jsp}
 
 HTL是AEM 6.0中引入的一种HTML模板语言。
 
-关于是否使用的讨论 [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html) 或JSP (Java Server Pages)在开发您自己的组件时应该简单明了，因为HTL现在是AEM推荐的脚本语言。
+关于是否使用的讨论 [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html) 或JSP (Java™ Server Pages)在开发您自己的组件时应该简单明了，因为HTL现在是AEM推荐的脚本语言。
 
 HTL和JSP都可用于为经典用户界面和触屏优化UI开发组件。 尽管可能会倾向于认为HTL仅适用于触屏UI和经典UI的JSP，但这是一种误解，并且更多是由于时间原因。 触摸式UI和HTL大约在同一时期内合并到AEM中。 由于HTL现在是推荐的语言，因此它被用于新组件，这些组件倾向于用于触屏优化UI。
 
@@ -103,7 +99,7 @@ HTL和JSP都可用于为经典用户界面和触屏优化UI开发组件。 尽�
 
 >[!NOTE]
 >
->这些机制还可用于在其他实例之间转移组件，例如，从开发实例转移到测试实例。
+>这些机制还可用于在其他实例之间传输组件，例如，从开发实例传输到测试实例。
 
 ### 从头开始要注意的组件 {#components-to-be-aware-of-from-the-start}
 
@@ -137,7 +133,7 @@ AEM组件的结构强大而灵活，主要考虑因素包括：
 结构的一个关键元素是资源类型。
 
 * 内容结构声明意图。
-* 资源类型实施它们。
+* 资源类型实现它们。
 
 这是一个抽象，有助于确保即使当外观和感觉随时间变化时，意图仍会停留在时间上。
 
@@ -161,7 +157,7 @@ AEM组件的结构强大而灵活，主要考虑因素包括：
 
    * jcr属性：
 
-     jcr属性的列表；这些属性是变量的，有些可能是可选的，但组件节点的基本结构、其属性和子节点由定义。 `cq:Component` 定义
+     jcr属性的列表；这些属性是变量的，有些可能是可选的，但组件节点的基本结构、其属性和子节点由 `cq:Component` 定义
 
    * 资源:
 
@@ -192,7 +188,7 @@ AEM组件的结构强大而灵活，主要考虑因素包括：
 
    * `cq:editConfig (cq:EditConfig)`  — 定义组件的编辑属性，并使组件显示在组件浏览器或Sidekick中。
 
-     注意：如果组件有对话框，它将自动显示在组件浏览器或Sidekick中，即使cq：editConfig不存在也是如此。
+     注意：如果组件有对话框，它将自动显示在组件浏览器或Sidekick中，即使cq：editConfig不存在。
 
    * `cq:childEditConfig (cq:EditConfig)`  — 控制子组件的创作UI方面，这些组件未定义自己的组件 `cq:editConfig`.
    * 触屏优化UI：
@@ -209,27 +205,27 @@ AEM组件的结构强大而灵活，主要考虑因素包括：
 
 组件的图标或缩写在开发人员创建组件时通过组件的JCR属性定义。 这些属性的计算顺序如下，并且使用找到的第一个有效属性。
 
-1. `cq:icon`  — 字符串属性，指向 [Coral UI库](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html) 在组件浏览器中显示
+1. `cq:icon`  — 字符串属性，指向 [Coral UI库](https://developer.adobe.com/experience-manager/reference-materials/6-5/coral-ui/coralui3/Coral.Icon.html) 在组件浏览器中显示
    * 使用Coral图标的HTML属性的值。
 1. `abbreviation`  — 字符串属性，用于自定义组件浏览器中组件名称的缩写
    * 缩写应限制为两个字符。
-   * 提供空字符串将构建 `jcr:title` 属性。
+   * 提供空字符串会构建由的前两个字符组成的缩写 `jcr:title` 属性。
       * 例如，“Im”表示“图像”
-      * 本地化的标题将用于构建缩写。
+      * 本地化的标题用于构建缩写。
    * 仅组件具有以下特征时，才会翻译缩写： `abbreviation_commentI18n` 属性，然后用作翻译提示。
 1. `cq:icon.png` 或 `cq:icon.svg`  — 此组件的图标，显示在组件浏览器中
    * 20 x 20像素是标准组件的图标大小。
-      * 较大的图标将被缩小（客户端）。
+      * 较大的图标会缩小（客户端）。
    * 推荐的颜色为rgb(112， 112， 112) > #707070
    * 标准组件图标的背景透明。
    * 仅 `.png` 和 `.svg` 文件受支持。
-   * 如果通过Eclipse插件从文件系统导入，则需要将文件名转义为 `_cq_icon.png` 或 `_cq_icon.svg` 例如。
+   * 如果通过Eclipse插件从文件系统导入，则必须对文件名进行转义，如 `_cq_icon.png` 或 `_cq_icon.svg` 例如。
    * `.png` 让先例重演 `.svg` 如果两者都存在
 
-如果以上属性均不( `cq:icon`， `abbreviation`， `cq:icon.png` 或 `cq:icon.svg`)，具体情况如下：
+如果以上属性均不( `cq:icon`， `abbreviation`， `cq:icon.png`，或 `cq:icon.svg`)，具体情况如下：
 
-* 系统将在超级组件上搜索相同的属性，如下所示 `sling:resourceSuperType` 属性。
-* 如果在超级组件级别上未找到任何内容或发现空缩写，则系统将根据 `jcr:title` 当前组件的属性。
+* 系统按照以下步骤在超级组件上搜索相同的属性 `sling:resourceSuperType` 属性。
+* 如果在超级组件级别上未找到任何内容或发现空缩写，则系统会从 `jcr:title` 当前组件的属性。
 
 要取消从超级组件继承图标，请将设置为空 `abbreviation` 组件上的属性将还原为默认行为。
 
@@ -320,7 +316,7 @@ AEM组件的结构强大而灵活，主要考虑因素包括：
   <tr>
    <td><code>cq:childEditConfig</code></td>
    <td><code>cq:EditConfig</code></td>
-   <td>当组件是容器时（例如，段落系统），这会驱动子节点的编辑配置。<br /> </td>
+   <td>当组件是容器（例如段落系统）时，它驱动子节点的编辑配置。<br /> </td>
   </tr>
   <tr>
    <td><code>cq:editConfig</code></td>
@@ -390,7 +386,7 @@ AEM组件的结构强大而灵活，主要考虑因素包括：
  </tbody>
 </table>
 
-如果我们查看 **文本** 组件（无论是哪个版本），我们可以看到以下元素：
+如果您查看 **文本** 组件（任一版本），您可以看到以下元素：
 
 * HTL ( `/libs/wcm/foundation/components/text`)
 
@@ -439,7 +435,7 @@ AEM组件的结构强大而灵活，主要考虑因素包括：
       * 特定于触屏UI
       * 使用Granite UI组件定义
       * 具有属性 `sling:resourceType`，作为标准Sling内容结构
-      * 可以具有属性 `helpPath` 定义在帮助图标(？ 图标)时，不会将鼠标指针置于“已更改”区域中。
+      * 可以具有属性 `helpPath` 定义在帮助图标( `?` 图标)时，不会将鼠标指针置于“已更改”区域中。
          * 对于开箱即用的组件，这通常会引用文档中的页面。
          * 如果否 `helpPath` 指定时，将显示默认URL（文档概述页面）。
 
@@ -472,7 +468,7 @@ AEM组件的结构强大而灵活，主要考虑因素包括：
 
 ### 设计对话框 {#design-dialogs}
 
-“设计”对话框与用于编辑和配置内容的对话框非常相似，但它们为作者提供了配置该组件并提供其设计详细信息的界面。
+“设计”对话框类似于用于编辑和配置内容的对话框，但它们为作者提供了配置该组件并提供其设计详细信息的界面。
 
 [设计对话框在设计模式下可用](/help/sites-authoring/default-components-designmode.md)，尽管并非所有组件都需要，例如， **标题** 和 **图像** 两者都具有设计对话框，而 **文本** 不会。
 
@@ -495,7 +491,7 @@ AEM组件的结构强大而灵活，主要考虑因素包括：
 
 ### 组件及其创建的内容 {#components-and-the-content-they-create}
 
-如果我们创建和配置 **标题** 页面上的组件： `<content-path>/Prototype.html`
+如果创建和配置实例 **标题** 页面上的组件： `<content-path>/Prototype.html`
 
 * 触屏优化UI
 
@@ -505,7 +501,7 @@ AEM组件的结构强大而灵活，主要考虑因素包括：
 
   ![screen_shot_2012-02-01at34257pm](assets/screen_shot_2012-02-01at34257pm.png)
 
-然后，我们可以查看在存储库中创建的内容的结构：
+然后，您可以查看在存储库中创建的内容的结构：
 
 ![screen_shot_2012-02-13at61405pm](assets/screen_shot_2012-02-13at61405pm.png)
 
@@ -518,19 +514,19 @@ AEM组件的结构强大而灵活，主要考虑因素包括：
 
 * 在内容中，这将生成属性 `jcr:title` 保存作者的内容。
 
-定义的属性取决于各个定义。 尽管它们可能比上面更复杂，但它们仍然遵循同样的基本原则。
+定义的属性取决于各个定义。 尽管它们可能比上述方法更复杂，但它们仍遵循相同的基本原则。
 
 ## 组件层次结构和继承 {#component-hierarchy-and-inheritance}
 
-AEM中的组件遵循3个不同的层次结构：
+AEM中的组件遵循三个不同的层次结构：
 
 * **资源类型层次结构**
 
-  这用于使用属性扩展组件 `sling:resourceSuperType`. 这将使组件能够继承。 例如，文本组件将继承标准组件的各种属性。
+  这用于使用属性扩展组件 `sling:resourceSuperType`. 这将使组件能够继承。 例如，文本组件从标准组件继承各种属性。
 
    * 脚本（由Sling解析）
    * 对话框
-   * 描述（包括缩略图图像、图标等）
+   * 描述（包括缩略图图像和图标）
 
 * **容器层次结构**
 
@@ -557,7 +553,7 @@ AEM中的组件遵循3个不同的层次结构：
 * [`cq:editConfig` 节点属性](#configuring-with-cq-editconfig-properties)：
 
    * `cq:actions` ( `String array`)：定义可以对组件执行的操作。
-   * `cq:layout` ( `String`)： ：定义如何在经典UI中编辑组件。
+   * `cq:layout` ( `String`)：定义如何在经典UI中编辑组件。
    * `cq:dialogMode` ( `String`)：定义如何在经典UI中打开组件对话框
 
       * 在触屏优化UI中，对话框在桌面模式下始终处于浮动状态，并在移动设备中自动作为全屏打开。
@@ -667,11 +663,11 @@ AEM中的组件遵循3个不同的层次结构：
    </tr>
   <tr>
    <td><code>delete</code></td>
-   <td>添加按钮以删除组件</td>
+   <td>添加按钮以删除组件。</td>
   </tr>
   <tr>
    <td><code>insert</code></td>
-   <td>添加按钮以在当前组件之前插入新组件</td>
+   <td>添加按钮以将新组件插入到当前组件之前。</td>
   </tr>
   <tr>
    <td><code>copymove</code></td>
@@ -680,7 +676,7 @@ AEM中的组件遵循3个不同的层次结构：
  </tbody>
 </table>
 
-以下配置向组件编辑栏中添加了编辑按钮、分隔符、删除和插入按钮：
+以下配置将编辑按钮、分隔符、删除和插入按钮添加到组件编辑栏：
 
 ```
 <jcr:root xmlns:cq="https://www.day.com/jcr/cq/1.0" xmlns:jcr="https://www.jcp.org/jcr/1.0"
@@ -710,7 +706,7 @@ AEM中的组件遵循3个不同的层次结构：
   </tr>
   <tr>
    <td><code>rollover</code></td>
-   <td>默认值。 组件版本可通过单击和/或上下文菜单“在鼠标悬停时”访问。<br /> 对于高级使用，请注意，相应的客户端对象为： <code>CQ.wcm.EditRollover</code>.</td>
+   <td>默认值。 组件版本可通过单击和/或上下文菜单“在鼠标悬停时”访问。<br /> 对于高级使用，相应的客户端对象为： <code>CQ.wcm.EditRollover</code>.</td>
   </tr>
   <tr>
    <td><code>editbar</code></td>
@@ -791,7 +787,7 @@ AEM中的组件遵循3个不同的层次结构：
 
 * 值 `fullscreen` 全屏打开对话框。
 * 如果属性为空值或缺失，则默认正常打开对话框。
-* 请注意，用户始终可以在对话框中切换全屏模式。
+* 用户始终可以在对话框中切换全屏模式。
 * 不适用于经典UI
 
 ### 使用cq：EditConfig子节点进行配置 {#configuring-with-cq-editconfig-child-nodes}
@@ -804,7 +800,7 @@ AEM中的组件遵循3个不同的层次结构：
 >
 >多个放置目标仅在经典UI中可用。
 >
->在触屏优化UI中，将仅使用第一个目标。
+>在触屏优化UI中，仅使用第一个目标。
 
 每个类型的子节点 `cq:DropTargetConfig` 在组件中定义放置目标。 节点名称非常重要，因为它必须在JSP中使用，如下所示，才能生成分配给作为有效放置目标的DOM元素的CSS类名称：
 
@@ -813,7 +809,7 @@ AEM中的组件遵循3个不同的层次结构：
  <node name of the drop target in the edit configuration>
 ```
 
-此 `<drag and drop prefix>` 由Java属性定义：
+此 `<drag and drop prefix>` 由Java™属性定义：
 
 `com.day.cq.wcm.api.components.DropTarget.CSS_CLASS_PREFIX`。
 
@@ -821,7 +817,7 @@ AEM中的组件遵循3个不同的层次结构：
 
 `String ddClassName = DropTarget.CSS_CLASS_PREFIX + "file";`
 
-类型的节点 `cq:DropTargetConfig` 需要具有以下属性：
+类型的节点 `cq:DropTargetConfig` 必须具有以下属性：
 
 <table>
  <tbody>
@@ -1024,7 +1020,7 @@ AEM中的组件遵循3个不同的层次结构：
 
 >[!NOTE]
 >
->对于嵌套组件，对定义为属性的 `cq:listeners` 节点：
+>如果有嵌套组件，则对定义为属性的操作会有某些限制。 `cq:listeners` 节点：
 >
 >* 对于嵌套组件，以下属性的值 *必须* 是 `REFRESH_PAGE`： >
 >  * `aftermove`
@@ -1040,9 +1036,9 @@ AEM中的组件遵循3个不同的层次结构：
 
 >[!NOTE]
 >
->对于经典UI，要查看哪些参数可以在处理程序中使用，请参阅 `before<action>` 和 `after<action>` 的事件部分 [`CQ.wcm.EditBar`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.EditBar) 和 [`CQ.wcm.EditRollover`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.EditRollover) 构件文档。
+>对于经典UI，要查看哪些参数可以在处理程序中使用，请参阅 `before<action>` 和 `after<action>` 的事件部分 [`CQ.wcm.EditBar`](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.wcm.EditBar) 和 [`CQ.wcm.EditRollover`](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.wcm.EditRollover) 构件文档。
 
-使用下列配置，在删除、编辑、插入或移动组件后刷新页面：
+采用以下配置时，在删除、编辑、插入或移动组件后刷新页面：
 
 ```
     <cq:listeners
