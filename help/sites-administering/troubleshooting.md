@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: da92d751-6f14-4512-9d77-7ecf098bd58e
 docset: aem65
 exl-id: ab4fc41f-e0e9-4577-aab2-f0b4298f9a59
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 2f3168c9bd39926ee8cf86b48cc0daef9d783a1c
 workflow-type: tm+mt
-source-wordcount: '234'
+source-wordcount: '252'
 ht-degree: 3%
 
 ---
@@ -21,6 +21,13 @@ ht-degree: 3%
 # 使用日志{#working-with-logs}
 
 此部分包含有关日志的详细信息，可帮助您排除故障。
+
+>[!NOTE]
+>
+>有关日志的更多信息，请参阅：
+>
+>* [AEM中的审核日志维护](/help/sites-administering/operations-audit-log.md)
+>* [使用审计记录和日志文件](/help/sites-deploying/monitoring-and-maintaining.md#working-with-audit-records-and-log-files)
 
 CRX记录详细的日志。 打开包装并启动“快速入门”后，您可以在以下位置找到日志：
 
