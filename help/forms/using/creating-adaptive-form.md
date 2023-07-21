@@ -5,16 +5,18 @@ feature: Adaptive Forms
 role: User, Developer
 level: Beginner
 exl-id: 2c25a8b7-73f7-40fb-a303-9446a708c8eb
-source-git-commit: 6ab2538dd8095304a55433c15c8c3d095499d92c
+source-git-commit: f620966974b0f535d30a17a5fa3175a593e52fec
 workflow-type: tm+mt
-source-wordcount: '1898'
+source-wordcount: '1913'
 ht-degree: 0%
 
 ---
 
 # 创建自适应表单 {#creating-an-adaptive-form}
 
-<span class="preview"> 本文介绍了自适应Forms的早期方法。 Adobe建议使用 [自适应Forms核心组件](/help/forms/using/create-an-adaptive-form-core-components.md) 创建任何新表单。 这些组件表示 [创建自适应Forms方面的重大进展](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html)，确保获得令人印象深刻的用户体验。</span>
+<span class="preview"> Adobe建议使用现代化的、可扩展的数据捕获 [核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) 对象 [创建新的自适应Forms](/help/forms/using/create-an-adaptive-form-core-components.md) 或 [将自适应Forms添加到AEM Sites页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). 这些组件在创建自适应Forms方面实现了重大进步，确保了令人印象深刻的用户体验。 本文介绍了使用基础组件创作自适应Forms的旧方法。 </span>
+
+
 
 ## 创建自适应表单 {#strong-create-an-adaptive-form-strong}
 
