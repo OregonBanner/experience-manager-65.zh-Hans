@@ -11,9 +11,9 @@ topic-tags: Security
 discoiquuid: 68077369-0549-4c0f-901b-952e323013ea
 docset: aem65
 exl-id: 574e2fc2-6ebf-49b6-9b65-928237a8a34d
-source-git-commit: 9273282b26aeab5f65f0f05aa8ad754962dc59ec
+source-git-commit: 7edd848bbdbadfb387bd4d880b24931ad6758dbd
 workflow-type: tm+mt
-source-wordcount: '853'
+source-wordcount: '856'
 ht-degree: 0%
 
 ---
@@ -237,8 +237,8 @@ curl -u user:password -F "keystorePassword=password" -F "keystorePasswordConfirm
 
 `-F "certificateFile=@root.crt" -F "certificateFile=@localhost.crt"..`
 
-执行命令后，请验证所有证书是否都进入密钥库。 从以下位置检查密钥库：
-[http://localhost:4502/libs/granite/security/content/userEditor.html/home/users/system/security/ssl-service](http://localhost:4502/libs/granite/security/content/userEditor.html/home/users/system/security/ssl-service)
+执行命令后，请验证所有证书是否都进入密钥库。 查看 **密钥库** 条目来源：
+[http://localhost:4502/libs/granite/security/content/v2/usereditor.html/home/users/system/security/ssl-service](http://localhost:4502/libs/granite/security/content/v2/usereditor.html/home/users/system/security/ssl-service)
 
 ### 启用TLS 1.3连接 {#enabling-tls-connection}
 
