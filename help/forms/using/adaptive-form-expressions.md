@@ -10,14 +10,16 @@ discoiquuid: 2fd2276e-cfe3-47ad-94c1-9c7af56b7a17
 docset: aem65
 feature: Adaptive Forms
 exl-id: 048bd9e8-ef34-40fb-9f46-73743d7b47c8
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
 workflow-type: tm+mt
-source-wordcount: '2746'
+source-wordcount: '2803'
 ht-degree: 0%
 
 ---
 
 # 自适应表单表达式{#adaptive-form-expressions}
+
+<span class="preview"> Adobe建议使用现代化的、可扩展的数据捕获 [核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) 对象 [创建新的自适应Forms](/help/forms/using/create-an-adaptive-form-core-components.md) 或 [将自适应Forms添加到AEM Sites页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). 这些组件在创建自适应Forms方面实现了重大进步，确保了令人印象深刻的用户体验。 本文介绍了使用基础组件创作自适应Forms的旧方法。 </span>
 
 自适应表单为具有动态脚本编写功能的最终用户提供经过优化、简化的表单填写体验。 它允许您编写表达式以添加各种行为，如动态显示/隐藏字段和面板。 它还允许您添加计算字段、使字段只读、添加验证逻辑等。 动态行为基于用户输入或预填充的数据。
 
@@ -71,7 +73,7 @@ JavaScript是自适应表单的表达式语言。 所有表达式都是有效的
 
 ### 计算表达式 {#calculate-expression}
 
-计算表达式用于使用表达式自动计算字段的值。 通常，此类表达式使用其他字段的值属性。 例如， `field2.value + field3.value`. 每当值 `field2`或 `field3`更改、重新触发表达式并重新计算值。
+计算表达式用于使用表达式自动计算字段的值。 通常，此类表达式使用其他字段的值属性。 例如：`field2.value + field3.value`。每当值 `field2`或 `field3`更改、重新触发表达式并重新计算值。
 
 **应用于**：字段
 
@@ -193,7 +195,7 @@ click表达式处理对按钮的单击事件执行的操作。 GuideBridge开箱
 
 在字段中添加验证的方法包括：
 
-### 必填 {#required}
+### 必需 {#required}
 
 要将组件设为必需，请在 **编辑** 对话框，您可以选择选项 **标题和文本>必需**. 您还可以添加相应的 **必需消息** （可选）以及。.
 
@@ -282,7 +284,7 @@ guideBridge.on("elementValueChanged", function (event, data)  {
 1. 打开已创建节点的“属性”选项卡。 例如，打开的“属性”选项卡 `textboxpatterns`. 添加 `guideComponentType` 属性，并将其值设置为 *fd/af/components/formatter/guideTextBox*.
 
 1. 此属性的值因要定义模式的字段而异。 对于数字字段，其值 `guideComponentType` 属性为 *fd/af/components/formatter/guideNumericBox*. “日期选取器”字段的值为 *fd/af/components/formatter/guideDatepicker*.”
-1. 您可以通过为添加自定义模式分配属性 `textboxpatterns` 节点。 添加具有名称的属性(例如 `pattern1`)，并将其值设置为要添加的pattern。 例如，添加属性 `pattern1` 值为Fax=text{99-999-9999999}。 该模式适用于您在自适应Forms中使用的所有文本框。
+1. 您可以通过为添加自定义模式分配属性 `textboxpatterns` 节点。 添加具有名称的属性(例如 `pattern1`)，并将其值设置为要添加的pattern。 例如，添加属性 `pattern1` 值为Fax=text{99-999-9999999}. 该模式适用于您在自适应Forms中使用的所有文本框。
 
    ![为CrxDe中的字段创建自定义模式](assets/creating-custom-patterns.png)
 

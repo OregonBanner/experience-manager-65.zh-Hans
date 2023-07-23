@@ -9,14 +9,16 @@ topic-tags: author
 discoiquuid: 43c431e4-5286-4f4e-b94f-5a7451c4a22c
 feature: Adaptive Forms
 exl-id: 5c75ce70-983e-4431-a13f-2c4c219e8dde
-source-git-commit: f05ddd2fb72258b7de5d361eb87f5e68e7ddd7ff
+source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
 workflow-type: tm+mt
-source-wordcount: '4529'
+source-wordcount: '4586'
 ht-degree: 0%
 
 ---
 
 # 使用自适应表单的最佳实践 {#best-practices-for-working-with-adaptive-forms}
+
+<span class="preview"> Adobe建议使用现代化的、可扩展的数据捕获 [核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) 对象 [创建新的自适应Forms](/help/forms/using/create-an-adaptive-form-core-components.md) 或 [将自适应Forms添加到AEM Sites页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). 这些组件在创建自适应Forms方面实现了重大进步，确保了令人印象深刻的用户体验。 本文介绍了使用基础组件创作自适应Forms的旧方法。 </span>
 
 ## 概述 {#overview}
 
@@ -259,7 +261,7 @@ AEM提供可用于本地化自适应表单的翻译工作流。 有关信息，�
 * 任何修改（如添加新组件或以本地化的形式应用脚本）都不会自动本地化。 因此，在本地化表单之前必须先完成该表单，以避免多个本地化周期。
 * 使用 `afAcceptLang` 请求参数覆盖浏览器区域设置并以指定的区域设置呈现表单。 例如，无论浏览器设置中指定的区域设置如何，以下URL将强制以日语区域设置呈现表单：
 
-   `https://'[server]:[port]'/<contextPath>/<formFolder>/<formName>.html?wcmmode=disabled&afAcceptLang=ja`
+  `https://'[server]:[port]'/<contextPath>/<formFolder>/<formName>.html?wcmmode=disabled&afAcceptLang=ja`
 
 * AEM Forms当前支持英语(en)、西班牙语(es)、法语(fr)、意大利语(it)、德语(de)、日语(ja)、葡萄牙语 — 巴西语(pt-BR)、中文(zh-CN)、中文 — 台湾(zh-TW)和韩语(ko-KR)语言环境的自适应表单内容本地化。 但是，您可以在运行时为自适应表单添加新区域设置支持。 有关更多信息，请参阅 [支持自适应表单本地化的新区域设置](/help/forms/using/supporting-new-language-localization.md).
 
@@ -269,7 +271,7 @@ AEM提供可用于本地化自适应表单的翻译工作流。 有关信息，�
 
 您可以配置驻留在防火墙后面的安全区域中的其他AEM Forms服务器实例。 您可以将此实例用于：
 
-* **批处理**：以重负载批次方式定期或计划的作业。 例如，打印语句，生成对应，以及使用PDF生成器、输出和汇编器等文档服务。
+* **批处理**：以重负载批次方式定期或计划的作业。 例如，打印语句，生成对应，以及使用PDF Generator、输出和汇编器等文档服务。
 * **存储PII数据**：将PII数据保存在处理服务器上。 如果您已在使用自定义存储提供程序存储PII数据，则不需要使用此功能。
 
 ### 将项目移动到其他环境 {#moving-project-to-another-environment}
@@ -312,7 +314,7 @@ AEM提供可用于本地化自适应表单的翻译工作流。 有关信息，�
 
 * **存储提交数据**：如果您使用表单门户提交存储，则应当实施自定义SPI以将提交数据存储到数据库中。 参见 [将草稿和提交组件与数据库集成的示例](/help/forms/using/integrate-draft-submission-database.md) （了解示例集成）。
 
-   您还可以编写自定义提交操作，将表单数据和附件存储在安全存储中。 参见 [为自适应表单编写自定义提交操作](/help/forms/using/custom-submit-action-form.md) 了解更多信息。
+  您还可以编写自定义提交操作，将表单数据和附件存储在安全存储中。 参见 [为自适应表单编写自定义提交操作](/help/forms/using/custom-submit-action-form.md) 了解更多信息。
 
 * **草稿标识的长度**：将自适应表单另存为草稿时，将生成草稿ID以唯一标识草稿。 草稿ID字段的最小长度值为26个字符。 Adobe建议将草稿ID长度设置为26个或更多字符。
 

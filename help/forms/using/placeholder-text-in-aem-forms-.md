@@ -10,14 +10,16 @@ discoiquuid: f9ff2cc5-3f0a-4b2f-a206-2fe0985646ea
 docset: aem65
 feature: Adaptive Forms
 exl-id: 6b6e27b5-8b4e-489c-9e72-4d256692c1ca
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
 workflow-type: tm+mt
-source-wordcount: '215'
-ht-degree: 0%
+source-wordcount: '272'
+ht-degree: 3%
 
 ---
 
 # AEM Forms中的占位符文本 {#placeholder-text-in-aem-forms}
+
+<span class="preview"> Adobe建议使用现代化的、可扩展的数据捕获 [核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) 对象 [创建新的自适应Forms](/help/forms/using/create-an-adaptive-form-core-components.md) 或 [将自适应Forms添加到AEM Sites页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). 这些组件在创建自适应Forms方面实现了重大进步，确保了令人印象深刻的用户体验。 本文介绍了使用基础组件创作自适应Forms的旧方法。 </span>
 
 占位符文本表示单词或短语。 它旨在帮助用户在控件没有值时输入数据。 占位符文本可以是示例值，也可以是预期格式的简短描述。 占位符文本在用户输入值之前显示，当用户输入或选择值时会被删除。
 

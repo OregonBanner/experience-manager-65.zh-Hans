@@ -3,14 +3,16 @@ title: 创建自适应表单或将自适应表单添加到 AEM Sites 页面
 description: 了解如何轻松创建自适应表单或将自适应表单无缝添加到 AEM Sites 页面。分步学习将动态且可自定义的表单集成到您的网站中并优化您的数字体验以尽量提高影响力的方法和最佳实践。
 feature: Adaptive Forms
 exl-id: 1813ccfc-87ce-46fa-a1d5-5edffd91efb0
-source-git-commit: 762e918a2c65898fc518f131d44421fb82ce4d6f
+source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
 workflow-type: tm+mt
-source-wordcount: '2913'
+source-wordcount: '2970'
 ht-degree: 23%
 
 ---
 
 # 创建自适应表单或将自适应表单添加到 AEM Sites 页面 {#create-or-add-an-adaptive-form-to-aem-sites-page}
+
+<span class="preview"> Adobe建议使用现代化的、可扩展的数据捕获 [核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) 对象 [创建新的自适应Forms](/help/forms/using/create-an-adaptive-form-core-components.md) 或 [将自适应Forms添加到AEM Sites页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). 这些组件在创建自适应Forms方面实现了重大进步，确保了令人印象深刻的用户体验。 本文介绍了使用基础组件创作自适应Forms的旧方法。 </span>
 
 | 版本 | 文章链接 |
 | -------- | ---------------------------- |

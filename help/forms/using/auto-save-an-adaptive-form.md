@@ -9,14 +9,16 @@ topic-tags: author
 discoiquuid: d519ac4e-6d29-4a69-874e-792acabe87ff
 feature: Adaptive Forms
 exl-id: 948b2c12-895d-49e3-a943-d8fe87174fc4
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
 workflow-type: tm+mt
-source-wordcount: '688'
-ht-degree: 0%
+source-wordcount: '745'
+ht-degree: 1%
 
 ---
 
 # 自动保存自适应表单 {#auto-save-an-adaptive-form}
+
+<span class="preview"> Adobe建议使用现代化的、可扩展的数据捕获 [核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) 对象 [创建新的自适应Forms](/help/forms/using/create-an-adaptive-form-core-components.md) 或 [将自适应Forms添加到AEM Sites页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). 这些组件在创建自适应Forms方面实现了重大进步，确保了令人印象深刻的用户体验。 本文介绍了使用基础组件创作自适应Forms的旧方法。 </span>
 
 您可以配置自适应表单，以根据事件或预定义的时间间隔自动开始保存内容。 默认情况下，自适应表单的内容会在用户操作时保存，例如按保存按钮时。 自动保存选项在以下内容中很有帮助：
 

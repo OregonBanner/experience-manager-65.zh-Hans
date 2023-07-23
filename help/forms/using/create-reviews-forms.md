@@ -9,14 +9,16 @@ topic-tags: forms-manager
 docset: aem65
 feature: Adaptive Forms
 exl-id: 9ca4fcd6-3eb0-4fc1-a09c-e4ad532bbed0
-source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
+source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
 workflow-type: tm+mt
-source-wordcount: '673'
-ht-degree: 2%
+source-wordcount: '730'
+ht-degree: 3%
 
 ---
 
 # 创建和管理表单审核{#creating-and-managing-reviews-to-forms}
+
+<span class="preview"> Adobe建议使用现代化的、可扩展的数据捕获 [核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) 对象 [创建新的自适应Forms](/help/forms/using/create-an-adaptive-form-core-components.md) 或 [将自适应Forms添加到AEM Sites页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). 这些组件在创建自适应Forms方面实现了重大进步，确保了令人印象深刻的用户体验。 本文介绍了使用基础组件创作自适应Forms的旧方法。 </span>
 
 | 版本 | 文章链接 |
 | -------- | ---------------------------- |

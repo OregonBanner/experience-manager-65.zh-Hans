@@ -10,14 +10,16 @@ discoiquuid: 1a32eb24-db3b-4fad-b1c7-6326b5af4e5e
 docset: aem65
 feature: Adaptive Forms
 exl-id: 2f276e9d-b3c1-48f7-a94a-bdf7eb15a031
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
 workflow-type: tm+mt
-source-wordcount: '2055'
-ht-degree: 0%
+source-wordcount: '2112'
+ht-degree: 1%
 
 ---
 
 # 自适应表单片段{#adaptive-form-fragments}
+
+<span class="preview"> Adobe建议使用现代化的、可扩展的数据捕获 [核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) 对象 [创建新的自适应Forms](/help/forms/using/create-an-adaptive-form-core-components.md) 或 [将自适应Forms添加到AEM Sites页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). 这些组件在创建自适应Forms方面实现了重大进步，确保了令人印象深刻的用户体验。 本文介绍了使用基础组件创作自适应Forms的旧方法。 </span>
 
 虽然每个表单都是为特定目的而设计的，但大多数表单中都存在一些通用区段，例如提供个人详细信息，如姓名和地址、家庭详细信息、收入详细信息等。 每次创建新表单时，表单开发人员都需要创建这些通用区段。
 
@@ -76,9 +78,9 @@ ht-degree: 0%
 1. 在片段创建对话框中，指定以下信息：
 
    * **名称**：片段的名称。 默认值为面板的元素名称。 它是必填字段。
-      >[!NOTE]
-      >
-      >确保为片段指定唯一的名称。 如果已存在另一个同名片段，则创建该片段失败。
+     >[!NOTE]
+     >
+     >确保为片段指定唯一的名称。 如果已存在另一个同名片段，则创建该片段失败。
 
    * **标题**：片段的标题。 默认值为面板的标题。
 
@@ -241,7 +243,7 @@ ht-degree: 0%
 * 重新发布更新的自适应表单片段时，更改会反映在使用片段的自适应表单已发布实例中。
 * 包含Verify组件的自适应表单不支持匿名用户。 此外，不建议在自适应表单片段中使用验证组件。
 * (**仅限Mac**)要确保表单片段功能在所有场景中完全正常工作，请将以下条目添加到/private/etc/hosts文件：
-   `127.0.0.1 <Host machine>` **主机**：部署AEM Forms的Apple Mac计算机。
+  `127.0.0.1 <Host machine>` **主机**：部署AEM Forms的Apple Mac计算机。
 
 ## 引用片段 {#reference-fragments}
 

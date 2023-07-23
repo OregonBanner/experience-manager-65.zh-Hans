@@ -5,14 +5,16 @@ feature: Adaptive Forms
 role: User, Developer
 level: Beginner, Intermediate
 exl-id: 35d5859f-54c4-4d14-9c64-0d9291ef9029
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
 workflow-type: tm+mt
-source-wordcount: '1073'
-ht-degree: 5%
+source-wordcount: '1130'
+ht-degree: 6%
 
 ---
 
 # 使用XML架构创建自适应表单 {#creating-adaptive-forms-using-xml-schema}
+
+<span class="preview"> Adobe建议使用现代化的、可扩展的数据捕获 [核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) 对象 [创建新的自适应Forms](/help/forms/using/create-an-adaptive-form-core-components.md) 或 [将自适应Forms添加到AEM Sites页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). 这些组件在创建自适应Forms方面实现了重大进步，确保了令人印象深刻的用户体验。 本文介绍了使用基础组件创作自适应Forms的旧方法。 </span>
 
 ## 前提条件 {#prerequisites}
 
@@ -290,7 +292,7 @@ XML架构由简单和复杂的元素类型组成。 元素具有向元素添加�
 
 ![XML架构元素的bindref字段](assets/dblclick.png)
 
-bindRef</code> 字段显示树元素与架构中的元素或属性之间的关联。
+此 <code>bindRef</code> 字段显示树元素与架构中的元素或属性之间的关联。
 
 >[!NOTE]
 >

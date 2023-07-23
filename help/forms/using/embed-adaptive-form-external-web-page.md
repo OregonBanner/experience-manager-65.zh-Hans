@@ -10,14 +10,16 @@ discoiquuid: d739c6da-3b41-4452-8728-d7cd1a3ae20b
 docset: aem65
 feature: Adaptive Forms
 exl-id: 2a237f74-fdfc-4e28-841c-f69afb7b99cf
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
 workflow-type: tm+mt
-source-wordcount: '970'
-ht-degree: 1%
+source-wordcount: '1027'
+ht-degree: 2%
 
 ---
 
 # 将自适应表单嵌入到外部网页中{#embed-adaptive-form-in-external-web-page}
+
+<span class="preview"> Adobe建议使用现代化的、可扩展的数据捕获 [核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) 对象 [创建新的自适应Forms](/help/forms/using/create-an-adaptive-form-core-components.md) 或 [将自适应Forms添加到AEM Sites页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). 这些组件在创建自适应Forms方面实现了重大进步，确保了令人印象深刻的用户体验。 本文介绍了使用基础组件创作自适应Forms的旧方法。 </span>
 
 您可以 [在AEM Sites页面中嵌入自适应表单](/help/forms/using/embed-adaptive-form-aem-sites.md) 或托管在AEM外部的网页。 嵌入式自适应表单功能齐全，用户无需离开页面即可填写和提交表单。 它有助于用户停留在网页上其他元素的上下文中，同时与表单交互。
 

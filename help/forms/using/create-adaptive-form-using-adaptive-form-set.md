@@ -10,14 +10,16 @@ discoiquuid: 264aa8c0-ba64-4768-b3d1-1b9baa6b4d72
 docset: aem65
 feature: Adaptive Forms
 exl-id: 4254c2cb-66cc-4a46-b447-bc5e32def7a0
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
 workflow-type: tm+mt
-source-wordcount: '569'
-ht-degree: 0%
+source-wordcount: '626'
+ht-degree: 1%
 
 ---
 
 # 使用一组自适应表单创建自适应表单{#create-an-adaptive-form-using-a-set-of-adaptive-forms}
+
+<span class="preview"> Adobe建议使用现代化的、可扩展的数据捕获 [核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) 对象 [创建新的自适应Forms](/help/forms/using/create-an-adaptive-form-core-components.md) 或 [将自适应Forms添加到AEM Sites页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). 这些组件在创建自适应Forms方面实现了重大进步，确保了令人印象深刻的用户体验。 本文介绍了使用基础组件创作自适应Forms的旧方法。 </span>
 
 ## 概述 {#overview}
 
@@ -141,7 +143,7 @@ ht-degree: 0%
 
 1. 在编辑模式下打开父窗体。
 1. 在侧栏中，单击 **资产** ![assets-browser](assets/assets-browser.png). 在Assets下，选择 **自适应表单** 从下拉菜单中。
-   [ ![在Assets下选择自适应表单](assets/asset.png)](assets/asset-1.png)
+   [![在Assets下选择自适应表单](assets/asset.png)](assets/asset-1.png)
 
 1. 拖放要作为子表单添加的自适应表单。
-   [ ![将自适应表单拖放到网站中](assets/drag-drop.png)](assets/drag-drop-1.png)您拖放的自适应表单将添加为子表单。
+   [![将自适应表单拖放到网站中](assets/drag-drop.png)](assets/drag-drop-1.png)您拖放的自适应表单将添加为子表单。

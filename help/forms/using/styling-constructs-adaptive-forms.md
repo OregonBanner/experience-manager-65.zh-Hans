@@ -10,14 +10,16 @@ discoiquuid: ed50fa70-a8dd-4cc6-82a9-d59de0fa417d
 docset: aem65
 feature: Adaptive Forms
 exl-id: 691608a6-be82-4d81-b876-427de997e5be
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
 workflow-type: tm+mt
-source-wordcount: '2308'
-ht-degree: 3%
+source-wordcount: '2365'
+ht-degree: 4%
 
 ---
 
 # 自适应表单的样式结构{#styling-constructs-for-adaptive-forms}
+
+<span class="preview"> Adobe建议使用现代化的、可扩展的数据捕获 [核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) 对象 [创建新的自适应Forms](/help/forms/using/create-an-adaptive-form-core-components.md) 或 [将自适应Forms添加到AEM Sites页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). 这些组件在创建自适应Forms方面实现了重大进步，确保了令人印象深刻的用户体验。 本文介绍了使用基础组件创作自适应Forms的旧方法。 </span>
 
 ## 前提条件 {#prerequisites}
 
@@ -520,7 +522,7 @@ HTML元素 **标签** 用于字段包括类 **left** 或 **top** 标签在顶部
   </tr>
   <tr>
    <td><p><code>table-header-bg-color</code></p> </td>
-   <td><p>标题行的背景颜色。 默认值为 <code>#333</code>。<br /> </p> </td>
+   <td><p>标题行的背景颜色。 默认值为 <code>#333</code>.<br /> </p> </td>
   </tr>
   <tr>
    <td><p><code>table-odd-row-bg-color</code></p> </td>

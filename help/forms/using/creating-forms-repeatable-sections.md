@@ -9,14 +9,16 @@ topic-tags: author
 discoiquuid: 01724ca0-6901-45e7-b045-f44814ed574e
 feature: Adaptive Forms
 exl-id: f2abae0a-f7fd-4a39-bd8c-03492ce06fe9
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
 workflow-type: tm+mt
-source-wordcount: '1119'
+source-wordcount: '1176'
 ht-degree: 0%
 
 ---
 
 # 创建包含可重复部分的表单 {#creating-forms-with-repeatable-sections}
+
+<span class="preview"> Adobe建议使用现代化的、可扩展的数据捕获 [核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) 对象 [创建新的自适应Forms](/help/forms/using/create-an-adaptive-form-core-components.md) 或 [将自适应Forms添加到AEM Sites页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). 这些组件在创建自适应Forms方面实现了重大进步，确保了令人印象深刻的用户体验。 本文介绍了使用基础组件创作自适应Forms的旧方法。 </span>
 
 可重复部分是可动态添加到表单或从中移除的面板。
 
@@ -54,7 +56,7 @@ ht-degree: 0%
       * 要创建添加面板按钮，请指定 `this.panel.instanceManager.addInstance()`
       * 要创建删除面板按钮，请指定 `this.panel.instanceManager.removeInstance(this.panel.instanceIndex)`
 
-      单击 **完成**.
+      单击&#x200B;**完成**。
 
       >[!NOTE]
       >
@@ -93,8 +95,6 @@ ht-degree: 0%
       >[!NOTE]
       >
       >从自适应表单中删除面板的所有实例时，要添加已删除面板的实例，请使用_panelName语法捕获面板的实例管理器，并使用实例管理器的addInstance API添加已删除的实例。 例如，_panelName.addInstance()。 它会添加已删除面板的一个实例。
-
-
 
 ## 使用父面板的可折叠项布局   {#using-the-accordion-layout-for-the-parent-panel-nbsp}
 

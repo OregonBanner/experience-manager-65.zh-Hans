@@ -10,14 +10,16 @@ discoiquuid: f5642571-9657-4ca1-93c5-4ae2eb91e967
 noindex: true
 feature: Adaptive Forms
 exl-id: ebec03a3-67a0-4ecd-84bb-8580388e048a
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
 workflow-type: tm+mt
-source-wordcount: '753'
-ht-degree: 15%
+source-wordcount: '810'
+ht-degree: 14%
 
 ---
 
 # 使用AEM翻译工作流将自适应表单和记录文档本地化 {#using-aem-translation-workflow-to-localize-adaptive-forms-and-document-of-record}
+
+<span class="preview"> Adobe建议使用现代化的、可扩展的数据捕获 [核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) 对象 [创建新的自适应Forms](/help/forms/using/create-an-adaptive-form-core-components.md) 或 [将自适应Forms添加到AEM Sites页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). 这些组件在创建自适应Forms方面实现了重大进步，确保了令人印象深刻的用户体验。 本文介绍了使用基础组件创作自适应Forms的旧方法。 </span>
 
 本地化的表单可帮助您跨地理区域为更广泛的受众提供服务。 Adobe Experience Manager翻译工作流可帮助您本地化自适应表单及其记录文档。 您可以使用 **机器翻译** 或 **人工翻译** 本地化自适应表单。
 
@@ -41,7 +43,6 @@ ht-degree: 15%
    >
    >* 在浏览器窗口中打开本地化的表单版本之前，请确保将浏览器的区域设置设置为与表单的区域设置相匹配。 例如，如果表单已翻译为德语(de)语言，则将浏览器的区域设置设置为德语(de)。
    >* 自适应表单组件不支持从右至左(RTL)语言。 例如，希伯来语。
-
 
    除了自适应表单之外，自动生成的记录文档也进行了本地化。
 
@@ -78,4 +79,3 @@ ht-degree: 15%
 >
 >* 自适应表单组件不支持从右至左(RTL)语言。 例如，希伯来语。
 >
-

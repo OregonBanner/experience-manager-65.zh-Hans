@@ -10,14 +10,16 @@ discoiquuid: 2c971da0-5bd5-40d1-820d-4efc2a44b49d
 docset: aem65
 feature: Adaptive Forms
 exl-id: 5ca850e3-30f0-4384-b615-356dc3c2ad0d
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
 workflow-type: tm+mt
-source-wordcount: '685'
-ht-degree: 0%
+source-wordcount: '742'
+ht-degree: 1%
 
 ---
 
 # 将用户数据中的信息添加到表单提交元数据{#adding-information-from-user-data-to-form-submission-metadata}
+
+<span class="preview"> Adobe建议使用现代化的、可扩展的数据捕获 [核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) 对象 [创建新的自适应Forms](/help/forms/using/create-an-adaptive-form-core-components.md) 或 [将自适应Forms添加到AEM Sites页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). 这些组件在创建自适应Forms方面实现了重大进步，确保了令人印象深刻的用户体验。 本文介绍了使用基础组件创作自适应Forms的旧方法。 </span>
 
 您可以使用在表单元素中输入的值来计算草稿或表单提交的元数据字段。 元数据允许您根据用户数据筛选内容。 例如，用户在表单的名称字段中输入John Doe。 您可以使用此信息计算元数据，该元数据可将此提交归入首字母JD下。
 
