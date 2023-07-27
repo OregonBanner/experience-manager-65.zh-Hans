@@ -4,7 +4,7 @@ description: 了解如何轻松创建自适应表单或将自适应表单无缝�
 Keywords: AEM Forms in sites, AF in Sites editor, af in aem sites, aem sites af, add af to a sites page, af aem sites, af sites, create af in a sites page, adaptive form in aem sites, forms aem sites, add form to a sites page, adaptive forms aem sites, add adaptive forms to aem page, create forms in an aem sites page
 feature: Adaptive Forms
 exl-id: 1813ccfc-87ce-46fa-a1d5-5edffd91efb0
-source-git-commit: 4992416c0deec7eab51920fd9c7e1e2b10887ea5
+source-git-commit: 600dcc52829ff2c5e54176bda7631845ef24f986
 workflow-type: tm+mt
 source-wordcount: '2970'
 ht-degree: 25%
@@ -45,17 +45,17 @@ AEM Forms 会提供自适应表单容器和自适应表单嵌入组件。您可�
 
 可使用以下选项充分利用此功能：
 
-* **将自定义自适应表单添加到AEM Sites页面：** 从头开始构建全新的表单，根据您的要求和设计偏好进行定制。
+* **[将自定义自适应表单添加到AEM Sites页面：](#create-an-adaptive-form-in-sites-editor)** 从头开始构建全新的表单，根据您的要求和设计偏好进行定制。
 
-* **向体验片段添加自定义自适应表单：** 通过将表单添加到AEM体验片段来扩展表单的覆盖范围，从而允许在多个页面或网站上无缝重用。
+* **[向体验片段添加自定义自适应表单：](#create-an-adaptive-form-in-experience-fragment)** 通过将表单添加到AEM体验片段来扩展表单的覆盖范围，从而允许在多个页面或网站上无缝重用。
 
-* **将多个表单添加到AEM Sites页面或体验片段：**  将多个表单添加到页面中，以根据用户的偏好和要求为其提供多个选择。 这些表单可以包括从头开始创建的全新表单和现有的表单。
-
-* **将自适应表单转换为体验片段：** 将添加到AEM Sites页面的自适应表单转换为体验片段，以便在多个AEM Sites页面中重用该表单。
+* **[将自适应表单转换为体验片段：](#convert-an-adaptive-form-in-sites-page-to-an-experience-fragment)** 将添加到AEM Sites页面的自适应表单转换为体验片段，以便在多个AEM Sites页面中重用该表单。
 
 * **根据批准的模板创建表单并将其添加到AEM Sites页面：** 利用预批准的模板快速创建符合您组织的品牌准则和设计标准的表单。 选项仅适用于使用自适应Forms编辑器或自适应Forms — 嵌入组件创建的自适应Forms 。
 
 * **将现有表单添加到AEM Sites页面：** 轻松将您已创建的表单集成到网站中，使访客能够直接与表单进行交互。 选项仅适用于使用自适应Forms编辑器或自适应Forms — 嵌入组件创建的自适应Forms 。
+
+* **将多个表单添加到AEM Sites页面或体验片段：**  将多个表单添加到页面中，以根据用户的偏好和要求为其提供多个选择。 这些表单可以包括从头开始创建的全新表单和现有的表单。
 
 ## 注意事项 {#consideration}
 
