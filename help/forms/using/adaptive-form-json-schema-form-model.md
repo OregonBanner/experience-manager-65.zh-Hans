@@ -5,7 +5,7 @@ feature: Adaptive Forms
 role: User, Developer
 level: Beginner, Intermediate
 exl-id: 1b402aef-a319-4d32-8ada-cadc86f5c872
-source-git-commit: f11bb43d914a43431cab408ca77690b6ba528a06
+source-git-commit: d0768679182567cc7cd618adaa78b6518f902f7c
 workflow-type: tm+mt
 source-wordcount: '1861'
 ht-degree: 5%
@@ -732,7 +732,7 @@ JavaScript是自适应表单的表达式语言。 所有表达式都是有效的
 
 ## 启用符合架构的数据 {#enablig-schema-compliant-data}
 
-要启用自适应表单以在表单提交时生成与架构兼容的数据，请执行以下步骤：
+要启用所有基于JSON架构的自适应Forms在提交表单时生成与架构兼容的数据，请执行以下步骤：
 
 1. 转到Experience ManagerWeb控制台，网址为 `https://server:host/system/console/configMgr`.
 1. 定位 **[!UICONTROL 自适应表单和互动通信Web渠道配置]**.
