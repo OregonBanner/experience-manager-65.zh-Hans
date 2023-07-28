@@ -1,13 +1,13 @@
 ---
 title: 如何使用JSON架构创建自适应Forms？
-description: 了解如何使用JSON架构作为表单模型创建自适应表单。 您可以使用现有JSON架构创建自适应表单。 深入了解JSON模式示例、在JSON模式定义中预配置字段、限制自适应表单组件的可接受值并了解不受支持的结构。
+description: 了解如何使用JSON架构作为表单模型创建自适应表单。 您可以使用现有JSON架构创建自适应表单。 深入了解JSON模式示例，在JSON模式定义中预配置字段，限制自适应表单组件的可接受值，并了解不受支持的结构。
 feature: Adaptive Forms
 role: User, Developer
 level: Beginner, Intermediate
 exl-id: 1b402aef-a319-4d32-8ada-cadc86f5c872
-source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
+source-git-commit: f11bb43d914a43431cab408ca77690b6ba528a06
 workflow-type: tm+mt
-source-wordcount: '1798'
+source-wordcount: '1861'
 ht-degree: 5%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 5%
 
 ## 前提条件 {#prerequisites}
 
-使用JSON架构作为表单模型创作自适应表单需要基本了解JSON架构。 建议在阅读本文之前，通读以下内容。
+使用JSON架构作为自适应表单的表单模型创作时，需要基本了解JSON架构。 建议在阅读本文之前通读以下内容。
 
 * [创建自适应表单](creating-adaptive-form.md)
 * [JSON架构](https://json-schema.org/)
@@ -35,9 +35,9 @@ ht-degree: 5%
 
 使用JSON架构的主要功能包括：
 
-* 在自适应表单的创作模式下，JSON的结构在Content Finder选项卡中显示为树。 您可以将元素从JSON层次结构拖放到自适应表单中。
-* 您可以使用与相关架构兼容的JSON预填充表单。
-* 在提交时，用户输入的数据将作为JSON提交，与关联的架构一致。
+* 在自适应表单的创作模式下，JSON的结构在“内容查找器”选项卡中显示为树。 您可以将元素从JSON层次结构拖放到自适应表单中。
+* 您可以使用与关联架构兼容的JSON预填充表单。
+* 在提交时，用户输入的数据将作为JSON提交，该JSON与关联的架构保持一致。
 
 JSON架构包含简单和复杂的元素类型。 元素具有向元素添加规则的属性。 将这些元素和属性拖动到自适应表单上时，会自动映射到相应的自适应表单组件。
 
@@ -81,7 +81,7 @@ JSON元素与自适应表单组件的映射如下所示：
    <td>
     <ul>
      <li>当类型为字符串且格式为电子邮件时，将映射电子邮件组件。</li>
-     <li>当类型为字符串且格式为hostname时，将映射带验证的Textbox组件。</li>
+     <li>当类型为字符串且格式为hostname时，将映射带验证的文本框组件。</li>
     </ul> </td>
   </tr>
   <tr>
@@ -106,7 +106,7 @@ JSON元素与自适应表单组件的映射如下所示：
   </tr>
   <tr>
    <td>数组属性</td>
-   <td>最小值和最大值分别等于minItems和maxItems的可重复面板。 仅支持同质数组。 因此，项约束必须是一个对象，而不是数组。<br /> </td>
+   <td>可重复面板，最小值和最大值分别等于minItems和maxItems。 仅支持同质数组。 因此项约束必须是对象，而不是数组。<br /> </td>
   </tr>
  </tbody>
 </table>
@@ -116,16 +116,16 @@ JSON元素与自适应表单组件的映射如下所示：
 自适应表单使用JSON架构中可用的信息来映射每个生成的字段。 特别是：
 
 * 此 `title` 属性用作自适应表单组件的标签。
-* 此 `description` 属性设置为自适应表单组件的详细说明。
+* 此 `description` 属性设置为自适应表单组件的完整描述。
 * 此 `default` 属性用作自适应表单字段的初始值。
 * 此 `maxLength` 属性设置为 `maxlength` 文本字段组件的属性。
-* 此 `minimum`， `maximum`， `exclusiveMinimum`、和 `exclusiveMaximum` 属性用于数字框组件。
+* 此 `minimum`， `maximum`， `exclusiveMinimum`、和 `exclusiveMaximum` 属性用于数值框组件。
 * 要支持的范围，请执行以下操作 `DatePicker component` 其他JSON架构属性 `minDate` 和 `maxDate` 提供……
-* 此 `minItems` 和 `maxItems` 属性用于限制可以从面板组件中添加或删除的项目/字段的数量。
+* 此 `minItems` 和 `maxItems` 属性用于限制可从面板组件添加或删除的项目/字段数。
 * 此 `readOnly` 属性设置 `readonly` 自适应表单组件的属性。
-* 此 `required` 属性将自适应表单字段标记为必填字段，而在面板（其中type为object）中，最终提交的JSON数据包含与该对象对应的具有空值的字段。
+* 此 `required` 属性将自适应表单字段标记为必填字段，而在面板（其中类型为对象）中，最终提交的JSON数据具有的字段具有对应于该对象的空值。
 * 此 `pattern` 属性设置为自适应表单中的验证模式（正则表达式）。
-* JSON架构文件的扩展名必须保留为.schema.json。 例如， &lt;filename>.schema.json.
+* JSON架构文件的扩展名必须保留为.schema.json。 例如， &lt;filename>.schema.json。
 
 ## 示例JSON架构 {#sample-json-schema}
 
@@ -311,7 +311,7 @@ JSON元素与自适应表单组件的映射如下所示：
 
 ### 可重用架构定义 {#reusable-schema-definitions}
 
-定义键用于标识可重用的架构。 可重用架构定义用于创建片段。 它类似于在XSD中标识复杂类型。 下面给出了具有定义的示例JSON架构：
+定义键用于标识可重用架构。 可重用架构定义用于创建片段。 它类似于识别XSD中的复杂类型。 下面给出了具有定义的示例JSON架构：
 
 ```json
 {
@@ -338,11 +338,11 @@ JSON元素与自适应表单组件的映射如下所示：
 }
 ```
 
-上例定义了一个客户记录，其中每个客户都有一个送货地址和账单地址。 两个地址的结构相同（地址具有街道地址、城市和州/省），因此最好不要复制这些地址。 此外，将来进行任何更改时都可轻松添加和删除字段。
+上例定义了一个客户记录，其中每个客户都有一个送货地址和账单地址。 两个地址的结构相同（地址具有街道地址、城市和州/省），因此最好不要重复这些地址。 它还使得添加和删除字段对于任何未来的更改都非常容易。
 
 ## 在JSON架构定义中预配置字段 {#pre-configuring-fields-in-json-schema-definition}
 
-您可以使用 **aem：afProperties** 属性，用于预配置JSON架构字段以映射到自定义自适应表单组件。 下面列出了一个示例：
+您可以使用 **aem：afProperties** 属性，用于预配置要映射到自定义自适应表单组件的JSON架构字段。 下面列出了一个示例：
 
 ```json
 {
@@ -364,9 +364,9 @@ JSON元素与自适应表单组件的映射如下所示：
 
 ## 为表单对象配置脚本或表达式  {#configure-scripts-or-expressions-for-form-objects}
 
-JavaScript是自适应表单的表达式语言。 所有表达式都是有效的JavaScript表达式，并且使用自适应表单脚本模型API。 您可以预配置表单对象，以 [计算表达式](adaptive-form-expressions.md) 在表单事件上。
+JavaScript是自适应表单的表达式语言。 所有表达式都是有效的JavaScript表达式，并使用自适应表单脚本模型API。 您可以预配置表单对象，以 [计算表达式](adaptive-form-expressions.md) 在表单事件中。
 
-使用aem：afproperties属性为自适应表单组件预配置自适应表单表达式或脚本。 例如，在触发初始化事件时，以下代码设置电话字段的值并将值打印到日志：
+使用aem：afproperties属性为自适应表单组件预配置自适应表单表达式或脚本。 例如，当触发初始化事件时，以下代码设置telephone字段的值并将值打印到日志：
 
 ```json
 "telephone": {
@@ -384,7 +384,7 @@ JavaScript是自适应表单的表达式语言。 所有表达式都是有效的
 }
 ```
 
-您应该是 [forms-power-user group](forms-groups-privileges-tasks.md) 为表单对象配置脚本或表达式。 下表列出了自适应表单组件支持的所有脚本事件。
+您应该是 [表单 — 超级用户组](forms-groups-privileges-tasks.md) 为表单对象配置脚本或表达式。 下表列出了自适应表单组件支持的所有脚本事件。
 
 <table>
  <tbody>
@@ -593,7 +593,7 @@ JavaScript是自适应表单的表达式语言。 所有表达式都是有效的
 
 以下是前面提到的示例的JSON代码示例。
 
-### 在初始化事件时隐藏字段 {#hiding-a-field-on-initialize-event}
+### 在初始化事件中隐藏字段 {#hiding-a-field-on-initialize-event}
 
 ```json
 "name": {
@@ -656,7 +656,7 @@ JavaScript是自适应表单的表达式语言。 所有表达式都是有效的
   <tr>
    <td><p><code>minimum</code></p> </td>
    <td><p>字符串</p> </td>
-   <td><p>指定数字值和日期的下限。 默认情况下，包含最小值。</p> </td>
+   <td><p>指定数值和日期的下限。 默认情况下，将包含最小值。</p> </td>
    <td>
     <ul>
      <li>数值框</li>
@@ -667,7 +667,7 @@ JavaScript是自适应表单的表达式语言。 所有表达式都是有效的
   <tr>
    <td><p><code>exclusiveMaximum</code></p> </td>
    <td><p>布尔值</p> </td>
-   <td><p>如果为true，则表单组件中指定的数值或日期必须小于为maximum属性指定的数值或日期。</p> <p>如果为false，则表单组件中指定的数值或日期必须小于或等于为maximum属性指定的数值或日期。</p> </td>
+   <td><p>如果为true，则表单的组件中指定的数值或日期必须小于为maximum属性指定的数值或日期。</p> <p>如果为false，则表单的组件中指定的数值或日期必须小于或等于为maximum属性指定的数值或日期。</p> </td>
    <td>
     <ul>
      <li>数值框</li>
@@ -678,7 +678,7 @@ JavaScript是自适应表单的表达式语言。 所有表达式都是有效的
   <tr>
    <td><p><code>exclusiveMinimum</code></p> </td>
    <td><p>布尔值</p> </td>
-   <td><p>如果为true，则表单组件中指定的数值或日期必须大于为最小属性指定的数值或日期。</p> <p>如果为false，则表单组件中指定的数值或日期必须大于或等于为最小属性指定的数值或日期。</p> </td>
+   <td><p>如果为true，则表单的组件中指定的数值或日期必须大于为最小属性指定的数值或日期。</p> <p>如果为false，则表单的组件中指定的数值或日期必须大于或等于为minimum属性指定的数值或日期。</p> </td>
    <td>
     <ul>
      <li>数值框</li>
@@ -707,7 +707,7 @@ JavaScript是自适应表单的表达式语言。 所有表达式都是有效的
   <tr>
    <td><p><code>pattern</code></p> </td>
    <td><p>字符串</p> </td>
-   <td><p>指定字符的序列。 如果字符符合指定的模式，组件将接受这些字符。</p> <p>pattern属性映射到相应自适应表单组件的验证模式。</p> </td>
+   <td><p>指定字符的顺序。 如果字符符合指定的模式，则组件接受这些字符。</p> <p>pattern属性映射到相应自适应表单组件的验证模式。</p> </td>
    <td>
     <ul>
      <li>映射到XSD架构的所有自适应表单组件 </li>
@@ -728,20 +728,34 @@ JavaScript是自适应表单的表达式语言。 所有表达式都是有效的
  </tbody>
 </table>
 
+
+
+## 启用符合架构的数据 {#enablig-schema-compliant-data}
+
+要启用自适应表单以在表单提交时生成与架构兼容的数据，请执行以下步骤：
+
+1. 转到Experience ManagerWeb控制台，网址为 `https://server:host/system/console/configMgr`.
+1. 定位 **[!UICONTROL 自适应表单和互动通信Web渠道配置]**.
+1. 点按以在编辑模式下打开配置。
+1. 选择 **[!UICONTROL 生成符合架构的数据]** 复选框。
+1. 保存设置。
+
+![自适应表单和交互式通信Web渠道配置](/help/forms/using/assets/af-ic-web-channel-configuration.png)
+
 ## 不受支持的结构  {#non-supported-constructs}
 
 自适应表单不支持以下JSON架构结构：
 
 * 空类型
 * 合并类型，例如any和
-* OneOf、AnyOf、AllOf和NOT
+* OneOf、AnyOf、All和NOT
 * 仅支持同质数组。 因此，项约束必须是对象，而不是数组。
 
 ## 常见问题 {#frequently-asked-questions}
 
 **为什么我无法为可重复的子表单（minOccours或maxOccurs值大于1）拖动子表单的单个元素（从任何复杂类型生成的结构）？**
 
-在可重复的子表单中，您必须使用完整的子表单。 如果只需要选择字段，请使用整个结构并删除不需要的字段。
+在可重复的子表单中，必须使用完整的子表单。 如果只需要选择字段，请使用整个结构并删除不需要的字段。
 
 **我在内容查找器中有一个长且复杂的结构。 如何查找特定元素？**
 
@@ -752,4 +766,4 @@ JavaScript是自适应表单的表达式语言。 所有表达式都是有效的
 
 **JSON架构文件的扩展名应该是什么？**
 
-JSON架构文件的扩展名必须是.schema.json。 例如， &lt;filename>.schema.json.
+JSON架构文件的扩展名必须是.schema.json。 例如， &lt;filename>.schema.json。
