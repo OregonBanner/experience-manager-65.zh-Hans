@@ -10,9 +10,9 @@ role: User, Admin
 mini-toc-levels: 4
 exl-id: badd0f5c-2eb7-430d-ad77-fa79c4ff025a
 feature: Configuration,Scene7 Mode
-source-git-commit: 48540664fa80ac7ecc94a2d9dc56682ceaf67206
+source-git-commit: 78842fb50d5aa5e5c22801389713cb3c69cac4bf
 workflow-type: tm+mt
-source-wordcount: '6491'
+source-wordcount: '6489'
 ht-degree: 3%
 
 ---
@@ -236,7 +236,7 @@ Dynamic Media中的密码过期时间设置为自当前系统日期起100年。
 
 1. 在 **com.adobe.cq.dam.s7imaging.impl.ps.PlatformServerServlet.name** 页面上，选中以下两个设置的复选框：
 
-   * `com.adobe.cq.dam.s7imaging.impl.ps.PlatformServerServlet.cache.enable.name`  — 启用时，此设置将缓存权限结果120秒或2分钟（默认值）以保存。
+   * `com.adobe.cq.dam.s7imaging.impl.ps.PlatformServerServlet.cache.enable.name`  — 启用时，此设置将缓存权限结果120秒（两分钟）（默认值）以保存。
    * `com.adobe.cq.dam.s7imaging.impl.ps.PlatformServerServlet.validate.userAccess.name`  — 启用后，此设置将在用户通过Dynamic Media图像服务器预览资源时验证用户的访问权限。
 
    ![在Dynamic Media - Scene7模式下启用访问控制列表设置](/help/assets/assets-dm/acl.png)
@@ -703,7 +703,7 @@ Scene7上传连接设置将Experience Manager资源同步到Dynamic Media Classi
 
    此 **[!UICONTROL 连接数]** 设置可控制Experience Manager到Dynamic Media上传时允许的最大HTTP连接数；通常，预先定义的十个连接值便已足够。
 
-   此 **[!UICONTROL 活动作业超时]** 设置确定在投放服务器中发布已上传Dynamic Media资源的等待时间。 此值默认为2100秒或35分钟。
+   此 **[!UICONTROL 活动作业超时]** 设置确定在投放服务器中发布已上传Dynamic Media资源的等待时间。 此值默认为2100秒（35分钟）。
 
    对于大多数用例，设置2100就足够了。
 
