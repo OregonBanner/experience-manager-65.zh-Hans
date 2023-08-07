@@ -8,9 +8,9 @@ contentOwner: Khushwant Singh
 topic-tags: Adaptive Forms
 docset: aem65
 role: Admin, Developer
-source-git-commit: 00f8b2c72aab37a57ab76e684f432250d2de3470
+source-git-commit: 3bc61e56d2fcd9f32c37a7ea04b0ffc6728bfc56
 workflow-type: tm+mt
-source-wordcount: '891'
+source-wordcount: '889'
 ht-degree: 21%
 
 ---
@@ -20,16 +20,16 @@ ht-degree: 21%
 
 | 版本 | 文章链接 |
 | -------- | ---------------------------- |
+| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/setup-configure-migrate/enable-adaptive-forms-core-components.html) |
 | AEM 6.5 | 本文 |
-| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/using-themes-in-core-components.html) |
 
 **适用于：** ✅用自适应表单核心组件❎自适应表单基础组件。
 
-启用自适应Forms核心组件允许您开始创建、发布和交付 [基于核心组件的自适应Forms](create-an-adaptive-form-core-components.md) 和 [Headless自适应Forms](https://experienceleague.adobe.com/docs/experience-manager-headless-adaptive-forms/using/overview.html) 从AEM 6.5 Forms环境中。
+启用自适应Forms核心组件后，您可以开始创建、发布和交付 [基于核心组件的自适应Forms](create-an-adaptive-form-core-components.md) 和 [Headless自适应Forms](https://experienceleague.adobe.com/docs/experience-manager-headless-adaptive-forms/using/overview.html) 从AEM 6.5 Forms环境中。
 
-要在AEM 6.5 Forms环境中启用HAdaptive Forms核心组件，请设置和部署 [AEM Archetype 41或更高版本](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) 基于您的所有创作实例和发布实例上的项目（启用了表单选项）。
+要在AEM 6.5 Forms环境中启用HAdaptive Forms核心组件，请设置和部署 [AEM Archetype 41或更高版本](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) 基于所有创作和发布实例上的项目（启用了表单选项）。
 
-本文详细说明了如何在您的AEM 6.5 Forms环境中设置和部署基于AEM Archetype 41或更高版本的项目以启用Adaptive Forms核心组件。
+本文介绍了如何在您的AEM 6.5 Forms环境中设置和部署基于AEM Archetype 41或更高版本的项目以启用自适应Forms核心组件。
 
 
 ## 前提条件 {#prerequisites}
@@ -44,7 +44,7 @@ ht-degree: 21%
 
 ## 创建和部署最新的基于AEM原型的项目
 
-创建AEM原型41或 [稍后](https://github.com/adobe/aem-project-archetype) 基于项目并将其部署到所有创作和发布实例：
+创建AEM Archetype 41或 [稍后](https://github.com/adobe/aem-project-archetype) 基于的项目并将其部署到所有创作和发布实例：
 
 1. 以管理员身份登录到您的计算机，托管并运行AEM 6.5 Forms实例。
 1. 打开命令提示符或终端，然后运行以下命令以创建AEM Archetype项目（启用表单选项）：
@@ -79,14 +79,14 @@ ht-degree: 21%
 
    执行上述命令时，请务必考虑以下几点：
 
-   * 不要更改的值 `aemVersion` 属性自 `6.5.15.0` 任何事都可以。
+   * 不要更改的值 `aemVersion` 属性来源 `6.5.15.0` 任何事都可以。
 
-   * 设置 `archetypeVersion` 属性至 `41` 或更高版本。 有关最新版本，请参阅系统要求部分，位置在： [AEM项目原型](https://github.com/adobe/aem-project-archetype) 文档。
+   * 设置 `archetypeVersion` 属性至 `41` 或更高版本。 有关最新版本，请参阅系统要求部分，位于 [AEM项目原型](https://github.com/adobe/aem-project-archetype) 文档。
 
-   * 更新命令以反映环境的特定值，包括 `appTitle`， `appId`、和 `groupId`. 此外，设置  `includeFormsenrollment` 属性至 `y`. 如果您使用Forms Portal，请设置 `includeExamples=y` 可在项目中包含Forms门户核心组件的选项。
+   * 更新命令以反映环境的特定值，包括 `appTitle`， `appId`、和 `groupId`. 此外，设置  `includeFormsenrollment` 属性至 `y`. 如果您使用Forms Portal，请设置 `includeExamples=y` 可在您的项目中包含的Forms Portal核心组件的选项。
 
 
-1. （仅适用于基于Archetype版本41的项目）创建AEM Archetype项目后，请为基于核心组件的自适应Forms启用主题。 要启用主题：
+1. （仅适用于基于Archetype版本41的项目）创建AEM Archetype项目后，请为基于核心组件的自适应Forms启用主题。 要启用主题，请执行以下操作：
 
    1. 打开 [AEM原型项目文件夹]/ui.apps/src/main/content/jcr_root/apps/__appId__/components/adaptiveForm/page/customheaderlibs.html进行编辑：
 
@@ -112,11 +112,11 @@ ht-degree: 21%
    1. 保存并关闭该文件。
 
 
-1. 成功创建AEM原型项目后，为您的环境构建部署包。 要生成包，请执行以下操作：
+1. 成功创建AEM原型项目后，为您的环境构建部署包。 要构建包，请执行以下操作：
 
    1. 导航到AEM Archetype项目的根目录。
 
-   1. 运行以下命令为您的环境构建AEM Archetype项目：
+   1. 运行以下命令为您的环境构建AEM原型项目：
 
       ```Shell
       mvn clean install
@@ -125,16 +125,16 @@ ht-degree: 21%
       ![archetypebuild-success](/help/forms/using/assets/corecomponent-build-successful.png)
 
 
-   成功构建AEM Archetype项目后，将生成AEM包。 您可以在以下位置找到该包： [AEM原型项目文件夹]\all\target\[appid].all-[version].zip
+   成功构建AEM原型项目后，将生成AEM包。 您可以在以下位置找到该包： [AEM原型项目文件夹]\all\target\[appid].all-[版本].zip
 
-1. 使用 [包管理器](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html?lang=en) 以部署 [AEM原型项目文件夹]\all\target\[appid].all-[version].zip包。
+1. 使用 [包管理器](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html?lang=en) 以部署 [AEM原型项目文件夹]\all\target\[appid].all-[版本].zip包。
 
 >[!NOTE]
 >
 >
 >
-> * 如果您在访问发布实例的登录对话框时遇到困难，要通过包管理器安装包，请尝试使用URL： `http://[Publish Server URL]:[PORT]/system/console` 以登录。 这允许您访问发布实例的登录页面，从而允许您继续安装过程。
-> * 将原型项目部署到您的环境后，请勿将其删除或放弃。 将自定义的和新的自适应Forms核心组件主题添加到您的环境时，需要原型项目。
+> * 如果您在发布实例上访问登录对话框时遇到困难，要通过包管理器安装包，请尝试使用URL： `http://[Publish Server URL]:[PORT]/system/console` 以登录。 这允许您访问发布实例的登录页面，从而允许您继续安装过程。
+> * 将原型项目部署到您的环境后，请勿将其删除或放弃。 要将自定义主题和新的自适应Forms核心组件主题添加到您的环境中，需要原型项目。
 
 为您的环境启用了核心组件。 将基于空白核心组件的自适应表单模板和画布3.0主题部署到您的环境，使您能够 [创建基于核心组件的自适应Forms](create-an-adaptive-form-core-components.md).
 
