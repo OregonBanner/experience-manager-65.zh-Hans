@@ -9,7 +9,7 @@ contentOwner: Khushwant Singh
 topic-tags: Adaptive Forms
 docset: aem65
 role: Admin, Developer
-source-git-commit: d9abdc92c8c4fdb60c8aa827c57c0aa928fd6543
+source-git-commit: 3d7db26a85379e780b103c1e7d26b4116023ee9b
 workflow-type: tm+mt
 source-wordcount: '1796'
 ht-degree: 35%
@@ -43,13 +43,13 @@ ht-degree: 35%
 
 * **为您的环境启用自适应Forms核心组件**：需要AEM Archetype项目版本41或更高版本， [为您的环境启用核心组件](/help/forms/using/enable-adaptive-forms-core-components.md). 在为您的环境启用核心组件时， **自适应Forms（核心组件）** 模板和画布主题将添加到环境中。
 
-* **自适应表单模板**：模板提供基本结构并定义自适应表单的外观（版面和样式）。它的预格式化的组件包含某些属性和内容结构。它还提供用于定义主题和提交操作的选项。主题定义外观，提交操作定义在提交自适应表单时执行的操作。您还可以部署示例 [模板](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/sample-themes-templates-form-data-models-core-components) 到您的环境。 这些功能可帮助您迅速创建表单。
+* **自适应表单模板**：模板提供基本结构并定义自适应表单的外观（版面和样式）。它的预格式化的组件包含某些属性和内容结构。它还提供用于定义主题和提交操作的选项。主题定义外观，提交操作定义在提交自适应表单时执行的操作。您还可以部署 [示例模板](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/sample-themes-templates-form-data-models-core-components.html) 到您的环境。 这些功能可帮助您迅速创建表单。
 
   >[!NOTE]
   >
   > 如果环境中没有&#x200B;**自适应表单（核心组件）**&#x200B;模板，请[为您的环境启用自适应表单核心组件](/help/forms/using/enable-adaptive-forms-core-components.md)。在为您的环境启用核心组件时，会将&#x200B;**自适应表单（核心组件）**&#x200B;模板添加到您的环境。
 
-* **自适应表单主题**：主题包含组件和面板的样式详细信息。样式包括背景颜色、状态颜色、透明度、对齐方式和大小等属性。在应用主题时，指定的样式会反映在相应的组件上。此 `Canvas` 在为环境启用核心组件时，默认添加主题。 您可以  [下载和自定义标准主题](create-or-customize-themes-for-adaptive-forms-core-components.md). 对象 **开箱即用** 您可以部署的主题 [示例](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/sample-themes-templates-form-data-models-core-components) 主题与您的环境。 这些功能可帮助您开始设计表单的样式，并提供一个基础结构，以根据业务需求创建或自定义主题。
+* **自适应表单主题**：主题包含组件和面板的样式详细信息。样式包括背景颜色、状态颜色、透明度、对齐方式和大小等属性。在应用主题时，指定的样式会反映在相应的组件上。此 `Canvas` 在为环境启用核心组件时，默认添加主题。 您可以  [下载和自定义标准主题](create-or-customize-themes-for-adaptive-forms-core-components.md). 对象 **开箱即用** 您可以部署的主题 [示例主题](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/sample-themes-templates-form-data-models-core-components.html) 到您的环境。 这些功能可帮助您开始设计表单的样式，并提供一个基础结构，以根据业务需求创建或自定义主题。
 
 * **权限**：将用户添加到[!DNL forms-users]组。[!DNL forms-users]组的成员具有创建自适应表单的权限。有关特定于表单的用户组的详细列表，请参阅[组和权限](forms-groups-privileges-tasks.md)。
 
