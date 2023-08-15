@@ -10,20 +10,20 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 910229a3-38b1-44f1-9c09-55f8fd6cbb1d
 exl-id: 7ac0056c-a742-49f4-8312-2cf90ab9f23a
-source-git-commit: 1d334c42088342954feb34f6179dc5b134f81bb8
+source-git-commit: 10227bcfcfd5a9b0f126fee74dce6ec7842f5e95
 workflow-type: tm+mt
-source-wordcount: '570'
-ht-degree: 4%
+source-wordcount: '572'
+ht-degree: 6%
 
 ---
 
 # 开发沙盒应用程序  {#develop-sandbox-application}
 
-在本节中，由于模板已经在 [初始应用](initial-app.md) 部分，以及中建立的初始页面 [初始内容](initial-content.md) 部分，可以使用基础脚本开发应用程序，包括启用通过社区组件进行创作的功能。 在本节结束时，该网站将正常运行。
+在此部分中，现在已在以下位置设置了模板： [初始应用](initial-app.md) 部分，以及中建立的初始页面 [初始内容](initial-content.md) 部分，可以使用基础脚本开发应用程序，包括启用通过社区组件进行创作的功能。 在本节结束时，该网站将正常运行。
 
 ## 使用基础页脚本 {#using-foundation-page-scripts}
 
-在添加了呈现播放页模板的组件时创建的默认脚本将被修改为包括基础页的head.jsp和本地body.jsp。
+默认脚本是在添加了呈现播放页模板的组件时创建的，该脚本经过修改后包括基础页的head.jsp和本地body.jsp。
 
 ### 超级资源类型 {#super-resource-type}
 
@@ -38,16 +38,16 @@ ht-degree: 4%
 
    类型: `String`
 
-   价值: `foundation/components/page`
+   值: `foundation/components/page`
 
 1. 单击绿色 **[!UICONTROL +添加]** 按钮。
-1. 单击 **[!UICONTROL 全部保存]**.
+1. 单击&#x200B;**[!UICONTROL 全部保存]**。
 
    ![page-script](assets/page-script.png)
 
 ### Head和body脚本 {#head-and-body-scripts}
 
-1. In **CRXDE Lite** 资源管理器窗格，导航到 `/apps/an-scf-sandbox/components/playpage` 并双击文件 `playpage.jsp` 以在“编辑”窗格中将其打开。
+1. 在 **CRXDE Lite** 资源管理器窗格，导航到 `/apps/an-scf-sandbox/components/playpage` 并双击文件 `playpage.jsp` 以在“编辑”窗格中将其打开。
 
    `/apps/an-scf-sandbox/components/playpage/playpage.jsp`
 
@@ -66,7 +66,7 @@ ht-degree: 4%
    %>
    ```
 
-1. 请注意open/close脚本标记，将“ // TODO ...”替换为 &lt;html>.
+1. 请注意open/close脚本标记，将“ // TODO ...”替换为include脚本，该脚本用于的标题和正文部分 &lt;html>.
 
    具有超类型 `foundation/components/page`，任何未在此同一文件夹中定义的脚本都将解析为中的脚本 `/apps/foundation/components/page` 文件夹（如果存在），则复制到中的脚本 `/libs/foundation/components/page` 文件夹。
 
@@ -88,16 +88,17 @@ ht-degree: 4%
    </html>
    ```
 
-1. 基础脚本 `head.jsp` 不需要覆盖，但是基础脚本 `body.jsp` 为空。
+1. 基础脚本 `head.jsp` 不需要覆盖，但基础脚本 `body.jsp` 为空。
 
-   要设置创作，请叠加 `body.jsp` 使用本地脚本，并在主体中包含段落系统(parsys)：
+   要设置创作，叠加 `body.jsp` 使用本地脚本，并在主体中包含段落系统(parsys)：
 
    1. 导航到 `/apps/an-scf-sandbox/components`。
    1. 选择 `playpage` 节点。
    1. 右键单击并选择 `Create > Create File...`
 
       * 名称： **body.jsp**
-   1. 单击 **[!UICONTROL 全部保存]**.
+
+   1. 单击&#x200B;**[!UICONTROL 全部保存]**。
 
    打开 `/apps/an-scf-sandbox/components/playpage/body.jsp` 并粘贴以下文本：
 
@@ -117,7 +118,7 @@ ht-degree: 4%
    </body>
    ```
 
-1. 单击 **[!UICONTROL 全部保存]**.
+1. 单击&#x200B;**[!UICONTROL 全部保存]**。
 
 **在浏览器中以编辑模式查看页面：**
 
@@ -125,7 +126,7 @@ ht-degree: 4%
 
 您不应仅看到标题 **社区播放**，以及用于编辑页面内容的UI。
 
-当两侧面板均切换为打开并且窗口足够宽以便显示侧内容和页面内容时，可看到“资产”/“组件”侧面板。
+当两侧面板均切换打开并且窗口足够宽以便显示侧内容和页面内容时，可以看到资产/组件侧面板。
 
 ![view-page](assets/view-page.png)
 
@@ -141,7 +142,7 @@ ht-degree: 4%
 
 * [访问社区组件](basics.md#accessing-communities-components)
 
-对于此沙盒，请从以下内容开始 **Communities** 组件（通过选中该框启用）：
+对于此沙盒，请从以下内容开始 **Communities** 组件（通过选中框启用）：
 
 * 评论
 * 论坛
@@ -150,7 +151,7 @@ ht-degree: 4%
 * 审核摘要（显示）
 * 投票
 
-此外，选择 **[!UICONTROL 常规]** 组件，例如
+此外，选择 **[!UICONTROL 常规]** 组件，如
 
 * 图像
 * 表
@@ -159,7 +160,7 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->为页面段启用的组件作为的值，存储在存储库中 `components` 的属性
+>为页面段启用的组件作为的值，存储在存储库中。 `components` 的属性
 >
 >`/etc/designs/an-scf-sandbox/jcr:content/playpage/par` 节点。
 
@@ -173,13 +174,13 @@ ht-degree: 4%
 
 * 选择页面信息图标
 * 选择 **[!UICONTROL 打开属性]**
-* 在“高级”选项卡上
+* 在高级选项卡上
 
-   * 对于重定向条目，浏览至 **[!UICONTROL 网站]** > **[!UICONTROL SCF沙盒站点]** > **[!UICONTROL SCF沙盒]**
+   * 对于“重定向”条目，浏览 **[!UICONTROL 网站]** > **[!UICONTROL SCF沙盒站点]** > **[!UICONTROL SCF沙盒]**
    * 单击 **[!UICONTROL 确定]**
 
 * 单击 **[!UICONTROL 确定]**
 
-发布站点后，在发布实例上浏览到根页面将重定向到英语页面。
+发布站点后，在发布实例上浏览到根页面将重定向到英文页面。
 
-在播放communities SCF组件之前，最后一步是添加客户端库文件夹(clientlibs) .... [添加Clienlibs](add-clientlibs.md)
+播放社区SCF组件之前的最后一步是添加客户端库文件夹(clientlibs) .... [添加Clienlibs](add-clientlibs.md)

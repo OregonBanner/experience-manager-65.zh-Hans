@@ -12,9 +12,9 @@ discoiquuid: 5d68a101-67e1-4dbc-9943-24fb754d4f77
 docset: aem65
 feature: Language Copy
 exl-id: 99f9929f-26de-4e95-9ee3-d70512d53bb7
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '214'
+source-wordcount: '213'
 ht-degree: 35%
 
 ---
@@ -27,21 +27,21 @@ ht-degree: 35%
 >
 >用户必须是项目管理员组的成员才能创建站点的语言副本。
 
-要访问此向导，请执行以下操作：
+要访问此向导：
 
 1. 在站点中，选择一个页面，然后点按/单击创建。
 
    ![chlimage_1-9](assets/chlimage_1-9.jpeg)
 
-1. 选择“语言复制”，此时向导将打开。
+1. 选择语言复制，向导将打开。
 
    ![chlimage_1-10](assets/chlimage_1-10.jpeg)
 
-1. 此 **选择源** 利用该向导的步骤，可添加/删除页面。 您还可以选择包含或排除子页面。
+1. 此 **选择源** 向导的步骤允许您添加/删除页面。 您还可以选择包含或排除子页面。
 
    ![chlimage_1-11](assets/chlimage_1-11.jpeg)
 
-1. 此 **下一个** 按钮使您转到 **配置** 向导的步骤。 您可以在此处添加/删除语言并选择翻译方法。
+1. 此 **下一个** 按钮将您转到 **配置** 向导的步骤。 在此处，您可以添加/删除语言并选择翻译方法。
 
    ![chlimage_1-12](assets/chlimage_1-12.jpeg)
 
@@ -49,7 +49,7 @@ ht-degree: 35%
    >
    >默认情况下，只有一种翻译设置。要能够选择其他设置，您必须先配置云配置。请参阅[配置翻译集成框架](/help/sites-administering/tc-tic.md)。
 
-1. 此 **下一个** 按钮使您转到 **转换** 向导的步骤。 在此处，您可以选择仅创建结构、创建新翻译项目或添加到现有翻译项目。
+1. 此 **下一个** 按钮将您转到 **Translate** 向导的步骤。 在此处，您可以选择仅创建结构、创建新翻译项目或添加到现有翻译项目。
 
    >[!NOTE]
    >

@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 docset: aem65
 exl-id: aedf890c-a2f1-412f-8897-2492ffab335a
-source-git-commit: f0dd1ac3ab9c17a8b331f5048d84ec97dd23924f
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '927'
+source-wordcount: '924'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ roms portal的Search and Lister组件显示AEM服务器的Publish实例上可用
 
 ### 搜索和侦听器 {#search-and-lister}
 
-使用搜索和列表程序组件，可将以下功能添加到表单门户：
+通过搜索和列表程序组件，可将以下功能添加到表单门户：
 
 * 在面板、卡片或网格视图中列出现成可用的表单。 它还支持Forms Manager中特定文件夹的自定义templatesList表单。
 * 指定表单的呈现方式 — HTML5、PDF或两者。
@@ -50,7 +50,7 @@ roms portal的Search and Lister组件显示AEM服务器的Publish实例上可用
 * 全文搜索
 * 高级搜索
 
-全文搜索允许您根据指定的关键字查找和列出表单。
+全文搜索允许您根据指定的关键词查找和列出表单。
 
 ![高级搜索对话框](assets/search-panel.png)
 

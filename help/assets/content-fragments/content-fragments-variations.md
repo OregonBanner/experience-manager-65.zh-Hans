@@ -4,16 +4,16 @@ description: 了解变体如何允许您为片段创作内容，然后根据用�
 feature: Content Fragments
 role: User
 exl-id: 50982ede-7ccf-45b2-b0dd-a49d23e0f971
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '2428'
-ht-degree: 96%
+source-wordcount: '2422'
+ht-degree: 93%
 
 ---
 
 # 变体 – 创作片段内容{#variations-authoring-fragment-content}
 
-[变体](/help/assets/content-fragments/content-fragments.md#constituent-parts-of-a-content-fragment) 是AEM内容片段的一项重要功能，因为它们允许您创建和编辑主控内容的副本，以用于特定渠道和/或场景，从而使headless内容投放更加灵活。
+[变体](/help/assets/content-fragments/content-fragments.md#constituent-parts-of-a-content-fragment) 是AEM内容片段的一项重要功能，因为它们允许您创建和编辑主控内容的副本，用于特定渠道和/或场景，从而使headless内容投放更加灵活。
 
 从&#x200B;**“变体”**&#x200B;选项卡，您可：
 
@@ -152,7 +152,7 @@ ht-degree: 96%
 >
 >有关完整信息，请参阅 [Markdown](/help/assets/content-fragments/content-fragments-markdown.md) 文档。
 
-这允许您使用 Markdown 设置文本格式。 您可以定义：
+这允许您使用Markdown设置文本格式。 您可以定义：
 
 * 标题
 * 段落和换行符
@@ -193,7 +193,7 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 
 #### 新内容片段 {#fragment-references-new-content-fragment}
 
-**新内容片段**&#x200B;选项将允许您创建一个全新的片段。 为此，将在编辑器中打开创建内容片段向导的变体。
+选项 **新内容片段** 将允许您创建一个全新的片段。 为此，将在编辑器中打开创建内容片段向导的变体。
 
 然后，您将能够通过以下方式创建新片段：
 
@@ -401,7 +401,7 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 
 ### 创建变体 {#creating-a-variation}
 
-各种变体允许您获取&#x200B;**主要**&#x200B;内容，并根据不同目的（如有需要）进行更改。
+变体允许您获取 **母版** 内容，并根据不同目的（如有需要）进行更改。
 
 要创建新变体：
 

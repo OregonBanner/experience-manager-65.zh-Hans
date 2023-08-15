@@ -2,10 +2,10 @@
 title: 配置翻译规则
 description: 了解如何定义翻译规则，标识要翻译的内容。
 exl-id: 262503af-361b-491c-8639-0bb32f0a4c0e
-source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '872'
-ht-degree: 93%
+source-wordcount: '871'
+ht-degree: 92%
 
 ---
 
@@ -61,7 +61,7 @@ ht-degree: 93%
 
 在&#x200B;**翻译配置** UI 中，提供了可用于翻译规则的大量选项。在这里，我们重点介绍基本 Headless 本地化配置所需的大多数必需和典型的步骤。
 
-1. 点按或单击&#x200B;**添加上下文**，这可让您添加路径。这是受规则影响的内容的路径。
+1. 点击或单击 **添加上下文**，可添加路径。 这是受规则影响的内容的路径。
    ![添加上下文](assets/add-translation-context.png)
 1. 使用路径浏览器选择所需的路径，然后点按或单击&#x200B;**确认**&#x200B;按钮进行保存。请记住，包含 Headless 内容的内容片段通常位于 `/content/dam/<your-project>` 下。
    ![选择路径](assets/select-context.png)
@@ -83,7 +83,7 @@ ht-degree: 93%
 
 可以将许多附加属性配置为翻译规则的一部分。此外，您可以手动将规则指定为 XML，这可以提高特殊性和灵活性。
 
-通常，无需此类功能即可开始本地化您的 Headless 内容，但如果您愿意，可以参阅[其他资源](#additional-resources)部分以了解详情。
+通常，无需此类功能即可开始本地化您的 Headless 内容，但如果您愿意，可以参阅[其他资源](#additional-resources)部分以了解详细信息。
 
 ## 后续内容 {#what-is-next}
 
@@ -96,6 +96,6 @@ ht-degree: 93%
 
 ## 其他资源 {#additional-resources}
 
-我们建议您查看文档，以继续进行Headless翻译历程的下一部分 [翻译内容](translate-content.md)，以下是一些其他可选资源，这些资源对本文档中提到的一些概念进行了更深入的探究，但并非继续无头之旅所必需的。
+我们建议您查看文档来继续到Headless翻译历程的下一部分 [翻译内容](translate-content.md)，以下是一些其他可选资源，这些资源对本文档中提到的一些概念进行了更深入的探究，但并非继续执行Headless历程所必需的。
 
 * [标识要翻译的内容](/help/sites-administering/tc-rules.md) – 了解翻译规则如何标识需要翻译的内容。

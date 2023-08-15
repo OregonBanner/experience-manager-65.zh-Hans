@@ -7,9 +7,9 @@ role: User, Admin, Leader
 feature: Connected Assets,User and Groups
 exl-id: 4ceb49d8-b619-42b1-81e7-c3e83d4e6e62
 hide: true
-source-git-commit: 578e9eb45ab996df841cb22e89d45fadfe90592b
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '3950'
+source-wordcount: '3949'
 ht-degree: 17%
 
 ---
@@ -71,7 +71,7 @@ ht-degree: 17%
 
 ### 连接的资产体系结构 {#connected-assets-architecture}
 
-Experience Manager允许您将远程DAM部署作为源连接到多个Experience Manager [!DNL Sites] 部署。 但是，您可以连接 [!DNL Sites] 只有一个远程DAM部署的部署。
+通过Experience Manager，您可以将远程DAM部署作为源连接到多个Experience Manager [!DNL Sites] 部署。 但是，您可以连接 [!DNL Sites] 只有一个远程DAM部署的部署。
 
 评估连接到远程DAM部署的最佳站点实例数量。 Adobe建议将Sites实例增量连接到部署，并测试远程DAM上的性能不会受到影响，因为每个连接的Sites实例都会贡献远程DAM上的数据流量。
 
@@ -356,7 +356,7 @@ An [!DNL Experience Manager] 管理员可以创建此集成。 创建后，使�
 
   ![无痕模式下Chrome浏览器中的Cookie错误](assets/chrome-cookies-incognito-dialog.png)
 
-* 如果您无法从Experience Manager Sitesas a Cloud Service站点部署访问Adobe Managed Services远程DAM部署，请更新 `aem_author.vhost` 文件，位于 `"/etc/httpd/conf.d/available_vhosts`，以便远程DAM在Dispatcher配置中包含以下标头：
+* 如果您无法从Managed Servicesas a Cloud Service站点部署访问AdobeExperience Manager Sites远程DAM部署，请更新 `aem_author.vhost` 文件，位于 `"/etc/httpd/conf.d/available_vhosts`，以便远程DAM在Dispatcher配置中包含以下标头：
 
   ```xml
   Header Set Access-Control-Allow-Origin <Local Sites instance host>

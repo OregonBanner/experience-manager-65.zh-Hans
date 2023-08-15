@@ -1,8 +1,8 @@
 ---
-title: 为图形渲染添加字体
+title: 添加用于图形渲染的字体
 seo-title: Adding Fonts for Graphic-Rendering
 description: AEM允许您生成包含从内容中动态获取的文本的图形
-seo-description: AEM allows you to generate graphics incorporating text dynamically taken from your content
+seo-description: AEM lets you generate graphics incorporating text dynamically taken from your content
 uuid: 67d9b10f-e986-4d29-bde2-10e08075fe17
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,18 +10,18 @@ topic-tags: platform
 content-type: reference
 discoiquuid: 6af48ef5-75e6-4b66-bc0d-ecf254b1c4ef
 exl-id: 725c81d0-0258-4118-8b01-29fd7bcaf9b3
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '183'
+source-wordcount: '181'
 ht-degree: 1%
 
 ---
 
-# 为图形渲染添加字体{#adding-fonts-for-graphic-rendering}
+# 添加用于图形渲染的字体{#adding-fonts-for-graphic-rendering}
 
 AEM允许您生成包含从内容中动态获取的文本的图形。
 
-要执行此操作，您还可以加载和使用自己的字体。
+为此，您还可以加载和使用自己的字体。
 
 当前所有实施的Java平台支持 [TrueType](https://en.wikipedia.org/wiki/Truetype) 字体。
 
@@ -42,10 +42,10 @@ AEM允许您生成包含从内容中动态获取的文本的图形。
    >
    >存储库中的字体文件必须具有后缀 `*.ttf` 或 `*.TTF`.
 
-1. 更新 [OSGi配置](/help/sites-deploying/configuring-osgi.md) 之 [Day Commons GFX字体帮助程序](/help/sites-deploying/osgi-configuration-settings.md). 添加字体文件夹的路径；即 `/apps/<your-project>/fonts`.
+1. 更新 [OSGi配置](/help/sites-deploying/configuring-osgi.md) 之 [Day Commons GFX字体帮助程序](/help/sites-deploying/osgi-configuration-settings.md). 将路径添加到您的fonts文件夹；即 `/apps/<your-project>/fonts`.
 
-1. 返回CRXDE Lite。 您现在应该看到 `.fontlist` 文件夹中包含导入字体的名称的节点。
+1. 返回CRXDE Lite。 您现在应会看到 `.fontlist` 文件夹中包含导入字体的名称的节点。
 
    这些字体现在可以在Java API中使用。
 
-有关如何将字体与Java API结合使用的完整详细信息，请参阅 [Java API的Font类的文档](https://download.oracle.com/javase/6/docs/api/java/awt/Font.html).
+有关如何在Java API中使用字体的完整详细信息，请参阅 [Java API的Font类的文档](https://download.oracle.com/javase/6/docs/api/java/awt/Font.html).

@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
 content-type: reference
 exl-id: 50e608d5-951f-4a3f-bed4-9e92ff5d7bd4
-source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '2465'
+source-wordcount: '2462'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ Granite标记库包含有用的函数。
 <%@include file="/libs/granite/ui/global.jsp"%>
 ```
 
-此外，全球还声明 [Sling库](/help/sites-developing/taglib.md#sling-tag-library).
+全球还声明 [Sling库](/help/sites-developing/taglib.md#sling-tag-library).
 
 ```xml
 <%@taglib prefix="sling" uri="https://sling.apache.org/taglibs/sling" %>
@@ -35,19 +35,19 @@ Granite标记库包含有用的函数。
 
 ### &lt;ui:includeClientLib> {#ui-includeclientlib}
 
-此 `<ui:includeClientLib>` 标记包含AEM html客户端库，可以是js、css或主题库。 对于不同类型的多个包含项（例如js和css），此标记必须在jsp中多次使用。 此标记是一个方便的包装文件，可方便您识别 ` [com.adobe.granite.ui.clientlibs.HtmlLibraryManager](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/ui/clientlibs/HtmlLibraryManager.html)` 服务接口。
+此 `<ui:includeClientLib>` 标记包含AEM html客户端库，该库可以是js、css或主题库。 对于不同类型的多个包含项（例如js和css），必须在jsp中多次使用此标记。 此标记是一个方便的包装工具，可方便您识别 ` [com.adobe.granite.ui.clientlibs.HtmlLibraryManager](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/ui/clientlibs/HtmlLibraryManager.html)` 服务接口。
 
 它具有以下属性：
 
-**类别**  — 逗号分隔的客户端库类别的列表。 这包括给定类别的所有JavaScript和CSS库。 主题名称是从请求中提取的。
+**类别**  — 逗号分隔的客户端库类别的列表。 这包括给定类别的所有JavaScript和CSS库。 将从请求中提取主题名称。
 
 等同于： `com.adobe.granite.ui.clientlibs.HtmlLibraryManager#writeIncludes`
 
-**主题**  — 逗号分隔的客户端库类别的列表。 这包括给定类别的所有与主题相关的库（CSS和JS）。 主题名称是从请求中提取的。
+**主题**  — 逗号分隔的客户端库类别的列表。 这包括给定类别的所有与主题相关的库（CSS和JS）。 将从请求中提取主题名称。
 
 等同于： `com.adobe.granite.ui.clientlibs.HtmlLibraryManager#writeThemeInclude`
 
-**js**  — 逗号分隔的客户端库类别的列表。 这包括给定类别的所有JavaScript库。
+**js**  — 逗号分隔的客户端库类别的列表。 其中包括给定类别的所有JavaScript库。
 
 等同于： `com.adobe.granite.ui.clientlibs.HtmlLibraryManager#writeJsInclude`
 
@@ -57,7 +57,7 @@ Granite标记库包含有用的函数。
 
 **主题**  — 只应包含指示主题库或非主题库的标志。 如果省略，则包含两个集。 仅适用于纯JS或CSS includes（不适用于类别或主题包含）。
 
-此 `<ui:includeClientLib>` 标记可以在jsp中按如下方式使用：
+此 `<ui:includeClientLib>` 标记可以在jsp中按以下方式使用：
 
 ```xml
 <%-- all: js + theme (theme-js + css) --%>
@@ -77,7 +77,7 @@ Granite标记库包含有用的函数。
 
 CQ标记库包含有用的函数。
 
-要在脚本中使用CQ标记库，脚本必须以下列代码开头：
+要在脚本中使用CQ标记库，脚本必须以以下代码开头：
 
 ```xml
 <%@taglib prefix="cq" uri="https://www.day.com/taglibs/cq/1.0" %>
@@ -85,7 +85,7 @@ CQ标记库包含有用的函数。
 
 >[!NOTE]
 >
->当 `/libs/foundation/global.jsp` 文件包含在脚本中，将自动声明taglib。
+>当 `/libs/foundation/global.jsp` 文件包含在脚本中，taglib会自动声明。
 
 在开发AEM组件的jsp脚本时，建议在脚本顶部包含以下代码：
 
@@ -105,25 +105,25 @@ CQ标记库包含有用的函数。
 
 **值**  — 用于输出的值。 如果此属性存在，则会覆盖属性属性的使用。
 
-**oldValue**  — 用于差异输出的值。 如果此属性存在，则会覆盖属性属性的使用。
+**oldValue**  — 用于比较输出的值。 如果此属性存在，则会覆盖属性属性的使用。
 
-**escapeXml**  — 定义是否应将结果字符串中的&lt;、>、&amp;、&#39;和&quot;字符转换为相应的字符实体代码。 默认值为false。 在可选格式设置之后应用转义。
+**escapeXml**  — 定义是否应将结果字符串中的&lt;、>、&amp;、&#39;和&#39;字符转换为相应的字符实体代码。 默认值为false。 转义在可选格式设置之后应用。
 
 **格式**  — 用于设置文本格式的可选java.text.Format。
 
 **noDiff**  — 隐藏差异输出的计算，即使存在差异信息也是如此。
 
-**tagClass**  — 将包围非空输出的元素的CSS类名称。 如果为空，则不会添加任何元素。
+**标记类**  — 将包围非空输出的元素的CSS类名称。 如果为空，则不会添加任何元素。
 
-**tagName**  — 将包围非空输出的元素的名称。 默认为DIV。
+**tagName**  — 将包含非空输出的元素的名称。 默认为DIV。
 
-**占位符**  — 在编辑模式下用于空或空文本的默认值，即占位符。 请注意，默认检查在可选格式化和转义之后执行，即按原样写入输出。 默认为：
+**占位符**  — 在编辑模式下用于null或空文本的默认值，即占位符。 请注意，默认检查在可选格式化和转义之后执行，即按原样写入输出。 默认为：
 
 `<div><span class="cq-text-placeholder">&para;</span></div>`
 
-**默认**  — 用于null或空文本的默认值。 默认检查在可选的格式化和转义之后执行，即按原样写入输出。
+**默认**  — 用于Null或空文本的默认值。 默认检查在可选格式化和转义之后执行，即按原样写入输出。
 
-以下示例说明 `<cq:text>` 标记可以在JSP中使用：
+以下示例介绍了 `<cq:text>` 标记可以在JSP中使用：
 
 ```xml
 <cq:text property="jcr:title" tagName="h2"/>
@@ -167,9 +167,9 @@ CQ标记库包含有用的函数。
 
 * **页面**  — 区域设置取自当前页面或资源的语言（如果可用），否则取自 `language` 属性（如果可用），否则从服务器默认区域设置。
 
-* **请求**  — 从请求区域设置( `request.getLocale()`)。
+* **请求**  — 区域设置取自请求区域设置( `request.getLocale()`)。
 
-* **自动**  — 区域设置取自 `language` 属性（如果可用），否则从当前页面的语言或资源（如果可用），否则从请求。
+* **自动**  — 区域设置取自 `language` 属性（如果有），否则会从当前页面的语言或资源（如果可用）中使用，否则会从请求中使用。
 
 如果 `source` 属性未设置：
 
@@ -177,12 +177,12 @@ CQ标记库包含有用的函数。
 
 * 如果 `language` 属性未设置， `source` 属性默认为 `auto`.
 
-“内容包”可供标准JSTL使用 `<fmt:message>` 标记之间。 按键值查找消息是双重的：
+“内容包”可供标准JSTL使用 `<fmt:message>` 标记之间。 按键查找消息是双重的：
 
-1. 首先，在渲染的基础资源的JCR属性中搜索翻译。 这允许您定义一个简单组件对话框来编辑这些值。
-1. 如果节点不包含与键完全相同的名为的属性，则回退是从sling请求( `SlingHttpServletRequest.getResourceBundle(Locale)`)。 此包的语言或区域设置由 `<cq:setContentBundle>` 标记之前。
+1. 首先，将搜索渲染的基础资源的JCR属性以查找翻译。 这允许您定义一个简单的组件对话框来编辑这些值。
+1. 如果节点不包含与键完全相同的名称属性，则回退是从sling请求( `SlingHttpServletRequest.getResourceBundle(Locale)`)。 此包的语言或区域设置由 `<cq:setContentBundle>` 标记之前。
 
-此 `<cq:setContentBundle>` 标记可以在jsp中按如下方式使用。
+此 `<cq:setContentBundle>` 标记可以如下在jsp中使用。
 
 对于定义其语言的页面：
 
@@ -202,7 +202,7 @@ CQ标记库包含有用的函数。
 
 ### &lt;cq:include> {#cq-include}
 
-此 `<cq:include>` 标记中包含一个资源到当前页面中。
+此 `<cq:include>` 标记包含进入当前页面的资源。
 
 它具有以下属性：
 
@@ -212,12 +212,12 @@ CQ标记库包含有用的函数。
 
 **path**
 
-* 当前请求处理中包含的资源对象的路径。 如果此路径是相对路径，则会将其附加到当前资源的路径中，该资源的脚本包含给定资源。 必须指定path和resourceType或脚本。
+* 当前请求处理中包含的资源对象的路径。 如果此路径是相对路径，则会将其附加到当前资源的路径，该资源的脚本包含给定资源。 必须指定path和resourceType或脚本。
 
 **resourceType**
 
-* 要包含的资源的资源类型。 如果设置了资源类型，则路径必须是资源对象的确切路径：在这种情况下，不支持向路径添加参数、选择器和扩展名。
-* 如果要包含的资源使用path属性指定，而该属性无法解析为资源，则标记可能会创建路径之外的合成资源对象以及此资源类型。
+* 要包含的资源的资源类型。 如果设置了资源类型，则路径必须是资源对象的确切路径：在这种情况下，不支持向路径添加参数、选择器和扩展。
+* 如果要包含的资源使用无法解析为资源的路径属性指定，则标记可能会创建路径之外的合成资源对象以及此资源类型。
 * 必须指定path和resourceType或脚本。
 
 **脚本**
@@ -226,7 +226,7 @@ CQ标记库包含有用的函数。
 
 **ignoreComponentHierarchy**
 
-* 一个布尔值，用于控制是否应忽略组件层次结构以实现脚本解析。 如果为true，则只考虑搜索路径。
+* 一个布尔值，用于控制是否应忽略组件层次结构以实现脚本解析。 如果为true，则仅遵循搜索路径。
 
 **示例:**
 
@@ -242,13 +242,13 @@ CQ标记库包含有用的函数。
 
 是否应该使用 `<%@ include file="myScript.jsp" %>` 或 `<cq:include script="myScript.jsp" %>` 是否包含脚本？
 
-* 此 `<%@ include file="myScript.jsp" %>` 指令通知JSP编译器将完整文件包含到当前文件中。 就好像所包含文件的内容被直接粘贴到原始文件中。
-* 使用 `<cq:include script="myScript.jsp">` 标签中，文件在运行时包含。
+* 此 `<%@ include file="myScript.jsp" %>` 指令通知JSP编译器将完整文件包含到当前文件中。 就好像将所包含文件的内容直接粘贴到原始文件中一样。
+* 使用 `<cq:include script="myScript.jsp">` 标记时，文件包含在运行时。
 
 是否应该使用 `<cq:include>` 或 `<sling:include>`？
 
 * 在开发AEM组件时，Adobe建议您使用 `<cq:include>`.
-* `<cq:include>` 允许您在使用script属性时直接按名称包含脚本文件。 这考虑到了组件和资源类型继承，并且通常比使用选择器和扩展严格遵守Sling的脚本解析更简单。
+* `<cq:include>` 允许您在使用script属性时直接按名称包含脚本文件。 这考虑到了组件和资源类型继承，通常比使用选择器和扩展严格遵守Sling的脚本解析更简单。
 
 ### &lt;cq:includeClientLib> {#cq-includeclientlib}
 
@@ -256,19 +256,19 @@ CQ标记库包含有用的函数。
 >
 >`<cq:includeClientLib>` 自AEM 5.6起已弃用。 [`<ui:includeClientLib>`](/help/sites-developing/taglib.md#ui-includeclientlib) 应改用。
 
-此 `<cq:includeClientLib>` 标记包含AEM html客户端库，它可以是js、css或主题库。 对于不同类型的多个包含项（例如js和css），此标记必须在jsp中多次使用。 此标记是一个方便的包装文件，可方便您识别 `com.day.cq.widget.HtmlLibraryManager` 服务接口。
+此 `<cq:includeClientLib>` 标记包含AEM html客户端库，该库可以是js、css或主题库。 对于不同类型的多个包含项（例如js和css），必须在jsp中多次使用此标记。 此标记是一个方便的包装工具，可方便您识别 `com.day.cq.widget.HtmlLibraryManager` 服务接口。
 
 它具有以下属性：
 
-**类别**  — 逗号分隔的客户端库类别的列表。 这包括给定类别的所有JavaScript和CSS库。 主题名称是从请求中提取的。
+**类别**  — 逗号分隔的客户端库类别的列表。 这包括给定类别的所有JavaScript和CSS库。 将从请求中提取主题名称。
 
 等同于： `com.day.cq.widget.HtmlLibraryManager#writeIncludes`
 
-**主题**  — 逗号分隔的客户端库类别的列表。 这包括给定类别的所有与主题相关的库（CSS和JS）。 主题名称是从请求中提取的。
+**主题**  — 逗号分隔的客户端库类别的列表。 这包括给定类别的所有与主题相关的库（CSS和JS）。 将从请求中提取主题名称。
 
 等同于： `com.day.cq.widget.HtmlLibraryManager#`writeThemeInclude
 
-**js**  — 逗号分隔的客户端库类别的列表。 这包括给定类别的所有JavaScript库。
+**js**  — 逗号分隔的客户端库类别的列表。 其中包括给定类别的所有JavaScript库。
 
 等同于： `com.day.cq.widget.HtmlLibraryManager#writeJsInclude`
 
@@ -278,7 +278,7 @@ CQ标记库包含有用的函数。
 
 **主题**  — 只应包含指示主题库或非主题库的标志。 如果省略，则包含两个集。 仅适用于纯JS或CSS includes（不适用于类别或主题包含）。
 
-此 `<cq:includeClientLib>` 标记可以在jsp中按如下方式使用：
+此 `<cq:includeClientLib>` 标记可以在jsp中按以下方式使用：
 
 ```xml
 <%-- all: js + theme (theme-js + css) --%>
@@ -296,7 +296,7 @@ CQ标记库包含有用的函数。
 
 ### &lt;cq:defineObjects> {#cq-defineobjects}
 
-此 `<cq:defineObjects>` 标记公开以下定期使用的脚本对象，以供开发人员引用。 它还会公开由定义的对象 [`<sling:defineObjects>`](#amp-lt-sling-defineobjects) 标记之前。
+此 `<cq:defineObjects>` 标记公开以下定期使用的脚本对象，开发人员可以引用这些对象。 它还会公开由定义的对象 [`<sling:defineObjects>`](#amp-lt-sling-defineobjects) 标记之前。
 
 **componentContext**
 
@@ -320,7 +320,7 @@ CQ标记库包含有用的函数。
 
 **设计者**
 
-* 用于访问设计信息的设计器对象(com.day.cq.wcm.api.designer.Designer界面)。
+* 用于访问设计信息的设计器对象(com.day.cq.wcm.api.designer.Designer接口)。
 
 **editContext**
 
@@ -328,7 +328,7 @@ CQ标记库包含有用的函数。
 
 **pageManager**
 
-* 用于页面级别操作的页面管理器对象(com.day.cq.wcm.api.PageManager界面)。
+* 用于页面级操作的页面管理器对象(com.day.cq.wcm.api.PageManager接口)。
 
 **pageProperties**
 
@@ -340,7 +340,7 @@ CQ标记库包含有用的函数。
 
 **resourceDesign**
 
-* 资源页的设计对象(com.day.cq.wcm.api.designer.Design界面)。
+* 资源页的设计对象(com.day.cq.wcm.api.designer.Design接口)。
 
 **resourcePage**
 
@@ -351,7 +351,7 @@ CQ标记库包含有用的函数。
 
 * 继承自sling
 
-**响应名称**
+**responseName**
 
 * 继承自sling
 
@@ -375,7 +375,7 @@ CQ标记库包含有用的函数。
 
 * 继承自sling
 
-**componentContextName**
+**componentContextname**
 
 * 特定于wcm
 
@@ -438,9 +438,9 @@ CQ标记库包含有用的函数。
 
 ### &lt;cq:requestURL> {#cq-requesturl}
 
-此 `<cq:requestURL>` 标记将当前请求URL写入JspWriter。 两个标记 [`<cq:addParam>`](#amp-lt-cq-addparam) 和 [`<cq:removeParam>`](#amp-lt-cq-removeparam) 并可用于此标记正文中，以在写入当前请求URL之前对其进行修改。
+此 `<cq:requestURL>` 标记将当前请求URL写入JspWriter。 两个标记 [`<cq:addParam>`](#amp-lt-cq-addparam) 和 [`<cq:removeParam>`](#amp-lt-cq-removeparam) 并可用于此标记的正文中，以在写入当前请求URL之前对其进行修改。
 
-它允许您使用各种参数创建指向当前页面的链接。 例如，它使您能够转换请求：
+利用该区域，可使用各种参数创建指向当前页面的链接。 例如，它使您能够转换请求：
 
 `mypage.html?mode=view&query=something` 到 `mypage.html?query=something`.
 
@@ -460,7 +460,7 @@ CQ标记库包含有用的函数。
 
 ### &lt;cq:addParam> {#cq-addparam}
 
-此 `<cq:addParam>` 标记会将具有给定名称和值的请求参数添加到封闭 [`<cq:requestURL>`](#amp-lt-cq-requesturl) 标记之前。
+此 `<cq:addParam>` 标记会将具有给定名称和值的请求参数添加到结尾处 [`<cq:requestURL>`](#amp-lt-cq-requesturl) 标记之前。
 
 它具有以下属性：
 
@@ -480,7 +480,7 @@ CQ标记库包含有用的函数。
 
 ### &lt;cq:removeParam> {#cq-removeparam}
 
-此 `<cq:removeParam>` 标记会从结尾处移除具有给定名称和值的请求参数 [`<cq:requestURL>`](#amp-lt-cq-requesturl) 标记之前。 如果未提供任何值，则将删除具有给定名称的所有参数。
+此 `<cq:removeParam>` 标记会从结尾删除具有给定名称和值的请求参数 [`<cq:requestURL>`](#amp-lt-cq-requesturl) 标记之前。 如果未提供任何值，则删除具有给定名称的所有参数。
 
 它具有以下属性：
 
@@ -510,7 +510,7 @@ Sling标记库包含有用的Sling函数。
 
 ### &lt;sling:include> {#sling-include}
 
-此 `<sling:include>` 标记中包含一个资源到当前页面中。
+此 `<sling:include>` 标记包含进入当前页面的资源。
 
 它具有以下属性：
 
@@ -520,16 +520,16 @@ Sling标记库包含有用的Sling函数。
 
 **resource**
 
-* 要包含在当前请求处理中的资源对象。 必须指定资源或路径。 如果同时指定这两个参数，则优先使用资源。
+* 要包含在当前请求处理中的资源对象。 必须指定资源或路径。 如果同时指定了两者，则资源优先。
 
 **path**
 
-* 当前请求处理中包含的资源对象的路径。 如果此路径是相对路径，则会将其附加到当前资源的路径中，该资源的脚本包含给定资源。 必须指定资源或路径。 如果同时指定这两个参数，则优先使用资源。
+* 当前请求处理中包含的资源对象的路径。 如果此路径是相对路径，则会将其附加到当前资源的路径，该资源的脚本包含给定资源。 必须指定资源或路径。 如果同时指定了两者，则资源优先。
 
 **resourceType**
 
-* 要包含的资源的资源类型。 如果设置了资源类型，则路径必须是资源对象的确切路径：在这种情况下，不支持向路径添加参数、选择器和扩展名。
-* 如果要包含的资源使用path属性指定，而该属性无法解析为资源，则标记可能会创建路径之外的合成资源对象以及此资源类型。
+* 要包含的资源的资源类型。 如果设置了资源类型，则路径必须是资源对象的确切路径：在这种情况下，不支持向路径添加参数、选择器和扩展。
+* 如果要包含的资源使用无法解析为资源的路径属性指定，则标记可能会创建路径之外的合成资源对象以及此资源类型。
 
 **replaceSelectors**
 
@@ -537,7 +537,7 @@ Sling标记库包含有用的Sling函数。
 
 **addSelectors**
 
-* 调度时，将此属性的值添加到选择器中。
+* 调度时，此属性的值将添加到选择器中。
 
 **replaceSuffix**
 
@@ -545,7 +545,7 @@ Sling标记库包含有用的Sling函数。
 
 >[!NOTE]
 >
->资源的分辨率和随附的脚本 `<sling:include>` 标记与普通sling URL解析相同。 默认情况下，当前请求中的选择器、扩展名等也用于包含的脚本。 它们可以通过标记属性进行修改：例如 `replaceSelectors="foo.bar"` 允许您覆盖选择器。
+>资源的分辨率和随附的脚本 `<sling:include>` 标记与普通sling URL解析相同。 默认情况下，也会将当前请求中的选择器、扩展等用于包含的脚本。 它们可以通过标记属性进行修改：例如 `replaceSelectors="foo.bar"` 允许您覆盖选择器。
 
 示例：
 
@@ -575,11 +575,11 @@ Sling标记库包含有用的Sling函数。
 
 ### &lt;sling:defineObjects> {#sling-defineobjects}
 
-此 `<sling:defineObjects>` 标记公开以下定期使用的脚本对象，以供开发人员引用：
+此 `<sling:defineObjects>` 标记公开以下定期使用的脚本对象，开发人员可以引用这些对象：
 
 **slingRequest**
 
-* SlingHttpServletRequest对象，提供对HTTP请求标头信息的访问 — 扩展标准HttpServletRequest — 并提供对特定Sling事物（如资源、路径信息和选择器）的访问。
+* SlingHttpServletRequest对象，提供对HTTP请求标头信息的访问权限 — 扩展标准HttpServletRequest — 并提供对特定Sling的项的访问权限，如资源、路径信息和选择器。
 
 **slingResponse**
 
@@ -593,7 +593,7 @@ Sling标记库包含有用的Sling函数。
 
 。**sling**
 
-* SlingScriptHelper对象，包含用于脚本的方便方法，主要是sling.include(&#39;/some/other/resource&#39;)，用于在响应中包含其他资源的响应（例如，嵌入标头html代码片段）和sling.getService(foo.bar.Service.class)，以检索Sling中提供的OSGi服务（类表示法取决于脚本语言）。
+* SlingScriptHelper对象，包含方便的脚本方法，主要是sling.include(&#39;/some/other/resource&#39;)，用于在响应中包含其他资源的响应（例如，嵌入标头html代码片段）和sling.getService(foo.bar.Service.class)，以检索Sling中提供的OSGi服务（类表示法，具体取决于脚本语言）。
 
 **resource**
 
@@ -601,21 +601,21 @@ Sling标记库包含有用的Sling函数。
 
 **当前节点**
 
-* 如果当前资源指向JCR节点（这通常在Sling中为），则允许直接访问Node对象。 否则，不会定义此对象。
+* 如果当前资源指向JCR节点（Sling中通常会出现这种情况），则可以直接访问Node对象。 否则，不会定义此对象。
 
-**log**
+**日志**
 
-* 提供了一个SLF4J记录器，用于从脚本中登录到Sling日志系统，例如log.info（“正在执行我的脚本”）。
+* 提供了一个SLF4J日志记录器，用于从脚本中登录到Sling日志系统，例如log.info（“执行我的脚本”）。
 
 * 它具有以下属性：
 
 **请求名称**
 
-**响应名称**
+**responseName**
 
 **nodeName**
 
-l **ogName resourceResolverName**
+l **ogName资源解析程序名称**
 
 **slingName**
 
@@ -630,7 +630,7 @@ l **ogName resourceResolverName**
 
 ## JSTL标记库 {#jstl-tag-library}
 
-此 [JavaServer Pages标准标记库](https://www.oracle.com/java/technologies/java-server-tag-library.html) 包含许多有用的标准标记。 核心、格式和函数taglib由 `/libs/foundation/global.jsp` 如以下代码片段所示。
+此 [JavaServer Pages标准标记库](https://www.oracle.com/java/technologies/java-server-tag-library.html) 包含许多有用的标准标记。 核心、格式和函数taglibs由 `/libs/foundation/global.jsp` 如以下代码片段所示。
 
 ### /libs/foundation/global.jsp的提取 {#extract-of-libs-foundation-global-jsp}
 
@@ -640,4 +640,4 @@ l **ogName resourceResolverName**
 <%@taglib prefix="fn" uri="https://java.sun.com/jsp/jstl/functions" %>
 ```
 
-导入后 `/libs/foundation/global.jsp` 文件（如前所述），您可以使用 `c`， `fmt` 和 `fn` 用于访问这些taglib的前缀。 JSTL的官方文档位于 [Java™ EE 5教程 — JavaServer Pages Standard标记库](https://docs.oracle.com/javaee/5/tutorial/doc/bnakc.html).
+导入后 `/libs/foundation/global.jsp` 文件（如前所述），您可以使用 `c`， `fmt` 和 `fn` 用于访问这些taglib的前缀。 JSTL的官方文档位于 [Java™ EE 5教程 — JavaServer Pages标准标记库](https://docs.oracle.com/javaee/5/tutorial/doc/bnakc.html).

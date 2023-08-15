@@ -9,10 +9,10 @@ content-type: reference
 discoiquuid: 1099cc44-de6d-499e-8b52-f2f5811ae086
 docset: aem65
 exl-id: dcb66b6d-d731-493e-8936-12d529f6cbde
-source-git-commit: 768576e300b655962adc3e1db20fc5ec06a5ba6c
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '3224'
-ht-degree: 5%
+source-wordcount: '3221'
+ht-degree: 6%
 
 ---
 
@@ -28,11 +28,11 @@ ht-degree: 5%
 * 提供保留与从中创建的任何页面的动态连接的模板。 这样做可确保对模板所做的任何更改都反映在页面本身中。
 * 使页面组件变得更通用，以便无需自定义即可使用核心页面组件。
 
-使用可编辑的模板时，构成页面的片段会隔离在组件中。 您可以在UI中配置必要的组件组合，从而无需为每个页面变体开发新的页面组件。
+使用可编辑的模板，构成页面的片段将被隔离在组件中。 您可以在UI中配置必要的组件组合，从而无需为每个页面变体开发新的页面组件。
 
 >[!NOTE]
 >
->[静态模板](/help/sites-developing/page-templates-static.md) 也可用。
+>[静态模板](/help/sites-developing/page-templates-static.md) 也提供。
 
 本文档：
 
@@ -43,37 +43,38 @@ ht-degree: 5%
 * 描述创建可编辑模板所需的管理员/开发人员任务
 * 描述可编辑模板的技术基础
 
-本文档假设您已经熟悉创建和编辑模板。 请参阅创作文档 [创建页面模板](/help/sites-authoring/templates.md)，其中详细说明了向模板作者公开的可编辑模板的功能。
+本文档假设您已熟悉创建和编辑模板。 请参阅创作文档 [创建页面模板](/help/sites-authoring/templates.md)，详细介绍向模板作者公开的可编辑模板的功能。
 
 >[!NOTE]
 >
 >以下教程可能也适合在新项目中设置可编辑页面模板：
->[AEM Sites快速入门第2部分 — 创建基础页面和模板](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/pages-templates.html?lang=en)
+>[AEM Sites快速入门第2部分 — 创建基础页和模板](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/pages-templates.html?lang=en)
 
 ## 创建新模板 {#creating-a-new-template}
 
-创建可编辑模板主要是通过 [模板控制台和模板编辑器](/help/sites-authoring/templates.md) 模板作者。 本节概述了此过程，并在后面介绍了技术级别发生的情况。
+创建可编辑模板主要是通过 [模板控制台和模板编辑器](/help/sites-authoring/templates.md) 模板作者执行的操作。 本节概述了此过程，并在后面描述了技术级别所发生的情况。
 
-有关如何在AEM项目中使用可编辑模板的信息，请参阅 [使用Lazybones创建AEM项目](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/create-aem-project-structure-using-lazybones/m-p/186478).
+有关如何在AEM项目中使用可编辑模板的信息，请参阅 [使用Lazybone创建AEM项目](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/create-aem-project-structure-using-lazybones/m-p/186478).
 
-在创建新的可编辑模板时，您可以：
+创建新的可编辑模板时，您需要执行以下步骤：
 
 1. 创建 [模板文件夹](#template-folders). 此文件夹不是强制性的，但建议使用最佳实践。
 1. 选择 [模板类型](#template-type). 复制此类型以创建 [模板定义](#template-definitions).
 
    >[!NOTE]
    >
-   >现成提供了一系列模板类型。 您还可以 [创建您自己的特定于站点的模板类型](/help/sites-developing/page-templates-editable.md#creating-template-types)（如有必要）。
+   >现成提供模板类型选择。 您还可以 [创建您自己的特定于站点的模板类型](/help/sites-developing/page-templates-editable.md#creating-template-types)（如有必要）。
 
 1. 配置新模板的结构、内容策略、初始内容和布局。
 
    **结构**
 
    * 利用结构，可为模板定义组件和内容。
-   * 不能在生成的页面上移动模板结构中定义的组件，也不能从任何生成的页面中删除这些组件。
+   * 不能在生成页面上移动在模板结构中定义的组件，也不能从任何生成页面中删除这些组件。
 
-      * 如果您是在 `We.Retail` 示例内容，您可以选择基础组件或使用 [核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/overview.html?lang=zh-Hans).
-   * 如果您希望页面作者能够添加和删除组件，请向模板中添加一个段落系统。
+      * 如果您是在模板外部的自定义文件夹中创建模板 `We.Retail` 示例内容，您可以选择基础组件或使用 [核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/overview.html?lang=zh-Hans).
+
+   * 如果要使页面作者能够添加和删除组件，请在模板中添加段落系统。
    * 可以解锁组件，然后再将其锁定，以便定义初始内容。
 
    有关模板作者如何定义结构的详细信息，请参阅 [创建页面模板](/help/sites-authoring/templates.md#editing-a-template-structure-template-author).
@@ -84,8 +85,9 @@ ht-degree: 5%
 
    * 内容策略定义组件的设计属性。
 
-      * 例如，可用元件或最小/最大尺寸。
-   * 这些策略适用于模板（以及使用模板创建的页面）。
+      * 例如，可用的组件或最小/最大尺寸。
+
+   * 这些策略适用于模板（以及使用该模板创建的页面）。
 
    有关模板作者如何定义策略的详细信息，请参阅 [创建页面模板](/help/sites-authoring/templates.md#editing-a-template-structure-template-author).
 
@@ -107,7 +109,7 @@ ht-degree: 5%
 
    有关模板作者如何定义模板布局的详细信息，请参阅 [创建页面模板](/help/sites-authoring/templates.md#editing-a-template-layout-template-author).
 
-   有关模板布局的技术详细信息，请参阅 [版面](/help/sites-developing/page-templates-editable.md#layout) 在本文档中。
+   有关模板布局的技术详细信息，请参阅 [布局](/help/sites-developing/page-templates-editable.md#layout) 在本文档中。
 
 1. 启用模板，然后为特定内容树允许该模板。
 
@@ -129,7 +131,7 @@ ht-degree: 5%
 
 >[!TIP]
 >
->切勿在模板中输入任何必须国际化的信息。 出于内部化目的， [核心组件的本地化功能](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/localization.html) 推荐。
+>切勿在模板中输入任何必须国际化的信息。 出于内部化的目的， [核心组件的本地化功能](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/localization.html) 推荐。
 
 >[!NOTE]
 >
@@ -139,11 +141,11 @@ ht-degree: 5%
 
 >[!NOTE]
 >
->编辑器客户端库假定存在 `cq.shared` 内容页面中的命名空间。 如果不存在，则会导致JavaScript错误 `Uncaught TypeError: Cannot read property 'shared' of undefined`.
+>编辑器客户端库假定存在 `cq.shared` 内容页面中的命名空间。 如果此链接不存在，则会导致JavaScript错误 `Uncaught TypeError: Cannot read property 'shared' of undefined`.
 >
 >所有示例内容页面都包含 `cq.shared`，因此任何基于它们的内容都会自动包含 `cq.shared`. 但是，如果您决定从头开始创建自己的内容页面，而不基于示例内容，则必须确保包含 `cq.shared` 命名空间。
 >
->参见 [使用客户端库](/help/sites-developing/clientlibs.md) 以进一步了解。
+>请参阅 [使用客户端库](/help/sites-developing/clientlibs.md) 以了解详细信息。
 
 ## 模板文件夹 {#template-folders}
 
@@ -154,9 +156,9 @@ ht-degree: 5%
 
 >[!NOTE]
 >
->即使您可以嵌套文件夹，当用户在 **模板** 控制台将它们显示为平面结构。
+>即使您可以嵌套文件夹，当用户在 **模板** 控制台，它们以扁平结构呈现。
 
-在标准AEM实例中， **全局** 模板控制台中存在文件夹。 此文件夹包含默认模板，如果在当前文件夹中未找到策略和/或模板类型，则充当后备。 您可以将默认模板添加到此文件夹或创建一个文件夹（推荐）。
+在标准AEM实例中， **全局** 文件夹存在于模板控制台中。 此文件夹包含默认模板，如果在当前文件夹中未找到策略和/或模板类型，则此文件夹将充当备用。 您可以将默认模板添加到此文件夹或创建文件夹（推荐）。
 
 >[!NOTE]
 >
@@ -164,7 +166,7 @@ ht-degree: 5%
 
 >[!CAUTION]
 >
->文件夹必须由用户创建，并且 `admin` 权限。
+>文件夹必须由具有以下权限的用户创建： `admin` 权限。
 
 模板类型和策略将按照以下优先级顺序跨所有文件夹继承：
 
@@ -174,7 +176,7 @@ ht-degree: 5%
 1. `/apps`
 1. `/libs`
 
-将创建所有允许条目的列表。 如果有任何配置重叠( `path`/ `label`)，则只有最接近当前文件夹的实例会呈现给用户。
+将创建所有允许条目的列表。 如果任何配置重叠( `path`/ `label`)，则只有最接近当前文件夹的实例才会呈现给用户。
 
 要创建文件夹，请执行以下操作：
 
@@ -204,13 +206,13 @@ ht-degree: 5%
 
    * 类型: `String`
 
-   * 值：您希望在 **模板** 控制台。
+   * 值：您希望在中显示的标题（针对文件夹） **模板** 控制台。
 
-1. In *加法* 标准创作权限和特权(例如， `content-authors`)，分配组并定义作者所需的访问权限(ACL)，以便能够在新文件夹中创建模板。
+1. 在 *加法* 标准创作权限和特权(例如， `content-authors`)，分配组并定义作者所需的访问权限(ACL)，以便能够在新文件夹中创建模板。
 
-   此 `template-authors` group是必须分配的默认组。 请参阅以下部分 [ACL和组](/help/sites-developing/page-templates-editable.md#acls-and-groups) 了解详细信息。
+   此 `template-authors` group是必须分配的默认组。 请参阅以下部分 [ACL和组](/help/sites-developing/page-templates-editable.md#acls-and-groups) 以了解详细信息。
 
-   参见 [访问权限管理](/help/sites-administering/user-group-ac-admin.md#access-right-management) 有关管理和分配访问权限的完整详细信息。
+   请参阅 [访问权限管理](/help/sites-administering/user-group-ac-admin.md#access-right-management) 以了解有关管理和分配访问权限的完整详细信息。
 
 ### 使用配置浏览器 {#using-the-configuration-browser}
 
@@ -222,7 +224,7 @@ ht-degree: 5%
 1. 在 **创建配置** 对话框，必须配置以下字段：
 
    * **标题**：提供配置文件夹的标题
-   * **可编辑的模板**：选择以允许在此文件夹中使用可编辑的模板
+   * **可编辑的模板**：选择以允许在此文件夹中编辑模板
 
 1. 单击 **创建**
 
@@ -238,17 +240,17 @@ ht-degree: 5%
 
 的模板文件夹 [`We.Retail` 参考实现](/help/sites-developing/we-retail.md) 可用作示例。
 
-#### 模板 — 作者组 {#the-template-authors-group}
+#### 模板作者组 {#the-template-authors-group}
 
-此 `template-authors` group是用于管理对模板的访问权限的组，并且在AEM中是标准组，但为空。 必须将用户添加到项目/站点的组中。
+此 `template-authors` group是用于管理对模板的访问权限的组，它是AEM的标准配置，但为空。 必须将用户添加到项目/站点的组中。
 
 >[!CAUTION]
 >
 >此 `template-authors` 组是 *仅限* 适用于必须能够创建模板的用户。
 >
->编辑模板的功能非常强大，如果不正确完成，现有模板可能会中断。 因此，该角色应重点突出，仅包括符合条件的用户。
+>编辑模板非常强大，如果不正确完成，现有模板可能会损坏。 因此，此角色应重点明确，仅包含符合条件的用户。
 
-下表详细列出了模板编辑的必要权限。
+下表详细列出了模板编辑所需的权限。
 
 <table>
  <tbody>
@@ -304,11 +306,11 @@ ht-degree: 5%
  </tbody>
 </table>
 
-此默认值 `template-authors` 组仅涵盖项目设置，其中所有 `template-authors` 允许成员访问和创作所有模板。 对于更复杂的设置，需要多个模板作者组来分隔对模板的访问，则必须创建更多自定义模板作者组。 但是，模板作者组的权限将仍然相同。
+此默认值 `template-authors` 组仅涵盖项目设置，其中 `template-authors` 允许成员访问和创作所有模板。 对于更复杂的设置，需要多个模板作者组来分隔对模板的访问，则必须创建更多自定义模板作者组。 但是，模板作者组的权限将仍然相同。
 
 #### /conf/global下的旧版模板 {#legacy-templates-under-conf-global}
 
-不将模板存储到中 `/conf/global`. 但是，对于某些旧版安装，此位置可能仍存在模板。 *仅* 在此类遗留情况下，应 `/conf/global` 明确配置路径。
+不要在中存储模板 `/conf/global`. 但是，对于某些旧版安装，此位置可能仍存在模板。 *仅* 在此类遗留情况下，应 `/conf/global` 明确配置路径。
 
 <table>
  <tbody>
@@ -332,7 +334,7 @@ ht-degree: 5%
   <tr>
    <td>内容作者</td>
    <td>复制</td>
-   <td>内容作者在激活页面时必须激活页面的模板</td>
+   <td>内容作者在激活页面时必须激活页面模板</td>
   </tr>
   <tr>
    <td rowspan="3"><code>/conf/global/settings/wcm/policies</code></td>
@@ -368,20 +370,20 @@ ht-degree: 5%
 
 创建模板时，请指定模板类型：
 
-* 模板类型可以有效地为模板提供模板。 创建模板时，使用所选模板类型的结构和初始内容来创建模板。
+* 模板类型可以有效地为模板提供模板。 创建模板时，将使用所选模板类型的结构和初始内容来创建模板。
 
    * 将复制模板类型以创建模板。
-   * 复制后，模板和模板类型之间的唯一连接是用作信息的静态引用。
+   * 复制完成后，模板和模板类型之间的唯一连接是用作信息的静态引用。
 
 * 模板类型允许您定义：
 
    * 页面组件的资源类型。
-   * 根节点的策略，定义模板编辑器中允许的组件。
-   * Adobe建议您在模板类型上为响应式网格和移动设备仿真器的设置定义断点。 此步骤是可选的，因为也可以在单个模板上定义配置(请参阅 [模板类型和移动设备组](/help/sites-developing/page-templates-editable.md#p-template-type-and-mobile-device-groups-br-p))。
+   * 根节点的策略，用于定义模板编辑器中允许的组件。
+   * Adobe建议为响应式网格定义断点，并在模板类型上设置移动设备模拟器。 此步骤是可选的，因为也可以在单个模板上定义配置(请参阅 [模板类型和移动设备组](/help/sites-developing/page-templates-editable.md#p-template-type-and-mobile-device-groups-br-p))。
 
-* AEM提供少量现成的模板类型，如“HTML5页”和“自适应表单页”。
+* AEM提供了少量的现成模板类型，如“HTML5页面”和“自适应表单页面”。
 
-   * 以下部分提供了其他示例 [`We.Retail`](/help/sites-developing/we-retail.md) 示例内容。
+   * 其他示例作为 [`We.Retail`](/help/sites-developing/we-retail.md) 示例内容。
 
 * 模板类型通常由开发人员定义。
 
@@ -391,13 +393,13 @@ ht-degree: 5%
 
 >[!CAUTION]
 >
->请勿更改 `/libs` 路径。 原因在于 `/libs` 下次升级实例时将被覆盖（并且在应用修补程序或功能包时可能被覆盖）。
+>请勿更改 `/libs` 路径。 原因在于 `/libs` 下次升级实例时将被覆盖（应用修补程序或功能包时可能会被覆盖）。
 
-您站点特定的模板类型应存储在类似位置：
+特定于站点的模板类型应存储在类似位置：
 
 * `/apps/settings/wcm/template-types`
 
-自定义模板类型的定义应存储在用户定义的文件夹中（推荐），或者存储在 `global`. 例如：
+自定义模板类型的定义应存储在用户定义的文件夹中（推荐）或者存储在 `global`. 例如：
 
 * `/conf/<my-folder-01>/<my-folder-02>/settings/wcm/template-types`
 * `/conf/<my-folder>/settings/wcm/template-types`
@@ -414,26 +416,26 @@ ht-degree: 5%
 * 在可编辑模板类型上
 * 在可编辑模板上
 
-创建新的可编辑模板时，该值将从模板类型复制到单个模板。 如果未在类型上设置该值，则可以在模板上设置该值。 创建模板后，不会从该类型继承到模板。
+创建新的可编辑模板时，该值将从模板类型复制到单个模板。 如果类型上未设置该值，则可以在模板上设置该值。 创建模板后，不会从类型继承到模板。
 
 >[!CAUTION]
 >
->的值 `cq:deviceGroups` 必须设置为相对路径，例如 `mobile/groups/responsive` 而不是绝对路径，例如 `/etc/mobile/groups/responsive`.
+>的值 `cq:deviceGroups` 必须设置为相对路径，例如 `mobile/groups/responsive` 而不是作为绝对路径，例如 `/etc/mobile/groups/responsive`.
 
 >[!NOTE]
 >
->替换为 [静态模板](/help/sites-developing/page-templates-static.md)，的值 `cq:deviceGroups` 可以在站点的根目录中设置。
+>替换为 [静态模板](/help/sites-developing/page-templates-static.md)，的值 `cq:deviceGroups` 可以在站点的根目录下设置。
 >
->对于可编辑的模板，此值现在存储在模板级别，不支持在页面根级别存储。
+>对于可编辑的模板，此值现在存储在模板级别，在页面根级别不受支持。
 
 ### 创建模板类型 {#creating-template-types}
 
-如果已创建可作为其他模板基础的模板，则可以将此模板作为模板类型复制。
+如果您已创建可作为其他模板基础的模板，则可以将此模板作为模板类型复制。
 
-1. 像创建任何可编辑模板一样创建模板 [如此处记录的那样](/help/sites-authoring/templates.md#creating-a-new-template-template-author)，可用作模板类型的基础。
-1. 使用CRXDE Lite，从以下位置复制新创建的 `templates` 节点到 `template-types` 下的节点 [模板文件夹](/help/sites-developing/page-templates-editable.md#template-folders).
+1. 像创建任何可编辑模板一样创建模板 [如此处记录的](/help/sites-authoring/templates.md#creating-a-new-template-template-author)，可用作模板类型的基础。
+1. 使用CRXDE Lite从复制新创建的模板 `templates` 节点到 `template-types` 下的节点 [模板文件夹](/help/sites-developing/page-templates-editable.md#template-folders).
 1. 从删除模板 `templates` 下的节点 [模板文件夹](/help/sites-developing/page-templates-editable.md#template-folders).
-1. 在位于以下位置的模板副本中 `template-types` 节点，删除所有 `cq:template` 和 `cq:templateType` 全部属性 `jcr:content` 节点。
+1. 在位于以下位置的模板副本中 `template-types` 节点，删除所有 `cq:template` 和 `cq:templateType` 属性来自所有 `jcr:content` 节点。
 
 您还可以在GitHub上使用示例可编辑模板作为基础来开发自己的模板类型。
 
@@ -446,7 +448,7 @@ GITHUB上的代码
 
 ## 模板定义 {#template-definitions}
 
-可编辑模板的定义已存储 [用户定义的文件夹](/help/sites-developing/page-templates-editable.md#template-folders) （推荐）或另一种方法 `global`. 例如：
+可编辑模板的定义已存储 [用户定义的文件夹](/help/sites-developing/page-templates-editable.md#template-folders) （推荐）或在 `global`. 例如：
 
 * `/conf/<my-folder>/settings/wcm/templates`
 * `/conf/<my-folder-01>/<my-folder-02>/settings/wcm/templates`
@@ -504,20 +506,20 @@ GITHUB上的代码
 
    * **类型**: `String`
 
-   * **值**： `draft`， `enabled`，或 `disabled`
+   * **值**: `draft`, `enabled`, 或 `disabled`
 
 ### 结构 {#structure}
 
 定义生成页面的结构：
 
-* 与初始内容合并( `/initial`)创建页面时。
+* 与初始内容合并( `/initial`)。
 * 对结构所做的更改会反映在使用模板创建的任何页面中。
 * 此 `root` ( `structure/jcr:content/root`)节点定义生成页面中可用的组件列表。
 
-   * 不能在任何生成页面上移动或删除在模板结构中定义的组件。
+   * 无法在任何生成页面上移动或删除在模板结构中定义的组件。
    * 解锁组件后， `editable` 属性设置为 `true`.
 
-   * 解锁已包含内容的组件后，此内容将移至 `initial` 分支。
+   * 解锁已包含内容的组件后，此内容将被移至 `initial` 分支。
 
 * 此 `cq:responsive` 节点包含响应布局的定义。
 
@@ -526,31 +528,31 @@ GITHUB上的代码
 定义创建新页面时具有的初始内容：
 
 * 包含 `jcr:content` 复制到任何新页面的节点。
-* 与结构合并( `/structure`)创建页面时。
+* 与结构合并( `/structure`)。
 * 如果在创建后更改了初始内容，则会更新任何现有页面。
-* 此 `root` node包含组件列表，用于定义生成的页面中可用的组件。
-* 如果在结构模式下将内容添加到组件中，且组件稍后处于解锁状态（或相反），则此内容将用作初始内容。
+* 此 `root` 节点包含组件列表，用于定义生成的页面中可用的组件。
+* 如果在结构模式下将内容添加到组件且稍后解锁该组件（或反之），则此内容将用作初始内容。
 
 ### 布局 {#layout}
 
-时间 [编辑模板时，您可以定义布局](/help/sites-authoring/templates.md)，此实践使用 [标准响应式布局](/help/sites-authoring/responsive-layout.md) 也可以 [已配置](/help/sites-administering/configuring-responsive-layout.md).
+时间 [编辑模板时，您可以定义布局](/help/sites-authoring/templates.md)，此实践使用 [标准响应布局](/help/sites-authoring/responsive-layout.md) 也可以 [已配置](/help/sites-administering/configuring-responsive-layout.md).
 
 ### 内容策略 {#content-policies}
 
-内容（或设计）策略定义组件的设计属性，例如组件的可用性或最小/最大维度。 这些策略适用于模板（以及使用模板创建的页面）。 可以在模板编辑器中创建和选择内容策略。
+内容（或设计）策略定义组件的设计属性，如组件的可用性或最小/最大维度。 这些策略适用于模板（以及使用该模板创建的页面）。 可以在模板编辑器中创建和选择内容策略。
 
 * 属性 `cq:policy`，位于 `root` 节点
-   `/conf/<your-folder>/settings/wcm/templates/<your-template>/policies/jcr:content/root`
-为页面的段落系统提供对内容策略的相对引用。
+  `/conf/<your-folder>/settings/wcm/templates/<your-template>/policies/jcr:content/root`
+为页面的段落系统提供内容策略的相对引用。
 
-* 属性 `cq:policy`，在下的组件显式节点上 `root`，提供指向各个组件策略的链接。
+* 属性 `cq:policy`，位于下的组件显式节点上 `root`，提供指向各个组件策略的链接。
 
 * 实际的策略定义存储在以下位置：
-   `/conf/<your-folder>/settings/wcm/policies/wcm/foundation/components`
+  `/conf/<your-folder>/settings/wcm/policies/wcm/foundation/components`
 
 >[!NOTE]
 >
->策略定义的路径取决于组件的路径。 此 `cq:policy` 包含对配置本身的相对引用。
+>策略定义的路径取决于组件的路径。 此 `cq:policy` 保存对配置本身的相对引用。
 
 >[!NOTE]
 >
@@ -577,21 +579,21 @@ GITHUB上的代码
    * 在上设置状态属性 `jcr:content` 节点。
 
       * 例如，在：
-         `/conf/<your-folder>/settings/wcm/templates/<your-template>/jcr:content`
+        `/conf/<your-folder>/settings/wcm/templates/<your-template>/jcr:content`
 
       * 定义属性：
 
          * 名称：状态
          * 类型：字符串
-         * 价值: `enabled`
+         * 值: `enabled`
 
 1. **允许的模板**
 
-   * [在上定义允许的模板路径 **页面属性**](/help/sites-authoring/templates.md#allowing-a-template-author) 子分支的相应页面或根页面的属性。
+   * [在上定义允许的模板路径 **页面属性**](/help/sites-authoring/templates.md#allowing-a-template-author) 子分支的相应页面或根页面的ID。
    * 设置属性：
-      `cq:allowedTemplates`
-在 
-`jcr:content` 所需分支的节点。
+     `cq:allowedTemplates`
+在 `jcr:content` 所需分支的节点。
+
    例如，其值为：
 
    `/conf/<your-folder>/settings/wcm/templates/.*`
@@ -602,7 +604,7 @@ GITHUB上的代码
 
 * 使用合并的子树创建 `structure` 和 `initial` 在模板中
 
-* 对模板和模板类型中包含的信息具有引用。 您可以使用 `jcr:content` 节点具有以下属性：
+* 具有对模板和模板类型中包含的信息的引用。 您可通过以下方式实现此功能 `jcr:content` 节点的属性：
 
    * `cq:template`
 提供对实际模板的动态引用；使对模板所做的更改能够反映在实际页面上。
@@ -615,29 +617,29 @@ GITHUB上的代码
 上图显示了模板、内容和组件如何相互关联：
 
 * 控制器 —  `/content/<my-site>/<my-page>`
-引用模板的结果页面。 内容控制着整个过程。 根据定义访问相应的模板和组件。
+引用模板的结果页面。 内容控制着整个过程。 根据定义，访问相应的模板和组件。
 
 * 配置 —  `/conf/<my-folder>/settings/wcm/templates/<my-template>`
 此 [模板和相关内容策略](#template-definitions) 定义页面配置。
 
-* 模型 — OSGi捆绑包 [OSGi包](/help/sites-deploying/osgi-configuration-settings.md) 实施功能。
+* 模型 — OSGi捆绑了 [OSGi包](/help/sites-deploying/osgi-configuration-settings.md) 实施相关功能。
 
 * 视图 —  `/apps/<my-site>/components`
-在创作和发布环境中，内容呈现方式为 [组件](/help/sites-developing/components.md).
+在创作环境和发布环境中，内容由渲染 [组件](/help/sites-developing/components.md).
 
 呈现页面时：
 
 * **模板**:
 
-   * 此 `cq:template` 其属性 `jcr:content` 节点用于访问与该页面对应的模板。
+   * 此 `cq:template` 其属性 `jcr:content` 节点被引用以访问与该页面对应的模板。
 
 * **组件**:
 
    * 页面组件合并 `structure/jcr:content` 模板树 `jcr:content` 页面的树。
 
    * 页面组件仅允许作者编辑已标记为可编辑的模板结构的节点（以及任何子节点）。
-   * 在页面上呈现组件时，该组件的相对路径是从 `jcr:content` 节点；同一路径位于 `policies/jcr:content` 然后搜索模板的节点。
+   * 在页面上呈现组件时，该组件的相对路径将从 `jcr:content` 节点；同一路径位于 `policies/jcr:content` 然后搜索模板的节点。
 
-      * 此 `cq:policy` 此节点的属性指向实际内容策略（即，包含该组件的设计配置）。
+      * 此 `cq:policy` 此节点的属性指向实际内容策略（即，它包含该组件的设计配置）。
 
-      * 此功能可让您有多个模板重复使用相同的内容策略配置。
+      * 此功能允许您拥有多个重复使用相同内容策略配置的模板。

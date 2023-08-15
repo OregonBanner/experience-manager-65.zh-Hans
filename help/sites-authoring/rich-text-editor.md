@@ -9,10 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 discoiquuid: 813fda6a-e877-452b-82c3-e758720e7dd0
 docset: aem65
 exl-id: 90cb8893-65f3-4d82-9880-ce8dd80891b1
-source-git-commit: b3889b1897f0ec0c5bbf60c346b77b2906175904
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '264'
-ht-degree: 51%
+source-wordcount: '263'
+ht-degree: 47%
 
 ---
 
@@ -30,13 +30,13 @@ ht-degree: 51%
 
 ![screen_shot_2018-03-21at163054](assets/screen_shot_2018-03-21at163054.png)
 
-再次点按/单击或最初通过缓慢点按/单击选择组件将打开就地编辑，它有自己的工具栏。 您可以在此处编辑内容并进行基本格式更改。
+再次点按/单击或最初通过缓慢点按/单击选择组件将打开就地编辑，它有自己的工具栏。 在这里，您可以编辑内容并进行基本的格式更改。
 
 ![screen_shot_2018-03-21at163214](assets/screen_shot_2018-03-21at163214.png)
 
 此工具栏提供了以下选项：
 
-* **格式**：允许您设置粗体、斜体和下划线。
+* **格式**：可让您设置粗体、斜体和下划线。
 * **列表**：创建项目符号或编号列表，或者设置缩进。
 * **超链接**
 * **取消链接**

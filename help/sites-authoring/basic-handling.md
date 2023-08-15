@@ -9,10 +9,10 @@ content-type: reference
 discoiquuid: 21181a6f-b434-40ed-8eb1-ebdfc98964dd
 docset: aem65
 exl-id: ef1a3997-feb4-4cb0-9396-c8335b69bb10
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '3025'
-ht-degree: 70%
+source-wordcount: '3017'
+ht-degree: 68%
 
 ---
 
@@ -30,7 +30,7 @@ ht-degree: 70%
 
 ### 触屏优化 UI {#a-touch-enabled-ui}
 
-已为触控启用AEM用户界面。 触屏界面允许您使用触屏，通过点按、触控并按住及轻扫之类的手势与软件进行交互。这与传统的桌面界面通过鼠标操作（例如，单击、双击、右键单击和鼠标悬停）的操作方式相反。
+已为触控启用AEM用户界面。 触屏界面允许您使用触屏，通过点按、触摸并按住及轻扫之类的手势与软件进行交互。 这与传统的桌面界面使用鼠标操作（如单击、双击、右键单击和鼠标悬停）的方式形成对比。
 
 由于AEM UI支持触控，因此您可以在触控设备（例如，移动设备或平板电脑）上使用触控手势，并在传统桌面设备上使用鼠标操作。
 
@@ -77,7 +77,7 @@ ht-degree: 70%
 
 ### “导航”面板 {#navigation-panel}
 
-通过“导航”面板可以访问AEM控制台：
+“导航”面板提供对AEM控制台的访问：
 
 ![导航](assets/bh-01.png)
 
@@ -93,15 +93,15 @@ ht-degree: 70%
   </tr>
   <tr>
    <td>资源<br /> </td>
-   <td>这些控制台允许您导入和 <a href="/help/assets/home.md">管理数字资产</a> 如图像、视频、文档和音频文件。 随后，这些资源便可由同一AEM实例上运行的任何网站使用。 </td>
+   <td>这些控制台允许您导入和 <a href="/help/assets/home.md">管理数字资产</a> 如图像、视频、文档和音频文件。 随后，这些资产便可由同一AEM实例上运行的任何网站使用。 </td>
   </tr>
   <tr>
    <td>社区</td>
-   <td>此控制台允许您创建和管理 <a href="/help/communities/sites-console.md">社区站点</a> 对象 <a href="/help/communities/overview.md#engagement-community">参与</a> 和 <a href="/help/communities/overview.md#enablement-community">启用</a>.</td>
+   <td>通过此控制台，您可以创建和管理 <a href="/help/communities/sites-console.md">社区站点</a> 对象 <a href="/help/communities/overview.md#engagement-community">参与</a> 和 <a href="/help/communities/overview.md#enablement-community">启用</a>.</td>
   </tr>
   <tr>
    <td>商务</td>
-   <td>这样，您就可以管理与相关的产品、产品目录和订单， <a href="/help/commerce/cif-classic/administering/ecommerce.md">商务</a> 站点。</td>
+   <td>这使您能够管理与您的产品、产品目录和订单相关的 <a href="/help/commerce/cif-classic/administering/ecommerce.md">商务</a> 站点。</td>
   </tr>
   <tr>
    <td>体验片段</td>
@@ -109,7 +109,7 @@ ht-degree: 70%
   </tr>
   <tr>
    <td>Forms</td>
-   <td>利用此控制台，您可以创建、管理和处理 <a href="/help/forms/home.md">表单和文档</a>.</td>
+   <td>通过此控制台，您可以创建、管理和处理 <a href="/help/forms/home.md">表单和文档</a>.</td>
   </tr>
   <tr>
    <td>个性化</td>
@@ -117,22 +117,22 @@ ht-degree: 70%
   </tr>
   <tr>
    <td>项目</td>
-   <td>此 <a href="/help/sites-authoring/touch-ui-managing-projects.md">通过“项目”控制台，您可以直接访问项目</a>. 项目是虚拟功能板。 它们可用于构建团队，然后授予该团队访问资源、工作流和任务的权限，从而允许人员致力于同一个目标。 <br /> </td>
+   <td>此 <a href="/help/sites-authoring/touch-ui-managing-projects.md">通过“项目”控制台，您可以直接访问您的项目</a>. 项目是虚拟功能板。 它们可用于构建团队，然后为该团队提供对资源、工作流和任务的访问权限，从而让人们朝着同一个目标努力。 <br /> </td>
   </tr>
   <tr>
    <td>Screens</td>
-   <td><a href="https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/authoring/setting-up-projects/creating-a-screens-project.html">Screens</a> 允许您管理任何地点、任何规模的面向客户的所有屏幕。</td>
+   <td><a href="https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/authoring/setting-up-projects/creating-a-screens-project.html">Screens</a> 将允许您管理任何地点、任何规模的面向客户的所有屏幕。</td>
   </tr>
   <tr>
    <td>Sites</td>
-   <td>Sites控制台允许您 <a href="/help/sites-authoring/page-authoring.md">创建、查看和管理网站</a> 在AEM实例上运行。 通过这些控制台，您可以创建、编辑、复制、移动和删除网站页面、启动工作流以及发布页面。<br /> </td>
+   <td>站点控制台允许您 <a href="/help/sites-authoring/page-authoring.md">创建、查看和管理网站</a> 在您的AEM实例上运行。 通过这些控制台，您可以创建、编辑、复制、移动和删除网站页面、启动工作流以及发布页面。<br /> </td>
   </tr>
  </tbody>
 </table>
 
 ### “工具”面板 {#tools-panel}
 
-在“工具”面板中，侧面板中的每个选项都包含一系列子菜单。 此 [工具控制台](/help/sites-administering/tools-consoles.md) 通过此处提供，您可以访问一些专用工具和控制台，帮助您管理网站、数字资源和内容存储库的其他方面。
+在“工具”面板中，侧面板中的每个选项都包含一系列子菜单。 此 [工具控制台](/help/sites-administering/tools-consoles.md) 通过此处提供的功能，可访问一些专用工具和控制台，帮助您管理网站、数字资产及内容存储库的其他方面。
 
 ![“工具”面板](assets/bh-04.png)
 
@@ -170,7 +170,7 @@ ht-degree: 70%
 
   >[!NOTE]
   >
-  >现成的AEM预先加载了分配给管理员用户组的管理任务。 参见 [您的收件箱 — 现成的管理任务](/help/sites-authoring/inbox.md#out-of-the-box-administrative-tasks) 了解详细信息。
+  >现成的AEM预先加载了分配给管理员用户组的管理任务。 请参阅 [您的收件箱 — 现成的管理任务](/help/sites-authoring/inbox.md#out-of-the-box-administrative-tasks) 以了解详细信息。
 
 * [用户属性](/help/sites-authoring/user-properties.md)
 
@@ -188,7 +188,7 @@ ht-degree: 70%
 
   ![痕迹导航](assets/bh-05.png)
 
-  痕迹导航位于边栏中间，且始终显示当前选定项的描述，它允许您在特定控制台内导航。在 Sites 控制台中，您可以导航浏览网站的各个级别。
+  痕迹导航位于边栏中间，始终显示当前选定项目的描述，它允许您在特定控制台中导航。 在 Sites 控制台中，您可以导航浏览网站的各个级别。
 
   只需单击痕迹导航文本，即会显示一个下拉列表，其中列出了当前选定项的结构层级。单击某个条目可跳转到该位置。
 
@@ -198,7 +198,7 @@ ht-degree: 70%
 
   ![Analytics时段](assets/screen_shot_2018-03-23at104126.png)
 
-  这仅在列表视图中可用。 参见 [列表视图](#list-view) 了解更多信息。
+  这仅在列表视图中可用。 请参阅 [列表视图](#list-view) 以了解更多信息。
 
 * **创建**&#x200B;按钮
 
@@ -218,9 +218,9 @@ ht-degree: 70%
 
 * 键盘导航
 
-  您可以只使用键盘导航网站。这会使用的标准浏览器功能 **选项卡** 键(或 **OPT+TAB键**)，以便在页面上的元素 *可聚焦*.
+  您可以只使用键盘导航网站。这会使用的标准浏览器功能 **选项卡** 键(或 **OPT+TAB键**)，以便在页面上 *可聚焦*.
 
-  在 **Sites** 控制台中，添加了&#x200B;**跳至主要内容**&#x200B;的选项。当您看到该屏幕时 *选项卡* 通过“标题”选项，并允许您跳过（产品）工具栏中的标准元素直接转到主内容，从而加快导航速度。
+  在 **Sites** 控制台中，添加了&#x200B;**跳至主要内容**&#x200B;的选项。当您看到时，它就会变得可见 *选项卡* 通过“标题”选项，并允许您跳过（产品）工具栏中的标准元素并直接转到主内容，从而加快导航速度。
 
   ![跳至主要内容](assets/bh-30.png)
 
@@ -253,7 +253,7 @@ ht-degree: 70%
   通过&#x200B;**“工具”**&#x200B;控制台，还可以访问外部&#x200B;**资源**：
 
    * **文档**
-查看Web体验管理文档
+查看Web Experience Management文档
 
    * **开发人员资源**
 开发人员资源和下载
@@ -339,11 +339,11 @@ ht-degree: 70%
    <td>
     <ul>
      <li>桌面：<br /> 鼠标悬停，然后使用复选标记快速操作</li>
-     <li>移动设备：<br /> 点按并按住信息卡</li>
+     <li>移动设备：<br /> 点按并按住卡片</li>
     </ul> </td>
    <td>
     <ul>
-     <li>桌面：<br /> 单击卡片</li>
+     <li>桌面：<br /> 单击卡</li>
      <li>移动设备：<br /> 点按卡片</li>
     </ul> </td>
   </tr>
@@ -368,7 +368,7 @@ ht-degree: 70%
 您可以通过单击控制台右上角的&#x200B;**“全选”**&#x200B;选项来选择任何视图中的所有项目。
 
 * 在&#x200B;**信息卡视图**&#x200B;中，选择所有信息卡。
-* In **列表视图** 选择列表中的所有项目。
+* 在 **列表视图** 选择列表中的所有项目。
 * 在&#x200B;**列视图**&#x200B;中，选择最左侧列中的所有项目。
 
 ![全选](assets/screen-shot_2019-03-05at094659.png)
@@ -379,7 +379,7 @@ ht-degree: 70%
 
 您可以通过以下任一方式取消选择所有项目并退出选择模式：
 
-* 单击或点按 **X** 在计数旁边，
+* 单击或点按 **X** 在伯爵的旁边，
 
 * 或使用 **转义**.
 
@@ -401,7 +401,7 @@ ht-degree: 70%
 
 ![列视图](assets/bh-16.png)
 
-列视图允许通过一系列的层叠列，对内容树进行可视化导航。通过此视图，可以查看和遍历您网站的树结构。
+列视图允许通过一系列的层叠列，对内容树进行可视化导航。此视图可让您可视化并遍历网站的树结构。
 
 选择最左侧列中的资源，将在右侧的列中显示子资源。接着选择右侧列中的资源，又将在右侧的另一个列中显示子资源，然后如此反复。
 
@@ -535,9 +535,9 @@ ht-degree: 70%
 
 ### 时间线 {#timeline}
 
-时间轴可用于查看和/或启动所选资源上发生的事件。 要打开时间线列，请使用边栏选择器：
+时间线可用于查看和/或启动所选资源上已发生的事件。 要打开时间线列，请使用边栏选择器：
 
-通过时间线列可以：
+通过时间轴列，您可以：
 
 * [查看与选定项目相关的各种事件。](#timelineviewevents)
 
@@ -574,8 +574,8 @@ ht-degree: 70%
 * [语言副本](/help/sites-administering/tc-prep.md#seeing-the-status-of-language-roots)
 * 内容引用：
 
-   * 从其他页面链接到所选页面
-   * 引用组件在选定页面中借用的内容和/或借出的内容
+   * 从其他页面链接到选定页面
+   * 引用组件在所选页面中借用的内容和/或借出的内容
 
 ![bh-28](assets/bh-28.png)
 

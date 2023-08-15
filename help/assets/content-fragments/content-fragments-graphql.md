@@ -4,16 +4,16 @@ description: 了解如何将AEM内容片段与GraphQL结合使用来投放Headle
 feature: Content Fragments
 role: User
 exl-id: 2debd678-2d73-41f2-b33c-c29d661f6a6b
-source-git-commit: ad0f0bd8b0c230e002c734adca87da22bfa3a7cd
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '687'
-ht-degree: 89%
+source-wordcount: '684'
+ht-degree: 80%
 
 ---
 
 # 使用带有 GraphQL 的内容片段的 Headless 内容投放 {#headless-content-delivery-using-content-fragments-with-graphQL}
 
-借助Adobe Experience Manager (AEM)，您可以使用内容片段与AEM GraphQL API(一种自定义实现，基于标准GraphQL)一起，无头交付结构化内容以用于您的应用程序。 通过自定义单个 API 查询的功能，您可以检索和投放您想要/需要呈现的特定内容（作为对单个 API 查询的响应）。
+借助Adobe Experience Manager (AEM)，您可以使用内容片段与AEM GraphQL API(一种自定义实现，基于标准GraphQL)一起，无头交付结构化内容以用于您的应用程序。 通过自定义单个API查询的功能，您可以检索和提供您希望/需要呈现的特定内容（作为对单个API查询的响应）。
 
 <!--
 >[!NOTE]
@@ -23,11 +23,10 @@ ht-degree: 89%
 
 >[!NOTE]
 >
->GraphQL当前用于Adobe Experience Manager (AEM)中的两个（单独的）场景：
+>GraphQL当前用于Adobe Experience Manager (AEM)中的两种（单独的）方案：
 >
 >* [AEM Commerce 通过 GraphQL 使用来自 Commerce 平台的数据](/help/commerce/cif/integrating/magento.md)。
 >* [AEM 内容片段与 AEM GraphQL API（一种自定义实现，基于标准 GraphQL）配合使用，提供结构化内容用于您的应用程序](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md)。
-
 
 ## Headless CMS {#headless-cms}
 
@@ -35,7 +34,7 @@ Headless 内容管理系统 (CMS) 包括：
 
 * “*Headless 内容管理系统（或 headless CMS）是从头开始构建的仅后端内容管理系统 (CMS)，它是一个内容存储库，通过 API 访问内容以在任何设备上显示。*
 
-   请参阅[维基百科](https://en.wikipedia.org/wiki/Headless_content_management_system)。
+  请参阅[维基百科](https://en.wikipedia.org/wiki/Headless_content_management_system)。
 
 在 AEM 中创作内容片段时，这意味着：
 
@@ -49,13 +48,13 @@ GraphQL 是：
 
 * ”*...一种用于 API 和运行时的查询语言，使用您的现有数据满足这些查询。*“。
 
-   请参阅 [GraphQL.org](https://graphql.org)
+  请参阅 [GraphQL.org](https://graphql.org)
 
-[AEM GraphQL API](#aem-graphql-api) 允许您对[内容片段](/help/assets/content-fragments/content-fragments.md)执行（复杂）查询；每个查询都根据特定的模型类型。 然后，您的应用程序可以使用返回的内容。
+此 [AEM GRAPHQL API](#aem-graphql-api) 允许您对执行（复杂）查询 [内容片段](/help/assets/content-fragments/content-fragments.md)；每个查询都根据特定的模型类型。 然后，您的应用程序可以使用返回的内容。
 
 ## AEM GraphQL API {#aem-graphql-api}
 
-对于Adobe Experience，已开发标准GraphQL API的自定义实施。 请参阅[用于内容片段的 AEM GraphQL API](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md) 以了解详细信息。
+对于Adobe体验，已开发了标准GraphQL API的自定义实现。 请参阅[用于内容片段的 AEM GraphQL API](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md) 以了解详细信息。
 
 AEM GraphQL API 实施基于 [GraphQL Java 库](https://graphql.org/code/#java)。
 
@@ -97,7 +96,7 @@ AEM GraphQL API 实施基于 [GraphQL Java 库](https://graphql.org/code/#java)�
 
 * 引用另一个片段，具体取决于特定的内容片段模型。
 
-* 用于检索结构化数据。
+* 允许您检索结构化数据。
 
    * 定义为&#x200B;**多源**，则主片段可以引用（检索）多个子片段。
 

@@ -1,13 +1,13 @@
 ---
 title: MSM 最佳实践
-description: 查找由Adobe工程和咨询团队编译的最佳实践，以帮助启动和运行AEM多站点管理器。
+description: 查找由Adobe工程和咨询团队编译的最佳实践，帮助启动和运行AEM多站点管理器。
 topic-tags: site-features, best-practices
 feature: Multi Site Manager
 exl-id: 3fedc1ba-64f5-4fbe-9ee5-9b96b75dda58
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1617'
-ht-degree: 42%
+source-wordcount: '1614'
+ht-degree: 41%
 
 ---
 
@@ -18,11 +18,11 @@ ht-degree: 42%
 MSM 是用于自动化内容部署的可配置框架。实施通常涉及网站的主要部分，并且跨多个组织和地理区域。因此，强烈建议您像规划网站一样仔细规划 MSM 实施：
 
 * 在开始实施之前，仔细&#x200B;**规划结构和内容流**。
-* **尽可能减少活动副本的数量。** 处理活动副本是一项资源密集型任务。 您的系统中存在的活动副本越多，受影响的性能就越高：从处理内部Live Copy索引、通过Live Copy操作（如转出）到UI操作（如在站点管理员引用边栏中显示Live Copy关系）。 最佳实践是创建站点或站点分支的实时副本，其中Live Copy关系继承到站点或分支中的页面。 当整个结构可以制作为Live Copy时，避免为网站或分支中的页面创建单个Live Copy。
+* **尽可能减少活动副本的数量。** 处理活动副本是一项资源密集型任务。 您的系统中存在的Live Copy越多，受影响的性能就越好：从处理内部Live Copy索引，到通过Live Copy操作（如转出），再到用户界面操作（如在站点管理员引用边栏中显示Live Copy关系）。 最佳实践为创建站点或站点分支的Live Copy，其中Live Copy关系继承到站点或分支中的页面。 当整个结构可以制作为Live Copy时，请避免为网站或分支中的页面创建单个Live Copy。
 * **进行所需数量的自定义，越少越好。** 虽然MSM支持高度自定义（例如转出配置），但通常情况下，网站的性能、可靠性和可升级性的最佳实践旨在最大程度地减少自定义。
 * 尽早建立&#x200B;**治理**&#x200B;模型，并相应地培训用户以确保成功。从治理的角度来看，最佳做法是 **最大程度地降低本地内容制作者拥有的权限** 将内容分配/连接到其他本地用户及其各自的活动副本。 这是因为，不受控制的链式继承会大大增加 MSM 结构的复杂性并降低其性能和可靠性。
 
-* 为您的结构、内容流、自动化和治理制定计划后 —  **原型并全面测试您的系统**，然后再开始实时实施。
+* 在针对您的结构、内容流、自动化和治理制定计划后 —  **原型并全面测试您的系统**，然后开始实时实施。
 * 请记住，**Adobe 咨询和领先的系统集成商**&#x200B;在使用 MSM 规划和实施内容自动化方面拥有丰富的经验，他们可以帮助您启动 MSM 项目并完成整个实施。
 
 >[!NOTE]
@@ -34,10 +34,10 @@ MSM 是用于自动化内容部署的可配置框架。实施通常涉及网站�
 
 >[!NOTE]
 >
->您还可以使用 [引用组件](/help/sites-authoring/default-components-foundation.md#reference) 重复使用单个页面或段落。 但请记住：
+>您也可以使用 [引用组件](/help/sites-authoring/default-components-foundation.md#reference) 重复使用单个页面或段落。 但请记住：
 >
 >* MSM更加灵活，允许对同步的内容以及同步时间进行细粒度控制。
->* [核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) 现在建议使用基础组件。
+>* [核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) 现在建议不要使用基础组件。
 >
 
 ## Live Copy 源和 Blueprint 配置 {#live-copy-sources-and-blueprint-configurations}
@@ -46,11 +46,11 @@ MSM 是用于自动化内容部署的可配置框架。实施通常涉及网站�
 
 使用 Blueprint 配置的额外好处是：
 
-* 允许作者使用 **转出** Blueprint上的选项 — 以（显式）将修改推送到从此Blueprint继承的活动副本。
+* 允许作者使用 **转出** Blueprint上的选项 — 到（显式）将修改推送到从此Blueprint继承的活动副本。
 * 允许作者使用 **创建站点**；这允许用户轻松选择语言并配置Live Copy的结构。
-* 为与Blueprint相关的活动副本定义默认转出配置。
+* 为与Blueprint关联的活动副本定义默认转出配置。
 
-如果未引用Blueprint配置，则只能从活动副本本身启动转出，实质上是从源中提取内容。
+如果未引用Blueprint配置，则只能从活动副本本身启动转出，这实际上是从源中提取内容。
 
 使用Live Copy创建新站点时，创建Blueprint配置以确保完整MSM功能集的可用性是有利的。
 
@@ -79,7 +79,7 @@ MSM 是用于自动化内容部署的可配置框架。实施通常涉及网站�
 
 * 时间 [创建Live Copy](/help/sites-administering/msm-livecopy.md#creating-a-live-copy-of-a-page)
 
-  这可以被视为更通用的方法，允许您从任何页面创建活动副本。 Live Copy的内容结构与源完全匹配。
+  可将其视为更通用的方法，允许您从任何页面创建活动副本。 Live Copy的内容结构与源完全匹配。
 
 * 时间 [创建站点](/help/sites-administering/msm-livecopy.md#creating-a-live-copy-of-a-site-from-a-blueprint-configuration)
 
@@ -89,7 +89,7 @@ MSM 是用于自动化内容部署的可配置框架。实施通常涉及网站�
 
 * 要创建新站点，您需要 [Blueprint 配置](/help/sites-administering/msm-livecopy.md#managing-blueprint-configurations)。
 * 要允许选择在新站点中创建的语言路径，相应的语言根必须存在于 Blueprint（源）中。
-* 一次 [新站点已创建为Live Copy](/help/sites-administering/msm-livecopy.md#creating-a-live-copy-of-a-site-from-a-blueprint-configuration) (使用 **创建**，则 **站点**)，此Live Copy的前两个级别为 *浅*. 页面的子级不属于实时关系，但如果找到与触发器匹配的实时关系，则转出仍会下降。
+* 一次 [新站点已创建为Live Copy](/help/sites-administering/msm-livecopy.md#creating-a-live-copy-of-a-site-from-a-blueprint-configuration) (使用 **创建**，则 **站点**)，此Live Copy的前两个级别为 *简略*. 页面的子级不属于实时关系，但如果找到与触发器匹配的实时关系，则转出仍会下降。
 
   这有助于避免：
 
@@ -114,19 +114,19 @@ MSM 可通过两种方式来帮助创建多语言网站：
 
 * 从语言母版转出内容时。
 
-   * 例如，从主控的法语站点到特定于国家/地区的站点，如法国/法语、加拿大/法语、瑞士/法语。
+   * 例如，从法语母版到特定于国家/地区的站点，如法国/法语、加拿大/法语、瑞士/法语。
 
 有关更多信息，请参阅[翻译多语言站点的内容](/help/sites-administering/translation.md)和[翻译最佳实践。](/help/sites-administering/tc-bp.md)
 
 ## 结构更改和转出 {#structure-changes-and-rollouts}
 
-对Blueprint/源树中内容结构的修改会以不同的方式反映在Live Copy中。 这取决于修改类型：
+对Blueprint/源树中内容结构的修改会以不同的方式在Live Copy中反映出来。 这取决于修改类型：
 
-* **正在创建** Blueprint中的新页面将导致在使用标准转出配置转出后，在活动副本中创建相应的页面。
+* **正在创建** Blueprint中的新页面将导致在使用标准转出配置转出后，在Live Copies中创建相应的页面。
 
 * **正在删除** 使用标准转出配置转出后，Blueprint中的页面将导致相应的页面从活动副本中删除。
 
-* **移动** Blueprint中的页面将 **非** 使用标准转出配置转出后，导致对应的页面在活动副本中移动：
+* **正在移动** Blueprint中的页面将 **非** 导致相应的页面在使用标准转出配置转出后在Live Copies中移动：
 
    * 此行为的原因是页面移动隐式包含页面删除。这可能会导致发布时出现意外行为，因为删除创作实例上的页面会自动停用发布实例上的相应内容。这也可能对相关项目（如链接、书签等）产生连锁反应。
    * 相应Live Copy页面中的内容继承已更新，以反映其源在Blueprint中的新位置。
@@ -134,7 +134,7 @@ MSM 可通过两种方式来帮助创建多语言网站：
 
 >[!NOTE]
 >
->这仅适用于 [在转出触发程序时](/help/sites-administering/msm-sync.md#rollout-triggers).
+>这仅适用于 [在转出触发时](/help/sites-administering/msm-sync.md#rollout-triggers).
 
 * 创建自定义转出配置：
 
@@ -146,26 +146,26 @@ MSM 可通过两种方式来帮助创建多语言网站：
 
 * 定位新配置：
 
-   * 要完全转出页面移动，同时在Live Copy中的旧位置删除各自的页面，请执行以下操作：
+   * 要完全转出页面移动，同时在Live Copy中的旧位置删除相应的页面，请执行以下操作：
 
       * 将新创建的配置放置在标准转出配置的前面。
 
         标准转出配置将负责删除旧位置的页面。
 
-   * 要转出页面移动，同时将相应页面保留在活动副本中的旧位置（本质上复制内容），请执行以下操作：
+   * 要转出页面移动，同时将相应页面保留在活动副本中的旧位置（本质上重复内容），请执行以下操作：
 
       * 将新创建的配置放置在标准转出配置的后面。
 
-        这将确保不会在Live Copy中删除内容或从发布中停用内容。
+        这将确保未在Live Copy中删除内容或从发布中停用内容。
 
 ## 自定义转出 {#customizing-rollouts}
 
-MSM 转出配置是高度自定义的。您应意识到，自动化转出可能会产生深远的影响。作为最佳实践，您应规划 *非常* 例如，之前请务必谨慎：
+MSM 转出配置是高度自定义的。您应意识到，自动化转出可能会产生深远的影响。作为最佳实践，您应当 *非常* 例如，之前请务必谨慎：
 
 * 自动化转出；例如，使用 [onModify触发器](#onmodify)，
 * 自定义 [节点类型/属性](#node-types-properties)，
 * 启动后续工作流，
-* 和/或激活转出中的内容。
+* 和/或激活内容作为转出的一部分。
 
 ### onModify {#onmodify}
 
@@ -186,7 +186,7 @@ MSM 转出配置是高度自定义的。您应意识到，自动化转出可能�
 
 请记住：
 
-* 除了自定义转出操作之外，MSM 还允许您自定义正在转出的节点属性。此 [MSM OSGi配置允许您排除节点类型](/help/sites-administering/msm-sync.md#excluding-properties-and-node-types-from-synchronization) 从源复制到Live Copy的过程中。
+* 除了自定义转出操作之外，MSM还允许您自定义正在转出的节点属性。 此 [MSM OSGi配置允许您排除节点类型](/help/sites-administering/msm-sync.md#excluding-properties-and-node-types-from-synchronization) 从源复制到Live Copy的过程中。
 
 ## 更多信息 {#further-information}
 

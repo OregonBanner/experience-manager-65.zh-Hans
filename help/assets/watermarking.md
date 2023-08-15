@@ -1,15 +1,15 @@
 ---
 title: 向数字资产添加水印
-description: 了解如何使用水印功能向资产添加数字水印。
+description: 了解如何使用水印功能向资源添加数字水印。
 contentOwner: AG
 role: User, Admin
 feature: Asset Management
 exl-id: bc0cfb0e-3f70-4377-8831-326a7cae73bd
 hide: true
-source-git-commit: 3d5e9ad8ee19756b05e5a77a3f748bc647fcf734
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '328'
-ht-degree: 2%
+source-wordcount: '327'
+ht-degree: 3%
 
 ---
 
@@ -22,23 +22,23 @@ ht-degree: 2%
 
 [!DNL Adobe Experience Manager Assets] 允许您将数字水印添加到资产，以帮助用户验证资产的真实性和版权所有权。 [!DNL Experience Manager Assets] 支持在PNG和JPEG文件上用作水印的文本。
 
-要能够对资产应用水印，请将水印步骤添加到 [!UICONTROL DAM更新资产] 工作流。
+要对资产应用水印，请在中添加水印步骤 [!UICONTROL DAM更新资产] 工作流。
 
-1. 访问 [!DNL Experience Manager] 用户界面，并转到 **[!UICONTROL 工具]** > **[!UICONTROL 工作流]** > **[!UICONTROL 模型]**.
+1. 访问 [!DNL Experience Manager] 用户界面，然后转到 **[!UICONTROL 工具]** > **[!UICONTROL 工作流]** > **[!UICONTROL 模型]**.
 1. 从 **[!UICONTROL 工作流模型]** 页面上，选择 **[!UICONTROL DAM更新资产]** 工作流并单击 **[!UICONTROL 编辑]**.
 
-1. 从侧面板中，拖动 **[!UICONTROL 添加水印]** 步骤至 [!UICONTROL DAM更新资产] 工作流。
+1. 从侧面板中，拖动 **[!UICONTROL 添加水印]** 逐步执行 [!UICONTROL DAM更新资产] 工作流。
 
-   ![拖动 [!UICONTROL 添加水印] 步骤并添加到 [!UICONTROL DAM更新资产] 工作流](assets/add_watermark_step_aem_assets.png)
+   ![拖动 [!UICONTROL 添加水印] 步骤并将添加到 [!UICONTROL DAM更新资产] 工作流](assets/add_watermark_step_aem_assets.png)
 
-   *图：拖动 [!UICONTROL 添加水印] 步骤并添加到 [!UICONTROL DAM更新资产] 工作流。*
+   *图：拖动 [!UICONTROL 添加水印] 步骤并将添加到 [!UICONTROL DAM更新资产] 工作流。*
 
    >[!NOTE]
    >
-   >放置 [!UICONTROL 添加水印] 之前的任何步骤 [!UICONTROL 进程缩略图] 步骤。
+   >放置 [!UICONTROL 添加水印] 在此之前的任何位置 [!UICONTROL 进程缩略图] 步骤。
 
 1. 打开 **[!UICONTROL 添加水印]** 步骤以显示其属性。
-1. 在 **[!UICONTROL 参数]** 选项卡，指定各种字段中的有效值，包括文本、字体类型、大小、颜色、位置、方向等。 要确认更改，请单击 **[!UICONTROL 完成]**.
+1. 在 **[!UICONTROL 参数]** 制表符后，在各个字段中指定有效值，包括文本、字体类型、大小、颜色、位置、方向等。 要确认更改，请单击 **[!UICONTROL 完成]**.
 
    ![在中添加水印步骤中提供参数 [!DNL Assets]](assets/arguments_add_watermark_aem_assets.png)
 
@@ -51,5 +51,5 @@ ht-degree: 2%
 
 ## 提示和限制 {#tips-limitations}
 
-* 仅支持基于文本的水印。 图像不用作水印，即使您可以在创建 [!UICONTROL 添加水印进程].
-* 仅支持PNG和JPEG文件添加水印。 其他资源格式未添加水印。
+* 仅支持基于文本的水印。 图像不会用作水印，即使您可以在创建 [!UICONTROL 添加水印进程].
+* 仅支持PNG和JPEG文件添加水印。 其他资产格式没有添加水印。

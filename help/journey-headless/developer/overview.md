@@ -2,16 +2,16 @@
 title: AEM Headless 开发人员历程
 description: AEM Headless CMS 文档。从这里开始，引导您了解 AEM 强大而灵活的 Headless 特性、它们的功能以及如何在您的第一个开发项目中利用它们。
 exl-id: f24fb308-daa7-426f-ba45-37a236b5a500
-source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
 source-wordcount: '1212'
-ht-degree: 81%
+ht-degree: 79%
 
 ---
 
 # AEM Headless 开发人员历程 {#aem-headless-developer-journey}
 
-从这里开始，引导您了解AEM强大而灵活的Headless特性、它们的功能以及如何在您的第一个Headless开发项目中利用它们。 此历程向您提供了开发您的第一个Headless应用程序所需的所有AEM Headless文档。
+从这里开始，引导您了解AEM强大而灵活的Headless特性、它们的功能以及如何在您的第一个Headless开发项目中利用它们。 此历程提供了开发您的第一个Headless应用程序所需的所有AEM Headless文档。
 
 ## 简介 {#introduction}
 
@@ -33,7 +33,7 @@ Headless 实施放弃了传统的全栈解决方案中的页面和组件管理�
 
 >[!TIP]
 >
->如果您愿意 **通过做来学习** 如果您在技术上有倾向，请访问AEM Headless教程，这些教程按API和框架组织，可在 [其他资源部分](#additional-resources) 在本文档末尾。
+>如果您愿意 **通过实践学习** 具有技术倾向的AEM Headless教程，这些教程按API和框架组织，可在 [其他资源部分](#additional-resources) 本文档末尾。
 
 ## 受众 {#audience}
 
@@ -54,7 +54,7 @@ Headless 实施放弃了传统的全栈解决方案中的页面和组件管理�
 
 您将在此历程中探究多个主题。以下文章为您提供了 AEM 中的 Headless 的基础知识以及指向详细技术文档的链接。
 
-虽然您可以直接进入历程的特定部分，但许多概念都是基于之前文章中的概念来构建的。因此，如果您是初次使用 AEM 中的 Headless，我们建议您从头开始，然后循序渐进。
+虽然您可以直接进入历程的特定部分，但许多概念都是基于之前文章中的概念来构建的。因此，如果您不熟悉AEM中的Headless，Adobe建议您从头开始，然后循序渐进。
 
 | # | 文章 | 描述 |
 |---|---|---|
@@ -67,15 +67,15 @@ Headless 实施放弃了传统的全栈解决方案中的页面和组件管理�
 | 6 | [如何通过 AEM Assets API 更新您的内容](update-your-content.md) | 了解如何使用 REST API 来访问和更新您的内容片段内容。 |
 | 7 | [如何汇总您的应用程序和 AEM Headless 中的内容](put-it-all-together.md) | 了解如何获取您的 AEM Project 并准备好使用 AEM Headless SDK 上线。 |
 | 8 | [如何使用 Headless 应用程序上线](go-live.md) | 了解如何实时部署应用程序，在Git中获取本地代码并将其移动到Cloud Manager Git中以用于CI/CD管道。 |
-| 9 | [可选 – 如何使用 AEM 创建单页应用程序 (SPA)](create-spa.md) | 了解AEM Headless功能后，探索如何组合Headless和Headless投放，并了解如何使用AEM SPA Editor框架创建可编辑SPA。 |
+| 9 | [可选 – 如何使用 AEM 创建单页应用程序 (SPA)](create-spa.md) | 了解AEM Headless功能后，探索如何将Headless投放与Headless投放结合使用，并了解如何使用AEM SPA Editor框架创建可编辑的SPA。 |
 
 ## 后续内容 {#what-is-next}
 
-您现在已准备好开始您的 Adobe Headless 历程。我们鼓励您继续此历程的下一部分，并阅读文章 [了解CMS Headless开发。](learn-about.md)
+您现在已准备好开始您的 Adobe Headless 历程。我们鼓励您继续此历程的下一部分，并阅读此文章 [了解CMS Headless开发。](learn-about.md)
 
 ### 选择您自己的冒险 {#choose-your-path}
 
-但是，无论您的学习方式如何，Adobe都希望您随着开始使用AEM Headless项目而取得成功。 所以，请考虑这两个选项。
+但是，Adobe希望您能够在开始使用AEM Headless项目时取得成功，无论您的学习方式如何。 所以，请考虑这两个选项。
 
 * 如果您更喜欢继续&#x200B;**了解 Headless 概念和 AEM 的 Headless 技术**，您应按照建议继续您的 AEM Headless 历程，即接下来查看文档[如何将内容建模为 AEM 内容模型](model-your-content.md)，您可从中了解如何在 AEM 中为内容结构建模。
 * 如果您更喜欢&#x200B;**通过实践学习**，则可以跳转到 [AEM Headless 快速入门教程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html?lang=zh-Hans)，在该教程中，您将实施一个简单项目来公开 AEM Headless 内容，从而直接跳转到 AEM Headless 开发。

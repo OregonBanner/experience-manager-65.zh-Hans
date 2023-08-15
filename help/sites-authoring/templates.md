@@ -11,10 +11,10 @@ topic-tags: site-features
 discoiquuid: b53348ca-fc50-4e7d-953d-b4c03a5025bb
 docset: aem65
 exl-id: 363b8fab-6ce7-4338-8478-3f25f2a1f117
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '4871'
-ht-degree: 85%
+source-wordcount: '4864'
+ht-degree: 83%
 
 ---
 
@@ -37,7 +37,7 @@ ht-degree: 85%
 
 本文档将介绍&#x200B;**模板作者**&#x200B;如何使用“模板”控制台和模板编辑器来创建和管理可编辑的模板。
 
-有关如何在技术层面使用可编辑模板的详细信息，请参阅开发人员文档 [页面模板 — 可编辑](/help/sites-developing/page-templates-editable.md) 了解更多信息。
+有关如何在技术层面使用可编辑模板的详细信息，请参阅开发人员文档 [页面模板 — 可编辑](/help/sites-developing/page-templates-editable.md) 以了解更多信息。
 
 >[!NOTE]
 >
@@ -53,7 +53,7 @@ ht-degree: 85%
 >
 >管理员必须在&#x200B;**配置浏览器**&#x200B;中配置一个模板文件夹，并应用适当的权限，之后模板作者才能在该文件夹中创建模板。
 
-在开始之前，请务必注意以下几点：
+在开始之前，请务必考虑以下几点：
 
 * 创建新模板需要协作。 因此，为每项任务指明了对应的[角色](#roles)。
 
@@ -93,24 +93,24 @@ ht-degree: 85%
 
 本文档详细介绍的任务列有负责执行这些任务的角色。
 
-### 可编辑的模板和静态模板 {#editable-and-static-templates}
+### 可编辑模板和静态模板 {#editable-and-static-templates}
 
 AEM现在提供两种基本类型的模板：
 
 * [可编辑模板](/help/sites-authoring/templates.md#creatingandmanagingnewtemplates)
 
-   * 可以是 [已创建](#creatinganewtemplate) 和 [已编辑](#editingatemplate) 模板作者使用 **模板** 控制台和编辑器。 此 **模板** 控制台可在 **常规** 部分 **工具** 控制台。
+   * 可以是 [已创建](#creatinganewtemplate) 和 [已编辑](#editingatemplate) 由模板作者使用 **模板** 控制台和编辑器。 此 **模板** 控制台可在以下位置访问： **常规** 的部分 **工具** 控制台。
 
    * 创建新页面后，页面和模板之间会保持动态连接。 这意味着对模板结构和/或锁定内容的更改将反映在使用该模板创建的任何页面上。 对已解锁（即初始）内容所做的更改将不会反映出来。
-   * 使用内容策略（可在模板编辑器中定义这些策略）来保留设计属性。 页面编辑器中的设计模式不再用于可编辑的模板。
+   * 使用内容策略（可在模板编辑器中定义这些策略）来保留设计属性。 页面编辑器中的设计模式不再用于可编辑模板。
 
 * 静态模板
 
    * 静态模板可用于多个版本的AEM。
-   * 它们是 [由您的开发人员提供](/help/sites-developing/page-templates-static.md)，因此作者无法创建或编辑它们。
+   * 他们是 [由您的开发人员提供](/help/sites-developing/page-templates-static.md)，因此作者无法创建或编辑它们。
    * 将被复制以创建新页面，但之后不存在动态连接（尽管模板名称已注册以供参考）。
    * 使用 [设计模式](/help/sites-authoring/default-components-designmode.md) 以保留设计属性。
-   * 由于编辑静态模板是开发人员的独家任务，请参阅开发人员文档 [页面模板 — 静态](/help/sites-developing/page-templates-static.md) 了解更多信息。
+   * 由于编辑静态模板是开发人员的独家任务，请参阅开发人员文档 [页面模板 — 静态](/help/sites-developing/page-templates-static.md) 以了解更多信息。
 
 根据定义，模板控制台和模板编辑器仅允许创建和编辑可编辑模板。 因此，本文档仅侧重于可编辑的模板。
 
@@ -147,7 +147,7 @@ AEM现在提供两种基本类型的模板：
 
 >[!CAUTION]
 >
->切勿输入任何需要的信息 [国际化](/help/sites-developing/i18n.md) 放入模板。 出于内部化目的， [核心组件的本地化功能](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/localization.html) 建议使用。
+>切勿输入任何需要的信息 [国际化](/help/sites-developing/i18n.md) 转换为模板。 出于内部化的目的， [核心组件的本地化功能](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/localization.html) 建议使用。
 
 ### 创建模板文件夹 – 管理员 {#creating-a-template-folder-admin}
 
@@ -271,7 +271,7 @@ AEM现在提供两种基本类型的模板：
 
    `/conf/<your-folder>/settings/wcm/templates/.*`
 
-   路径的顺序无关，将扫描所有路径并检索任何模板。
+   路径的顺序不相关，将扫描所有路径并检索任何模板。
 
    >[!NOTE]
    >
@@ -304,9 +304,9 @@ AEM现在提供两种基本类型的模板：
 
 * [结构](#editingatemplatestructure)
 
-  页面作者不能从生成页面中移动/移除在此处添加的组件。 如果要使页面作者能够在生成页面中添加和删除组件，则需要在模板中添加段落系统。
+  页面作者不能从生成页面中移动/删除在此处添加的组件。 如果要使页面作者能够在生成页面中添加和删除组件，则需要在模板中添加段落系统。
 
-  将组件锁定后，您可以添加页面作者无法编辑的内容。您可以解锁组件，以便能够定义[初始内容](#editingatemplateinitialcontent)。
+  将组件锁定后，您可以添加页面作者无法编辑的内容。您可以解锁组件，以便定义 [初始内容](#editingatemplateinitialcontent).
 
   >[!NOTE]
   >
@@ -334,7 +334,7 @@ AEM现在提供两种基本类型的模板：
 
   有关更多信息，请参阅[样式系统文档](/help/sites-authoring/style-system.md)。
 
-使用工具栏中的&#x200B;**模式**&#x200B;选择器，可以选择并编辑模板的相应方面：
+此 **模式** 使用工具栏中的选择器，可以选择并编辑模板的相应方面：
 
 * [结构](#editingatemplatestructure)
 * [初始内容](#editingatemplateinitialcontent)
@@ -342,7 +342,7 @@ AEM现在提供两种基本类型的模板：
 
 ![chlimage_1-133](assets/chlimage_1-133.png)
 
-而使用&#x200B;**页面信息**&#x200B;菜单中的&#x200B;**页面策略**&#x200B;选项，可以[选择所需的页面策略](#editingatemplatepagepolicies)：
+而 **页面策略** 上的选项 **页面信息** 菜单允许您 [选择所需的页面策略](#editingatemplatepagepolicies)：
 
 ![screen_shot_2018-03-23at120604](assets/screen_shot_2018-03-23at120604.png)
 
@@ -356,20 +356,20 @@ AEM现在提供两种基本类型的模板：
 
 * 不能在生成页面上移动在模板结构中定义的组件，也不能从任何生成页面中删除这些组件。
 * 如果要使页面作者能够添加和删除组件，请在模板中添加段落系统。
-* 可以解锁组件，然后再将其锁定，以便定义[初始内容](#editingatemplateinitialcontent)。
+* 可以解锁组件，然后再将其锁定，以便定义 [初始内容](#editingatemplateinitialcontent).
 
 * 可为组件和页面定义设计策略。
 
 ![screen_shot_2018-03-23at120819](assets/screen_shot_2018-03-23at120819.png)
 
-In **结构** 模板编辑器的模式：
+在 **结构** 模板编辑器的模式：
 
 * **添加组件**
 
   可使用以下几种方法将组件添加到模板：
 
    * 从侧面板中的&#x200B;**组件**&#x200B;浏览器添加。
-   * 通过使用 **插入组件** 选项(**+** 图标)的工具栏上提供的页面加载项，或者 **将组件拖动到此处** 盒子。
+   * 通过使用 **插入组件** 选项(**+** 图标)，该工具栏中提供了相应的组件或者 **将组件拖动到此处** 盒子。
 
    * 将资源（从侧面板中的&#x200B;**资源**&#x200B;浏览器）直接拖动到模板，以就地生成相应的组件。
 
@@ -395,7 +395,7 @@ In **结构** 模板编辑器的模式：
 
 * **组件操作**
 
-  将组件添加到模板后，可以对其执行一些操作。每个实例都有其各自的工具栏，以供您访问可用的操作。显示的工具栏取决于组件类型。
+  将组件添加到模板后，可以对其执行一些操作。每个实例都有一个用于访问可用操作的工具栏，该工具栏取决于组件类型。
 
   ![screen_shot_2018-03-23at120909](assets/screen_shot_2018-03-23at120909.png)
 
@@ -409,7 +409,7 @@ In **结构** 模板编辑器的模式：
 
   在&#x200B;**结构**&#x200B;模式下工作时，橙色边框指示当前选定的组件。虚线指示父组件。
 
-  例如，在下面的屏幕快照中 **文本** 组件已选取，位于 **布局容器** （响应网格）。
+  例如，在下面的屏幕截图中， **文本** 组件已在一个 **布局容器** （响应网格）。
 
   ![chlimage_1-134](assets/chlimage_1-134.png)
 
@@ -452,7 +452,7 @@ In **结构** 模板编辑器的模式：
 
   >[!NOTE]
   >
-  >如果将同一类型的多个组件添加为初始内容，则同一策略适用于所有这些组件。这会镜像中的相同限制 [**设计模式** 用于静态模板](/help/sites-authoring/default-components-designmode.md).
+  >如果将同一类型的多个组件添加为初始内容，则同一策略适用于所有这些组件。这反映了中的相同限制 [**设计模式** 用于静态模板](/help/sites-authoring/default-components-designmode.md).
 
   ***属性***
 
@@ -479,7 +479,7 @@ In **结构** 模板编辑器的模式：
 
   *功能*
 
-  **功能**&#x200B;选项卡允许您启用或禁用组件的其他功能。
+  此 **功能** 选项卡可让您启用或禁用组件的其他功能。
 
   例如，对于图像组件，您可以定义裁剪比例、允许的图像方向，以及是否允许上传。
 
@@ -559,7 +559,7 @@ In **结构** 模板编辑器的模式：
 
   ![chlimage_1-146](assets/chlimage_1-146.png)
 
-  这包括解锁容器组件，以便在初始内容模式或生成的页面 **中添加其他组件** 。 如果在解锁容器之前已将组件／内容添加到容器，则这些组件／内容在结构模式下不再显示，但将以初始内容模式 **显示****** 。 在&#x200B;**“结构”模式**&#x200B;下，只会显示容器组件本身，及其&#x200B;**允许的组件**&#x200B;列表。
+  这包括解锁容器组件，以便在&#x200B;**初始内容**&#x200B;模式或生成的页面中添加其他组件。 如果在解锁容器之前已将组件／内容添加到容器，则这些组件／内容在结构模式下不再显示，但将以初始内容模式 **显示****** 。 在&#x200B;**“结构”模式**&#x200B;下，只会显示容器组件本身，及其&#x200B;**允许的组件**&#x200B;列表。
 
   ![chlimage_1-147](assets/chlimage_1-147.png)
 

@@ -11,20 +11,20 @@ discoiquuid: bd9bf095-d74d-458c-afe7-fab04050849d
 docset: aem65
 feature: Mobile Forms
 exl-id: 89118bb8-6ec8-4048-b3d6-5c73a9eea33e
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '393'
+source-wordcount: '392'
 ht-degree: 0%
 
 ---
 
 # 将Form Bridge与HTML5表单的自定义门户集成{#integrating-form-bridge-with-custom-portal-for-html-forms}
 
-FormBridge是一个HTML5 forms bridge API，它允许您与表单交互。 有关FormBridge API参考，请参阅 [FormBridge API参考](/help/forms/using/form-bridge-apis.md).
+FormBridge是一个HTML5 Forms Bridge API，它允许您与表单交互。 有关FormBridge API的参考，请参阅 [FormBridge API参考](/help/forms/using/form-bridge-apis.md).
 
 您可以使用FormBridge API从“HTML”页获取或设置表单字段的值并提交表单。 例如，您可以使用API构建类似于向导的体验。
 
-现有的HTML应用程序可利用FormBridge API与表单交互并将其嵌入到HTML页面中。 您可以使用以下步骤通过Form Bridge API设置字段的值。
+现有的HTML应用程序可利用FormBridge API与表单进行交互并将其嵌入到HTML页面中。 您可以使用以下步骤通过Form Bridge API设置字段的值。
 
 ## 将HTML5表单集成到网页 {#integrating-html-forms-to-a-web-page}
 
@@ -40,7 +40,7 @@ FormBridge是一个HTML5 forms bridge API，它允许您与表单交互。 有�
 
    在配置文件渲染器中包含XFA运行时、XFA区域设置库和XFA表单HTML片段，设计您的网页，并将表单放入网页中。
 
-   例如，使用以下代码片断，创建一个带有两个输入字段的应用程序，并创建一个表单来演示表单与外部应用程序之间的交互。
+   例如，使用以下代码片断，创建一个包含两个输入字段的应用程序，并创建一个表单以演示表单与外部应用程序之间的交互。
 
    ```xml
    <%@ page session="false"
@@ -79,8 +79,12 @@ FormBridge是一个HTML5 forms bridge API，它允许您与表单交互。 有�
    >此 **9号线**，包含用于设计CSS样式和JavaScript文件的其他JSP引用。
    >
    >
-   >此 &lt;div id=&quot;rightdiv&quot;> 标记于 **第18行** 包含XFA表单的HTML片段。
-   页面将设置为两个容器： **left** 和 **右**. 正确的容器具有表单。 左侧容器包含两个输入字段和一个外部HTML页的一部分。
+   >此 &lt;div id=&quot;rightdiv&quot;> 标记位于 **第18行** 包含XFA表单的HTML片段。
+   >
+   >
+   页面将设置为两个容器： **左侧** 和 **右**. 正确的容器具有表单。 左侧容器包含两个输入字段和一个外部HTML页的一部分。
+   >
+   >
    以下屏幕抓图显示了表单在浏览器中的显示方式。
 
    ![门户](assets/portal.jpg)
@@ -89,9 +93,9 @@ FormBridge是一个HTML5 forms bridge API，它允许您与表单交互。 有�
 
 1. **从页面访问表单字段**
 
-   下面是一个示例脚本，您可以添加该脚本以在表单字段中设置值。
+   以下是示例脚本，您可以添加此脚本来设置表单字段中的值。
 
-   例如，如果要设置 **员工姓名** 使用字段中的值 **名字** 和 **姓氏**，调用 **window.formBridge.setFieldValue** 函数。
+   例如，如果要设置 **雇员姓名** 使用字段中的值 **名字** 和 **姓氏**，调用 **window.formBridge.setFieldValue** 函数。
 
    同样，您可以通过调用 **window.formBridge.getFieldValue** API。
 

@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: platform
 exl-id: b3de1a4a-f334-44bd-addc-463433204c99
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '2297'
+source-wordcount: '2296'
 ht-degree: 0%
 
 ---
@@ -31,27 +31,27 @@ ht-degree: 0%
 >
 >[API文档](/help/commerce/cif-classic/developing/ecommerce.md#api-documentation) 也可用。
 
-提供了多个现成的AEM组件以使用集成层。 目前，这些解决方案包括：
+提供了多个现成的AEM组件以使用集成层。 目前，这些方法包括：
 
-* 产品展示组件
+* 产品显示组件
 * 购物车
-* 结账
+* 结帐
 
 对于搜索，提供了一个集成挂接，允许您使用AEM搜索、电子商务系统搜索、第三方搜索或它们的组合。
 
 ## 电子商务引擎选择 {#ecommerce-engine-selection}
 
-电子商务框架可与任何电子商务解决方案一起使用，使用的引擎必须可由AEM识别：
+电子商务框架可与任何电子商务解决方案一起使用，使用的引擎必须由AEM识别：
 
 * 电子商务引擎是支持 `CommerceService` 界面
 
-   * 可以通过以下方式识别引擎 `commerceProvider` 服务属性
+   * 可以通过以下方式区分引擎 `commerceProvider` 服务属性
 
 * AEM支持 `Resource.adaptTo()` 对象 `CommerceService` 和 `Product`
 
-   * 此 `adaptTo` 实施会查找 `cq:commerceProvider` 资源层次结构中的属性：
+   * 此 `adaptTo` 实施将查找 `cq:commerceProvider` 资源层次结构中的属性：
 
-      * 如果找到，则使用值筛选Commerce服务查找。
+      * 如果找到，该值将用于筛选Commerce服务查找。
 
       * 如果未找到，则使用排名最高的商务服务。
 
@@ -61,7 +61,7 @@ ht-degree: 0%
 
    * 例如， `cq:commerceProvider` 具有值的属性 `hybris` 与的OSGi配置关联 **Day CQ Commerce Factory for Hybris** (com.adobe.cq.commerce.hybris.impl.HybrisServiceFactory) — 其中参数 `commerceProvider` 还具有值 `hybris`.
 
-   * 下面是其他属性，例如 **目录版本** 可以配置（在适当和可用时）。
+   * 下面是其他属性，如 **目录版本** 可以配置（在适当和可用时）。
 
 请参阅以下示例：
 
@@ -93,39 +93,39 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->通过使用CRXDE Lite，您可以看到在Hybris实施的产品组件中如何处理这种情况：
+>通过使用CRXDE Lite，您可以看到在hybris实施的产品组件中如何处理这种情况：
 >
 >`/apps/geometrixx-outdoors/components/hybris/product/product.jsp`
 
-### 针对hybris 4进行开发 {#developing-for-hybris}
+### 为hybris 4开发 {#developing-for-hybris}
 
-电子商务集成框架的hybris扩展已更新，以支持Hybris 5，同时保持与Hybris 4的向后兼容性。
+更新了eCommerce Integration Framework的hybris扩展，以支持Hybris 5，同时保持与Hybris 4的向后兼容性。
 
 代码中的默认设置是针对Hybris 5调整的。
 
 要为Hybris 4开发，需要满足以下条件：
 
-* 调用maven时，将以下命令行参数添加到命令中
+* 调用maven时，请将以下命令行参数添加到命令中
 
   `-P hybris4`
 
-  它下载预配置的Hybris 4分发并将其嵌入捆绑包中 `cq-commerce-hybris-server`.
+  它将下载预配置的Hybris 4分发并将其嵌入捆绑包中 `cq-commerce-hybris-server`.
 
 * 在OSGi配置管理器中：
 
-   * 禁用默认响应分析器服务的Hybris 5支持。
+   * 禁用对默认响应分析器服务的Hybris 5支持。
 
    * 确保Hybris基本身份验证处理程序服务的服务排名低于Hybris OAuth处理程序服务。
 
 ### 会话处理 {#session-handling}
 
-hybris使用用户会话来存储信息，例如客户的购物车。 会话ID从hybris返回 `JSESSIONID` 后续请求中必须发送给hybris的Cookie。 为避免将会话id存储在存储库中，会将其编码到购物者的浏览器中存储的另一个Cookie中。 执行以下步骤：
+hybris使用用户会话来存储信息，如客户的购物车。 会话ID从hybris返回到 `JSESSIONID` 后续请求中必须发送给hybris的Cookie。 为了避免将会话id存储在存储库中，会将其编码到购物者的浏览器中存储的另一个Cookie中。 执行以下步骤：
 
 * 在第一个请求中，购物者的请求未设置Cookie；因此会向hybris实例发送请求以创建会话。
 
 * 会话Cookie是从响应中提取的，并在新的Cookie中进行编码(例如， `hybris-session-rest`)，并在对购物者的响应中设置。 新Cookie中的编码是必需的，因为原始Cookie仅对特定路径有效，否则在后续请求中不会从浏览器发送回。 还必须将路径信息添加到Cookie的值中。
 
-* 在后续请求中，Cookie将从 `hybris-session-<*xxx*>` Cookie ，并在用于从hybris请求数据的HTTP客户端上设置。
+* 在后续请求中，Cookie将从以下位置解码： `hybris-session-<*xxx*>` Cookie ，并在用于从hybris请求数据的HTTP客户端上设置。
 
 >[!NOTE]
 >
@@ -135,7 +135,7 @@ hybris使用用户会话来存储信息，例如客户的购物车。 会话ID�
 
 * 此会话“拥有” **购物车**
 
-   * 执行添加/删除等操作
+   * 执行添加/删除/等
 
    * 在购物车上执行各种计算；
 
@@ -153,22 +153,22 @@ hybris使用用户会话来存储信息，例如客户的购物车。 会话ID�
 
 在Hybris中维护的产品数据必须在AEM中可用。 已实施以下机制：
 
-* hybris会提供ID的初始负载作为馈送。 可以更新此信息源。
-* hybris将通过信息源(AEM轮询)提供更新信息。
-* 当AEM使用产品数据时，它会向hybris发送有关当前数据的请求（使用上次修改日期的有条件get请求）。
+* ID的初始加载由hybris作为馈送提供。 此信息源可能有更新。
+* hybris将通过信息源(AEM轮询的位置)提供更新信息。
+* 当AEM使用产品数据时，它会向hybris发送有关当前数据的请求（使用上次修改日期的条件get请求）。
 * 在Hybris上，可以声明方式指定馈送内容。
 * 将馈送结构映射到AEM内容模型会在AEM端的馈送适配器中进行。
 
 ![chlimage_1-12](/help/sites-developing/assets/chlimage_1-12a.png)
 
 * 导入器(b)用于初始设置AEM中的目录页面树结构。
-* Hybris中的目录更改通过信息源指示给AEM，然后传播到AEM (b)
+* hybris中的目录更改通过信息源指示给AEM，然后传播到AEM (b)
 
-   * 已添加/删除/更改有关目录版本的产品。
+   * 添加/删除/更改了有关目录版本的产品。
 
    * 产品已批准。
 
-* hybris扩展提供了一个轮询导入程序（“hybris”方案），可以将其配置为按指定的时间间隔（例如，每24小时，其中时间间隔以秒为单位）将更改导入AEM：
+* hybris扩展提供了一个轮询导入程序（“hybris”方案），可以将其配置为按指定的时间间隔(例如，每24小时将更改导入AEM，其中时间间隔以秒为单位)：
 
   ```JavaScript
       http://localhost:4502/content/geometrixx-outdoors/en_US/jcr:content.json
@@ -193,7 +193,7 @@ hybris使用用户会话来存储信息，例如客户的购物车。 会话ID�
 
    * 产品位于 **在线** 产品页面的目录版本。
 
-   * 引用的产品位于 **在线** 其他页面（例如，促销活动页面）的目录版本。
+   * 引用的产品位于 **在线** 其他页面的目录版本（例如，促销活动页面）。
 
 * 激活的产品页面必须访问产品数据的 **在线** 版本(d)。
 
@@ -205,17 +205,17 @@ hybris使用用户会话来存储信息，例如客户的购物车。 会话ID�
 
 单个产品可以有多个变体；例如，它可能因颜色和/或大小而异。 产品必须定义哪些属性会驱动变化；Adobe术语如下 *变量轴*.
 
-但是，并非所有属性都是变量轴。 变体还可以影响其他属性；例如，价格可能取决于大小。 购物者无法选择这些属性，因此不被视为变量轴。
+但是，并非所有属性都是变量轴。 变体也可能会影响其他属性；例如，价格可能取决于大小。 购物者无法选择这些属性，因此不被视为变量轴。
 
-每个产品和/或变体由一个资源表示，因此将1:1映射到存储库节点。 必然的结果是，特定产品和/或变体可以通过其路径进行唯一标识。
+每个产品和/或变体由一个资源表示，因此将1:1映射到存储库节点。 由此推断，特定产品和/或变体可通过其路径唯一标识。
 
-产品/变体资源并不总是包含实际产品数据。 它可能是其他系统（如hybris）上所持有数据的表示形式。 例如，产品描述、定价等不会存储在AEM中，而是从电子商务引擎中实时检索。
+产品/变型资源并不总是包含实际产品数据。 它可能是其他系统（如hybris）上保留的数据的表示形式。 例如，产品描述、定价等不会存储在AEM中，而是从电子商务引擎中实时检索。
 
-任何产品资源都可以用 `Product API`. 产品API中的大多数调用特定于变体（尽管变体可能继承来自祖先的共享值），但也有列出变体集的调用( `getVariantAxes()`， `getVariants()`，等等)。
+任何产品资源都可以用 `Product API`. 产品API中的大多数调用均特定于变体（尽管变体可能继承来自祖先的共享值），但也有列出变体集的调用( `getVariantAxes()`， `getVariants()`，等等)。
 
 >[!NOTE]
 >
->实际上，变体轴由以下内容决定 `Product.getVariantAxes()` 返回：
+>实际上，变轴由任何参数决定 `Product.getVariantAxes()` 返回：
 >* hybris为hybris实现定义它
 >
 >虽然产品（通常）可以具有多个变体轴，但现成的产品组件仅处理两个变体轴：
@@ -230,9 +230,9 @@ hybris使用用户会话来存储信息，例如客户的购物车。 会话ID�
 
 通常，产品数据位于 `/etc`，以及下的产品引用 `/content`.
 
-产品变体与产品数据节点之间必须是1:1映射。
+产品变体和产品数据节点之间必须是1:1映射。
 
-产品引用还必须具有呈现每个变体的节点，但不需要呈现所有变体。 例如，如果产品具有S、M、L变体，则产品数据可能为：
+产品引用还必须具有呈现每个变体的节点 — 但不要求呈现所有变体。 例如，如果产品具有S、M、L变体，则产品数据可能为：
 
 ```shell
 etc
@@ -244,7 +244,7 @@ etc
 |       |──shirt-l
 ```
 
-虽然“大而高”目录可能只有：
+而“大而高”的目录可能只有：
 
 ```shell
 content
@@ -340,19 +340,19 @@ public class AxisFilter implements VariantFilter {
 
          * 产品数据是分层的；产品属性继承自产品数据节点的祖先。
 
-         * 产品引用还可以包含本地属性，这些属性会覆盖产品数据中指定的属性。
+         * 产品引用还可以包含本地属性，这些属性将覆盖产品数据中指定的属性。
 
       * 产品本身：
 
          * 不带 `productData` 属性。
 
-         * 在本地保存所有属性（且不包含productData属性）的product节点直接从自己的祖先继承产品属性。
+         * 在本地保存所有属性（并且不包含productData属性）的product节点直接从自己的祖先继承product属性。
 
 * **AEM-generic产品结构**
 
    * 每个变体必须具有自己的叶节点。
 
-   * 产品界面既表示产品，又表示变体，但相关的存储库节点特定于它本身。
+   * 产品界面既表示产品，又表示变体，但相关的存储库节点特定于它。
 
    * product节点描述产品属性和变体轴。
 
@@ -405,18 +405,18 @@ public class AxisFilter implements VariantFilter {
 
 * 该购物车属于 `CommerceSession:`
 
-   * 此 `CommerceSession` 执行添加/删除等操作。
-   * 此 `CommerceSession` 也会在购物车上执行各种计算。”
+   * 此 `CommerceSession` 执行添加/删除等操作
+   * 此 `CommerceSession` 还会在购物车上执行各种计算。&quot;
 
 * 虽然不直接与购物车相关，但是 `CommerceSession` 还必须提供目录定价信息（因为它拥有定价）
 
-   * 定价可能有几个修改量：
+   * 定价可能有几个修饰符：
 
       * 数量折扣。
       * 不同的货币。
       * 应缴纳增值税且免纳增值税。
 
-   * 修改量是开放式，接口如下：
+   * 修饰符是开放的，接口如下：
 
       * `int CommerceSession.getQuantityBreakpoints(Product product)`
       * `String CommerceSession.getProductPrice(Product product)`
@@ -439,7 +439,7 @@ public class AxisFilter implements VariantFilter {
 
 ![chlimage_1-13](/help/sites-developing/assets/chlimage_1-13a.png)
 
-#### 签出架构 {#architecture-of-checkout}
+#### 结账的架构 {#architecture-of-checkout}
 
 **购物车和订单数据**
 
@@ -474,7 +474,7 @@ public class AxisFilter implements VariantFilter {
 
 1. **订单详细信息**
 
-   但是，订单详细信息包括 *非* 通过API修复：
+   但是，订单详情如下 *非* 由API修复：
 
    ```java
    public void updateOrderDetails(Map<String, String> orderDetails);
@@ -485,23 +485,23 @@ public class AxisFilter implements VariantFilter {
 **配送费计算**
 
 * 订单通常必须提供多种送货选项（和价格）。
-* 价格可能基于订单的物料和详细信息，如重量和/或交货地址。
-* 此 `CommerceSession` 有权访问所有依赖项，因此可以采用与产品定价类似的方式处理依赖项：
+* 价格可能基于物料和订单详细信息，如重量和/或交货地址。
+* 此 `CommerceSession` 有权访问所有依赖项，因此可以采用与产品定价类似的方式对其进行处理：
 
-   * 此 `CommerceSession` 拥有装运定价。
+   * 此 `CommerceSession` 拥有配送定价。
    * 可以使用检索/更新投放详细信息 `updateOrder(Map<String, Object> delta)`
 
 >[!NOTE]
 >
 >您可以实施送货选择器；例如：
 >
->`yourProject/commerce/components/shippingpicker`:
+>`yourProject/commerce/components/shippingpicker`：
 >
->* 本质上，这可以是 `foundation/components/form/radio`，但是通过回调到 `CommerceSession` 对于：
+>* 本质上，这可以是 `foundation/components/form/radio`，但回调到 `CommerceSession` 对于：
 >
 >* 检查方法是否可用
 >* 添加定价信息
->* 使购物者能够更新AEM中的订单页面（包括配送方法的超集和描述这些方法的文本），同时仍有权公开相关 `CommerceSession` 信息。
+>* 允许购物者在AEM中更新订单页面（包括配送方法的超集以及描述这些方法的文本），同时仍然具有公开相关配送方法的控制权 `CommerceSession` 信息。
 
 **付款处理**
 
@@ -516,13 +516,13 @@ public class AxisFilter implements VariantFilter {
 
 ### 搜索定义 {#search-definition}
 
-遵循标准服务API模型，电子商务项目提供一组搜索相关的API，它们可以由各个商业引擎实现。
+遵循标准服务API模型，电子商务项目提供一组搜索相关的API，它们可以由商业引擎实现。
 
 >[!NOTE]
 >
->目前，只有hybris引擎实现了现成的搜索API。
+>目前，只有hybris引擎可开箱即用地实施搜索API。
 >
->但是，搜索API是通用的，可以由每个CommerceService单独实现。
+>但是，搜索API是通用的，可以由每个CommerceService单独实施。
 
 电子商务项目包含一个默认搜索组件，位于以下位置：
 
@@ -538,45 +538,45 @@ public class AxisFilter implements VariantFilter {
 
 1. `CommerceQuery`
 
-   用于描述搜索查询（包含有关查询文本、当前页面、页面大小、排序和选定彩块化的信息）。 所有实施搜索API的电子商务服务都会接收此类的实例以执行其搜索。 A `CommerceQuery` 可以从请求对象实例化( `HttpServletRequest`)。
+   用于描述搜索查询（包含有关查询文本、当前页面、页面大小、排序和所选Facet的信息）。 所有实施搜索API的电子商务服务都会接收此类的实例以执行其搜索。 A `CommerceQuery` 可以从请求对象实例化( `HttpServletRequest`)。
 
 1. `FacetParamHelper`
 
-   是一个实用程序类，它提供一个静态方法 —  `toParams`  — 用于生成 `GET` 多面和一个切换值的列表中的参数字符串。 这在UI端很有用，您需要为每个Facet的每个值显示超链接，以便当用户单击超链接时，切换相应的值（即，如果选中了超链接，则会从查询中删除它，否则会添加）。 这解决了处理多个/单值Facet、覆盖值等的所有逻辑。
+   是一个实用程序类，它提供一个静态方法 —  `toParams`  — 用于生成 `GET` 多面和一个切换值列表中的参数字符串。 这在UI端很有用，您需要显示每个Facet的每个值的超链接，以便当用户单击超链接时，切换相应的值（即，如果选中它，则从查询中删除它，否则添加）。 这解决了处理多个/单值Facet、覆盖值等操作的所有逻辑。
 
-搜索API的入口点是 `CommerceService#search` 返回值的方法 `CommerceResult` 对象。 请参阅 [API文档](/help/commerce/cif-classic/developing/ecommerce.md#api-documentation) 以了解有关此主题的详细信息。
+搜索API的入口点为 `CommerceService#search` 返回 `CommerceResult` 对象。 请参阅 [API文档](/help/commerce/cif-classic/developing/ecommerce.md#api-documentation) 以了解有关此主题的详细信息。
 
 ### 用户集成 {#user-integration}
 
-在AEM和各种电子商务系统之间提供集成。 这要求使用一种策略在不同系统之间同步购买者，以便特定于AEM的代码只需了解AEM，反之亦然：
+在AEM和各种电子商务系统之间提供集成。 这就要求有一种策略来同步不同系统之间的购买者，以便特定于AEM的代码只需了解AEM，反之亦然：
 
 * 身份验证
 
-  推定AEM为 *仅限* web前端，因此执行 *所有* 身份验证。
+  推测AEM为 *仅限* web前端，因此执行 *所有* 身份验证。
 
 * Hybris中的帐户
 
-  AEM会在每个购物者的hybris中创建相应的(下属)帐户。 此帐户的用户名与AEM用户名相同。 加密随机密码会自动生成，并在AEM中存储（加密）。
+  AEM为每个购物者在hybris中创建相应的（下属）帐户。 该帐户的用户名与AEM的用户名相同。 加密随机密码是在AEM中自动生成并存储（加密）的。
 
 #### 预先存在的用户 {#pre-existing-users}
 
-AEM前端可以位于现有Hybris实施的前面。 此外，还可以将hybris引擎添加到现有AEM安装中。 要实现此目的，系统必须能够正常处理任一系统中的现有用户：
+AEM前端可以位于现有hybris实施的前面。 此外，还可以在现有AEM安装中添加一个hybris引擎。 要实现此目的，系统必须能够正常处理任一系统中的现有用户：
 
 * AEM -> hybris
 
    * 登录到hybris时，如果AEM用户不存在：
 
-      * 使用随机密码创建新的hybris用户
+      * 使用加密随机密码创建新的hybris用户
       * 将hybris用户名存储在AEM用户的用户目录中
 
    * 请参阅: `com.adobe.cq.commerce.hybris.impl.HybrisSessionImpl#login()`
 
 * hybris -> AEM
 
-   * 在登录到AEM时，如果系统识别了用户，则：
+   * 在登录到AEM时，如果系统可以识别用户：
 
       * 尝试使用提供的用户名/密码登录hybris
-      * 如果成功，请在AEM中使用相同的密码创建新用户(特定于AEM的salt将产生AEM特定的哈希)
+      * 如果成功，请在AEM中使用相同的密码创建新用户(AEM特定的salt将产生AEM特定的哈希)
 
    * 上述算法在Sling中实现 `AuthenticationInfoPostProcessor`
 
@@ -650,7 +650,7 @@ public interface ImportHandler {
 }
 ```
 
-要使导入程序能够识别您的自定义处理程序，它必须指定 `service.ranking`值大于0的属性，例如。
+对于要由导入程序识别的自定义处理程序，它必须指定 `service.ranking`值大于0的属性，例如。
 
 ```java
 @Component

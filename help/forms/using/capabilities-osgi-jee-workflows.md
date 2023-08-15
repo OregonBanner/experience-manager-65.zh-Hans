@@ -3,9 +3,9 @@ title: OSGi和AEM Forms JEE工作流中以表单为中心的AEM工作流的操�
 description: OSGi和AEM Forms JEE工作流中以表单为中心的AEM工作流的操作和功能
 contentOwner: khsingh
 exl-id: 505b8988-b2b3-4222-b3cb-9b3c6259fdd2
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '928'
+source-wordcount: '927'
 ht-degree: 22%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 22%
 
 ## AEM收件箱和HTML工作区 {#aem-inbox-and-html-workspace}
 
-您可以使用AEM收件箱在OSGi上运行和监视以Forms为中心的AEM Workflow。 而HTML工作区允许您运行和监控AEM Forms JEE Workflow。 下表可帮助您了解OSGi上以AEM为中心的Forms AEM Workflow的OSGi收件箱中以及AEM Forms JEE Workflow的HTML工作区中可用的各种重要操作。
+您可以使用AEM收件箱在OSGi上运行和监视以Forms为中心的AEM Workflow。 而HTML工作区允许您运行和监控AEM Forms JEE Workflow。 下表可帮助您了解OSGi上以AEM为中心的Forms AEM Workflow的OSGi收件箱中和AEM Forms JEE Workflow的HTML Workspace中可用的各种重要操作。
 
 <table>
  <tbody>
@@ -69,7 +69,7 @@ ht-degree: 22%
    <td>不支持</td>
   </tr>
   <tr>
-   <td>任务级别注释</td>
+   <td>任务级注释</td>
    <td>支持</td>
    <td>不支持</td>
   </tr>
@@ -84,7 +84,7 @@ ht-degree: 22%
    <td>支持</td>
   </tr>
     <tr>
-   <td>自定义UI元素</td>
+   <td>自定义用户界面元素</td>
    <td>支持</td>
    <td>支持</td>
   </tr>
@@ -98,7 +98,7 @@ ht-degree: 22%
 
 ## OSGi和AEM Forms JEE工作流中以表单为中心的AEM工作流 {#form-centric-aem-workflows-on-osgi-and-aem-forms-jee-workflows}
 
-OSGi和AEM Forms JEE Workflows上以表单为中心的AEM Workflow (AEM Forms on JEE Process Management)具有一组不同的功能。 下表可帮助您了解OSGi和AEM Forms on JEE Workflows中以表单为中心的AEM Workflow中可用的重要功能：
+OSGi和AEM Forms JEE Workflows上以表单为中心的AEM Workflow (AEM Forms on JEE Process Management)具有一组不同的功能。 下表可帮助您了解OSGi和AEM Forms on JEE Workflows中以表单为中心的AEM Workflow提供的重要功能：
 
 <table>
  <tbody>
@@ -120,12 +120,12 @@ OSGi和AEM Forms JEE Workflows上以表单为中心的AEM Workflow (AEM Forms on
   <tr>
    <td>潦草签名</td>
    <td>支持</td>
-   <td>支持<br /> </td>
+   <td>支持<br />。 </td>
   </tr>
   <tr>
    <td>自定义电子邮件模板</td>
    <td>支持</td>
-   <td>支持<br /> </td>
+   <td>支持<br />。 </td>
   </tr>
   <tr>
    <td>定义任务优先级</td>
@@ -188,7 +188,7 @@ OSGi和AEM Forms JEE Workflows上以表单为中心的AEM Workflow (AEM Forms on
    <td>支持</td>
   </tr>
   <tr>
-   <td>OR，AND拆分</td>
+   <td>OR， AND Split</td>
    <td>支持</td>
    <td>支持</td>
   </tr>
@@ -233,7 +233,7 @@ OSGi和AEM Forms JEE Workflows上以表单为中心的AEM Workflow (AEM Forms on
    <td>不支持</td>
   </tr>
   <tr>
-   <td>对工作流详细信息部分的精细控制</td>
+   <td>“对工作流详细信息的粒度控制”部分</td>
    <td>支持</td>
    <td>不支持</td>
   </tr>
@@ -253,7 +253,7 @@ OSGi和AEM Forms JEE Workflows上以表单为中心的AEM Workflow (AEM Forms on
    <td>支持</td>
   </tr>
   <tr>
-   <td>PDF生成器服务</td>
+   <td>PDF Generator服务</td>
    <td>支持</td>
    <td>支持</td>
   </tr>
@@ -283,7 +283,7 @@ OSGi和AEM Forms JEE Workflows上以表单为中心的AEM Workflow (AEM Forms on
    <td>支持</td>
   </tr>  
   <tr>
-   <td>HTML5 Forms、交互式PDF forms、表单集</td>
+   <td>HTML5 Forms，交互式PDF forms，表单集</td>
    <td>不支持</td>
    <td>支持</td>
   </tr>
@@ -358,7 +358,7 @@ OSGi和AEM Forms JEE Workflows上以表单为中心的AEM Workflow (AEM Forms on
    <td>支持</td>
   </tr>
   <tr>
-   <td>不相交组之间的委派</td>
+   <td>在不相交组之间进行委托</td>
    <td>不支持</td>
    <td>支持</td>
   </tr>
@@ -385,12 +385,12 @@ OSGi和AEM Forms JEE Workflows上以表单为中心的AEM Workflow (AEM Forms on
  </tbody>
 </table>
 
-1. 您可以在OSGi上使用以表单为中心的AEM Workflows来签名已填写的自适应表单。 OSGi上以表单为中心的AEM Workflow支持表单签名以外的内容。 此 [表单内签名](../../forms/using/working-with-adobe-sign.md#create-in-form-signing-experience) 不支持体验。
+1. 您可以在OSGi上使用以表单为中心的AEM Workflows来签名已填写的自适应表单。 OSGi上以表单为中心的AEM Workflow支持表单签名之外的其他内容。 此 [表单内签名](../../forms/using/working-with-adobe-sign.md#create-in-form-signing-experience) 不支持体验。
 
 1. 您需要访问AEM收件箱才能在AEM Forms OSGi和HTML Workspace上运行和监控以表单为中心的工作流，从而运行和监控AEM Forms JEE Workflow。
-1. 本机AEM Forms文档服务适用于OSGi上的以表单为中心的AEM Workflow和JEE Workflow上的AEM Forms 。 AEM Workflow在OSGi和AEM Forms JEE （流程管理）工作流中使用本机文档服务执行以表单为中心的AEM Workflow。
+1. 本机AEM Forms文档服务适用于OSGi上的以表单为中心的AEM Workflow和JEE Workflow上的AEM Forms 。 AEM Workflow在OSGi和AEM Forms JEE （流程管理）工作流中使用本机文档服务来处理以表单为中心的AEM Workflow。
 1. AEM Forms JEE工作流只能渲染自适应表单。 它不支持将自适应表单渲染为PDF文档。
-1. AEM forms JEE工作流没有适用于Adobe Sign的单独步骤。 您需要为AEM Forms JEE Workflows启用自适应表单Adobe Sign。 有关更多详细信息，请参阅 [Adobe Sign文档](../../forms/using/working-with-adobe-sign.md#add-and-configure-the-signature-step-component).
+1. AEM Forms JEE工作流没有适用于Adobe Sign的单独步骤。 您需要为AEM Forms JEE Workflow提供启用Adobe Sign的自适应表单。 有关更多详细信息，请参阅 [Adobe Sign文档](../../forms/using/working-with-adobe-sign.md#add-and-configure-the-signature-step-component).
 1. 您可以使用 [调用表单数据模型服务](../../forms/using/aem-forms-workflow-step-reference.md#p-invoke-form-data-model-service-step-p) 用于调用Web服务以及发布或检索来自第三方应用程序的数据的步骤。
 1. 您可以使用 [发送电子邮件](../../forms/using/aem-forms-workflow-step-reference.md#send-email-step) 步骤以发送电子邮件。
 

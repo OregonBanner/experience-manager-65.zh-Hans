@@ -2,10 +2,10 @@
 title: WCAG 2.1 快速指南
 description: WCAG 2.1 快速指南
 exl-id: 9cd37f5a-ff59-4617-a0f3-cd8994fbf4ab
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 10227bcfcfd5a9b0f126fee74dce6ec7842f5e95
 workflow-type: tm+mt
-source-wordcount: '1772'
-ht-degree: 99%
+source-wordcount: '1774'
+ht-degree: 97%
 
 ---
 
@@ -68,7 +68,7 @@ WCAG 2.1 包含有四个用于无障碍设计的关键原则，有时由首字�
 * 准则编号为 1.1 - 4.1，其中第一个编号与父准则相对应。
 * 每个准则都包含一个或多个&#x200B;**成功标准**。
 * 成功标准将编写为语句，任何给定网页的结果都为 `True` 或 `False`。
-* 成功标准可能包括其中一项/或多种选项，也可能包括例外，即不符合成功标准的情况。
+* 成功标准可能包括其中一项/或多种选择，也可能包括例外，即不符合成功标准的情况。
 * 成功标准按照父准则和原则编号，从 1.1.1 - 4.1.1。它们还有一个简短的名称，用于总结标准的目的，以便于参考。例如，成功标准 [1.1.1 是非文本内容](https://www.w3.org/TR/WCAG/#non-text-content)。
 * 成功标准包括一系列相关的&#x200B;**技术**（详见下文）。
 

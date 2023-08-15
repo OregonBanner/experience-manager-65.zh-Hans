@@ -2,10 +2,10 @@
 title: 如何通过 AEM Assets API 更新您的内容
 description: 在 AEM Headless 开发人员历程的这一部分中，了解如何使用 REST API 访问和更新内容片段的内容。
 exl-id: af29cb77-0210-4fc4-8d86-2a833d19b49f
-source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1040'
-ht-degree: 92%
+source-wordcount: '1037'
+ht-degree: 89%
 
 ---
 
@@ -41,7 +41,7 @@ ht-degree: 92%
 
 那么，为什么需要另一个 API 呢？
 
-Assets HTTP API 不仅可让您&#x200B;**读取**&#x200B;内容，还可让您&#x200B;**创建**、**更新**&#x200B;和&#x200B;**删除**&#x200B;内容，这些操作无法通过 GraphQL API 执行。
+资源HTTP API允许您 **读取** 您的内容，但它还允许您 **创建**， **更新** 和 **删除** content - GraphQL API无法执行的操作。
 
 Assets REST API 在最新版本的 Adobe Experience Manager 的每个现成安装中提供。
 
@@ -224,7 +224,6 @@ Assets REST API 使用 `/api/assets` 端点并需要资产路径才能访问资�
 >* `/api/assets`**不**&#x200B;需要使用 `.model` 选择器。
 >* `/content/path/to/page`**需要**&#x200B;使用 `.model` 选择器。
 
-
 ### 操作 {#operation}
 
 HTTP 方法决定了要执行的操作：
@@ -318,7 +317,7 @@ API 引用文档中将定义受支持请求的准确格式。
 
 <!--You should continue your AEM headless journey by next reviewing the document [How to Put It All Together - Your App and Your Content in AEM Headless](put-it-all-together.md) where you learn how to take your AEM Headless project and prepare it for going live.-->
 
-您应该通过下一次查看文档来继续您的AEM Headless历程 [如何使用Headless应用程序上线](go-live.md) 您实际将AEM Headless项目上线的位置！
+您应该通过下一次查看文档来继续您的AEM Headless历程 [如何使用Headless应用程序上线](go-live.md) AEM Headless项目实际上线的位置！
 
 ## 其他资源 {#additional-resources}
 

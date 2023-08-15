@@ -1,13 +1,13 @@
 ---
 title: 电子商务集成框架
-description: AEM eCommerce帮助营销人员跨Web、移动和社交接触点提供品牌化、个性化的购物体验。
+description: AEM eCommerce帮助营销人员跨Web、移动和社交接触点交付品牌化、个性化的购物体验。
 topic-tags: e-commerce
 content-type: reference
 docset: aem65
 exl-id: d995f0d6-9e48-4228-ac82-f33a0b25b9d3
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '753'
+source-wordcount: '749'
 ht-degree: 2%
 
 ---
@@ -17,14 +17,14 @@ ht-degree: 2%
 * [概念](/help/commerce/cif-classic/administering/concepts.md)
 * [管理（通用）](/help/commerce/cif-classic/administering/generic.md)
 
-Adobe提供了两个版本的Commerce Integration Framework：
+Adobe提供两个版本的Commerce Integration Framework：
 
 <table>
  <tbody>
   <tr>
    <th><p> </p> </th>
    <th><p>CIF内部部署</p> </th>
-   <th><p>CIF云</p> </th>
+   <th><p>CIF Cloud</p> </th>
   </tr>
   <tr>
    <td><p>支持的 AEM 版本</p> </td>
@@ -36,7 +36,7 @@ Adobe提供了两个版本的Commerce Integration Framework：
    <td>
     <ul>
      <li>AEM， Java</li>
-     <li>整体集成，预构建映射（模板）</li>
+     <li>整体集成，预建映射（模板）</li>
      <li>JCR存储库</li>
     </ul> </td>
    <td>
@@ -62,7 +62,7 @@ Adobe提供了两个版本的Commerce Integration Framework：
     <ul>
      <li>无产品导入</li>
      <li>通用模板</li>
-     <li>通过连接器按需提供数据</li>
+     <li>通过连接器的按需数据</li>
     </ul> </td>
   </tr>
   <tr>
@@ -85,7 +85,7 @@ Adobe提供了两个版本的Commerce Integration Framework：
   </tr>
   <tr>
    <td>可用性</td>
-   <td><p>是。SAPCommerce Cloud(扩展已更新，可支持AEM 6.4和Hybris 5 （默认），并保持与Hybris 4的兼容性</p> <p>SalesforceCommerce Cloud(支持AEM 6.4的开放源连接器)</p> </td>
+   <td><p>是。SAPCommerce Cloud(扩展已更新，以支持AEM 6.4和Hybris 5 （默认），并保持与Hybris 4的兼容性</p> <p>SalesforceCommerce Cloud(支持AEM 6.4的开放源连接器)</p> </td>
    <td>通过GitHub的开源提供。 Adobe Commerce (支持2.3.2（默认）并与2.3.1兼容)。</td>
   </tr>
   <tr>
@@ -105,7 +105,7 @@ Adobe提供了两个版本的Commerce Integration Framework：
 * 实时和集中存储记录
 * Web界面
 
-AEM eCommerce帮助营销人员跨Web、移动和社交接触点提供品牌化、个性化的购物体验。 AEM创作环境允许您根据目标访客上下文和促销策略自定义页面和组件；例如：
+AEM eCommerce帮助营销人员跨Web、移动和社交接触点交付品牌化、个性化的购物体验。 AEM创作环境允许您根据目标访客上下文和促销策略自定义页面和组件；例如：
 
 * 产品页面
 * 购物车组件
@@ -141,9 +141,9 @@ AEM eCommerce提供：
 
   >[!NOTE]
   >
-  >AEM提供的集成框架还允许您为商业功能构建其他AEM组件，而不依赖于特定的电子商务引擎。
+  >通过AEM提供的集成框架，您还可以独立于特定的电子商务引擎为商业功能构建其他AEM组件。
 
-* **搜索**  — 使用：
+* **Search**  — 使用：
 
    * AEM搜索
    * 电子商务系统的搜寻
@@ -152,26 +152,26 @@ AEM eCommerce提供：
 
   ![搜索示例](/help/sites-administering/assets/chlimage_1-131.png)
 
-* 使用AEM的功能来 **在多个渠道上展示您的内容**，可以是完整浏览器窗口或移动设备。 这将以访客所需的格式提供您的内容。
+* 使用AEM功能 **在多个渠道上展示您的内容**，可以是整个浏览器窗口或移动设备。 这将以访客所需的格式提供您的内容。
 
-  ![移动视图示例](/help/sites-administering/assets/chlimage_1-132.png)
+  ![移动设备视图示例](/help/sites-administering/assets/chlimage_1-132.png)
 
-* 能够 **根据以下内容开发您自己的集成实施： [AEM电子商务框架](#the-framework)**.
+* 能够 **根据以下内容开发您自己的集成实施 [AEM电子商务框架](#the-framework)**.
 
-  当前可用的两个实施均基于相同的基础构建 — 基于常规API（框架）。 实施新集成仅涉及实施您的集成所需的功能。 前端组件可供任何新实施使用，因为它们使用接口（因此独立于实施）。
+  当前可用的两个实施均基于相同的基础构建 — 基于常规API（框架）。 实施新集成仅涉及实施您的集成所需的功能。 任何新实施均可使用前端组件，因为它们使用接口（因此独立于实施）。
 
-* 开发的可能性 **基于购物者数据和活动的体验驱动型商务**. 这允许您实现许多场景：
+* 开发以下项目的可能性 **基于购物者数据和活动的体验驱动型商务**. 这让您可以了解许多场景：
 
-   * 例如，当订单总额超过特定金额时，可以降低运费。
-   * 另一种方法可能会允许您提供使用配置文件数据的季节性优惠（例如，位置）。 然后，可以突出显示这些内容，同样在必要时取决于其他因素。
+   * 例如，当订单总额超过特定数量时，可以降低运费。
+   * 另一种方法可能会让您提供使用用户档案数据的季节性选件（例如，位置）。 之后，可以高亮显示这些内容，在必要时同样取决于其他因素。
 
-  在以下示例中，显示了一个Teaser，因为购物车的内容不到$75：
+  在下面的示例中，显示了一个Teaser，因为购物车的内容不到$75：
 
   ![具有客户上下文的购物车](/help/sites-administering/assets/chlimage_1-133.png)
 
-  当购物车内容超过$75时，可以更改此值：
+  当购物车内容超过$75时，可以更改此设置：
 
-  ![更改后具有客户上下文的购物车](/help/sites-administering/assets/chlimage_1-134.png)
+  ![更改后具有客户端上下文的购物车](/help/sites-administering/assets/chlimage_1-134.png)
 
 * 以及其他功能，包括：
 
@@ -181,17 +181,17 @@ AEM eCommerce提供：
 
 ## 框架 {#the-framework}
 
-此 [概念](/help/commerce/cif-classic/administering/concepts.md) 部分更详细地介绍了该框架，但以下部分提供了该框架的高级、高速视图：
+此 [概念](/help/commerce/cif-classic/administering/concepts.md) 部分将更详细地介绍该框架，但以下部分提供了该框架的高级、高速视图：
 
 ### 什么？ {#what}
 
 * 集成框架提供了API、一系列用于说明功能的组件，以及多个用于提供连接方法示例的扩展。
 * 该框架提供了项目实施所需的基本结构。
 * 该框架是可扩展的。
-* 该框架不提供开箱即用、随时可用的站点。 始终需要执行一定数量的开发工作来使框架适应您的规范。
+* 该框架不提供现成、随时可用的站点。 始终需要执行一定数量的开发工作来根据您的规范调整框架。
 
 ### 为什么？ {#why}
 
-* 提供快速实现电子商务网站定制所需的基本机制。
+* 提供快速实现定制电子商务网站所需的基本机制。
 * Tp提供了开发实际电子商务网站所需的灵活性。
 * 说明最佳实践。

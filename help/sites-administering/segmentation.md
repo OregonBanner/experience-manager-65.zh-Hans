@@ -10,10 +10,10 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: 6cade87c-9ed5-47d7-9b39-c942268afdad
 exl-id: 8bd6c88b-f36a-422f-ae6c-0d59f365079a
-source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1787'
-ht-degree: 79%
+source-wordcount: '1783'
+ht-degree: 77%
 
 ---
 
@@ -21,37 +21,38 @@ ht-degree: 79%
 
 >[!NOTE]
 >
->本节介绍在使用ContextHub时配置分段。 如果您使用的是Client Context功能，请参阅相关的文档 [为Client Context配置分段](/help/sites-administering/campaign-segmentation.md).
+>本节介绍如何在使用ContextHub时配置分段。 如果您使用的是客户端上下文功能，请参阅相关的文档 [为Client Context配置分段](/help/sites-administering/campaign-segmentation.md).
+>
 
-分段是创建营销活动时的主要考虑事项。参见 [管理受众](/help/sites-authoring/managing-audiences.md) 了解分段的工作方式和关键术语。
+分段是创建营销活动时的主要考虑事项。请参阅 [管理受众](/help/sites-authoring/managing-audiences.md) 有关分段的工作方式和关键术语的信息。
 
 根据您收集到的有关网站访客的信息以及要实现的目标，您将需要定义目标内容所需的区段和策略。
 
-之后，这些区段可用于为访客提供具体的目标内容。此内容维护在 [个性化](/help/sites-authoring/personalization.md) 部分。 此处定义的[活动](/help/sites-authoring/activitylib.md)可以包含在任何页面上，并定义专用内容适用于的访客区段。
+之后，这些区段可用于为访客提供具体的目标内容。此内容维护于 [个性化](/help/sites-authoring/personalization.md) 部分。 此处定义的[活动](/help/sites-authoring/activitylib.md)可以包含在任何页面上，并定义专用内容适用于的访客区段。
 
-AEM允许您轻松个性化用户体验。 它还允许您验证区段定义的结果。
+AEM可让您轻松个性化用户体验。 它还允许您验证区段定义的结果。
 
 ## 访问区段 {#accessing-segments}
 
-此 [受众](/help/sites-authoring/managing-audiences.md) console用于管理ContextHub或Client Context的区段以及Adobe Target帐户的受众。 本文档介绍了如何管理 ContextHub 的区段。对象 [客户端上下文区段](/help/sites-administering/campaign-segmentation.md) 和Adobe Target区段，请参阅相关文档。
+此 [受众](/help/sites-authoring/managing-audiences.md) 控制台用于管理ContextHub或Client Context的区段以及Adobe Target帐户的受众。 本文档介绍了如何管理 ContextHub 的区段。对象 [客户端上下文区段](/help/sites-administering/campaign-segmentation.md) 和Adobe Target区段，请参阅相关文档。
 
 要访问区段，您需要选择配置。 在全局导航中，选择 **导航>个性化>受众**. 您将看到可用的配置：
 
 ![受众 — 配置](assets/segmentation-access-confs.png)
 
-选择您的配置以查看区段，例如WKND站点：
+选择您的配置以查看区段，例如WKND Site：
 
 ![受众 — 区段](assets/segmentation-access-segments.png)
 
 ## 区段编辑器 {#segment-editor}
 
-**区段编辑器**&#x200B;可让您轻松修改区段。要编辑区段，请在 [区段列表](/help/sites-administering/segmentation.md#accessing-segments) 并单击 **编辑** 按钮。
+此 **区段编辑器** 可让您轻松修改区段。 要编辑区段，请在 [区段列表](/help/sites-administering/segmentation.md#accessing-segments) 然后单击 **编辑** 按钮。
 
 ![segmenteditor](assets/segmenteditor.png)
 
 利用组件浏览器，您可以添加 **AND** 和 **OR** 容器来定义区段逻辑，然后添加其他组件以比较属性和值，或参考脚本和其他区段以定义选择标准（请参阅[创建新区段](#creating-a-new-segment)），从而定义选择区段的确切场景。
 
-当整个语句的计算结果为 true 时，表示该区段已解析。在适用多个区段的情况下，也将使用 **Boost** 因素。参见 [创建新区段](#creating-a-new-segment) ，以了解有关 [提升因子。](/help/sites-administering/campaign-segmentation.md#boost-factor)
+当整个语句的计算结果为 true 时，表示该区段已解析。在适用多个区段的情况下，也将使用 **Boost** 因素。请参阅 [创建新区段](#creating-a-new-segment) ，以了解有关 [提升因子。](/help/sites-administering/campaign-segmentation.md#boost-factor)
 
 >[!CAUTION]
 >
@@ -59,7 +60,7 @@ AEM允许您轻松个性化用户体验。 它还允许您验证区段定义的�
 
 ### 容器 {#containers}
 
-以下容器是现成可用的，可让您将比较和引用分组在一起以进行布尔评估。可以将它们从组件浏览器拖到编辑器中。有关更多信息，请参阅下面的[使用 AND 和 OR 容器](/help/sites-administering/segmentation.md#using-and-and-or-containers)部分。
+以下容器是现成可用的，可让您将比较和引用分组在一起以进行布尔评估。 可以将它们从组件浏览器拖到编辑器中。有关更多信息，请参阅下面的[使用 AND 和 OR 容器](/help/sites-administering/segmentation.md#using-and-and-or-containers)部分。
 
 <table>
  <tbody>
@@ -81,24 +82,24 @@ AEM允许您轻松个性化用户体验。 它还允许您验证区段定义的�
 <table>
  <tbody>
   <tr>
-   <td>Property-Value<br /> </td>
+   <td>Property-Value<br />。 </td>
    <td>将存储的一个属性与一个定义的值进行比较<br /> </td>
   </tr>
   <tr>
    <td>Property-Property</td>
-   <td>将存储的一个属性与另一个属性进行比较<br /> </td>
+   <td>将存储的一个属性与另一个属性进行比较<br />。 </td>
   </tr>
   <tr>
    <td>Property-Segment 引用</td>
-   <td>将存储的一个属性与另一个引用的区段进行比较<br /> </td>
+   <td>将存储的一个属性与另一个引用的区段进行比较<br />。 </td>
   </tr>
   <tr>
    <td>Property-Script 引用</td>
-   <td>将存储的一个属性与脚本结果进行比较<br /> </td>
+   <td>将存储的一个属性与脚本结果进行比较<br />。 </td>
   </tr>
   <tr>
    <td>区段 Reference-Script 引用</td>
-   <td>将引用的区段与脚本的结果进行比较<br /> </td>
+   <td>将引用的区段与脚本的结果进行比较<br />。 </td>
   </tr>
  </tbody>
 </table>
@@ -120,7 +121,7 @@ AEM允许您轻松个性化用户体验。 它还允许您验证区段定义的�
 <table>
  <tbody>
   <tr>
-   <td>区段引用<br /> </td>
+   <td>区段引用<br />。 </td>
    <td>评估引用的区段</td>
   </tr>
   <tr>
@@ -174,7 +175,7 @@ AEM允许您轻松个性化用户体验。 它还允许您验证区段定义的�
 
 女性，30至59岁
 
-首先，在默认的 AND 容器中放置一个 OR 容器组件。在OR容器中，您可以添加两个AND容器，并且在这两个容器中都可以添加属性或引用组件。
+首先，在默认的 AND 容器中放置一个 OR 容器组件。在OR容器中，您可以添加两个AND容器，并在这两个容器中添加属性或引用组件。
 
 ![screen_shot_2012-02-02at105145am](assets/screen_shot_2012-02-02at105145ama.png)
 
@@ -255,7 +256,7 @@ this.dependOn(ContextHub.SegmentEngine.Property('profile/age'));
 1. 此文件夹将显示在区段列表中。
    * 您的列排序方式将影响新文件夹在列表中的显示位置。
    * 您可以点按或单击列标题来调整您的排序。
-      ![新文件夹](assets/contexthub-folder.png)
+     ![新文件夹](assets/contexthub-folder.png)
 
 ### 修改现有文件夹 {#modify-folders}
 
@@ -322,7 +323,7 @@ this.dependOn(ContextHub.SegmentEngine.Property('profile/age'));
 
 此类测试也可在内容页面上执行，并与目标内容以及相关的&#x200B;**活动**&#x200B;和&#x200B;**体验**&#x200B;相结合。
 
-如果您使用上述主要年龄组区段示例设置了活动和体验，则可以轻松地使用活动测试区段。 有关设置活动的详细信息，请参阅[有关创作目标内容的文档](/help/sites-authoring/content-targeting-touch.md)。
+如果您使用上面的主要年龄组区段示例设置了活动和体验，则可以轻松地使用活动测试区段。 有关设置活动的详细信息，请参阅[有关创作目标内容的文档](/help/sites-authoring/content-targeting-touch.md)。
 
 1. 在已设置目标内容的页面的编辑模式下，您可以看到已通过内容上的箭头图标来目标内容。
 

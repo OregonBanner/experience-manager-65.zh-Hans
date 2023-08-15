@@ -1,8 +1,8 @@
 ---
 title: 迁移 AEM Forms 资产和文档
 seo-title: Migrate AEM Forms assets and documents
-description: 通过迁移实用程序，您可以将AEM Forms资产和文档从AEM 6.3 Forms或之前的版本迁移到AEM 6.4 Forms。
-seo-description: The Migration utility allows you to Migrate AEM Forms assets and documents from AEM 6.3 Forms or prior versions to AEM 6.4 Forms.
+description: 通过迁移实用程序，您可以将AEM Forms资源和文档从AEM 6.3 Forms或更早版本迁移到AEM 6.4 Forms。
+seo-description: The Migration utility lets you Migrate AEM Forms assets and documents from AEM 6.3 Forms or prior versions to AEM 6.4 Forms.
 uuid: a3fdf940-7fc2-441c-91c8-ad66ba47e5f2
 content-type: reference
 topic-tags: correspondence-management, installing
@@ -13,16 +13,16 @@ discoiquuid: 39dfef85-d047-4b6d-a0f5-92bd77df103b
 docset: aem65
 role: Admin
 exl-id: 0f9aab7d-8e41-449a-804b-7e1bfa90befd
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1743'
+source-wordcount: '1742'
 ht-degree: 1%
 
 ---
 
 # 迁移 AEM Forms 资产和文档{#migrate-aem-forms-assets-and-documents}
 
-迁移实用程序将 [自适应Forms资源](../../forms/using/introduction-forms-authoring.md)， [云配置](/help/sites-developing/extending-cloud-config.md)、和 [相应的管理资产](/help/forms/using/cm-overview.md) 从早期版本中使用的格式转换为AEM 6.5 Forms中使用的格式。 运行迁移实用程序时，将迁移以下内容：
+迁移实用程序将转换 [自适应Forms资源](../../forms/using/introduction-forms-authoring.md)， [云配置](/help/sites-developing/extending-cloud-config.md)、和 [相应的管理资源](/help/forms/using/cm-overview.md) 从早期版本中使用的格式转换到AEM 6.5 Forms中使用的格式。 运行迁移实用程序时，将迁移以下内容：
 
 * 自适应表单的自定义组件
 * 自适应表单和通信管理模板
@@ -31,23 +31,23 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->如果升级不当（如果是Correspondence Management资产），则可以在每次导入资产时运行迁移。 对于通信管理迁移，您需要安装Forms兼容包。
+>如果升级不当（如果升级了“通信管理”资产），则可以在每次导入资产时运行迁移。 对于通信管理迁移，您需要安装Forms兼容包。
 
 ## 迁移方法 {#approach-to-migration}
 
-您可以 [升级](../../forms/using/upgrade.md) 从AEM Forms 6.4、6.3或6.2升级到AEM Forms 6.5的最新版本或执行全新安装。 根据您是升级了以前的安装还是执行了全新安装，您需要执行以下操作之一：
+您可以 [升级](../../forms/using/upgrade.md) 从AEM Forms 6.4、6.3或6.2到最新版本的AEM Forms 6.5，或者执行全新安装。 根据您是升级以前的安装还是执行了全新安装，您需要执行以下操作之一：
 
 **在就地升级的情况下**
 
-如果您执行就地升级，则升级的实例已经具有资产和文档。 但是，在使用资源和文档之前，您需要安装 [AEMFD兼容包](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) （包括通信管理兼容包）
+如果您执行就地升级，则升级的实例已经具有资源和文档。 但是，在使用资源和文档之前，您需要安装 [AEMFD兼容包](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) （包括Correspondence Management兼容包）
 
 然后，您需要通过以下方式更新资源和文档 [运行迁移实用程序](#runningmigrationutility).
 
-**如果安装不适当**
+**如果安装不恰当**
 
-如果这是非现场（全新）安装，则在使用资源和文档之前，您需要安装 [AEMFD兼容包](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) （包括Correspondence Management兼容包）。
+如果这是异地（全新）安装，则在使用资产和文档之前，您需要安装 [AEMFD兼容包](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) （包括Correspondence Management兼容包）。
 
-然后，您需要在新设置中导入资源包（zip或cmp），然后通过以下方式更新资源和文档 [运行迁移实用程序](#runningmigrationutility). Adobe建议仅在运行迁移实用程序后，才在新设置中创建新资源。
+然后，您需要在新设置中导入资产包（zip或cmp），然后通过以下方式更新资产和文档 [运行迁移实用程序](#runningmigrationutility). Adobe建议，只有在运行迁移实用程序之后，才能在新设置中创建新资源。
 
 到期日期 [向后兼容性相关](/help/sites-deploying/backward-compatibility.md) 更改，crx-repository中几个文件夹的位置也会更改。 手动将依赖项（自定义库和资产）从以前的设置导出和导入到新的环境。
 
@@ -56,35 +56,35 @@ ht-degree: 1%
 对于相应的管理资产：
 
 * 对于从上一个平台导入的资产，将添加一个属性： **fd：version=1.0**.
-* 自AEM 6.1 Forms起，无法提供现成的注释。 以前添加的注释可在资源中使用，但不会自动在界面中显示。 您需要在AEM Forms用户界面中自定义extendedProperties属性，以使注释可见。
-* 在某些早期版本(如LiveCycleES4)中，文本是使用Flex RichTextEditor编辑的，但由于AEM 6.1 Forms，因此使用HTML编辑器。 由于这种渲染和字体外观，字体大小和字体边距可能与创作用户界面中以前的版本不同。 但是，字母在呈现时看起来相同。
-* 文本模块中的列表已得到改进，现在呈现方式不同。 可能有视觉差异。 我们建议您渲染并查看您在文本模块中使用列表的字母。
-* 由于图像内容模块在迁移期间被转换为DAM资产并且布局和片段被添加到表单，因此这些模块的“更新者”属性更改为“管理员”。
-* 资产的版本历史记录未迁移，且在迁移后不可用。 迁移后的后续版本历史记录将进行维护。
-* 由于AEM 6.1 Forms已弃用“发布就绪”状态，因此“发布就绪”状态的所有资源都将更改为“已修改”状态。
-* 由于用户界面在AEM Forms 6.3中进行了更新，因此执行自定义设置的步骤也有所不同。 如果要从6.3之前的版本迁移，则需要重做自定义设置。
+* 自AEM 6.1 Forms起，无法立即使用注释。 之前添加的注释可在资源中使用，但不会自动在界面中显示。 您需要在AEM Forms用户界面中自定义extendedProperties属性，以使注释可见。
+* 在某些早期版本(如LiveCycleES4)中，文本是使用Flex RichTextEditor进行编辑的，但由于AEM 6.1 Forms，因此使用HTML编辑器。 由于这种渲染和字体外观，字体大小和字体边距可能与创作用户界面中以前的版本不同。 但是，字母在呈现时看起来相同。
+* 文本模块中的列表已得到改进，现在呈现方式有所不同。 视觉上可能有所差异。 我们建议您呈现并查看您在文本模块中使用列表的字母。
+* 由于图像内容模块已转换为DAM资源并在迁移期间将布局和片段添加到表单，因此这些模块的“更新者”属性将更改为“管理员”。
+* 资产的版本历史记录未迁移，且在迁移后不可用。 迁移后的后续版本历史记录将得到维护。
+* 由于AEM 6.1 Forms已弃用发布准备就绪状态，因此所有处于发布准备就绪状态的资源都将更改为已修改状态。
+* 由于用户界面在AEM Forms 6.3中进行了更新，因此执行自定义设置的步骤也有所不同。 如果您是从6.3之前的版本迁移，则需要重做自定义设置。
 * 布局片段从/content/apps/cm/layouts/fragmentlayouts/1001移至/content/apps/cm/modules/fragmentlayouts。 资产中的数据字典引用显示数据字典的路径而不是其名称。
 * 文本模块中用于对齐的任何制表符空格都需要重新调整。 有关更多信息，请参阅 [通信管理 — 使用制表符间距排列文本](https://helpx.adobe.com/aem-forms/kb/cm-tab-spacing-limitations.html).
-* 资产编辑器配置对通信管理配置的更改。
-* 资产会移动到名为“现有文本”和“现有列表”等名称的文件夹下。
+* 资产编辑器配置会更改为通信管理配置。
+* 资产将移动到名为“现有文本”和“现有列表”等名称的文件夹下。
 
 ## 使用迁移实用程序 {#using-the-migration-utility}
 
 ### 运行迁移实用程序 {#runningmigrationutility}
 
-在对资源进行任何更改或创建资源之前，先运行迁移实用程序。 我们建议您在进行任何更改或创建资产后，不要运行该实用程序。 确保在迁移过程中未打开通信管理或自适应Forms Assets用户界面。
+在对资源进行任何更改或创建资源之前，先运行迁移实用程序。 我们建议您在进行任何更改或创建资产后不要运行该实用程序。 确保在迁移过程中未打开通信管理或自适应Forms Assets用户界面。
 
-首次运行迁移实用程序时，将使用以下路径和名称创建一个日志： `\[aem-installation-directory]\cq-quickstart\logs\aem-forms-migration.log`. 此日志会不断更新通信管理和自适应Forms迁移信息，例如资产移动。
+首次运行Migration Utility时，将使用以下路径和名称创建日志： `\[aem-installation-directory]\cq-quickstart\logs\aem-forms-migration.log`. 此日志会不断更新通信管理和自适应Forms迁移信息，例如移动资源。
 
 >[!NOTE]
 >
 >在运行迁移实用程序之前，请确保已备份crx存储库。
 
-1. 在浏览器会话中，以管理员身份登录AEM创作实例。
+1. 在浏览器会话中，以管理员身份登录到AEM创作实例。
 
 1. 在浏览器中打开以下URL：
 
-   https://[*主机名*]：[*端口*]/[*context_path*]/libs/fd/foundation/gui/content/migration.html
+   https://[*主机名*]：[*端口*]/[*上下文路径*]/libs/fd/foundation/gui/content/migration.html
 
    浏览器显示四个选项：
 
@@ -95,7 +95,7 @@ ht-degree: 1%
 
 1. 执行以下操作以执行迁移：
 
-   * 要迁移 **资产**，点按AEM Forms资产迁移，然后在下一个屏幕中，点按 **开始迁移**. 以下内容已迁移：
+   * 要迁移 **资产**，点按AEM Forms资产迁移，然后在下一个屏幕中，点按 **开始迁移**. 将迁移以下项：
 
       * 自适应表单
       * 文档片段
@@ -105,31 +105,36 @@ ht-degree: 1%
 
    >[!NOTE]
    >
-   >在资源迁移期间，您可能会发现警告消息，例如“Conflict found for...”。 此类消息指示无法迁移自适应表单中某些组件的规则。 例如，如果组件的一个事件同时具有规则和脚本，则如果规则发生在任何脚本之后，则不会迁移组件的任何规则。 您可以 [通过打开规则编辑器迁移此类规则](#migrate-rules) 在自适应表单创作中。
+   >在资源迁移过程中，您可能会找到警告消息，例如“发现冲突……”。 此类消息指示无法迁移自适应表单中某些组件的规则。 例如，如果组件有一个同时包含规则和脚本的事件，如果规则发生在任何脚本之后，则不会迁移组件的任何规则。 您可以 [通过打开规则编辑器迁移此类规则](#migrate-rules) 在自适应表单创作中。
 
-   * 要迁移自适应表单自定义组件，请点按 **自适应Forms自定义组件迁移** 在“自定义组件迁移”页面中，点按 **开始迁移**. 以下内容已迁移：
+   * 要迁移自适应表单自定义组件，请点击 **自适应Forms自定义组件迁移** 在自定义组件迁移页面中，点按 **开始迁移**. 将迁移以下项：
 
       * 为自适应Forms编写的自定义组件
       * 组件叠加（如果有）。
-   * 要迁移自适应表单模板，请点按 **自适应Forms模板迁移** 在“自定义组件迁移”页面中，点按 **开始迁移**. 以下内容已迁移：
+
+   * 要迁移自适应表单模板，请点击 **自适应Forms模板迁移** 在自定义组件迁移页面中，点按 **开始迁移**. 将迁移以下项：
 
       * 自适应表单模板创建于 `/apps` 或 `/conf` 使用AEM模板编辑器。
-   * 迁移AEM Forms Cloud Configuration Services以利用新的上下文感知云服务范例，其中包括支持触摸的UI(在 `/conf`)。 迁移AEM Forms云配置服务时，云服务位于 `/etc` 已移动到 `/conf`. 如果您没有任何依赖于旧版路径的云服务自定义(`/etc`)，建议您在升级到6.5后立即运行迁移实用程序，并使用云配置触屏UI执行任何进一步的工作。 如果您有任何现有的云服务自定义设置，请在升级后的设置上继续使用经典UI，直到自定义设置更新为与迁移的路径保持一致(`/conf`)，然后运行迁移实用程序。
 
-   要迁移 **AEM Forms云服务**，包括以下)点按AEM Forms云配置迁移（云配置迁移独立于AEMFD兼容包），点按AEM Forms云配置迁移，然后点按配置迁移页面 **开始迁移**：
+   * 迁移AEM Forms Cloud Configuration Services以利用新的上下文感知云服务模式，包括支持触摸的UI(在 `/conf`)。 迁移AEM Forms云配置服务时，云服务位于 `/etc` 已移动到 `/conf`. 如果您没有任何依赖于旧版路径的云服务自定义(`/etc`)，建议您在升级到6.5后立即运行迁移实用程序，并使用云配置触屏UI执行任何进一步的工作。 如果您有任何现有的云服务自定义设置，请继续在升级后的设置中使用经典UI，直到自定义设置更新以与迁移的路径保持一致(`/conf`)，然后运行迁移实用程序。
+
+   要迁移 **AEM Forms云服务**，其中包括以下内容：点按AEM Forms云配置迁移（云配置迁移独立于AEMFD兼容包），点按AEM Forms云配置迁移，然后点按配置迁移页面上的迁移 **开始迁移**：
 
    * 表单数据模型云服务
 
       * 源路径： `/etc/cloudservices/fdm`
       * 目标路径： `/conf/global/settings/cloudconfigs/fdm`
+
    * Recaptcha
 
       * 源路径： `/etc/cloudservices/recaptcha`
       * 目标路径： `/conf/global/settings/cloudconfigs/recaptcha`
+
    * Adobe Sign
 
       * 源路径： `/etc/cloudservices/echosign`
       * 目标路径： `/conf/global/settings/cloudconfigs/echosign`
+
    * Typekit云服务
 
       * 源路径： `/etc/cloudservices/typekit`
@@ -137,36 +142,27 @@ ht-degree: 1%
 
    在迁移过程中，浏览器窗口会显示以下内容：
 
-   * 资产更新时：资产已成功更新。
-   * 迁移完成后：完成对资产的迁移。
+   * 资产更新后：资产已成功更新。
+   * 迁移完成后：完成资产的迁移。
 
    执行时，迁移实用程序将执行以下操作：
 
-   * **将标记添加到资源**：添加标记“Correspondence Management ： Migrated Assets”/“Adaptive Forms ： Migrated Assets”。 ，以便用户能够识别已迁移的资产。 运行迁移实用程序时，系统中所有现有资产均被标记为“已迁移”。
-   * **生成标记**：以前系统中存在的类别和子类别将作为标记创建，然后这些标记与AEM中的相关通信管理资产相关联。 例如，信件模板的类别（索赔）和子类别（索赔）作为标记生成。
+   * **将标记添加到资源**：添加标记“通信管理：已迁移资源”/“自适应Forms：已迁移资源”。 ，以便用户能够识别已迁移的资产。 运行迁移实用程序时，系统中所有现有资源均标记为已迁移。
+   * **生成标记**：以前系统中存在的类别和子类别将作为标记创建，然后这些标记与AEM中的相关通信管理资源相关联。 例如，信件模板的类别（索赔）和子类别（索赔）作为标记生成。
 
-
-
-
-
-
-
-
-
-
-1. 迁移实用程序运行完毕后，请转到 [内务管理任务](#housekeepingtasks).
+1. 在迁移实用程序运行完成后，继续执行 [内部管理任务](#housekeepingtasks).
 
 #### 使用规则编辑器迁移规则 {#migrate-rules}
 
-通过在自适应Forms编辑器中的规则编辑器中打开这些组件，可以迁移这些组件。
+通过在自适应Forms编辑器的规则编辑器中打开这些组件，可以迁移这些组件。
 
-* 要在自定义组件中迁移规则和脚本（如果从6.3升级，则不需要），请点按自适应Forms自定义组件迁移，然后在下一个屏幕中，点按开始迁移。 以下内容已迁移：
+* 要在自定义组件中迁移规则和脚本（如果从6.3升级，则不需要这样做），请点按自适应Forms自定义组件迁移，然后在下一个屏幕中，点按开始迁移。 将迁移以下项：
 
    * 使用规则编辑器（6.1 FP1及更高版本）创建的规则和脚本
 
    * 在6.1及更低版本的UI中使用“脚本”选项卡创建的脚本
 
-* 要迁移模板（从6.3和6.4升级时不需要），请点按自适应Forms模板迁移，然后在下一个屏幕中，点按开始迁移。 以下内容已迁移：
+* 要迁移模板（如果从6.3和6.4升级，则不需要迁移模板），请点按自适应Forms模板迁移，然后在下一个屏幕中，点按开始迁移。 将迁移以下项：
 
    * 旧模板 — 在/apps下使用AEM 6.1 Forms或更低版本创建的自适应表单模板。 这包括模板组件中定义的脚本。
 
@@ -176,13 +172,13 @@ ht-degree: 1%
 
 运行迁移实用程序后，请完成以下内部管理任务：
 
-1. 确保布局和片段布局的XFA版本为3.3或更高版本。 如果您使用的是旧版本的布局和片段布局，则呈现书信时可能会出现问题。 要将旧版XFA更新到最新版本，请完成以下步骤：
+1. 确保布局和片段布局的XFA版本为3.3或更高版本。 如果您使用的是较旧版本的布局和片段布局，则呈现信件时可能会出现问题。 要将旧版XFA更新到最新版本，请完成以下步骤：
 
-   1. [将XFA下载为zip文件](../../forms/using/import-export-forms-templates.md#p-import-and-export-assets-in-correspondence-management-p) 从Forms用户界面访问。
+   1. [以zip文件格式下载XFA](../../forms/using/import-export-forms-templates.md#p-import-and-export-assets-in-correspondence-management-p) 从Forms用户界面访问。
    1. 提取文件。
-   1. 在最新的设计器中打开XFA文件并保存。 XFA的版本会更新到最新版本。
+   1. 在最新的设计器中打开XFA文件并保存。 XFA的版本将更新到最新版本。
    1. 在Forms用户界面中上传XFA。
 
-1. 发布迁移前在上一个系统中发布的所有资源。 迁移实用程序仅更新创作实例上的资产，并在发布实例上更新您需要发布资产的资产。
+1. 发布迁移前在上一个系统中发布的所有资源。 迁移实用程序仅在创作实例上更新资产，而在发布实例上更新资产时，您需要发布资产。
 
-1. 在AEM Forms 6.4和6.5中，更改了表单用户组的某些权限。 如果您希望您的任何用户能够上传包含脚本的XDP和自适应Forms或使用代码编辑器，则需要将它们添加到表单超级用户组。 同样，模板作者不能再使用规则编辑器中的代码编辑器。 要使用户能够使用代码编辑器，请将他们添加到af-template-script-writers组中。 有关将用户添加到组的说明，请参阅 [管理用户和用户组](/help/communities/users.md).
+1. 在AEM Forms 6.4和6.5中，更改了Forms用户组的某些权限。 如果您希望您的任何用户能够上传XDP和包含脚本的自适应Forms或使用代码编辑器，则需要将它们添加到forms-power-users组。 同样，模板作者无法在规则编辑器中再使用代码编辑器。 要使用户能够使用代码编辑器，请将其添加到af-template-script-writers组。 有关将用户添加到组的说明，请参阅 [管理用户和用户组](/help/communities/users.md).

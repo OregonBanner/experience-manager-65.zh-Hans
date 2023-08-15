@@ -1,20 +1,20 @@
 ---
 title: 用于内容片段的 AEM GraphQL API
-description: 了解如何在Adobe Experience Manager (AEM)中将内容片段与AEM GraphQL API一起使用来投放Headless内容。
+description: 了解如何在Adobe Experience Manager (AEM)中将内容片段与AEM GraphQL API用于Headless内容投放。
 feature: Content Fragments,GraphQL API
 exl-id: beae1f1f-0a76-4186-9e58-9cab8de4236d
-source-git-commit: 1481d613783089046b44d4652d38f7b4b16acc4d
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '4479'
-ht-degree: 56%
+source-wordcount: '4477'
+ht-degree: 59%
 
 ---
 
 # 用于内容片段的 AEM GraphQL API {#graphql-api-for-use-with-content-fragments}
 
-了解如何在Adobe Experience Manager (AEM)中将内容片段与AEM GraphQL API一起使用来投放Headless内容。
+了解如何在Adobe Experience Manager (AEM)中将内容片段与AEM GraphQL API用于Headless内容投放。
 
-与内容片段一起使用的AEM GraphQL API很大程度上基于标准的开源GraphQL API。
+与内容片段一起使用的AEM GraphQL API很大程度上依赖于标准的开源GraphQL API。
 
 在 AEM 中使用 GraphQL API 可以在 Headless CMS 实施中，高效地将内容片段投放到 JavaScript 客户端：
 
@@ -24,37 +24,36 @@ ht-degree: 56%
 
 >[!NOTE]
 >
->GraphQL在Adobe Experience Manager (AEM)中的两种（单独的）情况下使用：
+>GraphQL在Adobe Experience Manager (AEM)中使用两种（不同的）方案：
 >
 >* [AEM Commerce 通过 GraphQL 使用来自 Commerce 平台的数据](/help/commerce/cif/integrating/magento.md)。
 >* AEM 内容片段与 AEM GraphQL API（一种自定义实施，基于标准 GraphQL）配合使用，提供结构化内容用于您的应用程序。
 
-
 ## 前提条件 {#prerequisites}
 
-使用GraphQL的客户应安装AEM内容片段以及GraphQL索引包1.0.5。请参阅 [发行说明](/help/release-notes/release-notes.md#install-aem-graphql-index-add-on-package) 了解更多详细信息。
+使用GraphQL的客户应安装AEM内容片段和GraphQL索引包1.0.5。请参阅 [发行说明](/help/release-notes/release-notes.md#install-aem-graphql-index-add-on-package) 以了解更多详细信息。
 
 ## GraphQL API {#graphql-api}
 
 GraphQL 是：
 
-* “*...一种用于 API 和运行时的查询语言，使用您的现有数据满足这些查询。GraphQL为API中的数据提供完整且可理解的描述。 它使客户端能够精确地请求他们所需要的内容，而不用再请求其他内容，使API更容易随时间演进，并提供了强大的开发人员工具。*“。
+* “*...一种用于 API 和运行时的查询语言，使用您的现有数据满足这些查询。GraphQL提供了API中数据的完整且可理解的描述。 它使客户端能够精确地请求所需要的信息，而不再需要其他内容，让API更容易随时间演进，并提供了强大的开发人员工具。*“。
 
-   请参阅 [GraphQL.org](https://graphql.org)。
+  请参阅 [GraphQL.org](https://graphql.org)。
 
 * “*...一种面向灵活 API 层的开发规格。将GraphQL放在现有后端之上，以便您以前所未有的速度构建产品....*“。
 
-   请参阅[探索 GraphQL](https://graphql.com/)。
+  请参阅[探索 GraphQL](https://graphql.com/)。
 
 * *“……一种数据查询语言和规范，由Facebook在2012年内部开发，然后在2015年公开开源发布。 它提供了对基于 REST 的架构的替代，其目的是为了提高开发人员的工作效率并尽可能减少传输的数据量。GraphQL 已由各种规模的数百家组织用于生产环境中...”*
 
-   请参阅 [GraphQL 基础](https://graphql.org/foundation)。
+  请参阅 [GraphQL 基础](https://graphql.org/foundation)。
 
 <!--
 "*Explore GraphQL is maintained by the Apollo team. Our goal is to give developers and technical leaders around the world all of the tools they need to understand and adopt GraphQL.*". 
 -->
 
-有关GraphQL API的更多信息，请参阅以下部分（以及许多其他资源）：
+有关GraphQL API的更多信息，请参阅以下部分（以及其他许多资源）：
 
 * 位于 [graphql.org](https://graphql.org)：
 
@@ -129,9 +128,9 @@ AEM提供了将查询（两种类型）转换为 [持久查询](/help/sites-deve
 
 >[!NOTE]
 >
->GraphiQL包含在AEM的所有环境中（但仅在配置端点时可访问/可见）。
+>GraphiQL包含在AEM的所有环境中（但只有在配置端点时才能访问/显示）。
 >
->在以前的版本中，安装GraphiQL IDE时需要软件包。 如果已安装此包，则现在可以将其删除。
+>在以前的版本中，安装GraphiQL IDE时需要软件包。 如果您已安装此软件包，现在可以将其删除。
 
 利用此界面，可直接输入和测试查询。
 
@@ -145,7 +144,7 @@ AEM提供了将查询（两种类型）转换为 [持久查询](/help/sites-deve
 
 >[!NOTE]
 >
->参见 [使用GraphiQL IDE](/help/sites-developing/headless/graphql-api/graphiql-ide.md).
+>请参阅 [使用GraphiQL IDE](/help/sites-developing/headless/graphql-api/graphiql-ide.md).
 
 ## 针对创作环境和发布环境的用例 {#use-cases-author-publish-environments}
 
@@ -163,15 +162,15 @@ AEM提供了将查询（两种类型）转换为 [持久查询](/help/sites-deve
 
 访问Assets需要权限。
 
-GraphQL查询是在基础请求的AEM用户的权限下运行的。 如果用户对某些片段（存储为资产）没有读取权限，它们不会成为结果集的一部分。
+GraphQL查询是在基础请求的AEM用户的权限下运行的。 如果用户对某些片段（存储为资产）没有读取权限，它们将不会成为结果集的一部分。
 
 此外，用户必须有权访问GraphQL端点才能运行GraphQL查询。
 
 ## 架构生成 {#schema-generation}
 
-GraphQL是一种类型的API，这意味着数据必须结构明确且按类型组织。
+GraphQL是一种类型的API，这意味着数据必须清楚地按类型构建和组织结构。
 
-GraphQL 规范提供了一系列准则，说明如何创建可靠的 API 用于询问特定实例上的数据。要完成这些准则，客户端必须获取 [架构](#schema-generation)，其中包含查询所需的所有类型。
+GraphQL 规范提供了一系列准则，说明如何创建可靠的 API 用于询问特定实例上的数据。要完成这些指南，客户端必须获取 [架构](#schema-generation)，其中包含查询所需的全部类型。
 
 对于内容片段，GraphQL 架构（结构和类型）基于&#x200B;**已启用**[内容片段模型](/help/assets/content-fragments/content-fragments-models.md)及其数据类型。
 
@@ -179,7 +178,7 @@ GraphQL 规范提供了一系列准则，说明如何创建可靠的 API 用于�
 >
 >所有 GraphQL 架构（派生自&#x200B;**已启用**&#x200B;的内容片段模型）可通过 GraphQL 端点读取。
 >
->这种能力意味着，您必须确保没有敏感数据可用，因为数据可能会以这种方式泄露。 例如，它包括可在模型定义中显示为字段名称的信息。
+>这种能力意味着您必须确保没有敏感数据可用，因为数据可能会以这种方式泄露。 例如，它包括可在模型定义中作为字段名称显示的信息。
 
 例如，如果创建内容片段模型的用户调用 `Article`，则 AEM 生成 GraphQL 类型 `ArticleModel`。此类型中的字段对应于在模型中定义的字段和数据类型。此外，它还为操作此类型的查询创建一些入口点，例如 `articleByPath` 或 `articleList`。
 
@@ -190,7 +189,7 @@ GraphQL 规范提供了一系列准则，说明如何创建可靠的 API 用于�
 1. 对应的 GraphQL 架构（来自 GraphiQL 自动文档的输出）：
    ![GraphQL 架构基于内容片段模型](assets/cfm-graphqlapi-02.png "GraphQL 架构基于内容片段模型")
 
-   此图像显示了生成的类型 `ArticleModel` 包含多个 [字段](#fields).
+   此图像显示生成的类型 `ArticleModel` 包含多个 [字段](#fields).
 
    * 其中三个由用户控制： `author`， `main`、和 `referencearticle`.
 
@@ -198,7 +197,7 @@ GraphQL 规范提供了一系列准则，说明如何创建可靠的 API 用于�
 
 1. 用户基于 Article 模型创建内容片段之后，可以通过 GraphQL 询问该模型。例如，请参阅[示例查询](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#graphql-sample-queries)（基于[用于 GraphQL 的示例内容片段结构](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#content-fragment-structure-graphql)）。
 
-在 GraphQL for AEM 中，架构是灵活的。这种灵活性意味着每次创建、更新或删除内容片段模型时都会自动生成模型。 数据架构缓存还可在更新内容片段模型时刷新。
+在 GraphQL for AEM 中，架构是灵活的。这种灵活性意味着每次创建、更新或删除内容片段模型时都会自动生成架构。 数据架构缓存还可在更新内容片段模型时刷新。
 
 Sites GraphQL 服务监听（在后台）对内容片段模型所作的任何更改。检测到更新时，仅重新生成架构的该部分。此优化可节省时间并提供稳定性。
 
@@ -206,19 +205,19 @@ Sites GraphQL 服务监听（在后台）对内容片段模型所作的任何更
 
 1. 安装包含 `Content-Fragment-Model-1` 和 `Content-Fragment-Model-2` 的软件包：
 
-   1. GraphQL类型 `Model-1` 和 `Model-2` 生成。
+   1. 生成用于 `Model-1` 和 `Model-2` 的 GraphQL 类型。
 
 1. 然后修改 `Content-Fragment-Model-2`：
 
-   1. 仅 `Model-2` GraphQL类型将更新。
+   1. 仅 `Model-2` GraphQL类型已更新。
 
    1. 而 `Model-1` 保持不变。
 
 >[!NOTE]
 >
->此详细信息很重要，以防您通过REST API或其他方式对内容片段模型执行批量更新。
+>此详细信息很重要，以防您通过REST API或以其他方式批量更新内容片段模型。
 
-架构通过与 GraphQL 查询相同的端点提供，客户端处理使用扩展 `GQLschema` 调用架构的实际情况。例如，执行简单 `GET` 请求日期 `/content/cq:graphql/global/endpoint.GQLschema` 导致输出具有内容类型的架构： `text/x-graphql-schema;charset=iso-8859-1`.
+架构通过与 GraphQL 查询相同的端点提供，客户端处理使用扩展 `GQLschema` 调用架构的实际情况。例如，执行 `GET` 请求日期 `/content/cq:graphql/global/endpoint.GQLschema` 将生成具有内容类型的架构输出： `text/x-graphql-schema;charset=iso-8859-1`.
 
 ### 架构生成 – 未发布的模型 {#schema-generation-unpublished-models}
 
@@ -226,7 +225,7 @@ Sites GraphQL 服务监听（在后台）对内容片段模型所作的任何更
 
 >[!NOTE]
 >
->AEM用户界面可以防止出现这种情况，但是，如果以编程方式发布，或者使用内容包发布，则可能会出现这种情况。
+>AEM用户界面可以防止出现这种情况，但是，如果以编程方式进行发布，或者使用内容包发布，则可能出现这种情况。
 
 发生这种情况时，AEM会生成 *未完成* 父内容片段模型的架构。 这意味着依赖于未发布模型的片段引用将从架构中删除。
 
@@ -236,13 +235,13 @@ Sites GraphQL 服务监听（在后台）对内容片段模型所作的任何更
 
 * 您生成的字段。
 
-   使用选择的一组[数据类型](#data-types)，根据您配置内容片段模型的方式来创建字段。字段名称获取自&#x200B;**数据类型**&#x200B;的&#x200B;**属性名称**&#x200B;字段。
+  使用选择的一组[数据类型](#data-types)，根据您配置内容片段模型的方式来创建字段。字段名称获取自&#x200B;**数据类型**&#x200B;的&#x200B;**属性名称**&#x200B;字段。
 
    * 还有 **呈现为** 设置，因为用户可以配置某些数据类型。 例如，通过选择将单行文本字段配置为包含多个单行文本 `multifield` 从下拉菜单中查找。
 
-* GraphQL for AEM还生成多个 [帮助程序字段](#helper-fields).
+* GraphQL for AEM还生成了多个 [帮助程序字段](#helper-fields).
 
-   这些字段用于标识内容片段，或获取有关内容片段的更多信息。
+  这些字段用于标识内容片段，或获取有关内容片段的更多信息。
 
 ### 数据类型 {#data-types}
 
@@ -264,7 +263,7 @@ GraphQL for AEM 支持一个类型列表。所有支持的内容片段模型数�
 
 ### 帮助程序字段 {#helper-fields}
 
-除了用户生成的字段的数据类型之外，GraphQL for AEM还生成多个字段 *辅助函数* 帮助标识内容片段或提供有关内容片段的附加信息的字段。
+除了用户生成的字段的数据类型之外，GraphQL for AEM还生成了多个 *辅助函数* 帮助标识内容片段或提供有关内容片段的附加信息的字段。
 
 这些[帮助程序字段](#helper-fields)使用前缀 `_` 标记，用于区分哪些字段由用户定义，哪些字段为自动生成。
 
@@ -287,7 +286,7 @@ GraphQL for AEM 支持一个类型列表。所有支持的内容片段模型数�
 }
 ```
 
-要检索特定类型的单个内容片段，您还必须首先确定其路径。 例如：
+要检索特定类型的单个内容片段，您还必须先确定其路径。 例如：
 
 ```graphql
 {
@@ -310,7 +309,7 @@ GraphQL for AEM 支持一个类型列表。所有支持的内容片段模型数�
 * 内容片段的标题
 * 缩略图路径
 * 内容片段的描述
-* 以及创建日期等。
+* 以及创建日期，等等。
 
 由于元数据通过架构编辑器生成，因此没有特定结构，所以实施了 `TypedMetaData` GraphQL 类型以公开内容片段的元数据。此 `TypedMetaData` 公开按以下标量类型分组的信息：
 
@@ -356,7 +355,7 @@ GraphQL for AEM 支持一个类型列表。所有支持的内容片段模型数�
 >**普通和数组元数据之间的不同**
 >请记住，`StringMetadata` 和 `StringArrayMetadata` 均引用存储在存储库中的内容，而非您如何检索它们。
 >
->例如，通过调用 `stringMetadata` 字段中，您将收到一个数组，其中包含存储库中存储的所有元数据，该数组将作为 `String`. 如果你打电话 `stringArrayMetadata`，您将收到一个数组，其中包含存储在存储库中的所有元数据，如下所示 `String[]`.
+>例如，通过调用 `stringMetadata` 字段中，您将收到一个数组，其中包含作为存储在存储库中的所有元数据 `String`. 如果你打电话 `stringArrayMetadata`，您将收到一个数组，其中包含存储在存储库中的所有元数据，其名称为 `String[]`.
 
 请参阅[元数据的示例查询 – 列出标题为 GB 的奖励的元数据](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-metadata-awards-gb)。
 
@@ -376,13 +375,13 @@ GraphQL for AEM 支持一个类型列表。所有支持的内容片段模型数�
 
 >[!NOTE]
 >
->此 `_variations` 字段不包含 `master` 变体，从技术上讲就是原始数据(称为 *主控* （在UI中）不被视为显式变量。
+>此 `_variations` 字段不包含 `master` 变体，从技术上讲，为原始数据(称为 *母版* （在UI中）不被视为显式变量。
 
-请参阅[示例查询 – 具有指定变量的所有城市](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-cities-named-variation)。
+请参阅[示例查询 – 具有指定变体的所有城市](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-cities-named-variation)。
 
 >[!NOTE]
 >
->如果内容片段不存在给定的变量，则原始数据(也称为主控变量)将作为（回退）默认值返回。
+>如果内容片段不存在给定的变量，则原始数据（也称为主控变量）会作为（回退）默认值返回。
 
 <!--
 ## Security Considerations {#security-considerations}
@@ -390,7 +389,7 @@ GraphQL for AEM 支持一个类型列表。所有支持的内容片段模型数�
 
 ## GraphQL 变量 {#graphql-variables}
 
-GraphQL 允许在查询中放入变量。有关更多信息，请参阅 [变量的GraphQL文档](https://graphql.org/learn/queries/#variables).
+GraphQL 允许在查询中放入变量。有关详细信息，请参阅 [GraphQL 的变量文档。](https://graphql.org/learn/queries/#variables)
 
 例如，要获取具有特定变体的类型为 `Article` 的所有内容片段，您可以在 GraphiQL 中指定变量 `variation`。
 
@@ -487,18 +486,18 @@ query GetAdventureByType($includePrice: Boolean!) {
 
 表达式可以在逻辑运算符 (`_logOp`) 的帮助下组合成一个集合：
 
-* `OR`  — 如果至少有一个表达式成功，则表达式集成功
-* `AND`  — 如果所有表达式都成功，则表达式集将成功（默认）
+* `OR`  — 如果至少有一个表达式成功，则表达式集将成功
+* `AND`  — 如果所有表达式都成功，则表达式集将成功（默认值）
 
-每个字段都可以通过其自己的一组表达式进行过滤。过滤器参数中提到的所有字段的表达式集最终由其自己的逻辑运算符组合。
+每个字段都可以通过其自己的一组表达式进行过滤。过滤器参数中提到的所有字段的表达式集最终将由其自己的逻辑运算符组合。
 
 过滤器定义（作为 `filter` 参数传递给查询）包含：
 
-* 每个字段的子定义(可通过其名称访问该字段，例如，有一个 `lastName` 的过滤器中的字段 `lastName` 字段类型)
+* 每个字段的子定义(可以通过其名称访问该字段，例如， `lastName` 的过滤器中的字段 `lastName` 字段类型)
 * 每个子定义包含 `_expressions` 数组，提供表达式集和 `_logOp` 定义表达式应与之组合的逻辑运算符的字段
 * 每个表达式由值（`value` 字段）和运算符（`_operator` 字段）定义，字段的内容应该与之进行比较
 
-您可以省略 `_logOp` 如果要将项目与 `AND` 和 `_operator` 如果要检查是否相等，因为这些值是默认值。
+您可以省略 `_logOp` 如果要将项目与 `AND` 和 `_operator` 如果您要检查是否相等，因为这些值是默认值。
 
 以下示例演示了一个完整的查询，该查询过滤所有 `lastName` 为 `Provo` 或包含 `sjö` 的人员，与大小写无关：
 
@@ -543,7 +542,7 @@ query GetAdventureByType($includePrice: Boolean!) {
 
 >[!NOTE]
 >
->为获得最佳性能，请考虑 [更新内容片段以在GraphQL筛选中进行分页和排序](/help/sites-developing/headless/graphql-api/graphql-optimized-filtering-content-update.md).
+>为获得最佳性能，请考虑 [在GraphQL筛选中更新用于分页和排序的内容片段](/help/sites-developing/headless/graphql-api/graphql-optimized-filtering-content-update.md).
 
 此功能允许您根据指定字段对查询结果进行排序。
 
@@ -556,7 +555,7 @@ query GetAdventureByType($includePrice: Boolean!) {
    * 点分符号，即field1.subfield.subfield等……
 * 带有可选的订单方向
    * ASC（升序）或 DESC（降序）；作为默认 ASC 应用
-   * 可以按字段指定方向；这种能力意味着您可以对一个字段进行升序排序，对另一个字段进行降序排序(name， firstName DESC)
+   * 可以按字段指定方向；这种能力意味着您可以对一个字段按升序排序，对另一个字段按降序排序（名称、名字DESC）
 
 例如：
 
@@ -612,9 +611,9 @@ query {
 
 >[!NOTE]
 >
->为获得最佳性能，请考虑 [更新内容片段以在GraphQL筛选中进行分页和排序](/help/sites-developing/headless/graphql-api/graphql-optimized-filtering-content-update.md).
+>为获得最佳性能，请考虑 [在GraphQL筛选中更新用于分页和排序的内容片段](/help/sites-developing/headless/graphql-api/graphql-optimized-filtering-content-update.md).
 
-此功能允许您对返回列表的查询类型执行分页。提供了两种方法：
+此功能允许您对返回列表的查询类型执行分页。 提供了两种方法：
 
 * 在 `List` 查询中的 `offset` 和 `limit`
 * 在 `Paginated` 查询中的 `first` 和 `after`
@@ -647,10 +646,9 @@ query {
 
 >[!NOTE]
 >
->* 分页需要稳定的排序顺序才能在请求同一结果集的不同页面的多个查询中正常工作。默认情况下，它使用结果集中每个项目的存储库路径来确保顺序始终相同。 如果使用不同的排序顺序，并且如果无法在JCR查询级别进行排序，则会对性能产生负面影响。 原因在于，必须在确定页面之前将整个结果集加载到内存中。
+>* 分页需要稳定的排序顺序才能在请求同一结果集的不同页面的多个查询中正常工作。默认情况下，它使用结果集中每个项目的存储库路径来确保顺序始终相同。 如果使用不同的排序顺序，并且无法在JCR查询级别进行排序，则会对性能产生负面影响。 原因在于，在确定页面之前，必须将整个结果集加载到内存中。
 >
 >* 偏移量越高，从完整的JCR查询结果集中跳过项目所需的时间就越多。 大型结果集的替代解决方案是使用带有 `first` 和 `after` 方法的分页查询。
-
 
 ### 分页查询 – 先和后 {#paginated-first-after}
 
@@ -658,7 +656,7 @@ query {
 
 * `first`：`n`要返回的第一个项目。
 默认为 `50`。最大值为 `100`。
-* `after`：确定所请求页面开始的光标。游标所表示的项目不包括在结果集中。 项目的光标由 `cursor` 字段 `edges` 结构。
+* `after`：确定请求页面开始的光标。光标所表示的项目不包含在结果集中。 项目的光标由 `cursor` 字段 `edges` 结构。
 
 例如，输出包含最多五次冒险的结果页面，从&#x200B;*完整*&#x200B;结果列表中的给定光标项开始：
 
@@ -686,38 +684,36 @@ query {
 >
 >* 默认情况下，分页使用表示排序片段的存储库节点的UUID，以确保结果的顺序始终相同。 当使用 `sort` 时，隐式使用 UUID 以确保唯一排序；即使对于具有相同排序键的两个项目，也可以使用。
 >
->* 由于内部技术限制，如果对嵌套字段应用排序和筛选，则性能会降低。 因此，请使用存储在根级别的筛选器/排序字段。 如果要查询大型分页结果集，还建议使用此方法。
-
+>* 由于内部技术限制，如果对嵌套字段应用排序和筛选，则性能会降低。 因此，请使用存储在根级别的筛选器/排序字段。 如果要查询大型分页结果集，也建议使用此方法。
 
 ## GraphQL for AEM – 执行摘要 {#graphql-extensions}
 
 使用 GraphQL for AEM 的查询基本处理遵循标准 GraphQL 规范。对于使用AEM的GraphQL查询，有几个扩展：
 
 * 如果您需要单个结果：
-   * 使用模型名称；例如city
+   * 使用模型名称；例如，city
 
 * 如果您需要结果列表：
    * 将 `List` 添加到模型名称；例如，`cityList`
    * 请参阅[示例查询 – 关于所有城市的所有信息](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-all-information-all-cities)
 
-   稍后您可以：
+  稍后您可以：
 
    * [对结果进行排序](#sorting)
 
       * `ASC` : 升序
       * `DESC` : 降序
+
    * 使用以下任一方法返回一页结果：
 
       * [带有偏移和限制的列表查询](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#list-offset-limit)
       * [带有“先”和“后”的分页查询](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#paginated-first-after)
    * 请参阅[示例查询 – 关于所有城市的所有信息](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-all-information-all-cities)
 
+* 过滤器 `includeVariations` 包含在 `List` 查询类型。 要在查询结果中检索内容片段变体，请 `includeVariations` 筛选器必须设置为 `true`.
 
-
-* 筛选条件 `includeVariations` 包含在 `List` 查询类型。 要在查询结果中检索内容片段变体，请 `includeVariations` 筛选器必须设置为 `true`.
-
-   >[!CAUTION]
-   >筛选条件 `includeVariations` 不能与系统生成的字段一起使用 `_variation`.
+  >[!CAUTION]
+  >过滤器 `includeVariations` 不能与系统生成的字段一起使用 `_variation`.
 
 * 如果您希望使用逻辑 OR：
    * 使用 ` _logOp: OR`
@@ -734,51 +730,50 @@ query {
 
       * `_locale`：用于显示语言；基于语言管理器
          * 请参阅[给定区域设置的多个内容片段的示例查询](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-wknd-multiple-fragments-given-locale)
+
       * `_metadata`：用于显示片段的元数据
          * 请参阅[元数据的示例查询 – 列出标题为 GB 的奖励的元数据](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-metadata-awards-gb)
+
       * `_model`：允许查询内容片段模型（路径和标题）
          * 请参阅[来自模型的内容片段模型的示例查询](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-wknd-content-fragment-model-from-model)
+
       * `_path`：存储库中内容片段的路径
          * 请参阅[示例查询 – 一个特定城市片段](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-single-specific-city-fragment)
+
       * `_reference`：用于显示引用，包括富文本编辑器中的内联引用
          * 请参阅[具有预获取引用的多个内容片段的示例查询](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-wknd-multiple-fragments-prefetched-references)
+
       * `_variation`：用于显示内容片段中的特定变体
 
-         >[!NOTE]
-         >
-         >如果内容片段不存在给定的变量，则主控变量将作为（回退）默认值返回。
+        >[!NOTE]
+        >
+        >如果内容片段不存在给定的变量，则主控变量会作为（回退）默认值返回。
 
-         >[!CAUTION]
-         >系统生成的字段 `_variation` 不能与过滤器一起使用 `includeVariations`.
+        >[!CAUTION]
+        >系统生成的字段 `_variation` 不能与过滤器 `includeVariations` 一起使用。
 
          * 请参阅[示例查询 – 具有指定变体的所有城市](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-cities-named-variation)
-      * `_tags` ：用于显示包含标记的内容片段或变体的ID；此列表由多个 `cq:tags` 标识符。
 
-         * 参见 [示例查询 — 标记为城市分隔符的所有城市的名称](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-names-all-cities-tagged-city-breaks)
-         * 参见 [附加了特定标记的给定模型的内容片段变体示例查询](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-wknd-fragment-variations-given-model-specific-tag)
+      * `_tags` ：用于显示包含标记的内容片段或变体的ID；此列表由一系列 `cq:tags` 标识符。
 
-         >[!NOTE]
-         >
-         >标记也可以通过列出内容片段的元数据来查询。
+         * 请参阅[示例查询 - 标记为“城市度假”的所有城市的名称](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-names-all-cities-tagged-city-breaks)
+         * 请参阅[附加了特定标签的给定模型的内容片段变体的示例查询](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-wknd-fragment-variations-given-model-specific-tag)
+
+        >[!NOTE]
+        >
+        >还可以通过列出内容片段的元数据来查询标签。
+
    * 以及操作：
 
       * `_operator`：应用特定运算符；`EQUALS`、`EQUALS_NOT`、`GREATER_EQUAL`、`LOWER`、`CONTAINS`、`STARTS_WITH`
          * 请参阅[示例查询 – 所有名字不是“Jobs”的人](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-all-persons-not-jobs)
          * 请参阅[示例查询 – `_path` 以特定前缀开头的所有冒险](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-wknd-all-adventures-cycling-path-filter)
+
       * `_apply`：用于应用特定条件，例如 `AT_LEAST_ONCE`
          * 请参阅[示例查询 – 筛选数组中必须至少出现一次的项](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-array-item-occur-at-least-once)
+
       * `_ignoreCase`：在查询时忽略大小写
          * 请参阅[示例查询 – 名称中包含 SAN 的所有城市，不考虑大小写](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-all-cities-san-ignore-case)
-
-
-
-
-
-
-
-
-
-
 
 * 支持 GraphQL 合并类型：
 
@@ -787,7 +782,7 @@ query {
 
 * 在查询嵌套片段时回退：
 
-   * 如果请求的变体在嵌套片段中不存在，则 **主控** 变量已返回。
+   * 如果请求的变体在嵌套片段中不存在，则 **母版** 变量已返回。
 
 ### CORS 筛选条件 {#cors-filter}
 
@@ -797,7 +792,7 @@ query {
 
 要访问GraphQL端点，请在客户Git存储库中配置CORS策略。 此配置可通过为一个或多个所需端点添加相应的OSGi CORS配置文件来完成。
 
-此配置必须指定受信任的网站来源 `alloworigin` 或 `alloworiginregexp` 必须授予其访问权限。
+此配置必须指定可信网站来源 `alloworigin` 或 `alloworiginregexp` 必须向其授予访问权限。
 
 例如，要授予对 GraphQL 端点  的访问权限，以及对 `https://my.domain` 的持久查询端点的访问权限，您可以使用：
 
@@ -838,7 +833,7 @@ query {
 
 ### 反向链接筛选条件 {#referrer-filter}
 
-除了CORS配置之外，还必须配置反向链接筛选条件以允许从第三方主机进行访问。
+除了CORS配置外，还必须配置反向链接筛选条件以允许从第三方主机进行访问。
 
 此过滤器可通过添加适当的OSGi反向链接过滤器配置文件来完成，该配置文件可以：
 
@@ -877,12 +872,11 @@ query {
 >* 确保未公开敏感信息
 >* 不使用通配符 [*] 语法；此功能禁用对GraphQL端点的经过身份验证的访问，还会将其向全世界公开。
 
-
 >[!CAUTION]
 >
 >所有 GraphQL [架构](#schema-generation)（派生自&#x200B;**已启用**&#x200B;的内容片段模型）可通过 GraphQL 端点读取。
 >
->此功能意味着您必须确保没有可用的敏感数据，因为这样可能会泄露这些数据。 例如，它包括可在模型定义中显示为字段名称的信息。
+>此功能意味着您必须确保没有敏感数据可用，因为这样可能会泄露这些数据。 例如，它包括可在模型定义中作为字段名称显示的信息。
 
 ## 身份验证 {#authentication}
 
@@ -896,8 +890,8 @@ query {
 
    * **答**：
 *AEM GraphQL API 提供了对 JSON 输出的全面控制，是用于查询内容的行业标准。
-将来，AEM计划投资于AEM GraphQL API。*”
+将来，AEM计划投资于AEM GraphQL API。*&quot;
 
 ## 教程 – AEM Headless 和 GraphQL 快速入门 {#tutorial}
 
-正在寻找实践教程？签出 [AEM Headless和GraphQL快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=zh-Hans) 端到端教程，其中演示了如何在Headless CMS场景中使用AEM GraphQL API构建和公开内容并由外部应用程序使用。
+正在寻找实践教程？请查看 [AEM Headless 和 GraphQL 快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=zh-Hans)端到端教程，其中说明了在 Headless CMS 场景中，如何使用 AEM GraphQL API 构建和公开内容并由外部应用程序使用。

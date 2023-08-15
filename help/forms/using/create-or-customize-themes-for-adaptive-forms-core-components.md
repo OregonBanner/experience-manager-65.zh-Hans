@@ -8,10 +8,10 @@ contentOwner: Khushwant Singh
 topic-tags: Adaptive Forms
 docset: aem65
 role: Admin, Developer
-source-git-commit: d958f616803f92190493cc3f1ef474d0987991bd
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1975'
-ht-degree: 6%
+source-wordcount: '1973'
+ht-degree: 7%
 
 ---
 
@@ -33,7 +33,7 @@ ht-degree: 6%
 AEM 6.5环境为基于核心组件的自适应Forms提供了以下列出的主题：
 
 * [画布主题](https://github.com/adobe/aem-forms-theme-canvas)
-* [WKND主题](https://github.com/adobe/aem-forms-theme-wknd)
+* [WKND 主题](https://github.com/adobe/aem-forms-theme-wknd)
 * [画架主题](https://github.com/adobe/aem-forms-theme-easel)
 
 ## 了解主题的结构 {#understanding-structure-of-theme}
@@ -55,14 +55,14 @@ AEM 6.5环境为基于核心组件的自适应Forms提供了以下列出的主�
 AEM Forms 6.5为基于核心组件的自适应Forms提供了以下列出的主题。
 
 * [画布主题](https://github.com/adobe/aem-forms-theme-canvas)
-* [WKND主题](https://github.com/adobe/aem-forms-theme-wknd)
+* [WKND 主题](https://github.com/adobe/aem-forms-theme-wknd)
 * [画架主题](https://github.com/adobe/aem-forms-theme-easel)
 
 您可以 [自定义这些主题中的任意主题以创建主题](#customize-a-theme-core-components).
 
 ## 自定义主题 {#customize-a-theme-core-components-based-adaptive-forms}
 
-自定义主题是指修改和个性化主题外观的过程。 自定义主题时，您可以更改其设计元素、布局、颜色、排版规则，有时还会更改基础代码。 这允许您为网站或应用程序创建独一无二的定制外观，同时保持主题提供的基本结构和功能。
+自定义主题是指修改和个性化主题外观的过程。 自定义主题时，您可以更改其设计元素、布局、颜色、排版规则，有时还会更改基础代码。 这样，您就可以为网站或应用程序创建独一无二的定制外观，同时保持主题提供的基本结构和功能。
 
 >[!NOTE]
 >
@@ -75,7 +75,7 @@ AEM Forms 6.5为基于核心组件的自适应Forms提供了以下列出的主�
 
 * 安装最新版本的 [Apache Maven。](https://maven.apache.org/download.cgi) Apache Maven是一种常用于Java™项目的构建自动化工具。 安装最新版本可确保您具有主题自定义所需的依赖项。
 
-* 了解如何创建 [Adobe Experience Manager中的客户端库](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html). AEM提供了客户端库，允许您在存储库中存储客户端代码，将其组织成不同类别，并定义何时以及如何向客户端提供每种类别的代码。
+* 了解如何创建 [Adobe Experience Manager中的客户端库](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html). AEM提供了客户端库，这使您可以在存储库中存储客户端代码，将其整理到不同类别中，并定义何时以及如何向客户端提供每种类别的代码。
 
 * 安装纯文本编辑器。 例如，Microsoft® Visual Studio Code。 使用Microsoft等纯文本编辑器®Visual Studio Code为编辑和修改主题文件提供了用户友好的环境。
 
@@ -110,7 +110,7 @@ AEM Forms 6.5为基于核心组件的自适应Forms提供了以下列出的主�
 要克隆基于核心组件的自适应Forms的主题，请选择以下主题之一：
 
 * [画布主题](https://github.com/adobe/aem-forms-theme-canvas)
-* [WKND主题](https://github.com/adobe/aem-forms-theme-wknd)
+* [WKND 主题](https://github.com/adobe/aem-forms-theme-wknd)
 * [画架主题](https://github.com/adobe/aem-forms-theme-easel)
 
 执行以下说明以克隆主题：

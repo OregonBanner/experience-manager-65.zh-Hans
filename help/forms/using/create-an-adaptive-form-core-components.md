@@ -9,10 +9,10 @@ contentOwner: Khushwant Singh
 topic-tags: Adaptive Forms
 docset: aem65
 role: Admin, Developer
-source-git-commit: 3d7db26a85379e780b103c1e7d26b4116023ee9b
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1796'
-ht-degree: 35%
+source-wordcount: '1794'
+ht-degree: 34%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 35%
 
 **适用于：** ✅自适应表单核心组件❎ [自适应表单基础组件](/help/forms/using/create-adaptive-form.md).
 
-自适应表单可让您创建引人入胜、响应式、动态和自适应的表单。AEM Forms为商业用户提供了友好的UI，以便快速创建自适应Forms。 用户界面提供快速的选项卡导航，以轻松选择预配置的模板、样式、字段和提交选项以创建自适应表单。
+自适应表单使您能够创建引人入胜、响应式、动态和自适应的表单。AEM Forms为商业用户提供了友好的UI，以便快速创建自适应Forms。 用户界面提供快速的选项卡导航，以轻松选择预配置的模板、样式、字段和提交选项以创建自适应表单。
 
 在开始之前，了解可使用的表单组件类型：
 
@@ -90,7 +90,7 @@ ht-degree: 35%
 
 ## 配置自适应表单的提交操作 {#configure-submit-action-for-form}
 
-提交操作允许您选择通过自适应表单捕获的数据的目标。当用户单击自适应表单上的提交按钮时，将触发此操作。自适应表单包括一些现成的提交操作。 您还可以扩展默认提交操作以创建自己的自定义提交操作。 要为表单配置提交操作，请执行以下操作：
+提交操作允许您选择通过自适应表单捕获的数据的目标。 当用户单击自适应表单上的提交按钮时，将触发此操作。自适应表单包括一些现成的提交操作。 您还可以扩展默认提交操作以创建自己的自定义提交操作。 要为表单配置提交操作，请执行以下操作：
 
 1. 打开内容浏览器，然后选择自适应表单的&#x200B;**[!UICONTROL 指南容器]**&#x200B;组件。
 1. 单击指南容器属性![指南属性](/help/forms/using/assets/configure-icon.svg)图标。这将打开“自适应表单容器”对话框。

@@ -2,10 +2,10 @@
 title: 如何通过 AEM 交付 API 访问您的内容
 description: 在 AEM Headless 开发人员历程的这一部分中，了解如何使用 GraphQL 查询访问内容片段的内容。
 exl-id: 44f85d00-a958-470a-8a6e-e2ae1580525a
-source-git-commit: ad0f0bd8b0c230e002c734adca87da22bfa3a7cd
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1335'
-ht-degree: 96%
+source-wordcount: '1333'
+ht-degree: 93%
 
 ---
 
@@ -79,7 +79,7 @@ GraphQL is used in various locations in AEM; for example:
 
 ## AEM GraphQL API {#aem-graphql-api}
 
-AEM GraphQL API 是基于标准 GraphQL API 规范的自定义版本，经过专门配置以允许您对内容片段执行（复杂）查询。
+AEM GraphQL API是基于标准GraphQL API规范的自定义版本，专门配置为允许您对内容片段执行（复杂）查询。
 
 使用内容片段，因为内容是根据内容片段模型构建的。这将满足 GraphQL 的基本要求。
 
@@ -133,7 +133,7 @@ The use cases for the AEM GraphQL API can depend on the type of AEMenvironment:
 
 * 是可在定义内容片段模型时可用的特定数据类型。
 * 引用另一个片段，具体取决于特定的内容片段模型。
-* 允许您依次创建和检索结构化数据。
+* 允许您创建和检索结构化数据。
 
    * 定义为&#x200B;**多源**，则主片段可以引用（检索）多个子片段。
 
@@ -257,7 +257,7 @@ It provides features such as syntax-highlighting, auto-complete, auto-suggest, t
    * CEO（人员）– 片段引用
    * 员工（人员）– 片段引用
 * 人员
-   * 姓名 - 文本
+   * 姓名 – 文本
    * 名字 – 文本
 
 如您所见，“CEO”和“员工”字段引用“人员”片段。
@@ -374,7 +374,7 @@ query {
 * [使用内容片段](/help/assets/content-fragments/content-fragments.md)
    * [内容片段模型](/help/assets/content-fragments/content-fragments-models.md)
    * [JSON 输出](/help/assets/content-fragments/content-fragments-json-preview.md)
-* [了解跨源资源共享 (CORS)](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html?lang=en#understand-cross-origin-resource-sharing-(cors))
+* [了解跨源资源共享 (CORS)](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html?lang=zh-Hans#understand-cross-origin-resource-sharing-(cors))
 * [AEM Headless 快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html) - 一个简短的视频教程系列，概述了如何使用 AEM 的 Headless 功能，包括内容建模和 GraphQL。
 
 <!--

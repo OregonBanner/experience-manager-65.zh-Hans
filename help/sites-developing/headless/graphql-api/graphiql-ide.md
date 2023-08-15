@@ -2,10 +2,10 @@
 title: 在 AEM 中使用 GraphiQL IDE
 description: 了解如何在 Adobe Experience Manager 中使用 GraphiQL IDE。
 exl-id: d4b01485-658b-4245-b2e6-04be8abc8ecf
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '791'
-ht-degree: 93%
+source-wordcount: '788'
+ht-degree: 87%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 93%
 >[!NOTE]
 >在使用 GraphiQL IDE 之前，您必须在[配置浏览器](/help/assets/content-fragments/content-fragments-configuration-browser.md)中[配置您的端点](/help/sites-developing/headless/graphql-api/graphql-endpoint.md)。
 
-**GraphiQL** 工具允许您测试和调试 GraphQL 查询，方法是：
+此 **GraphiQL** 工具允许您测试和调试GraphQL查询，方法是：
 
 * 选择适用于您要用于查询的 Sites 配置的&#x200B;**端点**
 * 直接输入新查询
@@ -89,7 +89,7 @@ ht-degree: 93%
 
 <!-- more details needed here? -->
 
-GraphiQL IDE 还允许您管理[查询变量](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#graphql-variables)。
+GraphiQL IDE还允许您管理 [查询变量](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#graphql-variables).
 
 例如：
 
@@ -132,7 +132,7 @@ Using GraphQL you can configure the HTTP Cache Headers  to control these paramet
 
 ## 正在发布持久查询 {#publishing-persisted-queries}
 
-选择您的 [持久查询](/help/sites-developing/headless/graphql-api/persisted-queries.md) 从列表（左侧面板）中，您可以使用 **Publish** 和 **取消发布** 操作。 这会将它们激活到您的发布环境（例如，`dev-publish`），以便您的应用程序在测试时轻松访问。
+选择您的 [持久查询](/help/sites-developing/headless/graphql-api/persisted-queries.md) 从列表（左面板）中，您可以使用 **Publish** 和 **取消发布** 操作。 这会将它们激活到您的发布环境（例如，`dev-publish`），以便您的应用程序在测试时轻松访问。
 
 >[!NOTE]
 >
@@ -140,7 +140,7 @@ Using GraphQL you can configure the HTTP Cache Headers  to control these paramet
 
 ## 复制 URL 以直接访问查询 {#copy-url}
 
-**“复制 URL”**&#x200B;选项允许您通过复制用于直接访问持久查询并查看结果的 URL 来模拟查询。然后可以将其用于测试；例如，通过在浏览器中访问：
+此 **复制URL** 选项允许您通过复制用于直接访问持久查询并查看结果的URL来模拟查询。 然后可以将其用于测试；例如，通过在浏览器中访问：
 
 <!--
   >[!NOTE]

@@ -10,9 +10,9 @@ topic-tags: customization
 discoiquuid: 0d817a7e-2758-4308-abda-6194716c2d97
 docset: aem65
 exl-id: 44516956-00aa-41d5-a7e9-746c7618e5db
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '524'
+source-wordcount: '523'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 创建自适应表单时，可以指定表单的工具栏布局。 工具栏布局定义命令和表单上工具栏的布局。
 
-工具栏布局使用在很大程度上依赖于由复杂的JavaScript和CSS代码驱动的客户端处理。 组织和优化此代码的服务可能是一个复杂的问题。 为帮助解决此问题，AEM提供了客户端库文件夹，您可以使用这些文件夹将客户端代码存储在存储库中，将其划分为不同类别，并定义每个类别的代码何时以及如何提供给客户端。 然后，客户端库系统负责在最终网页中产生正确的链接，以加载正确的代码。 有关详细信息，请参阅 [客户端库在AEM中的工作方式。](/help/sites-developing/clientlibs.md)
+工具栏布局的使用严重依赖于由复杂的JavaScript和CSS代码驱动的客户端处理。 组织和优化此代码的服务可能是一个复杂的问题。 为了帮助解决此问题，AEM提供了客户端库文件夹，这允许您在存储库中存储客户端代码，将其按类别整理，并定义何时以及如何向客户端提供每种类别的代码。 然后，客户端库系统负责在最终网页中产生正确的链接，以加载正确的代码。 有关详细信息，请参阅 [客户端库在AEM中的工作方式。](/help/sites-developing/clientlibs.md)
 
 ![工具栏的示例布局](assets/default_toolbar_layout.png)
 
@@ -39,7 +39,7 @@ ht-degree: 0%
 
 以下过程详细介绍了创建自定义工具栏的步骤，该工具栏在工具栏中显示三个操作，并在工具栏的下拉列表中显示其他操作。
 
-附加的内容包包含下面描述的整个代码。 安装内容包后，打开 `/content/forms/af/CustomLayoutDemo.html` 查看自定义工具栏布局演示。
+附加的内容包包含如下所述的完整代码。 安装内容包后，打开 `/content/forms/af/CustomLayoutDemo.html` 以查看自定义工具栏布局演示。
 
 CustomToolbarLayoutDemo.zip
 
@@ -56,19 +56,19 @@ CustomToolbarLayoutDemo.zip
 
    `/libs/fd/af/layouts/toolbar`
 
-   例如，复制 `mobileFixedToolbarLayout` 节点来自 `/libs/fd/af/layouts/toolbar` 文件夹到 `/apps/customlayout/toolbar` 文件夹。
+   例如，复制 `mobileFixedToolbarLayout` 来自的节点 `/libs/fd/af/layouts/toolbar` 文件夹到 `/apps/customlayout/toolbar` 文件夹。
 
    此外，将toolbarCommon.jsp复制到 `/apps/customlayout/toolbar` 文件夹。
 
    >[!NOTE]
    >
-   >您创建的用于维护自定义版面的文件夹大部分是使用 `apps` 文件夹。
+   >您为维护自定义布局而创建的文件夹，在创建时通常会使用 `apps` 文件夹。
 
 1. 重命名复制的节点， `mobileFixedToolbarLayout`，至 `customToolbarLayout.`
 
    此外，为节点提供相关描述。 例如，将节点的jcr：description更改为 **自定义工具栏布局**.
 
-   此 `guideComponentType` 节点的属性确定布局类型。 在这种情况下，布局类型为工具栏，因此显示在工具栏布局选择下拉列表中。
+   此 `guideComponentType` 节点的属性确定布局类型。 在这种情况下，布局类型为工具栏，因此会显示在工具栏布局选择下拉列表中。
 
    ![具有相关说明的节点](assets/toolbar3.png)
 
@@ -108,7 +108,7 @@ CustomToolbarLayoutDemo.zip
 
    >[!NOTE]
    >
-   >为布局添加guidetoolbar类。 工具栏的现成样式是根据guidetoolbar类定义的。
+   >为布局添加guidetoolbar类。 现成的工具栏样式是根据guidetolbar类定义的。
 
    样本 `toolBarCommon.jsp`:
 

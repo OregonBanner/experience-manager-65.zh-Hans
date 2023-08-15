@@ -12,9 +12,9 @@ discoiquuid: b5607343-a13b-4520-a771-f1a555bfcc7b
 docset: aem65
 feature: Upgrading
 exl-id: c42373e9-712e-4c11-adbb-4e3626e0b217
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '522'
+source-wordcount: '521'
 ht-degree: 1%
 
 ---
@@ -23,31 +23,31 @@ ht-degree: 1%
 
 ## 概述 {#overview}
 
-此功能允许您通过检测使用中的模式来检查现有AEM实例的可升级性，这些模式：
+此功能允许您通过检测使用中的模式来检查现有AEM实例的可升级性，这些模式包括：
 
-1. 违反某些规则，并在将受升级影响或覆盖的区域中执行
-1. 使用AEM 6.x功能或API，该API在AEM 6.5上无法向后兼容，并且在升级后可能会中断。
+1. 违反某些规则，并在升级将影响或覆盖的区域中执行
+1. 使用AEM 6.x功能或AEM 6.5上无法向后兼容且在升级后可能中断的API。
 
-这可作为对升级到AEM 6.5所涉及的开发工作的评估。
+这可以作为对升级到AEM 6.5所涉及的开发工作的评估。
 
 ## 如何设置 {#how-to-set-up}
 
-模式检测器作为 [一个包](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/compatpack/pd-all-aem65) 正在处理从6.1到6.5的任何源AEM版本，这些版本面向AEM 6.5升级。 它可使用以下方式安装： [包管理器](/help/sites-administering/package-manager.md).
+模式检测器作为单独发行的 [一个包](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/compatpack/pd-all-aem65) 正在处理从6.1到6.5的任意源AEM版本，这些版本面向AEM 6.5升级。 可以使用进行安装 [包管理器](/help/sites-administering/package-manager.md).
 
 ## 使用方法 {#how-to-use}
 
 >[!NOTE]
 >
->Pattern Detector可以在任何环境中运行，包括本地开发实例。 但是，为了：
+>模式检测器可在任何环境中运行，包括本地开发实例。 但是，为了：
 >
 >* 提高检测率
 >* 避免业务关键型实例速度减慢
 >
->建议同时运行这两个应用程序 **在暂存环境中** 在用户应用程序、内容和配置方面尽可能接近生产环境。
+>同时建议运行它 **在暂存环境中** 在用户应用程序、内容和配置方面尽可能接近生产环境。
 
-您可以使用多种方法来检查模式检测器输出：
+您可以使用多种方法检查模式检测器输出：
 
-* **通过Felix清单控制台：**
+* **通过Felix库存控制台：**
 
 1. 通过浏览至，转到AEM Web Console *https://serveraddress:serverport/system/console/configMgr*
 1. 选择 **状态 — 模式检测器** 如下图所示：
@@ -59,7 +59,7 @@ ht-degree: 1%
 
 这两种方法详述如下：
 
-## 反应式界面 {#reactive-interface}
+## 反应式接口 {#reactive-interface}
 
 反应接口允许在检测到可疑时立即处理违规报告。
 
@@ -125,7 +125,7 @@ curl -Nsu 'admin:admin' https://localhost:4502/system/console/status-pattern-det
 }
 ```
 
-每5秒报告一次进度，可通过排除标记为可疑的其他消息来获取进度：
+每5秒报告一次进度，可以通过排除标记为可疑的其他消息来获取进度：
 
 ```shell
 curl -Nsu 'admin:admin' https://localhost:4502/system/console/status-pattern-detector.json | tee patterns-report.json | jq --unbuffered -C 'select(.suspicion == false)'
@@ -210,18 +210,18 @@ curl -Nsu 'admin:admin' https://localhost:4502/system/console/status-pattern-det
 
 >[!NOTE]
 >
->建议的方法是将curl的整个输出保存到文件中，然后通过对其进行处理 `jq` 或 `grep` 以筛选信息类型。
+>建议的方法是将curl的全部输出保存到文件中，然后通过对其进行处理 `jq` 或 `grep` 以筛选信息类型。
 
 ## 检测范围 {#scope}
 
 当前模式检测器允许检查：
 
-* OSGi包导出和导入不匹配
-* Sling资源类型和超级类型（具有搜索路径内容叠加图）的使用情况
+* OSGi捆绑导出和导入不匹配
+* Sling资源类型和超级类型（具有搜索路径内容叠加）的使用情况
 * Oak索引的定义（兼容性）
-* VLT包（使用过量）
+* VLT包（过度使用）
 * rep：用户节点兼容性（在OAuth配置的上下文中）
 
 >[!NOTE]
 >
->请注意，模式检测器会尝试准确预测升级警告。 但是，在某些情况下，它可能会产生误报。
+>请注意，模式检测器会尝试准确地预测升级警告。 但是，在某些情况下，它可能会产生误报。

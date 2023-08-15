@@ -1,7 +1,7 @@
 ---
 title: 自定义创建通信UI
 seo-title: Customize create correspondence UI
-description: 了解如何自定义创建通信用户界面。
+description: 了解如何自定义创建通信UI。
 seo-description: Learn how to customize create correspondence UI.
 uuid: 9dee9b6f-4129-4560-9bf8-db48110b76f7
 content-type: reference
@@ -11,10 +11,10 @@ discoiquuid: 13a93111-c08c-4457-b69a-a6f6eb6da330
 docset: aem65
 feature: Correspondence Management
 exl-id: 9593ca2a-7f9e-4487-a1a5-ca44114bff17
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1087'
-ht-degree: 0%
+source-wordcount: '1086'
+ht-degree: 1%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 ## 概述 {#overview}
 
-通信管理允许您重新品牌化其解决方案模板，以获得更好的品牌价值，并遵守贵组织的品牌标准。 重新品牌化用户界面包括更改组织徽标，该徽标显示在创建通信UI的左上角。
+通信管理允许您重新品牌化其解决方案模板，以获得更好的品牌价值并遵守贵组织的品牌标准。 重新品牌化用户界面包括更改组织徽标，该徽标显示在创建通信UI的左上角。
 
 您可以在创建通信UI中使用您组织的徽标更改徽标。
 
@@ -34,21 +34,21 @@ ht-degree: 0%
 
 要设置您选择的徽标图像，请执行以下操作：
 
-1. 创建相应的 [CRX中的文件夹结构](#creatingfolderstructure).
-1. [上传新的徽标文件](#uploadlogo) （在您已在CRX中创建的文件夹中）。
+1. 创建适当的 [CRX中的文件夹结构](#creatingfolderstructure).
+1. [上传新的徽标文件](#uploadlogo) （在CRX中创建的文件夹）中的位置。
 
 1. [设置CSS](#createcss) 在CRX上引用新徽标。
 1. 清除浏览器历史记录并 [刷新创建通信UI](#refreshccrui).
 
 ## 创建所需的文件夹结构 {#creatingfolderstructure}
 
-创建文件夹结构（如下所述），以托管自定义徽标图像和样式表。 具有根文件夹/apps的新文件夹结构与/libs文件夹的结构类似。
+创建文件夹结构（如下所述），用于托管自定义徽标图像和样式表。 根文件夹/apps的新文件夹结构与/libs文件夹的结构类似。
 
-对于任何自定义，请在/apps分支中创建一个并行文件夹结构，如下所述。
+对于任何自定义设置，请在/apps分支中创建并行文件夹结构，如下所述。
 
 /apps分支（文件夹结构）：
 
-* 确保您的文件在系统更新时处于安全状态。 如果执行升级、功能包或热修复， /libs分支将会更新，如果您将更改托管在/libs分支中，这些更改将被覆盖。
+* 在系统更新时确保文件的安全。 如果执行升级、功能包或修补程序，则会更新/libs分支；如果您将更改托管在/libs分支中，则会覆盖这些更改。
 * 帮助您避免打扰当前的系统/分支，如果您使用默认位置存储自定义文件，则可能会错误地解除干扰。
 * 帮助您的资源在AEM搜索资源时获得更高的优先级。 AEM配置为首先搜索/apps分支，然后搜索/libs分支以查找资源。 此机制意味着系统使用您的叠加（以及其中定义的自定义项）。
 
@@ -59,7 +59,7 @@ ht-degree: 0%
 
    创建css文件夹的步骤：
 
-   1. 右键单击 **css** 文件夹并选中 **覆盖节点**： `/libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/css`
+   1. 右键单击 **css** 路径下的文件夹并选择 **覆盖节点**： `/libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/css`
 
       ![覆盖节点](assets/1_overlaynode_css.png)
 
@@ -79,20 +79,20 @@ ht-degree: 0%
       >
       >    
       >    
-      >    * 在您的实例上升级
+      >    * 在实例上升级
       >    * 应用热修复程序
       >    * 安装功能包
       >    
       >
 
-   1. 单击&#x200B;**确定**。在指定的路径中创建css文件夹。
+   1. 单击&#x200B;**确定**。css文件夹在指定的路径中创建。
 
-1. 在apps文件夹中，创建一个名为 `imgs` 路径/结构与imgs文件夹（位于ccrui文件夹）类似。
+1. 在apps文件夹中，创建一个名为 `imgs` 路径/结构与imgs文件夹（位于crui文件夹）类似。
 
-   1. 右键单击 **图像** 文件夹并选中 **覆盖节点**： `/libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/imgs`
+   1. 右键单击 **imgs** 路径下的文件夹并选择 **覆盖节点**： `/libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/imgs`
    1. 确保“覆盖节点”对话框具有以下值：
 
-      **路径：** /libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/imgs
+      **路径：** /libs/fd/cm/ccr/gui/components/admin/clientlibs/crui/imgs
 
       **叠加位置：** /apps/
 
@@ -108,16 +108,16 @@ ht-degree: 0%
 
 ## 将新徽标上传到CRX {#uploadlogo}
 
-将您的自定义徽标文件上传到CRX。 标准HTML规则管理徽标的呈现。 支持的图像文件格式取决于您用于访问AEM Forms的浏览器。 所有浏览器都支持JPEG、GIF和PNG。 有关更多信息，请参阅特定于浏览器的文档，了解支持的图像格式。
+将您的自定义徽标文件上传到CRX。 标准HTML规则管理徽标的呈现。 根据您用于访问AEM Forms的浏览器，支持哪些图像文件格式。 所有浏览器都支持JPEG、GIF和PNG。 有关更多信息，请参阅特定于浏览器的文档，了解支持的图像格式。
 
 * 徽标图像的默认尺寸为48像素 &#42; 48像素 确保图像类似于此大小或大于48像素 &#42; 48像素
-* 如果您的徽标图像高度大于50像素，则“创建通信”用户界面会将图像最大缩放到50像素，因为这是标题的高度。 在缩小图像时，“创建通信”用户界面会保持图像的纵横比。
-* 创建通信用户界面不会将图像放大（如果图像较小），因此请确保使用高度至少为48像素且宽度足够大的徽标图像以提高清晰度。
+* 如果您的徽标图像高度大于50像素，则“创建通信”用户界面会将图像高度缩减到最大为50像素，因为这是标题的高度。 在缩小图像时，“创建通信”用户界面会保持图像的纵横比。
+* 创建通信用户界面不会放大图像（如果图像较小），因此请确保使用高度至少为48像素且宽度充足的徽标图像以提高清晰度。
 
 使用以下步骤将自定义徽标文件上传到CRX：
 
 1. 转到 `https://'[server]:[port]'/[contextpath]/crx/de`. 如有必要，请以管理员身份登录。
-1. 在CRXDE中，右键单击 **图像** 文件夹并选中 **“创建”>“创建文件”**：
+1. 在CRXDE中，右键单击 **imgs** 路径下的文件夹并选择 **“创建”>“创建文件”**：
 
    `/apps/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/imgs/`
 
@@ -127,7 +127,7 @@ ht-degree: 0%
 
    ![CustomLogo.png作为新节点](assets/3_contentexplorernewnode_customlogo.png)
 
-1. 单击 **全部保存**.
+1. 单击&#x200B;**全部保存**。
 
    在您创建的新文件（此处为CustomLogo.png）下，将显示jcr：content属性。
 
@@ -139,19 +139,19 @@ ht-degree: 0%
 
 1. 双击 **jcr：data** 属性。
 
-   此时将显示编辑jcr：data对话框。
+   此时将显示“编辑jcr：data”对话框。
 
-   现在单击newlogo.png文件夹，双击jcr：content （dim选项），并设置nt：resource类型。 如果不存在，请创建名为jcr：content的属性。
+   现在，单击newlogo.png文件夹，双击jcr：content （dim选项），然后设置nt：resource类型。 如果没有，请创建名为jcr：content的属性。
 
 1. 在“编辑jcr：data”对话框中，单击 **浏览** 并选择要用作徽标的图像文件（此处为CustomLogo.png）。
 
-   支持的图像文件格式取决于您用于访问AEM Forms的浏览器。 所有浏览器都支持JPEG、GIF和PNG。 有关更多信息，请参阅特定于浏览器的文档，了解支持的图像格式。
+   根据您用于访问AEM Forms的浏览器，支持哪些图像文件格式。 所有浏览器都支持JPEG、GIF和PNG。 有关更多信息，请参阅特定于浏览器的文档，了解支持的图像格式。
 
    ![自定义徽标文件示例](assets/geometrixx-outdoors.png)
 
    示例：用作自定义徽标的CustomLogo.png
 
-1. 单击 **全部保存**.
+1. 单击&#x200B;**全部保存**。
 
 ## 创建CSS以将徽标与UI集成 {#createcss}
 
@@ -168,7 +168,7 @@ ht-degree: 0%
 
    1. 右键单击 **css** 文件夹并选择 **“创建”>“创建文件”**.
    1. 在“新建文件”对话框中，将CSS的名称指定为 `customcss.css`（不能使用其他文件名），然后单击 **确定**.
-   1. 将以下代码添加到新创建的css文件中。 在代码中的content：url中，指定您上传到CRXDE中的imgs文件夹的图像名称。
+   1. 将以下代码添加到新创建的css文件中。 在代码的content：url中，指定您上传到CRXDE中的imgs文件夹的图像名称。
 
       ```css
       .logo, .logo:after {
@@ -176,7 +176,7 @@ ht-degree: 0%
       }
       ```
 
-   1. 单击 **全部保存**.
+   1. 单击&#x200B;**全部保存**。
 
 ## 刷新创建通信UI以查看自定义徽标 {#refreshccrui}
 

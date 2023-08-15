@@ -1,7 +1,7 @@
 ---
 title: 草稿和提交组件
 seo-title: Drafts and submissions component
-description: 草稿和提交组件列出了处于草稿状态且已提交的表单。 可定制组件的外观和样式。
+description: 草稿和提交组件列出了处于草稿状态并已提交的表单。 您可以自定义组件的外观和样式。
 seo-description: Drafts and submissions component lists forms that are in the draft state and are already submitted. You can customize appearance and style of the component.
 uuid: 42c205b5-3141-4b80-85d9-dad921e223a2
 content-type: reference
@@ -10,28 +10,28 @@ topic-tags: publish
 discoiquuid: ad71b423-02e1-4476-9c7c-f832cea6b0a6
 docset: aem65
 exl-id: f3f013a7-a399-4178-a901-d4a8c65ddbd3
-source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '747'
+source-wordcount: '745'
 ht-degree: 0%
 
 ---
 
 # 草稿和提交组件{#drafts-and-submissions-component}
 
-草稿和提交组件列出处于草稿状态的所有表单和已提交的表单。 该组件具有用于草稿和已提交表单的单独部分（选项卡）。 用户只能查看其草稿和提交的表单。
+草稿和提交组件列出了处于草稿状态的所有表单以及已提交的表单。 该组件具有用于草稿和已提交表单的单独部分（选项卡）。 用户只能查看其草稿和提交的表单。
 
 ## 配置组件 {#configuring-the-component}
 
 草稿和提交组件包含两个选项卡：草稿和提交。
 
-要允许在提交选项卡中显示自适应表单的提交，请设置 **提交操作** 到 **[Forms Portal提交操作](../../forms/using/configuring-submit-actions.md). 或者，** 启用Forms门户提交选项。 每当用户提交表单时，该表单即被添加到提交选项卡。
+要允许在提交选项卡中显示自适应表单的提交，请设置 **提交操作** 到 **[Forms Portal提交操作](../../forms/using/configuring-submit-actions.md). 或者，** 启用Forms Portal提交选项。 每当用户提交表单时，该表单即被添加到提交选项卡。
 
-现成启用草稿功能。 用户点击时 **保存** 在自适应表单上，该表单会添加到草稿选项卡。
+现成启用草稿功能。 用户单击时 **保存** 在自适应表单上，该表单被添加到草稿选项卡。
 
 执行以下步骤以添加和配置草稿和提交组件：
 
-1. 拖放 **草稿和提交** 页面上组件浏览器中Document Services类别下的组件。
+1. 拖放 **草稿和提交** 页面上组件浏览器中“文档服务”类别下的组件。
 1. 点按组件，然后点按 ![settings_icon](assets/settings_icon.png) 以打开组件的“编辑”对话框。
 
    ![草稿和提交组件](assets/drafts-submissions-edit.png)
@@ -47,13 +47,13 @@ ht-degree: 0%
   </tr>
   <tr>
    <td>常规</td>
-   <td>结果总计</td>
-   <td>指定要显示的最大结果数。 如果结果计数增加“总结果”限制，则 <strong>更多 </strong>链接显示在组件底部。 点击 <strong>更多 </strong>显示所有表单。 </td>
+   <td>总结果</td>
+   <td>指定要显示的最大结果数。 如果结果计数增加了“总结果”限制，则 <strong>更多 </strong>链接显示在组件底部。 点击 <strong>更多 </strong>显示所有表单。 </td>
   </tr>
   <tr>
    <td> </td>
    <td>样式类型</td>
-   <td>指定组件的样式。 您可以指定 <strong>无样式</strong>， <strong>默认样式</strong>，或 <strong>自定义样式</strong> 以列出表格。 对于自定义样式选项，您可以在 <strong>自定义样式路径 </strong>字段<strong>.</strong></td>
+   <td>指定组件的样式。 您可以指定 <strong>无样式</strong>， <strong>默认样式</strong>，或 <strong>自定义样式</strong> 以列出表单。 对于自定义样式选项，您可以在 <strong>自定义样式路径 </strong>字段<strong>.</strong></td>
   </tr>
   <tr>
    <td> </td>
@@ -63,12 +63,12 @@ ht-degree: 0%
   <tr>
    <td> </td>
    <td>显示选项</td>
-   <td><p>指定要显示的选项卡。 您可以选择显示草稿表单、已提交的表单或同时显示两者。 </p> <p><strong>注释</strong>：<em> 对象 <strong>显示选项</strong>，如果您选择的选项不是 <strong>两者</strong>，则 <strong>默认选项卡</strong> 未使用字段选项。</em></p> </td>
+   <td><p>指定要显示的选项卡。 您可以选择显示草稿表单、已提交的表单或同时显示两者。 </p> <p><strong>注意</strong>：<em> 对象 <strong>显示选项</strong>，如果您选择的选项不是 <strong>两者</strong>， <strong>默认选项卡</strong> 未使用字段选项。</em></p> </td>
   </tr>
   <tr>
    <td> </td>
    <td>默认选项卡</td>
-   <td>指定在加载表单门户页面时显示的选项卡。 您可以选择 <strong>草稿Forms选项卡</strong> 和 <strong>已提交的Forms选项卡</strong>.</td>
+   <td>指定在加载表单门户页面时显示的选项卡。 您可以选择 <strong>草稿Forms选项卡</strong> 和 <strong>已提交Forms选项卡</strong>.</td>
   </tr>
   <tr>
    <td>草稿Forms选项卡配置</td>
@@ -95,9 +95,9 @@ ht-degree: 0%
 
 ## 自定义存储 {#customizing-the-storage}
 
-当您使用Forms Portal提交操作或启用自适应表单中的在表单门户中存储数据选项时，表单数据存储在AEM存储库中。 在生产环境中，建议不要将草稿或已提交的表单数据存储在AEM存储库中。 相反，您必须将草稿和提交组件与企业数据库等安全存储集成，以存储草稿和提交的表单数据。
+当您使用Forms Portal提交操作或启用自适应表单中的在表单门户中存储数据选项时，表单数据存储在AEM存储库中。 在生产环境中，建议不要将草稿或已提交的表单数据存储在AEM存储库中。 相反，您必须将草稿和提交组件与企业数据库等安全存储集成以存储草稿和提交的表单数据。
 
-Forms portal允许您将数据存储在本地AEM存储库、远程AEM存储库中，或存储到数据库中。 AEM Forms允许您自定义存储草稿和提交的用户数据的实施。 您可以覆盖默认方法，以指定如何将草稿和提交数据存储到您选择的存储中。 例如，您可以将数据存储在组织中当前实施的数据存储中。
+Forms portal允许您将数据存储在本地AEM存储库、远程AEM存储库中或数据库中。 AEM Forms允许您自定义存储草稿和提交的用户数据的实施。 您可以覆盖默认方法，以指定如何将草稿和提交数据存储到您选择的存储中。 例如，您可以将数据存储在组织中当前实施的数据存储中。
 
 Forms portal提供开箱即用的服务(API)，用于在本地和远程AEM Forms发布实例的crx存储库上存储数据。 您可以替换默认实施，如中所述 [为草稿和提交配置存储服务](/help/forms/using/configuring-draft-submission-storage.md) 文章，通过自定义实施来替换默认功能。 有关在自定义实施中将内容存储在安全位置所需的方法的详细信息，请参阅 [自定义草稿和提交数据服务](/help/forms/using/custom-draft-submission-data-services.md) 和 [草稿和提交组件的自定义存储。](/help/forms/using/adding-custom-storage-provider-forms.md)
 

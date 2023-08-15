@@ -1,11 +1,11 @@
 ---
 title: 了解如何在内容片段中使用引用
-description: 了解如何在内容片段中对内容、其他片段和其他资产（媒体）使用引用。介绍 Headless CMS 创作的嵌套片段的必要性和机制。
+description: 了解如何在内容片段中对内容、其他片段和其他资源（媒体）使用引用。介绍 Headless CMS 创作的嵌套片段的必要性和机制。
 exl-id: d54a0a40-a8af-456a-9bf5-219d84540c97
-source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '731'
-ht-degree: 98%
+source-wordcount: '726'
+ht-degree: 88%
 
 ---
 
@@ -25,31 +25,31 @@ ht-degree: 98%
 * **目标**：介绍如何在 Headless CMS 创作中使用引用。提供了哪些类型的引用，它们的作用是什么：
 
    * 内容引用
-   * 资产/媒体引用
+   * 资源/媒体引用
    * 片段引用
    * 文本块中的临时引用
 
 ## 什么是引用？ {#what-are-references}
 
-引用只是一种用于连接资源的机制，无论它是其他内容、资产（如图像）还是其他片段。虽然非常相似，但仍有些许不同。
+引用只是一种用于连接资源的机制，无论它是其他内容、资源（如图像）还是其他片段。虽然非常相似，但仍有些许不同。
 
-一些引用具有专用数据类型（例如，内容引用和片段引用），而其他引用只是作为引用内容添加到文本块中（资产引用和临时引用）。
+一些引用具有专用数据类型（例如，内容引用和片段引用），而其他引用只是作为引用内容添加到文本块中（资源引用和临时引用）。
 
 ![内容片段 – 引用](/help/journey-headless/author/assets/headless-journey-author-references-01.png)
 
 ## 内容引用 {#content-references}
 
-内容引用就是这样做的 – 它们允许您引用任何其他内容。这将打开一个浏览器以便您能够选择内容项。
+内容引用仅用于此目的，可让您引用任何其他内容。 这将打开一个浏览器，允许您选择内容项目。
 
-## 资产/媒体引用 {#assets-media-references}
+## 资源/媒体引用 {#assets-media-references}
 
-可以使用&#x200B;**插入资产**&#x200B;选项在文本块中引用资产（例如，图像或媒体）。这将打开一个浏览器以便您能够选择资产。
+可以使用&#x200B;**插入资源**&#x200B;选项在文本块中引用资源（例如，图像或媒体）。这将打开一个浏览器，允许您选择资产。
 
-![内容片段 – 插入资产](/help/journey-headless/author/assets/headless-journey-author-references-02.png)
+![内容片段 – 插入资源](/help/journey-headless/author/assets/headless-journey-author-references-02.png)
 
 ## 片段引用 {#fragment-references}
 
-片段引用也是这样做的，它们允许您引用其他片段。 需要进一步说明它很重要的原因。
+片段引用也这样做 — 它们允许您引用另一个片段。 需要进一步说明它很重要的原因。
 
 例如，您可能定义了以下内容片段模型：
 
@@ -75,7 +75,7 @@ ht-degree: 98%
 
 ### 如何创作嵌套片段 {#author-nested-fragment}
 
-创作片段引用非常简单（尽管该字段通常将不被标记为&#x200B;**片段引用**）。您可以直接键入引用，或者（更有可能）选择文件夹图标以打开浏览器，以便导航并选择所需的片段。
+创作片段引用非常简单（尽管该字段通常将不被标记为&#x200B;**片段引用**）。您可以直接键入引用，或（更有可能的是）选择文件夹图标以打开浏览器，从中导航并选择所需的片段。
 
 ![内容片段 – 引用](/help/journey-headless/author/assets/headless-journey-author-references-03.png)
 
@@ -113,6 +113,7 @@ ht-degree: 98%
       * [将配置应用到 Assets 文件夹](/help/assets/content-fragments/content-fragments-configuration-browser.md#apply-the-configuration-to-your-assets-folder)
 
       * [创建内容片段](/help/assets/content-fragments/content-fragments-managing.md#creating-a-content-fragment)
+
    * [变体 - 创作片段内容](/help/assets/content-fragments/content-fragments-variations.md)
 
    * [内容片段模型](/help/assets/content-fragments/content-fragments-models.md)
@@ -120,7 +121,6 @@ ht-degree: 98%
       * [内容片段模型 – 数据类型](/help/assets/content-fragments/content-fragments-models.md#data-types)
 
       * [内容片段模型 – 属性](/help/assets/content-fragments/content-fragments-models.md#properties)
-
 
 * 快速入门指南
    * [创建资源文件夹Headless快速入门指南](/help/sites-developing/headless/getting-started/create-assets-folder.md)

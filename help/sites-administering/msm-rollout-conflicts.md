@@ -11,22 +11,22 @@ content-type: reference
 discoiquuid: 16db5334-604f-44e2-9993-10d683dee5bb
 feature: Multi Site Manager
 exl-id: e145e79a-c363-4a33-b9f9-99502ed20563
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '910'
-ht-degree: 29%
+source-wordcount: '906'
+ht-degree: 25%
 
 ---
 
 # MSM 转出冲突{#msm-rollout-conflicts}
 
-如果在Blueprint分支和从属Live Copy分支中均创建了具有相同页面名称的新页面，则可能会发生冲突。
+如果在Blueprint分支和从属Live Copy分支中都创建了具有相同页面名称的新页面，则可能会发生冲突。
 
 转出时需要处理和解决此类冲突。
 
 ## 冲突处理 {#conflict-handling}
 
-当Blueprint和Live Copy分支中存在冲突的页面时，MSM允许您定义应如何（甚至是否）处理这些页面。
+当Blueprint和Live Copy分支中的页面存在冲突时，MSM允许您定义应如何（甚至是否）处理冲突。
 
 为了确保转出不被阻止，可能的定义可以包括：
 
@@ -34,21 +34,21 @@ ht-degree: 29%
 * 哪些页面将进行重命名（以及重命名的方式），
 * 这将如何影响任何已发布的内容。
 
-   AEM的默认行为（开箱即用）是发布的内容将不会受到影响。 因此，如果在Live Copy分支中手动创建的页面已发布，则仍将在冲突处理和转出后发布该内容。
+  AEM的默认行为（现成）是发布的内容将不会受到影响。 因此，如果在Live Copy分支中手动创建的页面已发布，则仍将在冲突处理和转出后发布该内容。
 
 除了标准功能外，还可以添加自定义的冲突处理程序来实施其他规则。它们还允许将操作发布为单独的过程。
 
 ### 示例场景 {#example-scenario}
 
-在以下部分中，我们使用新页面的示例 `b`，在Blueprint和Live Copy分支（手动创建）中创建，以说明解决冲突的各种方法：
+在以下部分中，我们使用新页面的示例 `b`，在Blueprint和Live Copy分支（手动创建）中创建，用于说明解决冲突的各种方法：
 
 * Blueprint：`/b`
 
-   主控页面；带1个子页面，bp级别1。
+  母版页；带1个子页，bp-level-1。
 
 * live copy： `/b`
 
-   在Live Copy分支中手动创建的页面；带1个子页面， `lc-level-1`.
+  在Live Copy分支中手动创建的页面；带1个子页面， `lc-level-1`.
 
    * 在发布为 `/b` 时与子页面一起激活.
 
@@ -62,14 +62,14 @@ ht-degree: 29%
    <td><strong>转出前发布</strong></td>
   </tr>
   <tr>
-   <td><code>b</code> <br /> （在Blueprint分支中创建，可供转出）<br /> </td>
-   <td><code>b</code> <br /> （在live copy分支中手动创建）<br /> </td>
-   <td><code>b</code> <br /> （包含在live copy分支中手动创建的页面b的内容）</td>
+   <td><code>b</code><br /> <br /> （在Blueprint分支中创建，可供转出）<br /> </td>
+   <td><code>b</code><br /> <br /> （在live copy分支中手动创建）<br /> </td>
+   <td><code>b</code><br /> <br /> （包含在live copy分支中手动创建的页面b的内容）</td>
   </tr>
   <tr>
    <td><code> /bp-level-1</code></td>
-   <td><code> /lc-level-1</code> <br /> （在live copy分支中手动创建）<br /> </td>
-   <td><code> /lc-level-1</code> <br /> (包含页面的内容<br /> 在live copy分支中手动创建的子级别1)</td>
+   <td><code> /lc-level-1</code><br /> <br /> （在live copy分支中手动创建）<br /> </td>
+   <td><code> /lc-level-1</code><br /> <br /> （包含页面的内容）<br /> 在live copy分支中手动创建的子级1)</td>
   </tr>
  </tbody>
 </table>
@@ -78,13 +78,13 @@ ht-degree: 29%
 
 转出管理器允许您激活或停用冲突管理。
 
-可使用以下方式完成 [OSGi配置](/help/sites-deploying/configuring-osgi.md) 之 **Day CQ WCM转出管理器**：
+可使用 [OSGi配置](/help/sites-deploying/configuring-osgi.md) 之 **Day CQ WCM转出管理器**：
 
 * **处理与手动创建的页面的冲突**：
 
-   ( `rolloutmgr.conflicthandling.enabled`)
+  ( `rolloutmgr.conflicthandling.enabled`)
 
-   如果转出管理器应处理Live Copy中创建的页面的名称与Blueprint中存在的名称之间的冲突，则设置为true。
+  如果转出管理器应处理Live Copy中创建的页面的名称与Blueprint中已存在的名称发生的冲突，则设置为true。
 
 AEM具有 [已停用冲突管理时的预定义行为](#behavior-when-conflict-handling-deactivated).
 
@@ -99,13 +99,13 @@ AEM 提供：
    * `ResourceNameRolloutConflictHandler`
 
 * 实施[自定义处理程序](#customized-handlers)的可能性。
-* 服务排名机制，可让您设置每个单独处理程序的优先级. 使用排名最高的服务。
+* 服务排名机制，允许您设置每个单独处理程序的优先级。 使用排名最高的服务。
 
 ### 默认冲突处理程序 {#default-conflict-handler}
 
 默认冲突处理程序：
 
-* 调用 `ResourceNameRolloutConflictHandler`
+* 称为 `ResourceNameRolloutConflictHandler`
 
 * 对于此处理程序，Blueprint 页面将获得优先权。
 * 此处理程序的服务排名设置得很低(“即低于 `service.ranking` 属性)，因为假设自定义处理程序需要更高的排名。 然而，排名并不是在必要时确保灵活性的绝对最低标准。
@@ -114,13 +114,13 @@ AEM 提供：
 
 * live copy： `/b`
 
-   （在Live Copy中）移至 `/b_msm_moved`. 这将充当备份，并确保不丢失任何内容。
+  （在Live Copy中）移至 `/b_msm_moved`. 这将充当备份，并确保不丢失任何内容。
 
    * 不会移动 `lc-level-1`。
 
 * Blueprint：`/b`
 
-   转出到Live Copy页面 `/b`.
+  转出到Live Copy页面 `/b`.
 
    * `bp-level-1` 转出到livecopy。
 
@@ -137,24 +137,24 @@ AEM 提供：
   </tr>
   <tr>
    <td><code>b</code></td>
-   <td><code>b</code> <br /> （具有已转出的Blueprint页面b的内容）<br /> </td>
+   <td><code>b</code><br /> <br /> （具有已转出的Blueprint页面b的内容）<br /> </td>
    <td></td>
-   <td><code>b_msm_moved</code> <br /> （具有在live copy分支中手动创建的页面b的内容）</td>
-   <td><code>b</code> <br /> （无更改；包含在live copy分支中手动创建的原始页面b的内容，现在称为b_msm_moved）<br /> </td>
+   <td><code>b_msm_moved</code><br /> <br /> （具有在live copy分支中手动创建的页面b的内容）</td>
+   <td><code>b</code><br /> <br /> （无更改；包含在live copy分支中手动创建的原始页面b的内容，现在称为b_msm_moved）<br /> </td>
   </tr>
   <tr>
    <td><code> /bp-level-1</code></td>
    <td><code class="code"> /bp-level-1</code></td>
-   <td><code> /lc-level-1</code> <br /> （无更改）</td>
+   <td><code> /lc-level-1</code><br /> <br /> （无更改）</td>
    <td><code> </code></td>
-   <td><code> /lc-level-1</code> <br /> （无更改）</td>
+   <td><code> /lc-level-1</code><br /> <br /> （无更改）</td>
   </tr>
  </tbody>
 </table>
 
 ### 自定义处理程序 {#customized-handlers}
 
-自定义冲突处理程序允许您实施自己的规则。利用服务排名机制，您还可以定义它们如何与其他处理程序交互。
+自定义冲突处理程序允许您实施自己的规则。 利用服务排名机制，您还可以定义它们如何与其他处理程序交互。
 
 自定义冲突处理程序可以：
 
@@ -164,9 +164,9 @@ AEM 提供：
 
    * **服务排名**：
 
-      定义与其他冲突处理程序相关的顺序( `service.ranking`)。
+     定义与其他冲突处理程序相关的顺序( `service.ranking`)。
 
-      默认值为 0。
+     默认值为 0。
 
 ### 冲突处理停用时的行为 {#behavior-when-conflict-handling-deactivated}
 
@@ -174,17 +174,17 @@ AEM 提供：
 
 >[!CAUTION]
 >
->AEM不会提供任何指示忽略冲突，因为必须明确配置此行为，因此假定它是必需的行为。
+>AEM不会指示将忽略冲突，因为必须显式配置此行为，因此会假定这是必需的行为。
 
 在这种情况下，Live Copy将获得优先权。 Blueprint页面 `/b` 不会复制且live copy页面不会复制 `/b` 保持不变。
 
 * Blueprint：`/b`
 
-   根本不复制，而是忽略。
+  根本不复制，而是忽略。
 
 * live copy： `/b`
 
-   保持不变。
+  保持不变。
 
 <table>
  <caption>
@@ -198,13 +198,13 @@ AEM 提供：
   </tr>
   <tr>
    <td><code>b</code></td>
-   <td><code>b</code> <br /> （无更改；具有在live copy分支中手动创建的页面b的内容）</td>
-   <td><code>b</code> <br /> （无更改；包含在live copy分支中手动创建的页面b的内容）<br /> </td>
+   <td><code>b</code><br /> <br /> （无更改；具有在live copy分支中手动创建的页面b的内容）</td>
+   <td><code>b</code><br /> <br /> （无更改；包含在live copy分支中手动创建的页面b的内容）<br /> </td>
   </tr>
   <tr>
-   <td><code> /bp-level-1</code> </td>
-   <td><code> /lc-level-1</code> <br /> （无更改）</td>
-   <td><code> /lc-level-1</code> <br /> （无更改）</td>
+   <td><code> /bp-level-1</code><br /> </td>
+   <td><code> /lc-level-1</code><br /> <br /> （无更改）</td>
+   <td><code> /lc-level-1</code><br /> <br /> （无更改）</td>
   </tr>
  </tbody>
 </table>

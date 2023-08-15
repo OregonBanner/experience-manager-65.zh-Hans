@@ -1,5 +1,5 @@
 ---
-title: 正在配置文件类型设置
+title: 配置文件类型设置
 seo-title: Configuring file type settings
 description: 了解如何配置文件类型设置。
 seo-description: Learn how to configure file type settings.
@@ -9,7 +9,7 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/working_with_pdf_generator
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 89f4d3cf-eb2e-4d55-8209-16ecbba03792
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: 5f4bbad87768cf6bd73771f9eac6e01ab3bf3309
 workflow-type: tm+mt
 source-wordcount: '6171'
 ht-degree: 0%
@@ -17,14 +17,14 @@ ht-degree: 0%
 ---
 
 
-# 正在配置文件类型设置 {#configuring-file-type-settings}
+# 配置文件类型设置 {#configuring-file-type-settings}
 
-在PDF生成器中，可以为支持的文件类型设置应用程序设置。 在Windows上，您可以为每个支持的文件类型设置应用程序设置。 在UNIX和Linux上，您可以为HTML到PDF和OpenOffice设置应用程序设置。
+在PDF Generator中，您可以为支持的文件类型设置应用程序设置。 在Windows上，您可以为每个支持的文件类型设置应用程序设置。 在UNIX和Linux上，您可以为HTML到PDF和OpenOffice设置应用程序设置。
 
 在“文件类型设置”页上，可以执行以下任务：
 
 * [创建或编辑“文件类型”设置](#create-or-edit-file-type-settings)
-* 指定默认使用的文件类型设置(请参阅 [导入和导出PDF生成器配置文件](https://helpx.adobe.com/aem-forms/6-2/admin-help/importing-exporting-pdf-generator-configuration.html))
+* 指定默认使用的文件类型设置(请参阅 [导入和导出PDF Generator配置文件](https://helpx.adobe.com/aem-forms/6-2/admin-help/importing-exporting-pdf-generator-configuration.html))
 * [更改默认设置](/help/forms/using/admin-help/configuring-file-type-settings1.md#change-the-default-settings)
 * [启用PDF/A支持](https://helpx.adobe.com/aem-forms/6-2/admin-help/enable-pdf-a-support.html)
 * [删除文件类型设置](https://helpx.adobe.com/aem-forms/6-2/admin-help/enable-pdf-a-support.html)
@@ -37,30 +37,30 @@ ht-degree: 0%
 
 创建或编辑文件类型设置，以指定应用程序处理所支持文件类型转换的方式。 在Windows上，您可以为每个支持的文件类型设置应用程序设置。 在UNIX和Linux上，您可以为HTML到PDF和OpenOffice设置应用程序设置。
 
-1. 在管理控制台中，单击 **[!UICONTROL 服务]** > **[!UICONTROL PDF生成器]** > **[!UICONTROL 文件类型设置]**.
+1. 在管理控制台中，单击 **[!UICONTROL 服务]** > **[!UICONTROL PDF Generator]** > **[!UICONTROL 文件类型设置]**.
 1. 单击新建或单击设置的名称。
 1. 在“文件扩展名”框中，键入此应用程序接受的文件类型的文件扩展名（以逗号分隔）。 不要包含扩展之前的句点或扩展之间的空格。 默认为 `bmp,gif,jpeg,jpg,tif,tiff,png`。
 1. （可选）要在图形或图像中使用文本的光学代码识别(OCR)，请选择“使用OCR”并设置以下选项：
 
 **主要语言：** OCR引擎用于标识字符的语言。 默认为英语（美国）。
 
-**PDF输出样式：** 选择“可搜索图像”可在前景中显示页面的位图图像，并在下面不可见的图层中显示扫描的文本。 页面的外观不变，但文本变为可选和可读。 选择“格式化的文本和图形”，使用可识别的文本、字体、图片和其他图形元素重建原始页面。 默认为可搜索图像（精确）。
+**PDF输出样式：** 选择“可搜索图像”可在前景中显示页面的位图图像，并在下面不可见的图层中显示扫描的文本。 页面的外观不会发生更改，但文本会变为可选和可读的。 选择“格式化的文本和图形”以使用可识别的文本、字体、图片和其他图形元素重建原始页面。 默认为可搜索图像（精确）。
 
-**缩减像素取样图像：** 减少彩色、灰度和单色图像中的像素数。 在OCR完成之后对扫描的图像执行缩减像素采样。 缺省值为“最低”(600 dpi)。 如果将PDF输出样式设置为“可搜索图像（精确）”，则此选项不可用。
+**缩减像素取样图像：** 减少彩色、灰度和单色图像中的像素数。 在OCR完成之后对扫描的图像执行缩减像素采样。 缺省值为“最低”(600 dpi)。 如果将“PDF输出样式”设置为“可搜索图像（精确）”，则此选项不可用。
 
 1. 完成以下部分中的必需信息：
 
-   [导入和导出PDF生成器配置文件](https://helpx.adobe.com/aem-forms/6-2/admin-help/importing-exporting-pdf-generator-configuration.html)
+   [导入和导出PDF Generator配置文件](https://helpx.adobe.com/aem-forms/6-2/admin-help/importing-exporting-pdf-generator-configuration.html)
 
 [Adobe PDF导出设置（仅限Windows）](#adobe-pdf-export-settings-windows-only)
 
 [HTML到PDF设置](#html-to-pdf-settings)
 
-[将视频Flash到PDF设置](#flash-videos-to-pdf-settings)
+[Flash视频以PDF设置](#flash-videos-to-pdf-settings)
 
 [XPS到PDF设置](#xps-to-pdf-settings)
 
-[PDF优化器设置](#pdf-optimizer-settings)
+[PDF优化程序设置](#pdf-optimizer-settings)
 
 [Microsoft Excel设置（仅限Windows）](/help/forms/using/admin-help/configuring-file-type-settings1.md#microsoft-excel-settings-windows-only)
 
@@ -80,19 +80,19 @@ ht-degree: 0%
 
 [其他应用程序的设置（仅限Windows）](#other-applications-settings-windows-only)
 
-   要转到其他部分，请在网页上单击其链接或使用**[!UICONTROL 下一个]**或 **[!UICONTROL 上一个]** 按钮。
+   要转到其他部分，请单击其在网页上的链接或使用**[!UICONTROL 下一个]**或 **[!UICONTROL 上一个]** 按钮。
 
 1. 完成所有部分后，单击 **[!UICONTROL 保存]** 或 **[!UICONTROL 另存为]** 并提供设置的名称。
 
-可以自定义对各种文件类型的支持。 (请参见“ ” [添加对其他本机文件格式的支持](https://help.adobe.com/en_US/AEMForms/6.1/ProgramLC/WS624e3cba99b79e12e69a9941333732bac8-7756.2.html)中的“” [使用AEM表单编程](https://www.adobe.com/go/learn_lc_programming_11).)
+可以自定义对各种文件类型的支持。 (请参阅&quot; [添加对其他本机文件格式的支持](https://help.adobe.com/en_US/AEMForms/6.1/ProgramLC/WS624e3cba99b79e12e69a9941333732bac8-7756.2.html)中的&quot; [使用AEM表单编程](https://www.adobe.com/go/learn_lc_programming_11).)
 
 ## 更改默认设置 {#change-the-default-settings}
 
-您可以更改适用于新创建的源的Adobe PDF设置、安全设置和文件类型设置的默认值。 更改默认值不会影响现有源的设置。
+您可以更改适用于新创建源的Adobe PDF设置、安全设置和文件类型设置的默认值。 更改默认值不会影响现有源的设置。
 
-1. 在管理控制台中，单击 **[!UICONTROL 服务>PDF生成器]**.
+1. 在管理控制台中，单击 **[!UICONTROL 服务>PDF Generator]**.
 1. 在 **[!UICONTROL Adobe PDF设置]**， **[!UICONTROL 文件类型设置]**，或 **[!UICONTROL 安全设置]** 页面，单击 **[!UICONTROL 设置默认设置]**.
-1. 选择您的首选默认设置。 “设置默认设置”页面上提供了以下一个或多个设置：
+1. 选择您的首选默认设置。 “设置默认设置”页面提供了以下一个或多个设置：
 
    **[!UICONTROL Adobe PDF设置]**：原始默认值为“标准”(Acrobat 6)。
 
@@ -100,23 +100,23 @@ ht-degree: 0%
 
    **[!UICONTROL 文件类型设置]**：原始默认值为“标准”。
 
-1. 单击“**[!UICONTROL 保存]**”。
+1. 单击&#x200B;**[!UICONTROL 保存]**。
 
 ## 删除文件类型设置 {#delete-a-file-type-setting}
 
 您可以删除不再使用的文件类型设置。
 
-1. 在管理控制台中，单击 **[!UICONTROL 服务>PDF生成器>文件类型设置]**.
-1. 选中要删除的设置旁边的复选框。 您可以选择多个源。 旁边没有复选框的设置始终包含在PDF生成器中，无法删除。
+1. 在管理控制台中，单击 **[!UICONTROL 服务>PDF Generator>文件类型设置]**.
+1. 选中要删除的设置旁边的复选框。 您可以选择多个源。 旁边没有复选框的设置始终包含在PDF Generator中，无法删除。
 1. 单击 **[!UICONTROL 删除]** 然后，在“删除确认”页面上，单击 **[!UICONTROL 删除]**.
 
 ## 图像到PDF设置 {#image-to-pdf-settings}
 
 以下选项确定如何将图像文件转换为PDF。 有关访问这些设置的说明，请参阅 [创建或编辑文件类型设置](configuring-file-type-settings.md#create-or-edit-file-type-settings).
 
-**文件扩展名：** 可转换的文件名的逗号分隔列表。
+**文件扩展名：** 可转换的文件扩展名列表（以逗号分隔）。
 
-**尝试使用回退转换器：** PDF生成器可以使用Java™或Acrobat将图像文件转换为PDF。 当选择此选项且转换失败或达到指定的超时限制时，PDF生成器会使用替代方法尝试转换。 如果替代方法失败或达到指定的超时限制，则会将异常写入日志文件。
+**尝试回退转换器：** PDF Generator可以使用Java™或Acrobat将图像文件转换为PDF。 当选择此选项且转换失败或达到指定的超时限制时，PDF Generator会使用替代方法尝试转换。 如果备用方法失败或达到指定的超时限制，则会将异常写入日志文件。
 
 >[!NOTE]
 >
@@ -124,15 +124,15 @@ ht-degree: 0%
 
 **使用OCR：** 指定是否对PDF应用OCR（光学字符识别）。 OCR软件使您能够搜索、更正和复制PDF中的文本。
 
-***注释&#x200B;**：仅在Microsoft Windows上支持OCRPDF(可搜索PDF)功能。*
+***注意&#x200B;**：仅Microsoft Windows支持OCRPDF(可搜索PDF)功能。*
 
 **主要OCR语言：** 指定OCR引擎用于标识字符的语言。
 
 **PDF输出样式：** 确定要生成的PDF类型。 所有格式都将OCR和字体及页面识别应用于文本图像，并将它们转换为普通文本。
 
-**可搜索图像：** 确保文本可搜索和选择。 此选项会保留原始图像，根据需要对其进行扭曲，并在其上放置不可见的文本图层。 “缩减像素取样图像”选项确定图像是否缩减像素取样以及缩减像素取样到何种程度。
+**可搜索图像：** 确保文本可搜索且可选择。 此选项会保留原始图像，根据需要对其进行扭曲并将不可见的文本图层置于其上。 缩减像素取样图像选项可确定图像是否缩减像素取样以及缩减像素取样到什么程度。
 
-**可搜索图像（精确）：** 确保文本可搜索和选择。 此选项会保留原始图像，并在其上放置不可见的文本图层。 建议用于要求原始图像具有最大保真度的情况。
+**可搜索图像（精确）：** 确保文本可搜索且可选择。 此选项会保留原始图像并在其上放置不可见的文本图层。 建议用于要求原始图像的最大保真度的情况。
 
 **清除扫描：** 合成与原始字体非常接近的新Type 3字体，并使用低分辨率副本保留页面背景。
 
@@ -140,7 +140,7 @@ ht-degree: 0%
 
 ## Adobe PDF导出设置（仅限Windows） {#adobe-pdf-export-settings-windows-only}
 
-Adobe PDF导出设置部分中的“导出文件类型”设置可用于将PDF文件转换为其他格式。 缺省值为HTML4.01，带有层叠样式表(CSS) 1.0(&amp;ast；.htm，&amp;ast；.html)。
+Adobe PDF导出设置部分中的“导出文件类型”设置用于将PDF文件转换为另一种格式。 缺省值为HTML4.01，带有层叠样式表(CSS) 1.0(&amp;ast；.htm， &amp;ast；.html)。
 
 有关访问此设置的说明，请参阅 [创建或编辑文件类型设置](configuring-file-type-settings.md#create-or-edit-file-type-settings).
 
@@ -148,23 +148,23 @@ Adobe PDF导出设置部分中的“导出文件类型”设置可用于将PDF�
 
 以下选项确定HTML文件转换为PDF的方式。 有关访问这些选项的说明，请参阅 [创建或编辑文件类型设置](configuring-file-type-settings.md#create-or-edit-file-type-settings).
 
-**尝试使用回退转换器：** PDF生成器可以使用Java™或Acrobat将HTML文件转换为PDF。 当选择此选项且转换失败或达到指定的超时限制时，PDF生成器会使用替代方法尝试转换。 如果替代方法失败或达到指定的超时限制，则会将异常写入日志文件。
+**尝试回退转换器：** PDF Generator可以使用Java™或Acrobat将HTML文件转换为PDF。 当选择此选项且转换失败或达到指定的超时限制时，PDF Generator会使用替代方法尝试转换。 如果备用方法失败或达到指定的超时限制，则会将异常写入日志文件。
 
-**默认编码：** 从操作系统和字母的菜单设置文件文本的输入编码。 仅当HTML源文件未指定编码类型时，才使用默认编码选项中显示的选择。
+**默认编码：** 从操作系统和字母表的菜单设置文件文本的输入编码。 仅当HTML源文件未指定编码类型时，才使用默认编码选项中显示的选择。
 
-**强制选定的编码：** 忽略HTML源文件中指定的任何编码，并使用“默认编码”选项中显示的选择。
+**强制选定编码：** 忽略HTML源文件中指定的任何编码，并使用默认编码选项中显示的选择。
 
 ### 爬网设置 {#spidering-settings}
 
 *爬网* 扫描网页以查找指向其他网页的链接。 当遇到指向其他网页的链接时，将获取目标页面并将其包含在生成的PDF文档中。 启用这些选项可设置要获取并转换为PDF的级别数：
 
-**仅获取X个级别：** 从基本页面URL中查找页面并将其转换到指定级别的深度。 值1仅转换提供的URL。
+**仅获取X级别：** 从基本页面URL中查找并转换页面，直至指定级别的深度。 值1仅转换提供的URL。
 
-**获取整个站点：** 从提供的URL开始，转换整个网站。
+**获取整个站点：** 转换整个网站，从提供的URL开始。
 
 **保持相同路径：** 在爬网过程中，指向与基本URL不在同一相对路径上的页面的任何链接都不会被转换。
 
-**停留在同一服务器上：** 在爬网过程中，指向不同服务器上页面的任何链接都不会被转换。 只有指向与指定URL相同的服务器的链接才会被转换。
+**驻留在同一服务器上：** 在爬网过程中，指向不同服务器上页面的所有链接都不会被转换。 只有指向与指定URL相同的服务器的链接才会被转换。
 
 ### 页面转换设置 {#page-conversion-settings}
 
@@ -178,17 +178,17 @@ Adobe PDF导出设置部分中的“导出文件类型”设置可用于将PDF�
 
 **将书签添加到PDF：** 向PDF文档添加书签。
 
-**启用已标记的PDF：** 在PDF文档中嵌入标签。
+**启用已标记的PDF：** 在PDF文档中嵌入标记。
 
-**设置初始视图设置：** 允许您配置“文档选项”、“窗口选项”和“用户界面选项”。 这些设置确定内容的初始显示方式。
+**设置初始视图设置：** 允许您配置文档选项、窗口选项和用户界面选项。 这些设置确定内容的初始显示方式。
 
 ### 文档选项 {#document-options}
 
-启用这些选项可指定如何显示PDF、如何在“内容”文档中显示页面以及如何指定放大级别：
+启用这些选项以指定如何显示PDF、如何显示内容文档中的页面以及如何指定放大级别：
 
 **显示：** 选择打开PDF文档时要在Acrobat中打开的窗格。
 
-**页面布局：** 为PDF文档选择页面布局类型。
+**页面布局：** 选择PDF文档的页面布局类型。
 
 **放大率：** 为PDF文档的初始视图选择预设缩放比例或选择自定义值。 选择默认设置表示将使用默认的Acrobat放大率。
 
@@ -196,11 +196,11 @@ Adobe PDF导出设置部分中的“导出文件类型”设置可用于将PDF�
 
 ### 窗口选项 {#window-options}
 
-启用这些选项可指定窗口的大小和显示方式。
+启用这些选项以指定窗口的大小和显示方式。
 
 **将窗口大小调整为初始页面：** 将Acrobat窗口的大小调整为初始页面的大小。
 
-**屏幕窗口居中：** 在屏幕中央打开窗口。
+**将窗口置于屏幕中心：** 在屏幕中央打开窗口。
 
 **以全屏模式打开：** 以全屏模式打开窗口。
 
@@ -216,29 +216,29 @@ Adobe PDF导出设置部分中的“导出文件类型”设置可用于将PDF�
 
 **隐藏窗口控件：** 隐藏PDF文档中的窗口控件。
 
-## 将视频Flash到PDF设置 {#flash-videos-to-pdf-settings}
+## Flash视频以PDF设置 {#flash-videos-to-pdf-settings}
 
-PDF生成器支持提交视频以进行AdobeFlash(SWF或FLV文件)，并创建一个PDF文件，其中嵌入了用于AdobeFlash的视频。 此转换不需要在表单服务器上安装AdobeFlash Player。 有关访问此选项的说明，请参阅 [创建或编辑文件类型设置](configuring-file-type-settings.md#create-or-edit-file-type-settings).
+PDF Generator支持提交用于AdobeFlash的视频(SWF或FLV文件)并创建PDF文件的功能，其中嵌入用于AdobeFlash的视频。 此转换不需要在表单服务器上安装AdobeFlash Player。 有关访问此选项的说明，请参阅 [创建或编辑文件类型设置](configuring-file-type-settings.md#create-or-edit-file-type-settings).
 
-**文件扩展名：** 可转换的文件名的逗号分隔列表。
+**文件扩展名：** 可转换的文件扩展名列表（以逗号分隔）。
 
 ## XPS到PDF设置 {#xps-to-pdf-settings}
 
-XML纸张规范(XPS)用于Windows打印机。 这是一种Microsoft格式，可从任何Microsoft Office应用程序创建。 AEM表单提供转换XPS文件PDF的功能。
+XML纸张规范(XPS)用于Windows打印机。 这是一种Microsoft格式，可从任何Microsoft Office应用程序创建。 AEM Forms提供以PDF转换XPS文件的功能。
 
-**文件扩展名：** 可转换的所有XPS文件扩展名的逗号分隔列表。 目前有一种格式： .xps。
+**文件扩展名：** 所有可转换的XPS文件扩展名的逗号分隔列表。 目前有一种格式： .xps。
 
-## PDF优化器设置 {#pdf-optimizer-settings}
+## PDF优化程序设置 {#pdf-optimizer-settings}
 
-PDF生成器支持减小PDF文件大小的功能。 是否使用所有这些设置或仅使用少数几个设置取决于您打算如何使用文件以及文件必须具有的基本属性。 在大多数情况下，默认设置适合发挥最大效率 — 通过删除嵌入字体、压缩图像以及从不再需要的文件中删除项目来节省空间。
+PDF Generator支持减小PDF文件大小的功能。 是否使用所有这些设置或仅使用少数几个设置取决于您打算如何使用文件以及文件必须具有的基本属性。 在大多数情况下，默认设置适合最大化效率 — 通过删除嵌入字体、压缩图像以及从不再需要的文件中删除项目来节省空间。
 
 >[!NOTE]
 >
->优化数字签名文档可删除数字签名并使其无效。
+>优化数字签名文档可删除数字签名并使其失效。
 
 有关访问此设置的说明，请参阅 [创建或编辑文件类型设置](configuring-file-type-settings.md#create-or-edit-file-type-settings).
 
-**目标PDF版本：** 指定PDF兼容的Acrobat版本。
+**目标PDF版本：** 指定与PDF兼容的Acrobat版本。
 
 ### 字体 {#fonts}
 
@@ -257,21 +257,21 @@ PDF生成器支持减小PDF文件大小的功能。 是否使用所有这些设�
 
    >[!NOTE]
    >
-   >*如果要取消嵌入其子集已嵌入文档中的某些字体，请在字体名称前加上+号。 例如，“+Helvetica”。*
+   >*如果要取消嵌入其子集已嵌入文档中的某些字体，请在字体名称前面加上+号。 例如，“+Helvetica”。*
 
 1. 如果只想嵌入嵌入字体的使用中的子集，请选择 **为所有嵌入的字体设置子集**.
 
    >[!NOTE]
    >
-   >*如果您要将此选项与&#x200B;**取消嵌入某些字体**，中的字体&#x200B;**A**要取消嵌入列表的dd字体仍完全取消嵌入。*
+   >*如果您要将此选项与&#x200B;**取消嵌入某些字体**，中的字体&#x200B;**A**添加到取消嵌入列表的字体仍完全取消嵌入。*
 
    >[!NOTE]
    >
-   >*字体子集是仅嵌入字体的一部分的技术。 字体子集仅包含文档中使用的字符。*
+   >*字体子集是仅嵌入部分字体的技术。 字体子集仅包含文档中使用的字符。*
 
 ### 透明度 {#transparency}
 
-如果您的PDF文档包含包含包含透明度的图稿，则可以使用PDF优化器设置来拼合透明度并减小文件大小。
+如果PDF文档包含包含包含透明度的图稿，可以使用“PDF优化器”设置来拼合透明度并减小文件大小。
 
 >[!NOTE]
 >
@@ -279,29 +279,29 @@ PDF生成器支持减小PDF文件大小的功能。 是否使用所有这些设�
 
 选择 **透明度** 在优化PDF文档时配置透明度设置。
 
-**透明度级别** 指定将保留的矢量信息的数量。 较高的设置会保留更多的矢量对象，而较低的设置则会栅格化更多的矢量对象；中间设置会将简单区域以矢量形式保留，并将复杂区域栅格化。 选择最低设置以栅格化所有图稿。
+**透明度级别** 指定将保留的矢量信息的数量。 较高的设置可保留更多的矢量对象，而较低的设置可栅格化更多的矢量对象；中间设置可保留矢量形式的简单区域，并栅格化复杂的区域。 选择最低设置以栅格化所有图稿。
 
 >[!NOTE]
 >
->光栅化的程度取决于页面的复杂性和重叠对象的类型。
+>栅格化的发生量取决于页面的复杂性和重叠对象的类型。
 
-**艺术线条和文本** 所有对象（包括图像、矢量图稿、文本和渐变）栅格化的分辨率。 支持的值为1像素/英寸(ppi)到9600 ppi。
-
->[!NOTE]
->
->通常，线条艺术和文本分辨率应设置为600-1200 ppi，以提供高质量的栅格化，尤其是在衬线或小尺寸点型上。
-
-**渐变和网格** 栅格化渐变和网格的分辨率。 支持的值为1 ppi到1200 ppi。
+**线形图和文本** 所有对象（包括图像、矢量图稿、文本和渐变）栅格化的分辨率。 支持的值为1像素/英寸(ppi)到9600 ppi。
 
 >[!NOTE]
 >
->渐变和网格分辨率通常应设置为150-300 ppi，因为渐变、下落阴影和羽化的质量不会随着更高分辨率的提高而提高，但打印时间和文件大小会增加。
+>通常，线条艺术和文本分辨率应设置为600-1200 ppi，以提供高质量的栅格化，尤其是在衬线或小磅尺寸文字上。
 
-**将所有文本转换为外框** 将所有文字对象（点文字、区域文字和路径文字）转换为外框，并丢弃包含透明度的页面上的所有文字字符信息。 此选项可确保拼合期间文本的宽度保持一致。 请注意，在Acrobat中查看或在低分辨率的桌面打印机上打印时，启用此选项将使小字体显得稍粗一些。 它不会影响高分辨率打印机或照排机打印的类型的质量。
+**渐变和网格** 将渐变和网格栅格化的分辨率。 支持的值为1 ppi到1200 ppi。
 
-**将所有描边转换为轮廓** 将所有描边转换为包含透明度的页面上的简单填充路径。 此选项可确保拼合时笔划的宽度保持一致。 请注意，启用此选项会导致细描边显得稍微粗一些，并且可能会降低拼合性能。
+>[!NOTE]
+>
+>渐变和网格分辨率通常应设置为150-300 ppi，因为渐变、阴影和羽化的质量不会随着更高分辨率的提高而提高，但打印时间和文件大小会增加。
 
-**剪切复杂区域** 确保矢量图稿和栅格化图稿之间的边界沿对象路径排列。 此选项可减少将OG作为一部分时产生的拼合构件
+**将所有文本转换为外框** 将所有文字对象（点文字、区域文字和路径文字）转换为外框，并丢弃包含透明度的页面上的所有文字字符信息。 此选项可确保拼合期间文本的宽度保持一致。 请注意，在Acrobat中查看或在低分辨率的桌面打印机上打印时，启用此选项将导致小字体显示得稍微粗一些。 它不会影响高分辨率打印机或照排机打印的类型的质量。
+
+**将所有描边转换为外框** 将所有描边转换为包含透明度的页面上的简单填充路径。 此选项可确保拼合期间笔触的宽度保持一致。 请注意，启用此选项会导致细描边显得稍粗一些，并且可能会降低拼合性能。
+
+**剪切复杂区域** 确保矢量图稿和栅格化图稿之间的边界沿对象路径排列。 此选项可减少将工件加入日志时产生的拼接工件
 
 <!--
 NOTE to WRITER: Unfinished sentence above.
@@ -309,17 +309,17 @@ NOTE to WRITER: Unfinished sentence above.
 
 >[!NOTE]
 >
->有些打印驱动程序处理光栅和矢量图的方式不同，有时会导致颜色拼接。 通过禁用某些特定于打印驱动程序的颜色管理设置，可以将拼合问题降至最低。 这些设置因每台打印机而异，请参阅打印机附带的文档以了解详细信息。
+>有些打印驱动程序处理光栅和矢量图的方式不同，有时会导致颜色拼接。 通过禁用某些特定打印驱动程序的色彩管理设置，您可以最大限度地减少拼接问题。 这些设置因每台打印机而异，因此请参阅打印机随附的文档以了解详细信息。
 
 保留叠印：将透明图稿的颜色与背景颜色混合以创建叠印效果。
 
-下表显示了打印机的常见类型及其以dpi测量的分辨率、以每英寸行数(lpi)测量的默认屏幕刻度以及以每英寸像素(ppi)测量的图像重新取样分辨率。 例如，如果要打印到600 dpi激光打印机，则输入170作为图像重新取样的分辨率。
+下表显示了常见的打印机类型及其以dpi测量的分辨率、以每英寸行数(lpi)测量的默认屏幕划线以及以每英寸像素数(ppi)测量的图像的重新取样分辨率。 例如，如果要打印到600 dpi激光打印机，则输入170作为图像重新取样的分辨率。
 
-**图像** 选择“图像”以指定颜色、灰度图像和单色图像的压缩和重新取样选项。 您可能希望试验这些选项以在文件大小和图像质量之间找到合适的平衡。颜色和灰度图像的分辨率设置应该为打印文件时网线的1.5到2倍。 单色图像的分辨率应与输出设备相同，但请注意，以高于1500 dpi的分辨率保存单色图像会增加文件大小，但不会显着改善图像质量。 要放大的图像（例如地图）可能需要更高的分辨率。
+**图像** 选择“图像”为彩色、灰度和单色图像指定压缩和重新取样选项。 您可能希望尝试使用这些选项，以在文件大小和图像质量之间找到合适的平衡。彩色和灰度图像的分辨率设置应该为打印文件时线网的1.5到2倍。 单色图像的分辨率应与输出设备相同，但请注意，以高于1500 dpi的分辨率保存单色图像会增加文件大小，但不会明显提高图像质量。 要放大的图像（如地图）可能需要更高的分辨率。
 
 >[!NOTE]
 >
->重新取样单色图像可能会产生意外的查看结果，例如没有图像显示。 如果发生这种情况，请关闭重新取样，然后再次转换文件。 缺采样时最有可能发生此问题，而双三次缩减采样时最不可能发生此问题。
+>重新取样单色图像可能会产生意外的查看结果，例如没有图像显示。 如果发生这种情况，请关闭重新取样功能，然后再次转换文件。 缺采样时最有可能出现此问题，而双三次缩减采样时最不可能出现此问题。
 
 <table>
  <tbody>
@@ -357,13 +357,13 @@ NOTE to WRITER: Unfinished sentence above.
 * **放弃所有表单提交、导入和重置操作**：禁用与提交或导入表单数据相关的所有操作，并重置表单字段。 此选项会保留操作链接到的表单对象。
 * **放弃所有JavaScript操作**：从PDF中删除任何使用JavaScript的操作。
 * **放弃嵌入的页面缩略图**：删除嵌入的页面缩略图。 此选项适用于大型文档，在您单击“页面”按钮后，此类文档可能需要很长时间才能绘制页面缩略图。
-* **将平滑线条转换为曲线**：减少用于在CAD绘图中构建曲线的控制点数，从而使PDF文件更小，并加快屏幕渲染速度。
-* **放弃嵌入式打印设置**：从文档中删除嵌入的打印设置，如页面缩放和双工模式。
+* **将平滑线条转换为曲线**：减少用于在CAD绘图中构建曲线的控制点数量，从而减少PDF文件并加快屏幕渲染。
+* **放弃嵌入的打印设置**：从文档中删除嵌入的打印设置，如页面缩放和双工模式。
 * **放弃书签**：从文档中删除所有书签。
 * **拼合表单字段**：使表单字段不可用，而不更改其外观。 表单数据与页面合并，成为页面内容。
-* **放弃所有备用图像**：删除图像的所有版本，但用于屏幕查看的版本除外。 某些PDF包含同一图像的多个版本以用于不同的目的，例如低分辨率的屏幕查看和高分辨率的打印。
+* **放弃所有备用图像**：删除除预定在屏幕上查看的版本之外的所有图像版本。 某些PDF包含同一图像的多个版本以用于不同的目的，例如低分辨率的屏幕查看和高分辨率的打印。
 * **放弃文档标记**：从文档中删除标记，这也会删除文本的可访问性和重排功能。
-* **检测和合并图像片段**：查找碎片化为细片的图像或蒙版，并尝试将切片合并为单个图像或蒙版。
+* **检测和合并图像片段**：查找分割为细切片的图像或蒙版，并尝试将切片合并为单个图像或蒙版。
 * **放弃嵌入的搜索索引**：删除嵌入的搜索索引，这会减小文件大小。
 
 #### 放弃用户数据 {#discard-user-data}
@@ -373,10 +373,10 @@ NOTE to WRITER: Unfinished sentence above.
 * **放弃所有评论、Forms和多媒体**：从PDF中删除所有注释、表单、表单字段和多媒体。
 * **放弃所有对象数据**：从PDF中删除所有对象。
 * **放弃外部交叉引用**：删除指向其他文档的链接。 跳转到PDF内其他位置的链接不会被删除。
-* **放弃隐藏图层内容并拼合可见图层**：减小文件大小。 优化文档看起来像原始PDF，但不包含图层信息。
-* **放弃文档信息和元数据**：删除文档信息字典和所有元数据流中的信息。 (使用“另存为”命令将PDF流还原为元数据副本。)
-* **放弃文件附件**：删除所有文件附件，包括作为注释添加到PDF中的附件。 (PDF优化器不会优化附加文件。)
-* **放弃其他应用程序的私有数据**：从PDF文档中剥离仅对创建该文档的应用程序有用的信息。 此设置不会影响PDF的功能，但会减小文件大小。
+* **放弃隐藏图层内容并拼合可见图层**：减小文件大小。 优化文档看起来与原始PDF相似，但不包含图层信息。
+* **放弃文档信息和元数据**：删除文档信息字典中的所有元数据流中的信息。 (使用“另存为”命令将PDF流还原为元数据副本。)
+* **放弃文件附件**：删除所有文件附件，包括作为注释添加到PDF中的附件。 (PDF优化器不优化附加文件。)
+* **放弃其他应用程序的私有数据**：从PDF文档中删除仅对创建该文档的应用程序有用的信息。 此设置不会影响PDF的功能，但会减小文件大小。
 
 ### 清理 {#clean-up}
 
@@ -385,7 +385,7 @@ NOTE to WRITER: Unfinished sentence above.
 
 **压缩**
 
-从下拉菜单中选择以下任一“flate压缩”选项：
+从下拉菜单中选择以下“平滑”压缩选项之一：
 
 * 压缩整个文件
 * 压缩文档结构
@@ -394,23 +394,23 @@ NOTE to WRITER: Unfinished sentence above.
 
 **使用Flate对未编码的流进行编码**：将Flate压缩应用于所有未编码的流。
 
-**放弃无效的书签**：删除指向文档中已删除页面的书签。
+**放弃无效书签**：删除指向文档中已删除页面的书签。
 
 **放弃未引用的命名目标**：从PDF文档中删除未在内部引用的已命名目标。 此选项不检查来自其他PDF文件或网站的链接。
 
-**优化PDF以实现快速Web查看**：重新构建PDF文档，以便从Web服务器逐页下载（字节服务）。
+**优化PDF以实现快速Web查看**：重新构建PDF文档，以便从Web服务器每次下载（提供字节）。
 
 **在使用LZW编码的流中，请改用Flate**：将Flate压缩应用于使用LZW编码的所有内容流和图像。
 
 **放弃无效链接**：删除跳转到无效目标的链接。
 
-**优化页面内容**：将所有行尾字符转换为空格字符，这改进了浮动压缩。
+**优化页面内容**：将所有行尾字符转换为空格字符，这改进了拼合压缩。
 
 ## Microsoft Excel设置（仅限Windows） {#microsoft-excel-settings-windows-only}
 
-这些选项决定Microsoft Excel文件的转换方式。 有关访问这些选项的说明，请参阅 [创建或编辑文件类型设置](#create-or-edit-file-type-settings).
+这些选项决定如何转换Microsoft Excel文件。 有关访问这些选项的说明，请参阅 [创建或编辑文件类型设置](#create-or-edit-file-type-settings).
 
-**尝试将OpenOffice作为后备转换器**：如果选择此选项，并且使用Microsoft Excel的转换失败或达到指定的超时限制时，PDF生成器会尝试使用OpenOffice进行转换。 如果使用OpenOffice的转换失败或达到指定的超时限制，则会将异常写入日志文件。
+**尝试将OpenOffice作为回退转换器**：当选择此选项且使用Microsoft Excel的转换失败或达到指定的超时限制时，PDF Generator将尝试使用OpenOffice进行转换。 如果使用OpenOffice的转换失败或达到指定的超时限制，则会将异常写入日志文件。
 
 **文件扩展名**：指定此应用程序接受的文件类型的文件扩展名（以逗号分隔）。 默认为 `xls,xlsx`。不要在扩展之前添加句点，也不要在扩展之间添加空格。
 
@@ -430,17 +430,17 @@ NOTE to WRITER: Unfinished sentence above.
 
 **将源文件附加到Adobe PDF**：选择此选项时，原始Excel电子表格将作为附件插入到生成的PDF文档中。
 
-**启用辅助功能和Reflow及标记的Adobe PDF**：在PDF文档中嵌入标记以启用辅助功能和重排。
+**通过标记的Adobe PDF启用辅助功能和Reflow**：在PDF文档中嵌入标记以启用辅助功能和重排。
 
-**要加载的Excel加载项列表**：默认情况下（出于安全原因），当Excel文件转换为PDF时，不会运行任何Excel加载项。 要允许在转换期间运行某些Excel加载项，请提供以逗号分隔的加载项名称列表。
+**要加载的Excel加载项列表**：默认情况下（出于安全原因），当Excel文件转换为PDF时，不会运行Excel加载项。 要允许在转换期间运行某些Excel加载项，请提供以逗号分隔的加载项名称列表。
 
 **要转换的工作表列表**：如果此框为空，则Excel电子表格中的所有工作表都将包含在生成的PDF中。 要有选择地转换工作表的子集，请提供以逗号分隔的工作表名称列表。
 
 ## Microsoft PowerPoint设置（仅限Windows） {#microsoft-powerpoint-settings-windows-only}
 
-这些选项决定Microsoft PowerPoint文件的转换方式。 有关访问这些选项的说明，请参阅 [创建或编辑文件类型设置](/help/forms/using/admin-help/configuring-file-type-settings1.md#create-or-edit-file-type-settings).
+这些选项确定Microsoft PowerPoint文件的转换方式。 有关访问这些选项的说明，请参阅 [创建或编辑文件类型设置](/help/forms/using/admin-help/configuring-file-type-settings1.md#create-or-edit-file-type-settings).
 
-**[!UICONTROL 尝试将OpenOffice作为后备转换器]**：当选择此选项且使用Microsoft PowerPoint的转换失败或达到指定的超时限制时，PDF生成器会尝试使用OpenOffice进行转换。 如果使用OpenOffice的转换失败或达到指定的超时限制，则会将异常写入日志文件。
+**[!UICONTROL 尝试将OpenOffice作为回退转换器]**：当选择此选项且使用Microsoft PowerPoint的转换失败或达到指定的超时限制时，PDF Generator将尝试使用OpenOffice进行转换。 如果使用OpenOffice的转换失败或达到指定的超时限制，则会将异常写入日志文件。
 
 **[!UICONTROL 文件扩展名]**：指定此应用程序接受的文件类型的文件扩展名（以逗号分隔）。 默认值为ppt，pptx。 不要在扩展之前添加句点，也不要在扩展之间添加空格。
 
@@ -450,7 +450,7 @@ NOTE to WRITER: Unfinished sentence above.
 
 **[!UICONTROL 将源文件附加到Adobe PDF]**：将源文件作为附件添加到PDF文件中。 默认情况下，此选项处于取消选中状态。
 
-**[!UICONTROL 启用辅助功能和Reflow及标记的Adobe PDF]**：将标记嵌入到PDF文件中。 默认情况下，此选项处于取消选中状态。
+**[!UICONTROL 通过标记的Adobe PDF启用辅助功能和Reflow]**：将标记嵌入到PDF文件中。 默认情况下，此选项处于取消选中状态。
 
 **[!UICONTROL 将多媒体转换为PDF多媒体]**：尽可能将多媒体转换为PDF多媒体。 默认情况下，该选项处于选中状态。
 
@@ -466,13 +466,13 @@ NOTE to WRITER: Unfinished sentence above.
 
 **[!UICONTROL 在Adobe PDF中保存动画]**：将转换后的动画保存在PDF文件中。
 
-**[!UICONTROL 将隐藏的幻灯片转换为PDF页]**：转换隐藏的幻灯片。
+**[!UICONTROL 将隐藏的幻灯片转换为PDF页面]**：转换隐藏的幻灯片。
 
-**[!UICONTROL 创建符合PDF/A-1a标准的文件]**：强制使用PDF/A-1b：2005RGBAdobe PDF设置。 在生成PDF文件时，一些PowerPoint功能未得到转换。 如果PowerPoint过渡在Acrobat中没有等效过渡，则会替换类似的过渡。 如果同一幻灯片中有多个动画效果，则使用单个效果。 页面过渡和项目符号飞入将被转换。
+**[!UICONTROL 创建符合PDF/A-1a标准的文件]**：强制使用PDF/A-1b：2005RGBAdobe PDF设置。 在生成PDF文件时，一些PowerPoint功能不会转换。 如果PowerPoint过渡在Acrobat中没有等效过渡，则会替换类似的过渡。 如果同一幻灯片中有多个动画效果，则使用单个效果。 转换页面过渡和项目符号飞入。
 
 ## Microsoft项目设置（仅限Windows） {#microsoft-project-settings-windows-only}
 
-这些选项决定Microsoft项目文件的转换方式。 有关访问这些选项的说明，请参阅 [创建或编辑文件类型设置](#create-or-edit-file-type-settings).
+这些选项决定如何转换Microsoft项目文件。 有关访问这些选项的说明，请参阅 [创建或编辑文件类型设置](#create-or-edit-file-type-settings).
 
 1. **[!UICONTROL 文件扩展名：]** 为此应用程序接受的文件类型指定文件扩展名（以逗号分隔）。 默认为 `mpp`。不要在扩展之前添加句点，也不要在扩展之间添加空格。
 
@@ -485,7 +485,7 @@ NOTE to WRITER: Unfinished sentence above.
 
 这些选项决定如何转换Microsoft Word文件。 有关访问这些选项的说明，请参阅 [创建或编辑文件类型设置](#create-or-edit-file-type-settings).
 
-**[!UICONTROL 尝试将OpenOffice作为后备转换器]**：当选择此选项且使用Microsoft Word的转换失败或达到指定的超时限制时，PDF生成器会尝试使用OpenOffice进行转换。 如果使用OpenOffice的转换失败或达到指定的超时限制，则会将异常写入日志文件。
+**[!UICONTROL 尝试将OpenOffice作为回退转换器]**：当选择此选项且使用Microsoft Word的转换失败或达到指定的超时限制时，PDF Generator将尝试使用OpenOffice进行转换。 如果使用OpenOffice的转换失败或达到指定的超时限制，则会将异常写入日志文件。
 
 **[!UICONTROL 文件扩展名]**：指定此应用程序接受的文件类型的文件扩展名（以逗号分隔）。 默认为 `doc,docx,rtf,txt`。不要在扩展之前添加句点，也不要在扩展之间添加空格。
 
@@ -497,17 +497,17 @@ NOTE to WRITER: Unfinished sentence above.
 
 **[!UICONTROL 将交叉引用和目录转换为链接]**：将所有交叉引用和目录条目转换为链接。 默认情况下，该选项处于选中状态。
 
-**[!UICONTROL 启用辅助功能和Reflow及标记的Adobe PDF]**：将标记嵌入到PDF文件中。 默认情况下，该选项处于选中状态。
+**[!UICONTROL 通过标记的Adobe PDF启用辅助功能和Reflow]**：将标记嵌入到PDF文件中。 默认情况下，该选项处于选中状态。
 
 **[!UICONTROL 创建符合PDF/A-1a标准的文件]**：如果选中，强制使用PDF/A-1b：2005RGBAdobe PDF设置。
 
 **[!UICONTROL 自动运行宏]**：在转换文档之前运行Word文档中的任何宏（例如插入当前时间的宏）。
 
-**[!UICONTROL 在Adobe PDF中保留文档标记]**：将Word文档中的标记转换为PDF文件中的注释。
+**[!UICONTROL 在Adobe PDF中保留文档标记]**：将Word文档中的标记转换为PDF文件中的批注。
 
 **[!UICONTROL 添加指向Adobe PDF的链接]**：将源文件中的超链接转换为PDF文档中的超链接。
 
-**[!UICONTROL 转换脚注和尾注链接]**：从PDF文档的脚注和尾注引文创建指向注释的链接。
+**[!UICONTROL 转换脚注和尾注链接]**：创建指向PDF文档中注释的脚注和尾注引文的链接。
 
 **[!UICONTROL 在Adobe PDF中将显示的注释转换为注释]**：将Word文档中的注释转换为PDF文档中的文本注释。
 
@@ -519,7 +519,7 @@ NOTE to WRITER: Unfinished sentence above.
 
 styleName1=level1[，styleName2=level2...]
 
-如果Microsoft Word样式名称包含逗号(，)或等号(=)，则会在特殊字符之前添加转义字符(&quot;\_)。 例如，将名为“标题，1”的样式指定为标题\，1。
+如果Microsoft Word样式名称包含逗号(，)或等号(=)，则在特殊字符之前使用转义字符(&quot;\_)。 例如，指定名为“标题，1”的样式作为“标题\，1”。
 
 ## Microsoft Visio设置（仅限Windows） {#visio}
 
@@ -531,25 +531,25 @@ styleName1=level1[，styleName2=level2...]
 
 **将源文件附加到Adobe PDF**：将源文件作为附件添加到PDF文件中。
 
-**始终拼合Adobe PDF中的图层**：拼合所有Visio图层。
+**在Adobe PDF中始终拼合图层**：拼合所有Visio层。
 
 **转换所有页面**：转换Visio文件的所有页面。
 
-**在Adobe Acrobat中查看时打开“图层”面板**：如果Visio图层未拼合，将打开一个窗口，您可以在其中指定使用Acrobat打开时保留在PDF文件中的图层。 默认情况下，该选项处于选中状态。
+**在Adobe Acrobat中查看时打开图层面板**：如果Visio图层未拼合，将打开一个窗口，您可以在其中指定使用Acrobat打开时PDF文件中保留的图层。 默认情况下，该选项处于选中状态。
 
 **创建与PDF/A-1b兼容的文件**：强制使用Adobe PDF设置PDF/A-1b：2005(RGB)。
 
-**将注释转换为Adobe PDF注释**：将Visio注释转换为PDF注释。
+**将评论转换为Adobe PDF评论**：将Visio注释转换为PDF注释。
 
 ## Microsoft Publisher设置（仅限Windows） {#microsoft-publisher-settings-windows-only}
 
-这些选项决定Microsoft Publisher文件的转换方式。 有关访问这些选项的说明，请参阅 [创建或编辑文件类型设置](#create-or-edit-file-type-settings).
+这些选项决定如何转换Microsoft Publisher文件。 有关访问这些选项的说明，请参阅 [创建或编辑文件类型设置](#create-or-edit-file-type-settings).
 
 **[!UICONTROL 文件扩展名]**：指定此应用程序接受的文件类型的文件扩展名（以逗号分隔）。 默认为 `pub`。不要在扩展之前添加句点，也不要在扩展之间添加空格。
 
 ## AutoCAD设置（仅限Windows） {#autocad-settings-windows-only}
 
-这些选项决定AutoCAD文件的转换方式。 有关访问这些选项的说明，请参阅 [创建或编辑文件类型设置](/help/forms/using/admin-help/configuring-file-type-settings1.md#create-or-edit-file-type-settings).
+这些选项决定如何转换AutoCAD文件。 有关访问这些选项的说明，请参阅 [创建或编辑文件类型设置](/help/forms/using/admin-help/configuring-file-type-settings1.md#create-or-edit-file-type-settings).
 
 **[!UICONTROL 文件扩展名]**：指定此应用程序接受的文件类型的文件扩展名（以逗号分隔）。 默认为 `dwg`。不要在扩展之前添加句点，也不要在扩展之间添加空格。
 
@@ -557,11 +557,11 @@ styleName1=level1[，styleName2=level2...]
 
 **[!UICONTROL 将书签添加到Adobe PDF]**：将标题转换为书签。
 
-**[!UICONTROL 始终拼合Adobe PDF中的图层]**：拼合所有AutoCAD图层。
+**[!UICONTROL 在Adobe PDF中始终拼合图层]**：拼合所有AutoCAD层。
 
 **[!UICONTROL 在Adobe Acrobat中查看时打开“图层”窗格]**：在Acrobat中打开PDF时显示层结构。
 
-**[!UICONTROL 创建符合PDF/E-1标准的文件]**：创建符合PDF/E-1标准的文件。 PDF/E是用于交换工程和技术文档的ISO标准。 有关PDF/E-1的更多信息，请参阅 [Adobe和行业标准](https://www.adobe.com/enterprise/standards/index.html).
+**[!UICONTROL 创建符合PDF/E-1标准的文件]**：创建符合PDF/E-1标准的文件。 PDF/E是用于交换工程和技术文档的ISO标准。 有关PDF/E-1的详细信息，请参阅 [Adobe和行业标准](https://www.adobe.com/enterprise/standards/index.html).
 
 **[!UICONTROL 转换所有布局]**：包括PDF中的所有布局。
 
@@ -573,38 +573,38 @@ styleName1=level1[，styleName2=level2...]
 
 **[!UICONTROL 创建与PDF/A-1b兼容的文件]**：强制使用PDF/A-1b Adobe PDF设置。
 
-**[!UICONTROL 转换所有图层]**：默认情况下，PDF生成器仅将AutoCAD文件的默认图层转换为PDF，而不是文件中的所有图层。 选择此选项可转换文件的所有图层。
+**[!UICONTROL 转换所有图层]**：默认情况下，PDF Generator仅将AutoCAD文件的默认图层转换为PDF，而不是文件中的所有图层。 选择此选项可转换文件的所有层。
 
-**[!UICONTROL 嵌入规模信息]**：保留绘图比例信息。
+**[!UICONTROL 嵌入范围信息]**：保留绘图比例信息。
 
 **[!UICONTROL 转换当前布局]**：仅包括PDF中的当前布局。
 
-**[!UICONTROL 要转换的AutoCAD布局列表]**：AutoCAD绘图可以有多个布局。 如果此框为空，则AutoCAD绘图中的所有布局都将包含在生成的PDF文档中。 要有选择地转换布局的子集，请提供以逗号分隔的布局名称列表。
+**[!UICONTROL 要转换的AutoCAD布局列表]**：AutoCAD绘图可以有多个布局。 如果此框为空，则AutoCAD绘图中的所有布局都将包含在生成的PDF文档中。 要选择性地转换布局的子集，请提供以逗号分隔的布局名称列表。
 
 ## OpenOffice设置 {#openoffice-settings}
 
-这些选项决定OpenOffice文件的转换方式。 有关访问这些选项的说明，请参阅 [创建或编辑文件类型设置](/help/forms/using/admin-help/configuring-file-type-settings1.md#create-or-edit-file-type-settings).
+这些选项决定如何转换OpenOffice文件。 有关访问这些选项的说明，请参阅 [创建或编辑文件类型设置](/help/forms/using/admin-help/configuring-file-type-settings1.md#create-or-edit-file-type-settings).
 
-**试用PDFMaker作为回退转换器**：当选择此选项且使用OpenOffice的转换失败或达到指定的超时限制时，PDF生成器会尝试使用PDFMaker进行转换。 如果使用PDFMaker的转换失败或达到指定的超时限制，则会向日志文件写入异常。
+**试用PDFMaker作为回退转换器**：当选择此选项且使用OpenOffice的转换失败或达到指定的超时限制时，PDF Generator将尝试使用PDFMaker进行转换。 如果使用PDFMaker的转换失败或达到指定的超时限制，则会将异常写入日志文件。
 
 **文件扩展名**：为此应用程序接受的文件类型指定文件扩展名（以逗号分隔）。 默认为 `odt,odp,ods,odg,odf,sxw,sxi,sxd`。不要在扩展之前添加句点，也不要在扩展之间添加空格。
 
-**Range**：转换所有页面或指定特定页面或页面范围。 如果未定义页面范围，则会转换所有页面。 要导出一定范围的页面，请使用格式3-6。 要导出单个页面，请使用格式7；9；11。 可以使用格式（如3-6；8；10；12）导出页面范围和单个页面的组合。
+**Range**：转换所有页面或指定特定页面或页面范围。 如果未定义页面范围，则会转换所有页面。 要导出一定范围的页面，请使用格式3-6。 要导出单个页面，请使用格式7；9；11。 您可以使用格式（如3-6；8；10；12）导出页面范围和单个页面的组合。
 
-**页面方向**：仅适用于纯文本文件，请为转换后的PDF文档选择纵向或横向。
+**页面方向**：仅对于纯文本文件，为转换的PDF文档选择纵向或横向。
 
-**图像**：配置图像的转换方式。 包含嵌入预览的EPS图像仅导出为预览。 没有嵌入预览的EPS图像将导出为空占位符。 通过对图像进行无损压缩，可以保留所有像素。 通过对图像进行JPEG压缩和高质量等级，几乎所有的像素都被保留。 在低质量级别时，某些像素会丢失并引入伪像，但文件大小会减小。
+**图像**：配置图像的转换方式。 包含嵌入预览的EPS图像仅导出为预览。 没有嵌入预览的EPS图像将导出为空占位符。 通过对图像进行无损压缩，可以保留所有像素。 由于图像的JPEG压缩和高质量级别，因此几乎所有的像素都被保留。 在低质量级别，某些像素会丢失并引入伪像，但文件大小会减小。
 
-**常规**：启用相应选项以转换带标记的PDF，或者将Writer和FormCalc文档注释、Impress幻灯片过渡效果或空白页导出到PDF。 导出标记时，文件大小可能会大幅增加。 导出的一些标记是目录、超链接和控件。
+**常规**：启用相应选项以转换带标记的PDF、将Writer和FormCalc文档注释导出、Impress幻灯片过渡效果或空白页面导出到PDF。 导出标记时，文件大小可能会大幅增加。 有些导出的标记是目录、超链接和控件。
 
-您还可以指定表单的提交方式。 选项有XML、FDF、PDF或HTML。 此设置将覆盖您在文档中设置的控件的URL属性。 只能为PDF文档选择一个通用设置：
+您还可以指定提交表单的方式。 选项有XML、FDF、PDF或HTML。 此设置将覆盖您在文档中设置的控件的URL属性。 只能为PDF文档选择一个通用设置：
 
 * PDF（发送整个文档）
 * FDF（发送控制内容）
 * HTML
 * XML
 
-**已标记的PDF**：允许从OpenOfficePDF创建标记文档。 已标记的PDF包含有关文档内容结构的信息。 当在不同的屏幕上显示文档以及使用屏幕阅读器软件时，此功能会很有帮助。 它还有助于辅助功能软件对PDF文档执行各种有用的操作，例如朗读PDF文档的内容。
+**已标记PDF**：允许从OpenOffice文档创建标记PDF。 已标记的PDF包含有关文档内容结构的信息。 当在具有不同屏幕的设备上显示文档时，以及使用屏幕阅读器软件时，此功能会有所帮助。 它还有助于辅助功能软件对PDF文档执行各种有用的操作，例如大声阅读PDF文档的内容。
 
 **导出注释**：将OpenOffice文档中的注释转换为生成的PDF文档中的注释。
 
@@ -612,17 +612,17 @@ styleName1=level1[，styleName2=level2...]
 
 **以格式提交Forms**：创建可由PDF文档的用户填写和打印的PDF表单。
 
-**导出自动插入的空白页**：选择此选项时，自动插入的空白页将包含在生成的PDF文档中。 如果要双面打印PDF文档，则此选项非常有用。 例如，可以配置一本书籍，使章节的第一页始终从奇数页开始。 如果上一章以奇数页结束，OpenOffice会插入空白的偶数页。 此选项控制是否在生成的PDF中包含该偶数页页面。
+**导出自动插入的空白页**：选择此选项时，自动插入的空白页将包含在生成的PDF文档中。 如果要双面打印PDF文档，则此功能非常有用。 例如，可以配置一本书籍，使章节的第一页始终从奇数页开始。 如果上一章以奇数页结尾，则OpenOffice会插入空白的偶数页。 此选项控制是否在生成的PDF中包含该偶数页。
 
 ## 其他应用程序设置（仅限Windows） {#other-applications-settings-windows-only}
 
-不能通过管理控制台更改其他应用程序的设置；它们显示所支持文件类型的文件扩展名。 有关访问这些设置的说明，请参阅 [创建或编辑文件类型设置](https://help.adobe.com/en_US/AEMForms/6.1/AdminHelp/WS92d06802c76abadb-5145d5d12905ce07e7-7e42.2.html).
+您不能通过管理控制台更改其他应用程序的设置；它们显示所支持文件类型的文件扩展名。 有关访问这些设置的说明，请参阅 [创建或编辑文件类型设置](https://help.adobe.com/en_US/AEMForms/6.1/AdminHelp/WS92d06802c76abadb-5145d5d12905ce07e7-7e42.2.html).
 
 * Corel WordPerfect： `wpd`
 * AdobePageMaker： `pmd, pm6, p65, pm`
 * Adobe FrameMaker： `fm`
 * Adobe Photoshop: `psd`
 
-可能需要自定义对这些文件类型的支持。 有关更多信息，请参阅中的“添加对其他本机文件格式的支持” [使用AEM表单编程](https://www.adobe.com/go/learn_aemforms_programming_62).
+可能需要自定义对这些文件类型的支持。 有关详细信息，请参阅中的“添加对其他本机文件格式的支持” [使用AEM表单编程](https://www.adobe.com/go/learn_aemforms_programming_62).
 
-有关配置PDFG网络打印机的帮助，请参见 [设置PDFG网络打印机（仅限Windows）](/help/forms/using/admin-help/setting-pdfg-network-printer-windows.md).
+有关配置PDFG网络打印机的帮助，请参阅 [设置PDFG网络打印机（仅限Windows）](/help/forms/using/admin-help/setting-pdfg-network-printer-windows.md).

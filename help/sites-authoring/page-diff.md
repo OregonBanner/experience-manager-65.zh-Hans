@@ -11,9 +11,9 @@ topic-tags: site-features
 discoiquuid: 8386a16a-9d47-46d5-bc60-5f290c59e60e
 docset: aem65
 exl-id: 3beea5cd-5ae0-485b-8dfc-8b3a23c11586
-source-git-commit: e85aacd45a2bbc38f10d03915e68286f0a55364e
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '578'
+source-wordcount: '577'
 ht-degree: 96%
 
 ---
@@ -52,7 +52,7 @@ ht-degree: 96%
 
 两个页面的源会清楚地显示在浏览器窗口顶部的标题栏中。
 
-![标题中显示的源](assets/chlimage_1-109.png)
+![源显示在标题中](assets/chlimage_1-109.png)
 
 差异比较会检测在组件和 HTML 级别发生的更改。发生更改的项目会以不同的颜色突出显示。
 
@@ -78,7 +78,7 @@ ht-degree: 96%
 
 选定的一侧将填满整个窗口，但标题栏仍将保留在顶部，允许您在两个页面之间切换。
 
-![顶部栏允许您在页面之间切换](assets/chlimage_1-110.png)
+![顶部的栏可让您在页面之间切换](assets/chlimage_1-110.png)
 
 您也可以选择单击退出全屏图标来关闭全屏视图。
 

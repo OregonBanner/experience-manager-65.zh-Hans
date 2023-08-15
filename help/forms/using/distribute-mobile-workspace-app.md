@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
 discoiquuid: 5756cb52-dd47-4277-981c-fd0af9a20638
 exl-id: 375cfa95-ac6f-44c4-a736-f5dd55d24195
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '243'
+source-wordcount: '242'
 ht-degree: 0%
 
 ---
@@ -31,9 +31,9 @@ ht-degree: 0%
 * 强制执行安全合规性。
 * 保护对公司资源的移动访问
 
-MDM解决方案与移动应用程序管理相结合，可让您跨企业内的移动设备管理内部、公开和购买的应用程序。
+MDM解决方案与移动应用程序管理一起，允许您跨企业中的移动设备管理内部、公开和购买的应用程序。
 
-MDM管理员可以将ipa和apk文件上传到MDM服务器，并控制有权访问ipa或apk文件的用户。 管理员还可以控制每个应用程序对应的配置文件设置。
+MDM管理员可以将ipa和apk文件上传到MDM服务器，并控制可以访问ipa或apk文件的用户。 管理员还可以控制每个应用程序对应的配置文件设置。
 
 ## 影响AEM Forms应用程序的配置文件设置 {#profile-settings-affecting-the-aem-forms-app-br}
 
@@ -41,8 +41,8 @@ MDM管理员可以将ipa和apk文件上传到MDM服务器，并控制有权访�
 
 * **允许使用摄像头** 在 **设备功能** 部分
 
-如果禁用 **允许使用摄像头**，的相机功能 [照片批注](/help/forms/using/add-attachments.md) 将无法正常运行。 您需要启用此选项才能在应用程序中使用摄像头。
+如果您禁用 **允许使用摄像头**，的摄像头功能 [照片批注](/help/forms/using/add-attachments.md) 将无法正常运行。 您需要启用此选项才能在应用程序中使用摄像头。
 
-* **设备上需要密码** 在“密码策略”部分
+* **需要设备密码** 在密码策略部分中
 
-启用 **应用程序数据加密**，建议您启用 **密码** 在您的设备上。 如果未在设备上设置密码，则不会加密存储在设备上的应用程序数据。
+要启用 **应用程序数据加密**，建议您启用 **密码** 在您的设备上。 如果未在设备上设置密码，则不会加密存储在设备上的应用程序数据。

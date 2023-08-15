@@ -11,20 +11,20 @@ content-type: reference
 discoiquuid: 2d35a2a4-0c8c-4b16-99a6-c6e6d66446dc
 docset: aem65
 exl-id: a7e16555-9bbe-4da2-817c-4495a0193f3f
-source-git-commit: d045fc1ac408f992d594a4cb68d1c4eeae2b0de1
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1558'
-ht-degree: 72%
+source-wordcount: '1557'
+ht-degree: 73%
 
 ---
 
 # 页面创作快速指南{#quick-guide-to-authoring-pages}
 
-这些步骤旨在作为（高级）快速指南，介绍AEM中创作页面内容的关键操作。
+这些过程旨在作为（高级）快速指南，介绍AEM中创作页面内容的关键操作。
 
 他们：
 
-* 并非旨在提供全面的服务。
+* 并非旨在提供全面的介绍。
 * 提供详细文档的链接。
 
 有关使用 AEM 进行创作的完整详细信息，请参阅：
@@ -34,15 +34,15 @@ ht-degree: 72%
 
 ## 一些快速提示 {#a-few-quick-hints}
 
-在概述具体内容之前，请注意下面这一小部分常规提示和提示。
+在概述具体内容之前，请查看下面列出的一些常规提示，请牢记这些提示。
 
-###  Sites 控制台 {#sites-console}
+### Sites 控制台 {#sites-console}
 
 * **创建**
 
-   * 此按钮在许多控制台中可用 — 显示的选项是上下文相关的，因此可以因场景而异。
+   * 此按钮在许多控制台中可用 — 显示的选项是上下文相关的，因此在不同的情况下可能有所变化。
 
-* 在文件夹中重新排序页面
+* 对文件夹中的页面重新排序
 
    * 这可以在[列表视图](/help/sites-authoring/basic-handling.md#list-view)中完成。更改已应用并在其他视图中可见。
 
@@ -50,16 +50,16 @@ ht-degree: 72%
 
 * 导航链接
 
-   * 当您处于&#x200B;***编辑***&#x200B;模式下时，**链接不可用于导航**。要通过链接进行导航，您需要 [预览页面](/help/sites-authoring/editing-content.md#previewing-pages) 使用：
+   * 当您处于&#x200B;***编辑***&#x200B;模式下时，**链接不可用于导航**。要通过链接导航，您需要 [预览页面](/help/sites-authoring/editing-content.md#previewing-pages) 使用：
 
       * [预览模式](/help/sites-authoring/editing-content.md#preview-mode)
       * [以发布的形式查看](/help/sites-authoring/editing-content.md#view-as-published)
 
-* 无法从页面编辑器启动/创建版本；现在，可以从站点控制台完成(通过 **创建** 或 [时间线](/help/sites-authoring/basic-handling.md#timeline) （对于选定的资源）。
+* 无法从页面编辑器启动/创建版本；现在，可以从站点控制台完成(通过 **创建** 或 [时间线](/help/sites-authoring/basic-handling.md#timeline) （对于所选资源）。
 
 >[!NOTE]
 >
->有几个键盘快捷键可以使创作体验更轻松。
+>有几个键盘快捷键可以简化创作体验。
 >
 >* [编辑页面时的键盘快捷键](/help/sites-authoring/page-authoring-keyboard-shortcuts.md)
 >* [控制台的键盘快捷键](/help/sites-authoring/keyboard-shortcuts.md)
@@ -75,7 +75,7 @@ ht-degree: 72%
 
    ![screen_shot_2018-03-21at160214](assets/screen_shot_2018-03-21at160214.png)
 
-1. 使用[标头中的痕迹导航](/help/sites-authoring/basic-handling.md#theheaderwithbreadcrumbs)对树进行向上导航，这允许您返回到选定的位置：
+1. 使用向上导航树 [标题中的痕迹导航](/help/sites-authoring/basic-handling.md#theheaderwithbreadcrumbs)，可让您返回选定的位置：
 
    ![qgtap-01](assets/qgtap-01.png)
 
@@ -121,14 +121,14 @@ ht-degree: 72%
 
    >[!NOTE]
    >
-   >进入选择模式后 **选择** 图标（勾号）将更改为 **取消选择** 图标（十字形）。
+   >在选择模式中 **选择** 图标（勾号）将更改为 **取消选择** 图标（十字形）。
 
 ### 快速操作（仅限卡片视图/桌面） {#quick-actions-card-view-desktop-only}
 
 [快速操作](/help/sites-authoring/basic-handling.md#quick-actions)可用：
 
 1. [导航](#finding-your-page)到要执行操作的页面。
-1. 将鼠标指针悬停在表示所需资源的信息卡上；将显示快速操作：
+1. 将鼠标指针悬停在表示所需资源的卡片上方；将会显示快速操作：
 
    ![screen_shot_2018-03-21at160503-1](assets/screen_shot_2018-03-21at160503-1.png)
 
@@ -144,12 +144,12 @@ ht-degree: 72%
    * 所需资源的[快速操作（仅限卡片视图/桌面）](#quick-actions-card-view-desktop-only)。
    * [选择页面](#selectiingyourpageforfurtheraction)后显示的工具栏。
 
-1. 打开编辑器后，您可以：
+1. 在打开编辑器时，您可以：
 
    * 通过以下方式[向页面中添加新组件](/help/sites-authoring/editing-content.md#inserting-a-component)：
 
       * 打开侧面板
-      * 选择“组件”选项卡( [组件浏览器](/help/sites-authoring/author-environment-tools.md#components-browser))
+      * 选择组件选项卡( [组件浏览器](/help/sites-authoring/author-environment-tools.md#components-browser))
       * 将所需的组件拖动到页面上。
 
      可以通过以下图标打开（或关闭）侧面板：
@@ -205,7 +205,7 @@ ht-degree: 72%
 
 [编辑页面属性](/help/sites-authoring/editing-page-properties.md)的方法（主要）有两种：
 
-* 从&#x200B;**站点**&#x200B;控制台中：
+* 从&#x200B;**Sites**&#x200B;控制台中：
 
    1. [导航](#finding-your-page)到要发布的页面。
    1. 从以下任一位置选择&#x200B;**属性**&#x200B;图标：
@@ -228,7 +228,7 @@ ht-degree: 72%
 
 [发布页面](/help/sites-authoring/publishing-pages.md)（和取消发布）的方法主要有两种：
 
-* 从&#x200B;**站点**&#x200B;控制台中：
+* 从&#x200B;**Sites**&#x200B;控制台中：
 
    1. [导航](#finding-your-page)到要发布的页面。
    1. 从以下任一位置选择&#x200B;**快速发布**&#x200B;图标：
@@ -286,7 +286,7 @@ ht-degree: 72%
 [锁定页面](/help/sites-authoring/editing-content.md#locking-a-page) ，可阻止其他作者在您处理页面时对其进行处理。 可以找到“锁定”（和“解锁”）图标／按钮：
 
 * [选择页面](#selecting-your-page-for-further-action)后显示的工具栏。
-* 此 [“页面信息”下拉菜单](#editing-the-page-properties) 编辑页面时。
+* 编辑页面时显示的[“页面信息”下拉菜单](#editing-the-page-properties)。
 * 编辑页面（页面处于锁定状态）时显示的页面工具栏
 
 例如，“锁定”图标如下所示：
@@ -295,7 +295,7 @@ ht-degree: 72%
 
 ### 访问页面引用 {#accessing-page-references}
 
-[快速访问引用](/help/sites-authoring/author-environment-tools.md#references) “引用”边栏中提供了页面的URL或页面的URL路径。
+[快速访问引用](/help/sites-authoring/author-environment-tools.md#references) 对于页面或从页面，引用边栏会提供。
 
 1. 使用工具栏图标选择&#x200B;**引用**（在[选择您的页面](#selecting-your-page-for-further-action)之前或之后）：
 
@@ -335,8 +335,8 @@ ht-degree: 72%
 
    * **恢复到此版本**
 
-      * 版本已恢复。
+      * 该版本会恢复。
 
    * **显示差异**
 
-      * 打开页面时，会高亮显示（两个版本之间的）差异。
+      * 该页面会打开，并突出显示（两个版本之间的）差异。

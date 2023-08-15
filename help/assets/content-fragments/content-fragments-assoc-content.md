@@ -1,19 +1,19 @@
 ---
 title: 关联的内容
-description: 了解AEM关联内容功能如何提供连接，以便在将资产添加到内容页面时，可以选择将资产与片段一起使用，从而为Headless内容投放增加额外的灵活性。
+description: 了解AEM关联内容功能如何提供连接，以便在将资产添加到内容页面时，可以选择将资产与片段一起使用，从而为Headless内容投放增加了额外的灵活性。
 feature: Content Fragments
 role: User
 exl-id: 8b93fd6e-47d1-46fd-901b-621caa25be7b
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 10227bcfcfd5a9b0f126fee74dce6ec7842f5e95
 workflow-type: tm+mt
 source-wordcount: '245'
-ht-degree: 60%
+ht-degree: 57%
 
 ---
 
 # 关联的内容{#associated-content}
 
-AEM关联内容功能提供了连接，以便在将资产添加到内容页面时，可以选择将资产与片段一起使用。 这通过以下方式为您的Headless内容投放提供了灵活性 [在页面上使用内容片段时，提供要访问的一系列资产，](/help/sites-authoring/content-fragments.md#using-associated-content) 同时还有助于减少搜索适当资产所需的时间。
+AEM关联内容功能提供了连接，以便在将资产添加到内容页面时，可以选择将资产与片段一起使用。 这通过以下方式为Headless内容交付提供了灵活性 [提供要在页面上使用内容片段时访问的一系列资产，](/help/sites-authoring/content-fragments.md#using-associated-content) 同时还有助于减少搜索适当资产所需的时间。
 
 ## 添加关联内容 {#adding-associated-content}
 
@@ -30,7 +30,7 @@ AEM关联内容功能提供了连接，以便在将资产添加到内容页面�
 1. 根据是否已关联任何收藏集，选择以下任一选项：
 
    * **关联内容** – 这将是第一个关联的集合
-   * **关联集合** – 关联的集合已配置
+   * **关联收藏集**  — 已配置的关联集合
 
 1. 选择所需的集合。
 

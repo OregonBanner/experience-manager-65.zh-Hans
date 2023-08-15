@@ -7,9 +7,9 @@ topic-tags: extending-aem
 content-type: reference
 docset: aem65
 exl-id: 08c88e70-4df9-4627-8a66-1fabe3aee50b
-source-git-commit: ada61b87753f3f3e70acdca0e946428511bd7b00
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '2788'
+source-wordcount: '2784'
 ht-degree: 2%
 
 ---
@@ -82,7 +82,7 @@ ht-degree: 2%
 
 * 所有内容都存储在 `jcr:content/data` 资源的节点：
 
-   * 元素数据存储在主控子节点下：
+   * 元素数据存储在主子节点下：
      `jcr:content/data/master`
 
    * 变体存储在子节点下，该子节点带有变体的名称：例如， `jcr:content/data/myvariation`
@@ -138,7 +138,7 @@ ht-degree: 2%
 * 此外，可以选择一定范围的段落以限制输出；例如，这可用于多列输出。
 * 组件允许 [中间内容](/help/sites-developing/components-content-fragments.md#in-between-content)：
 
-   * 在此处，组件允许您放置其他资产（图像等） 在所引用片段的段落之间。
+   * 在这里，您可以使用组件放置其他资产（图像等） 在所引用片段的段落之间。
    * 对于中间内容，您需要：
 
       * 请注意，可能存在不稳定的引用；中间内容（在创作页面时添加）与其旁边的段落没有固定关系，在中间内容的位置可能丢失相对位置之前插入新段落（在内容片段编辑器中）
@@ -297,7 +297,7 @@ ht-degree: 2%
 
 * **内容片段** ([内容片段](https://www.adobe.io/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/dam/cfm/ContentFragment.html))
 
-  利用此界面，可采用抽象方式处理内容片段。
+  利用此界面，您可以以抽象方式处理内容片段。
 
   >[!CAUTION]
   >

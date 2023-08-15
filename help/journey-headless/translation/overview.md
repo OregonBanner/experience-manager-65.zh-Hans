@@ -2,10 +2,10 @@
 title: AEM Headless 翻译历程
 description: 从这里开始，通过使用 AEM 强大的翻译工具来翻译您的 Headless 内容，实施引导式历程。
 exl-id: 1a9d4c88-b676-4168-a9ef-7d218b39129f
-source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
 source-wordcount: '1037'
-ht-degree: 97%
+ht-degree: 95%
 
 ---
 
@@ -59,7 +59,7 @@ Headless 实施放弃了传统的全栈解决方案中的页面和组件管理�
 
 您将在此历程中探究多个主题。以下文章为您提供了在 AEM 中翻译 Headless 内容的基础知识以及指向详细技术文档的链接。
 
-虽然您可以直接进入历程的特定部分，但许多概念都是基于之前文章中的概念来构建的。因此，如果您是 AEM Headless 翻译新手，我们建议您从头开始，然后循序渐进。
+虽然您可以直接进入历程的特定部分，但许多概念都是基于之前文章中的概念来构建的。因此，如果您不熟悉AEM中的Headless翻译，Adobe建议您从头开始，然后循序渐进。
 
 | # | 文章 | 描述 |
 |---|---|---|

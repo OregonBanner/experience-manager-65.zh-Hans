@@ -9,16 +9,16 @@ topic-tags: author
 discoiquuid: 43c431e4-5286-4f4e-b94f-5a7451c4a22c
 feature: Adaptive Forms
 exl-id: 5c75ce70-983e-4431-a13f-2c4c219e8dde
-source-git-commit: 000ab7bc9a686b62fcfc122f9cf09129101ec9a8
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '4738'
-ht-degree: 0%
+source-wordcount: '4734'
+ht-degree: 1%
 
 ---
 
 # 使用自适应表单的最佳实践 {#best-practices-for-working-with-adaptive-forms}
 
-<span class="preview"> Adobe建议使用现代化的、可扩展的数据捕获 [核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) 对象 [创建新的自适应Forms](/help/forms/using/create-an-adaptive-form-core-components.md) 或 [将自适应Forms添加到AEM Sites页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). 这些组件在创建自适应Forms方面实现了重大进步，确保了令人印象深刻的用户体验。 本文介绍了使用基础组件创作自适应Forms的旧方法。 </span>
+<span class="preview">Adobe 建议使用现代、可扩展的数据捕获[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html)，以[创建新的自适应表单](/help/forms/using/create-an-adaptive-form-core-components.md)或[将自适应表单添加到 AEM Sites 页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。这些组件代表有关创建自适应表单的重大改进，确保实现令人印象深刻的用户体验。本文介绍了使用基础组件创作自适应表单的旧方法。</span>
 
 ## 概述 {#overview}
 
@@ -76,7 +76,7 @@ Adobe Experience Manager (AEM) forms可以帮助您将复杂的交易转换为�
 
 有关更多信息，请参阅 [创建自适应表单](/help/forms/using/creating-adaptive-form.md).
 
-* 自适应表单中包含一些常见部分。 您可以标识这些内容并定义策略以促进内容重用。 利用自适应表单，可创建独立片段并在各个表单中重复使用。 您还可以将自适应表单中的面板另存为片段。 片段中的任何更改都会反映在所有关联的表单中。 它有助于减少创作时间并确保表单之间的一致性。 此外，使用片段使自适应表单变得轻量级，从而改进了创作体验，尤其是大型表单的创作体验。 有关更多信息，请参阅 [自适应表单片段](/help/forms/using/adaptive-form-fragments.md).
+* 自适应表单中包含一些常见部分。 您可以标识这些内容并定义策略以促进内容重用。 通过自适应表单，您可以创建独立的片段并在各个表单中重复使用。 您还可以将自适应表单中的面板另存为片段。 片段中的任何更改都会反映在所有关联的表单中。 它有助于减少创作时间并确保表单之间的一致性。 此外，使用片段使自适应表单变得轻量级，从而改进了创作体验，尤其是大型表单的创作体验。 有关更多信息，请参阅 [自适应表单片段](/help/forms/using/adaptive-form-fragments.md).
 
 ### 自定义自适应表单和组件 {#customize-components}
 
@@ -191,7 +191,7 @@ AEM Forms提供 [规则编辑器](/help/forms/using/rule-editor.md) 允许您创
 
 ### 使用主题 {#working-with-themes}
 
-通过自适应主题，可创建可重复使用的样式，这些样式可以跨表单应用，以实现一致的外观和样式。 建议使用主题来定义表单组件和面板的样式。 围绕主题的一些最佳实践如下：
+通过自适应主题，您可以创建可重复使用的样式，这些样式可以跨表单应用，以实现一致的外观和样式。 建议使用主题来定义表单组件和面板的样式。 围绕主题的一些最佳实践如下：
 
 * 使用资产库快速应用文本样式、背景和图像。 将样式添加到资产库时，该样式可用于其他主题以及表单编辑器的样式模式。
 * 使用页面级别选择器应用全局设置，如字体和页面背景。

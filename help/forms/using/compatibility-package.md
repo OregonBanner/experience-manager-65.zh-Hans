@@ -2,7 +2,7 @@
 title: 兼容包
 seo-title: Compatibility Package
 description: 通过在AEM Forms 6.5上安装兼容包，您可以使用AEM Forms 6.4及更早版本中的通信管理资源以及已弃用的自适应表单模板和页面
-seo-description: Installing the Compatibility package on AEM Forms 6.4 allows you to use the Correspondence Management assets from AEM Forms 6.4 and deprecated adaptive forms templates and pages
+seo-description: Installing the Compatibility package on AEM Forms 6.4 lets you use the Correspondence Management assets from AEM Forms 6.4 and deprecated adaptive forms templates and pages
 uuid: b49633d6-2cb3-422c-a314-25f3b8a37b7f
 contentOwner: gtalwar
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -12,9 +12,9 @@ discoiquuid: 73e8ccc6-f857-493e-b6e3-878f93e2a356
 docset: aem65
 role: Admin
 exl-id: bb16017c-a1bf-40d8-a78d-827c05b7ee2e
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '316'
+source-wordcount: '314'
 ht-degree: 2%
 
 ---
@@ -30,7 +30,7 @@ AEMFD兼容包还允许您 [在AEM Forms 6.5上使用AEM Forms 6.4、6.3和6.2�
 * 文档片段
 * 书信
 * 数据字典
-* 自适应表单已弃用模板和页面
+* 自适应表单弃用的模板和页面
 
 有关更多信息，请参阅 [通过安装兼容包，使资源与AEM Forms 6.5兼容](../../forms/using/compatibility-package.md#assetsmadecompatible).
 
@@ -38,11 +38,11 @@ AEMFD兼容包还允许您 [在AEM Forms 6.5上使用AEM Forms 6.4、6.3和6.2�
 
 执行升级后，请执行以下操作以安装AEMFD兼容包，并使您的资产与6.5兼容：
 
-确保您拥有 [AEM兼容包](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) 预安装。
+确保您拥有 [AEM兼容包](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) 已预安装。
 
 1. 安装最新的6.5 [兼容包](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html).
 
-   有关上传和安装软件包的更多信息，请参阅 [如何使用包](/help/sites-administering/package-manager.md).
+   有关上载和安装软件包的更多信息，请参阅 [如何使用包](/help/sites-administering/package-manager.md).
 
 1. 在日志稳定后，重新启动服务器。
 1. 使用迁移实用程序使您的资产与6.5兼容。
@@ -59,7 +59,7 @@ AEMFD兼容包还允许您 [在AEM Forms 6.5上使用AEM Forms 6.4、6.3和6.2�
    * [数据字典](/help/forms/using/data-dictionary.md)
    * 文档片段
 
-* 自适应表单已弃用模板：
+* 自适应表单已弃用的模板：
 
    * /libs/fd/af/templates/blankTemplate2
    * /libs/fd/af/templates/simpleEnrollmentTemplate

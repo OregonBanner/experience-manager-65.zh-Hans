@@ -2,7 +2,7 @@
 title: 通过电子邮件发送表单提交确认
 seo-title: Sending a form submission acknowledgement via email
 description: AEM Forms允许您配置电子邮件提交操作，以在提交表单时向用户发送确认。
-seo-description: AEM Forms allows you to configure the email submit action that sends an acknowledgement to a user on submitting the form.
+seo-description: AEM Forms lets you configure the email submit action that sends an acknowledgement to a user on submitting the form.
 uuid: c80b1ef4-8fe3-48e0-8fc6-3032dc022a38
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -10,9 +10,9 @@ topic-tags: publish
 discoiquuid: 574de3d5-69ba-4e2f-a8ab-c59f357e4386
 docset: aem65
 exl-id: bca4044a-18a9-4b97-92de-eff1e9a840f9
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '546'
+source-wordcount: '545'
 ht-degree: 0%
 
 ---
@@ -21,19 +21,19 @@ ht-degree: 0%
 
 ## 自适应表单数据提交 {#adaptive-form-data-submission}
 
-自适应表单提供了多个开箱即用的表单 [提交操作](../../forms/using/configuring-submit-actions.md) 用于将表单数据提交到不同端点的工作流。
+自适应表单提供了多个现成的表单 [提交操作](../../forms/using/configuring-submit-actions.md) 用于将表单数据提交到不同端点的工作流。
 
 例如， **[!UICONTROL 发送电子邮件]** 提交操作会在成功提交自适应表单时发送电子邮件。 您还可以将其配置为通过电子邮件发送表单数据和PDF。
 
-本文详细介绍了在自适应表单及其提供的不同配置上启用电子邮件操作的步骤。
+本文详细介绍在自适应表单及其提供的不同配置上启用电子邮件操作的步骤。
 
 >[!NOTE]
 >
->您还可以使用 **[!UICONTROL 通过电子邮件发送PDF]** 选项，通过电子邮件将填写的表单作为PDF附件发送。 此操作的可用配置选项与以下操作的可用选项相同： **[!UICONTROL 发送电子邮件]** 操作。 电子邮件PDF操作仅适用于基于XFA的自适应表单
+>您也可以使用 **[!UICONTROL 通过电子邮件发送PDF]** 选项，通过电子邮件将填写的表单作为PDF附件发送。 可用于此操作的配置选项与可用于的选项相同。 **[!UICONTROL 发送电子邮件]** 操作。 电子邮件PDF操作仅适用于基于XFA的自适应表单
 
 ## 发送电子邮件操作 {#email-action}
 
-利用“发送电子邮件”操作，作者可在成功提交自适应表单时自动向一个或多个收件人发送电子邮件。
+利用“发送电子邮件”操作，作者可在自适应表单成功提交后自动向一个或多个收件人发送电子邮件。
 
 >[!NOTE]
 >
@@ -43,7 +43,7 @@ ht-degree: 0%
 
 1. 在中打开自适应表单 **[!UICONTROL 编辑]** 模式。
 
-1. 在 **[!UICONTROL 内容]** 选项卡，点按 **[!UICONTROL 表单容器]** 并点按 ![配置](assets/configure-icon.svg) 查看自适应表单属性。
+1. 在 **[!UICONTROL 内容]** 选项卡，点按 **[!UICONTROL 表单容器]** 并点击 ![配置](assets/configure-icon.svg) 查看自适应表单属性。
 
 1. 在 **[!UICONTROL 提交]** 部分，选择 **[!UICONTROL 发送电子邮件]** 从 **[!UICONTROL 提交操作]** 下拉列表。
 
@@ -67,7 +67,7 @@ ht-degree: 0%
 
 自适应表单中的字段名称称为占位符，在用户提交表单后，这些占位符将替换为该字段的值。
 
-在 **[!UICONTROL 发送电子邮件]** 操作时，您可以使用在执行该操作时处理的占位符。 这意味着电子邮件的标头(如 **[!UICONTROL 至]**， **[!UICONTROL 抄送]**， **[!UICONTROL 密件抄送]**， **[!UICONTROL 主题]**)在用户提交表单时生成。
+在 **[!UICONTROL 发送电子邮件]** 操作，则可以使用在执行操作时处理的占位符。 这意味着电子邮件的标题(如 **[!UICONTROL 至]**， **[!UICONTROL 抄送]**， **[!UICONTROL 密件抄送]**， **[!UICONTROL 主题]**)将在用户提交表单时生成。
 
 要定义占位符，请指定 `${<field name>}` 在字段中选择 **[!UICONTROL 发送电子邮件]** 作为“提交”操作。
 
@@ -79,7 +79,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->您可以在以下位置找到字段的名称： **[!UICONTROL 编辑]** 字段的对话框。
+>您可以在以下位置找到字段名称： **[!UICONTROL 编辑]** 字段对应的对话框。
 
 变量占位符还可用于 **[!UICONTROL 主题]** 和 **[!UICONTROL 电子邮件模板]** 字段。
 

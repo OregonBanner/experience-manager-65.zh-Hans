@@ -1,22 +1,22 @@
 ---
 title: 为AdobeAsset Link配置Experience Manager Assets
-description: 配置Experience Manager Assets以用于Creative Cloud应用程序的AdobeAsset Link扩展。
+description: 配置Experience Manager Assets以与用于Creative Cloud应用程序的AdobeAsset Link扩展一起使用。
 contentOwner: Vishabh Gupta
 role: Admin
 feature: Asset Management
 exl-id: 3a9b44d4-1756-4ad5-91df-df8d53e82193
-source-git-commit: 84b16dd1a60f731b568dd87ef89699875cb86596
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '3149'
+source-wordcount: '3148'
 ht-degree: 1%
 
 ---
 
 # 为AdobeAsset Link配置Experience Manager Assets {#adobe-asset-link}
 
-[AdobeAsset Link (AAL)](https://www.adobe.com/cn/creativecloud/business/enterprise/adobe-asset-link.html) 在内容创建过程中，简化了创意人员和营销人员之间的协作。 它将Adobe Experience Manager资产与Creative Cloud桌面应用程序Adobe InDesign、Adobe Photoshop和Adobe Illustrator连接起来。 AdobeAsset Link面板允许创意人员访问和修改存储在AEM Assets中的内容，而无需离开他们最熟悉的创意应用程序。
+[AdobeAsset Link (AAL)](https://www.adobe.com/cn/creativecloud/business/enterprise/adobe-asset-link.html) 在内容创建过程中，可简化创意专业人士与营销人员之间的协作。 它将Adobe Experience Manager资产与Creative Cloud桌面应用程序Adobe InDesign、Adobe Photoshop和Adobe Illustrator连接起来。 AdobeAsset Link面板允许创意人员访问和修改存储在AEM Assets中的内容，而无需离开他们最熟悉的创意应用程序。
 
-要将Experience Manager Assets配置为与Asset Link一起使用，请实施以下任务。 使用Experience Manager管理员帐户进行配置：
+要配置要与Asset Link一起使用的Experience Manager Assets，请实施以下任务。 使用Experience Manager管理员帐户进行配置：
 
 1. 根据需要安装包。 详情请参阅 [先决条件](#prerequisites).
 
@@ -40,24 +40,24 @@ ht-degree: 1%
 
 ## 使用配置包配置Experience Manager {#configure-using-package}
 
-Adobe建议您安装 [adobe-asset-link-config](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq640/product/assets/adobe-asset-link-config) 配置包以自动执行大多数配置任务，然后执行一些手动任务。 或者，您可以 [手动配置](#manual-configuration).
+Adobe建议您安装 [adobe-asset-link-config](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq640/product/assets/adobe-asset-link-config) 配置包可自动执行大多数配置任务，然后是一些手动任务。 或者，您可以 [手动配置](#manual-configuration).
 
 >[!CAUTION]
 >
 >如果您的Experience Manager实例配置为使用Adobe IMS帐户进行用户登录，请不要使用配置包。 相反， [手动配置](#manual-configuration) Experience Manager实例。
 
-1. 要打开包管理器，请在Experience ManagerWeb界面中访问 **[!UICONTROL 工具]** > **[!UICONTROL 部署]** > **[!UICONTROL 包共享]**. 安装 `adobe-asset-link-config` 包。
+1. 要打开包管理器，请在Experience ManagerWeb界面中，访问 **[!UICONTROL 工具]** > **[!UICONTROL 部署]** > **[!UICONTROL 包共享]**. 安装 `adobe-asset-link-config` 包。
 
-1. 访问&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 运营]** > **[!UICONTROL Web 控制台]**。查找 **[!UICONTROL AdobeGranite OAuth IMS提供程序]** 配置，然后单击以进行编辑。
+1. 访问&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 运营]** > **[!UICONTROL Web 控制台]**。定位 **[!UICONTROL AdobeGranite OAuth IMS提供程序]** 配置，然后单击以编辑它。
 
    设置以下属性并保存更改。
 
    * [!UICONTROL 组映射]：除非需要，否则留空。 有关详细信息，请参阅 [组映射](#group-mapping).
    * [!UICONTROL 组织]：输入您在Adobe Admin Console中使用的组织ID。 有关组织ID的详细信息，请参阅 [创建用户组](https://helpx.adobe.com/enterprise/using/create-aal-user-group.html).
 
-1. 查找 **[!UICONTROL AdobeGranite Bearer身份验证处理程序]** 配置，然后单击以进行编辑。
+1. 定位 **[!UICONTROL AdobeGranite持有者身份验证处理程序]** 配置，然后单击以编辑它。
 
-   添加 **[!UICONTROL InDesignAem2]** 的客户端ID **[!UICONTROL 允许的OAuth客户端ID]** 配置属性。
+   添加 **[!UICONTROL InDesignAem2]** 客户端ID **[!UICONTROL 允许的OAuth客户端ID]** 配置属性。
 
 
 ## 手动配置Experience Manager {#manual-configuration}
@@ -68,7 +68,7 @@ Adobe建议您安装 [adobe-asset-link-config](https://experience.adobe.com/#/do
 
 1. 要访问配置管理器，请访问 **[!UICONTROL 工具]** > **[!UICONTROL 操作]** > **[!UICONTROL Web控制台]**. 选择 **[!UICONTROL osgi]** > **[!UICONTROL 配置]** 从顶部的菜单。
 
-1. 找到 **[!UICONTROL AdobeGranite OAuth IMS提供程序]** 配置，然后单击以进行编辑。
+1. 找到 **[!UICONTROL AdobeGranite OAuth IMS提供程序]** 配置，然后单击以编辑它。
 
    设置以下配置并单击 **[!UICONTROL 保存]**.
 
@@ -79,69 +79,68 @@ Adobe建议您安装 [adobe-asset-link-config](https://experience.adobe.com/#/do
    * [!UICONTROL 组织]：在中设置为组织ID [Adobe Admin Console](https://adminconsole.adobe.com/).
    * [!UICONTROL 组映射]：留空，除非您遇到特殊情况。 有关详细信息，请参阅 [组映射](#group-mapping).
 
-1. 查找 **[!UICONTROL AdobeGranite Bearer身份验证处理程序]** 配置，然后单击以进行编辑。
+1. 定位 **[!UICONTROL AdobeGranite持有者身份验证处理程序]** 配置，然后单击以编辑它。
 
    将以下客户端ID添加到 **[!UICONTROL 允许的OAuth客户端ID]** 配置属性： `InDesignAem2, cc-europa-desktop_0_1, cc-europa-desktop_1_0, cc-europa-desktop_2_0, cc-europa-desktop_3_0, cc-europa-desktop_4_0, cc-europa-desktop_5_0, cc-europa-desktop_6_0, cc-europa-desktop_7_0, cc-europa-desktop_8_0, cc-europa-desktop_9_0, and cc-europa-desktop_10_0`.
 
    添加每个 `Client ID`，单击 `+`. 单击 **[!UICONTROL 保存]** 添加所有ID之后。
 
-1. In **[!UICONTROL AdobeGranite OAuth应用程序和提供程序]** 配置，检查现有 **[!UICONTROL AdobeGranite OAuth身份验证处理程序]** 实例。 如果您使用找到实例 `Config ID` 值 `ims`，请将其用于此过程中的说明。 否则，请单击 `+` 创建配置实例。 设置以下属性值，然后单击 **[!UICONTROL 保存]**.
+1. 在 **[!UICONTROL AdobeGranite OAuth应用程序和提供程序]** 配置，检查现有 **[!UICONTROL AdobeGranite OAuth身份验证处理程序]** 实例。 如果您使用 `Config ID` 值 `ims`，请将其用于本过程中的说明。 否则，请单击 `+` 创建配置实例。 设置以下属性值，然后单击 **[!UICONTROL 保存]**.
 
    * [!UICONTROL 客户端ID]：不更改
    * [!UICONTROL 客户端密码]：不更改
    * [!UICONTROL 配置ID]： ` ims`
-   * [!UICONTROL 范围]： `AdobeID, OpenID, read_organizations` （其他值可能也在配置中）
+   * [!UICONTROL 范围]： `AdobeID, OpenID, read_organizations` （其他值也可能在配置中）
    * [!UICONTROL 提供程序ID]： ` ims`
    * [!UICONTROL 创建用户]： ` Checked`
-   * [!UICONTROL 用户ID属性]： `Email` 用于新创建的配置。 否则，请勿更改。
+   * [!UICONTROL 用户标识属性]： `Email` 用于新创建的配置。 否则，请勿更改。
 
-1. 找到 **[!UICONTROL Apache Jackrabbit Oak默认同步处理程序]** 配置 **[!UICONTROL 同步处理程序名称]** `ims` 然后单击以进行编辑。
+1. 找到 **[!UICONTROL Apache Jackrabbit Oak默认同步处理程序]** 使用配置 **[!UICONTROL 同步处理程序名称]** `ims` 然后单击以进行编辑。
 
    设置以下配置属性，然后单击 **[!UICONTROL 保存]**.
 
-   * [!UICONTROL 用户过期时间和用户成员资格过期]：按“m”后面所跟的时间（以分钟为单位），没有空格。 例如， `15m` 15分钟。 有关详细信息，请参阅 [组映射](#group-mapping).
+   * [!UICONTROL 用户过期时间和用户成员资格过期]：时间以分钟为单位，后跟“m”，无空格。 例如， `15m` 15分钟。 有关详细信息，请参阅 [组映射](#group-mapping).
    * [!UICONTROL 用户自动成员资格]：不更改
    * [!UICONTROL 用户动态成员资格]： ` Deslect`
 
-1. 找到 **[!UICONTROL AdobeGranite OAuth身份验证处理程序]** 配置，然后单击以进行编辑。 不进行任何更改，单击 **[!UICONTROL 保存]**.
+1. 找到 **[!UICONTROL AdobeGranite OAuth身份验证处理程序]** 配置，然后单击以编辑它。 不进行任何更改，单击 **[!UICONTROL 保存]**.
 
-1. 要调整承载身份验证处理程序的相对优先级，请在CRXDE中导航到 `/apps/system/config`. 查找 `com.adobe.granite.auth.oauth.impl.BearerAuthenticationHandler.config` 并打开其配置。 最后，添加 `service.ranking=I"-10"`. 保存更改。
+1. 要调整载体身份验证处理程序的相对优先级，请在CRXDE中导航到 `/apps/system/config`. 定位 `com.adobe.granite.auth.oauth.impl.BearerAuthenticationHandler.config` 并打开其配置。 最后，添加 `service.ranking=I"-10"`. 保存更改。
 
    >[!NOTE]
    >
-   >使用持有者令牌进行身份验证的每个请求都会产生对Adobe IMS的三次调用、Experience Manager同步和创建登录令牌的开销。 为了克服此开销，AdobeAsset Link会捕获在来自Experience Manager的响应中返回的登录令牌，并与后续请求一起发送。 要使此进程正常工作，必须调整承载身份验证处理程序的相对优先级。
+   >使用持有者令牌进行身份验证的每个请求都会产生对Adobe IMS的三次调用、Experience Manager同步以及创建登录令牌的开销。 为了克服此开销，AdobeAsset Link会捕获在来自Experience Manager的响应中返回的登录令牌，并将其与后续请求一起发送。 要使此进程正常工作，必须调整载体身份验证处理程序的相对优先级。
 
 1. （可选）如果Experience Manager用户的电子邮件ID中包含大写或混合大小写的域名，请选择 **[!UICONTROL 将锁定用户更改为小写]** 在 **[!UICONTROL AdobeGranite ACP平台配置]** 在Experience ManagerWeb控制台中。
 
 ## 迁移到企业配置文件后的其他配置 {#configure-migration-activity}
 
-AdobeAsset Link用户能够连接到Experience Manager，以允许从企业(CCE)组织的主Creative Cloud进行IMS登录。 Experience Manager使用客户端ID标识允许的IMS组织。 迁移到Business Profiles后，需要为IMS组织配置客户端ID和密钥，以作为承载身份验证处理程序的Experience Manager。 有关业务配置文件的详细信息，请参阅 [Adobe配置文件简介](https://helpx.adobe.com/enterprise/kb/introducing-adobe-profiles.html).
+AdobeAsset Link用户能够连接到Experience Manager，以允许从企业(CCE)组织的主Creative Cloud进行IMS登录。 Experience Manager使用客户端ID标识允许的IMS组织。 迁移到Business Profiles后，需要为IMS组织配置客户端ID和密钥，以Experience Manager持有者身份验证处理程序。 有关业务配置文件的详细信息，请参阅 [Adobe配置文件简介](https://helpx.adobe.com/enterprise/kb/introducing-adobe-profiles.html).
 
-仅当您使用不同的Adobe IMS组织进行企业Experience Manager和Creative Cloud(CCE)并在这两个组织之间建立域信任关系时，才需要额外配置。
+仅当您使用其他Adobe IMS组织进行Experience Manager和企业Creative Cloud(CCE)并在这两个组织之间建立域信任关系时，才需要额外配置。
 
 >[!NOTE]
 >
->* Experience Manager6.5.11.0中提供了对Business Profile的修复。
+>* Experience Manager6.5.11.0中提供了对Business Profiles的修复。
 >* 如果您使用具有Experience Manager和CCE的相同Adobe IMS组织，则现有配置将继续有效。
-
 
 
 **前提条件**
 
 1. 为AAL配置了持有者身份验证且正在运行的Experience Manager实例。
-1. 在Experience Manager6.5实例上安装以下软件包(Service Pack 11)。
+1. 在Experience Manager6.5实例上安装以下包(Service Pack 11)。
 
    [下载Experience Manager6.5.11.0](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.11.zip)
 
-1. 联系人 [!UICONTROL 客户支持] 获取IMS组织的承载身份验证的客户端ID和密钥。
+1. 联系人 [!UICONTROL 客户支持] 用于获取IMS组织的持有者身份验证的客户端ID和密钥。
 
 以下是迁移到Business Profiles后所需的其他配置：
 
-1. In **[!UICONTROL AdobeGranite OAuth IMS配置提供程序]** (`com.adobe.granite.auth.ims.impl.ImsConfigProviderImpl`)，设置：
+1. 在 **[!UICONTROL AdobeGranite OAuth IMS配置提供程序]** (`com.adobe.granite.auth.ims.impl.ImsConfigProviderImpl`)，设置：
 
-   * OAuth配置ID (`oauth.configmanager.ims.configid`)： `ims` （验证一次，您可能已配置它）
+   * OAuth配置ID (`oauth.configmanager.ims.configid`)： `ims` （验证一次，您可能已经配置了该程序）
 
-   * IMS拥有实体(`ims.owningEntity`)：您的IMS组织ID
+   * IMS所属实体(`ims.owningEntity`)：您的IMS组织ID
 
    ![IMS配置ID](assets/bearer-authentication1.png)
 
@@ -159,96 +158,96 @@ AdobeAsset Link用户能够连接到Experience Manager，以允许从企业(CCE)
 
 ## 管理用户访问控制 {#user-access}
 
-本节介绍如何管理用户以及用户对Experience Manager存储库的访问权限。
+本节介绍如何管理Experience Manager及其对“用户”存储库的访问权限。
 
 ### 组映射 {#group-mapping}
 
-组映射确定Experience Manager中的组如何与Adobe IMS中的组相对应。 在授予AdobeAsset Link用户访问Experience Manager Assets的权限方面，它起着重要作用。
+组映射确定Experience Manager中的组如何与Adobe IMS中的组相对应。 在授予AdobeAsset Link用户访问Experience Manager Assets的权限时，它起着重要作用。
 
 与AdobeAsset Link一起使用时，Experience Manager将用户管理功能委派给Adobe IMS。 它会自动创建与Adobe IMS中的用户和组对应的用户和组。 此外，它还同步Experience Manager中的用户、组和组成员资格，以匹配Adobe IMS中的用户、组和组成员资格。
 
-例如，假设AdobeAsset Link用户是Adobe IMS组assetlink用户的成员。 在这种情况下，当该Adobe IMS组中的用户首次连接到Experience Manager Asset Link时，将在Adobe中创建名为assetlink-users的同步组。 Adobe IMS组中的每个新用户首次通过AdobeAsset Link连接到Experience Manager时，都会添加到Experience Manager中的相应组。
+例如，考虑一个方案，其中AdobeAsset Link用户是Adobe IMS组assetlink-users的成员。 在这种情况下，当该Adobe IMS组中的用户首次连接到Experience Manager Asset Link时，将在Adobe中创建名为assetlink-users的同步组。 Adobe IMS组中的每个新用户在首次通过AdobeAsset Link连接到Experience Manager时，都会添加到Experience Manager中的相应组。
 
-可以直接授予与Adobe IMS中的组对应并与其同步的Experience Manager中的组访问权限，也可以通过使这些组成为其他组的成员。 以下是如何管理权限的示例。
+Experience Manager中与Adobe IMS中的组对应并同步的组可以直接被授予访问权限，也可以通过使其成为另一个组的成员。 下面是如何管理权限的示例。
 
 ![组示例](assets/group-examples.png)
 
 以下规则适用于Experience Manager中的组映射：
 
 * 确保 **[!UICONTROL 组映射]** 中的属性 **[!UICONTROL AdobeGranite OAuth IMS提供程序]** 配置为空。
-* 在Adobe进行身份验证时，将评估Asset Link用户组成员资格 **[!UICONTROL 用户过期时间]** 中的属性 **[!UICONTROL Apache Jackrabbit Oak默认同步处理程序]** 配置已过期。 目前，可以向Experience Manager中的组添加用户或从组中移除用户，以与Adobe IMS中的内容同步。
-* 避免组名冲突。 确保在Adobe IMS中创建的组（用于管理用户）的名称不同于所有Experience Manager系统组名称。
+* Adobe进行身份验证时，将评估Asset Link用户组成员资格，以及 **[!UICONTROL 用户过期时间]** 中的属性 **[!UICONTROL Apache Jackrabbit Oak默认同步处理程序]** 配置已过期。 目前，可以在Experience Manager中的组中添加和删除用户，以与Adobe IMS中的内容同步。
+* 避免组名冲突。 确保在Adobe IMS中创建的组(用于管理Experience Manager)的名称不同于所有用户系统组名称。
 
-   例如，确保它们与 `dam-users` 组和由Experience Manager管理员创建的组。
+  例如，确保它们与 `dam-users` 组和Experience Manager管理员创建的组。
 
-   名称与Experience Manager系统组或手动创建的组名称冲突的Adobe IMS组不用于控制用户权限。
-* 如果Adobe IMS用户连接到Experience Manager实例，并且在该实例上，用户的名称与之前创建的Experience Manager用户冲突，则会为Adobe IMS用户指定另一个名称，并添加数字以使其唯一。
+  如果某个Adobe IMS组的名称与Experience Manager系统组的名称或手动创建的组的名称冲突，则不会使用该IMS组来控制用户权限。
+* 如果Adobe IMS用户连接到Experience Manager实例，并且在该实例中，用户的名称与之前创建的Experience Manager用户冲突，则会为Adobe IMS用户指定另一个名称，并添加编号以使其唯一。
 
 **设置首次访问控制**
 
-通过AdobeAsset Link连接的用户只有在获得所需的权限后，才能查看资源并与之交互。 此 [组映射](#group-mapping) 上面的部分讨论了如何在Experience Manager中创建用户组，这些用户组对应于Adobe IMS中您组织中的用户组并与之同步。 建议Experience Manager管理员使用这些组来管理AdobeAsset Link用户的访问控制。
+通过AdobeAsset Link连接的用户在获得所需的权限后，只能查看资源并与之交互。 此 [组映射](#group-mapping) 上面的部分讨论如何在Experience Manager中创建用户组，这些用户组对应于Adobe IMS中您组织中的用户组并与之同步。 建议Experience Manager管理员使用这些组来管理AdobeAsset Link用户的访问控制。
 
-对于与Adobe IMS组（用于管理用户访问控制）同步的每个Experience Manager组：
+对于与Adobe IMS组(用于管理Experience Manager访问控制)同步的每个用户组：
 
 1. 确保组具有可用于从AdobeAsset Link进行初始连接的成员。
-1. 使用该用户登录AdobeAsset Link并连接到Experience Manager。 此连接预期会失败。
-1. 在Experience Manager中，找到与Adobe IMS中的组对应的组，并向其授予所需的访问控制。 例如，新组成为dam-users组的成员。
+1. 使用该用户登录到AdobeAsset Link，然后连接到Experience Manager。 此连接预期会失败。
+1. 在Experience Manager中，找到与Adobe IMS中的组对应的组，并授予其所需的访问控制。 例如，新组成为dam-users组的成员。
 1. 关闭AdobeAsset Link并重新启动Creative Cloud应用程序。
-1. 要验证用户是否具有预期的访问权限，请重新打开Adobe资源链接。
+1. 要验证用户是否具有预期的访问权限，请重新打开AdobeAsset Link。
 
-执行这些步骤后，同一组中的其他用户可以在第一次尝试时通过AdobeAsset Link连接到Experience Manager。 这些用户会自动拥有与组中其他用户相同的权限。
+执行这些步骤后，同一组中的其他用户可以在第一次尝试时通过AdobeAsset Link连接到Experience Manager。 这些用户自动拥有与组中其他用户相同的权限。
 
-## 管理AdobeAsset Link的Experience Manager用户 {#manage-users}
+## 管理Experience Manager用户以使用AdobeAsset Link {#manage-users}
 
-AdobeAsset Link用户登录其Creative Cloud应用程序后，即可与Experience Manager连接。 此身份验证使用Adobe IMS技术，并在Experience Manager中创建用户信息（如果不存在）。 Experience Manager企业客户通常使用与Experience Manager集成的外部身份提供程序来管理其用户。 身份提供程序包括Adobe IMS以及使用SAML和LDAP协议的其他产品。 或者，也可以在Experience Manager中本地创建和管理用户。
+AdobeAsset Link用户登录其Creative Cloud应用程序后，即可连接到Experience Manager。 此身份验证使用Adobe IMS技术，并在Experience Manager中创建用户信息（如果不存在）。 Experience Manager企业客户通常使用与Experience Manager集成的外部身份提供程序来管理其用户。 身份提供程序包括Adobe IMS以及使用SAML和LDAP协议的其他产品。 或者，也可以在Experience Manager中本地创建和管理用户。
 
-如果符合以下条件，从AdobeAsset Link连接到Experience Manager的用户不会与先前直接登录存储在Experience Manager中的现有用户信息发生冲突：
+如果符合以下条件，从AdobeAsset Link连接到Experience Manager的用户不会与上次直接登录时存储在Experience Manager中的现有用户信息发生冲突：
 
-* 用于直接登录到Experience Manager的所有用户名与Adobe IMS中用于Creative Cloud登录的用户名不同。
+* 用于直接登录Experience Manager的所有用户名与Adobe IMS中用于Creative Cloud登录的用户名不同。
 * Adobe IMS用作直接Experience Manager登录的身份提供程序。
-* 用户在使用同一Experience Manager直接Adobe登录之前从Experience Manager资源链接连接到帐户。
+* 用户先从AdobeAsset Link连接到Experience Manager，然后再使用同一帐户直接Experience Manager登录。
 
 
-另一方面，在以下场景中，必须更新由于直接Experience Manager登录而创建的用户信息才能使用AdobeAsset Link：
+另一方面，在以下情形中，必须更新作为直接Experience Manager登录结果而创建的用户信息，才能与AdobeAsset Link一起使用：
 
-* 相同的用户名（例如用户的电子邮件地址）同时用于两者 — 使用Adobe IMS的Creative Cloud中的帐户，以及非Adobe IMS的外部身份提供商中的帐户。
-* 这两个帐户使用相同的用户名 — Creative Cloud中的帐户和本地Experience Manager帐户。
+* 相同的用户名（例如用户的电子邮件地址）会用于两者 — 使用Adobe IMS的Creative Cloud中的帐户，以及Adobe IMS以外的外部身份提供商中的帐户。
+* 相同的用户名同时用于两者 — Creative Cloud中的帐户和本地Experience Manager帐户。
 * Adobe IMS中的Creative Cloud帐户是Federated ID，它们由与Experience Manager集成以便直接登录的同一外部身份提供程序提供。
 
 通过这些方案创建的用户没有与Adobe IMS同步的用户所需的属性。
 
-要在Experience Manager中更新此类用户以使用Adobe资源链接，请执行以下操作：
+要在Experience Manager更新此类用户以使用AdobeAsset Link，请执行以下操作：
 
-1. 在Experience ManagerWeb控制台中，找到 **[!UICONTROL Apache Jackrabbit Oak外部主体配置]** 配置，然后单击以进行编辑。 取消选择 **[!UICONTROL 外部身份保护]** 复选框，然后单击 **[!UICONTROL 保存]**.
-1. 要在Experience Manager中访问“用户管理”界面，请导航到 **[!UICONTROL 工具]** > **[!UICONTROL 安全性]** > **[!UICONTROL 用户]**. 选择要更新的用户，然后记下该用户的浏览器URL路径末尾，开始于 `/home/users`. 或者，您也可以在CRXDE中搜索用户名。 示例用户路径： `/home/users/x/xTac082TDh-guJzzG7WM`.
+1. 在Experience ManagerWeb控制台中，找到 **[!UICONTROL Apache Jackrabbit Oak外部主体配置]** 配置，然后单击以编辑它。 取消选择 **[!UICONTROL 外部身份保护]** 复选框，然后单击 **[!UICONTROL 保存]**.
+1. 要在Experience Manager中访问“用户管理”界面，请导航至 **[!UICONTROL 工具]** > **[!UICONTROL 安全性]** > **[!UICONTROL 用户]**. 选择要更新的用户，然后记下该用户的浏览器URL路径末尾，开头为 `/home/users`. 或者，您可以在CRXDE中搜索用户名。 示例用户路径： `/home/users/x/xTac082TDh-guJzzG7WM`.
 1. 在CRXDE中，导航到用户路径，选择用户节点，然后通过选择 **[!UICONTROL 属性]** 中下区域的Tab键。 此节点具有 `jcr:primaryType` 属性值 `rep:User`.
-1. 在底部 **[!UICONTROL 属性]** 选项卡区域，输入 `Name` 值 `rep:externalId`， `Type` 值 `String`，和 `Value` 值 `rep:authorizableId`；`ims`，其中 `rep:authorizableId` 是的值 `rep:authorizableId` 节点的属性。 (使用分号，且不加空格来分隔 `rep:authorizableId` 值自 `ims`.)
-1. 单击 **[!UICONTROL 添加]** 按钮，然后单击 **[!UICONTROL 全部保存]**.
-1. 对于要升级以使用AdobeAsset Link的任何其他用户，请重复步骤2至5。
-1. 在Experience ManagerWeb控制台中，找到 **[!UICONTROL Apache Jackrabbit Oak外部主体配置]** 配置，然后单击以进行编辑。 取消选择 **[!UICONTROL 外部身份保护]** 复选框，然后单击 **[!UICONTROL 保存]**.
+1. 在底部 **[!UICONTROL 属性]** 选项卡区域，输入 `Name` 值 `rep:externalId`， `Type` 值 `String`，和 `Value` 值 `rep:authorizableId`；`ims`，其中 `rep:authorizableId` 的值为 `rep:authorizableId` 节点的属性。 (分号用于分隔 `rep:authorizableId` 值自 `ims`.)
+1. 单击 **[!UICONTROL 添加]** 新条目右侧的按钮，然后单击 **[!UICONTROL 全部保存]**.
+1. 对要升级以使用Asset Link的任何其他Adobe重复步骤2至5。
+1. 在Experience ManagerWeb控制台中，找到 **[!UICONTROL Apache Jackrabbit Oak外部主体配置]** 配置，然后单击以编辑它。 取消选择 **[!UICONTROL 外部身份保护]** 复选框，然后单击 **[!UICONTROL 保存]**.
 
 >[!NOTE]
 >
 >如果服务在几分钟内未恢复，请重新启动Experience Manager以允许成功进行身份验证。
 
-进行此更改后，更新的Experience Manager用户可以连接到Adobe资源链接，并继续使用直接登录方法登录在更新之前使用的Experience Manager。 成功通过Adobe IMS身份验证后，Experience Manager用户配置文件信息会与Adobe IMS中的用户配置文件同步。
+进行此更改后，更新的Experience Manager用户可以连接到AdobeAsset Link，并继续使用直接登录方法登录在更新之前使用的Experience Manager。 成功通过Adobe IMS身份验证后，Experience Manager用户配置文件信息将与Adobe IMS中的用户配置文件同步。
 
-通过一种方法，可以执行多个Experience Manager用户的批量迁移，以便他们能够使用AdobeAsset Link。 请联系Adobe关怀团队，以获取启用此选项的更多信息和帮助。
+通过有一种方法，可以执行多个Experience Manager用户的批量迁移，以便他们能够使用AdobeAsset Link。 请联系Adobe关怀团队，了解有关启用此选项的更多信息和帮助。
 
-作为这些步骤的替代方法，在某些情况下，可能会向AdobeAsset Link用户提供对Experience Manager的快速访问。 在这种情况下，预先存在的用户信息在与AdobeAsset Link连接之前通过Experience Manager用户管理或Experience ManagerCRXDE查找和删除。 新用户信息在连接后以Experience Manager创建。 只有当您确定没有重要数据添加为用户节点的子节点时，才使用此方法。 此类额外数据是除以下节点之外的任何用户节点的子节点 `tokens`， `preferences`， `profile`， `profiles`， `profiles/public`、和 `rep:policy/*` 节点。
+作为这些步骤的替代方法，在某些情况下，可能会向AdobeAsset Link用户提供对Experience Manager的快速访问。 在这种情况下，预先存在的用户信息在与AdobeAsset Link建立连接之前通过Experience Manager用户管理或Experience ManagerCRXDE查找和删除。 新用户信息在连接之后在Experience Manager中创建。 只有在您确定没有重要数据添加为用户节点的子项时，才使用此方法。 此类额外数据是用户节点的子节点，而不是 `tokens`， `preferences`， `profile`， `profiles`， `profiles/public`、和 `rep:policy/*` 节点。
 
 ## 自动启动工作流以有条件地处理资产 {#auto-start-workflow}
 
-在Experience Manager6.4和Experience Manager6.5中，管理员可以配置工作流，以根据预定义条件自动执行和处理资源。
+在Experience Manager6.4和Experience Manager6.5中，管理员可以配置工作流以根据预定义条件自动执行和处理资源。
 
-例如，对于业务线用户和营销人员，配置非常有用，可以在几个特定文件夹上创建自定义工作流。 假设一个机构照片中的所有资产都可以添加水印，或者自由职业者上传的所有资产都可以经过处理以创建特定的演绎版。
+配置对于业务线用户和营销人员非常有用，例如在几个特定文件夹上创建自定义工作流。 假设某个机构照片拍摄的所有资产都可以添加水印，或者自由职业者上传的所有资产都可以经过处理以创建特定演绎版。
 
 有关更多信息和Experience Manager配置，请参阅 [对资产自动执行工作流](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/assets-workflow.html#auto-execute-workflow-on-some-assets).
 
 
 ## 在Experience Manager6.4.x版本中创建自定义索引 {#create-custom-index}
 
-Experience Manager包含用于查询的索引。 为指定版本创建以下自定义索引。 默认情况下，Experience Manager6.5.0包含此索引。 Adobe资源链接需要此索引来确定用户已签出的资源。
+Experience Manager包含用于查询的索引。 为指定版本创建以下自定义索引。 默认情况下，Experience Manager6.5.0包含此索引。 AdobeAsset Link需要此索引来确定用户已签出的资产。
 
 1. 在CRXDE中，找到 `/oak:index` 节点。 创建名为的节点 `cqDrivelock` 并设置其 `Type` 到 `oak:QueryIndexDefinition`.
 
@@ -261,29 +260,29 @@ Experience Manager包含用于查询的索引。 为指定版本创建以下自�
 
 ## 配置视觉或相似性搜索 {#configure-visual-similarity-search}
 
-可视化搜索功能允许您使用Adobe资源链接面板，在AEM Assets存储库中搜索视觉上类似的资源。 6.5.0或更高版本中提供了该功能，并且只搜索索引资产。 有关更多信息，请参阅 [如何配置可视搜索](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/search-assets.html#configvisualsearch).
+可视化搜索功能允许您使用Adobe资源链接面板，在AEM Assets存储库中搜索视觉上类似的资源。 该功能在6.5.0或更高版本中可用，并且只搜索索引资产。 有关更多信息，请参阅 [如何配置可视化搜索](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/search-assets.html#configvisualsearch).
 
-## 为Adobe InDesign生成仅用于置入的演绎版 {#fpo-renditions}
+## 为Adobe InDesign生成“仅用于置入”演绎版 {#fpo-renditions}
 
-Experience Manager提供仅用于置入(FPO)的演绎版。 这些FPO呈现版本的文件大小较小，但具有相同的纵横比。 如果FPO演绎版不可用于某个资源，Adobe InDesign将改用原始资源。 此回退机制可确保创作工作流不间断地进行。 有关更多信息，请参阅 [生成FPO演绎版](/help/assets/configure-fpo-renditions.md).
+Experience Manager提供仅用于置入(FPO)的演绎版。 这些FPO呈现版本的文件大小较小，但纵横比相同。 如果FPO演绎版不可用于某个资源，Adobe InDesign将改用原始资源。 此回退机制可确保创意工作流不间断地进行。 有关更多信息，请参阅 [生成FPO呈现版本](/help/assets/configure-fpo-renditions.md).
 
 
 ## 与Adobe Stock集成 {#adobe-stock-integration}
 
-组织将其Adobe Stock帐户与Experience Manager Assets集成。 它可帮助营销人员为其创意和营销项目制作已获许可的高质量、免版税的照片、矢量、插图、视频、模板和3D资产。 创意专业人士可以使用Asset Link面板使用这些资产。
+组织将其Adobe Stock帐户与Experience Manager Assets集成。 它可帮助营销人员为其创意和营销项目提供授权的高质量、免版税的照片、矢量、插图、视频、模板和3D资产。 创意专业人士可以使用Asset Link面板来使用这些资源。
 
 要与Adobe Stock集成，请参阅 [Experience Manager Assets中的Adobe Stock资源](/help/assets/aem-assets-adobe-stock.md). 要与Adobe Stock集成，需要Experience Manager6.4.2或更高版本。
 
 
-## 解决Experience Manager相关问题 {#troubleshoot}
+## Experience Manager相关问题疑难解答 {#troubleshoot}
 
 
 如果您在配置或使用AdobeAsset Link时遇到问题，请尝试以下操作：
 
-* 确保您的部署满足先决条件。 具体来说，请确保安装了适当的功能包或软件包。
+* 确保您的部署满足先决条件。 具体来说，请确保安装了相应的功能包或软件包。
 * 联系贵组织的合作伙伴或系统集成商。
 * 如果您的Creative Cloud用户无法在已签出的资产中进行验证，请检查电子邮件ID中域名的大小写。 要修复，请参阅 [手动配置](#manual-configuration).
-* 有关更多信息，请参阅 [Asset Link故障诊断](https://helpx.adobe.com/enterprise/kb/asset-link-troubleshooting.html).
+* 有关更多信息，请参阅 [Asset Link疑难解答](https://helpx.adobe.com/enterprise/kb/asset-link-troubleshooting.html).
 
 
 >[!MORELIKETHIS]
@@ -291,4 +290,3 @@ Experience Manager提供仅用于置入(FPO)的演绎版。 这些FPO呈现版�
 >* [关于 Adobe Asset Link](https://helpx.adobe.com/cn/enterprise/using/adobe-asset-link.html)
 >* [在Creative Cloud桌面应用程序中使用Asset Link管理资源](https://helpx.adobe.com/enterprise/using/manage-assets-using-adobe-asset-link.html)
 >* [as a Cloud Service配置Adobe Experience Manager Assets](https://helpx.adobe.com/cn/enterprise/using/configure-aem-assets-for-asset-link.html).
-

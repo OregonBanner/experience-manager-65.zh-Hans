@@ -8,51 +8,51 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 8ae6817a-16d3-4740-b67a-498e75adf350
 exl-id: 5e232886-75c1-4f0f-b359-4739ae035fd3
-source-git-commit: e85aacd45a2bbc38f10d03915e68286f0a55364e
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '915'
-ht-degree: 12%
+source-wordcount: '912'
+ht-degree: 10%
 
 ---
 
 # 在设计模式下配置默认组件{#configuring-components-in-design-mode}
 
-当现成安装AEM实例时，组件浏览器中会立即提供一系列组件选项。
+现成安装AEM实例后，组件浏览器中会立即显示一组组件选项。
 
-除此之外，还提供各种其他组件。 您可以使用设计模式来 [启用/禁用此类组件](#enable-disable-components). 启用并位于您的页面后，您可以使用设计模式来 [配置组件设计的各个方面](#configuring-the-design-of-a-component) 通过编辑属性参数。
-
->[!NOTE]
->
->编辑这些组件时务必谨慎。 设计设置通常是整个网站设计不可分割的一部分，因此它们只应由具有适当权限和经验的人更改，通常是管理员或开发人员。 参见 [开发组件](/help/sites-developing/components.md) 了解更多信息。
+除此之外，还可以使用各种其他组件。 您可以使用设计模式来 [启用/禁用此类组件](#enable-disable-components). 启用并位于您的页面后，您可以使用设计模式来 [配置组件设计的各个方面](#configuring-the-design-of-a-component) 通过编辑属性参数。
 
 >[!NOTE]
 >
->设计模式仅适用于静态模板。 使用可编辑模板创建的模板应使用进行编辑 [模板编辑器](/help/sites-authoring/templates.md).
+>编辑这些组件时务必谨慎。 设计设置通常是整个网站设计不可分割的一部分，因此只应由具有适当权限和经验的人进行更改，通常是管理员或开发人员。 请参阅 [开发组件](/help/sites-developing/components.md) 以了解更多信息。
 
 >[!NOTE]
 >
->设计模式仅适用于作为内容存储在( `/etc`)。
->
->从AEM 6.4开始，建议将设计作为配置数据存储在 `/apps` 以支持连续部署方案。 设计存储在以下位置 `/apps` 在运行时不可编辑，并且非管理员用户将无法使用此类模板的“设计”模式。
+>设计模式仅适用于静态模板。 使用可编辑模板创建的模板应使用 [模板编辑器](/help/sites-authoring/templates.md).
 
-这涉及添加或删除页面段落系统中允许的组件。 段落系统( `parsys`)是一个包含所有其他段落组件的复合组件。 段落系统允许作者向页面添加不同类型的组件，因为它包含所有其他段落组件。 每个段落类型都表示为一个组件。
+>[!NOTE]
+>
+>设计模式仅适用于在( `/etc`)。
+>
+>从AEM 6.4开始，建议将设计作为配置数据存储在 `/apps` 支持连续部署方案。 设计存储在下 `/apps` 在运行时不可编辑，并且此类模板的非管理员用户将无法使用设计模式。
+
+这涉及添加或删除在页面的段落系统中允许的组件。 段落系统( `parsys`)是包含所有其他段落组件的复合组件。 段落系统允许作者向页面添加不同类型的组件，因为它包含所有其他段落组件。 每个段落类型都表示为一个组件。
 
 例如，产品页面的内容可能包含包含以下内容的段落系统：
 
 * 产品的图像（采用图像或文本段落的形式）
 * 产品描述（作为文本段落）
-* 含有技术数据的表格（作为表格段落）
-* 表单用户填写（表单开头、表单元素和表单结尾段落）
+* 带有技术数据的表格（作为表格段落）
+* 表单用户填写（作为表单开头、表单元素和表单结束段落）
 
 >[!NOTE]
 >
->参见 [开发组件](/help/sites-developing/components.md) 和 [使用模板和组件的准则](/help/sites-developing/dev-guidelines-bestpractices.md#guidelines-for-using-templates-and-components) 了解有关 `parsys`.
+>请参阅 [开发组件](/help/sites-developing/components.md) 和 [使用模板和组件的准则](/help/sites-developing/dev-guidelines-bestpractices.md#guidelines-for-using-templates-and-components) 有关的详细信息 `parsys`.
 
 >[!CAUTION]
 >
->使用本文中介绍的“设计模式”编辑设计是定义静态模板设计的推荐方法
+>使用本文中介绍的设计模式编辑设计是定义静态模板设计的推荐方法
 >
->例如，在CRX DE中修改设计不是最佳做法，此类设计的应用可能与预期行为有所不同。 查看开发人员文档 [页面模板 — 静态](/help/sites-developing/page-templates-static.md#how-template-designs-are-applied) 了解更多信息。
+>例如，在CRX DE中修改设计不是最佳实践，此类设计的应用可能与预期行为有所不同。 请参阅开发人员文档 [页面模板 — 静态](/help/sites-developing/page-templates-static.md#how-template-designs-are-applied) 以了解更多信息。
 
 ## 启用/禁用组件 {#enable-disable-components}
 
@@ -72,13 +72,13 @@ ht-degree: 12%
 
    这将选择包含当前组件的段落系统。
 
-1. 此 **配置** 段落系统的图标将显示在父项的操作栏中。
+1. 此 **配置** 段落系统的图标将显示在父级的操作栏中。
 
    ![配置](do-not-localize/screen_shot_2018-03-22at103256.png)
 
    选择此项以显示对话框。
 
-1. 使用对话框可定义在编辑当前页面时组件浏览器中可用的组件。
+1. 使用对话框可定义在编辑当前页面时在组件浏览器中可用的组件。
 
    ![screen_shot_2018-03-22at103329](assets/screen_shot_2018-03-22at103329.png)
 
@@ -89,7 +89,7 @@ ht-degree: 12%
 
    **允许的组件**
 
-   在 **允许的组件** 选项卡，定义哪些组件可用于parsys。
+   在 **允许的组件** 选项卡中，定义哪些组件可用于parsys。
 
    * 这些组件按其组件组分组，各组可以展开和折叠。
    * 可以通过选中组名称选择整个组，通过取消选中全部取消选择。
@@ -97,7 +97,7 @@ ht-degree: 12%
    * 可按名称进行搜索来筛选组件。
    * 无论是否应用了过滤器，组件组名称右侧列出的数字都表示这些组中选定组件的总数。
 
-   您可以按页面组件定义配置。 如果子页面使用相同的模板和/或页面组件（通常对齐），则相同的配置将应用于相应的段落系统。
+   您可以为每个页面组件定义配置。 如果子页面使用相同的模板和/或页面组件（通常对齐），则相同的配置将应用于相应的段落系统。
 
    >[!NOTE]
    >
@@ -115,7 +115,7 @@ ht-degree: 12%
 
    ![screen_shot_2018-03-22at103113-1](assets/screen_shot_2018-03-22at103113-1.png)
 
-1. 点按或单击带有蓝色边框的组件。 在此示例中，选择了主页图像组件。
+1. 点按或单击具有蓝色边框的组件。 在此示例中，选择了主页图像组件。
 
    ![screen_shot_2018-03-22at103434](assets/screen_shot_2018-03-22at103434.png)
 
@@ -123,7 +123,7 @@ ht-degree: 12%
 
    ![“配置”图标](do-not-localize/screen_shot_2018-03-22at103256-1.png)
 
-   在“设计”对话框中，可根据可用的设计参数配置组件。
+   在“设计”对话框中，您可以根据可用的设计参数配置组件。
 
    ![screen_shot_2018-03-22at103530](assets/screen_shot_2018-03-22at103530.png)
 
@@ -139,11 +139,11 @@ ht-degree: 12%
 
    **功能**
 
-   **功能**&#x200B;选项卡允许您启用或禁用组件的其他功能。例如，对于图像组件，您可以定义图像的方向、可用的裁切选项以及是否可以上传图像。
+   此 **功能** 选项卡可让您启用或禁用组件的其他功能。 例如，对于图像组件，您可以定义图像的方向、可用的裁切选项以及是否可以上传图像。
 
    **样式**
 
-   此 **样式** 选项卡允许您定义要与组件一起使用的CSS类和样式。
+   此 **样式** 选项卡允许您定义要用于组件的CSS类和样式。
 
    ![screen_shot_2018-03-22at103741](assets/screen_shot_2018-03-22at103741.png)
 

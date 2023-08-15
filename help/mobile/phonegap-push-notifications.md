@@ -6,9 +6,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 exl-id: 375f2f40-1b98-4e21-adee-cbea274e6a2a
-source-git-commit: f8643f6118e0bc6bfb2ee0e093155cf0907eb5d3
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '3214'
+source-wordcount: '3212'
 ht-degree: 0%
 
 ---
@@ -95,7 +95,7 @@ AEM配置为使用下列三种推送通知服务之一：
 
 *AMAZON SNS* 和 *Pushwoosh* 配置允许您从AEM屏幕内部发送推送消息。
 
-*Adobe移动服务* 配置允许您使用Adobe Analytics帐户在Adobe Mobile Services中配置和发送推送通知（但必须使用此配置集构建应用程序才能启用AMS推送通知）。
+*Adobe移动服务* 通过配置，您可以使用Adobe Analytics帐户在Adobe Mobile Services中配置和发送推送通知（但必须使用此配置集构建应用程序才能启用AMS推送通知）。
 
 #### 使用Amazon SNS消息服务 {#using-the-amazon-sns-messaging-service}
 

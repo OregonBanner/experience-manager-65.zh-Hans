@@ -2,10 +2,10 @@
 title: 学习创作基础知识
 description: 了解使用内容片段为 Headless CMS 创作内容的概念和机制。
 exl-id: 125c4d0b-1572-4dba-823d-cdef2778f275
-source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1693'
-ht-degree: 82%
+source-wordcount: '1692'
+ht-degree: 81%
 
 ---
 
@@ -47,7 +47,7 @@ AEM 安装通常至少包含两个环境：
 * 密码
 * 用于访问登录屏幕的链接
 
-您的帐户将配置有您需要的任何权限。如果您有任何问题，我们建议您联系您的内部项目支持团队。
+您的帐户将配置有您需要的任何权限。如果您有任何问题，Adobe建议您联系内部项目支持团队。
 
 ### 导航 {#navigation}
 
@@ -55,14 +55,14 @@ AEM 安装通常至少包含两个环境：
 
 之后，您可以使用导航面板访问 AEM 的关键区域。对于内容片段，您将使用 **资产控制台**.
 
-要打开“导航”面板，请选择左上角的“Adobe”图标，然后按小指南针图标：
+要打开“导航”面板，请选择左上角的Adobe图标，然后按小指南针图标：
 
 ![“导航”面板](/help/journey-headless/author/assets/headless-journey-author-navigation-01.png)
 
 >[!NOTE]
->尽管内容片段是AEM的一项功能 **站点**，它们可在 **资产** 控制台。 这是一个技术细节，应该不会影响您，但了解它可能会有所帮助。
+>尽管内容片段是AEM的一项功能 **站点**，可在 **资产** 控制台。 这是一个技术细节，应该不会影响您，但了解它可能会有所帮助。
 
-在控制台中，您可以选择文件夹以导航到您的内容片段，或者选择痕迹导航（在标题中）以导航到备份树。
+在控制台中，您可以选择文件夹以导航到您的内容片段，或选择痕迹导航（在标题中）以导航到备份树。
 
 ![痕迹导航](/help/journey-headless/author/assets/headless-journey-author-navigation-02.png)
 
@@ -74,7 +74,7 @@ AEM 安装通常至少包含两个环境：
 
 ![快速操作](/help/journey-headless/author/assets/headless-journey-author-navigation-05.png)
 
-通过操作工具栏，可以访问适用于当前方案的全部操作。 可用的操作可能会发生更改；例如，取决于您的位置或您是否已选择多个资源：
+操作工具栏提供对全部操作的访问权限 — 适用于当前方案。 可用的操作可能会发生更改；例如，根据您的位置或您是否已选择多个资源：
 
 ![操作工具栏](/help/journey-headless/author/assets/headless-journey-author-navigation-06.png)
 
@@ -148,11 +148,11 @@ AEM 安装通常至少包含两个环境：
 
 ![创建内容片段 – 提供名称](/help/journey-headless/author/assets/headless-journey-author-content-fragment-03.png)
 
-确认方式 **创建** 然后你可以 **打开** 您的片段在编辑器中。
+确认 **创建** 然后你可以 **打开** 编辑器中的片段。
 
 ### 编辑片段 {#editing-fragment}
 
-您可以在创建片段后立即打开片段，也可以通过从“资产”控制台中选择它来打开片段。
+您可以在创建片段后立即打开它，也可以通过从资产控制台中选择它来打开片段。
 
 在编辑器首次打开时，您将看到：
 
@@ -166,11 +166,11 @@ AEM 安装通常至少包含两个环境：
 
 * 只需要多条信息（其中一些信息具有特定类型）的片段。对于 Headless 内容，引用很重要，您将在历程的后面部分中了解相关信息。
 
-   ![内容片段编辑器 – 我的片段](/help/journey-headless/author/assets/headless-journey-author-content-fragment-04.png)
+  ![内容片段编辑器 – 我的片段](/help/journey-headless/author/assets/headless-journey-author-content-fragment-04.png)
 
-* 一个允许您编写长段文本的片段。这里提供了用于管理文本并设置其格式的其他选项。您甚至可以在全屏编辑器中打开各个文本字段（使用右侧的类似小屏幕的图标）
+* 可让您编写较长文本部分的片段。 这里提供了用于管理文本并设置其格式的其他选项。您甚至可以在全屏编辑器中打开各个文本字段（使用右侧的类似小屏幕的图标）
 
-   ![内容片段编辑器 – 阿拉斯加烈酒](/help/journey-headless/author/assets/headless-journey-author-content-fragment-05.png)
+  ![内容片段编辑器 – 阿拉斯加烈酒](/help/journey-headless/author/assets/headless-journey-author-content-fragment-05.png)
 
 >[!NOTE]
 >
@@ -190,26 +190,26 @@ AEM 安装通常至少包含两个环境：
 
 * **内容片段模型**
 
-   您将在编辑器顶部看到内容片段模型的名称 - 位于片段名称的正下方。这也是一个可将您转至模型编辑器的链接。
+  您将在编辑器顶部看到内容片段模型的名称 - 位于片段名称的正下方。这也是一个可将您转至模型编辑器的链接。
 实际上，内容片段模型对您的内容片段至关重要，因为它们定义了您使用的结构。不过，创建和编辑这些模型（通常）是另一个角色（即内容架构师）的责任。
 
-   >[!NOTE]
-   >
-   >如果您想了解详情，可以参阅“AEM Headless 内容架构师历程”。
+  >[!NOTE]
+  >
+  >如果您想了解详细信息，可以参阅“AEM Headless 内容架构师历程”。
 
 * **关联的内容**
 
-   这一个非常明显，因为它是编辑器中的一个选项卡。
+  这一个非常明显，因为它是编辑器中的一个选项卡。
 
-   对于相当多的版本，内容片段已在 AEM 中提供。最初，它们在创作页面时可用于“传统”用途....并且它们仍在此上下文中使用。这可能涉及关联资产（例如图像），这些资产未嵌入片段中，需要在创作页面提供给作者。
+  对于相当多的版本，内容片段已在 AEM 中提供。最初，它们在创作页面时可用于“传统”用途....并且它们仍在此上下文中使用。这可能涉及关联资源（例如图像），这些资源未嵌入片段中，需要在创作页面提供给作者。
 
 * **预览**
 
-   这是编辑器中的另一个选项卡，它提供了技术视图，主要供开发人员使用。
+  这是编辑器中的另一个选项卡，它提供了技术视图，主要供开发人员使用。
 
 * **更新页面引用**
 
-   可从 **...**（省略号）下拉列表中执行此操作。Headless 作者对它并不感兴趣，因为它与页面创作有关。
+  可从 **...**（省略号）下拉列表中执行此操作。Headless 作者对它并不感兴趣，因为它与页面创作有关。
 
 ### 发布 {#publishing}
 
@@ -217,7 +217,7 @@ AEM 安装通常至少包含两个环境：
 
 完成片段后，您可以&#x200B;**发布**&#x200B;它，以便 Headless 应用程序可使用它。
 
-发布操作在编辑器中可用(或者从 **资产** console)：
+发布操作在编辑器中可用(或者从 **资产** 控制台)：
 
 ![内容片段编辑器 – 我的片段](/help/journey-headless/author/assets/headless-journey-author-content-fragment-06.png)
 
@@ -229,7 +229,7 @@ AEM 安装通常至少包含两个环境：
 
 * [创作概念](/help/sites-authoring/author.md)
 
-* [基本处理](/help/sites-authoring/basic-handling.md) – 此页面主要基于&#x200B;**站点**&#x200B;控制台，但许多/大多数功能也用于在 **Assets** 控制台下创作&#x200B;**内容片段**。
+* [基本处理](/help/sites-authoring/basic-handling.md) – 此页面主要基于&#x200B;**Sites**&#x200B;控制台，但许多/大多数功能也用于在 **Assets** 控制台下创作&#x200B;**内容片段**。
 
    * [“导航”面板](/help/sites-authoring/basic-handling.md#navigation-panel)
 
@@ -250,6 +250,7 @@ AEM 安装通常至少包含两个环境：
       * [将配置应用到 Assets 文件夹](/help/assets/content-fragments/content-fragments-configuration-browser.md#apply-the-configuration-to-your-assets-folder)
 
       * [创建内容片段](/help/assets/content-fragments/content-fragments-managing.md#creating-a-content-fragment)
+
    * [变体 - 创作片段内容](/help/assets/content-fragments/content-fragments-variations.md)
 
    * [内容片段模型](/help/assets/content-fragments/content-fragments-models.md)
@@ -259,7 +260,6 @@ AEM 安装通常至少包含两个环境：
       * [内容片段模型 – 属性](/help/assets/content-fragments/content-fragments-models.md#properties)
 
       * [内容片段模型 – 允许 Assets 文件夹中的内容片段模型](/help/assets/content-fragments/content-fragments-models.md#allowing-content-fragment-models-assets-folder)
-
 
 * 快速入门指南
    * [创建资源文件夹Headless快速入门指南](/help/sites-developing/headless/getting-started/create-assets-folder.md)

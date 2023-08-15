@@ -1,7 +1,7 @@
 ---
 title: 导出到 CSV
 seo-title: Export to CSV
-description: 将页面相关信息导出到本地系统上的CSV文件
+description: 将与页面相关的信息导出到本地系统上的 CSV 文件
 seo-description: Export information about your pages to a CSV file on your local system
 uuid: 6eee607b-3510-4f6a-ba82-b27480a4fbe1
 contentOwner: Chris Bohnert
@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 7be506fb-f5c4-48dd-bec2-a3ea3ea19397
 docset: aem65
 exl-id: 18910143-f2f2-4cfe-88b9-651df90d9cb9
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '191'
-ht-degree: 75%
+source-wordcount: '190'
+ht-degree: 81%
 
 ---
 
@@ -30,7 +30,7 @@ ht-degree: 75%
 >
 >系统将使用您浏览器的下载功能及默认目标位置。
 
-**创建 CSV 导出**&#x200B;向导允许您选择以下内容：
+此 **创建CSV导出** 向导允许您选择：
 
 * 要导出的属性
    * 元数据
@@ -46,7 +46,7 @@ ht-degree: 75%
       * 独特访客
       * 页面停留时间
 * 深度
-   * 父级路径
+   * 父项路径
    * 仅直接子项
    * 其他级别的子项
    * 级别
@@ -61,10 +61,10 @@ ht-degree: 75%
 
 要创建 CSV 导出，请执行以下操作：
 
-1. 必要时，打开&#x200B;**站点**&#x200B;控制台并导航到所需的位置。
+1. 必要时，打开&#x200B;**Sites**&#x200B;控制台并导航到所需的位置。
 1. 从工具栏中，选择&#x200B;**创建**，然后选择 **CSV 报表**，以打开向导：
 
    ![etc-03](assets/etc-03.png)
 
-1. 选择要导出的所需属性。
+1. 选择需要导出的属性。
 1. 选择&#x200B;**创建**。

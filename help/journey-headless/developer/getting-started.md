@@ -2,10 +2,10 @@
 title: AEM Headless 快速入门
 description: 在 AEM Headless 开发人员历程的这一部分中，了解 AEM Headless 的先决条件。
 exl-id: a94794a4-bf8b-4f3b-a761-3f02feedd5c0
-source-git-commit: ad0f0bd8b0c230e002c734adca87da22bfa3a7cd
+source-git-commit: 10227bcfcfd5a9b0f126fee74dce6ec7842f5e95
 workflow-type: tm+mt
-source-wordcount: '3031'
-ht-degree: 100%
+source-wordcount: '3024'
+ht-degree: 96%
 
 ---
 
@@ -70,7 +70,7 @@ AEM 的 Headless 功能基于几项关键功能。历程的后面部分将详细
 
 ### 内容片段 {#content-fragments}
 
-您可使用内容片段设计、创建、管理和发布独立于页面的内容。利用它们，您可以准备内容以用于多个位置和多个渠道。
+内容片段允许您设计、创建、管理和发布独立于页面的内容。 利用这些功能，可准备内容以用于多个位置和多个渠道。
 
 内容片段包含结构化内容，可以采用 JSON 格式投放。
 
@@ -78,8 +78,8 @@ AEM 的 Headless 功能基于几项关键功能。历程的后面部分将详细
 
 为了以 Headless 方式修改您的内容，AEM 提供了两个功能强大的 API。
 
-* GraphQL API 允许您创建请求来访问和交付内容片段。
-* Assets REST API 允许您创建和修改内容片段（及其他资产）。
+* GraphQL API 允许您创建请求来访问和投放内容片段。
+* Assets REST API允许您创建和修改内容片段（和其他资源）。
 
 您将在 AEM Headless 历程的后面部分中了解这些 API 及其使用者式。或参阅下面的[其他资源](#additional-resources)部分以获取其他文档。
 
@@ -139,7 +139,7 @@ AEM 支持 CMS 的完全 Headless 模型和传统的全栈或 Headful 模型。�
 
 ### 范围 {#scope}
 
-请务必明确定义项目的范围。范围告知验收标准，并允许您创建完成的定义。
+请务必明确定义项目的范围。范围会通知接受标准，并允许您建立完成的定义。
 
 您必须提出的第一个问题是“我尝试使用 AEM Headless 实现什么目标？”一般来说，答案应该是您拥有或将来会拥有您使用自己的开发工具而非 AEM 构建的体验应用程序。此体验应用程序可以是移动应用程序、网站或任何其他面向最终用户客户的体验应用程序。使用 AEM Headless 的目标是为您的体验应用程序提供在 AEM 中创建、存储和管理的内容，并使用最先进的 API 调用 AEM Headless 以直接从体验应用程序中获取内容甚至完整的 CRUD 内容。如果这不是您想执行的操作，您可能需要[返回 AEM 文档](https://experienceleague.adobe.com/docs/experience-manager-65.html?lang=zh-Hans)，并找到更适合您要完成的操作的部分。
 
@@ -154,9 +154,9 @@ AEM 支持 CMS 的完全 Headless 模型和传统的全栈或 Headful 模型。�
 
 #### 管理员 {#administrator}
 
-管理员负责系统的基本设置和配置。例如，管理员在 Adobe 用户管理系统（称为 Identity Management System (IMS)）中设置您的组织。Adobe 在 IMS 中创建您的组织后，管理员是组织中第一个收到来自 Adobe 的电子邮件邀请的用户。管理员可以登录 IMS 并添加其他角色的用户。
+管理员负责系统的基本设置和配置。例如，管理员在 Adobe User Management 系统（称为 Identity Management System (IMS)）中设置您的组织。Adobe 在 IMS 中创建您的组织后，管理员是组织中第一个收到来自 Adobe 的电子邮件邀请的用户。管理员可以登录 IMS 并添加其他角色的用户。
 
-在管理员配置用户后，他们将获得对所有 AEM 资源的访问权限，以完成他们作为投稿人的工作，并使用 AEM Headless 交付体验应用程序。
+管理员配置用户后，将授予他们访问所有AEM资源的权限，以便他们作为参与者完成使用AEM Headless交付Experience应用程序的任务。
 
 管理员应是负责以下工作的用户：设置 AEM 并准备运行时环境以使[内容作者](#content-author)能够创建和更新内容，并使[开发人员](#developer)能够使用 API 来获取或修改其体验应用程序的内容。
 
@@ -255,7 +255,7 @@ GraphQL 充当 AEM 和 Headless 内容使用者之间的“粘合剂”。GraphQ
 
 #### 更新频率 {#update-frequency}
 
-通常，不同的体验部分会具有不同的内容更新频率。了解这一点对于能够微调 CDN 和缓存配置非常重要。这也是[内容架构师](#content-architects)的重要输入，因为他们将设计模型来表示您的内容。请考虑：
+通常，不同的体验部分会具有不同的内容更新频率。了解这一点对于能够微调CDN和缓存配置非常重要。 这也是[内容架构师](#content-architects)的重要输入，因为他们将设计模型来表示您的内容。请考虑：
 
 * 某些类型的内容是否必须在一段时间后过期？
 * 是否存在无法缓存的用户特定的元素？
@@ -288,6 +288,6 @@ GraphQL 充当 AEM 和 Headless 内容使用者之间的“粘合剂”。GraphQ
 * [内容片段模型](/help/assets/content-fragments/content-fragments-models.md) – 有关内容片段模型的技术文档。
 * [GraphQL 技术文档](https://graphql.org) – GraphQL 定义（外部链接）
 * [GraphQL API](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md) – 说明如何创建请求来访问和交付内容片段的技术文档
-* [Assets REST API](/help/assets/assets-api-content-fragments.md) – 说明如何创建和修改内容片段（及其他资产）的技术文档
+* [Assets REST API](/help/assets/assets-api-content-fragments.md) – 说明如何创建和修改内容片段（及其他资源）的技术文档
 * [持久查询](/help/sites-developing/headless/graphql-api/persisted-queries.md) – 有关 AEM 中的持久查询的技术文档
 * [AEM 中的 Headful 和 Headless](/help/sites-developing/headful-headless.md) – 对 AEM 中可用的 Headless 集成级别的完整讨论

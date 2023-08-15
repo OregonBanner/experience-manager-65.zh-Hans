@@ -10,10 +10,10 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: 3cc8ac23-98ff-449f-bd76-1203c7cbbed7
 exl-id: efebe66d-3d30-4033-9c4c-ae347e134f2f
-source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '481'
-ht-degree: 9%
+source-wordcount: '479'
+ht-degree: 10%
 
 ---
 
@@ -25,13 +25,13 @@ We.Retail中的所有页面都基于可编辑的模板，允许非开发人员�
 
 ## 正在尝试 {#trying-it-out}
 
-1. 编辑语言主控分支的“设备”页。
+1. 编辑语言主分支的设备页面。
 
    http://localhost:4502/editor.html/content/we-retail/language-masters/en/equipment.html
 
-1. 请注意，模式选择器不再提供设计模式。 We.Retail的所有页面都基于可编辑模板，要更改可编辑模板的设计，必须在模板编辑器中编辑这些页面。
+1. 请注意，模式选择器不再提供设计模式。 We.Retail的所有页面都基于可编辑模板，要改变可编辑模板的设计，必须在模板编辑器中编辑这些页面。
 1. 从 **页面信息** 菜单选择 **编辑模板**.
-1. 您现在正在编辑主页模板。
+1. 您正在编辑主页模板。
 
    利用页面的结构模式，可修改模板的结构。 例如，这包括布局容器中允许的组件。
 
@@ -39,7 +39,7 @@ We.Retail中的所有页面都基于可编辑的模板，允许非开发人员�
 
 1. 配置布局容器的策略以定义容器中允许哪些组件。
 
-   策略等同于设计配置。
+   策略相当于设计配置。
 
    ![chlimage_1-139](assets/chlimage_1-139.png)
 
@@ -56,10 +56,10 @@ We.Retail中的所有页面都基于可编辑的模板，允许非开发人员�
    这允许您：
 
    * 选择现有策略或为容器创建新策略
-   * 定义使用此组件时页面作者可用的功能，例如
+   * 定义在使用此组件时可供页面作者使用的功能，例如
 
       * 允许的粘贴源
-      * 格式选项
+      * 格式化选项
       * 允许的段落样式
       * 允许的特殊字符
 
@@ -67,12 +67,12 @@ We.Retail中的所有页面都基于可编辑的模板，允许非开发人员�
 
    ![chlimage_1-141](assets/chlimage_1-141.png)
 
-1. 返回模板编辑器，您可以使用模式选择器更改为 **初始内容** 模式，以定义页面上所需的内容。
+1. 返回模板编辑器，您可以使用模式选择器更改为 **初始内容** 模式以定义页面上所需的内容。
 
-   **版面** 模式可在普通页面上使用，以定义模板的布局。
+   **布局** 模式可在普通页面上使用，以定义模板的布局。
 
 ## 更多信息 {#more-information}
 
 有关详细信息，请参阅创作文档 [创建页面模板](/help/sites-authoring/templates.md) 或开发人员文档页面 [模板 — 可编辑](/help/sites-developing/page-templates-editable.md) 有关可编辑模板的完整技术详细信息。
 
-您可能还希望调查 [核心组件](/help/sites-developing/we-retail-core-components.md). 请参阅创作文档 [核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans) 有关核心组件和开发人员文档的功能概述 [开发核心组件](https://helpx.adobe.com/experience-manager/core-components/using/developing.html) 了解技术概述。
+您可能还希望调查 [核心组件](/help/sites-developing/we-retail-core-components.md). 请参阅创作文档 [核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) 有关核心组件和开发人员文档的功能概述 [开发核心组件](https://helpx.adobe.com/experience-manager/core-components/using/developing.html) 获取技术概述。

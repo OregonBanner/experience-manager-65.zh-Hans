@@ -2,10 +2,10 @@
 title: 了解 CMS Headless 开发
 description: 在 AEM Headless 开发人员历程的这一部分中，了解 Headless 技术以及使用它的原因。
 exl-id: f0989cea-3102-43cd-976e-9a6b265d9c15
-source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1595'
-ht-degree: 94%
+source-wordcount: '1594'
+ht-degree: 93%
 
 ---
 
@@ -76,7 +76,7 @@ Headless 是从内容的呈现中分离内容的示例。或者，从更通用�
 
 ## 技术基础 {#technology}
 
-Headless 方法允许您构建一个技术堆栈，从而轻松快速地适应未来的数字体验需求。
+Headless方法允许您构建技术栈栈，以便轻松快速地适应未来的数字体验需求。
 
 过去的适用于 CMS 的 API 通常基于 REST。代表性状态传输 (REST) 采用无状态方式以文本形式提供资源。这允许使用一组预定义的操作来读取和修改资源。通过确保内容的无状态表示形式，REST 允许各种 Web 服务之间进行良好的互操作。
 
@@ -86,7 +86,7 @@ Headless 内容交付通常会使用 GraphQL API。GraphQL 既允许类似的无
 
 无论您选择哪个 API，都可以通过定义基于通用 API 的 Headless 系统，来利用最新的浏览器和其他 Web 技术（例如，渐进式 Web 应用程序 (PWA)）。API 会创建一个易于扩展且适应性强的标准接口。
 
-通常，内容在客户端上呈现。这通常意味着有人在移动设备上调用您的内容，您的CMS将交付内容，然后移动设备（客户端）负责呈现您提供的内容。 如果设备较旧或速度较慢，您的数字体验也会较慢。
+通常，内容在客户端上呈现。这通常意味着有人在移动设备上调用您的内容，您的CMS交付内容，然后移动设备（客户端）负责呈现您提供的内容。 如果设备较旧或速度较慢，您的数字体验也会较慢。
 
 将内容与呈现分离意味着可以更好地控制此类客户端性能问题。服务器端呈现 (SSR) 将呈现内容的责任从客户端浏览器转交到了服务器。这使您（作为内容提供者）能够在需要时向受众提供一定程度的有保障的性能。
 
@@ -124,6 +124,6 @@ Headless 展示了交付数字体验方面的灵活度。但这种灵活度本�
 
 ## 其他资源 {#additional-resources}
 
-我们建议您查看文档来继续无头开发历程的下一部分 [AEM Headless快速入门](getting-started.md)，以下是一些其他可选资源，这些资源对本文档中提到的一些概念进行了更深入的探究，但并非继续无头之旅所必需的。
+我们建议您查看文档来继续无头开发历程的下一部分 [AEM Headless快速入门](getting-started.md)，以下是一些其他可选资源，这些资源对本文档中提到的一些概念进行了更深入的探究，但并非继续执行Headless历程所必需的。
 
 * [AEM Headless 教程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=zh-Hans) – 使用这些动手实践教程，探究如何使用各种选项通过 AEM 将内容交付到 Headless 端点，并选择适合您的选项。

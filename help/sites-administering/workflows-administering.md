@@ -10,9 +10,9 @@ topic-tags: operations
 content-type: reference
 discoiquuid: d9c96e7f-9416-48e1-a6af-47384f7bee92
 exl-id: 90923d39-3ac5-4028-976c-d011f0404476
-source-git-commit: 25f7218355b7715949273c84eb72ddde3d6a0a65
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '994'
+source-wordcount: '993'
 ht-degree: 84%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 84%
 
 >[!NOTE]
 >
->此 [JMX控制台](/help/sites-administering/jmx-console.md#workflow-maintenance) 提供其他工作流维护操作。
+>此 [JMX控制台](/help/sites-administering/jmx-console.md#workflow-maintenance) 提供了其他工作流维护操作。
 
 提供了一系列控制台来管理您的工作流。使用[全局导航](/help/sites-authoring/basic-handling.md#global-navigation)以打开&#x200B;**工具**&#x200B;窗格，然后选择&#x200B;**工作流**：
 
@@ -88,18 +88,16 @@ ht-degree: 84%
    >* 使用&#x200B;**终止**&#x200B;操作
    >* 当受工作流约束的页面被（强制）删除时，工作流将被终止
 
-
 1. 选择特定项目，然后&#x200B;**打开历史记录**&#x200B;以查看更多详细信息：
 
    ![wf-99](assets/wf-99.png)
 
 ## 修复工作流实例故障 {#fixing-workflow-instance-failures}
 
-当工作流失败时，AEM 会提供&#x200B;**故障**&#x200B;控制台，使您能够进行调查，并在找到初始原因后执行适当的操作：
+当工作流失败时，AEM提供 **失败** 控制台让您进行调查，并在找到初始原因后执行适当的操作：
 
-* **故障详细信息**
-打开一个窗口以显示 
-**失败消息**， **步骤**、和 **失败栈栈**.
+* **失败详细信息**
+打开一个窗口以显示 **失败消息**， **步骤**、和 **失败栈栈**.
 
 * **打开历史记录**
 显示工作流历史记录的详细信息。
@@ -120,7 +118,7 @@ ht-degree: 84%
 
 最大限度地减少工作流实例的数量可以提高工作流引擎的性能，因此，您可以定期从存储库中清除已完成或正在运行的工作流实例。
 
-配置 **AdobeGranite工作流清除配置** 要根据工作流实例的年龄和状态清除工作流实例，请执行以下操作： 您还可以清除所有模型或特定模型的工作流实例。
+配置 **Adobe Granite 工作流清除配置**&#x200B;以根据其时限和状态清除工作流实例。您还可以清除所有模型或特定模型的工作流实例。
 
 您还可以创建多个服务配置以清除满足不同条件的工作流实例。例如，创建一个配置，以便在特定工作流模型的实例的运行时间显著超出预期时间时清除这些实例。创建另一个配置，以便在一定天数后清除所有已完成的工作流，从而最大限度地减小存储库。
 
@@ -160,7 +158,7 @@ ht-degree: 84%
   <tr>
    <td>要清除的模型</td>
    <td>scheduledpurge.modelIds</td>
-   <td><p>要清除的工作流模型的 ID。ID是模型节点的路径，例如：<br /> /var/workflow/models/dam/update_asset<br /> </p> <p>要指定多个模型，请单击 Web 控制台中的 + 按钮。 </p> <p>不要指定任何值以清除所有工作流模型的实例。</p> </td>
+   <td><p>要清除的工作流模型的 ID。ID是模型节点的路径，例如：<br /> /var/workflow/models/dam/update_asset<br /> </p> <p>要指定多个模型，请单击 Web 控制台中的 + 按钮。 </p> <p>请勿指定任何值以清除所有工作流模型的实例。</p> </td>
   </tr>
   <tr>
    <td>工作流时限</td>
@@ -184,9 +182,9 @@ ht-degree: 84%
 |---|---|
 | 最大收件箱查询大小 | granite.workflow.inboxQuerySize |
 
-## 对客户拥有的数据存储使用工作流变量 {#using-workflow-variables-customer-datastore}
+## 对客户拥有的数据存储使用工作流变体 {#using-workflow-variables-customer-datastore}
 
-工作流处理的数据存储在 Adobe 提供的存储 (JCR) 中。此类数据本质上可能是敏感的。您可能希望将所有用户定义的元数据/数据保存在您自己的托管存储中，而不是 Adobe 提供的存储中。以下各节将介绍如何为外部存储设置这些变量。
+工作流处理的数据存储在 Adobe 提供的存储 (JCR) 中。此类数据本质上可能是敏感的。您可能希望将所有用户定义的元数据/数据保存在您自己的托管存储中，而不是 Adobe 提供的存储中。这些部分描述了如何为外部存储设置这些变量。
 
 ### 设置模型以使用元数据的外部存储 {#set-model-for-external-storage}
 
@@ -194,7 +192,7 @@ ht-degree: 84%
 
 属性 *userMetadataPersistenceEnabled* 将存储在工作流模型的 *jcr:content 节点*&#x200B;上。此标志将作为 *cq:userMetaDataCustomPersistenceEnabled* 保留在工作流元数据中。
 
-下图显示了如何在工作流中设置标记。
+以下插图显示的是如何在工作流上设置标志。
 
 ![workflow-externalize-config](assets/workflow-externalize-config.png)
 
