@@ -9,14 +9,14 @@ discoiquuid: 9d8d7044-ffce-4ab4-9543-a2d2f9da31e3
 docset: aem65
 feature: Adaptive Forms
 exl-id: 04efb4ad-cff6-4e05-bcd2-98102f052452
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: e19a7e617bdabb678bd804cab3fea228ce19acfa
 workflow-type: tm+mt
-source-wordcount: '1949'
-ht-degree: 50%
+source-wordcount: '2154'
+ht-degree: 47%
 
 ---
 
-# 配置提交操作{#configuring-the-submit-action}
+# 配置提交操作 {#configuring-the-submit-action}
 
 <span class="preview">Adobe 建议使用现代、可扩展的数据捕获[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html)，以[创建新的自适应表单](/help/forms/using/create-an-adaptive-form-core-components.md)或[将自适应表单添加到 AEM Sites 页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。这些组件代表有关创建自适应表单的重大改进，确保实现令人印象深刻的用户体验。本文介绍了使用基础组件创作自适应表单的旧方法。</span>
 
@@ -45,6 +45,7 @@ ht-degree: 50%
 * 使用表单数据模型提交
 * Forms Portal提交操作
 * 调用AEM工作流
+* 提交到Power Automate
 
 >[!NOTE]
 >
@@ -155,6 +156,19 @@ ht-degree: 50%
 * **附件**：您可以使用&#x200B;**[!UICONTROL 附件路径]**&#x200B;选项指定用于存储已上传到自适应表单的附件的文件夹名称。该文件夹是相对于负载创建的。如果为外部数据存储标记了工作流，请使用变量选项，并从对工作流模型可用的变量列表中选择变量。
 
 * **记录文档**：它包含为自适应表单生成的记录文档。您可以使用&#x200B;**[!UICONTROL 记录文档路径]**&#x200B;选项来指定记录文档的文件名以及相对于负载的文件路径。例如，`/addresschange/DoR.pdf` 路径将创建一个相对于负载的名为 `addresschange` 的文件夹，并相对于负载放置 `DoR.pdf`。您也可以仅指定 `DoR.pdf` 以仅保存记录文档而不创建文件夹层次结构。如果为外部数据存储标记了工作流，请使用变量选项，并从对工作流模型可用的变量列表中选择变量。
+
+## 提交到Power Automate {#microsoft-power-automate}
+
+您可以配置自适应表单以在提交时运行Microsoft® Power Automate Cloud Flow。 配置的自适应表单将捕获的数据、附件和记录文档发送到 Power Automation Cloud Flow 进行处理。 它可帮助您构建自定义数据捕获体验，同时利用 Microsoft® Power Automate 的强大功能围绕捕获的数据构建业务逻辑并自动执行客户工作流。以下是自适应表单与Microsoft® Power Automate集成后可执行的操作示例：
+
+* 在Power Automate业务流程中使用自适应Forms数据
+* 使用Power Automate将捕获的数据发送到500多个数据源或任何公开可用的API
+* 对捕获的数据执行复杂的计算
+* 按预定义的计划将自适应Forms数据保存到存储系统
+
+自适应Forms编辑器提供 **调用Microsoft® Power Automate流** 提交操作以将自适应表单数据、附件和记录文档发送到Power Automate Cloud Flow。 要使用Submit操作将捕获的数据发送到Microsoft®Power Automate， [将AEM Forms实例与Microsoft®Power Automate连接](/help/forms/using/forms-microsoft-power-automate-integration.md)
+
+成功配置后，使用 [调用Microsoft® Power Automate流](/help/forms/using/forms-microsoft-power-automate-integration.md#use-the-invoke-a-microsoft&reg;-power-automate-flow-submit-action-to-send-data-to-a-power-automate-flow-use-the-invoke-microsoft-power-automate-flow-submit-action) 提交操作以将数据发送到Power Automate流。
 
 ## 自适应表单中的服务器端重新验证 {#server-side-revalidation-in-adaptive-form}
 
