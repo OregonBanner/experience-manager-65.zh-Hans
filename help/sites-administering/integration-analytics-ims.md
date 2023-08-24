@@ -2,10 +2,10 @@
 title: 使用IMS与Adobe Analytics集成
 description: 了解如何使用IMS将AEM与Adobe Analytics集成
 exl-id: 2833a6df-ef32-48ab-8395-0f26816f8443
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 06ed2329840e151083bd238ee3a4d33663463c9c
 workflow-type: tm+mt
-source-wordcount: '1057'
-ht-degree: 65%
+source-wordcount: '1085'
+ht-degree: 63%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 65%
 >
 >AEM 6.5.12.0中新增了对Adobe Analytics Standard API 2.0的支持。此版本的API支持IMS身份验证。
 >
->为了向后兼容，仍支持在AEM中使用Adobe Analytics Classic API 1.4。 此 [Analytics Classic API使用用户凭据身份验证](/help/sites-administering/adobeanalytics-connect.md).
+>为了向后兼容，仍支持在AEM中使用Adobe Analytics Classic API 1.4。 此 [Analytics Classic API使用用户凭据](/help/sites-administering/adobeanalytics-connect.md).
 >
 >API 选择由用于 AEM/Analytics 集成的身份验证方法驱动。
 >
@@ -69,6 +69,12 @@ ht-degree: 65%
 ### 创建项目 {#creating-the-project}
 
 打开 Adobe Developer Console 以使用 Adobe Analytics（将由 AEM 使用）创建项目：
+
+>[!CAUTION]
+>
+>目前，我们仅支持Adobe Developer控制台的 **服务帐户(JWT)** 凭据类型。
+>
+>请勿使用 **OAuth服务器到服务器** 凭据类型，将在未来受支持。
 
 1. 为项目打开 Adobe Developer Console：
 
@@ -146,7 +152,7 @@ ht-degree: 65%
 
 ## 在 AEM 中完成 IMS 配置 {#completing-the-ims-configuration-in-aem}
 
-通过返回到AEM，您可以通过从Analytics的集成项目添加所需的值来完成IMS配置：
+通过返回到AEM，您可以添加针对Analytics的集成项目中的所需值来完成IMS配置：
 
 1. 返回到 [AEM 中打开的 IMS 配置](#configuring-an-ims-configuration-generating-a-public-key)。
 1. 选择&#x200B;**下一步**。
@@ -190,12 +196,12 @@ ht-degree: 65%
 
 现在可为Cloud Service引用配置以使用Analytics Standard API：
 
-1. 打开 **工具** 菜单。 然后，在 **Cloud Services** 部分，选择 **旧版Cloud Services**.
+1. 打开 **工具** 菜单。 然后，在 **Cloud Service** 部分，选择 **旧版Cloud Service**.
 1. 向下滚动到 **Adobe Analytics** 并选择 **立即配置**.
 
    此 **创建配置** 此时将打开对话框。
 
-1. 输入 **标题** 如果你愿意，还有 **名称** （如果留空，将从标题中生成此字段）。
+1. 输入 **标题** 如果你愿意，还有 **名称** （如果留空，这将从标题生成）。
 
    您还可以选择所需的模板（如果有多个模板可用）。
 

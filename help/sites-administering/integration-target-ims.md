@@ -2,10 +2,10 @@
 title: 使用IMS与Adobe Target集成
 description: 了解如何使用IMS将AEM与Adobe Target集成
 exl-id: 8ddd86d5-a5a9-4907-b07b-b6552d7afdc8
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 06ed2329840e151083bd238ee3a4d33663463c9c
 workflow-type: tm+mt
-source-wordcount: '1549'
-ht-degree: 54%
+source-wordcount: '1577'
+ht-degree: 53%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 54%
 >
 >AEM 6.5中新增了对Adobe Target Standard API的支持。Target Standard API使用IMS身份验证。
 >
->为了向后兼容，仍支持在AEM中使用Adobe Target Classic API。 此 [Target Classic API使用用户凭据身份验证](/help/sites-administering/target-configuring.md#manually-integrating-with-adobe-target).
+>为了向后兼容，仍支持在AEM中使用Adobe Target Classic API。 此 [Target Classic API使用用户凭据](/help/sites-administering/target-configuring.md#manually-integrating-with-adobe-target).
 >
 >API 选择由用于 AEM/Target 集成的身份验证方法驱动。
 >另请参阅 [租户ID和客户端代码](#tenant-client) 部分。
@@ -69,6 +69,12 @@ ht-degree: 54%
 
 打开 Adobe Developer Console 以使用 Adobe Target（将由 AEM 使用）创建项目：
 
+>[!CAUTION]
+>
+>目前，我们仅支持Adobe Developer控制台的 **服务帐户(JWT)** 凭据类型。
+>
+>请勿使用 **OAuth服务器到服务器** 凭据类型，将在未来受支持。
+
 1. 为项目打开 Adobe Developer Console：
 
    [https://developer.adobe.com/console/projects](https://developer.adobe.com/console/projects)
@@ -91,7 +97,7 @@ ht-degree: 54%
    >
    >如果您已订阅Adobe Target，但它并未列出，您应查看 [先决条件](#prerequisites).
 
-   ![单击下一步](assets/integration-target-io-12.png)
+   ![单击“下一步”](assets/integration-target-io-12.png)
 
 1. **上传公钥**，完成后，选择&#x200B;**下一步**：
 
@@ -154,7 +160,7 @@ ht-degree: 54%
 
 ## 在 AEM 中完成 IMS 配置 {#completing-the-ims-configuration-in-aem}
 
-通过返回到AEM，您可以通过从Target的Adobe Developer控制台集成添加所需的值来完成IMS配置：
+通过返回到AEM，您可以添加针对Target的Adobe Developer控制台集成中所需的值来完成IMS配置：
 
 1. 返回到 [AEM 中打开的 IMS 配置](#configuring-an-ims-configuration-generating-a-public-key)。
 1. 选择&#x200B;**下一步**。
@@ -163,8 +169,8 @@ ht-degree: 54%
 
    * **标题**：您的文本。
    * **授权服务器**：复制并粘贴以下&#x200B;**有效负载**&#x200B;分区中 `aud` 行的内容，例如，以下示例中的 `https://ims-na1.adobelogin.com`
-   * **API密钥**：从以下位置复制此代码： [概述](#details-stored-for-the-ims-integration-project) 部分
-   * **客户端密码**：在中生成此ID [概述](#details-stored-for-the-ims-integration-project) 部分，并复制
+   * **API密钥**：从以下位置复制此 [概述](#details-stored-for-the-ims-integration-project) 部分
+   * **客户端密码**：在中生成此 [概述](#details-stored-for-the-ims-integration-project) 部分，并复制
    * **有效负载**：从[生成 JWT](#details-stored-for-the-ims-integration-project) 部分中复制此有效负载
 
    ![技术帐户配置](assets/integrate-target-io-10.png)
@@ -200,12 +206,12 @@ ht-degree: 54%
 
 现在可为Cloud Service引用配置以使用Target Standard API：
 
-1. 打开 **工具** 菜单。 然后，在 **Cloud Services** 部分，选择 **旧版Cloud Services**.
+1. 打开 **工具** 菜单。 然后，在 **Cloud Service** 部分，选择 **旧版Cloud Service**.
 1. 向下滚动到 **Adobe Target** 并选择 **立即配置**.
 
    此 **创建配置** 此时将打开对话框。
 
-1. 输入 **标题** 如果你愿意，还有 **名称** （如果留空，将从标题中生成此字段）。
+1. 输入 **标题** 如果你愿意，还有 **名称** （如果留空，这将从标题生成）。
 
    您还可以选择所需的模板（如果有多个模板可用）。
 
@@ -229,7 +235,7 @@ ht-degree: 54%
      >
      >然后您使用 `yourtenantid`.
 
-   * **客户端代码**：请参阅 [租户ID和客户端代码](#tenant-client) 部分。
+   * **客户代码**：请参阅 [租户ID和客户端代码](#tenant-client) 部分。
 
    * **IMS配置**：选择IMS配置的名称
 
@@ -243,25 +249,25 @@ ht-degree: 54%
 
    * **客户端库**：选择是需要AT.js客户端库，还是mbox.js（已弃用）。
 
-   * **使用Tag Management System交付客户端库**：使用DTM（已弃用）、AdobeLaunch或任何其他标签管理系统。
+   * **使用Tag Management System提供客户端库**：使用DTM（已弃用）、AdobeLaunch或任何其他标签管理系统。
 
-   * **自定义AT.js**：如果选中了Tag Management框或使用默认的AT.js，则保留为空。 或者，上传您的自定义AT.js。 仅当您选择了AT.js时才显示。
+   * **自定义AT.js**：如果选中Tag Management框或使用默认的AT.js，则保留为空。 或者，上传您的自定义AT.js。 仅当您选择了AT.js时才显示。
 
    >[!NOTE]
    >
-   >[使用Target Classic API的Cloud Service配置](/help/sites-administering/target-configuring.md#manually-integrating-with-adobe-target) 已弃用(使用“Adobe Recommendations设置”选项卡)。
+   >[配置使用Target Classic API的Cloud Service](/help/sites-administering/target-configuring.md#manually-integrating-with-adobe-target) 已弃用(使用Adobe Recommendations的“设置”选项卡)。
 
-1. 单击 **连接到目标** 初始化与Adobe Target的连接。
+1. 单击 **连接到Target** 初始化与Adobe Target的连接。
 
    如果连接成功，则将显示消息&#x200B;**连接成功**。
 
 1. 选择 **确定** 在消息上，后接 **确定** ，以确认配置。
 
-1. 您现在可以继续访问 [添加Target框架](/help/sites-administering/target-configuring.md#adding-a-target-framework) 以配置将发送到Target的ContextHub或ClientContext参数。 请注意，将AEM体验片段导出到Target可能不需要此项。
+1. 您现在可以继续访问 [添加Target框架](/help/sites-administering/target-configuring.md#adding-a-target-framework) 以配置将发送到Target的ContextHub或ClientContext参数。 请注意，将AEM体验片段导出到Target时可能不需要此项。
 
 ### 租户ID和客户端代码 {#tenant-client}
 
-替换为 [Adobe Experience Manager 6.5.8.0](/help/release-notes/release-notes.md)，则Client Code字段已添加到Target配置窗口。
+替换为 [Adobe Experience Manager 6.5.8.0](/help/release-notes/release-notes.md)，则Client Code字段已添加到Target配置窗口中。
 
 在配置“租户ID”和“客户端代码”字段时，请注意以下事项：
 
@@ -270,11 +276,11 @@ ht-degree: 54%
 
 在这两种情况下，请注意：
 
-* 默认情况下，客户端代码（如果首先添加）也将自动复制到“租户ID”字段中。
+* 默认情况下，客户端代码（如果首先添加）也将自动复制到租户ID字段中。
 * 您可以选择更改默认租户 ID 集。
 * 因此，对 Target 进行的后端调用将基于租户 ID，而对 Target 进行的客户端调用将基于客户端代码。
 
-如前所述，第一种情况在AEM 6.5中最常见。无论哪种方式，确保 **两者** 字段包含正确的信息，具体取决于您的要求。
+如前所述，对于AEM 6.5，第一种情况最常见。无论哪种方式，确保 **两者** 字段包含正确的信息，具体取决于您的要求。
 
 >[!NOTE]
 >
