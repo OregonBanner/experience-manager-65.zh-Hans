@@ -2,10 +2,10 @@
 title: 发布翻译的内容
 description: 了解如何发布翻译的内容并在该内容更新时更新翻译。
 exl-id: 32c387fe-fa1b-499b-861f-b4822f5e139e
-source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+source-git-commit: 29fb61f9fdcb72864068662d935bc01779b9e451
 workflow-type: tm+mt
-source-wordcount: '1378'
-ht-degree: 97%
+source-wordcount: '1364'
+ht-degree: 86%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 97%
 在 AEM Headless 翻译历程的上一个文档[翻译内容](configure-connector.md)中，您已了解如何使用 AEM 翻译项目来翻译 Headless 内容。您现在应：
 
 * 了解什么是翻译项目。
-* 能够创建新的翻译项目。
+* 能够创建翻译项目。
 * 使用翻译项目来翻译 Headless 内容。
 
 现在，您的初始翻译已完成，本文将引导您完成该内容的发布流程的下一步，以及如何在语言根中的基础内容发生更改时更新您的翻译。
@@ -47,7 +47,7 @@ ht-degree: 97%
 
 ## 发布翻译的内容 {#publishing}
 
-在您对翻译的内容的状态感到满意后，必须发布此内容以供 Headless 服务使用。此任务通常不是翻译专家的责任，此处记录它是为了说明完整的工作流。
+在您对翻译的内容的状态感到满意后，必须发布此内容以供 Headless 服务使用。此任务不是翻译专家的责任，此处记录它是为了说明完整的工作流。
 
 >[!NOTE]
 >
@@ -55,7 +55,7 @@ ht-degree: 97%
 >
 >为了完整起见，提供了以下步骤。
 
-发布翻译的最简单方法是导航到项目资产文件夹。
+发布翻译的最简单方法是导航到项目资源文件夹。
 
 ```text
 /content/dam/<your-project>/
@@ -63,7 +63,7 @@ ht-degree: 97%
 
 此路径下提供了每种翻译语言的子文件夹，并且您可以选择要发布的语言。
 
-1. 转到&#x200B;**导航** -> **资产** -> **文件**，然后打开项目文件夹。
+1. 转到&#x200B;**导航** -> **资源** -> **文件**，然后打开项目文件夹。
 1. 在这里，您可以看到语言根文件夹和所有其他语言文件夹。选择您希望发布的一种或多种本地化语言。
    ![选择语言文件夹](assets/select-language-folder.png)
 1. 点按或单击&#x200B;**管理发布**。
@@ -84,18 +84,18 @@ ht-degree: 97%
 
 ## 更新翻译的内容 {#updating-translations}
 
-翻译很少是一次性活动。通常，您的内容作者会在初始翻译完成后继续在语言根中添加和修改您的内容。这意味着您还需要更新翻译的内容。
+翻译很少是一次性活动。通常，您的内容作者会在初始翻译完成后继续在语言根中添加和修改您的内容。这意味着您还必须更新翻译的内容。
 
-具体的项目要求定义了翻译的更新频率，以及执行更新前需遵循的决策流程。在您决定更新翻译后，可以在 AEM 中轻松执行此流程。由于初始翻译是基于翻译项目的，因此任何更新也是如此。
+具体的项目要求定义了翻译的更新频率，以及在执行更新之前需遵循的决策流程。 在您决定更新翻译后，AEM中的流程就会变得非常简单。 由于初始翻译是基于翻译项目的，因此任何更新也是如此。
 
 但是和以前一样，如果您选择自动创建翻译项目或手动创建翻译项目，则流程会略有不同。
 
 ### 更新自动创建的翻译项目 {#updating-automatic-project}
 
-1. 导航到&#x200B;**导航** -> **资产** -> **文件**。请记住，AEM 中的 Headless 内容将存储为称作内容片段的资产。
-1. 选择项目的语言根。在此示例中，我们已选择 `/content/dam/wknd/en`。
+1. 导航到&#x200B;**导航** -> **资源** -> **文件**。请记住，AEM 中的 Headless 内容将存储为称作内容片段的资源。
+1. 选择项目的语言根。在本例中， `/content/dam/wknd/en` 已选中。
 1. 点按或单击边栏选择器，这将显示&#x200B;**引用**&#x200B;面板。
-1. 点按或单击&#x200B;**语言副本**。
+1. 点击或单击 **语言副本**.
 1. 选中&#x200B;**语言副本**&#x200B;复选框。
 1. 展开“引用”面板底部的&#x200B;**更新语言副本**&#x200B;部分。
 1. 在&#x200B;**项目**&#x200B;下拉列表中，选择&#x200B;**添加到现有翻译项目**。
@@ -118,7 +118,7 @@ You see that a new job card was added to the project. In this example, another S
 ![Additional translation job added](assets/additional-translation-job.png)
 -->
 
-您可能会发现，新信息卡上列出的统计数据（资产和内容片段数量）有所不同。这是因为 AEM 可以识别自上次翻译以来发生的变化，并且仅包含需要翻译的内容。这包括已更新内容的重新翻译以及新内容的首次翻译。
+您可能会发现，新信息卡上列出的统计数据（资源和内容片段数量）有所不同。这是因为AEM可以识别自上次翻译以来发生的更改，并且仅包含必须翻译的内容。 这包括已更新内容的重新翻译以及新内容的首次翻译。
 
 从此时起，您可以[像处理初始翻译一样启动和管理您的翻译作业。](translate-content.md#using-translation-project)
 
@@ -127,7 +127,7 @@ You see that a new job card was added to the project. In this example, another S
 要更新翻译，您可以将新作业添加到负责翻译已更新内容的现有项目中。
 
 1. 导航到&#x200B;**导航** -> **项目**。
-1. 点按或单击需要更新的项目。
+1. 点按或单击必须更新的项目。
 1. 点按或单击窗口底部的&#x200B;**添加**&#x200B;按钮。
 1. 在&#x200B;**添加拼贴**&#x200B;窗口中，点按或单击&#x200B;**翻译作业**，然后点按或单击&#x200B;**提交**。
 
@@ -141,8 +141,8 @@ You see that a new job card was added to the project. In this example, another S
 
    ![选择目标语言](assets/select-target-language.png)
 
-1. 设置新翻译作业的目标语言后，点按或单击作业信息卡底部的省略号按钮查看作业的详细信息。
-1. 作业在首次创建时为空。通过点按或单击&#x200B;**添加**&#x200B;按钮并使用路径浏览器将内容添加到作业，[就像您最初创建翻译项目时所做的那样。](translate-content.md##manually-creating)
+1. 设置新翻译作业的目标语言后，点按或单击作业信息卡底部的省略号按钮以查看作业的详细信息。
+1. 作业在首次创建时为空。通过点按或单击&#x200B;**添加**&#x200B;按钮并使用路径浏览器将内容添加到作业，[就像您最初创建翻译项目时所做的那样。](translate-content.md#manually-creating)
 
 >[!TIP]
 >
@@ -168,4 +168,4 @@ You see that a new job card was added to the project. In this example, another S
 * [管理翻译项目](/help/sites-administering/tc-manage.md) – 了解翻译项目的详细信息以及人工翻译工作流和多语言项目等附加功能。
 * [创作概念](/help/sites-authoring/author.md) – 更详细地了解 AEM 的创作和发布模型。 虽然本文档侧重于创作页面而非内容片段，但该理论仍然适用。
 * [发布页面](/help/sites-authoring/publishing-pages.md) – 了解发布内容时可用的附加功能。虽然本文档侧重于创作页面而非内容片段，但该理论仍然适用。
-* [创作环境和工具](/help/sites-authoring/author-environment-tools.md##path-selection) – AEM 提供各种机制来组织和编辑您的内容，包括强大的路径浏览器。
+* [创作环境和工具](/help/sites-authoring/author-environment-tools.md#path-selection) – AEM 提供各种机制来组织和编辑您的内容，包括强大的路径浏览器。
