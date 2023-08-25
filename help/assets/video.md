@@ -10,7 +10,7 @@ docset: aem65
 feature: Asset Management
 role: User, Admin
 exl-id: 28cf9e39-cab4-4278-b6c9-e84cc31964db
-source-git-commit: 6ef87e4f86181f83b7c340e4954e9e85e6bb9ab1
+source-git-commit: 29fb61f9fdcb72864068662d935bc01779b9e451
 workflow-type: tm+mt
 source-wordcount: '11269'
 ht-degree: 2%
@@ -449,7 +449,7 @@ DASH(Digital Adaptive Streaming over HTTP)是视频流的国际标准，被广�
 
 >[!IMPORTANT]
 >
->您上传的任何视频 *优先* 要在您的Dynamic Media帐户中启用多字幕和多音频轨道支持，请执行以下操作 [必须重新处理](/help/assets/processing-profiles.md##reprocessing-assets). 此视频重新处理步骤是必需的，这样他们就可以使用多字幕和多音频跟踪功能。 重新处理之后，视频URL可继续像往常一样正常工作和播放。
+>您上传的任何视频 *优先* 要在您的Dynamic Media帐户中启用多字幕和多音频轨道支持，请执行以下操作 [必须重新处理](/help/assets/processing-profiles.md#reprocessing-assets). 此视频重新处理步骤是必需的，这样他们就可以使用多字幕和多音频跟踪功能。 重新处理之后，视频URL可继续像往常一样正常工作和播放。
 
 **要在您的Dynamic Media帐户中启用DASH、多字幕和多音频轨道支持，请执行以下操作：**
 
@@ -625,7 +625,7 @@ WebVTT和AdobeVTT格式支持添加字幕和字幕。 此外，添加的MP3格�
 
 >[!IMPORTANT]
 >
->您上传的任何视频 *优先* 要在您的Dynamic Media帐户中启用多字幕和多音频轨道支持，请执行以下操作 [必须重新处理](/help/assets/processing-profiles.md##reprocessing-assets). 此视频重新处理步骤是必需的，这样他们就可以使用多字幕和多音频跟踪功能。 重新处理之后，视频URL可继续像往常一样正常工作和播放。
+>您上传的任何视频 *优先* 要在您的Dynamic Media帐户中启用多字幕和多音频轨道支持，请执行以下操作 [必须重新处理](/help/assets/processing-profiles.md#reprocessing-assets). 此视频重新处理步骤是必需的，这样他们就可以使用多字幕和多音频跟踪功能。 重新处理之后，视频URL可继续像往常一样正常工作和播放。
 
 **要将多字幕和多音频曲目添加到视频，请执行以下操作：**
 
@@ -693,7 +693,7 @@ WebVTT和AdobeVTT格式支持添加字幕和字幕。 此外，添加的MP3格�
 
 >[!CAUTION]
 >
->当您将字幕文件或音频文件上传到已发布的视频时，如果您 [*重新处理*](/help/assets/processing-profiles.md##reprocessing-assets) 视频。 只有视频的原始音频保持不变。 在这种情况下，必须再次将字幕文件和音轨文件重新上传到视频。
+>当您将字幕文件或音频文件上传到已发布的视频时，如果您 [*重新处理*](/help/assets/processing-profiles.md#reprocessing-assets) 视频。 只有视频的原始音频保持不变。 在这种情况下，必须再次将字幕文件和音轨文件重新上传到视频。
 
 #### 向具有带标题修饰符的现有URL的视频添加多个标题
 
