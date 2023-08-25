@@ -10,16 +10,16 @@ discoiquuid: 99d7025f-d022-4213-83c0-815a4712c573
 role: User, Admin
 exl-id: 750627fc-2a29-43ff-867e-55cb2e371043
 feature: Publishing
-source-git-commit: 7f8cfe155af3b8831e746ced89c11c971e429f69
+source-git-commit: 4005e09349d22dbb70a7af378bed2a991ea7218d
 workflow-type: tm+mt
-source-wordcount: '474'
+source-wordcount: '475'
 ht-degree: 4%
 
 ---
 
 # 发布 Dynamic Media 资源 {#publishing-dynamic-media-assets}
 
-您可以通过选择已上传的资源并点按来发布Dynamic Media资源 **[!UICONTROL Publish]** 或 **[!UICONTROL 快速发布]**. 发布Dynamic Media资源后，您可以通过URL或通过将代码嵌入到网页中来包含这些资源。
+您可以通过选择已上传的资源并点按来发布Dynamic Media资源 **[!UICONTROL Publish]** 或 **[!UICONTROL 快速发布]**. 发布Dynamic Media资源后，您可以通过URL或在网页上嵌入代码的方式将其包含在网页中。
 
 您还可以即时发布您上传的资产，无需任何用户干预。 请参阅 [配置Dynamic Media - Scene7模式](config-dms7.md).
 或者，您可以选择将资源发布到Dynamic Media或Adobe Experience Manager，二者相互排斥，使用 **[!UICONTROL 选择性发布]** 在文件夹级别。 请参阅 [使用Dynamic Media中的“选择性发布”功能](/help/assets/selective-publishing.md).
