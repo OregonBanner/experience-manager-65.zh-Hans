@@ -2,9 +2,9 @@
 title: 的发行说明 [!DNL Adobe Experience Manager] 6.5
 description: 查找版本信息、新增功能、安装操作说明以及的详细更改列表 [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 4
-source-git-commit: 8edc6a97e2fc002d6dbbc4ce8b1828616b6c1cc6
+source-git-commit: 2209ab8498072744091f5af22887c8f13dbb3ac6
 workflow-type: tm+mt
-source-wordcount: '3440'
+source-wordcount: '3464'
 ht-degree: 2%
 
 ---
@@ -54,6 +54,10 @@ ht-degree: 2%
 * 为了在“列表”视图中快速找到系统中可能具有多个项目的项目，Adobe现在支持服务器端排序。 项目节点在用户界面中呈现之前，会根据用户选择的列在后端进行排序。 (NPR-41027)
 
 * AEM 6.5.18.0支持MongoDB 5.0到6.0。
+
+**已弃用功能**
+
+* 已弃用AEM中的ActiveMQ。 ActiveMQ用于两个AEM Publish实例之间的通信。 Adobe建议客户现在使用负载平衡器。
 
 **Forms**
 
