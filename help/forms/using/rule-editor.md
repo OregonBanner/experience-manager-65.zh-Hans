@@ -1,5 +1,5 @@
 ---
-title: 自适应表单规则编辑者
+title: 自适应表单规则编辑器
 seo-title: Adaptive forms rule editor
 description: 自适应表单规则编辑器允许您添加动态行为并将复杂逻辑构建到表单中，而无需编码或脚本。
 seo-description: Adaptive forms rule editor lets you add dynamic behavior and build complex logic into forms without coding or scripting.
@@ -10,9 +10,9 @@ discoiquuid: 1b905e66-dc05-4f14-8025-62a78feef12a
 docset: aem65
 feature: Adaptive Forms
 exl-id: c611a1f8-9d94-47f3-bed3-59eef722bf98
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 0985e591df83c7f1604bac37af771e8a7a21e691
 workflow-type: tm+mt
-source-wordcount: '6929'
+source-wordcount: '6983'
 ht-degree: 1%
 
 ---
@@ -42,7 +42,7 @@ Adobe Experience Manager Forms中的规则编辑器功能使表单业务用户�
 
 规则编辑器取代了AEM 6.1 Forms及更早版本中的脚本编写功能。 但是，现有脚本将保留在新规则编辑器中。 有关在规则编辑器中使用现有脚本的更多信息，请参阅 [规则编辑器对现有脚本的影响](#impact-of-rule-editor-on-existing-scripts).
 
-添加到forms-power-users组的用户可以创建新脚本并编辑现有脚本。 forms-users组中的用户可以使用脚本，但不能创建或编辑脚本。
+添加到 forms-使用者群组的用户可以创建新的脚本并编辑现有文种。 表单中的用户群组可以使用脚本，但不能创建或编辑脚本。
 
 ## 了解规则 {#understanding-a-rule}
 
@@ -52,7 +52,7 @@ Adobe Experience Manager Forms中的规则编辑器功能使表单业务用户�
 
 规则通常遵循以下结构之一：
 
-**条件 — 操作** 在此构造中，规则首先定义条件，然后定义要触发的操作。 这种构造与编程语言中的if-then语句类似。
+**条件 — 操作** 在此构造中，规则首先定义条件，然后定义要触发的操作。 构造与编程语言中的 then 语句相同。
 
 在规则编辑器中， **时间** 规则类型强制使用condition-action结构。
 
@@ -81,12 +81,12 @@ Adobe Experience Manager Forms中的规则编辑器功能使表单业务用户�
 * 要根据多个条件触发操作，建议使用action-condition构造。 例如，要通过评估字段B、C和D的条件来显示和隐藏字段A，请在字段A中使用显示或隐藏规则类型。
 * 如果规则包含一个条件的一个操作，则使用condition-action或action condition结构。
 * 如果规则检查条件，并在字段中提供值或退出字段时立即执行操作，则建议在评估条件的字段中编写具有condition-action结构或When规则类型的规则。
-* 当用户更改应用When规则的对象的值时，将评估When规则中的条件。 但是，如果您希望在服务器端的值发生更改时触发操作，请点赞预设值时，建议在初始化字段时，编写一个规则触发操作的时间。
-* 在为下拉式、单选按钮或复选框对象编写规则时，表单中这些表单对象的选项或值会在规则编辑者中预先填充。
+* 当用户更改应用When规则的对象的值时，将评估When规则中的条件。 但是，如果您希望操作在服务器端更改时触发，例如在预填充值的情况下，则建议编写一个When规则以在字段初始化时触发操作。
+* 在编写下拉列表、单选按钮或复选框对象的规则时，表单中这些表单对象的选项或值会在规则编辑器中预填充。
 
-## 规则编辑者中可用的运算符类型和事件 {#available-operator-types-and-events-in-rule-editor}
+## 规则编辑器中的可用运算符类型和事件 {#available-operator-types-and-events-in-rule-editor}
 
-规则编辑者提供了可用于创建规则的逻辑运算符和事件。
+规则编辑器提供了以下逻辑运算符和事件，您可以使用这些运算符和事件创建规则。
 
 * **等于**
 * **不等于**
@@ -117,13 +117,15 @@ Adobe Experience Manager Forms中的规则编辑器功能使表单业务用户�
 
 `Then, do the following:`
 
-对对象B执行行动2；对对象C执行行动3；
+对象 B 上的操作 2;
+和
+对象 C 上的操作 3;
 
 _
 
-当具有多值组件（如单选按钮或列表）时，在为该组件创建规则时，会自动检索选项并使这些选项可用于规则创建者。 您无需再次键入选项值。
+如果您有多值组件（如单选按钮或列表），则在创建该组件的规则时，会自动检索选项，并将其提供给规则创建者使用。 您无需再次键入选项值。
 
-例如，列表包含四个选项：红色、蓝色、绿色和黄色。 创建规则时，将自动检索选项（单选按钮）并使规则创建者可以使用此选项，如下所示：
+例如，列表有四个选项：红色、蓝色、绿色和黄色。 创建规则时，会自动检索选项（单选按钮），并将其提供给规则创建者，如下所示：
 
 ![multivaluefcdisplaysoptions](assets/multivaluefcdisplaysoptions.png)
 
@@ -149,7 +151,19 @@ _
 
 有关在表单数据模型中配置服务的更多信息，请参阅 [AEM Forms数据集成](/help/forms/using/data-integration.md).
 
-此 **设置属性** 规则类型允许您根据条件操作设置指定对象的属性值。
+此 **[!UICONTROL 设置属性]** 规则类型允许您根据条件操作设置指定对象的属性值。 您可以将属性设置为以下项之一：
+* 可见（布尔值）
+* dorExclusion（布尔型）
+* chartType（字符串）
+* title（字符串）
+* 已启用（布尔值）
+* 必填（布尔值）
+* validationsDisabled（布尔型）
+* validateExpMessage（字符串）
+* 值（数字、字符串、日期）
+* 项（列表）
+* 有效（布尔值）
+* errorMessage（字符串）
 
 它可让您定义规则以动态地将复选框添加到自适应表单。 您可以使用自定义函数、表单对象或对象属性来定义规则。
 
@@ -179,13 +193,13 @@ _
 
 **添加实例** 添加指定可重复面板或表行的实例。
 
-**移除实例** 删除指定可重复面板或表格行的实例。
+**删除实例** 删除指定可重复面板或表行的实例。
 
-****&#x200B;导航至导航至其他交互式通信、自适应表单、其他 Assets，例如图像或文档片段或外部 URL。有关详细信息，请参阅 [ 添加按钮到交互式通信 ](../../forms/using/create-interactive-communication.md#addbuttontothewebchannel) 。
+**导航到** 导航到其他交互式通信、自适应表单、其他资产（如图像或文档片段）或外部URL。 有关更多信息，请参阅 [向交互式通信添加按钮](../../forms/using/create-interactive-communication.md#addbuttontothewebchannel).
 
 ### 设置值 {#set-value-of}
 
-**[!UICONTROL 通过设置规则类型值]** ，您可以根据是否满足指定的条件来设置表单对象的值。该值可以设置为其他对象的值、文本字符串、从数学表达式或函数派生的值、其他对象的属性值或表单数据模型服务的输出。 同样，您可以检查组件、字符串、属性或从函数或数学表达式派生的值的条件。
+此 **[!UICONTROL 设置值]** 规则类型允许您根据是否满足指定的条件来设置表单对象的值。 该值可以设置为另一个对象的值、文本字符串、从数学表达式或函数派生的值、另一个对象的属性的值或表单数据模型服务的输出。 同样，您可以检查组件、字符串、属性或从函数或数学表达式派生的值的条件。
 
 请注意，“设置值”规则类型并非适用于所有表单对象，例如面板和工具栏按钮。 标准的“设置值”规则具有以下结构：
 
@@ -201,15 +215,15 @@ _
 
 
 
-以下示例将值引入到 `dependentid` 字段作为输入，并设置 `Relation` 字段到输出 `Relation` 的参数 `getDependent` 表单数据模型服务。
+以下示例将字段中 `dependentid` 的值作为输入，并将字段的值 `Relation` 设置为表单数据模型服务的参数 `getDependent` 输出 `Relation` 。
 
-![set-value-web-service](assets/set-value-web-service.png)
+![设置-值-web 服务](assets/set-value-web-service.png)
 
-使用表单数据模型服务的设置值规则示例
+使用表单数据模型服务设置值规则的示例
 
 >[!NOTE]
 >
->此外，您可以使用规则的“设置值”从表单数据模型服务或Web服务的输出填充下拉列表组件中的所有值。 但是，请确保您选择的输出参数为数组类型。 数组中返回的所有值在指定的下拉列表中变为可用。
+>此外，您还可以使用 Set 值规则从表单数据模型服务或 web 服务的输出中填充下拉列表组件中的所有值。 但是，请确保您选择的输出参数是数组类型。 数组中返回的所有值在指定的下拉列表中变为可用。
 
 ### 显示 {#show}
 
@@ -345,21 +359,21 @@ _
 
 让我们详细了解一下规则编辑器UI的每个组件。
 
-### 答组件规则显示 {#a-component-rule-display}
+### A.组件规则显示 {#a-component-rule-display}
 
-显示用于启动规则编辑者和当前所选规则类型的自适应表单对象的标题。 在以上示例中，规则编辑者从标题为 &quot;薪水&quot; 的自适应表单对象启动，&quot;所选的规则类型&quot; 为 &quot;时间&quot;。
+显示自适应表单对象的标题（通过自适应表单对象启动规则编辑器）和当前选定的规则类型。 在上述示例中，规则编辑器从名为Salary的自适应表单对象启动，并且选定的规则类型是When。
 
-### B. 表单对象和函数 {#b-form-objects-and-functions-br}
+### B.表单对象和功能 {#b-form-objects-and-functions-br}
 
-规则编辑者用户界面左侧的窗格包含两个选项卡- **[!UICONTROL Forms 对象]** 和 **[!UICONTROL 函数]** 。
+规则编辑器用户界面左侧的窗格包含两个选项卡： **[!UICONTROL Forms对象]** 和 **[!UICONTROL 函数]**.
 
 “表单对象”选项卡显示自适应表单中包含的所有对象的分层视图。 它显示对象的标题和类型。 在编写规则时，可以将表单对象拖放到规则编辑器中。 在将对象或函数拖放到占位符中时，在创建或编辑规则时，占位符会自动采用相应的值类型。
 
 应用了一个或多个有效规则的表单对象将标有绿点。 如果应用于表单对象的任意规则无效，则表单对象将标有黄点。
 
-“函数”选项卡包含一组内置函数，例如“总和”、“最小值”、“最大值”、“平均值”、“数目”和“验证表单”。 您可以使用这些函数计算可重复的面板和表格行中的值，并在编写规则时在操作和条件语句中使用它们。 但是，您可以创建 [自定义函数](#custom-functions) 也是。
+“函数”选项卡包含一组内置函数，例如“总和”、“最小值”、“最大值”、“平均值”、“数目”和“验证表单”。 您可以使用这些函数计算可重复面板和表格行中的值，并在编写规则时在操作和条件语句中使用它们。 但是，您可以创建 [自定义函数](#custom-functions) 也是。
 
-![函数选项卡](assets/functions.png)
+![“函数”选项卡](assets/functions.png)
 
 >[!NOTE]
 >
@@ -430,13 +444,13 @@ AEM Forms会跟踪您上次用于编写规则的规则编辑器模式。 当您�
 
    在“婚姻状况”单选按钮中， **已婚** 和 **单身** 已分配选项 **0** 和 **1** 个值。 您可以在“编辑”单选按钮对话框的“标题”选项卡中验证分配的值，如下所示。
 
-   ![从规则编辑者无线电按钮值](assets/radio-button-values.png)
+   ![规则编辑器中的单选按钮值](assets/radio-button-values.png)
 
-1. 在规则的 &quot; **输入字符串** &quot; 字段中，指定 **0** 。
+1. 在 **输入字符串** 字段中，指定 **0**.
 
-   ![写入规则-可视化-编辑者-4](assets/write-rules-visual-editor-4.png)
+   ![write-rules-visual-editor-4](assets/write-rules-visual-editor-4.png)
 
-   您已将条件定义为 `When Marital Status is equal to Married` 。 下一个，定义条件为 True 时要执行的操作。
+   您已定义条件 `When Marital Status is equal to Married`. 接下来，定义此条件为True时要执行的操作。
 
 1. 在Then语句中，选择 **[!UICONTROL 显示]** 从 **[!UICONTROL 选择操作]** 下拉菜单。
 
@@ -812,6 +826,10 @@ var c = {
 ![example-invoke-services](assets/example-invoke-services.png)
 
 使用自适应表单规则调用表单数据模型服务
+
+>[!NOTE]
+>
+>如果输入的类型为数组，则支持数组的字段在“输出”下拉部分下可见。
 
 ### 使用When规则触发多个操作 {#triggering-multiple-actions-using-the-when-rule}
 

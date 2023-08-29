@@ -9,9 +9,9 @@ breadcrumb-title: Forms 指南
 user-guide-description: 创建、管理、发布和更新数字表单。
 role: User
 feature: Forms Service
-source-git-commit: e19a7e617bdabb678bd804cab3fea228ce19acfa
+source-git-commit: 28cc10b79d2ac8cf12ddfd0bf7d1a8e013fe6238
 workflow-type: tm+mt
-source-wordcount: '3897'
+source-wordcount: '3912'
 ht-degree: 4%
 
 ---
@@ -136,6 +136,7 @@ ht-degree: 4%
    + [为您的环境启用核心组件](/help/forms/using/enable-adaptive-forms-core-components.md)
    + [创建基于核心组件的自适应表单](/help/forms/using/create-an-adaptive-form-core-components.md)
    + [为基于核心组件的自适应Forms创建主题](/help/forms/using/create-or-customize-themes-for-adaptive-forms-core-components.md)
+   + [为基于核心组件的自适应Forms创建和使用自定义错误处理程序](/help/forms/using/add-custom-error-handler-adaptive-forms-core-components.md)
 + 自适应Forms — 基本创作 {#adaptive-forms-basic-authoring}
    + [使用自适应表单的最佳实践](using/adaptive-forms-best-practices.md)
    + [创建自适应表单](using/creating-adaptive-form.md)
@@ -188,7 +189,7 @@ ht-degree: 4%
    + [将Adobe Sign与AEM Forms集成](using/adobe-sign-integration-adaptive-forms.md)
    + [在表单中创建和管理资产审核](using/create-reviews-forms.md)
    + [在AEM Sites单页应用程序中嵌入自适应表单或交互式通信](/help/forms/using/embed-adaptive-form-aem-sites-spa.md)
-   + [自适应Forms的标准验证错误消息](/help/forms/using/standard-validation-error-messages-adaptive-forms.md)
+   + [创建并使用自适应Forms的自定义错误处理程序](/help/forms/using/standard-validation-error-messages-adaptive-forms.md)
 + 交互式通信 {#interactive-communications}
    + [交互式通信创作UI简介](using/introduction-interactive-communication-authoring.md)
    + [创建交互式通信](using/create-interactive-communication.md)
