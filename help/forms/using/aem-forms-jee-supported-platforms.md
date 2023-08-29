@@ -7,9 +7,9 @@ geptopics: SG_AEMFORMS/categories/jee
 docset: aem65
 role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
-source-git-commit: 25d7f93137e2410ecafc22dc4899e0ce5f654083
+source-git-commit: 018ffe71d0186e1eb07e5f59e3d6a48ed316de47
 workflow-type: tm+mt
-source-wordcount: '3639'
+source-wordcount: '3660'
 ht-degree: 1%
 
 ---
@@ -759,6 +759,8 @@ Adobe保留在任意给定时刻更改AEM Forms on JEE版本支持的第三方�
       - Microsoft® SQL Server JDBC驱动程序6.2.1.0
       - Microsoft® SQL Server JDBC驱动程序6.2.2.0
       - 适用于SQL Server的Microsoft® JDBC驱动程序8.x
+
+   - **PDF Generator服务的平台更新**： [!DNL Adobe Experience Manager Forms] on JEE移除了对以下PDF Generator平台和一般平台的支持：
       - Microsoft® Sharepoint 2016
       - Microsoft® Office 2016
       - Microsoft® Office Visio 2016
