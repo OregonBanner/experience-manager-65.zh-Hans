@@ -10,9 +10,9 @@ docset: aem65
 feature: Asset Management
 role: User, Admin
 exl-id: 28cf9e39-cab4-4278-b6c9-e84cc31964db
-source-git-commit: 29fb61f9fdcb72864068662d935bc01779b9e451
+source-git-commit: 051e6838bea0be9f826183db935d33725c18386d
 workflow-type: tm+mt
-source-wordcount: '11269'
+source-wordcount: '11313'
 ht-degree: 2%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 2%
 >
 >* 请参阅 [配置Dynamic MediaCloud Service](/help/assets/config-dynamic.md#configuring-dynamic-media-cloud-services) (在配置Dynamic Media — 混合模式下)。
 >
->Dynamic Media中当前已知的视频播放问题 *仅在Experience Manager6.5.9.0上*：
+>Dynamic Media中当前存在的已知视频播放问题 *仅在Experience Manager6.5.9.0上*：
 >
 >* 如果发布的视频已更新，则必须再次发布该视频以反映投放时的更改。
 >
@@ -145,7 +145,7 @@ Dynamic Media中的视频是一种端到端解决方案，能够轻松发布高�
 
 * 所有HTML5视频查看器中的视频字幕。
 * 使用完整的元数据支持来组织、浏览和搜索视频，从而高效管理视频资产。
-* 将自适应视频集交付到Web和桌面以及移动设备，包括iPhone、iPad、Android™、BlackBerry®和Windows phone。
+* 将自适应视频集交付到Web以及桌面和移动设备，包括iPhone、iPad、Android™、BlackBerry®和Windows Phone。
 
 各种iOS平台支持自适应视频流。 请参阅 [Dynamic Media查看器参考指南](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/c-html5-video-reference.html#video).
 
@@ -449,7 +449,7 @@ DASH(Digital Adaptive Streaming over HTTP)是视频流的国际标准，被广�
 
 >[!IMPORTANT]
 >
->您上传的任何视频 *优先* 要在您的Dynamic Media帐户中启用多字幕和多音频轨道支持，请执行以下操作 [必须重新处理](/help/assets/processing-profiles.md#reprocessing-assets). 此视频重新处理步骤是必需的，这样他们就可以使用多字幕和多音频跟踪功能。 重新处理之后，视频URL可继续像往常一样正常工作和播放。
+>您上传的任何视频 *早于* 在您的Dynamic Media帐户中启用多字幕和多音频轨道支持， [必须重新处理](/help/assets/processing-profiles.md#reprocessing-assets). 此视频重新处理步骤是必需的，这样他们就可以使用多字幕和多音频跟踪功能。 重新处理之后，视频URL可继续像往常一样正常工作和播放。
 
 **要在您的Dynamic Media帐户中启用DASH、多字幕和多音频轨道支持，请执行以下操作：**
 
@@ -625,7 +625,7 @@ WebVTT和AdobeVTT格式支持添加字幕和字幕。 此外，添加的MP3格�
 
 >[!IMPORTANT]
 >
->您上传的任何视频 *优先* 要在您的Dynamic Media帐户中启用多字幕和多音频轨道支持，请执行以下操作 [必须重新处理](/help/assets/processing-profiles.md#reprocessing-assets). 此视频重新处理步骤是必需的，这样他们就可以使用多字幕和多音频跟踪功能。 重新处理之后，视频URL可继续像往常一样正常工作和播放。
+>您上传的任何视频 *早于* 在您的Dynamic Media帐户中启用多字幕和多音频轨道支持， [必须重新处理](/help/assets/processing-profiles.md#reprocessing-assets). 此视频重新处理步骤是必需的，这样他们就可以使用多字幕和多音频跟踪功能。 重新处理之后，视频URL可继续像往常一样正常工作和播放。
 
 **要将多字幕和多音频曲目添加到视频，请执行以下操作：**
 
@@ -637,9 +637,14 @@ WebVTT和AdobeVTT格式支持添加字幕和字幕。 此外，添加的MP3格�
 1. 在视频的“属性”页面上，选择 **[!UICONTROL 字幕和音轨]** 选项卡。
 
    >[!TIP]
-   >如果您没有看到 **[!UICONTROL 字幕和音轨]** 选项卡，这意味着没有为选定视频所在的文件夹分配视频配置文件。 [将视频配置文件应用到文件夹](/help/assets/video-profiles.md#applying-video-profiles-to-specific-folders)，然后返回这些步骤。
+   >如果您没有看到 **[!UICONTROL 字幕和音轨]** 选项卡，它表示以下两种情况之一：
+   >
+   >* 所选视频所在的文件夹没有分配视频配置文件。 在这种情况下，请参阅 [将视频配置文件应用到文件夹](/help/assets/video-profiles.md#applying-video-profiles-to-specific-folders).
+   >* 或者，视频必须由Dynamic Media重新处理。 在这种情况下，请参阅 [重新处理文件夹中的资产](/help/assets/processing-profiles.md#reprocessing-assets).
+   >
+   >完成以上任一任务后，请返回这些步骤。
 
-   ![“属性”页面上的“字幕和音轨”选项卡。](assets-dm/msma-audiotracks.png)*视频属性页面上的“字幕和音轨”选项卡。 请注意，没有与视频关联的原始音轨，如空的音轨列表框所示。 视频处理完成后，会出现跟踪。*
+   ![“属性”页面上的“字幕和音轨”选项卡。](assets-dm/msma-audiotracks.png)*视频属性页面上的“字幕和音轨”选项卡。*
 
 1. （可选）要将一个或多个字幕（或标题）文件添加到视频，请执行以下操作：
    * 选择 **[!UICONTROL 上传字幕]**.
@@ -697,11 +702,7 @@ WebVTT和AdobeVTT格式支持添加字幕和字幕。 此外，添加的MP3格�
 
 #### 向具有带标题修饰符的现有URL的视频添加多个标题
 
-Dynamic Media支持通过URL修饰符在视频中添加单个标题(请参阅 [题注](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/command-reference-url-video/r-html5-video-viewer-url-caption.html?lang=en))。
-
-<!-- IS THE CORRECT LINK THE ONE ABOVE OR IS IT THE LINK BELOW???? -->
-
-请参阅 [提供静态（非图像）内容](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/c-serving-static-nonimage-contents.html#image-serving-api) 在 *Dynamic Media图像服务和渲染API帮助* 有关在URL中使用JSON函数的更多信息。
+Dynamic Media支持通过URL修饰符添加带有视频的单个字幕。 请参阅 [向视频添加字幕](#adding-captions-to-video).
 
 对已发布的视频所做的多个字幕更改优先于通过URL修饰符添加的字幕。
 
@@ -725,11 +726,11 @@ Dynamic Media支持通过URL修饰符在视频中添加单个标题(请参阅 [�
 
 | 字幕或音轨状态 | 描述 |
 | --- | --- |
-| 正在处理 | 正在处理。 |
-| 已处理 | 处理已完成。 |
-| 发布时间 | 已发布到 Dynamic Media. |
-| 失败 | 处理未完成。 请删除文件，然后重新尝试上传。 |
-| 已取消发布 | 正在处理，但尚未发布到Dynamic Media。 |
+| 正在处理 | 添加并保存新的字幕或音轨文件时，它进入“正在处理”状态。 Dynamic Media通过将流清单附加到主视频来处理该文件。 |
+| 已处理 | 处理完成后，字幕或音轨文件，或与主视频相关的原始音轨将显示为“已处理”状态。 您可以预览显示为“已处理”的字幕和音轨文件 *早于* 您实时发布视频。 |
+| 发布时间 | “已发布”状态表示与主视频的“已发布”状态类似。 发布主视频后，将发布资源，这些资源可在公共Dynamic Media URL上使用。 |
+| 失败 | “失败”状态表示子标题或音频轨道文件的处理未完成。 请删除字幕或音轨文件，然后重新上传。 |
+| 已取消发布 | 明确取消发布已发布的主视频时，您添加到该视频的任何字幕或音频轨道文件也会被取消发布。 |
 
 ![为字幕和音轨字段突出显示的状态列。](assets-dm/msma-lifecycle-status.png)*每个上传的字幕和音轨文件的生命周期状态。*
 
@@ -763,7 +764,7 @@ Dynamic Media支持通过URL修饰符在视频中添加单个标题(请参阅 [�
 
 ### 预览具有多个字幕和音轨的视频{#preview-video-audio-subtitle}
 
-将字幕文件和音轨文件上传到视频并进行处理后，您可以使用Dynamic Media视频查看器预览所有不同的音轨。 这样做有助于您了解视频在客户心目中的外观和声音，并确保视频按预期运行。
+将字幕文件和音轨文件上传到视频并进行处理后，您可以使用Dynamic Media视频查看器（或其他查看器类型，如果需要）预览所有音轨。 预览可帮助您了解视频在客户看来是什么样子，并确保视频按预期运行。
 
 如果对视频满意，您可以 [发布它](publishing-dynamicmedia-assets.md) 使用以下任一方法。
 
@@ -783,15 +784,15 @@ Dynamic Media支持通过URL修饰符在视频中添加单个标题(请参阅 [�
 
    ![下拉列表显示查看器选项。](assets-dm/msma-selectviewers.png)
 
-1. 从查看器列表中，选择 **[!UICONTROL 视频]**.
+1. 从查看器列表中，选择要用于视频预览的查看器。 例如，以下屏幕截图显示了 **[!UICONTROL 视频]** 正在选择的查看器。
 
    ![从“查看器”下拉列表中选择视频查看器。](assets-dm/msma-dmviewerselected.png)
 
-1. 在右下角附近，在音量图标的左侧，选择语音泡图标，然后选择要收听的音频或字幕，或者同时选择两者。 如果需要，可在“字幕”下选择 **[!UICONTROL 关闭]** 不显示任何字幕或字幕。
+1. 在右下角附近，在音量图标的左侧，选择语音泡图标，然后选择要收听的音频或字幕，或者选择收听的音频或字幕，或者选择两者。 如果需要，可在“字幕”下选择 **[!UICONTROL 关闭]** 不显示任何字幕或字幕。
 
    ![视频查看器中的“音频”和“字幕”弹出列表。](assets-dm/msma-selectaudiosubtitle.png)*模拟用户为视频播放选择音频和字幕。*
 
-1. 选择视频的 **[!UICONTROL 播放]** 按钮开始播放。
+1. 要开始播放，请选择视频的 **[!UICONTROL 播放]** 按钮。
 请注意 **[!UICONTROL URL]** 和 **[!UICONTROL 嵌入]** 按钮。 使用这些按钮可以 [将视频的URL链接到您的Web应用程序](/help/assets/linking-urls-to-yourwebapplication.md) 或 [在网页上嵌入视频](/help/assets/embed-code.md)、ID名称和ID名称等。
 1. 在预览页面的右上角附近，选择 **[!UICONTROL 关闭]**.
 
@@ -852,7 +853,7 @@ Dynamic Media支持通过URL修饰符在视频中添加单个标题(请参阅 [�
 
 >[!IMPORTANT]
 >
-不再积极维护此主题。 它按原样提供给Dynamic Media的旧版用户。 Adobe建议您 [启用多字幕和多音频跟踪功能](#enable-dash) 在您的Dynamic Media帐户上。 这样，您就可以利用最新的Dynamic Media后端架构和简化的工作流程，为您的视频添加字幕、字幕和音轨。
+Adobe建议您 [启用多字幕和多音频跟踪功能](#enable-dash) 在您的Dynamic Media帐户上。 这样，您就可以利用最新的Dynamic Media后端架构和简化的工作流程，为您的视频添加字幕、字幕和音轨。
 
 通过将隐藏式字幕添加到单个视频或自适应视频集，您可以将视频扩展到全球市场。 通过添加隐藏式字幕，您无需对音频进行配音，也无需使用母语人士重新录制每种语言的音频。 视频以所录制的语言播放。 出现外语字幕是为了让不同语言的人仍然能够理解音频部分。
 
@@ -914,10 +915,6 @@ Dynamic Media将字幕文件转换为JSON（JavaScript对象表示法）格式�
      请注意 `,1` 标题路径末尾。 紧跟在 `.vtt` 文件扩展名在路径中，您可以选择启用（打开）或禁用（关闭）视频播放器栏上的隐藏式字幕按钮，方法是将设置为 `,1` 或 `,0`、ID名称和ID名称等。
 
 ## 向视频添加章节标记 {#adding-chapter-markers-to-video}
-
->[!IMPORTANT]
->
-不再积极维护此主题。 它按原样提供给Dynamic Media的旧版用户。 Adobe建议您 [启用多字幕和多音频跟踪功能](#enable-dash) 在您的Dynamic Media帐户上。 这样，您就可以利用最新的Dynamic Media后端架构和简化的工作流程，为您的视频添加字幕、字幕和音轨。
 
 您可以通过将章节标记添加到单个视频或自适应视频集，使长格式视频更易于观看和导航。 当用户播放视频时，可以单击视频时间轴上的章节标记（也称为视频洗刷）以轻松导航到其目标点。 或者，他们可以立即跳转到新内容、演示和教程。
 
