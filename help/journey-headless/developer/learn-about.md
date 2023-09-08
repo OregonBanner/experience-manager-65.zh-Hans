@@ -2,9 +2,9 @@
 title: 了解 CMS Headless 开发
 description: 在 AEM Headless 开发人员历程的这一部分中，了解 Headless 技术以及使用它的原因。
 exl-id: f0989cea-3102-43cd-976e-9a6b265d9c15
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 9c517590c2b78eed7c52e33e0a106237a2af3bb7
 workflow-type: tm+mt
-source-wordcount: '1594'
+source-wordcount: '1612'
 ht-degree: 93%
 
 ---
@@ -76,7 +76,7 @@ Headless 是从内容的呈现中分离内容的示例。或者，从更通用�
 
 ## 技术基础 {#technology}
 
-Headless方法允许您构建技术栈栈，以便轻松快速地适应未来的数字体验需求。
+Headless 方法让您构建一个技术堆栈，从而轻松快速地适应未来的数字体验需求。
 
 过去的适用于 CMS 的 API 通常基于 REST。代表性状态传输 (REST) 采用无状态方式以文本形式提供资源。这允许使用一组预定义的操作来读取和修改资源。通过确保内容的无状态表示形式，REST 允许各种 Web 服务之间进行良好的互操作。
 
@@ -126,4 +126,6 @@ Headless 展示了交付数字体验方面的灵活度。但这种灵活度本�
 
 我们建议您查看文档来继续无头开发历程的下一部分 [AEM Headless快速入门](getting-started.md)，以下是一些其他可选资源，这些资源对本文档中提到的一些概念进行了更深入的探究，但并非继续执行Headless历程所必需的。
 
+* An [AEM as a Headless CMS简介](/help/sites-developing/headless/introduction.md)
+* 此 [AEM开发人员门户](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=zh-Hans)
 * [AEM Headless 教程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=zh-Hans) – 使用这些动手实践教程，探究如何使用各种选项通过 AEM 将内容交付到 Headless 端点，并选择适合您的选项。

@@ -2,10 +2,10 @@
 title: AEM Headless 翻译快速入门
 description: 了解如何组织您的 Headless 内容以及 AEM 的翻译工具的工作原理。
 exl-id: 764f78a7-1d3d-4406-85b1-b80dffae2350
-source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+source-git-commit: 9c517590c2b78eed7c52e33e0a106237a2af3bb7
 workflow-type: tm+mt
-source-wordcount: '1466'
-ht-degree: 93%
+source-wordcount: '1495'
+ht-degree: 92%
 
 ---
 
@@ -89,11 +89,11 @@ AEM 的内容（无论是 Headless 还是传统网页）都由其结构推动。
 1. 点按或单击模型的某个字段。AEM 会标记该字段，其详细信息会显示在右列中。
    ![内容片段模型编辑器详细信息](assets/content-fragment-model-editor-detail.png)
 
-记下字段 **属性名称** 用于所有必须翻译的字段。 在历程的后期，您将需要此信息。 这些 **属性名称**&#x200B;需要来告知AEM必须翻译内容的哪些字段。
+记下字段 **属性名称** 用于所有必须翻译的字段。 在历程的后期，您将需要此信息。 这些 **属性名称**&#x200B;需要来通知AEM必须翻译内容的哪些字段。
 
 >[!TIP]
 >
->通常，内容架构师会为翻译专家提供 **属性名称**&#x200B;翻译所需的所有字段的答案。 在历程的后面部分需要这些字段名称。 前面的步骤是为了便于翻译专家理解而提供的。
+>通常，内容架构师为翻译专家提供 **属性名称**&#x200B;是翻译所需的所有字段的。 在历程的后期需要这些字段名称。 前面的步骤是为了便于翻译专家理解而提供的。
 
 ### 内容片段 {#content-fragments}
 
@@ -101,7 +101,7 @@ AEM 的内容（无论是 Headless 还是传统网页）都由其结构推动。
 
 如果内容模型是内容的模式，内容片段则为基于这些模式的实际内容。内容片段表示必须翻译的内容。
 
-在数字资产管理 (DAM) 中，内容片段在 AEM 中作为资产进行管理。这一点很重要，因为它们都位于路径 `/content/dam` 下。
+在数字资源管理 (DAM) 中，内容片段在 AEM 中作为资源进行管理。这一点很重要，因为它们都位于路径 `/content/dam` 下。
 
 ## 建议的内容结构 {#recommended-structure}
 
@@ -190,3 +190,6 @@ AEM 的内容（无论是 Headless 还是传统网页）都由其结构推动。
 * [标识要翻译的内容](/help/sites-administering/tc-rules.md) – 了解翻译规则如何标识需要翻译的内容。
 * [配置翻译集成框架](/help/sites-administering/tc-tic.md) – 了解如何配置翻译集成框架以与第三方翻译服务集成。
 * [管理翻译项目](/help/sites-administering/tc-manage.md) – 了解如何在 AEM 中创建和管理机器翻译项目和人工翻译项目。
+* An [AEM as a Headless CMS简介](/help/sites-developing/headless/introduction.md)
+* 此 [AEM开发人员门户](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=zh-Hans)
+* [AEM中的HeadlessTutorials](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=zh-Hans)

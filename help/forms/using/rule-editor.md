@@ -10,7 +10,7 @@ discoiquuid: 1b905e66-dc05-4f14-8025-62a78feef12a
 docset: aem65
 feature: Adaptive Forms
 exl-id: c611a1f8-9d94-47f3-bed3-59eef722bf98
-source-git-commit: 34be3b4695679a9b5e8001d28f05ed804f929e61
+source-git-commit: 517fe7fb8917164ee05b006214055592510d15da
 workflow-type: tm+mt
 source-wordcount: '6921'
 ht-degree: 1%
@@ -153,6 +153,7 @@ _
 有关在表单数据模型中配置服务的更多信息，请参阅 [AEM Forms数据集成](/help/forms/using/data-integration.md).
 
 此 **[!UICONTROL 设置属性]** 规则类型允许您根据条件操作设置指定对象的属性值。 您可以将属性设置为以下项之一：
+
 * 可见（布尔值）
 * dorExclusion（布尔型）
 * chartType（字符串）

@@ -2,10 +2,10 @@
 title: 了解 AEM 中的 Headless 内容及其翻译方法
 description: 了解 Headless 概念、它们如何映射到 AEM 以及 AEM 翻译理论。
 exl-id: cb2e2d89-e2d2-462f-8fff-b201847d0641
-source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+source-git-commit: 9c517590c2b78eed7c52e33e0a106237a2af3bb7
 workflow-type: tm+mt
-source-wordcount: '727'
-ht-degree: 100%
+source-wordcount: '756'
+ht-degree: 97%
 
 ---
 
@@ -78,3 +78,6 @@ ht-degree: 100%
 我们建议您查看文档 [AEM Headless 翻译快速入门](getting-started.md)来继续 Headless 翻译历程的下一部分，以下是一些其他可选资源，这些资源对本文档中提到的一些概念进行了更深入的探究，但并非继续 Headless 历程所必需的。
 
 * [MSM 和翻译](/help/sites-administering/msm-and-translation.md) – AEM 的多站点管理器的详细信息及其使用翻译工具的方式
+* An [AEM as a Headless CMS简介](/help/sites-developing/headless/introduction.md)
+* 此 [AEM开发人员门户](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=zh-Hans)
+* [AEM中的HeadlessTutorials](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=zh-Hans)

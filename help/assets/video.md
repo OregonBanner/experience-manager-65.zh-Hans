@@ -10,9 +10,9 @@ docset: aem65
 feature: Asset Management
 role: User, Admin
 exl-id: 28cf9e39-cab4-4278-b6c9-e84cc31964db
-source-git-commit: 051e6838bea0be9f826183db935d33725c18386d
+source-git-commit: 0738f53564cb2e2607d739d97bdd1bb2fc64ac6e
 workflow-type: tm+mt
-source-wordcount: '11313'
+source-wordcount: '11310'
 ht-degree: 2%
 
 ---
@@ -605,7 +605,6 @@ DASH(Digital Adaptive Streaming over HTTP)是视频流的国际标准，被广�
 | **字幕** | 多语言支持 |
 |  | 用于辅助功能的描述性文本 |
 | **音频轨道** | 多语言支持 |
-|  | 立体声与多声道（环绕声） |
 |  | 评论轨道 |
 |  | 描述性音频 |
 
@@ -698,7 +697,7 @@ WebVTT和AdobeVTT格式支持添加字幕和字幕。 此外，添加的MP3格�
 
 >[!CAUTION]
 >
->当您将字幕文件或音频文件上传到已发布的视频时，如果您 [*重新处理*](/help/assets/processing-profiles.md#reprocessing-assets) 视频。 只有视频的原始音频保持不变。 在这种情况下，必须再次将字幕文件和音轨文件重新上传到视频。
+>当您将字幕文件或音频文件上传到已发布或未发布的视频时，如果您 [*重新处理*](/help/assets/processing-profiles.md#reprocessing-assets) 视频。 只有视频的原始音频保持不变。 在这种情况下，必须再次将字幕文件和音轨文件重新上传到视频。
 
 #### 向具有带标题修饰符的现有URL的视频添加多个标题
 

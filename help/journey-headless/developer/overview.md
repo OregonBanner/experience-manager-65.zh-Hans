@@ -2,10 +2,10 @@
 title: AEM Headless 开发人员历程
 description: AEM Headless CMS 文档。从这里开始，引导您了解 AEM 强大而灵活的 Headless 特性、它们的功能以及如何在您的第一个开发项目中利用它们。
 exl-id: f24fb308-daa7-426f-ba45-37a236b5a500
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 9c517590c2b78eed7c52e33e0a106237a2af3bb7
 workflow-type: tm+mt
-source-wordcount: '1212'
-ht-degree: 79%
+source-wordcount: '1230'
+ht-degree: 80%
 
 ---
 
@@ -54,7 +54,7 @@ Headless 实施放弃了传统的全栈解决方案中的页面和组件管理�
 
 您将在此历程中探究多个主题。以下文章为您提供了 AEM 中的 Headless 的基础知识以及指向详细技术文档的链接。
 
-虽然您可以直接进入历程的特定部分，但许多概念都是基于之前文章中的概念来构建的。因此，如果您不熟悉AEM中的Headless，Adobe建议您从头开始，然后循序渐进。
+虽然您可以直接进入历程的特定部分，但许多概念都是基于之前文章中的概念来构建的。因此，如果您是初次使用 AEM 中的 Headless，Adobe 建议您从头开始，然后循序渐进。
 
 | # | 文章 | 描述 |
 |---|---|---|
@@ -91,3 +91,7 @@ Headless 实施放弃了传统的全栈解决方案中的页面和组件管理�
 * [Headless 创作历程](/help/journey-headless/author/overview.md) – 从这里开始，引导您了解 AEM 强大而灵活的 Headless 特性、它们的功能以及如何在您的第一个 Headless 项目中为内容建模。
 * [Headless架构师历程](/help/journey-headless/architect/overview.md)  — 从这里开始了解Adobe Experience Manager强大而灵活的Headless功能，以及如何对项目内容进行建模。
 * [AEM 技术文档](https://experienceleague.adobe.com/docs/experience-manager-65.html?lang=zh-Hans) – 如果您已对 AEM 和 Headless 技术有一定的了解，则可能需要直接参阅深入的技术文档。
+
+   * An [AEM as a Headless CMS简介](/help/sites-developing/headless/introduction.md)
+
+* 此 [AEM开发人员门户](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=zh-Hans)

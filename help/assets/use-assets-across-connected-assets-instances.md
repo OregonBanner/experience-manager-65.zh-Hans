@@ -7,7 +7,7 @@ role: User, Admin, Leader
 feature: Connected Assets,User and Groups
 exl-id: 4ceb49d8-b619-42b1-81e7-c3e83d4e6e62
 hide: true
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: bc6a97a55f392cba03131ee3ca7cad35b8c1e69b
 workflow-type: tm+mt
 source-wordcount: '3949'
 ht-degree: 17%
@@ -92,7 +92,7 @@ An [!DNL Experience Manager] 管理员可以创建此集成。 创建后，使�
 1. 访问现有 [!DNL Sites] 部署或使用以下命令创建部署：
 
    1. 在JAR文件的文件夹中，在终端上执行以下命令以创建 [!DNL Experience Manager] 服务器。
-      `java -XX:MaxPermSize=768m -Xmx4096m -jar <quickstart jar filepath> -r samplecontent -p 4502 -nofork -gui -nointeractive &`
+      `java -Xmx4096m -jar <quickstart jar filepath> -r samplecontent -p 4502 -nofork -gui -nointeractive &`
 
    1. 几分钟后， [!DNL Experience Manager] 服务器启动成功。 考虑一下 [!DNL Sites] 将部署为用于网页创作的本地计算机，例如 `https://[local_sites]:4502`.
 
