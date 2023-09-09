@@ -444,7 +444,7 @@ DSCSample.jar文件使用renderLetter API从DSC提供作为输入的XML数据将
 
 1. 在创建通信UI中，单击 **书信审核** 并指定审阅者的电子邮件ID。
 
-1. 单击 **提交**.
+1. 单击&#x200B;**“提交”。**
 
 ![sendreview](assets/sendreview.png)
 

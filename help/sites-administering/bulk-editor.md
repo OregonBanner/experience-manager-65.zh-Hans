@@ -74,7 +74,7 @@ Geometrixx网站中包含一个说明此用例的示例：
   </tr>
   <tr>
    <td>根路径</td>
-   <td>指示批量编辑器搜索的根路径。<br />例如，<code>/content/geometrixx/en</code>。批量编辑器将搜索所有子节点。</td>
+   <td>指示批量编辑器搜索的根路径。<br />例如：<code>/content/geometrixx/en</code>。批量编辑器将搜索所有子节点。</td>
   </tr>
   <tr>
    <td>查询参数</td>

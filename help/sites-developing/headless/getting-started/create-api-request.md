@@ -5,7 +5,7 @@ exl-id: 4664b3a4-4873-4f42-b59d-aadbfaa6072f
 source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
 source-wordcount: '555'
-ht-degree: 47%
+ht-degree: 49%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 47%
 
 * [GraphQL API](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md) 允许您创建请求来访问和投放内容片段。
    * 要使用它， [必须在AEM中定义和启用端点](/help/sites-developing/headless/graphql-api/graphql-endpoint.md#enabling-graphql-endpoint)，如有必要， [已安装GraphiQL接口](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#installing-graphiql-interface).
-* [Assets REST API](/help/assets/assets-api-content-fragments.md) 允许您创建和修改内容片段（和其他资源）。
+* [Assets REST API](/help/assets/assets-api-content-fragments.md) 让您创建和修改内容片段（及其他资源）。
 
 本指南的剩余部分侧重于 GraphQL 访问和内容片段投放。
 

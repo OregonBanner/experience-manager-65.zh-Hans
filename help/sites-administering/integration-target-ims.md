@@ -5,7 +5,7 @@ exl-id: 8ddd86d5-a5a9-4907-b07b-b6552d7afdc8
 source-git-commit: 06ed2329840e151083bd238ee3a4d33663463c9c
 workflow-type: tm+mt
 source-wordcount: '1577'
-ht-degree: 53%
+ht-degree: 55%
 
 ---
 
@@ -71,9 +71,9 @@ ht-degree: 53%
 
 >[!CAUTION]
 >
->目前，我们仅支持Adobe Developer控制台的 **服务帐户(JWT)** 凭据类型。
+>目前，我们仅支持 Adobe Developer Console 的&#x200B;**服务帐户 (JWT)** 凭据类型。
 >
->请勿使用 **OAuth服务器到服务器** 凭据类型，将在未来受支持。
+>不要使用 **OAuth 服务器到服务器**&#x200B;凭据类型（以后将支持此类型）。
 
 1. 为项目打开 Adobe Developer Console：
 

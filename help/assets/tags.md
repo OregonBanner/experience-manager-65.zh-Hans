@@ -272,7 +272,7 @@ Dynamic Media Viewers 扩展提供的唯一数据元素类型是&#x200B;**[!UICO
 
 ![image2019-7-12_19-2-35](assets/image2019-7-12_19-2-35.png)
 
-使用数据元素与直接事件参数引用之间有一个重要区别。 对于数据元素，哪个事件触发Set Variables操作并不重要。 触发规则的事件可能与动态查看器无关。 例如，从核心扩展中选择网页。 但是，在使用直接参数引用时，请务必确保触发规则的事件与它引用的事件参数相对应。
+使用数据元素与使用直接事件参数引用之间有一个重要的区别。 对于数据元素，哪个事件触发Set Variables操作并不重要。 触发规则的事件可能与动态查看器无关。 例如，从核心扩展中选择网页。 但是，在使用直接参数引用时，请务必确保触发规则的事件与它引用的事件参数相对应。
 
 例如，如果规 `%event.detail.dm.LOAD.asset%` 则是由Dynamic Media Viewer扩展的 **[!UICONTROL LOAD]** 事件触发的，则引用将返回正确的资产名称。 但是，对于任何其他事件，它都会返回一个空值。
 
@@ -795,7 +795,7 @@ Experience Manager配置包含以下两个主要步骤：
 
 ## 为集成配置Experience Platform标签云 {#configuring-adobe-launch-cloud-for-the-integration}
 
-1. 在Experience Manager创作中的左上角附近，选择 **[!UICONTROL 工具]** 图标（锤子），然后转到 **[!UICONTROL Cloud Services]** > **[!UICONTROL Experience Platform标记配置]**.
+1. 在Experience Manager创作中的左上角附近，选择 **[!UICONTROL 工具]** 图标（锤子），然后转到 **[!UICONTROL Cloud Service]** > **[!UICONTROL Experience Platform标记配置]**.
 
    ![2019-07-26_12-10-38](assets/2019-07-26_12-10-38.png)
 

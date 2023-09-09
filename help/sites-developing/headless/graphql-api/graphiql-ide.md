@@ -5,7 +5,7 @@ exl-id: d4b01485-658b-4245-b2e6-04be8abc8ecf
 source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
 source-wordcount: '788'
-ht-degree: 87%
+ht-degree: 93%
 
 ---
 
@@ -17,12 +17,12 @@ ht-degree: 87%
 >
 >GraphiQL 包含在 AEM 的所有环境中（但只有在配置端点时才可访问/显示）。
 >
->在以前的版本中，安装 GraphiQL IDE 时需要软件包。 如果您已安装此软件，现可将其移除。
+>在以前的版本中，安装 GraphiQL IDE 时需要软件包。如果您已安装此软件，现可将其移除。
 
 >[!NOTE]
 >在使用 GraphiQL IDE 之前，您必须在[配置浏览器](/help/assets/content-fragments/content-fragments-configuration-browser.md)中[配置您的端点](/help/sites-developing/headless/graphql-api/graphql-endpoint.md)。
 
-此 **GraphiQL** 工具允许您测试和调试GraphQL查询，方法是：
+**GraphiQL** 工具让您测试和调试 GraphQL 查询，方法是：
 
 * 选择适用于您要用于查询的 Sites 配置的&#x200B;**端点**
 * 直接输入新查询
@@ -41,7 +41,7 @@ ht-degree: 87%
 
 ![GraphiQL 接口](assets/cfm-graphiql-interface.png "GraphiQL 接口")
 
-您可以在系统上使用 GraphiQL，以便您的客户端应用程序可以使用 GET 请求来请求查询，并发布查询。 对于生产使用，您可以[将查询移动到生产环境](/help/sites-developing/headless/graphql-api/persisted-queries.md#transfer-persisted-query-production)。 最初是移至生产作者环境，以供通过查询来验证新撰写的内容，最后移至生产发布环境，以供实时使用。
+您可以在系统上使用 GraphiQL，以便您的客户端应用程序可以使用 GET 请求来请求查询，并发布查询。对于生产使用，您可以[将查询移动到生产环境](/help/sites-developing/headless/graphql-api/persisted-queries.md#transfer-persisted-query-production)。最初是移至生产作者环境，以供通过查询来验证新撰写的内容，最后移至生产发布环境，以供实时使用。
 
 ## 选择您的端点 {#selecting-endpoint}
 
@@ -89,7 +89,7 @@ ht-degree: 87%
 
 <!-- more details needed here? -->
 
-GraphiQL IDE还允许您管理 [查询变量](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#graphql-variables).
+GraphiQL IDE 还让您管理[查询变量](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#graphql-variables)。
 
 例如：
 
@@ -140,7 +140,7 @@ Using GraphQL you can configure the HTTP Cache Headers  to control these paramet
 
 ## 复制 URL 以直接访问查询 {#copy-url}
 
-此 **复制URL** 选项允许您通过复制用于直接访问持久查询并查看结果的URL来模拟查询。 然后可以将其用于测试；例如，通过在浏览器中访问：
+**“复制 URL”**&#x200B;选项让您通过复制用于直接访问持久查询并查看结果的 URL 来模拟查询。然后可以将其用于测试；例如，通过在浏览器中访问：
 
 <!--
   >[!NOTE]

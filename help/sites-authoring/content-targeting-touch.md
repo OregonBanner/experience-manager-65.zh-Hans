@@ -14,7 +14,7 @@ exl-id: edde225d-0be7-4306-8dda-d18d46fae977
 source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
 source-wordcount: '5388'
-ht-degree: 86%
+ht-degree: 87%
 
 ---
 
@@ -150,7 +150,7 @@ ht-degree: 86%
 >
 >选件是目标组件的内容。
 
-体验显示在“受众”窗格中。 在以下示例中，体验包 **括Default**、 **Female**、Female 30 **岁以上的体验和****** Female 30以下的体验。 此示例显示了目标图像组件的默认 **选件** 。
+体验显示在“受众”窗格中。在以下示例中，体验包 **括Default**、 **Female**、Female 30 **岁以上的体验和****** Female 30以下的体验。此示例显示了目标图像组件的默认 **选件** 。
 
 ![chlimage_1-12](assets/chlimage_1-12.png)
 
@@ -158,7 +158,7 @@ ht-degree: 86%
 
 ![chlimage_1-13](assets/chlimage_1-13.png)
 
-选择某个体验且目标组件不包含该体验的选件时，该组件会在半透明的默认选件上叠加显示 **添加选件** 。 尚未为体验创建选件时，系统会为映射 **到该体验的区段显示** “默认选件”。
+选择某个体验且目标组件不包含该体验的选件时，该组件会在半透明的默认选件上叠加显示 **添加选件** 。尚未为体验创建选件时，系统会为映射 **到该体验的区段显示** “默认选件”。
 
 ![chlimage_1-14](assets/chlimage_1-14.png)
 
@@ -570,7 +570,7 @@ ht-degree: 86%
 
    ![chlimage_1-33](assets/chlimage_1-33.png)
 
-1. 在“目 **标量度** ”区域的“我的主要目标 **** ”下，选择要跟踪的成功量度——转化率、收入、参与度——并输入度量的度量方式（或受众采取什么操作指示已达到目标）。 请参阅上表中目标量度的定义，并参阅 [Adobe Target成功量度相关文档](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/success-metrics.html) 。
+1. 在“目 **标量度** ”区域的“我的主要目标 **** ”下，选择要跟踪的成功量度——转化率、收入、参与度——并输入度量的度量方式（或受众采取什么操作指示已达到目标）。请参阅上表中目标量度的定义，并参阅 [Adobe Target成功量度相关文档](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/success-metrics.html) 。
 
    您可以通过单击右上角的三个圆点，然后选择&#x200B;**重命名**&#x200B;来重命名目标。
 
@@ -692,7 +692,7 @@ ht-degree: 86%
   </tr>
   <tr>
    <td><strong>包含已解析的区段</strong></td>
-   <td><p>选中此复选框可包括 mbox 调用中的所有已解析的区段以及页面和框架中配置的任何参数。</p> <p>这仅适用于通过 XML API 同步 AEM 区段的情况。如果您的AEM中存在不由Adobe Target处理的区段（如脚本区段），则此选项允许您在AEM中解析该区段，并向Adobe Target发送有关该区段处于活动状态的信息。</p> </td>
+   <td><p>选中此复选框可包括 mbox 调用中的所有已解析的区段以及页面和框架中配置的任何参数。</p> <p>这仅适用于通过 XML API 同步 AEM 区段的情况。如果您的 AEM 中存在不由 Adobe Target 处理的区段（如脚本区段），则此选项让您在 AEM 中解析这些区段，并发送信息告知 Adobe Target 这些区段处于活动状态。</p> </td>
   </tr>
   <tr>
    <td><strong>继承的上下文参数</strong></td>

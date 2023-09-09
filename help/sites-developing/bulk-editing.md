@@ -13,13 +13,13 @@ exl-id: 1787e643-fc8e-40e0-8e14-97b222a7c320
 source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
 source-wordcount: '413'
-ht-degree: 26%
+ht-degree: 30%
 
 ---
 
 # 配置页面以批量编辑页面属性 {#configuring-your-page-for-bulk-editing-of-page-properties}
 
-[批量编辑页面属性](/help/sites-authoring/editing-page-properties.md#from-the-sites-console-multiple-pages) 允许您同时编辑多个页面的属性。
+[批量编辑页面属性](/help/sites-authoring/editing-page-properties.md#from-the-sites-console-multiple-pages)功能让您一次编辑多个页面的属性。
 
 由于可能存在不同的值，默认情况下不会启用页面属性以进行批量编辑。 必须明确允许（启用）。 在定义可用于批量编辑的页面属性时，您需要考虑某些事项，例如：
 
@@ -68,9 +68,9 @@ ht-degree: 26%
 1. 导航至`cq:dialog` 定义中的必填字段。
 1. 在字段节点上定义以下属性：
 
-   * **名称**: `allowBulkEdit`
-   * **类型**: `Boolean`
-   * **值**: `true`
+   * **名称**：`allowBulkEdit`
+   * **类型**：`Boolean`
+   * **值**：`true`
 
    例如，对于标准页面 [基础组件](/help/sites-authoring/default-components-foundation.md)：
 

@@ -14,7 +14,7 @@ exl-id: e145e79a-c363-4a33-b9f9-99502ed20563
 source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
 source-wordcount: '906'
-ht-degree: 25%
+ht-degree: 28%
 
 ---
 
@@ -76,7 +76,7 @@ ht-degree: 25%
 
 ## 转出管理器和冲突处理 {#rollout-manager-and-conflict-handling}
 
-转出管理器允许您激活或停用冲突管理。
+转出管理器让您激活或停用冲突管理。
 
 可使用 [OSGi配置](/help/sites-deploying/configuring-osgi.md) 之 **Day CQ WCM转出管理器**：
 
@@ -99,7 +99,7 @@ AEM 提供：
    * `ResourceNameRolloutConflictHandler`
 
 * 实施[自定义处理程序](#customized-handlers)的可能性。
-* 服务排名机制，允许您设置每个单独处理程序的优先级。 使用排名最高的服务。
+* 服务排名机制，可让您设置每个单独处理程序的优先级. 使用排名最高的服务。
 
 ### 默认冲突处理程序 {#default-conflict-handler}
 

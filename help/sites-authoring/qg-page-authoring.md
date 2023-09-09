@@ -14,7 +14,7 @@ exl-id: a7e16555-9bbe-4da2-817c-4495a0193f3f
 source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
 source-wordcount: '1557'
-ht-degree: 73%
+ht-degree: 74%
 
 ---
 
@@ -75,7 +75,7 @@ ht-degree: 73%
 
    ![screen_shot_2018-03-21at160214](assets/screen_shot_2018-03-21at160214.png)
 
-1. 使用向上导航树 [标题中的痕迹导航](/help/sites-authoring/basic-handling.md#theheaderwithbreadcrumbs)，可让您返回选定的位置：
+1. 使用[标头中的痕迹导航](/help/sites-authoring/basic-handling.md#theheaderwithbreadcrumbs)对树进行向上导航，这让您返回到选定的位置：
 
    ![qgtap-01](assets/qgtap-01.png)
 
@@ -283,7 +283,7 @@ ht-degree: 73%
 
 ### 锁定页面（然后解锁） {#locking-your-page-then-unlocking}
 
-[锁定页面](/help/sites-authoring/editing-content.md#locking-a-page) ，可阻止其他作者在您处理页面时对其进行处理。 可以找到“锁定”（和“解锁”）图标／按钮：
+[锁定页面](/help/sites-authoring/editing-content.md#locking-a-page) ，可阻止其他作者在您处理页面时对其进行处理。可以找到“锁定”（和“解锁”）图标／按钮：
 
 * [选择页面](#selecting-your-page-for-further-action)后显示的工具栏。
 * 编辑页面时显示的[“页面信息”下拉菜单](#editing-the-page-properties)。

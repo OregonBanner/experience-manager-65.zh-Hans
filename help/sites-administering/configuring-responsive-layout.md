@@ -14,7 +14,7 @@ exl-id: 61152b2d-4c0b-4cfd-9669-cf03d32cb7c7
 source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
 source-wordcount: '1285'
-ht-degree: 3%
+ht-degree: 5%
 
 ---
 
@@ -48,7 +48,7 @@ AEM 使用一组机制为页面实现响应式布局：
 将布局容器放置到页面上后，您便可以使用 **布局** 模式，用于将内容放置在响应式网格中。
 
 * [**模拟器**](/help/sites-authoring/responsive-layout.md#selecting-a-device-to-emulate)
-通过执行此操作，您可以创建和编辑响应式网站，这些网站可通过以交互方式调整组件大小，从而根据设备/窗口大小重新排列布局。 然后，用户可以使用模拟器查看内容的呈现方式。
+这让您创建和编辑响应式网站，通过以交互的方式调整组件大小，根据设备/窗口大小重新排列布局。然后，用户可以使用模拟器查看内容的呈现方式。
 
 >[!CAUTION]
 >
@@ -128,18 +128,18 @@ AEM 使用一组机制为页面实现响应式布局：
 
 1. 下 `jcr:content` 创建节点：
 
-   * 名称: `cq:responsive`
-   * 类型: `nt:unstructured`
+   * 名称：`cq:responsive`
+   * 类型：`nt:unstructured`
 
 1. 在此下创建节点：
 
-   * 名称: `breakpoints`
-   * 类型: `nt:unstructured`
+   * 名称：`breakpoints`
+   * 类型：`nt:unstructured`
 
 1. 在断点节点下，可以创建任意数量的断点。 每个定义都是一个具有以下属性的节点：
 
-   * 名称: `<descriptive name>`
-   * 类型: `nt:unstructured`
+   * 名称：`<descriptive name>`
+   * 类型：`nt:unstructured`
    * 标题: `String` * `<descriptive title seen in Emulator>`*
    * 宽度: `Decimal` * `<value of breakpoint>`*
 

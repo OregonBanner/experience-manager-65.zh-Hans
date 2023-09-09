@@ -202,9 +202,9 @@ ht-degree: 6%
 
    `<your-folder-name> [sling:Folder]`
 
-   名称: `jcr:title`
+   名称：`jcr:title`
 
-   * 类型: `String`
+   * 类型：`String`
 
    * 值：您希望在中显示的标题（针对文件夹） **模板** 控制台。
 
@@ -500,13 +500,13 @@ GITHUB上的代码
 
 此节点保存模板的属性：
 
-* **名称**: `jcr:title`
+* **名称**：`jcr:title`
 
-* **名称**: `status`
+* **名称**：`status`
 
-   * **类型**: `String`
+   * **类型**：`String`
 
-   * **值**: `draft`, `enabled`, 或 `disabled`
+   * **值**：`draft`, `enabled`, 或 `disabled`
 
 ### 结构 {#structure}
 
@@ -585,7 +585,7 @@ GITHUB上的代码
 
          * 名称：状态
          * 类型：字符串
-         * 值: `enabled`
+         * 价值: `enabled`
 
 1. **允许的模板**
 

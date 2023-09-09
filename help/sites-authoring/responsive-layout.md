@@ -11,15 +11,15 @@ exl-id: 760b8419-5cf8-49c5-8d4f-6691f5256c53
 source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
 source-wordcount: '1796'
-ht-degree: 76%
+ht-degree: 82%
 
 ---
 
 # 响应式布局{#responsive-layout}
 
-AEM允许您使用页面有一个响应式布局 **布局容器** 组件。
+AEM 让您能够使用&#x200B;**布局容器**&#x200B;组件为页面实现响应式布局。
 
-这提供了一个段落系统，允许您在响应式网格中放置组件。 此网格可以根据设备/窗口大小和格式重新安排布局。该组件将与 [**布局** 模式](/help/sites-authoring/responsive-layout.md#defining-layouts-layout-mode)，您可以创建和编辑依赖于设备的响应式布局。
+由此提供的段落系统让您能够将组件放置在响应式网格内。此网格可以根据设备/窗口大小和格式重新安排布局。此组件可与&#x200B;[**布局**&#x200B;模式](/help/sites-authoring/responsive-layout.md#defining-layouts-layout-mode)配合使用，让您能够根据设备创建和编辑响应式布局。
 
 布局容器：
 
@@ -47,7 +47,7 @@ AEM 使用一组机制为页面实现响应式布局：
   在将布局容器放置到页面上后，就可以使用&#x200B;**布局**&#x200B;模式在响应式网格内放置内容。
 
 * [**模拟器**](#selecting-a-device-to-emulate)
-通过执行此操作，您可以创建和编辑响应式网站，这些网站可通过以交互方式调整组件大小，从而根据设备/窗口大小重新排列布局。 然后，用户可以使用模拟器查看内容的呈现方式。
+这让您创建和编辑响应式网站，通过以交互的方式调整组件大小，根据设备/窗口大小重新排列布局。然后，用户可以使用模拟器查看内容的呈现方式。
 
 通过这些响应式网格机制，您可以：
 
@@ -71,7 +71,7 @@ AEM 使用一组机制为页面实现响应式布局：
 
 在创建网站内容时，您可能希望确保内容的显示方式适合用来查看内容的设备。
 
-AEM允许您定义依赖于设备宽度的布局：
+AEM 让您根据设备的宽度定义布局：
 
 * 模拟器让您能够在各种设备上模拟这些布局。除设备类型以外，通过&#x200B;**旋转设备**&#x200B;选项选择的方向也可能会因宽度的改变而影响所选的断点。
 * 断点是区分各种布局定义的分界点。
@@ -109,7 +109,7 @@ AEM允许您定义依赖于设备宽度的布局：
 
    模拟器工具栏会显示其他布局选项：
 
-   * **旋转设备**  — 允许您将设备从垂直（纵向）方向旋转到水平（横向）方向，反之亦然。
+   * **旋转设备** - 让您将设备从垂直（纵向）方向旋转到水平（横向）方向，反之亦然。
 
      ![旋转设备](do-not-localize/screen_shot_2018-03-23at084612.png) ![旋转设备](do-not-localize/screen_shot_2018-03-23at084637.png)
 
@@ -151,7 +151,7 @@ AEM允许您定义依赖于设备宽度的布局：
 >
 >如果尚不可用， **布局容器** 必须明确 [已为段落系统/页面激活](/help/sites-administering/configuring-responsive-layout.md) (例如，通过使用 [**设计** 模式](/help/sites-authoring/default-components-designmode.md))。
 
-1. 布局 **容器在组件浏览器中** ，可作为标准 [组件使用](/help/sites-authoring/author-environment-tools.md#components-browser)。 从此处，您可以将其拖动到页面上的所需位置，随后您将看到将组件拖动到 **此处占位符** 。
+1. 布局 **容器在组件浏览器中** ，可作为标准 [组件使用](/help/sites-authoring/author-environment-tools.md#components-browser)。从此处，您可以将其拖动到页面上的所需位置，随后您将看到将组件拖动到 **此处占位符** 。
 1. 接下来，您可以向布局容器中添加组件。这些组件将存放实际的内容：
 
    ![screen_shot_2018-03-23at085500](assets/screen_shot_2018-03-23at085500.png)

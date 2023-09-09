@@ -5,7 +5,7 @@ exl-id: d54a0a40-a8af-456a-9bf5-219d84540c97
 source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
 source-wordcount: '726'
-ht-degree: 88%
+ht-degree: 95%
 
 ---
 
@@ -39,11 +39,11 @@ ht-degree: 88%
 
 ## 内容引用 {#content-references}
 
-内容引用仅用于此目的，可让您引用任何其他内容。 这将打开一个浏览器，允许您选择内容项目。
+内容引用仅用于此目的，可让您引用任何其他内容。 这将打开一个浏览器以便让您能够选择内容项。
 
 ## 资源/媒体引用 {#assets-media-references}
 
-可以使用&#x200B;**插入资源**&#x200B;选项在文本块中引用资源（例如，图像或媒体）。这将打开一个浏览器，允许您选择资产。
+可以使用&#x200B;**插入资源**&#x200B;选项在文本块中引用资源（例如，图像或媒体）。这将打开一个浏览器以便您能够选择资源。
 
 ![内容片段 – 插入资源](/help/journey-headless/author/assets/headless-journey-author-references-02.png)
 
@@ -75,7 +75,7 @@ ht-degree: 88%
 
 ### 如何创作嵌套片段 {#author-nested-fragment}
 
-创作片段引用非常简单（尽管该字段通常将不被标记为&#x200B;**片段引用**）。您可以直接键入引用，或（更有可能的是）选择文件夹图标以打开浏览器，从中导航并选择所需的片段。
+创作片段引用非常简单（尽管该字段通常将不被标记为&#x200B;**片段引用**）。您可以直接键入引用，或者（更有可能）选择文件夹图标以打开浏览器，以便导航并选择所需的片段。
 
 ![内容片段 – 引用](/help/journey-headless/author/assets/headless-journey-author-references-03.png)
 

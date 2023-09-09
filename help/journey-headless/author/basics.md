@@ -5,7 +5,7 @@ exl-id: 125c4d0b-1572-4dba-823d-cdef2778f275
 source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
 source-wordcount: '1692'
-ht-degree: 81%
+ht-degree: 82%
 
 ---
 
@@ -47,7 +47,7 @@ AEM 安装通常至少包含两个环境：
 * 密码
 * 用于访问登录屏幕的链接
 
-您的帐户将配置有您需要的任何权限。如果您有任何问题，Adobe建议您联系内部项目支持团队。
+您的帐户将配置有您需要的任何权限。如果您有任何问题，Adobe 建议您联系您的内部项目支持团队。
 
 ### 导航 {#navigation}
 
@@ -168,7 +168,7 @@ AEM 安装通常至少包含两个环境：
 
   ![内容片段编辑器 – 我的片段](/help/journey-headless/author/assets/headless-journey-author-content-fragment-04.png)
 
-* 可让您编写较长文本部分的片段。 这里提供了用于管理文本并设置其格式的其他选项。您甚至可以在全屏编辑器中打开各个文本字段（使用右侧的类似小屏幕的图标）
+* 一个让您编写长段文本的片段。这里提供了用于管理文本并设置其格式的其他选项。您甚至可以在全屏编辑器中打开各个文本字段（使用右侧的类似小屏幕的图标）
 
   ![内容片段编辑器 – 阿拉斯加烈酒](/help/journey-headless/author/assets/headless-journey-author-content-fragment-05.png)
 

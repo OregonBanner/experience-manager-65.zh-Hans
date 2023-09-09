@@ -13,7 +13,7 @@ exl-id: 407fc164-291d-42f6-8c46-c1df9ba3d454
 source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
 source-wordcount: '797'
-ht-degree: 38%
+ht-degree: 41%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 38%
 
 现成可用的项目工作流包括：
 
-* **项目审批工作流**  — 利用此工作流，可将内容分配给用户进行审查和批准。
+* **项目审批工作流** – 此工作流让您将内容分配给用户进行审查和批准。
 * **请求启动项** – 此工作流用于请求启动项。
 * **请求登陆页面** – 此工作流用于请求登陆页面。
 * **请求电子邮件** – 此工作流用于请求电子邮件。
@@ -69,7 +69,7 @@ ht-degree: 38%
 
    ![请求复制工作流](assets/project-request-copy-workflow.png)
 
-1. 单击 **提交**.
+1. 单击&#x200B;**“提交”。**
 
 该工作流随即会启动。任务出现在 **任务** 卡片。
 
@@ -87,7 +87,7 @@ ht-degree: 38%
 
    ![项目审批工作流](assets/project-approval-workflow.png)
 
-1. 单击 **提交**.
+1. 单击&#x200B;**“提交”。**
 
 该工作流随即会启动。任务出现在 **任务** 卡片。
 
@@ -101,7 +101,7 @@ ht-degree: 38%
 
    ![请求启动工作流](assets/project-request-launch-workflow.png)
 
-1. 单击 **提交**.
+1. 单击&#x200B;**“提交”。**
 
 该工作流随即会启动。该工作流将显示在 **工作流** 列表。
 
@@ -115,7 +115,7 @@ ht-degree: 38%
 
    ![请求登陆页面工作流](assets/project-request-landing-page-workflow.png)
 
-1. 单击 **提交**.
+1. 单击&#x200B;**“提交”。**
 
 该工作流随即会启动。任务出现在 **任务** 卡片。
 
@@ -129,7 +129,7 @@ ht-degree: 38%
 
    ![请求电子邮件工作流](assets/project-request-email-workflow.png)
 
-1. 单击 **提交**.
+1. 单击&#x200B;**“提交”。**
 
 该工作流随即会启动。任务出现在 **任务** 卡片。
 

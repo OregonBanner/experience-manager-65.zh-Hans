@@ -312,10 +312,10 @@ JSP脚本文件 `global.jsp` 用于提供对用于呈现组件的任何JSP脚本
       * 添加字段定义到 `tab3/items`，类型为的节点位置 `cq:Widget`
       * 为新的设置以下属性（类型为String） `tab3/items/position`节点：
 
-         * `name`: `./imagePosition`
-         * `xtype`: `selection`
-         * `fieldLabel`: `Image Position`
-         * `type`: `select`
+         * `name`：`./imagePosition`
+         * `xtype`：`selection`
+         * `fieldLabel`：`Image Position`
+         * `type`：`select`
 
       * 添加子节点 `position/options` 类型 `cq:WidgetCollection` 表示两个图像放置选项，并在其下创建两个类型为的节点o1和o2 `nt:unstructured`.
       * 用于节点 `position/options/o1` 设置属性： `text` 到 `Left` 和 `value` 到 `left.`
@@ -380,9 +380,9 @@ JSP脚本文件 `global.jsp` 用于提供对用于呈现组件的任何JSP脚本
 1. 导航到 `/apps/geometrixx/components/image/dialog/items/image`。
 1. 添加属性：
 
-   * **名称**: `allowUpload`
-   * **类型**: `String`
-   * **值**: `false`
+   * **名称**：`allowUpload`
+   * **类型**：`String`
+   * **值**：`false`
 
    ![chlimage_1-63](assets/chlimage_1-63a.png)
 

@@ -5,7 +5,7 @@ exl-id: b4cc1311-1ef7-409a-bd41-0456519b3436
 source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
 source-wordcount: '257'
-ht-degree: 83%
+ht-degree: 98%
 
 ---
 
@@ -32,11 +32,11 @@ ht-degree: 83%
 
   ![创建内容片段 – 提供名称](/help/journey-headless/author/assets/headless-journey-author-content-fragment-03.png)
 
-* 此 **变体** 通过内容片段编辑器的选项卡，可添加预定义的 **标记** 从您的项目中：
+* 使用内容片段编辑器的&#x200B;**变体**&#x200B;选项卡可以添加您项目中的预定义的&#x200B;**标记**：
 
   ![内容片段编辑器 – 阿拉斯加烈酒](/help/journey-headless/author/assets/headless-journey-author-content-fragment-05.png)
 
-* 此 **元数据** 在内容片段编辑器的选项卡中，您可以添加元数据的各种字段和预定义的字段 **标记** 从您的项目中：
+* 内容片段编辑器的&#x200B;**元数据**&#x200B;选项卡可让您添加元数据的各种字段以及您项目中的预定义的&#x200B;**标记**：
 
   ![内容片段编辑器 – 元数据](/help/journey-headless/author/assets/headless-journey-author-metadata-01.png)
 

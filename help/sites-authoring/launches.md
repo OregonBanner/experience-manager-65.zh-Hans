@@ -12,7 +12,7 @@ exl-id: b25d3f8e-5687-49ab-95e1-19ec75c87f6e
 source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
 source-wordcount: '843'
-ht-degree: 80%
+ht-degree: 82%
 
 ---
 
@@ -109,7 +109,7 @@ ht-degree: 80%
 
 ### “启动项”控制台 {#the-launches-console}
 
-“启动项”控制台提供了启动项的概述，允许您对列出的启动项执行操作。 可以通过以下方式访问该控制台：
+“启动项”控制台提供了启动项的概览，并让您对列出的启动项执行操作。可以通过以下方式访问该控制台：
 
 * **工具**&#x200B;控制台：**工具**、**站点**、**启动项**。
 

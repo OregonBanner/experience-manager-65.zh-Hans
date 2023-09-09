@@ -12,7 +12,7 @@ exl-id: 3b3c118b-ca35-484b-a62e-7bec98953123
 source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
 source-wordcount: '2240'
-ht-degree: 78%
+ht-degree: 80%
 
 ---
 
@@ -292,7 +292,7 @@ AEM 的创作环境提供了各种可用于组织和编辑内容的机制. 可�
 编辑页面时可以使用多种模式来执行不同的操作：
 
 * [编辑](/help/sites-authoring/editing-content.md) - 编辑页面内容时使用的模式。
-* [布局](/help/sites-authoring/responsive-layout.md)  — 允许您创建和编辑依赖于设备的响应式布局（如果页面基于布局容器）
+* [布局](/help/sites-authoring/responsive-layout.md) - 让您创建和编辑依赖于设备的响应式布局（如果页面基于布局容器）
 
 * [基架](/help/sites-authoring/scaffolding.md)  — 帮助您创建大量共享相同结构但内容不同的页面。
 * [开发人员](/help/sites-developing/developer-mode.md)  — 可让您执行各种操作（需要权限）。 这包括检查页面及其组件的技术详细信息。
@@ -302,7 +302,7 @@ AEM 的创作环境提供了各种可用于组织和编辑内容的机制. 可�
 * [定位](/help/sites-authoring/content-targeting-touch.md) - 通过在所有渠道中进行定位和衡量来提高内容相关性。
 * [Activity Map](/help/sites-authoring/page-analytics-using.md#analyticsvisiblefromthepageeditor)  — 显示页面的Analytics数据。
 
-* [时间扭曲](/help/sites-authoring/working-with-page-versions.md#timewarp)  — 允许您查看特定时间点的页面状态。
+* [时间扭曲](/help/sites-authoring/working-with-page-versions.md#timewarp) - 让您查看页面在特定时间点的状态。
 * [Live Copy 状态](/help/sites-authoring/editing-content.md#live-copy-status) – 允许快速查看 Live Copy 状态以及继承/未继承的组件。
 * [预览](/help/sites-authoring/editing-content.md#previewing-pages) - 用于查看将在发布环境中显示的页面；或使用内容中的链接进行导航。
 
@@ -345,7 +345,7 @@ AEM 的创作环境提供了各种可用于组织和编辑内容的机制. 可�
 ![screen_shot_2018-03-22at154521](assets/screen_shot_2018-03-22at154521.png)
 
 * 选择资源后，对话框右上角的&#x200B;**选择**&#x200B;按钮将变为活动状态。单击或点按以确认选择，或者单击或点按&#x200B;**取消**&#x200B;以中止操作。
-* 如果上下文允许选择多个资源，则选择某个资源也会激活“选择 **** ”按钮，但也会将选定资源的计数添加到窗口的右上角。 单击该 **数字旁边的** X可取消选择全部。
+* 如果上下文允许选择多个资源，则选择某个资源也会激活“选择 **** ”按钮，但也会将选定资源的计数添加到窗口的右上角。单击该 **数字旁边的** X可取消选择全部。
 * 在树中导航时，您的位置会反映在对话框顶部的痕迹导航中。还可使用这些痕迹导航在资源层次结构中快速跳转。
 * 您随时都可以使用对话框顶部的搜索字段。单击搜索字段中的 **X** 可清除搜索。
 * 要缩小搜索范围，您可以显示过滤器选项并按特定路径筛选结果。

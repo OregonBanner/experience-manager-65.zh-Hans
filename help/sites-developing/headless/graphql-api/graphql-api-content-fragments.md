@@ -6,7 +6,7 @@ exl-id: beae1f1f-0a76-4186-9e58-9cab8de4236d
 source-git-commit: 79fa58e63596301e1669903ce10dd8b2ba7d0a1b
 workflow-type: tm+mt
 source-wordcount: '4774'
-ht-degree: 55%
+ht-degree: 62%
 
 ---
 
@@ -118,7 +118,7 @@ AEM提供了将查询（两种类型）转换为 [持久查询](/help/sites-deve
 
 虽然GraphQL也支持GET请求，但这些请求可能会达到限制（例如URL的长度），而使用持久查询可以避免这些限制。
 
-请参阅 [启用持久查询的缓存](#enable-caching-persisted-queries) 以了解更多详细信息。
+有关更多详细信息，请参阅[启用持久化查询缓存](#enable-caching-persisted-queries)。
 
 >[!NOTE]
 >
@@ -253,7 +253,7 @@ GraphQL for AEM 支持一个类型列表。所有支持的内容片段模型数�
 |--- |--- |--- |
 | 单行文本 | `String`、`[String]` |  用于简单字符串，例如作者名称和位置名称。 |
 | 多行文本 | `String` | 用于输出文本，例如文章的正文 |
-| 数字 |  `Float`, `[Float]` | 用于显示浮点数和常规数字 |
+| 数字 |  `Float`， `[Float]` | 用于显示浮点数和常规数字 |
 | 布尔型 |  `Boolean` | 用于显示复选框 → 简单的 true/false 语句 |
 | 日期和时间 | `Calendar` | 用于显示日期和时间，使用 ISO 8086 格式。根据选择的类型，有三种风格可用于 AEM GraphQL 中：`onlyDate`、`onlyTime`、`dateTime` |
 | 枚举 |  `String` | 用于显示在模型创建时定义的选项列表中的选项 |
@@ -546,7 +546,7 @@ query GetAdventureByType($includePrice: Boolean!) {
 >
 >为获得最佳性能，请考虑 [在GraphQL筛选中更新用于分页和排序的内容片段](/help/sites-developing/headless/graphql-api/graphql-optimized-filtering-content-update.md).
 
-此功能允许您根据指定字段对查询结果进行排序。
+此功能让您根据指定字段对查询结果进行排序。
 
 排序标准：
 
@@ -615,7 +615,7 @@ query {
 >
 >为获得最佳性能，请考虑 [在GraphQL筛选中更新用于分页和排序的内容片段](/help/sites-developing/headless/graphql-api/graphql-optimized-filtering-content-update.md).
 
-此功能允许您对返回列表的查询类型执行分页。 提供了两种方法：
+此功能让您对返回列表的查询类型执行分页。提供了两种方法：
 
 * 在 `List` 查询中的 `offset` 和 `limit`
 * 在 `Paginated` 查询中的 `first` 和 `after`
@@ -688,25 +688,25 @@ query {
 >
 >* 由于内部技术限制，如果对嵌套字段应用排序和筛选，则性能会降低。 因此，请使用存储在根级别的筛选器/排序字段。 如果要查询大型分页结果集，也建议使用此方法。
 
-## GraphQL持久查询 — 在Dispatcher中启用缓存 {#graphql-persisted-queries-enabling-caching-dispatcher}
+## GraphQL 持久化查询 - 在 Dispatcher 中启用缓存 {#graphql-persisted-queries-enabling-caching-dispatcher}
 
 >[!CAUTION]
 >
->如果启用了Dispatcher中的缓存，则 [CORS过滤器](#cors-filter) 不需要，因此该部分可以忽略。
+>如果在 Dispatcher 中启用了缓存，则不需要 [CORS 筛选条件](#cors-filter)，并且可以忽略该部分。
 
-默认情况下，Dispatcher中未启用持久查询的缓存。 无法启用默认功能，因为使用具有多个源的CORS（跨源资源共享）的客户需要查看和更新其Dispatcher配置。
+默认情况下，Dispatcher 中未启用持久化查询的缓存。无法实施默认启用，因为对多个源使用 CORS（跨源资源共享）的客户需要检查并（可能需要）更新其 Dispatcher 配置。
 
 >[!NOTE]
 >
->Dispatcher不缓存 `Vary` 标题。
+>Dispatcher 不会缓存 `Vary` 标头。
 >
->可以在Dispatcher中启用其他CORS相关标头的缓存，但是当有多个CORS源时，该功能可能不够。
+>可以在 Dispatcher 中启用其他 CORS 相关标头的缓存，但如果存在多个 CORS 源，则可能不够。
 
-### 启用持久查询的缓存 {#enable-caching-persisted-queries}
+### 启用持久化查询的缓存 {#enable-caching-persisted-queries}
 
-要启用持久查询的缓存，请定义Dispatcher变量 `CACHE_GRAPHQL_PERSISTED_QUERIES`：
+要启用持久化查询的缓存，请定义 Dispatcher 变量 `CACHE_GRAPHQL_PERSISTED_QUERIES`：
 
-1. 将变量添加到Dispatcher文件 `global.vars`：
+1. 将该变量添加到 Dispatcher 文件 `global.vars` 中：
 
    ```xml
    Define CACHE_GRAPHQL_PERSISTED_QUERIES
@@ -714,18 +714,18 @@ query {
 
 >[!NOTE]
 >
->要符合 [Dispatcher对可缓存文档的要求](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/troubleshooting/dispatcher-faq.html#how-does-the-dispatcher-return-documents%3F)，Dispatcher添加后缀 `.json` 到所有持久查询URL，以便可以缓存结果。
+>为了符合 [Dispatcher 对可缓存文档的要求](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/troubleshooting/dispatcher-faq.html#how-does-the-dispatcher-return-documents%3F)，Dispatcher 将后缀 `.json` 添加到所有持久化查询 URL，以便能够缓存结果。
 >
->启用持久查询缓存后，此后缀将由重写规则添加。
+>在启用持久化查询缓存后，将通过重写规则添加此后缀。
 
-### Dispatcher中的CORS配置 {#cors-configuration-in-dispatcher}
+### Dispatcher 中的 CORS 配置 {#cors-configuration-in-dispatcher}
 
-使用CORS请求的客户可能需要在Dispatcher中查看和更新其CORS配置。
+使用 CORS 请求的客户可能需要在 Dispatcher 中查看和更新其 CORS 配置。
 
-* 此 `Origin` 不得通过Dispatcher将标头传递到AEM发布：
-   * 查看 `clientheaders.any` 文件。
-* 相反，必须在Dispatcher级别评估CORS请求是否为允许的源。 此方法还可以确保在所有情况下都在一个位置正确设置与CORS相关的标头。
-   * 此类配置应添加到 `vhost` 文件。 下面给出了一个配置示例；为简单起见，仅提供了CORS相关部分。 您可以根据特定用例调整它。
+* `Origin` 标头不得通过 Dispatcher 传递到 AEM 发布：
+   * 检查 `clientheaders.any` 文件。
+* 相反，必须在 Dispatcher 级别为允许的源评估 CORS 请求。此方法还可确保在所有情况下，在一个位置正确设置 CORS 相关标头。
+   * 应将此类配置添加到 `vhost` 文件。下面提供了一个示例配置；为简单起见，仅提供了 CORS 相关部分。您可以根据特定用例进行调整。
 
   ```xml
   <VirtualHost *:80>
@@ -895,7 +895,7 @@ query {
 
 >[!CAUTION]
 >
->如果 [Dispatcher中的缓存已启用](#graphql-persisted-queries-enabling-caching-dispatcher) 则无需使用CORS过滤器，因此可以忽略此部分。
+>如果[已在 Dispatcher 中启用缓存](#graphql-persisted-queries-enabling-caching-dispatcher)，则不需要 CORS 筛选条件，因此可忽略此部分。
 
 >[!NOTE]
 >

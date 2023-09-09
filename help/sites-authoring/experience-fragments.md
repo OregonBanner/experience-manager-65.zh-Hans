@@ -77,7 +77,7 @@ ht-degree: 78%
 
 * [在这些文件夹中配置允许的模板](#configure-allowed-templates-folder)。
 
-创建文件夹允许您：
+创建文件夹可以让您：
 
 * 为您的体验片段创建有意义的结构；例如，根据分类
 
@@ -227,7 +227,7 @@ WKND 项目可根据 `Contributors` 构建一些体验片段。使用的结构�
 
    ![xf-authoring-06](assets/xf-authoring-06.png)
 
-1. **创建** 允许您创建：
+1. **创建**&#x200B;让您创建：
 
    * **变体**
    * **[live-copy 形式的变量](/help/sites-administering/msm.md#live-copies)**.

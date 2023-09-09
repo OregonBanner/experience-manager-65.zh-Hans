@@ -5,7 +5,7 @@ exl-id: c9597c78-be05-42ff-84fe-f7451119e83d
 source-git-commit: 10227bcfcfd5a9b0f126fee74dce6ec7842f5e95
 workflow-type: tm+mt
 source-wordcount: '1014'
-ht-degree: 94%
+ht-degree: 98%
 
 ---
 
@@ -19,7 +19,7 @@ AEM 提供了功能强大的工具来管理一个平台上的内容创建和交�
 
 AEM 还可用于简单地管理内容，并允许呈现和交付要由另一个平台管理的内容。这是内容管理“Headless”模型，在该模型中，内容作者和开发人员在不同的平台上工作以将体验交付给内容消费者。
 
-但这并不一定是一个二选一的选择。 AEM 提供了前所未有的灵活性，使您能够在项目中灵活地运用这两种模型的优势。
+但这不必是一个二选一的选择。AEM 提供了前所未有的灵活性，使您能够在项目中灵活地运用这两种模型的优势。
 
 ![AEM 实施模型](/help/sites-developing/headless/getting-started/assets/aem-implementation-models.png)
 
@@ -27,7 +27,7 @@ AEM 还可用于简单地管理内容，并允许呈现和交付要由另一个�
 
 在 Headless 模型中，内容在 AEM 存储库中管理，但通过 REST 和 GraphQL 等 API 交付到另一个系统以呈现用户体验的内容。在此模型中，内容的创建操作是在 AEM 中进行的，但内容的样式设置、呈现和交付操作是在另一个平台中进行的。
 
-单页应用程序 (SPA) 通常是 AEM 以 Headless 方式交付内容的目标。但是，这些SPA不需要完全位于AEM外部。 AEM允许您确定SPA与AEM的集成程度。 让我们举个例子。
+单页应用程序 (SPA) 通常是 AEM 以 Headless 方式交付内容的目标。但是，这些 SPA 不必完全在 AEM 外部。利用 AEM，您可以决定 SPA 集成到 AEM 中的程度。让我们举个例子。
 
 ## 网上商店示例 {#web-shop-example}
 

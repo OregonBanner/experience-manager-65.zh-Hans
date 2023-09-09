@@ -230,7 +230,7 @@ Web控制台不显示存储库中已保存更改的位置，但可以轻松地�
 
 1. 在此文件夹下创建节点：
 
-   * 类型: `sling:OsgiConfig`
+   * 类型：`sling:OsgiConfig`
    * 名称：永久标识(PID)；
 
      例如，AEM WCM版本管理器使用 `com.day.cq.wcm.core.impl.VersionManagerImpl`

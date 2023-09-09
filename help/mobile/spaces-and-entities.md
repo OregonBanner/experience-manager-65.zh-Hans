@@ -164,7 +164,7 @@ ht-degree: 1%
 
    ![chlimage_1-92](assets/chlimage_1-92.png)
 
-1. 选择图元的模型。 这是要创建的实体类型。 单击下一步。
+1. 选择图元的模型。 这是要创建的实体类型。 单击“下一个”。
 
    ![chlimage_1-93](assets/chlimage_1-93.png)
 

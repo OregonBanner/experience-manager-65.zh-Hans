@@ -141,8 +141,8 @@ RTE的基本功能由的值激活或停用 `features` 属性的特定于相应�
 >[!NOTE]
 >
 >不要命名下的节点 `cq:inplaceEditing` 作为 `config`. 开启 `cq:inplaceEditing` 节点，定义以下属性：
->* **名称**: `configPath`
->* **类型**: `String`
+>* **名称**：`configPath`
+>* **类型**：`String`
 >* **值**：包含实际配置的节点的路径
 >
 >不要将RTE配置节点命名为 `config`. 否则，RTE配置将仅对管理员生效，而不对组中的用户生效 `content-author`.

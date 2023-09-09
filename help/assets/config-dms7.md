@@ -19,7 +19,7 @@ ht-degree: 3%
 
 # 配置Dynamic Media - Scene7模式{#configuring-dynamic-media-scene-mode}
 
-如果您使用针对不同环境（如开发、暂存和生产）设置的Adobe Experience Manager，请为每个环境配置Dynamic MediaCloud Services。
+如果您使用针对不同环境（如开发、暂存和生产）设置的Adobe Experience Manager，请为每个环境配置Dynamic MediaCloud Service。
 
 ## Dynamic Media - Scene7模式的架构图 {#architecture-diagram-of-dynamic-media-scene-mode}
 
@@ -83,7 +83,7 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 
 请参阅 [安装功能包18912以进行批量资源迁移](/help/assets/bulk-ingest-migrate.md) 以了解更多信息。
 
-## 在Cloud Services中创建Dynamic Media配置 {#configuring-dynamic-media-cloud-services}
+## 在Cloud Service中创建Dynamic Media配置 {#configuring-dynamic-media-cloud-services}
 
 <!-- **Before you configure Dynamic Media** - After you receive your provisioning email with Dynamic Media credentials, you must open the [Dynamic Media Classic desktop application](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started), then sign in to your account to change your password. The password provided in the provisioning email is system-generated and intended to be a temporary password only. It is important that you update the password so that Dynamic Media Cloud Service is set up with the correct credentials.
 
@@ -91,7 +91,7 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 
 **To create a Dynamic Media Configuration in Cloud Services:** -->
 
-1. 在Experience Manager创作模式下，选择Experience Manager徽标以访问全局导航控制台，然后选择工具图标，然后转到 **[!UICONTROL Cloud Services]** > **[!UICONTROL Dynamic Media配置]**.
+1. 在Experience Manager创作模式下，选择Experience Manager徽标以访问全局导航控制台，然后选择工具图标，然后转到 **[!UICONTROL Cloud Service]** > **[!UICONTROL Dynamic Media配置]**.
 1. 在Dynamic Media配置浏览器页面的左侧窗格中，选择 **[!UICONTROL 全局]** (请勿选择左侧的文件夹图标 **[!UICONTROL 全局]**)，然后选择 **[!UICONTROL 创建]**.
 1. 在 **[!UICONTROL 创建Dynamic Media配置]** 页面，输入标题、Dynamic Media帐户电子邮件地址和密码，然后选择您所在的区域。 此信息通过在预配电子邮件中的Adobe向您提供。 如果您没有收到电子邮件，请联系Adobe客户支持。
 
@@ -121,7 +121,7 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
    * **[!UICONTROL 公司]** - Dynamic Media帐户的名称。
      >[!IMPORTANT]
      >
-     一个Experience Manager实例仅支持Cloud Services中的一个Dynamic Media配置；请勿添加多个配置。 一个Experience Manager实例上的多个Dynamic Media配置为 _非_ 受Adobe支持或推荐。
+     一个Experience Manager实例仅支持Cloud Service中的一个Dynamic Media配置；请勿添加多个配置。 一个Experience Manager实例上的多个Dynamic Media配置为 _非_ 受Adobe支持或推荐。
 
      <!-- CQDOC-19579 and CQDOC-19612 -->
 
@@ -189,7 +189,7 @@ Dynamic Media中的密码过期时间设置为自当前系统日期起100年。
 **要更改Dynamic Media的密码，请执行以下操作：**
 
 1. 在Experience Manager创作模式下，选择Experience Manager徽标以访问全局导航控制台。
-1. 在控制台左侧，选择“工具”图标，然后转到 **[!UICONTROL Cloud Services] > [!UICONTROL Dynamic Media配置]**.
+1. 在控制台左侧，选择“工具”图标，然后转到 **[!UICONTROL Cloud Service] > [!UICONTROL Dynamic Media配置]**.
 1. 在Dynamic Media配置浏览器页面的左侧窗格中，选择 **[!UICONTROL 全局]**. 请勿选择左侧的文件夹图标 **[!UICONTROL 全局]**. 然后，选择 **[!UICONTROL 编辑]**.
 1. 在 **[!UICONTROL 编辑Dynamic Media配置]** 页面，紧接在 **[!UICONTROL 密码]** 字段，选择 **[!UICONTROL 更改密码]**.
 1. 在 **[!UICONTROL 更改密码]** 对话框中，执行以下操作：
@@ -465,7 +465,7 @@ Dynamic Media中的密码过期时间设置为自当前系统日期起100年。
 
 作为替代方法，您可以使用 **[!UICONTROL 查看代码]** 表单字段不可用。 在此视图中，您可以完全使用正则表达式来创建命名约定定义。
 
-两个元素可用于定义：“匹配”和“基本名称”。 这些字段允许您定义命名约定的所有元素，并标识用于命名包含这些元素的集的约定的部分。 公司的单个命名惯例通常对这些元素中的每一个使用一行或多行定义。 您可以为唯一定义使用尽可能多的行，并将它们分组为不同的元素，例如用于主图像、颜色元素、备用视图元素和样本元素。
+两个元素可用于定义：“匹配”和“基本名称”。 这些字段允许您定义命名约定的所有元素，并标识用于命名包含这些元素的集的约定的部分。 公司的单个命名惯例通常对这些元素中的每一个使用一行或多行定义。 您可以为唯一定义使用尽可能多的行，并将它们分组为不同的元素，例如用于主图像、颜色元素、替代视图元素和样本元素。
 
 **要配置默认命名，请执行以下操作：**
 
@@ -713,7 +713,7 @@ Scene7上传连接设置将Experience Manager资源同步到Dynamic Media Classi
 
 ### （可选）筛选要复制的资产 {#optional-filtering-assets-for-replication}
 
-在非Dynamic Media部署中，您复制 *所有* 资源（图像和视频）从Experience Manager创作环境转到Experience Manager发布节点。 此工作流是必要的，因为Experience Manager发布服务器也交付资产。
+在非Dynamic Media部署中，您复制 *所有* 资源（图像和视频）从Experience Manager创作环境转到Experience Manager发布节点。 此工作流是必需的，因为Experience Manager发布服务器也交付资产。
 
 但是，在Dynamic Media部署中，由于资源是通过Cloud Service交付的，因此无需将这些相同的资源复制到Experience Manager发布节点。 这种“混合发布”工作流可以避免复制资产所需的额外存储成本和较长的处理时间。 Experience Manager发布节点将继续提供其他内容，例如站点页面。
 

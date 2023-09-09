@@ -12,7 +12,7 @@ exl-id: d5cf4478-51e4-4ca8-b3f8-6d7caed7d515
 source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
 source-wordcount: '3067'
-ht-degree: 69%
+ht-degree: 71%
 
 ---
 
@@ -76,7 +76,7 @@ ht-degree: 69%
 
 * **模式选择器**
 
-  显示当前 [模式](/help/sites-authoring/author-environment-tools.md#page-modes) 并允许您选择其他模式，如编辑、布局、时间扭曲或定位。
+  显示当前的[模式](/help/sites-authoring/author-environment-tools.md#page-modes)并让您选择其他模式，例如编辑、布局、时间扭曲或定位。
 
   ![模式选择器](assets/chlimage_1-120.png)
 
@@ -88,7 +88,7 @@ ht-degree: 69%
 
 * **批注**
 
-  允许您添加 [注释](/help/sites-authoring/annotations.md) 查看页面时跳转到页面。 添加第一个注释后，该图标将切换为数字，以指示页面上的注释数量。
+  让您在审核页面时向页面中添加[注释](/help/sites-authoring/annotations.md)。添加第一个注释后，该图标将切换为数字，以指示页面上的注释数量。
 
   ![批注](do-not-localize/screen_shot_2018-03-22at111638.png)
 
@@ -280,7 +280,7 @@ ht-degree: 69%
 
 * **组**
 
-  这使您能够一次选择多个组件。 在桌面设备上&#x200B;**按住 Ctrl 并单击**&#x200B;或&#x200B;**按住 Command 并单击**&#x200B;可实现同样的操作。
+  此操作让您一次选择多个组件。在桌面设备上&#x200B;**按住 Ctrl 并单击**&#x200B;或&#x200B;**按住 Command 并单击**&#x200B;可实现同样的操作。
 
   ![组](do-not-localize/screen_shot_2018-03-22at113240.png)
 
@@ -292,13 +292,13 @@ ht-degree: 69%
 
 * **布局**
 
-  这可让您修改 [布局](/help/sites-authoring/editing-content.md#edit-component-layout) 选定组件的。 此操作仅适用于选定组件，而不会激活整个页面的[布局模式](/help/sites-authoring/author-environment-tools.md#page-modes)。
+  让您修改选定组件的[布局](/help/sites-authoring/editing-content.md#edit-component-layout)。此操作仅适用于选定组件，而不会激活整个页面的[布局模式](/help/sites-authoring/author-environment-tools.md#page-modes)。
 
   ![布局](do-not-localize/screen_shot_2018-03-22at113044.png)
 
 * **转换为体验片段变体**
 
-  这让您能够创建新的 [体验片段](/help/sites-authoring/experience-fragments.md) 或将它添加到现有的体验片段中。
+  让您从选定的组件创建一个新的[体验片段](/help/sites-authoring/experience-fragments.md)，或将其添加到现有的体验片段中。
 
   ![转换为体验片段变量](do-not-localize/screen_shot_2018-03-22at113033.png)
 
@@ -494,7 +494,7 @@ ht-degree: 69%
 在编辑内容时，您可以使用预览[模式](/help/sites-authoring/author-environment-tools.md#page-modes)预览页面。此模式：
 
 * 会隐藏各种编辑机制，以便让您快速查看页面在发布时是什么样子。
-* 允许您使用链接进行导航。
+* 让您使用链接进行导航。
 * **不会**&#x200B;刷新页面内容。
 
 进行创作时，可以使用页面编辑器右上角的图标进入预览模式：

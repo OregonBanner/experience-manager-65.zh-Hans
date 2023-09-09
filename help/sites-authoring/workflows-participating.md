@@ -12,7 +12,7 @@ exl-id: e47270e8-bace-4d0f-a088-7269b6356315
 source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
 source-wordcount: '1525'
-ht-degree: 91%
+ht-degree: 92%
 
 ---
 
@@ -172,7 +172,7 @@ ht-degree: 91%
 
 ### 对参与者步骤执行回退 {#performing-step-back-on-a-participant-step}
 
-如果您发现需要重复一个步骤或一系列步骤，您可以执行回退。这允许您选择在工作流中较早发生的步骤进行重新处理。 工作流会返回到您指定的步骤，然后从此处继续执行。
+如果您发现需要重复一个步骤或一系列步骤，您可以执行回退。此操作让您选择之前已在工作流中执行过的步骤，以进行重新处理。工作流会返回到您指定的步骤，然后从此处继续执行。
 
 在此操作中，您可以指示：
 

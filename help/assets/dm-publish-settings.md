@@ -21,7 +21,7 @@ ht-degree: 3%
 只有符合以下条件时，才可配置Dynamic Media发布设置：
 
 * 您正在以Scene7模式运行Dynamic Media。 请参阅 [在Scene7模式下启用Dynamic Media](/help/assets/config-dms7.md#enabling-dynamic-media-in-scene-mode).
-* 您有一个 *现有* **[!UICONTROL Dynamic Media配置]** (in **[!UICONTROL Cloud Services]**)在Adobe Experience Manager 6.5.11或更高版本中。 请参阅 [在Cloud Services中创建Dynamic Media配置](/help/assets/config-dms7.md#configuring-dynamic-media-cloud-services).
+* 您有一个 *现有* **[!UICONTROL Dynamic Media配置]** (in **[!UICONTROL Cloud Service]**)在Adobe Experience Manager 6.5.11或更高版本中。 请参阅 [在Cloud Service中创建Dynamic Media配置](/help/assets/config-dms7.md#configuring-dynamic-media-cloud-services).
 * 您是具有管理员权限的Experience Manager系统管理员。
 
 Dynamic Media发布设置旨在供经验丰富的网站开发人员和程序员使用。 AdobeDynamic Media建议更改这些发布设置的用户熟悉AdobeDynamic Media、HTTP协议标准和惯例，以及基础映像技术。

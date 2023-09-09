@@ -224,7 +224,7 @@ select * from [nt:base] where [alias] = '/admin'
 
 要为上述查询定义Lucene属性索引，可通过在下创建节点来添加以下定义 **oak:index:**
 
-* **名称:** `LucenePropertyIndex`
+* **名称：**`LucenePropertyIndex`
 * **类型:** `oak:QueryIndexDefinition`
 
 创建节点后，添加以下属性：
@@ -283,7 +283,7 @@ select * from [nt:base] where [alias] = '/admin'
 
 1. 将属性添加到具有以下属性的默认节点：
 
-   * **名称:** `class`
+   * **名称：**`class`
    * **类型:** `String`
    * **值:** `org.apache.lucene.analysis.standard.StandardAnalyzer`
 
@@ -291,7 +291,7 @@ select * from [nt:base] where [alias] = '/admin'
 
    您还可以使用选项，将分析器设置为与特定Lucene版本一起使用 `luceneMatchVersion` 字符串属性。 将其与Lucene 4.7一起使用的有效语法为：
 
-   * **名称:** `luceneMatchVersion`
+   * **名称：**`luceneMatchVersion`
    * **类型:** `String`
    * **值:** `LUCENE_47`
 
@@ -299,7 +299,7 @@ select * from [nt:base] where [alias] = '/admin'
 
 1. 如果要将stopwords文件添加到分析器配置，可以在 `default` 一个具有以下属性：
 
-   * **名称:** `stopwords`
+   * **名称：**`stopwords`
    * **类型:** `nt:file`
 
 #### 通过合成创建分析器 {#creating-analyzers-via-composition}
@@ -308,39 +308,39 @@ select * from [nt:base] where [alias] = '/admin'
 
 以此节点结构为例：
 
-* **名称:** `analyzers`
+* **名称：**`analyzers`
 
-   * **名称:** `default`
+   * **名称：**`default`
 
-      * **名称:** `charFilters`
+      * **名称：**`charFilters`
       * **类型:** `nt:unstructured`
 
-         * **名称:** `HTMLStrip`
-         * **名称:** `Mapping`
+         * **名称：**`HTMLStrip`
+         * **名称：**`Mapping`
 
-      * **名称:** `tokenizer`
+      * **名称：**`tokenizer`
 
          * **属性名称:** `name`
 
             * **类型:** `String`
             * **值:** `Standard`
 
-      * **名称:** `filters`
+      * **名称：**`filters`
       * **类型:** `nt:unstructured`
 
-         * **名称:** `LowerCase`
-         * **名称:** `Stop`
+         * **名称：**`LowerCase`
+         * **名称：**`Stop`
 
             * **属性名称:** `words`
 
                * **类型:** `String`
                * **值:** `stop1.txt, stop2.txt`
 
-            * **名称:** `stop1.txt`
+            * **名称：**`stop1.txt`
 
                * **类型:** `nt:file`
 
-            * **名称:** `stop2.txt`
+            * **名称：**`stop2.txt`
 
                * **类型:** `nt:file`
 

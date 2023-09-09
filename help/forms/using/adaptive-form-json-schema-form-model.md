@@ -8,13 +8,13 @@ exl-id: 1b402aef-a319-4d32-8ada-cadc86f5c872
 source-git-commit: d0768679182567cc7cd618adaa78b6518f902f7c
 workflow-type: tm+mt
 source-wordcount: '1861'
-ht-degree: 5%
+ht-degree: 8%
 
 ---
 
 # 使用JSON架构创建自适应表单 {#creating-adaptive-forms-using-json-schema}
 
-<span class="preview"> Adobe建议使用现代化的、可扩展的数据捕获 [核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) 对象 [创建新的自适应Forms](/help/forms/using/create-an-adaptive-form-core-components.md) 或 [将自适应Forms添加到AEM Sites页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). 这些组件在创建自适应Forms方面实现了重大进步，确保了令人印象深刻的用户体验。 本文介绍了使用基础组件创作自适应Forms的旧方法。 </span>
+<span class="preview">Adobe 建议使用现代、可扩展的数据捕获[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html)，以[创建新的自适应表单](/help/forms/using/create-an-adaptive-form-core-components.md)或[将自适应表单添加到 AEM Sites 页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。这些组件代表有关创建自适应表单的重大改进，确保实现令人印象深刻的用户体验。本文介绍了使用基础组件创作自适应表单的旧方法。</span>
 
 | 版本 | 文章链接 |
 | -------- | ---------------------------- |
@@ -366,7 +366,7 @@ JSON元素与自适应表单组件的映射如下所示：
 
 JavaScript是自适应表单的表达式语言。 所有表达式都是有效的JavaScript表达式，并使用自适应表单脚本模型API。 您可以预配置表单对象，以 [计算表达式](adaptive-form-expressions.md) 在表单事件中。
 
-使用aem：afproperties属性为自适应表单组件预配置自适应表单表达式或脚本。 例如，当触发初始化事件时，以下代码设置telephone字段的值并将值打印到日志：
+使用aem：afproperties属性为自适应表单组件预配置自适应表单表达式或脚本。 例如，触发初始化事件时，以下代码设置telephone字段的值并将值打印到日志：
 
 ```json
 "telephone": {

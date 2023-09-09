@@ -31,8 +31,8 @@ AEM允许您生成包含从内容中动态获取的文本的图形。
 
 1. 下 `/apps/<your-project>/` 创建新节点：
 
-   * **名称**: `fonts`
-   * **类型**: `sling:Folder`
+   * **名称**：`fonts`
+   * **类型**：`sling:Folder`
 
    保存所有更改。
 

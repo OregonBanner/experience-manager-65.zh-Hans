@@ -10,7 +10,7 @@ exl-id: d60e9601-d15b-4378-a33e-e90961f63195
 source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
 source-wordcount: '764'
-ht-degree: 8%
+ht-degree: 10%
 
 ---
 
@@ -64,7 +64,7 @@ ht-degree: 8%
 
 >[!NOTE]
 >
->无法将注释添加到其他用户锁定的页面。
+>无法将注释添加到其他用户已锁定的页面。
 
 ## 注释草图 {#annotation-sketches}
 

@@ -290,13 +290,13 @@ DEBUG 3 WebApp Panel: WebApp successfully deployed
 1. 如果不存在，请创建配置文件夹( `sling:Folder`) `/apps/<project-name>/config`.
 1. 下 `/apps/<project-name>/config`，为新的创建节点 [Apache Sling日志记录器配置](/help/sites-deploying/osgi-configuration-settings.md#apacheslingloggingloggerconfigurationfactoryconfiguration)：
 
-   * 名称: `org.apache.sling.commons.log.LogManager.factory.config-<identifier>`
+   * 名称：`org.apache.sling.commons.log.LogManager.factory.config-<identifier>`
 
      `<identifier>`免费文本替换为您（必须）输入以识别实例（您不能忽略此信息）。
 
      例如，`org.apache.sling.commons.log.LogManager.factory.config-MINE`
 
-   * 类型: `sling:OsgiConfig`
+   * 类型：`sling:OsgiConfig`
 
    >[!NOTE]
    >
@@ -304,13 +304,13 @@ DEBUG 3 WebApp Panel: WebApp successfully deployed
 
 1. 在此节点上设置以下属性：
 
-   * 名称: `org.apache.sling.commons.log.file`
+   * 名称：`org.apache.sling.commons.log.file`
 
      类型：字符串
 
      值：指定日志文件；例如， `logs/myLogFile.log`
 
-   * 名称: `org.apache.sling.commons.log.names`
+   * 名称：`org.apache.sling.commons.log.names`
 
      类型：字符串[] （字符串+多个）
 
@@ -320,7 +320,7 @@ DEBUG 3 WebApp Panel: WebApp successfully deployed
       * `org.apache.felix`
       * `com.day`
 
-   * 名称: `org.apache.sling.commons.log.level`
+   * 名称：`org.apache.sling.commons.log.level`
 
      类型：字符串
 
@@ -328,9 +328,9 @@ DEBUG 3 WebApp Panel: WebApp successfully deployed
 
    * 根据需要配置其他参数：
 
-      * 名称: `org.apache.sling.commons.log.pattern`
+      * 名称：`org.apache.sling.commons.log.pattern`
 
-        类型: `String`
+        类型：`String`
 
         值：根据需要指定日志消息的模式；例如，
 
@@ -393,7 +393,7 @@ DEBUG 3 WebApp Panel: WebApp successfully deployed
 
      和记录器一样， `<identifier>` 替换为（必须）输入以标识实例的自由文本（不能忽略此信息）。 例如，`org.apache.sling.commons.log.LogManager.factory.writer-MINE`
 
-   * 类型: `sling:OsgiConfig`
+   * 类型：`sling:OsgiConfig`
 
    >[!NOTE]
    >
@@ -401,9 +401,9 @@ DEBUG 3 WebApp Panel: WebApp successfully deployed
 
    在此节点上设置以下属性：
 
-   * 名称: `org.apache.sling.commons.log.file`
+   * 名称：`org.apache.sling.commons.log.file`
 
-     类型: `String`
+     类型：`String`
 
      值：指定日志文件，使其与记录器中指定的文件匹配；
 
@@ -411,15 +411,15 @@ DEBUG 3 WebApp Panel: WebApp successfully deployed
 
    * 根据需要配置其他参数：
 
-      * 名称: `org.apache.sling.commons.log.file.number`
+      * 名称：`org.apache.sling.commons.log.file.number`
 
-        类型: `Long`
+        类型：`Long`
 
         值：指定要保留的日志文件数；例如， `5`
 
-      * 名称: `org.apache.sling.commons.log.file.size`
+      * 名称：`org.apache.sling.commons.log.file.size`
 
-        类型: `String`
+        类型：`String`
 
         值：根据需要指定以按大小/日期控制文件旋转；例如， `'.'yyyy-MM-dd`
 

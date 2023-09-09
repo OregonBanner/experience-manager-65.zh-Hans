@@ -5,7 +5,7 @@ exl-id: 44f85d00-a958-470a-8a6e-e2ae1580525a
 source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
 source-wordcount: '1333'
-ht-degree: 93%
+ht-degree: 94%
 
 ---
 
@@ -124,7 +124,7 @@ The use cases for the AEM GraphQL API can depend on the type of AEMenvironment:
 这些内容片段模型：
 
 * 一旦&#x200B;**启用**，用于生成架构。
-* 提供 GraphQL 所需的数据类型和字段。 它们确保您的应用程序仅请求可能的内容，并接收预期内容。
+* 提供 GraphQL 所需的数据类型和字段。它们确保您的应用程序仅请求可能的内容，并接收预期内容。
 * 数据类型&#x200B;**片段引用**&#x200B;可在模型中使用来引用其他内容片段，因此可引入其他级别的结构。
 
 ### 片段引用 {#fragment-references}
@@ -133,7 +133,7 @@ The use cases for the AEM GraphQL API can depend on the type of AEMenvironment:
 
 * 是可在定义内容片段模型时可用的特定数据类型。
 * 引用另一个片段，具体取决于特定的内容片段模型。
-* 允许您创建和检索结构化数据。
+* 让您依次创建和检索结构化数据。
 
    * 定义为&#x200B;**多源**，则主片段可以引用（检索）多个子片段。
 

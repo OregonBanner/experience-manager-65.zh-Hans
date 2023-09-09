@@ -7,7 +7,7 @@ exl-id: 50982ede-7ccf-45b2-b0dd-a49d23e0f971
 source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
 source-wordcount: '2422'
-ht-degree: 93%
+ht-degree: 95%
 
 ---
 
@@ -40,7 +40,7 @@ ht-degree: 93%
 
 ## 创作内容 {#authoring-your-content}
 
-当您打开内容片段进行编辑时，**变体**&#x200B;选项卡将默认打开。 在此，您可以为主要或任何变体创作内容。 结构化片段包含内容模型中定义的各种数据类型的字段。
+当您打开内容片段进行编辑时，**变体**&#x200B;选项卡将默认打开。 在此，您可以为主要或任何变体创作内容。结构化片段包含内容模型中定义的各种数据类型的字段。
 
 例如：
 
@@ -60,7 +60,7 @@ ht-degree: 93%
 
 * 将&#x200B;**标记**&#x200B;分配给当前变体；可以添加、更新和删除标签
 
-   * [标记](/help/sites-authoring/tags.md)在组织片段时可发挥强大作用，因为其可用于内容分类和分类。 标记可用于查找内容（按标记）和应用批量操作。
+   * [标记](/help/sites-authoring/tags.md)在组织片段时可发挥强大作用，因为其可用于内容分类和分类。标记可用于查找内容（按标记）和应用批量操作。
 
 
       * 搜索标记将会返回片段，并会突出显示标记的变体。
@@ -115,7 +115,7 @@ ht-degree: 93%
 
 ### 富文本 {#rich-text}
 
-富文本编辑允许您设置格式：
+富文本编辑可让您设置格式：
 
 * 粗体
 * 斜体
@@ -140,7 +140,7 @@ ht-degree: 93%
 
 ### 纯文本 {#plain-text}
 
-纯文本允许快速输入内容，而无需设置格式或标记信息。 您还可以打开全屏编辑器以进一步[操作](#actions)。
+纯文本允许快速输入内容，而无需设置格式或标记信息。您还可以打开全屏编辑器以进一步[操作](#actions)。
 
 >[!CAUTION]
 >
@@ -152,7 +152,7 @@ ht-degree: 93%
 >
 >有关完整信息，请参阅 [Markdown](/help/assets/content-fragments/content-fragments-markdown.md) 文档。
 
-这允许您使用Markdown设置文本格式。 您可以定义：
+这让您使用 Markdown 设置文本格式。您可以定义：
 
 * 标题
 * 段落和换行符
@@ -279,11 +279,11 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 
 1. 打开全屏编辑器。
 
-1. 顶部工具栏中有&#x200B;**注释**&#x200B;图标。 您可以根据需要选择一些文本。
+1. 顶部工具栏中有&#x200B;**注释**&#x200B;图标。您可以根据需要选择一些文本。
 
    ![批注](assets/cfm-variations-07.png)
 
-1. 此时将打开一个对话框。 您可以在此输入注释。
+1. 此时将打开一个对话框。您可以在此输入注释。
 
    ![批注](assets/cfm-variations-07a.png)
 
@@ -295,11 +295,11 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 
    ![注释](assets/cfm-variations-07b.png)
 
-1. 关闭全屏编辑器时，注释仍会高亮显示。 对话框若选中将会打开，以便您进一步编辑注释。
+1. 关闭全屏编辑器时，注释仍会高亮显示。对话框若选中将会打开，以便您进一步编辑注释。
 
 1. 选择&#x200B;**“保存”**。
 
-1. 关闭全屏编辑器时，注释仍会高亮显示。 对话框若选中将会打开，以便您进一步编辑注释。
+1. 关闭全屏编辑器时，注释仍会高亮显示。对话框若选中将会打开，以便您进一步编辑注释。
 
    ![注释](assets/cfm-variations-07c.png)
 
@@ -331,7 +331,7 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 >
 无法在引用页面上移动或删除这些资源，必须在片段编辑器中完成此操作。
 >
-但是，必须在[页面编辑器](/help/sites-authoring/content-fragments.md)中编排资源格式（例如，大小）。 资源在片段编辑器中的呈现形式仅用于创作内容流。
+但是，必须在[页面编辑器](/help/sites-authoring/content-fragments.md)中编排资源格式（例如，大小）。资源在片段编辑器中的呈现形式仅用于创作内容流。
 
 >[!NOTE]
 >
@@ -371,7 +371,7 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 >
 无法在引用页面上移动或删除这些资源，必须在片段编辑器中完成此操作。
 >
-但是，必须在[页面编辑器](/help/sites-authoring/content-fragments.md)中编排资源格式（例如，大小）。 资源在片段编辑器中的呈现形式仅用于创作内容流。
+但是，必须在[页面编辑器](/help/sites-authoring/content-fragments.md)中编排资源格式（例如，大小）。资源在片段编辑器中的呈现形式仅用于创作内容流。
 
 >[!NOTE]
 >
@@ -460,13 +460,13 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 
 ### 与母版同步 {#synchronizing-with-master}
 
-**母版**&#x200B;是内容片段的一个组成部分，从定义上讲，它包含内容的母版副本，而变体则包含该内容的单独更新和定制版本。 更新母版时，这些更改可能也与变体相关，因此需要传播到这些变体中。
+**母版**&#x200B;是内容片段的一个组成部分，从定义上讲，它包含内容的母版副本，而变体则包含该内容的单独更新和定制版本。更新母版时，这些更改可能也与变体相关，因此需要传播到这些变体中。
 
-在编辑变体时，您有权使用将变体的当前元素与主要内容同步的操作。 这样，您就可以自动将对母版所做的更改复制到所需的变体。
+在编辑变体时，您有权使用将变体的当前元素与主要内容同步的操作。这样，您就可以自动将对母版所做的更改复制到所需的变体。
 
 >[!CAUTION]
 >
-同步仅可将更改从&#x200B;***母版**复制到变体*。
+同步仅可将更改&#x200B;*从&#x200B;**母版**复制到变体*。
 >
 将仅同步变体的当前元素。
 >
@@ -476,7 +476,7 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 
 <!-- needs new screenshot for synchronize effect -->
 
-1. 在片段编辑器中打开内容片段。 确保&#x200B;**母版**&#x200B;已编辑。
+1. 在片段编辑器中打开内容片段。确保&#x200B;**母版**&#x200B;已编辑。
 
 1. 选择一个特定的变体，然后从以下任一位置选择相应的同步操作：
 

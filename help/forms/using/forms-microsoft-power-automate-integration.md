@@ -6,21 +6,21 @@ exl-id: a059627b-df12-454d-9e2c-cc56986b7de6
 source-git-commit: e19a7e617bdabb678bd804cab3fea228ce19acfa
 workflow-type: tm+mt
 source-wordcount: '1196'
-ht-degree: 6%
+ht-degree: 14%
 
 ---
 
 
 # 连接自适应表单数据并将其提交到Microsoft® Power Automate {#connect-adaptive-form-with-power-automate}
 
-您可以配置自适应表单以在提交时运行Microsoft® Power Automate Cloud Flow。 配置的自适应表单将捕获的数据、附件和记录文档发送到 Power Automation Cloud Flow 进行处理。 它可帮助您构建自定义数据捕获体验，同时利用 Microsoft® Power Automate 的强大功能围绕捕获的数据构建业务逻辑并自动执行客户工作流。以下是自适应表单与Microsoft® Power Automate集成后可执行的操作示例：
+您可以配置自适应表单以在提交时运行Microsoft® Power Automate Cloud Flow。 配置的自适应表单将捕获的数据、附件和记录文档发送到 Power Automate Cloud Flow 进行处理。它可帮助您构建自定义数据捕获体验，同时利用 Microsoft® Power Automate 的强大功能围绕捕获的数据构建业务逻辑并自动执行客户工作流。以下几个示例说明了在将自适应表单与 Microsoft® Power Automate 集成后可执行的操作：
 
-* 在Power Automate业务流程中使用自适应Forms数据
-* 使用Power Automate将捕获的数据发送到500多个数据源或任何公开可用的API
-* 对捕获的数据执行复杂的计算
-* 按预定义的计划将自适应Forms数据保存到存储系统
+* 在 Power Automate 业务流程中使用自适应表单数据
+* 使用 Power Automate 将捕获的数据发送到 500 多个数据源或任何公开可用的 API
+* 对捕获的数据执行复杂计算
+* 按预定义的计划将自适应表单数据保存到存储系统
 
-自适应Forms编辑器提供 **调用Microsoft® Power Automate流** 将自适应表单数据、附件和记录文档的提交操作发送到Power Automate Cloud Flow。 要使用Submit操作将捕获的数据发送到Microsoft®Power Automate， [将您的AEM Forms创作实例连接到Microsoft® Power Automate](#connect-your-aem-forms-instance-with-microsoft&reg;-power-automate)
+自适应表单编辑器提供&#x200B;**调用 Microsoft® Power Automate 流程**&#x200B;提交操作，以将自适应表单数据、附件和记录文档发送到 Power Automate Cloud Flow。要使用Submit操作将捕获的数据发送到Microsoft®Power Automate， [将您的AEM Forms创作实例连接到Microsoft® Power Automate](#connect-your-aem-forms-instance-with-microsoft&reg;-power-automate)
 
 ## 前提条件
 
@@ -187,7 +187,7 @@ ht-degree: 6%
         }
 ```
 
-## 另请参阅,
+## 另请参阅，
 
 * [创建自适应表单](create-an-adaptive-form-core-components.md)
 * [配置提交操作](configuring-submit-actions.md)

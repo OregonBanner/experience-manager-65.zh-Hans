@@ -512,7 +512,7 @@ ContentFragment newFragment = tpl.createFragment(parentRsc, "A fragment name", "
 
 * 节点： `<*conf-root*>/settings/dam/cfm/jcr:content`
 * 属性名称: `autoSaveInterval`
-* 类型: `Long`
+* 类型：`Long`
 
 * 默认： `600` （10分钟）；此时间定义于 `/libs/settings/dam/cfm/jcr:content`
 
@@ -521,7 +521,7 @@ ContentFragment newFragment = tpl.createFragment(parentRsc, "A fragment name", "
 * 节点： `/conf/global/settings/dam/cfm/jcr:content`
 * 属性名称: `autoSaveInterval`
 
-* 类型: `Long`
+* 类型：`Long`
 
 * 值： `300` （5分钟等于300秒）
 

@@ -101,8 +101,8 @@ ht-degree: 2%
 
 要从（现有）基本步骤组件之一继承，请将以下属性添加到 `cq:Component` 节点：
 
-* 名称: `sling:resourceSuperType`
-* 类型: `String`
+* 名称：`sling:resourceSuperType`
+* 类型：`String`
 * 值：解析为基本组件的以下路径之一：
 
    * `cq/workflow/components/model/process`
@@ -127,8 +127,8 @@ ht-degree: 2%
 
 1. 在 `cq:Component` 节点，添加以下节点：
 
-   * 名称: `cq:editConfig`
-   * 类型: `cq:EditConfig`
+   * 名称：`cq:editConfig`
+   * 类型：`cq:EditConfig`
 
    >[!NOTE]
    >
@@ -136,8 +136,8 @@ ht-degree: 2%
 
 1. 在 `cq:EditConfig` 节点，添加以下节点：
 
-   * 名称: `cq:formParameters`
-   * 类型: `nt:unstructured`
+   * 名称：`cq:formParameters`
+   * 类型：`nt:unstructured`
 
 1. 添加 `String` 以下名称的属性更改为 `cq:formParameters` 节点：
 
@@ -178,15 +178,15 @@ ht-degree: 2%
 
 1. 在cq：component节点下，添加以下节点：
 
-   * 名称: `cq:editConfig`
-   * 类型: `cq:EditConfig`
+   * 名称：`cq:editConfig`
+   * 类型：`cq:EditConfig`
 
    有关cq：editConfig节点的更多信息，请参见 [配置组件的编辑行为](/help/sites-developing/developing-components.md#configuring-the-edit-behavior).
 
 1. 在cq：EditConfig节点下，添加以下节点：
 
-   * 名称: `cq:formParameters`
-   * 类型: `nt:unstructured`
+   * 名称：`cq:formParameters`
+   * 类型：`nt:unstructured`
 
 1. 添加 `String` 属性到 `cq:formParameters` 节点。 组件超类型确定属性的名称：
 
@@ -213,43 +213,43 @@ ht-degree: 2%
 
 1. 在 `cq:Component` 节点，添加以下节点：
 
-   * 名称: `cq:editConfig`
-   * 类型: `cq:EditConfig`
+   * 名称：`cq:editConfig`
+   * 类型：`cq:EditConfig`
 
    有关cq：editConfig节点的更多信息，请参见 [配置组件的编辑行为](/help/sites-developing/components-basics.md#edit-behavior).
 
 1. 在cq：EditConfig节点下，添加以下节点：
 
-   * 名称: `cq:formParameters`
-   * 类型: `nt:unstructured`
+   * 名称：`cq:formParameters`
+   * 类型：`nt:unstructured`
 
 1. 要在用户打开工作项时显示表单，请将以下属性添加到 `cq:formParameters` 节点：
 
-   * 名称: `FORM_PATH`
-   * 类型: `String`
+   * 名称：`FORM_PATH`
+   * 类型：`String`
    * 值：解析为表单的路径
 
 1. 要在用户完成工作项时显示自定义对话框，请将以下属性添加到 `cq:formParameters` 节点
 
-   * 名称: `DIALOG_PATH`
-   * 类型: `String`
+   * 名称：`DIALOG_PATH`
+   * 类型：`String`
    * 值：解析为对话框的路径
 
 ### 配置工作流步骤运行时行为 {#configuring-the-workflow-step-runtime-behavior}
 
 在 `cq:Component` 节点，添加 `cq:EditConfig` 节点。 在该处下添加 `nt:unstructured` 节点(必须命名 `cq:formParameters`)并添加到该节点中，添加以下属性：
 
-* 名称: `PROCESS_AUTO_ADVANCE`
+* 名称：`PROCESS_AUTO_ADVANCE`
 
-   * 类型: `Boolean`
+   * 类型：`Boolean`
    * 价值:
 
       * 当设置为 `true` 工作流将运行此步骤并继续 — 这是默认设置，也是推荐的
       * 时间 `false`，工作流将运行并停止；这需要额外的处理，因此 `true` 推荐
 
-* 名称: `DO_NOTIFY`
+* 名称：`DO_NOTIFY`
 
-   * 类型: `Boolean`
+   * 类型：`Boolean`
    * 值：指示是否应为用户参与步骤发送电子邮件通知（并假定邮件服务器配置正确）
 
 ## 保留和访问数据 {#persisting-and-accessing-data}

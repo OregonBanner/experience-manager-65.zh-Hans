@@ -149,7 +149,7 @@ MSM和活动副本有许多用例，一些情况包括：
 
    * 此控制台允许您 [查看和管理您的Blueprint及其活动副本](/help/sites-administering/msm-livecopy-overview.md).
 
-* **Blueprint**（**工具** – **站点**）
+* **蓝图**（**工具** – **Sites**）
 
    * 此控制台允许您 [创建和管理您的Blueprint配置](/help/sites-administering/msm-livecopy.md#creating-a-blueprint-configuration).
 
@@ -337,7 +337,7 @@ Live Copy在作为浅Live Copy的子级创建时称为栈叠式Live Copy。 其�
 
 任何页面或页面分支均可用作Live Copy的源。
 
-但是，MSM还允许您定义指定源路径的Blueprint配置。 使用 Blueprint 配置的好处是：
+不过，MSM 还让您定义指定源路径的 Blueprint 配置。使用 Blueprint 配置的好处是：
 
 * 允许作者使用 **转出** Blueprint上的选项 — 到（显式）将修改推送到从此Blueprint继承的活动副本。
 * 允许作者使用 **创建站点**；这允许用户轻松选择语言并配置Live Copy的结构。

@@ -100,7 +100,7 @@ GITHUB上的代码
 * [在GitHub上打开aem-authoring-extension-assetfinder-flickr项目](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-assetfinder-flickr)
 * 将项目下载为 [ZIP文件](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-assetfinder-flickr/archive/master.zip)
 
-## 过滤资源 {#filtering-resources}
+## 筛选资源 {#filtering-resources}
 
 创作页面时，用户通常必须从资源（例如，页面、组件和资产）中进行选择。 这可以采用列表形式，例如，作者必须从中选择项目。
 
@@ -151,7 +151,7 @@ GITHUB上的代码
       * `/libs/foundation/components/text/cq:editConfig`
       * `/libs/foundation/components/image/cq:editConfig`
 
-         * 属性: `editorType`
+         * 属性：`editorType`
 
            定义触发对该组件进行就地编辑时使用的内联编辑器的类型；例如，`text`, `textimage`, `image`, `title`。
 
@@ -181,7 +181,7 @@ GITHUB上的代码
 
    >[!CAUTION]
    >
-   >由 `ratio` 属性设置的 AEM 裁剪比例定义为&#x200B;**高度/宽度。**&#x200B;这与常见的宽高比的定义不同，这样做是出于对旧版兼容性的考虑。只要您清楚地定义 `name` 属性，页面创作用户便不会察觉到任何差异，因为您定义的名称才是 UI 中显示的内容。
+   >由 `ratio` 属性设置的 AEM 裁剪比例定义为&#x200B;**高度/宽度**。这与常见的宽高比的定义不同，这样做是出于对旧版兼容性的考虑。只要您清楚地定义 `name` 属性，页面创作用户便不会察觉到任何差异，因为您定义的名称才是 UI 中显示的内容。
 
 #### 创建新的就地编辑器 {#creating-a-new-in-place-editor}
 

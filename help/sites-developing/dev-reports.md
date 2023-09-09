@@ -785,8 +785,8 @@ N:definitions
 
 * 对于节点 `definitions/data/preprocessing/apply` 具有以下两个属性：
 
-   * `pattern`: `(.*)(/jcr:content)(/|$)(.*)`
-   * `replace`: `$1`
+   * `pattern`：`(.*)(/jcr:content)(/|$)(.*)`
+   * `replace`：`$1`
 
 * 一个字符串以：
 

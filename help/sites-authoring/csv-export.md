@@ -14,7 +14,7 @@ exl-id: 18910143-f2f2-4cfe-88b9-651df90d9cb9
 source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
 source-wordcount: '190'
-ht-degree: 81%
+ht-degree: 85%
 
 ---
 
@@ -30,7 +30,7 @@ ht-degree: 81%
 >
 >系统将使用您浏览器的下载功能及默认目标位置。
 
-此 **创建CSV导出** 向导允许您选择：
+**创建 CSV 导出**&#x200B;向导让您选择以下内容：
 
 * 要导出的属性
    * 元数据

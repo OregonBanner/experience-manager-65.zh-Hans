@@ -34,11 +34,11 @@ ht-degree: 6%
 1. 选择节点 `/apps/an-scf-sandbox/components/playpage`.
 1. 在属性选项卡中，输入具有以下值的新属性：
 
-   名称: `sling:resourceSuperType`
+   名称：`sling:resourceSuperType`
 
-   类型: `String`
+   类型：`String`
 
-   值: `foundation/components/page`
+   价值: `foundation/components/page`
 
 1. 单击绿色 **[!UICONTROL +添加]** 按钮。
 1. 单击&#x200B;**[!UICONTROL 全部保存]**。

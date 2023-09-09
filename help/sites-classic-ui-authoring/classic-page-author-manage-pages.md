@@ -109,7 +109,7 @@ ht-degree: 22%
 
 #### 名称 {#name}
 
-如果您在创建新页面时提供页面&#x200B;**名称**[，AEM 将依据 AEM 和 JCR 实行的惯例验证此名称。](/help/sites-developing/naming-conventions.md)
+如果您在创建新页面时提供页面&#x200B;**名称**，AEM 将[依据 AEM 和 JCR 实行的惯例验证此名称](/help/sites-developing/naming-conventions.md)。
 
 在经典UI中，您 **无法输入无效字符** 在 **名称** 字段。
 

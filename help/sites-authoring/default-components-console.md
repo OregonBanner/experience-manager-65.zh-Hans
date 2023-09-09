@@ -14,7 +14,7 @@ exl-id: d79107b9-dfa4-4e80-870e-0b7ea72f0bc7
 source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
 source-wordcount: '262'
-ht-degree: 55%
+ht-degree: 75%
 
 ---
 
@@ -38,7 +38,7 @@ ht-degree: 55%
 
 ### 组件详细信息 {#component-details}
 
-要查看有关特定组件的详细信息，请点按/单击所需的资源。 三个选项卡提供：
+要查看有关特定组件的详细信息，请点按/单击所需的资源。三个选项卡提供以下内容：
 
 * **属性**
 
@@ -49,9 +49,9 @@ ht-degree: 55%
    * 查看组件的常规属性。
    * 查看 [图标或缩写](/help/sites-developing/components-basics.md#component-icon-in-touch-ui) 用于组件。
 
-      * 单击图标的来源将会转到该组件。
+      * 单击图标的源将转到该组件。
 
-   * 查看 **资源类型** 和 **资源超级类型** （如果已定义）。
+   * 查看组件的&#x200B;**资源类型**&#x200B;和&#x200B;**资源超级类型**（如果定义）。
 
       * 单击“资源超级类型”将转到该组件。
 
