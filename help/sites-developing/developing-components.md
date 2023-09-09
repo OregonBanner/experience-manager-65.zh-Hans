@@ -12,7 +12,7 @@ discoiquuid: 8cdb6db4-adaa-4eda-af7d-310a0b44b80b
 docset: aem65
 legacypath: /content/docs/en/aem/6-2/develop/components/components-touch-optimized
 exl-id: 573cdc36-e9c3-4803-9c4e-cebd0cf0a56f
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 823e756f470b0599f7d53a3e08fdf650b4e892d1
 workflow-type: tm+mt
 source-wordcount: '3454'
 ht-degree: 2%
@@ -228,7 +228,7 @@ newComponent (cq:Component)
 
 如果要为组件定义样式和行为，可以创建专用的 [客户端库](/help/sites-developing/clientlibs.md) 定义您的自定义CSS/LESS和JS。
 
-要仅为组件对话框加载客户端库（即它不会为其他组件加载），您需要设置属性 `extraClientlibs`**对话框中的**添加到刚刚创建的客户端库的类别名称。 如果您的客户端库很大和/或您的字段特定于此对话框，并且其他对话框不需要执行此操作，则建议您执行此操作。
+要仅为组件对话框加载客户端库（即它不会为其他组件加载），您需要设置属性 `extraClientlibs` 对话框的类别名称添加到刚刚创建的客户端库的类别名称。 如果您的客户端库很大和/或您的字段特定于此对话框，并且其他对话框不需要执行此操作，则建议您执行此操作。
 
 要为所有对话框加载客户端库，请将客户端库的类别属性设置为 `cq.authoring.dialog`. 这是渲染所有对话框时默认包括的客户端库的类别名称。 如果客户端库较小和/或字段是通用的，并且可在其他对话框中重复使用，则需要执行此操作。
 
@@ -296,8 +296,8 @@ newComponent (cq:Component)
 
 要将给定字段标记为必填字段，请在字段的内容节点上设置以下属性：
 
-* 名称: `required`
-* 类型: `Boolean`
+* 名称：`required`
+* 类型：`Boolean`
 
 有关示例，请参阅：
 
@@ -324,7 +324,7 @@ newComponent (cq:Component)
 其定义与a的定义非常相似 [用于编辑内容的对话框](#creating-a-new-dialog)，不同之处在于它被定义为节点：
 
 * 节点名称： `cq:design_dialog`
-* 类型: `nt:unstructured`
+* 类型：`nt:unstructured`
 
 ## 创建和配置就地编辑器 {#creating-and-configuring-an-inplace-editor}
 
@@ -375,44 +375,44 @@ newComponent (cq:Component)
 
    创建新节点：
 
-   * 名称: `cq:authoring`
-   * 类型: `nt:unstructured`
+   * 名称：`cq:authoring`
+   * 类型：`nt:unstructured`
 
 1. 在此下，创建一个新节点来保存所有资产到组件映射：
 
-   * 名称: `assetToComponentMapping`
-   * 类型: `nt:unstructured`
+   * 名称：`assetToComponentMapping`
+   * 类型：`nt:unstructured`
 
 1. 对于每个资产到组件的映射，请创建一个节点：
 
    * 名称：文本；建议名称指示资产和相关组件类型；例如，图像
-   * 类型: `nt:unstructured`
+   * 类型：`nt:unstructured`
 
    每个配置文件均具有以下属性：
 
    * `assetGroup`：
 
-      * 类型: `String`
+      * 类型：`String`
       * 值：相关资产所属的组；例如， `media`
 
    * `assetMimetype`:
 
-      * 类型: `String`
+      * 类型：`String`
       * 值：相关资产的mime类型；例如 `image/*`
 
    * `droptarget`:
 
-      * 类型: `String`
+      * 类型：`String`
       * 值：放置目标；例如， `image`
 
    * `resourceType`:
 
-      * 类型: `String`
+      * 类型：`String`
       * 值：相关的组件资源；例如， `foundation/components/image`
 
    * `type`:
 
-      * 类型: `String`
+      * 类型：`String`
       * 值：类型，例如， `Images`
 
 有关示例，请参阅：
