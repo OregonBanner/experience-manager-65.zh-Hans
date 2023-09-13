@@ -4,9 +4,9 @@ description: 了解如何轻松创建自适应表单或将自适应表单无缝�
 Keywords: AEM Forms in sites, AF in Sites editor, af in aem sites, aem sites af, add af to a sites page, af aem sites, af sites, create af in a sites page, adaptive form in aem sites, forms aem sites, add form to a sites page, adaptive forms aem sites, add adaptive forms to aem page, create forms in an aem sites page
 feature: Adaptive Forms
 exl-id: 1813ccfc-87ce-46fa-a1d5-5edffd91efb0
-source-git-commit: 3649df0e2a2672bc1742b3c02386f12ff6991935
+source-git-commit: 6d6e74c61b2ecb13e7cc352d5278c40d2677d44d
 workflow-type: tm+mt
-source-wordcount: '2888'
+source-wordcount: '2905'
 ht-degree: 24%
 
 ---
@@ -250,3 +250,8 @@ AEM Forms 会提供自适应表单容器和自适应表单嵌入组件。您可�
    * 要配置重定向URL，请在提交时为选项选择重定向到URL选项，并提供绝对地址、重定向URL或AEM Sites页面的相对路径。
 
    * 要配置自定义或感谢消息，请在“提交时”选项中选择显示消息选项，然后在“消息内容”框中提供消息。 它是一个富文本框，您可以使用全屏选项查看所有可用的富文本项。
+
+## 另请参阅 {#see-also}
+
+* [创建基于独立核心组件的自适应表单](/help/forms/using/create-an-adaptive-form-core-components.md)
+* [为表单创建样式或主题](/help/forms/using/create-or-customize-themes-for-adaptive-forms-core-components.md)
