@@ -1,29 +1,25 @@
 ---
 title: 管理本地凭据
-seo-title: Managing local credentials
 description: 了解如何管理本地凭据。
-seo-description: Learn how to manage local credentials.
-uuid: 3c4358e0-aaff-4e94-a6b2-04b463fca260
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/managing_certificates_and_credentials
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 598a9a03-3773-4620-8867-1f754d8ca031
 exl-id: c5905272-7d09-47e4-8b35-4cc25a148477
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 474a726058b141985f52a0faec6161a34be1e9dc
 workflow-type: tm+mt
-source-wordcount: '501'
+source-wordcount: '508'
 ht-degree: 0%
 
 ---
 
 # 管理本地凭据 {#managing-local-credentials}
 
-本地凭据是在信任存储区管理中托管的私钥凭据。 A *本地凭据* 标识存储用户的DES凭据的位置。 使用信任存储区管理，您可以使用现有的PFX文件导入和管理本地凭据，以便可以导入、编辑和删除本地凭据。
+本地凭据是在信任存储管理中托管的私钥凭据。 A *本地凭据* 标识存储用户的DES凭据的位置。 使用信任存储区管理，您可以使用例如现有的PFX文件导入和管理本地凭据，以便可以导入、编辑和删除本地凭据。
 
-AEM forms支持标准PKCS12格式（.pfx和.p12文件）中最多4096位的RSA和DSA凭据。
+AEM forms支持采用标准PKCS12格式（.pfx和.p12文件）的最多4096位的RSA和DSA凭据。
 
-您可以导入和导出任意数量的凭据。 如果要使用相同的别名替换过期的凭据，请删除该凭据，然后使用相同的别名导入新凭据。
+您可以导入和导出任意数量的凭据。 如果要使用相同的别名替换过期的凭据，请删除该凭据，然后导入具有相同别名的新凭据。
 
 有关Acrobat Reader DC扩展的信息和说明，请参阅 [配置凭据以用于Acrobat Reader DC扩展](/help/forms/using/admin-help/configuring-credentials-acrobat-reader-dc.md#configuring-credentials-for-use-with-acrobat-reader-dc-extensions).
 
@@ -32,21 +28,21 @@ AEM forms支持标准PKCS12格式（.pfx和.p12文件）中最多4096位的RSA�
 1. 在管理控制台中，单击“设置”>“信任存储区管理”>“本地凭据”。
 1. 单击“导入”。 在“信任存储类型”下，选择以下选项之一：
 
-   * **文档签名凭据：** 用于在文档上发布数字签名的凭据。
+   * **文档签名凭据：** 用于在文档上颁发数字签名的凭据。
    * **Acrobat Reader DC扩展凭据：** 特定于Acrobat Reader DC扩展的数字证书，允许在生成的PDF文档中激活Adobe Reader使用权限。
    * **默认：** 指示这是要与Acrobat Reader DC扩展一起使用的默认凭据。
 
-   有关获取凭据的信息，请参阅 [准备安装AEM表单](https://www.adobe.com/go/learn_aemforms_prepareInstallsingle_63).
+   有关获取凭据的信息，请参阅 [准备安装AEM表单](https://helpx.adobe.com/pdf/aem-forms/6-3/prepare-install-single-server.pdf).
 
-1. 在“别名”框中，键入凭据的标识符。 此标识符用作Acrobat Reader DC扩展和签名服务中凭据的显示名称。 此别名还用于通过AEM Forms SDK以编程方式访问凭据。
+1. 在“别名”框中，键入凭据的标识符。 此标识符用作Acrobat Reader DC扩展和签名服务中凭据的显示名称。 此别名还用于使用AEM Forms SDK以编程方式访问凭据。
 
    >[!NOTE]
    >
-   >别名会自动转换为大写以便显示。 在进程中引用别名时，别名不区分大小写。
+   >别名会自动转换为大写以便显示。 在进程中引用别名时，该别名不区分大小写。
 
 1. 单击“浏览”以查找凭据，键入凭据的密码，然后单击“确定”。
 
-   如果出现错误消息“由于文件格式不正确或密码不正确而无法导入凭据”，请验证密码是否有效。
+   如果出现错误消息“由于文件格式不正确或密码不正确导致无法导入凭据”，请验证密码是否有效。
 
 ## 导出凭据 {#export-a-credential}
 
@@ -59,11 +55,11 @@ AEM forms支持标准PKCS12格式（.pfx和.p12文件）中最多4096位的RSA�
 
 ## 编辑凭据的别名或信任存储类型 {#edit-a-credential-s-alias-or-trust-store-type}
 
-导入凭据后，可以编辑其别名以及信任存储类型。
+导入凭据后，可以编辑其别名和信任存储类型。
 
 1. 在管理控制台中，单击“设置”>“信任存储区管理”>“本地凭据”。
 1. 单击要编辑的凭据的别名。
-1. 单击更新凭据。
+1. 单击“更新凭据”。
 1. 根据需要编辑别名及信任存储类型，然后单击“确定”。
 
 ## 删除凭据 {#delete-a-credential}

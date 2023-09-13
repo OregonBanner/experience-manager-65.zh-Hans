@@ -1,29 +1,25 @@
 ---
-title: 配置用于数据捕获的Acrobat Reader DC扩展
-seo-title: Configuring Acrobat Reader DC extensions for data capture
+title: 为数据捕获配置Acrobat Reader DC扩展
 description: 了解如何配置Acrobat Reader DC扩展以进行数据捕获。
-seo-description: Learn how to configure Acrobat Reader DC extensions for data capture.
-uuid: af6b3c72-601e-4f54-8343-a323eeee5906
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_acrobat_reader_dc_extensions
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 8f8367fe-a8e9-46ee-a980-1633be02932d
 exl-id: 0f8e1e46-4fc5-43f6-abb1-19a3f20e1f1d
-source-git-commit: 0c7dba43dad8608b4a5de271e1e44942c950fb16
+source-git-commit: 5af420c8e95fed88a8516cce27b8bbc7d3974e75
 workflow-type: tm+mt
-source-wordcount: '320'
-ht-degree: 0%
+source-wordcount: '318'
+ht-degree: 1%
 
 ---
 
-# 配置用于数据捕获的Acrobat Reader DC扩展 {#configuring-acrobat-reader-dc-extensions-for-data-capture}
+# 为数据捕获配置Acrobat Reader DC扩展 {#configuring-acrobat-reader-dc-extensions-for-data-capture}
 
-如果AEM Forms安装的用户使用Content Services的数据捕获功能（已弃用），建议您为这些用户创建一个具有只读访问权限的角色。
+如果AEM Forms安装的用户使用Content Services的数据捕获功能（已弃用），则建议为这些用户创建具有只读访问权限的角色。
 
-***注释&#x200B;**：Adobe®LiveCycle®内容服务ES（已弃用）是随LiveCycle一起安装的内容管理系统。 它使用户能够设计、管理、监控和优化以人为中心的流程。 内容服务（已弃用）支持于2014年12月31日终止。 参见 [Adobe产品生命周期文档](https://www.adobe.com/support/products/enterprise/eol/eol_matrix.html).*
+***注意&#x200B;**：Adobe®LiveCycle®内容服务ES（已弃用）是随LiveCycle一起安装的内容管理系统。 它使用户能够设计、管理、监控和优化以人为中心的流程。 Content Services（已弃用）支持于2014年12月31日终止。 请参阅 [Adobe产品生命周期文档](https://helpx.adobe.com/cn/support/programs/eol-matrix.html).*
 
-数据捕获要求您分配用户角色以访问SampleReaderExtensionsCredential。 您可以指定标准的信任管理员角色，但认为此角色可为常规的非管理用户赋予强大的管理员权限，这些权限可控制PKI信任设置并管理PKI凭据，这可能会危及生产环境中AEM表单安装的安全性。 建议AEM表单系统管理员创建一个仅授予对信任存储的只读访问权限的角色，并将此新角色分配给使用数据捕获的非管理员用户。
+数据捕获要求您分配用户角色以访问SampleReaderExtensionsCredential。 您可以分配标准的信任管理员角色。 但是，请考虑一下，此角色赋予了常规的非管理用户管理员权限，这些权限可控制PKI信任设置并管理PKI凭据，这可能会危及在生产环境中安装AEM表单的安全性。 建议AEM Forms系统管理员创建一个仅授予信任存储区只读访问权限的角色，并将此新角色分配给使用数据捕获的非管理员用户。
 
 ## 为数据捕获用户创建角色 {#create-a-role-for-data-capture-users}
 

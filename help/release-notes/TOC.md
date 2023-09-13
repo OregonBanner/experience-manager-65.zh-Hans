@@ -7,19 +7,18 @@ breadcrumb-title: 发行说明
 user-guide-description: 在发行说明中了解AEM 6.5中的最新新增功能。
 feature: Release Information
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: 8a7ca99d896fd1ce2ace5b17a91987c6b8535615
+source-git-commit: 474a726058b141985f52a0faec6161a34be1e9dc
 workflow-type: tm+mt
 source-wordcount: '70'
-ht-degree: 44%
+ht-degree: 42%
 
 ---
 
 
 # Adobe Experience Manager 6.5发行说明 {#release-notes}
 
-+ [AEM 6.5发行说明](home.md)
-+ [最新发行说明](release-notes.md)
-+ [AEM Forms Service Pack安装说明](aem-forms-current-service-pack-installation-instructions.md)
++ [AEM 6.5 发行说明](home.md)
++ [当前的发行说明](release-notes.md)
 + [以前的发行说明]{#service-pack}
    + [6.5.17](previous/6.5.17.md)
    + [6.5.16](previous/6.5.16.md)
@@ -39,6 +38,7 @@ ht-degree: 44%
    + [6.5.2](previous/6.5.2.md)
    + [6.5.1](previous/6.5.1.md)
    + [6.5.0](previous/ga.md)
++ [AEM Forms service pack安装说明](aem-forms-current-service-pack-installation-instructions.md)
 + [AEM Forms JEE修补程序安装程序](jee-patch-installer-65.md)
 + [已弃用和已删除的功能](deprecated-removed-features.md)
-+ [触屏 UI 功能状态](touch-ui-features-status.md)
++ [触屏UI功能状态](touch-ui-features-status.md)

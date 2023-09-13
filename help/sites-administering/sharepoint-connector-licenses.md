@@ -1,28 +1,24 @@
 ---
-title: SharePoint Connector许可证、版权声明和免责声明
-seo-title: SharePoint Connector Licenses, Copyright Notices, and Disclaimers
-description: 了解SharePoint Connector许可证、版权声明和免责声明。
-seo-description: Learn about SharePoint Connector Licenses, Copyright Notices and Disclaimers.
-uuid: 182c8f0f-dcca-461a-9d8f-f05b376ad0cb
+title: SharePoint连接器许可证、版权声明和免责声明
+description: 了解SharePoint连接器许可证、版权声明和免责声明。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
-discoiquuid: 56849775-3ac7-44a2-ab17-a707b001470e
 docset: aem65
 exl-id: b9342330-31f6-49cb-965e-4bab61f98d4c
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 474a726058b141985f52a0faec6161a34be1e9dc
 workflow-type: tm+mt
-source-wordcount: '362'
-ht-degree: 19%
+source-wordcount: '354'
+ht-degree: 20%
 
 ---
 
-# SharePoint Connector许可证、版权声明和免责声明{#sharepoint-connector-licenses-copyright-notices-and-disclaimers}
+# SharePoint连接器许可证、版权声明和免责声明{#sharepoint-connector-licenses-copyright-notices-and-disclaimers}
 
-本节列出了必须与Day JCR Connector for MS SharePoint一起明确声明的所有许可证、版权声明和免责声明。
+本节列出了必须使用Day JCR Connector for MS® SharePoint明确声明的所有许可证、版权声明和免责声明。
 
-## Connector第三方库概述 {#overview-of-connector-rd-party-libraries}
+## 连接器第三方库概述 {#overview-of-connector-rd-party-libraries}
 
 下表列出了SharePoint Connector核心库中使用的第三方库，以及涵盖了这些库的许可证、版权声明或免责声明：
 
@@ -49,10 +45,10 @@ ht-degree: 19%
 | jackrabbit-jcr-commons | [Apache](#apache) |
 | jackrabbit-spi-commons | [Apache](#apache) |
 | jackrabbit-spi | [Apache](#apache) |
-| 雅森 | BSD |
+| 亚森 | BSD |
 | log4j | [Apache](#apache) |
 | lucene-core | [Apache](#apache) |
-| neethi | [Apache](#apache) |
+| 尼蒂 | [Apache](#apache) |
 | slf4j-api | [SLF4J.ORG](#slf-j-org) |
 | slf4j-jdk14 | [SLF4J.ORG](#slf-j-org) |
 | stax-api | [Apache](#apache) |
@@ -60,7 +56,7 @@ ht-degree: 19%
 | wstx-asl | [Apache](#apache) |
 | xalan | [Apache](#apache) |
 | xbean | [Apache](#apache) |
-| xml-api | [Apache](#apache) （包含由公共域和W3C软件许可证覆盖的部分） |
+| xml-api | [Apache](#apache) （包含公共域和W3C软件许可证所涵盖的部分） |
 | XmlSchema | [Apache](#apache) |
 
 ## CRX第三方库概述 {#overview-of-crx-rd-party-libraries}
@@ -114,7 +110,7 @@ ht-degree: 19%
   </tr>
   <tr>
    <td>jcr-1.0.jar</td>
-   <td><a href="#day-jcr">日JCR</a></td>
+   <td><a href="#day-jcr">Day JCR</a></td>
   </tr>
   <tr>
    <td>jdom-1.0.jar</td>
@@ -438,7 +434,7 @@ ht-degree: 19%
      <a href="https://gee.cs.oswego.edu/dl/classes/EDU/oswego/cs/dl/util/sun-u.c.license.pdf" TARGET="_blank" >https://gee.cs.oswego.edu/dl/classes/EDU/oswego/cs/dl/util/sun-u.c.license.pdf</a>
 ```
 
-## 日JCR {#day-jcr}
+## Day JCR {#day-jcr}
 
 ```xml
      Day Management AG ("Licensor") is willing to license this
@@ -1100,8 +1096,8 @@ ht-degree: 19%
      This license came from: https://www.w3.org/Consortium/Legal/
      copyright-documents-19990405
 
-     W3C® DOCUMENT NOTICE AND LICENSE
-     Copyright © 1994-2001 World
+     W3C&reg; DOCUMENT NOTICE AND LICENSE
+     Copyright &copy; 1994-2001 World
      Wide Web Consortium, World
      Wide Web Consortium, (Massachusetts Institute of
      Technology, Institut National de
@@ -1125,7 +1121,7 @@ ht-degree: 19%
      A link or URL to the original W3C document.
 
      The pre-existing copyright notice of the original author, or if
-     it doesn't exist, a notice of the form: "Copyright © [$date-of-document]
+     it doesn't exist, a notice of the form: "Copyright &copy; [$date-of-document]
      World Wide Web Consortium, (Massachusetts
      Institute of Technology, Institut National de Recherche en Informatique
      et en Automatique, Keio
@@ -1186,8 +1182,8 @@ ht-degree: 19%
      This license came from: <a href="https://www.w3.org/Consortium/Legal/" TARGET="_blank" >https://www.w3.org/Consortium/Legal/</a>
      copyright-software-19980720
 
-     W3C® SOFTWARE NOTICE AND LICENSE
-     Copyright © 1994-2001 World
+     W3C&reg; SOFTWARE NOTICE AND LICENSE
+     Copyright &copy; 1994-2001 World
      Wide Web Consortium, World
      Wide Web Consortium, (Massachusetts Institute of
      Technology, Institut National de
@@ -1213,7 +1209,7 @@ ht-degree: 19%
      terms and conditions. If none exist, a short notice of the
      following form (hypertext is preferred, text is permitted) should
      be used within the body of any redistributed or derivative code:
-     "Copyright © [$date-of-software] World Wide Web Consortium,
+     "Copyright &copy; [$date-of-software] World Wide Web Consortium,
      (Massachusetts Institute of Technology, Institut National de
      Recherche en Informatique et en Automatique, Keio University).
      All Rights Reserved.

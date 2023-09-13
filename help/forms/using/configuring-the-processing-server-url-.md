@@ -1,31 +1,27 @@
 ---
 title: 配置AEM DS设置
-seo-title: Configuring AEM DS settings
-description: 在提交表单之前，需要指定处理服务器URL。
-seo-description: You need to specify the processing server URL before you submit a form.
-uuid: 55a6d434-7352-48a8-8387-8a5c1a48fafc
+description: 了解如何在提交表单之前指定处理服务器URL。
 contentOwner: amgoyal
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: Configuration
-discoiquuid: a7387bd3-8b31-4bd0-a861-daa8f7cb2d05
 docset: aem65
 role: Admin
 exl-id: c43cab7b-3421-4e1b-a834-b2dd6eb23c1d
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 5af420c8e95fed88a8516cce27b8bbc7d3974e75
 workflow-type: tm+mt
-source-wordcount: '241'
+source-wordcount: '244'
 ht-degree: 0%
 
 ---
 
 # 配置AEM DS设置{#configuring-aem-ds-settings}
 
-本文介绍了如何配置 **AEM DS设置服务**. 此设置可用于多个场景，例如：
+本文介绍如何配置 **AEM DS设置服务**. 此设置可用于多种场景，例如：
 
 * 在通信管理中
 
    * 用于配置AEM Forms工作流程
-   * 使用表单门户远程保存草稿/提交时
+   * 使用Forms门户远程保存草稿/提交内容时
 
 * 在自适应表单中，适用于从发布实例提交自适应表单的情况
 
@@ -46,7 +42,7 @@ ht-degree: 0%
 
 1. 在相应字段中添加以下信息：
 
-   **[!UICONTROL 处理服务器URL]**：处理服务器是需要触发Forms或AEM工作流的服务器。 这可以与AEM创作实例的URL或其他服务器URL(即https://localhost:port/)相同。
+   **[!UICONTROL 处理服务器URL]**：处理服务器是必须触发Forms或AEM工作流的服务器。 这可以与AEM创作实例的URL或其他服务器URL(即https://localhost:port/)相同。
 
    **[!UICONTROL 处理服务器用户名]**：工作流用户的用户名 [基于正在使用的服务器URL]
 
@@ -57,5 +53,6 @@ ht-degree: 0%
    >
    >    
    >    
-   >    * 使用Forms或AEM工作流时，在从发布服务器进行任何提交之前，需要配置DS设置服务。 否则，无法提交表单。
-
+   >    * 使用Forms或AEM工作流时，在从发布服务器进行任何提交之前，必须配置DS设置服务。 否则，表格提交将失败。
+   >    
+   >

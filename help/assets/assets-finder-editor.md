@@ -5,9 +5,9 @@ contentOwner: AG
 role: User, Admin
 feature: Developer Tools,Asset Management
 exl-id: 53e310a9-c511-447a-91bd-8c5b2760dc03
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 5af420c8e95fed88a8516cce27b8bbc7d3974e75
 workflow-type: tm+mt
-source-wordcount: '2125'
+source-wordcount: '2112'
 ht-degree: 1%
 
 ---
@@ -17,24 +17,24 @@ ht-degree: 1%
 本文档将介绍以下内容：
 
 * 为什么要创建自定义的资产编辑器页面。
-* 如何创建和自定义Asset Editor页面，这些页面是WCM页面，允许您查看和编辑元数据以及对资源执行操作。
+* 如何创建和自定义资产编辑器页面，这些页面是WCM页面，允许您查看和编辑元数据以及对资产执行操作。
 * 如何同时编辑多个资源。
 
 <!-- TBD: Add UICONTROL tags. Need PM review. Flatten the structure a bit. Re-write to remove Geometrixx mentions and to adhere to 6.5 default samples. -->
 
 >[!NOTE]
 >
->资产共享可用作开源参考实施。 参见 [资产共享公域](https://adobe-marketing-cloud.github.io/asset-share-commons/). 官方并不支持此功能。
+>资产共享可用作开源参考实施。 请参阅 [资产共享公用](https://adobe-marketing-cloud.github.io/asset-share-commons/). 官方不支持该功能。
 
 ## 为何要创建和配置Asset Editor页面？ {#why-create-and-configure-asset-editor-pages}
 
-数字资产管理正在越来越多的场景中使用。 从面向受过专业培训的少数用户群体（例如摄影师或分类学家）的小型解决方案，过渡到更大、更多样化的用户群体（例如商业用户、WCM作者、记者等）时，强大的 [!DNL Adobe Experience Manager Assets] 对于专业用户而言，可能会提供太多的信息，利益相关者会开始请求特定的用户界面或应用程序访问与其相关的数字资产。
+数字资产管理正在更多情况下使用。 当从一个面向受过专业培训的用户的小型用户组（例如摄影师或分类学家）的小型解决方案迁移到更大、更多样化的用户组（例如商业用户、WCM作者和记者）时，强大的 [!DNL Adobe Experience Manager Assets] 可能会提供太多的信息。 利益相关者开始请求特定的用户界面或应用程序访问与其相关的数字资产。
 
-这些以资产为中心的应用程序可以是内部网中的简单照片画廊，员工可以在其中从展会访问或面向公众的网站的新闻中心上传照片。 以资产为中心的应用程序还可以扩展到包括购物车、结帐和验证流程在内的完整解决方案。
+这些以资产为中心的应用程序可以是内部网中的简单照片画廊，员工可以在其中从展会访问或面向公众的网站的新闻中心上传照片。 以资产为中心的应用程序还可以扩展到完整的解决方案，包括购物车、结账和验证流程。
 
-创建以资产为中心的应用程序在很大程度上变成了一个无需编码、仅了解用户组及其需求以及了解正在使用的元数据的配置过程。 使用创建的以资产为中心的应用程序 [!DNL Assets] 可扩展：通过适度编码，可以创建可重复使用的组件，用于搜索、查看和修改资源。
+创建以资产为中心的应用程序会变成一个配置过程，它不需要编码，只需要了解用户组及其需求以及所使用元数据的知识。 使用创建的以资产为中心的应用程序 [!DNL Assets] 可扩展：通过适度编码力度，可以创建用于搜索、查看和修改资源的可重用组件。
 
-中一个以资产为中心的应用程序 [!DNL Experience Manager] 包含一个资产编辑器页面，该页面可用于获取特定资产的详细视图。 如果访问资产的用户拥有必要的权限，则还可以通过资产编辑器页面编辑元数据。
+以资产为中心的应用程序 [!DNL Experience Manager] 包含一个资产编辑器页面，可用于获取特定资产的详细视图。 资产编辑器页面还允许编辑元数据，前提是访问资产的用户具有必要的权限。
 
 <!--
 ## Create and configure an Asset Share page {#creating-and-configuring-an-asset-share-page}
@@ -192,20 +192,20 @@ For more information, see the [predicate Javadocs](https://helpx.adobe.com/exper
 
 ## 创建和配置资产编辑器页面 {#creating-and-configuring-an-asset-editor-page}
 
-您可以自定义资产编辑器，以确定用户查看和编辑数字资产的方式。 为此，您需要创建一个新的Asset Editor页面，然后自定义用户可在该页面上执行的视图和操作。
+您可以自定义资产编辑器，以确定用户查看和编辑数字资产的方式。 为此，您需要创建一个Asset Editor页面，然后自定义用户可在该页面上执行的视图和操作。
 
 >[!NOTE]
 >
->如果要将自定义字段添加到DAM资产编辑器，请新增 `cq:Widget` 节点至 `/apps/dam/content/asseteditors.`
+>如果要将自定义字段添加到DAM资产编辑器，请新增 `cq:Widget` 节点到 `/apps/dam/content/asseteditors.`
 
 ### 创建资产编辑器页面 {#creating-the-asset-editor-page}
 
-创建资产编辑器页面时，好的做法是直接在资产共享页面下方创建页面。
+创建资产编辑器页面时，最佳做法是直接在资产共享页面下方创建页面。
 
 要创建资产编辑器页面，请执行以下操作：
 
-1. 在 **[!UICONTROL 网站]** 选项卡，导航到要创建资产编辑器页面的位置，然后单击 **新**.
-1. 选择 **Geometrixx资产编辑器** 并单击 **创建**. 此时将创建新页面，并且该页面将列在 **网站** 选项卡。
+1. 在 **[!UICONTROL 网站]** 选项卡，导航到要创建Asset Editor页面的位置并单击 **新建**.
+1. 选择 **Geometrixx资产编辑器** 并单击 **创建**. 此时将创建新页面，并且该页面列在 **网站** 选项卡。
 
 ![screen_shot_2012-04-23at15858pm](assets/screen_shot_2012-04-23at15858pm.png)
 
@@ -213,17 +213,17 @@ For more information, see the [predicate Javadocs](https://helpx.adobe.com/exper
 
 ![assetshare5](assets/assetshare5.png)
 
-要自定义Asset Editor页面，请使用sidekick中的元素。 可从访问的资产编辑器页面 **Geometrixx新闻中心** 是基于此模板的页面的自定义版本：
+要自定义资产编辑器页面，请使用sidekick中的元素。 可从访问的资产编辑器页面 **Geometrixx新闻中心** 是基于此模板的页面的自定义版本：
 
 ![assetshare6](assets/assetshare6.png)
 
 #### 将资产编辑器设置为从资产共享页面打开 {#setting-which-asset-editor-opens-from-an-asset-share-page}
 
-创建自定义资产编辑器页面后，您需要确保双击所创建的自定义资产共享在自定义编辑器页面中打开资产时。
+创建自定义资产编辑器页面后，请确保在双击您创建的自定义资产共享的资产时，在自定义编辑器页面中打开资产。
 
 要设置资产编辑器页面，请执行以下操作：
 
-1. 在“资产共享”页面中，单击 **编辑** ，位于查询生成器旁边。
+1. 在资产共享页面中，单击 **编辑** ，位于查询生成器旁边。
 
 ![screen_shot_2012-04-23at20123pm](assets/screen_shot_2012-04-23at20123pm.png)
 
@@ -237,55 +237,55 @@ For more information, see the [predicate Javadocs](https://helpx.adobe.com/exper
 
 您可以通过向页面添加组件来确定资产编辑器具有什么功能。
 
-要添加资产编辑器组件，请执行以下操作：
+要添加Asset Editor组件：
 
-1. 在要自定义的资产编辑器页面中，选择 **资产编辑器** 在副手手里。 将显示所有可用的资产编辑器组件。
-
->[!NOTE]
->
->可自定义的内容取决于可用的组件。 要启用组件，请转到“设计”模式并选择需要启用的组件。
-
-1. 将组件从Sidekick拖到资产编辑器中，并在组件对话框中进行任何修改。 下表介绍了这些组件，下面的详细说明对这些组件进行了说明。
+1. 在要自定义的资产编辑器页面中，选择 **资产编辑器** 在副手里。 此时将显示所有可用的资产编辑器组件。
 
 >[!NOTE]
 >
->在设计资产编辑器页面时，您可以创建只读或可编辑的组件。 用户知道，如果铅笔的图像出现在组件中，则可以编辑字段。 默认情况下，大多数组件都设置为只读。
+>可自定义的内容取决于可用的组件。 要启用组件，请转到设计模式并选择需要启用的组件。
+
+1. 将组件从Sidekick拖到资产编辑器中，并在组件对话框中进行任何编辑。 下表介绍了这些组件，下面的详细说明中也介绍了这些组件。
+
+>[!NOTE]
+>
+>设计Asset Editor页面时，您可以创建只读或可编辑的组件。 用户知道，如果铅笔的图像出现在组件中，则可以编辑字段。 默认情况下，大多数组件都设置为只读。
 
 | 组件 | 描述 |
 |---|---|
-| **[!UICONTROL 元数据表单] 和 [!UICONTROL 元数据文本字段]** | 允许您将其他元数据添加到资源中并对该资源执行操作，例如提交。 |
+| **[!UICONTROL 元数据表单] 和 [!UICONTROL 元数据文本字段]** | 此设置允许您将其他元数据添加到资源中，并对该资源执行操作，例如提交。 |
 | **[!UICONTROL 子资产]** | 允许您自定义子资产。 |
 | **标记** | 允许用户选择标记并将其添加到资源。 |
-| **[!UICONTROL 缩略图]** | 显示资源的缩略图及其文件名，并允许您添加替换文本。 您也可以在此处添加资产编辑器操作。 |
+| **[!UICONTROL 缩略图]** | 显示资源的缩略图及其文件名，并允许您添加替换文本。 您还可以在此处添加资产编辑器操作。 |
 | **[!UICONTROL 标题]** | 显示可自定义的资源标题。 |
 
 ![screen_shot_2012-04-23at22743pm](assets/screen_shot_2012-04-23at22743pm.png)
 
 #### 元数据表单和文本字段 — 配置视图元数据组件 {#metadata-form-and-text-field-configuring-the-view-metadata-component}
 
-元数据表单是一个包含开始和结束操作的表单。 在两者之间，输入 **文本** 字段。 参见 [Forms](/help/sites-authoring/default-components-foundation.md#form-component) 以了解有关使用表单的更多信息。
+元数据表单是一个包含开始和结束操作的表单。 在中间，输入 **文本** 字段。 请参阅 [Forms](/help/sites-authoring/default-components-foundation.md#form-component) 以了解有关使用表单的更多信息。
 
-1. 通过单击创建开始操作 **编辑** 在表单的“开始”区域中。 如果需要，可以输入Box标题。 默认情况下，框标题为 **元数据**. 如果希望生成用于验证的java-script客户端代码，请选中“客户端验证”复选框。
+1. 通过单击创建开始操作 **编辑** 在窗体的“开始”区域中。 如果需要，可以输入框标题。 默认情况下，框标题为 **元数据**. 如果希望生成用于验证的JavaScript客户端代码，请选中“客户端验证”复选框。
 
 ![screen_shot_2012-04-23at22911pm](assets/screen_shot_2012-04-23at22911pm.png)
 
-1. 通过单击创建“结束”操作 **编辑** 表单的结束区域。 例如，您可能希望创建 **[!UICONTROL 提交]** 允许用户提交其元数据更改的选项。 或者，您也可以添加 **重置** 用于将元数据重置为其原始状态的选项。
+1. 通过单击创建结束操作 **编辑** 在窗体的“结束”区域中。 例如，您可能要创建 **[!UICONTROL 提交]** 允许用户提交其元数据更改的选项。 或者，您也可以添加 **重置** 用于将元数据重置为其原始状态的选项。
 
 ![screen_shot_2012-04-23at23138pm](assets/screen_shot_2012-04-23at23138pm.png)
 
-1. 介于之间 **表单开始** 和 **表单结尾**，将元数据文本字段拖到表单中。 用户将元数据填充到这些文本字段中，他们可以在这些字段中提交或完成其他操作。
+1. 介于之间 **表单开始** 和 **表单结尾**，将元数据文本字段拖到表单中。 用户将元数据填充到这些文本字段中，然后可以提交或完成其他操作。
 
-1. 双击字段名称，例如， **标题** 以打开元数据字段并进行更改。 在 **常规** 的选项卡 **编辑组件** 窗口中，您可以定义命名空间和字段标签以及类型，例如， `dc:title`.
+1. 双击字段名称，例如， **标题** 以打开元数据字段并进行更改。 在 **常规** 选项卡 **编辑组件** 窗口中，您可以定义命名空间和字段标签并键入，例如， `dc:title`.
 
 ![screen_shot_2012-04-23at23305pm](assets/screen_shot_2012-04-23at23305pm.png)
 
-参见 [自定义和扩展资产](/help/assets/extending-assets.md) 有关修改元数据表单中可用的命名空间的信息。
+请参阅 [自定义和扩展资产](/help/assets/extending-assets.md) 有关修改元数据表单中可用命名空间的信息。
 
-1. 单击 **约束** 选项卡。 在此处，您可以选择是否需要字段，并根据需要添加任何约束。
+1. 单击 **约束** 选项卡。 您可以在此选择是否需要字段，并根据需要添加任何约束。
 
 ![screen_shot_2012-04-23at23435pm](assets/screen_shot_2012-04-23at23435pm.png)
 
-1. 单击 **显示** 选项卡。 在这里，您可以为元数据字段输入新的宽度和行数。 选择 **字段为只读** 用于允许用户编辑元数据的复选框。
+1. 单击 **显示** 选项卡。 在这里，您可以为元数据字段输入新的宽度和行数。 选择 **字段为只读** 此复选框允许用户编辑元数据。
 
 ![screen_shot_2012-04-23at23446pm](assets/screen_shot_2012-04-23at23446pm.png)
 
@@ -299,11 +299,11 @@ For more information, see the [predicate Javadocs](https://helpx.adobe.com/exper
 
 在子资产组件中，您可以查看和选择子资产。 您可以确定 [主资产](/help/assets/assets.md#what-are-digital-assets) 和子资产。
 
-双击子资产组件以打开子资产对话框，您可以在其中更改主资产和任何子资产的标题。 默认值显示在相应字段的下方。
+双击Sub Assets组件，以便打开Sub Assets对话框，可在其中更改主资产和任何子资产的标题。 默认值显示在相应字段的下方。
 
 ![screen_shot_2012-04-23at23907pm](assets/screen_shot_2012-04-23at23907pm.png)
 
-以下是填充的子资产组件示例：
+以下是已填充的子资产组件示例：
 
 ![screen_shot_2012-04-23at24442pm](assets/screen_shot_2012-04-23at24442pm.png)
 
@@ -317,7 +317,7 @@ For more information, see the [predicate Javadocs](https://helpx.adobe.com/exper
 
 ![screen_shot_2012-04-23at25031pm](assets/screen_shot_2012-04-23at25031pm.png)
 
-双击“标记”组件以打开“标记”对话框，可以在其中根据需要从“标记”中更改标题，还可以选择分配的命名空间。 要使此字段可编辑，请清除 **[!UICONTROL 隐藏编辑]** 复选框。 默认情况下，标记是可编辑的。
+双击标记组件，以便打开标记对话框，您可以在其中根据需要更改标记的标题，并可以选择分配的命名空间。 要使该字段可编辑，请清除 **[!UICONTROL 隐藏编辑]** 复选框。 默认情况下，标记是可编辑的。
 
 ![screen_shot_2012-04-23at24731pm](assets/screen_shot_2012-04-23at24731pm.png)
 
@@ -331,11 +331,11 @@ For more information, see the [predicate Javadocs](https://helpx.adobe.com/exper
 
 #### 缩略图 {#thumbnail}
 
-缩略图组件是资产显示选定缩略图的地方（对于多种格式，缩略图都是自动提取的）。 此外，组件会显示文件名，并且 [可修改的操作](/help/assets/assets-finder-editor.md#adding-asset-editor-actions).
+缩略图组件是资产显示选定缩略图的地方（对于多种格式，缩略图都是自动提取的）。 此外，组件会显示文件名，以及 [可修改的操作](/help/assets/assets-finder-editor.md#adding-asset-editor-actions).
 
 ![screen_shot_2012-04-23at25452pm](assets/screen_shot_2012-04-23at25452pm.png)
 
-双击缩略图组件以打开缩略图对话框，您可以在其中更改替换文本。 默认情况下，缩略图替代文本默认为 **单击以下载** 资产。
+双击缩略图组件，以便打开缩略图对话框并在其中更改替换文本。 默认情况下，缩略图替换文本默认为 **单击以下载** 资产。
 
 ![screen_shot_2012-04-23at25604pm](assets/screen_shot_2012-04-23at25604pm.png)
 
@@ -351,9 +351,9 @@ For more information, see the [predicate Javadocs](https://helpx.adobe.com/exper
 
 ![screen_shot_2012-04-23at35100pm](assets/screen_shot_2012-04-23at35100pm.png)
 
-如果可以编辑标题，则可以通过单击铅笔打开 **资产属性** 窗口。 此外，您还可以通过选择日期和时间来打开和关闭资产。
+如果可以编辑标题，则可以通过单击铅笔打开 **资产属性** 窗口。 此外，您还可以通过选择日期和时间打开和关闭资产。
 
-编辑 [!UICONTROL 标题]，用户可以更改 **标题**， **描述**，并输入 **日期** 和 **关闭时间** 以打开和关闭资产。
+编辑 [!UICONTROL 标题]，用户可以更改 **标题**， **描述**，并输入 **开启** 和 **关闭时间** 打开和关闭资产。
 
 ![screen_shot_2012-04-23at35241pm](assets/screen_shot_2012-04-23at35241pm.png)
 
@@ -367,7 +367,7 @@ For more information, see the [predicate Javadocs](https://helpx.adobe.com/exper
 
 要将操作添加到资产编辑器页面，请执行以下操作：
 
-1. 在要自定义的资产编辑器页面中，单击 **资产编辑器** 在副手手里。
+1. 在要自定义的资产编辑器页面中，单击 **资产编辑器** 在副手里。
 
 ![screen_shot_2012-04-23at35515pm](assets/screen_shot_2012-04-23at35515pm.png)
 
@@ -377,23 +377,20 @@ For more information, see the [predicate Javadocs](https://helpx.adobe.com/exper
 |---|---|
 | [!UICONTROL 下载] | 允许用户将选定的资产下载到其计算机。 |
 | [!UICONTROL 编辑器] | 允许用户编辑图像（交互式编辑） |
-| [!UICONTROL 灯箱] | 将资产保存到“灯箱”，您可以在其中对其执行其他操作。 当在多个页面中处理资产时，这非常有用。 |
-| [!UICONTROL 锁定] | 允许用户锁定资源。 默认情况下不启用此功能，需要在组件列表中启用此功能。 |
-| [!UICONTROL 引用] | 单击此项可在使用资产的页面上显示。 |
+| [!UICONTROL 灯箱] | 将资产保存到“灯箱”中，您可以在其中执行其他操作。 在处理多个页面中的资产时，这非常有用。 |
+| [!UICONTROL 锁定] | 允许用户锁定资源。 默认情况下不启用此功能，必须在组件列表中启用此功能。 |
+| [!UICONTROL 引用] | 单击此项可显示在哪些页面上正在使用资产。 |
 | [!UICONTROL 版本控制] | 允许您创建和恢复资源的版本。 |
 
-1. 将相应的操作拖到 **操作** 区域。 它会创建一个选项，用于执行在页面上拖动的操作。
+1. 将相应的操作拖动到 **操作** 区域。 它会创建一个选项，用于执行在页面上拖动的操作。
 
 ![chlimage_1-165](assets/chlimage_1-393.png)
 
-## 使用“资产编辑器”页面可多次编辑资产 {#multi-editing-assets-with-the-asset-editor-page}
+## 使用“资产编辑器”页面多重编辑资产 {#multi-editing-assets-with-the-asset-editor-page}
 
-替换为 [!DNL Experience Manager Assets] 您可以一次更改多个资产。 选择资源后，您可以同时更改其：
+替换为 [!DNL Experience Manager Assets]，您可以一次更改多个资源。 选择资源后，您可以同时更改标记和元数据。
 
-* 标记
-* 元数据
-
-要使用“资产编辑器”页面多编辑资产，请执行以下操作：
+要使用“资产编辑器”页面多重编辑资产，请执行以下操作：
 
 1. 打开Geometrixx **新闻中心** 页面：
    `https://localhost:4502/content/geometrixx/en/company/press.html`
@@ -403,26 +400,26 @@ For more information, see the [predicate Javadocs](https://helpx.adobe.com/exper
    * 在Windows上： `Ctrl + click` 每个资产。
    * 在Mac上： `Cmd + click` 每个资产。
 
-   要选择一系列资源，请执行以下操作：单击第一个资源，然后单击 `Shift + click` 最后一个资源。
+   要选择一系列资源：单击第一个资源，然后单击 `Shift + click` 最后一个资产。
 
 1. 单击 **编辑元数据** 在 **操作** 字段（页面左侧）。
 1. Geometrixx **新闻中心资产编辑器** 页面将在新选项卡中打开。 资源的元数据显示如下：
 
-   * 标记不适用于所有资产，但仅适用于少数资产，以斜体显示。
+   * 并非适用于所有资产但只适用于少数几个资产的标记，会以斜体显示。
    * 应用于所有资产的标记将以普通字体显示。
-   * 标记以外的元数据：仅当所有选定资源都相同时，才会显示字段的值。
+   * 标记以外的元数据：仅当所有选定资产的字段值相同时，才会显示字段值。
 
-1. 单击 **下载** 下载包含资产原始演绎版的ZIP文件。
-1. 单击旁边的“编辑标记”选项 **标记** 字段。
+1. 单击 **下载** 用于下载包含资源原始演绎版的ZIP文件。
+1. 单击旁边的编辑标记选项 **标记** 字段。
 
-   * 并非适用于所有资产，但只适用于少数资产的标记具有灰色背景。
+   * 不适用于所有资产，但仅适用于少数资产的标记具有灰色背景。
    * 应用于所有资产的标记具有白色背景。
 
    您可以：
 
    * 单击 `x` 以移除所有资产的标记。
-   * 单击 `+` 以将标记添加到所有资产。
-   * 单击 **箭头** 并选择标记以向所有资产添加新标记。
+   * 单击 `+` 以将标记添加到所有资源。
+   * 单击 **箭头** 并选择标记以向所有资源添加新标记。
 
    单击 **确定** 将更改写入表单。 旁边的那个盒子 **标记** 字段会自动选中。
 
@@ -430,10 +427,10 @@ For more information, see the [predicate Javadocs](https://helpx.adobe.com/exper
 
    `This is a common description`
 
-   编辑字段时，其值会在提交表单时覆盖所选资产的现有值。
+   编辑字段时，其值会在提交表单时覆盖所选资源的现有值。
 
    注意：编辑字段时，将自动选中字段旁边的框。
 
 1. 单击 **更新元数据** 以提交表单并保存所有资产的更改。
 
-   注意：仅修改选中的元数据。
+   注意：只修改选中的元数据。

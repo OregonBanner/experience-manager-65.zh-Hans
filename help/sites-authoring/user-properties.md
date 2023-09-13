@@ -1,20 +1,16 @@
 ---
 title: 配置帐户环境
-seo-title: Configuring Your Account Environment
 description: AEM 提供了用于配置帐户和创作环境的某些方面的功能
-seo-description: AEM provides you with the capability to configure your account and certain aspects of the author environment
-uuid: ef31be29-5c18-4dc9-ad51-fb001588b31e
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: introduction
 content-type: reference
-discoiquuid: b610e19c-f8d9-4ae2-b056-9fd5cf541261
 docset: aem65
 exl-id: 6079431d-7d08-4973-8bb4-a8d10626a795
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 474a726058b141985f52a0faec6161a34be1e9dc
 workflow-type: tm+mt
-source-wordcount: '519'
-ht-degree: 85%
+source-wordcount: '514'
+ht-degree: 64%
 
 ---
 
@@ -24,7 +20,7 @@ AEM 提供了用于配置帐户和创作环境的某些方面的功能。
 
 通过使用[标题](/help/sites-authoring/basic-handling.md#the-header)和关联的[我的首选项](#userpreferences)对话框中的[用户](/help/sites-authoring/user-properties.md#user-settings)选项，您可以修改用户选项。
 
-首先访问 [用户](/help/sites-authoring/user-properties.md#user-settings) 选项。
+首先，访问标题中的[用户](/help/sites-authoring/user-properties.md#user-settings)选项。
 
 ## 用户设置 {#user-settings}
 
@@ -48,7 +44,7 @@ AEM 提供了用于配置帐户和创作环境的某些方面的功能。
 
 **我的首选项**&#x200B;对话框可通过标题中的[用户](/help/sites-authoring/user-properties.md#user-settings)选项进行访问。
 
-每个用户都可以为自己设置特定的属性。
+每个用户都可以为自己设置某些属性。
 
 ![screen-shot_2019-03-05at100322](assets/screen-shot_2019-03-05at100322.png)
 
@@ -64,26 +60,26 @@ AEM 提供了用于配置帐户和创作环境的某些方面的功能。
 
    * **多窗口**（默认）
 
-      * 页面将在新窗口中打开。
+      * 页面会在新窗口中打开。
 
    * **单窗口**
 
-      * 页面将在当前窗口中打开。
+      * 页面会在当前窗口中打开。
 
 * **显示适用于资产的桌面操作**
 
-  此选项要求使用 AEM 桌面应用程序。
+  此选项需要使用AEM桌面应用程序。
 
 * **注释颜色**
 
   此选项定义创建注释时使用的默认颜色。
 
-   * 单击颜色块可打开色板选择器以选择一种颜色。
+   * 单击颜色块，以便可以打开样本选择器并选择颜色。
    * 或者，可在字段中输入所需颜色的十六进制代码。
 
 * **相对日期显示**
 
-  为了提高可读性，AEM 会将过去七天内的日期显示为相对日期（例如三天前），而将更早的日期则显示为确切日期（例如 2017 年 3 月 20 日）。
+  为了提高可读性，AEM将过去七天内的日期渲染为相对日期（例如，三天前），将更早的日期渲染为确切日期（例如，2017年3月20日）。
 
   此选项定义系统中日期的显示方式。以下选项可供选择：
 
@@ -100,12 +96,12 @@ AEM 提供了用于配置帐户和创作环境的某些方面的功能。
 
 * **启用快捷键**
 
-  AEM 支持使用许多键盘快捷键，以便更高效地进行创作。
+  AEM支持使用多个键盘快捷键，以便更高效地创作。
 
    * [用于编辑页面的键盘快捷键](/help/sites-authoring/page-authoring-keyboard-shortcuts.md)
    * [控制台的键盘快捷键](/help/sites-authoring/keyboard-shortcuts.md)
 
-  此选项可启用键盘快捷键。默认情况下，这些键盘快捷键处于启用状态，但也可以将其禁用，例如，当用户要求使用特定辅助功能时。
+  此选项可启用键盘快捷键。默认情况下，这些功能处于启用状态，但可以禁用，例如，如果用户有特定的辅助功能要求。
 
 * **使用经典版创作体验**
 
@@ -117,4 +113,4 @@ AEM 提供了用于配置帐户和创作环境的某些方面的功能。
 
 * **Stock 配置**
 
-  此选项允许指定首选的 Adobe Stock 配置，并且仅在系统管理员已启用 [Adobe Stock 集成](/help/assets/aem-assets-adobe-stock.md)时才可用。
+  此选项可让您指定首选的Adobe Stock配置，并且仅在系统管理员已启用时才可用 [Adobe Stock集成](/help/assets/aem-assets-adobe-stock.md).
