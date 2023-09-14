@@ -2,10 +2,10 @@
 title: 使用IMS与Adobe Analytics集成
 description: 了解如何使用IMS将AEM与Adobe Analytics集成
 exl-id: 2833a6df-ef32-48ab-8395-0f26816f8443
-source-git-commit: 06ed2329840e151083bd238ee3a4d33663463c9c
+source-git-commit: fd8bb7d3d9040e0a7a6b2f65751445f41aeab73e
 workflow-type: tm+mt
-source-wordcount: '1085'
-ht-degree: 66%
+source-wordcount: '1068'
+ht-degree: 55%
 
 ---
 
@@ -28,17 +28,17 @@ ht-degree: 66%
 
 开始此过程之前：
 
-* [Adobe 支持部门](https://helpx.adobe.com/cn/contact/enterprise-support.ec.html)必须针对以下项目配置您的帐户：
+* [Adobe 支持部门](https://experienceleague.adobe.com/?support-solution=General&amp;support-tab=home#support)必须针对以下项目配置您的帐户：
 
    * Adobe Console
    * Adobe Developer Console
    * Adobe Analytics 和
    * Adobe IMS (Identity Management System)
 
-* 您组织的系统管理员应使用Admin Console将您组织中所需的开发人员添加到相关的产品配置文件中。
+* 您组织的系统管理员应使用 Admin Console 将您组织中所需的开发人员添加到相关的产品配置文件中。
 
    * 这将为特定开发人员提供在Adobe Developer控制台中启用集成的权限。
-   * 有关更多详细信息，请参阅[管理开发人员](https://helpx.adobe.com/cn/enterprise/admin-guide.html/enterprise/using/manage-developers.ug.html)。
+   * 请参阅 [管理开发人员](https://helpx.adobe.com/enterprise/using/manage-developers.html).
 
 
 ## 配置 IMS 配置 – 生成公钥 {#configuring-an-ims-configuration-generating-a-public-key}
@@ -46,9 +46,9 @@ ht-degree: 66%
 配置的第一阶段是在 AEM 中创建 IMS 配置并生成公钥。
 
 1. 在 AEM 中，打开&#x200B;**工具**&#x200B;菜单。
-1. 在&#x200B;**安全性**&#x200B;部分中，选择 **Adobe IMS 配置**。
+1. 在 **安全性** 部分，选择 **Adobe IMS配置**.
 1. 选择&#x200B;**创建**，打开 **Adobe IMS 技术帐户配置**。
-1. 使用&#x200B;**云配置**&#x200B;下的下拉列表，选择 **Adobe Analytics**。
+1. 使用&#x200B;**云配置**&#x200B;下的下拉列表，选择 **Adobe Analytics。**
 1. 激活&#x200B;**新建证书**&#x200B;并输入新别名。
 1. 选择&#x200B;**创建证书**&#x200B;来确认。
 
@@ -58,21 +58,21 @@ ht-degree: 66%
 
    >[!CAUTION]
    >
-   >将此配置保持开放状态，供[在 AEM 中完成 IMS 配置](#completing-the-ims-configuration-in-aem)时再次使用。
+   >保持此配置处于打开状态；出现以下情况时再次需要： [在AEM中完成IMS配置](#completing-the-ims-configuration-in-aem).
 
    ![用于向Adobe I/O添加密钥的信息对话框](assets/integrate-analytics-io-02.png)
 
 ## 为 Adobe Analytics 与 AEM 的集成配置 IMS {#configuring-ims-for-adobe-analytics-integration-with-aem}
 
-使用 Adobe Developer Console，您需要使用 Adobe Analytics（供 AEM 使用）创建项目（集成），然后分配所需的权限。
+使用Adobe Developer Console，创建一个与Adobe Analytics(供AEM使用)的项目（集成），然后分配所需的权限。
 
 ### 创建项目 {#creating-the-project}
 
-打开 Adobe Developer Console 以使用 Adobe Analytics（将由 AEM 使用）创建项目：
+要使用AEM可以使用的Adobe Analytics创建项目，请打开Adobe Developer Console：
 
 >[!CAUTION]
 >
->目前，我们仅支持 Adobe Developer Console 的&#x200B;**服务帐户 (JWT)** 凭据类型。
+>目前，Adobe仅支持Adobe Developer控制台的 **服务帐户(JWT)** 凭据类型。
 >
 >不要使用 **OAuth 服务器到服务器**&#x200B;凭据类型（以后将支持此类型）。
 
@@ -80,11 +80,11 @@ ht-degree: 66%
 
    [https://developer.adobe.com/console/projects](https://developer.adobe.com/console/projects)
 
-1. 将显示您拥有的任何项目。选择&#x200B;**新建项目** – 位置和使用将取决于：
+1. 您拥有的任何项目都会显示出来。选择 **创建新项目**  — 位置和使用情况取决于以下因素：
 
-   * 如果您不具有任何项目，**新建项目**将位于底部中心。
+   * 如果您不具有任何项目，**新建项目**会位于底部中心。
      ![新建项目 – 第一个项目](assets/integration-analytics-io-02.png)
-   * 如果您已拥有项目，这些项目将列出，**新建项目**将位于右上方。
+   * 如果您已经拥有现有项目，则会列出和 **创建新项目** 位于右上角。
      ![新建项目 – 多个项目](assets/integration-analytics-io-03.png)
 
 
@@ -96,11 +96,11 @@ ht-degree: 66%
 
    >[!NOTE]
    >
-   >如果您已订阅Adobe Analytics，但它并未列出，您应查看 [先决条件](#prerequisites).
+   >如果您已订阅 Adobe Analytics，但它并未列出，您应查看[先决条件](#prerequisites)。
 
    ![添加 API](assets/integration-analytics-io-12.png)
 
-1. 选择&#x200B;**服务帐户 (JWT)** 作为身份验证类型，然后选择&#x200B;**下一步**：
+1. 选择 **服务帐户(JWT)** 作为身份验证类型，然后继续 **下一个**：
 
    ![选择身份验证类型](assets/integration-analytics-io-12a.png)
 
@@ -116,11 +116,11 @@ ht-degree: 66%
 
    ![选择所需的产品配置文件](assets/integration-analytics-io-16.png)
 
-1. 这将确认配置。
+1. 配置得到确认。
 
 ### 将权限分配给集成 {#assigning-privileges-to-the-integration}
 
-您现在必须将所需权限分配给集成：
+现在，将所需权限分配给集成：
 
 1. 打开 Adobe **Admin Console**：
 
@@ -137,7 +137,7 @@ ht-degree: 66%
 
 * [https://developer.adobe.com/console/projects](https://developer.adobe.com/console/projects)
 
-选择特定项目条目以显示有关配置的更多详细信息。其中包括：
+要显示有关配置的更多详细信息，请选择特定项目条目。 其中包括：
 
 * 项目概述
 * 见解
@@ -148,11 +148,11 @@ ht-degree: 66%
 * APIS
    * 例如，Adobe Analytics
 
-要在AEM中完成Adobe Analytics的集成，您需要其中的一些项。
+其中一些您必须在AEM中完成Adobe Analytics的集成。
 
 ## 在 AEM 中完成 IMS 配置 {#completing-the-ims-configuration-in-aem}
 
-通过返回到AEM，您可以添加针对Analytics的集成项目中的所需值来完成IMS配置：
+通过返回到AEM，您可以添加针对Analytics的集成项目所需的值来完成IMS配置：
 
 1. 返回到 [AEM 中打开的 IMS 配置](#configuring-an-ims-configuration-generating-a-public-key)。
 1. 选择&#x200B;**下一步**。
@@ -169,7 +169,7 @@ ht-degree: 66%
 
 1. 选择&#x200B;**创建**&#x200B;来确认。
 
-1. 您的 Adobe Analytics 配置将显示在 AEM 控制台中。
+1. 您的 Adobe Analytics 配置会显示在 AEM 控制台中。
 
    ![IMS 配置](assets/integrate-analytics-io-11.png)
 
@@ -199,15 +199,15 @@ ht-degree: 66%
 1. 打开 **工具** 菜单。 然后，在 **Cloud Service** 部分，选择 **旧版Cloud Service**.
 1. 向下滚动到 **Adobe Analytics** 并选择 **立即配置**.
 
-   此 **创建配置** 此时将打开对话框。
+   此 **创建配置** 对话框打开。
 
-1. 输入 **标题** 如果你愿意，还有 **名称** （如果留空，这将从标题生成）。
+1. 输入 **标题** 如果你愿意，还有 **名称** （如果留空，则从标题生成）。
 
    您还可以选择所需的模板（如果有多个模板可用）。
 
 1. 选择&#x200B;**创建**&#x200B;来确认。
 
-   此 **编辑组件** 此时将打开对话框。
+   此 **编辑组件** 对话框打开。
 
 1. 请在以下位置输入详细信息 **Analytics设置** 选项卡：
 
@@ -215,12 +215,12 @@ ht-degree: 66%
 
    * **IMS配置**：选择IMS配置的名称
 
-1. 单击 **连接到Analytics** 初始化与Adobe Analytics的连接。
+1. 要初始化与Adobe Analytics的连接，请单击 **连接到Analytics**.
 
    如果连接成功，则将显示消息&#x200B;**连接成功**。
 
 1. 选择 **确定** 在消息上。
 
-1. 根据需要完成其他参数，然后 **确定** ，以确认配置。
+1. 根据需要完成其他参数，然后 **确定** ，以便您确认配置。
 
-1. 您现在可以继续访问 [添加Analytics框架](/help/sites-administering/adobeanalytics-connect.md) 以配置将发送到Adobe Analytics的参数。
+1. 您现在可以继续访问 [添加Analytics框架](/help/sites-administering/adobeanalytics-connect.md) 以配置发送到Adobe Analytics的参数。

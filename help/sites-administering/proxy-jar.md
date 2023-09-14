@@ -1,26 +1,22 @@
 ---
 title: 代理服务器工具(proxy.jar)
-seo-title: Proxy Server Tool (proxy.jar)
 description: 了解AEM中的代理服务器工具。
-seo-description: Learn about the Proxy Server Tool in AEM.
-uuid: 2fc1df24-8d5a-4be7-83fa-238ae65591b0
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
-discoiquuid: ca98dc3c-7056-4cdc-b4d3-23e471da5730
 docset: aem65
 exl-id: 3df50303-5cdd-4df0-abec-80831d2ccef7
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: fd8bb7d3d9040e0a7a6b2f65751445f41aeab73e
 workflow-type: tm+mt
-source-wordcount: '1160'
+source-wordcount: '1156'
 ht-degree: 0%
 
 ---
 
 # 代理服务器工具(proxy.jar){#proxy-server-tool-proxy-jar}
 
-代理服务器充当在客户端和服务器之间中继请求的中间服务器。 代理服务器会跟踪所有客户端 — 服务器交互，并输出整个TCP通信的日志。 这使您能够准确地监视正在发生的情况，而无需访问主服务器。
+代理服务器充当在客户端和服务器之间中继请求的中间服务器。 代理服务器跟踪所有客户端 — 服务器交互并输出整个TCP通信的日志。 这使您能够准确地监视正在发生的情况，而无需访问主服务器。
 
 您可以在相应的安装文件夹中找到代理服务器：
 
@@ -47,10 +43,10 @@ java -jar proxy.jar <host> <remoteport> <localport> [options]
 ### 选项 {#options}
 
 * **q（安静模式）** 不会将请求写入控制台窗口。 如果不想减慢连接速度，或者将输出记录到文件（请参见 — logfile选项），则使用此选项。
-* **b（二进制模式）** 如果您要在流量中查找特定的字节组合，请启用二进制模式。 然后，输出将包含十六进制和字符输出。
+* **b（二进制模式）** 如果您要在流量中查找特定的字节组合，请启用二进制模式。 输出包含十六进制和字符输出。
 * **t（时间戳日志条目）** 向每个日志输出添加时间戳。 时间戳以秒为单位，因此它可能不适合检查单个请求。 如果您使用代理服务器的时间较长，则使用它来查找在特定时间发生的事件。
-* **logfile &lt;filename> （写入日志文件）** 将客户端 — 服务器对话写入日志文件。 此参数也可以在安静模式下使用。
-* **i &lt;numindentions> （添加缩进）** 每个活动连接都进行缩进，以提高可读性。 默认级别为16。 （proxy.jar版本1.16中的新增功能）。
+* **logfile &lt;filename> （写入日志文件）** 将客户端 — 服务器对话写入日志文件。 此参数还可在安静模式下使用。
+* **i &lt;numindentions> （添加缩进）** 每个活动连接都进行缩进，以提高可读性。 默认值为16级。 （proxy.jar版本1.16中的新增功能）。
 
 ## 使用代理服务器工具 {#uses-of-the-proxy-server-tool}
 
@@ -58,7 +54,7 @@ java -jar proxy.jar <host> <remoteport> <localport> [options]
 
 **检查Cookie及其值**
 
-以下日志条目示例显示了自代理启动以来第6个连接上由客户端发送的所有Cookie及其值：
+以下日志条目示例显示了自代理启动以来在第六个连接上由客户端发送的所有Cookie及其值：
 
 ```xml
 C-6-#000635 -> [Cookie: cq3session=7e39bc51-ac72-3f48-88a9-ed80dbac0693; Show=ShowMode; JSESSIONID=68d78874-cabf-9444-84a4-538d43f5064d ]
@@ -74,7 +70,7 @@ S-7-#000107 -> [Content-Length: 124 ]
 
 **正在检查Keep-Alive是否有效**
 
-**保持活动状态** 这意味着客户端重新使用与服务器的连接来传输多个文件（页面代码、图片、样式表等）。 如果没有保持活动状态，客户端必须为每个请求建立新的连接。
+**保持活动状态** 这意味着客户端会重复使用与服务器的连接来传输多个文件（页面代码、图片、样式表等）。 如果没有保持活动状态，客户端必须为每个请求建立新的连接。
 
 要检查保持活动状态是否有效，请执行以下操作：
 
@@ -86,7 +82,7 @@ S-7-#000107 -> [Content-Length: 124 ]
 
 **查找丢失的请求**
 
-如果在复杂的服务器设置中丢失请求，例如防火墙和Dispatcher设置，则可以使用代理服务器查找请求丢失的位置。 在防火墙的情况下：
+如果在复杂的服务器设置中丢失请求，例如防火墙和Dispatcher设置，则可以使用代理服务器查找请求丢失的位置。 如果有防火墙：
 
 1. 在防火墙之前启动代理
 1. 在防火墙后启动另一个代理
@@ -126,11 +122,11 @@ C-6-Finished: 758 bytes (1.0 kb/s)
 S-6-Finished: 665 bytes (1.0 kb/s)
 ```
 
-这显示第6个连接中客户机和服务器之间以平均速度传递的字节数。
+这显示了第六次连接中客户机和服务器之间以平均速度传递的字节数。
 
 ## 日志输出示例 {#an-example-of-log-output}
 
-我们将审查一个简单的模板，该模板会根据请求生成以下代码：
+查看一个简单模板，该模板会在请求时生成以下代码：
 
 ```xml
 <html>
@@ -181,7 +177,7 @@ C-0-#000347 -> [Host: localhost:4444 ]
 C-0-#000369 -> [Connection: Keep-Alive ]
 ```
 
-代理服务器是验证Cookie是否正确设置的有用工具。 在这里，我们看到：
+代理服务器是验证Cookie是否正确设置的有用工具。 在这里，您会看到以下内容：
 
 * AEM生成的cq3session Cookie
 * CFC生成的show mode开关Cookie
@@ -281,4 +277,4 @@ C-1-Finished: 403 bytes (0.0 kb/s)
 * 首先，服务器返回HTML代码
 * 然后浏览器请求图像并打开一个新连接
 
-实际上，页面可能会生成对图像、样式表、JavaScript文件等的多个并行请求。 这意味着日志具有重叠的并行打开连接条目。 在这种情况下，我们建议使用选项 — i来提高可读性。
+实际上，页面可能会生成对图像、样式表、JavaScript文件等的多个并行请求。 这意味着日志具有重叠的并行打开连接条目。 在这种情况下，Adobe建议使用选项 — i来提高可读性。

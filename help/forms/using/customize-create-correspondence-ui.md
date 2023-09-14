@@ -1,19 +1,15 @@
 ---
 title: 自定义创建通信UI
-seo-title: Customize create correspondence UI
-description: 了解如何自定义创建通信UI。
-seo-description: Learn how to customize create correspondence UI.
-uuid: 9dee9b6f-4129-4560-9bf8-db48110b76f7
+description: 了解如何自定义创建通信用户界面。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: correspondence-management
-discoiquuid: 13a93111-c08c-4457-b69a-a6f6eb6da330
 docset: aem65
 feature: Correspondence Management
 exl-id: 9593ca2a-7f9e-4487-a1a5-ca44114bff17
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: fd8bb7d3d9040e0a7a6b2f65751445f41aeab73e
 workflow-type: tm+mt
-source-wordcount: '1086'
+source-wordcount: '1084'
 ht-degree: 1%
 
 ---
@@ -35,7 +31,7 @@ ht-degree: 1%
 要设置您选择的徽标图像，请执行以下操作：
 
 1. 创建适当的 [CRX中的文件夹结构](#creatingfolderstructure).
-1. [上传新的徽标文件](#uploadlogo) （在CRX中创建的文件夹）中的位置。
+1. [上传新的徽标文件](#uploadlogo) （在您已在CRX中创建的文件夹中）。
 
 1. [设置CSS](#createcss) 在CRX上引用新徽标。
 1. 清除浏览器历史记录并 [刷新创建通信UI](#refreshccrui).
@@ -46,16 +42,16 @@ ht-degree: 1%
 
 对于任何自定义设置，请在/apps分支中创建并行文件夹结构，如下所述。
 
-/apps分支（文件夹结构）：
+此 `/apps` 分支（文件夹结构）：
 
-* 在系统更新时确保文件的安全。 如果执行升级、功能包或修补程序，则会更新/libs分支；如果您将更改托管在/libs分支中，则会覆盖这些更改。
-* 帮助您避免打扰当前的系统/分支，如果您使用默认位置存储自定义文件，则可能会错误地解除干扰。
-* 帮助您的资源在AEM搜索资源时获得更高的优先级。 AEM配置为首先搜索/apps分支，然后搜索/libs分支以查找资源。 此机制意味着系统使用您的叠加（以及其中定义的自定义项）。
+* 如果系统有更新，确保文件的安全。 如果有升级、功能包或修补程序， `/libs` 分支将更新，如果您将更改托管在 `/libs` 分支，它们将被覆盖。
+* 有助于避免打扰现有的系统/分支，如果您使用默认位置存储自定义文件，则可能会错误地解除干扰。
+* 帮助您的资源在AEM搜索资源时获得更高的优先级。 AEM配置为搜索 `/apps` 先分支，然后分支 `/libs` 分支以查找资源。 此机制意味着系统使用您的叠加（以及其中定义的自定义项）。
 
-使用以下步骤可在/apps分支中创建所需的文件夹结构：
+使用以下步骤在中创建所需的文件夹结构 `/apps` 分支：
 
 1. 转到 `https://'[server]:[port]'/[ContextPath]/crx/de` 并以管理员身份登录。
-1. 在apps文件夹中，创建一个名为 `css` 路径/结构与css文件夹（位于crui文件夹）类似。
+1. 在apps文件夹中，创建一个名为 `css` 路径/结构与css文件夹（在crui文件夹中）类似。
 
    创建css文件夹的步骤：
 
@@ -65,9 +61,9 @@ ht-degree: 1%
 
    1. 确保“覆盖节点”对话框具有以下值：
 
-      **路径：** /libs/fd/cm/ccr/gui/components/admin/clientlibs/crui/css
+      **路径:** `/libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/css`
 
-      **叠加位置：** /apps/
+      **覆盖位置:** `/apps/`
 
       **匹配节点类型：** 已选中
 
@@ -75,7 +71,7 @@ ht-degree: 1%
 
       >[!NOTE]
       >
-      >请勿在/libs分支中进行更改。 您所做的任何更改都可能会丢失，因为每当您：
+      >请勿更改 `/libs` 分支。 您所做的任何更改都可能会丢失，因为每当您：
       >
       >    
       >    
@@ -87,7 +83,7 @@ ht-degree: 1%
 
    1. 单击&#x200B;**确定**。css文件夹在指定的路径中创建。
 
-1. 在apps文件夹中，创建一个名为 `imgs` 路径/结构与imgs文件夹（位于crui文件夹）类似。
+1. 在apps文件夹中，创建一个名为 `imgs` 路径/结构与imgs文件夹（在ccrui文件夹中）类似。
 
    1. 右键单击 **imgs** 路径下的文件夹并选择 **覆盖节点**： `/libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/imgs`
    1. 确保“覆盖节点”对话框具有以下值：
@@ -108,10 +104,10 @@ ht-degree: 1%
 
 ## 将新徽标上传到CRX {#uploadlogo}
 
-将您的自定义徽标文件上传到CRX。 标准HTML规则管理徽标的呈现。 根据您用于访问AEM Forms的浏览器，支持哪些图像文件格式。 所有浏览器都支持JPEG、GIF和PNG。 有关更多信息，请参阅特定于浏览器的文档，了解支持的图像格式。
+将您的自定义徽标文件上传到CRX。 标准HTML规则管理徽标的呈现。 根据您用于访问AEM Forms的浏览器，支持的图像文件格式会有所不同。 所有浏览器都支持JPEG、GIF和PNG。 有关更多信息，请参阅特定于浏览器的文档，了解支持的图像格式。
 
 * 徽标图像的默认尺寸为48像素 &#42; 48像素 确保图像类似于此大小或大于48像素 &#42; 48像素
-* 如果您的徽标图像高度大于50像素，则“创建通信”用户界面会将图像高度缩减到最大为50像素，因为这是标题的高度。 在缩小图像时，“创建通信”用户界面会保持图像的纵横比。
+* 如果徽标图像的高度超过50像素，则创建通信用户界面会将图像高度缩减到最大为50像素，因为这是标题的高度。 在缩小图像时，“创建通信”用户界面会保持图像的纵横比。
 * 创建通信用户界面不会放大图像（如果图像较小），因此请确保使用高度至少为48像素且宽度充足的徽标图像以提高清晰度。
 
 使用以下步骤将自定义徽标文件上传到CRX：
@@ -141,11 +137,11 @@ ht-degree: 1%
 
    此时将显示“编辑jcr：data”对话框。
 
-   现在，单击newlogo.png文件夹，双击jcr：content （dim选项），然后设置nt：resource类型。 如果没有，请创建名为jcr：content的属性。
+   现在，单击newlogo.png文件夹，然后双击jcr：content （dim选项）并设置nt：resource类型。 如果该属性不存在，请创建名为jcr：content的属性。
 
 1. 在“编辑jcr：data”对话框中，单击 **浏览** 并选择要用作徽标的图像文件（此处为CustomLogo.png）。
 
-   根据您用于访问AEM Forms的浏览器，支持哪些图像文件格式。 所有浏览器都支持JPEG、GIF和PNG。 有关更多信息，请参阅特定于浏览器的文档，了解支持的图像格式。
+   根据您用于访问AEM Forms的浏览器，支持的图像文件格式会有所不同。 所有浏览器都支持JPEG、GIF和PNG。 有关更多信息，请参阅特定于浏览器的文档，了解支持的图像格式。
 
    ![自定义徽标文件示例](assets/geometrixx-outdoors.png)
 
@@ -153,11 +149,11 @@ ht-degree: 1%
 
 1. 单击&#x200B;**全部保存**。
 
-## 创建CSS以将徽标与UI集成 {#createcss}
+## 创建CSS以便通过UI呈现徽标 {#createcss}
 
 自定义徽标图像需要在内容上下文中加载其他样式表。
 
-使用以下步骤设置用于呈现徽标的样式表：
+使用以下步骤可创建样式表，以便通过UI呈现徽标：
 
 1. 转到 `https://'[server]:[port]'/[contextpath]/crx/de`. 如有必要，请以管理员身份登录。
 1. 在以下位置创建一个名为customcss.css的文件（不能使用其他文件名）：
@@ -178,9 +174,9 @@ ht-degree: 1%
 
    1. 单击&#x200B;**全部保存**。
 
-## 刷新创建通信UI以查看自定义徽标 {#refreshccrui}
+## 刷新创建通信UI，以便您可以看到自定义徽标 {#refreshccrui}
 
-清除浏览器缓存，然后在浏览器中打开创建通信UI实例。 您应该会看到您的自定义徽标。
+清除浏览器缓存，然后在浏览器中打开创建通信UI实例，以便您可以看到自定义徽标。
 
 ![使用自定义徽标创建通信用户界面](assets/0_1_introscreenshot-1.png)
 

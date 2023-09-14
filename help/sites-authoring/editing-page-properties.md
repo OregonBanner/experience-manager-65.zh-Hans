@@ -1,24 +1,22 @@
 ---
 title: 编辑内容页面属性
 description: 为页面定义所需的属性.
-uuid: d3a2183b-8082-4cfc-aeed-26facbf3f3e6
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
-discoiquuid: 1e9dd0d7-209a-4989-b66b-bca0d04b437a
 docset: aem65
 exl-id: 3cd9374f-6f16-40fb-97cf-5f9a750b8dd2
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: fd8bb7d3d9040e0a7a6b2f65751445f41aeab73e
 workflow-type: tm+mt
-source-wordcount: '1882'
-ht-degree: 60%
+source-wordcount: '1868'
+ht-degree: 45%
 
 ---
 
 # 编辑页面属性{#editing-page-properties}
 
-您可以为页面定义所需的属性。这些属性会因页面性质而异。例如，某些页面可能会连接到 Live Copy，而其他页面则可能不会，Live Copy 信息将在适当情况下才可用。
+您可以为页面定义所需的属性。这些属性会因页面性质而异。例如，某些页面可能已连接到Live Copy，而其他页面未连接到，因此Live Copy信息会根据需要变得可用。
 
 ## 页面属性 {#page-properties}
 
@@ -36,13 +34,13 @@ ht-degree: 60%
 
   在此，可以通过更新选择框中的列表在页面中添加或删除标记：
 
-   * 选择标记后，它会列在选择框下。您可以使用“x”从此列表中移除标记。
-   * 可通过在空白选择框中键入名称输入全新标记。
+   * 选择某个标记后，该标记会列在选择框的下方。 您可以使用“x”从此列表中移除标记。
+   * 通过在空的选择框中键入名称可输入新标记。
 
-      * 按 Enter 将创建新标记。
-      * 随后将会显示新标记，其右侧带有一个小星星，表示该标记为新标记。
+      * 当您按Enter键时，将创建新标记。
+      * 新标记将在右侧显示一个小星号，指示它是新标记。
 
-   * 使用下拉列表功能，可从现有标记中进行选择。
+   * 利用下拉功能，您可以从现有标记中进行选择。
    * 当您将鼠标悬停在选择框中的标记条目上时，会显示 x，用于为此页面删除该标记。
 
   有关标记的更多信息，请访问[使用标记](/help/sites-authoring/tags.md)。
@@ -56,16 +54,16 @@ ht-degree: 60%
   通过将品牌概要附加到每个页面标题，跨页面应用一致的品牌识别。此功能需要使用 2.14.0 版或更高版本的[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)中的页面组件。
 
    * **覆盖** – 选中可在此页面上定义品牌概要。
-      * 该值将由任何子页面继承，除非它们也设置了&#x200B;**覆盖**&#x200B;值。
+      * 该值会由任何子页面继承，除非它们也设置了&#x200B;**覆盖**&#x200B;值。
    * **覆盖值** – 要附加到页面标题的品牌概要的文本。
       * 该值附加到页面标题后的竖线字符后，例如“骑行 Tuscany | 始终准备好使用 WKND”
 * **页面标题**
 
-  要在页面上使用的标题。 通常由标题组件使用。如果留空，则将使用&#x200B;**标题**。
+  要在页面上使用的标题。 通常由标题组件使用。如果留空，则会使用&#x200B;**标题**。
 
 * **导航标题**
 
-  您可以指定单独的标题以便在导航中使用（例如，当您希望某些内容能更加简洁时）。 如果为空， **标题** 将使用。
+  您可以指定单独的标题以便在导航中使用（例如，当您希望某些内容能更加简洁时）。 如果留空，则会使用&#x200B;**标题**。
 
 * **子标题**
 
@@ -77,19 +75,19 @@ ht-degree: 60%
 
 * **开始时间**
 
-  激活已发布页面的日期和时间。 发布后，此页面将保持休眠状态，直到指定的时间。
+  激活已发布页面的日期和时间。 发布后，此页面在指定时间之前一直处于休眠状态。
 
   对于要立即发布的页面（正常场景），请将这些字段留空。
 
 * **结束时间**
 
-  将停用已发布页面的时间。
+  已发布页面被停用时的时间。
 
   再次将这些字段留空以便立即执行操作。
 
 * **虚 URL**
 
-  可让您输入此页面的虚URL，这样可让您具有更短和/或更具有表现性的URL。
+  输入此页面的虚URL，这样可让您的URL长度更短和/或更具有表现性。
 
   例如，如果将虚URL设置为 `welcome`到由路径标识的页面 `/v1.0/startpage`用于网站 `http://example.com,` 则 `http://example.com/welcome`将成为的虚URL `http://example.com/content/v1.0/startpage`
 
@@ -97,12 +95,12 @@ ht-degree: 60%
   >
   >虚 URL：
   >
-  >* 必须是唯一的，因此您应该确保该值没有被其他页面使用。
+  >* 必须是唯一的。 确保其他页面尚未使用该值。
   >* 不支持正则表达式模式。
   >* 不应设置为现有页面。
   >
 
-  您还需要配置Dispatcher以启用对虚名URL的访问。 请参阅 [启用对虚名URL的访问](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#enabling-access-to-vanity-urls-vanity-urls) 以了解更多详细信息。
+  配置Dispatcher以启用对虚名URL的访问。 请参阅 [启用对虚名URL的访问](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#enabling-access-to-vanity-urls-vanity-urls) 以了解更多详细信息。
 
 * **重定向虚 URL**
 
@@ -133,7 +131,7 @@ ht-degree: 60%
    * 例如，如果您为页面 `/content/wknd/us/en/magazine/members-only` 定义别名 `private`，则也可以通过 `/content/wknd/us/en/magazine/private` 访问此页面
    * 创建别名将设置页面节点上的 `sling:alias` 属性，这只会影响资源，而不会影响存储库路径。
    * 无法发布编辑器中按别名处理的页面。编辑器中的[发布选项](/help/sites-authoring/publishing-pages.md)仅适用于通过其实际路径访问的页面。
-   * 有关详细信息，请参阅[“SEO 和 URL 管理最佳实践”下的“本地化的页面名称”](/help/managing/seo-and-url-management.md#localized-page-names)。
+   * 有关更多详细信息，请参阅 [SEO和URL管理最佳实践下的本地化页面名称](/help/managing/seo-and-url-management.md#localized-page-names).
 
 * **继承自&lt;*路径*>**
 
@@ -145,19 +143,19 @@ ht-degree: 60%
 
 * **允许的模板**
 
-  [定义将可用的模板列表](/help/sites-authoring/templates.md#allowingatemplate) 在该支行内。
+  [定义可用的模板列表](/help/sites-authoring/templates.md#allowingatemplate) 在该支行内。
 
 * **启用** （身份验证要求）
 
-  启用（或禁用）使用身份验证来访问页面。
+  启用（或禁用）身份验证，以便您可以访问该页面。
 
   >[!NOTE]
   >
-  >已关闭的用户组在&#x200B;**[权限](/help/sites-authoring/editing-page-properties.md#permissions)**&#x200B;选项卡上定义。
+  >页面的已关闭的用户组在&#x200B;**[权限](/help/sites-authoring/editing-page-properties.md#permissions)**&#x200B;选项卡上定义。
 
   >[!CAUTION]
   >
-  >此 **[权限](/help/sites-authoring/editing-page-properties.md#main-pars-procedure-949394300)** 选项卡允许根据是否存在以下项编辑CUG配置 `granite:AuthenticationRequired` mixin。 如果页面权限是使用已弃用的CUG配置进行配置，则根据是否存在 `cq:cugEnabled` 属性，下将显示一条警告消息 **身份验证要求** 选项将不可编辑，并且 [权限](/help/sites-authoring/editing-page-properties.md#permissions) 可编辑。
+  >此 **[权限](/help/sites-authoring/editing-page-properties.md#main-pars-procedure-949394300)** 选项卡允许根据是否存在 `granite:AuthenticationRequired` mixin。 如果页面权限是使用已弃用的CUG配置进行配置，则根据是否存在 `cq:cugEnabled` 属性，下将显示一条警告消息 **身份验证要求** 并且选项不可编辑，也不是 [权限](/help/sites-authoring/editing-page-properties.md#permissions) 可编辑。
   >
   >
   >在这种情况下，必须在中编辑CUG权限 [经典UI](/help/sites-classic-ui-authoring/classic-page-author-edit-page-properties.md).
@@ -188,18 +186,18 @@ ht-degree: 60%
 
 * **还原**
 
-  在您对缩略图进行更改后，此选项将变得可用。 如果不想保留您的更改，可以在保存前还原更改。
+  在更改缩略图后，此选项将变得可用。 如果不想保留您的更改，可以在保存前还原更改。
 
 ### 社交媒体 {#social-media}
 
 * **社交媒体共享**
 
-  定义页面上可用的共享选项。 显示以下项可用的选项： [共享核心组件](https://helpx.adobe.com/experience-manager/core-components/using/sharing.html).
+  定义页面上可用的共享选项。 显示可用于的选项 [共享核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/sharing.html?lang=en).
 
    * **为Facebook启用用户共享**
    * **为Pinterest启用用户共享**
-   * **首选体验片段变体**
-定义用于为页面生成元数据的体验片段变体
+   * **首选体验片段变量**
+定义用于为页面生成元数据的体验片段变量
 
 ### Cloud Service {#cloud-services}
 
@@ -233,7 +231,7 @@ ht-degree: 60%
 
   >[!CAUTION]
   >
-  >此 **权限** 选项卡允许根据是否存在以下项编辑CUG配置 `granite:AuthenticationRequired` mixin。 如果页面权限是使用已弃用的CUG配置进行配置，则根据是否存在 `cq:cugEnabled` 属性，将显示一条警告消息，并且CUG权限将不可编辑，对的身份验证要求也不会 [高级](/help/sites-authoring/editing-page-properties.md#advanced) 选项卡可编辑。
+  >此 **权限** 选项卡允许根据是否存在以下项编辑CUG配置 `granite:AuthenticationRequired` mixin。 如果页面权限是使用已弃用的CUG配置进行配置，则根据是否存在 `cq:cugEnabled` 属性，将显示一条警告消息，并且CUG权限不可编辑，上的身份验证要求也不是 [高级](/help/sites-authoring/editing-page-properties.md#advanced) 选项卡可编辑。
   >
   >
   >在这种情况下，必须在中编辑CUG权限 [经典UI](/help/sites-classic-ui-authoring/classic-page-author-edit-page-properties.md).
@@ -256,7 +254,7 @@ ht-degree: 60%
 
 ### 站点结构 {#site-structure}
 
-* 提供具有全站点功能的页面的链接，例如&#x200B;**注册页面**、**脱机页面**&#x200B;以及其他。
+* 提供具有全站点功能的页面的链接，例如 **注册页面**， **脱机页面**，等等。
 
 ## 编辑页面属性 {#editing-page-properties-1}
 
@@ -286,15 +284,15 @@ ht-degree: 60%
    * [快速操作](/help/sites-authoring/basic-handling.md#quick-actions)
    * [选择模式](/help/sites-authoring/basic-handling.md#selectionmode)
 
-   此时将使用相应的选项卡显示页面属性。
+   此时会使用相应的选项卡显示页面属性。
 
 1. 查看或编辑所需的属性。
 
-1. 然后，使用&#x200B;**保存**&#x200B;来保存您的更新，接着使用&#x200B;**关闭**&#x200B;返回到控制台。
+1. 然后使用 **保存** 以保存您的更新，然后 **关闭** 以便返回控制台。
 
 ### 编辑页面时 {#when-editing-a-page}
 
-在编辑页面时，您可以使用&#x200B;**页面信息**&#x200B;来定义页面属性：
+在编辑页面时，您可以使用 **页面信息** 要定义页面属性，请执行以下操作：
 
 1. 打开要编辑属性的页面。
 
@@ -311,13 +309,13 @@ ht-degree: 60%
 
 ### 从 Sites 控制台中 – 多个页面 {#from-the-sites-console-multiple-pages}
 
-从&#x200B;**Sites**&#x200B;控制台中，您可以选择多个页面，然后使用&#x200B;**查看属性**，查看和／或编辑页面属性。这称为批量编辑页面属性。
+从 **站点** 控制台中，您可以选择多个页面，然后使用 **查看属性** 查看和/或编辑页面属性。 这称为批量编辑页面属性。
 
 >[!NOTE]
 >
->也可以对资源使用批量编辑属性功能。其操作大体相同，只有少数几点差别。请参阅 [编辑多个资产的属性](/help/assets/metadata.md) 以了解详细信息。
+>也可以对资源使用批量编辑属性功能。两者相似，但在几个方面有所不同。 请参阅 [编辑多个资产的属性](/help/assets/metadata.md) 以了解详细信息。
 >
->还有 [批量编辑器](/help/sites-administering/bulk-editor.md)，可让您使用GQL(Google查询语言)从多个页面搜索内容，然后直接在批量编辑器中编辑内容，再将更改保存到原始页面。
+>还有 [批量编辑器](/help/sites-administering/bulk-editor.md). 通过此编辑器，您可以使用GQL(Google查询语言)从多个页面搜索内容，然后直接使用批量编辑器编辑内容，再将更改保存到原始页面。
 
 可以通过多种方法选择要批量编辑的多个页面，这些方法包括：
 
@@ -326,7 +324,7 @@ ht-degree: 60%
 
 ![epp-01](assets/epp-01.png)
 
-选择页面后，单击或点按&#x200B;**属性选项**，此时将会显示批量属性：
+选择页面后，单击或点按&#x200B;**属性选项**，此时会显示批量属性：
 
 ![epp-02](assets/epp-02.png)
 
@@ -335,13 +333,13 @@ ht-degree: 60%
 * 属于同一资源类型
 * 不是 Live Copy 的一部分
 
-   * 如果有任何页面在 Live Copy 中，将会在属性打开时显示一条消息。
+   * 如果有任何页面在 Live Copy 中，则会在属性打开时显示一条消息。
 
-进入“批量编辑”后，您可以：
+进入“批量编辑”后，可以执行以下操作：
 
 * **查看**
 
-  在查看多个页面的页面属性时，您可以看到：
+  查看多个页面的页面属性时，您可以看到以下内容：
 
    * 受影响的页面列表
 
@@ -359,7 +357,7 @@ ht-degree: 60%
    * 具有相同值的通用属性
 
       * 在“查看”模式中，只显示具有相同值的属性。
-      * 当字段有多个值时（例如“标记”），只有在&#x200B;*所有值*&#x200B;均相同的情况下，才会显示这些值。如果只有部分值相同，则仅在编辑时才显示它们。
+      * 当字段有多个值时（例如“标记”），只有当 *所有* 很常见。 如果只有一些是通用的，则仅在编辑时才显示它们。
 
   如果不存在具有相同值的属性，则会显示一条消息。
 
@@ -369,10 +367,10 @@ ht-degree: 60%
 
    * 您可以更新可用字段中的值。
 
-      * 当您选择&#x200B;**完成**&#x200B;时，新值将会应用于所有选定页面。
+      * 当您选择&#x200B;**完成**&#x200B;时，新值会应用于所有选定页面。
       * 当字段有多个值时（例如“标记”），您可以附加一个新值，也可以删除相同的值。
 
-   * 如果不同页面具有相同的字段，但这些字段的值不同，则会用一个特殊的值表示它们，例如，文本 `<Mixed Entries>`。
+   * 如果不同页面具有相同的字段，但这些字段的值不同，则会用一个特殊的值表示它们，例如文本 `<Mixed Entries>`.
 
 >[!NOTE]
 >

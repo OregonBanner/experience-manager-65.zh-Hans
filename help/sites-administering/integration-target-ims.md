@@ -1,11 +1,11 @@
 ---
 title: 使用IMS与Adobe Target集成
-description: 了解如何使用IMS将AEM与Adobe Target集成
+description: 了解如何使用IMS将AEM与Adobe Target集成。
 exl-id: 8ddd86d5-a5a9-4907-b07b-b6552d7afdc8
-source-git-commit: 06ed2329840e151083bd238ee3a4d33663463c9c
+source-git-commit: fd8bb7d3d9040e0a7a6b2f65751445f41aeab73e
 workflow-type: tm+mt
-source-wordcount: '1577'
-ht-degree: 55%
+source-wordcount: '1557'
+ht-degree: 43%
 
 ---
 
@@ -27,17 +27,17 @@ ht-degree: 55%
 
 开始此过程之前：
 
-* [Adobe 支持部门](https://helpx.adobe.com/cn/contact/enterprise-support.ec.html)必须针对以下项目配置您的帐户：
+* [Adobe 支持部门](https://experienceleague.adobe.com/?support-solution=General&amp;support-tab=home#support)必须针对以下项目配置您的帐户：
 
    * Adobe Console
    * Adobe Developer Console
    * Adobe Target 和
    * Adobe IMS (Identity Management System)
 
-* 您组织的系统管理员应使用Admin Console将您组织中所需的开发人员添加到相关的产品配置文件中。
+* 您组织的系统管理员应使用 Admin Console 将您组织中所需的开发人员添加到相关的产品配置文件中。
 
    * 这将为特定开发人员提供在Adobe Developer控制台中启用集成的权限。
-   * 有关更多详细信息，请参阅[管理开发人员](https://helpx.adobe.com/cn/enterprise/admin-guide.html/enterprise/using/manage-developers.ug.html)。
+   * 请参阅 [管理开发人员](https://helpx.adobe.com/enterprise/using/manage-developers.html).
 
 
 ## 配置 IMS 配置 – 生成公钥 {#configuring-an-ims-configuration-generating-a-public-key}
@@ -45,7 +45,7 @@ ht-degree: 55%
 配置的第一阶段是在 AEM 中创建 IMS 配置并生成公钥。
 
 1. 在 AEM 中，打开&#x200B;**工具**&#x200B;菜单。
-1. 在&#x200B;**安全性**&#x200B;部分中，选择 **Adobe IMS 配置**。
+1. 在 **安全性** 部分，选择 **Adobe IMS配置**.
 1. 选择&#x200B;**创建**，打开 **Adobe IMS 技术帐户配置**。
 1. 使用&#x200B;**云配置**&#x200B;下的下拉列表，选择 **Adobe Target**。
 1. 激活&#x200B;**新建证书**&#x200B;并输入新别名。
@@ -57,21 +57,21 @@ ht-degree: 55%
 
    >[!CAUTION]
    >
-   >将此配置保持开放状态，供[在 AEM 中完成 IMS 配置](#completing-the-ims-configuration-in-aem)时再次使用。
+   >保持此配置处于打开状态；出现以下情况时再次需要： [在AEM中完成IMS配置](#completing-the-ims-configuration-in-aem).
 
    ![用于在Adobe I/O上添加证书的信息消息](assets/integrate-target-io-02.png)
 
 ## 为 Adobe Target 与 AEM 的集成配置 IMS {#configuring-ims-for-adobe-target-integration-with-aem}
 
-使用Adobe Developer Console，您需要使用AEM将使用的Adobe Target创建项目（集成），然后分配所需的权限。
+使用Adobe Developer Console，通过AEM可以使用的Adobe Target创建项目（集成），然后分配所需的权限。
 
 ### 创建项目 {#creating-the-project}
 
-打开 Adobe Developer Console 以使用 Adobe Target（将由 AEM 使用）创建项目：
+要使用AEM可以使用的Adobe Target创建项目，请打开Adobe Developer Console：
 
 >[!CAUTION]
 >
->目前，我们仅支持 Adobe Developer Console 的&#x200B;**服务帐户 (JWT)** 凭据类型。
+>目前，Adobe仅支持Adobe Developer控制台的 **服务帐户(JWT)** 凭据类型。
 >
 >不要使用 **OAuth 服务器到服务器**&#x200B;凭据类型（以后将支持此类型）。
 
@@ -79,11 +79,11 @@ ht-degree: 55%
 
    [https://developer.adobe.com/console/projects](https://developer.adobe.com/console/projects)
 
-1. 将显示您拥有的任何项目。选择&#x200B;**新建项目** – 位置和使用将取决于：
+1. 您拥有的任何项目都会显示出来。选择 **创建新项目**  — 位置和使用情况取决于以下因素：
 
-   * 如果您不具有任何项目，**新建项目**将位于底部中心。
+   * 如果您不具有任何项目，**新建项目**会位于底部中心。
      ![新建项目 – 第一个项目](assets/integration-target-io-02.png)
-   * 如果您已拥有项目，这些项目将列出，**新建项目**将位于右上方。
+   * 如果您已经拥有现有项目，则会列出和 **创建新项目** 在右上角。
      ![新建项目 – 多个项目](assets/integration-target-io-03.png)
 
 
@@ -95,7 +95,7 @@ ht-degree: 55%
 
    >[!NOTE]
    >
-   >如果您已订阅Adobe Target，但它并未列出，您应查看 [先决条件](#prerequisites).
+   >如果您已订阅 Adobe Target，但它并未列出，您应查看[先决条件](#prerequisites)。
 
    ![单击“下一步”](assets/integration-target-io-12.png)
 
@@ -118,17 +118,17 @@ ht-degree: 55%
 
    ![选择要添加的API](assets/integration-target-io-16.png)
 
-1. 这将确认创建。
+1. 这会确认创建。
 
 <!--
-1. The creation will be confirmed, you can now **Continue to integration details**; these are needed for [Completing the IMS Configuration in AEM](#completing-the-ims-configuration-in-aem).
+1. The creation is confirmed, you can now **Continue to integration details**; these are needed for [Completing the IMS Configuration in AEM](#completing-the-ims-configuration-in-aem).
 
    ![integrate-target-io-07](assets/integrate-target-io-07.png)
 -->
 
 ### 将权限分配给集成 {#assigning-privileges-to-the-integration}
 
-您现在必须将所需权限分配给集成：
+现在，将所需权限分配给集成：
 
 1. 打开 Adobe **Admin Console**：
 
@@ -145,7 +145,7 @@ ht-degree: 55%
 
 * [https://developer.adobe.com/console/projects](https://developer.adobe.com/console/projects)
 
-选择&#x200B;**查看**（特定项目条目右侧）以显示有关配置的更多详细信息。其中包括：
+要显示有关配置的更多详细信息，请选择 **视图** （特定项目条目右侧）。 其中包括：
 
 * 项目概述
 * 见解
@@ -156,7 +156,7 @@ ht-degree: 55%
 * APIS
    * 例如，Adobe Target
 
-要在基于 IMS 的 AEM 中完成 Adobe Target 的集成，您需要其中的一些项。
+其中某些组件必须在基于IMS的AEM中完成Adobe Target的集成。
 
 ## 在 AEM 中完成 IMS 配置 {#completing-the-ims-configuration-in-aem}
 
@@ -177,7 +177,7 @@ ht-degree: 55%
 
 1. 选择&#x200B;**创建**&#x200B;来确认。
 
-1. 您的 Adobe Target 配置将显示在 AEM 控制台中。
+1. 您的 Adobe Target 配置会显示在 AEM 控制台中。
 
    ![Adobe IMS 技术帐户配置](assets/integrate-target-io-11.png)
 
@@ -209,15 +209,15 @@ ht-degree: 55%
 1. 打开 **工具** 菜单。 然后，在 **Cloud Service** 部分，选择 **旧版Cloud Service**.
 1. 向下滚动到 **Adobe Target** 并选择 **立即配置**.
 
-   此 **创建配置** 此时将打开对话框。
+   此 **创建配置** 对话框打开。
 
-1. 输入 **标题** 如果你愿意，还有 **名称** （如果留空，这将从标题生成）。
+1. 输入 **标题** 如果你愿意，还有 **名称** （如果留空，则从标题生成）。
 
    您还可以选择所需的模板（如果有多个模板可用）。
 
 1. 选择&#x200B;**创建**&#x200B;来确认。
 
-   此 **编辑组件** 此时将打开对话框。
+   此 **编辑组件** 对话框打开。
 
 1. 请在以下位置输入详细信息 **Adobe Target设置** 选项卡：
 
@@ -227,7 +227,7 @@ ht-degree: 55%
 
      >[!NOTE]
      >
-     >对于IMS，此值需要取自Target本身。 您可以登录Target并从URL中提取租户ID。
+     >对于IMS，必须从Target本身获取此值。 您可以登录Target并从URL中提取租户ID。
      >
      >例如，如果URL为：
      >
@@ -241,11 +241,11 @@ ht-degree: 55%
 
    * **API类型**：REST
 
-   * **A4T Analytics Cloud 配置**：选择用于 Target 活动目标和量度的 Analytics Cloud 配置。如果您在定位内容时使用 Adobe Analytics 作为报告源，则需要此项。如果您看不到云配置，请参阅中的注释 [配置A4T Analytics Cloud配置](/help/sites-administering/target-configuring.md#configuring-a-t-analytics-cloud-configuration).
+   * **A4T Analytics Cloud配置**：选择用于Target活动目标和量度的Analytics Cloud配置。 如果您在定位内容时使用 Adobe Analytics 作为报告源，则需要此项。如果您看不到云配置，请参阅中的注释 [配置A4T Analytics Cloud配置](/help/sites-administering/target-configuring.md#configuring-a-t-analytics-cloud-configuration).
 
-   * **使用准确定位**：默认情况下，此复选框处于选中状态。 如果选中，云服务配置将等到上下文加载完后，再加载内容。请参阅以下注释。
+   * **使用准确定位**：默认情况下，此复选框处于选中状态。 如果选中，云服务配置会等待上下文加载完后再加载内容。 请参阅以下注释。
 
-   * **从Adobe Target同步区段**：选择此选项可下载在Target中定义的分段，以便在AEM中使用它们。 当“API 类型”属性为 REST 时，您必须选择此选项，因为内联分段不受支持，并且您始终需要从 Target 使用分段。（请注意，AEM 术语“分段”等同于 Target“受众”。）
+   * **从Adobe Target同步区段**：选择此选项可下载在Target中定义的分段，以便在AEM中使用它们。 当API类型属性为REST时，选择此选项，因为内联区段不受支持，并且您必须始终使用Target中的区段。 (AEM术语“区段”等同于Target“受众”。)
 
    * **客户端库**：选择是需要AT.js客户端库，还是mbox.js（已弃用）。
 
@@ -261,24 +261,24 @@ ht-degree: 55%
 
    如果连接成功，则将显示消息&#x200B;**连接成功**。
 
-1. 选择 **确定** 在消息上，后接 **确定** ，以确认配置。
+1. 选择 **确定** 在消息上，后接 **确定** ，以便您确认配置。
 
-1. 您现在可以继续访问 [添加Target框架](/help/sites-administering/target-configuring.md#adding-a-target-framework) 以配置将发送到Target的ContextHub或ClientContext参数。 请注意，将AEM体验片段导出到Target时可能不需要此项。
+1. 您现在可以继续访问 [添加Target框架](/help/sites-administering/target-configuring.md#adding-a-target-framework) 以配置发送到Target的ContextHub或ClientContext参数。 请注意，将AEM体验片段导出到Target时可能不需要此项。
 
 ### 租户ID和客户端代码 {#tenant-client}
 
 替换为 [Adobe Experience Manager 6.5.8.0](/help/release-notes/release-notes.md)，则Client Code字段已添加到Target配置窗口中。
 
-在配置“租户ID”和“客户端代码”字段时，请注意以下事项：
+配置租户ID和客户端代码字段时，请注意以下事项：
 
 1. 对于大多数客户来说，租户 ID 和客户代码是相同的。这意味着，这两个字段包含相同的信息并且是相同的。确保在这两个字段中输入租户 ID。
 2. 对于遗留问题，您还可以在“租户 ID”和“客户端代码”字段中输入不同的值。
 
-在这两种情况下，请注意：
+在这两种情况下，请注意以下事项：
 
-* 默认情况下，客户端代码（如果首先添加）也将自动复制到租户ID字段中。
-* 您可以选择更改默认租户 ID 集。
-* 因此，对 Target 进行的后端调用将基于租户 ID，而对 Target 进行的客户端调用将基于客户端代码。
+* 默认情况下，客户端代码（如果首先添加）也会自动复制到“租户 ID”字段中。
+* 您可以选择更改默认租户ID集。
+* 因此，对Target的后端调用基于租户ID，而客户端对Target的调用基于客户端代码。
 
 如前所述，对于AEM 6.5，第一种情况最常见。无论哪种方式，确保 **两者** 字段包含正确的信息，具体取决于您的要求。
 

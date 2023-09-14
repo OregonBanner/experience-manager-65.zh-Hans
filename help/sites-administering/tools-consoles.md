@@ -1,26 +1,22 @@
 ---
 title: 工具控制台
-seo-title: Tools Consoles
 description: 了解整个 AEM 中的不同工具控制台。
-seo-description: Learn about the different tools consoles throughout AEM.
-uuid: 44439f8e-7c47-4ea9-afe1-a9a23489a20e
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
-discoiquuid: 6732ef1f-0bfd-44e6-b24d-e22fe427d8b4
 docset: aem65
 exl-id: c9f55ec9-83ea-4115-97c2-59b5c179e90f
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: fd8bb7d3d9040e0a7a6b2f65751445f41aeab73e
 workflow-type: tm+mt
-source-wordcount: '604'
-ht-degree: 33%
+source-wordcount: '594'
+ht-degree: 30%
 
 ---
 
 # 工具控制台{#tools-consoles}
 
-**工具**&#x200B;控制台让您可以访问一些专用工具，这些工具有助于您管理网站、数字资产及内容存储库的其他方面。目前有两种风格的 **工具** 控制台取决于您使用的UI：
+此 **工具** 控制台让您可以访问一些专用工具，这些工具有助于您管理网站、数字资产及内容存储库的其他方面。 目前有两种风格的 **工具** 控制台取决于您使用的UI：
 
 * [工具 — 触控优化的UI](#tools-touch-optimized-ui)
 * [工具 — 经典用户界面](#tools-classic-ui)
@@ -374,11 +370,11 @@ ht-degree: 33%
   </tr>
   <tr>
    <td>客户端上下文配置<br /> </td>
-   <td>Client Context表示动态组合的用户数据集合。 默认和Marketing Cloud配置保留在此处。<br /> </td>
+   <td>Client Context表示动态组合的用户数据集合。 默认和Experience Cloud配置保留在此处。<br /> </td>
   </tr>
   <tr>
    <td>云服务配置<br /> </td>
-   <td>保存与与Adobe Marketing Cloud集成相关的配置。</td>
+   <td>保存与与Adobe Experience Cloud集成相关的配置。</td>
   </tr>
   <tr>
    <td>云设置<br /> </td>
@@ -390,11 +386,11 @@ ht-degree: 33%
   </tr>
   <tr>
    <td>DAM </td>
-   <td>提供对各种选项的访问。</td>
+   <td>访问各种选项。</td>
   </tr>
   <tr>
    <td>功能板</td>
-   <td>允许您创建报告仪表板；这些仪表板提供了一种可自定义的方式，用于定义显示合并数据的页面。</td>
+   <td>创建报告仪表板；这些仪表板提供了一种可自定义的方式，用于定义显示合并数据的页面。</td>
   </tr>
   <tr>
    <td>自定义文档</td>
@@ -406,15 +402,15 @@ ht-degree: 33%
   </tr>
   <tr>
    <td>表单提交</td>
-   <td>保存已收到的表单提交列表。</td>
+   <td>已收到的表单提交内容列表。</td>
   </tr>
   <tr>
    <td>导入程序 </td>
-   <td>提供对各种选项的访问。</td>
+   <td>访问各种选项。</td>
   </tr>
   <tr>
    <td>外部链接检查程序</td>
-   <td>外部链接检查程序。</td>
+   <td>外部链接检查程序.</td>
   </tr>
   <tr>
    <td>移动设备</td>
@@ -426,19 +422,19 @@ ht-degree: 33%
   </tr>
   <tr>
    <td>复制 — 复制代理</td>
-   <td>用于在发布页面时，将数据从作者复制到发布，或者使用反向复制将数据从发布环境返回到作者。</td>
+   <td>用于在发布页面时，将数据从创作实例复制到发布，或使用反向复制将用户注释从发布环境返回到创作。</td>
   </tr>
   <tr>
    <td>报表</td>
-   <td>AEM提供了一系列自定义报表，允许您创建自定义报表和/或开发自己的报表。</td>
+   <td>AEM提供了一系列自定义报表，允许您创建自定义报表或开发自己的报表。</td>
   </tr>
   <tr>
    <td>默认页面基架</td>
-   <td>利用基架，您可以创建一个包含字段的表单（基架），这些字段反映您想要用于页面的结构，然后使用此表单轻松地基于此结构创建页面。</td>
+   <td>通过基架，您可以创建一个包含字段的表单（基架），这些字段反映您想要用于页面的结构，然后使用此表单轻松地基于此结构创建页面。</td>
   </tr>
   <tr>
    <td>安全性 — 自助服务配置 </td>
-   <td>允许您配置用户在创建帐户或重置密码时自动收到的电子邮件，并确认已重置的密码。</td>
+   <td>配置用户在创建帐户或重置密码时自动收到的电子邮件，并确认已重置的密码。</td>
   </tr>
   <tr>
    <td>分段</td>
@@ -454,7 +450,7 @@ ht-degree: 33%
   </tr>
   <tr>
    <td>版本控制 — 清除版本</td>
-   <td>允许您根据需要清除页面版本。</td>
+   <td>根据需要清除页面版本。</td>
   </tr>
   <tr>
    <td>工作流</td>
