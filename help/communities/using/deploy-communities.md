@@ -1,14 +1,12 @@
 ---
 title: 部署社区
-seo-title: Deploying Communities
 description: 如何部署AEM Communities
-seo-description: How to deploy AEM Communities
 content-type: reference
 topic-tags: deploying
-source-git-commit: d045fc1ac408f992d594a4cb68d1c4eeae2b0de1
+source-git-commit: e33816b3b8d190e185d2b23dad3a05aca272f01c
 workflow-type: tm+mt
-source-wordcount: '1755'
-ht-degree: 1%
+source-wordcount: '1761'
+ht-degree: 2%
 
 ---
 
@@ -31,7 +29,7 @@ ht-degree: 1%
 
 **对于 [AEM平台](/help/sites-deploying/deploy.md#what-is-aem)**：
 
-* 安装最新的 [AEM 6.5更新](#aem64updates).
+* 安装最新版本 [AEM 6.5更新](#aem64updates).
 
 * 如果不使用默认端口(4502、4503)，则 [配置复制代理](#replication-agents-on-author).
 * [复制加密密钥](#replicate-the-crypto-key)
@@ -46,7 +44,7 @@ ht-degree: 1%
 * [启用社交登录](/help/communities/social-login.md#adobe-granite-oauth-authentication-handler)
 * [配置Adobe Analytics](/help/communities/analytics.md)
 * 设置 [默认电子邮件服务](/help/communities/email.md)
-* 确定以下各项的选择 [共享UGC存储](/help/communities/working-with-srp.md) (**SRP**)
+* 确定以下项的选择 [共享UGC存储](/help/communities/working-with-srp.md) (**SRP**)
 
    * 如果MongoDB SRP [(MSRP)](/help/communities/msrp.md)
 
@@ -68,7 +66,7 @@ ht-degree: 1%
 
    * 如果JCR SRP [(JSRP)](/help/communities/jsrp.md)
 
-      * 不是共享的UGC存储：
+      * 不是共享的UGC（用户生成的内容）存储：
 
          * 从不复制UGC。
          * UGC仅在输入它的AEM实例或群集中可见。
@@ -78,7 +76,7 @@ ht-degree: 1%
 
 ## 最新版本 {#latest-releases}
 
-AEM 6.5 Communities GA包含Communities包。 了解AEM 6.5的更新 [Communities](/help/release-notes/release-notes.md#experiencemanagercommunities)，请参阅 [AEM 6.5发行说明](/help/release-notes/release-notes.md#communities-release-notes.html).
+AEM 6.5 Communities GA包含Communities包。 详细了解AEM 6.5的更新 [Communities](/help/release-notes/release-notes.md#experiencemanagercommunities)，请参见 [AEM 6.5发行说明](/help/release-notes/release-notes.md#communities-release-notes.html).
 
 ### AEM 6.5更新 {#aem-updates}
 
@@ -90,17 +88,17 @@ AEM 6.5 Communities GA包含Communities包。 了解AEM 6.5的更新 [Communitie
 
 与AEM 6.4及更高版本一样，AEM Communities功能和修补程序是AEM Communities累积修补程序包和Service Pack的一部分。 因此，没有单独的功能包。
 
-### 适用于MySQL的JDBC驱动程序 {#jdbc-driver-for-mysql}
+### 用于MySQL的JDBC驱动程序 {#jdbc-driver-for-mysql}
 
 一个Communities功能使用MySQL数据库：
 
-* 对象 [DSRP](/help/communities/dsrp.md)：存储用户生成的内容(UGC)
+* 对象 [DSRP](/help/communities/dsrp.md)：存储UGC
 
 必须单独获取和安装MySQL连接器。
 
 必需的步骤包括：
 
-1. 下载ZIP存档，从 [https://dev.mysql.com/downloads/connector/j/](https://dev.mysql.com/downloads/connector/j/)
+1. 下载ZIP存档 [https://dev.mysql.com/downloads/connector/j/](https://dev.mysql.com/downloads/connector/j/)
 
    * 版本必须>= 5.1.38
 
@@ -109,13 +107,13 @@ AEM 6.5 Communities GA包含Communities包。 了解AEM 6.5的更新 [Communitie
 
    * 例如， https://localhost:4502/system/console/bundles
    * 选择 **`Install/Update`**
-   * 浏览……以选择从下载的ZIP存档中提取的包
-   * 检查 *oracle公司的MySQLcom.mysql.jdbc的JDBC驱动程序* 处于活动状态，如果未处于活动状态，则启动它（或检查日志）
+   * 浏览……以选择从下载的ZIP存档提取的包
+   * 检查 *oracle公司用于MySQLcom.mysql.jdbc的JDBC驱动程序* 处于活动状态，如果未处于活动状态，则启动它（或检查日志）
 
-1. 如果在配置JDBC之后在现有部署上进行安装，则通过从Web控制台重新保存JDBC配置来将JDBC重新绑定到新连接器：
+1. 如果在配置JDBC后在现有部署上进行安装，则通过从Web控制台重新保存JDBC配置将JDBC重新绑定到新连接器：
 
    * 例如， https://localhost:4502/system/console/configMgr
-   * 查找 `Day Commons JDBC Connections Pool` 配置，然后选择以打开配置。
+   * 定位 `Day Commons JDBC Connections Pool` 配置，然后选择以打开配置。
    * 选择 `Save`.
 
 1. 对所有创作和发布实例重复步骤3和4。
@@ -128,7 +126,7 @@ AEM 6.5 Communities GA包含Communities包。 了解AEM 6.5的更新 [Communitie
 
 ### AEM高级MLS {#aem-advanced-mls}
 
-对于SRP集合（MSRP或DSRP）以支持高级多语言搜索(MLS)，除了自定义架构和Solr配置之外，还需要新的Solr插件。 所有必需的项目都打包到一个可下载的zip文件中。
+对于SRP集合（MSRP或DSRP）而言，为了支持高级多语言搜索(MLS)，除了自定义架构和Solr配置之外，还需要新的Solr插件。 所有必需的项目都打包到一个可下载的zip文件中。
 
 高级MLS下载（也称为“phasetwo”）可从Adobe存储库中获取：
 
@@ -141,13 +139,13 @@ AEM 6.5 Communities GA包含Communities包。 了解AEM 6.5的更新 [Communitie
 
 ### 关于指向包共享的链接 {#about-links-to-package-share}
 
-**AdobeAEM Cloud中可见的软件包**
+**AdobeAEM Cloud中可见的包**
 
-此页上的包链接不需要正在运行的AEM实例，因为它们将在其上共享包 `adobeaemcloud.com`. 虽然可以查看包，但是 `Install` 按钮用于将包安装到托管Adobe的站点。 如果要在本地AEM实例上安装，请选择 `Install` 将导致错误。
+此页面上指向包的链接不需要正在运行的AEM实例，因为它们将位于上的包共享 `adobeaemcloud.com`. 虽然可以查看包，但是 `Install` 按钮用于将包安装到Adobe托管的站点。 如果要在本地AEM实例上安装，请选择 `Install` 会导致错误。
 
 **如何在本地AEM实例上安装**
 
-要安装中显示的包，请执行以下操作 `adobeaemcloud.com` 在本地AEM实例上，必须首先将软件包下载到本地磁盘：
+要安装中显示的包，请执行以下操作 `adobeaemcloud.com` 在本地AEM实例上，必须首先将包下载到本地磁盘：
 
 * 选择 **资产** 选项卡
 * 选择 **下载到磁盘**
@@ -162,11 +160,11 @@ AEM 6.5 Communities GA包含Communities包。 了解AEM 6.5的更新 [Communitie
 
 ## 建议的部署 {#recommended-deployments}
 
-在AEM Communities中，公用存储用于存储用户生成的内容(UGC)，通常称为 [存储资源提供程序(SRP)](/help/communities/working-with-srp.md). 建议的部署侧重于为公用存储选择一个SRP选项。
+在AEM Communities中，公用存储用于存储UGC，通常称为 [存储资源提供程序(SRP)](/help/communities/working-with-srp.md). 建议的部署重点是为公用存储选择SRP选项。
 
 公用存储支持在发布环境中审核和分析UGC，同时消除了对的必要 [复制](/help/communities/sync.md) UGC的。
 
-* [社区内容存储](/help/communities/working-with-srp.md) ：讨论AEM社区的SRP存储选项
+* [社区内容存储](/help/communities/working-with-srp.md) ：讨论AEM Communities的SRP存储选项
 
 * [推荐的拓扑](/help/communities/topologies.md) ：根据用例和SRP选择讨论要使用的拓扑
 
@@ -180,9 +178,9 @@ AEM 6.5 Communities GA包含Communities包。 了解AEM 6.5的更新 [Communitie
 
 ### 主要发布者 {#primary-publisher}
 
-当选择的部署是 [发布场](/help/communities/topologies.md#tarmk-publish-farm)，则必须将一个AEM发布实例标识为 **`primary publisher`** 对于不应在所有实例上发生的活动，例如依赖以下项的功能 **通知** 或 **Adobe Analytics**.
+当选择的部署是 [发布场](/help/communities/topologies.md#tarmk-publish-farm)，则必须将一个AEM发布实例标识为 **`primary publisher`** 适用于不应该在所有实例上发生的活动。 例如，依赖于 **通知** 或 **Adobe Analytics**.
 
-默认情况下， `AEM Communities Publisher Configuration` OSGi配置使用 **`Primary Publisher`** 复选框，以使发布场中的所有发布实例都自行标识为主发布实例。
+默认情况下， `AEM Communities Publisher Configuration` OSGi配置包含 **`Primary Publisher`** 复选框，以便发布场中的所有发布实例都将自行标识为主发布实例。
 
 因此，有必要 **编辑所有辅助发布实例上的配置** 取消选中 **`Primary Publisher`** 复选框。
 
@@ -202,19 +200,19 @@ AEM 6.5 Communities GA包含Communities包。 了解AEM 6.5的更新 [Communitie
 
 ### 创作实例上的复制代理 {#replication-agents-on-author}
 
-复制用于发布环境中创建的站点内容，如社区组，以及使用 [隧道服务](#tunnel-service-on-author).
+复制用于发布环境中创建的站点内容（如社区组），并使用从创作环境中管理成员和成员组 [通道服务](#tunnel-service-on-author).
 
 对于主发布者，请确保 [复制代理配置](/help/sites-deploying/replication.md) 正确标识发布服务器和授权用户。 默认授权用户， `admin` 已经具有相应的权限(是 `Communities Administrators`)。
 
-为了使其他某个用户具有适当的权限，必须将这些用户作为成员添加到 `administrators` 用户组(也是 `Communities Administrators`)。
+要让其他某个用户拥有适当的权限，则必须将其添加为的成员 `administrators` 用户组(也是 `Communities Administrators`)。
 
 创作环境中有两个复制代理需要正确配置传输配置。
 
-* 访问创作实例上的复制控制台
+* 访问作者的“复制”控制台
 
-   * 从全局导航： **工具、部署、复制、作者代理**
+   * 从全局导航： **工具、部署、复制、创作代理**
 
-* 对于这两个代理，请遵循相同的过程：
+* 对两个代理均遵循相同的过程：
 
    * **默认代理（发布）**
    * **反向复制代理（反向发布）**
@@ -222,9 +220,9 @@ AEM 6.5 Communities GA包含Communities包。 了解AEM 6.5的更新 [Communitie
       1. 选择代理。
       1. 选择 **编辑**.
       1. 选择 **传输** 选项卡
-      1. 如果没有端口 `4503`，编辑 **URI** 以指定正确的端口。
+      1. 如果不是端口 `4503`，编辑 **URI** 以指定正确的端口。
 
-      1. 如果不是用户 `admin`，编辑 **用户** 和 **密码** 指定以下项的成员： `administrators` 用户组。
+      1. 如果它不是用户 `admin`，编辑 **用户** 和 **密码** 指定成员 `administrators` 用户组。
 
 下图显示了将端口从4503更改为6103的结果：
 
@@ -236,15 +234,15 @@ AEM 6.5 Communities GA包含Communities包。 了解AEM 6.5的更新 [Communitie
 
 ![反向复制代理（发布恢复）显示它处于打开或启用状态。](../assets/reverse-replication-agent.png)
 
-### 作者上的隧道服务 {#tunnel-service-on-author}
+### 作者上的通道服务 {#tunnel-service-on-author}
 
-使用创作环境时 [创建站点](/help/communities/sites-console.md)， [修改站点属性](/help/communities/sites-console.md#modifying-site-properties) 或 [管理社区成员](/help/communities/members.md)时，必须访问在发布环境中注册的成员（用户），而不是访问在作者中注册的用户。
+使用创作环境时 [创建站点](/help/communities/sites-console.md)， [修改站点属性](/help/communities/sites-console.md#modifying-site-properties) 或 [管理社区成员](/help/communities/members.md)时，访问在发布环境中注册的成员（用户）是必需的，而不是访问在作者中注册的用户。
 
 通道服务使用创作实例上的复制代理提供此访问权限。
 
 要启用通道服务，请执行以下操作：
 
-* 日期 **作者**，使用管理权限登录。
+* 开启 **作者**，使用管理权限登录。
 * 如果publisher不是localhost：4503，或者传输用户不是 `admin`，则 [配置复制代理](#replication-agents-on-author).
 
 * 访问 [Web控制台](/help/sites-deploying/configuring-osgi.md)
@@ -256,26 +254,26 @@ AEM 6.5 Communities GA包含Communities包。 了解AEM 6.5的更新 [Communitie
 * 选择 **启用** 复选框
 * 选择 **保存**
 
-![AEM Communities Publish Tunnel Service显示“启用”复选框（已选中或已选中）。](../assets/tunnel-service.png)
+![AEM Communities发布通道服务显示“启用”复选框（已选中或已选中）。](../assets/tunnel-service.png)
 
 ### 复制加密密钥 {#replicate-the-crypto-key}
 
-AEM Communities有两项功能要求所有AEM服务器实例使用相同的加密密钥。 这些是 [分析](/help/communities/analytics.md) 和 [ASRP](/help/communities/asrp.md).
+AEM Communities有两项功能要求所有AEM服务器实例都使用相同的加密密钥。 这些是 [分析](/help/communities/analytics.md) 和 [ASRP](/help/communities/asrp.md).
 
 从AEM 6.3开始，关键资料存储在文件系统中，不再存储在存储库中。
 
-要将关键资料从创作实例复制到所有其他实例，有必要执行以下操作：
+要将关键资料从作者复制到所有其他实例，您需要：
 
-* 访问包含要复制的关键材料的AEM实例，通常是创作实例
+* 访问AEM实例（通常为创作实例），其中包含要复制的关键资料
 
    * 找到 `com.adobe.granite.crypto.file` 捆绑在本地文件系统中
 
      例如，
 
       * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21`
-      * 此 `bundle.info` 文件将标识该捆绑包
+      * 此 `bundle.info` 文件标识捆绑包
 
-   * 导航到数据文件夹，例如，
+   * 导航到数据文件夹中，例如，
 
       * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21/data`
 
@@ -283,39 +281,39 @@ AEM Communities有两项功能要求所有AEM服务器实例使用相同的加�
 
 * 对于每个目标AEM实例
 
-   * 导航到数据文件夹，例如，
+   * 导航到数据文件夹中，例如，
 
       * `<publish-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21/data`
 
-   * 粘贴之前复制的2个文件
-   * 有必要 [刷新Granite加密包](#refresh-the-granite-crypto-bundle) 目标AEM实例当前是否正在运行。
+   * 粘贴之前复制的两个文件
+   * 有必要 [刷新Granite加密包](#refresh-the-granite-crypto-bundle) 目标AEM实例是否正在运行。
 
 >[!CAUTION]
 >
->如果已配置了基于加密密钥的其他安全功能，则复制加密密钥可能会损坏配置。 如需帮助， [联系客户关怀团队](https://helpx.adobe.com/cn/marketing-cloud/contact-support.html).
+>如果已配置基于加密密钥的其他安全功能，则复制加密密钥可能会损坏配置。 如需帮助， [联系客户关怀团队](https://experienceleague.adobe.com/?support-solution=General&amp;support-tab=home#support).
 
 #### 存储库复制 {#repository-replication}
 
-将关键资料存储在存储库中(对于AEM 6.2及更早版本)，可以通过在每个AEM实例的首次启动时指定以下系统属性（这将创建初始存储库）来保留：
+将关键资料存储在存储库中(如AEM 6.2及更早版本)可以保留。 在每个AEM实例首次启动时（这将创建初始存储库）指定以下系统属性：
 
 * `-Dcom.adobe.granite.crypto.file.disable=true`
 
 >[!NOTE]
 >
->务必确认 [作者上的复制代理](#replication-agents-on-author) 已正确配置。
+>务必确认 [创作实例上的复制代理](#replication-agents-on-author) 已正确配置。
 
 将密钥资料存储在存储库中，将加密密钥从创作实例复制到其他实例的方式如下：
 
 使用 [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md) ：
 
-* 浏览到 [https://&lt;server>：&lt;port>/crx/de](https://localhost:4502/crx/de)
+* 浏览至 [https://&lt;server>：&lt;port>/crx/de](https://localhost:4502/crx/de)
 * 选择 `/etc/key`
 * 打开 `Replication` 选项卡
 * 选择 `Replicate`
 
 * [刷新Granite加密包](#refresh-the-granite-crypto-bundle)
 
-![在左侧面板上显示path /etc/key的CRXDE Lite，并在右下角面板上选择Replication选项卡。](../assets/replicare-repository.png)
+![CRXDE Lite在左侧面板上显示/etc/key路径并在右下面板中显示“复制”选项卡。](../assets/replicare-repository.png)
 
 #### 刷新Granite加密包 {#refresh-the-granite-crypto-bundle}
 
@@ -323,19 +321,19 @@ AEM Communities有两项功能要求所有AEM服务器实例使用相同的加�
 
    * 例如， [https://&lt;server>：&lt;port>/system/console/bundles](https://localhost:4503/system/console/bundles)
 
-* 查找 `Adobe Granite Crypto Support` 包(com.adobe.granite.crypto)
+* 定位 `Adobe Granite Crypto Support` 包(com.adobe.granite.crypto)
 * 选择 **刷新**
 
 ![正在刷新AdobeGranite加密支持包。](../assets/refresh-granite-bundle.png)
 
-* 片刻之后， **成功** 对话框应显示：
+* 片刻之后， **成功** 此时应出现对话框：
   `Operation completed successfully.`
 
 ### Apache HTTP Server {#apache-http-server}
 
-如果使用Apache HTTP Server，请确保为所有相关条目使用正确的服务器名称。
+如果使用Apache HTTP Server，请确保对所有相关条目使用正确的服务器名称。
 
-特别是，请注意使用正确的服务器名称，而不是 `localhost`，在 `RedirectMatch`.
+特别是，请小心使用正确的服务器名称，而不是 `localhost`，在 `RedirectMatch`.
 
 #### httpd.conf示例 {#httpd-conf-sample}
 
@@ -358,8 +356,8 @@ AEM Communities有两项功能要求所有AEM服务器实例使用相同的加�
 
 如果使用Dispatcher，请参阅：
 
-* AEM [调度程序](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html) 文档
-* [安装 Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-install.html)
+* AEM [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hans) 文档
+* [安装 Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install.html?lang=en)
 * [为社区配置Dispatcher](/help/communities/dispatcher.md)
 * [已知问题](/help/communities/troubleshooting.md#dispatcher-refetch-fails)
 
@@ -367,7 +365,7 @@ AEM Communities有两项功能要求所有AEM服务器实例使用相同的加�
 
 * 访问 [管理社区站点](/help/communities/administer-landing.md) 了解有关创建社区站点、配置社区站点模板、审核社区内容、管理成员和配置消息传送的信息。
 
-* 访问 [发展中的社区](/help/communities/communities.md) 了解社交组件框架(SCF)和自定义社区组件和功能。
+* 访问 [发展中的社区](/help/communities/communities.md) 在这里，您可以了解社交组件框架(SCF)和自定义社区组件和功能。
 
-* 访问 [创作社区组件](/help/communities/author-communities.md) 了解如何使用创作和配置社区组件。
+* 访问 [创作社区组件](/help/communities/author-communities.md) 在这里，您可以了解如何使用及配置社区组件。
 

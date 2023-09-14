@@ -1,14 +1,14 @@
 ---
 title: 访问和填写已发布的表单
-description: Forms Portal为Web开发人员提供了组件，以便在使用Adobe Experience Manager (AEM)创作的网站上创建和自定义表单门户。
+description: Forms Portal为Web开发人员提供了组件，以便在使用Adobe Experience Manager (AEM)创作的网站上创建和自定义Forms Portal。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 docset: aem65
 exl-id: aedf890c-a2f1-412f-8897-2492ffab335a
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: e33816b3b8d190e185d2b23dad3a05aca272f01c
 workflow-type: tm+mt
-source-wordcount: '924'
+source-wordcount: '935'
 ht-degree: 0%
 
 ---
@@ -17,25 +17,25 @@ ht-degree: 0%
 
 在以表单为中心的门户部署设置中，表单开发和门户开发是两个不同的活动。 当表单设计人员将表单设计和存储在存储库中时，Web开发人员会创建一个Web应用程序来列出表单并处理提交。 Forms随后将复制到Web层，因为Forms存储库和Web应用程序之间没有通信。
 
-这通常会导致在管理设置和生产延迟时出现问题。 例如，如果存储库中有较新版本的表单可用，则表单设计器会替换Web层上的表单、修改Web应用程序并重新部署公共站点上的表单。 重新部署Web应用程序可能会导致某些服务器停机。 由于服务器停机是计划的活动，因此不能将更改立即推送到公共站点。
+这通常会导致在管理设置和生产延迟时出现问题。 例如，如果存储库中有较新版本的表单，则表单设计器会替换Web层上的表单，修改Web应用程序，并在公共站点上重新部署表单。 重新部署Web应用程序可能会导致某些服务器停机。 由于服务器停机是计划的活动，因此不能将更改立即推送到公共站点。
 
-Forms Portal可减少管理开销和生产延迟。 它为Web开发人员配备了组件，以便在使用Adobe Experience Manager (AEM)创作的网站上创建和自定义表单门户。
+Forms Portal可减少管理开销和生产延迟。 它为Web开发人员配备了组件，以便在使用Forms (AEM)创作的网站上创建和自定义Adobe Experience Manager门户。
 
-有关Forms Portal及其功能的详细信息，请参阅 [在门户上发布表单的简介](/help/forms/using/introduction-publishing-forms.md).
+有关Forms Portal及其功能的更多信息，请参阅 [在门户上发布表单的简介](/help/forms/using/introduction-publishing-forms.md).
 
-## Forms Portal入门 {#getting-started-with-forms-portal}
+## Forms Portal快速入门 {#getting-started-with-forms-portal}
 
-导航到已发布的表单门户页面。 有关创建表单门户页面的详细信息，请参阅 [创建表单门户页面](../../forms/using/creating-form-portal-page.md).
+导航到已发布的Forms Portal页面。 有关创建Forms Portal页面的更多信息，请参阅 [创建Forms门户页面](../../forms/using/creating-form-portal-page.md).
 
-roms portal的Search and Lister组件显示AEM服务器的Publish实例上可用的表单。 此列表包含在创作Forms Portal页面时在筛选器中定义的所有表单或表单。 如下图所示，Forms Portal页面看起来类似：
+Forms Portal的搜索和列表程序组件显示AEM服务器的发布实例上可用的表单。 此列表包含在创作Forms Portal页面时在筛选器中定义的所有表单或表单。 Forms Portal页面看起来类似于，如下图所示：
 
 ![一个示例表单门户页面 ](assets/forms-portal-page.png)
 
-一个示例表单门户页面
+Forms Portal页面示例
 
 ### 搜索和侦听器 {#search-and-lister}
 
-通过搜索和列表程序组件，可将以下功能添加到表单门户：
+通过搜索和列表程序组件，您可以向Forms Portal添加以下功能：
 
 * 在面板、卡片或网格视图中列出现成可用的表单。 它还支持Forms Manager中特定文件夹的自定义templatesList表单。
 * 指定表单的呈现方式 — HTML5、PDF或两者。
@@ -88,9 +88,9 @@ roms portal的Search and Lister组件显示AEM服务器的Publish实例上可用
 
 ## 使用提交的表单数据开始新表单 {#start-a-new-form-using-submitted-form-data}
 
-有些表格您必须经常填写和提交。 例如，个人纳税申报单每年都会提交。 在这种情况下，尽管每次填写表单时某些信息都会更改，但大多数信息（如个人和家庭详细信息）不会更改。 但是，您仍需要从头开始再次填写整个表单。
+有些表格您必须经常填写和提交。 例如，每年都会提交个人纳税申报单。 在这种情况下，尽管每次填写表单时某些信息都会更改，但大多数信息（如个人和家庭详细信息）不会更改。 但是，您仍需要从头开始再次填写整个表单。
 
-AEM Forms可帮助优化表单填写体验，并显着减少再次填写和提交表单的时间。 最终用户可使用已提交表单中的数据启动新表单。 此功能内置于 [草稿和提交组件](../../forms/using/draft-submission-component.md). 在将草稿和提交组件添加到Forms Portal页面并进行发布时，最终用户会在已提交的Forms和草稿Forms选项卡中看到一个选项，该选项可使用已提交表单中的数据创建新表单。 下图突出显示了该选项。
+AEM Forms可帮助优化表单填写体验，并显着减少再次填写和提交表单的时间。 最终用户可使用已提交表单中的数据启动新表单。 此功能内置于中 [草稿和提交组件](../../forms/using/draft-submission-component.md). 将草稿和提交组件添加到Forms Portal页面并进行发布时，最终用户会在已提交的Forms和草稿Forms选项卡中看到一个选项。 利用选项，可使用已提交表单中的数据创建新表单。 下图突出显示了该选项。
 
 ![开始 — 新建 — 表单](assets/start-a-new-form.png)
 
