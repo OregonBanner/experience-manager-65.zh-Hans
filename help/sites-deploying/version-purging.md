@@ -1,35 +1,31 @@
 ---
 title: 版本清除
-seo-title: Version Purging
 description: 本文介绍了用于版本清除的可用选项。
-seo-description: This article describes the available options for version purging.
-uuid: a9fa25c7-e60e-4665-a726-99af9aac8f70
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: configuring
 content-type: reference
-discoiquuid: fb4d7337-7b94-430b-80d2-f1754f823c2b
 docset: aem65
 feature: Configuring
 exl-id: 6f0b1951-bdda-475f-b6c0-bc18de082b7c
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 4e2ee7da5424ac6677eaa2392de7803e7543d13c
 workflow-type: tm+mt
-source-wordcount: '727'
+source-wordcount: '717'
 ht-degree: 1%
 
 ---
 
 # 版本清除{#version-purging}
 
-在标准安装中，当您在更新内容后激活页面时，AEM会创建新版本的页面或节点。
+在标准安装中，当您在更新内容后激活页面时，Adobe Experience Manager (AEM)会创建页面或节点的版本。
 
 >[!NOTE]
 >
->如果未对内容进行任何更改，您将看到一则消息，指出该页面已激活，但不会创建新版本
+>如果未对内容进行任何更改，则会看到一则消息，指出该页面已激活，但未创建新版本。
 
-您可以使用根据请求创建其他版本 **版本控制** 替他搭便车。 这些版本存储在存储库中，如果需要，可以恢复。
+您可以使用根据请求创建其他版本 **版本控制** 替他搭便车。 这些版本存储在存储库中，如有必要，可以恢复。
 
-这些版本永远不会被清除，因此存储库的大小会随着时间的推移而增加，因此需要对其进行管理。
+这些版本永远不会被清除，因此存储库的大小会随着时间的推移而增长，因此必须对其进行管理。
 
 AEM附带了各种机制来帮助您管理存储库：
 
@@ -49,7 +45,7 @@ AEM附带了各种机制来帮助您管理存储库：
 
 >[!CAUTION]
 >
->为了优化存储库大小，您应该经常运行版本清除任务。 当流量有限时，任务应安排在工作时间之外。
+>要优化存储库大小，请经常运行版本清除任务。 当流量有限时，任务应安排在工作时间之外。
 
 ## 版本管理器 {#version-manager}
 
@@ -75,11 +71,11 @@ AEM附带了各种机制来帮助您管理存储库：
 
 * `versionmanager.maxNumberVersions` （int，默认为5）在版本清除时，将删除任何早于第n个最新版本的版本。 如果该值小于1，则不会根据版本数执行清除。
 
-* `versionmanager.minNumberVersions` （int，默认为0）将保留的最少版本数，不考虑版本保留时间。 如果将该值设置为小于1的值，则不会保留最小版本数。
+* `versionmanager.minNumberVersions` （int，默认为0）无论使用年限如何，保留的最小版本数。 如果将该值设置为小于1的值，则不会保留最小版本数。
 
 >[!NOTE]
 >
->不建议在存储库中保留大量版本。 因此，在配置版本清除操作时，请注意不要从清除中排除太多版本，否则存储库大小将无法正确优化。 如果您因业务需求而保留大量版本，请联系Adobe支持以找到优化存储库大小的替代方法。
+>不建议在存储库中保留多个版本。 因此，在配置版本清除操作时，请注意不要从清除中排除太多版本，否则存储库大小将无法正确优化。 如果您因业务需求而保留大量版本，请联系Adobe支持以寻找优化存储库大小的替代方法。
 
 ### 组合保留选项 {#combining-retention-options}
 
@@ -95,12 +91,12 @@ AEM附带了各种机制来帮助您管理存储库：
 
 * 替换为：
 
-   * 过去60天内推出的10个版本
-   * 其中3个版本是在过去30天内创建的
+   * 在过去60天内制作了10个版本
+   * 其中三个版本是在过去30天内创建的
 
-* 将意味着：
+* 这意味着：
 
-   * 将保留最后3个版本
+   * 保留最后三个版本
 
 例如，在定义要保留的最大AND最小版本数和要保留的最旧版本时：
 
@@ -112,11 +108,11 @@ AEM附带了各种机制来帮助您管理存储库：
 
 * 替换为：
 
-   * 60天前制作的5个版本
+   * 60天前制作了5个版本
 
-* 将意味着：
+* 这意味着：
 
-   * 将保留3个版本
+   * 保留了三个版本
 
 ## 清除版本工具 {#purge-versions-tool}
 
