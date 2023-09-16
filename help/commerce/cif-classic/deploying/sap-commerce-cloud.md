@@ -1,11 +1,11 @@
 ---
 title: 使用SAPCommerce Cloud部署电子商务
-description: 了解如何使用SAPCommerce Cloud部署电子商务。
+description: 了解如何使用SAPCommerce Cloud部署eCommerce。
 contentOwner: Guillaume Carlino
 topic-tags: e-commerce
 content-type: reference
 exl-id: ecbd0097-c407-4581-bab2-4729a71df4a3
-source-git-commit: b9c164321baa3ed82ae87a97a325fcf0ad2f6ca0
+source-git-commit: b00ed4ed146b89aece9af1d267c890a360a236e9
 workflow-type: tm+mt
 source-wordcount: '714'
 ht-degree: 2%
@@ -22,7 +22,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->以下过程使用以下演示目录来说明部署：
+>以下过程使用下列演示目录来说明部署：
 >
 >`Geometrixx Outdoors Site English (US)`
 
@@ -35,11 +35,11 @@ ht-degree: 2%
 * [购物车内容概述](#shoppingcartcontentoverview)
 * [客户注册](#customersignup) 和 [客户登录](#customersignin)
 
-* [对Hybris管理控制台的访问权限](#accesstothehybrismanagementconsole)
+* [访问hybris管理控制台](#accesstothehybrismanagementconsole)
 
-### 技术要求 — hybris Server {#technical-requirements-hybris-server}
+### 技术要求 — hybris服务器 {#technical-requirements-hybris-server}
 
-电子商务集成框架的hybris扩展已更新，以支持Hybris 5（作为默认值），同时保持与的向后兼容性 [Hybris 4](/help/commerce/cif-classic/developing/sap-commerce-cloud.md#developing-for-hybris).
+电子商务集成框架的hybris扩展已更新，以支持Hybris 5（作为默认），同时保持与的向后兼容性 [Hybris 4](/help/commerce/cif-classic/developing/sap-commerce-cloud.md#developing-for-hybris).
 
 >[!NOTE]
 >
@@ -66,11 +66,11 @@ ht-degree: 2%
    * `cq-hybris-content-6.3.2`
    * 特定于hybris的API实施
    * `cq-geometrixx-hybris-content-6.3.2`
-   * 说明使用hybris ( `geometrixx-outdoors/en_US`)
+   * 用于说明使用hybris ( `geometrixx-outdoors/en_US`)
 
-### 使用Hybris安装电子商务 {#installation-of-ecommerce-with-hybris}
+### 使用hybris安装电子商务 {#installation-of-ecommerce-with-hybris}
 
-要安装完整的配置(使用演示目录、Geometrixx Outdoors)，基本步骤包括：
+要安装完整的配置(使用演示目录、Geometrixx Outdoors)，基本步骤如下：
 
 1. [安装AEM](/help/sites-deploying/deploy.md).
 1. 安装全Geometrixx包
@@ -87,7 +87,7 @@ ht-degree: 2%
 
    1. [设置Geometrixx户外商店](#setup-the-geometrixx-outdoors-store).
 
-1. [作者](/help/sites-authoring/qg-page-authoring.md) 您在AEM中所需的任何补充页面。
+1. [作者](/help/sites-authoring/qg-page-authoring.md) AEM中所需的任何辅助页面。
 
 >[!CAUTION]
 >
@@ -95,11 +95,11 @@ ht-degree: 2%
 
 >[!NOTE]
 >
-面向开发人员 [API文档](/help/commerce/cif-classic/developing/ecommerce.md#api-documentation) 也可供下载。
+对于开发人员， [API文档](/help/commerce/cif-classic/developing/ecommerce.md#api-documentation) 也可供下载。
 
 ### 下载并构建hybris服务器 {#download-and-build-your-hybris-server}
 
-此过程中的步骤是下载和构建hybris服务器。 它还创建了hybris和cq之间的连接所需的初始配置。 随后，该扩展将可用于默认设置。
+此过程中的步骤下载并构建hybris服务器。 它还创建了hybris和cq之间的连接所需的初始配置。 随后，该扩展将可与默认设置一起使用。
 
 >[!CAUTION]
 >
@@ -113,7 +113,7 @@ ht-degree: 2%
 
    >[!CAUTION]
    >
-   您需要一个帐户（来自hybris）才能访问它。
+   您需要一个帐户（来自hybris）才能访问此。
 
 1. 将分发文件解压缩到所需的位置(称为 &lt;hybris-root-directory>)。
 1. 在命令行中，执行以下命令：
@@ -153,7 +153,7 @@ ht-degree: 2%
 1. 从命令行中，执行以下命令到：
 
    * 更新hybris服务器的配置（根据扩展的要求）
-   * 使用修改后的配置重新构建hybris服务器
+   * 使用修改后的配置重新生成hybris服务器
    * 启动服务器
 
    ```shell
@@ -165,15 +165,15 @@ ht-degree: 2%
 
    >[!NOTE]
    >
-   根据您的系统，其中几个步骤可能需要几分钟才能完成。
+   根据您的系统，完成其中的几个步骤可能需要花费几分钟时间。
 
 1. 在浏览器中，导航到 **hybris管理控制台** 在：
 
    [http://localhost:9002](http://localhost:9002)
 
-1. 单击 **初始化** 然后确认初始化操作（因为它删除了现有数据）。
+1. 单击 **初始化** 然后确认初始化操作（因为它删除现有数据）。
 
-   进度显示在控制台中，带有 `FINISHED` 指示完成。
+   进度显示在控制台上，带有 `FINISHED` 指示完成。
 
    >[!NOTE]
    >
@@ -181,9 +181,9 @@ ht-degree: 2%
 
 ### 设置Geometrixx Outdoors商店 {#setup-the-geometrixx-outdoors-store}
 
-此过程可上传和配置Experience Store - “Online(联机Geometrixx)”。
+此过程上载并配置演示商店 — 联机Geometrixx。
 
-1. 启动hybris实例。 在命令行中，执行以下命令：
+1. 启动您的hybris实例。 在命令行中，执行以下命令：
 
    ```shell
    cd <hybris-root-directory>/bin/platform
@@ -194,21 +194,21 @@ ht-degree: 2%
 
    [https://localhost:9002/backoffice](https://localhost:9002/backoffice)
 
-   使用以下凭据：
-   * 用户名：admin
+   使用这些凭据：
+   * 用户名：管理员
    * 密码：nimda
 
 1. 在侧栏导航中，展开 **系统** 和 **工具**. 然后选择 **导入** 以打开 **向导：CSV导入** 窗口。
-1. 在 **配置** 选项卡， **上传** 以下各项 **导入文件**：
+1. 在 **配置** 选项卡， **上传** 以下内容 **导入文件**：
 
 [获取文件](/help/sites-deploying/assets/geometrixx-outdoors-export.csv)
 
-1. 设置 **区域设置** 到：
+1. 设置 **区域设置** 至：
 
    `en_US - English (United States)`
 
 1. 打开 **资源** 选项卡。
-1. **上传** 以下各项 **Media-Zip**：
+1. **上传** 以下内容 **Media-Zip**：
 
 [获取文件](/help/sites-deploying/assets/geometrixx-outdoors-images.zip)
 
@@ -218,11 +218,11 @@ ht-degree: 2%
 
 1. 在侧栏中，选择 **系统**，则 **工具**，则 **导入**.
 
-1. **上传** 以下各项 **导入文件**：
+1. **上传** 以下内容 **导入文件**：
 
 [获取文件](/help/sites-deploying/assets/base-store.csv)
 
-   对于hybris 5.7，使用以下内容：
+   对于hybris 5.7，请使用以下代码：
 
 [获取文件](/help/sites-deploying/assets/base-store-5_7.csv)
 

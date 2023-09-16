@@ -1,23 +1,21 @@
 ---
 title: 管理通用电子商务
-seo-title: Administering generic eCommerce
 description: AEM通用解决方案提供了管理存储库中保留的商务信息的方法。
-seo-description: The AEM generic solution provides methods of managing the commerce information held within the repository.
 contentOwner: Guillaume Carlino
 topic-tags: e-commerce
 content-type: reference
 docset: aem65
 exl-id: c29f6213-1df6-45af-91c8-14b255276d82
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: b00ed4ed146b89aece9af1d267c890a360a236e9
 workflow-type: tm+mt
-source-wordcount: '2977'
+source-wordcount: '2929'
 ht-degree: 2%
 
 ---
 
 # 管理通用电子商务 {#administering-generic-ecommerce}
 
-AEM通用解决方案提供了管理存储库中保留的商务信息的方法（与使用外部电子商务引擎不同）。 这包括：
+Adobe Experience Manager (AEM)通用解决方案提供了管理存储库中保留的商务信息的方法（与使用外部电子商务引擎不同）。 这包括：
 
 * [产品](/help/commerce/cif-classic/administering/concepts.md#products)
 * [产品的系列品种](/help/commerce/cif-classic/administering/concepts.md#product-variants)
@@ -31,7 +29,7 @@ AEM通用解决方案提供了管理存储库中保留的商务信息的方法�
 >
 >标准AEM安装包括通用AEM (JCR)电子商务实施。
 >
->它目前仅用于演示目的，或作为根据您的要求进行自定义实施的基本基础。
+>它旨在用于演示目的，或作为根据您的要求进行自定义实施的基本基础。
 
 ## 产品和产品变体 {#products-and-product-variations}
 
@@ -39,7 +37,7 @@ AEM通用解决方案提供了管理存储库中保留的商务信息的方法�
 >
 >以下过程同时适用于产品和产品变体。
 
-在创建产品之前，您需要定义 [基架](/help/sites-authoring/scaffolding.md). 这会指定定义产品所需的字段以及编辑产品的方式。
+在创建产品之前，请定义 [基架](/help/sites-authoring/scaffolding.md). 这会指定必须定义的字段、产品以及编辑方式。
 
 每种不同的产品类型都需要一个基架。 适当的基架通过以下任一方式与产品相关联：
 
@@ -56,7 +54,7 @@ AEM通用解决方案提供了管理存储库中保留的商务信息的方法�
 >
 >`/etc/commerce/products/geometrixx-outdoors`
 >
->无需任何其他设置，您就可以在产品定义下的任何位置创建新产品定义。
+>无需任何其他设置，您便可以在产品定义下的任何位置创建产品定义。
 
 ### 正在导入产品 {#importing-products}
 
@@ -76,7 +74,7 @@ AEM通用解决方案提供了管理存储库中保留的商务信息的方法�
 
    * **来源**
 
-     要导入的文件；可使用浏览器选择文件。
+     要导入的文件；您可以使用浏览器选择文件。
 
    * **增量导入**
 
@@ -92,11 +90,11 @@ AEM通用解决方案提供了管理存储库中保留的商务信息的方法�
 
    >[!NOTE]
    >
-   >产品将导入到当前位置或相对于当前位置。
+   >产品会导入到当前位置或相对于当前位置。
 
    >[!NOTE]
    >
-   >重复使用 **下一个** 和 **返回** 将重复导入产品定义。 但是，由于它们的SKU相同，因此只会覆盖存储库中存在的信息。
+   >重复使用 **下一个** 和 **返回** 反复导入产品定义。 但是，由于它们具有相同的SKU，因此会覆盖存储库中存在的信息。
 
 1. 选择 **完成** 以关闭向导。
 
@@ -145,7 +143,7 @@ AEM通用解决方案提供了管理存储库中保留的商务信息的方法�
 
    ![加号形状创建图标](/help/sites-administering/do-not-localize/chlimage_1-14.png)
 
-1. 此时将打开向导。 使用 **基本** 和 **产品选项卡** 输入 [产品属性](/help/commerce/cif-classic/administering/concepts.md#product-attributes) 用于新产品或产品变型。
+1. 将打开向导。 使用 **基本** 和 **产品选项卡** 输入 [产品属性](/help/commerce/cif-classic/administering/concepts.md#product-attributes) 用于新产品或产品变型。
 
    >[!NOTE]
    >
@@ -167,7 +165,7 @@ AEM通用解决方案提供了管理存储库中保留的商务信息的方法�
 >
 >`/etc/commerce/products/...`
 >
->这意味着，默认情况下，它们会被阻止 [dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hans)，因此请根据需要配置。
+>这意味着，默认情况下，它们会被阻止 [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hans)，因此请根据需要配置。
 
 #### 编辑产品信息 — 触屏优化UI {#editing-product-information-touch-optimized-ui}
 
@@ -181,7 +179,7 @@ AEM通用解决方案提供了管理存储库中保留的商务信息的方法�
 
    ![查看产品数据图标 — 信息图标](/help/sites-administering/do-not-localize/chlimage_1-15.png)
 
-1. 此 [产品属性](/help/commerce/cif-classic/administering/concepts.md#product-attributes) 将显示在屏幕上。 使用 **编辑** 和 **完成** 进行更改。
+1. 此 [产品属性](/help/commerce/cif-classic/administering/concepts.md#product-attributes) 将显示出来。 使用 **编辑** 和 **完成** 进行更改。
 
 ### 显示产品引用 {#showing-product-references}
 
@@ -192,12 +190,12 @@ AEM通用解决方案提供了管理存储库中保留的商务信息的方法�
 
    ![双箭头图标](/help/sites-administering/do-not-localize/chlimage_1-16.png)
 
-1. 选择所需的产品 — 辅助边栏将更新以显示可用的引用类型：
+1. 选择所需的产品 — 二级边栏更新，其中显示了可用的引用类型：
 
    ![打开引用的products控制台](/help/sites-administering/assets/chlimage_1-88.png)
 
 1. 单击/点按引用类型（例如，产品页面）以展开列表。
-1. 选择特定引用以显示以下选项：
+1. 选择特定引用，以便显示以下选项：
 
    * 导航到产品页面
    * 编辑产品页面
@@ -211,7 +209,7 @@ AEM通用解决方案提供了管理存储库中保留的商务信息的方法�
 
    ![放大镜图标](/help/sites-administering/do-not-localize/chlimage_1-17.png)
 
-1. 您可以使用多个Facet来搜索产品。 搜索只能使用一个或多个Facet。 将会显示找到的产品：
+1. 您可以使用多个Facet来搜索产品。 搜索只能使用一个或多个Facet。 显示的产品包括：
 
    ![产品控制台中的产品数据](/help/sites-administering/assets/chlimage_1-90.png)
 
@@ -225,14 +223,14 @@ AEM通用解决方案提供了管理存储库中保留的商务信息的方法�
 
    `http://localhost:4502/crx/de/index.jsp#/libs/commerce/gui/content/products/aside/items/search/items/searchpanel/facets`
 
-1. 例如，您可以修改将显示在产品搜索页面上的大小。 单击 `sizegroup` 节点。
+1. 例如，您可以编辑产品搜索页面上显示的大小。 单击 `sizegroup` 节点。
 1. 单击 `items` 节点，然后单击 `propertypredicate` 节点。
-1. 您可以修改 `propertyValues`. 例如，可以添加XS、XXL或移除大小。
+1. 您可以编辑 `propertyValues`. 例如，可以添加XS、XXL或移除大小。
 1. 单击 **全部保存** 并导航到产品搜索页面。 此时应会显示您的更改。
 
 ### 多个资产 {#multiple-assets}
 
-您可以在产品组件中添加多个资源，然后指定将在产品页面上显示的资源。
+您可以在产品组件中添加多个资产，然后指定要显示在产品页面上的资产。
 
 >[!NOTE]
 >
@@ -247,34 +245,34 @@ AEM通用解决方案提供了管理存储库中保留的商务信息的方法�
    >
    >您必须处于产品级别，而不是变型级别。
 
-1. 点按/单击 **查看产品数据** 图标（带有选择模式或快速操作）。
-1. 点按/单击编辑图标。
+1. 选择 **查看产品数据** 图标（带有选择模式或快速操作）。
+1. 选择编辑图标。
 1. 滚动到 **添加**.
 
    ![添加产品数据屏幕截图](/help/sites-administering/assets/chlimage_1-91.png)
 
-1. 点按/单击 **添加**. 将出现一个新的资产占位符。
-1. 点按/单击**更改**打开一个对话框，允许您选择资产。
+1. 选择 **添加**. 将出现一个新的资产占位符。
+1. 选择 **更改** 打开一个用于选择资源的对话框。
 1. 选择要添加的资源。
 
    >[!NOTE]
    >
    >您可以选择的资源包括 [资产](/help/assets/assets.md).
 
-1. 点按/单击完成图标。
+1. 选择完成图标。
 
-两个资产现在存储在您的产品组件中。 您可以配置将在产品页面上显示哪一个。 这适用于类别系统。 首先，您需要向单个资产添加类别：
+两个资产现在存储在您的产品组件中。 您可以配置哪个出现在产品页面上。 这适用于类别系统。 首先，必须将类别添加到单个资产：
 
-1. 点按/单击 **查看产品数据**.
+1. 选择 **查看产品数据**.
 1. 键入 **资产类别** 例如，在资产下 `cat1` 和 `cat2`.
 
    >[!NOTE]
    >
    >您还可以将标记用于类别。
 
-1. 点按/单击完成图标。 您现在必须 [转出](#rolling-out-a-catalog) 您所做的更改。
+1. 选择完成图标。 您现在必须 [转出](#rolling-out-a-catalog) 您所做的更改。
 
-现在，产品组件中的资产具有一个类别。 您可以配置将在三个不同级别显示的类别：
+现在，产品组件中的资产具有一个类别。 您可以配置在三个不同级别显示的类别：
 
 * [产品页面](#product-page)
 * [目录](#catalog)
@@ -282,12 +280,12 @@ AEM通用解决方案提供了管理存储库中保留的商务信息的方法�
 
 >[!NOTE]
 >
->如果不设置类别，则产品页面上将显示第一个资产。
+>如果不设置类别，则第一个资产会显示在产品页面上。
 
 选择要显示的图像的机制如下：
 
 1. 验证是否为产品页面设置了类别。
-1. 如果没有，则验证是否为目录设置了类别。
+1. 如果没有，请验证是否为目录设置了类别。
 1. 如果没有，请验证是否为产品控制台设置了类别。
 
 >[!NOTE]
@@ -298,26 +296,26 @@ AEM通用解决方案提供了管理存储库中保留的商务信息的方法�
 
 1. 导航到您的产品页面。
 1. **编辑** 产品组件。
-1. 键入 **图像类别** 您已选择( `cat1` 例如)。
-1. 点按/单击 **完成**. 页面将刷新，并且应会显示正确的资产。
+1. 键入 **图像类别** 您选择的( `cat1` 例如)。
+1. 选择 **完成**. 页面将刷新，并且应会显示正确的资产。
 
 #### 目录  {#catalog}
 
 1. 导航到您的目录。
-1. 点按/单击 **查看属性**.
-1. 点按/单击&#x200B;**编辑**。
-1. 点按/单击 **资产** 选项卡。
+1. 选择 **查看属性**.
+1. 选择&#x200B;**编辑**。
+1. 选择 **资产** 选项卡。
 1. 键入所需的 **产品资产类别**.
-1. 点按/单击 **完成**.
+1. 选择 **完成**.
 1. [转出](#rolling-out-a-catalog) 您所做的更改。
 
 #### 产品控制台 {#products-console}
 
 1. 使用 **产品** 控制台，导航到所需的产品。
-1. 点按/单击 **查看产品数据**.
-1. 点按/单击&#x200B;**编辑**。
+1. 选择 **查看产品数据**.
+1. 选择&#x200B;**编辑**。
 1. 键入 **默认资源类别**.
-1. 点按/单击 **完成**.
+1. 选择 **完成**.
 1. [转出](#rolling-out-a-catalog) 您所做的更改。
 
 ### 发布/取消发布产品信息 {#publishing-unpublishing-product-information}
@@ -326,7 +324,7 @@ AEM通用解决方案提供了管理存储库中保留的商务信息的方法�
 
 >[!NOTE]
 >
->通常，产品信息会通过引用它的页面发布。 例如，在发布引用了产品Y的页面X时，AEM将询问您是否要发布产品Y。
+>通常，产品信息会通过引用它的页面发布。 例如，在发布引用产品Y的页面X时，AEM会询问您是否还想发布产品Y。
 >
 >对于特殊情况，AEM还支持直接从产品数据发布。
 
@@ -340,7 +338,7 @@ AEM通用解决方案提供了管理存储库中保留的商务信息的方法�
 
    ![世界图标](/help/sites-administering/do-not-localize/chlimage_1-18.png) ![带有十字架的世界图标 — 无符号](/help/sites-administering/do-not-localize/chlimage_1-19.png)
 
-   将根据需要发布或取消发布产品信息。
+   根据需要，发布或取消发布产品信息。
 
 <!-- Search&Promote is end of life as of September 1, 2022 ### Product Feed {#product-feed} -->
 
@@ -355,7 +353,7 @@ AEM通用解决方案提供了管理存储库中保留的商务信息的方法�
 
 ### 产品更新的事件处理程序 {#event-handler-for-product-updates}
 
-有一个事件处理程序，用于在添加、修改或删除产品以及添加、修改或删除产品页面时记录事件。 有以下OSGi事件：
+有一个事件处理程序，可在添加、编辑或删除产品以及添加、编辑或删除产品页面时记录事件。 有以下OSGi事件：
 
 * `com/adobe/cq/commerce/pim/PRODUCT_ADDED`
 * `com/adobe/cq/commerce/pim/PRODUCT_MODIFIED`
@@ -436,7 +434,7 @@ AEM通用解决方案提供了管理存储库中保留的商务信息的方法�
 
    ![添加到购物车选项卡](/help/sites-administering/assets/chlimage_1-97.png)
 
-1. 单击 **添加到购物车**. 有3个配置选项可供您使用。
+1. 单击 **添加到购物车**. 有三个配置选项可供您使用。
 
    ![配置选项](/help/sites-administering/assets/chlimage_1-98.png)
 
@@ -450,32 +448,32 @@ AEM通用解决方案提供了管理存储库中保留的商务信息的方法�
 
 >[!NOTE]
 >
->目录将引用您的产品数据。
+>目录引用您的产品数据。
 
 要生成目录，请执行以下操作：
 
 1. 打开站点控制台(例如， [http://localhost:4502/sites.html/content](http://localhost:4502/sites.html/content))。
-1. 导航到要创建新页面的位置。
+1. 导航到要创建页面的位置。
 1. 要打开选项列表，请使用 **创建** 图标：
 
    ![create-icon](/help/sites-administering/do-not-localize/chlimage_1-23.png)
 
-1. 从列表中选择 **创建目录**，此时将打开创建目录向导。
+1. 从列表中，选择 **创建目录**. 此时将打开“创建目录”向导。
 
    ![创建目录向导](/help/sites-administering/assets/chlimage_1-99.png)
 
 1. 导航到所需的目录Blueprint。
-1. 点按/单击 **选择** 按钮并点按/单击所需的目录Blueprint。
-1. 点按/单击 **下一个**.
+1. 选择 **选择** 按钮并点按/单击所需的目录Blueprint。
+1. 选择&#x200B;**下一步**。
 
    ![目录属性向导](/help/sites-administering/assets/chlimage_1-100.png)
 
 1. 键入 **标题** 和 **名称**.
-1. 点按/单击 **创建** 按钮。 将创建目录并打开一个对话框。
+1. 选择&#x200B;**创建**&#x200B;按钮。将创建目录并打开一个对话框。
 
    ![目录创建对话框](/help/sites-administering/assets/chlimage_1-101.png)
 
-1. 点按/单击 **完成** 按钮将带您返回到站点控制台，您可以在该控制台中查看您的目录。
+1. 选择 **完成** 按钮会将您带回站点控制台，您可以在其中查看您的目录。
 
    点按/单击 **打开目录** 按钮打开您的目录(例如 `http://localhost:4502/editor.html/content/test-catalog.html`)。
 
@@ -483,7 +481,7 @@ AEM通用解决方案提供了管理存储库中保留的商务信息的方法�
 
 >[!NOTE]
 >
->目录将引用您的 [产品数据](#products-and-product-variants).
+>目录引用您的 [产品数据](#products-and-product-variants).
 
 1. 使用 **网站** 控制台，导航到 **目录Blueprint**，然后选择基本目录。
 
@@ -491,22 +489,22 @@ AEM通用解决方案提供了管理存储库中保留的商务信息的方法�
 
    `http://localhost:4502/siteadmin#/content/catalogs/geometrixx-outdoors/base-catalog`
 
-1. 使用创建新页面 **区域Blueprint** 模板。
+1. 使用创建页面 **区域Blueprint** 模板。
 
    例如：`Swimwear`。
 
-1. 打开新的 `Swimwear` 页面，然后单击 **编辑Blueprint** 以打开 **属性** 对话框，在其中可以设置 **产品** 选择。
+1. 打开新的 `Swimwear` 页面，然后单击 **编辑Blueprint**. 此 **属性** 对话框打开，以便您可以设置 **产品** 选择。
 
    例如，打开 **标记/关键字** 字段以选择活动，然后从Geometrixx — 室外部分选择游泳。
 
-1. 单击 **确定** 以保存您的资产；示例产品将显示在 **产品选择标准** 在Blueprint页面上。
-1. 单击 **转出更改……**，选择 **转出页面和所有子页面**，然后单击 **下一个** 则 **转出**. 成功完成转出后， **状态** 指示器将显示为绿色。
+1. 单击 **确定** 以便保存您的资产；示例产品显示在 **产品选择标准** 在Blueprint页面上。
+1. 单击 **转出更改……**，选择 **转出页面和所有子页面**，然后单击 **下一个** 则 **转出**. 成功完成转出后， **状态** 指示器显示为绿色。
 1. 您现在可以单击 **关闭** 和选中新目录部分；例如，位于和下：
 
    `http://localhost:4502/cf#/content/geometrixx-outdoors/en/swimwear.html`
 
 1. 再次从Blueprint页面单击 **编辑Blueprint** 和 **属性** 对话框打开 **生成的页面** 选项卡。 在Banner list字段中，选择要显示的图像；例如， `summer.jpg`
-1. 单击 **确定** 以保存您的资产；横幅信息将显示在 **产品选择标准** 在Blueprint页面上。
+1. 单击 **确定** 这样您的资产就会被保存；横幅信息显示在 **产品选择标准** 在Blueprint页面上。
 1. 转出这些新更改。
 
 ### 转出目录 {#rolling-out-a-catalog}
@@ -527,7 +525,7 @@ AEM通用解决方案提供了管理存储库中保留的商务信息的方法�
    ![转出](/help/sites-administering/do-not-localize/chlimage_1-24.png)
 
 1. 在向导中，根据需要设置转出，然后点按/单击 **转出更改**.
-1. 这将打开一个对话框。 点按/单击 **完成** 过程完成时。
+1. 随即会打开一个对话框。 选择 **完成** 过程完成时。
 
 #### 转出目录 — 经典UI {#rolling-out-a-catalog-classic-ui}
 
@@ -547,7 +545,7 @@ AEM通用解决方案提供了管理存储库中保留的商务信息的方法�
 
 1. 导航至 **目录** 控制台，通过 **商务**.
 1. 导航到要导入目录Blueprint的位置。
-1. 点按/单击 **导入Blueprint** 图标。
+1. 选择 **导入Blueprint** 图标。
 
    ![导入Blueprint图标](/help/sites-administering/do-not-localize/chlimage_1-13.png)
 
@@ -555,7 +553,7 @@ AEM通用解决方案提供了管理存储库中保留的商务信息的方法�
 
    ![Blueprint向导](/help/sites-administering/assets/chlimage_1-102.png)
 
-1. 点按/单击 **完成** 导入完成后。
+1. 选择 **完成** 导入完成后。
 
 #### Blueprint导入程序 — 经典UI {#blueprint-importer-classic-ui}
 
@@ -581,11 +579,11 @@ AEM通用解决方案提供了管理存储库中保留的商务信息的方法�
 >
 >促销也可以位于 [体验](/help/sites-authoring/personalization.md) 在营销策划中。
 >
->有关详细信息，请参阅 [促销和优惠券](#promotions-and-vouchers).
+>有关更多信息，请参阅 [促销和优惠券](#promotions-and-vouchers).
 
 1. 打开 **网站** 创作实例的控制台。
 1. 在左侧窗格中，选择所需的 **营销活动**.
-1. 单击 **新建**，选择 **促销活动** 模板，然后指定 **标题** (和 **名称** （如果需要）作为新凭证。
+1. 单击 **新建**，选择 **促销活动** 模板，然后指定 **标题** (和 **名称** （如有必要）作为新凭证。
 1. 单击&#x200B;**创建**。新的促销页面将显示在右侧窗格中。
 
 1. 编辑 **属性** 通过下列任一方式：
@@ -607,10 +605,10 @@ AEM通用解决方案提供了管理存储库中保留的商务信息的方法�
 
 1. 打开 **网站** 创作实例的控制台。
 1. 在左侧窗格中，选择所需的 **营销活动**.
-1. 单击 **新建**，选择 **优惠券** 模板，然后指定 **标题** (和 **名称** （如果需要）作为新凭证。
+1. 单击 **新建**，选择 **优惠券** 模板，然后指定 **标题** (和 **名称** （如有必要）作为新凭证。
 1. 单击&#x200B;**创建**。新凭单页面将显示在右侧窗格中。
 
-1. 双击以打开您的新优惠券页面，然后单击 **编辑** 以根据需要配置信息。
+1. 双击以打开您的新优惠券页面，然后单击 **编辑** 并根据需要配置信息。
 1. 单击 **确定** 以保存。
 
 1. 您现在可以激活优惠券，以便购物者可以在发布实例上的购物车中使用该优惠券。
@@ -619,9 +617,9 @@ AEM通用解决方案提供了管理存储库中保留的商务信息的方法�
 
 #### 删除优惠券 — 经典UI {#removing-vouchers-classic-ui}
 
-为了使优惠券对客户不可用，您可以：
+要使优惠券对客户不可用，您可以：
 
-* 停用优惠券 — 它将在创作环境中保持可用，以便您稍后可以重新激活它。
+* 停用优惠券 — 它仍然在创作环境中可用，以便您稍后可以重新激活。
 * 将其完全删除。
 
 这两个操作都可以从 **网站** 控制台。
@@ -634,7 +632,7 @@ AEM通用解决方案提供了管理存储库中保留的商务信息的方法�
 
 ### 将优惠券添加到购物车 {#adding-vouchers-to-a-cart}
 
-要允许用户将优惠券添加到其购物车，您可以使用内置 **优惠券** 组件（商业类别）。 您需要将此项添加到显示购物车的相同页面（但不是强制性的）。 优惠券组件只是用户可以在其中输入优惠券代码的表单，它是实际显示应用优惠券及其折扣列表的购物车组件。
+要允许用户将优惠券添加到其购物车，您可以使用内置 **优惠券** 组件（商业类别）。 将此项添加到显示购物车的同一页面（但这不是强制性的）。 优惠券组件只是用户可以在其中输入优惠券代码的表单，它是实际显示应用优惠券及其折扣列表的购物车组件。
 
 在演示站点(Geometrixx Outdoors语 — 英语)中，您可以在购物车页面上看到实际购物车下的优惠券表单。
 
@@ -644,7 +642,7 @@ AEM通用解决方案提供了管理存储库中保留的商务信息的方法�
 >
 >请记住，开箱即用的AEM没有与订单相关的标准功能所需的操作，例如退回商品、更新订单状态、执行履行、生成装箱单。 它主要用于技术预览。
 >
->AEM中的通用订单管理一直是基本的；向导中可用的字段取决于基架：
+>AEM中的通用订单管理始终保持为基本；向导中可用的字段取决于基架：
 >`/etc/scaffolding/geometrixx-outdoors/order/jcr:content/cq:dialog`
 >
 >如果您创建自定义基架，则可以存储更多订单信息。
@@ -664,7 +662,7 @@ AEM通用解决方案提供了管理存储库中保留的商务信息的方法�
 
    ![加号形状创建图标](/help/sites-administering/do-not-localize/chlimage_1-14.png)
 
-1. 此时将打开向导。 使用 **基本**， **内容**， **付款** 和 **完成** 选项卡以输入 [有关新订单的信息](/help/commerce/cif-classic/administering/concepts.md#order-information).
+1. 将打开向导。 使用 **基本**， **内容**， **付款**、和 **完成** 选项卡以输入 [有关新订单的信息](/help/commerce/cif-classic/administering/concepts.md#order-information).
 
 1. 选择 **创建** 以保存信息。
 
@@ -682,5 +680,5 @@ AEM通用解决方案提供了管理存储库中保留的商务信息的方法�
 
    ![信息图标](/help/sites-administering/do-not-localize/chlimage_1-15.png)
 
-1. 此 [订单信息](/help/commerce/cif-classic/administering/concepts.md#order-information) 将显示在屏幕上。 使用 **编辑** 和 **完成** 进行更改。
+1. 此 [订单信息](/help/commerce/cif-classic/administering/concepts.md#order-information) 显示了。 使用 **编辑** 和 **完成** 进行更改。
 
