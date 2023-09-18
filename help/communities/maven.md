@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 exl-id: 3df90511-e43e-442b-bf73-44c22c1886b7
-source-git-commit: e161c37544c3391607cbe495644f3353b9f77fe3
+source-git-commit: ab3d016c7c9c622be361596137b150d8719630bd
 workflow-type: tm+mt
-source-wordcount: '109'
+source-wordcount: '115'
 ht-degree: 0%
 
 ---
@@ -27,11 +27,11 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->从AEM 6.4开始，Communities API未明确发布。 现在，所有社区API都包含在Uber jar本身中。
+>从AEM 6.4开始，Communities API未明确发布。 所有社区API现在都包含在Uber jar本身中。
 >
->及时了解最新的Communities版本。
+>与最新的Communities版本保持同步。
 >
->参见 [最新版本](deploy-communities.md#latest-releases) 部分，以标识最新版本。
+>请参阅 [最新版本](deploy-communities.md#latest-releases) 可在其中标识最新版本的部分。
 
 ## Maven依赖关系示例 {#maven-dependency-example}
 
@@ -46,7 +46,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->参见 [AEM Uber jar存储库](https://mvnrepository.com/artifact/com.adobe.aem/uber-jar) 辨认出最新的Uber jar藏品。
+>请参阅 [AEM Uber jar存储库](https://mvnrepository.com/artifact/com.adobe.aem/uber-jar) 在这里，您可以识别最新的Uber jar工件。
 
 <!--
 There are now two "uber" artifacts that replace individual artifacts:

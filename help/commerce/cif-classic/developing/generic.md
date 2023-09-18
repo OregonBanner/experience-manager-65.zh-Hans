@@ -1,17 +1,14 @@
 ---
 title: 开发（通用）
-seo-title: Developing (generic)
 description: 集成框架包括带有API的集成层，允许您为电子商务功能构建AEM组件
-seo-description: The integration framework includes an integration layer with an API, allowing you to build AEM components for eCommerce capabilities
-uuid: 393bb28a-9744-44f4-9796-09228fcd466f
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: platform
 exl-id: 1138a548-d112-4446-b0e1-b7a9ea7c7604
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: ab3d016c7c9c622be361596137b150d8719630bd
 workflow-type: tm+mt
-source-wordcount: '1860'
+source-wordcount: '1846'
 ht-degree: 0%
 
 ---
@@ -24,7 +21,7 @@ ht-degree: 0%
 
 集成框架包括带有API的集成层。 这使您能够为电子商务功能构建AEM组件（独立于您的特定电子商务引擎）。 它还允许您使用内部CRX数据库或插入电子商务系统并将产品数据提取到AEM中。
 
-提供了许多现成的AEM组件以使用集成层。 目前，这些方法包括：
+提供了多个现成的AEM组件以使用集成层。 目前，这些方法包括：
 
 * 产品显示组件
 * 购物车
@@ -33,11 +30,11 @@ ht-degree: 0%
 * 结帐
 * 搜索
 
-对于搜索，提供了一个集成挂接，允许您使用AEM搜索、第三方搜索或其组合。
+对于搜索，提供了一个集成挂接，允许您使用Adobe Experience Manager (AEM)搜索、第三方搜索或它们的组合。
 
 ## 电子商务引擎选择 {#ecommerce-engine-selection}
 
-电子商务框架可与任何电子商务解决方案一起使用，使用的引擎需要由AEM进行标识 — 即使使用AEM通用引擎时也是如此：
+电子商务框架可与任何电子商务解决方案一起使用，使用的引擎必须由AEM标识 — 即使使用AEM通用引擎时也是如此：
 
 * 电子商务引擎是支持 `CommerceService` 界面
 
@@ -54,7 +51,7 @@ ht-degree: 0%
 
 * 此 `cq:commerceProvider` 属性还用于引用相应的商务工厂定义。
 
-   * 例如， `cq:commerceProvider` 值为geometrixx的属性将关联到的OSGi配置 **Day CQ Commerce Factory for Geometrixx-Outdoors** (`com.adobe.cq.commerce.hybris.impl.GeoCommerceServiceFactory`) — 其中，参数 `commerceProvider` 还具有值 `geometrixx`.
+   * 例如， `cq:commerceProvider` 属性，其值Geometrixx与的OSGi配置关联 **Day CQ Commerce Factory for Geometrixx-Outdoors** (`com.adobe.cq.commerce.hybris.impl.GeoCommerceServiceFactory`) — 其中，参数 `commerceProvider` 还具有值 `geometrixx`.
    * 此处可以配置其他属性（在适当且可用时）。
 
 在标准AEM安装中，需要特定实施，例如：
@@ -104,26 +101,26 @@ ht-degree: 0%
   `CommerceSession.getUserContext()`
 
 * 可以使用检索/更新投放详细信息 `updateOrder(Map<String, Object> delta)`
-* 还拥有 **付款** 正在处理连接
-* 还拥有 **履行** 连接
+* 拥有 **付款** 正在处理连接
+* 拥有 **履行** 连接
 
 ### 架构 {#architecture}
 
 #### 产品和变体的架构 {#architecture-of-product-and-variants}
 
-单个产品可以有多个变体；例如，它可能因颜色和/或大小而异。 产品必须定义哪些属性会驱动变化；我们称这些属性为 *变量轴*.
+单个产品可以有多个变体；例如，它可能因颜色和/或大小而异。 产品必须定义哪些属性会驱动变化；Adobe术语如下 *变量轴*.
 
-但是，并非所有属性都是变量轴。 各种变化也可能会影响其他属性；例如，价格可能取决于大小。 购物者无法选择这些属性，因此不被视为变量轴。
+但是，并非所有属性都是变量轴。 变体也可能会影响其他属性；例如，价格可能取决于大小。 购物者无法选择这些属性，因此不被视为变量轴。
 
 每个产品和/或变体由一个资源表示，因此将1:1映射到存储库节点。 由此推断，特定产品和/或变体可通过其路径唯一标识。
 
-任何产品资源都可以用 `Product API`. 产品API中的大多数调用是特定于变体的调用（尽管变体可能继承来自祖先的共享值），但也有列出变体集的调用( `getVariantAxes()`， `getVariants()`、等)。
+任何产品资源都可以用 `Product API`. 产品API中的大多数调用均特定于变体（尽管变体可能继承来自祖先的共享值），但也有列出变体集的调用( `getVariantAxes()`， `getVariants()`，等等)。
 
 >[!NOTE]
 >
->实际上，变轴由任何决定 `Product.getVariantAxes()` 返回：
+>实际上，变轴由任何参数决定 `Product.getVariantAxes()` 返回：
 >
->* 对于通用实现，AEM会从产品数据中的属性读取它( `cq:productVariantAxes`)
+>* 对于通用实施，AEM会从产品数据( `cq:productVariantAxes`)
 >
 >虽然产品（通常）可以具有多个变体轴，但现成的产品组件仅处理两个变体轴：
 >
@@ -309,7 +306,7 @@ public class AxisFilter implements VariantFilter {
 
 * 该购物车属于 `CommerceSession:`
 
-   * 此 `CommerceSession` 执行添加、删除等
+   * 此 `CommerceSession` 执行添加、删除等操作。
    * 此 `CommerceSession` 还会在购物车上执行各种计算。
    * 此 `CommerceSession` 还会将已触发的优惠券和促销活动应用于购物车。
 
@@ -321,7 +318,7 @@ public class AxisFilter implements VariantFilter {
       * 不同的货币。
       * 应缴纳增值税且免纳增值税。
 
-   * 修饰符使用以下接口是完全开放的：
+   * 修饰符是开放的，接口如下：
 
       * `int CommerceSession.getQuantityBreakpoints(Product product)`
       * `String CommerceSession.getProductPrice(Product product)`
@@ -334,7 +331,7 @@ public class AxisFilter implements VariantFilter {
 
 **个性化**
 
-* 应始终通过以下方式推动个性化 [ClientContext](/help/sites-administering/client-context.md).
+* 始终通过以下方式推动个性化 [ClientContext](/help/sites-administering/client-context.md).
 * ClientContext `/version/` 在所有情况下都会创建Cart的：
 
    * 应使用添加产品 `CommerceSession.addCartEntry()` 方法。
@@ -384,7 +381,7 @@ public class AxisFilter implements VariantFilter {
 
 **配送费计算**
 
-* 订单通常需要提供多种送货选项（和价格）。
+* 订单通常必须提供多种送货选项（和价格）。
 * 价格可能基于物料和订单详细信息，如重量和/或交货地址。
 * 此 `CommerceSession` 有权访问所有依赖项，因此可以采用与产品定价类似的方式对其进行处理：
 
@@ -403,13 +400,13 @@ public class AxisFilter implements VariantFilter {
 >
 >因此，尽管提供的现成通用实施不实施此API，但您可以对其进行扩展并添加搜索功能。
 
-电子商务项目包含一个默认搜索组件，位于以下位置：
+电子商务项目包含以下位置中的默认搜索组件：
 
 `/libs/commerce/components/search`
 
 ![chlimage_1-34](/help/sites-developing/assets/chlimage_1-34a.png)
 
-这将利用搜索API来查询选定的商务引擎(请参阅 [电子商务引擎选择](#ecommerce-engine-selection))：
+这将使用搜索API查询选定的商务引擎(请参阅 [电子商务引擎选择](#ecommerce-engine-selection))：
 
 #### 搜索API {#search-api}
 
@@ -417,11 +414,11 @@ public class AxisFilter implements VariantFilter {
 
 1. `CommerceQuery`
 
-   用于描述搜索查询（包含有关查询文本、当前页面、页面大小、排序和所选Facet的信息）。 所有实施搜索API的电子商务服务都将接收此类的实例以执行其搜索。 A `CommerceQuery` 可以从请求对象实例化( `HttpServletRequest`)。
+   用于描述搜索查询（包含有关查询文本、当前页面、页面大小、排序和所选彩块化的信息）。 所有实施搜索API的电子商务服务都接收此类的实例以执行其搜索。 A `CommerceQuery` 可以从请求对象实例化( `HttpServletRequest`)。
 
 1. `FacetParamHelper`
 
-   是一个实用程序类，它提供一个静态方法 —  `toParams`  — 用于生成 `GET` 多面和一个切换值列表中的参数字符串。 这在UI端很有用，您需要显示每个Facet的每个值的超链接，以便当用户单击超链接时，切换相应的值（即，如果选中它，则从查询中删除它，否则添加）。 这解决了处理多个/单值Facet、覆盖值等的所有逻辑。
+   是一个实用程序类，它提供一个静态方法 —  `toParams`  — 用于生成 `GET` 多面和一个切换值列表中的参数字符串。 这在UI端很有用，您需要为每个Facet的每个值显示超链接，这样当用户单击超链接时，将切换相应的值。 也就是说，如果选定了它，则会将其从查询中删除，否则会添加它。 这解决了处理多个/单值Facet、覆盖值等操作的所有逻辑。
 
 搜索API的入口点为 `CommerceService#search` 返回 `CommerceResult` 对象。 有关此主题的更多信息，请参阅API文档。
 
@@ -464,7 +461,7 @@ public class AxisFilter implements VariantFilter {
 
    * 您可以将促销活动关联到促销活动，以定义其打开/关闭日期/时间。
    * 您可以将促销活动连接到体验以定义其区段。
-   * 与体验无关的促销活动不会自行触发，但仍可以通过优惠券触发。
+   * 与体验无关的促销活动不会自行触发，但优惠券仍可以触发。
    * 提升组件( `/libs/commerce/components/promotion`)包含：
 
       * 用于提升管理的渲染器和对话框
@@ -477,7 +474,7 @@ public class AxisFilter implements VariantFilter {
 
    * ClientContext `SegmentMgr` 解析区段和ClientContext `CartMgr` 解析促销活动。 至少具有一个已解析区段的每个促销活动都会触发。
 
-      * 触发的促销活动会通过AJAX调用发送回服务器，以重新计算购物车。
+      * 已触发的促销活动将通过AJAX调用发送回服务器以重新计算购物车。
       * ClientContext面板中还会显示触发的促销活动（和添加的优惠券）。
 
 在购物车中添加/删除优惠券是通过 `CommerceSession` API：
@@ -507,7 +504,7 @@ public void removeVoucher(String code) throws CommerceException;
 public List<Voucher> getVouchers() throws CommerceException;
 ```
 
-这边， `CommerceSession` 负责检查凭单是否存在以及凭单是否可以应用。 这可能适用于只有在满足特定条件时才能应用的凭单；例如，当购物车总价格大于$100时)。 如果由于任何原因无法应用优惠券，则 `addVoucher` 方法将引发异常。 此外， `CommerceSession` 负责在添加/删除优惠券后更新购物车的价格。
+这边， `CommerceSession` 负责检查凭单是否存在以及凭单是否可以应用。 这可能适用于只有在满足特定条件时才能应用的凭单。 例如，当购物车总价格大于$100时。 如果由于任何原因无法应用优惠券，则 `addVoucher` 方法引发异常。 此外， `CommerceSession` 负责在添加/删除优惠券后更新购物车的价格。
 
 此 `Voucher` 是一个类Bean，其中包含下列字段：
 
@@ -523,7 +520,7 @@ public List<Voucher> getVouchers() throws CommerceException;
 * `code` （字符串） — 用户必须输入以应用此优惠券的代码
 * `promotion` （字符串） — 要应用的促销活动；例如， `/content/campaigns/geometrixx-outdoors/article/10-bucks-off`
 
-促销处理程序是修改购物车的OSGi服务。 购物车将支持将在中定义的多个挂钩 `PromotionHandler` 界面。
+促销处理程序是修改购物车的OSGi服务。 购物车支持在中定义的多个挂钩。 `PromotionHandler` 界面。
 
 ```java
 /**

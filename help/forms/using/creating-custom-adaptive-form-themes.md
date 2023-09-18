@@ -1,17 +1,13 @@
 ---
 title: 创建自定义自适应表单主题
-seo-title: Creating custom adaptive form themes
-description: 自适应表单主题是一个AEM客户端库，可使用它定义自适应表单的样式（外观）。 了解如何创建自定义自适应表单主题。
-seo-description: An adaptive form theme is an AEM client library that you use to define the styles (look and feel) for an adaptive form. Learn how you can create custom adaptive form themes.
-uuid: b25df10e-b07c-4e9d-a799-30f1c6fb3c44
+description: 自适应表单主题是一个Adobe Experience Manager客户端库，可用于定义自适应表单的样式（外观）。 了解如何创建自定义自适应表单主题。
 content-type: reference
 topic-tags: customization
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 437e6581-4eb1-4fbd-a6da-86b9c90cec89
 exl-id: 73b0057f-082d-4502-90e2-5e41b52c1185
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: ab3d016c7c9c622be361596137b150d8719630bd
 workflow-type: tm+mt
-source-wordcount: '788'
+source-wordcount: '795'
 ht-degree: 0%
 
 ---
@@ -20,7 +16,7 @@ ht-degree: 0%
 
 >[!CAUTION]
 >
->AEM Forms提供 [主题编辑器](/help/forms/using/themes.md) 创建和修改自适应表单的功能 [主题](/help/forms/using/themes.md). 执行本文中列出的步骤（仅当从没有的版本升级时） [主题编辑器](/help/forms/using/themes.md) 并且您目前在使用Less/CSS文件（预主题编辑器方法）创建的主题方面有所投资。
+>Adobe Experience Manager (AEM) Forms提供 [主题编辑器](/help/forms/using/themes.md) 能够创建和修改自适应表单 [主题](/help/forms/using/themes.md). 仅当从没有的版本升级时，才执行本文中列出的步骤 [主题编辑器](/help/forms/using/themes.md) 而且您已经在使用Less/CSS文件（预主题编辑器方法）创建的主题方面有所投资。
 
 ## 前提条件 {#prerequisites}
 
@@ -30,7 +26,7 @@ ht-degree: 0%
 
 ## 自适应表单主题 {#adaptive-form-theme}
 
-An **自适应表单主题** 是一个AEM客户端库，可使用它定义自适应表单的样式（外观）。
+An **自适应表单主题** 是一个AEM客户端库，可用于定义自适应表单的样式（外观）。
 
 您创建 **自适应模板** 并将主题应用于模板。 然后，您可以使用此自定义模板创建 **自适应表单**.
 
@@ -61,13 +57,13 @@ An **自适应表单主题** 是一个AEM客户端库，可使用它定义自适
 
 1. 添加两个文件夹， `less` 和 `css`和文件 `css.txt` 到步骤1中创建的节点：
 
-   * `less` 文件夹：包含 `less` 变量文件，可在其中定义 `less` 变量和 `less mixins` 用于管理.css样式的属性。
+   * `less` 文件夹：包含 `less` 变量文件，在其中定义 `less` 变量和 `less mixins` 用于管理.css样式的属性。
 
-      此文件夹包括 `less` 变量文件， `less` mixin文件， `less` 使用mixin和变量定义样式的文件。 然后所有这些较少的文件以样式.less导入。
+     此文件夹包括 `less` 变量文件， `less` mixin文件， `less` 使用mixin和变量定义样式的文件。 然后所有这些较少的文件会以样式导入.less.
 
-   * `css`文件夹：包含.css文件，可在其中定义要在主题中使用的静态样式。
+   * `css`文件夹：包含.css文件，您可以在其中定义要在主题中使用的静态样式。
 
-   **变量较少文件**：这些是文件，您可以在其中定义或覆盖在定义CSS样式中使用的变量。
+   **更少变量文件**：这些是您在其中定义或覆盖在定义CSS样式中使用的变量的文件。
 
    自适应表单提供以下.less文件中定义的OOTB变量：
 
@@ -109,13 +105,13 @@ An **自适应表单主题** 是一个AEM客户端库，可使用它定义自适
    @button-hover-bg-color: rgb(30, 156, 67);
    ```
 
-   **更少的mixin文件：** 您可以定义接受变量作为参数的函数。 这些函数的输出是生成样式。 请在不同的样式中使用这些mixin，以避免重复CSS样式。
+   **更少的mixin文件：** 您可以定义接受变量作为参数的函数。 这些函数的输出是生成的样式。 请在不同的样式中使用这些mixin，以避免重复CSS样式。
 
    自适应表单提供中定义的OOTB mixin：
 
    * `/apps/clientlibs/fd/af/guidetheme/common/less/adaptiveforms-mixins.less`
 
-   自适应表单还提供中定义的第三方Mixin：
+   自适应表单还提供中定义的第三方mixin：
 
    * `/apps/clientlibs/fd/af/third-party/less/mixins.less`
 
@@ -135,7 +131,7 @@ An **自适应表单主题** 是一个AEM客户端库，可使用它定义自适
    }
    ```
 
-   **Styles.less文件：** 使用此文件可以包含需要在客户端库中使用的所有较少文件（变量、mixin、样式）。
+   **Styles.less文件：** 使用此文件可以包含必须在客户端库中使用的所有较少文件（变量、mixin、样式）。
 
    在以下示例中 `styles.less` 文件，导入语句可以按任意顺序放置。
 
@@ -196,7 +192,7 @@ An **自适应表单主题** 是一个AEM客户端库，可使用它定义自适
    >
    >styles.less文件不是强制性的。 这意味着如果您尚未定义任何自定义样式、变量或mixin，则无需创建此文件。
    >
-   >但是，如果您未创建style.less文件，则需要在css.txt文件中取消注释以下行：
+   >但是，如果不创建style.less文件，则必须在css.txt文件中取消注释以下行：
    >
    >**`#base=less`**
    >
@@ -208,7 +204,7 @@ An **自适应表单主题** 是一个AEM客户端库，可使用它定义自适
 
 创建自适应表单主题后，执行以下步骤以在自适应表单中使用此主题：
 
-1. 包括在中创建的主题 [创建自适应表单主题](/help/forms/using/creating-custom-adaptive-form-themes.md#p-to-create-an-adaptive-form-theme-p) 部分，创建类型的自定义页面 `cq:Component`.
+1. 要包含在中创建的主题，请执行以下操作 [创建自适应表单主题](/help/forms/using/creating-custom-adaptive-form-themes.md#p-to-create-an-adaptive-form-theme-p) 部分，创建类型为的自定义页面 `cq:Component`.
 
    例如，`/apps/myAfCustomizations/myAfPages/forestPage`
 
@@ -216,9 +212,9 @@ An **自适应表单主题** 是一个AEM客户端库，可使用它定义自适
 
       ![CRX存储库快照](assets/1-2.png)
 
-   1. 要在页面中使用主题，您需要向节点添加覆盖文件library.jsp。
+   1. 要在页面中使用主题，必须将覆盖文件library.jsp添加到节点。
 
-      然后，导入在本文的创建自适应表单主题部分中创建的主题。
+      然后，您可以导入在本文的创建自适应表单主题部分中创建的主题。
 
       以下示例代码片段导入 `af.theme.forest` 主题。
 
@@ -233,4 +229,4 @@ An **自适应表单主题** 是一个AEM客户端库，可使用它定义自适
 
    ![CRX存储库快照](assets/2-1.png)
 
-1. 使用上一步中创建的模板创建自适应表单。 自适应表单的外观由本文的创建自适应表单主题部分中创建的主题定义。
+1. 使用上一步中创建的模板创建自适应表单。 自适应表单的外观由本文创建自适应表单主题部分中创建的主题定义。

@@ -2,9 +2,9 @@
 title: 使用JEE自定义DSC上的AEM Forms压缩和解压缩文件
 description: 了解如何使用JEE自定义DSC上的AEM Forms压缩和解压缩文件
 exl-id: 1b950d8f-6b54-452a-831b-f5644370691d
-source-git-commit: f0dd1ac3ab9c17a8b331f5048d84ec97dd23924f
+source-git-commit: ab3d016c7c9c622be361596137b150d8719630bd
 workflow-type: tm+mt
-source-wordcount: '483'
+source-wordcount: '484'
 ht-degree: 0%
 
 ---
@@ -23,11 +23,13 @@ Java™编辑器，例如 [Eclipse](https://www.eclipse.org/) 或 [Netbeans IDE]
 
 中间
 
-通过JEE上的AEM Forms，开发人员可以创建自定义DSC（文档服务容器），以创建扩充的开箱即用功能。 创建此类组件可插入JEE运行时环境的AEM Forms，并且符合预期目的。 本文介绍如何创建自定义ZIP服务，该服务可用于将文件列表压缩为.zip文件，并将.zip解压缩为文档列表。
+通过JEE上的AEM Forms，开发人员可以创建自定义ASC(Acrobat服务容器)，以创建扩充的开箱即用功能。 创建此类组件可插入JEE运行时环境的AEM Forms，并且符合预期目的。 本文介绍如何创建自定义ZIP服务，该服务可用于将文件列表压缩为.zip文件，并将.zip解压缩为文档列表。
 
-## 创建自定义DSC组件 {#create-custom-dsc-component}
+## 创建自定义ASC组件 {#create-custom-dsc-component}
 
-创建具有两个服务操作的自定义DSC组件，以压缩和解压缩文档列表。 此组件使用java.util.zip包进行压缩和解压缩。 请按照以下步骤创建自定义组件：
+创建具有两个服务操作的自定义ASC组件，以便可以压缩和解压缩文档列表。 此组件使用java.util.zip包进行压缩和解压缩。
+
+要创建自定义ASC组件，请执行以下操作：
 
 1. 将adobe-livecycle-client.jar文件添加到库中
 1. 添加所需的图标
@@ -203,7 +205,7 @@ component.xml文件如下所示：
 
 ![Zip文档](assets/zip-doc.jpg)
 
-以下工作流编排说明如何解压缩给定的ZIP文件，将其压缩回另一个ZIP文件并返回输出（请参阅下图）。
+以下工作流编排显示了如何解压缩给定的ZIP文件，将其压缩回另一个ZIP文件并返回输出（请参阅下图）。
 
 ![解压缩Zip工作流](assets/unzip-zip-process.jpg)
 
@@ -215,8 +217,8 @@ component.xml文件如下所示：
 
 * 提供包含多个PDF文档的ZIP文件，在解压缩文档后可以扩展这些文档。 这需要AEM Forms on JEEReader扩展模块。
 
-* 提供包含异类文档的ZIP文件，可使用生成PDF服务将异类文档解压缩并转换为PDF文档。
+* 提供包含异类文档的ZIP文件，可使用生成PDF服务将此类文档解压缩并转换为PDF文档。
 
 * 策略保护文档列表并作为ZIP文件返回。
 
-* 允许用户将流程实例的所有附件下载为一个ZIP文件。
+* 允许用户将流程实例的所有附件下载为单个ZIP文件。

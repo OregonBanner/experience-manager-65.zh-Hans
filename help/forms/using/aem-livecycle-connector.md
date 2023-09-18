@@ -1,32 +1,28 @@
 ---
 title: 将AEM Forms与AdobeLiveCycle连接
-seo-title: Connecting AEM Forms with Adobe LiveCycle
-description: AEMLiveCycle连接器允许您从AEM应用程序和工作流程中启动LiveCycleES4 Document Services。
-seo-description: AEM LiveCycle connector lets you start LiveCycle ES4 Document Services from within AEM apps and workflows.
-uuid: 7dc9d5ec-7b19-4d93-936d-81ceb45dfffa
+description: Adobe Experience Manager (AEM)LiveCycle连接器允许您从AEM应用程序和工作流LiveCycleES4 Acrobat服务。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: Configuration
-discoiquuid: 7e404b45-1302-4dd1-b3c9-3f47fedb5f94
 role: Admin
 exl-id: 562f8a22-cbab-4915-bc0d-da9bea7d18fa
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: ab3d016c7c9c622be361596137b150d8719630bd
 workflow-type: tm+mt
-source-wordcount: '1004'
+source-wordcount: '1026'
 ht-degree: 0%
 
 ---
 
 # 将AEM Forms与AdobeLiveCycle连接 {#connecting-aem-forms-with-adobe-livecycle}
 
-Adobe Experience Manager (AEM)LiveCycle连接器允许从AEM Web应用程序和工作流中无缝调用AdobeLiveCycleES4 Document Services。 LiveCycle提供了一个富客户端SDK，允许客户端应用程序使用Java API启动LiveCycle服务。 AEMLiveCycle连接器简化了OSGi环境中使用这些API的过程。
+Adobe Experience Manager (AEM)LiveCycle连接器允许从AEM Web应用程序和工作流中无缝调用AdobeLiveCycleES4 Acrobat服务。 LiveCycle提供了一个富客户端SDK，允许客户端应用程序使用Java™ API启动LiveCycle服务。 AEMLiveCycle连接器简化了OSGi环境中使用这些API的过程。
 
 ## 正在将AEM服务器连接到AdobeLiveCycle {#connecting-aem-server-to-adobe-livecycle}
 
-AEMLiveCycle连接器属于 [AEM Forms附加组件包](/help/forms/using/installing-configuring-aem-forms-osgi.md). 安装AEM Forms附加组件包后，执行以下步骤以将LiveCycle服务器的详细信息添加到AEM Web控制台。
+AEMLiveCycle连接器属于 [AEM Forms附加组件包](/help/forms/using/installing-configuring-aem-forms-osgi.md). 安装AEM Forms附加组件包后，请执行以下步骤，以便可以将LiveCycle服务器的详细信息添加到AEM Web控制台。
 
 1. 在AEM Web控制台配置管理器中，找到AdobeLiveCycle客户端SDK配置组件。
-1. 单击该组件可编辑配置服务器的URL、用户名和密码。
+1. 单击该组件，以便编辑配置服务器的URL、用户名和密码。
 1. 查看设置并单击 **保存**.
 
 虽然其性质不言自明，但重要之处如下：
@@ -40,13 +36,13 @@ AEMLiveCycle连接器属于 [AEM Forms附加组件包](/help/forms/using/install
 
   选项。
 
-* **用户名** — 指定用于在AEM和LiveCycle之间建立通信的帐户的用户名。 该帐户是具有启动Document Services权限的LiveCycle用户帐户。
+* **用户名** — 指定用于在AEM和LiveCycle之间建立通信的帐户的用户名。 帐户是具有启动Acrobat服务的权限的LiveCycle用户帐户。
 * **密码** — 指定密码。
 * **服务名称**  — 指定使用用户名和密码字段中提供的用户凭据启动的服务。 默认情况下，启动LiveCycle服务时不会传递任何凭据。
 
 ## 启动文档服务 {#starting-document-services}
 
-客户端应用程序可以使用Java API、Web服务、远程处理和REST以编程方式启动LiveCycle服务。 对于Java客户端，应用程序可以使用LiveCycleSDK。 LiveCycleSDK提供了一个用于远程启动这些服务的Java API。 例如，要将Microsoft Word文档转换为PDF，客户端将启动GeneratePDFervice。 调用流包含以下步骤：
+客户端应用程序可以使用Java™ API、Web服务、远程处理和REST以编程方式启动LiveCycle服务。 对于Java™客户端，应用程序可以使用LiveCycleSDK。 LiveCycleSDK提供了一个用于远程启动这些服务的Java™ API。 例如，要将Microsoft® Word Document转换为PDF，客户端将启动GeneratePDFervice。 调用流包含以下步骤：
 
 1. 创建ServiceClientFactory实例。
 1. 每个服务都提供一个客户端类。 要启动服务，请创建服务的客户端实例。
@@ -54,7 +50,7 @@ AEMLiveCycle连接器属于 [AEM Forms附加组件包](/help/forms/using/install
 
 AEMLiveCycle连接器通过将这些客户端实例公开为OSGi服务（可使用标准OSGi方式访问）简化了流程。 LiveCycle连接器提供以下功能：
 
-* OSGi服务形式的客户端实例：中列出了打包为OSGI捆绑包的客户端 [文档服务列表](/help/forms/using/aem-livecycle-connector.md#p-document-services-list-p) 部分。 每个客户端jar都在OSGi服务注册表中将客户端实例注册为OSGi服务。
+* OSGi服务形式的客户端实例：中列出了打包为OSGI捆绑包的客户端 [Acrobat Services列表](/help/forms/using/aem-livecycle-connector.md#p-document-services-list-p) 部分。 每个客户端jar都在OSGi服务注册表中将客户端实例注册为OSGi服务。
 * 用户凭据传播：在中心位置管理连接到LiveCycle服务器所需的连接详细信息。
 * ServiceClientFactory服务：要启动进程，客户端应用程序可以访问ServiceClientFactory实例。
 
@@ -82,7 +78,7 @@ AEMLiveCycle连接器通过将这些客户端实例公开为OSGi服务（可使�
    </dependency>
    ```
 
-   要启动服务，请为该服务添加相应的Maven依赖项。 有关依赖关系列表，请参见 [文档服务列表](/help/forms/using/aem-livecycle-connector.md#p-document-services-list-p). 例如，对于生成PDF服务，添加以下依赖关系：
+   要启动服务，请为该服务添加相应的Maven依赖项。 有关依赖关系列表，请参见 [Acrobat服务列表](/help/forms/using/aem-livecycle-connector.md#p-document-services-list-p). 例如，对于生成PDF服务，添加以下依赖关系：
 
    ```xml
    <dependency>
@@ -92,7 +88,7 @@ AEMLiveCycle连接器通过将这些客户端实例公开为OSGi服务（可使�
    </dependency>
    ```
 
-1. 获取服务引用。 获取服务实例的句柄。 如果要编写Java类，可以使用Declarative Services注释。
+1. 获取服务引用。 获取服务实例的句柄。 如果要编写Java™类，可以使用Declarative Services注释。
 
    ```java
    import com.adobe.livecycle.generatepdf.client.GeneratePdfServiceClient;
@@ -138,7 +134,7 @@ AEMLiveCycle连接器通过将这些客户端实例公开为OSGi服务（可使�
 
 ### 通过ServiceClientFactory启动 {#starting-via-serviceclientfactory}
 
-在某些情况下，需要ServiceClientFactory类。 例如，需要ServiceClientFactory调用进程。
+有时需要ServiceClientFactory类。 例如，需要ServiceClientFactory调用进程。
 
 ```java
 import com.adobe.livecycle.dsc.clientsdk.ServiceClientFactoryProvider;
@@ -154,11 +150,11 @@ ServiceClientFactory scf = scfProvider.getDefaultServiceClientFactory();
 
 ## 运行方式支持 {#runas-support}
 
-LiveCycle中的几乎每个Document Service都需要身份验证。 您可以使用以下任意选项启动这些服务，而无需在代码中提供显式凭据：
+几乎所有LiveCycle中的Acrobat服务都需要身份验证。 您可以使用以下任意选项启动这些服务，而无需在代码中提供显式凭据：
 
 ### 允许列表配置 {#allowlist-configuration}
 
-LiveCycle客户端SDK配置包含有关服务名的设置。 此配置是调用逻辑开箱即用管理员凭据的服务列表。 例如，如果将DirectoryManager服务（用户管理API的一部分）添加到此列表，则任何客户端代码都可以直接使用该服务，并且调用层会自动将配置的凭据作为发送给LiveCycle服务器的请求的一部分传递
+LiveCycle客户端SDK配置包含有关服务名的设置。 此配置是调用逻辑开箱即用管理员凭据的服务列表。 例如，如果将DirectoryManager服务（用户管理API的一部分）添加到此列表，则任何客户端代码都可以直接使用该服务。 此外，调用层会在发送给LiveCycle服务器的请求过程中自动传递配置的凭据。
 
 ### RunAsManager {#runasmanager}
 
@@ -181,7 +177,7 @@ List<Component> components = runAsManager.doPrivileged(new PrivilegedAction<List
 assertNotNull(components);
 ```
 
-如果要传递不同的凭据，可以使用采用PasswordCredential实例的重载方法。
+如果要传递其他凭据，可以使用采用PasswordCredential实例的重载方法。
 
 ```java
 PasswordCredential credential = new PasswordCredential("administrator","password");
@@ -213,7 +209,7 @@ ir.setProperty(InvocationProperties.INVOKER_TYPE,InvocationProperties.INVOKER_TY
 InvocationResponse response = serviceClientFactory.getServiceClient().invoke(ir);
 ```
 
-## 文档服务列表 {#document-services-list}
+## Acrobat Services列表 {#document-services-list}
 
 ### AdobeLiveCycle客户端SDK API包 {#adobe-livecycle-client-sdk-api-bundle}
 

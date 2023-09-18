@@ -1,14 +1,14 @@
 ---
 title: 使用SAPCommerce Cloud进行开发
-description: SAPCommerce Cloud集成框架包括一个集成层和API
+description: SAPCommerce Cloud集成框架包括一个带有API的集成层。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: platform
 exl-id: b3de1a4a-f334-44bd-addc-463433204c99
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: ab3d016c7c9c622be361596137b150d8719630bd
 workflow-type: tm+mt
-source-wordcount: '2296'
+source-wordcount: '2286'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 集成框架包括带有API的集成层。 这允许您：
 
-* 插入电子商务系统并将产品数据提取到AEM中
+* 插入电子商务系统并将产品数据提取到Adobe Experience Manager (AEM)
 
 * 为独立于特定电子商务引擎的商务功能构建AEM组件
 
@@ -105,7 +105,7 @@ ht-degree: 0%
 
 要为Hybris 4开发，需要满足以下条件：
 
-* 调用maven时，请将以下命令行参数添加到命令中
+* 调用maven时，将以下命令行参数添加到命令中
 
   `-P hybris4`
 
@@ -123,7 +123,7 @@ hybris使用用户会话来存储信息，如客户的购物车。 会话ID从hy
 
 * 在第一个请求中，购物者的请求未设置Cookie；因此会向hybris实例发送请求以创建会话。
 
-* 会话Cookie是从响应中提取的，并在新的Cookie中进行编码(例如， `hybris-session-rest`)，并在对购物者的响应中设置。 新Cookie中的编码是必需的，因为原始Cookie仅对特定路径有效，否则在后续请求中不会从浏览器发送回。 还必须将路径信息添加到Cookie的值中。
+* 会话Cookie是从响应中提取的，并在新的Cookie中进行编码(例如， `hybris-session-rest`)，并在对购物者的响应中设置。 新Cookie中的编码是必需的，因为原始Cookie仅对特定路径有效，否则在后续请求中不会从浏览器发送回。 必须将路径信息添加到Cookie的值中。
 
 * 在后续请求中，Cookie将从以下位置解码： `hybris-session-<*xxx*>` Cookie ，并在用于从hybris请求数据的HTTP客户端上设置。
 
@@ -145,16 +145,16 @@ hybris使用用户会话来存储信息，如客户的购物车。 会话ID从hy
 
   `CommerceSession.getUserContext()`
 
-* 还拥有 **付款** 正在处理连接
+* 拥有 **付款** 正在处理连接
 
-* 还拥有 **履行** 连接
+* 拥有 **履行** 连接
 
 ### 产品同步和发布 {#product-synchronization-and-publishing}
 
 在Hybris中维护的产品数据必须在AEM中可用。 已实施以下机制：
 
 * ID的初始加载由hybris作为馈送提供。 此信息源可能有更新。
-* hybris将通过信息源(AEM轮询的位置)提供更新信息。
+* hybris通过信息源(AEM轮询)提供更新信息。
 * 当AEM使用产品数据时，它会向hybris发送有关当前数据的请求（使用上次修改日期的条件get请求）。
 * 在Hybris上，可以声明方式指定馈送内容。
 * 将馈送结构映射到AEM内容模型会在AEM端的馈送适配器中进行。
@@ -197,7 +197,7 @@ hybris使用用户会话来存储信息，如客户的购物车。 会话ID从hy
 
 * 激活的产品页面必须访问产品数据的 **在线** 版本(d)。
 
-* AEM发布实例需要访问hybris以检索产品和个性化数据(d)。
+* AEM Publish实例需要访问hybris以检索产品和个性化数据(d)。
 
 ### 架构 {#architecture}
 
@@ -209,7 +209,7 @@ hybris使用用户会话来存储信息，如客户的购物车。 会话ID从hy
 
 每个产品和/或变体由一个资源表示，因此将1:1映射到存储库节点。 由此推断，特定产品和/或变体可通过其路径唯一标识。
 
-产品/变型资源并不总是包含实际产品数据。 它可能是其他系统（如hybris）上保留的数据的表示形式。 例如，产品描述、定价等不会存储在AEM中，而是从电子商务引擎中实时检索。
+产品/变型资源并不总是包含实际产品数据。 它可能是其他系统（如hybris）上保留的数据的表示形式。 例如，产品描述和定价不会存储在AEM中，而是从电子商务引擎中实时检索。
 
 任何产品资源都可以用 `Product API`. 产品API中的大多数调用均特定于变体（尽管变体可能继承来自祖先的共享值），但也有列出变体集的调用( `getVariantAxes()`， `getVariants()`，等等)。
 
@@ -426,7 +426,7 @@ public class AxisFilter implements VariantFilter {
 * 存储
 
    * 在hybris示例中，hybris服务器拥有购物车。
-   * 在AEM一般情况下，购物车存储在 [ClientContext](/help/sites-administering/client-context.md).
+   * 在AEM一般情况下，的购物车存储在 [ClientContext](/help/sites-administering/client-context.md).
 
 **个性化**
 
@@ -507,12 +507,12 @@ public class AxisFilter implements VariantFilter {
 
 * 此 `CommerceSession` 还拥有支付处理连接。
 
-* 实施人员需要将特定呼叫（添加到其选择的支付处理服务）添加到 `CommerceSession` 实现。
+* 实施人员应将特定呼叫（至其选择的支付处理服务）添加到 `CommerceSession` 实现。
 
 **订单履行**
 
 * 此 `CommerceSession` 还拥有履行连接。
-* 实施人员需要将特定呼叫（添加到其选择的支付处理服务）添加到 `CommerceSession` 实现。
+* 实施人员必须将特定呼叫（至其选择的支付处理服务）添加到 `CommerceSession` 实现。
 
 ### 搜索定义 {#search-definition}
 
@@ -524,13 +524,13 @@ public class AxisFilter implements VariantFilter {
 >
 >但是，搜索API是通用的，可以由每个CommerceService单独实施。
 
-电子商务项目包含一个默认搜索组件，位于以下位置：
+电子商务项目包含以下位置中的默认搜索组件：
 
 `/libs/commerce/components/search`
 
 ![chlimage_1-14](/help/sites-developing/assets/chlimage_1-14a.png)
 
-这将利用搜索API来查询选定的商务引擎(请参阅 [电子商务引擎选择](#ecommerce-engine-selection))：
+这将使用搜索API来查询选定的商务引擎(请参阅 [电子商务引擎选择](#ecommerce-engine-selection))：
 
 #### 搜索API {#search-api}
 
@@ -538,11 +538,11 @@ public class AxisFilter implements VariantFilter {
 
 1. `CommerceQuery`
 
-   用于描述搜索查询（包含有关查询文本、当前页面、页面大小、排序和所选Facet的信息）。 所有实施搜索API的电子商务服务都会接收此类的实例以执行其搜索。 A `CommerceQuery` 可以从请求对象实例化( `HttpServletRequest`)。
+   描述搜索查询（包含有关查询文本、当前页面、页面大小、排序和所选彩块化的信息）。 所有实施搜索API的电子商务服务都接收此类的实例以执行其搜索。 A `CommerceQuery` 可以从请求对象实例化( `HttpServletRequest`)。
 
 1. `FacetParamHelper`
 
-   是一个实用程序类，它提供一个静态方法 —  `toParams`  — 用于生成 `GET` 多面和一个切换值列表中的参数字符串。 这在UI端很有用，您需要显示每个Facet的每个值的超链接，以便当用户单击超链接时，切换相应的值（即，如果选中它，则从查询中删除它，否则添加）。 这解决了处理多个/单值Facet、覆盖值等操作的所有逻辑。
+   是一个实用程序类，它提供一个静态方法 —  `toParams`  — 用于生成 `GET` 多面和一个切换值列表中的参数字符串。 这在UI端很有用，您必须为每个Facet的每个值显示超链接，以便当用户单击超链接时，将切换相应的值。 也就是说，如果选定它，则会将其从查询中删除，否则会添加。 这解决了处理多个/单值Facet、覆盖值等操作的所有逻辑。
 
 搜索API的入口点为 `CommerceService#search` 返回 `CommerceResult` 对象。 请参阅 [API文档](/help/commerce/cif-classic/developing/ecommerce.md#api-documentation) 以了解有关此主题的详细信息。
 
@@ -566,7 +566,7 @@ AEM前端可以位于现有hybris实施的前面。 此外，还可以在现有A
 
    * 登录到hybris时，如果AEM用户不存在：
 
-      * 使用加密随机密码创建新的hybris用户
+      * 使用加密随机密码创建hybris用户
       * 将hybris用户名存储在AEM用户的用户目录中
 
    * 请参阅: `com.adobe.cq.commerce.hybris.impl.HybrisSessionImpl#login()`
@@ -576,7 +576,7 @@ AEM前端可以位于现有hybris实施的前面。 此外，还可以在现有A
    * 在登录到AEM时，如果系统可以识别用户：
 
       * 尝试使用提供的用户名/密码登录hybris
-      * 如果成功，请在AEM中使用相同的密码创建新用户(AEM特定的salt将产生AEM特定的哈希)
+      * 如果成功，请在AEM中创建具有相同密码的用户(AEM特定的salt将导致AEM特定的哈希)
 
    * 上述算法在Sling中实现 `AuthenticationInfoPostProcessor`
 

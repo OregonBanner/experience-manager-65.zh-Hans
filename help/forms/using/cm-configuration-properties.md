@@ -1,16 +1,12 @@
 ---
 title: 通信管理配置属性
-seo-title: Correspondence Management Configuration Properties
-description: 本主题介绍如何使用特定于解决方案的配置来修改资产编辑器。 本主题详细介绍可编辑的属性，及其说明、默认值和可接受值。
-seo-description: This topic explains how you can modify Asset Composer with solution-specific configurations. This topic details the properties you can edit, with their description, default values, and acceptable values.
-uuid: 6b401d51-9332-459b-b751-42a9b5a1462d
+description: 本主题介绍如何使用特定于解决方案的配置来修改资产编辑器。 本主题详细介绍可编辑的属性、其说明、默认值和可接受值。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: correspondence-management
-discoiquuid: f2955419-c680-44a7-9913-c594b4577551
 feature: Correspondence Management
 exl-id: c9c007d0-c545-4738-b11b-4c50986342ee
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: ab3d016c7c9c622be361596137b150d8719630bd
 workflow-type: tm+mt
 source-wordcount: '845'
 ht-degree: 3%
@@ -39,25 +35,25 @@ ht-degree: 3%
   </tr>
   <tr>
    <td>数字最小宽度</td>
-   <td>使用罗马数字以外的编号列表时，项目符号/编号字段应用的最小宽度</td>
+   <td>使用罗马数字以外的编号列表时，应用于项目符号/编号字段的最小宽度</td>
    <td>8.0mm</td>
    <td>任意数字</td>
   </tr>
   <tr>
    <td><p>罗马数字最小宽度</p> </td>
-   <td><p>使用罗马数字时，应用于项目符号/数字字段的最小宽度</p> </td>
+   <td><p>使用罗马数字时要应用于项目符号/数字字段的最小宽度</p> </td>
    <td><p>12.7mm</p> </td>
    <td><p>任意数字</p> </td>
   </tr>
   <tr>
    <td>节目类型</td>
-   <td>创建通信应用程序用于呈现信件预览的演绎版类型。 </td>
+   <td>“创建通信”应用程序用于呈现信件预览的演绎版类型。 </td>
    <td>HTML演绎版</td>
    <td>HTML呈现版本/PDF呈现版本</td>
   </tr>
   <tr>
    <td><p>启用CCRPDF高亮显示</p> </td>
-   <td><p>在“创建通信”应用程序中启用PDF高亮显示</p> </td>
+   <td><p>在“创建通信”应用程序中启用对PDF的突出显示</p> </td>
    <td><p>true</p> </td>
    <td><p>true / false</p> </td>
   </tr>
@@ -71,7 +67,7 @@ ht-degree: 3%
    <td><p>目标高亮颜色</p> </td>
    <td><p>创建通信应用程序中的目标高亮颜色</p> </td>
    <td><p>90;155;245</p> </td>
-   <td><p>格式为R；G；B的任何RGB</p> </td>
+   <td><p>R；G；B格式的任意RGB</p> </td>
   </tr>
   <tr>
    <td><p>内容高亮类型</p> </td>
@@ -83,7 +79,7 @@ ht-degree: 3%
    <td><p>内容高亮颜色</p> </td>
    <td><p>创建通信应用程序中的内容高亮颜色</p> </td>
    <td><p>210;225;245</p> </td>
-   <td><p>格式为R；G；B的任何RGB</p> </td>
+   <td><p>R；G；B格式的任意RGB</p> </td>
   </tr>
   <tr>
    <td><p>字段高亮类型</p> </td>
@@ -95,7 +91,7 @@ ht-degree: 3%
    <td><p>字段高亮颜色</p> </td>
    <td><p>创建通信应用程序中的字段高亮颜色</p> </td>
    <td><p>210;225;245</p> </td>
-   <td><p>格式为R；G；B的任何RGB</p> </td>
+   <td><p>R；G；B格式的任意RGB</p> </td>
   </tr>
   <tr>
    <td><p>应用程序超时</p> </td>
@@ -104,28 +100,28 @@ ht-degree: 3%
    <td><p>任意数字</p> </td>
   </tr>
   <tr>
-   <td><p>PDF的文档参数名称</p> </td>
+   <td><p>文档参数名称PDF</p> </td>
    <td><p>后处理中PDF文档的参数名称</p> </td>
    <td><p>inPDFDoc</p> </td>
-   <td><p>任意字符串变量名称</p> </td>
+   <td><p>任何字符串变量名称</p> </td>
   </tr>
   <tr>
    <td><p>XML数据参数名称</p> </td>
    <td><p>后处理中的XML文档（数据）的参数名称</p> </td>
    <td><p>inXMLDoc</p> </td>
-   <td><p>任意字符串变量名称</p> </td>
+   <td><p>任何字符串变量名称</p> </td>
   </tr>
   <tr>
    <td><p>XDP文档参数名称</p> </td>
    <td><p>发送到后处理的XDP文档的参数名称</p> </td>
    <td><p>inXDPDoc</p> </td>
-   <td><p>任意字符串变量名称</p> </td>
+   <td><p>任何字符串变量名称</p> </td>
   </tr>
   <tr>
    <td><p>重定向URL参数名称</p> </td>
    <td><p>从后处理发送的重定向URL的参数名称此值可以是任何字符串变量名称</p> </td>
    <td><p>redirecturl</p> </td>
-   <td><p>任意字符串变量名称</p> </td>
+   <td><p>任何字符串变量名称</p> </td>
   </tr>
   <tr>
    <td><p>PDF提交类型</p> </td>
@@ -135,13 +131,13 @@ ht-degree: 3%
   </tr>
   <tr>
    <td><p>优化数据字典实例</p> </td>
-   <td><p>实现数据字典实例b/w服务器和客户端的优化传输</p> </td>
+   <td><p>支持数据字典实例b/w服务器和客户端的优化传输</p> </td>
    <td><p>true</p> </td>
    <td><p>true / false</p> </td>
   </tr>
   <tr>
    <td><p>自动更正不一致 </p> </td>
-   <td><p>启用后，它会自动处理信件分配中可能的不一致情况</p> </td>
+   <td><p>启用后，它会自动处理信件分配中可能出现的不一致情况</p> </td>
    <td><p>true</p> </td>
    <td><p>true / false</p> </td>
   </tr>
@@ -153,18 +149,18 @@ ht-degree: 3%
   </tr>
   <tr>
    <td><p>数据显示格式</p> </td>
-   <td><p>指定特定于区域设置的数据显示格式</p> </td>
+   <td><p>指定数据的区域设置特定显示格式</p> </td>
    <td><p>locale=en_US； dateFormat=dd-MM-yyyy； numberDecimalSeparator=.； numberGroupSeparator=，； numberUseGroupSeparator=truelocale=de_DE； dateFormat=dd-MM-yyyy； numberDecimalSeparator=，； numberGroupSeparator=.； numberUseGroupSeparator=truelocale=fr_FR； dateFormat=dd-MM-yyyy； numberDecimalSeparator=，； numberGroupSeparator= ； numberUseGroupSeparator=truelocale=ja_JP； dateFormat=dd-MM-yyy； numberDecimalSeparator=。； numberGroupSeparator=，； numberUseGroupSeparator=true</p> </td>
    <td><p>—</p> </td>
   </tr>
   <tr>
    <td><p>数据编辑格式</p> </td>
-   <td><p>编辑数据格式。 将数据写入字符串或从字符串解析数据时，将使用此属性</p> </td>
+   <td><p>编辑数据格式。 当将数据写入字符串或从字符串中解析数据时，将使用此选项</p> </td>
    <td><p>locale=en_US； dateFormat=dd-MM-yyyy； numberDecimalSeparator=.； numberGroupSeparator=，； numberUseGroupSeparator=true</p> </td>
    <td>--<p> </p> </td>
   </tr>
   <tr>
-   <td><p>在发布时管理书信实例</p> </td>
+   <td><p>管理发布时的书信实例</p> </td>
    <td><p>启用/禁用管理书信功能（仅适用于发布服务器）</p> </td>
    <td><p>false</p> </td>
    <td><p>true / false</p> </td>
@@ -183,7 +179,7 @@ ht-degree: 3%
   </tr>
   <tr>
    <td><p>启用“创建审核”</p> </td>
-   <td><p>启用/禁用资产创建的审核功能</p> </td>
+   <td><p>启用/禁用用于创建资产的审核功能</p> </td>
    <td><p>false</p> </td>
    <td><p>true / false</p> </td>
   </tr>
@@ -213,7 +209,7 @@ ht-degree: 3%
   </tr>
   <tr>
    <td><p>启用提交审核</p> </td>
-   <td><p>启用/禁用信件提交的审核功能</p> </td>
+   <td><p>启用/禁用书信提交的审核功能</p> </td>
    <td><p>false</p> </td>
    <td><p>true / false</p> </td>
   </tr>
@@ -239,7 +235,7 @@ ht-degree: 3%
    <td><p>附件文档参数名称</p> </td>
    <td><p>发送到发布流程的附件文档的参数名称</p> </td>
    <td><p>inAttachmentDocs</p> </td>
-   <td><p>任意字符串变量名称</p> </td>
+   <td><p>任何字符串变量名称</p> </td>
   </tr>
   <tr>
    <td><p>CM用户根目录</p> </td>
@@ -251,7 +247,7 @@ ht-degree: 3%
    <td><p>书信缓存大小</p> </td>
    <td><p>指定缓存中保留的最大字母数。</p> <p>更改此值将导致清理 <code>in-memory</code> 缓存。</p> </td>
    <td><p>100</p> </td>
-   <td><p>任意数值</p> </td>
+   <td><p>任何数值</p> </td>
   </tr>
   <tr>
    <td><p>启用书信缓存</p> </td>
