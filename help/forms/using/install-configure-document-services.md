@@ -8,9 +8,9 @@ topic-tags: installing
 discoiquuid: b53eae8c-16ba-47e7-9421-7c33e141d268
 role: Admin
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
-source-git-commit: 923ec028679031c9ef9ea6ae2cf827e7a4cd00d8
+source-git-commit: f41962faa0567ed99c1e2ab189e81fb978781af3
 workflow-type: tm+mt
-source-wordcount: '5517'
+source-wordcount: '5515'
 ht-degree: 2%
 
 ---
@@ -481,7 +481,7 @@ AEM Forms附加组件包是部署在AEM上的应用程序。 该资源包中包�
 
 ### （仅限Windows）配置HTML到PDF转换的主路由 {#configure-primary-route-for-html-to-pdf-conversion-windows-only}
 
-PDF Generator服务提供将HTML文件转换为PDF文档的多种途径：Webkit、Acrobat WebCapture（仅限Windows）和PhantomJS。 Adobe建议使用PhantomJS路由，因为它能够处理动态内容，并且不依赖于32位库和32位JDK，或者不需要额外字体。 此外，PhantomJS路由不需要sudo或root访问权限才能运行转换。
+PDF Generator服务提供将HTML文件转换为PDF文档的多种途径：Webkit、Acrobat WebCapture（仅限Windows）和PhantomJS。 Adobe建议使用PhantomJS路由，因为它能够处理动态内容，并且不依赖于32位库或不需要额外字体。 此外，PhantomJS路由不需要sudo或root访问权限才能运行转换。
 
 HTML到PDF转换的默认主要路由为Webkit。 要更改转换路线，请执行以下操作：
 
