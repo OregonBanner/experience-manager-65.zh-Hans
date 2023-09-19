@@ -8,9 +8,9 @@ topic-tags: installing
 discoiquuid: b53eae8c-16ba-47e7-9421-7c33e141d268
 role: Admin
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 923ec028679031c9ef9ea6ae2cf827e7a4cd00d8
 workflow-type: tm+mt
-source-wordcount: '5529'
+source-wordcount: '5517'
 ht-degree: 2%
 
 ---
@@ -243,7 +243,7 @@ AEM Forms附加组件包是部署在AEM上的应用程序。 通常，您只需�
 >[!NOTE]
 >
 >* 所有环境变量和相应的路径都区分大小写。
->* JAVA_HOME、JAVA_HOME_32和Acrobat_PATH（仅限Windows）是强制环境变量。
+>* JAVA_HOME和Acrobat_PATH（仅限Windows）是强制环境变量。
 >* 环境变量OpenOffice_PATH设置为安装文件夹，而不是设置为可执行文件的路径。
 >* 请勿为Microsoft® Office应用程序（如Word、PowerPoint、Excel和Project）或AutoCAD设置环境变量。 如果这些应用程序安装在服务器上，则生成PDF服务会自动启动这些应用程序。
 >* 在基于UNIX的平台上，将OpenOffice安装为/root。 如果OpenOffice未安装为root，则PDF Generator服务无法将OpenOffice文档转换为PDF文档。 如果需要以非根用户身份安装和运行OpenOffice，请向非根用户提供sudo权限。
@@ -583,7 +583,7 @@ Assembler服务依赖于Reader扩展服务、签名服务、Forms服务和输出
 
 此 [系统就绪工具](#srt-configuration) 检查计算机是否已正确配置为运行PDF Generator转换。 该工具在指定的路径处生成报告。 要运行该工具，请执行以下操作：
 
-1. 打开命令提示符。 导航至 `[extracted-adobe-aemfd-pdfg-common-pkg]\jcr_root\libs\fd\pdfg\tools` 文件夹。
+1. 打开命令提示符。 导航到 `[extracted-adobe-aemfd-pdfg-common-pkg]\jcr_root\libs\fd\pdfg\tools` 文件夹。
 
 1. 从命令提示符运行以下命令：
 
@@ -686,8 +686,6 @@ Assembler服务依赖于Reader扩展服务、签名服务、Forms服务和输出
   ```
   ldd phantomjs | grep not
   ```
-
-* 确保JAVA_HOME_32环境变量指向正确的位置。
 
 **Linux®和Solaris™（WebKit转换途径）**
 
