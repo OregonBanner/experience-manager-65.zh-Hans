@@ -2,10 +2,10 @@
 title: 的发行说明 [!DNL Adobe Experience Manager] 6.5
 description: 查找版本信息、新增功能、安装操作说明以及的详细更改列表 [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 4
-source-git-commit: aec2eb3303ad9747f6f56ae2eb31c3c7ed7b0c24
+source-git-commit: a15b9dae5cc4405122ee95e036a83fdfbf34f9bd
 workflow-type: tm+mt
-source-wordcount: '4417'
-ht-degree: 2%
+source-wordcount: '4490'
+ht-degree: 4%
 
 ---
 
@@ -41,7 +41,7 @@ ht-degree: 2%
 
 **关键功能**
 
-* Dynamic Media的Assets - [Dynamic Media中支持视频的多字幕和多音频轨道](/help/assets/video.md#about-msma) — 您现在可以轻松地将多个字幕和多个音轨添加到主视频中。 这项功能意味着您的视频可在全球受众中访问。 您可以采用多种语言向全球受众自定义单个已发布的主视频，并遵守适用于不同地理区域的辅助功能准则。 作者还可以在用户界面中通过单个选项卡管理字幕和音轨。
+* Dynamic Media的Assets - [Dynamic Media中支持视频的多字幕和多音频轨道](/help/assets/video.md#about-msma) — 您现在可以轻松地将多个字幕和多个音轨添加到主视频中。 此功能可让全球受众访问您的视频。您可以用多种语言为全球受众定制单个已发布的主视频，并遵循不同地理区域的无障碍准则。此外，作者可以在用户界面的单个选项卡中管理字幕和音轨。
 
 * 资源 — 现在，您可以在搜索结果中导航到包含资源的文件夹位置，从而执行各种资源管理任务。 (ASSETS-23182)
 
@@ -65,19 +65,19 @@ ht-degree: 2%
 
 * **[增强的Adobe Sign工作流步骤](https://experienceleague.adobe.com/docs/experience-manager-65/forms/workflows/aem-forms-workflow-step-reference.html#sign-document-step)：** AEM Workflows中的Adobe Sign工作流步骤包含以下增强功能。
 
-   * **通过基于Government ID的身份验证增强Adobe Sign的安全性：** Adobe Acrobat Sign基于政府身份证的身份验证允许用户使用政府颁发的ID（驾照、身份证、护照）进行身份验证，从而提供额外的验证层。 通过利用受信任的标识文档，此增强功能为签名过程增添了更高的置信度，使其非常适合需要增强的安全性、合规性和用户验证的情况。
+   * **通过基于Government ID的身份验证增强Adobe Sign的安全性：** Adobe Acrobat Sign基于Government ID的身份验证允许用户使用政府颁发的ID（驾照、身份证、护照）进行身份验证，从而提供了一层额外的验证。 通过使用可信的标识文档，此增强功能为签名过程增添了更高的可信度，使其非常适合需要增强的安全性、合规性和用户验证的情况。
 
-   * **增强了Adobe Sign文档审核追踪的透明度：** 使用审核记录功能，可详细了解Adobe Sign文档的生命周期。 通过跟踪线索，您现在可以维护与文档相关的所有操作和交互的全面记录。 这包括查看者、编辑者或签名者等详细信息，以及每个事件的时间戳。 此增强功能对于维护合规性、解决争议和确保数字协议的完整性至关重要。
+   * **增强了Adobe Sign文档审核追踪的透明度：** 使用审核记录功能，可详细了解Adobe Sign文档的生命周期。 利用审核跟踪功能，您现在可以维护与文档相关的所有操作和交互的全面记录。其中包括查看者、编辑者或文档签署者等详细信息以及每个事件的时间戳。此增强功能对于维持合规性、解决争议和确保数字协议的完整性至关重要。
 
 
-   * **扩展了协议收件人的角色，不仅限于签名者：** Adobe Acrobat Sign可以选择将协议接受者的角色扩展至签名者之外，以更好地匹配他们的工作流要求。 启用后，协议中的每个收件人可以单独配置其角色，签名者是默认角色。
+   * **扩展了协议收件人的角色，不仅限于签名者：** Adobe Acrobat Sign可以选择将协议接受者的角色扩展至签名者之外，以更好地匹配他们的工作流要求。 启用此选项后，每个协议接收者均可单独配置其角色，默认角色为签名者。
 
 
 * **[AEM Forms on JEE完整安装程序](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/jee-installation/aem-forms-jee-supported-platforms.html)**：此Service Pack提供了AEM Forms on JEE的完整安装程序，以支持多种新软件组合，包括：
-   * Microsoft Windows Server 2022
-   * Microsoft Active Directory 2022
+   * Microsoft® Windows Server 2022
+   * Microsoft® Active Directory 2022
    * 在Windows Server 2022上OracleWebLogic 14C
-   * redhat JBoss 7.4.10
+   * Red Hat® JBoss® 7.4.10
    * MongoDB 4.4
    * MySQL JDBC连接器8
 
@@ -152,7 +152,7 @@ ht-degree: 2%
 * 当VTT下载失败时，视频不可见。 它显示一个空白屏幕，同时显示视频洗刷正在前进。 (ASSETS-21909)
 * 使用键盘上的Tab导航时，焦点未移动到视频下方的多个控件。 因此，他们无法访问。 改进了交互式视频的键盘导航。 (ASSETS-25749)
 * 修复了在Dynamic Media组件中显示禁用的查看器预设。 (ASSETS-22922)
-* 已从“常规设置”的“安全性”选项卡中删除“图像服务”。 (ASSETS-24618)
+* 从“常规设置”安全性选项卡中删除了“图像服务”。 (ASSETS-24618)
 * 修复了无法上传到Dynamic Media和StringIndexOutOfBoundsException的资源。 (ASSETS-25787)
 * 在“基本”选项卡中为必填的“宽度”编辑字段添加了可视星号。 (ASSETS-25741)
 * 修复了水印Dynamic Media演绎版下载问题。 (ASSETS-26173)
@@ -167,11 +167,11 @@ ht-degree: 2%
    * 如果在生成PDF文档期间服务器关闭，则会引发服务器启动后作业处理错误。 服务器启动期间需要添加参数 — Dcom.adobe.livecycle.dsc.deferServiceStart=true。 (FORMS-9836)
    * 如果用户尝试使用AssemblerService.Invoke方法合并PDF，则汇编程序无法执行该任务。 (FORMS-9550)
    * 当您在OSGI和JEE环境中升级到AEM 6.5.15.0 Service Pack时，使用特定模板的Assembler服务将停止工作。 (FORMS-9355、FORMS-9445、FORMS-9408)
-   * Java垃圾回收无法清除AEM Forms OSGi服务器上的旧根栈，因为XMLFormService的全局超时未配置为适当的值。 (FORMS-9384、FORMS-9035)
-   * 呈现自适应表单的PDF预览时，错误日志中会显示不需要的Java栈栈转储。 (FORMS-8865)
+   * Java™垃圾收藏集无法清除AEM Forms OSGi服务器上的旧根栈，因为XMLFormService的全局超时未配置为适当的值。 (FORMS-9384、FORMS-9035)
+   * 呈现自适应表单的PDF预览时，错误日志中会显示不需要的Java™栈栈转储。 (FORMS-8865)
    * 当用户查看文档详情部分中文档的文档状态时，无法正确显示。 (FORMS-8946、FORMS-10424)
    * 当用户升级到AEM Forms并使用sendToPrinter服务时，栈利用率会持续增加。 (FORMS-10148)
-   * 在JBoss 7.4 EAP服务器上，电子邮件功能失败 `java.io.IOException`. (FORMS-10138)
+   * 在JBoss® 7.4 EAP服务器上，电子邮件功能失败 `java.io.IOException`. (FORMS-10138)
    * 当用户使用transformPDF服务时，它会失败并出现错误： `java.lang.ClassNotFoundException: default task-158Class name com.adobe.internal.afml.AFMLExceptionInvalidParameter from package com.adobe.internal.afml`(FORMS-9957)
    * 升级到AEM Service Pack 6.5.14.0后，在使用特定模板时，组装程序服务中会出现问题。 (FORMS-9445、FORMS-9408)
   <!-- *  When a user configures the watched folder endpoint for PDF Generator, it fails to pick documents on JDK 11. (FORMS-10152) -->
@@ -186,8 +186,8 @@ ht-degree: 2%
    * 如果某个字段在基于自适应表单的核心组件中标记为无效，则会启动该字段的更改事件。 (FORMS-10087)
    * 当用户尝试使用复杂的JSON架构创建自适应表单时，失败。 错误发生于：
      `GET /content/forms/af/katezeroone/testaf1.html HTTP/1.1] com.adobe.aemds.guide.service.impl.JsonObjectCreatorImpl Could not emit JSON with context java.lang.ArrayIndexOutOfBoundsException:0`. (FORMS-9639)
-   * 在自适应表单中，当用户禁用“我同意条款和条件”复选框时，它会在用户向下滚动时立即重新启用。 (FORMS-9458)
-   * 当用户使用Google Chrome/Firefox在Android设备上打开自适应表单并在文本框中输入允许的最大字符数时，文本框中的值无法清除。 (FORMS-9354)
+   * 在自适应表单中，当用户禁用“我同意条款和条件”复选框时，它会在用户向下滚动时再次启用。 (FORMS-9458)
+   * 当用户使用Google Chrome/Firefox在Android™设备上打开自适应表单并在文本框中输入允许的最大字符数时，文本框中的值无法清除。 (FORMS-9354)
    * 如果复选框的标签包含“，”、“/”或“。”等特殊字符，则单击文本/标签不会选中相应的复选框。 (FORMS-9313)
    * 当用户尝试验证条款和条件组件时，它无法验证该组件是否不在焦点上，而另一个组件是否处于验证状态。 (FORMS-8725、FORMS-8913)
    * 如果在升级到AEM 6.5.16.0 Service Pack后重新加载自适应表单，则检索文件附件失败。 (FORMS-8906)
@@ -195,6 +195,8 @@ ht-degree: 2%
    * 如果用户尝试对作者环境中嵌入在自适应表单中的片段实施延迟加载，则为片段定义的规则/逻辑不会反映在表单中。 (FORMS-8554、FORMS-9182)
    * 当您尝试在AEM 6.5.16.0 Service Pack中打开任何Coral对话框时，它会生成 `error.log: cannot render resource` 例外。 (FORMS-8942)
    * 当用户尝试翻译自适应表单中带有单个选项的复选框时，会失败。 (FORMS-10181)
+   * 所有记录文档(DoR)模板均无法发布。 仅发布基于区域设置的英文DoR模板及其关联的基于Forms的DoR模板。 (FORMS-10535)
+
 * **辅助功能**
    * 在自适应表单中使用涂写签名组件时，出现以下错误：
       * 在涂鸦签名组件之后，如果有更多组件，按Tab键不会遍历签名对话框；而是会移至下一个组件。 只有在遍历所有组件后，它才最终移至签名对话框。
@@ -205,7 +207,7 @@ ht-degree: 2%
    * 当用户提交自适应表单时，屏幕阅读器无法读取必填字段的错误消息。 (FORMS-9316)
    * 当屏幕阅读器读取HTML表单时，使用字距微调（间距）读取文本时出现问题。 (FORMS-9258)
    * 在自适应表单中，使用屏幕阅读器不会调出链接到文本的引用/脚注。 (FORMS-8920)
-   * 在最新设计器中，无法正确识别辅助功能标记。 (FORMS-10139)
+   * 在最新的设计器中，无法正确识别辅助功能标记。 (FORMS-10139)
 * **交互式通信**
    * 在通信管理中，本地化不起作用。 (FORMS-8926)
    * 使用publishAll服务时，无法打开草稿书信。 (FORMS-8589)
@@ -263,7 +265,7 @@ ht-degree: 2%
 #### 工作流{#foundation-workflow-6518}
 
 * 还原资源版本会将资源状态保留在处理模式下。 (NPR-41029)
-* 资源和项目用户界面上的排序问题。 根据业务要求，有些客户已覆盖“资产”和“项目”用户界面上的自定义列。 他们使用现成的属性实施了一种分类 `sortable=true`. 但是，当项目或资产用户界面下有许多条目时，他们会在排序中看到不一致。 (NPR-41027)
+* 资源和项目用户界面上的排序问题。 有些客户根据业务要求覆盖了“资产和项目”用户界面上的自定义列。 他们使用现成的属性实施了一种分类 `sortable=true`. 但是，当项目或资产用户界面下存在许多条目时，他们会在排序中看到不一致。 (NPR-41027)
 * 日志中填充了 `NullPointerException` 在 `EMailNotificationService`工作流应发送的、和电子邮件不会发送。 (NPR-40898)
 <!-- REMOVED BY ENGINEERING FROM TOTAL RELEASE CANDIDATE LIST  * The timeline is not providing references to the selected content. (NPR-40806) -->
 
@@ -297,7 +299,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->在安装Service Pack期间，有时会退出包管理器UI上的对话框。 Adobe建议您在访问部署之前等待错误日志稳定下来。 等待与卸载更新程序捆绑包相关的特定日志，然后确定安装成功。 通常，此问题出现在以下位置 [!DNL Safari] 浏览器，但可能间歇性地在任何浏览器上出现。
+>在安装Service Pack期间，有时会退出包管理器UI上的对话框。 Adobe建议您在访问部署之前等待错误日志稳定下来。 等待与卸载更新程序捆绑包相关的特定日志，然后确定安装成功。 通常，此问题出现在 [!DNL Safari] 浏览器，但可能间歇性地在任何浏览器上出现。
 
 **自动安装**
 
@@ -395,7 +397,7 @@ To retrieve your runtime copy, Adobe recommends to synchronize the design-time c
    1. 安装Service Pack，或重新启动Experience Manageras a Cloud Service。
 的新文件夹 `cache` 和 `diff-cache` 自动创建，并且您不再遇到与相关的异常 `mvstore` 在 `error.log`.
 
-* 将可能已为内容模型使用自定义API名称的GraphQL查询更新为改用内容模型的默认名称。
+* 更新可能已为内容模型使用自定义API名称的GraphQL查询，以改用内容模型的默认名称。
 
 * GraphQL查询可能使用 `damAssetLucene` 索引而非 `fragments` 索引。 此操作可能会导致GraphQL查询失败或需要很长时间才能运行。
 
@@ -427,7 +429,7 @@ To retrieve your runtime copy, Adobe recommends to synchronize the design-time c
    * `com.adobe.granite.maintenance.impl.TaskScheduler`：在granite/operations/maintenance中未找到维护窗口。
    * 当使用集合函数(如SUM、MAX和MIN)时，自适应表单服务器端验证失败(CQ-4274424)。
    * `com.adobe.granite.maintenance.impl.TaskScheduler`  — 在granite/operations/maintenance中未找到维护窗口。
-   * 通过Shoppable Banner查看器预览资源时，Dynamic Media交互式图像中的热点不可见。
+   * 通过可购物横幅查看器预览资源时，Dynamic Media交互式图像中的热点不可见。
    * `com.adobe.cq.social.cq-social-jcr-provider bundle com.adobe.cq.social.cq-social-jcr-provider:1.3.5 (395)[com.adobe.cq.social.provider.jcr.impl.SpiSocialJcrResourceProviderImpl(2302)]` ：等待注册更改完成取消注册时超时。
 
 * 从AEM 6.5.15开始，Rhino JavaScript引擎由 ```org.apache.servicemix.bundles.rhino``` 捆绑有新的提升行为。 使用严格模式(```use strict;```)必须正确声明其变量，否则它们不会运行，而是会引发运行时错误。
@@ -437,13 +439,13 @@ To retrieve your runtime copy, Adobe recommends to synchronize the design-time c
 #### 支持的平台
 
 * WebLogic JEE服务器不支持高于1.8.0_281的JDK版本。 (FORMS-8498、CQDOC-20383)
-* 作为 [!DNL Microsoft® Windows Server 2019] 不支持 [!DNL MySQL 5.7] 和 [!DNL JBoss® EAP 7.1]， [!DNL Microsoft® Windows Server 2019] 不支持的全包安装 [!DNL Experience Manager Forms 6.5.10.0]. (CQDOC-18312)
+* 作为 [!DNL Microsoft®® Windows Server 2019] 不支持 [!DNL MySQL 5.7] 和 [!DNL JBoss®® EAP 7.1]， [!DNL Microsoft®® Windows Server 2019] 不支持的全包安装 [!DNL Experience Manager Forms 6.5.10.0]. (CQDOC-18312)
 * JDK 11.0.20不支持在JEE安装程序上安装AEM Forms。 在JEE安装程序上安装AEM Forms仅支持JDK 11.0.19或更早版本。 (FORMS-10659)
 
 #### 安装
 
 * 在JBoss® 7.1.4平台上，当用户安装Experience Manager6.5.16.0或更高版本的Service Pack时， `adobe-livecycle-jboss.ear` 部署失败。 (CQ-4351522和CQDOC-20159)
-* 安装AEM Service Pack 6.5.18.0完整安装程序后，EAR部署在使用JBoss全包的JEE上失败(CQDOC-20803)。
+* 安装AEM Service Pack 6.5.18.0完整安装程序后，EAR部署在使用JBoss® Turnkey (CQDOC-20803)的JEE上失败。
 要解决此问题，请找到 `<AEM_Forms_Installation_dir>\jboss\bin\standalone.bat` 文件和更新 `Adobe_Adobe_JAVA_HOME` 到 `Adobe_JAVA_HOME` 所有出现的次数。
 
 #### 自适应表单
@@ -451,6 +453,7 @@ To retrieve your runtime copy, Adobe recommends to synchronize the design-time c
 * 发布自适应表单时，其所有依赖项（包括策略）都会重新发布，即使尚未对它们进行任何修改也是如此。 (FORMS-10454)
 * 当用户选择在自适应表单中首次配置字段时，属性浏览器中不显示保存配置的选项。 选择在同一编辑器中配置自适应表单的某些其他字段可解决此问题。
 * 在自适应表单的指南容器中设置重定向URL后，内联签名将停止工作。 (FORMS-10493)
+* 所有记录文档(DoR)模板均无法发布。 仅发布基于区域设置的英文DoR模板及其关联的基于Forms的DoR模板。 (FORMS-10535)
 
 #### 交互式通信
 
