@@ -2,7 +2,7 @@
 title: 的发行说明 [!DNL Adobe Experience Manager] 6.5
 description: 查找版本信息、新增功能、安装操作说明以及的详细更改列表 [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 4
-source-git-commit: 4f6ef1a6cddec307af64ca888307f19c0450467d
+source-git-commit: ffda4927ddc8555564f33697fa81d1f8a0cd2cdc
 workflow-type: tm+mt
 source-wordcount: '4548'
 ht-degree: 4%
@@ -371,7 +371,7 @@ To retrieve your runtime copy, Adobe recommends to synchronize the design-time c
 
 * **升级到Service Pack 18 (6.5.18.0)后，页面发布在页面编辑器中不起作用**
 
-  <!-- https://jira.corp.adobe.com/browse/SITES-15856 REMOVE FOR 6.5.19.0--> 将AEM 6.5.0.0 - 6.5.17.0的实例升级到AEM 6.5.18.0后，单击 **[!UICONTROL 发布页面]** 在页面编辑器中，您被重定向到一个不存在的URL。
+  <!-- https://jira.corp.adobe.com/browse/SITES-15856 REMOVE FOR 6.5.19.0--> 将AEM 6.5.0.0 - 6.5.17.0的实例升级到AEM 6.5.18.0后，单击 **发布页面** 在页面编辑器中，您被重定向到一个不存在的URL。
 
   要解决此问题，请执行以下操作之一：
 
