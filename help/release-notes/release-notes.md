@@ -2,9 +2,9 @@
 title: 的发行说明 [!DNL Adobe Experience Manager] 6.5
 description: 查找版本信息、新增功能、安装操作说明以及的详细更改列表 [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 4
-source-git-commit: a15b9dae5cc4405122ee95e036a83fdfbf34f9bd
+source-git-commit: 4f6ef1a6cddec307af64ca888307f19c0450467d
 workflow-type: tm+mt
-source-wordcount: '4490'
+source-wordcount: '4548'
 ht-degree: 4%
 
 ---
@@ -41,9 +41,9 @@ ht-degree: 4%
 
 **关键功能**
 
-* Dynamic Media的Assets - [Dynamic Media中支持视频的多字幕和多音频轨道](/help/assets/video.md#about-msma) — 您现在可以轻松地将多个字幕和多个音轨添加到主视频中。 此功能可让全球受众访问您的视频。您可以用多种语言为全球受众定制单个已发布的主视频，并遵循不同地理区域的无障碍准则。此外，作者可以在用户界面的单个选项卡中管理字幕和音轨。
+* Dynamic Media的Assets - [Dynamic Media中支持视频的多字幕和多音频轨道](/help/assets/video.md#about-msma) — 您现在可以轻松地将多个字幕和多个音轨添加到主视频中。 此功能意味着全球观众都能看懂您的视频。只需自定义一个主视频，即可发布到多种语言的全球观众，并遵循不同地区的辅助功能准则。此外，作者从用户界面中的一个选项卡即可管理字幕和音轨。
 
-* 资源 — 现在，您可以在搜索结果中导航到包含资源的文件夹位置，从而执行各种资源管理任务。 (ASSETS-23182)
+* 资源 — 现在，您可以在搜索结果中导航到包含资源的文件夹位置，以便执行各种资源管理任务。 (ASSETS-23182)
 
 **关键增强功能**
 
@@ -51,7 +51,7 @@ ht-degree: 4%
 
 * 允许站点页面编辑器/图像组件用户从远程AssetsCloud Service引用资源。 (SITES-13448和SITES-13433)
 
-* 为了在“列表”视图中快速找到系统中可能具有多个项目的项目，Adobe现在支持服务器端排序。 项目节点在用户界面中呈现之前，会根据用户选择的列在后端进行排序。 (NPR-41027)
+* 要在“列表”视图中快速查找项目（系统中可能有许多项目），Adobe现在支持服务器端排序。 项目节点在用户界面中呈现之前，会根据用户选择的列在后端进行排序。 (NPR-41027)
 
 * AEM 6.5.18.0支持MongoDB 5.0到6.0。
 
@@ -61,19 +61,19 @@ ht-degree: 4%
 
 **Forms**
 
-* **[在规则编辑器中使用自定义错误处理程序增强了错误处理](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/standard-validation-error-messages-adaptive-forms.html)：** 现在，您可以调用自定义函数（使用客户端库）来响应外部服务返回的错误，并为最终用户提供量身定制的响应。 或者，您可以针对服务返回的错误采取特定操作。例如，您可以在后端中调用自定义工作流以获取特定错误代码，或通知客户服务已中断
+* **[在规则编辑器中使用自定义错误处理程序增强了错误处理](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/standard-validation-error-messages-adaptive-forms.html)**  — 现在，您可以调用自定义函数（使用客户端库）来响应外部服务返回的错误。 而且，您可以为最终用户提供量身定制的响应。 或者，您可以针对服务返回的错误采取特定操作。例如，您可以在后端中调用自定义工作流以获取特定错误代码，或通知客户服务已中断
 
-* **[增强的Adobe Sign工作流步骤](https://experienceleague.adobe.com/docs/experience-manager-65/forms/workflows/aem-forms-workflow-step-reference.html#sign-document-step)：** AEM Workflows中的Adobe Sign工作流步骤包含以下增强功能。
+* **[增强的Adobe Sign工作流步骤](https://experienceleague.adobe.com/docs/experience-manager-65/forms/workflows/aem-forms-workflow-step-reference.html#sign-document-step)** - AEM Workflows中的Adobe Sign工作流步骤包含以下增强功能。
 
-   * **通过基于Government ID的身份验证增强Adobe Sign的安全性：** Adobe Acrobat Sign基于Government ID的身份验证允许用户使用政府颁发的ID（驾照、身份证、护照）进行身份验证，从而提供了一层额外的验证。 通过使用可信的标识文档，此增强功能为签名过程增添了更高的可信度，使其非常适合需要增强的安全性、合规性和用户验证的情况。
+   * **通过基于Government ID的身份验证增强Adobe Sign的安全性** - Adobe Acrobat Sign基于Government ID的身份验证提供额外的验证层。 它允许用户使用政府颁发的ID（驾照、身份证、护照）进行身份认证。 通过使用可信的标识文档，此增强功能为签名过程增添了更高的可信度，使其非常适合需要增强的安全性、合规性和用户验证的情况。
 
-   * **增强了Adobe Sign文档审核追踪的透明度：** 使用审核记录功能，可详细了解Adobe Sign文档的生命周期。 利用审核跟踪功能，您现在可以维护与文档相关的所有操作和交互的全面记录。其中包括查看者、编辑者或文档签署者等详细信息以及每个事件的时间戳。此增强功能对于维持合规性、解决争议和确保数字协议的完整性至关重要。
-
-
-   * **扩展了协议收件人的角色，不仅限于签名者：** Adobe Acrobat Sign可以选择将协议接受者的角色扩展至签名者之外，以更好地匹配他们的工作流要求。 启用此选项后，每个协议接收者均可单独配置其角色，默认角色为签名者。
+   * **Adobe Sign文档审核追踪的透明度增强**  — 使用审核记录功能可详细了解Adobe Sign文档的生命周期。 利用审核记录功能，您现在可保留与文档相关的所有操作和交互的全面记录。其中包括查看者、编辑者或签署文档者以及每个事件的时间戳等详细信息。此增强对于保持合规性、解决争议和确保数字协议的完整性至关重要。
 
 
-* **[AEM Forms on JEE完整安装程序](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/jee-installation/aem-forms-jee-supported-platforms.html)**：此Service Pack提供了AEM Forms on JEE的完整安装程序，以支持多种新软件组合，包括：
+   * **扩展了协议收件人的角色，而不只是签名者** - Adobe Acrobat Sign允许您扩展协议接受者的角色，而不只是签名者，以便更好地匹配他们的工作流要求。 启用后，协议中的每个收件人可以单独配置其角色，签名者是默认角色。
+
+
+* **[AEM Forms on JEE完整安装程序](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/jee-installation/aem-forms-jee-supported-platforms.html)** - Service Pack提供了AEM Forms on JEE的完整安装程序，以支持多种新软件组合，包括：
    * Microsoft® Windows Server 2022
    * Microsoft® Active Directory 2022
    * 在Windows Server 2022上OracleWebLogic 14C
@@ -81,7 +81,7 @@ ht-degree: 4%
    * MongoDB 4.4
    * MySQL JDBC连接器8
 
-如果您正在执行全新安装或计划为JEE环境上的AEM 6.5 Forms使用最新软件，则Adobe建议在JEE上使用AEM 6.5.18.0 Forms完整安装程序。 要探索新添加和已弃用的软件的完整列表，请参阅JEE上的AEM Forms或OSGi上的AEM Forms的文档。
+如果您在JEE环境中安装或计划使用适用于AEM 6.5 Forms的最新软件，Adobe建议使用AEM 6.5.18.0 Forms on JEE完整安装程序。 要探索新添加和已弃用的软件的完整列表，请参阅JEE上的AEM Forms或OSGi上的AEM Forms的文档。
 
 <!-- UPDATE BELOW FOR EACH NEW RELEASE -->
 
@@ -164,7 +164,7 @@ ht-degree: 4%
 
 * **文档服务**
    * 当用户使用transformPDF服务时，它会失败，并出现异常： `java.lang.ClassNotFoundException: default task-158Class name com.adobe.internal.afml.AFMLExceptionInvalidParameter from package com.adobe.internal.afml` (FORMS-9957)
-   * 如果在生成PDF文档期间服务器关闭，则会引发服务器启动后作业处理错误。 服务器启动期间需要添加参数 — Dcom.adobe.livecycle.dsc.deferServiceStart=true。 (FORMS-9836)
+   * 如果在生成PDF文档期间服务器关闭，则会引发服务器启动后作业处理错误。 必须在服务器启动期间添加参数 — Dcom.adobe.livecycle.dsc.deferServiceStart=true。 (FORMS-9836)
    * 如果用户尝试使用AssemblerService.Invoke方法合并PDF，则汇编程序无法执行该任务。 (FORMS-9550)
    * 当您在OSGI和JEE环境中升级到AEM 6.5.15.0 Service Pack时，使用特定模板的Assembler服务将停止工作。 (FORMS-9355、FORMS-9445、FORMS-9408)
    * Java™垃圾收藏集无法清除AEM Forms OSGi服务器上的旧根栈，因为XMLFormService的全局超时未配置为适当的值。 (FORMS-9384、FORMS-9035)
@@ -179,7 +179,7 @@ ht-degree: 4%
    * 当用户尝试在不修改字段（例如设置另一个字段的值）的情况下调用自定义函数时，调用会失败。 (FORMS-9921)
    * 在自适应表单中使用规则编辑器的自定义错误函数时，出现以下错误：
       * 当用户尝试使用@param时{boolean} 对于函数，规则编辑器不允许将布尔值传递到函数。
-      * 当用户尝试使用@param时{string} 对于函数，规则编辑器无法传递可选值，并会对不完整的规则发出警告。 (FORMS-9816、FORMS-9815)
+      * 当用户尝试使用@param时{string} 对于函数，规则编辑器无法传递可选值，并收到不完整规则的警告。 (FORMS-9816、FORMS-9815)
    * 表单 — 用户组在自适应表单中两次调用规则编辑器失败。 (FORMS-9051)
    * 在可视编辑器中，当用户选择表单对象时，整个字段实例对象将传递到自定义函数，而不仅仅是字段的值。 (FORMS-10015)
    * 当用户创建基于核心组件的自适应表单并添加文本输入组件时， `Is Empty` 和 `Is Not Empty` 无法在规则编辑器中工作。 (FORMS-10098)
@@ -187,7 +187,7 @@ ht-degree: 4%
    * 当用户尝试使用复杂的JSON架构创建自适应表单时，失败。 错误发生于：
      `GET /content/forms/af/katezeroone/testaf1.html HTTP/1.1] com.adobe.aemds.guide.service.impl.JsonObjectCreatorImpl Could not emit JSON with context java.lang.ArrayIndexOutOfBoundsException:0`. (FORMS-9639)
    * 在自适应表单中，当用户禁用“我同意条款和条件”复选框时，它会在用户向下滚动时再次启用。 (FORMS-9458)
-   * 当用户使用Google Chrome/Firefox在Android™设备上打开自适应表单并在文本框中输入允许的最大字符数时，文本框中的值无法清除。 (FORMS-9354)
+   * 当用户使用Google Chrome/Firefox在Android™设备上打开自适应表单，并在文本框中输入允许的最大字符数时，文本框中的值无法清除。 (FORMS-9354)
    * 如果复选框的标签包含“，”、“/”或“。”等特殊字符，则单击文本/标签不会选中相应的复选框。 (FORMS-9313)
    * 当用户尝试验证条款和条件组件时，它无法验证该组件是否不在焦点上，而另一个组件是否处于验证状态。 (FORMS-8725、FORMS-8913)
    * 如果在升级到AEM 6.5.16.0 Service Pack后重新加载自适应表单，则检索文件附件失败。 (FORMS-8906)
@@ -203,7 +203,7 @@ ht-degree: 4%
       * 当用户使用画笔或键盘登录签名对话框时，按Enter键不会关闭对话框。
       * 无法使用键盘访问清除签名确认对话框。
       * 屏幕阅读器无法读取在对话框中输入的信息。
-      * 如果不使用鼠标，则无法清除签名。  (FORMS-9317)
+      * 如果不使用鼠标，则无法清除签名。 (FORMS-9317)
    * 当用户提交自适应表单时，屏幕阅读器无法读取必填字段的错误消息。 (FORMS-9316)
    * 当屏幕阅读器读取HTML表单时，使用字距微调（间距）读取文本时出现问题。 (FORMS-9258)
    * 在自适应表单中，使用屏幕阅读器不会调出链接到文本的引用/脚注。 (FORMS-8920)
@@ -235,7 +235,7 @@ ht-degree: 4%
 #### Platform{#foundation-platform-6518}
 
 * 安装vanillaExperience ManagerService Pack 17后，您会看到 `stderr.log`. Vanilla安装不会收到错误。 (CQ-4353637)
-* “Tagging（标记）”屏幕中的“Create（创建）”按钮不遵循ACL（访问控制列表）。 (NPR-40973)
+* “标记”(Tagging)屏幕中的“创建”(Create)按钮不遵循ACL（访问控制列表）。 (NPR-40973)
 * 无法在Experience Manager上创建ContextHub的缓存节点，也无法访问（或同时访问）该节点。 (NPR-40515)
 
 #### 复制{#foundation-replication-6518}
@@ -369,7 +369,24 @@ UberJar用于 [!DNL Experience Manager] 6.5.18.0可从以下网站获取： [Mav
 To retrieve your runtime copy, Adobe recommends to synchronize the design-time copy of the custom workflow model with its runtime copy using the HTTP API:
 `<designModelPath>/jcr:content.generate.json`. -->
 
-* 与来自Service Pack 13及更高版本的Oak相关，以下错误日志已开始出现，这影响持久性缓存：
+* **升级到Service Pack 18 (6.5.18.0)后，页面发布在页面编辑器中不起作用**
+
+  <!-- https://jira.corp.adobe.com/browse/SITES-15856 REMOVE FOR 6.5.19.0--> 将AEM 6.5.0.0 - 6.5.17.0的实例升级到AEM 6.5.18.0后，单击 **[!UICONTROL 发布页面]** 在页面编辑器中，您被重定向到一个不存在的URL。
+
+  要解决此问题，请执行以下操作之一：
+
+   * 删除以下“path”属性。
+
+     `/libs/wcm/core/content/editor/jcr:content/content/items/content/header/items/headerbar/items/pageinfopopover/items/list/items/publish/granite:data`
+
+   * 将正确的URL直接粘贴到浏览器中。
+
+     `http://localhost:4504/editor.html/libs/wcm/core/content/sites/publishpagewizard.html?item=/content/we-retail/language-masters/en/about-us.html`
+
+
+
+* **与Oak相关**
+在Service Pack 13及更高版本中，已开始出现以下错误日志，这会影响持久性缓存：
 
   ```shell
   org.h2.mvstore.MVStoreException: The write format 1 is smaller than the supported format 2 [2.0.202/5]
@@ -439,7 +456,7 @@ To retrieve your runtime copy, Adobe recommends to synchronize the design-time c
 #### 支持的平台
 
 * WebLogic JEE服务器不支持高于1.8.0_281的JDK版本。 (FORMS-8498、CQDOC-20383)
-* 作为 [!DNL Microsoft®® Windows Server 2019] 不支持 [!DNL MySQL 5.7] 和 [!DNL JBoss®® EAP 7.1]， [!DNL Microsoft®® Windows Server 2019] 不支持的全包安装 [!DNL Experience Manager Forms 6.5.10.0]. (CQDOC-18312)
+* 作为 [!DNL Microsoft® Windows Server 2019] 不支持 [!DNL MySQL 5.7] 和 [!DNL JBoss® EAP 7.1]， [!DNL Microsoft® Windows Server 2019] 不支持的全包安装 [!DNL Experience Manager Forms 6.5.10.0]. (CQDOC-18312)
 * JDK 11.0.20不支持在JEE安装程序上安装AEM Forms。 在JEE安装程序上安装AEM Forms仅支持JDK 11.0.19或更早版本。 (FORMS-10659)
 
 #### 安装
@@ -460,7 +477,7 @@ To retrieve your runtime copy, Adobe recommends to synchronize the design-time c
 * 升级到AEM Service Pack 18后，无法编辑交互式通信信件。 (FORMS-10578)要解决此问题，请执行以下步骤：
 
    1. 下载 [修补程序 — FORMS-10578](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) 从SD链接。
-   1. 解压缩修补程序存档文件以获取Experience Manager包(.zip)和包(.jar)文件。
+   1. 解压缩修补程序存档文件，以便获取Experience Manager包(.zip)和捆绑包(.jar)文件。
    1. 通过包管理器上传并安装包(.zip)。
    1. 打开配置管理器包 `https://server:host/system/console/bundles`，上传并安装捆绑包(.jar)。
 
