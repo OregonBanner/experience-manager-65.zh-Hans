@@ -1,20 +1,16 @@
 ---
 title: MSM 转出冲突
-seo-title: MSM Rollout Conflicts
 description: 了解如何处理多站点管理器转出冲突。
-seo-description: Learn how to deal with Multi Site Manager rollout conflicts.
-uuid: 7a640905-aae2-498e-b95c-2c73008fa1cd
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: site-features
 content-type: reference
-discoiquuid: 16db5334-604f-44e2-9993-10d683dee5bb
 feature: Multi Site Manager
 exl-id: e145e79a-c363-4a33-b9f9-99502ed20563
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 6799f1d371734b69c547f3c0c68e1e633aa63229
 workflow-type: tm+mt
-source-wordcount: '906'
-ht-degree: 28%
+source-wordcount: '905'
+ht-degree: 23%
 
 ---
 
@@ -22,7 +18,7 @@ ht-degree: 28%
 
 如果在Blueprint分支和从属Live Copy分支中都创建了具有相同页面名称的新页面，则可能会发生冲突。
 
-转出时需要处理和解决此类冲突。
+转出时必须处理和解决此类冲突。
 
 ## 冲突处理 {#conflict-handling}
 
@@ -31,24 +27,24 @@ ht-degree: 28%
 为了确保转出不被阻止，可能的定义可以包括：
 
 * 转出期间哪个页面（Blueprint或Live Copy）优先，
-* 哪些页面将进行重命名（以及重命名的方式），
-* 这将如何影响任何已发布的内容。
+* 哪些页面被重命名（以及重命名的方式），
+* 这会如何影响任何已发布的内容。
 
-  AEM的默认行为（现成）是发布的内容将不会受到影响。 因此，如果在Live Copy分支中手动创建的页面已发布，则仍将在冲突处理和转出后发布该内容。
+  Adobe Experience Manager (AEM)（现成）的默认行为是发布的内容不受影响。 因此，如果在Live Copy分支中手动创建的页面已发布，则该内容在冲突处理和转出后仍会发布。
 
 除了标准功能外，还可以添加自定义的冲突处理程序来实施其他规则。它们还允许将操作发布为单独的过程。
 
 ### 示例场景 {#example-scenario}
 
-在以下部分中，我们使用新页面的示例 `b`，在Blueprint和Live Copy分支（手动创建）中创建，用于说明解决冲突的各种方法：
+在以下部分中，您必须使用新页面的示例 `b`，在Blueprint和Live Copy分支（手动创建）中创建，用于说明解决冲突的各种方法：
 
 * Blueprint：`/b`
 
-  母版页；带1个子页，bp-level-1。
+  母版页；带有一个子页面bp-level-1。
 
 * live copy： `/b`
 
-  在Live Copy分支中手动创建的页面；带1个子页面， `lc-level-1`.
+  在Live Copy分支中手动创建的页面；具有一个子页面， `lc-level-1`.
 
    * 在发布为 `/b` 时与子页面一起激活.
 
@@ -107,8 +103,8 @@ AEM 提供：
 
 * 称为 `ResourceNameRolloutConflictHandler`
 
-* 对于此处理程序，Blueprint 页面将获得优先权。
-* 此处理程序的服务排名设置得很低(“即低于 `service.ranking` 属性)，因为假设自定义处理程序需要更高的排名。 然而，排名并不是在必要时确保灵活性的绝对最低标准。
+* 使用此处理程序时，Blueprint页面将获得优先权。
+* 此处理程序的服务排名设置得很低(即低于 `service.ranking` 属性)，因为假设自定义处理程序需要更高的排名。 然而，排名并不是在必要时确保灵活性的绝对最低标准。
 
 此处理程序为 Blueprint 页面提供优先权。Live Copy页面 `/b` （在live copy分支中）移至 `/b_msm_moved`.
 
@@ -122,7 +118,7 @@ AEM 提供：
 
   转出到Live Copy页面 `/b`.
 
-   * `bp-level-1` 转出到livecopy。
+   * `bp-level-1` 转出到live copy。
 
 **转出后**
 
@@ -156,11 +152,11 @@ AEM 提供：
 
 自定义冲突处理程序允许您实施自己的规则。 利用服务排名机制，您还可以定义它们如何与其他处理程序交互。
 
-自定义冲突处理程序可以：
+自定义的冲突处理程序可以具有以下内容：
 
-* 根据您的要求进行命名。
-* 根据您的要求开发/配置；例如，您可以开发一个处理程序，以便为Live Copy页面指定优先权。
-* 可设计为使用 [OSGi配置](/help/sites-deploying/configuring-osgi.md)；特别是：
+* 根据您的要求命名。
+* 根据您的要求开发/配置；例如，您可以开发一个处理程序，以便为Live Copy页面提供优先权。
+* 设计为使用 [OSGi配置](/help/sites-deploying/configuring-osgi.md)；特别是：
 
    * **服务排名**：
 
@@ -170,7 +166,7 @@ AEM 提供：
 
 ### 冲突处理停用时的行为 {#behavior-when-conflict-handling-deactivated}
 
-如果您手动 [取消激活冲突处理](#rollout-manager-and-conflict-handling) 则AEM不会对任何冲突页面执行任何操作（非冲突页面按预期转出）。
+如果您手动 [取消激活冲突处理](#rollout-manager-and-conflict-handling)，则AEM不会对任何冲突页面执行任何操作（非冲突页面按预期转出）。
 
 >[!CAUTION]
 >
@@ -184,7 +180,7 @@ AEM 提供：
 
 * live copy： `/b`
 
-  保持不变。
+  同样的。
 
 <table>
  <caption>
