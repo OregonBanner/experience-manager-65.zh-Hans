@@ -1,21 +1,17 @@
 ---
 title: 内容片段的组件
-seo-title: Components for Content Fragments
-description: AEM内容片段作为独立于页面的资产进行创建和管理
-seo-description: AEM content fragments are created and managed as page-independent assets
-uuid: 81a9e0fe-ed45-4880-b36c-4f49e2598389
+description: Adobe Experience Manager (AEM)内容片段作为独立于页面的资源而创建和管理
 contentOwner: AEM Docs
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: components
 content-type: reference
-discoiquuid: b7777dc5-a867-4799-9e2c-a1f4bb5dd96a
 docset: aem65
 pagetitle: Components for Content Fragments
 exl-id: f2edd9b2-f231-42f3-a25e-428cd1d96c2a
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: b66ec42c35b5b60804015d340b8194bbd6ef3e28
 workflow-type: tm+mt
-source-wordcount: '960'
-ht-degree: 1%
+source-wordcount: '961'
+ht-degree: 2%
 
 ---
 
@@ -33,7 +29,7 @@ ht-degree: 1%
 
 >[!CAUTION]
 >
->此 [内容片段核心组件](https://helpx.adobe.com/experience-manager/core-components/using/content-fragment-component.html) 现在推荐。 请参阅 [开发核心组件](https://helpx.adobe.com/experience-manager/core-components/using/developing.html) 以了解更多详细信息。
+>此 [内容片段核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/content-fragment-component.html?lang=en) 现在推荐。 请参阅 [开发核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/overview.html?lang=zh-Hans) 以了解更多详细信息。
 >
 >此部分详细介绍为与内容片段一起使用而交付的原始组件(**内容片段** 在 **常规** 组)。
 
@@ -65,47 +61,47 @@ Adobe Experience Manager (AEM) 内容片段[作为独立于页面的资产而创
 
 `cq.authoring.editor.plugin.cfm`
 
-此库会向编辑器添加特定于内容片段的功能。 例如，支持在页面上添加和配置内容片段的功能，支持在资产浏览器中搜索内容片段资产以及在侧面板中搜索关联内容的功能。
+此库会向编辑器添加特定于内容片段的功能。 例如，支持在页面上添加和配置内容片段，支持在资产浏览器中搜索内容片段资产，以及在侧面板中搜索关联内容。
 
 ### 中间内容 {#in-between-content}
 
 此 **内容片段** t组件允许您在显示的不同段落之间放置其他组件 [元素](/help/assets/content-fragments/content-fragments.md#constituent-parts-of-a-content-fragment). 基本上，显示的元素由不同的段落组成（每个段落都标有一个回车符）。 在每个段落之间，您可以使用其他组件插入内容。
 
-从技术角度来看，显示的元素* *的每个段落都位于自己的Parsys中，您在段落之间添加的每个组件都将（在标题下）插入Parsys中。
+从技术角度来看，所显示元素的每个段落都位于其自身的parsys中，您在段落之间添加的每个组件都（在标题下）插入parsys中。
 
-换句话说，如果内容片段组件的实例由三个段落组成，则组件在存储库中将具有三个不同的parsys。 添加到内容片段的所有中间内容实际上将位于这些parsys中。
+换句话说，如果内容片段组件的实例由三个段落组成，则组件在存储库中有三个不同的parsys。 添加到内容片段的所有中间内容实际上都位于这些parsys中。
 
-在存储库中，中间内容是相对于其在整个段落结构中的位置存储的，即，它未附加到实际的段落内容。
+在存储库中，中间内容是相对于其在整个段落结构中的位置存储的，也就是说，它未附加到实际的段落内容。
 
-为了说明这一点，让我们考虑一下：
+为了说明这一点，请考虑以下几点：
 
 * 由三个段落组成的内容片段的实例
 * 第二段之后已经插入了一些内容
 
-   * 这意味着该内容将存储在第二个parsys中。
+   * 这意味着内容存储在第二个parsys中。
 
 基本上，如果此实例的段落结构发生更改（通过更改显示的变体、元素或段落范围），它可能会影响在内容片段内容时显示的中间内容：
 
 * 编辑，并在第二段之前添加另一段：
 
-   * 中间内容将显示在新创建的段落之后（第二个parsys现在包含新创建的段落）。
+   * 中间内容在新创建的段落之后显示（第二个parsys现在保存新创建的段落）。
 
 * 将编辑并删除第二段：
 
-   * 中间内容将显示在之前为第三个的段落（现在为第二个parsys包含之前的第三个段落）之后。
+   * 中间内容显示在之前是第三段的段落之后（第二个parsys现在包含前三个段落）。
 
 * 进行了配置，以便仅显示第一段：
 
-   * 将不会显示中间内容（由于新配置，第二个Parsys不再呈现）。
+   * 不显示中间内容（由于新配置，第二个Parsys不再呈现）。
 
 ### 自定义内容片段组件 {#customizing-the-content-fragment-component}
 
 要使用现成的内容片段组件作为扩展的Blueprint，您应遵守以下合同：
 
-* 重用HTL渲染脚本及其关联的POJO查看中间内容功能的实施方式。
+* 重用HTL渲染脚本及其关联的POJO，以便查看中间内容功能的实施方式。
 * 重用内容片段节点： `cq:editConfig`
 
-   * 此 `afterinsert`/ `afteredit`/ `afterdelete` 监听器用于触发JS事件。 这些事件将在以下位置处理： `cq.authoring.editor.plugin.cfm` 客户端库，可在侧面板中显示关联内容。
+   * 此 `afterinsert`/ `afteredit`/ `afterdelete` 监听器用于触发JS事件。 这些事件在中处理 `cq.authoring.editor.plugin.cfm` 客户端库，可在侧面板中显示关联内容。
    * 此 `cq:dropTargets` 配置为支持拖动内容片段资产。
    * `cq:inplaceEditing` 配置为支持在页面编辑器中创作内容片段。 片段就地编辑器在中定义 `cq.authoring.editor.plugin.cfm` 客户端库，并允许快速链接打开当前 [元素/变量](/help/assets/content-fragments/content-fragments.md#constituent-parts-of-a-content-fragment) 在 [片段编辑器](/help/assets/content-fragments/content-fragments-variations.md).
 
@@ -113,7 +109,7 @@ Adobe Experience Manager (AEM) 内容片段[作为独立于页面的资产而创
 
 内容片段管理使用内部渲染过程为页面生成最终HTML输出。 这由内容片段组件内部使用，也由在引用页面上更新引用片段的后台进程使用。
 
-在内部，Sling重写器用于该渲染。 相应的配置位于 `/libs/dam/config/rewriter/cfm` 并且可以根据需要进行调整。 请参阅 [Apache Sling重写器](https://sling.apache.org/documentation/bundles/output-rewriting-pipelines-org-apache-sling-rewriter.html) 以了解更多信息。
+在内部，Sling重写器用于该渲染。 相应的配置位于 `/libs/dam/config/rewriter/cfm` 如有必要，可以调整。 请参阅 [Apache Sling重写器](https://sling.apache.org/documentation/bundles/output-rewriting-pipelines-org-apache-sling-rewriter.html) 以了解更多信息。
 
 >[!CAUTION]
 >
@@ -132,4 +128,4 @@ Adobe Experience Manager (AEM) 内容片段[作为独立于页面的资产而创
 * `transformer-cfm-parfilter`  — 如果指定了段落范围，则过滤掉不需要的段落（可以对内容片段组件执行此操作）
 * `transformer-cfm-assetprocessor`  — 在内部使用，用于检索片段中嵌入的资产列表
 
-呈现过程将通过公开 [`com.adobe.cq.dam.cfm.content.FragmentRenderService`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/dam/cfm/ContentFragment.html) 如果需要，自定义组件可以利用和（例如）。
+呈现过程将通过公开 [`com.adobe.cq.dam.cfm.content.FragmentRenderService`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/dam/cfm/ContentFragment.html) 如有必要，自定义组件可以使用（例如）和。

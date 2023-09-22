@@ -1,6 +1,6 @@
 ---
 title: Oak查询和索引
-description: 了解如何在AEM中配置索引。
+description: 了解如何在Adobe Experience Manager中配置索引。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
@@ -8,7 +8,7 @@ topic-tags: deploying
 legacypath: /content/docs/en/aem/6-0/deploy/upgrade/queries-and-indexing
 feature: Configuring
 exl-id: d9ec7728-84f7-42c8-9c80-e59e029840da
-source-git-commit: 2adc33b5f3ecb2a88f7ed2c5ac5cc31f98506989
+source-git-commit: b66ec42c35b5b60804015d340b8194bbd6ef3e28
 workflow-type: tm+mt
 source-wordcount: '3033'
 ht-degree: 2%
@@ -23,7 +23,7 @@ ht-degree: 2%
 
 ## 简介 {#introduction}
 
-与Jackrabbit 2不同，默认情况下，Oak不索引内容。 必要时必须创建自定义索引，就像传统关系数据库一样。 如果特定查询没有索引，则可能会遍历许多节点。 这个查询可能仍然有效，但速度可能相当慢。
+与Jackrabbit 2不同，默认情况下，Oak不索引内容。 必要时必须创建自定义索引，就像传统关系数据库一样。 如果没有针对特定查询的索引，则可能会遍历许多节点。 查询可能仍然有效，但速度可能较慢。
 
 如果Oak遇到没有索引的查询，则会打印WARN级别的日志消息：
 
@@ -84,7 +84,7 @@ Oak查询引擎支持以下语言：
    * **类型：**  `property` （类型为String）
    * **属性名称：**  `jcr:uuid` （类型为“名称”）
 
-   此特定示例将索引 `jcr:uuid` 属性，其任务是公开它所附加节点的通用唯一标识符(UUID)。
+   此特定示例对 `jcr:uuid` 属性，其任务是公开它所附加节点的通用唯一标识符(UUID)。
 
 1. 保存更改。
 
@@ -92,11 +92,11 @@ Oak查询引擎支持以下语言：
 
 * 此 **type** 属性指定索引的类型，在这种情况下，必须将其设置为 **属性**
 
-* 此 **属性名称** 属性指明将存储在索引中的属性的列表。 如果缺少节点名称，则会将节点名称用作属性名称引用值。 在此示例中， **jcr：uuid** 其作业是公开其节点的唯一标识符(UUID)的属性将添加到索引中。
+* 此 **属性名称** 属性指明存储在索引中的属性的列表。 如果缺少节点名称，则会将节点名称用作属性名称引用值。 在此示例中， **jcr：uuid** 其作业是公开其节点的唯一标识符(UUID)的属性将添加到索引中。
 
 * 此 **独特** 标记哪项，如果设置为 **true** 在属性索引中添加唯一性约束。
 
-* 此 **声明节点类型** 属性用于指定仅应用索引的特定节点类型。
+* 此 **声明节点类型** 属性允许您指定仅应用索引的特定节点类型。
 * 此 **重新索引** 标记在设置为时显示的对象 **true**，会触发完整的内容重新索引。
 
 ### 有序索引 {#the-ordered-index}
@@ -134,11 +134,11 @@ Lucene索引具有以下配置选项：
 
 ### 了解全文搜索 {#understanding-fulltext-search}
 
-本节中的文档适用于Apache Lucene、Elasticsearch以及PostgreSQL、SQLite、MySQL等的全文索引。 以下示例适用于AEM / Oak / Lucene。
+例如，本节中的文档适用于Apache Lucene、Elasticsearch以及PostgreSQL、SQLite和MySQL的全文索引。 以下示例适用于AEM / Oak / Lucene。
 
 <b>要编制索引的数据</b>
 
-首先需要编制索引的数据。 以下列文档为例：
+起点是必须编制索引的数据。 以下列文档为例：
 
 | <b>文档Id</b> | <b>路径</b> | <b>全文</b> |
 | --- | --- | --- |
@@ -149,11 +149,11 @@ Lucene索引具有以下配置选项：
 
 <b>反转索引</b>
 
-索引机制将全文拆分为名为“令牌”的单词，并构建名为“反转索引”的索引。 此索引包含文档列表，每个单词在该列表中显示。
+索引机制将全文拆分为名为“令牌”的单词，并构建名为“反转索引”的索引。 此索引包含文档列表，其中每个单词均显示了该索引。
 
-非常短的、常见的词语（也称为“停用词”）不会编制索引。 所有令牌都将转换为小写，并应用字干处理。
+短而常见的词语（也称为“停用词”）不会编制索引。 所有令牌都将转换为小写，并应用字干处理。
 
-注意特殊字符，例如 *&quot;-&quot;* 未编制索引。
+特殊字符，例如 *&quot;-&quot;* 未编制索引。
 
 | <b>令牌</b> | <b>文档Id</b> |
 | --- | --- |
@@ -161,12 +161,12 @@ Lucene索引具有以下配置选项：
 | 品牌 | ..., 100,... |
 | 多维数据集 | ..., 200, 300,... |
 | 维度 | 300 |
-| 芬兰语 | ..., 100,... |
+| 完成 | ..., 100,... |
 | 发明 | 200 |
 | 对象 | ..., 300,... |
-| 鲁比克 | .., 100, 200,... |
+| 鲁比克 | ..., 100, 200,... |
 
-文档列表已排序。 在查询时，这将变得很方便。
+文档列表已排序。 这在查询时很方便。
 
 <b>正在搜索</b>
 
@@ -182,7 +182,7 @@ Lucene索引具有以下配置选项：
 +:fulltext:rubik +:fulltext:cube
 ```
 
-然后，索引将查询文档列表以了解这些单词。 如果文档很多，列表可能会非常大。 例如，假设它们包含以下内容：
+索引将查阅这些单词的文档列表。 如果文档很多，列表可能会很大。 例如，假设它们包含以下内容：
 
 
 | <b>令牌</b> | <b>文档Id</b> |
@@ -191,7 +191,7 @@ Lucene索引具有以下配置选项：
 | 多维数据集 | 30, 200, 300, 2000 |
 
 
-Lucene将在两个列表（或循环调度程序）之间来回切换 `n` 列表，搜索时 `n` 单词数)：
+Lucene在两个列表（或循环调度程序）之间来回切换 `n` 列表，搜索时 `n` 单词数)：
 
 * 在“rubik”中读取将获得第一个条目：它找到10
 * 在“多维数据集”中读取将获取第一个条目 `>` = 10. 找不到10，则下一个为30。
@@ -201,7 +201,7 @@ Lucene将在两个列表（或循环调度程序）之间来回切换 `n` 列表
 * 在“rubik”中读到下一个条目： 1000。
 * 在“多维数据集”中读取将获取第一个条目 `>` = 1000：它找到2000。
 * 读入“rubik”获得第一个条目 `>` = 2000：列表结束。
-* 最后，我们可以停止搜索。
+* 最后，你可以停止搜索。
 
 找到的唯一包含这两个术语的文档为200，如下例所示：
 
@@ -263,7 +263,7 @@ select * from [nt:base] where [alias] = '/admin'
 
 分析器在文档被编制索引时和查询时都使用。 分析器检查字段的文本并生成令牌流。 Lucene分析器由一系列标记器和过滤类组成。
 
-分析器可通过 `analyzers` 节点（属于类型） `nt:unstructured`)内部 `oak:index` 定义。
+可通过以下方式配置分析器 `analyzers` 节点（属于类型） `nt:unstructured`)内部 `oak:index` 定义。
 
 索引的默认分析器配置于 `default` 分析器节点的子节点。
 
@@ -297,14 +297,14 @@ select * from [nt:base] where [alias] = '/admin'
 
    如果 `luceneMatchVersion` 未提供，Oak使用的是随附的Lucene版本。
 
-1. 如果要将stopwords文件添加到分析器配置，可以在 `default` 一个具有以下属性：
+1. 如果要向分析器配置添加stopwords文件，可以在 `default` 一个具有以下属性：
 
    * **名称：**`stopwords`
    * **类型:** `nt:file`
 
 #### 通过合成创建分析器 {#creating-analyzers-via-composition}
 
-分析器也可以根据以下内容组成 `Tokenizers`， `TokenFilters` 和 `CharFilters`. 为此，可指定分析器并创建其可选令牌化器和筛选器的子节点，这些子节点将按列出的顺序应用。 另请参阅 [https://wiki.apache.org/solr/AnalyzersTokenizersTokenFilters#Specifying_an_Analyzer_in_the_schema](https://wiki.apache.org/solr/AnalyzersTokenizersTokenFilters#Specifying_an_Analyzer_in_the_schema)
+分析器也可以根据以下内容组成 `Tokenizers`， `TokenFilters`、和 `CharFilters`. 为此，可指定分析器并为其可选令牌化器和过滤器创建子节点，这些子节点将按列出的顺序应用。 另请参阅 [https://cwiki.apache.org/confluence/display/solr/AnalyzersTokenizersTokenFilters#Specifying_an_Analyzer_in_the_schema](https://cwiki.apache.org/confluence/display/solr/AnalyzersTokenizersTokenFilters#Specifying_an_Analyzer_in_the_schema)
 
 以此节点结构为例：
 
@@ -354,7 +354,7 @@ select * from [nt:base] where [alias] = '/admin'
 
 工厂所需的任何配置参数均指定为相关节点的属性。
 
-对于需要加载外部文件内容的加载停用词，可以通过创建子节点来提供内容 `nt:file` 键入相关文件。
+对于必须加载外部文件内容的加载停用词，可以通过创建子节点来提供内容 `nt:file` 键入相关文件。
 
 ### Solr索引 {#the-solr-index}
 
@@ -368,7 +368,7 @@ AEM中的集成发生在存储库级别，因此Solr是可用于Oak(AEM随附的
 
 AEM也可以配置为与远程Solr服务器实例配合使用：
 
-1. 下载并解压缩最新版本的Solr。 有关如何执行此操作的更多信息，请参阅 [Apache Solr安装文档](https://cwiki.apache.org/confluence/display/solr/Installing+Solr).
+1. 下载并解压缩最新版本的Solr。 有关如何执行此操作的更多信息，请参见 [Apache Solr安装文档](https://solr.apache.org/guide/6_6/installing-solr.html).
 1. 现在，创建两个Solr分片。 为此，您可以为解压缩Solr的文件夹中的每个分区创建文件夹：
 
    * 对于第一个分片，创建文件夹：
@@ -396,7 +396,7 @@ AEM也可以配置为与远程Solr服务器实例配合使用：
 
    >[!NOTE]
    >
-   >有关Solr和ZooKeeper配置的更多信息，请参阅 [Solr配置文档](https://wiki.apache.org/solr/ConfiguringSolr) 和 [ZooKeeper快速入门指南](https://zookeeper.apache.org/doc/r3.1.2/zookeeperStarted.html).
+   >有关Solr和ZooKeeper配置的更多信息，请参阅 [Solr配置文档](https://cwiki.apache.org/confluence/display/solr/ConfiguringSolr) 和 [ZooKeeper快速入门指南](https://zookeeper.apache.org/doc/r3.1.2/zookeeperStarted.html).
 
 1. 通过ZooKeeper支持启动第一个分片，方法是 `aemsolr1\node1` 并运行以下命令：
 
@@ -431,7 +431,7 @@ AEM也可以配置为与远程Solr服务器实例配合使用：
 
 以下是基本配置的示例，该配置可以与本文所述的所有三个Solr部署一起使用。 它包含AEM中已存在的专用属性索引，不应与其他应用程序一起使用。
 
-要正确使用它，必须将归档文件的内容直接放在Solr主目录中。 在多节点部署中，它应直接位于每个节点的根文件夹下。
+要正确使用它，必须将归档文件的内容直接放在Solr主目录中。 如果有多节点部署，则它应直接位于每个节点的根文件夹下。
 
 推荐的Solr配置文件
 
@@ -464,7 +464,7 @@ ACS Commons包还公开可用于创建属性索引的OSGi配置。
 
 #### 准备调试信息以供分析 {#preparing-debugging-info-for-analysis}
 
-要获取所执行查询的必需信息，最简单的方法是通过 [说明查询工具](/help/sites-administering/operations-dashboard.md#explain-query). 这样，您就可以收集调试慢查询所需的精确信息，而无需查阅日志级别信息。 如果您知道正在调试的查询，这是可取的。
+要获取运行查询所需的信息，最简单的方法是 [说明查询工具](/help/sites-administering/operations-dashboard.md#explain-query). 这样，您就可以收集调试慢查询所需的精确信息，而无需查阅日志级别信息。 如果您知道正在调试的查询，这是可取的。
 
 如果由于任何原因而无法执行此操作，您可以将索引日志收集到单个文件中，并使用它来解决特定问题。
 
@@ -480,7 +480,7 @@ ACS Commons包还公开可用于创建属性索引的OSGi配置。
 
 >[!NOTE]
 >
->请务必仅在要排除故障的查询正在运行期间，将日志设置为DEBUG 。 否则，日志中会随着时间的推移生成大量事件。 因此，在收集到所需的日志后，请切换回INFO级别日志记录，以用于上述类别。
+>请务必仅在要排除故障的查询正在运行期间，将日志设置为DEBUG 。 否则，随着时间的推移，日志中会生成许多事件。 因此，在收集到所需的日志后，请切换回INFO级别日志记录，以用于上述类别。
 
 您可以按照以下步骤启用日志记录：
 
@@ -516,7 +516,7 @@ ACS Commons包还公开可用于创建属性索引的OSGi配置。
    * Oak查询统计数据
    * IndexStat
 
-1. 单击每个MBean可获取性能统计信息。 创建屏幕截图，或记下它们以备需要提交支持时使用。
+1. 单击每个MBean，以便获取性能统计信息。 创建屏幕截图，或记下它们以备需要提交支持时使用。
 
 您还可通过以下URL获取这些统计数据的JSON变体：
 

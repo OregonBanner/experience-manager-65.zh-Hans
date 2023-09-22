@@ -1,26 +1,22 @@
 ---
 title: Adobe Experience Manager中的Web控制台
-seo-title: Web Console
-description: 了解如何使用AEM Web控制台。
-seo-description: Learn how to use the AEM web console.
-uuid: 7856b2b3-4216-421d-a315-cd9a55936362
+description: 了解如何使用Adobe Experience Manager Web控制台。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: configuring
-discoiquuid: 4a33fddd-0399-40e4-8687-564fb6765b76
 feature: Configuring
 exl-id: 9acbf61f-73a8-4998-9421-dd933f30ac8a
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: b66ec42c35b5b60804015d340b8194bbd6ef3e28
 workflow-type: tm+mt
-source-wordcount: '719'
+source-wordcount: '710'
 ht-degree: 1%
 
 ---
 
 # Web 控制台{#web-console}
 
-AEM中的Web控制台基于 [Apache Felix Web管理控制台](https://felix.apache.org/documentation/subprojects/apache-felix-web-console.html). Apache Felix是社区努力实施OSGi R4服务平台，其中包括OSGi框架和标准服务。
+Adobe Experience Manager (AEM)中的Web控制台基于 [Apache Felix Web管理控制台](https://felix.apache.org/documentation/subprojects/apache-felix-web-console.html). Apache Felix是社区努力实施OSGi R4服务平台，其中包括OSGi框架和标准服务。
 
 >[!NOTE]
 >
@@ -58,7 +54,7 @@ Web控制台提供了一系列用于维护OSGi捆绑包的选项卡，包括：
 
   `http://localhost:4502/system/console/configMgr`
 
-将显示配置列表：
+此时将显示配置列表：
 
 ![screen_shot_2012-02-15at52308pm](assets/screen_shot_2012-02-15at52308pm.png)
 
@@ -73,7 +69,7 @@ Web控制台提供了一系列用于维护OSGi捆绑包的选项卡，包括：
 * **工厂配置**
 允许您创建所需功能对象的实例。
 
-  这将分配一个永久标识，然后列在Configurations下拉列表中。
+  该标识将分配给永久标识，然后列在配置下拉列表中。
 
 从列表中选择任何条目将显示与该配置相关的参数：
 
@@ -85,7 +81,7 @@ Web控制台提供了一系列用于维护OSGi捆绑包的选项卡，包括：
 
   保存所做的更改。
 
-  对于工厂配置，这将创建一个具有永久标识的新实例。 然后，新实例将列在Configurations下。
+  对于工厂配置，这将创建一个具有永久标识的实例。 然后，新实例将列在Configurations下。
 
 * **重置**
 
@@ -115,7 +111,7 @@ Web控制台提供了一系列用于维护OSGi捆绑包的选项卡，包括：
 
   `http://localhost:4502/system/console/bundles`
 
-将显示包列表：
+此时将显示捆绑包列表：
 
 ![screen_shot_2012-02-15at44740pm](assets/screen_shot_2012-02-15at44740pm.png)
 
@@ -133,7 +129,7 @@ Web控制台提供了一系列用于维护OSGi捆绑包的选项卡，包括：
 
   这将检查所有包的引用，并根据需要进行刷新。
 
-  例如，在更新后，由于以前的引用，旧版本和新版本可能仍在运行。 此选项将检查并移动对新版本的所有引用，从而允许旧版本停止。
+  例如，在更新后，由于以前的引用，旧版本和新版本可能仍在运行。 此选项会检查并移动对新版本的所有引用，从而允许旧版本停止。
 
 * **启动**
 
@@ -149,11 +145,11 @@ Web控制台提供了一系列用于维护OSGi捆绑包的选项卡，包括：
 
 * **查看状态**
 
-  该列表指定包的当前状态；单击带有显示进一步信息的特定包的名称。
+  该列表指定束的状态；单击包含进一步信息的特定束的名称可显示详细信息。
 
 >[!NOTE]
 >
->之后 **更新** 建议执行 **刷新包**.
+>之后 **更新**，Adobe建议您执行 **刷新包**.
 
 ## 组件 {#components}
 
@@ -161,7 +157,7 @@ Web控制台提供了一系列用于维护OSGi捆绑包的选项卡，包括：
 
 * 下拉菜单：
 
-  **主要 >**
+  **主控 >**
 
 * URL；例如：
 
@@ -171,12 +167,12 @@ Web控制台提供了一系列用于维护OSGi捆绑包的选项卡，包括：
 
 ![screen_shot_2012-02-15at52144pm](assets/screen_shot_2012-02-15at52144pm.png)
 
-单击特定组件的名称将显示有关其状态的更多信息。 在此处，您还可以启用、禁用或重新加载组件。
+单击特定组件的名称可显示有关其状态的详细信息。 在此处，您还可以启用、禁用或重新加载组件。
 
 ![chlimage_1-22](assets/chlimage_1-22a.png)
 
 >[!NOTE]
 >
->启用或禁用组件仅在重新启动AEM/CRX后才适用。
+>启用或禁用组件只适用于AEM/CRX重新启动之前。
 >
 >开始状态在组件描述符中定义，组件描述符在开发期间生成，并在包创建时存储在包中。

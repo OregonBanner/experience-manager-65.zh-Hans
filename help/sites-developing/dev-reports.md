@@ -1,18 +1,14 @@
 ---
 title: 开发报告
-seo-title: Developing Reports
-description: AEM根据报表框架提供了一系列标准报表
-seo-description: AEM provides a selection of standard reports based on a reporting framework
-uuid: 1b406d15-bd77-4531-84c0-377dbff5cab2
+description: Adobe Experience Manager (AEM)根据报表框架提供了一系列标准报表
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
-discoiquuid: 50fafc64-d462-4386-93af-ce360588d294
 exl-id: 3891150e-9972-4bbc-ad61-7f46a1f9bbb4
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: b66ec42c35b5b60804015d340b8194bbd6ef3e28
 workflow-type: tm+mt
-source-wordcount: '5239'
+source-wordcount: '5182'
 ht-degree: 0%
 
 ---
@@ -20,9 +16,9 @@ ht-degree: 0%
 
 # 开发报告 {#developing-reports}
 
-AEM提供了一系列 [标准报表](/help/sites-administering/reporting.md) 其中大多数都基于报告框架。
+Adobe Experience Manager (AEM)提供了一系列 [标准报表](/help/sites-administering/reporting.md) 其中大多数都基于报告框架。
 
-使用框架，您可以扩展这些标准报表，或开发您自己的全新报表。 报告框架与现有CQ5概念和原则紧密集成，以便开发人员可以使用他们对CQ5的现有知识作为开发报告的跳板。
+利用框架，您可以扩展这些标准报表，或开发您自己的新报表。 报告框架与现有CQ5概念和原则紧密集成，以便开发人员可以使用他们对CQ5的现有知识作为开发报告的跳板。
 
 对于通过AEM交付的标准报表：
 
@@ -72,8 +68,8 @@ AEM提供了一系列 [标准报表](/help/sites-administering/reporting.md) 其
 * 结果集定义报告中显示的数据。 结果集中的每一行对应于报告表格视图中的一行。
 * 可用于对结果集执行的操作类似于RDBMS概念；主要是 *分组* 和 *聚合*.
 
-* 大多数数据检索和处理都在服务器端。
-* 客户端单独负责显示预处理后的数据。 在客户端仅执行次要的处理任务（例如，在单元格内容中创建链接）。
+* 大多数数据检索和处理都在服务器端完成。
+* 客户端单独负责显示预处理后的数据。 客户端仅执行次要的处理任务（例如，在单元格内容中创建链接）。
 
 报告框架（由标准报表的结构图示）使用以下构建块，由处理队列提供：
 
@@ -81,18 +77,18 @@ AEM提供了一系列 [标准报表](/help/sites-administering/reporting.md) 其
 
 ### 报告页面 {#report-page}
 
-报表页面：
+报告页面为：
 
-* 是标准CQ5页面。
+* 标准CQ5页面。
 * 基于 [为报告配置的标准CQ5模板](#report-template).
 
 ### 报表库 {#report-base}
 
-此 [`reportbase` 组件](#report-base-component) 构成任何报告的基础，如下所示：
+此 [`reportbase` 组件](#report-base-component) 构成任何报表的基础，因为它：
 
-* 保存定义 [查询](#the-query-and-data-retrieval) 提供数据的底层结果集。
+* 保留 [查询](#the-query-and-data-retrieval) 提供数据的底层结果集。
 
-* 是一个经过调整的段落系统，它将包含所有列( `columnbase`)已添加到报表。
+* 它是一个经过调整的段落系统，包含所有列( `columnbase`)已添加到报表。
 * 定义哪些图表类型可用以及哪些图表类型当前处于活动状态。
 * 定义“编辑”对话框，该对话框允许用户配置报告的某些方面。
 
@@ -101,15 +97,15 @@ AEM提供了一系列 [标准报表](/help/sites-administering/reporting.md) 其
 每列都是 [`columnbase` 组件](#column-base-component) 即：
 
 * 是一个段落，由parsys ( `reportbase`)。
-* 定义指向的链接 [基础结果集](#the-query-and-data-retrieval)；即定义此结果集中引用的特定数据及其处理方式。
-* 保存其他定义；例如可用的聚合和筛选器以及任何默认值。
+* 定义指向的链接 [基础结果集](#the-query-and-data-retrieval). 即，它定义此结果集中引用的特定数据及其处理方式。
+* 保留其他定义；例如可用的聚合和筛选器以及任何默认值。
 
 ### 查询与数据检索 {#the-query-and-data-retrieval}
 
 查询：
 
 * 定义为 [`reportbase`](#report-base) 组件。
-* 基于 [CQ QueryBuilder](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/QueryBuilder.html).
+* 基于 [CQ QueryBuilder](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/search/QueryBuilder.html).
 * 检索用作报表基础的数据。 结果集（表）的每一行都绑定到查询返回的节点。 的特定信息 [单个列](#column-base-component) 然后从该数据集提取。
 
 * 通常包括：
@@ -201,7 +197,7 @@ AEM提供了一系列 [标准报表](/help/sites-administering/reporting.md) 其
 
 默认报表组件保存在 `/libs/cq/reporting/components`.
 
-但是，强烈建议您不要更新这些节点，而是在下创建自己的组件节点 `/apps/cq/reporting/components` 或者，如果更合适 `/apps/<yourProject>/reports/components`.
+但是，建议您不要更新这些节点，而是在下创建自己的组件节点 `/apps/cq/reporting/components` 或者，如果更合适 `/apps/<yourProject>/reports/components`.
 
 其中（例如）：
 
@@ -212,7 +208,7 @@ N:apps
             N:components [sling:Folder]
 ```
 
-在此下，您将创建报表的根，在此下，创建报表基础组件和列基础组件：
+在此下，您将创建报表的根，并在其下，创建报表基组件和列基组件：
 
 ```
 N:apps
@@ -228,7 +224,7 @@ N:apps
 
 报表页面必须使用 `sling:resourceType` 之 `/libs/cq/reporting/components/reportpage`.
 
-在大多数情况下，不需要自定义页面组件。
+（通常）不需要自定义页面组件。
 
 ## 报表基础组件 {#report-base-component}
 
@@ -238,7 +234,7 @@ N:apps
 
 * 此 [查询定义](#query-definition).
 * An [（可选）对话框](#configuration-dialog) 以配置报表。
-* 任何 [图表](#chart-definitions) 已集成到报告中。
+* 任何 [图表](#chart-definitions) 与报告集成的内容。
 
 ```
 N:<reportname> [cq:Component]
@@ -265,7 +261,7 @@ N:queryBuilder
 
 * `propertyConstraints`
 
-  可用于将结果集限制为具有特定属性（含特定值）的节点。 如果指定了多个约束，则节点必须满足所有约束（AND操作）。
+  将结果集限制为具有特定属性（含特定值）的节点。 如果指定了多个约束，则节点必须满足所有约束（AND操作）。
 
   例如：
 
@@ -289,7 +285,7 @@ N:queryBuilder
 
 * `mandatoryProperties`
 
-  可用于将结果集限制为具有 *所有* 指定属性的。 未考虑属性的值。
+  将结果集限制为具有 *所有* 指定的属性。 未考虑属性的值。
 
 所有变量都是可选的，可以根据需要进行组合，但您必须至少定义其中一个。
 
@@ -326,13 +322,13 @@ N:charting
 
 * `definitions`
 
-  定义可用于报表的图表类型。 此 `definitions` 要使用的将由 `active` 设置。
+  定义可用于报表的图表类型。 此 `definitions` 要使用的由 `active` 设置。
 
   定义是使用节点数组(通常也命名为 `0`， `1`.. `x`)，则每个配置文件具有以下属性：
 
    * `id`
 
-     图表标识。
+     图表的标识。
 
    * `type`
 
@@ -372,17 +368,17 @@ N:charting
 
          * `hoverLimit` ( `Long`)
 
-           要显示弹出窗口的聚合快照（在每个水平线上显示的圆点，表示不同的值）的最大数量，即用户将鼠标悬停在图表图例中的不同值或相应标签上时。
+           要显示弹出窗口的聚合快照（在每个水平线上显示的圆点，表示不同值）的最大数量。 也就是说，当用户在图表图例中将鼠标悬停在不同的值或对应的标签上时。
 
            默认： `35` （即，如果超过35个不同的值适用于当前的图表设置，则根本不会显示弹出窗口）。
 
-           另外，还有10个可以并行显示的弹出窗口（当在图例文本上悬停鼠标时，可以显示多个弹出窗口）。
+           对于可以并行显示的弹出窗口，还有十个额外的限制（当在图例文本上悬停鼠标时，可以显示多个弹出窗口）。
 
 ### 配置对话框 {#configuration-dialog}
 
 每个报告都可以有一个配置对话框，允许用户为报告指定各种参数。 此对话框可通过 **编辑** 按钮。
 
-此对话框是一个标准CQ [对话框](/help/sites-developing/components-basics.md#dialogs) 并且可以按此方式配置(请参阅 [CQ.Dialog](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Dialog) 了解更多信息)。
+此对话框是一个标准CQ [对话框](/help/sites-developing/components-basics.md#dialogs) 并且可以按此方式配置(请参阅 [CQ.Dialog](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.Dialog) 了解更多信息)。
 
 示例对话框如下所示：
 
@@ -429,7 +425,7 @@ N:charting
 
   `/libs/cq/reporting/components/commons/title`
 
-  用于定义报表标题的文本字段。
+  用于定义报告标题的文本字段。
 
 * **`description`**
 
@@ -455,7 +451,7 @@ N:charting
 
 ### 根路径 {#root-path}
 
-此外，可以为报表定义根路径：
+此外，还可以为报告定义根路径：
 
 * **`rootPath`**
 
@@ -476,7 +472,7 @@ N:charting
 * 此 [解析器和预处理](#resolvers-and-preprocessing).
 * 此 [列特定的定义](#column-specific-definitions) (如过滤器和聚合； `definitions` 子节点)。
 * [列默认值](#column-default-values).
-* 此 [客户端筛选器](#client-filter) 从服务器返回的数据中提取要显示的信息。
+* 此 [客户端筛选器](#client-filter) 从服务器返回的数据中提取信息以供显示。
 * 此外，列组件必须提供适当的实例 `cq:editConfig`. 以定义 [事件和操作](#events-and-actions) 必需。
 * 的配置 [通用列](#generic-columns).
 
@@ -523,32 +519,32 @@ N:definitions
 
   定义用于计算实际单元格值的属性。
 
-  如果属性被定义为字符串[] 扫描（按顺序）多个属性以查找实际值。
+  如果属性被定义为字符串[]，则会（按顺序）扫描多个属性以查找实际值。
 
-  例如，在下列情况下：
+  例如，如果存在：
 
   `property = [ "jcr:lastModified", "jcr:created" ]`
 
-  相应的值提取器（在此处进行控制）将：
+  相应的值提取器（在此处进行控制）：
 
-   * 检查是否有jcr：lastModified属性可用，如果存在，则使用它。
-   * 如果没有可用的jcr：lastModified属性，将改用jcr：created的内容。
+   * 检查是否有jcr：lastModified属性可用，如果已可用，则使用它。
+   * 如果没有可用的jcr：lastModified属性，则改用jcr：created的内容。
 
 * `subPath`
 
-  如果结果不位于查询返回的节点上， `subPath` 定义资产的实际位置。
+  如果结果不在查询返回的节点上， `subPath` 定义资产的位置。
 
 * `secondaryProperty`
 
-  定义另一个属性，该属性还必须用于计算实际单元格值；这仅用于特定列类型（差异和可排序）。
+  必须用于计算实际单元格值的第二个属性。 此定义仅用于某些列类型（差异和可排序）。
 
-  例如，在工作流实例报表的情况下，指定的属性用于存储开始时间和结束时间之间时间差的实际值（以毫秒为单位）。
+  例如，如果存在工作流实例报表，则指定的属性用于存储开始时间和结束时间之间时间差的实际值（以毫秒为单位）。
 
 * `secondarySubPath`
 
   与subPath类似，当 `secondaryProperty` 已使用。
 
-在大多数情况下，仅 `property` 将使用。
+通常，仅 `property` 已使用。
 
 ### 客户端筛选器 {#client-filter}
 
@@ -556,7 +552,7 @@ N:definitions
 
 >[!NOTE]
 >
->在应用整个服务器端处理之后，在客户端执行此过滤器。
+>在应用整个服务器端处理之后，在客户端运行此过滤器。
 
 ```xml
 N:definitions
@@ -564,7 +560,7 @@ N:definitions
         P:clientFilter [String]
 ```
 
-`clientFilter` 定义为一个JavaScript函数，该函数：
+此 `clientFilter` 是一个JavaScript函数，该函数：
 
 * 作为输入，接收一个参数；从服务器返回的数据（如此完全预处理）
 * 作为输出，返回滤波（已处理）值；从输入信息提取或导出的数据
@@ -613,7 +609,7 @@ N:definitions
 
    * `path`
 
-     通过可选地附加子路径并从节点的属性中获取实际值（如所定义），解析路径值 `resolverConfig`)。 例如， `path` 之 `/content/.../page/jcr:content` 可以解析为的内容 `jcr:title` 属性，这意味着页面路径解析为页面标题。
+     解析路径值，方法是（可选）附加子路径并从节点的属性中获取实际值（如所定义） `resolverConfig`)。 例如， `path` 之 `/content/.../page/jcr:content` 可以解析为的内容 `jcr:title` 属性，这意味着页面路径解析为页面标题。
 
    * `pathextension`
 
@@ -621,13 +617,13 @@ N:definitions
 
 * `resolverConfig`
 
-  提供解析程序的定义；可用的选项取决于 `resolver` 已选定：
+  提供解析程序的定义。 可用的选项取决于 `resolver` 已选定：
 
    * `const`
 
      使用属性指定要解析的常量。 属性的名称定义要解析的常量；属性的值定义解析的值。
 
-     例如，属性具有 **名称**= `1` 和 **值** `=One` 将解析1对1。
+     例如，属性具有 **名称**= `1` 和 **值** `=One` 解析1到1。
 
    * `default`
 
@@ -661,7 +657,7 @@ N:definitions
 
       * `i18n` （可选；键入布尔值）
 
-        确定解析的值是否应为 *国际化* (即使用 [CQ5的国际化服务](/help/sites-administering/tc-manage.md))。
+        确定解析的值是否应为 *国际化* (即，使用 [CQ5的国际化服务](/help/sites-administering/tc-manage.md))。
 
 * `preprocessing`
 
@@ -681,7 +677,7 @@ N:definitions
 
 **常量**
 
-以下内容将解析的常量值 `VersionCreated` 到字符串 `New version created`.
+下面解析一个常量值 `VersionCreated` 到字符串 `New version created`.
 
 请参阅 `/libs/cq/reporting/components/auditreport/typecol/definitions/data`.
 
@@ -745,7 +741,7 @@ N:data
 
   如有必要，可以为每个聚合提供单独的定义。
 
-  要为聚合值指定显式预处理，预处理定义必须驻留在各自的上 `aggregated` 子节点( `apply/aggregated`， `applyAfter/aggregated`)。 如果需要对不同的聚合进行显式预处理，则预处理定义将位于具有相应聚合名称的子节点上(例如 `apply/aggregated/min/max` 或其他聚合)。
+  要为聚合值指定显式预处理，预处理定义必须驻留在各自的上 `aggregated` 子节点( `apply/aggregated`， `applyAfter/aggregated`)。 如果需要对不同的聚合进行显式预处理，则预处理定义位于具有相应聚合名称的子节点上(例如 `apply/aggregated/min/max` 或其他聚合)。
 
 您可以指定预处理期间使用的以下任一选项：
 
@@ -754,7 +750,7 @@ N:data
 
 * [数据类型格式化程序](#preprocessing-data-type-formatters)
 
-  将数值转换为相对字符串；例如，“表示1小时时间差的值”将解析为字符串，如 `1:24PM (1 hour ago)`.
+  将数值转换为相对字符串；例如，“表示一小时时间差的值”将解析为字符串，如 `1:24PM (1 hour ago)`.
 
 例如：
 
@@ -779,7 +775,7 @@ N:definitions
 
 * `replace`
 
-  将用作原始字符串的替换的字符串或字符串表示形式。 通常，它表示由正则表达式定位的字符串的子字符串 `pattern`.
+  用作原始字符串的替换的字符串或字符串表示形式。 通常，它表示由正则表达式定位的字符串的子字符串 `pattern`.
 
 示例替换可划分为：
 
@@ -792,7 +788,7 @@ N:definitions
 
    * `/content/geometrixx/en/services/jcr:content/par/text`
 
-* 将分为四个部分：
+* 分为四个部分：
 
    * `$1` - `(.*)` - `/content/geometrixx/en/services`
    * `$2` - `(/jcr:content)` - `/jcr:content`
@@ -807,7 +803,7 @@ N:definitions
 
 这些格式化程序将数值转换为相对字符串。
 
-例如，这可用于时间列，它允许 `min`， `avg` 和 `max` 聚合。 作为 `min`/ `avg`/ `max` 聚合显示为 *时差* (例如， `10 days ago`)，则需要数据格式化程序。 对于此， `datedelta` 格式化程序应用于 `min`/ `avg`/ `max` 聚合值。 如果 `count` 聚合也可用，因此它不需要格式器，原始值也不需要。
+例如，这可用于时间列，它允许 `min`， `avg` 和 `max` 聚合。 作为 `min`/ `avg`/ `max` 聚合显示为 *时差* (例如， `10 days ago`)，则需要数据格式化程序。 对于此， `datedelta` 格式化程序应用于 `min`/ `avg`/ `max` 聚合值。 如果 `count` 聚合也可用，它不需要格式器，原始值也不需要。
 
 目前可用的数据类型格式化程序包括：
 
@@ -817,13 +813,13 @@ N:definitions
 
    * `duration`
 
-     持续时间是两个已定义日期之间的时间范围。 例如，一个耗时1小时的工作流操作的开始和结束，从2011年2月13日11:23小时开始，然后在一个小时后的2月13日11日12:23小时结束。
+     持续时间是两个已定义日期之间的时间范围。 例如，某个工作流操作的开始和结束时间为1小时，从2/13/11 11:23h开始，1小时后于2/13/11 12:23h结束。
 
      它将数值（解释为毫秒）转换为持续时间字符串；例如， `30000` 格式为* `30s`.*
 
    * `datedelta`
 
-     Datadelta是过去某个日期到“现在”之间的时间范围（因此，如果在以后的某个时间点查看报表，结果将不同）。
+     Datadelta是过去日期到“现在”之间的时间范围（因此，如果在以后的某个时间点查看报表，则结果不同）。
 
      它将数字值（解释为以天为单位的时间差异）转换为相对日期字符串。 例如，1的格式为1天前。
 
@@ -843,7 +839,7 @@ N:definitions
 
 ### 列特定的定义 {#column-specific-definitions}
 
-列特定的定义定义了该列可用的过滤器和聚合。
+特定于列的定义定义定义了该列可用的过滤器和聚合。
 
 ```xml
 N:definitions
@@ -875,19 +871,19 @@ N:definitions
    * `diff`
    * `timeslot`
 
-     用于提取聚合所需日期的各个部分（例如，按年分组以获取每年聚合的数据）。
+     用于提取聚合所需日期的各个部分（例如，按年分组，以获取每年聚合的数据）。
 
    * `sortable`
 
      用于使用不同值（从不同属性获取）进行排序和显示的值。
 
-  此外。 以上任何一项都可以定义为多个值；例如， `string[]` 定义字符串数组。
+  此外，以上任何一种都可以定义为多值，例如， `string[]` 定义字符串数组。
 
   值提取器由列类型选择。 如果值提取器可用于列类型，则使用此提取器。 否则，使用默认值提取器。
 
   类型可以（可选）采用参数。 例如， `timeslot:year` 从日期字段中提取年份。 类型及其参数：
 
-   * `timeslot`  — 这些值与对应的常量进行比较， `java.utils.Calendar`.
+   * `timeslot`  — 这些值与对应的常量具有可比性， `java.utils.Calendar`.
 
       * `timeslot:year` - `Calendar.YEAR`
       * `timeslot:month-of-year` - `Calendar.MONTH`
@@ -924,15 +920,15 @@ N:definitions
 
       * `raw`
 
-        对原始数据应用过滤器。
+        该过滤器应用于原始数据。
 
       * `preprocessed`
 
-        筛选器应用于预处理数据。
+        该过滤器应用于预处理数据。
 
       * `resolved`
 
-        筛选器应用于已解析的数据。
+        该过滤器应用于已解析的数据。
 
 * `aggregates`
 
@@ -940,7 +936,7 @@ N:definitions
 
    * `text`
 
-     聚合的文本名称。 如果 `text` 如果未指定，则它会采用聚合的默认描述；例如， `minimum` 将用于 `min` 聚合。
+     聚合的文本名称。 如果 `text` 如果未指定，则它采用聚合的默认描述。 例如， `minimum` 用于 `min` 聚合。
 
    * `type`
 
@@ -956,31 +952,31 @@ N:definitions
 
       * `min`
 
-        提供最小值。
+        它提供最小值。
 
       * `max`
 
-        提供最大值。
+        它提供最大值。
 
       * `average`
 
-        提供平均值。
+        它提供平均值。
 
       * `sum`
 
-        提供所有值的总和。
+        它提供所有值的总和。
 
       * `median`
 
-        提供中间值。
+        它提供中间值。
 
       * `percentile95`
 
-        采用所有值的第95百分位数。
+        使用所有值的第95百分位数。
 
 ### 列默认值 {#column-default-values}
 
-用于定义列的默认值：
+定义列的默认值：
 
 ```xml
 N:defaults
@@ -1015,9 +1011,9 @@ N:cq:editConfig [cq:EditConfig]
 
 通用列是一种扩展，其中（大部分）列定义存储在列节点的实例（而不是组件节点）上。
 
-它们为各个类属组件使用（标准）对话框，该对话框由您定制。 该对话框允许报告用户在报告页面上定义通用列的列属性（使用菜单选项） **列属性……**)。
+它们使用（标准）对话框，您可以为单个类属元件定制该对话框。 此对话框允许报告用户定义报告页面上通用列的列属性（使用菜单选项） **列属性……**)。
 
-示例为 **通用** 列 **用户报告**；请参见 `/libs/cq/reporting/components/userreport/genericcol`.
+示例为 **通用** 列 **用户报告**. 请参阅 `/libs/cq/reporting/components/userreport/genericcol`.
 
 要将列设为通用列，请执行以下操作：
 
@@ -1041,7 +1037,7 @@ N:cq:editConfig [cq:EditConfig]
 
 * 使用标准AEM方法定义（其他）列属性。
 
-  请注意，对于在组件和列实例上定义的属性，列实例上的值优先。
+  对于在组件和列实例上定义的属性，列实例上的值优先。
 
   通用列的可用属性包括：
 
@@ -1053,7 +1049,7 @@ N:cq:editConfig [cq:EditConfig]
    * `definitions/queryBuilder`  — 查询生成器配置
    * `defaults/aggregate`  — 默认聚合
 
-  如果是在上的类属列的新实例 **用户报告** 通过对话框定义的属性将保留在下：
+  如果类属列的新实例位于 **用户报告**，则通过对话框定义的属性将保留在下：
 
   `/etc/reports/userreport/jcr:content/report/columns/genericcol/settings/generic`
 
@@ -1061,13 +1057,13 @@ N:cq:editConfig [cq:EditConfig]
 
 设计会定义哪些列类型可用于创建报告。 它还定义了向其中添加列的段落系统。
 
-强烈建议您为每个报告创建单独的设计。 这可确保完全的灵活性。 另请参阅 [定义新报告](#defining-your-new-report).
+Adobe建议您为每个报告创建单独的设计。 这样做可确保完全的灵活性。 请参阅 [定义新报告](#defining-your-new-report).
 
 默认报表组件保存在 `/etc/designs/reports`.
 
-报告的位置可能取决于组件所在的位置：
+报表的位置取决于组件的位置：
 
-* `/etc/designs/reports/<yourReport>` 如果报告位于下方，则适用 `/apps/cq/reporting`
+* `/etc/designs/reports/<yourReport>` 适用于报告位于 `/apps/cq/reporting`
 
 * `/etc/designs/<yourProject>/reports/<*yourReport*>` 对于使用 `/apps/<yourProject>/reports` 模式
 
@@ -1105,9 +1101,9 @@ N:cq:editConfig [cq:EditConfig]
 
 >[!NOTE]
 >
->建议您不要对标准报表设计进行任何更改。 这是为了确保您在升级或安装修补程序时不会丢失任何更改。
+>Adobe建议您不要更改标准报表设计。 这是为了确保您在升级或安装修补程序时不会丢失任何更改。
 >
->如果您要自定义标准报表，请复制报表及其设计。
+>如果要自定义标准报表，请复制报表及其设计。
 
 >[!NOTE]
 >
@@ -1122,7 +1118,7 @@ N:cq:editConfig [cq:EditConfig]
 * 设置 `sling:resourceType` 到 `cq/reporting/components/reportpage`
 
 * 指示要使用的设计
-* 创建 `report` 引用容器的子节点( `reportbase`)组件通过 `sling:resourceType` 属性
+* 创建 `report` 引用容器的子节点( `reportbase`)组件使用 `sling:resourceType` 属性
 
 模板片段的示例（取自组件报表模板）为：
 
@@ -1157,7 +1153,7 @@ N:cq:editConfig [cq:EditConfig]
 
 默认报表模板保留在 `/libs/cq/reporting/templates`.
 
-但是，强烈建议您不要更新这些节点，而是在下创建自己的组件节点 `/apps/cq/reporting/templates` 或者，如果更合适 `/apps/<yourProject>/reports/templates`.
+但是，Adobe建议您不要更新这些节点。 请改为在下创建自己的组件节点 `/apps/cq/reporting/templates` 或者，如果更合适 `/apps/<yourProject>/reports/templates`.
 
 其中，作为示例(另请参阅 [报表组件的位置](#location-of-report-components))：
 
@@ -1168,7 +1164,7 @@ N:apps
             N:templates [sling:Folder]
 ```
 
-在此下，您将创建模板的根：
+在此下，创建模板的根：
 
 ```xml
 N:apps
@@ -1182,7 +1178,7 @@ N:apps
 
 ### 定义新报告 {#defining-your-new-report}
 
-要定义新报告，您必须创建和配置：
+要定义报表，请创建和配置：
 
 1. 报表组件的根。
 1. 报表基础组件。
@@ -1191,7 +1187,7 @@ N:apps
 1. 报表模板的根。
 1. 报表模板。
 
-为了说明这些步骤，以下示例定义了一个报告，其中列出了存储库中的所有OSGi配置；即 `sling:OsgiConfig` 节点。
+为了说明这些步骤，以下示例定义了一个报表，其中列出了存储库中的所有OSGi配置。 也就是说， `sling:OsgiConfig` 节点。
 
 >[!NOTE]
 >
@@ -1208,7 +1204,7 @@ N:apps
                N:osgireport [sling:Folder]
    ```
 
-1. 定义您的报表库。 例如 `osgireport[cq:Component]` 下 `/apps/cq/reporting/components/osgireport`.
+1. 定义您的报表库。 例如， `osgireport[cq:Component]` 下 `/apps/cq/reporting/components/osgireport`.
 
    ```xml
    N:osgireport [sling:Folder]
@@ -1260,7 +1256,7 @@ N:apps
    * 显示两者 `pie` 和 `lineseries` 图表
    * 为用户配置报告提供了一个对话框
 
-1. 定义您的第一列(columnbase)组件。 例如 `bundlecol[cq:Component]` 下 `/apps/cq/reporting/components/osgireport`.
+1. 定义您的第一列(columnbase)组件。 例如， `bundlecol[cq:Component]` 下 `/apps/cq/reporting/components/osgireport`.
 
    ```xml
    N:osgireport [sling:Folder]
@@ -1288,7 +1284,7 @@ N:apps
                    P:property [String] = "jcr:path"
    ```
 
-   这将定义一个列基本组件，该组件可以：
+   这将定义一个具有以下特征的列基组件：
 
    * 搜索并返回它从服务器收到的值；在本例中，属性为 `jcr:path` 每隔 `sling:OsgiConfig` 节点
    * 提供 `count` 总计
@@ -1310,7 +1306,7 @@ N:apps
    >
    >其中，函数仅返回它收到的值。
 
-1. 定义报告设计。 例如 `osgireport[cq:Page]` 下 `/etc/designs/reports`.
+1. 定义报告设计。 例如， `osgireport[cq:Page]` 下 `/etc/designs/reports`.
 
    ```xml
    N:osgireport [cq:Page]
@@ -1335,7 +1331,7 @@ N:apps
                N:osgireport [cq:Template]
    ```
 
-1. 定义报表模板。 例如 `osgireport[cq:Template]` 下 `/apps/cq/reporting/templates`.
+1. 定义报表模板。 例如， `osgireport[cq:Template]` 下 `/apps/cq/reporting/templates`.
 
    ```xml
    N:osgireport [cq:Template]
@@ -1367,12 +1363,12 @@ N:apps
 
 1. 选择 **报表** 在左窗格中。
 1. 则 **新建……** 工具栏中。 定义 **标题** 和 **名称**，选择您的新报表类型( **OSGi报表模板**)，然后单击 **创建**.
-1. 您的新报告实例将显示在列表中。 双击以打开。
+1. 您的新报表实例随即会显示在列表中。 双击以打开。
 1. 拖动组件(例如， **捆绑** 在 **OSGi报表** 组)创建第一列和 [启动报表定义](/help/sites-administering/reporting.md#the-basics-of-report-customization).
 
    >[!NOTE]
    >
-   >由于此示例没有任何可分组的列，因此图表将不可用。 要查看图表，请设置 `groupable` 到 `true`：
+   >由于此示例没有任何可分组的列，因此图表不可用。 要查看图表，请设置 `groupable` 到 `true`：
    >
    >```
    >N:osgireport [sling:Folder]
@@ -1386,41 +1382,41 @@ N:apps
 
 此部分介绍用于实施报表框架的OSGi服务的高级配置选项。
 
-可以使用Web控制台的“配置”菜单(例如， `http://localhost:4502/system/console/configMgr`)。 使用AEM时，可通过多种方法管理此类服务的配置设置；请参阅 [配置OSGi](/help/sites-deploying/configuring-osgi.md) 以了解更多详细信息和建议的做法。
+可以使用Web控制台的配置菜单(位于 `http://localhost:4502/system/console/configMgr`例如)。 使用AEM时，可通过多种方法管理此类服务的配置设置；请参阅 [配置OSGi](/help/sites-deploying/configuring-osgi.md) 以了解更多详细信息和建议的做法。
 
 ### 基本服务（Day CQ报告配置） {#basic-service-day-cq-reporting-configuration}
 
 * **时区** 定义为其创建历史数据的时区。 这是为了确保历史图表显示全球每个用户的相同数据。
-* **区域设置** 定义要与配合使用的区域设置 **时区** 用于历史数据。 区域设置用于确定某些特定于区域设置的日历设置（例如，一周的第一天是星期日还是星期一）。
+* **区域设置** 定义要使用的区域设置 **时区** 用于历史数据。 区域设置用于确定某些特定于区域设置的日历设置（例如，一周的第一天是星期日还是星期一）。
 
 * **快照路径** 定义存储历史图表快照的根路径。
 * **报表路径** 定义报告所在的路径。 快照服务使用此选项来确定要为其实际生成快照的报表。
 * **每日快照** 定义每天生成每日快照的小时。 指定的小时位于服务器的本地时区中。
 * **每小时快照** 定义在生成每小时快照时每小时的分钟数。
-* **行（最大值）** 定义为每个快照存储的最大行数。 应当合理选择此值；如果此值过高，将会影响存储库的大小；如果太低，则数据可能因为历史数据的处理方式而不准确。
-* **虚假数据**，如果启用，则可以使用创建虚假历史数据 `fakedata` 选择器；如果禁用，则使用 `fakedata` 选择器将引发异常。
+* **行（最大值）** 定义为每个快照存储的最大行数。 应合理选择此值。 如果它太高，则会影响存储库的大小；如果太低，则数据可能因为处理历史数据的方式而不准确。
+* **虚假数据**，如果启用，则可以使用创建虚假历史数据 `fakedata` 选择器；如果禁用，则使用 `fakedata` 选择器引发异常。
 
-  因为数据是假的，所以它必须 *仅限* 用于测试和调试目的。
+  因为数据是假的，所以必须 *仅限* 用于测试和调试目的。
 
-  使用 `fakedata` 选择器将隐式完成报告，因此所有现有数据都将丢失；数据可以手动恢复，但这是一个非常耗时的过程。
+  使用 `fakedata` 选择器隐式完成报表，因此所有现有数据都会丢失。 数据可以手动恢复，但这是一个非常耗时的过程。
 
 * **快照用户** 定义可用于生成快照的可选用户。
 
-  基本上，会为完成报告的用户拍摄快照。 在某些情况下（例如在发布系统上，此用户不存在，因为其帐户尚未复制），您需要指定替代使用的回退用户。
+  基本上，会为完成报告的用户拍摄快照。 在某些情况下（例如，在发布系统上，此用户不存在，因为其帐户尚未复制），您可能会需要指定替代使用的回退用户。
 
   此外，指定用户可能会带来安全风险。
 
-* **强制快照用户**，如果启用，将使用下指定的用户拍摄所有快照 *快照用户*. 如果处理不当，可能会带来严重的安全影响。
+* **强制快照用户**，如果启用，则所有快照都将使用下指定的用户来创建 *快照用户*. 如果处理不当，这可能会造成严重的安全影响。
 
 ### 缓存设置(Day CQ Reporting Cache) {#cache-settings-day-cq-reporting-cache}
 
-* **启用** 允许您启用或禁用报表数据的缓存。 在多次请求期间，启用报表缓存会将报表数据保留在内存中。 这可能会提高性能，但会导致内存消耗增加，并且在极端情况下可能会导致内存不足。
-* **TTL** 定义缓存报表数据的时间（以秒为单位）。 较高的数字会提升性能，但如果数据在该时间段内发生更改，则也可能返回不准确的数据。
+* **启用** 允许您启用或禁用报表数据的缓存。 启用报表缓存会在多个请求期间将报表数据保留在内存中。 这可能会提高性能，但会导致内存消耗增加，并且在极端情况下可能会导致内存不足的情况。
+* **TTL** 定义缓存报表数据的时间（以秒为单位）。 较高的数字可以提高性能，但如果数据在某个时间段内发生更改，则也可能返回不准确的数据。
 * **最大条目数** 定义在任意时间要缓存的报表的最大数量。
 
 >[!NOTE]
 >
->每个用户和语言的报告数据可能不同。 因此，根据报表、用户和语言，会缓存报表数据。 这意味着 **最大条目数** 值 `2` 实际缓存以下任一项的数据：
+>每个用户和语言的报告数据可能不同。 因此，按照报表、用户和语言，会缓存报表数据。 这意味着 **最大条目数** 值 `2` 实际缓存以下任一项的数据：
 >
 >* 一个报表，用于具有不同语言设置的两个用户
 >* 一个用户和两个报告
