@@ -1,20 +1,16 @@
 ---
 title: OSGi组和权限上的AEM Forms
-seo-title: AEM Forms on OSGi Groups and Privileges
-description: 将用户分配给组以在OSGi上管理AEM Forms
-seo-description: Assign users to the groups to manage AEM Forms on OSGi
-uuid: f269a206-356d-4cee-b449-05c5da87121a
+description: 将用户分配给组以在OSGi上管理Adobe Experience Manager (AEM) Forms
 contentOwner: anujkapo
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 content-type: reference
 topic-tags: Configuration
-discoiquuid: 1717b1b4-1c2a-450e-8e79-4156a974d5fa
 docset: aem65
 role: Admin
 exl-id: d802ac53-e3db-45ca-afcb-7e99d0bb7877
-source-git-commit: 3bc61e56d2fcd9f32c37a7ea04b0ffc6728bfc56
+source-git-commit: f7b24617dec77c6907798b1615debdc2329c9d80
 workflow-type: tm+mt
-source-wordcount: '282'
+source-wordcount: '293'
 ht-degree: 6%
 
 ---
@@ -26,9 +22,9 @@ ht-degree: 6%
 | AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/setup-configure-migrate/forms-groups-privileges-tasks.html) |
 | AEM 6.5 | 本文 |
 
-您可以 [创建组](/help/sites-administering/user-group-ac-admin.md#group-administration) 并分配策略和 [用户](/help/sites-administering/user-group-ac-admin.md#user-administration) 到AEM中的组。 这些策略控制属于组的用户的权限。
+您可以 [创建组](/help/sites-administering/user-group-ac-admin.md#group-administration) 并分配策略和 [用户](/help/sites-administering/user-group-ac-admin.md#user-administration) 到Adobe Experience Manager (AEM)中的组。 这些策略控制属于组的用户的权限。
 
-安装后 [AEM Forms附加组件包](../../forms/using/installing-configuring-aem-forms-osgi.md)，则本文中提到的组（例如forms-users和forms-power-user）会自动可用于分配。 下表列出了用户可基于组分配在OSGi上为AEM Forms执行的任务：
+安装之后 [AEM Forms附加组件包](../../forms/using/installing-configuring-aem-forms-osgi.md)，则本文中提到的组（例如forms-users和forms-power-user）会自动可用于分配。 下表列出了用户可基于组分配在OSGi上为AEM Forms执行的任务：
 
 <table>
  <tbody>
@@ -99,7 +95,7 @@ ht-degree: 6%
    <td>workflow-users</td> 
    <td>
     <ul> 
-     <li>使用AEM收件箱应用程序<br /> <strong>注意： </strong>您必须具有cm-agent-users和workflow-users组分配才能访问AEM收件箱中的Interactive Communications Agent UI。</li> 
+     <li>使用AEM收件箱应用程序<br /> <strong>注意： </strong>您必须具有cm-agent-users和workflow-users组分配，才能访问AEM收件箱中的交互式通信代理UI。</li> 
      <li>管理工作流实例</li> 
     </ul> </td> 
   </tr>
@@ -108,7 +104,7 @@ ht-degree: 6%
    <td>
     <ul> 
      <li>配置 PDF 生成器</li> 
-     <li>配置观察文件夹</li> 
+     <li>配置Watched文件夹</li> 
      <li>管理工作流应用程序</li> 
     </ul> </td> 
   </tr>

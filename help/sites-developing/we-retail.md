@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 exl-id: 504c61c7-dcd3-412c-9239-d24a2b78e4b9
-source-git-commit: 1ef5593495b4bf22d2635492a360168bccc1725d
+source-git-commit: f7b24617dec77c6907798b1615debdc2329c9d80
 workflow-type: tm+mt
-source-wordcount: '749'
-ht-degree: 9%
+source-wordcount: '759'
+ht-degree: 10%
 
 ---
 
@@ -17,11 +17,11 @@ ht-degree: 9%
 
 ## 简介 {#introduction}
 
-We.Retail是一个参考实施和示例内容，说明了使用Adobe Experience Manager设置在线展示的推荐方法。
+We.Retail是一个参考实施和示例内容，它说明了使用Adobe Experience Manager设置在线展示的推荐方法。
 
-We.Retail使用最新的AEM技术，例如HTL、响应式布局、可编辑模板、核心组件等。
+We.Retail使用最新的Adobe Experience Manager (AEM)技术，例如HTL、响应式布局、可编辑模板、核心组件等。
 
-虽然它演示了一个零售垂直领域，但网站设置的方式可应用于任何垂直领域，并且只有产品目录和购物车功能特定于零售领域。
+虽然它说明了零售行业，但网站设置方式可应用于任何行业，并且只有产品目录和购物车功能是零售特定的。
 
 ## 功能 {#features}
 
@@ -29,19 +29,19 @@ We.Retail使用最新的AEM技术，例如HTL、响应式布局、可编辑模�
 
 | **专题** | **描述** | **有兴趣吗？** |
 |---|---|---|
-| [全局化站点结构](/help/sites-administering/tc-bp.md) | We.Retail包括语言母版，这些母版会实时复制到特定于国家/地区的站点中。 | [试试看！](/help/sites-developing/we-retail-globalized-site-structure.md) |
-| [响应式布局](/help/sites-authoring/responsive-layout.md) | 所有页面均采用响应式布局，可动态适应屏幕和设备大小。 | [试试看！](/help/sites-developing/we-retail-responsive-layout.md) |
+| [全局化站点结构](/help/sites-administering/tc-bp.md) | We.Retail包括语言母版，这些母版将实时复制到国家/地区特定的站点中。 | [试试看！](/help/sites-developing/we-retail-globalized-site-structure.md) |
+| [响应式布局](/help/sites-authoring/responsive-layout.md) | 所有页面都具有响应式布局，可动态调整以适应屏幕和设备大小。 | [试试看！](/help/sites-developing/we-retail-responsive-layout.md) |
 | [可编辑的模板](/help/sites-developing/page-templates-editable.md) | 所有页面都基于可编辑的模板，允许非开发人员调整和自定义模板。 | [试试看！](/help/sites-developing/we-retail-editable-templates.md) |
 | [HTML 模板语言](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html) | 所有组件都基于HTL |  |
 | [电子商务功能](/help/commerce/cif-classic/developing/ecommerce.md) | 功能产品目录 |  |
 | [社区站点](/help/communities/overview.md) | 允许访客加入社区讨论、阅读博客等 |  |
-| [核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) | 所有组件都基于新的核心组件，更易于使用且用户可立即配置 | [试试看！](/help/sites-developing/we-retail-core-components.md) |
+| [核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) | 所有组件都基于新的核心组件，并且更加可用，可开箱即用且可由用户配置 | [试试看！](/help/sites-developing/we-retail-core-components.md) |
 | [内容片段](/help/assets/content-fragments/content-fragments.md) | We.Retail体验部分展示了通过内容片段重用内容的强大功能。 | [试试看！](/help/sites-developing/we-retail-content-fragments.md) |
 | [体验片段](/help/sites-authoring/experience-fragments.md) | 体验片段是由一个或多个组件组成的组，其中包括可在页面中引用的内容和布局。 | [试试看！](/help/sites-developing/we-retail-experience-fragments.md) |
 
 ## 快速入门 {#getting-started}
 
-We.Retail作为AEM示例内容提供。 要使用，只需使用 [像往常一样启动AEM](/help/sites-deploying/deploy.md#getting-started)，确保未禁用示例内容。
+We.Retail作为AEM示例内容提供。 要使用，只需使用 [像往常一样启动AEM](/help/sites-deploying/deploy.md#getting-started)，并确保未禁用示例内容。
 
 >[!CAUTION]
 >
@@ -53,7 +53,7 @@ We.Retail作为AEM示例内容提供。 要使用，只需使用 [像往常一�
 
 ### 最新版本 {#latest-version}
 
-尽管We.Retail随AEM版本一起分发，但在该版本之后可能会对内容及其功能进行更新。 因此，可以 [从GitHub下载最新版本](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/releases) 然后 [上传](/help/sites-administering/package-manager.md#uploading-packages-from-your-file-system) 和 [安装](/help/sites-administering/package-manager.md#installing-packages) 它作为您的AEM实例上的包。
+尽管We.Retail随AEM版本一起分发，但可能会在该版本之后对内容及其功能进行更新。 因此，可以 [从GitHub下载最新版本](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/releases) 然后 [上传](/help/sites-administering/package-manager.md#uploading-packages-from-your-file-system) 和 [安装](/help/sites-administering/package-manager.md#installing-packages) 它会在您的AEM实例中作为包提供。
 
 ### 首要步骤 {#first-steps}
 
@@ -64,9 +64,9 @@ We.Retail作为AEM示例内容提供。 要使用，只需使用 [像往常一�
 
 ## We.Retail和Geometrixx {#we-retail-geometrixx}
 
-在AEM的早期版本中，Geometrixx及其许多化身用作示例内容。 自6.3版本以来，We.Retail一直是随AEM提供的示例内容，并用作新的标准参考实施。
+Geometrixx及其许多化身在早期版本的AEM中用作示例内容。 自版本6.3开始，We.Retail是与AEM一起提供的示例内容，可用作新的标准参考实施。
 
-We.Retail在技术上更加稳健，它利用最新的AEM技术来提高灵活性和可扩展性，同时还演示了该产品的最新功能。
+We.Retail在技术上更加稳健，它利用最新的AEM技术变得更加灵活和可扩展，同时还演示了该产品的最新功能。
 
 ### 功能比较 {#feature-comparison}
 
@@ -87,22 +87,22 @@ We.Retail在技术上更加稳健，它利用最新的AEM技术来提高灵活�
 | Screens | 可用 | 不可用 |
 | 移动设备 | 不可用 | 可用 |
 | 手稿 | 不可用 | 可用 |
-| 轮播、下载、图表组件 | 不可用 | 可用 |
+| 轮播查看器、下载和图表组件 | 不可用 | 可用 |
 | 列控件 | 替换为布局容器 | 可用 |
 | Forms | 不可用 | 可用 |
 | 营销活动 | 无电子邮件示例 | 可用 |
 
 >[!NOTE]
 >
->此列表力求完整，但不应被视为详尽无遗。
+>此列表力求完整，但不应视为详尽无遗。
 
 ## Contribute {#contribute}
 
-We.Retail已作为开源项目发布，并且可以从GitHub下载源代码的最新版本。
+We.Retail已作为开源项目发布，可以从GitHub下载最新版本的源代码。
 
 GITHUB上的代码
 
-您可以在GitHub上找到此页面的代码
+您可以在 GitHub 上找到此页面的代码。
 
 * [在GitHub上打开aem-sample-we-retail项目](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail)
 * 将项目下载为 [ZIP文件](https://codeload.github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/zip/refs/heads/master)
@@ -111,7 +111,7 @@ GITHUB上的代码
 
 如果遇到问题，请将 [GitHub问题](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/issues).
 
-您可以随意取舍，也可以参与其中 [拉取请求](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/pulls).
+欢迎您随心所欲地提出建议或投稿 [拉取请求](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/pulls).
 
 ## 预览 {#preview}
 
