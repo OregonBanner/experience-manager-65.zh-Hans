@@ -7,9 +7,9 @@ geptopics: SG_AEMFORMS/categories/jee
 docset: aem65
 role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
-source-git-commit: 54bed871375ddc9d18af564318ceac95dd1dd2f9
+source-git-commit: d76fce58973bd011b53a5da41578b57a8e10912e
 workflow-type: tm+mt
-source-wordcount: '3667'
+source-wordcount: '3694'
 ht-degree: 1%
 
 ---
@@ -707,7 +707,7 @@ Adobe保留在任意给定时刻更改AEM Forms on JEE版本支持的第三方�
 - Microsoft® Windows Server 2019（64位）
 - Microsoft® Active Directory 2016
 
-以下平台在2022年6月2日发行的AEM Forms 6.5.18.0中标记为已弃用：
+以下平台在2022年6月2日发行的AEM Forms 6.5.17.0中标记为已弃用：
 
 - Microsoft®SharePoint 2016
 
@@ -731,15 +731,14 @@ Adobe保留在任意给定时刻更改AEM Forms on JEE版本支持的第三方�
 - Microsoft® Office 2016
 - OpenOffice 4.1.2
 
-<!--
+
 >[!NOTE]
 >
->The platforms marked as [deprecated on with AEM Forms 6.5.12.0 and 6.5.10.0 remain in support until AEM Forms 6.5 Service Pack 18 (6.5.18.0) release](https://helpx.adobe.com/support/programs/eol-matrix.html).
--->
+已弃用的平台将继续获得支持，直到平台被标记为已删除或平台的第三方供应商支持到达其生命周期结束为止（以先到者为准）。
 
 ## 修订历史记录 {#revision-history}
 
-- 2023年8月31日
+- 6.5.18.0（2023年8月31日）
    - **平台更新**： [!DNL Adobe Experience Manager Forms] on JEE已添加对以下平台的支持：
       - MongoDB Enterprise 4.4
       - oracleWebLogic Server 14c
@@ -768,7 +767,7 @@ Adobe保留在任意给定时刻更改AEM Forms on JEE版本支持的第三方�
       - OpenOffice 4.1.2
       - Acrobat 2017 (Classic Track)版本17.011.30078或更高版本
 
-- 2022年9月01日
+- 6.5.10.0（2022年9月01日）
 
    - 添加了对用于应用程序服务器JBoss™ EAP 7.4的OracleJava® SE 11 （64位）SDK的支持。
 
