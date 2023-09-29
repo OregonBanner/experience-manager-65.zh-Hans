@@ -11,7 +11,7 @@ role: Developer
 source-git-commit: 1481d613783089046b44d4652d38f7b4b16acc4d
 workflow-type: tm+mt
 source-wordcount: '1296'
-ht-degree: 37%
+ht-degree: 38%
 
 ---
 
@@ -35,14 +35,14 @@ ht-degree: 37%
    + [参考资料](reference-materials.md)
    + [创建功能齐全的网站（经典UI）](website.md)
    + [设计和设计器（经典UI）](designer.md)
-   + [迁移到触控UI](/help/sites-developing/touch-ui-migration.md)
+   + [迁移到Touch UI](/help/sites-developing/touch-ui-migration.md)
 + 平台{#platform}
    + [Sling 备忘单](sling-cheatsheet.md)
    + [使用 Sling 适配器](sling-adapters.md)
    + [标记库](taglib.md)
    + 模板{#templates}
       + [模板](templates.md)
-      + [页面模板 — 可编辑 ](page-templates-editable.md)
+      + [页面模板 — 可编辑](page-templates-editable.md)
       + [页面模板 — 静态](page-templates-static.md)
       + [内容片段模板](content-fragment-templates.md)
       + [自适应模板渲染](templates-adaptive-rendering.md)
@@ -57,10 +57,10 @@ ht-degree: 37%
    + 标记{#tagging}
       + [标记](tags.md)
       + [AEM 标记框架](framework.md)
-      + [在AEM应用程序中构建标记](building.md)
+      + [在AEM应用程序中生成标记](building.md)
    + [自定义错误处理程序显示的页面](customizing-errorhandler-pages.md)
    + [自定义节点类型](custom-nodetypes.md)
-   + [为图形渲染添加字体](adding-fonts.md)
+   + [添加用于图形渲染的字体](adding-fonts.md)
    + [连接到SQL数据库](jdbc.md)
    + [将URL外部化](externalizer.md)
    + [创建和使用卸载作业](dev-offloading.md)
@@ -70,7 +70,7 @@ ht-degree: 37%
    + [开发批量编辑器](dev-bulk-editor.md)
    + [开发报告](dev-reports.md)
 + 组件{#components}
-   + [核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)
+   + [核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
    + [样式系统](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/style-system.html)
    + [组件概述](components.md)
    + [AEM组件 — 基础知识](components-basics.md)
@@ -83,7 +83,7 @@ ht-degree: 37%
    + [使用隐藏条件](hide-conditions.md)
    + [配置多个就地编辑器](multiple-inplace-editors.md)
    + [开发人员模式](developer-mode.md)
-   + [测试您的UI](hobbes.md)
+   + [测试UI](hobbes.md)
    + [内容片段的组件](components-content-fragments.md)
    + [获取JSON格式的页面信息](pageinfo.md)
    + 国际化{#internationalization}
@@ -158,7 +158,7 @@ ht-degree: 37%
    + [SPA 编辑器概述](spa-overview.md)
    + [SPA Blueprint](spa-blueprint.md)
    + [SPA 页面组件](spa-page-component.md)
-   + [对组件映射进行动态建模 对于SPA](spa-dynamic-model-to-component-mapping.md)
+   + [对组件映射进行动态建模 适用于SPA的](spa-dynamic-model-to-component-mapping.md)
    + [SPA模型路由](spa-routing.md)
    + [RemotePage 组件](spa-remote-page.md)
    + [在 AEM 中编辑外部 SPA](spa-edit-external.md)
@@ -188,7 +188,7 @@ ht-degree: 37%
    + [将ContextHub添加到页面并访问存储](ch-adding.md)
    + [扩展 ContextHub](ch-extend.md)
    + [示例ContextHub存储候选项](ch-samplestores.md)
-   + [示例ContextHub UI模块类型](ch-samplemodules.md)
+   + [ContextHub UI模块类型示例](ch-samplemodules.md)
    + [ContextHub 诊断](ch-diagnostics.md)
    + [针对目标内容进行开发](target.md)
    + [ContextHub JavaScript API参考](contexthub-api.md)
@@ -199,7 +199,7 @@ ht-degree: 37%
    + [使用 Adobe Developer App Builder 扩展 AEM](app-builder.md)
    + [自定义页面创作](customizing-page-authoring-touch.md)
    + [自定义控制台](customizing-consoles-touch.md)
-   + [自定义页面属性视图](page-properties-views.md)
+   + [自定义页面属性的视图](page-properties-views.md)
    + [配置页面以批量编辑页面属性](bulk-editing.md)
    + [自定义和扩展内容片段](customizing-content-fragments.md)
    + [配置用于呈现的组件的内容片段](content-fragments-config-components-rendering.md)
@@ -245,10 +245,10 @@ ht-degree: 37%
    + [下一个版本……](the-next-release.md)
    + [核对清单](checklists.md)
    + [艰难的一天](tough-day.md)
-   + [测试您的UI](https://experienceleague.adobe.com/docs/experience-manager-65/developing/components/hobbes.html)
+   + [测试UI](https://experienceleague.adobe.com/docs/experience-manager-65/developing/components/hobbes.html)
 + 最佳实践{#bestpractices}
    + [最佳实践概述](best-practices.md)
-   + [AEM开发准则和最佳实践](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/dev-guidelines-bestpractices.html)
+   + [AEM开发准则和最佳实践](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/dev-guidelines-bestpractices.html?lang=zh-Hans)
    + [开发最佳实践](development-practices.md)
    + [内容架构](content-architecture.md)
    + [软件体系结构](software-architecture.md)
@@ -262,10 +262,10 @@ ht-degree: 37%
       + [在We.Retail中尝试体验片段](we-retail-experience-fragments.md)
    + [编码提示](coding-tips.md)
    + [代码陷阱](code-pitfalls.md)
-   + [OSGi包](osgi-bundles.md)
+   + [OSGI包](osgi-bundles.md)
    + [JCR集成](jcr-integration.md)
    + [代码示例](code-samples.md)
-   + [排查查询速度缓慢的问题](troubleshooting-slow-queries.md)
+   + [排查查询速度较慢的问题](troubleshooting-slow-queries.md)
 + 移动Web{#mobileweb}
    + [移动Web](mobile-web.md)
    + [创建设备组筛选器](groupfilters.md)

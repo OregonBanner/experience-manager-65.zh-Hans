@@ -8,7 +8,7 @@ user-guide-description: 了解如何使用和管理 AEM Content and Commerce。
 source-git-commit: b3c44f93c235b5daa7b6385a0c12841fcba767ff
 workflow-type: tm+mt
 source-wordcount: '123'
-ht-degree: 69%
+ht-degree: 70%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 69%
 # 商务 {#commerce}
 
 + [AEM Content and Commerce](/help/commerce/home.md)
-+ [对AEM Content and Commerce的重要更改](cif/changes.md)
++ [对AEM Content and Commerce的显着更改](cif/changes.md)
 + [简介和概述](cif/introduction.md)
 + 集成 {#integrations}
    + [Adobe Commerce](cif/integrating/magento.md)

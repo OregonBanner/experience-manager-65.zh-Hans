@@ -5,7 +5,7 @@ exl-id: 2fc93249-9bd0-4e34-83b2-80f51c102ed1
 source-git-commit: a51a863a4edf7e8b951a8361c5c7f0517b09f12a
 workflow-type: tm+mt
 source-wordcount: '355'
-ht-degree: 41%
+ht-degree: 43%
 
 ---
 
@@ -15,7 +15,7 @@ AEM 发行说明涵盖有关最新版 AEM 的重要信息，包括新增功能�
 
 * [最新发行说明](/help/release-notes/release-notes.md)
 
-## 重要AEM文章
+## AEM重要文章
 
 * [AEM入门](https://experienceleague.adobe.com/docs/experience-manager-65.html?lang=zh-Hans)
 * [近期文档更新](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html)
@@ -33,17 +33,17 @@ AEM 发行说明涵盖有关最新版 AEM 的重要信息，包括新增功能�
 | [经典UI创作指南](/help/sites-classic-ui-authoring/home.md) | 本指南在经典用户界面中说明在AEM中创作的概念。 |
 | [Screens用户指南](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html?lang=zh-Hans) | 了解用于发布动态和交互式数字体验的数字标牌解决方案。 |
 | [Deploying用户指南](/help/sites-deploying/home.md) | 本指南向您介绍AEM的基础知识。 |
-| [开发用户指南](/help/sites-developing/home.md) | 了解如何构建AEM实例。 |
+| [Developing用户指南](/help/sites-developing/home.md) | 了解如何构建AEM实例。 |
 | [Managing用户指南](/help/managing/home.md) | 本指南介绍如何成功管理AEM项目。 |
 | [Commerce 用户指南](/help/commerce/home.md) | 了解AEM上的Commerce集成框架。 |
-| [Mobile用户指南](/help/mobile/home.md) | 本指南介绍如何为移动设备应用程序创建和管理内容。 |
+| [Mobile用户指南](/help/mobile/home.md) | 本指南介绍如何创建和管理移动设备应用程序的内容。 |
 
 ## 重要AEM资源
 
 * [AEM教程](https://experienceleague.adobe.com/docs/experience-manager-tutorials.html)
 * [Dispatcher用户指南](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)
 * [HTL用户指南](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)
-* [核心组件用户指南](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)
+* [核心组件用户指南](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
 * [Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html)
 * [GDPR 就绪](/help/managing/data-protection-and-privacy.md)
 * [Experience League](https://experienceleague.adobe.com/?promoid=K42KVXHD&amp;mv=other)

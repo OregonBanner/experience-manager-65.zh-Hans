@@ -11,14 +11,14 @@ role: Admin
 source-git-commit: 58594be73372e128ba999a8290615fbcb447084e
 workflow-type: tm+mt
 source-wordcount: '630'
-ht-degree: 35%
+ht-degree: 36%
 
 ---
 
 # AEM 6.5 Administering 用户指南 {#administering}
 
 + [管理用户指南概述](home.md)
-+ Sites功能 {#introduction}
++ 站点功能 {#introduction}
    + [网站管理](msm-and-translation.md)
    + [异步作业](asynchronous-jobs.md)
    + [重用内容：多站点管理器和 Live Copy](msm.md)
@@ -50,7 +50,7 @@ ht-degree: 35%
    + [AEM 6中的审核日志维护](operations-audit-log.md)
    + [配置富文本编辑器](rich-text-editor.md)
    + [配置RTE以创建可访问的站点](rte-accessible-content.md)
-   + [为页面编辑配置撤消](config-undo.md)
+   + [配置撤消以进行页面编辑](config-undo.md)
    + [配置富文本编辑器插件](configure-rich-text-editor-plug-ins.md)
    + [配置视频组件](config-video.md)
    + [批量编辑器](bulk-editor.md)
@@ -59,7 +59,7 @@ ht-degree: 35%
    + [AEM 故障排除](troubleshoot.md)
    + [管理对工作流的访问权限](workflows-managing.md)
    + [启动工作流](workflows-starting.md)
-   + [管理工作流](workflows.md)
+   + [管理工作流程](workflows.md)
    + [管理工作流实例](workflows-administering.md)
    + [在AEM中使用cURL](curl.md)
    + [代理服务器工具(proxy.jar)](proxy-jar.md)
@@ -78,7 +78,7 @@ ht-degree: 35%
    + [OWASP前10名](owasp-top10.md)
    + [在生产就绪模式下运行AEM](production-ready.md)
    + [Identity Management](identity-management.md)
-   + [适用于AEM Managed Services的Adobe IMS身份验证和Admin Console支持](ims-config-and-admin-console.md)
+   + [对AEM Managed Services的Adobe IMS身份验证和Admin Console支持](ims-config-and-admin-console.md)
    + [创建已关闭的用户组](cug.md)
    + [缓解AEM中的序列化问题](mitigating-serialization-issues.md)
    + [用户同步](sync.md)
@@ -87,7 +87,7 @@ ht-degree: 35%
    + [如何在AEM中审核用户管理操作](audit-user-management-operations.md)
    + [默认SSL](ssl-by-default.md)
    + [SAML 2.0 身份验证处理程序](saml-2-0-authenticationhandler.md)
-   + [AEM中的封闭用户组](closed-user-groups.md)
+   + [AEM 中的封闭用户组](closed-user-groups.md)
    + [Granite操作 — 用户和组管理](granite-user-group-admin.md)
    + [在AEM中启用CRXDE Lite](enabling-crxde-lite.md)
    + [使用AEM 6配置LDAP](ldap-config.md)
@@ -98,7 +98,7 @@ ht-degree: 35%
    + [权限管理的主体视图](touch-ui-principal-view.md)
    + [内容处置过滤器](content-disposition-filter.md)
    + [AEM 6.5中的自定义用户组映射](/help/sites-administering/cug-mapping.md)
-   + [相同站点Cookie支持](same-site-cookie-support.md)
+   + [相同网站Cookie支持](same-site-cookie-support.md)
 + 个性化 {#personalization}
    + [个性化](personalization.md)
    + [配置 ContextHub](https://experienceleague.adobe.com/docs/experience-manager-65/developing/personlization/ch-configuring.html)
@@ -120,13 +120,13 @@ ht-degree: 35%
    + [为 Adobe Analytics 配置视频跟踪](adobeanalytics-video.md)
    + [使用IMS与Adobe Analytics集成](integration-analytics-ims.md)
    + [HTTP2 内容投放常见问题解答](scene7-http2faq.md)
-   + [Adobe Campaign集成故障诊断](troubleshooting-campaignintegration.md)
-   + [SharePoint Connector许可证、版权声明和免责声明](sharepoint-connector-licenses.md)
+   + [Adobe Campaign集成疑难解答](troubleshooting-campaignintegration.md)
+   + [SharePoint连接器许可证、版权声明和免责声明](sharepoint-connector-licenses.md)
    + [SharePoint连接器](sharepoint-connector.md)
    + [DHTML 查看器生命周期结束常见问题解答](dhtml-viewer-endoflifefaqs.md)
    + [与 Adobe Campaign Classic 集成](campaignonpremise.md)
    + [相关社区文章](related-community-articles.md)
-   + [与Adobe Campaign Standard集成](campaignstandard.md)
+   + [与 Adob&#x200B;e Campaign Standard 集成](campaignstandard.md)
    + [Flash 查看器生命周期终止通知](flash-viewers-eol.md)
    + [与AdobeDynamic Tag Management集成](dtm.md)
    + [选择使用Adobe Analytics和Adobe Target](opt-in.md)
@@ -141,7 +141,7 @@ ht-degree: 35%
    + [与ExactTarget集成](exacttarget.md)
    + [Analytics与外部提供程序](external-providers.md)
    + [与Adobe Marketing Cloud集成](marketing-cloud.md)
-   + [手动配置与Adobe Target集成](target-configuring.md)
+   + [手动配置与Adobe Target的集成](target-configuring.md)
    + [与Adobe Target集成的先决条件](target-requirements.md)
    + [使用IMS与Adobe Target集成](integration-target-ims.md)
    + [Adobe 分类](adobeanalytics-classifications.md)
@@ -153,9 +153,9 @@ ht-degree: 35%
    + [最佳实践](administer-best-practices.md)
    + [翻译最佳实践](https://experienceleague.adobe.com/docs/experience-manager-65/administering/introduction/tc-bp.html)
    + [MSM 最佳实践](https://experienceleague.adobe.com/docs/experience-manager-65/administering/introduction/msm-best-practices.html)
-   + [AEM Sites - GDPR准备工作](gdpr-compliance-sites.md)
+   + [AEM Sites - GDPR就绪](gdpr-compliance-sites.md)
    + [处理AEM Foundation的GDPR请求](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/handling-gdpr-requests-for-aem-platform.html)
-   + [AEM Commerce - GDPR准备工作](gdpr-compliance-commerce.md)
+   + [AEM Commerce - GDPR就绪](gdpr-compliance-commerce.md)
 + 内容管理 {#contentmanagement}
    + [包管理器](package-manager.md)
    + [管理标记](tags.md)
