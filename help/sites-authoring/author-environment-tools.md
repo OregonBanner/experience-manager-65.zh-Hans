@@ -7,9 +7,9 @@ topic-tags: page-authoring
 content-type: reference
 docset: aem65
 exl-id: 3b3c118b-ca35-484b-a62e-7bec98953123
-source-git-commit: fd8bb7d3d9040e0a7a6b2f65751445f41aeab73e
+source-git-commit: 8737c989927b1be148d440aa1944cf4cfb216b69
 workflow-type: tm+mt
-source-wordcount: '2210'
+source-wordcount: '2226'
 ht-degree: 52%
 
 ---
@@ -234,7 +234,9 @@ AEM 的创作环境提供了各种可用于组织和编辑内容的机制. 可�
 
 选择相应的引用类型可获取详细信息。在某些情况下，当您选择特定引用时，还可以执行其他操作，包括：
 
-* **传入链接** 提供引用页面的页面列表以及直接访问 **编辑** 选择特定链接时显示的页面之一
+* **传入链接** 提供引用页面的页面列表以及直接访问 **编辑** 选择特定链接时显示的页面之一。
+
+   * 这只能显示静态链接，而不能显示动态生成的链接；例如，来自列表组件的链接。
 
 * 使用&#x200B;**引用**&#x200B;组件的借入和借出内容的实例，您可以从此处导航至正在引用/引用的页面
 
