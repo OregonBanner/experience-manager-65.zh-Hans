@@ -2,16 +2,16 @@
 title: 使用AEM创建和组织页面
 description: 如何使用AEM创建和管理页面
 exl-id: 74576e51-4b4e-464e-a0b8-0fae748a505d
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
-source-wordcount: '2526'
+source-wordcount: '2523'
 ht-degree: 82%
 
 ---
 
 # 创建和组织页面 {#creating-and-organizing-pages}
 
-本节介绍如何使用Adobe Experience Manager (AEM)创建和管理页面，以便您随后可以 [创建内容](/help/sites-authoring/editing-content.md) 这些页面上。
+本节将介绍如何使用Adobe Experience Manager (AEM)创建和管理页面，以便您随后可以 [创建内容](/help/sites-authoring/editing-content.md) 在这些页面上。
 
 >[!NOTE]
 >
@@ -32,9 +32,9 @@ ht-degree: 82%
 
 您还可以使用[文件夹](#creating-a-new-folder)来帮助组织内容。
 
-网站的结构可以视为包含内容页面的树结构。 这些内容页面的名称用于形成URL，而标题在查看页面内容时显示。
+网站的结构可被视为保存内容页面的树结构。 这些内容页面的名称用于组成URL，而标题在查看页面内容时显示。
 
-下面显示了We.Retail网站上的一个示例，在该网站中， `desert-sky-shorts`)已访问：
+下面显示了We.Retail网站上的一个示例，其中一个“远足短裤”页面( `desert-sky-shorts`)已访问：
 
 * 创作环境
   `https://localhost:4502/editor.html/content/we-retail/us/en/products/equipment/hiking/desert-sky-shorts.html`
@@ -118,7 +118,7 @@ ht-degree: 82%
 
 >[!NOTE]
 >
->如果AEM运行在 [MongoMK持久性管理器部署](/help/sites-deploying/recommended-deploys.md)，页面名称限制为150个字符。
+>如果AEM运行在 [MongoMK持久性管理器部署](/help/sites-deploying/recommended-deploys.md)，页面名称不能超过150个字符。
 
 #### 标题 {#title}
 
@@ -131,7 +131,7 @@ ht-degree: 82%
 
 #### 名称 {#name}
 
-如果您在创建新页面时提供页面&#x200B;**名称**，AEM 将依据 AEM 和 JCR 实行的惯例验证此名称。[](/help/sites-developing/naming-conventions.md)您在&#x200B;**名称**&#x200B;字段中无法提交无效的字符。AEM 检测到无效字符时，该字段将突出显示，并提供有说明性消息。
+如果您在创建新页面时提供页面&#x200B;**名称**，AEM 将[依据 AEM 和 JCR 实行的惯例验证此名称](/help/sites-developing/naming-conventions.md)。您在&#x200B;**名称**&#x200B;字段中无法提交无效的字符。AEM 检测到无效字符时，该字段将突出显示，并提供有说明性消息。
 
 ![caop-02](assets/caop-02.png)
 
@@ -164,7 +164,7 @@ AEM 附带了一些现成的模板。可用模板取决于单个网站。关键�
 
 ### 组件 {#components}
 
-组件是AEM提供的元素，用于添加特定类型的内容。AEM随附了一系列的 [现成组件](/help/sites-authoring/default-components-console.md) 提供全面的功能。这些功能包括：
+组件是AEM提供的元素，用于添加特定类型的内容。AEM随附了一系列产品， [开箱即用的组件](/help/sites-authoring/default-components-console.md) 功能齐全。这些功能包括：
 
 * 文本
 * 图像
@@ -213,7 +213,7 @@ AEM 附带了一些现成的模板。可用模板取决于单个网站。关键�
    * **名称**：
 
       * 用于生成 URI。如果未指定，名称会从标题派生。
-      * 如果您在创建新页面时提供页面&#x200B;**名称**[，AEM 将依据 AEM 和 JCR 实行的惯例验证此名称。](/help/sites-developing/naming-conventions.md)
+      * 如果您在创建新页面时提供页面&#x200B;**名称**，AEM 将[依据 AEM 和 JCR 实行的惯例验证此名称](/help/sites-developing/naming-conventions.md)。
 
       * 您在&#x200B;**名称**&#x200B;字段中&#x200B;**无法提交无效的字符**。当 AEM 检测到无效字符时，此字段将会突出显示，并出现一条说明性消息以指示需要删除/替换的字符。
 
@@ -239,11 +239,11 @@ AEM 附带了一些现成的模板。可用模板取决于单个网站。关键�
 
 >[!CAUTION]
 >
->创建页面后，无法更改其模板 — 除非您 [使用新模板创建启动项](/help/sites-authoring/launches-creating.md#create-launch-with-new-template)，但这将丢失任何已存在的内容。
+>创建页面后，无法更改其模板 — 除非您 [使用新模板创建启动项](/help/sites-authoring/launches-creating.md#create-launch-with-new-template)，但会丢失任何已存在的内容。
 
 ### 打开页面进行编辑 {#opening-a-page-for-editing}
 
-创建页面或（在控制台中）导航到现有页面后，您可以打开页面进行编辑：
+在创建页面或（在控制台中）导航到现有页面后，您可以打开页面以进行编辑：
 
 1. 打开 **Sites** 控制台。
 1. 导航直到您找到要编辑的页面为止。
@@ -264,7 +264,7 @@ AEM 附带了一些现成的模板。可用模板取决于单个网站。关键�
 
 ### 复制和粘贴页面 {#copying-and-pasting-a-page}
 
-您可以将页面及其所有子页面复制到新位置：
+您可以将页面及其所有子页面复制到一个新位置：
 
 1. 在 **Sites** 控制台中，导航直到您找到要复制的页面为止。
 1. 通过以下方式选择您的页面：
@@ -278,7 +278,7 @@ AEM 附带了一些现成的模板。可用模板取决于单个网站。关键�
 
    >[!NOTE]
    >
-   >如果您处于选择模式，则在复制页面后会自动退出该模式。
+   >如果您处于选择模式，则在复制页面后将自动退出。
 
 1. 导航到页面的新副本所在的位置。
 1. 通过正右侧的下拉箭头可显示&#x200B;**粘贴**&#x200B;图标：
@@ -370,7 +370,7 @@ AEM 还有一项功能是允许您对引用被重命名页面或被移动页面�
 
 >[!NOTE]
 >
->如果页面已发布，则移动页面将自动取消发布。 默认情况下，移动完成后将重新发布它，但可以通过取消选中以更改此设置 **重新发布** 中的字段 **调整/重新发布** 步骤。
+>如果页面已发布，则移动页面将自动取消发布。 默认情况下，移动完成后将重新发布它，但可以通过取消选中 **重新发布** 中的字段 **调整/重新发布** 步骤。
 
 >[!NOTE]
 >
@@ -412,7 +412,7 @@ AEM 还有一项功能是允许您对引用被重命名页面或被移动页面�
    >
    >为安全起见，**删除**&#x200B;页面图标不可用作快速操作。
 
-1. 对话框将要求进行确认，使用：
+1. 对话框将要求确认，使用：
 
    * **取消**&#x200B;可中止操作
    * **删除**&#x200B;可确认操作：
@@ -426,7 +426,7 @@ AEM 还有一项功能是允许您对引用被重命名页面或被移动页面�
 
 ### 锁定页面 {#locking-a-page}
 
-您可以在控制台中或者在编辑单个页面时[锁定/解锁页面](/help/sites-authoring/editing-content.md#locking-a-page)。关于页面是否已被锁定的信息也会显示在这两个位置。
+您可以在控制台中或者在编辑单个页面时[锁定/解锁页面](/help/sites-authoring/editing-content.md#locking-a-page)。有关锁定页面的信息也会同时显示在这两个位置。
 
 ![screen_shot_2018-03-22at105713](assets/screen_shot_2018-03-22at105713.png) ![screen_shot_2018-03-22at105720](assets/screen_shot_2018-03-22at105720.png)
 

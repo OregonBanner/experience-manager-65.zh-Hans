@@ -7,9 +7,9 @@ content-type: reference
 topic-tags: site-features
 docset: aem65
 exl-id: 58e61302-cfb4-4a3d-98d4-3c92baa2ad42
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
-source-wordcount: '1431'
+source-wordcount: '1429'
 ht-degree: 0%
 
 ---
@@ -62,7 +62,7 @@ ht-degree: 0%
 
 转到 **页面属性** ，并将 *标题文本*， *描述*， *目标模板*、和 *目标路径*，如上所述。
 
-接下来，您必须定义此基架将创建的页面的结构。 为此，请进入 **[设计模式](/help/sites-authoring/page-authoring.md#sidekick)** 在基架页面上。 此时将显示一个链接，允许您在中编辑基架 **对话框编辑器**.
+接下来，您必须定义此基架将创建的页面的结构。 为此，请进入 **[设计模式](/help/sites-authoring/page-authoring.md#sidekick)** 在基架页面上。 此时会显示一个链接，允许您在 **对话框编辑器**.
 
 ![cq5_dialog_editor](assets/cq5_dialog_editor.png)
 

@@ -1,17 +1,13 @@
 ---
 title: 使用Web服务调用AEM Forms
-seo-title: Invoking AEM Forms using Web Services
 description: 使用Web服务调用AEM Forms进程，并完全支持WSDL生成。
-seo-description: Invoke AEM Forms processes using web services with full support for WSDL generation.
-uuid: 66bcd010-c476-4b66-831d-a48307d8d67a
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
-discoiquuid: d5722281-bea9-4fc7-abdc-e678899e0a15
 role: Developer
 exl-id: 3139564f-9346-4933-8e39-2e1642bff097
-source-git-commit: 10227bcfcfd5a9b0f126fee74dce6ec7842f5e95
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
 source-wordcount: '9901'
 ht-degree: 0%
@@ -648,7 +644,7 @@ A `BLOB` 对象向和从AEM Forms服务发送和检索二进制数据(例如，P
 1. Microsoft创建一个使用 `MyApplication/EncryptDocument` 服务WSDL。
 1. 创建客户端Microsoft .NET项目。 在客户端项目中引用Microsoft .NET客户端程序集。 另请参阅 `System.Web.Services`.
 1. 使用Microsoft .NET客户端程序集，创建 `MyApplication_EncryptDocumentService` 对象。
-1. 设置 `MyApplication_EncryptDocumentService` 对象的 `Credentials` 属性带有 `System.Net.NetworkCredential` 对象。 在 `System.Net.NetworkCredential` 构造函数，指定AEM表单用户名和相应密码。 设置身份验证值以使.NET客户端应用程序能够与AEM Forms成功交换SOAP消息。
+1. 设置 `MyApplication_EncryptDocumentService` 对象的 `Credentials` 属性带有 `System.Net.NetworkCredential` 对象。 在 `System.Net.NetworkCredential` 构造函数，指定AEM forms用户名和相应密码。 设置身份验证值以使.NET客户端应用程序能够与AEM Forms成功交换SOAP消息。
 1. 创建 `BLOB` 对象。 此 `BLOB` 对象用于存储传递给的PDF文档 `MyApplication/EncryptDocument` 进程。
 1. 创建 `System.IO.FileStream` 对象通过调用其构造函数。 传递一个字符串值，该值表示PDF文档的文件位置以及打开文件的模式。
 1. 创建一个字节数组，用于存储 `System.IO.FileStream` 对象。 您可以通过获取 `System.IO.FileStream` 对象的 `Length` 属性。
@@ -964,7 +960,7 @@ A `BLOB` 对象向和从AEM Forms服务发送和检索二进制数据(例如，P
 1. 创建.NET客户端程序集。
 1. 引用Microsoft .NET客户端程序集。 创建客户端Microsoft .NET项目。 在客户端项目中引用Microsoft .NET客户端程序集。 另请参阅 `System.Web.Services`.
 1. 使用Microsoft .NET客户端程序集，创建 `MyApplication_EncryptDocumentService` 对象。
-1. 设置 `MyApplication_EncryptDocumentService` 对象的 `Credentials` 属性带有 `System.Net.NetworkCredential` 对象。 在 `System.Net.NetworkCredential` 构造函数，指定AEM表单用户名和相应密码。 设置身份验证值以使.NET客户端应用程序能够与AEM Forms成功交换SOAP消息。
+1. 设置 `MyApplication_EncryptDocumentService` 对象的 `Credentials` 属性带有 `System.Net.NetworkCredential` 对象。 在 `System.Net.NetworkCredential` 构造函数，指定AEM forms用户名和相应密码。 设置身份验证值以使.NET客户端应用程序能够与AEM Forms成功交换SOAP消息。
 1. 创建 `BLOB` 对象。 此 `BLOB` 对象用于将数据传递到 `MyApplication/EncryptDocument` 进程。
 1. 将字符串值分配给 `BLOB` 对象的 `remoteURL` 指定要传递给的PDF文档的URI位置的数据成员 `MyApplication/EncryptDocument`服务。
 1. 调用 `MyApplication/EncryptDocument` 通过调用 `MyApplication_EncryptDocumentService` 对象的 `invoke` 方法和传递 `BLOB` 对象。 此过程会返回PDF文档在 `BLOB` 对象。

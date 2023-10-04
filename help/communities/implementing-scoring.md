@@ -9,9 +9,9 @@ docset: aem65
 tagskeywords: scoring, badging, badges, gamification
 role: Admin
 exl-id: 4aa857f7-d111-4548-8f03-f6d6c27acf51
-source-git-commit: d3c40d1452217983b01245ec1c81111a3c4e7295
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
-source-wordcount: '2853'
+source-wordcount: '2852'
 ht-degree: 2%
 
 ---
@@ -20,17 +20,17 @@ ht-degree: 2%
 
 ## 概述 {#overview}
 
-AEM Communities评分和徽章功能提供了识别和奖励社区成员的能力。
+AEM Communities评分和徽章功能使您能够识别和奖励社区成员。
 
 评分和徽章的主要方面包括：
 
 * [分配徽章](#assign-and-revoke-badges) 确定成员在社区中的角色。
 
-* [徽章的基本授予](#enable-scoring) 鼓励成员参与（创建的内容数量）。
+* [徽章的基本授予](#enable-scoring) 以鼓励成员参与（创建的内容数量）。
 
-* [徽章的高级授予](/help/communities/advanced.md) 将成员标识为专家（创建的内容的质量）。
+* [徽章的高级授予](/help/communities/advanced.md) 将成员标识为专家（创建的内容质量）。
 
-**注释** 颁发徽章是 [默认未启用](/help/communities/implementing-scoring.md#main-pars-text-237875536).
+**注意** 授予徽章是 [默认未启用](/help/communities/implementing-scoring.md#main-pars-text-237875536).
 
 >[!CAUTION]
 >
@@ -38,7 +38,7 @@ AEM Communities评分和徽章功能提供了识别和奖励社区成员的能�
 
 ## 徽章 {#badges}
 
-徽章放置在成员的名称下，以表明他们在社区中的角色或地位。 徽章可以显示为图像或名称。 当显示为图像时，该名称将作为辅助功能的替换文本包含在内。
+徽章放置在成员的名称下，以指示其在社区中的角色或地位。 徽章可以显示为图像或名称。 显示为图像时，该名称将作为辅助功能的替换文本包含在内。
 
 默认情况下，徽章位于以下存储库中：
 
@@ -46,17 +46,17 @@ AEM Communities评分和徽章功能提供了识别和奖励社区成员的能�
 
 如果存储在其他位置，则每个人都可以读取这些文件。
 
-在UGC中区分徽章，无论它们是根据规则分配还是获得的。 目前，分配的徽章显示为文本，已获得的徽章显示为图像。
+在UGC中区分徽章，无论它们是按照规则分配还是按照规则获得的。 目前，分配的徽章显示为文本，已获得的徽章显示为图像。
 
 ### 徽章管理UI {#badge-management-ui}
 
-社区 [徽章控制台](/help/communities/badges.md) 允许您添加自定义徽章，当成员获得（奖励）或在社区中承担特定角色（已分配）时，徽章可以显示给成员。
+社区 [徽章控制台](/help/communities/badges.md) 允许您添加自定义徽章，当成员赢取（奖励）或在社区中承担特定角色（已分配）时，可以显示这些徽章。
 
 ### 已分配的徽章 {#assigned-badges}
 
 基于角色的徽章由管理员根据社区成员在社区中的角色分配给社区成员。
 
-已分配（和已授予）的徽章将存储在选定的 [SRP](/help/communities/srp.md) 和不可直接访问。 在GUI可用之前，分配基于角色的徽章的唯一方法是使用代码或cURL。 有关cURL说明，请参阅标题为 [分配和撤销徽章](#assign-and-revoke-badges).
+分配（和授予）的徽章将存储在选定的 [SRP](/help/communities/srp.md) 和不可直接访问。 在GUI可用之前，分配基于角色的徽章的唯一方法是使用代码或cURL。 有关说明，请参阅标题为 [分配和撤销徽章](#assign-and-revoke-badges).
 
 此版本中包含三个基于角色的徽章：
 
@@ -73,19 +73,19 @@ AEM Communities评分和徽章功能提供了识别和奖励社区成员的能�
 
 ### 已授予的徽章 {#awarded-badges}
 
-评分服务会根据适用于社区成员活动的规则，向社区成员授予基于奖励的徽章。
+评分服务会根据适用于社区成员在社区中活动的规则，向社区成员授予基于奖励的徽章。
 
-要让徽章显示为对活动的奖励，必须发生以下两件事：
+要让徽章显示为对活动的奖励，必须发生以下两种情况：
 
-* 徽章必须为 [已启用](#enableforcomponent) 对于特征组件。
+* 徽章必须为 [已启用](#enableforcomponent) 用于特征元件。
 * 评分和徽章规则必须 [已应用](#applytopage) 到放置元件的页面（或祖先）。
 
 此版本中包含三个基于奖励的徽章：
 
-* **金级**
+* **金牌**
   `/libs/settings/community/badging/images/gold-badge/jcr:content/gold.png`
 
-* **银级**
+* **银**
   `/libs/settings/community/badging/images/silver-badge/jcr:content/silver.png`
 
 * **铜级**
@@ -95,27 +95,27 @@ AEM Communities评分和徽章功能提供了识别和奖励社区成员的能�
 
 >[!NOTE]
 >
->评分规则可以配置为为标记为不适当的帖子分配负分，从而影响评分值。 但是，获得徽章后，不会由于评分点减少或评分规则更改而自动删除该徽章。
+>可以将评分规则配置为为标记为不适当并因此影响得分值的帖子分配负分。 但是，获得徽章后，不会由于评分点减少或评分规则更改而自动删除该徽章。
 >
->授予的徽章可以与分配的徽章相同的方式撤销。 请参阅 [分配和撤销徽章](#assign-and-revoke-badges) 部分。 未来的改进将包括一个用于管理成员徽章的UI。
+>授予的徽章可以与分配的徽章相同的方式被撤销。 请参阅 [分配和撤销徽章](#assign-and-revoke-badges) 部分。 未来的改进将包括一个UI来管理成员的徽章。
 
 ### 自定义徽章 {#custom-badges}
 
-可以使用安装自定义徽章 [徽章控制台](/help/communities/badges.md) 在徽章规则中指定或指定的属性。
+可以使用安装自定义徽章 [徽章控制台](/help/communities/badges.md) 并在徽章规则中指定或指定。
 
 从“徽章”控制台安装后，自定义徽章会自动复制到发布环境。
 
 ## 启用评分 {#enable-scoring}
 
-默认情况下不启用评分。 设置和启用徽章评分和奖励的基本步骤如下：
+默认情况下不启用评分。 设置和启用徽章评分和授予的基本步骤如下：
 
-* 确定获得点数的规则([评分规则](#scoring-rules))。
+* 确定收入点数规则([评分规则](#scoring-rules))。
 * 对于每个评分规则累计的点数，分配 [徽章](#badges) ([徽章规则](#badging-rules))。
 
 * [将评分和徽章规则应用于社区站点](#apply-rules-to-content).
 * [为社区功能启用徽章](#enable-badges-for-component).
 
-请参阅 [快速测试](#quick-test) 区域来启用对社区站点的评分，使用论坛和评论的默认评分和徽章规则。
+请参阅 [快速测试](#quick-test) 区域启用对社区站点的评分，使用论坛和评论的默认评分和徽章规则。
 
 ### 将规则应用于内容 {#apply-rules-to-content}
 
@@ -129,8 +129,8 @@ AEM Communities评分和徽章功能提供了识别和奖励社区成员的能�
 
 | **属性** | **类型** | **描述** |
 |---|---|---|
-| 徽章规则 | 字符串 | 数组列表 [徽章规则](#badging-rules) |
-| 评分规则 | 字符串 | 数组列表 [评分规则](#scoring-rules) |
+| 徽章规则 | 字符串 | 的数组列表 [徽章规则](#badging-rules) |
+| 评分规则 | 字符串 | 的数组列表 [评分规则](#scoring-rules) |
 
 >[!NOTE]
 >
@@ -140,32 +140,32 @@ AEM Communities评分和徽章功能提供了识别和奖励社区成员的能�
 
 评分和标记规则仅对通过编辑中的组件配置启用了标记的组件实例有效 [创作模式](/help/communities/author-communities.md).
 
-布尔型属性， `allowBadges`，启用/禁用组件实例的徽章显示。 它可在 [“组件编辑”对话框](/help/communities/author-communities.md) 通过标记为的复选框访问论坛、QnA和评论组件 **显示徽章**.
+布尔型属性， `allowBadges`，启用/禁用组件实例的徽章显示。 它可在以下位置配置： [组件“编辑”对话框](/help/communities/author-communities.md) 通过标记为的复选框访问论坛、QnA和评论组件 **显示徽章**.
 
-#### 示例：允许论坛组件实例使用徽章 {#example-allowbadges-for-forum-component-instance}
+#### 示例：用于论坛组件实例的allowBadges {#example-allowbadges-for-forum-component-instance}
 
 ![enable-badges-component](assets/enable-badges-component.png)
 
 >[!NOTE]
 >
->任何组件都可以覆盖，以使用论坛、问题与解答和评论中的HBS代码作为示例来显示徽章。
+>任何组件都可以叠加以使用论坛、问题与解答中的HBS代码作为示例来显示徽章。
 
 ## 评分规则 {#scoring-rules}
 
 评分规则是颁发徽章进行评分的基础。
 
-每个评分规则是一个或多个子规则的列表。 评分规则将应用于社区站点内容，以确定在启用徽章时要应用的规则。
+每个评分规则是一个包含一个或多个子规则的列表。 评分规则将应用于社区站点内容，以确定在启用徽章时要应用的规则。
 
 评分规则是继承的，但不是累加的。 例如：
 
 * 如果页面2包含评分规则2，并且其祖先page1包含评分规则1。
-* page2组件上的操作会同时调用rule1和rule2。
-* 如果两个规则都包含相同规则的适用子规则 `topic/verb`：
+* 在page2组件上的操作同时调用rule1和rule2。
+* 如果两个规则包含相同规则的适用子规则 `topic/verb`：
 
    * 只有规则2中的子规则会影响得分。
-   * 两个子规则中的得分未添加。
+   * 两个子规则的分数均不添加。
 
-当有多个评分规则时，将分别为每个规则维护得分。
+当存在多个评分规则时，将分别为每个规则维护得分。
 
 评分规则是类型的节点 `cq:Page` 具有属性 `jcr:content` 指定定义它的子规则列表的节点。
 
@@ -175,9 +175,9 @@ AEM Communities评分和徽章功能提供了识别和奖励社区成员的能�
 >
 >最佳实践：唯一地命名每个评分规则。
 >
->评分规则名称应在全局范围内是唯一的；它们不应以相同的名称结尾。
+>评分规则名称应具有全局唯一性；它们不应以相同的名称结尾。
 >
->以下示例 *非* 待办事项：
+>示例 *非* 待办事项：
 >
 >/libs/settings/community/scoring/rules/site1/forums-scoring
 >/libs/settings/community/scoring/rules/site2/forums-scoring
@@ -186,13 +186,13 @@ AEM Communities评分和徽章功能提供了识别和奖励社区成员的能�
 
 评分子规则包含详细说明参与社区的值的属性。
 
-每个评分子规则标识：
+每个评分子规则确定：
 
 * 正在跟踪哪些活动？
 * 涉及哪些特定的社区功能？
 * 会奖励多少分？
 
-默认情况下，积分会授予采取操作的会员，除非子规则将内容的所有者指定为接收积分( `forOwner`)。
+默认情况下，积分被授予采取行动的成员，除非子规则将内容的所有者指定为接收积分( `forOwner`)。
 
 每个子规则可以包含在一个或多个评分规则中。
 
@@ -201,14 +201,14 @@ AEM Communities评分和徽章功能提供了识别和奖励社区成员的能�
 * member-comment-create
 * 会员 — 接收 — 投票
 
-子规则是类型的节点 `cq:Page` 具有属性 `jcr:content`指定以下项的节点： [动词和主题](#topics-and-verbs) .
+子规则是类型的节点 `cq:Page` 具有属性 `jcr:content`指定以下内容的节点： [动词和主题](#topics-and-verbs) .
 
 <table>
  <tbody>
   <tr>
    <th>属性</th>
    <th>类型</th>
-   <th> 价值 描述</th>
+   <th> 值说明</th>
   </tr>
   <tr>
    <td><i><code>VERB</code></i></td>
@@ -218,9 +218,9 @@ AEM Communities评分和徽章功能提供了识别和奖励社区成员的能�
      <li>必需；动词对应于事件操作</li>
      <li>必须至少有一个动词属性</li>
      <li>谓词必须全部大写</li>
-     <li>可以有多个动词属性，但不存在重复项</li>
-     <li>值是要应用于此事件的分数</li>
-     <li>该值可以为正或负</li>
+     <li>动词属性可以有多个，但不存在重复项</li>
+     <li>该值是要应用于此事件的分数</li>
+     <li>该值可为正或负</li>
      <li>此版本中支持的动词列表位于 <a href="#topics-and-verbs">主题和动词</a> 部分</li>
     </ul> </td>
   </tr>
@@ -229,7 +229,7 @@ AEM Communities评分和徽章功能提供了识别和奖励社区成员的能�
    <td>字符串</td>
    <td>
     <ul>
-     <li>可选；将子规则限制为事件主题标识的社区组件</li>
+     <li>可选；将子规则限制为按事件主题标识的社区组件</li>
      <li>如果已指定：值是事件主题的多值字符串</li>
      <li>此版本中的主题列表位于 <a href="#topics-and-verbs">主题和动词</a> 部分</li>
      <li>默认设置为应用于与动词相关的所有主题</li>
@@ -240,8 +240,8 @@ AEM Communities评分和徽章功能提供了识别和奖励社区成员的能�
    <td>布尔值</td>
    <td>
     <ul>
-     <li>可选；当成员根据其拥有的内容进行操作时无效</li>
-     <li>如果为true，则将分数应用于正在处理的内容的所有者</li>
+     <li>可选；在成员根据其拥有的内容进行操作时不可用</li>
+     <li>如果为true，则将得分应用于所执行内容的所有者</li>
      <li>如果为false，则对成员执行操作应用分数</li>
      <li>默认为false</li>
     </ul> </td>
@@ -268,7 +268,7 @@ AEM Communities评分和徽章功能提供了识别和奖励社区成员的能�
 
 ### 包含评分规则和子规则 {#included-scoring-rules-and-sub-rules}
 
-此版本中包含两个评分规则， [论坛功能](/help/communities/functions.md#forum-function) （论坛功能的论坛和评论部分各一个）：
+此版本中包含的两个评分规则： [论坛功能](/help/communities/functions.md#forum-function) （论坛”功能的“论坛”和“评论”组件各一个）：
 
 1. /libs/settings/community/scoring/rules/comments-scoring
 
@@ -287,7 +287,7 @@ AEM Communities评分和徽章功能提供了识别和奖励社区成员的能�
 * `sub-rules` 可以在各种评分规则之间共享。
 * `rules` 应位于存储库位置，且每个人都具有读取权限。
 
-   * 无论位置如何，规则名称必须是唯一的。
+   * 无论位置如何，规则名称都必须是唯一的。
 
 ### 激活自定义评分规则 {#activating-custom-scoring-rules}
 
@@ -300,9 +300,9 @@ AEM Communities评分和徽章功能提供了识别和奖励社区成员的能�
 * 评分规则
 * 授予特定徽章所需的分数
 
-徽章规则为类型的节点 `cq:Page` 具有属性 `jcr:content` 将评分规则与分数和徽章关联的节点。
+徽章规则是类型的节点 `cq:Page` 具有属性 `jcr:content` 将评分规则与分数和徽章关联的节点。
 
-徽章规则包含必需 `thresholds` 属性，是映射到徽章的分数的有序列表。 分数必须按递增值排序。 例如：
+徽章规则由必填 `thresholds` 属性，是映射到徽章的分数有序列表。 必须按递增值对得分进行排序。 例如：
 
 * `1|/libs/settings/community/badging/images/bronze-badge/jcr:content/bronze.png`
 
@@ -310,15 +310,15 @@ AEM Communities评分和徽章功能提供了识别和奖励社区成员的能�
 
 * `60|/libs/settings/community/badging/images/silver-badge/jcr:content/silver.png`
 
-   * 当积蓄了60分时，颁发银质奖章。
+   * 银牌可获得60分。
 
 * `80|/libs/settings/community/badging/images/gold-badge/jcr:content/gold.png`
 
-   * 金牌得分80分。
+   * 金牌获得八十分的奖励。
 
-徽章规则与评分规则配对，后者确定积分的积累方式。 请参阅标题为的部分 [将规则应用于内容](#apply-rules-to-content).
+徽章规则与评分规则配对，后者决定积分的积累方式。 请参阅标题为的部分 [将规则应用于内容](#apply-rules-to-content).
 
-此 `scoringRules` 徽章规则的属性只是限制哪些评分规则可以与该特定徽章规则配对。
+此 `scoringRules` 徽章规则的属性仅限制哪些评分规则可以与该特定徽章规则配对。
 
 >[!NOTE]
 >
@@ -331,17 +331,17 @@ AEM Communities评分和徽章功能提供了识别和奖励社区成员的能�
   <tr>
    <th>属性</th>
    <th>类型</th>
-   <th>价值 描述</th>
+   <th>值说明</th>
   </tr>
   <tr>
    <td>阈值</td>
    <td>字符串</td>
-   <td><em>（必需）</em> 格式为“数字|路径”的多值字符串
+   <td><em>（必填）</em> 形式为“number|path”的多值字符串
     <ul>
      <li>数字=得分</li>
      <li>| =垂直线字符(U+007C)</li>
-     <li>path =标记图像资源的完整路径</li>
-    </ul> 必须对字符串进行排序，以使数字的值不断增大，并且数字与路径之间不应出现空格。<br /> 示例条目：<br /> <code>80|/libs/settings/community/badging/images/gold-badge/jcr:content/gold.png</code></td>
+     <li>path =徽章图像资源的完整路径</li>
+    </ul> 必须对字符串进行排序，以使数字在值中递增，并且在数字和路径之间不应出现空格。<br /> 示例条目：<br /> <code>80|/libs/settings/community/badging/images/gold-badge/jcr:content/gold.png</code></td>
   </tr>
   <tr>
    <td>徽章类型</td>
@@ -358,7 +358,7 @@ AEM Communities评分和徽章功能提供了识别和奖励社区成员的能�
 
 ### 包含的徽章规则 {#included-badging-rules}
 
-此版本中包含两个与对应的徽章规则 [论坛和评论评分规则](#includedscoringrules).
+此版本中包含两个徽章规则，它们分别与 [论坛和评论评分规则](#includedscoringrules).
 
 * `/libs/settings/community/badging/rules/comments-badging`
 
@@ -373,7 +373,7 @@ AEM Communities评分和徽章功能提供了识别和奖励社区成员的能�
 
 ### 激活自定义徽章规则 {#activating-custom-badging-rules}
 
-在创作环境中对标记规则或图像所做的任何更改或添加必须安装在发布上。
+在创作环境中对标记规则或图像所做的任何更改或添加都必须安装在发布上。
 
 ## 分配和撤销徽章 {#assign-and-revoke-badges}
 
@@ -381,25 +381,25 @@ AEM Communities评分和徽章功能提供了识别和奖励社区成员的能�
 
 以下cURL命令显示了分配和撤消徽章的HTTP请求所必需的。 基本格式为：
 
-cURL -i -XPOST-H *标头* -u *登录* -F *操作* -F *徽章* *member-profile-url*
+cURL -i -XPOST-H *标题* -u *登录* -F *操作* -F *徽章* *member-profile-url*
 
-*标头* = &quot;Accept：application/json&quot;自定义标头以传递到服务器（必需）
+*标题* =“Accept：application/json”自定义标头以传递到服务器（必需）
 
 *登录* = administrator-id：password，例如：admin：admin
 
 *操作* =“：operation=social：assignBadge”或“：operation=social：deleteBadge”
 
-*徽章* = &quot;badgeContentPath=*badge-image-file*”
+*徽章* = &quot;badgeContentPath=*badge-image-file*&quot;
 
 *badge-image-file* =徽章图像文件在存储库中的位置，例如： /libs/settings/community/badging/images/moderator/jcr：content/moderator.png
 
-*member-profile-url* =发布时成员配置文件的端点，例如：https://&lt;server>：&lt;port>/home/users/community/riley/profile.social.json
+*member-profile-url* =发布上成员配置文件的端点，例如：https://&lt;server>：&lt;port>/home/users/community/riley/profile.social.json
 
 >[!NOTE]
 >
 >此 *member-profile-url*：
 >
->* 可以引用作者实例，如果 [通道服务](/help/communities/users.md#tunnel-service) 已启用。
+>* 可以参考作者实例，如果 [通道服务](/help/communities/users.md#tunnel-service) 已启用。
 >* 可能是一个模糊的随机名称 — 请参阅 [安全核对清单](/help/sites-administering/security-checklist.md#verify-that-you-are-not-disclosing-personally-identifiable-information-in-the-users-home-path) 关于可授权ID。
 
 ### 示例： {#examples}
@@ -426,15 +426,15 @@ curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=socia
 
 ## 主题和动词 {#topics-and-verbs}
 
-当成员与社区功能交互时，发送可触发异步侦听器的事件，例如通知和评分。
+当成员与社区功能交互时，会发送可触发异步侦听器的事件，例如通知和评分。
 
-组件的SocialEvent实例将这些事件记录为 `actions` 发生于 `topic`. SocialEvent包括用于返回 `verb` 与操作相关联。 有一个 *n-1* 关系介于 `actions` 和 `verbs`.
+组件的SocialEvent实例将事件记录为 `actions` 发生于 `topic`. SocialEvent包括用于返回 `verb` 与操作相关联。 有一个 *n-1* 关系介于 `actions` 和 `verbs`.
 
-对于交付的社区组件，下表描述了 `verbs` 为每项定义 `topic` 可在以下位置使用 [评分子规则](#scoring-sub-rules).
+对于交付的communities组件，下表介绍了 `verbs` 为每项定义 `topic` 可在以下位置使用 [评分子规则](#scoring-sub-rules).
 
 >[!NOTE]
 >
->新的布尔值属性， `allowBadges`，启用/禁用组件实例的徽章显示。 可在更新后进行配置 [组件编辑对话框](/help/communities/author-communities.md) 通过标记为的复选框 **显示徽章**.
+>新的布尔值属性， `allowBadges`，启用/禁用组件实例的徽章显示。 可在更新后进行配置 [组件编辑对话框](/help/communities/author-communities.md) 通过标记为 **显示徽章**.
 
 **[日历组件](/help/communities/calendar.md)**
 社交事件 `topic`= com/adobe/cq/social/calendar
@@ -444,7 +444,7 @@ curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=socia
 | POST | 成员创建日历事件 |
 | 添加 | 成员对日历事件的评论 |
 | 更新 | 编辑成员的日历事件或评论 |
-| 删除 | 已删除成员的日历事件或评论 |
+| 删除 | 成员的日历事件或评论已删除 |
 
 **[注释组件](/help/communities/comments.md)**
 社交事件 `topic`= com/adobe/cq/social/comment
@@ -452,7 +452,7 @@ curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=socia
 | **动词** | **描述** |
 |---|---|
 | POST | 成员创建注释 |
-| 添加 | 成员对评论的回复 |
+| 添加 | 成员回复评论 |
 | 更新 | 编辑成员的注释 |
 | 删除 | 已删除成员的评论 |
 
@@ -491,12 +491,12 @@ curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=socia
 
 | **动词** | **描述** |
 |---|---|
-| POST | 成员创建QnA问题 |
-| 添加 | 成员创建问题与解答答案 |
+| POST | 成员创建问题与解答问题 |
+| 添加 | 成员创建QnA答案 |
 | 更新 | 编辑成员的问题或答案 |
-| SELECT | 已选择成员的答案 |
+| 选择 | 已选择成员的答案 |
 | 取消选择 | 已取消选择成员的答案 |
-| 删除 | 已删除成员的QnA问题或答案 |
+| 删除 | 已删除成员的问题或答案 |
 
 **[审核组件](/help/communities/reviews.md)**
 社交事件 `topic`= com/adobe/cq/social/review
@@ -504,7 +504,7 @@ curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=socia
 | **动词** | **描述** |
 |---|---|
 | POST | 成员创建审核 |
-| 更新 | 编辑成员的审阅 |
+| 更新 | 成员的审核已编辑 |
 | 删除 | 已删除成员的审核 |
 
 **[评级组件](/help/communities/rating.md)**
@@ -512,7 +512,7 @@ curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=socia
 
 | **动词** | **描述** |
 |---|---|
-| 添加评级 | 成员内容已上调 |
+| 添加评级 | 成员内容已上标 |
 | 删除评级 | 成员内容已降级 |
 
 **[投票组件](/help/communities/voting.md)**
@@ -520,7 +520,7 @@ curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=socia
 
 | **动词** | **描述** |
 |---|---|
-| 添加投票 | 会员内容已投赞成票 |
+| 添加投票 | 成员内容已被投票表决 |
 | 删除投票 | 成员内容已被否决 |
 
 **启用审核的组件**
@@ -529,29 +529,29 @@ curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=socia
 | **动词** | **描述** |
 |---|---|
 | 拒绝 | 成员内容被拒绝 |
-| 标记为不适当 | 已标记成员的内容 |
-| 取消标记为不适当 | 成员的内容未标记 |
-| 接受 | 审阅人已批准成员的内容 |
+| 标记为不适当 | 成员内容已标记 |
+| 取消标记为不适当 | 成员内容未标记 |
+| ACCEPT | 审阅人已批准成员的内容 |
 | 关闭 | 成员关闭评论以进行编辑和回复 |
-| OPEN | 成员重新打开注释 |
+| 打开 | 成员重新打开注释 |
 
 ### 自定义组件事件 {#custom-component-events}
 
-对于自定义组件，会实例化SocialEvent以将组件的事件记录为 `actions` 发生于 `topic`.
+对于自定义组件，会实例化SocialEvent以将该组件的事件记录为 `actions` 发生于 `topic`.
 
-为了支持评分，SocialEvent需要覆盖方法 `getVerb()` 以便适当地 `verb` 针对每个返回 `action`. 此 `verb` 针对操作返回的可能是常用的(例如 `POST`)或专用于组件的组件(例如 `ADD RATING`)。 有一个 *n-1* 关系介于 `actions` 和 `verbs`.
+为了支持评分，SocialEvent需要覆盖方法 `getVerb()` 以便适当地 `verb` 针对每个维度返回 `action`. 此 `verb` 针对操作返回的可能是常用的(例如 `POST`)或组件专用的(例如 `ADD RATING`)。 有一个 *n-1* 关系介于 `actions` 和 `verbs`.
 
 ## 疑难解答 {#troubleshooting}
 
-### 徽章未出现 {#badges-are-not-appearing}
+### 未显示徽章 {#badges-are-not-appearing}
 
 如果评分和徽章规则已应用于网站的内容，但未授予任何活动的徽章，请确保已为该组件的实例启用徽章。
 
-参见 [为组件启用徽章](#enable-badges-for-component).
+请参阅 [为组件启用徽章](#enable-badges-for-component).
 
-### 评分规则不起作用 {#scoring-rule-has-no-effect}
+### 评分规则无效 {#scoring-rule-has-no-effect}
 
-如果评分和徽章规则已应用于网站的内容，并且授予了一些操作的徽章，但没有授予其他操作，请检查徽章规则是否未限制其适用的评分规则。
+如果评分和徽章规则已应用于网站的内容，并且授予了一些操作的徽章，但其他操作没有这样做，请检查徽章规则是否未限制其适用的评分规则。
 
 请参阅 `scoringRules` 属性 [徽章规则](#badging-rules).
 
@@ -563,17 +563,17 @@ curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=socia
 
 ## 快速测试 {#quick-test}
 
-可以使用快速尝试评分和标记 [入门教程](/help/communities/getting-started.md) （参与）站点：
+可以使用快速尝试评分和标记 [快速入门教程](/help/communities/getting-started.md) （参与）站点：
 
-* 访问CRXDE Lite作者。
+* 访问有关作者的CRXDE Lite。
 * 浏览到基本页：
 
    * /content/sites/engage/en/jcr：content
 
 * 添加badgingRules属性：
 
-   * **名称**: `badgingRules`
-   * **类型**： `String`
+   * **名称**：`badgingRules`
+   * **类型**：`String`
    * 选择 **多个**
    * 选择 **添加**
    * 输入 `/libs/settings/community/badging/rules/forums-badging`
@@ -583,8 +583,8 @@ curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=socia
 
 * 添加scoringRules属性：
 
-   * **名称**: `scoringRules`
-   * **类型**： `String`
+   * **名称**：`scoringRules`
+   * **类型**：`String`
    * 选择 **多个**
    * 选择 **添加**
    * 输入 `/libs/settings/community/scoring/rules/forums-scoring`
@@ -603,11 +603,11 @@ curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=socia
 
    * `/content/sites/engage/en/forum/jcr:content/content/primary/forum`
 
-* 如有必要，添加allowBadges布尔属性，并确保其为true。
+* 如有必要，添加allowBadges布尔属性，并确保该属性为true。
 
-   * **名称**: `allowBadges`
-   * **类型**： `Boolean`
-   * **值**: `true`
+   * **名称**：`allowBadges`
+   * **类型**：`Boolean`
+   * **值**：`true`
 
 ![test-forum-component](assets/test-forum-component.png)
 
@@ -617,14 +617,14 @@ curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=socia
 
 * 浏览到发布实例上的组件。
 * 以社区成员身份登录(例如：weston.mccall@dodgit.com /密码)。
-* 发布新的论坛主题。
+* 发布新论坛主题。
 * 必须刷新页面才能显示徽章。
 
    * 注销并以其他社区成员身份登录(例如：aaron.mcdonald@mailinator.com/password)。
 
 * 选择论坛。
 
-由于第一个论坛徽章规则的第一个阈值为1分，因此这应该会为该社区成员获取一个其论坛帖子可见的铜牌。
+由于第一个论坛徽章规则的第一个阈值为1分，因此这应该会为社区成员获取随论坛帖子可见的铜级徽章。
 
 ![bronzebadge](assets/bronzebadge.png)
 
@@ -634,4 +634,4 @@ curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=socia
 
 有关高级评分引擎的信息，请参阅 [高级评分和徽章](/help/communities/advanced.md).
 
-可配置的排行榜 [组件](/help/communities/enabling-leaderboard.md) 和 [函数](/help/communities/functions.md#leaderboard-function) 简化了成员及其分数在社区站点上的显示。
+可配置的排行榜 [组件](/help/communities/enabling-leaderboard.md) 和 [函数](/help/communities/functions.md#leaderboard-function) 简化了在社区站点上显示成员及其得分的过程。

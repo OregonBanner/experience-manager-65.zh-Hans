@@ -10,22 +10,22 @@ topic-tags: hTML5_forms
 discoiquuid: 445e24af-cd1a-414d-bd01-9feb6631bbef
 feature: Mobile Forms
 exl-id: a9879445-d626-4279-8a95-a9009294b483
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
-source-wordcount: '300'
+source-wordcount: '299'
 ht-degree: 5%
 
 ---
 
 # 将HTML5表单另存为草稿 {#saving-an-html-form-as-a-draft}
 
-您可以将HTML5表单另存为草稿，然后在稍后阶段继续填写表单。 Forms Portal允许任何用户保存和恢复HTML5表单。 要启用“另存为草稿”功能，请将以下配置添加到配置文件节点：
+您可以将HTML5表单另存为草稿，然后在稍后阶段继续填写表单。 Forms Portal允许任何用户保存和恢复HTML5表单。 要启用另存为草稿功能，请将以下配置添加到配置文件节点：
 
 ## 自定义配置文件以允许另存为草稿功能 {#custom-profile-to-allow-save-as-draft-feature}
 
-开箱即用的AEM Forms提供 **另存为草稿** 个人资料。 您可以使用另存为草稿配置文件渲染表单，以启用HTML5表单的草稿功能。 您可以在中指定表单的HTML渲染配置文件 [Forms Manager](/help/forms/using/introduction-managing-forms.md).
+AEM Forms开箱即用地提供 **另存为草稿** 个人资料。 您可以使用另存为草稿配置文件呈现表单，以启用HTML5表单的草稿功能。 您可以在以下位置为表单指定HTML渲染配置文件 [Forms Manager](/help/forms/using/introduction-managing-forms.md).
 
-要为现有资源启用另存为草稿功能，请执行以下操作 [自定义配置文件](/help/forms/using/custom-profile.md)，将以下属性添加到自定义配置文件节点：
+要为现有报表启用另存为草稿功能，请执行以下操作 [自定义配置文件](/help/forms/using/custom-profile.md)，将以下属性添加到自定义配置文件节点：
 
 <table>
  <tbody>
@@ -52,7 +52,7 @@ ht-degree: 5%
 
 ## 草稿存储和列表 {#drafts-storage-and-listing}
 
-为表单启用另存为草稿功能后；保存表单时，该表单会列在 [草稿和提交组件](/help/forms/using/draft-submission-component.md). 您可以从“草稿和提交”组件中检索并开始填写已保存的表单。
+为表单启用另存为草稿功能后；保存表单时，该表单会列在 [草稿和提交组件](/help/forms/using/draft-submission-component.md). 您可以检索并开始填写从“草稿和提交”组件保存的表单。
 
 要为草稿和提交组件启用表单列表，请将以下属性添加到配置文件节点：
 
@@ -68,7 +68,7 @@ ht-degree: 5%
    <td>fp.enablePortalSubmit</td>
    <td>字符串</td>
    <td>true</td>
-   <td>启用草稿和表单以列在<br /> 提交后Forms Portal草稿和提交组件</td>
+   <td>启用草稿和表单以在<br /> 提交后Forms Portal草稿和提交组件</td>
   </tr>
  </tbody>
 </table>

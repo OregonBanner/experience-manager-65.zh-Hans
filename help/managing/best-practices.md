@@ -1,22 +1,22 @@
 ---
 title: 管理项目 — 最佳实践核对清单
-description: 管理项目以实施Adobe Experience Manager (AEM)需要规划和了解。 项目核对表旨在作为一组项目交付的最佳实践。 它们指导您完成项目生命周期的所有阶段，并为您提供当前状态的高级监控。
+description: 管理项目以实施Adobe Experience Manager (AEM)需要规划和了解。 项目核对表旨在作为一组项目交付的最佳实践。 它们指导您完成项目生命周期的所有阶段，并提供对状态的高层次监控。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/MANAGING
 topic-tags: managing-checklist, introduction
 content-type: reference
 docset: aem65
 exl-id: 94b91996-d2b2-4d4a-b770-334cfa2dc0b7
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
-source-wordcount: '3251'
+source-wordcount: '3240'
 ht-degree: 1%
 
 ---
 
 # 管理项目 — 最佳实践核对清单{#managing-projects-best-practices-checklist}
 
-管理项目以实施Adobe Experience Manager (AEM)需要规划和了解，以确保您在实施项目之前和期间了解必须做出的问题和（相关）决策。
+管理项目以实施Adobe Experience Manager (AEM)需要规划和了解，以便您了解在实施项目之前和期间必须做出的问题和（相关）决策。
 
 为了帮助您获得这些好处，最佳实践包括：
 
@@ -25,7 +25,7 @@ ht-degree: 1%
    * 根据阶段、里程碑和角色定义输入和交付项。
    * 提供自动概述（质量、运行状况和完整性）以指示进度和项目运行状况。
 
-* 文档，基于 [清单](/help/managing/best-practices-checklist.md)，其中详细介绍了：
+* 文档基于 [清单](/help/managing/best-practices-checklist.md) 详细描述了：
 
    * [项目心率](#projectheartbeat) 分析。
    * [按角色显示状态](#status-by-role) 概述。
@@ -117,7 +117,7 @@ ht-degree: 1%
 
 ### 规划 {#planning}
 
-计划项目可整合准备工作。 在此，您需要开始将目标和期望转换为由具体任务组成的明确定义的路线图，该路线图应具有明确的沟通和严格的评估以衡量进度。
+计划项目可整合准备工作。 在此，您应该开始将目标和期望转化为由具体任务组成的明确定义的路线图，并以明确的沟通和严格的评审来衡量进度。
 
 #### 里程碑 {#milestones-1}
 
@@ -135,7 +135,7 @@ ht-degree: 1%
 
 * **通信**
 
-  沟通在任何项目中都始终是成功的关键。 您需要清晰而高效地沟通，以确保每个人都能：
+  沟通在任何项目中都始终是成功的关键。 清晰高效地沟通，确保每个人都能：
 
    * 努力实现同样的基本目标
    * 来自同一信息库
@@ -195,7 +195,7 @@ ht-degree: 1%
 
   其重点是：
 
-   * 他们如何相互互动以及如何与用户互动。
+   * 他们如何彼此互动以及如何与用户互动。
    * 由应用程序（而非其内部结构）使用和生成的数据。
 
   这些定义应包括：
@@ -203,7 +203,7 @@ ht-degree: 1%
    * 项目的基本代码结构
    * 代码工件（包、包等）
    * 模板/组件及其关系的划分
-   * 所需自定义的高级详细信息（特定叠加稍后提供）
+   * 所需自定义设置的高级详细信息（特定叠加图稍后提供）
    * 设计解决方案所需的工作流（例如，内容创建、批准、发布、转换、导入和导出）
    * 任何复杂模块（如MSM、商务、第三方集成）的特别注意事项
 
@@ -211,8 +211,8 @@ ht-degree: 1%
 
   系统集成要求您规划（然后实施）：
 
-   * 所有子系统和 [解决方案集成](/help/sites-administering/integration.md) 将汇集起来，作为一个连贯的系统运作
-   * 如何集成任何第三方系统；以及任何特殊注意事项，例如离线/在线、客户端/浏览器端，或在第三方系统停机时进行回退处理
+   * 所有子系统和 [解决方案集成](/help/sites-administering/integration.md) 作为一个连贯的系统共同运作
+   * 任何第三方系统如何集成；以及任何特殊注意事项，例如离线/在线、客户端/浏览器端，或在第三方系统停机时进行回退处理
 
 * **测试概念**
 
@@ -570,7 +570,7 @@ ht-degree: 1%
 
 * 作者和最终用户
 
-   * 将使用系统创建和维护网站内容的人员。
+   * 使用系统创建和维护网站内容的人员。
 
 ## 所需文档和交付项 {#required-documents-and-deliverables}
 

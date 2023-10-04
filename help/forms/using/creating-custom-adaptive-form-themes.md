@@ -5,9 +5,9 @@ content-type: reference
 topic-tags: customization
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: 73b0057f-082d-4502-90e2-5e41b52c1185
-source-git-commit: ab3d016c7c9c622be361596137b150d8719630bd
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
-source-wordcount: '795'
+source-wordcount: '789'
 ht-degree: 0%
 
 ---
@@ -59,13 +59,13 @@ An **自适应表单主题** 是一个AEM客户端库，可用于定义自适应
 
    * `less` 文件夹：包含 `less` 变量文件，在其中定义 `less` 变量和 `less mixins` 用于管理.css样式的属性。
 
-     此文件夹包括 `less` 变量文件， `less` mixin文件， `less` 使用mixin和变量定义样式的文件。 然后所有这些较少的文件会以样式导入.less.
+     此文件夹包括 `less` 变量文件， `less` mixin文件， `less` 使用mixin和变量定义样式的文件。 还有这些 `less` 然后文件会以styles.less格式导入。
 
    * `css`文件夹：包含.css文件，您可以在其中定义要在主题中使用的静态样式。
 
    **更少变量文件**：这些是您在其中定义或覆盖在定义CSS样式中使用的变量的文件。
 
-   自适应表单提供以下.less文件中定义的OOTB变量：
+   自适应表单提供以下定义的OOTB变量 `.less` 文件：
 
    * `/apps/clientlibs/fd/af/guidetheme/common/less/globalvariables.less`
    * `/apps/clientlibs/fd/af/guidetheme/common/less/layoutvariables.less`
@@ -74,7 +74,7 @@ An **自适应表单主题** 是一个AEM客户端库，可用于定义自适应
 
    `/apps/clientlibs/fd/af/third-party/less/variables.less`
 
-   您可以使用自适应表单中提供的更少变量，也可以覆盖这些变量，或者创建新的更少变量。
+   您可以使用 `less` 自适应表单随附的变量，您可以覆盖这些变量，也可以新建 `less` 变量。
 
    >[!NOTE]
    >
@@ -131,11 +131,11 @@ An **自适应表单主题** 是一个AEM客户端库，可用于定义自适应
    }
    ```
 
-   **Styles.less文件：** 使用此文件可以包含必须在客户端库中使用的所有较少文件（变量、mixin、样式）。
+   **Styles.less文件：** 使用此文件可包含所有 `less` 必须在客户端库中使用的文件（变量、mixin、样式）。
 
    在以下示例中 `styles.less` 文件，导入语句可以按任意顺序放置。
 
-   导入以下.less文件的语句是必需的：
+   用于导入以下项的语句 `.less` 文件是必需的：
 
    * `globalvariables.less`
    * `layoutvariables.less`

@@ -1,18 +1,14 @@
 ---
 title: 使用延迟加载改进大型表单的性能
-seo-title: Improve performance of large forms with lazy loading
 description: 延迟加载通过将表单片段的初始化和加载推迟到它们可见时，显着提高了大型复杂自适应表单的性能。
-seo-description: Lazy loading significantly improves the performance of large and complex adaptive forms by deferring initialization and loading of form fragments until they are visible.
-uuid: 6be3d2f0-1b2a-4090-af66-2b08487c31bc
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
-discoiquuid: a20736b7-f7b4-4da1-aa32-2408049b1209
 docset: aem65
 feature: Adaptive Forms
 exl-id: f7e3e2cd-0cbe-4b26-9e55-7afc6dc3af63
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
-source-wordcount: '1090'
+source-wordcount: '1089'
 ht-degree: 8%
 
 ---
@@ -90,7 +86,7 @@ Forms包含某些字段和部分，不适用于所有用户且在所有条件下
 
 在开发用于延迟加载面板的脚本时要牢记以下几点：
 
-* 请确保在延迟加载片段的字段上使用的初始化和计算脚本在本质上是幂等的。 幂等脚本是指即使在多次执行后具有相同效果的脚本。
+* 确保用于延迟加载片段的字段上的初始化和计算脚本本质上为幂等。 幂等脚本是指即使在多次执行后具有相同效果的脚本。
 * 使用字段的全局可用属性，使延迟加载面板中的字段值可用于表单的所有其他面板。
 * 无论是否跨片段全局标记字段，都不要转发延迟面板中字段的引用值。
 * 使用面板重置功能，可通过以下单击表达式重置面板上可见的所有内容。\

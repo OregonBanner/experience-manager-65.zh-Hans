@@ -1,18 +1,14 @@
 ---
 title: 使用Adobe Campaign Classic和Adobe Campaign Standard
-seo-title: Working with Adobe Campaign 6.1 and Adobe Campaign Standard
 description: 您可以在AEM中创建电子邮件内容，并在Adobe Campaign电子邮件中处理这些内容
-seo-description: You can create email content in AEM and process it in Adobe Campaign emails
-uuid: 23195f0b-71c0-4554-8c8b-b0e7704d71d7
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: personalization
-discoiquuid: 2fd0047d-d0f6-4289-98cf-454486f9cd61
 exl-id: d7e4d424-0ca7-449f-95fb-c4fe19dd195d
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
-source-wordcount: '2755'
+source-wordcount: '2753'
 ht-degree: 0%
 
 ---
@@ -149,7 +145,7 @@ ht-degree: 0%
 
 编辑内容时，您可以插入：
 
-* Adobe Campaign上下文字段。 这些是您可以在文本中插入的字段，将根据收件人的数据（例如名字、姓氏或目标维度的任何数据）进行调整。
+* Adobe Campaign上下文字段。 这些字段可插入文本中，并根据收件人的数据（例如名字、姓氏或目标维度的任何数据）进行调整。
 * Adobe Campaign个性化块。 这些是与收件人数据无关的预定义内容块，例如品牌徽标或指向镜像页面的链接。
 
 请参阅 [Adobe Campaign组件](/help/sites-authoring/adobe-campaign-components.md) 获取Campaign组件的完整说明。

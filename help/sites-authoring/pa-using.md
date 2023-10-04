@@ -1,16 +1,14 @@
 ---
 title: 查看页面分析数据以衡量页面内容的有效性
-description: 使用页面分析数据来衡量其页面内容的有效性
-uuid: 8dda89be-13e3-4a13-9a44-0213ca66ed9c
+description: 使用页面分析数据衡量其页面内容的有效性
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: site-features
-discoiquuid: 42d2195a-1327-45c0-a14c-1cf5ca196cfc
 exl-id: 554b10c2-6157-4821-a6a7-f2fb6666cdff
-source-git-commit: 75c6bb87bb06c5ac9378ccebf193b5416c080bb1
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
-source-wordcount: '638'
+source-wordcount: '636'
 ht-degree: 4%
 
 ---
@@ -23,13 +21,13 @@ ht-degree: 4%
 
 ![aa-10](assets/aa-10.png)
 
-页面分析数据显示在 [列表视图](/help/sites-authoring/basic-handling.md#list-view) 站点控制台的。 当页面以列表格式显示时，默认情况下以下列可用：
+页面分析数据显示在 [列表视图](/help/sites-authoring/basic-handling.md#list-view) 站点控制台的。 当页面以列表格式显示时，默认情况下可以使用以下列：
 
 * 页面视图
 * 独特访客
 * 页面停留时间
 
-每列显示一个当前报告期的值，并指示该值自上一个报告期以来是增加还是减少。 您看到的数据每12小时更新一次。
+每列显示当前报告期的值，并指示该值自上一个报告期以来是增加还是减少。 您看到的数据每12小时更新一次。
 
 >[!NOTE]
 >
@@ -55,7 +53,7 @@ ht-degree: 4%
 
 ### 配置可用数据列 {#configuring-available-data-columns}
 
-Analytics-administrators用户组的成员可以配置Sites控制台，以便作者能够查看额外的Analytics列。
+analytics-administrators用户组的成员可以配置Sites控制台，以便作者能够查看额外的Analytics列。
 
 >[!NOTE]
 >
@@ -67,7 +65,7 @@ Analytics-administrators用户组的成员可以配置Sites控制台，以便作
 
 1. 在站点控制台中选择要向作者显示的量度，然后单击 **添加**.
 
-   显示的列检索自Adobe Analytics。
+   显示的列是从Adobe Analytics中检索的。
 
    ![aa-16](assets/aa-16.png)
 
@@ -84,13 +82,13 @@ Analytics-administrators用户组的成员可以配置Sites控制台，以便作
 
 >[!NOTE]
 >
->在以下情况下将显示此选项： [Activity Map已配置](/help/sites-administering/adobeanalytics-connect.md#configuring-for-the-activity-map) （对于您的网站）。
+>如果 [Activity Map已配置](/help/sites-administering/adobeanalytics-connect.md#configuring-for-the-activity-map) 用于您的网站。
 
 >[!NOTE]
 >
 >Activity Map的数据获取自Adobe Analytics。
 
-当您的网站 [已为Adobe Analytics配置](/help/sites-administering/adobeanalytics-connect.md)，您可以使用 [模式Activity Map](/help/sites-authoring/author-environment-tools.md#page-modes) 以查看相关数据。 例如：
+当您的网站 [为Adobe Analytics配置](/help/sites-administering/adobeanalytics-connect.md)，您可以使用 [模式Activity Map](/help/sites-authoring/author-environment-tools.md#page-modes) 以查看相关数据。 例如：
 
 ![aa-07](assets/aa-07.png)
 
@@ -104,13 +102,13 @@ Analytics-administrators用户组的成员可以配置Sites控制台，以便作
 
 * 使用双箭头(**>>**)
 * 切换页面详细信息（眼睛图标）
-* 配置Activity Map设置（齿轮图标）
+* 配置Activity Map设置（cog图标）
 * 选择要显示的分析（各种下拉选择器）
 * 退出Activity Map并关闭工具栏(x)
 
 ![aa-09](assets/aa-09.png)
 
-### 选择要显示的分析 {#selecting-the-analytics-to-show}
+### 选择要显示的Analytics {#selecting-the-analytics-to-show}
 
 您可以使用各种标准选择要显示的分析数据及其显示方式：
 
@@ -149,10 +147,10 @@ Analytics-administrators用户组的成员可以配置Sites控制台，以便作
 * 标准
 
    * 显示（链接类型和数量）
-   * 隐藏未收到点击量的链接所对应的叠加图
+   * 隐藏未获得任何点击量的链接所对应的叠加图
 
 * 实时版
 
    * 显示排名最前的（获胜方或失败方）
-   * 排除最后%
+   * 排除最低的%
    * 自动更新（数据和期间）

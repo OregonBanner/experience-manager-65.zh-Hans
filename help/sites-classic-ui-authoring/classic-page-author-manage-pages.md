@@ -1,17 +1,15 @@
 ---
 title: 创建和组织页面
 description: 本节介绍如何使用AEM创建和管理页面，以便您随后能够在这些页面上创建内容。
-uuid: 47ce137a-7a85-4b79-b4e0-fdf08a9e77bd
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
-discoiquuid: 14b8758b-f164-429a-b299-33b0703f8bec
 exl-id: bd2636d1-6f13-4c6c-b8cd-3bed9e83a101
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
-source-wordcount: '1909'
-ht-degree: 22%
+source-wordcount: '1906'
+ht-degree: 21%
 
 ---
 
@@ -323,7 +321,7 @@ AEM提供了将内部链接更新到要重命名或移动的页面的功能。 �
 
 ### 锁定页面 {#locking-a-page}
 
-您可以在控制台中或者在编辑单个页面时[锁定/解锁页面](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md#locking-a-page)。关于页面是否已被锁定的信息也会显示在这两个位置。
+您可以在控制台中或者在编辑单个页面时[锁定/解锁页面](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md#locking-a-page)。有关锁定页面的信息也会同时显示在这两个位置。
 
 ### 创建新文件夹 {#creating-a-new-folder}
 

@@ -1,27 +1,23 @@
 ---
 title: 为内容片段创建翻译项目
-seo-title: Creating Translation Projects for Content Fragments
 description: 了解如何翻译内容片段。
-seo-description: Learn how to translate content fragments.
-uuid: 23176e70-4003-453c-af25-6499a5ed3f6d
 contentOwner: AEM Docs
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: managing-assets
 content-type: reference
-discoiquuid: d2decc31-a04b-4a8e-bb19-65f21cf7107e
 feature: Content Fragments
 role: User, Admin
 exl-id: 19bb58da-8220-404e-bddb-34be94a3a7d7
-source-git-commit: 53c39e4aa250b18d4fae0327b313b18901677f2c
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
-source-wordcount: '975'
+source-wordcount: '976'
 ht-degree: 0%
 
 ---
 
 # 为内容片段创建翻译项目 {#creating-translation-projects-for-content-fragments}
 
-除了资源外，Adobe Experience Manager (AEM) Assets还支持以下项的语言复制工作流 [内容片段](/help/assets/content-fragments/content-fragments.md) （包括变体）。 对内容片段运行语言复制工作流不需要其他优化。 在每个工作流中，会发送整个内容片段以供翻译。
+除了资源之外，Adobe Experience Manager (AEM) Assets还支持以下项目的语言复制工作流 [内容片段](/help/assets/content-fragments/content-fragments.md) （包括变体）。 对内容片段运行语言复制工作流无需进行其他优化。 在每个工作流中，会发送整个内容片段以供翻译。
 
 您可以在内容片段上运行的工作流类型与您为资产运行的工作流类型完全相似。 此外，每个工作流类型中可用的选项与资产的相应工作流类型下可用的选项相匹配。
 
@@ -33,35 +29,35 @@ ht-degree: 0%
 
 **更新语言副本**
 
-更新或修改源内容片段时，对应的区域设置/语言特定的内容片段需要重新翻译。 更新语言副本工作流会翻译另一组内容片段，并将其包含在特定区域设置的语言副本中。 在这种情况下，会将已翻译的内容片段添加到已包含先前翻译的内容片段的目标文件夹。
+更新或修改源内容片段时，相应的区域设置/语言特定的内容片段需要重新翻译。 更新语言副本工作流会翻译另一组内容片段，并将其包含在特定区域设置的语言副本中。 在这种情况下，会将已翻译的内容片段添加到已包含先前已翻译的内容片段的目标文件夹。
 
 ## 创建和翻译工作流 {#create-and-translate-workflow}
 
-创建和翻译工作流包含以下选项。 与每个选项关联的过程步骤类似于与资产的相应选项关联的步骤。
+创建和翻译工作流包含以下选项。 与每个选项关联的程序步骤与资产相应选项关联的步骤类似。
 
-* 仅创建结构：有关过程步骤，请参阅 [仅为资产创建结构](translation-projects.md#create-structure-only).
+* 仅创建结构：有关过程步骤，请参见 [仅为资产创建结构](translation-projects.md#create-structure-only).
 * 创建新翻译项目：有关过程步骤，请参阅 [为资产创建新的翻译项目](translation-projects.md#create-a-new-translation-project).
 * 添加到现有翻译项目：有关过程步骤，请参阅 [添加到资产的现有翻译项目](translation-projects.md#add-to-existing-translation-project).
 
 ## 更新语言副本工作流 {#update-language-copies-workflow}
 
-更新语言副本工作流包含以下选项。 与每个选项关联的过程步骤类似于与资产的相应选项关联的步骤。
+更新语言副本工作流包含以下选项。 与每个选项关联的程序步骤与资产相应选项关联的步骤类似。
 
 * 创建新翻译项目：有关过程步骤，请参阅 [为资产创建新的翻译项目](translation-projects.md#create-a-new-translation-project) （更新工作流）。
 * 添加到现有翻译项目：有关过程步骤，请参阅 [添加到资产的现有翻译项目](translation-projects.md#add-to-existing-translation-project) （更新工作流）。
 
-您还可以为片段创建临时语言副本，其方式与为资产创建临时副本类似。 有关详细信息，请参阅 [为资源创建临时语言副本](translation-projects.md#creating-temporary-language-copies).
+您还可以创建片段的临时语言副本，其方式与创建资产的临时副本类似。 有关详细信息，请参阅 [创建资产的临时语言副本](translation-projects.md#creating-temporary-language-copies).
 
 ## 翻译混合媒体片段 {#translating-mixed-media-fragments}
 
 AEM允许您翻译包含各种媒体资产和收藏集的内容片段。 如果您翻译包含内联资源的内容片段，则这些资源的翻译副本将存储在目标语言根下。
 
-如果内容片段包含收藏集，则收藏集中的资产将随内容片段一起翻译。 资产的已翻译副本存储在相应的目标语言根中，其位置与源语言根下的源资产的物理位置匹配。
+如果内容片段包括集合，则集合中的资产将随内容片段一起翻译。 资产的翻译副本存储在相应的目标语言根中，该根位于与源语言根下的源资产的物理位置相匹配的位置。
 
-为了能够翻译包含混合媒体的内容片段，请首先编辑默认翻译框架，以启用与内容片段关联的内联资产和收藏集的翻译。
+为了能够翻译包含混合媒体的内容片段，请首先编辑默认翻译框架以启用与内容片段关联的内联资产和收藏集的翻译。
 
-1. 单击/点按AEM徽标，然后导航到 **[!UICONTROL “工具”>“部署”>“Cloud Services”]**.
-1. 查找 **[!UICONTROL 翻译集成]** 下 **[!UICONTROL Adobe Marketing Cloud]**，然后单击/点按 **[!UICONTROL 显示配置]**.
+1. 单击/点按AEM徽标，然后导航到 **[!UICONTROL “工具”>“部署”>“Cloud Service”]**.
+1. 定位 **[!UICONTROL 翻译集成]** 下 **[!UICONTROL Adobe Marketing Cloud]**，然后单击/点按 **[!UICONTROL 显示配置]**.
 
    ![chlimage_1-444](assets/chlimage_1-444.png)
 
@@ -73,11 +69,11 @@ AEM允许您翻译包含各种媒体资产和收藏集的内容片段。 如果�
 
    ![chlimage_1-446](assets/chlimage_1-446.png)
 
-1. 导航到 **[!UICONTROL 资产]** 选项卡，然后选择 **[!UICONTROL 内联媒体资产和关联的收藏集]** 从 **[!UICONTROL 翻译内容片段资产]** 列表。 单击/点按 **[!UICONTROL 确定]** 以保存更改。
+1. 导航至 **[!UICONTROL 资产]** 选项卡，然后选择 **[!UICONTROL 内嵌媒体资产和关联的收藏集]** 从 **[!UICONTROL 翻译内容片段资产]** 列表。 单击/点按 **[!UICONTROL 确定]** 以保存更改。
 
    ![chlimage_1-447](assets/chlimage_1-447.png)
 
-1. 从英语根文件夹中，打开一个内容片段。
+1. 从英语根文件夹中，打开内容片段。
 
    ![chlimage_1-448](assets/chlimage_1-448.png)
 
@@ -97,7 +93,7 @@ AEM允许您翻译包含各种媒体资产和收藏集的内容片段。 如果�
 
    ![chlimage_1-452](assets/chlimage_1-452.png)
 
-1. 选择一个收藏集并将其包含到内容片段中。 单击/点按 **[!UICONTROL 保存]**.
+1. 选择一个收藏集并将其包含在内容片段中。 单击/点按 **[!UICONTROL 保存]**.
 
    ![chlimage_1-453](assets/chlimage_1-453.png)
 
@@ -110,7 +106,7 @@ AEM允许您翻译包含各种媒体资产和收藏集的内容片段。 如果�
 
    ![chlimage_1-455](assets/chlimage_1-455.png)
 
-1. 单击/点按 **[!UICONTROL 创建并翻译]** ，以显示 **[!UICONTROL 创建并翻译]** 对话框。
+1. 单击/点按 **[!UICONTROL 创建并翻译]** 从面板底部显示 **[!UICONTROL 创建并翻译]** 对话框。
 
    ![chlimage_1-456](assets/chlimage_1-456.png)
 
@@ -126,7 +122,7 @@ AEM允许您翻译包含各种媒体资产和收藏集的内容片段。 如果�
 
    ![chlimage_1-459](assets/chlimage_1-459.png)
 
-1. 导航到 **[!UICONTROL 项目]** 控制台中，打开您创建的翻译项目的项目文件夹。
+1. 导航至 **[!UICONTROL 项目]** 控制台，然后打开您创建的翻译项目的项目文件夹。
 
    ![chlimage_1-460](assets/chlimage_1-460.png)
 
@@ -135,7 +131,7 @@ AEM允许您翻译包含各种媒体资产和收藏集的内容片段。 如果�
    ![chlimage_1-461](assets/chlimage_1-461.png)
 
 1. 在翻译作业拼贴中，验证要翻译的资产数量。
-1. 从 **[!UICONTROL 翻译作业]** 图块，启动翻译作业。
+1. 从 **[!UICONTROL 翻译作业]** 磁贴，启动翻译作业。
 
    ![chlimage_1-462](assets/chlimage_1-462.png)
 
@@ -151,7 +147,7 @@ AEM允许您翻译包含各种媒体资产和收藏集的内容片段。 如果�
 
    ![chlimage_1-465](assets/chlimage_1-465.png)
 
-   请注意，仅翻译收藏集的内容。 收藏集本身不会翻译。
+   请注意，仅翻译收藏集的内容。 收藏集本身不会进行翻译。
 
 1. 导航到已翻译关联资产的路径。 请注意，已翻译的资产存储在目标语言根下。
 

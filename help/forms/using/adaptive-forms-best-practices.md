@@ -1,15 +1,11 @@
 ---
 title: 使用自适应表单的最佳实践
-seo-title: Best practices for working with adaptive forms
 description: 介绍设置AEM Forms项目、开发自适应表单和优化AEM Forms系统性能的最佳实践。
-seo-description: Explains best practices for setting up an AEM Forms project, developing adaptive forms, and optimizing the performance for AEM Forms system.
-uuid: ed95fc64-56b3-4ea1-a5ba-2e96953fca56
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
-discoiquuid: 43c431e4-5286-4f4e-b94f-5a7451c4a22c
 feature: Adaptive Forms
 exl-id: 5c75ce70-983e-4431-a13f-2c4c219e8dde
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
 source-wordcount: '4734'
 ht-degree: 1%
@@ -293,7 +289,7 @@ AEM提供可用于本地化自适应表单的翻译工作流。 有关信息，�
 
 * 将自适应表单片段用于各个表单中的常用元素并将片段本地化。 它确保您将片段本地化一次，并在使用本地化片段的所有表单中反映出来。
 * 任何修改（如添加新组件或以本地化的形式应用脚本）都不会自动本地化。 因此，在本地化表单之前必须先完成该表单，以避免多个本地化周期。
-* 使用 `afAcceptLang` 请求参数覆盖浏览器区域设置并以指定的区域设置呈现表单。 例如，无论浏览器设置中指定的区域设置如何，以下URL将强制以日语区域设置呈现表单：
+* 使用 `afAcceptLang` 请求参数覆盖浏览器区域设置并以指定的区域设置呈现表单。 例如，无论浏览器设置中指定的区域设置如何，以下URL都会强制以日语区域设置呈现表单：
 
   `https://'[server]:[port]'/<contextPath>/<formFolder>/<formName>.html?wcmmode=disabled&afAcceptLang=ja`
 
