@@ -3,17 +3,17 @@ title: 配置富文本编辑器插件
 description: 了解如何配置Adobe Experience Manager富文本编辑器插件以启用各个功能。
 contentOwner: AG
 exl-id: 6bfd6caa-a68a-40ba-9826-4ba02cd1dbfb
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 71b3f7c6ad2c7712762a29518de6cf0639081cb7
 workflow-type: tm+mt
-source-wordcount: '4405'
-ht-degree: 4%
+source-wordcount: '4395'
+ht-degree: 3%
 
 ---
 
 
 # 配置富文本编辑器插件 {#configure-the-rich-text-editor-plug-ins}
 
-RTE功能通过一系列插件提供，每个插件都具有功能属性。 您可以将features属性配置为启用或禁用一个或多个RTE功能。 本文介绍了如何专门配置RTE插件。
+RTE功能通过一系列插件提供，每个插件都具有功能属性。 您可以配置features属性以启用或禁用一个或多个RTE功能。 本文介绍了如何专门配置RTE插件。
 
 有关其他RTE配置的详细信息，请参阅 [配置富文本编辑器](/help/sites-administering/rich-text-editor.md).
 
@@ -47,7 +47,7 @@ RTE功能通过一系列插件提供，每个插件都具有功能属性。 您�
       * **类型** `String`
       * **值** `./text`
 
-1. 根据您配置的接口，创建一个节点 `<rtePlugins-node>`，如果它不存在：
+1. 根据要配置的接口，创建一个节点 `<rtePlugins-node>`，如果它不存在：
 
    * **名称** `rtePlugins`
    * **类型** `nt:unstructured`
@@ -71,7 +71,7 @@ RTE功能通过一系列插件提供，每个插件都具有功能属性。 您�
 
 在使用替换功能时，要替换的替换字符串应与查找字符串同时输入。不过，您仍可以在替换字符串之前单击“查找”来搜索它。如果在单击“查找”后输入替换字符串，则搜索将重置到文本的开头。
 
-在单击“查找”时，“查找和替换”对话框变为透明；在单击“替换”时，此对话框变为不透明。这允许作者审查自己将替换的文本。如果用户单击“全部替换” ，对话框将关闭并显示所做的替换次数。
+在单击“查找”时，“查找和替换”对话框变为透明；在单击“替换”时，此对话框变为不透明。这允许作者查看自己替换的文本。 如果用户单击“全部替换” ，对话框将关闭并显示所做的替换次数。
 
 ## 配置粘贴模式 {#paste-modes}
 
@@ -81,7 +81,7 @@ RTE功能通过一系列插件提供，每个插件都具有功能属性。 您�
 
 * **纯文本模式**：以纯文本形式粘贴剪贴板内容。 在插入之前，它会从复制的内容中剥离所有样式和格式元素 [!DNL Experience Manager] 组件。
 
-* **MS Word模式**：从MS Word复制时粘贴带格式的文本（包括表格）。 不支持从其他源（如网页或MS Excel）复制和粘贴文本，并且仅保留部分格式。
+* **MS® Word模式**：从MS® Word复制时粘贴带格式的文本（包括表格）。 不支持从其他源(如网页或MS® Excel)复制和粘贴文本，并且仅保留部分格式。
 
 ### 配置RTE工具栏上可用的粘贴选项  {#configure-paste-options-available-on-the-rte-toolbar}
 
@@ -91,7 +91,7 @@ RTE功能通过一系列插件提供，每个插件都具有功能属性。 您�
 
 * **[!UICONTROL 粘贴为文本]**：提供纯文本模式功能。
 
-* **[!UICONTROL 从Word粘贴]**：提供MS Word模式功能。
+* **[!UICONTROL 从Word粘贴]**：提供MS® Word模式功能。
 
 要配置RTE以显示所需的图标，请执行以下步骤。
 
@@ -109,10 +109,10 @@ RTE功能通过一系列插件提供，每个插件都具有功能属性。 您�
 
 * 以纯文本形式粘贴剪贴板内容。 在AEM组件中插入之前，它会从复制的内容中剥离所有样式和格式元素。 使用进行配置 `plaintext` 下。
 
-* 从MS Word复制时，粘贴包含格式设置的文本（包括表格）。 不支持从其他源（如网页或MS Excel）复制和粘贴文本，并且仅保留部分格式。 使用进行配置 `wordhtml` 下。
+* 从MS® Word复制时，粘贴包含格式设置的文本（包括表格）。 不支持从其他源(如网页或MS® Excel)复制和粘贴文本，并且仅保留部分格式。 使用进行配置 `wordhtml` 下。
 
 1. 在组件中，导航到 `<rtePlugins-node>/edit` 节点。 如果节点不存在，请创建节点。 有关更多信息，请参阅 [激活插件](#activateplugin).
-1. 在 `edit` 节点使用以下详细信息创建属性：
+1. 在 `edit` 节点，使用以下详细信息创建属性：
 
    * **名称** `defaultPasteMode`
    * **类型** `String`
@@ -120,7 +120,7 @@ RTE功能通过一系列插件提供，每个插件都具有功能属性。 您�
 
 ### 配置粘贴内容时允许的格式 {#pasteformats}
 
-pass-as-Microsoft-Word (`paste-wordhtml`)模式可进行进一步配置，以便您可以明确定义在从其他程序(如Microsoft Word)粘贴AEM时允许使用哪些样式。
+pass-as-Microsoft-Word (`paste-wordhtml`)模式可进行进一步配置，以便您可以明确定义在从其他程序(如Microsoft® Word)粘贴AEM时允许使用哪些样式。
 
 例如，如果在AEM中粘贴时只允许使用粗体格式和列表，则可以筛选掉其他格式。 这称为可配置的粘贴筛选，可同时为以下两项执行该操作：
 
@@ -132,12 +132,12 @@ pass-as-Microsoft-Word (`paste-wordhtml`)模式可进行进一步配置，以便
 要配置在将文本从其他程序粘贴到AEM时允许的格式，请执行以下操作：
 
 1. 在组件中，导航到节点 `<rtePlugins-node>/edit`. 如果节点不存在，请创建节点。 有关更多详细信息，请参阅 [激活插件](#activateplugin).
-1. 在下创建节点 `edit` 保存HTML粘贴规则的节点：
+1. 在下创建节点 `edit` 节点，以便您可以保存HTML粘贴规则：
 
    * **名称** `htmlPasteRules`
    * **类型** `nt:unstructured`
 
-1. 在下创建节点 `htmlPasteRules`，保存允许的基本格式的详细信息：
+1. 在下创建节点 `htmlPasteRules`，以便您可以保存允许的基本格式的详细信息：
 
    * **名称** `allowBasics`
    * **类型** `nt:unstructured`
@@ -163,7 +163,7 @@ pass-as-Microsoft-Word (`paste-wordhtml`)模式可进行进一步配置，以便
 | 属性 | 类型 | 描述 |
 |---|---|---|
 | `allowBlockTags` | 字符串 | 定义允许的块标记列表。 一些可能的块标记包括： <ul> <li>标题(h1、h2、h3)</li> <li>第(p)款</li> <li>列表(ol， ul)</li> <li>表(table)</li> </ul> |
-| `fallbackBlockTag` | 字符串 | 定义块标记，用于具有未包含在中的块标记的任何块 `allowBlockTags`. `p` 在多数情况下就足够了。 |
+| `fallbackBlockTag` | 字符串 | 定义块标记，用于具有未包含在中的块标记的任何块 `allowBlockTags`. `p` 通常就足够了。 |
 | 表 | nt:unstructured | 定义粘贴表时的行为。 此节点必须具有属性 `allow` （键入布尔值）以定义是否允许粘贴表。 如果允许设置为 `false`，您必须指定属性 `ignoreMode` （键入字符串）以定义如何处理粘贴的表内容。 的有效值 `ignoreMode` 为： <ul> <li>`remove`：删除表内容。</li> <li>`paragraph`：将表格单元格转换为段落。</li> </ul> |
 | list | nt:unstructured | 定义粘贴列表时的行为。 必须具有属性 `allow` （键入布尔值）以定义是否允许粘贴列表。 如果 `allow` 设置为 `false`，您必须指定属性 `ignoreMode` （键入字符串）以定义如何处理粘贴的任何列表内容。 的有效值 `ignoreMode` 为： <ul><li> `remove`：删除列表内容。</li> <li>`paragraph`：将列表项转换为段落。</li> </ul> |
 
@@ -241,7 +241,7 @@ pass-as-Microsoft-Word (`paste-wordhtml`)模式可进行进一步配置，以便
 
 >[!NOTE]
 >
->在对话框（经典UI）中使用RTE时，您可能需要指定针对富文本编辑优化的样式表。 由于技术限制，编辑器中的CSS上下文丢失，因此您可能希望模拟此上下文以改进WYSIWYG体验。
+>在对话框（经典UI）中使用RTE时，可能需要指定针对富文本编辑优化的样式表。 由于技术限制，编辑器中的CSS上下文丢失，因此您可能希望模拟此上下文以改进WYSIWYG体验。
 >
 >富文本编辑器使用容器DOM元素，其ID为 `CQrte` 可用于提供不同的样式进行查看和编辑：
 >
@@ -254,17 +254,17 @@ pass-as-Microsoft-Word (`paste-wordhtml`)模式可进行进一步配置，以便
 ### 在弹出列表中指定可用的样式 {#stylesindropdown}
 
 1. 在组件定义中，导航到节点 `<rtePlugins-node>/styles`，在中创建 [启用样式下拉选择器](#styleselectorlist).
-1. 在节点下 `styles`，创建新节点(也称为 `styles`)，以保存可供使用的列表：
+1. 在节点下 `styles`，创建一个节点(也称为 `styles`)，以保存可供使用的列表：
 
    * **名称** `styles`
    * **类型** `cq:WidgetCollection`
 
-1. 在 `styles` 表示单个样式的节点：
+1. 在下创建节点 `styles` 节点，以便您可以表示单个样式：
 
    * **名称**，您可以指定名称，但它应该适合样式
    * **类型** `nt:unstructured`
 
-1. 添加属性 `cssName` 要引用CSS类，请执行以下操作：
+1. 添加属性 `cssName` ，以便您可以引用CSS类：
 
    * **名称** `cssName`
    * **类型** `String`
@@ -282,7 +282,7 @@ pass-as-Microsoft-Word (`paste-wordhtml`)模式可进行进一步配置，以便
 
 ### 配置RTE以优化日语断字 {#jpwordwrap}
 
-使用AEM创作日语内容的作者可以将样式应用于字符以避免在不需要换行符时换行。 这允许作者在所需位置处断句。 此功能的样式基于CSS样式表中预定义的CSS类。
+使用AEM创作日语内容的作者可以将样式应用于字符，以避免在不需要换行符的情况下出现换行符。 这允许作者在所需位置处断句。 此功能的样式基于CSS样式表中预定义的CSS类。
 
 >[!NOTE]
 >
@@ -290,11 +290,11 @@ pass-as-Microsoft-Word (`paste-wordhtml`)模式可进行进一步配置，以便
 
 要创建作者可以应用于日语文本的样式，请执行以下步骤：
 
-1. 在styles节点下创建新节点。 请参阅 [指定新样式](#stylesindropdown).
+1. 在“样式”节点下创建一个节点。 请参阅 [指定新样式](#stylesindropdown).
    * 名称：`jpn-word-wrap`
    * 类型：`nt:unstructure`
 
-1. 添加属性 `cssName` 到节点以引用CSS类。 此类名称是日语自动换行功能的保留名称。
+1. 添加属性 `cssName` 到节点，以便您可以引用CSS类。 此类名称是日语自动换行功能的保留名称。
    * 名称：`cssName`
    * 类型：`String`
    * 值： `jpn-word-wrap` (无前置词 `.`)
@@ -319,11 +319,11 @@ pass-as-Microsoft-Word (`paste-wordhtml`)模式可进行进一步配置，以便
 
 ## 配置段落格式 {#paraformats}
 
-在RTE中创作的任何文本都放置在块标记中，默认设置为 `<p>`. 启用 `paraformat` 插件，您可以使用下拉选择列表指定可分配给段落的其他块标记。 段落格式通过指定正确的块标记来确定段落类型。 作者可以使用“格式”选择器选择和分配格式。 示例块标记包括标准段落 &lt;p> 和标题 &lt;h1>， &lt;h2>，等等。
+在RTE中创作的任何文本都放置在块标记中，默认设置为 `<p>`. 启用 `paraformat` 插件，您可以使用下拉选择列表指定可分配给段落的其他块标记。 段落格式通过指定正确的块标记来确定段落类型。 作者可以使用“格式”选择器选择和分配格式。 示例块标记除其他外包括标准段落 &lt;p> 和标题 &lt;h1>， &lt;h2>，等等。
 
 >[!CAUTION]
 >
->此插件不适用于结构复杂的内容，例如列表或表。
+>此插件不适用于具有复杂结构的内容，例如列表或表。
 
 >[!NOTE]
 >
@@ -334,7 +334,7 @@ pass-as-Microsoft-Word (`paste-wordhtml`)模式可进行进一步配置，以便
 * 启用格式下拉选择器列表。
 * 指定可从下拉列表中选择作为段落格式的块标记。
 
-对于以后的（重新）配置（如添加更多格式），请仅遵循说明的相关部分。
+对于以后的配置或重新配置（如要添加更多格式），请仅遵循说明的相关部分。
 
 ### 启用格式下拉选择器 {#formatselectorlist}
 
@@ -366,12 +366,12 @@ pass-as-Microsoft-Word (`paste-wordhtml`)模式可进行进一步配置，以便
 可以通过以下方式使段落格式可供选择：
 
 1. 在组件定义中，导航到节点 `<rtePlugins-node>/paraformat`，在中创建 [启用格式下拉选择器](#styleselectorlist).
-1. 在 `paraformat` 节点创建一个新节点，保存格式列表：
+1. 在 `paraformat` 节点，创建一个保存格式列表的节点：
 
    * **名称** `formats`
    * **类型** `cq:WidgetCollection`
 
-1. 在 `formats` 节点，这将保存单个格式的详细信息：
+1. 在下创建节点 `formats` 节点，这将保存单个格式的详细信息：
 
    * **名称**，您可以指定名称，但它应该适合格式（例如，myparagraph、myheading1）。
    * **类型** `nt:unstructured`
@@ -380,7 +380,7 @@ pass-as-Microsoft-Word (`paste-wordhtml`)模式可进行进一步配置，以便
 
    * **名称** `tag`
    * **类型** `String`
-   * **值** 格式的块标记；例如：p、h1、h2等。
+   * **值** 格式的块标记；例如：p、h1、h2。
 
      您无需输入分隔尖括号。
 
@@ -388,7 +388,7 @@ pass-as-Microsoft-Word (`paste-wordhtml`)模式可进行进一步配置，以便
 
    * **名称** `description`
    * **类型** `String`
-   * **值** 此格式的描述性文本；例如，段落、标题1、标题2等。 此文本显示在“格式”选择列表中。
+   * **值** 此格式的描述性文本；例如，段落，标题1，标题2。 此文本显示在“格式”选择列表中。
 
 1. 保存更改。
 
@@ -406,7 +406,7 @@ pass-as-Microsoft-Word (`paste-wordhtml`)模式可进行进一步配置，以便
 
 >[!CAUTION]
 >
-添加您自己的特殊字符将覆盖默认选项。 如果需要，可在您自己的选择中（重新）定义这些字符。
+添加您自己的特殊字符将覆盖默认选项。 如有必要，请在您自己的选择中定义或重新定义这些字符。
 
 ### 定义单个字符 {#definesinglechar}
 
@@ -419,22 +419,22 @@ pass-as-Microsoft-Word (`paste-wordhtml`)模式可进行进一步配置，以便
 
          (或 `String / *` 适用于此插件的所有功能)
 
-1. 下 `misctools` 创建一个节点来保存特殊字符配置：
+1. 下 `misctools`，创建一个节点来保存特殊字符配置：
 
    * **名称** `specialCharsConfig`
    * **类型** `nt:unstructured`
 
-1. 下 `specialCharsConfig` 创建另一个节点来保存字符列表：
+1. 下 `specialCharsConfig`，创建另一个节点来保存字符列表：
 
    * **名称** `chars`
    * **类型** `nt:unstructured`
 
-1. 下 `chars` 添加新节点以保存单个字符定义：
+1. 下 `chars`，添加节点以保存单个字符定义：
 
    * **名称** 您可以指定名称，但它应反映字符；例如，一半。
    * **类型** `nt:unstructured`
 
-1. 要添加到此节点，请添加以下属性：
+1. 在此节点中，添加以下属性：
 
    * **名称** `entity`
    * **类型** `String`
@@ -442,14 +442,14 @@ pass-as-Microsoft-Word (`paste-wordhtml`)模式可进行进一步配置，以便
 
 1. 保存更改。
 
-在CRXDE中，保存属性后，将显示表示的字符。 请参阅下面的示例中一半内容。 重复以上步骤以使作者可以使用更多特殊字符。
+在CRXDE中，保存属性后，将显示表示的字符。 请参阅下面的示例中一半内容。 重复上述步骤，以便您能够为作者提供更多特殊字符。
 
 ![在CRXDE中，添加单个字符以使其在RTE工具栏中可用](assets/chlimage_1-106.png "在CRXDE中，添加单个字符以使其在RTE工具栏中可用")
 
 ### 定义字符范围 {#definerangechar}
 
-1. 使用中的步骤1至3 [定义单个字符](#definesinglechar).
-1. 下 `chars` 添加新节点来保存字符范围的定义：
+1. 使用中的步骤1 - 3 [定义单个字符](#definesinglechar).
+1. 下 `chars`，添加一个节点来保存字符范围的定义：
 
    * **名称** 您可以指定名称，但它应反映字符范围；例如，铅笔。
    * **类型** `nt:unstructured`
@@ -466,7 +466,7 @@ pass-as-Microsoft-Word (`paste-wordhtml`)模式可进行进一步配置，以便
 
 1. 保存更改。
 
-   例如，定义9998到10000之间的范围时，为您提供了以下字符。
+   例如，定义一个范围9998 - 10000为您提供了以下字符。
 
    ![在CRXDE中，定义要在RTE中可用的字符范围](assets/chlimage_1-107.png)
 
@@ -486,7 +486,7 @@ pass-as-Microsoft-Word (`paste-wordhtml`)模式可进行进一步配置，以便
 >
 在RTE组件中或从RTE组件中复制和粘贴表依赖于浏览器。 并非所有浏览器都支持开箱即用。 根据表结构和浏览器，可能会得到不同的结果。 例如，在经典UI和触屏UI中，当您在Mozilla Firefox的RTE组件中复制并粘贴表时，不会保留表的布局。
 
-1. 在组件内，导航到节点 `<rtePlugins-node>/table`. 如果节点不存在，请创建节点。 有关更多详细信息，请参阅 [激活插件](#activateplugin).
+1. 在组件中，导航到节点 `<rtePlugins-node>/table`. 如果节点不存在，请创建节点。 有关更多详细信息，请参阅 [激活插件](#activateplugin).
 1. 创建 `features` 上的属性 `table` 节点：
 
    * **名称** `features`
@@ -495,16 +495,16 @@ pass-as-Microsoft-Word (`paste-wordhtml`)模式可进行进一步配置，以便
 
    >[!NOTE]
    >
-   如果不希望启用所有表格功能，可创建 `features` 属性为：
+   如果不希望启用所有表格功能，可以创建 `features` 属性为：
    >
    * **类型** `String[]`
    >
-   * **值**(s)下列其中一项或两项（视需要）：
+   * **值** 根据需要，执行下列一项或两项操作：
    * `table` 允许编辑表属性；包括样式。
    * `cellprops` 允许编辑单元格属性，包括样式。
 
-1. 定义CSS样式表的位置以引用这些样式表。 请参阅 [指定样式表的位置](#locationofstylesheet) 因为这与定义 [文本样式](#textstyles). 如果定义了其他样式，则可以定义位置。
-1. 在 `table` 节点创建以下新节点（根据需要）：
+1. 定义CSS样式表的位置，以便您可以引用这些样式表。 请参阅 [指定样式表的位置](#locationofstylesheet) 因为这与定义 [文本样式](#textstyles). 如果定义了其他样式，则可以定义位置。
+1. 在 `table` 节点，根据需要创建以下新节点：
 
    * 为整个表定义样式(可在 **表属性**)：
 
@@ -516,12 +516,12 @@ pass-as-Microsoft-Word (`paste-wordhtml`)模式可进行进一步配置，以便
       * **名称** `cellStyles`
       * **类型** `cq:WidgetCollection`
 
-1. 创建新节点(在 `tableStyles` 或 `cellStyles` 节点)，以表示单个样式：
+1. 创建节点(在 `tableStyles` 或 `cellStyles` 节点)，以便您可以表示单个样式：
 
    * **名称** 您可以指定名称，但它应反映样式。
    * **类型** `nt:unstructured`
 
-1. 在此节点上创建属性：
+1. 在此节点上，创建属性：
 
    * 定义要引用的CSS样式
 
@@ -541,7 +541,7 @@ pass-as-Microsoft-Word (`paste-wordhtml`)模式可进行进一步配置，以便
 
 ### 为辅助功能配置表中的隐藏标头 {#hiddenheader}
 
-有时，您可以创建没有可视文本的数据表，但前提是列标题的用途隐含在列与其他列的视觉关系中。 在这种情况下，有必要在标题单元格的单元格中提供隐藏的内部文本，以允许屏幕阅读器和其他辅助技术帮助有各种需求的阅读器了解列的用途。
+有时，您可以创建没有可视文本的数据表，但前提是列标题的用途隐含在列与其他列的视觉关系中。 在这种情况下，必须在标题单元格的单元格中提供隐藏的内部文本。 这样，屏幕阅读器和其他辅助技术即可帮助有各种需求的阅读器了解此列的用途。
 
 为了在这种情况下增强辅助功能，RTE支持隐藏的标题单元格。 此外，它还提供与表中隐藏标头相关的配置设置。 这些设置允许您在编辑和预览模式下对隐藏的标题应用CSS样式。 为帮助作者在编辑模式下识别隐藏的标头，请在代码中包含以下参数：
 
@@ -559,7 +559,7 @@ pass-as-Microsoft-Word (`paste-wordhtml`)模式可进行进一步配置，以便
 
 ## 为拼写检查器添加词典 {#adddict}
 
-当激活spellcheck插件时，RTE会为每种相应的语言使用词典。 然后，通过获取子树的语言属性或者从URL中提取语言来根据网站的语言选择这些语言；例如。 该 `/en/` 分支被选为英语， `/de/` 分支为德语。
+当激活spellcheck插件时，RTE会为每种相应的语言使用词典。 然后，通过获取子树的语言属性或者从URL中提取语言来根据网站的语言选择这些语言。 例如， `/en/` 分支被选为英语， `/de/` 分支为德语。
 
 >[!NOTE]
 >
@@ -580,8 +580,8 @@ pass-as-Microsoft-Word (`paste-wordhtml`)模式可进行进一步配置，以便
    >
    仅字典在 `MySpell` 支持OpenOffice.org v2.0.1或更低版本的格式。 由于字典现在是存档文件，因此建议您在下载后验证存档。
 
-1. 找到.aff和.dic文件。 请将文件名保留为小写。 例如， `de_de.aff` 和 `de_de.dic`.
-1. 将.aff和.dic文件加载到存储库的 `/apps/cq/spellchecker/dictionaries`.
+1. 找到 `.aff` 和 `.dic` 文件。 请将文件名保留为小写。 例如， `de_de.aff` 和 `de_de.dic`.
+1. 加载 `.aff` 和 `.dic` 存储库中的文件，位于 `/apps/cq/spellchecker/dictionaries`.
 
 >[!NOTE]
 >
@@ -593,8 +593,8 @@ RTE拼写检查器可按需使用。 当您开始键入文本时，它不会自�
 
 RTE允许作者撤消或重做前几次编辑。 默认情况下，历史中存储50次编辑。 您可以根据需要配置此值。
 
-1. 在组件内，导航到节点 `<rtePlugins-node>/undo`. 创建这些节点（如果这些节点不存在）。 有关更多详细信息，请参阅 [激活插件](#activateplugin).
-1. 在 `undo` 节点创建属性：
+1. 在组件中，导航到节点 `<rtePlugins-node>/undo`. 创建这些节点（如果这些节点不存在）。 有关更多详细信息，请参阅 [激活插件](#activateplugin).
+1. 在 `undo` 节点，创建属性：
 
    * **名称** `maxUndoSteps`
    * **类型** `Long`
@@ -609,7 +609,7 @@ RTE允许作者撤消或重做前几次编辑。 默认情况下，历史中存�
 要定义选项卡大小，请执行以下操作：
 
 1. 在组件中，导航到节点 `<rtePlugins-node>/keys`. 如果节点不存在，请创建节点。 有关更多详细信息，请参阅 [激活插件](#activateplugin).
-1. 在 `keys` 节点创建属性：
+1. 在 `keys` 节点，创建属性：
 
    * **名称** `tabSize`
    * **类型** `String`
@@ -625,10 +625,10 @@ RTE允许作者撤消或重做前几次编辑。 默认情况下，历史中存�
 >
 此缩进大小仅适用于文本的段落（块）；它不会影响实际列表的缩进。
 
-1. 在组件内，导航到节点 `<rtePlugins-node>/lists`. 创建这些节点（如果这些节点不存在）。 有关更多详细信息，请参阅 [激活插件](#activateplugin).
-1. 在 `lists` 节点创建 `identSize` 参数：
+1. 在组件中，导航到节点 `<rtePlugins-node>/lists`. 创建这些节点（如果这些节点不存在）。 有关更多详细信息，请参阅 [激活插件](#activateplugin).
+1. 在 `lists` 节点，创建 `indentSize` 参数：
 
-   * **名称**：`identSize`
+   * **名称**：`indentSize`
    * **类型**：`Long`
    * **值**：缩进边距所需的像素数。
 
@@ -640,7 +640,7 @@ RTE允许作者撤消或重做前几次编辑。 默认情况下，历史中存�
 
 您可以定义组件对话框中显示的可编辑空间的高度：
 
-1. 在 `../items/text` 节点时，创建新属性：
+1. 在 `../items/text` 节点时，创建属性：
 
    * **名称** `height`
    * **类型** `Long`
@@ -662,7 +662,7 @@ RTE允许作者撤消或重做前几次编辑。 默认情况下，历史中存�
 要配置如何将链接从其他程序添加到AEM中，请定义HTML规则。
 
 1. 使用CRXDE Lite，找到项目的文本组件。
-1. 在与相同的级别创建新节点 `<rtePlugins-node>`，即，在父节点下创建节点 `<rtePlugins-node>`：
+1. 在与相同的级别创建节点 `<rtePlugins-node>`，即，在父节点下创建节点 `<rtePlugins-node>`：
 
    * **名称** `htmlRules`
    * **类型** `nt:unstructured`
@@ -677,12 +677,12 @@ RTE允许作者撤消或重做前几次编辑。 默认情况下，历史中存�
    >
    的位置 `../items/text` 节点可能因对话框的结构而异；以下两个示例为 `/apps/myProject>/components/text/dialog/items/text` 和 `/apps/<myProject>/components/text/dialog/items/panel/items/text`.
 
-1. 下 `htmlRules`，创建新节点。
+1. 下 `htmlRules`，创建一个节点。
 
    * **名称** `links`
    * **类型** `nt:unstructured`
 
-1. 在 `links` 节点根据需要定义属性：
+1. 在 `links` 节点，根据需要定义属性：
 
    * 内部链接的CSS样式：
 
@@ -700,26 +700,26 @@ RTE允许作者撤消或重做前几次编辑。 默认情况下，历史中存�
 
       * **名称** `protocols`
       * **类型** `String[]`
-      * **值**(s)一个或多个协议
+      * **值** 一个或多个协议
 
    * **defaultprotocol** (属性类型为 **字符串**)：用户未明确指定时使用的协议。
 
       * **名称** `defaultProtocol`
       * **类型** `String`
-      * **值**(s)一个或多个默认协议
+      * **值** 一个或多个默认协议
 
-   * 有关如何处理链接的目标属性的定义。 创建新节点：
+   * 有关如何处理链接的目标属性的定义。 创建节点：
 
       * **名称** `targetConfig`
       * **类型** `nt:unstructured`
 
-     在节点上 `targetConfig`：定义所需的属性：
+     在节点上 `targetConfig`，定义所需的属性：
 
       * 指定目标模式：
 
          * **名称** `mode`
          * **类型** `String`)
-         * **值**(s) ：
+         * **值**
 
             * `auto`：表示选择了自动目标
 
