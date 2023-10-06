@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
 exl-id: f82391d7-e30d-48d2-8f66-88fcae3dfb5f
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 71b3f7c6ad2c7712762a29518de6cf0639081cb7
 workflow-type: tm+mt
 source-wordcount: '2067'
 ht-degree: 10%
@@ -18,7 +18,7 @@ ht-degree: 10%
 
 使用 **搜索Forms** 自定义在创作环境的各种AEM控制台和/或面板中提供的搜索面板中使用的搜索谓词选择。 自定义这些面板可根据您的特定需求使搜索功能通用。
 
-A [谓词范围](#predicates-and-their-settings)s现成可用。 您可以添加多个谓词，其中包括“属性”谓词以搜索与您指定的单个属性匹配的资产，或“选项”谓词以搜索与为特定属性指定的一个或多个值匹配的资产。
+A [谓词范围](#predicates-and-their-settings)s现成可用。 您可以添加多个谓词，其中包括“属性”谓词以搜索与您指定的单个属性匹配的资产，或“选项”谓词以搜索与您为特定属性指定的一个或多个值匹配的资产。
 
 您可以 [配置搜索表单](#configuring-your-search-forms) 用于各种控制台和资产浏览器（编辑页面时）。 此 [用于配置这些表单的对话框](#configuring-your-search-forms) 可以通过以下方式访问：
 
