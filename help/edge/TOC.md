@@ -18,6 +18,6 @@ ht-degree: 10%
 
 # Edge交付服务 {#edge-delivery-services}
 
-+ [Edge Delivery 入门。](/help/edge/overview.md)
++ [Edge Delivery 快速入门。](/help/edge/overview.md)
 + [使用Edge Delivery](/help/edge/using.md)
 
