@@ -2,9 +2,10 @@
 title: 的发行说明 [!DNL Adobe Experience Manager] 6.5
 description: 查找版本信息、新增功能、安装操作说明以及的详细更改列表 [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 4
-source-git-commit: ffda4927ddc8555564f33697fa81d1f8a0cd2cdc
+exl-id: d0dc5dfb-25a3-4388-a1d4-abba70081cc3
+source-git-commit: 59d5c2574bf4298469152a3d55e7c1508eb2f1be
 workflow-type: tm+mt
-source-wordcount: '4548'
+source-wordcount: '4633'
 ht-degree: 4%
 
 ---
@@ -462,8 +463,25 @@ To retrieve your runtime copy, Adobe recommends to synchronize the design-time c
 #### 安装
 
 * 在JBoss® 7.1.4平台上，当用户安装Experience Manager6.5.16.0或更高版本的Service Pack时， `adobe-livecycle-jboss.ear` 部署失败。 (CQ-4351522和CQDOC-20159)
-* 安装AEM Service Pack 6.5.18.0完整安装程序后，EAR部署在使用JBoss® Turnkey (CQDOC-20803)的JEE上失败。
-要解决此问题，请找到 `<AEM_Forms_Installation_dir>\jboss\bin\standalone.bat` 文件和更新 `Adobe_Adobe_JAVA_HOME` 到 `Adobe_JAVA_HOME` 所有出现的次数。
+* 在Windows Server 2022上升级到AEM Forms 6.5.18.0 JBoss Turnkey完整安装程序环境后，使用Java 11编译输出客户端应用程序代码时，可能会出现以下编译错误：
+
+  ```
+  error: error reading [AEM_Forms_Installation_dir]\sdk\client-libs\common\adobe-output-client.jar; java.net.URISyntaxException: 
+  Illegal character in path at index 70: file:/[AEM_Forms_Installation_dir]/sdk/client-libs/common/${clover.jar.name} 1 error
+  ```
+
+  要解决此问题，请执行以下步骤：
+   1. 导航到 `[AEM_Forms_Installation_dir]\sdk\client-libs\common\` 和unzip `adobe-output-client.jar` 以提取 `Manifest.mf` 文件。
+   1. 更新 `Manifest.mf` 通过删除条目生成文件 `${clover.jar.name}` 从class-path属性中。
+
+      >[!NOTE]
+      >
+      > 您还可以使用就地编辑工具（例如7-zip）来更新 `Manifest.mf` 文件。
+
+   1. 保存更新的 `Manifest.mf` 在 `adobe-output-client.jar` 存档。
+   1. 保存修改的内容 `adobe-output-client.jar` 文件并重新运行安装程序。  (CQDOC-20878)
+* 安装AEM Service Pack 6.5.18.0完整安装程序后，EAR部署在使用JBoss® Turnkey的JEE上失败。
+要解决此问题，请找到 `<AEM_Forms_Installation_dir>\jboss\bin\standalone.bat` 文件和更新 `Adobe_Adobe_JAVA_HOME` 到 `Adobe_JAVA_HOME` 所有出现的次数。 (CQDOC-20803)
 
 #### 自适应表单
 
