@@ -1,9 +1,10 @@
 ---
 title: Edge Delivery Services快速入门
-description: Edge Delivery Services 入门。
-source-git-commit: cac0e6f7483fed9c1b245aa7f00ff36fdcfaea31
+description: Edge Delivery Services 快速入门。
+exl-id: 8d2b2d6c-ae11-4829-842e-b186f5491713
+source-git-commit: d989f83b51ed1c957b63b5d71e2afe027abcd330
 workflow-type: tm+mt
-source-wordcount: '824'
+source-wordcount: '823'
 ht-degree: 0%
 
 ---
@@ -58,7 +59,7 @@ Adobe提供三个渠道来帮助您进行Edge Delivery Services：
 
 ### 访问社区资源 {#community-resource}
 
-Adobe有两个社区资源可帮助您进行Edge交付， [Experience League社区](https://adobe.ly/3Q6kTKl) 和 [不和谐通道](https://discord.gg/YFTKQK8M).
+Adobe有两个社区资源可帮助您进行Edge交付， [Experience League社区](https://adobe.ly/3Q6kTKl) 和 [不和谐通道](https://discord.gg/aem-live).
 
 ### 如何访问您的产品协作渠道 {#collab-channel}
 
