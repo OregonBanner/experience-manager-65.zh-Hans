@@ -2,9 +2,9 @@
 title: 优化 GraphQL 查询
 description: 了解在Adobe Experience Manager as a Cloud Service中筛选、分页和排序内容片段以进行Headless内容投放时，如何优化GraphQL查询。
 exl-id: 47d0570b-224e-4109-b94e-ccc369d7ac5f
-source-git-commit: 2ba17c43e84ad449ec858de57812f3ef82fca3e1
+source-git-commit: c0570d6c0d624d950ddbb5c0d2ce38ff7c3756a4
 workflow-type: tm+mt
-source-wordcount: '1940'
+source-wordcount: '1935'
 ht-degree: 60%
 
 ---
@@ -89,7 +89,10 @@ ht-degree: 60%
 
 在将GraphQL持久查询与CDN结合使用时，建议设置适当的HTTP缓存控制标头。
 
-每个持久查询可以有自己的一组特定的缓存控制标头。 标头可设置在 [GRAPHQL API](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md) 或 [AEM GraphiQL IDE](/help/sites-developing/headless/graphql-api/graphiql-ide.md).
+每个持久查询可以有自己的一组特定的缓存控制标头。 标头可设置在 [GRAPHQL API](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md).
+
+<!-- or the [AEM GraphiQL IDE](/help/sites-developing/headless/graphql-api/graphiql-ide.md#managing-cache). 
+-->
 
 **进一步参考**
 
