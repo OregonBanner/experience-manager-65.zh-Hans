@@ -2,9 +2,9 @@
 title: 优化 GraphQL 查询
 description: 了解在Adobe Experience Manager as a Cloud Service中筛选、分页和排序内容片段以进行Headless内容投放时，如何优化GraphQL查询。
 exl-id: 47d0570b-224e-4109-b94e-ccc369d7ac5f
-source-git-commit: c0570d6c0d624d950ddbb5c0d2ce38ff7c3756a4
+source-git-commit: 3ec34efc14cc49d0f45cb4b175573c33c1cc232e
 workflow-type: tm+mt
-source-wordcount: '1935'
+source-wordcount: '1966'
 ht-degree: 60%
 
 ---
@@ -91,6 +91,17 @@ ht-degree: 60%
 
 每个持久查询可以有自己的一组特定的缓存控制标头。 标头可设置在 [GRAPHQL API](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md).
 
+也可以使用进行设置 **cURL** 命令行工具。 例如，使用 `PUT` 请求使用缓存控制创建打包的简单查询。
+
+```shell
+$ curl -X PUT \
+    -H 'authorization: Basic YWRtaW46YWRtaW4=' \
+    -H "Content-Type: application/json" \
+    "http://localhost:4502/graphql/persist.json/wknd/plain-article-query-max-age" \
+    -d \
+'{ "query": "{articleList { items { _path author main { json } referencearticle { _path } } } }", "cache-control": { "max-age": 300 }}'
+```
+
 <!-- or the [AEM GraphiQL IDE](/help/sites-developing/headless/graphql-api/graphiql-ide.md#managing-cache). 
 -->
 
@@ -99,6 +110,7 @@ ht-degree: 60%
 请参阅：
 
 * [正在缓存您的持久查询](/help/sites-developing/headless/graphql-api/persisted-queries.md#caching-persisted-queries)
+* [如何使 GraphQL 查询持久](/help/sites-developing/headless/graphql-api/persisted-queries.md#how-to-persist-query)
 <!--
 * [Managing cache for your persisted queries](/help/sites-developing/headless/graphql-api/graphiql-ide.md#managing-cache)
 -->
