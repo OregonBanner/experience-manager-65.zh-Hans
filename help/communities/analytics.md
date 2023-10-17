@@ -1,20 +1,16 @@
 ---
 title: 用于社区功能的Analytics配置
-seo-title: Analytics Configuration for Communities Features
-description: 为社区配置analytics
-seo-description: Configure analytics for Communities
-uuid: 5a083645-9de6-4ecd-a94e-a40143f92edf
+description: 了解如何为AEM Communities配置Adobe Analytics，以便在成员与受支持的社区功能交互时，将事件发送到Adobe Analytics。
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
-discoiquuid: e6fdaf56-402f-418d-96d8-e46bd3ad1e8c
 docset: aem65
 role: Admin
 exl-id: 7d54928b-6512-4da9-a209-eb4488bf2b64
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 0a4aca939c564720f63f055e9522e56942eaa128
 workflow-type: tm+mt
-source-wordcount: '2693'
+source-wordcount: '2701'
 ht-degree: 4%
 
 ---
@@ -23,7 +19,7 @@ ht-degree: 4%
 
 ## 概述 {#overview}
 
-Adobe Analytics和Adobe Experience Manager (AEM)都是Adobe Marketing Cloud的解决方案。
+Adobe Analytics和Adobe Experience Manager (AEM)都是Adobe Experience Cloud的解决方案。
 
 可以为AEM Communities配置Adobe Analytics，以便在成员与受支持的社区功能交互时，事件会发送到Adobe Analytics，并从中生成报表。
 
@@ -35,12 +31,12 @@ Adobe Analytics和Adobe Experience Manager (AEM)都是Adobe Marketing Cloud的�
 
    * 社区报告 [趋势](/help/communities/trends.md)
    * 允许网站访客按“查看次数最多”、“最活跃”、“最喜欢”进行排序
-   * 查看UGC列表计数
+   * 查看UGC（用户生成的内容）列表计数
 
 * 在创作环境中：
 
    * 在中显示参与率数据 [成员管理控制台](/help/communities/members.md) （查看次数、帖子、关注次数、喜欢次数）
-   * 启用资源的趋势摘要、视频心率和视频设备 [报表](/help/communities/reports.md)
+   * 用于启用资源的趋势摘要、视频心率和视频设备 [报表](/help/communities/reports.md)
 
 支持的社区功能包括：
 
@@ -52,7 +48,7 @@ Adobe Analytics和Adobe Experience Manager (AEM)都是Adobe Marketing Cloud的�
 
 此文档的此部分介绍如何将Analytics报表包与Communities功能相关联。 基本步骤为：
 
-1. [复制加密密钥](#replicate-the-crypto-key) 确保所有AEM实例上均可正确进行加密/解密
+1. [复制加密密钥](#replicate-the-crypto-key) 因此，您可以确保在所有AEM实例上正确进行加密/解密
 1. 准备Adobe Analytics [报告包](#adobe-analytics-report-suite-for-video-reporting)
 1. 创建AEM分析 [云服务](#aem-analytics-cloud-service-configuration) 和 [框架](#aem-analytics-framework-configuration)
 
@@ -88,17 +84,17 @@ Adobe Analytics和Adobe Experience Manager (AEM)都是Adobe Marketing Cloud的�
 
 ## 用于视频报表的Adobe Analytics报表包 {#adobe-analytics-report-suite-for-video-reporting}
 
-使用Adobe Marketing Cloud的 [报表包管理器](https://experienceleague.adobe.com/docs/analytics/admin/manage-report-suites/new-report-suite/new-report-suite.html)，可以配置Analytics报表包，以便启用社区站点来为社区功能提供报表。
+使用Adobe Experience Cloud的 [报表包管理器](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/c-new-report-suite/new-report-suite.html)，可以配置Analytics报表包，以便启用社区站点来为社区功能提供报表。
 
 通过登录到 [Adobe Experience Cloud](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/home.html) 替换为 [公司名称和用户名](/help/communities/analytics.md#prerequisites)，则可以将新的或现有的报表包配置为：
 
-* [11转化变量](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html) (eVar)
+* [11转化变量](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/conversion-var-admin.html) (eVar)
 
    * **`evar1`** 到 **`evar11`** 已启用
 
-   * 可以重新利用（重命名）现有eVar或创建新的eVar以用于社区功能
+   * 可以重新利用（重命名）现有eVar或创建用于Communities功能的项目
 
-* [7个成功事件](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/success-events/success-event.html) （活动）
+* [7个成功事件](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/success-events/success-event.html) （活动）
 
    * **`event1`** 到 **`event7`** 已启用
 
@@ -106,7 +102,7 @@ Adobe Analytics和Adobe Experience Manager (AEM)都是Adobe Marketing Cloud的�
 
       * 否 **`Counter (no subrelations)`**
 
-   * 可以重新调整现有事件的用途（重命名）或创建新事件以用于Communities功能
+   * 可以重新利用（重命名）现有事件或创建要用于Communities功能的事件
 
 * [视频管理](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html)
 
@@ -120,9 +116,9 @@ Adobe Analytics和Adobe Experience Manager (AEM)都是Adobe Marketing Cloud的�
       * 选择 `Use Solution Variables`
       * 选择保存
 
-如果使用 **新的报表包**，请注意，新的报表包可能只有4个evar和6个事件变量，而社区需要11个evar和7个事件变量。
+如果使用 **新的报表包**，新的报表包可能只有4个evar和6个事件变量，而社区需要11个evar和7个事件变量。
 
-如果使用 **现有报表包**，可能需要 [修改变量映射](#modifying-analytics-variable-mapping) ，然后再为社区站点激活Analytics框架。
+如果使用 **现有报表包**，可能需要 [修改变量映射](#modifying-analytics-variable-mapping) 在为社区站点激活Analytics框架之前。
 
 有关专用于社区的变量的任何问题，请联系您的客户代表。
 
@@ -146,7 +142,7 @@ Adobe Analytics和Adobe Experience Manager (AEM)都是Adobe Marketing Cloud的�
 
 要在之后启用视频心率报告，请执行以下操作 [为视频报表配置Analytics报表包](#adobe-analytics-report-suite-for-video-reporting)：
 
-* 创建 [Analytics云服务](#aem-analytics-cloud-service-configuration)
+* 创建 [Analytics Cloud服务](#aem-analytics-cloud-service-configuration)
 * 启用 [Analytics for a community site](#enable-analytics-for-a-community-site)
 * 关联 `Marketing Cloud Org Id` 使用社区站点
 
@@ -154,13 +150,13 @@ Adobe Analytics和Adobe Experience Manager (AEM)都是Adobe Marketing Cloud的�
 
 ![marketing-org-id](assets/marketing-org-id.png)
 
-启用视频心率分析后，视频播放器的JavaScript (JS)代码将视频心率库代码（同样在JS中）实例化，该代码处理所有逻辑，用于每10秒（不可配置）向Analytics视频跟踪服务器发送视频状态更新，以及最终将视频会话的累积报告发送到主Analytics服务器。
+启用视频心率分析后，视频播放器的JavaScript (JS)代码会实例化视频心率库代码（同样在JS中）。 代码处理每10秒向Analytics视频跟踪服务器发送视频状态更新的所有逻辑（不可配置）。 最终，它会向主Analytics服务器发送视频会话的累积报告。
 
 如果未启用，则视频心率代码从不实例化，并且只会将视频进度和恢复位置跟踪保留到SRP以便进行报告。
 
 ## AEM Analytics Cloud服务配置 {#aem-analytics-cloud-service-configuration}
 
-要创建新的Analytics集成，以便使用创作实例上的标准UI将Adobe Analytics与AEM社区站点集成，请执行以下操作：
+要创建Analytics集成，以便使用Adobe Analytics实例上的标准UI将AEM与Analytics社区站点集成，请执行以下操作：
 
 * 从全局导航： **[!UICONTROL 工具]** > **[!UICONTROL 部署]** > **[!UICONTROL Cloud Service]**
 * 向下滚动至 **[!UICONTROL Adobe Analytics]**
@@ -170,7 +166,7 @@ Adobe Analytics和Adobe Experience Manager (AEM)都是Adobe Marketing Cloud的�
 
 ### “创建配置”对话框 {#create-configuration-dialog}
 
-* 选择 `[+]` 图标旁边 **[!UICONTROL 可用配置]** 创建新配置
+* 选择 `[+]` 图标旁边 **[!UICONTROL 可用配置]** 以便创建配置。
 
 在创建配置对话框中，要输入的值标识配置。
 
@@ -183,7 +179,7 @@ Adobe Analytics和Adobe Experience Manager (AEM)都是Adobe Marketing Cloud的�
 
 * **名称**
 
-  （可选）如果未指定，则名称将默认为从标题派生的有效节点名称。
+  （可选）如果未指定，则名称默认为从标题派生的有效节点名称。
 例如，输入 *社区*
 
 * **模板**
@@ -249,7 +245,7 @@ Adobe Analytics和Adobe Experience Manager (AEM)都是Adobe Marketing Cloud的�
 
 成功配置与Adobe Analytics的基本连接后，需要创建或编辑社区站点的框架。 此框架用于将社区功能(AEM)变量映射到Analytics（报表包）变量。
 
-* 选择 `[+]` 图标旁边 **[!UICONTROL 可用的框架]** 创建新框架
+* 选择 `[+]` 图标旁边 **[!UICONTROL 可用的框架]** 以便创建框架。
 
   ![分析框架](assets/analytics-framework.png)
 
@@ -259,7 +255,7 @@ Adobe Analytics和Adobe Experience Manager (AEM)都是Adobe Marketing Cloud的�
 
 * **名称**
 
-  （可选）如果未指定，则名称将默认为从标题派生的有效节点名称。
+  （可选）如果未指定，则名称默认为从标题派生的有效节点名称。
 例如，输入 *社区*.
 
 * *模板*
@@ -316,7 +312,7 @@ Analytics云服务和框架现已完成。 在启用了此Analytics服务的情�
 
 ### 为新社区站点启用 {#enable-for-new-community-site}
 
-添加Analytics云服务，同时 [创建新社区站点](/help/communities/sites-console.md)：
+要添加Analytics Cloud服务，请执行以下操作 [创建社区站点](/help/communities/sites-console.md)：
 
 * 在步骤3中，在 [“ANALYTICS”选项卡](/help/communities/sites-console.md#analytics)：
    * 选择 **启用Analytics** 复选框。
@@ -326,7 +322,7 @@ Analytics云服务和框架现已完成。 在启用了此Analytics服务的情�
 
 ### 为现有社区站点启用 {#enable-for-existing-community-site}
 
-要将Analytics云服务添加到 [现有社区站点](/help/communities/sites-console.md#modifying-site-properties)：
+要将Analytics Cloud服务添加到 [现有社区站点](/help/communities/sites-console.md#modifying-site-properties)：
 
 * 导航至 **社区>站点** 控制台。
 * 选择社区站点的编辑站点图标。
@@ -339,7 +335,7 @@ Analytics云服务和框架现已完成。 在启用了此Analytics服务的情�
 
 ### 为自定义站点启用 {#enable-for-customized-sites}
 
-为了使Analytics跟踪和导入功能在社区站点中正常工作，带有一个 `scf-js-site-title` 类和href属性必须存在。 页面上应仅存在一个此类元素，例如未修改的页面中的此类元素 `sitepage.hbs` 社区站点的脚本。 的值 `siteUrl` 将提取并发送到Adobe Analytics，作为 *站点路径*.
+要使Analytics跟踪和导入功能在社区站点中正常工作，需将页面元素与 `scf-js-site-title` 类和href属性必须存在。 页面上应仅存在一个此类元素，例如未修改的页面中的此类元素 `sitepage.hbs` 社区站点的脚本。 的值 `siteUrl` 将提取并发送到Adobe Analytics，作为 *站点路径*.
 
 ```xml
 # present in default sitepage.hbs
@@ -353,7 +349,7 @@ Analytics云服务和框架现已完成。 在启用了此Analytics服务的情�
 </div>
 ```
 
-对于 **自定义社区站点** 覆盖 `sitepage.hbs` 脚本，确保元素存在。 此 `siteUrl` 变量将在呈现到服务器上时进行设置，然后再提供给客户端。
+对于 **自定义社区站点** 覆盖 `sitepage.hbs` 脚本，确保元素存在。 此 `siteUrl` 变量是在向客户端提供服务之前在服务器上呈现时设置的。
 
 对于 **通用AEM站点** 包含Communities组件，但不使用 [站点创建向导](/help/communities/sites-console.md)时，必须添加元素。 href的值应为站点的路径。 例如，如果站点路径为 `/content/my/company/en`，然后使用：
 
@@ -384,7 +380,7 @@ Analytics自动用于多个Communities功能。
 
 ### 将Analytics映射到AEM变量 {#mapped-analytics-to-aem-variables}
 
-在启用Analytics并选择云配置框架的情况下保存社区站点后，AEM变量将自动映射到分别以evar1和event1开头并以1递增的Analytics eVar和事件。
+保存社区站点后，启用Analytics并选择云配置框架后，AEM变量会自动映射到Analytics eVar和事件。 它分别从evar1和event1开始，并递增1。
 
 如果使用映射了evar1到evar11以及event1到event7中任何变量的现有报表包，则需要 [重新映射AEM变量](#modifying-analytics-variable-mapping) 并恢复原始映射。
 
@@ -518,7 +514,7 @@ Analytics自动用于多个Communities功能。
 
 **eVar值示例：**
 
-* *[MIME类型](https://www.iana.org/assignments/media-types)*：video/mp4
+* *[MIME类型](https://www.iana.org/assignments/media-types/media-types.xhtml)*：video/mp4
 * *[社区站点标题](/help/communities/sites-console.md#step13asitetemplate)*：Geometrixx社区
 * *[社区功能名称](/help/communities/functions.md)*：论坛
 * *[社区组名称](/help/communities/creating-groups.md#creating-a-new-group)*：健行
@@ -535,7 +531,7 @@ Analytics自动用于多个Communities功能。
 
 为社区站点启用Analytics后，Analytics eVar和事件到AEM变量的映射在框架配置中可见。
 
-启用Analytics之后，在发布社区站点之前，可以通过从左边栏拖动所需的Analytics eVar或事件并将其放到映射表中的相关行来在框架中更改映射。
+启用Analytics之后以及发布社区站点之前，可以在框架中更改映射。 只需将所需的Analytics eVar或事件从左边栏拖放到映射表中的相关行中。
 
 要避免出现重复的映射，请确保将鼠标悬停在替换的Analytics evar或事件上并选择Analytics变量元素右侧显示的“X”来从行中删除该变量或事件。
 
@@ -561,7 +557,7 @@ Analytics自动用于多个Communities功能。
 
 ### 验证Analytics到AEM的变量映射 {#verify-analytics-to-aem-variable-mapping}
 
-明智的做法是在发布社区站点（该站点还发布了Analytics云服务和框架）之前验证变量映射。
+明智的做法是在发布社区站点(该站点还发布了Analytics Cloud服务和框架)之前验证变量映射。
 
 请参阅以下部分：
 
@@ -576,7 +572,7 @@ Analytics自动用于多个Communities功能。
 >
 >* **`event1`** 至 **`event7`**
 >
->**在发布社区站点之前，** 必须恢复预先存在的映射，并将自动映射的Communities AEM变量（为社区站点启用Analytics时）移动到其他Analytics变量。 此重新映射应在所有Communities组件中保持一致。
+>**在发布社区站点之前，** 恢复预先存在的映射。 将自动映射的Communities AEM变量（为社区站点启用Analytics时）移动到其他Analytics变量。 所有Communities组件中的此重新映射都应保持一致。
 >
 >否则，可能会导致无法恢复的数据丢失。
 
@@ -602,7 +598,7 @@ Adobe Analytics凭据已加密。 为了便于作者和发布者之间复制或�
 
 ### 发布社区站点和Analytics Cloud服务 {#publish-community-site-and-analytics-cloud-service}
 
-为社区站点启用Analytics云服务后，如有必要， [已调整Analytics到AEM变量的映射](#mapped-analytics-to-aem-variables)，必须将配置复制到发布环境，方法是 [（重新）发布社区站点](/help/communities/sites-console.md#publishing-the-site).
+为社区站点启用Analytics Cloud服务后，如有必要， [调整了Analytics到AEM变量的映射](#mapped-analytics-to-aem-variables)，通过以下方式将配置复制到发布环境 [（重新）发布社区站点](/help/communities/sites-console.md#publishing-the-site).
 
 ## 从Analytics获取报表 {#obtaining-reports-from-analytics}
 
@@ -637,7 +633,7 @@ Adobe Analytics凭据已加密。 为了便于作者和发布者之间复制或�
 * 在主发布服务器上，使用管理权限登录。
 * 导航到 [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md). 例如， [https://localhost:4503/crx/de](https://localhost:4503/crx/de).
 
-* 在语言根的jcr：content节点下(例如 `/content/sites/engage/en/jcr:content),`导航到为Analytics报表配置的组件。
+* 在 `jcr:content` 语言根的节点(例如， `/content/sites/engage/en/jcr:content`)，导航到为Analytics报表配置的组件。
 例如，**`analytics/reportConfigs/social_forum_components_hbs_topic`**
 
 * 请注意创建的时间段：
@@ -649,13 +645,13 @@ Adobe Analytics凭据已加密。 为了便于作者和发布者之间复制或�
 * 请注意 `total`节点。
 
    * 修改 **`interval`** 属性将覆盖报表导入器时间间隔。
-   * 该值以秒为单位，设置为4小时(14400秒)。
+   * 该值以秒为单位，设置为四小时(14400秒)。
 
 ![组件报告](assets/component-report.png)
 
 ## 在Analytics中管理用户数据 {#manage-user-data-in-analytics}
 
-Adobe Analytics提供了允许您访问、导出和删除用户数据的API。 有关更多信息，请参阅 [提交访问和删除请求](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-submit-access-delete.html).
+Adobe Analytics提供了允许您访问、导出和删除用户数据的API。 有关更多信息，请参阅 [提交访问和删除请求](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/data-governance/an-gdpr-workflow.html).
 
 ## 资源 {#resources}
 
