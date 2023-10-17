@@ -1,15 +1,15 @@
 ---
 title: 批量编辑器
-description: 了解如何使用批量编辑器。
+description: 了解如何在不需要可视化页面上下文时使用批量编辑器进行有效编辑。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
 docset: aem65
 exl-id: c63e044c-4d2a-44d3-853b-8e7337e1ee03
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 06a6d4e0ba2aeaefcfb238233dd98e8bbd6731da
 workflow-type: tm+mt
-source-wordcount: '1158'
+source-wordcount: '1159'
 ht-degree: 1%
 
 ---
@@ -63,7 +63,7 @@ Geometrixx网站中包含一个说明此用例的示例：
 要使用批量编辑器同时编辑多个项目，请执行以下操作：
 
 1. 在 **工具** 控制台，单击 **导入程序** 文件夹以展开它。
-1. 双击 **批量编辑器** 打开它。
+1. 双击 **批量编辑器**.
 1. 输入您的选择要求：
 
 <table>
@@ -74,15 +74,15 @@ Geometrixx网站中包含一个说明此用例的示例：
   </tr>
   <tr>
    <td>根路径</td>
-   <td>指示批量编辑器搜索的根路径。<br />例如：<code>/content/geometrixx/en</code>。批量编辑器将搜索所有子节点。</td>
+   <td>指示批量编辑器搜索的根路径。<br /> 例如， <code>/content/geometrixx/en</code>. 批量编辑器将搜索所有子节点。</td>
   </tr>
   <tr>
    <td>查询参数</td>
-   <td>使用GQL参数，输入希望Bulk Editor在存储库中查找的搜索字符串；例如， <code>type:Page</code> 查找根路径中的所有页面， <code>text:professional</code> 查找所有包含“professional”一词的页面，并且 <code>"jcr:title":English</code> 查找所有标题为“English”的页面。 您只能搜索字符串。</td>
+   <td>使用GQL参数，输入您希望批量编辑器在存储库中查找的搜索字符串。 例如， <code>type:Page</code> 查找根路径中的所有页面， <code>text:professional</code> 查找所有包含“professional”一词的页面，并且 <code>"jcr:title":English</code> 查找所有标题为“English”的页面。 您只能搜索字符串。</td>
   </tr>
   <tr>
    <td>“内容模式”复选框</td>
-   <td>选中此复选框可读取 <code>jcr:content</code> 搜索结果的子节点（如果存在）。 仅用于页面。 属性名称带有前缀 <code>"jcr:content/"</code></td>
+   <td>选中此复选框，以便您可以读取 <code>jcr:content</code> 搜索结果的子节点（如果存在）。 仅用于页面。 属性名称带有前缀 <code>"jcr:content/"</code></td>
   </tr>
   <tr>
    <td>属性/列</td>
@@ -104,11 +104,11 @@ Geometrixx网站中包含一个说明此用例的示例：
 
    ![批量编辑器结果](assets/chlimage_1-39.png)
 
-1. 在单元格中双击以进行所需的任何更改。
+1. 双击单元格，以便进行任何更改。
 
    ![批量编辑](assets/srchresultedit.png)
 
-1. 单击 **保存** 以保存更改( **保存** 按钮将在编辑单元格后激活)。
+1. 单击 **保存** 以保存更改( **保存** 按钮会在您编辑单元格后激活)。
 
    >[!CAUTION]
    >
@@ -119,16 +119,16 @@ Geometrixx网站中包含一个说明此用例的示例：
 * **路径：** 仅搜索此路径下的节点。 如果指定了多个带有路径前缀的术语，则只考虑最后一个术语。
 * **类型：** 仅返回给定节点类型的节点。 这包括主要和mixin类型。 您可以指定多个逗号分隔的节点类型。 GQL返回任何指定类型的节点。
 * **订购：** 按给定属性对结果进行排序。 您可以指定多个以逗号分隔的属性名称。 要以降序排序结果，只需在属性名称的前面加一个减号即可。 例如，order：-name。 使用加号将按升序返回结果，这也是默认设置。
-* **限制：** 使用间隔限制结果的数量。 例如，limit：10..20间隔从零开始，开始是包含的，结束是排除的。 您还可以指定打开时间间隔:limit:10.. 或限制：...20如果忽略这些点并且只指定一个值，则GQL最多将返回此数量的结果。 例如，limit：10（返回前十个结果）。
+* **限制：** 使用间隔限制结果的数量。 例如，limit：10..20间隔从零开始，开始是包含的，结束是排除的。 您还可以指定打开时间间隔:limit:10.. or limit：..20如果忽略点并且只指定一个值，则GQL最多返回此数量的结果。 例如，limit：10（返回前十个结果）。
 
 ### 导出内容 {#exporting-content}
 
-您可能需要在Excel电子表格中导出内容并进行更改。 例如，您可能需要导出邮件列表，并直接在Excel中更改所有列出的电话号码的区号，或添加其他行等。
+如有必要，可将内容导出到Excel电子表格以进行任何更改。 例如，您可能希望导出邮件列表，并直接在Excel中更改列出的所有电话号码的区号，或添加其他行。
 
 要导出内容，请执行以下操作：
 
 1. 搜索内容（如所述） [搜索和编辑内容](#searching-and-editing-content).
-1. 单击 **导出** 以将更改导出到以制表符分隔的Excel电子表格中。 AEM WCM会询问您要将文件下载到的位置。
+1. 单击 **导出** 以便您可以将更改导出到制表符分隔的Excel电子表格中。 AEM WCM会询问您要将文件下载到的位置。
 
    >[!NOTE]
    >

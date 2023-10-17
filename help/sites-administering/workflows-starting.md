@@ -1,25 +1,21 @@
 ---
 title: 启动工作流
-seo-title: Starting Workflows
-description: 了解如何在AEM中启动工作流。
-seo-description: Learn how to start Workflows in AEM.
-uuid: 0648d335-ecce-459d-95fd-3d4d76181b32
+description: 了解如何管理Adobe Experience Manager中的工作流，以便您可以使用各种方法（手动或自动）启动它们。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
-discoiquuid: e9ab4796-a050-40de-b073-af7d33cff009
 exl-id: 84a1964c-4121-4763-b946-9eee6093747d
-source-git-commit: 71b3f7c6ad2c7712762a29518de6cf0639081cb7
+source-git-commit: 06a6d4e0ba2aeaefcfb238233dd98e8bbd6731da
 workflow-type: tm+mt
-source-wordcount: '794'
+source-wordcount: '799'
 ht-degree: 5%
 
 ---
 
 # 启动工作流{#starting-workflows}
 
-在管理工作流时，您可以使用各种方法启动它们：
+管理工作流时，您可以使用各种方法启动它们：
 
 * 手动:
 
@@ -87,7 +83,7 @@ ht-degree: 5%
 ## 从模型控制台启动工作流 {#starting-a-workflow-from-the-models-console}
 
 1. 导航至 **模型** 控制台使用 **工具**， **工作流**，则 **模型**.
-1. 选择工作流（根据控制台视图）；如果需要，您还可以使用搜索（左上方）：
+1. 选择工作流（根据控制台视图）；如有必要，您还可以使用搜索（左上方）：
 
    ![wf-103](assets/wf-103.png)
 
@@ -96,7 +92,7 @@ ht-degree: 5%
    >此 **[瞬态](/help/sites-developing/workflows.md#transient-workflows)** 指示器显示不保留工作流历史记录的工作流。
 
 1. 选择 **启动工作流** 工具栏中。
-1. 此时将打开“运行工作流”对话框，允许您指定：
+1. “运行工作流”对话框打开，您可以指定：
 
    * **有效负荷**
 
@@ -121,7 +117,7 @@ ht-degree: 5%
 
    * **事件类型**
 
-     将启动工作流的事件类型：
+     启动工作流的事件类型：
 
       * 创建时间
       * 修改时间
@@ -172,10 +168,10 @@ ht-degree: 5%
 
      这指定在确定是否应触发工作流时要排除的任何JCR事件（即忽略）。
 
-     此启动器属性是一个以逗号分隔的项目列表：&#39;&#39;
+     此启动器属性是以逗号分隔的项目列表：&#39;&#39;
 
       * `property-name` 忽略任何 `jcr` 在指定的属性名称上触发的事件。&quot;
-      * `event-user-data:<*someValue*>` 忽略任何包含 `*<someValue*`> `user-data` 通过 [`ObservationManager` API](https://www.adobe.io/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/observation/ObservationManager.html#setUserData(java.lang.String.
+      * `event-user-data:<*someValue*>` 忽略任何包含 `*<someValue*`> `user-data` 通过 [`ObservationManager` API](https://developer.adobe.com/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/observation/ObservationManager.html#setUserData(java.lang.String).
 
      例如：
 
@@ -187,7 +183,7 @@ ht-degree: 5%
 
 1. 选择 **创建**，以创建启动器并返回到控制台。
 
-   发生相应的事件后，将触发启动器并启动工作流。
+   当发生相应的事件时，将触发启动器，并启动工作流。
 
 ## 管理启动器配置 {#managing-a-launcher-configuration}
 

@@ -1,14 +1,14 @@
 ---
 title: 配置搜索表单
-description: 了解如何配置Search Forms。
+description: 了解如何使用Search Forms自定义在创作环境的AEM控制台和面板中提供的搜索面板中使用的搜索谓词选择。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
 exl-id: f82391d7-e30d-48d2-8f66-88fcae3dfb5f
-source-git-commit: 71b3f7c6ad2c7712762a29518de6cf0639081cb7
+source-git-commit: 06a6d4e0ba2aeaefcfb238233dd98e8bbd6731da
 workflow-type: tm+mt
-source-wordcount: '2067'
+source-wordcount: '2073'
 ht-degree: 10%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 10%
 
 使用 **搜索Forms** 自定义在创作环境的各种AEM控制台和/或面板中提供的搜索面板中使用的搜索谓词选择。 自定义这些面板可根据您的特定需求使搜索功能通用。
 
-A [谓词范围](#predicates-and-their-settings)s现成可用。 您可以添加多个谓词，其中包括“属性”谓词以搜索与您指定的单个属性匹配的资产，或“选项”谓词以搜索与您为特定属性指定的一个或多个值匹配的资产。
+A [谓词范围](#predicates-and-their-settings)s现成可用。 您可以添加多个谓词，其中包括“属性”谓词，以搜索与您指定的单个属性匹配的资产。 或者，使用“选项”谓词来搜索与您为特定属性指定的一个或多个值匹配的资产。
 
 您可以 [配置搜索表单](#configuring-your-search-forms) 用于各种控制台和资产浏览器（编辑页面时）。 此 [用于配置这些表单的对话框](#configuring-your-search-forms) 可以通过以下方式访问：
 
@@ -28,7 +28,7 @@ A [谓词范围](#predicates-and-their-settings)s现成可用。 您可以添加
 
       * **搜索表单**
 
-首次访问此控制台时，您可以看到所有配置都有一个挂锁符号。 这表示相应的配置是默认（现成）配置 — 无法删除。 自定义配置后，锁定将消失 — 除非您 [删除自定义配置](#deleting-a-configuration-to-reinstate-the-default)，在这种情况下，将恢复默认设置（以及挂锁指示器）。
+首次访问此控制台时，您可以看到所有配置都有一个挂锁符号。 这表示相应的配置是默认（现成）配置 — 无法删除。 自定义配置后，锁定将消失，除非您 [删除自定义配置](#deleting-a-configuration-to-reinstate-the-default). 在这种情况下，将恢复缺省值（和挂锁指示器）。
 
 ![搜索表单窗口](assets/chlimage_1-374.png)
 
@@ -336,7 +336,7 @@ A [谓词范围](#predicates-and-their-settings)s现成可用。 您可以添加
 >  `/libs/cq/gui/components/siteadmin/admin/searchpanel/searchpredicates`
 >   * 这些功能已弃用，仅可用于向后兼容。
 >
->此信息仅供参考，您不得对 `/libs`.
+>此信息仅供参考。 请勿更改 `/libs`.
 
 ### 谓词设置 {#predicate-settings}
 
@@ -344,7 +344,7 @@ A [谓词范围](#predicates-and-their-settings)s现成可用。 您可以添加
 
 * **字段标签**
 
-  将显示为可折叠标题或谓词字段标签的标签。
+  显示为可折叠标题或谓词字段标签的标签。
 
 * **描述**
 
@@ -358,7 +358,7 @@ A [谓词范围](#predicates-and-their-settings)s现成可用。 您可以添加
 
   要搜索的属性。 它使用相对路径和通配符 `*/*/*` 指定相对于的属性深度 `jcr:content` 节点（每个星号代表一个节点级别）。
 
-  如果只想在资源的第一级子节点上搜索，该资源具有 `x` 上的属性 `jcr:content` 节点使用 `*/jcr:content/x`
+  如果只想在具有 `x` 上的属性 `jcr:content` 节点使用 `*/jcr:content/x`
 
 * **属性深度**
 
@@ -376,7 +376,7 @@ A [谓词范围](#predicates-and-their-settings)s现成可用。 您可以添加
 
 * **选项路径**
 
-  用户可以使用谓词设置选项卡中的路径浏览器选择路径。 选择 **+** 图标用于将所选内容添加到有效选项列表中(然后 **-** 图标以删除（如果需要）。
+  用户可以使用谓词设置选项卡中的路径浏览器选择路径。 选择后 **+**，图标用于将所选内容添加到有效选项列表中(然后 **-** 图标以删除)。
 
   这些选项是由用户创建的内容节点，具有以下结构：
 
@@ -391,7 +391,7 @@ A [谓词范围](#predicates-and-their-settings)s现成可用。 您可以添加
 * **发布和Live Copy属性名称**
 站点特定谓词的发布和Live Copy复选框的标签。
 
-* 中的字段标签上的&amp;ast； **设置** 制表符表示必填字段，如果留空，将显示错误消息
+* 中的字段标签上的&amp;ast； **设置** 制表符表示必填字段，如果留空，将显示错误消息。
 
 ## 配置搜索Forms {#configuring-your-search-forms}
 
@@ -401,7 +401,7 @@ A [谓词范围](#predicates-and-their-settings)s现成可用。 您可以添加
 
 1. 选择要自定义的配置。
 1. 使用 **编辑** 图标以打开配置以进行更新。
-1. 如果进行了新的自定义，则您可能需要 [添加新谓词字段并定义设置](#add-edit-a-predicate-field-and-define-field-settings) 根据需要。 如果存在自定义项，您可以选择现有字段并 [更新设置](#add-edit-a-predicate-field-and-define-field-settings).
+1. 如果进行了新的自定义，则您可能希望 [添加新谓词字段并定义设置](#add-edit-a-predicate-field-and-define-field-settings) 根据需要。 如果存在自定义项，则可以选择现有字段并 [更新设置](#add-edit-a-predicate-field-and-define-field-settings).
 1. 选择 **完成** 以保存配置。
 
    >[!NOTE]
@@ -416,15 +416,15 @@ A [谓词范围](#predicates-and-their-settings)s现成可用。 您可以添加
 您可以添加或编辑字段并定义/更新其设置：
 
 1. [打开自定义配置](#creating-opening-a-customized-configuration) 以进行更新。
-1. 如果要添加新字段，请打开 **选择谓词** 制表符并将所需的谓词拖到所需的位置。 例如， **日期范围谓词**：
+1. 如果要添加字段，请打开 **选择谓词** 制表符并将所需的谓词拖到所需的位置。 例如， **日期范围谓词**：
 
    ![编辑搜索表单](assets/chlimage_1-375.png)
 
 1. 取决于是否：
 
-   * 您正在添加新字段：
+   * 您正在添加一个字段：
 
-     添加谓词后 **设置** 选项卡将打开并显示可以定义的属性。
+     添加谓词后， **设置** 选项卡将打开并显示可以定义的属性。
 
    * 要更新现有的谓词：
 
@@ -442,11 +442,11 @@ A [谓词范围](#predicates-and-their-settings)s现成可用。 您可以添加
 
    ![预览搜索表单](do-not-localize/chlimage_1-31.png)
 
-1. 这将显示搜索表单，它们在相应控制台的搜索列中显示（完全展开）。
+1. 这将显示搜索表单，它们在相应控制台的“搜索”列中显示（完全展开）。
 
    ![预览搜索表单](assets/chlimage_1-377.png)
 
-1. **关闭** 预览以返回并完成配置。
+1. **关闭** 预览，以便您能够返回并完成配置。
 
 ### 删除谓词字段 {#deleting-a-predicate-field}
 
@@ -461,7 +461,7 @@ A [谓词范围](#predicates-and-their-settings)s现成可用。 您可以添加
 
 ### 删除配置（恢复默认设置） {#deleting-a-configuration-to-reinstate-the-default}
 
-自定义配置后，这将覆盖默认值。 您可以通过删除自定义配置来重新声明默认配置。
+自定义配置后，这将覆盖默认值。 您可以通过删除自定义配置来恢复默认配置。
 
 >[!NOTE]
 >
@@ -473,11 +473,11 @@ A [谓词范围](#predicates-and-their-settings)s现成可用。 您可以添加
 
    ![删除表单](assets/chlimage_1-378.png)
 
-1. 自定义配置将被删除，默认配置将恢复（控制台中挂锁符号的重新出现表示这一点）。
+1. 自定义配置将被删除，默认配置将恢复（控制台中挂锁符号的重新显示即表示这一点）。
 
 ### 添加选项谓词 {#adding-options-predicates}
 
-选项谓词（选项、选项属性）允许您配置要搜索的项目。 属性通常用于直接在页面下搜索某些内容；例如，页面节点上的属性。
+选项谓词（选项、选项属性）允许您配置要搜索的项目。 它们用于直接在页面下搜索某些内容；例如，页面节点上的属性。
 
 以下示例（根据用于创建页面的模板进行搜索）说明了所涉及的步骤：
 
@@ -494,7 +494,7 @@ A [谓词范围](#predicates-and-their-settings)s现成可用。 您可以添加
 
    >[!NOTE]
    >
-   >您 ***必须*** 不会更改中的任何内容 `/libs` 路径。
+   >Do ***非*** 更改 `/libs` 路径。
    >
    >这是因为 `/libs` 下次升级实例时将被覆盖（在应用修补程序或功能包时很可能会被覆盖）。
    >
@@ -526,7 +526,7 @@ A [谓词范围](#predicates-and-their-settings)s现成可用。 您可以添加
    ![添加属性路径](assets/chlimage_1-380.png)
 
 1. 选择 **完成** 以保存您的配置。
-1. 导航到相应的控制台(在本例中， **站点**)并打开 **Search** 边栏。 此时将显示新定义的搜索表单以及各种选项。 选择所需的选项以查看搜索结果：
+1. 导航到相应的控制台(在本例中， **站点**)并打开 **Search** 边栏。 新定义的搜索表单以及各种选项均可见。 选择所需的选项，以便查看搜索结果：
 
    ![最终结果](assets/chlimage_1-381.png)
 

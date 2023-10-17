@@ -1,18 +1,14 @@
 ---
 title: 使用Preflight预览
-seo-title: Previewing with Preflight
-description: 本页介绍使用Preflight应用程序预览。
-seo-description: With the Mobile On Demand Preflight app, you can view all projects to which you have access. Follow this page to learn more about this.
-uuid: bea83055-8172-4634-88ec-5d3f163ad8e0
+description: 了解如何使用Mobile On-Demand Preflight应用程序，以便查看您有权访问的所有项目。
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: administering-on-demand-services-app
-discoiquuid: c08729f6-1512-4aee-82bb-7cc05749a72f
 exl-id: 5d2b9743-9601-46e6-9d73-3bf734e04a30
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 06a6d4e0ba2aeaefcfb238233dd98e8bbd6731da
 workflow-type: tm+mt
-source-wordcount: '260'
+source-wordcount: '271'
 ht-degree: 1%
 
 ---
@@ -23,11 +19,11 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->对于需要基于单页应用程序框架的客户端渲染（例如React）的项目，Adobe建议使用SPA编辑器。 [了解详情](/help/sites-developing/spa-overview.md).
+>Adobe建议对需要基于单页应用程序框架的客户端渲染（例如React）的项目使用SPA编辑器。 [了解详情](/help/sites-developing/spa-overview.md)。
 
-以下操作会对整个应用程序执行。
+以下操作将在整个应用程序中执行。
 
-通过Mobile On Demand Preflight应用程序，您可以查看您有权访问的所有项目。 选择项目后，您可以预览应用程序内容，包括浏览页面和文章，以了解应用程序在各种设备上的外观和执行方式。
+使用Mobile On-Demand Preflight应用程序，您可以查看您有权访问的所有项目。 选择项目后，您可以预览应用程序内容，包括浏览页面和文章，以了解应用程序在各种设备上的外观和性能。
 
 >[!NOTE]
 >
@@ -35,9 +31,9 @@ ht-degree: 1%
 
 ## 使用Preflight预览 {#previewing-with-preflight-1}
 
-1. 从Mobile中，从目录中选择您的Mobile On-Demand应用程序。
+1. 在Mobile中，从目录中选择您的Mobile On-Demand应用程序。
 1. 单击中的省略号(...) **管理文章** （或横幅/收藏集）拼贴。
-1. 选择 **Preflight** 操作栏中的。
+1. 选择 **Preflight** 从操作栏中。
 1. 单击 **激活Preflight** 从对话框中。
 1. 您的应用程序现在可以在Mobile On-Demand Preflight应用程序上预览。
 

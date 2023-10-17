@@ -1,19 +1,15 @@
 ---
 title: 管理工作流实例
-seo-title: Administering Workflow Instances
-description: 了解如何管理工作流实例。
-seo-description: Lear how to administer Workflow Instances.
-uuid: 81e53ef5-fe62-4ed4-b2d4-132aa986d5aa
+description: 了解工作流控制台如何提供多种工具来管理工作流实例以确保它们按预期运行。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
-discoiquuid: d9c96e7f-9416-48e1-a6af-47384f7bee92
 exl-id: 90923d39-3ac5-4028-976c-d011f0404476
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 06a6d4e0ba2aeaefcfb238233dd98e8bbd6731da
 workflow-type: tm+mt
-source-wordcount: '993'
-ht-degree: 84%
+source-wordcount: '1003'
+ht-degree: 65%
 
 ---
 
@@ -37,7 +33,7 @@ ht-degree: 84%
 ## 监控工作流实例状态 {#monitoring-the-status-of-workflow-instances}
 
 1. 使用“导航”，依次选择&#x200B;**工具**&#x200B;和&#x200B;**工作流**。
-1. 选择&#x200B;**实例**&#x200B;以显示当前正在进行的工作流实例的列表。
+1. 选择 **实例** 以便显示当前正在进行的工作流实例的列表。
 
    ![wf-96](assets/wf-96.png)
 
@@ -66,7 +62,7 @@ ht-degree: 84%
 ## 暂停、恢复和终止工作流实例 {#suspending-resuming-and-terminating-a-workflow-instance}
 
 1. 使用“导航”，依次选择&#x200B;**工具**&#x200B;和&#x200B;**工作流**。
-1. 选择&#x200B;**实例**&#x200B;以显示当前正在进行的工作流实例的列表。
+1. 选择 **实例** 以便显示当前正在进行的工作流实例的列表。
 
    ![wf-96-1](assets/wf-96-1.png)
 
@@ -77,7 +73,7 @@ ht-degree: 84%
 ## 查看存档的工作流 {#viewing-archived-workflows}
 
 1. 使用“导航”，依次选择&#x200B;**工具**&#x200B;和&#x200B;**工作流**。
-1. 选择&#x200B;**存档**&#x200B;以显示已成功完成的工作流实例的列表。
+1. 选择 **存档** 这样即可显示已成功完成的工作流实例的列表。
 
    ![wf-98](assets/wf-98.png)
 
@@ -86,7 +82,7 @@ ht-degree: 84%
    >中止状态被视为成功终止，因为它是用户操作的结果；例如：
    >
    >* 使用&#x200B;**终止**&#x200B;操作
-   >* 当受工作流约束的页面被（强制）删除时，工作流将被终止
+   >* 当受工作流约束的页面被（强制）删除时，工作流被终止
 
 1. 选择特定项目，然后&#x200B;**打开历史记录**&#x200B;以查看更多详细信息：
 
@@ -102,14 +98,14 @@ ht-degree: 84%
 * **打开历史记录**
 显示工作流历史记录的详细信息。
 
-* **重试步骤**&#x200B;再次执行脚本步骤组件实例。修复导致原始错误的故障后，使用“重试步骤”命令。例如，在修复流程步骤执行的脚本中的错误后，重试该步骤。
-* **终止**&#x200B;如果错误导致工作流出现不可调和的情况，则终止工作流。例如，工作流可以依赖于环境条件，例如存储库中对工作流实例不再有效的信息。
-* **终止并重试**&#x200B;类似于&#x200B;**终止**，只不过使用原始有效负载、标题和描述来启动新的工作流实例。
+* **重试步骤**  — 再次运行脚本步骤组件实例。 修复导致原始错误的故障后，使用“重试步骤”命令。例如，在修复流程步骤执行的脚本中的错误后，重试该步骤。
+* **终止**  — 如果错误导致工作流出现不可调和的情况，则终止工作流。 例如，工作流可以依赖于环境条件，例如存储库中对工作流实例不再有效的信息。
+* **终止并重试**  — 类似于 **终止** 只不过使用原始有效负载、标题和描述来启动新的工作流实例。
 
 要调查故障，然后恢复或终止工作流，请执行以下步骤：
 
 1. 使用“导航”，依次选择&#x200B;**工具**&#x200B;和&#x200B;**工作流**。
-1. 选择&#x200B;**故障**&#x200B;以显示未成功完成的工作流实例的列表。
+1. 选择 **失败** 以便显示未成功完成的工作流实例的列表。
 1. 选择特定项目，然后选择适当的操作：
 
    ![wf-47](assets/wf-47.png)
@@ -120,7 +116,7 @@ ht-degree: 84%
 
 配置 **Adobe Granite 工作流清除配置**&#x200B;以根据其时限和状态清除工作流实例。您还可以清除所有模型或特定模型的工作流实例。
 
-您还可以创建多个服务配置以清除满足不同条件的工作流实例。例如，创建一个配置，以便在特定工作流模型的实例的运行时间显著超出预期时间时清除这些实例。创建另一个配置，以便在一定天数后清除所有已完成的工作流，从而最大限度地减小存储库。
+您还可以创建多个服务配置以清除满足不同条件的工作流实例。例如，创建一个配置，以便在特定工作流模型的实例运行时间超过预期时间时清除这些实例。 创建另一个配置，以便在一定天数后清除所有已完成的工作流，从而最大限度地减小存储库。
 
 要配置服务，您可以使用 [Web控制台](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) 或 [将OSGi配置添加到存储库](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository). 下表描述了任一方法所需的属性。
 
@@ -182,15 +178,15 @@ ht-degree: 84%
 |---|---|
 | 最大收件箱查询大小 | granite.workflow.inboxQuerySize |
 
-## 对客户拥有的数据存储使用工作流变体 {#using-workflow-variables-customer-datastore}
+## 将工作流变量用于客户拥有的数据存储 {#using-workflow-variables-customer-datastore}
 
 工作流处理的数据存储在 Adobe 提供的存储 (JCR) 中。此类数据本质上可能是敏感的。您可能希望将所有用户定义的元数据/数据保存在您自己的托管存储中，而不是 Adobe 提供的存储中。这些部分描述了如何为外部存储设置这些变量。
 
 ### 设置模型以使用元数据的外部存储 {#set-model-for-external-storage}
 
-在工作流模型级别，提供了一个标志来指示模型（及其运行时实例）具有元数据的外部存储。对于为外部存储标记的模型的工作流实例，工作流变量将不会保留在 JCR 中。
+在工作流模型级别，提供了一个标志来指示模型（及其运行时实例）具有元数据的外部存储。对于标记为外部存储的模型的工作流实例，工作流变量不会保留在JCR中。
 
-属性 *userMetadataPersistenceEnabled* 将存储在工作流模型的 *jcr:content 节点*&#x200B;上。此标志将作为 *cq:userMetaDataCustomPersistenceEnabled* 保留在工作流元数据中。
+属性 *userMetadataPersistenceEnabled* 会存储在工作流模型的 *jcr:content 节点*&#x200B;上。此标志会作为 *cq:userMetaDataCustomPersistenceEnabled* 保留在工作流元数据中。
 
 以下插图显示的是如何在工作流上设置标志。
 
@@ -198,7 +194,7 @@ ht-degree: 84%
 
 ### 外部存储中的元数据的 API {#apis-for-metadata-external-storage}
 
-要在外部存储变量，您必须实施工作流公开的 API。
+要在外部存储变量，请实施工作流公开的API。
 
 UserMetaDataPersistenceContext
 

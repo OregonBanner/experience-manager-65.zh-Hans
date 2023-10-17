@@ -1,14 +1,14 @@
 ---
 title: 测试移动应用程序
-description: 测试移动应用程序
+description: 了解如何使用各种工具自动或手动测试您的移动应用程序。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing
 content-type: reference
 exl-id: e10e1904-7016-4eb0-9408-36297285f378
-source-git-commit: 99808cb38c5d376ccb7fb550c5212138890cec11
+source-git-commit: 06a6d4e0ba2aeaefcfb238233dd98e8bbd6731da
 workflow-type: tm+mt
-source-wordcount: '1023'
+source-wordcount: '1033'
 ht-degree: 0%
 
 ---

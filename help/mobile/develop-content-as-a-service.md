@@ -1,13 +1,13 @@
 ---
 title: 内容交付
-description: 内容交付
+description: 了解如何使用Adobe Experience Manager中的所有内容来提供有针对性的应用程序体验。
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 exl-id: 85e73679-684e-402f-8186-8b56d8bd9372
-source-git-commit: fd8bb7d3d9040e0a7a6b2f65751445f41aeab73e
+source-git-commit: 06a6d4e0ba2aeaefcfb238233dd98e8bbd6731da
 workflow-type: tm+mt
-source-wordcount: '961'
+source-wordcount: '978'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->**无线内容** 可以通过ContentSync处理程序从上述任何程序访问。 它可用于通过ZIP对包进行批处理并投放，以及维护这些包的更新。
+>**无线内容** 可以通过ContentSync处理程序从上述任何方法获取。 它可用于通过ZIP对包进行批处理并投放，以及维护这些包的更新。
 
 Content Services提供了三种主要类型的资料：
 
@@ -47,7 +47,7 @@ Content Services提供了三种主要类型的资料：
 
 Content Services的一个关键价值是能够返回针对设备优化的资产。 这减少了本地设备存储需求，并提高了应用程序性能。
 
-资产优化是一种服务器端函数，它基于API请求中提供的信息。 应尽可能缓存资产演绎版，以便类似请求不需要重新生成资产演绎版。
+资产优化是一种服务器端函数，它基于API请求中提供的信息。 应尽可能缓存资产演绎版，以便类似的请求不需要重新生成资产演绎版。
 
 ### 资产工作流程 {#assets-workflow}
 
@@ -70,7 +70,7 @@ Content Services提供对AEM管理的资源的访问权限，这些资源可能�
 
 #### 现有的受管资产 {#existing-managed-assets}
 
-AEM Sites和Assets的用户正在使用AEM Assets管理其所有渠道的所有数字材料。 他们正在开发本机移动设备应用程序，并且需要使用AEM Assets管理的多个资源。 例如，徽标、背景图像和按钮图标。
+AEM Sites和Assets的用户正在使用AEM Assets管理其所有渠道的所有数字材料。 他们正在开发本机移动设备应用程序，并且必须使用AEM Assets管理的多个资源。 例如，徽标、背景图像和按钮图标。
 
 目前，这些功能分布在Assets存储库中。 应用程序必须引用的文件如下：
 
@@ -106,7 +106,7 @@ JSON为Content Services生成的每个图像向图像提供一个URL。
 
 ## 打包HTML内容 {#packaged-html-content}
 
-需要维护内容布局的客户需要HTML内容。 这对于使用Web容器（如Cordova Webview）显示内容的本机应用程序非常有用。
+必须维护内容布局的客户需要HTML内容。 这对于使用Web容器（如Cordova Webview）显示内容的本机应用程序非常有用。
 
 AEM Content Services通过API向移动设备应用程序提供HTML内容。 希望将AEM内容作为HTML公开的客户可以创建指向AEM内容源的HTML页面实体。
 
@@ -135,7 +135,7 @@ AEM Content Services通过API向移动设备应用程序提供HTML内容。 希�
       * AEM处理程序
       * 自定义处理程序
 
-1. 直接通过内容渲染器GET内容
+1. 通过内容渲染器直接GET内容
 
    * 开箱即用的默认Sling渲染器
    * AEM Mobile/Content Services内容渲染器
