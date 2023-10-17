@@ -1,20 +1,12 @@
 ---
 title: 使用经典UI创建语言根
-seo-title: Creating a Language Root Using the Classic UI
-description: 了解如何使用Classic UI创建语言根。
-seo-description: Learn how to create a language root using the Classic UI.
-uuid: 62e40d39-2868-4d3d-9af7-c60a1a658be0
+description: 了解如何使用Classic UI在Adobe Experience Manager中创建语言根。
 contentOwner: Guillaume Carlino
-products: SG_EXPERIENCEMANAGER/6.5/SITES
-topic-tags: site-features
-content-type: reference
-discoiquuid: b88edad4-2a2e-429b-86a2-cc68ba69697e
-docset: aem65
 feature: Language Copy
 exl-id: 1ae21d80-0683-4ab9-afaa-4d733ff47720
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
 workflow-type: tm+mt
-source-wordcount: '318'
+source-wordcount: '322'
 ht-degree: 0%
 
 ---
@@ -24,13 +16,13 @@ ht-degree: 0%
 以下过程使用经典UI创建站点的语言根。 有关更多信息，请参阅 [创建语言根](/help/sites-administering/tc-prep.md#creating-a-language-root).
 
 1. 在网站控制台的网站树中，选择站点的根页面。 ([http://localhost:4502/siteadmin#](http://localhost:4502/siteadmin#))
-1. 添加表示站点语言版本的新子页面：
+1. 添加新的子页面以表示站点的语言版本：
 
    1. 单击“新建”>“新建页面”。
-   1. 在对话框中，指定标题和名称。 名称格式必须为 `<language-code>` 或 `<language-code>_<country-code>`，例如en、en_US、en_us、en_GB、en_gb。
+   1. 在对话框中，指定标题和名称。 名称必须采用格式 `<language-code>` 或 `<language-code>_<country-code>`，例如en、en_US、en_us、en_GB、en_gb。
 
-      * 支持的语言代码是由ISO-639-1定义的小写双字母代码
-      * 支持的国家/地区代码是由ISO 3166定义的小写或大写形式的双字母代码
+      * 支持的语言代码是由ISO-639-1定义的小写形式的双字母代码
+      * 支持的国家/地区代码是由ISO 3166定义的小写或大写形式的两字母代码
 
    1. 选择模板并单击创建。
 
@@ -41,7 +33,7 @@ ht-degree: 0%
 
    ![toolslanguagecopy](assets/toolslanguagecopy.png)
 
-   语言复制对话框显示可用语言版本和网页的矩阵。 语言列中的x表示该页面在该语言中可用。
+   语言复制对话框会显示可用语言版本和网页的矩阵。 语言列中的x表示该页面在该语言中可用。
 
    ![languagecopydialog](assets/languagecopydialog.png)
 
@@ -59,4 +51,4 @@ ht-degree: 0%
    | `<language>` （例如，法语） | 仅复制该语言的页面 |
 
 1. 单击“确定”关闭对话框。
-1. 在下一个对话框中，单击“是”以确认复制。
+1. 在下一个对话框中，单击“是”确认复制。

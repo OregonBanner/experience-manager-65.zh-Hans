@@ -1,20 +1,11 @@
 ---
 title: 组件控制台
-seo-title: Components Console
-description: 组件控制台
-seo-description: null
-uuid: a4e34d81-7875-4e26-8b48-4473e2905c37
-contentOwner: Chris Bohnert
-products: SG_EXPERIENCEMANAGER/6.5/SITES
-topic-tags: page-authoring
-content-type: reference
-discoiquuid: b657f95d-7be3-4409-a31b-d47fb2bfa550
-docset: aem65
+description: 组件控制台允许您浏览针对实例定义的所有组件，并查看每个组件的关键信息。
 exl-id: d79107b9-dfa4-4e80-870e-0b7ea72f0bc7
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
 workflow-type: tm+mt
-source-wordcount: '262'
-ht-degree: 75%
+source-wordcount: '280'
+ht-degree: 70%
 
 ---
 

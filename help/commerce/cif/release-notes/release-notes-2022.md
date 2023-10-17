@@ -1,19 +1,19 @@
 ---
-title: AEM Content and Commerce 2022版发行说明
-description: AEM Content and Commerce 2022版发行说明
+title: AEM Content and Commerce 2022年发行说明
+description: Adobe Experience Manager Content and Commerce 2022年发行说明。
 exl-id: d0a66e70-c4f1-4051-8161-11f07dad0612
-source-git-commit: 78c584db8c35ea809048580fe5b440a0b73c8eea
+source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
 workflow-type: tm+mt
-source-wordcount: '816'
+source-wordcount: '818'
 ht-degree: 37%
 
 ---
 
-# Commerce Integration Framework GitHub发行版概述
+# Commerce integration frameworkGitHub版本概述
 
 ## 系统要求概述
 
-查看下表中当前使用或计划将来使用的CIF版本的最低系统要求。
+查看下表中，您当前使用或计划将来使用的CIF版本的最低系统要求。
 
 | 组件 | 系统要求 |
 |:-------|:-----:|

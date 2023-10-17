@@ -1,13 +1,11 @@
 ---
 title: AEM 6.5功能用户指南
-seo-title: AEM 6.5 Capabilities User Guide
-description: AEM 6.5基本功能概述
-seo-description: An overview of the essential capabilities of AEM 6.5
+description: Adobe Experience Manager 6.5的基本功能概述。
 exl-id: d9941242-a01d-48fa-bad0-4c5b9dd16f4c
-source-git-commit: a51a863a4edf7e8b951a8361c5c7f0517b09f12a
+source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
 workflow-type: tm+mt
-source-wordcount: '129'
-ht-degree: 41%
+source-wordcount: '131'
+ht-degree: 40%
 
 ---
 
@@ -15,7 +13,7 @@ ht-degree: 41%
 
 ## AEM Foundation {#aem-foundation}
 
-[详细了解Adobe Experience Manager 6.5的安装、部署和架构](/help/sites-deploying/home.md)，包括我们的Adobe Managed Services云部署。
+[详细了解Adobe Experience Manager 6.5的安装、部署和架构](/help/sites-deploying/home.md)，包括我们的AdobeManaged Services cloud deployment。
 
 [了解如何管理AEM项目](/help/managing/home.md).
 

@@ -1,10 +1,10 @@
 ---
 title: 创作Commerce体验
-description: 有效的commerce体验
+description: CIF加载项通过特定于Commerce的功能扩展了Adobe Experience Manager创作。
 exl-id: 2db51bd7-8fc7-4ae8-8d6f-e5035fbe954d
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
 workflow-type: tm+mt
-source-wordcount: '705'
+source-wordcount: '713'
 ht-degree: 1%
 
 ---

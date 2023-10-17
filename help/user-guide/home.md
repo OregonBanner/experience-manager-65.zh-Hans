@@ -1,8 +1,8 @@
 ---
 title: AEM 6.5用户指南中心
-description: 了解、安装、管理和使用AEM 6.5的基本资源概述
+description: 了解、安装、管理和使用AEM 6.5的基本资源概述。
 exl-id: 51788662-6214-408e-98d9-692950c366be
-source-git-commit: 78c584db8c35ea809048580fe5b440a0b73c8eea
+source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
 workflow-type: tm+mt
 source-wordcount: '212'
 ht-degree: 15%
@@ -15,7 +15,7 @@ ht-degree: 15%
 
 | [首要步骤](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/home.html) | [教程](https://experienceleague.adobe.com/docs/experience-manager-tutorials.html) | [发行说明](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html?lang=zh-Hans) |
 |:-:|:-:|:-:|
-| 探索AEM快速入门教程和文章 | 重点介绍6.5版新增功能的一系列视频 | 了解AEM 6.5的新增功能 |
+| 探索AEM快速入门教程和文章 | 一系列视频重点介绍6.5版新增功能 | 了解AEM 6.5中的新增功能 |
 
 ## 用户指南和资源 {#user-guides-and-resources}
 
@@ -40,7 +40,7 @@ ht-degree: 15%
 
 >[!NOTE]
 >
->不确定您是否为 **支持委派**？ 了解此项 [用户类型适用于您](https://helpx.adobe.com/experience-cloud/supported-users.html) 并了解Adobe [企业支持条款](https://helpx.adobe.com/support/programs/enterprise-support-terms.html).
+>不确定您是否是 **支持代理**？ 了解此项 [适用于您的用户类型](https://helpx.adobe.com/experience-cloud/supported-users.html) 并了解Adobe的 [企业支持条款](https://helpx.adobe.com/support/programs/enterprise-support-terms.html).
 
 ## 社区 {#community}
 

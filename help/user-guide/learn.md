@@ -1,13 +1,11 @@
 ---
 title: 了解Adobe Experience Manager 6.5功能
-seo-title: Learn about Adobe Experience Manager 6.5 Capabilities
-description: 了解Adobe Experience Manager 6.5的基本功能
-seo-description: An description of the essential capabilities of Adobe Experience Manager 6.5
+description: 了解Adobe Experience Manager 6.5的基本功能。
 exl-id: dc3b8690-f664-4ffa-993b-7a8634e6fe6b
-source-git-commit: a51a863a4edf7e8b951a8361c5c7f0517b09f12a
+source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
 workflow-type: tm+mt
 source-wordcount: '362'
-ht-degree: 3%
+ht-degree: 6%
 
 ---
 
@@ -15,11 +13,11 @@ ht-degree: 3%
 
 ## Experience Manager Sites {#aem-sites}
 
-Experience Manager Sites是Adobe Experience Manager中的内容管理系统。 它为您提供了一个跨网站、移动网站和站点屏幕创建、管理和投放数字体验的地方，以使这些体验在全球范围内触及，同时具有个人相关性和吸引力。 [了解详情](https://business.adobe.com/products/experience-manager/sites/web-content-management.html) 或 [仔细阅读新的视频功能教程。](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/overview.html?lang=en)
+Experience Manager Sites是Adobe Experience Manager中的一种内容管理系统。 它为您提供了一个跨网站、移动站点和站点屏幕创建、管理和交付数字体验的地方，以使这些体验在全球范围内触及，同时具有个人相关性和吸引力。 [了解详情](https://business.adobe.com/products/experience-manager/sites/web-content-management.html) 或 [阅读新的视频功能教程。](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/overview.html?lang=en)
 
 ## Experience Manager Assets {#aem-assets}
 
-通过Experience Manager Assets，您的组织可以从多租户云平台轻松创建、管理、交付和优化数字资产。 [阅读有关AEM Assets的新视频功能教程。](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/overview.html?lang=en)
+借助Experience Manager Assets，您的组织可以从多租户云平台轻松创建、管理、交付和优化数字资源。 [阅读有关AEM Assets的新视频功能教程。](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/overview.html?lang=en)
 
 * [使用Experience Manager Assets](/help/assets/manage-assets.md)
 * [使用 Dynamic Media](/help/assets/dynamic-media.md)
@@ -38,12 +36,12 @@ Experience Manager Forms将表单创作、管理和发布与通信管理功能�
 
 ## Experience Manager Screens {#aem-screens}
 
-Experience Manager Screens是一项Adobe Experience Manager功能，可让您发布涉及各种屏幕类型的动态和交互式数字体验和交互，所有这些都来自全面的数字营销平台。 [了解详情.](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html)
+Experience Manager Screens是一项Adobe Experience Manager功能，可让您发布涉及各种屏幕类型的动态交互式数字体验和交互，所有这些都来自全面的数字营销平台。 [了解详情。](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html)
 
 ## Experience Manager社区 {#aem-communities}
 
-“Experience Manager社区”是一项Adobe Experience Manager功能，可帮助您创建在线社区体验，包括论坛、用户组、学习资源以及对客户、员工和您的品牌极具价值的其他社交功能。 [了解详情.](https://experienceleague.adobe.com/docs/experience-manager-65/communities/introduction/overview.html?lang=en)
+Experience Manager社区是一项Adobe Experience Manager功能，可帮助您创建在线社区体验，包括论坛、用户组、学习资源以及对客户、员工和您的品牌极具价值的其他社交功能。 [了解详情。](https://experienceleague.adobe.com/docs/experience-manager-65/communities/introduction/overview.html?lang=en)
 
 ## Experience Manager基础 {#aem-foundation}
 
-进一步了解 [Adobe Experience Manager 6.5基础](/help/sites-deploying/home.md) 和Adobe的Managed Services部署模型，或仔细研究 [新视频介绍了此版本中的功能。](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/overview.html?lang=en)
+了解关于 [Adobe Experience Manager 6.5基础](/help/sites-deploying/home.md) 和Adobe的Managed Services部署模型，或者仔细研究 [此版本中各项功能的新视频简介。](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/overview.html?lang=en)

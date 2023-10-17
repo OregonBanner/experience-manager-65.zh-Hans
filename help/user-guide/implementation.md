@@ -1,13 +1,11 @@
 ---
 title: AEM 6.5 Implementation用户指南
-seo-title: AEM 6.5 Implementation User Guide
-description: 如何实施AEM 6.5概述
-seo-description: An overview of how to implement AEM 6.5
+description: 有关如何使用Adobe Experience Manager 6.5实施和开发的概述。
 exl-id: 33404f0d-c04c-4720-8a24-ded6738ec7d4
-source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
+source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
 workflow-type: tm+mt
-source-wordcount: '100'
-ht-degree: 35%
+source-wordcount: '105'
+ht-degree: 33%
 
 ---
 
@@ -15,11 +13,11 @@ ht-degree: 35%
 
 ## 在AEM上开发 {#developing-on-aem}
 
-您是否是AEM开发人员？ [开始在AEM上进行开发。](/help/sites-developing/home.md)
+您是否是AEM开发人员？ [AEM开发入门。](/help/sites-developing/home.md)
 
 ## AEM核心组件 {#core-components-for-aem}
 
-[使用可扩展的核心组件让作者轻松创建内容。](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)
+[使用可扩展的核心组件让作者轻松创建内容。](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
 
 ## 适用于AEM的HTL(HTML模板语言) {#htl-for-aem}
 
@@ -27,7 +25,7 @@ ht-degree: 35%
 
 ## Cloud Manager for AEM {#cloud-manager-for-aem}
 
-[了解如何将Cloud Manager与AEM结合使用。](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html)
+[了解如何将Cloud Manager与AEM一起使用。](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html)
 
 ## Dispatcher配置 {#dispatcher-configuration}
 

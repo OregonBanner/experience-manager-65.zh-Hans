@@ -1,20 +1,13 @@
 ---
 title: 准备内容以进行翻译
-seo-title: Preparing Content for Translation
-description: 了解如何准备内容以进行翻译。
-seo-description: Learn how to prepare content for translation.
-uuid: 369630a8-2ed7-48db-973e-bd8213231d49
+description: 了解如何准备内容以在Adobe Experience Manager中进行翻译。
 contentOwner: Guillaume Carlino
-products: SG_EXPERIENCEMANAGER/6.5/SITES
-topic-tags: site-features
-content-type: reference
-discoiquuid: 8bd67d71-bcb7-4ca0-9751-3ff3ee054011
 feature: Language Copy
 exl-id: 81978733-89a6-4436-bcf1-4bde962ed54f
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
 workflow-type: tm+mt
-source-wordcount: '681'
-ht-degree: 61%
+source-wordcount: '685'
+ht-degree: 59%
 
 ---
 
@@ -60,7 +53,7 @@ ht-degree: 61%
 
 根据您为全球站点选择的结构，您可以使用任一格式。例如，Geometrixx站点的法语副本的根页面具有 `fr` 作为Name属性。 请注意， Name属性用作存储库中页面节点的名称，从而确定页面的路径。 (http://localhost:4502/content/geometrixx/fr.html)
 
-以下过程使用触屏优化UI创建网站的语言副本。 有关使用经典UI的说明，请参阅 [使用经典UI创建语言根](/help/sites-administering/tc-lroot-classic.md).
+以下过程使用触控优化的UI创建网站的语言副本。 有关使用经典UI的说明，请参阅 [使用经典UI创建语言根](/help/sites-administering/tc-lroot-classic.md).
 
 1. 导航到站点。
 1. 单击或点按要为其创建语言副本的站点。
@@ -76,15 +69,15 @@ ht-degree: 61%
 
    ![chlimage_1-22](assets/chlimage_1-22a.png)
 
-1. 单击或点按创建。在确认对话框中，单击或点按&#x200B;**完成**&#x200B;以返回站点控制台，或者单击或点按&#x200B;**打开**&#x200B;打开语言副本。
+1. 单击或点按创建。在确认对话框中，单击或点按&#x200B;**完成**&#x200B;以返回 Sites 控制台，或者单击或点按&#x200B;**打开**&#x200B;打开语言副本。
 
 ## 查看语言根的状态 {#seeing-the-status-of-language-roots}
 
-触屏优化UI提供了一个引用面板，其中显示已创建的语言根的列表。
+触屏优化UI提供了一个引用面板，用于显示已创建的语言根的列表。
 
 ![chlimage_1-23](assets/chlimage_1-23a.png)
 
-以下过程使用触屏优化UI打开页面的“引用”面板。
+以下过程使用触控优化UI打开页面的“引用”面板。
 
 1. 在站点控制台上，选择站点的页面，然后单击或点按 **引用**.
 

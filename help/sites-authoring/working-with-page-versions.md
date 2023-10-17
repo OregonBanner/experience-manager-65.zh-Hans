@@ -1,16 +1,11 @@
 ---
 title: 使用内容页面版本
-description: 创建、比较和恢复页面版本
-contentOwner: Chris Bohnert
-products: SG_EXPERIENCEMANAGER/6.5/SITES
-topic-tags: page-authoring
-content-type: reference
-docset: aem65
+description: 在Adobe Experience Manager中创建、比较和恢复页面版本。
 exl-id: cb7a9da2-7112-4ef0-b1cf-211a7df93625
-source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
+source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
 workflow-type: tm+mt
-source-wordcount: '1497'
-ht-degree: 55%
+source-wordcount: '1501'
+ht-degree: 66%
 
 ---
 
@@ -22,14 +17,14 @@ ht-degree: 55%
 * 将页面还原到以前的版本；例如：
    * 撤消对页面所做的更改。
 * 将页面的当前版本与先前版本进行比较：
-   * 以突出显示文本和图像中的差异。
+   * 突出显示文本和图像中的差异。
 
 ## 创建新版本 {#creating-a-new-version}
 
 您可以通过以下方式创建某个版本的资源：
 
-* 此 [时间轴边栏](#creating-a-new-version-timeline)
-* 此 [创建](#creating-a-new-version-create-with-a-selected-resource) 选项（当选择资源时）
+* 该 [时间轴边栏](#creating-a-new-version-timeline)
+* 该 [创建](#creating-a-new-version-create-with-a-selected-resource) 选项（在选择某个资源时）
 
 ### 创建新版本 – 时间线 {#creating-a-new-version-timeline}
 
@@ -47,20 +42,20 @@ ht-degree: 55%
 
 1. 通过&#x200B;**创建**&#x200B;确认新版本。
 
-   时间轴中的信息会更新以指示新版本。
+   时间线中的信息会进行更新以指示该新版本。
 
 ### 创建新版本 – 通过选定的资源创建 {#creating-a-new-version-create-with-a-selected-resource}
 
 1. 导航以显示要为其创建版本的页面。
 1. 在[选择模式](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)中选择页面。
-1. 选择 **创建** 工具栏中的选项以打开对话框。
-1. 在对话框中，您可以输入 **标签** 和 **注释**，如果需要：
+1. 选择 **创建** 选项，以打开对话框。
+1. 在该对话框中，您可以输入 **标签** 和 **注释**，如果需要：
 
    ![输入标签和注释](assets/screen_shot_2012-02-15at105050am.png)
 
 1. 通过&#x200B;**创建**&#x200B;确认新版本。
 
-   打开时间轴时，信息会更新以指示新版本。
+   时间线会打开，并且其信息会更新以指示新版本。
 
 ## 恢复版本 {#reinstating-versions}
 
@@ -96,14 +91,14 @@ ht-degree: 55%
 
 要将选定页面&#x200B;**恢复**&#x200B;到先前版本，请执行以下操作：
 
-1. 导航以显示要还原到先前版本的页面。
+1. 导航以显示要还原到之前版本的页面。
 1. 在[选择模式](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)中选择页面。
-1. 打开“ **时间线** ”列，然后选择“ **显示全部** ”或“ **版本**”。 所选页面的页面版本会予以列出。
-1. 选择要还原到的版本。 显示可能的选项：
+1. 打开&#x200B;**时间线**&#x200B;列，然后选择&#x200B;**显示全部**&#x200B;或&#x200B;**版本**。所选页面的页面版本会予以列出。
+1. 选择要还原到的版本。显示可能的选项：
 
    ![恢复到此版本](assets/screen-shot_2019-03-05at112505.png)
 
-1. 选择“**还原到此版本**”。恢复所选版本，并更新时间线中的信息。
+1. 选择&#x200B;**还原到此版本**。将恢复所选版本，并更新时间线中的信息。
 
 ### 恢复版本 {#restore-version}
 
@@ -117,7 +112,7 @@ ht-degree: 55%
    >
    >如果出现以下任一情况：
    >
-   >* 您已选择从未具有任何子页面的单个页面，
+   >* 您已选择一个从未具有任何子页面的页面，
    >* 或者文件夹中的所有页面都没有版本，
    >
    >则显示为空，因为没有适用的版本。
@@ -126,7 +121,7 @@ ht-degree: 55%
 
    ![恢复版本 – 文件夹中所有页面的列表](/help/sites-authoring/assets/versions-restore-version-01.png)
 
-1. 对于特定页面，使用下的下拉选择器 **还原到版本** 以选择该页面的所需版本。
+1. 对于特定页面，使用&#x200B;**恢复到版本**&#x200B;下的下拉选择器来选择该页面的所需版本。
 
    ![恢复版本 – 选择版本](/help/sites-authoring/assets/versions-restore-version-02.png)
 
@@ -146,7 +141,7 @@ ht-degree: 55%
 
 1. 导航到并[选择](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)所需文件夹。
 
-1. 选择&#x200B;**恢复**，然后从顶部[操作工具栏](/help/sites-authoring/basic-handling.md#actions-toolbar)中选择&#x200B;**恢复树**。将显示树的最新版本：
+1. 选择&#x200B;**恢复**，然后从顶部[操作工具栏](/help/sites-authoring/basic-handling.md#actions-toolbar)中选择&#x200B;**恢复树**。树的最新版本如下所示：
 
    ![恢复树](/help/sites-authoring/assets/versions-restore-tree-02.png)
 
@@ -164,14 +159,14 @@ ht-degree: 55%
 
 您可以预览特定版本：
 
-1. 导航以显示要比较的页面。
+1. 导航以显示要进行比较的页面。
 1. 在[选择模式](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)中选择页面。
 1. 打开&#x200B;**时间线**&#x200B;列，然后选择&#x200B;**显示全部**&#x200B;或&#x200B;**版本**。
 1. 页面版本会列出。选择要预览的版本：
 
    ![选择要预览的版本](assets/screen-shot_2019-03-05at112505-1.png)
 
-1. 选择&#x200B;**预览**。该页面将显示在新选项卡中。
+1. 选择&#x200B;**预览**。该页面会显示在新选项卡中。
 
    >[!CAUTION]
    >
@@ -183,10 +178,10 @@ ht-degree: 55%
 
 要将页面的之前版本与当前版本进行比较，请执行以下操作：
 
-1. 导航以显示要比较的页面。
+1. 导航以显示要进行比较的页面。
 1. 在[选择模式](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)中选择页面。
 1. 打开&#x200B;**时间线**&#x200B;列，然后选择&#x200B;**显示全部**&#x200B;或&#x200B;**版本**。
-1. 页面版本会列出。选择要比较的版本：
+1. 页面版本会列出。选择要进行比较的版本：
 
    ![列出的页面版本 — 选择版本](assets/screen-shot_2019-03-05at112505-2.png)
 
@@ -198,14 +193,14 @@ ht-degree: 55%
 
 >[!TIP]
 >
->[时间扭曲也可以与启动项一起使用来预览未来情况](/help/sites-authoring/launches.md) 运行AEM 6.5.10.0或更高版本时。
+>[时间扭曲也可以与启动项一起使用来预览未来情况](/help/sites-authoring/launches.md) 在运行AEM 6.5.10.0或更高版本时。
 
-内容创建是一个持续的协作过程。 时间扭曲的目的在于允许作者跟踪已发布的网站随时间的变化，以帮助他们了解内容发生了什么变化。 此功能使用页面版本确定发布环境的状态：
+内容创建是一个持续的协作过程。 时间扭曲旨在允许作者跟踪已发布的网站随时间的变化，以帮助他们了解内容发生了什么变化。 此功能使用页面版本确定发布环境的状态：
 
 * 系统会查找在选定时间处于活动状态的页面版本。
    * 已创建/激活此页面版本 *早于* 在时间扭曲中选择的时间点。
 * 当浏览到已删除的页面时，也会呈现相应的页面版本 — 只要该页面的旧版本仍然在存储库中即可。
-* 如果未找到已发布的版本，则时间扭曲会恢复到页面在创作环境中的当前状态（以防止出现错误/404页面，该页面将阻止浏览）。
+* 如果未找到发布的版本，则时间扭曲会还原到该页面在创作环境中的当前状态（以防止出现错误/404页面，此页面将阻止您进行浏览）。
 
 ### 使用时间扭曲 {#using-timewarp}
 
@@ -213,9 +208,9 @@ ht-degree: 55%
 
 1. 为希望启动时间扭曲的页面启动编辑器，然后在模式选择中选择&#x200B;**时间扭曲**。
 
-   ![在模式选择中选择时间扭曲](assets/wwpv-01.png)
+   ![在模式选择中选择“时间扭曲”](assets/wwpv-01.png)
 
-1. 在对话框中，设置目标日期和时间，然后单击或点按 **设置日期**. 如果不选择时间，则将当前时间作为默认值。
+1. 在对话框中，设置目标日期和时间，然后单击或点按 **设置日期**. 如果不选择时间，则当前时间将被用作默认值。
 
    ![设置日期](assets/wwpv-02.png)
 
@@ -227,8 +222,8 @@ ht-degree: 55%
 
 时间扭曲会尽量在选定的时刻重现页面。但是，由于在AEM中连续创作内容的过程非常复杂，并非总是可以做到这一点。 在使用时间扭曲时，应牢记以下限制。
 
-* **时间扭曲基于已发布的页面工作**  — 仅当您之前已发布页面时，时间扭曲才会完全正常工作。 如果没有，时间扭曲会在创作环境中显示当前页面。
-* **时间扭曲使用页面版本**  — 如果浏览到的页面已从存储库中删除/删除，但是如果该页面的旧版本仍然位于存储库中，则该页面会正常呈现。
+* **时间扭曲基于已发布的页面工作** – 仅当您之前已发布页面时，时间扭曲才会完全正常工作。如果没有，时间扭曲会在创作环境中显示当前页面。
+* **时间扭曲使用页面版本** – 当您浏览到的页面已从存储库删除时，如果该页面的旧版本仍然位于存储库中，则该页面会正常呈现。
 * **已删除的版本会影响时间扭曲** – 如果从存储库从删除了版本，那么时间扭曲无法显示正确的视图。
 
 * **时间扭曲为只读** – 您无法编辑页面的旧版本。旧版本仅供查看。如果要恢复旧版本，则必须使用手动恢复 [恢复](#reverting-to-a-page-version).

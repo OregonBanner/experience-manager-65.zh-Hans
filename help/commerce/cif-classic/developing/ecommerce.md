@@ -1,16 +1,10 @@
 ---
 title: 使用API的电子商务集成层
-description: 集成框架包括带有API的集成层。
-uuid: 48e01bbb-8f9e-489c-bbe4-24563e84ff35
-contentOwner: Guillaume Carlino
-products: SG_EXPERIENCEMANAGER/6.5/SITES
-content-type: reference
-topic-tags: platform
-docset: aem65
+description: 集成框架允许您将产品数据提取到AEM中并为商业功能构建AEM组件。
 exl-id: da63c576-34cd-40ce-81de-d7391a331364
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
 workflow-type: tm+mt
-source-wordcount: '144'
+source-wordcount: '152'
 ht-degree: 3%
 
 ---

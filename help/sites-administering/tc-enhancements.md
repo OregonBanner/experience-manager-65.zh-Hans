@@ -1,19 +1,14 @@
 ---
 title: 翻译增强功能
-seo-title: Translation Enhancements
-description: AEM中的翻译增强。
-seo-description: Translation enhancements in AEM.
-uuid: 0563603f-327b-48f1-ac14-6777c06734b9
-products: SG_EXPERIENCEMANAGER/6.5/SITES
+description: AEM翻译管理功能的增量增强和细化。
 topic-tags: site-features
 content-type: reference
-discoiquuid: 42df2db3-4d3c-4954-a03e-221e2f548305
 feature: Language Copy
 exl-id: 2011a976-d506-4c0b-9980-b8837bdcf5ad
-source-git-commit: 1be3d394283493f7c282ea4c3d794458d88e1ac3
+source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
 workflow-type: tm+mt
-source-wordcount: '681'
-ht-degree: 28%
+source-wordcount: '686'
+ht-degree: 27%
 
 ---
 
@@ -23,9 +18,9 @@ ht-degree: 28%
 
 ## 翻译项目自动化 {#translation-project-automation}
 
-添加了用于提高处理翻译项目的工作效率的选项，如自动提升和删除翻译启动项，以及计划翻译项目的重复执行。
+添加了用于提高处理翻译项目的工作效率的选项，如自动提升和删除翻译启动项，以及计划翻译项目的定期执行。
 
-1. 在您的翻译项目中，单击或点按底部的省略号 **翻译摘要** 图块。
+1. 在您的翻译项目中，单击或点按底部的省略号 **翻译摘要** 磁贴。
 
    ![screen_shot_2018-04-19at222622](assets/screen_shot_2018-04-19at222622.jpg)
 
@@ -33,7 +28,7 @@ ht-degree: 28%
 
    ![screen_shot_2018-04-19at223430](assets/screen_shot_2018-04-19at223430.jpg)
 
-1. （可选）您可以选择在收到已翻译内容后，是否自动提升和删除翻译启动项。
+1. 或者，您可以选择在收到已翻译内容后，是否应该自动提升和删除翻译启动项。
 
    ![screen_shot_2018-04-19at224033](assets/screen_shot_2018-04-19at224033.jpg)
 
@@ -45,15 +40,15 @@ ht-degree: 28%
 
 可以在翻译项目中配置多个目标语言，以减少创建的翻译项目总数。
 
-1. 在您的翻译项目中，单击或点按 **翻译摘要** 图块。
+1. 在您的翻译项目中，单击或点按 **翻译摘要** 磁贴。
 
    ![screen_shot_2018-04-19at222622](assets/screen_shot_2018-04-19at222622.jpg)
 
-1. 切换到 **高级** 选项卡。 您可以在下添加多种语言 **目标语言**.
+1. 切换到 **高级** 选项卡。 您可以在下面添加多种语言 **目标语言**.
 
    ![screen_shot_2018-04-22at212601](assets/screen_shot_2018-04-22at212601.jpg)
 
-1. 或者，如果您要通过站点中的引用边栏启动翻译，请添加您的语言并选择 **创建多语言翻译项目**.
+1. 或者，如果您通过站点中的引用边栏启动翻译，请添加您的语言并选择 **创建多语言翻译项目**.
 
    ![screen_shot_2018-04-22at212941](assets/screen_shot_2018-04-22at212941.jpg)
 
@@ -101,15 +96,15 @@ AEM 会更新已配置的 TMS 的翻译记忆中现有字符串的翻译。
 >* `/content/we-retail/language-masters/en`
 >* `/content/we-retail/language-masters/americas/central-america/es`
 >
->此 `es` 无法检测到语言副本，因为它与有两个级别（美洲/中美洲） `en` 节点。
+>此 `es` 不会检测到语言副本，因为它与 `en` 节点。
 
 >[!NOTE]
 >
->语言根可以具有任何页面名称，而不仅仅是语言的ISO代码。 AEM将始终首先检查路径和名称，但如果页面名称未标识语言，AEM将检查页面的cq：language属性以获取语言标识。
+>语言根可以具有任何页面名称，而不仅仅是语言的ISO代码。 AEM将始终首先检查路径和名称，但如果页面名称未标识语言，则AEM将检查页面的cq：language属性以标识语言。
 
 ## 翻译状态报告 {#translation-status-reporting}
 
-现在，可以在站点列表视图中选择一个属性，该属性显示页面是否已翻译、正在翻译还是尚未翻译。 要显示它，请执行以下操作：
+现在，可以在站点列表视图中选择一个属性，该属性显示页面是已翻译、正在翻译还是尚未翻译。 要显示它，请执行以下操作：
 
 1. 在Sites中，切换到 **列表视图。**
 

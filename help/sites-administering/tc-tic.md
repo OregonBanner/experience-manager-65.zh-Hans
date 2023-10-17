@@ -1,19 +1,12 @@
 ---
 title: 配置翻译集成框架
-seo-title: Configuring the Translation Integration Framework
-description: 了解如何配置翻译集成框架。
-seo-description: Learn how to configure the Translation Integration Framework.
-uuid: 5ecfe154-732f-4a13-96f8-92f55023c54d
+description: 了解如何在Adobe Experience Manager中配置翻译集成框架。
 contentOwner: Guillaume Carlino
-products: SG_EXPERIENCEMANAGER/6.5/SITES
-topic-tags: site-features
-content-type: reference
-discoiquuid: 200f51ab-f9bf-4989-91af-c3904fc673e5
 feature: Language Copy
 exl-id: 7562754b-d9fd-441b-8ae5-c7eebe458cef
-source-git-commit: 3d1959a1a81293b51257d99d32c9576866c8a308
+source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
 workflow-type: tm+mt
-source-wordcount: '1569'
+source-wordcount: '1573'
 ht-degree: 47%
 
 ---
@@ -43,7 +36,7 @@ ht-degree: 47%
 * [Smartling](https://www.smartling.com/software/integrations/adobe-experience-manager/)
 * [Systran](https://exchange.adobe.com/experiencecloud.details.90233.systran-for-adobe-experience-manager.html)
 * [阿尔特朗](https://exchange.adobe.com/experiencecloud.details.90222.altlang.html)
-* Microsoft (AEM中预装了Microsoft Translator)
+* Microsoft (AEM中预安装了Microsoft Translator)
 
 >[!NOTE]
 >
@@ -53,7 +46,6 @@ ht-degree: 47%
 >* [AEM人工翻译](https://www.adobe.com/go/aem-human-translation-connectors)
 >* [AEM机器翻译](https://www.adobe.com/go/aem-machine-translation-connectors)
 >
-
 
 安装连接器软件包后，即可为连接器创建云配置。一般需要提供凭据，以便向翻译服务进行身份验证。有关为 Microsoft Translator 连接器添加云配置的信息，请参阅[与 Microsoft Translator 集成](/help/sites-administering/tc-msconf.md)。
 
@@ -67,11 +59,11 @@ ht-degree: 47%
 
 * 要使用哪个翻译服务提供商。
 * 要执行人工翻译还是机器翻译.
-* 是否翻译与页面或资产关联的其他内容，如标记.
+* 是否翻译与页面或资源关联的其他内容，如标记.
 
 创建框架配置后，请将云配置与要根据该配置翻译的页面关联。开始翻译过程后，将根据关联的框架配置执行翻译工作流。
 
-当网站的不同部分有不同的翻译要求时，请相应地创建多个框架配置。例如，多语言网站包括英语、西班牙语和日语副本。 站点所有者使用两个不同的翻译服务提供商生成西班牙语和日语译文。因此，配置了两个框架配置。每个配置使用一个不同的翻译服务提供商。
+当网站的不同部分有不同的翻译要求时，请相应地创建多个框架配置。例如，多语言网站包括英语、西班牙语和日语版本。 站点所有者使用两个不同的翻译服务提供商生成西班牙语和日语译文。因此，配置了两个框架配置。每个配置使用一个不同的翻译服务提供商。
 
 配置翻译集成框架后，可[将它与使用它的页面关联](/help/sites-administering/tc-prep.md)。
 
@@ -95,17 +87,17 @@ ht-degree: 47%
    <td><p>选择框架为网站内容执行的翻译方法：</p>
     <ul>
      <li>机器翻译：翻译提供商使用机器翻译实时执行翻译。</li>
-     <li>人工翻译：将内容发送到翻译提供商，以供翻译人员翻译。 </li>
+     <li>人工翻译：将内容发送到翻译提供商，以供译员进行翻译。 </li>
      <li>不翻译：不发送内容以供翻译。 这是为了跳过某些不翻译但可用最新内容更新的内容分支。</li>
     </ul> </td>
   </tr>
   <tr>
    <td>翻译提供商</td>
-   <td>选择要执行翻译的翻译提供商。 安装提供商的相应连接器后，列表中会显示该提供商。</td>
+   <td>选择要执行翻译的翻译提供商。 安装提供商的相应连接器后，列表中即会显示该提供商。</td>
   </tr>
   <tr>
    <td>内容类别</td>
-   <td>（仅限机器翻译）描述正在翻译的内容的类别。 在翻译内容时，类别可能会影响术语和措辞的选择。</td>
+   <td>（仅限机器翻译）用于描述所翻译内容的类别。 在翻译内容时，类别可能会影响术语和措辞的选择。</td>
   </tr>
   <tr>
    <td>翻译组件字符串</td>
@@ -113,15 +105,15 @@ ht-degree: 47%
   </tr>
   <tr>
    <td>翻译标记</td>
-   <td>选择可翻译与页面关联的标记。</td>
+   <td>选择以翻译与页面关联的标记。</td>
   </tr>
   <tr>
-   <td>翻译页面资产</td>
+   <td>翻译页面资源</td>
    <td><p>选择如何翻译从文件系统添加到组件或从资源引用的资源：</p>
     <ul>
      <li>不翻译：不翻译页面资产。</li>
      <li>使用站点翻译工作流：根据站点选项卡上的配置属性处理资产。</li>
-     <li>使用资产翻译工作流：根据资产选项卡上属性的配置处理资产。</li>
+     <li>使用资产翻译工作流：根据在资产选项卡上配置的属性处理资产。</li>
     </ul> </td>
   </tr>
   <tr>
@@ -131,19 +123,19 @@ ht-degree: 47%
  </tbody>
 </table>
 
-### Communities配置属性 {#communities-configuration-properties}
+### 社区配置属性 {#communities-configuration-properties}
 
 社区属性控制如何执行用户生成的内容的翻译。 用户生成的内容的翻译始终使用机器翻译。 有关更多信息，请参阅 [翻译用户生成的内容](/help/communities/translate-ugc.md).
 
 | 属性 | 描述 |
 |---|---|
-| 翻译提供商 | 选择要执行翻译的翻译提供商。 为其创建云配置的提供程序将显示在列表中。 |
-| 内容类别 | 描述正在翻译的内容的类别。 在翻译内容时，类别可能会影响术语和措辞的选择。 |
-| 选择要用作全局共享存储的区域设置 | （可选）通过选择存储UGC的区域设置，来自所有语言副本的帖子将显示在一个全局对话中。 按照惯例，选择 [基本语言](/help/communities/sites-console.md#translation) 用于网站。 选择无公用存储将禁用全局翻译。 默认情况下，全局翻译处于禁用状态。 |
+| 翻译提供商 | 选择要执行翻译的翻译提供商。 为其创建云配置的提供商将显示在列表中。 |
+| 内容类别 | 描述所翻译内容的类别。 在翻译内容时，类别可能会影响术语和措辞的选择。 |
+| 选择要用作全局共享存储的区域设置 | （可选）通过选择存储UGC的区域设置，所有语言副本中的帖子将显示在一个全局对话中。 按照惯例，选择 [基本语言](/help/communities/sites-console.md#translation) 用于网站。 选择无公用存储将禁用全局翻译。 默认情况下，全局翻译处于禁用状态。 |
 
-### 资产配置属性 {#assets-configuration-properties}
+### 资源配置属性 {#assets-configuration-properties}
 
-资产属性控制如何配置资产。有关翻译资产的更多信息，请参阅[创建资产的语言副本](/help/assets/translation-projects.md)。
+资源属性控制如何配置资源。有关翻译资源的更多信息，请参阅[创建资源的语言副本](/help/assets/translation-projects.md)。
 
 <table>
  <tbody>
@@ -153,23 +145,23 @@ ht-degree: 47%
   </tr>
   <tr>
    <td>翻译工作流</td>
-   <td><p>选择框架为资源执行的翻译的类型：</p>
+   <td><p>选择框架为资源执行的翻译类型：</p>
     <ul>
      <li>机器翻译：翻译提供商使用机器翻译立即执行翻译。</li>
-     <li>人工翻译：自动将内容发送到翻译提供商，以供手动翻译。 </li>
-     <li>不翻译：不发送资产以供翻译。</li>
+     <li>人工翻译：自动将内容发送到翻译提供商，以供人工翻译。 </li>
+     <li>不翻译：不发送资源以供翻译。</li>
     </ul> </td>
   </tr>
   <tr>
    <td>翻译提供商</td>
-   <td>选择要执行翻译的翻译提供商。 安装提供商的相应连接器后，列表中会显示该提供商。</td>
+   <td>选择要执行翻译的翻译提供商。 安装提供商的相应连接器后，列表中即会显示该提供商。</td>
   </tr>
   <tr>
    <td>内容类别</td>
-   <td>（仅限机器翻译）描述正在翻译的内容的类别。 在翻译内容时，类别可能会影响术语和措辞的选择。</td>
+   <td>（仅限机器翻译）用于描述所翻译内容的类别。 在翻译内容时，类别可能会影响术语和措辞的选择。</td>
   </tr>
   <tr>
-   <td>翻译资产</td>
+   <td>翻译资源</td>
    <td>选择以在翻译项目中包含资产。 </td>
   </tr>
   <tr>
@@ -187,8 +179,8 @@ ht-degree: 47%
  </tbody>
 </table>
 
-1. 单击或点按侧栏中的“工具”>“操作”>“云”>“Cloud Services”。
-1. 在翻译集成区域，是否已创建任何配置决定了显示的链接：
+1. 单击或点按侧栏中的“工具”>“操作”>“云”>“Cloud Service”。
+1. 在翻译集成区域，是否已创建任何配置决定了将显示哪个链接：
 
    * 如果尚未创建配置，请单击或点按立即配置。
    * 如果配置已存在，请单击或点按显示配置，然后单击或点按可用配置旁边显示的+链接。
@@ -205,18 +197,18 @@ ht-degree: 47%
 
 请注意，翻译集成框架云配置标识要用于连接到服务提供商的云配置。将源页面与框架云配置关联时，该页面必须与该框架云配置使用的服务提供商云配置关联。
 
-将页面与云配置关联时，该页面的后代页面继承这种关联。例如，如果将/content/geometrixx/en/products页面与翻译集成框架关联，则将根据该框架翻译产品页面及其下的所有页面。
+将页面与云配置关联时，该页面的后代页面继承这种关联。例如，如果将/content/geometrixx/en/products页面与翻译集成框架关联，则根据该框架翻译产品页面及其下的所有页面。
 
-必要时，可在后代页面上取代该关联。例如，网站的内容主要是关于服装。 但某个分支的页面介绍公司情况。站点的根页面与指定使用“服装”类别进行机器翻译的翻译集成框架关联。 描述公司情况的分支使用框架，该框架使用“常规”类别执行机器翻译。
+必要时，可在后代页面上取代该关联。例如，网站的内容主要与服装有关。 但某个分支的页面介绍公司情况。站点的根页面与指定使用“服装”类别进行机器翻译的翻译集成框架关联。 描述公司情况的分支使用框架，该框架使用“常规”类别执行机器翻译。
 
-此外，对于任何社区 [SCF组件](/help/communities/scf.md) 在页面上，用户生成的内容(UGC)将包括用户翻译内容的功能。 有关更多信息，请参阅 [用户生成内容的翻译](/help/communities/translate-ugc.md).
+此外，对于任何社区 [SCF组件](/help/communities/scf.md) 在页面上，用户生成的内容(UGC)将包括用户翻译内容的功能。 有关更多信息，请参阅 [用户生成的内容的翻译](/help/communities/translate-ugc.md).
 
 ### 将页面与翻译提供商关联 {#associating-a-page-with-a-translation-provider}
 
 将页面与您用于翻译该页面和后代页面的翻译提供商关联。
 
 1. 在站点控制台中，选择要配置的页面，然后单击或点按查看属性。
-1. 单击或点按编辑，然后单击或点按Cloud Services选项卡。
+1. 单击或点按编辑，然后单击或点按Cloud Service选项卡。
 1. 单击或点按添加配置>翻译集成。
 1. 选择要使用的翻译提供商，然后单击或点按完成。
 
@@ -225,6 +217,6 @@ ht-degree: 47%
 将页面与定义您要如何为该页面和后代页面执行翻译的翻译集成框架关联。
 
 1. 在站点控制台中，选择要配置的页面，然后单击或点按查看属性。
-1. 单击或点按编辑，然后单击或点按Cloud Services选项卡。
+1. 单击或点按编辑，然后单击或点按Cloud Service选项卡。
 1. 单击或点按添加配置>翻译集成。
 1. 选择要使用的翻译集成框架，然后单击或点按完成。

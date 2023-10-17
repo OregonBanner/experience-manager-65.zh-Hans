@@ -1,15 +1,15 @@
 ---
 title: AEM Content and Commerce 2019版发行说明
-description: AEM Content and Commerce 2019版发行说明
+description: Adobe Experience Manager Content and Commerce发行说明2019。
 exl-id: 7e61a75d-6b35-46ee-b88a-444c10b2708f
-source-git-commit: ab3d016c7c9c622be361596137b150d8719630bd
+source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
 workflow-type: tm+mt
-source-wordcount: '990'
+source-wordcount: '992'
 ht-degree: 7%
 
 ---
 
-# Commerce Integration Framework GitHub发行版概述
+# Commerce integration frameworkGitHub版本概述
 
 ## 发行日期： 2019年11月
 
@@ -91,11 +91,11 @@ ht-degree: 7%
 
 ### 新增功能 {#what-is-new-august}
 
-* 在CIF原型中嵌入CIF连接器是可选的，这样可为开发人员提供更大的灵活性。
+* 在CIF原型中嵌入CIF Connector是可选的，这样可为开发人员提供更大的灵活性。
 
 * CIF组件与“Venia”特定的CSS样式分离，允许开发人员应用他们选择的CSS样式。
 
-* 多存储/站点功能，允许在多个AEM站点结构上使用CIF核心组件，并允许底层GraphQL客户端实施连接到不同的Adobe Commerce存储/存储视图。
+* 多存储/站点功能，允许在多个CIF站点结构上使用AEM核心组件，并允许底层GraphQL客户端实施连接到不同的Adobe Commerce存储/存储视图。
 
 * 为某些GraphQL查询启用了通过HTTPGET的GraphQL缓存，以减少响应时间。
 

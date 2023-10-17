@@ -1,30 +1,24 @@
 ---
 title: 用于管理任务的收件箱
-description: 使用收件箱管理您的任务.
-uuid: ddd48019-ce69-4a47-be2b-5b66ae2fe3c8
-contentOwner: Chris Bohnert
-products: SG_EXPERIENCEMANAGER/6.5/SITES
-topic-tags: introduction
-content-type: reference
-discoiquuid: 8b607b55-2412-469f-856b-0a3dea4b0efb
+description: 使用Adobe Experience Manager 6.5中的收件箱管理您的任务。
 exl-id: 80b7f179-b011-4f90-b5ab-9ef8a669d271
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
 workflow-type: tm+mt
-source-wordcount: '1144'
-ht-degree: 45%
+source-wordcount: '1148'
+ht-degree: 44%
 
 ---
 
 # 您的收件箱{#your-inbox}
 
-您可以从AEM的各个区域（包括工作流和项目）接收通知；例如，关于：
+您可以从AEM的各个区域接收通知，包括工作流和项目；例如，关于：
 
 * 任务：
 
-   * 这些任务也可以在AEM UI中的不同位置创建，例如，在 **项目**，
+   * 这些任务也可以在AEM UI的不同位置创建，例如 **项目**，
    * 这些可以是工作流的产物 **创建任务** 或 **创建项目任务** 步骤。
 
-* 工作流：
+* 工作流程：
 
    * 表示您需要对页面内容执行的操作的工作项；
 
@@ -36,7 +30,7 @@ ht-degree: 45%
 
 >[!NOTE]
 >
->现成的AEM预先加载了分配给管理员用户组的管理任务。 参见 [开箱即用的管理任务](#out-of-the-box-administrative-tasks) 了解详细信息。
+>现成的AEM预先加载了分配给管理员用户组的管理任务。 请参阅 [开箱即用的管理任务](#out-of-the-box-administrative-tasks) 以了解详细信息。
 
 >[!NOTE]
 >
@@ -44,7 +38,7 @@ ht-degree: 45%
 >
 >* [项目](/help/sites-authoring/touch-ui-managing-projects.md)
 >* [项目 – 处理任务](/help/sites-authoring/task-content.md)
->* [工作流](/help/sites-authoring/workflows.md)
+>* [工作流程](/help/sites-authoring/workflows.md)
 >* [Forms](/help/forms/home.md)
 >
 
@@ -73,8 +67,8 @@ ht-degree: 45%
 
 1. 单击/点按工具栏中的指示器。
 
-1. 选择&#x200B;**查看全部**。此时将打开 **AEM 收件箱**。收件箱会显示工作流、项目和任务中的项目。
-1. 默认视图为“列 [表视图](#inbox-list-view)”，但您也可以切换到“日历 [视图”](#inbox-calendar-view)。 这是通过视图选择器（工具栏，右上方）完成的。
+1. 选择&#x200B;**查看全部**。此时将打开 **AEM 收件箱**。收件箱会显示工作流程、项目和任务中的项目。
+1. 默认视图为[列表视图](#inbox-list-view)，但您也可以切换到[日历视图](#inbox-calendar-view)。这是通过视图选择器（工具栏，右上方）完成的。
 
    对于这两个视图，您还可以定义 [查看设置](#inbox-view-settings)；可用选项取决于当前视图。
 
@@ -92,7 +86,7 @@ ht-degree: 45%
 
 ### 收件箱 – 日历视图 {#inbox-calendar-view}
 
-此视图根据项目在日历中的位置和您选择的精确视图显示项目：
+此视图根据项目在日历中的位置以及您选择的精确视图显示项目：
 
 ![wf-93](assets/wf-93.png)
 
@@ -102,7 +96,7 @@ ht-degree: 45%
 
 * 指定要显示的任务 **计划**； **全部**， **已计划**， **进行中**， **即将到期**， **已过期**
 
-* 深入查看有关物料的更多详细信息
+* 深入查看有关项目的更多详细信息
 * 选择日期范围以集中显示视图：
 
 ![wf-91](assets/wf-91.png)
@@ -136,16 +130,16 @@ Admin Control选项允许管理员：
 
 * 自定义AEM收件箱列
 
-* 自定义页眉文本和徽标
+* 自定义标题文本和徽标
 
 * 控制标题中可用的导航链接的显示
 
-Admin Control选项仅对成员可见 `administrators` 或 `workflow-administrators` 组。
+Admin Control选项仅对 `administrators` 或 `workflow-administrators` 组。
 
 * **列自定义**：自定义AEM收件箱以更改列的默认标题，对列的位置重新排序，并根据工作流的数据显示其他列。
    * **添加列**：选择要添加到AEM收件箱中的列。
    * **编辑列**：将鼠标悬停在列标题上并点按 ![编辑](assets/edit.svg) 图标，输入列显示名称。
-   * **删除列**：点按 ![delete](assets/delete_updated.svg) 图标以从AEM收件箱中删除列。
+   * **删除列**：点按 ![删除](assets/delete_updated.svg) 图标以从AEM收件箱中删除列。
    * **移动列**：拖动 ![移动](assets/move_updated.svg) 图标以将列移动到AEM收件箱中的新位置。
 
   ![admin-control](assets/admin-control-column-customize.png)
@@ -182,7 +176,7 @@ Admin Control选项仅对成员可见 `administrators` 或 `workflow-administrat
       * 打开相关文档
 
    * **回退**&#x200B;到上一步.
-   * 查看工作流的有效负荷.
+   * 查看工作流程的有效负荷.
    * 从该项目创建一个项目.
 
    >[!NOTE]
@@ -193,7 +187,7 @@ Admin Control选项仅对成员可见 `administrators` 或 `workflow-administrat
 
 1. 根据所选项目，将启动操作；例如：
 
-   * 此时将打开一个与该操作对应的对话框。
+   * 将打开与操作对应的对话框。
    * 将启动操作向导。
    * 将打开文档页面。
 
@@ -205,21 +199,21 @@ Admin Control选项仅对成员可见 `administrators` 或 `workflow-administrat
 
    * 确认相应的操作；例如，重新分配。
    * 取消操作.
-   * 返回箭头；例如，如果操作向导或文档页面已打开，则可以返回到“收件箱”。
+   * 后退箭头；例如，如果操作向导或文档页面已打开，则可以返回收件箱。
 
 ## 创建任务 {#creating-a-task}
 
 您可以从收件箱中创建任务：
 
 1. 选择&#x200B;**创建**，然后选择&#x200B;**任务**。
-1. 填写以下内容中的必需字段： **基本** 和 **高级** 选项卡；仅 **标题** 为必填项，所有其他项均为可选：
+1. 填写以下文件中的必需字段： **基本** 和 **高级** 选项卡；仅 **标题** 是必填项，所有其他字段都是可选的：
 
    * **基本**:
 
       * **标题**
       * **项目**
       * **被分派人**
-      * **内容**；与“有效负载”类似，这是从任务到存储库中位置的引用
+      * **内容**；与“有效负荷”类似，这是从任务到存储库中位置的引用
       * **描述**
       * **任务优先级**
       * **开始日期**
@@ -229,7 +223,7 @@ Admin Control选项仅对成员可见 `administrators` 或 `workflow-administrat
 
    * **高级**
 
-      * **名称**：这将用于形成URL；如果留空，它将基于 **标题**.
+      * **名称**：这将用于组建URL；如果留空，它将基于 **标题**.
 
    ![wf-87](assets/wf-87.png)
 

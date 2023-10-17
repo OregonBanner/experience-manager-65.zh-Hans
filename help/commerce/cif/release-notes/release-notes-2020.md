@@ -1,15 +1,15 @@
 ---
 title: AEM Content and Commerce 2020版发行说明
-description: AEM Content and Commerce 2020版发行说明
+description: Adobe Experience Manager Content and Commerce 2020版发行说明。
 exl-id: 440ecd8e-55dc-4606-8678-c65cda1d2b3a
-source-git-commit: 474a726058b141985f52a0faec6161a34be1e9dc
+source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
 workflow-type: tm+mt
-source-wordcount: '1352'
+source-wordcount: '1354'
 ht-degree: 11%
 
 ---
 
-# Commerce Integration Framework GitHub发行版概述
+# Commerce integration frameworkGitHub版本概述
 
 ## 发行日期： 2020年11月
 
@@ -45,7 +45,7 @@ ht-degree: 11%
 
 * 添加了新类别轮盘组件，以允许商业用户将此组件拖放到AEM内容页面上，以使用商业数据扩充内容页面。
 
-* CIF核心组件经过扩展，可通过发送商业数据来水合Adobe客户端数据层。 Adobe客户端数据层是一种标准化方法，用于收集数据并将数据传递到Digital Analytics和报表服务器。 有关更多详细信息，请参阅 [Adobe客户端数据层](https://github.com/adobe/adobe-client-data-layer/wiki).
+* 扩展了CIF核心组件，以通过发送商业数据来水合Adobe客户端数据层。 Adobe客户端数据层是一种标准化方法，用于收集数据并将数据传递到Digital Analytics和报表服务器。 有关更多详细信息，请参阅 [Adobe客户端数据层](https://github.com/adobe/adobe-client-data-layer/wiki).
 
 * 扩展了“产品详细信息”和“产品列表”页面，以自动填充从Adobe Commerce管理UI中配置的SEO元数据（如标题、元描述、元关键词）
 
@@ -111,13 +111,13 @@ ht-degree: 11%
 
 ### 新增功能 {#what-is-new-july}
 
-* CIF Venia引用站点是从CIF原型存储库中提取的，现在是一个独立的GitHub存储库。
+* CIF Venia引用站点是从CIF Archetype存储库中提取的，现在是一个独立的GitHub存储库。
 
 * CIF原型与AEM项目原型合并。 对于新项目，请使用 [AEM项目原型](https://github.com/adobe/aem-project-archetype) 作为起点。
 
 * 添加了通讯簿管理，以允许登录用户管理其地址。
 
-* CIF云配置UI支持发布/取消发布操作。
+* CIF Cloud配置UI支持发布/取消发布操作。
 
 ### 改进内容 {#what-is-improved-july}
 
@@ -137,7 +137,7 @@ ht-degree: 11%
 
 ### 新增功能 {#what-is-new-june}
 
-这是Adobe Experience Manager支持的第一版CIF核心组件。
+这是Adobe Experience Manager支持的CIF核心组件的第一个版本。
 
 * 在产品列表页面和搜索结果页面上添加了产品排序，以允许购物者根据相关性、价格和产品名称进行排序。
 
@@ -189,7 +189,7 @@ ht-degree: 11%
 
 ### 新增功能 {#what-is-new-april}
 
-* 统一并简化了CIF连接器的配置设置。 有关更多详细信息，请查看 [快速入门](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/home.html) 或 [新建AEM CIF项目设置](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/home.html)
+* 统一并简化了CIF Connector的配置设置。 有关更多详细信息，请查看 [快速入门](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/home.html) 或 [新建AEM CIF项目设置](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/home.html)
 
 ### 改进内容 {#what-is-improved-april}
 

@@ -1,19 +1,19 @@
 ---
 title: Adobe Experience Manager Content and Commerce 2021版发行说明
-description: Adobe Experience Manager Content and Commerce 2021版发行说明
+description: Adobe Experience Manager Content and Commerce 2021年发行说明。
 exl-id: ec47c5f8-d4dd-469f-94df-5ee28f25d696
-source-git-commit: 2810e34f642f4643fa4dc24b31a57a68e9194e39
+source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
 workflow-type: tm+mt
 source-wordcount: '1318'
 ht-degree: 13%
 
 ---
 
-# Commerce Integration Framework GitHub发行版概述
+# Commerce integration frameworkGitHub版本概述
 
 ## 系统要求概述
 
-查看下表中当前使用或计划将来使用的CIF版本的最低系统要求。
+查看下表中，您当前使用或计划将来使用的CIF版本的最低系统要求。
 
 | 组件 | 系统要求 |
 |:-------|:-----:|
@@ -49,15 +49,15 @@ ht-degree: 13%
 
 ### 新增功能 {#what-is-new-october}
 
-* CIF加载项支持具有新GraphQL API和架构的最新Commerce v2.4.3
+* CIF加载项支持带有新GraphQL API和架构的最新Commerce v2.4.3
 
-* 作者可以使用富文本编辑器(RTE)在文本字段中添加指向产品和目录页面的链接。 RTE工具栏中添加了一个CIF图标，该图标会打开选取器，以便在不离开上下文的情况下快速搜索和选择产品或类别。
+* 作者可以使用富文本编辑器(RTE)在文本字段中添加指向产品和目录页面的链接。 RTE工具栏中添加了CIF图标，该图标可打开选取器，以便在不离开上下文的情况下快速搜索和选择产品或类别。
 
-* 现有的弹出购物车和结帐页面已替换为专用的AEM购物车和结帐页面。 这些页面上的组件是使用Adobe Commerce的可扩展Peregrine组件构建的
+* 现有的弹出购物车和结帐已替换为专用的AEM购物车和结帐页面。 这些页面上的组件是使用Adobe Commerce的可扩展Peregrine组件构建的
 
-* 商家可以使用Commerce后端在导航中隐藏某些产品目录类别。 CIF导航核心组件遵循商务后端配置“包含在菜单中”以在导航中显示/隐藏类别
+* 商家可以使用Commerce后端在导航中隐藏某些产品目录类别。 CIF导航核心组件遵循Commerce后端配置“包含在菜单中”以在导航中显示/隐藏类别
 
-* 如果找不到类别或产品页面，AEM Storefront Venia会返回HTTP 404错误
+* 如果找不到类别或产品页面，AEM Storefront Venia返回HTTP 404错误
 
 ## 发行日期： 2021年9月
 
@@ -77,13 +77,13 @@ ht-degree: 13%
 
   ![新产品选取器](/help/assets/CIF/product-picker.png)
 
-* 在导航组件中遵守“include_in_menu”属性
+* 在导航组件中遵循“include_in_menu”属性
 
 ### 错误修复 {#bug-fixes-september}
 
 * 菜单缓存刷新未按预期工作
 
-* AEM CS部署步骤和不使用客户端组件时出现JS错误
+* AEM CS部署步骤期间以及不使用客户端组件时出现JS错误
 
 * 无法在具有sling：configs节点的文件夹中创建CIF云配置
 
@@ -97,21 +97,21 @@ ht-degree: 13%
 
 ### 新增功能 {#what-is-new-august}
 
-* 新的类别选择器UI改善了用户体验、提高了效率，并更好地支持复杂的产品目录
+* 新的类别选取器UI，可改善用户体验、提高效率并更好地支持复杂的产品目录
 
   ![新建类别选取器](/help/assets/CIF/category-picker.png)
 
-* 对CIF核心组件的更佳A11Y支持
+* 更好地支持CIF核心组件的A11Y
 
 ### 错误修复 {#bug-fixes-august}
 
-* 打开类别筛选器折叠后，无法将其关闭
+* 打开类别过滤器折叠面板后即无法将其关闭
 
 * 产品Teaser中的“行动号召文本”属性损坏
 
 * AEM CS部署步骤期间出现CIF JS错误
 
-* 修复对映射的产品列表项目的原始产品访问权限
+* 修复对映射的产品列表项的原始产品访问权限
 
 ## 发行日期： 2021年7月
 
@@ -124,9 +124,9 @@ ht-degree: 13%
 ### 新增功能 {#what-is-new-july}
 
 * CIF核心组件v2
-   * 简化并改进了PDP/PLP URL和SEO的配置
-   * 创作模式下暂存产品数据的视觉指示器，用于更好地显示即将发生的更改
-   * 内容和商务页面的新站点地图组件
+   * 简化并改进了PDP/PLP URL和SEO配置
+   * 创作模式下暂存的产品数据的视觉指示器，用于更好地显示即将发生的更改
+   * 内容和商务页面的新Sitemap组件
 
 * 支持 [Adobe Commerce Sensei产品推荐，由Adobe Sensei提供支持](https://business.adobe.com/products/magento/product-recommendations.html) 在AEM Storefront中使用预定义或动态创建的推荐
 
@@ -157,11 +157,11 @@ ht-degree: 13%
 
 ### 新增功能 {#what-is-new-may}
 
-* 产品控制台属性中的关联内容支持分页
+* 产品控制台属性中对相关内容的分页支持
 
 ### 错误修复 {#bug-fixes-may}
 
-* 资产缩略图未显示在产品属性的“资产”选项卡中
+* 产品属性的“资产”选项卡中不显示资产缩略图
 
 * 痕迹导航在产品控制台中重置预览数据
 
@@ -175,15 +175,15 @@ ht-degree: 13%
 
 ### 新增功能 {#what-is-new-april}
 
-* 支持类别UID — 对于将字符串用作类别ID的系统，这为他们解锁了第三方商业集成
+* 支持类别UID — 这为将字符串用于类别ID的系统解锁了第三方商业集成
 
-* 用于PWA Studio的AEM扩展，包括 示例集成
+* 适用于PWA Studio的AEM扩展，包括 集成示例
 
-* 扩展WCM导航核心组件的新CIF导航核心组件
+* 新增扩展WCM导航核心组件的CIF导航核心组件
 
 ### 错误修复 {#bug-fixes-april}
 
-* 根类别字段未显示在类别页面的页面属性中的commerce选项卡下
+* 根类别字段未显示在类别页面的页面属性中的商务选项卡下
 
 ## 发行日期： 2021年3月 {#what-is-new-march}
 
@@ -195,13 +195,13 @@ ht-degree: 13%
 
 ### 新增功能
 
-* 对Adobe Commerce 2.4.2的支持
+* 支持Adobe Commerce 2.4.2
 
 ### 改进内容
 
 * 改进了内容驱动页面的产品详细信息组件的可重用性
 
-* PDP的缓存性能更好，后端调用更少
+* PDP的缓存性能更高，后端调用更少
 
 * 多个错误修复。
 
@@ -217,11 +217,11 @@ ht-degree: 13%
 
 * 产品体验管理：使用体验片段单独丰富产品目录页面。
 
-* 扩展了产品控制台属性，可显示链接的资产和体验片段，包括用于快速导航到关联内容的操作。
+* 扩展了产品控制台属性，可显示链接的资源和体验片段，包括快速导航到关联内容的操作。
 
 ### 改进内容  {#what-is-improved-february}
 
-* 使用产品图像URL和类别信息增强的客户端数据层。
+* 增强了包含产品图像URL和类别信息的客户端数据层。
 
 * 多个错误修复。
 
@@ -235,10 +235,10 @@ ht-degree: 13%
 
 ### 新增功能 {#what-is-new-january}
 
-* 产品体验管理：为资源和体验片段新增了“商务”属性选项卡。 利用此选项卡，可将资产和体验片段链接到产品和类别。 该选项卡还显示链接商务对象的实时数据以及在产品控制台中显示详细信息的链接。
+* 产品体验管理：为资源和体验片段新增了“商务”属性选项卡。 利用此选项卡，可将资产和体验片段链接到产品和类别。 该选项卡还显示链接商务对象的实时数据以及一个链接，该链接用于在产品控制台中显示详细信息。
 
 ### 改进内容  {#what-is-improved-january}
 
-* 在验证后，将用户数据发送到Adobe客户端数据层。
+* 验证后，将用户数据发送到Adobe客户端数据层。
 
 * 多个错误修复。

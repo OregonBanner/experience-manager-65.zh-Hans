@@ -1,10 +1,10 @@
 ---
 title: AEM CIF Classic
-description: AEM CIF Classic自助资源和文档链接
+description: Adobe Experience Manager CIF Classic自助资源和文档链接。
 exl-id: ae0823b3-d847-42b6-ba92-e4e949da1799
-source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
 workflow-type: tm+mt
-source-wordcount: '52'
+source-wordcount: '54'
 ht-degree: 5%
 
 ---
@@ -18,11 +18,10 @@ ht-degree: 5%
 >CIF Classic处于维护模式。
 >
 >* 新项目应使用 [AEM CIF](/help/commerce/home.md).
->* 现有CIF Classic应 [迁移到AEM CIF](/help/commerce/cif/migration.md).
+>* 现有CIF Classic应该 [迁移到AEM CIF](/help/commerce/cif/migration.md).
 >
 
-
-## 重要CIF Classic文章 {#key-articles}
+## CIF Classic的关键文章 {#key-articles}
 
 * [概念](administering/concepts.md)
 * [管理](administering/generic.md)
