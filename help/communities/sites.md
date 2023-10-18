@@ -1,15 +1,15 @@
 ---
 title: 站点模板
-description: 如何访问站点模板控制台
+description: 了解如何访问“站点模板”控制台以创建社区站点。
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
 role: Admin
 exl-id: 05a944a3-adb1-47b4-b4a5-15bac91c995e
-source-git-commit: ab3d016c7c9c622be361596137b150d8719630bd
+source-git-commit: 00b6f2f03470aca7f87717818d0dfcd17ac16bed
 workflow-type: tm+mt
-source-wordcount: '444'
+source-wordcount: '450'
 ht-degree: 4%
 
 ---
@@ -72,7 +72,7 @@ ht-degree: 4%
 
 继续拖放基于此模板的社区站点所需的任何其他社区功能。
 
-page函数提供一个空页面。 使用“组”功能，可在社区站点中创建组站点（子社区）。
+page函数提供一个空页面。 “组”功能允许您在社区站点中创建组站点（子社区）。
 
 >[!CAUTION]
 >

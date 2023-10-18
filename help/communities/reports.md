@@ -1,6 +1,6 @@
 ---
 title: 报表控制台
-description: 了解如何访问各种报告，这些报告可以从Adobe Experience Manager创作环境以多种方式访问。
+description: 了解如何使用各种报表，您可以通过Adobe Experience Manager创作环境的多种方式访问这些报表。
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
@@ -8,7 +8,7 @@ content-type: reference
 docset: aem65
 role: Admin
 exl-id: 2aff2ffe-ba6f-4cc9-a126-40fc2a1161e2
-source-git-commit: 5af420c8e95fed88a8516cce27b8bbc7d3974e75
+source-git-commit: 00b6f2f03470aca7f87717818d0dfcd17ac16bed
 workflow-type: tm+mt
 source-wordcount: '405'
 ht-degree: 9%

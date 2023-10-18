@@ -1,6 +1,6 @@
 ---
 title: 社区站点控制台
-description: 如何访问社区站点控制台
+description: 了解如何访问社区站点控制台以进行站点创建、编辑和管理。
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
@@ -8,9 +8,9 @@ content-type: reference
 docset: aem65
 role: Admin
 exl-id: 426e3adf-3723-4d17-a988-6eb050939e68
-source-git-commit: ab3d016c7c9c622be361596137b150d8719630bd
+source-git-commit: 00b6f2f03470aca7f87717818d0dfcd17ac16bed
 workflow-type: tm+mt
-source-wordcount: '3082'
+source-wordcount: '3089'
 ht-degree: 3%
 
 ---
@@ -67,7 +67,7 @@ ht-degree: 3%
 
 通过选择 `Create` 按钮进行编辑。
 
-创建过程是作为面板显示的一系列步骤，这些面板包含要配置的一组特征（作为子面板显示）。 您可以前进到 **下一个** 步骤或 **返回** 到上一步，然后再在最后一步中提交站点。
+创建过程是作为面板显示的一系列步骤，其中包含要配置的一组功能（作为子面板显示）。 您可以前进到 **下一个** 步骤或 **返回** 到上一步，然后再在最后一步中提交站点。
 
 ### 第1步：站点模板 {#step-site-template}
 
@@ -116,7 +116,7 @@ ht-degree: 3%
 
 ### 第2步：设计 {#step-design}
 
-“设计”面板包含两个子面板，用于选择主题和品牌推广横幅：
+“设计”面板包含两个用于选择主题和品牌推广横幅的子面板：
 
 #### 社区站点主题 {#community-site-theme}
 
@@ -149,7 +149,7 @@ ht-degree: 3%
 
 ### 步骤3：设置 {#step-settings}
 
-“设置”面板包含多个子面板，这些子面板演示了在移至创建站点的最后一步之前要配置的功能。
+“设置”面板包含多个子面板，这些子面板提供了在移动到创建站点的最后一步之前要配置的功能。
 
 * [USER MANAGEMENT](#user-management)
 * [标记](#tagging)
@@ -450,7 +450,7 @@ BASIC面板允许修改：
 
 ### 修改设置 {#modify-settings}
 
-设置面板允许访问子面板下的大多数设置，这些子面板用于创建社区站点的步骤3：
+通过“设置”面板，可访问社区站点创建步骤3的子面板下的大多数设置：
 
 * [用户管理](#user-management)
 * [标记](#tagging)
