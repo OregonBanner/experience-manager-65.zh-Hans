@@ -1,25 +1,21 @@
 ---
 title: 使用评级
-seo-title: Using Ratings
-description: 向页面添加评级组件
-seo-description: Adding a Rating component to a page
-uuid: a986970b-1221-4648-9a69-410f4480e0ae
+description: 了解如何向页面添加评级组件，该页面允许登录社区成员通过评级内容来表达他们的意见。
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: authoring
 content-type: reference
-discoiquuid: a0e5491e-66bc-47b0-94a5-45a02bc558da
 exl-id: 7534ad5d-b408-4b09-bd3d-da7ab009d55b
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
 workflow-type: tm+mt
-source-wordcount: '206'
+source-wordcount: '219'
 ht-degree: 2%
 
 ---
 
 # 使用评级 {#using-ratings}
 
-此 `Rating` 组件可独立使用或与其他Communities功能结合使用。 此组件允许已登录的社区成员通过评级内容来表达他们的意见。
+此 `Rating` 组件可单独使用，也可与其他Communities功能一起使用。 此组件允许登录的社区成员通过评级内容来表达他们的意见。
 
 ## 向页面添加评级 {#adding-a-rating-to-a-page}
 
@@ -27,22 +23,22 @@ ht-degree: 2%
 
 有关必要信息，请访问 [社区组件基础知识](basics.md).
 
-当 [所需的客户端库](rating-basics.md#essentials-for-client-side) 包括，这就是 `Rating` 组件随即出现。
+当 [所需的客户端库](rating-basics.md#essentials-for-client-side) 包括，这就是 `Rating` 组件出现。
 
 ![评级](assets/rating.png)
 
 ## 配置评级 {#configuring-rating}
 
-选择已放置的 `Rating` 组件以访问和选择 `Configure` 图标，打开“编辑”对话框。
+选择已放置的 `Rating` 组件，以便您能够访问和选择 `Configure` 图标打开“编辑”对话框。
 
 ![configure-new](assets/configure-new.png)
 
-在 **[!UICONTROL 文本和标签]** 选项卡，指定评分的内部标识符。
+在 **[!UICONTROL 文本和标签]** 选项卡，您可以指定评分的内部标识符。
 
 ![tallyname](assets/tallyname.png)
 
 **[!UICONTROL 标签名称]**
-(*必需*)的简单名称 `Rating` 唯一地标识此实例。 必须为存储库的有效节点名称。
+(*必填*)的简单名称 `Rating` 唯一地标识此实例。 必须为存储库的有效节点名称。
 
 ## 网站访客体验 {#site-visitor-experience}
 

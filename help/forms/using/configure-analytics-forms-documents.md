@@ -10,7 +10,7 @@ topic-tags: integrations
 discoiquuid: 96a77980-4213-4779-a540-00905ea8f7e3
 docset: aem65
 exl-id: 72f0f8e3-e70b-4f78-aa0e-b31768b536f7
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
 workflow-type: tm+mt
 source-wordcount: '1532'
 ht-degree: 3%
@@ -172,7 +172,7 @@ Adobe Analytics框架是Adobe Analytics变量与AEM变量之间的一组映射�
 
    >[!NOTE]
    >
-   >超时报表获取操作可能耗时10秒，而不是指定的秒数。
+   >超时报表获取操作可能需要多达10秒，而不是指定的秒数。
 
 1. 在发布实例上重复步骤1-3以配置analytics。
 

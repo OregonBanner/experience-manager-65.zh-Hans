@@ -1,19 +1,15 @@
 ---
 title: 排行榜要点
-seo-title: Leaderboard Essentials
-description: 排行榜功能概述
-seo-description: Leaderboard feature overview
-uuid: 815a6928-b147-496d-9751-13159ad1304d
+description: 了解如何配置社区评分和徽章，以便您可以使用Adobe Experience Manager Communities中的排行榜组件。
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: 7449f99e-77d7-4c0f-96d5-b67d5e1f124a
 exl-id: fd1b1749-13f9-4079-ae39-348676105852
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
 workflow-type: tm+mt
-source-wordcount: '94'
-ht-degree: 5%
+source-wordcount: '112'
+ht-degree: 4%
 
 ---
 
@@ -23,7 +19,7 @@ ht-degree: 5%
 
 在页面上包含排行榜组件之前，需要配置 [社区评分和徽章](implementing-scoring.md).
 
-参见 [评分和徽章要点](configure-scoring.md).
+请参阅 [评分和徽章要点](configure-scoring.md).
 
 ## 适用于客户端的Essentials {#essentials-for-client-side}
 
@@ -51,7 +47,7 @@ ht-degree: 5%
   </tr>
   <tr>
    <td><strong> 属性</strong></td>
-   <td>参见 <a href="enabling-leaderboard.md">排行榜功能</a></td>
+   <td>请参阅 <a href="enabling-leaderboard.md">排行榜功能</a></td>
   </tr>
  </tbody>
 </table>

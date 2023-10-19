@@ -1,25 +1,21 @@
 ---
 title: 开发沙盒应用程序
-seo-title: Develop Sandbox Application
-description: 使用基础脚本开发应用程序
-seo-description: Develop application using foundation scripts
-uuid: 572f68cd-9ecb-4b43-a7f8-4aa8feb6c64e
+description: 了解如何开发一个沙盒应用程序，该应用程序使用基础脚本，并能够通过Communities组件启用创作。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: 910229a3-38b1-44f1-9c09-55f8fd6cbb1d
 exl-id: 7ac0056c-a742-49f4-8312-2cf90ab9f23a
-source-git-commit: 10227bcfcfd5a9b0f126fee74dce6ec7842f5e95
+source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
 workflow-type: tm+mt
-source-wordcount: '572'
+source-wordcount: '593'
 ht-degree: 6%
 
 ---
 
 # 开发沙盒应用程序  {#develop-sandbox-application}
 
-在此部分中，现在已在以下位置设置了模板： [初始应用](initial-app.md) 部分，以及中建立的初始页面 [初始内容](initial-content.md) 部分，可以使用基础脚本开发应用程序，包括启用通过社区组件进行创作的功能。 在本节结束时，该网站将正常运行。
+在此部分中，现在已在以下位置设置了模板： [初始应用](initial-app.md) 部分，以及中建立的初始页面 [初始内容](initial-content.md) 部分，您可以开发应用程序。 为此，您需要使用基础脚本，这些脚本包含启用通过社区组件进行创作的功能。 在此部分末尾，您有一个功能齐全的网站。
 
 ## 使用基础页脚本 {#using-foundation-page-scripts}
 
@@ -66,9 +62,9 @@ ht-degree: 6%
    %>
    ```
 
-1. 请注意open/close脚本标记，将“ // TODO ...”替换为include脚本，该脚本用于的标题和正文部分 &lt;html>.
+1. 请注意open/close脚本标记，请将“ // TODO ...”替换为 `includes` 的标题和正文部分的脚本 &lt;html>.
 
-   具有超类型 `foundation/components/page`，任何未在此同一文件夹中定义的脚本都将解析为中的脚本 `/apps/foundation/components/page` 文件夹（如果存在），则复制到中的脚本 `/libs/foundation/components/page` 文件夹。
+   具有超类型 `foundation/components/page`，则未在此同一文件夹中定义的任何脚本都将解析为中的脚本 `/apps/foundation/components/page` 文件夹（如果存在），或者指向中的脚本 `/libs/foundation/components/page` 文件夹。
 
    `/apps/an-scf-sandbox/components/playpage/playpage.jsp`
 
@@ -88,7 +84,7 @@ ht-degree: 6%
    </html>
    ```
 
-1. 基础脚本 `head.jsp` 不需要覆盖，但基础脚本 `body.jsp` 为空。
+1. 覆盖基础脚本 `head.jsp` 不是必需的，但基础脚本 `body.jsp` 为空。
 
    要设置创作，叠加 `body.jsp` 使用本地脚本，并在主体中包含段落系统(parsys)：
 
@@ -162,13 +158,13 @@ ht-degree: 6%
 >
 >为页面段启用的组件作为的值，存储在存储库中。 `components` 的属性
 >
->`/etc/designs/an-scf-sandbox/jcr:content/playpage/par` 节点。
+>节点 `/etc/designs/an-scf-sandbox/jcr:content/playpage/par`.
 
 ## 登录页面 {#landing-page}
 
 在多语言环境中，根页面将包含一个脚本，该脚本将解析来自客户端的请求以确定首选语言。
 
-在这个简单的示例中，将根页面静态设置为重定向到英语页面，该页面将来可能会发展为带有播放页面链接的主登陆页面。
+在此示例中，将根页面静态设置为重定向到英语页面，该页面将来可能会发展为带有播放页面链接的主登陆页面。
 
 将浏览器URL更改为根页面： `http://localhost:4502/editor.html/content/an-scf-sandbox.html`
 
@@ -181,6 +177,6 @@ ht-degree: 6%
 
 * 单击 **[!UICONTROL 确定]**
 
-发布站点后，在发布实例上浏览到根页面将重定向到英文页面。
+发布站点后，在发布实例上浏览到根页面时，会重定向到英文页面。
 
-播放社区SCF组件之前的最后一步是添加客户端库文件夹(clientlibs) .... [添加Clienlibs](add-clientlibs.md)
+播放Communities SCF组件之前的最后一步是添加客户端库文件夹(clientlibs) .... [添加Clientlibs](add-clientlibs.md)

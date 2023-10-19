@@ -1,18 +1,14 @@
 ---
 title: 精选内容要点
-seo-title: Featured Content Essentials
-description: 使用功能内容
-seo-description: Working with feature content
-uuid: b376828a-1431-4d16-ad6b-b23a3ea62a75
+description: 了解使用您希望在社区网站的任何位置突出显示的精选内容的基础知识。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: 781625f1-39a0-4e34-948c-d4eab35dd5c1
 exl-id: 70b0ad6a-c891-4588-8515-449aed206805
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
 workflow-type: tm+mt
-source-wordcount: '106'
+source-wordcount: '120'
 ht-degree: 5%
 
 ---
@@ -21,7 +17,7 @@ ht-degree: 5%
 
 本页提供了使用精选内容的基本信息。
 
-与将帖子固定到论坛顶部不同，此功能允许突出显示社区网站中的任何内容。
+与将帖子固定到论坛顶部相反，此功能允许在社区网站中的任何位置突出显示内容。
 
 
 ## 适用于客户端的Essentials {#essentials-for-client-side}
@@ -50,7 +46,7 @@ ht-degree: 5%
   </tr>
   <tr>
    <td><strong> 属性</strong></td>
-   <td>参见 <a href="featured.md">专题内容</a></td>
+   <td>请参阅 <a href="featured.md">专题内容</a></td>
   </tr>
  </tbody>
 </table>

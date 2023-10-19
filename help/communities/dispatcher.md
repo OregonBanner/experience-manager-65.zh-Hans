@@ -1,14 +1,14 @@
 ---
 title: 为社区配置Dispatcher
-description: 为AEM Communities配置Dispatcher
+description: 了解如何为AEM Communities配置Dispatcher以确保社区站点正常运行。
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 content-type: reference
 topic-tags: deploying
 exl-id: fb4e3973-2193-4bb5-8120-bf2f3ec80112
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
 workflow-type: tm+mt
-source-wordcount: '644'
+source-wordcount: '653'
 ht-degree: 11%
 
 ---
@@ -17,13 +17,13 @@ ht-degree: 11%
 
 ## AEM Communities {#aem-communities}
 
-对于AEM Communities，必须配置Dispatcher以确保正常运行 [社区站点](overview.md#community-sites). 在包含社交登录等功能时，需要其他配置。
+对于AEM Communities，必须配置Dispatcher以确保正常运行 [社区站点](overview.md#community-sites). 在包含社交登录等功能时，需要额外的配置。
 
-了解特定部署和站点设计所需的内容
+了解您的特定部署和站点设计所需的内容
 
 * 联系[客户关怀团队](https://experienceleague.adobe.com/?support-solution=General&amp;support-tab=home#support)
 
-另请参阅主要 [Dispatcher文档](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hans).
+另请参阅主要的 [Dispatcher文档](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hans).
 
 ## Dispatcher缓存 {#dispatcher-caching}
 
@@ -31,11 +31,11 @@ ht-degree: 11%
 
 AEM Communities的Dispatcher缓存让Dispatcher能够为社区站点的页面提供完全缓存版本。
 
-目前，它仅支持匿名网站访客，例如浏览社区网站或因搜索而登陆社区页面的用户，以及索引页面的搜索引擎。 其好处是匿名用户和搜索引擎的性能得到了改进。
+目前，它仅支持匿名网站访客，例如浏览社区网站或因搜索而登陆社区页面的用户，以及索引页面的搜索引擎。 这样做的好处是，匿名用户和搜索引擎可以体验到改进的性能。
 
 对于已登录的成员，Dispatcher会绕过缓存，将请求直接转发给发布者，以便动态生成并交付所有页面。
 
-当配置为支持Dispatcher缓存时，会向标头添加基于TTL的“最大期限”过期时间，以确保Dispatcher缓存的页面是最新的。
+在配置为支持Dispatcher缓存时，会向标头添加基于TTL的“最大期限”过期时间，以确保Dispatcher缓存的页面是最新的。
 
 ### 要求 {#requirements}
 
@@ -47,30 +47,30 @@ AEM Communities的Dispatcher缓存让Dispatcher能够为社区站点的页面提
 
 ### 配置 {#configuration}
 
-OSGi配置 **ACS AEM Commons - Dispatcher缓存控制标头 — Max Age** 设置显示在指定路径下的缓存页面的过期时间。
+OSGi配置 **ACS AEM Commons - Dispatcher缓存控制标头 — 最大保留时间** 设置显示在指定路径下的缓存页面的过期时间。
 
 * 从 [Web控制台](../../help/sites-deploying/configuring-osgi.md).
 
    * 例如， [http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr)
 
-* 查找 `ACS AEM Commons - Dispatcher Cache Control Header - Max Age`
-* 选择“+”图标，以便创建连接配置。
+* 定位 `ACS AEM Commons - Dispatcher Cache Control Header - Max Age`
+* 选择“+”图标以创建连接配置。
 
   ![dispatcher](assets/dispatcher.png)
 
 * **筛选模式**
-  *（必需）* 社区页面的一个或多个路径。 例如：`/content/sites/engage/(.*)`。
+  *（必填）* 社区页面的一个或多个路径。 例如：`/content/sites/engage/(.*)`。
 
-* **Cache-Control Max Age**
-  *（必需）* 添加到Cache Control标头的最长时限（以秒为单位）。 该值必须大于零(0)。
+* **Cache-Control最长使用时间**
+  *（必填）* 添加到Cache Control标头的最长时间（以秒为单位）。 该值必须大于零(0)。
 
 ## Dispatcher过滤器 {#dispatcher-filters}
 
 的/filter部分 `dispatcher.any` 文件记录于 [配置对内容的访问 — /filter](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hans).
 
-此部分介绍社区功能正常运行可能需要的条目。
+本节介绍社区功能正常运行可能需要的条目。
 
-过滤器属性名称遵循使用四位数字指示应用过滤器模式的顺序的约定。 当一个请求应用了多个筛选模式时，应用的最后一个筛选模式将生效。 因此，第一个过滤模式通常用于拒绝所有内容，这样以下模式用于以受控方式恢复访问。
+过滤器属性名称遵循使用四位数字表示应用过滤器模式的顺序的约定。 对一个请求应用了多个过滤模式时，最后一个应用的过滤模式生效。 因此，第一个过滤模式通常用于拒绝所有内容，使得以下模式用于以受控方式恢复访问。
 
 以下示例使用的属性名称可能必须修改以适合任何特定情况 `dispatcher.any` 文件。
 
@@ -81,7 +81,7 @@ OSGi配置 **ACS AEM Commons - Dispatcher缓存控制标头 — Max Age** 设置
 >[!NOTE]
 >
 >**属性名称示例**
->显示的所有属性名称，例如 **/0050** 和 **/0170**，应进行调整以适合现有的 `dispatcher.any` 配置文件。
+>显示的所有属性名称，例如 **/0050** 和 **/0170**，应该进行调整以适合现有的 `dispatcher.any` 配置文件。
 >
 
 >[!CAUTION]
@@ -89,7 +89,7 @@ OSGi配置 **ACS AEM Commons - Dispatcher缓存控制标头 — Max Age** 设置
 >请参阅 [Dispatcher 安全检查清单](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/security-checklist.html)以了解使用 Dispatcher 限制访问时的更多注意事项。有关 AEM 安装的其他安全详细信息，另请阅读 [AEM 安全检查清单](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html)。
 >
 
-应将以下条目添加到/filter部分的末尾，尤其是在所有拒绝条目之后。
+应将以下条目添加到/filter部分的末尾，尤其是在所有被拒绝的条目之后。
 
 <!-- New code wrt CQDOC-16081, changed by Vishabh on 10 Dec 2020.
 -->
@@ -221,7 +221,7 @@ OSGi配置 **ACS AEM Commons - Dispatcher缓存控制标头 — Max Age** 设置
 
 ## Dispatcher规则 {#dispatcher-rules}
 
-的规则部分 `dispatcher.any` 根据请求的URL定义应缓存哪些响应。 对于社区，规则部分用于定义绝不应缓存的内容。
+的规则部分 `dispatcher.any` 定义应根据请求的URL缓存哪些响应。 对于社区，规则部分用于定义绝不应缓存的内容。
 
 <!-- New code wrt CQDOC-16081, changed by Vishabh on 10 Dec 2020.
 -->
@@ -269,9 +269,9 @@ OSGi配置 **ACS AEM Commons - Dispatcher缓存控制标头 — Max Age** 设置
 
 ## 疑难解答 {#troubleshooting}
 
-问题的一个主要原因是插入过滤器规则时没有注意对早期规则的影响，尤其是在添加拒绝访问的规则时。
+问题的一个主要来源是在插入过滤器规则时没有注意对早期规则的影响，尤其是在添加拒绝访问的规则时。
 
-第一个过滤器模式通常用于拒绝所有内容，以便以下过滤器以可控方式恢复访问。 如果一个请求应用了多个过滤器，则最后一个应用的过滤器是已生效的过滤器。
+第一个过滤器模式通常用于拒绝所有内容，以便后续过滤器以可控方式恢复访问。 对一个请求应用了多个筛选器时，最后一个应用的筛选器是生效的筛选器。
 
 ## 示例dispatcher.any {#sample-dispatcher-any}
 

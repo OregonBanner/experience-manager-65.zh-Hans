@@ -1,18 +1,14 @@
 ---
 title: 使用审阅和审阅摘要（显示）
-seo-title: Using Reviews and Reviews Summary (Display)
-description: 将审阅和审阅摘要组件添加到页面
-seo-description: Adding the Reviews and Reviews Summary components to a page
-uuid: bd1ccee7-b26b-4a27-b1ea-89609f5080af
+description: 了解如何将审阅和审阅摘要组件添加到页面。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: authoring
 content-type: reference
-discoiquuid: bf4e7809-8def-4647-aaa6-3ac36865511f
 exl-id: 170414a6-c40b-4ad2-9294-7c2266850c3d
-source-git-commit: c667a1658e43bb5b61daede5f94256dae582a4fc
+source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
 workflow-type: tm+mt
-source-wordcount: '1293'
+source-wordcount: '1285'
 ht-degree: 2%
 
 ---
@@ -25,7 +21,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->不支持评论的匿名发布。 网站访客必须注册（成为会员）并登录才能参与。 已登录的访客可随时更新其评论。
+>不支持评论的匿名发布。 网站访客必须注册（成为会员）并登录才能参与。 已登录的访客可随时更新其审核。
 
 ## 将审阅添加到页面 {#adding-a-review-to-a-page}
 
@@ -33,13 +29,13 @@ ht-degree: 2%
 
 有关必要信息，请访问 [社区组件基础知识](basics.md).
 
-当 [所需的客户端库](reviews-basics.md#essentials-for-client-side) 包括，这就是 `Reviews` 组件随即出现。
+当 [所需的客户端库](reviews-basics.md#essentials-for-client-side) 包括，这就是 `Reviews` 组件出现。
 
 ![create-review](assets/create-review.png)
 
 ## 配置审核 {#configuring-reviews}
 
-选择已放置的 `Reviews` 组件以访问和选择 `Configure` 图标打开“编辑”对话框。
+选择已放置的 `Reviews` 组件，以便您能够访问和选择 `Configure` 图标打开“编辑”对话框。
 
 ![configure-new](assets/configure-new.png)
 
@@ -55,9 +51,9 @@ ht-degree: 2%
 
   单击 **[!UICONTROL 添加项目]** 以添加其他评级选择。
 
-在 **[!UICONTROL 所需评级]** 选项卡，从列表中重新输入项目 **[!UICONTROL 允许的评级]** 需要进行评级的。 如果仅在“允许的评级”选项卡上指定项目，则成员提交时可能会保留不标记该项目。
+在 **[!UICONTROL 所需评级]** 选项卡，从列表中重新输入项目 **[!UICONTROL 允许的评级]** 评级所必需的。 如果仅在“允许的评级”选项卡上指定项目，则成员提交时可能会保留不标记该项目。
 
-在网站上，必填评级标有星号。 如果某个项目是必需的且未标记，则会向成员显示一条消息，并且会拒绝提交，直到标记完所有必需的评级为止。
+在网站上，必填评级标有星号。 如果某个项目是必需的且未标记，则会向该成员显示一条消息，并且在标记所有必需的评级之前，将拒绝提交。
 
 ![要求评级](assets/configure-review2.png)
 
@@ -99,7 +95,7 @@ ht-degree: 2%
 
 * **[!UICONTROL 允许的文件类型]**
 
-  相关条件仅限于 **[!UICONTROL 允许文件上传]** 已选中。 包含“点”分隔符的逗号分隔文件扩展名列表。 例如： .jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定了任何文件类型，则不允许使用未指定的文件类型。 默认值为无指定以便允许所有文件类型。
+  相关条件仅限于 **[!UICONTROL 允许文件上传]** 已选中。 包含“点”分隔符的逗号分隔文件扩展名列表。 例如，.jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定了任何文件类型，则不允许使用未指定的文件类型。 默认值为无指定以便允许所有文件类型。
 
 * **[!UICONTROL 富文本编辑器]**
 
@@ -119,7 +115,7 @@ ht-degree: 2%
 
 * **[!UICONTROL 删除审核]**
 
-  如果选中，则向发布审阅的成员提供删除审阅的功能。 默认值为未选中。
+  如果选中，则发布评论的成员可以将其删除。 默认值为未选中。
 
 * **[!UICONTROL 拒绝审核]**
 
@@ -159,7 +155,7 @@ ht-degree: 2%
 
 有关必要信息，请访问 [社区组件基础知识](basics.md).
 
-当 [所需的客户端库](reviews-basics.md#essentials-for-client-side) 包括，这就是 `Reviews Summary (Display)`组件随即出现。
+当 [所需的客户端库](reviews-basics.md#essentials-for-client-side) 包括，这就是 `Reviews Summary (Display)`组件出现。
 
 ![review-summary](assets/configure-review5.png)
 
@@ -169,7 +165,7 @@ ht-degree: 2%
 
 ### 配置审阅摘要（显示） {#configuring-reviews-summary-display}
 
-选择已放置的 `Reviews Summary (Display)` 组件以访问和选择 `Configure` 图标打开“编辑”对话框。
+选择已放置的 `Reviews Summary (Display)` 组件，以便您能够访问和选择 `Configure` 图标打开“编辑”对话框。
 
 ![配置](assets/configure-new.png)
 
@@ -179,21 +175,21 @@ ht-degree: 2%
 
 * `Review Path`
 
-  输入或浏览到放置的实例 `reviews`用于总结的组件，例如，如果将其添加到的 [Geometrixx参与网站，](getting-started.md) 路径将为：
+  输入或浏览到放置的实例 `reviews` 组件，以便您能够总结(例如，如果添加到 [Geometrixx参与网站，](getting-started.md) 路径将为：
 
   `/content/sites/engage/en/page/jcr:content/content/primary/reviews`
 
 * `Include histogram`
 
-  如果选中，则显示一个条形图，指示所总结的评论中存在多少个星级。 默认值为未选中。
+  如果选中，则显示一个条形图，指示所总结的评论中有多少星级。 默认值为未选中。
 
 ### 更改为自定义审核类型 {#changing-to-a-custom-review-type}
 
 审阅组件使用注释系统。
 
-通过更改注释资源类型，注释系统将不再使用默认选项生成注释的实例，而是由开发人员自定义（扩展）的实例。
+通过更改“注释资源类型”，注释系统不再使用缺省值生成注释的实例，而是由开发人员自定义（扩展）的实例。
 
-在已知自定义资源类型后，输入 [设计模式](../../help/sites-authoring/default-components-designmode.md) 并双击所放置的 `Comments` 组件以打开带有附加选项卡的对话框。
+当自定义资源类型已知时，输入 [设计模式](../../help/sites-authoring/default-components-designmode.md) 并双击所放置的 `Comments` 组件以打开带有附加选项卡的对话框。
 
 在 **[!UICONTROL 资源类型]** 选项卡，为的新实例指定自定义resourceType `Comments or Voting` 组件：
 
@@ -203,13 +199,13 @@ ht-degree: 2%
 
   导航到扩展的resourceType `comment`/apps中的组件（单个注释）。 例如：`/apps/social/commons/components/hbs/comments/comment`。
 
-  此资源将标识访客发表评论时创建的UGC的resourceType。
+  此资源标识访客发表评论时创建的UGC的resourceType。
 
 * **[!UICONTROL 投票资源类型]**
 
   导航到扩展的resourceType `voting`/apps中的组件 例如：`/apps/social/components/hbs/voting`。
 
-  此资源将标识访客发表投票时创建的UGC的资源类型。
+  此资源标识访客发表投票时创建的UGC的资源类型。
 
 * **[!UICONTROL 注释系统资源类型]**
 

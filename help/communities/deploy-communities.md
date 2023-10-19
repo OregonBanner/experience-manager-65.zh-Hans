@@ -1,15 +1,15 @@
 ---
 title: 部署社区
-description: 如何部署AEM Communities
+description: 了解如何在Adobe Experience Manager中部署社区和社区功能。
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 content-type: reference
 topic-tags: deploying
 docset: aem65
 exl-id: 5b3d572d-e73d-4626-b664-c985949469c9
-source-git-commit: e33816b3b8d190e185d2b23dad3a05aca272f01c
+source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
 workflow-type: tm+mt
-source-wordcount: '1707'
+source-wordcount: '1712'
 ht-degree: 2%
 
 ---
@@ -84,7 +84,7 @@ AEM 6.5 Communities GA包含Communities包。 详细了解AEM 6.5的更新 [Comm
 
 从AEM 6.4开始，对Communities的更新作为AEM累积修补程序包和Service Pack的一部分提供。
 
-有关AEM 6.5的最新更新，请参阅 [Adobe Experience Manager 6.4累积修补程序包和Service Pack](https://helpx.adobe.com/cn/experience-manager/aem-releases-updates.html).
+有关AEM 6.5的最新更新，请参阅 [Adobe Experience Manager 6.4累积修补程序包和Service Pack](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html?lang=zh-Hans).
 
 ### 版本历史记录 {#version-history}
 
@@ -132,7 +132,7 @@ AEM 6.5 Communities GA包含Communities包。 详细了解AEM 6.5的更新 [Comm
 
 对于SRP集合（MSRP或DSRP）而言，为了支持高级多语言搜索(MLS)，除了自定义架构和Solr配置之外，还需要新的Solr插件。 所有必需的项目都打包到一个可下载的zip文件中。
 
-高级MLS下载（也称为“phasetwo”）可从Adobe存储库中获取：
+高级MLS下载(也称为 `phasetwo`)从Adobe存储库中可用：
 
 * AEM-SOLR-MLS-phasetwo
 
@@ -298,13 +298,11 @@ AEM Communities有两项功能要求所有AEM服务器实例都使用相同的�
 
 #### 存储库复制 {#repository-replication}
 
-将关键资料存储在存储库中(如AEM 6.2及更早版本)可以保留。 在每个AEM实例首次启动时（这将创建初始存储库）指定以下系统属性：
-
-* `-Dcom.adobe.granite.crypto.file.disable=true`
+将关键资料存储在存储库中(如AEM 6.2及更早版本)可以保留。 指定系统属性 `-Dcom.adobe.granite.crypto.file.disable=true` 在首次启动每个AEM实例（这将创建初始存储库）时。
 
 >[!NOTE]
 >
->务必确认 [创作实例上的复制代理](#replication-agents-on-author) 已正确配置。
+>验证 [创作实例上的复制代理](#replication-agents-on-author) 已正确配置。
 
 将密钥资料存储在存储库中，将加密密钥从创作实例复制到其他实例的方式如下：
 

@@ -1,25 +1,21 @@
 ---
 title: Ideation Essentials
-seo-title: Ideation Essentials
-description: 构思功能概述
-seo-description: Ideation feature overview
-uuid: abaf03ee-8bf4-4241-96c3-474c95a30a88
+description: 了解在社区中使用构思功能的基础知识，该功能类似于论坛，但具有更协作的感觉。
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: a9e4f2f0-d1ff-40c0-abcf-645e40586a84
 exl-id: 7ad3592b-f8b5-45c0-97bc-15f781d7b811
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
 workflow-type: tm+mt
-source-wordcount: '106'
+source-wordcount: '127'
 ht-degree: 3%
 
 ---
 
 # Ideation Essentials {#ideation-essentials}
 
-此页面提供了使用构思功能的基本信息，该功能与论坛类似，但可以另存为草稿并提供更具协作性的体验。
+此页面提供了使用构思功能的基本信息，该功能与论坛类似，但可以另存为草稿和更具协作性的感觉。
 
 ## 适用于客户端的Essentials {#essentials-for-client-side}
 
@@ -47,7 +43,7 @@ ht-degree: 3%
   </tr>
   <tr>
    <td><strong> 属性</strong></td>
-   <td>参见 <a href="ideation-feature.md">构思特征</a></td>
+   <td>请参阅 <a href="ideation-feature.md">构思特征</a></td>
   </tr>
  </tbody>
 </table>
