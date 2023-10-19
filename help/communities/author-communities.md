@@ -1,20 +1,16 @@
 ---
 title: Communities组件
-seo-title: Communities Components
-description: 向任何AEM站点添加社区功能
-seo-description: Adding community features to any AEM site
-uuid: 76824820-81e9-4192-8df3-dff55eaf144e
+description: 了解AEM Communities何时获得许可，可以使用标准AEM创作工具将社区功能添加到任何AEM站点。
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: authoring
 content-type: reference
-discoiquuid: df1ac689-33db-4e30-9f75-3bda2a485652
 docset: aem65
 exl-id: 4a49d14c-e6f0-4791-904e-8f30e47f7cde
-source-git-commit: 4dbbcc41757843d3b2d5a3bbb2656ef587e83d2c
+source-git-commit: b8887b4a6f757352e9dbfdf074c10e9ccd6dbd4f
 workflow-type: tm+mt
-source-wordcount: '273'
-ht-degree: 27%
+source-wordcount: '293'
+ht-degree: 25%
 
 ---
 
@@ -33,15 +29,15 @@ ht-degree: 27%
 >
 >如果不熟悉创作环境，请查看文档 [基本处理](/help/sites-authoring/basic-handling.md) 和 [页面创作快速指南](/help/sites-authoring/qg-page-authoring.md).
 
-## 可用社区组件 {#available-communities-components}
+## 可用的社区组件 {#available-communities-components}
 
-下表列出了在组件浏览器(sidekick)中启用时对作者可见的社区组件。
+下表列出了在组件浏览器(sidekick)中启用时对作者可见的Communities组件。
 
 另请参阅交互式 [社区组件指南](/help/communities/components-guide.md).
 
 >[!NOTE]
 >
->读取 [社区组件基础知识](/help/communities/basics.md) 因为它包含使用Communities组件创作所需的信息。
+>读取 [社区组件基础知识](/help/communities/basics.md) 因为它包含使用Communities组件进行创作所需的信息。
 
 | **组件标题** | **专题** |
 |---|---|
@@ -71,17 +67,17 @@ ht-degree: 27%
 | 审核摘要（显示） | [审核](/help/communities/reviews.md) |
 | 搜索 | [搜索](/help/communities/search.md) |
 | 搜索结果 | [搜索](/help/communities/search.md) |
-| 社交标签云 | [社交标签云](/help/communities/tagcloud.md) |
+| 社交标记云 | [社交标记云](/help/communities/tagcloud.md) |
 | 投票 | [投票](/help/communities/voting.md) |
 
 >[!NOTE]
 >
->轮询组件不再可用，并且在Experience Manager社区中不受支持。
+>轮询组件不再可用，并且在Experience Manager Communities中不受支持。
 
 ## 相关社区文档 {#related-communities-documentation}
 
-* 访问 [部署社区](/help/communities/deploy-communities.md) 以了解建议的部署。
+* 访问 [部署社区](/help/communities/deploy-communities.md) 您可以在其中了解建议的部署。
 
 * 访问 [管理社区站点](/help/communities/administer-landing.md) 了解有关创建社区站点、配置社区站点模板、审核社区内容、管理成员和配置消息传送的信息。
 
-* 访问 [发展中的社区](/help/communities/communities.md) 了解社交组件框架(SCF)和自定义社区组件和功能。
+* 访问 [发展中的社区](/help/communities/communities.md) 在这里，您可以了解社交组件框架(SCF)和自定义社区组件和功能。

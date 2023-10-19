@@ -1,20 +1,16 @@
 ---
 title: 排行榜功能
-seo-title: Leaderboard Feature
-description: 向页面添加排行榜组件
-seo-description: Adding a Leaderboard component to a page
-uuid: c4633919-75d3-4bc7-830c-ef9c28cc1cba
+description: 了解排行榜组件如何让您根据获得的积分和专业知识，对成员进行排名，从而了解成员在社区内的互动情况。
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: authoring
 content-type: reference
-discoiquuid: 9045ce2e-a06d-4da5-9b83-56dd823007bb
 docset: aem65
 exl-id: 8b4d56d9-ba73-4eda-9773-3daaa9237abe
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: b8887b4a6f757352e9dbfdf074c10e9ccd6dbd4f
 workflow-type: tm+mt
-source-wordcount: '400'
-ht-degree: 10%
+source-wordcount: '417'
+ht-degree: 9%
 
 ---
 
@@ -22,11 +18,11 @@ ht-degree: 10%
 
 ## 简介 {#introduction}
 
-此 `Leaderboard` 通过根据获得的点数（基本评分）或其专业知识（高级评分）对成员进行排名，组件提供了解成员如何在社区内进行交互的能力。
+此 `Leaderboard` 组件可帮助您通过根据获得的点数（基本评分）或其专业知识（高级评分）对成员进行排名，了解成员如何在社区内进行交互。
 
 在页面上包含排行榜组件之前，需要配置 [社区评分和徽章](/help/communities/implementing-scoring.md).
 
-本文档的这一部分描述了：
+此文档的此部分描述了：
 
 * 添加 `Leaderboard` 组件到 [社区站点](/help/communities/overview.md#community-sites).
 * 的配置设置 `Leaderboard` 组件。
@@ -41,13 +37,13 @@ ht-degree: 10%
 
 有关必要信息，请访问 [社区组件基础知识](/help/communities/basics.md).
 
-首次放置到社区站点的页面上时，以下是组件的显示方式：
+首次放到社区站点的页面时，该组件的显示方式如下：
 
 ![排行榜](assets/leaderboard.png)
 
 ### 配置排行榜 {#configuring-leaderboard}
 
-选择已放置的 `Leaderboard` 组件以访问和选择 `Configure` 图标，打开“编辑”对话框。
+选择已放置的 `Leaderboard` 组件，以便您能够访问和选择 `Configure` 图标打开“编辑”对话框。
 
 ![configure-new](assets/configure-new.png)
 
@@ -59,22 +55,22 @@ ht-degree: 10%
 
 * **显示名称**
 
-   为展示板显示的描述性名称，反映为显示徽章和分数而选择的规则。
-默认为 `Leaderboard`如果未输入任何内容，则为。
+  为展示板显示的描述性名称，反映为显示徽章和分数而选择的规则。
+默认为 `Leaderboard` 如果未输入任何内容。
 
 * **徽章**
 
-   如果选中，则排行榜中包含徽章图标列。
+  如果选中，则排行榜中将包含一列徽章图标。
 默认值为未选中。
 
 * **徽章名称**
 
-   如果选中，则排行榜中将包含徽章名称列。
+  如果选中，则排行榜中将包含徽章名称列。
 默认值为未选中。
 
 * **使用头像**
 
-   如果选中，则成员的头像图像将包含在排行榜中，位于其名称链接旁边，指向其成员配置文件。
+  如果选中，则成员的头像图像将包含在排行榜中，位于其名称链接旁边，指向其成员配置文件。
 默认值为未选中。
 
 #### “规则”选项卡 {#rules-tab}
@@ -83,19 +79,19 @@ ht-degree: 10%
 
 * **规则位置**
 
-   （必需）配置评分/徽章规则的位置。
+  （必需）配置得分/徽章规则的位置。
 
 * **评分规则**
 
-   （必需）生成要显示的分数的特定规则。
+  （必需）生成要显示的分数的特定规则。
 
 * **徽章规则**
 
-   （必需）生成要显示的徽章的特定规则。
+  （必需）生成要显示的徽章的特定规则。
 
 * **显示限制**
 
-   每页显示的成员数。默认为10。
+  每页显示的成员数。 默认值为10。
 
 ### 示例：参与者排行榜 {#example-participants-leaderboard}
 
@@ -106,7 +102,7 @@ ht-degree: 10%
 * 设置选项卡：
 
    * 显示名称 = `Participation Board`
-   * `checked`:
+   * `checked`：
 
       * 徽章
       * 徽章名称
