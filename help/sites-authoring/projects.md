@@ -1,16 +1,8 @@
 ---
 title: 项目
-seo-title: Projects
 description: 通过“项目”，您可以将资源分组到一个实体中，该实体的通用共享环境使您能够轻松管理项目.
-seo-description: Projects let you group resources into one entity whose common, shared environment makes it easy to manage your projects
-uuid: 4b5b9d78-d515-46af-abe2-882da0a1c8ae
-products: SG_EXPERIENCEMANAGER/6.5/SITES
-topic-tags: projects
-content-type: reference
-discoiquuid: dee7ac7c-ca86-48e9-8d95-7826fa926c68
-docset: aem65
 exl-id: 632c0608-2ab8-4a5b-8251-cd747535449b
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 1d64a9a6d6dfbc7606d7c222ef50a21bf9b902d6
 workflow-type: tm+mt
 source-wordcount: '1365'
 ht-degree: 32%
@@ -223,7 +215,7 @@ ht-degree: 32%
 |---|---|---|---|
 | 观察者 | 具有此角色的用户可以查看项目详细信息，包括项目状态。 | 项目的只读权限 | `workflow-users` 组 |
 | 编辑器 | 具有此角色的用户可以上传和编辑项目的内容。 | 对项目、关联的元数据和相关资源的读写访问权限<br>上传拍摄列表、照片拍摄以及查看和审批资源的权限<br>的写入权限 `/etc/commerce`<br>修改特定项目的权限 | `workflow-users` 组 |
-| 所有者 | 具有此角色的用户可以创建项目、在项目中启动工作，并将批准的资产移动到生产文件夹。 所有者还可以查看和执行项目中的所有其他任务。 | `/etc/commerce` 的写入权限 | `dam-users` 组才能创建项目<br>`project-administrators` 组，以便能够创建项目和移动资产 |
+| 所有者 | 具有此角色的用户可以创建项目、在项目中启动工作，并将批准的资产移动到生产文件夹。 所有者还可以查看和执行项目中的所有其他任务。 | `/etc/commerce` 的写入权限 | `dam-users` 组才能创建项目<br>`projects-administrators` 组，以便能够创建项目和移动资产 |
 
 对于创意项目，还提供了诸如摄影师等其他角色。 您可以使用这些角色来派生特定项目的自定义角色。
 

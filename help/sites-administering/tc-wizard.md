@@ -3,7 +3,7 @@ title: 语言复制向导
 description: 了解如何在AdobeExperience Manager中使用语言复制向导。
 feature: Language Copy
 exl-id: 99f9929f-26de-4e95-9ee3-d70512d53bb7
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+source-git-commit: 2d87022aa2223df261e245fba65df054c041cd69
 workflow-type: tm+mt
 source-wordcount: '215'
 ht-degree: 30%
@@ -16,7 +16,7 @@ ht-degree: 30%
 
 >[!NOTE]
 >
->用户必须是项目管理员组的成员才能创建站点的语言副本。
+>用户必须是projects-administrators组的成员才能创建站点的语言副本。
 
 要访问此向导：
 

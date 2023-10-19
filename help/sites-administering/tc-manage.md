@@ -2,7 +2,7 @@
 title: 管理翻译项目
 description: 了解如何在Adobe Experience Manager中管理翻译项目。
 exl-id: 968bba02-98fe-4eaf-9937-ce5cfdf5b413
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+source-git-commit: 9438868191961404e9e18cb0dd2e844985ac9db0
 workflow-type: tm+mt
 source-wordcount: '3588'
 ht-degree: 55%
@@ -433,7 +433,7 @@ AEM 检测是否正在为内容的初始翻译创建翻译项目，或更新已�
 
 >[!NOTE]
 >
->要创建项目，您的帐户必须是 `project-administrators` 组的成员。
+>要创建项目，您的帐户必须是 `projects-administrators` 组的成员。
 
 在手动创建翻译项目时，必须为以下与翻译相关的属性以及[基本属性](/help/sites-authoring/touch-ui-managing-projects.md#creating-a-project)提供值：
 

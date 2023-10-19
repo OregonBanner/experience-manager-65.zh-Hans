@@ -2,10 +2,10 @@
 title: AEM Headless 翻译快速入门
 description: 了解如何组织您的 Headless 内容以及 AEM 的翻译工具的工作原理。
 exl-id: 764f78a7-1d3d-4406-85b1-b80dffae2350
-source-git-commit: 9c517590c2b78eed7c52e33e0a106237a2af3bb7
+source-git-commit: 947b17a82f704a244e7fdc710cfa9df50c64f46b
 workflow-type: tm+mt
 source-wordcount: '1495'
-ht-degree: 92%
+ht-degree: 93%
 
 ---
 
@@ -50,7 +50,7 @@ ht-degree: 92%
 
 * 用于测试翻译内容的沙盒访问
 * 用于连接到您的首选翻译服务的凭据
-* 成为 AEM 中的 `project-administrators` 组的成员
+* 成为 AEM 中的 `projects-administrators` 组的成员
 
 ## 结构是关键所在 {#content-structure}
 
@@ -190,6 +190,6 @@ AEM 的内容（无论是 Headless 还是传统网页）都由其结构推动。
 * [标识要翻译的内容](/help/sites-administering/tc-rules.md) – 了解翻译规则如何标识需要翻译的内容。
 * [配置翻译集成框架](/help/sites-administering/tc-tic.md) – 了解如何配置翻译集成框架以与第三方翻译服务集成。
 * [管理翻译项目](/help/sites-administering/tc-manage.md) – 了解如何在 AEM 中创建和管理机器翻译项目和人工翻译项目。
-* An [AEM as a Headless CMS简介](/help/sites-developing/headless/introduction.md)
-* 此 [AEM开发人员门户](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=zh-Hans)
-* [AEM中的HeadlessTutorials](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=zh-Hans)
+* [AEM as a Headless CMS 简介](/help/sites-developing/headless/introduction.md)
+* [AEM 开发人员门户](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=zh-Hans)
+* [AEM 中的 Headless 教程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=zh-Hans)
