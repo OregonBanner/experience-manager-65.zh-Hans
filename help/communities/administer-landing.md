@@ -1,19 +1,15 @@
 ---
 title: 社区站点
-seo-title: Communities Sites
-description: AEM Communities文档概述
-seo-description: Overview of the AEM Communities documentation
-uuid: 9842ce6c-1af8-4b27-b199-07410e797ab2
+description: 了解适用于管理员且已熟悉其基本功能的Adobe Experience Manager (AEM)社区的基础知识。
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
-discoiquuid: 8799386a-c3b8-43cf-9f71-580ff2a81abc
 role: Admin
 exl-id: e3ffc73e-2bc5-492d-b64b-750cc7d8ab9b
-source-git-commit: 4dbbcc41757843d3b2d5a3bbb2656ef587e83d2c
+source-git-commit: f03d0ab9d0f491441378e16e1590d33651f064b5
 workflow-type: tm+mt
-source-wordcount: '430'
+source-wordcount: '449'
 ht-degree: 4%
 
 ---
@@ -38,10 +34,10 @@ ht-degree: 4%
    * [Sites](sites-console.md)
 
       * [组（子社区）](groups.md)
+
    * [审核](moderation.md)
    * [成员和组管理](members.md)
    * [报表](reports.md)
-
 
 * Communities [*工具*](tools.md)：
 
@@ -58,10 +54,10 @@ ht-degree: 4%
 AEM Communities的一个主要功能是通过登录网站访客（成员）生成用户生成的内容(UGC)。 要了解有关使用UGC的更多信息，请访问：
 
 * [通用UGC存储](working-with-srp.md)：为UGC的共享存储选择SRP
-* [正在审核UGC](moderate-ugc.md)：受信任成员可以批量或上下文中审核UGC
+* [审核UGC](moderate-ugc.md)：受信任成员可以批量或上下文中审核UGC
 * [标记UGC](tag-ugc.md)：可以将功能配置为允许成员标记内容
 * [翻译UGC](translate-ugc.md)：可以将功能配置为翻译所有UGC或允许成员翻译选定的帖子
-* [Analytics配置](analytics.md)：启用Adobe Analytics以报告有关成员活动的各种指标
+* [Analytics配置](analytics.md)：启用Adobe Analytics以报告与成员活动相关的各种指标
 
 ### 社区成员 {#community-members}
 
@@ -73,8 +69,8 @@ AEM Communities的一个主要功能是通过登录网站访客（成员）生�
 * [使用Facebook和Twitter进行社交登录](social-login.md)：允许网站访客使用其Facebook或Twitter凭据成为社区成员。
 * [评分和徽章](implementing-scoring.md)：能够分配徽章以标识成员的角色，并且成员能够通过参与社区来获取徽章。
 * [通知](notifications.md)：能够让成员收到其所关注活动的通知。
-* [订阅](subscriptions.md)：成员可使用外部电子邮件与社区进行交互。
-* [消息传送](messaging.md)：成员可以使用内部消息与社区进行交互。
+* [订阅](subscriptions.md)：成员可以使用外部电子邮件与社区交互。
+* [消息传送](messaging.md)：成员可以使用内部消息与社区交互。
 
 ### 部署 {#deployment}
 
@@ -88,12 +84,12 @@ AEM Communities的一个主要功能是通过登录网站访客（成员）生�
 
 * [最新的Communities功能包](deploy-communities.md#latestfeaturepack)
 
-有关其他特定于Communities的信息(例如 [升级](upgrade.md)， [调度程序](dispatcher.md) 和 [复制](deploy-communities.md#replication-agents-on-author).
+有关其他特定于社区的信息，请参阅部署页面，例如 [升级](upgrade.md)， [Dispatcher](dispatcher.md)、和 [复制](deploy-communities.md#replication-agents-on-author).
 
 ## 相关社区文档 {#related-communities-documentation}
 
-* 访问 [部署社区](deploy-communities.md) 以了解建议的部署。
+* 访问 [部署社区](deploy-communities.md) 您可以在其中了解建议的部署。
 
-* 访问 [发展中的社区](communities.md) 了解社交组件框架(SCF)和自定义社区组件和功能。
+* 访问 [发展中的社区](communities.md) 在这里，您可以了解社交组件框架(SCF)和自定义社区组件和功能。
 
-* 访问 [创作社区组件](author-communities.md) 了解如何使用创作和配置社区组件。
+* 访问 [创作社区组件](author-communities.md) 在这里，您可以了解如何使用及配置社区组件。

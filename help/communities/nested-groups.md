@@ -1,15 +1,15 @@
 ---
 title: 创作嵌套组
-description: 创建嵌套组
+description: 了解如何为Adobe Experience Manager Communities站点创建嵌套组。
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: introduction
 content-type: reference
 docset: aem65
 exl-id: 55803b7a-9064-4392-9cc2-9f113fa8dc29
-source-git-commit: ab3d016c7c9c622be361596137b150d8719630bd
+source-git-commit: f03d0ab9d0f491441378e16e1590d33651f064b5
 workflow-type: tm+mt
-source-wordcount: '590'
+source-wordcount: '600'
 ht-degree: 4%
 
 ---
@@ -37,7 +37,7 @@ ht-degree: 4%
 
 ## 创建主艺术组 {#create-main-arts-group}
 
-可以创建此组，因为用于参与的站点结构包含组功能。 站点中函数的配置 `Reference Template` 默认为允许选择任何已启用的组模板。 因此，为新组选择的模板是 `Reference Group`.
+可以创建此组，因为用于接合的站点结构包括组的功能。 站点中函数的配置 `Reference Template` 默认为允许选择任何已启用的组模板。 因此，为新组选择的模板是 `Reference Group`.
 
 这些控制台与社区站点控制台类似。
 

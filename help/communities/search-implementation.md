@@ -1,14 +1,14 @@
 ---
 title: Search Essentials
-description: 在社区中搜索
+description: 了解搜索功能，该功能是AEM Communities的一项基本功能。 社区还为用户生成的内容提供搜索API。
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 exl-id: 8af5ee58-19d7-47b6-b45d-e88006703a5d
-source-git-commit: ab3d016c7c9c622be361596137b150d8719630bd
+source-git-commit: f03d0ab9d0f491441378e16e1590d33651f064b5
 workflow-type: tm+mt
-source-wordcount: '1170'
+source-wordcount: '1189'
 ht-degree: 4%
 
 ---
@@ -68,11 +68,11 @@ ht-degree: 4%
 
 ### JSRP搜索 {#jsrp-searches}
 
-对象 [JSRP](jsrp.md)，UGC存储在 [Oak](../../help/sites-deploying/platform.md) 并且仅在输入它的AEM创作或发布实例的存储库中可见。
+对象 [JSRP](jsrp.md)，UGC存储在 [Oak](../../help/sites-deploying/platform.md) 并且仅在输入它的AEM Author或Publish实例的存储库中可见。
 
 由于UGC通常输入在发布环境中，因此对于多发布者生产系统，有必要配置 [发布集群](topologies.md)，而不是发布场，因此输入的内容对所有发布者可见。
 
-对于JSRP，在发布环境中输入的UGC在创作环境中从不可见。 因此，所有 [审核](moderate-ugc.md) 任务在发布环境中进行。
+对于JSRP，在发布环境中输入的UGC在创作环境中从不可见。 因此，所有 [审核](moderate-ugc.md) 任务在“发布”环境中执行。
 
 自定义搜索功能应使用 [UGC搜索API](#ugc-search-api).
 
