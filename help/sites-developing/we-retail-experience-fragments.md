@@ -1,7 +1,7 @@
 ---
 title: 在We.Retail中尝试体验片段
 seo-title: Trying out Experience Fragments in We.Retail
-description: 在We.Retail中尝试体验片段
+description: 了解如何使用We.Retail在Adobe Experience Manager中试用体验片段。
 seo-description: Trying out Experience Fragments in We.Retail
 uuid: 43a6df77-9dd3-4316-b749-0ef059370f7d
 contentOwner: AEM Docs
@@ -10,9 +10,9 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: fe44a941-a09b-4421-b766-1d433291f2cc
 exl-id: e17ff611-122a-4d17-97af-071d0234dd16
-source-git-commit: 53c39e4aa250b18d4fae0327b313b18901677f2c
+source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
 workflow-type: tm+mt
-source-wordcount: '235'
+source-wordcount: '242'
 ht-degree: 25%
 
 ---
@@ -21,11 +21,11 @@ ht-degree: 25%
 
 在We.Retail中尝试体验片段
 
-An [体验片段](/help/sites-authoring/experience-fragments.md) 由一个或多个组件组成，包括可在页面中引用的内容和布局。 它们可以包含任何组件。
+An [体验片段](/help/sites-authoring/experience-fragments.md) 是一个或多个组件的组，这些组件包括可在页面中引用的内容和布局。 它们可以包含任何组件。
 
 它们允许作者重复使用页面的各个部分（体验的片段），而无需复制和粘贴内容。
 
-这支持Headless内容管理系统(CMS)用例，在该用例中，作者希望使用AEM仅用于创作，而不是交付给客户。 然后，第三方系统/接触点可以使用该体验，然后交付给最终用户。
+这支持Headless内容管理系统(CMS)用例，在该用例中，作者希望使用AEM仅进行创作，而不是提供给客户。 然后，第三方系统/接触点会使用该体验，然后交付给最终用户。
 
 >[!NOTE]
 >
@@ -38,9 +38,9 @@ An [体验片段](/help/sites-authoring/experience-fragments.md) 由一个或多
 
 ## 在We.Retail中创建体验片段的位置 {#where-to-create-experience-fragments-in-we-retail}
 
-从全局导航中选择&#x200B;**体验片段**。在此，您配置， [创建](/help/sites-authoring/experience-fragments.md#creating-an-experience-fragment) 和 [编辑](/help/sites-authoring/experience-fragments.md#editing-your-experience-fragment) 您的体验片段以及任何相关的 [变体](/help/sites-authoring/experience-fragments.md#creating-an-experience-fragment-variation).
+从全局导航中选择&#x200B;**体验片段**。您在此处配置， [创建](/help/sites-authoring/experience-fragments.md#creating-an-experience-fragment) 和 [编辑](/help/sites-authoring/experience-fragments.md#editing-your-experience-fragment) 您的体验片段和任何相关 [变体](/help/sites-authoring/experience-fragments.md#creating-an-experience-fragment-variation).
 
-## 在We.Retail中使用体验片段的位置 {#where-to-use-experience-fragments-in-we-retail}
+## 在We.Retail中的何处使用体验片段 {#where-to-use-experience-fragments-in-we-retail}
 
 您可以使用 [体验片段](/help/sites-authoring/experience-fragments.md#using-your-experience-fragment) （与任何其他组件一样） [任意页面](/help/sites-authoring/editing-content.md) 下 **站点** 在全局导航中。
 

@@ -1,7 +1,7 @@
 ---
 title: 网站管理
 seo-title: Website Administration
-description: 了解如何在AEM中管理多语言网站。
+description: 了解如何使用Adobe Experience Manager管理多语言网站。
 seo-description: Learn how to manage multilingual websites in AEM.
 uuid: a32d458b-a5ad-46ef-a68c-4717c63b4bdd
 contentOwner: Guillaume Carlino
@@ -10,9 +10,9 @@ topic-tags: site-features
 content-type: reference
 discoiquuid: fabaa3e8-1657-4ed4-abb2-990117bec39c
 exl-id: 8f11f5de-f5af-4ce7-a448-2b4299de2930
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
 workflow-type: tm+mt
-source-wordcount: '350'
+source-wordcount: '352'
 ht-degree: 41%
 
 ---

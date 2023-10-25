@@ -1,7 +1,7 @@
 ---
 title: 工作流最佳实践
 seo-title: Workflow Best Practices
-description: 工作流最佳实践
+description: 了解在Adobe Experience Manager中使用工作流的最佳实践。
 seo-description: null
 uuid: 79be4055-c2ef-428e-9054-103c6cfde1d2
 contentOwner: User
@@ -10,9 +10,9 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: 0be8b88c-6f57-4dcc-ae11-77b378a2decd
 exl-id: 14775476-6fe5-4583-8ab5-b55fef892174
-source-git-commit: 71b3f7c6ad2c7712762a29518de6cf0639081cb7
+source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
 workflow-type: tm+mt
-source-wordcount: '1920'
+source-wordcount: '1929'
 ht-degree: 1%
 
 ---

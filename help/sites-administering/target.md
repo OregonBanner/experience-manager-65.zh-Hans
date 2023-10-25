@@ -1,7 +1,7 @@
 ---
 title: 与 Adobe Target 集成
 seo-title: Integrating with Adobe Target
-description: 了解AEM与Adobe Target的集成。
+description: 了解如何将Adobe Experience Manager与Adobe Target集成。
 seo-description: Learn about integrating AEM with Adobe Target.
 uuid: b90346e8-9757-4272-a870-bbe5e647303f
 contentOwner: Guillaume Carlino
@@ -10,9 +10,9 @@ topic-tags: integration
 content-type: reference
 discoiquuid: 454854f8-6053-406c-888d-f427777bf570
 exl-id: 2b17d8cd-a43c-4d54-b990-a6f0cb1db22b
-source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
+source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
 workflow-type: tm+mt
-source-wordcount: '598'
+source-wordcount: '601'
 ht-degree: 66%
 
 ---
@@ -34,7 +34,7 @@ ht-degree: 66%
 
 1. 可以任选其一：
 
-   1. [选择加入Adobe Target](/help/sites-administering/opt-in.md)：选择加入向导会获取您的Target帐户信息，并创建Adobe Target云配置和Target框架。 该向导还会将您的站点与Target框架相关联。 如果向导无法连接到目标，请参阅 [连接故障排除](/help/sites-administering/target-configuring.md#troubleshooting-target-connection-problems) 部分。 然后，您可以 [修改默认云配置](/help/sites-administering/target-configuring.md#modifying-the-opt-in-wizard-configurations)：如有必要，请修改选择加入向导创建的云配置和框架。 例如，修改框架以将其他上下文数据发送到Target。 如果要使用Adobe Analytics作为Adobe Target的报表源，则需要修改云配置以指向A4T配置。
+   1. [选择加入Adobe Target](/help/sites-administering/opt-in.md)：选择加入向导会获取您的Target帐户信息，并创建Adobe Target云配置和Target框架。 该向导还会将您的站点与Target框架相关联。 如果向导无法连接到目标，请参阅 [连接故障排除](/help/sites-administering/target-configuring.md#troubleshooting-target-connection-problems) 部分。 您可以 [修改默认云配置](/help/sites-administering/target-configuring.md#modifying-the-opt-in-wizard-configurations)：如有必要，请修改选择加入向导创建的云配置和框架。 例如，修改框架以将其他上下文数据发送到Target。 如果要使用Adobe Analytics作为Adobe Target的报表源，则需要修改云配置以指向A4T配置。
    1. [手动与Adobe Target集成](/help/sites-administering/target-configuring.md#manually-integrating-with-adobe-target).
 
 1. [配置活动](/help/sites-authoring/activitylib.md)：将您的活动与 Target 云配置相关联。
@@ -50,7 +50,6 @@ ht-degree: 66%
 >* 3.x 通过 [http://localhost:4502/system/console/configMgr/com.day.commons.httpclient](http://localhost:4502/system/console/configMgr/com.day.commons.httpclient) 进行配置
 >* 4.x 通过 [http://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator](http://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator) 进行配置
 >
-
 
 >[!CAUTION]
 >
@@ -81,4 +80,3 @@ ht-degree: 66%
 >* 50 个量度
 >* 50 个报告区段
 >
-

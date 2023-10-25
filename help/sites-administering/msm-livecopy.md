@@ -1,12 +1,12 @@
 ---
 title: 创建并同步 Live Copy
-description: 了解如何创建和同步活动副本。
+description: 了解如何在Adobe Experience Manager中创建和同步活动副本。
 feature: Multi Site Manager
 exl-id: 896b35dd-4510-4c94-8615-03d9649c2f64
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
 workflow-type: tm+mt
-source-wordcount: '4229'
-ht-degree: 46%
+source-wordcount: '4233'
+ht-degree: 47%
 
 ---
 
@@ -25,7 +25,7 @@ Blueprint配置标识要用作一个或多个Live Copy页面的源的现有网�
 创建 Blueprint 配置时，可以选择定义 Blueprint 的内部结构的模板。默认 Blueprint 模板假定源网站具有以下特征：
 
 * 网站具有根页面。
-* 根的直接子页面是网站的语言分支。在创建Live Copy时，语言显示为可选内容，以包含在副本中。
+* 根的直接子页面是网站的语言分支。在创建Live Copy时，将语言显示为可选内容，以便包含在副本中。
 * 每个语言分支的根均有一个或多个子页面。在创建Live Copy时，子页面显示为可包含在Live Copy中的章节。
 
 >[!NOTE]
@@ -59,7 +59,7 @@ Blueprint配置标识要用作一个或多个Live Copy页面的源的现有网�
 
 1. **创建**&#x200B;将根据您的规范创建 Blueprint 配置。
 
-### 编辑或删除Blueprint配置 {#editing-or-deleting-a-blueprint-configuration}
+### 编辑或删除Blue配置 {#editing-or-deleting-a-blueprint-configuration}
 
 您可以编辑或删除现有 Blueprint 配置：
 
@@ -86,12 +86,12 @@ Blueprint配置标识要用作一个或多个Live Copy页面的源的现有网�
 
 * 引用的页面 [Blueprint配置](#creating-a-blueprint-configuration).
 * 以及与配置无关联的页面.
-* AEM还支持在另一个live copy的页面中创建live copy。
+* AEM还支持在其他Live Copy的页面中创建Live Copy。
 
 唯一的区别是，**转出**&#x200B;命令在源/Blueprint 页面上的可用性取决于 Blueprint 配置是否引用了源：
 
-* 如果从源页面创建Live Copy，且 **是** 在Blueprint配置中引用，则“转出”命令将适用于源/Blueprint页面。
-* 如果从源页面创建Live Copy，且 **不是** 在Blueprint配置中引用，则转出命令将不可用于源/Blueprint页面。
+* 如果您从源页面创建Live Copy，则它会 **是** 在Blueprint配置中引用，则转出命令将适用于源/Blueprint页面。
+* 如果您从源页面创建Live Copy，则它会 **不是** 在Blueprint配置中引用，则转出命令将不可用于源/Blueprint页面。
 
 要创建Live Copy，请执行以下操作：
 
@@ -120,17 +120,17 @@ Blueprint配置标识要用作一个或多个Live Copy页面的源的现有网�
 
 1. 使用&#x200B;**排除子页面**&#x200B;复选框：
 
-   * 选定：仅创建选定页面的Live Copy（浅Live Copy）
-   * 未选择：创建一个包含选定页面的所有后代（深Live Copy）的Live Copy
+   * 选中：仅创建所选页面的Live Copy（浅Live Copy）
+   * 未选择：创建一个包含选定页面的所有子项的Live Copy（深Live Copy）
 
-1. （可选）要指定用于LiveCopy的一个或多个转出配置，请使用 **转出配置** 下拉列表进行选择；选定的配置将显示在下拉选择器下方。
+1. （可选）要指定用于LiveCopy的一个或多个转出配置，请使用 **转出配置** 下拉列表来选择它们；选定的配置将显示在下拉选择器的下方。
 1. 单击或点按&#x200B;**创建**。这将显示一条确认消息，可在其中选择&#x200B;**打开**&#x200B;或&#x200B;**完成**。
 
 ### 从 Blueprint 配置创建站点的 Live Copy {#creating-a-live-copy-of-a-site-from-a-blueprint-configuration}
 
 使用Blueprint配置创建Live Copy可基于Blueprint（源）内容创建站点。 从Blueprint配置创建Live Copy时，选择要复制的Blueprint源的一个或多个语言分支，然后从语言分支中选择要复制的章节。 请参阅[创建 Blueprint 配置](/help/sites-administering/msm-livecopy.md#creating-a-blueprint-configuration)。
 
-如果您从Live Copy中省略了一些语言分支或章节，可以稍后添加它们；请参阅 [在Live Copy（Blueprint配置）中创建Live Copy](#creating-a-live-copy-inside-a-live-copy-blueprint-configuration).
+如果您从Live Copy中省略了一些语言分支或章节，则可稍后添加它们；请参阅 [在Live Copy（Blueprint配置）中创建Live Copy](#creating-a-live-copy-inside-a-live-copy-blueprint-configuration).
 
 >[!CAUTION]
 >
@@ -145,7 +145,7 @@ Blueprint配置标识要用作一个或多个Live Copy页面的源的现有网�
 * **名称**：（可选）存储Live Copy根页面的JCR节点的名称。默认值基于标题。
 * **站点所有者**：（可选）
 * **Live Copy**：选择此选项可与源站点建立实时关系。如果不选择此选项，则尽管会创建 Blueprint 的副本，但该副本随后不会与源同步。
-* **转出配置**：（可选）选择一个或多个转出配置以用于同步Live Copy。 默认情况下，转出配置继承自Blueprint；请参阅 [指定要使用的转出配置](/help/sites-administering/msm-sync.md#specifying-the-rollout-configurations-to-use) 了解更多详细信息。
+* **转出配置**：（可选）选择一个或多个转出配置以用于同步Live Copy。 默认情况下，转出配置继承自Blueprint；请参阅 [指定要使用的转出配置](/help/sites-administering/msm-sync.md#specifying-the-rollout-configurations-to-use) 以了解更多详细信息。
 
 要从Blueprint配置创建站点的Live Copy，请执行以下操作：
 
@@ -154,7 +154,7 @@ Blueprint配置标识要用作一个或多个Live Copy页面的源的现有网�
 
    ![选择Blueprint配置作为Live Copy的源](assets/blueprint-configuration-select.png)
 
-1. 使用 **初始语言** 选择器，以指定要用于Live Copy的Blueprint站点的语言。
+1. 使用 **初始语言** 选择器，以指定用于Live Copy的Blueprint站点的语言。
 
    默认选择所有可用语言。要删除某种语言，请单击或点按该语言旁边显示的 **X**。
 
@@ -167,7 +167,7 @@ Blueprint配置标识要用作一个或多个Live Copy页面的源的现有网�
 
 ### 在 Live Copy（Blueprint 配置）中创建 Live Copy {#creating-a-live-copy-inside-a-live-copy-blueprint-configuration}
 
-在现有Live Copy（使用Blueprint配置创建）中创建Live Copy时，可以插入最初创建Live Copy时未包含的任何语言副本或章节。
+在现有Live Copy（使用Blueprint配置创建的）中创建Live Copy时，您可以插入最初创建Live Copy时未包含的任何语言副本或章节。
 
 ## 监控您的 Live Copy {#monitoring-your-live-copy}
 
@@ -179,13 +179,13 @@ Live Copy页面的属性显示有关Live Copy的以下信息：
 * **状态**：Live Copy的同步状态。 状态包括Live Copy是否与源保持同步、上次同步时间以及同步操作的执行者。
 * **配置**：
 
-   * 页面是否仍受限于活动副本继承。
+   * 页面是否仍受Live Copy继承的约束。
    * 配置是否继承自父页面.
    * Live Copy使用的任何转出配置。
 
 要查看属性，请执行以下操作：
 
-1. 在 **站点** 控制台中，选择Live Copy页面并打开属性。
+1. 在 **站点** 控制台中，选择live copy页面并打开属性。
 1. 选择 **Live Copy** 选项卡。
 
    例如：
@@ -210,7 +210,7 @@ Blueprint页面（在Blueprint配置中引用）为您提供使用当前(Bluepri
 
 >[!NOTE]
 >
->如果在Blueprint分支和从属Live Copy分支中均创建了具有相同页面名称的新页面，则可能会发生冲突。
+>如果在Blueprint分支和从属Live Copy分支中都创建了具有相同页面名称的新页面，则可能会发生冲突。
 >
 >[转出时需要处理和解决此类冲突](/help/sites-administering/msm-rollout-conflicts.md)。
 >
@@ -231,7 +231,7 @@ Blueprint页面（在Blueprint配置中引用）为您提供使用当前(Bluepri
 
    ![转出Blueprint](assets/rollout-blueprint.png)
 
-转出作为异步作业处理，并且可以在以下位置查看： [**异步作业状态** 仪表板](asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations) 在 **全局导航** -> **工具** -> **操作** -> **作业**
+转出作为异步作业处理，并且可在以下位置查看： [**异步作业状态** 仪表板](asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations) 在 **全局导航** -> **工具** -> **操作** -> **作业**
 
 >[!NOTE]
 >
@@ -257,11 +257,11 @@ Blueprint页面（在Blueprint配置中引用）为您提供使用当前(Bluepri
 
 1. 确认这些详细信息后，选择&#x200B;**转出**&#x200B;以执行此操作。
 
-转出作为异步作业处理，并且可以在以下位置查看： [**异步作业状态** 仪表板](asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations) 在 **全局导航** -> **工具** -> **操作** -> **作业**
+转出作为异步作业处理，并且可在以下位置查看： [**异步作业状态** 仪表板](asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations) 在 **全局导航** -> **工具** -> **操作** -> **作业**
 
 >[!NOTE]
 >
->异步转出处理需要AEM 6.5.3.0或更高版本。 在以前的版本中，会立即同步处理页面，除非 **背景转出** 选项已被选中。
+>异步转出处理需要AEM 6.5.3.0或更高版本。 在以前的版本中，页面会被立即同步处理，除非 **背景转出** 选项已选中。
 
 #### 从 Live Copy 概述转出 Blueprint {#roll-out-a-blueprint-from-the-live-copy-overview}
 
@@ -277,7 +277,7 @@ Blueprint页面（在Blueprint配置中引用）为您提供使用当前(Bluepri
 
    ![转出Blueprint](assets/rollout-blueprint.png)
 
-转出作为异步作业处理，并且可以在以下位置查看： [**异步作业状态** 仪表板](asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations) 在 **全局导航** -> **工具** -> **操作** -> **作业**
+转出作为异步作业处理，并且可在以下位置查看： [**异步作业状态** 仪表板](asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations) 在 **全局导航** -> **工具** -> **操作** -> **作业**
 
 >[!NOTE]
 >
@@ -295,7 +295,7 @@ Blueprint页面（在Blueprint配置中引用）为您提供使用当前(Bluepri
 >
 >同步执行使用[转出](/help/sites-administering/msm-sync.md#rollout-triggers)触发器的转出配置。
 
-1. 在 **站点** 控制台中，选择Live Copy页面并打开属性。
+1. 在 **站点** 控制台中，选择live copy页面并打开属性。
 1. 打开 **Live Copy** 选项卡。
 1. 单击或点按&#x200B;**同步**。
 
@@ -331,7 +331,7 @@ Blueprint页面（在Blueprint配置中引用）为您提供使用当前(Bluepri
 
 >[!NOTE]
 >
->如果在Blueprint分支和从属Live Copy分支中均创建了具有相同页面名称的新页面，则可能会发生冲突。
+>如果在Blueprint分支和从属Live Copy分支中都创建了具有相同页面名称的新页面，则可能会发生冲突。
 >
 >[转出时需要处理和解决此类冲突](/help/sites-administering/msm-rollout-conflicts.md)。
 >
@@ -348,7 +348,7 @@ Blueprint页面（在Blueprint配置中引用）为您提供使用当前(Bluepri
 
 ### 暂停页面的继承 {#suspending-inheritance-for-a-page}
 
-在创建Live Copy时，Live Copy配置将保存在已复制页面的根页面上。 根页面的所有子页面将继承Live Copy配置。 Live Copy页面上的组件也将继承Live Copy配置。
+创建Live Copy时，Live Copy配置将保存在所复制页面的根页面上。 根页面的所有子页面将继承Live Copy配置。 Live Copy页面上的组件也将继承Live Copy配置。
 
 您可以暂停Live Copy页面的Live Copy继承，以便更改页面属性和组件。 当您暂停继承时，页面属性和组件不再与源同步。
 
@@ -358,13 +358,13 @@ Blueprint页面（在Blueprint配置中引用）为您提供使用当前(Bluepri
 
 >[!NOTE]
 >
->如果组件标记为容器，则取消和暂停操作不会应用于其子组件。 另请参阅 [msm最佳实践](/help/sites-administering/msm-best-practices.md#components-and-container-synchronization) 以获取其他信息。
+>如果组件标记为容器，则取消和暂停操作不会应用于其子组件。 另请参阅 [msm最佳实践](/help/sites-administering/msm-best-practices.md#components-and-container-synchronization) 以了解其他信息。
 
 #### 暂停来自页面属性的继承 {#suspending-inheritance-from-page-properties}
 
 要暂停页面上的继承，请执行以下操作：
 
-1. 使用以下任一方式打开Live Copy页面的属性 **查看属性** 命令 **站点** 控制台或使用 **页面信息** 页面工具栏上。
+1. 使用打开live copy页面的属性 **查看属性** 命令 **站点** 控制台或使用 **页面信息** 页面工具栏上。
 1. 单击或点按 **Live Copy** 选项卡。
 1. 从工具栏中选择&#x200B;**暂停**。之后，您可以选择：
 
@@ -384,7 +384,7 @@ Blueprint页面（在Blueprint配置中引用）为您提供使用当前(Bluepri
    * **暂停**
    * **与子项一起暂停**
 
-   ![选择适当的“暂停”选项](assets/chlimage_1-226.png)
+   ![选择适当的暂停选项](assets/chlimage_1-226.png)
 
 1. 在&#x200B;**暂停 Live Copy** 对话框中确认&#x200B;**暂停**&#x200B;操作：
 
@@ -418,7 +418,7 @@ Blueprint页面（在Blueprint配置中引用）为您提供使用当前(Bluepri
 
 在选择 Live Copy 页面时，[也可以从 Live Copy 概述执行恢复操作](/help/sites-administering/msm-livecopy-overview.md#using-the-live-copy-overview)。
 
-1. 打开 [Live Copy概述](/help/sites-administering/msm-livecopy-overview.md#using-the-live-copy-overview) 并选择已暂停的Live Copy页面；将显示为 **继承已取消**.
+1. 打开 [Live Copy概述](/help/sites-administering/msm-livecopy-overview.md#using-the-live-copy-overview) 并选择已暂停的Live Copy页面；将显示为 **已取消继承**.
 1. 从工具栏中选择&#x200B;**恢复**。
 1. 指示是否要在恢复继承后同步页面，然后在&#x200B;**恢复 Live Copy** 对话框中确认&#x200B;**恢复**&#x200B;操作。
 
@@ -430,7 +430,7 @@ Blueprint页面（在Blueprint配置中引用）为您提供使用当前(Bluepri
 
    * 将立即生效且不可逆。
 
-      * 子页面会明确从Live Copy分离。 如果撤消，则无法保留对子项所做的进一步修改。
+      * 子页面会从Live Copy显式分离。 如果撤消，则无法保留对子项所做的进一步修改。
 
       * 将删除任何下级 `LiveRelationships`，即使存在嵌套式 `LiveCopies` 也是如此。
 
@@ -441,20 +441,20 @@ Blueprint页面（在Blueprint配置中引用）为您提供使用当前(Bluepri
 
 * 切换到浅Live Copy，然后切换到深：
 
-   * （以前的）浅Live Copy的所有子项都被视为手动创建，因此使用移开 `[oldname]_msm_moved name`.
+   * （以前的）浅Live Copy的所有子项都被视为手动创建，因此使用将其移开 `[oldname]_msm_moved name`.
 
 要指定或更改深度，请执行以下操作：
 
-1. 使用以下任一方式打开Live Copy页面的属性 **查看属性** 命令 **站点** 控制台或使用 **页面信息** 页面工具栏上。
+1. 使用打开live copy页面的属性 **查看属性** 命令 **站点** 控制台或使用 **页面信息** 页面工具栏上。
 1. 单击或点按 **Live Copy** 选项卡。
 1. 在&#x200B;**配置**&#x200B;部分中，根据是否包含子页面来设置或清除 **Live Copy 继承**&#x200B;选项：
 
-   * 选中 — 深Live Copy（包含子页面）
+   * 选中 — 深live copy（包含子页面）
    * 清除 — 浅Live Copy（排除子页面）
 
    >[!CAUTION]
    >
-   >切换到浅Live Copy将立即生效且不可逆。
+   >切换到浅Live Copy将立即生效并且不可逆。
    >
    >有关更多信息，请参阅 [Live Copy – 构图](/help/sites-administering/msm.md#live-copies-composition)。
 
@@ -466,7 +466,7 @@ Blueprint页面（在Blueprint配置中引用）为您提供使用当前(Bluepri
 
 >[!NOTE]
 >
->如果组件标记为容器，则取消和暂停操作不会应用于其子组件。 另请参阅 [msm最佳实践](/help/sites-administering/msm-best-practices.md#components-and-container-synchronization) 以获取其他信息。
+>如果组件标记为容器，则取消和暂停操作不会应用于其子组件。 另请参阅 [msm最佳实践](/help/sites-administering/msm-best-practices.md#components-and-container-synchronization) 以了解其他信息。
 
 >[!NOTE]
 >
@@ -476,7 +476,7 @@ Blueprint页面（在Blueprint配置中引用）为您提供使用当前(Bluepri
 
 1. 单击或点按要为其取消继承的组件。
 
-   ![选择用于取消继承操作的组件](assets/chlimage_1-230.png)
+   ![选择要取消继承操作的组件](assets/chlimage_1-230.png)
 
 1. 在组件工具栏上，单击或点按&#x200B;**取消继承**&#x200B;图标。
 
@@ -494,11 +494,11 @@ Blueprint页面（在Blueprint配置中引用）为您提供使用当前(Bluepri
 
 ### 更改 Live Copy 页面上的组件顺序 {#changing-the-order-of-components-on-a-live-copy-page}
 
-如果Live Copy包含属于段落系统的组件，则该段落系统的继承将遵循以下规则：
+如果Live Copy包含属于某个段落系统的组件，则该段落系统的继承将遵循以下规则：
 
 * 即使建立了继承，也可修改继承的段落系统中的组件顺序。
 * 在推出时，将从 Blueprint 中恢复组件顺序。如果在转出之前已将新组件添加到live copy，则这些新组件将与其上所添加的组件一起重新排序。
-* 如果取消段落系统的继承，组件的顺序将不会在转出时恢复，并且将在Live Copy中保持不变。
+* 如果取消段落系统的继承，组件的顺序将不会在推出时恢复，并且将在Live Copy中保持不变。
 
 >[!NOTE]
 >
@@ -526,7 +526,7 @@ Blueprint页面（在Blueprint配置中引用）为您提供使用当前(Bluepri
 
 >[!NOTE]
 >
->当您重新启用继承时，Live Copy页面属性不会自动与源属性同步。 如果需要，您可以手动请求同步。
+>当您重新启用继承时，Live Copy 页面属性不会自动与源属性同步。如果需要，您可以手动请求同步。
 
 1. 使用以下任一方式打开Live Copy页面的属性 **查看属性** 的选项 **站点** 控制台或 **页面信息** 图标。
 1. 要取消属性的继承，请单击或点按属性右侧显示的链接图标。
@@ -580,7 +580,7 @@ Blueprint页面（在Blueprint配置中引用）为您提供使用当前(Bluepri
    * **Blueprint** （当选择Live Copy页面时）
    * **活动副本** （当选择Blueprint页面时）
 
-1. 选择您的特定Live Copy ，然后执行以下任一操作：
+1. 选择特定的Live Copy ，然后：
 
    * **与Blueprint比较** （当选择Live Copy页面时）
    * **与Live Copy比较** （当选择Blueprint页面时）
@@ -589,7 +589,7 @@ Blueprint页面（在Blueprint配置中引用）为您提供使用当前(Bluepri
 
    ![比较](assets/chlimage_1-235.png)
 
-1. 两个页面（live copy和blueprint）将并排打开。
+1. 两个页面（Live Copy和Blueprint）将并排打开。
 
    有关使用此功能的完整信息，请参阅[页面差异](/help/sites-authoring/page-diff.md)。
 
@@ -601,7 +601,7 @@ Blueprint页面（在Blueprint配置中引用）为您提供使用当前(Bluepri
 >
 >分离Live Copy后，无法恢复实时关系。
 >
->要删除实时关系并选择稍后恢复它，您可以 [取消Live Copy继承](#suspending-inheritance-for-a-page) 页面的。
+>要删除实时关系并选择稍后恢复它，您可以 [取消Live Copy继承](#suspending-inheritance-for-a-page) 用于页面。
 
 这会对树中使用&#x200B;**分离**&#x200B;的位置产生影响：
 
@@ -609,22 +609,22 @@ Blueprint页面（在Blueprint配置中引用）为您提供使用当前(Bluepri
 
   在Live Copy的根页面上执行此操作时，它会删除Blueprint的所有页面与其LiveCopy之间的实时关系。
 
-  对Blueprint中的页面的进一步更改（按原样） **不会** 会影响livecopy（按原样）。
+  对Blueprint中页面的进一步更改（按原样） **不会** 影响livecopy（按原样）。
 
 * **在LiveCopy的子页面上分离**
 
-  在Live Copy的子页面（或分支）上执行此操作时：
+  在Live Copy中的子页面（或分支）上执行此操作时：
 
    * 将删除该子页面（或分支）的实时关系
    * 和live copy分支中的（子）页面被视为是手动创建的。
 
-  *但是*，子页面仍受父分支的实时关系的约束，因此进一步转出Blueprint页面将同时满足以下条件：
+  *但是*，子页面仍受父分支的实时关系的约束，因此Blueprint页面的进一步转出将：
 
    1. 重命名分离的页面：
 
-      * 这是因为MSM将它们视为手动创建的页面，这些页面因具有与它尝试创建的LiveCopy页面相同的名称而导致发生冲突。
+      * 这是因为MSM将它们视为手动创建的页面，这些页面因具有与它尝试创建的livecopy页面相同的名称而导致发生冲突。
 
-   1. 创建一个具有原始名称的新(Livecopy)页面，其中包含转出的更改。
+   1. 创建一个具有原始名称的新(LiveCopy)页面，其中包含转出的更改。
 
   >[!NOTE]
   >
@@ -634,7 +634,7 @@ Blueprint页面（在Blueprint配置中引用）为您提供使用当前(Bluepri
 
 要分离Live Copy，请执行以下操作：
 
-1. 在 **站点** 控制台中，选择Live Copy页面，然后单击或点按 **查看属性**.
+1. 在 **站点** 在控制台中，选择Live Copy页面，然后单击或点按 **查看属性**.
 1. 打开 **Live Copy** 选项卡。
 1. 在工具栏上，选择&#x200B;**分离**。
 

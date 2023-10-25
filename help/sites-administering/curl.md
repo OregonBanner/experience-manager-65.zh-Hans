@@ -1,7 +1,7 @@
 ---
 title: 在AEM中使用cURL
 seo-title: Using cURL with AEM
-description: 了解如何将cURL与AEM结合使用。
+description: 了解如何将cURL用于常见的Adobe Experience Manager任务。
 seo-description: Learn how to use cURL with AEM.
 uuid: 771b9acc-ff3a-41c9-9fee-7e5d2183f311
 contentOwner: Silviu Raiman
@@ -10,26 +10,26 @@ topic-tags: operations
 content-type: reference
 discoiquuid: d4ceb82e-2889-4507-af22-b051af83be38
 exl-id: e3f018e6-563e-456f-99d5-d232f1a4aa55
-source-git-commit: fafcf5f9ec64f147447300b02afbc0590d0c5e22
+source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
 workflow-type: tm+mt
-source-wordcount: '881'
+source-wordcount: '885'
 ht-degree: 2%
 
 ---
 
 # 在AEM中使用cURL{#using-curl-with-aem}
 
-管理员通常需要自动化或简化任何系统中的常见任务。 例如，在AEM中，管理用户、安装包和管理OSGi捆绑包是通常必须完成的任务。
+管理员通常需要自动执行或简化任何系统中的常见任务。 例如，在AEM中，管理用户、安装包和管理OSGi捆绑包是通常必须完成的任务。
 
-由于构建AEM所基于的Sling框架的RESTful性质，大多数任务可以通过URL调用完成。 cURL可用于执行此类URL调用，可以是AEM管理员的有用工具。
+由于构建AEM所基于的Sling框架具有RESTful特性，因此大多数任务可以通过URL调用来完成。 cURL可用于执行此类URL调用，可以是AEM管理员的有用工具。
 
 ## 什么是cURL {#what-is-curl}
 
 cURL是用于执行URL操作的开源命令行工具。 它支持各种Internet协议，包括HTTP、HTTPS、FTP、FTPS、SCP、SFTP、TFTP、LDAP、DAP、DICT、TELNET、FILE、IMAP、POP3、SMTP和RTSP。
 
-cURL是一个成熟且广泛使用的工具，用于使用URL语法获取或发送数据，最初于1997年发布。 名称cURL最初表示“查看URL”。
+cURL是一个成熟且广泛使用的工具，最初于1997年发布，用于使用URL语法获取或发送数据。 名称cURL最初的意思是“查看URL”。
 
-由于AEM构建所基于的Sling框架的RESTful性质，大多数任务可以简化为URL调用，该调用可以使用cURL执行。 [内容操作任务](/help/sites-administering/curl.md#common-content-manipulation-aem-curl-commands) 例如激活页面、启动工作流以及 [运行任务](/help/sites-administering/curl.md#common-operational-aem-curl-commands) 例如包管理和管理用户可以使用cURL实现自动化。 此外，您还可以 [创建您自己的cURL](/help/sites-administering/curl.md#building-a-curl-ready-aem-command) 命令，用于AEM中的大多数任务。
+由于构建AEM所基于的Sling框架具有RESTful性质，因此大多数任务可以简化为URL调用，而该URL调用可以使用cURL执行。 [内容操作任务](/help/sites-administering/curl.md#common-content-manipulation-aem-curl-commands) 例如激活页面、启动工作流以及 [运行任务](/help/sites-administering/curl.md#common-operational-aem-curl-commands) 例如包管理以及使用cURL管理用户等。 此外，您还可以 [创建您自己的cURL](/help/sites-administering/curl.md#building-a-curl-ready-aem-command) 命令用于AEM中的大多数任务。
 
 >[!NOTE]
 >
@@ -37,19 +37,19 @@ cURL是一个成熟且广泛使用的工具，用于使用URL语法获取或发�
 
 ## 正在下载cURL {#downloading-curl}
 
-cURL是macOS和一些Linux调试器的标准部分。 但是，它适用于大多数操作系统。 最新下载内容位于 [https://curl.haxx.se/download.html](https://curl.haxx.se/download.html).
+cURL是macOS和一些Linux调试程序的标准部分。 但是，它适用于大多数操作系统。 有关最新下载信息，请访问 [https://curl.haxx.se/download.html](https://curl.haxx.se/download.html).
 
 cURL的源存储库也可以在GitHub上找到。
 
 ## 构建cURL就绪的AEM命令 {#building-a-curl-ready-aem-command}
 
-可以为AEM中的大多数操作构建cURL命令，例如触发工作流、检查OSGi配置、触发JMX命令、创建复制代理等等。
+cURL命令可以为AEM中的大多数操作构建，例如触发工作流、检查OSGi配置、触发JMX命令、创建复制代理等等。
 
 要找到特定操作所需的确切命令，您需要在执行AEM命令时使用浏览器中的开发人员工具来捕获对服务器的POST调用。
 
-以下步骤描述了如何在Chrome浏览器中创建新页面作为示例，来完成此操作。
+以下步骤描述了如何使用Chrome浏览器中创建新页面作为示例来完成此操作。
 
-1. 准备要在AEM中调用的操作。 在本例中，我们一直推进到 **创建页面** 向导，但尚未单击 **创建**.
+1. 准备要在AEM中调用的操作。 在本例中，我们继续到 **创建页面** 向导，但尚未单击 **创建**.
 
    ![chlimage_1-66](assets/chlimage_1-66a.png)
 
@@ -57,7 +57,7 @@ cURL的源存储库也可以在GitHub上找到。
 
    ![chlimage_1-67](assets/chlimage_1-67a.png)
 
-1. 单击 **创建** 在 **创建页面** 向导来实际创建工作流。
+1. 单击 **创建** 在 **创建页面** 向导以实际创建工作流。
 1. 右键单击生成的POST操作并选择 **复制** -> **复制为cURL**.
 
    ![chlimage_1-68](assets/chlimage_1-68a.png)
@@ -70,13 +70,13 @@ cURL的源存储库也可以在GitHub上找到。
 
    ![chlimage_1-70](assets/chlimage_1-70a.png)
 
-## 常用操作AEM cURL命令 {#common-operational-aem-curl-commands}
+## 常见操作AEM cURL命令 {#common-operational-aem-curl-commands}
 
 以下是常见管理和操作任务的AEM cURL命令列表。
 
 >[!NOTE]
 >
->以下示例假定正在运行AEM `localhost` 在端口 `4502` 和使用用户 `admin` 使用密码 `admin`. 其他命令占位符设置在尖括号中。
+>以下示例假定AEM运行于 `localhost` 在端口 `4502` 并使用用户 `admin` 包含密码 `admin`. 其他命令占位符设置在尖括号中。
 
 ### 包管理 {#package-management}
 
@@ -110,7 +110,7 @@ curl -u <user>:<password> -X POST http://localhost:4502/crx/packmgr/service/cons
 curl -X POST http://localhost:4502/crx/packmgr/service/.json/etc/packages/mycontent.zip?cmd=build
 ```
 
-#### 将包换行 {#rewrap-a-package}
+#### 重新包装包 {#rewrap-a-package}
 
 ```shell
 curl -u <user>:<password> -X POST http://localhost:4502/crx/packmgr/service/.json/etc/packages/mycontent.zip?cmd=rewrap
@@ -140,7 +140,7 @@ curl -u <user>:<password> -F cmd=install http://localhost:4502/crx/packmgr/servi
 curl -u <user>:<password> -F cmd=uninstall http://localhost:4502/crx/packmgr/service/.json/etc/packages/my_packages/test.zip
 ```
 
-#### 删除资源包 {#delete-a-package}
+#### 删除包 {#delete-a-package}
 
 ```shell
 curl -u <user>:<password> -F cmd=delete http://localhost:4502/crx/packmgr/service/.json/etc/packages/my_packages/test.zip
@@ -172,7 +172,7 @@ curl -u <user>:<password> -FcreateUser= -FauthorizableId=hashim -Frep:password=h
 curl -u <user>:<password> -FcreateGroup=group1 -FauthorizableId=testGroup1 http://localhost:4502/libs/granite/security/post/authorizables
 ```
 
-#### 将属性添加到现有用户 {#add-a-property-to-an-existing-user}
+#### 向现有用户添加属性 {#add-a-property-to-an-existing-user}
 
 ```shell
 curl -u <user>:<password> -Fprofile/age=25 http://localhost:4502/home/users/h/hashim.rw.html
@@ -222,7 +222,7 @@ curl -u <user>:<password> -FdeleteAuthorizable= http://localhost:4502/home/group
 
 ### 备份 {#backup}
 
-参见 [备份和恢复](/help/sites-administering/backup-and-restore.md#automating-aem-online-backup) 了解详细信息。
+请参阅 [备份和恢复](/help/sites-administering/backup-and-restore.md#automating-aem-online-backup) 以了解详细信息。
 
 ### osgi {#osgi}
 
@@ -289,41 +289,41 @@ curl -u <user>:<password> -F "cmd=clear" -F "name=publish"  http://localhost:450
 
 #### 分配和撤销徽章 {#assign-and-revoke-badges}
 
-参见 [社区评分和徽章](/help/communities/implementing-scoring.md#assign-and-revoke-badges) 了解详细信息。
+请参阅 [社区评分和徽章](/help/communities/implementing-scoring.md#assign-and-revoke-badges) 以了解详细信息。
 
-参见 [评分和徽章要点](/help/communities/configure-scoring.md#example-setup) 了解详细信息。
+请参阅 [评分和徽章要点](/help/communities/configure-scoring.md#example-setup) 以了解详细信息。
 
 #### MSRP重新索引 {#msrp-reindexing}
 
-参见 [MSRP - MongoDB存储资源提供程序](/help/communities/msrp.md#running-msrp-reindex-tool-using-curl-command) 了解详细信息。
+请参阅 [MSRP - MongoDB存储资源提供程序](/help/communities/msrp.md#running-msrp-reindex-tool-using-curl-command) 以了解详细信息。
 
 ### 安全性 {#security}
 
 #### 启用和禁用CRX DE Lite {#enabling-and-disabling-crx-de-lite}
 
-参见 [在AEM中启用CRXDE Lite](/help/sites-administering/enabling-crxde-lite.md) 了解详细信息。
+请参阅 [在AEM中启用CRXDE Lite](/help/sites-administering/enabling-crxde-lite.md) 以了解详细信息。
 
 ### 数据存储垃圾收集 {#data-store-garbage-collection}
 
-参见 [数据存储垃圾收集](/help/sites-administering/data-store-garbage-collection.md#automating-data-store-garbage-collection) 了解详细信息。
+请参阅 [数据存储垃圾收集](/help/sites-administering/data-store-garbage-collection.md#automating-data-store-garbage-collection) 以了解详细信息。
 
 ### Analytics与Target集成 {#analytics-and-target-integration}
 
-参见 [选择使用Adobe Analytics和Adobe Target](/help/sites-administering/opt-in.md#configuring-the-setup-and-provisioning-via-script) 了解详细信息。
+请参阅 [选择使用Adobe Analytics和Adobe Target](/help/sites-administering/opt-in.md#configuring-the-setup-and-provisioning-via-script) 以了解详细信息。
 
 ### 单点登录 {#single-sign-on}
 
 #### 发送测试标头 {#send-test-header}
 
-参见 [单点登录](/help/sites-deploying/single-sign-on.md) 了解详细信息。
+请参阅 [单点登录](/help/sites-deploying/single-sign-on.md) 以了解详细信息。
 
-## 通用内容操作AEM cURL命令 {#common-content-manipulation-aem-curl-commands}
+## 常见内容操作AEM cURL命令 {#common-content-manipulation-aem-curl-commands}
 
 以下是用于内容操作的AEM cURL命令列表。
 
 >[!NOTE]
 >
->以下示例假定正在运行AEM `localhost` 在端口 `4502` 和使用用户 `admin` 使用密码 `admin`. 其他命令占位符设置在尖括号中。
+>以下示例假定AEM运行于 `localhost` 在端口 `4502` 并使用用户 `admin` 包含密码 `admin`. 其他命令占位符设置在尖括号中。
 
 ### 页面管理 {#page-management}
 
@@ -365,7 +365,7 @@ curl -u <user>:<password> -F cmd=copyPage -F destParentPath=/path/to/destination
 
 ### 工作流 {#workflows}
 
-参见 [以编程方式与工作流交互](/help/sites-developing/workflows-program-interaction.md) 了解详细信息。
+请参阅 [以编程方式与工作流交互](/help/sites-developing/workflows-program-interaction.md) 以了解详细信息。
 
 ### Sling内容 {#sling-content}
 
@@ -405,7 +405,7 @@ curl -u <user>:<password> -F"*=@test.properties"  http://localhost:4502/etc/test
 curl -u <user>:<password> -F"test2.properties=@test.properties"  http://localhost:4502/etc/test
 ```
 
-#### 上载文件指定内容类型 {#upload-files-specifying-a-content-type}
+#### 上载指定内容类型的文件 {#upload-files-specifying-a-content-type}
 
 ```shell
 curl -u <user>:<password> -F "*=@test.properties;type=text/plain" http://localhost:4502/etc/test
@@ -413,4 +413,4 @@ curl -u <user>:<password> -F "*=@test.properties;type=text/plain" http://localho
 
 ### 资产操作 {#asset-manipulation}
 
-参见 [资源HTTP API](/help/assets/mac-api-assets.md) 了解详细信息。
+请参阅 [资源HTTP API](/help/assets/mac-api-assets.md) 以了解详细信息。

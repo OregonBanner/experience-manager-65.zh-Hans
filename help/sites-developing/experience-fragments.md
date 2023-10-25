@@ -1,15 +1,15 @@
 ---
 title: Adobe Experience Manager Sites开发中的体验片段
-description: 了解如何自定义体验片段。
+description: 了解如何自定义Adobe Experience Manager的体验片段。
 contentOwner: AEM Docs
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
 docset: aem65
 exl-id: c4fb1b5e-e15e-450e-b882-fe27b165ff9f
-source-git-commit: d6e5684ee89d19ab0fc6d15038c22a4a5b816563
+source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
 workflow-type: tm+mt
-source-wordcount: '1782'
+source-wordcount: '1787'
 ht-degree: 1%
 
 ---

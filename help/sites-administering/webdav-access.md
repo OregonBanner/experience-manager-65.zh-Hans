@@ -1,7 +1,7 @@
 ---
 title: WebDAV访问
 seo-title: WebDAV Access
-description: 了解AEM中的WebDAV访问。
+description: 了解如何使用WebDAV访问AdobeExperience Manager。
 seo-description: Learn about WebDAV access in AEM.
 uuid: b0ecaa5d-5454-42df-8453-404ece734c32
 contentOwner: Chiradeep Majumdar
@@ -10,9 +10,9 @@ topic-tags: content
 content-type: reference
 discoiquuid: 1eaf7afe-a181-45df-8766-bd564b1ad22a
 exl-id: 891ee66c-e49c-4561-8fef-e6e448a8aa1c
-source-git-commit: e05f6cd7cf17f4420176cf76f28cb469bcee4a0a
+source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
 workflow-type: tm+mt
-source-wordcount: '1097'
+source-wordcount: '1101'
 ht-degree: 0%
 
 ---
@@ -21,11 +21,11 @@ ht-degree: 0%
 
 要使用KDE通过WebDAV连接到AEM，请执行以下操作：
 
-AEM提供WebDAV支持，可让您显示和编辑存储库内容。 通过WebDAV连接使您能够通过桌面直接访问内容存储库。 通过WebDAV连接添加到存储库中的文本和PDF文件会自动编制全文索引，并且可以使用标准搜索界面并通过标准Java™ API进行搜索。
+AEM提供WebDAV支持，可让您显示和编辑存储库内容。 通过WebDAV连接，您可以通过桌面直接访问内容存储库。 通过WebDAV连接添加到存储库中的文本和PDF文件会自动编制全文索引，并且可以使用标准搜索界面并通过标准Java™ API进行搜索。
 
 ## 常规 {#general}
 
-[每个操作系统的详细说明](/help/sites-administering/webdav-access.md#connecting-via-webdav) 本文档中包含，但为了使用WebDAV协议连接到存储库，需将WebDAV客户端指向以下位置：
+[每个操作系统的详细说明](/help/sites-administering/webdav-access.md#connecting-via-webdav) 本文档中包含，但为了使用WebDAV协议连接到存储库，您可以将WebDAV客户端指向以下位置：
 
 ```xml
 http://localhost:4502
@@ -33,15 +33,15 @@ http://localhost:4502
 
 ![chlimage_1-111](assets/chlimage_1-111a.png)
 
-此URL在从操作系统级别连接时，提供对默认工作区的WebDAV访问( `crx.default`)。 虽然这对于用户来说更简单，但它不会为他们提供指定工作区名称的额外灵活性，而指定工作区名称可使用额外的 [WebDAV URL](/help/sites-administering/webdav-access.md#webdav-urls).
+此URL在从操作系统级别连接时，提供对默认工作区的WebDAV访问( `crx.default`)。 虽然它对于用户来说比较简单，但是它没有为他们提供指定工作区名称的额外灵活性，而指定工作区名称可使用额外的 [WebDAV URL](/help/sites-administering/webdav-access.md#webdav-urls).
 
 AEM按如下方式显示存储库内容：
 
-* 类型的节点 `nt:folder` 显示为文件夹。 以下节点 `nt:folder` 节点显示为文件夹内容。
+* 类型的节点 `nt:folder` 显示为文件夹。 以下的节点 `nt:folder` 节点显示为文件夹内容。
 
-* 类型的节点 `nt:file` 显示为文件。 以下节点 `nt:file` 节点不会显示，但会构成文件的内容。
+* 类型的节点 `nt:file` 显示为文件。 以下的节点 `nt:file` 节点不会显示，但会构成文件的内容。
 
-当您使用WebDAV创建和编辑文件夹和文件时，AEM会创建和编辑必要的 `nt:folder` 和 `nt:file` 节点。 如果您计划使用WebDAV导入和导出内容，请尝试使用 `nt:file` 和 `nt:folder` 节点类型越多越好。
+当您使用WebDAV创建和编辑文件夹和文件时，AEM会创建和编辑必要的 `nt:folder` 和 `nt:file` 节点。 如果您计划使用WebDAV导入和导出内容，请尝试使用 `nt:file` 和 `nt:folder` 尽可能多的节点类型。
 
 >[!NOTE]
 >
@@ -90,7 +90,7 @@ WebDAV服务器的URL具有以下结构：
  </tbody>
 </table>
 
-通过更改路径中的工作区元素，可以映射默认工作区以外的工作区( `crx.default`)。 例如，映射名为的工作区 `staging`，使用以下URL：
+通过更改路径中的工作区元素，可以映射默认工作区以外的工作区( `crx.default`)。 例如，要映射名为的工作区 `staging`，使用以下URL：
 
 ```xml
 http://localhost:4502/crx/repository/staging
@@ -108,9 +108,9 @@ http://localhost:4502/crx/repository/staging
 
 ### Windows {#windows}
 
-要成功将Microsoft® Windows 7（及更高版本）系统连接到未使用SSL保护的AEM实例，必须在Windows中明确启用通过不安全的网络建立基本身份验证的选项。 此功能要求在WebClient的Windows注册表中进行更改。
+要成功地将Microsoft® Windows 7（及更高版本）系统连接到不使用SSL保护的AEM实例，必须在Windows中明确启用通过不安全的网络建立基本身份验证的选项。 此功能要求在WebClient的Windows注册表中进行更改。
 
-更新注册表后，可以将AEM实例映射为驱动器。
+一旦更新了注册表，AEM实例就可以映射为驱动器。
 
 #### Windows 7及更高配置 {#windows-and-greater-configuration}
 
@@ -122,7 +122,7 @@ http://localhost:4502/crx/repository/staging
    HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WebClient\Parameters
    ```
 
-1. 设置 `BasicAuthLevel` 注册表项子键的值为 `2` 或更高。
+1. 设置 `BasicAuthLevel` 注册表项子项至值 `2` 或更高。
 
    如果不存在，请添加子键。
 
@@ -130,17 +130,17 @@ http://localhost:4502/crx/repository/staging
 
 >[!NOTE]
 >
->Adobe建议使用与存储库用户相同的凭据创建一个Windows用户，否则可能会遇到权限冲突。
+>Adobe建议您使用与存储库用户相同的凭据创建Windows用户，否则可能会遇到权限冲突。
 
 #### Windows 8配置 {#windows-configuration}
 
-对于Windows 8，更改注册表项 [如Windows 7及更高版本中所述](/help/sites-administering/webdav-access.md#windows-and-greater-configuration). 但是，在执行此任务之前，必须启用Desktop Experience才能查看注册表项。
+对于Windows 8，更改注册表项 [如Windows 7及更高版本中所述](/help/sites-administering/webdav-access.md#windows-and-greater-configuration). 但是，在执行此任务之前，必须启用Desktop Experience才能看到注册表项。
 
 要启用桌面体验，请打开 **服务器管理器**，则 **功能**，则 **添加功能**，则 **桌面体验**.
 
-重新启动后，为Windows 7及更高版本描述的注册表项可用。 按照适用于Windows 7及更高版本的说明修改它。
+重新启动后，为Windows 7及更高版本描述的注册表项可用。 按照适用于Windows 7及更高版本的说明对其进行修改。
 
-#### 在Windows连接 {#connecting-in-windows}
+#### 在Windows中连接 {#connecting-in-windows}
 
 要在Windows环境中通过WebDAV连接到AEM，请执行以下操作：
 
@@ -161,13 +161,13 @@ http://localhost:4502/crx/repository/staging
 
    >[!NOTE]
    >
-   >如果AEM在另一个端口上，请使用该端口号而不是4502。 此外，如果您没有在本地计算机上运行内容存储库，请替换 `localhost` 具有相应的服务器名称或IP地址。
+   >如果AEM在另一个端口上，请使用该端口号，而不是4502。 此外，如果您没有在本地计算机上运行内容存储库，请将 `localhost` 相应的服务器名称或IP地址。
 
-1. 输入用户名 `admin` 和密码 `admin`. Adobe建议使用预配置的管理员帐户进行测试。
+1. 输入用户名 `admin` 和密码 `admin`. Adobe建议您使用预配置的admin帐户进行测试。
 
    ![chlimage_1-114](assets/chlimage_1-114a.png)
 
-1. 向导关闭，新映射的驱动器在Windows资源管理器或“文件资源管理器”窗口中打开。
+1. 向导将关闭，新映射的驱动器将在Windows资源管理器或“文件资源管理器”窗口中打开。
 
    ![chlimage_1-115](assets/chlimage_1-115a.png)
 
@@ -181,54 +181,55 @@ Windows现在已通过WebDAV将AEM映射为驱动器，您可以将其用作任�
 1. 在 **连接到服务器** 窗口中，输入AEM位置：
 
    * `http://localhost:4502`
+
    >[!NOTE]
    >
-   >如果AEM在另一个端口上，请使用该端口号而不是4502。 此外，如果您没有在本地计算机上运行内容存储库，请替换 `localhost` 具有相应的服务器名称或IP地址。
+   >如果AEM在另一个端口上，请使用该端口号，而不是4502。 此外，如果您没有在本地计算机上运行内容存储库，请将 `localhost` 相应的服务器名称或IP地址。
 
-1. 当系统提示您进行身份验证时，请输入用户名 `admin` 和密码 `admin`. Adobe建议使用预配置的管理员帐户进行测试。
+1. 当系统提示您进行身份验证时，请输入用户名 `admin` 和密码 `admin`. Adobe建议您使用预配置的admin帐户进行测试。
 
 macOS现在已通过WebDAV连接到AEM，您可以将其用作Mac上的任何其他文件夹。
 
 ### Linux® {#linux}
 
-在Linux®上通过WebDAV进行连接不需要任何配置，但需要执行一些步骤来进行连接，具体步骤因您的桌面环境而异。
+在Linux®上通过WebDAV进行连接不需要任何配置，但需要执行一些步骤才能建立连接，具体步骤因您的桌面环境而异。
 
 #### 地名 {#gnome}
 
 要使用GNOME通过WebDAV连接到AEM，请执行以下操作：
 
-1. 在Nautilus （文件资源管理器）中，选择 **Places** 并选择 **连接到服务器**.
-1. 在 **连接到服务器** 窗口中，在服务类型中选择WebDAV (HTTP)。
+1. 在Nautilus （文件资源管理器）中，选择 **地标** 并选择 **连接到服务器**.
+1. 在 **连接到服务器** 窗口，在服务类型中选择WebDAV (HTTP)。
 
-1. In **服务器**，输入 `http://localhost:4502/crx/repository/crx.default`
+1. 在 **服务器**，输入 `http://localhost:4502/crx/repository/crx.default`
 
    >[!NOTE]
    >
-   >如果AEM在另一个端口上，请使用该端口号而不是4502。 此外，如果您没有在本地计算机上运行内容存储库，请替换 `localhost` 具有相应的服务器名称或IP地址。
+   >如果AEM在另一个端口上，请使用该端口号，而不是4502。 此外，如果您没有在本地计算机上运行内容存储库，请将 `localhost` 相应的服务器名称或IP地址。
 
-1. In **文件夹**，输入 `/dav`
-1. 输入用户名 `admin`. Adobe建议使用预配置的管理员帐户进行测试。
-1. 将端口保留为空并为连接输入任意名称。
-1. 单击 **Connect**. AEM会提示您输入密码。
-1. 输入密码 `admin` 并单击 **Connect**.
+1. 在 **文件夹**，输入 `/dav`
+1. 输入用户名 `admin`. Adobe建议您使用预配置的admin帐户进行测试。
+1. 将端口保留为空，并为连接输入任意名称。
+1. 单击&#x200B;**连接**。AEM会提示您输入密码。
+1. 输入密码 `admin` 并单击 **连接**.
 
-GNOME现在已将AEM装载为卷，您可以像使用任何其他卷一样使用该卷。
+GNOME现在已将AEM装载为卷，您可以像使用任何其他卷一样使用它。
 
 #### KDE {#kde}
 
 1. 打开网络文件夹向导。
 1. 选择 **WebFolder**(webdav)，然后单击“下一步”。
-1. In **名称**，键入连接名称。
-1. In **用户**，输入 `admin.` Adobe建议您使用预配置的管理员帐户。
-1. In **服务器**，输入 `http://localhost:4502/crx/repository/crx.default`
+1. 在 **名称**，键入连接名称。
+1. 在 **用户**，输入 `admin.` Adobe建议您使用预配置的管理员帐户。
+1. 在 **服务器**，输入 `http://localhost:4502/crx/repository/crx.default`
 
    >[!NOTE]
    >
-   >如果AEM在另一个端口上，请使用该端口号而不是4502。 此外，如果您没有在本地计算机上运行内容存储库，请替换 `localhost` 具有相应的服务器名称或IP地址
+   >如果AEM在另一个端口上，请使用该端口号，而不是4502。 此外，如果您没有在本地计算机上运行内容存储库，请将 `localhost` 相应的服务器名称或IP地址
 
-1. In **文件夹**，输入 `dav`
+1. 在 **文件夹**，输入 `dav`
 
 1. 单击 **保存并连接**.
-1. 提示输入密码时，输入密码 `admin` 并单击 **Connect**.
+1. 提示输入密码时，请输入密码 `admin` 并单击 **连接**.
 
-KDE现在已将AEM装载为卷，您可以像使用任何其他卷一样使用该卷。
+KDE现在已将AEM装载为卷，您可以像使用任何其他卷一样使用它。

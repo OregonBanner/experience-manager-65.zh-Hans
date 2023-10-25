@@ -1,14 +1,14 @@
 ---
 title: 配置 ContextHub
-description: 了解如何配置上下文中心。
+description: 了解如何配置Adobe Experience Manager的Context Hub以个性化您的体验。
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
 exl-id: 61208bd5-475b-40be-ba00-31bbbc952adf
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
 workflow-type: tm+mt
-source-wordcount: '1786'
+source-wordcount: '1793'
 ht-degree: 1%
 
 ---
