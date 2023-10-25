@@ -1,15 +1,15 @@
 ---
 title: 基本配置概念
-description: 了解如何配置Adobe Experience Manager。
+description: 了解如何根据您自己的特定要求配置Adobe Experience Manager。
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: configuring
 content-type: reference
 feature: Configuring
 exl-id: 3777a1ba-cc4e-41b9-9098-236f8141925f
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: c7c32130a3257c14c98b52f9db31d80587d7993a
 workflow-type: tm+mt
-source-wordcount: '2111'
+source-wordcount: '2116'
 ht-degree: 1%
 
 ---

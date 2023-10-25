@@ -1,23 +1,23 @@
 ---
 title: 部署最佳实践
-description: 部署和维护最佳实践。
+description: 了解如何以尽可能高效和最有效的方式部署和维护Adobe Experience Manager (AEM)。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 exl-id: 4cbc0a30-d5f6-40ff-b7f6-8d64762e1970
-source-git-commit: fd937341e26edd0c3edfced8e862066ebc30f9a3
+source-git-commit: c7c32130a3257c14c98b52f9db31d80587d7993a
 workflow-type: tm+mt
-source-wordcount: '434'
-ht-degree: 11%
+source-wordcount: '447'
+ht-degree: 10%
 
 ---
 
 # 部署最佳实践{#deploying-best-practices}
 
-部署最佳实践描述了如何以尽可能高效和最有效的方式部署或维护Adobe Experience Manager (AEM)。 不断增加的主题列表包括AEM中的各个领域。
+部署最佳实践描述如何以尽可能高效和最有效的方式部署或维护Adobe Experience Manager (AEM)。 不断增加的主题列表包括AEM中的各个领域。
 
-以下区域提供了有关部署和维护最佳实践和建议的文档：
+以下领域提供了有关部署和维护最佳实践和建议的文档：
 
 * [Oak](#oak)
 * [社区](#communities)
@@ -70,17 +70,17 @@ ht-degree: 11%
 
 AEM Communities简化了内部部署社区的创建和管理。 此处介绍了AEM Communities的最佳实践：
 
-[社区内容存储](/help/communities/working-with-srp.md)  — 讨论用户生成内容(UGC)的新共享存储功能以及选择基础内容的注意事项 [拓扑](/help/communities/topologies.md).
+[社区内容存储](/help/communities/working-with-srp.md)  — 讨论用户生成内容(UGC)的新共享存储功能以及选择底层内容的注意事项 [拓扑](/help/communities/topologies.md).
 
-[针对社区的推荐部署](/help/sites-deploying/recommended-deploys.md#considerations-for-aem-communities)  — 介绍社区推荐的部署。 |
+[针对社区的建议部署](/help/sites-deploying/recommended-deploys.md#considerations-for-aem-communities)  — 介绍社区推荐的部署。 |
 
 ## UI {#ui}
 
-有关用户界面的最佳实践，请参阅此处：
+此处介绍了有关用户界面的最佳实践：
 
-[客户的用户界面Recommendations](/help/sites-deploying/ui-recommendations.md)
+[客户的Recommendations用户界面](/help/sites-deploying/ui-recommendations.md)
 
-AEM当前在同一个版本中具有两个UI：经典UI和触控优化UI。 因此，客户必须在项目实施期间决定使用哪些。 本文档旨在帮助找到正确的选择。
+AEM当前在同一版本中有两个UI：经典用户界面和触屏优化用户界面。 因此，客户必须在项目实施期间决定使用哪种。 本文档旨在帮助查找正确的选择。
 
 ## 性能 {#performance}
 
@@ -89,9 +89,9 @@ AEM当前在同一个版本中具有两个UI：经典UI和触控优化UI。 因�
 <table>
  <tbody>
   <tr>
-   <td>质量保证最佳实践</td>
-   <td><a href="/help/sites-deploying/configuring-performance.md#best-practices-for-quality-assurance">质量保证最佳实践</a></td>
-   <td>对定义测试概念时涉及的问题的标准化概述，专门用于对 <em>发布</em> 环境。 这主要是QA工程师、项目经理和系统管理员的兴趣。</td>
+   <td>质量保证的最佳实践</td>
+   <td><a href="/help/sites-deploying/configuring-performance.md#best-practices-for-quality-assurance">质量保证的最佳实践</a></td>
+   <td>专门为对进行性能测试的测试概念定义涉及的问题标准化概述 <em>发布</em> 环境。 这主要是QA工程师、项目经理和系统管理员的兴趣。</td>
   </tr>
   <tr>
    <td>将 Dispatcher 与 CDN 结合使用</td>
@@ -105,7 +105,7 @@ AEM当前在同一个版本中具有两个UI：经典UI和触控优化UI。 因�
   </tr>
   <tr>
    <td>性能测试</td>
-   <td><a href="/help/sites-deploying/best-practices-for-performance-testing.md">性能测试最佳实践</a></td>
+   <td><a href="/help/sites-deploying/best-practices-for-performance-testing.md">性能测试的最佳实践</a></td>
    <td>描述在AEM部署上运行性能测试的最佳实践。<br /> </td>
   </tr>
  </tbody>

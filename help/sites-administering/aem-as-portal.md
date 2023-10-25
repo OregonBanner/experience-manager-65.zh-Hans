@@ -1,8 +1,8 @@
 ---
 title: AEM Portals和Portlet
 seo-title: AEM Portals and Portlets
-description: 了解AEM中的门户和门户。
-seo-description: Learn about Portals and Portles in AEM.
+description: 了解如何配置和管理AEM as a portal，以及如何在portlet中配置和显示AEM内容。
+seo-description: Learn how to configure and administer AEM as a portal and how to configure and display AEM content in a portlet.
 uuid: 7f9e316d-277e-4a1e-b6f3-cd89addc897b
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 99528fda-5c8c-4034-bcbe-a4cea42f694b
 docset: aem65
 exl-id: b5f3d3a6-39c0-4aa5-8562-3cc6fa2b9e46
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: c7c32130a3257c14c98b52f9db31d80587d7993a
 workflow-type: tm+mt
-source-wordcount: '6086'
+source-wordcount: '6100'
 ht-degree: 0%
 
 ---

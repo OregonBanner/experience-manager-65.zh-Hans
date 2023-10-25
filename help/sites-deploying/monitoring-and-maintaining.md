@@ -1,6 +1,6 @@
 ---
 title: 监控和维护Adobe Experience Manager实例
-description: 了解如何监测AEM。
+description: 了解如何监控和维护Adobe Experience Manager实例。
 uuid: 14466552-5c92-4730-a427-85675a2b121c
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,9 +10,9 @@ discoiquuid: 5d2364b7-4497-4f8b-85ef-6e780bfb8c36
 docset: aem65
 feature: Configuring
 exl-id: d3375935-090d-4052-8234-68ef4ddbab6a
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: c7c32130a3257c14c98b52f9db31d80587d7993a
 workflow-type: tm+mt
-source-wordcount: '5933'
+source-wordcount: '5939'
 ht-degree: 1%
 
 ---
@@ -546,7 +546,7 @@ OSGi事件还会生成审核记录，这些记录可在以下位置查看： **�
 
 | 区域 | 症状 | 增加容量…… | 要减小音量…… |
 |---|---|---|---|
-| 客户端 | 高客户端CPU使用率。 | 安装更高性能的客户端CPU。 | 简化(HTML)布局。 |
+| 客户 | 高客户端CPU使用率。 | 安装更高性能的客户端CPU。 | 简化(HTML)布局。 |
 |   | 服务器CPU使用率低。 | 升级到更快的浏览器。 | 改进客户端缓存。 |
 |   | 有些客户速度很快，有些速度很慢。 |  |  |
 | 服务器 |  |  |  |

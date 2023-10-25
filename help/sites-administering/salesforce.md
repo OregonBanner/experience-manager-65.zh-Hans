@@ -1,15 +1,15 @@
 ---
 title: 与Salesforce集成
-description: 了解如何将Adobe Experience Manager与Salesforce集成。
+description: 了解如何将Adobe Experience Manager (AEM)与Salesforce集成。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
 docset: aem65
 exl-id: 0f3aaa0a-ccfb-4162-97a6-ee5485595d28
-source-git-commit: b66ec42c35b5b60804015d340b8194bbd6ef3e28
+source-git-commit: c7c32130a3257c14c98b52f9db31d80587d7993a
 workflow-type: tm+mt
-source-wordcount: '1552'
+source-wordcount: '1553'
 ht-degree: 0%
 
 ---

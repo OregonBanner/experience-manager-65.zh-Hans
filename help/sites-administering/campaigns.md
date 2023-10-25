@@ -1,7 +1,7 @@
 ---
 title: 营销活动
 seo-title: Campaigns
-description: 了解使用AEM Campaigns的基础知识。
+description: 了解使用Adobe Experience Manager (AEM)促销活动的基础知识。
 seo-description: Learn the basics of using AEM Campaigns.
 uuid: f4be814f-8b0f-4089-88bb-0141227bce02
 contentOwner: Guillaume Carlino
@@ -10,21 +10,21 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: 4a3a2ad7-40b0-4f19-a012-167453f58bc2
 exl-id: c7a6ab46-111f-42f0-bf09-7a300486672a
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: c7c32130a3257c14c98b52f9db31d80587d7993a
 workflow-type: tm+mt
-source-wordcount: '142'
+source-wordcount: '145'
 ht-degree: 1%
 
 ---
 
 # 营销活动{#campaigns}
 
-Campaign管理为数字营销人员提供了交付个性化内容并为访客创建专用体验的机会。
+Campaign管理为数字营销人员提供了提供个性化内容并为访客创建专用体验的机会。
 
 如果您管理的是营销策划（包括登陆页面），则可能需要执行以下操作：
 
 * **定义区段**  — 您需要为目标内容定义区段和策略。
-* **为登录页准备HTML**  — 利用登陆页面，作者可以快速轻松地将设计和内容直接导入AEM页面。 您需要准备HTML，以便能够正确导入资源。 在创建仅在有限时间内有效且需要快速创建的营销登陆页面时，登陆页面很有用。
+* **为登录页面准备HTML**  — 利用登陆页面，作者可以快速轻松地将设计和内容直接导入AEM页面。 您需要准备HTML，以便能够正确导入资源。 在创建仅在有限时间内有效且需要快速创建的营销登陆页面时，登陆页面很有用。
 * **与SiteCatalyst集成**  — 您可以将登陆页面与SiteCatalyst集成。
 
 请参阅以下页面：
