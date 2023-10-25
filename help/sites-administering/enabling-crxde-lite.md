@@ -1,7 +1,7 @@
 ---
 title: 在AEM中启用CRXDE Lite
 seo-title: Enabling CRXDE Lite in AEM
-description: 了解如何在AEM中启用CRXDE Lite。
+description: 了解如何在Adobe Experience Manager中启用CRXDE Lite。
 seo-description: Learn how to enable CRXDE Lite in AEM.
 uuid: d7a3db67-6384-463b-9aa9-f08ecc6c99c6
 contentOwner: Guillaume Carlino
@@ -10,9 +10,9 @@ topic-tags: Security
 content-type: reference
 discoiquuid: 72df3ece-badf-466b-8f9a-0ec985d87741
 exl-id: bf51def2-1dd4-4bd3-b989-685058f0ead8
-source-git-commit: a4183bb9d72763ebea3b464c77fce978c723e053
+source-git-commit: e54c1d422f2bf676e8a7b0f50a101e495c869c96
 workflow-type: tm+mt
-source-wordcount: '258'
+source-wordcount: '260'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 但是，CRXDE Lite取决于 `org.apache.sling.jcr.davex` 以正常运行，因此禁用WebDAV也将有效地禁用CRXDE Lite。
 
-发生此情况时，浏览到 `https://serveraddress:4502/crx/de/index.jsp` 将显示一个空的根节点，所有对CRXDE Lite资源的HTTP请求都将失败：
+发生此情况时，浏览到 `https://serveraddress:4502/crx/de/index.jsp` 将显示一个空的根节点，并且对CRXDE Lite资源的所有HTTP请求都将失败：
 
 ```xml
 404 Resource at '/crx/server/crx.default/jcr:root/.1.json' not found: No resource found
@@ -35,15 +35,15 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->由于这些方法的操作方式略有不同，您应该使用 ***任一*** OSGI ***或*** cURL。
+>由于这些方法的操作方式略有不同，您应使用 ***或者*** OSGI ***或*** cURL。
 >
->这两种方法是 ***非*** 可互换。
+>两种方法为 ***非*** 可互换。
 
 ## 使用OSGI启用CRXDE Lite {#enabling-crxde-lite-osgi}
 
-如果禁用，可以按照以下步骤打开CRXDE Lite：
+如果禁用，则可以通过以下过程打开CRXDE Lite：
 
-1. 转到OSGi组件控制台，网址为 `http://localhost:4502/system/console/components`
+1. 转到位于的OSGi组件控制台 `http://localhost:4502/system/console/components`
 1. 搜索以下组件：
 
    * `org.apache.sling.jcr.davex.impl.servlets.SlingDavExServlet`
@@ -55,7 +55,7 @@ ht-degree: 0%
 1. 创建以下配置：
 
    * **根路径:** `/crx/server`
-   * 勾选下面的框 **使用绝对URI**.
+   * 勾选下面的方框 **使用绝对URI**.
 
 1. 完成使用CRXDE Lite后，请确保再次禁用WebDAV。
 

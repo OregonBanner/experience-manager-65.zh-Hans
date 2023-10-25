@@ -1,7 +1,7 @@
 ---
 title: 默认为SSL/TLS
 seo-title: SSL/TLS By Default
-description: 了解如何在AEM中默认使用SSL。
+description: 了解如何在AEM 6.5中使用默认的SSL功能。
 seo-description: Learn how to use SSL by Default in AEM.
 uuid: 2fbfd020-1d33-4b22-b963-c698e62f5bf6
 contentOwner: User
@@ -11,16 +11,16 @@ topic-tags: Security
 discoiquuid: 68077369-0549-4c0f-901b-952e323013ea
 docset: aem65
 exl-id: 574e2fc2-6ebf-49b6-9b65-928237a8a34d
-source-git-commit: 7edd848bbdbadfb387bd4d880b24931ad6758dbd
+source-git-commit: e54c1d422f2bf676e8a7b0f50a101e495c869c96
 workflow-type: tm+mt
-source-wordcount: '856'
+source-wordcount: '857'
 ht-degree: 0%
 
 ---
 
 # 默认为SSL/TLS{#ssl-tls-by-default}
 
-为了不断提高AEM的安全性，Adobe默认引入了SSL功能。 其目的是鼓励使用HTTPS连接到AEM实例。
+为了不断提高AEM的安全性，Adobe引入了一项默认称为SSL的功能。 其目的是鼓励使用HTTPS连接到AEM实例。
 
 ## 默认启用SSL/TLS {#enabling-ssl-tls-by-default}
 
@@ -32,27 +32,27 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->如果 **配置HTTPS** 警报在收件箱中不存在，您可以通过转到，直接导航到HTTPS向导 *<http://serveraddress:serverport/libs/granite/security/content/sslConfig.html?item=configuration%2fconfiguressl&_charset_=utf-8>*
+>如果 **配置HTTPS** 收件箱中不存在警报，您可以通过转到 *<http://serveraddress:serverport/libs/granite/security/content/sslConfig.html?item=configuration%2fconfiguressl&_charset_=utf-8>*
 
-名为的服务用户 **ssl-service** 已为此功能创建。 打开警报后，将引导您完成以下配置向导：
+名为的服务用户 **ssl服务** 已为此功能创建。 打开警报后，系统将引导您完成以下配置向导：
 
-1. 首先，设置存储凭据。 这些是 **ssl-service** 系统用户的密钥存储，将包含HTTPS侦听器的私钥和信任存储。
+1. 首先，设置存储凭据。 这些是 **ssl服务** 系统用户的密钥存储，将包含HTTPS侦听器的私钥和信任存储。
 
    ![chlimage_1-104](assets/chlimage_1-104.png)
 
-1. 输入身份证明后，单击 **下一个** 页面右上角的。 然后，为SSL/TLS连接上传关联的私钥和证书。
+1. 输入凭据后，单击 **下一个** （在页面的右上角）。 然后，为SSL/TLS连接上传关联的私钥和证书。
 
    ![chlimage_1-105](assets/chlimage_1-105.png)
 
    >[!NOTE]
    >
-   >有关如何生成要用于向导的私钥和证书的信息，请参阅 [此过程](/help/sites-administering/ssl-by-default.md#generating-a-private-key-certificate-pair-to-use-with-the-wizard) 下面的。
+   >有关如何生成要用于向导的私钥和证书的信息，请参阅 [此过程](/help/sites-administering/ssl-by-default.md#generating-a-private-key-certificate-pair-to-use-with-the-wizard) 下。
 
 1. 最后，指定HTTPS侦听器的HTTPS主机名和TCP端口。
 
    ![screen_shot_2018-07-25at31658pm](assets/screen_shot_2018-07-25at31658pm.png)
 
-## 默认情况下自动化SSL/TLS {#automating-ssl-tls-by-default}
+## 默认情况下，自动化SSL/TLS {#automating-ssl-tls-by-default}
 
 默认情况下，有三种方法可自动化SSL/TLS。
 
@@ -93,7 +93,7 @@ Content-Disposition: form-data; name="httpsPort"
 8443
 ```
 
-此servlet与任何slingPOSTservlet一样，将以“200 OK”或错误HTTP状态代码响应。 您可以在响应的HTML正文中找到有关状态的详细信息。
+此servlet与任何slingPOSTservlet一样，将使用“200确定”或错误HTTP状态代码进行响应。 您可以在响应的HTML正文中找到有关状态的详细信息。
 
 以下是成功响应和错误的示例。
 
@@ -152,14 +152,14 @@ it for any subsequent updating of the private key or certificate.</dd>
 
 ### 通过包 {#via-package}
 
-或者，您也可以通过上传已包含以下必需项目的包来自动化SSL/TLS设置：
+或者，您可以通过上传已包含这些必需项目的包来自动化SSL/TLS设置：
 
-* ssl服务用户的密钥库。 此目录位于 */home/users/system/security/ssl-service/keystore* 在存储库中。
+* ssl服务用户的密钥库。 该文件位于 */home/users/system/security/ssl-service/keystore* 在存储库中。
 * 此 `GraniteSslConnectorFactory` 配置
 
-### 生成要与向导一起使用的私钥/证书对 {#generating-a-private-key-certificate-pair-to-use-with-the-wizard}
+### 生成要用于向导的私钥/证书对 {#generating-a-private-key-certificate-pair-to-use-with-the-wizard}
 
-下面您将找到一个示例，用于创建SSL/TLS向导可以使用的采用DER格式的自签名证书。 基于操作系统安装OpenSSL，打开OpenSSL命令提示符，然后将目录更改为要生成私钥/证书的文件夹。
+下面您将找到一个示例，用于创建SSL/TLS向导可以使用的DER格式的自签名证书。 基于操作系统安装OpenSSL，打开OpenSSL命令提示符，并将目录更改为要生成私钥/证书的文件夹。
 
 >[!NOTE]
 >
@@ -178,7 +178,7 @@ it for any subsequent updating of the private key or certificate.</dd>
    openssl req -sha256 -new -key localhostprivate.key -out localhost.csr -subj "/CN=localhost"
    ```
 
-1. 生成SSL/TLS证书并使用私钥对其进行签名。 在此示例中，将从现在起一年后过期：
+1. 生成SSL/TLS证书并使用私钥签名。 在此示例中，将从现在起一年后过期：
 
    ```shell
    openssl x509 -req -days 365 -in localhost.csr -signkey localhostprivate.key -out localhost.crt
@@ -190,19 +190,19 @@ it for any subsequent updating of the private key or certificate.</dd>
 openssl pkcs8 -topk8 -inform PEM -outform DER -in localhostprivate.key -out localhostprivate.der -nocrypt
 ```
 
-最后，上传 **localhostprivate.der** 作为私钥和 **localhost.crt** 如本页开头描述的图形SSL/TLS向导步骤2中的SSL/TLS证书所示。
+最后，上传 **localhostprivate.der** 作为私钥和 **localhost.crt** 如本页开头描述的图形SSL/TLS向导步骤2中的SSL/TLS证书一样。
 
 ### 通过cURL更新SSL/TLS配置 {#updating-the-ssl-tls-configuration-via-curl}
 
 >[!NOTE]
 >
->参见 [在AEM中使用cURL](https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/curl.html) 以获取AEM中有用的cURL命令的集中式列表。
+>请参阅 [在AEM中使用cURL](https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/curl.html) 以集中显示AEM中有用的cURL命令列表。
 
 您还可以使用cURL工具自动配置SSL/TLS。 为此，您可以将配置参数发布到此URL：
 
 *https://&lt;serveraddress>：&lt;serverport>/libs/granite/security/post/sslSetup.html*
 
-以下是可用于更改配置向导中的各种设置的参数：
+以下是可用于更改配置向导中各种设置的参数：
 
 * `-F "keystorePassword=password"`  — 密钥库密码；
 
@@ -210,18 +210,18 @@ openssl pkcs8 -topk8 -inform PEM -outform DER -in localhostprivate.key -out loca
 
 * `-F "truststorePassword=password"`  — 信任库密码；
 
-* `-F "truststorePasswordConfirm=password"`  — 确认truststore密码；
+* `-F "truststorePasswordConfirm=password"`  — 确认信任库密码；
 
 * `-F "privatekeyFile=@localhostprivate.der"`  — 指定私钥；
 
 * `-F "certificateFile=@localhost.crt"`  — 指定证书；
 
 * `-F "httpsHostname=host.example.com"` — 指定主机名；
-* `-F "httpsPort=8443"` - HTTPS侦听器将使用的端口。
+* `-F "httpsPort=8443"` - HTTPS侦听器将处理的端口。
 
 >[!NOTE]
 >
->运行cURL以自动化SSL/TLS配置的最快方法是从DER和CRT文件所在的文件夹中运行。 或者，您也可以在以下位置指定完整路径： `privatekeyFile` 和certificateFile参数。
+>运行cURL以自动化SSL/TLS配置的最快方式来自DER和CRT文件所在的文件夹。 或者，您可以在 `privatekeyFile` 和certificateFile参数。
 >
 >您还需要进行身份验证才能执行更新，因此请确保将cURL命令附加到 `-u user:passeword` 参数。
 >
@@ -237,14 +237,14 @@ curl -u user:password -F "keystorePassword=password" -F "keystorePasswordConfirm
 
 `-F "certificateFile=@root.crt" -F "certificateFile=@localhost.crt"..`
 
-执行命令后，请验证所有证书是否都进入密钥库。 查看 **密钥库** 条目来源：
+执行命令后，验证所有证书是否都进入密钥库。 查看 **密钥库** 条目来源：
 [http://localhost:4502/libs/granite/security/content/v2/usereditor.html/home/users/system/security/ssl-service](http://localhost:4502/libs/granite/security/content/v2/usereditor.html/home/users/system/security/ssl-service)
 
 ### 启用TLS 1.3连接 {#enabling-tls-connection}
 
 1. 转到Web控制台
 1. 然后，导航到 **osgi** - **配置** - **AdobeGranite SSL连接器工厂**
-1. 转到 **包含密码套件** 字段并添加以下条目。 您可以通过按“**+**”按钮，在中添加每个按钮后：
+1. 转到 **包含的密码套件** 字段并添加以下条目。 您可以通过按“**+**”按钮，在中添加每个按钮后：
 
    * `TLS_AES_256_GCM_SHA384`
    * `TLS_AES_128_GCM_SHA256`

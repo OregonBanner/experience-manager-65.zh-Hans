@@ -1,6 +1,6 @@
 ---
 title: 使用AEM 6配置LDAP
-description: 了解如何使用AEM配置LDAP。
+description: 了解如何使用AEM使用和配置LDAP服务。
 uuid: 0007def4-86f0-401d-aa37-c8d49d5acea1
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -8,39 +8,39 @@ topic-tags: Security
 content-type: reference
 discoiquuid: 5faf6ee5-9242-48f4-87a8-ada887a3be1e
 exl-id: 2ebca4fb-20f7-499c-96a0-4018eaeddc1a
-source-git-commit: 768576e300b655962adc3e1db20fc5ec06a5ba6c
+source-git-commit: e54c1d422f2bf676e8a7b0f50a101e495c869c96
 workflow-type: tm+mt
-source-wordcount: '1625'
+source-wordcount: '1628'
 ht-degree: 0%
 
 ---
 
 # 使用AEM 6配置LDAP {#configuring-ldap-with-aem}
 
-LDAP (此 **L** hightweight **D**&#x200B;目录 **A**&#x200B;访问 **P** rotocol)用于访问集中式目录服务。 它有助于减少管理用户帐户所需的工作量，因为多个应用程序可以访问用户帐户。 Active Directory就是这样的LDAP服务器。 LDAP通常用于实现单点登录，它允许用户在一次登录后访问多个应用程序。
+LDAP (此 **L**&#x200B;高权重 **D**&#x200B;目录 **A**&#x200B;访问 **P** rotocol)用于访问集中式目录服务。 它有助于减少管理用户帐户所需的工作量，因为多个应用程序可以访问用户帐户。 其中一个LDAP服务器是Active Directory。 LDAP通常用于实现单点登录，它允许用户在一次登录后访问多个应用程序。
 
-用户帐户可以在LDAP服务器和存储库之间同步，LDAP帐户详细信息将保存在存储库中。 此功能允许将帐户分配给存储库组，以便分配所需的权限和权限。
+用户帐户可以在LDAP服务器和存储库之间同步，LDAP帐户详细信息将保存在存储库中。 此功能允许将帐户分配给存储库组，以便分配所需的权限和特权。
 
-存储库使用LDAP身份验证来验证此类用户，凭据将传递到LDAP服务器进行验证，在允许访问存储库之前需要验证。 为了提高性能，存储库可以缓存已成功验证的凭据，并且有过期超时，以确保在适当的时间段后进行重新验证。
+存储库使用LDAP身份验证来验证此类用户，凭据将传递到LDAP服务器进行验证，在允许访问存储库之前需要验证。 为了提高性能，存储库可以缓存已成功验证的凭据，并且存在过期超时以确保在适当时间段后进行重新验证。
 
 从LDAP服务器中删除帐户后，将不再授予验证并拒绝对存储库的访问。 还可以清除保存在存储库中的LDAP帐户的详细信息。
 
-此类帐户的使用对用户是透明的。 也就是说，他们发现，从LDAP创建的用户和组帐户与仅在存储库中创建的帐户之间没有区别。
+此类帐户的使用对用户是透明的。 也就是说，他们发现从LDAP创建的用户帐户和组帐户与仅在存储库中创建的帐户之间没有任何区别。
 
-在AEM 6中，LDAP支持随附了一个新实施，该实施需要与以前版本不同的配置类型。
+在AEM 6中，LDAP支持随附了一个新实施，该实施需要与以前的版本不同的配置类型。
 
-所有LDAP配置现在都作为OSGi配置提供。 它们可以通过Web管理控制台进行配置，网址为：
+现在，所有LDAP配置都作为OSGi配置提供。 它们可以通过Web管理控制台进行配置，网址为：
 `https://serveraddress:4502/system/console/configMgr`
 
 要使LDAP与AEM配合使用，您必须创建三个OSGi配置：
 
-1. LDAP身份提供程序(IDP)。
+1. LDAP身份提供方(IDP)。
 1. 同步处理程序。
 1. 外部登录模块。
 
 >[!NOTE]
 >
->观看 [Oak的外部登录模块 — 使用LDAP及更高版本进行身份验证](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2015/aem-oak-external-login-module-authenticating-with-ldap-and-beyond.html?lang=en) 以深入了解外部登录模块。
+>观看 [Oak的外部登录模块 — 使用LDAP和其他方式进行身份验证](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2015/aem-oak-external-login-module-authenticating-with-ldap-and-beyond.html?lang=en) 以深入了解外部登录模块。
 >
 >要阅读有关使用Apache DS配置Experience Manager的示例，请参见 [正在配置Adobe Experience Manager 6.5以使用Apache Directory Service。](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/configuring-adobe-experience-manager-6-to-use-apache-directory/m-p/183805)
 
@@ -48,7 +48,7 @@ LDAP (此 **L** hightweight **D**&#x200B;目录 **A**&#x200B;访问 **P** rotoco
 
 LDAP标识提供程序用于定义如何从LDAP服务器中检索用户。
 
-它可以在管理控制台中的 **Apache Jackrabbit Oak LDAP身份提供程序** 名称。
+您可以在管理控制台中的 **Apache Jackrabbit Oak LDAP身份提供程序** 名称。
 
 以下配置选项可用于LDAP身份提供程序：
 
@@ -91,7 +91,7 @@ LDAP标识提供程序用于定义如何从LDAP服务器中检索用户。
    <td>搜索超时前的时间</td>
   </tr>
   <tr>
-   <td><strong>最大管理池活动</strong></td>
+   <td><strong>最大活动管理员池</strong></td>
    <td>管理连接池的最大活动大小。</td>
   </tr>
   <tr>
@@ -112,7 +112,7 @@ LDAP标识提供程序用于定义如何从LDAP服务器中检索用户。
   </tr>
   <tr>
    <td><strong>用户额外筛选器</strong></td>
-   <td>搜索用户时要使用的额外LDAP过滤器。 最终筛选器的格式如下所示：'(&amp;(&lt;idattr&gt;=&lt;userid&gt;)(objectclass=&lt;objectclass&gt;)&lt;extrafilter&gt;)' (user.extraFilter)</td>
+   <td>搜索用户时要使用的额外LDAP过滤器。 最终筛选器的格式如下所示：“(&amp;(&lt;idattr&gt;=&lt;userid&gt;)(objectclass=&lt;objectclass&gt;)&lt;extrafilter&gt;)' (user.extraFilter)</td>
   </tr>
   <tr>
    <td><strong>用户DN路径</strong></td>
@@ -124,15 +124,15 @@ LDAP标识提供程序用于定义如何从LDAP服务器中检索用户。
   </tr>
   <tr>
    <td><strong>组对象类</strong></td>
-   <td>组条目必须包含的对象类列表。</td>
+   <td>组条目必须包含的对象类的列表。</td>
   </tr>
   <tr>
    <td><strong>组名称属性</strong></td>
    <td>包含组名称的属性的名称。</td>
   </tr>
   <tr>
-   <td><strong>对额外过滤器进行分组</strong></td>
-   <td>搜索组时要使用的额外LDAP过滤器。 最终筛选器的格式如下所示：'(&amp;(&lt;nameattr&gt;=&lt;groupname&gt;)(objectclass=&lt;objectclass&gt;)&lt;extrafilter&gt;)'</td>
+   <td><strong>分组额外筛选器</strong></td>
+   <td>搜索组时要使用的额外LDAP过滤器。 最终筛选器的格式如下所示：“(&amp;(&lt;nameattr&gt;=&lt;groupname&gt;)(objectclass=&lt;objectclass&gt;)&lt;extrafilter&gt;)'</td>
   </tr>
   <tr>
    <td><strong>组DN路径</strong></td>
@@ -181,7 +181,7 @@ LDAP标识提供程序用于定义如何从LDAP服务器中检索用户。
   </tr>
   <tr>
    <td><strong>用户成员资格嵌套深度</strong></td>
-   <td>同步成员关系时返回组嵌套的最大深度。 如果值为0，则实际上会禁用组成员资格查找。 值1仅添加用户的直接组。 仅当同步用户成员资格祖先时，同步各个组时，此值不起作用。</td>
+   <td>同步成员关系时返回组嵌套的最大深度。 如果值为0，则实际上禁用组成员资格查找。 值为1仅添加用户的直接组。 只有在同步用户成员资格祖先时，才同步各个组时，此值无效。</td>
   </tr>
   <tr>
    <td><strong>组过期时间</strong></td>
@@ -208,25 +208,26 @@ LDAP标识提供程序用于定义如何从LDAP服务器中检索用户。
 
 >[!NOTE]
 >
->Apache Jackrabbit Oak外部登录模块实施Java™身份验证和授权服务(JAAS)规范。 请参阅 [官方OracleJava™安全参考指南](https://docs.oracle.com/javase/8/docs/technotes/guides/security/jaas/JAASRefGuide.html) 了解更多信息。
+>Apache Jackrabbit Oak外部登录模块实施Java™身份验证和授权服务(JAAS)规范。 请参阅 [官方OracleJava™安全参考指南](https://docs.oracle.com/javase/8/docs/technotes/guides/security/jaas/JAASRefGuide.html) 以了解更多信息。
 
-其工作是定义要使用哪个身份提供程序和同步处理程序，从而有效地绑定这两个模块。
+其工作是定义要使用哪个身份提供程序和同步处理程序，从而有效地绑定两个模块。
 
-以下配置选项可用：
+可以使用以下配置选项：
 
-| **JAAS排名** | 指定此登录模块条目的排名（即排序顺序）。 这些条目按降序排序（即，值较高的排名配置排在首位）。 |
+| **jaas排名** | 指定此登录模块条目的排名（即排序顺序）。 条目按降序排序（即，值较高的排名配置排在首位）。 |
 |---|---|
 | **JAAS控制标志** | 指定LoginModule是REQUIRED、REQUISITE、SUFFIENT还是OPTIONAL的属性。 有关这些标记含义的更多详细信息，请参阅JAAS配置文档。 |
-| **JAAS领域** | 注册LoginModule时所针对的领域名称（或应用程序名称）。 如果未提供领域名称，则使用Felix JAAS配置中配置的默认领域注册LoginModule。 |
+| **JAAS领域** | LoginModule注册的领域名（或应用程序名）。 如果未提供领域名称，则使用Felix JAAS配置中配置的默认领域注册LoginModule。 |
 | **身份提供程序名称** | 身份提供程序的名称。 |
 | **同步处理程序名称** | 同步处理程序的名称。 |
 
 >[!NOTE]
-如果您打算在AEM实例中使用多个LDAP配置，则必须为每个配置创建单独的身份提供程序和同步处理程序。
+>
+如果您计划在AEM实例中使用多个LDAP配置，则必须为每个配置创建单独的身份提供程序和同步处理程序。
 
 ## 通过SSL配置LDAP {#configure-ldap-over-ssl}
 
-可以将AEM 6配置为通过SSL的LDAP进行身份验证，请执行以下步骤：
+可以将AEM 6配置为通过SSL使用LDAP进行身份验证，过程如下：
 
 1. 查看 **使用SSL** 或 **使用TLS** 复选框。 [LDAP身份提供程序](#configuring-the-ldap-identity-provider).
 1. 根据您的设置配置同步处理程序和外部登录模块。
@@ -274,7 +275,7 @@ LDAP标识提供程序用于定义如何从LDAP服务器中检索用户。
 要启用调试日志记录，必须执行以下操作：
 
 1. 转到Web管理控制台。
-1. 查找“Apache Sling日志记录器配置”并使用以下选项创建两个日志记录器：
+1. 查找“Apache Sling日志记录器配置”，并使用以下选项创建两个日志记录器：
 
 * 日志级别： Debug
 * 日志文件logs/ldap.log
@@ -284,19 +285,19 @@ LDAP标识提供程序用于定义如何从LDAP服务器中检索用户。
 * 日志级别： Debug
 * 日志文件：logs/external.log
 * 消息模式： {0，date，dd.MM.yyyy HH:mm:ss.SSS} &amp;ast；{4}&amp;ast； {2} {3} {5}
-* 记录器：org.apache.jackrabbit.oak.spi.security.authentication.external
+* 日志记录器：org.apache.jackrabbit.oak.spi.security.authentication.external
 
-## 关于群组隶属的一句话 {#a-word-on-group-affiliation}
+## 关于组隶属关系的消息 {#a-word-on-group-affiliation}
 
 通过LDAP同步的用户可以属于AEM中的不同组。 这些组可以是作为同步过程的一部分添加到AEM的外部LDAP组。 但是，它们也可以是单独添加的组，而不是原始LDAP组关联方案的一部分。
 
 通常，这些组由本地AEM管理员或任何其他身份提供程序添加。
 
-如果从LDAP服务器上的组中删除某个用户，则同步时所做的更改将反映在AEM端。 但是，用户的所有其他未由LDAP添加的组关联仍保持不变。
+如果从LDAP服务器上的组中删除用户，则同步时更改将反映在AEM端。 但是，用户的所有其他未由LDAP添加的组关联仍保持不变。
 
-AEM通过使用检测并处理从外部组中清除用户的操作， `rep:externalId` 属性。 此属性将自动添加到由同步处理程序同步的任何用户或组，并且包含有关原始身份提供者的信息。
+AEM使用检测并处理从外部组中清除用户的操作。 `rep:externalId` 属性。 此属性将自动添加到由同步处理程序同步的任何用户或组，并且包含有关原始身份提供者的信息。
 
-请参阅有关的Apache Oak文档 [用户和组同步](https://jackrabbit.apache.org/oak/docs/security/authentication/usersync.html).
+请参阅Apache Oak文档，网址为 [用户和组同步](https://jackrabbit.apache.org/oak/docs/security/authentication/usersync.html).
 
 ## 已知问题 {#known-issues}
 
