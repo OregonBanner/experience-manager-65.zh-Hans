@@ -5,9 +5,9 @@ role: Admin
 feature: Integrations
 exl-id: 2660de7c-0281-4884-98d9-e78f20cf571c
 hide: true
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: a07765f95f01f05a30dce14138f75e7edbe94ae2
 workflow-type: tm+mt
-source-wordcount: '1735'
+source-wordcount: '1740'
 ht-degree: 1%
 
 ---
@@ -77,6 +77,7 @@ Workfront项目和AEM文件夹之间的元数据映射在AEM文件夹元数据�
 
 要配置映射，请执行以下步骤：
 
+1. 添加 `jcr:read` 权限 `/conf/global/settings/dam/adminui-extension/foldermetadataschema` 对象 `wf-workfront-users` 组。
 1. 导航到 **[!UICONTROL 工具]** > **[!UICONTROL 资产]** > **[!UICONTROL 文件夹元数据架构]**.
 1. 选择要编辑的文件夹元数据架构表单，然后单击编辑。
 1. 选择要编辑的文件夹元数据架构表单字段，然后选择右侧面板上的设置选项卡。
