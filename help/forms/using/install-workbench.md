@@ -1,14 +1,13 @@
 ---
 title: 安装工作台
-seo-title: Install workbench
-description: 安装工作台。
+description: 安装、卸载、配置、管理或部署AEM Forms Workbench。
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 role: Admin
 exl-id: d530dbb9-f95e-4329-9665-37faf8f7931b
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: ad5d98c5519cda29cecde54a880958bae81c4764
 workflow-type: tm+mt
-source-wordcount: '2231'
+source-wordcount: '2238'
 ht-degree: 0%
 
 ---

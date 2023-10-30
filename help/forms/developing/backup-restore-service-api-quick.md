@@ -1,6 +1,6 @@
 ---
-title: 备份和还原服务APIQuick启动
-description: 备份和还原服务APIQuick启动
+title: 备份和恢复服务APIQuick启动
+description: AEM Forms备份和恢复API快速入门支持高效的备份创建和恢复过程。
 uuid: c3992be2-ceb4-480d-9c8f-71eb0ea66dde
 contentOwner: admin
 content-type: reference
@@ -9,32 +9,32 @@ topic-tags: develop
 discoiquuid: 813162be-dbf5-4dc1-80ff-e37dbc25ef60
 role: Developer
 exl-id: ae17fd3a-0ba4-4a00-907b-811e500b0e14
-source-git-commit: 78c584db8c35ea809048580fe5b440a0b73c8eea
+source-git-commit: 68a1edf5f62d7a988094fceb3f762504711dc2f1
 workflow-type: tm+mt
-source-wordcount: '246'
+source-wordcount: '254'
 ht-degree: 0%
 
 ---
 
 # 备份和还原服务API快速启动 {#backup-and-restore-service-apiquick-starts}
 
-**本文档中的示例和示例仅适用于AEM Forms on JEE环境。**
+**本文档中的示例和示例仅适用于JEE环境上的AEM Forms 。**
 
 Java™ API快速入门(SOAP)可用于备份和还原服务API。
 
-[快速入门：使用Java进入备份模式](backup-restore-service-api-quick.md#quick-start-soap-mode-entering-backup-mode-using-the-java-api)
+[快速启动：使用Java进入备份模式](backup-restore-service-api-quick.md#quick-start-soap-mode-entering-backup-mode-using-the-java-api)
 
-[快速入门：使用Java退出备份模式](backup-restore-service-api-quick.md#quick-start-soap-mode-leaving-backup-mode-using-the-java-api)
+[快速启动：使用Java退出备份模式](backup-restore-service-api-quick.md#quick-start-soap-mode-leaving-backup-mode-using-the-java-api)
 
 AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应设置为SOAP。
 
 >[!NOTE]
 >
->AEM Forms编程快速入门基于Forms操作系统。 但是，如果您使用的是其他操作系统(如UNIX®)，请将特定于Windows的路径替换为适用的操作系统支持的路径。 同样，如果您使用的是其他J2EE应用程序服务器，请确保指定有效的连接属性。 参见 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>《使用AEM Forms进行编程快速入门》基于Forms操作系统。 但是，如果您使用的是其他操作系统(如UNIX®)，请将特定于Windows的路径替换为适用的操作系统支持的路径。 同样，如果您使用的是其他J2EE应用程序服务器，请确保指定有效的连接属性。 请参阅 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
-## 快速入门（SOAP模式）：使用Java™ API进入备份模式 {#quick-start-soap-mode-entering-backup-mode-using-the-java-api}
+## 快速启动（SOAP模式）：使用Java™ API进入备份模式 {#quick-start-soap-mode-entering-backup-mode-using-the-java-api}
 
-以下Java™代码示例使用唯一标签进入备份模式两小时。 在备份时间过期或明确退出备份模式后，Forms Server将返回到从全局文档存储中清除文件的状态。 (请参阅 [在Forms服务器上进入备份模式](/help/forms/developing/preparing-aem-forms-backup.md#entering-backup-mode-on-the-forms-server).)
+以下Java™代码示例使用唯一标签进入备份模式两小时。 在备份时间过期或明确退出备份模式后，Forms服务器将返回到从全局文档存储中清除文件的状态。 (请参阅 [在Forms服务器上进入备份模式](/help/forms/developing/preparing-aem-forms-backup.md#entering-backup-mode-on-the-forms-server).)
 
 ```java
  /*

@@ -1,15 +1,15 @@
 ---
 title: 自定义创建通信UI
-description: 了解如何自定义创建通信用户界面。
+description: 了解如何在AEM Forms环境中自定义通信用户界面(UI)，例如徽标。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: correspondence-management
 docset: aem65
 feature: Correspondence Management
 exl-id: 9593ca2a-7f9e-4487-a1a5-ca44114bff17
-source-git-commit: fd8bb7d3d9040e0a7a6b2f65751445f41aeab73e
+source-git-commit: 0e5b89617d481c69882ec5d4658e76855aa9b691
 workflow-type: tm+mt
-source-wordcount: '1084'
+source-wordcount: '1092'
 ht-degree: 1%
 
 ---

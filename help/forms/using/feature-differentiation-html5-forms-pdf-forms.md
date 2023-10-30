@@ -1,8 +1,6 @@
 ---
-title: HTML5表单和PDF forms之间的功能区别
-seo-title: Feature differentiation between HTML5 forms and PDF forms
-description: HTML5表单和PDF forms中支持的功能
-seo-description: Feature supported in HTML5 forms and PDF forms
+title: HTML5表单与PDF forms之间的功能区别
+description: 了解HTML5表单与PDF forms之间的差异。
 uuid: 6ddee197-d108-4897-9976-77d115a06504
 contentOwner: robhagat
 content-type: reference
@@ -12,14 +10,14 @@ discoiquuid: bdd97c20-d1f2-4898-9862-1a6a8071be88
 docset: aem65
 feature: Mobile Forms
 exl-id: 3150f95f-7150-4eee-b5a9-121422dec2a1
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 0e5b89617d481c69882ec5d4658e76855aa9b691
 workflow-type: tm+mt
-source-wordcount: '444'
+source-wordcount: '446'
 ht-degree: 2%
 
 ---
 
-# HTML5表单和PDF forms之间的功能区别 {#feature-differentiation-between-html-forms-and-pdf-forms}
+# HTML5表单与PDF forms之间的功能区别 {#feature-differentiation-between-html-forms-and-pdf-forms}
 
 下表指定为HTML5表单和PDF forms提供的功能支持：
 
@@ -37,7 +35,7 @@ ht-degree: 2%
   </tr>
   <tr>
    <td>签名字段<br /> </td>
-   <td><strong>数字签名</strong> 不受支持，但具有新 <strong>涂鸦签名</strong> 为类似于纸的签名添加了字段。 人们可以在表格上涂写他们的签名，使用 <strong>涂鸦签名</strong> 字段。 签名将作为图像保存在表单上。 可将地理位置信息保存在 <strong>涂鸦签名</strong> 字段。</td>
+   <td><strong>数字签名</strong> 不受支持，但支持新的 <strong>潦草签名</strong> 为类似于纸的签名添加了字段。 人们可以在表格上用手写签名 <strong>潦草签名</strong> 字段。 签名将作为图像保存在表单上。 可将地理位置信息保存在 <strong>潦草签名</strong> 字段。</td>
    <td>签名字段可用于 <strong>数字签名</strong>.</td>
   </tr>
   <tr>
@@ -47,27 +45,27 @@ ht-degree: 2%
   </tr>
   <tr>
    <td>图像</td>
-   <td>数据URI方案用于显示图像。 所有现代版本的浏览器都支持此方案，但每个浏览器支持的图像格式范围存在差异。<br /> </td>
+   <td>数据URI方案用于显示图像。 所有现代版本的浏览器都支持此方案，但每个浏览器支持的图像格式范围有所不同。<br /> </td>
    <td>支持.gif、.png、.jpeg、.bmp和.tiff格式。</td>
   </tr>
   <tr>
    <td>分页<br /> </td>
-   <td><p>HTML5窗体被分成多个面板和框，以提供类似于PDF forms的外观。 页面大小会动态计算。 如果HTML5表单中页面的所有内容都已删除或标记为隐藏，则空白页会隐藏，并且空白页的上方和下方的页面之间不显示空格（空格）。</p> <p>如果数据合并或脚本将内容添加到页面，则页面长度会展开以适应新添加的内容。 表单中不会添加任何新页面以容纳新添加的内容。 </p> <p><strong>注意：</strong> 删除HTML5表单中某页的所有内容或将其标记为隐藏时，在第1页和第2页之间仍可看到空白页（空格），但在任何其他页之间则不可见。</p> </td>
+   <td><p>HTML5窗体被分成多个面板和框，以使其外观类似于PDF forms。 页面大小会动态计算。 如果HTML5表单中页面的所有内容被删除或标记为隐藏，则空白页面将被隐藏，并且空白页面上方和下方页面之间不显示空格（空格）。</p> <p>如果数据合并或脚本向页面添加内容，则页面长度将展开以容纳新添加的内容。 表单中不会添加任何新页面，以适应新添加的内容。 </p> <p><strong>注意：</strong> 删除HTML5表单中页面的所有内容或将其标记为隐藏时，在第1页和第2页之间仍可看到空白页（空格），但在任何其他页面之间不可见。</p> </td>
    <td>PDF中的分页取决于合并的数据内容或用户内容，并且页面计数会因此而增加/减少。</td>
   </tr>
   <tr>
    <td>页眉/页脚 </td>
-   <td>支持. <br /> <br /> 由于HTML5移动表单不支持分页符，因此页眉和页脚仅出现一次。 但是，您可以在布局中设置它们，以显示在移动设备表单预览中的多个位置。<br /> </td>
+   <td>支持. <br /> <br /> 由于HTML5移动设备表单不支持分页符，因此页眉和页脚仅出现一次。 但是，您可以将它们设置为在移动设备表单预览中的多个位置显示。<br /> </td>
    <td>支持。</td>
   </tr>
   <tr>
    <td>自定义构件</td>
-   <td>用户可自定义小组件以增强移动设备上的用户体验。<br /> </td>
+   <td>可以自定义小组件以增强移动设备的用户体验。<br /> </td>
    <td>所有构件都已锁定，无法插入自定义构件。<br /> </td>
   </tr>
   <tr>
    <td>XFA脚本API</td>
-   <td>支持最常用的XFA脚本结构。 有关支持的结构的详细信息列表，请参见 <a href="/help/forms/using/scripting-support.md">脚本支持</a>.</td>
+   <td>支持最常用的XFA脚本结构。 有关支持的构造的详细信息列表，请参见 <a href="/help/forms/using/scripting-support.md">脚本支持</a>.</td>
    <td>支持所有XFA脚本结构。</td>
   </tr>
   <tr>
