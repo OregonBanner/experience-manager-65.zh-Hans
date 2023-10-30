@@ -1,19 +1,15 @@
 ---
 title: 使用CRX2Oak迁移工具
-seo-title: Using the CRX2Oak Migration Tool
-description: 了解如何将CRX2Oak迁移工具与AEM结合使用。
-seo-description: Learn how to use the CRX2Oak migration tool.
-uuid: 9b788981-4ef0-446e-81f0-c327cdd3214b
+description: 了解如何将CRX2Oak迁移工具与Adobe Experience Manager一起使用。 该工具旨在帮助您在不同的存储库之间迁移数据。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: upgrading
 content-type: reference
-discoiquuid: e938bdc7-f8f5-4da5-81f6-7f60c6b4b8e6
 feature: Upgrading
 exl-id: ef3895b9-8d35-4881-8188-c864ae3f0b4c
-source-git-commit: e54c1d422f2bf676e8a7b0f50a101e495c869c96
+source-git-commit: ee1134be6ad81cc6638ee9004f7dad475a6cc67d
 workflow-type: tm+mt
-source-wordcount: '1222'
+source-wordcount: '1208'
 ht-degree: 0%
 
 ---
@@ -31,7 +27,7 @@ CRX2Oak是一种用于在不同存储库之间迁移数据的工具。
 
 >[!NOTE]
 >
->有关Apache Oak以及AEM持久性的关键概念的更多信息，请参阅 [AEM平台简介](/help/sites-deploying/platform.md).
+>有关Apache Oak以及Adobe Experience Manager (AEM)持久性的关键概念的更多信息，请参阅 [AEM平台简介](/help/sites-deploying/platform.md).
 
 ## 迁移用例 {#migration-use-cases}
 
@@ -51,15 +47,15 @@ CRX2Oak是一种用于在不同存储库之间迁移数据的工具。
 
 CRX2Oak在AEM升级期间以用户可指定预定义迁移配置文件的方式进行调用，该配置文件可自动重新配置持久性模式。 这称为快速启动模式。
 
-如果需要进行更多自定义，它也可以单独运行。 但是，请注意，在此模式下，仅对存储库进行更改，并且需要手动对AEM执行任何其他重新配置。 这称为独立模式。
+如果需要进行更多自定义，它也可以单独运行。 但是，在此模式下，只能对存储库进行更改，并且必须手动对AEM执行任何其他重新配置。 这称为独立模式。
 
-另外要注意的是，使用独立模式中的默认设置，将只迁移节点存储，而新存储库将重复使用旧的二进制存储。
+另外要注意的是，在独立模式下使用默认设置时，只会迁移节点存储，而新存储库会重用旧的二进制存储。
 
 ### 自动快速启动模式 {#automated-quickstart-mode}
 
 自AEM 6.3起，CRX2Oak能够处理用户定义的迁移配置文件，该配置文件可使用所有可用的迁移选项进行配置。 这样既提高了灵活性，又能够自动配置AEM，在独立模式下使用该工具时，这些功能将不可用。
 
-为了将CRX2Oak切换到快速启动模式，您需要通过此操作系统环境变量在AEM安装目录中定义crx-quickstart文件夹的路径：
+要将CRX2Oak切换到快速启动模式，请通过此操作系统环境变量在AEM安装目录中定义crx-quickstart文件夹的路径：
 
 **对于基于UNIX的系统和macOS：**
 
@@ -79,7 +75,7 @@ SET "SLING_HOME=/path/to/crx-quickstart"
 
 #### 可自定义的升级逻辑 {#customizable-upgrade-logic}
 
-自定义Java逻辑，也可以使用进行实施 `CommitHooks`. 自定义 `RepositoryInitializer` 可以实施类以便使用自定义值初始化存储库。
+可以使用实现自定义Java™逻辑 `CommitHooks`. 自定义 `RepositoryInitializer` 可以实施类以使用自定义值初始化存储库。
 
 #### 支持内存映射操作 {#support-for-memory-mapped-operations}
 
@@ -97,15 +93,15 @@ SET "SLING_HOME=/path/to/crx-quickstart"
 
 #### 路径合并 {#path-merging}
 
-如果需要在两个存储库之间复制数据，并且您的内容路径在两个实例上均不同，则可以在以下位置定义该数据： `--merge-path` 参数。 完成后，CRX2Oak将仅将新节点复制到目标存储库中，并将保留旧节点。
+如果必须在两个存储库之间复制数据，并且您的内容路径在两个实例上均不同，则可以在以下位置定义该数据： `--merge-path` 参数。 执行此操作时，CRX2Oak仅将新节点复制到目标存储库中，并将旧节点保持不变。
 
 ![chlimage_1-152](assets/chlimage_1-152.png)
 
 #### 版本支持 {#version-support}
 
-默认情况下，AEM将为每个要修改的节点或页面创建一个版本，并将其存储在存储库中。 然后，可以使用这些版本将页面还原到以前的状态。
+默认情况下，AEM会为每个要修改的节点或页面创建一个版本，并将其存储在存储库中。 然后，可以使用这些版本将页面还原到以前的状态。
 
-但是，即使删除了原始页面，也不会清除这些版本。 在处理已运行多年的存储库时，迁移可能需要处理由孤立版本导致的大量冗余数据。
+但是，即使删除了原始页面，也不会清除这些版本。 在处理已运行很长时间的存储库时，迁移可能会重新处理由孤立版本导致的冗余数据。
 
 对于这些类型的情况，一个有用的功能是添加 `--copy-versions` 参数。 它用于在迁移或复制存储库期间跳过版本节点。
 
@@ -136,7 +132,7 @@ CRX2Oak的开源版本以oak-upgrade的形式提供。 它支持所有功能，�
 
 * `--src-user:` 源RDB的用户
 
-* `--user`：目标RDB的用户
+* `--user`：目标RDB
 
 * `--password`：目标RDB的密码。
 
@@ -144,13 +140,13 @@ CRX2Oak的开源版本以oak-upgrade的形式提供。 它支持所有功能，�
 
 * `--early-shutdown`：在复制节点之后和应用提交挂接之前关闭源JCR2存储库
 * `--fail-on-error`：如果无法从源存储库中读取节点，则强制迁移失败。
-* `--ldap`：将LDAP用户从CQ 5.x实例迁移到基于Oak的实例。 为了使其正常工作，需要将Oak配置中的身份提供程序命名为ldap。 欲了解更多信息，请参见 [LDAP文档](/help/sites-administering/ldap-config.md).
+* `--ldap`：将LDAP用户从CQ 5.x实例迁移到基于Oak的实例。 要使此功能正常工作，必须将Oak配置中的身份提供程序命名为ldap。 欲了解更多信息，请参见 [LDAP文档](/help/sites-administering/ldap-config.md).
 
-* `--ldap-config:` 将此功能与 `--ldap` 使用多个LDAP服务器进行身份验证的CQ 5.x存储库的参数。 您可以使用它指向CQ 5.x `ldap_login.conf` 或 `jaas.conf` 配置文件。 格式为 `--ldapconfig=path/to/ldap_login.conf`.
+* `--ldap-config:` 将此用于 `--ldap` 使用多个LDAP服务器进行身份验证的CQ 5.x存储库的参数。 您可以使用它指向CQ 5.x `ldap_login.conf` 或 `jaas.conf` 配置文件。 格式为 `--ldapconfig=path/to/ldap_login.conf`.
 
 ### 版本存储选项 {#version-store-options}
 
-* `--copy-orphaned-versions`：跳过复制孤立版本。 支持的参数包括： `true`， `false` 和 `yyyy-mm-dd`. 默认为 `true`.
+* `--copy-orphaned-versions`：跳过复制孤立版本。 支持的参数包括： `true`， `false`、和 `yyyy-mm-dd`. 默认为 `true`.
 
 * `--copy-versions:` 复制版本存储。 参数： `true`， `false`， `yyyy-mm-dd`. 默认为 `true`.
 
@@ -186,7 +182,7 @@ CRX2Oak的开源版本以oak-upgrade的形式提供。 它支持所有功能，�
 
 ## 调试 {#debugging}
 
-您还可以为迁移过程启用调试信息，以便解决迁移过程中可能出现的任何问题。 根据您希望在其中运行工具的模式，您可以采用不同的方式执行此操作：
+您还可以启用迁移过程的调试信息，以解决迁移过程中可能出现的任何问题。 根据您希望在其中运行工具的模式，您可以采用不同的方式执行此操作：
 
 <table>
  <tbody>
@@ -200,7 +196,7 @@ CRX2Oak的开源版本以oak-upgrade的形式提供。 它支持所有功能，�
   </tr>
   <tr>
    <td>独立模式</td>
-   <td><p>添加 <strong>—trace</strong> CRX2Oak命令行选项，以在标准输出中显示TRACE事件（您需要使用重定向字符“&gt;”或“T”命令自己重定向日志，以供以后检查）。</p> </td>
+   <td><p>添加 <strong>—trace</strong> CRX2Oak命令行选项，以便您可以在标准输出中显示TRACE事件（您必须使用重定向字符“&gt;”或“T”命令自己重定向日志，以供以后检查）。</p> </td>
   </tr>
  </tbody>
 </table>
