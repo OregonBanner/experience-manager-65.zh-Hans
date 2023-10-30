@@ -1,8 +1,6 @@
 ---
 title: 查看凭据使用信息
-seo-title: Review credential use information
-description: 了解如何查看凭据使用信息。
-seo-description: Learn how to review credential use information.
+description: 了解如何查看凭据使用信息。 可通过Acrobat Reader扩展访问凭据的使用信息，其中介绍了凭据的使用情况。
 uuid: 02af75f9-c235-470d-a98b-a2102aa31381
 contentOwner: admin
 content-type: reference
@@ -10,16 +8,16 @@ geptopics: SG_AEMFORMS/categories/configuring_acrobat_reader_dc_extensions
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: cdf61cff-768b-49f7-9926-400bc96b0708
 exl-id: a8e16cf8-f3c8-48ce-87da-2f0de0b10a6e
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 6caf3ef4a00275f0f73be52b6a9ccba77d277f1a
 workflow-type: tm+mt
-source-wordcount: '180'
+source-wordcount: '196'
 ht-degree: 0%
 
 ---
 
 # 查看凭据使用信息 {#review-credential-use-information}
 
-凭据包含的信息描述其预期用途，可以通过Acrobat Reader DC扩展最终用户Web应用程序访问。 您可以使用此信息确定安装的凭据类型（评估凭据或生产凭据）及其有效日期。
+凭据包含的信息描述其预期用途，可以通过Acrobat Reader DC扩展最终用户Web应用程序访问。 您可以使用此信息确定安装的凭据的类型（评估或生产）及其有效日期。
 
 1. 打开Web浏览器并输入此URL：
 
@@ -39,4 +37,4 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->凭据的过期日期还可在管理控制台的“设置”>“信任存储区管理”>“本地凭据”页面的“过期日期”下找到。
+>凭据的过期日期也可在管理控制台的“设置”>“信任存储区管理”>“本地凭据”页面上的“过期日期”下找到。

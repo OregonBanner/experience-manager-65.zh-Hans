@@ -1,8 +1,6 @@
 ---
 title: 将自适应Forms与XFA表单模板同步
-seo-title: Synchronizing Adaptive Forms with XFA Form Templates
-description: 将自适应表单与XFA/XDP文件同步。
-seo-description: Synchronizing Adaptive forms with XFA/XDP files.
+description: 了解如何将表单与XFA/XDP文件同步。 它会重用与XFA/XDP文件中相应字段的更改同步的表单字段。
 uuid: 92818132-1ae0-4576-84f2-ece485a34457
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
@@ -10,9 +8,9 @@ discoiquuid: dac4539b-804d-4420-9170-68000ebb2638
 docset: aem65
 feature: Adaptive Forms
 exl-id: fed67c23-a9b7-403e-9199-dfd527d5f209
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 6caf3ef4a00275f0f73be52b6a9ccba77d277f1a
 workflow-type: tm+mt
-source-wordcount: '1211'
+source-wordcount: '1231'
 ht-degree: 5%
 
 ---

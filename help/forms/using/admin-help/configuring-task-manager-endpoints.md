@@ -1,8 +1,6 @@
 ---
 title: 配置任务管理器端点
-seo-title: Configuring Task Manager endpoints
-description: 了解如何配置任务管理器端点。
-seo-description: Learn how to configure Task Manager endpoints.
+description: 了解如何配置Task Manager端点以调用服务。 配置Task Manager端点需要不同的设置。
 uuid: 07604b10-0bd7-4bce-9624-7ebac4754f56
 contentOwner: admin
 content-type: reference
@@ -10,16 +8,16 @@ geptopics: SG_AEMFORMS/categories/managing_endpoints
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 9c55feb9-23d8-4798-a3c5-70ec736df3ad
 exl-id: 8495a3d7-6ac9-41f5-b1f9-31decaba118a
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 6caf3ef4a00275f0f73be52b6a9ccba77d277f1a
 workflow-type: tm+mt
-source-wordcount: '232'
+source-wordcount: '245'
 ht-degree: 0%
 
 ---
 
 # 配置任务管理器端点 {#configuring-task-manager-endpoints}
 
-任务管理器端点使Workspace用户能够调用该服务。
+任务管理器端点使Workspace用户能够调用服务。
 
 **任务管理器端点设置**
 
@@ -31,7 +29,7 @@ ht-degree: 0%
 
 **任务说明：** 启动此工作流的用户的说明。
 
-**进程所有者：** 负责该流程的人员姓名。
+**进程所有者：** 负责流程的人员的姓名。
 
 **用户可以转发任务：** 允许用户转发初始任务。
 
@@ -41,7 +39,7 @@ ht-degree: 0%
 
 **最初锁定的任务：** 锁定初始任务。
 
-**为共享队列添加ACL：** 初始任务是通过共享队列用户的ACL创建的。
+**为共享队列添加ACL：** 初始任务是为共享队列用户创建的ACL。
 
 **分类：** （必需）用户将在工作区中看到表单的类别。 从列表中选择一个类别，或选择“新建类别”以添加类别。
 

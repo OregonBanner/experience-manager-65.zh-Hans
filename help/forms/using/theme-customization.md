@@ -1,25 +1,22 @@
 ---
 title: 主题自定义
-seo-title: Theme Customization
-description: 如何自定义AEM Forms应用程序的主题。
-seo-description: How to customize the theme of your AEM Forms app.
-uuid: 36632e67-1cc6-416d-ae80-d84bbabab4bd
+description: 了解如何自定义AEM Forms应用程序的主题。 您可以自定义HTML代码和CSS文件，以提供特定于组织的外观。
 contentOwner: robhagat
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
 discoiquuid: c72f608e-052a-4bf9-b7bc-ddf57483af35
 exl-id: 9b8c5933-b783-48f9-b463-15a01e06ee98
-source-git-commit: 6bc228866aca785ec768daefb73970fc24568ef0
+source-git-commit: 6caf3ef4a00275f0f73be52b6a9ccba77d277f1a
 workflow-type: tm+mt
-source-wordcount: '223'
-ht-degree: 0%
+source-wordcount: '238'
+ht-degree: 4%
 
 ---
 
 # 主题自定义 {#theme-customization}
 
-您可以自定义HTML代码和CSS文件，以便为AEM Forms应用程序提供独特的组织特定外观。 例如，您可以更改任务或“起点”的背景颜色和高度。 以下示例提供了更改说明：
+您可以自定义HTML代码和CSS文件，为AEM Forms应用程序提供独特的组织特定外观。 例如，您可以更改任务或“起点”的背景颜色和高度。 以下示例提供了更改说明：
 
 * 显示说明代替说明
 * 显示路由数
@@ -29,7 +26,7 @@ ht-degree: 0%
 
 1. 打开您的项目。
 
-   * 对于iOS，请打开 `Capture.xcodeproj` 在Xcode中
+   * 对于iOS，打开 `Capture.xcodeproj` 在Xcode中
    * 对于Android，在Eclipse中打开Android项目。
    * 对于Windows，打开 `MWSWindows.sln` 在Visual Studio中。
 
@@ -39,7 +36,7 @@ ht-degree: 0%
    * 在Eclipse中，导航到 **资产> www > wsmobile > js >运行时>模板** 文件夹。
    * 在Visual Studio中，导航到 **MWSWindows > www > wsmobile > js >运行时>模板** 文件夹。
 
-1. 打开 `template.html` 要编辑的文件。
+1. 打开 `template.html` 文件以供编辑。
 1. 找到以下字符串：
 
    ```jsp
@@ -78,9 +75,9 @@ ht-degree: 0%
    * 在Eclipse中，导航到 **资产> www > wsmobile > css**.
    * 在Visual Studio中，导航到 **MWSWindows > www > wsmobile > css**.
 
-1. 打开 `_style.css` 要编辑的文件。
+1. 打开 `_style.css` 文件以供编辑。
 1. 对于背景图像，更改 `#323232` 到 `#fff`.
 1. 保存更改并关闭 `_style.css` 文件。
 1. 打开AEM Forms应用程序。
 
-   AEM Forms应用程序现在显示说明而不是描述。
+   AEM Forms应用程序现在显示说明，而不是说明。

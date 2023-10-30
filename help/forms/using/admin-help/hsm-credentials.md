@@ -1,14 +1,14 @@
 ---
 title: 管理HSM凭证
-description: 了解如何管理HSM凭证。
+description: 了解如何管理HSM凭证。 您可以从“信任存储区管理”页面管理HSM。 您可以查看、检查、更新、重置和删除HSM组件。
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/managing_certificates_and_credentials
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: facbeab2-de95-4778-894c-faa771d3391e
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 6caf3ef4a00275f0f73be52b6a9ccba77d277f1a
 workflow-type: tm+mt
-source-wordcount: '1304'
+source-wordcount: '1324'
 ht-degree: 0%
 
 ---

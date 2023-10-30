@@ -1,8 +1,6 @@
 ---
 title: 配置文件类型设置
-seo-title: Configuring file type settings
-description: 了解如何配置文件类型设置。
-seo-description: Learn how to configure file type settings.
+description: 了解如何配置文件类型设置。 在PDF Generator中，您可以为支持的文件类型设置应用程序设置，以配置文件类型设置。
 uuid: ab037659-c6ff-4de9-9417-f5a6fc8122cb
 geptopics: SG_AEMFORMS/categories/working_with_pdf_generator
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -10,9 +8,9 @@ content-type: reference
 discoiquuid: ab19b248-8931-4cf6-b6a5-fb7b067c4a49
 feature: PDF Generator
 exl-id: 1a6640cc-22ef-41d5-a0c6-7a2c2dabcef1
-source-git-commit: 5f4bbad87768cf6bd73771f9eac6e01ab3bf3309
+source-git-commit: 6caf3ef4a00275f0f73be52b6a9ccba77d277f1a
 workflow-type: tm+mt
-source-wordcount: '6158'
+source-wordcount: '6177'
 ht-degree: 0%
 
 ---
@@ -253,7 +251,7 @@ PDF Generator支持减小PDF文件大小的功能。 是否使用所有这些设
 
    * 如有必要，请从 **字体源** 下拉菜单。 此下拉菜单列出了中指定的字体目录。 **主页>设置>核心系统>核心配置**.
    * 从中选择一种或多种字体 **可用字体** 列表并单击 **添加**. 这些字体将添加到 **要取消嵌入的字体** 列表。
-   * 如果要取消嵌入表单服务器上不存在的某些字体，请在 **添加字体以取消嵌入** 盒子。 单击 **添加**.
+   * 如果要取消嵌入表单服务器上不存在的某些字体，请在 **添加字体以取消嵌入** 盒子。 单击&#x200B;**添加**。
 
    >[!NOTE]
    >

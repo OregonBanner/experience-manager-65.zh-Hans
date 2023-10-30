@@ -1,14 +1,14 @@
 ---
 title: 端点类型
-description: 了解不同类型的端点。
+description: 了解不同类型的端点。 可以将不同类型的端点（如电子邮件、Watched文件夹等）添加到服务。
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/managing_endpoints
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: 380cab7f-e7f7-4cb7-bd20-ea530a349fac
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 6caf3ef4a00275f0f73be52b6a9ccba77d277f1a
 workflow-type: tm+mt
-source-wordcount: '438'
+source-wordcount: '455'
 ht-degree: 0%
 
 ---
