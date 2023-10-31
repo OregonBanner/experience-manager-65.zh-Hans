@@ -2,10 +2,10 @@
 title: 配置翻译规则
 description: 了解如何定义翻译规则，标识要翻译的内容。
 exl-id: 262503af-361b-491c-8639-0bb32f0a4c0e
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: f627bc2b58578df1b4ff6c95d87f0c64daafa1c7
 workflow-type: tm+mt
 source-wordcount: '871'
-ht-degree: 93%
+ht-degree: 84%
 
 ---
 
@@ -15,12 +15,12 @@ ht-degree: 93%
 
 ## 迄今为止的故事 {#story-so-far}
 
-在 AEM Headless 翻译历程的上一个文档[配置翻译连接器](configure-connector.md)中，您已了解如何安装和配置翻译连接器，现在应：
+在AEM Headless翻译历程的上一个文档中， [配置翻译集成](configure-connector.md) 您已了解如何安装和配置翻译集成，现在应：
 
 * 了解 AEM 中翻译集成框架的重要参数。
 * 能够自行建立与翻译服务的连接。
 
-现在您的连接器已设置完毕，本文将引导您完成下一步，即标识要翻译的内容。
+现在，您的集成已设置完毕，本文将引导您完成下一步，即标识需要翻译的内容。
 
 ## 目标 {#objective}
 
@@ -92,7 +92,7 @@ ht-degree: 93%
 * 了解翻译规则的用途。
 * 能够定义您自己的翻译规则。
 
-在此知识的基础上继续您的 AEM Headless 翻译历程，接下来查看文档[翻译内容](translate-content.md)，了解您的连接器和规则如何协作以翻译 Headless 内容。
+在此知识的基础上继续您的AEM Headless翻译历程，接下来查看文档 [翻译内容](translate-content.md) 在这里，您将了解集成和规则如何协作以翻译headless内容。
 
 ## 其他资源 {#additional-resources}
 

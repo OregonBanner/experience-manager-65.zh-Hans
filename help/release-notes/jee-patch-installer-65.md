@@ -57,11 +57,11 @@ AEM 6.5 Forms JEE修补程序安装程序包含在此修补程序发布之前可
 
    * 或者取消选择 **启动Configuration Manager** 选项，然后再单击 **[!UICONTROL 完成]**. 运行之前 **配置管理器** 使用 **Configurationmanager.exe** 或 **ConfigurationManager_IPv6.exe**，导航到 *`<AEMForms_Install_Dir>\configurationManager\bin`* 目录和替换 [配置管理器.lax](/help/assets/ConfigurationManager.lax) 和 [ConfigurationManager_IPV6.lax](/help/assets/ConfigurationManager_IPv6.lax) 文件。
 
-   
-   >[!NOTE]
+   >>
+   [!NOTE]
+   >>
+   使用 **ConfigurationManager.bat** 文件可帮助您避免手动更新.lax文件的名称。
    >
-   >使用 **ConfigurationManager.bat** 文件可帮助您避免手动更新.lax文件的名称。
-   
 
 1. **[仅适用于基于Unix的]：**
 
