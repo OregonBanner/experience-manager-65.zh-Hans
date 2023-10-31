@@ -2,10 +2,10 @@
 title: 异步作业
 description: Adobe Experience Manager 通过异步完成某些资源密集型任务来优化性能。
 exl-id: 4af1bcfe-9f2e-44a4-8666-881f2dccc3bc
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: cc63291c32f7a234398ebe8bf67ab53aaf8fa90f
 workflow-type: tm+mt
-source-wordcount: '895'
-ht-degree: 96%
+source-wordcount: '800'
+ht-degree: 97%
 
 ---
 
@@ -19,7 +19,6 @@ ht-degree: 96%
 * 移动许多资产或包含许多引用的资产
 * 批量导出/导入资产元数据
 * 从远程 Experience Manager 部署获取超过阈值限制设置的资产
-* 移动页面
 * 转出 Live Copy
 
 您可以从&#x200B;**[!UICONTROL 异步作业状态]**&#x200B;功能板（位于&#x200B;**全局导航** -> **工具** -> **操作** -> **作业**）查看异步作业的状态。
@@ -113,19 +112,6 @@ AEM 每天 01:00 运行清除作业，以删除已完成的已超过一天的异
 1. 在&#x200B;**[!UICONTROL 资产/参考的阈值数]**&#x200B;框中，指定用于异步处理移动操作的资产/文件夹的阈值数。
 
    ![资产移动阈值](assets/async-move-threshold.png)
-
-1. 选中选项&#x200B;**启用电子邮件通知**，以接收此作业状态的电子邮件通知。例如，成功、失败。
-1. 保存更改。
-
-### 配置异步页面移动操作 {#configuring-asynchronous-page-move-operations}
-
-如果对要移动的页面的引用数量超过阈值数，将异步执行移动操作。
-
-1. 在“全局导航”中，单击&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 操作]** > **[!UICONTROL Web 控制台]**。
-1. 从 Web 控制台中，打开&#x200B;**[!UICONTROL 异步页面移动操作作业处理配置。]**
-1. 在&#x200B;**[!UICONTROL 引用的阈值数]**&#x200B;字段中，指定用于异步处理页面移动操作的引用的阈值数。
-
-   ![页面移动阈值](assets/async-page-move.png)
 
 1. 选中选项&#x200B;**启用电子邮件通知**，以接收此作业状态的电子邮件通知。例如，成功、失败。
 1. 保存更改。
