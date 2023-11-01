@@ -1,13 +1,13 @@
 ---
 title: AEM Forms JEE修补程序安装程序
-description: AEM Forms JEE修补程序安装程序，用于修复AEM 6.5 Forms组件中的问题。
+description: 了解如何使用AEM Forms JEE修补程序安装程序来修复AEM 6.5 Forms组件中的问题。
 uuid: 76662858-afca-4ba3-883b-9b9a61874f15
 content-type: reference
 discoiquuid: b0283feb-c3ec-4ef0-885c-46bc83a61e26
 exl-id: 6b17472b-9226-4319-b305-4dba862d21af
-source-git-commit: 0e5b89617d481c69882ec5d4658e76855aa9b691
+source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '535'
 ht-degree: 20%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 20%
 
 >[!NOTE]
 >
->[联系支持人员](https://www.adobe.com/cn/account/sign-in.supportportal.html) 以获取详细信息或获取修补程序。
+>[联系支持人员](https://experienceleague.adobe.com/?support-solution=General&amp;support-tab=home#support) 以获取详细信息或获取修补程序。
 
 ## 关于修补程序安装程序 {#about-the-patch-installer}
 
@@ -39,10 +39,10 @@ AEM 6.5 Forms JEE修补程序安装程序包含在此修补程序发布之前可
       * （Windows 32位） `Windows\Disk1\InstData\VM`
       * （Windows 64位） `Windows_64Bit`\ `Disk1\InstData\VM`
 
-   * **Linux**
+   * **Linux®**
 导航到相应的目录，然后在命令提示符下键入 `./aem65_cfp_install.bin`.
 
-      * (Linux) `Linux/Disk1/InstData/NoVM`
+      * (Linux®) `Linux/Disk1/InstData/NoVM`
 
    这会启动安装向导，引导您完成安装。
 
@@ -52,8 +52,8 @@ AEM 6.5 Forms JEE修补程序安装程序包含在此修补程序发布之前可
 1. 阅读“Pre-Installation Summary”信息，然后单击 **[!UICONTROL Install]**。
 1. 安装完成后，单击 **[!UICONTROL Next]** 以将快速修补程序更新应用到已安装的文件。
 
-1. **[仅适用于Windows]：** 执行以下步骤之一：
-   * 取消选择 **启动Configuration Manager** 选项，然后再单击 **[!UICONTROL 完成]**. 运行 **配置管理器** 通过使用 **ConfigurationManager.bat** 文件位于 `[aem-forms root]\configurationManager\bin`.
+1. **[仅适用于Windows]：** 执行以下操作：
+   * 取消选择 **启动Configuration Manager** 选项，然后再单击 **[!UICONTROL 完成]**. 运行 **配置管理器** 通过使用 **ConfigurationManager.bat** 文件位置 `[aem-forms root]\configurationManager\bin`.
 
    * 或者取消选择 **启动Configuration Manager** 选项，然后再单击 **[!UICONTROL 完成]**. 运行之前 **配置管理器** 使用 **Configurationmanager.exe** 或 **ConfigurationManager_IPv6.exe**，导航到 *`<AEMForms_Install_Dir>\configurationManager\bin`* 目录和替换 [配置管理器.lax](/help/assets/ConfigurationManager.lax) 和 [ConfigurationManager_IPV6.lax](/help/assets/ConfigurationManager_IPv6.lax) 文件。
 
@@ -69,10 +69,10 @@ AEM 6.5 Forms JEE修补程序安装程序包含在此修补程序发布之前可
 
 1. 根据您的应用程序服务器，选择以下文档之一，然后按照 *配置和部署AEM表单* 部分。
 
-   * [安装和部署AEM forms for JBoss](https://www.adobe.com/go/learn_aemforms_installJBoss_65)
-   * [安装和部署AEM forms for WebSphere](https://www.adobe.com/go/learn_aemforms_installWebSphere_65)
+   * [安装和部署AEM forms for JBoss®](https://www.adobe.com/go/learn_aemforms_installJBoss_65)
+   * [安装和部署AEM forms for WebSphere®](https://www.adobe.com/go/learn_aemforms_installWebSphere_65)
 
-1. （仅限JBoss）安装修补程序并配置服务器后，删除JBoss应用程序服务器的临时和工作目录。
+1. (仅限JBoss®)安装修补程序并配置服务器后，删除JBoss®应用程序服务器的tmp和工作目录。
 
 ## 部署后配置 {#post-deployment-configurations}
 
@@ -91,4 +91,4 @@ AEM 6.5 Forms JEE修补程序安装程序包含在此修补程序发布之前可
 * 文档安全
 * Foundation JEE
 
-[联系支持人员](https://www.adobe.com/cn/account/sign-in.supportportal.html)
+[联系支持人员](https://experienceleague.adobe.com/?support-solution=General&amp;support-tab=home#support)

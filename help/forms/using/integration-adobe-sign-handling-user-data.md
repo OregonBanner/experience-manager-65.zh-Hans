@@ -1,14 +1,14 @@
 ---
 title: 与Adobe Sign集成 |处理用户数据
-description: AEM Forms集成了Adobe Sign，以便通过自适应表单进行电子签名。 它支持各种工作流的多个签名选项。
+description: 了解AEM Forms与Adobe Sign的集成，以在自适应表单中进行电子签名。 它支持各种工作流的多个签名选项。
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 feature: Acrobat Sign
 role: Admin
 exl-id: b43ed9b7-b1ef-4878-ae3b-643b558eed7b
-source-git-commit: 20b0d0db54dc30285c056a10032f02ba45f8baca
+source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
 workflow-type: tm+mt
-source-wordcount: '321'
+source-wordcount: '323'
 ht-degree: 0%
 
 ---

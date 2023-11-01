@@ -1,15 +1,13 @@
 ---
 title: Forms JEE工作流 |处理用户数据
-description: 用于设计、创建和管理业务流程的AEM Forms JEE工作流。
-uuid: 3b06ef19-d3c4-411e-9530-2c5d2159b559
+description: 了解如何使用AEM Forms JEE工作流设计、创建和管理业务流程。
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 5632a8df-a827-4e38-beaa-18b61c2208a3
 role: Admin
 exl-id: 847fa303-8d1e-4a17-b90d-5f9da5ca2d77
-source-git-commit: 0e5b89617d481c69882ec5d4658e76855aa9b691
+source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
 workflow-type: tm+mt
-source-wordcount: '1370'
+source-wordcount: '1388'
 ht-degree: 0%
 
 ---
@@ -42,9 +40,9 @@ AEM Forms JEE工作流提供了用于设计、创建和管理业务流程的工�
 
 ### 在工作流发起者或参与者已知时标识流程实例ID {#initiator-participant}
 
-执行以下步骤以标识工作流发起者或参与者的进程实例ID：
+执行以下步骤，以便您能够为工作流发起者或参与者标识流程实例ID：
 
-1. 在AEM Forms服务器数据库中执行以下命令，以从检索工作流发起人或参与者的主体ID `edcprincipalentity` 数据库表。
+1. 在AEM Forms Server数据库中执行以下命令，以从检索工作流发起人或参与者的主体ID `edcprincipalentity` 数据库表。
 
    ```sql
    select id from edcprincipalentity where canonicalname='user_ID'
@@ -75,7 +73,7 @@ AEM Forms JEE工作流提供了用于设计、创建和管理业务流程的工�
 
    对于孤立任务，如果 `process_instance_id` 为0（零），记下相应的任务ID并查看 [处理孤立任务](#orphan).
 
-1. 请按照 [根据流程实例ID从工作流实例中清除用户数据](/help/forms/using/forms-workflow-jee-handling-user-data.md#purge) 部分，用于删除已标识的流程实例ID的用户数据。
+1. 请按照 [根据流程实例ID从工作流实例中清除用户数据](/help/forms/using/forms-workflow-jee-handling-user-data.md#purge) 部分，以便您可以删除已标识流程实例ID的用户数据。
 
 ### 在用户数据存储在原始变量中时识别流程实例ID {#primitive}
 
@@ -85,7 +83,7 @@ AEM Forms JEE工作流提供了用于设计、创建和管理业务流程的工�
 * **数值**：直接包含用户ID。
 * **XML**：在作为文本列存储在数据库中的文本中包含作为子字符串的用户ID，并且可以像字符串一样进行查询。
 
-执行以下步骤，确定在原始类型变量中存储数据的工作流是否包含用户的数据：
+执行以下步骤，以便确定在原始类型变量中存储数据的工作流是否包含用户的数据：
 
 1. 执行以下数据库命令：
 
@@ -111,13 +109,13 @@ AEM Forms JEE工作流提供了用于设计、创建和管理业务流程的工�
 
    该查询返回与指定的关联的所有进程实例ID `user_ID`.
 
-1. 请按照 [根据流程实例ID从工作流实例中清除用户数据](/help/forms/using/forms-workflow-jee-handling-user-data.md#purge) 部分，用于删除已标识的流程实例ID的用户数据。
+1. 请按照 [根据流程实例ID从工作流实例中清除用户数据](/help/forms/using/forms-workflow-jee-handling-user-data.md#purge) 部分，以便您可以删除已标识流程实例ID的用户数据。
 
 ### 根据流程实例ID从工作流实例中清除用户数据 {#purge}
 
 现在，您已标识与用户关联的流程实例ID，请执行以下操作以从相应的流程实例中删除用户数据。
 
-1. 执行以下命令以从检索进程实例的长生命周期调用ID和状态 `tb_process_instance` 表格。
+1. 运行以下命令，以便您可以从以下位置检索进程实例的长生命周期调用ID和状态： `tb_process_instance` 表格。
 
    ```sql
    select long_lived_invocation_id, status from tb_process_instance where id='process_instance_id'
@@ -127,7 +125,7 @@ AEM Forms JEE工作流提供了用于设计、创建和管理业务流程的工�
 
 1. 创建公共实例 `ProcessManager` 客户端( `com.adobe.idp.workflow.client.ProcessManager`)使用 `ServiceClientFactory` 具有正确连接设置的实例。
 
-   有关更多信息，请参阅的Java API参考 [类ProcessManager](https://helpx.adobe.com/experience-manager/6-3/forms/ProgramLC/javadoc/com/adobe/idp/workflow/client/ProcessManager.html).
+   有关更多信息，请参阅的Java™ API参考 [类ProcessManager](https://helpx.adobe.com/experience-manager/6-3/forms/ProgramLC/javadoc/com/adobe/idp/workflow/client/ProcessManager.html).
 
 1. 检查工作流实例的状态。 如果状态不是2 (COMPLETE)或4 (TERMINATED)，请首先通过调用以下方法终止实例：
 
@@ -137,7 +135,7 @@ AEM Forms JEE工作流提供了用于设计、创建和管理业务流程的工�
 
    `ProcessManager.purgeProcessInstance(<long_lived_invocation_id>)`
 
-   此 `purgeProcessInstance` 如果已配置，则方法会从AEM Forms服务器数据库和GDS中完全删除指定调用ID的所有数据。
+   此 `purgeProcessInstance` 如果已配置，则方法会从AEM Forms Server数据库和GDS中完全删除指定调用ID的所有数据。
 
 ### 处理孤立任务 {#orphan}
 
@@ -145,7 +143,7 @@ AEM Forms JEE工作流提供了用于设计、创建和管理业务流程的工�
 
 获得任务ID后，请执行以下操作以从GDS和数据库中清除具有孤立任务的关联文件和数据。
 
-1. 在AEM Forms服务器数据库上执行以下命令，检索已标识任务ID的ID。
+1. 在AEM Forms Server数据库上运行以下命令，以便您可以检索已标识任务ID的ID。
 
    ```sql
    select id from tb_form_data where task_id=<task_id>
@@ -185,7 +183,7 @@ AEM Forms JEE工作流提供了用于设计、创建和管理业务流程的工�
       delete from tb_dm_deletion where sessionid=<session_id>
       ```
 
-1. 执行以下命令以从AEM Forms服务器数据库中删除任务ID的数据：
+1. 运行以下命令，以便您可以从AEM Forms Server数据库中删除任务ID的数据：
 
    ```sql
    delete from tb_task_acl where task_id=<task_id>

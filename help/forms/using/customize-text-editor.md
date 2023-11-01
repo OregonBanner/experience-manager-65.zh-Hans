@@ -1,17 +1,15 @@
 ---
 title: 自定义文本编辑器
-description: 了解如何在AEM Forms环境中自定义文本编辑器。
-uuid: 598246fe-8f15-49b6-b6d3-9154bebcd27e
+description: 了解如何在Adobe Experience Manager Forms环境中自定义文本编辑器。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: correspondence-management
-discoiquuid: 666fee78-a103-44dc-afe7-71b90ce219b7
 docset: aem65
 feature: Correspondence Management
 exl-id: 1dd3f55c-24f7-4331-a9a3-c9223e613fec
-source-git-commit: 20b0d0db54dc30285c056a10032f02ba45f8baca
+source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
 workflow-type: tm+mt
-source-wordcount: '609'
+source-wordcount: '604'
 ht-degree: 1%
 
 ---
@@ -29,7 +27,7 @@ ht-degree: 1%
 * 字体系列和大小、高度、字母间距和日期格式的默认值
 * 项目符号缩进
 
-为此，您需要：
+执行以下操作：
 
 1. [通过在CRX中编辑tbxeditor-config.xml文件来自定义字体](#customizefonts)
 1. [将自定义字体添加到客户端计算机](#addcustomfonts)
@@ -159,14 +157,14 @@ ht-degree: 1%
       </editorConfig>
       ```
 
-   1. 在文件中进行所需的更改，以更改字体设置的以下内容：
+   1. 在文件中进行所需的更改，以便在字体设置中更改以下内容：
 
       * 添加或删除字体系列和大小
       * 高度和字母间距等属性
       * 字体系列和大小、高度、字母间距和日期格式的默认值
       * 项目符号缩进
 
-      例如，要添加名为Sazanami Mincho Medium的日语字体，需要在XML文件中输入以下条目： `<font>Sazanami Mincho Medium</font>`. 您还需要将此字体安装在用于访问和使用字体自定义的客户端计算机上。 有关更多信息，请参阅 [将自定义字体添加到客户端计算机](#addcustomfonts).
+      例如，要添加名为Sazanami Mincho Medium的日语字体，必须在XML文件中输入以下内容： `<font>Sazanami Mincho Medium</font>`. 您还必须将此字体安装在用于访问和使用字体自定义的客户端计算机上。 有关更多信息，请参阅 [将自定义字体添加到客户端计算机](#addcustomfonts).
 
       您还可以更改文本各方面的默认值，通过删除条目从文本编辑器中删除字体。
 
@@ -174,7 +172,7 @@ ht-degree: 1%
 
 ## 将自定义字体添加到客户端计算机 {#addcustomfonts}
 
-当您在“通信管理”文本编辑器中访问字体时，它需要出现在用于访问“通信管理”的客户端计算机上。 要在文本编辑器中使用自定义字体，首先需要在客户端计算机上安装该字体。
+在“通信管理”文本编辑器中访问字体时，该字体必须存在于用于访问“通信管理”的客户端计算机中。 要在文本编辑器中使用自定义字体，必须先在客户端计算机上安装该字体。
 
 有关安装字体的详细信息，请参阅以下内容：
 
@@ -183,7 +181,7 @@ ht-degree: 1%
 
 ## 访问字体自定义 {#access-font-customizations}
 
-在CRX的tbxeditor-config.xml文件中更改了字体，并在用于访问AEM Forms的客户端计算机上安装了所需的字体后，这些更改将显示在文本编辑器中。
+在 `tbxeditor-config.xml` 文件，并在用于访问AEM Forms的客户端计算机上安装了所需的字体，则更改会显示在文本编辑器中。
 
 例如， Sazanami Mincho Medium字体已添加到 [通过在CRX中编辑tbxeditor-config.xml文件来自定义字体](#customizefonts) 过程显示在文本编辑器UI中，如下所示：
 
@@ -191,4 +189,4 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->要查看日文文本，首先需要输入包含日文字符的文本。 应用自定日文字体时，只按某种方式设置文本格式。 应用自定日文字体不会将英文或其他字符更改为日文字符。
+>要查看日文文本，必须先输入包含日文字符的文本。 应用自定日文字体时，只按某种方式设置文本格式。 应用自定日文字体不会将英文或其他字符更改为日文字符。

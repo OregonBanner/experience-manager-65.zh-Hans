@@ -1,23 +1,21 @@
 ---
 title: 登录AEM Forms工作流
-description: 调试AEM Forms工作流问题并为AEM Forms工作流启用调试日志记录以查看日志。
-uuid: 869d0271-c7e3-4b6d-8e63-893dc6af8b8a
+description: 了解如何调试AEM Forms工作流问题并为AEM Forms工作流启用调试日志记录以查看日志。
 contentOwner: anujkapo
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
-discoiquuid: 14bb521a-42ea-4fe2-90fb-202e7ddf917a
 docset: aem65
 exl-id: 601c8d95-0d1a-4945-a522-e85d3e9fc4ae
-source-git-commit: 20b0d0db54dc30285c056a10032f02ba45f8baca
+source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
 workflow-type: tm+mt
-source-wordcount: '288'
+source-wordcount: '292'
 ht-degree: 5%
 
 ---
 
 # 登录AEM Forms工作流{#logging-in-aem-forms-workflows}
 
-Forms工作流步骤提供详细的日志，可方便地调试与工作流相关的问题。 为AEM Forms工作流启用调试日志记录以查看日志。
+Forms Workflow步骤提供详细的日志，可方便地调试与工作流相关的问题。 为AEM Forms工作流启用调试日志记录以查看日志。
 
 默认情况下，所有日志记录信息在 **error.log** 文件位于 */crx-repository/logs/* 目录。
 
@@ -76,7 +74,7 @@ Forms工作流步骤提供详细的日志，可方便地调试与工作流相关
 
 ## 为AEM Forms工作流启用调试日志记录 {#enable-debug-logging-for-aem-forms-workflows}
 
-执行以下步骤以启用AEM Forms工作流的调试日志记录：
+执行以下操作，以便为AEM Forms工作流启用调试日志记录：
 
 1. 转到AEM Web控制台配置管理器，网址为：
 

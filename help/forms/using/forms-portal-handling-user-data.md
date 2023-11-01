@@ -1,32 +1,32 @@
 ---
 title: Forms门户 |处理用户数据
-description: 管理AEM Forms门户上的用户数据，例如访问、删除和数据存储。
+description: 了解如何管理AEM Forms Portal上的用户数据，例如访问、删除和数据存储。
 contentOwner: vishgupt
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 role: Admin
 exl-id: 791524a4-a8bb-4632-a68d-e96864e139a9
-source-git-commit: bb1e1790b8b9e6d6224c62b1f51d8af50a82e975
+source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
 workflow-type: tm+mt
-source-wordcount: '865'
+source-wordcount: '867'
 ht-degree: 0%
 
 ---
 
 # Forms门户 |处理用户数据 {#forms-portal-handling-user-data}
 
-[!DNL AEM Forms] portal提供了一些组件，可用于在页面上列出自适应表单、HTML5表单和其他Forms资源 [!DNL AEM Sites] 页面。 此外，您还可以将其配置为显示草稿以及为登录用户提交的自适应表单和HTML5表单。 有关表单门户的更多信息，请参阅 [在门户上发布表单的简介](/help/forms/using/introduction-publishing-forms.md).
+[!DNL AEM Forms] Portal提供了一些组件，您可以使用这些组件在页面上列出自适应表单、HTML5表单和其他Forms资源 [!DNL AEM Sites] 页面。 此外，您还可以将其配置为显示草稿以及为登录用户提交的自适应表单和HTML5表单。 有关Forms门户的更多信息，请参阅 [在门户上发布表单的简介](/help/forms/using/introduction-publishing-forms.md).
 
-当登录用户将自适应表单另存为草稿或提交时，它们将显示在表单门户的草稿和提交选项卡中。 起草或提交表单的数据存储在为AEM部署配置的数据存储中。 匿名用户的草稿和提交内容不会显示在Forms Portal页面上；但是，数据存储在配置的数据存储中。 请参阅 [为草稿和提交配置存储服务](/help/forms/using/configuring-draft-submission-storage.md).
+当登录用户将自适应表单另存为草稿或提交时，它们显示在Forms Portal的草稿和提交选项卡中。 起草或提交表单的数据存储在为AEM部署配置的数据存储中。 匿名用户的草稿和提交内容不会显示在Forms Portal页面上；但是，数据存储到配置的数据存储中。 请参阅 [为草稿和提交配置存储服务](/help/forms/using/configuring-draft-submission-storage.md).
 
 ## 用户数据和数据存储 {#user-data-and-data-stores}
 
-Forms portal在以下场景中存储草稿和已提交表单的数据：
+Forms Portal在以下场景中存储草稿和已提交表单的数据：
 
 * 在自适应表单中配置的提交操作为 **Forms Portal提交操作**.
-* 用于提交操作，而不是 **Forms Portal提交操作**， **[!UICONTROL 在表单门户中存储数据]** 选项在中启用 **[!UICONTROL 提交]** 自适应表单容器的属性。
+* 用于提交操作，而不是 **Forms Portal提交操作**， **[!UICONTROL 在Forms Portal中存储数据]** 选项在中启用 **[!UICONTROL 提交]** 自适应表单容器的属性。
 
-对于已登录和匿名用户的每个草稿和已提交的表单，表单门户都会存储以下数据：
+对于已登录和匿名用户的每个草稿和已提交的表单，Forms门户都会存储以下数据：
 
 * 表单元数据，例如表单名称、表单路径、草稿或提交ID、附件路径和用户数据ID
 * 数据字节形式的表单附件
@@ -53,7 +53,7 @@ Forms portal在以下场景中存储草稿和已提交表单的数据：
   </tr>
   <tr>
    <td><p>数据库</p> </td>
-   <td><p>创作实例和数据库表的AEM存储库</p> </td>
+   <td><p>Author实例和数据库表的AEM存储库</p> </td>
    <td>数据库表 <code>data</code>， <code>metadata</code>、和 <code>additionalmetadata</code></td>
   </tr>
  </tbody>
@@ -69,7 +69,7 @@ AEM实例（作者、发布或远程）中针对已登录和匿名用户的所�
 
 #### 访问用户数据 {#access-user-data}
 
-当登录用户保存草稿或提交表单时，将使用其用户ID创建一个子节点。 例如，为其用户ID为 `srose` 存储在 `/content/forms/fp/srose/` AEM节点。 在用户ID节点中，数据以层次结构组织。
+当登录用户保存草稿或提交表单时，将使用其用户ID创建子节点。 例如，为其用户ID为 `srose` 存储在 `/content/forms/fp/srose/` AEM节点。 在用户ID节点中，数据以层次结构组织。
 
 下表说明按以下方式生成的所有草稿的数据： `srose` 存储在AEM存储库中。
 
@@ -97,7 +97,7 @@ AEM实例（作者、发布或远程）中针对已登录和匿名用户的所�
 
 ### 数据库 {#database}
 
-如果将AEM配置为将数据存储在数据库中，则Forms Portal草稿和提交数据将存储在以下数据库表中，以供登录用户和匿名用户使用：
+如果将AEM配置为将数据存储在数据库中，则Forms Portal草稿和提交数据会存储在以下数据库表中，以供登录用户和匿名用户使用：
 
 * 数据
 * 元数据

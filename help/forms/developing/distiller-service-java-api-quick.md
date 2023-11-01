@@ -1,34 +1,32 @@
 ---
-title: Distiller服务Java API快速启动(SOAP)
-description: Distiller服务将PostScript、EPS和PRN文件转换为PDF，通常用于大容量打印到电子文档的转换。
-uuid: 7781f074-cea4-4109-892b-118cfad4ec36
+title: Distiller服务Java&trade； API快速启动(SOAP)
+description: 了解Distiller服务如何将PostScript、EPS和PRN文件转换为PDF（通常用于大容量打印到电子文档的转换）。
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
-discoiquuid: 59dd61d1-c6b1-4bea-b666-4aa7897384a1
 role: Developer
 exl-id: c5bf9184-a837-4033-9962-7b3052498e75
-source-git-commit: 68a1edf5f62d7a988094fceb3f762504711dc2f1
+source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
 workflow-type: tm+mt
-source-wordcount: '188'
+source-wordcount: '190'
 ht-degree: 0%
 
 ---
 
-# Distiller服务Java API快速入门(SOAP) {#distiller-service-java-api-quickstart-soap}
+# Distiller服务Java™ API快速入门(SOAP) {#distiller-service-java-api-quickstart-soap}
 
-Java API快速入门(SOAP)可用于Distiller®服务：
+Java™ API快速入门(SOAP)可用于Distiller®服务：
 
-[快速入门（SOAP模式）：使用Java API将PostScript文件转换为PDF文档](distiller-service-java-api-quick.md#quick-start-soap-mode-converting-a-postscript-file-to-a-pdf-document-using-the-java-api)
+[快速入门（SOAP模式）：使用Java将PostScript文件转换为PDF文档](distiller-service-java-api-quick.md#quick-start-soap-mode-converting-a-postscript-file-to-a-pdf-document-using-the-java-api)
 
 AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应设置为SOAP。
 
 >[!NOTE]
 >
->“使用AEM进行编程”表单中的“快速入门”基于在JBoss Application Server和Microsoft Windows操作系统上部署的Forms Server。 但是，如果您使用的是其他操作系统（如UNIX），请将特定于Windows的路径替换为适用的操作系统支持的路径。 同样，如果您使用的是其他J2EE应用程序服务器，请确保指定有效的连接属性。 请参阅 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>使用AEM表单进行编程中的快速入门基于在JBoss®应用程序服务器和Microsoft® Windows操作系统上部署的Forms服务器。 但是，如果您使用的是其他操作系统(如UNIX®)，请将特定于Windows的路径替换为适用的操作系统支持的路径。 同样，如果您使用的是其他J2EE应用程序服务器，请确保指定有效的连接属性。 请参阅 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
-## 快速入门（SOAP模式）：使用Java API将PostScript文件转换为PDF文档 {#quick-start-soap-mode-converting-a-postscript-file-to-a-pdf-document-using-the-java-api}
+## 快速入门（SOAP模式）：使用Java™ API将PostScript文件转换为PDF文档 {#quick-start-soap-mode-converting-a-postscript-file-to-a-pdf-document-using-the-java-api}
 
 以下代码示例转换一个名为的PostScript文件 *贷款.ps* PDF文件，名为 *Loan.pdf*. (请参阅 [将PostScript转换为PDF文档](/help/forms/developing/converting-postscript-pdf-documents.md#converting-postscript-to-pdf-documents).)
 

@@ -1,13 +1,13 @@
 ---
 title: 安装工作台
-description: 安装、卸载、配置、管理或部署AEM Forms Workbench。
+description: 了解如何安装、卸载、配置、管理或部署AEM Forms Workbench。
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 role: Admin
 exl-id: d530dbb9-f95e-4329-9665-37faf8f7931b
-source-git-commit: ad5d98c5519cda29cecde54a880958bae81c4764
+source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
 workflow-type: tm+mt
-source-wordcount: '2238'
+source-wordcount: '2242'
 ht-degree: 0%
 
 ---
@@ -84,7 +84,7 @@ Workbench是一个集成开发环境(IDE)，开发人员和表单作者使用它
 >
 >如果所有这些位置都驻留在单个驱动器上，则安装期间必须有1.5 GB的可用空间。 安装完成后，将删除复制到临时目录的文件。
 
-* 硬件要求：英特尔®奔腾® 4或等效的AMD® 1 GHz处理器。
+* 硬件要求：英特尔®奔腾® 4或等效的AMD® 1-GHz处理器。
 * Java™ Runtime Environment (JRE) 7.0将51或更高版本更新到7.0。
 * 最低1024 X 768像素或更高的显示器分辨率（16位颜色或更高）。
 * 到AEM Forms服务器的TCP/IPv4或TCP/IPv6网络连接。
@@ -119,7 +119,7 @@ Workbench安装过程会检测计算机上随Acrobat Pro或Acrobat Pro Extended�
   </tr>
   <tr>
    <td><p>Designer（独立）</p> </td>
-   <td><p>无。<br />Workbench中包含的Designer版本仅限英语。 <br />Workbench安装程序不会重新安装新版本的Designer。 而是将修补与Workbench安装程序捆绑在一起的更新版本。 这还允许您在Workbench中使用本地化版本的Designer。<br /> </p> </td>
+   <td><p>无。<br />Workbench中包含的Designer版本仅限英语。 <br />Workbench安装程序不会重新安装新版本的Designer。 而是修补与Workbench安装程序捆绑在一起的更新版本。 这还允许您在Workbench中使用本地化版本的Designer。<br /> </p> </td>
   </tr>
  </tbody>
 </table>
@@ -167,7 +167,7 @@ Workbench安装过程会检测计算机上随Acrobat Pro或Acrobat Pro Extended�
    安装目录路径不应包含# （井号）和$ （美元）字符。
 
 1. 查看预安装摘要，然后单击“安装”。 安装程序显示安装进度。
-1. 查看安装摘要。 选择启动AEM Forms Workbench以启动Workbench，然后单击下一步。
+1. 查看安装摘要。 选择启动AEM Forms Workbench ，以启动Workbench ，然后单击下一步。
 1. 查看发行说明，然后单击完成。
 1. 以下项目现已安装在您的计算机上：
    * **Workbench**：要从“开始”菜单中运行Workbench，请选择所有程序> AEM Forms > Workbench（如果您选择将快捷文件夹存储在该处）。 有关信息，请参见 <a href="https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/pdf/WorkbenchHelp.pdf">使用Workbench</a> 文档。
@@ -184,7 +184,7 @@ Workbench安装过程会检测计算机上随Acrobat Pro或Acrobat Pro Extended�
 
 >[!NOTE]
 >
-如果您已将AEM Forms配置为使用EMC Documentum®或IBM® FileNet存储库提供程序，并且希望登录到其他存储库(在AEM Forms管理控制台中配置为默认的存储库)，请以username@Repository的形式提供用户名。
+如果您将AEM Forms配置为使用EMC Documentum®或IBM® FileNet存储库提供程序，并且希望登录到其他存储库(在AEM Forms管理控制台中配置为默认的存储库)，请以username@Repository的形式提供用户名。
 
 ### 配置超时设置 {#configuring-timeout-settings}
 
@@ -205,7 +205,7 @@ Workbench安装过程会检测计算机上随Acrobat Pro或Acrobat Pro Extended�
 
    >[!NOTE]
    >
-   要导出证书，请打开Web浏览器并登录到管理控制台，在浏览器中安装证书，然后将证书从浏览器导出到临时存储位置(或直接导出到 [Workbench_HOME]/workbench/jre/lib/security directory)。
+   要导出证书，请打开Web浏览器并登录到管理控制台。 在浏览器中安装证书，然后将证书从浏览器导出到临时存储位置(或直接导出到 [Workbench_HOME]/workbench/jre/lib/security directory)。
 
 1. 将证书复制到 [Workbench_HOME]/workbench/jre/lib/security目录。
 
@@ -223,7 +223,7 @@ Workbench安装过程会检测计算机上随Acrobat Pro或Acrobat Pro Extended�
 
 如果您的应用程序通过自动更新XFA内容来动态生成唯一的模板，则应考虑缓存操作的以下方面。 实际上，每个交易都使用新的唯一模板。
 
-当表单生成器或输出在缓存中搜索或更新特定表单模板的项目时，它会使用多个键值来查找将访问的特定缓存项目。
+当表单生成器或输出在缓存中搜索或更新特定表单模板的项目时，它会使用多个键值来查找访问的特定缓存项目。
 
 * **模板文件名**：用作缓存表单的主要唯一标识符的模板的位置和文件名。
 * **时间戳**：模板文件包含一个时间戳，用于确定表单的上次更新时间。
@@ -236,18 +236,21 @@ Workbench安装过程会检测计算机上随Acrobat Pro或Acrobat Pro Extended�
 
 
 Forms服务通过引用文件名或存储库位置或按值接收模板，这些模板在内存中为XML对象。
+
 * **通过引用传递的模板**：使用内容根和表单名称。 如果使用此方法在每个请求中传递了具有不同文件名的唯一模板，则磁盘缓存会无限增加，永远不会重复使用。 为防止出现这种情况，应使用相同的文件名传递唯一的模板，以确保为所有请求更新相同的缓存。
-* **按值传递的模板**：使用inDataDoc参数将模板字节与数据一起传递。 如果使用此方法传递具有不同UUID的唯一模板，则磁盘缓存会无限增长，并且永远不会被重复使用。 要防止出现这种情况，应从所有模板中剥离UUID属性，以确保不为该模板创建缓存。 或者，传递相同的非空UUID可以创建缓存对象，但会确保随着每个请求更新相同缓存。
+* **按值传递的模板**：使用inDataDoc参数将模板字节与数据一起传递。 如果使用此方法传递具有不同UUID的唯一模板，则磁盘缓存会无限增长，并且永远不会重复使用。 要防止出现这种情况，应从所有模板中剥离UUID属性，以确保不为该模板创建缓存。 或者，传递相同的非空UUID可以创建缓存对象，但会确保随着每个请求更新相同缓存。
 
 为了防止缓存无限增长，请考虑以下因素，以便使用新的AEM Forms API呈现动态生成的模板，即renderHTMLForm2和renderPDFForm2。
 
 使用新API时，模板作为文档对象传递，在Forms服务中根据其是否被钝化进行处理。
 
 对于将UUID和内容根用作缓存键的钝化文档，请考虑以下方面：
+
 * 缓存不是为没有UUID的钝化输入模板创建的。
 * 如果传递了多个具有相同UUID和内容根目录的钝化输入模板，则会覆盖相同的缓存。
 
 对于文件名和内容根目录用作缓存键的非钝化文档，请考虑以下方面：
+
 * 对于非钝化输入模板，缓存取决于生成文档的内容根目录和文件名。
 只有内容根和模板文件名相同的请求才会使用相同的缓存。
 以下最佳实践可确保将动态生成的模板传递到Forms服务时，缓存不会无限增加：
@@ -256,7 +259,7 @@ Forms服务通过引用文件名或存储库位置或按值接收模板，这些
 
 ### 卸载Workbench {#uninstalling-workbench}
 
-使用控制面板中的添加或删除程序功能启动卸载程序。 Workbench和Designer应用程序具有单独的卸载程序。
+使用控制面板中的添加或删除程序功能，以便启动卸载程序。 Workbench和Designer应用程序具有单独的卸载程序。
 
 ## 配置AEM Forms XDC编辑器 {#configuring-aem-forms-xdc-editor}
 
@@ -265,9 +268,11 @@ Forms服务通过引用文件名或存储库位置或按值接收模板，这些
 在网络打印机管理员使用XDC编辑器之前，重新定位示例XDC文件，并参阅使用XDC编辑器创建设备配置文件。
 
 **获取示例XDC文件**：
+
 1. 在AEM Forms服务器上，找到XDC文件夹，位于 [AEM Forms根目录]\sdk\samples\Output\IVS.
 1. 将此文件夹的内容复制到可从Workbench或Eclipse系统访问的目录中。
 
 **获取XDC编辑器帮助**：
+
 1. 转到AEM Forms文档网站。
 1. 单击 **开发** 选项卡，并导航到使用XDC编辑器创建设备配置文件。 按照自述文件中提供的说明下载xdc_editor_help_web.zip文件并安装帮助文件。

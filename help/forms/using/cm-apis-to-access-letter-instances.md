@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: correspondence-management
 feature: Correspondence Management
 exl-id: 9d43d9d4-5487-416c-b641-e807227ac056
-source-git-commit: 68a1edf5f62d7a988094fceb3f762504711dc2f1
+source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
 workflow-type: tm+mt
-source-wordcount: '599'
+source-wordcount: '597'
 ht-degree: 1%
 
 ---
@@ -134,8 +134,8 @@ Boolean result = letterInstanceService.letterInstanceExists(letterInstanceName )
 
 书信实例可以是已提交或草稿类型。 打开两种信件实例类型时，会显示不同的行为：
 
-* 在“已提交信件”实例的情况下，将打开表示该信件实例的PDF。 服务器上保留的提交的书信实例还包含dataXML和已处理的XDP，这可用于完成并进一步自定义用例，如创建PDF/A。
-* 在草稿信件实例的情况下，创建通信UI将重新加载到与创建草稿时完全相同的先前状态
+* 如果存在已提交信件实例，则会打开表示该信件实例的PDF。 服务器上保留的提交的书信实例还包含dataXML和已处理的XDP，这可用于完成并进一步自定义用例，如创建PDF/A。
+* 如果存在草稿信件实例，则创建通信UI将重新加载到与创建草稿时完全相同的先前状态
 
 ### 打开草稿信件实例  {#opening-draft-letter-instance-nbsp}
 

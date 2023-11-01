@@ -1,17 +1,15 @@
 ---
 title: 了解AEM Forms流程
-description: AEM Forms流程包括表单创建、提交、数据处理、验证、集成、工作流自动化和输出管理。
-uuid: 7cbebe7d-f222-42fa-8eb6-d2443458a791
+description: 了解AEM Forms流程如何包括表单创建、提交、数据处理、验证、集成、工作流自动化和输出管理。
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: development-tools, coding
-discoiquuid: ac9fe461-63e7-442b-bd1c-eb9576ef55aa
 role: Developer
 exl-id: 434ac316-8a01-43a6-844b-1b792f60fa21
-source-git-commit: 20b0d0db54dc30285c056a10032f02ba45f8baca
+source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
 workflow-type: tm+mt
-source-wordcount: '815'
+source-wordcount: '814'
 ht-degree: 0%
 
 ---
@@ -40,7 +38,7 @@ ht-degree: 0%
 
 使用调用标识符值，您可以跟踪长生命周期进程的状态。 例如，可以使用进程调用标识符值执行Process Manager操作，如终止正在运行的进程实例。
 
-**短期进程示例**
+**短期流程示例**
 
 下图是名为的短期进程的示例 *MyApplication/EncryptDocument*.
 
@@ -60,10 +58,10 @@ ht-degree: 0%
    >
    >通常，一个短暂的过程包含三个以上的操作。 您可以使用Workbench创建流程。 (请参阅 [使用Workbench](https://www.adobe.com/go/learn_aemforms_workbench_63).)
 
-   *使用AEM表单编程*&#x200B;描述了您可以通过以下方式以编程方式调用此短暂的进程：
+   *使用AEM表单编程* 描述了您可以通过以下方式以编程方式调用此短暂的进程：
 
    * [通过使用AEM Forms Remoting传递不安全的文档来调用短暂的进程](/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-a-short-lived-process-by-passing-an-unsecure-document-using-remoting) (使用Flex应用程序)
-   * [使用调用API调用短期进程](/help/forms/developing/invoking-aem-forms-using-java.md#invoking-a-short-lived-process-using-the-invocation-api) （Java调用API）
+   * [使用调用API调用短期进程](/help/forms/developing/invoking-aem-forms-using-java.md#invoking-a-short-lived-process-using-the-invocation-api) (Java™调用API)
    * [使用Base64编码调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding) （Web服务示例）
    * [使用MTOM调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom) （Web服务示例）
    * [使用SwaRef调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref) （Web服务示例）

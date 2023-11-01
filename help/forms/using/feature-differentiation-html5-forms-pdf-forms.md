@@ -1,18 +1,16 @@
 ---
 title: HTML5表单与PDF forms之间的功能区别
-description: 了解HTML5表单与PDF forms之间的差异。
-uuid: 6ddee197-d108-4897-9976-77d115a06504
+description: 了解HTML5表单和PDF forms之间的功能差异。
 contentOwner: robhagat
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
-discoiquuid: bdd97c20-d1f2-4898-9862-1a6a8071be88
 docset: aem65
 feature: Mobile Forms
 exl-id: 3150f95f-7150-4eee-b5a9-121422dec2a1
-source-git-commit: 0e5b89617d481c69882ec5d4658e76855aa9b691
+source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
 workflow-type: tm+mt
-source-wordcount: '446'
+source-wordcount: '447'
 ht-degree: 2%
 
 ---
@@ -50,7 +48,7 @@ ht-degree: 2%
   </tr>
   <tr>
    <td>分页<br /> </td>
-   <td><p>HTML5窗体被分成多个面板和框，以使其外观类似于PDF forms。 页面大小会动态计算。 如果HTML5表单中页面的所有内容被删除或标记为隐藏，则空白页面将被隐藏，并且空白页面上方和下方页面之间不显示空格（空格）。</p> <p>如果数据合并或脚本向页面添加内容，则页面长度将展开以容纳新添加的内容。 表单中不会添加任何新页面，以适应新添加的内容。 </p> <p><strong>注意：</strong> 删除HTML5表单中页面的所有内容或将其标记为隐藏时，在第1页和第2页之间仍可看到空白页（空格），但在任何其他页面之间不可见。</p> </td>
+   <td><p>HTML5窗体被分成多个面板和框，以使其外观类似于PDF forms。 页面大小会动态计算。 如果HTML5表单中页面的所有内容被删除或标记为隐藏，则会隐藏空白页面。 空白页的上方和下方的页面之间不显示空格（空格）。</p> <p>如果数据合并或脚本向页面添加内容，则页面长度将展开以容纳新添加的内容。 表单中不会添加任何新页面，以适应新添加的内容。 </p> <p><strong>注意：</strong> 删除HTML5表单中页面的所有内容或将其标记为隐藏时，在第1页和第2页之间仍可看到空白页（空格），但在任何其他页面之间不可见。</p> </td>
    <td>PDF中的分页取决于合并的数据内容或用户内容，并且页面计数会因此而增加/减少。</td>
   </tr>
   <tr>
@@ -65,7 +63,7 @@ ht-degree: 2%
   </tr>
   <tr>
    <td>XFA脚本API</td>
-   <td>支持最常用的XFA脚本结构。 有关支持的构造的详细信息列表，请参见 <a href="/help/forms/using/scripting-support.md">脚本支持</a>.</td>
+   <td>支持最常用的XFA脚本结构。 有关支持的构造的详细列表，请参见 <a href="/help/forms/using/scripting-support.md">脚本支持</a>.</td>
    <td>支持所有XFA脚本结构。</td>
   </tr>
   <tr>

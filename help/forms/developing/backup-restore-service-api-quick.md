@@ -1,17 +1,15 @@
 ---
 title: 备份和恢复服务APIQuick启动
-description: AEM Forms备份和恢复API快速入门支持高效的备份创建和恢复过程。
-uuid: c3992be2-ceb4-480d-9c8f-71eb0ea66dde
+description: 了解AEM Forms备份和恢复API快速入门如何实现高效的备份创建和恢复过程。
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
-discoiquuid: 813162be-dbf5-4dc1-80ff-e37dbc25ef60
 role: Developer
 exl-id: ae17fd3a-0ba4-4a00-907b-811e500b0e14
-source-git-commit: 68a1edf5f62d7a988094fceb3f762504711dc2f1
+source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
 workflow-type: tm+mt
-source-wordcount: '254'
+source-wordcount: '256'
 ht-degree: 0%
 
 ---

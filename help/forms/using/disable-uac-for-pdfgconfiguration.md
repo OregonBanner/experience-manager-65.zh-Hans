@@ -1,11 +1,11 @@
 ---
 title: 禁用适用于JEE和OSGI的PDFG配置UAC
-description: 为PDFG配置禁用UAC以修复Word到PDF转换的步骤。
+description: 了解如何为PDFG配置禁用UAC以修复Word到PDF转换的步骤。
 exl-id: 785b7bb4-7158-45ea-a1e5-eebf3dc3ebc3
-source-git-commit: 0e5b89617d481c69882ec5d4658e76855aa9b691
+source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
 workflow-type: tm+mt
-source-wordcount: '261'
-ht-degree: 3%
+source-wordcount: '262'
+ht-degree: 4%
 
 ---
 
@@ -13,16 +13,18 @@ ht-degree: 3%
 
 ## 问题 {#issue}
 
-当用户尝试在Microsoft Windows Server上将Word或Excel文件转换为PDF时，遇到以下错误：
+当用户尝试在Microsoft® Windows Server上将Word或Excel文件转换为PDF时，遇到以下错误：
 
-*来自主转换器的错误消息： ALC-PDG-015-003 — 系统无法打开输入文件。 请再次提交文件或联系系统管理员。*
+*来自主转换器的错误消息：*
+*ALC-PDG-015-003 — 系统无法打开输入文件。 再次提交文件或联系系统管理员。*
 
 
 ## 解决方案 {#solution}
 
-执行以下步骤来解决问题：
+执行以下操作：
+
 1. 要访问系统配置实用程序，请转到 **[!UICONTROL “开始”>“运行”]** 然后输入 **[!UICONTROL MSCONFIG]**.
-1. 单击 **[!UICONTROL 工具]** 制表符，向下滚动并选择 **[!UICONTROL 更改UAC设置]**. 单击 **[!UICONTROL Launch]** 在新窗口中运行命令。
+1. 单击 **[!UICONTROL 工具]** 制表符，向下滚动并选择 **[!UICONTROL 更改UAC设置]**. 单击 **[!UICONTROL Launch]** 以便在新窗口中运行该命令。
 1. 将滑块调整为从不通知级别。 完成后，关闭命令窗口并关闭“System Configuration（系统配置）”窗口。
 1. 验证UAC的注册表设置是否设置为0（零）。 执行以下步骤进行验证：
 
@@ -35,6 +37,4 @@ ht-degree: 3%
 
 ## 应用于 {#appliesto}
 
-此解决方案适用于以下内容：
-* JEE服务器上的AEM Forms
-* OSGi服务器上的AEM Forms
+此解决方案适用于JEE服务器上的AEM Forms和OSGi服务器上的AEM Forms 。

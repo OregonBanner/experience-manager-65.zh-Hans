@@ -1,15 +1,13 @@
 ---
 title: 通信管理 |处理用户数据
-description: AEM Forms环境中的通信管理和用户数据处理。
-uuid: d5bb190b-d668-4da3-95da-b7705ad302d9
+description: 了解如何在Adobe Experience Manager Forms环境中进行通信管理和处理用户数据。
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 764d8e0d-604d-4c7b-89cd-7686ce5f03ff
 role: Admin
 exl-id: a0c6a02c-47a3-4e70-a14c-953ee016b8e4
-source-git-commit: 0e5b89617d481c69882ec5d4658e76855aa9b691
+source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
 workflow-type: tm+mt
-source-wordcount: '545'
+source-wordcount: '550'
 ht-degree: 0%
 
 ---
@@ -73,7 +71,7 @@ AEM Forms Correspondence Management使您能够创建、管理和简化安全和
 
 通信管理提供了可用于查找和访问草稿及已提交信件实例的API。 通过使用API，您可以使用信件实例ID或保存或提交信件的用户查找并打开信件实例。 有关更多信息，请参阅 [用于访问书信实例的API](/help/forms/using/cm-apis-to-access-letter-instances.md).
 
-或者，您可以使用CRX DELite导航到AEM存储库中的信件实例。 请参阅 [用户数据和数据存储](/help/forms/using/correspondence-management-handling-user-data.md#data) 有关存储数据和存储库位置的信息。
+或者，您可以使用CRXDE Lite导航到AEM存储库中的信件实例。 请参阅 [用户数据和数据存储](/help/forms/using/correspondence-management-handling-user-data.md#data) 有关存储数据和存储库位置的信息。
 
 ### 删除用户数据 {#delete-user-data}
 

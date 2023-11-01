@@ -7,7 +7,7 @@ topic-tags: correspondence-management
 docset: aem65
 feature: Correspondence Management
 exl-id: 9593ca2a-7f9e-4487-a1a5-ca44114bff17
-source-git-commit: 0e5b89617d481c69882ec5d4658e76855aa9b691
+source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
 workflow-type: tm+mt
 source-wordcount: '1092'
 ht-degree: 1%
@@ -83,7 +83,7 @@ ht-degree: 1%
 
    1. 单击&#x200B;**确定**。css文件夹在指定的路径中创建。
 
-1. 在apps文件夹中，创建一个名为 `imgs` 路径/结构与imgs文件夹（在ccrui文件夹中）类似。
+1. 在apps文件夹中，创建一个名为 `imgs` 路径/结构与 `imgs` 文件夹（在ccrui文件夹中）。
 
    1. 右键单击 **imgs** 路径下的文件夹并选择 **覆盖节点**： `/libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/imgs`
    1. 确保“覆盖节点”对话框具有以下值：

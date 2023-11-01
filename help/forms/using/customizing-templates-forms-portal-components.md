@@ -1,22 +1,20 @@
 ---
-title: 自定义表单门户组件的模板
-description: AEM Forms用户界面允许用户向表单添加元数据。 自定义元数据可增强用户在表单列表和搜索贵组织时的体验。
-uuid: 212109ca-85c8-4915-82e5-a18a0443be1b
+title: 自定义Forms Portal组件的模板
+description: 了解AEM Forms用户界面如何让用户向表单添加元数据。 自定义元数据可增强用户在表单列表和搜索中的体验。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: customization
-discoiquuid: 7566203f-2f80-4ce7-bff9-073d67119f64
 docset: aem65
 feature: Forms Portal
 exl-id: f889d996-77f7-4a4f-a637-da43fe1343c5
-source-git-commit: 20b0d0db54dc30285c056a10032f02ba45f8baca
+source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
 workflow-type: tm+mt
-source-wordcount: '1243'
+source-wordcount: '1250'
 ht-degree: 0%
 
 ---
 
-# 自定义表单门户组件的模板{#customizing-templates-for-forms-portal-components}
+# 自定义Forms Portal组件的模板{#customizing-templates-for-forms-portal-components}
 
 ## 前提条件 {#prerequisites}
 
@@ -30,7 +28,7 @@ HTML和CSS工作知识
 
 Forms Portal允许您在表单列表中使用自定义元数据。 在为资源创建自定义模板时，您可以修改其布局并在CSS样式集中使用自定义元数据。
 
-执行以下步骤，为各种Forms Portal组件创建自定义模板。
+执行以下操作，以便您可以为各种Forms Portal组件创建自定义模板。
 
 ## 创建自定义模板 {#creating-a-nbsp-custom-template}
 
@@ -55,7 +53,7 @@ Forms Portal允许您在表单列表中使用自定义元数据。 在为资源�
    下图描述了Search &amp; Lister组件的配置。
    ![创建sling：Folder](assets/1.png)
 
-1. 在此文件夹中创建一个文件template.html作为自定义模板。
+1. 在此文件夹中创建一个文件template.html ，以将其用作自定义模板。
 1. 编写自定义模板并使用如下所述的自定义元数据。
 
 ## 工作示例 {#working-example}
@@ -92,7 +90,7 @@ Forms Portal为占位符提供了一个语法以显示自定义/OOTB元数据。
 
 每个占位符都有一个专用的OOTB元数据集。 要在表单上的特定位置显示自定义元数据，请添加 **${metadata_prop} 属性** 在那个地方。
 
-*在此示例中，元数据属性在多个实例中使用。 例如，它用于&#x200B;**描述**，**name**，**formUrl**，**htmlStyle**，**pdfUrl**，**pdf样式**、和&#x200B;**路径**按照规定的方式进行。*
+*在本例中，元数据属性在多个实例中使用。 例如，它用于&#x200B;**描述**，**name**，**formUrl**，**htmlStyle**，**pdfUrl**，**pdf样式**、和&#x200B;**路径**按照规定的方式进行。*
 
 ## 开箱即用的元数据 {#out-of-the-box-metadata}
 
@@ -105,7 +103,7 @@ Forms Portal为占位符提供了一个语法以显示自定义/OOTB元数据。
 * **描述**：表单描述
 * **formUrl**：用于将表单渲染为HTML的URL
 * **pdfUrl**：用于将表单渲染为PDF的URL
-* **资产类型**：资源的类型。 有效值包括 **表单**，**PDF表单**， **打印表单**、和 **自适应表单**
+* **资产类型**：资源的类型。 有效值包括 **表单**， **PDF表单**， **打印表单**、和 **自适应表单**
 
 * **htmlStyle**&#x200B;和 **pdf样式**：分别用于呈现的HTML图标和PDF图标的显示样式。 有效值为&#39;&#39;**__FP_display_none**”或空白。
 
@@ -120,8 +118,8 @@ Forms Portal为占位符提供了一个语法以显示自定义/OOTB元数据。
 1. **本地化支持**：要本地化任何静态文本，请使用属性 `${localize-YOUR_TEXT}` 并使本地化的值可用（如果尚不存在）。
    *在所讨论的示例中，属性 `${localize-Apply}` 和 `${localize-Download}` 用于本地化“应用”和“下载”文本。*
 
-1. **支持排序**：单击HTML元素可对搜索结果排序。 要在表格布局中实施排序，请在特定表标题上添加“data-sortKey”属性。 此外，添加其值作为要排序的元数据。
-例如，对于网格视图中的“Title”标头，“data-sortKey”标头的值为“title”。 单击标题可对特定列中的值进行排序。
+1. **支持排序**：单击HTML元素可对搜索结果排序。 要在表布局中实施排序，请在特定表标题上添加“data-sortKey”属性。 此外，添加其值作为要排序的元数据。
+例如，对于网格视图中的“Title”标头，“data-sortKey”标头的值为“title”。 单击标题，以便对特定列中的值进行排序。
 
 1. **使用配置属性**：搜索和列表组件具有多种可在用户界面中使用的配置。 例如，要显示通过“编辑”对话框保存的HTML工具提示文本，请使用 `${config-htmlLinkText}` 属性。 **同样，对于PDF工具提示文本，请使用** `${config-pdfLinkText}` 属性。
 
@@ -134,7 +132,7 @@ Forms Portal为占位符提供了一个语法以显示自定义/OOTB元数据。
 
 ### 草稿和提交组件 {#drafts-amp-submissions-component}
 
-* **路径**：草稿/提交元数据节点的路径。 将其与。HTML扩展名一起用作打开草稿或提交的URL。
+* **路径**：草稿/提交元数据节点的路径。 请将其与。HTML扩展名用作URL，以便打开草稿或提交。
 * **contextpath**：AEM实例的上下文路径
 * **首字母**：保存为草稿或提交的自适应表单标题的第一个字母（大写）。
 * **formName**：自适应表单的标题，已另存为草稿或已提交。
@@ -142,7 +140,7 @@ Forms Portal为占位符提供了一个语法以显示自定义/OOTB元数据。
 * **submitID**：列出的提交的ID（仅用于提交部分的模板中）。
 * **状态**：已提交表单的状态。 （仅在“提交”部分的模板中使用）。
 * **描述**：与草稿或提交关联的自适应表单的描述。
-* **diffTime**：当前时间和草稿的最后一次保存操作之间的差异。 或者，显示当前时间和上次提交操作的提交时间之差。
+* **diffTime**：当前时间和草稿的最后一次保存操作之间的差异。 或者，也可以选择当前时间与上次提交提交操作之间的差值。
 * **图标类**：用于显示草稿/提交内容的第一字母的CSS类。 Forms Portal包含以下类，这些类提供各种不同颜色的背景。
 * **所有者**：创建草稿/提交的用户。
 * **今天**：在DD中创建草稿或提交文件的日期:MM:yyyy格式。
@@ -162,7 +160,7 @@ Forms Portal为占位符提供了一个语法以显示自定义/OOTB元数据。
 
 **C.** 用于每个表单的模板部分的数据可重复属性
 
-**D.** 要本地化“应用”字符串
+**D.** 本地化“应用”字符串
 
 **E.** 使用配置属性pdfLinkText
 
@@ -177,11 +175,11 @@ Forms Portal为占位符提供了一个语法以显示自定义/OOTB元数据。
 
 ## 相关文章
 
-* [启用表单门户组件](/help/forms/using/enabling-forms-portal-components.md)
-* [创建表单门户页面](/help/forms/using/creating-form-portal-page.md)
+* [启用Forms Portal组件](/help/forms/using/enabling-forms-portal-components.md)
+* [创建Forms门户页面](/help/forms/using/creating-form-portal-page.md)
 * [使用API列出网页上的表单](/help/forms/using/listing-forms-webpage-using-apis.md)
 * [使用草稿和提交组件](/help/forms/using/draft-submission-component.md)
 * [自定义草稿和已提交表单的存储](/help/forms/using/draft-submission-component.md)
 * [将草稿和提交组件与数据库集成的示例](/help/forms/using/integrate-draft-submission-database.md)
-* [自定义表单门户组件的模板](/help/forms/using/customizing-templates-forms-portal-components.md)
+* [自定义Forms Portal组件的模板](/help/forms/using/customizing-templates-forms-portal-components.md)
 * [在门户上发布表单的简介](/help/forms/using/introduction-publishing-forms.md)

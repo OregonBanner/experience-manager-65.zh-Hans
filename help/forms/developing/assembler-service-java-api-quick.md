@@ -1,20 +1,20 @@
 ---
-title: 汇编程序服务Java API快速启动(SOAP)
-description: 使用Assembler Service Java API QuickStart(SOAP)来组合、分解并动态创建PDF文档。
+title: Assembler服务Java&trade； API快速启动(SOAP)
+description: 了解如何使用Assembler服务Java&trade； API QuickStart (SOAP)来组合、分解和动态创建PDF文档。
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 role: Developer
 exl-id: 306cd40b-1831-45aa-9f58-3ab1983a68c5
-source-git-commit: 0e5b89617d481c69882ec5d4658e76855aa9b691
+source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
 workflow-type: tm+mt
-source-wordcount: '1012'
+source-wordcount: '1019'
 ht-degree: 0%
 
 ---
 
-# 汇编程序服务Java API快速启动(SOAP) {#assembler-service-java-api-quickstart-soap}
+# Assembler服务Java™ API快速启动(SOAP) {#assembler-service-java-api-quickstart-soap}
 
 Java API快速入门(SOAP)可用于Assembler服务
 
@@ -44,7 +44,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
 
 >[!NOTE]
 >
->位于“使用AEM Forms编程”中的快速入门指南基于在JBoss Application Server和Microsoft Windows操作系统上部署的Forms Server。 但是，如果您使用的是其他操作系统（如UNIX），请将特定于Windows的路径替换为适用的操作系统支持的路径。 同样，如果您使用的是其他J2EE应用程序服务器，请确保指定有效的连接属性。 请参阅 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+>《使用AEM Forms进行编程快速入门》基于在JBoss®应用程序服务器和Microsoft® Windows操作系统上部署的Forms服务器。 但是，如果您使用的是其他操作系统(如UNIX®)，请将特定于Windows的路径替换为适用的操作系统支持的路径。 同样，如果您使用的是其他J2EE应用程序服务器，请确保指定有效的连接属性。 请参阅 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
 ## 快速入门（SOAP模式）：使用Java API组合PDF文档 {#quick-start-soap-mode-assembling-a-pdf-document-using-the-java-api}
 
@@ -1683,11 +1683,11 @@ public class AssemblePDFWithDynamicDDXSOAP {
 
 ## 快速入门（SOAP模式）：使用Java API编辑PDF文档 {#quick-start-soap-mode-redacting-a-pdf-document-using-the-java-api}
 
-以下代码示例使用以下方式对PDF文档进行密文 `PDFUtility`.
+PDF以下代码示例使用 `PDFUtility`.
 
 >[!NOTE]
 >
->`PDFUtility` 只能密文那些使用Acrobat标记为密文的PDF。
+此 `PDFUtility` 只能密文那些使用Acrobat标记为密文的PDF。
 
 ```java
 /*
