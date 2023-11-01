@@ -1,11 +1,11 @@
 ---
 title: Edge Delivery Services 快速入门
-description: Edge Delivery Services 快速入门。
+description: Edge Delivery Services(EDS)快速入门。
 exl-id: 8d2b2d6c-ae11-4829-842e-b186f5491713
-source-git-commit: 6b60deb47f4a07b48156ce8f449d49ebaf29abde
+source-git-commit: 6a1d96125ca6647770718fff74ec21afb5c91a68
 workflow-type: tm+mt
-source-wordcount: '868'
-ht-degree: 91%
+source-wordcount: '869'
+ht-degree: 99%
 
 ---
 
@@ -59,7 +59,7 @@ Adobe 提供三个渠道帮助您使用 Edge Delivery Services：
 
 ### 访问社区资源 {#community-resource}
 
-Adobe致力于为您提供最佳社区参与以及对Edge Delivery Services和基于文档的创作支持。 参与 [Experience League社区](https://adobe.ly/3Q6kTKl) 提出问题、分享反馈、发起讨论、向Adobe专家和AEM顾问/Champs寻求帮助，以及实时与想法相似的个人保持联系。 加入我们的 [不和谐通道](https://discord.gg/aem-live)，这是一个用于实时交互和快速想法交流的更休闲的平台。
+Adobe 致力于为您提供对 Edge Delivery Services 和基于文档的创作的最佳社区参与和支持。加入 [Experience League 社区](https://adobe.ly/3Q6kTKl)，提出问题、共享反馈、发起讨论、向 Adobe 专家和 AEM 顾问/拥护者寻求帮助，以及实时联系志同道合者。加入我们的 [Discord 渠道](https://discord.gg/aem-live)，这是一个更随意的实时互动和快速交流想法的平台。
 
 ### 如何访问您的产品协作渠道 {#collab-channel}
 
