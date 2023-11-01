@@ -10,9 +10,9 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: d5dac1db-2dde-4b75-a31b-e057b447f6e2
 exl-id: bce6c586-9962-4217-82cb-c837e479abc0
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '530'
+source-wordcount: '528'
 ht-degree: 0%
 
 ---
@@ -21,20 +21,20 @@ ht-degree: 0%
 
 在Adobe Campaign中创建自定义表时，您可能希望在AEM中构建映射到该自定义表的表单。
 
-本文档介绍如何创建自定义表单映射。 完成本文档中的步骤后，您将为用户提供一个事件页面，用户可以在其中注册即将举行的事件。 然后，您可以通过Adobe Campaign跟进这些用户。
+本文档介绍如何创建自定义表单映射。 当您完成本文档中的步骤时，将为用户提供事件页面，用户可在其中注册即将举行的事件。 然后，您可以通过Adobe Campaign跟进这些用户。
 
 ## 前提条件 {#prerequisites}
 
-您需要安装以下组件：
+您需要安装以下软件：
 
 * Adobe Experience Manager
 * Adobe Campaign Classic
 
-参见 [将AEM与Adobe Campaign Classic集成](/help/sites-administering/campaignonpremise.md) 了解更多信息。
+请参阅 [将AEM与Adobe Campaign Classic集成](/help/sites-administering/campaignonpremise.md) 以了解更多信息。
 
 ## 创建自定义表单映射 {#creating-custom-form-mappings-2}
 
-要创建自定义表单映射，您需要遵循以下各节中详述的这些高级步骤：
+要创建自定义表单映射，您需要按照以下各节中详述的这些高级步骤进行操作：
 
 1. 创建自定义表。
 1. 扩展 **种子** 表格。
@@ -56,7 +56,7 @@ ht-degree: 0%
 </element>
 ```
 
-创建事件表后，运行 **更新数据库结构向导** 创建表。
+创建事件表后，运行 **更新数据库结构向导** 以创建表。
 
 ### 扩展种子表 {#extending-the-seed-table}
 
@@ -79,25 +79,25 @@ ht-degree: 0%
 
 ### 创建自定义目标映射 {#creating-custom-target-mapping}
 
-In **管理/营销活动管理** t，转到 **目标映射** 并添加新的T **目标映射。**
+在 **管理/营销活动管理** t，转到 **目标映射** 并添加新的T **目标映射。**
 
 >[!NOTE]
 >
->请确保对以下内容使用有意义的名称 **内部名称**.
+>请确保对以下内容使用有意义的名称： **内部名称**.
 
 ![chlimage_1-195](assets/chlimage_1-195.png)
 
 ### 创建自定义投放模板 {#creating-a-custom-delivery-template}
 
-在此步骤中，您将添加一个使用创建的 **目标映射**.
+在此步骤中，您将添加一个使用所创建的 **目标映射**.
 
-In **资源/模板**，导航到投放模板并复制现有AEM投放。 当您单击 **至**，选择创建事件 **目标映射**.
+在 **资源/模板**，导航到投放模板并复制现有AEM投放。 当您单击 **至**，选择创建事件 **目标映射**.
 
 ![chlimage_1-196](assets/chlimage_1-196.png)
 
 ### 在AEM中构建表单 {#building-the-form-in-aem}
 
-在AEM中，确保您已在以下位置配置了Cloud Service： **页面属性**.
+在AEM中，确保您已在中配置Cloud Service **页面属性**.
 
 然后，在 **Adobe Campaign** 选项卡，选择在中创建的投放 [创建自定义投放模板](#creating-a-custom-delivery-template).
 
@@ -107,7 +107,7 @@ In **资源/模板**，导航到投放模板并复制现有AEM投放。 当您�
 
 配置字段后，您需要手动更改映射。
 
-在CRXDE-lite中，转到 **jcr：content** （页面）节点并更改 **acMapping** 的内部名称的值 **目标映射**.
+在CRXDE-Lite中，转到 **jcr：content** （属于页面）节点，并更改 **acMapping** 的内部名称的值 **目标映射**.
 
 ![chlimage_1-198](assets/chlimage_1-198.png)
 

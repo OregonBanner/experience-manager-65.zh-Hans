@@ -10,9 +10,9 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: cb621332-a149-4f8d-9425-fd815b033c38
 exl-id: 2b396850-e9fb-46d9-9daa-ebd410a9e1a5
-source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '2011'
+source-wordcount: '2009'
 ht-degree: 0%
 
 ---
@@ -248,7 +248,7 @@ REST API支持以下操作：
   </tr>
   <tr>
    <td><code>DELETE</code></td>
-   <td>删除模型。 为了解决防火墙/代理问题， <code>POST</code> 包含 <code>X-HTTP-Method-Override</code> 带值的标题条目 <code>DELETE</code> 也将被接受为 <code>DELETE</code> 请求。</td>
+   <td>删除模型。 解决防火墙/代理问题 <code>POST</code> 包含 <code>X-HTTP-Method-Override</code> 带值的标题条目 <code>DELETE</code> 也将被接受为 <code>DELETE</code> 请求。</td>
   </tr>
  </tbody>
 </table>

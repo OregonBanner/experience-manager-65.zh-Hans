@@ -8,20 +8,20 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
 exl-id: d8d9a799-3e30-442a-843b-d4d7ba70c557
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '473'
+source-wordcount: '471'
 ht-degree: 1%
 
 ---
 
 # 示例ContextHub存储候选项{#sample-contexthub-store-candidates}
 
-ContextHub提供了几个可在解决方案中使用的示例商店候选项。 每个示例都提供了以下信息：
+ContextHub提供了几个可在解决方案中使用的示例商店候选项。 为每个示例提供了以下信息：
 
-* 在何处查找源代码，以便可以打开它进行学习。
+* 在何处查找源代码，以便打开它进行学习。
 * 如何配置您从候选商店创建的商店。
-* 如何构建存储数据以便访问。
+* 存储数据的结构方式，以便您能够访问它。
 
 >[!WARNING]
 >
@@ -55,7 +55,7 @@ aem.segmentation存储候选扩展 [`ContextHub.Store.PersistedJSONPStore`](/hel
 
 ## contexthub.geolocation示例存储候选项 {#contexthub-geolocation-sample-store-candidate}
 
-Contexthub.geolocation示例存储候选项使用Google地图获取和存储有关客户端位置的信息。
+contexthub.geolocation示例存储候选文件使用Google Maps获取并存储有关客户端位置的信息。
 
 ### 源位置 {#source-location-geolocation}
 
@@ -98,7 +98,7 @@ contexthub.geolocation存储候选项扩展 [`ContextHub.Store.PersistedJSONPSto
 
 ### 数据项 {#data-items-geolocation}
 
-存储区使用的数据树类似于以下示例：
+该存储使用与以下示例类似的数据树：
 
 ```xml
 {
@@ -109,11 +109,11 @@ contexthub.geolocation存储候选项扩展 [`ContextHub.Store.PersistedJSONPSto
 
 >[!NOTE]
 >
->Chrome 50.x中引入的安全策略要求所有与地理位置相关的调用都通过安全连接进行。 因此，如果AEM也通过https运行，则AEM强制对地理位置API调用使用https。 否则，将使用http以遵守相同来源的策略。 参见 [此Google博客帖子](https://developers.google.com/web/updates/2016/04/geolocation-on-secure-contexts-only) 以了解有关Chrome中更改的更多详细信息。
+>Chrome 50.x中引入的安全策略要求所有与地理位置相关的调用都通过安全连接进行。 因此，如果AEM也通过https运行，则AEM强制对地理位置API调用使用https。 否则，将使用http来遵守相同来源的策略。 请参阅 [此Google博客帖子](https://developers.google.com/web/updates/2016/04/geolocation-on-secure-contexts-only) 以了解有关Chrome中更改的更多详细信息。
 
 ## contexthub.surferinfo示例存储候选项 {#contexthub-surferinfo-sample-store-candidate}
 
-存储有关当前客户端环境的信息，例如设备、窗口、浏览器、日期和时间。
+存储有关当前客户端环境的信息，如设备、窗口、浏览器、日期和时间。
 
 ### 源位置 {#source-location-surferinfo}
 
@@ -129,7 +129,7 @@ contexthub.datetime存储候选项扩展 [`ContextHub.Store.PersistedStore`](/he
 
 ### 数据项 {#data-items-surferinfo}
 
-使用此存储候选的存储区具有类似于以下示例的数据树：
+使用此候选商店的存储区具有类似于以下示例的数据树：
 
 ```xml
 {
@@ -192,7 +192,7 @@ contexthub.geolocation存储候选项扩展 [`ContextHub.Store.PersistedStore`](
 
 ### 配置 {#configuration-emulators}
 
-默认配置包括一个名为的数组 `defaultEmulators` 包含有关不同设备的信息。 创建存储区时，请根据需要使用下例中说明的格式，在Detail Configuration属性中提供不同的设备配置文件：
+默认配置包括一个名为的数组 `defaultEmulators` 其中包含有关不同设备的信息。 在创建存储时，根据需要在详细配置属性中提供不同的设备配置文件，使用的格式如下例所示：
 
 ```xml
 {
@@ -340,7 +340,7 @@ contexthub.datetime存储候选项扩展 [`ContextHub.Store.PersistedJSONPStore`
 
 ### 数据项 {#data-items-profile}
 
-使用此存储候选的存储区具有类似于以下示例的数据树：
+使用此候选商店的存储区具有类似于以下示例的数据树：
 
 ```xml
 {

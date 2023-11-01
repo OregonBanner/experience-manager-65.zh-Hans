@@ -1,18 +1,14 @@
 ---
 title: 在AEM中启用CRXDE Lite
-seo-title: Enabling CRXDE Lite in AEM
 description: 了解如何在Adobe Experience Manager中启用CRXDE Lite。
-seo-description: Learn how to enable CRXDE Lite in AEM.
-uuid: d7a3db67-6384-463b-9aa9-f08ecc6c99c6
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: Security
 content-type: reference
-discoiquuid: 72df3ece-badf-466b-8f9a-0ec985d87741
 exl-id: bf51def2-1dd4-4bd3-b989-685058f0ead8
-source-git-commit: e54c1d422f2bf676e8a7b0f50a101e495c869c96
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '260'
+source-wordcount: '254'
 ht-degree: 0%
 
 ---
@@ -29,7 +25,7 @@ ht-degree: 0%
 404 Resource at '/crx/server/crx.default/jcr:root/.1.json' not found: No resource found
 ```
 
-虽然此建议旨在尽可能减少攻击面，但系统管理员有时可能需要访问CRXDE Lite，才能浏览内容或调试生产实例上的问题。
+虽然此建议旨在尽可能减少攻击面，但系统管理员有时可能需要访问CRXDE Lite来浏览内容或调试生产实例上的问题。
 
 您可以通过以下任一方式启用CRXDE Lite [OSGi设置](#enabling-crxde-lite-osgi) 或使用 [cURL命令](#enabling-crxde-lite-curl).
 

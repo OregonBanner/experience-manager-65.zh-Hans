@@ -2,9 +2,9 @@
 title: 自定义 HTTP 标头
 description: 了解如何在Adobe Experience Manager Commerce中配置自定义HTTP标头。
 exl-id: 834aadac-c3be-4e7a-a3cb-349608810b40
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '278'
+source-wordcount: '276'
 ht-degree: 5%
 
 ---

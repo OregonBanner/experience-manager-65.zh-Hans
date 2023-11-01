@@ -10,9 +10,9 @@ topic-tags: Security
 content-type: reference
 discoiquuid: 2c263c0d-2521-49df-88ba-f304a25af8ab
 exl-id: e24d815c-83e2-4639-8273-b4c0a6bb008a
-source-git-commit: 10227bcfcfd5a9b0f126fee74dce6ec7842f5e95
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '801'
+source-wordcount: '795'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 ## 简介 {#introduction}
 
-默认情况下，AEM使用令牌身份验证处理程序来验证每个请求。 但是，为了处理身份验证请求，令牌身份验证处理程序需要访问每个请求的存储库。 发生这种情况是因为使用Cookie来维护身份验证状态。 从逻辑上讲，状态需要保留在存储库中，以便验证后续请求。 实际上，这意味着身份验证机制是有状态的。
+默认情况下，AEM使用令牌身份验证处理程序来验证每个请求。 但是，要为身份验证请求提供服务，令牌身份验证处理程序需要访问每个请求的存储库。 发生这种情况是因为使用Cookie来维护身份验证状态。 从逻辑上讲，状态需要保留在存储库中才能验证后续请求。 实际上，这意味着身份验证机制是有状态的。
 
 这对于水平可扩展性尤其重要。 在像下面描述的发布场这样的多实例设置中，无法以最佳方式实现负载平衡。 使用有状态身份验证，持久身份验证状态将仅在用户首次进行身份验证的实例上可用。
 

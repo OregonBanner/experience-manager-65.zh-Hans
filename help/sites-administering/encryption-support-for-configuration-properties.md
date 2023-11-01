@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: security
 discoiquuid: 4e08c297-aa4b-44cf-84c8-1e11582d9ebb
 exl-id: 3c3db1c8-5b22-45dd-aeaf-5cf830a9486b
-source-git-commit: e54c1d422f2bf676e8a7b0f50a101e495c869c96
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '283'
+source-wordcount: '281'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 此功能允许所有OSGi配置属性都以受保护的加密形式存储，而不是以明文形式存储。 Web控制台UI中的表单用于使用系统范围加密主密钥从明文创建加密文本。
 
-添加了OSGi配置插件支持，以便在服务使用属性之前对其进行解密。
+添加了OSGi配置插件支持，可在属性被服务使用之前对其进行解密。
 
 >[!NOTE]
 >

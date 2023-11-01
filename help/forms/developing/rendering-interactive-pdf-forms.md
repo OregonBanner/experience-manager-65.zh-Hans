@@ -8,9 +8,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 role: Developer
 exl-id: d9f32939-c2c0-4531-b15e-f63941c289e3
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '2487'
+source-wordcount: '2483'
 ht-degree: 0%
 
 ---
@@ -194,7 +194,7 @@ Forms服务向客户端设备（通常是Web浏览器）呈现交互式PDF forms
    * 创建 `URLSpec` 使用其构造函数存储URI值的对象。
    * 调用 `URLSpec` 对象的 `setApplicationWebRoot` 方法，并传递一个表示应用程序的Web根目录的字符串值。
    * 调用 `URLSpec` 对象的 `setContentRootURI` 方法，并传递一个指定内容根URI值的字符串值。 确保表单设计位于内容根URI中。 否则，Forms服务会引发异常。 要引用存储库，请指定 `repository:///`.
-   * 调用 `URLSpec` 对象的 `setTargetURL` 方法，并传递一个字符串值，该值指定要将表单数据发布到的目标URL值。 如果您在表单设计中定义目标URL，则可以传递空字符串。 您还可以指定将表单发送到的URL，以便执行计算。
+   * 调用 `URLSpec` 对象的 `setTargetURL` 方法，并传递一个字符串值，该值指定要将表单数据发布到的目标URL值。 如果您在表单设计中定义目标URL，则可以传递空字符串。 您还可以指定将表单发送到哪个URL来执行计算。
 
 1. 将文件附加到表单
 
@@ -249,7 +249,7 @@ Forms服务向客户端设备（通常是Web浏览器）呈现交互式PDF forms
    * 创建 `URLSpec` 使用其构造函数存储URI值的对象。
    * 调用 `URLSpec` 对象的 `setApplicationWebRoot` 方法，并传递一个表示应用程序的Web根目录的字符串值。
    * 调用 `URLSpec` 对象的 `setContentRootURI` 方法，并传递一个指定内容根URI值的字符串值。 确保表单设计位于内容根URI中。 否则，Forms服务会引发异常。 要引用存储库，请指定 `repository:///`.
-   * 调用 `URLSpec` 对象的 `setTargetURL` 方法，并传递一个字符串值，该值指定要将表单数据发布到的目标URL值。 如果您在表单设计中定义目标URL，则可以传递空字符串。 您还可以指定将表单发送到的URL，以便执行计算。
+   * 调用 `URLSpec` 对象的 `setTargetURL` 方法，并传递一个字符串值，该值指定要将表单数据发布到的目标URL值。 如果您在表单设计中定义目标URL，则可以传递空字符串。 您还可以指定将表单发送到哪个URL来执行计算。
 
 1. 将文件附加到表单
 

@@ -2,16 +2,16 @@
 title: 使用WS-security标头传递凭据
 description: 了解如何使用WS-security标头传递凭据
 exl-id: 519d57ad-81ab-4caf-ae25-4390ae2eee13
-source-git-commit: a2fd3c0c1892ac648c87ca0dec440e22144c37a2
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '217'
+source-wordcount: '215'
 ht-degree: 0%
 
 ---
 
 # 使用WS-Security标头传递凭据 {#using-execute-script-service-aem-forms-jee-workbench}
 
-使用Web服务在JEE服务上调用AEM Forms时，您可以使用WS-Security标头传递AEM Forms on JEE所需的客户端身份验证信息。 WS-Security定义SOAP扩展以实现客户端身份验证、消息机密性和消息完整性。 因此，当JEE上的AEM Forms部署为独立服务器或群集环境时，您可以在JEE服务上调用AEM Forms 。
+使用Web服务在JEE服务上调用AEM Forms时，您可以使用WS-Security标头传递AEM Forms on JEE所需的客户端身份验证信息。 WS-Security定义SOAP扩展以实现客户端身份验证、消息机密性和消息完整性。 因此，当JEE上的AEM Forms部署为独立服务器或群集环境时，您可以调用JEE上的AEM Forms 。
 
 如何在JEE上将WS-Security标头传递到AEM Forms取决于您使用的是轴生成的Java类，还是使用服务的本机SOAP栈栈的.NET客户端程序集。
 
@@ -21,9 +21,9 @@ ht-degree: 0%
 
 本文档涵盖以下主题：
 
-* 使用轴生成的Java类传递客户端身份验证
+* 使用Axis生成的Java类传递客户端身份验证
 
-* 生成调用Encryption服务所需的Axis库文件
+* 生成调用加密服务所需的Axis库文件
 
 * 使用WS-Security标头调用Encryption服务
 
@@ -34,9 +34,8 @@ ht-degree: 0%
 
 ## 要求 {#requirements}
 
-为了充分利用本文档，您需要对AEM Forms on JEE软件有深入的了解。
+要充分利用本文档，您需要对AEM Forms on JEE软件有一定的了解。
 
 >[!MORELIKETHIS]
 >
 >* [使用WS-Security标头传递凭据](assets/passing-credentials-using-ws-security-headers.pdf)
-

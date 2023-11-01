@@ -10,9 +10,9 @@ content-type: reference
 topic-tags: personalization
 discoiquuid: 4dda6a03-d3ad-4e65-8b37-cee030fa4f7f
 exl-id: 5e345ffd-4e9c-467f-8ebb-c798eeb61dea
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '2871'
+source-wordcount: '2869'
 ht-degree: 95%
 
 ---
@@ -176,7 +176,7 @@ ht-degree: 95%
 
 ## 创建区域作为 Live Copy {#creating-areas-as-live-copies}
 
-您可以创建一个区域作为Live Copy，以便跨站点结构继承目标内容。
+您可以创建区域作为 Live Copy，以便跨站点结构继承目标内容。
 
 要创建区域作为 Live Copy，请执行以下操作：
 

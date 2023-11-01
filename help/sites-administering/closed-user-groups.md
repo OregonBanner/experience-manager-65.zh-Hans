@@ -8,9 +8,9 @@ content-type: reference
 docset: aem65
 exl-id: 39e35a07-140f-4853-8f0d-8275bce27a65
 feature: Security
-source-git-commit: e54c1d422f2bf676e8a7b0f50a101e495c869c96
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '6854'
+source-wordcount: '6836'
 ht-degree: 1%
 
 ---
@@ -96,7 +96,7 @@ CUG的关键功能是限制内容存储库中给定树上除选定承担者外�
 在通过CUG定义受限读取访问时，应考虑以下最佳实践：
 
 * 慎重决定您对CUG的需求是限制读访问还是身份验证要求。 如果是后者，或者同时需要这两者，请查阅最佳实践部分，了解有关身份验证要求的详细信息
-* 为需要保护的数据或内容创建威胁模型，以便确定威胁边界，并清楚地了解数据的敏感性和与授权访问相关的角色
+* 为需要保护的数据或内容创建威胁模型，以确定威胁边界，并清楚地了解数据的敏感性和与授权访问相关的角色
 * 为存储库内容和CUG建模，以遵循与授权相关的一般方面和最佳实践：
 
    * 请记住，仅当给定CUG和设置授权中部署的其他模块评估允许给定主题读取给定存储库项目时，才会授予读取权限
@@ -129,7 +129,7 @@ CUG功能的与身份验证相关的部分允许您标记需要身份验证的�
 
 默认AEM安装程序现在通过允许以创作运行模式设置mixin来使用此配置，但只有在复制到发布实例时才会生效。 请参阅 [此页面](https://sling.apache.org/documentation/the-sling-engine/authentication/authenticationframework.html) 有关Sling如何实施身份验证要求的详细信息。
 
-添加 `granite:AuthenticationRequired` 配置的支持路径中的mixin类型将导致更新负责处理程序的OSGi注册，其中包含新的、额外的条目 `sling.auth.requirements` 属性。 如果给定的身份验证要求指定了可选 `granite:loginPath` 属性，该值另外会向身份验证器注册一个“ — ”前缀，以便从身份验证要求中排除。
+添加 `granite:AuthenticationRequired` 配置的支持路径中的mixin类型将导致更新负责处理程序的OSGi注册，其中包含新的、额外的条目 `sling.auth.requirements` 属性。 如果给定的身份验证要求指定了可选 `granite:loginPath` 属性，该值另外会向验证器注册，且前缀为“ — ”，以从验证要求中排除。
 
 #### 身份验证要求的评估和继承 {#evaluation-and-inheritance-of-the-authentication-requirement}
 
@@ -718,7 +718,7 @@ CUG重写的身份验证相关部分只附带一个与AdobeGranite身份验证�
 
 ### 禁用身份验证要求 {#disable-the-authentication-requirement}
 
-为了禁用对身份验证要求的支持， `granite.auth.authhandler` 模块足以删除与关联的配置 **AdobeGranite身份验证要求和登录路径处理程序**.
+要禁用对身份验证要求的支持，请按照 `granite.auth.authhandler` 模块足以删除与关联的配置 **AdobeGranite身份验证要求和登录路径处理程序**.
 
 >[!NOTE]
 >
@@ -740,7 +740,7 @@ CUG重写的身份验证相关部分只附带一个与AdobeGranite身份验证�
 
 ### AdobeGranite复制 {#adobe-granite-replication}
 
-为了能够在不同的AEM实例之间复制CUG策略，稍微调整了复制模块：
+复制模块已进行了稍微调整，以便能够在不同的AEM实例之间复制CUG策略：
 
 * `DurboImportConfiguration.isImportAcl()` 将按字面解释，并且只影响实施的访问控制策略 `javax.jcr.security.AccessControlList`
 
@@ -794,7 +794,7 @@ CUG重写的身份验证相关部分只附带一个与AdobeGranite身份验证�
 
 **在访问控制管理中编辑CUG策略**
 
-从剩余的JCR属性迁移到专用的访问控制策略会影响创建或修改CUG功能的授权部分所需的权限。 由于这被视为对访问控制内容的修改，因此它需要 `jcr:readAccessControl` 和 `jcr:modifyAccessControl` 权限以写入存储库。 因此，只有有权修改页面的访问控制内容的内容作者才能设置或修改此内容。 这与旧实施形成对比，旧实施写入常规JCR属性的能力已经足够，从而导致权限提升。
+从剩余的JCR属性迁移到专用的访问控制策略会影响创建或修改CUG功能的授权部分所需的权限。 由于这被视为对访问控制内容的修改，因此它需要 `jcr:readAccessControl` 和 `jcr:modifyAccessControl` 权限写入存储库。 因此，只有有权修改页面的访问控制内容的内容作者才能设置或修改此内容。 这与旧实施形成对比，旧实施写入常规JCR属性的能力已经足够，从而导致权限提升。
 
 **策略定义的目标节点**
 

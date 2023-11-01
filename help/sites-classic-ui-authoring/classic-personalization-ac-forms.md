@@ -8,9 +8,9 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: 3086a8a1-8d2e-455a-a055-91b07d31ea65
 exl-id: 3f9ed24e-c54b-4bd4-9212-eabc67bb540e
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '1224'
+source-wordcount: '1222'
 ht-degree: 0%
 
 ---
@@ -107,7 +107,7 @@ AEM允许您创建并使用与网站上的Adobe Campaign交互的表单。 可�
    >
    >此 **元素名称** 每个表单字段必须不同。 如有需要，请进行更改。
    >
-   >每个表单必须包含 **已加密的主密钥** 组件，以便正确管理Adobe Campaign数据库中的收件人。
+   >每个表单必须包含 **已加密的主密钥** 组件，用于正确管理Adobe Campaign数据库中的收件人。
 
 1. 通过选择激活页面 **页面** > **激活页面** 在工具箱里。 您的网站上已激活该页面。 您可以通过转到AEM发布实例来查看它。 验证表单后，Adobe Campaign数据库中的数据即会更新。
 

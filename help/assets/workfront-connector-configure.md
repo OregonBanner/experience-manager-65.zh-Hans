@@ -5,9 +5,9 @@ role: Admin
 feature: Integrations
 exl-id: 2660de7c-0281-4884-98d9-e78f20cf571c
 hide: true
-source-git-commit: a07765f95f01f05a30dce14138f75e7edbe94ae2
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '1740'
+source-wordcount: '1727'
 ht-degree: 1%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 1%
 
 ## 配置事件订阅 {#event-subscriptions}
 
-事件订阅用于通知AEM中发生的事件 [!DNL Adobe Workfront]. 有三个 [!DNL Workfront for Experience Manager enhanced connector] 需要活动订阅才能正常使用的功能包括：
+事件订阅用于通知AEM中发生的事件 [!DNL Adobe Workfront]. 有三个 [!DNL Workfront for Experience Manager enhanced connector] 需要事件订阅才能正常使用的功能包括：
 
 * 自动创建项目链接文件夹。
 * 将Workfront文档自定义表单值中的更改同步到AEM资源元数据。
@@ -62,9 +62,9 @@ ht-degree: 1%
 1. 链接的文件夹结构：输入逗号分隔的值。 每个值应 `DE:<some-project-custom-form-field>`、Portfolio、项目、年份、名称或某个“文本字符串值”（最后一个，带引号）。 它当前设置为Portfolio、项目、年、DE：项目类型、名称。
 1. 如果Workfront中的文件夹标题应包括结构中的所有文件夹，则应选中使用文件夹结构名称在Workfront中构建链接的文件夹标题。 否则，这将是最后一个文件夹的标题。
 1. 子文件夹多字段允许您指定应创建为链接文件夹的子文件夹的文件夹列表。
-1. 项目状态：选择项目必须设置为的状态以创建链接文件夹。
-1. 在具有项目组合的项目中创建链接文件夹：项目必须所属的Portfolio列表以创建链接文件夹。 将此列表留空可为所有项目组合创建链接文件夹。
-1. 在具有自定义表单字段的项目中创建链接文件夹：自定义表单字段及其项目必须具有的相应值以创建链接文件夹。 如果留空，将忽略此配置。 选择 `CUSTOM FORMS: Create DAM Linked Folder` 字段和输入 `Yes` 值。
+1. 项目状态：选择项目的状态以创建链接文件夹。
+1. 在具有项目组合的项目中创建链接文件夹：项目必须属于以创建链接文件夹的Portfolio的列表。 将此列表留空可为所有项目组合创建链接文件夹。
+1. 在具有自定义表单字段的项目中创建链接文件夹：自定义表单字段及其相应的值，项目必须创建链接文件夹。 如果留空，将忽略此配置。 选择 `CUSTOM FORMS: Create DAM Linked Folder` 字段和输入 `Yes` 值。
 1. 单击启用自动创建链接的文件夹。 如果您返回到“事件订阅”选项卡，现在将看到一个创建事件。
 
 ![链接的文件夹配置](/help/assets/assets/wf-linked-folder-config.png)

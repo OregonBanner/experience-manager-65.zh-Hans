@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 exl-id: 6dfaa14d-5dcf-4e89-993a-8d476a36d668
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '4613'
+source-wordcount: '4609'
 ht-degree: 6%
 
 ---
@@ -105,7 +105,7 @@ Lucene注册一个JMX Bean，它将提供有关索引内容的详细信息，包
 
 您可以通过访问位于以下位置的JMX控制台来访问该控制台： `https://server:port/system/console/jmx`
 
-登录到JMX控制台后，执行搜索 **Lucene索引统计数据** 才能找到它。 其他索引统计数据可在以下位置找到： **IndexStat** MBean。
+登录到JMX控制台后，执行搜索 **Lucene索引统计数据** 找到它。 其他索引统计数据可在以下位置找到： **IndexStat** MBean。
 
 有关查询统计数据，请查看命名的MBean **Oak查询统计数据**.
 

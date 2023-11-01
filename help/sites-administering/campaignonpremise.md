@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
 exl-id: a7281ca0-461f-4762-a631-6bb539596200
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '1583'
-ht-degree: 66%
+source-wordcount: '1581'
+ht-degree: 65%
 
 ---
 
@@ -124,7 +124,7 @@ Adobe Campaign 中的 **AEM 集成**&#x200B;包含有连接到 AEM 所需的许�
 
 ## 在AEM中配置Campaign集成 {#campaign-integration}
 
-AEM 使用[您在 Campaign 中设置的运算符](#create-operator)与 Campaign 进行通信
+AEM使用 [已在Campaign中设置的运算符](#create-operator) 与Campaign通信
 
 1. 以管理员身份登录到您的 AEM 创作实例。
 

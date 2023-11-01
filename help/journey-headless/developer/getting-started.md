@@ -2,9 +2,9 @@
 title: AEM Headless 快速入门
 description: 在 AEM Headless 开发人员历程的这一部分中，了解 AEM Headless 的先决条件。
 exl-id: a94794a4-bf8b-4f3b-a761-3f02feedd5c0
-source-git-commit: 9c517590c2b78eed7c52e33e0a106237a2af3bb7
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '3042'
+source-wordcount: '3038'
 ht-degree: 97%
 
 ---
@@ -195,7 +195,7 @@ AEM 允许灵活的内容结构，并且层级可以任意大。不过，请务�
 * 防止内容作者创作不属于该文件夹的内容。
 * 通过在创建期间过滤文件夹中允许的内容类型，以仅显示有效的内容类型来优化内容创建过程。
 
-通过创建适当的内容结构，可以更轻松地跨渠道协调 Headless 内容创作，以最大程度地重用内容。跨多个渠道利用内容可大大提高内容生产效率并增强更改管理。
+通过创建适当的内容结构，可以更轻松地跨渠道协调Headless内容创作，以最大限度地提高内容重复使用。 跨多个渠道利用内容可大大提高内容生产效率并增强更改管理。
 
 ##### 建立正确的命名惯例 {#naming-conventions}
 
@@ -277,11 +277,11 @@ GraphQL 充当 AEM 和 Headless 内容使用者之间的“粘合剂”。GraphQ
 
 * [AEM 中的 Headful 和 Headless](/help/sites-developing/headful-headless.md) – 对 AEM 中可用的 Headless 集成级别的完整讨论
 
-* An [AEM as a Headless CMS简介](/help/sites-developing/headless/introduction.md)
+* [AEM as a Headless CMS 简介](/help/sites-developing/headless/introduction.md)
 
 * [AEM Headless 翻译历程](/help/journey-headless/translation/overview.md) – 此文档历程可让您全面了解 Headless 技术、AEM 如何提供 Headless 内容以及如何翻译 Headless 内容。
 
-* [AEM Headless 教程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=zh-Hans) – 使用这些动手实践教程，探究如何使用各种选项通过 AEM 将内容交付到 Headless 端点，并选择适合您的选项。
+* [AEM Headless 教程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=zh-Hans) – 使用这些动手实践教程探索如何使用通过 AEM 将内容投放到 Headless 端点的各种选项并选择适合您的选项。
 * [使用 GraphQL API 进行 Headless 内容管理](https://experienceleague.adobe.com/?Solution=Experience+Manager&amp;Solution=Experience+Manager+Sites&amp;Solution=Experience+Manager+Forms&amp;Solution=Experience+Manager+Screens&amp;launch=ExperienceManager-D-1-2020.1.headless#courses) – 在本课程中大致了解在 AEM 中实施的 GraphQL API。需要通过 AdobeID 进行的身份验证。
 * [AEM Guides WKND - GraphQL](https://github.com/adobe/aem-guides-wknd-graphql) – 此 GitHub 项目包含突出显示 AEM 的 GraphQL API 的示例应用程序。
 * [创作概念](/help/sites-authoring/author.md) – 有关 AEM 的创作环境的技术文档，包括作者-发布设置的详细信息
@@ -295,4 +295,4 @@ GraphQL 充当 AEM 和 Headless 内容使用者之间的“粘合剂”。GraphQ
 * [GraphQL API](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md) – 说明如何创建请求来访问和交付内容片段的技术文档
 * [Assets REST API](/help/assets/assets-api-content-fragments.md) – 说明如何创建和修改内容片段（及其他资源）的技术文档
 * [持久查询](/help/sites-developing/headless/graphql-api/persisted-queries.md) – 有关 AEM 中的持久查询的技术文档
-* 此 [AEM开发人员门户](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=zh-Hans)
+* [AEM 开发人员门户](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=zh-Hans)

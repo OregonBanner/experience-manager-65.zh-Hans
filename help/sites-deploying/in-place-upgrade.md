@@ -4,9 +4,9 @@ description: 了解如何执行AEM 6.5的就地升级。
 topic-tags: upgrading
 feature: Upgrading
 exl-id: aef6ef00-993c-4252-b0ad-ddc4917beaf7
-source-git-commit: e54c1d422f2bf676e8a7b0f50a101e495c869c96
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '1246'
+source-wordcount: '1242'
 ht-degree: 0%
 
 ---
@@ -45,7 +45,7 @@ ht-degree: 0%
 
 如果从AEM 6.3升级，则不需要进行此迁移。对于低于6.3的版本，Adobe提供了一个工具，可用于将存储库迁移到AEM 6.3中存在的新版Oak Segment Tar。它作为快速入门程序包的一部分提供，对于任何将使用TarMK的升级而言，它是必需的。 升级使用MongoMK的环境不需要迁移存储库。 有关新的Segment Tar格式的优势的更多信息，请参见 [迁移到Oak区段Tar常见问题解答](/help/sites-deploying/revision-cleanup.md#online-revision-cleanup-frequently-asked-questions).
 
-使用标准AEM快速入门jar文件执行实际迁移，并使用新的 `-x crx2oak` 选项来执行crx2oak工具，以简化升级并使其更加稳健。
+使用标准AEM快速入门jar文件执行实际迁移，并使用新的 `-x crx2oak` 选项可执行crx2oak工具以简化升级并使其更加稳健。
 
 >[!NOTE]
 >
@@ -131,7 +131,7 @@ java -Xmx4096m -jar aem-quickstart.jar -v -x crx2oak -xargs -- --load-profile <<
 
 **将不会复制检查点，因为未指定外部数据存储。 这将导致在第一次启动时完全重新索引存储库。 使用 — skip-checkpoints强制迁移，或者参阅https://jackrabbit.apache.org/oak/docs/migration.html#Checkpoints_migration以了解更多信息。**
 
-出于某种原因，迁移过程需要访问数据存储中的二进制文件，并且无法找到它。 要指定数据存储配置，请在 `<<ADDITIONAL_FLAGS>>` 迁移命令的一部分：
+出于某种原因，迁移过程需要访问数据存储中的二进制文件，并且无法找到它。 要指定数据存储配置，请将以下标记包含在 `<<ADDITIONAL_FLAGS>>` 迁移命令的一部分：
 
 **对于S3数据存储：**
 

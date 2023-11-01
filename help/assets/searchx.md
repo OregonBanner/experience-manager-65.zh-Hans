@@ -5,28 +5,28 @@ contentOwner: AG
 role: Developer
 feature: Search
 exl-id: 9e33d1c0-232b-458a-ad6a-f595aa541a5a
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '825'
+source-wordcount: '823'
 ht-degree: 19%
 
 ---
 
-# 扩展资源搜索 {#extending-assets-search}
+# 扩展资产搜索 {#extending-assets-search}
 
-您可以扩展 [!DNL Adobe Experience Manager Assets] 搜索功能。 开箱即用， [!DNL Experience Manager Assets] 按字符串搜索资产。
+您可以扩展 [!DNL Adobe Experience Manager Assets] 搜索功能。 开箱即用， [!DNL Experience Manager Assets] 按字符串搜索资源。
 
-搜索通过QueryBuilder界面完成，因此可以使用多个谓词自定义搜索。 可以在以下目录中覆盖缺省谓词集： `/apps/dam/content/search/searchpanel/facets`.
+搜索通过QueryBuilder界面完成，因此可以使用多个谓词自定义搜索。 您可以在以下目录中覆盖缺省谓词集： `/apps/dam/content/search/searchpanel/facets`.
 
-您还可以将其他选项卡添加到 [!DNL Assets] “管理”面板。
+您还可以将其他选项卡添加到 [!DNL Assets] 管理面板。
 
 >[!CAUTION]
 >
->截至 [!DNL Experience Manager] 6.4，已弃用经典UI。 Adobe建议使用触屏优化UI。 有关自定义信息，请参阅 [搜索Facet](/help/assets/search-facets.md).
+>截至 [!DNL Experience Manager] 6.4，经典UI已被弃用。 Adobe建议使用触屏优化UI。 要进行自定义，请参阅 [搜索Facet](/help/assets/search-facets.md).
 
 ## 叠加 {#overlaying}
 
-要覆盖预配置的谓词，请复制 `facets` 节点来源 `/libs/dam/content/search/searchpanel` 到 `/apps/dam/content/search/searchpanel/` 或指定另一个 `facetURL` 中的属性 `searchpanel` 配置(默认为 `/libs/dam/content/search/searchpanel/facets.overlay.infinity.json`)。
+要覆盖预配置的谓词，请复制 `facets` 节点来源 `/libs/dam/content/search/searchpanel` 到 `/apps/dam/content/search/searchpanel/` 或指定其他 `facetURL` 中的属性 `searchpanel` 配置(默认为 `/libs/dam/content/search/searchpanel/facets.overlay.infinity.json`)。
 
 ![screen_shot_2012-06-05at113619am](assets/screen_shot_2012-06-05at113619am.png)
 
@@ -38,7 +38,7 @@ ht-degree: 19%
 
 您可以通过在以下位置配置其他搜索选项卡： [!DNL Assets] 管理界面。 要创建其他选项卡，请执行以下操作：
 
-1. 创建文件夹结构 `/apps/wcm/core/content/damadmin/tabs,`如果该文件尚不存在，则复制 `tabs` 节点来源 `/libs/wcm/core/content/damadmin` 然后粘上。
+1. 创建文件夹结构 `/apps/wcm/core/content/damadmin/tabs,`如果该文件尚不存在，请复制 `tabs` 节点来源 `/libs/wcm/core/content/damadmin` 然后粘上。
 1. 根据需要创建和配置第二个选项卡。
 
    >[!NOTE]
@@ -47,11 +47,11 @@ ht-degree: 19%
 
 ## 创建自定义谓词 {#creating-custom-predicates}
 
-[!DNL Assets] 随附一组预定义谓词，可用于自定义资产共享页面。 通过此方式自定义资产共享包含在 [创建和配置“资产共享”页面](/help/assets/assets-finder-editor.md#creating-and-configuring-an-asset-share-page).
+[!DNL Assets] 附带一组预定义谓词，可用于自定义资产共享页面。 中介绍了如何通过此方式自定义资产共享 [创建和配置资产共享页面](/help/assets/assets-finder-editor.md#creating-and-configuring-an-asset-share-page).
 
 除了使用预先存在的谓词之外， [!DNL Experience Manager] 开发人员还可以使用创建自己的谓词 [查询生成器API](/help/sites-developing/querybuilder-api.md).
 
-创建自定义谓词需要具备以下基本知识： [Widget框架](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html).
+创建自定义谓词需要具备有关 [构件框架](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html).
 
 最佳实践是复制并调整现有谓词。 示例谓词位于 **/libs/cq/search/components/predicates**.
 
@@ -140,9 +140,9 @@ ht-degree: 19%
    ```
 
 1. 为了使组件可用，您需要能够对其进行编辑。要使组件可编辑，请在 CRXDE 中添加主类型 **cq:EditConfig** 的 **cq:editConfig** 节点。为了删除段落，请添加带有单个值 **DELETE** 的多值属性 **cq:actions**。
-1. 导航到浏览器，并在示例页面上导航(例如， **press.html**)切换到设计模式并为谓词段落系统启用新组件(例如， **left**)。
+1. 导航到浏览器，并在示例页面中导航(例如， **press.html**)切换到设计模式并为谓词段落系统启用新组件(例如， **左侧**)。
 
-1. In **编辑** 模式，新组件现在可在sidekick中使用(可在 **搜索** 组)。 将组件插入 **谓词** 列并键入搜索词，例如， **菱形** 然后单击放大镜开始搜索。
+1. 在 **编辑** 模式，新组件现在可在sidekick中使用(可在 **Search** 组)。 将组件插入到 **谓词** 列并键入搜索词，例如， **菱形** 单击放大镜开始搜索。
 
    >[!NOTE]
    >
@@ -244,8 +244,8 @@ ht-degree: 19%
    ```
 
 1. 为了使组件可用，您需要能够对其进行编辑。要使组件可编辑，请在 CRXDE 中添加主类型 **cq:EditConfig** 的 **cq:editConfig** 节点。为了删除段落，请添加带有单个值 **DELETE** 的多值属性 **cq:actions**。
-1. 导航到浏览器，并在示例页面上导航(例如， **press.html**)切换到设计模式并为谓词段落系统启用新组件(例如， **left**)。
-1. In **编辑** 模式，新组件现在可在sidekick中使用(可在 **搜索** 组)。 将组件插入 **谓词** 列。
+1. 导航到浏览器，并在示例页面中导航(例如， **press.html**)切换到设计模式并为谓词段落系统启用新组件(例如， **左侧**)。
+1. 在 **编辑** 模式，新组件现在可在sidekick中使用(可在 **Search** 组)。 将组件插入到 **谓词** 列。
 
 ## 已安装的谓词小组件 {#installed-predicate-widgets}
 
@@ -258,12 +258,12 @@ ht-degree: 19%
 | predicatename | 字符串 | 谓词的名称。 默认为 `fulltext` |
 | searchCallback | 函数 | 用于触发事件搜索的回调 `keyup`. 默认为 `CQ.wcm.SiteAdmin.doSearch` |
 
-### PropertyPredicate {#propertypredicate}
+### 属性谓词 {#propertypredicate}
 
 | 属性 | 类型 | 描述 |
 |---|---|---|
 | predicatename | 字符串 | 谓词的名称。 默认为 `property` |
-| propertyName | 字符串 | JCR属性的名称。 默认为 `jcr:title` |
+| propertyName | 字符串 | jcr属性的名称。 默认为 `jcr:title` |
 | defaultvalue | 字符串 | 预填充的默认值。 |
 
 ### 路径谓词 {#pathpredicate}
@@ -273,23 +273,23 @@ ht-degree: 19%
 | predicatename | 字符串 | 谓词的名称。 默认为 `path` |
 | rootPath | 字符串 | 谓词的根路径。 默认为 `/content/dam` |
 | pathFieldPredicateName | 字符串 | 默认为 `folder` |
-| showFlatOption | 布尔值 | 用于显示复选框的标记 `search in subfolders`. 默认为true。 |
+| showFlatOption | 布尔值 | 用于显示复选框的标志 `search in subfolders`. 默认为true。 |
 
 ### DatePredicate {#datepredicate}
 
 | 属性 | 类型 | 描述 |
 |---|---|---|
 | predicatename | 字符串 | 谓词的名称。 默认为 `daterange` |
-| 属性名称 | 字符串 | JCR属性的名称。 默认为 `jcr:content/jcr:lastModified` |
+| propertyname | 字符串 | jcr属性的名称。 默认为 `jcr:content/jcr:lastModified` |
 | defaultvalue | 字符串 | 预填充的默认值 |
 
-### OptionsPredicate {#optionspredicate}
+### 选项谓词 {#optionspredicate}
 
 | 属性 | 类型 | 描述 |
 |---|---|---|
-| 标题 | 字符串 | 添加其他顶部标题 |
+| 标题 | 字符串 | 添加额外的顶部标题 |
 | predicatename | 字符串 | 谓词的名称。 默认为 `daterange` |
-| 属性名称 | 字符串 | JCR属性的名称。 默认为 `jcr:content/metadata/cq:tags` |
+| propertyname | 字符串 | jcr属性的名称。 默认为 `jcr:content/metadata/cq:tags` |
 | 折叠 | 字符串 | 折叠级别。 默认为 `level1` |
 | triggerSearch | 布尔值 | 用于在检查时触发搜索的标志。 默认为false |
 | searchCallback | 函数 | 用于触发搜索的回调。 默认为 `CQ.wcm.SiteAdmin.doSearch` |
@@ -297,6 +297,6 @@ ht-degree: 19%
 
 ## 自定义搜索结果 {#customizing-search-results}
 
-资产共享页面上搜索结果的显示受所选镜头控制。 [!DNL Experience Manager Assets] 附带一组预定义镜头，可用于自定义资产共享页面。 通过此方式自定义资产共享包含在 [创建和配置资产共享页面](/help/assets/assets-finder-editor.md#creating-and-configuring-an-asset-share-page).
+资产共享页面上搜索结果的显示受所选镜头控制。 [!DNL Experience Manager Assets] 附带一组预定义镜头，可用于自定义资产共享页面。 中介绍了如何通过此方式自定义资产共享 [创建和配置资产共享页面](/help/assets/assets-finder-editor.md#creating-and-configuring-an-asset-share-page).
 
-除了使用预先存在的镜片外， [!DNL Experience Manager] 开发商也可以自己制造镜头。
+除了使用预先存在的镜片外， [!DNL Experience Manager] 开发者也可以自己制作镜头。

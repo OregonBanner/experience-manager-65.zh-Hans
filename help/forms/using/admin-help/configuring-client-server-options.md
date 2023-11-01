@@ -7,9 +7,9 @@ geptopics: SG_AEMFORMS/categories/working_with_document_security
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 feature: Document Security
 exl-id: fe132f13-5f9a-4c86-a385-0a0026c812e2
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '10243'
+source-wordcount: '10239'
 ht-degree: 0%
 
 ---
@@ -72,7 +72,7 @@ ht-degree: 0%
 
 您的AEM表单环境包含一个或多个具有创建用户和组的相应权限的管理员用户。 如果您的组织正在使用Document Security，则还必须至少向一位管理员分配管理受邀用户和本地用户的权限。
 
-管理员还必须具有管理控制台用户角色，才能访问管理控制台。 (请参阅 [创建和配置角色](/help/forms/using/admin-help/creating-configuring-roles.md#creating-and-configuring-roles).)
+管理员还必须具有管理控制台用户角色才能访问管理控制台。 (请参阅 [创建和配置角色](/help/forms/using/admin-help/creating-configuring-roles.md#creating-and-configuring-roles).)
 
 ### 配置可见的用户和组 {#configuring-visible-users-and-groups}
 
@@ -296,7 +296,7 @@ Document Security可以审核和记录与与与受策略保护的文档、策略
 
 **已删除策略：** 发布者从文档中删除策略以撤销安全保护。
 
-**更改文档吊销URL：** 来自API级别的调用会更改指定的撤销URL，以便访问替换已撤销文档的新文档。
+**更改文档吊销URL：** 来自API级别的调用会更改为访问替换已撤销文档的新文档而指定的撤销URL。
 
 **修改文档：** 收件人更改受策略保护文档的内容。
 

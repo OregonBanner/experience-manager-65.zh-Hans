@@ -6,9 +6,9 @@ seo-description: Learn about the options available when installing a standalone 
 content-type: reference
 topic-tags: deploying
 exl-id: d6484bb7-8123-4f42-96e8-aa441b1093f3
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '1620'
+source-wordcount: '1616'
 ht-degree: 0%
 
 ---
@@ -47,13 +47,13 @@ AEM的默认端口为4502。 如果该端口不可用或已在使用中，则Qui
 
 如果您运行OracleJava 11（或Java的常规版本高于8），则启动AEM时需要在命令行中添加其他开关。
 
-* 以下 —  `-add-opens` 需要添加交换机，以防止相关的反射访问 `stdout.log`
+* 以下 —  `-add-opens` 需要添加交换机以防止相关的反射访问中的警告消息 `stdout.log`
 
 ```shell
 --add-opens=java.desktop/com.sun.imageio.plugins.jpeg=ALL-UNNAMED --add-opens=java.base/sun.net.www.protocol.jrt=ALL-UNNAMED --add-opens=java.naming/javax.naming.spi=ALL-UNNAMED --add-opens=java.xml/com.sun.org.apache.xerces.internal.dom=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/jdk.internal.loader=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED -Dnashorn.args=--no-deprecation-warning
 ```
 
-* 此外，您需要使用 `-XX:+UseParallelGC` 以缓解任何潜在的性能问题。
+* 此外，您需要使用 `-XX:+UseParallelGC` 切换以缓解任何潜在的性能问题。
 
 以下是在Java 11上启动AEM时其他JVM参数的外观示例：
 

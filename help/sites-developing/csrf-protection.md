@@ -1,7 +1,7 @@
 ---
 title: CSRF保护框架
 seo-title: The CSRF Protection Framework
-description: 该框架使用令牌来保证客户端请求的合法性
+description: 该框架使用令牌来确保客户端请求合法
 seo-description: The framework makes use of tokens to guarantee that the client request is legitimate
 uuid: 7cb222ba-fc7a-46ee-8b49-a5f39a53580b
 contentOwner: Guillaume Carlino
@@ -10,22 +10,22 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: f453427d-c813-48b7-b2f9-adadea39c67d
 exl-id: e6b0f8f7-54b0-4dd6-86ad-5516954c6d90
-source-git-commit: f841e3886771fb00eee6e476d7111d4a335a9d51
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '260'
+source-wordcount: '254'
 ht-degree: 0%
 
 ---
 
 # CSRF保护框架{#the-csrf-protection-framework}
 
-除了Apache Sling Referrer Filter之外，Adobe还提供了一个新的CSRF Protection Framework来抵御此类攻击。
+除了Apache Sling反向链接过滤器之外，Adobe还提供了一个新的CSRF保护框架来抵御此类攻击。
 
 该框架使用令牌来保证客户端请求的合法性。 令牌在表单发送到客户端时生成，并在表单发送回服务器时进行验证。
 
 >[!NOTE]
 >
->发布实例上没有匿名用户的令牌。
+>匿名用户的发布实例上没有任何令牌。
 
 ## 要求 {#requirements}
 
@@ -35,7 +35,7 @@ ht-degree: 0%
 
 ### 复制加密密钥 {#replicating-crypto-keys}
 
-为了使用令牌，您需要将HMAC二进制文件复制到部署中的所有实例。 参见 [复制HMAC密钥](/help/sites-administering/encapsulated-token.md#replicating-the-hmac-key) 了解更多详细信息。
+要使用令牌，您需要将HMAC二进制文件复制到部署中的所有实例。 请参阅 [复制HMAC密钥](/help/sites-administering/encapsulated-token.md#replicating-the-hmac-key) 以了解更多详细信息。
 
 >[!NOTE]
 >

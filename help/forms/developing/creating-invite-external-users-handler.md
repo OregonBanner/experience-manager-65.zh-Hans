@@ -3,9 +3,9 @@ title: 创建“邀请外部用户”处理程序
 description: 了解如何创建邀请外部用户处理程序。 它允许Rights Management服务邀请外部用户成为Rights Management用户。
 role: Developer
 exl-id: b0416716-dcc9-4f80-986a-b9660a7c8f6b
-source-git-commit: 6caf3ef4a00275f0f73be52b6a9ccba77d277f1a
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '1135'
+source-wordcount: '1133'
 ht-degree: 0%
 
 ---
@@ -170,7 +170,7 @@ public class InviteExternalUsersSample implements InvitedUserProvider
 
 ## 为授权处理程序定义组件XML文件 {#define-component-xml-authorization-handler}
 
-必须定义组件XML文件，才能部署邀请外部用户处理程序组件。 每个组件都存在一个组件XML文件，该文件提供了有关该组件的元数据。
+必须定义组件XML文件才能部署邀请外部用户处理程序组件。 每个组件都存在一个组件XML文件，该文件提供了有关该组件的元数据。
 
 以下各项 `component.xml` 文件用于邀请外部用户处理程序。 请注意，服务名称为 `InviteExternalUsersSample` 并且此服务公开的操作名为 `invitedUser`. 输入参数为 `java.util.List` 实例且输出值是 `com.adobe.edc.server.spi.esrp.InvitedUserProviderResult` 实例。
 

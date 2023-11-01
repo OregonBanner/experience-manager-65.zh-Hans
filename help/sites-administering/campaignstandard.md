@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
 exl-id: caa43d80-1f38-46fc-a8b9-9485c235c0ca
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '1833'
+source-wordcount: '1831'
 ht-degree: 17%
 
 ---
@@ -217,7 +217,7 @@ Campaign内容由内容作者在AEM创作实例上创建。 此实例通常仅�
 
 ## 在Campaign中配置AEM外部帐户 {#acc-external-user}
 
-当您 [创建了一个特定于AEM的电子邮件投放模板，](#aem-email-delivery-template) 您已指定模板应使用 `aemInstance` 用于与AEM通信的外部帐户。 为了启用两个解决方案之间的双向通信，您需要在Adobe Campaign中配置此帐户。
+当您 [创建了一个特定于AEM的电子邮件投放模板，](#aem-email-delivery-template) 您已指定模板应使用 `aemInstance` 用于与AEM通信的外部帐户。 要启用这两种解决方案之间的双向通信，您需要在Adobe Campaign中配置此帐户。
 
 1. 以管理员身份登录Adobe Campaign。
 

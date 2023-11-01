@@ -10,16 +10,16 @@ topic-tags: operations
 content-type: reference
 discoiquuid: 40560e06-2508-45a4-a648-39629ed54f28
 exl-id: 5b934e3a-f554-46ec-a913-8d570abb1503
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '839'
+source-wordcount: '837'
 ht-degree: 3%
 
 ---
 
 # 功能板{#dashboards}
 
-在使用AEM时，您可以管理大量不同类型的内容（例如，页面、资产）。 AEM功能板提供了一种易于使用且可自定义的方式，来定义显示合并数据的页面。
+在使用AEM时，您可以管理大量不同类型的内容（例如，页面、资源）。 AEM功能板提供了一种易于使用和自定义的方法来定义显示合并数据的页面。
 
 >[!NOTE]
 >
@@ -43,7 +43,7 @@ ht-degree: 3%
 
 ### 克隆功能板 {#cloning-a-dashboard}
 
-您可能希望具有多个功能板，以便从不同视图快速查看有关您的内容的信息。 为了帮助您创建新功能板，AEM提供了一个克隆功能，您可以使用它来复制现有功能板。 要克隆功能板，请按照以下步骤操作：
+您可能希望具有多个功能板，以便从不同视图快速查看有关您的内容的信息。 为了帮助您创建新功能板，AEM提供了一个克隆功能，您可以使用该功能复制现有功能板。 要克隆功能板，请按照以下步骤操作：
 
 1. 在 **工具** 部分，单击 **配置控制台**.
 
@@ -52,7 +52,7 @@ ht-degree: 3%
 
 1. 单击 **克隆**.
 
-1. 键入 **名称** 新仪表板的。
+1. 键入 **名称** 的新仪表板的。
 
 ### 删除功能板 {#removing-a-dashboard}
 
@@ -73,7 +73,7 @@ ht-degree: 3%
 
 ### 网站分析报表组件 {#web-analytics-reporting-components}
 
-AEM附带一组组件，这些组件渲染您的多个量度 [SiteCatalyst](/help/sites-administering/adobeanalytics.md) 数据。 这些组件在Sidekick中列在 **仪表板** 部分。
+AEM附带一组组件，这些组件呈现您的多个指标 [SiteCatalyst](/help/sites-administering/adobeanalytics.md) 数据。 这些组件在Sidekick中列在 **仪表板** 部分。
 
 每个报表组件至少提供三个选项卡：
 
@@ -86,7 +86,7 @@ AEM附带一组组件，这些组件渲染您的多个量度 [SiteCatalyst](/hel
 
 #### 基本配置 {#basic-configuration}
 
-此 **基本** 选项卡提供对以下配置条目的访问：
+此 **基本** 选项卡提供对以下配置项的访问：
 
 **标题** 仪表板上显示的标题。
 
@@ -98,17 +98,17 @@ AEM附带一组组件，这些组件渲染您的多个量度 [SiteCatalyst](/hel
 
 #### 报告配置 {#report-configuration}
 
-为了显示Web统计信息，您需要定义要编辑的数据的日期范围。 此 **报告** 选项卡提供了两个字段来定义该范围。
+要显示Web统计信息，您需要定义要收集的数据的日期范围。 此 **报表** 选项卡提供了两个字段来定义该范围。
 
 >[!NOTE]
 >
->设置较大的日期范围可能会降低仪表板的响应能力。
+>设置较大的日期范围可能会降低仪表板的响应性。
 
 **起始日期** 从中获取数据的绝对或相对日期。
 
 **结束日期** 获取数据的绝对或相对日期。
 
-每个组件还定义特定的设置。
+每个组件还会定义特定的设置。
 
 #### 超时报表 {#overtime-report}
 
@@ -118,7 +118,7 @@ AEM附带一组组件，这些组件渲染您的多个量度 [SiteCatalyst](/hel
 
 **量度** 要显示的事件列表。
 
-**元素** 划分图形中量度数据的元素列表。
+**元素** 用于划分图形中量度数据的元素列表。
 
 #### 排名列表报表 {#ranked-list-report}
 
@@ -140,7 +140,7 @@ AEM附带一组组件，这些组件渲染您的多个量度 [SiteCatalyst](/hel
 
 #### 顶级网站区域报表 {#top-site-section-report}
 
-此组件显示一个图形，其中根据以下配置显示网站的访问次数最多的部分。
+此组件根据以下配置显示一个图形，其中显示了网站中访问次数最多的部分。
 
 ![chlimage_1-29](assets/chlimage_1-29a.png)
 
@@ -168,7 +168,7 @@ AEM附带一组组件，这些组件渲染您的多个量度 [SiteCatalyst](/hel
 
 模板定义新功能板的默认内容。 您可以使用多个模板来创建不同类型的功能板。
 
-功能板模板与其他页面模板一样创建，只是它们存储在 `/libs/cq/dashboards/templates/`. 请参阅 [正在创建Contentpage模板](/help/sites-developing/website.md#creating-the-contentpage-template) 部分。
+功能板模板与其他页面模板一样创建，只是它们存储在下面 `/libs/cq/dashboards/templates/`. 请参阅 [正在创建Contentpage模板](/help/sites-developing/website.md#creating-the-contentpage-template) 部分。
 
 >[!NOTE]
 >
@@ -176,21 +176,21 @@ AEM附带一组组件，这些组件渲染您的多个量度 [SiteCatalyst](/hel
 
 ### 开发功能板组件 {#developing-a-dashboard-component}
 
-开发功能板组件包括创建常规AEM组件。 此部分介绍了显示前10个贡献者的组件的示例。
+开发功能板组件包括创建常规AEM组件。 本节介绍显示前10个贡献者的组件的示例。
 
 ![chlimage_1-31](assets/chlimage_1-31a.png)
 
-顶级创作组件存储在存储库中的 `/apps/geometrixx-outdoors/components/reporting` 并由：
+主要创作组件存储在存储库中的 `/apps/geometrixx-outdoors/components/reporting` 并由：
 
 1. a `jsp` 读取jcr数据并定义 `html` 占位符。
 
-1. 包含客户端库的客户端库 `js` 文件，用于获取和排序数据，然后填充 `html` 占位符。
+1. 包含客户端库的客户端库 `js` 文件用于获取和排序数据，然后填充 `html` 占位符。
 
 ![chlimage_1-32](assets/chlimage_1-32a.png)
 
 以下JavaScript文件是在 `geout.reporting.topauthors` [客户端库](/help/sites-developing/clientlibs.md) 作为组件本身的子项。
 
-此 [Querybuilder](/help/sites-developing/querybuilder-api.md) 用于查询要读取的存储库 `cq:AuditEvent` 节点。 查询结果是一个JSON对象，从中可提取作者贡献。
+此 [Querybuilder](/help/sites-developing/querybuilder-api.md) 用于查询要读取的存储库 `cq:AuditEvent` 节点。 查询结果是JSON对象，将从该对象中提取作者贡献。
 
 #### top_authors.js {#top-authors-js}
 

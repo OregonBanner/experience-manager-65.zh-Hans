@@ -10,9 +10,9 @@ content-type: reference
 discoiquuid: 6694a135-d1e1-4afb-9f5b-23991ee70eee
 docset: aem65
 exl-id: e8929d7c-9920-4c02-95a9-6f7f7a365203
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '3572'
+source-wordcount: '3570'
 ht-degree: 2%
 
 ---
@@ -481,7 +481,7 @@ curl -v -X POST --user admin:admin -F file=@/Users/SomeGuy/Desktop/core.wcm.comp
 
 ### 安装包 {#installing-packages}
 
-上传资源包只会将该资源包内容添加到存储库，但不可访问。 您必须安装上传的包，才能使用包的内容。
+上传资源包只会将该资源包内容添加到存储库，但不可访问。 您必须安装上传的包才能使用包的内容。
 
 >[!CAUTION]
 >

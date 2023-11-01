@@ -11,16 +11,16 @@ content-type: reference
 discoiquuid: 873ce073-0055-4e1b-b3c6-ae7967700894
 docset: aem65
 exl-id: eabd8335-6140-4c15-8cff-21608719aa5f
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '4956'
-ht-degree: 1%
+source-wordcount: '4950'
+ht-degree: 2%
 
 ---
 
 # 使用JMX控制台监控服务器资源{#monitoring-server-resources-using-the-jmx-console}
 
-通过JMX控制台，您可以监视和管理CRX服务器上的服务。 以下各节概述了通过JMX框架公开的属性和操作。
+通过JMX控制台，您可以监视和管理CRX服务器上的服务。 后面的部分总结了通过JMX框架公开的属性和操作。
 
 有关如何使用控制台控件的信息，请参见 [使用JMX控制台](#using-the-jmx-console). 有关JMX的背景信息，请参见 [Java管理扩展(JMX)技术](https://www.oracle.com/technetwork/java/javase/tech/javamanagement-140525.html) oracle网站上的页面。
 
@@ -49,7 +49,7 @@ ht-degree: 1%
 * 参数：无
 * 返回的值：包含Count和ModelId列的表格式数据。
 
-**returnWorkflowQueueInfo** 列出有关已处理的工作流项目以及已排队等候处理的工作流项目的信息。
+**returnWorkflowQueueInfo** 列出有关已处理的工作流项目以及已排队等待处理的工作流项目的信息。
 
 * 参数：无
 * 返回值：包含以下列的表格式数据：
@@ -63,7 +63,7 @@ ht-degree: 1%
    * 失败的作业
    * 已完成的作业
    * 已处理的作业
-   * 已排队的作业
+   * 排队的作业
 
 **returnWorkflowJobTopicInfo** 列出工作流作业的处理信息，按主题组织。
 
@@ -93,13 +93,13 @@ ht-degree: 1%
 * 参数：无。
 * 返回的值：包含“计数”和“模型ID”列的表格数据。
 
-**terminateFailedInstances** 终止失败的工作流实例。 您可以终止所有失败实例或仅终止特定模型的失败实例。 或者，您可以在实例终止后重新启动实例。 也可以测试操作以查看结果，而无需实际执行该操作。
+**terminateFailedInstances** 终止失败的工作流实例。 您可以终止所有失败的实例，或仅终止特定模型的失败实例。 或者，您可以在实例终止后重新启动实例。 也可以测试操作以查看结果，而无需实际执行该操作。
 
 * 参数:
 
-   * 重新启动实例： （可选）指定值 `true` 在实例终止后重新启动实例。 默认值 `false` 导致已终止的工作流实例不重新启动。
-   * 试运行： （可选）指定值 `true` 查看操作的结果，而不实际执行操作。 默认值 `false` 导致执行操作。
-   * 模型： （可选）要对其应用操作的模型的ID。 不指定任何模型以将操作应用于所有工作流模型的失败实例。 ID是模型节点的路径，例如：
+   * 重新启动实例： （可选）指定值 `true` 在实例终止后重新启动实例。 默认值 `false` 导致无法重新启动已终止的工作流实例。
+   * 试运行： （可选）指定值 `true` 查看操作的结果，而不实际执行该操作。 默认值 `false` 导致执行操作。
+   * 模型： （可选）要应用操作的模型的ID。 不指定任何模型以将操作应用于所有工作流模型的失败实例。 ID是模型节点的路径，例如：
 
      `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
 
@@ -107,17 +107,17 @@ ht-degree: 1%
 
    * 发起者
    * 实例ID
-   * ModelId
+   * 模型ID
    * 有效负荷
    * 开始注释
    * 工作流标题
 
-**retryFailedWorkItems** 尝试执行失败的工作项步骤。 您可以重试特定工作流模型的所有失败工作项或仅重试失败工作项。 您可以选择测试工序以查看结果，而无需实际执行该工序。
+**retryFailedWorkItems** 尝试执行失败的工作项步骤。 您可以针对特定工作流模型重试所有失败的工作项或仅重试失败的工作项。 您可以选择测试工序以查看结果，而无需实际执行该工序。
 
 * 参数:
 
-   * 试运行： （可选）指定值 `true` 查看操作的结果，而不实际执行操作。 默认值 `false` 导致执行操作。
-   * 模型： （可选）要对其应用操作的模型的ID。 不指定任何模型以将操作应用于所有工作流模型的失败工作项。 ID是模型节点的路径，例如：
+   * 试运行： （可选）指定值 `true` 查看操作的结果，而不实际执行该操作。 默认值 `false` 导致执行操作。
+   * 模型： （可选）要应用操作的模型的ID。 不指定任何模型以将操作应用于所有工作流模型的失败工作项。 ID是模型节点的路径，例如：
 
      `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
 
@@ -125,65 +125,65 @@ ht-degree: 1%
 
    * 发起者
    * 实例ID
-   * ModelId
+   * 模型ID
    * 有效负荷
    * 开始注释
    * 工作流标题
 
-**清除活动** 删除特定页面的活动工作流实例。 您可以清除所有模型的活动实例，或只清除特定模型的实例。 您可以选择测试工序以查看结果，而无需实际执行该工序。
+**清除活动** 删除特定页面的活动工作流实例。 您可以清除所有模型的活动实例，或仅清除特定模型的实例。 您可以选择测试工序以查看结果，而无需实际执行该工序。
 
 * 参数:
 
-   * 模型： （可选）要对其应用操作的模型的ID。 不指定任何模型以将操作应用于所有工作流模型的工作流实例。 ID是模型节点的路径，例如：
+   * 模型： （可选）要应用操作的模型的ID。 不指定任何模型以将操作应用于所有工作流模型的工作流实例。 ID是模型节点的路径，例如：
 
      `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
-   * 自工作流启动以来的天数：要清除的工作流实例的持续时间（以天为单位）。
-   * 试运行： （可选）指定值 `true` 查看操作的结果，而不实际执行操作。 默认值 `false` 导致执行操作。
+   * 自工作流启动以来的天数：要清除的工作流实例的时限（以天为单位）。
+   * 试运行： （可选）指定值 `true` 查看操作的结果，而不实际执行该操作。 默认值 `false` 导致执行操作。
 
-* 返回值：有关已清除的活动工作流实例的表格式数据，包括以下列：
+* 返回值：有关已清除的活动工作流实例的表格数据，包括以下列：
 
    * 发起者
    * 实例ID
-   * ModelId
+   * 模型ID
    * 有效负荷
    * 开始注释
    * 工作流标题
 
-**countStaleWorkflows** 返回过时的工作流实例数。 您可以检索所有工作流模型或特定模型的过时实例数。
+**countStaleWorkflows** 返回失效的工作流实例数。 您可以检索所有工作流模型或特定模型的过时实例数。
 
 * 参数:
 
-   * 模型： （可选）要对其应用操作的模型的ID。 不指定任何模型以将操作应用于所有工作流模型的工作流实例。 ID是模型节点的路径，例如：
+   * 模型： （可选）要应用操作的模型的ID。 不指定任何模型以将操作应用于所有工作流模型的工作流实例。 ID是模型节点的路径，例如：
 
      `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
 
 * 返回的值：过期的工作流实例数。
 
-**restartStaleWorkflows** 重新启动过时的工作流实例。 您可以重新启动所有过时实例，也可以只重新启动特定模型的过时实例。 也可以测试操作以查看结果，而无需实际执行该操作。
+**restartStaleWorkflows** 重新启动过时的工作流实例。 您可以重新启动所有过时实例，或仅重新启动特定模型的过时实例。 也可以测试操作以查看结果，而无需实际执行该操作。
 
 * 参数:
 
-   * 模型： （可选）要对其应用操作的模型的ID。 不指定任何模型以将操作应用于所有工作流模型的过时实例。 ID是模型节点的路径，例如：
+   * 模型： （可选）要应用操作的模型的ID。 不指定任何模型以将操作应用于所有工作流模型的过时实例。 ID是模型节点的路径，例如：
 
      `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
-   * 试运行： （可选）指定值 `true` 查看操作的结果，而不实际执行操作。 默认值 `false` 导致执行操作。
+   * 试运行： （可选）指定值 `true` 查看操作的结果，而不实际执行该操作。 默认值 `false` 导致执行操作。
 
-* 返回值：已重新启动的工作流实例的列表。
+* 返回的值：已重新启动的工作流实例的列表。
 
 **fetchModelList** 列出所有工作流模型。
 
 * 参数：无
 * 返回值：标识工作流模型（包括ModelId和ModelName列）的表格数据。
 
-**countRunningWorkflows** 返回正在运行的工作流实例数。 您可以检索所有工作流模型或特定模型的正在运行的实例数。
+**countRunningWorkflows** 返回正在运行的工作流实例数。 您可以检索所有工作流模型或特定模型的运行实例数。
 
 * 参数:
 
-   * 模型： （可选）返回其运行实例数的模型的ID。 指定无模型可返回所有工作流模型的正在运行实例数。 ID是模型节点的路径，例如：
+   * 模型： （可选）返回其运行实例数的模型的ID。 指定无模型可返回所有工作流模型的运行实例数。 ID是模型节点的路径，例如：
 
      `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
 
-* 返回的值：正在运行的工作流实例数。
+* 返回的值：正在运行的工作流实例的数量。
 
 **countCompletedWorkflows** 返回已完成的工作流实例数。 您可以检索所有工作流模型或特定模型的已完成实例数。
 
@@ -193,23 +193,23 @@ ht-degree: 1%
 
      `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
 
-* 返回的值：已完成的工作流实例数。
+* 返回的值：已完成的工作流实例的数量。
 
 **purgeCompleted** 从存储库中删除已完成的特定页面工作流记录。 当您大量使用工作流时，请定期使用此操作以最大限度地减小存储库的大小。 您可以清除所有模型的已完成实例，或仅清除特定模型的实例。 您可以选择测试工序以查看结果，而无需实际执行该工序。
 
 * 参数:
 
-   * 模型： （可选）要对其应用操作的模型的ID。 不指定任何模型以将操作应用于所有工作流模型的工作流实例。 ID是模型节点的路径，例如：
+   * 模型： （可选）要应用操作的模型的ID。 不指定任何模型以将操作应用于所有工作流模型的工作流实例。 ID是模型节点的路径，例如：
 
      `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
-   * 工作流完成后的天数：工作流实例处于已完成状态的天数。
-   * 试运行： （可选）指定值 `true` 查看操作的结果，而不实际执行操作。 默认值 `false` 导致执行操作。
+   * 自工作流完成以来的天数：工作流实例处于已完成状态的天数。
+   * 试运行： （可选）指定值 `true` 查看操作的结果，而不实际执行该操作。 默认值 `false` 导致执行操作。
 
-* 返回值：有关已清除的已完成工作流实例的表格式数据，包括以下列：
+* 返回值：有关已清除的已完成工作流实例的表格数据，包括以下列：
 
    * 发起者
    * 实例ID
-   * ModelId
+   * 模型ID
    * 有效负荷
    * 开始注释
    * 工作流标题
@@ -233,11 +233,11 @@ ht-degree: 1%
 
 **许可证密钥** 用于此存储库安装的唯一许可证密钥。 只读.
 
-**可用磁盘空间** 存储库的此实例可用的磁盘空间（以MB为单位）。 只读.
+**可用磁盘空间** 此存储库实例可用的磁盘空间（以MB为单位）。 只读.
 
 **MaximumNumberOfOpenFiles** 一次可以打开的文件数。 只读.
 
-**Sessiontracker** crx.debug.sessions系统变量的值。 true表示调试会话。 false表示正常会话。 读/写。
+**SessionTracker** crx.debug.sessions系统变量的值。 true表示调试会话。 false表示正常会话。 读/写。
 
 **描述符** 表示存储库属性的一组键值对。 所有属性均为只读。
 
@@ -255,9 +255,9 @@ ht-degree: 1%
    <td>identifier.stability</td>
    <td>指示不可引用节点标识符的稳定性。 可以使用以下值：
     <ul>
-     <li>identifier.stability.indefinition.duration：标识符不会更改。</li>
-     <li>identifier.stability.method.duration：标识符可以在方法调用之间更改。</li>
-     <li>identifier.stability.save.duration：标识符不会在保存/刷新周期内更改。</li>
+     <li>identifier.stability.infinition.duration：标识符不会更改。</li>
+     <li>identifier.stability.method.duration：在方法调用之间可以更改标识符。</li>
+     <li>identifier.stability.save.duration：标识符在保存/刷新周期内不会更改。</li>
      <li>identifier.stability.session.duration：标识符在会话期间不会更改。</li>
     </ul> </td>
   </tr>
@@ -291,7 +291,7 @@ ht-degree: 1%
   </tr>
   <tr>
    <td>option.observation.supported</td>
-   <td>true表示支持对存储库更改进行异步观察。 支持异步观察使应用程序能够在每次更改发生时接收和响应有关更改的通知。</td>
+   <td>true表示支持对存储库更改进行异步观察。 支持异步观察使应用程序能够在每次更改发生时接收和响应有关这些更改的通知。</td>
   </tr>
   <tr>
    <td>query.jcrscore</td>
@@ -299,7 +299,7 @@ ht-degree: 1%
   </tr>
   <tr>
    <td>option.simple.versioning.supported</td>
-   <td>true表示存储库支持简单的版本控制。 通过简单的版本控制，存储库可维护节点的连续一系列版本。</td>
+   <td>true表示存储库支持简单版本控制。 通过简单的版本控制，存储库可维护节点的连续一系列版本。</td>
   </tr>
   <tr>
    <td>option.workspace.management.supported</td>
@@ -311,10 +311,10 @@ ht-degree: 1%
   </tr>
   <tr>
    <td>node.type.management.primary.item.name.supported</td>
-   <td>true表示存储库允许节点定义包含主项目作为子项。 无需知道项目名称，即可使用API访问主要项目。</td>
+   <td>true表示存储库允许节点定义将主项目作为子项包含。 主项目可以使用API访问，而无需知道项目名称。</td>
   </tr>
   <tr>
-   <td>级别2.supported</td>
+   <td>level.2.supported</td>
    <td>true表示LEVEL_1_SUPPORTED和OPTION_XML_IMPORT_SUPPORTED均为true。</td>
   </tr>
   <tr>
@@ -359,7 +359,7 @@ ht-degree: 1%
   </tr>
   <tr>
    <td>crx.cluster.id</td>
-   <td>存储库群集的标识符。</td>
+   <td>存储库集群的标识符。</td>
   </tr>
   <tr>
    <td>query.stored.queries.supported</td>
@@ -371,11 +371,11 @@ ht-degree: 1%
   </tr>
   <tr>
    <td>node.type.management.inheritance</td>
-   <td><p>指示节点类型继承的存储库支持级别。 可以使用以下值：</p> <p>node.type.management.inheritance.minimal：主节点类型的注册仅限于仅将nt：base作为超类型的节点。 mixin节点类型的注册仅限于没有超类型的节点。</p> <p>node.type.management.inheritance.single：主节点类型的注册仅限于具有一个超类型的节点类型。 Mixin节点类型的注册仅限于最多具有一个超类型的节点。</p> <p><br /> node.type.management.inheritance.multiple：可使用一个或多个超类型注册主节点类型。 Mixin节点类型可以使用零个或多个超类型进行注册。</p> </td>
+   <td><p>指示对节点类型继承的存储库支持的级别。 可以使用以下值：</p> <p>node.type.management.inheritance.minimal：主节点类型的注册仅限于仅将nt：base作为超类型的节点。 mixin节点类型的注册仅限于没有超类型的节点。</p> <p>node.type.management.inheritance.single：主节点类型的注册仅限于具有一个超类型的节点。 Mixin节点类型的注册仅限于最多具有一个超类型的节点。</p> <p><br /> node.type.management.inheritance.multiple：可以使用一个或多个超类型注册主节点类型。 Mixin节点类型可以使用零个或多个超类型进行注册。</p> </td>
   </tr>
   <tr>
    <td>crx.cluster.preferredMaster</td>
-   <td>true表示此群集节点是群集的首选主控。</td>
+   <td>true表示此群集节点是群集的首选主节点。</td>
   </tr>
   <tr>
    <td>option.transactions.supported</td>
@@ -403,11 +403,11 @@ ht-degree: 1%
   </tr>
   <tr>
    <td>query.joins</td>
-   <td><p>查询中对联接的支持级别。 可以使用以下值：</p>
+   <td><p>查询中连接的支持级别。 可以使用以下值：</p>
     <ul>
-     <li>query.joins.none：不支持联接。 查询可以使用一个选择器。</li>
+     <li>query.joins.none：不支持连接。 查询可以使用一个选择器。</li>
      <li>query.joins.inner：支持内部连接。</li>
-     <li>query.joins.inner.outer：支持内部连接和外部连接。</li>
+     <li>query.joins.inner.outer：支持内连接和外连接。</li>
     </ul> </td>
   </tr>
   <tr>
@@ -432,7 +432,7 @@ ht-degree: 1%
   </tr>
   <tr>
    <td>node.type.management.residual.definitions.supported</td>
-   <td>true表示存储库支持带有剩余定义的名称属性。 如果受支持，项目定义的名称属性可以是一个星号(“*”)。</td>
+   <td>true表示存储库支持带有剩余定义的名称属性。 如果受支持，项目定义的名称属性可以是星号(“*”)。</td>
   </tr>
   <tr>
    <td>node.type.management.autocreated.definitions.supported</td>
@@ -440,7 +440,7 @@ ht-degree: 1%
   </tr>
   <tr>
    <td>crx.cluster.master</td>
-   <td>true表示此存储库节点是群集的主控节点。</td>
+   <td>true表示此存储库节点是群集的主节点。</td>
   </tr>
   <tr>
    <td>级别1.受支持</td>
@@ -448,7 +448,7 @@ ht-degree: 1%
   </tr>
   <tr>
    <td>option.unfiled.content.supported</td>
-   <td>true表示存储库支持未归档的内容。 未归档的节点不是存储库层次结构的一部分。</td>
+   <td>true表示存储库支持未归档的内容。 未归档的节点不属于存储库层次结构。</td>
   </tr>
   <tr>
    <td>jcr.specification.name</td>
@@ -464,7 +464,7 @@ ht-degree: 1%
   </tr>
   <tr>
    <td>option.locking.supported</td>
-   <td>true表示存储库支持节点锁定。 锁定使用户能够暂时阻止其他用户进行更改。</td>
+   <td>true表示存储库支持节点锁定。 锁定使用户可以暂时阻止其他用户进行更改。</td>
   </tr>
   <tr>
    <td>jcr.repository.version.display</td>
@@ -495,35 +495,35 @@ ht-degree: 1%
 
 **BackupDelay** 备份过程在备份的每个步骤之间休眠的时间（以毫秒为单位）。 读/写。
 
-**BackupInProgress** 值为true表示备份进程正在执行。 只读.
+**备份进行中** 值为true表示正在执行备份进程。 只读.
 
-**BackupProgress** 对于当前备份，已备份的所有文件的百分比。 只读.
+**备份进度** 对于当前备份，已备份的所有文件的百分比。 只读.
 
-**CurrentBackupTarget** 对于当前备份，为存储备份文件的ZIP文件。 当备份未进行时，不会显示任何值。 只读.
+**当前备份目标** 对于当前备份，为存储备份文件的ZIP文件。 当备份未进行时，不会显示任何值。 只读.
 
-**BackupWascessful** 值为true表示当前备份期间未发生错误，或者未进行任何备份。 false表示当前备份期间出错。 只读.
+**BackupWasSuccessful** 值为true表示当前备份期间没有发生错误，或者没有进行备份。 false表示当前备份期间出错。 只读.
 
 **BackupResult** 当前备份的状态。 可以使用以下值：
 
 * 正在进行备份：当前正在执行备份。
 * 已取消备份：已取消备份。
 * 备份已完成，但出现错误：备份过程中出现错误。 错误消息提供有关原因的信息。
-* 备份完成：备份成功。
-* 目前尚未执行任何备份：没有正在进行的备份。
+* 备份已完成：备份成功。
+* 目前未执行任何备份：没有正在进行的备份。
 
 只读.
 
 **TarOptimizationRunningSince** 当前TAR文件优化过程的开始时间。 只读.
 
-**TarOptimizationDelay** TAR优化进程在进程的每个步骤之间休眠的时间（以毫秒为单位）。 读/写。
+**TarOptimizationDelay** TAR优化进程在进程每个步骤之间休眠的时间（以毫秒为单位）。 读/写。
 
-**群集属性** 表示群集属性和值的一组键值对。 表中的每一行都表示一个群集属性。 只读.
+**群集属性** 表示群集属性和值的一组键值对。 表中的每一行代表一个群集属性。 只读.
 
 **群集节点** 存储库群集的成员。
 
-**ClusterId** 此存储库群集的标识符。 只读.
+**群集ID** 此存储库集群的标识符。 只读.
 
-**ClusterMasterId** 此存储库群集的主控节点的标识符。 只读.
+**ClusterMasterId** 此存储库群集的主节点的标识符。 只读.
 
 **ClusterNodeId** 存储库群集的此节点的标识符。 只读.
 
@@ -537,11 +537,11 @@ ht-degree: 1%
 
 * 返回值：无
 
-**runDataStoreGarbageCollection** 对存储库节点执行垃圾收集。
+**runDataStoreGarbageCollection** 对存储库节点执行垃圾回收。
 
 * 参数:
 
-   * delete：一个布尔值，指示是否删除未使用的存储库项目。 值为true会导致删除未使用的节点和属性。 如果值为false，则会扫描所有节点，但不会删除任何节点。
+   * 删除：一个布尔值，指示是否删除未使用的存储库项目。 值为true会导致删除未使用的节点和属性。 如果值为false，则会扫描所有节点，但不会删除任何节点。
 
 * 返回值：无
 
@@ -550,7 +550,7 @@ ht-degree: 1%
 * 参数：无
 * 返回值：当前状态的字符串表示形式
 
-**startBackup** 将存储库数据备份到ZIP文件中。
+**startBackup** 以ZIP文件备份存储库数据。
 
 * 参数:
 
@@ -558,23 +558,23 @@ ht-degree: 1%
 
      要执行增量备份，请指定以前用于备份的目录。
 
-     您可以指定绝对路径或相对路径。 相对路径是相对于crx-quickstart目录的父级的。
+     您可以指定绝对路径或相对路径。 相对路径相对于crx-quickstart目录的父级路径。
 
-     未指定值时，默认值为 `backup-currentdate.zip` 使用，其中 `currentdate` 采用格式 `yyyyMMdd-HHmm`.
+     未指定值时，默认值为 `backup-currentdate.zip` 被使用，其中 `currentdate` 采用格式 `yyyyMMdd-HHmm`.
 
 * 返回值：无
 
-**cancelerbackup** 停止当前的备份过程，并删除该过程为存档数据而创建的临时存档。
+**取消备份** 停止当前的备份过程，并删除该过程为归档数据而创建的临时归档。
 
 * 参数：无
 * 返回值：无
 
-**blockRepositoryWrite** 阻止对存储库数据进行更改。 所有存储库备份侦听器都会收到有关块的通知。
+**blockrepositorwrites** 阻止对存储库数据进行更改。 所有资料库备份侦听程序都会收到有关该块的通知。
 
 * 参数：无
 * 返回值：无
 
-**unblockRepositoryWrites** 从存储库中删除块。 所有存储库备份侦听器都会收到块删除的通知。
+**unblockRepositoryWrites** 从存储库中删除块。 所有资料库备份侦听程序都会收到块删除的通知。
 
 * 参数：无
 * 返回值：无
@@ -589,7 +589,7 @@ ht-degree: 1%
 * 参数：无
 * 返回值：无
 
-**tarIndexMerge** 合并所有TAR集的顶级索引文件。 顶级索引文件是主要版本不同的文件。 例如，以下文件将合并到文件index_3_1.tar中：index_1_1.tar、index_2_0.tar、index_3_0.tar。 已删除已合并的文件（在前面的示例中，删除了index_1_1.tar、index_2_0.tar和index_3_0.tar）。
+**tarIndexMerge** 合并所有TAR集的顶级索引文件。 顶级索引文件是具有不同主版本的文件。 例如，以下文件将合并到文件index_3_1.tar中： index_1_1.tar 、 index_2_0.tar 、 index_3_0.tar。 已合并的文件将被删除（在前面的示例中，删除了index_1_1.tar、index_2_0.tar和index_3_0.tar）。
 
 * 参数:
 
@@ -597,32 +597,32 @@ ht-degree: 1%
 
 * 返回值：无
 
-**beforeClusterMaster** 将此存储库节点设置为群集的主控节点。 如果不是主控的，此命令将停止当前主控实例的侦听器，并在当前节点上启动主控的侦听器。 然后，将此节点设置为主控节点并重新启动，从而导致群集中的所有其他节点(即由主控控制的节点)连接到此实例。
+**beforeClusterMaster** 将此存储库节点设置为群集的主节点。 如果尚未为主节点，则此命令将停止当前主实例的侦听器，并在当前节点上启动主侦听器。 然后，将此节点设置为主节点并重新启动，从而导致群集中的所有其他节点（即由主节点控制的节点）连接到此实例。
 
 * 参数：无
 * 返回值：无
 
-**joinCluster** 将此存储库作为由群集主控控制的节点添加到群集。 您必须提供用户名和密码以进行身份验证。 连接使用基本身份验证。 安全凭据在发送到服务器之前进行base-64编码。
+**joinCluster** 将此存储库作为由群集主节点控制的节点添加到群集。 您必须提供用户名和密码以进行身份验证。 连接使用基本身份验证。 安全凭据在发送到服务器之前进行base-64编码。
 
 * 参数:
 
-   * `master`：一个字符串值，表示运行主控存储库节点的计算机的IP地址或计算机名。
+   * `master`：一个字符串值，表示运行主存储库节点的计算机的IP地址或计算机名称。
    * `username`：用于向群集进行身份验证的名称。
    * `password`：用于身份验证的密码。
 
 * 返回值：无
 
-**traversalcheck** 遍历子树中的不一致，并可以选择修复这些不一致的问题，其起点为特定节点。 有关持久性管理器的文档中对此进行了详细介绍。
+**traversalcheck** 遍历子树中的不一致，并可选择修复从特定节点开始的不一致。 有关持久性管理器的文档将对此进行详细介绍。
 
-**consistencyCheck** 检查并（可选）修复数据存储中的一致性。 有关数据存储的文档将对此进行详细介绍。
+**consistencyCheck** 检查和（可选）修复数据存储中的一致性。 数据存储上的文档将对此进行详细介绍。
 
 ## 存储库统计数据（时间序列） {#repository-statistics-timeseries}
 
-每个统计类型的TimeSeries字段的值 `org.apache.jackrabbit.api.stats.RepositoryStatistics` 定义。
+每个统计类型的“时间序列”字段的值 `org.apache.jackrabbit.api.stats.RepositoryStatistics` 定义。
 
 * 域: `com.adobe.granite`
-* 类型: `TimeSeries`
-* 名称：以下值之一，来自 `org.apache.jackrabbit.api.stats.RepositoryStatistics.Type` 枚举类：
+* 类型：`TimeSeries`
+* 名称：以下值之一： `org.apache.jackrabbit.api.stats.RepositoryStatistics.Type` 枚举类：
 
    * BUNDLE_CACHE_ACCESS_COUNTER
    * BUNDLE_CACHE_MISS_AVERAGE
@@ -636,7 +636,7 @@ ht-degree: 1%
    * BUNDLE_WRITE_DURATION
    * BUNDLE_WS_SIZE_COUNTER
    * QUERY_AVERAGE
-   * QUERY_COUNT
+   * 查询计数
    * QUERY_DURATION
    * SESSION_COUNT
    * SESSION_LOGIN_COUNTER
@@ -651,9 +651,9 @@ ht-degree: 1%
 
 为报告的每种统计类型提供了以下属性：
 
-* ValuePerSecond：最后一分钟内的每秒测量值。 只读.
+* ValuePerSecond：过去一分钟内的每秒测量值。 只读.
 * ValuePerMinute：过去一小时内每分钟测量的值。 只读.
-* ValuePerHour：上一周每小时测量的值。 只读.
+* ValuePerHour：上周每小时的测量值。 只读.
 * ValuePerWeek：过去三年中每周测量到的值。 只读.
 
 ## 存储库查询统计信息 {#repository-query-stats}
@@ -667,7 +667,7 @@ ht-degree: 1%
 
 **慢查询** 有关完成时间最长的存储库查询的信息。 只读.
 
-**SlowQueriesQueueSize** 要包含在SlowQueries列表中的最大查询数。 读写。
+**SlowQueriesQueueSize** SlowQueries列表中包含的最大查询数。 读写。
 
 **PopularQueries** 有关发生次数最多的存储库查询的信息。 只读.
 
@@ -698,7 +698,7 @@ ht-degree: 1%
 
 **Id** 表示复制代理配置的标识符的字符串值。 多个代理可以使用相同的配置。 只读.
 
-**有效** 指示代理配置是否正确的布尔值：
+**有效** 一个布尔值，指示代理配置是否正确：
 
 * `true`：有效配置。
 * `false` ：配置包含错误。
@@ -710,29 +710,29 @@ ht-degree: 1%
 * `true`: 启用.
 * `false`: 已禁用.
 
-**队列已阻止** 一个布尔值，指示队列是否存在并被阻止：
+**已阻止队列** 一个布尔值，指示队列是否存在且被阻止：
 
 * `true`: 已阻止. 正在等待自动重试。
 * `false`：未阻止或不存在。
 
 只读.
 
-**QueuePaused** 指示作业队列是否已暂停的布尔值：
+**已暂停队列** 一个布尔值，指示作业队列是否已暂停：
 
 * `true`：已暂停（已暂停）
 * `false`：未暂停或不存在。
 
 读写。
 
-**QueueNumEntries** 一个int值，表示代理队列中的作业数。 只读.
+**QueueNumEntries** int值，表示代理队列中的作业数。 只读.
 
 **QueueStatusTime** 日期值，指示获取显示的状态值时服务器上的时间。 该值对应于加载页面的时间。 只读.
 
-**QueueNextRetryTime** 对于被阻止的队列，为日期值，指示下次自动重试的时间。 如果未显示时间，则不会阻止队列。 只读.
+**QueueNextRetryTime** 对于阻塞的队列，为日期值，指示下次自动重试的时间。 如果没有显示时间，则不会阻止队列。 只读.
 
-**QueueProcessingSince** 日期值，指示当前作业的处理开始时间。 如果没有出现时间，则队列被阻止或闲置。 只读.
+**QueueProcessingSince** 日期值，指示当前作业的处理开始时间。 如果未显示时间，则队列将被阻塞或闲置。 只读.
 
-**QueueLastProcessTime** 日期值，指示上一个作业何时完成。 只读.
+**QueueLastProcessTime** 日期值，指示上一个作业完成的时间。 只读.
 
 ### 运营 {#operations-3}
 
@@ -758,7 +758,7 @@ ht-degree: 1%
 
 **请求计数** 自上次重置统计信息以来发生的请求数。
 
-**MinRequestDurationMsec** 自上次重置统计信息以来，处理请求所需的最短时间（以毫秒为单位）。
+**MinRequestDurationMsec** 自上次重置统计信息以来处理请求所需的最短时间（以毫秒为单位）。
 
 **MaxRequestDurationMsec** 自上次重置统计信息以来，处理请求所需的最长时间（以毫秒为单位）。
 
@@ -768,14 +768,14 @@ ht-degree: 1%
 
 ### 运营 {#operations-4}
 
-**resetStatistics** 将所有统计信息设置为零。 当需要分析特定时间范围内的请求处理性能时，请重置统计信息。
+**resetStatistics** 将所有统计信息设置为零。 当您需要分析特定时间范围内的请求处理性能时，请重置统计信息。
 
 * 参数：无
 * 返回值：无
 
 **id** 程序包ID的字符串表示形式。
 
-**已安装** 指示是否安装包的布尔值：
+**已安装** 一个布尔值，指示软件包是否已安装：
 
 * `true`: 已安装.
 * `false`: 未安装.
@@ -789,7 +789,7 @@ ht-degree: 1%
 
 ## 快速入门启动器 {#quickstart-launcher}
 
-有关启动过程和“快速启动”启动器的信息。
+有关启动过程和快速入门启动器的信息。
 
 * 域： com.adobe.granite.quickstart
 * 类型：启动器
@@ -807,22 +807,22 @@ ht-degree: 1%
 
 **startupFinished**
 
-调用服务器启动器的startupFinished方法。 方法会尝试在Web浏览器中打开“欢迎”页面。
+调用服务器启动器的startupFinished方法。 方法会尝试在Web浏览器中打开欢迎页面。
 
 * 参数：无
 * 返回值：无
 
 **startupProgress**
 
-设置服务器启动过程的完成值。 QuickStart窗口中的进度条表示完成值。
+设置服务器启动进程的完成值。 QuickStart窗口中的进度条表示完成值。
 
 * 参数:
-   * p1：一个浮点值，以小数的形式表示启动过程完成的时间。 该值应介于0和1之间。 例如，0.3表示已完成30%。
+   * p1：一个浮点值，以小数形式表示启动过程完成的程度。 该值应介于0和1之间。 例如，0.3表示已完成30%。
 * 返回值：无。
 
 ## 第三方服务 {#third-party-services}
 
-一些第三方服务器资源安装向JMX控制台公开属性和操作的MBean。 下表列出了第三方资源并提供指向更多信息的链接。
+一些第三方服务器资源安装了向JMX控制台公开属性和操作的MBean。 下表列出了第三方资源并提供指向更多信息的链接。
 
 <table>
  <tbody>
@@ -838,7 +838,7 @@ ht-degree: 1%
   </tr>
   <tr>
    <td>com.sun.management</td>
-   <td>热点诊断</td>
+   <td>HotspotDiagnostic</td>
    <td><a href="https://docs.oracle.com/javase/8/docs/jre/api/management/extension/com/sun/management/HotSpotDiagnosticMXBean.html">com.sun.management.HotSpotDiagnosticMXBean</a></td>
   </tr>
   <tr>
@@ -880,8 +880,8 @@ ht-degree: 1%
 
 JMX控制台显示有关服务器上运行的多个服务的信息：
 
-* 属性：服务属性，如配置或运行时数据。 属性可以是只读的，也可以是读写的。
-* 操作：可以在服务上调用的命令。
+* 属性：服务属性，如配置或运行时数据。 属性可以是只读或读写。
+* 操作：可以对服务调用的命令。
 
 与OSGi服务一起部署的MBean向控制台公开服务属性和操作。 MBean确定公开的属性和操作，以及属性是只读属性还是读写属性。
 
@@ -889,8 +889,8 @@ JMX控制台的主页包括一个服务表。 表中的每一行表示一个由M
 
 1. 打开Web控制台，然后单击JMX选项卡。 ([http://localhost:4502/system/console/jmx](http://localhost:4502/system/console/jmx))
 2. 单击服务的单元格值可查看服务的属性和操作。
-3. 要更改属性值，请单击该值，在显示的对话框中指定该值，然后单击“保存”。
-4. 要调用服务操作，请单击操作名称，在出现的对话框中指定参数值，然后单击调用。
+3. 要更改属性值，请单击该值，在显示的对话框中指定该值，然后单击保存。
+4. 要调用服务操作，请单击操作名称，在显示的对话框中指定参数值，然后单击调用。
 
 ## 使用外部JMX应用程序进行监控 {#using-external-jmx-applications-for-monitoring}
 
@@ -905,7 +905,7 @@ CRX允许外部应用程序通过与Managed Bean (MBean)交互 [Java管理扩展
 
    `jconsole`
 
-JConsole将启动，并显示JConsole窗口。
+将启动JConsole并显示JConsole窗口。
 
 ### 连接到本地CRX进程 {#connecting-to-a-local-crx-process}
 
@@ -917,13 +917,13 @@ JConsole将显示本地Java虚拟机进程的列表。 该列表将包含两个�
 
 要连接到远程CRX进程，需要启用承载远程CRX进程的JVM以接受远程JMX连接。
 
-要启用远程JMX连接，必须在启动JVM时设置以下系统属性：
+要启用远程JMX连接，在启动JVM时必须设置以下系统属性：
 
 `com.sun.management.jmxremote.port=portNum`
 
-在上面的属性中， `portNum` 是要启用JMX RMI连接的端口号。 请确保指定一个未使用的端口号。 除了发布RMI连接器以进行本地访问外，通过设置此属性，还可在指定端口的专用只读注册表中使用已知名称“jmxrmi”发布其他RMI连接器。
+在上述属性中， `portNum` 是要启用JMX RMI连接的端口号。 请确保指定一个未使用的端口号。 除了发布RMI连接器以进行本地访问外，设置此属性还会在专用只读注册表中使用已知名称“jmxrmi”在指定端口发布其他RMI连接器。
 
-默认情况下，启用JMX代理进行远程监视时，它使用基于口令文件的口令验证，在启动Java VM时需要使用以下系统属性指定口令文件：
+默认情况下，启用JMX代理进行远程监视时，它使用基于密码文件的密码验证，启动Java VM时需要使用以下系统属性指定该密码文件：
 
 `com.sun.management.jmxremote.password.file=pwFilePath`
 
@@ -944,7 +944,7 @@ $ java
 
 ![screen_shot_2012-03-26at115056am](assets/screen_shot_2012-03-26at115056am.png)
 
-要访问CRX的内部监视和配置选项，请转到MBeans选项卡，然后从左侧的分层内容树中选择您感兴趣的属性或操作部分。 例如，com.adobe.granite/Repository/Operations部分。
+要访问CRX的内部监控和配置选项，请转到MBeans选项卡，然后从左侧的层次内容树中选择您感兴趣的属性或操作部分。 例如，com.adobe.granite/Repository/Operations部分。
 
 在该部分中，在左窗格中选择所需的属性或操作。
 

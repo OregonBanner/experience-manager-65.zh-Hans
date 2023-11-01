@@ -2,13 +2,13 @@
 sub-product: AEM Documentation Journeys
 user-guide-title: AEM 文档历程
 breadcrumb-title: AEM 文档历程
-user-guide-description: 文档历程通过将复杂和不同的功能捆绑在一起，以最佳做法方式解决业务目标，从而在 AEM 文档中提供了一种叙述性结构。 在设计时考虑了 AEM 初学者，历程将介绍概念和功能，以实现从 A 到 Z 的目标。
+user-guide-description: 文档历程通过将复杂和不同的功能捆绑在一起，以最佳做法方式解决业务目标，从而在AEM文档中提供了一种叙述性结构。 在设计时考虑了 AEM 初学者，历程将介绍概念和功能，以实现从 A 到 Z 的目标。
 feature: Developer Tools
 role: Developer, Architect
-source-git-commit: 0b8b517607f305ad82caf6ba766cad5a46021439
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '529'
-ht-degree: 53%
+source-wordcount: '527'
+ht-degree: 48%
 
 ---
 

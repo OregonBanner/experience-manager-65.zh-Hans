@@ -9,10 +9,10 @@ content-type: reference
 topic-tags: site-features
 discoiquuid: e3ccddb6-be5e-4e5f-a017-0eed263555ce
 exl-id: 1772368a-f5c9-440c-a92a-0f1d34cc4bf8
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '1312'
-ht-degree: 92%
+source-wordcount: '1306'
+ht-degree: 90%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 92%
 样式系统针对模板作者和内容作者的要求提供了统一的解决方案：
 
 * 模板作者可以在组件的内容策略中定义样式类。
-* 然后，内容作者在页面上编辑组件时，可以从下拉菜单中选择这些类，以应用相应的样式。
+* 然后，内容作者在页面上编辑组件时，可以从下拉列表中选择这些类以应用相应的样式。
 
 样式类随后会插入到组件的装饰包装器元素中，这样组件开发人员除了提供 CSS 规则之外，便无需关注样式的处理。
 
@@ -111,7 +111,7 @@ ht-degree: 92%
 
 >[!CAUTION]
 >
->配置为组件策略的样式属性的CSS类（以及任何必需的JavaScript）必须部署为 [客户端库](/help/sites-developing/clientlibs.md) 为了工作。
+>配置为组件策略的样式属性的CSS类（以及任何必需的JavaScript）必须部署为 [客户端库](/help/sites-developing/clientlibs.md) 去工作。
 
 ## 设置 {#setup}
 
@@ -126,7 +126,7 @@ ht-degree: 92%
 * `path = "/mnt/overlay/cq/gui/components/authoring/dialog/style/tab_design/styletab"`
 * `sling:resourceType = "granite/ui/components/coral/foundation/include"`
 
-配置组件后，由AEM自动将页面作者配置的样式插入修饰元素上，AEM会自动将该修饰元素包装在每个可编辑组件周围。 组件本身不需要执行任何操作即可实现这一点。
+配置好组件后，AEM会自动将页面作者配置的样式插入修饰元素上，AEM会自动将该修饰元素包装在每个可编辑的组件周围。 组件本身不需要执行任何操作即可实现这一点。
 
 ### 在“编辑”对话框中启用“样式”选项卡 {#enable-styles-tab-edit}
 
@@ -158,6 +158,6 @@ ht-degree: 92%
 >1. 最后，组件的 `cq:htmlTag`/`cq:tagName` 将被视为回退值。
 >
 
-这种定义样式名称的功能对于极其通用的组件（如布局容器或内容片段组件）非常有用，可为它们提供更多含义。
+这种定义样式名称的功能对于极其通用的组件（如布局容器或内容片段组件）非常有用，可为它们提供额外的含义。
 
 例如，使用该功能可以为布局容器提供 `<main>`、`<aside>`、`<nav>` 等语义。

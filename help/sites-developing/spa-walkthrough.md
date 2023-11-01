@@ -4,9 +4,9 @@ description: 本文介绍了 SPA 的概念，演练了如何使用基本 SPA 应
 topic-tags: spa
 content-type: reference
 exl-id: 95990112-2afc-420a-a7c7-9613f40d4c4a
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '1967'
+source-wordcount: '1965'
 ht-degree: 71%
 
 ---
@@ -20,7 +20,7 @@ SPA 编辑器提供了一个全面的解决方案来支持 AEM 中的 SPA。本�
 
 >[!NOTE]
 >
->对于需要基于SPA框架的客户端渲染(例如React或Angular)的项目，建议使用SPA编辑器。
+>SPA编辑器是推荐的解决方案，适用于需要基于SPA Framework的客户端渲染(例如React或Angular)的项目。
 
 ## 简介 {#introduction}
 
@@ -37,8 +37,8 @@ SPA 编辑器提供了一个全面的解决方案来支持 AEM 中的 SPA。本�
 * [AEM版本6.5.4或更高版本](/help/release-notes/release-notes.md)
    * 您必须拥有系统的管理员权限。
 * [GitHub 上提供的示例 WKND SPA Project 应用程序](https://github.com/adobe/aem-guides-wknd-spa)
-   * 下载 [最新版本的React应用程序。](https://github.com/adobe/aem-guides-wknd-spa/releases) 其名称类似于 `wknd-spa-react.all.classic-X.Y.Z-SNAPSHOT.zip`.
-   * 下载 [最新示例图像](https://github.com/adobe/aem-guides-wknd-spa/releases) 应用程序的。 其名称类似于 `wknd-spa-sample-images-X.Y.Z.zip`.
+   * 下载 [最新版本的React应用程序。](https://github.com/adobe/aem-guides-wknd-spa/releases) 其命名将类似于 `wknd-spa-react.all.classic-X.Y.Z-SNAPSHOT.zip`.
+   * 下载 [最新示例图像](https://github.com/adobe/aem-guides-wknd-spa/releases) 应用程序的。 其命名将类似于 `wknd-spa-sample-images-X.Y.Z.zip`.
    * [使用包管理器](/help/sites-administering/package-manager.md) 以安装包，就像安装AEM中的任何其他包一样。
    * 在本演练中，无需使用 Maven 安装应用程序。
 
@@ -79,7 +79,7 @@ SPA 的工作方式的特性使其更快、更流畅且更类似于本机应用�
 
 ### SPA 的工作原理是什么？ {#how-does-a-spa-work}
 
-SPA的主要思想是减少对服务器的调用和依赖，以便最小化由服务器调用导致的延迟，使SPA接近本机应用程序的响应能力。
+SPA的主要思想是减少对服务器的调用和依赖以最大限度地减少服务器调用造成的延迟，使SPA接近本机应用程序的响应速度。
 
 在传统的连续网页中，仅加载即时页面所需的数据。这意味着，当访客移至另一个页面时，将调用服务器以获取其他资源。当访客与页面上的元素进行交互时，可能需要额外的调用。 由于页面必须与访客的请求同步，因此多次调用可能会给人一种滞后或延迟的感觉。
 
@@ -87,17 +87,17 @@ SPA的主要思想是减少对服务器的调用和依赖，以便最小化由�
 
 为了获得更流畅的体验（接近访客从本机移动设备应用程序中期望的体验），SPA会在首次加载时加载访客的所有必要数据。 虽然最初可能需要花费更长的时间，但随后便不再需要额外的服务器调用。
 
-通过在客户端进行渲染，页面元素可以更快地做出反应，并且访客与页面的交互可以立即进行。 可能需要的任何其他数据都会异步调用，以最大化页面速度。
+通过在客户端进行渲染，页面元素可以更快地做出反应，并且访客与页面的交互可以立即进行。 为了最大化页面速度，可能需要的任何其他数据都会异步调用。
 
 >[!NOTE]
 >
->有关SPA如何在AEM中工作的技术详细信息，请参阅文章 [AEM中的SPA快速入门](/help/sites-developing/spa-getting-started-react.md).
+>有关SPA如何在AEM中工作的技术详细信息，请参阅文章 [AEM中的SPA入门](/help/sites-developing/spa-getting-started-react.md).
 >
 >要更详细地了解SPA编辑器的设计、架构和技术工作流，请参阅文章 [SPA编辑器概述](/help/sites-developing/spa-overview.md).
 
 ## SPA 的内容编辑体验 {#content-editing-experience-with-spa}
 
-当构建SPA以利用AEM SPA编辑器时，内容作者注意到编辑和创建内容时没有区别。 提供了常用 AEM 功能，而无需更改作者的工作流。
+构建SPA以利用AEM SPA编辑器时，内容作者在编辑和创建内容时不会注意到任何差异。 提供了常用 AEM 功能，而无需更改作者的工作流。
 
 1. 在 AEM 中编辑 WKND SPA Project 应用程序。
 
@@ -135,7 +135,7 @@ SPA的主要思想是减少对服务器的调用和依赖，以便最小化由�
 
 ## SPA 应用程序和 AEM SPA Editor {#spa-apps-and-the-aem-spa-editor}
 
-体验SPA如何为最终用户执行操作，然后检查SPA页面，有助于更好地了解SAP应用程序如何与AEM中的SPA编辑器一起使用。
+体验SPA对最终用户的行为方式，然后检查SPA页面，有助于更好地了解SAP应用程序如何与AEM中的SPA编辑器配合工作。
 
 ### 使用 SPA 应用程序 {#using-an-spa-application}
 
@@ -161,7 +161,7 @@ SPA的主要思想是减少对服务器的调用和依赖，以便最小化由�
 
 那么，如果在子页面中导航时没有重新加载页面，如何加载页面呢？
 
-下一节， [正在加载SPA应用程序，](#loading-an-spa-application) 深入了解加载SPA的机制，以及如何同步和异步加载内容。
+下一节， [加载SPA应用程序，](#loading-an-spa-application) 深入了解加载SPA的机制，以及如何同步和异步加载内容。
 
 ### 加载 SPA 应用程序 {#loading-an-spa-application}
 
@@ -172,7 +172,7 @@ SPA的主要思想是减少对服务器的调用和依赖，以便最小化由�
    ![步骤 1](assets/spa-walkthrough-step-1-1.png)
 
 1. 使用浏览器的内置工具可查看页面的源。
-1. 请注意，源的内容非常有限。
+1. 请注意，源的内容极其有限。
 
    * 页面的正文中没有任何内容。它主要由样式表和对各种脚本（例如 `clientlib-react.min.js`）的调用构成。
    * 这些脚本是此应用程序的主要驱动程序，负责呈现所有内容。
@@ -244,12 +244,12 @@ SPA的主要思想是减少对服务器的调用和依赖，以便最小化由�
    >这是AEM中服务器端渲染页面的行为更改，其中有一个 `cq` 为每个可编辑组件插入的元素。
    >
    >
-   >SPA中的此方法无需注入自定义元素，只需依赖其他数据属性，从而使前端开发人员更容易标记这些元素。
+   >SPA中的此方法无需注入自定义元素，只需依赖其他数据属性，使得前端开发人员更容易标记这些元素。
 
 ## 后续步骤 {#next-steps}
 
 现在，您已了解 AEM 中的 SPA 编辑体验以及 SPA 与 SPA 编辑器的关系，请更深入地了解 SPA 的构建方式。
 
-* [AEM中的SPA快速入门](/help/sites-developing/spa-getting-started-react.md) 显示如何在AEM中构建基本SPA以用于SPA编辑器
+* [AEM中的SPA入门](/help/sites-developing/spa-getting-started-react.md) 显示了如何构建基本SPA以便在AEM中使用SPA编辑器
 * [SPA 编辑器概述](/help/sites-developing/spa-overview.md)更深入地介绍了 AEM 和 SPA 之间的通信模型。
 * [为 AEM 开发 SPA](/help/sites-developing/spa-architecture.md) 介绍了如何让前端开发人员为 AEM 开发 SPA，以及 SPA 如何与 AEM 的架构进行交互。

@@ -2,10 +2,10 @@
 title: 配置翻译规则
 description: 了解如何定义翻译规则，标识要翻译的内容。
 exl-id: 262503af-361b-491c-8639-0bb32f0a4c0e
-source-git-commit: f627bc2b58578df1b4ff6c95d87f0c64daafa1c7
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '871'
-ht-degree: 84%
+source-wordcount: '869'
+ht-degree: 83%
 
 ---
 
@@ -68,7 +68,7 @@ ht-degree: 84%
 1. AEM 将保存配置。
 1. 您必须选择刚创建的上下文，然后点按或单击&#x200B;**编辑**。这将打开&#x200B;**翻译规则编辑器**以配置属性。
    ![翻译规则编辑器](assets/translation-rules-editor.png)
-1. 默认情况下，所有配置都继承自父路径，在此示例中为 `/content/dam`。取消选中选项&#x200B;**继承自`/content/dam`**&#x200B;以便向配置添加其他字段。
+1. 默认情况下，所有配置都继承自父路径，在此示例中为 `/content/dam`。取消选中选项 **继承自`/content/dam`** 以向配置中添加其他字段。
 1. 取消选中后，在列表的&#x200B;**常规**&#x200B;部分下，添加您[之前标识为翻译字段](getting-started.md#content-models)的内容片段模型的属性名称。
    1. 在&#x200B;**新属性**&#x200B;字段中输入属性名称。
    1. 这将自动选中&#x200B;**翻译**&#x200B;和&#x200B;**继承**&#x200B;选项。

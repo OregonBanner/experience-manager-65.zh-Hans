@@ -7,9 +7,9 @@ topic-tags: introduction
 content-type: reference
 docset: aem65
 exl-id: 408ac30c-60ab-4d6c-855c-d544af8d5cf9
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '2860'
+source-wordcount: '2856'
 ht-degree: 1%
 
 ---
@@ -52,7 +52,7 @@ ht-degree: 1%
 
 * `categories`：标识此JS和/或CSS文件集所属的类别 `cq:ClientLibraryFolder` 摔倒。 此 `categories` 属性是多值属性，允许库文件夹属于多个类别（请参阅下方以了解其用处）。
 
-* `dependencies`：这是此库文件夹所依赖的其他客户端库类别的列表。 例如，给定两个 `cq:ClientLibraryFolder` 节点 `F` 和 `G`，如果文件位于 `F` 需要另一个文件 `G` 为了正常运行，则至少一个 `categories` 之 `G` 应该属于 `dependencies` 之 `F`.
+* `dependencies`：这是此库文件夹所依赖的其他客户端库类别的列表。 例如，给定两个 `cq:ClientLibraryFolder` 节点 `F` 和 `G`，如果文件位于 `F` 需要另一个文件 `G` 以正常运行，则 `categories` 之 `G` 应该属于 `dependencies` 之 `F`.
 
 * `embed`：用于嵌入来自其他库的代码。 如果节点F嵌入了节点G和H，则得到的HTML将是来自节点G和H的内容集。
 * `allowProxy`：如果客户端库位于 `/apps`，此属性允许通过代理servlet访问它。 请参阅 [查找客户端库文件夹并使用代理客户端库Servlet](/help/sites-developing/clientlibs.md#locating-a-client-library-folder-and-using-the-proxy-client-libraries-servlet) 下。
