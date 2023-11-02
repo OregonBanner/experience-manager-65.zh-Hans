@@ -16,7 +16,7 @@ ht-degree: 12%
 Adobe Experience Manager (AEM)是一个基于Web的客户端 — 服务器系统，用于构建、管理和部署商业网站及相关服务。 它将多个基础架构级别和应用程序级别的功能合并到一个集成软件包中。
 
 * [有关更多详细信息，请访问文档](/help/sites-deploying/home.md)
-* [AEM近期文档更新](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html?lang=en)
+* [AEM近期文档更新](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html?lang=zh-Hans)
 
 ## 从何处下载AEM软件？ {#download}
 
