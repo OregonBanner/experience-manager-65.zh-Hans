@@ -1,20 +1,18 @@
 ---
 title: 如何在AEM 6.5 Forms上启用自适应Forms核心组件？
-seo-title: How to enable Adaptive Forms Core Components on AEM 6.5 Forms?
 description: 分步指南可帮助您在AEM 6.5 Forms环境中启用自适应Forms核心组件。
-seo-description: Step-by-Step guide to help you enable Adaptive Forms Core Components on an AEM 6.5 Forms environment.
 keywords: 启用核心组件、核心组件自适应Forms、6.5上的核心组件、AEM 6.5上的自适应Forms核心组件、AEM 6.5上的AF核心组件、AEM 6.5 Forms核心组件
 contentOwner: Khushwant Singh
 topic-tags: Adaptive Forms
 docset: aem65
 role: Admin, Developer
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+exl-id: 6585ea71-6242-47d3-bc59-6f603cf507b6
+source-git-commit: 1da3abac8a7f09d41127818a5abacf29524f1365
 workflow-type: tm+mt
-source-wordcount: '888'
-ht-degree: 21%
+source-wordcount: '990'
+ht-degree: 22%
 
 ---
-
 
 # 在AEM 6.5 Forms上启用自适应Forms核心组件 {#enable-adaptive-forms-core-components}
 
@@ -27,10 +25,9 @@ ht-degree: 21%
 
 通过启用自适应Forms核心组件，您可以开始创建、发布和交付 [基于核心组件的自适应Forms](create-an-adaptive-form-core-components.md) 和 [Headless自适应Forms](https://experienceleague.adobe.com/docs/experience-manager-headless-adaptive-forms/using/overview.html) 从AEM 6.5 Forms环境中。
 
-要在AEM 6.5 Forms环境中启用HAdaptive Forms核心组件，请设置和部署 [AEM Archetype 41或更高版本](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) 基于所有创作和发布实例上的项目（启用了表单选项）。
+要在AEM 6.5 Forms环境中启用自适应Forms核心组件，请设置和部署 [AEM Archetype 41或更高版本](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) 基于所有创作和发布实例上的项目（启用了表单选项）。
 
-本文介绍了如何在您的AEM 6.5 Forms环境中设置和部署基于AEM Archetype 41或更高版本的项目以启用自适应Forms核心组件。
-
+本文介绍了如何在您的AEM 6.5 Forms环境中设置和部署基于AEM Archetype 41或更高版本的项目以启用自适应Forms核心组件。 您可以参阅下面的列表，以了解 **AEM 6.5** 用于启用Forms核心组件的兼容版本：
 
 ## 前提条件 {#prerequisites}
 
@@ -107,7 +104,16 @@ ht-degree: 21%
 1. 更新项目以包含最新版本的Forms核心组件：
 
    1. 打开 [AEM原型项目文件夹]/pom.xml进行编辑。
-   1. 设置版本 `core.forms.components.version` 和 `core.forms.components.af.version` 到 [最新Forms核心组件](https://github.com/adobe/aem-core-forms-components/tree/release/650) 版本。
+   1. 设置版本 `core.forms.components.version` 和 `core.forms.components.af.version` 到 [最新Forms核心组件](https://github.com/adobe/aem-core-forms-components/tree/release/650#system-requirements) 版本并确保两者的版本都与 **Forms核心组件** 在表中提及，并设置版本 `core.wcm.components.version` 如中所述 **WCM核心组件**.
+
+      >[!WARNING]
+      >
+      >* 使用创建原型项目时 `version 45`， [AEM原型项目文件夹]/pom.xml最初将forms核心组件版本设置为 `1.1.28`. 在构建或部署原型项目之前，请将表单核心组件版本更新为 `1.1.26`.
+
+
+      >[!NOTE]
+      >
+      >* 如果设置了任何其他拓扑，请确保将提交、预填充和其他 URL 添加到 Dispatcher 层的允许列表。
 
    1. 保存并关闭该文件。
 
