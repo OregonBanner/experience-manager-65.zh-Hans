@@ -1,19 +1,15 @@
 ---
 title: 创建工作流模型
-seo-title: Creating Workflow Models
-description: 您可以创建工作流模型，以定义用户启动工作流时执行的一系列步骤。
-seo-description: You create a workflow model to define the series of steps executed when a user starts the workflow.
-uuid: 31071d3a-d6d5-4476-9ac0-7b335de406d9
+description: 您可以创建工作流模型，以定义在用户启动工作流时运行的一系列步骤。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
-discoiquuid: c097b60f-bcdf-45de-babe-b4c2e2b746a1
 docset: aem65
 exl-id: 6790202f-0542-4779-b3ce-d394cdba77b4
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2463'
+source-wordcount: '2451'
 ht-degree: 2%
 
 ---
@@ -22,7 +18,7 @@ ht-degree: 2%
 
 >[!CAUTION]
 >
->要使用经典UI，请参阅 [AEM 6.3文档](https://helpx.adobe.com/experience-manager/6-3/help/sites-developing/workflows-models.html) 以供参考。
+>有关使用经典UI的信息，请参阅 [AEM 6.3文档](https://helpx.adobe.com/experience-manager/6-3/help/sites-developing/workflows-models.html) 以供参考。
 
 您创建 [工作流模型](/help/sites-developing/workflows.md#model) 定义用户启动工作流时执行的一系列步骤。 您还可以定义模型属性，例如工作流是临时工作流还是使用多个资源。
 
@@ -30,14 +26,14 @@ ht-degree: 2%
 
 ## 创建新工作流 {#creating-a-new-workflow}
 
-首次创建新工作流模型时，它包含：
+首次创建工作流模型时，它包含：
 
 * 步骤， **流程开始** 和 **流程结束**.
 这些表示工作流的开始和结束。 这些步骤是必需的，无法编辑/删除。
 * 示例 **参与者** 已命名的步骤 **步骤1**.
 此步骤配置为向工作流发起者分配工作项。 编辑或删除此步骤，并根据需要添加步骤。
 
-使用编辑器创建新工作流：
+使用编辑器创建工作流：
 
 1. 打开 **工作流模型** 控制台；通过 **工具**， **工作流**， **模型** 或者，例如： [https://localhost:4502/aem/workflow](https://localhost:4502/aem/workflow)
 1. 选择 **创建**，则 **创建模型**.
@@ -101,7 +97,7 @@ ht-degree: 2%
 
 ### 向模型添加步骤 {#adding-a-step-to-a-model}
 
-您需要向模型添加步骤以表示要执行的活动 — 每个步骤都会执行特定活动。 标准AEM实例中提供了一组步骤组件。
+您必须向模型添加步骤以表示要执行的活动 — 每个步骤都会执行特定活动。 标准AEM实例中提供了一组步骤组件。
 
 在编辑模型时，可用步骤会出现在各个组的 **步骤浏览器**. 例如：
 
@@ -167,7 +163,7 @@ ht-degree: 2%
 
 ### 创建临时工作流 {#creating-a-transient-workflow}
 
-您可以创建 [瞬态](/help/sites-developing/workflows.md#transient-workflows) 工作流模型（创建新模型或编辑现有模型时）：
+您可以创建 [瞬态](/help/sites-developing/workflows.md#transient-workflows) 工作流模型（在创建模型或编辑现有模型时）：
 
 1. 打开的工作流模型 [编辑](#editinganexistingworkflow).
 1. 选择 **工作流模型属性** 工具栏中。
@@ -207,7 +203,7 @@ ht-degree: 2%
 
 ### 为多资源支持配置工作流 {#configuring-a-workflow-for-multi-resource-support}
 
-您可以为配置工作流模型 [多资源支持](/help/sites-developing/workflows.md#multi-resource-support) 创建新模型或编辑现有模型时：
+您可以为配置工作流模型 [多资源支持](/help/sites-developing/workflows.md#multi-resource-support) 创建模型或编辑现有模型时：
 
 1. 打开的工作流模型 [编辑](#editinganexistingworkflow).
 1. 选择 **工作流模型属性** 工具栏中。
@@ -264,7 +260,7 @@ ht-degree: 2%
 
 要导出资源包中的工作流模型，请执行以下操作：
 
-1. 使用创建新资源包 [包管理器](/help/sites-administering/package-manager.md#package-manager)：
+1. 使用创建包 [包管理器](/help/sites-administering/package-manager.md#package-manager)：
 
    1. 导航到包管理器，方法为 **工具**， **部署**， **包**.
 
@@ -299,7 +295,7 @@ ht-degree: 2%
 
 要配置要与表单一起使用的工作流，请执行以下操作：
 
-1. 创建新页面并打开它以进行编辑。
+1. 创建页面并打开它以进行编辑。
 1. 添加 **表单** 组件添加到页面。
 1. **配置** 该 **表单开始** 显示在页面中的组件。
 1. 使用 **启动工作流** 要从可用的工作流中选择所需的工作流，请执行以下操作：
@@ -328,7 +324,7 @@ ht-degree: 2%
 
 为了说明创建工作流的一些可能性，以下示例创建了 `Publish Example` 工作流。
 
-1. [创建新的工作流模型](#creating-a-new-workflow).
+1. [创建工作流模型](#creating-a-new-workflow).
 
    新工作流将包含：
 
@@ -402,7 +398,7 @@ ht-degree: 2%
 
 要定义OR规则，请按照以下步骤操作：
 
-1. 创建两个脚本并将它们保存在存储库中，例如在下：
+1. 创建两个脚本并将它们保存在存储库中，例如，位于以下位置：
 
    `/apps/myapp/workflow/scripts`
 

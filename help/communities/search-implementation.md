@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 exl-id: 8af5ee58-19d7-47b6-b45d-e88006703a5d
-source-git-commit: f03d0ab9d0f491441378e16e1590d33651f064b5
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1189'
+source-wordcount: '1188'
 ht-degree: 4%
 
 ---
@@ -82,7 +82,7 @@ ht-degree: 4%
 
 如果自定义属性正在使用中并且搜索缓慢，则必须为自定义属性创建其他索引以提高其性能。 要保持可移植性，请遵守 [命名要求](#naming-of-custom-properties) 创建可搜索的自定义属性时。
 
-要修改现有索引或创建自定义索引，请参阅 [Oak查询和索引](../../help/sites-deploying/queries-and-indexing.md).
+要修改现有索引或创建自定义索引，请参见 [Oak查询和索引](../../help/sites-deploying/queries-and-indexing.md).
 
 此 [Oak索引管理器](https://adobe-consulting-services.github.io/acs-aem-commons/features/oak-index-manager.html) 可从ACS AEM Commons获取。 它提供：
 

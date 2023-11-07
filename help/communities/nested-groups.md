@@ -7,9 +7,9 @@ topic-tags: introduction
 content-type: reference
 docset: aem65
 exl-id: 55803b7a-9064-4392-9cc2-9f113fa8dc29
-source-git-commit: f03d0ab9d0f491441378e16e1590d33651f064b5
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '600'
+source-wordcount: '599'
 ht-degree: 4%
 
 ---
@@ -50,7 +50,7 @@ ht-degree: 4%
    * **[!UICONTROL 社区组根目录]**： *保留为默认值*
    * **[!UICONTROL 其他可用的社区组语言]**：使用下拉菜单选择可用的社区组语言。 该菜单显示创建父社区站点时采用的所有语言。 用户可以在这些语言中进行选择，以便通过此单一步骤在多个区域设置中创建组。 在相应社区站点的“组”控制台中，以多种指定语言创建同一组。
    * **[!UICONTROL 社区组名称]**：艺术
-   * **[!UICONTROL 模板]**：下拉菜单以选择 `Reference Group`
+   * **[!UICONTROL 模板]**：用于选择的下拉列表 `Reference Group`
    * 选择 **[!UICONTROL 下一个]**
 
 ![嵌套社区组](assets/parent-to-nestedgroup.png)
@@ -148,7 +148,7 @@ ht-degree: 4%
 
 ## 发布体验 {#experience-on-publish}
 
-登录时可能会遇到不同的组，例如使用 [演示用户](/help/communities/tutorials.md#demo-users) 用于：
+在登录时可能会体验不同的组，例如，使用 [演示用户](/help/communities/tutorials.md#demo-users) 用于：
 
 * 艺术/历史组成员： `emily.andrews@mailinator.com/password`
    * 受限（机密）组“艺术/历史”可见：

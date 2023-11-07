@@ -2,7 +2,7 @@
 title: 迁移到AEMCommerce integration framework(CIF)加载项
 description: 如何从旧版本迁移到AEMCommerce integration framework(CIF)加载项。
 exl-id: c6c0c2fc-6cfa-4c64-b3d8-7e428b2a4b2e
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '265'
 ht-degree: 4%
@@ -35,4 +35,4 @@ CIF加载项不支持导入产品目录数据。 使用CIF附加组件主体，�
 
 ## 不可缓存的数据和购物交互
 
-对不可缓存的数据和交互的客户端请求（例如添加到购物车、搜索）应通过CDN/Dispatcher直接转到商业端点（商业解决方案或集成层）。 删除AEM只是代理的任何调用。
+对不可缓存的数据和交互的客户端请求（例如，添加到购物车、搜索）应通过CDN/Dispatcher直接转到商业端点（商业解决方案或集成层）。 删除AEM只是代理的任何调用。

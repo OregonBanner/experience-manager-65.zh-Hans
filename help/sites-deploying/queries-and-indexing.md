@@ -8,9 +8,9 @@ topic-tags: deploying
 legacypath: /content/docs/en/aem/6-0/deploy/upgrade/queries-and-indexing
 feature: Configuring
 exl-id: d9ec7728-84f7-42c8-9c80-e59e029840da
-source-git-commit: c7c32130a3257c14c98b52f9db31d80587d7993a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '3034'
+source-wordcount: '3032'
 ht-degree: 2%
 
 ---
@@ -429,7 +429,7 @@ AEM也可以配置为与远程Solr服务器实例配合使用：
 
 #### 推荐的Solr配置 {#recommended-configuration-for-solr}
 
-以下是基本配置的示例，该配置可以与本文所述的所有三个Solr部署一起使用。 它包含AEM中已存在的专用属性索引，不应与其他应用程序一起使用。
+以下是基本配置的示例，该配置可以与本文所述的所有三个Solr部署一起使用。 它包含AEM中已存在的专用属性索引；请勿与其他应用程序一起使用。
 
 要正确使用它，必须将归档文件的内容直接放在Solr主目录中。 如果有多节点部署，则它应直接位于每个节点的根文件夹下。
 

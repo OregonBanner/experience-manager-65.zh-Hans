@@ -2,10 +2,10 @@
 title: 编辑内容页面属性
 description: 在Adobe Experience Manager中为页面定义所需的属性。
 exl-id: 3cd9374f-6f16-40fb-97cf-5f9a750b8dd2
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1872'
-ht-degree: 45%
+source-wordcount: '1871'
+ht-degree: 43%
 
 ---
 
@@ -257,7 +257,7 @@ ht-degree: 45%
 
 * 从&#x200B;**Sites**&#x200B;控制台中：
 
-   * [创建一个新页面](/help/sites-authoring/managing-pages.md#creating-a-new-page)（一部分属性）
+   * [创建页面](/help/sites-authoring/managing-pages.md#creating-a-new-page) （一部分资产）
 
    * 单击或点按&#x200B;**属性**
 
@@ -352,7 +352,7 @@ ht-degree: 45%
    * 具有相同值的通用属性
 
       * 在“查看”模式中，只显示具有相同值的属性。
-      * 当字段有多个值时（例如“标记”），只有当 *所有* 很常见。 如果只有一些是通用的，则仅在编辑时才显示它们。
+      * 当字段有多个值时（例如，“标记”），则仅在以下情况下显示值 *所有* 很常见。 如果只有一些是通用的，则仅在编辑时才显示它们。
 
   如果不存在具有相同值的属性，则会显示一条消息。
 
@@ -363,7 +363,7 @@ ht-degree: 45%
    * 您可以更新可用字段中的值。
 
       * 当您选择&#x200B;**完成**&#x200B;时，新值会应用于所有选定页面。
-      * 当字段有多个值时（例如“标记”），您可以附加一个新值，也可以删除相同的值。
+      * 当字段有多个值时（例如，“标记”），您可以附加新值或删除公共值。
 
    * 如果不同页面具有相同的字段，但这些字段的值不同，则会用一个特殊的值表示它们，例如文本 `<Mixed Entries>`.
 

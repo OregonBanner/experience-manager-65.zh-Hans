@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 role: Developer
 exl-id: 036c35c1-1be7-4825-bbb6-ea025e49c6f6
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '5396'
+source-wordcount: '5393'
 ht-degree: 0%
 
 ---
@@ -632,7 +632,7 @@ ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_REQUEST_TIMEOUT, 
 
 ### 调用群集AEM Forms实例的客户端应用程序 {#client-application-invoking-clustered-aem-forms-instances}
 
-下图显示了一个客户端应用程序，该应用程序在其自己的JVM中运行，并调用位于群集中的AEM Forms实例。
+下图显示了一个客户端应用程序，该应用程序在其自己的JVM中运行，并在群集中调用AEM Forms实例。
 
 此方案类似于调用独立AEM Forms实例的客户端应用程序。 但是，提供程序URL不同。 如果客户端应用程序要连接到特定的J2EE应用程序服务器，该应用程序必须将URL更改为引用特定的J2EE应用程序服务器。
 
@@ -789,7 +789,7 @@ A `com.adobe.idp.Document` 对象是Java可序列化的类型，因此可以通�
 
 #### 基于文件创建文档 {#creating-a-document-based-on-a-file}
 
-以下代码示例创建 `com.adobe.idp.Document` 基于名为PDF文件的对象 *map.pdf*. 此文件位于C硬盘的根目录下。 此构造函数尝试将 `com.adobe.idp.Document` 对象名。
+以下代码示例创建 `com.adobe.idp.Document` 基于名为PDF文件的对象 *map.pdf*. 该文件位于C硬盘的根目录下。 此构造函数尝试将 `com.adobe.idp.Document` 对象名。
 
 此 `com.adobe.idp.Document` 接受一个构造函数 `java.io.File` 对象还接受一个布尔参数。 将此参数设置为 `true`， `com.adobe.idp.Document` 对象删除文件。 此操作意味着在将文件传递到 `com.adobe.idp.Document` 构造函数。
 

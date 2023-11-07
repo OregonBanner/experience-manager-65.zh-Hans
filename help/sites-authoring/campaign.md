@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: personalization
 exl-id: d7e4d424-0ca7-449f-95fb-c4fe19dd195d
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2753'
+source-wordcount: '2749'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 您可以在AEM中创建电子邮件内容，并在Adobe Campaign电子邮件中处理这些内容。 为此，您必须：
 
-1. 从特定于Adobe Campaign的模板在AEM中创建新的新闻稿。
+1. 从特定于Adobe Campaign的模板在AEM中创建新闻稿。
 1. 选择 [Adobe Campaign服务](#selecting-the-adobe-campaign-cloud-service-and-template) 编辑内容以访问所有功能之前。
 1. 编辑内容。
 1. 验证内容。
@@ -55,7 +55,7 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >[电子邮件示例仅在Geometrixx中可用](/help/sites-developing/we-retail.md). 请从包共享下载示例Geometrixx内容。
+   >[电子邮件示例仅在Geometrixx中可用](/help/sites-developing/we-retail.md). 从包共享下载示例Geometrixx内容。
 
    ![chlimage_1-15](assets/chlimage_1-15a.png)
 
@@ -145,7 +145,7 @@ ht-degree: 0%
 
 编辑内容时，您可以插入：
 
-* Adobe Campaign上下文字段。 这些字段可插入文本中，并根据收件人的数据（例如名字、姓氏或目标维度的任何数据）进行调整。
+* Adobe Campaign上下文字段。 这些字段可插入文本中，并根据收件人的数据（例如，名字、姓氏或目标维度的任何数据）进行调整。
 * Adobe Campaign个性化块。 这些是与收件人数据无关的预定义内容块，例如品牌徽标或指向镜像页面的链接。
 
 请参阅 [Adobe Campaign组件](/help/sites-authoring/adobe-campaign-components.md) 获取Campaign组件的完整说明。
@@ -187,7 +187,7 @@ ht-degree: 0%
 
 ### 预览新闻稿 {#previewing-a-newsletter}
 
-您可以预览新闻稿的外观，并预览个性化。
+您可以预览新闻稿的外观，并预览个性化设置。
 
 1. 在新闻稿打开时，单击 **预览** 在AEM的右上角。 AEM显示用户收到新闻稿时的外观。
 
@@ -257,7 +257,7 @@ ht-degree: 0%
 
 要将在AEM中创建的页面链接到来自Adobe Campaign的电子邮件，请执行以下操作：
 
-1. 根据特定于AEM的电子邮件模板创建新电子邮件。 请参阅 [在Adobe Campaign Standard中创建电子邮件](https://helpx.adobe.com/campaign/standard/channels/using/creating-an-email.html) 以了解更多信息。
+1. 根据特定于AEM的电子邮件模板创建电子邮件。 请参阅 [在Adobe Campaign Standard中创建电子邮件](https://helpx.adobe.com/campaign/standard/channels/using/creating-an-email.html) 以了解更多信息。
 
    ![chlimage_1-36](assets/chlimage_1-36a.png)
 

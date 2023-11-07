@@ -2,10 +2,10 @@
 title: Adobe Experience Manager Headless内容架构师历程
 description: 简单介绍Adobe Experience Manager强大而灵活的Headless功能，以及如何对项目内容进行建模。
 exl-id: 49ba0d6d-dde4-42e2-92fd-c7655c0eebc0
-source-git-commit: 9c517590c2b78eed7c52e33e0a106237a2af3bb7
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '731'
-ht-degree: 86%
+ht-degree: 81%
 
 ---
 
@@ -50,7 +50,7 @@ ht-degree: 86%
 
 ![Headless CMS](/help/journey-headless/developer/assets/headless-cms.png)
 
-消费服务（无论是 AR 体验、网上商店、移动体验、渐进式 Web 应用程序 (PWA) 等）都将从 Headless CMS 获取内容并提供它们自己的呈现。它们负责为您的内容提供它们自己的头。
+消费服务，无论是AR体验、网络商店、移动体验、渐进式Web应用程序(PWA)等，都会从Headless CMS中获取内容并提供自己的渲染。 它们负责为您的内容提供它们自己的头。
 
 忽略头将消除复杂性，从而简化 CMS。这样做还会将呈现内容的责任转移到实际需要内容且通常更适合此类呈现的服务。
 
@@ -66,7 +66,7 @@ ht-degree: 86%
 
 这更像是开发详细信息 - 但您可能会它感兴趣，仅用于完成故事。
 
-在您创建内容片段模型，并且您的作者已使用这些模型生成内容后，Headless 应用程序将需要访问此内容。
+在创建内容片段模型，并且作者已使用它们生成内容后，Headless应用程序必须访问此内容。
 
 Adobe Experience Manager (AEM)可以使用AEM GraphQL API有选择地访问您的内容片段，以仅返回所需的内容。 利用 API，开发人员可以制定用于选择特定内容的查询。此选择过程基于&#x200B;*您的*&#x200B;内容片段模型。
 
@@ -81,6 +81,6 @@ Adobe Experience Manager (AEM)可以使用AEM GraphQL API有选择地访问您�
 * AEM Headless 开发人员历程
    * [了解 CMS Headless 开发](/help/journey-headless/developer/learn-about.md)
    * [了解如何为您的内容建模](/help/journey-headless/developer/model-your-content.md)
-* [AEM as a Headless CMS简介](/help/sites-developing/headless/introduction.md)
-* [AEM开发人员门户](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=zh-Hans)
-* [AEM中的HeadlessTutorials](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=zh-Hans)
+* [AEM as a Headless CMS 简介](/help/sites-developing/headless/introduction.md)
+* [AEM 开发人员门户](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=zh-Hans)
+* [AEM 中的 Headless 教程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=zh-Hans)

@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: platform
 exl-id: 54b942f9-5dd9-4826-9a0a-028f2d7b8e41
-source-git-commit: 4e2ee7da5424ac6677eaa2392de7803e7543d13c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '2347'
 ht-degree: 3%
@@ -68,7 +68,7 @@ ht-degree: 3%
 #### 属性 {#properties}
 
 * **布尔属性**
-属性的相对路径，例如 `myFeatureEnabled` 或 `jcr:content/myFeatureEnabled`.
+属性的相对路径，例如， `myFeatureEnabled` 或 `jcr:content/myFeatureEnabled`.
 
 * **值**
 要检查属性的值， &quot; `true`”或“ `false`“。
@@ -120,11 +120,11 @@ ht-degree: 3%
 
 * **属性**
 
-  相对路径 `DATE` 属性，例如 `jcr:lastModified`.
+  相对路径 `DATE` 属性，例如， `jcr:lastModified`.
 
 * **下限**
 
-  用于检查属性的日期下限，例如 `2014-10-01`.
+  用于检查属性的日期下限，例如， `2014-10-01`.
 
 * **lowerOperation**
 
@@ -132,7 +132,7 @@ ht-degree: 3%
 
 * **上限**
 
-  检查属性的上限，例如 `2014-10-01T12:15:00`.
+  检查属性的上限，例如， `2014-10-01T12:15:00`.
 
 * **upperOperation**
 
@@ -247,7 +247,7 @@ group.2_group.type=dam:Asset
 
 * **语言**
 
-  ISO语言代码，例如&#39;&#39; `de`&quot;
+  ISO语言代码，例如“`de`&quot;
 
 ### mainasset {#mainasset}
 
@@ -313,7 +313,7 @@ group.2_group.type=dam:Asset
 
 * **orderby**
 
-  JCR属性名称由前导@指示，例如 `@jcr:lastModified` 或 `@jcr:content/jcr:title`或查询中的其他谓词，例如 `2_property`，进行排序。
+  JCR属性名称由前导@指示，例如， `@jcr:lastModified` 或 `@jcr:content/jcr:title`或查询中的其他谓词，例如， `2_property`，进行排序。
 
 * **排序**
 
@@ -357,7 +357,7 @@ group.2_group.type=dam:Asset
 
 * **属性**
 
-  属性的相对路径，例如 `jcr:title`.
+  属性的相对路径，例如， `jcr:title`.
 
 * **值**
 
@@ -459,7 +459,7 @@ group.2_group.type=dam:Asset
 
 * **p.guessTotal**
 
-  建议：避免计算完整的结果总数，因为这样可能很昂贵；要么是指示要计算的最大总数的数字（例如1000，这个数字可以为用户提供对粗略大小和精确数字的足够反馈，以获得较小结果），要么是“ `true`”以仅计数到所需的最小值 `p.offset` + `p.limit`.
+  建议：避免计算完整的结果总数，因为这样可能很昂贵；要么是指示要计算的最大总数的数字（例如，1000，这个数字可以为用户提供对粗略大小以及精确数字的足够反馈，以获得较小结果），要么是“ `true`”以仅计数到所需的最小值 `p.offset` + `p.limit`.
 
 * **p.excerpt**
 
@@ -541,7 +541,7 @@ group.2_group.type=dam:Asset
 
 * **tagid**
 
-  标记ID，以便查找，例如&quot; `properties:orientation/landscape`“。
+  标记ID，以便您查找，例如， ” `properties:orientation/landscape`“。
 
 * **N_value**
 
@@ -585,4 +585,4 @@ group.2_group.type=dam:Asset
 
 * **类型**
 
-  要搜索的节点类型或mixin名称，例如 `cq:Page`.
+  要搜索的节点类型或mixin名称，例如， `cq:Page`.

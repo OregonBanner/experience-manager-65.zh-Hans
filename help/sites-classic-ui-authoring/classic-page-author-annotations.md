@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
 exl-id: d60e9601-d15b-4378-a33e-e90961f63195
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '764'
+source-wordcount: '761'
 ht-degree: 10%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 10%
 
 >[!NOTE]
 >
->在经典UI中创建的批注也将显示在触屏优化UI中。 不过，草图是特定于UI的，并且仅在创建它们的UI中显示。
+>在经典UI中创建的注释显示在触屏优化UI中。 但是，草图是特定于UI的，并且仅在创建它们的UI中显示。
 
 >[!CAUTION]
 >

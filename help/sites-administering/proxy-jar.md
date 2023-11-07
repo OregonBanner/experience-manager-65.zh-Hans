@@ -7,7 +7,7 @@ topic-tags: operations
 content-type: reference
 docset: aem65
 exl-id: 3df50303-5cdd-4df0-abec-80831d2ccef7
-source-git-commit: c7c32130a3257c14c98b52f9db31d80587d7993a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '1159'
 ht-degree: 0%
@@ -82,7 +82,7 @@ S-7-#000107 -> [Content-Length: 124 ]
 
 **查找丢失的请求**
 
-如果在复杂的服务器设置中丢失请求，例如防火墙和Dispatcher设置，则可以使用代理服务器查找请求丢失的位置。 如果有防火墙：
+如果在复杂的服务器设置中丢失请求，例如，在防火墙和Dispatcher中，您可以使用代理服务器查找请求丢失的位置。 如果有防火墙：
 
 1. 在防火墙之前启动代理
 1. 在防火墙后启动另一个代理

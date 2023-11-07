@@ -1,18 +1,14 @@
 ---
 title: 管理标记
-seo-title: Administering Tags
 description: 了解如何在Adobe Experience Manager中管理标记。
-seo-description: Learn how to administer Tags in AEM.
-uuid: 77e1280a-feea-4edd-94b6-4fb825566c42
 contentOwner: Chiradeep Majumdar
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: content
 content-type: reference
-discoiquuid: 69253ee9-8c28-436b-9331-6fb875f64cba
 exl-id: ff041ef0-e566-4373-818e-76680ff668d8
-source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1764'
+source-wordcount: '1761'
 ht-degree: 11%
 
 ---
@@ -78,7 +74,7 @@ AEM中标记的部分功能包括：
 
 ### 创建命名空间 {#creating-a-namespace}
 
-要创建新命名空间，请选择 **`Create Namespace`** 图标。
+要创建命名空间，请选择 **`Create Namespace`** 图标。
 
 命名空间本身是一个标记，无需包含任何子标记。 但是，要继续创建分类， [创建子标记](#creating-tags)，则它可以是叶标记或容器标记。
 
@@ -211,7 +207,7 @@ AEM中标记的部分功能包括：
 
 当分类具有重复项时，可以使用合并标记。 当标记A合并到标记B时，所有使用标记A标记的页面都将使用标记B标记，并且标记A不再可用于作者。
 
-选择命名空间或其他标记后，选择 **合并** 图标将打开一个面板，可在其中选择要合并到的路径。
+选择命名空间或其他标记后，选择 **合并** 图标会打开一个面板，可在其中选择要合并到的路径。
 
 ![chlimage_1-200](assets/chlimage_1-200.png)
 
@@ -296,7 +292,7 @@ AEM中标记的部分功能包括：
 
 ![chlimage_1-205](assets/chlimage_1-205.png)
 
-通常，为标记选择的语言在可用时从页面语言中获取。 当 [`tag` 构件](/help/sites-developing/building.md#tagging-on-the-client-side) 在其他情况下（例如在表单或对话框中）使用，标记语言取决于上下文。
+通常，为标记选择的语言在可用时从页面语言中获取。 当 [`tag` 构件](/help/sites-developing/building.md#tagging-on-the-client-side) 在其他情况下（例如，在表单或对话框中）使用，标记语言取决于上下文。
 
 “标记”控制台不使用页面语言设置，而是使用用户语言设置。 在“标记”控制台中，对于“Animals”标记，会向在其用户属性中将语言设置为法语的用户显示“Animaux”。
 
@@ -310,6 +306,6 @@ AEM中标记的部分功能包括：
 
 * [为开发人员添加标记](/help/sites-developing/tags.md)
 
-  有关标记框架以及在自定义应用程序中扩展和包含标记的信息。
+  有关标记框架和扩展以及在自定义应用程序中包括标记的信息。
 
 * [经典UI标记控制台](/help/sites-administering/classic-console.md)

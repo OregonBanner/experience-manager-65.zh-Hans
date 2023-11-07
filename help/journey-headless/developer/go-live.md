@@ -2,7 +2,7 @@
 title: 如何使用 Headless 应用程序上线
 description: 在AEM Headless开发人员历程的这一可选部分中，了解如何实时部署Headless应用程序。
 exl-id: ec3356ef-9e60-4151-984d-3ebdab593b96
-source-git-commit: 9c517590c2b78eed7c52e33e0a106237a2af3bb7
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '1873'
 ht-degree: 51%
@@ -151,7 +151,7 @@ Node.js是用于处理AEM项目的前端资源的JavaScript运行时环境 `ui.f
 
 <!-- Can't find a parallel link -->
 <!--
-You can start deploying your code by leveraging the Cloud Manager CI/CD pipeline, which is covered extensively [here](/help/implementing/deploying/overview.md).
+You can start deploying your code by using the Cloud Manager CI/CD pipeline, which is covered extensively [here](/help/implementing/deploying/overview.md).
 -->
 
 ## 性能监控 {#performance-monitoring}
@@ -167,7 +167,7 @@ You can start deploying your code by leveraging the Cloud Manager CI/CD pipeline
       * 检查用户、请求和加载的数量
 * 访问特定于应用程序和空间的性能报表
    * 在服务器启动后，检查一般指标是否为绿色/橙色/红色，然后识别具体的应用程序问题
-   * 打开上面过滤到应用程序或空间的相同报告（例如，Photoshop 桌面、付费专区）
+   * 打开上面按应用程序或空间过滤的相同报表(例如，Photoshop desktop、paywall)
    * 使用 Splunk 日志 API 访问服务和应用程序性能
    * 如果还有其他问题，请联系客户支持。
 
@@ -226,6 +226,6 @@ You can start deploying your code by leveraging the Cloud Manager CI/CD pipeline
 
    * 配置 [CDN重写器](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/osgi-configuration-settings.html) (*搜索CDN重写器*)
 
-* [AEM as a Headless CMS简介](/help/sites-developing/headless/introduction.md)
-* [AEM开发人员门户](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=zh-Hans)
-* [AEM中的HeadlessTutorials](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=zh-Hans)
+* [AEM as a Headless CMS 简介](/help/sites-developing/headless/introduction.md)
+* [AEM 开发人员门户](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=zh-Hans)
+* [AEM 中的 Headless 教程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=zh-Hans)

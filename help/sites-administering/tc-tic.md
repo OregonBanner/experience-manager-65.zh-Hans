@@ -4,10 +4,10 @@ description: 了解如何在Adobe Experience Manager中配置翻译集成框架�
 contentOwner: Guillaume Carlino
 feature: Language Copy
 exl-id: 7562754b-d9fd-441b-8ae5-c7eebe458cef
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1573'
-ht-degree: 47%
+source-wordcount: '1571'
+ht-degree: 45%
 
 ---
 
@@ -195,7 +195,7 @@ ht-degree: 47%
 * 用于将 AEM 连接到您的翻译服务提供商的云配置。
 * 用于配置翻译细节的翻译集成框架。
 
-请注意，翻译集成框架云配置标识要用于连接到服务提供商的云配置。将源页面与框架云配置关联时，该页面必须与该框架云配置使用的服务提供商云配置关联。
+翻译集成框架云配置标识要用于连接到服务提供商的云配置。 将源页面与框架云配置关联时，该页面必须与该框架云配置使用的服务提供商云配置关联。
 
 将页面与云配置关联时，该页面的后代页面继承这种关联。例如，如果将/content/geometrixx/en/products页面与翻译集成框架关联，则根据该框架翻译产品页面及其下的所有页面。
 

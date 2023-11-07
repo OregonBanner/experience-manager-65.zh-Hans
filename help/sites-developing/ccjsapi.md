@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: a6e5810b-dac5-4137-93cf-5d8d53cacc49
 feature: Context Hub
 exl-id: 24bdf9fc-71e6-4b99-9dad-0f41a5e36b98
-source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '3159'
+source-wordcount: '3157'
 ht-degree: 2%
 
 ---
@@ -72,7 +72,7 @@ CQ_Analytics.SessionStore对象，表示给定名称的会话存储。 返回 `n
 * 存储已预填充默认值（init属性），但请求失败（超时）。 只有一个使用默认值的初始化。
 * 已预填充存储。
 
-当延迟设置为 `true` 或毫秒数，该方法会先等待再调用回调方法。 如果在传递延迟之前触发了另一个初始化事件，它将等待直到超过延迟时间，而不发生初始化事件。 这允许等待触发第二个初始化事件，并在最理想的情况下调用回调函数。
+当延迟设置为 `true` 或者几毫秒之前，该方法会等待调用回调方法。 如果在传递延迟之前触发了另一个初始化事件，它将等待直到超过延迟时间，而不发生初始化事件。 这允许等待触发第二个初始化事件，并在最理想的情况下调用回调函数。
 
 **参数**
 

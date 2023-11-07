@@ -5,9 +5,9 @@ contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 exl-id: ab4f1c61-be83-420e-a339-02cf1f33efed
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2686'
+source-wordcount: '2682'
 ht-degree: 0%
 
 ---
@@ -58,9 +58,9 @@ angular根据是否检测到wcmMode (！= WCMMode.DISABLED)，以确定是打开
 
 在创作模式下，每个页面将单独呈现。 angular不处理页面之间的路由，也不能使用ng-view加载包含页面组件的部分模板。 相反，页面模板(template.jsp)的内容通过包含在服务器端 `cq:include` 标记之前。
 
-此策略可启用作者功能(例如，在段落系统、Sidekick、设计模式等中添加和编辑组件) 无需修改即可正常运行。 依赖客户端渲染的页面（例如应用程序的页面）在AEM创作模式下性能不佳。
+此策略使作者功能(例如，在段落系统、Sidekick、设计模式等中添加和编辑组件)无需修改即可正常工作。 依赖客户端渲染的页面（例如应用程序的页面）在AEM创作模式下性能不佳。
 
-请注意，template.jsp include封装在 `div` 包含 `ng-controller` 指令。 此结构启用DOM内容与控制器的链接。 因此，虽然在客户端呈现自身的页面会失败，但可以正常工作的各个组件（请参阅下面关于组件的部分）。
+template.jsp include封装在 `div` 包含 `ng-controller` 指令。 此结构启用DOM内容与控制器的链接。 因此，虽然在客户端呈现自身的页面会失败，但可以正常工作的各个组件（请参阅下面关于组件的部分）。
 
 ```xml
 <div ng-controller="<c:out value="${controllerNameStripped}"/>">
@@ -143,7 +143,7 @@ controller.js.jsp脚本为每个页面生成控制器片段。 此控制器片�
 ])
 ```
 
-请注意 `data` 为变量分配了Angular返回的承诺 `$http.get` 方法。 如果需要，此页面中包含的每个组件都可以提供一些.json内容(通过其angular.json.jsp脚本)，并在解析时对此请求的内容执行操作。 该请求在移动设备上非常快，因为它仅访问文件系统。
+此 `data` 为变量分配了Angular返回的承诺 `$http.get` 方法。 如果需要，此页面中包含的每个组件都可以提供一些.json内容(通过其angular.json.jsp脚本)，并在解析时对此请求的内容执行操作。 该请求在移动设备上非常快，因为它仅访问文件系统。
 
 为了使组件以这种方式成为控制器的一部分，它应该扩展/libs/mobileapps/components/angular/ng-component组件并包含 `frameworkType: angular` 属性。
 

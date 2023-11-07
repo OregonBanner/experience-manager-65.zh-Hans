@@ -2,10 +2,10 @@
 title: 配置翻译规则
 description: 了解如何定义翻译规则，标识要翻译的内容。
 exl-id: 262503af-361b-491c-8639-0bb32f0a4c0e
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '869'
-ht-degree: 83%
+source-wordcount: '864'
+ht-degree: 78%
 
 ---
 
@@ -59,14 +59,14 @@ ht-degree: 83%
 1. 导航到&#x200B;**工具** -> **常规**。
 1. 点按或单击&#x200B;**翻译配置**。
 
-在&#x200B;**翻译配置** UI 中，提供了可用于翻译规则的大量选项。在这里，我们重点介绍基本 Headless 本地化配置所需的大多数必需和典型的步骤。
+在 **翻译配置** UI中，有几个选项可用于翻译规则。 在这里，我们重点介绍基本 Headless 本地化配置所需的大多数必需和典型的步骤。
 
 1. 点按或单击&#x200B;**添加上下文**，这可让您添加路径。这是受规则影响的内容的路径。
    ![添加上下文](assets/add-translation-context.png)
 1. 使用路径浏览器选择所需的路径，然后点按或单击&#x200B;**确认**&#x200B;按钮进行保存。请记住，包含 Headless 内容的内容片段通常位于 `/content/dam/<your-project>` 下。
    ![选择路径](assets/select-context.png)
 1. AEM 将保存配置。
-1. 您必须选择刚创建的上下文，然后点按或单击&#x200B;**编辑**。这将打开&#x200B;**翻译规则编辑器**以配置属性。
+1. 您必须选择已创建的上下文，然后点按或单击 **编辑**. 这将打开&#x200B;**翻译规则编辑器**以配置属性。
    ![翻译规则编辑器](assets/translation-rules-editor.png)
 1. 默认情况下，所有配置都继承自父路径，在此示例中为 `/content/dam`。取消选中选项 **继承自`/content/dam`** 以向配置中添加其他字段。
 1. 取消选中后，在列表的&#x200B;**常规**&#x200B;部分下，添加您[之前标识为翻译字段](getting-started.md#content-models)的内容片段模型的属性名称。
@@ -81,7 +81,7 @@ ht-degree: 83%
 
 ## 高级使用 {#advanced-usage}
 
-可以将许多附加属性配置为翻译规则的一部分。此外，您可以手动将规则指定为 XML，这可以提高特殊性和灵活性。
+可以将多个其他属性配置为翻译规则的一部分。 此外，您可以手动将规则指定为 XML，这可以提高特殊性和灵活性。
 
 通常，无需此类功能即可开始本地化您的 Headless 内容，但如果您愿意，可以参阅[其他资源](#additional-resources)部分以了解详细信息。
 

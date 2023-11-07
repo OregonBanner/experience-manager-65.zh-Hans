@@ -1,6 +1,6 @@
 ---
 title: 提升启动项
-description: 您可以提升启动页面，以便在发布之前将内容移回源（生产）。
+description: 您可以提升启动页面，以在发布之前将内容移回源（生产）。
 uuid: 2dc41817-fcfb-4485-a085-7b57b9fe89ec
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,10 +10,10 @@ discoiquuid: 3d4737ef-f758-4540-bc8f-ecd9f05f6bb0
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/author/site-page-features/launches
 exl-id: f59f12a2-ecd6-49cf-90ad-621719fe51bf
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '774'
-ht-degree: 78%
+source-wordcount: '772'
+ht-degree: 77%
 
 ---
 
@@ -52,15 +52,15 @@ ht-degree: 78%
 
 1. 打开：
 
-   * 此 **站点** 控制台：
+   * 该 **站点** 控制台：
 
-      1. 打开[引用边栏](/help/sites-authoring/author-environment-tools.md#showingpagereferences)，然后使用[选择模式](/help/sites-authoring/basic-handling.md)选择所需的源页面（或者先进行选择，然后再打开引用边栏，顺序不重要）。此时将显示所有引用。
+      1. 打开[引用边栏](/help/sites-authoring/author-environment-tools.md#showingpagereferences)，然后使用[选择模式](/help/sites-authoring/basic-handling.md)选择所需的源页面（或者先进行选择，然后再打开引用边栏，顺序不重要）。此时会显示所有引用。
 
       1. 选择&#x200B;**启动项**（例如“启动项 (1)”），可显示特定启动项的列表。
       1. 选择特定的启动项以显示可用的操作。
       1. 选择&#x200B;**提升启动项**&#x200B;以打开向导。
 
-   * 此 **启动次数** 控制台：
+   * 该 **启动次数** 控制台：
 
       1. 选择您的启动项（点按/单击缩略图）。
       1. 选择&#x200B;**提升**。
@@ -87,7 +87,7 @@ ht-degree: 78%
    >此处介绍的是单个启动项的情况，如果您具有嵌套启动项，请参阅[提升嵌套启动项](#promoting-a-nested-launch)。
 
 1. 选择&#x200B;**下一步**&#x200B;以继续。
-1. 您可以查看要提升的页面，这些页面将取决于您选择的页面范围：
+1. 您可以查看要提升的页面，具体页面取决于您选择的页面范围：
 
    ![查看要提升的页面](assets/chlimage_1-102.png)
 
@@ -95,7 +95,7 @@ ht-degree: 78%
 
 ## 编辑时提升启动页面 {#promoting-launch-pages-when-editing}
 
-在编辑启动页面时，也可以从&#x200B;**页面信息**&#x200B;中执行&#x200B;**提升启动项**&#x200B;操作。这将打开相应向导来收集所需的信息。
+在编辑启动页面时，也可以从&#x200B;**页面信息**&#x200B;中执行&#x200B;**提升启动项**&#x200B;操作。这将打开向导以收集所需的信息。
 
 ![提升发布内容](assets/chlimage_1-103.png)
 
@@ -107,9 +107,9 @@ ht-degree: 78%
 
 创建嵌套启动项后，您可以将其提升回任意源，包括根目录源（生产）。
 
-![提升嵌套启动项概述](assets/chlimage_1-104.png)
+![提升嵌套启动项的概述](assets/chlimage_1-104.png)
 
-1. 与 [创建嵌套启动项](#creatinganestedlaunchlaunchwithinalaunch)，导航到所需的启动项，并在以下任一位置选择它 **启动次数** 控制台或 **引用** 边栏。
+1. 与 [创建嵌套启动项](#creatinganestedlaunchlaunchwithinalaunch)，导航到以下任一位置并选择所需的启动项： **启动次数** 控制台或 **引用** 边栏。
 1. 选择&#x200B;**提升启动项**&#x200B;以打开向导。
 
 1. 输入所需的详细信息：
@@ -120,7 +120,7 @@ ht-degree: 78%
 您可以提升到任何源。
 
       * **提升后删除启动项**
-提升后，将删除选定的启动项以及嵌套在其中的任何启动项。
+提升后，所选启动项以及嵌套在其中的所有启动项都将被删除。
 
    * **范围**
 在此处，您可以选择是提升整个启动项，还是仅提升已实际编辑的页面。 如果选择后者，则还可以选择包括/排除子页面。默认配置是仅提升当前页面的页面更改：
@@ -153,7 +153,7 @@ ht-degree: 78%
 1. 当作者提升启动页面时，他们会将其存储在工作流包中。
 1. 将包作为有效负荷，以启动工作流模型。
 
-要在提升页面时自动启动工作流， [配置工作流启动器](/help/sites-administering/workflows-starting.md#workflows-launchers) 包节点的。
+要在提升页面时自动启动工作流， [配置工作流启动器](/help/sites-administering/workflows-starting.md#workflows-launchers) 包节点的标头。
 
 例如，您可以在作者提升启动页面时自动生成页面激活请求。配置工作流启动器，以在包节点被修改时启动请求激活工作流。
 

@@ -4,9 +4,9 @@ description: 了解如何识别需要在Adobe Experience Manager中翻译的内�
 contentOwner: Guillaume Carlino
 feature: Language Copy
 exl-id: 8ca7bbcc-413a-49a8-a836-7083a9cadda1
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1153'
+source-wordcount: '1152'
 ht-degree: 66%
 
 ---
@@ -160,7 +160,7 @@ translation_rules.xml文件包含 `nodelist` 带多个子项的元素 `node` 元
 
 ![chlimage_1-57](assets/chlimage_1-57.jpeg)
 
-之后，您需要选择上下文，然后单击&#x200B;**编辑**。该操作将打开翻译规则编辑器。
+之后，您需要选择上下文，然后单击&#x200B;**编辑**。这将打开翻译规则编辑器。
 
 ![chlimage_1-58](assets/chlimage_1-58.jpeg)
 

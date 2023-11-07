@@ -12,10 +12,10 @@ discoiquuid: 8cdb6db4-adaa-4eda-af7d-310a0b44b80b
 docset: aem65
 legacypath: /content/docs/en/aem/6-2/develop/components/components-touch-optimized
 exl-id: 573cdc36-e9c3-4803-9c4e-cebd0cf0a56f
-source-git-commit: 823e756f470b0599f7d53a3e08fdf650b4e892d1
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '3454'
-ht-degree: 2%
+source-wordcount: '3446'
+ht-degree: 1%
 
 ---
 
@@ -206,13 +206,13 @@ newComponent (cq:Component)
 
 触屏UI的构件实施为Granite UI组件。
 
-要创建新构件以便在启用了触屏操作的UI的组件对话框中使用，需要您 [创建新的Granite UI字段组件](/help/sites-developing/granite-ui-component.md).
+要创建要在组件对话框中用于触屏UI的构件，需要您 [创建Granite UI字段组件](/help/sites-developing/granite-ui-component.md).
 
 >[!NOTE]
 >
 >有关Granite UI的完整详细信息，请参阅 [Granite UI文档](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html).
 
-如果将对话框视为表单元素的简单容器，则还可以将对话框内容的主要内容视为表单字段。 创建新表单字段要求您创建资源类型；这等同于创建新组件。 为了帮助您完成该任务，Granite UI提供了一个通用字段组件来继承(使用 `sling:resourceSuperType`)：
+如果将对话框视为表单元素的简单容器，则还可以将对话框内容的主要内容视为表单字段。 创建表单字段要求您创建资源类型；这等同于创建组件。 为了帮助您完成该任务，Granite UI提供了一个通用字段组件来继承(使用 `sling:resourceSuperType`)：
 
 `/libs/granite/ui/components/coral/foundation/form/field`
 
@@ -228,7 +228,7 @@ newComponent (cq:Component)
 
 如果要为组件定义样式和行为，可以创建专用的 [客户端库](/help/sites-developing/clientlibs.md) 定义您的自定义CSS/LESS和JS。
 
-要仅为组件对话框加载客户端库（即它不会为其他组件加载），您需要设置属性 `extraClientlibs` 对话框的类别名称添加到刚刚创建的客户端库的类别名称。 如果您的客户端库很大和/或您的字段特定于此对话框，并且其他对话框不需要执行此操作，则建议您执行此操作。
+要仅为组件对话框加载客户端库（即它不会为其他组件加载），您需要设置属性 `extraClientlibs` 对话框的类别名称更改为已创建的客户端库的类别名称。 如果您的客户端库很大和/或您的字段特定于此对话框，并且其他对话框不需要执行此操作，则建议您执行此操作。
 
 要为所有对话框加载客户端库，请将客户端库的类别属性设置为 `cq.authoring.dialog`. 这是渲染所有对话框时默认包括的客户端库的类别名称。 如果客户端库较小和/或字段是通用的，并且可在其他对话框中重复使用，则需要执行此操作。
 
@@ -346,13 +346,13 @@ newComponent (cq:Component)
 
 现成的AEM仅检查“参照”组件。 要添加组件，您需要配置OSGi捆绑包 **WCM创作内容引用配置**.
 
-在定义中创建一个新条目，指定组件以及要检查的属性。 例如：
+在定义中创建一个条目，指定组件以及要检查的属性。 例如：
 
 `/apps/<*your-Project*>/components/reference@parentPath`
 
 >[!NOTE]
 >
->使用 AEM 时，可通过多种方法管理此类服务的配置设置。请参阅[配置 OSGi](/help/sites-deploying/configuring-osgi.md)，以了解更多详细信息和建议的做法。
+>使用AEM时，可通过多种方法管理此类服务的配置设置。请参阅 [配置OSGi](/help/sites-deploying/configuring-osgi.md) 以了解更多详细信息和建议的做法。
 
 ## 启用组件并将组件添加到段落系统 {#enabling-and-adding-your-component-to-the-paragraph-system}
 
@@ -373,12 +373,12 @@ newComponent (cq:Component)
 
    * `/etc/designs/<myApp>/page/par`
 
-   创建新节点：
+   创建节点：
 
    * 名称：`cq:authoring`
    * 类型：`nt:unstructured`
 
-1. 在此下，创建一个新节点来保存所有资产到组件映射：
+1. 在此下，创建一个节点以保存所有资产到组件映射：
 
    * 名称：`assetToComponentMapping`
    * 类型：`nt:unstructured`
@@ -398,7 +398,7 @@ newComponent (cq:Component)
    * `assetMimetype`:
 
       * 类型：`String`
-      * 值：相关资产的mime类型；例如 `image/*`
+      * 值：相关资产的mime类型；例如， `image/*`
 
    * `droptarget`:
 

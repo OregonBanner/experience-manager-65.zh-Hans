@@ -10,9 +10,9 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: c01e42ff-e338-46e6-a961-131ef943ea91
 exl-id: 3405cdd3-3d1b-414d-9931-b7d7b63f0a6f
-source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2269'
+source-wordcount: '2268'
 ht-degree: 0%
 
 ---
@@ -321,7 +321,7 @@ AEM支持以下查询语言：
 ## 现有索引调整 {#existing-index-tuning}
 
 1. 如果最佳查询解析为属性索引，则由于属性索引最低可微调，因此没有任何可执行的操作。
-1. 否则，查询应解析为Lucene属性索引。 如果无法解析任何索引，请跳到创建新索引。
+1. 否则，查询应解析为Lucene属性索引。 如果无法解析索引，请跳到创建索引。
 1. 根据需要，将查询转换为XPath或JCR-SQL2。
 
    * **查询生成器查询**

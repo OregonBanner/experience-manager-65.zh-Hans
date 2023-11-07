@@ -7,7 +7,7 @@ topic-tags: developing
 content-type: reference
 docset: aem65
 exl-id: b941b5e0-f768-4393-9a9d-ded2cd7d10c4
-source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '397'
 ht-degree: 3%
@@ -114,7 +114,7 @@ ht-degree: 3%
 
 ### 示例代码：消息接收通知 {#sample-code-message-received-notification}
 
-社交消息功能会引发操作事件，例如 `send`， `marking read`， `marking delete`. 可以捕获这些事件，并对事件中包含的数据执行操作。
+社交消息功能会引发操作事件，例如， `send`， `marking read`， `marking delete`. 可以捕获这些事件，并对事件中包含的数据执行操作。
 
 以下示例是一个事件处理程序，该处理程序监听 `message sent` 事件，并使用向所有消息收件人发送电子邮件 `Day CQ Mail Service`.
 

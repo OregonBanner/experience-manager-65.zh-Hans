@@ -2,10 +2,10 @@
 title: 学习创作基础知识
 description: 了解使用内容片段为 Headless CMS 创作内容的概念和机制。
 exl-id: 125c4d0b-1572-4dba-823d-cdef2778f275
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1692'
-ht-degree: 82%
+source-wordcount: '1688'
+ht-degree: 80%
 
 ---
 
@@ -41,7 +41,7 @@ AEM 安装通常至少包含两个环境：
 
 ### 登录 {#signing-in}
 
-与大多数系统一样，您将需要登录。作为作者，您将获得：
+与大多数系统一样，您必须登录。 作为作者，您将获得：
 
 * 用户（帐户）名
 * 密码
@@ -102,7 +102,7 @@ AEM 安装通常至少包含两个环境：
 
 ![“创建文件夹”选项](/help/journey-headless/author/assets/headless-journey-author-folder-01.png)
 
-这将打开一个对话框，可在其中输入详细信息，然后使用&#x200B;**创建**&#x200B;进行确认：
+这将打开一个对话框，您可以在其中输入详细信息，然后使用 **创建**：
 
 ![“创建文件夹”对话框](/help/journey-headless/author/assets/headless-journey-author-folder-02.png)
 
@@ -170,7 +170,7 @@ AEM 安装通常至少包含两个环境：
 
 * 一个让您编写长段文本的片段。这里提供了用于管理文本并设置其格式的其他选项。您甚至可以在全屏编辑器中打开各个文本字段（使用右侧的类似小屏幕的图标）
 
-  ![内容片段编辑器 – 阿拉斯加烈酒](/help/journey-headless/author/assets/headless-journey-author-content-fragment-05.png)
+  ![内容片段编辑器 – Alaska Spirits](/help/journey-headless/author/assets/headless-journey-author-content-fragment-05.png)
 
 >[!NOTE]
 >
@@ -201,7 +201,7 @@ AEM 安装通常至少包含两个环境：
 
   这一个非常明显，因为它是编辑器中的一个选项卡。
 
-  对于相当多的版本，内容片段已在 AEM 中提供。最初，它们在创作页面时可用于“传统”用途....并且它们仍在此上下文中使用。这可能涉及关联资源（例如图像），这些资源未嵌入片段中，需要在创作页面提供给作者。
+  对于相当多的版本，内容片段已在 AEM 中提供。最初，它们在创作页面时可用于“传统”用途....并且它们仍在此上下文中使用。这可能涉及关联资产（例如图像），虽然这些资产未嵌入片段中，但在创作页面时，作者需要能够使用这些资产。
 
 * **预览**
 

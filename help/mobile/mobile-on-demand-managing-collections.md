@@ -6,9 +6,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: authoring-on-demand-services-app
 exl-id: 0b4aa1a4-449a-4882-8f7c-3ceea6ac7f83
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '798'
+source-wordcount: '796'
 ht-degree: 0%
 
 ---
@@ -113,7 +113,7 @@ ht-degree: 0%
 1. 在中选择要删除的文章 **管理收藏集** 磁贴。
 1. 确保在列表中选中它（根据需要选择要删除的其他项）。
 1. 单击 **删除** 从操作栏中。
-1. 检查您是否要从AEM和Mobile On-Demand中删除。
+1. 检查是否要从AEM和Mobile On-Demand中删除。
 1. 单击&#x200B;**删除**。
 1. 您的收藏集现已从列表中删除。
 

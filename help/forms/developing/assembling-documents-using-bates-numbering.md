@@ -12,9 +12,9 @@ topic-tags: operations
 discoiquuid: 77e9b895-1313-4a5b-a2d5-cdb65bdc1966
 role: Developer
 exl-id: 2a4e21c4-f2f5-44cd-b8ed-7b572782a2f1
-source-git-commit: 10227bcfcfd5a9b0f126fee74dce6ec7842f5e95
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1922'
+source-wordcount: '1921'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 您可以使用Bates编号来组合包含唯一页面标识符的PDF文档。 *Bates编号* 是一种将唯一标识应用于一批相关文档的方法。 文档（或文档集）中的每个页面都分配有一个Bates编号，用于唯一标识该页面。 例如，包含物料清单信息并与装配件的生产关联的制造文档可以包含标识符。 Bates编号包含一个按顺序递增的数值，以及可选的前缀和后缀。 前缀+数字+后缀称为 *贝茨图案*.
 
-下图显示了一个PDF文档，该文档包含位于文档标题中的唯一标识符。
+下图显示了一个PDF文档，该文档的标题中包含唯一标识符。
 
 ![au_au_batesnumber](assets/au_au_batesnumber.png)
 

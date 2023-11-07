@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 discoiquuid: ccc0e434-8847-4e12-8a18-84b55fb2964b
 docset: aem65
 exl-id: 5623dcf4-bda9-4dee-ace3-5a1f6057e96c
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1840'
+source-wordcount: '1835'
 ht-degree: 2%
 
 ---
@@ -44,7 +44,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->如果打开了内容查找器，则选项卡顶部将显示一个包含RTE格式选项的工具栏（如上所述）。
+>如果打开了内容查找器，则选项卡顶部会显示一个包含RTE格式选项的工具栏（如上所述）。
 >
 >如果未打开内容查找器，则不会显示工具栏。
 
@@ -52,7 +52,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->此 [!UICONTROL 标题] 组件设计为包含不带换行符的短文本。 在“就地编辑”模式下编辑标题时，输入换行符将打开一个新标题 **文本** 标题下的组件。
+>此 [!UICONTROL 标题] 组件设计为包含不带换行符的短文本。 在“就地编辑”模式下编辑标题时，输入换行符将打开一个新的 **文本** 标题下的组件。
 
 ## 富文本编辑器的功能 {#features-of-the-rich-text-editor}
 
@@ -353,7 +353,7 @@ AEM同时提供 **查找** 和 **替换** （查找和替换）函数。
 
 ![chlimage_1-107](assets/chlimage_1-107.png)
 
-创建嵌套表将在当前单元格中创建一个新的自包含表。
+创建嵌套表会在当前单元格内创建一个自包含表。
 
 >[!NOTE]
 >

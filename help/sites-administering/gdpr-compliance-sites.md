@@ -1,16 +1,12 @@
 ---
 title: AEM Sites - GDPR就绪
-seo-title: AEM Sites - GDPR Readiness
 description: 了解在AEM Sites中处理GDPR请求的过程以及如何使用它们。
-seo-description: Learn about the details of GDPR Readiness for AEM Sites.
-uuid: 00d1fdce-ef9a-4902-a7a5-7225728e8ffc
 contentOwner: AEM Docs
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
-discoiquuid: 772f6188-5e0b-4e66-b94a-65a0cc267ed3
 exl-id: 8c1ea483-7319-4e5c-be4c-d43a2b67d316
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '837'
 ht-degree: 54%
@@ -151,7 +147,7 @@ AEM提供了一个可选的数据层，它具有 [ContextHub](/help/sites-develo
       * ContextHub.Utils.Persistence.Modes.COOKIE
       * ContextHub.Utils.Persistence.Modes.WINDOW
 
-     ContextHub 存储定义将使用哪个持久层，因此，要查看持久存储的当前状态，应检查所有层。
+     ContextHub 存储会定义使用哪个持久层，因此，要查看持久存储的当前状态，应检查所有层。
 
 例如，要查看存储在 localStorage 中的数据，请执行以下操作：
 
@@ -180,7 +176,7 @@ AEM提供了一个可选的数据层，它具有 [ContextHub](/help/sites-develo
       * ContextHub.Utils.Persistence.Modes.COOKIE
       * ContextHub.Utils.Persistence.Modes.WINDOW
 
-     ContextHub 存储定义将使用哪个持久层，因此，要查看持久存储的当前状态，应检查所有层。
+     ContextHub 存储会定义使用哪个持久层，因此，要查看持久存储的当前状态，应检查所有层。
 
 例如，要查看存储在 localStorage 中的数据，请执行以下操作：
 

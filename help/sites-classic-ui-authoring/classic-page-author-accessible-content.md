@@ -1,20 +1,16 @@
 ---
 title: 创建辅助内容（WCAG 2.0 符合性）
-seo-title: Creating Accessible Content (WCAG 2.0 Conformance)
 description: WCAG 2.0 包含一系列非技术层面的准则及成功标准，旨在确保残障人士能够访问并使用 Web 内容。
-seo-description: WCAG 2.0 consists of a set of technology independent guidelines and success criteria to help make web content accessible to, and usable by, persons with disabilities.
 page-status-flag: de-activated
-uuid: c2c0cac0-2a9f-478d-8261-e8cc894aae34
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
-discoiquuid: 378bc33d-ab6c-4651-9688-102c961561fc
 exl-id: 01c69aa9-2623-42dc-9e2d-62bc5e01cf0e
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '9152'
-ht-degree: 59%
+source-wordcount: '9151'
+ht-degree: 58%
 
 ---
 
@@ -360,7 +356,7 @@ W3C提供了一些建议，例如： 这些方法中的每一种都有其自身�
 
 ### 适应性 (1.3) {#adaptable}
 
-[准则 1.3 适应性：创建可用不同方式呈现的内容（例如更简单的布局），而不会丢失信息或结构。](https://www.w3.org/TR/WCAG20/#content-structure-separation)
+[准则1.3可适应：创建能够以不同方式（例如，更简单的布局）呈现的内容且不会丢失信息或结构。](https://www.w3.org/TR/WCAG20/#content-structure-separation)
 
 该准则包含为支持以下用户而必须满足的要求：
 
@@ -382,7 +378,7 @@ W3C提供了一些建议，例如： 这些方法中的每一种都有其自身�
 
 #### 如何达到标准 – 信息和关系 (1.3.1) {#how-to-meet-info-and-relationships}
 
-AEM 允许轻松地使用相应的 HTML 元素构建网页。在RTE（文本组件）中打开页面内容，然后使用 **格式** 菜单来指定相应的结构元素（例如段落和标题）。
+AEM 允许轻松地使用相应的 HTML 元素构建网页。在RTE（文本组件）中打开页面内容，然后使用 **格式** 菜单来指定相应的结构元素（例如，段落和标题）。
 
 下图显示了已设置为段落文本的文本；正在使用的源代码视图显示它具有正确的打开和关闭方式 &lt;p> 和 &lt;/p> 标记之间。
 
@@ -530,13 +526,13 @@ AEM 允许轻松地使用相应的 HTML 元素构建网页。在RTE（文本组�
 
 >[!NOTE]
 >
-有关颜色替代内容的要求，请参阅[使用颜色](#use-of-color)。
+有关颜色替代内容的要求，请参阅[使用颜色。](#use-of-color)
 
 #### 如何达到标准 – 感官特性 (1.3.3) {#how-to-meet-sensory-characteristics}
 
 确保那些依赖页面内容的可视特性传递的任何信息都同时以替代格式呈现。
 
-* 切勿依赖可视位置来提供信息。例如，如果希望用户通过页面右侧的菜单访问更多信息，那么请不要只提及&#x200B;*右侧的菜单*；而是要为该菜单命名（例如，通过标题进行命名），然后以文本方式提及该名称。
+* 切勿依赖可视位置来提供信息。例如，如果您想将用户引荐至页面右侧的菜单，以便访问更多信息，请不要引荐 *右侧的菜单*；请改为命名菜单（例如，通过标题），并在文本中引用该名称。
 * 切勿将文本样式（例如，粗体或斜体文本）作为传递信息的唯一方式。
 
 >[!NOTE]
@@ -686,7 +682,7 @@ AEM 允许轻松地使用相应的 HTML 元素构建网页。在RTE（文本组�
 
 注意要点：
 
-1. 有关闪烁或闪烁内容的要求，请参阅 [切勿设计会导致癫痫发作的内容(2.3)](#seizures).
+1. 有关闪烁或闪烁的内容的要求，请参阅 [切勿设计会导致癫痫发作的内容(2.3)](#seizures).
 1. 由于任何未达到此成功标准的内容会干涉用户使用整个页面的能力，因此网页上的所有内容（无论是否用来达到其他成功标准）必须达到此成功标准。请参阅[符合性要求 5：不干涉](https://www.w3.org/TR/WCAG20/#cc5)。
 1. 通过软件定期更新或以流式传输至用户代理的内容，不需要保留或呈现在启动暂停和恢复呈现期间生成或收到的信息，因为这可能没有技术可行性，而且在许多情况下可能会误导这样做。
 1. 对于在预加载阶段或类似情况下出现的动画，如果所有用户在该阶段都无法进行交互，并且如果不指示进度可能会让用户感到困惑，或导致他们认为内容冻结或中断，则可以将此类动画视为必需内容。
@@ -967,7 +963,7 @@ John Smith's publications
 
 标签放在紧靠字段上方或左侧的位置。
 
-在功能有限的简单表单中，相应地标记 `Submit` 按钮可以用作相邻字段的标签(例如 `Search`)。 当很难找到用于提供标签文本的空间时，这种方法非常有用。
+在功能有限的简单表单中，相应地标记 `Submit` 按钮可以用作相邻字段的标签(例如， `Search`)。 当很难找到用于提供标签文本的空间时，这种方法非常有用。
 
 #### 更多信息 – 标签或说明 (3.3.2) {#more-information-labels-or-instructions}
 

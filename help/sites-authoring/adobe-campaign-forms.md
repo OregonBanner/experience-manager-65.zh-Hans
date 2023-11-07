@@ -8,9 +8,9 @@ content-type: reference
 topic-tags: personalization
 discoiquuid: d53ef3e2-14ca-4444-b563-be67be15c040
 exl-id: 7d60673e-484a-4447-83cf-d62a0d7ad745
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1288'
+source-wordcount: '1286'
 ht-degree: 0%
 
 ---
@@ -54,7 +54,7 @@ AEM允许您创建并使用与网站上的Adobe Campaign交互的表单。 可�
 >确保 **acMapping** 页面上的属性 **jcr：content** 节点设置为 **mapRecipient** 或 **个人资料** 分别使用Adobe Campaign Classic或Adobe Campaign Standard时
 >
 
-1. 在AEM的Sites中，导航到要创建新页面的位置。
+1. 在AEM的Sites中，导航到要创建页面的位置。
 1. 创建页面并选择 **Adobe Campaign Classic配置文件**&#x200B;或&#x200B;**Adobe Campaign Standard配置文件** 并单击 **下一个**.
 
    ![chlimage_1-43](assets/chlimage_1-43a.png)
@@ -95,7 +95,7 @@ AEM允许您创建并使用与网站上的Adobe Campaign交互的表单。 可�
    * **Adobe Campaign：订阅服务**：用于在Adobe Campaign中管理收件人的订阅。
    * **Adobe Campaign：取消订阅服务**：用于在Adobe Campaign中取消收件人的订阅。
 
-1. 您必须拥有 **已加密的主密钥** 组件。 此组件定义哪个URL参数将用于接受Adobe Campaign配置文件的加密主密钥。 在组件中，选择Adobe Campaign ，以便仅显示这些组件。
+1. 您必须拥有 **已加密的主密钥** 组件。 此组件定义哪个URL参数用于接受Adobe Campaign配置文件的加密主密钥。 在组件中，选择Adobe Campaign ，以便仅显示这些组件。
 1. 拖动组件 **已加密的主密钥** 至表单（任意位置），然后单击或点按 **配置** 图标。 在 **Adobe Campaign** 选项卡，为URL参数指定任意名称。 单击或点按复选标记可保存更改。
 
    生成的指向此表单的链接需要使用此URL参数并为其分配Adobe Campaign配置文件的加密主密钥。 加密的主密钥必须正确进行URL（百分比）编码。

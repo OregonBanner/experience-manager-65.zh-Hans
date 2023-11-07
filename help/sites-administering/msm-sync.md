@@ -12,9 +12,9 @@ discoiquuid: 6bcf0fcc-481a-4283-b30d-80b517701280
 docset: aem65
 feature: Multi Site Manager
 exl-id: ac24b8b4-b3ed-47fa-9a73-03f0c9e68ac8
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2699'
+source-wordcount: '2695'
 ht-degree: 37%
 
 ---
@@ -52,7 +52,7 @@ ht-degree: 37%
 
 ### 已安装的转出配置 {#installed-rollout-configurations}
 
-下表列出了随AEM一起安装的转出配置。 该表包含每个转出配置的触发器和同步操作。如果安装的转出配置操作不符合您的要求，您可以 [创建新的转出配置](#creating-a-rollout-configuration).
+下表列出了随AEM一起安装的转出配置。 该表包含每个转出配置的触发器和同步操作。如果安装的转出配置操作不符合您的要求，您可以 [创建转出配置](#creating-a-rollout-configuration).
 
 <table>
  <tbody>
@@ -400,7 +400,7 @@ MSM允许您指定通常使用的转出配置集，并且在需要时，您可�
 
 使用要在转出 Blueprint 页面时使用的转出配置对 Blueprint 页面进行配置。
 
-请注意，Blueprint 页面的子页面将继承该配置。在配置要使用的转出配置时，可能会覆盖页面从其父页面继承的配置。
+Blueprint页面的子页面继承配置。 在配置要使用的转出配置时，可能会覆盖页面从其父页面继承的配置。
 
 1. 使用&#x200B;**Sites**&#x200B;控制台选择 Blueprint 的根页面。
 1. 从工具栏中选择&#x200B;**属性**。

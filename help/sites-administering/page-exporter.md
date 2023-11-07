@@ -2,7 +2,7 @@
 title: 页面导出程序
 description: 了解如何使用Adobe Experience Manager (AEM)页面导出程序。
 exl-id: 15d08758-cf75-43c0-9818-98a579d64183
-source-git-commit: 6799f1d371734b69c547f3c0c68e1e633aa63229
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '1034'
 ht-degree: 0%
@@ -107,7 +107,7 @@ Adobe Experience Manager (AEM)允许您将页面导出为包括图像的完整�
 
 模板由节点结构组成，因为它使用 [内容同步框架](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/contentsync/package-summary.html). 每个节点都有一个 `type` 属性，用于定义zip文件创建过程中的特定操作。
 
-<!-- For more details about the type property, refer to the Overview of configuration types section in the Content Sync framework page.
+<!-- For more details about the type property, see the Overview of configuration types section in the Content Sync framework page.
 -->
 
 以下节点可用于构建导出模板：
@@ -131,7 +131,7 @@ Adobe Experience Manager (AEM)允许您将页面导出为包括图像的完整�
 
 * `rewrite`
 重写节点定义如何在导出的页面中重写链接。 重写的链接可以指向zip文件中包含的文件或服务器上的资源。
-  <!-- Please refer to the Content Sync page for a complete description of the `rewrite` node. -->
+  <!-- See the Content Sync page for a complete description of the `rewrite` node. -->
 
 * `design`
 设计节点用于复制用于导出页面的设计。 它具有以下特性：
@@ -177,7 +177,7 @@ As you may have noticed in the node structure, the **Geometrixx** page export te
 
 要满足某些特定要求，请实施 [自定义更新处理程序](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/contentsync/handler/package-summary.html).
 
-<!-- To meet some specific requirements, you may need to implement a custom `type` property: to do so, refer to the Implementing a custom update handler section in the Content Sync page.
+<!-- To meet some specific requirements, you may need to implement a custom `type` property. To do so, see the Implementing a custom update handler section in the Content Sync page.
 -->
 
 ## 以编程方式导出页面 {#programmatically-exporting-a-page}

@@ -3,10 +3,10 @@ title: 创建并同步 Live Copy
 description: 了解如何在Adobe Experience Manager中创建和同步活动副本。
 feature: Multi Site Manager
 exl-id: 896b35dd-4510-4c94-8615-03d9649c2f64
-source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '4233'
-ht-degree: 47%
+source-wordcount: '4226'
+ht-degree: 46%
 
 ---
 
@@ -123,8 +123,8 @@ Blueprint配置标识要用作一个或多个Live Copy页面的源的现有网�
    * 选中：仅创建所选页面的Live Copy（浅Live Copy）
    * 未选择：创建一个包含选定页面的所有子项的Live Copy（深Live Copy）
 
-1. （可选）要指定用于LiveCopy的一个或多个转出配置，请使用 **转出配置** 下拉列表来选择它们；选定的配置将显示在下拉选择器的下方。
-1. 单击或点按&#x200B;**创建**。这将显示一条确认消息，可在其中选择&#x200B;**打开**&#x200B;或&#x200B;**完成**。
+1. （可选）要指定用于LiveCopy的一个或多个转出配置，请使用 **转出配置** 下拉列表来选择它们；选定的配置显示在下拉选择器的下方。
+1. 单击或点按&#x200B;**创建**。这会显示一条确认消息，可在其中选择&#x200B;**打开**&#x200B;或&#x200B;**完成**。
 
 ### 从 Blueprint 配置创建站点的 Live Copy {#creating-a-live-copy-of-a-site-from-a-blueprint-configuration}
 
@@ -149,7 +149,7 @@ Blueprint配置标识要用作一个或多个Live Copy页面的源的现有网�
 
 要从Blueprint配置创建站点的Live Copy，请执行以下操作：
 
-1. 在&#x200B;**站点**&#x200B;控制台中，选择&#x200B;**创建**，然后从下拉选择器中选择&#x200B;**站点**。
+1. 在&#x200B;**Sites**&#x200B;控制台中，选择&#x200B;**创建**，然后从下拉选择器中选择&#x200B;**站点**。
 1. 选择要用作Live Copy源的Blueprint配置，然后继续 **下一个**：
 
    ![选择Blueprint配置作为Live Copy的源](assets/blueprint-configuration-select.png)
@@ -325,7 +325,7 @@ Blueprint页面（在Blueprint配置中引用）为您提供使用当前(Bluepri
 
 >[!NOTE]
 >
->如果您在Live Copy中手动创建新页面，则该页面是Live Copy的本地页面，这意味着它没有要附加到的相应源页面。
+>如果您在Live Copy中手动创建页面，则该页面是Live Copy的本地页面，这意味着它没有要附加到的相应源页面。
 >
 >创建属于关系一部分的本地页面的最佳实践是在源中创建它并执行（深）转出。 这将在本地创建页面作为活动副本。
 
@@ -412,13 +412,13 @@ Blueprint页面（在Blueprint配置中引用）为您提供使用当前(Bluepri
 
 ![继续](assets/chlimage_1-229.png)
 
-选中后，该对话框将出现。如果需要，您可以选择同步，然后确认操作。
+选中后，将显示对话框。 如果需要，您可以选择同步，然后确认操作。
 
 #### 从 Live Copy 概述恢复 Live Copy 页面 {#resume-a-live-copy-page-from-the-live-copy-overview}
 
 在选择 Live Copy 页面时，[也可以从 Live Copy 概述执行恢复操作](/help/sites-administering/msm-livecopy-overview.md#using-the-live-copy-overview)。
 
-1. 打开 [Live Copy概述](/help/sites-administering/msm-livecopy-overview.md#using-the-live-copy-overview) 并选择已暂停的Live Copy页面；将显示为 **已取消继承**.
+1. 打开 [Live Copy概述](/help/sites-administering/msm-livecopy-overview.md#using-the-live-copy-overview) 并选择已暂停的Live Copy页面；它显示为 **已取消继承**.
 1. 从工具栏中选择&#x200B;**恢复**。
 1. 指示是否要在恢复继承后同步页面，然后在&#x200B;**恢复 Live Copy** 对话框中确认&#x200B;**恢复**&#x200B;操作。
 
@@ -624,7 +624,7 @@ Blueprint页面（在Blueprint配置中引用）为您提供使用当前(Bluepri
 
       * 这是因为MSM将它们视为手动创建的页面，这些页面因具有与它尝试创建的livecopy页面相同的名称而导致发生冲突。
 
-   1. 创建一个具有原始名称的新(LiveCopy)页面，其中包含转出的更改。
+   1. 创建一个具有原始名称的(livecopy)页面，其中包含转出后所做的更改。
 
   >[!NOTE]
   >
@@ -640,7 +640,7 @@ Blueprint页面（在Blueprint配置中引用）为您提供使用当前(Bluepri
 
    ![分离](assets/chlimage_1-236.png)
 
-1. 这将显示一个确认对话框，请选择&#x200B;**分离**&#x200B;以完成此操作。
+1. 将显示确认对话框，请选择 **分离** 以完成操作。
 
 ### 从 Live Copy 概述分离 Live Copy 页面 {#detach-a-live-copy-page-from-the-live-copy-overview}
 

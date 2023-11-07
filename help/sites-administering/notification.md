@@ -1,18 +1,14 @@
 ---
 title: 配置电子邮件通知
-seo-title: Configuring Email Notification
 description: 了解如何在Adobe Experience Manager中配置电子邮件通知。
-seo-description: Learn how to configure Email Notification in AEM.
-uuid: 6cbdc312-860b-4a69-8bbe-2feb32204a27
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
-discoiquuid: 6466d7b8-e308-43c5-acdc-dec15f796f64
 exl-id: 918fcbbc-a78a-4fab-a933-f183ce6a907f
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2069'
+source-wordcount: '2067'
 ht-degree: 12%
 
 ---
@@ -22,7 +18,7 @@ ht-degree: 12%
 
 AEM会向符合以下条件的用户发送电子邮件通知：
 
-* 已订阅页面事件，例如修改或复制。 此 [通知收件箱](/help/sites-classic-ui-authoring/author-env-inbox.md#subscribing-to-notifications) 部分介绍了如何订阅此类事件。
+* 已订阅页面事件，例如，修改或复制。 此 [通知收件箱](/help/sites-classic-ui-authoring/author-env-inbox.md#subscribing-to-notifications) 部分介绍了如何订阅此类事件。
 
 * 已订阅论坛活动。
 * 必须在工作流中执行步骤。 此 [参与者步骤](/help/sites-developing/workflows-step-ref.md#participant-step) 部分介绍如何在工作流中触发电子邮件通知。
@@ -361,7 +357,7 @@ AEM为其集成的邮件程序服务提供OAuth2支持，以允许组织遵守�
 1. 接下来，转至&#x200B;**证书和密码**，单击&#x200B;**新建客户端密码**，然后执行屏幕上显示的步骤来创建密码。请务必记下此密码供以后使用
 1. 按左窗格中的&#x200B;**概述**，复制&#x200B;**应用程序（客户端）ID** 和&#x200B;**目录（租户）ID** 的值供以后使用
 
-回顾一下，您将需要以下信息为AEM端的邮件程序服务配置OAuth2：
+回顾一下，您必须具有以下信息才能在AEM端为邮件程序服务配置OAuth2：
 
 * 将使用租户 ID 构建的身份验证 URL。它采用以下形式：`https://login.microsoftonline.com/<tenantID>/oauth2/v2.0/authorize`
 * 将使用租户 ID 构建的令牌 URL。它采用以下形式：`https://login.microsoftonline.com/<tenantID>/oauth2/v2.0/token`

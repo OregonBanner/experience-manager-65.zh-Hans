@@ -11,9 +11,9 @@ topic-tags: operations
 discoiquuid: 5e4bda3a-5648-4c0f-b2f8-bdbebb88f537
 role: Developer
 exl-id: d3cbca7f-9277-4d61-b198-abf4bb008f15
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '8187'
+source-wordcount: '8184'
 ht-degree: 0%
 
 ---
@@ -86,7 +86,7 @@ ht-degree: 0%
 
 要使用口令加密PDF文档，可以指定四个值，包括两个口令值。 第一个密码值用于加密PDF文档，并且必须在打开PDF文档时指定。 第二个口令值（称为主口令值）用于从PDF文档中删除加密。 密码值区分大小写，且这两个密码值不能相同。
 
-您必须指定要加密的PDF文档资源。 您可以加密整个PDF文档，除文档元数据之外的所有内容，或者仅加密文档的附件。 如果只加密文档的附件，则当用户尝试访问文件附件时，系统会提示用户输入密码。
+指定要加密的PDF文档资源。 您可以加密整个PDF文档，除文档元数据之外的所有内容，或者仅加密文档的附件。 如果只加密文档的附件，则当用户尝试访问文件附件时，系统会提示用户输入密码。
 
 加密PDF文档时，您可以指定与受保护文档关联的权限。 通过指定权限，您可以控制允许打开密码加密PDF文档的用户执行的操作。 例如，要成功提取表单数据，您必须设置以下权限：
 
@@ -142,7 +142,7 @@ ht-degree: 0%
    * 创建 `PasswordEncryptionOptionSpec` 对象通过调用其构造函数。
    * 通过调用，指定要加密的PDF文档资源 `PasswordEncryptionOptionSpec` 对象的 `setEncryptOption` 方法和传递 `PasswordEncryptionOption` 指定要加密的文档资源的枚举值。 例如，要加密整个PDF文档，包括其元数据和附件，请指定 `PasswordEncryptionOption.ALL`.
    * 创建 `java.util.List` 通过使用 `ArrayList` 构造函数。
-   * 通过调用 `java.util.List` 对象 `add` 方法，并传递与要设置的权限对应的枚举值。 例如，要设置允许用户复制位于PDF文档中的数据的权限，请指定 `PasswordEncryptionPermission.PASSWORD_EDIT_COPY`. （对每个要设置的权限重复此步骤）。
+   * 通过调用 `java.util.List` 对象 `add` 方法，并传递与要设置的权限对应的枚举值。 例如，要设置允许用户复制PDF文档中的数据的权限，请指定 `PasswordEncryptionPermission.PASSWORD_EDIT_COPY`. （对每个要设置的权限重复此步骤）。
    * Acrobat通过调用 `PasswordEncryptionOptionSpec` 对象的 `setCompatability` 方法，并传递一个指定Acrobat兼容性级别的枚举值。 例如，您可以指定 `PasswordEncryptionCompatability.ACRO_7`.
    * PDF指定密码值，以允许用户通过调用 `PasswordEncryptionOptionSpec` 对象的 `setDocumentOpenPassword` 方法，并传递表示打开密码的字符串值。
    * PDF指定主密码值，以允许用户通过调用 `PasswordEncryptionOptionSpec` 对象的 `setPermissionPassword` 方法，并传递表示主密码的字符串值。

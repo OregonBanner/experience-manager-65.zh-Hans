@@ -8,9 +8,9 @@ discoiquuid: 76d178d1-8e40-41b3-80d4-66b2f8d04211
 docset: aem65
 feature: Adaptive Forms
 exl-id: 096f61b0-59f4-4699-9093-8fb1ed81fded
-source-git-commit: 6caf3ef4a00275f0f73be52b6a9ccba77d277f1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '742'
+source-wordcount: '738'
 ht-degree: 9%
 
 ---
@@ -79,7 +79,7 @@ ht-degree: 9%
    * **模板消息：** 指定在加载签名PDF时要显示的消息。 Adobe Sign服务需要一些时间来准备和加载签名PDF。
    * **签名服务：** 选择 **潦草签名** 选项。
 
-   * **CSS类**：指定客户端库的CSS类（如果有）。 建议使用 [主题](../../forms/using/themes.md) 和 [内联样式](../../forms/using/inline-style-adaptive-forms.md) 而不是CSS类。
+   * **CSS类**：指定客户端库的CSS类（如果有）。 使用 [主题](../../forms/using/themes.md) 和 [内联样式](../../forms/using/inline-style-adaptive-forms.md) 而不是CSS类。
 
    点按完成 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) 图标以保存更改。 已成功配置签名。
 

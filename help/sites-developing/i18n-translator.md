@@ -1,18 +1,14 @@
 ---
 title: 使用Translator管理词典
-seo-title: Using Translator to Manage Dictionaries
 description: AEM提供了一个控制台，用于管理组件UI中使用的文本的各种翻译
-seo-description: AEM provides a console for managing the various translations of texts used in component UI
-uuid: 4eea3110-e958-473e-8d22-c84fa435edbd
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: components
-discoiquuid: adf3364c-11f1-45c6-b41d-2c7d48b626f9
 exl-id: a8d50c09-72d0-406e-874e-50a985227a56
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2327'
+source-wordcount: '2320'
 ht-degree: 1%
 
 ---
@@ -25,7 +21,7 @@ AEM提供了一个控制台，用于管理组件UI中使用的文本的各种翻
 
 使用翻译工具管理英语字符串及其翻译。 词典在存储库中创建，例如/apps/myproject/i18n。
 
-请注意，您管理的翻译工具及词典用于以不同语言呈现组件UI。 如果要翻译页面或用户生成的内容，请参阅 [翻译多语言站点的内容](/help/sites-administering/translation.md) 和 [用户生成的内容的翻译](/help/communities/translate-ugc.md).
+您管理的翻译工具及词典用于以不同语言呈现组件UI。 如果要翻译页面或用户生成的内容，请参阅 [翻译多语言站点的内容](/help/sites-administering/translation.md) 和 [用户生成的内容的翻译](/help/communities/translate-ugc.md).
 
 >[!CAUTION]
 >
@@ -43,7 +39,7 @@ AEM提供了一个控制台，用于管理组件UI中使用的文本的各种翻
 
 您可以搜索、筛选和编辑英语和已翻译文本。 您还可以将词典导出为XLIFF格式进行翻译，然后将翻译导入回词典中。
 
-也可以从此控制台将i18n词典添加到翻译项目。 您可以创建新项目或添加到现有项目。
+也可以从此控制台将i18n词典添加到翻译项目。 您可以创建一个项目或将其添加到现有项目中。
 
 1. 单击 **翻译字典**.
 
@@ -113,7 +109,7 @@ AEM提供了一个控制台，用于管理组件UI中使用的文本的各种翻
 
 使用词典字符串的Commenet属性向翻译人员提供信息以阐明字符串的含义。 通常，UI会帮助用户确定模糊单词的含义。 但是，翻译人员不会在UI的上下文中看到字符串。 翻译提示可消除歧义。 例如，注释可帮助翻译人员了解英语单词Request用作名词而不是动词。
 
-翻译提示还可以区分相同且具有不同含义的字符串。 例如，“搜索”一词可以是名词或动词，在词典中需要两个“搜索”条目，并带有两个不同的翻译提示。 请求字符串的代码还包括翻译提示，以便在UI中使用正确的字符串。
+翻译提示还可以区分相同且具有不同含义的字符串。 例如，Search一词可以是名词或动词，在词典中需要两个“Search”条目，并带有两个不同的翻译提示。 请求字符串的代码还包括翻译提示，以便在UI中使用正确的字符串。
 
 **包括索引变量**
 
@@ -283,7 +279,7 @@ Translator工具底部的搜索栏提供了字符串选择选项：
 
 使用以下过程添加或删除语言。
 
-1. 使用CRXDE Lite创建新节点：
+1. 使用CRXDE Lite创建节点：
 
    `/etc/languages`
 
@@ -382,7 +378,7 @@ Translator工具底部的搜索栏提供了字符串选择选项：
 
 >[!NOTE]
 >
->不应将常规发布功能或复制用于字典。 相反，应按处理代码和配置的方式处理词典。 这包括使用源代码管理来跟踪更改，以及使用内容包将更改应用于创作和发布。
+>请勿对字典使用常规发布功能或复制。 相反，应按处理代码和配置的方式处理词典。 这包括使用源代码管理来跟踪更改，以及使用内容包将更改应用于创作和发布。
 
 >[!NOTE]
 >

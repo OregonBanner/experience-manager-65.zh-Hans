@@ -3,10 +3,10 @@ title: OSGi和AEM Forms JEE工作流中以表单为中心的AEM工作流的操�
 description: OSGi和AEM Forms JEE工作流中以表单为中心的AEM工作流的操作和功能
 contentOwner: khsingh
 exl-id: 505b8988-b2b3-4222-b3cb-9b3c6259fdd2
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '927'
-ht-degree: 22%
+source-wordcount: '925'
+ht-degree: 23%
 
 ---
 

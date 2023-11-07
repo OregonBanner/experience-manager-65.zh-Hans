@@ -11,10 +11,10 @@ topic-tags: personalization
 discoiquuid: 9d940744-3b00-4721-829a-96d17bb738e8
 docset: aem65
 exl-id: edde225d-0be7-4306-8dda-d18d46fae977
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '5388'
-ht-degree: 87%
+source-wordcount: '5385'
+ht-degree: 86%
 
 ---
 
@@ -93,7 +93,7 @@ ht-degree: 87%
 
    >[!NOTE]
    >
-   >在创建新活动时，如果已将 Adobe Target 云配置附加到页面或其某个父页面，则 AEM 会自动将 Adobe Target 视为定位引擎。
+   >在创建活动时，如果已将Adobe Target云配置附加到页面或其某个父页面，则AEM会自动将Adobe Target视为引擎。
 
 1. 在&#x200B;**定位**&#x200B;引擎下拉菜单中，选择您的定位引擎。
 
@@ -440,7 +440,7 @@ ht-degree: 87%
 
 ## 目标和设置：配置活动并设置目标 {#goals-settings-configuring-the-activity-and-setting-goals}
 
-[定位流程](/help/sites-authoring/content-targeting-touch.md#the-targeting-process-create-target-and-goals-settings)的“目标和设置”步骤涉及配置品牌活动的行为。指定活动的开始和结束时间以及活动优先级。 此外，还可以跟踪目标。具体来说，您可以决定要通过活动衡量的内容。
+[定位流程](/help/sites-authoring/content-targeting-touch.md#the-targeting-process-create-target-and-goals-settings)的“目标和设置”步骤涉及配置品牌活动的行为。这包括指定活动的开始和结束时间，以及指定活动优先级。此外，还可以跟踪目标。具体来说，您可以决定要通过活动衡量的内容。
 
 仅当使用 Adobe Target 作为定位引擎时，才可以使用目标量度。您必须至少定义一个目标量度。如果您已经配置 Adobe Analytics，且具有 A4T 分析云配置，则可以选择要使用 Adobe Target 还是 Adobe Analytics 作为报表源。
 

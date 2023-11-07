@@ -10,32 +10,32 @@ topic-tags: develop
 discoiquuid: 31a9bfc6-462d-4535-888f-31026b8fa674
 role: Developer
 exl-id: 82f0b6c1-ca0c-48c7-b7f6-b54704ac0830
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '311'
+source-wordcount: '310'
 ht-degree: 0%
 
 ---
 
 # Acrobat Reader DC扩展服务Java API快速入门(SOAP) {#acrobat-reader-dc-extensions-servicejava-api-quick-start-soap}
 
-以下快速启动适用于Acrobat Reader DC扩展服务。
+以下快速入门适用于Acrobat Reader DC扩展服务。
 
 [快速入门（SOAP模式）：使用Java API应用使用权限](#quick-start-soap-mode-applying-usage-rights-using-the-java-api)
 
 [从PDF文档中删除使用权限](#quick-start-soap-mode-removing-usage-rights-from-a-pdf-document-using-the-java-api)
 
-[快速入门（SOAP模式）：使用Java API检索凭据信息](acrobat-reader-dc-extensions-service.md#quick-start-soap-mode-retrieving-credential-information-using-the-java-api)
+[快速启动（SOAP模式）：使用Java API检索凭据信息](acrobat-reader-dc-extensions-service.md#quick-start-soap-mode-retrieving-credential-information-using-the-java-api)
 
 AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应设置为SOAP。
 
 >[!NOTE]
 >
->“使用AEM Forms编程”中的“快速入门”基于Forms服务器操作系统。 但是，如果您使用的是其他操作系统（如UNIX），请将特定于Windows的路径替换为适用的操作系统支持的路径。 同样，如果您使用的是其他J2EE应用程序服务器，请确保指定有效的连接属性。 参见 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>《使用AEM Forms进行编程快速入门》基于Forms服务器操作系统。 但是，如果您使用的是其他操作系统（如UNIX），请将特定于Windows的路径替换为适用的操作系统支持的路径。 同样，如果您使用的是其他J2EE应用程序服务器，请确保指定有效的连接属性。 请参阅 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
 ## 快速入门（SOAP模式）：使用Java API应用使用权限 {#quick-start-soap-mode-applying-usage-rights-using-the-java-api}
 
-以下Java代码示例将使用权限应用于名为的PDF文档 *Loan.pdf*. 启用权限的PDF文档另存为名为的PDF文件 *LoanUsageRights.pdf*. 以下使用权限应用于此PDF文档： `enabledComments`， `enabledFormFillIn`、和 `enabledDigitalSignatures`. (请参阅 [对PDF文档应用使用权限](/help/forms/developing/assigning-usage-rights.md).)
+以下Java代码示例将使用权限应用于名为的PDF文档 *Loan.pdf*. 启用权限的PDF文档将保存为名为的PDF文件 *LoanUsageRights.pdf*. 以下使用权限适用于此PDF文档： `enabledComments`， `enabledFormFillIn`、和 `enabledDigitalSignatures`. (请参阅 [将使用权限应用于PDF文档](/help/forms/developing/assigning-usage-rights.md).)
 
 
 ```java
@@ -62,13 +62,13 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
      * 18. xbean.jar (required for SOAP mode) 
      * 19. xercesImpl.jar (required for SOAP mode) 
      * 
-     * These JAR files are located in the following path: 
+     * These JAR files are in the following path: 
      * <install directory>/sdk/client-libs/common 
      * 
      * 
      * <install directory>/jboss/bin/client 
      * 
-     * SOAP required JAR files are located in the following path: 
+     * SOAP required JAR files are in the following path: 
      * <install directory>/sdk/client-libs/thirdparty 
      * 
      * If you want to invoke a remote forms server instance and there is a 
@@ -132,7 +132,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
              null, 
              reOptions);  
           
-           //Create a new PDF file that represents the rights-enabled PDF document 
+           //Create a PDF file that represents the rights-enabled PDF document 
            File resultFile = new File("C:\\Adobe\LoanUsageRights.pdf");  
            rightsEnabledPDF.copyToFile(resultFile); 
                           
@@ -176,7 +176,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to  
      * your local development environment and then include the 3 JBoss JAR files in your class path 
      * 
-     * These JAR files are located in the following path: 
+     * These JAR files are in the following path: 
      * <install directory>/sdk/client-libs/common 
      * 
      * 
@@ -185,7 +185,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
      * If you want to invoke a remote forms server instance and there is a 
      * firewall between the client application and the server, then it is  
      * recommended that you use the SOAP mode. When using the SOAP mode,  
-     * you have to include additional JAR files located in the following  
+     * you have to include additional JAR files in the following  
      * path 
      * <install directory>/sdk/client-libs/thirdparty 
      * 
@@ -245,9 +245,9 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
  
 ```
 
-## 快速入门（SOAP模式）：使用Java API检索凭据信息 {#quick-start-soap-mode-retrieving-credential-information-using-the-java-api}
+## 快速启动（SOAP模式）：使用Java API检索凭据信息 {#quick-start-soap-mode-retrieving-credential-information-using-the-java-api}
 
-以下Java代码示例检索有关凭据的信息，该凭据用于将使用权限应用于启用了权限的PDF文档 *LoanUsageRights.pdf*. (请参阅 [正在检索凭据信息](/help/forms/developing/assigning-usage-rights.md).)
+以下Java代码示例检索有关用于向名为的已启用权限的PDF文档应用使用权限的凭据的信息 *LoanUsageRights.pdf*. (请参阅 [正在检索凭据信息](/help/forms/developing/assigning-usage-rights.md).)
 
 ```java
  /* 
@@ -276,7 +276,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to  
      * your local development environment and then include the 3 JBoss JAR files in your class path 
      * 
-     * These JAR files are located in the following path: 
+     * These JAR files are in the following path: 
      * <install directory>/sdk/client-libs/common 
      * 
      * 
@@ -285,7 +285,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
      * If you want to invoke a remote forms server instance and there is a 
      * firewall between the client application and the server, then it is  
      * recommended that you use the SOAP mode. When using the SOAP mode,  
-     * you have to include additional JAR files located in the following  
+     * you have to include additional JAR files in the following  
      * path 
      * <install directory>/sdk/client-libs/thirdparty 
      * 

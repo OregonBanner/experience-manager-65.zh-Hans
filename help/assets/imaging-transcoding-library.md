@@ -5,7 +5,7 @@ contentOwner: AG
 role: Admin
 feature: Renditions,Developer Tools,Asset Processing
 exl-id: b67465f9-177c-49c4-b4eb-a1d6e09ac9a2
-source-git-commit: 10227bcfcfd5a9b0f126fee74dce6ec7842f5e95
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '992'
 ht-degree: 0%
@@ -23,7 +23,7 @@ Adobe的图像转码库是一种专用的图像处理解决方案，可以执行
 * JPEG质量压缩
 * 调整图像大小
 
-图像转码库提供CMYK支持和完整Alpha支持，但CMYK -Alpha除外。
+图像转码库提供CMYK支持和完整的Alpha支持，但CMYKAlpha除外。
 
 除了支持广泛的文件格式和配置文件外，在性能、可扩展性和质量方面，图像转码库与其他第三方解决方案相比具有显着的优势。 以下是使用图像转码库的一些主要优势：
 
@@ -56,10 +56,10 @@ Adobe的图像转码库是一种专用的图像处理解决方案，可以执行
 
 您可以配置以下选项 `-resize` 参数：
 
-* `X`：工作方式类似于 [!DNL Experience Manager]. 例如 — resize 319。
-* `WxH`：不维护宽高比，例如 `-resize 319x319`.
-* `Wx`：固定宽度并计算高度以保持宽高比。 例如 `-resize 319x`。
-* `xH`：固定高度并计算宽度以保持宽高比。 例如 `-resize x319`。
+* `X`：工作方式类似于 [!DNL Experience Manager]. 例如，-resize 319。
+* `WxH`：不维护宽高比，例如， `-resize 319x319`.
+* `Wx`：固定宽度并计算高度以保持宽高比。 例如：`-resize 319x`。
+* `xH`：固定高度并计算宽度以保持宽高比。 例如：`-resize x319`。
 
 ```shell
  -AllowUpsampling (Resizes smaller images)

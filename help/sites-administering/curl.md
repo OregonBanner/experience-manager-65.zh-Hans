@@ -10,9 +10,9 @@ topic-tags: operations
 content-type: reference
 discoiquuid: d4ceb82e-2889-4507-af22-b051af83be38
 exl-id: e3f018e6-563e-456f-99d5-d232f1a4aa55
-source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '885'
+source-wordcount: '883'
 ht-degree: 2%
 
 ---
@@ -29,7 +29,7 @@ cURL是用于执行URL操作的开源命令行工具。 它支持各种Internet�
 
 cURL是一个成熟且广泛使用的工具，最初于1997年发布，用于使用URL语法获取或发送数据。 名称cURL最初的意思是“查看URL”。
 
-由于构建AEM所基于的Sling框架具有RESTful性质，因此大多数任务可以简化为URL调用，而该URL调用可以使用cURL执行。 [内容操作任务](/help/sites-administering/curl.md#common-content-manipulation-aem-curl-commands) 例如激活页面、启动工作流以及 [运行任务](/help/sites-administering/curl.md#common-operational-aem-curl-commands) 例如包管理以及使用cURL管理用户等。 此外，您还可以 [创建您自己的cURL](/help/sites-administering/curl.md#building-a-curl-ready-aem-command) 命令用于AEM中的大多数任务。
+由于构建AEM所基于的Sling框架具有RESTful性质，因此大多数任务可以简化为URL调用，而该URL调用可以使用cURL执行。 [内容操作任务](/help/sites-administering/curl.md#common-content-manipulation-aem-curl-commands) 例如激活页面，以及启动工作流和 [运行任务](/help/sites-administering/curl.md#common-operational-aem-curl-commands) 例如包管理以及使用cURL管理用户等。 此外，您还可以 [创建您自己的cURL](/help/sites-administering/curl.md#building-a-curl-ready-aem-command) 命令用于AEM中的大多数任务。
 
 >[!NOTE]
 >

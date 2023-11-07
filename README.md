@@ -1,13 +1,13 @@
 ---
-source-git-commit: 41011e538104405c954761d9adc270e774e8a9a1
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '84'
-ht-degree: 69%
+source-wordcount: '83'
+ht-degree: 73%
 
 ---
-# Adobe Experience Manager 6.5文档
+# Adobe Experience Manager 6.5 文档
 
-这是Adobe Experience Manager 6.5文档的存储库。 本文档介绍安装、管理、创作用法以及如何自定义AEM。
+这是Adobe Experience Manager 6.5文档的存储库。 本文档介绍了安装、管理、创作使用以及如何自定义AEM。
 
 欢迎您贡献文档内容。请参阅以下资源：
 

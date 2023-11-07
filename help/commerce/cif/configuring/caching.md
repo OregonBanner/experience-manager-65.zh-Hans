@@ -2,7 +2,7 @@
 title: 缓存和性能
 description: 了解可用于启用GraphQL和内容缓存以优化Commerce实施性能的各种配置。
 exl-id: ecce64bf-5960-4ddb-b6e3-dad401038c11
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '849'
 ht-degree: 3%
@@ -27,7 +27,7 @@ AEM CIF核心组件已内置支持缓存各个组件的GraphQL响应。 可以�
 
 ### 示例
 
-我们建议为Search Service配置一些缓存，以便获取在产品搜索和类别页面上显示的所有可用聚合/Facet值。 这些值通常仅在新属性（例如，添加到产品的新属性）发生更改时才会更改，因此，如果产品属性集不经常更改，则此缓存条目的持续时间可能会“很大”。 虽然这是特定于项目的，但Adobe建议在项目开发阶段使用几分钟的值，在稳定生产系统中使用几小时的值。
+我们建议为Search Service配置一些缓存，以便获取在产品搜索和类别页面上显示的所有可用聚合/Facet值。 这些值通常仅在添加新属性（例如，添加到产品）时更改，因此，如果产品属性集不经常更改，则此缓存条目的持续时间可能很“长”。 虽然这是特定于项目的，但Adobe建议在项目开发阶段使用几分钟的值，在稳定生产系统中使用几小时的值。
 
 这通常使用以下缓存条目进行配置：
 
@@ -49,9 +49,9 @@ venia/components/structure/navigation:true:10:600
 
 在中缓存AEM页面或片段 [AEM调度程序](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html) 是任何AEM项目的最佳实践。 通常，它依赖于失效技术，以确保在AEM中更改的任何内容在Dispatcher中正确更新。 这是AEM Dispatcher缓存策略的核心功能。
 
-除了纯AEM托管内容CIF之外，页面通常可以显示通过GraphQL从Adobe Commerce动态获取的商务数据。 虽然页面结构本身可能永远不会更改，但商业内容可能会发生更改，例如，如果某些产品数据（如名称或价格）在Adobe Commerce中发生更改。
+除了纯AEM托管内容，CIF页面通常可以显示通过GraphQL从Adobe Commerce动态获取的商务数据。 虽然页面结构本身可能永远不会更改，但商业内容可能会发生更改，例如，如果某些产品数据（如名称或价格）在Adobe Commerce中发生更改。
 
-为了确保CIF页面可以在AEM Dispatcher中的有限时间内缓存，我们因此建议使用 [基于时间的缓存失效](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#configuring-time-based-cache-invalidation-enablettl) AEM （也称为基于TTL的缓存）时。 此功能可在AEM中使用额外的 [ACS AEM Commons](https://adobe-consulting-services.github.io/acs-aem-commons/) 包。
+为了确保CIF页面可以在AEM Dispatcher中的有限时间内缓存，我们因此建议使用 [基于时间的缓存失效](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#configuring-time-based-cache-invalidation-enablettl) （也称为基于TTL的缓存）来缓存AEM Dispatcher中的CIF页面时。 此功能可在AEM中使用额外的 [ACS AEM Commons](https://adobe-consulting-services.github.io/acs-aem-commons/) 包。
 
 对于基于TTL的缓存，开发人员通常会为选定的AEM页面定义一个或多个缓存持续时间。 这可确保CIF页面仅在AEM Dispatcher中缓存到配置的持续时间并且内容将经常更新。
 

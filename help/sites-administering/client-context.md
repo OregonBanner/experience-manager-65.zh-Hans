@@ -1,19 +1,15 @@
 ---
 title: ClientContext
-seo-title: Client Context
 description: 了解如何使用Client Context查看有关Adobe Experience Manager中当前页面和访客的信息。
-seo-description: Learn how to use the Client Context in AEM.
-uuid: 82b2f976-cb41-42f8-ad4b-3a5cd23cc5f5
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
-discoiquuid: 7a3322fe-554e-479e-a27c-4259cdd3ba2e
 docset: aem65
 exl-id: 69c66c82-fbd6-406e-aefd-b85480a62109
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1978'
+source-wordcount: '1979'
 ht-degree: 0%
 
 ---
@@ -42,7 +38,7 @@ Client Context是一种机制，可为您提供有关当前页面和访客的特
 ![“客户端上下文”窗口的“编辑”、“加载”和“重置”图标](do-not-localize/clientcontext_icons.png)
 
 * **编辑**
-此时将打开一个新页面，允许您执行以下操作 [编辑、添加或删除配置文件属性](#editingprofiledetails).
+此时将打开一个新页面，让您可以 [编辑、添加或删除配置文件属性](#editingprofiledetails).
 
 * **加载**
 您可以 [从配置文件列表中进行选择并加载配置文件](#loading-a-new-user-profile) 你想测试。
@@ -70,7 +66,7 @@ Client Context可以显示以下属性([根据使用编辑选择的内容](#addi
 
 营销活动解析通常基于营销活动的优先级属性。 体验通常基于分段进行选择。
 
-**购物车** 显示购物车信息，包括产品条目（标题、数量、价格格式等）、已解决的促销活动（标题、消息等） 凭单（代码、说明等）。
+**购物车** 显示购物车信息，包括产品条目（标题、数量、价格格式等）、已解决的促销活动（标题、消息等）和优惠券（代码、描述等）。
 
 购物车会话存储还可以使用ClientContextCartServlet将已解决的促销更改通知（基于分段更改）到服务器。
 
@@ -164,7 +160,7 @@ Client Context允许您以交互方式更改详细信息：
 
 您还可以使用选择滑块选择配置文件：
 
-1. 双击表示当前用户的图标。 将打开选择器，使用箭头导航并查看可用的配置文件：
+1. 双击表示当前用户的图标。 选择器将打开，使用箭头导航并查看可用的配置文件：
 
    ![用户选择器](assets/clientcontext_profileselector.png)
 
@@ -178,7 +174,7 @@ Client Context允许您以交互方式更改详细信息：
 
 ### 更改浏览器平台 {#changing-the-browser-platform}
 
-1. 双击表示浏览器平台的图标。 将打开选择器，使用箭头导航并查看可用的平台/浏览器：
+1. 双击表示浏览器平台的图标。 选择器将打开，使用箭头导航并查看可用的平台/浏览器：
 
    ![浏览器平台选择器](assets/clientcontext_browserplatform.png)
 
@@ -186,7 +182,7 @@ Client Context允许您以交互方式更改详细信息：
 
 ### 更改地理位置 {#changing-the-geolocation}
 
-1. 双击地理位置图标。 此时将打开一个展开的地图，您可以在此处将标记拖动到新位置：
+1. 双击地理位置图标。 展开的地图将打开，您可以在此处将标记拖动到新位置：
 
    ![地理位置详细信息](assets/clientcontext_geomocationrelocate.png)
 

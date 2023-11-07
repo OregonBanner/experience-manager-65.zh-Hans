@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: fec86f03-f81e-460a-9f84-d6304c95128c
 exl-id: e2ddf5d1-0f5b-4f3b-9666-0f388915730e
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1409'
+source-wordcount: '1406'
 ht-degree: 0%
 
 ---
@@ -87,7 +87,7 @@ ht-degree: 0%
 }
 ```
 
-**mobilecontentpackageslisting** 列出给定应用程序中的AEM内容包以及用于向其发出更新请求的serverURL。 这用于设备上的客户端js请求内容更新
+**mobilecontentpackageslisting** 列出给定应用程序中的AEM内容包以及要向其发出更新请求的serverURL。 这用于设备上的客户端js请求内容更新
 
 该处理程序应在AEM App Shell ContentSync配置（具有page-type=app-instance的节点）上使用
 
@@ -157,7 +157,7 @@ AEM属性是使用“cq”、“sling”或“jcr”进行命名空间的属性�
 
    * 其他ContentSync配置
    * 到内容包（将使用其phonegap-exportTemplate属性来查找其ContentSync配置）
-   * 移动资源（在该资源下可找到app-content，如果这些内容包的page-includeInBuild属性为true，则使用phonegap-exportTemplate查找其ContentSync配置）
+   * 到移动设备资源（应用程序内容将位于该资源下，如果这些内容包的page-includeInBuild属性为true，则使用phonegap-exportTemplate查找其ContentSync配置）
 
 * ***autoCreateFirstUpdateBeforeImport — 布尔值***  — 如果为true，则创建初始 **更新** 如果已经不存在，则在导入之前的目标配置中
 

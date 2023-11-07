@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
 content-type: reference
 exl-id: 50e608d5-951f-4a3f-bed4-9e92ff5d7bd4
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2462'
+source-wordcount: '2460'
 ht-degree: 0%
 
 ---
@@ -117,7 +117,7 @@ CQ标记库包含有用的函数。
 
 **tagName**  — 将包含非空输出的元素的名称。 默认为DIV。
 
-**占位符**  — 在编辑模式下用于null或空文本的默认值，即占位符。 请注意，默认检查在可选格式化和转义之后执行，即按原样写入输出。 默认为：
+**占位符**  — 在编辑模式下用于null或空文本的默认值，即占位符。 默认检查在可选格式化和转义之后执行，即按原样写入输出。 默认为：
 
 `<div><span class="cq-text-placeholder">&para;</span></div>`
 
@@ -545,7 +545,7 @@ Sling标记库包含有用的Sling函数。
 
 >[!NOTE]
 >
->资源的分辨率和随附的脚本 `<sling:include>` 标记与普通sling URL解析相同。 默认情况下，也会将当前请求中的选择器、扩展等用于包含的脚本。 它们可以通过标记属性进行修改：例如 `replaceSelectors="foo.bar"` 允许您覆盖选择器。
+>资源的分辨率和随附的脚本 `<sling:include>` 标记与普通sling URL解析相同。 默认情况下，也会将当前请求中的选择器、扩展等用于包含的脚本。 它们可以通过标记属性进行修改：例如， `replaceSelectors="foo.bar"` 允许您覆盖选择器。
 
 示例：
 
@@ -603,7 +603,7 @@ Sling标记库包含有用的Sling函数。
 
 * 如果当前资源指向JCR节点（Sling中通常会出现这种情况），则可以直接访问Node对象。 否则，不会定义此对象。
 
-**日志**
+**log**
 
 * 提供了一个SLF4J日志记录器，用于从脚本中登录到Sling日志系统，例如log.info（“执行我的脚本”）。
 

@@ -7,9 +7,9 @@ topic-tags: correspondence-management
 docset: aem65
 feature: Correspondence Management
 exl-id: bf6d3edb-6bf7-4d3e-b042-d75cb8e39e3f
-source-git-commit: 10227bcfcfd5a9b0f126fee74dce6ec7842f5e95
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1354'
+source-wordcount: '1351'
 ht-degree: 4%
 
 ---
@@ -43,7 +43,7 @@ ht-degree: 4%
 
 1. 转到 `https://'[server]:[port]'/[ContextPath]/crx/de` 并以管理员身份登录。
 
-1. 在apps文件夹中，使用下列步骤创建一个名为items的文件夹，其路径/结构与selection文件夹中的items文件夹类似：
+1. 在apps文件夹中，使用下列步骤创建一个名为items的文件夹，该文件夹的路径/结构与selection文件夹中的items文件夹类似：
 
    1. 右键单击 **个项目** 路径下的文件夹并选择 **覆盖节点**：
 

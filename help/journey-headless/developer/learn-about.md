@@ -2,10 +2,10 @@
 title: 了解 CMS Headless 开发
 description: 在 AEM Headless 开发人员历程的这一部分中，了解 Headless 技术以及使用它的原因。
 exl-id: f0989cea-3102-43cd-976e-9a6b265d9c15
-source-git-commit: 9c517590c2b78eed7c52e33e0a106237a2af3bb7
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '1612'
-ht-degree: 93%
+ht-degree: 89%
 
 ---
 
@@ -56,13 +56,13 @@ ht-degree: 93%
 
 任何系统的头通常都是该系统的输出呈现器，通常采用 GUI 或其他图形输出的形式。
 
-例如，Headless 服务器可能位于服务器机房某处的机架中，并且未连接监视器。要访问该服务器，您必须远程连接到它。在此情况下，监视器是头，因为它负责呈现服务器的输出。作为服务消费者，您在远程连接到服务器时提供自己的头（监视器）。
+例如，Headless服务器可能位于某个服务器机房的机架中，且未连接显示器。 要访问该服务器，您必须远程连接到它。在此情况下，监视器是头，因为它负责呈现服务器的输出。作为服务消费者，您在远程连接到服务器时提供自己的头（监视器）。
 
 就 Headless CMS 而言，CMS 将管理内容并继续将内容交付给消费者。但是，通过仅以标准化方式交付&#x200B;**内容**，Headless CMS 会省略最终的输出呈现，而只保留要&#x200B;**呈现**&#x200B;给消费服务的内容。
 
 ![Headless CMS](assets/headless-cms.png)
 
-消费服务（无论是 AR 体验、网上商店、移动体验、渐进式 Web 应用程序 (PWA) 等）都将从 Headless CMS 获取内容并提供它们自己的呈现。它们负责为您的内容提供它们自己的头。
+消费服务，无论是AR体验、网络商店、移动体验、渐进式Web应用程序(PWA)等，都会从Headless CMS中获取内容并提供自己的渲染。 它们负责为您的内容提供它们自己的头。
 
 忽略头将消除复杂性，从而简化 CMS。这样做还会将呈现内容的责任转移到实际需要内容且通常更适合此类呈现的服务。
 
@@ -96,7 +96,7 @@ Headless 展示了交付数字体验方面的灵活度。但这种灵活度本�
 
 拥有许多不同的渠道可能意味着它们均有自己的呈现系统。尽管它们通过相同的 API 使用相同内容，但由于呈现方式不同，体验可能会有所不同。必须给予关注以确保客户体验的一致性。
 
-通过实施精心设计的系统、共享模式库、利用可重用的设计组件以及已建立的开放式客户端框架，可以确保提供一致体验，但必须规划这些工作。
+通过实施仔细的设计系统、共享模式库以及使用可重用设计组件和已建立的、开放的客户端框架，可以确保一致的体验，但这是必须计划好的。
 
 ## 未来是 Headless，未来即在眼前 {#future}
 
@@ -126,6 +126,6 @@ Headless 展示了交付数字体验方面的灵活度。但这种灵活度本�
 
 我们建议您查看文档来继续无头开发历程的下一部分 [AEM Headless快速入门](getting-started.md)，以下是一些其他可选资源，这些资源对本文档中提到的一些概念进行了更深入的探究，但并非继续执行Headless历程所必需的。
 
-* An [AEM as a Headless CMS简介](/help/sites-developing/headless/introduction.md)
-* 此 [AEM开发人员门户](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=zh-Hans)
-* [AEM Headless 教程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=zh-Hans) – 使用这些动手实践教程，探究如何使用各种选项通过 AEM 将内容交付到 Headless 端点，并选择适合您的选项。
+* [AEM as a Headless CMS 简介](/help/sites-developing/headless/introduction.md)
+* [AEM 开发人员门户](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=zh-Hans)
+* [AEM Headless 教程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=zh-Hans) – 使用这些动手实践教程探索如何使用通过 AEM 将内容投放到 Headless 端点的各种选项并选择适合您的选项。

@@ -2,10 +2,10 @@
 title: 管理翻译项目
 description: 了解如何在Adobe Experience Manager中管理翻译项目。
 exl-id: 968bba02-98fe-4eaf-9937-ce5cfdf5b413
-source-git-commit: 9438868191961404e9e18cb0dd2e844985ac9db0
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '3588'
-ht-degree: 55%
+source-wordcount: '3578'
+ht-degree: 52%
 
 ---
 
@@ -123,7 +123,7 @@ AEM 检测是否正在为内容的初始翻译创建翻译项目，或更新已�
 
 在将页面添加到翻译项目时，页面将包含在新的翻译作业中。您也可以[将页面添加到现有作业](#adding-pages-assets-to-a-translation-job)。
 
-与创建新项目时一样，在添加页面时，页面的副本会在必要时添加到启动项中，避免覆盖现有语言副本。（请参阅[为现有语言副本创建翻译项目](#performing-initial-translations-and-updating-existing-translations)。）
+与创建项目时一样，在添加页面时，页面的副本会在必要时添加到启动项，以避免覆盖现有语言副本。 （请参阅[为现有语言副本创建翻译项目](#performing-initial-translations-and-updating-existing-translations)。）
 
 1. 使用 Sites 控制台选择要添加到翻译项目的页面。
 
@@ -412,7 +412,7 @@ AEM 检测是否正在为内容的初始翻译创建翻译项目，或更新已�
 
 ## 移动或重命名源页面 {#move-source}
 
-如果需要[重命名或移动](/help/sites-authoring/managing-pages.md#moving-or-renaming-a-page)一个已翻译的源页面，在移动后重新翻译该页面将根据新的页面名称/位置创建新的语言副本。基于上一个名称/位置的旧语言副本仍将存在。要防止出现这种情况，您可以在移动后使用更新语言复制功能：
+如果需要翻译已翻译的源页面，则 [重命名或移动](/help/sites-authoring/managing-pages.md#moving-or-renaming-a-page)，在移动后再次翻译页面将根据新页面名称/位置创建语言副本。 基于先前名称/位置的旧语言副本仍然存在。 要防止出现这种情况，您可以在移动后使用更新语言复制功能：
 
 1. 移动具有语言副本的页面。
 1. 选择语言副本根。
@@ -423,9 +423,9 @@ AEM 检测是否正在为内容的初始翻译创建翻译项目，或更新已�
 1. 单击&#x200B;**更新**。A [Launch](/help/sites-authoring/launches-promoting.md) 将被创建。
 1. 导航到所需的语言根并将其选定。
 1. 使用 **引用** 面板，选择 **启动次数**.
-1. 单击刚创建的启动项，然后单击 **提升启动项**.
+1. 单击已创建的启动项，然后单击 **提升启动项**.
 
-现在，源页面以及关联的语言副本已移动。
+现在，源页面和关联的语言副本已移动。
 
 ## 使用项目控制台创建翻译项目 {#creating-a-translation-project-using-the-projects-console}
 
@@ -450,7 +450,7 @@ AEM 检测是否正在为内容的初始翻译创建翻译项目，或更新已�
 
 ## 导出翻译作业 {#exporting-a-translation-job}
 
-您可以下载翻译作业的内容，例如，通过连接器发送给未与 AEM 集成的翻译提供商，或审查内容。
+例如，您可以下载翻译作业的内容，以通过连接器发送给未与AEM集成的翻译提供商，或审查内容。
 
 1. 从翻译作业拼贴的下拉菜单中，单击或点按导出。
 1. 在“导出”对话框中，单击或点按“下载导出的文件”，并在必要时使用Web浏览器对话框保存该文件。
@@ -458,7 +458,7 @@ AEM 检测是否正在为内容的初始翻译创建翻译项目，或更新已�
 
 ## 导入翻译作业 {#importing-a-translation-job}
 
-您可以将已翻译内容导入 AEM 中（例如，当翻译提供商将已翻译内容发送给您时），因为它们未通过连接器与 AEM 集成。
+例如，当翻译提供商将已翻译内容发送给您时，您可以将已翻译内容导入AEM，因为它们未通过连接器与AEM集成。
 
 1. 从翻译作业拼贴的下拉菜单中，单击或点按导入。
 1. 使用 Web 浏览器的对话框选择要导入的文件。

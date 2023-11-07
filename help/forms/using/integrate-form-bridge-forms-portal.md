@@ -11,9 +11,9 @@ discoiquuid: bd9bf095-d74d-458c-afe7-fab04050849d
 docset: aem65
 feature: Mobile Forms
 exl-id: 89118bb8-6ec8-4048-b3d6-5c73a9eea33e
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '392'
+source-wordcount: '391'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ FormBridge是一个HTML5 Forms Bridge API，它允许您与表单交互。 有�
 
 您可以使用FormBridge API从“HTML”页获取或设置表单字段的值并提交表单。 例如，您可以使用API构建类似于向导的体验。
 
-现有的HTML应用程序可利用FormBridge API与表单进行交互并将其嵌入到HTML页面中。 您可以使用以下步骤通过Form Bridge API设置字段的值。
+现有的HTML应用程序可以使用FormBridge API与表单进行交互并将其嵌入到HTML页面中。 您可以使用以下步骤通过Form Bridge API设置字段的值。
 
 ## 将HTML5表单集成到网页 {#integrating-html-forms-to-a-web-page}
 
@@ -34,7 +34,7 @@ FormBridge是一个HTML5 Forms Bridge API，它允许您与表单交互。 有�
    1. 使用管理员凭据登录。
    1. 创建配置文件或选择现有配置文件。
 
-      有关如何创建配置文件的详细信息，请参阅 [创建新配置文件](/help/forms/using/custom-profile.md).
+      有关如何创建配置文件的详细信息，请参阅 [创建用户档案](/help/forms/using/custom-profile.md).
 
 1. **修改HTML配置文件**
 

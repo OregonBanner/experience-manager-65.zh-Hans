@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: bb7a6e9f-4f28-4d97-8a0c-949259fd6857
 exl-id: 9ab657cc-fa8e-4168-8a68-e38ac5c51b29
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '330'
 ht-degree: 3%
@@ -49,7 +49,7 @@ AEM Forms工作区中的“跟踪”选项卡用于显示与登录用户有关�
   </tr>
   <tr>
    <td><p>内容类型</p> </td>
-   <td><p>isshowAttachments</p> </td>
+   <td><p>isShowAttachments</p> </td>
    <td><p>serializedImageTicket</p> </td>
   </tr>
   <tr>
@@ -60,10 +60,10 @@ AEM Forms工作区中的“跟踪”选项卡用于显示与登录用户有关�
   <tr>
    <td><p>creationId</p> </td>
    <td><p>isVisible</p> </td>
-   <td><p>serviceTitle</p> </td>
+   <td><p>服务标题</p> </td>
   </tr>
   <tr>
-   <td><p>当前分配</p> </td>
+   <td><p>当前工作</p> </td>
    <td><p>nextReminder</p> </td>
    <td><p>showACLActions</p> </td>
   </tr>
@@ -85,7 +85,7 @@ AEM Forms工作区中的“跟踪”选项卡用于显示与登录用户有关�
   <tr>
    <td><p>forwardGroupId</p> </td>
    <td><p>outOfOfficeUserName</p> </td>
-   <td><p>supportsSave</p> </td>
+   <td><p>supportssave</p> </td>
   </tr>
   <tr>
    <td><p>isApprovalUI</p> </td>
@@ -99,8 +99,8 @@ AEM Forms工作区中的“跟踪”选项卡用于显示与登录用户有关�
   </tr>
   <tr>
    <td><p>isDefaultImage</p> </td>
-   <td><p>processinstancestatus</p> </td>
-   <td><p>任务用户信息</p> </td>
+   <td><p>processInstanceStatus</p> </td>
+   <td><p>taskUserinfo</p> </td>
   </tr>
   <tr>
    <td><p>isLocked</p> </td>
@@ -115,7 +115,7 @@ AEM Forms工作区中的“跟踪”选项卡用于显示与登录用户有关�
  </tbody>
 </table>
 
-对于任务表中的以下自定义，您需要在源代码中进行语义更改。 参见 [自定义AEM Forms工作区简介](/help/forms/using/introduction-customizing-html-workspace.md) 有关如何使用Workspace SDK进行语义更改以及如何从更改的源构建缩小的包。
+对于任务表中的以下自定义，您需要在源代码中进行语义更改。 请参阅 [自定义AEM Forms工作区简介](/help/forms/using/introduction-customizing-html-workspace.md) 有关如何使用Workspace SDK进行语义更改以及如何从更改的源构建缩小的包。
 
 ## 更改表列及其顺序 {#changing-table-columns-and-their-order}
 
@@ -141,7 +141,7 @@ AEM Forms工作区中的“跟踪”选项卡用于显示与登录用户有关�
        <tbody>
            <%_.each(obj, function(task){%>
            <tr>
-               <!-- Put the task attributes in the order of headings, for example -->
+               <!-- Put the task attributes in the order of headings, for example, -->
                <td><%= task.stepName %></td>
                <td><%= task.instructions %></td>
                <td><%= !task.selectedRoute?'':(task.selectedRoute=='null'?'Default':task.selectedRoute) %></td>
@@ -177,7 +177,7 @@ AEM Forms工作区中的“跟踪”选项卡用于显示与登录用户有关�
 
 1. 公开 `TaskTableHeaderClick` 中的方法 `js/runtime/util/history.js`.
 
-   该方法从单击事件中查找任务属性，对该属性上的任务列表进行排序，然后使用排序的任务列表来呈现任务表。
+   该方法从单击事件中查找任务属性，对该属性上的任务列表进行排序，然后使用排序的任务列表呈现任务表。
 
    通过提供比较器函数，使用任务列表集合上的主干排序函数完成排序。
 

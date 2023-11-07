@@ -2,7 +2,7 @@
 title: 在AEM中创作内容页面
 description: 在Adobe Experience Manager 6.5中创作内容页面时涉及的任务。
 exl-id: 07528cf0-e67a-46b5-a3b2-d1b74ad2228f
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '317'
 ht-degree: 0%

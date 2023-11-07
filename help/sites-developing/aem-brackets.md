@@ -1,18 +1,14 @@
 ---
 title: AEM Brackets扩展
-seo-title: AEM Brackets Extension
 description: 了解如何使用Brackets的Adobe Experience Manager扩展。
-seo-description: null
-uuid: 2f0dfa42-eb34-44ae-90eb-b5f321c03b79
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: development-tools
 content-type: reference
-discoiquuid: 8231a30a-dcb7-4156-bb45-c5a23e5b56ef
 exl-id: 829d8256-b415-4a44-a353-455ac16950f3
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '936'
+source-wordcount: '935'
 ht-degree: 1%
 
 ---
@@ -21,7 +17,7 @@ ht-degree: 1%
 
 ## 概述 {#overview}
 
-AEM Brackets扩展提供了一个流畅的工作流来编辑AEM组件和客户端库，同时利用了 [括号](https://brackets.io/) 代码编辑器，允许从代码编辑器访问Photoshop文件和图层。 扩展提供的轻松同步（不需要Maven或File Vault）提高了开发人员效率，并且还有助于掌握有限AEM知识的前端开发人员参与项目。 此扩展还为 [HTML模板语言(HTL)](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)这样可以降低JSP的复杂性，使组件开发更容易、更安全。
+AEM Brackets扩展提供了一个流畅的工作流，用于编辑AEM组件和客户端库，并利用了 [括号](https://brackets.io/) 代码编辑器，允许从代码编辑器访问Photoshop文件和图层。 扩展提供的轻松同步（不需要Maven或File Vault）提高了开发人员效率，并且还有助于掌握有限AEM知识的前端开发人员参与项目。 此扩展还为 [HTML模板语言(HTL)](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)这样可以降低JSP的复杂性，使组件开发更容易、更安全。
 
 ![chlimage_1-53](assets/chlimage_1-53a.png)
 
@@ -71,7 +67,7 @@ AEM Brackets扩展支持Brackets版本1.0或更高版本。
 
 1. a `jcr_root` 文件夹(例如， `myproject/jcr_root`)
 
-1. a `filter.xml` 文件(例如， `myproject/META-INF/vault/filter.xml`)；以获取有关架构的更多详细信息 `filter.xml` 文件，请参见 [工作区筛选器定义](https://jackrabbit.apache.org/filevault/filter.html).
+1. a `filter.xml` 文件(例如， `myproject/META-INF/vault/filter.xml`)；以获取有关架构的更多详细信息 `filter.xml` 文件请参阅 [工作区筛选器定义](https://jackrabbit.apache.org/filevault/filter.html).
 
 在括号中 **文件** 菜单，选择 **打开文件夹……** 然后选取 `jcr_root` 文件夹或父项目文件夹。
 
@@ -127,7 +123,7 @@ AEM Brackets扩展的Brackets窗口右侧的工具栏中提供了一个通知图
 * 黄色 — 某些文件未同步
 * 红色 — 未同步任何文件
 
-单击通知图标将打开同步状态报告对话框，其中列出了每个已同步文件的所有状态。
+单击通知图标会打开“同步状态报告”对话框，其中列出了每个已同步文件的所有状态。
 
 ![chlimage_1-58](assets/chlimage_1-58a.png)
 

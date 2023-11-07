@@ -5,7 +5,7 @@ breadcrumb-title: AEM 文档历程
 user-guide-description: 文档历程通过将复杂和不同的功能捆绑在一起，以最佳做法方式解决业务目标，从而在AEM文档中提供了一种叙述性结构。 在设计时考虑了 AEM 初学者，历程将介绍概念和功能，以实现从 A 到 Z 的目标。
 feature: Developer Tools
 role: Developer, Architect
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '527'
 ht-degree: 48%
@@ -16,7 +16,7 @@ ht-degree: 48%
 # AEM 文档历程 {#documentation-journeys}
 
 <!--
-Please note that all links to other guides need to be absolute references with leading protocol and domain since SCCM does not allow pages to be referenced with relative links in multiple ToCs.
+All links to other guides need to be absolute references with leading protocol and domain since SCCM does not allow pages to be referenced with relative links in multiple ToCs.
 -->
 
 + AEM 文档历程 {#overview}

@@ -8,9 +8,9 @@ topic-tags: site-features
 docset: aem65
 legacypath: /content/help/en/experience-manager/6-4/help/sites-authoring/pa-using.html
 exl-id: 2e406512-47fb-451d-b837-0a3898ae1f08
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '447'
+source-wordcount: '445'
 ht-degree: 11%
 
 ---
@@ -35,10 +35,10 @@ ht-degree: 11%
 >
 >要更改更新周期， [配置导入间隔](/help/sites-administering/adobeanalytics-connect.md#configuring-the-import-interval).
 
-1. 打开 **站点** 控制台；例如 [https://localhost:4502/sites.html/content](https://localhost:4502/sites.html/content)
+1. 打开 **站点** 控制台；例如， [https://localhost:4502/sites.html/content](https://localhost:4502/sites.html/content)
 1. 在工具栏的最右侧（右上角），单击或点按图标以选择 **列表视图** (显示的图标将取决于 [当前视图](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources))。
 
-1. 同样，在工具栏的最右侧（右上角），单击或点按图标，然后选择 **查看设置**. 此 **配置列** 此时将打开对话框。 进行所需的任何更改并通过进行确认 **更新**.
+1. 同样，在工具栏的最右侧（右上角），单击或点按图标，然后选择 **查看设置**. 此 **配置列** 对话框打开。 进行所需的任何更改并通过进行确认 **更新**.
 
    ![spad-02](assets/spad-02.png)
 

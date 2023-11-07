@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 67625e62-7035-4eb5-8dd5-6840d775a547
 docset: aem65
 exl-id: 5d7b6b2e-d1d8-4efe-b9ff-c9542b4e67d7
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '897'
+source-wordcount: '898'
 ht-degree: 6%
 
 ---
@@ -182,7 +182,7 @@ AEM允许您查看哪些页面已链接到您当前处理的页面。
 
 ## 页面信息 {#page-information}
 
-网站控制台也 [提供了有关页面当前状态的信息](/help/sites-classic-ui-authoring/author-env-basic-handling.md#page-information-on-the-websites-console) 例如，发布、修改、锁定、活动副本等。
+网站控制台也 [提供了有关页面当前状态的信息](/help/sites-classic-ui-authoring/author-env-basic-handling.md#page-information-on-the-websites-console) 例如，发布、修改、锁定、活动复制等。
 
 ## 页面模式 {#page-modes}
 
@@ -207,7 +207,7 @@ Sidekick底部的一行图标用于切换处理页面的模式：
 >
 >* [基架](/help/sites-classic-ui-authoring/classic-feature-scaffolding.md)
 >* [ClientContext](/help/sites-administering/client-context.md)
->* 网站 — 将打开网站控制台。
+>* 网站 — 打开网站控制台。
 >* 重新加载 — 将刷新页面。
 
 ## 键盘快捷键 {#keyboard-shortcuts}

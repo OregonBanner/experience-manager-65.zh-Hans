@@ -10,9 +10,9 @@ docset: aem65
 feature: Viewers
 role: User, Admin,Developer,Data Engineer,Data Architect
 exl-id: 161dfe22-bc1c-4b60-8ab6-a19407a39e2e
-source-git-commit: 04941e17054951bcf6264da957d951a5d1107896
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '6622'
+source-wordcount: '6618'
 ht-degree: 7%
 
 ---
@@ -469,7 +469,7 @@ Adobe建议您仔细阅读本节之前的所有文档，以便了解整个集成
 
    请参阅 [prop和eVar概述](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar.html#vars).
 
-   就本文档而言，仅会使用自定义流量(props)变量，因为它们会在网页上发生操作后的几分钟内在Analytics报表中变得可用。
+   在本文档中，仅使用自定义流量(props)变量，因为它们会在网页上发生操作后的几分钟内在Analytics报表中变得可用。
 
    要启用新的自定义流量变量，请在Adobe Analytics的工具栏中，转到 **[!UICONTROL 管理员]** > **[!UICONTROL 报表包]**.
 
@@ -496,7 +496,7 @@ Adobe建议您仔细阅读本节之前的所有文档，以便了解整个集成
 
 ## 为集成配置Experience Platform标记 {#configuring-adobe-launch-for-the-integration}
 
-配置Experience Platform标记后，将为集成设置以下内容：
+配置Experience Platform标记后，将为该集成设置以下内容：
 
 * 创建一个新资产，将所有配置放在一起。
 * 扩展的安装和设置。 资产中安装的所有扩展的客户端代码将一起编译到一个库中。 此库稍后将被网页使用。
@@ -825,7 +825,7 @@ Experience Manager配置包含以下两个主要步骤：
 
    在 **[!UICONTROL 库URI]** （统一资源标识符）字段，请检查Experience Platform标记库的暂存版本的位置。 Experience Manager会自动填充此字段。
 
-   仅出于示例目的，此步骤使用部署到Experience PlatformCDN的Adobe标记库。
+   仅出于示例目的，此步骤使用部署为AdobeCDN的Experience Platform标记库。
 
    >[!NOTE]
    >

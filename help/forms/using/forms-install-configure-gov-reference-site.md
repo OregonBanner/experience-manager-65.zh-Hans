@@ -4,9 +4,9 @@ description: 安装、配置和自定义AEM Forms演示包。
 contentOwner: anujkapo
 docset: aem65
 exl-id: 1fee474e-7da5-4ab2-881a-34b8e055aa29
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '4622'
+source-wordcount: '4619'
 ht-degree: 3%
 
 ---
@@ -362,7 +362,7 @@ ht-degree: 3%
 
    ![Analytics云服务配置](assets/analytics_config.jpg)
 
-1. 单击“编辑”按钮以更新Adobe Analytics配置（您需要提供共享密钥）。 单击“连接到Analytics”进行连接，单击“确定”完成。
+1. 单击“编辑”按钮以更新Adobe Analytics配置（您必须提供共享密钥）。 单击“连接到Analytics”进行连接，单击“确定”完成。
 
    ![We.Gov Adobe Analytics](assets/wegov_adobe_analytics.jpg)
 
@@ -700,7 +700,7 @@ automated forms conversion服务包含特定的 [最佳实践，已知的复杂�
 
 [样式系统](../../sites-authoring/style-system.md)
 
-您还可以参阅 [模板自定义样式系统](../../forms/using/forms-install-configure-gov-reference-site.md#customizetemplates) 有关支持的样式的文档。
+您还可以看到 [模板自定义样式系统](../../forms/using/forms-install-configure-gov-reference-site.md#customizetemplates) 有关支持的样式的文档。
 
 ### 自适应表单自定义 {#adaptive-forms-customization}
 
@@ -749,7 +749,7 @@ automated forms conversion服务包含特定的 [最佳实践，已知的复杂�
 
 ### 启用辅助功能测试Chrome加载项 {#enable-chrome-add-on}
 
-要执行辅助功能测试，请安装位于此处的Chrome插件 `https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb?hl=en`. <!-- This URL is a 404. As such, please fix and update this entire topic. We ought not to be writing about third-party software that we have no control over to avoid these 404s. Consider making this topic entirely generic and leaving it up to the user to choose their own Accessibility Testing add-on. -->
+要执行辅助功能测试，请安装位于此处的Chrome插件 `https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb?hl=en`. <!-- This URL is a 404. As such, fix and update this entire topic. We ought not to be writing about third-party software that we have no control over to avoid these 404s. Consider making this topic entirely generic and leaving it up to the user to choose their own Accessibility Testing add-on. -->
 
 安装后，在Chrome浏览器中加载要测试的页面（注意：打开多个选项卡可能会影响分数，最好只打开一个选项卡）。 加载页面后， **右键单击** ，然后选择 **审核** 选项卡。 开发人员可以选择由“辅助功能”插件执行的审核类型。 选择所有所需选项后，用户可以单击“生成报告”按钮。 这将生成一个PDF文档，其中显示总体无障碍等级以及可用于提高总体无障碍等级的内容。
 

@@ -1,25 +1,25 @@
 ---
 title: 链接检查器
-description: Link Checker可帮助验证内部链接和外部链接，并允许链接重写。
+description: Link Checker有助于验证内部和外部链接，并允许链接重写。
 exl-id: 8ec4c399-b192-46fd-be77-3f49b83ce711
-source-git-commit: 0b9de3261d8747f3e7107962b6aea1dbdf9d6773
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '987'
+source-wordcount: '981'
 ht-degree: 0%
 
 ---
 
 # 链接检查器 {#the-link-checker}
 
-内容作者无需自行验证其内容页面中包含的每个链接。
+内容作者无需自行验证他们包含在内容页面中的每个链接。
 
 Link Checker会自动运行以帮助内容作者使用其链接，包括：
 
-* 验证添加到内容的链接
+* 在链接添加到内容时对其进行验证
 * 显示内容中所有外部链接的列表
 * 执行链接转换
 
-链接检查器包含多个 [配置选项](#configuring) 例如，定义验证内部、允许在验证中忽略某些链接或链接模式，以及重写链接重写规则。
+链接检查器具有多个 [配置选项](#configuring) 例如，定义验证内部、允许在验证中忽略某些链接或链接模式，以及重写链接重写规则。
 
 Link Checker验证两者 [内部链接](#internal) 和 [外部链接。](#external)
 
@@ -34,9 +34,9 @@ Link Checker验证两者 [内部链接](#internal) 和 [外部链接。](#extern
 * 您的页面 `/content/wknd/us/en/adventures/ski-touring.html`
 * 包含指向的链接 `/content/wknd/us/en/adventures/extreme-ironing.html` 在 [文本组件。](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html)
 
-内容作者添加指向页面的内部链接后，将立即验证内部链接。 如果该链接无效：
+内容作者向页面添加内部链接后，将立即验证内部链接。 如果链接无效：
 
-* 已从发布器中将其删除。 链接文本会保留，但链接本身会被删除。
+* 已从发布器中将其删除。 链接的文本会保留，但链接本身会被删除。
 * 在创作界面中，该链接显示为断开的链接。
 
 ![创作页面时断开的内部链接](assets/link-checker-invalid-link-internal.png)
@@ -50,7 +50,7 @@ Link Checker验证两者 [内部链接](#internal) 和 [外部链接。](#extern
 
 验证外部链接的语法和检查其可用性。 此检查在可配置的内部异步完成。 如果Link Checker发现外部链接无效：
 
-* 已从发布器中将其删除。 链接文本会保留，但链接本身会被删除。
+* 已从发布器中将其删除。 链接的文本会保留，但链接本身会被删除。
 * 在创作界面中，该链接显示为断开的链接。
 
 ![创作页面时断开的内部链接](assets/link-checker-invalid-link-external.png)
@@ -76,37 +76,37 @@ Link Checker验证两者 [内部链接](#internal) 和 [外部链接。](#extern
 * **反向链接**  — 包含外部链接的内容页面
    * 仅填充 [如果已配置。](#configuring)
 * **上次检查**  — 上次链接检查器验证外部链接的时间
-   * 检查链接的频率 [可配置。](#configuring)
+   * 检查链接的频率 [是可配置的。](#configuring)
 * **上次状态**  — 链接检查后上次检查外部链接时返回的最后HTML状态代码
-* **上次可用**  — 链接上次对链接检查器可用的时间
+* **上次可用**  — 链接检查器上次使用该链接后的时间
 * **上次访问**  — 自上次在创作界面中访问带有外部链接的页面以来的时间
 
-您可以使用链接列表顶部的两个按钮来操作窗口内容：
+您可以使用链接列表顶部的两个按钮来处理窗口内容：
 
-* **刷新**  — 刷新列表内容
+* **刷新**  — 刷新列表的内容
 * **Check**  — 检查列表中选定的单个外部链接
 
-### 外部链接检查器的工作原理 {#how-it-works}
+### 外部链接检查器的工作方式 {#how-it-works}
 
-尽管易于使用，但External Link Checker依赖于许多服务，并了解这些服务的工作方式有助于您了解如何 [配置Link Checker](#configuring) 以满足您的需求。
+尽管易于使用，但External Link Checker依赖于多项服务，了解这些服务的工作方式有助于您了解如何 [配置Link Checker](#configuring) 以满足您的需求。
 
 1. 每当内容作者保存指向页面的任何链接时，都会触发事件处理程序。
-1. 事件处理程序遍历下的所有内容 `/content` 和会检查新链接或更新后的链接，并将它们添加到链接检查器的缓存中。
+1. 事件处理程序遍历下的所有内容 `/content` 和会检查新链接或更新链接，并将它们添加到链接检查器的缓存中。
 1. 此 **Day CQ链接检查器服务** 然后定期执行以检查缓存中的条目是否为有效语法。
-1. 随后，经过语法验证的链接将显示在 [外部链接检查程序](#external-link-checker) 窗口。 但是，它们将 **待处理** 省/州。
+1. 随后，经过语法验证的链接将显示在 [外部链接检查程序](#external-link-checker) 窗口。 但是，它们将位于 **待处理** 省/州。
 1. 此 **Day CQ Link Checker任务** 然后定期执行，以通过进行GET调用来验证链接。
-1. 此 **Day CQ Link Checker任务** 然后，使用GET调用的结果更新“外部链接检查器”窗口中的条目。
+1. 此 **Day CQ Link Checker任务** 然后，使用GET调用的结果更新外部链接检查器窗口中的条目。
 
 ## 配置链接检查器 {#configuring}
 
-链接检查器在AEM中可自动开箱即用。 但是，可以修改许多OSGi配置以更改其行为：
+链接检查器在AEM中自动开箱即用。 但是，可以修改几个OSGi配置以更改其行为：
 
 * **Day CQ链接检查器信息存储服务**  — 此服务定义存储库中Link Checker缓存的大小。
-* **Day CQ链接检查器服务**  — 此服务执行外部链接语法的异步检查。 除了其他选项外，您还可以定义检查器跳过的检查时段和链接类型。
+* **Day CQ链接检查器服务**  — 此服务执行外部链接语法的异步检查。 除其他选项外，您还可以定义检查时段以及检查器跳过的链接类型。
 * **Day CQ Link Checker任务**  — 此服务执行外部链接的GET验证。 它允许单独定义间隔，以检查其他选项中的坏链接和好链接。
 * **Day CQ链接检查器转换器**  — 允许根据用户定义的规则集转换链接。
 
-查看文档 [OSGi配置](/help/sites-deploying/osgi-configuration-settings.md) 有关如何更改OSGi设置的更多详细信息。
+查看文档 [osgi配置设置](/help/sites-deploying/osgi-configuration-settings.md) 有关如何更改OSGi设置的更多详细信息。
 
 ## 禁用链接检查器 {#disabling}
 
@@ -120,4 +120,4 @@ Link Checker验证两者 [内部链接](#internal) 和 [外部链接。](#extern
 
 >[!NOTE]
 >
->如果在开始创建内容后禁用链接检查，您仍可能会看到 [“外部链接检查器”窗口](#external-link-checker)，但不会再更新它们。
+>如果在开始创建内容后禁用链接检查，您仍可能会看到 [“外部链接检查器”窗口](#external-link-checker)，但将不再更新它们。

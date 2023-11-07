@@ -1,17 +1,13 @@
 ---
 title: 使用经理视图管理组织层次结构中的任务
-seo-title: Managing tasks in an organizational hierarchy using Manager View
-description: 经理和组织负责人如何在AEM Forms工作区的“待办事项”选项卡中访问和处理其直接和间接报告的任务。
-seo-description: How managers and organization heads can access and work on the tasks of their direct and indirect reports in the To-do tab in AEM Forms workspace.
-uuid: c44c55e6-6cc1-417d-8e89-c8d5c32914c8
+description: 经理和组织负责人如何在AEM Forms工作区的“待办事项”选项卡中访问和处理其直接报告和间接报告的任务。
 contentOwner: robhagat
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
-discoiquuid: 2e60df86-d8ff-4cf9-b801-9559857b5ff4
 docset: aem65
 exl-id: e50974a7-01ac-4a08-bea2-df9cc975c69e
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '344'
 ht-degree: 0%
@@ -20,20 +16,20 @@ ht-degree: 0%
 
 # 使用经理视图管理组织层次结构中的任务{#managing-tasks-in-an-organizational-hierarchy-using-manager-view}
 
-在AEM Forms工作区中，经理现在可以访问其层次结构中分配给任何人的任务（直接或间接报告），并对其执行各种操作。 这些任务可在AEM Forms工作区的“待办事项”选项卡中找到。 直接报告任务支持的操作包括：
+在AEM Forms工作区中，管理员现在可以访问其层次结构中分配给任何人的任务（直接或间接报告），并对其执行各种操作。 这些任务在AEM Forms工作区的“待办事项”选项卡中可用。 直接下属任务支持的操作包括：
 
-**转发** 将任务从直接报告转发给任何用户。
+**转发** 将任务从直接下属转发给任何用户。
 
 **声明** 声明直接下属的任务。
 
-**报销申请和打开** 声明直接下属的任务，并在经理的待办事项列表中自动将其打开。
+**报销申请和未结** 声明直接下属的任务，并在经理的待办事项列表中自动将其打开。
 
-**拒绝** 拒绝某个其他用户转发到直接报告的任务。 此选项适用于其他用户转发到直接下属的任务。
+**拒绝** 拒绝其他用户转发到直接报告的任务。 此选项适用于其他用户转发到直接报告的任务。
 
-AEM Forms限制用户仅访问用户具有访问控制(ACL)的任务。 此类检查可确保用户只能获取用户拥有访问权限的任务。 通过使用第三方Web服务和实施来定义层次结构，组织可以自定义经理和直接报告的定义以满足其需求。
+AEM Forms限制用户仅访问用户具有访问控制(ACL)的任务。 此类检查可确保用户只能获取其拥有访问权限的任务。 通过使用第三方Web服务和实现来定义层次结构，组织可以自定义经理和直接报表的定义以满足其需求。
 
 1. 创建DSC。 有关更多信息，请参阅中的“为AEM Forms开发组件”主题 [使用AEM Forms编程](https://www.adobe.com/go/learn_aemforms_programming_63) 指南。
-1. 在DSC中，为层次结构管理定义新的SPI，以便在AEM Forms用户中定义直接报告和层次结构。 以下是一个示例Java™代码段。
+1. 在DSC中，为层级管理定义新的SPI ，以便在AEM Forms用户中定义直接报告和层级。 以下是一个示例Java™代码段。
 
    ```java
    public class MyHierarchyMgmtService
@@ -68,7 +64,7 @@ AEM Forms限制用户仅访问用户具有访问控制(ACL)的任务。 此类�
    }
    ```
 
-1. 创建一个component.xml文件。 请确保spec-id必须与以下代码片段中所示的相同。 以下是一个代码片段示例，您可以调整其用途。
+1. 创建component.xml文件。 请确保spec-id与以下代码片段中所示的相同。 以下是一个代码片段示例，您可以调整其用途。
 
    ```xml
    <component xmlns="https://adobe.com/idp/dsc/component/document">
@@ -115,7 +111,7 @@ AEM Forms限制用户仅访问用户具有访问控制(ACL)的任务。 此类�
 1. 通过Workbench部署DSC。 重新启动 `ProcessManagementTeamTasksService` 服务。
 1. 您可能需要刷新浏览器或再次注销/登录用户。
 
-以下屏幕说明了如何访问直接下属的任务和可用的操作。
+以下屏幕说明了如何访问直接下属的任务以及可用的操作。
 
 ![cu_manager_view](assets/cu_manager_view.png)
 

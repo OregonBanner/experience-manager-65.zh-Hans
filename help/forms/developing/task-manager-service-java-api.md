@@ -11,16 +11,16 @@ topic-tags: develop
 discoiquuid: 532e607d-5bc5-4ccc-92c6-30efe1081872
 role: Developer
 exl-id: d61c20a9-27c6-4b57-ab00-dfaa77fe3f75
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '524'
+source-wordcount: '522'
 ht-degree: 0%
 
 ---
 
 # 任务管理器服务Java API快速入门(SOAP) {#task-manager-service-java-api-quickstart-soap}
 
-以下快速启动适用于Task Manager服务。
+以下快速启动功能适用于Task Manager服务。
 
 [快速入门（SOAP模式）：使用Java API分配任务](task-manager-service-java-api.md#quick-start-soap-mode-assigning-tasks-using-the-java-api)
 
@@ -40,11 +40,11 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
 
 >[!NOTE]
 >
->无法使用Web服务API搜索分配给用户的任务。 原因是您无法调用 `taskList` 方法，它是执行此任务所必需的方法调用。
+>无法使用Web服务API搜索分配给用户的任务。 原因是无法调用 `taskList` 方法，它是执行此任务所必需的方法调用。
 
 >[!NOTE]
 >
->位于“使用AEM Forms编程”中的快速入门基于Forms服务器操作系统。 但是，如果您使用的是其他操作系统（如UNIX），请将特定于Windows的路径替换为适用的操作系统支持的路径。 同样，如果您使用的是其他J2EE应用程序服务器，请确保指定有效的连接属性。 参见 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>《使用AEM Forms进行编程快速入门》基于Forms服务器操作系统。 但是，如果您使用的是其他操作系统（如UNIX），请将特定于Windows的路径替换为适用的操作系统支持的路径。 同样，如果您使用的是其他J2EE应用程序服务器，请确保指定有效的连接属性。 请参阅 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
 ## 快速入门（SOAP模式）：使用Java API分配任务 {#quick-start-soap-mode-assigning-tasks-using-the-java-api}
 
@@ -77,7 +77,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
      *
@@ -86,7 +86,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *
@@ -210,7 +210,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
      *
@@ -219,7 +219,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *
@@ -270,7 +270,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
 
 ## 快速入门（SOAP模式）：检索使用Java API分配给用户的任务 {#quick-start-soap-mode-retrieving-tasks-assigned-to-users-using-the-java-api}
 
-以下Java代码示例可检索分配给名为的用户的所有任务 *托尼·布鲁*. 请注意，此用户在连接属性中指定。 显示有关返回任务的信息，如其标识符值和描述。
+以下Java代码示例检索分配给名为的用户的所有任务 *托尼·布鲁*. 请注意，此用户在连接属性中指定。 显示有关返回任务的信息，如其标识符值和说明。
 
 ```java
  /*
@@ -299,7 +299,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
      *
@@ -308,7 +308,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *
@@ -396,7 +396,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
 
 ## 快速入门（SOAP模式）：使用Java API从任务中检索表单数据 {#quick-start-soap-mode-retrieving-form-data-from-tasks-using-the-java-api}
 
-以下Java代码示例从标识符值为304的任务中检索表单数据。 将表单数据写入名为的XML文件 *FormData.xml* 网址为C:\Adobe。
+以下Java代码示例从标识符值为304的任务中检索表单数据。 将表单数据写入名为的XML文件 *FormData.xml* 位于C:\Adobe。
 
 ```java
  /*
@@ -425,7 +425,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
      *
@@ -434,7 +434,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *
@@ -483,7 +483,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
              long formInstanceId = fi[0].getFormInstanceId();
              FormInstance newfi = myTaskManager.getFormInstanceForTask(taskId, formInstanceId, true);
  
-             //Get data located in the form and
+             //Get data in the form and
              //write the data to FormData.xml
              Document doc = newfi.getDocument();
              File myTestFile = new File("C:\\Adobe\FormData.xml");
@@ -502,7 +502,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
 
 ## 快速入门（SOAP模式）：使用Java API修改表单数据 {#quick-start-soap-mode-modifying-form-data-using-the-java-api}
 
-以下Java代码示例使用位于 *FormData.xml* 文件。
+以下Java代码示例使用 *FormData.xml* 文件。
 
 ```java
  /*
@@ -531,7 +531,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
      *
@@ -540,7 +540,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *
@@ -612,7 +612,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
 
 ## 快速入门（SOAP模式）：使用Java API从任务中检索文件附件 {#quick-start-soap-mode-retrieving-file-attachments-from-tasks-using-the-java-api}
 
-以下Java代码示例可检索文件附件。 每个文件附件都保存为TXT文件。
+以下Java代码示例检索文件附件。 每个文件附件都保存为TXT文件。
 
 ```java
  /*
@@ -641,7 +641,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
      *
@@ -650,7 +650,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *
@@ -716,7 +716,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
 
 ## 快速入门（SOAP模式）：使用Java API检索任务信息 {#quick-start-soap-mode-retrieving-task-information-using-the-java-api}
 
-以下Java代码示例检索基于名为的进程的所有任务 *MortgageLoan — 预建*. 检查每个返回任务的状态，以确保其为已完成任务。 检索并显示完成任务的用户的名称和完成任务的日期等信息。
+以下Java代码示例检索基于名为的进程的所有任务 *MortgageLoan — 预建*. 系统会检查每个返回任务的状态，以确保其为已完成任务。 检索并显示完成任务的用户的姓名以及完成任务的日期等信息。
 
 ```java
  /*
@@ -745,7 +745,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
      *
@@ -754,7 +754,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *

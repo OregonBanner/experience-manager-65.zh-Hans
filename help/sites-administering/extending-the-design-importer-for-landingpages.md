@@ -7,9 +7,9 @@ topic-tags: personalization
 content-type: reference
 docset: aem65
 exl-id: 1b8c6075-13c6-4277-b726-8dea7991efec
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '3501'
+source-wordcount: '3498'
 ht-degree: 0%
 
 ---
@@ -113,7 +113,7 @@ zip文件布局示例如下：
 
 ### 不保留应用于&amp;lt；body>标记的任何属性，如类或id {#any-attribute-like-class-or-id-applied-on-the-amp-lt-body-tag-is-not-preserved}
 
-例如，如果对body标记应用了id或类等任何属性， `<body id="container">` 则在导入后不会保留该值。 因此，导入的设计不应与应用于的属性有任何依赖关系。 `<body>` 标记之前。
+例如，如果在body标记上应用了id或类等任何属性， `<body id="container">` 则在导入后不会保留该值。 因此，导入的设计不应与应用于的属性有任何依赖关系。 `<body>` 标记之前。
 
 ### 拖放zip文件 {#drag-and-drop-zip}
 
@@ -321,7 +321,7 @@ HTML标记，以在导入的zip文件中包含图形链接组件。 此处href�
 
 * 预定义的潜在客户字段 — 名字、姓氏、地址、dob、性别、关于、用户ID、电子邮件ID、提交按钮在Sidekick中可用。 只需将所需的组件拖放到潜在客户表单中。
 * 借助这些组件，作者可以设计独立的潜在客户表单，这些字段对应于潜在客户表单字段。 在独立或导入的zip应用程序中，用户可以使用cq：form或cta潜在客户表单字段添加额外的字段和名称，并根据要求进行设计。
-* 使用CTA潜在客户表单的特定预定义名称映射潜在客户表单字段，例如 — 潜在客户表单中名字的名字，等等。
+* 使用CTA潜在客户表单的特定预定义名称映射潜在客户表单字段，例如，潜在客户表单中的名字使用“名字”等。
 * 未映射到潜在客户表单的字段将映射到cq：form组件 — 文本、单选、复选框、下拉列表、隐藏、密码。
 * 用户可以使用“label”标记提供标题，也可以使用样式属性“class”提供样式（仅适用于CTA潜在客户表单组件）。
 * 感谢页面和订阅列表可作为表单的隐藏参数提供（显示在index.htm中），也可以从“潜在客户表单开始”的编辑栏添加/编辑
@@ -438,9 +438,9 @@ AEM parsys组件是可以包含其他AEM组件的容器组件。 可以在导入
 
 ### 覆盖模板 {#overlaying-template}
 
-空白登陆页面模板可通过在以下位置创建新模板来进行覆盖： `/apps/<appName>/designimporter/templates/<templateName>`
+可以通过在下列位置创建一个空白登陆页面模板来覆盖该模板： `/apps/<appName>/designimporter/templates/<templateName>`
 
-说明了在AEM中创建新模板的步骤 [此处](/help/sites-developing/templates.md).
+说明了在AEM中创建模板的步骤 [此处](/help/sites-developing/templates.md).
 
 ### 从登陆页面引用组件 {#referring-a-component-from-landing-page}
 

@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
 exl-id: 9414c77a-b180-4440-8386-e6eb4426e475
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '404'
 ht-degree: 15%
@@ -56,7 +56,7 @@ ht-degree: 15%
 
 1. 添加属性到 `googleanalyticspage`：
 
-   * **名称：**`cq:defaultView`
+   * **名称:** `cq:defaultView`
    * **值:** `html`
 
 1. 创建名为的文件 `content.jsp` 下 `/apps/acs/analytics/components/googleanalyticspage`，包含以下内容：
@@ -208,6 +208,6 @@ ht-degree: 15%
 
    选择 **Google Analytics配置** 并单击 **创建**.
 
-1. 输入 **帐户ID**&#x200B;例如 `AA-11111111-1`. 单击&#x200B;**确定**。
+1. 输入 **帐户ID**&#x200B;例如， `AA-11111111-1`. 单击&#x200B;**确定**。
 1. 导航到页面，并在页面属性中添加 **Cloud Service** 选项卡。
 1. 页面中将会添加自定义标记。

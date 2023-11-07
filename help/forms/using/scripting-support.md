@@ -11,16 +11,16 @@ topic-tags: hTML5_forms
 discoiquuid: 4ef78c8c-783f-4aac-a499-692cd4acef75
 feature: Mobile Forms
 exl-id: bcb5afc5-2190-4269-aba2-63842db9df3f
-source-git-commit: c4045313200ffecbf05abfacd67aabc80ad67e7f
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '3892'
+source-wordcount: '3888'
 ht-degree: 6%
 
 ---
 
 # 对HTML5表单的脚本支持 {#scripting-support-for-html-forms}
 
-HTML5表单中支持的JavaScript、FormCalc属性和方法如下所示：
+JavaScript、FormCalc属性以及HTML5表单中支持的方法如下所示：
 
 ## $event {#event}
 
@@ -33,11 +33,11 @@ HTML5表单中支持的JavaScript、FormCalc属性和方法如下所示：
   </tr>
   <tr>
    <td><code>prevText</code></td>
-   <td>指定字段的内容，该字段在响应用户的操作而更改之前的内容。 此值可以回调，类似于撤消功能。</td>
+   <td>指定在字段内容因用户操作而更改之前，该字段的内容。 此值可重新调用，类似于撤消功能。</td>
    <td><p>不适用于下拉列表和列表框。 <code>PrevText </code>在以下情况下无法正常工作：</p>
     <ul>
      <li>在iPad的数值字段中键入一些特殊字符键(例如$、(、)、&amp;、@等)时，以及 </li>
-     <li>用于日期字段（通过日历输入日期时）。<br /> </li>
+     <li>对于“日期”字段（当通过日历输入日期时）。<br /> </li>
     </ul> <p>不支持通过脚本设置值。</p> </td>
   </tr>
   <tr>
@@ -51,8 +51,8 @@ HTML5表单中支持的JavaScript、FormCalc属性和方法如下所示：
    <td><p>此 <code>newText</code> 资产在以下情况下无法正常工作：</p>
     <ul>
      <li>关于选择 — 替换文本</li>
-     <li>删除、复制和粘贴文本时。</li>
-     <li>在数字字段中键入一些特殊字符键(例如$、(、)、&amp;、@等)<br /> </li>
+     <li>在删除、复制和粘贴文本时。</li>
+     <li>在数值字段中键入一些特殊字符键(例如$、(、)、&amp;、@等)时<br /> </li>
      <li>使用Shift +字母数字组合时。 </li>
      <li>使用日期/时间字段时。</li>
     </ul>
@@ -66,14 +66,14 @@ HTML5表单中支持的JavaScript、FormCalc属性和方法如下所示：
    <td><p>在以下情况下，更改属性无法正常工作：</p>
     <ul>
      <li>关于选择 — 替换文本</li>
-     <li>删除、复制和粘贴文本时。</li>
+     <li>在删除、复制和粘贴文本时。</li>
      <li>在数值字段中键入一些特殊字符键(例如$、(、)、&amp;、@等)时<br /> </li>
      <li>使用Shift +字母数字组合时。 </li>
      <li>使用日期/时间字段时。</li>
     </ul> <p>不支持通过脚本设置值。</p> </td>
   </tr>
   <tr>
-   <td>Keydown</td>
+   <td>键控</td>
    <td>确定用户是否按箭头键进行选择。 此属性仅适用于列表框和下拉列表。</td>
    <td>无</td>
   </tr>
@@ -111,7 +111,7 @@ HTML5表单中支持的JavaScript、FormCalc属性和方法如下所示：
   </tr>
   <tr>
    <td><code>platform</code></td>
-   <td>返回一个字符串，该字符串表示运行脚本的计算机平台。</td>
+   <td>返回表示运行脚本的计算机平台的字符串。</td>
    <td>无</td>
   </tr>
   <tr>
@@ -146,7 +146,7 @@ HTML5表单中支持的JavaScript、FormCalc属性和方法如下所示：
   </tr>
   <tr>
    <td><code>setFocus</code></td>
-   <td>将键盘焦点设置为指定的字段。 字段被指定为对象，或由字段的SOM表达式指定。 它仅适用于客户端应用程序。</td>
+   <td>将键盘焦点设置为指定的字段。 字段指定为对象，或者由字段的SOM表达式指定。 它仅适用于客户端应用程序。</td>
    <td> </td>
   </tr>
   <tr>
@@ -161,7 +161,7 @@ HTML5表单中支持的JavaScript、FormCalc属性和方法如下所示：
   </tr>
   <tr>
    <td>当前页面</td>
-   <td><p>在运行时设置文档的当前活动页面。</p> <p>页面值基于0，因此文档的第一页返回值0。</p> <p>在客户端上执行layout：ready时，currentPage属性可用。 但是，当layout：ready在服务器上执行时，它不可用，因为只有在表单布局执行后属性才会执行。</p> </td>
+   <td><p>在运行时设置文档的当前活动页面。</p> <p>页面值从0开始，因此文档的第一页返回值0。</p> <p>当在客户端上执行layout：ready时，currentPage属性可用。 但是，当在服务器上执行layout：ready时，它不可用，因为只有在执行表单布局后才会执行属性。</p> </td>
    <td>无</td>
   </tr>
  </tbody>
@@ -178,13 +178,13 @@ HTML5表单中支持的JavaScript、FormCalc属性和方法如下所示：
   </tr>
   <tr>
    <td><code>presence</code></td>
-   <td>控制关联对象在处理不同阶段的参与。 如果对象是容器，则容器的内容将继承此控件适用的任何限制。</td>
+   <td>控制关联对象在处理不同阶段的参与情况。 如果对象是容器，则该容器的内容将继承此控件适用的任何限制。</td>
    <td>无</td>
   </tr>
   <tr>
    <td><code>access</code></td>
    <td>控制用户对内容的访问。</td>
-   <td>不适用于排除组。 此外，HTML5表单对非交互对象和受保护对象进行相同的处理。<br /> </td>
+   <td>不适用于排除组。 此外，HTML5表格对非交互对象和受保护对象给予相同的处理。<br /> </td>
   </tr>
   <tr>
    <td><code>name</code></td>
@@ -198,7 +198,7 @@ HTML5表单中支持的JavaScript、FormCalc属性和方法如下所示：
   </tr>
   <tr>
    <td><code>rawValue</code></td>
-   <td>指定此字段的未格式化的值。</td>
+   <td>指定此字段的未格式化值。</td>
    <td>无</td>
   </tr>
   <tr>
@@ -253,7 +253,7 @@ HTML5表单中支持的JavaScript、FormCalc属性和方法如下所示：
   </tr>
   <tr>
    <td><code>clearItem</code></td>
-   <td>从字段删除所有项。</td>
+   <td>从字段中删除所有项。</td>
    <td>无</td>
   </tr>
   <tr>
@@ -283,7 +283,7 @@ HTML5表单中支持的JavaScript、FormCalc属性和方法如下所示：
   </tr>
   <tr>
    <td><code>setItemState</code></td>
-   <td>设置指定项目的选择状态。</td>
+   <td>设置指定项的选择状态。</td>
    <td>无</td>
   </tr>
   <tr>
@@ -293,7 +293,7 @@ HTML5表单中支持的JavaScript、FormCalc属性和方法如下所示：
   </tr>
   <tr>
    <td><code>getSaveItem</code></td>
-   <td>检索指定项目索引的数据值。</td>
+   <td>检索指定项索引的数据值。</td>
    <td>无</td>
   </tr>
   <tr>
@@ -313,17 +313,17 @@ HTML5表单中支持的JavaScript、FormCalc属性和方法如下所示：
   </tr>
   <tr>
    <td>w</td>
-   <td>指定布局宽度的测量值。</td>
+   <td>指定布局宽度的测量。</td>
    <td>无</td>
   </tr>
   <tr>
    <td>x</td>
-   <td>指定当使用定位布局放置时，容器锚点相对于父容器的左上角的x坐标。</td>
+   <td>指定当使用定位布局放置时容器锚点相对于父容器左上角的x坐标。</td>
    <td>无</td>
   </tr>
   <tr>
    <td>y</td>
-   <td>指定当使用定位布局放置时，容器锚点相对于父容器的左上角的y坐标。</td>
+   <td>指定当使用定位布局放置时，容器锚点相对于父容器左上角的y坐标。</td>
    <td>无</td>
   </tr>
   <tr>
@@ -333,7 +333,7 @@ HTML5表单中支持的JavaScript、FormCalc属性和方法如下所示：
   </tr>
   <tr>
    <td>验证</td>
-   <td>验证对象控制对表单上用户提供的数据的验证。 验证对象可在表单的生命周期中多次激活。</td>
+   <td>validate对象控制对表单上的用户提供数据的验证。 验证对象可在表单的生命周期中多次激活。</td>
    <td>无</td>
   </tr>
   <tr>
@@ -343,7 +343,7 @@ HTML5表单中支持的JavaScript、FormCalc属性和方法如下所示：
   </tr>
   <tr>
    <td>选定索引</td>
-   <td>第一个选定项目的索引。</td>
+   <td>第一个选定项的索引。</td>
    <td>无</td>
   </tr>
  </tbody>
@@ -355,16 +355,16 @@ HTML5表单中支持的JavaScript、FormCalc属性和方法如下所示：
 |---|---|---|
 | formNodes | 返回绑定到指定数据对象的所有表单模型对象的列表。 |  |
 
-## 实例管理器 {#instancemanager}
+## InstanceManager {#instancemanager}
 
 | 属性 | 描述 |
 |---|---|
 | `name` | 脚本表达式中用于标识此元素的标识符。 |
 | `occur` | 描述其封闭容器允许实例数的约束。 |
-| `min` | 指定可实例化的实例的最小数量。 |
+| `min` | 指定可实例化的实例的最小数目。 |
 | `max` | 指定可实例化的实例的最大数量。 |
 | `count` | 指定当前实例化的实例数。 |
-| `setInstances` | 从该节点添加或删除指定的子表单或子表单集。 |
+| `setInstances` | 从此节点添加或删除指定的子表单或子表单集。 |
 | `addInstance` | 将子表单或子表单集的新实例添加到此节点。 |
 | `removeInstance` | 从此节点删除子表单或子表单集。 |
 | `moveInstance` | 将表单模型对象的子对象移动到表单模型内的另一个指定位置。 对象对应的数据模型信息也在该数据模型中重新定位。 |
@@ -421,7 +421,7 @@ HTML5表单中支持的JavaScript、FormCalc属性和方法如下所示：
   </tr>
   <tr>
    <td>getInvalidObjects</td>
-   <td>返回子表单（包含）中包含的、验证测试失败的节点列表。</td>
+   <td>返回子表单（包含）中包含的、未通过验证测试的节点列表。</td>
    <td>无</td>
   </tr>
   <tr>
@@ -441,22 +441,22 @@ HTML5表单中支持的JavaScript、FormCalc属性和方法如下所示：
   </tr>
   <tr>
    <td>w</td>
-   <td>指定布局宽度的测量值。</td>
+   <td>指定布局宽度的测量。</td>
    <td>无</td>
   </tr>
   <tr>
    <td>x</td>
-   <td>指定当使用定位布局放置时，容器锚点相对于父容器的左上角的x坐标。</td>
+   <td>指定当使用定位布局放置时容器锚点相对于父容器左上角的x坐标。</td>
    <td>无</td>
   </tr>
   <tr>
    <td>y</td>
-   <td>指定当使用定位布局放置时，容器锚点相对于父容器的左上角的y坐标。</td>
+   <td>指定当使用定位布局放置时，容器锚点相对于父容器左上角的y坐标。</td>
    <td>无</td>
   </tr>
   <tr>
    <td>验证</td>
-   <td>验证对象控制对表单上用户提供的数据的验证。 验证对象可在表单的生命周期中多次激活。</td>
+   <td>validate对象控制对表单上的用户提供数据的验证。 验证对象可在表单的生命周期中多次激活。</td>
    <td>无</td>
   </tr>
   <tr>
@@ -481,7 +481,7 @@ HTML5表单中支持的JavaScript、FormCalc属性和方法如下所示：
   </tr>
   <tr>
    <td>instancemanager</td>
-   <td>instanceManager对象管理窗体模型对象的实例创建、移除和移动。<br /> </td>
+   <td>instanceManager对象可管理表单模型对象的实例创建、移除和移动。<br /> </td>
    <td>无</td>
   </tr>
  </tbody>
@@ -491,7 +491,7 @@ HTML5表单中支持的JavaScript、FormCalc属性和方法如下所示：
 
 | 属性 | 描述 |
 |---|---|
-| 目标 | 将数据提交到的URL。 缺少此属性意味着XFA处理应用程序使用特定于产品的技术获取URI，例如访问配置对象中的特定于产品的信息。 |
+| 目标 | 数据提交到的URL。 缺少此属性意味着XFA处理应用程序使用产品特定技术获取URI，例如访问配置对象中的产品特定信息。 |
 
 ## 树 {#tree}
 
@@ -544,11 +544,11 @@ HTML5表单中支持的JavaScript、FormCalc属性和方法如下所示：
  </tbody>
 </table>
 
-## 子表单集 {#subformset}
+## subformset {#subformset}
 
 | 属性 | 描述 | 例外 |
 |---|---|---|
-| instancemanager | instanceManager对象管理窗体模型对象的实例创建、移除和移动。 | 无 |
+| instancemanager | instanceManager对象可管理表单模型对象的实例创建、移除和移动。 | 无 |
 
 ## content {#content}
 
@@ -556,7 +556,7 @@ HTML5表单中支持的JavaScript、FormCalc属性和方法如下所示：
 |---|---|---|
 | isNull | 指示当前数据值是否为空值。 |  |
 
-## dataValue {#datavalue}
+## 数据值 {#datavalue}
 
 | **属性** | **描述** | **例外** |
 |---|---|---|
@@ -577,7 +577,7 @@ HTML5表单中支持的JavaScript、FormCalc属性和方法如下所示：
    <td>
     <ul>
      <li>无法检索默认值。 </li>
-     <li>更改会反映在模型中，并且可用于编写脚本，但不会同步到HTML元素。 因此，这些更改不会反映在UI中。</li>
+     <li>更改会反映在模型中，并可用于编写脚本，但不会同步到HTML元素。 因此，这些更改不会反映在UI中。</li>
     </ul> </td>
   </tr>
  </tbody>
@@ -598,7 +598,7 @@ HTML5表单中支持的JavaScript、FormCalc属性和方法如下所示：
    <td>
     <ul>
      <li>无法检索默认值。 </li>
-     <li>更改会反映在模型中，并且可用于编写脚本，但不会同步到HTML元素。 因此，这些更改不会反映在UI中。</li>
+     <li>更改会反映在模型中，并可用于编写脚本，但不会同步到HTML元素。 因此，这些更改不会反映在UI中。</li>
     </ul> </td>
   </tr>
  </tbody>
@@ -619,7 +619,7 @@ HTML5表单中支持的JavaScript、FormCalc属性和方法如下所示：
    <td>
     <ul>
      <li>无法检索默认值。 </li>
-     <li>更改会反映在模型中，并且可用于编写脚本，但不会同步到HTML元素。 因此，这些更改不会反映在UI中。</li>
+     <li>更改会反映在模型中，并可用于编写脚本，但不会同步到HTML元素。 因此，这些更改不会反映在UI中。</li>
     </ul> </td>
   </tr>
  </tbody>
@@ -637,7 +637,7 @@ HTML5表单中支持的JavaScript、FormCalc属性和方法如下所示：
   <tr>
    <td>edge</td>
    <td>Edge对象描述圆弧、直线或边框或矩形的一侧。<br /> </td>
-   <td>不支持颜色、帽子等属性。<br /> </td>
+   <td>不支持颜色、大写字母等属性。<br /> </td>
   </tr>
  </tbody>
 </table>
@@ -657,7 +657,7 @@ HTML5表单中支持的JavaScript、FormCalc属性和方法如下所示：
    <td>
     <ul>
      <li>无法检索默认值。 </li>
-     <li>更改会反映在模型中，并且可用于编写脚本，但不会同步到HTML元素。 因此，这些更改不会反映在UI中。</li>
+     <li>更改会反映在模型中，并可用于编写脚本，但不会同步到HTML元素。 因此，这些更改不会反映在UI中。</li>
     </ul> </td>
   </tr>
  </tbody>
@@ -678,13 +678,13 @@ HTML5表单中支持的JavaScript、FormCalc属性和方法如下所示：
    <td>
     <ul>
      <li>无法检索默认值。 </li>
-     <li>更改会反映在模型中，并且可用于编写脚本，但不会同步到HTML元素。 因此，这些更改不会反映在UI中。</li>
+     <li>更改会反映在模型中，并可用于编写脚本，但不会同步到HTML元素。 因此，这些更改不会反映在UI中。</li>
     </ul> </td>
   </tr>
  </tbody>
 </table>
 
-## 点胶 {#stipple}
+## 点缀 {#stipple}
 
 <table>
  <tbody>
@@ -774,7 +774,7 @@ HTML5表单中支持的JavaScript、FormCalc属性和方法如下所示：
   </tr>
   <tr>
    <td>边框</td>
-   <td>border对象描述checkButton对象周围的边框。 </td>
+   <td>border对象描述了checkButton对象周围的边框。 </td>
    <td>更改会反映在模型中，并可用于编写脚本，但不会同步到HTML元素。 因此，这些更改不会反映在UI中。<br /> </td>
   </tr>
  </tbody>
@@ -829,9 +829,9 @@ HTML5表单中支持的JavaScript、FormCalc属性和方法如下所示：
 
 | **属性** | **描述** | **例外** |
 |---|---|---|
-| 边框 | border对象描述imageEdit对象周围的边框。 |  |
+| 边框 | border对象描述了imageEdit对象周围的边框。 |  |
 
-## numericededit {#numericedit}
+## numericEdit {#numericedit}
 
 | **属性** | **描述** | **例外** |
 |---|---|---|
@@ -866,7 +866,7 @@ HTML5表单中支持的JavaScript、FormCalc属性和方法如下所示：
   <tr>
    <td>edge</td>
    <td>Edge对象描述圆弧、直线或边框或矩形的一侧。<br /> </td>
-   <td>不支持颜色、帽子等属性。</td>
+   <td>不支持颜色、大写字母等属性。</td>
   </tr>
  </tbody>
 </table>
@@ -888,7 +888,7 @@ HTML5表单中支持的JavaScript、FormCalc属性和方法如下所示：
  </tbody>
 </table>
 
-## 排除组 {#exclgroup}
+## 不包括组 {#exclgroup}
 
 <table>
  <tbody>
@@ -929,22 +929,22 @@ HTML5表单中支持的JavaScript、FormCalc属性和方法如下所示：
   </tr>
   <tr>
    <td>瞬态</td>
-   <td>指定处理应用程序是否必须在表单提交或保存操作中保存排除组的值。</td>
+   <td>指定处理应用程序是否必须在表单提交或保存操作过程中保存排除组的值。</td>
    <td>无</td>
   </tr>
   <tr>
    <td>w</td>
-   <td>指定布局宽度的测量值。</td>
+   <td>指定布局宽度的测量。</td>
    <td>无</td>
   </tr>
   <tr>
    <td>x</td>
-   <td>指定当使用定位布局放置时，容器锚点相对于父容器的左上角的x坐标。</td>
+   <td>指定当使用定位布局放置时容器锚点相对于父容器左上角的x坐标。</td>
    <td>无</td>
   </tr>
   <tr>
    <td>y</td>
-   <td>指定当使用定位布局放置时，容器锚点相对于父容器的左上角的y坐标。</td>
+   <td>指定当使用定位布局放置时，容器锚点相对于父容器左上角的y坐标。</td>
    <td>无</td>
   </tr>
   <tr>
@@ -954,11 +954,11 @@ HTML5表单中支持的JavaScript、FormCalc属性和方法如下所示：
   </tr>
   <tr>
    <td>验证</td>
-   <td>验证对象控制对表单上用户提供的数据的验证。 验证对象可在表单的生命周期中多次激活。</td>
+   <td>validate对象控制对表单上的用户提供数据的验证。 验证对象可在表单的生命周期中多次激活。</td>
    <td>无</td>
   </tr>
   <tr>
-   <td>dataNode</td>
+   <td>数据节点</td>
    <td>获取合并后表单节点绑定到的数据节点。</td>
    <td>无</td>
   </tr>
@@ -970,7 +970,7 @@ HTML5表单中支持的JavaScript、FormCalc属性和方法如下所示：
   <tr>
    <td>访问</td>
    <td>控制用户对容器对象（如子表单）内容的访问权限。</td>
-   <td>对于exclgrp中的各个项目，它始终返回open。 </td>
+   <td>对于排除中的单个项目，它始终返回open。 </td>
   </tr>
   <tr>
    <td>name</td>
@@ -983,13 +983,13 @@ HTML5表单中支持的JavaScript、FormCalc属性和方法如下所示：
    <td>无</td>
   </tr>
   <tr>
-   <td>selectedmember</td>
+   <td>selectedMember</td>
    <td>返回排除组的选定成员。</td>
    <td>无</td>
   </tr>
   <tr>
    <td>execCalculate</td>
-   <td>对指定对象的计算事件和任何子对象执行任何脚本。</td>
+   <td>对指定对象的计算事件以及任何子对象执行任何脚本。</td>
    <td>无</td>
   </tr>
   <tr>
@@ -1000,7 +1000,7 @@ HTML5表单中支持的JavaScript、FormCalc属性和方法如下所示：
  </tbody>
 </table>
 
-## 弧线 {#arc}
+## 圆弧 {#arc}
 
 <table>
  <tbody>
@@ -1012,7 +1012,7 @@ HTML5表单中支持的JavaScript、FormCalc属性和方法如下所示：
   <tr>
    <td>edge</td>
    <td>Edge对象描述圆弧、直线或边框或矩形的一侧。<br /> </td>
-   <td>不支持颜色、帽子等属性。 </td>
+   <td>不支持颜色、大写字母等属性。 </td>
   </tr>
  </tbody>
 </table>
@@ -1029,7 +1029,7 @@ HTML5表单中支持的JavaScript、FormCalc属性和方法如下所示：
   <tr>
    <td>edge</td>
    <td>Edge对象描述圆弧、直线或边框或矩形的一侧。<br /> </td>
-   <td>不支持颜色、帽子等属性。 </td>
+   <td>不支持颜色、大写字母等属性。 </td>
   </tr>
  </tbody>
 </table>
@@ -1057,7 +1057,7 @@ HTML5表单中支持的JavaScript、FormCalc属性和方法如下所示：
    <td>确定给定表单设计对象的宽度。</td>
    <td>
     <ul>
-     <li>页面区域和内容区域不支持Width (w)属性。 </li>
+     <li>页面区域和内容区域不支持宽度(w)属性。 </li>
      <li>不支持参数“从第一个内容区域偏移XFA-Form对象发生位置”。</li>
     </ul> </td>
   </tr>
@@ -1094,7 +1094,7 @@ HTML5表单中支持的JavaScript、FormCalc属性和方法如下所示：
    <td>无</td>
   </tr>
   <tr>
-   <td>absPageCount</td>
+   <td>abpagecount</td>
    <td>确定当前表单的页数。</td>
    <td>
     <ul>
@@ -1111,9 +1111,9 @@ HTML5表单中支持的JavaScript、FormCalc属性和方法如下所示：
 |---|---|---|
 | 存在 | 指定对象的可见性。 | 无 |
 
-## FormCalc {#formcalc}
+## FormCal {#formcalc}
 
-FormCalc是一种特定于XFA的语言，用于创建以电子表单为中心的逻辑和计算根。 FormCalculation提供了一组强大的构建函数。
+FormCalc是一种特定于XFA的语言，用于创建以电子表单为中心的逻辑和计算根。 FormCalculation提供了一组功能强大的构建函数。
 
 ### FormCalc支持的函数 {#formcalc-supported-functions}
 
@@ -1141,14 +1141,14 @@ FormCalc是一种特定于XFA的语言，用于创建以电子表单为中心的
    <td>
     <ul>
      <li>逻辑（和/或）</li>
-     <li>比较（大于/小于/等于）</li>
+     <li>比较（大/小/等）</li>
     </ul> </td>
    <td>A或1<br /> 1 &lt;&gt; 2<br /> A NE B<br /> A或1<br /> 1 &lt;&gt; 2<br /> A NE B</td>
   </tr>
   <tr>
    <td>If表达式</td>
    <td><br type="_moz" /> </td>
-   <td>如果(a&gt;b)则2 endif</td>
+   <td>如果(a&gt;b)，则2 endif</td>
   </tr>
   <tr>
    <td>同时</td>
@@ -1158,12 +1158,12 @@ FormCalc是一种特定于XFA的语言，用于创建以电子表单为中心的
   <tr>
    <td> 的 </td>
    <td><br type="_moz" /> </td>
-   <td>对于i = 100，降到1 <br /> do s = s + i endfor</td>
+   <td>对于i = 100减至1 <br /> do s = s + i endfor</td>
   </tr>
   <tr>
    <td>每个</td>
    <td><br type="_moz" /> </td>
-   <td>每个i在(1， 2， 3) <br /> do s = s + i endfor</td>
+   <td>(1， 2， 3)中的每个i <br /> do s = s + i endfor</td>
   </tr>
   <tr>
    <td>函数声明</td>
@@ -1179,13 +1179,13 @@ FormCalc是一种特定于XFA的语言，用于创建以电子表单为中心的
 
    1. Abs()
    1. Avg()
-   1. Ceil()
+   1. 单元格()
    1. 计数()
    1. Floor()
    1. Max()
    1. 最小()
    1. Mod()
-   1. Round()
+   1. 圆角()
    1. 总计()
 
 1. **科学功能**
@@ -1257,7 +1257,7 @@ FormCalc是一种特定于XFA的语言，用于创建以电子表单为中心的
   </tr>
   <tr>
    <td>console.println()</td>
-   <td>此acrobat API会将输出转储到JavaScript控制台。</td>
+   <td>此acrobat API将输出转储到JavaScript控制台。</td>
    <td> </td>
   </tr>
   <tr>
@@ -1282,12 +1282,12 @@ FormCalc是一种特定于XFA的语言，用于创建以电子表单为中心的
   </tr>
   <tr>
    <td>app.setInterval()</td>
-   <td>指定JavaScript脚本和时间段。 每次经过该时段时都会执行脚本。 此方法的返回值必须保存在JavaScript变量中。 否则，间隔对象将接受垃圾回收，这将导致时钟停止。 要终止定期执行，请将返回的interval对象传递给clearInterval。</td>
+   <td>指定JavaScript脚本和时间段。 每次经过该时段时都会执行脚本。 此方法的返回值必须保存在JavaScript变量中。 否则，间隔对象将接受垃圾回收，这将导致时钟停止。 要终止定期执行，请将返回的间隔对象传递给clearInterval。</td>
    <td> </td>
   </tr>
   <tr>
    <td>app.setTimeOut()</td>
-   <td>指定JavaScript脚本和时间段。 脚本只执行一次，在句点过后。此方法的返回值必须保存在JavaScript变量中。 否则，超时对象将接受垃圾回收，这会导致时钟停止。 要取消超时事件，请将返回的超时对象传递给clearTimeOut。</td>
+   <td>指定JavaScript脚本和时间段。 该脚本只执行一次，超过该时间段后执行。此方法的返回值必须保存在JavaScript变量中。 否则，超时对象将接受垃圾回收，这会导致时钟停止。 要取消超时事件，请将返回的超时对象传递给clearTimeOut。</td>
    <td> </td>
   </tr>
   <tr>
@@ -1307,23 +1307,23 @@ FormCalc是一种特定于XFA的语言，用于创建以电子表单为中心的
   </tr>
   <tr>
    <td>app.activeDocs</td>
-   <td>包含每个活动文档的Doc对象的数组。 如果没有处于活动状态的文档，activeDocs将不会返回任何内容；也就是说，它与d = new Array(0) in core JavaScript的行为相同。</td>
+   <td>包含每个活动文档的Doc对象的数组。 如果没有处于活动状态的文档，activeDocs将不会返回任何内容；也就是说，其行为与核心JavaScript中的d = new Array(0)的行为相同。</td>
    <td>返回HTMl5表单的空数组。</td>
   </tr>
   <tr>
    <td>app.calculate</td>
    <td>如果为true（默认值），则可执行计算。 如果为false，则不允许计算。</td>
-   <td>对于HTMl5 Forms，始终为true。</td>
+   <td>对于HTMl5 Forms，始终为True。</td>
   </tr>
   <tr>
    <td>app.constants</td>
-   <td>用于保存各种常数值的包装对象。 当前，此属性返回一个对象，该对象具有单个属性align。</td>
+   <td>用于保存各种常数值的包装对象。 目前，此属性返回一个对象，该对象具有单个属性align。</td>
    <td>HTML5表单返回空对齐对象。</td>
   </tr>
   <tr>
    <td>app.focusRect</td>
    <td>打开和关闭焦点矩形。 焦点矩形是按钮、复选框、单选按钮和签名周围模糊的虚线，用于指示表单字段具有键盘焦点。 如果值为true，则焦点矩形将被打开。</td>
-   <td>对于HTML5表单，始终为true。</td>
+   <td>对于HTML5表单，始终为True。</td>
   </tr>
   <tr>
    <td>app.formsVersion</td>
@@ -1353,4 +1353,4 @@ FormCalc是一种特定于XFA的语言，用于创建以电子表单为中心的
 
 >[!NOTE]
 >
->HTML5表单在客户端（浏览器）上呈现。 建议使用客户端 **验证** 和 **计算** 脚本而不是服务器端脚本。
+>HTML5表单在客户端（浏览器）呈现。 使用客户端 **验证** 和 **计算** 脚本而不是服务器端脚本。

@@ -1,19 +1,15 @@
 ---
 title: 管理用户
-seo-title: Managing Users
-description: 使用用户管理API创建客户端应用程序，这些应用程序可以管理角色、权限和主体（可以是用户或组），并对用户进行身份验证。
-seo-description: Use the User Management API to create client applications that can manage roles, permissions, and principals (which can be users or groups), as well as authenticate users.
-uuid: 68d8a0bc-6e3d-4286-ba5c-534dcf58cb84
+description: 使用用户管理API创建可以管理角色、权限和主体（可以是用户或组）的客户端应用程序，并对用户进行身份验证。
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
-discoiquuid: 95804bff-9e6f-4807-aae4-790bd9e7cb57
 role: Developer
 exl-id: d7c5bb84-a988-4b2e-a587-f4e5b50fea58
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '6226'
+source-wordcount: '6218'
 ht-degree: 0%
 
 ---
@@ -853,7 +849,7 @@ An `objectSID` 如果将对象从一个Active Directory域移动到另一个域�
 
 ## 以编程方式同步用户 {#programmatically-synchronizing-users}
 
-您可以使用用户管理API以编程方式同步用户。 同步用户时，您会使用用户存储库中的用户数据更新AEM Forms。 例如，假设您将新用户添加到用户存储库中。 执行同步操作后，新用户将成为AEM Forms用户。 此外，用户存储库中不再存在的用户也将从AEM Forms中删除。
+您可以使用用户管理API以编程方式同步用户。 在同步用户时，您将使用用户存储库中的用户数据更新AEM Forms。 例如，假设您将新用户添加到用户存储库中。 执行同步操作后，新用户将成为AEM Forms用户。 此外，用户存储库中不再存在的用户也将从AEM Forms中删除。
 
 下图显示了AEM Forms与用户存储库进行同步的情况。
 

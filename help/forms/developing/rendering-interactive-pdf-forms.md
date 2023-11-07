@@ -8,9 +8,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 role: Developer
 exl-id: d9f32939-c2c0-4531-b15e-f63941c289e3
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2483'
+source-wordcount: '2478'
 ht-degree: 0%
 
 ---
@@ -76,7 +76,7 @@ Forms服务向客户端设备（通常是Web浏览器）呈现交互式PDF forms
 
 ![ri_ri_confirm](assets/ri_ri_confirm.png)
 
-此 `HandleData` Java Servlet会使用用户的名字和姓氏以及金额预填充此表单。 预填充表单后，该表单会被发送到客户端Web浏览器。 (请参阅 [使用可流布局预填充Forms](/help/forms/developing/prepopulating-forms-flowable-layouts.md))
+此 `HandleData` Java Servlet会使用用户的名字和姓氏以及数量预填充此表单。 预填充表单后，该表单会被发送到客户端Web浏览器。 (请参阅 [使用可流布局预填充Forms](/help/forms/developing/prepopulating-forms-flowable-layouts.md))
 
 **Java Servlet**
 
@@ -133,7 +133,7 @@ Forms服务向客户端设备（通常是Web浏览器）呈现交互式PDF forms
 >
 >有关使用Workbench创建Forms应用程序的信息，请参阅 [Workbench帮助](https://www.adobe.com/go/learn_aemforms_workbench_63).
 
-位于Forms应用程序中的资源的路径为：
+Forms应用程序中资源的路径为：
 
 `Applications/Application-name/Application-version/Folder.../Filename`
 

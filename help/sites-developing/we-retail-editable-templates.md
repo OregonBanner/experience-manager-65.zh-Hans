@@ -10,10 +10,10 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: 3cc8ac23-98ff-449f-bd76-1203c7cbbed7
 exl-id: efebe66d-3d30-4033-9c4c-ae347e134f2f
-source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '486'
-ht-degree: 9%
+source-wordcount: '480'
+ht-degree: 10%
 
 ---
 
@@ -29,7 +29,7 @@ We.Retail中的所有页面都基于可编辑的模板，允许非开发人员�
 
    http://localhost:4502/editor.html/content/we-retail/language-masters/en/equipment.html
 
-1. 请注意，模式选择器不再提供设计模式。 We.Retail的所有页面都基于可编辑模板，要改变可编辑模板的设计，必须在模板编辑器中编辑这些页面。
+1. 模式选择器不再提供设计模式。 We.Retail的所有页面都基于可编辑模板，要改变可编辑模板的设计，必须在模板编辑器中编辑这些页面。
 1. 从 **页面信息** 菜单选择 **编辑模板**.
 1. 您正在编辑主页模板。
 
@@ -45,7 +45,7 @@ We.Retail中的所有页面都基于可编辑的模板，允许非开发人员�
 
 1. 在布局容器的“设计”对话框中，可以
 
-   * 选择现有策略或为容器创建新策略
+   * 选择现有策略或为容器创建策略
    * 选择容器中允许的组件
    * 定义将资产拖到容器时要放置的默认组件
 
@@ -55,7 +55,7 @@ We.Retail中的所有页面都基于可编辑的模板，允许非开发人员�
 
    这允许您：
 
-   * 选择现有策略或为容器创建新策略
+   * 选择现有策略或为容器创建策略
    * 定义在使用此组件时可供页面作者使用的功能，例如
 
       * 允许的粘贴源

@@ -7,9 +7,9 @@ topic-tags: extending-aem
 content-type: reference
 docset: aem65
 exl-id: 08c88e70-4df9-4627-8a66-1fabe3aee50b
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2784'
+source-wordcount: '2793'
 ht-degree: 2%
 
 ---
@@ -51,7 +51,7 @@ ht-degree: 2%
    * 内容片段模型在创建内容片段时定义其结构。
    * 片段引用模型；因此，对模型的更改可能/将影响任何依赖的片段。
    * 模型由数据类型构建。
-   * 添加新变体的函数等必须相应地更新片段。
+   * 用于添加新变体的函数等，必须相应地更新片段。
 
   >[!CAUTION]
   >
@@ -62,8 +62,8 @@ ht-degree: 2%
    * 用于定义简单内容片段。
    * 模板在创建内容片段时定义内容片段的（基本、纯文本）结构。
    * 模板在创建时复制到片段；因此对模板的进一步更改将不会反映在现有片段中。
-   * 添加新变体的函数等必须相应地更新片段。
-   * [内容片段模板](/help/sites-developing/content-fragment-templates.md) 以不同于AEM生态系统内其他模板机制（例如，页面模板等）的方式运行。 因此，应单独审议这些问题。
+   * 用于添加新变体的函数等，必须相应地更新片段。
+   * [内容片段模板](/help/sites-developing/content-fragment-templates.md) 其操作方式与AEM生态系统内的其他模板机制（例如，页面模板等）不同。 因此，应单独审议这些问题。
    * 当基于模板时，内容的MIME类型根据实际内容进行管理；这意味着每个元素和变体可以具有不同的MIME类型。
 
 ### 与Assets集成 {#integration-with-assets}
@@ -138,7 +138,7 @@ ht-degree: 2%
 * 此外，可以选择一定范围的段落以限制输出；例如，这可用于多列输出。
 * 组件允许 [中间内容](/help/sites-developing/components-content-fragments.md#in-between-content)：
 
-   * 在这里，您可以使用组件放置其他资产（图像等） 在所引用片段的段落之间。
+   * 在这里，利用组件可以在引用片段的段落之间放置其他资产（图像等）。
    * 对于中间内容，您需要：
 
       * 请注意，可能存在不稳定的引用；中间内容（在创作页面时添加）与其旁边的段落没有固定关系，在中间内容的位置可能丢失相对位置之前插入新段落（在内容片段编辑器中）
@@ -182,7 +182,7 @@ ht-degree: 2%
 
 * 如果支持多个元素的输出(通过使用 `elementNames` 要指定多个元素)，实际显示模式由属性定义 `displayMode`：
 
-   * 如果值为 `singleText` （并且仅配置了一个元素），则该元素将呈现为具有中间内容、布局支持等的文本。 这是仅呈现一个元素的片段的默认设置。
+   * 如果值为 `singleText` （并且只配置了一个元素），则该元素将呈现为具有中间内容、布局支持等的文本。 这是仅呈现一个元素的片段的默认设置。
    * 否则，将使用一种更简单的方法（可以称为“表单视图”），这种方法不支持中间内容，并且片段内容按“原样”渲染。
 
 * 如果片段呈现为 `displayMode` == `singleText` （隐式或显式）以下附加属性发挥作用：
@@ -254,7 +254,7 @@ ht-degree: 2%
 
 * **片段模板** ([片段模板](https://www.adobe.io/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/dam/cfm/FragmentTemplate.html))
 
-  使用 `FragmentTemplate.createFragment()` 用于创建新片段。
+  使用 `FragmentTemplate.createFragment()` 用于创建片段。
 
   ```
   Resource templateOrModelRsc = resourceResolver.getResource("...");
@@ -492,9 +492,9 @@ if (fragmentResource != null) {
 }
 ```
 
-### 示例：创建新内容片段 {#example-creating-a-new-content-fragment}
+### 示例：创建内容片段 {#example-creating-a-new-content-fragment}
 
-要以编程方式创建新的内容片段，您需要使用：
+要以编程方式创建内容片段，您需要使用：
 
 `com.adobe.cq.dam.cfm.ContentFragmentManager#create`
 

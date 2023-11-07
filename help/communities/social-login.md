@@ -1,36 +1,32 @@
 ---
 title: 使用Facebook和Twitter进行社交登录
-seo-title: Social Login with Facebook and Twitter
 description: 社交登录允许网站访客使用其Facebook或Twitter帐户登录。
-seo-description: Social login lets site visitors to sign in with their Facebook or Twitter account.
-uuid: f70e346e-0d8c-41a0-a100-206a420088dc
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
-discoiquuid: c0a71870-8f95-40c8-9ffd-b7af49723288
 role: Admin
 exl-id: aed9247c-eb81-470c-9fa4-a98c3df2dcaa
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2783'
+source-wordcount: '2773'
 ht-degree: 1%
 
 ---
 
 # 使用Facebook和Twitter进行社交登录 {#social-login-with-facebook-and-twitter}
 
-社交登录是一种向网站访客显示使用其Facebook或Twitter帐户登录的选项的功能。 因此，将允许的Facebook或Twitter数据包含在其AEM成员配置文件中。
+社交登录是向网站访客展示使用其Facebook或Twitter帐户登录的选项。 因此，将允许的Facebook或Twitter数据包含在其AEM成员配置文件中。
 
 ![socialloginweretail](assets/socialloginweretail.png)
 
 ## 社交登录概述 {#social-login-overview}
 
-要包含社交登录，它是 *必需* 创建自定义Facebook和Twitter应用程序。
+要包含社交登录，它是 *必填* 创建自定义Facebook和Twitter应用程序。
 
-虽然we-retail示例提供了示例Facebook和Twitter应用程序及云服务，但它们在 [生产网站](../../help/sites-administering/production-ready.md).
+虽然We-Retail示例提供了示例Facebook和Twitter应用程序及云服务，但它们在 [生产网站](../../help/sites-administering/production-ready.md).
 
-所需步骤包括：
+所需步骤为：
 
 1. [启用OAuth身份验证](#adobe-granite-oauth-authentication-handler) 在所有AEM发布实例上。
 
@@ -42,11 +38,11 @@ ht-degree: 1%
 
       * 创建 [facebook应用程序](#create-a-facebook-app).
       * 创建和发布 [facebook Connect云服务](#create-a-facebook-connect-cloud-service).
+
    * 要支持使用Twitter登录，请执行以下操作：
 
       * 创建 [twitter应用程序](#create-a-twitter-app).
-      * 创建和发布 [twitter Connect云服务](#create-a-twitter-connect-cloud-service).
-
+      * 创建和发布 [twitter连接云服务](#create-a-twitter-connect-cloud-service).
 
 1. [**启用** 社交登录](#enable-social-login) 社区站点。
 
@@ -54,35 +50,35 @@ ht-degree: 1%
 
 1. **范围** （权限）指定允许应用程序请求的数据。
 
-   * facebook和Twitter [AdobeGranite OAuth应用程序和提供程序](#adobe-granite-oauth-application-and-provider) 默认情况下，实例会在其范围中包含基本应用程序权限。
+   * facebook和Twitter [AdobeGranite OAuth应用程序和提供程序](#adobe-granite-oauth-application-and-provider) 默认情况下，实例在其作用域中包含基本应用程序权限。
 
 1. **字段** (params)指定使用URL参数请求的实际数据。
 
-   * 这些字段在 [AEM Communities Facebook OAuth提供程序](#aem-communities-facebook-oauth-provider) 和 [AEM Communities Twitter OAuth提供程序](#aem-communities-twitter-oauth-provider).
-   * 对于大多数用例，默认字段即足够，但可以修改。
+   * 这些字段在 [AEM Communities Facebook OAuth提供程序](#aem-communities-facebook-oauth-provider) 和 [AEM CommunitiesTwitterOAuth提供程序](#aem-communities-twitter-oauth-provider).
+   * 对于大多数用例，默认字段已足够，但可以修改。
 
 ## facebook登录 {#facebook-login}
 
 ### facebook API版本 {#facebook-api-version}
 
-社交登录和we-retail Facebook示例是在Facebook Graph API版本1.0时开发的。截至AEM 6.4 GA和AEM 6.3 SP1社交登录已更新，可与较新版本的Facebook Graph API 2.5配合使用。
+社交登录和We-Retail Facebook示例是在Facebook Graph API版本1.0时开发的。截至AEM 6.4 GA和AEM 6.3 SP1社交登录已更新，可与较新版本的Facebook Graph API 2.5配合使用。
 
 >[!NOTE]
 >
->对于较旧的AEM版本，如果您在日志中遇到异常 **无法从此中提取令牌**，请升级到该AEM版本的最新CFP。
+>对于较旧的AEM版本，如果您在日志中遇到异常 **无法从此提取令牌**，请升级到该AEM版本的最新CFP。
 
 有关Facebook Graph API版本信息，请参阅 [facebook API更改日志](https://developers.facebook.com/docs/apps/changelog).
 
 ### 创建Facebook应用程序 {#create-a-facebook-app}
 
-需要正确配置的Facebook应用程序才能启用Facebook社交登录。
+要启用Facebook社交登录，需要正确配置的Facebook应用程序。
 
-要创建Facebook应用程序，请按照Facebook的说明操作，网址为 [https://developers.facebook.com/apps/](https://developers.facebook.com/apps/). 对说明所做的更改不会反映在以下信息中。
+要创建Facebook应用程序，请按照Facebook的说明操作，网址为 [https://developers.facebook.com/apps/](https://developers.facebook.com/apps/). 对其说明所做的更改不会反映在以下信息中。
 
 一般来说，从Facebook API v2.7开始：
 
 * *添加新的Facebook应用程序*
-   * 对象 *Platform*，选择网站：
+   * 对象 *平台*，选择网站：
       * 对象 *站点URL*，输入 `  https://<server>:<port>.`
       * 对象 *显示名称*，输入标题以用作Facebook连接服务的标题。
       * 对象 *类别*，推荐选择 *页面应用程序*，但可以是任何内容。
@@ -91,19 +87,19 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->在开发方面，http://localhost:4503将发挥作用。
+>在开发方面，http://localhost:4503将起作用。
 
-创建应用程序后，找到 **[!UICONTROL 应用程序ID]** 和 **[!UICONTROL 应用程序密钥]** 设置。 此信息是配置 [facebook cloud service](#createafacebookcloudservice).
+创建应用程序后，找到 **[!UICONTROL 应用程序ID]** 和 **[!UICONTROL 应用程序密钥]** 设置。 此信息是配置 [facebook云服务](#createafacebookcloudservice).
 
 ### 创建Facebook ConnectCloud Service {#create-a-facebook-connect-cloud-service}
 
-此 [AdobeGranite OAuth应用程序和提供程序](#adobe-granite-oauth-application-and-provider) 通过创建Cloud Service配置实例化的实例，可标识Facebook应用程序以及添加新用户的成员组。
+此 [AdobeGranite OAuth应用程序和提供程序](#adobe-granite-oauth-application-and-provider) 通过创建Cloud Service配置实例化的实例，可识别Facebook应用程序以及向其中添加新用户的成员组。
 
 1. 在AEM创作实例上，使用管理员权限登录。
-1. 在全局导航中，选择 **[!UICONTROL 工具]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL facebook社交登录配置]**.
+1. 在全局导航中，选择 **[!UICONTROL 工具]** > **[!UICONTROL Cloud Service]** > **[!UICONTROL facebook社交登录配置]**.
 1. 选择配置 **[!UICONTROL 上下文路径]**.
 
-   **[!UICONTROL 上下文路径]** 应与您在创建/编辑社区站点时选择的云配置路径相同。
+   **[!UICONTROL 上下文路径]** 应与创建/编辑社区站点时选择的云配置路径相同。
 
 1. 检查是否已启用上下文路径以在其下方创建云服务。
 1. 转到 **[!UICONTROL 工具]** > **[!UICONTROL 常规]** > **[!UICONTROL 配置浏览器]**. 选择上下文并编辑属性。 启用云配置（如果尚未启用）。
@@ -116,13 +112,13 @@ ht-degree: 1%
 
    ![fbsocialloginconfigpng](assets/fbsocialloginconfigpng.png)
 
-   * **[!UICONTROL 标题]** (*必需*)输入标识Facebook应用程序的显示标题。 建议使用与输入的相同的名称 *显示名称* 用于Facebook应用程序。
-   * **[!UICONTROL 应用程序ID/API密钥]** (*必需*)输入 ***应用程序ID*** 用于Facebook应用程序。 这样可识别 [AdobeGranite OAuth应用程序和提供程序](https://helpx.adobe.com/experience-manager/6-3/communities/using/social-login.html#AdobeGraniteOAuthApplicationandProvider) 通过对话框创建的实例。
-   * **[!UICONTROL 应用程序密钥]** (*必需*)输入 ***应用程序密钥*** 用于Facebook应用程序。
-   * **[!UICONTROL 创建用户]** 如果选中，使用Facebook帐户登录将创建AEM用户条目，并将其作为成员添加到选定的用户组。  默认选中（强烈推荐）。
-   * **[!UICONTROL 隐藏用户ID]**：保留为取消选中状态。
-   * **[!UICONTROL 设定电子邮件范围]**：应从Facebook获取用户的电子邮件id。
-   * **[!UICONTROL 添加到用户组]** 选择“添加用户组”以选择一个或多个组 [成员组](https://helpx.adobe.com/experience-manager/6-3/communities/using/users.html) 用户将添加到其中的社区站点。
+   * **[!UICONTROL 标题]** (*必填*)输入用于标识Facebook应用程序的显示标题。 使用与输入的相同的名称 *显示名称* 用于Facebook应用程序。
+   * **[!UICONTROL 应用程序ID/API密钥]** (*必填*)输入 ***应用程序ID*** 用于Facebook应用程序。 这标识了 [AdobeGranite OAuth应用程序和提供程序](https://helpx.adobe.com/experience-manager/6-3/communities/using/social-login.html#AdobeGraniteOAuthApplicationandProvider) 通过对话框创建的实例。
+   * **[!UICONTROL 应用程序密钥]** (*必填*)输入 ***应用程序密钥*** 用于Facebook应用程序。
+   * **[!UICONTROL 创建用户]** 如果选中，使用Facebook帐户登录将创建AEM用户条目，并将其作为成员添加到选定的用户组。  默认处于选中状态（强烈推荐）。
+   * **[!UICONTROL 隐藏用户ID]**：取消选择。
+   * **[!UICONTROL 设定电子邮件范围]**：应从Facebook中获取用户的电子邮件id。
+   * **[!UICONTROL 添加到用户组]** 选择“添加用户组”以选择一个或多个 [成员组](https://helpx.adobe.com/experience-manager/6-3/communities/using/users.html) 用于要向其添加用户的社区站点。
 
    >[!NOTE]
    >
@@ -131,24 +127,23 @@ ht-degree: 1%
    * 选择 **[!UICONTROL 保存]**.
    * **[!UICONTROL 发布]**.
 
-
-结果是 [AdobeGranite OAuth应用程序和提供程序](https://helpx.adobe.com/experience-manager/6-3/communities/using/social-login.html#adobe-granite-oauth-application-and-provider) 无需进一步修改的实例，除非添加了其他范围（权限）。 默认范围是Facebook登录的标准权限。 如果需要其他范围，则需要直接编辑OSGI配置。 如果直接通过系统/控制台进行了修改，请避免从触屏UI编辑云服务配置以避免覆盖。
+结果是 [AdobeGranite OAuth应用程序和提供程序](https://helpx.adobe.com/experience-manager/6-3/communities/using/social-login.html#adobe-granite-oauth-application-and-provider) 除非添加其他范围（权限），否则不需要进一步修改的实例。 默认范围是Facebook登录的标准权限。 如果需要额外的范围，则需要直接编辑OSGI配置。 如果直接通过系统/控制台进行了修改，请避免从触屏UI编辑云服务配置以避免覆盖。
 
 ### AEM Communities Facebook OAuth提供程序 {#aem-communities-facebook-oauth-provider}
 
-AEM Communities提供商对 [AdobeGranite OAuth应用程序和提供程序](#adobe-granite-oauth-application-and-provider) 实例。
+AEM Communities提供商将 [AdobeGranite OAuth应用程序和提供程序](#adobe-granite-oauth-application-and-provider) 实例。
 
 此提供程序需要编辑以：
 
 * 允许用户更新
 * 添加其他字段 [在范围内](#adobe-granite-oauth-application-and-provider)
 
-   * 默认情况下，并不包括默认允许的所有字段。
+   * 默认情况下，并不包括默认情况下允许的所有字段。
 
 如果需要进行编辑，请在每个AEM发布实例上：
 
 1. 使用管理员权限登录。
-1. 导航到 [Web控制台](../../help/sites-deploying/configuring-osgi.md). 例如，http://localhost:4503/system/console/configMgr。
+1. 导航至 [Web控制台](../../help/sites-deploying/configuring-osgi.md). 例如，http://localhost:4503/system/console/configMgr。
 1. 找到AEM Communities Facebook OAuth提供程序。
 1. 选择铅笔图标以打开进行编辑。
 
@@ -156,31 +151,31 @@ AEM Communities提供商对 [AdobeGranite OAuth应用程序和提供程序](#ado
 
    * **[!UICONTROL OAuth提供程序ID]**
 
-      (*必需*)默认值为 *soco -facebook*. 不要编辑。
+     (*必填*)默认值为 *soco -facebook*. 请勿编辑。
 
    * **[!UICONTROL Cloud Service配置]**
 
-      默认值为 `/etc/  cloudservices /  facebookconnect`. 不要编辑。
+     默认值为 `/etc/  cloudservices /  facebookconnect`. 请勿编辑。
 
    * **[!UICONTROL OAuth提供程序服务配置]**
 
-      默认值为 `/apps/social/facebookprovider/config/`. 不要编辑。
+     默认值为 `/apps/social/facebookprovider/config/`. 请勿编辑。
 
    * **[!UICONTROL 启用标记]**
 
-      不要编辑。
+     请勿编辑。
 
    * **[!UICONTROL 用户路径]**
 
-      存储库中存储用户数据的位置。 对于社区站点，为确保成员有权查看彼此的配置文件，路径应为默认路径 */home/users/community*.
+     存储库中存储用户数据的位置。 对于社区站点，为确保成员有权查看其他成员的配置文件，路径应为默认路径 */home/users/community*.
 
    * **[!UICONTROL 启用字段]**
 
-      如果选中，则在向Facebook发出的用户身份验证和信息请求中会指定列出的字段。 默认值为取消选中。
+     如果选中，则在向Facebook发出请求时指定列出的字段，以进行用户身份验证和获取信息。 默认值为取消选中。
 
    * **[!UICONTROL 字段]**
 
-      启用字段后，在调用Facebook图形API时将包含以下字段。 这些字段必须允许在云服务配置中定义的作用域内。 其他字段可能需要Facebook批准。 参考Facebook文档的Facebook登录权限部分。 作为参数添加的默认字段包括：
+     启用字段后，在调用Facebook图形API时将包含以下字段。 这些字段必须在云服务配置中定义的范围内允许。 其他字段可能需要Facebook批准。 请参阅Facebook文档的Facebook登录权限部分。 添加为参数的默认字段包括：
 
       * id
       * name
@@ -190,7 +185,7 @@ AEM Communities提供商对 [AdobeGranite OAuth应用程序和提供程序](#ado
       * 区域设置
       * 图片
       * 时区
-      * update_time
+      * 更新时间
       * 已验证
       * 电子邮件
 
@@ -198,8 +193,7 @@ AEM Communities提供商对 [AdobeGranite OAuth应用程序和提供程序](#ado
 
    * **[!UICONTROL 更新用户]**
 
-      如果选中，会在每次登录时刷新存储库中的用户数据，以反映配置文件更改或请求的其他数据。 默认已取消选中。
-
+     如果选中，会在每次登录时刷新存储库中的用户数据，以反映配置文件更改或请求的其他数据。 默认值为取消选中。
 
 #### 后续步骤 {#next-steps}
 
@@ -214,11 +208,11 @@ facebook和Twitter的后续步骤相同：
 
 需要配置的Twitter应用程序才能启用Twitter社交登录。
 
-按照最新说明在处创建新的Twitter应用程序 [https://apps.twitter.com](https://apps.twitter.com/).
+按照最新说明创建Twitter应用程序，网址为 [https://apps.twitter.com](https://apps.twitter.com/).
 
 一般而言：
 
-1. 输入 *名称* ，该选项会将您的Twitter应用程序标识给网站用户。
+1. 输入 *名称* 会向网站用户标识您的Twitter应用程序。
 1. 输入 *描述*.
 1. 对象 *网站*  — 输入 `https://<server>`.
 1. 对象 *回调URL*  — 输入 `https://server`.
@@ -227,9 +221,9 @@ facebook和Twitter的后续步骤相同：
    >
    >无需指定端口。
    >
-   >在开发方面，https://127.0.0.1/将发挥作用。
+   >在开发方面，https://127.0.0.1/将起作用。
 
-1. 创建应用程序后，找到 **[!UICONTROL 使用者(API)密钥]** 和 **[!UICONTROL 使用者(API)密码]**. 配置 [twitter cloud service](#createatwittercloudservice).
+1. 创建应用程序后，找到 **[!UICONTROL 使用者(API)密钥]** 和 **[!UICONTROL 使用者(API)密码]**. 配置 [twitter云服务](#createatwittercloudservice).
 
 #### 权限 {#permissions}
 
@@ -246,12 +240,12 @@ facebook和Twitter的后续步骤相同：
 
 对社交登录发出的唯一REST请求是 *[GET帐户/验证凭据](https://dev.twitter.com/rest/reference/get/account/verify_credentials)*.
 
-### 创建Twitter ConnectCloud Service {#create-a-twitter-connect-cloud-service}
+### 创建Twitter连接Cloud Service {#create-a-twitter-connect-cloud-service}
 
-此 [AdobeGranite OAuth应用程序和提供程序](#adobe-granite-oauth-application-and-provider) 通过创建Cloud Service配置实例化的实例，可标识Twitter应用程序以及添加新用户的成员组。
+此 [AdobeGranite OAuth应用程序和提供程序](#adobe-granite-oauth-application-and-provider) 实例通过创建Cloud Service配置进行实例化，用于标识添加新用户的Twitter应用程序和成员组。
 
 1. 在创作实例上，使用管理员权限登录。
-1. 在全局导航中，选择 **[!UICONTROL 工具]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL twitter社交登录配置]**.
+1. 在全局导航中，选择 **[!UICONTROL 工具]** > **[!UICONTROL Cloud Service]** > **[!UICONTROL twitter社交登录配置]**.
 1. 选择 **[!UICONTROL 上下文路径]** 配置。
 
    上下文路径应与您在创建/编辑社区站点时选择的云配置路径相同。
@@ -269,73 +263,74 @@ facebook和Twitter的后续步骤相同：
 
    * **[!UICONTROL 标题]**
 
-      (*必需*)输入标识Twitter应用程序的显示标题。 建议使用与输入的相同的名称 *显示名称* 用于Twitter应用程序。
+     (*必填*)输入用于标识Twitter应用程序的显示标题。 使用与输入的相同的名称 *显示名称* 用于Twitter应用程序。
 
    * **[!UICONTROL 使用者密钥]**
 
-      (*必需*)输入 **使用者(API)密钥** 用于Twitter应用程序。 这样可识别 [AdobeGranite OAuth应用程序和提供程序](https://helpx.adobe.com/experience-manager/6-3/communities/using/social-login.html#AdobeGraniteOAuthApplicationandProvider) 通过对话框创建的实例。
+     (*必填*)输入 **使用者(API)密钥** 用于Twitter应用程序。 这标识了 [AdobeGranite OAuth应用程序和提供程序](https://helpx.adobe.com/experience-manager/6-3/communities/using/social-login.html#AdobeGraniteOAuthApplicationandProvider) 通过对话框创建的实例。
 
    * **[!UICONTROL 使用者密钥]**
 
-      (*必需*)输入 ***Consumer(API)密码*** 用于Twitter应用程序。
+     (*必填*)输入 ***使用者(API)密码*** 用于Twitter应用程序。
 
    * **[!UICONTROL 创建用户]**
 
-      如果选中，使用Twitter帐户登录将创建AEM用户条目，并将其作为成员添加到选定的用户组。 默认选中（强烈推荐）。
+     如果选中，使用Twitter帐户登录将创建AEM用户条目，并将其作为成员添加到选定的用户组。 默认处于选中状态（强烈推荐）。
 
    * **[!UICONTROL 隐藏用户 ID]**
 
-      保持取消选中状态。
+     保持取消选中状态。
 
    * **[!UICONTROL 添加到用户组]**
 
-      选择“添加用户组”以选择一个或多个组 [成员组](https://helpx.adobe.com/experience-manager/6-3/communities/using/users.html) 用户将添加到其中的社区站点。
+     选择“添加用户组”以选择一个或多个 [成员组](https://helpx.adobe.com/experience-manager/6-3/communities/using/users.html) 用于要向其添加用户的社区站点。
+
    >[!NOTE]
    >
-   >可以随时添加或删除组。 但现有用户的成员资格不会受到影响。 自动成员资格仅适用于此字段更新后创建的新用户。 对于禁用匿名用户的站点，将用户添加到适用于该已关闭的社区站点的相应社区成员组。
+   >可以随时添加或删除组。 但现有用户的成员资格不会受到影响。 自动成员资格仅适用于此字段更新后创建的新用户。 对于禁用匿名用户的站点，将用户添加到对应于该已关闭社区站点的社区成员组。
+   >
 
 1. 选择 **[!UICONTROL 保存]** 和 **[!UICONTROL Publish]**.
 
 结果是 [AdobeGranite OAuth应用程序和提供程序](https://helpx.adobe.com/experience-manager/6-3/communities/using/social-login.html#adobe-granite-oauth-application-and-provider) 无需进一步修改的实例。 默认范围是Twitter登录的标准权限。
 
-### AEM Communities Twitter OAuth提供程序 {#aem-communities-twitter-oauth-provider}
+### AEM CommunitiesTwitterOAuth提供程序 {#aem-communities-twitter-oauth-provider}
 
-AEM Communities配置扩展了 [AdobeGranite OAuth应用程序和提供程序](#adobe-granite-oauth-application-and-provider) 实例。 此提供程序需要编辑，以允许用户更新。
+AEM Communities配置对 [AdobeGranite OAuth应用程序和提供程序](#adobe-granite-oauth-application-and-provider) 实例。 此提供程序需要编辑才能允许用户更新。
 
 如果需要进行编辑，请在每个AEM发布实例上：
 
 1. 使用管理员权限登录。
-1. 导航到 [Web控制台](../../help/sites-deploying/configuring-osgi.md).
+1. 导航至 [Web控制台](../../help/sites-deploying/configuring-osgi.md).
 
    例如，http://localhost:4503/system/console/configMgr。
 
-1. 找到AEM Communities Twitter OAuth提供程序。
+1. 找到AEM CommunitiesTwitterOAuth提供程序。
 1. 选择铅笔图标以打开进行编辑。
 
    ![twitteroauth_png](assets/twitteroauth_png.png)
 
    * **[!UICONTROL OAuth提供程序ID]**
 
-   (*必需*)默认值为 *soco -twitter*. 不要编辑。
+   (*必填*)默认值为 *soco -twitter*. 请勿编辑。
 
    * **[!UICONTROL Cloud Service配置]**
 
-      默认值为 *会议* 不要编辑。
+     默认值为 *会议* 请勿编辑。
 
    * **[!UICONTROL OAuth提供程序服务配置]**
 
-      默认值为 `/apps/social/twitterprovider/config/`。不要编辑。
+     默认值为 `/apps/social/twitterprovider/config/`。请勿编辑。
 
    * **[!UICONTROL 用户路径]**
 
-      存储库中存储用户数据的位置。 对于社区站点，为确保成员有权查看彼此的配置文件，路径应为默认路径 `/home/users/community`.
+     存储库中存储用户数据的位置。 对于社区站点，为确保成员有权查看其他成员的配置文件，路径应为默认路径 `/home/users/community`.
 
    * **[!UICONTROL 启用参数]** 不编辑
    * **[!UICONTROL URL参数]** 不编辑
    * **[!UICONTROL 更新用户]**
 
-      如果选中，会在每次登录时刷新存储库中的用户数据，以反映配置文件更改或请求的其他数据。 默认值为取消选中。
-
+     如果选中，会在每次登录时刷新存储库中的用户数据，以反映配置文件更改或请求的其他数据。 默认值为取消选中。
 
 #### 后续步骤 {#next-steps-1}
 
@@ -364,14 +359,14 @@ facebook和Twitter的后续步骤相同：
 
 * 确保 [AdobeGranite OAuth身份验证处理程序](#adobe-granite-oauth-authentication-handler) 已在所有发布实例上启用。
 * 确保已发布云服务。
-* 确保已发布社区站点。
+* 确保社区站点已发布。
 * 在浏览器中启动已发布的站点。
 例如， http://localhost:4503/content/sites/engage/en.html
 * 选择 **[!UICONTROL 登录]**.
 * 选择 **[!UICONTROL 使用Facebook登录]** 或 **[!UICONTROL 使用Twitter登录]**.
 * 如果尚未登录Facebook或Twitter，请使用相应的凭据登录。
-* 根据Facebook或Twitter应用程序显示的对话框，可能需要授予权限。
-* 请注意，页面顶部的工具栏已更新以反映成功登录。
+* 根据Facebook或Twitter应用程序显示的对话框，可能有必要授予权限。
+* 请注意，页面顶部的工具栏已更新，以反映已成功登录。
 * 选择 **[!UICONTROL 个人资料]**：配置文件页面显示用户的头像图像、名字和姓氏。 它还根据允许的字段/参数显示Facebook或Twitter配置文件中的信息。
 
 ## AEM平台OAuth配置 {#aem-platform-oauth-configurations}
@@ -383,9 +378,9 @@ facebook和Twitter的后续步骤相同：
 要在发布时启用身份验证处理程序，只需打开OSGi配置并保存它即可：
 
 * 使用管理员权限登录。
-* 导航到 [Web控制台](../../help/sites-deploying/configuring-osgi.md).
+* 导航至 [Web控制台](../../help/sites-deploying/configuring-osgi.md).
 例如， http://localhost:4503/system/console/configMgr
-* 查找 `Adobe Granite OAuth Authentication Handler`.
+* 定位 `Adobe Granite OAuth Authentication Handler`.
 * 选择以打开配置进行编辑。
 * 选择&#x200B;**[!UICONTROL 保存]**。
 
@@ -393,18 +388,18 @@ facebook和Twitter的后续步骤相同：
 
 >[!CAUTION]
 >
->请注意不要将身份验证处理程序与的Facebook或Twitter实例混淆 *AdobeGranite OAuth应用程序和提供程序*.
+>请注意不要将身份验证处理程序与Facebook或Twitter实例混淆 *AdobeGranite OAuth应用程序和提供程序*.
 
 ![graniteoauth1](assets/graniteoauth1.png)
 
 ### AdobeGranite OAuth应用程序和提供程序 {#adobe-granite-oauth-application-and-provider}
 
-创建Facebook或Twitter的云服务时，实例 `Adobe Granite OAuth Authentication Handler` 创建。
+创建Facebook或Twitter的云服务后， `Adobe Granite OAuth Authentication Handler` 创建。
 
 要找到为Facebook或Twitter应用程序创建的实例，请执行以下操作：
 
 1. 使用管理员权限登录。
-1. 导航到 [Web控制台](../../help/sites-deploying/configuring-osgi.md).
+1. 导航至 [Web控制台](../../help/sites-deploying/configuring-osgi.md).
 
    例如，http://localhost:4503/system/console/configMgr。
 
@@ -412,58 +407,59 @@ facebook和Twitter的后续步骤相同：
 
    * 查找实例，其中 **[!UICONTROL 客户端ID]** 匹配 **[!UICONTROL 应用程序ID]**.
 
-      ![graniteoauth2](assets/graniteoauth2.png)
+     ![graniteoauth2](assets/graniteoauth2.png)
 
-      除以下属性外，配置的其他属性保持不变：
+     除以下属性外，配置的其他属性保持不变：
 
    * **[!UICONTROL 配置ID]**
 
-      (*必需*) OAuth配置ID必须是唯一的。 在创建云服务时自动生成。
+     (*必填*) OAuth配置ID必须是唯一的。 在创建云服务时自动生成。
 
    * **[!UICONTROL 客户端 ID]**
 
-      (*必需*)创建云服务时提供的应用程序ID。
+     (*必填*)创建云服务时提供的应用程序ID。
 
    * **[!UICONTROL 客户端密钥]**
 
-      (*必需*)创建云服务时提供的应用程序密码。
+     (*必填*)创建云服务时提供的应用程序密钥。
 
    * **[!UICONTROL 范围]**
 
-      (*可选*)可从提供商处请求额外的允许范围。 默认范围包括提供社交身份验证和配置文件数据所需的权限。
+     (*可选*)可从提供程序请求额外的允许范围。 默认范围包括提供社交身份验证和配置文件数据所需的权限。
 
    * **[!UICONTROL 提供程序ID]**
 
-      (*必需*)AEM Communities的提供程序ID是在创建云服务时设置的。 不要编辑。 对于Facebook Connect，值为 *soco -facebook*. 对于Twitter Connect，值为 *soco -twitter*.
+     (*必填*)AEM Communities的提供程序ID在创建云服务时设置。 请勿编辑。 对于Facebook Connect，值为 *soco -facebook*. 对于Twitter连接，值为 *soco -twitter*.
 
    * **[!UICONTROL 组]**
 
-      (*推荐*)将创建的用户添加到的一个或多个成员组。 对于AEM Communities，建议列出社区站点的成员组。
+     (*推荐*)将一个或多个已创建用户添加到其中的成员组。 对于AEM Communities，建议列出社区站点的成员组。
 
    * **[!UICONTROL 回调 URL]**
 
-      (*可选*)使用OAuth提供程序配置的URL，用于将客户端重定向回。 使用相对URL可使用原始请求的主机。 留空将改用最初请求的URL。 后缀“/callback/j_security_check”会自动附加到此URL 。
+     (*可选*)使用OAuth提供程序配置的URL，用于将客户端重定向回。 使用相对URL以使用原始请求的主机。 留空将改用最初请求的URL。 后缀“/callback/j_security_check”会自动附加到此URL 。
+
    >[!NOTE]
    >
    >回调的域必须向提供商(Facebook或Twitter)注册。
 
-对于每个OAuth身份验证处理程序配置，在实例中创建了其他两个配置：
+对于每个OAuth身份验证处理程序配置，在该实例中创建两个其他配置：
 
-* Apache Jackrabbit Oak Default Sync Handler (org.apache.jackrabbit.oak.spi.security.authentication.external.impl.DefaultSyncHandler) — 此处不需要编辑，但您可以查看用户字段映射，了解Facebook字段如何映射到CQ用户配置文件节点。 另请注意，“同步处理程序名称”与OAuth提供程序配置的配置ID匹配。
+* Apache Jackrabbit Oak Default Sync Handler (org.apache.jackrabbit.oak.spi.security.authentication.external.impl.DefaultSyncHandler) — 无需编辑，但您可以查看用户字段映射，了解Facebook字段如何映射到CQ用户配置文件节点。 另请注意，“同步处理程序名称”与OAuth提供程序配置的配置ID匹配。
 * Apache Jackrabbit Oak外部登录模块(org.apache.jackrabbit.oak.spi.security.authentication.external.impl.ExternalLoginModuleFactory) — 此处不需要编辑，但您可能会注意到“身份提供程序名称”和“同步处理程序名称”相同，分别指向相应的OAuth和同步处理程序配置。
 
 有关更多信息，请参阅 [使用Apache Oak外部登录模块进行身份验证](https://jackrabbit.apache.org/oak/docs/security/authentication/externalloginmodule.html).
 
 ## OAuth用户遍历性能 {#oauth-user-traversal-performance}
 
-对于数十万用户使用其Facebook或Twitter登录名注册的社区网站，可通过添加以下Oak索引来提高网站访客使用其社交登录名时执行的查询的遍历性能。
+对于有数十万用户使用其Facebook或Twitter登录名注册的社区网站，可以通过添加以下Oak索引来提高网站访客使用其社交登录名时执行的查询的遍历性能。
 
 如果日志中出现遍历警告，建议添加此索引。
 
 在创作实例上，使用管理权限登录：
 
 1. 从全局导航：选择 **工具， [CRX/DE Lite](../../help/sites-developing/developing-with-crxde-lite.md).**
-1. 从ntBaseLucene副本创建一个名为ntBaseLucene-oauth的索引：
+1. 从ntBaseLucene的副本创建一个名为ntBaseLucene-oauth的索引：
 
    * 在节点下 `/oak:index`
    * 选择节点 `ntBaseLucene`
@@ -474,10 +470,10 @@ facebook和Twitter的后续步骤相同：
 
 1. 修改node ntBaseLucene-oauth的属性：
 
-   * **[!UICONTROL indexPath]**： `/oak:index/ntBaseLucene-oauth`
+   * **[!UICONTROL 索引路径]**： `/oak:index/ntBaseLucene-oauth`
    * **[!UICONTROL name]**： `oauthid-123****`
    * **[!UICONTROL 重新索引]**： `true`
-   * **[!UICONTROL reindexCount]**： `1`
+   * **[!UICONTROL 重新索引计数]**： `1`
 
 1. 在节点/oak：index/ntBaseLucene-oauth/indexRules/nt：base/properties下：
 
@@ -486,15 +482,15 @@ facebook和Twitter的后续步骤相同：
    * 修改节点的属性 `oauthid-123****`
 
       * **[!UICONTROL name]**： `oauthid-123****`
-   * 选择 **[!UICONTROL 全部保存]**.
 
+   * 选择 **[!UICONTROL 全部保存]**.
 
 * 对于 **name** `oauthid-123`，替换 *123* 使用Facebook ***应用程序ID*** 或Twitter ***使用者(API)密钥*** 这就是 **客户端ID** 在 [AdobeGranite OAuth应用程序和提供程序](social-login.md#adobe-granite-oauth-application-and-provider) 配置。
 
-   ![graniteoauth-crxde](assets/graniteoauth-crxde.png)
+  ![graniteoauth-crxde](assets/graniteoauth-crxde.png)
 
 有关其他信息和工具，请参阅 [Oak查询和索引](../../help/sites-deploying/queries-and-indexing.md).
 
 ## Dispatcher配置 {#dispatcher-configuration}
 
-参见 [为社区配置Dispatcher](dispatcher.md).
+请参阅 [为社区配置Dispatcher](dispatcher.md).

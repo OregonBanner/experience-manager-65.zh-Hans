@@ -1,20 +1,16 @@
 ---
 title: 扩展多站点管理器
-seo-title: Extending the Multi Site Manager
 description: 此页面可帮助您扩展多站点管理器的功能
-seo-description: This page helps you extend the functionalities of the Multi Site Manager
-uuid: dfa7d050-29fc-4401-8d4d-d6ace6b49bea
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
-discoiquuid: 6128c91a-4173-42b4-926f-bbbb2b54ba5b
 docset: aem65
 exl-id: bba64ce6-8b74-4be1-bf14-cfdf3b9b60e1
-source-git-commit: 71b3f7c6ad2c7712762a29518de6cf0639081cb7
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2585'
-ht-degree: 61%
+source-wordcount: '2578'
+ht-degree: 60%
 
 ---
 
@@ -23,7 +19,7 @@ ht-degree: 61%
 此页面可帮助您扩展多站点管理器的功能：
 
 * 了解MSM Java API的主要成员。
-* 创建可在转出配置中使用的新的同步操作.
+* 创建可在转出配置中使用的同步操作。
 * 修改默认语言和国家代码.
 
 <!-- * Remove the "Chapters" step in the Create Site wizard. -->
@@ -111,7 +107,7 @@ ht-degree: 61%
 
 * `LiveAction` 类包括以下方法：
 
-   * `getName`：返回操作的名称该名称用于引用操作，例如在转出配置中。
+   * `getName`: 返回操作的名称. 名称用于引用操作，例如在转出配置中。
    * `execute`: 执行该操作的任务.
 
 * `LiveActionFactory` 类包括以下成员：
@@ -182,8 +178,6 @@ Node sourcenode = source.adaptTo(javax.jcr.Node.class);
 
 ### 创建转出配置 {#create-the-rollout-configuration}
 
-要创建新的转出配置，请执行以下操作：
-
 1. 打开CRXDE Lite；例如：
    [http://localhost:4502/crx/de](http://localhost:4502/crx/de)
 
@@ -206,7 +200,7 @@ Node sourcenode = source.adaptTo(javax.jcr.Node.class);
 
 1. 在此下 **创建** 具有以下属性的节点：
 
-   * **名称**：转出配置的节点名称。 md#installed-synchronization-actions)，例如 `contentCopy` 或 `workflow`.
+   * **名称**：转出配置的节点名称。 md#installed-synchronization-actions)，例如， `contentCopy` 或 `workflow`.
    * **类型**：`cq:RolloutConfig`
 
 1. 向该节点添加以下属性：
@@ -240,7 +234,7 @@ Node sourcenode = source.adaptTo(javax.jcr.Node.class);
 1. **创建具有以下节点属性的节点：**
 
    * **名称**：同步操作的节点名称.
-名称必须与 **操作名称** 在下面的表格中 [同步操作](/help/sites-administering/msm-sync.md#installed-synchronization-actions)例如 `contentCopy` 或 `workflow`.
+名称必须与 **操作名称** 在下面的表格中 [同步操作](/help/sites-administering/msm-sync.md#installed-synchronization-actions)例如， `contentCopy` 或 `workflow`.
    * **类型**：`cq:LiveSyncAction`
 
 1. 根据需要添加和配置任意数量的同步操作节点。重新排列操作节点，使其顺序与您希望它们发生的顺序相一致。最顶层的操作节点首先出现。
@@ -600,7 +594,7 @@ In some cases, the **Chapters** selection is not required in the create site wiz
 1. In CRX Explorer, remove the node:
    `/etc/blueprints/weretail-english/jcr:content/dialog/items/tabs/items/tab_chap`.
 
-1. Navigate to `/libs/wcm/msm/templates/blueprint/defaults/livecopy_tab/items` and create a new node:
+1. Navigate to `/libs/wcm/msm/templates/blueprint/defaults/livecopy_tab/items` and create a node:
 
     1. **Name** = `chapters`; **Type** = `cq:Widget`.
 

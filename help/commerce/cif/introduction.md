@@ -3,9 +3,9 @@ title: 简介和概述
 description: Content and Commerce 的简介和概述。Experience Manager Commerce Integration Framework (CIF) 是 Adobe 推荐的模式，用于通过 Experience Cloud 集成和扩展来自 Adobe Commerce 和其他第三方商务解决方案的商务服务。
 thumbnail: introducing-aem-commerce.jpg
 exl-id: 52dad8f9-1812-42a3-8106-92b23f8517cd
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '871'
+source-wordcount: '869'
 ht-degree: 94%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 94%
 
 ## 介绍 AEM Commerce Integration Framework (CIF) {#cif-intro}
 
-由于这些项目必须处理集成商务解决方案方面的复杂性。商业解决方案可以是任何内容，从Adobe Commerce等商业解决方案到一组自定义商业服务。 集成高度依赖于用例和生态系统。它通常涉及不同的位置并具有许多不同的风格：
+由于这些项目必须处理集成商务解决方案方面的复杂性。商业解决方案可以是任何内容，从Adobe Commerce之类的商业解决方案到一组自定义商业服务。 集成高度依赖于用例和生态系统。它通常涉及不同的位置并具有许多不同的风格：
 
 * 集成复杂、动态的生态系统（示例产品目录）
 * 企业需要以高效的全渠道方式管理具有其生命周期的产品内容
@@ -58,7 +58,7 @@ CIF 加载项将产品上下文引入 Experience Manager 中，并提供产品�
 
 ### 价值实现时间 (TTV)
 
-使用加快项目开发 [AEM核心组件](https://www.aemcomponents.dev/)， [AEM Venia参考店面](https://github.com/adobe/aem-cif-guides-venia)， [AEM项目原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)和PWA(Headless Content and Commerce)的集成模式。
+使用加快项目开发 [AEM核心组件](https://www.aemcomponents.dev/)， [AEM Venia参考店面](https://github.com/adobe/aem-cif-guides-venia)， [AEM项目原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)和PWA的集成模式(Headless Content and Commerce)。
 
 CIF 旨在通过始终保持最新的加载项持续创新，使客户能够访问新的和改进的功能。
 

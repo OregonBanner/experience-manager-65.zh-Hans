@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 1099cc44-de6d-499e-8b52-f2f5811ae086
 docset: aem65
 exl-id: dcb66b6d-d731-493e-8936-12d529f6cbde
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '3221'
+source-wordcount: '3219'
 ht-degree: 6%
 
 ---
@@ -56,7 +56,7 @@ ht-degree: 6%
 
 有关如何在AEM项目中使用可编辑模板的信息，请参阅 [使用Lazybone创建AEM项目](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/create-aem-project-structure-using-lazybones/m-p/186478).
 
-创建新的可编辑模板时，您需要执行以下步骤：
+创建可编辑模板时，您可以：
 
 1. 创建 [模板文件夹](#template-folders). 此文件夹不是强制性的，但建议使用最佳实践。
 1. 选择 [模板类型](#template-type). 复制此类型以创建 [模板定义](#template-definitions).
@@ -416,7 +416,7 @@ ht-degree: 6%
 * 在可编辑模板类型上
 * 在可编辑模板上
 
-创建新的可编辑模板时，该值将从模板类型复制到单个模板。 如果类型上未设置该值，则可以在模板上设置该值。 创建模板后，不会从类型继承到模板。
+创建可编辑模板时，该值将从模板类型复制到单个模板。 如果类型上未设置该值，则可以在模板上设置该值。 创建模板后，不会从类型继承到模板。
 
 >[!CAUTION]
 >

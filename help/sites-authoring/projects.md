@@ -2,9 +2,9 @@
 title: 项目
 description: 通过“项目”，您可以将资源分组到一个实体中，该实体的通用共享环境使您能够轻松管理项目.
 exl-id: 632c0608-2ab8-4a5b-8251-cd747535449b
-source-git-commit: 1d64a9a6d6dfbc7606d7c222ef50a21bf9b902d6
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1365'
+source-wordcount: '1359'
 ht-degree: 32%
 
 ---
@@ -34,7 +34,7 @@ ht-degree: 32%
 
 ![“项目”控制台](assets/screen-shot_2019-03-05at125110.png)
 
-项目控制台与AEM中的其他控制台类似，允许对单个项目执行许多操作并调整您的项目视图。
+项目控制台与AEM中的其他控制台类似，允许对单个项目执行多个操作，并调整您的项目视图。
 
 ### 切换模式 {#modes}
 

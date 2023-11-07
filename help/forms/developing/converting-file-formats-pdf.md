@@ -11,9 +11,9 @@ topic-tags: operations
 discoiquuid: 180cac3f-6378-42bc-9a47-60f9f08a7103
 role: Developer
 exl-id: 10535740-e3c2-4347-a88f-86706ad699b4
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '7848'
+source-wordcount: '7847'
 ht-degree: 0%
 
 ---
@@ -619,7 +619,7 @@ AppMon使用标准的Win32 API与第三方应用程序进行交互，以传输UI
   <tr>
    <td><p>脚本 </p></td>
    <td><p>指定生成PDF服务和本机应用程序之间的交互。 此类交互通常指示应用程序将文件打印到Adobe PDF驱动程序。 </p><p>该脚本包含指导本机应用程序打开特定对话框以及为这些对话框中的字段和按钮提供特定响应的说明。 </p></td>
-   <td><p>生成PDF服务包括所有支持的本机应用程序的脚本文件。 您可以使用XML编辑应用程序修改这些文件。</p><p>要添加对新的本机应用程序的支持，必须创建新的脚本文件。 (请参阅 <a href="converting-file-formats-pdf.md#creating-or-modifying-an-additional-dialog-xml-file-for-a-native-application">为本机应用程序创建或修改其他对话框XML文件</a>.) </p></td>
+   <td><p>生成PDF服务包括所有支持的本机应用程序的脚本文件。 您可以使用XML编辑应用程序修改这些文件。</p><p>要添加对新的本机应用程序的支持，必须创建一个脚本文件。 (请参阅 <a href="converting-file-formats-pdf.md#creating-or-modifying-an-additional-dialog-xml-file-for-a-native-application">为本机应用程序创建或修改其他对话框XML文件</a>.) </p></td>
   </tr>
   <tr>
    <td><p>常规对话框说明 </p></td>

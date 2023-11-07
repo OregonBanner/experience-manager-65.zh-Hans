@@ -1,14 +1,12 @@
 ---
 title: 自定义独立安装
-seo-title: Custom Standalone Install
 description: 了解安装独立AEM实例时可用的选项。
-seo-description: Learn about the options available when installing a standalone AEM instance.
 content-type: reference
 topic-tags: deploying
 exl-id: d6484bb7-8123-4f42-96e8-aa441b1093f3
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1616'
+source-wordcount: '1618'
 ht-degree: 0%
 
 ---
@@ -45,7 +43,7 @@ AEM的默认端口为4502。 如果该端口不可用或已在使用中，则Qui
 
 ### Java 11注意事项 {#java-considerations}
 
-如果您运行OracleJava 11（或Java的常规版本高于8），则启动AEM时需要在命令行中添加其他开关。
+如果您运行OracleJava 11（或者Java的通常版本高于8），则在启动AEM时，必须在命令行中添加其他开关。
 
 * 以下 —  `-add-opens` 需要添加交换机以防止相关的反射访问中的警告消息 `stdout.log`
 
@@ -143,7 +141,7 @@ AEM的默认端口为4502。 如果该端口不可用或已在使用中，则Qui
 
 ## 重新定义临时工作目录的位置 {#redefining-the-location-of-the-temporary-work-directory}
 
-Java计算机临时文件夹的缺省位置为 `/tmp`. AEM也使用此文件夹，例如在构建包时。
+Java计算机临时文件夹的缺省位置为 `/tmp`. 例如，在构建包时，AEM也使用此文件夹。
 
 如果要更改临时文件夹的位置（例如，需要具有更多可用空间的目录），请定义* `<new-tmp-path>`*通过添加JVM参数：
 

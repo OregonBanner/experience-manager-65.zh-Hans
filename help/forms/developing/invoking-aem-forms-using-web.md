@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 role: Developer
 exl-id: 3139564f-9346-4933-8e39-2e1642bff097
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '9901'
+source-wordcount: '9888'
 ht-degree: 0%
 
 ---
@@ -143,7 +143,7 @@ AEM Forms支持以下Web服务标准：
 
 **AEM Forms流程WSDL定义**
 
-必须在WSDL定义中指定应用程序名称和进程名称，才能访问属于在Workbench中创建的进程的WSDL。 假定应用程序的名称为 `MyApplication` 进程名称为 `EncryptDocument`. 在这种情况下，请指定以下WSDL定义：
+在WSDL定义中指定应用程序名称和进程名称，以访问属于在Workbench中创建的进程的WSDL。 假定应用程序的名称为 `MyApplication` 进程名称为 `EncryptDocument`. 在这种情况下，请指定以下WSDL定义：
 
 ```java
  http://localhost:8080/soap/services/MyApplication/EncryptDocument?wsdl
@@ -208,7 +208,7 @@ A `BLOB` 对象向和从AEM Forms服务发送和检索二进制数据(例如，P
 
 **在服务请求中提供BLOB对象**
 
-如果AEM Forms服务操作需要 `BLOB` 键入作为输入值，创建 `BLOB` 键入应用程序逻辑。 (许多Web服务快速启动位于 *使用AEM表单编程* 显示如何使用BLOB数据类型。)
+如果AEM Forms服务操作需要 `BLOB` 键入作为输入值，创建 `BLOB` 键入应用程序逻辑。 (许多Web服务快速启动于 *使用AEM表单编程* 显示如何使用BLOB数据类型。)
 
 将值分配给属于 `BLOB` 实例如下所示：
 
@@ -357,7 +357,7 @@ A `BLOB` 对象向和从AEM Forms服务发送和检索二进制数据(例如，P
 1. 安装JDK 1.6或更高版本。
 
    * 将JDK bin目录添加到类路径中。
-   * 将JRE bin目录添加到类路径中。 此纸盒位于 `[JDK_INSTALL_LOCATION]/jre` 目录。
+   * 将JRE bin目录添加到类路径中。 此箱位于 `[JDK_INSTALL_LOCATION]/jre` 目录。
    * 设置 `JAVA_HOME` 环境变量到安装JDK的目录。
 
    JDK 1.6包括在build.xml文件中使用的wsimport程序。 JDK 1.5不包括该程序。
@@ -431,7 +431,7 @@ A `BLOB` 对象向和从AEM Forms服务发送和检索二进制数据(例如，P
 
 1. 将JAVA文件打包到JAR文件中。 如果您在使用Eclipse，请执行以下步骤：
 
-   * 创建一个新的Java项目，该项目用于将代理JAVA文件打包到JAR文件中。
+   * 创建一个Java项目，该项目用于将代理JAVA文件打包到JAR文件中。
    * 在项目中创建源文件夹。
    * 创建 `com.adobe.idp.services` 包中。
    * 选择 `com.adobe.idp.services` 包，然后将JAVA文件从adobe/idp/services文件夹导入到包中。
@@ -440,11 +440,11 @@ A `BLOB` 对象向和从AEM Forms服务发送和检索二进制数据(例如，P
    * 将Java编译器的兼容级别设置为5.0或更高。
    * 生成项目。
    * 将项目导出为JAR文件。
-   * 在客户端项目的类路径中导入此JAR文件。 此外，导入位于中的所有JAR文件 &lt;install directory=&quot;&quot;>\Adobe\Adobe_Experience_Manager_forms\sdk\client-libs\thirdparty.
+   * 在客户端项目的类路径中导入此JAR文件。 此外，还将所有JAR文件导入 &lt;install directory=&quot;&quot;>\Adobe\Adobe_Experience_Manager_forms\sdk\client-libs\thirdparty.
 
    >[!NOTE]
    >
-   >位于“使用AEM进行编程”表单中的所有Java Web服务快速启动(Forms服务除外)，均使用JAX-WS创建Java代理文件。 此外，所有Java Web服务都快速启动，使用SwaRef。 (请参阅 [使用SwaRef调用AEM Forms](#invoking-aem-forms-using-swaref).)
+   >使用AEM窗体编程中的所有Java Web服务快速启动(Forms服务除外)使用JAX-WS创建Java代理文件。 此外，所有Java Web服务都快速启动，使用SwaRef。 (请参阅 [使用SwaRef调用AEM Forms](#invoking-aem-forms-using-swaref).)
 
 **另请参阅**
 
@@ -584,7 +584,7 @@ A `BLOB` 对象向和从AEM Forms服务发送和检索二进制数据(例如，P
 
 **创建代理类**
 
-可以使用随Microsoft Visual Studio提供的工具创建一个用于创建.NET客户端程序集的代理类。 该工具的名称为wsdl.exe，它位于Microsoft Visual Studio安装文件夹中。 要创建代理类，请打开命令提示符并导航到包含wsdl.exe文件的文件夹。 有关wsdl.exe工具的更多信息，请参见 *MSDN帮助*.
+可以使用随Microsoft Visual Studio提供的工具创建一个用于创建.NET客户端程序集的代理类。 该工具的名称为wsdl.exe，位于Microsoft Visual Studio安装文件夹中。 要创建代理类，请打开命令提示符并导航到包含wsdl.exe文件的文件夹。 有关wsdl.exe工具的更多信息，请参见 *MSDN帮助*.
 
 在命令提示符下输入以下命令：
 
@@ -669,7 +669,7 @@ A `BLOB` 对象向和从AEM Forms服务发送和检索二进制数据(例如，P
    >替换 `hiro-xp` *包含托管AEM Forms的J2EE应用程序服务器的IP地址。*
 
 1. 将使用JAX-WS创建的Java代理类打包到JAR文件中。
-1. 包括位于以下路径中的Java代理JAR文件和JAR文件：
+1. 在以下路径中包含Java代理JAR文件和JAR文件：
 
    &lt;install directory=&quot;&quot;>\Adobe\Adobe_Experience_Manager_forms\sdk\client-libs\thirdparty
 
@@ -864,7 +864,7 @@ A `BLOB` 对象向和从AEM Forms服务发送和检索二进制数据(例如，P
    >替换 `hiro-xp` *，其中包含托管AEM Forms的J2EE应用程序服务器的IP地址。*
 
 1. 将使用JAX-WS创建的Java代理类打包到JAR文件中。
-1. 包括位于以下路径中的Java代理JAR文件和JAR文件：
+1. 在以下路径中包含Java代理JAR文件和JAR文件：
 
    &lt;install directory=&quot;&quot;>\Adobe\Adobe_Experience_Manager_forms\sdk\client-libs\thirdparty
 
@@ -966,7 +966,7 @@ A `BLOB` 对象向和从AEM Forms服务发送和检索二进制数据(例如，P
 1. 调用 `MyApplication/EncryptDocument` 通过调用 `MyApplication_EncryptDocumentService` 对象的 `invoke` 方法和传递 `BLOB` 对象。 此过程会返回PDF文档在 `BLOB` 对象。
 1. 创建 `System.UriBuilder` 对象，方法是使用其构造函数并传递返回的值 `BLOB` 对象的 `remoteURL` 数据成员。
 1. 转换 `System.UriBuilder` 对象到 `System.IO.Stream` 对象。 （此列表后面的C#快速入门说明了如何执行此任务。）
-1. 创建字节数组，并使用位于以下位置的数据填充该字节数组： `System.IO.Stream` 对象。
+1. 创建字节数组，然后使用 `System.IO.Stream` 对象。
 1. 创建 `System.IO.BinaryWriter` 对象通过调用其构造函数并传递 `System.IO.FileStream` 对象。
 1. PDF通过调用 `System.IO.BinaryWriter` 对象的 `Write` 和传递字节数组。
 
@@ -987,7 +987,7 @@ A `BLOB` 对象向和从AEM Forms服务发送和检索二进制数据(例如，P
    >替换 `hiro-xp` *，其中包含托管AEM Forms的J2EE应用程序服务器的IP地址。*
 
 1. 将使用JAX-WS创建的Java代理类打包到JAR文件中。
-1. 包括位于以下路径中的Java代理JAR文件和JAR文件：
+1. 在以下路径中包含Java代理JAR文件和JAR文件：
 
    &lt;install directory=&quot;&quot;>\Adobe\Adobe_Experience_Manager_forms\sdk\client-libs\thirdparty
 
@@ -1106,7 +1106,7 @@ A `BLOB` 对象向和从AEM Forms服务发送和检索二进制数据(例如，P
 1. 调用 `EncryptDocumentServiceWse.RequestSoapContext.Attachments.Add` 方法并传递 `Microsoft.Web.Services2.Dime.DimeAttachment` 对象。
 1. 调用 `MyApplication/EncryptDocument` 通过调用 `EncryptDocumentServiceWse` 对象的 `invoke` 方法和传递 `BLOB` 包含DIME附件的对象。 此过程会返回PDF文档在 `BLOB` 对象。
 1. 通过获取返回的值获取附件标识符值 `BLOB` 对象的 `attachmentID` 数据成员。
-1. 循环访问位于中的附件 `EncryptDocumentServiceWse.ResponseSoapContext.Attachments` 并使用附件标识符值获取加密的PDF文档。
+1. 循环访问中的附件 `EncryptDocumentServiceWse.ResponseSoapContext.Attachments` 并使用附件标识符值获取加密的PDF文档。
 1. 获取 `System.IO.Stream` 对象，方法是获取 `Attachment` 对象的 `Stream` 数据成员。
 1. 创建字节数组，并将该字节数组传递给 `System.IO.Stream` 对象的 `Read` 方法。 此方法使用表示加密PDF文档的数据流填充字节数组。
 1. 创建 `System.IO.FileStream` 对象，方法是调用其构造函数并传递表示PDF文件位置的字符串值。 此对象表示加密的PDF文档。

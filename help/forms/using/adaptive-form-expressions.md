@@ -10,7 +10,7 @@ discoiquuid: 2fd2276e-cfe3-47ad-94c1-9c7af56b7a17
 docset: aem65
 feature: Adaptive Forms
 exl-id: 048bd9e8-ef34-40fb-9f46-73743d7b47c8
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '2802'
 ht-degree: 2%
@@ -284,7 +284,7 @@ guideBridge.on("elementValueChanged", function (event, data)  {
 1. 打开已创建节点的属性选项卡。 例如，打开的“属性”选项卡 `textboxpatterns`. 添加 `guideComponentType` 属性并将其值设置为 *fd/af/components/formatter/guideTextBox*.
 
 1. 此属性的值因要定义模式的字段而异。 对于数字字段，其值 `guideComponentType` 属性为 *fd/af/components/formatter/guideNumericBox*. “日期选取器”字段的值为 *fd/af/components/formatter/guideDatepicker*.&quot;
-1. 您可以通过分配属性到来添加自定义模式 `textboxpatterns` 节点。 添加名为的属性(例如 `pattern1`)，并将其值设置为要添加的pattern。 例如，添加属性 `pattern1` 值为Fax=text{99-999-9999999}. 该模式适用于您在自适应Forms中使用的所有文本框。
+1. 您可以通过分配属性到来添加自定义模式 `textboxpatterns` 节点。 添加具有名称的属性(例如， `pattern1`)，并将其值设置为要添加的pattern。 例如，添加属性 `pattern1` 值为Fax=text{99-999-9999999}. 该模式适用于您在自适应Forms中使用的所有文本框。
 
    ![在CrxDe中为字段创建自定义模式](assets/creating-custom-patterns.png)
 

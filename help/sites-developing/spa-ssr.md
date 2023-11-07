@@ -7,9 +7,9 @@ topic-tags: spa
 content-type: reference
 docset: aem65
 exl-id: a80bc883-e0f6-4714-bd28-108262f96d77
-source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1724'
+source-wordcount: '1723'
 ht-degree: 2%
 
 ---
@@ -172,7 +172,7 @@ AEM中适用于SPA的SSR需要Adobe I/O Runtime，应用程序内容服务器端
 
 >[!CAUTION]
 >
->此 [We.Retail日志应用程序](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail-journal) 仅用于演示目的，因此使用Node.js作为简单示例，而不是推荐的Adobe I/O Runtime。 此示例不应用于任何项目工作。
+>此 [We.Retail日志应用程序](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail-journal) 仅用于演示目的，因此使用Node.js作为简单示例，而不是推荐的Adobe I/O Runtime。 请勿将此示例用于任何项目工作。
 
 >[!NOTE]
 >

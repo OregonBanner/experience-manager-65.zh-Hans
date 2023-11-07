@@ -2,7 +2,7 @@
 title: 优化 GraphQL 查询
 description: 了解在Adobe Experience Manager as a Cloud Service中筛选、分页和排序内容片段以进行Headless内容投放时，如何优化GraphQL查询。
 exl-id: 47d0570b-224e-4109-b94e-ccc369d7ac5f
-source-git-commit: 3ec34efc14cc49d0f45cb4b175573c33c1cc232e
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '1966'
 ht-degree: 60%
@@ -124,7 +124,7 @@ This capability allows AEM to further cache content within the scope of GraphQL 
 
 **Further Reference**
 
-Please contact Adobe to enable this capability for your AEM Cloud Service program and environments. 
+Contact Adobe to enable this capability for your AEM Cloud Service program and environments. 
 -->
 
 ### GraphQL查询优化 {#graphql-query-optimization}

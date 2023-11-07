@@ -2,9 +2,9 @@
 title: AEM Content and Commerce 2020版发行说明
 description: Adobe Experience Manager Content and Commerce 2020版发行说明。
 exl-id: 440ecd8e-55dc-4606-8678-c65cda1d2b3a
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1354'
+source-wordcount: '1353'
 ht-degree: 11%
 
 ---

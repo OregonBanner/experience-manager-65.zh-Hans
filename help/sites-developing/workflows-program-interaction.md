@@ -10,9 +10,9 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: cb621332-a149-4f8d-9425-fd815b033c38
 exl-id: 2b396850-e9fb-46d9-9daa-ebd410a9e1a5
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2009'
+source-wordcount: '2008'
 ht-degree: 0%
 
 ---
@@ -99,7 +99,7 @@ REST API支持以下操作：
   </tr>
   <tr>
    <td><code>POST</code></td>
-   <td><p>创建新的工作流实例。 参数包括：<br /> - <code>model</code>：相应工作流模型的ID (URI)<br /> - <code>payloadType</code>：包含有效负载的类型(例如 <code>JCR_PATH</code> 或URL)。<br /> 有效负载将作为参数发送 <code>payload</code>. A <code>201</code> (<code>CREATED</code>)响应将发送回，且位置标头包含新工作流实例资源的URL。</p> </td>
+   <td><p>创建新的工作流实例。 参数包括：<br /> - <code>model</code>：相应工作流模型的ID (URI)<br /> - <code>payloadType</code>：包含有效负载的类型(例如， <code>JCR_PATH</code> 或URL)。<br /> 有效负载将作为参数发送 <code>payload</code>. A <code>201</code> (<code>CREATED</code>)响应将发送回，且位置标头包含新工作流实例资源的URL。</p> </td>
   </tr>
  </tbody>
 </table>
@@ -132,7 +132,7 @@ REST API支持以下操作：
   </tr>
   <tr>
    <td><code>POST</code></td>
-   <td>更改实例的状态。 新状态将作为参数发送 <code>state</code> 和必须具有下列值之一： <code>RUNNING</code>， <code>SUSPENDED</code>，或 <code>ABORTED</code>.<br /> 如果无法访问新状态（例如，暂停已终止的实例时），则 <code>409</code> (<code>CONFLICT</code>)响应发送回客户端。</td>
+   <td>更改实例的状态。 新状态将作为参数发送 <code>state</code> 和必须具有下列值之一： <code>RUNNING</code>， <code>SUSPENDED</code>，或 <code>ABORTED</code>.<br /> 如果无法访问新状态（例如，暂停已终止的实例时）， <code>409</code> (<code>CONFLICT</code>)响应发送回客户端。</td>
   </tr>
  </tbody>
 </table>
@@ -488,7 +488,7 @@ var wfsession = sling.getRequest().getResource().getResourceResolver().adaptTo(P
 >
 >删除不会删除模型节点。
 
-创建新模型时：
+创建模型时：
 
 * 工作流模型编辑器要求模型使用以下特定的节点结构 `/var/workflow/models`. 模型的父节点必须属于以下类型 `cq:Page` 拥有 `jcr:content` 节点具有以下属性值：
 

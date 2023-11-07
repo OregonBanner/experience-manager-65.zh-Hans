@@ -8,9 +8,9 @@ geptopics: SG_AEMFORMS/categories/managing_endpoints
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: dcf15c42-9ec6-4d1c-ad41-083aa0b8c7ae
 exl-id: 33583a12-4f20-4146-baa4-c9854e454bbf
-source-git-commit: 6caf3ef4a00275f0f73be52b6a9ccba77d277f1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '3776'
+source-wordcount: '3775'
 ht-degree: 0%
 
 ---
@@ -92,7 +92,7 @@ ht-degree: 0%
 
 **收件箱主机：** 要扫描的电子邮件提供程序的收件箱主机名或IP地址。
 
-**收件箱端口：** 要扫描的电子邮件提供商的收件箱端口号。 如果该值为0，将使用默认的IMAP或POP3端口。
+**收件箱端口：** 要扫描的电子邮件提供商的收件箱端口号。 如果该值为0，则使用默认的IMAP或POP3端口。
 
 **收件箱协议：** 用于扫描收件箱的电子邮件端点的电子邮件协议。 选项为IMAP或POP3。 收件箱主机邮件服务器必须支持这些协议。
 

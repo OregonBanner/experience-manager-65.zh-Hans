@@ -11,9 +11,9 @@ topic-tags: operations
 discoiquuid: d2c95881-6c02-4e34-85af-84607df54287
 role: Developer
 exl-id: a07e51ca-fea0-4719-8071-1b7e805de2ae
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '9109'
+source-wordcount: '9095'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ ht-degree: 0%
 >
 >有关使用Workbench创建Forms应用程序的信息，请参阅 [Workbench帮助](https://www.adobe.com/go/learn_aemforms_workbench_63).
 
-位于AEM Forms存储库中的资源的路径为：
+AEM Forms存储库中资源的路径为：
 
 `Applications/Application-name/Application-version/Folder.../Filename`
 
@@ -50,7 +50,7 @@ ht-degree: 0%
 >
 >您可以使用Web浏览器浏览AEM Forms存储库。 要浏览存储库，请在Web浏览器中输入以下URL `https://[server name]:[server port]/repository`. 您可以使用Web浏览器验证与使用AEM Forms存储库部分关联的快速入门结果。 例如，如果将内容添加到AEM Forms存储库，则可以在Web浏览器中查看该内容。 (请参阅 [快速入门（SOAP模式）：使用Java API编写资源](/help/forms/developing/repository-service-api-quick-starts.md#quick-start-soap-mode-writing-a-resource-using-the-java-api).)
 
-存储库API提供了许多可用于存储和检索存储库信息的操作。 例如，在处理应用程序时需要资源时，您可以获取资源列表或检索存储在存储库中的特定资源。
+存储库API提供了几种可用于存储和检索存储库信息的操作。 例如，在处理应用程序时需要资源时，您可以获取资源列表或检索存储在存储库中的特定资源。
 
 >[!NOTE]
 >
@@ -305,7 +305,7 @@ ht-degree: 0%
 
 1. 将资源写入目标文件夹
 
-   调用 `ResourceRepositoryClient` 对象的 `writeResource` 方法并传入文件夹的URI，以及 `Resource` 对象。
+   调用 `ResourceRepositoryClient` 对象的 `writeResource` 方法，并在文件夹的URI中传递， `Resource` 对象。
 
 **另请参阅**
 
@@ -354,7 +354,7 @@ ht-degree: 0%
 
 1. 将资源写入目标文件夹
 
-   调用 `RepositoryServiceService` 对象的 `writeResource` 方法并传入文件夹的URI，以及 `Resource` 对象。 通过 `null` 其他两个参数。
+   调用 `RepositoryServiceService` 对象的 `writeResource` 方法，并在文件夹的URI中传递， `Resource` 对象。 通过 `null` 其他两个参数。
 
 **另请参阅**
 
@@ -999,7 +999,7 @@ A *查询* 包含一个或多个用条件逻辑连接的语句。 A *语句* 由
 
 您可以锁定资源或资源集，以供特定用户独占使用，或在多个用户之间共享使用。 共享锁表示资源会发生一些情况，但不会阻止其他任何人对该资源执行操作。 共享锁定应被视为一种信令机制。 独占锁意味着锁定资源的用户将要更改资源，并且该锁可确保在用户不再需要访问资源并已释放该锁之前，其他人都无法执行此操作。 如果存储库管理员解锁资源，则该资源上的所有独占和共享锁定将被自动删除。 此类操作适用于用户不再可用并且未解锁资源的情况。
 
-锁定资源后，当您查看位于Workbench中的“资源”选项卡时，将出现一个锁定图标，如下图所示。
+锁定资源后，当您在Workbench中查看“资源”选项卡时，会出现一个锁定图标，如下图所示。
 
 ![lr_lr_lockrepository](assets/lr_lr_lockrepository.png)
 

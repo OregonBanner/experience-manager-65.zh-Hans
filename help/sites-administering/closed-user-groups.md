@@ -8,10 +8,10 @@ content-type: reference
 docset: aem65
 exl-id: 39e35a07-140f-4853-8f0d-8275bce27a65
 feature: Security
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '6836'
-ht-degree: 1%
+source-wordcount: '6818'
+ht-degree: 0%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->为了简单起见，本文档中将使用CUG缩写。
+>为了简单起见，本文档中采用了CUG缩写。
 
 新实施的目标是在需要时涵盖现有功能，同时解决旧版本的问题和设计限制。 最终得到一种具有以下特征的新CUG设计：
 
@@ -104,7 +104,7 @@ CUG的关键功能是限制内容存储库中给定树上除选定承担者外�
    * 对嵌套CUG的过度需求可能会突显内容设计中的问题
    * 对CUG的过度需求（例如，在每个页面上）可能表明需要一种自定义授权模型，该模型可能更适合匹配现有应用程序和内容的特定安全需求。
 
-* 将CUG策略支持的路径限制为存储库中的几棵树，以便优化性能。 例如，自AEM 6.3起，仅允许将/content节点下的CUG作为默认值提供。
+* 将CUG策略支持的路径限制为存储库中的几棵树，以便优化性能。 例如，自AEM 6.3起，只允许将/content节点下的CUG作为默认值提供。
 * CUG策略旨在向一小部分主体授予读取权限。 对大量主体的需求可能会突出显示内容或应用程序设计中的问题，应当重新考虑。
 
 ### 身份验证：定义身份验证要求 {#authentication-defining-the-auth-requirement}
@@ -207,7 +207,7 @@ Oak文档涵盖了新的CUG策略在存储库内容中的反映方式。 有关�
 
 #### 设置新的CUG策略 {#set-a-new-cug-policy}
 
-此代码用于在之前未设置CUG的节点上应用新的CUG策略。 请注意 `getApplicablePolicies` 将仅返回以前未设置的新策略。 最后，策略需要回写，更改需要保留。
+此代码用于在之前未设置CUG的节点上应用新的CUG策略。 请注意 `getApplicablePolicies` 仅返回以前未设置的新策略。 最后，策略需要回写，更改需要保留。
 
 ```java
 String path = [...] // needs to be a supported, absolute path
@@ -243,7 +243,7 @@ session.save();
 
 #### 编辑现有CUG策略 {#edit-an-existing-cug-policy}
 
-编辑现有CUG策略需要执行以下步骤。 请注意，修改后的策略需要回写，并且更改需要通过使用保留 `javax.jcr.Session.save()`.
+编辑现有CUG策略需要执行以下步骤。 修改后的策略需要回写，并且更改需要使用保留 `javax.jcr.Session.save()`.
 
 ```java
 String path = [...] // needs to be a supported, absolute path
@@ -281,7 +281,7 @@ JCR访问控制管理定义了一种尽力而为的方法，用于检索在给�
 
 >[!NOTE]
 >
->请注意以下两者之间的区别 `getEffectivePolicies` 以及后续代码示例，该示例向上遍历层级以查找给定路径是否已是现有CUG的一部分。
+>两者之间的差异 `getEffectivePolicies` 以及后续代码示例，该示例向上遍历层级以查找给定路径是否已是现有CUG的一部分。
 
 ```java
 String path = [...] // needs to be a supported, absolute path
@@ -338,7 +338,7 @@ while (isSupportedPath(path)) {
 
 #### 添加新的身份验证要求 {#adding-a-new-auth-requirement}
 
-下面详细说明了创建新身份验证要求的步骤。 请注意，只有在满足以下条件时，才会向Apache Sling Authenticator注册该要求： `RequirementHandler` 已为包含目标节点的树进行了配置。
+创建身份验证要求的步骤详述如下。 仅当符合以下条件时，此要求才会向Apache Sling Authenticator注册： `RequirementHandler` 已为包含目标节点的树进行了配置。
 
 ```java
 Node targetNode = [...]
@@ -349,7 +349,7 @@ session.save();
 
 #### 使用登录路径添加新身份验证要求 {#add-a-new-auth-requirement-with-login-path}
 
-创建新的身份验证要求（包括登录路径）的步骤。 请注意，只有在符合以下条件时，才会向Apache Sling身份验证器注册登录路径的要求和排除项： `RequirementHandler` 已为包含目标节点的树进行了配置。
+创建包含登录路径的身份验证要求的步骤。 请注意，只有在符合以下条件时，才会向Apache Sling身份验证器注册登录路径的要求和排除项： `RequirementHandler` 已为包含目标节点的树进行了配置。
 
 ```java
 Node targetNode = [...]
@@ -582,7 +582,7 @@ while (isSupported(node)) {
 
 #### 从CUG评估中排除承担者 {#excluding-principals-from-cug-evaluation}
 
-在前一实施中，已采用免除个人主参与者的CUG评估。 新的CUG授权通过名为CugExclude的专用接口覆盖这一点。 Apache Jackrabbit Oak 1.4附带默认实施，该实施不包括固定主体集以及允许配置单个主体名称的扩展实施。 后者在AEM发布实例中配置。
+在前一实施中，已采用免除个人主参与者的CUG评估。 新的CUG授权通过名为CugExclude的专用接口覆盖这一点。 Apache Jackrabbit Oak 1.4附带默认实施，该实施不包括固定主体集和允许配置单个主体名称的扩展实施。 后者在AEM发布实例中配置。
 
 自AEM 6.3起的默认设置可防止以下主体受CUG策略的影响：
 
@@ -768,7 +768,7 @@ CUG重写的身份验证相关部分只附带一个与AdobeGranite身份验证�
 
 这两个元素均创建于 `cq:Page`. 对于当前设计，MSM仅处理 `cq:PageContent` (`jcr:content`)节点。
 
-因此，CUG组无法从Blueprint转出到Live Copies。 请在配置 Live Copy 时对此进行规划。
+因此，CUG组无法从Blueprint转出到Live Copies。 在配置Live Copy时对此进行规划。
 
 ## 对新的CUG实施进行的更改 {#changes-with-the-new-cug-implementation}
 

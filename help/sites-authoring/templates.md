@@ -1,32 +1,28 @@
 ---
 title: 创建页面模板
-seo-title: Creating Page Templates
 description: 模板可定义生成页面的结构，而且有了模板编辑器，创建和维护模板不再只是开发人员的任务
-seo-description: The template defines the structure of the resultant page and with the template editor, creating and maintaining templates is no longer a developer-only task
-uuid: e14cd298-289f-43f0-aacb-314ed5d56c12
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: site-features
-discoiquuid: b53348ca-fc50-4e7d-953d-b4c03a5025bb
 docset: aem65
 exl-id: 363b8fab-6ce7-4338-8478-3f25f2a1f117
-source-git-commit: 71b3f7c6ad2c7712762a29518de6cf0639081cb7
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '4862'
-ht-degree: 84%
+source-wordcount: '4840'
+ht-degree: 80%
 
 ---
 
 # 创建页面模板{#creating-page-templates}
 
-创建页面时，您必须选择一个模板，以用作创建新页面的基础。模板可定义生成页面的结构、任何初始内容以及可使用的组件。
+创建页面时，必须选择一个模板，该模板用作创建新页面的基础。 模板可定义生成页面的结构、任何初始内容以及可使用的组件。
 
 使用模 **板编辑器**，创建和维护模板不再只是开发人员的任务。高级用户(称为模板作者 **)也可能**。开发人员仍需要设置环境、创建客户端库和创建要使用的组件，但是，在这些基础知识到位后，模板作者就可以灵活地创建和配置模板，而无需开发项目。****
 
 在&#x200B;**“模板”控制台**&#x200B;中，模板作者可以执行以下操作：
 
-* 创建新模板，或复制现有模板。
+* 创建模板或复制现有模板。
 * 管理模板的生命周期。
 
 在&#x200B;**模板编辑器**&#x200B;中，模板作者可以执行以下操作：
@@ -55,13 +51,13 @@ ht-degree: 84%
 
 在开始之前，请务必考虑以下几点：
 
-* 创建新模板需要协作。 因此，为每项任务指明了对应的[角色](#roles)。
+* 创建模板需要协作。 因此，为每项任务指明了对应的[角色](#roles)。
 
 * 根据实例的配置方式，请注意AEM现在提供的 [两种基本类型的模板](/help/sites-authoring/templates.md#editable-and-static-templates). 这不会影响您实际的 [使用模板创建页面](#using-a-template-to-create-a-page)，但它确实会影响您可以创建的模板类型以及页面与其模板的关系。
 
 ### 角色 {#roles}
 
-使用&#x200B;**“模板”控制台**&#x200B;和&#x200B;**模板编辑器**&#x200B;创建新模板需要以下角色之间的协作：
+使用创建模板 **模板控制台** 和 **模板编辑器** 需要以下角色之间的协作：
 
 * **管理员**:
 
@@ -110,24 +106,24 @@ AEM现在提供两种基本类型的模板：
    * 他们是 [由您的开发人员提供](/help/sites-developing/page-templates-static.md)，因此作者无法创建或编辑它们。
    * 将被复制以创建新页面，但之后不存在动态连接（尽管模板名称已注册以供参考）。
    * 使用 [设计模式](/help/sites-authoring/default-components-designmode.md) 以保留设计属性。
-   * 由于编辑静态模板是开发人员的独家任务，请参阅开发人员文档 [页面模板 — 静态](/help/sites-developing/page-templates-static.md) 以了解更多信息。
+   * 由于编辑静态模板是开发人员的专属任务，因此请参阅开发人员文档 [页面模板 — 静态](/help/sites-developing/page-templates-static.md) 以了解更多信息。
 
 根据定义，模板控制台和模板编辑器仅允许创建和编辑可编辑模板。 因此，本文档仅侧重于可编辑的模板。
 
 ### 使用模板创建页面 {#using-a-template-to-create-a-page}
 
-将模板用于 [创建新页面](/help/sites-authoring/managing-pages.md#creating-a-new-page) 静态模板与可编辑模板之间没有可见的区别和指示。 对于页面作者，该过程是透明的。
+将模板用于 [创建页面](/help/sites-authoring/managing-pages.md#creating-a-new-page) 静态模板与可编辑模板之间没有可见的区别和指示。 对于页面作者，该过程是透明的。
 
 ## 创建和管理模板 {#creating-and-managing-templates}
 
-创建新的可编辑模板时，您需要执行以下步骤：
+创建可编辑模板时，您可以：
 
 * 使用&#x200B;**模板**&#x200B;控制台。此控制台可从&#x200B;**工具**&#x200B;控制台的&#x200B;**常规**&#x200B;部分访问。
 
    * 或直接从以下网站进行访问：[https://localhost:4502/libs/wcm/core/content/sites/templates.html/conf](https://localhost:4502/libs/wcm/core/content/sites/templates.html/conf)
 
 * 如有必要，可以[创建模板文件夹](#creating-a-template-folder-admin)
-* [创建新模板](#creatinganewtemplateauthor)，新模板最初是空的
+* [创建模板](#creatinganewtemplateauthor)，最初为空
 
 * 如有必要，为该模板[定义其他属性](#definingtemplatepropertiesauthor)
 * [编辑该模板](#editingtemplates)，以定义以下各项：
@@ -200,7 +196,7 @@ AEM现在提供两种基本类型的模板：
 
 * 描述
 
-   * 可选描述，用于提供更多有关模板及其用法的信息，例如&#x200B;**创建页面**&#x200B;向导中显示的描述。
+   * 可选描述，用于提供更多有关模板及其用法的信息，例如 **创建页面** 向导。
 
 要查看和/或编辑属性，请执行以下操作：
 
@@ -251,7 +247,7 @@ AEM现在提供两种基本类型的模板：
 
 1. 在&#x200B;**模板控制台**&#x200B;中，选择相应的模板。
 1. 从工具栏中选择&#x200B;**启用**&#x200B;或&#x200B;**禁用**，然后在确认对话框中再次选择“启用”或“禁用”。
-1. 现在，您便能够在[创建新页面](/help/sites-authoring/managing-pages.md#creating-a-new-page)时使用模板，不过您可能想要根据自己的需求[编辑模板](#editingatemplate)。
+1. 现在，您可以在以下情况下使用模板： [创建页面](/help/sites-authoring/managing-pages.md#creating-a-new-page)，但您可能希望 [编辑模板](#editingatemplate) 根据您自己的要求。
 
 >[!NOTE]
 >
@@ -318,7 +314,7 @@ AEM现在提供两种基本类型的模板：
 
   >[!NOTE]
   >
-  >在&#x200B;**初始内容**&#x200B;模式下以及在生成页面上，可以删除任何具有可访问父项的已解锁组件（即，布局容器内的组件）。
+  >在 **初始内容** 在模式和生成页面上，可以删除任何具有可访问父项的已解锁组件（即，布局容器中的组件）。
 
 * [布局](#editingatemplatelayout)
 
@@ -384,7 +380,7 @@ AEM现在提供两种基本类型的模板：
   >将现成的&#x200B;**标题**&#x200B;组件添加到模板后，该组件会包含默认的文本&#x200B;**结构**。
   >
   >
-  >如果更改此文本，并添加自己的文本，则在使用该模板创建页面时，将会使用更新的文本。
+  >如果更改此文本，并添加自己的文本，则在使用该模板创建页面时会使用更新的文本。
   >
   >
   >如果您保留默认文本（“结构”），则标题会默认使用后续生成页面的名称。
@@ -559,7 +555,7 @@ AEM现在提供两种基本类型的模板：
 
   ![chlimage_1-146](assets/chlimage_1-146.png)
 
-  这包括解锁容器组件，以便在&#x200B;**初始内容**&#x200B;模式或生成的页面中添加其他组件。如果在解锁容器之前已将组件／内容添加到容器，则这些组件／内容在结构模式下不再显示，但将以初始内容模式 **显示****** 。 在&#x200B;**“结构”模式**&#x200B;下，只会显示容器组件本身，及其&#x200B;**允许的组件**&#x200B;列表。
+  这包括解锁容器组件，以便在&#x200B;**初始内容**&#x200B;模式或生成的页面中添加其他组件。如果在解锁容器之前已将组件/内容添加到容器，则在中时，这些组件/内容不再显示 **结构** 模式，但它们显示在 **初始内容** 模式。 在&#x200B;**“结构”模式**&#x200B;下，只会显示容器组件本身，及其&#x200B;**允许的组件**&#x200B;列表。
 
   ![chlimage_1-147](assets/chlimage_1-147.png)
 
@@ -682,7 +678,7 @@ AEM现在提供两种基本类型的模板：
 
 >[!NOTE]
 >
->虽然模板作者可以在模板上指定页面策略，但是他们需要从开发人员处获取相应客户端库的详细信息。
+>虽然模板作者可以在模板上指定页面策略，但他们必须从开发人员处获取相应客户端库的详细信息。
 
 ### 编辑模板 – 初始页面属性 – 作者 {#editing-a-template-initial-page-properties-author}
 

@@ -6,9 +6,9 @@ role: Developer
 feature: APIs,Assets HTTP API,Developer Tools
 exl-id: 6bc10f4e-a951-49ba-9c71-f568a7f2e40d
 hide: true
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1744'
+source-wordcount: '1743'
 ht-degree: 1%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 1%
 1. 打开API服务文档，位于 `https://[hostname]:[port]/api.json`.
 1. 请遵循 [!DNL Assets] 服务链接指向 `https://[hostname]:[server]/api/assets.json`.
 
-API响应是适用于某些MIME类型的JSON文件，是适用于所有MIME类型的响应代码。 JSON响应是可选的，并且可能不可用，例如PDF文件。 依靠响应代码进行进一步分析或执行操作。
+API响应是适用于某些MIME类型的JSON文件，是适用于所有MIME类型的响应代码。 JSON响应是可选的，可能无法用于（例如）PDF文件。 依靠响应代码进行进一步分析或执行操作。
 
 在 [!UICONTROL 关闭时间]，资产及其演绎版不可通过 [!DNL Assets] Web界面和通过HTTP API。 如果 [!UICONTROL 准时] 是未来或 [!UICONTROL 关闭时间] 是过去的。
 
@@ -211,7 +211,7 @@ if (jcrcontentNode.hasProperty("jcr:title"))
 
 ## 创建资源演绎版 {#create-an-asset-rendition}
 
-为资源创建新的资源演绎版。 如果未提供请求参数名称，则使用文件名作为演绎版名称。
+为资源创建资源演绎版。 如果未提供请求参数名称，则使用文件名作为演绎版名称。
 
 **参数**：参数为 `name` 格式副本的名称和 `file` 作为文件引用。
 

@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: d701e4ba-417f-4b57-b103-27fd25290736
 feature: Configuring
 exl-id: 5ecd09a3-c4be-4361-9816-03106435346f
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '1971'
 ht-degree: 0%
@@ -233,7 +233,7 @@ Web控制台不显示存储库中已保存更改的位置，但可以轻松地�
    * 类型：`sling:OsgiConfig`
    * 名称：永久标识(PID)；
 
-     例如，AEM WCM版本管理器使用 `com.day.cq.wcm.core.impl.VersionManagerImpl`
+     例如，对于AEM WCM版本管理器，请使用 `com.day.cq.wcm.core.impl.VersionManagerImpl`
 
    >[!NOTE]
    >

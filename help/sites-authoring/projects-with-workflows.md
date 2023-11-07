@@ -10,9 +10,9 @@ topic-tags: projects
 content-type: reference
 discoiquuid: 9d2bf30c-5190-4924-82cd-bcdfde24eb39
 exl-id: 407fc164-291d-42f6-8c46-c1df9ba3d454
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '797'
+source-wordcount: '795'
 ht-degree: 41%
 
 ---
@@ -125,7 +125,7 @@ ht-degree: 41%
 
 1. 在简单项目中，点按或单击右上角的向下V形 **工作流** 平铺并选择 **启动工作流**.
 1. 在工作流向导中，选择 **请求电子邮件** 并单击 **下一个**.
-1. 输入电子邮件标题，以及营销活动和模板路径。 此外，您还可以提供名称、描述和上线日期。
+1. 输入电子邮件标题、营销活动和模板路径。 此外，您还可以提供名称、描述和上线日期。
 
    ![请求电子邮件工作流](assets/project-request-email-workflow.png)
 

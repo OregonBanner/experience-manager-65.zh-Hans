@@ -3,9 +3,9 @@ title: 创建“邀请外部用户”处理程序
 description: 了解如何创建邀请外部用户处理程序。 它允许Rights Management服务邀请外部用户成为Rights Management用户。
 role: Developer
 exl-id: b0416716-dcc9-4f80-986a-b9660a7c8f6b
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1133'
+source-wordcount: '1132'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ ht-degree: 0%
 
 ## 设置开发环境 {#setting-up-development-environment}
 
-要设置开发环境，您必须创建一个新的Java项目，例如Eclipse项目。 支持的Eclipse版本是 `3.2.1` 或更高版本。
+要设置开发环境，必须创建一个Java项目，如Eclipse项目。 支持的Eclipse版本是 `3.2.1` 或更高版本。
 
 Rights ManagementSPI需要 `edc-server-spi.jar` 在项目的类路径中设置的文件。 如果不引用此JAR文件，则无法在Java项目中使用Rights ManagementSPI。 此JAR文件与AEM Forms SDK一起安装在中 `[install directory]\Adobe\Adobe_Experience_Manager_forms\sdk\spi` 文件夹。
 

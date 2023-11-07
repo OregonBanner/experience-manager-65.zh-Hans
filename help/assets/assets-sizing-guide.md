@@ -5,9 +5,9 @@ contentOwner: AG
 role: Architect, Admin
 feature: Asset Management
 exl-id: fd58ead9-5e18-4f55-8d20-1cf4402fad97
-source-git-commit: 10227bcfcfd5a9b0f126fee74dce6ec7842f5e95
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1614'
+source-wordcount: '1611'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 0%
 
 考虑到这些因素，您需要一种方法来计算存储用户资产所需的存储空间，此存储空间精确到可以接受的程度。
 
-1. 确定要加载到系统中的资源大小和数量。
+1. 确定加载到系统中的资源的大小和数量。
 1. 获取要上传到的资源的代表性示例 [!DNL Experience Manager]. 例如，如果您计划将PSD、JPG、AI和PDF文件加载到系统中，则需要每种文件格式的多个示例图像。 此外，这些示例应该能够代表不同的文件大小和图像的复杂性。
 1. 定义要使用的演绎版。
 1. 在中创建节目 [!DNL Experience Manager] 使用 [!DNL ImageMagick] 或 [!DNL Adobe Creative Cloud] 应用程序。 除了用户指定的呈现版本之外，还应创建现成的呈现版本。 对于实施Dynamic Media的用户，可以使用IC二进制文件生成要存储在Experience Manager中的PTIFF演绎版。
@@ -103,7 +103,7 @@ S3实施中的延迟由后台写入线程引入。 备份过程必须考虑这�
 
 ## 网络 {#network}
 
-[!DNL Assets] 有许多使用案例，使网络性能比我们的许多产品更重要 [!DNL Experience Manager] 项目。 客户可以拥有快速服务器，但如果网络连接不够大，不足以支持从系统上传和下载资产的用户的负载，则服务器速度仍会显得缓慢。 有一种很有效的方法来确定用户与的网络连接中的阻塞点 [!DNL Experience Manager] 在 [用户体验、实例大小调整、工作流评估和网络拓扑的资源注意事项](/help/assets/assets-network-considerations.md).
+[!DNL Assets] 有几个使用案例使网络性能比我们的许多产品更重要 [!DNL Experience Manager] 项目。 客户可以拥有快速服务器，但如果网络连接不够大，不足以支持从系统上传和下载资产的用户的负载，则服务器速度仍会显得缓慢。 有一种很有效的方法来确定用户与的网络连接中的阻塞点 [!DNL Experience Manager] 在 [用户体验、实例大小调整、工作流评估和网络拓扑的资源注意事项](/help/assets/assets-network-considerations.md).
 
 ## 限制 {#limitations}
 

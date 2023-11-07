@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: introduction
 content-type: reference
 exl-id: f6f32290-422e-4037-89d8-d9f414332e8e
-source-git-commit: f7b24617dec77c6907798b1615debdc2329c9d80
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '3310'
+source-wordcount: '3306'
 ht-degree: 1%
 
 ---
@@ -333,7 +333,7 @@ OSGi定义了一种用于开发和部署模块化应用程序和库的架构(也
 
 **项目** 项目是节点或属性。
 
-有关处理Item对象的详细信息，请参阅 [Java™文档](https://developer.adobe.com/experience-manager/reference-materials/spec/javax.jcr/javadocs/jcr-2.0/javax/jcr/Item.html) 接口javax.jcr.Item的
+有关处理Item对象的详细信息，请参见 [Java™文档](https://developer.adobe.com/experience-manager/reference-materials/spec/javax.jcr/javadocs/jcr-2.0/javax/jcr/Item.html) 接口javax.jcr.Item的
 
 **节点（及其属性）** 节点及其属性在JCR API 2.0规范(JSR 283)中定义。 它们存储内容、对象定义、渲染脚本和其他数据。
 
@@ -349,7 +349,7 @@ OSGi定义了一种用于开发和部署模块化应用程序和库的架构(也
 
 当前节点对象为currentNode。
 
-有关处理节点对象的详细信息，请参阅 [Java™文档](https://developer.adobe.com/experience-manager/reference-materials/spec/javax.jcr/javadocs/jcr-2.0/javax/jcr/Node.html).
+有关处理Node对象的详细信息，请参见 [Java™文档](https://developer.adobe.com/experience-manager/reference-materials/spec/javax.jcr/javadocs/jcr-2.0/javax/jcr/Node.html).
 
 **构件** 在AEM中，所有用户输入都由小组件管理。 这些通常用于控制内容的编辑。
 
@@ -396,7 +396,7 @@ TcurrentPage是当前页面对象。 有关处理页面对象的详细信息，�
 
 页面myPage = pageManager.getContainingPage(myResource)；
 
-pageManager是页面管理器对象，myResource是资源对象。 有关页面管理器所提供方法的更多信息，请参阅 [Java™文档](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/api/PageManager.html).
+pageManager是页面管理器对象，myResource是资源对象。 有关页面管理器所提供方法的更多信息，请参见 [Java™文档](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/api/PageManager.html).
 
 ## 存储库中的结构 {#structure-within-the-repository}
 

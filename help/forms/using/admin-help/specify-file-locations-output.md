@@ -1,6 +1,6 @@
 ---
 title: 指定输出的文件位置
-description: 了解如何为某些类型的文件（例如内容根URI、XCI配置文件、缓存和默认值）的输出指定文件位置。
+description: 了解如何为某些类型的文件（例如，内容根URI、XCI配置文件、缓存和默认值）的输出指定文件位置。
 uuid: 3287274f-85b5-4811-8abb-d347a9b80947
 contentOwner: admin
 content-type: reference
@@ -8,7 +8,7 @@ geptopics: SG_AEMFORMS/categories/configuring_output
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 460bbb31-8187-469c-8102-b310093b6c03
 exl-id: 620c69d6-4fe1-46d6-b5d4-3b562142e547
-source-git-commit: 6caf3ef4a00275f0f73be52b6a9ccba77d277f1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '330'
 ht-degree: 1%

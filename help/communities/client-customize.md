@@ -10,9 +10,9 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 24b6d1d2-c118-4a25-959f-2783961c4ae3
 exl-id: bf34f564-ac93-4c8c-95f7-8690d99d85cb
-source-git-commit: c667a1658e43bb5b61daede5f94256dae582a4fc
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1233'
+source-wordcount: '1232'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ ht-degree: 0%
 
 通过修改/中的默认组件副本，可以实现叠加&#x200B;**应用程序** 目录，而不是修改/中的原始组件&#x200B;**库** 目录。 组件使用相同的相对路径构建，但“libs”被替换为“apps”除外。
 
-/apps目录是用于解析请求的第一个搜索位置，如果未找到，则使用位于/libs目录中的默认版本。
+/apps目录是用于解析请求的第一个搜索位置，如果未找到，则使用/libs目录中的默认版本。
 
 不得修改/libs目录中的默认组件，因为将来可以随时使用补丁和升级以维护公共接口所需的任何方式更改/libs目录。
 

@@ -10,9 +10,9 @@ discoiquuid: 1e95c66b-d132-4c44-a1dc-31fd09af8113
 docset: aem65
 feature: Adaptive Forms
 exl-id: e755159f-374f-42b8-b28b-e8864df44f9d
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2111'
+source-wordcount: '2109'
 ht-degree: 3%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 3%
 
 ## 简介 {#introduction}
 
-可访问的表单是每个人都能使用的表单，包括有特殊需求的用户。 自适应Forms包括许多特性和功能，可增强具有不同功能的用户的可用性。 将辅助功能构建到自适应表单中不仅可以使内容具有尽可能广泛的受众，而且在要求遵守辅助功能标准的地理位置提供文档时，这也是一项要求。 AEM Forms帮助表单开发人员符合辅助功能标准。
+可访问的表单是每个人都能使用的表单，包括有特殊需求的用户。 自适应Forms包括多种特性和功能，可增强具有不同功能的用户的可用性。 将辅助功能构建到自适应表单中不仅可以使内容具有尽可能广泛的受众，而且在要求遵守辅助功能标准的地理位置提供文档时，这也是一项要求。 AEM Forms帮助表单开发人员符合辅助功能标准。
 
 在创作自适应表单时，作者应考虑以下几点来创建无障碍的自适应表单：
 

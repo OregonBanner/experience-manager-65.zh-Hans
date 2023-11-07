@@ -9,9 +9,9 @@ breadcrumb-title: Forms 指南
 user-guide-description: 创建、管理、发布和更新数字表单。
 role: User
 feature: Forms Service
-source-git-commit: 28cc10b79d2ac8cf12ddfd0bf7d1a8e013fe6238
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '3912'
+source-wordcount: '3911'
 ht-degree: 4%
 
 ---
@@ -228,7 +228,7 @@ ht-degree: 4%
    + [自定义AEM表单工作区简介](using/introduction-customizing-html-workspace.md)
    + [AEM Forms工作区自定义的常规步骤](using/generic-steps-html-workspace-customization.md)
    + [更改AEM Forms工作区用户界面的区域设置](using/changing-locale-user-interface.md)
-   + [创建新的登录屏幕](using/creating-new-login-screen.md)
+   + [创建登录屏幕](using/creating-new-login-screen.md)
    + [自定义错误对话框](using/customizing-error-dialogs.md)
    + [自定义任务的选项卡](using/customizing-tabs-task.md)
    + [自定义任务详细信息页面](using/customizing-task-details-page.md)

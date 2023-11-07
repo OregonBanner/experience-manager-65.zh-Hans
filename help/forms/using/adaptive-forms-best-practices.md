@@ -5,9 +5,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 feature: Adaptive Forms
 exl-id: 5c75ce70-983e-4431-a13f-2c4c219e8dde
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '4734'
+source-wordcount: '4725'
 ht-degree: 1%
 
 ---
@@ -68,7 +68,7 @@ Adobe Experience Manager (AEM) forms可以帮助您将复杂的交易转换为�
    * **XFA表单模板**：如果您在基于XFA的HTML5表单中有投资，则它是理想的表单模型。 它提供了一种将您的基于XFA的表单转换为自适应表单的直接方法。 任何现有XFA规则都会保留在关联的自适应表单中。 生成的自适应表单支持XFA构造，例如验证、事件、属性和模式。
    * **表单数据模型**：如果您希望集成后端系统(如数据库、Web服务和AEM用户配置文件)以预填充自适应表单并将提交的表单数据写回后端系统，则它是首选表单模型。 利用表单数据模型编辑器，可在可用于创建自适应表单的表单数据模型中定义和配置实体和服务。 有关更多信息，请参阅 [AEM Forms数据集成](/help/forms/using/data-integration.md).
 
-请务必仔细选择不仅适合您的要求，而且能够扩大您对XFA和XSD资产（如果有）的现有投资的数据模型。 建议使用XSD模型创建表单模板，因为生成的XML包含架构定义的每个XPATH的数据。 使用XSD模型作为表单数据模型的默认选择也很有帮助，因为它将表单设计与处理和使用数据的后端系统分离，并且由于表单字段的一对一映射，它提高了表单的性能。 此外，还可以将该字段的BindRef设置为其数据值在XML中的XPATH。
+请务必仔细选择不仅适合您的要求，而且能够扩大您对XFA和XSD资产（如果有）的现有投资的数据模型。 使用XSD模型创建表单模板，因为生成的XML包含架构定义的每个XPATH的数据。 使用XSD模型作为表单数据模型的默认选择也很有帮助，因为它将表单设计与处理和使用数据的后端系统分离，并且由于表单字段的一对一映射，它提高了表单的性能。 此外，还可以将该字段的BindRef设置为其数据值在XML中的XPATH。
 
 有关更多信息，请参阅 [创建自适应表单](/help/forms/using/creating-adaptive-form.md).
 
@@ -187,7 +187,7 @@ AEM Forms提供 [规则编辑器](/help/forms/using/rule-editor.md) 允许您创
 
 ### 使用主题 {#working-with-themes}
 
-通过自适应主题，您可以创建可重复使用的样式，这些样式可以跨表单应用，以实现一致的外观和样式。 建议使用主题来定义表单组件和面板的样式。 围绕主题的一些最佳实践如下：
+通过自适应主题，您可以创建可重复使用的样式，这些样式可以跨表单应用，以实现一致的外观和样式。 使用主题定义表单组件和面板的样式。 围绕主题的一些最佳实践如下：
 
 * 使用资产库快速应用文本样式、背景和图像。 将样式添加到资产库时，该样式可用于其他主题以及表单编辑器的样式模式。
 * 使用页面级别选择器应用全局设置，如字体和页面背景。
@@ -241,7 +241,7 @@ AEM Forms提供 [规则编辑器](/help/forms/using/rule-editor.md) 允许您创
 * 如果默认提交操作不符合您的用例，则可以编写自定义提交操作。 有关更多信息，请参阅 [编写自适应表单的自定义提交操作](/help/forms/using/custom-submit-action-form.md).
 * 包括服务器端验证，以防止提交无效数据。
 
-您可以在自适应表单中利用Adobe Sign的多签名体验。 在自适应表单中配置Adobe Sign时，请考虑以下事项。 有关详细信息，请参阅 [在自适应表单中使用Adobe Sign](/help/forms/using/working-with-adobe-sign.md).
+您可以在自适应表单中使用Adobe Sign的多签名体验。 在自适应表单中配置Adobe Sign时，请考虑以下事项。 有关详细信息，请参阅 [在自适应表单中使用Adobe Sign](/help/forms/using/working-with-adobe-sign.md).
 
 * 启用Adobe Sign的自适应表单仅在所有签名者签名表单后提交。 在所有签名者对表单进行签名之前，Forms会一直处于待处理签名状态。
 * 您可以配置表单内签名体验或在提交时将签名者重定向到签名页面。

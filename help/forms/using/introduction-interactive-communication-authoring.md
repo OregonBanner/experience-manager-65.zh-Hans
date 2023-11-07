@@ -11,9 +11,9 @@ discoiquuid: 5855d21b-340c-4139-aabe-c3a534cedb98
 docset: aem65
 feature: Interactive Communication
 exl-id: 3d15a723-df6c-4b4a-992e-a6636f4cf3dc
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1312'
+source-wordcount: '1310'
 ht-degree: 14%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 14%
 * 所见即所得拖放文档编辑器
 * 集成的资产存储库 — 可在交互式通信创作界面的资产浏览器中找到上传到服务器上并在其上创建的资产
 
-当您 [创建新的交互式通信或编辑现有的交互式通信](../../forms/using/create-interactive-communication.md)，则可以使用以下用户界面元素：
+当您 [创建或编辑现有的交互式通信](../../forms/using/create-interactive-communication.md)，则可以使用以下用户界面元素：
 
 * [侧栏](#sidebar)
 * [页面工具栏](#page-toolbar)

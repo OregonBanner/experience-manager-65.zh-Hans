@@ -4,7 +4,7 @@ description: 了解如何使用Classic UI在Adobe Experience Manager中创建语
 contentOwner: Guillaume Carlino
 feature: Language Copy
 exl-id: 1ae21d80-0683-4ab9-afaa-4d733ff47720
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '322'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 1. 添加新的子页面以表示站点的语言版本：
 
    1. 单击“新建”>“新建页面”。
-   1. 在对话框中，指定标题和名称。 名称必须采用格式 `<language-code>` 或 `<language-code>_<country-code>`，例如en、en_US、en_us、en_GB、en_gb。
+   1. 在对话框中，指定标题和名称。 名称必须采用格式 `<language-code>` 或 `<language-code>_<country-code>`例如，en、en_US、en_us、en_GB、en_gb。
 
       * 支持的语言代码是由ISO-639-1定义的小写形式的双字母代码
       * 支持的国家/地区代码是由ISO 3166定义的小写或大写形式的两字母代码

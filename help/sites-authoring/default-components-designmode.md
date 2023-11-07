@@ -2,9 +2,9 @@
 title: 在设计模式下配置默认组件
 description: 在设计模式下配置Adobe Experience Manager组件。
 exl-id: 5e232886-75c1-4f0f-b359-4739ae035fd3
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '915'
+source-wordcount: '914'
 ht-degree: 12%
 
 ---
@@ -66,7 +66,7 @@ ht-degree: 12%
 
    这将选择包含当前组件的段落系统。
 
-1. 此 **配置** 段落系统的图标将显示在父级的操作栏中。
+1. 此 **配置** 段落系统的图标显示在父级的操作栏中。
 
    ![配置](do-not-localize/screen_shot_2018-03-22at103256.png)
 
@@ -95,7 +95,7 @@ ht-degree: 12%
 
    >[!NOTE]
    >
-   >自适应表单组件设计为可在自适应表单容器中工作，以利用Forms生态系统。 因此，这些组件必须仅在自适应表单编辑器中使用，在站点页面编辑器中不起作用。
+   >自适应表单组件可在自适应表单容器中工作以使用Forms生态系统。 因此，这些组件必须仅在自适应表单编辑器中使用，在站点页面编辑器中不起作用。
 
    **设置**
 

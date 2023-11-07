@@ -10,7 +10,7 @@ topic-tags: platform
 content-type: reference
 discoiquuid: 11a11803-bce4-4099-9b50-92327608f37b
 exl-id: 1082b2d7-2d1b-4c8c-a31d-effa403b21b2
-source-git-commit: 061af6f3318d68b50c5f606ad50db7a39da0f4fd
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '917'
 ht-degree: 0%
@@ -27,7 +27,7 @@ ht-degree: 0%
 
 ## 捆绑JDBC数据库驱动程序 {#bundling-the-jdbc-database-driver}
 
-例如，一些数据库供应商在OSGi捆绑包中提供JDBC驱动程序 [MySQL](https://dev.mysql.com/downloads/connector/j/). 如果数据库的JDBC驱动程序不能作为OSGi捆绑包使用，请获取驱动程序JAR并将其包装在OSGi捆绑包中。 捆绑包必须导出与数据库服务器交互所需的包。 捆绑包还必须导入其引用的包。
+某些数据库供应商在OSGi捆绑包中提供JDBC驱动程序，例如， [MySQL](https://dev.mysql.com/downloads/connector/j/). 如果数据库的JDBC驱动程序不能作为OSGi捆绑包使用，请获取驱动程序JAR并将其包装在OSGi捆绑包中。 捆绑包必须导出与数据库服务器交互所需的包。 捆绑包还必须导入其引用的包。
 
 以下示例使用 [适用于Maven的捆绑包插件](https://felix.apache.org/documentation/subprojects/apache-felix-maven-bundle-plugin-bnd.html) 将HSQLDB驱动程序封装在OSGi包中。 POM指示插件嵌入标识为依赖项的hsqldb.jar文件。 将导出所有org.hsqldb软件包。
 
@@ -94,21 +94,21 @@ ht-degree: 0%
 
 为使用JDBC驱动程序创建数据源对象的JDBC连接池服务添加配置。 您的应用程序代码使用此服务来获取对象并连接到数据库。
 
-JDBC连接池( `com.day.commons.datasource.jdbcpool.JdbcPoolService`)是工厂服务。 如果需要使用不同属性（例如只读或读/写访问）的连接，请创建多个配置。
+JDBC连接池( `com.day.commons.datasource.jdbcpool.JdbcPoolService`)是工厂服务。 如果需要使用不同属性（例如，只读或读/写访问）的连接，请创建多个配置。
 
 使用CQ时，可通过多种方法管理此类服务的配置设置；请参阅 [配置OSGi](/help/sites-deploying/configuring-osgi.md) 以了解全部详细信息。
 
 以下属性可用于配置池连接服务。 在Web控制台中列出的属性名称如下所示。 的相应名称 `sling:OsgiConfig` 节点显示在括号中。 对于HSQLDB服务器和别名为 `mydb`：
 
-* JDBC驱动程序类( `jdbc.driver.class`)：用于实现java.sql.Driver接口的Java™类，例如 `org.hsqldb.jdbc.JDBCDriver`. 数据类型是 `String`.
+* JDBC驱动程序类( `jdbc.driver.class`)：用于实现java.sql.Driver接口的Java™类，例如， `org.hsqldb.jdbc.JDBCDriver`. 数据类型是 `String`.
 
-* JDBC连接URI ( `jdbc.connection.uri`)：用于创建连接的数据库URL，例如 `jdbc:hsqldb:hsql//10.36.79.223:9001/mydb`. URL的格式必须对java.sql.DriverManager类的getConnection方法有效。 数据类型是 `String`.
+* JDBC连接URI ( `jdbc.connection.uri`)：用于创建连接的数据库URL，例如， `jdbc:hsqldb:hsql//10.36.79.223:9001/mydb`. URL的格式必须对java.sql.DriverManager类的getConnection方法有效。 数据类型是 `String`.
 
 * 用户名( `jdbc.username`)：用于向数据库服务器进行身份验证的用户名。 数据类型是 `String`.
 
 * 密码( `jdbc.password`)：用于用户身份验证的密码。 数据类型是 `String`.
 
-* 验证查询( `jdbc.validation.query`)：用于验证连接是否成功的SQL语句，例如 `select 1 from INFORMATION_SCHEMA.SYSTEM_USERS`. 数据类型是 `String`.
+* 验证查询( `jdbc.validation.query`)：用于验证连接是否成功的SQL语句，例如， `select 1 from INFORMATION_SCHEMA.SYSTEM_USERS`. 数据类型是 `String`.
 
 * 默认只读(default.readonly)：如果希望连接提供只读访问权限，请选择此选项。 数据类型是 `Boolean`.
 * 默认自动提交( `default.autocommit`)：选择此选项可以为发送到数据库的每个SQL命令创建单独的事务，并且每个事务都会自动提交。 在代码中明确提交事务时，请勿选择此选项。 数据类型是 `Boolean`.

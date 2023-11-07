@@ -10,9 +10,9 @@ discoiquuid: 1f28b257-5419-4a21-a54a-b20bf35530ac
 docset: aem65
 feature: Adaptive Forms, Acrobat Sign
 exl-id: 52146038-1582-41b8-aee0-215d04bb91d7
-source-git-commit: 6caf3ef4a00275f0f73be52b6a9ccba77d277f1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2074'
+source-wordcount: '2073'
 ht-degree: 21%
 
 ---
@@ -60,7 +60,7 @@ ht-degree: 21%
 
    >[!NOTE]
    >
-   >您可以执行步骤1-4以创建新的配置容器并创建 [!DNL Adobe Sign] 在容器中进行配置或使用现有的 `global` 文件夹位置 **工具** ![锤子](assets/hammer.png) > **[!UICONTROL Cloud Service]** > **[!UICONTROL Adobe Sign]**. 如果您在新配置容器中创建配置，请确保在 **[!UICONTROL 配置容器]** 创建自适应表单时显示的字段。
+   >您可以执行步骤1-4以创建配置容器并创建 [!DNL Adobe Sign] 在容器中进行配置或使用现有的 `global` 文件夹位置 **工具** ![锤子](assets/hammer.png) > **[!UICONTROL Cloud Service]** > **[!UICONTROL Adobe Sign]**. 如果您在新配置容器中创建配置，请确保在 **[!UICONTROL 配置容器]** 创建自适应表单时显示的字段。
 
    >[!NOTE]
    >

@@ -11,9 +11,9 @@ discoiquuid: bbaba39b-e15a-4143-b6fc-7789fa2917b4
 docset: aem65
 feature: Correspondence Management
 exl-id: bc5d6c5b-c833-4849-aace-e07f8a522b32
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1659'
+source-wordcount: '1657'
 ht-degree: 0%
 
 ---
@@ -168,7 +168,7 @@ AEM Forms允许您在文本模块中使用内联条件来自动呈现依赖于�
 
    要与DD元素一起重复静态文本，您需要按照后续步骤中的说明应用repeat。
 
-1. 选择静态文本以及要重复的DD元素，如下所示：
+1. 选择静态文本和要重复的DD元素，如下所示：
 
    ![2_repeat_selecttext](assets/2_repeat_selecttext.png)
 

@@ -10,10 +10,10 @@ topic-tags: components
 content-type: reference
 discoiquuid: 45efff93-2fe5-4313-83a0-0e23a540da93
 exl-id: 9e30c969-2692-4380-943a-b022ee900ce8
-source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '590'
-ht-degree: 52%
+ht-degree: 53%
 
 ---
 
@@ -23,12 +23,12 @@ ht-degree: 52%
 
 ## 什么是组件？ {#what-exactly-is-a-component}
 
-* 模块化单元，可实施特定功能以在您的网站上展示您的内容。
+* 实现特定功能以在网站上展示内容的模块化单元。
 * 可重用的。
 * 作为存储库的一个文件夹中的独立单元开发。
 * 没有隐藏的配置文件。
 * 可以包含其他组件。
-* 可以在任何AEM系统中的任何地方运行。 它们也可以限制为在特定组件下运行。
+* 可以在任何AEM系统中的任何地方运行。 它们还可以限制为在特定组件下运行。
 * 拥有标准化的用户界面。
 * 具有可配置的编辑行为。
 * 使用使用基于Granite UI组件的子元素构建的对话框
@@ -40,7 +40,7 @@ ht-degree: 52%
 * 在本地实例上开发新组件。
 * 将它部署到测试环境。
 * 将它部署到实时创作环境，作者和/或管理员可在该环境中添加和配置内容。
-* 将它部署到实时发布环境，它在该环境中用于为您网站的访客呈现内容。某些组件（例如Communities）也接受用户的输入。
+* 将它部署到实时发布环境，它在该环境中用于为您网站的访客呈现内容。某些组件（例如，Communities）也接受用户的输入。
 
 每个 AEM 组件：
 
@@ -50,7 +50,7 @@ ht-degree: 52%
 
 ## AEM中的现成组件 {#out-of-the-box-components-within-aem}
 
-AEM随附多种 [现成组件](/help/sites-authoring/default-components.md) 功能全面，包括：
+AEM随附多种 [开箱即用的组件](/help/sites-authoring/default-components.md) 功能全面，包括：
 
 * 段落系统 ( `parsys`)
 * 页面( `responsivegrid`  — 仅限触控式UI)
@@ -58,22 +58,22 @@ AEM随附多种 [现成组件](/help/sites-authoring/default-components.md) 功�
 * 图像，带随附文本
 * 工具栏
 
-提供的组件及其在 [示例We.Retail网站](/help/sites-developing/we-retail.md) 提供了说明如何实施和使用组件。 这些组件随所有源代码一起提供，可以按原样使用或用作已修改或扩展的组件的起点。
+提供的组件及其在 [示例We.Retail网站](/help/sites-developing/we-retail.md) 提供了说明如何实施和使用组件的说明。 这些组件随所有源代码一起提供，可以按原样使用或用作已修改或扩展的组件的起点。
 
-### 核心组件与基础组件 {#core-components-and-foundation-components}
+### 核心组件和基础组件 {#core-components-and-foundation-components}
 
 提供了两组Adobe提供的AEM组件：
 
-* [核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)
-* [基础组件](/help/sites-authoring/default-components-foundation.md)
+* [核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
+* [Foundation 组件](/help/sites-authoring/default-components-foundation.md)
 
-**核心组件** 随AEM 6.3引入，提供了灵活且丰富的创作功能。 此 [We.Retail引用站点](/help/sites-developing/we-retail.md) 说明了如何使用核心组件，并代表了组件开发的当前最佳实践。
+**核心组件** 随AEM 6.3引入，提供了灵活且丰富的创作功能。 此 [We.Retail引用站点](/help/sites-developing/we-retail.md) 说明了核心组件的使用方式，并体现了当前组件开发的最佳实践。
 
 **基础组件** 已在AEM中提供了多个版本，并且在标准AEM安装中现成可用。 尽管仍受支持，但大多数技术已弃用，不再增强，并且基于旧版技术。
 
 >[!NOTE]
 >
->[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans) 表示组件设计和开发的当前最佳实践，并用作参考实施。
+>[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) 表示组件设计和开发的当前最佳实践，并用作参考实施。
 >
 >[AEM现代化工具](modernization-tools.md) 可帮助迁移到核心组件。
 
@@ -102,11 +102,11 @@ AEM随附多种 [现成组件](/help/sites-authoring/default-components.md) 功�
 * [开发AEM组件 — 代码示例](/help/sites-developing/developing-components-samples.md)
 * [配置多个就地编辑器](/help/sites-developing/multiple-inplace-editors.md)
 * [开发人员模式](/help/sites-developing/developer-mode.md)
-* [测试您的UI](/help/sites-developing/hobbes.md)
+* [测试UI](/help/sites-developing/hobbes.md)
 * [内容片段的组件](/help/sites-developing/components-content-fragments.md)
 * [获取JSON格式的页面信息](/help/sites-developing/pageinfo.md)
 * [国际化组件](/help/sites-developing/i18n.md)
-* [核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)
+* [核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
 * [使用隐藏条件](/help/sites-developing/hide-conditions.md)
 * 经典 UI
 

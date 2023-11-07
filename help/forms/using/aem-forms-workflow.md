@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 73e63493-e821-443f-b50d-10797360f5d1
 docset: aem65
 exl-id: c3e5f8fc-d2b9-4f76-9a3d-4bc5733f5a5c
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '3681'
 ht-degree: 2%
@@ -95,7 +95,7 @@ AEM提供了一个直观的用户界面，用于使用提供的工作流步骤�
 
    对于抵押贷款应用程序示例，将分配任务步骤配置为使用只读自适应表单并在任务完成后显示PDF文档。 此外，选择以允许审批贷款请求的用户组。 在 **操作** 选项卡，禁用 **提交** 选项。 创建 **actionTaked** 变量，并将变量指定为 **路由变量**. 例如，actionTaken。 另外，添加批准路由和拒绝路由。 路由在AEM收件箱中显示为单独的操作（按钮）。 工作流会根据用户点击的操作（按钮）选择分支。
 
-   您可以导入示例包，该示例包可在部分的开头下载，用于针对配置为“抵押应用程序”的分配任务步骤的所有字段的完整值集。
+   您可以为配置的分配任务步骤的所有字段（例如，抵押应用程序）的完整值集导入示例包（可在部分开头下载）。
 
 1. 将OR拆分组件从步骤浏览器拖放到工作流模型中。 OR拆分在工作流中创建拆分，之后只有一个分支处于活动状态。 此步骤允许您将条件处理路径引入工作流。 您可以根据需要向每个分支添加工作流步骤。
 
@@ -121,7 +121,7 @@ AEM提供了一个直观的用户界面，用于使用提供的工作流步骤�
 
    对于抵押示例，将生成记录文档、两个分配任务步骤和一个签名文档步骤添加到模型的分支1，如下图所示。 一个分配任务步骤是显示和发送 **将签署给申请人的贷款文件** 另一个分配任务组件是 **显示已签署文档**. 另外，添加一个任务组件到分支2。 当用户点按AEM收件箱中的拒绝时，它会激活。
 
-   对于配置的分配任务步骤、记录文档步骤和签名文档步骤的所有字段的完整值集（例如抵押应用程序），请导入示例包，该包可在本节开头下载。
+   对于配置的分配任务步骤、记录文档步骤和签名文档步骤的所有字段的完整值集（例如，抵押应用程序），导入示例包，可在本节开头下载。
 
    工作流模型已准备就绪。 您可以通过各种方法启动工作流。 有关详细信息，请参阅 [在OSGi上启动以Forms为中心的工作流](#launch).
 
@@ -277,9 +277,9 @@ AEM Forms应用程序与AEM Forms服务器同步，并允许您更改帐户中�
 
 ## 将敏感数据参数化为工作流变量并存储在外部数据存储中 {#externalize-wf-variables}
 
-从自适应表单提交到的任何数据 [!DNL Experience Manager] 工作流可以包含企业最终用户的PII（个人身份信息）或SPD（敏感个人数据）。 但是，并不强制要将您的数据存储在 [!DNL Adobe Experience Manager] [JCR存储库](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/underlying-technology/introduction-jcr.html). 通过将信息参数化，您可以将最终用户数据存储外部化到您的托管数据存储中（例如Azure blob storage） [工作流变量](/help/forms/using/variable-in-aem-workflows.md).
+从自适应表单提交到的任何数据 [!DNL Experience Manager] 工作流可以包含企业最终用户的PII（个人身份信息）或SPD（敏感个人数据）。 但是，并不强制要将您的数据存储在 [!DNL Adobe Experience Manager] [JCR存储库](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/underlying-technology/introduction-jcr.html). 通过将信息参数化，您可以将最终用户数据存储外部化到您的托管数据存储（例如Azure blob存储）中 [工作流变量](/help/forms/using/variable-in-aem-workflows.md).
 
-在 [!DNL Adobe Experience Manager] 在Forms工作流中，通过工作流变量执行一系列工作流步骤来处理和传递数据。 这些变量是存储在工作流实例元数据节点中的命名属性或键值对；例如 `/var/workflow/instances/<serverid>/<datebucket>/<uniquenameof model>_<id>/data/metaData`. 这些工作流变量可以外部化到JCR以外的单独存储库，然后由处理 [!DNL Adobe Experience Manager] 工作流。 [!DNL Adobe Experience Manager] 提供API `[!UICONTROL UserMetaDataPersistenceProvider]` 将工作流变量存储在托管外部存储中。 详细了解在中将工作流变量用于客户拥有的数据存储 [!DNL Adobe Experience Manager]，请参见 [管理外部数据存储的工作流变量](/help/sites-administering/workflows-administering.md#using-workflow-variables-customer-datastore).
+在 [!DNL Adobe Experience Manager] 在Forms工作流中，通过工作流变量执行一系列工作流步骤来处理和传递数据。 这些变量是存储在工作流实例元数据节点中的命名属性或键值对；例如， `/var/workflow/instances/<serverid>/<datebucket>/<uniquenameof model>_<id>/data/metaData`. 这些工作流变量可以外部化到JCR以外的单独存储库，然后由处理 [!DNL Adobe Experience Manager] 工作流。 [!DNL Adobe Experience Manager] 提供API `[!UICONTROL UserMetaDataPersistenceProvider]` 将工作流变量存储在托管外部存储中。 详细了解在中将工作流变量用于客户拥有的数据存储 [!DNL Adobe Experience Manager]，请参见 [管理外部数据存储的工作流变量](/help/sites-administering/workflows-administering.md#using-workflow-variables-customer-datastore).
 [!DNL Adobe] 提供了以下内容 [示例](https://github.com/adobe/workflow-variable-externalizer) 使用API将变量从工作流元数据映射到Azure blob存储 [UserMetaDataPersistenceProvider](https://github.com/adobe/workflow-variable-externalizer/blob/master/README.md). 在类似的行中，您可以使用示例作为使用指南 [UserMetaDataPersistenceProvider] 用于将任何其他数据存储中的工作流变量外部化的API [!DNL Adobe Experience Manager] 并管理相同的流程。
 
 >[!NOTE]
@@ -313,11 +313,11 @@ AEM Forms应用程序与AEM Forms服务器同步，并允许您更改帐户中�
 
 * **帐户名称** 是必须存储数据的azure帐户。
 
-* **端点后缀**&#x200B;例如 `core.windows.net`.
+* **端点后缀**&#x200B;例如， `core.windows.net`.
 
 * **containername** 是帐户中需要存储数据的容器。 此示例假定容器存在。
 
-* **协议**&#x200B;例如 `https` 或 `http`.
+* **协议**&#x200B;例如， `https` 或 `http`.
 
 1. 在中配置工作流模型 [!DNL Adobe Experience Manager]. 要了解如何为外部存储配置工作流模型，请参阅 [配置工作流模型](#configure-aem-wf-model).
 
@@ -337,7 +337,7 @@ AEM Forms应用程序与AEM Forms服务器同步，并允许您更改帐户中�
 
 ### 外部数据存储的AEM工作流准则 {#guidelines-workflows-external-data-storage}
 
-以下是使用时的准则 [!DNL Adobe Experience Manager] 工作流并将数据存储到外部数据存储(例如Microsoft Azure Storage Server)：
+以下是使用时的准则 [!DNL Adobe Experience Manager] 工作流并将数据存储到外部数据存储(例如，Microsoft Azure Storage Server)：
 
 * 在工作流模型步骤中定义输入和输出数据文件及附件时，使用变量来存储数据。 不选择 **[!UICONTROL 相对于有效负荷]** 和 **[!UICONTROL 在绝对路径上可用]** 选项。 此 **[!UICONTROL 相对于有效负荷]** 和 **[!UICONTROL 在绝对路径上可用]** 选项不会自动显示一次 [配置 [!DNL Adobe Experience Manager] 用于外部数据存储的工作流模型](#configure-aem-wf-model).
 

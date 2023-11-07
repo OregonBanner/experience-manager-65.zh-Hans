@@ -7,9 +7,9 @@ topic-tags: development-tools
 content-type: reference
 docset: aem65
 exl-id: 9e88ca55-ac3d-4857-b6b2-aeb732562664
-source-git-commit: b66ec42c35b5b60804015d340b8194bbd6ef3e28
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2120'
+source-wordcount: '2119'
 ht-degree: 2%
 
 ---
@@ -172,7 +172,7 @@ CRXDE Lite提供以下功能：
 
 * 类型的子节点 `cq:PageContent` 具有页面内容属性
 
-您可以在模板中添加属性：请参阅 [创建资产](#creating-a-property) 部分。
+您可以将属性添加到模板中：请参阅 [创建资产](#creating-a-property) 部分。
 
 ## 创建组件 {#creating-a-component}
 
@@ -241,7 +241,7 @@ CRXDE Lite提供以下功能：
 
 1. 在浏览器中打开CRXDE Lite。
 1. 在“导航”窗格中，选择要添加新属性的节点。
-1. 在 **属性** 选项卡，输入 **名称**， **类型**，和 **值**. 单击 **添加**.
+1. 在 **属性** 选项卡，输入 **名称**， **类型**，和 **值**. 单击&#x200B;**添加**。
 
 1. 单击 **全部保存** 以保存服务器上的更改。
 

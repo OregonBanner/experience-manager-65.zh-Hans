@@ -2,10 +2,10 @@
 title: AEM Headless 翻译快速入门
 description: 了解如何组织您的 Headless 内容以及 AEM 的翻译工具的工作原理。
 exl-id: 764f78a7-1d3d-4406-85b1-b80dffae2350
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1493'
-ht-degree: 90%
+source-wordcount: '1490'
+ht-degree: 88%
 
 ---
 
@@ -32,7 +32,7 @@ ht-degree: 90%
 
 ## 要求和先决条件 {#requirements-prerequisites}
 
-在开始翻译 Headless AEM 内容之前，需要满足许多要求。
+在开始翻译Headless AEM内容之前，需要满足几项要求。
 
 ### 知识 {#knowledge}
 
@@ -44,7 +44,7 @@ ht-degree: 90%
 
 >[!TIP]
 >
->如果您不能熟练使用 AEM 等大型 CMS，请考虑先查看[基本操作](/help/sites-authoring/basic-handling.md)文档，然后再继续。“基本操作”文档不是历程的一部分，因此，请在完成后返回此页面。
+>如果您不能熟练使用 AEM 等大型 CMS，请考虑先查看[基本操作](/help/sites-authoring/basic-handling.md)文档，然后再继续。“基本操作”文档不是历程的一部分，因此请在完成后返回此页面。
 
 ### 工具 {#tools}
 

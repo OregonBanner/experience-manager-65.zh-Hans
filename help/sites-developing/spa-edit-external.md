@@ -2,9 +2,9 @@
 title: 在Adobe Experience Manager中编辑外部SPA
 description: 本文档介绍了将独立SPA上传到Adobe Experience Manager实例、添加内容的可编辑部分以及启用创作的建议步骤。
 exl-id: 25236af4-405a-4152-8308-34d983977e9a
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2440'
+source-wordcount: '2432'
 ht-degree: 1%
 
 ---
@@ -247,7 +247,7 @@ mvn clean install -PautoInstallSinglePackage
 
 #### 要求和限制 {#limitations}
 
-添加虚拟叶组件有几项要求以及一些限制。
+添加虚拟叶组件有几项要求和一些限制。
 
 * 此 `pagePath` 属性是创建虚拟组件的必需属性。
 * 中的路径中提供的页面节点 `pagePath` 必须存在于AEM项目中。
@@ -286,7 +286,7 @@ mvn clean install -PautoInstallSinglePackage
 
 #### 要求和限制 {#container-limitations}
 
-添加虚拟容器有几项要求以及一些限制。
+添加虚拟容器有几项要求和一些限制。
 
 * 用于确定可以添加哪些组件的策略将从父容器继承。
 * 要创建的容器的直接父级必须已存在于AEM中。
@@ -314,9 +314,9 @@ mvn clean install -PautoInstallSinglePackage
 
 1. 在AEM应用程序的页面组件正文中，执行以下两个步骤：
 
-   1. 新建 `body.html` 页面组件的。
+   1. 创建 `body.html` 页面组件的。
 
-   ![创建新的body.html文件](assets/external-spa-update-body.gif)
+   ![创建body.html文件](assets/external-spa-update-body.gif)
 
    1. 在新的中添加新的根元素 `body.html` 文件。
 
@@ -336,9 +336,9 @@ mvn clean install -PautoInstallSinglePackage
 
    * 对于我们的示例，我们考虑 `wknd-spa-react/us/en` 作为SPA的根目录。 这意味着该路径之前的所有内容仅是AEM页面/内容。
 
-1. 在所需级别创建新页面。
+1. 在所需级别创建页面。
 
-   * 在此示例中，要编辑的页面为 `mydomain.com/test`. `test` 位于应用程序的根路径中。 在AEM中创建页面时，也需要保留此设置。 因此，我们可以在上一步中定义的根级别创建新页面。
+   * 在此示例中，要编辑的页面为 `mydomain.com/test`. `test` 位于应用程序的根路径中。 在AEM中创建页面时，也需要保留此设置。 因此，您可以在上一步中定义的根级别创建页面。
    * 创建的新页面必须与要编辑的页面具有相同的名称。 在此示例中，用于 `mydomain.com/test`，创建的新页面必须 `/path/to/aem/root/test`.
 
 1. 在SPA路由中添加帮助程序。

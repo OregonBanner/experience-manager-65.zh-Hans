@@ -3,9 +3,9 @@ title: 概念
 description: 通过Adobe Experience Manager了解电子商务的一般概念。
 contentOwner: Guillaume Carlino
 exl-id: 290b2af6-257f-42f2-b809-1248227a4795
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '4480'
+source-wordcount: '4481'
 ht-degree: 1%
 
 ---
@@ -574,7 +574,7 @@ AEM产品页面是指使用 **产品** 组件；例如，在 **商业产品** �
 
 >[!NOTE]
 >
->[hybris促销活动](https://www.hybris.com/modules/promotion) 和 [hybris优惠券](https://www.hybris.com/en/modules/voucher) 覆盖影响购物车并与定价相关的所有内容。 促销特定的营销内容（如横幅等） 并不是hybris促销活动的一部分。
+>[hybris促销活动](https://www.hybris.com/modules/promotion) 和 [hybris优惠券](https://www.hybris.com/en/modules/voucher) 覆盖影响购物车并与定价相关的所有内容。 促销特定的营销内容（如横幅等）。 并不是hybris促销活动的一部分。
 
 ## 个性化 {#personalization}
 

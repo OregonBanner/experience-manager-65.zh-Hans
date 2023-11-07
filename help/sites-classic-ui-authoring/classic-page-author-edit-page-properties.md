@@ -8,16 +8,16 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 23768c73-ac64-4727-8313-160c8c131b05
 exl-id: 1a77e4cd-bbf8-4d05-bb35-fd43c02eaf30
-source-git-commit: 71b3f7c6ad2c7712762a29518de6cf0639081cb7
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '761'
-ht-degree: 24%
+source-wordcount: '760'
+ht-degree: 22%
 
 ---
 
 # 编辑页面属性{#editing-page-properties}
 
-您可以为页面定义所需的属性。这些属性会因页面性质而异。例如，某些页面可能会连接到 Live Copy，而其他页面则可能不会，Live Copy 信息将在适当情况下才可用。
+您可以为页面定义所需的属性。这些属性会因页面性质而异。例如，某些页面可能已连接到Live Copy，而其他页面未连接到，因此Live Copy信息将根据需要可用。
 
 ## 页面属性 {#page-properties}
 
@@ -53,7 +53,7 @@ ht-degree: 24%
 
 * **导航标题**
 
-  您可以指定单独的标题以便在导航中使用（例如，当您希望某些内容能更加简洁时）。 如果为空， **标题** 将使用。
+  您可以指定单独的标题以便在导航中使用（例如，当您希望某些内容能更加简洁时）。 如果留空，则会使用&#x200B;**标题**。
 
 * **子标题**
 

@@ -10,9 +10,9 @@ topic-tags: operations
 content-type: reference
 discoiquuid: eb8bbb85-ca2f-4877-8ee0-bb1ee8b7d8de
 exl-id: dd26dade-b769-483e-bc11-dcfa5ed1f87e
-source-git-commit: e54c1d422f2bf676e8a7b0f50a101e495c869c96
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2285'
+source-wordcount: '2283'
 ht-degree: 0%
 
 ---
@@ -154,7 +154,7 @@ ht-degree: 0%
 
 ### 自动化AEM在线备份 {#automating-aem-online-backup}
 
-如果可能，应在系统负荷很小时（例如在早上）运行联机备份。
+如果可能，应在系统负荷很小时（例如，早上时）运行联机备份。
 
 可以使用自动执行备份 `wget` 或 `curl` HTTP客户端。 下面显示了如何使用curl自动执行备份的示例。
 
@@ -216,7 +216,7 @@ AEM Online Backup由一系列内部操作组成，以确保正在备份的数据
 
 1. 创建zip文件时，第一步是创建或定位目标目录。
 
-   * 如果备份到zip文件，则会创建临时目录。 目录名称开头为 `backup.` 结束于 `.temp`；例如 `backup.f4d3.temp`.
+   * 如果备份到zip文件，则会创建临时目录。 目录名称开头为 `backup.` 结束于 `.temp`；例如， `backup.f4d3.temp`.
    * 如果备份到目录，则使用目标路径中指定的名称。 可以使用现有目录，否则将创建新目录。
 
      名为的空文件 `backupInProgress.txt` 备份启动时，将在目标目录中创建。 备份完成后，此文件将被删除。

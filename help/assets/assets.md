@@ -5,7 +5,7 @@ contentOwner: AG
 feature: Asset Management
 role: Leader, Architect, User
 exl-id: 68239634-a2e8-414e-a866-cd8082641ee8
-source-git-commit: b00ed4ed146b89aece9af1d267c890a360a236e9
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '873'
 ht-degree: 0%
@@ -18,7 +18,7 @@ AEM [!DNL Assets] 是一个数字资产管理(DAM)工具，它是 [!DNL Experien
 
 ## 什么是数字资产管理？ {#what-is-digital-asset-management}
 
-[!DNL Assets] 在企业范围内共享和分发组织的关键数字资产。 组织内的用户可以通过Web界面（或CIFS或WebDAV文件夹）存储、管理和访问数字资产，如图像、图形、音频、视频和文档。
+[!DNL Assets] 在企业范围内共享和分发组织的关键数字资产。 组织内的用户可以通过Web界面(或CIF或WebDAV文件夹)存储、管理和访问数字资产，如图像、图形、音频、视频和文档。
 
 [!DNL Assets] 功能 [!DNL Experience Manager] 可让您执行以下操作：
 
@@ -26,7 +26,7 @@ AEM [!DNL Assets] 是一个数字资产管理(DAM)工具，它是 [!DNL Experien
 * 通过按标记、灯箱或星星（您的收藏夹）对资源进行分组来管理资源。 向资产添加注释。
 * 通过搜索文件名、文档全文以及搜索日期、文档类型和标记来查找资源。
 * 添加或编辑资源的元数据信息。 元数据会自动与相应的资源一起进行版本控制。 您可以导入或导出资源元数据。
-* 执行图像编辑功能，例如缩放和添加图像滤镜。 使用WebDAV或CIFS文件夹同时导入和导出多个数字资源。
+* 执行图像编辑功能，例如缩放和添加图像滤镜。 使用WebDAV或CIF文件夹同时导入和导出多个数字资源。
 * 使用工作流和通知允许联合处理和下载任何资产集并管理对资产的访问权限。
 
 ### [!DNL Experience Manager Assets] 与集成 [!DNL Experience Manager Sites] {#aem-assets-fully-integrated-in-cq-wcm}
@@ -66,7 +66,7 @@ AEM [!DNL Assets] 是一个数字资产管理(DAM)工具，它是 [!DNL Experien
 
 * **标记**： [!DNL Assets] 可以进行标记和分类。 请参阅 [组织资产](/help/assets/organize-assets.md).
 
-* **节目**：演绎版是资源的二进制表示形式。 [!DNL Assets] 始终具有主要表示形式 — 已上传文件的主要表示形式。 它们可以具有创建的任何数量的其他表示法，例如通过自定义工作流步骤或在上传资产时创建。 演绎版可以具有不同的尺寸、不同的分辨率、添加的水印或某些其他变化的特征。
+* **节目**：演绎版是资源的二进制表示形式。 [!DNL Assets] 始终具有主要表示形式 — 已上传文件的主要表示形式。 它们可以具有任意数量的其他表示法，这些表示法是例如通过自定义工作流步骤在上传资产时创建的。 演绎版可以具有不同的尺寸、不同的分辨率、添加的水印或某些其他变化的特征。
 
 * **版本**：版本控制可在特定的时间点创建数字资源的快照。 您可以将资源还原到以前的版本。 请参阅 [版本控制 [!DNL Assets]](manage-assets.md#asset-versioning).
 

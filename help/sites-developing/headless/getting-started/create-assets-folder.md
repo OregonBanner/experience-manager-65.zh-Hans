@@ -2,10 +2,10 @@
 title: 创建资源文件夹Headless快速入门指南
 description: 使用 AEM 内容片段模型定义内容片段的结构，也就是 Headless 内容的基础。
 exl-id: 8d913056-fcfa-4cdd-b40a-771f13dfd0f4
-source-git-commit: 7355c149500f9e5044c9ff78af208d36ee681f56
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '379'
-ht-degree: 87%
+source-wordcount: '375'
+ht-degree: 81%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 87%
 
 但是，您首先需要创建用于存储这些内容的资源文件夹。
 
-资源文件夹用于[组织传统内容资源](/help/assets/manage-assets.md)，例如图像和视频以及内容片段。
+资源文件夹用于 [组织传统内容资产](/help/assets/manage-assets.md) 如图像和视频以及内容片段。
 
 ## 如何创建资源文件夹 {#how-to-create-an-assets-folder}
 
@@ -34,17 +34,16 @@ ht-degree: 87%
       * 如有必要可以调整。
 
    ![创建文件夹](assets/assets-folder-create.png)
-1. 选择您刚刚创建的文件夹，然后选择 **属性** (或使用 `p` [键盘快捷键。](/help/sites-authoring/keyboard-shortcuts.md))
+1. 选择您创建的文件夹，然后选择 **属性** 工具栏中(或使用 `p` [键盘快捷键。](/help/sites-authoring/keyboard-shortcuts.md))
 1. 在&#x200B;**属性**&#x200B;窗口中，选择 **Cloud Services** 选项卡。
 1. 对于&#x200B;**云配置**，选择[您之前创建的配置。](create-configuration.md)
-
    ![配置资源文件夹](assets/assets-folder-configure.png)
 1. 点按或单击&#x200B;**保存并关闭**。
 1. 在确认窗口中，点按或单击&#x200B;**确定**。
 
    ![确认窗口](assets/assets-folder-confirmation.png)
 
-您可以在刚刚创建的文件夹中创建额外的子文件夹。子文件夹将继承父文件夹的&#x200B;**云配置**。但是，如果您希望使用来自其他配置的模型，则可以覆盖此项。
+您可以在创建的文件夹中创建其他子文件夹。 子文件夹将继承父文件夹的&#x200B;**云配置**。但是，如果您希望使用来自其他配置的模型，则可以覆盖此项。
 
 如果您使用本地化的站点结构，则可以在新文件夹下[创建语言根](/help/assets/multilingual-assets.md)。
 

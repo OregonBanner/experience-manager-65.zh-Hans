@@ -1,5 +1,5 @@
 ---
-title: 如何设置用于演示的MongoDB
+title: 如何设置MongoDB以进行演示
 description: 如何为一个创作实例和一个发布实例设置MSRP
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -8,18 +8,18 @@ content-type: reference
 discoiquuid: 0b126218-b142-4d33-a28c-a91ab4fe99ac
 role: Admin
 exl-id: 7e257b34-a0f5-47db-b1a9-e26333c287d9
-source-git-commit: b9c164321baa3ed82ae87a97a325fcf0ad2f6ca0
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '767'
+source-wordcount: '765'
 ht-degree: 0%
 
 ---
 
-# 如何设置用于演示的MongoDB {#how-to-setup-mongodb-for-demo}
+# 如何设置MongoDB以进行演示 {#how-to-setup-mongodb-for-demo}
 
 ## 简介 {#introduction}
 
-本教程介绍如何设置 [MSRP](msrp.md) 对象 *一位作者* 实例和 *一个发布* 实例。
+本教程将介绍如何设置 [MSRP](msrp.md) 对象 *一位作者* 实例和 *一个发布* 实例。
 
 通过此设置，可从创作和发布环境访问社区内容，而无需转发或反向复制用户生成的内容(UGC)。
 
@@ -52,20 +52,20 @@ ht-degree: 0%
    * 按照MongoDB安装说明操作。
    * 为mongod配置：
 
-      * 无需配置蒙哥或分片。
+      * 无需配置蒙兀国或分片。
 
    * 已安装的MongoDB文件夹名为 &lt;mongo-install>.
-   * 已定义的数据目录路径称为 &lt;mongo-dbpath>.
+   * 所定义的数据目录路径称为 &lt;mongo-dbpath>.
 
-* MongoDB可以在与AEM相同的主机上运行，也可以远程运行。
+* MongoDB可以与AEM在同一主机上运行或远程运行。
 
 ### 启动MongoDB {#start-mongodb}
 
 * &lt;mongo-install>/bin/mongod —dbpath &lt;mongo-dbpath>
 
-这将使用默认端口27017启动MongoDB服务器。
+这会使用默认端口27017启动MongoDB服务器。
 
-* 对于Mac，使用起始引号“ulimit -n 2048”提高ulimit
+* 对于Mac，使用起始引号“ulimit -n 2048”增加ulimit
 
 >[!NOTE]
 >
@@ -93,7 +93,7 @@ ht-degree: 0%
 
 ### 安装Solr {#install-solr}
 
-* 下载Solr来源 [Apache Lucene](https://archive.apache.org/dist/lucene/solr/)：
+* 下载Solr，从 [Apache Lucene](https://archive.apache.org/dist/lucene/solr/)：
 
    * 适用于任何操作系统。
    * Solr版本7.0。
@@ -101,7 +101,7 @@ ht-degree: 0%
 
 * 基本配置
 
-   * 执行“示例”Solr设置。
+   * 执行“example”Solr设置。
    * 无需服务。
    * 已安装的Solr文件夹称为 &lt;solr-install>.
 
@@ -109,14 +109,14 @@ ht-degree: 0%
 
 要为MSRP配置Solr收藏集以进行演示，需要做出两个决定（有关详细信息，请选择主文档的链接）：
 
-1. 在独立模式下运行Solr或 [SolrCloud模式](msrp.md#solrcloudmode).
+1. 以独立方式运行Solr或 [SolrCloud模式](msrp.md#solrcloudmode).
 1. 安装 [标准](msrp.md#installingstandardmls) 或 [高级](msrp.md#installingadvancedmls) 多语言搜索(MLS)。
 
 ### 独立Solr {#standalone-solr}
 
-运行Solr的方法可能会因安装的版本和方式而异。 此 [Solr参考指南](https://archive.apache.org/dist/lucene/solr/ref-guide/) 是权威文件。
+运行Solr的方法可能会因安装版本和方式而异。 此 [Solr参考指南](https://archive.apache.org/dist/lucene/solr/ref-guide/) 是权威文档。
 
-为方便起见，以版本4.10为例，在独立模式下启动Solr：
+为简单起见，使用版本4.10作为示例，在独立模式下启动Solr：
 
 * cd到 &lt;solrinstall>/example
 * Java™ -jar start.jar
@@ -127,13 +127,13 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->如果Solr Console不可用，请检查 &lt;solrinstall>/example/logs. 查看SOLR是否尝试绑定到无法解析的特定主机名（例如“user-macbook-pro”）。
+>如果Solr Console不可用，请检查下的日志 &lt;solrinstall>/example/logs. 查看SOLR是否尝试绑定到无法解析的特定主机名（例如“user-macbook-pro”）。
 >
-如果是这样，请更新 `etc/hosts` 文件，其中包含此主机名的新条目（例如127.0.0.1 user-macbook-pro），以便正确启动Solr。
+如果是这样，请更新 `etc/hosts` 文件，其中包含此主机名的新条目（例如，127.0.0.1 user-macbook-pro），以便正确启动Solr。
 
 ### SolrCloud {#solrcloud}
 
-要运行基本（非生产） solrCloud安装程序，请使用以下命令启动solr：
+要运行基本（非生产）solrCloud安装程序，请通过以下方式启动solr：
 
 * `java -Dbootstrap_confdir=./solr/collection1/conf -Dbootstrap_conf=true -DzkRun -jar start.jar`
 
@@ -147,7 +147,7 @@ ht-degree: 0%
 
 ## 测试 {#test}
 
-要测试和验证MongoDB公用存储，请在发布实例上发布评论并在创作实例上查看该评论，以及在MongoDB和Solr中查看UGC：
+要测试和验证MongoDB公用存储，请在发布实例上发布评论并在创作实例上查看该评论，然后在MongoDB和Solr中查看UGC：
 
 1. 在发布实例上，浏览到 [社区组件指南](http://localhost:4503/content/community-components/en/comments.html) 页面并选择注释组件。
 1. 登录以发布评论：
@@ -185,6 +185,6 @@ ht-degree: 0%
    * 在所有创作和发布AEM实例上，重新访问 [存储配置控制台](srp-config.md)，或检查AEM存储库：
 
    * 在JCR中，如果 [/etc/socialconfig](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/) 不包含 [srpc](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc) 节点，这意味着存储提供程序是JSRP。
-   * 如果srpc节点存在且包含节点 [默认配置](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc/defaultconfiguration)，defaultconfiguration的属性应将MSRP定义为默认提供程序。
+   * 如果srpc节点存在且包含节点 [默认配置](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc/defaultconfiguration)，默认配置的属性应将MSRP定义为默认提供程序。
 
-1. 确保在选择MSRP后重新启动AEM。
+1. 确保选择MSRP后重新启动AEM。

@@ -2,7 +2,7 @@
 title: 了解如何在 AEM 中创建内容片段模型
 description: 了解使用内容片段模型对 Headless CMS 进行内容建模的概念和机制。
 exl-id: b377e01f-e392-4ef5-a259-73ce9ff941d0
-source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '690'
 ht-degree: 92%
@@ -28,7 +28,7 @@ ht-degree: 92%
 <!--
 ## Enabling Content Fragment Models {#enabling-content-fragment-models}
 
-At the very start you need to enable Content Fragment Models for your site, this is done in the Configuration Browser; under Tools -> General -> Configuration Browser. You can either select to configure the global entry, or create a new configuration. For example:
+At the very start you need to enable Content Fragment Models for your site, this is done in the Configuration Browser; under Tools -> General -> Configuration Browser. You can either select to configure the global entry, or create a configuration. For example:
 
 ![Define configuration](/help/assets/content-fragments/assets/cfm-conf-01.png)
 
@@ -39,7 +39,7 @@ At the very start you need to enable Content Fragment Models for your site, this
 
 ## 创建内容片段模型 {#creating-content-fragment-models}
 
-之后，可以创建内容片段模型并定义结构。这可以在“工具” — >“资产” — >“内容片段模型”下完成。
+之后，可以创建内容片段模型并定义结构。此操作可在“工具” — >“资产” — >“内容片段模型”下完成。
 
 ![工具中的内容片段模型](assets/cfm-tools.png)
 
@@ -110,7 +110,7 @@ At the very start you need to enable Content Fragment Models for your site, this
 
 * [创作概念](/help/sites-authoring/author.md)
 
-* [基本处理](/help/sites-authoring/basic-handling.md)  — 此页面主要基于 **站点** 控制台，但许多/大多数功能也都与导航到和对执行操作有关， **内容片段模型** 在 **资产** 控制台。
+* [基本处理](/help/sites-authoring/basic-handling.md)  — 此页面主要基于 **站点** 控制台，但许多/大多数功能也可用于导航到和对执行操作， **内容片段模型** 在 **资产** 控制台。
 
 * [使用内容片段](/help/assets/content-fragments/content-fragments.md)
 

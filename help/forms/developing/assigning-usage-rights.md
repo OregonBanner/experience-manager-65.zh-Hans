@@ -11,9 +11,9 @@ topic-tags: operations
 discoiquuid: 9e8db506-9ace-4e1f-8a7b-c4e9b15dde7e
 role: Developer
 exl-id: 6af148eb-427a-4b54-9c5f-8750736882d8
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '3918'
+source-wordcount: '3914'
 ht-degree: 0%
 
 ---
@@ -69,7 +69,7 @@ Acrobat Reader DC扩展服务通过扩展Adobe Reader的功能，使您的组织
 
 **检索PDF文档**
 
-您必须检索PDF文档以应用使用权限。 启用权限的PDF文档包含使用权限字典。 当Adobe Reader打开包含此类词典的文档时，它仅启用词典中为该文档指定的使用权限。 如果文档不包含使用权限词典，则Acrobat Reader DC扩展服务会创建一个使用权限词典。 如果它已经包含字典，则Acrobat Reader DC扩展服务会使用您指定的字典覆盖现有使用权限。 词典指定启用哪些使用权限。 当用户在Adobe Reader中打开文档时，仅允许词典中指定的使用权限。
+检索PDF文档以应用使用权限。 启用权限的PDF文档包含使用权限字典。 当Adobe Reader打开包含此类词典的文档时，它仅启用词典中为该文档指定的使用权限。 如果文档不包含使用权限词典，则Acrobat Reader DC扩展服务会创建一个使用权限词典。 如果它已经包含字典，则Acrobat Reader DC扩展服务会使用您指定的字典覆盖现有使用权限。 词典指定启用哪些使用权限。 当用户在Adobe Reader中打开文档时，仅允许词典中指定的使用权限。
 
 **指定要应用的使用权限**
 
@@ -388,7 +388,7 @@ Acrobat Reader DC扩展服务通过扩展Adobe Reader的功能，使您的组织
 
 **检索启用权限的PDF文档**
 
-必须检索启用了权限的PDF文档，才能检索有关凭据的信息。 还可以通过指定凭据的别名来检索有关凭据的信息；但是，如果要检索有关用于向特定启用权限的PDF文档应用使用权限的凭据的信息，则必须检索该文档。
+检索启用了权限的PDF文档，以检索有关凭据的信息。 还可以通过指定凭据的别名来检索有关凭据的信息；但是，如果要检索有关用于向特定启用权限的PDF文档应用使用权限的凭据的信息，则必须检索该文档。
 
 **检索有关凭据的信息**
 

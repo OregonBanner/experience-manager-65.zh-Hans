@@ -10,7 +10,7 @@ topic-tags: forms-workspace
 discoiquuid: 6a32d240-c6a6-4937-a31f-7a5ec3c60b1f
 docset: aem65
 exl-id: 46de0101-9607-4429-84c3-7c1f34d2da27
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '901'
 ht-degree: 0%
@@ -21,16 +21,16 @@ ht-degree: 0%
 
 ## 简介 {#introduction}
 
-在Workbench中，当您定义 `AssignTask` 操作，请指定特定表单(XDP或PDF表单)。 此外，还可以通过操作配置文件指定一组渲染和提交服务。
+在Workbench中，当您定义 `AssignTask` 操作，请指定特定表单(XDP或PDF表单)。 此外，通过操作配置文件指定一组渲染和提交服务。
 
 XDP可以呈现为PDF表单或HTML表单。 新功能包括：
 
-* 以HTML身份呈现和提交XDP表单
-* 在桌面上以PDF身份呈现和提交XDP表单，在移动设备(例如，iPad)上以HTML身份呈现和提交
+* 作为HTML呈现和提交XDP表单
+* 在桌面上以PDF身份呈现和提交XDP表单，并在移动设备(例如，iPad)上以HTML身份呈现和提交
 
 ### 新的HTMLForms服务 {#new-html-forms-service}
 
-新的HTMLForms服务利用Forms中的新功能支持XDP表单的HTML渲染。 新的HTMLForms服务会公开以下方法：
+新的HTMLForms服务使用Forms中的新功能来支持将XDP表单渲染为HTML。 新的HTMLForms服务会公开以下方法：
 
 ```java
 /*
@@ -55,7 +55,7 @@ public String generateFormURL(TaskContext taskContext, String profileName);
 public Map<String, Object> renderHTMLForm (TaskContext taskContext, String profileName, Map<String,Object> runtimeMap);
 ```
 
-有关移动表单配置文件的更多信息，请访问 [创建自定义用户档案](/help/forms/using/custom-profile.md).
+有关移动设备表单配置文件的更多信息，请访问 [创建自定义用户档案](/help/forms/using/custom-profile.md).
 
 ## 新的HTML表单渲染和提交流程 {#new-html-form-render-amp-submit-processes}
 
@@ -71,15 +71,15 @@ public Map<String, Object> renderHTMLForm (TaskContext taskContext, String profi
 
 输出 - `outFormDoc`
 
-这种方法模拟了 `renderHTMLForm` NewHTMLFormsService的API。 它调用 `generateFormURL` 用于获取表单HTML呈现的URL的API。 然后，它使用以下一个或多个键值填充runtimeMap：
+此方法可模拟以下对象的精确行为： `renderHTMLForm` NewHTMLFormsService的API。 它调用 `generateFormURL` 用于获取表单HTML演绎版URL的API。 然后，它使用以下一个或多个键值填充runtimeMap：
 
-新html表单= true
+新建html表单= true
 
 newHTMLFormURL =调用后返回的URL `generateFormURL` API。
 
 ### 提交新的HTML表单 {#submit-a-new-html-form}
 
-提交新HTML表单的这个过程适用于以下I/O参数 — 
+提交新HTML表单的此流程适用于以下I/O参数 — 
 
 输入 - `taskContext`
 
@@ -89,13 +89,13 @@ newHTMLFormURL =调用后返回的URL `generateFormURL` API。
 
 该流程会设置 `outputDocument`到 `inputDocument`检索自 `taskContext`.
 
-## 默认渲染或提交进程，以及操作配置文件 {#default-render-or-submit-processes-and-action-profiles}
+## 默认呈现或提交进程，以及操作配置文件 {#default-render-or-submit-processes-and-action-profiles}
 
-通过默认的“渲染”和“提交”服务，支持在桌面上渲染PDF，并在移动设备(iPad)上HTML。
+利用默认呈现和提交服务，支持在桌面上呈现PDF，并在移动设备(iPad)上HTML。
 
 ### 默认渲染表单 {#default-render-form}
 
-此过程可无缝地在多个平台上呈现XDP表单。 该进程从检索用户代理 `taskContext`，并使用数据调用进程来渲染HTML或PDF。
+此过程可在多个平台上无缝呈现XDP表单。 进程从检索用户代理 `taskContext`，并使用数据调用进程来呈现HTML或PDF。
 
 ![default-render-form](assets/default-render-form.png)
 
@@ -107,9 +107,9 @@ newHTMLFormURL =调用后返回的URL `generateFormURL` API。
 
 ## 将移动表单的渲染从PDF切换到HTML {#switch-the-rendering-of-mobile-forms-from-pdf-to-html}
 
-浏览器正在逐步撤销对基于NPAPI的插件的支持，包括适用于Adobe Acrobat和Adobe Acrobat Reader的插件。 您可以使用以下步骤将移动表单的渲染从PDF更改为HTML：
+浏览器正在逐渐撤销对基于NPAPI的插件的支持，包括适用于Adobe Acrobat和Adobe Acrobat Reader的插件。 您可以使用以下步骤将移动表单的渲染从PDF更改为HTML：
 
-1. 以有效用户身份登录Workbench。
+1. 以有效用户的身份登录Workbench。
 1. 选择 **文件** > **获取应用程序**.
 
    将出现“获取应用程序”对话框。
@@ -134,32 +134,32 @@ newHTMLFormURL =调用后返回的URL `generateFormURL` API。
 
 * 渲染指南（指南已弃用）
 * 渲染表单指南
-* 渲染PDF表单
-* 渲染HTML表单
-* 渲染新HTML表单（新）
+* 呈现PDF表单
+* 呈现HTML表单
+* 呈现新HTML表单（新）
 * 默认渲染表单（新）
 
-以及等效的提交流程。
+等同于提交流程。
 
 ![gen_question_b_20](assets/gen_question_b_20.png) **哪些操作配置文件将开箱即用？**
 
 对于XDP Forms：
 
-* 默认（使用新的“默认渲染/提交”进程渲染/提交）
+* 默认（使用新的“默认呈现/提交”进程呈现/提交）
 
-![gen_question_b_20](assets/gen_question_b_20.png) **要使表单在设备上以HTML呈现，并在桌面上以PDF呈现，流程设计人员需要做什么？**
+![gen_question_b_20](assets/gen_question_b_20.png) **要使表单在设备上以HTML呈现，以及在桌面上PDF呈现，流程设计者需要执行哪些操作？**
 
-没什么。 默认的Action Profile是自动选择的，渲染模式也是自动处理的。
+没什么。 默认的“操作配置文件”是自动选择的，渲染模式也是自动处理的。
 
-![gen_question_b_20](assets/gen_question_b_20.png) **在桌面上以HTML呈现表单时，需要执行哪些操作？**
+![gen_question_b_20](assets/gen_question_b_20.png) **要使表单在桌面上HTML呈现，需要执行哪些操作？**
 
 用户必须为默认配置文件选择“HTML”单选按钮。
 
 ![gen_question_b_20](assets/gen_question_b_20.png) **更改默认操作配置文件行为是否会产生任何升级影响？**
 
-会，由于以前与默认操作配置文件关联的渲染和提交服务是不同的，因此这些服务将被视为现有表单的自定义。 单击 **恢复默认设置**，则改为设置默认的渲染和提交服务。
+会，由于与默认操作配置文件关联的上次渲染和提交服务不同，因此这些服务被视为现有表单的自定义。 单击 **恢复默认值**，则改为设置默认渲染和提交服务。
 
-如果您修改了现有的渲染或提交PDF表单服务或创建了自定义服务（例如custom1），现在希望将相同的功能用于HTML呈现。 您需要复制新的渲染或提交服务（如custom2），并将类似的自定义应用于这些服务。 现在，修改XDP的操作配置文件以开始使用custom2服务，而不是custom1进行渲染或提交。
+如果您修改了现有的渲染或提交PDF表单服务或创建了自定义服务（例如，custom1），现在希望将相同的功能用于HTML呈现。 您需要复制新的渲染或提交服务（如custom2）并将类似的自定义应用于这些服务。 现在，修改XDP的操作配置文件以开始使用custom2服务，而不是渲染或提交的custom1。
 
-要使表单在设备上以HTML呈现，并在桌面上以PDF呈现，流程设计人员需要做什么？
-要使表单在设备上以HTML呈现，并在桌面上以PDF呈现，流程设计人员需要做什么？
+要使表单在设备上以HTML呈现，以及在桌面上PDF呈现，流程设计者需要执行哪些操作？
+要使表单在设备上以HTML呈现，以及在桌面上PDF呈现，流程设计者需要执行哪些操作？

@@ -5,9 +5,9 @@ feature: Content Fragments,Assets HTTP API
 role: Developer
 exl-id: 0f9efb47-a8d1-46d9-b3ff-a6c0741ca138
 hide: true
-source-git-commit: 71b3f7c6ad2c7712762a29518de6cf0639081cb7
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1956'
+source-wordcount: '1959'
 ht-degree: 24%
 
 ---
@@ -204,7 +204,7 @@ Assets REST API支持通过URL参数执行分页(对于GET请求)：
 
 文件夹充当资源和其他文件夹的容器。 它们反映了AEM内容存储库的结构。
 
-Assets REST API公开对文件夹属性的访问权限；例如其名称、标题等。 资产将作为文件夹和子文件夹的子实体显示。
+Assets REST API公开对文件夹属性的访问权限；例如，其名称、标题等。 资产将作为文件夹和子文件夹的子实体显示。
 
 >[!NOTE]
 >
@@ -235,9 +235,9 @@ A [内容片段](/help/assets/content-fragments/content-fragments.md) 是一种�
 
 #### 内容模型和内容片段 {#content-models-and-content-fragments}
 
-目前，定义内容片段结构的模型不会通过HTTP API公开。 因此， *消费者* 需要了解片段的模型（至少是最低要求） — 尽管可以从有效负载推断出大多数信息；如数据类型等。 是定义的一部分。
+目前，定义内容片段结构的模型不会通过HTTP API公开。 因此， *消费者* 需要了解片段的模型（至少是最低要求） — 尽管可以从有效负载推断出大多数信息；数据类型等。 是定义的一部分。
 
-要创建新的内容片段，必须提供模型的（内部存储库）路径。
+要创建内容片段，必须提供模型的（内部存储库）路径。
 
 #### 关联的内容 {#associated-content}
 
@@ -307,7 +307,7 @@ A [内容片段](/help/assets/content-fragments/content-fragments.md) 是一种�
 
 有一些限制：
 
-* **当前不支持内容片段模型**：无法读取或创建它们。 为了能够创建新内容片段或更新现有内容片段，开发人员必须知道内容片段模型的正确路径。 目前，获取这些内容的概述的唯一方法是通过管理UI。
+* **当前不支持内容片段模型**：无法读取或创建它们。 为了能够创建内容片段或更新现有内容片段，开发人员必须知道内容片段模型的正确路径。 目前，获取这些内容的概述的唯一方法是通过管理UI。
 * **引用将被忽略**. 当前不检查是否引用了现有的内容片段。 因此，例如，删除内容片段可能会导致包含对已删除内容片段的引用的页面出现问题。
 * **JSON数据类型** 的REST API输出 *JSON数据类型* 当前为 *基于字符串的输出*.
 

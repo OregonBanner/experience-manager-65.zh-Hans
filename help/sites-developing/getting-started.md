@@ -1,19 +1,15 @@
 ---
 title: AEM Sites 开发快速入门 – WKND 教程
-seo-title: Getting Started Developing AEM Sites - WKND Tutorial
 description: 初次开发 AEM？需要复习最佳实践？从这里开始！此多部分教程旨在教授初次使用 AEM 的开发人员如何使用最新的标准和技术在 AEM 中实施网站。
-seo-description: New to developing AEM? Need a refresher on best practices? This is the place to start! The goal for this multi-part tutorial is to teach a developer who is new to AEM how to implement a website in AEM using the latest standards and technologies.
-uuid: 12861ca8-b5b9-404e-9788-9d13aa7c5a68
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: introduction
-discoiquuid: 95346ce1-84b7-4bd1-a1e2-6a803139dc69
 docset: aem65
 exl-id: 8314d7fe-0a46-453d-9592-f1bcd8c8f10a
-source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '259'
+source-wordcount: '258'
 ht-degree: 81%
 
 ---
@@ -39,11 +35,11 @@ ht-degree: 81%
 * [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)
 * [Sling 模型](https://sling.apache.org/documentation/bundles/models.html)
 * [触屏 UI](/help/sites-developing/touch-ui-concepts.md)
-* [核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)
+* [核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
 * [可编辑模板](/help/sites-developing/page-templates-editable.md)
 
-在详细介绍上述概念之前，请先阅读本教程。
+在详细介绍上述概念之前，请先完成本教程。
 
 ## 后续步骤 {#next-steps}
 
-一旦您完成 [教程](https://helpx.adobe.com/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop.html)，考虑查看文档 [AEM核心概念](/help/sites-developing/the-basics.md) 更好地了解AEM的一些底层技术和开发模式。
+完成以下步骤后： [教程](https://helpx.adobe.com/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop.html)，考虑查看文档 [AEM核心概念](/help/sites-developing/the-basics.md) 更好地了解AEM的一些底层技术和开发模式。

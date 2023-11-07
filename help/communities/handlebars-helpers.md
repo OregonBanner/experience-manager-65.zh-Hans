@@ -8,7 +8,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 8b6c1697-d693-41f4-8337-f41658465107
 exl-id: bfb95cae-4b0f-4521-a113-042dc4005a63
-source-git-commit: d673a447e9ce2377c8645c87f12be81cbad06238
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '1473'
 ht-degree: 2%
@@ -17,15 +17,15 @@ ht-degree: 2%
 
 # SCF Handlebars助手 {#scf-handlebars-helpers}
 
-| **[⇐ Feature Essentials](essentials.md)** | **[服务器端自定义⇒](server-customize.md)** |
+| **[⇐功能要点](essentials.md)** | **[服务器端自定义⇒](server-customize.md)** |
 |---|---|
 |   | **[客户端自定义⇒](client-customize.md)** |
 
-Handlebars帮助程序（帮助程序）是可从Handlebars脚本中调用的方法，以便使用SCF组件。
+Handlebars帮助程序（帮助程序）是可从Handlebars脚本中调用的方法，便于使用SCF组件。
 
 该实施包括客户端和服务器端定义。 开发人员还可以创建自定义帮助程序。
 
-与AEM Communities一起提供的自定义SCF帮助程序在 [客户端库](../../help/sites-developing/clientlibs.md)：
+与AEM Communities一起提供的自定义SCF帮助程序在中定义 [客户端库](../../help/sites-developing/clientlibs.md)：
 
 * `/etc/clientlibs/social/commons/scf/helpers.js`
 
@@ -35,13 +35,13 @@ Handlebars帮助程序（帮助程序）是可从Handlebars脚本中调用的方
 
 ## 缩写 {#abbreviate}
 
-用于返回符合maxWords和maxLength属性的缩写字符串的帮助程序。
+用于返回符合maxWords和maxLength属性的缩写字符串的辅助函数。
 
 要缩写的字符串作为上下文提供。 如果未提供上下文，则返回空字符串。
 
-首先，将上下文裁剪为maxLength，然后将上下文分割为单词，并缩减为maxWords。
+首先，将上下文裁剪为maxLength，然后将上下文分割为words并缩减为maxWords。
 
-如果safeString设置为true，则返回的字符串是SafeString。
+如果safeString设置为true ，则返回的字符串是SafeString。
 
 ### 参数 {#parameters}
 
@@ -57,7 +57,7 @@ Handlebars帮助程序（帮助程序）是可从Handlebars脚本中调用的方
 
   （可选）默认值为修剪字符串中的字数。
 
-* **安全字符串**：布尔值
+* **安全字符串**：布尔型
 
   （可选）如果为true，则返回Handlebars.SafeString()。 默认值为false。
 
@@ -99,7 +99,7 @@ Then abbreviate would return
 
 * **numChars**：数字
 
-  （可选）不显示全文时显示的字符数。 默认值为100。
+  （可选）不显示全文时要显示的字符数。 默认值为100。
 
 * **更多文本**：字符串
 
@@ -107,9 +107,9 @@ Then abbreviate would return
 
 * **省略号文本**：字符串
 
-  （可选）要显示的文本，指示存在隐藏文本。 默认值为“……”。
+  （可选）显示的文本，指示存在隐藏文本。 默认值为“……”。
 
-* **安全字符串**：布尔值
+* **安全字符串**：布尔型
 
   （可选）布尔值，指示在返回结果之前是否应用Handlebars.SafeString()。 默认值为false。
 
@@ -129,7 +129,7 @@ Then content-loadmore would return
 
 ## 日期实用程序 {#dateutil}
 
-用于返回带格式的日期字符串的帮助程序。
+用于返回格式化的日期字符串的辅助函数。
 
 ### 参数 {#parameters-2}
 
@@ -139,7 +139,7 @@ Then content-loadmore would return
 
 * **格式**：字符串
 
-  （可选）要应用的日期格式。 默认值为“YYYY-MM-DDTHH”:mm:ss.sssZ”，结果将显示为“2015-03-18T18”:17:13-07:00英寸
+  （可选）要应用的日期格式。 默认值为“YYYY-MM-DDTHH”:mm:ss.sssZ”并且结果显示为“2015-03-18T18:17:13-07:00英寸
 
 ### 示例 {#examples-1}
 
@@ -157,7 +157,7 @@ Then content-loadmore would return
 
 ## 等于 {#equals}
 
-根据相等条件返回内容的帮助程序。
+根据等式条件返回内容的帮助程序。
 
 ### 参数 {#parameters-3}
 
@@ -165,7 +165,7 @@ Then content-loadmore would return
 
   要比较的左侧值。
 
-* **rvalue**：字符串
+* **值**：字符串
 
   要比较的右侧值。
 
@@ -181,7 +181,7 @@ Then content-loadmore would return
 
 ## If-wcm-mode {#if-wcm-mode}
 
-一个块帮助程序，用于测试当前值 [WCM模式](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/api/WCMMode.html) 以字符串分隔的模式列表。
+一个块帮助程序，用于测试以下项的当前值： [WCM模式](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/api/WCMMode.html) 针对以字符串分隔的模式列表。
 
 ### 参数 {#parameters-4}
 
@@ -234,11 +234,11 @@ Then content-loadmore would return
 
 用于将组件作为非现有资源包含在模板中的辅助函数。
 
-与添加为JCR节点的资源相比，此方法使资源更容易以编程方式自定义。 参见 [添加或包含社区组件](scf.md#add-or-include-a-communities-component).
+与添加为JCR节点的资源相比，此方法允许更轻松地以编程方式自定义资源。 请参阅 [添加或包含社区组件](scf.md#add-or-include-a-communities-component).
 
 只有少数几个社区组件可供包含。 <!-- OBSOLETE/OLD  NEED TO UPDATE FOR 6.5  For AEM 6.1, those that are includable are [comments](essentials-comments.md), [rating](rating-basics.md), [reviews](reviews-basics.md), and [voting](essentials-voting.md). -->
 
-此帮助程序仅适用于服务器端，它提供的功能与 [cq：include](../../help/sites-developing/taglib.md) 用于JSP脚本。
+此辅助函数仅适用于服务器端，它提供的功能与 [cq：include](../../help/sites-developing/taglib.md) 用于JSP脚本。
 
 ### 参数 {#parameters-6}
 
@@ -248,7 +248,7 @@ Then content-loadmore would return
 
   使用 `this` 以传递当前上下文。
 
-  使用 `this.id` 获取资源： `id` 用于呈现所请求的resourceType。
+  使用 `this.id` 要获取资源，请执行以下操作 `id` 用于呈现请求的resourceType。
 
 * **resourceType**：字符串
 
@@ -262,7 +262,7 @@ Then content-loadmore would return
 
   （必需）资源的路径。 如果路径是相对路径，则必须提供上下文，否则返回空字符串。
 
-* **authoringDisabled**：布尔值
+* **authoringDisabled**：布尔型
 
   （可选）默认值为false。 仅供内部使用。
 
@@ -276,19 +276,19 @@ Then content-loadmore would return
 
 ## IncludeClientLib {#includeclientlib}
 
-包含AEM html客户端库的帮助程序，该客户端库可以是js、css或主题库。 对于不同类型的多个包含项（例如js和css），必须在Handlebars脚本中多次使用此标记。
+一个包含AEM html客户端库的帮助程序，该客户端库可以是js、css或主题库。 对于不同类型的多个包含项（例如js和css），必须在Handlebars脚本中多次使用此标记。
 
-此帮助程序仅适用于服务器端，它提供的功能与 [ui：includeClientLib](../../help/sites-developing/taglib.md) 用于JSP脚本。
+此辅助函数仅适用于服务器端，它提供的功能与 [ui：includeClientLib](../../help/sites-developing/taglib.md) 用于JSP脚本。
 
 ### 参数 {#parameters-7}
 
 * **类别**：字符串
 
-  （可选）以逗号分隔的客户端库类别的列表。 包含给定类别的所有JavaScript和CSS库。 主题名称是从请求中提取的。
+  （可选）以逗号分隔的客户端库类别的列表。 包含给定类别的所有JavaScript和CSS库。 将从请求中提取主题名称。
 
 * **主题**：字符串
 
-  （可选）以逗号分隔的客户端库类别的列表。 包含给定类别的所有与主题相关的库（CSS和JS）。 主题名称是从请求中提取的。
+  （可选）以逗号分隔的客户端库类别的列表。 包含给定类别的所有与主题相关的库（CSS和JS）。 将从请求中提取主题名称。
 
 * **js**：字符串
 
@@ -351,7 +351,7 @@ Then content-loadmore would return
 
 * **上下文**：数字
 
-  要与“现在”进行比较的过去时间。 时间表示为从1970年1月1日起偏移的毫秒值（纪元）。
+  要与“现在”进行比较的过去的时间。 时间表示为从1970年1月1日起偏移的毫秒值（纪元）。
 
 * **daysCutoff**：数字
 
@@ -375,7 +375,7 @@ Depending on how long in the past, may return
 
 ## Xss-html {#xss-html}
 
-一个帮助程序，用于为HTML元素内容编码源字符串，以帮助防范XSS。
+一个帮助程序，用于对HTML元素内容的源字符串进行编码，以帮助防范XSS。
 
 注意：此帮助程序不是验证程序，不用于写入属性值。
 
@@ -393,7 +393,7 @@ Depending on how long in the past, may return
 
 ## Xss-htmlAttr {#xss-htmlattr}
 
-帮助程序对源字符串进行编码，以便写入HTML属性值，帮助防范XSS。
+一个帮助程序，用于对要写入HTML属性值的源字符串进行编码，以帮助防范XSS。
 
 注意：此帮助程序不是验证器，不用于编写可操作属性（href、src、事件处理程序）。
 
@@ -411,7 +411,7 @@ Depending on how long in the past, may return
 
 ## Xss-jsString {#xss-jsstring}
 
-一个帮助程序，对用于写入JavaScript字符串内容的源字符串进行编码，以帮助防范XSS。
+一个帮助程序，用于对要写入JavaScript字符串内容的源字符串进行编码以帮助防范XSS。
 
 注意：此帮助程序不是验证器，不用于写入任意JavaScript。
 
@@ -429,9 +429,9 @@ var input = {{xss-jsString topic-title}}
 
 ## Xss-validHref {#xss-validhref}
 
-一个帮助程序，用于对作为HTMLhref或srce属性值写入的URL进行清理以帮助防范XSS。
+一个帮助程序，用于对作为HTMLhref或srce属性值写入的URL进行清理以帮助防御XSS。
 
-注意：此帮助程序可能返回空字符串。
+注意：此辅助函数可能返回空字符串。
 
 ### 参数 {#parameters-12}
 
@@ -447,22 +447,22 @@ var input = {{xss-jsString topic-title}}
 
 ## Handlebars.js基本概述 {#handlebars-js-basic-overview}
 
-* Handlebars帮助程序调用是一个简单标识符(即 *name* )，后面跟零个或多个空格分隔参数。
-* 参数可以是简单字符串、数字、布尔值或JSON对象，以及键值对（哈希参数）的可选序列作为最后一个参数。
+* Handlebars帮助程序调用是一个简单标识符(即 *name* )，后跟零个或多个以空格分隔的参数。
+* 参数可以是简单字符串、数字、布尔值或JSON对象，也可以是键值对（哈希参数）的可选序列作为最后一个参数。
 * 哈希参数中的键必须是简单标识符。
 * 散列参数中的值是Handlebars表达式：简单标识符、路径或字符串。
 * 当前上下文， `this`，始终可供Handlebars帮助程序使用。
 * 上下文可以是字符串、数字、布尔值或JSON数据对象。
 * 可以将嵌套在当前上下文中的对象作为上下文传递，例如 `this.url` 或 `this.id` （请参阅以下简单帮助程序和块帮助程序的示例）。
 
-* 块帮助程序是从模板中的任何位置调用的函数。 它们每次可使用不同的上下文调用模板块零次或多次。 它们包含以下内容之间的上下文： `{{#*name*}}` 和 `{{/*name*}}`.
+* 块帮助程序是从模板中的任何位置调用的函数。 它们每次可以使用不同的上下文零次或更多次调用模板块。 它们包含下列内容之间的上下文： `{{#*name*}}` 和 `{{/*name*}}`.
 
-* Handlebars为帮助程序提供了一个名为“options”的最终参数。 特殊对象“options”包括
+* Handlebars为名为“options”的帮助程序提供最终参数。 特殊对象“options”包括
 
-   * 可选专用数据(options.data)
-   * 调用中的可选键值属性(options.hash)
+   * 可选的专用数据(options.data)
+   * 调用的可选键值属性(options.hash)
    * 能够调用自身(options.fn())
-   * 能够调用自身的逆函数(options.inverse())
+   * 能够调用自身的反函数(options.inverse())
 
 * 建议从帮助程序返回的HTML字符串内容是SafeString。
 
@@ -518,13 +518,13 @@ template(data);
 &lt;li>&lt;a href=&quot;/people/2&quot;>耶胡达语&lt;/a>&lt;/li>
 &lt;/ul>
 
-## 自定义SCF助手 {#custom-scf-helpers}
+## 自定义SCF帮助程序 {#custom-scf-helpers}
 
 必须在服务器端和客户端实施自定义帮助程序，尤其是在传递数据时。 对于SCF，大多数模板在服务器端编译和渲染，因为服务器在请求页面时为给定组件生成HTML。
 
 ### 服务器端自定义帮助程序 {#server-side-custom-helpers}
 
-要在服务器端实施和注册自定义SCF帮助程序，只需实施Java™接口即可 [TemplateHelper](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/handlebars/api/TemplateHelper.html)，使其成为 [OSGi服务](../../help/sites-developing/the-basics.md#osgi) 并将其作为OSGi捆绑包的一部分安装。
+要在服务器端实施和注册自定义SCF帮助程序，只需实施Java™接口 [TemplateHelper](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/handlebars/api/TemplateHelper.html)，使其成为 [OSGi服务](../../help/sites-developing/the-basics.md#osgi) 并将其作为OSGi捆绑包的一部分进行安装。
 
 例如：
 
@@ -568,7 +568,7 @@ public class FooTextHelper implements TemplateHelper<String>{
 >
 >还必须为客户端创建为服务器端创建的帮助程序。
 >
->组件将在登录用户的客户端上重新渲染，如果找不到客户端帮助程序，组件将消失。
+>组件在登录用户的客户端上重新渲染，如果找不到客户端帮助程序，组件将消失。
 
 ### 客户端自定义帮助程序 {#client-side-custom-helpers}
 
@@ -599,6 +599,6 @@ clientlib必须：
 
 注意：SCF帮助程序定义于 `/etc/clientlibs/social/commons/scf/helpers.js`.
 
-| **[⇐ Feature Essentials](essentials.md)** | **[服务器端自定义⇒](server-customize.md)** |
+| **[⇐功能要点](essentials.md)** | **[服务器端自定义⇒](server-customize.md)** |
 |---|---|
 |   | **[客户端自定义⇒](client-customize.md)** |

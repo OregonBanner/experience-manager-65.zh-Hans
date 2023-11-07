@@ -7,7 +7,7 @@ feature: Asset Management,Search
 mini-toc-levels: 4
 exl-id: 158607e6-b4e9-4a3f-b023-4023d60c97d2
 hide: true
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '10067'
 ht-degree: 3%
@@ -112,7 +112,7 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
 
 如果上传的资产与上传资产位置已提供的资产同名，则会显示警告对话框。
 
-您可以选择替换现有资源，创建另一个版本，或通过重命名上传的新资源来保留这两个版本。 如果替换现有资源，则将删除资源的元数据以及您对现有资源所做的任何先前修改（例如注释或裁切）。 如果选择保留两个资源，则新资源将重命名为数字 `1` 附加到其名称之后。
+您可以选择替换现有资源，创建另一个版本，或通过重命名上传的新资源来保留这两个版本。 如果替换现有资源，则将删除资源的元数据以及您对现有资源所做的任何先前修改（例如，注释或裁切）。 如果选择保留两个资源，则新资源将重命名为数字 `1` 附加到其名称之后。
 
 ![用于解决资源名称冲突的“名称冲突”对话框](assets/resolve-naming-conflict.png)
 

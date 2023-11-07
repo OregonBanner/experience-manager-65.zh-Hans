@@ -8,10 +8,10 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 668d1a8a-c757-4c9f-833f-e5dada4d0384
 exl-id: 760b8419-5cf8-49c5-8d4f-6691f5256c53
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1796'
-ht-degree: 82%
+source-wordcount: '1795'
+ht-degree: 79%
 
 ---
 
@@ -24,7 +24,7 @@ AEM 让您能够使用&#x200B;**布局容器**&#x200B;组件为页面实现响�
 布局容器：
 
 * 提供水平对齐网格功能，还可以将组件并排放入网格，并且定义它们何时应该折叠/重排。
-* 使用预定义的断点（例如，对于手机、平板电脑等） 允许您定义相关设备/方向的所需内容行为。
+* 使用预定义的断点（例如，对于手机、平板电脑等）来让您定义相关设备/方向所需的内容行为。
 
    * 例如，您可以自定义组件的大小，或者在特定设备上是否可以看到组件。
 
@@ -61,7 +61,7 @@ AEM 使用一组机制为页面实现响应式布局：
 
 >[!NOTE]
 >
->Adobe 提供了响应式布局的 [GitHub 文档](https://adobe-marketing-cloud.github.io/aem-responsivegrid/)，前端开发人员可以参考该文档，以便在 AEM 之外使用 AEM 网格，例如在为将来的 AEM 站点创建静态 HTML 模型时。
+>Adobe提供 [GitHub文档](https://adobe-marketing-cloud.github.io/aem-responsivegrid/) 响应布局的基础之上，作为前端开发人员可以使用的参考，例如在为将来的AEM站点创建静态AEM模型时，允许他们在AEM之外使用HTML网格。
 
 >[!NOTE]
 >
@@ -182,7 +182,7 @@ AEM 让您根据设备的宽度定义布局：
 
    ![screen_shot_2018-03-23at085636](assets/screen_shot_2018-03-23at085636.png)
 
-1. 此时将突出显示整个网格及其内容。在显示的操作工具栏中，您可以选择一项操作，例如&#x200B;**删除**。
+1. 此时将突出显示整个网格及其内容。在显示的操作工具栏中，您可以选择一项操作，例如&#x200B;**删除。**
 
    ![screen_shot_2018-03-23at085724](assets/screen_shot_2018-03-23at085724.png)
 
@@ -208,7 +208,7 @@ AEM 让您根据设备的宽度定义布局：
 
 在布局模式下，您可以对网格执行各种操作：
 
-* 使用蓝色圆点调整内容组件的大小。大小调整操作将始终与网格对齐。调整大小时，背景网格将显示出来，以帮助进行对齐：
+* 使用蓝色圆点调整内容组件的大小。大小调整操作将始终与网格对齐。调整大小时，背景网格会显示出来，以帮助进行对齐：
 
   ![screen_shot_2018-03-23at090140](assets/screen_shot_2018-03-23at090140.png)
 

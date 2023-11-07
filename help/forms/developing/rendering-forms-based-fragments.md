@@ -12,9 +12,9 @@ topic-tags: operations
 discoiquuid: a65c5303-0ebd-43a9-a777-401042d8fcad
 role: Developer
 exl-id: febf5350-3fc5-48c0-8bc5-198daff15936
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2205'
+source-wordcount: '2199'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 0%
 
 Forms服务可以渲染基于您使用Designer创建的片段的表单。 A *片段* 是表单的可重用部分，并另存为可插入到多个表单设计中的单独XDP文件。 例如，片段可以包含地址块或法律文本。
 
-使用片段可简化并加速大量表单的创建和维护。 创建新表单时，插入对所需片段的引用，片段将显示在表单中。 片段引用包含一个指向物理XDP文件的子表单。 有关基于片段创建表单设计的信息，请参阅 [Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63_cn)
+使用片段可简化并加速大量表单的创建和维护。 创建表单时，插入对所需片段的引用，片段会显示在表单中。 片段引用包含一个指向物理XDP文件的子表单。 有关基于片段创建表单设计的信息，请参阅 [Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63_cn)
 
 片段可以包含多个包在选择子表单集中的子表单。 选择子表单集根据来自数据连接的数据流控制子表单的显示。 可使用条件语句确定集合中的哪个子表单出现在交付的表单中。 例如，集合中的每个子表单可以包含特定地理位置的信息，并且显示的子表单可以根据用户的位置来确定。
 
@@ -77,7 +77,7 @@ A *脚本片段* 包含可重复使用的JavaScript函数或与任何特定对�
 
 要成功呈现基于片段的表单，您必须确保Forms服务能够找到表单和表单设计引用的片段（XDP文件）。 例如，假设表单名为PO.xdp，并且此表单使用名为FooterUS.xdp和FooterCanada.xdp的两个片段。 在这种情况下，Forms服务必须能够找到所有三个XDP文件。
 
-您可以通过将表单放置在一个位置而将片段放置在另一个位置来组织表单及其片段，也可以将所有XDP文件放置在同一位置。 在本节中，假设所有XDP文件都位于AEM Forms存储库中。 有关将XDP文件放入AEM Forms存储库的信息，请参阅 [写入资源](/help/forms/developing/aem-forms-repository.md#writing-resources).
+您可以通过将表单放置在一个位置而将片段放置在另一个位置来组织表单及其片段，也可以将所有XDP文件放置在同一位置。 在本节中，假设所有XDP文件都在AEM Forms存储库中。 有关将XDP文件放入AEM Forms存储库的信息，请参阅 [写入资源](/help/forms/developing/aem-forms-repository.md#writing-resources).
 
 呈现基于片段的表单时，必须仅引用表单本身，而不引用片段。 例如，您必须引用PO.xdp，而不是FooterUS.xdp或FooterCanada.xdp。 确保将片段放置在Forms服务可以找到它们的位置。
 
@@ -183,7 +183,7 @@ Forms服务渲染表单时，会返回一个您必须写入客户端Web浏览器
 
    * 一个字符串值，它指定窗体设计名称，包括文件扩展名。 如果您引用的表单设计是Forms应用程序的一部分，请确保您指定完整的路径，例如 `Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`.
    * A `BLOB` 包含要与表单合并的数据的对象。 如果不想合并数据，请传递 `null`.
-   * A `PDFFormRenderSpec` 存储运行时选项的对象。 请注意，如果输入文档是PDFPDF，则无法设置标记文档选项。 如果输入文件是XDP文件，则可以设置标记的PDF选项。
+   * A `PDFFormRenderSpec` 存储运行时选项的对象。 如果输入文档是PDFPDF，则无法设置标记文档选项。 如果输入文件是XDP文件，则可以设置标记的PDF选项。
    * A `URLSpec` 包含Forms服务所需的URI值的对象。
    * A `java.util.HashMap` 存储文件附件的对象。 这是一个可选参数，您可以指定 `null` 如果您不想将文件附加到表单。
    * 空的 `com.adobe.idp.services.holders.BLOBHolder` 方法填充的对象。 此参数用于存储渲染的表单。

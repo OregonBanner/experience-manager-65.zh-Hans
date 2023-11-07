@@ -12,9 +12,9 @@ topic-tags: operations
 discoiquuid: f29b089e-8902-4744-81c5-15ee41ba8069
 role: Developer
 exl-id: 85e00003-8c8b-463a-b728-66af174be295
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1872'
+source-wordcount: '1865'
 ht-degree: 0%
 
 ---
@@ -71,7 +71,7 @@ Web应用程序使用的XML数据文件已从数据文件夹移至 `C:\Adobe`(�
 
 要创建基于Web的应用程序，以基于片段呈现表单，请执行以下步骤：
 
-1. 创建新的Web项目。
+1. 创建Web项目。
 1. 创建表示Java servlet的Java应用程序逻辑。
 1. 为Web应用程序创建网页。
 1. 将Web应用程序打包到WAR文件中。
@@ -84,7 +84,7 @@ Web应用程序使用的XML数据文件已从数据文件夹移至 `C:\Adobe`(�
 
 ### 创建Web项目 {#creating-a-web-project}
 
-创建包含可调用Forms服务的Java servlet的Web应用程序的第一步是创建新的Web项目。 本文档所基于的Java IDE是Eclipse 3.3。使用Eclipse IDE创建一个Web项目，并将所需的JAR文件添加到您的项目中。 最后，添加名为的HTML页面 *index.html* 和一个Java Servlet添加到您的项目中。
+创建包含可调用Forms服务的Java servlet的Web应用程序的第一步是创建一个Web项目。 本文档所基于的Java IDE是Eclipse 3.3。使用Eclipse IDE创建一个Web项目，并将所需的JAR文件添加到您的项目中。 最后，添加名为的HTML页面 *index.html* 和一个Java Servlet添加到您的项目中。
 
 以下列表指定了必须添加到Web项目中的JAR文件：
 
@@ -184,7 +184,7 @@ Web应用程序使用的XML数据文件已从数据文件夹移至 `C:\Adobe`(�
      * that contains this quick start is exported as a WAR file which
      * is deployed to the J2EE application server)
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs
      *
      * For complete details about the location of these JAR files,
@@ -331,7 +331,7 @@ Java Servlet通过使用以下Java代码捕获从HTML页面发布的数据：
              }
 ```
 
-以下HTML代码位于在设置开发环境期间创建的index.html文件中。 (请参阅 [创建Web项目](/help/forms/developing/rendering-forms.md#creating-a-web-project).)
+以下HTML代码位于在开发环境设置期间创建的index.html文件中。 (请参阅 [创建Web项目](/help/forms/developing/rendering-forms.md#creating-a-web-project).)
 
 ```xml
  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">

@@ -1,7 +1,7 @@
 ---
 title: 自定义任务操作
 seo-title: Customizing Task Actions
-description: 可以定制任务操作的外观，只使用图像的操作，以及定制路由操作中使用的图像。
+description: 您可以自定义任务操作的外观，仅使用图像执行操作，以及自定义路由操作中使用的图像。
 seo-description: You can customize appearance of the task actions, use only images for actions, and customize the images used in route actions.
 uuid: f6aebcd5-beac-41bf-95bf-2c07d36afa8b
 content-type: reference
@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: ca3f6025-7e17-4173-8267-e24a338ea4a1
 exl-id: d17863fb-7950-493d-b378-16861c4af176
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '287'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # 自定义任务操作 {#customizing-task-actions}
 
-AEM Forms工作区允许用户自定义任务操作。 在自定义任务操作之前，请确保遵循以下列出的步骤 [AEM Forms工作区自定义的一般步骤](/help/forms/using/generic-steps-html-workspace-customization.md).
+AEM Forms工作区允许用户自定义任务操作。 在自定义任务操作之前，请确保遵循中列出的步骤 [AEM Forms工作区自定义的常规步骤](/help/forms/using/generic-steps-html-workspace-customization.md).
 
 ## 自定义文本样式 {#customizing-text-style}
 
@@ -120,7 +120,7 @@ AEM Forms工作区允许用户自定义任务操作。 在自定义任务操作�
 
 >[!NOTE]
 >
->为“任务”列表和“任务详细信息”操作添加单独的样式，以显示不同图像或不同分辨率的图像。 例如，要更改“锁定”操作，请执行以下操作：
+>为“任务”列表和“任务详细信息”操作添加单独的样式以显示不同分辨率的图像或图像。 例如，要更改“锁定”操作，请执行以下操作：
 
 ```css
 #taskarea .taskActionsPopUp .lock{
@@ -139,7 +139,7 @@ AEM Forms工作区允许用户自定义任务操作。 在自定义任务操作�
 
 1. 您需要开发包以自定义AEM Forms工作区任务列表任务操作弹出菜单的项目。 有关创建开发包的详细信息，请参阅 [构建AEM Forms工作区代码。](/help/forms/using/introduction-customizing-html-workspace.md#building-html-workspace-code)
 
-1. 将/libs/ws/js/runtime/templates/task.html复制到 `/apps/ws/js/runtime/templates/task.html`替换以下代码段：
+1. 将/libs/ws/js/runtime/templates/task.html复制到 `/apps/ws/js/runtime/templates/task.html`替换以下代码片段：
 
    ```html
    // Orignal code
@@ -212,7 +212,7 @@ AEM Forms工作区允许用户自定义任务操作。 在自定义任务操作�
        </div>
    ```
 
-1. 从中移除指定给锚点标记的固定宽度 `/apps/ws/css/newStyle.css` 文件：
+1. 从以下位置移除指定给锚标记的固定宽度 `/apps/ws/css/newStyle.css` 文件：
 
    ```css
    .task .taskActionsPopUp ul{
@@ -267,7 +267,7 @@ AEM Forms工作区允许用户自定义任务操作。 在自定义任务操作�
 执行以下步骤以自定义详细信息任务操作弹出菜单：
 
 * 将/libs/ws/js/runtime/templates/taskdetails.html文件复制到 `/apps/ws/js/runtime/templates/` 文件夹：
-* 将图标标记而非文本封装在锚点标记中。 例如， *新代码* 下面列出的内容将图标标记封装在锚点标记中：
+* 将图标标记而非文本封装在锚点标记中。 例如， *新建代码* 下面列出的内容将图标标记封装在锚点标记中：
 
 ```html
 // Original code

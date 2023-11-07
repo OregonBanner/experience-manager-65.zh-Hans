@@ -10,9 +10,9 @@ discoiquuid: f04050f8-42de-4ef0-b6ed-145d59bbffce
 docset: aem65
 feature: Interactive Communication
 exl-id: b8e84c5d-2ec8-4575-9eed-6b37b04e5d66
-source-git-commit: 10227bcfcfd5a9b0f126fee74dce6ec7842f5e95
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2477'
+source-wordcount: '2475'
 ht-degree: 0%
 
 ---
@@ -86,7 +86,7 @@ ht-degree: 0%
 
 您可以通过插入表单数据模型属性来个性化文本文档片段。 通过在文本中插入表单数据模型属性，您可以在预览交互式通信时从关联的数据源获取并填充特定于收件人的数据。 有关表单数据模型的更多信息，请参阅 [AEM Forms数据集成](/help/forms/using/data-integration.md).
 
-如果在创建文本时指定了表单数据模型，则表单数据模型中的属性会显示在文本编辑器的左窗格中。 文本文档片段的指定表单数据模型以及包含该模型的交互式通信应相同。
+如果在创建文本时指定了表单数据模型，则表单数据模型中的属性会显示在文本编辑器的左窗格中。 对于文本文档片段和包含该片段的交互式通信，指定的表单数据模型应该相同。
 
 ![insertfdmelementtext](assets/insertfdmelementtext.png)
 

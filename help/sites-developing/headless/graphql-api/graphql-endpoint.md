@@ -1,11 +1,11 @@
 ---
 title: 在 AEM 中管理 GraphQL 端点
-description: 了解如何在Adobe Experience Manager中管理GraphQL端点以投放Headless内容。
+description: 了解如何在Adobe Experience Manager中为Headless内容投放管理GraphQL端点。
 exl-id: a59a5e50-0787-4c1c-a83d-bb3eac1479a8
-source-git-commit: a8616b3b30ac04ea24c4a869cabd47518af1a35f
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '511'
-ht-degree: 97%
+source-wordcount: '510'
+ht-degree: 93%
 
 ---
 
@@ -21,12 +21,12 @@ AEM 中有两种类型的端点：
 
 * 全局
    * 可供所有站点使用。
-   * 此端点可以使用所有站点配置的所有内容片段模型（在[配置浏览器](/help/assets/content-fragments/content-fragments-configuration-browser.md#enable-content-fragment-functionality-in-configuration-browser)中定义）。
-   * 如果有任何应该在站点配置中共享的内容片段模型，则这些内容应该在全局站点配置下创建。
+   * 此端点可以使用所有 Sites 配置的所有内容片段模型（在[配置浏览器](/help/assets/content-fragments/content-fragments-configuration-browser.md#enable-content-fragment-functionality-in-configuration-browser)中定义）。
+   * 如果有任何应该在 Sites 配置中共享的内容片段模型，则这些内容应该在全局 Sites 配置下创建。
 * Sites 配置：
-   * 对应于站点配置，如[配置浏览器](/help/assets/content-fragments/content-fragments-configuration-browser.md#enable-content-fragment-functionality-in-configuration-browser)中的定义。
+   * 对应于 Sites 配置，如[配置浏览器](/help/assets/content-fragments/content-fragments-configuration-browser.md#enable-content-fragment-functionality-in-configuration-browser)中的定义。
    * 特定于指定站点/项目。
-   * Sites 配置特定的端点将来自特定站点配置与来自全局站点配置的内容片段模型结合使用。
+   * Sites 配置特定的端点将来自特定 Sites 配置与来自全局 Sites 配置的内容片段模型结合使用。
 
 >[!CAUTION]
 >
@@ -61,7 +61,7 @@ AEM 全局端点的 GraphQL 的存储库路径为：
 
 1. 导航到&#x200B;**工具**、**资源**，然后选择 **GraphQL**。
 1. 选择&#x200B;**创建**。
-1. 此时将打开&#x200B;**创建新 GraphQL 端点**&#x200B;对话框。在其中可以指定：
+1. 此时，**创建新 GraphQL 端点**&#x200B;对话框会打开。在其中可以指定：
    * **名称**：端点的名称，您可以输入任意文本。
    * **使用的 GraphQL 架构提供自**：使用下拉菜单选择所需的站点/项目。
 
@@ -70,7 +70,6 @@ AEM 全局端点的 GraphQL 的存储库路径为：
    >对话框中显示以下警告：
    >
    >* *如果不对 GraphQL 端点仔细管理，则可能会带来数据安全和性能问题。请确保在创建端点后设置适当的权限。*
-
 
 1. 选择&#x200B;**创建**&#x200B;来确认。
 1. **后续步骤**&#x200B;对话框将提供直接指向安全性控制台的链接，这样您可以确保新创建的端点具有合适的权限。
@@ -91,4 +90,4 @@ AEM 全局端点的 GraphQL 的存储库路径为：
 >
 >在发布实例上，这会带来安全问题，因为 GraphQL 查询会对服务器施加大量负载。
 >
->您必须在端点上设置适合您的用例的 ACL。
+>在端点上设置适合您的用例的ACL。

@@ -3,10 +3,10 @@ title: 配置富文本编辑器插件
 description: 了解如何配置Adobe Experience Manager富文本编辑器插件以启用各个功能。
 contentOwner: AG
 exl-id: 6bfd6caa-a68a-40ba-9826-4ba02cd1dbfb
-source-git-commit: 71b3f7c6ad2c7712762a29518de6cf0639081cb7
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '4395'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -95,7 +95,7 @@ RTE功能通过一系列插件提供，每个插件都具有功能属性。 您�
 
 要配置RTE以显示所需的图标，请执行以下步骤。
 
-1. 导航到您的组件，例如 `/apps/<myProject>/components/text`.
+1. 导航到您的组件，例如， `/apps/<myProject>/components/text`.
 1. 导航到节点 `rtePlugins/edit`. 请参阅 [激活插件](#activateplugin) 如果节点不存在。
 1. 创建 `features` 上的属性 `edit` 节点并添加一个或多个功能。 保存所有更改。
 
@@ -226,7 +226,7 @@ pass-as-Microsoft-Word (`paste-wordhtml`)模式可进行进一步配置，以便
 
 然后，指定要引用的样式表的位置：
 
-1. 导航到文本组件的根节点，例如 `/apps/<myProject>/components/text`.
+1. 导航到文本组件的根节点，例如， `/apps/<myProject>/components/text`.
 1. 添加属性 `externalStyleSheets` 至的父节点 `<rtePlugins-node>`：
 
    * **名称** `externalStyleSheets`

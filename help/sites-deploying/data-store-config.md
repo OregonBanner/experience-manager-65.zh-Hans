@@ -6,9 +6,9 @@ topic-tags: deploying
 docset: aem65
 feature: Configuring
 exl-id: c1c90d6a-ee5a-487d-9a8a-741b407c8c06
-source-git-commit: 2ed19ac8c60dbf49422b8f1f665be4004689e00e
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '3550'
+source-wordcount: '3549'
 ht-degree: 2%
 
 ---
@@ -90,7 +90,7 @@ customBlobStore=B"true"
 
 * `changesSize`：Mongo中用于缓存差异输出的上限集合的大小（以MB为单位）。 默认为 `256`
 
-* `customBlobStore`：布尔值，指示将使用自定义数据存储。 默认为 `false`。
+* `customBlobStore`：指示使用自定义数据存储的布尔值。 默认为 `false`。
 
 以下是示例 `org.apache.jackrabbit.oak.plugins.document.DocumentNodeStoreService.config` 文件：
 

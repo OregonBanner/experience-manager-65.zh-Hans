@@ -11,9 +11,9 @@ topic-tags: operations
 discoiquuid: 2e783745-c986-45ba-8e65-7437d114ca38
 role: Developer
 exl-id: 96310e0a-8e95-4a55-9508-5298b8d67f83
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2774'
+source-wordcount: '2771'
 ht-degree: 0%
 
 ---
@@ -123,7 +123,7 @@ ht-degree: 0%
 
 **引用XML数据源**
 
-要导入表单数据，必须引用有效的数据源。 要将数据导入到在Designer中创建的XFA XML表单中，必须使用XDP XML数据源。 如果引用Acrobat表单，则必须使用XFDF数据源。 对于要将数据导入到的每个字段，必须指定值。 如果位于XML数据源中的元素与表单中的字段不对应，则该元素将被忽略。
+要导入表单数据，必须引用有效的数据源。 要将数据导入到在Designer中创建的XFA XML表单中，必须使用XDP XML数据源。 如果引用Acrobat表单，则必须使用XFDF数据源。 对于要将数据导入到的每个字段，必须指定值。 如果XML数据源中的元素与表单中的字段不对应，则该元素将被忽略。
 
 **将数据导入PDF表单**
 
@@ -177,7 +177,7 @@ ht-degree: 0%
    * 此 `com.adobe.idp.Document` 存储PDF表单的对象。
    * 此 `com.adobe.idp.Document` 存储表单数据的对象。
 
-   此 `importData` 方法返回 `com.adobe.idp.Document` 用于存储包含位于XML数据源中的数据的PDF表单的对象。
+   此 `importData` 方法返回 `com.adobe.idp.Document` 一个对象，用于存储包含XML数据源中数据的PDF表单。
 
 1. 将PDF表单另存为PDF文件。
 
@@ -242,7 +242,7 @@ ht-degree: 0%
    * 此 `BLOB` 存储PDF表单的对象。
    * 此 `BLOB` 存储表单数据的对象。
 
-   此 `importData` 方法返回 `BLOB` 用于存储包含位于XML数据源中的数据的PDF表单的对象。
+   此 `importData` 方法返回 `BLOB` 一个对象，用于存储包含XML数据源中数据的PDF表单。
 
 1. 将PDF表单另存为PDF文件。
 

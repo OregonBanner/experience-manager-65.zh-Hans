@@ -9,9 +9,9 @@ docset: aem65
 tagskeywords: scoring, badging, badges, gamification
 role: Admin
 exl-id: 4aa857f7-d111-4548-8f03-f6d6c27acf51
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2852'
+source-wordcount: '2851'
 ht-degree: 2%
 
 ---
@@ -385,15 +385,15 @@ cURL -i -XPOST-H *标题* -u *登录* -F *操作* -F *徽章* *member-profile-ur
 
 *标题* =“Accept：application/json”自定义标头以传递到服务器（必需）
 
-*登录* = administrator-id：password，例如：admin：admin
+*登录* = administrator-id：password例如，admin：admin
 
 *操作* =“：operation=social：assignBadge”或“：operation=social：deleteBadge”
 
 *徽章* = &quot;badgeContentPath=*badge-image-file*&quot;
 
-*badge-image-file* =徽章图像文件在存储库中的位置，例如： /libs/settings/community/badging/images/moderator/jcr：content/moderator.png
+*badge-image-file* =徽章图像文件在存储库中的位置，例如/libs/settings/community/badging/images/moderator/jcr：content/moderator.png
 
-*member-profile-url* =发布上成员配置文件的端点，例如：https://&lt;server>：&lt;port>/home/users/community/riley/profile.social.json
+*member-profile-url* =发布时成员配置文件的端点，例如https://&lt;server>：&lt;port>/home/users/community/riley/profile.social.json
 
 >[!NOTE]
 >
@@ -616,7 +616,7 @@ curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=socia
 最后，
 
 * 浏览到发布实例上的组件。
-* 以社区成员身份登录(例如：weston.mccall@dodgit.com /密码)。
+* 以社区成员身份登录(例如，weston.mccall@dodgit.com /密码)。
 * 发布新论坛主题。
 * 必须刷新页面才能显示徽章。
 

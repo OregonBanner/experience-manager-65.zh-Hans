@@ -10,9 +10,9 @@ discoiquuid: c47ef627-261e-4b4b-8846-873d3d84234b
 docset: aem65
 feature: Form Data Model
 exl-id: 16b76265-9ec4-4993-9ac0-b7aef1b1e5f1
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '4184'
+source-wordcount: '4181'
 ht-degree: 0%
 
 ---
@@ -96,7 +96,7 @@ ht-degree: 0%
 
 1. 登录AEM创作实例，导航至 **[!UICONTROL Forms >数据集成]**，并打开要在其中创建数据模型对象或实体的表单数据模型。
 1. 点按 **[!UICONTROL 创建实体]**.
-1. 在创建数据模型对话框中，指定数据模型对象的名称，然后点按 **[!UICONTROL 添加]**. 数据模型对象将添加到表单数据模型。 请注意，新添加的数据模型对象未绑定到数据源，并且不具有下图中所示的任何属性。
+1. 在创建数据模型对话框中，指定数据模型对象的名称，然后点按 **[!UICONTROL 添加]**. 数据模型对象将添加到表单数据模型。 新添加的数据模型对象未绑定到数据源，并且不具有下图中所示的任何属性。
 
    ![new-entity](assets/new-entity.png)
 
@@ -317,7 +317,7 @@ ht-degree: 0%
 
 例如，您可以创建一个计算属性 **全名** 其值是现有串连的结果 **名字** 和 **姓氏** 属性。 为此，请执行以下操作：
 
-1. 使用名称创建新属性 `FullName` 数据类型为字符串的数据。
+1. 创建名为的属性 `FullName` 数据类型为字符串的数据。
 1. 启用 **[!UICONTROL 已计算]** 并点击 **[!UICONTROL 完成]** 以创建资产。
 
    ![已计算](assets/computed.png)

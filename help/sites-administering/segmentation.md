@@ -10,10 +10,10 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: 6cade87c-9ed5-47d7-9b39-c942268afdad
 exl-id: 8bd6c88b-f36a-422f-ae6c-0d59f365079a
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1783'
-ht-degree: 78%
+source-wordcount: '1774'
+ht-degree: 76%
 
 ---
 
@@ -21,12 +21,12 @@ ht-degree: 78%
 
 >[!NOTE]
 >
->本节介绍如何在使用ContextHub时配置分段。 如果您使用的是客户端上下文功能，请参阅相关的文档 [为Client Context配置分段](/help/sites-administering/campaign-segmentation.md).
+>本节介绍如何在使用ContextHub时配置分段。 如果您使用的是“客户端上下文”功能，请参阅相关的文档 [为Client Context配置分段](/help/sites-administering/campaign-segmentation.md).
 >
 
 分段是创建营销活动时的主要考虑事项。请参阅 [管理受众](/help/sites-authoring/managing-audiences.md) 有关分段的工作方式和关键术语的信息。
 
-根据您收集到的有关网站访客的信息以及要实现的目标，您将需要定义目标内容所需的区段和策略。
+根据您收集到的有关网站访客的信息以及要实现的目标，必须定义目标内容所需的区段和策略。
 
 之后，这些区段可用于为访客提供具体的目标内容。此内容维护于 [个性化](/help/sites-authoring/personalization.md) 部分。 此处定义的[活动](/help/sites-authoring/activitylib.md)可以包含在任何页面上，并定义专用内容适用于的访客区段。
 
@@ -40,7 +40,7 @@ AEM可让您轻松个性化用户体验。 它还让您验证区段定义的结�
 
 ![受众 — 配置](assets/segmentation-access-confs.png)
 
-选择您的配置以查看区段，例如WKND Site：
+选择您的配置以查看区段，例如WKND站点：
 
 ![受众 — 区段](assets/segmentation-access-segments.png)
 
@@ -323,7 +323,7 @@ this.dependOn(ContextHub.SegmentEngine.Property('profile/age'));
 
 此类测试也可在内容页面上执行，并与目标内容以及相关的&#x200B;**活动**&#x200B;和&#x200B;**体验**&#x200B;相结合。
 
-如果您使用上面的主要年龄组区段示例设置了活动和体验，则可以轻松地使用活动测试区段。 有关设置活动的详细信息，请参阅[有关创作目标内容的文档](/help/sites-authoring/content-targeting-touch.md)。
+如果您使用上面的主要年龄组区段示例设置了活动和体验，则可以轻松地使用活动测试区段。 有关设置活动的详细信息，请参阅相关 [有关创作目标内容的文档](/help/sites-authoring/content-targeting-touch.md).
 
 1. 在已设置目标内容的页面的编辑模式下，您可以看到已通过内容上的箭头图标来目标内容。
 

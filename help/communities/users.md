@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 774c2553-b629-456b-afa7-5713490f4a0a
 role: Admin
 exl-id: 4237085a-d70d-41de-975d-153f58336daa
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1916'
+source-wordcount: '1912'
 ht-degree: 0%
 
 ---
@@ -200,7 +200,7 @@ ht-degree: 0%
 
 ### LDAP集成 {#ldap-integration}
 
-AEM支持使用LDAP对用户进行身份验证以及创建用户帐户。 有关详情，请参阅 [使用AEM 6配置LDAP](../../help/sites-administering/ldap-config.md).
+AEM支持使用LDAP对用户进行身份验证和创建用户帐户。 有关详情，请参阅 [使用AEM 6配置LDAP](../../help/sites-administering/ldap-config.md).
 
 以下是特定于社区成员和成员组的一些配置详细信息。
 

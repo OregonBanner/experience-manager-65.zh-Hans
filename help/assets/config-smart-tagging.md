@@ -5,7 +5,7 @@ contentOwner: AG
 role: Admin
 feature: Tagging,Smart Tags
 exl-id: 9f68804f-ba15-4f83-ab1b-c249424b1396
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '2244'
 ht-degree: 25%
@@ -14,7 +14,7 @@ ht-degree: 25%
 
 # 准备 [!DNL Assets] 用于智能标记 {#configure-asset-tagging-using-the-smart-content-service}
 
-在使用Smart Content Services开始标记资源之前，请集成 [!DNL Experience Manager Assets] Adobe Developer Console提供的智能服务， [!DNL Adobe Sensei]. 配置完毕后，可使用一些图像和标记来训练服务。
+在使用Smart Content Services开始标记资源之前，请集成 [!DNL Experience Manager Assets] 使用Adobe Developer Console提供的智能服务 [!DNL Adobe Sensei]. 配置完毕后，可使用一些图像和标记来训练服务。
 
 >[!NOTE]
 >

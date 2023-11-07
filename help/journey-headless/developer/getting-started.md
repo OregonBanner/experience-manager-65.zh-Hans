@@ -2,10 +2,10 @@
 title: AEM Headless 快速入门
 description: 在 AEM Headless 开发人员历程的这一部分中，了解 AEM Headless 的先决条件。
 exl-id: a94794a4-bf8b-4f3b-a761-3f02feedd5c0
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '3038'
-ht-degree: 97%
+source-wordcount: '3032'
+ht-degree: 95%
 
 ---
 
@@ -81,7 +81,7 @@ AEM 的 Headless 功能基于几项关键功能。历程的后面部分将详细
 * GraphQL API 允许您创建请求来访问和投放内容片段。
 * Assets REST API 让您创建和修改内容片段（及其他资源）。
 
-您将在 AEM Headless 历程的后面部分中了解这些 API 及其使用者式。或参阅下面的[其他资源](#additional-resources)部分以获取其他文档。
+您将在 AEM Headless 历程的后面部分中了解这些 API 及其使用者式。或者，请参阅 [其他资源](#additional-resources) 部分，以获取其他文档。
 
 ## Headless 集成级别 {#integration-levels}
 
@@ -113,13 +113,13 @@ AEM 支持 CMS 的完全 Headless 模型和传统的全栈或 Headful 模型。�
 
 ### 您没有 Headless 内容的外部使用者，例如单页应用程序 (SPA)。 {#do-not-have-a-spa}
 
-如果您的目标是创建一个新的 SPA 来以 Headless 方式使用 AEM 中的内容，则可以使用内容片段等功能来管理您的 Headless 内容，还可以使用 AEM 的 SPA 编辑器框架来构建 SPA。
+如果您的目标是创建一个SPA以从AEM中无头使用内容，则可以使用内容片段等功能来管理您的headless内容，还可以使用AEM SPA Editor框架构建SPA。
 
 借助 SPA 编辑器，SPA 不仅可以使用 AEM 中的内容，还可以由内容作者在 AEM 中进行完全编辑，这将使您能够在 AEM 中灵活地进行 Headless 交付和上下文编辑。
 
 ## 要求和先决条件 {#requirements-prerequisites}
 
-在开始 Headless AEM 项目之前，需要满足许多要求。
+在开始Headless AEM项目之前，需要满足几项要求。
 
 ### 知识 {#knowledge}
 

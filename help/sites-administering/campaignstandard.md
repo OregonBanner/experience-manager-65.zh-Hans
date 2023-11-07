@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
 exl-id: caa43d80-1f38-46fc-a8b9-9485c235c0ca
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1831'
+source-wordcount: '1825'
 ht-degree: 17%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 17%
 
 ## 集成步骤 {#integration-steps}
 
-配置AEM与Adobe Campaign Standard之间的集成需要在这两个解决方案中完成多个步骤。
+配置AEM与Adobe Campaign Standard之间的集成需要在这两个解决方案中执行多个步骤。
 
 1. [配置 ](#aemserver-user)
 1. [验证 ](#resource-type-filter)
@@ -63,7 +63,7 @@ ht-degree: 17%
 
 您的 `aemserver` 用户现在拥有必要的权限，以便AEM可以使用该权限与Adobe Campaign通信。
 
-但是，在AEM可以使用 `aemserver` 用户，必须设置其密码。 这不能通过Adobe Campaign完成。 必须由Adobe支持工程师执行。 [请向Adobe客户关怀部门提交票证](https://experienceleague.adobe.com/?support-tab=home#support) 请求重置 `aemserver` 密码。 获得Adobe客户关怀团队提供的密码后，请将其保存在安全位置。
+但是，在AEM可以使用 `aemserver` 用户，必须设置其密码。 这不能通过Adobe Campaign完成。 必须由Adobe支持工程师执行。 [向Adobe客户关怀部门提交票证](https://experienceleague.adobe.com/?support-tab=home#support) 请求重置 `aemserver` 密码。 获得Adobe客户关怀团队提供的密码后，请将其保存在安全位置。
 
 ## 验证Campaign中的AEMResourceTypeFilter {#resource-type-filter}
 

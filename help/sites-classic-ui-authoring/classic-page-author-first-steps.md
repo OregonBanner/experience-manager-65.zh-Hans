@@ -1,5 +1,5 @@
 ---
-title: 作者首要步骤
+title: 作者的首要步骤
 description: 此部分概述了使用Adobe Experience Manager (AEM)创作内容时使用的主要任务。
 uuid: 1343acf9-b104-40f3-a3f2-df42060cb4fd
 contentOwner: Chris Bohnert
@@ -8,22 +8,22 @@ content-type: reference
 topic-tags: page-authoring, introduction
 discoiquuid: 7f5713fe-01e3-450e-b71a-dc567d9a192e
 exl-id: b41aa7e5-1a5f-4e5e-be79-637d9f71ad72
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '412'
+source-wordcount: '410'
 ht-degree: 7%
 
 ---
 
 # 作者的首要步骤{#first-steps-for-authors}
 
-本节概述了您在以下情况下将使用的主要任务： [开始创作内容](/help/sites-authoring/author.md#concept-of-authoring-and-publishing) 使用Adobe Experience Manager (AEM)。
+本节概述您将在以下情况下使用的主要任务： [开始创作内容](/help/sites-authoring/author.md#concept-of-authoring-and-publishing) Adobe Experience Manager (AEM)。
 
 它涵盖：
 
-* [快速入门](#getting-started)：详细描述创建和发布第一个页面所需事件的基本序列。
+* [快速入门](#getting-started)：详细介绍创建和发布第一个页面所需的基本事件序列。
 
-* [进一步操作](#further-actions)：继续进行创作时可以使用的许多其他操作。
+* [后续操作](#further-actions)：接下来，您可以在创作时执行许多其他操作。
 
 ## 快速入门 {#getting-started}
 
@@ -35,7 +35,7 @@ ht-degree: 7%
 
 ### 创建新页面 {#creating-a-new-page}
 
-编辑之前，您需要 [创建新页面](/help/sites-classic-ui-authoring/classic-page-author-manage-pages.md#creating-a-new-page).
+编辑之前，您需要 [创建页面](/help/sites-classic-ui-authoring/classic-page-author-manage-pages.md#creating-a-new-page).
 
 ### 打开页面 {#opening-a-page}
 
@@ -43,7 +43,7 @@ ht-degree: 7%
 
 ### 编辑页面 {#editing-a-page}
 
-无论您的实例是否已具有现有页面，还是您自己刚刚创建了一个新页面，您都可以 [编辑页面](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md) 方式：
+无论您的实例是否已具有现有页面，还是已自行创建新页面，您都可以 [编辑页面](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md) 通过：
 
 * [插入组件（段落）](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md#inserting-a-component)
 * [编辑组件](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md#editing-a-component-content-and-properties)
@@ -57,19 +57,19 @@ ht-degree: 7%
 
 ### 发布页面 {#publishing-a-page}
 
-编辑完页面后，您需要 [发布（或激活）您的页面](/help/sites-classic-ui-authoring/classic-page-author-publish-pages.md#main-pars-title-10) 以使其可供您网站的访客使用。
+编辑完页面后，您需要 [发布（或激活）页面](/help/sites-classic-ui-authoring/classic-page-author-publish-pages.md#main-pars-title-10) 以便您的网站访客可以使用该内容。
 
-## 进一步操作 {#further-actions}
+## 后续操作 {#further-actions}
 
 除了基本步骤之外，创作时还有许多其他操作可用。
 
 ### 复制页面 {#copying-a-page}
 
-有时更容易做到 [复制页面](/help/sites-classic-ui-authoring/classic-page-author-manage-pages.md#copying-and-pasting-a-page) 并重复使用内容，而不是重新从头开始创建所有内容。
+有时候会比较容易 [复制页面](/help/sites-classic-ui-authoring/classic-page-author-manage-pages.md#copying-and-pasting-a-page) 并重复使用内容，而不是从头开始再次创建所有内容。
 
 ### 移动或重命名页面 {#moving-or-renaming-a-page}
 
-[移动和重命名页面](/help/sites-classic-ui-authoring/classic-page-author-manage-pages.md#moving-or-renaming-page) 基本上都是用同样的动作完成的。
+[移动和重命名页面](/help/sites-classic-ui-authoring/classic-page-author-manage-pages.md#moving-or-renaming-page) 基本上用同样的动作完成。
 
 ### 取消发布页面 {#unpublishing-a-page}
 
@@ -81,7 +81,7 @@ ht-degree: 7%
 
 ### 设置页面属性 {#setting-the-page-properties}
 
-每 [页面具有属性](/help/sites-classic-ui-authoring/classic-page-author-edit-page-properties.md) 可定义以确定其操作的各个方面。
+每 [页面具有属性](/help/sites-classic-ui-authoring/classic-page-author-edit-page-properties.md) 定义以确定其操作的方面。
 
 ### 创建页面版本 {#creating-a-version-of-a-page}
 

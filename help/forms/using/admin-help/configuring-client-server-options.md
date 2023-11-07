@@ -7,9 +7,9 @@ geptopics: SG_AEMFORMS/categories/working_with_document_security
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 feature: Document Security
 exl-id: fe132f13-5f9a-4c86-a385-0a0026c812e2
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '10239'
+source-wordcount: '10229'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->基础URL嵌入在受策略保护的文件中。 客户端应用程序使用基本URL连接回服务器。 安全文件将继续包含基本URL，即使稍后更改它。 如果更改基本URL，则需要更新所有连接客户端的配置信息。
+>基础URL嵌入在受策略保护的文件中。 客户端应用程序使用基本URL连接回服务器。 安全文件将继续包含基本URL，即使稍后更改它。 如果更改基本URL，则必须为所有连接的客户端更新配置信息。
 
 **默认脱机租赁期：** 用户可以脱机使用受保护文档的默认时间长度。 此设置确定在创建策略时自动离线租赁期设置的初始值。 （请参阅创建和编辑策略。） 租赁期到期后，收件人必须再次同步文档才能继续使用它。
 
@@ -625,7 +625,7 @@ Document Security可以跟踪可能在受保护文档上执行的各种自定义
 
 ### 注册邀请电子邮件设置 {#registration-invitation-email-settings}
 
-当您创建新的受邀用户帐户或现有用户添加之前未注册或受邀注册到策略的外部收件人时，Document Security会自动发出注册邀请电子邮件。 该电子邮件包含一个链接，收件人可以使用该链接访问注册页并输入个人帐户信息，包括用户名和密码。 密码可以是八个字符的任意组合。
+在创建受邀用户帐户或现有用户添加之前未注册或受邀注册到策略的外部收件人时，Document Security会自动发出注册邀请电子邮件。 该电子邮件包含一个链接，收件人可以使用该链接访问注册页并输入个人帐户信息，包括用户名和密码。 密码可以是八个字符的任意组合。
 
 当收件人激活帐户时，该用户即成为本地用户。
 
@@ -706,7 +706,7 @@ Document Security可以跟踪可能在受保护文档上执行的各种自定义
 
 ### 指定在搜索中可见的用户和组 {#specify-users-and-groups-that-are-visible-in-searches}
 
-当用户管理其自定义策略时，可以搜索要添加到其策略中的用户和组。 您必须指定在这些搜索中显示用户和组的域。
+当用户管理其自定义策略时，可以搜索要添加到其策略中的用户和组。 指定在这些搜索中显示用户和组的域。
 
 1. 在Document Security页面上，单击配置>我的策略。
 1. 在“我的策略”页上，单击“可见的用户和组”选项卡。

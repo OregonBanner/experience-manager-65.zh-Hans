@@ -7,9 +7,9 @@ content-type: reference
 topic-tags: site-features
 docset: aem65
 exl-id: 58e61302-cfb4-4a3d-98d4-3c92baa2ad42
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1429'
+source-wordcount: '1427'
 ht-degree: 0%
 
 ---
@@ -58,7 +58,7 @@ ht-degree: 0%
 
 ### 创建基架 {#creating-a-scaffold}
 
-要创建新的基架，请转到 **工具** 控制台，然后 **默认页面基架** 并创建一个页面。 单页面模板类型可用，但需使用 *基架模板。*
+要创建基架，请转到 **工具** 控制台，然后 **默认页面基架** 并创建一个页面。 单页面模板类型可用，但需使用 *基架模板。*
 
 转到 **页面属性** ，并将 *标题文本*， *描述*， *目标模板*、和 *目标路径*，如上所述。
 
@@ -163,4 +163,4 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->如果在页面级别（从“页面属性”的Livecopy选项卡）取消继承，则所有组件都将可以在 **基架** 模式（它们将显示在未锁定状态）。
+>如果在页面级别取消继承（从页面属性的Livecopy选项卡），则所有组件在中都可以编辑 **基架** 模式（它们以解锁状态显示）。

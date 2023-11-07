@@ -4,10 +4,10 @@ description: 了解如何使用Assets控制台管理您的AEM内容片段，即H
 feature: Content Fragments
 role: User
 exl-id: 25c91a85-06ff-4666-a809-46778a689e25
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1724'
-ht-degree: 81%
+source-wordcount: '1714'
+ht-degree: 78%
 
 ---
 
@@ -52,7 +52,7 @@ ht-degree: 81%
 1. 选择 **创建**，然后选择 **内容片段** ，以打开向导。
 1. 向导的第一步要求您指定新片段的基础。
 
-   * [模型](/help/assets/content-fragments/content-fragments-models.md)  — 用于创建需要结构化内容的片段；例如 **冒险** 模型
+   * [模型](/help/assets/content-fragments/content-fragments-models.md)  — 用于创建需要结构化内容的片段；例如， **冒险** 模型
 
       * 将显示所有可用模型。
 
@@ -78,7 +78,7 @@ ht-degree: 81%
 
       * **名称**
 
-        名称；将用于组成URL。
+        名称；用于组成URL。
 
         必填；将自动从标题派生，但可以更新。
 
@@ -130,7 +130,7 @@ ht-degree: 81%
 
 >[!CAUTION]
 >
->要编辑内容片段，您需要[相应的权限](/help/sites-developing/customizing-content-fragments.md#asset-permissions)。 如果您遇到问题，请联系您的系统管理员。
+>要编辑内容片段，您需要[相应的权限](/help/sites-developing/customizing-content-fragments.md#asset-permissions)。如果您遇到问题，请联系您的系统管理员。
 
 >[!CAUTION]
 >
@@ -142,7 +142,7 @@ ht-degree: 81%
    * 单击/点按片段或片段链接（具体取决于控制台视图）。
    * 选择片段，然后 **编辑** 工具栏中。
 
-1. 将打开片段编辑器。根据需要进行更改：
+1. 片段编辑器将打开。 根据需要进行更改：
 
    ![片段编辑器](assets/cfm-managing-03.png)
 
@@ -180,13 +180,13 @@ ht-degree: 81%
 
 ![模式](assets/cfm-managing-top-toolbar.png)
 
-* 当内容页面上已引用片段时，将显示一条消息。 您可以&#x200B;**关闭**&#x200B;消息。
+* 当内容页面上已引用片段时，会显示一条消息。您可以&#x200B;**关闭**&#x200B;消息。
 
 * 可以使用&#x200B;**切换侧面板**&#x200B;图标来隐藏/显示侧面板。
 
 * 在片段名称下方，您可以看到用于创建当前片段的[内容片段模型](/help/assets/content-fragments/content-fragments-models.md)的名称：
 
-   * 该名称还是一个将打开模型编辑器的链接。
+   * 该名称还是一个打开模型编辑器的链接。
 
 * 查看片段的状态；例如，有关创建、修改或发布时间的信息。
 
@@ -227,7 +227,7 @@ This updates any page references and ensures that the Dispatcher is flushed as r
 
   >[!CAUTION]
   >
-  >要编辑内容片段，您需要[相应的权限](/help/sites-developing/customizing-content-fragments.md#asset-permissions)。 如果您遇到问题，请联系您的系统管理员。
+  >要编辑内容片段，您需要[相应的权限](/help/sites-developing/customizing-content-fragments.md#asset-permissions)。如果您遇到问题，请联系您的系统管理员。
 
   >[!NOTE]
   >
@@ -237,7 +237,7 @@ This updates any page references and ensures that the Dispatcher is flushed as r
   >
   >除了仅保存您的更改外，这些操作还会更新任何引用，并确保 Dispatcher 按需要刷新。这些更改可能需要一些时间才能处理。因此，对于大型/复杂/重载系统，性能可能会受到影响。
   >
-  >在使用&#x200B;**保存并关闭**&#x200B;时请记住这一点，然后快速重新进入片段编辑器以进行并保存进一步的更改。
+  >使用时，请牢记这一点 **保存并关闭** 然后快速重新进入片段编辑器以进行并保存进一步的更改。
 
 * **关闭**
 
@@ -319,13 +319,13 @@ This updates any page references and ensures that the Dispatcher is flushed as r
 
 选择特定版本后，[时间线](/help/assets/content-fragments/content-fragments-managing.md#timeline-for-content-fragments)中的&#x200B;**与当前比较**&#x200B;操作可用。
 
-此时将打开：
+这将打开：
 
 * **当前**（最新）版本（左）
 
 * 所选版本 **v&lt;*x.y*>**（右）
 
-它们将并排显示，其中：
+它们会并排显示，其中：
 
 * 任何差异都会突出显示
 

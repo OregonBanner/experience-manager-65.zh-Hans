@@ -6,9 +6,9 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_ssl
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: b0786b52-879e-4a24-9cc9-bd9dcb2473cc
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1225'
+source-wordcount: '1222'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 要启用SSL，WebSphere需要访问本地操作系统用户注册表中具有管理系统管理权限的用户帐户：
 
-* (Windows)创建新的Windows用户，该用户是Administrators组的一部分，并且有权作为操作系统的一部分进行操作。 (请参阅 [为WebSphere创建Windows用户](configuring-ssl-websphere-application-server.md#create-a-windows-user-for-websphere).)
+* (Windows)创建一个Windows用户，该用户是管理员组的成员，并且有权作为操作系统的一部分进行操作。 (请参阅 [为WebSphere创建Windows用户](configuring-ssl-websphere-application-server.md#create-a-windows-user-for-websphere).)
 * (Linux、UNIX)用户可以是超级用户或具有超级用户权限的其他用户。 在WebSphere上启用SSL时，请使用此用户的服务器标识和密码。
 
 ### 为WebSphere创建Linux或UNIX用户 {#create-a-linux-or-unix-user-for-websphere}
@@ -51,7 +51,7 @@ ht-degree: 1%
 1. 右键单击“用户”并选择 **新用户**.
 1. 在相应的框中键入用户名和密码，并在其余框中键入所需的任何其他信息。
 1. 取消选择 **用户下次登录时必须更改密码**，单击 **创建**，然后单击 **关闭**.
-1. 单击 **用户**，右键单击刚创建的用户并选择 **属性**.
+1. 单击 **用户**，右键单击您创建的用户并选择 **属性**.
 1. 单击 **成员** 选项卡，然后单击 **添加**.
 1. 在“输入要选择的对象名称”框中，键入 `Administrators`，单击检查名称以确保组名称正确。
 1. 单击 **确定** 然后单击 **确定** 再来一次。
@@ -126,7 +126,7 @@ ht-degree: 1%
 
 1. 在WebSphere管理控制台中，选择 **安全>全局安全**.
 1. 在身份验证部分，展开 **RMI/IIOP安全** 并单击 **CSIv2入站通信**.
-1. 确保 **支持SSL** 在传输下拉列表中选择。
+1. 确保 **支持SSL** 在“传输”下拉列表中选择。
 1. 重新启动WebSphere配置文件。
 
 ## 配置WebSphere以转换以https开头的URL {#configuring-websphere-to-convert-urls-that-begins-with-https}

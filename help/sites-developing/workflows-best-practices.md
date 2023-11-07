@@ -10,9 +10,9 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: 0be8b88c-6f57-4dcc-ae11-77b378a2decd
 exl-id: 14775476-6fe5-4583-8ab5-b55fef892174
-source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1929'
+source-wordcount: '1923'
 ht-degree: 1%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 1%
 
 要优化高摄取负载，您可以定义 [作为临时工作流](/help/sites-developing/workflows.md#transient-workflows).
 
-当工作流是瞬态时，与中间工作步骤相关的运行时数据在运行时不会保留在JCR中（当然，输出呈现形式会保留）。
+当工作流是瞬态时，与中间工作步骤相关的运行时数据在运行时不会保留在JCR中（保留输出演绎版）。
 
 其优势可以包括：
 
@@ -255,7 +255,7 @@ public void execute(WorkItem item, WorkflowSession workflowSession, MetaDataMap 
 
 >[!CAUTION]
 >
->尽管有此处提供的建议，但如果您确实创建了自己的jcr会话，则需要保存它。
+>尽管有此处提供的建议，但如果您确实创建了自己的jcr会话，则必须保存它。
 
 ### 最大程度地减少启动器的数量/范围 {#minimize-the-number-scope-of-launchers}
 

@@ -6,7 +6,7 @@ topic-tags: spa
 content-type: reference
 docset: aem65
 exl-id: 383f84fd-455c-49a4-9e2b-1c4757cc188b
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '2074'
 ht-degree: 1%
@@ -71,11 +71,11 @@ ht-degree: 1%
 
 页面的内容结构存储在AEM中。 页面模型用于映射和实例化SPA组件。 SPA开发人员创建SPA组件，并将这些组件映射到AEM组件。 为此，它们使用资源类型(或AEM组件的路径)作为唯一键。
 
-SPA组件必须与页面模型同步，并根据对内容所做的任何更改进行更新。 必须使用利用动态组件的模式来按照提供的页面模型结构即时实例化组件。
+SPA组件必须与页面模型同步，并根据对内容所做的任何更改进行更新。 必须使用使用动态元件的阵列来按照提供的页面模型结构即时实例化元件。
 
 ### 元字段 {#meta-fields}
 
-页面模型利用JSON模型导出器，它本身基于 [Sling模型](https://sling.apache.org/documentation/bundles/models.html) API。 可导出的sling模型显示以下字段列表，以启用基础库解释数据模型：
+页面模型使用JSON模型导出器，它本身基于 [Sling模型](https://sling.apache.org/documentation/bundles/models.html) API。 可导出的sling模型显示以下字段列表，以启用基础库解释数据模型：
 
 * `:type`：AEM资源的类型（默认为资源类型）
 * `:children`：当前资源的层级子级。 子项不是当前资源的内部内容的一部分（可以在表示页面的项目上找到）

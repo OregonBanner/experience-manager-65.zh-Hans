@@ -8,7 +8,7 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 302d1bd9-fdb3-4db6-a446-6ed85ad9fba5
 exl-id: dc7ba6ad-9df9-4312-a82f-5f3405dea684
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '133'
 ht-degree: 3%
@@ -19,9 +19,9 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->对于需要基于单页应用程序框架的客户端渲染（例如React）的项目，Adobe建议使用SPA编辑器。 [了解详情](/help/sites-developing/spa-overview.md).
+>Adobe建议对需要基于单页应用程序框架的客户端渲染（例如React）的项目使用SPA编辑器。 [了解详情](/help/sites-developing/spa-overview.md)。
 
-Adobe Experience Manager (AEM) Mobile是Adobe Experience Manager多渠道数字平台的一部分，该平台还利用AEM Assets、Sites、Screens、Workflow、User Manager、Commerce和Forms。 AEM Mobile提供了出色的部署灵活性，使企业能够使用各种内容源。
+Adobe Experience Manager (AEM) Mobile是Adobe Experience Manager多渠道数字平台的一部分，该平台还使用AEM Assets、Sites、Screens、Workflow、User Manager、Commerce和Forms。 AEM Mobile提供了出色的部署灵活性，使企业能够使用各种内容源。
 
 AEM Mobile提供了多种创建应用程序的方法。 您可以使用以下不同方式创建应用程序：
 

@@ -2,10 +2,10 @@
 title: 发布内容页面
 description: 了解如何在Adobe Experience Manager 6.5中发布内容页面。
 exl-id: 61144bbe-6710-4cae-a63e-e708936ff360
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1664'
-ht-degree: 72%
+source-wordcount: '1660'
+ht-degree: 70%
 
 ---
 
@@ -60,13 +60,13 @@ ht-degree: 72%
    * 如果不包含要发布的引用，则将直接发布页面。
    * 如果页面包含需要发布的引用，则将在&#x200B;**发布**&#x200B;向导中列出该内容，从该向导中可以：
 
-      * 指定要与页面一起发布的资产/标记/等，然后使用&#x200B;**发布**&#x200B;完成该过程。
+      * 指定要与页面一起发布的资产/标记/等，然后使用 **Publish** 以完成该过程。
 
       * 使用&#x200B;**取消**&#x200B;中止操作。
 
    ![chlimage_1](assets/chlimage_1.png)
 
-1. 选择&#x200B;**发布**&#x200B;会将页面复制到发布环境。在页面编辑器中，将显示一个确认发布操作的信息横幅。
+1. 选择&#x200B;**发布**&#x200B;会将页面复制到发布环境。在页面编辑器中，会显示一个确认发布操作的信息横幅。
 
    ![screen_shot_2018-03-21at152840](assets/screen_shot_2018-03-21at152840.png)
 
@@ -111,7 +111,7 @@ Sites 控制台中有两个用于发布的选项：
 
 #### 管理发布 {#manage-publication}
 
-与“快速发布”相比，**管理发布**&#x200B;提供了更多选项，允许包含子页面、自定义引用和启动任何适用的工作流，并且还提供了在以后的日期发布的选项。
+与快速发布相比，**管理发布**&#x200B;提供了更多选项，允许包含子页面、自定义引用和启动任何适用的工作流程，并且还提供了在以后的日期发布的选项。
 
 要使用“管理发布”发布或取消发布页面，请执行以下操作：
 
@@ -178,11 +178,11 @@ Sites 控制台中有两个用于发布的选项：
 
    返回到 Sites 控制台后，将显示一条确认发布的通知消息。
 
-1. 如果发布的页面与工作流相关联，则这些工作流可能会显示在发布向导的最后一个步骤&#x200B;**工作流**&#x200B;中。
+1. 如果发布的页面与工作流程相关联，则这些工作流程可能会显示在发布向导的最后一个步骤&#x200B;**工作流程**&#x200B;中。
 
    >[!NOTE]
    >
-   >将根据用户可能拥有也可能没有的权限显示&#x200B;**工作流**&#x200B;步骤。请参阅 [此页面上的上一注释](/help/sites-authoring/publishing-pages.md#main-pars-note-0-ejsjqg-refd) 关于发布权限以及 [管理工作流的访问权限](/help/sites-administering/workflows-managing.md) 和 [将工作流应用到页面](/help/sites-authoring/workflows-applying.md#main-pars-text-5-bvhbkh-refd) 以了解详细信息。
+   >根据用户可能拥有或可能没有的权限显示&#x200B;**工作流程**&#x200B;步骤。请参阅 [此页面上的上一注释](/help/sites-authoring/publishing-pages.md#main-pars-note-0-ejsjqg-refd) 关于发布权限和 [管理工作流的访问权限](/help/sites-administering/workflows-managing.md) 和 [将工作流应用到页面](/help/sites-authoring/workflows-applying.md#main-pars-text-5-bvhbkh-refd) 以了解详细信息。
 
    资源将按触发的工作流程分组，并且每组都提供了用于执行以下操作的选项：
 

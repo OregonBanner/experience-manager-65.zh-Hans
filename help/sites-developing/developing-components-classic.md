@@ -7,9 +7,9 @@ topic-tags: components
 content-type: reference
 legacypath: /content/docs/en/aem/6-2/develop/components/components-classic
 exl-id: 3f078139-73fd-4913-9d67-264fb2515f8a
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2385'
+source-wordcount: '2384'
 ht-degree: 1%
 
 ---
@@ -196,7 +196,7 @@ JSP脚本文件 `global.jsp` 用于提供对用于呈现组件的任何JSP脚本
    * 使用CRXDE Lite添加值 `<path-to-component>` (例如， `/apps/geometrixx/components/myComponent`)到节点的属性组件中 `/etc/designs/geometrixx/jcr:content/contentpage/par`
    * 按照中的说明操作 [向段落系统添加新组件](#adding-a-new-component-to-the-paragraph-system-design-mode)
 
-1. 在AEM WCM中，打开网站中的页面，并插入您刚刚创建的类型的段落，以确保组件正常工作。
+1. 在AEM WCM中，打开网站中的页面，并插入您创建的类型的段落，以确保组件正常工作。
 
 >[!NOTE]
 >
@@ -206,7 +206,7 @@ JSP脚本文件 `global.jsp` 用于提供对用于呈现组件的任何JSP脚本
 
 开发组件后，您可以将其添加到段落系统，这样作者就可以在编辑页面时选择并使用组件。
 
-1. 访问创作环境中使用段落系统的页面，例如 `<contentPath>/Test.html`.
+1. 访问创作环境中使用段落系统的页面，例如， `<contentPath>/Test.html`.
 1. 通过以下任一方式切换到设计模式：
 
    * 添加 `?wcmmode=design` 到该URL的末尾，然后再次访问，例如：

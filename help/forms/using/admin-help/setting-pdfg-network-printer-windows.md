@@ -7,9 +7,9 @@ geptopics: SG_AEMFORMS/categories/working_with_pdf_generator
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 feature: PDF Generator
 exl-id: c3fc159e-2677-4b71-b0b2-2feaf69e1a32
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '608'
+source-wordcount: '605'
 ht-degree: 0%
 
 ---
@@ -47,7 +47,7 @@ PDFG网络打印机允许用户从任何支持打印的应用程序生成PDF文�
 
    * 要调用的服务的名称
    * 要调用的服务的操作的名称
-   * 在服务或进程的component.xml文件中指定的输入参数的名称。 PDF文档将用作该输入参数的值。
+   * 在服务或进程的component.xml文件中指定的输入参数的名称。 PDF文档用作该输入参数的值。
 
 1. 单击保存。
 
@@ -63,6 +63,6 @@ PDFG网络打印机允许用户从任何支持打印的应用程序生成PDF文�
 
 1. 在“PDFG Network Printer Installation（PDFG网络打印机安装）”下，单击链接。 提示输入用户帐户信息时，请指定您在步骤1中用于登录的用户名和密码。 出现一条消息，说明打印机已成功安装。
 
-   ***注意&#x200B;**：如果用户密码更改，则用户需要在其计算机上重新安装PDFG网络打印机。 无法从管理控制台更新密码。*
+   ***注意&#x200B;**：如果用户密码更改，则用户必须在其计算机上重新安装PDFG网络打印机。 无法从管理控制台更新密码。*
 
 1. 单击确定。

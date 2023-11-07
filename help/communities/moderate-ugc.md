@@ -8,7 +8,7 @@ content-type: reference
 docset: aem65
 role: Admin
 exl-id: 22276580-e6bc-41c5-9ac3-e8f291f676b7
-source-git-commit: 00b6f2f03470aca7f87717818d0dfcd17ac16bed
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '1516'
 ht-degree: 2%
@@ -209,7 +209,7 @@ ht-degree: 2%
 
 但是，要自定义或扩展默认垃圾邮件单词，请在/apps目录中按照默认垃圾邮件单词的结构创建一组单词，并使用 [叠加](/help/communities/overlay-comments.md).
 
-用户生成的包含垃圾邮件词的帖子（涵盖所有内容类型，例如博客、论坛和评论）在帖子上方标有“此帖子被分类为垃圾邮件”文本。
+用户生成的包含垃圾邮件词的帖子（涵盖所有内容类型，例如，博客、论坛和评论）在帖子上方标有“此帖子被分类为垃圾邮件”文本。
 
 审查方可以查看此类帖子并标记它们，以允许或拒绝在网站上显示。 可以在上下文中或通过批量审核UI对这些帖子执行审核操作。
 

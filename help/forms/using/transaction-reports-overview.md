@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: b2c09e6b-a1d8-4b30-af2c-988442a3a986
 docset: aem65
 exl-id: bb812614-f4d8-4f57-bea2-8f7d31457039
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '549'
 ht-degree: 0%
@@ -40,7 +40,7 @@ ht-degree: 0%
 
 ## 支持的拓扑 {#supported-topology}
 
-事务报表仅在OSGi环境上的AEM Forms上可用。 它支持author-publish 、 author-processing-publish ，并且仅支持处理拓扑。 有关拓扑，请参阅 [AEM Forms的架构和部署拓扑](../../forms/using/transaction-reports-overview.md).
+事务报表仅在OSGi环境上的AEM Forms上可用。 它支持author-publish 、 author-processing-publish ，并且仅支持处理拓扑。 例如，拓扑，请参见 [AEM Forms的架构和部署拓扑](../../forms/using/transaction-reports-overview.md).
 
 事务计数将从发布实例反向复制到创作实例或处理实例。 下面显示了指示性的作者 — 发布拓扑：
 

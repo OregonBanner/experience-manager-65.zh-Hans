@@ -11,7 +11,7 @@ discoiquuid: 28b9f1d6-6a52-458f-a8ed-a206502eda0d
 docset: aem65
 role: Admin
 exl-id: 9ecdc50a-31e3-46ae-948a-d1f6e6085734
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '671'
 ht-degree: 0%
@@ -81,7 +81,7 @@ AEM Forms服务器允许您运行JavaScript代码。 恶意JavaScript代码可�
 删除表单模板会损坏相关的自适应表单或表单模板。 此类自适应表单有时被非正式地称为脏表单。 在AEM Forms用户界面中，您可以通过以下两种方式找到已修改的表单。
 
 * 资产列表中的自适应表单缩略图上会显示一个警告图标，当您将指针悬停在警告图标上时，会显示以下消息。\
-  `Schema/Form Template for this adaptive form has been updated so please go to Authoring mode and rebase it with new version.`
+  `Schema/Form Template for this adaptive form has been updated so go to Authoring mode and rebase it with new version.`
 
 ![更新关联的XFA后自适应表单不同步的警告](assets/dirtyaf.png)
 

@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 exl-id: e1de20b0-6d7a-4bda-b62f-c2808fd0af28
-source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '420'
+source-wordcount: '419'
 ht-degree: 0%
 
 ---
@@ -68,4 +68,4 @@ We.Retail构建时采用了全球化网站结构，该结构提供了语言母�
 
 ## 更多信息 {#further-information}
 
-有关详细信息，请参阅创作文档 [翻译多语言站点的内容](/help/sites-administering/translation.md) 以了解完整的技术详细信息。
+有关更多信息，请参阅创作文档 [翻译多语言站点的内容](/help/sites-administering/translation.md) 以了解完整的技术详细信息。

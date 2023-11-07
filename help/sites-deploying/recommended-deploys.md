@@ -1,19 +1,15 @@
 ---
 title: 建议的部署
-seo-title: Recommended Deployments
 description: 本文介绍了推荐的AEM拓扑。
-seo-description: This article describes the recommended topologies for AEM.
-uuid: bc638121-c531-43eb-9ec6-3283a33519f8
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: deploying
-discoiquuid: 66d351e1-87f1-4006-bf8a-3cbbd33db9ed
 docset: aem65
 exl-id: baec7fc8-d48c-4bc6-b12b-4bf4eff695ea
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1782'
+source-wordcount: '1780'
 ht-degree: 0%
 
 ---
@@ -76,7 +72,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->此TarMK示例中的“冷备用”部署要求主实例和备用实例都单独授予许可，因为对故障转移服务器进行持续复制。 欲知关于许可的详情，请查阅 [Adobe一般许可条款](https://www.adobe.com/legal/terms/enterprise-licensing.html).
+>此TarMK示例中的“冷备用”部署要求主实例和备用实例都单独授予许可，因为对故障转移服务器进行持续复制。 欲知关于许可的更多信息，请参见 [Adobe一般许可条款](https://www.adobe.com/legal/terms/enterprise-licensing.html).
 
 ### TarMK场 {#tarmk-farm}
 

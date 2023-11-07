@@ -1,19 +1,15 @@
 ---
 title: AEM中的SPA快速入门 — React
-seo-title: Getting Started with SPAs in AEM - React
 description: 本文介绍了一个SPA应用程序示例，说明它是如何组合在一起的，并使您能够使用React框架快速启动和运行自己的SPA。
-seo-description: This article presents a sample SPA application, explains how it is put together, and lets you get up-and-running with your own SPA quickly using the React framework.
-uuid: 2beca277-a381-4482-99f6-85005d826d06
 contentOwner: bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: spa
 content-type: reference
-discoiquuid: cc1e5c20-cc9c-4222-8a11-ec5a963d4466
 docset: aem65
 exl-id: 552649e7-6054-4ae8-b570-5ba7230e6f19
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1164'
+source-wordcount: '1161'
 ht-degree: 5%
 
 ---
@@ -52,7 +48,7 @@ SPA创作功能提供了一个全面的解决方案，用于在AEM中支持SPA�
 
 ## 依赖项、配置和构建 {#dependencies-configuration-and-building}
 
-除了预期的React依赖项之外，示例SPA还可以利用其他库来更有效地创建SPA。
+除了预期的React依赖项之外，示例SPA还可以使用其他库来更有效地创建SPA。
 
 ### 依赖项 {#dependencies}
 
@@ -114,7 +110,7 @@ module.exports = {
 
 ### 正在生成 {#building}
 
-实际构建应用程序时会利用 [网络包](https://webpack.js.org/) 用于转换，并且使用aem-clientlib-generator自动创建客户端库。 因此，构建命令将类似于：
+实际构建应用程序使用 [网络包](https://webpack.js.org/) 用于转换，并且使用aem-clientlib-generator自动创建客户端库。 因此，构建命令将类似于：
 
 `"build": "webpack && clientlib --verbose"`
 
@@ -134,7 +130,7 @@ module.exports = {
 
 ### index.js {#index-js}
 
-SPA的入口当然是 `index.js` 此处显示的文件被简化为重点介绍重要内容。
+SPA的入口点为 `index.js` 此处显示的文件被简化为重点介绍重要内容。
 
 ```
 import ReactDOM from 'react-dom';
@@ -151,7 +147,7 @@ ReactDOM.render(
 });
 ```
 
-的主要功能 `index.js` 就是利用 `ReactDOM.render` 函数来确定在DOM中插入应用程序的位置。
+的主要功能 `index.js` 就是使用 `ReactDOM.render` 函数来确定在DOM中插入应用程序的位置。
 
 这是此函数的标准用法，并非特定于此示例应用程序。
 

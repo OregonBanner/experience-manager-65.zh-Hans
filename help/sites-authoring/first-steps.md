@@ -1,6 +1,6 @@
 ---
 title: 作者在AEM中创建内容时的首要步骤
-description: 使用Adobe Experience Manager (AEM)创作内容时的主要任务概述。
+description: 使用AdobeExperience Manager (AEM)创作内容时使用的主要任务概述。
 uuid: 1a09da22-faa4-4a7a-a2c5-97a255a6a2ae
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -9,24 +9,24 @@ content-type: reference
 discoiquuid: 85ebc05d-ce45-4bbb-b9cc-b21810d0d877
 docset: aem65
 exl-id: b2103774-1876-4bf8-a29a-2ba0d51e7914
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '407'
+source-wordcount: '405'
 ht-degree: 6%
 
 ---
 
 # 作者的首要步骤{#first-steps-for-authors}
 
-本节概述了您在以下情况下将使用的主要任务： [开始创作内容](/help/sites-authoring/author.md#concept-of-authoring-and-publishing) 使用Adobe Experience Manager (AEM)。
+本节概述您将在以下情况下使用的主要任务： [开始创作内容](/help/sites-authoring/author.md#concept-of-authoring-and-publishing) Adobe Experience Manager (AEM)。
 
 它涵盖：
 
 * [快速入门](#getting-started)\
-   详细说明创建和发布第一个页面所需的基本事件序列。
+  详细说明创建和发布第一个页面所需的基本事件序列。
 
-* [进一步操作](#further-actions)\
-   接下来是您可以在创作时使用的许多其他操作。
+* [后续操作](#further-actions)\
+  接下来，可在创作时使用的许多其他操作。
 
 ## 快速入门 {#getting-started}
 
@@ -38,7 +38,7 @@ ht-degree: 6%
 
 ### 创建新页面 {#creating-a-new-page}
 
-编辑之前，您需要 [创建新页面](/help/sites-authoring/managing-pages.md#creating-a-new-page).
+编辑之前，您需要 [创建页面](/help/sites-authoring/managing-pages.md#creating-a-new-page).
 
 ### 打开页面 {#opening-a-page}
 
@@ -46,10 +46,10 @@ ht-degree: 6%
 
 ### 编辑页面 {#editing-a-page}
 
-无论您的实例是否已具有现有页面，还是您自己刚刚创建了一个新页面，您都可以 [编辑页面](/help/sites-authoring/editing-content.md) 方式：
+无论您的实例是否已具有现有页面，还是已自行创建新页面，您都可以 [编辑页面](/help/sites-authoring/editing-content.md) 通过：
 
 * [插入组件（段落）](/help/sites-authoring/editing-content.md#inserting-a-component)
-* [编辑/配置/复制/剪切/删除/粘贴](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste) 组件
+* [编辑/配置/复制/剪切/删除/粘贴](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste) a组件
 * [编辑（内容）](/help/sites-authoring/editing-content.md#edit-content)
 * [编辑（内容） — 全屏模式](/help/sites-authoring/editing-content.md#edit-content-full-screen-mode)
 
@@ -59,19 +59,19 @@ ht-degree: 6%
 
 ### 发布页面 {#publishing-a-page}
 
-编辑完页面后，您需要 [发布（或激活）您的页面](/help/sites-authoring/publishing-pages.md#main-pars-title-10) 以使其可供您网站的访客使用。
+编辑完页面后，您需要 [发布（或激活）页面](/help/sites-authoring/publishing-pages.md#main-pars-title-10) 以便您的网站访客可以使用该内容。
 
-## 进一步操作 {#further-actions}
+## 后续操作 {#further-actions}
 
-在执行基本步骤后，您可以在创作时执行许多其他操作。
+在基本步骤之后，您可以在创作时执行许多其他操作。
 
 ### 复制页面 {#copying-a-page}
 
-有时更容易做到 [复制页面](/help/sites-authoring/managing-pages.md#copying-and-pasting-a-page) 并重复使用内容，而不是重新从头开始创建所有内容。
+有时候会比较容易 [复制页面](/help/sites-authoring/managing-pages.md#copying-and-pasting-a-page) 并重复使用内容，而不是从头开始再次创建所有内容。
 
 ### 移动或重命名页面 {#moving-or-renaming-a-page}
 
-[移动和重命名页面](/help/sites-authoring/managing-pages.md#moving-or-renaming-a-page) 基本上都是用同样的动作完成的。
+[移动和重命名页面](/help/sites-authoring/managing-pages.md#moving-or-renaming-a-page) 基本上用同样的动作完成。
 
 ### 取消发布页面 {#unpublishing-a-page}
 
@@ -83,7 +83,7 @@ ht-degree: 6%
 
 ### 设置页面属性 {#setting-the-page-properties}
 
-每 [页面具有属性](/help/sites-authoring/editing-page-properties.md) 可定义以确定其操作的各个方面。 可以使用任一UI更新这些内容。
+每 [页面具有属性](/help/sites-authoring/editing-page-properties.md) 定义以确定其操作的方面。 可以使用任一UI更新这些内容。
 
 ### 创建页面版本 {#creating-a-version-of-a-page}
 

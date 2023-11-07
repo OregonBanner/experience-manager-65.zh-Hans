@@ -6,9 +6,9 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: 01ec6ebc-6d80-4417-9604-c8571aebb57e
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1489'
+source-wordcount: '1487'
 ht-degree: 0%
 
 ---
@@ -94,7 +94,7 @@ AEM Forms备份策略包含两种类型的备份：
 
 ### 更改AEM forms节点文件系统路径 {#changing-the-aem-forms-node-file-system-paths}
 
-如果更改独立节点的文件系统路径，则必须更新首选项、其他系统配置、自定义应用程序和已部署的AEM表单应用程序中的相应引用。 另一方面，对于群集，所有节点必须使用相同的文件系统路径配置。 您必须设置全局文档存储(GDS)根目录，并确保它指向已恢复的GDS的副本，该副本与已恢复的数据库同步。 设置GDS路径很重要，因为GDS可以包含要在应用程序服务器重新启动后持续保留的数据。
+如果更改独立节点的文件系统路径，则必须更新首选项、其他系统配置、自定义应用程序和已部署的AEM表单应用程序中的相应引用。 另一方面，对于群集，所有节点必须使用相同的文件系统路径配置。 设置全局文档存储(GDS)根目录，并确保它指向已恢复的GDS的副本，该副本与已恢复的数据库同步。 设置GDS路径很重要，因为GDS可以包含要在应用程序服务器重新启动后持续保留的数据。
 
 在群集环境中，对于备份之前和恢复之后的所有群集节点，存储库的文件系统路径配置应该相同。
 

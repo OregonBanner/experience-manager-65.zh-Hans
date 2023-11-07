@@ -10,9 +10,9 @@ geptopics: SG_AEMFORMS/categories/configuring_forms_workflow
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 7a85e13d-4800-47c4-812a-5c6e2355298a
 exl-id: 4282718a-41f1-411a-9cd7-8c470005107d
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1907'
+source-wordcount: '1901'
 ht-degree: 0%
 
 ---
@@ -65,7 +65,7 @@ AEM forms提供了一个默认的业务日历(名为 *内置日历*)将星期六
 
 >[!NOTE]
 >
->如果不创建新的业务日历，则将使用默认日历。
+>如果未创建业务日历，则使用默认日历。
 
 1. 在管理控制台中，单击服务> Forms工作流>业务日历。
 1. 要添加新业务日历，请单击 ![bus_cal_plus](assets/bus_cal_plus.png). 文本 *新建日历* 显示在下拉列表中。 选择文本并为日历键入其他名称。
@@ -90,7 +90,7 @@ AEM forms提供了一个默认的业务日历(名为 *内置日历*)将星期六
 
    >[!NOTE]
    >
-   >如果不启用日历，将使用默认日历。
+   >如果未启用日历，则使用默认日历。
 
 ## 将用户和组映射到业务日历 {#mapping-users-and-groups-to-a-business-calendar}
 
@@ -117,7 +117,7 @@ AEM forms提供了一个默认的业务日历(名为 *内置日历*)将星期六
 
    >[!NOTE]
    >
-   >在Workbench中，如果您已将用户服务配置为使用业务日历，并且已将该服务分配给某个组，则AEM Forms会使用此处指定的组映射来解析该组的日历。 AEM Forms始终使用组映射来解析组的日历，即使您使用业务日历键为用户解析日历也是如此。 如果找不到组映射，将使用默认的业务日历。
+   >在Workbench中，如果您已将用户服务配置为使用业务日历，并且已将该服务分配给某个组，则AEM Forms会使用此处指定的组映射来解析该组的日历。 AEM Forms始终使用组映射来解析组的日历，即使您使用业务日历键为用户解析日历也是如此。 如果未找到组映射，则使用默认的业务日历。
 
 1. 对于“目录服务组”列表中的每个项目，选择日历。
 1. 单击保存。
@@ -143,7 +143,7 @@ AEM表单允许您将业务日历导出为XML文件并将其导入。 您可以�
 
 ## 删除业务日历 {#delete-a-business-calendar}
 
-您可以删除您的组织不再需要的任何业务日历。 如果您删除仍映射到用户和组的业务日历，则将使用默认日历。
+您可以删除您的组织不再需要的任何业务日历。 如果删除仍映射到用户和组的业务日历，则使用默认日历。
 
 1. 在管理控制台中，单击服务> Forms工作流>业务日历。
 1. 选择日历。

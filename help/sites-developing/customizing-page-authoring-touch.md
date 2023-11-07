@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
 exl-id: 90594588-db8e-4d4c-a208-22c1c6ea2a2d
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '1339'
-ht-degree: 43%
+ht-degree: 42%
 
 ---
 
@@ -220,7 +220,7 @@ GITHUB上的代码
 
 ## 添加新的页面操作。 {#add-a-new-page-action}
 
-用于向页面工具栏添加新的页面操作，例如&#x200B;**返回 Sites**（控制台）操作。
+要向页面工具栏中添加新的页面操作，例如， **返回站点** （控制台）操作。
 
 ### 代码示例 {#code-sample-3}
 

@@ -1,19 +1,15 @@
 ---
 title: 自适应表单模板
-seo-title: Adaptive Form Templates
 description: 使用模板编辑器通过定义基本结构和初始表单内容创建自适应表单模板。
-seo-description: Create adaptive form templates by defining the basic structure and initial form content using the Template Editor.
-uuid: 317ca3ab-f809-49a7-a063-9d0c17a35fe4
 contentOwner: sashanka
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
-discoiquuid: b21a48ba-eccd-4bb5-9b92-3039026ddf2a
 docset: aem65
 feature: Adaptive Forms
 exl-id: d7287ee7-fb4e-4d47-b37e-0a9260344070
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2042'
+source-wordcount: '2040'
 ht-degree: 4%
 
 ---
@@ -39,9 +35,9 @@ ht-degree: 4%
 
 ## 使用模板 {#working-with-templates}
 
-您可以从“工具”菜单导航到，访问模板编辑器 **Adobe Experience Manager >工具>模板**. 在此处，模板在启用可编辑模板的文件夹中进行组织。 AEM提供了一个用于组织模板的全局文件夹。 但是，默认情况下不启用此功能。 您可以请求管理员启用全局文件夹或为模板创建新文件夹。 有关如何创建文件夹的详细信息，请参阅 [模板文件夹](/help/sites-developing/page-templates-editable.md).
+您可以从“工具”菜单导航到，访问模板编辑器 **Adobe Experience Manager >工具>模板**. 在此处，模板在启用可编辑模板的文件夹中进行组织。 AEM提供了一个用于组织模板的全局文件夹。 但是，默认情况下不启用此功能。 您可以请求管理员启用全局文件夹或创建模板文件夹。 有关如何创建文件夹的详细信息，请参阅 [模板文件夹](/help/sites-developing/page-templates-editable.md).
 
-点击打开文件夹后，您将找到创建按钮，允许您为自适应表单创建新模板。
+点按以打开文件夹后，您会看到“创建”按钮，该按钮允许您为自适应表单创建模板。
 
 ### 创建模板 {#create-template}
 

@@ -6,7 +6,7 @@ topic-tags: e-commerce
 content-type: reference
 docset: aem65
 exl-id: c29f6213-1df6-45af-91c8-14b255276d82
-source-git-commit: b00ed4ed146b89aece9af1d267c890a360a236e9
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '2929'
 ht-degree: 2%
@@ -264,7 +264,7 @@ Adobe Experience Manager (AEM)通用解决方案提供了管理存储库中保�
 两个资产现在存储在您的产品组件中。 您可以配置哪个出现在产品页面上。 这适用于类别系统。 首先，必须将类别添加到单个资产：
 
 1. 选择 **查看产品数据**.
-1. 键入 **资产类别** 例如，在资产下 `cat1` 和 `cat2`.
+1. 键入 **资产类别** 例如，在资产下， `cat1` 和 `cat2`.
 
    >[!NOTE]
    >
@@ -345,8 +345,8 @@ Adobe Experience Manager (AEM)通用解决方案提供了管理存储库中保�
 <!-- Search&Promote is end of life as of September 1, 2022 The Search&Promote integration lets you: -->
 
 <!-- Search&Promote is end of life as of September 1, 2022 * use the eCommerce API, independently of the underlying repository structure and commerce platform. -->
-<!-- Search&Promote is end of life as of September 1, 2022 * leverage the Index Connector feature of Search&Promote to provide a product feed in XML format. -->
-<!-- Search&Promote is end of life as of September 1, 2022 * leverage the Remote Control feature of Search&Promote to perform on-demand or scheduled requests of the product feed -->
+<!-- Search&Promote is end of life as of September 1, 2022 * use the Index Connector feature of Search&Promote to provide a product feed in XML format. -->
+<!-- Search&Promote is end of life as of September 1, 2022 * use the Remote Control feature of Search&Promote to perform on-demand or scheduled requests of the product feed -->
 <!-- Search&Promote is end of life as of September 1, 2022 * feed generation for different Search&Promote accounts, configured as cloud services configurations. -->
 
 <!-- Search&Promote is end of life as of September 1, 2022 For more information, read [Product Feed](/help/sites-administering/product-feed.md). -->
@@ -475,7 +475,7 @@ Adobe Experience Manager (AEM)通用解决方案提供了管理存储库中保�
 
 1. 选择 **完成** 按钮会将您带回站点控制台，您可以在其中查看您的目录。
 
-   点按/单击 **打开目录** 按钮打开您的目录(例如 `http://localhost:4502/editor.html/content/test-catalog.html`)。
+   点按/单击 **打开目录** 按钮可打开您的目录(例如， `http://localhost:4502/editor.html/content/test-catalog.html`)。
 
 #### 生成目录 — 经典UI {#generating-a-catalog-classic-ui}
 

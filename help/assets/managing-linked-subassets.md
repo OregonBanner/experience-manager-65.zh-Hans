@@ -5,9 +5,9 @@ contentOwner: AG
 role: User, Admin
 feature: Asset Management
 exl-id: 1ea9d8fe-602c-452b-9a24-4125b705aedf
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1421'
+source-wordcount: '1420'
 ht-degree: 0%
 
 ---
@@ -63,7 +63,7 @@ ht-degree: 0%
 
 ### 通过导出ZIP文件创建对资产的引用 {#create-references-to-aem-assets-by-exporting-a-zip-file}
 
-1. 执行以下步骤： [创建工作流模型](/help/sites-developing/workflows-models.md) 以创建新工作流。
+1. 执行以下步骤： [创建工作流模型](/help/sites-developing/workflows-models.md) 以创建工作流。
 1. 使用 [包功能](https://helpx.adobe.com/indesign/how-to/indesign-package-files-for-handoff.html) 之 [!DNL Adobe InDesign] 以导出文档。 [!DNL Adobe InDesign] 可将文档和链接的资产导出为资源包。 在这种情况下，导出的文件夹包含 `Links` 文件夹中包含子资产 [!DNL InDesign] 文件。 此 `Links` 文件夹与INDD文件位于同一文件夹中。
 1. 创建ZIP文件并将其上传到 [!DNL Experience Manager] 存储库。
 1. 启动 `Unarchiver` 工作流。

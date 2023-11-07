@@ -2,10 +2,10 @@
 title: 学习内容建模基础知识
 description: 学习使用内容片段为 Headless CMS 的内容建模的基础知识。
 exl-id: a53fef09-6495-4bb7-8df1-ba3c113d88f6
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '899'
-ht-degree: 94%
+source-wordcount: '896'
+ht-degree: 92%
 
 ---
 
@@ -105,7 +105,7 @@ AEM 提供了以下数据类型以供您用来进行内容建模：
 这种类型的引用用于创建嵌套内容，引入对内容进行建模所需的关系。
 数据类型可配置为允许片段作者执行以下操作：
    * 直接编辑引用的片段。
-   * 根据相应的模型创建新内容片段
+   * 根据相应的模型创建内容片段
 
 >[!NOTE]
 >
@@ -130,7 +130,7 @@ AEM 提供了以下数据类型以供您用来进行内容建模：
 * 人员
 * 奖励
 
-似乎很简单，一家公司肯定会有一个 CEO 和众多员工....他们每个人都被定义为一个人员。
+看似直截了当，但一家公司既有CEO又有EMPLOYEES....他们每个人都被定义为一个人员。
 
 一个人员可以获得一个（或两个）奖励。
 

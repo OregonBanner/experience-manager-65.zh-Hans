@@ -2,9 +2,9 @@
 title: 用于管理任务的收件箱
 description: 使用Adobe Experience Manager 6.5中的收件箱管理您的任务。
 exl-id: 80b7f179-b011-4f90-b5ab-9ef8a669d271
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1148'
+source-wordcount: '1144'
 ht-degree: 44%
 
 ---
@@ -67,7 +67,7 @@ ht-degree: 44%
 
 1. 单击/点按工具栏中的指示器。
 
-1. 选择&#x200B;**查看全部**。此时将打开 **AEM 收件箱**。收件箱会显示工作流程、项目和任务中的项目。
+1. 选择&#x200B;**查看全部**。此 **AEM收件箱** 打开。 收件箱会显示工作流程、项目和任务中的项目。
 1. 默认视图为[列表视图](#inbox-list-view)，但您也可以切换到[日历视图](#inbox-calendar-view)。这是通过视图选择器（工具栏，右上方）完成的。
 
    对于这两个视图，您还可以定义 [查看设置](#inbox-view-settings)；可用选项取决于当前视图。
@@ -161,7 +161,7 @@ Admin Control选项仅对 `administrators` 或 `workflow-administrators` 组。
 >尽管可以选择多个项目，但一次只能对一个项目执行操作。
 
 
-1. 要对某个项目执行操作，请选择相应项目的缩略图。工具栏中将显示适用于该项目的操作图标：
+1. 要对某个项目执行操作，请选择相应项目的缩略图。工具栏中显示适用于该项目的操作图标：
 
    ![wf-84](assets/wf-84.png)
 
@@ -191,7 +191,7 @@ Admin Control选项仅对 `administrators` 或 `workflow-administrators` 组。
    * 将启动操作向导。
    * 将打开文档页面。
 
-   例如， **重新分配** 将打开一个对话框：
+   例如， **重新分配** 打开一个对话框：
 
    ![wf-85](assets/wf-85.png)
 
@@ -223,7 +223,7 @@ Admin Control选项仅对 `administrators` 或 `workflow-administrators` 组。
 
    * **高级**
 
-      * **名称**：这将用于组建URL；如果留空，它将基于 **标题**.
+      * **名称**：用于组建URL；如果留空，它将基于 **标题**.
 
    ![wf-87](assets/wf-87.png)
 

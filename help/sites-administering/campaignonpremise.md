@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
 exl-id: a7281ca0-461f-4762-a631-6bb539596200
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1581'
-ht-degree: 65%
+source-wordcount: '1573'
+ht-degree: 60%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 65%
 
 ## 集成步骤 {#integration-steps}
 
-AEM 和 Campaign 之间的集成需要在这两种解决方案中完成多个步骤。
+AEM和Campaign之间的集成需要在这两种解决方案中执行多个步骤。
 
 1. [在 Campaign 中安装 AEM 集成包。](#install-package)
 1. [在 Campaign 中为 AEM 创建一个运算符](#create-operator)
@@ -41,12 +41,12 @@ AEM 和 Campaign 之间的集成需要在这两种解决方案中完成多个步
 
 * 具有 Adobe Campaign Classic 管理员访问权限
    * 要执行集成，您需要一个有效的 Adobe Campaign Classic 实例，包括一个已配置的数据库。
-   * 如果您需要有关如何设置和配置 Adobe Campaign Classic 的更多详细信息，请参阅 [Adobe Campaign Classic 文档](https://experienceleague.adobe.com/docs/campaign-classic/using/campaign-classic-home.html)，特别是《安装和配置指南》。
+   * 如果您需要有关如何设置和配置Adobe Campaign Classic的更多详细信息，请参阅 [Adobe Campaign Classic文档，](https://experienceleague.adobe.com/docs/campaign-classic/using/campaign-classic-home.html) 特别是《安装和配置指南》。
 * 管理员访问AEM
 
 ## 在Campaign中安装AEM集成包 {#install-package}
 
-Adobe Campaign 中的 **AEM 集成**&#x200B;包含有连接到 AEM 所需的许多标准配置。
+此 **AEM集成** Adobe Campaign中的包包含连接到AEM所需的几个标准配置。
 
 1. 作为管理员，使用客户端控制台登录到 Adobe Campaign 实例。
 
@@ -112,7 +112,7 @@ Adobe Campaign 中的 **AEM 集成**&#x200B;包含有连接到 AEM 所需的许�
    >
    >默认情况下，没有为运算符配置安全区域。要使 AEM 连接到 Adobe Campaign，您必须按照前面步骤中的详细说明选择一个区域。
    >
-   >Adobe 强烈建议为 AEM 创建一个安全区域，以避免任何安全问题。有关此主题的更多信息，请参阅[ Adobe Campaign Classic 文档。](https://experienceleague.adobe.com/docs/campaign-classic/using/installing-campaign-classic/additional-configurations/security-zones.html)
+   >Adobe 强烈建议为 AEM 创建一个安全区域，以避免任何安全问题。有关此主题的更多信息，请参见 [Adobe Campaign Classic文档。](https://experienceleague.adobe.com/docs/campaign-classic/using/installing-campaign-classic/additional-configurations/security-zones.html)
 
 1. 在 Campaign 客户端中，返回到`aemserver`运算符并选择&#x200B;**“常规”**&#x200B;选项卡。
 

@@ -6,18 +6,18 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: development-tools
 content-type: reference
 exl-id: efbba312-9fc8-4670-b8f1-d2a86162d075
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2713'
+source-wordcount: '2707'
 ht-degree: 1%
 
 ---
 
 # 如何使用VLT工具 {#how-to-use-the-vlt-tool}
 
-Jackrabbit FileVault工具(VLT)是由 [Apache Foundation](https://www.apache.org/) 将Jackrabbit/AEM实例的内容映射到您的文件系统。 VLT工具具有类似源代码控制系统客户端的功能(如Subversion (SVN)客户端)，可提供正常的签入、签出和管理操作，以及灵活呈现项目内容的配置选项。
+Jackrabbit FileVault工具(VLT)是由 [Apache Foundation](https://www.apache.org/) 将Jackrabbit/AEM实例的内容映射到您的文件系统。 VLT工具具有类似源代码控制系统客户端(如Subversion (SVN)客户端)的功能，可提供正常的签入、签出和管理操作，以及灵活呈现项目内容的配置选项。
 
-从命令行运行VLT工具。 本文档介绍如何使用该工具，包括如何开始使用并获得帮助以及所有内容的列表 [命令](#vlt-commands) 和可用 [options](#vlt-global-options).
+从命令行运行VLT工具。 本文档介绍了如何使用该工具，包括如何开始使用并获得帮助，以及所有内容的列表 [命令](#vlt-commands) 和可用 [options](#vlt-global-options).
 
 ## 概念和架构 {#concepts-and-architecture}
 
@@ -440,7 +440,7 @@ analyze -l <format>|-v|-q <localPaths1> [<localPaths2> ...]
 
 |  |  |
 |--- |--- |
-| `-l (--linkFormat) <format>` | 修补程序链接的printf格式（名称、id），例如 `[CQ520_HF_%s|%s]` |
+| `-l (--linkFormat) <format>` | 修补程序链接的printf格式（名称、id），例如， `[CQ520_HF_%s|%s]` |
 | `-v (--verbose)` | 详细输出 |
 | `-q (--quiet)` | 尽量少打印 |
 | `<localPaths> [<localPaths> ...]` | 本地路径 |
@@ -781,7 +781,7 @@ VLT使用的状态代码包括：
 
 >[!NOTE]
 >
->保险库同步服务是一种开发工具，强烈建议不要将其用于生产系统。 另请注意，该服务只能与本地文件系统同步，不能用于远程开发。
+>保险库同步服务是一种开发工具，强烈建议不要将其用于生产系统。 此外，该服务只能与本地文件系统同步，不能用于远程开发。
 
 ### 使用vlt安装服务 {#installing-the-service-using-vlt}
 

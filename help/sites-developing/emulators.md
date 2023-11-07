@@ -1,7 +1,7 @@
 ---
 title: 模拟器
 seo-title: Emulators
-description: AEM使作者能够在模拟最终用户将查看页面的环境的模拟器中查看页面
+description: AEM使作者能够在模拟最终用户查看页面的环境的模拟器中查看页面
 seo-description: AEM enables authors to view a page in an emulator that simulates the environment in which an end-user will view the page
 uuid: ee1496a5-be68-4318-b5ce-b11c41e4485c
 contentOwner: Guillaume Carlino
@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: c51fca81-5dfc-4838-9672-acb6de62778b
 legacypath: /content/docs/en/aem/6-0/develop/mobile/emulators
 exl-id: 009b7e2c-ac37-4acc-a656-0a34d3853dfd
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '634'
 ht-degree: 0%
@@ -22,9 +22,9 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->对于需要基于单页应用程序框架的客户端渲染（例如React）的项目，Adobe建议使用SPA编辑器。 [了解详情](/help/sites-developing/spa-overview.md).
+>Adobe建议对需要基于单页应用程序框架的客户端渲染（例如React）的项目使用SPA编辑器。 [了解详情](/help/sites-developing/spa-overview.md)。
 
-Adobe Experience Manager (AEM)使作者能够在模拟最终用户查看页面的环境的模拟器中查看页面，例如在移动设备上或电子邮件客户端中。
+Adobe Experience Manager (AEM)允许作者在模拟最终用户查看页面的环境的模拟器中查看页面，例如在移动设备上或电子邮件客户端中。
 
 AEM模拟器框架：
 
@@ -41,7 +41,7 @@ AEM模拟器框架：
 模拟器：
 
 * 基于ExtJS。
-* 在页面DOM上运行。
+* 对页面DOM运行。
 * 其外观通过CSS进行调节。
 * 支持插件（例如，移动设备旋转插件）。
 * 仅对作者有效。
@@ -89,11 +89,11 @@ AEM模拟器框架：
 
 添加了两个div标记：
 
-* 具有id的div `cq-emulator` 保持模拟器整体和
+* 具有id的div `cq-emulator` 保持整个模拟器并且
 
-* 具有id的div `cq-emulator-content` 表示页面内容所在的设备的视区/屏幕/内容区域。
+* 具有id的div `cq-emulator-content` 表示页面内容所在的设备视区/屏幕/内容区域。
 
-新的CSS类也被分配给新的模拟器div：它们表示当前模拟器的名称。
+新的CSS类也分配给新的模拟器div：它们表示当前模拟器的名称。
 
 模拟器的插件可以进一步扩展分配的CSS类的列表，如旋转插件的示例，根据当前设备旋转插入“垂直”或“水平”类。
 
@@ -112,28 +112,28 @@ AEM模拟器框架：
 
   http://localhost:4502/bin/wcm/mobile/emulators.json
 
-当页面组件依赖于移动页面组件时( `/libs/wcm/mobile/components/page`)，则模拟器功能将通过以下机制自动集成到页面中：
+当页面组件依赖于移动页面组件时( `/libs/wcm/mobile/components/page`)，模拟器功能通过以下机制自动集成到页面中：
 
-* 移动页面组件 `head.jsp` 包括设备组的关联模拟器init组件（仅在创作模式下）以及设备组的渲染CSS，具体方式为：
+* 移动设备页面组件 `head.jsp` 包括设备组关联的模拟器初始化组件（仅在创作模式下）以及设备组通过进行的渲染CSS：
 
   `deviceGroup.drawHead(pageContext);`
 
-* 方法 `DeviceGroup.drawHead(pageContext)` 包含模拟器的init组件，即 `init.html.jsp` 模拟器组件的。 如果模拟器组件没有自己的 `init.html.jsp` 并依赖移动基础模拟器( `wcm/mobile/components/emulators/base)`，则mobile基础模拟器的init脚本将调用( `/libs/wcm/mobile/components/emulators/base/init.html.jsp`)。
+* 方法 `DeviceGroup.drawHead(pageContext)` 包括模拟器的init组件，即 `init.html.jsp` 模拟器组件的。 如果模拟器组件没有自己的 `init.html.jsp` 并依赖移动基础模拟器( `wcm/mobile/components/emulators/base)`，则mobile基础仿真器的init脚本名为( `/libs/wcm/mobile/components/emulators/base/init.html.jsp`)。
 
 * Mobile基础仿真器的init脚本通过JavaScript定义：
 
    * 为页面定义的所有模拟器的配置(emulatorConfigs)
    * 模拟器管理器通过以下方式将模拟器的功能集成到页面中：
 
-     `emulatorMgr.launch(config)`;
+     `emulatorMgr.launch(config)`；
 
-     模拟器管理器的定义如下：
+     通过以下方式定义模拟器管理器：
 
      `/libs/wcm/emulator/widgets/source/EmulatorManager.js`
 
 #### 创建自定义移动模拟器 {#creating-a-custom-mobile-emulator}
 
-要创建自定义移动模拟器，请执行以下操作：
+要创建自定义移动设备模拟器，请执行以下操作：
 
 1. 以下 `/apps/myapp/components/emulators` 创建组件 `myemulator` (节点类型： `cq:Component`)。
 
@@ -143,11 +143,11 @@ AEM模拟器框架：
 
    例如，您可以引用节点 `/libs/wcm/mobile/components/emulators/iPhone/css`
 
-1. 如果需要，可定义JS客户端库，例如定义特定插件：名称= js，节点类型= cq：ClientLibrary
+1. 如果需要，可定义JS客户端库，例如，以定义特定插件：名称= js，节点类型= cq：ClientLibrary
 
    例如，您可以引用节点 `/libs/wcm/mobile/components/emulators/base/js`
 
-1. 如果模拟器支持由插件定义的特定功能（如触控滚动），请在模拟器下方创建一个配置节点：名称= `cq:emulatorConfig`，节点类型= `nt:unstructured` 并添加用于定义插件的属性：
+1. 如果模拟器支持由插件定义的特定功能（如触控滚动），请在模拟器下创建配置节点：名称= `cq:emulatorConfig`，节点类型= `nt:unstructured` 并添加定义插件的属性：
 
    * 名称= `canRotate`，类型= `Boolean`，值= `true`：用于包含旋转功能。
 

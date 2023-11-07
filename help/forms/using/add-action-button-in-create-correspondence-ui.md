@@ -7,9 +7,9 @@ topic-tags: correspondence-management
 docset: aem65
 feature: Correspondence Management
 exl-id: a582ba41-83cb-46f2-9de9-3752f6a7820a
-source-git-commit: 10227bcfcfd5a9b0f126fee74dce6ec7842f5e95
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1880'
+source-wordcount: '1879'
 ht-degree: 2%
 
 ---
@@ -40,7 +40,7 @@ ht-degree: 2%
 ### 将按钮添加到“创建通信”用户界面 {#add-the-button-to-the-create-correspondence-user-interface}
 
 1. 转到 `https://'[server]:[port]'/[ContextPath]/crx/de` 并以管理员身份登录。
-1. 在apps文件夹中，创建一个名为 `defaultApp` 路径/结构与defaultApp文件夹（位于config文件夹）类似。 使用以下步骤可创建文件夹：
+1. 在apps文件夹中，创建一个名为 `defaultApp` 路径/结构与defaultApp文件夹（在config文件夹中）类似。 使用以下步骤可创建文件夹：
 
    1. 右键单击 **defaultapp** 路径下的文件夹并选择 **覆盖节点**：
 

@@ -10,7 +10,7 @@ discoiquuid: e72da81b-4085-49b0-86c3-11ad48978a8a
 docset: aem65
 exl-id: 53d8c654-8017-4528-a44e-e362d8b59f82
 feature: Security
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '5401'
 ht-degree: 1%
@@ -169,7 +169,7 @@ AEM使用ACL来确定用户或组可以执行的操作以及在何处可以执�
     <ul>
      <li>修改页面和任何子页面上的现有内容。</li>
      <li>在页面或任何子页面上创建段落。</li>
-    </ul> <p>在JCR级别，用户可以通过编辑资源的属性、锁定、版本控制和nt-modifications来编辑资源，并且他们对定义jcr：content子节点的节点具有完全写入权限。 例如cq：Page、nt：file、cq：Asset。</p> </td>
+    </ul> <p>在JCR级别，用户可以通过编辑资源的属性、锁定、版本控制和nt-modifications来编辑资源，并且他们对定义jcr：content子节点的节点具有完全写入权限。 例如，cq：Page、nt：file、cq：Asset。</p> </td>
   </tr>
   <tr>
    <td>创建</td>

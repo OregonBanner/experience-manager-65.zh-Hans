@@ -7,7 +7,7 @@ topic-tags: configuring
 content-type: reference
 feature: Configuring
 exl-id: 3777a1ba-cc4e-41b9-9098-236f8141925f
-source-git-commit: c7c32130a3257c14c98b52f9db31d80587d7993a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '2116'
 ht-degree: 1%
@@ -89,11 +89,11 @@ AEM的所有元素（例如，存储库和Dispatcher）都可以安装在IPv4和
 
 * IPv6地址
 
-  例如 `https://[ab12::34c5:6d7:8e90:1234]:4502`
+  例如， `https://[ab12::34c5:6d7:8e90:1234]:4502`
 
 * IPv4地址
 
-  例如 `https://123.1.1.4:4502`
+  例如， `https://123.1.1.4:4502`
 
 * 服务器名称
 
@@ -287,7 +287,7 @@ Scaling a CQ installation correctly depends greatly on the details of your parti
 
 CQ会向符合以下条件的用户发送电子邮件通知：
 
-* 已订阅页面事件，例如修改或复制。
+* 已订阅页面事件，例如，修改或复制。
 * 已订阅论坛活动。
 * 必须在工作流中执行步骤。
 

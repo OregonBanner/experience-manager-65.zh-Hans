@@ -1,19 +1,15 @@
 ---
 title: 经典UI标记控制台
-seo-title: Classic UI Tagging Console
 description: 了解Adobe Experience Manager Classic UI标记控制台。
-seo-description: Learn about the Classic UI Tagging Console.
-uuid: 51e29422-f967-424b-a7fd-4ca2ddc6b8a3
 contentOwner: Chiradeep Majumdar
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: content
 content-type: reference
-discoiquuid: b279c033-bc93-4e62-81ad-123c40b9fdd2
 docset: aem65
 exl-id: 8c6ba22f-5555-4e3c-998a-9353bd44715b
-source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '892'
+source-wordcount: '891'
 ht-degree: 2%
 
 ---
@@ -41,7 +37,7 @@ ht-degree: 2%
 
    ![创建命名空间对话框](assets/creating_tags_andnamespaces.png)
 
-   如果您选择命名空间(例如 **演示**)您可以在该命名空间中创建标记：
+   如果您选择命名空间(例如， **演示**)您可以在该命名空间中创建标记：
 
    ![创建标记对话框](assets/creating_tags_andnamespacesinnewnamespace.png)
 
@@ -159,7 +155,7 @@ ht-degree: 2%
 
 “标记”控制台使用用户语言设置，因此对于Animal标记，对于在用户属性中将语言设置为法语的用户，将显示“Animaux”。
 
-要向对话框添加新语言，请参阅一节 [向“编辑标记”对话框添加新语言](/help/sites-developing/building.md#adding-a-new-language-to-the-edit-tag-dialog) 在 **为开发人员添加标记** 部分。
+要向对话框添加新语言，请参阅部分 [向“编辑标记”对话框添加新语言](/help/sites-developing/building.md#adding-a-new-language-to-the-edit-tag-dialog) 在 **为开发人员添加标记** 部分。
 
 ### 以指定语言在页面属性中显示标记标题 {#displaying-tag-titles-in-page-properties-in-a-specified-language}
 
@@ -176,7 +172,7 @@ ht-degree: 2%
 
 默认情况下，“页面属性”对话框会显示标记 `titles`根据页面语言。
 
-通常，如果页面语言可用，则从页面语言中获取标记的语言。 当 [`tag` 构件](/help/sites-developing/building.md#tagging-on-the-client-side) 在其他情况下（例如在表单或对话框中）使用，标记语言取决于上下文。
+通常，如果页面语言可用，则从页面语言中获取标记的语言。 当 [`tag` 构件](/help/sites-developing/building.md#tagging-on-the-client-side) 在其他情况下（例如，在表单或对话框中）使用，标记语言取决于上下文。
 
 >[!NOTE]
 >

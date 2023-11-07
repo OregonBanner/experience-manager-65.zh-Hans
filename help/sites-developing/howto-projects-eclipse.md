@@ -10,9 +10,9 @@ topic-tags: development-tools
 content-type: reference
 discoiquuid: aa58cfb8-ec15-4698-a8f0-97683b0de51c
 exl-id: 9d421599-0417-4329-a528-9cda4e3716f5
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '436'
+source-wordcount: '434'
 ht-degree: 0%
 
 ---
@@ -23,13 +23,13 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe现在提供 [适用于Eclipse的AEM开发工具](/help/sites-developing/aem-eclipse.md) 可帮助您使用Eclipse开发AEM解决方案。
+>Adobe现在提供 [适用于Eclipse的AEM开发工具](/help/sites-developing/aem-eclipse.md) 这有助于您使用Eclipse开发AEM解决方案。
 
 ## 概述 {#overview}
 
 要开始在Eclipse上开发AEM，需要执行以下步骤。
 
-在本“操作方法”的其余部分中将更详细地解释其中的每项。
+在本操作方法的其余部分中，将更详细地解释每个方法。
 
 * 安装Eclipse 4.3 (Kepler)
 * 基于Maven设置您的AEM项目
@@ -55,16 +55,16 @@ ht-degree: 0%
 Eclipse还可以在使用JSP时提供支持，例如，
 
 * 自动完成标记库
-* 定义的对象的省略感知 &lt;cq:defineobjects /> 和 &lt;sling:defineobjects />
+* 对由定义的对象的日蚀感知 &lt;cq:defineobjects /> 和 &lt;sling:defineobjects />
 
 要使此功能正常工作，请执行以下操作：
 
-1. 按照上的说明操作 [如何使用JSP](/help/sites-developing/ht-projects-maven.md#how-to-work-with-jsps) 在 [如何使用Apache Maven构建AEM项目](/help/sites-developing/ht-projects-maven.md).
-1. 将以下内容添加到 &lt;build /> 部分（内容模块的POM）。
+1. 请按照 [如何使用JSP](/help/sites-developing/ht-projects-maven.md#how-to-work-with-jsps) 在 [如何使用Apache Maven构建AEM项目](/help/sites-developing/ht-projects-maven.md).
+1. 将以下内容添加到 &lt;build /> 部分（位于内容模块的POM中）。
 
-   Eclipse的Maven支持插件m2e不提供对maven-jspc-plugin的支持，并且此配置告知m2e忽略插件以及清除临时编译结果的相关任务。
+   Eclipse的Maven支持插件m2e不提供maven-jspc-plugin支持，此配置告知m2e忽略插件以及清理临时编译结果的相关任务。
 
-   这不是问题：如中所述 [如何使用JSP](/help/sites-developing/ht-projects-maven.md#how-to-work-with-jsps)，此设置中的maven-jspc-plugin仅用于验证JSP是否会在构建过程中编译。 Eclipse已报告JSP中的任何问题，并且不依赖此Maven插件来执行此操作。
+   这并不是问题：如中所述 [如何使用JSP](/help/sites-developing/ht-projects-maven.md#how-to-work-with-jsps)，则本设置中的maven-jspc-plugin仅用于验证JSP是否会在构建过程中编译。 Eclipse已报告JSP中的任何问题，并且不依赖此Maven插件来执行此操作。
 
    **myproject/content/pom.xml**
 
@@ -118,7 +118,7 @@ Eclipse还可以在使用JSP时提供支持，例如，
 
 ### 将Maven项目导入Eclipse {#import-the-maven-project-into-eclipse}
 
-1. 在Eclipse中，选择“文件”>“导入……”
+1. 在Eclipse中，选择文件>导入……
 1. 在“导入”对话框中，选择“Maven”>“现有Maven项目”，然后单击“下一步”。
 
    ![chlimage_1-41](assets/chlimage_1-41a.png)
@@ -127,10 +127,10 @@ Eclipse还可以在使用JSP时提供支持，例如，
 
    ![chlimage_1-42](assets/chlimage_1-42a.png)
 
-1. 现在，您已准备好使用Eclipse开发您的AEM项目，包括JSP自动完成。
+1. 现在，您已准备好使用Eclipse来开发您的AEM项目，包括JSP自动完成。
 
    ![chlimage_1-43](assets/chlimage_1-43a.png)
 
    >[!NOTE]
    >
-   >如果您包括 `/libs/foundation/global.jsp` 或其他JSP `/libs`中，您需要将其复制到项目中，以便Eclipse能够解析包含内容。 同时，您需要确保它未由Maven捆绑到您的内容包中。 中介绍了如何实现此目标 [如何使用Apache Maven构建AEM项目](/help/sites-developing/ht-projects-maven.md).
+   >如果您包括 `/libs/foundation/global.jsp` 或其他JSP `/libs`中，您必须将其复制到项目中，以便Eclipse能够解析包含的内容。 同时，您需要确保它未由Maven捆绑到您的内容包中。 中介绍了如何实现这一点 [如何使用Apache Maven构建AEM项目](/help/sites-developing/ht-projects-maven.md).

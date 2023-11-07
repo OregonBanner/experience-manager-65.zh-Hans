@@ -3,9 +3,9 @@ title: 语言复制向导
 description: 了解如何在AdobeExperience Manager中使用语言复制向导。
 feature: Language Copy
 exl-id: 99f9929f-26de-4e95-9ee3-d70512d53bb7
-source-git-commit: 2d87022aa2223df261e245fba65df054c041cd69
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '215'
+source-wordcount: '214'
 ht-degree: 30%
 
 ---
@@ -40,7 +40,7 @@ ht-degree: 30%
    >
    >默认情况下，只有一种翻译设置。要能够选择其他设置，您必须先配置云配置。请参阅[配置翻译集成框架](/help/sites-administering/tc-tic.md)。
 
-1. 此 **下一个** 按钮将您转到 **Translate** 向导的步骤。 在此处，您可以选择仅创建结构、创建新翻译项目或添加到现有翻译项目。
+1. 此 **下一个** 按钮将您转到 **Translate** 向导的步骤。 在此处，您可以选择仅创建结构、创建翻译项目或添加到现有翻译项目。
 
    >[!NOTE]
    >

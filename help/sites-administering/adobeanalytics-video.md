@@ -7,9 +7,9 @@ topic-tags: integration
 content-type: reference
 docset: aem65
 exl-id: 5d51f898-b6d1-40ac-bdbf-127cda1dc777
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1747'
+source-wordcount: '1745'
 ht-degree: 2%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->对于新的实施，建议您 **不使用** 视频跟踪的旧版选项。 请使用 **里程碑** 方法。
+>对于新的实施，建议您 **不使用** 视频跟踪的旧版选项。 使用 **里程碑** 方法。
 
 ## 常见步骤 {#common-steps}
 
@@ -376,7 +376,7 @@ eventdata.events.milestoneXX
 
    ![秒](assets/lseconds.png)
 
-   *此调用类似于上述旧版里程碑调用。 请查看pev3的信息&#x200B;**[在此提供](/help/sites-administering/adobeanalytics.md)**.*
+   *此调用类似于上述旧版里程碑调用。 查看有关pev3的信息&#x200B;**[在此提供](/help/sites-administering/adobeanalytics.md)**.*
 
 **本教程中使用的引用：**
 

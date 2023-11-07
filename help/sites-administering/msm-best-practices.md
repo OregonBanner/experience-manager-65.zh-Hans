@@ -4,10 +4,10 @@ description: 查找由Adobe工程和咨询团队编译的最佳实践，帮助�
 topic-tags: site-features, best-practices
 feature: Multi Site Manager
 exl-id: 3fedc1ba-64f5-4fbe-9ee5-9b96b75dda58
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1614'
-ht-degree: 42%
+source-wordcount: '1609'
+ht-degree: 41%
 
 ---
 
@@ -52,11 +52,11 @@ MSM 是用于自动化内容部署的可配置框架。实施通常涉及网站�
 
 如果未引用Blueprint配置，则只能从活动副本本身启动转出，这实际上是从源中提取内容。
 
-使用Live Copy创建新站点时，创建Blueprint配置以确保完整MSM功能集的可用性是有利的。
+使用Live Copy创建站点时，创建Blueprint配置以确保完整MSM功能集的可用性是有利的。
 
 >[!NOTE]
 >
->请注意，“权限”选项卡中的 CUG 无法从 Blueprint 转出到 Live Copy。请在配置 Live Copy 时对此进行规划。
+>请注意，“权限”选项卡中的 CUG 无法从 Blueprint 转出到 Live Copy。在配置Live Copy时对此进行规划。
 
 ## 组件和容器同步 {#components-and-container-synchronization}
 
@@ -87,7 +87,7 @@ MSM 是用于自动化内容部署的可配置框架。实施通常涉及网站�
 
 以下是创建站点时要牢记的几个注意事项：
 
-* 要创建新站点，您需要 [Blueprint 配置](/help/sites-administering/msm-livecopy.md#managing-blueprint-configurations)。
+* 要创建站点，您需要 [Blueprint配置](/help/sites-administering/msm-livecopy.md#managing-blueprint-configurations).
 * 要允许选择在新站点中创建的语言路径，相应的语言根必须存在于 Blueprint（源）中。
 * 一次 [新站点已创建为Live Copy](/help/sites-administering/msm-livecopy.md#creating-a-live-copy-of-a-site-from-a-blueprint-configuration) (使用 **创建**，则 **站点**)，此Live Copy的前两个级别为 *简略*. 页面的子级不属于实时关系，但如果找到与触发器匹配的实时关系，则转出仍会下降。
 

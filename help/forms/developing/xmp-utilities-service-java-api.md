@@ -11,16 +11,16 @@ topic-tags: develop
 discoiquuid: 1b229ddf-9350-40b6-8056-dcbe0c5afd5b
 role: Developer
 exl-id: 699a7309-a976-480e-886f-2e466a477348
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '233'
+source-wordcount: '232'
 ht-degree: 0%
 
 ---
 
 # XMP实用程序服务Java API快速入门(SOAP) {#xmp-utilities-service-java-apiquick-start-soap}
 
-以下快速启动适用于XMP Utilities服务。
+XMP Utilities服务提供了以下快速启动功能。
 
 [快速入门（SOAP模式）：使用Java API导出XMP元数据](xmp-utilities-service-java-api.md#quick-start-soap-mode-exporting-xmp-metadata-using-the-java-api)
 
@@ -30,7 +30,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
 
 >[!NOTE]
 >
->如果使用UNIX等其他操作系统，则位于“使用AEM进行编程”表单中的快速启动基于Forms服务器，并将特定于Windows的路径替换为适用操作系统支持的路径。 同样，如果您使用的是其他J2EE应用程序服务器，请确保指定有效的连接属性。 参见 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>如果使用UNIX等其他操作系统，请将Windows特定的路径替换为适用操作系统支持的路径，则“使用AEM进行编程”表单中的快速入门将基于Forms服务器。 同样，如果您使用的是其他J2EE应用程序服务器，请确保指定有效的连接属性。 请参阅 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
 ## 快速入门（SOAP模式）：使用Java API导出XMP元数据 {#quick-start-soap-mode-exporting-xmp-metadata-using-the-java-api}
 
@@ -62,7 +62,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
      *
@@ -71,7 +71,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *
@@ -139,7 +139,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
 
 ## 快速入门（SOAP模式）：使用Java API导入XMP元数据 {#quick-start-soap-mode-importing-xmp-metadata-using-the-java-api}
 
-以下代码示例导入XMP元数据并将新的PDF文件保存到磁盘。 PDF文档基于名为Loan.pdf的PDF文件。 包含要导入到PDF文档中的元数据的XML文档基于名为的XML文件 *LoanMetaData.xml*. 有关此XML文件的信息，请参见 [将元数据导入PDF文档](/help/forms/developing/xmp-utilities.md#importing-metadata-into-pdf-documents).
+以下代码示例导入XMP元数据并将新的PDF文件保存到磁盘。 PDF文档基于名为Loan.pdf的PDF文件。 包含要导入到PDF文档中的元数据的XML文档基于一个名为的XML文件 *LoanMetaData.xml*. 有关此XML文件的信息，请参见 [将元数据导入PDF文档](/help/forms/developing/xmp-utilities.md#importing-metadata-into-pdf-documents).
 
 ```java
  /*
@@ -167,7 +167,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
      *
@@ -176,7 +176,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *

@@ -12,9 +12,9 @@ discoiquuid: de7d7209-c194-4d19-853b-468ebf3fa4b2
 docset: aem65
 exl-id: 314a6409-398c-470b-8799-0c4e6f745141
 feature: Security
-source-git-commit: 465d3e956ecdd36eea5fe095e250652eedd4b3c5
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '3005'
+source-wordcount: '3004'
 ht-degree: 1%
 
 ---
@@ -407,7 +407,7 @@ Sling是 *以内容为中心*. 处理侧重于内容，因为每个(HTTP)请求�
 
 ![安装包后](/help/sites-administering/assets/after_resized.png)
 
-有关详细信息，请参阅包的发行说明。
+有关更多信息，请参阅资源包发行说明。
 
 ### 防御点击劫持攻击 {#prevent-clickjacking}
 

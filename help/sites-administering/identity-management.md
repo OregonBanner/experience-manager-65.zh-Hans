@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 994a5751-7267-4a61-9bc7-01440a256c65
 docset: aem65
 exl-id: acb5b235-523e-4c01-9bd2-0cc2049f88e2
-source-git-commit: e54c1d422f2bf676e8a7b0f50a101e495c869c96
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1254'
+source-wordcount: '1250'
 ht-degree: 2%
 
 ---
@@ -76,7 +76,7 @@ A [表单](/help/sites-authoring/default-components.md#form-component) 可用于
 
 这将为访客提供以下标准字段 **用户名** 和 **密码**，带有 **登录** 按钮以在输入凭据时激活登录过程。
 
-例如，用户可以使用以下方式登录或创建新帐户 **登录** Geometrixx工具栏上的选项（使用页面）：
+例如，用户可以登录或创建帐户，使用 **登录** Geometrixx工具栏上的选项（使用页面）：
 
 `http://localhost:4502/content/geometrixx-outdoors/en/user/sign-in.html`
 
@@ -94,7 +94,7 @@ A [表单](/help/sites-authoring/default-components.md#form-component) 可用于
 http://localhost:4502/content/geometrixx-outdoors/en/user/profile.html
 ```
 
-要查看个人资料的详细信息，请单击 **我的个人资料** （在任何页面的右上角）；例如 `admin` 帐户：
+要查看个人资料的详细信息，请单击 **我的个人资料** 位于任何页面的右上角；例如，使用 `admin` 帐户：
 `http://localhost:4502/home/users/a/admin/profile.form.html/content/geometrixx-outdoors/en/user/profile.html.`
 
 您可以使用查看其他配置文件 [客户端上下文](/help/sites-administering/client-context.md) （在创作环境中，并且有足够的权限）：
@@ -103,7 +103,7 @@ http://localhost:4502/content/geometrixx-outdoors/en/user/profile.html
 
    `http://localhost:4502/cf#/content/geometrixx/en.html`
 
-1. 单击 **我的个人资料** 在右上角。 您将看到当前帐户的用户档案；例如，管理员。
+1. 单击 **我的个人资料** 在右上角。 您将看到当前帐户的配置文件；例如，管理员。
 1. 按 **control-alt-C** 以打开客户端上下文。
 1. 在客户端上下文的左上角，单击 **加载配置文件** 按钮。
 
@@ -145,7 +145,7 @@ http://localhost:4502/content/geometrixx-outdoors/en/user/profile.html
 
 ## 配置文件状态 {#profile-states}
 
-在许多用例中，需要知道用户（或者他们的用户档案）是否在 *特定状态* 也可能不会。
+在几种用例中，需要知道用户（或者他们的用户档案）是否在 *特定状态* 也可能不会。
 
 这涉及在用户配置文件中定义适当的属性，其方式：
 

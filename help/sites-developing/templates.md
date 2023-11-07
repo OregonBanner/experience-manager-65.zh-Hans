@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: 7c723773-7c23-43d7-85dc-53e54556b648
 legacypath: /content/docs/en/aem/6-1/develop/the-basics/templates
 exl-id: 59f01bb1-4ff1-42b6-afc9-56d448b1f803
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '930'
 ht-degree: 1%
@@ -130,7 +130,7 @@ AEM现在提供了两种用于创建页面的基本模板类型：
 
 #### 限制子页面中使用的模板 {#limiting-templates-used-in-child-pages}
 
-要限制哪些模板可用于在给定页面下创建子页面，请使用 `cq:allowedTemplates` 属性 `jcr:content` 页面的节点，用于指定允许作为子页面的模板列表。 例如，列表中的每个值都必须是允许的子页面模板的绝对路径 `/apps/geometrixx/templates/contentpage`.
+要限制哪些模板可用于在给定页面下创建子页面，请使用 `cq:allowedTemplates` 属性 `jcr:content` 页面的节点，用于指定允许作为子页面的模板列表。 列表中的每个值都必须是允许的子页面模板的绝对路径，例如， `/apps/geometrixx/templates/contentpage`.
 
 您可以使用 `cq:allowedTemplates` 模板的属性  `jcr:content` 节点，用于将此配置应用于使用此模板的所有新创建的页面。
 

@@ -8,9 +8,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
 exl-id: d8d9a799-3e30-442a-843b-d4d7ba70c557
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '471'
+source-wordcount: '468'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ ContextHub提供了几个可在解决方案中使用的示例商店候选项。 
 
 >[!WARNING]
 >
->示例存储候选项作为参考配置提供，以帮助您为项目构建自己的专用配置，因此不应直接使用。
+>示例存储候选项作为参考配置提供，可帮助您为项目构建自己的专用配置。 请勿直接使用它们。
 
 ## aem.segmentation示例存储候选项 {#aem-segmentation-sample-store-candidate}
 

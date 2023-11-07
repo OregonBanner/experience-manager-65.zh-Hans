@@ -3,10 +3,10 @@ title: 创建自适应表单或将自适应表单添加到 AEM Sites 页面
 description: 了解如何轻松创建自适应表单或将自适应表单无缝添加到 AEM Sites 页面。分步学习将动态且可自定义的表单集成到您的网站中并优化您的数字体验以尽量提高影响力的方法和最佳实践。
 Keywords: AEM Forms in sites, AF in Sites editor, af in aem sites, aem sites af, add af to a sites page, af aem sites, af sites, create af in a sites page, adaptive form in aem sites, forms aem sites, add form to a sites page, adaptive forms aem sites, add adaptive forms to aem page, create forms in an aem sites page
 feature: Adaptive Forms
-exl-id: 1813ccfc-87ce-46fa-a1d5-5edffd91efb0
-source-git-commit: 6d6e74c61b2ecb13e7cc352d5278c40d2677d44d
+exl-id: dcf023a1-8735-48cb-b3ea-d17357eeedaf
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2905'
+source-wordcount: '2901'
 ht-degree: 24%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 24%
 
 您可以使用AEM页面编辑器快速创建多个表单并将其添加到AEM Sites页面。 使用AEM页面编辑器，内容作者可以使用自适应表单组件的强大功能（包括动态行为、验证、数据集成、生成记录文档和业务流程自动化），在Sites页面中创建无缝的数据捕获体验。 它还允许您使用AEM Sites页面的各种功能，例如，版本控制、定位、翻译和多站点管理器。
 
-AEM Forms 会提供自适应表单容器和自适应表单嵌入组件。您可以使用自适应表单容器在体验片段或AEM Sites页面中创建新表单，而自适应Forms — 嵌入组件允许您添加现有自适应表单或使用自适应Forms编辑器创建新表单。
+AEM Forms 会提供自适应表单容器和自适应表单嵌入组件。您可以使用自适应表单容器在体验片段或AEM Sites页面中创建表单，而自适应Forms — 嵌入组件允许您添加现有的自适应表单或使用自适应Forms编辑器创建表单。
 
 ![站点页面中的自适应表单](/help/forms/using/assets/adaptive-form-in-sites-page.png)
 
@@ -33,7 +33,7 @@ AEM Forms 会提供自适应表单容器和自适应表单嵌入组件。您可�
 通过在AEM页面编辑器中使用自适应表单容器，您可以使用自适应Forms组件的强大功能（包括动态行为、验证、数据集成、生成记录文档和业务流程自动化）在Sites页面中创建无缝的数据捕获体验。 它还允许您使用AEM Sites页面的各种功能，如版本控制、定位、翻译和多站点管理器，从而改善整体表单创建和管理体验。 让我们来探索一下其中的一些功能：
 
 * **版本控制：** AEM Sites pages选件 [强大的版本控制功能](/help/sites-authoring/working-with-page-versions.md)，允许您跟踪和管理表单的不同版本。 这使您能够对表单进行更改和增强，同时保持根据需要回滚到以前版本的能力。 版本控制可确保采用受控且有条理的方法来形成开发和演变。
-* **定位(与Adobe Target集成)：** 利用AEM Sites页面定位功能，您还可以 [为不同受众个性化表单体验](/help/sites-administering/target.md). 利用用户区段和定位标准，您可以根据特定用户组定制表单的内容、设计或行为。 这使您能够提供个性化且相关的表单体验，从而提高参与度和转化率。
+* **定位(与Adobe Target集成)：** 利用AEM Sites页面定位功能，您还可以 [为不同受众个性化表单体验](/help/sites-administering/target.md). 通过使用用户区段和定位标准，您可以根据特定用户组定制表单的内容、设计或行为。 这使您能够提供个性化且相关的表单体验，从而提高参与度和转化率。
 * **翻译：** AEM Sites [与翻译服务无缝集成](/help/sites-administering/translation.md)，可轻松地将表单翻译成多种语言。 此功能简化了本地化过程，确保全球受众能够访问您的表单。 您可以在AEM翻译项目中高效地管理翻译，从而减少多语言表单支持所需的时间和工作量。 有关翻译的更多信息，请参阅注意事项部分。
 * **多站点管理和Live Copy：** AEM Sites提供强大的 [多站点管理和实时复制功能](/help/sites-administering/msm.md)，使您能够在一个环境中创建和管理多个网站。 此功能现在允许您跨不同站点重用表单，确保一致性并减少重复工作。 通过集中化的控制和管理，您可以跨多个网站高效地维护和更新表单。
 * **主题：** AEM Sites页面提供了一个框架，用于跨多个网页设计和维护一致的可视样式。 它们定义了颜色、字体、样式表和其他对网站整体外观和体验有所贡献的可视元素。 [您可以将为AEM Sites页面设计的主题用于自适应表单，从而节省时间和精力](/help/sites-authoring/style-system.md).
@@ -181,8 +181,8 @@ AEM Forms 会提供自适应表单容器和自适应表单嵌入组件。您可�
    出现一个对话框，用于将自适应表单容器转换为新的体验片段或添加到现有的体验片段
 1. 在转换为体验片段变体对话框中，设置以下选项的值：
 
-   * **操作：** 选择以创建新体验片段或添加到现有体验片段。
-   * **父级路径：** 指定要承载体验片段的文件夹的路径。 选项仅适用于创建新体验片段。
+   * **操作：** 选择以创建体验片段或添加到现有体验片段。
+   * **父级路径：** 指定要承载体验片段的文件夹的路径。 选项仅适用于创建体验片段。
    * **模板：** 指定体验片段模板的路径。 如果您没有体验片段模板， [创建它](/help/sites-developing/experience-fragments.md). 选项仅可用于将自适应表单添加到现有体验片段。
    * **片段标题：** 指定体验片段的标题。 标题唯一标识体验片段
 

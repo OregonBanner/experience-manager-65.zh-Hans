@@ -1,19 +1,15 @@
 ---
 title: 为自适应表单生成记录文档
-seo-title: Generate Document of Record for adaptive forms
 description: 介绍如何为自适应表单的记录文档(DoR)生成模板。
-seo-description: Explains how you can generate a template for a document of record (DoR) for adaptive forms.
-uuid: 2dc7e0de-fff9-43fa-9426-e9b047eb2595
 content-type: reference
 topic-tags: adaptive_forms, develop
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: ce65cb5f-94ec-4423-9fa9-d617e9703091
 docset: aem65
 feature: Adaptive Forms
 exl-id: 7240897f-6b3a-427a-abc6-66310c2998f3
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '3544'
+source-wordcount: '3545'
 ht-degree: 5%
 
 ---
@@ -218,7 +214,7 @@ ht-degree: 5%
 
 基本模板为记录文档提供样式和外观信息。 它允许您自定义自动生成记录文档的默认外观。 例如，您希望在记录文档的页眉中添加公司徽标，在页脚中添加版权信息。 基础模板中的母版页用作记录文档模板的母版页。 母版页可以包含可应用于记录文档的页眉、页脚和页码等信息。 您可以使用基本模板将此类信息应用于记录文档，以自动生成记录文档。 使用基本模板可以更改字段的默认属性。
 
-请关注 [基本模板约定](#base-template-conventions) 当您设计基础模板时。
+请务必关注 [基本模板约定](#base-template-conventions) 当您设计基础模板时。
 
 ## 基本模板约定 {#base-template-conventions}
 
@@ -234,7 +230,7 @@ ht-degree: 5%
 
 **字段的样式约定**
 
-* 要对记录文档中的字段应用样式，基本模板提供位于 `AF_FIELDSSUBFORM` subfrom位于 `AF_METATEMPLATE` 根子表单。
+* 要对记录文档中的字段应用样式，基本模板在以下位置提供字段： `AF_FIELDSSUBFORM` subfrom位于 `AF_METATEMPLATE` 根子表单。
 
 * 这些字段的属性应用于记录文档中的字段。 这些字段应遵循 `AF_<name of field in all caps>_XFO` 命名约定。 例如，复选框的字段名称应为 `AF_CHECKBOX_XFO`.
 

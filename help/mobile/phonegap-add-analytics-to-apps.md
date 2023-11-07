@@ -6,9 +6,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 exl-id: 8d965e94-c368-481d-b000-6e22456c34db
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '938'
+source-wordcount: '932'
 ht-degree: 0%
 
 ---
@@ -45,7 +45,7 @@ AEM Mobile需要使用Adobe Analytics帐户来收集和报告应用程序中的�
 
 设置Analytics帐户后，创建内容同步配置以将内容拉入您的移动应用程序。
 
-有关其他详细信息，请参阅配置内容同步内容。 配置将需要指示内容同步将ADBMobileConfig放入/www目录。 例如，在Geometrixx Outdoors应用程序中，Content Sync配置位于： */content/phonegap/geometrixx-outdoors/shell/jcr：content/pge-app/app-config/ams-ADBMobileConfig*. 此外，还有一个用于开发的配置；但是，它与Geometrixx Outdoors中的非开发配置相同。
+有关其他详细信息，请参阅配置内容同步内容。 配置必须指示Content Sync将ADBMobileConfig放入/www目录。 例如，在Geometrixx Outdoors应用程序中，Content Sync配置位于： */content/phonegap/geometrixx-outdoors/shell/jcr：content/pge-app/app-config/ams-ADBMobileConfig*. 此外，还有一个用于开发的配置；但是，它与Geometrixx Outdoors中的非开发配置相同。
 
 有关如何从移动设备应用程序AEM应用程序仪表板下载ADBMobileConfig的详细信息，请参阅Analytics - Mobile Services -AdobeMobile Services SDK配置文件。
 
@@ -63,7 +63,7 @@ AEM Mobile需要使用Adobe Analytics帐户来收集和报告应用程序中的�
 
 如果使用PhoneGap CLI进行构建，则可以使用cordova构建挂接脚本来完成此操作。 您可以在Geometrixx Outdoors应用程序中看到以下内容：*content/phonegap/geometrixx-outdoors/shell/_jcr_content/pge-app/app-content/phonegap/scripts/restore_plugins.js.*
 
-对于iOS，该文件需要复制到Xcode项目的 **资源** 目录(例如“platforms/ios/Geometrixx/Resources/ADBMobileConfig.json”)。 如果应用程序针对Android™，则要复制到的路径为“platforms/android/assets/ADBMobileConfig.json”。 有关在PhoneGap CLI构建期间使用挂接的详细信息，请参阅 [三个挂接Cordova/PhoneGap项目需求](https://gist.github.com/jlcarvalho/22402d013bc72f795d45a01836ce735c).
+对于iOS，必须将文件复制到Xcode项目的 **资源** 目录(例如“platforms/ios/Geometrixx/Resources/ADBMobileConfig.json”)。 如果应用程序针对Android™，则要复制到的路径为“platforms/android/assets/ADBMobileConfig.json”。 有关在PhoneGap CLI构建期间使用挂接的详细信息，请参阅 [三个挂接Cordova/PhoneGap项目需求](https://gist.github.com/jlcarvalho/22402d013bc72f795d45a01836ce735c).
 
 ```xml
 ///////////////////////////

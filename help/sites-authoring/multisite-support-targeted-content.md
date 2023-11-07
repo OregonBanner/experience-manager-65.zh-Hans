@@ -10,10 +10,10 @@ content-type: reference
 topic-tags: personalization
 discoiquuid: 4dda6a03-d3ad-4e65-8b37-cee030fa4f7f
 exl-id: 5e345ffd-4e9c-467f-8ebb-c798eeb61dea
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2869'
-ht-degree: 95%
+source-wordcount: '2855'
+ht-degree: 90%
 
 ---
 
@@ -34,7 +34,7 @@ ht-degree: 95%
 
 要设置您的站点共享个性化内容的方式，您需要执行以下步骤：
 
-1. [创建新区域](#creating-new-areas)，或[创建新区域作为 Live Copy](#creating-new-areas)。区域包含可供页面的某个“区域”**&#x200B;使用的所有活动；也就是，页面上该组件所定位的位置。如果创建新区域，则会创建一个空的区域；然而，如果创建新区域作为 Live Copy，则您可以跨站点结构继承目标内容。
+1. [创建区域](#creating-new-areas) 或 [创建区域作为live copy](#creating-new-areas). 区域包含可供页面的某个“区域”**&#x200B;使用的所有活动；也就是，页面上该组件所定位的位置。创建区域会创建一个空区域，而创建区域作为Live Copy允许您跨站点结构继承内容。
 
 1. [将您的站点或页面链接](#linking-sites-to-an-area)到区域。
 
@@ -60,7 +60,7 @@ ht-degree: 95%
 
 ## 用例 {#use-cases}
 
-您可以使用多种方式设置目标内容的多站点支持功能，具体使用哪种方式取决于您的用例。此部分从理论上介绍了如何在一个品牌中使用多种方式设置此功能。此外，在 [示例：基于地理位置定位内容](#example-targeting-content-based-on-geography)，您即可在多个站点中查看定位内容的真实应用程序。
+您可以通过多种方式为目标内容设置多站点支持，具体取决于您的用例。 此部分从理论上介绍了如何在一个品牌中使用多种方式设置此功能。此外，在 [示例：基于地理位置定位内容](#example-targeting-content-based-on-geography)，您即可在多个站点中查看定位内容的真实应用程序。
 
 目标内容打包在所谓的可定义站点或页面范围的区域中。这些区域在品牌级别进行定义。一个品牌可以包含多个区域。不同品牌的区域可以有所不同。一个品牌可能只包含主区域，从而在所有品牌之间共享；而另一个品牌可能包含多个品牌（例如，按地区划分的品牌）。因此，品牌之间不需要相互映射区域集。
 
@@ -130,11 +130,11 @@ ht-degree: 95%
 >
 >要从技术层面更详细地了解此功能，请参阅[如何构建目标内容的多站点管理](/help/sites-authoring/technical-multisite-targeted.md)。
 
-### 创建新区域与创建新区域作为 Live Copy {#creating-a-new-area-versus-creating-a-new-area-as-livecopy}
+### 创建区域与将区域创建为LiveCopy {#creating-a-new-area-versus-creating-a-new-area-as-livecopy}
 
-在 AEM 中，您可以选择创建新区域，或创建新区域作为 Live Copy。创建新区域可将活动以及属于这些活动的任何内容（例如优惠、体验等）组合到一起。如果您想要创建完全不同的目标内容集，或想要共享目标内容集，则应当创建新区域。
+在AEM中，您可以选择创建区域或创建区域作为LiveCopy。 创建区域会对活动及属于这些活动的任何内容（例如选件、体验等）进行分组。 当您要创建完全不同的目标内容集或共享目标内容集时，您可以创建一个区域。
 
-但是，如果您已经通过 MSM 在两个站点之间设置了继承，则您可能希望继承活动。在这种情况下，您应当创建新区域作为 Live Copy，让区域 Y 成为区域 X 的 Live Copy，从而可以继承所有活动。
+但是，如果您已经通过 MSM 在两个站点之间设置了继承，则您可能希望继承活动。在这种情况下，您将创建一个区域作为Live Copy，其中Y是X的Live Copy，因此也会继承所有活动。
 
 >[!NOTE]
 >
@@ -159,7 +159,7 @@ ht-degree: 95%
 >
 >默认情况下，当您点按或单击品牌名称时，名为“主区域”的默认区域会折叠，直到您创 **建** 其他区域为止。然后，在“活动”或“优惠”控制台中选 **择品牌****时，您会看到“区** 域 **** ”控制台。
 
-要创建新区域，请执行以下操作：
+要创建区域，请执行以下操作：
 
 1. 导航到&#x200B;**个性化** > **活动**&#x200B;或&#x200B;**优惠**，然后导航到您的品牌。
 1. 点按或单击&#x200B;**创建区域**。

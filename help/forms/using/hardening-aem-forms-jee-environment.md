@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.4
 discoiquuid: 6b380e92-f90d-4875-b7a2-f3958daf2364
 role: Admin
 exl-id: 6fb260f9-d0f8-431e-8d4e-535b451e4124
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '7667'
+source-wordcount: '7665'
 ht-degree: 1%
 
 ---
@@ -430,7 +430,7 @@ AEM Forms数据库架构包含有关系统配置和业务流程的敏感信息�
 
 ### 审核和日志记录 {#auditing-and-logging}
 
-正确而安全地使用应用程序审核和日志记录有助于确保尽快跟踪和检测安全和其他异常事件。 在应用程序中有效地使用审核和日志记录功能包括跟踪成功和失败的登录等项目，以及关键应用程序事件（如创建或删除关键记录）。
+正确而安全地使用应用程序审核和日志记录有助于确保尽快跟踪和检测安全和其他异常事件。 在应用程序中有效使用审核和日志记录功能包括跟踪成功和失败的登录以及关键应用程序事件（如创建或删除关键记录）。
 
 您可以使用审核功能检测多种类型的攻击，包括：
 
@@ -662,7 +662,7 @@ JEE Web应用程序中每个AEM Forms的以下应用程序根URL。 您应仅配
 
 跨站点请求伪造(CSRF)攻击利用网站对用户的信任来传输未经授权且用户无意中的命令。 将链接或脚本包含在网页中，或将URL包含在电子邮件中，以访问用户已验证过的其他站点，从而设置攻击。
 
-例如，您可以在同时浏览其他网站时登录到Administration Console。 其中一个网页可以包含具有一个HTML图像标签的 `src` 定位受攻击网站上的服务器端脚本的属性。 利用Web浏览器提供的基于Cookie的会话身份验证机制，攻击网站可以伪装成合法用户，向这个受攻击服务器端的脚本发送恶意请求。 有关更多示例，请参阅 [https://owasp.org/www-community/attacks/csrf#Examples](https://owasp.org/www-community/attacks/csrf#Examples).
+例如，您可以在同时浏览其他网站时登录到Administration Console。 其中一个网页可以包含具有一个HTML图像标签的 `src` 定位受攻击网站上的服务器端脚本的属性。 利用Web浏览器提供的基于Cookie的会话认证机制，攻击网站可以伪装成合法用户，向这个受到攻击的服务器端脚本发送恶意请求。 有关更多示例，请参阅 [https://owasp.org/www-community/attacks/csrf#Examples](https://owasp.org/www-community/attacks/csrf#Examples).
 
 以下是CSRF共有的特征：
 

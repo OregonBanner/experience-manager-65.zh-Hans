@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: f658da57-0134-4458-9ef9-a99787b66742
 docset: aem65
 exl-id: 1fc56829-db81-4450-b1d8-b4a31110199e
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '352'
+source-wordcount: '351'
 ht-degree: 1%
 
 ---
@@ -24,19 +24,19 @@ ht-degree: 1%
 
 ## 更改模板的内容策略 {#changing-the-content-policy-of-a-template}
 
-创建模板时，模板创建于 `/conf` 在内容存储库中。 基于您在中创建的文件夹 `/conf` 目录，模板的路径为： `/conf/<your-folder>/settings/wcm/templates/<your-template>`.
+创建模板时，该模板创建于 `/conf` 在内容存储库中。 基于您在中创建的文件夹 `/conf` 目录，模板的路径为： `/conf/<your-folder>/settings/wcm/templates/<your-template>`.
 
 执行以下步骤，根据模板的内容策略在侧栏中显示组件：
 
-1. 打开CRXDE lite。\
+1. 打开CRXDE Lite。\
    URL: `https://<server>:<port>/crx/de/index.jsp`
-1. 在CRXDE中，导航到在其中创建模板的文件夹。
+1. 在CRXDE中，导航到创建模板的文件夹。
 
    例如：`/conf/<your-folder>/`
 
 1. 在CRXDE中，导航到： `/conf/<your-folder>/settings/wcm/policies/fd/af/layouts/gridFluidLayout/`
 
-   要选择一组组件，需要新的内容策略。 要创建新策略，请复制并粘贴默认策略，然后对其进行重命名。
+   要选择一组组件，需要新的内容策略。 要创建策略，请复制粘贴默认策略，然后对其进行重命名。
 
    默认内容策略的路径为： `/conf/<your-folder>/settings/wcm/policies/fd/af/layouts/gridFluidLayout/default`
 
@@ -46,7 +46,7 @@ ht-degree: 1%
 
 1. 选择您创建的新策略，然后选择 **组件** 右侧面板中具有类型的属性 `string[]`.
 
-   选择并打开components属性时，您会看到“编辑组件”对话框。 通过“编辑组件”对话框，您可以使用组件组 **+** 和 **-** 按钮。 您可以添加包含您希望作者使用的表单的组件的组件组。
+   选择并打开组件属性时，您将看到编辑组件对话框。 通过“编辑组件”对话框，您可以使用 **+** 和 **-** 按钮。 您可以添加组件组，其中包含您希望作者使用的组件。
 
    ![在策略中添加或删除组件](assets/add-components-list1.png)
 
@@ -60,4 +60,4 @@ ht-degree: 1%
 
    ![已更新模板内容策略](assets/updated-policy.png)
 
-   在创作使用该模板创建的表单时，您可以在侧栏中看到添加的组件。
+   在使用模板创作表单时，您可以在侧栏中看到添加的组件。

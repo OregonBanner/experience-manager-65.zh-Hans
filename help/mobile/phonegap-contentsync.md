@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 docset: aem65
 exl-id: 2cadd9c5-4335-48d0-8d1c-941fca717409
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2959'
+source-wordcount: '2957'
 ht-degree: 0%
 
 ---
@@ -287,7 +287,7 @@ public class OtherTypeUpdateHandler extends AbstractSlingResourceUpdateHandler {
 
 ### 实施自定义更新处理程序 {#implementing-a-custom-update-handler}
 
-每个We.Retail Mobile页面的左上角都有一个徽标，当然，我们要将该徽标包含在zip文件中。 但是，对于缓存优化，AEM不会引用图像文件在存储库中的实际位置，这会阻止我们仅使用 **复制** 配置类型。 相反，我们必须提供我们自己的 **徽标** 使图像在AEM请求的位置可用的配置类型。 以下代码列表显示了徽标更新处理程序的完整实施：
+每个We.Retail Mobile页面的左上角都有一个徽标，我们想将该徽标包含在zip文件中。 但是，对于缓存优化，AEM不会引用图像文件在存储库中的实际位置，这会阻止我们仅使用 **复制** 配置类型。 相反，我们必须提供我们自己的 **徽标** 使图像在AEM请求的位置可用的配置类型。 以下代码列表显示了徽标更新处理程序的完整实施：
 
 #### LogoUpdateHandler.java {#logoupdatehandler-java}
 

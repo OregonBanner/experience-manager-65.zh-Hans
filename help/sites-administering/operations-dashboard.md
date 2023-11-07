@@ -12,7 +12,7 @@ discoiquuid: b210f5d7-1d68-49ee-ade7-667c6ab11d2b
 docset: aem65
 exl-id: f9a88156-91a2-4c85-9bc9-8f23700c2cbd
 feature: Operations
-source-git-commit: c7c32130a3257c14c98b52f9db31d80587d7993a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '6057'
 ht-degree: 2%
@@ -429,7 +429,7 @@ A **复合运行状况检查** 是汇总来自几项单独检查的信息的检�
 * 如果您计划捕获所有 **错误** 消息 — 无需配置。 默认情况下会捕获所有错误消息。
 * 如果您计划捕获所有 **错误**， **警告** 和 **信息** messages — 记录器名称应设置为： &quot;**根**“，记录器级别为： **信息**.
 
-* 如果您计划捕获来自特定包（例如com.adobe.granite）的所有消息，则日志记录器名称应设置为：“com.adobe.granite”。 并且，日志记录器级别设置为： **调试** (这样做可以捕获所有 **错误**， **警告**， **信息**、和 **调试** 消息)，如下图所示。
+* 如果您计划捕获来自特定包（例如com.adobe.granite）的所有消息，则应将记录器名称设置为“com.adobe.granite”。 并且，日志记录器级别设置为： **调试** (这样做可以捕获所有 **错误**， **警告**， **信息**、和 **调试** 消息)，如下图所示。
 
 ![chlimage_1-121](assets/chlimage_1-121.png)
 

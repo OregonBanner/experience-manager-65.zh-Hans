@@ -10,7 +10,7 @@ topic-tags: forms-workspace
 discoiquuid: fed3b562-bcc2-4fb7-8fd2-35b1ac621e16
 docset: aem65
 exl-id: f8b84f13-02d3-4787-95e1-25fd684e6d3b
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '282'
 ht-degree: 1%
@@ -23,17 +23,17 @@ ht-degree: 1%
 
 ![查看显示默认配置的HTML工作区待办事项选项卡](assets/html-todo-list.png)
 
-本文详细介绍了为“待办事项”列表中的每个任务添加要显示信息的步骤。
+本文详细介绍了添加要为ToDo列表中的每个任务显示的信息所需的步骤。
 
-## 可添加内容 {#what-can-be-added}
+## 可添加的内容 {#what-can-be-added}
 
-您可以添加以下位置提供的信息 `task.json` 由服务器发送。 信息可以纯文本形式添加，也可以使用样式设置信息的格式。
+您可以添加以下位置提供的信息： `task.json` 由服务器发送。 信息可以纯文本形式添加，也可以使用样式设置信息的格式。
 
 有关JSON对象描述的详细信息，请参见 [此](/help/forms/using/html-workspace-json-object-description.md) 文章。
 
 ## 显示任务信息 {#displaying-information-on-a-task}
 
-1. 请遵循 [AEM Forms工作区自定义的一般步骤](../../forms/using/generic-steps-html-workspace-customization.md).
+1. 请遵循 [AEM Forms工作区自定义的常规步骤](../../forms/using/generic-steps-html-workspace-customization.md).
 1. 要显示任务的附加信息，必须在的任务块中添加相应的键值对 `translation.json`.
 
    例如，更改 `/apps/ws/locales/en-US/translation.json` 对于英语：
@@ -123,7 +123,7 @@ ht-degree: 1%
 
 ## 为新属性定义CSS {#defining-css-for-the-new-property}
 
-1. 您可以将样式应用于添加到任务的信息（属性）。 为此，您需要为添加到的新属性添加样式信息 `/apps/ws/css/newStyle.css`.
+1. 可以将样式应用于添加到任务的信息（属性）。 为此，您需要为添加到的新属性添加样式信息 `/apps/ws/css/newStyle.css`.
 
    例如，添加：
 
@@ -139,12 +139,12 @@ ht-degree: 1%
 
 最后，您需要在开发包中为要添加到任务的每个属性包含一个条目。 要创建工作区代码，请参阅构建AEM Forms工作区代码。
 
-1. 复制`task.html`：
+1. 复制 `task.html`:
 
    * 从: `/libs/ws/js/runtime/templates/`
    * 到: `/apps/ws/js/runtime/templates/`
 
-1. 将新信息添加到 `/apps/ws/js/runtime/templates/task.html`.
+1. 添加新信息到 `/apps/ws/js/runtime/templates/task.html`.
 
    例如，添加在 `div class="taskProperties"`：
 

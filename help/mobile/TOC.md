@@ -7,9 +7,9 @@ breadcrumb-title: Mobile 指南
 user-guide-description: 创建和管理移动应用程序的内容。
 feature: Mobile
 role: User
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '331'
+source-wordcount: '330'
 ht-degree: 10%
 
 ---
@@ -63,7 +63,7 @@ ht-degree: 10%
    + [编辑应用程序元数据](phonegap-editmetadata.md)
    + [应用程序定义](phonegap-app-definitions.md)
    + [创建和管理应用程序内容](phonegap-manage-app-content.md)
-   + [使用创建向导创建新的AEM Mobile应用程序](phonegap-create-new-app.md)
+   + [使用“创建”向导创建AEM Mobile应用程序](phonegap-create-new-app.md)
    + [创作移动设备应用程序](phonegap-authoring-apps.md)
    + [管理应用程序磁贴](phonegap-app-details-tile.md)
    + [AEM Mobile内容个性化](phonegap-aem-mobile-content-personalization.md)

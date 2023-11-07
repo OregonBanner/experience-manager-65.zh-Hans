@@ -2,10 +2,10 @@
 title: 如何通过 AEM 交付 API 访问您的内容
 description: 在 AEM Headless 开发人员历程的这一部分中，了解如何使用 GraphQL 查询访问内容片段的内容。
 exl-id: 44f85d00-a958-470a-8a6e-e2ae1580525a
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1333'
-ht-degree: 94%
+source-wordcount: '1332'
+ht-degree: 93%
 
 ---
 
@@ -262,14 +262,14 @@ It provides features such as syntax-highlighting, auto-complete, auto-suggest, t
 
 如您所见，“CEO”和“员工”字段引用“人员”片段。
 
-将使用片段模型：
+使用的片段模型：
 
 * 在内容片段编辑器中创建内容时
 * 生成您将查询的 GraphQL 架构
 
 ### 用于测试查询的位置 {#where-to-test-your-queries}
 
-查询可在 [GraphiQL接口](/help/sites-developing/headless/graphql-api/graphiql-ide.md)，例如：
+查询可在 [GraphiQL接口](/help/sites-developing/headless/graphql-api/graphiql-ide.md)例如，位于：
 
 * `http://localhost:4502/aem/graphiql.html`
 

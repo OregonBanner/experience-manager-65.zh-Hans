@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: development-tools
 content-type: reference
 exl-id: 7222a0c3-cdb9-4c73-9d53-26f00792e439
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '936'
 ht-degree: 0%
@@ -215,7 +215,7 @@ S-7-#000017 -> [Connection: Keep-Alive ]
 
 **查找丢失的请求**
 
-如果在复杂的服务器设置中丢失请求，例如防火墙和Dispatcher设置，则可以使用代理服务器查找请求丢失的位置。 如果有防火墙：
+如果在复杂的服务器设置中丢失请求，例如，在防火墙和Dispatcher中，您可以使用代理服务器查找请求丢失的位置。 如果有防火墙：
 
 * 在防火墙之前启动代理
 * 在防火墙后启动另一个代理

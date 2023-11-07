@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: platform
 exl-id: b3de1a4a-f334-44bd-addc-463433204c99
-source-git-commit: ab3d016c7c9c622be361596137b150d8719630bd
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2286'
+source-wordcount: '2287'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->电子商务框架可与任何电子商务解决方案一起使用。 此处介绍的某些细节和示例是指 [hybris](https://www.sap.com/products/crm.html) 解决方案。
+>电子商务框架可与任何电子商务解决方案一起使用。 此处介绍的某些细节和示例请参见 [hybris](https://www.sap.com/products/crm.html) 解决方案。
 
 集成框架包括带有API的集成层。 这允许您：
 
@@ -405,7 +405,7 @@ public class AxisFilter implements VariantFilter {
 
 * 该购物车属于 `CommerceSession:`
 
-   * 此 `CommerceSession` 执行添加/删除等操作
+   * 此 `CommerceSession` 执行添加/删除/等等。
    * 此 `CommerceSession` 还会在购物车上执行各种计算。&quot;
 
 * 虽然不直接与购物车相关，但是 `CommerceSession` 还必须提供目录定价信息（因为它拥有定价）

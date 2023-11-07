@@ -11,9 +11,9 @@ topic-tags: best-practices
 discoiquuid: 8f06d4b6-7d30-4ebc-9c6a-3bb8607a9be8
 docset: aem65
 exl-id: 7b71119a-ff58-47c0-aeef-a705ed8c40e0
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '783'
+source-wordcount: '781'
 ht-degree: 0%
 
 ---
@@ -90,7 +90,7 @@ Adobe建议客户计划在2018/19年度切换到新UI。 这可以在更新6.5�
     </ol> <p>然后，在第二阶段：</p>
     <ol>
      <li>更新组件对话框以使用Coral 3对话框格式。 Adobe建议使用 <a href="/help/sites-developing/modernization-tools.md">AEM现代化工具</a> 以更新组件。</li>
-     <li>配置ContextHub(ClientContext的替代项)并更新页面模板以使用ContextHub。 请注意，ContextHub具有允许加载自定义ClientContext存储的兼容模式。</li>
+     <li>配置ContextHub(ClientContext的替代项)并更新页面模板以使用ContextHub。 ContextHub具有允许加载自定义ClientContext存储的兼容模式。</li>
     </ol> </td>
   </tr>
   <tr>

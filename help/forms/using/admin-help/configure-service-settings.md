@@ -8,9 +8,9 @@ geptopics: SG_AEMFORMS/categories/managing_services
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 2fab4b0c-e5db-47cd-b85a-4ff5ad6eb178
 exl-id: a6a10ff0-6f4d-42df-9b4e-f98a53cf1806
-source-git-commit: 6caf3ef4a00275f0f73be52b6a9ccba77d277f1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '10699'
+source-wordcount: '10694'
 ht-degree: 0%
 
 ---
@@ -326,7 +326,7 @@ Guide Utilities服务的默认值支持大多数用例。 但是，如有必要�
 
 ### 在服务器群集中使用Guides {#using-guides-in-a-server-cluster}
 
-在不使用粘性会话的服务器群集中呈现指南失败，并出现NullPointerException。 Guides请求利用了安全URL，默认情况下，这些URL对于生成它们的服务器是唯一的。 在使用粘性会话的集群中，当请求命中集群中的节点后，该会话或用户的所有后续请求都将专门路由到该服务器，一切正常。 在不使用粘性会话的集群中，后续请求可以点击集群中的任何服务器。 如果请求点击的服务器不是原始服务器，则无法解析安全URL。
+在不使用粘性会话的服务器群集中呈现指南失败，并出现NullPointerException。 Guides请求使用安全URL，默认情况下，这些URL对于生成它们的服务器是唯一的。 在使用粘性会话的集群中，当请求命中集群中的节点后，该会话或用户的所有后续请求都将专门路由到该服务器，一切正常。 在不使用粘性会话的集群中，后续请求可以点击集群中的任何服务器。 如果请求点击的服务器不是原始服务器，则无法解析安全URL。
 
 如果您在不使用粘性会话的服务器群集中使用Guides，请为GuidesUtility服务设置macKeySeed值，然后停止并启动群集。
 
@@ -826,7 +826,7 @@ XSLT转换服务( `XSLTService`)使进程能够对XML文档应用可扩展样式
    * **SUPERVISOR_PERM：** 查看从进程创建的服务的进程实例数据
    * **START_STOP_PERM：** 启动和停止服务
    * **ADD_REMOVE_ENDPOINTS_PERM：** 添加、删除和修改服务的端点
-   * **CREATE_VERSION_PERM：** 创建新版本的服务
+   * **CREATE_VERSION_PERM：** 创建服务的版本
    * **DELETE版本PERM：** 删除服务的版本
    * **MODIFY_VERSION_PERM：** 修改服务的版本
    * **READ_PERM：** 查看服务

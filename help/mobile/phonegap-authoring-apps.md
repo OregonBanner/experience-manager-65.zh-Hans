@@ -8,7 +8,7 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: authoring-adobe-phonegap-enterprise
 discoiquuid: abfeea65-102d-4800-abeb-304d61afcc13
 exl-id: 073daff7-0c1d-4715-bfd4-3e2336e4cb88
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '1013'
 ht-degree: 0%
@@ -71,7 +71,7 @@ AEM Mobile功能板允许您创建、构建和部署移动应用程序，以及�
 
 内容包会为每次更新创建一个ZIP文件（被视为内容发布包）。 这些包包含在呈现应用程序时生成的html资源和html页面，并且足够智能，可仅打包自上次更新以来修改过的文件。
 
-“管理内容包”拼贴的 **类型** 列显示“应用程序”以表示应用程序Shell内容，例如开发人员管理的应用程序的框架或基础结构，或者显示“内容”，表示内容作者管理的页面内容。
+“管理内容包”拼贴的 **类型** 列显示“应用程序”以表示应用程序Shell内容，例如由开发人员管理的应用程序的框架或基础架构，或者显示“内容”，表示由内容作者管理的页面内容。
 
 内容可以表示为语言，也可以表示为应用程序的一个特定部分，应用程序在该部分中使用了多个内容发行包。 您如何捆绑内容的选择是灵活的，并且完全取决于您希望如何管理应用程序的内容。
 

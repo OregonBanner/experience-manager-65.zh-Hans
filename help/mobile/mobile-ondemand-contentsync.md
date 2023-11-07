@@ -6,9 +6,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-on-demand-services-app
 exl-id: a6e59334-09e2-4bb8-b445-1868035da556
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2974'
+source-wordcount: '2973'
 ht-degree: 0%
 
 ---
@@ -215,7 +215,7 @@ AEM服务调用了 **PathRewriterTransformerFactory** 用于配置将重写的�
 
 **events.plist**  — 此条目有点特殊。 如简介中所述，应用程序应提供包含事件位置标记的地图视图。 必要的位置信息将作为单独的文件以PLIST格式提供。 要使此功能正常工作，在索引页上使用的事件列表组件具有一个名为plist.jsp的脚本。 当使用请求组件的资源时，将运行此脚本 `.plist` 扩展。 与往常一样，在path属性中给定组件路径，并且类型设置为content，因为您想要使用 [Sling请求处理](/help/sites-developing/the-basics.md#sling-request-processing).
 
-**events.touch.html**  — 接下来是将在应用程序中显示的实际页面。 path属性设置为事件的根页面。 该页面下的所有事件页面也将被包含，因为deep属性默认为true。 您可以将页面用作配置类型，以便纳入任何可能从页面上的图像或下载组件引用的图像或其他文件。 此外，设置触摸选择器将会为我们提供页面的移动设备版本。 功能包中的配置包含更多此类条目，但为了简单起见，此处未包含这些条目。
+**events.touch.html**  — 接下来是应用程序中显示的实际页面。 path属性设置为事件的根页面。 该页面下的所有事件页面也将被包含，因为deep属性默认为true。 您可以将页面用作配置类型，以便纳入任何可能从页面上的图像或下载组件引用的图像或其他文件。 此外，设置触摸选择器将会为我们提供页面的移动设备版本。 功能包中的配置包含更多此类条目，但为了简单起见，此处未包含这些条目。
 
 **徽标**  — 目前尚未提及徽标配置类型，它不属于内置类型。 但是，内容同步框架在某种程度上是可扩展的，本节将介绍这方面的一个示例。
 

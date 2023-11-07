@@ -1,19 +1,15 @@
 ---
 title: 登陆页面
-seo-title: Landing Pages
 description: 利用登陆页面功能，可以快速轻松地直接将设计和内容导入AEM页面。 Web开发人员可以准备HTML和其他资源，这些资源可以导入为完整页面或仅页面的一部分。
-seo-description: The landing pages feature allows quick and easy importing of a design and content right into an AEM page. A web developer can prepare the HTML and additional assets that can be imported as a full page or only a part of a page.
-uuid: b294c43f-63ae-4b5b-bef0-04566e350b63
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
-discoiquuid: 061dee36-a3bb-4166-a9c1-3ab7e4de1d1d
 docset: aem65
 exl-id: 0f1014a7-b0ba-4455-b3a4-5023bcd4c5a1
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '3329'
+source-wordcount: '3323'
 ht-degree: 1%
 
 ---
@@ -41,7 +37,7 @@ ht-degree: 1%
 
 ## 什么是登陆页面？ {#what-are-landing-pages}
 
-登陆页面是作为营销活动“端点”的单页面或多页面网站 — 例如电子邮件、广告词/横幅、社交媒体。 登陆页面有多种用途，但都有一个共同点 — 访客应完成一项任务，并定义登陆页面成功与否。
+登陆页面是作为营销活动“端点”的单页面或多页面网站 — 例如，电子邮件、广告词/横幅、社交媒体。 登陆页面有多种用途，但都有一个共同点 — 访客应完成一项任务，并定义登陆页面成功与否。
 
 AEM中的登陆页面功能允许营销人员与机构或内部创意团队的Web设计人员合作，创建页面设计，这些页面设计可以轻松导入AEM中，并且仍可由营销人员编辑并在与其他AEM支持的网站相同的治理下发布。
 
@@ -351,13 +347,13 @@ Adobe建议在暂存实例上使用设计导入程序。 在暂存实例上，�
 
 ### 创建导入程序页面 {#creating-an-importer-page}
 
-在导入登陆页面设计之前，您需要创建一个导入程序页面，例如在营销策划下。 通过“导入者页面”模板，您可以导入完整的HTML登录页面。 该页面包含一个拖放框，可在其中使用拖放功能导入登陆页面设计包。
+在导入登陆页面设计之前，您需要先创建导入程序页面，例如在营销策划下。 通过“导入者页面”模板，您可以导入完整的HTML登录页面。 该页面包含一个拖放框，可在其中使用拖放功能导入登陆页面设计包。
 
 >[!NOTE]
 >
 >默认情况下，导入程序页面只能在营销活动下创建，但您也可以叠加此模板以在下创建登陆页面 `/content/mysite`.
 
-要创建新登陆页面，请执行以下操作：
+要创建登陆页面，请执行以下操作：
 
 1. 转到 **网站** 控制台。
 1. 在左窗格中选择您的营销策划。
@@ -417,7 +413,7 @@ Adobe建议在暂存实例上使用设计导入程序。 在暂存实例上，�
 
 ### 下载导入的设计包 {#downloading-the-imported-design-package}
 
-通过下载zip文件，您可以记录随特定登陆页面导入的zip文件。 请注意，对页面所做的更改不会添加到zip文件中。
+通过下载zip文件，您可以记录随特定登陆页面导入的zip文件。 对页面所做的更改不会添加到zip文件中。
 
 要下载导入的设计包，请单击 **下载Zip文件** （在登陆页面工具栏中）。
 
@@ -439,7 +435,7 @@ Adobe建议在暂存实例上使用设计导入程序。 在暂存实例上，�
 
 >[!NOTE]
 >
->如果决定删除内容更改，则您在导入的登陆页面上所做的所有更改以及所有页面属性都将在单击时丢失 **清除**.
+>如果决定删除内容更改，则您在导入的登陆页面上所做的所有更改以及单击时的所有页面属性都将丢失 **清除**.
 
 ### 在登陆页面上修改和添加组件 {#modifying-and-adding-components-on-a-landing-page}
 

@@ -11,18 +11,18 @@ topic-tags: develop
 discoiquuid: dcf83c9f-b818-44a2-9079-80a4fc357c4f
 role: Developer
 exl-id: bee0eebb-c21d-472c-bbdf-28d8c3a5ed4a
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1249'
+source-wordcount: '1248'
 ht-degree: 3%
 
 ---
 
 # 调用API快速启动 {#invocation-api-quick-starts}
 
-**本文档中的示例和示例仅适用于AEM Forms on JEE环境。**
+**本文档中的示例和示例仅适用于JEE环境上的AEM Forms 。**
 
-以下快速入门可用于以编程方式调用AEM Forms服务：
+以下快速入门功能可用于以编程方式调用AEM Forms服务：
 
 <table>
  <thead>
@@ -36,14 +36,14 @@ ht-degree: 3%
  <tbody>
   <tr>
    <td><p><a href="/help/forms/developing/invoking-human-centric-long-lived.md#invoking_human_centric_long_lived_processes">调用以人为中心的长期进程</a></p></td>
-   <td><p><a href="/help/forms/developing/invoking-human-centric-long-lived.md#invoking-a-long-lived-process-using-remoting">使用(不适用于AEM表单)AEM Forms Remoting调用长生命周期的过程</a></p></td>
+   <td><p><a href="/help/forms/developing/invoking-human-centric-long-lived.md#invoking-a-long-lived-process-using-remoting">使用(不推荐用于AEM表单)AEM Forms Remoting调用长生命周期的过程</a></p></td>
    <td><p><a href="/help/forms/developing/invoking-human-centric-long-lived.md#quick_start_invoking_a_long_lived_process_using_the_invocation_api">快速入门：使用调用API调用长生命周期进程</a></p></td>
    <td><p><a href="/help/forms/developing/invoking-human-centric-long-lived.md#quick_start_invoking_a_long_lived_process_using_the_web_service_api">快速入门：使用Web服务API调用长生命周期进程</a></p></td>
   </tr>
   <tr>
-   <td><p><a href="/help/forms/developing/invoking-aem-forms-using-java.md#invoking_a_short_lived_process_using_the_invocation_api">使用调用API调用短暂的进程</a></p></td>
+   <td><p><a href="/help/forms/developing/invoking-aem-forms-using-java.md#invoking_a_short_lived_process_using_the_invocation_api">使用调用API调用短期进程</a></p></td>
    <td><p>不适用</p></td>
-   <td><p><a href="invocation-api-quick-starts.md#quick_start_invoking_a_short_lived_process_using_the_invocation_api">快速入门：使用调用API调用短暂的进程</a></p></td>
+   <td><p><a href="invocation-api-quick-starts.md#quick_start_invoking_a_short_lived_process_using_the_invocation_api">快速入门：使用调用API调用短期进程</a></p></td>
    <td><p>不适用</p></td>
   </tr>
   <tr>
@@ -96,13 +96,13 @@ ht-degree: 3%
   </tr>
   <tr>
    <td><p><a href="/help/forms/developing/invoking-aem-forms-using-remoting.md#passing_secure_documents_to_invoke_processes_using_remoting">使用远程处理传递安全文档以调用进程</a></p></td>
-   <td><p><a href="/help/forms/developing/invoking-aem-forms-using-remoting.md#quick-start-invoking-a-short-lived-process-by-passing-a-secure-document-using-remoting">快速入门：通过使用(不适用于AEM forms)AEM Forms Remoting传递安全文档来调用短暂的过程</a></p></td>
+   <td><p><a href="/help/forms/developing/invoking-aem-forms-using-remoting.md#quick-start-invoking-a-short-lived-process-by-passing-a-secure-document-using-remoting">快速入门：通过使用(不推荐用于AEM表单)AEM Forms Remoting传递安全文档来调用短暂的进程</a></p></td>
    <td><p>不适用</p></td>
    <td><p>不适用</p></td>
   </tr>
   <tr>
-   <td><p><a href="/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking_custom_component_services_using_remoting">使用远程处理调用自定义组件服务</a></p></td>
-   <td><p><a href="/help/forms/developing/invoking-aem-forms-using-remoting.md#quick-start-invoking-the-customer-custom-service-using-remoting">快速入门：使用(不推荐用于AEM forms) AEM Forms Remoting调用客户自定义服务</a></p></td>
+   <td><p><a href="/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking_custom_component_services_using_remoting">使用远程调用自定义组件服务</a></p></td>
+   <td><p><a href="/help/forms/developing/invoking-aem-forms-using-remoting.md#quick-start-invoking-the-customer-custom-service-using-remoting">快速入门：使用(不推荐用于AEM表单)AEM Forms Remoting调用客户自定义服务</a></p></td>
    <td><p>不适用</p></td>
    <td><p>不适用</p></td>
   </tr>
@@ -113,11 +113,11 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
 
 >[!NOTE]
 >
->位于“使用AEM窗体编程”中的“快速入门”基于部署在JBoss Application Server和Microsoft Windows操作系统上的Forms服务器。 但是，如果您使用的是其他操作系统（如UNIX），请将特定于Windows的路径替换为适用的操作系统支持的路径。 同样，如果您使用的是其他J2EE应用程序服务器，请确保指定有效的连接属性。 参见 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>“使用AEM进行编程”中的快速入门基于部署在JBoss Application Server和Microsoft Windows操作系统上的Forms服务器。 但是，如果您使用的是其他操作系统（如UNIX），请将特定于Windows的路径替换为适用的操作系统支持的路径。 同样，如果您使用的是其他J2EE应用程序服务器，请确保指定有效的连接属性。 请参阅 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
-## 快速入门：使用调用API调用短暂的进程 {#quick-start-invoking-a-short-lived-process-using-the-invocation-api}
+## 快速入门：使用调用API调用短期进程 {#quick-start-invoking-a-short-lived-process-using-the-invocation-api}
 
-以下Java代码示例调用一个名为的短暂进程 `MyApplication/EncryptDocument`. 请注意，此过程是同步调用的。 此进程的输入参数名为 `inDoc`. 此进程的输出参数名为 `outDoc`. 密码加密的PDF文档保存为名为的PDF文件 `EncryptLoan.pdf`. (请参阅 [使用调用API调用短暂的进程](/help/forms/developing/invoking-aem-forms-using-java.md#invoking-a-short-lived-process-using-the-invocation-api).)
+以下Java代码示例调用一个名为的短期进程 `MyApplication/EncryptDocument`. 请注意，此过程是同步调用的。 此进程的输入参数名为 `inDoc`. 此进程的输出参数名为 `outDoc`. 密码加密的PDF文档保存为名为的PDF文件 `EncryptLoan.pdf`. (请参阅 [使用调用API调用短期进程](/help/forms/developing/invoking-aem-forms-using-java.md#invoking-a-short-lived-process-using-the-invocation-api).)
 
 ```java
  /*
@@ -135,19 +135,19 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
-     * The adobe-utilities.jar file is located in the following path:
+     * The adobe-utilities.jar file is in the following path:
      * <install directory>/sdk/client-libs/jboss
      *
-     * The jboss-client.jar file is located in the following path:
+     * The jboss-client.jar file is in the following path:
      * <install directory>/jboss/bin/client
      *
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *
@@ -231,9 +231,9 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
 
 ## 快速入门：在Microsoft .NET项目中使用base64调用服务 {#quick-start-invoking-a-service-using-base64-in-a-microsoft-net-project}
 
-以下C#代码示例调用一个名为的进程 `MyApplication/EncryptDocument` 使用Base64编码的Microsoft .NET项目。 (请参阅 [使用Base64编码调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding).)
+以下C#代码示例调用名为 `MyApplication/EncryptDocument` 来自使用Base64编码的Microsoft .NET项目。 (请参阅 [使用Base64编码调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding).)
 
-基于名为的PDF文件的无保护PDF文档 *Loan.pdf* 传递到AEM Forms进程。 该过程会返回一个密码加密的PDF文档，该文档保存为名为的PDF文件 *EncryptedPDF.pdf*.
+基于名为的PDF文件的无保护PDF文档 *Loan.pdf* 传递到AEM Forms进程。 此过程会返回一个密码加密的PDF文档，该文档将保存为名为的PDF文件 *EncryptedPDF.pdf*.
 
 ```java
  /*
@@ -291,7 +291,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
                     //Populate a byte array with BLOB data
                     byte[] outByteArray = outDoc.binaryData;
  
-                    //Create a new file named UsageRightsLoan.pdf
+                    //Create a file named UsageRightsLoan.pdf
                     FileStream fs2 = new FileStream(encryptedPDF, FileMode.OpenOrCreate);
  
                     //Create a BinaryWriter object
@@ -312,9 +312,9 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
 
 ## 快速入门：使用Java代理文件和Base64编码调用服务 {#quick-start-invoking-a-service-using-java-proxy-files-and-base64-encoding}
 
-以下Java代码示例调用一个名为的进程 `MyApplication/EncryptDocument` 使用JAX-WS和Base64编码创建的Java代理文件。 (请参阅 [使用Base64编码调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding).)
+以下Java代码示例调用名为 `MyApplication/EncryptDocument` 使用JAX-WS和Base64编码创建的Java代理文件。 (请参阅 [使用Base64编码调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding).)
 
-基于名为的PDF文件的无保护PDF文档 *Loan.pdf* 传递到AEM Forms进程。 该过程会返回一个密码加密的PDF文档，该文档保存为名为的PDF文件 *EncryptedDocument.pdf*.
+基于名为的PDF文件的无保护PDF文档 *Loan.pdf* 传递到AEM Forms进程。 此过程会返回一个密码加密的PDF文档，该文档将保存为名为的PDF文件 *EncryptedDocument.pdf*.
 
 ```java
  /**
@@ -555,9 +555,9 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
 
 ## 快速入门：在.NET项目中使用DIME调用服务 {#quick-start-invoking-a-service-using-dime-in-a-net-project}
 
-以下C#代码示例调用一个名为的进程 `MyApplication/EncryptDocument` 来自使用Dime的Microsoft .NET项目。 (请参阅 [使用Base64编码调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding).)
+以下C#代码示例调用名为 `MyApplication/EncryptDocument` 来自使用Dime的Microsoft .NET项目。 (请参阅 [使用Base64编码调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding).)
 
-基于名为的PDF文件的无保护PDF文档 *map.pdf* 会使用DIME传递到AEM Forms进程。 该过程会返回一个密码加密的PDF文档，该文档保存为名为的PDF文件 *mapEncrypt.pdf*.
+基于名为的PDF文件的无保护PDF文档 *map.pdf* 会使用DIME传递到AEM Forms进程。 此过程会返回一个密码加密的PDF文档，该文档将保存为名为的PDF文件 *mapEncrypt.pdf*.
 
 ```java
  /**
@@ -660,9 +660,9 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
 
 ## 快速入门：在Java项目中使用DIME调用服务 {#quick-start-invoking-a-service-using-dime-in-a-java-project}
 
-以下Java代码示例调用一个名为的进程 `MyApplication/EncryptDocument` 用一毛钱。 (请参阅 [使用DIME调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-dime).)
+以下Java代码示例调用名为 `MyApplication/EncryptDocument` 用DIME。 (请参阅 [使用DIME调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-dime).)
 
-基于名为的PDF文件的无保护PDF文档 *Loan.pdf* 会使用DIME传递到AEM Forms进程。 该过程会返回一个密码加密的PDF文档，该文档保存为名为的PDF文件 *EncryptLoan.pdf*.
+基于名为的PDF文件的无保护PDF文档 *Loan.pdf* 会使用DIME传递到AEM Forms进程。 此过程会返回一个密码加密的PDF文档，该文档将保存为名为的PDF文件 *EncryptLoan.pdf*.
 
 ```java
  /**
@@ -761,9 +761,9 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
 
 ## 快速入门：在Java项目中通过HTTP使用BLOB数据调用服务 {#quick-start-invoking-a-service-using-blob-data-over-http-in-a-java-project}
 
-以下Java代码示例调用一个名为的进程 `MyApplication/EncryptDocument` 通过HTTP使用数据。 (请参阅 [通过HTTP使用BLOB数据调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-blob-data-over-http).)
+以下Java代码示例调用名为 `MyApplication/EncryptDocument` 通过HTTP使用数据。 (请参阅 [通过HTTP使用BLOB数据调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-blob-data-over-http).)
 
-基于名为的PDF文件的无保护PDF文档 *Loan.pdf* 使用SOAP over HTTP传递到AEM Forms进程。 PDF文件位于以下URL： `https://'[server]:[port]'/FormsQS`. 该过程会返回一个密码加密的PDF文档，该文档保存为名为的PDF文件 *EncryptedDocument.pdf*.
+基于名为的PDF文件的无保护PDF文档 *Loan.pdf* 通过HTTP使用SOAP传递到AEM Forms进程。 PDF文件位于以下URL： `https://'[server]:[port]'/FormsQS`. 此过程会返回一个密码加密的PDF文档，该文档将保存为名为的PDF文件 *EncryptedDocument.pdf*.
 
 ```java
  /**
@@ -808,7 +808,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
              URL myURL = new URL(outDoc.getRemoteURL());
              InputStream inputStream = myURL.openStream();
  
-             //Create a new file containing the returned PDF document
+             //Create a file containing the returned PDF document
              File f = new File("C:\\Adobe\EncryptedDocument.pdf");
              OutputStream out = new FileOutputStream(f);
  
@@ -836,9 +836,9 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
 
 ## 快速入门：在.NET项目中通过HTTP使用BLOB数据调用服务 {#quick-start-invoking-a-service-using-blob-data-over-http-in-a-net-project}
 
-以下C#代码示例调用一个名为的进程 `MyApplication/EncryptDocument` 使用HTTP数据的Microsoft .NET项目。 (请参阅 [通过HTTP使用BLOB数据调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-blob-data-over-http).)
+以下C#代码示例调用名为 `MyApplication/EncryptDocument` 来自Microsoft .NET项目，使用HTTP上的数据。 (请参阅 [通过HTTP使用BLOB数据调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-blob-data-over-http).)
 
-基于名为的PDF文件的无保护PDF文档 *Loan.pdf* 通过HTTP使用BLOB传递到AEM Forms进程。 该过程会返回一个密码加密的PDF文档，该文档保存为名为的PDF文件 *EncryptedPDF.pdf*.
+基于名为的PDF文件的无保护PDF文档 *Loan.pdf* 通过HTTP使用BLOB传递到AEM Forms进程。 此过程会返回一个密码加密的PDF文档，该文档将保存为名为的PDF文件 *EncryptedPDF.pdf*.
 
 ```java
  /*
@@ -900,7 +900,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
                    //Populate the byte array
                    PopulateArray(mySteam, myData);
  
-                   //Create a new file named UsageRightsLoan.pdf
+                   //Create a file named UsageRightsLoan.pdf
                    FileStream fs2 = new FileStream("C:\\Adobe\EncryptedPDF.pdf", FileMode.OpenOrCreate);
  
                    //Create a BinaryWriter object
@@ -936,9 +936,9 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
 
 ## 快速入门：在.NET项目中使用MTOM调用服务 {#quick-start-invoking-a-service-using-mtom-in-a-net-project}
 
-以下C#代码示例调用一个名为的进程 `MyApplication/EncryptDocument` 来自使用MTOM的Microsoft .NET项目。 (请参阅 [使用MTOM调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom).)
+以下C#代码示例调用名为 `MyApplication/EncryptDocument` 来自使用MTOM的Microsoft .NET项目。 (请参阅 [使用MTOM调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom).)
 
-基于名为的PDF文件的无保护PDF文档 *loan.pdf* 会使用MTOM传递到AEM Forms进程。 该过程会返回一个密码加密的PDF文档，该文档保存为名为的PDF文件 *EncryptedDocument.pdf*.
+基于名为的PDF文件的无保护PDF文档 *loan.pdf* 会使用MTOM传递到AEM Forms进程。 此过程会返回一个密码加密的PDF文档，该文档将保存为名为的PDF文件 *EncryptedDocument.pdf*.
 
 ```java
  ???/**
@@ -1002,7 +1002,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
                     BLOB outDoc = encryptProcess.invoke(inDoc);
                     byte[] encryptDoc = outDoc.MTOM;
  
-                    //Create a new file containing the encrypted PDF document
+                    //Create a file containing the encrypted PDF document
                     string FILE_NAME = "C:\\Adobe\EncryptedDocument.pdf";
                     FileStream fs2 = new FileStream(FILE_NAME, FileMode.OpenOrCreate);
                     BinaryWriter w = new BinaryWriter(fs2);
@@ -1022,13 +1022,13 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
 
 >[!NOTE]
 >
->许多快速入门都包含一个MTOM代码示例，这些示例说明了如何执行AEM Forms服务操作。
+>许多快速入门中都包含一个MTOM代码示例，这些示例说明了如何执行AEM Forms服务操作。
 
 ## 快速入门：在Java项目中使用SwaRef调用服务 {#quick-start-invoking-a-service-using-swaref-in-a-java-project}
 
-以下Java代码示例调用一个名为的进程 `MyApplication/EncryptDocument` 来自Java项目。 此Java项目使用使用JAX-WS和SwaRef作为编码类型创建的代理类。 (请参阅 [使用SwaRef调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref).)
+以下Java代码示例调用名为 `MyApplication/EncryptDocument` 来自Java项目。 此Java项目使用使用JAX-WS和SwaRef作为编码类型创建的代理类。 (请参阅 [使用SwaRef调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref).)
 
-基于名为的PDF文件的无保护PDF文档 *Loan.pdf* 会使用SwaRef传递到AEM Forms进程。 加密的PDF文档将保存为名为的PDF文件 *EncryptedDocument.pdf*.
+基于名为的PDF文件的无保护PDF文档 *Loan.pdf* 被传递到AEM Forms进程。 加密的PDF文档保存为名为的PDF文件 *EncryptedDocument.pdf*.
 
 ```java
  /**
@@ -1089,7 +1089,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
          //Save the encrypted file as a PDF file
          DataHandler handler = outDoc.getSwaRef();
  
-         //Create a new file containing the returned PDF document
+         //Create a file containing the returned PDF document
          File f = new File("C:\\Adobe\EncryptedDocument.pdf");
          InputStream inputStream = handler.getInputStream();
          OutputStream out = new FileOutputStream(f);
@@ -1115,4 +1115,4 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
 
 >[!NOTE]
 >
->许多说明如何执行服务操作的快速启动都包含一个SwaRef代码示例。
+>许多说明如何执行服务操作的快速入门都包含一个SwaRef代码示例。

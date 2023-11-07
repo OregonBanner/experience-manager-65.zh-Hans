@@ -10,9 +10,9 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: b9618913-5433-4baf-9ff6-490a26860505
 exl-id: c07692f7-3618-4e8c-96d7-4db09f2d9896
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1107'
+source-wordcount: '1106'
 ht-degree: 3%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 3%
 
 要将电子邮件发布到电子邮件服务提供商，您需要执行以下步骤：
 
-1. 创建电子邮件。
+1. 创建电子邮件.
 1. 将电子邮件服务配置应用于电子邮件。
 1. 发布电子邮件。
 
@@ -39,7 +39,7 @@ ht-degree: 3%
 
 您可以使用在营销策划下创建要发布到电子邮件服务的电子邮件或新闻稿 **Geometrixx新闻稿** 模板。 您也可以使用 **Geometrixx Outdoors电子邮件** 模板。 基于以下内容的电子邮件/新闻稿示例： **Geometrixx Outdoors电子邮件** 模板位于 `https://<hostname>:<port>/cf#/content/campaigns/geometrixx-outdoors/e-mails.html`.
 
-要创建发布到配置的电子邮件服务的新电子邮件，请执行以下操作：
+要创建发布到配置的电子邮件服务的电子邮件，请执行以下操作：
 
 1. 转到 **网站** 然后 **营销活动**. 选择活动。
 1. 单击 **新建** 以打开 **创建页面** 窗口。

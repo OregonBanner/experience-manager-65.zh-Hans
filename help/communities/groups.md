@@ -9,7 +9,7 @@ docset: aem65
 pagetitle: Community Groups Console
 role: Admin
 exl-id: ef371ff8-6b4f-4e5a-98fb-d7c274927c46
-source-git-commit: 0a4aca939c564720f63f055e9522e56942eaa128
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '1688'
 ht-degree: 2%
@@ -32,7 +32,7 @@ ht-degree: 2%
 * **控件**：组可以是打开或加密的。
 * **嵌套**：组可以包含零个或多个组。
 
-<!-- This is a 404 on helpx. Please update or remove.
+<!-- This is a 404 on helpx. Update or remove.
 >[!NOTE]
 >
 >Community groups, created in the publish environment before the [existence of the Community Groups console](/help/communities/version-history.md#featurepack1fp1), is not listed in the Community Groups console, and thus, are not modifiable using the console.
@@ -150,7 +150,7 @@ ht-degree: 2%
 
 默认情况下，父社区站点管理员也是组的管理员。
 
-但是，可以分配独立的组管理员。 组管理员可以管理其组（例如G1），并创建嵌套在G1下的子组。 他们还可以为子组分配不同的管理员。
+但是，可以分配独立的组管理员。 组管理员可以管理其组（例如，G1），并创建嵌套在G1下的子组。 他们还可以为子组分配不同的管理员。
 
 因此，用户U1可以是组G1的管理员，也可以是其嵌套组G2的常规用户。
 

@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: repo_restructuring
 exl-id: 2d852d9d-9be3-487a-966a-4902bd7df7f9
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '2689'
 ht-degree: 2%
@@ -578,7 +578,7 @@ ht-degree: 2%
   </tr>
   <tr>
    <td><strong>注释</strong></td>
-   <td><p>重新启动Day Communique Tagging OSGi包后，只有当“上一个位置”为空时，才会将“新位置”注册为标记根。</p> <p>对于所有利用AEM TagManager API进行标记解析的功能，在迁移到新位置后，对之前位置的引用将继续有效。</p> <p>任何显式引用路径的自定义代码 <code>/etc/tags</code> 必须更新至 <span class="code">/content/
+   <td><p>重新启动Day Communique Tagging OSGi包后，只有当“上一个位置”为空时，才会将“新位置”注册为标记根。</p> <p>对于使用AEM TagManager API进行标记解析的所有功能，在迁移到新位置后，对先前位置的引用将继续有效。</p> <p>任何显式引用路径的自定义代码 <code>/etc/tags</code> 必须更新至 <span class="code">/content/
       <code>
        cq
       </code>

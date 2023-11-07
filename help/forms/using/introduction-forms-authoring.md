@@ -11,9 +11,9 @@ discoiquuid: ba70921e-db7e-43f6-902c-1065d3b13aef
 docset: aem65
 feature: Adaptive Forms
 exl-id: 935b734c-6fb1-45e8-8515-e98c8b85286c
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '3156'
+source-wordcount: '3154'
 ht-degree: 56%
 
 ---
@@ -52,7 +52,7 @@ XML 和 JSON 架构代表组织中的后端系统在其中生成或使用数据�
 * 标准表单组件
 * 集成的资源存储库
 
-创建新自适应表单或编辑现有自适应表单时，将使用以下UI元素：
+创建或编辑现有自适应表单时，会使用以下UI元素：
 
 * [侧栏](#sidebar)
 * [页面工具栏](#page-toolbar)
@@ -154,7 +154,7 @@ XML 和 JSON 架构代表组织中的后端系统在其中生成或使用数据�
   </tr>
   <tr>
    <td>电子邮件</td>
-   <td><p>添加字段以捕获电子邮件地址。默认情况下，电子邮件组件使用以下正则表达式来验证电子邮件地址。</p> <p><code>^[a-zA-Z0-9.!#$%&amp;’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)*$</code></p> </td>
+   <td><p>添加字段以捕获电子邮件地址。默认情况下，电子邮件组件使用以下正则表达式来验证电子邮件地址。</p> <p><code>^[a-zA-Z0-9.!#$%&amp;'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)*$</code></p> </td>
   </tr>
   <tr>
    <td>文件附件</td>

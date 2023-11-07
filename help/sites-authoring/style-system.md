@@ -9,10 +9,10 @@ content-type: reference
 topic-tags: site-features
 discoiquuid: e3ccddb6-be5e-4e5f-a017-0eed263555ce
 exl-id: 1772368a-f5c9-440c-a92a-0f1d34cc4bf8
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1306'
-ht-degree: 90%
+source-wordcount: '1304'
+ht-degree: 87%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 90%
 
 ## 用例 {#use-case}
 
-模板作者不仅需要能够为内容作者配置组件的使用方式，还需要能够配置组件的多种替代可视化变量。
+模板作者不仅需要能够为内容作者配置组件的工作方式，还需要配置组件的多个替代可视化变量。
 
 同样，内容作者不仅需要能够构建和布置他们的内容，还需要能够选择内容的可视呈现方式。
 
@@ -160,4 +160,4 @@ ht-degree: 90%
 
 这种定义样式名称的功能对于极其通用的组件（如布局容器或内容片段组件）非常有用，可为它们提供额外的含义。
 
-例如，使用该功能可以为布局容器提供 `<main>`、`<aside>`、`<nav>` 等语义。
+例如，它允许为布局容器提供如下语义 `<main>`， `<aside>`， `<nav>`，等等。

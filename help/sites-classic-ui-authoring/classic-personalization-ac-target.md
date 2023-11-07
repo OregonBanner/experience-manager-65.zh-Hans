@@ -1,23 +1,21 @@
 ---
-title: 定位您的Adobe Campaign
+title: 定位Adobe Campaign
 description: 设置分段包括创建区段、品牌、营销活动和体验。
-uuid: 520cd006-0aa8-43f3-b754-efb7397bb92f
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
-discoiquuid: bbc2aac9-ccf1-40c3-be4f-d59c2d0d8a6c
 exl-id: e56986b2-397e-4802-992b-05a9ea7b2e36
-source-git-commit: f4b6eb2ded17ec641f23a1fc3b977ce77169c8a1
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '816'
+source-wordcount: '811'
 ht-degree: 0%
 
 ---
 
-# 定位您的Adobe Campaign{#targeting-your-adobe-campaign}
+# 定位Adobe Campaign{#targeting-your-adobe-campaign}
 
-要定位Adobe Campaign新闻稿，您需要先设置仅在Classic UI中提供的分段。 之后，您可以为Adobe Campaign创建目标体验。
+要定位Adobe Campaign新闻稿，您需要先设置分段，该功能仅在经典UI中可用。 之后，您可以为Adobe Campaign创建定位体验。
 
 ## 在AEM中设置分段 {#setting-up-segmentation-in-aem}
 
@@ -32,61 +30,61 @@ ht-degree: 0%
 要创建区段，请执行以下操作：
 
 1. 打开 [分段控制台](http://localhost:4502/miscadmin#/etc/segmentation) 在 **&lt;host>：&lt;port>/miscadmin#/etc/segment**.
-1. 创建新页面并输入标题 — 例如， **交流区段**  — 并选择 **区段(Adobe Campaign)** 模板。
+1. 创建页面并输入标题 — 例如， **交流区段**  — 并选择 **区段(Adobe Campaign)** 模板。
 1. 在左侧的树视图中选择创建的页面。
-1. 创建一个区段，例如定位男性用户，方法是在您创建的名为“男性”的区段下创建一个新页面，然后选择 **区段(Adobe Campaign)** 模板。
-1. 打开创建的区段页面，然后拖放 **区段ID** 从副手到书页。
-1. 双击该特征，输入ID，在此例中表示在Adobe Campaign中定义的男性区段 — 例如， **男性**  — 并单击 **确定**. 应出现以下消息： `targetData.segmentCode == "MALE"`
+1. 创建一个区段，例如，定位男性用户，方法是在您创建的名为“男性”的区段下创建一个页面，然后选择 **区段(Adobe Campaign)** 模板。
+1. 打开创建的区段页面，并拖放 **区段ID** 从副手到书页。
+1. 双击该特征，输入ID，在此例中表示在Adobe Campaign中定义的男性区段 — 例如， **男**  — 并单击 **确定**. 将显示以下消息： `targetData.segmentCode == "MALE"`
 1. 对另一个区段重复这些步骤，例如，针对女性用户的区段。
 
 ### 创建品牌 {#creating-a-brand}
 
 要创建品牌，请执行以下操作：
 
-1. In **站点**，导航到 **营销活动** 文件夹（例如，在We.Retail中）。
-1. 单击 **创建页面** 并输入页面的标题，例如We.Retail Brand，然后选择 **品牌** 模板。
+1. 在 **站点**，导航到 **营销活动** 文件夹（例如，在We.Retail中）。
+1. 单击 **创建页面** 并输入页面的标题，例如We.Retail品牌，然后选择 **品牌** 模板。
 
 ### 创建活动 {#creating-a-campaign}
 
 要创建活动，请执行以下操作：
 
-1. 打开 **品牌** 您刚刚创建的页面。
-1. 单击 **创建页面** 并输入页面的标题，例如We.Retail Campaign，然后选择 **Campaign** 模板并单击 **创建**.
+1. 打开 **品牌** 您创建的页面。
+1. 单击 **创建页面** 并输入页面的标题，例如We.Retail Campaign，然后选择 **营销活动** 模板并单击 **创建**.
 
 ### 创建体验 {#creating-experiences}
 
 要为区段创建体验，请执行以下操作：
 
-1. 打开 **Campaign** 您刚刚创建的页面。
-1. 通过单击为区段创建体验 **创建页面** 并为页面输入标题，例如，在为男性区段创建体验时为“男性”，然后选择 **体验** 模板。
+1. 打开 **营销活动** 您创建的页面。
+1. 通过单击为区段创建体验 **创建页面** 并为页面输入标题，例如，在为“男性”区段创建体验时，选择“男性” **体验** 模板。
 1. 打开已创建的体验页面。
-1. 单击 **编辑**，然后在“区段”下方单击 **添加项目**.
-1. 输入男性区段的路径，例如 `/etc/segmentation/ac-segments/male` 并单击 **确定**. 应出现以下消息： *体验面向：男性*
-1. 重复上述步骤为所有区段（例如女性目标）创建体验。
+1. 单击 **编辑**，然后在区段下单击 **添加项目**.
+1. 输入男性区段的路径，例如， `/etc/segmentation/ac-segments/male` 并单击 **确定**. 将显示以下消息： *体验面向：男性*
+1. 重复上述步骤为所有区段（例如，女性目标）创建体验。
 
 ## 创建包含目标内容的新闻稿 {#creating-a-newsletter-with-targeted-content}
 
-创建区段、品牌、营销活动和体验后，您可以创建包含目标内容的新闻稿。 创建体验后，可将体验链接到区段。
+创建区段、品牌、营销活动和体验后，您可以创建包含目标内容的新闻稿。 创建体验后，您将体验链接到区段。
 
-您可以在已启用触屏的用户界面和经典用户界面中创建包含目标内容的新闻稿。 本文档介绍了触屏UI的操作过程。
+您可以在已启用触屏的用户界面和经典用户界面中创建包含目标内容的新闻稿。 本文档介绍了触屏优化UI的过程。
 
 要创建包含目标内容的新闻稿，请执行以下操作：
 
-1. 创建包含目标内容的新闻稿：在Geometrixx Outdoors中的电子邮件促销活动下方，单击或点按 **创建** > **页面**，然后选择其中一个Adobe Campaign Mail模板。
+1. 创建包含目标内容的新闻稿：在Geometrixx Outdoors中的电子邮件促销活动下方，单击或点按 **创建** > **页面**，然后选择其中一个Adobe Campaign邮件模板。
 
    >[!NOTE]
    >
-   >[电子邮件示例仅在Geometrixx中可用](/help/sites-developing/we-retail.md#weretail). 请从包共享下载示例Geometrixx内容。
+   >[电子邮件示例仅在Geometrixx中可用](/help/sites-developing/we-retail.md#weretail). 从包共享下载示例Geometrixx内容。
 
 1. 在新闻稿中，添加文本和个性化组件。
-1. 将文本添加到文本和个性化组件中，例如“这是默认设置”。
+1. 向文本和个性化组件中添加文本，例如“这是默认设置”。
 1. 单击旁边的箭头 **编辑** 并选择 **定位**.
-1. 从“品牌”下拉菜单中选择您的品牌，然后选择您的Campaign。 （这是您之前创建的品牌和营销活动）。
+1. 从品牌下拉菜单中选择您的品牌，然后选择您的Campaign。 （这是您之前创建的品牌和营销活动）。
 1. 单击 **开始定位**. 此时，您的区段将显示在受众区域中。 如果没有定义的区段匹配，则使用默认体验。
 
    >[!NOTE]
    >
-   >默认情况下，AEM中包含的电子邮件示例使用Adobe Campaign作为定位引擎。 对于自定义新闻稿，您可能需要选择Adobe Campaign作为定位引擎。 定位时，点按或单击工具栏中的+ ，输入新活动的标题，然后选择 **Adobe Campaign** 作为定位引擎。
+   >默认情况下，AEM随附的电子邮件示例使用Adobe Campaign作为定位引擎。 对于自定义新闻稿，您可能需要选择Adobe Campaign作为定位引擎。 定位时，点按或单击工具栏中的+ ，输入新活动的标题，然后选择 **Adobe Campaign** 作为定位引擎。
 
 1. 单击 **默认** 然后是您添加的文本和个性化组件，您会看到带有箭头的靶心。 单击图标以定位此组件。
 
@@ -98,7 +96,7 @@ ht-degree: 0%
 
    当内容在Adobe Campaign内的投放中使用时，AEM会自动为Adobe Campaign生成正确的定位代码
 
-1. 在Adobe Campaign中创建投放 — 选择 **包含AEM内容的电子邮件投放** 并根据需要选择本地AEM帐户，然后确认所做的更改。
+1. 在Adobe Campaign中，创建投放 — 选择 **包含AEM内容的电子邮件投放** 并根据需要选择本地AEM帐户，然后确认更改。
 
    在HTML视图中，目标组件的不同体验包含在Adobe Campaign定位代码中。
 

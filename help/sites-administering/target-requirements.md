@@ -1,19 +1,15 @@
 ---
 title: 与Adobe Target集成的先决条件
-seo-title: Prerequisites for Integrating with Adobe Target
 description: 了解与Adobe Target集成的先决条件。
-seo-description: Find out about the prerequisites for integrating with Adobe Target.
-uuid: 55d87a96-5fe7-4f7e-93c1-fdf7fbb7c971
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
-discoiquuid: ae4a6e97-c0d7-472d-a25f-b89b1abf4df3
 docset: aem65
 exl-id: 30813c44-51ac-4e6e-8ee6-4e8baacb1ff9
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '556'
+source-wordcount: '549'
 ht-degree: 7%
 
 ---
@@ -47,13 +43,13 @@ ht-degree: 7%
    >
    >在配置Test and Target复制代理时，请在 **传输** 选项卡，URI默认设置为 **tnt:///**. 不要将此URI替换为 **https://admin.testandtarget.omniture.com**.
    >
-   >请注意，如果您尝试测试与的连接 **tnt:///**，这将引发错误。 这是预期行为，因为此URI仅供内部使用，不应与一起使用 **测试连接**.
+   >如果您尝试测试与的连接 **tnt:///**，会引发错误。 这是预期行为，因为此URI仅供内部使用；请勿与一起使用 **测试连接**.
 
 ## 保护活动设置节点 {#securing-the-activity-settings-node}
 
 您必须确保发布实例中的活动设置节点 **cq:ActivitySettings** 安全，以使其不可由普通用户访问。该活动设置节点应当只能由负责将活动同步到 Adobe Target 的服务访问。
 
-此 **cq：ActivitySettings** 节点在CRXDE lite中可用，位于 `/content/campaigns/*nameofbrand*`* *在活动jcr：content节点下；* *例如 `/content/campaign/we-retail/master/myactivity/jcr:content/cq:ActivitySettings`. 此节点仅在定向组件后创建。
+此 **cq：ActivitySettings** 节点在CRXDE lite中可用，位于 `/content/campaigns/*nameofbrand*`* *在活动jcr：content节点下；* *例如， `/content/campaign/we-retail/master/myactivity/jcr:content/cq:ActivitySettings`. 此节点仅在定向组件后创建。
 
 此 **cq：ActivitySettings** 节点在活动的jcr：content下受以下ACL保护：
 

@@ -8,9 +8,9 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: aa89326a-ad33-4b0b-8d09-c68c5a5c790a
 exl-id: de1ae7e3-db3a-4b5e-8a4f-ae111227181f
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '640'
+source-wordcount: '639'
 ht-degree: 42%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 42%
 
 >[!NOTE]
 >
->经典UI中创建的注释将显示在触屏UI中。 不过，草图是特定于UI的，并且仅在创建它们的UI中显示。
+>在经典UI中创建的注释显示在触屏UI中。 不过，草图是特定于UI的，并且仅在创建它们的UI中显示。
 
 >[!CAUTION]
 >

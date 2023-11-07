@@ -4,9 +4,9 @@ description: 了解变体如何允许您为片段创作内容，然后根据用�
 feature: Content Fragments
 role: User
 exl-id: 50982ede-7ccf-45b2-b0dd-a49d23e0f971
-source-git-commit: 474a726058b141985f52a0faec6161a34be1e9dc
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2391'
+source-wordcount: '2388'
 ht-degree: 62%
 
 ---
@@ -183,7 +183,7 @@ ht-degree: 62%
 选项 **编辑内容片段** 在新窗口选项卡中打开该片段。
 
 <!--
-The option **Edit Content Fragment** will open that fragment in a new editor tab (within the same browser tab).
+The option **Edit Content Fragment** opens that fragment in a new editor tab (within the same browser tab).
 
 Selecting the original tab again (for example, **Little Pony Inc.**), will close this secondary tab (in this case, **Adam Smith**).
 
@@ -435,7 +435,7 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 
 1. 打开片段，然后从侧面板中选择&#x200B;**“变体”**。
 1. 选择所需的变体。
-1. 从&#x200B;**操作**&#x200B;下拉列表中选择&#x200B;**重命名**。
+1. 从&#x200B;**操作**&#x200B;下拉列表中选择&#x200B;**重命名。**
 
 1. 在结果对话框中输入新的&#x200B;**标题**&#x200B;和/或&#x200B;**描述**。
 
@@ -451,7 +451,7 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 
 1. 打开片段，然后从侧面板中选择&#x200B;**变体**。
 1. 选择所需的变体。
-1. 从&#x200B;**“操作”**&#x200B;下拉菜单中选择&#x200B;**“删除”**。
+1. 从&#x200B;**“操作”**&#x200B;下拉菜单中选择&#x200B;**“删除”。**
 
 1. 确认对话框中的&#x200B;**删除**&#x200B;操作。
 

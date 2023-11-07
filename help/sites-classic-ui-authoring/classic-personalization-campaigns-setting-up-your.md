@@ -7,9 +7,9 @@ topic-tags: personalization
 content-type: reference
 docset: aem65
 exl-id: 1b607a52-f065-4e35-8215-d54df7c8403d
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2257'
+source-wordcount: '2223'
 ht-degree: 0%
 
 ---
@@ -20,10 +20,10 @@ ht-degree: 0%
 
 1. [创建品牌](#creating-a-new-brand) 举办您的营销活动。
 1. 如果需要，您可以 [为新品牌定义属性](#defining-the-properties-for-your-new-brand).
-1. [创建营销活动](#creating-a-new-campaign) 用于保存体验；例如Teaser页面或新闻稿。
+1. [创建营销活动](#creating-a-new-campaign) 用于保存体验；例如，Teaser页面或新闻稿。
 1. 如果需要，您可以 [为新营销活动定义属性](#defining-the-properties-for-your-new-campaign).
 
-然后，根据要创建的体验类型，您将需要 [创建体验](#creating-a-new-experience). 体验的详细信息及其创建后的操作取决于您要创建的体验类型：
+然后，根据您创建的体验类型，您必须 [创建体验](#creating-a-new-experience). 体验的详细信息及其创建后的操作取决于您要创建的体验类型：
 
 * 如果创建Teaser：
 
@@ -50,8 +50,6 @@ ht-degree: 0%
 
 ## 创建新品牌 {#creating-a-new-brand}
 
-要创建新品牌，请执行以下操作：
-
 1. 打开 **MCM** 并选择 **营销活动** 在左窗格中。
 
 1. 选择 **新建……** 输入 **标题** 和 **名称** 和用于新品牌的模板一起使用：
@@ -72,11 +70,9 @@ ht-degree: 0%
 
 ### 创建新营销活动 {#creating-a-new-campaign}
 
-要创建新营销活动，请执行以下操作：
-
 1. 从 **营销活动**，在左窗格中选择新品牌，或双击右窗格中的图标。
 
-   将显示概述（如果品牌是新的，则为空）。
+   此时会显示概述（如果品牌是新的，则为空）。
 
 1. 单击 **新建……** 并指定 **标题**， **名称** 和用于新营销活动的模板。
 
@@ -105,7 +101,7 @@ ht-degree: 0%
 
 ### 创建新体验 {#creating-a-new-experience}
 
-创建新体验的过程取决于体验类型：
+创建体验的过程取决于体验类型：
 
 * [创建Teaser](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#creatingateaser)
 * [创建新闻稿](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#creatinganewsletter)
@@ -154,7 +150,7 @@ ht-degree: 0%
 >[!NOTE]
 >
 >Adobe不打算进一步增强此功能（管理潜在客户）。
->建议为 [利用Adobe Campaign以及与AEM的集成](/help/sites-administering/campaign.md).
+>建议使用 [Adobe Campaign以及与AEM的集成](/help/sites-administering/campaign.md).
 
 在AEM MCM中，您可以通过手动输入潜在客户或导入逗号分隔的列表（例如邮件列表）来整理和添加潜在客户。 生成潜在客户的其他方法来自新闻稿注册或社区注册（如果配置，这些方法可能会触发填充潜在客户的工作流）。
 
@@ -172,7 +168,7 @@ ht-degree: 0%
 
 创建新潜在客户后，请确保 [激活它们](#activating-or-deactivating-leads) 以便您可以跟踪他们在发布实例上的活动并个性化其体验。
 
-要人工创建新销售线索，请执行以下操作：
+要人工创建销售线索，请执行以下操作：
 
 1. 在AEM中，导航到MCM。 在功能板中，单击 **潜在客户**.
 1. 单击 **新建**. 此 **新建** 窗口打开。
@@ -207,7 +203,7 @@ ht-degree: 0%
 
 ### 导入新潜在客户 {#importing-new-leads}
 
-导入新潜在客户时，您可以自动将其添加到现有列表或创建新列表以包含这些潜在客户。
+在导入新潜在客户时，您可以将其自动添加到现有列表中，或创建列表以包含这些潜在客户。
 
 要从以逗号分隔的列表导入潜在客户，请执行以下操作：
 
@@ -302,7 +298,7 @@ ht-degree: 0%
 >[!NOTE]
 >
 >Adobe不打算进一步增强此功能（管理列表）。
->建议为 [利用Adobe Campaign以及与AEM的集成](/help/sites-administering/campaign.md).
+>建议使用 [Adobe Campaign以及与AEM的集成](/help/sites-administering/campaign.md).
 
 列表可让您将潜在客户组织到组中。 通过列表，您可以将营销活动定位到选定的用户组，例如，您可以向列表发送定向的新闻稿。 列表在MCM中可见，无论是在功能板中还是通过单击 **列表**. 两者都会为您提供列表名称和成员数。
 
@@ -314,8 +310,6 @@ ht-degree: 0%
 
 ### 创建新列表 {#creating-new-lists}
 
-要创建新列表（组），请执行以下操作：
-
 1. 在MCM仪表板中，单击 **新建列表……** 或 **列表**，单击 **新建** ...将打开“创建列表”窗口。
 
    ![screen_shot_2012-02-21at125147pm](assets/screen_shot_2012-02-21at125147pm.png)
@@ -325,8 +319,6 @@ ht-degree: 0%
    ![screen_shot_2012-02-21at125320pm](assets/screen_shot_2012-02-21at125320pm.png)
 
 ### 修改现有列表 {#modifying-existing-lists}
-
-要修改现有列表，请执行以下操作：
 
 1. 在MCM中，单击 **列表**.
 
@@ -384,7 +376,7 @@ ht-degree: 0%
 
 您可以随时通过浏览或搜索成员来查看哪些潜在客户属于特定列表。
 
-要查看属于列表的潜在客户，请执行以下操作：
+要查看列表中的潜在客户，请执行以下操作：
 
 1. 在MCM中，单击 **列表**.
 

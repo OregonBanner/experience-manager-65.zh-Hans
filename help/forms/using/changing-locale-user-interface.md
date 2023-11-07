@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 docset: aem65
 exl-id: 9a069486-02a8-4058-adfb-4e0e49d8c0cf
-source-git-commit: fd8bb7d3d9040e0a7a6b2f65751445f41aeab73e
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '570'
+source-wordcount: '569'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ AEM Forms工作区为英语、法语、德语和日语提供开箱即用支持�
 
 >[!NOTE]
 >
->要更改AEM Forms工作区的登录屏幕语言，请参阅 [创建新的登录屏幕](../../forms/using/creating-new-login-screen.md).
+>要更改AEM Forms工作区的登录屏幕语言，请参阅 [创建登录屏幕](../../forms/using/creating-new-login-screen.md).
 
 ## 本地化文本 {#localizing-text}
 
@@ -52,7 +52,7 @@ AEM Forms工作区使用图像来显示类别、队列和流程的标题。 您�
 
 >[!NOTE]
 >
->查找浏览器的浏览器语言区域设置代码。 打开 `https://'[server]:[port]'/lc/libs/ws/Locale.html`.
+>查找浏览器的浏览器语言区域设置代码。 打开 `https://'[server]:[port]'/lc/libs/ws/Locale.html`。
 
 ![collapsing_panels_image](assets/collapsing_panels_image.png)
 

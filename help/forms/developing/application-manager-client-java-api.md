@@ -7,7 +7,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 role: Developer
 exl-id: 659eb9b0-93a0-4bae-8836-d4bc9c3a8c77
-source-git-commit: 3d80ea6a6fbad05afcdd1f41f4b9de70921ab765
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '429'
 ht-degree: 0%
@@ -16,13 +16,13 @@ ht-degree: 0%
 
 # 应用程序管理器客户端JavaAPI快速入门(SOAP) {#application-manager-client-javaapi-quick-start-soap}
 
-以下Java™ API快速入门(SOAP)适用于应用程序管理器客户端。
+以下Java™ API快速入门(SOAP)可用于应用程序管理器客户端。
 
 [快速入门（SOAP模式）：使用Java创建应用程序版本](#quick-start-soap-mode-creating-application-version-using-the-java-api)
 
-[快速入门（SOAP模式）：使用Java导出应用程序](#quick-start-soap-mode-exporting-applications-using-the-java-api)
+[快速启动（SOAP模式）：使用Java导出应用程序](#quick-start-soap-mode-exporting-applications-using-the-java-api)
 
-[快速入门（SOAP模式）：使用Java导入应用程序](#quick-start-soap-mode-importing-applications-using-the-java-api)
+[快速启动（SOAP模式）：使用Java导入应用程序](#quick-start-soap-mode-importing-applications-using-the-java-api)
 
 [快速入门（SOAP模式）：使用Java获取AEM Forms应用程序](application-manager-client-java-api.md#quick-start-soap-mode-getting-a-application-using-the-java-api)
 
@@ -30,7 +30,7 @@ ht-degree: 0%
 
 [快速入门（SOAP模式）：使用Java获取应用程序的状态](application-manager-client-java-api.md#quick-start-soap-mode-getting-status-of-applications-using-java-api)
 
-[快速入门（SOAP模式）：使用Java预览AEM Forms和更高版本的应用程序存档](application-manager-client-java-api.md#quick-start-soap-mode-previewing-the-livecycle-es2-and-later-application-archive-using-the-java-api)
+[快速入门（SOAP模式）：使用Java预览AEM Forms和之后的应用程序存档](application-manager-client-java-api.md#quick-start-soap-mode-previewing-the-livecycle-es2-and-later-application-archive-using-the-java-api)
 
 [快速入门（SOAP模式）：使用Java删除AEM Forms应用程序存档](application-manager-client-java-api.md#quick-start-soap-mode-deleting-the-application-archive-using-the-java-api)
 
@@ -38,7 +38,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
 
 >[!NOTE]
 >
->使用AEM Forms编程中的快速入门指南基于在JBoss®和Windows操作系统上部署的Forms Server。 但是，如果您使用的是其他操作系统(如UNIX®)，请将特定于windows的路径替换为适用的操作系统支持的路径。 同样，如果您使用的是其他J2EE应用程序服务器，请确保指定有效的连接属性。 参见 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>使用AEM Forms进行编程中的快速入门基于正在JBoss®和Windows操作系统上部署的Forms Server。 但是，如果您使用的是其他操作系统(如UNIX®)，请将特定于Windows的路径替换为适用的操作系统支持的路径。 同样，如果您使用的是其他J2EE应用程序服务器，请确保指定有效的连接属性。 请参阅 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
 ## 快速入门（SOAP模式）：使用Java™ API创建应用程序版本 {#quick-start-soap-mode-creating-application-version-using-the-java-api}
 
@@ -69,11 +69,11 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
  * 19. xbean.jar (required for SOAP mode)
  * 20. xercesImpl.jar (required for SOAP mode)
  *
- * These JAR files are located in the following path:
+ * These JAR files are in the following path:
  * <install directory>/sdk/client-libs/common
  *
  *
- * SOAP required JAR files are located in the following path:
+ * SOAP required JAR files are in the following path:
  * <install directory>/sdk/client-libs/thirdparty
  *
  *
@@ -167,11 +167,11 @@ public class CreateApplicationVersion_SOAP {
  * 18. xbean.jar (required for SOAP mode)
  * 19. xercesImpl.jar (required for SOAP mode)
  *
- * These JAR files are located in the following path:
+ * These JAR files are in the following path:
  * <install directory>/sdk/client-libs/common
  *
  *
- * SOAP required JAR files are located in the following path:
+ * SOAP required JAR files are in the following path:
  * <install directory>/sdk/client-libs/thirdparty
  *
  *
@@ -248,7 +248,7 @@ public class ExportLCA_SOAP {
 
 >[!NOTE]
 >
-Java™ API importApplication()用较新的应用程序替换同名的现有应用程序。 要更新现有应用程序，请使用API importApplication()代替API updateApplication()。
+Java™ API importApplication()用较新的应用程序替换现有的同名应用程序。 要更新现有应用程序，请使用API importApplication()代替API updateApplication()。
 
 ```java
 /*
@@ -274,11 +274,11 @@ Java™ API importApplication()用较新的应用程序替换同名的现有应�
  * 18. xbean.jar (required for SOAP mode)
  * 19. xercesImpl.jar (required for SOAP mode)
  *
- * These JAR files are located in the following path:
+ * These JAR files are in the following path:
  * <install directory>/sdk/client-libs/common
  *
  *
- * SOAP required JAR files are located in the following path:
+ * SOAP required JAR files are in the following path:
  * <install directory>/sdk/client-libs/thirdparty
  *
  *
@@ -357,11 +357,11 @@ public class ImportLCA_SOAP {
  * 18. xbean.jar (required for SOAP mode)
  * 19. xercesImpl.jar (required for SOAP mode)
  *
- * These JAR files are located in the following path:
+ * These JAR files are in the following path:
  * <install directory>/sdk/client-libs/common
  *
  *
- * SOAP required JAR files are located in the following path:
+ * SOAP required JAR files are in the following path:
  * <install directory>/sdk/client-libs/thirdparty
  *
  *
@@ -440,7 +440,7 @@ public class GetApplication_SOAP {
 
 以下Java™代码示例使用Java™ API获取应用程序。
 
-**注释**：获取AEM Forms应用程序API getApplications()，将仅返回已部署的应用程序。
+**注意**：获取AEM Forms应用程序API getApplications()，将仅返回已部署的应用程序。
 
 ```java
 /*
@@ -466,11 +466,11 @@ public class GetApplication_SOAP {
  * 18. xbean.jar (required for SOAP mode)
  * 19. xercesImpl.jar (required for SOAP mode)
  *
- * These JAR files are located in the following path:
+ * These JAR files are in the following path:
  * <install directory>/sdk/client-libs/common
  *
  *
- * SOAP required JAR files are located in the following path:
+ * SOAP required JAR files are in the following path:
  * <install directory>/sdk/client-libs/thirdparty
  *
  *
@@ -561,11 +561,11 @@ public class GetApplications_SOAP {
  * 18. xbean.jar (required for SOAP mode)
  * 19. xercesImpl.jar (required for SOAP mode)
  *
- * These JAR files are located in the following path:
+ * These JAR files are in the following path:
  * <install directory>/sdk/client-libs/common
  *
  *
- * SOAP required JAR files are located in the following path:
+ * SOAP required JAR files are in the following path:
  * <install directory>/sdk/client-libs/thirdparty
  *
  *
@@ -642,7 +642,7 @@ public class GetApplicationStatus_SOAP {
 
 ## 快速入门（SOAP模式）：使用Java™ API预览LiveCycleES2和更高版本的应用程序存档 {#quick-start-soap-mode-previewing-the-livecycle-es2-and-later-application-archive-using-the-java-api}
 
-以下Java™代码示例用于使用Java™ API预览AEM Forms和更高版本的应用程序存档。
+以下Java™代码示例用于使用Java™ API预览AEM Forms和之后的应用程序存档。
 
 ```java
 /*
@@ -668,11 +668,11 @@ public class GetApplicationStatus_SOAP {
  * 18. xbean.jar (required for SOAP mode)
  * 19. xercesImpl.jar (required for SOAP mode)
  *
- * These JAR files are located in the following path:
+ * These JAR files are in the following path:
  * <install directory>/sdk/client-libs/common
  *
  *
- * SOAP required JAR files are located in the following path:
+ * SOAP required JAR files are in the following path:
  * <install directory>/sdk/client-libs/thirdparty
  */
 package com.adobe.idp.dsc.applicationmanager;
@@ -747,11 +747,11 @@ public class PreviewLCA_SOAP {
  * 18. xbean.jar (required for SOAP mode)
  * 19. xercesImpl.jar (required for SOAP mode)
  *
- * These JAR files are located in the following path:
+ * These JAR files are in the following path:
  * <install directory>/sdk/client-libs/common
  *
  *
- * SOAP required JAR files are located in the following path:
+ * SOAP required JAR files are in the following path:
  * <install directory>/sdk/client-libs/thirdparty
  *
  *

@@ -10,9 +10,9 @@ content-type: reference
 discoiquuid: 6694a135-d1e1-4afb-9f5b-23991ee70eee
 docset: aem65
 exl-id: e8929d7c-9920-4c02-95a9-6f7f7a365203
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '3570'
+source-wordcount: '3568'
 ht-degree: 2%
 
 ---
@@ -68,7 +68,7 @@ Package Manager分为四个主要功能区域：
 * **活动日志**  — 此面板最初最小化，然后展开以详细描述包管理器的活动，如在生成或安装包时。 在“活动日志”选项卡中，还有其它按钮用于：
    * **清除日志**
    * **显示/隐藏**
-* **工具栏**  — 工具栏包含左侧导航面板和包列表的刷新按钮，以及用于搜索、创建和上传包的按钮。
+* **工具栏**  — 工具栏包含用于左侧导航面板和包列表的刷新按钮，以及用于搜索、创建和上传包的按钮。
 
 ![包管理器UI](assets/package-manager-ui.png)
 
@@ -275,7 +275,7 @@ Official Service Pack
 
 ### 重新包装包 {#rewrapping-a-package}
 
-生成包后，可以对其进行重新包装。 重新包装会更改包信息，但不更改缩略图、描述等，而不会更改包内容。
+生成包后，可以对其进行重新包装。 重新包装会更改包信息，但不更改包内容，如缩略图、描述等。
 
 1. [访问包管理器。](#accessing)
 
@@ -581,7 +581,7 @@ AEM包可用于在AEM环境中创建和共享内容。
 
 [Software Distribution](https://downloads.experiencecloud.adobe.com) 是一项集中式服务，旨在简化AEM包的搜索和下载。
 
-欲知更多信息，请参见 [Software Distribution文档](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html)
+欲了解更多信息，请参见 [Software Distribution文档](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html)
 
 >[!NOTE]
 >

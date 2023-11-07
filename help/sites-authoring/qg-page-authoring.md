@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 2d35a2a4-0c8c-4b16-99a6-c6e6d66446dc
 docset: aem65
 exl-id: a7e16555-9bbe-4da2-817c-4495a0193f3f
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1557'
+source-wordcount: '1553'
 ht-degree: 74%
 
 ---
@@ -128,7 +128,7 @@ ht-degree: 74%
 [快速操作](/help/sites-authoring/basic-handling.md#quick-actions)可用：
 
 1. [导航](#finding-your-page)到要执行操作的页面。
-1. 将鼠标指针悬停在表示所需资源的卡片上方；将会显示快速操作：
+1. 将鼠标指针悬停在表示所需资源的卡片上方；将显示快速操作：
 
    ![screen_shot_2018-03-21at160503-1](assets/screen_shot_2018-03-21at160503-1.png)
 
@@ -215,7 +215,7 @@ ht-degree: 74%
 
   ![screen_shot_2018-03-21at160850](assets/screen_shot_2018-03-21at160850.png)
 
-   1. 将会显示页面属性。您可以进行需要的更新，然后使用“保存”保留这些更改
+   1. 页面属性会显示。您可以进行需要的更新，然后使用“保存”保留这些更改
 
 * 在[编辑页面](#editing-your-page-content)时：
 

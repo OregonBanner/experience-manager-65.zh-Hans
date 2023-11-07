@@ -5,10 +5,10 @@ contentOwner: AG
 role: Architect, Admin
 feature: Translation
 exl-id: 8990feca-cfda-4974-915e-27aa9d8f2ee1
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1873'
-ht-degree: 15%
+source-wordcount: '1869'
+ht-degree: 14%
 
 ---
 
@@ -30,7 +30,7 @@ ht-degree: 15%
 您可以使用创建和翻译工作流首次生成特定语言的语言副本。 工作流提供了以下选项：
 
 * 只创建结构.
-* 创建新翻译项目.
+* 创建翻译项目.
 * 添加到现有翻译项目.
 
 ### 只创建结构 {#create-structure-only}
@@ -55,7 +55,7 @@ ht-degree: 15%
 
    ![reveal-in-assets](assets/reveal-in-assets.png)
 
-### 创建新翻译项目 {#create-a-new-translation-project}
+### 创建翻译项目 {#create-a-new-translation-project}
 
 如果使用此选项，则要翻译的资产将会复制到要翻译的语言的语言根中。 根据您选择的选项，将为项目控制台中的资产创建翻译项目。 根据设置，翻译项目可以手动启动，也可以在创建翻译项目后立即自动运行。
 
@@ -164,10 +164,10 @@ ht-degree: 15%
 
 运行此工作流可翻译任何其他资产集，并将其包含在特定区域设置的语言副本中。 在这种情况下，已翻译资产会添加到已包含先前已翻译资产的目标文件夹。 根据选项选择，将为新资产创建翻译项目或更新现有翻译项目。 更新语言副本工作流包含以下选项：
 
-* 创建新翻译项目
+* 创建翻译项目
 * 添加到现有翻译项目
 
-### 创建新翻译项目 {#create-a-new-translation-project-1}
+### 创建翻译项目 {#create-a-new-translation-project-1}
 
 如果使用此选项，将为要更新语言副本的资源集创建翻译项目。
 

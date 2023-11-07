@@ -10,9 +10,9 @@ topic-tags: develop
 discoiquuid: b89293c4-ea2e-4fa4-9e5e-ef4f548e9608
 role: Developer
 exl-id: 76d855cf-ebfa-487a-b1c8-755e7e45dd73
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1069'
+source-wordcount: '1068'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ Java API快速入门(SOAP)可用于Rights Management服务：
 
 [快速入门（SOAP模式）：使用Java API恢复对已撤销文档的访问](document-security-service-java-api.md#quick-start-soap-mode-reinstating-access-to-a-revoked-document-using-the-java-api)
 
-[快速入门（SOAP模式）：使用Java API检查受策略保护的PDF文档](document-security-service-java-api.md#quick-start-soap-mode-inspecting-policy-protected-pdf-documents-using-the-java-api)
+[快速启动（SOAP模式）：使用Java API检查受策略保护的PDF文档](document-security-service-java-api.md#quick-start-soap-mode-inspecting-policy-protected-pdf-documents-using-the-java-api)
 
 [快速入门（SOAP模式）：使用Java API创建水印](document-security-service-java-api.md#quick-start-soap-mode-creating-a-pdf-watermark-using-the-java-api)
 
@@ -49,11 +49,11 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
 
 >[!NOTE]
 >
->位于“使用AEM Forms编程”中的快速入门基于Forms服务器操作系统。 但是，如果您使用的是其他操作系统（如UNIX），请将特定于Windows的路径替换为适用的操作系统支持的路径。 同样，如果您使用的是其他J2EE应用程序服务器，请确保指定有效的连接属性。 参见 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>《使用AEM Forms进行编程快速入门》基于Forms服务器操作系统。 但是，如果您使用的是其他操作系统（如UNIX），请将特定于Windows的路径替换为适用的操作系统支持的路径。 同样，如果您使用的是其他J2EE应用程序服务器，请确保指定有效的连接属性。 请参阅 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
 ## 快速入门（SOAP模式）：使用Java API创建策略 {#quick-start-soap-mode-creating-a-policy-using-the-java-api}
 
-以下Java代码示例创建一个名为的新策略 *允许复制*. 将策略添加到其中的策略集已命名 *全局策略集*. 默认情况下，此策略集存在。 (请参阅 [创建策略](/help/forms/developing/protecting-documents-policies.md#creating-policies).)
+以下Java代码示例创建一个名为的新策略 *允许复制*. 将策略添加到其中的策略集命名为 *全局策略集*. 默认情况下，此策略集存在。 (请参阅 [创建策略](/help/forms/developing/protecting-documents-policies.md#creating-policies).)
 
 ```java
  /*
@@ -82,7 +82,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
      *
@@ -91,7 +91,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *
@@ -182,7 +182,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
 
 ## 快速入门（SOAP模式）：使用Java API修改策略 {#quick-start-soap-mode-modifying-a-policy-using-the-java-api}
 
-以下Java代码示例修改了一个名为的策略 *允许复制* 通过将离线租赁期设置为40天。 (请参阅 [修改策略](/help/forms/developing/protecting-documents-policies.md#modifying-policies).)
+以下Java代码示例修改了名为的策略 *允许复制* 通过将离线租赁期设置为40天。 (请参阅 [修改策略](/help/forms/developing/protecting-documents-policies.md#modifying-policies).)
 
 ```java
  /*
@@ -208,13 +208,13 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
      * 18. xbean.jar (required for SOAP mode)
      * 19. xercesImpl.jar (required for SOAP mode)
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
      *
      * <install directory>/jboss/bin/client
      *
-     * SOAP required JAR files are located in the following path:
+     * SOAP required JAR files are in the following path:
      * <install directory>/sdk/client-libs/thirdparty
      *
      * If you want to invoke a remote forms server instance and there is a
@@ -312,7 +312,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
      *
@@ -321,7 +321,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *
@@ -375,7 +375,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
 
 ## 快速入门（SOAP模式）：使用Java API将策略应用到PDF文档 {#quick-start-soap-mode-applying-a-policy-to-a-pdf-document-using-the-java-api}
 
-以下Java代码示例应用名为的策略 *允许复制* 到名为的PDF文档 *Loan.pdf*. 将策略添加到其中的策略集已命名 *全局策略集*. 受策略保护的文档另存为名为*PolicyProtectedLoanDoc.pdf的PDF文件。 *(请参阅 [将策略应用于PDF文档](/help/forms/developing/protecting-documents-policies.md#applying-policies-to-pdf-documents).)
+以下Java代码示例应用名为的策略 *允许复制* 到名为的PDF文档 *Loan.pdf*. 将策略添加到其中的策略集命名为 *全局策略集*. 受策略保护的文档将另存为名为*PolicyProtectedLoanDoc.pdf的PDF文件。 *(请参阅 [将策略应用于PDF文档](/help/forms/developing/protecting-documents-policies.md#applying-policies-to-pdf-documents).)
 
 ```java
  /*
@@ -401,13 +401,13 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
      * 18. xbean.jar (required for SOAP mode)
      * 19. xercesImpl.jar (required for SOAP mode)
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
      *
      * <install directory>/jboss/bin/client
      *
-     * SOAP required JAR files are located in the following path:
+     * SOAP required JAR files are in the following path:
      * <install directory>/sdk/client-libs/thirdparty
      *
      * If you want to invoke a remote forms server instance and there is a
@@ -510,7 +510,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
      *
@@ -519,7 +519,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *
@@ -588,7 +588,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
 
 ## 快速入门（SOAP模式）：使用Java API撤销文档 {#quick-start-soap-mode-revoking-a-document-using-the-java-api}
 
-以下Java代码示例撤销一个名为的受策略保护的文档 *PolicyProtectedLoanDoc.pdf*. 修订的PDF文档位于以下URL位置 `https://'[server]:[port]'/RightsManagement/UpdatedLoan.pdf`. (请参阅 [撤销对文档的访问权限](/help/forms/developing/protecting-documents-policies.md#revoking-access-to-documents).)
+以下Java代码示例撤销名为的受策略保护的文档 *PolicyProtectedLoanDoc.pdf*. 修订的PDF文档位于以下URL位置 `https://'[server]:[port]'/RightsManagement/UpdatedLoan.pdf`. (请参阅 [撤销对文档的访问权限](/help/forms/developing/protecting-documents-policies.md#revoking-access-to-documents).)
 
 ```java
  /*
@@ -617,7 +617,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
      *
@@ -626,7 +626,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *
@@ -700,7 +700,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
  
 ```
 
-## 快速入门（SOAP模式）：使用Java API检查受策略保护的PDF文档 {#quick-start-soap-mode-inspecting-policy-protected-pdf-documents-using-the-java-api}
+## 快速启动（SOAP模式）：使用Java API检查受策略保护的PDF文档 {#quick-start-soap-mode-inspecting-policy-protected-pdf-documents-using-the-java-api}
 
 以下Java代码示例检查名为的受策略PDF文档 *PolicyProtectedLoanDoc.pd* f. (请参阅 [检查受策略保护的PDF文档](/help/forms/developing/protecting-documents-policies.md#inspecting-policy-protected-pdf-documents).)
 
@@ -731,7 +731,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
      *
@@ -740,7 +740,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *
@@ -849,7 +849,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
      *
@@ -858,7 +858,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *
@@ -926,7 +926,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
 
 ## 快速入门（SOAP模式）：使用Java API创建PDF水印 {#quick-start-soap-mode-creating-a-pdf-watermark-using-the-java-api}
 
-以下Java代码示例创建一个名为“示例PDF水印”的新PDF水印。 此水印包含单个元素(请参阅 [创建水印](/help/forms/developing/protecting-documents-policies.md#creating-watermarks))。
+以下Java代码示例创建了一个名为“示例PDF水印”的新PDF水印。 此水印包含单个元素(请参阅 [创建水印](/help/forms/developing/protecting-documents-policies.md#creating-watermarks))。
 
 ```java
 /*
@@ -952,14 +952,14 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
  * 18. xbean.jar (required for SOAP mode)
  * 19. xercesImpl.jar (required for SOAP mode)
  *
- * These JAR files are located in the following path:
+ * These JAR files are in the following path:
  * <install directory>/Adobe/Adobe_Experience_Manager_forms/sdk/client-libs/common
  *
  * <install directory>/Adobe/Adobe_Experience_Manager_forms/sdk/client-libs/jboss
  *
  * <install directory>/Adobe/Adobe_Experience_Manager_forms/jboss/bin/client
  *
- * SOAP required JAR files are located in the following path:
+ * SOAP required JAR files are in the following path:
  * <install directory>/Adobe/Adobe_Experience_Manager_forms/sdk/client-libs/thirdparty
  *
  * If you want to invoke a remote forms server instance and there is a
@@ -1059,7 +1059,7 @@ public class PDFWatermarksSOAPMode {
 
 ## 快速入门（SOAP模式）：使用Java API创建文本水印 {#quick-start-soap-mode-creating-a-text-watermark-using-the-java-api}
 
-以下Java代码示例创建一个名为的新文本水印 *示例文本水印*. 此水印包含单个元素。
+以下Java代码示例创建一个名为的新文本水印 *文本水印示例*. 此水印包含单个元素。
 
 ```java
 /*
@@ -1085,14 +1085,14 @@ public class PDFWatermarksSOAPMode {
  * 18. xbean.jar (required for SOAP mode)
  * 19. xercesImpl.jar (required for SOAP mode)
  *
- * These JAR files are located in the following path:
+ * These JAR files are in the following path:
  * <install directory>/Adobe/Adobe_Experience_Manager_forms/sdk/client-libs/common
  *
  * <install directory>/Adobe/Adobe_Experience_Manager_forms/sdk/client-libs/jboss
  *
  * <install directory>/Adobe/Adobe_Experience_Manager_forms/jboss/bin/client
  *
- * SOAP required JAR files are located in the following path:
+ * SOAP required JAR files are in the following path:
  * <install directory>/Adobe/Adobe_Experience_Manager_forms/sdk/client-libs/thirdparty
  *
  * If you want to invoke a remote forms server instance and there is a
@@ -1172,7 +1172,7 @@ public class TextWatermarks {
             element1.setEndPage(1);// The watermark will appear only on first
                                     // page, start page is 1 by default.
 
-            // Create a new element.
+            // Create an element.
             Watermark2Element element2 = InfomodelObjectFactory
                     .createWatermark2Element();
             element2.setName("Second element");
@@ -1234,14 +1234,14 @@ public class TextWatermarks {
  * 18. xbean.jar (required for SOAP mode)
  * 19. xercesImpl.jar (required for SOAP mode)
  *
- * These JAR files are located in the following path:
+ * These JAR files are in the following path:
  * <install directory>/Adobe/Adobe_Experience_Manager_forms/sdk/client-libs/common
  *
  * <install directory>/Adobe/Adobe_Experience_Manager_forms/sdk/client-libs/jboss
  *
  * <install directory>/Adobe/Adobe_Experience_Manager_forms/jboss/bin/client
  *
- * SOAP required JAR files are located in the following path:
+ * SOAP required JAR files are in the following path:
  * <install directory>/Adobe/Adobe_Experience_Manager_forms/sdk/client-libs/thirdparty
  *
  * If you want to invoke a remote forms server instance and there is a
@@ -1320,7 +1320,7 @@ public class ModifyWatermarks {
 
 ## 快速启动（SOAP模式）：使用Java API修改水印 {#quick-start-soap-mode-modifying-a-watermark-using-the-java-api}
 
-以下Java代码示例修改了名为的水印 *机密* 通过修改 `opacity` 属性为80。
+以下Java代码示例修改了一个名为的水印 *机密* 通过修改 `opacity` 属性为80。
 
 ```java
  /*
@@ -1349,7 +1349,7 @@ public class ModifyWatermarks {
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
      *
@@ -1358,7 +1358,7 @@ public class ModifyWatermarks {
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *
@@ -1447,7 +1447,7 @@ public class ModifyWatermarks {
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
      *
@@ -1456,7 +1456,7 @@ public class ModifyWatermarks {
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *
@@ -1531,7 +1531,7 @@ public class ModifyWatermarks {
 
 ## 快速入门(SOAP)：使用Java API将策略应用到Word文档 {#quick-start-soap-applying-a-policy-to-a-word-document-using-the-java-api}
 
-以下Java代码示例应用名为的策略 *允许复制* 到名为的Word文档 *Loan.doc*. 将策略添加到其中的策略集已命名 *全局策略集*. 受策略保护的文档将另存为名为*PolicyProtectedLoanDoc.doc的DOC文件。 *(请参阅 [将策略应用于PDF文档](/help/forms/developing/protecting-documents-policies.md#applying-policies-to-pdf-documents).)
+以下Java代码示例应用名为的策略 *允许复制* 到名为的Word文档 *Loan.doc*. 将策略添加到其中的策略集命名为 *全局策略集*. 受策略保护的文档将另存为名为*PolicyProtectedLoanDoc.doc的DOC文件。 *(请参阅 [将策略应用于PDF文档](/help/forms/developing/protecting-documents-policies.md#applying-policies-to-pdf-documents).)
 
 ```java
  /*
@@ -1560,7 +1560,7 @@ public class ModifyWatermarks {
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
      *
@@ -1569,7 +1569,7 @@ public class ModifyWatermarks {
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *
@@ -1675,7 +1675,7 @@ public class ModifyWatermarks {
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
      *
@@ -1684,7 +1684,7 @@ public class ModifyWatermarks {
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdkK/client-libs/thirdparty
      *
@@ -1754,7 +1754,7 @@ public class ModifyWatermarks {
 
 ## 快速入门（SOAP模式）：使用Java API创建抽象策略 {#quick-start-soap-mode-creating-an-abstract-policy-using-the-java-api}
 
-以下Java代码示例创建一个名为AllowCopy的新抽象策略。 将策略添加到其中的策略集被命名为全局策略集。 默认情况下，此策略集存在。 （请参阅创建策略。）
+以下Java代码示例创建一个名为AllowCopy的新抽象策略。 将策略添加到其中的策略集命名为“全局策略集”。 默认情况下，此策略集存在。 （请参阅创建策略。）
 
 ```java
 /*
@@ -1780,14 +1780,14 @@ public class ModifyWatermarks {
  * 18. xbean.jar (required for SOAP mode)
  * 19. xercesImpl.jar (required for SOAP mode)
  *
- * These JAR files are located in the following path:
+ * These JAR files are in the following path:
  * <install directory>/Adobe/Adobe_Experience_Manager_forms/sdk/client-libs/common
  *
  * <install directory>/Adobe/Adobe_Experience_Manager_forms/sdk/client-libs/jboss
  *
  * <install directory>/Adobe/Adobe_Experience_Manager_forms/jboss/bin/client
  *
- * SOAP required JAR files are located in the following path:
+ * SOAP required JAR files are in the following path:
  * <install directory>/Adobe/Adobe_Experience_Manager_forms/sdk/client-libs/thirdparty
  *
  * If you want to invoke a remote forms server instance and there is a
@@ -1869,9 +1869,9 @@ public class CreateAbstractPolicySoap {
 }
 ```
 
-## 快速入门（SOAP模式）：使用Java API修改抽象策略 {#quick-start-soap-mode-modifying-an-abstract-policy-using-the-java-api}
+## 快速启动（SOAP模式）：使用Java API修改抽象策略 {#quick-start-soap-mode-modifying-an-abstract-policy-using-the-java-api}
 
-以下Java代码示例修改名为AllowCopy的抽象策略。 在其中修改策略的策略集被命名为全局策略集。 默认情况下，此策略集存在。 （请参阅创建策略。）
+以下Java代码示例修改名为AllowCopy的抽象策略。 在其中修改策略的策略集被命名为“全局策略集”。 默认情况下，此策略集存在。 （请参阅创建策略。）
 
 ```java
 /*
@@ -1897,14 +1897,14 @@ public class CreateAbstractPolicySoap {
  * 18. xbean.jar (required for SOAP mode)
  * 19. xercesImpl.jar (required for SOAP mode)
  *
- * These JAR files are located in the following path:
+ * These JAR files are in the following path:
  * <install directory>/Adobe/Adobe_Experience_Manager_forms/sdk/client-libs/common
  *
  * <install directory>/Adobe/Adobe_Experience_Manager_forms/sdk/client-libs/jboss
  *
  * <install directory>/Adobe/Adobe_Experience_Manager_forms/jboss/bin/client
  *
- * SOAP required JAR files are located in the following path:
+ * SOAP required JAR files are in the following path:
  * <install directory>/Adobe/Adobe_Experience_Manager_forms/sdk/client-libs/thirdparty
  *
  * If you want to invoke a remote forms server instance and there is a
@@ -1968,9 +1968,9 @@ public class ModifyingAbstractPolicySoap {
 }
 ```
 
-## 快速入门（SOAP模式）：使用Java API删除抽象策略 {#quick-start-soap-mode-deleting-an-abstract-policy-using-the-java-api}
+## 快速启动（SOAP模式）：使用Java API删除抽象策略 {#quick-start-soap-mode-deleting-an-abstract-policy-using-the-java-api}
 
-以下Java代码示例删除名为AllowCopy的抽象策略。 从中删除策略的策略集被命名为全局策略集。 默认情况下，此策略集存在。 （请参阅创建策略。）
+以下Java代码示例删除名为AllowCopy的抽象策略。 从中删除策略的策略集被命名为“全局策略集”。 默认情况下，此策略集存在。 （请参阅创建策略。）
 
 ```java
 /*
@@ -1996,14 +1996,14 @@ public class ModifyingAbstractPolicySoap {
  * 18. xbean.jar (required for SOAP mode)
  * 19. xercesImpl.jar (required for SOAP mode)
  *
- * These JAR files are located in the following path:
+ * These JAR files are in the following path:
  * <install directory>/Adobe/Adobe_Experience_Manager_forms/sdk/client-libs/common
  *
  * <install directory>/Adobe/Adobe_Experience_Manager_forms/sdk/client-libs/jboss
  *
  * <install directory>/Adobe/Adobe_Experience_Manager_forms/jboss/bin/client
  *
- * SOAP required JAR files are located in the following path:
+ * SOAP required JAR files are in the following path:
  * <install directory>/Adobe/Adobe_Experience_Manager_forms/sdk/client-libs/thirdparty
  *
  * If you want to invoke a remote forms server instance and there is a
@@ -2083,14 +2083,14 @@ public class DeleteAbstractPolicySoap {
  * 18. xbean.jar (required for SOAP mode)
  * 19. xercesImpl.jar (required for SOAP mode)
  *
- * These JAR files are located in the following path:
+ * These JAR files are in the following path:
  * <install directory>/Adobe/Adobe_Experience_Manager_forms/sdk/client-libs/common
  *
  * <install directory>/Adobe/Adobe_Experience_Manager_forms/sdk/client-libs/jboss
  *
  * <install directory>/Adobe/Adobe_Experience_Manager_forms/jboss/bin/client
  *
- * SOAP required JAR files are located in the following path:
+ * SOAP required JAR files are in the following path:
  * <install directory>/Adobe/Adobe_Experience_Manager_forms/sdk/client-libs/thirdparty
  *
  * If you want to invoke a remote forms server instance and there is a
@@ -2167,7 +2167,7 @@ public class protectStatementWorkFlowExistingUserSoap {
 
 以下Java代码示例演示了如何在语句工作流中保护文档。 此过程分为两步：
 
-* 将创建一个新的用户、许可证和策略。
+* 将创建新的用户、许可证和策略。
 * 用户与许可证和策略相关联，并且文档受保护。
 
 ```java
@@ -2194,14 +2194,14 @@ public class protectStatementWorkFlowExistingUserSoap {
  * 18. xbean.jar (required for SOAP mode)
  * 19. xercesImpl.jar (required for SOAP mode)
  *
- * These JAR files are located in the following path:
+ * These JAR files are in the following path:
  * <install directory>/Adobe/Adobe_Experience_Manager_forms/sdk/client-libs/common
  *
  * <install directory>/Adobe/Adobe_Experience_Manager_forms/sdk/client-libs/jboss
  *
  * <install directory>/Adobe/Adobe_Experience_Manager_forms/jboss/bin/client
  *
- * SOAP required JAR files are located in the following path:
+ * SOAP required JAR files are in the following path:
  * <install directory>/Adobe/Adobe_Experience_Manager_forms/sdk/client-libs/thirdparty
  *
  * If you want to invoke a remote forms server instance and there is a

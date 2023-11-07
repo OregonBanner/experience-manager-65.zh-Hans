@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 873ce073-0055-4e1b-b3c6-ae7967700894
 docset: aem65
 exl-id: eabd8335-6140-4c15-8cff-21608719aa5f
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '4950'
+source-wordcount: '4962'
 ht-degree: 2%
 
 ---
@@ -915,7 +915,7 @@ JConsole将显示本地Java虚拟机进程的列表。 该列表将包含两个�
 
 ### 连接到远程CRX进程 {#connecting-to-a-remote-crx-process}
 
-要连接到远程CRX进程，需要启用承载远程CRX进程的JVM以接受远程JMX连接。
+要连接到远程CRX进程，必须启用承载远程CRX进程的JVM以接受远程JMX连接。
 
 要启用远程JMX连接，在启动JVM时必须设置以下系统属性：
 

@@ -8,7 +8,7 @@ topic-tags: configuring
 docset: aem65
 feature: Configuring
 exl-id: 09943de5-8d62-4354-a37f-0521a66b4c49
-source-git-commit: b66ec42c35b5b60804015d340b8194bbd6ef3e28
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '3389'
 ht-degree: 4%
@@ -111,7 +111,7 @@ AEM的标准安装中包含的We-Retail网站可用于说明复制。
 用于从Publish复制到Author。 反向复制不用于Communities功能，例如论坛、博客和评论。 由于未启用发件箱，因此该功能实际上已被禁用。 使用反向复制需要自定义配置。
 
 * 静态代理这是一个“将节点的静态表示存储在文件系统中的代理”。
-例如，对于默认设置，内容页面和DAM资产存储在 `/tmp`，作为HTML或相应的资源格式。 请参阅 `Settings` 和 `Rules` 选项卡进行配置。
+例如，在默认设置下，内容页面和DAM资产存储在 `/tmp`，作为HTML或相应的资源格式。 请参阅 `Settings` 和 `Rules` 选项卡进行配置。
 这是请求的，以便当直接从应用程序服务器请求页面时，可以看到内容。 这是一个专用代理，（可能）在大多数情况下不需要它。
 
 ## 复制代理 — 配置参数 {#replication-agents-configuration-parameters}
@@ -528,7 +528,7 @@ AEM的标准安装中包含的We-Retail网站可用于说明复制。
 
    ![chlimage_1-2](assets/chlimage_1-2.jpeg)
 
-   您可以在此执行以下操作：
+   在这里，您可以执行以下操作：
 
    * 查看代理是否已启用。
    * 查看任何复制的目标。

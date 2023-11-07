@@ -1,18 +1,14 @@
 ---
 title: 封装令牌支持
-seo-title: Encapsulated Token Support
 description: 了解AEM中的封装令牌支持。
-seo-description: Learn about the Encapsulated Token support in AEM.
-uuid: a7c6f269-bb5a-49ba-abef-ea029202ab6d
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: Security
 content-type: reference
-discoiquuid: 2c263c0d-2521-49df-88ba-f304a25af8ab
 exl-id: e24d815c-83e2-4639-8273-b4c0a6bb008a
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '795'
+source-wordcount: '792'
 ht-degree: 0%
 
 ---
@@ -47,7 +43,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->请注意，封装令牌与身份验证有关。 它确保无需访问存储库即可验证Cookie。 但是，仍要求用户存在于所有实例上，并且每个实例都可以访问存储在该用户下的信息。
+>封装令牌用于身份验证。 它确保无需访问存储库即可验证Cookie。 但是，仍要求用户存在于所有实例上，并且每个实例都可以访问存储在该用户下的信息。
 >
 >例如，如果在第一个发布实例上创建新用户，则由于封装令牌的工作方式，它将在第二个发布实例上成功进行身份验证。 如果用户在第二个发布实例上不存在，则请求仍将失败。
 >

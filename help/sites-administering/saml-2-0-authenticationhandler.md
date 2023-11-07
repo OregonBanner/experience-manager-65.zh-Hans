@@ -10,9 +10,9 @@ topic-tags: Security
 content-type: reference
 discoiquuid: 6ed09b5d-5089-43d2-b9d5-e7db57be5c02
 exl-id: 8e54bccf-0ff1-448d-a237-ec42fd3bfa23
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '844'
+source-wordcount: '842'
 ht-degree: 2%
 
 ---
@@ -40,7 +40,7 @@ AEM附带 [SAML](https://saml.xml.org/saml-specifications) 身份验证处理程
 
 >[!NOTE]
 >
->默认情况下，SAML 2.0身份验证处理程序处于禁用状态。 必须设置以下至少一个属性才能启用处理程序：
+>默认情况下，SAML 2.0身份验证处理程序处于禁用状态。 至少设置以下属性之一以启用处理程序：
 >
 >* 身份提供程序POSTURL，或IDP URL。
 >* 服务提供商实体ID。

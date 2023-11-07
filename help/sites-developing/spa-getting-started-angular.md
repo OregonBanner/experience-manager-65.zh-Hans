@@ -10,9 +10,9 @@ content-type: reference
 discoiquuid: 9cdd7648-d67e-414d-aedf-a5687da39326
 docset: aem65
 exl-id: 9528d92b-0989-4e2d-83be-ba6c07c845e2
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1013'
+source-wordcount: '1012'
 ht-degree: 6%
 
 ---
@@ -51,7 +51,7 @@ SPA创作功能提供了一个全面的解决方案，用于在AEM中支持SPA�
 
 ## 依赖项、配置和构建 {#dependencies-configuration-and-building}
 
-除了预期的Angular依赖关系之外，示例SPA还可以利用其他库来更有效地创建SPA。
+除了预期的Angular依赖关系之外，示例SPA还可以使用其他库来更有效地创建SPA。
 
 ### 依赖项 {#dependencies}
 
@@ -106,7 +106,7 @@ module.exports = {
 
 ### 正在生成 {#building}
 
-实际构建应用程序时会利用 [网络包](https://webpack.js.org/) 用于转换，并且使用aem-clientlib-generator自动创建客户端库。 因此，构建命令将类似于：
+实际构建应用程序使用 [网络包](https://webpack.js.org/) 用于转换，并且使用aem-clientlib-generator自动创建客户端库。 因此，构建命令将类似于：
 
 `"build": "ng build --build-optimizer=false && clientlib",`
 

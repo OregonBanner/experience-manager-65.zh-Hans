@@ -10,9 +10,9 @@ topic-tags: projects
 content-type: reference
 discoiquuid: fb354c72-debb-4fb6-9ccf-56ff5785c3ae
 exl-id: 62586c8e-dab4-4be9-a44a-2c072effe3c0
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '985'
+source-wordcount: '981'
 ht-degree: 23%
 
 ---
@@ -36,7 +36,7 @@ ht-degree: 23%
 
 ## 创建项目 {#creating-a-project}
 
-按照以下步骤创建新项目。
+按照以下步骤创建项目。
 
 1. 在 **项目** 控制台，点按或单击 **创建** 以打开 **创建项目** 向导。
 1. 选择模板并单击&#x200B;**下一步**。您可以了解有关标准项目模板的更多信息 [此处。](/help/sites-authoring/projects.md#project-templates)
@@ -76,7 +76,7 @@ ht-degree: 23%
 
    ![平铺V形](assets/project-tile-create-task.png)
 
-1. 像创建新拼贴时一样将项目添加到拼贴。 描述了项目拼贴 [此处。](/help/sites-authoring/projects.md#project-tiles)
+1. 将项目添加到拼贴，就像创建拼贴时一样。 描述了项目拼贴 [此处。](/help/sites-authoring/projects.md#project-tiles)
 
 ## 查看项目信息 {#viewing-project-info}
 

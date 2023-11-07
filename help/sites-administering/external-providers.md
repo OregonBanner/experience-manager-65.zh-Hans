@@ -7,7 +7,7 @@ topic-tags: integration
 content-type: reference
 docset: aem65
 exl-id: 9bf818f9-6e33-4557-b2e4-b0d4900f2a05
-source-git-commit: c7c32130a3257c14c98b52f9db31d80587d7993a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '446'
 ht-degree: 2%
@@ -55,7 +55,7 @@ _gaq.push(['_trackPageview']);
 >
 >Geometrixx-Outdoors演示站点已进行配置，因此在“页面属性”中提供的属性已附加到html源代码中(位于 `</html>` 结束标记) `js` 脚本。
 >
->如果您自己的 `/apps` 不继承默认页面组件( `/libs/foundation/components/page`)您（或您的开发人员）必须确保 `js` 包含脚本，例如，通过包含 `cq/cloudserviceconfigs/components/servicescomponents`，或使用类似的机制。
+>如果您自己的 `/apps` 不继承默认页面组件( `/libs/foundation/components/page`)您（或您的开发人员）必须确保 `js` 通过包含脚本来包含脚本，例如 `cq/cloudserviceconfigs/components/servicescomponents`，或使用类似的机制。
 >
 >没有这些，任何服务（通用、Analytics、Target等）都将无法正常工作。
 

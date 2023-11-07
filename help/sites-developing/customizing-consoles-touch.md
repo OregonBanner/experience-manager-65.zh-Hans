@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 61a4e196-bd53-4ef0-816b-c14401462457
 docset: aem65
 exl-id: 6e67f2b3-78b9-45f2-b496-61776b9fd9cc
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '667'
+source-wordcount: '669'
 ht-degree: 24%
 
 ---
@@ -158,6 +158,6 @@ AEM提供了各种机制让您能够自定义控制台(以及 [页面创作功�
 
 ### 筛选资源 {#filtering-resources}
 
-使用控制台时，常见的用例是用户必须从资源（例如，页面、组件、资源等）中进行选择的情况。 这可以采用列表形式，例如，作者必须从中选择项目。
+使用控制台时，常见的用例是用户必须从资源（例如，页面、组件、资源等）中进行选择的情况。 这可以采用列表形式，例如，作者必须从中选择一个项目。
 
 为了使列表保持合理的大小并且与用例相关，可以通过自定义谓词的形式实施筛选条件。请参阅 [本文](/help/sites-developing/customizing-page-authoring-touch.md#filtering-resources) 以了解详细信息。

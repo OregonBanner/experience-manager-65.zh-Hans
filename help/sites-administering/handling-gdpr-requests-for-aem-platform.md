@@ -3,18 +3,18 @@ title: 处理Adobe Experience Manager Foundation的GDPR请求
 description: 处理Adobe Experience Manager Foundation的GDPR请求
 contentOwner: sarchiz
 exl-id: 411d40ab-6be8-4658-87f6-74d2ac1a4913
-source-git-commit: 96e2e945012046e6eac878389b7332985221204e
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '436'
+source-wordcount: '438'
 ht-degree: 45%
 
 ---
 
-# 处理Adobe Experience Manager (AEM) Foundation的GDPR请求{#handling-gdpr-requests-for-the-aem-foundation}
+# 处理Adobe Experience Manager (AEM)基金会的GDPR请求{#handling-gdpr-requests-for-the-aem-foundation}
 
 >[!IMPORTANT]
 >
->以下部分使用GDPR作为示例，但所涵盖的详细信息适用于所有数据保护和隐私法规；例如GDPR、CCPA等。
+>以下部分使用GDPR作为示例，但包含的详细信息适用于所有数据保护和隐私法规；例如GDPR、CCPA等。
 
 ## AEM Foundation GDPR支持 {#aem-foundation-gdpr-support}
 
@@ -82,7 +82,7 @@ curl -u user:password  'http://localhost:4502/home/users/we-retail/DSCP-athB1NYL
 
    ![image2018-2-6_1-40-58](assets/image2018-2-6_1-40-58.png)
 
-   用户界面指示用户已停用，方法是灰显配置文件卡并添加锁定：
+   用户界面指示用户已通过灰显配置文件卡并向其添加锁定而被停用：
 
    ![disableduser](assets/disableduser.png)
 
@@ -98,7 +98,7 @@ curl -u user:password  'http://localhost:4502/home/users/we-retail/DSCP-athB1NYL
 
 1. 删除配置文件节点及其所有子节点。 配置文件节点有两种格式，具体取决于AEM版本：
 
-   1. 下的默认专用配置文件 `[!UICONTROL /profile]`
+   1. 下的默认个人资料 `[!UICONTROL /profile]`
    1. `[!UICONTROL /profiles]`，适用于使用AEM 6.5创建的新配置文件。
 
    ![image2018-2-6_2-0-4](assets/image2018-2-6_2-0-4.png)

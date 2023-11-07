@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 6ee3bd3b-51d1-462f-b12e-3cbe24898b85
 docset: aem65
 exl-id: f43e9491-aa8f-40af-9800-123695142559
-source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1953'
+source-wordcount: '1947'
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->本文档重点介绍如何使用开发表单 [基础组件](/help/sites-authoring/default-components-foundation.md) 在经典UI中。 Adobe建议利用新的 [核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) 和 [隐藏完成情况](/help/sites-developing/hide-conditions.md) 用于触屏UI中的表单开发。
+>本文档重点介绍如何使用开发表单 [基础组件](/help/sites-authoring/default-components-foundation.md) 在经典UI中。 Adobe建议使用新的 [核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) 和 [隐藏完成情况](/help/sites-developing/hide-conditions.md) 用于触屏UI中的表单开发。
 
 ## 预载表单值 {#preloading-form-values}
 
@@ -64,11 +64,11 @@ ht-degree: 0%
 
 #### 示例 — 预载具有多个值的下拉列表 {#example-preloading-a-dropdown-list-with-multiple-values}
 
-下拉列表可使用您选择的值范围进行配置。
+可以使用您选择的值范围配置下拉列表。
 
 此 **项目加载路径** 可用于从存储库中的文件夹访问列表，并将这些文件夹预加载到字段中：
 
-1. 创建新的sling文件夹( `sling:Folder`)例如， `/etc/designs/<myDesign>/formlistvalues`
+1. 创建sling文件夹( `sling:Folder`)例如， `/etc/designs/<myDesign>/formlistvalues`
 
 1. 添加新属性(例如， `myList`)类型为多值字符串( `String[]`)，以包含下拉项目的列表。 内容也可以使用脚本导入，例如通过JSP脚本或shell脚本中的cURL导入。
 
@@ -78,7 +78,7 @@ ht-degree: 0%
 
 * `AL=Alabama`
 * `AK=Alaska`
-* 以此类推。
+* 依此类推
 
 然后AEM将生成列表为：
 
@@ -208,7 +208,7 @@ An `addfields` 在写入表单起始HTML后，将立即调用脚本。 这允许
 
    * `sling:resourceType`  — 设置为 `foundation/components/form/constraint`
 
-   * `constraintMessage`  — 自定义消息，在提交表单时，如果字段无效（根据约束），将显示该消息
+   * `constraintMessage`  — 自定义消息，在提交表单时根据约束在字段无效时显示
 
    * 可选：
 

@@ -5,7 +5,7 @@ contentOwner: AG
 role: User, Admin
 feature: Developer Tools
 exl-id: de1c63c1-a0e5-470b-8d83-b594513a5dbd
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '687'
 ht-degree: 13%
@@ -153,7 +153,7 @@ Geometrixx中包含以下示例页面：
        String name = "dam:sampleMetadata";
        boolean readOnly = false;
    
-       // If the form page is requested for an asset loadResource will be the asset.
+       // If the form page is requested for an asset loadResource is the asset.
        Resource loadResource = (Resource) request.getAttribute("cq.form.loadresource");
    
        if (loadResource != null) {

@@ -1,17 +1,15 @@
 ---
 title: 与Adobe Campaign组件集成
 description: 与Adobe Campaign集成时，您拥有的组件可用于处理新闻稿和表单。
-uuid: a858d5ca-aa6e-4bde-92db-a6dcd8b48ae6
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: personalization
-discoiquuid: 9da34dab-7e89-4127-ab26-532687746b2a
 docset: aem65
 exl-id: d1132fcd-e6a0-44a2-8753-d250f68fbd78
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2836'
+source-wordcount: '2835'
 ht-degree: 4%
 
 ---
@@ -24,7 +22,7 @@ ht-degree: 4%
 >
 >已弃用AEM电子邮件组件。 由于电子邮件将内容和样式融合在一起，因此由AEM提供的现成可用电子邮件组件对于客户的重用受到限制，因为需要将自定义样式实施到项目所需的任何组件中。
 >
->电子邮件组件可以在项目级别实施，已弃用的AEM电子邮件组件说明了如何实现这一点。 但是，这些已弃用的组件不应在项目中使用。
+>电子邮件组件可以在项目级别实施，已弃用的AEM电子邮件组件说明了如何实现这一点。 但是，请勿在项目中使用这些已弃用的组件。
 
 ## Adobe Campaign新闻稿组件 {#adobe-campaign-newsletter-components}
 
@@ -216,7 +214,7 @@ Dynamic Media Classic (Scene7)图像模板是分层的图像文件，其中的�
 * **图像属性** (**高级图像属性**)用于指定以下内容：
 
    * **标题**
-块的标题；将显示在mouseover中。
+块的标题；由mouseover显示。
 
    * **替换文本**
 图像无法显示时要显示的替换文本。

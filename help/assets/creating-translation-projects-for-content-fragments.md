@@ -8,9 +8,9 @@ content-type: reference
 feature: Content Fragments
 role: User, Admin
 exl-id: 19bb58da-8220-404e-bddb-34be94a3a7d7
-source-git-commit: 3400df1ecd545aa0fb0e3fcdcc24f629ce4c99ba
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '980'
+source-wordcount: '975'
 ht-degree: 0%
 
 ---
@@ -36,14 +36,14 @@ ht-degree: 0%
 创建和翻译工作流包含以下选项。 与每个选项关联的程序步骤与资产相应选项关联的步骤类似。
 
 * 仅创建结构：有关过程步骤，请参见 [仅为资产创建结构](translation-projects.md#create-structure-only).
-* 创建新翻译项目：有关过程步骤，请参阅 [为资产创建新的翻译项目](translation-projects.md#create-a-new-translation-project).
+* 创建翻译项目：有关过程步骤，请参阅 [为资产创建翻译项目](translation-projects.md#create-a-new-translation-project).
 * 添加到现有翻译项目：有关过程步骤，请参阅 [添加到资产的现有翻译项目](translation-projects.md#add-to-existing-translation-project).
 
 ## 更新语言副本工作流 {#update-language-copies-workflow}
 
 更新语言副本工作流包含以下选项。 与每个选项关联的程序步骤与资产相应选项关联的步骤类似。
 
-* 创建新翻译项目：有关过程步骤，请参阅 [为资产创建新的翻译项目](translation-projects.md#create-a-new-translation-project) （更新工作流）。
+* 创建翻译项目：有关过程步骤，请参阅 [为资产创建翻译项目](translation-projects.md#create-a-new-translation-project) （更新工作流）。
 * 添加到现有翻译项目：有关过程步骤，请参阅 [添加到资产的现有翻译项目](translation-projects.md#add-to-existing-translation-project) （更新工作流）。
 
 您还可以创建片段的临时语言副本，其方式与创建资产的临时副本类似。 有关详细信息，请参阅 [创建资产的临时语言副本](translation-projects.md#creating-temporary-language-copies).

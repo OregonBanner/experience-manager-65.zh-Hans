@@ -2,9 +2,9 @@
 title: 自定义 HTTP 标头
 description: 了解如何在Adobe Experience Manager Commerce中配置自定义HTTP标头。
 exl-id: 834aadac-c3be-4e7a-a3cb-349608810b40
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '276'
+source-wordcount: '273'
 ht-degree: 5%
 
 ---
@@ -26,11 +26,11 @@ ht-degree: 5%
 
 您可以在项目的“Cloud Service配置”页中配置HTTP标头的值：
 
-1. 转到“工具” — >“Cloud Services” — >“CIF配置”中的“Cloud Service配置”页面
-1. 打开现有配置或创建新配置
+1. 转到“工具”>“Cloud Services”>“CIF配置”中的“Cloud Service配置”页面。
+1. 打开现有配置或创建配置。
 1. 转到“高级”选项卡，然后找到“自定义HTTP标头”多字段。 您可以选择之前定义的题头并为它们分配值。
 
-使用上述Cloud Service配置的组件将在每个GraphQL请求中发送这些HTTP标头。
+使用上述Cloud Service配置的组件随每个GraphQL请求发送这些HTTP标头。
 
 ## 限制 {#restrictions}
 

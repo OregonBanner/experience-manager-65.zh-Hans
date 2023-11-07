@@ -3,7 +3,7 @@ title: 使用布局模式调整自适应表单的组件大小
 description: 使用在布局模式下可用的响应式网格定义组件的位置
 feature: Adaptive Forms
 exl-id: 5cf76cb1-c92c-4aed-9945-37494fef2d29
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '1124'
 ht-degree: 7%
@@ -29,7 +29,7 @@ ht-degree: 7%
 选择 **布局** 从自适应表单创作界面顶部显示的下拉列表中， **预览** 选项。 该表单将以布局模式显示。
 
 1. 登录到AEM创作实例并导航到 **Adobe Experience Manager** > **Forms** > **Forms和文档**.
-1. 创建新或打开现有 [自适应表单](../../forms/using/creating-adaptive-form.md).
+1. 创建 [自适应表单](../../forms/using/creating-adaptive-form.md) 或者打开一个现有的存储库。
 1. 选择 **布局** 从顶部显示的下拉列表中，选择 **预览** 选项。 该表单将以布局模式显示。
 
    ![布局模式](assets/layout_mode_ic_new.png)

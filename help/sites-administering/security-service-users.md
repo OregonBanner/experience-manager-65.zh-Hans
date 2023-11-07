@@ -7,7 +7,7 @@ topic-tags: Security
 content-type: reference
 exl-id: ccd8577b-3bbf-40ba-9696-474545f07b84
 feature: Security
-source-git-commit: f317783f3320e3987c7468aa0b2471e525b0387a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '1797'
 ht-degree: 0%
@@ -43,7 +43,7 @@ ht-degree: 0%
 
 * **优化内容结构**
 
-   * 将其移动到其他位置，例如访问控制与可用的请求会话匹配的位置；
+   * 将其移动到其他位置，例如，访问控制与可用的请求会话相匹配；
    * 更改内容粒度；
 
 * **重构代码以使其成为适当的服务**

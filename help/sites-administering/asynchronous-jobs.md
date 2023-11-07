@@ -2,10 +2,10 @@
 title: 异步作业
 description: Adobe Experience Manager 通过异步完成某些资源密集型任务来优化性能。
 exl-id: 4af1bcfe-9f2e-44a4-8666-881f2dccc3bc
-source-git-commit: cc63291c32f7a234398ebe8bf67ab53aaf8fa90f
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '800'
-ht-degree: 97%
+source-wordcount: '798'
+ht-degree: 91%
 
 ---
 
@@ -55,7 +55,7 @@ ht-degree: 97%
 
    ![stop_icon](assets/async-stop-icon.png)
 
-1. 要查看其他详细信息（例如，说明和日志），请选择操作，然后单击工具栏中的&#x200B;**[!UICONTROL 打开]**。
+1. 要查看其他详细信息（例如，说明和日志），请选择操作并单击 **[!UICONTROL 打开]** 工具栏中。
 
    ![open_icon](assets/async-open-icon.png)
 
@@ -88,7 +88,7 @@ AEM 每天 01:00 运行清除作业，以删除已完成的已超过一天的异
 
 ## 配置异步处理 {#configuring-asynchronous-processing}
 
-您可以为 AEM 配置资产、页面或引用的阈值数，以异步处理特定操作，以及切换处理作业时的电子邮件通知。
+您可以为AEM配置资源、页面或引用的阈值数，以异步处理特定操作，并切换处理作业时的电子邮件通知。
 
 ### 配置异步资产删除操作 {#configuring-synchronous-delete-operations}
 

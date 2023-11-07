@@ -12,9 +12,9 @@ topic-tags: operations
 discoiquuid: 2ad227de-68a8-446f-8c4f-a33a6f95bec8
 role: Developer
 exl-id: b3c19c82-e26f-4dc8-b846-6aec705cee08
-source-git-commit: 10227bcfcfd5a9b0f126fee74dce6ec7842f5e95
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2163'
+source-wordcount: '2162'
 ht-degree: 0%
 
 ---
@@ -238,7 +238,7 @@ PDF通过调用 `invokeDDX` 操作。 传递动态创建的DDX文档。 Assemble
 
    * 创建 `System.IO.MemoryStream` 对象。
    * 填充 `MemoryStream` 对象的DDX文档 `XmlElement` 表示DDX文档的对象。 调用 `XmlElement` 对象的 `Save` 方法并传递 `MemoryStream` 对象。
-   * 创建字节数组，并使用位于以下位置的数据填充该字节数组： `MemoryStream` 对象。 以下代码显示此应用程序逻辑：
+   * 创建字节数组，并在其中填充数据 `MemoryStream` 对象。 以下代码显示此应用程序逻辑：
 
      ` int bufLen = Convert.ToInt32(stream.Length);  byte[] byteArray = new byte[bufLen];  stream.Position = 0;  int count = stream.Read(byteArray, 0, bufLen);`
 

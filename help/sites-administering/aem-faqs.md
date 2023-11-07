@@ -2,9 +2,9 @@
 title: AEM常见问题解答
 description: 使用这些常见问题解答来了解、配置和解决AEM中的常见工作流或问题。
 exl-id: 182c464a-ff7a-467b-9eb5-8ffac335a87a
-source-git-commit: f7bfbfab9fb9ec00304f2889735c70be924cc217
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1096'
+source-wordcount: '1085'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 ### 如何配置无二进制分发？ {#how-do-i-configure-binary-less-distribution}
 
-支持在共享数据存储上进行无二进制分发，并且涉及利用基于保险库的分发包导出程序(工厂PID： `org.apache.sling.distribution.serialization.impl.vlt.VaultDistributionPackageBuilderFactory`)包生成器。
+支持在共享数据存储上进行无二进制分发，并且涉及使用基于保险库的分发包导出程序(工厂PID： `org.apache.sling.distribution.serialization.impl.vlt.VaultDistributionPackageBuilderFactory`)包生成器。
 
 启用无二进制模式后，分发的内容包包含对二进制文件的引用，而不是实际的二进制文件。
 
@@ -44,7 +44,7 @@ ht-degree: 0%
 
 例如，创建语言根于 `/content/geometrixx` 名称为 `fr_LU` (和标题为法语（卢森堡）)。 随后，从“引用”面板创建页面的语言副本并导航到 `Create structure only` 中的选项 `Create & Translate`. 最后，创建翻译项目，然后将语言副本添加到翻译作业。
 
-有关详细信息，请参阅以下其他资源：
+有关详细信息，请参阅下面的其他资源：
 
 * [准备内容以进行翻译](/help/sites-administering/tc-prep.md)
 * [管理翻译项目](/help/sites-administering/tc-manage.md)
@@ -66,7 +66,7 @@ Adobe Experience Manager (AEM) 6.4附带SSL向导，并提供用于配置Jetty�
 
 要了解如何从React应用程序使用AEM内容服务，请参阅 [AEM Content Services入门](https://helpx.adobe.com/experience-manager/kt/sites/using/content-services-tutorial-use.html) 教程。
 
-此外，如果开发人员希望导出组件树，他们还可以实施 `ComponentExporter` 和 `ContainerExporter` 界面以及使用 `ModelFactory` 对子元件进行迭代并返回其模型表示。 请参阅以下资源：
+此外，如果开发人员希望导出组件树，他们还可以实施 `ComponentExporter` 和 `ContainerExporter` 界面和使用 `ModelFactory` 对子元件进行迭代并返回其模型表示。 请参阅以下资源：
 
 [1] [Adobe-Marketing-Cloud/aem-core-wcm-components](https://github.com/Adobe-Marketing-Cloud/aem-core-wcm-components/blob/master/bundles/core/src/main/java/com/adobe/cq/wcm/core/components/internal/models/v1/PageImpl.java#L245)
 
@@ -107,13 +107,13 @@ AEM提供了各种机制，使您能够自定义创作实例的控制台和页�
 
 #### 基于CoralUI 2的组件与基于CoralUI 3的组件有何区别？ {#what-is-the-difference-between-coralui-and-coralui-based-components}
 
-为Coral3创建了一组Granite UI Foundation的新Sling组件，该组件位于 [/libs/granite/ui/components/coral/foundation.](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/server.html) 其中一组用于基于CoralUI 2的组件，另一组用于基于CoralUI 3的组件。 新集将不仅仅是旧集的复制粘贴，而是将被清理（例如，精简、删除已弃用的功能）。 因此，建议页面仅使用基于CoralUI 3或基于CoralUI 2的集。
+为Coral3创建了一组Granite UI Foundation的新Sling组件，该组件位于 [/libs/granite/ui/components/coral/foundation.](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/server.html) 其中一组用于基于CoralUI 2的组件，另一组用于基于CoralUI 3的组件。 新集合将不仅仅是旧集合的复制粘贴，而是将被清理（例如，精简，删除已弃用的功能）。 因此，建议页面仅使用基于CoralUI 3或基于CoralUI 2的集。
 
-欲了解详情，请参阅 [基于CoralUI 3的迁移指南](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/components/legacy/coral2/migration.html).
+要详细了解，请参阅 [基于CoralUI 3的迁移指南](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/components/legacy/coral2/migration.html).
 
 #### 如何在AEM Assets中自定义搜索组件？ {#how-to-customize-the-search-component-in-aem-assets}
 
-要了解搜索提升/排名以及进一步实施信息，请参阅 [简单搜索实施指南](https://helpx.adobe.com/experience-manager/kt/sites/using/search-tutorial-develop.html).
+要了解搜索提升/排名以及进一步的实施信息，请参阅 [简单搜索实施指南](https://helpx.adobe.com/experience-manager/kt/sites/using/search-tutorial-develop.html).
 
 简单搜索实现来自2017 Summit实验室AEM Search Demystified的材料。
 

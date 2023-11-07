@@ -1,18 +1,14 @@
 ---
 title: 管理订阅
-seo-title: Managing Subscriptions
 description: 借助在AEM网页上使用的表单组件，可以要求用户订阅电子邮件服务提供商的邮件列表。 要准备带有注册表单的AEM页面以订阅电子邮件服务邮件列表，必须将相应的服务配置应用于潜在订阅者将访问的AEM页面。
-seo-description: Users can be asked to subscribe to Email Service Provider's mailing lists with the help of the Form component used on an AEM web page. To prepare an AEM page with a sign-up form for subscription to your e-mail service mailing lists, you must apply the corresponding service configuration to the AEM page that the potential subscriber will visit.
-uuid: b2578a3d-dba1-4114-b21a-5f34c0cccc5a
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
-discoiquuid: 295cb0a6-29db-42aa-824e-9141b37b5086
 exl-id: add05d22-3a11-49e9-a554-2315962552d5
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '914'
+source-wordcount: '913'
 ht-degree: 0%
 
 ---
@@ -22,7 +18,7 @@ ht-degree: 0%
 >[!NOTE]
 >
 >Adobe不打算进一步增强此功能（管理潜在客户和列表）。
->建议利用 [Adobe Campaign及其AEM集成](/help/sites-administering/campaign.md).
+>建议使用 [Adobe Campaign及其AEM集成](/help/sites-administering/campaign.md).
 
 可要求用户订阅 **电子邮件服务提供者的** 邮件列表在 **表单** 在AEM网页上使用的组件。 要准备带有注册表单的AEM页面以订阅电子邮件服务邮件列表，必须将相应的服务配置应用于潜在订阅者将访问的AEM页面。
 
@@ -72,7 +68,7 @@ ht-degree: 0%
 要使电子邮件服务通过发布实例上的注册表单进行订阅和取消订阅，您需要执行以下步骤：
 
 1. 在创作实例上，导航到包管理器。
-1. 创建新资源包。 将筛选器设置为 `/etc/key`.
+1. 创建包。 将筛选器设置为 `/etc/key`.
 1. 生成并下载包。
 1. 导航到发布实例上的包管理器，并上传此包。
 1. 导航到发布osgi控制台，然后重新启动名为的捆绑包 **AdobeGranite加密支持**.

@@ -7,9 +7,9 @@ topic-tags: introduction
 content-type: reference
 docset: aem65
 exl-id: 408ac30c-60ab-4d6c-855c-d544af8d5cf9
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2856'
+source-wordcount: '2853'
 ht-degree: 1%
 
 ---
@@ -122,7 +122,7 @@ Web客户端必须具有权限才能访问 `cq:ClientLibraryFolder` 节点。 �
 
 ### 覆盖/lib中的库 {#overriding-libraries-in-lib}
 
-位于下面的客户端库文件夹 `/apps` 优先于位置相似的同名文件夹 `/libs`. 例如， `/apps/cq/ui/widgets` 优先于 `/libs/cq/ui/widgets`. 如果这些库属于同一类别，则使用下面的库 `/apps` 已使用。
+位于下面的客户端库文件夹 `/apps` 优先于中类似的同名文件夹 `/libs`. 例如， `/apps/cq/ui/widgets` 优先于 `/libs/cq/ui/widgets`. 如果这些库属于同一类别，则使用下面的库 `/apps` 已使用。
 
 ### 查找客户端库文件夹并使用代理客户端库Servlet {#locating-a-client-library-folder-and-using-the-proxy-client-libraries-servlet}
 
@@ -134,7 +134,7 @@ Web客户端必须具有权限才能访问 `cq:ClientLibraryFolder` 节点。 �
 
 >[!NOTE]
 >
->为了更好地将代码与内容和配置分离，建议在下找到客户端库 `/apps` 并通过以下方式揭发他们 `/etc.clientlibs` 利用 `allowProxy` 属性。
+>为了更好地将代码与内容和配置分离，建议在下找到客户端库 `/apps` 并通过以下方式揭发他们 `/etc.clientlibs` 通过使用 `allowProxy` 属性。
 
 对于下的客户端库 `/apps` 要访问，将使用代理servelt。 仍会在客户端库文件夹上强制执行ACL，但Servlet允许通过读取内容 `/etc.clientlibs/` 如果 `allowProxy` 属性设置为 `true`.
 
@@ -197,7 +197,7 @@ Web客户端必须具有权限才能访问 `cq:ClientLibraryFolder` 节点。 �
 
 ### 链接到依赖项 {#linking-to-dependencies}
 
-当客户端库文件夹中的代码引用其他库时，将其他库标识为依赖项。 在JSP中， `ui:includeClientLib` 引用您的客户端库文件夹的标记会导致HTML代码包含指向生成的库文件的链接以及依赖项。
+当客户端库文件夹中的代码引用其他库时，将其他库标识为依赖项。 在JSP中， `ui:includeClientLib` 引用您的客户端库文件夹的标记会导致HTML代码包含指向生成的库文件和依赖项的链接。
 
 依赖项必须是另一个 `cq:ClientLibraryFolder`. 要识别依赖关系，请将属性添加到 `cq:ClientLibraryFolder` 节点具有以下属性：
 

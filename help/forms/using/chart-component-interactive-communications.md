@@ -11,9 +11,9 @@ discoiquuid: e21714ad-d445-4aff-b0db-d577061e0907
 docset: aem65
 feature: Interactive Communication
 exl-id: 0f877a15-a17f-427f-8d89-62ada4d20918
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2612'
+source-wordcount: '2608'
 ht-degree: 2%
 
 ---
@@ -161,7 +161,7 @@ ht-degree: 2%
    <td><p>除了常见配置外，还提供以下特定于图表的配置：</p>
     <ul>
      <li><strong>显示图例： </strong>启用时显示饼图或圆环图的图例。</li>
-     <li><strong>图例位置： </strong>指定图例相对于图表的位置。 可用的选项有“右”、“左”、“上”和“下”。 建议在打印渠道中使用右侧图例。</li>
+     <li><strong>图例位置： </strong>指定图例相对于图表的位置。 可用的选项有“右”、“左”、“上”和“下”。 在打印渠道中使用右侧图例。</li>
      <li><strong>内径</strong>：可用于圆环图，以指定图表中内圆的半径（以像素为单位）。</li>
      <li><strong>线条颜色</strong>：可用于折线图、折线图、点图和面积图，以指定图表中折线的颜色。</li>
      <li><strong>点颜色</strong>：适用于点图、折线图和点图，用于指定图表中点的颜色。<br /> </li>

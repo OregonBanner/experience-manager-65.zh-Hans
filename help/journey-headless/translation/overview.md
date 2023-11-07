@@ -2,10 +2,10 @@
 title: AEM Headless 翻译历程
 description: 从这里开始，通过使用 AEM 强大的翻译工具来翻译您的 Headless 内容，实施引导式历程。
 exl-id: 1a9d4c88-b676-4168-a9ef-7d218b39129f
-source-git-commit: f627bc2b58578df1b4ff6c95d87f0c64daafa1c7
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1055'
-ht-degree: 96%
+source-wordcount: '1051'
+ht-degree: 92%
 
 ---
 
@@ -53,7 +53,7 @@ Headless 实施放弃了传统的全栈解决方案中的页面和组件管理�
 | 管理员 | 管理 AEM 的基本设置和配置 | 翻译专家与管理员共同进行翻译所需的配置更改，例如安装翻译连接器。 |
 | 内容架构师 | 分析必须以 Headless 方式交付的数据的要求并定义此数据的结构 | 翻译专家与内容架构师共同定义内容的编排以便轻松翻译。 |
 
-虽然此历程中的信息对所有角色都很有用，但一些信息可能对特定角色来说是多余的。请继续关注[即将推出的涵盖其他角色的历程。](/help/journey-documentation/home.md#journeys)
+此历程中的信息对所有角色都很有用，但一些信息可能对特定角色来说是多余的。 请继续关注[即将推出的涵盖其他角色的历程。](/help/journey-documentation/home.md#journeys)
 
 ## Headless 翻译历程 {#the-journey}
 
@@ -79,7 +79,7 @@ Headless 实施放弃了传统的全栈解决方案中的页面和组件管理�
 
 文档历程将提供叙述来指导您完成复杂、相互关联的流程和使用相关功能，从而向您说明 AEM 如何解决业务问题。历程说明了多项功能如何协作以满足单一业务需求。
 
-因为此类历程被设计成独立的历程。不过，其中的许多历程可以相互关联。查看这些附加历程，详细了解 AEM 的强大功能如何协作。
+因此，旅程旨在自立。 但是，其中多个可以相互关联。 查看这些附加历程，详细了解 AEM 的强大功能如何协作。
 
 * [Headless 创作历程](/help/journey-headless/author/overview.md) – 从这里开始，引导您了解 AEM 强大而灵活的 Headless 特性、它们的功能以及如何在您的第一个 Headless 项目中为内容建模。
 * [Headless架构师历程](/help/journey-headless/architect/overview.md)  — 从这里开始了解Adobe Experience Manager强大而灵活的Headless功能，以及如何对项目内容进行建模。

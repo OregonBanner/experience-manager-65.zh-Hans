@@ -6,9 +6,9 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: d2dd381d-a7d2-4fec-a8ba-7ca037fd9dc1
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2072'
+source-wordcount: '2065'
 ht-degree: 0%
 
 ---
@@ -153,7 +153,7 @@ log-bin=logname
 
 内容存储根目录的默认位置为 `[aem-forms root]/lccs_data`.
 
-备份以下位于内容存储根目录中的目录：
+备份内容存储根目录中的以下目录：
 
 /audit.contentstore
 
@@ -173,7 +173,7 @@ log-bin=logname
 
 **索引根目录：** 在群集中的每个节点上创建的目录，其路径和目录名称始终相同
 
-内容存储根目录的默认位置为 `[GDS root]/lccs_data`，其中 `[GDS root]` 是中描述的位置 [GDS位置](files-back-recover.md#gds-location). 备份以下位于内容存储根目录中的目录：
+内容存储根目录的默认位置为 `[GDS root]/lccs_data`，其中 `[GDS root]` 是中描述的位置 [GDS位置](files-back-recover.md#gds-location). 备份内容存储根目录中的以下目录：
 
 /audit.contentstore
 

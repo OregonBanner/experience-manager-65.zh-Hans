@@ -1,7 +1,7 @@
 ---
 title: 签名服务Java API快速启动(SOAP)
 seo-title: Signature Service Java API QuickStart(SOAP)
-description: 使用签名服务向PDF文档添加签名字段、检索签名字段名称、修改签名字段、对PDF文档进行数字签名、对基于XFA的表单进行数字签名、认证PDF文档、验证数字签名、验证多个数字签名以及移除数字签名。
+description: 使用签名服务向PDF文档添加签名字段、检索签名字段名称、修改签名字段、对PDF文档进行数字签名、对基于XFA的表单进行数字签名、验证PDF文档、验证数字签名、验证多个数字签名以及移除数字签名。
 seo-description: Use the Signature service to add a signature field to a PDF document, retrieve signature field names, modify a signature field, digitally sign a PDF document, digitally sign an XFA-based form, certify a PDF document, verify a digital signature, verify multiple digital signatures, and remove a digital signature.
 uuid: ae6adf23-b119-45f6-bd57-73d8d9ca8ecb
 contentOwner: admin
@@ -11,9 +11,9 @@ topic-tags: develop
 discoiquuid: 07fffbd5-5430-4abc-b532-0840ecc7b1b0
 role: Developer
 exl-id: 34069505-a6cf-4540-932b-604f81823178
-source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '872'
+source-wordcount: '868'
 ht-degree: 0%
 
 ---
@@ -46,11 +46,11 @@ AEM Forms JEE操作可以使用AEM Forms强类型API执行，并且连接模式�
 
 >[!NOTE]
 >
->位于“使用AEM Forms编程”中的快速入门指南基于部署在JBoss Application Server和Microsoft Windows操作系统上的Forms服务器。 但是，如果您使用的是其他操作系统（如UNIX），请将特定于Windows的路径替换为适用的操作系统支持的路径。 同样，如果您使用的是其他J2EE应用程序服务器，请确保指定有效的连接属性。 参见 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>《使用AEM Forms进行编程快速入门》基于在JBoss Application Server和Microsoft Windows操作系统上部署的Forms服务器。 但是，如果您使用的是其他操作系统（如UNIX），请将特定于Windows的路径替换为适用的操作系统支持的路径。 同样，如果您使用的是其他J2EE应用程序服务器，请确保指定有效的连接属性。 请参阅 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
 ## 快速入门（SOAP模式）：使用Java API向PDF文档添加签名字段 {#quick-start-soap-mode-adding-a-signature-field-to-a-pdf-document-using-the-java-api}
 
-以下Java代码示例添加了一个名为的签名字段 *签名字段1* 基于名为的PDF文件的PDF文档&#x200B;*Loan.pdf*. 包含新签名字段的PDF文档将另存为名为的PDF文件 *LoanSig.pdf*. (请参阅 [添加签名字段](/help/forms/developing/digitally-signing-certifying-documents.md#adding-signature-fields).)
+以下Java代码示例添加了一个名为的签名字段 *签名字段1* 基于名为的PDF文件的PDF文档&#x200B;*Loan.pdf*. 包含新签名字段的PDF文档将保存为名为的PDF文件 *LoanSig.pdf*. (请参阅 [添加签名字段](/help/forms/developing/digitally-signing-certifying-documents.md#adding-signature-fields).)
 
 ```java
  /*
@@ -76,16 +76,16 @@ AEM Forms JEE操作可以使用AEM Forms强类型API执行，并且连接模式�
      * 18. xbean.jar (required for SOAP mode)
      * 19. xercesImpl.jar (required for SOAP mode)
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
-     * The adobe-utilities.jar file is located in the following path:
+     * The adobe-utilities.jar file is in the following path:
      * <install directory>/sdk/client-libs/jboss
      *
-     * The jboss-client.jar file is located in the following path:
+     * The jboss-client.jar file is in the following path:
      * <install directory>/jboss/bin/client
      *
-     * SOAP required JAR files are located in the following path:
+     * SOAP required JAR files are in the following path:
      * <install directory>/sdk/client-libs/thirdparty
      *
      * If you want to invoke a remote forms server instance and there is a
@@ -166,7 +166,7 @@ AEM Forms JEE操作可以使用AEM Forms强类型API执行，并且连接模式�
 
 ## 快速入门（SOAP模式）：使用Java API检索签名字段名称 {#quick-start-soap-mode-retrieving-signature-field-names-using-the-java-api}
 
-以下Java代码示例检索位于名为的PDF文档中的签名字段的名称 *LoanSig.pdf*. (请参阅 [正在检索签名字段名称](/help/forms/developing/digitally-signing-certifying-documents.md#retrieving-signature-field-names).)
+以下Java代码示例检索名为的PDF文档中签名字段的名称 *LoanSig.pdf*. (请参阅 [正在检索签名字段名称](/help/forms/developing/digitally-signing-certifying-documents.md#retrieving-signature-field-names).)
 
 ```java
  /*
@@ -195,16 +195,16 @@ AEM Forms JEE操作可以使用AEM Forms强类型API执行，并且连接模式�
      * 20. xbean.jar (required for SOAP mode)
      * 21. xercesImpl.jar (required for SOAP mode)
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
-     * The adobe-utilities.jar file is located in the following path:
+     * The adobe-utilities.jar file is in the following path:
      * <install directory>/sdk/client-libs/jboss
      *
-     * The jboss-client.jar file is located in the following path:
+     * The jboss-client.jar file is in the following path:
      * <install directory>/jboss/bin/client
      *
-     * SOAP required JAR files are located in the following path:
+     * SOAP required JAR files are in the following path:
      * <install directory>/sdk/client-libs/thirdparty
      *
      * If you want to invoke a remote forms server instance and there is a
@@ -272,7 +272,7 @@ AEM Forms JEE操作可以使用AEM Forms强类型API执行，并且连接模式�
 
 ## 快速入门（SOAP模式）：使用Java API修改签名字段 {#quick-start-soap-mode-modifying-a-signature-field-using-the-java-api}
 
-以下Java代码示例修改名为SignatureField1的签名字段，方法是在将签名应用于签名字段时锁定表单中的所有字段，并确保不允许任何更改。 签名服务返回包含修改后的签名字段的PDF文档后，PDF文档将另存为名为LoanSig.pdf的PDF文件。 (此示例将覆盖传递到Signature服务的PDF文件。) (请参阅 [修改签名字段](/help/forms/developing/digitally-signing-certifying-documents.md#modifying-signature-fields).)
+以下Java代码示例修改名为SignatureField1的签名字段，方法是在签名应用于签名字段时锁定表单中的所有字段，并确保不允许任何更改。 签名服务返回包含修改后的签名字段的PDF文档后，PDF文档将另存为名为LoanSig.pdf的PDF文件。 (此示例将覆盖传递给Signature服务的PDF文件。) (请参阅 [修改签名字段](/help/forms/developing/digitally-signing-certifying-documents.md#modifying-signature-fields).)
 
 ```java
  /*
@@ -301,16 +301,16 @@ AEM Forms JEE操作可以使用AEM Forms强类型API执行，并且连接模式�
      * 20. xbean.jar (required for SOAP mode)
      * 21. xercesImpl.jar (required for SOAP mode)
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
-     * The adobe-utilities.jar file is located in the following path:
+     * The adobe-utilities.jar file is in the following path:
      * <install directory>/sdk/client-libs/jboss
      *
-     * The jboss-client.jar file is located in the following path:
+     * The jboss-client.jar file is in the following path:
      * <install directory>/jboss/bin/client
      *
-     * SOAP required JAR files are located in the following path:
+     * SOAP required JAR files are in the following path:
      * <install directory>/sdk/client-libs/thirdparty
      *
      * If you want to invoke a remote forms server instance and there is a
@@ -400,7 +400,7 @@ AEM Forms JEE操作可以使用AEM Forms强类型API执行，并且连接模式�
 
 ## 快速入门（SOAP模式）：使用Java API对PDF文档进行数字签名 {#quick-start-soap-mode-digitally-signing-a-pdf-document-using-the-java-api}
 
-以下Java代码示例对基于PDF文件的PDF文档进行数字签名 *LoanSig.pdf*. 为安全凭据指定的别名是安全的，将执行吊销检查。 由于未指定CRL或OCSP服务器信息，因此服务器信息是从用于对PDF文档进行数字签名的证书中获取的。 已签署文档另存为名为的PDF文件 *LoanSigned.pdf*. (请参阅 [对PDF文档进行数字签名](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-pdf-documents).)
+以下Java代码示例对基于PDF文件（名为）的PDF文档进行数字签名 *LoanSig.pdf*. 为安全凭据指定的别名是安全的，将执行吊销检查。 因为没有指定CRL或OCSP服务器信息，所以从用于对PDF文档进行数字签名的证书中获取服务器信息。 已签署文档将保存为名为的PDF文件 *LoanSigned.pdf*. (请参阅 [对PDF文档进行数字签名](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-pdf-documents).)
 
 ```java
  /*
@@ -429,16 +429,16 @@ AEM Forms JEE操作可以使用AEM Forms强类型API执行，并且连接模式�
      * 20. xbean.jar (required for SOAP mode)
      * 21. xercesImpl.jar (required for SOAP mode)
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
-     * The adobe-utilities.jar file is located in the following path:
+     * The adobe-utilities.jar file is in the following path:
      * <install directory>/sdk/client-libs/jboss
      *
-     * The jboss-client.jar file is located in the following path:
+     * The jboss-client.jar file is in the following path:
      * <install directory>/jboss/bin/client
      *
-     * SOAP required JAR files are located in the following path:
+     * SOAP required JAR files are in the following path:
      * <install directory>/sdk/client-libs/thirdparty
      *
      * If you want to invoke a remote forms server instance and there is a
@@ -578,16 +578,16 @@ AEM Forms JEE操作可以使用AEM Forms强类型API执行，并且连接模式�
      * 20. xbean.jar (required for SOAP mode)
      * 21. xercesImpl.jar (required for SOAP mode)
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
-     * The adobe-utilities.jar file is located in the following path:
+     * The adobe-utilities.jar file is in the following path:
      * <install directory>/sdk/client-libs/jboss
      *
-     * The jboss-client.jar file is located in the following path:
+     * The jboss-client.jar file is in the following path:
      * <install directory>/jboss/bin/client
      *
-     * SOAP required JAR files are located in the following path:
+     * SOAP required JAR files are in the following path:
      * <install directory>/sdk/client-libs/thirdparty
      *
      * If you want to invoke a remote forms server instance and there is a
@@ -761,7 +761,7 @@ AEM Forms JEE操作可以使用AEM Forms强类型API执行，并且连接模式�
 
 ## 快速入门（SOAP模式）：使用Java API认证PDF文档 {#quick-start-soap-mode-certifying-a-pdf-document-using-the-java-api}
 
-以下Java代码示例验证了基于名为的PDF文件的PDF文档 *LoanSig.pdf*. 为安全凭据指定的别名是安全的，不会执行吊销检查。 已验证文档将另存为名为的PDF文件 *LoanCertified.pdf*. (请参阅 [认证PDF文档](/help/forms/developing/digitally-signing-certifying-documents.md#certifying-pdf-documents).)
+以下Java代码示例验证了一个基于名为的PDF文件的PDF文档 *LoanSig.pdf*. 为安全凭据指定的别名是安全的，不会执行吊销检查。 已验证的文档将另存为名为的PDF文件 *LoanCertified.pdf*. (请参阅 [认证PDF文档](/help/forms/developing/digitally-signing-certifying-documents.md#certifying-pdf-documents).)
 
 ```java
  /*
@@ -790,16 +790,16 @@ AEM Forms JEE操作可以使用AEM Forms强类型API执行，并且连接模式�
      * 20. xbean.jar (required for SOAP mode)
      * 21. xercesImpl.jar (required for SOAP mode)
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
-     * The adobe-utilities.jar file is located in the following path:
+     * The adobe-utilities.jar file is in the following path:
      * <install directory>/sdk/client-libs/jboss
      *
-     * The jboss-client.jar file is located in the following path:
+     * The jboss-client.jar file is in the following path:
      * <install directory>/jboss/bin/client
      *
-     * SOAP required JAR files are located in the following path:
+     * SOAP required JAR files are in the following path:
      * <install directory>/sdk/client-libs/thirdparty
      *
      * If you want to invoke a remote forms server instance and there is a
@@ -910,7 +910,7 @@ AEM Forms JEE操作可以使用AEM Forms强类型API执行，并且连接模式�
 
 ## 快速入门（SOAP模式）：使用Java API验证数字签名 {#quick-start-soap-mode-verifying-a-digital-signature-using-the-java-api}
 
-以下Java代码示例验证位于已签名PDF文档中的数字签名，该文档基于名为LoanSigned.pdf的PDF文件。 验证时间设置为当前时间，撤销检查选项设置为尽力而为。 (请参阅 [验证数字签名](#verifying-digital-signatures).)
+以下Java代码示例验证基于名为LoanSigned.pdf的PDF文件的已签名PDF文档中的数字签名。 验证时间设置为当前时间，撤销检查选项设置为尽力而为。 (请参阅 [验证数字签名](#verifying-digital-signatures).)
 
 ```java
  /*
@@ -935,16 +935,16 @@ AEM Forms JEE操作可以使用AEM Forms强类型API执行，并且连接模式�
      * 18. xbean.jar (required for SOAP mode)
      * 19. xercesImpl.jar (required for SOAP mode)
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
-     * The adobe-utilities.jar file is located in the following path:
+     * The adobe-utilities.jar file is in the following path:
      * <install directory>/sdk/client-libs/jboss
      *
-     * The jboss-client.jar file is located in the following path:
+     * The jboss-client.jar file is in the following path:
      * <install directory>/jboss/bin/client
      *
-     * SOAP required JAR files are located in the following path:
+     * SOAP required JAR files are in the following path:
      * <install directory>/sdk/client-libs/thirdparty
      *
      * If you want to invoke a remote forms server instance and there is a
@@ -1010,17 +1010,17 @@ AEM Forms JEE操作可以使用AEM Forms强类型API执行，并且连接模式�
  
        //Determine the status of the signature
        if (sigStatus == SignatureStatus.DynamicFormSignatureUnknown)
-              myStatus = "The signatures located in the dynamic PDF form are unknown";
+              myStatus = "The signatures in the dynamic PDF form are unknown";
           else if (sigStatus == SignatureStatus.DocumentSignatureUnknown)
-              myStatus = "The signatures located in the PDF document are unknown";
+              myStatus = "The signatures in the PDF document are unknown";
           else if (sigStatus == SignatureStatus.CertifiedDynamicFormSignatureTamper)
-              myStatus = "The signatures located in a certified PDF form are valid";
+              myStatus = "The signatures in a certified PDF form are valid";
           else if (sigStatus == SignatureStatus.SignedDynamicFormSignatureTamper)
-              myStatus = "The signatures located in a signed dynamic PDF form are valid";
+              myStatus = "The signatures in a signed dynamic PDF form are valid";
           else if (sigStatus == SignatureStatus.CertifiedDocumentSignatureTamper)
-              myStatus = "The signatures located in a certified PDF document are valid";
+              myStatus = "The signatures in a certified PDF document are valid";
           else if (sigStatus == SignatureStatus.SignedDocumentSignatureTamper)
-              myStatus = "The signatures located in a signed PDF document are valid";
+              myStatus = "The signatures in a signed PDF document are valid";
           else if (sigStatus == SignatureStatus.SignatureFormatError)
               myStatus = "The format of a signature in a signed document is invalid";
           else if (sigStatus == SignatureStatus.DynamicFormSigNoChanges)
@@ -1074,7 +1074,7 @@ AEM Forms JEE操作可以使用AEM Forms强类型API执行，并且连接模式�
 
 ## 快速入门（SOAP模式）：使用Java API验证多个数字签名 {#quick-start-soap-mode-verifying-multiple-digital-signatures-using-the-java-api}
 
-以下Java代码示例验证位于已签名PDF文档(基于名为LoanAllSigs.pdf的PDF文件)中的多个数字签名。 验证时间设置为当前时间，撤销检查选项设置为尽力而为。 (请参阅 [验证多个数字签名](signature-service-java-api-quick.md#quick-start-soap-mode-verifying-multiple-digital-signatures-using-the-java-api).)
+以下Java代码示例验证基于名为LoanAllSigs.pdf的PDF文件的已签名PDF文档中的多个数字签名。 验证时间设置为当前时间，撤销检查选项设置为尽力而为。 (请参阅 [验证多个数字签名](signature-service-java-api-quick.md#quick-start-soap-mode-verifying-multiple-digital-signatures-using-the-java-api).)
 
 ```java
  /*
@@ -1103,16 +1103,16 @@ AEM Forms JEE操作可以使用AEM Forms强类型API执行，并且连接模式�
      * 20. xbean.jar (required for SOAP mode)
      * 21. xercesImpl.jar (required for SOAP mode)
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
-     * The adobe-utilities.jar file is located in the following path:
+     * The adobe-utilities.jar file is in the following path:
      * <install directory>/sdk/client-libs/jboss
      *
-     * The jboss-client.jar file is located in the following path:
+     * The jboss-client.jar file is in the following path:
      * <install directory>/jboss/bin/client
      *
-     * SOAP required JAR files are located in the following path:
+     * SOAP required JAR files are in the following path:
      * <install directory>/sdk/client-libs/thirdparty
      *
      * If you want to invoke a remote forms server instance and there is a
@@ -1162,13 +1162,13 @@ AEM Forms JEE操作可以使用AEM Forms强类型API执行，并且连接模式�
        pkiOptions.setVerificationTime(VerificationTime.CURRENT_TIME);
        pkiOptions.setRevocationCheckStyle(RevocationCheckStyle.BestEffort);
  
-       //Verify all digital signatures that are located in a PDF document
+       //Verify all digital signatures that are in a PDF document
        PDFDocumentVerificationInfo  allSig = signClient.verifyPDFDocument(
           inDoc,
           pkiOptions,
           null);
  
-       //Get a list of all signatures that are located in the PDF document
+       //Get a list of all signatures that are in the PDF document
        List allSignatures = allSig.getVerificationInfos();
  
      //Create an Iterator object and iterate through
@@ -1184,17 +1184,17 @@ AEM Forms JEE操作可以使用AEM Forms强类型API执行，并且连接模式�
  
              //Determine the status of the signature
                if (sigStatus == SignatureStatus.DynamicFormSignatureUnknown)
-                   myStatus = "The signatures located in the dynamic PDF form are unknown";
+                   myStatus = "The signatures in the dynamic PDF form are unknown";
                else if (sigStatus == SignatureStatus.DocumentSignatureUnknown)
-                   myStatus = "The signatures located in the PDF document are unknown";
+                   myStatus = "The signatures in the PDF document are unknown";
                else if (sigStatus == SignatureStatus.CertifiedDynamicFormSignatureTamper)
-                   myStatus = "The signatures located in a certified PDF form are valid";
+                   myStatus = "The signatures in a certified PDF form are valid";
                else if (sigStatus == SignatureStatus.SignedDynamicFormSignatureTamper)
-                   myStatus = "The signatures located in a signed dynamic PDF form are valid";
+                   myStatus = "The signatures in a signed dynamic PDF form are valid";
                else if (sigStatus == SignatureStatus.CertifiedDocumentSignatureTamper)
-                   myStatus = "The signatures located in a certified PDF document are valid";
+                   myStatus = "The signatures in a certified PDF document are valid";
                else if (sigStatus == SignatureStatus.SignedDocumentSignatureTamper)
-                   myStatus = "The signatures located in a signed PDF document are valid";
+                   myStatus = "The signatures in a signed PDF document are valid";
                else if (sigStatus == SignatureStatus.SignatureFormatError)
                    myStatus = "The format of a signature in a signed document is invalid";
                else if (sigStatus == SignatureStatus.DynamicFormSigNoChanges)
@@ -1265,16 +1265,16 @@ AEM Forms JEE操作可以使用AEM Forms强类型API执行，并且连接模式�
      * 20. xbean.jar (required for SOAP mode)
      * 21. xercesImpl.jar (required for SOAP mode)
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
-     * The adobe-utilities.jar file is located in the following path:
+     * The adobe-utilities.jar file is in the following path:
      * <install directory>/sdk/client-libs/jboss
      *
-     * The jboss-client.jar file is located in the following path:
+     * The jboss-client.jar file is in the following path:
      * <install directory>/jboss/bin/client
      *
-     * SOAP required JAR files are located in the following path:
+     * SOAP required JAR files are in the following path:
      * <install directory>/sdk/client-libs/thirdparty
      *
      * If you want to invoke a remote forms server instance and there is a
@@ -1364,13 +1364,13 @@ AEM Forms JEE操作可以使用AEM Forms强类型API执行，并且连接模式�
  * 11. adobe-utilities.jar (required for SOAP mode)
  *
  *
- * These JAR files are located in the following path:
+ * These JAR files are in the following path:
  * <install directory>/sdk/client-libs/common
  *
- * The adobe-utilities.jar file is located in the following path:
+ * The adobe-utilities.jar file is in the following path:
  * <install directory>/sdk/client-libs/jboss
  *
- * SOAP required JAR files are located in the following path:
+ * SOAP required JAR files are in the following path:
  * <install directory>/sdk/client-libs/thirdparty
  *
  * If you want to invoke a remote forms server instance and there is a

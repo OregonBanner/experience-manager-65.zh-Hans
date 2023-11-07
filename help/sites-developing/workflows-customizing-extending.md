@@ -10,7 +10,7 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: f23408c3-6b37-4047-9cce-0cab97bb6c5c
 exl-id: 9e205912-50a6-414a-b8d4-a0865269d0e0
-source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '3588'
 ht-degree: 2%
@@ -528,7 +528,7 @@ if (workflowData.getPayloadType() == "JCR_PATH") {
 
 要使用脚本，请执行以下操作：
 
-1. 创建脚本(例如使用CRXDE Lite)并将其保存在下面的存储库中 `//apps/workflow/scripts/`
+1. 创建脚本(例如，使用CRXDE Lite)并将其保存在下面的存储库中 `//apps/workflow/scripts/`
 1. 要指定用于在脚本中标识脚本的标题，请执行以下操作 **流程步骤** 编辑对话框，请将以下属性添加到 `jcr:content` 脚本的节点：
 
    | 名称 | 类型 | 价值 |
@@ -645,7 +645,7 @@ function getParticipant() {
 }
 ```
 
-1. 创建脚本(例如使用CRXDE Lite)并将其保存在下面的存储库中 `//apps/workflow/scripts`
+1. 创建脚本(例如，使用CRXDE Lite)并将其保存在下面的存储库中 `//apps/workflow/scripts`
 1. 要指定用于在脚本中标识脚本的标题，请执行以下操作 **流程步骤** 编辑对话框，请将以下属性添加到 `jcr:content` 脚本的节点：
 
    | 名称 | 类型 | 价值 |
@@ -803,7 +803,7 @@ private List<String> getPaths(String path, ResourceCollection rcCollection) {
    >
    >此步骤不适用于经典UI模型编辑器。
 
-1. 然后将复制的步骤放置到/apps文件夹中；例如：
+1. 然后将复制的步骤放置到/apps文件夹中；例如，如下所示：
 
    `/apps/cq/workflow/components/model/myCustomStep`
 
@@ -1042,4 +1042,4 @@ private List<String> getPaths(String path, ResourceCollection rcCollection) {
 >* `/libs/wcm/workflow/components/autoassign`
 >* `/libs/cq/projects`
 >
->  您不得修改中的任何内容 `/libs`，只需将它们用作示例。 如果要利用任何现有步骤，请将其复制到 `/apps` 并在那里修改它们。
+>  您不得修改中的任何内容 `/libs`，只需将它们用作示例。 如果要使用任何现有步骤，请将其复制到 `/apps` 并在那里修改它们。
