@@ -10,10 +10,10 @@ topic-tags: components
 content-type: reference
 discoiquuid: 45efff93-2fe5-4313-83a0-0e23a540da93
 exl-id: 9e30c969-2692-4380-943a-b022ee900ce8
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '590'
-ht-degree: 53%
+source-wordcount: '589'
+ht-degree: 50%
 
 ---
 
@@ -79,7 +79,7 @@ AEM随附多种 [开箱即用的组件](/help/sites-authoring/default-components
 
 ### 查看可用组件 {#viewing-available-components}
 
-有关 AEM 实例中的所有可用组件的概述，请使用[组件控制台](/help/sites-authoring/default-components-console.md)。
+有关AEM实例中所有可用组件的概述，请使用 [组件控制台](/help/sites-authoring/default-components-console.md).
 
 或者，您也可以使用 CRXDE Lite 获取存储库中所有可用组件的列表。
 

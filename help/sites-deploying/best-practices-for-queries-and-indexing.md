@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 exl-id: 6dfaa14d-5dcf-4e89-993a-8d476a36d668
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '4602'
+source-wordcount: '4600'
 ht-degree: 6%
 
 ---
@@ -189,7 +189,7 @@ Lucene索引的Oak文档列出了设计索引时需要考虑的几个事项：
 * 在属性索引中，具有唯一的属性名称有助于减小索引的大小，但对于Lucene索引，请使用 `nodeTypes` 和 `mixins` 指标具有凝聚性。 查询特定 `nodeType` 或 `mixin` 将比查询性能更强 `nt:base`. 使用此方法时，定义 `indexRules` 对于 `nodeTypes` 有疑问。
 
 * 如果查询仅在特定路径下运行，则在这些路径下创建这些索引。 索引无需位于存储库的根目录下。
-* 当所有被索引的属性都相关时，请使用单个索引，以允许Lucene尽可能多地在本机评估属性限制。 此外，查询将只使用一个索引，即使在执行连接时也是如此。
+* 当所有要编制索引的属性都相关时，请使用单个索引，以允许Lucene尽可能多地在本机计算属性限制。 此外，查询将只使用一个索引，即使在执行连接时也是如此。
 
 ### CopyonRead {#copyonread}
 

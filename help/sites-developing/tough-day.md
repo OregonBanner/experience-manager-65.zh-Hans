@@ -4,9 +4,9 @@ description: Tough Day测试模拟了在所有操作同时进行的最坏情况�
 topic-tags: testing
 content-type: reference
 exl-id: ceb9671c-57f9-4d81-94c0-0dbccd4d90a2
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '1823'
+source-wordcount: '1822'
 ht-degree: 2%
 
 ---
@@ -86,7 +86,7 @@ java -jar toughday2.jar --help_full
   </tr>
   <tr>
    <td>—help_full</td>
-   <td>打印以上所有内容以及测试、发布器和套件组件。</td>
+   <td>打印以上所有内容，以及测试、发布器和套件组件。</td>
    <td> </td>
   </tr>
   <tr>

@@ -7,9 +7,9 @@ role: User, Admin
 feature: Collaboration,Adobe Asset Link,Desktop App
 exl-id: c7d589a3-1c5f-4ff0-879e-15e1c556f6dc
 hide: true
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '3264'
+source-wordcount: '3263'
 ht-degree: 15%
 
 ---
@@ -137,7 +137,7 @@ TBD: A condensed version of the below content is better placed in the Adobe DAM 
 
 存储资产还受技术和资源利用率考虑的约束。 DAM围绕存储的资产提供其他服务，包括提取元数据、版本控制、生成预览/转码、管理引用和添加访问控制信息。 这些服务会占用额外的时间和基础架构资源。
 
-通常，存储所有资产和更新都是不理想的。 例如，如果对特定资产的更新质量不佳并占用过多的资源，则这些资产可能未存储在DAM中。
+通常，不希望存储所有资源和更新。 例如，如果对特定资产的更新质量不佳并占用过多的资源，则这些资产可能未存储在DAM中。
 
 #### 当资产存储在DAM中时 {#when-assets-are-stored-in-dam}
 

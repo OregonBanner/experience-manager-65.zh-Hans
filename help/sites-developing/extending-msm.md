@@ -7,9 +7,9 @@ topic-tags: extending-aem
 content-type: reference
 docset: aem65
 exl-id: bba64ce6-8b74-4be1-bf14-cfdf3b9b60e1
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '2578'
+source-wordcount: '2577'
 ht-degree: 60%
 
 ---
@@ -149,7 +149,7 @@ public LiveAction createAction(Resource resource) throws WCMException {
 
 * 重置值表示转出重置模式。
 
-从这些对象中您可以获得有关 `LiveCopy` 的所有信息。您还可以使用 `Resource` 对象，获取`ResourceResolver`、`Session`和`Node`对象。这些对象对于操作存储库内容非常有用：
+从这些对象中，您可以获取有关 `LiveCopy`. 您还可以使用 `Resource` 对象，获取`ResourceResolver`、`Session`和`Node`对象。这些对象对于操作存储库内容非常有用：
 
 在以下代码的第一行中，源是源页面的 `Resource` 对象：
 

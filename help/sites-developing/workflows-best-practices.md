@@ -10,9 +10,9 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: 0be8b88c-6f57-4dcc-ae11-77b378a2decd
 exl-id: 14775476-6fe5-4583-8ab5-b55fef892174
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '1923'
+source-wordcount: '1921'
 ht-degree: 1%
 
 ---
@@ -261,7 +261,7 @@ public void execute(WorkItem item, WorkflowSession workflowSession, MetaDataMap 
 
 有一个监听器负责所有 [工作流启动器](/help/sites-administering/workflows-starting.md#workflows-launchers) 注册的：
 
-* 它会侦听其他启动器的通配属性中指定的所有路径的更改。
+* 它会侦听在其他启动器的通配属性中指定的所有路径上的更改。
 * 调度事件后，工作流引擎将评估每个启动器，以确定它是否应运行。
 
 创建过多启动器将导致评估过程运行速度变慢。

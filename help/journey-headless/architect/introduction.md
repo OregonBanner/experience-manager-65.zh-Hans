@@ -2,10 +2,10 @@
 title: Adobe Experience Manager Headless内容架构师历程
 description: 简单介绍Adobe Experience Manager强大而灵活的Headless功能，以及如何对项目内容进行建模。
 exl-id: 49ba0d6d-dde4-42e2-92fd-c7655c0eebc0
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '731'
-ht-degree: 81%
+source-wordcount: '730'
+ht-degree: 79%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 81%
 
 ![经典全栈 CMS](/help/journey-headless/developer/assets/full-stack.png)
 
-在全栈 CMS 中，用于操作内容的所有功能都在 CMS 中。该系统的各种功能构成了 CMS 堆栈的不同组件。全栈解决方案有许多优点。
+在全栈CMS中，处理内容的所有功能都在CMS中。 该系统的各种功能构成了 CMS 堆栈的不同组件。全栈解决方案有许多优点。
 
 * 需要维护一个系统。
 * 集中管理内容。

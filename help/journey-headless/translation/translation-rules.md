@@ -2,10 +2,10 @@
 title: 配置翻译规则
 description: 了解如何定义翻译规则，标识要翻译的内容。
 exl-id: 262503af-361b-491c-8639-0bb32f0a4c0e
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '864'
-ht-degree: 78%
+source-wordcount: '861'
+ht-degree: 81%
 
 ---
 
@@ -15,12 +15,12 @@ ht-degree: 78%
 
 ## 迄今为止的故事 {#story-so-far}
 
-在AEM Headless翻译历程的上一个文档中， [配置翻译集成](configure-connector.md) 您已了解如何安装和配置翻译集成，现在应：
+在 AEM Headless 翻译历程的上一个文档[配置翻译集成](configure-connector.md)中，您已了解如何安装和配置翻译集成，现在应：
 
 * 了解 AEM 中翻译集成框架的重要参数。
 * 能够自行建立与翻译服务的连接。
 
-现在，您的集成已设置完毕，本文将引导您完成下一步，即标识需要翻译的内容。
+现在您的集成已设置完毕，本文将引导您完成下一步，即标识要翻译的内容。
 
 ## 目标 {#objective}
 
@@ -46,7 +46,7 @@ ht-degree: 78%
 
 >[!TIP]
 >
->通常，内容架构师会为翻译专家提供翻译所需的所有字段的&#x200B;**属性名称**。需要使用这些名称才能配置翻译规则。作为翻译专家，您[可以自行查找这些&#x200B;**属性名称**](getting-started.md#content-models)，如本历程中前面所述。
+>通常，内容架构师为翻译专家提供 **属性名称**&#x200B;是翻译所需的所有字段的。 需要使用这些名称才能配置翻译规则。作为翻译专家，您[可以自行查找这些&#x200B;**属性名称**](getting-started.md#content-models)，如本历程中前面所述。
 
 ## 创建翻译规则 {#creating-rules}
 
@@ -73,7 +73,7 @@ ht-degree: 78%
    1. 在&#x200B;**新属性**&#x200B;字段中输入属性名称。
    1. 这将自动选中&#x200B;**翻译**&#x200B;和&#x200B;**继承**&#x200B;选项。
    1. 点按或单击&#x200B;**添加**。
-   1. 对您必须翻译的所有字段重复这些步骤。
+   1. 对必须翻译的所有字段重复这些步骤。
    1. 点按或单击&#x200B;**保存**。
       ![添加属性](assets/add-property.png)
 
@@ -92,7 +92,7 @@ ht-degree: 78%
 * 了解翻译规则的用途。
 * 能够定义您自己的翻译规则。
 
-在此知识的基础上继续您的AEM Headless翻译历程，接下来查看文档 [翻译内容](translate-content.md) 在这里，您将了解集成和规则如何协作以翻译headless内容。
+在此知识的基础上继续您的 AEM Headless 翻译历程，接下来查看文档[翻译内容](translate-content.md)，了解您的集成和规则如何协作以翻译 Headless 内容。
 
 ## 其他资源 {#additional-resources}
 

@@ -1,7 +1,7 @@
 ---
 title: 系统信息服务API
 seo-title: System information Service APIs
-description: 本文档提供了有关System Information Service提供的API的详细信息。
+description: 本文档提供有关System Information Service提供的API的详细信息。
 seo-description: This document provides detailed information about the APIs provided bythesystem information service.
 uuid: 7f624216-56e6-4d49-b9a1-3c9af045dabe
 contentOwner: admin
@@ -10,16 +10,16 @@ geptopics: SG_AEMFORMS/categories/system_information_service
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 79fccce2-d090-4b50-9c58-3f2a00e651b2
 exl-id: 4da96c8f-8bd0-4cad-9087-18e324f084e7
-source-git-commit: d1fc2ff44378276522c2ff3208f5b3bdc4484bba
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '336'
+source-wordcount: '335'
 ht-degree: 0%
 
 ---
 
 # 系统信息服务API {#system-information-service-apis}
 
-系统信息服务提供一组REST API来检索信息。 下表提供了有关API的详细信息：
+系统信息服务提供一组用于检索信息的REST API。 下表提供了有关API的详细信息：
 
 <table>
  <thead>
@@ -68,14 +68,14 @@ ht-degree: 0%
      <li><p>AdobeTempDir</p></li>
      <li><p>AdobeServerFontDir</p></li>
      <li><p>CustomerFontDir</p></li>
-     <li><p>GlobalDocumentStoreRootDir</p></li>
+     <li><p>GlobalDocumentStorageRootDir</p></li>
      <li><p>DefaultDocumentMaxInlineSize</p></li>
      <li><p>DefaultDocumentDisposalTimeout</p></li>
      <li><p>EnableDocumentDBStorage</p></li>
      <li><p>GlobalDocumentStorageUseNetworkShare</p></li>
      <li><p>EnableFIPS</p></li>
      <li><p>启用WSDL</p></li>
-     <li><p>DataServicesConfigFile </p></li>
+     <li><p>数据服务配置文件 </p></li>
      <li><p>EnableRDS</p></li>
     </ul><p></p></td>
   </tr>
@@ -106,7 +106,7 @@ ht-degree: 0%
   <tr>
    <td><p>SystemInfo.info</p></td>
    <td><p>https://'[server]：[port]'/rest/services/ SystemInfo.info</p></td>
-   <td><p>此API是所有系统信息服务API的包装器。 在内部，它运行所有系统信息API并以zip格式下载信息。 </p><p><i><strong>注释</strong>： SystemInfo.info不提供活动线程的计数和栈栈跟踪。 </i></p></td>
+   <td><p>此API是所有系统信息服务API的包装器。 在内部，它运行所有系统信息API并以zip格式下载信息。 </p><p><i><strong>注意</strong>： SystemInfo.info不提供活动线程的计数和栈栈跟踪。 </i></p></td>
   </tr>
  </tbody>
 </table>

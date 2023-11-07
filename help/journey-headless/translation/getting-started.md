@@ -2,10 +2,10 @@
 title: AEM Headless 翻译快速入门
 description: 了解如何组织您的 Headless 内容以及 AEM 的翻译工具的工作原理。
 exl-id: 764f78a7-1d3d-4406-85b1-b80dffae2350
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '1490'
-ht-degree: 88%
+source-wordcount: '1489'
+ht-degree: 90%
 
 ---
 
@@ -180,7 +180,7 @@ AEM 的内容（无论是 Headless 还是传统网页）都由其结构推动。
 * 了解 AEM 如何存储 Headless 内容。
 * 熟悉 AEM 的翻译工具。
 
-在此知识的基础上继续您的AEM Headless翻译历程，接下来查看文档 [配置翻译集成](configure-connector.md) 您将在其中学习如何将AEM连接到翻译服务。|
+在此知识的基础上继续您的 AEM Headless 翻译历程，接下来查看文档[配置翻译集成](configure-connector.md)，了解如何将 AEM 连接到翻译服务。|
 
 ## 其他资源 {#additional-resources}
 

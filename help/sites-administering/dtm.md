@@ -10,9 +10,9 @@ topic-tags: integration
 content-type: reference
 discoiquuid: b8c7a20a-7694-4a49-b66a-060720f17dad
 exl-id: 1e0821f5-627f-4262-ba76-62303890e112
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '2206'
+source-wordcount: '2205'
 ht-degree: 3%
 
 ---
@@ -260,7 +260,7 @@ AEM支持在云中托管或在AEM上托管的动态Tag Management。
 
 1. 使用Dynamic Tag Management下拉菜单选择您的配置，然后单击“确定”。
 
-使用以下过程可覆盖页面的继承配置关联。 覆盖将影响页面及所有页面子项。
+使用以下过程可覆盖页面的继承配置关联。 覆盖将影响页面和所有页面子项。
 
 1. 在经典UI中打开页面。
 1. 使用Sidekick打开页面属性。

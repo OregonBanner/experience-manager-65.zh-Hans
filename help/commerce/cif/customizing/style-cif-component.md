@@ -9,9 +9,9 @@ feature: Commerce Integration Framework
 kt: 3456
 thumbnail: 3456-style-cif.jpg
 exl-id: 04d553be-c67d-4ecb-a23f-2694c2adfc2b
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '2533'
+source-wordcount: '2531'
 ht-degree: 3%
 
 ---
@@ -69,7 +69,7 @@ ht-degree: 3%
 
 通过添加和覆盖这些客户端库管理的CSS，可以将特定于品牌的样式应用于AEM CIF核心组件。 了解如何构建客户端库并将其包含在页面上至关重要。
 
-此 [ui.frontend](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html) 是专门的 [webpack](https://webpack.js.org/) 用于管理项目的所有前端资产的项目。 这允许前端开发人员使用任意数量的语言和技术，例如 [TypeScript](https://www.typescriptlang.org/)， [萨斯](https://sass-lang.com/) 等等。
+此 [ui.frontend](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html) 是专门的 [webpack](https://webpack.js.org/) 用于管理项目的所有前端资源的项目。 这允许前端开发人员使用任意数量的语言和技术，例如 [TypeScript](https://www.typescriptlang.org/)， [萨斯](https://sass-lang.com/) 等等。
 
 此 `ui.frontend` 模块还是一个Maven模块，通过使用NPM模块与更大的项目集成 [aem-clientlib-generator](https://github.com/wcm-io-frontend/aem-clientlib-generator). 在构建期间， `aem-clientlib-generator` 将编译后的CSS和JavaScript文件复制到中的客户端库中 `ui.apps` 模块。
 

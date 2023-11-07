@@ -7,9 +7,9 @@ topic-tags: managing-checklist
 content-type: reference
 docset: aem65
 exl-id: 9672f7a4-82b7-4175-874d-181846115442
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '6946'
+source-wordcount: '6945'
 ht-degree: 0%
 
 ---
@@ -102,7 +102,7 @@ Adobe支持门户使实施合作伙伴和客户能够在支持门户中将AEM实
 
 ### 经过适当培训的工作人员 {#appropriately-trained-staff}
 
-确保您的团队由经过适当培训的员工组成。 对于项目团队，建议具有以下所有项：
+确保您的团队由经过适当培训的员工组成。 对于项目团队，建议具备以下所有条件：
 
 * 至少有一位AEM认证的潜在客户开发人员
 * 至少有一个AEM认证架构师

@@ -5,9 +5,9 @@ contentOwner: AG
 role: Architect, Admin
 feature: Migration,Renditions,Asset Management
 exl-id: 184f1645-894a-43c1-85f5-8e0d2d77aa73
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '1795'
+source-wordcount: '1791'
 ht-degree: 8%
 
 ---
@@ -55,7 +55,7 @@ ht-degree: 8%
 
 ### 引入资产 {#ingesting-assets}
 
-在将资产引入系统时，性能和稳定性是重要考虑事项。 由于您要将大量数据加载到系统中，因此希望确保系统能够正常执行，并且能够将所需的时间减至最少，同时避免系统过载，因为这样做可能会导致系统崩溃，尤其是在已经处于生产状态的系统中。
+在将资产引入系统时，性能和稳定性是重要考虑事项。 由于您要将大量数据加载到系统中，因此希望确保系统工作正常，以最大程度地减少所需的时间并避免系统过载，这可能会导致系统崩溃，特别是在已经处于生产状态的系统中。
 
 有两种将资产加载到系统中的方法：使用HTTP的基于推送的方法或使用JCR API的基于拉取的方法。
 

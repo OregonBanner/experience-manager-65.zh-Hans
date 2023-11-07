@@ -7,9 +7,9 @@ topic-tags: integration
 content-type: reference
 docset: aem65
 exl-id: b5f3d3a6-39c0-4aa5-8562-3cc6fa2b9e46
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '6093'
+source-wordcount: '6092'
 ht-degree: 0%
 
 ---
@@ -405,7 +405,7 @@ portlet的某些功能受权限保护。 当前用户需要具有此权限才能
 
 ### 自定义AEM portlet应用程序 {#customizing-the-aem-portlet-application}
 
-提供的AEM portlet应用程序在Web应用程序中启动OSGi容器，与AEM一样。 此架构允许您利用OSGi的所有好处：
+提供的AEM portlet应用程序在Web应用程序中启动OSGi容器，与AEM一样。 此架构允许您利用OSGi的所有优势：
 
 * 易于更新和扩展
 * 提供Portlet的热更新，无需门户服务器进行任何交互

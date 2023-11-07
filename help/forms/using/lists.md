@@ -8,9 +8,9 @@ discoiquuid: 0d5436c6-1976-496c-b9a7-7dc6e830bb5d
 docset: aem65
 feature: Correspondence Management
 exl-id: 71754e41-45d7-4cc5-ba49-0748bd51c0cf
-source-git-commit: 10227bcfcfd5a9b0f126fee74dce6ec7842f5e95
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '6913'
+source-wordcount: '6911'
 ht-degree: 0%
 
 ---
@@ -209,7 +209,7 @@ ht-degree: 0%
 
 ## 列表 {#list}
 
-列表是一组文档片段，包括文本、（其他）列表、条件和图像。 列表元素的顺序可以固定或可编辑。 创建信件时，您可以使用部分或全部列表元素来复制元素的可重用模式。 列表基本上可以作为嵌套在其他目标中的目标使用。
+列表是一组文档片段，包括文本、（其他）列表、条件和图像。 列表元素的顺序可以固定或可编辑。 创建信件时，您可以使用部分或全部列表元素来复制可重用元素模式。 列表基本上可以作为嵌套在其他目标中的目标使用。
 
 ### 实施列表 {#implementing-lists}
 

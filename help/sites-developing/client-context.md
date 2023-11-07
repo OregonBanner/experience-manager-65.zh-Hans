@@ -8,9 +8,9 @@ content-type: reference
 docset: aem65
 feature: Context Hub
 exl-id: 38b9a795-1c83-406c-ab13-b4456da938dd
-source-git-commit: 26c0411d6cc16f4361cfa9e6b563eba0bfafab1e
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '3001'
+source-wordcount: '3000'
 ht-degree: 0%
 
 ---
@@ -19,9 +19,9 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->ContextHub已取代客户端上下文。 请参阅 [相关文档](/help/sites-developing/contexthub.md) 了解详细信息。
+>ContextHub已取代客户端上下文。 请参阅 [相关文档](/help/sites-developing/contexthub.md) 以了解详细信息。
 
-Client Context表示动态组合的用户数据集合。 您可以使用数据来确定在给定情况下（内容定位）要在网页上显示的内容。 该数据还可用于网站分析以及页面上的任何JavaScript。
+Client Context表示动态组合的用户数据集合。 您可以使用数据来确定在给定情况（内容定位）下要在网页上显示的内容。 这些数据还可用于网站分析以及页面上的任何JavaScript。
 
 Client Context主要包括以下几个方面：
 
@@ -29,22 +29,22 @@ Client Context主要包括以下几个方面：
 * 显示用户数据并提供用于模拟用户体验的工具的UI。
 * A [JavaScript API](/help/sites-developing/ccjsapi.md) 用于与会话存储区交互。
 
-要创建独立会话存储并将其添加到Client Context，或创建绑定到Context Store组件的会话存储。 Adobe Experience Manager (AEM)安装了多个可以立即使用的上下文存储组件。 您可以将这些组件用作组件的基础。
+创建独立会话存储并将其添加到Client Context，或创建与上下文存储组件绑定的会话存储。 Adobe Experience Manager (AEM)安装了多个可以立即使用的上下文存储组件。 您可以使用这些组件作为组件的基础。
 
-有关打开Client Context、配置它显示的信息和模拟用户体验的信息，请参阅 [客户端上下文](/help/sites-administering/client-context.md).
+有关打开Client Context、配置其显示的信息以及模拟用户体验的信息，请参阅 [客户端上下文](/help/sites-administering/client-context.md).
 
 ## 会话存储 {#session-stores}
 
-Client Context包括包含用户数据的各种会话存储。 存储数据来自以下来源：
+Client Context包括包含用户数据的各种会话存储。 存储数据来自以下源：
 
 * 客户端Web浏览器。
 * 服务器(请参见 [JSONP存储](/help/sites-administering/client-context.md#main-pars-variable-8) 用于存储来自第三方源的信息)
 
-Client Context框架提供 [JavaScript API](/help/sites-developing/ccjsapi.md) 用于与会话存储区交互以读取和写入用户数据，以及侦听和响应存储事件。 您还可以为用于内容定位或其他目的的用户数据创建会话存储。
+Client Context框架提供 [JavaScript API](/help/sites-developing/ccjsapi.md) ，可用来与会话存储交互，以读取和写入用户数据，并侦听和响应存储事件。 您还可以为用于内容定位或其他目的的用户数据创建会话存储。
 
-会话存储数据将保留在客户端上。 Client Context不会将数据写回服务器。 要将数据发送到服务器，请使用表单或开发自定义JavaScript。
+会话存储数据保留在客户端上。 Client Context不会将数据写回服务器。 要将数据发送到服务器，请使用表单或开发自定义JavaScript。
 
-每个会话存储区都是属性值对的集合。 会话存储表示（任何类型的）数据的集合，其概念含义可由设计人员、开发人员或两者决定。 以下示例JavaScript代码定义了一个对象，该对象表示会话存储可能包含的配置文件数据：
+每个会话存储都是属性值对的集合。 会话存储表示（任何类型的）数据集合，其概念含义可由设计人员、开发人员或两者决定。 以下示例JavaScript代码定义了一个对象，该对象表示会话存储可能包含的配置文件数据：
 
 ```
 {
@@ -58,7 +58,7 @@ Client Context框架提供 [JavaScript API](/help/sites-developing/ccjsapi.md) �
 }
 ```
 
-会话存储可以在多个浏览器会话中持久保留，也可以仅针对在其中创建会话的浏览器会话持续保留。
+会话存储可以在浏览器会话间保留，也可以仅针对在其中创建会话的浏览器会话保留。
 
 >[!NOTE]
 >
@@ -68,22 +68,22 @@ Client Context框架提供 [JavaScript API](/help/sites-developing/ccjsapi.md) �
 
 ### 上下文存储组件 {#context-store-components}
 
-上下文存储组件是可以添加到客户端上下文的CQ组件。 通常，上下文存储组件显示与其关联的会话存储中的数据。 但是，上下文存储组件显示的信息不限于会话存储数据。
+上下文存储组件是可以添加到客户端上下文的CQ组件。 通常，上下文存储组件显示与其关联的会话存储中的数据。 但是，上下文存储组件显示的信息并不限于会话存储数据。
 
 上下文存储组件可以包括以下项目：
 
 * 在客户端上下文中定义外观的JSP脚本。
-* 用于列出Sidekick中组件的属性。
+* 用于在Sidekick中列出组件的属性。
 * 用于配置组件实例的编辑对话框。
 * 初始化会话存储的JavaScript。
 
-有关可以添加到上下文存储的已安装上下文存储组件的说明，请参见 [可用的客户端上下文组件](/help/sites-administering/client-context.md#available-client-context-components).
+有关已安装的上下文存储组件（可添加到上下文存储）的说明，请参阅 [可用的客户端上下文组件](/help/sites-administering/client-context.md#available-client-context-components).
 
 >[!NOTE]
 >
->页面数据不再作为默认组件存在于客户端上下文中。 如果需要，可以通过编辑客户端上下文、添加 **通用存储属性** 组件，然后配置此项以定义 **存储** 作为 `pagedata`.
+>页面数据不再作为默认组件存在于客户端上下文中。 如果需要，您可以通过编辑客户端上下文并添加 **常规存储属性** 组件，然后配置此项以定义 **存储** 作为 `pagedata`.
 
-### 目标内容交付 {#targeted-content-delivery}
+### 目标内容投放 {#targeted-content-delivery}
 
 用户档案信息还用于投放 [目标内容](/help/sites-authoring/content-targeting-touch.md).
 
@@ -91,13 +91,13 @@ Client Context框架提供 [JavaScript API](/help/sites-developing/ccjsapi.md) �
 
 ## 向页面添加客户端上下文 {#adding-client-context-to-a-page}
 
-将Client Context组件包含在网页的正文部分以启用Client Context。 客户端上下文组件节点的路径为 `/libs/cq/personalization/components/clientcontext`. 要包含该组件，请将以下代码添加到页面组件的JSP文件中，该文件位于 `body` 页面元素：
+将Client Context组件包括在网页的正文部分以启用Client Context。 客户端上下文组件节点的路径为 `/libs/cq/personalization/components/clientcontext`. 要包含该组件，请将以下代码添加到页面组件的JSP文件中，该文件位于 `body` 页面元素：
 
 ```java
 <cq:include path="clientcontext" resourceType="cq/personalization/components/clientcontext"/>
 ```
 
-clientcontext组件使页面加载实现Client Context的客户端库。
+clientcontext组件使页面加载实施Client Context的客户端库。
 
 * 客户端上下文JavaScript API。
 * Client Context框架支持会话存储、事件管理等。
@@ -109,18 +109,18 @@ clientcontext组件使页面加载实现Client Context的客户端库。
 
 ## 扩展客户端上下文 {#extending-client-context}
 
-要扩展Client Context，请创建一个会话存储区，并可以选择显示存储区数据：
+要扩展Client Context，请创建一个会话存储区，并选择性地显示存储区数据：
 
 * 为内容定位和网站分析所需的用户数据创建会话存储。
 * 创建上下文存储组件，使管理员能够配置关联的会话存储，并在Client Context中显示存储数据以进行测试。
 
 >[!NOTE]
 >
->如果您拥有（或创建） `JSONP` 提供数据的服务，您只需使用 `JSONP` 上下文存储组件并将其映射到JSONP服务。 这将处理会话存储。
+>如果您拥有（或创建） `JSONP` 可提供数据的服务，只需使用 `JSONP` 上下文存储组件并将其映射到JSONP服务。 这将处理会话存储。
 
 ### 创建会话存储 {#creating-a-session-store}
 
-为必须添加并从Client Context检索的数据创建会话存储。 通常，使用以下过程创建会话存储：
+为必须添加到的数据创建会话存储，并从Client Context中检索。 通常，使用以下过程创建会话存储：
 
 1. 创建具有 `categories` 属性值 `personalization.stores.kernel`. Client Context会自动加载此类别的客户端库。
 
@@ -128,7 +128,7 @@ clientcontext组件使页面加载实现Client Context的客户端库。
 
 1. 添加用于创建和初始化会话存储的JavaScript。
 
-在personalization.stores.kernel客户端库中包含JavaScript会导致在加载Client Context框架时创建存储。
+将JavaScript包含在personalization.stores.kernel客户端库中，会导致在加载Client Context框架时创建存储。
 
 >[!NOTE]
 >
@@ -141,9 +141,9 @@ clientcontext组件使页面加载实现Client Context的客户端库。
 * ` [CQ_Analytics.SessionStore](/help/sites-developing/ccjsapi.md#cq-analytics-sessionstore)`：这些对象仅驻留在页面DOM中。 数据在页面的生命周期内创建和保留。
 * ` [CQ_Analytics.PerstistedSessionStore](/help/sites-developing/ccjsapi.md#cq-analytics-persistedsessionstore)`：这些对象驻留在页面DOM中，并保留在浏览器存储或Cookie中。 数据可在页面和用户会话间使用。
 
-API还提供了专门用于存储JSON数据或JSONP数据的类的扩展：
+API还提供了专门用于存储JSON数据或JSONP数据的这些类的扩展：
 
-* 仅用于会话的对象： [CQ_Analytics.JSONStore](/help/sites-developing/ccjsapi.md#cq-analytics-jsonstore) 和 [cq_Analytics.JSONPStore](/help/sites-developing/ccjsapi.md#cq-analytics-jsonpstore).
+* 仅用于会话的对象： [CQ_Analytics.JSONStore](/help/sites-developing/ccjsapi.md#cq-analytics-jsonstore) 和 [CQ_Analytics.JSONPStore](/help/sites-developing/ccjsapi.md#cq-analytics-jsonpstore).
 
 * 持久化对象： [CQ_Analytics.PersistedJSONStore](/help/sites-developing/ccjsapi.md#cq-analytics-persistedjsonstore) 和 [CQ_Analytics.PersistedJSONPStore](/help/sites-developing/ccjsapi.md#cq-analyics-persistedjsonpstore).
 
@@ -165,7 +165,7 @@ if (CQ_Analytics.ClientContextMgr){
 }
 ```
 
-为了存储JSON数据，以下示例创建并注册 [CQ_Analytics.JSONStore](/help/sites-developing/ccjsapi.md#cq-analytics-sessionstore) 对象。
+为存储JSON数据，以下示例创建并注册 [CQ_Analytics.JSONStore](/help/sites-developing/ccjsapi.md#cq-analytics-sessionstore) 对象。
 
 ```
 if (!CQ_Analytics.myJSONStore) {
@@ -175,22 +175,22 @@ if (!CQ_Analytics.myJSONStore) {
 
 ### 创建上下文存储组件 {#creating-a-context-store-component}
 
-创建上下文存储组件以在Client Context中呈现会话存储数据。 创建后，您可以将上下文存储组件拖动到Client Context上以呈现来自会话存储的数据。 上下文存储组件由以下项目组成：
+创建上下文存储组件以在Client Context中呈现会话存储数据。 创建后，您可以将上下文存储组件拖动到Client Context上以呈现会话存储中的数据。 上下文存储组件由以下项目组成：
 
 * 用于呈现数据的JSP脚本。
 * 编辑对话框。
-* 用于初始化会话存储区的JSP脚本。
+* 用于初始化会话存储的JSP脚本。
 * （可选）创建会话存储的客户端库文件夹。 如果组件使用现有会话存储，则无需包含客户端库文件夹。
 
 #### 扩展提供的上下文存储组件 {#extending-the-provided-context-store-components}
 
-AEM提供可以扩展的genericstore和genericstoreproperties上下文存储组件。 存储数据的结构决定了要扩展的组件：
+AEM提供了可以扩展的genericstore和genericstoreproperties上下文存储组件。 存储数据的结构决定了要扩展的组件：
 
 * 属性值对：扩展 `GenericStoreProperties` 组件。 此组件自动呈现属性值对的存储。 提供了几个交互点：
 
-   * `prolog.jsp` 和 `epilog.jsp`：组件交互，可让您在组件渲染之前或之后添加服务器端逻辑。
+   * `prolog.jsp` 和 `epilog.jsp`：组件交互，允许您在组件呈现之前或之后添加服务器端逻辑。
 
-* 复杂数据：扩展 `GenericStore` 组件。 您的会话存储需要每当必须呈现组件时都调用的“renderer”方法。 使用两个参数调用renderer函数：
+* 复杂数据：扩展 `GenericStore` 组件。 您的会话存储需要每当必须呈现组件时都调用的“renderer”方法。 使用以下两个参数调用渲染器函数：
 
    * `@param {String} store`
 要呈现的存储
@@ -200,37 +200,37 @@ AEM提供可以扩展的genericstore和genericstoreproperties上下文存储组�
 
 >[!NOTE]
 >
->所有客户端上下文组件都是通用存储或通用存储属性组件的扩展。 中安装了多个示例 `/libs/cq/personalization/components/contextstores` 文件夹。
+>所有客户端上下文组件都是通用存储或通用存储属性组件的扩展。 中安装了几个示例 `/libs/cq/personalization/components/contextstores` 文件夹。
 
-#### 在Sidekick中配置外观 {#configuring-the-appearance-in-sidekick}
+#### 配置Sidekick中的外观 {#configuring-the-appearance-in-sidekick}
 
-编辑Client Context时，上下文存储组件以Sidekick显示。 与所有组件一样， `componentGroup` 和 `jcr:title` 客户端上下文组件的属性确定组件的组和名称。
+编辑Client Context时，上下文存储组件以Sidekick显示。 与所有组件一样， `componentGroup` 和 `jcr:title` 客户端上下文组件的属性决定了组件的组和名称。
 
 所有具有 `componentGroup` 属性值 `Client Context` 默认显示在Sidekick中。 如果您为 `componentGroup` 属性，您必须使用设计模式手动将组件添加到Sidekick。
 
 #### 上下文存储组件实例 {#context-store-component-instances}
 
-将上下文存储组件添加到Client Context时，将在下面创建一个表示该组件实例的节点 `/etc/clientcontext/default/content/jcr:content/stores`. 此节点包含使用组件的“编辑”对话框配置的属性值。
+将上下文存储组件添加到Client Context时，将在下面创建一个表示该组件实例的节点 `/etc/clientcontext/default/content/jcr:content/stores`. 此节点包含使用组件的编辑对话框配置的属性值。
 
-初始化客户端上下文时，将处理这些节点。
+初始化Client Context时，将处理这些节点。
 
 #### 初始化关联的会话存储 {#initializing-the-associated-session-store}
 
-将init.js.jsp文件添加到组件中以生成JavaScript代码，该代码初始化上下文存储组件使用的会话存储。 例如，使用初始化脚本检索组件的配置属性，并使用这些属性填充会话存储区。
+将init.js.jsp文件添加到组件中以生成JavaScript代码，该代码初始化您的上下文存储组件使用的会话存储。 例如，使用初始化脚本检索组件的配置属性，并使用这些属性填充会话存储。
 
-当创作实例和发布实例上的页面加载时初始化客户端上下文时，生成的JavaScript将添加到页面中。 此JSP在上下文存储组件实例加载和渲染之前执行。
+在创作实例和发布实例上的页面加载上初始化客户端上下文时，生成的JavaScript将添加到页面中。 此JSP在上下文存储组件实例加载和渲染之前执行。
 
-代码必须将文件的mime类型设置为 `text/javascript`，或者它不执行。
+代码必须将文件的mime类型设置为 `text/javascript`，或者不执行。
 
 >[!CAUTION]
 >
->init.js.jsp脚本在创作和发布实例上运行，但前提是已将上下文存储组件添加到客户端上下文中。
+>init.js.jsp脚本在创作和发布实例上运行，但前提是已将上下文存储组件添加到客户端上下文。
 
-以下过程将创建init.js.jsp脚本文件并添加用于设置正确mime类型的代码。 随后是执行存储初始化的代码。
+以下过程创建init.js.jsp脚本文件并添加用于设置正确mime类型的代码。 随后是执行存储初始化的代码。
 
 1. 右键单击上下文存储组件节点，然后单击“创建”>“创建文件”。
 1. 在“名称”字段中，键入 `init.js.jsp` 然后单击“确定”。
-1. 在页面顶部，添加以下代码，然后单击全部保存。
+1. 在页面顶部，添加以下代码，然后单击“全部保存”。
 
    ```java
    <%@page contentType="text/javascript" %>
@@ -262,7 +262,7 @@ AEM提供可以扩展的genericstore和genericstoreproperties上下文存储组�
 
 #### HTML结构 {#html-structure}
 
-Personalization.ui客户端库文件夹(/etc/clientlibs/foundation/personalization/ui/themes/default)提供Client Context用于设置HTML代码格式的CSS样式。 以下代码说明了用于显示存储数据的建议结构：
+personalization.ui客户端库文件夹(/etc/clientlibs/foundation/personalization/ui/themes/default)提供了客户端上下文用于设置HTML代码格式的CSS样式。 以下代码说明了用于显示存储数据的建议结构：
 
 ```xml
 <div class="cq-cc-store">
@@ -291,8 +291,8 @@ Personalization.ui客户端库文件夹(/etc/clientlibs/foundation/personalizati
 
 此 `/libs/cq/personalization/components/contextstores/profiledata` 上下文存储组件使用此结构来显示配置文件会话存储中的数据。 此 `cq-cc-thumbnail` 类放置缩略图图像。 此 `cq-cc-store-property-level*x*` 类设置字母数字数据的格式：
 
-* level0、level1和level2垂直分布，使用白色字体。
-* 级别3和任何其他级别水平分布，并使用背景较暗的白色字体。
+* level0、level1和level2是垂直分布的，使用白字体。
+* 级别3和任何其他级别水平分布，并使用带有较深背景的白字体。
 
 ![chlimage_1-4](assets/chlimage_1-4.png)
 
@@ -300,8 +300,8 @@ Personalization.ui客户端库文件夹(/etc/clientlibs/foundation/personalizati
 
 要使用genericstore组件呈现存储数据，您必须执行以下操作：
 
-* 将personalization：storeRendererTag标记添加到组件JSP脚本以标识会话存储的名称。
-* 对会话存储类实施渲染器方法。
+* 将personalization：storeRendererTag标记添加到组件JSP脚本中，以标识会话存储的名称。
+* 对会话存储类实施渲染方法。
 
 #### 标识泛型存储会话存储 {#identifying-the-genericstore-session-store}
 
@@ -319,20 +319,20 @@ Personalization.ui客户端库文件夹(/etc/clientlibs/foundation/personalizati
 
 #### 实现会话存储渲染方法 {#implementing-the-session-store-renderer-method}
 
-您的会话存储需要每当必须呈现组件时都调用的“renderer”方法。 使用两个参数调用renderer函数：
+您的会话存储需要每当必须呈现组件时都调用的“renderer”方法。 使用以下两个参数调用渲染器函数：
 
 * @param {String} 存储要呈现的存储
-* @param {String} 必须将存储呈现到的div的divId ID。
+* @param {String} 必须将存储呈现到的div的divId 。
 
 ## 与会话存储区交互 {#interacting-with-session-stores}
 
-使用JavaScript与会话存储区交互。
+使用JavaScript与会话存储交互。
 
 ### 访问会话存储 {#accessing-session-stores}
 
-获取会话存储对象以将数据读取或写入存储。 [CQ_Analytics.ClientContextMgr](/help/sites-developing/ccjsapi.md#cq-analytics-clientcontextmgr) 根据商店名称提供对商店的访问权限。 获取后，请使用 [cq_Analytics.SessionStore](/help/sites-developing/ccjsapi.md#cq-analytics-sessionstore) 或 [CQ_Analytics.PersistedSessionStore](/help/sites-developing/ccjsapi.md#cq-analytics-persistedsessionstore) 以与存储数据交互。
+获取会话存储对象以将数据读取或写入存储。 [CQ_Analytics.ClientContextMgr](/help/sites-developing/ccjsapi.md#cq-analytics-clientcontextmgr) 根据存储名称提供对存储的访问。 获取后，请使用 [cq_Analytics.SessionStore](/help/sites-developing/ccjsapi.md#cq-analytics-sessionstore) 或 [CQ_Analytics.PersistedSessionStore](/help/sites-developing/ccjsapi.md#cq-analytics-persistedsessionstore) 以与存储数据交互。
 
-以下示例获得 `profile` 存储，然后检索 `formattedName` 属性。
+以下示例将获得 `profile` 存储，然后检索 `formattedName` 属性。
 
 ```
 function getName(){
@@ -345,11 +345,11 @@ function getName(){
 }
 ```
 
-### 创建监听程序以响应会话存储区更新 {#creating-a-listener-to-react-to-a-session-store-update}
+### 创建侦听器以响应会话存储更新 {#creating-a-listener-to-react-to-a-session-store-update}
 
-会话会存储触发事件，因此可以根据这些事件添加侦听器并触发事件。
+会话会存储触发事件，因此可以添加侦听器并根据这些事件触发事件。
 
-会话存储构建于 `Observable` 模式。 它们可以扩展 [`CQ_Analytics.Observable`](/help/sites-developing/ccjsapi.md#cq-analytics-observable) 可提供 ` [addListener](/help/sites-developing/ccjsapi.md#addlistener-event-fct-scope)` 方法。
+会话存储构建于 `Observable` 模式。 它们会扩展 [`CQ_Analytics.Observable`](/help/sites-developing/ccjsapi.md#cq-analytics-observable) 可提供 ` [addListener](/help/sites-developing/ccjsapi.md#addlistener-event-fct-scope)` 方法。
 
 以下示例将一个监听程序添加到 `update` 的事件 `profile` 会话存储。
 
@@ -369,21 +369,21 @@ if( profileStore ) {
 
 ### 检查是否已定义和初始化会话存储 {#checking-that-a-session-store-is-defined-and-initialized}
 
-会话存储区在加载并使用数据初始化之前不可用。 以下因素可能会影响会话存储可用性的时间：
+在加载会话存储并使用数据初始化会话存储之前，会话存储不可用。 以下因素可能会影响会话存储可用性的时间：
 
 * 页面正在加载
 * JavaScript加载
 * JavaScript执行时间
 * XHR请求的响应时间
-* 对会话存储区的动态更改
+* 对会话存储区进行动态更改
 
-使用 [CQ_Analytics.ClientContextUtils](/help/sites-developing/ccjsapi.md#cq-analytics-clientcontextutils) 对象的 [onStoreRegistered](/help/sites-developing/ccjsapi.md#onstoreregistered-storename-callback) 和 [onStoreInitialled](/help/sites-developing/ccjsapi.md#onstoreinitialized-storename-callback-delay) 方法仅在会话存储可用时用于访问。 这些方法使您能够注册对会话注册和初始化事件作出反应的事件侦听器。
+使用 [CQ_Analytics.ClientContextUtils](/help/sites-developing/ccjsapi.md#cq-analytics-clientcontextutils) 对象的 [onStoreRegistered](/help/sites-developing/ccjsapi.md#onstoreregistered-storename-callback) 和 [onStoreInitialled](/help/sites-developing/ccjsapi.md#onstoreinitialized-storename-callback-delay) 方法仅在会话存储可用时才进行访问。 这些方法使您能够注册对会话注册和初始化事件做出反应的事件侦听器。
 
 >[!CAUTION]
 >
 >如果您依赖于其他商店，则必须满足从未注册该商店的情况。
 
-以下示例使用 `onStoreRegistered` 的事件 `profile` 会话存储。 注册存储后，监听程序将添加到 `update` 会话存储的事件。 更新存储时， `<div class="welcome">` 页面上的元素将更新为来自 `profile` 商店。
+以下示例使用 `onStoreRegistered` 的事件 `profile` 会话存储。 注册存储后，侦听器将添加到 `update` 会话存储的事件。 更新存储时， `<div class="welcome">` 页面上的元素将更新为来自 `profile` 商店。
 
 ```
 //listen for the store registration
@@ -413,7 +413,7 @@ function getName(){
 
 ### 从sessionpersistence Cookie排除属性 {#excluding-a-property-from-the-sessionpersistence-cookie}
 
-要阻止的属性，请执行以下操作 `PersistedSessionStore` 从persistent(即从 `sessionpersistence` cookie)，将属性添加到持久会话存储的非持久属性列表。
+要阻止的属性，请执行以下操作 `PersistedSessionStore` 从persistent(即从 `sessionpersistence` cookie)，将属性添加到持久会话存储的非持久属性列表中。
 
 请参阅 ` [CQ_Analytics.PersistedSessionStore.setNonPersisted(propertyName)](/help/sites-developing/ccjsapi.md#setnonpersisted-name)`
 
@@ -437,7 +437,7 @@ CQ_Analytics.ClientContextUtils.onStoreRegistered("surferinfo", function(store) 
 从桌面页面切换到移动设备等效页面时：
 
 * 加载移动设备页面的DOM。
-* 主要 `div` （必需）将提取并插入到当前桌面页面中。
+* 主要 `div` （必需）将提取包含内容的并插入到当前桌面页面中。
 
 * 必须手动配置加载的CSS和正文类。
 
@@ -480,7 +480,7 @@ window.CQMobileSlider["geometrixx-outdoors"] = {
 * 扩展genericstoreproperties组件。
 * 使用CQ_Analytics.JSONPStore JavaScript对象初始化存储。
 * 调用JSONP服务以检索数据并将其添加到存储中。
-* 在Client Context中渲染数据。
+* 在Client Context中呈现数据。
 
 ### 添加地理位置组件 {#add-the-geoloc-component}
 
@@ -488,7 +488,7 @@ window.CQMobileSlider["geometrixx-outdoors"] = {
 
 1. 在Web浏览器中打开CRXDE Lite([https://localhost:4502/crx/de](https://localhost:4502/crx/de))。
 1. 右键单击 `/apps` 文件夹，然后单击创建>创建文件夹。 指定名称 `myapp` 然后单击“确定”。
-1. 同样，在下方 `myapp`，创建一个名为的文件夹 `contextstores`.”
+1. 同样，如下 `myapp`，创建一个名为的文件夹 `contextstores`.&quot;
 1. 右键单击 `/apps/myapp/contextstores` 文件夹，然后单击“创建”>“创建组件”。 指定以下属性值，然后单击“下一步”：
 
    * 标签： geoloc
@@ -496,14 +496,14 @@ window.CQMobileSlider["geometrixx-outdoors"] = {
    * 超级类型：cq/personalization/components/contextstores/genericstoreproperties
    * 组：客户端上下文
 
-1. 在“创建组件”对话框中，单击每个页面上的“下一步”，直到启用“确定”按钮，然后单击“确定”。
+1. 在“创建组件”对话框中，单击每一页上的“下一步”，直到启用“确定”按钮，然后单击“确定”。
 1. 单击全部保存。
 
-### 创建地理位置的“编辑”对话框 {#create-the-geoloc-edit-dialog}
+### 创建“地理位置编辑”对话框 {#create-the-geoloc-edit-dialog}
 
-上下文存储组件需要“编辑”对话框。 地理位置编辑对话框包含一个静态消息，指示没有要配置的属性。
+上下文存储组件需要一个“编辑”对话框。 地理位置编辑对话框包含一条静态消息，指示没有要配置的属性。
 
-1. 右键单击 `/libs/cq/personalization/components/contextstores/genericstoreproperties/dialog` 节点，然后单击复制。
+1. 右键单击 `/libs/cq/personalization/components/contextstores/genericstoreproperties/dialog` 节点并单击 复制。
 1. 右键单击 `/apps/myapp/contextstores/geoloc` 节点，然后单击粘贴。
 1. 删除/apps/myapp/contextstores/geoloc/dialog/items/items/tab1/items节点下的所有子节点：
 
@@ -521,7 +521,7 @@ window.CQMobileSlider["geometrixx-outdoors"] = {
    | 名称 | 类型 | 价值 |
    |---|---|---|
    | cls | 字符串 | x-form-fieldset-description |
-   | text | 字符串 | Geoloc组件无需配置。 |
+   | text | 字符串 | geoloc组件无需配置。 |
    | xtype | 字符串 | 静态 |
 
 1. 单击全部保存。
@@ -532,10 +532,10 @@ window.CQMobileSlider["geometrixx-outdoors"] = {
 
 将init.js.jsp文件添加到geoloc组件中，并使用它来创建会话存储、检索位置数据并将其添加到存储中。
 
-init.js.jsp文件在页面加载Client Context时执行。 届时，将加载客户端上下文JavaScript API以供您的脚本使用。
+init.js.jsp文件在页面加载Client Context时执行。 到那时，将加载Client Context JavaScript API以供脚本使用。
 
-1. 右键单击/apps/myapp/contextstores/geoloc节点，然后单击“创建”>“创建文件”。 指定“名称”init.js.jsp ，然后单击“确定”。
-1. 将以下代码添加到页面顶部，然后单击全部保存。
+1. 右键单击/apps/myapp/contextstores/geoloc节点，然后单击“创建”>“创建文件”。 指定init.js.jsp的名称，然后单击“确定”。
+1. 将以下代码添加到页面顶部，然后单击“全部保存”。
 
    ```java
    <%@page contentType="text/javascript;charset=utf-8" %><%
@@ -552,7 +552,7 @@ init.js.jsp文件在页面加载Client Context时执行。 届时，将加载客
    <% log.info(" ***** done initializing geoloc ************"); %>
    ```
 
-### 渲染geoloc会话存储数据 {#render-the-geoloc-session-store-data}
+### 呈现geoloc会话存储数据 {#render-the-geoloc-session-store-data}
 
 将代码添加到geoloc组件的JSP文件中，以在Client Context中呈现存储数据。
 
@@ -592,7 +592,7 @@ init.js.jsp文件在页面加载Client Context时执行。 届时，将加载客
 将位置存储组件添加到客户端上下文，以便在页面加载时进行初始化。
 
 1. 在创作实例上打开Geometrixx Outdoors主页([https://localhost:4502/content/geometrixx-outdoors/en.html](https://localhost:4502/content/geometrixx-outdoors/en.html))。
-1. 单击Ctrl-Alt-c (windows)或control-option-c (Mac)以打开“客户端上下文”。
+1. 单击Ctrl-Alt-c (windows)或control-option-c (Mac)以打开客户端上下文。
 1. 单击Client Context顶部的编辑图标以打开Client Context Designer。
 
    ![方形内由铅笔指示的编辑图标。](do-not-localize/chlimage_1.png)
@@ -603,8 +603,8 @@ init.js.jsp文件在页面加载Client Context时执行。 届时，将加载客
 
 在编辑模式下打开Geometrixx Outdoors主页，然后打开Client Context以查看位置存储组件中的数据。
 
-1. 打开Geometrixx Outdoors网站的英语页面。 ([https://localhost:4502/content/geometrixx-outdoors/en.html](https://localhost:4502/content/geometrixx-outdoors/en.html))
-1. 要打开“客户端上下文”，请按Ctrl-Alt-c (windows)或control-option-c (Mac)。
+1. 打开Geometrixx Outdoors网站的英文页面。 ([https://localhost:4502/content/geometrixx-outdoors/en.html](https://localhost:4502/content/geometrixx-outdoors/en.html))
+1. 要打开Client Context，请按Ctrl-Alt-c (windows)或control-option-c (Mac)。
 
 ## 创建自定义的客户端上下文 {#creating-a-customized-client-context}
 

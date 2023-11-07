@@ -2,16 +2,16 @@
 title: 翻译内容
 description: 使用翻译连接器和规则来翻译 Headless 内容。
 exl-id: a2c2bb9f-97b9-42fd-9bd1-e75c113fb514
-source-git-commit: f627bc2b58578df1b4ff6c95d87f0c64daafa1c7
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '2163'
-ht-degree: 82%
+source-wordcount: '2162'
+ht-degree: 81%
 
 ---
 
 # 翻译内容 {#translate-content}
 
-使用翻译集成和规则来翻译Headless内容。
+使用翻译集成和规则来翻译 Headless 内容。
 
 ## 迄今为止的故事 {#story-so-far}
 

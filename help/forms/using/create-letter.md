@@ -9,9 +9,9 @@ topic-tags: correspondence-management
 discoiquuid: 6cef0bcf-e2f0-4a5a-85a1-6d8a5dd9bd01
 feature: Correspondence Management
 exl-id: 2f996a50-7c7d-41b6-84b2-523b6609254b
-source-git-commit: 10227bcfcfd5a9b0f126fee74dce6ec7842f5e95
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '3983'
+source-wordcount: '3979'
 ht-degree: 2%
 
 ---
@@ -138,7 +138,7 @@ ht-degree: 2%
   </tr> 
   <tr> 
    <td>存储<br /> 来自中央存储库的图像</td> 
-   <td>图像，如徽标和签名图像。 公司徽标等图像会出现在大多数或所有信函中。 签名图像专用于信件和代表其发送信件的人。</td> 
+   <td>图像，如徽标和签名图像。 公司徽标等图像会出现在大多数或所有通信中。 签名图像专用于信件和代表其发送信件的人。</td> 
    <td><p>存储在AEM assets (DAM)中的图像<br /> </p> <p> </p> </td> 
   </tr> 
  </tbody> 

@@ -1,18 +1,14 @@
 ---
 title: 为JBoss应用程序服务器配置SSL
-seo-title: Configuring SSL for JBoss Application Server
 description: 了解如何为JBoss应用程序服务器配置SSL。
-seo-description: Learn how to configure SSL for JBoss Application Server.
-uuid: 7c13cf00-ea89-4894-a4fc-aaeec7ae9f66
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_ssl
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: c187daa4-41b7-47dc-9669-d7120850cafd
 exl-id: 8eb4f691-a66b-498e-8114-307221f63718
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '908'
+source-wordcount: '907'
 ht-degree: 0%
 
 ---
@@ -30,24 +26,24 @@ ht-degree: 0%
 
 ## 创建SSL凭据 {#create-an-ssl-credential}
 
-1. 在命令提示符下，导航到 *[JAVA主页]*/bin并键入以下命令以创建凭据和密钥库：
+1. 在命令提示符下，导航至 *[JAVA主页]*/bin并键入以下命令以创建凭据和keystore：
 
-   `keytool -genkey -dname "CN=`*主机名* `, OU=`*组名称* `, O=`*公司名称* `,L=`*城市名称* `, S=`*状态* `, C=`国家/地区代码” `-alias "AEMForms Cert"` `-keyalg RSA -keypass`*key_password* `-keystore`*keystorename* `.keystore`
-
-   >[!NOTE]
-   >
-   >Replace `[JAVA_HOME]` 替换为安装JDK的目录，并将斜体文本替换为与您的环境对应的值。 主机名是应用程序服务器的完全限定域名。
-
-1. 输入 `keystore_password` 提示输入密码时。 密钥库和密钥的密码必须相同。
+   `keytool -genkey -dname "CN=`*主机名* `, OU=`*组名称* `, O=`*公司名称* `,L=`*城市名称* `, S=`*状态* `, C=`国家代码” `-alias "AEMForms Cert"` `-keyalg RSA -keypass`*key_password* `-keystore`*keystorename* `.keystore`
 
    >[!NOTE]
    >
-   >此 `keystore_password` *在此步骤输入的密码(key_password)可能与您在步骤1中输入的密码(key_password)相同，也可能不同。*
+   >替换 `[JAVA_HOME]` 替换为安装JDK的目录，并将斜体文本替换为与您的环境对应的值。 主机名是应用程序服务器的完全限定域名。
 
-1. 复制 *keystorename*.keystore到 `[appserver root]/server/[type]/conf` 通过键入以下命令之一来创建directory ：
+1. 输入 `keystore_password` 提示输入密码时。 密钥库的密码和密钥必须相同。
+
+   >[!NOTE]
+   >
+   >此 `keystore_password` *在此步骤输入的密码(key_password)可能与您在步骤1中输入的密码相同，也可能不同。*
+
+1. 复制 *keystorename*.keystore到 `[appserver root]/server/[type]/conf` 目录，键入以下命令之一：
 
    * (Windows Single Server) `copy` `keystorename.keystore[appserver root]\standalone\configuration`
-   * （Windows Server群集）复制 `keystorename.keystore[appserver root]\domain\configuration`
+   * （Windows Server群集）副本 `keystorename.keystore[appserver root]\domain\configuration`
    * （Linux单服务器） `cp keystorename.keystore [appserver root]/standalone/configuration`
    * （Linux服务器群集） `cp <em>keystorename</em>.keystore<em>[appserver root]</em>/domain/configuration`
 
@@ -58,7 +54,7 @@ ht-degree: 0%
    * （服务器群集） `keytool -export -alias "AEMForms Cert" -file AEMForms_cert.cer -keystore [appserver root]/domain/configuration/keystorename.keystore`
 
 1. 输入 *keystore_password* 提示输入密码时。
-1. 将AEMForms_cert.cer文件复制到 *[appserver根] \conf* 目录，键入以下命令：
+1. 将AEMForms_cert.cer文件复制到 *[appserver根] \conf* 目录，方法是：
 
    * (Windows Single Server) `copy AEMForms_cert.cer [appserver root]\standalone\configuration`
    * （Windows Server群集） `copy AEMForms_cert.cer [appserver root]\domain\configuration`
@@ -77,11 +73,11 @@ ht-degree: 0%
 
 1. 通过键入以下命令导入证书：
 
-   `keytool -import -alias "AEMForms Cert" -file`*Aemforms_cert* `.cer -keystore`*JAVA_HOME* `\jre\lib\security\cacerts`
+   `keytool -import -alias "AEMForms Cert" -file`*aemforms_cert* `.cer -keystore`*JAVA_HOME* `\jre\lib\security\cacerts`
 
 1. 类型 `changeit` 作为密码。 此密码是Java安装的默认密码，系统管理员可能已对其进行更改。
-1. 提示输入时 `Trust this certificate? [no]`：，类型 `yes`. 显示确认“Certificate was added to keystore”。
-1. 如果您是通过SSL从Workbench连接，请在Workbench计算机上安装证书。
+1. 提示输入时 `Trust this certificate? [no]`：，类型 `yes`. 此时会显示确认“Certificate waded to keystore”。
+1. 如果通过SSL从Workbench连接，请在Workbench计算机上安装证书。
 1. 在文本编辑器中，打开以下文件进行编辑：
 
    * 单服务器 —  `[appserver root]`/standalone/configuration/lc_&lt;dbname turnkey=&quot;&quot;>.xml
@@ -107,13 +103,13 @@ ht-degree: 0%
 
    `<http-listener name="default" socket-binding="http" redirect-socket="https" max-post-size="104857600"/>`
 
-   将以下内容添加到 &lt;server> 部分出现在上述代码之后：
+   将以下内容添加到 &lt;server> 部分位于上述代码之后：
 
    ```xml
    <https-listener name="default-secure" socket-binding="https" security-realm="SSLRealm"/>
    ```
 
-   * **对于服务器群集，** 在 [appserver根]\domain\configuration\host.xml在所有节点上，在后面添加以下内容 &lt;security-realms> 部分：
+   * **对于服务器群集，** 在 [appserver根]\domain\configuration\host.xml在所有节点上，添加以下内容 &lt;security-realms> 部分：
 
    ```xml
    <security-realm name="SSLRealm">
@@ -129,7 +125,7 @@ ht-degree: 0%
 
    `<http-listener name="default" socket-binding="http" redirect-socket="https" max-post-size="104857600"/>`
 
-   将以下内容添加到 &lt;server> 部分出现在上述代码之后：
+   将以下内容添加到 &lt;server> 部分位于上述代码之后：
 
    ```xml
    <https-listener name="default-secure" socket-binding="https" security-realm="SSLRealm"/>
@@ -138,41 +134,41 @@ ht-degree: 0%
 1. 更改 `keystoreFile` 属性和 `keystorePass` 创建密钥库时指定的密钥库密码的属性。
 1. 重新启动应用程序服务器：
 
-   * 对于全包安装：
+   * 对于统包安装：
 
       * 在Windows控制面板中，单击“管理工具”，然后单击“服务”。
-      * 为Adobe Experience Manager表单选择JBoss。
+      * 选择适用于Adobe Experience Manager表单的JBoss。
       * 选择操作>停止。
       * 等待服务的状态显示为已停止。
       * 选择操作>开始。
+
    * 对于Adobe预配置或手动配置的JBoss安装：
 
-      * 在命令提示符下，导航到 *`[appserver root]`*/bin.
+      * 在命令提示符下，导航至 *`[appserver root]`*/bin.
       * 输入以下命令停止服务器：
 
          * (Windows) `shutdown.bat -S`
          * (Linux) `./shutdown.sh -S`
+
       * 等待JBoss进程完全关闭（当JBoss进程将控制权返回到在其中启动它的终端时）。
       * 输入以下命令启动服务器：
 
          * (Windows) `run.bat -c <profile>`
          * (Linux) `./run.sh -c <profile>`
 
-
-
 1. 要使用SSL访问管理控制台，请键入 `https://[host name]:'port'/adminui` 在Web浏览器中：
 
    JBoss的默认SSL端口为8443。 从此处，在访问AEM表单时指定此端口。
 
-## 向CA请求凭据 {#request-a-credential-from-a-ca}
+## 从CA请求凭据 {#request-a-credential-from-a-ca}
 
-1. 在命令提示符下，导航到 *[JAVA主页]*/bin并键入以下命令以创建密钥库和密钥：
+1. 在命令提示符下，导航至 *[JAVA主页]*/bin ，然后键入以下命令以创建密钥库和密钥：
 
-   `keytool -genkey -dname "CN=`*主机名* `, OU=`*组名称* `, O=`*公司名称* `, L=`*城市名称* `, S=`*状态* `, C=`*国家/地区代码*” `-alias "AEMForms Cert"` `-keyalg RSA -keypass`-*key_password* `-keystore`*keystorename* `.keystore`
+   `keytool -genkey -dname "CN=`*主机名* `, OU=`*组名称* `, O=`*公司名称* `, L=`*城市名称* `, S=`*状态* `, C=`*国家/地区代码*&quot; `-alias "AEMForms Cert"` `-keyalg RSA -keypass`-*key_password* `-keystore`*keystorename* `.keystore`
 
    >[!NOTE]
    >
-   >Replace *`[JAVA_HOME]`* 替换为安装JDK的目录，并将斜体文本替换为与您的环境对应的值。
+   >替换 *`[JAVA_HOME]`* 替换为安装JDK的目录，并将斜体文本替换为与您的环境对应的值。
 
 1. 键入以下命令以生成要发送到证书颁发机构的证书请求：
 
@@ -182,24 +178,23 @@ ht-degree: 0%
 
 ## 使用从CA获得的凭据启用SSL {#use-a-credential-obtained-from-a-ca-to-enable-ssl}
 
-1. 在命令提示符下，导航到 *`[JAVA HOME]`*/bin并键入以下命令以导入已对CSR签名的CA的根证书：
+1. 在命令提示符下，导航至 *`[JAVA HOME]`*/bin ，并键入以下命令以导入已与CSR签名的CA的根证书：
 
    `keytool -import -trustcacerts -file` rootcert.pem -keystore` keystorename.keystore -alias root`
 
-   如果浏览器中没有根证书，也请将其导入。
+   如果根证书不在浏览器中，也将其导入浏览器。
 
    >[!NOTE]
    >
-   >Replace *`[JAVA_HOME]`替换为安装JDK的目录，并将斜体文本替换为与您的环境对应的值。*
+   >替换 *`[JAVA_HOME]`替换为安装JDK的目录，并将斜体文本替换为与您的环境对应的值。*
 
-1. 在命令提示符下，导航到 *`[JAVA HOME]`*/bin并键入以下命令以将凭据导入keystore：
+1. 在命令提示符下，导航至 *`[JAVA HOME]`*/bin ，然后键入以下命令以将凭据导入keystore：
 
    `keytool -import -trustcacerts -file`*CACertificateName* `.crt -keystore`*keystorename* `.keystore`
 
    >[!NOTE]
    >
-   >* Replace `[JAVA_HOME]` 替换为安装JDK的目录，并将斜体文本替换为与您的环境对应的值。
+   >* 替换 `[JAVA_HOME]` 替换为安装JDK的目录，并将斜体文本替换为与您的环境对应的值。
    >* 导入的CA签名证书将替换自签名公共证书（如果存在）。
-
 
 1. 完成创建SSL凭据的步骤13 - 18。

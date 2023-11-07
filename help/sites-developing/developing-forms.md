@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 6ee3bd3b-51d1-462f-b12e-3cbe24898b85
 docset: aem65
 exl-id: f43e9491-aa8f-40af-9800-123695142559
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '1947'
+source-wordcount: '1946'
 ht-degree: 0%
 
 ---
@@ -253,7 +253,7 @@ An `addfields` 在写入表单起始HTML后，将立即调用脚本。 这允许
 使用对话框顶部的字段指定以下信息：
 
 * 指定隐藏或显示组件的条件。
-* 是否需要true的任何或所有条件才能显示或隐藏组件。
+* 显示或隐藏组件时，需要为任意或全部条件是否为true。
 
 一个或多个条件将显示在这些字段下方。 条件会将另一个表单组件（位于同一表单上）的值与一个值进行比较。 如果字段中的实际值满足条件，则条件的计算结果为true。 条件包括以下信息：
 

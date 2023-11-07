@@ -2,10 +2,10 @@
 title: 了解 CMS Headless 开发
 description: 在 AEM Headless 开发人员历程的这一部分中，了解 Headless 技术以及使用它的原因。
 exl-id: f0989cea-3102-43cd-976e-9a6b265d9c15
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '1612'
-ht-degree: 89%
+source-wordcount: '1611'
+ht-degree: 88%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 89%
 
 ![经典全栈 CMS](assets/full-stack.png)
 
-在全栈 CMS 中，用于操作内容的所有功能都在 CMS 中。该系统的各种功能构成了 CMS 堆栈的不同组件。全栈解决方案有许多优点。
+在全栈CMS中，处理内容的所有功能都在CMS中。 该系统的各种功能构成了 CMS 堆栈的不同组件。全栈解决方案有许多优点。
 
 * 您需要维护一个系统。
 * 集中管理内容。
