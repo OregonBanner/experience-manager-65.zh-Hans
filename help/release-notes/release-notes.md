@@ -3,9 +3,9 @@ title: 的发行说明 [!DNL Adobe Experience Manager] 6.5
 description: 查找版本信息、新增功能、安装操作说明以及的详细更改列表 [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 4
 exl-id: d0dc5dfb-25a3-4388-a1d4-abba70081cc3
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 61f3079a88e39c02b29bfafc7b2b9d4d098cef6b
 workflow-type: tm+mt
-source-wordcount: '4632'
+source-wordcount: '4640'
 ht-degree: 4%
 
 ---
@@ -492,7 +492,7 @@ To retrieve your runtime copy, Adobe recommends to synchronize the design-time c
 
 #### 交互式通信
 
-* 升级到AEM Service Pack 18后，无法编辑交互式通信信件。 (FORMS-10578)要解决此问题，请执行以下步骤：
+* 升级到AEM Service Pack 18后，无法在编辑模式下打开包含大型内联图像的交互式通信。 (FORMS-10578)要解决此问题，请执行以下步骤：
 
    1. 下载 [修补程序 — FORMS-10578](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) 从SD链接。
    1. 解压缩修补程序存档文件，以便获取Experience Manager包(.zip)和捆绑包(.jar)文件。
