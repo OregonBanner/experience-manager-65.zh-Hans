@@ -11,7 +11,7 @@ discoiquuid: 69210727-dde3-495a-87b7-2e8173e6b664
 docset: aem65
 role: Admin
 exl-id: b5f6a54e-92d1-4631-a1d1-184f37d174b6
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '2509'
 ht-degree: 0%
@@ -232,7 +232,7 @@ AEM Forms用户界面使用文件夹来排列资源。 这些文件夹用于排�
 
    如果您将资产/信件复制并粘贴到同一位置，则会将后缀“ — CopyXX”添加到资产/信件的现有名称中。 如果复制的资产/信件不存在标题，则自动生成的标题字段将保持空白。
 
-1. 如果需要，请编辑要用于保存资产/信件副本的标题和名称。
+1. 如有必要，请编辑要用于保存资产/信件副本的标题和名称。
 1. 点按粘贴。 将创建复制资产的新副本。
 
 ## 搜索 {#search-forms}

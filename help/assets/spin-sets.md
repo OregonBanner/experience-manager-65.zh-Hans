@@ -11,9 +11,9 @@ docset: aem65
 feature: Spin Sets,Asset Management
 role: User, Admin
 exl-id: 758ad754-15de-4e72-9b7d-ab49c51d7d4f
-source-git-commit: 06a6d4e0ba2aeaefcfb238233dd98e8bbd6731da
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
-source-wordcount: '1974'
+source-wordcount: '1975'
 ht-degree: 8%
 
 ---
@@ -102,7 +102,7 @@ ht-degree: 8%
 
 以下是有关旋转集图像的一些最佳实践。 通常，旋转集中拥有的图像越多，图像旋转效果就越好。 但是，在集中包含许多图像也会增加加载图像所需的时间。 Experience Manager建议在拍摄旋转集中使用的图像时遵循以下准则：
 
-* 至少，在一维旋转集中使用8-12个图像，在二维旋转集中使用16-24个图像。 要旋转360度，至少需要8张图像。 一维旋转集更常见，因为创建二维旋转集需要大量劳力。
+* 至少，在一维旋转集中使用8-12个图像，在二维旋转集中使用16-24个图像。 至少需要8张图像才能旋转360度。 一维旋转集更常见，因为创建二维旋转集需要大量劳力。
 * 使用无损格式；建议使用TIFF和PNG。
 * 对所有图像进行蒙版，使项目出现在纯白色或其他高对比度背景上。 （可选）添加阴影。
 * 确保产品详细信息光照良好且清晰。

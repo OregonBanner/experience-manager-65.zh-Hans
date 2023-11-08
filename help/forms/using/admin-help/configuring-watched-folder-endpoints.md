@@ -6,7 +6,7 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/managing_endpoints
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 exl-id: ec169a01-a113-47eb-8803-bd783ea2c943
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '7174'
 ht-degree: 0%
@@ -54,7 +54,7 @@ ht-degree: 0%
 
 对于观察文件夹端点，如果作业只需要一个输入文件，则用户可以将该文件复制到观察文件夹的根目录。
 
-如果作业包含多个输入文件，则用户必须在监视文件夹层次结构之外创建一个包含所有必需文件的文件夹。 此新文件夹应包含输入文件（如果需要，还可以包含一个DDX文件）。 构造作业文件夹后，用户将其复制到观察文件夹的输入文件夹中。
+如果作业包含多个输入文件，则用户必须在监视文件夹层次结构之外创建一个包含所有必需文件的文件夹。 此新文件夹应包含输入文件（如果进程需要，还可以选择包含DDX文件）。 构造作业文件夹后，用户将其复制到观察文件夹的输入文件夹中。
 
 >[!NOTE]
 >

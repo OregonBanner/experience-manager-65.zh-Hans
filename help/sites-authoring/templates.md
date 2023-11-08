@@ -7,7 +7,7 @@ content-type: reference
 topic-tags: site-features
 docset: aem65
 exl-id: 363b8fab-6ce7-4338-8478-3f25f2a1f117
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '4834'
 ht-degree: 81%
@@ -125,7 +125,7 @@ AEM现在提供两种基本类型的模板：
 * 如有必要，可以[创建模板文件夹](#creating-a-template-folder-admin)
 * [创建模板](#creatinganewtemplateauthor)，最初为空
 
-* 如有必要，为该模板[定义其他属性](#definingtemplatepropertiesauthor)
+* [定义其他属性](#definingtemplatepropertiesauthor) 模板的（如有必要）
 * [编辑该模板](#editingtemplates)，以定义以下各项：
 
    * [结构](#editingatemplatestructureauthor) - 不能在使用该模板创建的页面上更改的预定义内容。

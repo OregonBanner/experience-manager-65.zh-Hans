@@ -3,16 +3,14 @@ title: 包管理器
 description: 了解使用包管理器进行AEM包管理的基础知识。
 feature: Administering
 role: Admin
-uuid: cba76a5f-5d75-4d63-a0f4-44c13fa1baf2
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: content
 content-type: reference
-discoiquuid: 6694a135-d1e1-4afb-9f5b-23991ee70eee
 docset: aem65
 exl-id: e8929d7c-9920-4c02-95a9-6f7f7a365203
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
-source-wordcount: '3570'
+source-wordcount: '3568'
 ht-degree: 2%
 
 ---
@@ -223,7 +221,7 @@ Official Service Pack
 
    >[!TIP]
    >
-   >如果您的实例具有大量包，则可能存在文件夹结构。 在这种情况下，创建新包之前可以更轻松地导航到所需的目标文件夹。
+   >如果您的实例具有许多包，则可能已有文件夹结构。 在这种情况下，创建新包之前可以更轻松地导航到所需的目标文件夹。
 
 1. 在 **新建包** 对话框，请输入以下字段：
 

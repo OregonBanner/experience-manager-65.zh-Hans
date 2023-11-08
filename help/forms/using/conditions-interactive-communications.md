@@ -10,7 +10,7 @@ discoiquuid: fe59d260-d392-4d6f-bb7e-2f2a1d701f51
 docset: aem65
 feature: Interactive Communication
 exl-id: 0c0dc6a2-b889-4516-8e08-1e9d31be2cce
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '1498'
 ht-degree: 0%
@@ -201,4 +201,4 @@ ht-degree: 0%
 1. 要在规则中插入变量，请将该变量拖放到规则中某个选项的占位符中。
 1. 构建有效规则后，点击 **[!UICONTROL 完成]**.
 
-   如果需要，可在条件中进行进一步更改并保存。
+   如有必要，请继续在条件中进行进一步更改并保存。

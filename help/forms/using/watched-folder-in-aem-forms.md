@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 docset: aem65
 exl-id: fbf5c7c3-cb01-4fda-8e5d-11d56792d4bf
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '7144'
 ht-degree: 0%
@@ -486,7 +486,7 @@ log.info("Exiting workflow script!")
 
 对于观察文件夹端点，如果作业只需要一个输入文件，则用户可以将该文件复制到Watched文件夹的根目录。
 
-如果作业包含多个输入文件，则用户必须在Watched Folder层次结构之外创建一个包含所有必需文件的文件夹。 此新文件夹应包含输入文件（如果需要，还可以包含一个DDX文件）。 创建作业文件夹后，用户将其复制到Watched文件夹的输入文件夹中。
+如果作业包含多个输入文件，则用户必须在Watched Folder层次结构之外创建一个包含所有必需文件的文件夹。 此新文件夹应包含输入文件（如果进程需要，还可以选择包含DDX文件）。 创建作业文件夹后，用户将其复制到Watched文件夹的输入文件夹中。
 
 >[!NOTE]
 >

@@ -5,7 +5,7 @@ contentOwner: AG
 role: Admin
 feature: Publishing
 exl-id: 5ba020a3-c36c-402b-a11b-d6b0426b03bf
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '1589'
 ht-degree: 4%
@@ -66,7 +66,7 @@ ht-degree: 4%
 要集成 [!DNL InDesign Server] 用于以下对象： [!DNL Experience Manager Assets] 配置代理后，您需要：
 
 1. [安装InDesign Server](#installing-the-indesign-server).
-1. 如果需要， [配置Experience Manager Assets工作流程](#configuring-the-aem-assets-workflow).
+1. 如有必要， [配置Experience Manager Assets工作流程](#configuring-the-aem-assets-workflow).
 仅当默认值不适用于您的实例时，才需要执行此操作。
 1. 配置 [InDesign Server的代理工作进程](#configuring-the-proxy-worker-for-indesign-server).
 
@@ -76,7 +76,7 @@ ht-degree: 4%
 
 1. 下载并安装 [!DNL InDesign Server].
 
-1. 如果需要，您可以自定义 [!DNL InDesign Server] 实例。
+1. 如有必要，您可以自定义您的 [!DNL InDesign Server] 实例。
 
 1. 从命令行启动服务器：
 

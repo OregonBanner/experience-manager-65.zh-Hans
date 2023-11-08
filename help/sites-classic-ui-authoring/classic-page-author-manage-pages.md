@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
 exl-id: bd2636d1-6f13-4c6c-b8cd-3bed9e83a101
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '1892'
 ht-degree: 17%
@@ -279,7 +279,7 @@ AEM提供了将内部链接更新到要重命名或移动的页面的功能。 �
 
    * **重命名为**
 
-     默认显示当前页面标签。 根据需要指定新页面标签。
+     默认显示当前页面标签。 指定新页面标签（如有必要）。
 
    * **调整**
 

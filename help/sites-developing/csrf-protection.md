@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: introduction
 content-type: reference
 exl-id: e6b0f8f7-54b0-4dd6-86ad-5516954c6d90
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
-source-wordcount: '251'
+source-wordcount: '247'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 0%
 
 ### 依赖项 {#dependencies}
 
-任何依赖于 `granite.jquery` 依赖项将自动从CSRF保护框架中受益。 如果任何组件均不是这种情况，则必须将依赖关系声明到 `granite.csrf.standalone` 才能使用该框架。
+任何依赖于 `granite.jquery` 依赖项可以自动从CSRF保护框架中受益。 如果不是，则对于任何组件，必须将依赖关系声明给 `granite.csrf.standalone` 才能使用该框架。
 
 ### 复制加密密钥 {#replicating-crypto-keys}
 

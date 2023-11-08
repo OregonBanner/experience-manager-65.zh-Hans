@@ -7,7 +7,7 @@ topic-tags: personalization
 content-type: reference
 docset: aem65
 exl-id: 6d759907-8796-4749-bd80-306ec7f2c819
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '1129'
 ht-degree: 13%
@@ -139,7 +139,7 @@ AEM可让您轻松创建和更新区段、Teaser和营销活动。 它还允许�
 
    ![在区段编辑器中编辑区段设置](assets/screen_shot_2012-02-02at103547am.png)
 
-1. 如果需要，可添加更多特征。 您可以使用以下公式来制定布尔表达式： **AND容器** 和 **OR容器** 在以下位置找到组件： **区段逻辑**. 通过区段编辑器，您可以删除不再需要的特征或容器，或将它们拖到语句中的新位置。
+1. 根据需要添加更多特征。 您可以使用以下公式来制定布尔表达式： **AND容器** 和 **OR容器** 在以下位置找到组件： **区段逻辑**. 通过区段编辑器，您可以删除不再需要的特征或容器，或将它们拖到语句中的新位置。
 
 ### 使用 AND 和 OR 容器 {#using-and-and-or-containers}
 

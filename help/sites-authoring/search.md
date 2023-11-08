@@ -9,10 +9,10 @@ content-type: reference
 discoiquuid: 4ec15013-f7ab-44d6-8053-ed28b14f95e2
 docset: aem65
 exl-id: dd65b308-c449-4f64-9f46-0797b922910f
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '508'
-ht-degree: 69%
+ht-degree: 64%
 
 ---
 
@@ -52,7 +52,7 @@ AEM 的创作环境提供了多种内容搜索机制，具体取决于资源类�
 
    ![screen_shot_2018-03-23at101445](assets/screen_shot_2018-03-23at101445.png)
 
-1. 如果需要，您可以删除位置过滤器（选中要删除的过滤器上的 **X**），以在所有控制台/资源类型之间进行筛选。
+1. 如有必要，您可以删除位置过滤器(选择 **X** ，以在所有控制台/资源类型之间进行搜索。
 1. 结果会显示，并按控制台和相关的资源类型进行分组。
 
    您可以选择特定资源（用于进一步操作），或通过选择所需的资源类型向下展开；例如， **查看所有站点**：

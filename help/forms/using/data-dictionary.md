@@ -10,7 +10,7 @@ discoiquuid: a1a0ad6b-023a-4822-9cce-0618657c3f9d
 docset: aem65
 feature: Correspondence Management
 exl-id: aaed75e6-8849-46a8-b986-896ad729adda
-source-git-commit: 10227bcfcfd5a9b0f126fee74dce6ec7842f5e95
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '3840'
 ht-degree: 1%
@@ -120,7 +120,7 @@ ht-degree: 1%
 1. 从数据字典列表中，选择适当的数据字典。 UI会显示复制图标。
 1. 点按复制。UI将显示“粘贴”图标。
 1. 点按粘贴。 将显示“粘贴”对话框。 系统会自动为新数据字典指定名称和标题。
-1. 如果需要，请编辑要用于保存数据字典副本的标题和名称。
+1. 如有必要，请编辑要用于保存数据字典副本的标题和名称。
 1. 点按粘贴。 将创建数据字典的副本。 现在，您可以在新建的数据字典中进行所需的更改。
 
 ## 请参阅引用数据字典元素的文档片段或文档 {#see-the-document-fragments-or-documents-that-refer-to-a-data-dictionary-element}

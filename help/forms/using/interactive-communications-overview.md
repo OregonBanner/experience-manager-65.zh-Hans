@@ -9,7 +9,7 @@ topic-tags: interactive-communications, introduction
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 67b03098-c58d-4a57-90e0-e4ddd78e5d99
 exl-id: 6cfbeec0-0be3-48b2-a4bb-fd19c69c92c7
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '485'
 ht-degree: 7%
@@ -56,7 +56,7 @@ ht-degree: 7%
    1. [图表](/help/forms/using/chart-component-interactive-communications.md)
    1. [文档片段](/help/forms/using/create-interactive-communication.md#document-fragment-properties)
 
-1. 预览打印和Web渠道，并根据需要编辑交互式通信。
+1. 预览打印和Web渠道，并在必要时编辑交互式通信。
 1. 代理使用代理UI来 [准备交互式通信](/help/forms/using/prepare-send-interactive-communication.md) 用于将其发送到收件人/帖子流程。
 
 ### 构建基块 {#buildingblocks}

@@ -12,9 +12,9 @@ legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/viewer
 feature: Viewer Presets
 role: User, Admin
 exl-id: 0899e497-88e9-4fc3-a6be-b3a149fb5b32
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
-source-wordcount: '4519'
+source-wordcount: '4520'
 ht-degree: 8%
 
 ---
@@ -114,7 +114,7 @@ Dynamic Media随附的所有现成查看器预设与以下系统完全兼容：
   </tr>
   <tr>
    <td><strong>全景图像</strong></td>
-   <td><p>全景图像和PanoramicVR查看器可渲染球形全景图像，以便用户沉浸在房间、属性、位置或景观的360°查看体验中。</p> <p>要使上传的图像符合球面全景的条件，该图像必须具有以下一项或两项之一：</p>
+   <td><p>全景图像和PanoramicVR查看器可渲染球形全景图像，以便用户沉浸在房间、属性、位置或景观的360度查看体验中。</p> <p>要使上传的图像符合球面全景的条件，该图像必须具有以下一项或两项之一：</p>
     <ul>
      <li>长宽比为2:1。</li>
      <li>已用关键字标记 <code>equirectangular</code>，或 <code>spherical</code> 和 <code>panorama</code>，或 <code>spherical </code>和 <code>panoramic</code>. 请参阅 <a href="/help/sites-authoring/tags.md">使用标记</a>.</li>

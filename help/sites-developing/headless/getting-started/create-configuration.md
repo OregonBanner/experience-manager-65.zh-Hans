@@ -2,10 +2,10 @@
 title: 创建配置Headless快速入门指南
 description: 创建配置作为在AEM 6.5中开始使用Headless的第一步。
 exl-id: f1df97a1-164f-4ed4-bb63-34caf35ae27c
-source-git-commit: 7355c149500f9e5044c9ff78af208d36ee681f56
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '295'
-ht-degree: 69%
+ht-degree: 67%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 69%
 
 1. 登录AEM，从主菜单选择 **工具 — >常规 — >配置浏览器**.
 1. 提供 **标题** 用于您的配置。
-   * 名称将根据标题自动生成，并根据以下内容进行调整 [AEM命名约定。](/help/sites-developing/naming-conventions.md). 它将成为存储库中的节点名称。
+   * 名称将根据标题自动生成，并根据以下内容进行调整： [AEM命名约定。](/help/sites-developing/naming-conventions.md). 它将成为存储库中的节点名称。
 1. 查看以下选项：
    * **内容片段模型**
    * **GraphQL 持久查询**
@@ -38,7 +38,7 @@ ht-degree: 69%
 
 1. 点击或单击&#x200B;**创建**
 
-如果需要，您可以创建多个配置。配置也可以嵌套。
+您可以根据需要创建多个配置。 配置也可以嵌套。
 
 >[!NOTE]
 >

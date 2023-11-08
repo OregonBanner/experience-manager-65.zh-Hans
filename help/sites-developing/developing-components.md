@@ -12,7 +12,7 @@ discoiquuid: 8cdb6db4-adaa-4eda-af7d-310a0b44b80b
 docset: aem65
 legacypath: /content/docs/en/aem/6-2/develop/components/components-touch-optimized
 exl-id: 573cdc36-e9c3-4803-9c4e-cebd0cf0a56f
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '3447'
 ht-degree: 1%
@@ -228,7 +228,7 @@ newComponent (cq:Component)
 
 如果要为组件定义样式和行为，可以创建专用的 [客户端库](/help/sites-developing/clientlibs.md) 定义您的自定义CSS/LESS和JS。
 
-要仅为组件对话框加载客户端库（即，不会为其他组件加载客户端库），您需要设置属性 `extraClientlibs` 对话框的类别名称更改为已创建的客户端库的类别名称。 如果您的客户端库很大和/或您的字段特定于此对话框，并且其他对话框不需要执行此操作，则建议您执行此操作。
+要仅为组件对话框加载客户端库（即，不会为其他组件加载客户端库），您需要设置属性 `extraClientlibs` 对话框的类别名称更改为已创建的客户端库的类别名称。 如果您的客户端库非常大和/或您的字段特定于此对话框，并且其他对话框不需要执行此操作，则建议您执行此操作。
 
 要为所有对话框加载客户端库，请将客户端库的类别属性设置为 `cq.authoring.dialog`. 这是渲染所有对话框时默认包括的客户端库的类别名称。 如果客户端库较小和/或字段是通用的，并且可在其他对话框中重复使用，则需要执行此操作。
 

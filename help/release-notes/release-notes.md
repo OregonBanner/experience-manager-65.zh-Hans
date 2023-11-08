@@ -2,35 +2,34 @@
 title: 的发行说明 [!DNL Adobe Experience Manager] 6.5
 description: 查找版本信息、新增功能、安装操作说明以及的详细更改列表 [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 4
-exl-id: d0dc5dfb-25a3-4388-a1d4-abba70081cc3
-source-git-commit: 31bc86f81620bdc6fe9877cdc96f4004a80d60f9
+source-git-commit: e3a3511a5854432b9c01748f7f5ffaf9182180f8
 workflow-type: tm+mt
-source-wordcount: '4641'
-ht-degree: 4%
+source-wordcount: '3392'
+ht-degree: 1%
 
 ---
 
 # [!DNL Adobe Experience Manager] 6.5最新Service Pack发行说明 {#aem-service-pack-release-notes}
 
-<!-- For an itemized list of all issues found in these release notes, see the following spreadsheet: https://adobe-my.sharepoint.com/:x:/r/personal/anujkapo_adobe_com/Documents/issue_tracker_sp_cfp_updates.xlsx?d=w3ea81ae4e6054153b132f2698c86f84e&csf=1&web=1&e=7yhrWb&nav=MTVfe0U0RjdDQUM3LTZCQ0EtNDk1Qy04Mjc1LTM2MUJEMzE1OEVGN30 -->
+<!-- For an itemized list of all issues found in these release notes, see the following spreadsheet: https://adobe-my.sharepoint.com/:x:/r/personal/anujkapo_adobe_com/_layouts/15/Doc.aspx?sourcedoc=%7B3ea81ae4-e605-4153-b132-f2698c86f84e%7D&action=edit&wdinitialsession=d8c7b903-87fc-4f2d-9ef2-542a82169570&wdrldsc=3&wdrldc=1&wdrldr=SessionMemoryQuotaExceededDuringSession -->
 
 <!-- DO NOT DELETE THIS HIDDEN NOTE      DO NOT DELETE THIS HIDDEN NOTE
 >[!NOTE]
 >
->Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on package one week after the scheduled [!DNL Experience Manager] Service Pack release date. In this case, the add-on packages release Thursday, June 1, 2023. In addition, a list of Forms fixes and enhancements is added to this section. -->
+>Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on package one week after the scheduled [!DNL Experience Manager] Service Pack release date. In this case, the add-on packages release Thursday, November 30, 2023. In addition, a list of Forms fixes and enhancements is added to this section. -->
 
 ## 发行版信息 {#release-information}
 
 | 产品 | [!DNL Adobe Experience Manager] 6.5 |
 | -------- | ---------------------------- |
-| 版本 | 6.5.18.0 <!-- UPDATE FOR EACH NEW RELEASE --> |
+| 版本 | 6.5.19.0 <!-- UPDATE FOR EACH NEW RELEASE --> |
 | 类型 | Service Pack版本 |
-| 日期 | 2023年8月24日星期四 <!-- UPDATE FOR EACH NEW RELEASE --> |
+| 日期 | 2023年11月23日星期四 <!-- UPDATE FOR EACH NEW RELEASE --> |
 | 下载 URL | [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.18.0.zip) <!-- UPDATE FOR EACH NEW RELEASE --> |
 
-## 中包括的内容 [!DNL Experience Manager] 6.5.18.0 {#what-is-included-in-aem-6518}
+## 中包括的内容 [!DNL Experience Manager] 6.5.19.0 {#what-is-included-in-aem-6519}
 
-[!DNL Experience Manager] 6.5.18.0包括自2019年4月首次推出6.5以来发布的新功能、关键客户请求的增强功能、错误修复以及性能、稳定性和安全性改进。 [安装此Service Pack](#install) 日期 [!DNL Experience Manager] 6.5.
+[!DNL Experience Manager] 6.5.19.0包括自2019年4月首次推出6.5以来发布的新功能、关键客户请求的增强功能、错误修复以及性能、稳定性和安全性改进。 [安装此Service Pack](#install) 日期 [!DNL Experience Manager] 6.5.
 
 <!-- UPDATE FOR EACH NEW RELEASE -->
 
@@ -42,245 +41,202 @@ ht-degree: 4%
 
 **关键功能**
 
-* Dynamic Media的Assets - [Dynamic Media中支持视频的多字幕和多音频轨道](/help/assets/video.md#about-msma) — 您现在可以轻松地将多个字幕和多个音轨添加到主视频中。 此功能意味着全球观众都能看懂您的视频。只需自定义一个主视频，即可发布到多种语言的全球观众，并遵循不同地区的辅助功能准则。此外，作者从用户界面中的一个选项卡即可管理字幕和音轨。
-
-* 资源 — 现在，您可以在搜索结果中导航到包含资源的文件夹位置，以便执行各种资源管理任务。 (ASSETS-23182)
+* A
 
 **关键增强功能**
 
-* 内容片段中的Sites Polaris选取器改进了性能。 (SITES-14092)
-
-* 允许站点页面编辑器/图像组件用户从远程AssetsCloud Service引用资源。 (SITES-13448和SITES-13433)
-
-* 要在“列表”视图中快速查找项目（系统中可能有许多项目），Adobe现在支持服务器端排序。 项目节点在用户界面中呈现之前，会根据用户选择的列在后端进行排序。 (NPR-41027)
-
-* AEM 6.5.18.0支持MongoDB 5.0到6.0。
+* S
 
 **已弃用功能**
 
 * 已弃用AEM中的ActiveMQ。 ActiveMQ用于两个AEM Publish实例之间的通信。 Adobe建议客户现在使用负载平衡器。
 
-**Forms**
-
-* **[在规则编辑器中使用自定义错误处理程序增强了错误处理](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/standard-validation-error-messages-adaptive-forms.html)**  — 现在，您可以调用自定义函数（使用客户端库）来响应外部服务返回的错误。 而且，您可以为最终用户提供量身定制的响应。 或者，您可以针对服务返回的错误采取特定操作。例如，您可以在后端中调用自定义工作流以获取特定错误代码，或通知客户服务已中断
-
-* **[增强的Adobe Sign工作流步骤](https://experienceleague.adobe.com/docs/experience-manager-65/forms/workflows/aem-forms-workflow-step-reference.html#sign-document-step)** - AEM Workflows中的Adobe Sign工作流步骤包含以下增强功能。
-
-   * **通过基于Government ID的身份验证增强Adobe Sign的安全性** - Adobe Acrobat Sign基于Government ID的身份验证提供额外的验证层。 它允许用户使用政府颁发的ID（驾照、身份证、护照）进行身份认证。 通过使用可信的标识文档，此增强功能为签名过程增添了更高的可信度，使其非常适合需要增强的安全性、合规性和用户验证的情况。
-
-   * **Adobe Sign文档审核追踪的透明度增强**  — 使用审核记录功能可详细了解Adobe Sign文档的生命周期。 利用审核记录功能，您现在可保留与文档相关的所有操作和交互的全面记录。其中包括查看者、编辑者或签署文档者以及每个事件的时间戳等详细信息。此增强对于保持合规性、解决争议和确保数字协议的完整性至关重要。
-
-
-   * **扩展了协议收件人的角色，而不只是签名者** - Adobe Acrobat Sign允许您扩展协议接受者的角色，而不只是签名者，以便更好地匹配他们的工作流要求。 启用后，协议中的每个收件人可以单独配置其角色，签名者是默认角色。
-
-
-* **[AEM Forms on JEE完整安装程序](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/jee-installation/aem-forms-jee-supported-platforms.html)** - Service Pack提供了AEM Forms on JEE的完整安装程序，以支持多种新软件组合，包括：
-   * Microsoft® Windows Server 2022
-   * Microsoft® Active Directory 2022
-   * 在Windows Server 2022上OracleWebLogic 14C
-   * Red Hat® JBoss® 7.4.10
-   * MongoDB 4.4
-   * MySQL JDBC连接器8
-
-如果您在JEE环境中安装或计划使用适用于AEM 6.5 Forms的最新软件，Adobe建议使用AEM 6.5.18.0 Forms on JEE完整安装程序。 要探索新添加和已弃用的软件的完整列表，请参阅JEE上的AEM Forms或OSGi上的AEM Forms的文档。
-
 <!-- UPDATE BELOW FOR EACH NEW RELEASE -->
 
-## 修复了Service Pack 18中的问题 {#fixed-issues}
+## 修复了Service Pack 19中的问题 {#fixed-issues}
 
-### [!DNL Sites]{#sites-6518}
+### [!DNL Sites]{#sites-6519}
 
-* 已使用批量编辑器通过下载 `tsv` 导出，进行了脱机更改，然后上传了 `tsv` 返回Experience Manager。 即使页面已更新，JCR属性 `cq:lastModified` 未更新，且位于时间线中。 (SITES-14072)
-* 创建体验片段的实时副本或转出时，体验片段内的链接引用未更新。 (SITES-14759)
-* 向现成的Experience Manager标准转出配置“转出页面和子页面”添加了来自父页面的工作流同步操作，并且异步作业失败并出现NullPointer异常。 源位置页面(en-us)不在父级中，但存在于目标位置(Live copy) (en)中。 (SITES-12207)
-* 您有“en”页面，其中包含 `jcr:description` 并发送页面以供翻译。 此 `jcr:description` 将进行翻译，并且属性位于launch下。 但是，提升启动项时， `jcr:description` 在页面中不会更新。 (SITES-13146)
-* Blueprint转出后，Live Copy上的本地化内容丢失。 (SITES-12602)
+* U
 
-#### 管理员用户界面{#sites-adminui-6518}
+#### 辅助功能{#sites-accessibility-6519}
 
-* 如果用户的删除权限通过useradmin控制台删除，则用户不会再看到sites.html控制台中的“属性”按钮（在选择页面时）。 但是，如果用户打开页面编辑器，则会显示此选项。 (SITES-14341)
-* 当文件夹具有多个页面，每个页面都具有多个版本时，使用比较版本功能时，实例上的负载会变得很高。 如果多个用户同时使用该功能，则实例可能会关闭。 (SITES-13026)
+* 在AEM Sites页面上，当您百分之百放大页面时，链接 **[!UICONTROL 语言复制]** 和 **[!UICONTROL CSV报表]** 在引用边栏中消失。 (SITES-11011)普通
 
-#### [!DNL Content Fragments]{#sites-contentfragments-6518}
+#### 管理员用户界面{#sites-adminui-6519}
 
-* 发现以下异常处理问题： `RemoteAssetClientImpl`. 当查询元数据时发生IOException或RuntimeException时，当前线程尝试关闭并重新创建共享httpClient，这可能导致线程中出现一连串的其他错误。 (SITES-14092)
-* 当作者在内容片段中填写富文本编辑器字段并在链接中插入图像时，通过GraphQL API查询内容片段时，出现错误消息 `Exception while fetching data (/genericContentByPath) : null` 会返回。 仅当链接中包含图像时才会发生此错误。 从链接中删除图像后，错误消息消失。 (SITES-13988)
-* GraphQL对Experience Manager6.5的实施与主版本不一致，并且缺少几个重要修复。 (SITES-13096)
-* 访问元数据服务端点时需要强制的HTTP标头。 (SITES-13068)
+* AEM Screens渠道 **[!UICONTROL 预览]** 功能在功能板上不起作用或无法显示。 (SITES-15730)关键
+* 在页面移动操作期间，如果用户界面无法显示引用，但指出这些引用已自动重新发布，则它们会 *非* 已重新发布。 (SITES-16435)主要
+* 在带有Service Pack 16或17的AEM 6.5中，当在启用了“工作流”列的网站的列表视图中时，无法根据该列中的项目对列表进行排序。 不执行排序。 (SITES-15385)主要
+* 对于重定向页面模板，重定向字段已设置为必填字段。 但是，在以下两种情况下，必填字段的验证既无法应用，也无法工作：当创建的页面没有强制重定向值时；无法创建重定向页面。 使用键盘快捷键导航时，验证不起作用，并且当字段标记为无效时，验证无法继续。 (SITES-15903)普通
+* 部分 **传入链接** 未包括在 **引用** 面板。 例如，该面板显示 **传入链接(6)** 但实际上有9个链接传入。 (SITES-14816)普通
 
-#### 核心组件{#sites-core-components-6518}
+#### 经典 UI{#sites-classicui-6519}
 
-* 资产选择器在关闭并重新打开时不会获取更新的资产列表。 如果新资产上传到存储库，则在刷新包含资产选择器的页面之前，它们不会显示在资产选择器中。 (SITES-14828)
-* 在窗口减少时，集成在站点编辑器(CS)中的资产选择器用户界面无响应。 (SITES-14127)
-* 资产选择器集成的Adobe IMS (Identity Management System)配置接受不正确的值。 (SITES-13962)
-* 资产选择器集成在站点图像组件中时，不应允许选择非图像资产。 (SITES-13879)
-* 成功登录后，用户将被重定向到页面编辑器。 用户必须重新打开资产选择器，才能选择远程资产。 (SITES-13851)
-* 远程资产选取器始终重定向到Adobe IMS (Identity Management System) Stage环境。 (SITES-13448和SITES-13433)
+* 在SITES-15827中安装修补程序后，单词之间有空格的对话框标题将被替换为 `" "`. 换行符也被删除。 (SITES-16089)主要
+* 已编码的对话框标题现在会导致对标题进行双重编码。 (SITES-15841)普通
+* 将AEM服务器从Service Pack 6.5.16更新到6.5.17会导致对经典UI对话框标题进行双重编码。 (SITES-15634)普通
 
-<!-- #### [!DNL Experience Fragments]{#sites-experiencefragments-6518}
+#### [!DNL Content Fragments]{#sites-contentfragments-6519}
 
-* A -->
+* 内容片段编辑器中会显示一条内部服务器错误消息。 (SITES-13550)关键
+* 更新 `org.json` 通过NPR-41291方式生成的库导致中的数据错误转换 `DefaultDataTypeConverter` 的 `cfm-impl` 捆绑。 数据类型转换必须更加灵活。 (SITES-16473)普通
+* 获取错误弹出消息“由于内容不兼容，此内容片段版本无法与当前版本进行比较。” 内容片段应当具有可比性，但事实并非如此。 (SITES-16317)普通
+* 已将资源选择器JS URL从
+  `https://experience.adobe.com/solutions/CQ-assets-selectors/assets/resources/assets-selectors.js`
+到
+  `https://experience.adobe.com/solutions/CQ-assets-selectors/static-assets/resources/assets-selectors.js` (SITES-16068)普通
+* 将新的Polaris元数据API响应模式适用于CFM-Polaris集成。 (SITES-15166)普通
+* 应列出引用所选内容片段的所有内容片段。 相反，内容片段引用面板中的资产引用显示0（零）引用。 (SITES-15036)普通
 
-#### 页面编辑器{#sites-pageeditor-6518}
+#### 核心后端{#sites-core-backend-6519}
 
-* 当作者打开页面属性时，对话框的视图不正确。 即，可以看到额外的水平滚动条和额外的边距。 (SITES-14502)
-* 在Experience Manager6.5 Service Pack 17中为锚点和正文标记添加的样式导致CSS问题。 在“创作”中，锚点标记未显示下划线。 (SITES-14261)
+* 改进 `StyleImpl`. (SITES-15164)普通
 
-### [!DNL Assets]{#assets-6518}
-
-* 屏幕阅读器不会通告 [!UICONTROL 开始裁切] 选项。 (NPR-40593)
-* 在AEM 6.5.17.0实例上上传资源时，Experience Manager显示错误和警告消息。 (ASSETS-26232)
-* 当您将某个资源从具有只读访问权限的文件夹与某个资源的完全访问权限关联时，Experience Manager会显示一条错误消息，但仍会创建两个资源之间的部分关系。 (ASSETS-25832)
-* 连接的资源在AMS实例和Cloud Service实例之间不起作用。 (ASSETS-24930)
-* 编辑元数据架构Forms时， [!UICONTROL 准时] 和 [!UICONTROL 关闭时间] 字段未正确保存。 (ASSETS-24871)
-* 在为经过训练的标记生成智能标记报表时，不会列出置信度得分较低的标记。 (ASSETS-24109)
-* 在“列”视图中编辑和注释图像时，Experience Manager显示一个空白屏幕。 (ASSETS-24108)
-* 创建收藏集时，屏幕阅读器不会朗读添加用户字段的用途。 (ASSETS-21736)
-* 此 **收藏集** 标签未在收藏集属性页面上本地化。 (ASSETS-21102)
-* 使用默认元数据架构表单添加规则或编辑现有规则时，下拉列表中的语言未本地化。 (ASSETS-21026)
-* 在元数据架构中添加JSON路径时，Experience Manager显示未本地化的错误消息。 (ASSETS-21025)
-* 左侧导航中的时间轴选项不显示相应的对比度。 (ASSETS-17348)
-* 日历元素不使用所需的ARIA属性。 (ASSETS-17282)
-* 左侧导航文本不显示相应的对比度。 (ASSETS-17268)
-* 屏幕阅读器用户不会隐藏Lightbox图像。 (ASSETS-17263和ASSETS-17242)
-* 活动用户界面的状态未提供有关背景的合适对比度。 (ASSETS-17260)
-* 为资产添加注释时，屏幕阅读器无法识别 [!UICONTROL 另存为版本] 或 [!UICONTROL 启动工作流] 使用键盘箭头键导航这些按钮时，显示这些按钮。 (ASSETS-17253)
-* 某些ARIA角色在Assets主页上不包含相应的子角色。 (ASSETS-17248)
-* 使用键盘导航到图像类型资产的编辑选项时， [!UICONTROL 启动地图] 选项无法识别，键盘焦点将转往“Cancel（取消）”按钮。 (ASSETS-17238)
-
-#### [!DNL Dynamic Media]{#assets-dm-6518}
-
-* 当VTT下载失败时，视频不可见。 它显示一个空白屏幕，同时显示视频洗刷正在前进。 (ASSETS-21909)
-* 使用键盘上的Tab导航时，焦点未移动到视频下方的多个控件。 因此，他们无法访问。 改进了交互式视频的键盘导航。 (ASSETS-25749)
-* 修复了在Dynamic Media组件中显示禁用的查看器预设。 (ASSETS-22922)
-* 从“常规设置”安全性选项卡中删除了“图像服务”。 (ASSETS-24618)
-* 修复了无法上传到Dynamic Media和StringIndexOutOfBoundsException的资源。 (ASSETS-25787)
-* 在“基本”选项卡中为必填的“宽度”编辑字段添加了可视星号。 (ASSETS-25741)
-* 修复了水印Dynamic Media演绎版下载问题。 (ASSETS-26173)
-* 恢复非视频资产名称不超过127个字符的限制。 (ASSETS-26074)
-
-### [!DNL Forms]{#forms-6518}
-
-<!-- Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on package one week after the scheduled [!DNL Experience Manager] Service Pack release date. In this case, the AEM 6.5.18.0 Forms add-on packages release is scheduled for Thursday, August 31, 2023. A list of Forms fixes and enhancements would be added to this section post the release. -->
-
-* **文档服务**
-   * 当用户使用transformPDF服务时，它会失败，并出现异常： `java.lang.ClassNotFoundException: default task-158Class name com.adobe.internal.afml.AFMLExceptionInvalidParameter from package com.adobe.internal.afml` (FORMS-9957)
-   * 如果在生成PDF文档期间服务器关闭，则会引发服务器启动后作业处理错误。 必须在服务器启动期间添加参数 — Dcom.adobe.livecycle.dsc.deferServiceStart=true。 (FORMS-9836)
-   * 如果用户尝试使用AssemblerService.Invoke方法合并PDF，则汇编程序无法执行该任务。 (FORMS-9550)
-   * 当您在OSGI和JEE环境中升级到AEM 6.5.15.0 Service Pack时，使用特定模板的Assembler服务将停止工作。 (FORMS-9355、FORMS-9445、FORMS-9408)
-   * Java™垃圾收藏集无法清除AEM Forms OSGi服务器上的旧根栈，因为XMLFormService的全局超时未配置为适当的值。 (FORMS-9384、FORMS-9035)
-   * 呈现自适应表单的PDF预览时，错误日志中会显示不需要的Java™栈栈转储。 (FORMS-8865)
-   * 当用户查看文档详情部分中文档的文档状态时，无法正确显示。 (FORMS-8946、FORMS-10424)
-   * 当用户升级到AEM Forms并使用sendToPrinter服务时，栈利用率会持续增加。 (FORMS-10148)
-   * 在JBoss® 7.4 EAP服务器上，电子邮件功能失败 `java.io.IOException`. (FORMS-10138)
-   * 当用户使用transformPDF服务时，它会失败并出现错误： `java.lang.ClassNotFoundException: default task-158Class name com.adobe.internal.afml.AFMLExceptionInvalidParameter from package com.adobe.internal.afml`(FORMS-9957)
-   * 升级到AEM Service Pack 6.5.14.0后，在使用特定模板时，组装程序服务中会出现问题。 (FORMS-9445、FORMS-9408)
-  <!-- *  When a user configures the watched folder endpoint for PDF Generator, it fails to pick documents on JDK 11. (FORMS-10152) -->
-* **自适应表单**
-   * 当用户尝试在不修改字段（例如设置另一个字段的值）的情况下调用自定义函数时，调用会失败。 (FORMS-9921)
-   * 在自适应表单中使用规则编辑器的自定义错误函数时，出现以下错误：
-      * 当用户尝试使用@param时{boolean} 对于函数，规则编辑器不允许将布尔值传递到函数。
-      * 当用户尝试使用@param时{string} 对于函数，规则编辑器无法传递可选值，并收到不完整规则的警告。 (FORMS-9816、FORMS-9815)
-   * 表单 — 用户组在自适应表单中两次调用规则编辑器失败。 (FORMS-9051)
-   * 在可视编辑器中，当用户选择表单对象时，整个字段实例对象将传递到自定义函数，而不仅仅是字段的值。 (FORMS-10015)
-   * 当用户创建基于核心组件的自适应表单并添加文本输入组件时， `Is Empty` 和 `Is Not Empty` 无法在规则编辑器中工作。 (FORMS-10098)
-   * 如果某个字段在基于自适应表单的核心组件中标记为无效，则会启动该字段的更改事件。 (FORMS-10087)
-   * 当用户尝试使用复杂的JSON架构创建自适应表单时，失败。 错误发生于：
-     `GET /content/forms/af/katezeroone/testaf1.html HTTP/1.1] com.adobe.aemds.guide.service.impl.JsonObjectCreatorImpl Could not emit JSON with context java.lang.ArrayIndexOutOfBoundsException:0`. (FORMS-9639)
-   * 在自适应表单中，当用户禁用“我同意条款和条件”复选框时，它会在用户向下滚动时再次启用。 (FORMS-9458)
-   * 当用户使用Google Chrome/Firefox在Android™设备上打开自适应表单，并在文本框中输入允许的最大字符数时，文本框中的值无法清除。 (FORMS-9354)
-   * 如果复选框的标签包含“，”、“/”或“。”等特殊字符，则单击文本/标签不会选中相应的复选框。 (FORMS-9313)
-   * 当用户尝试验证条款和条件组件时，它无法验证该组件是否不在焦点上，而另一个组件是否处于验证状态。 (FORMS-8725、FORMS-8913)
-   * 如果在升级到AEM 6.5.16.0 Service Pack后重新加载自适应表单，则检索文件附件失败。 (FORMS-8906)
-   * 在基于XDP的自适应表单中，如果复选框组件包含分配了数字值的文本标题，则文本标题会被截断且与分配的值不匹配。 (FORMS-8743)
-   * 如果用户尝试对作者环境中嵌入在自适应表单中的片段实施延迟加载，则为片段定义的规则/逻辑不会反映在表单中。 (FORMS-8554、FORMS-9182)
-   * 当您尝试在AEM 6.5.16.0 Service Pack中打开任何Coral对话框时，它会生成 `error.log: cannot render resource` 例外。 (FORMS-8942)
-   * 当用户尝试翻译自适应表单中带有单个选项的复选框时，会失败。 (FORMS-10181)
-   * 所有记录文档(DoR)模板均无法发布。 仅发布基于区域设置的英文DoR模板及其关联的基于Forms的DoR模板。 (FORMS-10535)
-
-* **辅助功能**
-   * 在自适应表单中使用涂写签名组件时，出现以下错误：
-      * 在涂鸦签名组件之后，如果有更多组件，按Tab键不会遍历签名对话框；而是会移至下一个组件。 只有在遍历所有组件后，它才最终移至签名对话框。
-      * 当用户使用画笔或键盘登录签名对话框时，按Enter键不会关闭对话框。
-      * 无法使用键盘访问清除签名确认对话框。
-      * 屏幕阅读器无法读取在对话框中输入的信息。
-      * 如果不使用鼠标，则无法清除签名。 (FORMS-9317)
-   * 当用户提交自适应表单时，屏幕阅读器无法读取必填字段的错误消息。 (FORMS-9316)
-   * 当屏幕阅读器读取HTML表单时，使用字距微调（间距）读取文本时出现问题。 (FORMS-9258)
-   * 在自适应表单中，使用屏幕阅读器不会调出链接到文本的引用/脚注。 (FORMS-8920)
-   * 在最新的设计器中，无法正确识别辅助功能标记。 (FORMS-10139)
-* **交互式通信**
-   * 在通信管理中，本地化不起作用。 (FORMS-8926)
-   * 使用publishAll服务时，无法打开草稿书信。 (FORMS-8589)
-   * Experience Manager后，在服务器上安装了Service Pack 16，如果尝试编辑这些信件，所有交互式通信信件都会开始计时。 如果它们提供任意示例有效负载来预览或查看/编辑属性页面，则它们有效。 但是，他们无法编辑字母。 (FORMS-9067)
-
-
-<!-- ### [!DNL Commerce]{#commerce-6518}
+<!--#### Core Components{#sites-core-components-6519}
 
 * A -->
 
-### Foundation{#foundation-6518}
+#### Campaign集成{#sites-campaign-integration-6519}
 
-#### 内容分发{#foundation-content-distribution-6518}
+* 在签名组件上(`/apps/fpl/components/campaign/signature`)，链接Externalizer无法正常工作。 如果删除了图像标记上方的HTML评论，则域未附加到图像源。 此问题仅存在于生产环境中的签名组件中，而不存在于暂存环境中。 (SITES-16120)普通
 
-* 不应阻止资产删除队列，并且日志文件中不应出现任何错误。 (NPR-40570)
-
-<!-- #### Integrations{#integrations-6518}
+<!--#### Experience Fragments{#sites-experiencefragments-6519}
 
 * A -->
 
-<!-- #### Oak{#oak-6518}
+#### 基础组件（旧版）{#sites-foundation-components-legacy-6519}
+
+* Adobe Experience Manager (AEM) Sites Search组件损坏了用户界面。 (SITES-15087)普通
+
+#### GraphQL Query Editor{#sites-graphql-query-editor-6519}
+
+* 当查询数量较多时（例如，超过25个），GraphQL编辑器用户界面不允许您滚动浏览所有持久查询。 (SITES-16008)主要
+* GraphQL编辑器未保存持久查询的发布状态。 GraphQL编辑器中会显示取消发布按钮，但不显示指示已发布持久查询的图标。 刷新页面会显示持久查询甚至未发布。 (SITES-15858)主要
+
+#### 启动项{#sites-launches-6519}
+
+* 存储库中的更改无法保存，原因是 `Oak0001` 在编辑多个页面或创作内容时发生冲突。 在此类事件中执行重试是正常的，但不会发生这种情况。 (SITES-14840)主要
+
+#### MSM — 活动副本{#sites-msm-live-copies-6519}
+
+* MSM转出按钮在触控图形用户界面中不起作用。 (SITES-16991)主要
+* 创建Live Copy或转出体验片段时，体验片段内的链接引用未更新。 (SITES-15460)普通
+
+#### 页面编辑器{#sites-pageeditor-6519}
+
+* 在资产类型筛选器上选择多个文档文件类型在页面控制台上不起作用。 即使某个特定文件类型的结果可用，也找不到任何结果。 因此，作者无法过滤多个文档。 他们必须使用多种文档类型，并且必须逐个进行筛选。 (SITES-14047)主要
+* 从AEM 6.5.17和AEM 6.5.18升级实例后，在页面编辑器中，如果您选择 **[!UICONTROL 发布页面]**，您会被重定向到不存在的URL。 用户应被重定向到“发布”向导。 (SITES-15856)普通
+* (SITES-15704)普通
+* 在操作系统剪贴板粘贴过程中从AEM剪贴板进行冗余复制。 (SITES-15704)普通
+* 在资产中，选择 **[!UICONTROL 文档]**，然后在 **[!UICONTROL Filtertype]**，选择 **[!UICONTROL Microsoft® Word]** 或 **[!UICONTROL Microsoft® Excel]** 即使存在这两种类型的文件，也不显示任何结果。 (SITES-14837)普通
+
+### [!DNL Assets]{#assets-6519}
+
+* 无法区分将资源发布到Experience Manager或Brand Portal。 [NPR-41320]
+* 创建或保存公共文件夹时，会在管理员功能板中创建三个组。 [ASSETS-26700]
+* 在搜索面板中，当您选中复选框并取消选中任何一个复选框时，所有复选框都将被取消选中。 [ASSETS-26377]
+
+#### [!DNL Dynamic Media]{#assets-dm-6519}
+
+* 将资源上传到AEM后， `update_asset` 工作流已触发。 该工作流永远不会完成。 查看工作流实例，工作流会完成到产品上传步骤。 下一步是scene7批量上传。 用户可以从Dynamic Media Classic应用程序中看到资源位于Scene7中。 (ASSETS-30443)关键
+* 自定义Servlet（API端点）返回错误的Dynamic Media (Scene7)文件名。 删除资产并将其替换为同名资产时，会发生这种情况。 自定义servlet将返回旧的Dynamic Media (Scene7)文件名，而“jcr”API调用将返回正确的文件名。 (ASSETS-29476)主要
+* 即使在文件夹级别关闭同步后，日志也会显示“Scene7 ReplicateOnModifyListener”的触发器。 此 `ReplicateOnModifyListener/Worker` 应跳过对非Dynamic Media文件夹资源和内容片段的处理。 (ASSETS-26705)主要
+* 如果焦点在高对比度黑白模式下的下拉元素（仅限内容、视图、更多选项）中不可见，则视力缺佳的人会受到影响。 (ASSETS-25759)普通
+* 如果页面上文本的光度对比度小于4.5:1，则视力缺佳的人会受到影响。 (ASSETS-25756)普通
+* 屏幕阅读器在提交数据后不提供所显示弹出消息的旁白。 (ASSETS-25755)普通
+* 使用地标/区域快捷键导航时，屏幕阅读器无法识别页面中的地标(Dynamic Media；创建视频编码配置文件) `D/R`. (ASSETS-25752)普通
+* 使用地标/区域快捷键导航时，屏幕阅读器无法识别页面中的多个地标(Dynamic Media；创建交互式视频) `D/R`. (ASSETS-25750)普通
+* 屏幕阅读器（NVDA/JAWS/讲述人）无法识别中的里程碑 **编辑资源** 使用快捷键导航时显示的页面 `D/R`. (ASSETS-25744)普通
+* 用户收到空/假异步作业消息，但连接的资产已成功发布。 (ASSETS-29342)普通
+
+### [!DNL Forms]{#forms-6519}
+
+中的修复 [!DNL Experience Manager] Forms在计划的一周后通过单独的附加组件包提供 [!DNL Experience Manager] Service Pack发行日期。 在本例中，AEM 6.5.19.0 Forms附加组件包版本计划于2023年11月30日星期四发布。 发布后，此部分中将添加一系列Forms修复和增强功能。
+
+* 添加访问控制列表 `fd-cloudservice` 用户能够读取或更新下的Microsoft®配置 `cloudconfigs/microsoftoffice`. (FORMS-11142)普通
+
+<!--LEFT BULLET LIST HERE IN CASE OF REUSE BY FORMS IN THE FUTURE 
+* **Document Services**
+  * text
+* **Adaptive Forms** 
+  * text
+* **Accessibility**
+  * text
+* **Interactive Communications**
+  * text -->
+
+<!--### Commerce{#commerce-6519}
 
 * A -->
 
-#### Platform{#foundation-platform-6518}
+### Foundation{#foundation-6519}
 
-* 安装vanillaExperience ManagerService Pack 17后，您会看到 `stderr.log`. Vanilla安装不会收到错误。 (CQ-4353637)
-* “标记”(Tagging)屏幕中的“创建”(Create)按钮不遵循ACL（访问控制列表）。 (NPR-40973)
-* 无法在Experience Manager上创建ContextHub的缓存节点，也无法访问（或同时访问）该节点。 (NPR-40515)
+* 在语言根级别创建语言副本不会调整页面中的路径。 如果创建了语言副本（不是针对语言根，而是针对其下方的页面），则路径正确更改。 (NPR-41364)主要
+* “相对日期显示”工具提示只能通过按键盘上的Esc键关闭。 当用户选择用户界面的任何部分时，工具提示都应关闭。 (NPR-41394)普通
+* 未本地化的字符串 `Something went wrong while adding the private key.` 在中添加错误的私钥文件时 **编辑用户** > **密钥库**. (NPR-41366)普通
+* AEM 6.5环境中的Microsoft®SharePoint和Microsoft®一个驱动器需要图标。 (NPR-41354)普通
+* 未本地化的“用户ID/密码不匹配”。 字符串输入 **安全性** > **用户** > **创建** 对话框。 (NPR-41245)普通
+* 弹出框代码和事件处理程序加载两次，破坏了用户创建的基于Coral3的用户界面。 (NPR-41171)普通
+* 在AEM Sites控制台中使用“全选”后，取消选择无法正常工作。 (NPR-41304)轻微
 
-#### 复制{#foundation-replication-6518}
+<!--#### Content distribution{#foundation-content-distribution-6519}
 
-* 复制刷新将删除请求路径的所有后代。 (NPR-40569)
+* T -->
 
-#### Sling{#foundation-sling-6518}
+#### 集成{#integrations-6519}
 
-* 在生成链接共享报表时，列链接未包含正确的值。 (NPR-40798)
-* 使用AEM 6.5.15.0时，AEM重新启动后所有虚名URL、sling别名和sling映射都会断开。 (NPR-40420)
+* AEM电子邮件营销活动中的短信链接未正确写入；它们包含HTML锚点元素。 (NPR-41211)主要
+* 在帐户配置屏幕上使用的措辞不应使用新的凭据类型。 (NPR-41210)普通
+* 正在将Analytics报表导入计划程序从 `ManagedPollConfig` 去吊索乔布斯。 将两个不同的分析框架与不同的报表包附加到两个不同的站点时， `ManagedPollConfig` 只能轮询其中一项。 (NPR-41209)普通
+* 将该值重置为默认值后，以前选择的时间范围按钮将保持启用状态。 在AEM的内容洞察功能板中，默认情况下，时间范围设置为周，并将内容洞察显示为每周数据。 现在，如果用户选择其他时间范围选项，例如小时、日、月和年，数据会根据所选值而变化。 但是，如果重置了值，则默认情况下，可见的时间范围为周，但仍会选中之前选择的时间范围选项。 (NPR-41246)轻微
 
-#### 翻译项目{#foundation-translation-6518}
+#### Oak{#oak-6519}
 
-* 翻译 `rules.xml` 从翻译配置用户界面添加规则时，排序会很差。 (NPR-40431)
-* 在翻译期间支持带有查询参数的链接。 (NPR-40339)
-* 更新其他上下文根目录后，未为客户加载词典用户界面。 (NPR-40650)
-* 当其中一个资产是内容片段，其中包含具有ReferenceFragment或ContentFragment类型的多字段时，创建语言副本时出错。 (NPR-40892)
+* 在异步索引延迟的情况下，用于限制写入AEM速率的反向端口实用程序。 (NPR-40985)主要
 
-#### 用户界面{#foundation-ui-6518}
+#### Platform{#foundation-platform-6519}
 
-* 如 [配置浏览器文档](https://experienceleague.adobe.com/docs/experience-manager-65/administering/introduction/configurations.html?lang=en#using-configuration-browser)， _名称将成为存储库中的节点名称_. 但是，在Configuration Browser中， Configuration Title用于CRXDE Lite中的路径，而Name of the Configuration被忽略。 (NPR-40607)
+* 包含方括号的QueryBuilder查询被错误地转换为xpath 。 (NPR-41298)普通
 
-<!-- #### WCM{#wcm-6518}
+<!--#### Replication{#foundation-replication-6519}
+
+* R -->
+
+<!--#### Sling{#foundation-sling-6519}
+
+* W -->
+
+#### 翻译项目{#foundation-translation-6519}
+
+* 在创建页面“A”的语言副本时，它应自动创建引用的页面、体验片段、内容片段和资产的语言副本。 此外，新路径下新创建的页面“A”的语言副本应将其引用更新为页面、体验片段、内容片段和资产的各自新创建的语言副本。 (NPR-41076)普通
+
+<!--#### User interface{#foundation-ui-6519}
 
 * A -->
 
-#### 工作流{#foundation-workflow-6518}
+<!--#### WCM{#wcm-6519}
 
-* 还原资源版本会将资源状态保留在处理模式下。 (NPR-41029)
-* 资源和项目用户界面上的排序问题。 有些客户根据业务要求覆盖了“资产和项目”用户界面上的自定义列。 他们使用现成的属性实施了一种分类 `sortable=true`. 但是，当项目或资产用户界面下存在许多条目时，他们会在排序中看到不一致。 (NPR-41027)
-* 日志中填充了 `NullPointerException` 在 `EMailNotificationService`工作流应发送的、和电子邮件不会发送。 (NPR-40898)
-<!-- REMOVED BY ENGINEERING FROM TOTAL RELEASE CANDIDATE LIST  * The timeline is not providing references to the selected content. (NPR-40806) -->
+* A -->
+
+#### 工作流{#foundation-workflow-6519}
+
+* 无法完成收件箱中的任务。 尝试完成任务并选择操作时，下拉菜单中只显示“未定义”值。 这意味着用户无法应用AEM 6.5.18 Service Pack。 (NPR-41402)主要
+* 无法完成收件箱中的任务。 尝试完成zip文件、资源报表、移动（成功或失败）或资源到期的任务时，下拉列表中没有值（仅限“未定义”）。 (NPR-41305)主要
+* 当用户选择时 **[!UICONTROL 工具]** > **[!UICONTROL 工作流]** >实例，选择正在运行的工作流，然后选择 **[!UICONTROL 查看有效负荷]**，这将导致出现500错误页面。 (NPR-41325)普通
+
 
 ## 安装 [!DNL Experience Manager] 6.5.18.0{#install}
 
 <!-- Remaining content from here to bottom stays the same except for version updating as needed as per update team feedback. -->
 
-* [!DNL Experience Manager] 6.5.18.0需要 [!DNL Experience Manager] 6.5.见 [升级文档](/help/sites-deploying/upgrade.md) 以获取详细说明。 <!-- UPDATE FOR EACH NEW RELEASE -->
+* [!DNL Experience Manager] 6.5.19.0需要 [!DNL Experience Manager] 6.5.见 [升级文档](/help/sites-deploying/upgrade.md) 以获取详细说明。 <!-- UPDATE FOR EACH NEW RELEASE -->
 * 可在Adobe上获取Service Pack下载 [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.18.0.zip).
-* 在具有MongoDB和多个实例的部署中，安装 [!DNL Experience Manager] 使用包管理器对某个Author实例执行6.5.18.0。<!-- UPDATE FOR EACH NEW RELEASE -->
+* 在具有MongoDB和多个实例的部署中，安装 [!DNL Experience Manager] 6.5.19.0适用于使用包管理器的某个Author实例。<!-- UPDATE FOR EACH NEW RELEASE -->
 
 >[!IMPORTANT]
 >
-> Adobe不建议您删除或卸载 [!DNL Experience Manager] 6.5.18.0程序包。 因此，在安装该包之前，您应该创建 `crx-repository` 万一你一定要把它退回。 <!-- UPDATE FOR EACH NEW RELEASE -->
+> Adobe不建议您删除或卸载 [!DNL Experience Manager] 6.5.19.0程序包。 因此，在安装该包之前，您应该创建 `crx-repository` 万一你一定要把它退回。 <!-- UPDATE FOR EACH NEW RELEASE -->
 <!-- For instructions to install Service Pack for Experience Manager Forms, see [Experience Manager Forms Service Pack installation instructions](/help/release-notes/aem-forms-current-service-pack-installation-instructions.md). -->
 
 
@@ -304,20 +260,20 @@ ht-degree: 4%
 
 **自动安装**
 
-可以使用两种不同的方法来自动安装 [!DNL Experience Manager] 6.5.18.0。<!-- UPDATE FOR EACH NEW RELEASE -->
+可以使用两种不同的方法来自动安装 [!DNL Experience Manager] 6.5.19.0。<!-- UPDATE FOR EACH NEW RELEASE -->
 
 * 将包放入 `../crx-quickstart/install` 文件夹（当服务器联机时）。 软件包会自动安装。
 * 使用 [包管理器中的HTTP API](/help/sites-administering/package-manager.md#package-share). 使用 `cmd=install&recursive=true` 以便安装嵌套包。
 
 >[!NOTE]
 >
->Experience Manager6.5.18.0不支持Bootstrap安装。 <!-- UPDATE FOR EACH NEW RELEASE -->
+>Experience Manager6.5.19.0不支持Bootstrap安装。 <!-- UPDATE FOR EACH NEW RELEASE -->
 
 **验证安装**
 
 要了解经认证可与本版本配合使用的平台，请参阅 [技术要求](/help/sites-deploying/technical-requirements.md).
 
-1. 产品信息页面(`/system/console/productinfo`)显示更新的版本字符串 `Adobe Experience Manager (6.5.18.0)` 下 [!UICONTROL 已安装的产品]. <!-- UPDATE FOR EACH NEW RELEASE -->
+1. 产品信息页面(`/system/console/productinfo`)显示更新的版本字符串 `Adobe Experience Manager (6.5.19.0)` 下 [!UICONTROL 已安装的产品]. <!-- UPDATE FOR EACH NEW RELEASE -->
 
 1. 所有OSGi捆绑包包 **[!UICONTROL 活动]** 或 **[!UICONTROL 片段]** 在OSGi控制台中(使用Web控制台： `/system/console/bundles`)。
 
@@ -341,7 +297,7 @@ ht-degree: 4%
 
 ### UberJar{#uber-jar}
 
-UberJar用于 [!DNL Experience Manager] 6.5.18.0可从以下网站获取： [Maven中央存储库](https://repo.maven.apache.org/maven2/com/adobe/aem/uber-jar/6.5.18/). <!-- CHECK FOR UPDATE EACH NEW RELEASE -->
+UberJar用于 [!DNL Experience Manager] 6.5.19.0可从以下网站获取： [Maven中央存储库](https://repo.maven.apache.org/maven2/com/adobe/aem/uber-jar/6.5.18/). <!-- CHECK FOR UPDATE EACH NEW RELEASE -->
 
 要在Maven项目中使用UberJar，请参阅 [如何使用UberJar](/help/sites-developing/ht-projects-maven.md) 并在项目POM中包含以下依赖项： <!-- CHECK FOR UPDATE EACH NEW RELEASE -->
 
@@ -349,7 +305,7 @@ UberJar用于 [!DNL Experience Manager] 6.5.18.0可从以下网站获取： [Mav
 <dependency>
      <groupId>com.adobe.aem</groupId>
      <artifactId>uber-jar</artifactId>
-     <version>6.5.18</version>
+     <version>6.5.19</version>
      <scope>provided</scope>
 </dependency>
 ```
@@ -370,9 +326,9 @@ UberJar用于 [!DNL Experience Manager] 6.5.18.0可从以下网站获取： [Mav
 To retrieve your runtime copy, Adobe recommends to synchronize the design-time copy of the custom workflow model with its runtime copy using the HTTP API:
 `<designModelPath>/jcr:content.generate.json`. -->
 
-* **升级到Service Pack 18 (6.5.18.0)后，页面发布在页面编辑器中不起作用**
+* **升级到Service Pack 18 (6.5.19.0)后，页面发布在页面编辑器中不起作用**
 
-  <!-- https://jira.corp.adobe.com/browse/SITES-15856 REMOVE FOR 6.5.19.0--> 将AEM 6.5.0.0 - 6.5.17.0的实例升级到AEM 6.5.18.0后，单击 **发布页面** 在页面编辑器中，您被重定向到一个不存在的URL。
+  <!-- https://jira.corp.adobe.com/browse/SITES-15856 REMOVE FOR 6.5.19.0--> 将AEM 6.5.0.0 - 6.5.17.0的实例升级到AEM 6.5.19.0后，单击 **发布页面** 在页面编辑器中，您被重定向到一个不存在的URL。
 
   要解决此问题，请执行以下操作之一：
 
@@ -472,7 +428,7 @@ To retrieve your runtime copy, Adobe recommends to synchronize the design-time c
 #### 安装
 
 * 在JBoss® 7.1.4平台上，当用户安装Experience Manager6.5.16.0或更高版本的Service Pack时， `adobe-livecycle-jboss.ear` 部署失败。 (CQ-4351522和CQDOC-20159)
-* 在Windows Server 2022上升级到AEM Forms 6.5.18.0 JBoss Turnkey完整安装程序环境后，使用Java 11编译输出客户端应用程序代码时，可能会出现以下编译错误：
+* 升级到Windows Server 2022上的AEM Forms 6.5.18.0 JBoss® Turnkey完整安装程序环境后，使用Java™ 11编译输出客户端应用程序代码时，可能会出现以下编译错误：
 
   ```
   error: error reading [AEM_Forms_Installation_dir]\sdk\client-libs\common\adobe-output-client.jar; java.net.URISyntaxException: 
@@ -488,8 +444,8 @@ To retrieve your runtime copy, Adobe recommends to synchronize the design-time c
       > 您还可以使用就地编辑工具（例如7-zip）来更新 `Manifest.mf` 文件。
 
    1. 保存更新的 `Manifest.mf` 在 `adobe-output-client.jar` 存档。
-   1. 保存修改的内容 `adobe-output-client.jar` 文件并重新运行安装程序。  (CQDOC-20878)
-* 安装AEM Service Pack 6.5.18.0完整安装程序后，EAR部署在使用JBoss® Turnkey的JEE上失败。
+   1. 保存修改的内容 `adobe-output-client.jar` 文件并重新运行安装程序。 (CQDOC-20878)
+* 安装AEM Service Pack 6.5.19.0完整安装程序后，EAR部署在使用JBoss® Turnkey的JEE上失败。
 要解决此问题，请找到 `<AEM_Forms_Installation_dir>\jboss\bin\standalone.bat` 文件和更新 `Adobe_Adobe_JAVA_HOME` 到 `Adobe_JAVA_HOME` 所有出现的次数。 (CQDOC-20803)
 
 #### 自适应表单
@@ -510,10 +466,10 @@ To retrieve your runtime copy, Adobe recommends to synchronize the design-time c
 
 ## 包含的OSGi包和内容包{#osgi-bundles-and-content-packages-included}
 
-以下文本文档列出了中包含的OSGi包和内容包 [!DNL Experience Manager] 6.5.18.0： <!-- UPDATE FOR EACH NEW RELEASE -->
+以下文本文档列出了中包含的OSGi包和内容包 [!DNL Experience Manager] 6.5.19.0： <!-- UPDATE FOR EACH NEW RELEASE -->
 
-* [Experience Manager6.5.18.0中包含的OSGi包列表](/help/release-notes/assets/65180_bundles.txt) <!-- UPDATE FOR EACH NEW RELEASE -->
-* [Experience Manager6.5.18.0中包含的内容包列表](/help/release-notes/assets/65180_packages.txt) <!-- UPDATE FOR EACH NEW RELEASE -->
+* [Experience Manager6.5.19.0中包含的OSGi包列表](/help/release-notes/assets/65180_bundles.txt) <!-- UPDATE FOR EACH NEW RELEASE -->
+* [Experience Manager6.5.19.0中包含的内容包列表](/help/release-notes/assets/65180_packages.txt) <!-- UPDATE FOR EACH NEW RELEASE -->
 
 ## 受限制的网站{#restricted-sites}
 

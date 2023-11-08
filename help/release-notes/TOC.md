@@ -7,10 +7,10 @@ breadcrumb-title: 发行说明
 user-guide-description: 在发行说明中了解AEM 6.5中的最新新增功能。
 feature: Release Information
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: 474a726058b141985f52a0faec6161a34be1e9dc
+source-git-commit: f618dbaafbbcd1511ea2a678db398b4bcbfda366
 workflow-type: tm+mt
-source-wordcount: '70'
-ht-degree: 42%
+source-wordcount: '71'
+ht-degree: 43%
 
 ---
 
@@ -20,6 +20,7 @@ ht-degree: 42%
 + [AEM 6.5 发行说明](home.md)
 + [当前的发行说明](release-notes.md)
 + [以前的发行说明]{#service-pack}
+   + [6.5.18](previous/6.5.18.md)
    + [6.5.17](previous/6.5.17.md)
    + [6.5.16](previous/6.5.16.md)
    + [6.5.15](previous/6.5.15.md)

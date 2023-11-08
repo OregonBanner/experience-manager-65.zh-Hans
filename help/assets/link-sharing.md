@@ -6,7 +6,7 @@ role: User
 feature: Link Sharing,Asset Management
 exl-id: 20370b00-862e-4d04-af2f-7d1c74a842dd
 hide: true
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '1030'
 ht-degree: 6%
@@ -36,7 +36,7 @@ ht-degree: 6%
 
 1. 在 [!DNL Assets] 用户界面中，选择要作为链接共享的资产。
 
-1. 在工具栏中，单击 **[!UICONTROL 共享链接]** ![共享资产图标](assets/do-not-localize/assets_share.png). 单击后创建的链接 **[!UICONTROL 共享]** 会预先显示在 [!UICONTROL 共享链接] 字段。 只有在您选择之前，才会创建链接 **[!UICONTROL 提交]**.
+1. 在工具栏中，单击 **[!UICONTROL 共享链接]** ![共享资产图标](assets/do-not-localize/assets_share.png). 单击后创建的链接 **[!UICONTROL 共享]** 会预先显示在 [!UICONTROL 共享链接] 字段。 只有在您选择之后，才会创建链接 **[!UICONTROL 提交]**.
 
    ![带有链接共享的对话框](assets/share-assets-as-link.png)
 

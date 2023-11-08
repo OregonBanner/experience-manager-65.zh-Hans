@@ -7,7 +7,7 @@ content-type: reference
 topic-tags: site-features
 docset: aem65
 exl-id: e00da2b3-046a-4d93-aed0-07dd8c66899f
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '645'
 ht-degree: 90%
@@ -135,6 +135,6 @@ ht-degree: 90%
 
 ## 从页面编辑器启动工作流 {#starting-a-workflow-from-the-page-editor}
 
-编辑页面时，您可以从工具栏中选择&#x200B;**页面信息**。下拉菜单中包含&#x200B;**启动工作流**&#x200B;选项。这将打开一个对话框，您可以在其中指定所需的工作流，如果需要，还可以指定标题：
+编辑页面时，您可以从工具栏中选择&#x200B;**页面信息**。下拉菜单中包含&#x200B;**启动工作流**&#x200B;选项。这将打开一个对话框，您可以在其中指定所需的工作流，并根据需要指定标题：
 
 ![wf-54](assets/wf-54.png)

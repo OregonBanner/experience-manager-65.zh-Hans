@@ -12,10 +12,10 @@ discoiquuid: 6bcf0fcc-481a-4283-b30d-80b517701280
 docset: aem65
 feature: Multi Site Manager
 exl-id: ac24b8b4-b3ed-47fa-9a73-03f0c9e68ac8
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '2694'
-ht-degree: 37%
+ht-degree: 36%
 
 ---
 
@@ -28,7 +28,7 @@ ht-degree: 37%
 
 ## 已安装的自定义转出配置 {#installed-and-custom-rollout-configurations}
 
-本部分提供有关已安装转出配置、其所使用的同步操作以及如何在需要时创建自定义配置的信息。
+此部分提供有关已安装的转出配置及其使用的同步操作的信息，以及如何在必要时创建自定义配置的信息。
 
 >[!CAUTION]
 >
@@ -386,7 +386,7 @@ MSM允许您指定通常使用的转出配置集，并且在需要时，您可�
 
    ![配置](assets/chlimage_1-1.png)
 
-1. 如果需要，可调整 **Live Copy 继承**&#x200B;标记。如果选中，Live Copy配置将在所有子项上都有效。
+1. 如有必要，请调整 **Live Copy继承** 标志。 如果选中，Live Copy配置将在所有子项上都有效。
 
 1. 清除&#x200B;**继承父项的转出配置**&#x200B;属性，然后从列表中选择一个或多个转出配置。
 

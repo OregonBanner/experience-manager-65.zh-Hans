@@ -6,7 +6,7 @@ topic-tags: process-reporting
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
 exl-id: a096eea0-b2fb-4d86-b729-ca47611135b2
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '1672'
 ht-degree: 0%
@@ -93,7 +93,7 @@ ht-degree: 0%
 创建查询后，使用 **创建筛选器** 面板用于：
 
 * **取消**：取消更改并返回到 **我的筛选器** 面板。
-* **运行**：执行当前查询以查看和/或验证结果。 在这种情况下，您无需在执行查询之前保存查询。 您可以验证结果，根据需要进行更改，然后在您对输出感到满意时保存查询。
+* **运行**：执行当前查询以查看和/或验证结果。 在这种情况下，您无需在执行查询之前保存查询。 您可以验证结果，必要时进行更改，然后在您对输出感到满意时保存查询。
 * **保存**：保存过滤器。 之后，可以从以下位置查看和执行过滤器 **我的筛选器** 面板。
 
 ### “我的筛选器”面板中的选项 {#options-in-my-filters-panel}

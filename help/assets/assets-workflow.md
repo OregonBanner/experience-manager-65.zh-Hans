@@ -5,10 +5,10 @@ contentOwner: AG
 feature: Workflow, Renditions
 role: User, Admin
 exl-id: e7c84385-efb3-4997-83ff-7a7f31582469
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
-source-wordcount: '960'
-ht-degree: 3%
+source-wordcount: '959'
+ht-degree: 2%
 
 ---
 
@@ -98,7 +98,7 @@ TBD: Add animated GIF for these steps instead of all these screenshots.
 
 ## 最佳实践和限制 {#best-practices-limitations-tips}
 
-* 在设计工作流时，请考虑您对所有类型的演绎版的需求。 如果您预计将来不需要节目，请从工作流中删除其创建步骤。 之后无法批量删除节目。 长期使用后，不需要的演绎版可能会占用大量存储空间 [!DNL Experience Manager]. 对于单个资源，您可以从用户界面手动删除演绎版。 对于多个资源，您可以进行自定义 [!DNL Experience Manager] 以删除特定演绎版或删除资源，然后再次上传这些资源。
+* 在设计工作流时，请考虑您对所有类型的演绎版的需求。 如果您预计将来不需要节目，请从工作流中删除其创建步骤。 之后无法批量删除节目。 长期使用后，不需要的演绎版可能会占用存储空间 [!DNL Experience Manager]. 对于单个资源，您可以从用户界面手动删除演绎版。 对于多个资源，您可以进行自定义 [!DNL Experience Manager] 以删除特定演绎版或删除资源，然后再次上传这些资源。
 * 默认情况下， [!UICONTROL DAM更新资产] 工作流包括创建缩略图和Web呈现的一些步骤。 如果从工作流中删除了任何默认呈现版本，则其用户界面 [!DNL Assets] 无法正确呈现。
 
 >[!MORELIKETHIS]

@@ -2,7 +2,7 @@
 title: 使用内容页面版本
 description: 在Adobe Experience Manager中创建、比较和恢复页面版本。
 exl-id: cb7a9da2-7112-4ef0-b1cf-211a7df93625
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '1501'
 ht-degree: 66%
@@ -36,7 +36,7 @@ ht-degree: 66%
    ![时间轴 — 另存为版本](assets/screen-shot_2019-03-05at112335.png)
 
 1. 选择&#x200B;**保存为版本**。
-1. 根据需要输入&#x200B;**标签**&#x200B;和&#x200B;**评论**。
+1. 输入 **标签** 和 **注释** 如有必要。
 
    ![创建版本 — 添加标签和注释](assets/chlimage_1-42.png)
 
@@ -49,7 +49,7 @@ ht-degree: 66%
 1. 导航以显示要为其创建版本的页面。
 1. 在[选择模式](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)中选择页面。
 1. 选择 **创建** 选项，以打开对话框。
-1. 在该对话框中，您可以输入 **标签** 和 **注释**，如果需要：
+1. 在该对话框中，您可以输入 **标签** 和 **注释**（如有必要）：
 
    ![输入标签和注释](assets/screen_shot_2012-02-15at105050am.png)
 

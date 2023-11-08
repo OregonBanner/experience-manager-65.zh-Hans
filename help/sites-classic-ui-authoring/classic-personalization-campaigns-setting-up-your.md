@@ -7,7 +7,7 @@ topic-tags: personalization
 content-type: reference
 docset: aem65
 exl-id: 1b607a52-f065-4e35-8215-d54df7c8403d
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '2223'
 ht-degree: 0%
@@ -19,9 +19,9 @@ ht-degree: 0%
 设置新营销活动包括以下（通用）步骤：
 
 1. [创建品牌](#creating-a-new-brand) 举办您的营销活动。
-1. 如果需要，您可以 [为新品牌定义属性](#defining-the-properties-for-your-new-brand).
+1. 如有必要，您可以 [为新品牌定义属性](#defining-the-properties-for-your-new-brand).
 1. [创建营销活动](#creating-a-new-campaign) 用于保存体验；例如，Teaser页面或新闻稿。
-1. 如果需要，您可以 [为新营销活动定义属性](#defining-the-properties-for-your-new-campaign).
+1. 如有必要，您可以 [为新营销活动定义属性](#defining-the-properties-for-your-new-campaign).
 
 然后，根据您创建的体验类型，您必须 [创建体验](#creating-a-new-experience). 体验的详细信息及其创建后的操作取决于您要创建的体验类型：
 

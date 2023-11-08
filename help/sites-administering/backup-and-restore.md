@@ -1,18 +1,14 @@
 ---
 title: 备份和恢复
-seo-title: Backup and Restore
 description: 了解如何备份和恢复AEM内容和配置。
-seo-description: Learn how to backup and restore your AEM content.
-uuid: 446a466f-f508-4430-9e50-42cd4463760e
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
-discoiquuid: eb8bbb85-ca2f-4877-8ee0-bb1ee8b7d8de
 exl-id: dd26dade-b769-483e-bc11-dcfa5ed1f87e
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
-source-wordcount: '2283'
+source-wordcount: '2282'
 ht-degree: 0%
 
 ---
@@ -232,7 +228,7 @@ AEM Online Backup由一系列内部操作组成，以确保正在备份的数据
    * 阶段A — 复制除数据存储之外的所有内容（延迟）。
    * 阶段B — 仅复制数据存储（延迟）。
 
-1. 在第二个复制阶段（创建zip文件时进度指示器63% - 65.8%，如果未创建zip文件，则进度指示器90% - 94%），将仅复制自第一个复制阶段启动以来在源目录中创建或修改的文件。 根据存储库的活动，文件数量可能会从完全没有文件到大量文件不等（因为第一个文件复制阶段通常需要大量时间）。 复制过程类似于第一阶段（阶段A和阶段B延迟）。
+1. 在第二个复制阶段（创建zip文件时进度指示器63% - 65.8%，如果未创建zip文件，则进度指示器90% - 94%），将仅复制自第一个复制阶段启动以来在源目录中创建或修改的文件。 根据存储库的活动，文件数量可能会从完全没有文件到大量文件不等（因为第一个文件复制阶段通常需要的时间最长）。 复制过程类似于第一阶段（阶段A和阶段B延迟）。
 1. 在第三个复制阶段（创建zip文件时进度指示器为65.8% - 68.6%，未创建zip文件时进度指示器为94% - 98%），将仅复制自第二个复制阶段启动以来在源目录中创建或修改的文件。 根据存储库的活动，可能没有要复制的文件，或者文件数量非常少（因为第二个文件复制阶段通常很快）。 复制过程与第二阶段（阶段A和阶段B）相似，但不会延迟。
 1. 文件复制阶段1到3均在存储库运行时同时完成。 只复制自第三个复制阶段启动后在源目录中创建或修改的文件。 根据存储库的活动，可能没有要复制的文件，或者文件数量非常少（因为第二个文件复制阶段通常非常快）。 创建zip文件时进度指示器为68.6% - 70%；如果未创建zip文件，则进度指示器为98% - 100%。 复制过程类似于第三阶段。
 1. 具体取决于目标：

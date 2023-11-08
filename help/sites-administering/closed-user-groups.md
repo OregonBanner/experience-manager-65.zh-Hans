@@ -8,9 +8,9 @@ content-type: reference
 docset: aem65
 exl-id: 39e35a07-140f-4853-8f0d-8275bce27a65
 feature: Security
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
-source-wordcount: '6816'
+source-wordcount: '6808'
 ht-degree: 0%
 
 ---
@@ -798,7 +798,7 @@ CUG重写的身份验证相关部分只附带一个与AdobeGranite身份验证�
 
 **策略定义的目标节点**
 
-CUG策略应在JCR节点创建，以定义子树接受受限的读取访问。 如果预计CUG会影响整个树，则这可能是一个AEM页面。
+在JCR节点创建CUG策略，定义子树要接受受限读取访问。 如果预计CUG会影响整个树，则这可能是一个AEM页面。
 
 请注意，仅将CUG策略放置在给定页面下方的jcr：content节点上，将只会限制对给定页面内容s.str的访问，而不会对任何同级页面或子页面生效。 这可能是有效的用例，并且可以使用允许应用细粒度访问内容的存储库编辑器实现。 但是，它与以前的实施形成了对比，以前的实施是在jcr：content节点上放置cq：cugEnabled属性时，将内部重新映射到页面节点。 不再执行此映射。
 
@@ -839,7 +839,7 @@ mixin类型定义一个名为的可选属性 `granite:loginPath`，基本上对�
 
 #### 由Mixin类型定义的目标节点 {#target-node-defined-by-mixin-type}
 
-身份验证要求应在JCR节点创建，该节点定义要强制登录的子树。 如果预计CUG会影响整个树，则这可能是AEM页面，并且新实现的UI随后将在页面节点上添加身份验证要求mixin类型。
+在JCR节点创建身份验证要求，定义要强制登录的子树。 如果预计CUG会影响整个树，则这可能是AEM页面，并且新实现的UI随后将在页面节点上添加身份验证要求mixin类型。
 
 仅将CUG策略放在给定页面下方的jcr：content节点上，将只会限制对内容的访问，而不会影响页面节点本身或任何子页面。
 

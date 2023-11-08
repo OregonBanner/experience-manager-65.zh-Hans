@@ -6,7 +6,7 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/managing_services
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 exl-id: a6a10ff0-6f4d-42df-9b4e-f98a53cf1806
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '10692'
 ht-degree: 0%
@@ -610,9 +610,9 @@ PDFG清理扫描秒的默认值为 `43200` （12小时）。 作业过期秒数�
 
 **TSP服务器URL：** 默认时间戳提供程序的URL。 仅在提供有效值时使用。 无默认值。
 
-**TSP服务器用户名：** 时间戳提供方要求的用户名。 仅当为URL提供了有效值时才使用。 无默认值。
+**TSP服务器用户名：** 时间戳提供方需要的用户名。 仅当为URL提供了有效值时才使用。 无默认值。
 
-**TSP服务器密码：** 上述用户名的密码（如果时间戳提供程序要求）。 仅当为URL和用户名提供了有效值时才使用。 无默认值。
+**TSP服务器密码：** 时间戳提供者根据需要，提供上述用户名的密码。 仅当为URL和用户名提供了有效值时才使用。 无默认值。
 
 **请求哈希算法：** 指定在创建时间戳提供程序的请求时要使用的哈希算法。 默认值为SHA1。
 

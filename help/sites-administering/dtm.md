@@ -10,7 +10,7 @@ topic-tags: integration
 content-type: reference
 discoiquuid: b8c7a20a-7694-4a49-b66a-060720f17dad
 exl-id: 1e0821f5-627f-4262-ba76-62303890e112
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '2205'
 ht-degree: 3%
@@ -248,7 +248,7 @@ AEM支持在云中托管或在AEM上托管的动态Tag Management。
 
 ## 将动态Tag Management配置与您的站点关联 {#associating-a-dynamic-tag-management-configuration-with-your-site}
 
-将您的动态Tag Management配置与网站页面关联，以便AEM将所需的脚本添加到页面。 将站点的根页面与配置关联。 该页面的所有后代都将继承关联。 如果需要，您可以在子页面中覆盖关联。
+将您的动态Tag Management配置与网站页面关联，以便AEM将所需的脚本添加到页面。 将站点的根页面与配置关联。 该页面的所有后代都将继承关联。 如有必要，您可以在子页面中覆盖关联。
 
 使用以下过程可将页面及其后代与Dynamic Tag Management配置相关联。
 

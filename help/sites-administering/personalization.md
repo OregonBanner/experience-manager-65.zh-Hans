@@ -1,18 +1,14 @@
 ---
 title: 个性化
-seo-title: Personalization
 description: 了解Adobe Experience Manager中的个性化设置，以便为用户提供一个显示动态内容的定制环境。
-seo-description: Learn about personalization in AEM.
-uuid: 5790a3e0-f0ec-4785-b915-330a10dea30c
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
-discoiquuid: 03ebc494-8baa-4741-b8de-dac5ace743c8
 exl-id: 3a550a33-b54b-4217-b9a6-b5a7971276ee
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
-source-wordcount: '1698'
+source-wordcount: '1696'
 ht-degree: 2%
 
 ---
@@ -115,7 +111,7 @@ ht-degree: 2%
 
 * 通过跟踪用户的行为或根据用户配置文件设置规则来实现的个性化必须准确且符合逻辑。
 * 因为规则的逻辑不准确，用户被强制提供或拒绝提供内容是最令其沮丧的。
-* 因此，必须仔细考虑规则 — 将用户的要求放在前台。 这可能需要大量工作，并且不会被低估；在实施个性化时，定义业务规则通常比技术工作更费力。
+* 因此，必须仔细考虑规则 — 将用户的要求放在前台。 这可能需要花费很多时间，并且不会被低估；在实施个性化时，定义业务规则通常比技术工作更费力。
 
 #### 使用时间 {#when-to-use}
 
@@ -157,7 +153,7 @@ AEM提供了各种组件以进行个性化。 有些功能允许用户登录并�
 | Forms文本字段 | 允许用户输入信息的文本字段。 |
 | 我的小工具 | 允许您包含一系列可用小工具之一。 |
 | 个人资料头像照片 | 允许输入头像照片。 |
-| 个人资料详细姓名 | 根据需要输入名称详细信息，包括标题、中间名和后缀等元素。 |
+| 个人资料详细姓名 | 输入名称详细信息，包括标题、中间名和后缀等元素（如有必要）。 |
 | 个人资料 - 显示名称 | 要显示的名称。 |
 | 个人资料电子邮件 | 电子邮件地址的输入。 |
 | 个人资料性别 | 允许输入性别。 |

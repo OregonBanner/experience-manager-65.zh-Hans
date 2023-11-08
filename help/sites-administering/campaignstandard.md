@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
 exl-id: caa43d80-1f38-46fc-a8b9-9485c235c0ca
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
-source-wordcount: '1825'
+source-wordcount: '1823'
 ht-degree: 17%
 
 ---
@@ -67,7 +67,7 @@ ht-degree: 17%
 
 ## 验证Campaign中的AEMResourceTypeFilter {#resource-type-filter}
 
-此 `AEMResourceTypeFilter` 是Adobe Campaign中的一个选项，用于筛选可以在Adobe Campaign中使用的AEM资源。 由于AEM包含大量内容，因此此选项将用作过滤器，允许Adobe Campaign仅检索专门设计用于Adobe Campaign的类型的AEM内容。
+此 `AEMResourceTypeFilter` 是Adobe Campaign中的一个选项，用于筛选可以在Adobe Campaign中使用的AEM资源。 由于AEM包含许多内容，因此此选项将用作过滤器，允许Adobe Campaign仅检索专门设计用于Adobe Campaign的类型的AEM内容。
 
 此选项是预配置的。 但是，如果您自定义了AEM的Campaign组件，则可能需要更新它。 验证 `AEMResourceTypeFilter` 选项，请按照以下步骤操作。
 

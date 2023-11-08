@@ -7,7 +7,7 @@ topic-tags: extending-aem
 content-type: reference
 docset: aem65
 exl-id: 6790202f-0542-4779-b3ce-d394cdba77b4
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '2451'
 ht-degree: 2%
@@ -167,7 +167,7 @@ ht-degree: 2%
 
 1. 打开的工作流模型 [编辑](#editinganexistingworkflow).
 1. 选择 **工作流模型属性** 工具栏中。
-1. 在对话框中，激活 **瞬态工作流** （如果需要，可以停用）：
+1. 在对话框中，激活 **瞬态工作流** （如有必要，请取消激活）：
 
    ![wf-07](assets/wf-07.png)
 
@@ -208,7 +208,7 @@ ht-degree: 2%
 1. 打开的工作流模型 [编辑](#editinganexistingworkflow).
 1. 选择 **工作流模型属性** 工具栏中。
 
-1. 在对话框中，激活 **多资源支持** （如果需要，可以停用）：
+1. 在对话框中，激活 **多资源支持** （如有必要，请取消激活）：
 
    ![wf-08](assets/wf-08.png)
 

@@ -4,9 +4,9 @@ description: 安装、配置和自定义AEM Forms演示包。
 contentOwner: anujkapo
 docset: aem65
 exl-id: 1fee474e-7da5-4ab2-881a-34b8e055aa29
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
-source-wordcount: '4611'
+source-wordcount: '4603'
 ht-degree: 3%
 
 ---
@@ -34,8 +34,8 @@ ht-degree: 3%
 | Adobe Analytics | v1.4 Rest API | **支持** |
 **软件包安装注意事项：**
 
-* 该软件包应安装在干净的服务器上，且没有其他演示软件包或早期演示软件包版本
-* 软件包应安装在OSGI服务器上，以创作模式运行
+* 在干净的服务器上安装该包，无需安装其他演示包或早期演示包版本。
+* 在OSGI服务器上安装包，该服务器以创作模式运行。
 
 ### 此包包含什么内容 {#what-does-this-package-include}
 

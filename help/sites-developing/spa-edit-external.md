@@ -2,7 +2,7 @@
 title: 在Adobe Experience Manager中编辑外部SPA
 description: 本文档介绍了将独立SPA上传到Adobe Experience Manager实例、添加内容的可编辑部分以及启用创作的建议步骤。
 exl-id: 25236af4-405a-4152-8308-34d983977e9a
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '2432'
 ht-degree: 1%
@@ -300,7 +300,7 @@ mvn clean install -PautoInstallSinglePackage
 
 ### 根节点标识 {#root-node-id}
 
-默认情况下，我们假定React应用程序在 `div` 元素ID的 `spa-root`. 如果需要，可以自定义标记。
+默认情况下，我们假定React应用程序在 `div` 元素ID的 `spa-root`. 如有必要，可以自定义标记。
 
 例如，假设我们有一个SPA，其中应用程序在 `div` 元素ID的 `root`. 这需要在三个文件中反映出来。
 

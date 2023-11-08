@@ -6,9 +6,9 @@ content-type: reference
 topic-tags: repo_restructuring
 feature: Upgrading
 exl-id: b4531792-06dd-4545-9dbb-57224be20dc7
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
-source-wordcount: '1460'
+source-wordcount: '1457'
 ht-degree: 1%
 
 ---
@@ -52,7 +52,7 @@ ht-degree: 1%
   </tr>
   <tr>
    <td><strong>重组指南</strong></td>
-   <td><p>如果打算在源代码管理中编辑任何新的或修改的ContextHub区段，而不是在AEM中编辑它们，则必须将它们迁移到新位置：</p>
+   <td><p>如果有任何新区段或修改的ContextHub区段是在源代码管理中编辑的，而不是在AEM中编辑的，则必须将它们迁移到新位置：</p>
     <ol>
      <li>将任何新区段或修改的ContextHub区段从上一个位置复制到适当的新位置(/<code>apps</code>， <code>/conf/global</code> 或 <code>/conf/&lt;tenant&gt;</code>)</li>
      <li>将之前位置对ContextHub区段的引用更新为新位置中已迁移的ContextHub区段(<code>/apps</code>， <code>/conf/global</code>， <code>/conf/&lt;tenant&gt;</code>)。</li>

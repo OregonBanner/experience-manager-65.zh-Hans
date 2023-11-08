@@ -12,9 +12,9 @@ discoiquuid: 4b676e7e-191f-4a19-8b8f-fc3e30244b59
 docset: aem65
 feature: Mobile Forms
 exl-id: 85c9315e-1bc8-44a9-937e-af6fc7cf54d1
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
-source-wordcount: '2005'
+source-wordcount: '2003'
 ht-degree: 0%
 
 ---
@@ -116,7 +116,7 @@ ht-degree: 0%
 
 1. 为什么HTML表单的大小大于PDF forms？
 
-   答案：要将XDP渲染到HTML表单，需要大量中间数据结构和对象，例如表单dom、数据dom和布局dom。
+   答案：要将XDP呈现为HTML表单，需要大量中间数据结构和对象，例如表单dom、数据dom和布局dom。
 
    对于PDF forms，Adobe Acrobat具有内置的XTG引擎，可用于创建中间数据结构和对象。 Acrobat还负责布局和脚本。
 

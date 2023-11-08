@@ -6,7 +6,7 @@ topic-tags: correspondence-management
 docset: aem65
 feature: Correspondence Management
 exl-id: da966787-a3b9-420f-8b7c-f00d05c61d43
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '3849'
 ht-degree: 0%
@@ -121,7 +121,7 @@ ht-degree: 0%
    >
    >有关为文本模块和字母设置制表符间距的详细信息，请参阅 [有关使用制表符间距排列文本的详细信息](https://helpx.adobe.com/aem-forms/kb/cm-tab-spacing-limitations.html).
 
-1. 如果需要，请在通信中插入特殊字符。 例如，可以使用“特殊字符”面板插入：
+1. 如有必要，请在通信中插入特殊字符。 例如，可以使用“特殊字符”面板插入：
 
    * 货币符号，如€、@和£
    * 数学符号，例如∑、√、∂和^

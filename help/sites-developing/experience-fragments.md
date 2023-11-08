@@ -7,9 +7,9 @@ topic-tags: extending-aem
 content-type: reference
 docset: aem65
 exl-id: c4fb1b5e-e15e-450e-b882-fe27b165ff9f
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
-source-wordcount: '1785'
+source-wordcount: '1782'
 ht-degree: 1%
 
 ---
@@ -46,7 +46,7 @@ An [体验片段](/help/sites-authoring/experience-fragments.md) 是一个或多
 
 >[!NOTE]
 >
->链接始终引用发布实例。 这些链接旨在由第三方使用，因此将始终从发布实例而不是作者中调用链接。
+>链接始终引用发布实例。 这些链接由第三方使用，因此链接始终从发布实例（而非创作实例）调用。
 >
 >有关详细信息，请参阅 [将URL外部化](/help/sites-developing/externalizer.md).
 

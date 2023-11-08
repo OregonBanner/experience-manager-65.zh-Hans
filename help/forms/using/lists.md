@@ -8,7 +8,7 @@ discoiquuid: 0d5436c6-1976-496c-b9a7-7dc6e830bb5d
 docset: aem65
 feature: Correspondence Management
 exl-id: 71754e41-45d7-4cc5-ba49-0748bd51c0cf
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '6911'
 ht-degree: 0%
@@ -96,7 +96,7 @@ ht-degree: 0%
    >
    >但是，粘贴文本的格式有一些 [限制](https://helpx.adobe.com/aem-forms/kb/cm-copy-paste-text-limitations.html).
 
-1. 如果需要，请在文档片段中插入特殊字符。 例如，可以使用“特殊字符”面板插入：
+1. 如有必要，请在文档片段中插入特殊字符。 例如，可以使用“特殊字符”面板插入：
 
    * 货币符号，如€、@和£
    * 数学符号，例如∑、√、∂和^
@@ -550,5 +550,5 @@ DD有一个收集元素Nominied_details，它有一个复合元素，该复合�
 1. 从文档片段列表中，选择一个或多个文档片段。 UI会显示复制图标。
 1. 点按复制。UI将显示“粘贴”图标。 您也可以选择在粘贴之前进入文件夹。 不同的文件夹可以包含具有相同名称的资源。 有关文件夹的详细信息，请参阅 [文件夹和组织资源](/help/forms/using/import-export-forms-templates.md#folders-and-organizing-assets).
 1. 点按粘贴。 将显示“粘贴”对话框。 如果您在同一位置复制和粘贴文档片段，系统会自动为信函的新副本指定名称和标题，但您可以编辑信函的标题和名称。
-1. 如果需要，请编辑保存文档片段副本的标题和名称。
+1. 如有必要，请编辑保存文档片段副本的标题和名称。
 1. 点按粘贴。 将创建文档片段的副本。

@@ -7,7 +7,7 @@ topic-tags: extending-aem
 content-type: reference
 docset: aem65
 exl-id: bba64ce6-8b74-4be1-bf14-cfdf3b9b60e1
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '2582'
 ht-degree: 58%
@@ -614,7 +614,7 @@ AEM 使用一组默认的语言和国家/地区代码。
 * 默认语言代码是 ISO-639-1 定义的由两个小写字母组成的代码。
 * 默认的国家/地区代码是由 ISO 3166 定义的小写或大写形式的由两个字母组成的代码。
 
-MSM 使用存储的语言和国家/地区代码列表来确定与页面语言版本名称关联的国家/地区名称。如果需要，您可以更改列表的以下方面：
+MSM 使用存储的语言和国家/地区代码列表来确定与页面语言版本名称关联的国家/地区名称。您可以根据需要更改列表的以下方面：
 
 * 语言标题
 * 国家/地区名称

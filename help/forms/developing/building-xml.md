@@ -2,16 +2,16 @@
 title: 如何在AEM Forms on JEE Workbench中使用execute脚本服务来构建XML数据？
 description: 使用AEM Forms on JEE Workbench中的执行脚本服务构建XML数据
 exl-id: 2ec57cd4-f41b-4e5c-849d-88ca3d2cfe19
-source-git-commit: e2a3470784beb04c2179958ac6cb98861acfaa71
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
-source-wordcount: '992'
+source-wordcount: '990'
 ht-degree: 0%
 
 ---
 
 # 使用AEM Forms on JEE Workbench中的执行脚本服务构建XML数据 {#using-execute-script-service-forms-jee-workbench}
 
-JEE流程管理工作流中AEM Forms涉及许多XML，例如：可以在流程中构建XML信息并将其发送到JEE Workspace上的AEM Forms中的Flex应用程序，用于系统设置，或者在表单之间传递信息。 在许多情况下，JEE上的AEM Forms开发人员需要管理XML，并且很多时候这需要通过JEE上的AEM Forms流程来管理XML。
+JEE流程管理工作流中AEM Forms涉及许多XML，例如：可以在流程中构建XML信息并将其发送到JEE Workspace上的AEM Forms中的Flex应用程序，用于系统设置，或者将信息传递到表单或从表单传递信息。 在许多情况下，JEE上的AEM Forms开发人员需要管理XML，并且很多时候这需要通过JEE上的AEM Forms流程来管理XML。
 
 在处理简单的XML设置时，可以使用 `Set Value` 服务，它是JEE服务中的默认AEM Forms。 此服务设置流程数据模型中一个或多个数据项的值。 对于简单的条件逻辑“如果为，则为”方案，此服务可以适合该目的。
 

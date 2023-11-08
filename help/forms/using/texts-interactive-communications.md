@@ -10,7 +10,7 @@ discoiquuid: f04050f8-42de-4ef0-b6ed-145d59bbffce
 docset: aem65
 feature: Interactive Communication
 exl-id: b8e84c5d-2ec8-4575-9eed-6b37b04e5d66
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '2475'
 ht-degree: 0%
@@ -247,7 +247,7 @@ ht-degree: 0%
 
 ## 在文本中插入特殊字符 {#special}
 
-如果需要，请在文档片段中插入特殊字符。 例如，可以使用“特殊字符”面板插入：
+如有必要，请在文档片段中插入特殊字符。 例如，可以使用“特殊字符”面板插入：
 
 * 货币符号，如€、@和£
 * 数学符号，例如∑、√、∂和^

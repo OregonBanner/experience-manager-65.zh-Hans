@@ -7,7 +7,7 @@ role: User,Admin
 feature: Metadata
 exl-id: 0dd322cd-ce97-4335-825d-71f72a5e438c
 hide: true
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '3616'
 ht-degree: 9%
@@ -220,7 +220,7 @@ ht-degree: 9%
 
    >[!NOTE]
    >
-   >添加选项时，如果单击“下拉”字段，则界面将扭曲，且选项的删除选项将停止工作。 在保存更改之前，请勿单击下拉菜单。 如果您遇到此问题，请保存架构并再次打开它以继续编辑。
+   >添加选项时，如果单击“下拉”字段，则界面将扭曲，且选项的删除选项将停止工作。 在保存更改之前，请勿单击下拉列表。 如果您遇到此问题，请保存架构并再次打开它以继续编辑。
 
 1. （可选）添加其他必填字段。 例如，资源类型视频的格式、编解码器和持续时间。
 

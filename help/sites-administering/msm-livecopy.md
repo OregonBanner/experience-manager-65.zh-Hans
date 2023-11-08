@@ -3,10 +3,10 @@ title: 创建并同步 Live Copy
 description: 了解如何在Adobe Experience Manager中创建和同步活动副本。
 feature: Multi Site Manager
 exl-id: 896b35dd-4510-4c94-8615-03d9649c2f64
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '4227'
-ht-degree: 46%
+ht-degree: 45%
 
 ---
 
@@ -412,7 +412,7 @@ Blueprint页面（在Blueprint配置中引用）为您提供使用当前(Bluepri
 
 ![继续](assets/chlimage_1-229.png)
 
-选中后，将显示对话框。 如果需要，您可以选择同步，然后确认操作。
+选中后，将显示对话框。 您可以根据需要选择同步，然后确认操作。
 
 #### 从 Live Copy 概述恢复 Live Copy 页面 {#resume-a-live-copy-page-from-the-live-copy-overview}
 
@@ -462,7 +462,7 @@ Blueprint页面（在Blueprint配置中引用）为您提供使用当前(Bluepri
 
 ### 取消组件的继承 {#cancelling-inheritance-for-a-component}
 
-取消组件的Live Copy继承，以便该组件不再与源组件同步。 如果需要，您可以稍后启用继承。
+取消组件的Live Copy继承，以便该组件不再与源组件同步。 如有必要，您可以稍后启用继承。
 
 >[!NOTE]
 >

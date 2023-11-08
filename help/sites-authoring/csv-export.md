@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 7be506fb-f5c4-48dd-bec2-a3ea3ea19397
 docset: aem65
 exl-id: 18910143-f2f2-4cfe-88b9-651df90d9cb9
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '189'
-ht-degree: 85%
+ht-degree: 79%
 
 ---
 
@@ -61,7 +61,7 @@ ht-degree: 85%
 
 要创建 CSV 导出，请执行以下操作：
 
-1. 必要时，打开&#x200B;**Sites**&#x200B;控制台并导航到所需的位置。
+1. 打开 **站点** 导航到所需的位置（如有必要）。
 1. 从工具栏中，选择&#x200B;**创建**，然后选择 **CSV 报表**，以打开向导：
 
    ![etc-03](assets/etc-03.png)

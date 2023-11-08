@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 5aa69b10-2cd0-4d34-8104-8c3b88405926
 feature: Configuring
 exl-id: b32001a1-0078-43f6-89d6-781d6d2e9c94
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '660'
 ht-degree: 0%
@@ -105,7 +105,7 @@ AEM使用以下功能将日志消息写入文件：
 
    * 将消息写入 `request.log` 或 `access.log`.
 
-如果需要，可以自定义这些配置，但标准配置适用于大多数安装。
+如有必要，可以自定义这些选项，但标准配置适用于大多数安装。
 
 其他对将遵循标准配置：
 

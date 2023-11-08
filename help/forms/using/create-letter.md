@@ -9,7 +9,7 @@ topic-tags: correspondence-management
 discoiquuid: 6cef0bcf-e2f0-4a5a-85a1-6d8a5dd9bd01
 feature: Correspondence Management
 exl-id: 2f996a50-7c7d-41b6-84b2-523b6609254b
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '3979'
 ht-degree: 2%
@@ -475,5 +475,5 @@ ht-degree: 2%
 1. 在“字母”页中，选择一个或多个字母。 UI会显示复制图标。
 1. 点按复制。UI将显示“粘贴”图标。 您也可以选择在粘贴之前进入文件夹。 不同的文件夹可以包含具有相同名称的资源。 有关文件夹的详细信息，请参阅 [文件夹和组织资源](/help/forms/using/import-export-forms-templates.md#folders-and-organizing-assets).
 1. 点按粘贴。 将显示“粘贴”对话框。 如果在同一位置复制和粘贴字母，系统会自动为新的字母副本指定名称和标题，但您可以编辑字母的标题和名称。
-1. 如果需要，请编辑要用于保存信件副本的标题和名称。
+1. 如有必要，请编辑要用于保存信件副本的标题和名称。
 1. 点按粘贴。 将创建信件的副本。 现在，您可以在新建的信件中进行所需的更改。

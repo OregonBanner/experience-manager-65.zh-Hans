@@ -10,10 +10,10 @@ topic-tags: projects
 content-type: reference
 discoiquuid: fb354c72-debb-4fb6-9ccf-56ff5785c3ae
 exl-id: 62586c8e-dab4-4be9-a44a-2c072effe3c0
-source-git-commit: e2a3470784beb04c2179958ac6cb98861acfaa71
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '980'
-ht-degree: 23%
+ht-degree: 22%
 
 ---
 
@@ -43,7 +43,7 @@ ht-degree: 23%
 
    ![创建项目向导](assets/create-project-wizard.png)
 
-1. 定义&#x200B;**标题**&#x200B;和&#x200B;**描述**，然后根据需要添加&#x200B;**缩略图**&#x200B;图像。您还可以添加或删除用户以及他们所属的组。
+1. 定义 **标题** 和 **描述** 并添加 **缩略图** 图像（如有必要）。 您还可以添加或删除用户以及他们所属的组。
 
    ![向导的“属性”步骤](assets/create-project-wizard-properties.png)
 
