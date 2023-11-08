@@ -5,7 +5,7 @@ exl-id: a1a4b1ca-d353-46e2-a992-f38be6be338e
 source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '1159'
-ht-degree: 94%
+ht-degree: 96%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 94%
 
 ## 目标 {#objective}
 
-本文档可帮助您了解如何设置AEM与所选翻译服务的集成。 阅读本文档后，您应：
+本文档可帮助您了解如何设置 AEM 集成以使用所选翻译服务。阅读本文档后，您应：
 
 * 了解 AEM 中翻译集成框架的重要参数。
 * 能够自行建立与翻译服务的连接。

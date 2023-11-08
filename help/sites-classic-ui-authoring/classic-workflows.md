@@ -1,14 +1,12 @@
 ---
 title: 使用工作流程
 description: AEM Workflows可让您自动执行在页面或资源上执行的一系列步骤。 例如，在发布时，编辑者必须在站点管理员激活页面之前审查内容。自动完成此示例的工作流会通知每位参与者何时需要执行其所需工作。
-uuid: 3eb6e790-6589-414a-8e51-33c358f47a73
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: site-features
-discoiquuid: b11f0e4c-4dec-4b66-9f54-a0aa13ac77b9
 exl-id: 298fcfeb-dc8d-4edc-8743-83c0e5e5bc08
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 2a97935a81cf9c0a1a832dd27b62d388805863e0
 workflow-type: tm+mt
 source-wordcount: '208'
 ht-degree: 75%
