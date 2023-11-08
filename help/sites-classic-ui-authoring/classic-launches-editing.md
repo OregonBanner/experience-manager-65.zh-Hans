@@ -1,18 +1,16 @@
 ---
 title: 编辑启动项
-description: 在为一个页面（或一组页面）创建启动项后，您可以编辑页面启动副本中的内容。
-uuid: 3a310eeb-553d-4d2b-98b5-c5bc523b2aca
+description: 为某个页面（或一组页面）创建启动项后，您可以在页面的启动项副本中编辑内容。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: site-features
-discoiquuid: 666b967a-e94b-4f94-a676-00adf150580f
 legacypath: /content/docs/en/aem/6-0/author/site-page-features/launches
 exl-id: 21776f42-cd81-459d-b4b9-1d92e0aec164
-source-git-commit: 71b3f7c6ad2c7712762a29518de6cf0639081cb7
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '291'
-ht-degree: 27%
+source-wordcount: '289'
+ht-degree: 9%
 
 ---
 
@@ -20,7 +18,7 @@ ht-degree: 27%
 
 ## 编辑启动页面 {#editing-launch-pages}
 
-在为一个页面（或一组页面）创建启动项后，您可以编辑页面启动副本中的内容。
+为某个页面（或一组页面）创建启动项后，您可以在页面的启动项副本中编辑内容。
 
 1. 打开要编辑的页面。
 1. 在Sidekick中，选择 **版本控制** 选项卡，然后展开 **启动次数** 组。 当前正在编辑的启动项的标题使用粗体字体。

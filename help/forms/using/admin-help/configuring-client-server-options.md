@@ -7,9 +7,9 @@ geptopics: SG_AEMFORMS/categories/working_with_document_security
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 feature: Document Security
 exl-id: fe132f13-5f9a-4c86-a385-0a0026c812e2
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: e2a3470784beb04c2179958ac6cb98861acfaa71
 workflow-type: tm+mt
-source-wordcount: '10228'
+source-wordcount: '10221'
 ht-degree: 0%
 
 ---
@@ -51,7 +51,7 @@ ht-degree: 0%
 
 **允许扩展身份验证** 选择以启用扩展身份验证，然后输入扩展身份验证登录URL。
 
-选择此选项可使客户端应用程序使用扩展身份验证。 扩展身份验证为AEM Forms服务器上配置的自定义身份验证流程和不同的身份验证选项提供了支持。 例如，用户现在可以从Acrobat和Reader客户端体验基于SAML的身份验证，而不是AEM表单用户名/密码。 默认情况下，登录URL包含 *localhost* 作为服务器名称。 将服务器名称替换为完全限定的主机名。 如果尚未启用扩展身份验证，则会从基本URL自动填充登陆URL中的主机名。 请参阅 [添加扩展身份验证提供程序](configuring-client-server-options.md#add-the-extended-authentication-provider).
+选择此选项可使客户端应用程序使用扩展身份验证。 扩展身份验证为AEM Forms服务器上配置的自定义身份验证流程和各种身份验证选项提供了支持。 例如，用户现在可以从Acrobat和Reader客户端体验基于SAML的身份验证，而不是AEM表单用户名/密码。 默认情况下，登录URL包含 *localhost* 作为服务器名称。 将服务器名称替换为完全限定的主机名。 如果尚未启用扩展身份验证，则会从基本URL自动填充登陆URL中的主机名。 请参阅 [添加扩展身份验证提供程序](configuring-client-server-options.md#add-the-extended-authentication-provider).
 
 ***注意&#x200B;**：带有Adobe Acrobat 11.0.6版或更高版本的Apple Mac OS X支持扩展身份验证。*
 
@@ -99,7 +99,7 @@ AEM forms提供了一个示例配置，您可以为您的环境自定义该配�
 >Apple Mac OS X 11.0.6及更高版本中的Adobe Acrobat支持扩展身份验证。
 
 1. 获取WAR文件的样例并部署它。 请参阅适用于您的应用程序服务器的安装指南。
-1. 确保表单服务器具有完全限定的名称（而不是IP地址）作为基本URL，并且它是HTTPS URL。 请参阅 [服务器配置设置](configuring-client-server-options.md#server-configuration-settings).
+1. 请确保Forms服务器具有作为基本URL的完全限定的名称（而不是IP地址），并且它是HTTPS URL。 请参阅 [服务器配置设置](configuring-client-server-options.md#server-configuration-settings).
 1. 从“服务器配置”页启用“扩展验证”。 请参阅 [服务器配置设置](configuring-client-server-options.md#server-configuration-settings).
 1. 在用户管理配置文件中添加所需的SSO重定向URL。 请参阅 [为扩展身份验证添加SSO重定向URL](configuring-client-server-options.md#add-sso-redirect-urls-for-extended-authentication).
 
@@ -154,7 +154,7 @@ Document Security使用加密算法和许可证来保护文档。 当文档安�
 
 减少离线文档威胁的一种方法是避免允许离线访问特别敏感文档。 另一种方法是周期性地滚过主键。 当Document Security滚动密钥时，任何现有密钥都不能再访问受策略保护的文档。 例如，如果犯罪者从被盗的膝上型计算机获得主密钥，则该密钥不能用于访问变换后发生保护后的文档。 如果您怀疑特定主体密钥已泄露，则可以手动滚动密钥。
 
-但是，您还需要注意，密钥滚动更新会影响所有主密钥，而不仅仅影响一个主密钥。 它还降低了系统的可扩展性，因为客户端必须存储更多密钥才能进行离线访问。 默认密钥滚动更新频率为20天。 建议不要将此值设置为小于14天，因为可能会阻止用户查看离线文档，并且系统性能可能会受到影响。
+但是，键滚动更新会影响所有主键，而不仅仅是主键。 它还降低了系统的可扩展性，因为客户端必须存储更多密钥才能进行离线访问。 默认密钥滚动更新频率为20天。 建议不要将此值设置为小于14天，因为可能会阻止用户查看离线文档，并且系统性能可能会受到影响。
 
 在下面的示例中，Key1是两个主键中较旧的键，Key2是较新的键。 第一次单击“Rollover Keys Now（立即滚动更新密钥）”按钮时，Key1无效，并生成一个较新的有效主体密钥(Key3)。 当用户与Document Security同步时（通常通过在线打开受保护的文档），将获得密钥3。 但是，在达到策略中指定的最大离线租赁期之前，不会强制用户与Document Security同步。 在第一次密钥滚动更新后，保持离线状态的用户仍可以打开离线文档，包括那些受Key3保护的文档，直到他们达到最大离线租赁期为止。 再次单击“Rollover Keys Now（立即滚动更新键）”按钮时，Key2将变为无效，并创建Key4。 在两次密钥滚动更新期间保持离线状态的用户无法打开受密钥3或密钥4保护的文档，直到他们与Document Security同步为止。
 
@@ -258,7 +258,7 @@ Document Security可以审核和记录与与与受策略保护的文档、策略
 
    * 要导出的审核事件的最小年龄
    * 单个文件中包含的最大审核事件数。 服务器根据此值生成一个或多个文件。
-   * 将在其中创建文件的文件夹。 此文件夹位于表单服务器上。 如果文件夹路径是相对路径，则它是相对于应用程序服务器根目录的相对路径。
+   * 将在其中创建文件的文件夹。 此文件夹位于Forms服务器上。 如果文件夹路径是相对路径，则它是相对于应用程序服务器根目录的相对路径。
    * 用于审核事件文件的文件前缀
    * 文件的格式，即与Microsoft Excel兼容的逗号分隔值(CSV)文件或XML文件。
 

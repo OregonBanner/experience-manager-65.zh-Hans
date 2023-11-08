@@ -7,9 +7,9 @@ topic-tags: upgrading
 content-type: reference
 feature: Upgrading
 exl-id: 85bc041e-0ab1-42de-8bcc-c98a175d7494
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '1338'
+source-wordcount: '1337'
 ht-degree: 1%
 
 ---
@@ -160,7 +160,7 @@ merge-index-definitions_target: JSON file having merged definitions for the targ
 
 的使用情况 `--doc-traversal-mode` 使用MongoMK安装时，参数非常方便，因为它通过将存储库内容假脱机到本地平面文件来显着缩短重新索引时间。 但是，它需要两倍于存储库大小的额外磁盘空间。
 
-对于MongoMK，如果在更接近MongoDB实例的实例中执行此步骤，则可以加快此进程。 如果在同一台计算机上运行，则可以避免网络开销。
+如果存在MongoMK，则如果在更靠近MongoDB实例的实例中执行此步骤，则可以加快此进程。 如果在同一台计算机上运行，则可以避免网络开销。
 
 欲知其他技术详情，请访问 [oak-run索引文档](https://jackrabbit.apache.org/oak/docs/query/oak-run-indexing.html).
 

@@ -6,7 +6,7 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: 01ec6ebc-6d80-4417-9604-c8571aebb57e
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: c4cd9a61a226ace2a72d60b5b7b7432de12cb873
 workflow-type: tm+mt
 source-wordcount: '1486'
 ht-degree: 0%
@@ -65,7 +65,7 @@ AEM Forms备份策略包含两种类型的备份：
 * 更改驱动器号或目录路径
 * 更改为其他数据库主机、端口或名称
 
-通常，此类恢复方案是由承载应用程序服务器、数据库服务器或表单服务器的服务器的硬件故障引起的。 除了本节所述的AEM表单特定配置外，如果AEM表单服务器的主机名或IP地址发生更改，您还应该对AEM表单部署的其他部分（如负载平衡器和防火墙）进行必要的更改。
+通常，此类恢复方案是由承载应用程序服务器、数据库服务器或Forms服务器的服务器的硬件故障引起的。 除了本节所述的AEM表单特定配置之外，如果AEM Forms服务器的主机名或IP地址发生更改，您还应该对AEM表单部署的其他部分（如负载平衡器和防火墙）进行必要的更改。
 
 ### 无法更改的内容 {#what-cannot-be-changed}
 
@@ -73,7 +73,7 @@ AEM Forms备份策略包含两种类型的备份：
 
 ### 恢复后重新启动 {#restarting-after-a-recovery}
 
-在恢复后重新启动表单服务器之前，请执行以下操作：
+在恢复后重新启动Forms服务器之前，请执行以下操作：
 
 1. 在维护模式下启动系统。
 1. 执行以下操作以确保在维护模式下将表单管理器与AEM表单同步：

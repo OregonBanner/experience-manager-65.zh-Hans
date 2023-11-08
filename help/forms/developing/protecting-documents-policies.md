@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 role: Developer
 exl-id: ff42579e-6aaf-433d-8b5d-9e9dd0957250
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '15468'
+source-wordcount: '15464'
 ht-degree: 0%
 
 ---
@@ -323,7 +323,7 @@ Document Security服务还可以保护其他文件类型，如Microsoft Word文�
 
 ## 修改策略 {#modifying-policies}
 
-您可以使用Document Security Java API或Web服务API修改现有策略。 要对现有策略进行更改，可以检索和修改现有策略，然后在服务器上更新策略。 例如，假设您检索现有策略并延长其有效期。 在更改生效之前，必须更新策略。
+您可以使用Document Security Java API或Web服务API修改现有策略。 要更改现有策略，您需要检索并修改现有策略，然后在服务器上更新策略。 例如，假设您检索现有策略并延长其有效期。 在更改生效之前，必须更新策略。
 
 当业务需求发生变化且策略不再反映这些需求时，您可以修改策略。 您可以简单地更新现有策略，而不是创建策略。
 
@@ -1477,7 +1477,7 @@ Inspect使用Document Security服务API（Web服务）创建受策略保护的PD
 
 ## 修改水印 {#modifying-watermarks}
 
-您可以使用Document Security Java API或Web服务API修改现有水印。 要对现有水印进行更改，可以检索该水印，修改其属性，然后在服务器上更新它。 例如，假设您检索水印并修改其不透明度属性。 在更改生效之前，必须更新水印。
+您可以使用Document Security Java API或Web服务API修改现有水印。 要更改现有水印，可以检索它，修改其属性，然后在服务器上更新它。 例如，假设您检索水印并修改其不透明度属性。 在更改生效之前，必须更新水印。
 
 当您修改水印时，此更改将影响对其应用了水印的未来文档。 也就是说，包含水印的现有PDF文档不受影响。
 

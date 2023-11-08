@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/setting_up_and_managing_domains
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 31dd8db3-ddac-429e-82f8-8c5dc4ffc186
 exl-id: d72a3977-1423-49e0-899b-234bb76be378
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: c4cd9a61a226ace2a72d60b5b7b7432de12cb873
 workflow-type: tm+mt
 source-wordcount: '1575'
 ht-degree: 0%
@@ -147,7 +147,7 @@ ht-degree: 0%
 ### 为域启用及时资源调配 {#enable-just-in-time-provisioning-for-a-domain}
 
 1. 编写实现IdentityCreator和AssignmentProvider接口的服务容器。 (请参阅 [使用AEM表单编程](https://www.adobe.com/go/learn_aemforms_programming_63).)
-1. 将服务容器部署到表单服务器。
+1. 将服务容器部署到Forms服务器。
 1. 在管理控制台中，单击设置>用户管理>域管理。
 
    选择现有域或单击“新建企业域”。

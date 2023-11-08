@@ -1,7 +1,7 @@
 ---
 title: 内容片段模板
 seo-title: Content Fragment Templates
-description: 在创建内容片段时选择模板，并为新片段提供基本结构、元素和变体
+description: 创建内容片段时会选择模板，并为新片段提供基本结构、元素和变量
 seo-description: Templates are selected when creating a content fragmen and provide the new fragment with the basic structure, element, and variation
 uuid: d147bac8-b710-40ed-9664-decb5ffcf8e7
 contentOwner: Guillaume Carlino
@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: a975ea2e-5e24-4a96-bd62-63bb98836ff2
 docset: aem65
 exl-id: 1b75721c-b223-41f0-88d9-bd855b529f31
-source-git-commit: a2b1bd5462ae1837470e31cfeb87a95af1c69be5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '674'
-ht-degree: 3%
+source-wordcount: '675'
+ht-degree: 4%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 3%
 
 >[!CAUTION]
 >
->[内容片段模型](/help/assets/content-fragments/content-fragments-models.md) 建议用于创建所有新的内容片段。
+>[内容片段模型](/help/assets/content-fragments/content-fragments-models.md) 建议创建所有新的内容片段。
 >
 >内容片段模型用于WKND中的所有示例。
 
@@ -30,9 +30,9 @@ ht-degree: 3%
 >
 >在AEM 6.3之前，内容片段是基于模板而不是模型创建的。
 >
->内容片段模板现已弃用。 它们仍可用于创建片段，但建议改用内容片段模型。 片段模板中不会添加任何新功能，将来版本中将删除这些功能。
+>现已弃用内容片段模板。 它们仍可用于创建片段，但建议改用内容片段模型。 不会向片段模板中添加任何新功能，并且会在未来版本中删除这些功能。
 
-创建内容片段时选择模板。 它们为新片段提供基本结构、元素和变量。 用于内容片段的模板受Granite Configuration Manager约束。
+创建内容片段时可以选择模板。 它们为新片段提供基本结构、元素和变量。 用于内容片段的模板受Granite配置管理器的约束。
 
 现成的模板保存在下：
 
@@ -46,24 +46,22 @@ ht-degree: 3%
 * `/conf/global/settings/dam/cfm/templates`
 运行时需要更改的全实例客户特定模板的位置。
 
-优先顺序为（降序） `/conf`， `/apps`， `/libs`.
+优先级顺序为（按降序排列） `/conf`， `/apps`， `/libs`.
 
 >[!CAUTION]
 >
->您 ***必须*** 不更改 `/libs` 路径。
+>您 ***必须*** 不会更改中的任何内容 `/libs` 路径。
 >
 >这是因为 `/libs` 下次升级实例时将被覆盖（在应用修补程序或功能包时很可能会被覆盖）。
 >
->配置和其他更改的推荐方法是：
+>建议用于配置和其他更改的方法是：
 >
->1. 重新创建所需项目（即该项目存在于中） `/libs`)下 `/apps`
+>1. 重新创建所需项目(即，它存在于 `/libs`)，在 `/apps`
 >
 >1. 在中进行任何更改 `/apps`
-
 >
 
-
-模板的基本结构位于下方：
+模板的基本结构保存在下：
 
 ```xml
 conf
@@ -109,7 +107,7 @@ conf
 
 * **模板**
 
-   <table>
+  <table>
    <tbody>
     <tr>
      <th>名称</th>
@@ -119,11 +117,11 @@ conf
     <tr>
      <td><code>&lt;<em>template-name</em>&gt;</code></td>
      <td><code>nt:unstructured</code></td>
-     <td>此节点是每个模板的根。 它是必填项，应具有唯一名称。</td>
+     <td>此节点是每个模板的根。 它是强制性的，应具有唯一名称。</td>
     </tr>
     <tr>
      <td><code>jcr:title</code></td>
-     <td><p><code>String</code></p> <p>必需<br /> </p> </td>
+     <td><p><code>String</code></p> <p>必填<br /> </p> </td>
      <td>模板的标题(显示在 <strong>创建片段</strong> 向导)。</td>
     </tr>
     <tr>
@@ -134,24 +132,24 @@ conf
     <tr>
      <td><code>initialAssociatedContent</code></td>
      <td><p><code>String[]</code></p> <p>可选</p> </td>
-     <td>一个数组，其中包含集合的路径，默认情况下，这些路径应该关联到新创建的内容片段。</td>
+     <td>一个数组，其中包含指向集合的路径，默认情况下，这些路径应关联到新创建的内容片段。</td>
     </tr>
     <tr>
      <td><code>precreateElements</code></td>
-     <td><p><code>Boolean</code></p> <p>必需</p> </td>
-     <td><p><code>true</code>，如果在创建内容片段时应创建表示内容片段的元素(主控元素除外)的子资产； <em>false</em> 如果它们应该“动态”创建的话。</p> <p><strong>注释</strong>：此参数当前必须设置为 <code>true</code>.</p> </td>
+     <td><p><code>Boolean</code></p> <p>必填</p> </td>
+     <td><p><code>true</code>，如果在创建内容片段时应创建表示内容片段的元素（主元素除外）的子资产； <em>false</em> 是否应“动态”创建。</p> <p><strong>注意</strong>：当前必须将此参数设置为 <code>true</code>.</p> </td>
     </tr>
     <tr>
      <td><code>version</code></td>
-     <td><p><code>Long</code></p> <p>必需</p> </td>
-     <td><p>内容结构的版本；当前支持：</p> <p><strong>注释</strong>：此参数当前必须设置为 <code>2</code>.<br /> </p> </td>
+     <td><p><code>Long</code></p> <p>必填</p> </td>
+     <td><p>内容结构的版本；当前支持：</p> <p><strong>注意</strong>：当前必须将此参数设置为 <code>2</code>.<br /> </p> </td>
     </tr>
    </tbody>
   </table>
 
 * **元素**
 
-   <table>
+  <table>
    <tbody>
     <tr>
      <th>名称</th>
@@ -159,16 +157,16 @@ conf
      <th>价值</th>
     </tr>
     <tr>
-     <td><code>elements</code> </td>
-     <td><p><code>nt:unstructured</code></p> <p>必需</p> </td>
-     <td><p>包含内容片段元素定义的节点。 它是强制性的，并且需要为至少包含一个子节点 <strong>主要</strong> 元素，但可以包含[1..n]个子节点。</p> <p>使用模板时，元素子分支复制到片段的模型子分支。</p> <p>第一个元素(在CRXDE Lite中查看)自动视为 <i>主要</i> 元素；节点名称是无关的，并且节点本身不具有特殊重要性，除了它由主资产表示这一事实；其他元素作为子资产处理。</p> </td>
+     <td><code>elements</code><br /> </td>
+     <td><p><code>nt:unstructured</code></p> <p>必填</p> </td>
+     <td><p>包含内容片段元素定义的节点。 它是强制性的，并且需要为至少包含一个子节点 <strong>主要</strong> 元素，但可以包含[1..n]个子节点。</p> <p>使用模板时，元素子分支复制到片段的模型子分支。</p> <p>第一个元素(在CRXDE Lite中查看)自动视为 <i>主要</i> 元素；节点名称是无关的，并且节点本身除了由主资产表示之外不具有特殊意义；其他元素作为子资产处理。</p> </td>
     </tr>
    </tbody>
   </table>
 
 * **元素名称**
 
-   <table>
+  <table>
    <tbody>
     <tr>
      <th>名称</th>
@@ -178,11 +176,11 @@ conf
     <tr>
      <td><code>&lt;<i>element-name</i>&gt;</code></td>
      <td><code>nt:unstructured</code></td>
-     <td>此节点定义一个元素。 它是必填项，应具有唯一名称。</td>
+     <td>此节点定义一个元素。 它是强制性的，应具有唯一名称。</td>
     </tr>
     <tr>
      <td><code>jcr:title</code></td>
-     <td><p><code>String</code></p> <p>必需</p> </td>
+     <td><p><code>String</code></p> <p>必填</p> </td>
      <td>元素的标题（显示在片段编辑器的元素选择器中）。</td>
     </tr>
     <tr>
@@ -202,7 +200,7 @@ conf
     </tr>
     <tr>
      <td><code>name</code></td>
-     <td><p><code>String</code></p> <p>必需</p> </td>
+     <td><p><code>String</code></p> <p>必填</p> </td>
      <td>元素的内部名称；对于片段类型必须是唯一的。</td>
     </tr>
    </tbody>
@@ -210,7 +208,7 @@ conf
 
 * **变体**
 
-   <table>
+  <table>
    <tbody>
     <tr>
      <th>名称</th>
@@ -218,7 +216,7 @@ conf
      <th>价值</th>
     </tr>
     <tr>
-     <td><code>variations</code> </td>
+     <td><code>variations</code><br /> </td>
      <td><p><code>nt:unstructured</code></p> <p>可选</p> </td>
      <td>此可选节点包含内容片段的初始变体的定义。</td>
     </tr>
@@ -227,7 +225,7 @@ conf
 
 * **变量名称**
 
-   <table>
+  <table>
    <tbody>
     <tr>
      <th>名称</th>
@@ -235,14 +233,14 @@ conf
      <th>价值</th>
     </tr>
     <tr>
-     <td><code>&lt;<i>variation-name</i>&gt;</code> </td>
-     <td><p><code>nt:unstructured</code></p> <p>如果存在变体节点，则此为必填项</p> </td>
-     <td><p>定义初始变量。<br /> 默认情况下，该变量会添加到内容片段的所有元素中。</p> <p>变体将具有与相应元素相同的初始内容(请参阅 <code class="code">defaultContent/
+     <td><code>&lt;<i>variation-name</i>&gt;</code><br /> </td>
+     <td><p><code>nt:unstructured</code></p> <p>如果存在变体节点，则此为必填字段</p> </td>
+     <td><p>定义初始变量。<br /> 默认情况下，变体会添加到内容片段的所有元素。</p> <p>该变体的初始内容将与相应元素相同(请参阅 <code class="code">defaultContent/
        initialContentType</code>)</p> </td>
     </tr>
     <tr>
      <td><code>jcr:title</code></td>
-     <td><p><code>String</code></p> <p>必需</p> </td>
+     <td><p><code>String</code></p> <p>必填</p> </td>
      <td>变体的标题(显示在片段编辑器的 <strong>变量</strong> 选项卡（左边栏）。</td>
     </tr>
     <tr>

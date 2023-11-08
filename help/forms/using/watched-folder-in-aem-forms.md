@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 docset: aem65
 exl-id: fbf5c7c3-cb01-4fda-8e5d-11d56792d4bf
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
 source-wordcount: '7144'
 ht-degree: 0%
@@ -79,7 +79,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->如果托管Watched文件夹的服务器没有指定的运行模式，则Watched文件夹始终激活，而不管服务器上的运行模式如何。
+>如果托管Watched文件夹的服务器没有指定的任何运行模式，则Watched文件夹始终激活，而不管服务器上的运行模式如何。
 
 * **outputFilePattern（字符串）**：输出文件的模式。 您可以指定文件夹或文件模式。 如果指定了文件夹模式，则输出文件的名称将如工作流中所述。 如果指定了文件模式，则输出文件的名称如文件模式中所述。 [文件和文件夹模式](../../forms/using/watched-folder-in-aem-forms.md#p-file-and-folder-patterns-p) 还可以指定输出文件的目录结构。 它是必需属性。
 
@@ -159,7 +159,7 @@ ht-degree: 0%
 * **throttleOn（布尔值）**：选中此选项后，它会限制AEM Forms在任何给定时间处理的观察文件夹作业数。 最大作业数由“批次大小”值决定。 默认值为true。 (请参阅 [关于限制](../../forms/using/watched-folder-in-aem-forms.md#p-about-throttling-p).)
 
 * **overwriteDuplicateFilename（布尔值）**：设置为True时，将覆盖结果文件夹和保留文件夹中的文件。 当设置为False时，使用具有数字索引后缀的文件和文件夹作为名称。 默认值为False。
-* **preserveOnFailure（布尔值）**：如果无法对服务执行操作，则保留输入文件。 默认值为true。
+* **preserveOnFailure（布尔值）**：如果对服务运行操作失败，则保留输入文件。 默认值为true。
 * **inputFilePattern（字符串）**：指定Watched文件夹的输入文件模式。 创建文件的允许列表。
 * **异步（布尔值）**：将调用类型标识为异步或同步。 默认值为true（异步）。 文件处理是一项消耗资源的任务，将异步标志的值保持为true可防止阻塞扫描作业的主线程。 在群集环境中，保持标记为true对于启用跨可用服务器处理的文件的负载平衡至关重要。 如果标志为false，则扫描作业将尝试在其自己的线程中依次对每个顶级文件/文件夹执行处理。 如果没有特定原因（例如，在单服务器设置上基于工作流的处理），请勿将标志设置为false。
 

@@ -11,7 +11,7 @@ topic-tags: forms-workspace
 discoiquuid: d8546227-d78d-4fe2-a092-222482bb69c9
 docset: aem65
 exl-id: c80bf347-d1ed-488f-a41a-ceb05a6df9e4
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
 source-wordcount: '4031'
 ht-degree: 0%
@@ -194,7 +194,7 @@ AEM Forms工作区具有以下三种类型的待办事项列表：
 
    >[!NOTE]
    >
-   >您可以将工作区配置为定期自动将用户输入的信息保存为草稿。 如果启用了自动保存并且用户正在处理草稿，则会定期保存草稿。 在自动保存的情况下，任务的默认名称将自动获取。
+   >您可以将工作区配置为定期自动将用户输入的信息保存为草稿。 如果启用了自动保存并且用户正在处理草稿，则会定期保存草稿。 如果存在自动保存，则会自动采用任务的默认名称。
    >
    >
    >有关更多信息，请参阅定期保存草稿，位置如下： [管理首选项](/help/forms/using/getting-started-livecycle-html-workspace.md).

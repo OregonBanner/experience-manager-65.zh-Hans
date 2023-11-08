@@ -1,20 +1,16 @@
 ---
 title: 计算表单数据
-seo-title: Calculating Form Data
 description: 使用Forms服务计算用户在表单中输入的值并显示结果。 Forms服务使用Java API和Web服务API计算值。
-seo-description: Use the Forms service to calculate values that a user enters into a form and display the results. Forms service calculates the values using the Java API and Web Service API.
-uuid: ccd85bc7-8ccc-44d9-9424-dfc1f603e688
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/rendering_forms
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: operations
-discoiquuid: b4f57e42-60a6-407d-9764-15a11615827d
 role: Developer
 exl-id: 28abf044-6c8e-4578-ae2e-54cdbd694c5f
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '1878'
+source-wordcount: '1876'
 ht-degree: 1%
 
 ---
@@ -25,7 +21,7 @@ ht-degree: 1%
 
 Forms服务可以计算用户在表单中输入的值并显示结果。 要计算表单数据，必须执行两项任务。 首先，创建用于计算表单数据的表单设计脚本。 窗体设计支持三种类型的脚本。 一种脚本类型在客户端运行，另一种脚本类型在服务器上运行，第三种脚本类型同时在服务器和客户端运行。 本主题中讨论的脚本类型在服务器上运行。 HTML、PDF和表单指南（已弃用）转换支持服务器端计算。
 
-在表单设计过程中，您可以使用计算和脚本来提供更丰富的用户体验。 可将计算和脚本添加到大多数表单字段和对象。 您必须创建一个表单设计脚本，以便对用户输入交互式表单的数据执行计算操作。
+在表单设计过程中，您可以使用计算和脚本提供更丰富的用户体验。 可将计算和脚本添加到大多数表单字段和对象。 您必须创建一个表单设计脚本，以便对用户输入交互式表单的数据执行计算操作。
 
 用户在表单中输入值，然后单击“计算”按钮以查看结果。 以下流程描述了允许用户计算数据的示例应用程序：
 

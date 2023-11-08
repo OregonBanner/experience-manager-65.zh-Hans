@@ -4,7 +4,7 @@ description: 了解如何部署AEM Content and Commerce项目。
 topics: Commerce
 feature: Commerce Integration Framework
 exl-id: 92b964f8-6672-4f76-8a9f-5782c3ceb83f
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
 source-wordcount: '714'
 ht-degree: 5%
@@ -57,7 +57,7 @@ CIF加载项在以下位置提供了一个GraphQL代理servlet： `/api/graphql`
 
 可以按照以下步骤通过CIFCloud Service配置为项目调整此配置：
 
-1. 在AEM中，转到“工具” — >“Cloud Service” — >“CIF配置”
+1. 在AEM中，转到“工具”>“Cloud Service”>“CIF配置”
 
 2. 选择要更改的商务配置
 

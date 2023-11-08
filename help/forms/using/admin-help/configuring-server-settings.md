@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/configuring_forms_workflow
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: e047a95e-0acb-438a-8d27-f005c0adc508
 exl-id: 362b7b91-c58b-4e47-a6ef-56a4b54a100c
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: c4cd9a61a226ace2a72d60b5b7b7432de12cb873
 workflow-type: tm+mt
 source-wordcount: '2623'
 ht-degree: 0%
@@ -27,7 +27,7 @@ ht-degree: 0%
 
 ## 配置电子邮件设置 {#configuring-email-settings}
 
-您可以为表单服务器指定一个电子邮件帐户，通过该帐户向AEM表单用户和管理员发送电子邮件。 这些电子邮件用于通知和提醒用户必须完成的任务，通知用户已到达截止日期的任务，并在发生任何进程错误时通知管理员。
+您可以为Forms服务器指定一个电子邮件帐户，通过该帐户向AEM Forms用户和管理员发送电子邮件。 这些电子邮件用于通知和提醒用户必须完成的任务，通知用户已到达截止日期的任务，并在发生任何进程错误时通知管理员。
 
 要在AEM表单和用户之间启用电子邮件发送，请在“电子邮件设置”页面上配置传出电子邮件设置。 传出电子邮件必须使用SMTP服务器。
 
@@ -288,7 +288,7 @@ Notification Template区域是一个富文本编辑器，可用于生成电子�
 1. 在管理控制台中，单击服务> Forms工作流>服务器设置> BAM配置设置。
 1. 在“BAM主机”框中，键入运行BAM的服务器的名称。 缺省值为localhost。
 1. 在“BAM端口”框中，键入用于连接到运行BAM的服务器的端口。 JBoss的默认BAM端口为8080，WebLogic为7001，WebSphere为9080。
-1. 在服务器主机框中，键入主机表单服务器的名称或IP地址。 默认值为localhost。
-1. 在“服务器端口”框中，键入表单服务器使用的端口号。
+1. 在服务器主机框中，键入主机Forms服务器的名称或IP地址。 默认值为localhost。
+1. 在“服务器端口”框中，键入Forms服务器使用的端口号。
 1. 在“User Name（用户名）”和“Password（密码）”框中，键入相应的用户ID和密码以访问BAM服务器。 默认的用户名为CognosNowAdmin ，默认密码为manager。
 1. 单击保存。

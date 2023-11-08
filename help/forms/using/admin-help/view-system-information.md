@@ -1,7 +1,7 @@
 ---
 title: 查看系统信息
 seo-title: View system information
-description: 了解如何查看资源监控图表和有关运行AEM表单的服务器的信息。
+description: 了解如何查看资源监控图表和运行AEM表单的服务器的相关信息。
 seo-description: Learn how you can view resource monitoring charts and information about the server that is running AEM forms.
 uuid: 983c1cc7-a8b3-48b2-a4c8-7b28a2e32537
 contentOwner: admin
@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/health_monitor
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: d51460d9-c96c-4661-b93e-e015427878ab
 exl-id: 27a2e81c-47b0-4de8-95bd-7cb34b9450da
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: c4cd9a61a226ace2a72d60b5b7b7432de12cb873
 workflow-type: tm+mt
 source-wordcount: '540'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # 查看系统信息 {#view-system-information}
 
-“系统”选项卡显示资源监视图表和有关运行AEM表单的服务器的信息。 要访问此信息，请在管理控制台中单击页面右上角的运行状况监视器。 如果在群集环境中运行AEM表单，则显示的信息为从“服务器”列表中选择的节点的信息。
+“系统”选项卡显示资源监控图表和运行AEM表单的服务器的相关信息。 要访问此信息，请在管理控制台中单击页面右上角的运行状况监视器。 如果在群集环境中运行AEM表单，则显示的信息为从“服务器”列表中选择的节点。
 
 要将当前系统信息保存为属性文件，请单击“保存”。
 
@@ -33,7 +33,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->图形数据、服务器信息值和时钟时间每10分钟更新一次。 信息不会实时显示。
+>图形数据、服务器信息值和时钟时间每10分钟更新一次。 该信息不会实时显示。
 
 “系统”选项卡的左窗格显示有关服务器或节点的以下信息：
 
@@ -45,15 +45,15 @@ ht-degree: 0%
 
 **计算机名称：** 安装AEM forms的服务器的主机名。
 
-**运行时间：** 服务器运行的时间，以小时和分钟为单位。
+**运行时间：** 服务器运行的时间（以小时和分钟为单位）。
 
 **即时编译器：** 正在使用的编译器的名称。
 
 **编译时间：** 编译所花费的时间。
 
-**实时线程数：** AEM Forms系统中当前存在的线程总数。
+**实时Threads数量：** AEM Forms系统中当前存在的线程总数。
 
-**峰值线程数：** 系统上记录的最大实时线程数。
+**Threads峰值数量：** 系统上记录的实时线程的最大数量。
 
 **已加载类的数量：** 加载到JVM中的类数。
 
@@ -65,9 +65,9 @@ ht-degree: 0%
 
 **操作系统名称：** AEM Forms服务器上运行的操作系统的名称。
 
-**操作系统版本：** AEM forms服务器上运行的操作系统的版本号。
+**操作系统版本：** AEM Forms服务器上运行的操作系统的版本号。
 
-**操作系统拱门：** 运行JVM的操作系统体系结构。
+**操作系统体系结构：** JVM运行的操作系统体系结构。
 
 **处理器数量：** 系统上的处理器数量。
 
@@ -77,7 +77,7 @@ ht-degree: 0%
 
 **库路径：** JVM使用的库路径。
 
-**引导类路径：** JVM使用的引导类路径。
+**启动类路径：** JVM使用的引导类路径。
 
 **应用程序服务器类型：** 用于运行AEM表单的应用程序服务器的类型。
 
@@ -85,7 +85,7 @@ ht-degree: 0%
 
 **应用程序服务器供应商：** 用于运行AEM表单的应用程序服务器的制造商。
 
-**安装日期：** 安装AEM表单的日期（格式为yyyy-mm-dd）。
+**安装日期：** AEM表单的安装日期（格式为yyyy-mm-dd）。
 
 **AEM Forms版本：** 已安装的AEM表单版本。
 
@@ -95,8 +95,8 @@ ht-degree: 0%
 
 **数据库版本：** AEM表单使用的数据库的版本号。
 
-**数据库驱动器名称：** JVM用来连接到数据库的驱动程序的名称。
+**数据库驱动器名称：** JVM用于连接到数据库的驱动程序的名称。
 
-**数据库驱动程序版本：** JVM用来连接到数据库的驱动程序的版本。
+**数据库驱动程序版本：** JVM用于连接到数据库的驱动程序的版本。
 
 此 **保存** 按钮可将此系统信息保存在属性文件中。

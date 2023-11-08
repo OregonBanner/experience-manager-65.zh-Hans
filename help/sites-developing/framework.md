@@ -8,9 +8,9 @@ content-type: reference
 docset: aem65
 feature: Tagging
 exl-id: 53a37449-ef87-4fa6-82de-88fdc24cf988
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '1639'
+source-wordcount: '1641'
 ht-degree: 0%
 
 ---
@@ -80,7 +80,7 @@ TagID包含 [命名空间](#tag-namespace) 后跟本地TagID。 [容器标记](#
 
 标记的命名空间是分类子树中的第一级，即紧接在 [分类根节点](#taxonomy-root-node). 命名空间是类型的节点 `cq:Tag` 其父项不是 `cq:Tag` 节点类型。
 
-所有标记都具有命名空间。 如果未指定命名空间，则会将标记分配给默认命名空间TagID `default` 带有标题 `Standard Tags`，即 `/content/cq:tags/default`.
+所有标记都具有命名空间。 如果未指定命名空间，则会将标记分配给默认命名空间TagID `default` 带有标题 `Standard Tags`，即， `/content/cq:tags/default`.
 
 ### 容器标记 {#container-tags}
 

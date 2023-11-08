@@ -5,9 +5,9 @@ contentOwner: AG
 role: Architect, Admin
 feature: Asset Management
 exl-id: fd58ead9-5e18-4f55-8d20-1cf4402fad97
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '1611'
+source-wordcount: '1609'
 ht-degree: 0%
 
 ---
@@ -80,7 +80,7 @@ ht-degree: 0%
 
 #### 性能问题 {#performance-concerns}
 
-共享数据存储要求将二进制文件存储在网络装载的驱动器上，该驱动器在所有实例之间共享。 由于这些二进制文件通过网络进行访问，因此会对系统性能产生负面影响。 使用到快速磁盘阵列的快速网络连接可以部分缓解影响。 然而，这是一个代价高昂的提议。 在AWS操作中，所有磁盘都是远程磁盘，需要网络连接。 临时卷在实例启动或停止时丢失数据。
+共享数据存储要求将二进制文件存储在网络装载的驱动器上，该驱动器在所有实例之间共享。 由于这些二进制文件通过网络进行访问，因此会对系统性能产生负面影响。 使用到快速磁盘阵列的快速网络连接可以部分缓解影响。 然而，这是一个代价高昂的提议。 如果存在AWS操作，则所有磁盘都是远程磁盘，需要网络连接。 临时卷在实例启动或停止时丢失数据。
 
 #### 延迟 {#latency}
 

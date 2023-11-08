@@ -1,19 +1,15 @@
 ---
 title: 使用 ContextHub 配置分段
-seo-title: Configuring Segmentation with ContextHub
 description: 了解如何使用Context Hub配置分段。
-seo-description: Learn how to configure segmentation with Context Hub.
-uuid: 196cfb18-317c-443d-b6f1-f559e4221baa
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
-discoiquuid: 6cade87c-9ed5-47d7-9b39-c942268afdad
 exl-id: 8bd6c88b-f36a-422f-ae6c-0d59f365079a
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '1774'
-ht-degree: 76%
+source-wordcount: '1772'
+ht-degree: 74%
 
 ---
 
@@ -52,7 +48,7 @@ AEM可让您轻松个性化用户体验。 它还让您验证区段定义的结�
 
 利用组件浏览器，您可以添加 **AND** 和 **OR** 容器来定义区段逻辑，然后添加其他组件以比较属性和值，或参考脚本和其他区段以定义选择标准（请参阅[创建新区段](#creating-a-new-segment)），从而定义选择区段的确切场景。
 
-当整个语句的计算结果为 true 时，表示该区段已解析。在适用多个区段的情况下，也将使用 **Boost** 因素。请参阅 [创建新区段](#creating-a-new-segment) ，以了解有关 [提升因子。](/help/sites-administering/campaign-segmentation.md#boost-factor)
+当整个语句的计算结果为 true 时，表示该区段已解析。如果有多个适用的区段，则 **提升** 还使用了因子。 请参阅 [创建新区段](#creating-a-new-segment) ，以了解有关 [提升因子。](/help/sites-administering/campaign-segmentation.md#boost-factor)
 
 >[!CAUTION]
 >
@@ -164,7 +160,7 @@ AEM可让您轻松个性化用户体验。 它还让您验证区段定义的结�
 
 通过使用 AND 和 OR 容器组件，您可以在 AEM 中构建复杂的区段。在执行此操作时，了解一些基本要点会有所帮助：
 
-* 定义的顶层始终是最初创建的 AND 容器。虽然这是无法更改的，但不会影响区段定义的其余部分。
+* 定义的顶级始终是最初创建的AND容器。 虽然这是无法更改的，但不会影响区段定义的其余部分。
 * 确保容器的嵌套有意义。可以将容器视为布尔表达式的括号。
 
 以下示例用于选择主要年龄组中考虑的访客：

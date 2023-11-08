@@ -1,19 +1,17 @@
 ---
 title: 编辑启动项
 description: 为您的页面（或页面集）创建启动项后，您可以在页面的启动项副本中编辑内容。
-uuid: 1f2c2e53-73a3-4bd7-b2c7-425491bc0118
 contentOwner: AEM Docs
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: site-features
-discoiquuid: 30aa3177-bcf4-4260-8f64-e73bc907942a
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/author/site-page-features/launches
 exl-id: 2d441820-b394-47c8-b4ca-a8aede590937
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
 source-wordcount: '521'
-ht-degree: 80%
+ht-degree: 76%
 
 ---
 
@@ -21,7 +19,7 @@ ht-degree: 80%
 
 ## 编辑启动页面 {#editing-launch-pages}
 
-在为一个页面（或一组页面）创建启动项后，您可以编辑页面启动副本中的内容。
+为某个页面（或一组页面）创建了启动项后，您可以在页面的启动项副本中编辑内容。
 
 1. [从“引用”（ Sites 控制台）中访问启动项](/help/sites-authoring/launches.md#launches-in-references-sites-console)，即可显示可用操作。
 1. 选择&#x200B;**转到页面**，即可打开要编辑的页面。

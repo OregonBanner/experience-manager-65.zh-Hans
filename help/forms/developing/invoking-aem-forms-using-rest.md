@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 role: Developer
 exl-id: 991fbc56-f144-4ae6-b010-8d02f780d347
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '2505'
+source-wordcount: '2503'
 ht-degree: 0%
 
 ---
@@ -117,9 +117,9 @@ ht-degree: 0%
 
 ## 错误报告 {#error-reporting}
 
-如果由于服务器上抛出异常而无法完成同步或异步调用请求，则该异常将作为HTTP响应消息的一部分报告。 如果调用URL(或 `async_result` 异步调用中的URL)没有.xml后缀，REST提供程序返回HTTP代码 `500 Internal Server Error` 后跟异常消息。
+如果由于服务器上抛出异常而无法完成同步或异步调用请求，则该异常将作为HTTP响应消息的一部分报告。 如果调用URL(或 `async_result` URL （如果存在异步调用），没有.xml后缀，则REST提供程序返回HTTP代码 `500 Internal Server Error` 后跟异常消息。
 
-如果调用URL(或 `async_result` URL（在异步调用中）确实具有.xml后缀，REST提供程序返回HTTP代码 `200 OK`后跟一个描述异常的XML文档，格式如下。
+如果调用URL(或 `async_result` URL（如果异步调用），则含有.xml后缀，REST提供程序会返回HTTP代码 `200 OK`后跟一个描述异常的XML文档，格式如下。
 
 ```xml
  <exception>
@@ -143,7 +143,7 @@ ht-degree: 0%
 
 ## 安全性和身份验证 {#security-and-authentication}
 
-要为REST调用提供安全传输，AEM Forms管理员可以在托管AEM Forms的J2EE应用程序服务器中启用HTTPS协议。 此配置特定于J2EE应用程序服务器；它不是forms服务器配置的一部分。
+要为REST调用提供安全传输，AEM Forms管理员可以在托管AEM Forms的J2EE应用程序服务器中启用HTTPS协议。 此配置特定于J2EE应用程序服务器；它不是Forms Server配置的一部分。
 
 >[!NOTE]
 >

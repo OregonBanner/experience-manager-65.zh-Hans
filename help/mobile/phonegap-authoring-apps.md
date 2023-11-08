@@ -1,16 +1,14 @@
 ---
 title: 创作移动设备应用程序
 description: AEM Mobile Dashboard允许您创建、构建和部署移动应用程序，以及创建、删除和编辑应用程序元数据。 关注此页面以了解更多信息。
-uuid: 293b5d29-df7e-42dd-ae64-8c677317e7a5
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: authoring-adobe-phonegap-enterprise
-discoiquuid: abfeea65-102d-4800-abeb-304d61afcc13
 exl-id: 073daff7-0c1d-4715-bfd4-3e2336e4cb88
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '1013'
+source-wordcount: '1011'
 ht-degree: 0%
 
 ---
@@ -67,7 +65,7 @@ AEM Mobile功能板允许您创建、构建和部署移动应用程序，以及�
 
 在通过“管理页面内容”拼贴添加或修改内容后，您能够通过内容版本更新将这些更改推送到客户。
 
-内容包允许AEM应用程序作者管理AEM中的页面内容，并让开发团队对您的PhoneGap Shell应用程序（即应用程序框架或基础架构）进行更改，然后快速将这些更改推送到您的客户，而无需招募开发人员重新提交到各个商店进行分发。
+内容包允许AEM应用程序作者管理AEM中的页面内容，并且让开发团队更改您的PhoneGap Shell应用程序（即应用程序框架或基础架构），然后快速将这些更改推送到您的客户，而无需招募开发人员重新提交到各个商店进行分发。
 
 内容包会为每次更新创建一个ZIP文件（被视为内容发布包）。 这些包包含在呈现应用程序时生成的html资源和html页面，并且足够智能，可仅打包自上次更新以来修改过的文件。
 

@@ -9,9 +9,9 @@ content-strategy: max-2018
 docset: aem65
 role: Admin
 exl-id: 0f9aab7d-8e41-449a-804b-7e1bfa90befd
-source-git-commit: 65c5a4442f17e6bc52deaa1588f535a05698083f
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '1737'
+source-wordcount: '1734'
 ht-degree: 2%
 
 ---
@@ -33,13 +33,13 @@ ht-degree: 2%
 
 您可以 [升级](../../forms/using/upgrade.md) 从AEM Forms 6.4、6.3或6.2到最新版本的AEM Forms 6.5，或者安装了一个新版本。 根据您是升级以前的安装还是执行了全新安装，您必须执行以下操作之一：
 
-**在就地升级的情况下**
+**如果有就地升级**
 
 如果您执行就地升级，则升级的实例已经具有资源和文档。 但是，您必须先安装 [AEMFD兼容包](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=zh-Hans) （包括Correspondence Management兼容包）
 
 然后，您必须通过以下方式更新资源和文档 [运行迁移实用程序](#runningmigrationutility).
 
-**如果是异地安装**
+**如果有异地安装**
 
 如果这是异地（全新）安装，则在您能够使用资源和文档之前，您必须安装 [AEMFD兼容包](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=zh-Hans) （包括Correspondence Management兼容包）。
 

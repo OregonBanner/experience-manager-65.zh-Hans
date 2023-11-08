@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 role: Developer
 exl-id: a521bfac-f417-4002-9c5c-8d7794d3eec7
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: e2a3470784beb04c2179958ac6cb98861acfaa71
 workflow-type: tm+mt
-source-wordcount: '18965'
+source-wordcount: '18956'
 ht-degree: 0%
 
 ---
@@ -257,7 +257,7 @@ Output服务允许您以PDF(包括PDF/A文档)、PostScript、打印机控制语
 
    >[!NOTE]
    >
-   >当通过调用PDF文档时 `generatePDFOutput` 方法，请注意，您无法将数据与已签名或认证的XFAPDF表单合并。 (请参阅 [数字签名和认证文档&#x200B;](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-and-certifying-documents)*.)*
+   >当通过调用PDF文档时 `generatePDFOutput` 方法，则无法将数据与已签名或认证的XFAPDF表单合并。 (请参阅 [数字签名和认证文档&#x200B;](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-and-certifying-documents)*.)*
 
    >[!NOTE]
    >
@@ -354,7 +354,7 @@ Output服务允许您以PDF(包括PDF/A文档)、PostScript、打印机控制语
 
    >[!NOTE]
    >
-   >当通过调用PDF文档时 `generatePDFOutput` 方法，请注意，您无法将数据与已签名或认证的XFAPDF表单合并。 (请参阅 [数字签名和认证文档&#x200B;](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-and-certifying-documents)*.)*
+   >当通过调用PDF文档时 `generatePDFOutput` 方法，则无法将数据与已签名或认证的XFAPDF表单合并。 (请参阅 [数字签名和认证文档&#x200B;](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-and-certifying-documents)*.)*
 
    >[!NOTE]
    >
@@ -1505,7 +1505,7 @@ ResourceRepositoryClient
 
 >[!NOTE]
 >
->如果PDFG安装在表单服务器上，并且服务器在Windows Server 2008上运行，则无法使用SharedPrinter属性。 在这种情况下，请使用不同的打印机协议。
+>如果PDFG安装在Forms Server上并且服务器在Windows Server 2008上运行，则无法使用SharedPrinter属性。 在这种情况下，请使用不同的打印机协议。
 
 >[!NOTE]
 >
@@ -2173,7 +2173,7 @@ Output服务执行操作后，会返回用于指定操作是否成功的XML数�
 
    >[!NOTE]
    >
-   >当通过调用PDF文档时 `generatePDFOutput` 方法，请注意，您无法将数据与已签名、已验证或包含使用权限的XFAPDF表单合并。 有关使用权限的信息，请参阅 [将使用权限应用于PDF文档](/help/forms/developing/assigning-usage-rights.md#applying-usage-rights-to-pdf-documents).
+   >当通过调用PDF文档时 `generatePDFOutput` 方法，则无法将数据与已签名、已验证或包含使用权限的XFAPDF表单合并。 有关使用权限的信息，请参阅 [将使用权限应用于PDF文档](/help/forms/developing/assigning-usage-rights.md#applying-usage-rights-to-pdf-documents).
 
 1. 检索操作的结果
 

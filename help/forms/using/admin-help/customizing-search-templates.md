@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/configuring_workspace
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 6e4b4dfa-3af5-4c21-a2a1-b90ef02d8514
 exl-id: bf69de86-2ca6-4d21-936c-07c1debacfa0
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: c4cd9a61a226ace2a72d60b5b7b7432de12cb873
 workflow-type: tm+mt
 source-wordcount: '855'
 ht-degree: 0%
@@ -58,7 +58,7 @@ ht-degree: 0%
       * （可选）要允许用户更改工作区中的操作数值，请选择允许用户更改操作数。
       * （可选）要允许用户更改关系运算符，请选择允许用户选择其他关系运算符。 在显示的列表中，选择用户可用的运算符。
 
-     **提示**： *如果选择“进程名称”作为元素，则可以单击操作数字段旁边的图标以显示列表，从中可以选择在表单服务器上运行的进程。 选择流程后，可在“标准”选项卡顶部的“流程变量”下选择在该流程中定义的任何流程变量。*
+     **提示**： *如果选择“进程名称”作为元素，则可以单击操作数字段旁边的图标以显示列表，从中可以选择在Forms服务器上运行的进程。 选择流程后，可在“标准”选项卡顶部的“流程变量”下选择在该流程中定义的任何流程变量。*
 
      **提示**： *通过单击元素搜索条件旁边的删除图标，可以从搜索模板中删除元素。*
 

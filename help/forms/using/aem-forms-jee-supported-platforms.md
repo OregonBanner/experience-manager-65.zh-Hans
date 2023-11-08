@@ -7,9 +7,9 @@ geptopics: SG_AEMFORMS/categories/jee
 docset: aem65
 role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '3693'
+source-wordcount: '3691'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 <div class="preview">
 
-Adobe已发布 [完整安装程序](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) JEE上的AEM 6.5 Forms Service Pack 18 (6.5.18.0)以及补丁安装程序。 完整安装程序提供对新平台的支持，而修补程序安装程序仅包含错误修复。
+Adobe已发布 [完整安装程序](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) JEE上的AEM 6.5 Forms Service Pack 18 (6.5.18.0)以及补丁安装程序。 完整安装程序支持新平台，而修补程序安装程序仅包含错误修复。
 如果您正在执行全新安装或计划为JEE环境中的AEM 6.5 Forms使用最新软件，则Adobe建议使用 [AEM 6.5.18.0 Forms on JEE完整安装程序](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) 发布于2023年8月31日，而不是2019年4月8日发布的AEM 6.5 Forms安装程序或2022年3月3日发布的AEM 6.5.12 Forms安装程序。
 
 </div>

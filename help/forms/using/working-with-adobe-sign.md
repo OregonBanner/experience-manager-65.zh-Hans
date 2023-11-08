@@ -11,9 +11,9 @@ discoiquuid: f79828d8-2230-4477-8ffa-eeb6a0413acd
 docset: aem65
 feature: Adaptive Forms, Acrobat Sign
 exl-id: a8decba9-229d-40a2-992a-3cc8ebefdd6d
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '3935'
+source-wordcount: '3936'
 ht-degree: 2%
 
 ---
@@ -201,7 +201,7 @@ ht-degree: 2%
 
    * **[!UICONTROL 签名者与填写表单的人员是否为同一人？]：** 选择 **是**，如果表单填写者和第一个签名者是同一个人。 如果选项设置为 **不，** 然后，请勿在自适应表单中使用签名步骤组件。 如果表单包含签名步骤组件，则字段会自动设置为“是”。
 
-   * **[!UICONTROL 签名者电子邮件地址]：** 指定签名者的电子邮件地址。 签名者在指定的电子邮件地址上接收要签名的文档/表单。 您可以选择使用表单字段、登录用户的AEM用户配置文件中提供的电子邮件地址，或者手动输入电子邮件地址。 这是强制步骤。 确保第一个签名者或唯一签名者（如果是单个签名者）的电子邮件地址与 [!DNL Adobe Sign] 用于配置AEM云服务的帐户。
+   * **[!UICONTROL 签名者电子邮件地址]：** 指定签名者的电子邮件地址。 签名者在指定的电子邮件地址上接收要签名的文档/表单。 您可以选择使用表单字段、登录用户的AEM用户配置文件中提供的电子邮件地址，或者手动输入电子邮件地址。 这是强制步骤。 确保第一个签名者或唯一签名者（如果只有一个签名者）的电子邮件地址与 [!DNL Adobe Sign] 用于配置AEM云服务的帐户。
 
    * **[!UICONTROL 签名者身份验证方法]：** 指定在打开表单进行签名之前对用户进行身份验证的方法。 您可以在电话、知识库和基于社会身份的身份验证之间进行选择。 对于Adobe Acrobat Sign Solutions for Government，仅提供电话和基于知识的身份验证选项。
 
@@ -355,7 +355,7 @@ ht-degree: 2%
 * 确保API应用程序位于 [!DNL Adobe Sign] 用于配置的服务器 [!DNL Adobe Sign] Cloud Service具有所需的权限。
 * 如果您使用多个 [!DNL Adobe Sign] 云服务，指向 **[!UICONTROL oAuth URL]** 所有服务的总和 **[!UICONTROL Adobe Sign Shard]**.
 
-* 使用单独的电子邮件地址进行配置 [!DNL Adobe Sign] 帐户和第一个签名者和单个签名者。 第一个签名者或唯一签名者（如果是单个签名者）的电子邮件地址不能与 [!DNL Adobe Sign] 用于配置AEM云服务的帐户。
+* 使用单独的电子邮件地址进行配置 [!DNL Adobe Sign] 帐户和第一个签名者和单个签名者。 第一个签名者或唯一签名者（如果只有单个签名者）的电子邮件地址不能与 [!DNL Adobe Sign] 用于配置AEM云服务的帐户。
 
 ### AEM [!DNL Forms] 为配置的工作流 [!DNL Adobe Sign] 启用的自适应表单未启动 {#adobe-sign-aem-form-workflow-failures}
 

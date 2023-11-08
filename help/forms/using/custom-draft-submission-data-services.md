@@ -7,7 +7,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: customization
 discoiquuid: 602fd6a9-9a65-411c-8475-a4082a3fdee0
 exl-id: ed10ef8c-7b9c-43cf-bea8-7cf9742a8cac
-source-git-commit: 78c584db8c35ea809048580fe5b440a0b73c8eea
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
 source-wordcount: '270'
 ht-degree: 0%
@@ -20,9 +20,9 @@ ht-degree: 0%
 
 AEM Forms允许用户将自适应表单另存为草稿。 草稿功能为用户提供了维护工作进行中表单的选项。 然后，用户可随时从任何设备填写并提交表单。
 
-默认情况下，AEM Forms会将与草稿和提交关联的用户数据存储在 `/content/forms/fp` 节点。
+默认情况下，AEM Forms会将与草稿和提交关联的用户数据存储在的发布实例上 `/content/forms/fp` 节点。
 
-但是，AEM Forms Portal组件提供数据服务，允许您自定义存储用于草稿和提交的用户数据的实施。 例如，您可以将数据存储在组织中当前实施的数据存储中。
+但是，AEM Forms Portal组件提供了数据服务，通过这些数据服务，您可以自定义存储草稿和提交的用户数据的实施。 例如，您可以将数据存储在组织中当前实施的数据存储中。
 
 要自定义用户数据的存储，您必须实施 [草稿数据](/help/forms/using/custom-draft-submission-data-services.md#p-draft-data-service-p) 和 [提交数据](/help/forms/using/custom-draft-submission-data-services.md#p-submission-data-service-p) 服务。
 
@@ -30,12 +30,12 @@ AEM Forms允许用户将自适应表单另存为草稿。 草稿功能为用户�
 
 * 启用 [Forms Portal组件](/help/forms/using/enabling-forms-portal-components.md)
 * 创建 [Forms Portal页面](/help/forms/using/creating-form-portal-page.md)
-* 启用 [自适应表单Forms门户](/help/forms/using/draft-submission-component.md)
-* 了解 [自定义存储的实施详细信息](/help/forms/using/draft-submission-component.md#customizing-the-storage)
+* 启用 [Forms Portal自适应表单](/help/forms/using/draft-submission-component.md)
+* 学习 [自定义存储的实施详细信息](/help/forms/using/draft-submission-component.md#customizing-the-storage)
 
 ## 草稿数据服务 {#draft-data-service}
 
-要自定义用户草稿数据的存储，您必须提供的所有方法的实现 `DraftAFDataService` 界面。
+要自定义用户草稿数据的存储，您必须为的所有方法提供实施 `DraftAFDataService` 界面。
 
 以下接口的代码示例中提供了这些方法及其参数的说明：
 
@@ -54,7 +54,7 @@ public interface DraftAFDataService {
  /**
   * Saves user data provided in the argument map
   *
-  * @param draftUserDataMap contains Form Data (key - "guideState"), Adaptive Form Name (Key - "guideName"), and Draft DataID (Key - "userDataID") in case of update
+  * @param draftUserDataMap contains Form Data (key - "guideState"), Adaptive Form Name (Key - "guideName"), and Draft DataID (Key - "userDataID") if there is update
   * @return userData ID would be returned which needs to be saved in metadata node
   * @throws FormsPortalException
   */
@@ -82,7 +82,7 @@ public interface DraftAFDataService {
 
 ## 提交数据服务 {#submission-data-service}
 
-要自定义用户提交数据的存储，您必须为的所有方法提供实施 `SubmittedAFDataService` 界面。
+要自定义用户提交数据的存储，您必须为的所有方法提供实现 `SubmittedAFDataService` 界面。
 
 以下接口的代码示例中提供了这些方法及其参数的说明：
 

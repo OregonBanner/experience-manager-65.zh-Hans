@@ -8,9 +8,9 @@ content-type: reference
 docset: aem65
 exl-id: 39e35a07-140f-4853-8f0d-8275bce27a65
 feature: Security
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '6818'
+source-wordcount: '6816'
 ht-degree: 0%
 
 ---
@@ -594,7 +594,7 @@ while (isSupported(node)) {
 
 可以在system console的configuration部分更改或扩展“administrators”组的排除 **Apache Jackrabbit Oak CUG排除列表**.
 
-或者，可以提供并部署CugExclude接口的自定义实现，以调整排除的承担者集以满足特殊需求。 请参阅相关文档 [CUG可插拔性](https://jackrabbit.apache.org/oak/docs/security/authorization/cug.html#pluggability) 详细信息和实施示例。
+或者，可以提供并部署CugExclude接口的自定义实现，以调整排除的承担者集（如果存在特殊需求）。 请参阅相关文档 [CUG可插拔性](https://jackrabbit.apache.org/oak/docs/security/authorization/cug.html#pluggability) 详细信息和实施示例。
 
 ### 身份验证：设置和配置 {#authentication-setup-and-configuration}
 
@@ -710,7 +710,7 @@ CUG重写的身份验证相关部分只附带一个与AdobeGranite身份验证�
 
 ## 禁用CUG授权和身份验证要求 {#disabling-cug-authorization-and-authentication-requirement}
 
-如果给定的安装不使用CUG或使用不同的身份验证和授权方式，则可以完全禁用新实施。
+如果给定的安装不使用CUG或使用不同的身份验证和授权方式，则可能完全禁用新实施。
 
 ### 禁用CUG授权 {#disable-cug-authorization}
 

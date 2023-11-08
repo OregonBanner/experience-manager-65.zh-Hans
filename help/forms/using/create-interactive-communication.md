@@ -1,18 +1,14 @@
 ---
 title: 创建交互式通信
-seo-title: Create an Interactive Communication
 description: 使用交互式通信编辑器创建交互式通信。 使用拖放功能构建交互式通信，并预览不同设备类型上的打印和Web输出。
-seo-description: Create an Interactive Communication using the Interactive Communication editor. Use drag-and-drop functionality to build the Interactive Communication, and preview both print and web outputs on different device types.
-uuid: d524a3de-00b4-444f-b3c7-be443fa24ec8
 topic-tags: interactive-communications
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: f4d98cb9-84d8-4735-91d2-b9ceec861e5e
 docset: aem65
 feature: Interactive Communication
 exl-id: 1f89c3bf-e67e-4d13-9285-3367be1ac8f8
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '6168'
+source-wordcount: '6163'
 ht-degree: 1%
 
 ---
@@ -141,7 +137,7 @@ ht-degree: 1%
 
 此外，当您将鼠标悬停在这些元素上时，将显示工具提示，其中显示“字段”(Field) （未绑定）或“变量”(Variable) （未绑定）消息。
 
-文档片段中使用的未绑定变量有时可能不会显示在创作界面上。 这可能是由于文档片段中的内联文本规则或者条件片段导致的。 在这种情况下，以蓝色突出显示的工具提示将显示为文档片段的一部分。 工具提示显示文档片段中使用的未绑定变量的数量。
+文档片段中使用的未绑定变量有时可能不会显示在创作界面上。 这可能是由于文档片段中的内联文本规则导致的，或者如果有条件片段，也可能发生。 在这种情况下，以蓝色突出显示的工具提示将显示为文档片段的一部分。 工具提示显示文档片段中使用的未绑定变量的数量。
 
 ![未绑定的变量](assets/df_unbound_variable_new.png)
 
@@ -199,7 +195,7 @@ ht-degree: 1%
    | 面板 | 允许您添加 [面板](../../forms/using/create-interactive-communication.md#add-panel-component-to-the-web-channel) 更改为交互式通信。 |
    | 表 | 添加表格以便按行和列整理数据。 |
    | 目标区域 | 在Web渠道中插入目标区域以组织特定于Web渠道的组件。 目标区域是一个普通容器，可用于对Web渠道特定的组件进行分组。 |
-   | 文本 | 向交互式通信的Web渠道添加富文本。 文本还可以利用表单数据模型对象使内容具有动态性。 |
+   | 文本 | 向交互式通信的Web渠道添加富文本。 文本还可以使用表单数据模型对象使内容具有动态性。 |
    | 按钮 | 允许您添加 [按钮](../../forms/using/create-interactive-communication.md#add-button-component-to-the-web-channel) 更改为交互式通信。 您可以使用按钮组件导航到其他交互式通信、自适应表单、其他资产（如图像或文档片段）或外部URL。 |
    | 分隔符 | 允许您在交互式通信中插入水平线。 使用此组件可区分通信中的节。 例如，您可以使用分隔符组件区分信用卡对帐单中的“客户详细信息”和“信用卡详细信息”部分。 |
 
@@ -562,7 +558,7 @@ ht-degree: 1%
 
 ### 同步 {#synchronize-1}
 
-如果您使用Print as Master for Web Channel并对Print channel进行更改，则可以同步内容以将新所做的更改引入Web channel。
+如果您使用Print as Master for Web Channel并更改Print channel，则可以同步内容以将新所做的更改引入Web channel。
 
 1. 要将Web渠道与打印渠道同步，请切换到Web渠道并点按更多选项图标。
 

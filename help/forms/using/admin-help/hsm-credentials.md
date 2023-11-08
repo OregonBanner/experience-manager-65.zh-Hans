@@ -6,7 +6,7 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/managing_certificates_and_credentials
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: facbeab2-de95-4778-894c-faa771d3391e
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
 source-wordcount: '1323'
 ht-degree: 0%
@@ -50,7 +50,7 @@ AEM forms Digital Signatures可以使用存储在HSM上的凭据来应用服务�
 1. 在“插槽类型”列表中，选择“插槽ID”、“插槽索引”或“令牌名称”，然后在“插槽信息”框中指定一个值。 AEM Forms使用这些设置来确定凭据在HSM中的存储位置。
 
    * **令牌名称：** 对应于分区名称（例如HSMPART1）。
-   * **插槽ID：** 插槽ID是对应于插槽的整数，该整数又对应于分区。 例如，客户端（表单服务器）首先在HSMPART1分区中注册。 这会将插槽1映射到此客户端的HSMPART1分区。 由于HSMPART1是第一个注册的分区，因此插槽ID为1，您应该将插槽信息设置为1。
+   * **插槽ID：** 插槽ID是对应于插槽的整数，该整数又对应于分区。 例如，客户端(Forms Server)首先在HSMPART1分区中注册。 这会将插槽1映射到此客户端的HSMPART1分区。 由于HSMPART1是第一个注册的分区，因此插槽ID为1，您应该将插槽信息设置为1。
 
      插槽ID是逐个客户端设置的。 如果您将另一台计算机注册到不同的分区（例如，同一HSM设备上的HSMPART2），则插槽1将与该客户端的HSMPART2分区相关联。
 
@@ -83,7 +83,7 @@ AEM forms Digital Signatures可以使用存储在HSM上的凭据来应用服务�
 
 ## 重置所有HSM连接 {#reset-all-hsm-connections}
 
-在表单服务器与HSM设备之间的网络会话出现任何中断后，重置与HSM设备的开放连接。 例如，由于网络中断或HSM设备因软件更新而脱机，可能会发生中断。 中断后，现有连接将过时，针对这些连接的任何签名请求都将失败。 使用“重置所有HSM连接”选项可清除旧连接。
+在Forms服务器与HSM设备之间的网络会话出现任何中断后，重置与HSM设备的开放连接。 例如，由于网络中断或HSM设备因软件更新而脱机，可能会发生中断。 中断后，现有连接将过时，针对这些连接的任何签名请求都将失败。 使用“重置所有HSM连接”选项可清除旧连接。
 
 1. 在管理控制台中，单击“设置”>“信任存储区管理”>“HSM凭据”。
 1. 单击“重置所有HSM连接”。

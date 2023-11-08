@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: testing
 content-type: reference
 exl-id: ed662279-0679-4ba3-b744-6649fb8dda17
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '975'
+source-wordcount: '977'
 ht-degree: 0%
 
 ---
@@ -41,7 +41,7 @@ ht-degree: 0%
 
 项目经理有责任根据结果决定并启动操作。
 
-**参与**  — 虽然项目经理有责任确保所有各方都充分参与任何会议（状态、研讨会等），但您也应设法尽早参与项目周期，包括信息收集和需求分析过程。
+**参与**  — 尽管项目经理有责任确保所有各方都充分参与任何会议（状况、研讨会等），您也应该设法尽早参与项目周期，包括信息收集和需求分析过程。
 
 **涉及客户**  — 在类似的主题上，尝试在定义测试用例和计划时让客户（在可能的情况下）参与。
 

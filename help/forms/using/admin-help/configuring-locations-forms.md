@@ -8,9 +8,9 @@ geptopics: SG_AEMFORMS/categories/configuring_forms
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 3d2b7cfb-228c-4cc2-8fcd-d500f0010010
 exl-id: 0d9eb7fe-28a6-444e-957d-023687158c61
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: e2a3470784beb04c2179958ac6cb98861acfaa71
 workflow-type: tm+mt
-source-wordcount: '825'
+source-wordcount: '822'
 ht-degree: 1%
 
 ---
@@ -82,11 +82,11 @@ font-mapping文件用于为表单中的HTML转换创建自定义字体映射，�
 **默认位置：** 这是默认选项。 如果选择该选项，则会在依赖于您正在使用的应用程序服务器的位置创建缓存：
 
 * **JBoss：** [JBoss主页]\server\[安装类型]\svcdata\FormServer\Cache
-* **WebLogic：** [WebLogic主页]\user_projects\domains\[aem-forms域名]\adobe\[表单服务器名称]\FormServer\Cache
+* **WebLogic：** [WebLogic主页]\user_projects\domains\[aem-forms域名]\adobe\[Forms服务器名称]\FormServer\Cache
 * **WebSphere：** [IBM主页]\WebSphere\AppServer\installedApps\adobe\server1\FormServer\Cache
 
 **LC临时目录：** 缓存在AEM forms临时目录的子目录中创建，该目录在管理控制台中的“设置”>“核心系统设置”>“配置”>“临时目录的位置”下指定。 该子目录名为adobeform_[服务器名称].
 
 >[!NOTE]
 >
->如果您使用临时清理实用程序，请注意，虽然删除这些目录不会影响功能，但在创建新缓存之前，它可能会在短时间内显着影响性能。 为避免出现此问题，在清除AEM forms临时目录时，请勿删除这些目录。
+>如果您使用临时清理实用程序，虽然删除这些目录不会影响功能，但在创建新缓存之前，可能会在短时间内显着影响性能。 为避免出现此问题，在清除AEM forms临时目录时，请勿删除这些目录。

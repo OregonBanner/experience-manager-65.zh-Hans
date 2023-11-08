@@ -10,10 +10,10 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: fe61ee4b-51b6-4a6f-91d8-1c02b29cc1db
 exl-id: 1787e643-fc8e-40e0-8e14-97b222a7c320
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '413'
-ht-degree: 30%
+source-wordcount: '414'
+ht-degree: 29%
 
 ---
 
@@ -88,7 +88,7 @@ ht-degree: 30%
    >
    >建议用于配置和其他更改的方法是：
    >
-   >    1. 重新创建所需项目（即它存在于中） `/libs`)，在 `/apps`
+   >    1. 重新创建所需项目(即，它存在于 `/libs`)，在 `/apps`
    >    1. 在中进行任何更改 `/apps`
 
 1. 选择&#x200B;**保存全部**，以保留您的更新。

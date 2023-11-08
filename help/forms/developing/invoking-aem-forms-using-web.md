@@ -7,7 +7,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 role: Developer
 exl-id: 3139564f-9346-4933-8e39-2e1642bff097
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
 source-wordcount: '9887'
 ht-degree: 0%
@@ -1735,4 +1735,4 @@ WSE体系结构使用策略、声明和SecurityToken数据类型。 简言之，
 
 ### 以字母I开头的服务生成无效的代理文件 {#services-starting-with-the-letter-i-produce-invalid-proxy-files}
 
-使用Microsoft .Net 3.5和WCF时，某些AEM Forms生成的代理类的名称不正确。 为IBMFilenetContentRepositoryConnector、IPSchedulerService或其名称以字母I开头的任何其他服务创建代理类时，会出现此问题。例如，对于IBMFileNetContentRepositoryConnector ，生成的客户端的名称是 `BMFileNetContentRepositoryConnectorClient`. 生成的代理类中缺少字母I。
+使用Microsoft .Net 3.5和WCF时，某些AEM Forms生成的代理类的名称不正确。 为IBMFilenetContentRepositoryConnector、IPSchedulerService或其名称以字母I开头的任何其他服务创建代理类时，会出现此问题。例如，如果存在IBMFileNetContentRepositoryConnector，则生成的客户端的名称是 `BMFileNetContentRepositoryConnectorClient`. 生成的代理类中缺少字母I。

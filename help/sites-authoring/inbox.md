@@ -2,10 +2,10 @@
 title: 用于管理任务的收件箱
 description: 使用Adobe Experience Manager 6.5中的收件箱管理您的任务。
 exl-id: 80b7f179-b011-4f90-b5ab-9ef8a669d271
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '1144'
-ht-degree: 44%
+source-wordcount: '1143'
+ht-degree: 42%
 
 ---
 
@@ -44,7 +44,7 @@ ht-degree: 44%
 
 ## 标题中的收件箱 {#inbox-in-the-header}
 
-任何控制台的标题中都会显示收件箱中的当前项目数。还可以打开指示器以快速访问需要执行操作的页面或访问收件箱：
+任何控制台的标题中都会显示收件箱中的当前项目数。也可以打开指示器，以提供对需要操作的页面的快速访问或对收件箱的访问：
 
 ![wf-80](assets/wf-80.png)
 

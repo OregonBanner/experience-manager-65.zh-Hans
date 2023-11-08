@@ -5,9 +5,9 @@ feature: Content Fragments,Assets HTTP API
 role: Developer
 exl-id: 0f9efb47-a8d1-46d9-b3ff-a6c0741ca138
 hide: true
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '1959'
+source-wordcount: '1961'
 ht-degree: 24%
 
 ---
@@ -231,7 +231,7 @@ A [内容片段](/help/assets/content-fragments/content-fragments.md) 是一种�
 * 不要公开任何二进制数据。
 * 完全包含在JSON输出中(在 `properties` 属性)。
 
-* 也被视为原子元素，即元素和变体作为片段属性的一部分显示，而不是作为链接或子实体显示。 这样可以高效地访问片段的负载。
+* 也被视为原子元素，也就是说，元素和变体作为片段属性的一部分显示，而不是作为链接或子实体显示。 这样可以高效地访问片段的负载。
 
 #### 内容模型和内容片段 {#content-models-and-content-fragments}
 

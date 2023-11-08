@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: introduction
 content-type: reference
 exl-id: 43fb4fa3-269a-4635-b055-4b7d787da21f
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '2670'
+source-wordcount: '2668'
 ht-degree: 0%
 
 ---
@@ -131,7 +131,7 @@ REST（Representational State Transfer，表示状态转移）是指万维网所
 
 **Dispatcher** - Dispatcher既是缓存工具又是负载平衡工具，可提供特定的安全保护机制。
 
-**ExtJS构件** - AEM中的大多数用户界面元素都使用ExtJS，它是使用JavaScript编写的第三方构件库。 ExtJS具有高性能、可自定义的UI小组件以及设计良好且可扩展的组件模型。
+**ExtJS构件** - AEM中的大多数用户界面元素使用ExtJS，它是使用JavaScript编写的第三方构件库。 ExtJS具有高性能、可自定义的UI小组件以及设计良好且可扩展的组件模型。
 
 **JCR、Java™内容存储库** - Java™内容存储库规范(JSR-283)提供了抽象数据模型和应用程序编程接口，用于实现结合了文件系统和对象数据库功能的大规模可扩展NoSQL数据存储库。 虽然您无需详尽了解JSR-283，但应花时间熟悉JCR的基本功能及其支持的数据模型，因为JCR才可能实现AEM的“一切都是内容”理念。
 

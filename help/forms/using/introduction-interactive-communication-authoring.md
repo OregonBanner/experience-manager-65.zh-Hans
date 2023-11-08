@@ -1,19 +1,15 @@
 ---
 title: 交互式通信创作UI简介
-seo-title: An introduction to the various user interface elements you can use to author Interactive Communication
 description: 介绍可用于创作交互式通信的各种用户界面元素
-seo-description: An introduction to the various user interface elements you can use to author Interactive Communication
-uuid: e8c5b1e8-b2bb-46b4-b42e-1f343192641a
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: interactive-communications
-discoiquuid: 5855d21b-340c-4139-aabe-c3a534cedb98
 docset: aem65
 feature: Interactive Communication
 exl-id: 3d15a723-df6c-4b4a-992e-a6636f4cf3dc
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '1310'
+source-wordcount: '1308'
 ht-degree: 14%
 
 ---
@@ -73,7 +69,7 @@ ht-degree: 14%
 | 面板 | - | ✓ | 面板组件是用于分组其他组件的占位符，可控制一组组件在交互式通信中的布局方式。 面板组件还允许您使一组组件对最终用户可重复，例如在填写教育凭证所需的多个条目中。 此外，最好在具有多个选项卡的交互式通信的选项卡中使用每个面板。 |
 | 表 | &#42; | ✓ | 添加表格以便按行和列整理数据。 |
 | 目标区域 | &#42;&#42; | ✓ | 在Web渠道中插入目标区域以组织特定于Web渠道的组件。 |
-| 文本 | - | ✓ | 向交互式通信的Web渠道添加文本。 文本可以使用表单数据模型对象来使内容具有动态性。 |
+| 文本 | - | ✓ | 向交互式通信的Web渠道添加文本。 文本可以使用表单数据模型对象使内容生动活泼。 |
 
 &#42; 在打印渠道中使用布局片段添加表格。
 

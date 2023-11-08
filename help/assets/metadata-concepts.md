@@ -5,9 +5,9 @@ contentOwner: AG
 role: User, Admin
 feature: Metadata
 exl-id: 312fff5f-39c1-48c1-aa99-40feb72c2f59
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '2718'
+source-wordcount: '2717'
 ht-degree: 9%
 
 ---
@@ -220,7 +220,7 @@ XMP通过提供数据模型、存储模型和架构，标准化元数据的定�
 
 来自EXIF、ID3或Microsoft Office的所有旧元数据会自动转换为XMP，可以扩展该架构以支持客户特定的元数据架构，例如产品目录。
 
-XMP中的元数据由一组属性组成。 这些属性始终与称为资源的特定实体相关联；即，属性与资源相关。 对于XMP，资源始终是资源。
+XMP中的元数据由一组属性组成。 这些属性始终与称为资源的特定实体相关联；即，属性与资源相关。 如果存在XMP，则资源始终为资源。
 
 ### XMP生态系统 {#xmp-ecosystem}
 

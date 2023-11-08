@@ -1,19 +1,15 @@
 ---
 title: 使用定位模式创作目标内容
-seo-title: Authoring Targeted Content Using Targeting Mode
 description: 通过定位模式和 Target 组件，可以创建体验的内容
-seo-description: Targeting mode and the Target component provide tools for creating content for experiences
-uuid: cea85c1b-1bc3-4498-9eaa-4ad10dc58ea4
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: personalization
-discoiquuid: 9d940744-3b00-4721-829a-96d17bb738e8
 docset: aem65
 exl-id: edde225d-0be7-4306-8dda-d18d46fae977
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '5385'
+source-wordcount: '5383'
 ht-degree: 86%
 
 ---
@@ -635,7 +631,7 @@ ht-degree: 86%
 
    页面会相应地发生更改，以显示当前上下文的目标内容。
 
-1. 要对显示的选件进行更改，请切换到定位模式。选择模拟活动后，编辑在预览模式下配置的上下文的选件。
+1. 要更改显示的选件，请切换到定位模式。 选择模拟活动后，编辑在预览模式下配置的上下文的选件。
 
 ## 配置 Target 组件选项 {#configuring-target-component-options}
 

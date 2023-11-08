@@ -2,9 +2,9 @@
 title: AEM Content and Commerce 2020版发行说明
 description: Adobe Experience Manager Content and Commerce 2020版发行说明。
 exl-id: 440ecd8e-55dc-4606-8678-c65cda1d2b3a
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '1353'
+source-wordcount: '1352'
 ht-degree: 11%
 
 ---
@@ -143,7 +143,7 @@ ht-degree: 11%
 
 * 添加了类别过滤作为Facet，以允许购物者根据类别过滤。
 
-* 添加了服务用户映射，作为安全要求的一部分，以确保通过服务用户访问/conf，而不是直接处理ACL。 CIF核心组件现在必须使用服务用户来访问配置。
+* 添加了服务用户映射，作为安全要求的一部分，以确保通过服务用户访问/conf，而不是直接处理ACL。 CIF核心组件必须使用服务用户来访问配置。
 
 ### 改进内容 {#what-is-improved-june}
 

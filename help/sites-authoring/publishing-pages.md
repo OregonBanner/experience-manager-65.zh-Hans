@@ -2,10 +2,10 @@
 title: 发布内容页面
 description: 了解如何在Adobe Experience Manager 6.5中发布内容页面。
 exl-id: 61144bbe-6710-4cae-a63e-e708936ff360
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '1660'
-ht-degree: 70%
+source-wordcount: '1662'
+ht-degree: 72%
 
 ---
 
@@ -107,7 +107,7 @@ Sites 控制台中有两个用于发布的选项：
 
 >[!NOTE]
 >
->快速发布是一种简单的发布方式，即仅发布选定的一个或多个页面，而不发布任何子页面。
+>“快速发布”是一种简单的发布方式，即只会发布选定的一个或多个页面，而不会发布任何子页面。
 
 #### 管理发布 {#manage-publication}
 

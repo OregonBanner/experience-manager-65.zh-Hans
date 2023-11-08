@@ -9,9 +9,9 @@ docset: aem65
 feature: Interactive Videos
 role: User, Admin
 exl-id: d118879d-c17b-43f3-9cc8-0405531b4d9f
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '6036'
+source-wordcount: '6035'
 ht-degree: 2%
 
 ---
@@ -533,7 +533,7 @@ ht-degree: 2%
 >
 此时，如果您只添加与超链接网页的交互，则操作已完成。
 >
-但是，如果添加了任何交互性来触发快速视图，则交互式视频旁边的缩略图仅用于显示目的；它们尚未与现有的快速视图集成。 在这种情况下，您现在必须将交互式视频与网站上的现有概览集成。
+但是，如果添加了任何交互性来触发快速视图，则交互式视频旁边的缩略图仅用于显示目的；它们尚未与现有的快速视图集成。 在这种情况下，必须将交互式视频与网站上的现有概览集成。
 
 **示例**
 

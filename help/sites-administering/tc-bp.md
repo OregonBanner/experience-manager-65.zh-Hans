@@ -3,10 +3,10 @@ title: 翻译最佳实践
 description: 查找由Adobe工程和咨询团队编译的最佳实践，帮助您启动和运行翻译项目。
 feature: Language Copy
 exl-id: 01a81c4b-cb30-4f7e-b281-7194ebb5fc70
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+source-git-commit: e2a3470784beb04c2179958ac6cb98861acfaa71
 workflow-type: tm+mt
-source-wordcount: '837'
-ht-degree: 97%
+source-wordcount: '836'
+ht-degree: 96%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 97%
 
 ## 站点结构 {#site-structure}
 
-* 在设计站点结构时，首先要检查您的内容，然后确定内容的创作位置以及用于创作内容的语言。此位置应是站点的顶层。
+* 在设计站点结构时，首先要检查您的内容，然后确定内容的创作位置以及用于创作内容的语言。此位置应该是网站的顶层。
 * 最佳实践是&#x200B;**基于语言的结构**，在顶层创作站点和国家/地区站点之间不超过 3 个层级。
 * 使用遵循 **W3C 标准**&#x200B;的语言/国家/地区站点命名惯例。
 * 确定按国家和地区分发内容的方式。考虑哪些国家/地区共享语言。建议创建语言母版，它是一个未激活的页面层，可在其中查看和修改翻译的内容，然后将该内容推送或拉取到共享该语言的国家/地区站点。

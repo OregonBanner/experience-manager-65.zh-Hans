@@ -1,6 +1,6 @@
 ---
 title: 使用 Quickview 创建自定义弹出窗口
-description: 默认概览用于电子商务体验中，其中显示带有产品信息的弹出窗口，以推动购买。 您可以触发要在弹出窗口中显示的自定义内容。
+description: 默认概览用于电子商务体验，其中显示带有产品信息的弹出窗口，以推动购买。 您可以触发要在弹出窗口中显示的自定义内容。
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
@@ -9,30 +9,30 @@ discoiquuid: 4bcab3f4-500f-432e-b16b-cdc26b9bab4d
 feature: Viewers
 role: User, Admin
 exl-id: 4e7f17ea-6985-4644-b91c-2c1299d01321
-source-git-commit: 05af34f8be6a4e32c3488ec05bc0133154caff7f
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '1052'
+source-wordcount: '1050'
 ht-degree: 1%
 
 ---
 
 # 使用 Quickview 创建自定义弹出窗口 {#using-quickviews-to-create-custom-pop-ups}
 
-默认概览用于电子商务体验中，其中显示带有产品信息的弹出窗口，以推动购买。 但是，您可以触发要在弹出窗口中显示的自定义内容。 根据查看器，此功能允许用户在热点、缩略图图像或图像映射上选择以查看信息或相关内容。
+默认概览用于电子商务体验，其中显示带有产品信息的弹出窗口，以推动购买。 但是，您可以触发要在弹出窗口中显示的自定义内容。 根据查看器的不同，此功能允许用户在热点、缩略图图像或图像映射上进行选择，以查看信息或相关内容。
 
 Dynamic Media中的以下查看器支持概览：
 
 * 交互式图像（可点击热点）
 * 交互式视频（视频播放期间可单击的缩略图图像）
-* 轮播横幅（可点击的热点或图像映射）
+* 轮播横幅（可点击热点或图像映射）
 
-虽然每个查看器的功能不同，但创建概览的过程在所有三个支持的查看器中是相同的。
+虽然每个查看器的功能不同，但创建概览的过程在所有三个受支持的查看器中是相同的。
 
 **要使用Quickview创建自定义弹出窗口，请执行以下操作：**
 
-1. 为上传的资产创建快速视图。
+1. 为上传的资源创建快速视图。
 
-   通常，在编辑资产以与正在使用的查看器一起使用时，会创建概览窗口。
+   通常，在编辑资产以用于使用的查看器的同时，创建概览也会同时进行。
 
    <table>
     <tbody>
@@ -72,13 +72,13 @@ Dynamic Media中的以下查看器支持概览：
     <td><a href="/help/assets/interactive-videos.md#integrating-an-interactive-video-with-your-website" target="_blank">将交互式视频与您的网站集成</a>.<br /> </td>
     </tr>
     <tr>
-    <td>轮播横幅</td>
+    <td>传送横幅</td>
     <td><a href="/help/assets/carousel-banners.md#adding-a-carousel-banner-to-your-website-page" target="_blank">将轮播横幅添加到您的网站页面</a>.<br /> </td>
     </tr>
     </tbody>
    </table>
 
-1. 您现在使用的查看器必须知道如何使用概览。
+1. 您使用的查看器必须知道如何使用概览。
 
    查看器使用名为的处理程序 `QuickViewActive`.
 
@@ -91,7 +91,7 @@ Dynamic Media中的以下查看器支持概览：
 
    `*viewerInstance*.setHandlers({ *handler 1*, *handler 2*}, ...`
 
-   **在上面的嵌入代码示例中，提供了以下代码：**
+   **以上面的示例嵌入代码为例，提供了以下代码：**
 
    ```xml
    s7interactiveimageviewer.setHandlers({
@@ -104,14 +104,14 @@ Dynamic Media中的以下查看器支持概览：
    })
    ```
 
-   详细了解 `setHandlers()` 方法：
+   了解有关 `setHandlers()` 方法：
 
    * 交互式图像查看器： [https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/jsapi-interactive-image/r-html5-aem-int-image-viewer-javascriptapiref-sethandlers.html](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/jsapi-interactive-image/r-html5-aem-int-image-viewer-javascriptapiref-sethandlers.html)
    * 交互式视频查看器： [https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/jsapi-interactive-video/r-html5-aem-int-video-javascriptapiref-sethandlers.html](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/jsapi-interactive-video/r-html5-aem-int-video-javascriptapiref-sethandlers.html)
 
-1. 您现在必须配置 `quickViewActivate` 处理程序。
+1. 您必须配置 `quickViewActivate` 处理程序。
 
-   此 `quickViewActivate` 处理程序控制查看器中的概览视图。 该处理程序包含用于概览的变量列表和函数调用。 嵌入代码提供在概览和示例中设置的SKU变量的映射 `loadQuickView` 函数调用。
+   此 `quickViewActivate` 处理程序控制查看器中的概览视图。 该处理程序包含用于概览的变量列表和函数调用。 嵌入代码提供在概览和示例中设置SKU变量的映射 `loadQuickView` 函数调用。
 
    **变量映射**
 将网页中使用的变量映射到概览中包含的SKU值和通用变量：
@@ -130,13 +130,13 @@ Dynamic Media中的以下查看器支持概览：
    ```
 
    **函数调用**
-该处理程序还需要Quickview的函数调用才能正常工作。 假定主机页面可以访问函数。 嵌入代码提供了一个示例函数调用：
+该处理程序还需要函数调用才能使概览正常工作。 假定主机页面可以访问函数。 嵌入代码提供了一个示例函数调用：
 
    `loadQuickView(sku)`
 
-   示例函数调用假定函数 `loadQuickView()` 存在并且可以访问。
+   示例函数调用假定使用函数 `loadQuickView()` 存在并且可以访问。
 
-   详细了解 `quickViewActivate` 方法：
+   了解有关 `quickViewActivate` 方法：
 
    * 交互式图像查看器： [https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/c-html5-aem-interactive-image-event-callbacks.html](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/c-html5-aem-interactive-image-event-callbacks.html)
    * 交互式视频查看器： [https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/c-html5-aem-int-video-event-callbacks.html](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/c-html5-aem-int-video-event-callbacks.html)
@@ -148,9 +148,10 @@ Dynamic Media中的以下查看器支持概览：
    * 映射概览中包含的任何其他变量。
 
       * 更新 `loadQuickView(sku,*var1*,*var2*)` 如果要添加其他变量，请调用。
-   * 创建一个简单的 `loadQuickView` ()在页面上的函数，位于查看器之外。
 
-      例如，以下内容会将SKU的值写入浏览器控制台：
+   * 创建简单的 `loadQuickView` ()功能在页面上，在查看器之外。
+
+     例如，下面会将SKU的值写入浏览器控制台：
 
    ```xml
    function loadQuickView(sku){
@@ -160,12 +161,10 @@ Dynamic Media中的以下查看器支持概览：
 
    * 将测试HTML页上传到Web服务器并打开。
 
-      在映射概览中的变量并设置函数调用后，浏览器控制台使用提供的示例函数将变量值写入浏览器控制台。
-
-
+     在映射概览中的变量并就地调用函数后，浏览器控制台使用提供的示例函数将变量值写入浏览器控制台。
 
 1. 现在，您可以使用函数在概览中调用简单的弹出窗口。 以下示例使用 `DIV` 弹出窗口。
-1. 设置弹出窗口样式 `DIV` 以下列方式进行。 根据需要添加您自己的其他样式。
+1. 设置弹出窗口的样式 `DIV` 以下列方式进行。 根据需要添加您自己的其他样式。
 
    ```xml
    <style type="text/css">
@@ -179,7 +178,7 @@ Dynamic Media中的以下查看器支持概览：
 
 1. 放置弹出窗口 `DIV` 在HTML页正文中。
 
-   其中某个元素设置了ID，当用户调用概览时，该ID会通过SKU值更新。 该示例还包括一个简单按钮，用于在弹出窗口变为可见后再次隐藏弹出窗口。
+   其中一个元素设置了ID，当用户调用概览时，该ID会使用SKU值更新。 该示例还包括一个简单按钮，用于在弹出窗口变为可见后再次隐藏弹出窗口。
 
    ```xml
    <div id="quickview_div" >
@@ -202,9 +201,9 @@ Dynamic Media中的以下查看器支持概览：
    ```
 
 1. 将测试HTML页上传到Web服务器并打开。 查看器显示弹出窗口 `DIV` 用户调用概览时。
-1. **如何在全屏模式下显示自定义弹出窗口**
+1. **如何以全屏模式显示自定义弹出窗口**
 
-   某些查看器（例如交互式视频查看器）支持全屏模式显示。 但是，使用上述步骤中所述的弹出窗口时，会在全屏模式下将其显示在查看器后面。
+   某些查看器（例如交互式视频查看器）支持全屏模式显示。 但是，如上一步所述使用弹出窗口，会在全屏模式下将其显示在查看器后面。
 
    要使弹出式菜单同时以标准模式和全屏模式显示，请将弹出式菜单附加到查看器容器。 使用第二个处理程序方法， `initComplete`.
 
@@ -214,12 +213,12 @@ Dynamic Media中的以下查看器支持概览：
    "initComplete":function() { code block }
    ```
 
-   详细了解 `init()` 方法：
+   了解有关 `init()` 方法：
 
    * 交互式图像查看器： [https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/jsapi-interactive-image/r-html5-aem-int-image-viewer-javascriptapiref-init.html](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/jsapi-interactive-image/r-html5-aem-int-image-viewer-javascriptapiref-init.html)
    * 交互式视频查看器： [https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/jsapi-interactive-video/r-html5-aem-int-video-javascriptapiref-init.html](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/jsapi-interactive-video/r-html5-aem-int-video-javascriptapiref-init.html)
 
-1. 要将上述步骤中描述的弹出窗口附加到查看器，请使用以下代码：
+1. 要将前面步骤中描述的弹出窗口附加到查看器，请使用以下代码：
 
    ```xml
    "initComplete":function() {
@@ -236,7 +235,7 @@ Dynamic Media中的以下查看器支持概览：
    * 已识别自定义弹出窗口。
    * 已从DOM中删除它。
    * 已标识查看器容器。
-   * 已将弹出窗口连接到查看器容器。
+   * 已将弹出窗口附加到查看器容器。
 
 1. 您的整个setHandlers代码类似于以下内容（使用了交互式视频查看器）：
 
@@ -266,4 +265,4 @@ Dynamic Media中的以下查看器支持概览：
 
    `s7interactiveimageviewer.init()`
 
-   将查看器嵌入主机页面后，请确保在使用调用查看器之前创建查看器实例并加载处理程序 `init()`.
+   将查看器嵌入主机页面后，请确保先创建查看器实例，并加载处理程序，然后再使用调用查看器 `init()`.

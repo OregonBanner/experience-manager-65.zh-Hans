@@ -6,9 +6,9 @@ topic-tags: spa
 content-type: reference
 docset: aem65
 exl-id: 383f84fd-455c-49a4-9e2b-1c4757cc188b
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '2074'
+source-wordcount: '2075'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 1%
 
 ## 简介 {#introduction}
 
-本文档描述了任何SPA框架都应该履行的一般合同(即AEM支持层的类型)，以便在AEM中实施可编辑的SPA组件。
+本文档描述了任何SPA框架都应该完成的常规合同(即AEM支持层的类型)，以便在AEM中实施可编辑的SPA组件。
 
 >[!NOTE]
 >

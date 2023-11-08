@@ -10,7 +10,7 @@ discoiquuid: 1a32eb24-db3b-4fad-b1c7-6326b5af4e5e
 docset: aem65
 feature: Adaptive Forms
 exl-id: 2f276e9d-b3c1-48f7-a94a-bdf7eb15a031
-source-git-commit: d8e34f6ece9e3be4c4c5372f3046bc937538536e
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
 source-wordcount: '2134'
 ht-degree: 3%
@@ -237,7 +237,7 @@ ht-degree: 3%
 ## 使用片段时要记住的要点 {#key-points-to-remember-when-working-with-fragments}
 
 * 确保片段名称是唯一的。 如果存在具有相同名称的现有片段，则创建片段失败。
-* 在基于XDP的自适应表单中，如果您将面板另存为包含其他XDP片段的片段，则生成的片段将自动绑定到子XDP片段。 在基于XSD的自适应表单中，生成的片段将绑定到架构根。
+* 在基于XDP的自适应表单中，如果您将面板另存为包含其他XDP片段的片段，则生成的片段将自动绑定到子XDP片段。 如果存在基于XSD的自适应表单，则生成的片段将绑定到架构根。
 * 创建自适应表单片段时，会创建一个片段节点，该节点与CRXDe Lite中自适应表单的guideContainer节点类似。
 * 不支持使用其他表单数据模型的自适应表单中的片段。 例如，基于XDP的片段在基于XSD的自适应表单中不受支持，反之亦然。
 * 自适应表单片段可通过AEM内容查找器中的自适应表单片段选项卡使用。

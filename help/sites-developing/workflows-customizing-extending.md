@@ -10,9 +10,9 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: f23408c3-6b37-4047-9cce-0cab97bb6c5c
 exl-id: 9e205912-50a6-414a-b8d4-a0865269d0e0
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '3588'
+source-wordcount: '3589'
 ht-degree: 2%
 
 ---
@@ -49,7 +49,7 @@ ht-degree: 2%
 >
 >建议用于配置和其他更改的方法是：
 >
->1. 重新创建所需项目（即它存在于中） `/libs` 下 `/apps`
+>1. 重新创建所需项目(即，它存在于 `/libs` 下 `/apps`
 >2. 在中进行任何更改 `/apps`
 
 此 `/libs/cq/workflow/components/model/step` component是 **流程步骤**， **参与者步骤**、和 **动态参与者步骤**，它们将继承以下项：

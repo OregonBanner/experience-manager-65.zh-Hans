@@ -10,9 +10,9 @@ topic-tags: platform
 content-type: reference
 discoiquuid: ec712ba0-0fd6-4bb8-93d6-07d09127df58
 exl-id: 1eed754e-9a7d-4b65-a929-757fc962614d
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '1252'
+source-wordcount: '1255'
 ht-degree: 1%
 
 ---
@@ -62,7 +62,7 @@ Sling资源合并器提供访问和合并资源的服务。 它提供了以下�
 >
 >建议用于配置和其他更改的方法是：
 >
->1. 重新创建所需项目（即它存在于中） `/libs`)，在 `/apps`
+>1. 重新创建所需项目(即，它存在于 `/libs`)，在 `/apps`
 >
 >1. 在中进行任何更改 `/apps`
 >

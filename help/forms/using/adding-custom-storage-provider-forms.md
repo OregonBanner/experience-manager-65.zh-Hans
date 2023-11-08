@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: Configuration
 feature: Forms Portal
 exl-id: b1300eeb-2653-4bb5-b2fd-88048c9c43b9
-source-git-commit: 3d80ea6a6fbad05afcdd1f41f4b9de70921ab765
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
 source-wordcount: '332'
 ht-degree: 0%
@@ -19,18 +19,18 @@ ht-degree: 0%
 
 AEM Forms允许您将表单另存为草稿。 草稿功能允许您维护正在处理的表单，您可以稍后从任何设备完成并提交该表单。
 
-默认情况下，AEM Forms会将与表单草稿和提交关联的用户数据存储在 `/content/forms/fp` 节点。 此外，AEM Forms Portal组件提供数据服务，您可以使用这些数据服务来自定义存储用于草稿和提交的用户数据的实施。 例如，您可以将用户数据存储到数据存储中。
+默认情况下，AEM Forms会将与表单草稿和提交关联的用户数据存储在 `/content/forms/fp` 节点。 此外，AEM Forms Portal组件提供数据服务，您可以使用这些数据服务自定义存储草稿和提交的用户数据的实施。 例如，您可以将用户数据存储到数据存储中。
 
 ## 前提条件  {#prerequisites}
 
 * 启用 [Forms Portal组件](/help/forms/using/enabling-forms-portal-components.md)
 * 创建 [Forms Portal页面](/help/forms/using/creating-form-portal-page.md)
-* 启用 [自适应表单Forms门户](/help/forms/using/draft-submission-component.md)
-* 了解 [自定义存储的实施详细信息](/help/forms/using/draft-submission-component.md#customizing-the-storage)
+* 启用 [Forms Portal自适应表单](/help/forms/using/draft-submission-component.md)
+* 学习 [自定义存储的实施详细信息](/help/forms/using/draft-submission-component.md#customizing-the-storage)
 
 ## 草稿数据服务 {#draft-data-service}
 
-要自定义草稿的用户数据存储，您必须实施的所有方法 `DraftDataService` 界面。 以下示例代码描述了方法和参数。
+要自定义草稿的用户数据的存储，您必须实施的所有方法 `DraftDataService` 界面。 以下示例代码描述了方法和参数。
 
 ```java
 /**
@@ -40,7 +40,7 @@ AEM Forms允许您将表单另存为草稿。 草稿功能允许您维护正在�
 public interface DraftDataService {
 
     /**
-     * To save/modify user data for this userDataID, it will be null in case of creation
+     * To save/modify user data for this userDataID, it will be null if there is creation
      * @param draftDataID: unique identifier associated with the form data
      * @param formName: name of the form whose draft is being saved
      * @param formData: user data associated with this draft
@@ -99,7 +99,7 @@ public interface DraftDataService {
 
 ## 提交数据服务 {#submission-data-service}
 
-要自定义用于提交的用户数据的存储，您必须实施的所有方法 `SubmitDataService` 界面。 以下示例代码描述了方法和参数。
+要自定义提交的用户数据的存储，您必须实施 `SubmitDataService` 界面。 以下示例代码描述了方法和参数。
 
 ```java
 /**
@@ -184,7 +184,7 @@ public interface SubmitDataService {
 }
 ```
 
-Forms Portal使用通用唯一标识符(UUID)概念为每个草稿和提交的表单生成一个唯一ID。 您还可以生成自己的唯一ID。 您可以实施接口FPKeyGeneratorService，覆盖其方法，并开发自定义逻辑以便为每个草稿和提交的表单生成自定义唯一ID。 此外，将自定义ID生成实施的服务排名设置为大于0。 它可确保使用自定义实施，而不是默认实施。
+Forms Portal使用通用唯一标识符(UUID)概念为每个草稿和提交的表单生成唯一ID。 您还可以生成自己的唯一ID。 您可以实施接口FPKeyGeneratorService，覆盖其方法，并开发自定义逻辑以为每个草稿和提交的表单生成自定义唯一ID。 此外，将自定义ID生成实施的服务排名设置为大于0。 它可确保使用自定义实施，而不是默认实施。
 
 ```java
 public interface FPKeyGeneratorService {

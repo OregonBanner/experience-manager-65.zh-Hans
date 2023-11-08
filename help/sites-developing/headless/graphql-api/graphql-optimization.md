@@ -2,10 +2,10 @@
 title: 优化 GraphQL 查询
 description: 了解在Adobe Experience Manager as a Cloud Service中筛选、分页和排序内容片段以进行Headless内容投放时，如何优化GraphQL查询。
 exl-id: 47d0570b-224e-4109-b94e-ccc369d7ac5f
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '1966'
-ht-degree: 60%
+source-wordcount: '1964'
+ht-degree: 58%
 
 ---
 
@@ -177,10 +177,10 @@ AEM 提供了两种方法来优化 GraphQL 查询：
 
 通过使用分页(一种GraphQL标准)将响应分段为块，可以改进具有大型结果集的复杂查询的响应时间。
 
-AEM 中的 GraphQL 支持两种类型的分页：
+AEM中的GraphQL支持两种类型的分页：
 
 * [基于限制/偏移的分页](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#list-offset-limit)
-此分页用于列表查询；它们以`List` 结尾；例如 `articleList`。
+这用于列表查询；它们以 `List`；例如， `articleList`.
 要使用它，您必须提供要返回的第一个项目的位置 (`offset`) 和要返回的项目数（`limit` 或页面大小）。
 
 * [基于光标的分页](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#paginated-first-after)（由 `first` 和 `after` 表示）

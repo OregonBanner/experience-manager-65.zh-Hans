@@ -10,9 +10,9 @@ topic-tags: platform
 content-type: reference
 discoiquuid: 6af48ef5-75e6-4b66-bc0d-ecf254b1c4ef
 exl-id: 725c81d0-0258-4118-8b01-29fd7bcaf9b3
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '180'
+source-wordcount: '181'
 ht-degree: 1%
 
 ---
@@ -42,7 +42,7 @@ AEM允许您生成包含从内容中动态获取的文本的图形。
    >
    >存储库中的字体文件必须具有后缀 `*.ttf` 或 `*.TTF`.
 
-1. 更新 [OSGi配置](/help/sites-deploying/configuring-osgi.md) 之 [Day Commons GFX字体帮助程序](/help/sites-deploying/osgi-configuration-settings.md). 将路径添加到您的fonts文件夹；即 `/apps/<your-project>/fonts`.
+1. 更新 [OSGi配置](/help/sites-deploying/configuring-osgi.md) 之 [Day Commons GFX字体帮助程序](/help/sites-deploying/osgi-configuration-settings.md). 添加字体文件夹的路径；即， `/apps/<your-project>/fonts`.
 
 1. 返回CRXDE Lite。 您现在应会看到 `.fontlist` 文件夹中包含导入字体的名称的节点。
 

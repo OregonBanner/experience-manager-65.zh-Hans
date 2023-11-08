@@ -1,20 +1,16 @@
 ---
 title: 页面差异
-seo-title: Page Diff
 description: 通过页面差异功能，可以方便地将两个页面并排比较，并突出显示它们的差异。
-seo-description: The page diff feature allows for the convenient side-by-side comparison of two pages with their differences highlighted.
-uuid: 5af8b466-5922-4fe6-9eae-7bad99be23e0
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: site-features
-discoiquuid: 8386a16a-9d47-46d5-bc60-5f290c59e60e
 docset: aem65
 exl-id: 3beea5cd-5ae0-485b-8dfc-8b3a23c11586
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '571'
-ht-degree: 92%
+source-wordcount: '570'
+ht-degree: 86%
 
 ---
 
@@ -90,7 +86,7 @@ ht-degree: 92%
 
 在某些情况下，页面差异功能可能检测不到预期的差异。
 
-* 在比较版本和启动项时，差异不会考虑动态组件，如痕迹导航、菜单、产品列表或徽标（依赖站点结构呈现其内容的组件）。
+* 当版本和启动项不同时，差异不会考虑动态组件，例如痕迹导航、菜单、产品列表或徽标（依赖站点结构呈现其内容的组件）。
 * 对于版本，差异不会重新创建访问控制策略和 Live Copy 关系。
 * 如果页面发生移动，将无法再使用移动前制作的任何版本执行差异。
 

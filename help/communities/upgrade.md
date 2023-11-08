@@ -11,9 +11,9 @@ topic-tags: deploying
 discoiquuid: abe5a998-bbe3-4a2b-bcf7-b490a8275219
 docset: aem65
 exl-id: ea41d35c-967c-4606-b4ec-377e817902e4
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: e2a3470784beb04c2179958ac6cb98861acfaa71
 workflow-type: tm+mt
-source-wordcount: '621'
+source-wordcount: '618'
 ht-degree: 0%
 
 ---
@@ -72,7 +72,7 @@ ht-degree: 0%
 
 ### Java API {#java-apis}
 
-从AEM 6.0社交社区升级到AEM 6.3社区时，请注意，许多API已重新组织到不同的包中。 使用IDE自定义Communities功能时，应该可以轻松解决大多数问题。
+从AEM 6.0社交社区升级到AEM 6.3社区时，许多API已重新组织到不同的包中。 使用IDE自定义Communities功能时，应该可以轻松解决大多数问题。
 
 有关已弃用的SocialUtils包的详细信息，请访问 [SocialUtils重构](/help/communities/socialutils.md).
 

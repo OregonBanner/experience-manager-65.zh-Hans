@@ -7,7 +7,7 @@ activity: setup
 audience: administrator
 feature: Commerce Integration Framework
 exl-id: 1d4e9b7b-848b-4007-b884-dd48682d62e8
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
 source-wordcount: '384'
 ht-degree: 2%
@@ -36,11 +36,11 @@ Live Copy和Language Copy的AEM多站点管理功能与Commerce Integration Fram
 
 3. 按照以下步骤创建CIFCloud Service配置的子配置：
 
-   * 在AEM中，转到“工具” — >“常规” — > [配置浏览器](/help/sites-administering/configurations.md#using-configuration-browser)
+   * 在AEM中，转到“工具”>“常规”> [配置浏览器](/help/sites-administering/configurations.md#using-configuration-browser)
    * 选择您创建的基本配置
    * 使用上述第2点所述的步骤创建配置
 
-   此新配置是作为基础配置的子配置创建的。 您现在可以转至“工具” — >“常规” — >“配置浏览器”并创建配置设置。
+   此新配置是作为基础配置的子配置创建的。 您现在可以转到工具>常规>配置浏览器并创建配置设置。
 
    >[!TIP]
    >

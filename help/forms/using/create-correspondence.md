@@ -1,18 +1,14 @@
 ---
 title: 创建通信
-seo-title: Create Correspondence
 description: 创建信件模板后，可通过管理数据、内容和附件，在AEM Forms中使用该模板创建信件。
-seo-description: After you have created a letter template, you can use it to create correspondence in AEM Forms by managing data, content, and attachments.
-uuid: 48cf2b26-c9b4-4127-9ea0-1b36addbff60
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: correspondence-management
-discoiquuid: 87742cb2-357b-421f-b79d-e355887ddec0
 docset: aem65
 feature: Correspondence Management
 exl-id: da966787-a3b9-420f-8b7c-f00d05c61d43
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '3853'
+source-wordcount: '3849'
 ht-degree: 0%
 
 ---
@@ -261,11 +257,11 @@ ht-degree: 0%
    >
    >如果您使用的是Mozilla Firefox和HTML呈现版本类型，若要将信件预览为拼合PDF，请确保您使用的是本机浏览器插件，而不是Acrobat插件。 要选择本机浏览器插件，请转到Mozilla Firefox的设置，对于内容类型PDF，请选择在Firefox中预览。
 
-1. 如果发现拼合PDF预览效果令人满意，请点击 **提交** 来提交信件。 或者，若要对书信进行更改，请点按 **退出预览** 返回到信件的创建通信UI预览，以在信件中进行更改。 点按提交时，如果在发布实例上启用了管理书信实例配置，则会生成提交书信实例。
+1. 如果发现拼合PDF预览效果令人满意，请点击 **提交** 来提交信件。 或者，若要更改字母，请点按 **退出预览** 返回到信件的创建通信UI预览，以在信件中进行更改。 点按提交时，如果在发布实例上启用了管理书信实例配置，则会生成提交书信实例。
 
    有关更多信息，请参阅保存草稿和提交信件实例下的草稿实例。
 
-   您还可以将信件另存为草稿，以便稍后对信件进行更改。
+   您还可以将信件另存为草稿以便稍后更改信件。
 
    进行所需的更改后，您可以从HTML5预览中提交书信，或再次点按预览以查看拼合的PDF输出。
 

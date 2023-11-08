@@ -7,10 +7,10 @@ topic-tags: extending-aem
 content-type: reference
 docset: aem65
 exl-id: bba64ce6-8b74-4be1-bf14-cfdf3b9b60e1
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '2577'
-ht-degree: 60%
+source-wordcount: '2582'
+ht-degree: 58%
 
 ---
 
@@ -195,7 +195,7 @@ Node sourcenode = source.adaptTo(javax.jcr.Node.class);
    >这是因为 `/libs` 下次升级实例时将被覆盖（在应用修补程序或功能包时很可能会被覆盖）。
    >建议用于配置和其他更改的方法是：
    >
-   >* 重新创建所需项目（即它存在于中） `/libs`)，在 `/apps`
+   >* 重新创建所需项目(即，它存在于 `/libs`)，在 `/apps`
    >* 在中进行任何更改 `/apps`
 
 1. 在此下 **创建** 具有以下属性的节点：
@@ -655,11 +655,11 @@ MSM 使用存储的语言和国家/地区代码列表来确定与页面语言版
 
 * 联系电子邮件:
 
-   * 该属性不需要转出，因为它在每个国家/地区（或品牌等）中都会有所不同。
+   * 此属性不需要推出，因为每个国家/地区（或品牌等）中的此属性将有所不同。
 
 * 主要视觉风格：
 
-   * 项目要求是要转出该属性，因为它（通常）对所有国家/地区（或品牌等）都是通用的。
+   * 项目要求是推出此属性，因为此属性（通常）对所有国家/地区（或品牌等）通用。
 
 那么您需要确保：
 

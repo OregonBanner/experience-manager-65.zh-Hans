@@ -6,7 +6,7 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: d2dd381d-a7d2-4fec-a8ba-7ca037fd9dc1
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: c4cd9a61a226ace2a72d60b5b7b7432de12cb873
 workflow-type: tm+mt
 source-wordcount: '2065'
 ht-degree: 0%
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 ## 全局文档存储目录 {#global-document-storage-directory}
 
-GDS是用于存储进程中使用的长期文件的目录。 长生命周期文件的生命周期旨在跨越AEM表单系统的一个或多个启动项，并且可能跨越天甚至年。 这些长期文件可以包括PDF、策略和表单模板。 长生命周期文件是许多AEM forms部署总体状态的重要组成部分。 如果某些或所有长期文档丢失或损坏，表单服务器可能会变得不稳定。
+GDS是用于存储进程中使用的长期文件的目录。 长生命周期文件的生命周期旨在跨越AEM表单系统的一个或多个启动项，并且可能跨越天甚至年。 这些长期文件可以包括PDF、策略和表单模板。 长生命周期文件是许多AEM forms部署总体状态的重要组成部分。 如果某些或所有长期文档丢失或损坏，Forms服务器可能会变得不稳定。
 
 异步作业调用的输入文档也存储在GDS中，并且必须可用于处理请求。 因此，一定要考虑承载GDS的文件系统的可靠性，并采用独立磁盘冗余阵列(RAID)或其他适合您的质量和服务级别要求的技术。
 

@@ -10,10 +10,10 @@ discoiquuid: 05303b29-9058-4723-b134-4ba605fe40c7
 docset: aem65
 feature: Adaptive Forms
 exl-id: 255be73f-3169-457c-aaa7-a2fb59f1f2cd
-source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '740'
-ht-degree: 5%
+source-wordcount: '738'
+ht-degree: 12%
 
 ---
 
@@ -21,15 +21,15 @@ ht-degree: 5%
 
 ## 简介 {#introduction}
 
-<span class="preview"> Adobe建议使用现代化的、可扩展的数据捕获 [核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) 对象 [创建新的自适应Forms](/help/forms/using/create-an-adaptive-form-core-components.md) 或 [将自适应Forms添加到AEM Sites页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). 这些组件在创建自适应Forms方面实现了重大进步，确保了令人印象深刻的用户体验。 本文介绍了使用基础组件创作自适应Forms的旧方法。 </span>
+<span class="preview">Adobe 建议使用现代、可扩展的数据捕获[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html)，以[创建新的自适应表单](/help/forms/using/create-an-adaptive-form-core-components.md)或[将自适应表单添加到 AEM Sites 页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。这些组件代表有关创建自适应表单的重大改进，确保实现令人印象深刻的用户体验。本文介绍了使用基础组件创作自适应表单的旧方法。</span>
 
-自适应表单提供对XDP文件中定义的各种XFA事件、属性、脚本和验证的支持，包括：
+自适应表单支持XDP文件中定义的各种XFA事件、属性、脚本和验证，包括：
 
 * 执行在XDP文件中的事件上定义的脚本。
 * 捕获XDP文件中字段的缺省值和行为属性。
 * 执行XDP文件中定义的验证脚本。
 
-在基于XDP文件创建自适应表单时，属性、事件和验证会在表单创作UI中自动填充。 但是，表单作者可以覆盖其中的一些元素以创建替代体验。
+在基于XDP文件创建自适应表单时，属性、事件和验证会在表单创作UI中自动填充。 但是，表单作者可以覆盖其中的某些元素以创建替代体验。
 
 本文列出了自适应表单中遵循的受支持XFA事件、属性和验证，并说明了如何在自适应表单中覆盖这些事件、属性和验证。
 
@@ -62,7 +62,7 @@ ht-degree: 5%
    <td><p>日期选取器</p> </td>
   </tr>
   <tr>
-   <td><p>签名涂鸦</p> </td>
+   <td><p>潦草签名</p> </td>
    <td><p>潦草签名</p> </td>
   </tr>
   <tr>
@@ -124,18 +124,18 @@ ht-degree: 5%
   </tr>
   <tr>
    <td><p>访问 </p> </td>
-   <td><p>映射到自适应表单中已启用的属性。 您可以使用Access表达式覆盖它。</p> </td>
+   <td><p>映射到自适应表单中启用的属性。 您可以使用Access表达式覆盖它。</p> </td>
   </tr>
   <tr>
    <td><p>辅助功能：角色 </p> </td>
-   <td><p>映射到自适应表单中的角色属性。</p> </td>
+   <td><p>映射到自适应表单中的role属性。</p> </td>
   </tr>
   <tr>
    <td><p>辅助功能：speakPriority </p> </td>
    <td><p>已映射到自适应表单中的speakPriority属性。</p> </td>
   </tr>
   <tr>
-   <td><p>辅助功能：speakText</p> </td>
+   <td><p>辅助功能： speakText</p> </td>
    <td><p>映射到自适应表单中的自定义辅助功能文本。</p> </td>
   </tr>
   <tr>
@@ -156,7 +156,7 @@ ht-degree: 5%
   </tr>
   <tr>
    <td><p>个项目<em> （列表框、复选框）</em></p> </td>
-   <td><p>映射到自适应表单中的options属性。 您可以使用“选项”表达式来覆盖它。</p> </td>
+   <td><p>映射到自适应表单中的options属性。 可以使用“选项”表达式覆盖它。</p> </td>
   </tr>
   <tr>
    <td><p>maxChar<em> （文本字段）</em></p> </td>
@@ -168,15 +168,15 @@ ht-degree: 5%
   </tr>
   <tr>
    <td><p>fracDigital<em> （数值字段，小数字段）</em></p> </td>
-   <td><p>映射到自适应表单中的Frac位数属性。</p> </td>
+   <td><p>映射到自适应表单中的Frac数字属性。</p> </td>
   </tr>
   <tr>
    <td><p>leadDigital<em> （数值字段，小数字段）</em></p> </td>
-   <td><p>映射到自适应表单中的前导位数属性。</p> </td>
+   <td><p>映射到自适应表单中的潜在客户数字属性。</p> </td>
   </tr>
   <tr>
    <td><p>multiSelect<em> （列表框）</em></p> </td>
-   <td><p>映射到允许自适应表单中的多选属性。</p> </td>
+   <td><p>已映射到允许自适应表单中包含多选属性。</p> </td>
   </tr>
  </tbody>
 </table>
@@ -197,7 +197,7 @@ ht-degree: 5%
   </tr>
   <tr>
    <td><p>计算</p> </td>
-   <td><p>已映射到自适应表单中的计算表达式。</p> </td>
+   <td><p>映射到自适应表单中的计算表达式。</p> </td>
   </tr>
   <tr>
    <td><p>验证 </p> </td>
@@ -213,7 +213,7 @@ ht-degree: 5%
   </tr>
   <tr>
    <td><p>单击（按钮字段）</p> </td>
-   <td><p>已映射到按钮的Click表达式。</p> </td>
+   <td><p>映射到按钮的Click表达式。</p> </td>
   </tr>
   <tr>
    <td><p>支持服务器端脚本</p> </td>
@@ -269,4 +269,4 @@ ht-degree: 5%
 
 >[!NOTE]
 >
->您无法覆盖绑定到XFA复选框按钮的自适应表单单选按钮和复选框组的强制属性。
+>无法覆盖绑定到XFA复选框按钮的自适应表单单选按钮和复选框组的强制属性。

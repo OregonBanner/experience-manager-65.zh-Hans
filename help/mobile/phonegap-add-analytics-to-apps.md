@@ -6,9 +6,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 exl-id: 8d965e94-c368-481d-b000-6e22456c34db
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '932'
+source-wordcount: '931'
 ht-degree: 0%
 
 ---
@@ -45,7 +45,7 @@ AEM Mobile需要使用Adobe Analytics帐户来收集和报告应用程序中的�
 
 设置Analytics帐户后，创建内容同步配置以将内容拉入您的移动应用程序。
 
-有关其他详细信息，请参阅配置内容同步内容。 配置必须指示Content Sync将ADBMobileConfig放入/www目录。 例如，在Geometrixx Outdoors应用程序中，Content Sync配置位于： */content/phonegap/geometrixx-outdoors/shell/jcr：content/pge-app/app-config/ams-ADBMobileConfig*. 此外，还有一个用于开发的配置；但是，它与Geometrixx Outdoors中的非开发配置相同。
+有关其他详细信息，请参阅配置内容同步内容。 配置必须指示Content Sync将ADBMobileConfig放入/www目录。 例如，在Geometrixx Outdoors应用程序中，Content Sync配置位于： */content/phonegap/geometrixx-outdoors/shell/jcr：content/pge-app/app-config/ams-ADBMobileConfig*. 此外，还有用于开发的配置。 但是，如果存在Geometrixx Outdoors，则它与非开发配置相同。
 
 有关如何从移动设备应用程序AEM应用程序仪表板下载ADBMobileConfig的详细信息，请参阅Analytics - Mobile Services -AdobeMobile Services SDK配置文件。
 

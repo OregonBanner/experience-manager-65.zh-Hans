@@ -2,10 +2,10 @@
 title: 使用 Edge Delivery Services
 description: 使用 Edge Delivery Services (EDS)
 exl-id: 6c9178b0-c8f3-4fc7-8614-8e71ffc2f0b8
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '609'
-ht-degree: 97%
+source-wordcount: '608'
+ht-degree: 93%
 
 ---
 
@@ -20,7 +20,7 @@ Edge Delivery 让创作变得简单、快速且灵活。您可以在 Edge Delive
 * 基于文档的创作（例如 Microsoft Word 或 Google Docs）- [请参阅此链接以了解更多详细信息](https://www.hlx.live/docs/authoring)。
 * 页面编辑器/Universal Editor - 请联系您的 Adobe 销售代表。
 
-对于基于文档的创作，您可以使用各种源，例如 Microsoft Word 和 Google Docs。来自这些源的文档将成为您网站上的页面。标题、列表、图像、字体元素、视频都可以从初始源转移到网站中。您可以出于 SEO 目的添加元数据，也可以使用块来处理结构化内容并添加功能。
+如果存在基于文档的创作，则可以使用各种源，如Microsoft Word和Google Docs。 来自这些源的文档将成为您网站上的页面。标题、列表、图像、字体元素、视频都可以从初始源转移到网站中。您可以出于 SEO 目的添加元数据，也可以使用块来处理结构化内容并添加功能。
 
 ## 发布 {#publishing-edge}
 

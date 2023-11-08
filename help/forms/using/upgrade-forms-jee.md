@@ -1,24 +1,22 @@
 ---
 title: 在JEE上升级到AEM 6.5 Forms
 description: 您可以执行从AEM 6.1 Forms、AEM 6.2 Forms和LiveCycleES4 SP1到AEM 6.3 Forms的直接升级。
-uuid: 1435246a-9215-4d88-b52c-59a5c329bb77
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.3/FORMS
 topic-tags: installing
 geptopics: SG_AEMFORMS/categories/jee
-discoiquuid: e745033f-8015-4fae-9d82-99d35802c0a6
 role: Admin
 exl-id: 722e75a0-bcb3-465e-bb74-ea94a3b99fd3
-source-git-commit: fbc371e59c4f80195fe90da5f635267141c8849e
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '367'
+source-wordcount: '366'
 ht-degree: 1%
 
 ---
 
 # 在JEE上升级到AEM 6.5 Forms {#upgrade-to-aem-forms-jee}
 
-JEE上的AEM 6.5.18.0 Forms提供了两种类型的安装程序：完整安装程序和修补程序安装程序。
+JEE上的AEM 6.5.18.0 Forms提供两种类型的安装程序：完整安装程序和修补程序安装程序。
 
 **完整安装程序**：您可以使用 [JEE上的AEM 6.5.18.0完整安装程序](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) 设置新的AEM Forms实例或执行从JEE上的AEM 6.5.x.x Forms升级到JEE上的AEM 6.5.18.0 Forms的升级。
 

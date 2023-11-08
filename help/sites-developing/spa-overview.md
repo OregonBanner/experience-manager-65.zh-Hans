@@ -7,7 +7,7 @@ topic-tags: spa
 content-type: reference
 docset: aem65
 exl-id: 7b34be66-bb61-4697-8cc8-428f7c63a887
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
 source-wordcount: '1651'
 ht-degree: 85%
@@ -177,7 +177,7 @@ SPA 编辑器 SDK 支持以下最低版本：
 
 如果您想使用在 SPA 中创建的文本组件的就地编辑器，则需要进行额外配置。
 
-1. 在包含文本 HTML 的容器包装器元素上设置属性（可以是任意属性）。对于WKND日志示例内容，它是 `<div>` 元素和已使用的选择器为 `data-rte-editelement`.
+1. 在包含文本 HTML 的容器包装器元素上设置属性（可以是任意属性）。如果存在WKND日志示例内容，则它为 `<div>` 元素和已使用的选择器为 `data-rte-editelement`.
 1. 在指向该选择器的相应 AEM 文本组件的 `cq:InplaceEditingConfig` 上设置配置 `editElementQuery`，例如 `data-rte-editelement`。这可让编辑器知道哪个 HTML 元素包装了 HTML 文本。
 
 有关如何执行此操作的示例，请参见 [wknd日志示例内容。](https://github.com/adobe/aem-sample-we-retail-journal/pull/16/files)

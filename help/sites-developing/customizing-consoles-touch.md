@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 61a4e196-bd53-4ef0-816b-c14401462457
 docset: aem65
 exl-id: 6e67f2b3-78b9-45f2-b496-61776b9fd9cc
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '669'
+source-wordcount: '670'
 ht-degree: 24%
 
 ---
@@ -50,7 +50,7 @@ AEM提供了各种机制让您能够自定义控制台(以及 [页面创作功�
 >
 >建议用于配置和其他更改的方法是：
 >
->1. 重新创建所需项目（即它存在于中） `/libs`)，在 `/apps`
+>1. 重新创建所需项目(即，它存在于 `/libs`)，在 `/apps`
 >
 >1. 在中进行任何更改 `/apps`
 >

@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 exl-id: 85ca35e5-6e2b-447a-9711-b12601beacdd
-source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '861'
+source-wordcount: '860'
 ht-degree: 0%
 
 ---
@@ -92,7 +92,7 @@ AEM提供了一个XSS API，用于轻松清除参数并确保免受跨站点脚�
 * DEBUG：有关处理的较低级别信息。 在使用支持功能调试问题时，此变量将非常有用。
 * TRACE：最低级别的信息，如输入/退出方法。 这通常仅供开发人员使用。
 
-以JavaScript为例， *console.log* 应仅在开发期间使用，并且应在发布之前删除所有日志语句。
+如果存在JavaScript， *console.log* 应仅在开发期间使用，并且应在发布之前删除所有日志语句。
 
 ### 避免狂热的编程 {#avoid-cargo-cult-programming}
 

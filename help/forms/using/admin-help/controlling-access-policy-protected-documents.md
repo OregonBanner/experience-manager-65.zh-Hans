@@ -11,28 +11,28 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: f34058c3-384a-4b73-a386-5bc9125acbf8
 feature: Document Security
 exl-id: 0eb6e769-97c1-41ee-8d12-91bece984947
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '2169'
+source-wordcount: '2168'
 ht-degree: 0%
 
 ---
 
 # 控制对受策略保护文档的访问 {#controlling-access-to-policy-protected-documents}
 
-您可以控制收件人使用受策略保护文档的方式，无论这些文档分发得多广泛。
+您可以控制收件人使用受策略保护文档的方式，而不管文档分发的范围如何。
 
 使用“文档”页，您可以执行以下任务：
 
-* 搜索并查看受策略保护文档的详细信息。 您可以查看有关文档名称、发布者名称、策略名称和应用策略的日期的信息。 如果删除了保护文档的策略，您还可以在策略名称下看到已删除的策略ID。 用户可以查看和管理自己受策略保护的文档。 管理员可以查看和管理所有受策略保护的文档。
-* 更改应用于文档的策略的详细信息。 用户可以编辑自己的策略，管理员可以编辑共享策略和个人策略，策略集协调员可以编辑他们拥有权限的策略集中的共享策略。 您可以直接从“文档详细信息”页面访问与文档关联的策略。
-* 撤销和恢复对受策略保护文档的访问权限。 管理员可以撤销和恢复对任何文档的访问权限。 策略集协调人（有权管理文档）可以从其策略集中撤销和恢复对使用共享策略的受策略保护文档的访问权限。 如果用户创建了保护文档的策略，或者该策略是允许此功能的共享策略，则用户可以撤销对其受策略保护文档的访问权限。
-* 切换应用于文档的策略。 如果将策略应用于文档，则创建该策略或该策略是启用此功能的共享策略时，用户可以切换该策略。 策略集协调员可以从其策略集切换策略。 管理员可以切换应用于任何文档的策略。
+* 搜索并查看受策略保护文档的详细信息。 您可以查看有关文档名称、发布者名称、策略名称以及应用策略的日期的信息。 如果删除了保护文档的策略，您还可以在策略名称下看到已删除的策略ID。 用户可以查看和管理自己受策略保护的文档。 管理员可以查看和管理所有受策略保护的文档。
+* 更改应用于文档的策略的详细信息。 用户可以编辑自己的策略，管理员可以编辑共享策略和个人策略，策略集协调员可以编辑他们具有权限的策略集中的共享策略。 您可以直接从“文档详细信息”页面访问与文档关联的策略。
+* 撤销和恢复对受策略保护文档的访问权限。 管理员可以撤销和恢复对任何文档的访问权限。 策略集协调员（有权管理文档）可以从其策略集中撤销和恢复对使用共享策略的受策略保护文档的访问权限。 如果用户创建了保护文档的策略，或者该策略是允许此功能的共享策略，则用户可以撤销对其受策略保护文档的访问权限。
+* 切换应用于文档的策略。 如果将策略应用到文档，则创建策略或共享策略启用此功能的用户可以切换策略。 策略集协调员可以从其策略集中切换策略。 管理员可以切换应用于任何文档的策略。
 
-当文档受策略保护并且您撤销访问权限或切换应用的策略时，更改将生效，如下所示：
+当文档受策略保护并且您撤销访问权限或切换应用的策略时，更改将按如下方式生效：
 
 * 如果文档处于联机状态，除非用户打开了文档，否则将立即应用更改。 在这种情况下，用户必须关闭文档才能使更改生效。
-* 如果收件人脱机使用文档（例如，在笔记本电脑上），则更改在下次收件人通过打开任何受策略保护的文档与Document Security同步时生效。
+* 如果收件人脱机使用文档（例如在笔记本电脑上），则下次收件人通过打开任何受策略保护的文档与Document Security同步时，更改将生效。
 
 ## 查看有关文档的信息 {#view-information-about-a-document}
 
@@ -46,35 +46,35 @@ ht-degree: 0%
 
 **文档名称：** 所选文档的名称。
 
-**文档ID：** Document Security在将策略应用于文档时分配的唯一标识符。 document security使用此编号来跟踪文档。
+**文档ID：** Document Security在将策略应用于文档时分配的唯一标识符。 document security使用此编号跟踪文档。
 
 **文档状态：** 文档的状态（例如，有效或已撤销。）
 
 **发布者：** 将策略附加到文档的用户的名称。
 
-**策略名称：** 用于保护文档的策略的名称。 您可以单击该名称以打开策略。 您必须使用此链接来访问Acrobat为Outlook中附加到电子邮件的文档的收件人生成的策略。 这些策略不会显示在“策略”页面上。
+**策略名称：** 用于保护文档的策略的名称。 您可以单击该名称以打开策略。 您必须使用此链接来访问Acrobat为Outlook中附加到电子邮件的文档收件人生成的策略。 这些策略不会显示在“策略”页面上。
 
 **策略类型：** 应用于文档的策略类型。
 
 **发布日期：** 将策略应用于文档的日期。
 
-**相关迭代：** 如果文档具有相关小版本，则此项目也会显示在列表中。 单击链接可查看文档的相关小版本的列表。
+**相关迭代：** 如果文档具有相关小版本，则该项目也会出现在列表中。 单击链接可查看文档的相关小版本列表。
 
-用户可以查看有关其受保护文档的信息。 管理员可以查看有关任何用户已受策略保护的文档的信息。 策略集协调员可以查看受策略保护的文档的相关信息，而不受策略集的保护。
+用户可以查看有关其受保护文档的信息。 管理员可以查看任何用户受策略保护的文档的相关信息。 策略集协调员可以查看受策略保护且不受策略集保护的文档的相关信息。
 
 1. 在Document Security页面上，单击“文档”。
-1. 在文档列表中，单击相应的文档。 “文档详细信息”页面将打开，显示有关文档的详细信息。 此页面还提供了撤销文档访问权限、切换策略和查看与此文档相关的事件的选项。
+1. 在文档列表中，单击相应的文档。 “文档详细信息”页面将打开，显示有关文档的详细信息。 此页面还提供了撤销文档访问、切换策略和查看与此文档相关的事件的选项。
 
 ## 查看文档的相关小版本 {#view-related-iterations-for-a-document}
 
-如果启用了跟踪相关小版本，则可以跟踪各个用户已保存的文档版本。 只有某些应用程序（如PTC Pro/ENGINEER Wildfire）支持此功能。
+如果启用了跟踪相关小版本，则可以跟踪各个用户已保存的文档版本。 此功能仅受某些应用程序（如PTC Pro/ENGINEER Wildfire）的支持。
 
 当多个用户协作并保存同一文档的不同版本时，此功能非常有用。 document security可以跟踪各种迭代；因此，您可以轻松查看不同版本的文档信息。
 
 如果启用了此功能，则可以从“文档”页面查看文档的相关小版本。
 
-1. 查看文档的“文档详细信息”页面。 (请参阅 [查看有关文档的信息](controlling-access-policy-protected-documents.md#view-information-about-a-document).)
-1. 单击“查看相关小版本”。 仅当启用该功能时，该选项才可用。 此时将显示相关迭代的列表。 对于每个小版本，可以查看以下信息：
+1. 查看文档的文档详情页面。 (请参阅 [查看有关文档的信息](controlling-access-policy-protected-documents.md#view-information-about-a-document).)
+1. 单击“查看相关小版本”。 仅当启用该功能时，该选项才可用。 此时将显示相关小版本的列表。 对于每个小版本，可以查看以下信息：
 
    * **迭代：** 文件名。 它可能与原始文件名不同，并且末尾附加了一个版本号。
    * **发布者：** 原始文档的发布者。
@@ -88,23 +88,23 @@ ht-degree: 0%
 
 您可以撤销和恢复对受策略保护文档的访问权限：
 
-**用户：** 可以撤销或恢复对文档的访问权限，这些文档由应用策略的用户使用自己的个人策略或启用了撤销功能的共享策略进行保护。 无法撤销文档访问权限或切换策略的用户需要联系管理员。
+**用户：** 可以撤销或恢复对文档的访问权限，这些文档由用户使用自己的个人策略或共享策略进行保护，对于这些共享策略在应用策略的用户启用了撤销功能。 无法撤销文档访问权限或切换策略的用户需要联系管理员。
 
-**管理员：** 可以撤销或恢复对任何受策略保护文档的访问权限，包括受个人或共享策略保护的文档。 如果管理员撤销对受共享策略保护的文档的访问权限，则只有管理员可以恢复该文档的访问权限。
+**管理员：** 可以撤销或恢复任何受策略保护文档的访问权限，包括受个人或共享策略保护的文档。 如果管理员撤销对受共享策略保护的文档的访问权限，则只有管理员可以恢复该文档的访问权限。
 
 **策略集协调器：** 可以撤销或恢复策略集中的策略所保护的文档的访问权限。
 
 当您撤销或恢复文档访问权限时，更改将在以下时间生效：
 
-* 如果文档处于联机状态且已关闭，则下次收件人通过打开受策略保护的文档与Document Security同步时，更改将生效。
+* 如果文档处于在线状态并已关闭，则下次收件人通过打开受策略保护的文档与Document Security同步时，更改将生效。
 * 如果文档在线且处于打开状态，则更改将在收件人关闭文档时生效。
-* 如果文档处于脱机状态（在没有Internet连接的情况下使用，例如在笔记本电脑上），则更改将在收件人下次与文档安全同步时生效。
+* 如果文档处于离线状态（在没有Internet连接的情况下使用，例如在笔记本电脑上），则下次收件人与document security同步时，更改将生效。
 
 **撤销对受策略保护文档的访问权限**
 
 1. 在Document Security页面上，单击“文档”。
 1. 选中相应文档旁边的复选框，然后单击“撤消”。 您可以一次撤消对多个文档的访问权限。
-1. 选择要在撤消文档后向尝试打开文档的用户显示的消息：
+1. 选择在撤消文档后向尝试打开文档的用户显示的消息：
 
    * **常规消息：** 指示作者撤消了文档
    * **文档已终止：** 指示作者已终止文档
@@ -121,13 +121,13 @@ ht-degree: 0%
 
 ## 切换应用于文档的策略 {#switch-a-policy-that-is-applied-to-a-document}
 
-用户、策略集协调员和管理员可以切换应用于受策略保护文档的策略（您一次只能对文档应用一个策略）。 如果用户创建了策略，或者该策略是启用了此功能的共享策略，则用户可以切换应用于自己受策略保护的文档的策略。 否则，管理员或策略集协调器必须切换策略。 管理员可以为任何用户的受策略保护的文档切换策略。 策略集协调员可以从其策略集切换策略。
+用户、策略集协调员和管理员可以切换应用于受策略保护文档的策略（您一次只能对文档应用一个策略）。 如果用户创建了策略，或者该策略是启用了此功能的共享策略，则用户可以切换应用于自己受策略保护的文档的策略。 否则，管理员或策略集协调员必须切换策略。 管理员可以为任何用户的受策略保护文档切换策略。 策略集协调员可以从其策略集中切换策略。
 
-切换策略时，新策略将按以下方式执行：
+切换策略时，新策略将按如下方式强制执行：
 
 * 如果文档在线并已关闭，则下次收件人通过在线打开任何受策略保护的文档与Document Security同步时，更改将生效。
 * 如果文档在线且处于打开状态，则更改将在用户关闭文档时生效。
-* 如果文档处于脱机状态（在使用中时没有活动的Internet或网络连接，例如在笔记本电脑上），则下次用户通过联机打开受策略保护的文档与Document Security同步时，将应用更改。
+* 如果文档处于离线状态（在使用中时没有活动的Internet或网络连接，例如在笔记本电脑上），则下次用户通过在线打开受策略保护的文档与Document Security同步时，将应用更改。
 
 >[!NOTE]
 >
@@ -135,16 +135,16 @@ ht-degree: 0%
 
 1. 在Document Security页面上，单击“文档”。
 1. 在文档列表中，单击相应的文档。
-1. 单击Switch Policy。 此时将显示一个最多包含100个策略的列表。
+1. 单击“Switch Policy（切换策略）”。 此时将显示一个最多包含100个策略的列表。
 1. 如果未显示所需的策略，请从“查找”列表中选择“策略名称”或“策略ID”，键入名称或ID，然后单击“查找”。
 1. 单击列表中的新策略。
 1. 单击“切换策略”，然后单击“确定”返回“文档”页。
 
 ## 搜索文档 {#search-for-a-document}
 
-您可以使用列表中可用的日期范围条件和搜索条件的组合在“文档”页面上搜索文档。 这些标准包括文档名称、策略名称或所有文档。
+您可以使用列表中提供的日期范围标准和搜索条件的组合在“文档”页面上搜索文档。 这些标准包括文档名称、策略名称或所有文档。
 
-一些其他搜索选项仅向管理员提供：
+一些其他搜索选项仅供管理员使用：
 
 **文档ID：** 应用策略时Document Security分配给文档的唯一ID号。
 
@@ -163,20 +163,20 @@ ht-degree: 0%
 
    可以将条件指定为文档ID、文档名称、发布者名称、策略ID、策略名称或所有文档。
 
-   如果指定发布者名称，请单击“通讯簿”图标并指定要在其中搜索用户的域，然后单击“确定”以返回“文档”搜索页。
+   如果指定发布者名称，请单击“通讯簿”图标并指定要搜索用户的域，然后单击“确定”以返回到“文档”搜索页。
 
-1. （可选）在日期列表中，选择一个日期范围选项。 如果选择自定义日期，请在显示的框中以yyyy/mm/dd格式键入日期，或使用日期选取器指定日期范围：
+1. （可选）在日期列表中，选择一个日期范围选项。 如果选择自定义日期，请在显示的框中以yyyy/mm/dd格式键入日期，或者使用日期选取器指定日期范围：
 
-   * 单击日历以打开日期选择器。
+   * 单击日历以打开日期选取器。
    * 使用箭头查找年和月。
-   * 在日历上单击月中某日。
+   * 单击日历上某月的某一天。
    * 单击“确定”以关闭日期选取器。
 
 1. 单击“查找”。
 
 ## 对文档列表排序 {#sort-the-document-list}
 
-您可以按列标题对文档列表进行排序。 列标题旁边的三角形图标指示当前使用哪一列进行排序。 上指三角形表示升序，下指三角形表示降序。
+您可以按列标题对文档列表进行排序。 列标题旁边的三角形图标指示当前使用哪一列进行排序。 向上三角形表示升序，向下三角形表示降序。
 
 1. 在Document Security页面上，单击“文档”。
 1. 单击相应的列标题。
@@ -184,7 +184,7 @@ ht-degree: 0%
 
 ## 将封面页添加到受策略保护的文档 {#add-cover-page-to-policy-protected-documents}
 
-对于大多数非Adobe PDF查看器，如果您打开受Document Security保护的文档，则第一页显示为空白页，或者应用程序在没有打开文档的情况下中止。
+如果存在大多数非Adobe PDF查看者，当您打开Document Security受保护的文档时，第一页显示为空白页，或者应用程序在没有打开文档的情况下中止。
 
 您可以使用页面0（包装文档）支持来允许非Adobe PDF查看者打开受保护的文档并在文档中显示封面页。
 
@@ -196,12 +196,12 @@ ht-degree: 0%
 
 在Workbench中使用以下流程：
 
-**带封面页的Protect文档：** 使用指定的策略保护PDF文档，并将封面页添加到文档中
+**包含封面页的Protect文档：** 使用指定的策略保护PDF文档，并向文档添加封面页
 
 **提取受保护的文档：** 从带有封面页的PDF文档中提取受策略保护的PDF文档
 
 使用以下Document Security API：
 
 **protectDocumentWithCoverPage：** 使用指定的策略保护给定PDF，并返回带有封面页和受保护文档的文档作为附件
-`//Create a ServiceClientFactory instance ServiceClientFactory factory = ServiceClientFactory.createInstance(connectionProps); //Create a RightsManagementClient object RightsManagementClient rightsClient = new RightsManagementClient(factory); //Reference a PDF document to which a policy is applied FileInputStream fileInputStream = new FileInputStream("C:\\testFile.pdf"); Document inPDF = new Document(fileInputStream); //Reference a Cover Page document FileInputStream coverPageInputStream = new FileInputStream("C:\\CoverPage.pdf"); Document inCoverDoc = new Document(coverPageInputStream); //Create a Document Manager object DocumentManager documentManager = rightsClient.getDocumentManager(); //Apply a policy to the PDF document RMSecureDocumentResult rmSecureDocument = documentManager.protectDocumentWithCoverPage( inPDF, "ProtectedPDF.pdf", "PolicySetName", "PolicyName", null, null, inCoverDoc, true); //Retrieve the policy-protected PDF document Document protectPDF = rmSecureDocument.getProtectedDoc(); //Save the policy-protected PDF document File myFile = new File("C:\\PolicyProtectedDoc.pdf"); protectPDF.copyToFile(myFile);` **extractProtectedDocument：** 提取作为带封面页文档中的附件的受保护文档。 可以使用protectDocumentWithCoverPage方法创建具有封面页的文档
+`//Create a ServiceClientFactory instance ServiceClientFactory factory = ServiceClientFactory.createInstance(connectionProps); //Create a RightsManagementClient object RightsManagementClient rightsClient = new RightsManagementClient(factory); //Reference a PDF document to which a policy is applied FileInputStream fileInputStream = new FileInputStream("C:\\testFile.pdf"); Document inPDF = new Document(fileInputStream); //Reference a Cover Page document FileInputStream coverPageInputStream = new FileInputStream("C:\\CoverPage.pdf"); Document inCoverDoc = new Document(coverPageInputStream); //Create a Document Manager object DocumentManager documentManager = rightsClient.getDocumentManager(); //Apply a policy to the PDF document RMSecureDocumentResult rmSecureDocument = documentManager.protectDocumentWithCoverPage( inPDF, "ProtectedPDF.pdf", "PolicySetName", "PolicyName", null, null, inCoverDoc, true); //Retrieve the policy-protected PDF document Document protectPDF = rmSecureDocument.getProtectedDoc(); //Save the policy-protected PDF document File myFile = new File("C:\\PolicyProtectedDoc.pdf"); protectPDF.copyToFile(myFile);` **extractProtectedDocument：** 提取受保护的文档，该文档是带有封面的文档中的附件。 可以使用protectDocumentWithCoverPage方法创建具有封面页的文档
 `//Create a ServiceClientFactory instance ServiceClientFactory factory = ServiceClientFactory.createInstance(connectionProps); //Create a RightsManagementClient object RightsManagementClient rightsClient = new RightsManagementClient(factory); //Reference a protected PDF document with a Cover Page FileInputStream fileInputStream = new FileInputStream("C:\\policyProtectedDocWithCoverPage.pdf"); Document inPDF = new Document(fileInputStream); //Create a Document Manager object DocumentManager documentManager = rightsClient.getDocumentManager(); //Apply a policy to the PDF document Document extractedDoc = documentManager.extractProtectedDocument(inPDF); //Save the policy-protected PDF document File myFile = new File("C:\\PolicyProtectedDoc.pdf"); extractedDoc.copyToFile(myFile);`

@@ -1,20 +1,18 @@
 ---
 title: 如何创建或自定义自适应表单主题？
-seo-title: How to create a theme for Adaptive Forms Core Components?
 description: 了解如何使用BEM规范创建或自定义自适应Forms核心组件的主题
-seo-description: Learn to create or customize themes for Adaptive Forms Core Components using BEM specifications
 keywords: 创建自适应表单核心组件主题，创建新主题，自定义主题，上传新主题，在表单中使用主题，删除主题，在AEM 6.5表单中创建主题
 contentOwner: Khushwant Singh
 topic-tags: Adaptive Forms
 docset: aem65
 role: Admin, Developer
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+exl-id: 9f9b35a3-0479-4179-9fad-994a482c96b6
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '1973'
+source-wordcount: '1971'
 ht-degree: 7%
 
 ---
-
 
 # 创建或自定义自适应表单主题 {#introduction-to-theme}
 
@@ -62,7 +60,7 @@ AEM Forms 6.5为基于核心组件的自适应Forms提供了以下列出的主�
 
 ## 自定义主题 {#customize-a-theme-core-components-based-adaptive-forms}
 
-自定义主题是指修改和个性化主题外观的过程。 自定义主题时，您可以更改其设计元素、布局、颜色、排版规则，有时还会更改基础代码。 这样，您就可以为网站或应用程序创建独一无二的定制外观，同时保持主题提供的基本结构和功能。
+自定义主题是指修改和个性化主题外观的过程。 自定义主题时，您可以更改其设计元素、布局、颜色、排版规则，有时还会更改底层代码。 这样，您就可以为网站或应用程序创建独一无二的定制外观，同时保持主题提供的基本结构和功能。
 
 >[!NOTE]
 >
@@ -189,7 +187,7 @@ AEM Forms 6.5为基于核心组件的自适应Forms提供了以下列出的主�
 要将主题部署到AEM实例，需要将其转换为客户端库。 按照以下步骤将主题转换为客户端库：
 
 1. 打开命令提示符或终端窗口。
-1. 导航至 `<your-theme-sources>` 文件夹。 例如，`C:\aem-forms-theme-canvas`
+1. 导航到 `<your-theme-sources>` 文件夹。例如，`C:\aem-forms-theme-canvas`
 1. 运行以下命令：
 
    ```
@@ -339,4 +337,3 @@ The selected theme is applied to the Adaptive Form.
 * [为基于核心组件的自适应Forms创建模板](template-editor.md)
 * [创建自适应表单或将其添加到AEM Sites页面或体验片段](create-or-add-an-adaptive-form-to-aem-sites-page.md)
 * [主题模板和表单数据模型示例](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/sample-themes-templates-form-data-models-core-components.html)
-

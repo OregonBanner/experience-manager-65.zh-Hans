@@ -2,7 +2,7 @@
 title: 在 AEM 中使用 GraphiQL IDE
 description: 了解如何在 Adobe Experience Manager 中使用 GraphiQL IDE。
 exl-id: d4b01485-658b-4245-b2e6-04be8abc8ecf
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
 source-wordcount: '786'
 ht-degree: 93%
@@ -36,7 +36,7 @@ ht-degree: 93%
 
 您可以通过以下任一方式访问查询编辑器：
 
-* **工具** -> **常规** -> **GraphQL 查询编辑器**
+* **工具** > **常规** > **GraphQL查询编辑器**
 * 直接；例如，`http://localhost:4502/aem/graphiql.html`
 
 ![GraphiQL 接口](assets/cfm-graphiql-interface.png "GraphiQL 接口")
@@ -104,7 +104,7 @@ GraphiQL IDE 还让您管理[查询变量](/help/sites-developing/headless/graph
 >
 >Custom rewrite rules on the Dispatcher might override defaults from AEM publish. 
 >
->In the case that you are sending TTL-based cache-control headers from the dispatcher, based on a location match pattern, then, if necessary, you might want to exclude `/graphql/execute.json/*` from the matches.
+>In the case that you are sending TTL-based cache-control headers from the dispatcher, based on a location match pattern then, if necessary, you might want to exclude `/graphql/execute.json/*` from the matches.
 
 Using GraphQL you can configure the HTTP Cache Headers  to control these parameters for your individual persisted query.
 
@@ -125,7 +125,7 @@ Using GraphQL you can configure the HTTP Cache Headers  to control these paramet
    * **surrogate-control** - **stale-while-revalidate**
      Caches may continue to serve a cached response after it becomes stale, for up to the specified number of seconds.
    * **surrogate-control** - **stale-if-error**
-     Caches may continue to serve a cached response in case of or origin error, for up to the specified number of seconds.
+     Caches may continue to serve a cached response if there is an origin error, for up to the specified number of seconds.
 
 1. Select **Save** to persist the changes.
 -->

@@ -4,9 +4,9 @@ description: 了解如何使用Assets控制台管理您的AEM内容片段，即H
 feature: Content Fragments
 role: User
 exl-id: 25c91a85-06ff-4666-a809-46778a689e25
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '1714'
+source-wordcount: '1715'
 ht-degree: 78%
 
 ---
@@ -272,7 +272,7 @@ This updates any page references and ensures that the Dispatcher is flushed as r
 
 ## 将内容与片段关联 {#associating-content-with-your-fragment}
 
-您还可以[关联内容](/help/assets/content-fragments/content-fragments-assoc-content.md)与片段。 这提供了一个连接，以便在将资源（即图像）添加到内容页面时，可以（可选）与片段一起使用资源（即图像）。
+您还可以[关联内容](/help/assets/content-fragments/content-fragments-assoc-content.md)与片段。这会提供一个连接，以便在将资源（即图像）添加到内容页面时，可以（可选）与片段一起使用资源（即图像）。
 
 ## 查看和编辑片段的元数据（属性） {#viewing-and-editing-the-metadata-properties-of-your-fragment}
 

@@ -7,9 +7,9 @@ topic-tags: integration
 content-type: reference
 docset: aem65
 exl-id: b5f3d3a6-39c0-4aa5-8562-3cc6fa2b9e46
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '6092'
+source-wordcount: '6087'
 ht-degree: 0%
 
 ---
@@ -405,7 +405,7 @@ portlet的某些功能受权限保护。 当前用户需要具有此权限才能
 
 ### 自定义AEM portlet应用程序 {#customizing-the-aem-portlet-application}
 
-提供的AEM portlet应用程序在Web应用程序中启动OSGi容器，与AEM一样。 此架构允许您利用OSGi的所有优势：
+提供的AEM portlet应用程序在Web应用程序中启动OSGi容器，与AEM一样。 此架构允许您使用OSGi的所有优势：
 
 * 易于更新和扩展
 * 提供Portlet的热更新，无需门户服务器进行任何交互
@@ -737,7 +737,7 @@ AEM快速入门JAR文件包含Portlet组件文件。 要获取文件(cq-portlet-
 
 >[!NOTE]
 >
->这些过程使用Websphere门户作为示例，尽管它们尽可能通用；请注意，对于其他Web门户，这些过程有所不同。 尽管这些步骤对于所有Web门户基本上相同，但您需要为特定Web门户重新调整这些步骤的用途。
+>这些过程使用Websphere门户作为示例，尽管它们尽可能通用；对于其他Web门户，过程有所不同。 尽管这些步骤对于所有Web门户基本上相同，但您需要为特定Web门户重新调整这些步骤的用途。
 
 #### 安装portlet {#installing-the-portlet}
 

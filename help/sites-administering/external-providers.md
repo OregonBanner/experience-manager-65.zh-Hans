@@ -7,9 +7,9 @@ topic-tags: integration
 content-type: reference
 docset: aem65
 exl-id: 9bf818f9-6e33-4557-b2e4-b0d4900f2a05
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '446'
+source-wordcount: '445'
 ht-degree: 2%
 
 ---
@@ -81,7 +81,7 @@ _gaq.push(['_trackPageview']);
 
 ## 在页面上使用新服务 {#using-your-new-service-on-pages}
 
-创建服务配置后，现在必须配置所需的页面才能使用它：
+创建服务配置后，必须配置所需的页面才能使用它：
 
 1. 导航到页面。
 1. 打开 **页面属性** 从sidekick，然后 **Cloud Service** 选项卡。

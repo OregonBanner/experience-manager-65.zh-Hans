@@ -12,7 +12,7 @@ topic-tags: operations
 discoiquuid: 669ede46-ea55-444b-a23f-23a86e5aff8e
 role: Developer
 exl-id: e6887e45-a472-41d4-9620-c56fd5b72b4c
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
 source-wordcount: '4143'
 ht-degree: 0%
@@ -69,11 +69,11 @@ Forms服务将表单渲染为HTML，以响应来自Web浏览器的HTTP请求。 
 
 **.fsc-ds-ssb**：此样式表适用于符号字段为空的情况。
 
-**.fsc-ds-ssv**：此样式表适用于有效符号字段的情况。
+**.fsc-ds-ssv**：此样式表适用于存在有效签名字段的情况。
 
-**.fsc-ds-ssc**：此样式表适用于有效符号字段的情况，但数据已更改。
+**.fsc-ds-ssc**：此样式表适用于存在有效符号字段但数据已更改的情况。
 
-**.fsc-ds-ssi**：此样式表适用于签名字段无效的情况。
+**.fsc-ds-ssi**：此样式表适用于符号字段无效的情况。
 
 **.fsc-ds-popup-bg**：未使用此样式表属性。
 

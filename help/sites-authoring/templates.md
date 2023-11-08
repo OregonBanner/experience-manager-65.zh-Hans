@@ -7,10 +7,10 @@ content-type: reference
 topic-tags: site-features
 docset: aem65
 exl-id: 363b8fab-6ce7-4338-8478-3f25f2a1f117
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '4840'
-ht-degree: 80%
+source-wordcount: '4834'
+ht-degree: 81%
 
 ---
 
@@ -53,7 +53,7 @@ ht-degree: 80%
 
 * 创建模板需要协作。 因此，为每项任务指明了对应的[角色](#roles)。
 
-* 根据实例的配置方式，请注意AEM现在提供的 [两种基本类型的模板](/help/sites-authoring/templates.md#editable-and-static-templates). 这不会影响您实际的 [使用模板创建页面](#using-a-template-to-create-a-page)，但它确实会影响您可以创建的模板类型以及页面与其模板的关系。
+* 根据实例的配置方式，AEM现在提供 [两种基本类型的模板](/help/sites-authoring/templates.md#editable-and-static-templates). 这不会影响您实际的 [使用模板创建页面](#using-a-template-to-create-a-page)，但它确实会影响您可以创建的模板类型以及页面与其模板的关系。
 
 ### 角色 {#roles}
 
@@ -314,7 +314,7 @@ AEM现在提供两种基本类型的模板：
 
   >[!NOTE]
   >
-  >在 **初始内容** 在模式和生成页面上，可以删除任何具有可访问父项的已解锁组件（即，布局容器中的组件）。
+  >在&#x200B;**初始内容**&#x200B;模式下以及在生成页面上，可以删除任何具有可访问父项的已解锁组件（即，布局容器内的组件）。
 
 * [布局](#editingatemplatelayout)
 

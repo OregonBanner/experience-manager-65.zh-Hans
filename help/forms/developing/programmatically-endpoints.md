@@ -1,19 +1,15 @@
 ---
 title: 以编程方式管理端点
-seo-title: Programmatically Managing Endpoints
 description: 使用“端点注册”服务可以添加EJB端点、添加SOAP端点、添加“观察文件夹”端点、添加“电子邮件”端点、添加“远程处理”端点、添加“任务管理器”端点、修改端点、删除端点以及检索端点连接器信息。
-seo-description: Use the Endpoint Registry service to add EJB endpoints, add SOAP endpoint, add Watched Folder endpoints, add Email endpoints, add  Remoting endpoints, add Task Manager endpoints, modify endpoints, remove endpoints, and retrieve endpoint connector information.
-uuid: 5dc50946-3323-4c5d-a43b-31c1c980bd04
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
-discoiquuid: 076889a7-9c9f-4b6f-a45b-67a9b3923c36
 role: Developer
 exl-id: b94dcca2-136b-4b7d-b5ce-544804575876
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '10790'
+source-wordcount: '10791'
 ht-degree: 1%
 
 ---
@@ -339,7 +335,7 @@ Endpoint Registry服务提供了以编程方式管理端点的功能。 例如�
 * **resultFolderName**：存储所保存结果的文件夹。 此位置可以是绝对或相对目录路径。 如果结果未出现在此文件夹中，请检查失败文件夹。 只读文件不会得到处理，将保存在故障文件夹中。 默认值为 `result/%Y/%M/%D/`。这是watched文件夹中的结果文件夹。
 * **preserveFolderName**：成功扫描和提取后，文件存储的位置。 此位置可以是绝对、相对或空目录路径。 默认值为 `preserve/%Y/%M/%D/`。
 * **failureFolderName**：保存失败文件的文件夹。 此位置始终相对于观察文件夹。 只读文件不会得到处理，将保存在故障文件夹中。 默认值为 `failure/%Y/%M/%D/`。
-* **preserveOnFailure**：如果无法对服务执行操作，则保留输入文件。 默认值为true。
+* **preserveOnFailure**：如果对服务运行操作失败，则保留输入文件。 默认值为true。
 * **overwriteDuplicateFilename**：设置为true时，将覆盖结果文件夹和保留文件夹中的文件。 当设置为false时，使用具有数字索引后缀的文件和文件夹作为名称。 默认值为false。
 
 **定义输入参数值**

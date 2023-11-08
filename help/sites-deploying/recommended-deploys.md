@@ -7,9 +7,9 @@ content-type: reference
 topic-tags: deploying
 docset: aem65
 exl-id: baec7fc8-d48c-4bc6-b12b-4bf4eff695ea
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '1780'
+source-wordcount: '1779'
 ht-degree: 0%
 
 ---
@@ -157,7 +157,7 @@ MongoDB的最低部署通常涉及以下拓扑：
 
 此外，强烈建议在共享文件系统或Amazon S3上配置数据存储，以便资源或二进制文件不存储在MongoDB中。 这将确保部署中的最佳性能。
 
-使用由两个或多个创作实例组成的群集部署MongoDB复制副本集的另一个好处是，在创作实例、MongoDB复制副本或完全数据中心故障的情况下，具有自动恢复方案，停机时间最短。 尽管如此，MongoMK与TarMK的选择不应完全由恢复需求驱动，因为TarMK还可以提供具有受控故障转移机制的最小停机时间解决方案。
+使用由两个或多个创作实例组成的群集部署MongoDB副本集的另一个好处是，如果存在创作实例、MongoDB副本或完全的数据中心故障，则可以使用最小的停机时间实现自动恢复方案。 尽管如此，MongoMK与TarMK的选择不应完全由恢复需求驱动，因为TarMK还可以提供具有受控故障转移机制的最小停机时间解决方案。
 
 如果在部署的前18个月中不符合上述标准，则建议首先使用TarMK部署AEM，稍后当上述标准适用时，重新评估您的配置，最后确定是保留在TarMK上还是迁移到MongoMK。
 

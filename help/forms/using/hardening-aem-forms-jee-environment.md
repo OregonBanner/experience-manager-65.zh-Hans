@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.4
 discoiquuid: 6b380e92-f90d-4875-b7a2-f3958daf2364
 role: Admin
 exl-id: 6fb260f9-d0f8-431e-8d4e-535b451e4124
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '7661'
+source-wordcount: '7662'
 ht-degree: 1%
 
 ---
@@ -153,7 +153,7 @@ JEE上的AEM Forms具有高度可自定义性，可以在许多不同的环境�
 
 在JEE上成功安装AEM Forms后，请务必从安全角度定期维护环境。
 
-以下部分详细描述了为保护已部署的表单服务器而推荐的不同任务。
+以下部分详细描述了为保护已部署的Forms Server而建议执行的各项任务。
 
 ### AEM Forms安全 {#aem-forms-security}
 
@@ -169,7 +169,7 @@ JEE上的AEM Forms具有高度可自定义性，可以在许多不同的环境�
 
 要使用特定的非管理帐户运行部署AEM Forms on JEE的应用程序服务器，请按照以下说明操作：
 
-1. 在Microsoft Management Console (MMC)中，为Forms Server服务创建一个本地用户以以下身份登录：
+1. 在Microsoft Management Console (MMC)中，为Forms Server服务创建一个本地用户，以如下方式登录：
 
    * 选择 **用户无法更改密码**.
    * 在 **成员** 选项卡，确保 **用户** 组已列出。
@@ -182,7 +182,7 @@ JEE上的AEM Forms具有高度可自定义性，可以在许多不同的环境�
 1. 双击JEE上适用于AEM Forms的JBoss并停止该服务。
 1. 在 **登录** 选项卡，选择 **此帐户**，浏览您创建的用户帐户，然后输入该帐户的密码。
 1. 在MMC中，打开 **本地安全设置** 并选择 **本地策略** > **用户权限分配**.
-1. 将以下权限分配给运行表单服务器的用户帐户：
+1. 将以下权限分配给运行Forms服务器的用户帐户：
 
    * 拒绝通过终端服务登录
    * 拒绝本地登录
@@ -273,7 +273,7 @@ Configuration Manager使用部署在您的应用程序服务器上的servlet对J
 
 **禁用所有非必要的匿名访问**
 
-某些表单服务器服务具有可能由匿名调用者调用的操作。 如果不需要匿名访问这些服务，请按照中的步骤将其禁用 [禁用对服务的非基本匿名访问](https://helpx.adobe.com/aem-forms/6-1/hardening-security/configuring-secure-administration-settings-aem.html#disabling_non_essential_anonymous_access_to_services).
+某些Forms Server服务具有可能被匿名调用者调用的操作。 如果不需要匿名访问这些服务，请按照中的步骤将其禁用 [禁用对服务的非基本匿名访问](https://helpx.adobe.com/aem-forms/6-1/hardening-security/configuring-secure-administration-settings-aem.html#disabling_non_essential_anonymous_access_to_services).
 
 #### 更改默认管理员密码 {#change-the-default-administrator-password}
 
@@ -401,7 +401,7 @@ oracle时，您使用的数据库帐户只需要CONNECT、RESOURCE和CREATE VIEW
 
 ### 保护对数据库中敏感内容的访问 {#protecting-access-to-sensitive-content-in-the-database}
 
-AEM Forms数据库架构包含有关系统配置和业务流程的敏感信息，应隐藏在防火墙之后。 应将数据库视为与表单服务器位于同一信任边界内。 为了防止信息泄露和业务数据失窃，数据库必须由数据库管理员(DBA)配置，以仅允许授权管理员访问。
+AEM Forms数据库架构包含有关系统配置和业务流程的敏感信息，应隐藏在防火墙之后。 数据库应被视为与Forms服务器处于同一信任边界内。 为了防止信息泄露和业务数据失窃，数据库必须由数据库管理员(DBA)配置，以仅允许授权管理员访问。
 
 作为附加的预防措施，您应该考虑使用特定于数据库供应商的工具来加密包含以下数据的表中的列：
 
@@ -537,13 +537,13 @@ JEE Web应用程序中每个AEM Forms的以下应用程序根URL。 您应仅配
   </tr> 
   <tr> 
    <td><p>/soap/*</p> </td> 
-   <td><p>表单服务器Web服务的信息页面</p> </td> 
+   <td><p>Forms Server Web服务的信息页面</p> </td> 
    <td><p>否</p> </td> 
    <td><p>否</p> </td> 
   </tr> 
   <tr> 
    <td><p>/soap/services/*</p> </td> 
-   <td><p>所有表单服务器服务的Web服务URL</p> </td> 
+   <td><p>所有Forms Server服务的Web服务URL</p> </td> 
    <td><p>否</p> </td> 
    <td><p>否</p> </td> 
   </tr> 
@@ -674,7 +674,7 @@ JEE Web应用程序中每个AEM Forms的以下应用程序根URL。 您应仅配
 JEE上的AEM Forms使用反向链接筛选条件功能来阻止CSRF攻击。 此部分中使用以下术语来描述反向链接筛选机制：
 
 * **允许的反向链接：** 反向链接是向服务器发送请求的源页面的地址。 对于JSP页或表单，反向链接通常是浏览历史记录中的上一页。 图像的反向链接通常是显示图像的页面。 您可以通过将允许访问服务器资源的反向链接添加到允许的反向链接列表，来识别这些反向链接。
-* **允许的反向链接例外：** 您可能希望限制允许的反向链接列表中特定反向链接的访问范围。 要强制执行此限制，您可以将该反向链接的单个路径添加到“允许的反向链接例外”列表。 阻止从允许的反向链接例外列表中的路径发起的请求调用表单服务器上的任何资源。 您可以为特定应用程序定义“允许的反向链接例外”，也可以使用适用于所有应用程序的例外全局列表。
+* **允许的反向链接例外：** 您可能希望限制允许的反向链接列表中特定反向链接的访问范围。 要强制执行此限制，您可以将该反向链接的单个路径添加到“允许的反向链接例外”列表。 阻止从允许的反向链接例外列表中的路径发起的请求调用Forms服务器上的任何资源。 您可以为特定应用程序定义“允许的反向链接例外”，也可以使用适用于所有应用程序的例外全局列表。
 * **允许的URI：** 这是无需检查反向链接标头即可提供的资源列表。 可以将资源（例如，不会导致服务器上的状态更改的帮助页面）添加到此列表中。 反向链接筛选器不会阻止允许URI列表中的资源，无论反向链接是谁。
 * **Null反向链接：** 与父网页无关或不源自父网页的服务器请求被视为来自Null反向链接的请求。 例如，当您打开新的浏览器窗口，键入地址，然后按Enter键时，发送到服务器的反向链接为空。 向Web服务器发出HTTP请求的桌面应用程序（.NET或SWING）也会向服务器发送Null反向链接。
 
@@ -682,12 +682,12 @@ JEE上的AEM Forms使用反向链接筛选条件功能来阻止CSRF攻击。 此
 
 “反向链接筛选”过程可描述如下：
 
-1. 表单服务器会检查用于调用的HTTP方法：
+1. Forms服务器检查用于调用的HTTP方法：
 
-   1. 如果POST，表单服务器将执行反向链接标头检查。
-   1. 如果是GET，则表单服务器会绕过反向链接检查，除非 *CSRF_CHECK_GETS* 设置为true，在这种情况下，它会执行反向链接标头检查。 *CSRF_CHECK_GETS* 指定于 *web.xml* 您的应用程序的文件。
+   1. 如果POST，Forms服务器将执行反向链接标头检查。
+   1. 如果是GET，则Forms服务器会绕过反向链接检查，除非 *CSRF_CHECK_GETS* 设置为true，在这种情况下，它会执行反向链接标头检查。 *CSRF_CHECK_GETS* 指定于 *web.xml* 您的应用程序的文件。
 
-1. 表单服务器检查请求的URI是否存在于允许列表中：
+1. Forms服务器检查请求的URI是否存在允许列表：
 
    1. 如果URI被列入允许列表，则服务器接受请求。
    1. 如果请求的URI未列入允许列表，则服务器检索请求的反向链接。
@@ -706,7 +706,7 @@ JEE上的AEM Forms使用反向链接筛选条件功能来阻止CSRF攻击。 此
 
 JEE上的AEM Forms提供了一个反向链接筛选条件，用于指定允许访问您的服务器资源的反向链接。 默认情况下，反向链接筛选条件不会筛选使用安全HTTP方法(例如GET)的请求，除非 *CSRF_CHECK_GETS* 设置为true。 如果“允许的反向链接”条目的端口号设置为0，则JEE上的AEM Forms将允许从该主机发起所有包含反向链接的请求，而不管端口号如何。 如果未指定端口号，则仅允许来自默认端口80 (HTTP)或端口443 (HTTPS)的请求。 如果删除了允许的反向链接列表中的所有条目，则会禁用反向链接筛选。
 
-首次安装Document Services时，“允许的反向链接”列表会更新为安装Document Services的服务器上的地址。 服务器的条目包括服务器名称、 IPv4地址、 IPv6地址（如果已启用IPv6） 、环回地址和localhost条目。 添加到允许的反向链接列表中的名称由主机操作系统返回。 例如，IP地址为10.40.54.187的服务器将包括以下条目： `https://server-name:0, https://10.40.54.187:0, https://127.0.0.1:0, http://localhost:0`. 列入允许列表对于主机操作系统返回的任何未限定的名称（没有IPv4地址、IPv6地址或限定的域名的名称），将不更新。 修改允许的反向链接列表以适合您的业务环境。 不要在生产环境中使用默认允许的反向链接列表部署表单服务器。 修改任何允许的反向链接、反向链接异常或URI后，请确保重新启动服务器以使更改生效。
+首次安装Document Services时，“允许的反向链接”列表会更新为安装Document Services的服务器上的地址。 服务器的条目包括服务器名称、 IPv4地址、 IPv6地址（如果已启用IPv6） 、环回地址和localhost条目。 添加到允许的反向链接列表中的名称由主机操作系统返回。 例如，IP地址为10.40.54.187的服务器将包括以下条目： `https://server-name:0, https://10.40.54.187:0, https://127.0.0.1:0, http://localhost:0`. 列入允许列表对于主机操作系统返回的任何未限定的名称（没有IPv4地址、IPv6地址或限定的域名的名称），将不更新。 修改允许的反向链接列表以适合您的业务环境。 不要在生产环境中使用默认的“允许的反向链接”列表部署Forms Server。 修改任何允许的反向链接、反向链接异常或URI后，请确保重新启动服务器以使更改生效。
 
 **管理允许的引用列表**
 
@@ -739,7 +739,7 @@ addAllowedRefererExceptions(UMConstants.LC_GLOBAL_ALLOWED_REFERER_EXCEPTION, Arr
 
 **禁用反向链接筛选条件**
 
-如果反向链接筛选条件完全阻止对表单服务器的访问，并且您无法编辑允许的反向链接列表，则可以更新服务器启动脚本并禁用反向链接筛选。
+如果反向链接筛选条件完全阻止对Forms服务器的访问，并且您无法编辑允许的反向链接列表，则可以更新服务器启动脚本并禁用反向链接筛选。
 
 包括 `-Dlc.um.csrffilter.disabled=true` 启动脚本中的JAVA参数并重新启动服务器。 请确保在适当重新配置允许的反向链接列表后删除JAVA参数。
 
@@ -749,7 +749,7 @@ addAllowedRefererExceptions(UMConstants.LC_GLOBAL_ALLOWED_REFERER_EXCEPTION, Arr
 
 **CSRF_CHECK_GETS** 控制对GET请求的反向链接检查。 如果未定义此参数，则默认值设置为false。 仅当您要筛选GET请求时，才应包含此参数。
 
-**CSRF_ALLOWED_REFERER_EXCEPTIONS** 是允许的反向链接例外列表的ID。 反向链接筛选条件可阻止来自列表ID所标识列表中反向链接的请求，从而防止这些请求在表单服务器上调用任何资源。
+**CSRF_ALLOWED_REFERER_EXCEPTIONS** 是允许的反向链接例外列表的ID。 反向链接筛选条件可阻止来自列表ID所标识列表中反向链接的请求，从而防止这些请求在Forms服务器上调用任何资源。
 
 **CSRF_ALLOWED_URIS_LIST_NAME** 是允许的URI列表的ID。 无论请求中的反向链接标头的值如何，反向链接筛选条件都不会阻止针对列表ID所标识的列表中任何资源的请求。
 
@@ -835,7 +835,7 @@ addAllowedRefererExceptions(UMConstants.LC_GLOBAL_ALLOWED_REFERER_EXCEPTION, Arr
     <ul> 
      <li><p>Web服务客户端应用程序，如.NET应用程序</p> </li> 
      <li><p>Adobe Reader®对JEE服务器Web服务上的AEM Forms使用SOAP</p> </li> 
-     <li><p>AdobeFlash®应用程序使用SOAP进行表单服务器Web服务</p> </li> 
+     <li><p>AdobeFlash®应用程序使用SOAP进行Forms Server Web服务</p> </li> 
      <li><p>在SOAP模式下使用时，对JEE SDK调用使用AEM Forms</p> </li> 
      <li><p>Workbench设计环境</p> </li> 
     </ul> </td> 
@@ -995,7 +995,7 @@ AEM Forms on JEE统包安装默认使用Local System帐户设置服务帐户。 
 
 #### 使用非管理帐户运行应用程序服务器 {#run-the-application-server-using-a-non-administrative-account}
 
-1. 在Microsoft Management Console (MMC)中，为Forms Server服务创建一个本地用户以以下身份登录：
+1. 在Microsoft Management Console (MMC)中，为Forms Server服务创建一个本地用户，以如下方式登录：
 
    * 选择 **用户无法更改密码**.
    * 在 **成员** 选项卡中，确保列出了Users组。
@@ -1003,7 +1003,7 @@ AEM Forms on JEE统包安装默认使用Local System帐户设置服务帐户。 
 1. 选择 **设置** > **管理工具** > **服务**.
 1. 双击应用程序服务器服务并停止该服务。
 1. 在 **登录** 选项卡，选择 **此帐户**，浏览您创建的用户帐户，然后输入该帐户的密码。
-1. 在“本地安全设置”窗口的“用户权限分配”下，将以下权限授予运行表单服务器的用户帐户：
+1. 在“本地安全设置”窗口的“用户权限分配”下，将以下权限授予运行Forms服务器的用户帐户：
 
    * 拒绝通过终端服务登录
    * 拒绝在locallyxx上登录
@@ -1040,7 +1040,7 @@ JEE上的AEM Forms通过以下方式使用文件系统：
 * 将文件存储在全局存档存储区，这些文件用于支持已安装的解决方案组件
 * 观察文件夹存储从文件系统文件夹位置用作服务输入的已删除文件
 
-当使用观察文件夹作为通过Forms Server服务发送和接收文档的方法时，请采取文件系统安全方面的额外预防措施。 当用户将内容放入watched文件夹时，该内容会通过watched文件夹公开。 在这种情况下，服务不会验证实际的最终用户。 相反，它依赖于在文件夹级别设置的ACL和共享级别安全性来确定谁能够有效地调用服务。
+当通过Forms Server服务使用观察文件夹来发送和接收文档时，请采取文件系统安全方面的额外预防措施。 当用户将内容放入watched文件夹时，该内容会通过watched文件夹公开。 在这种情况下，服务不会验证实际的最终用户。 相反，它依赖于在文件夹级别设置的ACL和共享级别安全性来确定谁能够有效地调用服务。
 
 ## 特定于JBoss的安全建议 {#jboss-specific-security-recommendations}
 

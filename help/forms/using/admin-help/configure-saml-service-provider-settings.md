@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/configuring_user_management
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 1169d0d1-cbfb-486b-acca-9b9de3d410dc
 exl-id: dd302cfb-eae1-4189-aa7b-9f2533ebd164
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: c4cd9a61a226ace2a72d60b5b7b7432de12cb873
 workflow-type: tm+mt
 source-wordcount: '598'
 ht-degree: 0%
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 1. 在管理控制台中，单击设置>用户管理>配置> SAML服务提供程序设置。
 1. 在“服务提供者实体ID”框中，键入要用作AEM Forms服务提供者实现的标识符的唯一ID。 您还可以在配置IDP时指定此唯一ID(例如， `um.lc.com`.) 您还可以使用用于访问AEM表单的URL(例如， `https://AEMformsserver`)。
-1. 在服务提供者基本URL框中，键入表单服务器的基本URL(例如， `https://AEMformsserver:8080`)。
+1. 在服务提供商基本URL框中，键入Forms服务器的基本URL(例如， `https://AEMformsserver:8080`)。
 1. （可选）要使AEM Forms能够向IDP发送已签名的身份验证请求，请执行以下任务：
 
    * 使用信任管理器导入PKCS #12格式的凭据，并选择文档签名凭据作为信任存储类型。 (请参阅 [管理本地凭据](/help/forms/using/admin-help/local-credentials.md#managing-local-credentials).)

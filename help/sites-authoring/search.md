@@ -9,10 +9,10 @@ content-type: reference
 discoiquuid: 4ec15013-f7ab-44d6-8053-ed28b14f95e2
 docset: aem65
 exl-id: dd65b308-c449-4f64-9f46-0797b922910f
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '507'
-ht-degree: 72%
+source-wordcount: '508'
+ht-degree: 69%
 
 ---
 
@@ -48,7 +48,7 @@ AEM 的创作环境提供了多种内容搜索机制，具体取决于资源类�
 
    ![s-01](assets/s-01.png)
 
-   默认情况下，搜索结果将被限制在您的当前位置（例如控制台和相关的资源类型）：
+   默认情况下，搜索结果将被限制在您的当前位置（即控制台和相关资源类型）：
 
    ![screen_shot_2018-03-23at101445](assets/screen_shot_2018-03-23at101445.png)
 

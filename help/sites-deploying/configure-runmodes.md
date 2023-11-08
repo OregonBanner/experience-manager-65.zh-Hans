@@ -7,9 +7,9 @@ topic-tags: configuring
 content-type: reference
 feature: Configuring
 exl-id: 6d03cb1d-500e-4a23-80e5-347a43dff30e
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '744'
+source-wordcount: '745'
 ht-degree: 1%
 
 ---
@@ -71,9 +71,9 @@ ht-degree: 1%
 
 这些模式允许您控制示例内容的使用。 示例内容是在构建快速入门之前定义的，可以包含包、配置等：
 
-* 此 `samplecontent` 运行模式将安装此内容（默认模式）。
+* 此 `samplecontent` 运行模式安装此内容（默认模式）。
 
-* 此 `nosamplecontent` 模式将不会安装示例内容。
+* 此 `nosamplecontent` 模式不安装示例内容。
 
 nosamplecontent运行模式专为生产安装而设计。
 

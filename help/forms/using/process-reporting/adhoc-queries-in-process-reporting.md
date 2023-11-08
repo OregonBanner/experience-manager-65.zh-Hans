@@ -1,16 +1,12 @@
 ---
 title: 进程报告中的临时查询
-seo-title: Ad-hoc Queries in Process Reporting
 description: 创建自定义查询以在Process Reporting中搜索AEM Forms on JEE流程和任务详细信息
-seo-description: Create custom queries to search for AEM Forms on JEE  process and task details in Process Reporting
-uuid: db0c5c28-b213-4582-a6ed-df127e570a4e
 content-type: reference
 topic-tags: process-reporting
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: b0a544e2-2ce4-48e2-a721-82f481d36004
 docset: aem65
 exl-id: a096eea0-b2fb-4d86-b729-ca47611135b2
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
 source-wordcount: '1672'
 ht-degree: 0%

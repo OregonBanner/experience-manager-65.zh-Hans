@@ -12,7 +12,7 @@ discoiquuid: db22f775-fab1-4a78-b334-a9c4fa613e43
 docset: aem65
 feature: Mobile Forms
 exl-id: 62ff6306-9989-43b0-abaf-b0a811f0a6a4
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: c4cd9a61a226ace2a72d60b5b7b7432de12cb873
 workflow-type: tm+mt
 source-wordcount: '1416'
 ht-degree: 0%
@@ -46,7 +46,7 @@ HTML5表单可包含多个外部资源，如图像、JavaScript和CSS文件。 �
 
 * 使用 [压缩图像](/help/assets/best-practices-for-optimizing-the-quality-of-your-images.md). 它减少了呈现表单所需的网络活动和内存量。 因此，成形加载时间显着减少。
 * 使用AEM Configuration Manager(Day CQHTML库管理器)中的“缩小”选项压缩JavaScript和CSS文件。 有关详细信息，请参阅 [osgi配置设置](/help/sites-deploying/osgi-configuration-settings.md).
-* 启用Web压缩。 它减小了源自表单的请求和响应的大小。 有关详细信息，请参阅 [AEM表单服务器的性能优化](https://helpx.adobe.com/aem-forms/6-3/performance-tuning-aem-forms.html).
+* 启用Web压缩。 它减小了源自表单的请求和响应的大小。 有关详细信息，请参阅 [AEM Forms服务器的性能优化](https://helpx.adobe.com/aem-forms/6-3/performance-tuning-aem-forms.html).
 
 ## 保持兴趣状态，仅显示必填字段  {#keep-the-interest-alive-show-only-required-fields}
 
