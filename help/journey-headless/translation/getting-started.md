@@ -180,7 +180,7 @@ AEM 的内容（无论是 Headless 还是传统网页）都由其结构推动。
 * 了解 AEM 如何存储 Headless 内容。
 * 熟悉 AEM 的翻译工具。
 
-在此知识的基础上继续您的 AEM Headless 翻译历程，接下来查看文档[配置翻译集成](configure-connector.md)，了解如何将 AEM 连接到翻译服务。|
+在此知识的基础上继续您的 AEM Headless 翻译历程，接下来请查阅文档[配置翻译集成](configure-connector.md)，您将从中了解如何将 AEM 连接到翻译服务。
 
 ## 其他资源 {#additional-resources}
 

@@ -11,7 +11,7 @@ ht-degree: 81%
 
 # 翻译内容 {#translate-content}
 
-使用翻译集成和规则来翻译 Headless 内容。
+使用翻译集成和规则翻译您的 Headless 内容。
 
 ## 迄今为止的故事 {#story-so-far}
 

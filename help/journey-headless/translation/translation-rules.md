@@ -15,12 +15,12 @@ ht-degree: 81%
 
 ## 迄今为止的故事 {#story-so-far}
 
-在 AEM Headless 翻译历程的上一个文档[配置翻译集成](configure-connector.md)中，您已了解如何安装和配置翻译集成，现在应：
+您在 AEM Headless 翻译历程的上一个文档[配置翻译集成](configure-connector.md)中了解了如何安装和配置您的翻译集成，而现在应：
 
 * 了解 AEM 中翻译集成框架的重要参数。
 * 能够自行建立与翻译服务的连接。
 
-现在您的集成已设置完毕，本文将引导您完成下一步，即标识要翻译的内容。
+现已设置您的集成，本文将引导您完成下一步，即确认需要翻译的内容。
 
 ## 目标 {#objective}
 
@@ -92,7 +92,7 @@ ht-degree: 81%
 * 了解翻译规则的用途。
 * 能够定义您自己的翻译规则。
 
-在此知识的基础上继续您的 AEM Headless 翻译历程，接下来查看文档[翻译内容](translate-content.md)，了解您的集成和规则如何协作以翻译 Headless 内容。
+在此知识的基础上继续您的 AEM Headless 翻译历程，接下来请查阅文档[翻译内容](translate-content.md)，您将从中了解您的集成和规则如何共同翻译 Headless 内容。
 
 ## 其他资源 {#additional-resources}
 
