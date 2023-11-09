@@ -1,19 +1,15 @@
 ---
 title: 对HTML5表单的脚本支持
-seo-title: Scripting support for HTML5 forms
 description: HTML5 Forms支持的JavaScript、FormCalc属性和其他方法。
-seo-description: JavaScript, FormCalc properties, and other methods that are supported in HTML5 Forms.
-uuid: 697d5ec4-c818-41e4-b813-883c01b7ff3a
 contentOwner: robhagat
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
-discoiquuid: 4ef78c8c-783f-4aac-a499-692cd4acef75
 feature: Mobile Forms
 exl-id: bcb5afc5-2190-4269-aba2-63842db9df3f
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 451fb472e170a79f9854efadf9be1d4fe0628b94
 workflow-type: tm+mt
-source-wordcount: '3887'
+source-wordcount: '3896'
 ht-degree: 6%
 
 ---
@@ -36,7 +32,7 @@ JavaScript、FormCalc属性以及HTML5表单中支持的方法如下所示：
    <td>指定在字段内容因用户操作而更改之前，该字段的内容。 此值可重新调用，类似于撤消功能。</td>
    <td><p>不适用于下拉列表和列表框。 <code>PrevText </code>在以下情况下无法正常工作：</p>
     <ul>
-     <li>在iPad的数值字段中键入一些特殊字符键(例如$、(、)、&amp;、@等)时，以及 </li>
+     <li>在iPad的数值字段中键入一些特殊字符键（例如，$或、&amp;或@等）时，以及 </li>
      <li>对于“日期”字段（当通过日历输入日期时）。<br /> </li>
     </ul> <p>不支持通过脚本设置值。</p> </td>
   </tr>
@@ -52,7 +48,7 @@ JavaScript、FormCalc属性以及HTML5表单中支持的方法如下所示：
     <ul>
      <li>关于选择 — 替换文本</li>
      <li>在删除、复制和粘贴文本时。</li>
-     <li>在数值字段中键入一些特殊字符键(例如$、(、)、&amp;、@等)时<br /> </li>
+     <li>在数值字段中键入一些特殊字符键（例如，$或、&amp;或@等）时<br /> </li>
      <li>使用Shift +字母数字组合时。 </li>
      <li>使用日期/时间字段时。</li>
     </ul>
@@ -67,7 +63,7 @@ JavaScript、FormCalc属性以及HTML5表单中支持的方法如下所示：
     <ul>
      <li>关于选择 — 替换文本</li>
      <li>在删除、复制和粘贴文本时。</li>
-     <li>在数值字段中键入一些特殊字符键(例如$、(、)、&amp;、@等)时<br /> </li>
+     <li>在数值字段中键入一些特殊字符键（例如，$或、&amp;或@等）时<br /> </li>
      <li>使用Shift +字母数字组合时。 </li>
      <li>使用日期/时间字段时。</li>
     </ul> <p>不支持通过脚本设置值。</p> </td>

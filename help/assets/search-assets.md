@@ -7,9 +7,9 @@ feature: Search, Metadata
 role: User
 exl-id: 588433b2-564a-430f-9d04-480465ece2ad
 hide: true
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 451fb472e170a79f9854efadf9be1d4fe0628b94
 workflow-type: tm+mt
-source-wordcount: '5739'
+source-wordcount: '5736'
 ht-degree: 5%
 
 ---
@@ -428,7 +428,7 @@ ht-degree: 5%
 
 对搜索结果进行排序，更快地发现所需的资源。 您只能在列表视图中排序搜索结果，并且仅在您选择时 **[[!UICONTROL 文件]](#searchui)** 从 **[!UICONTROL 过滤器]** 面板。 [!DNL Assets] 使用服务器端排序快速对某个文件夹或搜索查询结果中的所有资产（无论数量多少）进行排序。 与客户端排序相比，服务器端排序提供更快、更准确的结果。
 
-在列表视图中，您可以对搜索结果进行排序，就像对任何文件夹中的资源排序一样。 排序仅对以下列起作用 — 名称、标题、状态、Dimension、大小、评级、使用情况、（日期）创建、（日期）修改、（日期）发布、工作流和签出。
+在列表视图中，您可以对搜索结果进行排序，就像对任何文件夹中的资源排序一样。 排序功能适用于以下列 — 名称、标题、状态、Dimension、大小、评级、使用情况、已创建、已修改、已发布、工作流和已签出。
 
 有关排序功能的限制，请参阅 [限制](#limitations).
 

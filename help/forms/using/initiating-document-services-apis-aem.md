@@ -1,15 +1,11 @@
 ---
 title: 从AEM Workflow启动Document Services API
-seo-title: Initiate Document Services APIs from AEM Workflow
 description: 了解如何在DDX或提供的输入上调用AEM文档服务。 另请参阅如何将PDF转换为PDF/A
-seo-description: Learn how to invoke AEM Document services on DDX or supplied inputs. Also see hwo to convert PDF to PDF/A
-uuid: aacec2df-1ad6-4ff2-a99d-ef206efcdc09
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: document_services
-discoiquuid: 8b85bdc7-3864-49c9-81b0-cf15b8e986d9
 exl-id: 123087a2-9d09-4579-9185-2ccd7d25bf8d
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 451fb472e170a79f9854efadf9be1d4fe0628b94
 workflow-type: tm+mt
 source-wordcount: '1167'
 ht-degree: 0%
@@ -61,7 +57,7 @@ AEM Forms提供自定义工作流以调用以下Assembler服务API：
 根据输入DDX，调用API可以生成多个输出文档。 “输出文档”选项卡允许您选择保存输出文档的位置。
 
 1. *将输出保存在有效负荷中*：将输出文档保存在有效负荷文件夹中，如果有效负荷是文件则覆盖有效负荷。
-1. *输出文档的映射*：允许通过为每个输出文档添加一个条目来明确指定保存每个输出文档的位置。 每个条目都指定文档及其保存位置。 输出文档可能会覆盖有效负载或保存在有效负载文件夹下。 当有多个输出文档时，此插件非常有用。
+1. *输出文档的映射*：用于通过为每个输出文档添加一个条目来明确指定保存每个输出文档的位置。 每个条目都指定文档及其保存位置。 输出文档可能会覆盖有效负载或保存在有效负载文件夹下。 当有多个输出文档时，此插件非常有用。
 
 1. *作业日志*：指定保存作业日志文档的位置，这有助于排除故障。
 

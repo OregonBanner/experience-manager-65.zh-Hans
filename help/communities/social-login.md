@@ -7,7 +7,7 @@ topic-tags: administering
 content-type: reference
 role: Admin
 exl-id: aed9247c-eb81-470c-9fa4-a98c3df2dcaa
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 451fb472e170a79f9854efadf9be1d4fe0628b94
 workflow-type: tm+mt
 source-wordcount: '2773'
 ht-degree: 1%
@@ -326,8 +326,8 @@ AEM Communities配置对 [AdobeGranite OAuth应用程序和提供程序](#adobe-
 
      存储库中存储用户数据的位置。 对于社区站点，为确保成员有权查看其他成员的配置文件，路径应为默认路径 `/home/users/community`.
 
-   * **[!UICONTROL 启用参数]** 不编辑
-   * **[!UICONTROL URL参数]** 不编辑
+   * **[!UICONTROL 启用参数]**  — 不编辑
+   * **[!UICONTROL URL参数]**  — 不编辑
    * **[!UICONTROL 更新用户]**
 
      如果选中，会在每次登录时刷新存储库中的用户数据，以反映配置文件更改或请求的其他数据。 默认值为取消选中。

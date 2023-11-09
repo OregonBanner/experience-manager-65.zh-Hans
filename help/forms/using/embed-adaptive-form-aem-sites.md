@@ -1,18 +1,14 @@
 ---
 title: 在AEM sites页面中嵌入自适应表单或交互式通信
-seo-title: Embed an adaptive form or interactive communication in AEM sites page
 description: 您可以将自适应表单嵌入到AEM站点页面中。 用户无需离开网站页面即可填写和提交表单。
-seo-description: You can embed adaptive forms in AEM sites pages. Users can fill and submit forms without leaving the site pages.
-uuid: 59b49e2f-6d95-42e5-b31e-fc40936c42d2
 contentOwner: vishgupt
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author, interactive-communications
-discoiquuid: 43362643-69cd-4006-a613-f998c79eeddc
 feature: Adaptive Forms
 exl-id: 00ee7929-649f-4cbb-be79-ba13ac73a16d
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 451fb472e170a79f9854efadf9be1d4fe0628b94
 workflow-type: tm+mt
-source-wordcount: '1162'
+source-wordcount: '1164'
 ht-degree: 6%
 
 ---
@@ -69,7 +65,7 @@ AEM Forms提供了一个组件，您可以将该组件添加到网站页面。 A
 
       * **感谢信息**：使用富文本编辑器编写消息以在表单提交时显示。 仅当您选择显示感谢消息时，此选项才可用。
       * **感谢页面**：浏览并选择要在表单提交时显示的页面。 仅当您选择显示感谢页面时，此选项才可用。
-      * **提交时刷新页面**：启用可刷新包含嵌入的自适应表单的页面以显示感谢页面。 否则，“感谢”页面将替换AEM Forms容器中的自适应表单，而不刷新页面。 仅当您选择显示感谢页面时，此选项才可用。
+      * **提交时刷新页面**：启用，以便您可以刷新包含嵌入的自适应表单的页面以显示感谢页面。 否则，“感谢”页面将替换AEM Forms容器中的自适应表单，而不刷新页面。 仅当您选择显示感谢页面时，此选项才可用。
 
    * **主题**：选择用于定义自适应表单或交互式通信组件样式的主题。 样式设置包括外观属性，如字体样式、背景颜色、尺寸和对齐方式。
    * **高度**：指定容器的高度。 将其留空可自动调整容器大小。

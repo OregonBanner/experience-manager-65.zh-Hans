@@ -5,7 +5,7 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: document_services
 exl-id: 9bf090db-2c14-439e-ad78-6832678a309d
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 451fb472e170a79f9854efadf9be1d4fe0628b94
 workflow-type: tm+mt
 source-wordcount: '6419'
 ht-degree: 1%
@@ -4460,7 +4460,7 @@ PDF Generator服务提供用于将本机文件格式转换为PDF的API。 它还
 
 ### GeneratePDF服务 {#generatepdfservice}
 
-GeneratePDFService提供API来转换各种文件格式，如.doc、.docx、.ppt、.pptx、.xls、.xlsx、.odp、.odt、.ods、（已弃用）。swf、.jpg、.bmp、.tif、.png、.html和许多其他要PDF的文件格式。 它还提供API以将PDF导出为各种文件格式并优化PDF。 该服务支持以下API：
+GeneratePDFService提供API来转换各种文件格式，如.doc、.docx、.ppt、.pptx、.xls、.xlsx、.odp、.odt、.ods、.swf（已弃用）、.jpg、.bmp、.tif、.png、.html和许多其他要PDF的文件格式。 它还提供API以将PDF导出为各种文件格式并优化PDF。 该服务支持以下API：
 
 * **createPDF**：将支持的文件类型转换为PDF文档。 它支持文件格式，如Microsoft Word、Microsoft PowerPoint、Microsoft Excel和Microsoft Project。 除了这些应用程序之外，任何第三方通用PDF生成应用程序类型也可以插入到API中。
 * **exportPDF**：将PDF文档转换为支持的文件类型。 该方法接受PDF作为输入，并以指定的文件类型格式导出PDF的内容。 您可以导出封装的PostScript( eps)、HTML3.2( htm， html)、带有CSS 1.0( htm， html)的HTML4.01、JPEG( jpg， jpeg， jpe)、JPEG2000( jpf， jpx， jp2， j2k， j2c， jpc)、Microsoft Word Document( doc， docx) Microsoft Excel工作簿( xlsx)、Microsoft PowerPoint演示文稿( pptx)、PNG( png)、PostScript( RTF)、富文本格式(rtf)、文本（可访问）( txt)、文本（纯）( txt)TIFF( tif、tiff)、XML 1.0( xml)、PDF/A-1a(sRGB)、PDF/A-1b、PDF/A-2a(sRGB)、PDF/A-2b(sRGB)、PDF/A-3a(sRGB)、PDF/A-3b(sRGB)、PDF/A-3b(sRGB)格式。 您还可以指定 [自定义印前检查配置文件](https://helpx.adobe.com/acrobat/using/preflight-profiles-acrobat-pro.html) 用于PDF输出。
