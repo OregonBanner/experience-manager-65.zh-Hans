@@ -2,9 +2,9 @@
 title: 的发行说明 [!DNL Adobe Experience Manager] 6.5
 description: 查找版本信息、新增功能、安装操作说明以及的详细更改列表 [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 4
-source-git-commit: e3a3511a5854432b9c01748f7f5ffaf9182180f8
+source-git-commit: e4e2e8b58c0283182b2fbd4262a4ef9b607dac26
 workflow-type: tm+mt
-source-wordcount: '3392'
+source-wordcount: '3429'
 ht-degree: 1%
 
 ---
@@ -282,6 +282,10 @@ ht-degree: 1%
 ### 安装Service Pack for [!DNL Experience Manager] Forms{#install-aem-forms-add-on-package}
 
 有关在Experience Manager Forms上安装服务包的说明，请参阅 [Experience Manager Forms Service Pack安装说明](/help/release-notes/aem-forms-current-service-pack-installation-instructions.md).
+
+>[!NOTE]
+>
+>AEM 6.5 QuickStart中提供的自适应Forms功能仅用于探索和评估。 对于生产使用，获取AEM Forms的有效许可证至关重要，因为Adaptive Forms功能需要适当的许可。
 
 ### 安装用于Experience Manager内容片段的GraphQL索引包{#install-aem-graphql-index-add-on-package}
 

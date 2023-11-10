@@ -7,9 +7,9 @@ content-type: reference
 topic-tags: deploying
 docset: aem65
 exl-id: 3df0662a-0768-4b56-8b94-c517657b4bd9
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: e4e2e8b58c0283182b2fbd4262a4ef9b607dac26
 workflow-type: tm+mt
-source-wordcount: '1765'
+source-wordcount: '1803'
 ht-degree: 3%
 
 ---
@@ -73,7 +73,7 @@ Adobe Experience Manager是一个基于Web的客户端 — 服务器系统，用
 * **网站**
 * **移动应用程序**
 * **数字出版物**
-* **Forms**
+* **表单和文档**
 * **数字资产**
 * **社区**
 * **Online Commerce**
@@ -81,6 +81,10 @@ Adobe Experience Manager是一个基于Web的客户端 — 服务器系统，用
 最后，客户可以使用这些基础架构和应用程序级别的构建块，通过构建自己的应用程序来创建自定义解决方案。
 
 AEM服务器是 **基于Java** 并且在支持该平台的大多数操作系统上运行。 所有客户端与AEM的交互均通过 **Web浏览器**.
+
+>[!NOTE]
+>
+>AEM 6.5 QuickStart中提供的自适应Forms功能仅用于探索和评估。 对于生产使用，获取AEM Forms的有效许可证至关重要，因为Adaptive Forms功能需要适当的许可。
 
 ### 典型部署方案 {#typical-deployment-scenarios}
 

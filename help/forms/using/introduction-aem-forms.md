@@ -11,9 +11,9 @@ discoiquuid: a20383f2-f86a-45bf-a39e-725ee764503b
 docset: aem65
 feature: Adaptive Forms
 exl-id: e5533b4f-93b7-4ea9-a01d-fdf9528652c8
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: e4e2e8b58c0283182b2fbd4262a4ef9b607dac26
 workflow-type: tm+mt
-source-wordcount: '919'
+source-wordcount: '956'
 ht-degree: 11%
 
 ---
@@ -123,3 +123,7 @@ AEM Forms提供了Forms Workspace，这款移动应用程序可将您的数字�
 ![布局二](do-not-localize/layout-02.png)
 
 简化的个性化通信工作流
+
+>[!NOTE]
+>
+>AEM 6.5 QuickStart中提供的自适应Forms功能仅用于探索和评估。 对于生产使用，获取AEM Forms的有效许可证至关重要，因为Adaptive Forms功能需要适当的许可。
