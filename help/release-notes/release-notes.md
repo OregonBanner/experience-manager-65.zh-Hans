@@ -2,9 +2,9 @@
 title: 的发行说明 [!DNL Adobe Experience Manager] 6.5
 description: 查找版本信息、新增功能、安装操作说明以及的详细更改列表 [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 4
-source-git-commit: 6f45b0f8dad44e66570f6436a560060cbed56161
+source-git-commit: 41ef1b05e4082bb50b93ff6511542ed56a77497c
 workflow-type: tm+mt
-source-wordcount: '3432'
+source-wordcount: '3433'
 ht-degree: 1%
 
 ---
@@ -286,6 +286,7 @@ ht-degree: 1%
 >[!NOTE]
 >
 >中提供的AEM Forms功能，例如自适应Forms [AEM 6.5快速入门](https://experienceleague.corp.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html)仅供探索及评估之用。 对于生产使用，获得AEM Forms的有效许可证至关重要。
+
 
 
 ### 安装用于Experience Manager内容片段的GraphQL索引包{#install-aem-graphql-index-add-on-package}
