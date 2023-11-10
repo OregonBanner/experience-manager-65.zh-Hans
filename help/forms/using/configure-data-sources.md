@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
 feature: Form Data Model
 exl-id: 7a1d9d57-66f4-4f20-91c2-ace5a71a52f2
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: d39b4b1d921fc93a4871b74469953f2dfc5c470b
 workflow-type: tm+mt
-source-wordcount: '2111'
+source-wordcount: '2112'
 ht-degree: 2%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 2%
 
 通过AEM Forms数据集成，您可以配置并连接到不同的数据源。 支持开箱即用的以下类型。 但是，只需少量自定义，您也可以集成其他数据源。
 
-* 关系数据库 — MySQL、Microsoft SQL Server、IBM DB2、OracleRDBMS和Sybase
+* 关系数据库 — MySQL、Microsoft SQL Server、IBM DB2、OracleRDBMS、postgreSQL和Sybase
 * AEM用户配置文件
 * RESTful Web服务
 * 基于SOAP的Web服务
