@@ -11,9 +11,9 @@ discoiquuid: a20383f2-f86a-45bf-a39e-725ee764503b
 docset: aem65
 feature: Adaptive Forms
 exl-id: e5533b4f-93b7-4ea9-a01d-fdf9528652c8
-source-git-commit: e4e2e8b58c0283182b2fbd4262a4ef9b607dac26
+source-git-commit: 6f45b0f8dad44e66570f6436a560060cbed56161
 workflow-type: tm+mt
-source-wordcount: '956'
+source-wordcount: '952'
 ht-degree: 11%
 
 ---
@@ -36,6 +36,10 @@ AEM Forms将表单创作、管理和发布与通信管理功能、文档安全�
 在大型企业中，通常只创建表单一次，之后通过将它复制到内容管理系统中来进行重用。保持表单的大型数据库处于最新状态并使它们成为可发现的表单是一项巨大的挑战。 AEM 提供了一个可自定义的 Forms Portal，确保客户能够通过 Web 和移动渠道找到并访问所需的表单。
 
 AEM Forms提供了表单管理工具，这些工具不仅允许您管理自适应表单，而且还允许您管理XFA表单、PDF forms和相关资源。 有关更多信息，请参阅 [管理表单简介](../../forms/using/introduction-managing-forms.md).
+
+>[!NOTE]
+>
+>中提供的AEM Forms功能，例如自适应Forms [AEM 6.5快速入门](/help/sites-deploying/deploy.md)仅供探索及评估之用。 对于生产使用，获得AEM Forms的有效许可证至关重要。
 
 ![AEM forms功能](do-not-localize/4th-draft.gif)
 
@@ -124,6 +128,3 @@ AEM Forms提供了Forms Workspace，这款移动应用程序可将您的数字�
 
 简化的个性化通信工作流
 
->[!NOTE]
->
->AEM 6.5 QuickStart中提供的自适应Forms功能仅用于探索和评估。 对于生产使用，获取AEM Forms的有效许可证至关重要，因为Adaptive Forms功能需要适当的许可。
