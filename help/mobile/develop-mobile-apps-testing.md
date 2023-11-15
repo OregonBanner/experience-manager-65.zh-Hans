@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing
 content-type: reference
 exl-id: e10e1904-7016-4eb0-9408-36297285f378
-source-git-commit: 06a6d4e0ba2aeaefcfb238233dd98e8bbd6731da
+source-git-commit: 2c0e3052e32e32f794faa69177d5fdad95bec72f
 workflow-type: tm+mt
-source-wordcount: '1033'
+source-wordcount: '990'
 ht-degree: 0%
 
 ---
@@ -89,12 +89,12 @@ ht-degree: 0%
 
 有关更多信息，请参阅 [https://saucelabs.com/](https://saucelabs.com/).
 
-**AppTestNow**
+<!-- **AppTestNow**
 
-* 一种外包服务，用于测试您的移动应用程序。
-* 其中包含了大量的设备，并提供了多种类型的测试：性能、质量、功能、认证、本地化、数据消耗等等。
+* An outsourcing service that tests your mobile apps.
+* Included is a large pool of devices and offers a wide range of types of testing: performance, quality, functional, certification, localization, data consumption, and so on.
 
-有关更多信息，请参阅 [https://apptestnow.com/](https://apptestnow.com/).
+For more information, see [https://apptestnow.com/](https://apptestnow.com/). -->
 
 **曲棍球应用**
 
