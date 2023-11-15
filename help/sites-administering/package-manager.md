@@ -8,9 +8,9 @@ topic-tags: content
 content-type: reference
 docset: aem65
 exl-id: e8929d7c-9920-4c02-95a9-6f7f7a365203
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '3568'
+source-wordcount: '3574'
 ht-degree: 2%
 
 ---
@@ -358,11 +358,11 @@ Official Service Pack
 
 ##### 验证 OSGi 包的导入情况 {#osgi-package-imports}
 
-**检查内容**
+**勾选内容**
 
 此验证检查所有JAR文件（OSGi包）的包，提取其 `manifest.xml` （包含所述OSGi捆绑所依赖的版本化依赖项），并验证AEM实例以正确的版本导出所述依赖项。
 
-**如何报告**
+**报告方式**
 
 任何无法由AEM实例满足的版本化依赖项都会列在包管理器的“活动日志”中。
 
@@ -376,13 +376,13 @@ Official Service Pack
 
 ##### 验证覆盖 {#overlays}
 
-**检查内容**
+**勾选内容**
 
 此验证可确定正在安装的包是否包含目标AEM实例中已覆盖的文件。
 
 例如，假定在 `/apps/sling/servlet/errorhandler/404.jsp`，一个包，其中包含 `/libs/sling/servlet/errorhandler/404.jsp`，以便更改位于的现有文件 `/libs/sling/servlet/errorhandler/404.jsp`.
 
-**如何报告**
+**报告方式**
 
 包管理器的活动日志中介绍了任何此类叠加。
 
@@ -400,11 +400,11 @@ Official Service Pack
 
 ##### 验证 ACL {#acls}
 
-**检查内容**
+**勾选内容**
 
 此验证会检查正在添加的权限、如何处理这些权限（合并/替换），以及当前权限是否会受到影响。
 
-**如何报告**
+**报告方式**
 
 包管理器的活动日志中介绍了相关权限。
 

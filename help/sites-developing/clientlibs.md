@@ -7,7 +7,7 @@ topic-tags: introduction
 content-type: reference
 docset: aem65
 exl-id: 408ac30c-60ab-4d6c-855c-d544af8d5cf9
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
 source-wordcount: '2853'
 ht-degree: 1%
@@ -36,7 +36,7 @@ ht-degree: 1%
 
 虽然这种方法在AEM中起作用，但当页面及其组成组件变得复杂时，它可能会导致问题。 在这种情况下，最终HTML输出中可能会包含同一JS库的多个副本。 为了避免这种情况并允许对AEM使用的客户端库进行逻辑组织 **客户端库文件夹**.
 
-客户端库文件夹是类型的存储库节点 `cq:ClientLibraryFolder`. 它的定义在 [CND表示法](https://jackrabbit.apache.org/node-type-notation.html) 是
+客户端库文件夹是类型的存储库节点 `cq:ClientLibraryFolder`. 其定义位于 [CND表示法](https://jackrabbit.apache.org/node-type-notation.html) 是
 
 ```shell
 [cq:ClientLibraryFolder] > sling:Folder

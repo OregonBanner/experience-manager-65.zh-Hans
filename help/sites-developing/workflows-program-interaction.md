@@ -1,18 +1,14 @@
 ---
 title: 以编程方式与工作流交互
-seo-title: Interacting with Workflows Programmatically
 description: 了解如何在Adobe Experience Manager中以编程方式与工作流交互。
-seo-description: null
-uuid: a0f19fc6-b9bd-4b98-9c0e-fbf4f7383026
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
-discoiquuid: cb621332-a149-4f8d-9425-fd815b033c38
 exl-id: 2b396850-e9fb-46d9-9daa-ebd410a9e1a5
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '2008'
+source-wordcount: '2007'
 ht-degree: 0%
 
 ---
@@ -359,7 +355,7 @@ REST API支持以下操作：
   </tr>
   <tr>
    <td><code>POST</code></td>
-   <td>完成其URI作为参数发送的工作项 <code>item</code> 并将相应的工作流实例前进到下一个节点（由参数定义） <code>route</code> 或 <code>backroute</code> 如果有什么退步的话。<br /> 如果参数 <code>delegatee</code> 发送，即由参数标识的工作项 <code>item</code> 委托给指定的参与者。</td>
+   <td>完成其URI作为参数发送的工作项 <code>item</code> 并将相应的工作流实例前进到下一个节点，该节点由参数定义 <code>route</code> 或 <code>backroute</code> 如果倒退一步。<br /> 如果参数 <code>delegatee</code> 发送，即由参数标识的工作项 <code>item</code> 委托给指定的参与者。</td>
   </tr>
  </tbody>
 </table>

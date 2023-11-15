@@ -1,16 +1,14 @@
 ---
 title: Dynamic Media 图像配置文件
 description: 创建包含钝化蒙版和/或智能裁切或智能色板设置的图像配置文件，然后将配置文件应用到图像资源的文件夹。
-uuid: 9049fab9-d2be-4118-8684-ce58f3c8c16a
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: administering
 content-type: reference
-discoiquuid: 4f9301db-edf8-480b-886c-b5e8fca5bf5c
 feature: Image Profiles
 role: User, Admin
 exl-id: 67240ad0-1a7c-4e58-a518-1e36d771f1a1
-source-git-commit: d4c2890b92678aff58119e76251b5d181c95a393
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
 source-wordcount: '3033'
 ht-degree: 6%
@@ -63,7 +61,7 @@ ht-degree: 6%
 | 选项 | 何时使用 | 描述 |
 | --- | --- | --- |
 | 像素裁剪 | 仅根据尺寸批量裁切图像。 | 要使用此选项，请选择 **[!UICONTROL 像素裁切]** 裁切选项下拉列表中的选项。<br><br>要从图像的侧面裁切，请输入要从图像的任意侧面或每侧面裁切的像素数。 裁切图像的数量取决于图像文件中的ppi（每英寸像素数）设置。<br><br>图像配置文件像素裁剪按以下方式渲染：<br>·值包括“上”、“下”、“左”和“右”。<br>·考虑使用左上角 `0,0` 并从此处计算像素裁切。<br>·裁切起点：左为X，上为Y<br>·水平计算：原始图像的水平像素尺寸先减左，再减右。<br>·垂直计算：垂直像素高度减去“顶部”，然后减去“底部”。<br><br>例如，假设您的图像为4000 x 3000像素。 您可以使用以下值：Top=250、Bottom=500、Left=300、Right=700。<br><br>从左上(300,250)裁切，使用填充空间（4000-300-700、3000-250-500或3000,2250）。 |
-| 智能裁剪 | 根据视觉焦点批量裁切图像。 | 智能裁剪利用Adobe Sensei中的人工智能的强大功能快速批量自动裁剪图像。 智能裁切会自动检测并裁切到任何图像中的焦点，以捕获预期的目标点，而不管屏幕大小如何。</p> <p>要使用智能裁切，请选择 **[!UICONTROL 智能裁剪]** 从裁切选项下拉列表，然后到响应式图像裁切的右侧，启用（打开）该功能。</p> <p>默认断点大小（大、中、小）通常涵盖大部分图像在移动设备和平板电脑设备、桌面和横幅上使用的完整大小。 如果需要，可以编辑“大”、“中”和“小”的缺省名称。</p> <p>要添加更多断点，请选择 **[!UICONTROL 添加裁切]** 要删除裁切，请选择垃圾桶图标。 |
+| 智能裁切 | 根据视觉焦点批量裁切图像。 | 智能裁剪利用Adobe Sensei中的人工智能的强大功能快速批量自动裁剪图像。 智能裁切会自动检测并裁切到任何图像中的焦点，以捕获预期的目标点，而不管屏幕大小如何。</p> <p>要使用智能裁切，请选择 **[!UICONTROL 智能裁剪]** 从裁切选项下拉列表，然后到响应式图像裁切的右侧，启用（打开）该功能。</p> <p>默认断点大小（大、中、小）通常涵盖大部分图像在移动设备和平板电脑设备、桌面和横幅上使用的完整大小。 如果需要，可以编辑“大”、“中”和“小”的缺省名称。</p> <p>要添加更多断点，请选择 **[!UICONTROL 添加裁切]** 要删除裁切，请选择垃圾桶图标。 |
 | 颜色和图像样本 | 批量为每个图像生成图像样本。 | **注意**：Dynamic Media Classic不支持智能色板。<br><br>从显示颜色或纹理的产品图像自动定位并生成高质量色板。<br><br>要使用颜色和图像样本，请选择 **[!UICONTROL 智能裁剪]** 从“裁切选项”下拉列表中，然后在“颜色和图像样本”的右侧，启用（打开）该功能。 在“宽度”和“高度”文本框中输入一个像素值。<br><br>虽然所有图像裁剪都可以从“呈现版本”边栏中使用，但样本只能通过“复制URL”功能使用。 使用您自己的查看组件渲染网站上的色板。 (此规则的例外是轮播横幅。 Dynamic Media为轮播横幅中使用的样本提供查看组件。)<br><br>**使用图像样本**<br>&#x200B;图像样本的URL非常简单。 它是：<br><br>`/is/image/company/&lt;asset_name&gt;:Swatch`<br>位置 `:Swatch` 会附加到资产请求中。<br><br>**使用色板**<br>&#x200B;要使用色板，您需要 `req=userdata` 使用以下内容请求：<br>`/is/image/&lt;company_name&gt;/&lt;swatch_asset_name&gt;:Swatch?req=userdata`<br><br>例如，以下是Dynamic Media Classic中的样本资源：<br>`https://my.company.com:8080/is/image/DemoCo/Sleek:Swatch`<br>下面是样本资产对应的 `req=userdata` URL：<br>`https://my.company.com:8080/is/image/DemoCo/Sleek:Swatch?req=userdata`<br><br>此 `req=userdata` 响应如下：<br>`SmartCropDef=Swatch SmartCropHeight=200.0`<br>`SmartCropRect=0.421671,0.389815,0.0848564,0.0592593,200,200`<br>`SmartCropType=Swatch`<br>`SmartCropWidth=200.0`<br>`SmartSwatchColor=0xA56DB2`<br><br>您还可以请求 `req=userdata` XML或JSON格式的响应，如以下相应的URL示例中所示：<br>`https://my.company.com:8080/is/image/DemoCo/Sleek:Swatch?req=userdata,json`<br>`https://my.company.com:8080/is/image/DemoCo/Sleek:Swatch?req=userdata,xml`<br><br>**注意：** 创建您自己的WCM组件以请求颜色样本并解析 `SmartSwatchColor` 属性，由24位RGB的十六进制值表示。<br><br>另请参阅 [`userdata` 在查看器参考指南中](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/req/r-userdata.html). |
 
 ## USM 锐化 {#unsharp-mask}

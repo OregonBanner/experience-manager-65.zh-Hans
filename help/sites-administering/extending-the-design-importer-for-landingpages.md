@@ -7,9 +7,9 @@ topic-tags: personalization
 content-type: reference
 docset: aem65
 exl-id: 1b8c6075-13c6-4277-b726-8dea7991efec
-source-git-commit: e2a3470784beb04c2179958ac6cb98861acfaa71
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '3493'
+source-wordcount: '3495'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 1. 创建TagHandler
 
-   * 标记处理程序是一个POJO，用于处理特定类型的HTML标记。 您的TagHandler可以处理的HTML标签的“种类”是通过TagHandlerFactory的OSGi属性“tagpattern.name”定义的。 此OSGi属性本质上是一个正则表达式，它应该匹配您要处理的输入html标记。 所有嵌套的标记将被抛到标记处理程序中以供处理。 例如，如果注册包含嵌套的div &lt;p> 标记， &lt;p> 标记也会被抛到您的TagHandler中，具体取决于您希望如何进行处理。
+   * 标记处理程序是一个POJO，用于处理特定类型的HTML标记。 您的TagHandler可以处理的HTML标签的“种类”是通过TagHandlerFactory的OSGi属性“tagpattern.name”定义的。 此OSGi属性本质上是一个正则表达式，它应该匹配您要处理的输入html标记。 所有嵌套的标记将被抛到标记处理程序中以供处理。 例如，如果注册包含嵌套的div &lt;p> 标记， &lt;p> 标记也会被抛到您的TagHandler中，具体由您来决定如何处理它。
    * 标记处理程序界面类似于SAX内容处理程序界面。 它会接收每个html标记的SAX事件。 作为标记处理程序提供程序，您需要实施某些生命周期方法，这些方法由设计导入程序框架自动调用。
 
 1. 创建其对应的TagHandlerFactory。

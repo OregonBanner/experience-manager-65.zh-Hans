@@ -7,9 +7,9 @@ topic-tags: adaptive_forms, author
 docset: aem65
 feature: Adaptive Forms
 exl-id: 9b4219b8-d5eb-4099-b205-d98d84e0c249
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '1993'
+source-wordcount: '1992'
 ht-degree: 8%
 
 ---
@@ -64,7 +64,7 @@ AEM Forms用户可以使用Google的reCAPTCHA服务在自适应表单中实施CA
    1. 点按 **[!UICONTROL reCAPTCHA]**. 此时将打开“配置”页面。 选择在上一步中创建的配置容器，然后点击 **[!UICONTROL 创建]**.
    1. 选择版本作为reCAPTCHA Enterprise ，并为reCAPTCHA Enterprise服务指定名称、项目ID、站点密钥和API密钥（在步骤2和3中获取）。
    1. 选择密钥类型，则密钥类型应与在Google云项目中配置的站点密钥相同，例如， **复选框站点键** 或 **基于得分的网站密钥**.
-   1. 指定介于0到1之间的阈值分数([单击以了解有关得分的更多信息](https://cloud.google.com/recaptcha-enterprise/docs/interpret-assessment#interpret_scores))。 分数大于或等于阈值分数标识人交互，否则被视为机器人交互。
+   1. 指定在0-1范围内的阈值分数([单击以了解有关得分的更多信息](https://cloud.google.com/recaptcha-enterprise/docs/interpret-assessment#interpret_scores))。 分数大于或等于阈值分数标识人交互，否则被视为机器人交互。
 
       > 注意:
       >

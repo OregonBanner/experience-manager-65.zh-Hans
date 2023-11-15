@@ -8,9 +8,9 @@ content-type: reference
 pagetitle: Query Builder API
 tagskeywords: querybuilder
 exl-id: b2288442-d055-4966-8057-8b7b7b6bff28
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '2284'
+source-wordcount: '2285'
 ht-degree: 0%
 
 ---
@@ -88,7 +88,7 @@ orderby=path
 
 目的 `p.guessTotal` 参数是返回通过组合最小可行相位差和相位极限值可以显示的适当数目的结果。 使用该参数的优点是改善了性能，且结果集大。 这样可避免计算完整总计(例如，调用result.getSize())和读取整个结果集，从而可优化一直到Oak引擎和索引。 当有100,000个结果（包括执行时间和内存使用量）时，这可能有显着差异。
 
-此参数的缺点是用户看不到确切的总数。 但您可以设置一个最小值，如p.guessTotal=1000，以便它始终可读取多达1000个结果，这样您便可以获得较小结果集的精确总计，但如果大于此值，则只能显示“及更多”。
+此参数的缺点是用户看不到确切的总数。 但您可以设置一个最小值，如p.guessTotal=1000，以便它始终可读取多达1000个值，这样您便可以获得较小结果集的精确总计，但如果大于此值，则只能显示“及更多”。
 
 添加 `p.guessTotal=true` ，以了解其工作方式：
 

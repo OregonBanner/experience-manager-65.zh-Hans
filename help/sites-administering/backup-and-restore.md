@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
 exl-id: dd26dade-b769-483e-bc11-dcfa5ed1f87e
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
 source-wordcount: '2282'
 ht-degree: 0%
@@ -217,7 +217,7 @@ AEM Online Backup由一系列内部操作组成，以确保正在备份的数据
 
      名为的空文件 `backupInProgress.txt` 备份启动时，将在目标目录中创建。 备份完成后，此文件将被删除。
 
-1. 文件将从源目录复制到目标目录（或在创建zip文件时复制到临时目录）。 区段存储将在数据存储之前复制，以避免存储库损坏。 创建备份时，将忽略索引和缓存数据。 因此，数据来自 `crx-quickstart/repository/cache` 和 `crx-quickstart/repository/index` 不在备份中。 在创建zip文件时，进程的进度条指示符介于0% - 70%之间；如果未创建zip文件，则进度条指示符介于0% - 100%之间。
+1. 文件将从源目录复制到目标目录（或在创建zip文件时复制到临时目录）。 区段存储将在数据存储之前复制，以避免存储库损坏。 创建备份时，将忽略索引和缓存数据。 因此，数据来自 `crx-quickstart/repository/cache` 和 `crx-quickstart/repository/index` 不在备份中。 在创建zip文件时，进程的进度条指示符介于0%-70%之间；如果未创建zip文件，则进度条指示符介于0%-100%之间。
 
 1. 如果备份到预先存在的目录，则删除目标目录中的“旧”文件。 旧文件是源目录中不存在的文件。
 

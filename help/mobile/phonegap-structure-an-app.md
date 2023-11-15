@@ -6,7 +6,7 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 exl-id: f37f239f-065b-44f8-acb1-93485b713b49
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
 source-wordcount: '885'
 ht-degree: 0%
@@ -27,7 +27,7 @@ AEM Mobile项目涉及多种内容类型，包括页面、JavaScript和CSS客户
 
 ![chlimage_1-52](assets/chlimage_1-52.png)
 
-按照AEM约定，应用程序的第一个页面应该重定向到充当应用程序的默认语言的子页面之一(在Geometrixx和入门套件用例中均为“en”)。 顶级区域设置页面通常继承自foundation“splash-page”组件(/libs/mobileapps/components/splash-page)，该组件会进行支持安装无线内容同步更新所需的初始化(contentInit代码位于/etc/clientlibs/mobile/content-sync/js/contentInit.js)。
+根据AEM约定，应用程序的第一个页面应该是重定向到充当应用程序的默认语言的子页面之一(在Geometrixx和入门套件用例中均为“en”)。 顶级区域设置页面通常继承自foundation“splash-page”组件(/libs/mobileapps/components/splash-page)，该组件会进行支持安装无线内容同步更新所需的初始化(contentInit代码位于/etc/clientlibs/mobile/content-sync/js/contentInit.js)。
 
 ## 模板和组件 {#templates-and-components}
 
@@ -45,7 +45,7 @@ AEM Mobile项目涉及多种内容类型，包括页面、JavaScript和CSS客户
 
 如果您的客户端代码可以独立存在，并且与应用程序的特定组件无关（这意味着它可以在其他应用程序中重复使用），则Adobe建议将其存储在/etc/clientlibs/中&lt;brand name=&quot;&quot;>/&lt;lib name=&quot;&quot;>. 另一方面，如果clientlib特定于单个应用程序，则可以将其嵌套为应用程序设计节点( /etc/designs/phonegap/ )的子节点&lt;brand name=&quot;&quot;>/&lt;app name=&quot;&quot;>/clientlibs。 请勿将此clientlib的类别与其他库一起使用；而是根据需要嵌入其他库。 通过遵循此模式，开发人员无需每次将客户端库添加到应用程序时都添加新的内容同步配置，而只需更新应用程序设计clientlib的“embeds”属性。 例如，查看/content/phonegap/geometrixx-outdoors/en/jcr：content/pge-app/app-config/clientlibs-all中的clientlibs-all Content SyncGeometrixx。
 
-如果您的客户端代码与特定组件紧密耦合，请将该代码放置在嵌套在/apps/中组件位置下方的客户端库中，并将其类别嵌入应用程序的“设计”客户端库中。
+如果您的客户端代码与特定组件紧密耦合，请将该代码放置在嵌套在/apps/中组件位置下方的客户端库中，并将其类别嵌入应用程序的“设计”clientlib。
 
 ## PhoneGap配置 {#phonegap-configuration}
 

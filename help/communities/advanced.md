@@ -8,9 +8,9 @@ content-type: reference
 docset: aem65
 role: Admin
 exl-id: d3bb6664-6c01-4bcf-840c-072fc491fc99
-source-git-commit: 0a4aca939c564720f63f055e9522e56942eaa128
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '1069'
+source-wordcount: '1068'
 ht-degree: 1%
 
 ---
@@ -79,7 +79,7 @@ ht-degree: 1%
   默认值为216000小时（~24年）。
 
 * **评分增长率**
-这会指定介于0和评分范围之间的分数，超过该分数后，增长会减慢，从而限制专家数量。
+这会指定得分在0分范围之间，如果超出该范围，增长将会减慢，从而限制专家数量。
 
   默认值为 50。
 

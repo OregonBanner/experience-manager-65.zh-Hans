@@ -10,7 +10,7 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: c01e42ff-e338-46e6-a961-131ef943ea91
 exl-id: 3405cdd3-3d1b-414d-9931-b7d7b63f0a6f
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
 source-wordcount: '2268'
 ht-degree: 0%
@@ -180,7 +180,7 @@ AEM支持以下查询语言：
 * JCR-SQL2
 * XPath
 
-以下示例使用Query Builder，它是AEM开发人员使用的最常见查询语言，但是，相同的原则适用于JCR-SQL2和XPath。
+以下示例使用Query Builder作为AEM开发人员最常用的查询语言，但相同的原则适用于JCR-SQL2和XPath。
 
 1. 添加节点类型限制，以便查询解析为现有的Lucene属性索引。
 

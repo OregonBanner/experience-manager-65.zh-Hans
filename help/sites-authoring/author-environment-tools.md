@@ -7,10 +7,10 @@ topic-tags: page-authoring
 content-type: reference
 docset: aem65
 exl-id: 3b3c118b-ca35-484b-a62e-7bec98953123
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '2226'
-ht-degree: 52%
+source-wordcount: '2227'
+ht-degree: 51%
 
 ---
 
@@ -174,7 +174,7 @@ AEM 的创作环境提供了各种可用于组织和编辑内容的机制. 可�
 
 ![内容树](do-not-localize/screen_shot_2018-03-22at142042.png)
 
-打开侧面板时，它会（从左侧）滑开。 根据需要选择&#x200B;**内容树**&#x200B;选项卡。打开该选项卡后，您会看到页面或模板的树视图表现形式，以便您更方便地了解其内容的层次构成方式。此外，在复杂的页面上，还可以更轻松地在页面的组件之间跳转。
+打开侧面板时，它会（从左侧）滑开。 根据需要选择&#x200B;**内容树**&#x200B;选项卡。打开时，您可以看到页面或模板的树视图表示形式，以便更容易了解其内容是如何按层次结构构建的。 此外，在复杂的页面上，还可以更轻松地在页面的组件之间跳转。
 
 ![ateat-11](assets/ateat-11.png)
 

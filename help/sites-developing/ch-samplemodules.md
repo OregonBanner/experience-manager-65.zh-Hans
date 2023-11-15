@@ -1,14 +1,12 @@
 ---
 title: ContextHub UI模块类型示例
-seo-title: Sample ContextHub UI Module Types
-description: ContextHub提供了几个可在解决方案中使用的示例UI模块
-seo-description: ContextHub provides several sample UI modules that you can use in your solutions
+description: ContextHub提供了几个可在解决方案中使用的示例UI模块。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
 exl-id: df28180f-7af4-437d-8e91-bfd305f73113
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
 source-wordcount: '1174'
 ht-degree: 0%
@@ -57,7 +55,7 @@ contexthub.base UI模块类型是所有其他UI模块类型的基类型。 因�
    * 标题：为此项目显示的文本
    * 图像： （可选）应在左侧显示的图像的URL
    * 图标： （可选）应在左侧显示的CUI图标类；如果指定了图像，则忽略此类别
-   * selected： （可选）一个布尔值，它指定是否将此项显示为选定项(true=selected)。 默认情况下，选定的项目使用粗体字体显示。 使用 `listType` 属性以配置其他外观（请参阅下文）。
+   * selected： （可选）一个布尔值，它指定是否将此项显示为选定项(true=selected)。 默认情况下，选定的项目会以粗体字体显示。 使用 `listType` 属性以配置其他外观（请参阅下文）。
 
 * **listType：** 用于弹出框列表项的样式。 使用以下值之一：
 

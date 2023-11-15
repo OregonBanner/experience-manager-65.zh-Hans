@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
 feature: Correspondence Management
 exl-id: 9e1b0067-c7dc-4bbb-a209-d674592be858
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '2171'
+source-wordcount: '2170'
 ht-degree: 0%
 
 ---
@@ -83,7 +83,7 @@ XFA表单模板或XDP是用于以下项目的模板：
    1. 在中指定子表单的名称 **名称** 字段。
    1. 选择 **无数据绑定** 从 **数据绑定** 下拉列表。
 
-   重复步骤2至5以向XDP模板添加更多子表单。 添加 [文本、文档片段、图像和图表](create-interactive-communication.md#step2) 仅在创作交互式通信时访问目标区域。
+   重复步骤2-5以向XDP模板添加更多子表单。 添加 [文本、文档片段、图像和图表](create-interactive-communication.md#step2) 仅在创作交互式通信时访问目标区域。
 
 1. 选择 **文件** > **另存为** 将文件保存在本地文件系统中：
 

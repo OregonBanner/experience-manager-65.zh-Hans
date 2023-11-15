@@ -2,9 +2,9 @@
 title: Adobe Experience Manager 6.5版本中已弃用和已删除的功能。
 description: 特定于Adobe Experience Manager 6.5中已弃用和已删除的功能的发行说明。
 exl-id: d9b6140a-c37d-4b90-a60c-01f471d65621
-source-git-commit: aec2eb3303ad9747f6f56ae2eb31c3c7ed7b0c24
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '1710'
+source-wordcount: '1712'
 ht-degree: 12%
 
 ---
@@ -41,7 +41,7 @@ Adobe 不断评估产品功能，以便随着时间的推移，使用更现代�
 | 动态标签管理器(DTM) | 已弃用与DTM的集成。 | 切换到使用Adobe Experience Platform Launch作为标签管理器。 |   |
 | Adobe Target | 通过添加AEM使用以下程序连接到Adobe Target服务的功能 [!DNL Adobe I/O] 基于AEM 6.5中的Adobe Target Standard API (Rest API)，弃用Target Classic API (XML)方式。 | 将集成重新配置到 [使用新API](/help/sites-administering/target.md). |  |
 | Adobe Target | 使用 `mbox.js` 已弃用与AEM中的Adobe Target的基于的集成。 | 切换以使用 `at.js` 1.x. |  |
-| 商务 | [CIF REST](https://github.com/adobe/commerce-cif-api) 于2018年作为一组微服务提供，以实现AEM与商务引擎之间的集成。 在Adobe于2018年年中收购Adobe Commerce(前身为Magento)后，Adobe决定改变做法，原因有二。 Commerce具有自己的一组Commerce API(REST和GraphQL)，维护两组API是不好的做法。 市场趋势表明，客户正在转向GraphQL，因为这是一种更高效的数据查询方式。 2019年，Adobe发布了新的Commerce Integration Framework，它使用Commerce的GraphQL API作为事实来源。 Adobe不计划进一步投资CIF REST。 建议客户使用替代解决方案。 | 对于AEM-Commerce集成，切换到 [AEM CIF原型](https://github.com/adobe/aem-cif-project-archetype) 和 [AEM CIF核心组件](https://github.com/adobe/aem-core-cif-components). 请参阅AEM与Adobe Commerce集成 [使用Commerce集成框架](/help/commerce/cif/integrating/magento.md). 支持第三方（Commerce除外）与新方法的集成位于Adobe的路线图中。 |  |
+| 商务 | [CIF REST](https://github.com/adobe/commerce-cif-api) 于2018年作为一组微服务提供，以实现AEM与商务引擎之间的集成。 在Adobe于2018年年中收购Adobe Commerce(前身为Magento)后，Adobe决定改变做法，原因有二。 Commerce具有自己的一组Commerce API(REST和GraphQL)，维护两组API不是最佳做法。 市场趋势表明，客户正在转向GraphQL，因为这是一种更高效的数据查询方式。 2019年，Adobe发布了新的Commerce Integration Framework，它使用Commerce的GraphQL API作为事实来源。 Adobe不打算进一步投资CIF REST。 建议客户使用替代解决方案。 | 对于AEM-Commerce集成，切换到 [AEM CIF原型](https://github.com/adobe/aem-cif-project-archetype) 和 [AEM CIF核心组件](https://github.com/adobe/aem-core-cif-components). 请参阅AEM与Adobe Commerce集成 [使用Commerce integration framework](/help/commerce/cif/integrating/magento.md). 支持第三方（Commerce除外）与新方法的集成位于Adobe的路线图中。 |  |
 | 组件(AEM Sites) | Adobe不打算进一步增强存储在中的大多数Foundation组件 `/libs/foundation/components`. 查找 `cq:deprecated` 和 `cq:deprecatedReason` 属性。 AEM 6.5包含基础组件，从早期版本升级的客户可以继续按原样使用它们。 此外，即使已弃用，也支持基础组件。 | Adobe建议在将来的项目中使用核心组件。 现有站点可以保持不变，也可以使用 [AEM Modernize Tools Suite](https://github.com/adobe/aem-modernize-tools) 重构站点以使用核心组件。 |  |
 | 组件(AEM Sites) | 设计导入程序组件 `/libs/wcm/designimporter/components` 从6.5开始标记为已弃用。Adobe不打算进一步增强设计导入程序实施。 | Adobe计划在未来版本中提供用例的替代实施。 |  |
 | Foundation | Granite卸载框架。 Adobe不打算进一步增强CQ 5.6.1中引入的卸载框架，以将资源处理外部化。 | Adobe正在开发下一代云原生卸载框架。 |  |

@@ -2,9 +2,9 @@
 title: 配置和配置浏览器
 description: 了解AEM配置以及它们如何管理AEM中的工作区设置。
 exl-id: 1be5849b-748c-48e8-afa8-35a9026c27b3
-source-git-commit: 474a726058b141985f52a0faec6161a34be1e9dc
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '1482'
+source-wordcount: '1483'
 ht-degree: 6%
 
 ---

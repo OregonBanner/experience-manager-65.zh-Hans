@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 role: Developer
 exl-id: ff42579e-6aaf-433d-8b5d-9e9dd0957250
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '15464'
+source-wordcount: '15462'
 ht-degree: 0%
 
 ---
@@ -1328,7 +1328,7 @@ Inspect使用Document Security服务API（Web服务）创建受策略保护的PD
   <tr>
    <td><p><code>WaterBackCmd:OPACITY</code></p></td>
    <td><p>指定水印的不透明度。 如果未指定，则默认值为0.5。</p></td>
-   <td><p>介于0.0和1.0之间的值。</p></td>
+   <td><p>介于0.0-1.0之间的值。</p></td>
   </tr>
   <tr>
    <td><p><code>WaterBackCmd:ROTATION</code></p></td>

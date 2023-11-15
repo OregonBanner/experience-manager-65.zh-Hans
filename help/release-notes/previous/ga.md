@@ -2,9 +2,9 @@
 title: 的常规发行说明 [!DNL Adobe Experience Manager] 6.5
 description: '"[!DNL Adobe Experience Manager] 6.5版本说明概述了版本信息、新增功能、安装方法和详细的更改列表。”'
 exl-id: b3d4a527-44ca-4eb6-b393-f3e8117cf1a6
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '4675'
+source-wordcount: '4676'
 ht-degree: 6%
 
 ---

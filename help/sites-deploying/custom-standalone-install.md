@@ -4,9 +4,9 @@ description: 了解安装独立AEM实例时可用的选项。
 content-type: reference
 topic-tags: deploying
 exl-id: d6484bb7-8123-4f42-96e8-aa441b1093f3
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '1616'
+source-wordcount: '1617'
 ht-degree: 0%
 
 ---

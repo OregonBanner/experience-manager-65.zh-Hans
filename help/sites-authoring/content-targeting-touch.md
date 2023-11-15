@@ -7,10 +7,10 @@ content-type: reference
 topic-tags: personalization
 docset: aem65
 exl-id: edde225d-0be7-4306-8dda-d18d46fae977
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '5383'
-ht-degree: 86%
+source-wordcount: '5374'
+ht-degree: 85%
 
 ---
 
@@ -38,9 +38,9 @@ ht-degree: 86%
 
 >[!NOTE]
 >
->在 Adobe Target 中创建营销活动时，会为每个营销活动分配名为 `thirdPartyId` 的属性。在 Adobe Target 中删除营销活动时，不会删除 thirdPartyId。您不能为不同类型（AB、XT）的营销活动重复使用 `thirdPartyId`，也不能手动删除此属性。为避免出现此问题，请为每个营销活动指定唯一的名称；这样，营销活动名称便无法在不同的营销活动类型中重复使用。
+>在 Adobe Target 中创建营销活动时，会为每个营销活动分配名为 `thirdPartyId` 的属性。在 Adobe Target 中删除营销活动时，不会删除 thirdPartyId。您不能为不同类型（AB、XT）的营销活动重复使用 `thirdPartyId`，也不能手动删除此属性。为避免出现此问题，请为每个营销活动指定唯一的名称；营销活动名称不能在不同营销活动类型中重复使用。
 >
->如果在同一种营销活动类型中使用相同的名称，则会覆盖现有的营销活动。
+>如果在同一促销活动类型中使用相同的名称，则会覆盖现有的促销活动。
 >
 >如果在同步时遇到错误“请求失败。`thirdPartyId` 已存在”，请更改营销活动的名称，然后重新进行同步。
 
@@ -79,7 +79,7 @@ ht-degree: 86%
 
    >[!NOTE]
    >
-   >建议[通过活动控制台创建品牌](/help/sites-authoring/activitylib.md#creating-a-brand-using-the-activities-console)。
+   >Adobe建议您 [通过“活动”控制台创建品牌](/help/sites-authoring/activitylib.md#creating-a-brand-using-the-activities-console).
    >
    >
    >如果您以任何其他方式创建品牌，请确保存在节点 `/campaigns/<brand>/master`，否则在您尝试创建活动时将产生错误。
@@ -140,7 +140,7 @@ ht-degree: 86%
 
 >[!CAUTION]
 >
->在对创作实例中已定位的组件禁用定位时务必小心。相应的活动也将自动从发布实例中删除。
+>在对创作实例中已定位的组件禁用定位时务必小心。相应的活动也会自动从发布实例中删除。
 
 >[!NOTE]
 >
@@ -342,7 +342,7 @@ ht-degree: 86%
 
    ![chlimage_1-23](assets/chlimage_1-23.png)
 
-   您可以使用选件选取器浏览或筛选选件。浏览或筛选选件时，您可能还希望对选件进行排序，并更改查看选件的方式。右上方的数字指示当前选件库中可用的选件数量。
+   您可以使用选件选取器浏览或筛选选件。浏览或筛选选件时，您可能还希望对选件进行排序，并更改查看选件的方式。右上方的数字表示当前库中提供了多少个选件。
 
    * 单击或点按&#x200B;**浏览**&#x200B;可导航到其他文件夹。导航窗格随即会打开，单击箭头可向下浏览文件夹。再次单击或点按&#x200B;**浏览**&#x200B;可关闭导航窗格。
 
@@ -402,11 +402,11 @@ ht-degree: 86%
 
 ![chlimage_1-28](assets/chlimage_1-28.png)
 
-可使用区段定义受众。页面的云配置将决定您可以使用的区段。 如果页面没有与任何 Adobe Target 云配置关联，则可以使用 AEM 区段来定义受众。如果页面已与某个 Adobe Target 云配置关联，则可以使用 Target 区段。
+可使用区段定义受众。页面的云配置决定了您可以使用的区段。 如果页面没有与任何 Adobe Target 云配置关联，则可以使用 AEM 区段来定义受众。如果页面已与某个 Adobe Target 云配置关联，则可以使用 Target 区段。
 
 有关定位引擎的信息，请参阅[定位引擎](/help/sites-authoring/personalization.md#targeting-engine)。
 
-一个受众不能由多个体验使用。如果将某个体验映射到的受众已映射到其他体验，则该体验旁边会显示一个警告符号。
+请勿将受众用于多个体验。 如果将某个体验映射到的受众已映射到其他体验，则该体验旁边会显示一个警告符号。
 
 ![映射到映射到映射到另一个体验的受众时的警告符号](do-not-localize/chlimage_1-6.png)
 

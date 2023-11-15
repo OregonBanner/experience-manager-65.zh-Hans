@@ -8,9 +8,9 @@ topic-tags: upgrading
 docset: aem65
 feature: Upgrading
 exl-id: 0dea2b3e-fd7c-4811-a04a-6852ffc1e6d6
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '2395'
+source-wordcount: '2396'
 ht-degree: 0%
 
 ---
@@ -135,7 +135,7 @@ AEM 6.5中的新增功能位于 [adobe.com的AEM部分](/help/release-notes/rele
 
 #### 内容重构注意事项 {#content-restructuring-considerations}
 
-AEM已对存储库结构进行了更改，这有助于使升级更加顺畅。 这些更改涉及根据Adobe或客户是否拥有内容，将内容从/etc文件夹移出到/libs、/apps和/content等文件夹，从而限制在发布期间覆盖内容的机会。 存储库重组已经完成，因此在6.5版升级时不需要更改代码，但建议查看详细信息，网址为 [AEM中的存储库重组](/help/sites-deploying/repository-restructuring.md) 在计划升级时。
+AEM已对存储库结构进行了更改，这有助于使升级更加顺畅。 这些更改涉及根据Adobe或客户是否拥有内容，将内容从/etc文件夹移出到/libs、/apps和/content等文件夹，从而限制在发布期间覆盖内容的机会。 存储库重组已经完成，因此在6.5版升级时不需要更改代码，但建议查看详细信息： [AEM中的存储库重组](/help/sites-deploying/repository-restructuring.md) 在计划升级时。
 
 ### 评估升级复杂性 {#assessing-upgrade-complexity}
 

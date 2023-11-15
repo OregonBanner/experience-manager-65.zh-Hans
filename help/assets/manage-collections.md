@@ -7,9 +7,9 @@ role: User
 feature: Collections,Asset Management
 exl-id: 2117b2de-8024-4aa8-9ce0-68a156928356
 hide: true
-source-git-commit: e2a3470784beb04c2179958ac6cb98861acfaa71
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '2202'
+source-wordcount: '2204'
 ht-degree: 14%
 
 ---
@@ -222,7 +222,7 @@ ht-degree: 14%
 
 ## 创建嵌套收藏集 {#creating-nested-collections}
 
-您可以将一个收藏集添加到另一个收藏集，从而创建嵌套收藏集。
+您可以将一个收藏集添加到另一个收藏集，以便创建嵌套收藏集。
 
 1. 从收藏集控制台中，选择所需的收藏集或收藏集组，然后单击 **[!UICONTROL 目标收藏集]** 工具栏中。
 

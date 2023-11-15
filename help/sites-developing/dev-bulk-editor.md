@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
 exl-id: 8753aaab-959f-459b-bdb6-057cbe05d480
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '1833'
+source-wordcount: '1832'
 ht-degree: 2%
 
 ---
@@ -436,7 +436,7 @@ ht-degree: 2%
      <li>cellCls： css类 </li>
      <li>readOnly：true表示不能更改值 </li>
      <li>复选框：true可将列的所有单元格定义为复选框（true/false值） </li>
-     <li>forcedPosition：整数值，用于指定在网格中必须放置列的位置（介于0和列数–1之间）<p><br /> </p> </li>
+     <li>forcedPosition：整数值，用于指定在网格中必须放置列的位置（介于0-colums-1之间）<p><br /> </p> </li>
     </ul> </td>
   </tr>
  </tbody>

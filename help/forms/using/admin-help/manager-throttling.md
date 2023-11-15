@@ -6,9 +6,9 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/maintaining_aem_forms
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: 1f765de2-1362-4318-9302-c5036e6fa7d6
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '1022'
+source-wordcount: '1021'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,7 @@ AEM forms管理员可以使用运行状况监视器检查Work Manager统计信�
  <tbody>
   <tr>
    <td><code> adobe.work-manager.queue-refill-interval</code></td>
-   <td><p>指定工作管理器在检查其队列中的新项目时使用的时间间隔（以毫秒为单位）。</p><p>此选项的值是一个整数。 默认值为 <code>1000</code> 毫秒（1秒）。 </p><p>如果异步调用的数量较少，则可以增加此值。 例如，您可以将其增加到2000到5000（2到5秒）之间的某个值。 </p><p>如果异步调用的数量很大，则默认值应就足够了，但如有必要，您可以使用较低的值。 过多地降低此值（例如，低于50，这会导致轮询频率为每秒20次）会导致系统产生大量开销。</p></td>
+   <td><p>指定工作管理器在检查其队列中的新项目时使用的时间间隔（以毫秒为单位）。</p><p>此选项的值是一个整数。 默认值为 <code>1000</code> 毫秒（1秒）。 </p><p>如果异步调用的数量较少，则可以增加此值。 例如，您可以将其增加到2000到5000（2-5秒）之间的某个值。 </p><p>如果异步调用的数量很大，则默认值应就足够了，但如有必要，您可以使用较低的值。 过多地降低此值（例如，低于50，这会导致轮询频率为每秒20次）会导致系统产生大量开销。</p></td>
   </tr>
   <tr>
    <td><code> adobe.workmanager.debug-mode-enabled</code></td>

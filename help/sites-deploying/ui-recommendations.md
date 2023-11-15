@@ -11,7 +11,7 @@ topic-tags: best-practices
 discoiquuid: 8f06d4b6-7d30-4ebc-9c6a-3bb8607a9be8
 docset: aem65
 exl-id: 7b71119a-ff58-47c0-aeef-a705ed8c40e0
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
 source-wordcount: '781'
 ht-degree: 0%
@@ -46,7 +46,7 @@ Adobe Experience Manager附带两个UI — 统一的Experience CloudUI（也称�
 
 ## 常规 {#general}
 
-在过去几年中，Adobe使用统一的用户界面更新了所有Adobe Experience Cloud解决方案。 整个Experience Cloud解决方案的用户都可以在如何使用和操作应用程序方面享受到一致的体验，这些模式都是通用的。 在每个版本中，Adobe都根据客户在各种解决方案中提供的反馈来改进其用户界面。
+在过去几年中，Adobe使用统一的用户界面更新了所有Adobe Experience Cloud解决方案。 整个Experience Cloud解决方案的用户都可以在如何使用和操作应用程序方面享受到一致的体验，这些模式都是通用的。 在每个版本中，Adobe都根据客户在各种解决方案中提供的反馈来优化其用户界面。
 
 Adobe Experience Manager（以前称为CQ5）的原始用户界面，在2008年引入，供运行版本5.0-5.6.1的客户使用，现在位于AEM 6.5中。这可保证客户可以更新到6.5版本，并受益于具有新功能的更新平台，同时继续使用相同的用户界面。
 

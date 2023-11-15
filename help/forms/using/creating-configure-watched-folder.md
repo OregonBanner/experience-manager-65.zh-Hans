@@ -1,17 +1,13 @@
 ---
 title: 创建或配置观察文件夹
-seo-title: Create or Configure a watched folder
 description: 了解如何创建或删除watched文件夹，或修改现有watched文件夹的属性。
-seo-description: Learn how to create or delete a watched folder, or modify the properties of an existing watched folder.
-uuid: 659d4d8c-99b8-40dd-b884-bfee4d476fe1
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
-discoiquuid: 0ce7b338-6686-49b3-b58b-e7ab6b670708
 exl-id: b15d8d3b-5e47-4c33-95fe-440fcf96be83
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '1820'
+source-wordcount: '1819'
 ht-degree: 0%
 
 ---
@@ -95,7 +91,7 @@ ht-degree: 0%
       * %m =分钟
       * %s =秒
       * %l =毫秒
-      * %R =随机数（介于0和9之间）
+      * %R =随机数（介于0-9之间）
       * %P =进程或作业标识
       * 例如，如果在2009年7月17日晚上8点，并且您指定C：/Test/WF0/failure/%Y/%M/%D/%H/，则结果文件夹为C：/Test/WF0/failure/2009/07/17/20。
       * 如果路径不是绝对路径而是相对路径，则会在观察文件夹内创建文件夹。 默认值为result/%Y/%M/%D/，它是watched文件夹内的Result文件夹。 有关文件模式的详细信息，请参见 [关于文件模式](/help/forms/using/admin-help/configuring-watched-folder-endpoints.md#about-file-patterns).

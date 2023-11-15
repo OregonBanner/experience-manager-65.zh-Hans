@@ -7,9 +7,9 @@ content-type: reference
 topic-tags: deploying
 docset: aem65
 exl-id: 3df0662a-0768-4b56-8b94-c517657b4bd9
-source-git-commit: e4e2e8b58c0283182b2fbd4262a4ef9b607dac26
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '1803'
+source-wordcount: '1804'
 ht-degree: 3%
 
 ---
@@ -285,7 +285,7 @@ AEM启动并自动将Web浏览器重定向到相应的页面（通常是登录�
 
 ![登录屏幕](assets/screen_shot_2019-04-08at83533am.png)
 
-登录后，您即可访问AEM。 有关详细信息，请参阅以下内容，具体取决于您的角色：
+登录后，您可以访问AEM。 有关详细信息，请参阅以下内容，具体取决于您的角色：
 
 * [创作](/help/sites-authoring/home.md)
 * [管理](/help/sites-administering/home.md)

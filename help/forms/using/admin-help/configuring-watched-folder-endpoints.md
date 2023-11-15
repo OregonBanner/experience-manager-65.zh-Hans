@@ -6,9 +6,9 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/managing_endpoints
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 exl-id: ec169a01-a113-47eb-8803-bd783ea2c943
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '7174'
+source-wordcount: '7173'
 ht-degree: 0%
 
 ---
@@ -192,7 +192,7 @@ Watched Folder服务处理端点的创建、更新和删除。 管理员创建�
 * %m =分钟
 * %s =秒
 * %l =毫秒
-* %R =随机数（介于0和9之间）
+* %R =随机数（介于0-9之间）
 * %P =进程或作业标识
 
 例如，如果是2009年7月17日晚上8点，并且您指定 `C:/Test/WF0/failure/%Y/%M/%D/%H/`，结果文件夹为 `C:/Test/WF0/failure/2009/07/17/20`.

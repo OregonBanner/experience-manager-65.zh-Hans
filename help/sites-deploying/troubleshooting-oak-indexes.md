@@ -1,17 +1,14 @@
 ---
 title: Oak索引疑难解答
-seo-title: Troubleshooting Oak Indexes
 description: 了解如何识别索引速度是否较慢，找到原因并解决问题。
-uuid: 6567ddae-128c-4302-b7e8-8befa66b1f43
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: deploying
-discoiquuid: ea70758f-6726-4634-bfb4-a957187baef0
 exl-id: 85981463-189c-4f50-9d21-1d2f734b960a
-source-git-commit: c7c32130a3257c14c98b52f9db31d80587d7993a
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '1473'
+source-wordcount: '1474'
 ht-degree: 1%
 
 ---
@@ -22,7 +19,7 @@ ht-degree: 1%
 
 AEM内部重新索引过程会收集存储库数据并将其存储在Oak索引中，以支持对内容的高性能查询。 在特殊情况下，这一过程可能会变得缓慢甚至停滞。 本页作为疑难解答指南，可帮助确定索引速度是否较慢，找到原因并解决问题。
 
-区分需要花费不适当的长时间重新索引与需要很长时间重新索引很重要，因为重新索引需要大量内容。 例如，为内容编制索引所需的时间会随着内容量的增加而扩展，因此大型生产存储库重新编制索引的时间比小型开发存储库长。
+区分需要花费不恰当的大量时间的重新索引与需要很长时间重新索引很重要，因为重新索引需要大量内容。 例如，为内容编制索引所需的时间会随着内容量的增加而扩展，因此大型生产存储库重新编制索引的时间比小型开发存储库长。
 
 请参阅 [有关查询和索引的最佳实践](/help/sites-deploying/best-practices-for-queries-and-indexing.md) 有关何时以及如何重新索引内容的更多信息。
 

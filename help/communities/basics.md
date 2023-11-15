@@ -1,18 +1,14 @@
 ---
 title: 社区组件基础知识
-seo-title: Communities Components Basics
 description: 在编辑模式下将社区功能添加到AEM站点并配置组件
-seo-description: Add Communities features to AEM sites in edit mode and configure components
-uuid: c017a7c5-40d1-4592-9317-96fd727dac86
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: authoring
 content-type: reference
-discoiquuid: 21714581-7645-4b47-a9b0-9f1424013240
 exl-id: eb5ce76a-bf28-4540-bc2d-3b5ecb8286f2
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '359'
+source-wordcount: '360'
 ht-degree: 2%
 
 ---

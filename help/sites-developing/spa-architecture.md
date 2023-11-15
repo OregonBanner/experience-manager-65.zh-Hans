@@ -7,9 +7,9 @@ topic-tags: spa
 content-type: reference
 docset: aem65
 exl-id: c1429889-e2ed-4e2f-a45f-33f8a6a52745
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '2055'
+source-wordcount: '2051'
 ht-degree: 6%
 
 ---
@@ -98,7 +98,7 @@ SPA应仅依赖于内容的动态渲染。 这是AEM获取并呈现内容结构�
 
 >[!NOTE]
 >
->虽然AEM支持所有模型，但仅通过实现第三个（从而遵循建议的） [AEM中的SPA开发原则](/help/sites-developing/spa-architecture.md#spa-development-principles-for-aem))内容作者能否在AEM中与自定义的SPA内容进行交互和编辑。
+>虽然所有模型在AEM中均受支持，但仅通过实施第三种（因此遵循建议） [AEM中的SPA开发原则](/help/sites-developing/spa-architecture.md#spa-development-principles-for-aem))内容作者可以在经过自定义后，在AEM中与和编辑SPA的内容。
 
 ## 将现有SPA迁移到AEM {#migrating-existing-spas-to-aem}
 

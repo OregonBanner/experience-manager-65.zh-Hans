@@ -1,18 +1,14 @@
 ---
 title: 管理项目
-seo-title: Managing Projects
 description: 通过“项目”，您可以将资源分组到一个实体中，以便在“项目”控制台中对其进行访问和管理，从而组织项目
-seo-description: Projects lets you organize your project by grouping resources into one entity which can be acessed and managed intheProjects console
-uuid: ac937582-181f-429b-9404-3c71d1241495
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: projects
 content-type: reference
-discoiquuid: fb354c72-debb-4fb6-9ccf-56ff5785c3ae
 exl-id: 62586c8e-dab4-4be9-a44a-2c072effe3c0
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '980'
+source-wordcount: '981'
 ht-degree: 22%
 
 ---
@@ -135,7 +131,7 @@ ht-degree: 22%
 
 ### 正在停用项目 {#making-projects-inactive-or-active}
 
-如果项目已完成，您可能希望将其标记为非活动状态，但仍希望保留有关该项目的信息。 [现在不显示不活动的项目](#viewing-active-inactive-projects) 默认情况下，在 **项目** 控制台。
+如果项目已完成，但您仍要保留有关该项目的信息，则可能需要将其标记为非活动状态。 [现在不显示不活动的项目](#viewing-active-inactive-projects) 默认情况下，在 **项目** 控制台。
 
 要使项目处于非活动状态，请执行以下步骤。
 

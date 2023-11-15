@@ -5,7 +5,7 @@ contentOwner: AG
 role: Architect, Admin
 feature: Developer Tools
 exl-id: 1313842c-18b1-4727-ba63-b454d0f5a2cc
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
 source-wordcount: '992'
 ht-degree: 0%
@@ -73,7 +73,7 @@ ht-degree: 0%
 
 Dispatcher与两个实体(外部世界和 [!DNL Experience Manager] 部署。 对于同时上载和下载操作，应将此数字除以2。 连接的外部存储使用单独的连接。
 
-此 [!DNL Experience Manager] 部署共享它与多个服务的1Gbps连接。 从网络拓扑的角度来看，它等同于与不同的服务共享单个通道。
+此 [!DNL Experience Manager] 部署与多个服务共享其1Gbps连接。 从网络拓扑的角度来看，它等同于与不同的服务共享单个通道。
 
 检查从客户端设备到 [!DNL Experience Manager] 部署时，最小的瓶颈似乎是10 Mbit企业防火墙瓶颈。 您可以在的大小计算器中使用以下值： [Assets大小调整指南](assets-sizing-guide.md) 以确定用户体验。
 

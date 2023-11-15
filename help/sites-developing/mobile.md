@@ -8,9 +8,9 @@ content-type: reference
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/develop/mobile/mobile
 exl-id: 21b2037a-685a-441d-aecd-865884253e03
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '3786'
+source-wordcount: '3787'
 ht-degree: 0%
 
 ---
@@ -170,7 +170,7 @@ AEM移动框架允许开发对发出请求的设备敏感的组件。 以下代�
 **移动仿真器的主要特性**
 
 * 设备组由一个或多个模拟器组成：设备组配置页面（例如，/etc/mobile/groups/touch）包含 `emulators` 属性位于 `jcr:content` 节点。
-注意：虽然同一模拟器可能属于多个设备组，但这不太合理。
+注意：虽然同一模拟器可能属于多个设备组，但这并没有多大意义。
 
 * 通过设备组的配置对话框， `emulators` 属性通过所需模拟器的路径进行设置。 例如：`/libs/wcm/mobile/components/emulators/iPhone4`。
 
