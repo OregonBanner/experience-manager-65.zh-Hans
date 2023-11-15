@@ -8,16 +8,16 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 6a3c69b5-6df6-4b8f-afa4-7d3e9dd458b5
 exl-id: f4ca5c11-e3ff-4da5-bc4a-fd7e0aefffb5
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 69a249e63e2e6b96ba08f9846baa3e91d42b865f
 workflow-type: tm+mt
-source-wordcount: '219'
-ht-degree: 69%
+source-wordcount: '221'
+ht-degree: 63%
 
 ---
 
 # 编辑页面时的键盘快捷键{#keyboard-shortcuts-when-editing-pages}
 
-在整个 AEM 环境中都可以使用各种键盘快捷键。一些可应用于编辑页面，另一些可应用于 [控制台的使用](/help/sites-authoring/keyboard-shortcuts.md).
+在整个 AEM 环境中都可以使用各种键盘快捷键。有些可应用于编辑页面，另一些可应用于 [使用控制台](/help/sites-authoring/keyboard-shortcuts.md).
 
 >[!NOTE]
 >
@@ -27,12 +27,12 @@ ht-degree: 69%
 
 | 位置 | 快捷键 | 描述 |
 |---|---|---|
-| 任何编辑窗口模式 | `Ctrl-Shift-m` | 在&#x200B;**预览**&#x200B;模式和当前选定的[模式](/help/sites-authoring/author-environment-tools.md#page-modes)</a>（例如，**编辑**、**布局**&#x200B;等）之间切换* |
+| 任何编辑窗口模式 | `Ctrl-Shift-m` | 在之间切换 **预览** 和当前选定的 [模式](/help/sites-authoring/author-environment-tools.md#page-modes)</a> (例如， **编辑**， **布局**，等等) |
 | **编辑**&#x200B;模式 | `Ctrl-z` | [撤消最后一次更改](/help/sites-authoring/editing-content.md#undoing-and-redoing-page-edits) |
 |  | `Ctrl-y` | [重做最后一次更改](/help/sites-authoring/editing-content.md#undoing-and-redoing-page-edits) |
 |  | `Ctrl-Click` | 选择多个段落 |
 |  | `Ctrl-c` | 复制所选段落 |
-|  | `Ctrl-x` | 剪切所选段落，（剪切的段落在粘贴之前不会在UI中消失） |
+|  | `Ctrl-x` | 剪切所选段落（剪切的段落在粘贴之前不会在UI中消失） |
 |  | `Ctrl-v` | 粘贴先前剪切或复制的段落 |
 |  | `Ctrl-Backspace` | 删除所选段落 |
 | **编辑**&#x200B;模式 - 富文本编辑器 | `Ctrl-b` | 粗体 |

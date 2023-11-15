@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: development-tools
 content-type: reference
 exl-id: efbba312-9fc8-4670-b8f1-d2a86162d075
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 69a249e63e2e6b96ba08f9846baa3e91d42b865f
 workflow-type: tm+mt
-source-wordcount: '2707'
+source-wordcount: '2709'
 ht-degree: 1%
 
 ---
@@ -944,4 +944,4 @@ Removed sync directory: /tmp/workspace/vltsync/jcr_root
 
 >[!NOTE]
 >
->VLT同步功能仅支持简单文件和文件夹，但会检测特殊的vault序列化文件（.content.xml、dialog.xml等），并且静默忽略它们。 因此，可以在默认的vlt签出中使用保险库同步。
+>VLT同步功能仅支持简单的文件和文件夹，但会检测特殊的vault序列化文件（.content.xml、dialog.xml等），并且静默地忽略它们。 因此，可以在默认的vlt签出中使用保险库同步。
