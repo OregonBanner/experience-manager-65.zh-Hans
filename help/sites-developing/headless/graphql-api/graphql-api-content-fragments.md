@@ -3,10 +3,10 @@ title: 用于内容片段的 AEM GraphQL API
 description: 了解如何在Adobe Experience Manager (AEM)中将内容片段与AEM GraphQL API用于Headless内容投放。
 feature: Content Fragments,GraphQL API
 exl-id: beae1f1f-0a76-4186-9e58-9cab8de4236d
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 5bfd8216c9d3540ac6d795d434dab5afb7bce309
 workflow-type: tm+mt
-source-wordcount: '4774'
-ht-degree: 62%
+source-wordcount: '4848'
+ht-degree: 60%
 
 ---
 
@@ -714,7 +714,28 @@ query {
 
 >[!NOTE]
 >
->为了符合 [Dispatcher 对可缓存文档的要求](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/troubleshooting/dispatcher-faq.html#how-does-the-dispatcher-return-documents%3F)，Dispatcher 将后缀 `.json` 添加到所有持久化查询 URL，以便能够缓存结果。
+>使用以下对象为持久查询启用Dispatcher缓存时 `Define CACHE_GRAPHQL_PERSISTED_QUERIES` 一个 `ETag` 标头将添加到Dispatcher的响应中。
+>
+>默认情况下， `ETag` 标头使用以下指令进行配置：
+>
+>```
+>FileETag MTime Size 
+>```
+>
+>但是，此设置可能导致在持久查询响应上使用时出现问题，因为它不考虑响应中的细微更改。
+>
+>实现个人 `ETag` 计算 *每个* 唯一的响应 `FileETag Digest` 必须在Dispatcher配置中使用设置：
+>
+>```xml
+><Directory />    
+>   ...    
+>   FileETag Digest
+></Directory> 
+>```
+
+>[!NOTE]
+>
+>要符合 [Dispatcher对可缓存文档的要求](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/troubleshooting/dispatcher-faq.html#how-does-the-dispatcher-return-documents%3F)，Dispatcher添加后缀 `.json` 到所有持久查询URL，以便可以缓存结果。
 >
 >在启用持久化查询缓存后，将通过重写规则添加此后缀。
 
