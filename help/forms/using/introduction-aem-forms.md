@@ -11,9 +11,9 @@ discoiquuid: a20383f2-f86a-45bf-a39e-725ee764503b
 docset: aem65
 feature: Adaptive Forms
 exl-id: e5533b4f-93b7-4ea9-a01d-fdf9528652c8
-source-git-commit: 41ef1b05e4082bb50b93ff6511542ed56a77497c
+source-git-commit: 31131af52ecb4f9c4caaf8e75e0a9213874b3a1e
 workflow-type: tm+mt
-source-wordcount: '953'
+source-wordcount: '963'
 ht-degree: 11%
 
 ---
@@ -39,8 +39,7 @@ AEM Forms提供了表单管理工具，这些工具不仅允许您管理自适�
 
 >[!NOTE]
 >
->中提供的AEM Forms功能，例如自适应Forms [AEM 6.5快速入门](/help/sites-deploying/deploy.md)仅供探索及评估之用。 对于生产使用，获得AEM Forms的有效许可证至关重要。
-
+>中提供的自适应Forms功能 [AEM 6.5快速入门](https://experienceleague.corp.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html)，仅供探索和评估之用。 对于生产使用，获取AEM Forms的有效许可证至关重要，因为Adaptive Forms功能需要适当的许可。
 
 ![AEM forms功能](do-not-localize/4th-draft.gif)
 
