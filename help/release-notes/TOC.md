@@ -7,10 +7,10 @@ breadcrumb-title: 发行说明
 user-guide-description: 在发行说明中了解AEM 6.5中的最新新增功能。
 feature: Release Information
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: f618dbaafbbcd1511ea2a678db398b4bcbfda366
+source-git-commit: f6069758853181f96376a77da8d46cc5228b9605
 workflow-type: tm+mt
-source-wordcount: '71'
-ht-degree: 43%
+source-wordcount: '76'
+ht-degree: 40%
 
 ---
 
@@ -41,5 +41,6 @@ ht-degree: 43%
    + [6.5.0](previous/ga.md)
 + [AEM Forms service pack安装说明](aem-forms-current-service-pack-installation-instructions.md)
 + [AEM Forms JEE修补程序安装程序](jee-patch-installer-65.md)
++ [AEM Forms Service Pack修补程序](/help/release-notes/aem-forms-hotfix.md)
 + [已弃用和已删除的功能](deprecated-removed-features.md)
 + [触屏UI功能状态](touch-ui-features-status.md)

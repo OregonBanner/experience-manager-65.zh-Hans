@@ -2,9 +2,9 @@
 title: 的发行说明 [!DNL Adobe Experience Manager] 6.5
 description: 查找版本信息、新增功能、安装操作说明以及的详细更改列表 [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 4
-source-git-commit: 31131af52ecb4f9c4caaf8e75e0a9213874b3a1e
+source-git-commit: c78d5f1d94ffb92a1e034b0ccb6131ac811d708f
 workflow-type: tm+mt
-source-wordcount: '3559'
+source-wordcount: '3530'
 ht-degree: 3%
 
 ---
@@ -462,17 +462,13 @@ To retrieve your runtime copy, Adobe recommends to synchronize the design-time c
 
 * 发布自适应表单时，其所有依赖项（包括策略）都会重新发布，即使尚未对它们进行任何修改也是如此。 (FORMS-10454)
 * 当用户选择在自适应表单中首次配置字段时，属性浏览器中不显示保存配置的选项。 选择在同一编辑器中配置自适应表单的某些其他字段可解决此问题。
-* 在自适应表单的指南容器中设置重定向URL后，内联签名将停止工作。 (FORMS-10493)
-* 所有记录文档(DoR)模板均无法发布。 仅发布基于区域设置的英文DoR模板及其关联的基于Forms的DoR模板。 (FORMS-10535)
+* 在自适应表单的指南容器中设置重定向URL后，内联签名将停止工作。 (FORMS-10493)要解决此问题，请下载并安装 [适用于6.5.18.0的修补程序](/help/release-notes/aem-forms-hotfix.md).
+* 所有记录文档(DoR)模板均无法发布。 仅发布基于区域设置的英文DoR模板及其关联的基于Forms的DoR模板。 (FORMS-10535)要解决此问题，请下载并安装 [适用于6.5.18.0的修补程序](/help/release-notes/aem-forms-hotfix.md).
+
 
 #### 交互式通信
 
-* 升级到AEM Service Pack 18后，无法在编辑模式下打开包含大型内联图像的交互式通信。 (FORMS-10578)要解决此问题，请执行以下步骤：
-
-   1. 下载 [修补程序 — FORMS-10578](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) 从SD链接。
-   1. 解压缩修补程序存档文件，以便获取Experience Manager包(.zip)和捆绑包(.jar)文件。
-   1. 通过包管理器上传并安装包(.zip)。
-   1. 打开配置管理器包 `https://server:host/system/console/bundles`，上传并安装捆绑包(.jar)。
+* 升级到AEM Service Pack 18后，无法在编辑模式下打开包含大型内联图像的交互式通信。 (FORMS-10578)要解决此问题，请下载并安装 [适用于6.5.18.0的修补程序](/help/release-notes/aem-forms-hotfix.md).
 
 ## 包含的OSGi包和内容包{#osgi-bundles-and-content-packages-included}
 
