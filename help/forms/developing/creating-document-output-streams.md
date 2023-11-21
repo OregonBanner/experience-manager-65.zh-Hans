@@ -7,7 +7,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 role: Developer
 exl-id: a521bfac-f417-4002-9c5c-8d7794d3eec7
-source-git-commit: e2a3470784beb04c2179958ac6cb98861acfaa71
+source-git-commit: 7d46ba0eaa73d9f7a67034ba81d7fa379aa0112c
 workflow-type: tm+mt
 source-wordcount: '18956'
 ht-degree: 0%
@@ -1806,7 +1806,7 @@ Output服务执行操作后，会返回用于指定操作是否成功的XML数�
 
 1. 包括项目文件”
 
-   在您的Java项目的类路径中包含客户端JAR文件，例如adobe-output-client.jar。.
+   在您的Java项目的类路径中包含客户端JAR文件，例如adobe-output-client.jar。
 
 1. 创建输出客户端对象
 

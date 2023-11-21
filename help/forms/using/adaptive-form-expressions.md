@@ -1,16 +1,12 @@
 ---
 title: 自适应表单表达式
-seo-title: Adaptive Form Expressions
 description: 使用自适应表单表达式可添加自动验证、计算并打开或关闭部分的可见性。
-seo-description: Use adaptive forms expressions to add automatic validation, calculation, and turn visibility of a section on or off.
-uuid: c274dce5-8b87-472f-bff5-53b246fa6584
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
-discoiquuid: 2fd2276e-cfe3-47ad-94c1-9c7af56b7a17
 docset: aem65
 feature: Adaptive Forms
 exl-id: 048bd9e8-ef34-40fb-9f46-73743d7b47c8
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 7d46ba0eaa73d9f7a67034ba81d7fa379aa0112c
 workflow-type: tm+mt
 source-wordcount: '2802'
 ht-degree: 2%
@@ -197,7 +193,7 @@ click表达式处理对按钮的单击事件执行的操作。 GuideBridge开箱
 
 ### 必填 {#required}
 
-要将组件设为必需，请在 **编辑** 对话框，您可以选择选项 **标题和文本>必填**. 您还可以添加适当的 **必需消息** （可选）以及。.
+要将组件设为必需，请在 **编辑** 对话框，您可以选择选项 **标题和文本>必填**. 您还可以添加适当的 **必需消息** （可选）以及。
 
 ### 验证模式 {#validation-patterns}
 

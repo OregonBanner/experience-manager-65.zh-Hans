@@ -2,9 +2,9 @@
 title: 优化 GraphQL 查询
 description: 了解在Adobe Experience Manager as a Cloud Service中筛选、分页和排序内容片段以进行Headless内容投放时，如何优化GraphQL查询。
 exl-id: 47d0570b-224e-4109-b94e-ccc369d7ac5f
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 7d46ba0eaa73d9f7a67034ba81d7fa379aa0112c
 workflow-type: tm+mt
-source-wordcount: '1964'
+source-wordcount: '1965'
 ht-degree: 58%
 
 ---

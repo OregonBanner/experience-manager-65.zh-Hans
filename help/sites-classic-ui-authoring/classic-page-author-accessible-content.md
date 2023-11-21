@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
 exl-id: 01c69aa9-2623-42dc-9e2d-62bc5e01cf0e
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: 7d46ba0eaa73d9f7a67034ba81d7fa379aa0112c
 workflow-type: tm+mt
-source-wordcount: '9152'
+source-wordcount: '9151'
 ht-degree: 58%
 
 ---
@@ -608,7 +608,7 @@ AEM 允许轻松地使用相应的 HTML 元素构建网页。在RTE（文本组�
 * 对比度（最小）：文本的可视呈现以及文本的图像至少要有 4.5:1 的对比度，以下内容除外：
 
    * 大文本：大号文本及其图像至少要有 3:1 的对比度。
-   * 附属内容：文本或文本的图像是未激活的用户界面组件的一部分，只是纯粹的装饰，对任何人都不可见，或者只是包含其他重要可视内容的图片的一部分，对于此类文本或文本的图像，没有对比度要求。
+   * 附属内容：文本或文本的图像是未激活的用户界面组件的一部分，只是纯粹的装饰或对任何人都不可见，或者只是包含其他重要可视内容的图片的一部分，对于此类文本或文本的图像，没有对比度要求。
    * 商标标志：文本是徽标或品牌名称的一部分，对于此类文本，没有最低对比度要求。
 
 #### 用途 – 对比度（最小）(1.4.3) {#purpose-contrast-minimum}

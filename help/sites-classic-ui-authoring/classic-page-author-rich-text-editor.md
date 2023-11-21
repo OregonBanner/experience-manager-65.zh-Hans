@@ -1,13 +1,11 @@
 ---
 title: 富文本编辑器
 description: 富文本编辑器是用于向AEM输入文本内容的基本构建块。
-uuid: 4bcce45a-e14f-41b7-8c6f-89d1e1bb595c
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
-discoiquuid: ccc0e434-8847-4e12-8a18-84b55fb2964b
 docset: aem65
 exl-id: 5623dcf4-bda9-4dee-ace3-5a1f6057e96c
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 7d46ba0eaa73d9f7a67034ba81d7fa379aa0112c
 workflow-type: tm+mt
 source-wordcount: '1835'
 ht-degree: 2%

@@ -7,7 +7,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 role: Developer
 exl-id: 036c35c1-1be7-4825-bbb6-ea025e49c6f6
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 7d46ba0eaa73d9f7a67034ba81d7fa379aa0112c
 workflow-type: tm+mt
 source-wordcount: '5393'
 ht-degree: 0%
@@ -827,7 +827,7 @@ A `com.adobe.idp.Document` 对象是Java可序列化的类型，因此可以通�
 
 C：/temp/input .pdf 文件必须位于客户端计算机上（而不是服务器计算机上）。 在客户端计算机上读取 URL，以及创建对象的位置 `com.adobe.idp.Document` 。
 
-**根据可从 URL 访问的内容创建文档**
+**根据可从 URL 中访问的内容创建文档**
 
 ```java
  //Create a Document object based on a java.net.URL object
