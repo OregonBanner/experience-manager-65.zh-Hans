@@ -7,9 +7,9 @@ geptopics: SG_AEMFORMS/categories/jee
 docset: aem65
 role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
-source-git-commit: b886336b5a66f16eb7b076aefc2ae326dedb2f52
+source-git-commit: 7ac81860e127f47aecfd948ddda34241627f457c
 workflow-type: tm+mt
-source-wordcount: '3695'
+source-wordcount: '3973'
 ht-degree: 1%
 
 ---
@@ -36,6 +36,22 @@ JEE服务器上的AEM Forms可以使用支持的操作系统、应用程序服�
 >
 >- 有关受支持的服务器平台的例外完整列表，请参见 [支持的服务器平台例外](../../forms/using/aem-forms-jee-supported-platforms.md#p-exceptions-to-supported-server-platforms-p).
 >- JEE上的AEM Forms仅支持所支持的操作系统和应用程序的英语、法语、德语和日语版本。
+
+### 升级和支持政策
+
+#### 完整安装程序
+
+- **对完整安装程序的升级支持**：随每6个AEM Service Pack版本发布一次完整安装程序。 例如，随6.5.12.0和6.5.18.0 SP发行版一起发行了完整的安装程序。 AEM Forms允许仅从最后两个完整安装程序进行直接升级。 例如，AEM Forms仅帮助从最后两个完整安装程序（即6.5.12.0和6.5.6.0）直接升级到版本6.5.18.0。如果您需要从以前的升级进行升级，则可以使用多级跳升级，以便首先转到受支持的完整安装程序版本，然后再转到最新版本。
+
+- **弃用和删除**：每个完整安装程序版本都会更新平台支持。 在完整安装程序版本期间在platform matrix中标记为已弃用的任何软件，都有权在后续的完整安装程序版本中从支持的平台矩阵中删除，这指示对软件的支持已终止。
+
+#### 服务包
+
+- **Service Pack范围**：Adobe使用最新的六个服务包中的任意一个，为AEM Forms环境提供技术支持。 如果您的当前版本早于最近六个Service Pack，Adobe强烈建议升级到最新版本以获得最佳性能、安全性和持续支持。
+
+- **修补程序安装程序指南**：在使用补丁安装程序进行更新时，关键是要验证基础的完整安装程序版本是否不超过两个发行版旧版本。 例如，在安装Service Pack 6.5.19.0期间，请确保基础完整安装程序版本为6.5.18.0或6.5.12.0。
+
+- **修补程序升级支持**：您可以继续升级到最新的Service Pack，直到还要升级到最新支持的平台。 例如，可以从Service Pack 6.5.12.0升级到6.5.19.0，但前提是转换到6.5.19.0支持的平台组合。
 
 ### 建议的配置 {#recommendedconfigurations}
 
