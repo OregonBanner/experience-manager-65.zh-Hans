@@ -7,10 +7,10 @@ topic-tags: adaptive_forms, author
 docset: aem65
 feature: Adaptive Forms
 exl-id: 9b4219b8-d5eb-4099-b205-d98d84e0c249
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: f2d8fd17787e756e9ee5a8fc6eaea726de6b66ba
 workflow-type: tm+mt
-source-wordcount: '1992'
-ht-degree: 8%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -303,11 +303,12 @@ if (slingRequest.getParameter("numericbox1614079614831").length() >= 5) {
 
 同样，您可以使用规则编辑器在自适应表单中包含用于验证验证码的自定义方法。
 
-### 添加自定义验证码服务 {#add-custom-captcha-service}
+<!--
+### Add custom CAPTCHA services {#add-custom-captcha-service}
 
-[!DNL Experience Manager Forms] 提供reCAPTCHA作为CAPTCHA服务。 但是，您可以添加自定义服务以在 **[!UICONTROL 验证码服务]** 下拉列表。
+[!DNL Experience Manager Forms] provides reCAPTCHA as the CAPTCHA service. However, you can add a custom service to display in the **[!UICONTROL CAPTCHA Service]** drop-down list.  
 
-以下是向自适应表单添加其他CAPTCHA服务的界面实现示例：
+The following is a sample implementation of the interface to add additional CAPTCHA service to your Adaptive Form:
 
 ```javascript
 package com.adobe.aemds.guide.service;
@@ -337,6 +338,6 @@ public interface GuideCaptchaValidator {
 }
 ```
 
-`captchaPropertyNodePath` 参考Sling存储库中验证码组件的资源路径。 此属性用于包含特定于CAPTCHA组件的详细信息。 例如， `captchaPropertyNodePath` 包含有关在CAPTCHA组件上配置的reCAPTCHA云配置信息。 云配置信息提供 **[!UICONTROL 站点密钥]** 和 **[!UICONTROL 密钥]** 用于实施reCAPTCHA服务的设置。
+`captchaPropertyNodePath` Refers to the resource path of the CAPTCHA component in the Sling repository. Use this property to include details specific to the CAPTCHA component. For example, `captchaPropertyNodePath` includes information for the reCAPTCHA cloud configuration configured on the CAPTCHA component. The cloud configuration information provides **[!UICONTROL Site Key]** and **[!UICONTROL Secret Key]** settings for implementing the reCAPTCHA service.
 
-`userResponseToken` 请参阅 `g_reCAPTCHA_response` 在表单中求解验证码后生成的验证码。
+`userResponseToken` Refers to the `g_reCAPTCHA_response` that gets generated after solving a CAPTCHA in a form. -->
