@@ -2,9 +2,9 @@
 title: Adobe Experience Manager 6.5版本中已弃用和已删除的功能。
 description: 特定于Adobe Experience Manager 6.5中已弃用和已删除的功能的发行说明。
 exl-id: d9b6140a-c37d-4b90-a60c-01f471d65621
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: bbd18486a77d7b46454aacff23147b38860bd895
 workflow-type: tm+mt
-source-wordcount: '1712'
+source-wordcount: '1741'
 ht-degree: 12%
 
 ---
@@ -31,6 +31,7 @@ Adobe 不断评估产品功能，以便随着时间的推移，使用更现代�
 
 | 区域 | 专题 | 替换 | 版本号 (SP) |
 |---|---|---|---|
+| Sites | 此 **AdobeAEM托管轮询配置** 服务： `com.day.cq.polling.importer.impl.ManagedPollConfigImpl` | 此 **AdobeAEM Analytics报表Sling导入程序** 服务。 请参阅连接到Adobe Analytics和创建框架 —  [配置导入间隔](/help/sites-administering/adobeanalytics-connect.md#configuring-the-import-interval) | 6.5.19.0 |
 | Screens | AEM中的ActiveMQ。 ActiveMQ用于两个AEM Publish实例之间的通信。 | Adobe建议客户使用负载平衡器。 |  |
 | [!DNL Sites] | **社交媒体状态**&#x200B;的体验片段属性。 |   | 6.5.11.0 |
 | [!DNL Sites] | 内容片段模板，用于创建简单的内容片段。 | 现已提供[基于模型的结构化内容片段](/help/assets/content-fragments/content-fragments-models.md)。 | 6.5.11.0 |
