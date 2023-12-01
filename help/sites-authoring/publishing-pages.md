@@ -2,9 +2,9 @@
 title: 发布内容页面
 description: 了解如何在Adobe Experience Manager 6.5中发布内容页面。
 exl-id: 61144bbe-6710-4cae-a63e-e708936ff360
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
 workflow-type: tm+mt
-source-wordcount: '1662'
+source-wordcount: '1660'
 ht-degree: 72%
 
 ---
@@ -60,7 +60,7 @@ ht-degree: 72%
    * 如果不包含要发布的引用，则将直接发布页面。
    * 如果页面包含需要发布的引用，则将在&#x200B;**发布**&#x200B;向导中列出该内容，从该向导中可以：
 
-      * 指定要与页面一起发布的资产/标记/等，然后使用 **Publish** 以完成该过程。
+      * 指定要与页面一起发布的资产或标记，然后使用 **Publish** 以完成该过程。
 
       * 使用&#x200B;**取消**&#x200B;中止操作。
 

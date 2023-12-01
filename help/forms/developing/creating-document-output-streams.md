@@ -7,7 +7,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 role: Developer
 exl-id: a521bfac-f417-4002-9c5c-8d7794d3eec7
-source-git-commit: 7d46ba0eaa73d9f7a67034ba81d7fa379aa0112c
+source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
 workflow-type: tm+mt
 source-wordcount: '18956'
 ht-degree: 0%
@@ -1744,7 +1744,7 @@ Output服务可以为XML数据源内的每个记录创建单独的文档，也�
 为Output服务设置以下运行时选项，以基于XML数据源成功创建多个文件：
 
 * **许多文件**：指定Output服务是创建单个文档还是多个文档。 您可以指定true或false。 要为XML数据源中的每个数据记录创建单独的文档，请指定true。
-* **文件URI**：指定Output服务生成的文件的位置。 例如，假设您指定了C:\\Adobe\forms\Loan.pdf。 在这种情况下，Output服务会创建一个名为Loan.pdf的文件，并将该文件放在C:\\Adobe\forms文件夹中。 当有多个文件时，其文件名为Loan0001.pdf、Loan0002.pdf、Loan0003.pdf等。 如果指定文件位置，则文件将放置在服务器上，而不是客户端计算机上。
+* **文件URI**：指定Output服务生成的文件的位置。 例如，假设您指定了C:\\Adobe\forms\Loan.pdf。 在这种情况下，Output服务会创建一个名为Loan.pdf的文件，并将该文件放在C:\\Adobe\forms文件夹中。 如果有多个文件，其文件名将为Loan0001.pdf、Loan0002.pdf、Loan0003.pdf等。 如果指定文件位置，则文件将放置在服务器上，而不是客户端计算机上。
 * **记录名称**：指定数据源中用于分隔数据记录的XML元素名称。 例如，在本节前面显示的示例XML数据源中，将调用用于分隔数据记录的XML元素 `LoanRecord`. (您可以设置记录级别，而不是设置记录名称运行时选项，方法是为其指定一个数字值，该值表示包含数据记录的元素级别。 但是，您只能设置“记录名称”或“记录级别”。 不能同时设置这两个值。)
 
 **设置渲染运行时选项**

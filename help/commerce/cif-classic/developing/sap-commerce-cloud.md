@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: platform
 exl-id: b3de1a4a-f334-44bd-addc-463433204c99
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
 workflow-type: tm+mt
-source-wordcount: '2287'
+source-wordcount: '2288'
 ht-degree: 0%
 
 ---
@@ -405,7 +405,7 @@ public class AxisFilter implements VariantFilter {
 
 * 该购物车属于 `CommerceSession:`
 
-   * 此 `CommerceSession` 执行添加/删除/等等。
+   * 此 `CommerceSession` 执行添加或删除等操作。
    * 此 `CommerceSession` 还会在购物车上执行各种计算。&quot;
 
 * 虽然不直接与购物车相关，但是 `CommerceSession` 还必须提供目录定价信息（因为它拥有定价）
@@ -495,7 +495,7 @@ public class AxisFilter implements VariantFilter {
 >
 >您可以实施送货选择器；例如：
 >
->`yourProject/commerce/components/shippingpicker`：
+>`yourProject/commerce/components/shippingpicker`:
 >
 >* 本质上，这可以是 `foundation/components/form/radio`，但回调到 `CommerceSession` 对于：
 >

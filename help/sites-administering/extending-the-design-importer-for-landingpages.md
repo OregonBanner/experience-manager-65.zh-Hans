@@ -7,7 +7,7 @@ topic-tags: personalization
 content-type: reference
 docset: aem65
 exl-id: 1b8c6075-13c6-4277-b726-8dea7991efec
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
 workflow-type: tm+mt
 source-wordcount: '3495'
 ht-degree: 0%
@@ -282,7 +282,7 @@ HTML标记，用于在导入的zip文件中包含点进组件。 此处href映�
 * 目标URL，支持第三方和AEM URL
 * 页面渲染选项（同一窗口、新窗口等）
 
-HTML标记，以在导入的zip文件中包含图形链接组件。 此处href映射到目标url，img src是渲染图像，“title”作为悬停文本等。
+HTML标记，以在导入的zip文件中包含图形链接组件。 此处href映射到目标url，img src是渲染图像，“title”作为悬停文本，依此类推。
 
 ```xml
 <div id="cqcanvas">

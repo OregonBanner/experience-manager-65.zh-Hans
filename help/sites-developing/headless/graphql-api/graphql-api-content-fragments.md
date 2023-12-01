@@ -3,9 +3,9 @@ title: 用于内容片段的 AEM GraphQL API
 description: 了解如何在Adobe Experience Manager (AEM)中将内容片段与AEM GraphQL API用于Headless内容投放。
 feature: Content Fragments,GraphQL API
 exl-id: beae1f1f-0a76-4186-9e58-9cab8de4236d
-source-git-commit: 5bfd8216c9d3540ac6d795d434dab5afb7bce309
+source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
 workflow-type: tm+mt
-source-wordcount: '4848'
+source-wordcount: '4847'
 ht-degree: 60%
 
 ---
@@ -554,7 +554,7 @@ query GetAdventureByType($includePrice: Boolean!) {
    * 列表中的第一个字段定义主要排序顺序
       * 如果主要排序标准的两个值相等，则使用第二个字段
       * 如果前两个标准相等，则使用第三个字段，依此类推。
-   * 点分符号，即field1.subfield.subfield等……
+   * 点状记号， `field1.subfield.subfield`，等等。
 * 带有可选的订单方向
    * ASC（升序）或 DESC（降序）；作为默认 ASC 应用
    * 可以按字段指定方向；这种能力意味着您可以对一个字段按升序排序，对另一个字段按降序排序（名称、名字DESC）

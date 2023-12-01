@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
 exl-id: 01c69aa9-2623-42dc-9e2d-62bc5e01cf0e
-source-git-commit: 7d46ba0eaa73d9f7a67034ba81d7fa379aa0112c
+source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
 workflow-type: tm+mt
-source-wordcount: '9151'
+source-wordcount: '9148'
 ht-degree: 58%
 
 ---
@@ -579,15 +579,15 @@ AEM 允许轻松地使用相应的 HTML 元素构建网页。在RTE（文本组�
    <td><p><strong>可用性</strong></p> </td>
   </tr>
   <tr>
-   <td><p>星期二3月16日<sup>th</sup></p> </td>
+   <td><p>3月16日，星期二</p> </td>
    <td><p>可用名额</p> </td>
   </tr>
   <tr>
-   <td><p>星期三3月17日<sup>th</p> </td>
+   <td><p>3月17日，星期三</p> </td>
    <td><p>可用名额</p> </td>
   </tr>
   <tr>
-   <td><p>星期四3月18日<sup>th</sup></p> </td>
+   <td><p>3月18日，星期四</p> </td>
    <td><p>已售出</p> </td>
   </tr>
  </tbody>

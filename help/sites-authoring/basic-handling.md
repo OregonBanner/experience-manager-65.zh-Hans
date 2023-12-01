@@ -7,7 +7,7 @@ topic-tags: introduction
 content-type: reference
 docset: aem65
 exl-id: ef1a3997-feb4-4cb0-9396-c8335b69bb10
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
 workflow-type: tm+mt
 source-wordcount: '2987'
 ht-degree: 49%
@@ -401,7 +401,7 @@ ht-degree: 49%
 
 列视图允许通过一系列的层叠列，对内容树进行可视化导航。通过此视图，可以查看和遍历您网站的树结构。
 
-选择最左列的资源会在右侧的列中显示子资源。 在右列中选择资源，会在右侧的另一列中显示子资源，依此类推。
+选择最左列的资源会在右侧的列中显示子资源。 在右列中选择资源，会在右列的另一列中显示子资源，依此类推。
 
 * 您可以通过点按或单击资源名称或资源名称右侧的V形标记在树中向上和向下导航。
 

@@ -5,7 +5,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 feature: Adaptive Forms
 exl-id: 5c75ce70-983e-4431-a13f-2c4c219e8dde
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
 workflow-type: tm+mt
 source-wordcount: '4725'
 ht-degree: 1%

@@ -7,7 +7,7 @@ topic-tags: integration
 content-type: reference
 docset: aem65
 exl-id: b5f3d3a6-39c0-4aa5-8562-3cc6fa2b9e46
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
 workflow-type: tm+mt
 source-wordcount: '6087'
 ht-degree: 0%
@@ -106,7 +106,7 @@ AEM内容Portlet允许您在门户中显示AEM内容。 Portlet位于 `/crx-quic
  <tbody>
   <tr>
    <td>start路径</td>
-   <td><p>这是Portlet的开始路径：它定义最初显示的内容。</p> <p><strong>重要</strong>AEM ：如果Portlet配置为连接到在不同于<strong> /</strong>，您需要启用该力 <strong>CQUrlInfo</strong> 在这些AEM实例的Html库管理器配置中（例如，通过Felix Webconsole），或编辑将不起作用，并且不会显示首选项对话框。</p> </td>
+   <td><p>这是Portlet的开始路径：它定义最初显示的内容。</p> <p><strong>重要</strong>：如果Portlet配置为连接到在上下文路径上运行的AEM创作和发布实例，该上下文路径不是<strong> /</strong>，您需要启用该力 <strong>CQUrlInfo</strong> 在这些AEM实例的Html库管理器配置中（例如，通过Felix Webconsole），或编辑将不起作用，并且不会显示首选项对话框。</p> </td>
   </tr>
   <tr>
    <td>html选择器</td>
@@ -149,7 +149,7 @@ AEM内容Portlet允许您在门户中显示AEM内容。 Portlet位于 `/crx-quic
 
 为了支持自动部署和配置预配， AEM content portlet具有内置的配置支持，它尝试从提供给portlet应用程序的类路径中读取配置。
 
-启动时，系统属性 **com.day.cq.portet.config** 读取以检测当前环境。 通常，此属性的值类似于 **开发**， **prod**， **测试** 等等。 如果未设置环境，则不会读取任何配置。
+启动时，系统属性 **com.day.cq.portet.config** 读取以检测当前环境。 通常，此属性的值类似于 **开发**， **prod**， **测试**，等等。 如果未设置环境，则不会读取任何配置。
 
 如果设置了环境，则会在* *的类路径中搜索配置文件&#x200B;**com/day/cq/portlet/{env}.config** 位置 **环境** 替换为环境的实际值。 此文件应列出此环境的所有配置文件。 这些文件将相对于配置文件的位置进行搜索。 例如，如果文件包含行 `my.service.xml,` 此文件是从的类路径中读取的 `com/day/cq/portlet/my.service.config.` 文件的名称由服务的持久性ID组成，后跟有 **.config**. 在上一个示例中，持久性ID是 **my.service**. 配置文件的格式，是Apache Sling OSGi安装程序使用的格式。
 
@@ -501,7 +501,7 @@ Portlet的工具栏基本上有两种视图状态。 每个视图和相关的按
 
 | 占位符字符串 | 描述 |
 |---|---|
-| {name} | 按钮的名称，例如**作者、返回**刷新等等。 |
+| {name} | 按钮的名称，例如，**作者，上一步，刷新**，等等。 |
 | {id} | 按钮的CSS id。 |
 | {url} | 按钮目标的URL。 |
 | {text} | 按钮的标签。 |
@@ -762,7 +762,7 @@ AEM快速入门JAR文件包含Portlet组件文件。 要获取文件(cq-portlet-
 
    >[!NOTE]
    >
-   >如果Portlet配置为连接到在上下文路径上运行的AEM创作和发布实例，而上下文路径不是**/**，则需要启用强制 **CQUrlInfo** 在这些AEM实例的Html库管理器配置中（例如，通过Felix Webconsole），或编辑将不起作用，并且不会显示首选项对话框。
+   >如果将portlet配置为连接到在上下文路径上运行的AEM创作和发布实例，该上下文路径不是 **/**，您需要启用该力 **CQUrlInfo** 在这些AEM实例的Html库管理器配置中（例如，通过Felix Webconsole），或编辑将不起作用，并且不会显示首选项对话框。
 
 1. 将配置更改保存在应用程序服务器中。
 

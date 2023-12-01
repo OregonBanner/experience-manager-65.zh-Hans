@@ -5,7 +5,7 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 exl-id: f837a2b3-4650-4261-84c6-291bb2a46dc7
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
 workflow-type: tm+mt
 source-wordcount: '2115'
 ht-degree: 2%
@@ -233,7 +233,7 @@ ht-degree: 2%
    <td>它包含用于任务的服务的标题。<br /> </td>
   </tr>
   <tr>
-   <td>状态<br /> </td>
+   <td>status<br /> </td>
    <td>F</td>
    <td>1 =已创建（从起始点创建任务。）<br /> 2 =创建并保存（从起始点创建并保存任务。）<br /> 3 =已分配（任务在流程启动后分配给用户。）<br /> 4 =已分配和保存（任务已分配和保存。）<br /> 100 =已完成（任务已完成。）<br /> 101 =已截止（任务已达到截止日期。）<br /> 102 =已终止<br /> </td>
   </tr>

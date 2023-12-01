@@ -1,16 +1,12 @@
 ---
 title: 查看和了解AEM Forms analytics报表
-seo-title: View and understand AEM Forms analytics reports
 description: AEM Forms与Adobe Analytics集成，并为您提供有关已发布自适应表单的摘要和详细分析。
-seo-description: AEM Forms integrates with Adobe Analytics and provides you summary and detailed analytics about your published adaptive forms.
-uuid: b15ba5f3-aea7-40f5-893e-aaf3834cbc33
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: integrations
-discoiquuid: 3690fa80-6332-4df8-afea-77b5490fe0d1
 docset: aem65
 exl-id: c5a4e6f6-f331-41e9-a0a9-51a30df6e2cd
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
 workflow-type: tm+mt
 source-wordcount: '1049'
 ht-degree: 2%
@@ -40,7 +36,7 @@ AEM Forms中的分析功能作为AEM Forms附加组件包的一部分提供。 �
 * 2表示保存
 * 1获取帮助
 * 每个验证错误为1
-* 1表示表单演绎版+ 1表示默认面板访问+ 1表示默认第1个字段访问
+* 1表示表单演绎版+ 1表示默认面板访问+ 1表示默认第一个字段访问
 * 2表示表单放弃
 
 >[!NOTE]

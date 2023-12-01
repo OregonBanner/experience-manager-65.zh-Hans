@@ -1,18 +1,15 @@
 ---
 title: 文档管理服务（已弃用）Java API快速入门(SOAP)
-seo-title: Document Management Service (Deprecated)Java API Quick Start(SOAP)
 description: 文档管理服务（已弃用）Java API快速入门(SOAP)
-uuid: 967c282a-ccde-4489-a4d5-53c6a1a0cac0
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
-discoiquuid: 9cffdb77-c8a4-4a15-b64f-1d3aadaa60c7
 role: Developer
 exl-id: 38a90957-bdde-4f38-9edd-c59522e5f525
-source-git-commit: c4cd9a61a226ace2a72d60b5b7b7432de12cb873
+source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
 workflow-type: tm+mt
-source-wordcount: '640'
+source-wordcount: '639'
 ht-degree: 0%
 
 ---
