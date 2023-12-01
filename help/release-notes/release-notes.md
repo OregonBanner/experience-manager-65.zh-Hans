@@ -3,10 +3,10 @@ title: 的发行说明 [!DNL Adobe Experience Manager] 6.5
 description: 查找版本信息、新增功能、安装操作说明以及的详细更改列表 [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 4
 exl-id: cac14ac1-9cda-46ae-8aa3-94674bb79157
-source-git-commit: 8d06457241919095fd9802f69df426a1cc6851da
+source-git-commit: f8f82ad5805095f331432471b614225f761e645c
 workflow-type: tm+mt
-source-wordcount: '3675'
-ht-degree: 4%
+source-wordcount: '3530'
+ht-degree: 3%
 
 ---
 
@@ -38,23 +38,12 @@ ht-degree: 4%
 
 * _REVIEWERS: WHAT ARE THE KEY FEATURES AND ENHANCEMENTS YOU WANT TO HIGHLIGHT IN THIS RELEASE?_ -->
 
+**主要功能和增强功能**
+
 此版本中的某些主要功能和增强功能包括：
 
-**关键功能**
-
-* Dynamic Media的Assets - [Dynamic Media中支持视频的多字幕和多音频轨道](/help/assets/video.md#about-msma) — 您现在可以轻松地将多个字幕和多个音轨添加到主视频中。 此功能意味着全球观众都能看懂您的视频。只需自定义一个主视频，即可发布到多种语言的全球观众，并遵循不同地区的辅助功能准则。此外，作者从用户界面中的一个选项卡即可管理字幕和音轨。
-
-* 资源 — 现在，您可以在搜索结果中导航到包含资源的文件夹位置，以便执行各种资源管理任务。 (ASSETS-23182)
-
-**关键增强功能**
-
-* 内容片段中的Sites Polaris选取器改进了性能。 (SITES-14092)
-
 * 允许站点页面编辑器/图像组件用户从远程AssetsCloud Service引用资源。 (SITES-13448和SITES-13433)
-
-* 要在“列表”视图中快速查找项目（系统中可能有许多项目），Adobe现在支持服务器端排序。 项目节点在用户界面中呈现之前，会根据用户选择的列在后端进行排序。 (NPR-41027)
-
-* AEM 6.5.19.0支持MongoDB 5.0到6.0。
+* AEM现在支持服务器端排序，从而加快列表视图中的项目导航速度。 项目节点在显示在界面中之前根据用户选择的列排序。
 
 **已弃用功能**
 
@@ -292,7 +281,7 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->在 [AEM 6.5 快速入门](https://experienceleague.corp.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html)中谈及的自适应表单功能旨在仅作探索和评估用途。由于自适应表单功能需要适当的许可，因此必须获得 AEM Forms 的有效许可证才能作生产用途。
+>在 [AEM 6.5 快速入门](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html)中谈及的自适应表单功能旨在仅作探索和评估用途。由于自适应表单功能需要适当的许可，因此必须获得 AEM Forms 的有效许可证才能作生产用途。
 
 ### 安装用于Experience Manager内容片段的GraphQL索引包{#install-aem-graphql-index-add-on-package}
 
@@ -458,7 +447,7 @@ UberJar用于 [!DNL Experience Manager] 6.5.19.0可从以下网站获取： [Mav
 
 #### 安装servlet片段(AEM Service Pack 6.5.14.0或更低版本)
 
-* 如果您要升级到AEM Service Pack 6.5.15.0或更高版本，并且AEM实例在Tomcat 8.5.88上运行，则必须安装servlet片段 *早于* 将继续安装Service Pack 6.5.15.0或更高版本。
+* 如果您要升级到AEM Service Pack 6.5.15.0或更高版本，并且AEM实例在Tomcat 8.5.88上运行，则必须安装servlet片段 *早于* 请继续安装Service Pack 6.5.15.0或更高版本。
 * 必须为所有应用程序服务器(在JBoss® EAP 7.4.0上运行的除外)安装servlet片段。
 
 **安装servlet片段：**
@@ -484,7 +473,7 @@ UberJar用于 [!DNL Experience Manager] 6.5.19.0可从以下网站获取： [Mav
 
 #### 交互式通信
 
-* 升级到AEM Service Pack 18后，无法在编辑模式下打开包含大型内联图像的交互式通信。 (FORMS-10578)要解决此问题，请下载并安装 [适用于6.5.18.0的修补程序](/help/release-notes/aem-forms-hotfix.md).
+* 升级到AEM Service Pack 18后，无法在编辑模式下打开包含大型内联图像的交互式通信。 (FORMS-10578)要解决此问题，请安装 [适用于6.5.18.0的修补程序](/help/release-notes/aem-forms-hotfix.md).
 
 ## 包含的OSGi包和内容包{#osgi-bundles-and-content-packages-included}
 
