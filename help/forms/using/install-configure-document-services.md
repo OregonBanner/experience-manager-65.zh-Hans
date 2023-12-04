@@ -4,10 +4,10 @@ description: 安装AEM Forms文档服务以创建、汇编、分发、存档PDF�
 topic-tags: installing
 role: Admin
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 03ed3606e89d87bf2f95b56a1eeb6b7dc4bec13a
 workflow-type: tm+mt
-source-wordcount: '5512'
-ht-degree: 2%
+source-wordcount: '5521'
+ht-degree: 1%
 
 ---
 
@@ -30,7 +30,7 @@ AEM Forms提供一套OSGi服务来完成不同的文档级别操作，例如，�
 
 * **输出服务：** 使您能够创建不同格式的文档，包括PDF、激光打印机格式和标签打印机格式。 激光打印机格式为PostScript和打印机控制语言(PCL)。 有关更多信息，请参阅 [输出服务](/help/forms/using/output-service.md).
 
-* **PDF Generator服务：** PDF Generator服务提供用于将本机文件格式转换为PDF的API。 它还会将PDF转换为其他文件格式并优化PDF文档的大小。 有关更多信息，请参阅 [PDF Generator服务](aem-document-services-programmatically.md#pdfgeneratorservice).
+* **PDF Generator服务：** PDF Generator服务提供将本机文件格式转换为PDF的API。 它还会将PDF转换为其他文件格式并优化PDF文档的大小。 有关更多信息，请参阅 [PDF Generator服务](aem-document-services-programmatically.md#pdfgeneratorservice).
 
 * **Reader扩展服务：** 通过扩展Adobe Reader的功能（赋予额外的使用权限），您的组织可以轻松共享交互式PDF文档。 该服务激活在使用Adobe Reader打开PDF文档时不可用的功能，例如向文档添加注释、填写表单和保存文档。 有关更多信息，请参阅 [Reader扩展服务](/help/forms/using/overview-aem-document-services.md#reader-extension-service).
 
@@ -315,7 +315,7 @@ AEM Forms附加组件包是部署在AEM上的应用程序。 通常，您只需�
 
    1. Microsoft®建议在修改注册表之前对其进行备份。 有关详细步骤，请参阅 [如何在Windows中备份和还原注册表](https://support.microsoft.com/en-us/help/322756).
    1. 打开Microsoft® Windows注册表编辑器。 要打开注册表编辑器，请转到“开始”>“运行”，键入regedit ，然后单击“确定”。
-   1. 导航到 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\policies\system\`。确保EnableLUA的值设置为0（零）。
+   1. 导航到 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\policies\system\`. 确保EnableLUA的值设置为0（零）。
    1. 确保值 **EnableLUA** 设置为0（零）。 如果该值不为0，则将该值更改为0。 关闭注册表编辑器。
 
 1. 重新启动计算机。
@@ -370,7 +370,7 @@ AEM Forms附加组件包是部署在AEM上的应用程序。 该资源包中包�
    1. 选择 **[!UICONTROL Forms]** 从 **[!UICONTROL 解决方案]** 下拉列表。
    2. 选择包的版本和类型。 您也可以使用 **[!UICONTROL 搜索下载]** 用于筛选结果的选项。
 1. 点按适用于您的操作系统的包名称，然后选择 **[!UICONTROL 接受EULA条款]**，然后点击 **[!UICONTROL 下载]**.
-1. 打开[包管理器](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html)，并单击&#x200B;**[!UICONTROL 上传包]**&#x200B;以上传包。
+1. 打开 [包管理器](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html)  并单击 **[!UICONTROL 上传包]** 以上传包。
 1. 选择包并单击 **[!UICONTROL 安装]**.
 
    您还可以通过中列出的直接链接下载包 [AEM Forms版本](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) 文章。
@@ -445,12 +445,12 @@ AEM Forms附加组件包是部署在AEM上的应用程序。 该资源包中包�
   <tr>
    <td>PDFG 清理扫描秒数</td>
    <td>执行转换后操作所需的秒数。<br /> </td>
-   <td>3600 秒</td>
+   <td>3600秒</td>
   </tr>
   <tr>
    <td>作业盗取秒数</td>
    <td>允许PDF Generator服务运行转换的持续时间。 确保“作业过期时间（秒）”的值大于“PDFG清理扫描时间（秒）”值。</td>
-   <td>7200 秒</td>
+   <td>7200秒</td>
   </tr>
  </tbody>
 </table>
@@ -503,7 +503,7 @@ DocAssurance服务可以对PDF文档应用使用权限。 要对PDF文档应用�
 
 * 证书附带的私钥密码。
 
-* 私钥别名. 您可以执行Java keytool命令以查看私钥别名：
+* 私钥别名。 您可以执行Java keytool命令以查看私钥别名：
   `keytool -list -v -keystore [keystore-file] -storetype pkcs12`
 
 * Keystore文件密码。 如果您使用Adobe的Reader扩展证书，则Keystore文件密码始终与Private Key密码相同。
@@ -591,7 +591,7 @@ Assembler服务依赖于Reader扩展服务、签名服务、Forms服务和输出
    >
    * 如果系统就绪工具报告pdfgen.api文件在Acrobat插件文件夹中不可用，请从 `[extracted-adobe-aemfd-pdfg-common-pkg]\jcr_root\libs\fd\pdfg\tools\adobe-aemfd-pdfg-utilities-[version]\plugins\x86_win32` 目录到 `[Acrobat_root]\Acrobat\plug_ins` 目录。
 
-1. 导航到 `[Path_of_reports_folder]`。打开SystemReadinessTool.html文件。 验证报告并修复上述问题。
+1. 导航到 `[Path_of_reports_folder]`. 打开SystemReadinessTool.html文件。 验证报告并修复上述问题。
 
 ### 配置SRT工具的选项 {#srt-configuration}
 
@@ -668,6 +668,10 @@ Assembler服务依赖于Reader扩展服务、签名服务、Forms服务和输出
 * 如果安装OpenOffice时出现问题，请确保 [32位库](#extrarequirements) 现已提供OpenOffice安装所必需的。
 
 +++
+
++++Microsoft Office 2019未在Microsoft Windows Server 2019上运行
+
+* 确保您与AEM服务器没有任何活动的远程连接。
 
 +++HTML到PDF的转换问题
 
@@ -787,8 +791,23 @@ Assembler服务依赖于Reader扩展服务、签名服务、Forms服务和输出
 
 *来自主转换器的错误消息： ALC-PDG-015-003 — 系统无法打开输入文件。 再次提交文件或联系系统管理员。*
 
-要解决此问题，请参阅 [无法在Windows Server上将Word或Excel文件转换为PDF](/help/forms/using/disable-uac-for-pdfgconfiguration.md).
+要解决这些问题，请参阅 [无法在Windows Server上将Word或Excel文件转换为PDF](/help/forms/using/disable-uac-for-pdfgconfiguration.md).
 
++++ 无法在Windows Server 2019上将Excel文件转换为PDF
+
+在Microsoft Windows Server 2019上将Microsoft Excel 2019转换为PDF时，必须确保以下各项：
+
+* 使用PDF Generator服务时，Windows计算机不应与AEM服务器（Windows RDP会话）有任何活动的远程连接。
+* 默认打印机必须设置为Adobe PDF。
+
+>[!NOTE]
+* 对于Apple macOS和Ubuntu操作系统，您无需配置上述设置。
+
++++ 无法将XPS文件转换为PDF
+
+要解决此问题， [在Windows上创建特定于功能的注册表项](https://helpx.adobe.com/in/acrobat/kb/unable-convert-xps-to-pdfs.html).
+
++++
 
 ## 后续步骤 {#next-steps}
 
