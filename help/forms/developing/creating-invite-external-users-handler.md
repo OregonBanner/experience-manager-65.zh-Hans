@@ -3,9 +3,9 @@ title: 创建“邀请外部用户”处理程序
 description: 了解如何创建邀请外部用户处理程序。 它允许Rights Management服务邀请外部用户成为Rights Management用户。
 role: Developer
 exl-id: b0416716-dcc9-4f80-986a-b9660a7c8f6b
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1132'
+source-wordcount: '1126'
 ht-degree: 0%
 
 ---
@@ -170,7 +170,7 @@ public class InviteExternalUsersSample implements InvitedUserProvider
 
 ## 为授权处理程序定义组件XML文件 {#define-component-xml-authorization-handler}
 
-必须定义组件XML文件才能部署邀请外部用户处理程序组件。 每个组件都存在一个组件XML文件，该文件提供了有关该组件的元数据。
+查找组件XML文件以部署Invite外部用户处理程序组件。 每个组件都存在一个组件XML文件，该文件提供了有关该组件的元数据。
 
 以下各项 `component.xml` 文件用于邀请外部用户处理程序。 请注意，服务名称为 `InviteExternalUsersSample` 并且此服务公开的操作名为 `invitedUser`. 输入参数为 `java.util.List` 实例且输出值是 `com.adobe.edc.server.spi.esrp.InvitedUserProviderResult` 实例。
 
@@ -203,7 +203,7 @@ public class InviteExternalUsersSample implements InvitedUserProvider
 
 ## 正在打包邀请外部用户处理程序 {#packaging-invite-external-users-handler}
 
-要将邀请外部用户处理程序部署到AEM Forms，必须将Java项目打包到JAR文件中。 必须确保邀请外部用户处理程序的业务逻辑所依赖的外部JAR文件，例如 `edc-server-spi.jar` 和 `adobe-rightsmanagement-client.jar` 文件也包含在JAR文件中。 另外，组件XML文件必须存在。 此 `component.xml` 文件和外部JAR文件必须位于JAR文件的根目录下。
+要将邀请外部用户处理程序部署到AEM Forms，必须将Java项目打包到JAR文件中。 确保邀请外部用户处理程序的业务逻辑所依赖的外部JAR文件，例如 `edc-server-spi.jar` 和 `adobe-rightsmanagement-client.jar` 文件也包含在JAR文件中。 另外，组件XML文件必须存在。 此 `component.xml` 文件和外部JAR文件必须位于JAR文件的根目录下。
 
 >[!NOTE]
 >
@@ -215,7 +215,7 @@ public class InviteExternalUsersSample implements InvitedUserProvider
 
 A.组件所需的外部JAR文件B. JAVA文件
 
-必须将邀请外部用户处理程序打包到JAR文件中。 在上图中，请注意列出了.JAVA文件。 打包到JAR文件后，还必须指定相应的.CLASS文件。 如果没有.CLASS文件，授权处理程序将无法工作。
+将邀请外部用户处理程序打包到JAR文件中。 在上图中，请注意列出了.JAVA文件。 打包到JAR文件后，还必须指定相应的.CLASS文件。 如果没有.CLASS文件，授权处理程序将无法工作。
 
 >[!NOTE]
 >
@@ -239,7 +239,7 @@ A.组件所需的外部JAR文件B. JAVA文件
 1. 在管理控制台主页中，单击 **[!UICONTROL 设置]** > **[!UICONTROL User Management]** > **[!UICONTROL 域管理]**.
 1. 单击 **[!UICONTROL 新建本地域]**. 在以下页面中，创建一个名称和标识符值为 `EDC_EXTERNAL_REGISTERED`. 保存更改。
 1. 在管理控制台主页中，单击 **[!UICONTROL 服务]** > **[!UICONTROL Rights Management]** > **[!UICONTROL 受邀用户和本地用户]**. 此 **[!UICONTROL 添加受邀用户]** 页面。
-1. 输入电子邮件地址（由于当前的邀请外部用户处理程序实际上并不发送电子邮件，因此电子邮件地址不一定有效）。 单击&#x200B;**[!UICONTROL 确定]**。用户受邀加入系统。
+1. 输入电子邮件地址（由于当前的邀请外部用户处理程序实际上并不发送电子邮件，因此电子邮件地址不一定有效）。 单击 **[!UICONTROL 确定]**. 用户受邀加入系统。
 1. 在管理控制台主页中，单击 **[!UICONTROL 设置]** > **[!UICONTROL User Management]** > **[!UICONTROL 用户和组]**.
 1. 在 **[!UICONTROL 查找]** 字段中，输入您指定的电子邮件地址。 单击 **[!UICONTROL 查找]**. 您邀请的用户将作为用户出现在 `EDC_EXTERNAL_REGISTERED` 域。
 

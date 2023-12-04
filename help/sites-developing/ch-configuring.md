@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
 exl-id: 61208bd5-475b-40be-ba00-31bbbc952adf
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1788'
-ht-degree: 1%
+source-wordcount: '1726'
+ht-degree: 0%
 
 ---
 
@@ -28,10 +28,10 @@ There are two options to disable ContextHub:
 
 * Edit the ContextHub's configuration and check the option **Disable ContextHub**
 
-    1. In the rail click or tap **Tools &gt; Sites &gt; ContextHub**
-    1. Click or tap the appropriate **Configuration Container**
-    1. Select the **ContextHub Configuration** and click or tap **Edit Selected Element**
-    1. Click or tap **Disable ContextHub** and click or tap **Save**
+    1. In the rail click **Tools &gt; Sites &gt; ContextHub**
+    1. Click the appropriate **Configuration Container**
+    1. Select the **ContextHub Configuration** and click **Edit Selected Element**
+    1. Click **Disable ContextHub** and click **Save**
 
 or
 -->
@@ -74,10 +74,10 @@ UI模式在工具栏左侧显示为一系列图标。 选中后，UI模式的模
 
 添加UI模式以分组相关的ContextHub模块。 在创建UI模式时，您需要提供显示在ContextHub工具栏中的标题和图标。
 
-1. 在Experience Manager边栏中，单击或点按工具>站点>上下文中心。
-1. 单击或点按默认配置容器。
-1. 单击或点按Context Hub配置。
-1. 单击或点按创建按钮，然后单击或点按Context Hub UI模式。
+1. 在Experience Manager边栏中，单击工具>站点>上下文中心。
+1. 单击默认配置容器。
+1. 单击上下文中心配置。
+1. 单击创建按钮，然后单击Context Hub UI模式。
 
    ![chlimage_1-320](assets/chlimage_1-320.png)
 
@@ -87,7 +87,7 @@ UI模式在工具栏左侧显示为一系列图标。 选中后，UI模式的模
    * 模式图标：的选择器 [Coral UI图标](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html#availableIcons) 例如， `coral-Icon--user`
    * 启用：选择此项可在ContextHub工具栏中显示UI模式
 
-1. 单击或点按保存。
+1. 单击“保存”。
 
 ### 添加UI模块 {#adding-a-ui-module}
 
@@ -108,11 +108,11 @@ UI模块属性包括一个详细配置，您可以在其中提供特定于模块
 | [contexthub.tagcloud](/help/sites-developing/ch-samplemodules.md#contexthub-tagcloud-ui-module-type) | 显示有关页面标记的统计信息 | tagcloud |
 | [granite.profile](/help/sites-developing/ch-samplemodules.md#granite-profile-ui-module-type) | 显示当前用户的配置文件信息，包括authorizableID、displayName和familyName。 可以更改displayName和familyName的值。 | 侧面像 |
 
-1. 在Experience Manager边栏上，单击或点按工具>站点> ContextHub。
-1. 单击或点按要向其添加UI模块的配置容器。
+1. 在Experience Manager边栏中，单击工具>站点> ContextHub。
+1. 单击要向其添加UI模块的配置容器。
 1. 单击或键入要将UI模块添加到其中的ContextHub配置。
-1. 单击或点按要向其中添加UI模块的UI模式。
-1. 单击或点按创建按钮，然后单击或点按ContextHub UI模块（通用）。
+1. 单击要向其中添加UI模块的UI模式。
+1. 单击“创建”按钮，然后单击“ContextHub UI模块（通用）”。
 
    ![chlimage_1-321](assets/chlimage_1-321.png)
 
@@ -123,7 +123,7 @@ UI模块属性包括一个详细配置，您可以在其中提供特定于模块
    * 已启用：选择此选项可在ContextHub工具栏中显示UI模块
 
 1. （可选）要覆盖默认存储配置，请输入要配置UI模块的JSON对象。
-1. 单击或点按保存。
+1. 单击“保存”。
 
 ## 创建ContextHub存储 {#creating-a-contexthub-store}
 
@@ -151,14 +151,14 @@ AEM提供了以下存储候选项示例，您可以根据它们创建存储。
 | [contexthub.surferinfo](/help/sites-developing/ch-samplestores.md#contexthub-surferinfo-sample-store-candidate) | 存储有关客户端的信息，如设备信息、浏览器类型和窗口方向 |
 | [contexthub.tagcloud](/help/sites-developing/ch-samplestores.md#contexthub-tagcloud-sample-data-store) | 存储页面标记和标记计数 |
 
-1. 在Experience Manager边栏上，单击或点按工具>站点> ContextHub。
-1. 单击或点按默认配置容器。
-1. 单击或点按Contexthub配置
-1. 要添加商店，请单击或点按“创建”图标，然后单击或点按ContexHub商店配置。
+1. 在Experience Manager边栏中，单击工具>站点> ContextHub。
+1. 单击默认配置容器。
+1. 单击Contexthub配置
+1. 要添加存储，请单击“创建”图标，然后单击ContexHub存储配置。
 
    ![chlimage_1-322](assets/chlimage_1-322.png)
 
-1. 提供基本配置属性的值，然后单击或点按下一步：
+1. 提供基本配置属性的值，然后单击下一步：
 
    * **配置标题：** 标识存储的标题
    * **存储类型：** 作为存储基础的存储候选的storeType属性的值
@@ -166,7 +166,7 @@ AEM提供了以下存储候选项示例，您可以根据它们创建存储。
    * **已启用：** 选择以启用存储
 
 1. （可选）要覆盖默认存储配置，请在详细信息配置(JSON)框中输入JSON对象。
-1. 单击或点按保存。
+1. 单击“保存”。
 
 ## 示例：使用JSONP服务  {#example-using-a-jsonp-service}
 
@@ -193,7 +193,7 @@ Contexthub.generic-jsonp示例存储候选函数允许您从返回JSON数据的J
 * **存储类型：** contexthub.generic-jsonp
 * **必需：** 选择
 * **已启用：** 选择
-* **详细配置 (JSON):**
+* **详细信息配置(JSON)：**
 
   ```xml
   {
@@ -221,7 +221,7 @@ Contexthub.generic-jsonp示例存储候选函数允许您从返回JSON数据的J
 
 * **UI模块标题：** MD5
 * **模块类型：** contexthub.base
-* **详细配置 (JSON):**
+* **详细信息配置(JSON)：**
 
   ```xml
   {
@@ -241,10 +241,10 @@ Contexthub.generic-jsonp示例存储候选函数允许您从返回JSON数据的J
 
 编辑ContextHub的配置并选中选项 **调试**
 
-1. 在边栏中，单击或点按 **工具>站点> ContextHub**
-1. 单击或点按默认 **配置容器**
-1. 选择 **ContextHub配置** ，然后单击或点按 **编辑选定的元素**
-1. 单击或点按 **调试** ，然后单击或点按 **保存**
+1. 在边栏中，单击 **工具>站点> ContextHub**
+1. 单击默认值 **配置容器**
+1. 选择 **ContextHub配置** 并单击 **编辑选定的元素**
+1. 单击 **调试** 并单击 **保存**
 
 ### 通过CRXDE {#via-crxde}
 

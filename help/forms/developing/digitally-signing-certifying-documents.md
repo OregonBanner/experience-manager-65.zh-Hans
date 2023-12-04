@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 role: Developer
 exl-id: c200f345-40ab-46fd-b6ed-f3af0a23796b
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '17027'
+source-wordcount: '16882'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 **关于签名服务**
 
-签名服务允许贵组织保护其分发和接收的Adobe PDF文档的安全性和隐私。 此服务使用数字签名和认证确保只有预期的接收者可更改文档。因为安全功能应用于文档本身，所以文档在整个生命周期中保持安全和受控制。 在防火墙之外，当文档离线下载以及提交回组织时，文档将保持安全。
+签名服务允许贵组织保护其分发和接收的Adobe PDF文档的安全性和隐私。 此服务使用数字签名和认证，确保只有目标收件人才能更改文档。 因为安全功能应用于文档本身，所以文档在整个生命周期中保持安全和受控制。 在防火墙之外，当文档离线下载以及提交回组织时，文档将保持安全。
 
 >[!NOTE]
 >
@@ -87,7 +87,7 @@ ht-degree: 0%
 
 **获取添加了签名字段的PDF文档**
 
-您必须获取一个已添加签名字段的PDF文档。
+获取添加了签名字段的PDF文档。
 
 **添加签名字段**
 

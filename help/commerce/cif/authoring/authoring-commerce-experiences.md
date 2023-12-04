@@ -2,10 +2,10 @@
 title: 创作Commerce体验
 description: CIF加载项通过特定于Commerce的功能扩展了Adobe Experience Manager创作。
 exl-id: 2db51bd7-8fc7-4ae8-8d6f-e5035fbe954d
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
 source-wordcount: '713'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -95,7 +95,7 @@ CIF产品目录页面是动态渲染的虚拟页面。 因此，不可能像嵌�
 
 使用Omnisearch是一种让从业人员通过全文搜索查找AEM内容和产品目录数据的简单方法。 Omnisearch将在AEM和commerce后端中运行全文搜索，以在commerce后端和AEM内容中查找产品目录对象。 AEM结果还包括使用产品/类别数据标记的内容。
 
-![全能搜索](/help/commerce/cif/assets/authoring/omnisearch.png)
+![Omnisearch](/help/commerce/cif/assets/authoring/omnisearch.png)
 
 结果按类型分组。
 

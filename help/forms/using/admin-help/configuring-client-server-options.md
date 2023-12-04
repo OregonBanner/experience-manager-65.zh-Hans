@@ -7,9 +7,9 @@ geptopics: SG_AEMFORMS/categories/working_with_document_security
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 feature: Document Security
 exl-id: fe132f13-5f9a-4c86-a385-0a0026c812e2
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '10221'
+source-wordcount: '10266'
 ht-degree: 0%
 
 ---
@@ -140,7 +140,7 @@ document security提供在没有Internet或网络连接的情况下离线使用�
 
 1. 在document security页面上，单击配置>服务器配置。
 1. 在默认脱机租赁期框中，键入脱机租赁期的天数。
-1. 单击确定。
+1. 单击“确定”。
 
 ### 管理密钥变换 {#manage-key-rollovers}
 
@@ -164,7 +164,7 @@ Document Security使用加密算法和许可证来保护文档。 当文档安�
 
 1. 在Document Security页面上，单击配置>密钥管理。
 1. 在“键变换频率”框中，键入变换期间的天数。
-1. 单击确定。
+1. 单击“确定”。
 
 **手动滚动主键**
 
@@ -210,7 +210,7 @@ Document Security可以审核和记录与与与受策略保护的文档、策略
 
      (请参阅 [事件审计选项](configuring-client-server-options.md#event-auditing-options).)
 
-1. 单击确定。
+1. 单击“确定”。
 
 >[!NOTE]
 >
@@ -228,7 +228,7 @@ Document Security可以审核和记录与与与受策略保护的文档、策略
    如果附加到文档的策略不允许匿名用户访问，则用户将看到隐私通知消息。
 
 1. 如果适用，在隐私URL框中，键入隐私策略页面的URL。 如果将隐私URL框保留为空，则会显示adobe.com中的隐私页面。
-1. 单击确定。
+1. 单击“确定”。
 
 >[!NOTE]
 >
@@ -241,13 +241,13 @@ Document Security可以审核和记录与与与受策略保护的文档、策略
 1. 在管理控制台中，单击服务> Document Security >配置>事件管理。
 1. 单击“浏览”转到要导入的XML文件，然后单击“导入”。
 1. 如果发现相同的事件代码和命名空间组合，导入将覆盖服务器上现有的自定义审核事件类型。
-1. 单击确定。
+1. 单击“确定”。
 
 ### 删除自定义审核事件类型 {#delete-a-custom-audit-event-type}
 
 1. 在管理控制台中，单击服务> document security >配置>事件管理。
 1. 选中要删除的自定义审核事件类型旁边的复选框，然后单击删除。
-1. 单击确定。
+1. 单击“确定”。
 
 ### 导出审核事件 {#export-audit-events}
 
@@ -270,7 +270,7 @@ Document Security可以审核和记录与与与受策略保护的文档、策略
 
 1. 在管理控制台中，单击服务> Document Security >配置>事件管理。
 1. 在删除审计事件下，指定删除早于以下时间的审计事件框中的天数。
-1. 单击删除。单击“导出”。 如果要取消删除，请单击“取消删除”。 如果其他用户已计划删除，则在该导出完成之前，“取消删除”按钮不可用。 如果其他用户已计划导出，则“取消删除”按钮不可用。 要检查计划的删除是否已启动或完成，请单击“刷新”。
+1. 单击“删除”。 单击“导出”。 如果要取消删除，请单击“取消删除”。 如果其他用户已计划删除，则在该导出完成之前，“取消删除”按钮不可用。 如果其他用户已计划导出，则“取消删除”按钮不可用。 要检查计划的删除是否已启动或完成，请单击“刷新”。
 
 ### 事件审计选项 {#event-auditing-options}
 
@@ -514,14 +514,14 @@ Document Security可以跟踪可能在受保护文档上执行的各种自定义
    选择要使水印显示的位置。 默认情况下，水印会同时出现在软拷贝（在线）和硬拷贝（打印）上。
 
 1. 单击 **新建** 在水印元素下，可根据需要添加更多水印元素。
-1. 单击确定。
+1. 单击“确定”。
 
 ### 编辑动态水印模板 {#edit-a-dynamic-watermark-template}
 
 1. 在管理控制台中，单击“服务”>“Document Security”>“配置”>“水印”。
 1. 单击列表中的相应水印。
 1. 在“编辑水印”页面上，根据需要更改设置。
-1. 单击确定。
+1. 单击“确定”。
 
 ### 删除动态水印模板 {#delete-a-dynamic-watermark-template}
 
@@ -529,7 +529,7 @@ Document Security可以跟踪可能在受保护文档上执行的各种自定义
 
 1. 在管理控制台中，单击“服务”>“Document Security”>“配置”>“水印”。
 1. 选中相应水印旁边的复选框，然后单击“删除”。
-1. 单击确定。
+1. 单击“确定”。
 
 ## 配置受邀用户注册 {#configuring-invited-user-registration}
 
@@ -567,7 +567,7 @@ Document Security可以跟踪可能在受保护文档上执行的各种自定义
    * [配置密码重置电子邮件](configuring-client-server-options.md#configure-a-password-reset-email)
 
 1. （可选）在“内置注册”下，选择“是”以启用此选项。 如果未启用内置注册，则必须设置自己的用户注册系统。
-1. 单击确定。
+1. 单击“确定”。
 
 ### 排除或包含外部用户或组 {#exclude-or-include-an-external-user-or-group}
 
@@ -730,20 +730,20 @@ Document Security可以跟踪可能在受保护文档上执行的各种自定义
 
 >[!NOTE]
 >
->导入配置文件会根据文件中的信息重新配置系统。 动态水印配置和自定义事件信息除外，它们不与导出的配置文件一起保存。 您必须在新系统中手动配置此信息。 只有熟悉Document Security和XML的系统管理员或专业服务顾问才能修改配置文件的内容，如重新配置损坏的设置或调整特定企业部署方案的参数。
+>导入配置文件会根据文件中的信息重新配置系统。 动态水印配置和自定义事件信息除外，它们不与导出的配置文件一起保存。 在新系统中手动配置此信息。 只有熟悉Document Security和XML的系统管理员或专业服务顾问才能修改配置文件的内容，如重新配置损坏的设置或调整特定企业部署方案的参数。
 
 **导出配置文件**
 
 1. 在管理控制台中，单击服务> document security 11 >配置>手动配置。
 1. 单击“导出”，并将配置文件保存到其他位置。 默认文件名为config.xml。
-1. 单击确定。
+1. 单击“确定”。
 1. 在更改配置文件之前，请制作一个备份副本，以防您需要还原。
 
 **导入配置文件**
 
 1. 在管理控制台中，单击服务> document security 11 >配置>手动配置。
 1. 单击“浏览”转到配置文件，然后单击“导入”。 不能直接在“文件名”框中键入路径。
-1. 单击确定。
+1. 单击“确定”。
 
 ### 为脱机同步指定超时时间段 {#specify-a-timeout-period-for-offline-synchronization}
 

@@ -6,9 +6,9 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/managing_services
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 exl-id: a6a10ff0-6f4d-42df-9b4e-f98a53cf1806
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '10692'
+source-wordcount: '10702'
 ht-degree: 0%
 
 ---
@@ -147,7 +147,7 @@ Distiller服务( `DistillerService`)将PostScript、封装的PostScript (EPS)和
 
 可以通过PDF Generator用户界面创建新设置。
 
-**安全设置：** 预配置的安全设置，应用于生成的PDF文档。 默认值为No Security。 您必须使用PDF Generator创建安全设置，然后在此处输入设置。
+**安全设置：** 预配置的安全设置，应用于生成的PDF文档。 默认值为No Security。 使用PDF Generator创建安全设置，然后在此处输入设置。
 
 **池大小：** 池的初始大小。 在部署Distiller服务时，此数字用于确定已创建并分配给等待调用请求的空闲池的服务实施实例数。 然后，服务容器可以立即响应调用请求，而无需首先初始化服务实例。
 
@@ -332,7 +332,7 @@ macKeySeed值是用于生成安全URL的随机数生成器的种子。 设置此
 
 需要刷新安全URL时更改macKeySeed值。 刷新安全URL取决于您的安全策略，类似于更改服务器的主根密码的刷新策略。 macSeedValue类似于安全URL的主口令，因为它用于生成新的唯一随机数，以用于安全URL的生成和检索。
 
-必须重新启动群集，因为macSeedValue在系统启动时是只读的。 所有节点都需要重新启动才能读取该值，因为它们单独使用该值以种子值初始化其内部随机数。
+重新启动群集，因为macSeedValue在系统启动时为只读。 所有节点都需要重新启动才能读取该值，因为它们单独使用该值以种子值初始化其内部随机数。
 
 ## JDBC服务设置 {#jdbc-service-settings}
 
@@ -684,7 +684,7 @@ PDFG清理扫描秒的默认值为 `43200` （12小时）。 作业过期秒数�
 
 **Cron表达式：** Quartz用来安排轮询输入目录的cron表达式。
 
-**重复计数：** 轮询输入目录的次数。 如果未在终结点配置中指定此值，则使用默认重复计数。 值为–1表示无限扫描目录。 默认值为–1。
+**重复计数：** 轮询输入目录的次数。 如果未在终结点配置中指定此值，则使用默认重复计数。 值为–1表示无限扫描目录。 默认值为 -1。
 
 **重复间隔：** 每个轮询之间的默认秒数。 除非在观察文件夹终结点配置中指定了不同的值，否则此值将用作重复间隔。 默认值为 5。有关其他信息，请参阅批量大小设置的说明。
 
@@ -832,7 +832,7 @@ XSLT转换服务( `XSLTService`)使进程能够对XML文档应用可扩展样式
    * **SERVICE_MANAGER_PERM：** 用于AEM Forms的未来版本。 请勿使用此权限。
    * **SERVICE_AGENT_PERM：** 用于AEM Forms的未来版本。 请勿使用此权限。
 
-1. 单击添加。
+1. 单击“添加”。
 
 ### 从安全配置文件中删除主体 {#remove-the-principal-from-a-security-profile}
 
@@ -853,7 +853,7 @@ XSLT转换服务( `XSLTService`)使进程能够对XML文档应用可扩展样式
 1. 在“最大服务实例池大小”框中，输入指定服务的池中的最大实例数。 该设置控制能够在给定时间执行给定服务的线程数。 默认值为0，这将导致池大小不受限制。
 1. 在最大异步服务实例数框中，输入池中可用于在任意给定时间为异步请求提供服务的最大实例数。 该设置允许服务限制可并行处理的请求数。
 1. 在调用等待超时框中，输入等待服务可用于调用请求的毫秒数。 如果不为此设置指定值，则缺省值为0，这不会产生等待时间。
-1. 单击保存。
+1. 单击“保存”。
 
 ### 删除池 {#remove-pooling}
 
@@ -866,4 +866,4 @@ XSLT转换服务( `XSLTService`)使进程能够对XML文档应用可扩展样式
 
    **每个请求的新实例：** 每次收到调用时，都会创建一个新的服务实例。
 
-1. 单击保存。
+1. 单击“保存”。

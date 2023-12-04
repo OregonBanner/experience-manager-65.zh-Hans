@@ -7,10 +7,10 @@ content-type: reference
 topic-tags: site-features
 docset: aem65
 exl-id: e00da2b3-046a-4d93-aed0-07dd8c66899f
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '645'
-ht-degree: 90%
+source-wordcount: '647'
+ht-degree: 82%
 
 ---
 
@@ -20,7 +20,8 @@ ht-degree: 90%
 
 在应用工作流时，您需要指定以下信息：
 
-* 要应用的工作流。您可以应用任何工作流（您有权访问，由 AEM 管理员分配）。
+* 要应用的工作流。
+您可以应用任何工作流（您有权访问，由 AEM 管理员分配）。
 * （可选）有助于在用户收件箱中识别工作流实例的标题。
 * 工作流有效负荷；这可以是一个或多个页面。
 
@@ -102,7 +103,7 @@ ht-degree: 90%
 
    >[!NOTE]
    >
-   >为多资源支持配置了工作流并选择了多个资源时，**保留工作流包**&#x200B;选项可用。[](/help/sites-developing/workflows-models.md#configuring-a-workflow-for-multi-resource-support)
+   >此 **保留工作流包** 为配置工作流后，选项可用 [多资源支持](/help/sites-developing/workflows-models.md#configuring-a-workflow-for-multi-resource-support) 并选择了多个资源。
 
    完成后，单击&#x200B;**下一步**&#x200B;继续。
 
@@ -110,7 +111,7 @@ ht-degree: 90%
 
 1. 在&#x200B;**范围**&#x200B;步骤中，您可以选择：
 
-   * **添加内容**&#x200B;以打开[路径浏览器](/help/sites-authoring/author-environment-tools.md#path-browser)并选择其他资源；在浏览器中，单击/点按&#x200B;**选择**&#x200B;以将内容添加到工作流实例。
+   * **添加内容** 以打开 [路径浏览器](/help/sites-authoring/author-environment-tools.md#path-browser) 并选择其他资源；在浏览器中，单击 **选择** 将内容添加到工作流实例。
 
    * 现有资源以查看其他操作：
 

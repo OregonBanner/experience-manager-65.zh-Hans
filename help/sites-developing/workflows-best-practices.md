@@ -10,9 +10,9 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: 0be8b88c-6f57-4dcc-ae11-77b378a2decd
 exl-id: 14775476-6fe5-4583-8ab5-b55fef892174
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1922'
+source-wordcount: '1925'
 ht-degree: 1%
 
 ---
@@ -297,7 +297,7 @@ public void execute(WorkItem item, WorkflowSession workflowSession, MetaDataMap 
 
 您可以定义 [工作流暂存](/help/sites-developing/workflows.md#workflow-stages)，然后将任务/步骤分配给特定工作流暂存。
 
-此信息用于在您单击 [**工作流信息** 选项卡中的工作项 **收件箱**](/help/sites-authoring/workflows-participating.md#opening-a-workflow-item-to-view-details-and-take-actions). 可以编辑现有工作流模型以添加暂存。
+此信息用于在单击 [**工作流信息** 选项卡中的工作项 **收件箱**](/help/sites-authoring/workflows-participating.md#opening-a-workflow-item-to-view-details-and-take-actions). 可以编辑现有工作流模型以添加暂存。
 
 ### 激活页面流程步骤 {#activate-page-process-step}
 

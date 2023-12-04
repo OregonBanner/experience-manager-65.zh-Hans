@@ -8,10 +8,10 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: operations
 role: Developer
 exl-id: 28abf044-6c8e-4578-ae2e-54cdbd694c5f
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1876'
-ht-degree: 1%
+source-wordcount: '1858'
+ht-degree: 0%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 Forms服务可以计算用户在表单中输入的值并显示结果。 要计算表单数据，必须执行两项任务。 首先，创建用于计算表单数据的表单设计脚本。 窗体设计支持三种类型的脚本。 一种脚本类型在客户端运行，另一种脚本类型在服务器上运行，第三种脚本类型同时在服务器和客户端运行。 本主题中讨论的脚本类型在服务器上运行。 HTML、PDF和表单指南（已弃用）转换支持服务器端计算。
 
-在表单设计过程中，您可以使用计算和脚本提供更丰富的用户体验。 可将计算和脚本添加到大多数表单字段和对象。 您必须创建一个表单设计脚本，以便对用户输入交互式表单的数据执行计算操作。
+在表单设计过程中，您可以使用计算和脚本提供更丰富的用户体验。 可将计算和脚本添加到大多数表单字段和对象。 创建表单设计脚本，以对用户输入交互式表单的数据执行计算操作。
 
 用户在表单中输入值，然后单击“计算”按钮以查看结果。 以下流程描述了允许用户计算数据的示例应用程序：
 
@@ -86,7 +86,7 @@ Forms服务可以计算用户在表单中输入的值并显示结果。 要计�
 
 >[!NOTE]
 >
->有关创建表单设计脚本的信息，请参阅 [Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63_cn).
+>有关创建表单设计脚本的信息，请参阅 [Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63).
 
 >[!NOTE]
 >
@@ -197,7 +197,7 @@ Forms服务可以计算用户在表单中输入的值并显示结果。 要计�
       * 此 `BLOB` 包含表单数据的对象。
       * 一个字符串值，它指定包含所有相关HTTP标头的环境变量。 例如，您可以指定以下字符串值： `HTTP_REFERER=referrer&HTTP_CONNECTION=keep-alive&CONTENT_TYPE=application/xml`
       * 一个字符串值，它指定 `HTTP_USER_AGENT` 标头值；例如， `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`.
-      * A `RenderOptionsSpec` 存储运行时选项的对象。 有关更多信息, .
+      * A `RenderOptionsSpec` 存储运行时选项的对象。 有关更多信息， 。
       * 空的 `BLOBHolder` 方法填充的对象。
       * 空的 `javax.xml.rpc.holders.StringHolder` 方法填充的对象。
       * 空的 `BLOBHolder` 方法填充的对象。

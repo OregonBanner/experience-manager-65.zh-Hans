@@ -4,9 +4,9 @@ description: 代理是 [!DNL Experience Manager] 使用代理工作程序处理�
 contentOwner: AG
 role: Admin, Architect
 exl-id: 42fff236-b4e1-4f42-922c-97da32a933cf
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '842'
+source-wordcount: '824'
 ht-degree: 0%
 
 ---
@@ -164,7 +164,7 @@ curl -u admin:admin -F":operation=remove" -F"jobid=xxxxxxxxxxxx"
 
    例如，请参阅 `IDSJob.IDS_EXTENDSCRIPT_JOB` 用于IDS代理工作进程。
 
-1. 外部步骤用于触发事件，然后等待该操作完成；这是通过对id进行轮询来完成的。 您必须自行开发步骤才能实施新功能。
+1. 外部步骤用于触发事件，然后等待该操作完成；这是通过对id进行轮询来完成的。 自行开发实施新功能的步骤。
 
    实施 `WorkflowExternalProcess`，然后使用JobService API和作业主题准备作业事件并将其调度到JobService（一种OSGi服务）。
 

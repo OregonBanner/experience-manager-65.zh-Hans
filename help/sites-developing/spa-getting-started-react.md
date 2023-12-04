@@ -7,10 +7,10 @@ topic-tags: spa
 content-type: reference
 docset: aem65
 exl-id: 552649e7-6054-4ae8-b570-5ba7230e6f19
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1161'
-ht-degree: 5%
+source-wordcount: '1148'
+ht-degree: 4%
 
 ---
 
@@ -26,7 +26,7 @@ SPA创作功能提供了一个全面的解决方案，用于在AEM中支持SPA�
 
 >[!NOTE]
 >
->SPA编辑器是推荐的解决方案，适用于需要基于SPA Framework的客户端渲染(例如React或Angular)的项目。
+>SPA编辑器是推荐的解决方案，适用于需要基于SPA框架的客户端渲染(例如React或Angular)的项目。
 
 ## 简介 {#introduction}
 

@@ -7,9 +7,9 @@ topic-tags: personalization
 content-type: reference
 docset: aem65
 exl-id: 69c66c82-fbd6-406e-aefd-b85480a62109
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1978'
+source-wordcount: '1961'
 ht-degree: 0%
 
 ---
@@ -106,7 +106,7 @@ JSONP存储与任何其他存储一样，但它可以加载来自其他域的信
 
 >[!NOTE]
 >
->目前这是一个演示功能，它依赖于演示用户的配置文件节点上预配置的数据集。 例如，请参阅:
+>目前这是一个演示功能，它依赖于演示用户的配置文件节点上预配置的数据集。 例如，请参阅：
 >
 >`/home/users/geometrixx/aparker@geometrixx.info/profile` => friends资产
 
@@ -208,7 +208,7 @@ Client Context允许您以交互方式更改详细信息：
 
 ### 添加属性组件 {#adding-a-property-component}
 
-打开 **ClientContext设计页面**，您还可以 **添加** 一个全新的属性，它使用了可用的组件(这些组件在sidekick或 **插入新组件** 对话框，该对话框在 **将组件或资源拖动到此处** 框)：
+打开 **ClientContext设计页面**，您还可以 **添加** 一个全新的属性，它使用了可用的组件(这些组件在sidekick或 **插入新组件** 在双击 **将组件或资源拖动到此处** 框)：
 
 ![将属性添加到“客户端上下文”窗口](assets/clientcontext_alisonparker_new.png)
 
@@ -245,7 +245,7 @@ Client Context允许您以交互方式更改详细信息：
 
    ![JSONP服务的属性](assets/chlimage_1-40.png)
 
-1. 单击确定。
+1. 单击“确定”。
 1. 返回“Geometrixx Outdoors”主页并刷新该页。 Client Context现在包含来自JSONP存储组件的信息。
 
    ![使用数据填充的JSONP组件示例](assets/chlimage_1-41.png)
@@ -264,7 +264,7 @@ Client Context允许您以交互方式更改详细信息：
 
    1. 对于“标题”，键入Winter。
    1. 选择区段模板。
-   1. 单击创建。
+   1. 单击“创建”。
 
 1. 右键单击Winter区段，然后单击“打开”。
 1. 将常规存储属性拖到默认的AND容器中。

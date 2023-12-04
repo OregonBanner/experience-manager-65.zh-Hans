@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
 exl-id: 9414c77a-b180-4440-8386-e6eb4426e475
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
 source-wordcount: '404'
-ht-degree: 15%
+ht-degree: 11%
 
 ---
 
@@ -44,20 +44,20 @@ ht-degree: 15%
 1. 右键单击 `/apps/acs/analytics/components`. 选择 **创建……** 后接 **创建组件……** 打开的对话框允许您指定：
 
    * **标签**： `googleanalyticspage`
-   * **标题**: `Google Analytics Page`
-   * **超级类型**: `cq/cloudserviceconfigs/components/configpage`
-   * **组**: `.hidden`
+   * **标题**： `Google Analytics Page`
+   * **超级类型**： `cq/cloudserviceconfigs/components/configpage`
+   * **组**： `.hidden`
 
 1. 单击 **下一个** 两次，并指定：
 
-   * **允许的父项:** `acs/analytics/templates/googleanalytics`
+   * **允许的父项：** `acs/analytics/templates/googleanalytics`
 
    单击 **下一个** 两次，然后单击 **确定**.
 
 1. 添加属性到 `googleanalyticspage`：
 
-   * **名称:** `cq:defaultView`
-   * **值:** `html`
+   * **名称：** `cq:defaultView`
+   * **值：** `html`
 
 1. 创建名为的文件 `content.jsp` 下 `/apps/acs/analytics/components/googleanalyticspage`，包含以下内容：
 
@@ -78,7 +78,7 @@ ht-degree: 15%
 
    * **名称**：`dialog`
    * **类型**：`cq:Dialog`
-   * **属性**:
+   * **属性**：
 
       * **名称**：`title`
       * **类型**：`String`
@@ -91,7 +91,7 @@ ht-degree: 15%
 
    * **名称**：`items`
    * **类型**：`cq:Widget`
-   * **属性**:
+   * **属性**：
 
       * **名称**：`xtype`
       * **类型**：`String`
@@ -106,7 +106,7 @@ ht-degree: 15%
 
    * **名称**：tab1
    * **类型**：`cq:Panel`
-   * **属性**:
+   * **属性**：
 
       * **名称**：`title`
       * **类型**：`String`
@@ -116,7 +116,7 @@ ht-degree: 15%
 
    * **名称**：项目
    * **类型**：`nt:unstructured`
-   * **属性**:
+   * **属性**：
 
       * **名称**：`fieldLabel`
       * **类型**：字符串
@@ -192,7 +192,7 @@ ht-degree: 15%
 
 1. 导航到 `http://localhost:4502/miscadmin#/etc/cloudservices` 并创建页面：
 
-   * **标题**: `Google Analytics`
+   * **标题**： `Google Analytics`
    * **名称**：`googleanalytics`
 
    返回CRXDE Lite，在 `/etc/cloudservices/googleanalytics`，添加以下属性到 `jcr:content`：
@@ -203,8 +203,8 @@ ht-degree: 15%
 
 1. 导航到新创建的服务页面( `http://localhost:4502/etc/cloudservices/googleanalytics.html`)，然后单击 **+** 要创建配置，请执行以下操作：
 
-   * **父配置**: `/etc/cloudservices/googleanalytics`
-   * **标题:**  `My First GA Config`
+   * **父配置**： `/etc/cloudservices/googleanalytics`
+   * **标题：**  `My First GA Config`
 
    选择 **Google Analytics配置** 并单击 **创建**.
 

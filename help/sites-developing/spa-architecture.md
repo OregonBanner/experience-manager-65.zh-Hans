@@ -7,10 +7,10 @@ topic-tags: spa
 content-type: reference
 docset: aem65
 exl-id: c1429889-e2ed-4e2f-a45f-33f8a6a52745
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '2051'
-ht-degree: 6%
+source-wordcount: '2037'
+ht-degree: 5%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 6%
 
 >[!NOTE]
 >
->SPA编辑器是推荐的解决方案，适用于需要基于SPA Framework的客户端渲染(例如React或Angular)的项目。
+>SPA编辑器是推荐的解决方案，适用于需要基于SPA框架的客户端渲染(例如React或Angular)的项目。
 
 ## AEM的SPA开发原则 {#spa-development-principles-for-aem}
 
@@ -192,7 +192,7 @@ SPA应仅依赖于内容的动态渲染。 这是AEM获取并呈现内容结构�
    * NPM clientlib生成器从SPA项目创建一个客户端库。
    * 该库由Maven获取，并由Maven Build插件与组件部署到AEM Author。
 
-* **AEM Author**
+* **AEM创作**
 
   在AEM创作实例上创建内容，包括创作SPA。
 
@@ -204,7 +204,7 @@ SPA应仅依赖于内容的动态渲染。 这是AEM获取并呈现内容结构�
    1. 执行SPA应用程序时，将请求JSON，以允许应用程序构建页面的DOM，包括 `cq-data` 属性。
    1. 此 `cq-data` 属性允许编辑器加载其他页面信息，以便它知道哪些编辑配置可用于组件。
 
-* **AEM 发布**
+* **AEM发布**
 
   这是发布创作的内容和编译的库(包括SPA应用程序工件、clientlibs和组件)以供公众使用的位置。
 

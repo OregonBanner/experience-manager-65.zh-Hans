@@ -2,10 +2,10 @@
 title: 组件控制台
 description: 组件控制台允许您浏览针对实例定义的所有组件，并查看每个组件的关键信息。
 exl-id: d79107b9-dfa4-4e80-870e-0b7ea72f0bc7
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
 source-wordcount: '280'
-ht-degree: 70%
+ht-degree: 57%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 70%
 
 组件控制台允许您浏览针对实例定义的所有组件，并查看每个组件的关键信息。
 
-该控制台可从&#x200B;**工具** -> **常规** -> **组件**&#x200B;中访问。在控制台中，卡片视图和列表视图均可用。 由于组件没有树结构，因此列视图不可用。
+可从以下位置访问： **工具>** **常规>** **组件**. 在控制台中，卡片视图和列表视图均可用。 由于组件没有树结构，因此列视图不可用。
 
 ![screen-shot_2019-03-05at113145](assets/screen-shot_2019-03-05at113145.png)
 
@@ -29,7 +29,7 @@ ht-degree: 70%
 
 ### 组件详细信息 {#component-details}
 
-要查看有关特定组件的详细信息，请点按/单击所需的资源。三个选项卡提供以下内容：
+要查看有关特定组件的详细信息，请单击所需资源。 三个选项卡提供以下内容：
 
 * **属性**
 
@@ -64,6 +64,6 @@ ht-degree: 70%
 
 * **文档**
 
-  如果开发人员已提供 [组件的文档](/help/sites-developing/developing-components.md#documenting-your-component)，它将显示在 **文档** 选项卡。 如果没有可用文档，则不会显示&#x200B;**文档**&#x200B;选项卡。
+  如果开发人员已提供 [组件的文档](/help/sites-developing/developing-components.md#documenting-your-component)，它将显示在 **文档** 选项卡。 如果没有可用文档， **文档** 选项卡将不显示。
 
   ![文档](assets/chlimage_1-171.png)

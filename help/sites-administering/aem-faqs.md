@@ -2,9 +2,9 @@
 title: AEM常见问题解答
 description: 使用这些常见问题解答来了解、配置和解决AEM中的常见工作流或问题。
 exl-id: 182c464a-ff7a-467b-9eb5-8ffac335a87a
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1085'
+source-wordcount: '1011'
 ht-degree: 0%
 
 ---
@@ -88,7 +88,7 @@ Adobe Experience Manager (AEM) 6.4附带SSL向导，并提供用于配置Jetty�
 
 #### 创建语言副本时，OOTB配置的默认设置是什么？ {#what-are-the-default-settings-for-ootb-configurations-while-creating-language-copy}
 
-通过Touch UI创建语言副本时(**引用** -> **更新语言副本**)，将在新语言下创建新的DAM文件夹，并从中引用资产。
+通过Touch UI创建语言副本时(**引用** > **更新语言副本**)，将在新语言下创建新的DAM文件夹，并从中引用资产。
 
 这是OOTB配置的默认设置。 您可以设置 **翻译页面资产** = **不翻译** 在翻译配置中。
 对于AEM 6.4， **工具** > **Cloud Service** > **翻译云服务**.

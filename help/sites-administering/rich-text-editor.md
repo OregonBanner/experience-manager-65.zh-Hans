@@ -3,10 +3,10 @@ title: 配置富文本编辑器以在Adobe Experience Manager中创作内容。
 description: 了解如何配置Adobe Experience Manager富文本编辑器以在Adobe Experience Manager中创作内容。
 contentOwner: AG
 exl-id: 2e7ec22f-0856-44c4-bb15-1086dae0b85a
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '2921'
-ht-degree: 1%
+source-wordcount: '2883'
+ht-degree: 0%
 
 ---
 
@@ -56,13 +56,13 @@ ht-degree: 1%
 
 ### 内联编辑 {#inline-editing}
 
-打开时（缓慢双击/单击），可以在页面中编辑内容。 此时会显示一个包含非常基本选项的紧凑工具栏。
+打开时（缓慢双击），可以在页面中编辑内容。 此时会显示一个包含非常基本选项的紧凑工具栏。
 
 ![在触屏UI中使用基本工具栏进行内联编辑](assets/chlimage_1-36.png)
 
 *图：在触屏UI中使用基本工具栏的内联编辑*
 
-在经典UI中，通过缓慢双击组件，可以内联编辑，并且橙色轮廓会突出显示内容。 如果“内容查找器”处于打开状态，则窗口顶部会显示一个包含可用RTE格式选项的工具栏。 如果“内容查找器”未打开，则不会显示格式选项，并且您只能进行基本的文本编辑。
+在经典UI中，双击组件缓慢即可进行内联编辑，并且橙色轮廓会突出显示内容。 如果“内容查找器”处于打开状态，则窗口顶部会显示一个包含可用RTE格式选项的工具栏。 如果“内容查找器”未打开，则不会显示格式选项，并且您只能进行基本的文本编辑。
 
 ### 全屏编辑 {#full-screen-editing}
 
@@ -108,12 +108,12 @@ RTE的基本功能由的值激活或停用 `features` 属性的特定于相应�
 | 插件Id | 功能 | 描述 |
 |--- |--- |--- |
 | 编辑 | 剪切copy paste-default paste-plaintext paste-wordhtml | [剪切、复制和三种粘贴模式](/help/sites-administering/configure-rich-text-editor-plug-ins.md#textstyles). |
-| findreplace | 查找替换 | 查找并替换. |
+| findreplace | 查找替换 | 查找并替换。 |
 | 格式 | 加粗斜体下划线 | [基本文本格式](/help/sites-administering/configure-rich-text-editor-plug-ins.md#textstyles). |
 | 图像 | 图像 | 基本图像支持（从内容或内容查找器拖动）。 根据浏览器的不同，支持的作者行为也有所不同 |
 | 键 |  | 要定义此值，请参阅 [选项卡大小](/help/sites-administering/configure-rich-text-editor-plug-ins.md#tabsize). |
 | 两端对齐 | justifyleft justifycenter justifyright | 段落对齐方式。 |
-| links | modifylink取消链接锚点 | [超链接和锚点](/help/sites-administering/configure-rich-text-editor-plug-ins.md#linkstyles). |
+| 链接 | modifylink取消链接锚点 | [超链接和锚点](/help/sites-administering/configure-rich-text-editor-plug-ins.md#linkstyles). |
 | 列表 | 有序无序缩进缩进 | 此插件会同时控制两者 [缩进和列表](/help/sites-administering/configure-rich-text-editor-plug-ins.md#indentmargin)；包括嵌套列表。 |
 | misctools | specialchars sourceedit | 其他工具允许作者输入 [特殊字符](/help/sites-administering/configure-rich-text-editor-plug-ins.md#spchar) 或编辑HTML源。 此外，您还可以添加整个 [特殊字符的范围](/help/sites-administering/configure-rich-text-editor-plug-ins.md#definerangechar) 如果您想定义自己的列表。 |
 | 参数格式 | paraformat | 默认的段落格式为“段落”、“标题1”、“标题2”和“标题3”(`<p>`， `<h1>`， `<h2>`、和 `<h3>`)。 您可以 [添加更多段落格式](/help/sites-administering/configure-rich-text-editor-plug-ins.md#paraformats) 或者扩展列表。 |

@@ -1,22 +1,22 @@
 ---
 title: 创作 — AEM中的环境和工具
-description: AEM 的创作环境提供了各种可用于组织和编辑内容的机制.
+description: AEM的创作环境提供了各种可用于组织和编辑内容的机制。
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
 docset: aem65
 exl-id: 3b3c118b-ca35-484b-a62e-7bec98953123
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '2227'
-ht-degree: 51%
+source-wordcount: '2246'
+ht-degree: 47%
 
 ---
 
 # 创作 — 环境和工具{#authoring-the-environment-and-tools}
 
-AEM 的创作环境提供了各种可用于组织和编辑内容的机制. 可以从各种控制台和页面编辑器访问提供的工具。
+AEM 的创作环境提供了各种可用于组织和编辑内容的机制。可以从各种控制台和页面编辑器访问提供的工具。
 
 ## 管理您的站点 {#managing-your-site}
 
@@ -95,7 +95,7 @@ AEM 的创作环境提供了各种可用于组织和编辑内容的机制. 可�
    * 按名称筛选组件。
    * 使用下拉选择框将显示内容限定为特定组。
 
-  有关组件的更多详细说明，您可以单击或点按&#x200B;**组件**&#x200B;浏览器（如果可用）中组件旁边的信息图标。例如，对于&#x200B;**布局容器**：
+  有关组件的更多详细说明，您可以单击中组件旁边的信息图标 **组件** 浏览器（如果可用）。 例如，对于&#x200B;**布局容器**：
 
   ![ateat-06](assets/ateat-06.png)
 
@@ -243,8 +243,8 @@ AEM 的创作环境提供了各种可用于组织和编辑内容的机制. 可�
 * [对产品页面的引用](/help/commerce/cif-classic/administering/generic.md#showing-product-references) （可从“商业 — 产品”控制台中获取）
 * [启动次数](/help/sites-authoring/launches.md) 提供对相关启动项的访问。
 * [Live Copy](/help/sites-administering/msm.md) 显示基于选定资源的所有 Live Copy 的路径。
-* [](/help/sites-administering/msm-best-practices.md)Blueprint 提供详细信息和各种操作.
-* [](/help/sites-administering/tc-manage.md#creating-translation-projects-using-the-references-panel)语言副本提供详细信息和各种操作.
+* [Blueprint](/help/sites-administering/msm-best-practices.md) 提供详细信息和各种操作。
+* [语言副本](/help/sites-administering/tc-manage.md#creating-translation-projects-using-the-references-panel) 提供详细信息和各种操作。
 
 例如，可以修复“参照”元件中的断开参照：
 
@@ -344,7 +344,7 @@ AEM 的创作环境提供了各种可用于组织和编辑内容的机制. 可�
 
 ![screen_shot_2018-03-22at154521](assets/screen_shot_2018-03-22at154521.png)
 
-* 选择资源后，对话框右上角的&#x200B;**选择**&#x200B;按钮将变为活动状态。单击或点按以确认选择，或者单击或点按&#x200B;**取消**&#x200B;以中止操作。
+* 选择资源后，对话框右上角的&#x200B;**选择**&#x200B;按钮将变为活动状态。单击以确认选择或 **取消** 中止。
 * 如果上下文允许选择多个资源，则选择某个资源也会激活“选择 **** ”按钮，但也会将选定资源的计数添加到窗口的右上角。单击 **X** ，取消选择全部。
 * 在树中导航时，您的位置会反映在对话框顶部的痕迹导航中。还可使用这些痕迹导航在资源层次结构中快速跳转。
 * 您可以随时使用对话框顶部的搜索字段。 单击搜索字段中的 **X** 可清除搜索。

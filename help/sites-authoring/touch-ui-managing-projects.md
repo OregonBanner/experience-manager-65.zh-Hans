@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: projects
 content-type: reference
 exl-id: 62586c8e-dab4-4be9-a44a-2c072effe3c0
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '981'
-ht-degree: 22%
+source-wordcount: '964'
+ht-degree: 18%
 
 ---
 
@@ -34,16 +34,16 @@ ht-degree: 22%
 
 按照以下步骤创建项目。
 
-1. 在 **项目** 控制台，点按或单击 **创建** 以打开 **创建项目** 向导。
-1. 选择模板并单击&#x200B;**下一步**。您可以了解有关标准项目模板的更多信息 [此处。](/help/sites-authoring/projects.md#project-templates)
+1. 在 **项目** 控制台，单击 **创建** 以打开 **创建项目** 向导。
+1. 选择模板并单击 **下一个**. 您可以了解有关标准项目模板的更多信息 [此处。](/help/sites-authoring/projects.md#project-templates)
 
    ![创建项目向导](assets/create-project-wizard.png)
 
-1. 定义 **标题** 和 **描述** 并添加 **缩略图** 图像（如有必要）。 您还可以添加或删除用户以及他们所属的组。
+1. 定义 **标题** 和 **描述** 并添加 **缩略图** 图像（如有必要）。 您还可以添加或删除用户及其所属的组。
 
    ![向导的“属性”步骤](assets/create-project-wizard-properties.png)
 
-1. 点按/单击&#x200B;**创建**。确认对话框会询问您是要打开新项目还是要返回到控制台。
+1. 单击&#x200B;**创建**。确认对话框会询问您是要打开新项目还是要返回到控制台。
 
 对于所有项目模板，创建项目的过程都是相同的。 项目类型之间的差异与可用有关 [用户角色](/help/sites-authoring/projects.md) 和 [工作流。](/help/sites-authoring/projects-with-workflows.md)
 
@@ -54,11 +54,11 @@ ht-degree: 22%
 要将资源与项目关联，请执行以下操作：
 
 1. 从&#x200B;**项目**&#x200B;控制台中打开您的项目。
-1. 点按/单击&#x200B;**添加拼贴**，然后选择您要链接到项目的拼贴。您可以选择多种类型的拼贴。
+1. 单击 **添加拼贴** 并选择要链接到项目的拼贴。 您可以选择多种类型的拼贴。
 
    ![添加拼贴](assets/project-add-tile.png)
 
-1. 点按/单击&#x200B;**创建**。您的资源随即会链接到项目，从现在开始，您便可以从项目中访问该资源。
+1. 单击&#x200B;**创建**。您的资源随即会链接到项目，从现在开始，您便可以从项目中访问该资源。
 
 ### 向拼贴中添加一些项 {#adding-items-to-a-tile}
 
@@ -84,7 +84,7 @@ ht-degree: 22%
 
 要打开拼贴，以便查看其中的各个项或修改一些项，请执行以下操作：
 
-1. 点按或单击图块右下方的省略号图标。
+1. 单击图块右下方的省略号图标。
 
    ![“任务”拼贴](assets/project-tile-tasks.png)
 
@@ -96,7 +96,7 @@ ht-degree: 22%
 
 项目时间线提供了项目中的资源上次使用时间的相关信息。要查看项目时间线，请执行以下步骤。
 
-1. 在 **项目** 控制台，单击或点按 **时间线** 位于控制台左上角的边栏选择器中。
+1. 在 **项目** 控制台，单击 **时间线** 位于控制台左上角的边栏选择器中。
    ![选择时间轴模式](assets/projects-timeline-rail.png)
 2. 在控制台中，选择要查看其时间线的项目。
    ![项目时间线视图](assets/project-timeline-view.png)
@@ -119,7 +119,7 @@ ht-degree: 22%
 
 您可以在中创建文件夹 **项目** 控制台来分组和组织类似项目。
 
-1. 在 **项目** 控制台点按或单击 **创建** 然后 **创建文件夹**.
+1. 在 **项目** 控制台单击 **创建** 然后 **创建文件夹**.
 
    ![创建文件夹](assets/project-create-folder.png)
 
@@ -141,7 +141,7 @@ ht-degree: 22%
 
    ![属性窗口中的项目状态选择器](assets/project-status.png)
 
-1. 点击或单击 **保存并关闭** 以保存更改。
+1. 单击 **保存并关闭** 以保存更改。
 
 ### 删除项目 {#deleting-a-project}
 
@@ -149,13 +149,13 @@ ht-degree: 22%
 
 1. 导航到 **项目** 控制台。
 1. 在控制台中选择您的项目。
-1. 点击或单击 **删除** 工具栏中。
+1. 单击 **删除** 工具栏中。
 1. 删除项目时，AEM可以删除/修改关联的项目数据。 选择您需要在以下位置使用的选项： **删除项目** 对话框。
    * 删除项目组和角色
    * 删除项目资源文件夹
    * 终止项目工作流
 
    ![项目删除选项](assets/project-delete-options.png)
-1. 点击或单击 **删除** 以删除选定的项目。
+1. 单击 **删除** 以删除选定的项目。
 
 要了解有关项目自动创建的组的更多信息，请参阅 [自动组创建](/help/sites-authoring/projects.md#auto-group-creation) 以了解详细信息。

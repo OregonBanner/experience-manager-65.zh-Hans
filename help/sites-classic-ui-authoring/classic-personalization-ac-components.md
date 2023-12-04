@@ -7,10 +7,10 @@ topic-tags: personalization
 content-type: reference
 docset: aem65
 exl-id: eeff89c1-41b3-403d-b4bf-c79b09b24d4a
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '2529'
-ht-degree: 5%
+source-wordcount: '2548'
+ht-degree: 4%
 
 ---
 
@@ -107,7 +107,7 @@ ht-degree: 5%
 
 >[!NOTE]
 >
->您必须在 **替换文本** 中的字段 **高级** 制表符，否则图像无法保存，并且您会看到以下错误消息：
+>在 **替换文本** 中的字段 **高级** 制表符，否则图像无法保存，并且您会看到以下错误消息：
 >
 >`Validation failed. Verify the values of the marked fields.`
 >
@@ -131,14 +131,14 @@ ht-degree: 5%
 添加了关于如何使用链接的其他信息。
 
 * **链接类型**
-在下拉列表中，选择 **自定义URL** 和 **自适应文档**. 此字段为必填字段. 如果您选择自定义URL，则可以提供链接URL。 如果选择“自适应文档”，则可以提供文档路径。
+在下拉列表中，选择 **自定义URL** 和 **自适应文档**. 此字段为必填字段。 如果您选择自定义URL，则可以提供链接URL。 如果选择“自适应文档”，则可以提供文档路径。
 
 * **其他URL参数**
 添加任何其他URL参数。 单击“添加项目”可添加多个项目。
 
 >[!NOTE]
 >
->您必须在 **链接类型** 中的字段 **URL信息** 选项卡，或组件无法保存，此时您会看到以下错误消息：
+>在 **链接类型** 中的字段 **URL信息** 选项卡，或组件无法保存，此时您会看到以下错误消息：
 >
 >`Validation failed. Verify the values of the marked fields.`
 >
@@ -225,7 +225,7 @@ ht-degree: 5%
 * 日期字段（营销活动）和日期字段/HTML5（营销活动）
 * 已加密的主要密钥（营销活动）
 * 错误显示（营销活动）
-* 隐藏的对帐密钥（营销活动）
+* 隐藏的协调键（营销活动）
 * 数字字段（营销活动）
 * 选项字段（营销活动）
 * 订阅核对清单（营销活动）
@@ -247,7 +247,7 @@ ht-degree: 5%
   <tr>
    <td><p>复选框（营销活动）</p> </td>
    <td><p>布尔型</p> </td>
-   <td><p>否 延长联系时间（通过任何渠道）</p> </td>
+   <td><p>不再联系（通过任何渠道）</p> </td>
   </tr>
   <tr>
    <td><p>日期字段（营销活动）</p> <p>日期字段/HTML 5（营销活动）</p> </td>
@@ -360,7 +360,7 @@ Adobe Campaign组件具有所有组件中通用的设置（加密的主密钥和
 
 ![chlimage_1-94](assets/chlimage_1-94.png)
 
-### 隐藏的对帐密钥（营销活动） {#hidden-reconciliation-key-campaign}
+### 隐藏的协调键（营销活动） {#hidden-reconciliation-key-campaign}
 
 利用隐藏的对帐密钥（营销活动）组件，您可以将隐藏字段作为对帐密钥的一部分添加到表单。
 

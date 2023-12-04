@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
 exl-id: 918fcbbc-a78a-4fab-a933-f183ce6a907f
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '2067'
-ht-degree: 12%
+source-wordcount: '2037'
+ht-degree: 9%
 
 ---
 
@@ -253,7 +253,7 @@ subject=<text_1>
 在共享或取消共享AEM Assets中的收藏集时，用户可以从AEM接收电子邮件通知。 要配置电子邮件通知，请执行以下步骤。
 
 1. 配置电子邮件服务，如中所述 [配置邮件服务](/help/sites-administering/notification.md#configuring-the-mail-service).
-1. 以管理员身份登录 AEM。单击 **工具** >  **操作** >  **Web控制台** 以打开Web控制台配置。
+1. 以管理员身份登录AEM。 单击 **工具** >  **操作** >  **Web控制台** 以打开Web控制台配置。
 1. 编辑 **Day CQ DAM资源收集Servlet**. 选择 **发送电子邮件**. 单击&#x200B;**保存**。
 
 ## 设置OAuth {#setting-up-oauth}
@@ -289,7 +289,7 @@ AEM为其集成的邮件程序服务提供OAuth2支持，以允许组织遵守�
 1. 打开AEM Web Console，方法是转到 `http://serveraddress:serverport/system/console/configMgr`
 1. 查找，然后单击 **Day CQ邮件服务**
 1. 添加以下设置：
-   * SMTP 服务器主机名: `smtp.gmail.com`
+   * SMTP服务器主机名： `smtp.gmail.com`
    * SMTP服务器端口： `25` 或 `587`，具体取决于要求
    * 勾选选复选框 **SMPT使用StarTLS** 和 **SMTP需要StarTLS**
    * Check **OAuth流** 并单击 **保存**.
@@ -303,7 +303,7 @@ AEM为其集成的邮件程序服务提供OAuth2支持，以允许组织遵守�
    * 令牌URL： `https://accounts.google.com/o/oauth2/token`
    * 范围： `https://www.googleapis.com/auth/gmail.send` 和 `https://mail.google.com/`. 通过按 **+** 按钮以打开每个已配置作用域的右侧。
    * 客户端ID和客户端密码：使用您在上面段落中检索到的值配置这些字段。
-   * 刷新令牌 URL: `https://accounts.google.com/o/oauth2/token`
+   * 刷新令牌URL： `https://accounts.google.com/o/oauth2/token`
    * 刷新令牌过期：从不
 1. 单击&#x200B;**保存**。
 
@@ -341,7 +341,7 @@ AEM为其集成的邮件程序服务提供OAuth2支持，以允许组织遵守�
 
    ![配置Microsoft Outlook时的“新建注册”按钮](assets/oauth-outlook1.png)
 
-1. 根据您的要求填写信息，然后单击&#x200B;**注册**
+1. 根据您的要求填写信息，然后单击 **注册**
 1. 转至新创建的应用程序，并选择 **API 权限**
 1. 转至&#x200B;**添加权限** - **图表权限** - **委派权限**
 1. 为应用程序选择以下权限，然后单击&#x200B;**添加权限**：
@@ -354,7 +354,7 @@ AEM为其集成的邮件程序服务提供OAuth2支持，以允许组织遵守�
    * `http://localhost:4503/services/mailer/oauth2/token`
 1. 对每个发布实例重复以上步骤
 1. 根据您的要求配置设置
-1. 接下来，转至&#x200B;**证书和密码**，单击&#x200B;**新建客户端密码**，然后执行屏幕上显示的步骤来创建密码。请务必记下此密码供以后使用
+1. 接下来，转到 **证书和密钥**，单击 **新客户端密码** 并按照屏幕上的步骤创建密码。 请务必记下此密码供以后使用
 1. 按左窗格中的&#x200B;**概述**，复制&#x200B;**应用程序（客户端）ID** 和&#x200B;**目录（租户）ID** 的值供以后使用
 
 回顾一下，您必须具有以下信息才能在AEM端为邮件程序服务配置OAuth2：
@@ -372,7 +372,7 @@ AEM为其集成的邮件程序服务提供OAuth2支持，以允许组织遵守�
 1. 通过浏览到以下内容，转到本地实例的Web控制台 `http://serveraddress:serverport/system/console/configMgr`
 1. 查找并单击 **Day CQ邮件服务**
 1. 添加以下设置：
-   * SMTP 服务器主机名: `smtp.office365.com`
+   * SMTP服务器主机名： `smtp.office365.com`
    * SMTP用户：您的用户名，采用电子邮件格式
    * “发件人”地址：在邮件程序发送的邮件的“发件人：”字段中使用的电子邮件地址
    * SMTP服务器端口： `25` 或 `587` 具体取决于要求

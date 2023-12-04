@@ -9,10 +9,10 @@ content-type: reference
 discoiquuid: 1099cc44-de6d-499e-8b52-f2f5811ae086
 docset: aem65
 exl-id: dcb66b6d-d731-493e-8936-12d529f6cbde
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '3219'
-ht-degree: 6%
+source-wordcount: '3186'
+ht-degree: 4%
 
 ---
 
@@ -72,7 +72,7 @@ ht-degree: 6%
    * 利用结构，可为模板定义组件和内容。
    * 不能在生成页面上移动在模板结构中定义的组件，也不能从任何生成页面中删除这些组件。
 
-      * 如果您是在模板外部的自定义文件夹中创建模板 `We.Retail` 示例内容，您可以选择基础组件或使用 [核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/overview.html?lang=zh-Hans).
+      * 如果您是在模板外部的自定义文件夹中创建模板 `We.Retail` 示例内容，您可以选择基础组件或使用 [核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/overview.html?lang=en).
 
    * 如果要使页面作者能够添加和删除组件，请在模板中添加段落系统。
    * 可以解锁组件，然后再将其锁定，以便定义初始内容。
@@ -85,7 +85,7 @@ ht-degree: 6%
 
    * 内容策略定义组件的设计属性。
 
-      * 例如，可用的组件或最小/最大尺寸。
+      * 例如，可用的元件或最小/最大尺寸。
 
    * 这些策略适用于模板（以及使用该模板创建的页面）。
 
@@ -216,7 +216,7 @@ ht-degree: 6%
 
 ### 使用配置浏览器 {#using-the-configuration-browser}
 
-1. 转到 **全局导航** -> **工具** > **配置浏览器**.
+1. 转到 **全局导航** > **工具** > **配置浏览器**.
 
    左侧列出了现有文件夹，包括 **全局** 文件夹。
 
@@ -506,7 +506,7 @@ GITHUB上的代码
 
    * **类型**：`String`
 
-   * **值**：`draft`, `enabled`, 或 `disabled`
+   * **值**： `draft`， `enabled`，或 `disabled`
 
 ### 结构 {#structure}
 
@@ -585,7 +585,7 @@ GITHUB上的代码
 
          * 名称：状态
          * 类型：字符串
-         * 价值: `enabled`
+         * 值： `enabled`
 
 1. **允许的模板**
 
@@ -629,11 +629,11 @@ GITHUB上的代码
 
 呈现页面时：
 
-* **模板**:
+* **模板**：
 
    * 此 `cq:template` 其属性 `jcr:content` 节点被引用以访问与该页面对应的模板。
 
-* **组件**:
+* **组件**：
 
    * 页面组件合并 `structure/jcr:content` 模板树 `jcr:content` 页面的树。
 

@@ -7,10 +7,10 @@ topic-tags: personalization
 content-type: reference
 docset: aem65
 exl-id: 6d759907-8796-4749-bd80-306ec7f2c819
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1129'
-ht-degree: 13%
+source-wordcount: '1128'
+ht-degree: 7%
 
 ---
 
@@ -49,12 +49,12 @@ AEM可让您轻松创建和更新区段、Teaser和营销活动。 它还允许�
 <table>
  <tbody>
   <tr>
-   <td> AND 容器<br /> </td>
-   <td> 布尔 AND 运算符.<br /> </td>
+   <td> AND容器<br /> </td>
+   <td> 布尔AND运算符。<br /> </td>
   </tr>
   <tr>
-   <td> OR 容器<br /> </td>
-   <td> 布尔 OR 运算符.</td>
+   <td> OR容器<br /> </td>
+   <td> 布尔OR运算符。</td>
   </tr>
  </tbody>
 </table>
@@ -66,11 +66,11 @@ AEM可让您轻松创建和更新区段、Teaser和营销活动。 它还允许�
 <table>
  <tbody>
   <tr>
-   <td> IP 范围<br /> </td>
+   <td> IP范围<br /> </td>
    <td>定义访客可以拥有的IP地址范围。<br /> </td>
   </tr>
   <tr>
-   <td> 页面点击<br /> </td>
+   <td> 页面点击量<br /> </td>
    <td>请求页面的频率。 <br /> </td>
   </tr>
   <tr>
@@ -110,7 +110,7 @@ AEM可让您轻松创建和更新区段、Teaser和营销活动。 它还允许�
 
 >[!CAUTION]
 >
->区段编辑器不检查任何循环引用。例如，区段 A 引用另一个区段 B，而后者又引用区段 A。您必须确保您的区段不包含任何循环引用。
+>区段编辑器不检查任何循环引用。例如，区段A引用另一个区段B，而后者又引用区段A。请确保您的区段不包含任何循环引用。
 
 >[!NOTE]
 >
@@ -179,7 +179,7 @@ AEM可让您轻松创建和更新区段、Teaser和营销活动。 它还允许�
 
 >[!NOTE]
 >
->将立即解析所有特征，尽管大多数特征仅在页面重新加载时发生变化。对鼠标位置的更改会立即可见，因此可用于测试目的。
+>所有特征都会立即解析，但大多数特征仅在页面重新加载时发生变化。 对鼠标位置的更改会立即可见，因此可用于测试目的。
 
 此类测试也可在内容页面上执行，并与 **Teaser** 组件。
 

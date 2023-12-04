@@ -7,9 +7,9 @@ topic-tags: integration
 content-type: reference
 docset: aem65
 exl-id: b5f3d3a6-39c0-4aa5-8562-3cc6fa2b9e46
-source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '6087'
+source-wordcount: '6076'
 ht-degree: 0%
 
 ---
@@ -719,7 +719,7 @@ AEM快速入门JAR文件包含Portlet组件文件。 要获取文件(cq-portlet-
    >
    >如果计划在同一页面上多次使用同一Portlet ，请为每个Portlet指定不同的窗口ID。
 
-1. 单击&#x200B;**确定**。Portlet将显示在您的AEM页面上。
+1. 单击 **确定**. Portlet将显示在您的AEM页面上。
 
    ![chlimage_1-136](assets/chlimage_1-136.png)
 
@@ -727,7 +727,7 @@ AEM快速入门JAR文件包含Portlet组件文件。 要获取文件(cq-portlet-
 
 要访问AEM WCM提供的内容，门户服务器需要安装AEM Portal Director Portlet。 要执行此操作，请使用本节中提供的步骤安装、配置Portlet并将其添加到门户页面。
 
-默认情况下，portlet连接到localhost：4503上的发布实例，并连接到localhost：4502上的创作实例。 这些值可以在部署portlet的过程中更改。 门户控制器可在存储库的/libs/portal/directory下作为内容使用。 必须先下载应用程序war文件，然后才能使用它。
+默认情况下，portlet连接到localhost：4503上的发布实例，并连接到localhost：4502上的创作实例。 这些值可以在部署portlet的过程中更改。 门户控制器可在存储库的/libs/portal/directory下作为内容使用。 下载应用程序war文件，然后再使用它。
 
 ### 正在下载war文件 {#downloading-the-war-file}
 
@@ -776,7 +776,7 @@ AEM快速入门JAR文件包含Portlet组件文件。 要获取文件(cq-portlet-
 
    ![chlimage_1-137](assets/chlimage_1-137.png)
 
-1. 单击&#x200B;**保存**。您现在可以将portlet添加到门户页面并使用门户。
+1. 单击 **保存**. 您现在可以将portlet添加到门户页面并使用门户。
 
 ### 内容URL {#content-urls}
 

@@ -1,19 +1,17 @@
 ---
 title: 提升启动项
 description: 您可以提升启动页面，以在发布之前将内容移回源（生产）。
-uuid: 2dc41817-fcfb-4485-a085-7b57b9fe89ec
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: site-features
-discoiquuid: 3d4737ef-f758-4540-bc8f-ecd9f05f6bb0
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/author/site-page-features/launches
 exl-id: f59f12a2-ecd6-49cf-90ad-621719fe51bf
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
 source-wordcount: '772'
-ht-degree: 77%
+ht-degree: 76%
 
 ---
 
@@ -62,7 +60,7 @@ ht-degree: 77%
 
    * 该 **启动次数** 控制台：
 
-      1. 选择您的启动项（点按/单击缩略图）。
+      1. 选择您的启动项（单击缩略图）。
       1. 选择&#x200B;**提升**。
 
 1. 在第一步中，您可以指定：
@@ -97,7 +95,7 @@ ht-degree: 77%
 
 在编辑启动页面时，也可以从&#x200B;**页面信息**&#x200B;中执行&#x200B;**提升启动项**&#x200B;操作。这将打开向导以收集所需的信息。
 
-![提升发布内容](assets/chlimage_1-103.png)
+![提升启动项](assets/chlimage_1-103.png)
 
 >[!NOTE]
 >

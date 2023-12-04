@@ -5,10 +5,10 @@ contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 docset: aem65
 exl-id: 5623dcf4-bda9-4dee-ace3-5a1f6057e96c
-source-git-commit: 7d46ba0eaa73d9f7a67034ba81d7fa379aa0112c
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1835'
-ht-degree: 2%
+source-wordcount: '1764'
+ht-degree: 1%
 
 ---
 
@@ -182,7 +182,7 @@ AEM会按时间顺序保留当前组件中最后50个操作的记录。 如有�
 
 ![锚点工具栏](do-not-localize/cq55_rte_anchor.png)
 
-通过定位光标或选取某些文本，可以在文本中的任意位置创建锚点。 然后，单击 **锚点** 图标以打开对话框。
+通过定位光标或选取某些文本，可以在文本中的任意位置创建锚点。 然后单击 **锚点** 图标以打开对话框。
 
 输入锚点的名称，然后单击 **确定** 以保存。
 
@@ -238,7 +238,7 @@ AEM同时提供 **查找** 和 **替换** （查找和替换）函数。
 
 * 作为 **表** 组件
 
-  ![表格组件](assets/chlimage_1-105.png)
+  ![表组件](assets/chlimage_1-105.png)
 
 * 从 **文本** 组件
 

@@ -2,9 +2,9 @@
 title: 如何在AEM Forms on JEE Workbench中使用execute脚本服务来构建XML数据？
 description: 使用AEM Forms on JEE Workbench中的执行脚本服务构建XML数据
 exl-id: 2ec57cd4-f41b-4e5c-849d-88ca3d2cfe19
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '990'
+source-wordcount: '982'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ JEE流程管理工作流中AEM Forms涉及许多XML，例如：可以在流程�
 
 在本教程中，整个应用程序和进程创建不在范围之内，但出于本说明的目的，已创建名为“DemoApplication02”的应用程序。 假定已创建应用程序，则需要在此应用程序中创建进程以调用executeScript服务。 向应用程序添加一个进程，其中包括 `Execute Script` 服务：
 
-1. 右键单击您的应用程序并选择 **[!UICONTROL 新建]**. 在 **[!UICONTROL 新建]** 滑出菜单，选择 **[!UICONTROL 进程]**. 命名您的进程，添加说明（如有必要），然后选择要代表此进程的图标。 在本教程中，我们创建了一个流程，并将其命名为  `executeScriptDemoProcess`.
+1. 右键单击您的应用程序，然后选择 **[!UICONTROL 新建]**. 在 **[!UICONTROL 新建]** 滑出菜单，选择 **[!UICONTROL 进程]**. 命名您的进程，添加说明（如有必要），然后选择要代表此进程的图标。 在本教程中，我们创建了一个流程，并将其命名为  `executeScriptDemoProcess`.
 1. 定义您的起点，或简单地选择稍后添加起点。
 1. 该流程现已创建，应会在以下位置自动打开： [!UICONTROL 流程设计] 窗口。 在此窗口中，单击“流程设计”窗口顶部的“活动选取器”图标，然后将新活动拖到泳道上。 此时， [!UICONTROL 定义活动窗口] （请参见下图）。
    ![定义活动](assets/define-activity.jpg)

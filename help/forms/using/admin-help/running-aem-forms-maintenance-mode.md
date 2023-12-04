@@ -1,7 +1,7 @@
 ---
 title: 在维护模式下运行AEM表单
 seo-title: Running AEM forms in maintenance mode
-description: 在执行打补丁DSC、升级AEM表单或应用Service Pack等任务时，维护模式很有用。 了解有关在维护模式下运行AEM表单的更多信息。
+description: 在执行诸如为DSC打补丁、升级AEM表单或应用Service Pack等任务时，维护模式很有用。 了解有关在维护模式下运行AEM表单的更多信息。
 seo-description: Maintenance mode is useful when performing tasks such as patching a DSC, upgrading AEM forms, or applying a service pack. Learn more about running AEM forms in maintenance mode.
 uuid: 9aa3be20-f17e-4384-b4ce-daaee2898c96
 contentOwner: admin
@@ -10,21 +10,21 @@ geptopics: SG_AEMFORMS/categories/maintaining_aem_forms
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 94047c12-ba3d-457a-954f-e035c7cc3ecd
 exl-id: 6f5ce18b-26b4-4c31-b48a-43ccbb3912f6
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '259'
+source-wordcount: '256'
 ht-degree: 0%
 
 ---
 
 # 在维护模式下运行AEM表单 {#running-aem-forms-in-maintenance-mode}
 
-在执行打补丁DSC、升级AEM表单或应用Service Pack等任务时，维护模式很有用。
+在执行诸如为DSC打补丁、升级AEM表单或应用Service Pack等任务时，维护模式很有用。
 
 避免在服务器处于维护模式时调用任何进程。 如果在服务器处于维护模式时调用进程，则会发生以下情况：
 
 * 如果进程是长期的，则会将其添加到作业数据库，但不会启动。 当您退出维护模式时，AEM Forms会处理其队列中的长期作业，即使服务器在维护模式下重新启动也是如此。
-* 如果处理周期较短，则会立即进行处理。
+* 如果处理的时间较短，则会立即进行处理。
 
 **将AEM表单置于维护模式**
 
@@ -36,7 +36,7 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >如果在服务器处于维护模式时将其关闭，则在重新启动时它仍将处于维护模式。 完成维护任务后，必须关闭维护模式。
+   >如果在服务器处于维护模式时将其关闭，则在重新启动时它仍处于维护模式。 完成维护任务后关闭维护模式。
 
 **检查AEM表单是否正在维护模式下运行**
 

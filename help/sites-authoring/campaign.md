@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: personalization
 exl-id: d7e4d424-0ca7-449f-95fb-c4fe19dd195d
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '2749'
+source-wordcount: '2770'
 ht-degree: 0%
 
 ---
@@ -102,7 +102,7 @@ ht-degree: 0%
 
    ![chlimage_1-19](assets/chlimage_1-19a.png)
 
-1. 选择 **云服务** 并单击 **+** 以添加配置。 选择任何可见的配置（无论哪个配置）。 单击或点按 **+** 签名以添加其他配置，然后选择 **Adobe Campaign**.
+1. 选择 **云服务** 并单击 **+** 以添加配置。 选择任何可见的配置（无论哪个配置）。 单击 **+** 签名以添加其他配置，然后选择 **Adobe Campaign**.
 
    >[!NOTE]
    >
@@ -201,7 +201,7 @@ ht-degree: 0%
 
    ![chlimage_1-29](assets/chlimage_1-29a.png)
 
-1. 您可以查看来自Adobe Campaign且与当前选定角色关联的种子数据。 为此，请单击/点按ContextHub栏中的Adobe Campaign模块。 这将打开一个对话框，其中显示当前配置文件的所有种子数据。 同样，当切换到其他角色时，数据会进行相应的调整。
+1. 您可以查看来自Adobe Campaign且与当前选定角色关联的种子数据。 为此，请单击ContextHub栏中的Adobe Campaign模块。 这将打开一个对话框，其中显示当前配置文件的所有种子数据。 同样，当切换到其他角色时，数据会进行相应的调整。
 
    ![chlimage_1-30](assets/chlimage_1-30a.png)
 

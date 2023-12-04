@@ -7,10 +7,10 @@ topic-tags: extending-aem
 content-type: reference
 docset: aem65
 exl-id: 6790202f-0542-4779-b3ce-d394cdba77b4
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '2451'
-ht-degree: 2%
+source-wordcount: '2462'
+ht-degree: 3%
 
 ---
 
@@ -97,7 +97,7 @@ ht-degree: 2%
 
 ### 向模型添加步骤 {#adding-a-step-to-a-model}
 
-您必须向模型添加步骤以表示要执行的活动 — 每个步骤都会执行特定活动。 标准AEM实例中提供了一组步骤组件。
+将步骤添加到模型中以表示要执行的活动 — 每个步骤都会执行特定活动。 标准AEM实例中提供了一组步骤组件。
 
 在编辑模型时，可用步骤会出现在各个组的 **步骤浏览器**. 例如：
 
@@ -144,7 +144,7 @@ ht-degree: 2%
 
 1. 打开 **步骤属性** 对话框，显示以下步骤之一：
 
-   * 单击/点按工作流模型中的* *步骤，然后选择 **配置** 从组件工具栏中。
+   * 单击工作流模型中的* *步骤，然后选择 **配置** 从组件工具栏中。
 
    * 双击该步骤。
 
@@ -243,7 +243,7 @@ ht-degree: 2%
 
    一个阶段可以分配给多个步骤。 例如：
 
-   | **步骤** | **暂存** |
+   | **步骤** | **Stage** |
    |---|---|
    | 步骤 1 | 创建 |
    | 步骤 2 | 创建 |
@@ -368,7 +368,7 @@ ht-degree: 2%
 1. 确认对的更新 **OR拆分**.
 1. 拖动 **参与者步骤** 打开左侧的属性，指定以下值，然后确认更改：
 
-   * **标题**: `Reject Publish Request`
+   * **标题**： `Reject Publish Request`
 
    * **用户/组**：例如， `projects-administrators`
 
@@ -376,7 +376,7 @@ ht-degree: 2%
 
 1. 拖动 **流程步骤** 在右侧分支中，打开属性，指定以下值，然后确认更改：
 
-   * **标题**: `Publish Page as Requested`
+   * **标题**： `Publish Page as Requested`
 
    * **进程**：选择 `Activate Page`. 此进程将所选页面发布到发布服务器实例。
 

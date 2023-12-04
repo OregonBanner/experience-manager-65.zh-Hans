@@ -10,18 +10,18 @@ geptopics: SG_AEMFORMS/categories/configuring_workspace
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 2d6f90bb-62f7-4805-9250-1b913fe7d2b3
 exl-id: da1224e4-566a-402f-9d8b-27fda5f3101b
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '126'
+source-wordcount: '124'
 ht-degree: 0%
 
 ---
 
 # 工作区概述 {#overview-of-workspace}
 
-Workspace允许用户启动、参与和跟踪业务流程。
+工作区允许用户启动、参与和跟踪业务流程。
 
-在管理控制台的Workspace页上，可以执行以下任务：
+在管理控制台的Workspace页面上，可以执行以下任务：
 
 * 设置要在Workspace用户界面的“欢迎”页面上显示的消息
 * 配置要在Workspace中用于搜索流程和任务的搜索模板
@@ -33,4 +33,4 @@ Workspace允许用户启动、参与和跟踪业务流程。
 
 >[!NOTE]
 >
->您必须使用管理控制台中的导航方法。 请勿使用Web浏览器中的“后退”、“前进”或“刷新”按钮。 使用这些按钮可能会导致数据捕获和数据显示问题。
+>使用管理控制台中的导航方法。 请勿使用Web浏览器中的“后退”、“转发”或“刷新”按钮。 使用这些按钮可能会导致数据捕获和数据显示问题。

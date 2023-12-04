@@ -10,10 +10,10 @@ topic-tags: integration
 content-type: reference
 discoiquuid: 20c8eb1d-5847-4902-b7d3-4c3286423b46
 exl-id: 0f710685-dc4f-4333-9847-d002b2637d08
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '2199'
-ht-degree: 30%
+source-wordcount: '2122'
+ht-degree: 28%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 30%
 
 您还可以通过配置A4T Analytics Cloud配置，将Adobe Target配置为在定位内容时使用Adobe Target作为报表源。
 
-要找到云配置和框架，请导航到 **Cloud Service** via **工具** > **部署** > **云**. ([http://localhost:4502/libs/cq/core/content/tools/cloudservices.html](http://localhost:4502/libs/cq/core/content/tools/cloudservices.html))在Adobe Target下，单击或点按 **显示配置**.
+要找到云配置和框架，请导航到 **Cloud Service** via **工具** > **部署** > **云**. ([http://localhost:4502/libs/cq/core/content/tools/cloudservices.html](http://localhost:4502/libs/cq/core/content/tools/cloudservices.html))在Adobe Target下，单击 **显示配置**.
 
 ### 已设置的目标配置属性 {#provisioned-target-configuration-properties}
 
@@ -90,7 +90,7 @@ ht-degree: 30%
    >1. 导航到 **工具** > **常规** > **CRXDE Lite**.
    1. 导航至 [A4T分析配置对话框](#a4t-analytics-config-dialog) （见下文）
    1. 设置属性 **disable** 到 **false**.
-   1. 点击或单击 **全部保存**.
+   1. 单击&#x200B;**全部保存**。
 
 #### A4T分析配置对话框 {#a4t-analytics-config-dialog}
 
@@ -100,7 +100,7 @@ ht-degree: 30%
 
 ![AdobeTargetSettings](assets/adobe-target-settings.jpg)
 
-单击&#x200B;**确定**。使用Adobe Target定位内容时，您能够 [选择您的报表源](/help/sites-authoring/content-targeting-touch.md).
+单击 **确定**. 使用Adobe Target定位内容时，您能够 [选择您的报表源](/help/sites-authoring/content-targeting-touch.md).
 
 ## 手动与Adobe Target集成 {#manually-integrating-with-adobe-target}
 
@@ -108,7 +108,7 @@ ht-degree: 30%
 
 >[!NOTE]
 >
-Target 库文件 [AT.JS](https://developer.adobe.com/target/implement/client-side/atjs/atjs-functions/mboxcreate-atjs/) 是 Adobe Target 的新实施库，专为典型的 Web 实施和单页应用程序而设计。Adobe 建议您使用 AT.js 而不是 mbox.js 作为客户端库。
+Target库文件， [AT.JS](https://developer.adobe.com/target/implement/client-side/atjs/atjs-functions/mboxcreate-atjs/)，是适用于Adobe Target的新实施库，专为典型的Web实施和单页应用程序而设计。 Adobe 建议您使用 AT.js 而不是 mbox.js 作为客户端库。
 >
 AT.js 对 mbox.js 库进行了多项改进：
 >
@@ -153,7 +153,7 @@ AT.js 对 mbox.js 库进行了多项改进：
    1. 导航到 **工具** > **常规** > **CRXDE Lite**.
    1. 导航到 **/libs/cq/analytics/components/testandtargetpage/dialog/items/tables/items/tab1_general/items/a4tAnalyticsConfig**
    1. 设置属性 **disable** 到 **false**.
-   1. 点击或单击 **全部保存**.
+   1. 单击&#x200B;**全部保存**。
 
 1. 在对话框中，提供这些属性的值。
 
@@ -180,7 +180,7 @@ AT.js 对 mbox.js 库进行了多项改进：
    >
    如果您&#x200B;***已经***&#x200B;创建目标组件并更改此设置，则您的更改不会影响这些组件。直接更改这些组件。
 
-1. 单击&#x200B;**连接到 Target** 可初始化与 Target 的连接。如果连接成功，则将显示消息&#x200B;**连接成功**。单击消息上的&#x200B;**确定**，然后单击对话框上的&#x200B;**确定**。
+1. 单击 **连接到Target** 初始化与Target的连接。 如果连接成功，则将显示消息&#x200B;**连接成功**。单击消息上的&#x200B;**确定**，然后单击对话框上的&#x200B;**确定**。
 
    如果无法连接到 Target，请参阅[疑难解答](/help/sites-administering/target-configuring.md#troubleshooting-target-connection-problems)部分。
 
@@ -199,7 +199,7 @@ AT.js 对 mbox.js 库进行了多项改进：
 
    ![框架组件](assets/chlimage_1-162.png)
 
-1. 将表示要用于映射的数据的客户端上下文组件拖动到放置目标。或者，将 **ContextHub 存储**&#x200B;组件拖动到框架。
+1. 将表示要用于映射的数据的客户端上下文组件拖动到放置目标。或者，拖动&#x200B;**ContextHub存储** 组件添加到框架。
 
    >[!NOTE]
    >
@@ -243,8 +243,8 @@ AT.js 对 mbox.js 库进行了多项改进：
 1. 在 **站点** 控制台中，导航到要配置的站点。
 1. 使用 [快速操作](/help/sites-authoring/basic-handling.md#quick-actions) 或 [选择模式](/help/sites-authoring/basic-handling.md)，选择 **查看属性。**
 1. 选择&#x200B;**云服务**&#x200B;选项卡。
-1. 点按/单击&#x200B;**编辑**。
-1. 点按/单击 **添加配置** 下 **Cloud Service配置** 并选择 **Adobe Target**.
+1. 单击 **编辑**.
+1. 单击 **添加配置** 下 **Cloud Service配置** 并选择 **Adobe Target**.
 
    ![添加配置](assets/chlimage_1-165.png)
 
@@ -254,7 +254,7 @@ AT.js 对 mbox.js 库进行了多项改进：
    >
    确保选择特定的 **框架** 中创建的，而不是在其中创建它的Target云配置。
 
-1. 点按/单击 **完成**.
+1. 单击&#x200B;**完成**。
 1. 激活网站的根页面，以便将其复制到发布服务器。 (请参阅 [如何发布页面](/help/sites-authoring/publishing-pages.md).)
 
    >[!NOTE]

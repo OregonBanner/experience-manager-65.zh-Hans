@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
 exl-id: e56986b2-397e-4802-992b-05a9ea7b2e36
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '811'
+source-wordcount: '805'
 ht-degree: 0%
 
 ---
@@ -70,7 +70,7 @@ ht-degree: 0%
 
 要创建包含目标内容的新闻稿，请执行以下操作：
 
-1. 创建包含目标内容的新闻稿：在Geometrixx Outdoors中的电子邮件促销活动下方，单击或点按 **创建** > **页面**，然后选择其中一个Adobe Campaign邮件模板。
+1. 创建包含目标内容的新闻稿：在Geometrixx Outdoors中的电子邮件促销活动下，单击 **创建** > **页面**，然后选择其中一个Adobe Campaign邮件模板。
 
    >[!NOTE]
    >
@@ -84,7 +84,7 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >默认情况下，AEM随附的电子邮件示例使用Adobe Campaign作为定位引擎。 对于自定义新闻稿，您可能需要选择Adobe Campaign作为定位引擎。 定位时，点按或单击工具栏中的+ ，输入新活动的标题，然后选择 **Adobe Campaign** 作为定位引擎。
+   >默认情况下，AEM随附的电子邮件示例使用Adobe Campaign作为定位引擎。 对于自定义新闻稿，您可能需要选择Adobe Campaign作为定位引擎。 定位时，单击工具栏中的+ ，输入新活动的标题，然后选择 **Adobe Campaign** 作为定位引擎。
 
 1. 单击 **默认** 然后是您添加的文本和个性化组件，您会看到带有箭头的靶心。 单击图标以定位此组件。
 

@@ -7,10 +7,10 @@ topic-tags: spa
 content-type: reference
 docset: aem65
 exl-id: 7b34be66-bb61-4697-8cc8-428f7c63a887
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1652'
-ht-degree: 85%
+source-wordcount: '1644'
+ht-degree: 84%
 
 ---
 
@@ -22,7 +22,7 @@ SPA 编辑器提供了一个全面的解决方案来支持 AEM 中的 SPA。此�
 
 >[!NOTE]
 >
->SPA编辑器是推荐的解决方案，适用于需要基于SPA Framework的客户端渲染(例如React或Angular)的项目。
+>SPA编辑器是推荐的解决方案，适用于需要基于SPA框架的客户端渲染(例如React或Angular)的项目。
 
 ## 简介 {#introduction}
 
@@ -51,7 +51,8 @@ SPA 的页面组件不通过 JSP 或 HTL 文件提供其子组件的 HTML 元素
 * 或者，使用 `customfooterlibs.html` 添加类别。
 
 对于已导出模型中的每个资源，SPA 将映射一个用于呈现的实际组件。
-之后，使用容器内的组件映射呈现以 JSON 形式表示的模型。![screen_shot_2018-08-20at144152](assets/screen_shot_2018-08-20at144152.png)
+随后使用容器中的组件映射呈现以JSON表示的模型。
+![screen_shot_2018-08-20at144152](assets/screen_shot_2018-08-20at144152.png)
 
 >[!CAUTION]
 >
@@ -78,7 +79,7 @@ SPA 的页面组件不通过 JSP 或 HTL 文件提供其子组件的 HTML 元素
 
 请记住，SPA 编辑器的关键元素，面向作者的在 AEM 中编辑 SPA 的高级工作流如下所示。
 
-![untitled1](assets/untitled1.gif)
+![无标题1](assets/untitled1.gif)
 
 1. SPA 编辑器加载。
 1. SPA 是在一个单独的框架中加载的。

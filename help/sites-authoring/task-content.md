@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: projects
 content-type: reference
 exl-id: a0719745-8d67-44bc-92ba-9ab07f31f8d2
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '594'
+source-wordcount: '586'
 ht-degree: 41%
 
 ---
@@ -52,7 +52,7 @@ ht-degree: 41%
 
 #### 任务详细信息 {#task-details}
 
-有关特定任务的详细信息，请在收件箱中，点按或单击该任务以将其选定，然后点按或单击 **打开** 工具栏中。
+有关特定任务的详细信息，请在收件箱中单击该任务以将其选定，然后单击 **打开** 工具栏中。
 
 ![任务详细信息](assets/project-task-detail.png)
 
@@ -70,12 +70,12 @@ ht-degree: 41%
 要添加任务，请执行以下操作：
 
 1. 在项目中，找到 **任务** 磁贴
-1. 点按或单击图块右上角的向下V形标记并选择 **创建任务**.
+1. 单击图块右上角的向下V形标记并选择 **创建任务**.
 1. 在 **添加任务** 窗口，提供任务详细信息，如优先级、被分派人和到期日。
 
    ![添加任务](assets/project-add-task.png)
 
-1. 点按或单击 **提交**。
+1. 单击&#x200B;**“提交”。**
 
 ## 在收件箱中处理任务 {#working-with-tasks-in-the-inbox}
 

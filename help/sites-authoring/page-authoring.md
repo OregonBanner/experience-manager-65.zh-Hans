@@ -2,7 +2,7 @@
 title: 在AEM中创作内容页面
 description: 在Adobe Experience Manager 6.5中创作内容页面时涉及的任务。
 exl-id: 07528cf0-e67a-46b5-a3b2-d1b74ad2228f
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
 source-wordcount: '317'
 ht-degree: 0%
@@ -41,7 +41,7 @@ ht-degree: 0%
 在可编辑页面的左侧，可以打开滑动浏览器；从这里，可以将资产拖动到页面上；例如，放置资产或创建指向其他页面的链接。
 
 * **组件工具栏**
-单击/点按一次或缓慢双击都会显示相应的工具栏（单击可显示就地编辑工具栏，单击缓慢双击可显示完整工具栏）。
+一次或慢速双击都会显示相应的工具栏（单用于就地编辑工具栏，慢速双击用于完整工具栏）。
 
 * **[响应式布局](/help/sites-authoring/responsive-layout.md)**
 这提供了一个段落系统，允许您在响应式网格中放置组件。

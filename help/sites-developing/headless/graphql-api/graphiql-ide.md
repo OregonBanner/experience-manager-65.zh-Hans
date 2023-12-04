@@ -2,10 +2,10 @@
 title: 在 AEM 中使用 GraphiQL IDE
 description: 了解如何在 Adobe Experience Manager 中使用 GraphiQL IDE。
 exl-id: d4b01485-658b-4245-b2e6-04be8abc8ecf
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '786'
-ht-degree: 93%
+source-wordcount: '783'
+ht-degree: 92%
 
 ---
 
@@ -82,7 +82,7 @@ ht-degree: 93%
 
 在两种情况下，编辑器面板中显示的查询都是在以下情况下执行的查询：
 
-* 点击/点按&#x200B;**“执行查询”**&#x200B;图标
+* 单击 **执行查询** 图标
 * 使用键盘组合`Control-Enter`
 
 ## 查询变量 {#query-variables}

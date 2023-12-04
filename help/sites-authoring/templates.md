@@ -7,10 +7,10 @@ content-type: reference
 topic-tags: site-features
 docset: aem65
 exl-id: 363b8fab-6ce7-4338-8478-3f25f2a1f117
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '4834'
-ht-degree: 81%
+source-wordcount: '4825'
+ht-degree: 75%
 
 ---
 
@@ -51,7 +51,7 @@ ht-degree: 81%
 
 在开始之前，请务必考虑以下几点：
 
-* 创建模板需要协作。 因此，为每项任务指明了对应的[角色](#roles)。
+* 创建模板需要协作。 因此， [角色](#roles) 指示每个任务。
 
 * 根据实例的配置方式，AEM现在提供 [两种基本类型的模板](/help/sites-authoring/templates.md#editable-and-static-templates). 这不会影响您实际的 [使用模板创建页面](#using-a-template-to-create-a-page)，但它确实会影响您可以创建的模板类型以及页面与其模板的关系。
 
@@ -120,7 +120,7 @@ AEM现在提供两种基本类型的模板：
 
 * 使用&#x200B;**模板**&#x200B;控制台。此控制台可从&#x200B;**工具**&#x200B;控制台的&#x200B;**常规**&#x200B;部分访问。
 
-   * 或直接从以下网站进行访问：[https://localhost:4502/libs/wcm/core/content/sites/templates.html/conf](https://localhost:4502/libs/wcm/core/content/sites/templates.html/conf)
+   * 或直接访问： [https://localhost:4502/libs/wcm/core/content/sites/templates.html/conf](https://localhost:4502/libs/wcm/core/content/sites/templates.html/conf)
 
 * 如有必要，可以[创建模板文件夹](#creating-a-template-folder-admin)
 * [创建模板](#creatinganewtemplateauthor)，最初为空
@@ -151,7 +151,7 @@ AEM现在提供两种基本类型的模板：
 
 ### 创建新模板 – 模板作者 {#creating-a-new-template-template-author}
 
-1. 打开&#x200B;**“模板”控制台**（通过&#x200B;**工具** -> **常规**），然后导航到所需的文件夹。
+1. 打开 **模板控制台** (通过 **工具>** **常规**)，然后导航到所需的文件夹。
 
    >[!NOTE]
    >
@@ -173,7 +173,7 @@ AEM现在提供两种基本类型的模板：
    * **模板名称**
    * **描述**
 
-1. 选择&#x200B;**创建**。随即会显示确认对话框，选择&#x200B;**打开**[](#editingatemplate)以开始编辑模板，或选择&#x200B;**完成**&#x200B;以返回到“模板”控制台。
+1. 选择&#x200B;**创建**。随即会显示确认消息，请选择 **打开** 开始 [编辑模板](#editingatemplate) 或 **完成** 以返回到“模板”控制台。
 
    >[!NOTE]
    >
@@ -221,14 +221,14 @@ AEM现在提供两种基本类型的模板：
 1. 编辑模板属性。
 1. 选择是要上传缩略图，还是要从模板内容中生成缩略图。
 
-   * 如果要上传缩略图，请单击或点按&#x200B;**上传图像**。
-   * 如果要生成缩略图，请单击或点按&#x200B;**生成预览**。
+   * 如果要上传缩略图，请单击 **上传图像**
+   * 如果要生成缩略图，请单击 **生成预览**
 
 1. 使用上述两种方法时，系统都会显示缩略图预览。
 
-   如果对缩略图不满意，请单击或点按&#x200B;**清除**&#x200B;以上传其他图像，或重新生成缩略图。
+   如果不满意，请单击 **清除** 上传其他图像或重新生成缩略图。
 
-1. 如果对缩略图满意，请单击或点按&#x200B;**保存并关闭**。
+1. 如果对缩略图满意，请单击 **保存并关闭**.
 
 ### 启用并允许模板 - 模板作者 {#enabling-and-allowing-a-template-template-author}
 
@@ -310,7 +310,7 @@ AEM现在提供两种基本类型的模板：
 
 * [初始内容](#editingatemplateinitialcontent)
 
-  解锁组件后，您可以定义要复制到生成页面（使用模板创建）的初始内容。可以在生成页面上编辑这些已解锁的组件。
+  解锁组件后，您可以定义要复制到生成页面（使用模板创建）的初始内容。 可以在生成页面上编辑这些已解锁的组件。
 
   >[!NOTE]
   >
@@ -413,7 +413,7 @@ AEM现在提供两种基本类型的模板：
 
   内容（或设计）策略可定义组件的设计属性。例如，可用的组件或最小/最大尺寸。这些属性适用于模板（和使用模板创建的页面）。
 
-  可为组件创建内容策略或选择现有策略。这让您定义设计详细信息。
+  为组件创建内容策略或选择现有策略。 这让您定义设计详细信息。
 
   ![chlimage_1-135](assets/chlimage_1-135.png) ![chlimage_1-136](assets/chlimage_1-136.png)
 
@@ -448,7 +448,7 @@ AEM现在提供两种基本类型的模板：
 
   >[!NOTE]
   >
-  >如果将同一类型的多个组件添加为初始内容，则同一策略适用于所有这些组件。这反映了中的相同限制 [**设计模式** 用于静态模板](/help/sites-authoring/default-components-designmode.md).
+  >如果将同一类型的多个组件添加为初始内容，则同一策略适用于所有这些组件。 这反映了中的相同限制 [**设计模式** 用于静态模板](/help/sites-authoring/default-components-designmode.md).
 
   ***属性***
 
@@ -463,13 +463,13 @@ AEM现在提供两种基本类型的模板：
 
   例如，对于图像组件，可定义允许的宽度，并启用延迟加载。
 
-  如果某项设置允许多个配置，请单击或点按&#x200B;**添加**&#x200B;按钮，以添加其他配置。
+  如果设置允许多项配置，请单击 **添加** 按钮以添加其他配置。
 
   ![chlimage_1-141](assets/chlimage_1-141.png)
 
-  要删除配置，请单击或点按位于配置右侧的&#x200B;**删除**&#x200B;按钮。
+  要删除配置，请单击 **删除** 按钮进行配置。
 
-  要删除配置，请单击或点按**删除**按钮。
+  要删除配置，请单击**删除**按钮。
 
   ![chlimage_1-142](assets/chlimage_1-142.png)
 
@@ -487,7 +487,7 @@ AEM现在提供两种基本类型的模板：
 
   >[!NOTE]
   >
-  >[](/help/sites-administering/rich-text-editor.md#main-pars-header-206036638)只能为 RTE 通过其 UI 设置提供的选项定义用于实施富文本编辑器的组件的内容策略。 [](/help/sites-administering/rich-text-editor.md#main-pars_header_206036638) [](/help/sites-administering/rich-text-editor.md#main-pars_header_206036638)
+  >[用于实施富文本编辑器的组件的内容策略](/help/sites-administering/rich-text-editor.md#main-pars-header-206036638) 只能为RTE通过其UI设置提供的选项定义。 [](/help/sites-administering/rich-text-editor.md#main-pars_header_206036638) [](/help/sites-administering/rich-text-editor.md#main-pars_header_206036638)
 
 * **策略和属性（布局容器）**
 
@@ -529,13 +529,13 @@ AEM现在提供两种基本类型的模板：
 
   在&#x200B;**默认组件**&#x200B;选项卡上，您可以定义要自动与给定媒体类型关联的组件，以便作者从资源浏览器中拖动资源时，AEM 知道要将其与哪个组件关联。请注意，只有具有拖放区域的组件才可使用此类配置。
 
-  单击或点按&#x200B;**添加映射**，可添加全新的组件和 MIME 类型映射。
+  单击 **添加映射** 添加全新的组件和MIME类型映射。
 
-  在列表中选择一个组件，然后单击或点按 **添加类型** ，以向已映射的组件添加其他MIME类型。单击&#x200B;**删除**&#x200B;图标可删除 MIME 类型。
+  在列表中选择一个组件并单击 **添加类型** 向已映射的组件添加额外的MIME类型。 单击&#x200B;**删除**&#x200B;图标可删除 MIME 类型。
 
   ![chlimage_1-145](assets/chlimage_1-145.png)
 
-  *响应式设置*
+  *响应设置*
 
   在&#x200B;**响应式设置**&#x200B;选项卡上，您可以配置布局容器的生成网格中的列数。
 

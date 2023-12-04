@@ -7,10 +7,10 @@ topic-tags: extending-aem
 content-type: reference
 docset: aem65
 exl-id: bba64ce6-8b74-4be1-bf14-cfdf3b9b60e1
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '2582'
-ht-degree: 58%
+source-wordcount: '2444'
+ht-degree: 53%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 58%
 
 * 了解MSM Java API的主要成员。
 * 创建可在转出配置中使用的同步操作。
-* 修改默认语言和国家代码.
+* 修改默认语言和国家代码。
 
 <!-- * Remove the "Chapters" step in the Create Site wizard. -->
 
@@ -107,8 +107,8 @@ ht-degree: 58%
 
 * `LiveAction` 类包括以下方法：
 
-   * `getName`: 返回操作的名称. 名称用于引用操作，例如在转出配置中。
-   * `execute`: 执行该操作的任务.
+   * `getName`：返回操作的名称。 名称用于引用操作，例如在转出配置中。
+   * `execute`：执行操作的任务。
 
 * `LiveActionFactory` 类包括以下成员：
 
@@ -144,7 +144,7 @@ public LiveAction createAction(Resource resource) throws WCMException {
 
 * A [`Resource`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/org/apache/sling/api/resource/Resource.html) 表示Live Copy源的对象。
 * A `Resource` 表示Live Copy目标的对象。
-* Live Copy 的 [`LiveRelationship`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/msm/api/LiveRelationship.html) 对象.
+* 此 [`LiveRelationship`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/msm/api/LiveRelationship.html) 对象。
 * 此 `autoSave` 值指示您的 `LiveAction` 应保存对存储库所做的更改。
 
 * 重置值表示转出重置模式。
@@ -168,7 +168,7 @@ Node sourcenode = source.adaptTo(javax.jcr.Node.class);
 当安装的转出配置不符合您的应用程序要求时，创建转出配置：
 
 * [创建转出配置](#create-the-rollout-configuration)
-* [将同步操作添加到转出配置中](#add-synchronization-actions-to-the-rollout-configuration).
+* [将同步操作添加到转出配置](#add-synchronization-actions-to-the-rollout-configuration).
 
 然后，在 Blueprint 或 Live Copy 页面上设置转出配置时，您就可以使用新的转出配置。
 
@@ -181,7 +181,7 @@ Node sourcenode = source.adaptTo(javax.jcr.Node.class);
 1. 打开CRXDE Lite；例如：
    [http://localhost:4502/crx/de](http://localhost:4502/crx/de)
 
-1. 导航至：
+1. 导航到：
    `/apps/msm/<your-project>/rolloutconfigs`
 
    >[!NOTE]
@@ -191,7 +191,7 @@ Node sourcenode = source.adaptTo(javax.jcr.Node.class);
 
    >[!NOTE]
    >
-   >您不得更改 `/libs` 路径。
+   >请勿更改 `/libs` 路径。
    >这是因为 `/libs` 下次升级实例时将被覆盖（在应用修补程序或功能包时很可能会被覆盖）。
    >建议用于配置和其他更改的方法是：
    >
@@ -212,7 +212,7 @@ Node sourcenode = source.adaptTo(javax.jcr.Node.class);
      **值**：可选描述。
    * **名称**：`cq:trigger`
      **类型**：`String`
-     **值**：要使用的[转出触发器. ](/help/sites-administering/msm-sync.md#rollout-triggers)选择自：
+     **值**：和 [转出触发器](/help/sites-administering/msm-sync.md#rollout-triggers) 将使用。 选择自：
       * `rollout`
       * `modification`
       * `publish`
@@ -231,13 +231,13 @@ Node sourcenode = source.adaptTo(javax.jcr.Node.class);
    例如：
    `/apps/msm/myproject/rolloutconfigs/myrolloutconfig`
 
-1. **创建具有以下节点属性的节点：**
+1. **创建** 具有下列节点属性的节点：
 
-   * **名称**：同步操作的节点名称.
+   * **名称**：同步操作的节点名称。
 名称必须与 **操作名称** 在下面的表格中 [同步操作](/help/sites-administering/msm-sync.md#installed-synchronization-actions)例如， `contentCopy` 或 `workflow`.
    * **类型**：`cq:LiveSyncAction`
 
-1. 根据需要添加和配置任意数量的同步操作节点。重新排列操作节点，使其顺序与您希望它们发生的顺序相一致。最顶层的操作节点首先出现。
+1. 根据需要添加并配置所需数量的同步操作节点。 重新排列操作节点，使其顺序与您希望它们出现的顺序相匹配。 最顶层的操作节点首先出现。
 
 ## 创建和使用简单的 LiveActionFactory 类 {#creating-and-using-a-simple-liveactionfactory-class}
 
@@ -249,7 +249,7 @@ Node sourcenode = source.adaptTo(javax.jcr.Node.class);
 1. [创建转出配置](#create-the-example-rollout-configuration)
 1. [创建 Live Copy](#create-the-live-copy)。
 
-Maven 项目和 Java 类的源代码可在公共 Git 存储库中找到。
+Maven项目和Java类的源代码在公共Git存储库中提供。
 
 GITHUB上的代码
 
@@ -637,7 +637,7 @@ MSM 使用存储的语言和国家/地区代码列表来确定与页面语言版
 
    命名新文件夹`wcm`。
 
-1. 重复上一步，以创建 `/apps/wcm/core` 文件夹树。在 `sling:Folder` 中创建一个类型为 `core` 的节点，称为 `resources`。 <!-- ![Resources](assets/chlimage_1-77.png) -->
+1. 重复上一步，以创建 `/apps/wcm/core` 文件夹树。创建节点类型 `sling:Folder` 在 `core` 已调用 `resources`. <!-- ![Resources](assets/chlimage_1-77.png) -->
 
 1. 右键单击 `/libs/wcm/core/resources/languages` 节点并单击 **复制**。
 1. 右键单击 `/apps/wcm/core/resources` 文件夹并单击&#x200B;**粘贴**。根据需要修改子节点。
@@ -647,7 +647,7 @@ MSM 使用存储的语言和国家/地区代码列表来确定与页面语言版
 
    ![Day CQ WCM 语言管理器](assets/chlimage_1-78.png)
 
-## 在页面属性上配置 MSM 锁 （触屏UI） {#configuring-msm-locks-on-page-properties-touch-enabled-ui}
+## 配置页面属性上的MSM锁定（触屏UI） {#configuring-msm-locks-on-page-properties-touch-enabled-ui}
 
 创建自定义页面属性时，您可能需要考虑新属性是否适合转出到任何 Live Copy。
 

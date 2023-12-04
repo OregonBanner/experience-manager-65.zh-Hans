@@ -6,9 +6,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 exl-id: 49e0b3f6-7ac7-4417-9c31-cc3d3c2305f3
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '2685'
+source-wordcount: '2675'
 ht-degree: 0%
 
 ---
@@ -99,7 +99,7 @@ AEM Mobile提供了用于创建移动应用程序的Phonegap应用程序Blueprin
    要创建移动设备应用程序配置，请单击管理配置。
 
 1. （可选）要提供应用程序图标，请单击“浏览”按钮，从文件系统中选择图像文件，然后单击“打开”。
-1. 单击创建。
+1. 单击“创建”。
 
 ### 更改移动应用程序的属性 {#changing-the-properties-of-a-mobile-application}
 
@@ -107,16 +107,16 @@ AEM Mobile提供了用于创建移动应用程序的Phonegap应用程序Blueprin
 
 #### 更改标题、描述和图标 {#change-the-title-description-and-icon}
 
-1. 在边栏上，单击或点按应用程序。
+1. 在边栏上，单击应用程序。
 1. 选择要配置的应用程序，然后单击查看页面属性图标。
 
    ![圆圈中的字母I表示的“查看页面属性”图标。](do-not-localize/chlimage_1-8.png)
 
-1. 要更改属性值，请单击或点按编辑图标。
+1. 要更改属性值，请单击编辑图标。
 
    ![铅笔指示的“编辑”图标。](do-not-localize/chlimage_1-9.png)
 
-1. 配置基本和高级属性，然后单击或点按完成图标。
+1. 配置基本和高级属性，然后单击完成图标。
 
    ![由复选标记符号指示的“完成”图标。](do-not-localize/chlimage_1-10.png)
 
@@ -127,11 +127,11 @@ AEM Mobile提供了用于创建移动应用程序的Phonegap应用程序Blueprin
 
    ![圆圈内的字母I表示的View Application Properties图标。](do-not-localize/chlimage_1-11.png)
 
-1. 要更改属性值，请单击或点按编辑图标。
+1. 要更改属性值，请单击编辑图标。
 
    ![铅笔指示的“编辑”图标。](do-not-localize/chlimage_1-12.png)
 
-1. 在“基本”、“高级”、“生成”和“Analytics”选项卡上配置属性，然后单击或点按完成图标。
+1. 在“基本”、“高级”、“生成”和“Analytics”选项卡上配置属性，然后单击“完成”图标。
 
    ![由复选标记符号指示的“完成”图标。](do-not-localize/chlimage_1-13.png)
 
@@ -139,8 +139,8 @@ AEM Mobile提供了用于创建移动应用程序的Phonegap应用程序Blueprin
 
 创建移动设备应用程序后，添加用作应用程序UI的内容。
 
-1. 在边栏上，单击或点按应用程序。
-1. 单击或点按应用程序，然后单击或点按英语。
+1. 在边栏上，单击应用程序。
+1. 单击应用程序，然后单击英语。
 1. 编辑主页，或根据需要添加子页面。
 
 ### 将内容移动到移动应用程序 {#moving-content-to-mobile-applications}
@@ -160,8 +160,8 @@ AEM发布实例上的内容同步缓存用作移动设备应用程序的内容�
 
 在要更新缓存的实例上执行以下过程。 例如，如果您的应用程序请求从发布实例进行更新，请在发布实例上执行该过程。
 
-1. 在边栏上，单击或点按应用程序，然后单击或点按您的应用程序。
-1. 选择启动页面，然后单击或点按更新缓存图标。
+1. 在边栏上，单击应用程序，然后单击您的应用程序。
+1. 选择启动页面，然后单击更新缓存图标。
 
    ![“更新缓存”图标由带有循环符号的条状边栏表示。](do-not-localize/chlimage_1-14.png)
 
@@ -188,7 +188,7 @@ AEM发布实例上的内容同步缓存用作移动设备应用程序的内容�
 
 ![chlimage_1-2](assets/chlimage_1-2.jpeg)
 
-1. 单击“下一个”。
+1. 单击“下一步”。
 1. 提供应用程序ID和标题，但您可能还希望包含名称和描述。
 
    1. 此外，您还可以通过浏览AEM Assets提供PNG（支持的PhoneGap图标格式）作为图标。

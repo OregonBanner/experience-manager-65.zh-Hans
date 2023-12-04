@@ -10,10 +10,10 @@ topic-tags: integration
 content-type: reference
 discoiquuid: b8c7a20a-7694-4a49-b66a-060720f17dad
 exl-id: 1e0821f5-627f-4262-ba76-62303890e112
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '2205'
-ht-degree: 3%
+source-wordcount: '2148'
+ht-degree: 2%
 
 ---
 
@@ -58,7 +58,7 @@ AEM支持在云中托管或在AEM上托管的动态Tag Management。
 
 当AEM托管Dynamic Tag Management库时，您可以使用Dynamic Tag Management部署挂接服务自动将库更新推送到AEM。 在对库进行更改时(例如，在编辑Dynamic Tag Management Web属性时)，将推送库更新。
 
-要使用部署挂接，Dynamic Tag Management必须能够连接到托管库的AEM实例。 您必须 [启用对AEM的访问](/help/sites-administering/dtm.md#enabling-access-for-the-deployment-hook-service) (对于Dynamic Tag Management服务器)。
+要使用部署挂接，Dynamic Tag Management必须能够连接到托管库的AEM实例。 [启用对AEM的访问](/help/sites-administering/dtm.md#enabling-access-for-the-deployment-hook-service) (对于Dynamic Tag Management服务器)。
 
 在某些情况下，可能无法访问AEM，例如当AEM位于防火墙后面时。 在这些情况下，您可以使用AEM轮询导入程序选项定期检索库。 cron作业表达式规定了库下载计划。
 
@@ -66,7 +66,7 @@ AEM支持在云中托管或在AEM上托管的动态Tag Management。
 
 启用Dynamic Tag Management部署挂接服务以访问AEM，以便该服务可以更新AEM托管的库。 指定根据需要更新暂存和生产库的Dynamic Tag Management服务器的IP地址：
 
-* 暂存: `107.21.99.31`
+* 暂存： `107.21.99.31`
 * 生产： `23.23.225.112` 和 `204.236.240.48`
 
 使用 [Web控制台](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) 或 [`sling:OsgiConfig`](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository) 节点：

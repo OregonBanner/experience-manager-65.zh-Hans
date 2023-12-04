@@ -7,9 +7,9 @@ topic-tags: integration
 content-type: reference
 docset: aem65
 exl-id: 30813c44-51ac-4e6e-8ee6-4e8baacb1ff9
-source-git-commit: 7d46ba0eaa73d9f7a67034ba81d7fa379aa0112c
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '548'
+source-wordcount: '528'
 ht-degree: 7%
 
 ---
@@ -34,10 +34,10 @@ ht-degree: 7%
 
 测试和目标 [复制代理](/help/sites-deploying/replication.md) 必须在创作实例上启用。 请注意，如果您使用 [nosamplecontent](/help/sites-deploying/configure-runmodes.md#using-samplecontent-and-nosamplecontent) 用于安装AEM的运行模式。 有关保护生产环境的更多信息，请参见 [安全核对清单](/help/sites-administering/security-checklist.md).
 
-1. 在AEM主页上，单击或点按 **工具** > **部署** > **复制**.
-1. 单击或点按 **作者代理**.
-1. 单击或点按 **测试和定位（测试和定位）** 复制代理，然后单击或点按 **编辑**.
-1. 选择已启用选项，然后单击或点按 **确定**.
+1. 在AEM主页上，单击 **工具** > **部署** > **复制**.
+1. 单击 **作者代理**.
+1. 单击 **测试和定位（测试和定位）** 复制代理，然后单击 **编辑**.
+1. 选择启用选项，然后单击 **确定**.
 
    >[!NOTE]
    >
@@ -47,7 +47,7 @@ ht-degree: 7%
 
 ## 保护活动设置节点 {#securing-the-activity-settings-node}
 
-您必须确保发布实例中的活动设置节点 **cq:ActivitySettings** 安全，以使其不可由普通用户访问。该活动设置节点应当只能由负责将活动同步到 Adobe Target 的服务访问。
+确保发布实例中的活动设置节点 **cq:ActivitySettings** 安全，以使其不可由普通用户访问。该活动设置节点应当只能由负责将活动同步到 Adobe Target 的服务访问。
 
 此 **cq：ActivitySettings** 节点在CRXDE lite中可用，位于 `/content/campaigns/*nameofbrand*`* *在活动jcr：content节点下；* *例如， `/content/campaign/we-retail/master/myactivity/jcr:content/cq:ActivitySettings`. 此节点仅在定向组件后创建。
 

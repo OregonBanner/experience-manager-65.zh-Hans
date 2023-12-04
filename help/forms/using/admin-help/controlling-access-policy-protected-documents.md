@@ -11,9 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: f34058c3-384a-4b73-a386-5bc9125acbf8
 feature: Document Security
 exl-id: 0eb6e769-97c1-41ee-8d12-91bece984947
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '2168'
+source-wordcount: '2167'
 ht-degree: 0%
 
 ---
@@ -42,7 +42,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->您必须使用“文档详细信息”页面上的“策略名称”链接来访问在Microsoft Outlook中为附加到电子邮件的文档的收件人自动生成的策略。 这些策略不会显示在策略页面上。
+>使用“文档详细信息”页面上的“策略名称”链接可访问在Microsoft Outlook中为附加到电子邮件的文档的收件人自动生成的策略。 这些策略不会显示在策略页面上。
 
 **文档名称：** 所选文档的名称。
 
@@ -52,7 +52,7 @@ ht-degree: 0%
 
 **发布者：** 将策略附加到文档的用户的名称。
 
-**策略名称：** 用于保护文档的策略的名称。 您可以单击该名称以打开策略。 您必须使用此链接来访问Acrobat为Outlook中附加到电子邮件的文档收件人生成的策略。 这些策略不会显示在“策略”页面上。
+**策略名称：** 用于保护文档的策略的名称。 您可以单击该名称以打开策略。 使用此链接可访问Acrobat为Outlook中附加到电子邮件的文档收件人生成的策略。 这些策略不会显示在“策略”页面上。
 
 **策略类型：** 应用于文档的策略类型。
 

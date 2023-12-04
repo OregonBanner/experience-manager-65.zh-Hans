@@ -6,9 +6,9 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: d2dd381d-a7d2-4fec-a8ba-7ca037fd9dc1
-source-git-commit: c4cd9a61a226ace2a72d60b5b7b7432de12cb873
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '2065'
+source-wordcount: '2017'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ GDS的位置是在AEM Forms安装过程中或以后使用管理控制台确定�
 
 ### GDS位置 {#gds-location}
 
-如果在安装期间将位置设置保留为空，则该位置将默认为应用程序服务器安装下的目录。 您必须为应用程序服务器备份以下目录：
+如果在安装期间将位置设置保留为空，则该位置将默认为应用程序服务器安装下的目录。 为应用程序服务器备份以下目录：
 
 * (JBos) `[appserver root]/server/'server'/svcnative/DocumentStorage`
 * (WebLogic) `[appserverdomain]/'server'/adobe/AEMformsserver/DocumentStorage`

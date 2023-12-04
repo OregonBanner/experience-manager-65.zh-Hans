@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
 exl-id: 8bd6c88b-f36a-422f-ae6c-0d59f365079a
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1772'
-ht-degree: 73%
+source-wordcount: '1745'
+ht-degree: 62%
 
 ---
 
@@ -30,7 +30,7 @@ AEM可让您轻松个性化用户体验。 它还让您验证区段定义的结�
 
 ## 访问区段 {#accessing-segments}
 
-此 [受众](/help/sites-authoring/managing-audiences.md) 控制台用于管理ContextHub或Client Context的区段以及Adobe Target帐户的受众。 本文档介绍了如何管理 ContextHub 的区段。对象 [客户端上下文区段](/help/sites-administering/campaign-segmentation.md) 和Adobe Target区段，请参阅相关文档。
+此 [受众](/help/sites-authoring/managing-audiences.md) 控制台用于管理ContextHub或Client Context的区段以及Adobe Target帐户的受众。 本文档介绍了如何管理ContextHub的区段。 对象 [客户端上下文区段](/help/sites-administering/campaign-segmentation.md) 和Adobe Target区段，请参阅相关文档。
 
 要访问区段，您需要选择配置。 在全局导航中，选择 **导航>个性化>受众**. 您将看到可用的配置：
 
@@ -52,7 +52,7 @@ AEM可让您轻松个性化用户体验。 它还让您验证区段定义的结�
 
 >[!CAUTION]
 >
->区段编辑器不检查任何循环引用。例如，区段A引用另一个区段B，后者又引用区段A。您必须确保区段不包含任何循环引用。
+>区段编辑器不检查任何循环引用。例如，区段A引用另一个区段B，而后者又引用区段A。请确保您的区段不包含任何循环引用。
 
 ### 容器 {#containers}
 
@@ -61,11 +61,11 @@ AEM可让您轻松个性化用户体验。 它还让您验证区段定义的结�
 <table>
  <tbody>
   <tr>
-   <td>容器 AND<br /> </td>
-   <td>布尔 AND 运算符<br /> </td>
+   <td>容器AND<br /> </td>
+   <td>布尔AND运算符<br /> </td>
   </tr>
   <tr>
-   <td>容器 OR<br /> </td>
+   <td>容器OR<br /> </td>
    <td>布尔 OR 运算符</td>
   </tr>
  </tbody>
@@ -78,24 +78,24 @@ AEM可让您轻松个性化用户体验。 它还让您验证区段定义的结�
 <table>
  <tbody>
   <tr>
-   <td>Property-Value<br />。 </td>
-   <td>将存储的一个属性与一个定义的值进行比较<br /> </td>
+   <td>属性值<br /> </td>
+   <td>将存储的一个属性与定义的值进行比较<br /> </td>
   </tr>
   <tr>
    <td>Property-Property</td>
-   <td>将存储的一个属性与另一个属性进行比较<br />。 </td>
+   <td>将存储的一个属性与另一个属性进行比较<br /> </td>
   </tr>
   <tr>
    <td>Property-Segment 引用</td>
-   <td>将存储的一个属性与另一个引用的区段进行比较<br />。 </td>
+   <td>将存储的一个属性与另一个引用的区段进行比较<br /> </td>
   </tr>
   <tr>
    <td>Property-Script 引用</td>
-   <td>将存储的一个属性与脚本结果进行比较<br />。 </td>
+   <td>将存储的一个属性与脚本的结果进行比较<br /> </td>
   </tr>
   <tr>
    <td>区段 Reference-Script 引用</td>
-   <td>将引用的区段与脚本的结果进行比较<br />。 </td>
+   <td>将引用的区段与脚本的结果进行比较<br /> </td>
   </tr>
  </tbody>
 </table>
@@ -117,7 +117,7 @@ AEM可让您轻松个性化用户体验。 它还让您验证区段定义的结�
 <table>
  <tbody>
   <tr>
-   <td>区段引用<br />。 </td>
+   <td>区段引用<br /> </td>
    <td>评估引用的区段</td>
   </tr>
   <tr>
@@ -133,11 +133,11 @@ AEM可让您轻松个性化用户体验。 它还让您验证区段定义的结�
 
 1. 在[访问区段](/help/sites-administering/segmentation.md#accessing-segments)后，[导航到文件夹](#organizing-segments)，您要在该文件夹中创建区段。
 
-1. 单击或点按创建按钮并选择 **创建ContextHub区段**.
+1. 单击创建按钮并选择 **创建ContextHub区段**.
 
    ![chlimage_1-311](assets/chlimage_1-311.png)
 
-1. 在 **新ContextHub区段**，输入区段的标题和boost值（如有必要），然后点按或单击 **创建**.
+1. 在 **新ContextHub区段**，输入区段的标题和boost值（如有必要），然后单击 **创建**.
 
    ![chlimage_1-312](assets/chlimage_1-312.png)
 
@@ -147,7 +147,7 @@ AEM可让您轻松个性化用户体验。 它还让您验证区段定义的结�
    * 最大值：`1000000`
 
 1. 将比较或引用拖动到区段编辑器中，它将显示在默认的 AND 容器中。
-1. 双击或点按新引用或区段的配置选项以编辑特定参数。在此示例中，我们正在测试圣何塞的人员。
+1. 双击新参照或段的配置选项以编辑特定参数。 在此示例中，我们正在测试圣何塞的人员。
 
    ![screen_shot_2012-02-02at103135am](assets/screen_shot_2012-02-02at103135ama.png)
 
@@ -233,7 +233,7 @@ this.dependOn(ContextHub.SegmentEngine.Property('profile/age'));
 
 ### 创建新文件夹 {#create-folder}
 
-1. 在[访问区段](#accessing-segments)后，单击或点按&#x200B;**创建**&#x200B;按钮并选择&#x200B;**文件夹**。
+1. 之后 [访问区段](#accessing-segments)，单击 **创建** 按钮并选择 **文件夹**.
 
    ![添加文件夹](assets/contexthub-create-segment.png)
 
@@ -245,24 +245,24 @@ this.dependOn(ContextHub.SegmentEngine.Property('profile/age'));
 
    ![创建文件夹](assets/contexthub-create-folder.png)
 
-1. 点按或单击&#x200B;**创建**。
+1. 单击&#x200B;**创建**。
 
    ![确认文件夹](assets/contexthub-confirm-folder.png)
 
 1. 此文件夹将显示在区段列表中。
    * 您的列排序方式将影响新文件夹在列表中的显示位置。
-   * 您可以点按或单击列标题来调整您的排序。
+   * 您可以单击列标题来调整您的排序。
      ![新文件夹](assets/contexthub-folder.png)
 
 ### 修改现有文件夹 {#modify-folders}
 
-1. 在[访问区段](#accessing-segments)后，单击或点按要修改的文件夹以将其选定。
+1. 之后 [访问区段](#accessing-segments)，单击要修改的文件夹以将其选定。
 
    ![选择文件夹](assets/contexthub-select-folder.png)
 
-1. 点按或单击工具栏中的&#x200B;**重命名**&#x200B;以重命名文件夹。
+1. 单击 **重命名** 以重命名文件夹。
 
-1. 提供新的&#x200B;**文件夹标题**&#x200B;并点按或单击&#x200B;**保存**。
+1. 提供新的 **文件夹标题** 并单击 **保存**.
 
    ![重命名文件夹](assets/contexthub-rename-folder.png)
 
@@ -272,25 +272,25 @@ this.dependOn(ContextHub.SegmentEngine.Property('profile/age'));
 
 ### 删除文件夹
 
-1. 在[访问区段](#accessing-segments)后，单击或点按要修改的文件夹以将其选定。
+1. 之后 [访问区段](#accessing-segments)，单击要修改的文件夹以将其选定。
 
    ![选择文件夹](assets/contexthub-select-folder.png)
 
-1. 点按或单击工具栏中的&#x200B;**删除**&#x200B;以删除文件夹。
+1. 单击 **删除** 以删除文件夹。
 
 1. 这将显示一个对话框，其中包含已选择删除的文件夹的列表。
 
    ![确认删除](assets/contexthub-confirm-segment-delete.png)
 
-   * 点按或单击&#x200B;**删除**&#x200B;以进行确认。
-   * 点按或单击&#x200B;**取消**&#x200B;以中止。
+   * 单击 **删除** 以确认。
+   * 单击 **取消** 中止。
 
 1. 如果任意选定文件夹包含子文件夹或区段，则必须确认将其删除。
 
    ![确认删除子级](assets/contexthub-confirm-segment-child-delete.png)
 
-   * 点按或单击&#x200B;**强制删除**&#x200B;以进行确认。
-   * 点按或单击&#x200B;**取消**&#x200B;以中止。
+   * 单击 **强制删除** 以确认。
+   * 单击 **取消** 中止。
 
 >[!NOTE]
 >

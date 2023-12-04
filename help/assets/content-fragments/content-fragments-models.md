@@ -4,10 +4,10 @@ description: 了解内容片段模型如何作为AEM中Headless内容的基础�
 feature: Content Fragments
 role: User
 exl-id: 6fd1fdb2-d1d3-4f97-b119-ecfddcccec9e
-source-git-commit: b00ed4ed146b89aece9af1d267c890a360a236e9
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '2305'
-ht-degree: 72%
+source-wordcount: '2310'
+ht-degree: 71%
 
 ---
 
@@ -18,9 +18,9 @@ AEM中的内容片段模型为您的定义了内容结构 [内容片段，](/hel
 要使用内容片段模型，您可以：
 
 1. [为您的实例启用内容片段模型功能](/help/assets/content-fragments/content-fragments-configuration-browser.md).
-1. [创建](#creating-a-content-fragment-model)和[配置](#defining-your-content-fragment-model)，内容片段模型.
-1. [启用您的内容片段模型](#enabling-disabling-a-content-fragment-model)，以便在创建内容片段时使用.
-1. 通过配置&#x200B;**策略**，[允许在所需的 Assets 文件夹上创建内容片段模型](#allowing-content-fragment-models-assets-folder)。
+1. [创建](#creating-a-content-fragment-model)、和 [配置](#defining-your-content-fragment-model)，您的内容片段模型。
+1. [启用您的内容片段模型](#enabling-disabling-a-content-fragment-model) 以便在创建内容片段时使用。
+1. 通过配置[策略](#allowing-content-fragment-models-assets-folder)，**允许在所需的 Assets 文件夹上创建内容片段模型**。
 
 ## 创建内容片段模型 {#creating-a-content-fragment-model}
 
@@ -36,7 +36,7 @@ AEM中的内容片段模型为您的定义了内容结构 [内容片段，](/hel
 
    ![标题和描述](assets/cfm-models-02.png)
 
-1. 使用&#x200B;**创建**&#x200B;以保存空模型。将显示一条消息，指示操作是否成功，您可以选择&#x200B;**打开**&#x200B;来立即编辑模型，或选择&#x200B;**完成**&#x200B;以返回到控制台。
+1. 使用&#x200B;**创建**&#x200B;保存空模型。随后将显示一条消息，指示操作成功，您可选择&#x200B;**打开**&#x200B;以立即编辑模型或选择&#x200B;**完成**&#x200B;以返回控制台。
 
 ## 定义内容片段模型 {#defining-your-content-fragment-model}
 
@@ -72,7 +72,7 @@ AEM中的内容片段模型为您的定义了内容结构 [内容片段，](/hel
    * 将字段添加到模型后，右侧面板将显示可以为该特定数据类型定义的&#x200B;**属性**。您可以在此定义该字段的必需内容。
 
       * 许多属性的含义一目了然，有关更多详细信息，请参阅[属性](#properties)。
-      * 键入&#x200B;**字段标签**&#x200B;将自动完成&#x200B;**属性名称** - 如果为空，则以后可手动更新。
+      * 键入&#x200B;**字段标签**&#x200B;将自动补全&#x200B;**属性名称** - 如果为空，则以后可手动更新它。
 
         >[!CAUTION]
         >
@@ -86,7 +86,7 @@ AEM中的内容片段模型为您的定义了内容结构 [内容片段，](/hel
 
 1. **移除字段**
 
-   选择必填字段，然后单击/点按垃圾桶图标。系统会要求您确认该操作。
+   选择必填字段，然后单击垃圾桶图标。 系统会要求您确认该操作。
 
    ![移除](assets/cfm-models-06.png)
 
@@ -98,12 +98,12 @@ AEM中的内容片段模型为您的定义了内容结构 [内容片段，](/hel
 
 ## 数据类型 {#data-types}
 
-可以选择数据类型以定义模型：
+有一批数据类型可用于定义您的模型：
 
 * **单行文本**
    * 添加单行文本的一个或多个字段；可以定义最大长度
 * **多行文本**
-   * 可以是富文本、纯文本或 Markdown 的文本区域
+   * 一个文本区域，它可为富文本、纯文本或 Markdown
 * **数字**
    * 添加一个或多个数字字段
 * **布尔型**
@@ -305,7 +305,7 @@ type CompanyModel {
 >
 >已建立重复保护机制。它禁止用户在片段引用中选择当前内容片段。这可能导致出现空的片段引用选取器对话框。
 >
->GraphQL 还对片段引用提供了定期保护。如果在两个相互引用的内容片段之间创建深层查询，则将返回空值。
+>GraphQL 还对片段引用提供了定期保护。如果在两个互相引用的内容片段之间创建深层查询，则它返回 null。
 
 ## 启用或禁用内容片段模型 {#enabling-disabling-a-content-fragment-model}
 
@@ -341,7 +341,7 @@ type CompanyModel {
    * 仍可以从 GraphQL 端点查询和返回任何基于模型的内容片段。
 * 该模型无法再次引用，但现有引用将保持不变，并且仍可以从 GraphQL 端点查询和返回。
 
-要禁用标记为&#x200B;**已启用**&#x200B;的模型，您可以从以下任一位置使用&#x200B;**禁用**&#x200B;选项：
+要禁用标为&#x200B;**已启用**&#x200B;的模型，可从以下任意一处使用&#x200B;**禁用**&#x200B;选项：
 
 * 选择所需的“模型”时，顶部工具栏。
 * 相应的快速操作（将鼠标悬停在所需模型上）。
@@ -400,7 +400,7 @@ type CompanyModel {
 
    >[!NOTE]
    >
-   >如果参照了模型，则会发出警告。采取适当措施。
+   >如果引用了模型，则会发出警告。采取适当措施。
 
 ## 发布内容片段模型 {#publishing-a-content-fragment-model}
 
@@ -427,8 +427,7 @@ type CompanyModel {
 1. 导航到 **工具**， **资产**，然后打开 **内容片段模型**.
 
 1. 导航到包含内容片段模型的文件夹。
-1. 选择您的模型，然后从工具栏中选择&#x200B;**取消发布**。
-控制台中会指示已发布状态。
+1. 选择您的模型，然后从工具栏中选择&#x200B;**取消发布**。控制台中会指示已发布状态。
 
 ## 内容片段模型 – 属性 {#content-fragment-model-properties}
 

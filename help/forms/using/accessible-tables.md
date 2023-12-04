@@ -10,23 +10,23 @@ topic-tags: hTML5_forms
 discoiquuid: 3504afe1-abf5-4fbf-a0d2-e093361764bd
 feature: Mobile Forms
 exl-id: 3b8e3323-9ac4-4f5c-8c52-e2186e9169ea
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '273'
+source-wordcount: '271'
 ht-degree: 0%
 
 ---
 
 # 在HTML5表单中创建可访问的复杂表 {#create-accessible-complex-tables-in-html-forms}
 
-HTML5 Forms中表的默认实现使用HTMLDIV元素渲染表。 渲染包括使用ARIA角色来满足辅助功能要求。
+HTML5 Forms中表的默认实现使用HTMLDIV元素来呈现表。 渲染包括使用ARIA角色来满足辅助功能要求。
 
-为了避免屏幕阅读器出现辅助功能问题（该屏幕阅读器不完全支持与数据表一起使用的ARIA角色），HTML5 Forms提供了表的替代演绎版。 这些表基于Designer中引入的新表格式，该格式还支持：
+为避免屏幕阅读器出现辅助功能问题（该屏幕阅读器不完全支持与数据表一起使用的ARIA角色），HTML5 Forms为表提供了替代演绎版。 这些表基于Designer中引入的新表格式，该格式还支持：
 
 * 行标题
 * 行跨度
 
-要在HTML5 Forms中使用新格式，请将表标记为复杂。 要将表标记为复杂，请添加 `extras` 表子表单的XML源中的标记，如下所示：
+要在HTML5 Forms中使用新格式，请将表标记为复杂表。 要将表标记为复杂，请添加 `extras` 表子表单的XML源中的标记，如下所示：
 
 ```xml
 </extras>
@@ -42,7 +42,7 @@ HTML5 Forms中表的默认实现使用HTMLDIV元素渲染表。 渲染包括使�
 
 要将行标记为行标题，请选择行中的所有单元格，右键单击选定内容，然后单击 **[!UICONTROL 标记标题]**.
 
-要将单元格标记为列标题，请选择列中的任意单元格，右键单击所选内容，然后单击 **[!UICONTROL 标记标题]**.
+要将单元格标记为列标题，请选择列中的任意单元格，右键单击选定内容，然后单击 **[!UICONTROL 标记标题]**.
 
 新增限制 *Accessibletable* 格式：
 
@@ -50,4 +50,4 @@ HTML5 Forms中表的默认实现使用HTMLDIV元素渲染表。 渲染包括使�
 * 不支持嵌套表（表单元格中的表）
 * 仅对标题行和标题单元格支持rowspan
 * 仅支持常规表
-* 不支持在rowspan > 1的表中预填充数据
+* 不支持在rowspan > 1的表中进行数据预填充

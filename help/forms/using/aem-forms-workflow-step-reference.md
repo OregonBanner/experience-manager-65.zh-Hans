@@ -5,9 +5,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 docset: aem65
 exl-id: 470fcfda-dfde-437c-b539-d5af1e13a7d6
-source-git-commit: e2a3470784beb04c2179958ac6cb98861acfaa71
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '7687'
+source-wordcount: '7640'
 ht-degree: 0%
 
 ---
@@ -186,7 +186,7 @@ Forms Workflow步骤在AEM工作流中执行特定于AEM Forms的操作。 这�
 
 **使用以下选项保存生成的记录文档：** 指定保存记录文档文件的位置。 您可以选择覆盖有效负载文件夹，将记录文档放置在有效负载目录中的某个位置，或将记录文档存储在Document数据类型的变量中。
 
-**区域设置**：指定记录文档的语言。 选择 **文本** 从下拉列表中选择区域设置，或选择 **变量** 从字符串数据类型变量中存储的值检索区域设置。 在变量中存储区域设置的值时，必须定义区域设置代码。 例如，指定 **en_US** 英语和 **fr_FR** 法文版的。
+**区域设置**：指定记录文档的语言。 选择 **文本** 从下拉列表中选择区域设置，或选择 **变量** 从字符串数据类型变量中存储的值检索区域设置。 在变量中存储区域设置的值时定义区域设置代码。 例如，指定 **en_US** 英语和 **fr_FR** 法文版的。
 
 ## 调用表单数据模型服务步骤 {#invoke-form-data-model-service-step}
 
@@ -200,7 +200,7 @@ Forms Workflow步骤在AEM工作流中执行特定于AEM Forms的操作。 这�
  <tbody> 
   <tr> 
    <td>属性</td> 
-   <td>价值<br /> </td> 
+   <td>值<br /> </td> 
   </tr> 
   <tr> 
    <td>名字<br /> </td> 
@@ -279,7 +279,7 @@ Forms Workflow步骤在AEM工作流中执行特定于AEM Forms的操作。 这�
 
 * **协议名称：** 指定协议的标题。 协议名称将成为发送给收件人的电子邮件的主题和正文的一部分。 您可以将名称存储在String数据类型的变量中，也可以选择 **文本** 以手动添加名称。
 
-* **区域设置：** 指定电子邮件和验证选项的语言。 您可以将区域设置存储在String数据类型的变量中，也可以选择 **文本** 从可用选项列表中选择区域设置。 在变量中存储区域设置的值时，必须定义区域设置代码。 例如，指定 **en_US** 英语和 **fr_FR** 法文版的。
+* **区域设置：** 指定电子邮件和验证选项的语言。 您可以将区域设置存储在String数据类型的变量中，也可以选择 **文本** 从可用选项列表中选择区域设置。 在变量中存储区域设置的值时定义区域设置代码。 例如，指定 **en_US** 英语和 **fr_FR** 法文版的。
 
 * **Adobe Sign云配置**：选择一个Adobe Sign云配置。 如果您尚未配置适用于AEM Forms的Adobe Sign，请参阅 [将Adobe Sign与AEM Forms集成](../../forms/using/adobe-sign-integration-adaptive-forms.md).
 

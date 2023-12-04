@@ -1,5 +1,5 @@
 ---
-title: 在 中，使用连接的资产共享 DAM 资产 [!DNL Sites]
+title: 使用“连接的资产”在中共享DAM资产 [!DNL Sites]
 description: 使用远程上可用的资源 [!DNL Adobe Experience Manager Assets] 在另一个网站上创建网页时的部署 [!DNL Adobe Experience Manager Sites] 部署。
 contentOwner: AK
 mini-toc-levels: 2
@@ -7,14 +7,14 @@ role: User, Admin, Leader
 feature: Connected Assets,User and Groups
 exl-id: 4ceb49d8-b619-42b1-81e7-c3e83d4e6e62
 hide: true
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '3949'
-ht-degree: 17%
+source-wordcount: '3908'
+ht-degree: 15%
 
 ---
 
-# 在 中，使用连接的资产共享 DAM 资产 [!DNL Experience Manager Sites] {#use-connected-assets-to-share-dam-assets-in-aem-sites}
+# 使用“连接的资产”在中共享DAM资产 [!DNL Experience Manager Sites] {#use-connected-assets-to-share-dam-assets-in-aem-sites}
 
 | 版本 | 文章链接 |
 | -------- | ---------------------------- |
@@ -36,7 +36,7 @@ ht-degree: 17%
 
 对于 [!DNL Sites] 此外，远程资产将以只读本地资产形式提供。 该功能支持在站点编辑器中无缝搜索和访问远程资产。 对于可能要求在站点上提供完整资产语料的任何其他用例，请考虑批量迁移资产，而不是使用“连接的资产”。 请参阅 [Experience Manager Assets迁移指南](/help/assets/assets-migration-guide.md).
 
-### 先决条件与支持的部署 {#prerequisites}
+### 先决条件和支持的部署 {#prerequisites}
 
 在使用或配置此功能之前，请确保：
 
@@ -103,7 +103,7 @@ An [!DNL Experience Manager] 管理员可以创建此集成。 创建后，使�
    1. A **[!UICONTROL 标题]** 配置中。
    1. **[!UICONTROL 远程DAM URL]** 是的URL [!DNL Assets] 格式中的位置 `https://[assets_servername]:[port]`.
    1. DAM 分发人员（技术用户）的凭据。
-   1. 在 **[!UICONTROL 装入点]** 字段，输入本地 [!DNL Experience Manager] 路径： [!DNL Experience Manager] 获取资源。 例如，`remoteassets` 文件夹。从DAM获取的资产存储在 [!DNL Sites] 部署。
+   1. 在 **[!UICONTROL 装入点]** 字段，输入本地 [!DNL Experience Manager] 路径： [!DNL Experience Manager] 获取资源。 例如， `remoteassets` 文件夹。 从DAM获取的资产存储在 [!DNL Sites] 部署。
    1. **[!UICONTROL 本地站点URL]** 是的位置 [!DNL Sites] 部署。 [!DNL Assets] 部署使用此值维护对此获取的数字资产的引用 [!DNL Sites] 部署。
    1. 凭据 [!DNL Sites] 技术用户。
    1. 的值 **[!UICONTROL 原始二进制传输优化阈值]** 字段指定是否同步传输原始资源（包括演绎版）。 文件大小较小的资产可以轻松获取，而文件大小相对较大的资产最好进行异步同步。 该值取决于您的网络功能。
@@ -131,7 +131,7 @@ An [!DNL Experience Manager] 管理员可以创建此集成。 创建后，使�
 
    >[!NOTE]
    >
-   >在作者获取资产时，将会获取该资产在远程 部署中可用的所有演绎版。如果要为获取的资产创建更多演绎版，请跳过此配置步骤。此 [!UICONTROL DAM更新资产] 触发工作流并创建更多演绎版。 这些演绎版仅在本地可用 [!DNL Sites] 而不是在远程DAM部署中。
+   >在作者获取资产时，将会获取远程部署中可用的所有演绎版。 如果要为获取的资产创建更多演绎版，请跳过此配置步骤。此 [!UICONTROL DAM更新资产] 触发工作流并创建更多演绎版。 这些演绎版仅在本地可用 [!DNL Sites] 而不是在远程DAM部署中。
 
 1. 添加 [!DNL Sites] 在上的CORS配置中作为允许的源部署 [!DNL Assets] 部署。 有关更多信息，请参阅 [了解CORS](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html).
 
@@ -200,7 +200,7 @@ An [!DNL Experience Manager] 管理员可以创建此集成。 创建后，使�
 
    ![在远程 DAM 上搜索资产时，筛选文档类型和图像的选项](assets/filetypes_filter_connected_assets.png)
 
-   *图：在远程 DAM 上搜索资产时，筛选文档类型和图像的选项.*
+   *图：在远程DAM上搜索资产时，筛选文档类型和图像的选项。*
 
 1. 如果异步获取资产的原始资产且获取任务失败，会通知站点作者。 在创作过程中甚至创作后，作者都可以在中查看有关获取任务和错误的详细信息 [异步作业](/help/sites-administering/asynchronous-jobs.md) 用户界面。
 
@@ -301,7 +301,7 @@ An [!DNL Experience Manager] 管理员可以创建此集成。 创建后，使�
 
 +++**配置“连接的资产”后，能否对远程DAM资产或文件夹执行更新、删除、重命名和移动操作？**
 
-是，在配置“连接的资产”后，您可以对远程DAM资产或文件夹执行更新、删除、重命名和移动操作。 相关更新会在 Sites 部署中自动提供，但会有一些延迟。有关更多信息，请参阅 [管理远程DAM中资产的更新](#handling-updates-to-remote-assets).
+是，在配置“连接的资产”后，您可以对远程DAM资产或文件夹执行更新、删除、重命名和移动操作。 更新会在Sites部署中自动提供，但会有一些延迟。 有关更多信息，请参阅 [管理远程DAM中资产的更新](#handling-updates-to-remote-assets).
 
 +++
 
@@ -319,7 +319,7 @@ An [!DNL Experience Manager] 管理员可以创建此集成。 创建后，使�
 
 ### 权限和资产管理 {#permissions-and-managing-assets}
 
-* 本地资产是只读副本。[!DNL Experience Manager] 组件对资产进行无损编辑。不允许进行其他编辑。
+* 本地资产是只读副本。[!DNL Experience Manager] 组件对资产进行无损编辑。 不允许进行其他编辑。
 * 本地获取的资产只能用于创作。不能应用资产更新工作流，也不能编辑元数据。
 * 仅支持图像和列出的文档格式。[!DNL Content Fragments] 和 [!DNL Experience Fragments] 不受支持。
 * [!DNL Experience Manager] 不获取元数据架构。 这意味着可能无法显示所有获取的元数据。 如果架构单独更新，在 [!DNL Sites] 部署，则会显示所有元数据属性。
@@ -339,12 +339,12 @@ An [!DNL Experience Manager] 管理员可以创建此集成。 创建后，使�
 
 * 用户可以在创作时搜索远程资产并将这些资产拖动到本地页面上。 不支持其他功能。
 * 获取操作会在 5 秒后超时。作者在获取资产时可能会遇到问题，比如，网络问题。作者可以通过从拖动远程资产来重新尝试 [!UICONTROL 内容查找器] 到 [!UICONTROL 页面编辑器].
-* 可以对获取的资产执行无损的简单编辑以及 `Image` 组件支持的编辑。资产是只读的。
+* 无损的简单编辑以及通过支持的编辑 `Image` 组件，可以对获取的资产执行。 资产是只读的。
 * 重新获取资产的唯一方法是将其拖动到页面上。 没有API支持或其他方法可重新获取资产以对其进行更新。
 * 如果从DAM中停用资产，则在上继续使用这些资产 [!DNL Sites] 页数。
 * 资产的远程引用条目是异步获取的。 引用和总计数不是实时的，并且如果Sites作者在DAM用户查看引用时使用资产，则可能会有一些差异。 DAM用户可以刷新页面，并在几分钟后重试以获取总计数。
 
-## 故障诊断问题 {#troubleshoot}
+## 问题疑难解答 {#troubleshoot}
 
 要排除常见错误，请执行以下步骤：
 

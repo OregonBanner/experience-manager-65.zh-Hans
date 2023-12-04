@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: introduction
 content-type: reference
 exl-id: f6f32290-422e-4037-89d8-d9f414332e8e
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '3306'
-ht-degree: 1%
+source-wordcount: '3251'
+ht-degree: 0%
 
 ---
 
@@ -53,7 +53,7 @@ Experience Server提供了AEM所基于的、可用于构建自定义应用程序
 
 ### Sling简介 {#introduction-to-sling}
 
-AEM是使用以下方式构建的 [Sling](https://sling.apache.org/index.html)，基于REST原则的Web应用程序框架，它提供了易于开发的面向内容的应用程序。 Sling使用JCR存储库（例如Apache Jackrabbit）或者(如果存在AEM)CRX内容存储库作为其数据存储。 Sling已加入到Apache Software Foundation — 有关详细信息，请访问Apache。
+AEM是使用以下方式构建的 [Sling](https://sling.apache.org/index.html)是一个基于REST原则的Web应用程序框架，它提供了易于开发的面向内容的应用程序。 Sling使用JCR存储库（例如Apache Jackrabbit）或者(如果存在AEM)CRX内容存储库作为其数据存储。 Sling已加入到Apache Software Foundation — 有关详细信息，请访问Apache。
 
 使用Sling时，要呈现的内容类型不是第一个处理注意事项。 相反，主要考虑的问题是URL是否解析为内容对象，然后可以找到该内容对象的脚本来执行渲染。 这为Web内容作者提供了极佳的支持，使他们能够根据自己的需求轻松自定义页面。
 
@@ -98,7 +98,7 @@ https://myhost/tools/spy.printable.a4.html/a/b?x=12
 
 您可以将它分解为其复合部分：
 
-| 协议 | host | 内容路径 | 选择器 | 扩展 |  | 后缀 |  | 参数 |
+| 协议 | 主机 | 内容路径 | 选择器 | 扩展 |  | 后缀 |  | 参数 |
 |---|---|---|---|---|---|---|---|---|
 | https:// | myhost | 工具/间谍 | .printable.a4. | html | / | a/b | ? | x=12 |
 
@@ -444,7 +444,7 @@ pageManager是页面管理器对象，myResource是资源对象。 有关页面�
 
 ## 调度程序 {#the-dispatcher}
 
-Dispatcher是Adobe用于缓存和/或负载平衡的工具。 欲知更多信息，请访问 [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hans).
+Dispatcher是Adobe用于缓存和/或负载平衡的工具。 欲知更多信息，请访问 [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=en).
 
 ## FileVault（源修订版系统） {#filevault-source-revision-system}
 

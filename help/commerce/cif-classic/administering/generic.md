@@ -6,9 +6,9 @@ topic-tags: e-commerce
 content-type: reference
 docset: aem65
 exl-id: c29f6213-1df6-45af-91c8-14b255276d82
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '2929'
+source-wordcount: '2907'
 ht-degree: 2%
 
 ---
@@ -41,7 +41,7 @@ Adobe Experience Manager (AEM)通用解决方案提供了管理存储库中保�
 
 每种不同的产品类型都需要一个基架。 适当的基架通过以下任一方式与产品相关联：
 
-* path
+* 路径
 * 产品可以引用基架
 
 >[!NOTE]
@@ -165,7 +165,7 @@ Adobe Experience Manager (AEM)通用解决方案提供了管理存储库中保�
 >
 >`/etc/commerce/products/...`
 >
->这意味着，默认情况下，它们会被阻止 [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hans)，因此请根据需要配置。
+>这意味着，默认情况下，它们会被阻止 [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html)，因此请根据需要配置。
 
 #### 编辑产品信息 — 触屏优化UI {#editing-product-information-touch-optimized-ui}
 
@@ -194,7 +194,7 @@ Adobe Experience Manager (AEM)通用解决方案提供了管理存储库中保�
 
    ![打开引用的products控制台](/help/sites-administering/assets/chlimage_1-88.png)
 
-1. 单击/点按引用类型（例如，产品页面）以展开列表。
+1. 单击引用类型（例如，“产品页面”）以展开列表。
 1. 选择特定引用，以便显示以下选项：
 
    * 导航到产品页面
@@ -304,9 +304,9 @@ Adobe Experience Manager (AEM)通用解决方案提供了管理存储库中保�
 1. 导航到您的目录。
 1. 选择 **查看属性**.
 1. 选择&#x200B;**编辑**。
-1. 选择 **资产** 选项卡。
+1. 选择&#x200B;**资源**&#x200B;选项卡。
 1. 键入所需的 **产品资产类别**.
-1. 选择 **完成**.
+1. 选择&#x200B;**完成**。
 1. [转出](#rolling-out-a-catalog) 您所做的更改。
 
 #### 产品控制台 {#products-console}
@@ -315,7 +315,7 @@ Adobe Experience Manager (AEM)通用解决方案提供了管理存储库中保�
 1. 选择 **查看产品数据**.
 1. 选择&#x200B;**编辑**。
 1. 键入 **默认资源类别**.
-1. 选择 **完成**.
+1. 选择&#x200B;**完成**。
 1. [转出](#rolling-out-a-catalog) 您所做的更改。
 
 ### 发布/取消发布产品信息 {#publishing-unpublishing-product-information}
@@ -430,7 +430,7 @@ Adobe Experience Manager (AEM)通用解决方案提供了管理存储库中保�
 
    ![“配置”图标](/help/sites-administering/assets/chlimage_1-96.png)
 
-1. 向下滚动. 有一个 **添加到购物车** 选项卡。
+1. 向下滚动。 有一个 **添加到购物车** 选项卡。
 
    ![添加到购物车选项卡](/help/sites-administering/assets/chlimage_1-97.png)
 
@@ -463,13 +463,13 @@ Adobe Experience Manager (AEM)通用解决方案提供了管理存储库中保�
    ![创建目录向导](/help/sites-administering/assets/chlimage_1-99.png)
 
 1. 导航到所需的目录Blueprint。
-1. 选择 **选择** 按钮并点按/单击所需的目录Blueprint。
+1. 选择 **选择** 按钮并单击所需的目录Blueprint。
 1. 选择&#x200B;**下一步**。
 
    ![目录属性向导](/help/sites-administering/assets/chlimage_1-100.png)
 
 1. 键入 **标题** 和 **名称**.
-1. 选择&#x200B;**创建**&#x200B;按钮。将创建目录并打开一个对话框。
+1. 选择 **创建** 按钮。 将创建目录并打开一个对话框。
 
    ![目录创建对话框](/help/sites-administering/assets/chlimage_1-101.png)
 
@@ -524,7 +524,7 @@ Adobe Experience Manager (AEM)通用解决方案提供了管理存储库中保�
 
    ![转出](/help/sites-administering/do-not-localize/chlimage_1-24.png)
 
-1. 在向导中，根据需要设置转出，然后点按/单击 **转出更改**.
+1. 在向导中，根据需要设置转出，然后单击 **转出更改**.
 1. 随即会打开一个对话框。 选择 **完成** 过程完成时。
 
 #### 转出目录 — 经典UI {#rolling-out-a-catalog-classic-ui}
@@ -549,7 +549,7 @@ Adobe Experience Manager (AEM)通用解决方案提供了管理存储库中保�
 
    ![导入Blueprint图标](/help/sites-administering/do-not-localize/chlimage_1-13.png)
 
-1. 在向导中，根据需要选择源，然后点按/单击 **下一个**.
+1. 在向导中，根据需要选择源，然后单击 **下一个**.
 
    ![Blueprint向导](/help/sites-administering/assets/chlimage_1-102.png)
 

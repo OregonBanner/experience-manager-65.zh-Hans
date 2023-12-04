@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: deploying
 exl-id: 3a90f1d2-e53f-4cc4-8122-024ad6500de0
-source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1164'
+source-wordcount: '1168'
 ht-degree: 0%
 
 ---
@@ -100,9 +100,9 @@ AEM作为单个war文件来部署。
 
 * 让基本身份验证标头通过：
 
-   * 允许AEM对用户进行身份验证的一种方法是禁用WebSphere®服务器的全局管理安全性，要实现此目的：转到“安全性” — >“全局安全性”，然后取消选中“启用管理安全性”复选框，保存并重新启动服务器。
+   * 允许AEM对用户进行身份验证的一种方法是禁用WebSphere®服务器的全局管理安全性，要实现此目的：转到“安全性”>“全局安全性”，然后取消选中“启用管理安全性”复选框，保存并重新启动服务器。
 
-* set `"JAVA_OPTS= -Xmx2048m"`
+* 设置 `"JAVA_OPTS= -Xmx2048m"`
 * 如果要使用上下文根= /安装AEM，请更改现有默认Web应用程序的上下文根。
 
 **部署AEM Web应用程序**

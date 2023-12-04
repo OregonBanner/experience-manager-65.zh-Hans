@@ -7,10 +7,10 @@ topic-tags: spa
 content-type: reference
 docset: aem65
 exl-id: 0e9e2350-67ef-45c3-991f-6c1cd98fe93d
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '731'
-ht-degree: 8%
+source-wordcount: '723'
+ht-degree: 6%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 8%
 
 >[!NOTE]
 >
->SPA编辑器是推荐的解决方案，适用于需要基于SPA Framework的客户端渲染(例如React或Angular)的项目。
+>SPA编辑器是推荐的解决方案，适用于需要基于SPA框架的客户端渲染(例如React或Angular)的项目。
 
 ## 简介 {#introduction}
 
@@ -41,7 +41,7 @@ SPA的页面组件不通过JSP或HTL文件和资源对象提供其子组件的HT
 
 使用在AEM Page组件中设置HTML元素来设置通信数据类型 `data-cq-datatype` 属性。 当通信数据类型设置为JSON时，GET请求会命中组件的Sling模型端点。 在页面编辑器中执行更新后，已更新组件的 JSON 表示形式将发送到页面模型库。然后，页面模型库会向SPA发出更新警告。
 
-**SPA 页面组件 -`body.html`**
+**SPA页面组件 —`body.html`**
 
 ```
 <div id="page"></div>
@@ -49,7 +49,7 @@ SPA的页面组件不通过JSP或HTL文件和资源对象提供其子组件的HT
 
 除了是不延迟DOM生成的良好做法之外，SPA框架还要求在正文末尾添加脚本。
 
-**SPA 页面组件 -`customfooterlibs.html`**
+**SPA页面组件 —`customfooterlibs.html`**
 
 ```
 <sly data-sly-use.clientLib="${'/libs/granite/sightly/templates/clientlib.html'}"></sly>
@@ -60,7 +60,7 @@ SPA的页面组件不通过JSP或HTL文件和资源对象提供其子组件的HT
 
 描述SPA内容的元资源属性：
 
-**SPA 页面组件 -`customheaderlibs.html`**
+**SPA页面组件 —`customheaderlibs.html`**
 
 ```
 <meta property="cq:datatype" data-sly-test="${wcmmode.edit || wcmmode.preview}" content="JSON"/>

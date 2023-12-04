@@ -11,9 +11,9 @@ topic-tags: operations
 discoiquuid: 30a12fc6-07b8-4c7c-b9e2-caa2bec0ac48
 role: Developer
 exl-id: ff087084-fb1c-43a4-ae54-cc77eb862493
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '3501'
+source-wordcount: '3478'
 ht-degree: 0%
 
 ---
@@ -212,7 +212,7 @@ XML数据源用于预先填充具有固定布局和可流动布局的表单。 �
 
 **创建内存中XML数据源**
 
-您可以使用 `org.w3c.dom` 用于创建内存中XML数据源的类，以便使用可流布局预填充表单。 您必须将数据放置到符合表单的XML数据源中。 有关具有流式布局的表单与XML数据源之间的关系的信息，请参阅 [了解数据子组](#understanding-data-subgroups).
+您可以使用 `org.w3c.dom` 用于创建内存中XML数据源的类，以便使用可流布局预填充表单。 将数据放置到符合表单的XML数据源中。 有关具有流式布局的表单与XML数据源之间的关系的信息，请参阅 [了解数据子组](#understanding-data-subgroups).
 
 **转换XML数据源**
 

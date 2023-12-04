@@ -1,17 +1,17 @@
 ---
 title: 使用富文本编辑器创作内容
-description: 使用富文本编辑器创作内容 在Adobe Experience Manager 6.5中。
+description: 使用富文本编辑器在Adobe Experience Manager 6.5中创作内容。
 exl-id: 90cb8893-65f3-4d82-9880-ce8dd80891b1
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '266'
-ht-degree: 46%
+source-wordcount: '264'
+ht-degree: 32%
 
 ---
 
 # 使用富文本编辑器创作内容 {#use-rich-text-editor-to-author-content}
 
-富文本编辑器 (RTE) 是将文本内容插入到 AEM 中的基本构建块。它构成各种组件的基础，包括：
+富文本编辑器 (RTE) 是将文本内容插入到 AEM 中的基本构建块。它构成了各种组件的基础，包括：
 
 * 文本
 * 文本图像
@@ -19,11 +19,11 @@ ht-degree: 46%
 
 ## 就地编辑 {#in-place-editing}
 
-通过点按或单击选择基于文本的组件，将像任何其他组件一样显示[组件工具栏](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste)。
+通过单击选择基于文本的组件将显示 [组件工具栏](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste) 与任何组件一样。
 
 ![screen_shot_2018-03-21at163054](assets/screen_shot_2018-03-21at163054.png)
 
-再次点按/单击或最初通过缓慢点按/单击选择组件会打开就地编辑，它有自己的工具栏。 在这里，您可以编辑内容并进行基本的格式更改。
+再次点按/单击或最初通过缓慢双击选择组件时，将打开就地编辑，该编辑具有自己的工具栏。 在这里，您可以编辑内容并进行基本的格式更改。
 
 ![screen_shot_2018-03-21at163214](assets/screen_shot_2018-03-21at163214.png)
 

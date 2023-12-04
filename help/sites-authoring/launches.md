@@ -7,10 +7,10 @@ content-type: reference
 topic-tags: site-features
 docset: aem65
 exl-id: b25d3f8e-5687-49ab-95e1-19ec75c87f6e
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '843'
-ht-degree: 82%
+source-wordcount: '831'
+ht-degree: 81%
 
 ---
 
@@ -121,6 +121,6 @@ ht-degree: 82%
 
    ![“引用”选项卡 — 启动项](assets/screen-shot_2019-03-05at121901-1.png)
 
-1. 点按/单击相应的启动项，此时将显示可执行的操作列表：
+1. 单击相应的启动项，此时将显示可执行的操作列表：
 
    ![选择启动项以显示可能的操作](assets/screen-shot_2019-03-05at121952-1.png)

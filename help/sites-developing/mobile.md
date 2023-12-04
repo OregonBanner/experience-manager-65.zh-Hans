@@ -8,9 +8,9 @@ content-type: reference
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/develop/mobile/mobile
 exl-id: 21b2037a-685a-441d-aecd-865884253e03
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '3787'
+source-wordcount: '3720'
 ht-degree: 0%
 
 ---
@@ -146,8 +146,7 @@ AEM移动框架允许开发对发出请求的设备敏感的组件。 以下代�
 
 * 检查设备组是否支持映像
   `if (deviceGroup.hasCapability(DeviceCapability.CAPABILITY_IMAGES)) {`
-...
-或
+...或者
   `if MobileUtil.hasCapability(request, DeviceCapability.CAPABILITY_IMAGES) {`
 ...
 
@@ -186,9 +185,9 @@ AEM移动框架允许开发对发出请求的设备敏感的组件。 以下代�
 
 设备组在下方定义为内容页面 `/etc/mobile/devices` 并使用 **移动设备组** 模板。 设备组模板可用作内容页面形式的设备组定义的配置模板。 其主要特点是：
 
-* 位置: `/libs/wcm/mobile/templates/devicegroup`
+* 位置： `/libs/wcm/mobile/templates/devicegroup`
 * 允许的路径： `/etc/mobile/groups/*`
-* 页面组件: `wcm/mobile/components/devicegroup`
+* 页面组件： `wcm/mobile/components/devicegroup`
 
 #### 将设备组分配给您的站点 {#assigning-device-groups-to-your-site}
 
@@ -254,7 +253,7 @@ AEM移动框架允许开发对发出请求的设备敏感的组件。 以下代�
 
    * **标题**：移动设备组的名称。
    * **描述**：组的描述。
-   * **User-Agent**：设备匹配的用户代理字符串。 它是可选的，也可以是正则表达式。 示例: `BlackBerryZ10`
+   * **User-Agent**：设备匹配的用户代理字符串。 它是可选的，也可以是正则表达式。 示例： `BlackBerryZ10`
    * **功能**：定义组是否可以处理图像、CSS、JavaScript或设备旋转。
    * **最小屏幕宽度**&#x200B;和&#x200B;**高度**
    * **禁用模拟器**：在内容编辑期间启用/禁用模拟器。
@@ -268,7 +267,7 @@ AEM移动框架允许开发对发出请求的设备敏感的组件。 以下代�
    * 要添加筛选器，请单击添加项，然后从下拉列表中选择一个筛选器。
    * 过滤器会按照其显示顺序进行评估。 当设备不符合过滤器的条件时，不评估列表中的后续过滤器。
 
-1. 单击确定。
+1. 单击“确定”。
 
 移动设备组配置对话框如下所示：
 
@@ -337,7 +336,7 @@ AEM自动解析 `wurfl.xml` 文件并更新以下节点 `/var/mobile/devicespecs
 1. 在 **CRXDE Lite**，在/apps/wcm/mobile/devicespecs/regexp下创建一个节点，例如， `apple_ipad_ver1`.
 1. 将以下属性添加到节点：
 
-   * **regexp**：定义用户代理的正则表达式，例如。&#42;莫兹拉。&#42;iPad.&#42;AppleWebKit。&#42;Safari&#42;
+   * **regexp**：定义用户代理的正则表达式，例如。&#42;莫兹拉。&#42;iPad。&#42;AppleWebKit。&#42;Safari&#42;
    * **deviceId**：wurfl.xml中定义的设备ID，例如， `apple_ipad_ver1`
 
 上述配置导致用户代理与提供的正则表达式匹配的设备映射到apple_ipad_ver1 WURFL™设备ID（如果存在）。
@@ -577,7 +576,7 @@ AEM会按如下方式处理由属于触控设备组的移动设备发出的请�
 
 ### 支持“将链接发送到朋友”链接的页面缓存 {#supporting-page-caching-for-send-link-to-a-friend-links}
 
-移动设备页面可在Dispatcher上缓存，因为为设备组呈现的页面在页面URL中被设备组选择器区分开，例如， `/content/mobilepage.touch.html`. 绝不会缓存对没有选择器的移动页面的请求，因为在这种情况下，设备检测会运行，并且最终重定向到匹配的设备组（或就此而言的“不匹配”）。 使用设备组选择器呈现的移动页面由链接重写器处理，该链接重写器重写页面内的所有链接以同时包含设备组选择器，从而防止对已经限定的页面上的每次点击重新执行设备检测。
+移动设备页面可在Dispatcher上缓存，因为为设备组呈现的页面在页面URL中被设备组选择器区分开，例如， `/content/mobilepage.touch.html`. 绝不会缓存对没有选择器的移动页面的请求，因为在这种情况下，设备检测会运行，并且最终重定向到匹配的设备组（或就此而言的“不匹配”）。 使用设备组选择器呈现的移动页面由链接重写器处理，该链接重写器重写页面内的所有链接以同时包含设备组选择器，从而防止对已经限定的页面的每次点击重新执行设备检测。
 
 因此，您可能会遇到以下情况：
 

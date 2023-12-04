@@ -10,10 +10,10 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: fe61ee4b-51b6-4a6f-91d8-1c02b29cc1db
 exl-id: 1787e643-fc8e-40e0-8e14-97b222a7c320
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '414'
-ht-degree: 29%
+source-wordcount: '407'
+ht-degree: 24%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 29%
 
 由于可能存在不同的值，默认情况下不会启用页面属性以进行批量编辑。 必须明确允许（启用）。 在定义可用于批量编辑的页面属性时，您需要考虑某些事项，例如：
 
-* 某些字段通常是唯一的；例如，页面标题。 当应用一个值时，您必须确定启用此类字段进行批量编辑是否有意义。
+* 某些字段通常是唯一的；例如，页面标题。 确定在应用一个值时启用此类字段进行批量编辑是否有意义。
 * 某些字段可能具有多个值 — 这在呈现时需要有意义的表示形式。
 
   例如，显示“准备发布”的复选框。 在批量编辑之前，这可能会有多个值（例如，就绪、正在审核、正在进行）。

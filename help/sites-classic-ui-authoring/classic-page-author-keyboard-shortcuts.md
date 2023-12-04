@@ -1,27 +1,25 @@
 ---
 title: 编辑页面时的键盘快捷键
-description: 在整个 AEM 环境中都可以使用各种键盘快捷键。一些可应用于编辑页面，另一些可应用于对控制台的使用。
-uuid: a1753e0b-5701-426c-b974-2e8b8d81a30d
+description: 在整个 AEM 环境中都可以使用各种键盘快捷键。有些可应用于编辑页面，另一些可应用于对控制台的使用。
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
-discoiquuid: 68fa88c5-a759-49fa-ab9b-8dc63c049d5f
 exl-id: 1c761aa7-a72f-46f0-8717-0b6e0d1cff55
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '308'
-ht-degree: 19%
+source-wordcount: '307'
+ht-degree: 14%
 
 ---
 
 # 编辑页面时的键盘快捷键{#keyboard-shortcuts-when-editing-pages}
 
-在整个 AEM 环境中都可以使用各种键盘快捷键。一些可应用于编辑页面，另一些可应用于 [控制台的使用](/help/sites-classic-ui-authoring/author-env-keyboard-shortcuts.md).
+在整个 AEM 环境中都可以使用各种键盘快捷键。有些可应用于编辑页面，另一些可应用于 [使用控制台](/help/sites-classic-ui-authoring/author-env-keyboard-shortcuts.md).
 
 >[!NOTE]
 >
->在下表中，对于 **快捷键** 列中，Ctrl键和Command键均适用于macOS。
+>在下表中，对于以下组中的键组合： **快捷键** 列中，Ctrl和Command键均可在macOS上使用。
 
 >[!NOTE]
 >
@@ -43,32 +41,32 @@ ht-degree: 19%
   <tr>
    <td>编辑模式</td>
    <td><code>Ctrl-z</code></td>
-   <td>撤消最后一次更改.</td>
+   <td>撤消最后一次更改。</td>
   </tr>
   <tr>
    <td> </td>
    <td><code>Ctrl-y</code></td>
-   <td>重做最后一次更改.</td>
+   <td>重做最后一次更改。</td>
   </tr>
   <tr>
    <td> </td>
    <td><strong><code>Shift-Click</code></strong></td>
-   <td>选择多个段落.</td>
+   <td>选择多个段落。</td>
   </tr>
   <tr>
    <td> </td>
    <td><strong><code>Ctrl-Click</code></strong></td>
-   <td>选择多个段落.</td>
+   <td>选择多个段落。</td>
   </tr>
   <tr>
    <td> </td>
    <td><strong><code>Ctrl-C</code></strong></td>
-   <td>复制所选段落.</td>
+   <td>复制所选段落。</td>
   </tr>
   <tr>
    <td> </td>
    <td><strong><code>Ctrl-X</code></strong></td>
-   <td>剪切选定的段落。<strong><br /> 注意：</strong> 将剪切的段落粘贴到新位置后，该段落才会消失。</td>
+   <td>剪切选定的段落。<strong><br /> 注意：</strong> 在将剪切的段落粘贴到新位置之前，它不会消失。</td>
   </tr>
   <tr>
    <td> </td>
@@ -93,7 +91,7 @@ ht-degree: 19%
   <tr>
    <td> </td>
    <td><strong><code>Alt-right-click</code></strong></td>
-   <td>强制使用默认（浏览器）上下文菜单。<br /> <strong>注意：</strong> AEM上下文菜单仅在经典UI中出现。</td>
+   <td>强制默认（浏览器）上下文菜单。<br /> <strong>注意：</strong> AEM上下文菜单仅在经典UI中出现。</td>
   </tr>
   <tr>
    <td> </td>
@@ -138,12 +136,12 @@ ht-degree: 19%
   <tr>
    <td> </td>
    <td><strong><code>Esc</code></strong></td>
-   <td>关闭建议图层。</td>
+   <td>关闭建议层。</td>
   </tr>
   <tr>
    <td>内容查找器<br /> </td>
    <td><strong><code>Alt+drag</code></strong></td>
-   <td><p>拖动资产，放到目标上。</p> <p>放置操作会生成一个新段落，而不是替换目标中的资产。</p> </td>
+   <td><p>拖放资源，放到目标上。</p> <p>放置操作会生成一个新段落，而不是替换目标中的资产。</p> </td>
   </tr>
  </tbody>
 </table>
@@ -164,7 +162,7 @@ ht-degree: 19%
   <tr>
    <td>编辑模式</td>
    <td>在URL中设置以下后缀：<br /> <code>?debugClientLibs=true</code><br /> 然后使用：<br /> <strong><code>Ctrl-Shift-U</code></strong></td>
-   <td>查看页面加载的时间统计信息。</td>
+   <td>要查看页面加载的时间统计信息，请执行以下操作：</td>
   </tr>
  </tbody>
 </table>

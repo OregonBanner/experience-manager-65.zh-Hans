@@ -3,10 +3,10 @@ title: 语言复制向导
 description: 了解如何在AdobeExperience Manager中使用语言复制向导。
 feature: Language Copy
 exl-id: 99f9929f-26de-4e95-9ee3-d70512d53bb7
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '214'
-ht-degree: 30%
+source-wordcount: '219'
+ht-degree: 22%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 30%
 
 要访问此向导：
 
-1. 在站点中，选择一个页面，然后点按/单击创建。
+1. 在站点中，选择一个页面，然后单击创建。
 
    ![chlimage_1-9](assets/chlimage_1-9.jpeg)
 
@@ -48,6 +48,6 @@ ht-degree: 30%
 
    ![chlimage_1-13](assets/chlimage_1-13.jpeg)
 
-1. 最后，该向导将显示&#x200B;**创建**&#x200B;按钮。
+1. 此 **创建** 按钮结束向导。
 
    ![chlimage_1-14](assets/chlimage_1-14.jpeg)

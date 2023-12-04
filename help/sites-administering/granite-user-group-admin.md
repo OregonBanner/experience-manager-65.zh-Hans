@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 95ab2e54-0f8d-49e0-ad20-774875f6f80a
 exl-id: f3477d21-7e9a-4588-94e8-496bc42434a8
 feature: Security
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '953'
-ht-degree: 4%
+source-wordcount: '951'
+ht-degree: 1%
 
 ---
 
@@ -100,7 +100,7 @@ Granite用户和组管理控制台均可从 **[工具](/help/sites-administering
 
      您可以在此处上传照片以用作头像。
 
-     接受的文件类型: `.jpg .png .tif .gif`
+     接受的文件类型： `.jpg .png .tif .gif`
 
      首选大小： `240x240px`
 
@@ -222,7 +222,7 @@ Granite用户和组管理控制台均可从 **[工具](/help/sites-administering
 
 1. 此 **编辑组设置** 窗体将被打开。
 
-   组ID将与原始组相同，但带有前缀 `Copy of`. 您必须编辑此字段，因为ID不能包含空格。 所有其他细节将与原始细节相同。
+   组ID将与原始组相同，但带有前缀 `Copy of`. 编辑此ID，因为它不能包含空格。 所有其他细节与原始细节相同。
 
    您现在可以在中编辑并保存详细信息 [添加新组](#adding-a-new-group).
 

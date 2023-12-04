@@ -7,9 +7,9 @@ topic-tags: personalization
 content-type: reference
 docset: aem65
 exl-id: 1b8c6075-13c6-4277-b726-8dea7991efec
-source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '3495'
+source-wordcount: '3443'
 ht-degree: 0%
 
 ---
@@ -58,10 +58,10 @@ ht-degree: 0%
 
 zip文件布局示例如下：
 
-* /index.html ->登录页HTML文件
-* /css ->以添加到CSS clientlib
-* /img ->所有图像和资产
-* /js ->以添加到JS clientlib
+* /index.html >登陆页面HTML文件
+* /css >以添加到CSS clientlib
+* /img >所有图像和资产
+* /js >以添加到JS clientlib中
 
 布局基于HTML5样板最佳实践布局。 有关更多信息，请参阅 [https://html5boilerplate.com/](https://html5boilerplate.com/)
 
@@ -156,7 +156,7 @@ Internet Explorer和Firefox 3.6及更早版本不支持拖放zip上传。 要在
 
 添加带有列表的文本：
 
-* 1st
+* 第1
 * 2nd
 
 可以在RTE编辑器中编辑的内容：
@@ -430,7 +430,7 @@ AEM parsys组件是可以包含其他AEM组件的容器组件。 可以在导入
 
 `<meta charset="UTF-8">`
 
-*或*
+*或者*
 
 `<meta http-equiv="content-type" content="text/html;charset=utf-8">`
 

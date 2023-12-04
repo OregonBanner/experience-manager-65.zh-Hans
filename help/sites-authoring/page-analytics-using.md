@@ -8,10 +8,10 @@ topic-tags: site-features
 docset: aem65
 legacypath: /content/help/en/experience-manager/6-4/help/sites-authoring/pa-using.html
 exl-id: 2e406512-47fb-451d-b837-0a3898ae1f08
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '445'
-ht-degree: 11%
+source-wordcount: '435'
+ht-degree: 4%
 
 ---
 
@@ -36,9 +36,9 @@ ht-degree: 11%
 >要更改更新周期， [配置导入间隔](/help/sites-administering/adobeanalytics-connect.md#configuring-the-import-interval).
 
 1. 打开 **站点** 控制台；例如， [https://localhost:4502/sites.html/content](https://localhost:4502/sites.html/content)
-1. 在工具栏的最右侧（右上角），单击或点按图标以选择 **列表视图** (显示的图标将取决于 [当前视图](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources))。
+1. 在工具栏的最右侧（右上角），单击图标以选择 **列表视图** (显示的图标将取决于 [当前视图](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources))。
 
-1. 同样，在工具栏的最右侧（右上角），单击或点按图标，然后选择 **查看设置**. 此 **配置列** 对话框打开。 进行所需的任何更改并通过进行确认 **更新**.
+1. 再次单击工具栏最右侧的图标，然后选择 **查看设置**. 此 **配置列** 对话框打开。 进行所需的任何更改并通过进行确认 **更新**.
 
    ![spad-02](assets/spad-02.png)
 
@@ -85,6 +85,6 @@ analytics-administrators用户组的成员可以配置Sites控制台，以便作
 
 >[!CAUTION]
 >
->由于 Adobe Analytics API 中的安全性更改，无法再使用 AEM 中包含的 Activity Map 版本。
+>由于Adobe Analytics API中的安全性更改，无法再使用AEM中包含的Activity Map版本。
 >
 >此 [Adobe Analytics提供的ActivityMap插件](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html) 现在应使用。

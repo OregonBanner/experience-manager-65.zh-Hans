@@ -1,6 +1,6 @@
 ---
-title: 监控和维护Adobe Experience Manager实例
-description: 了解如何监控和维护Adobe Experience Manager实例。
+title: 监测和维护您的 Adobe Experience Manager 实例
+description: 了解如何监测和维护 Adobe Experience Manager 实例。
 uuid: 14466552-5c92-4730-a427-85675a2b121c
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,14 +10,14 @@ discoiquuid: 5d2364b7-4497-4f8b-85ef-6e780bfb8c36
 docset: aem65
 feature: Configuring
 exl-id: d3375935-090d-4052-8234-68ef4ddbab6a
-source-git-commit: c7c32130a3257c14c98b52f9db31d80587d7993a
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '5939'
-ht-degree: 1%
+source-wordcount: '5793'
+ht-degree: 0%
 
 ---
 
-# 监控和维护Adobe Experience Manager实例{#monitoring-and-maintaining-your-aem-instance}
+# 监测和维护您的 Adobe Experience Manager 实例{#monitoring-and-maintaining-your-aem-instance}
 
 部署AEM实例后，必须监视和维护其操作、性能和完整性。
 
@@ -63,11 +63,11 @@ ht-degree: 1%
 >
 >有关备份性能的详细信息，请参阅 [备份性能](/help/sites-deploying/configuring-performance.md#backup-performance) 部分。
 
-### 备份您的软件安装 {#backing-up-your-software-installation}
+### 备份软件安装 {#backing-up-your-software-installation}
 
-安装后，或在配置中发生重大更改时，请创建您的软件安装备份。
+在安装或配置发生重大更改后，创建软件安装的备份。
 
-要完成此任务，请 [ 备份整个存储库 ](#backing-up-your-repository) ，然后执行以下操作：
+要完成此任务， [备份整个存储库](#backing-up-your-repository) 然后：
 
 1. 停止 AEM。
 1. 备份整个 `<cq-installation-dir>` 从您的文件系统删除。
@@ -94,7 +94,7 @@ ht-degree: 1%
 
 此 **清除版本** 工具用于清除存储库中节点或节点层次结构的版本。 其主要用途是通过删除节点的旧版本来帮助您减小存储库的大小。
 
-本节介绍与AEM版本控制功能相关的维护操作。 此 **清除版本** 工具用于清除存储库中节点或节点层次结构的版本。 其主要用途是通过删除节点的旧版本来帮助您减小存储库的大小。
+本节介绍与AEM版本控制功能相关的维护操作。 此 **清除版本** 工具用于清除存储库中节点或节点层次结构的版本。 其主要目的是帮助您通过删除旧版本的节点来减小存储库的大小。
 
 ### 概述 {#overview}
 
@@ -178,7 +178,7 @@ ht-degree: 1%
 此外，控制台还提供了有关版本的有用信息：
 
 * `V 1.0`：版本号。
-* `V 1.0.1`&#42;：星号表示版本是当前（基本）版本，无法清除。
+* `V 1.0.1`&#42;：星形标记指示版本是当前（基础）版本，无法清除。
 
 * `Thu Mar 15 2012 08:37:32 GMT+0100`：版本的日期。
 
@@ -207,11 +207,11 @@ AEM WCM会记录详细的日志。 打开包装并启动“快速入门”后，
 
 * 此 `error.log` 文件将按照模式重命名 {original_filename} `.yyyy-MM-dd`. 例如，在2010年7月11日，当前日志文件被重命名 `error.log-2010-07-10`，然后是新的 `error.og` 创建。
 
-* 以前的日志文件不会被删除，因此您有责任定期清理旧日志文件，以限制磁盘的使用量。
+* 不会删除上一个日志文件，因此您有责任定期清除旧日志文件，以限制磁盘的使用情况。
 
 >[!NOTE]
 >
->如果升级AEM安装，则AEM不再使用的任何现有日志文件将保留在磁盘上。 您可以毫无风险地删除它们。 所有新的日志条目都写入新的日志文件中。
+>如果您升级 AEM 安装，AEM 中不再使用的任何现有日志文件仍保留在磁盘上。 您可以在不风险的情况下删除它们。 所有新的日志条目都写入新的日志文件中。
 
 ### 查找日志文件 {#finding-the-log-files}
 
@@ -292,7 +292,7 @@ DEBUG 3 WebApp Panel: WebApp successfully deployed
 
    * 名称：`org.apache.sling.commons.log.LogManager.factory.config-<identifier>`
 
-     `<identifier>`免费文本替换为您（必须）输入以识别实例（您不能忽略此信息）。
+     位置 `<identifier>` 替换为（必须）输入以标识实例的自由文本（不能忽略此信息）。
 
      例如，`org.apache.sling.commons.log.LogManager.factory.config-MINE`
 
@@ -332,7 +332,7 @@ DEBUG 3 WebApp Panel: WebApp successfully deployed
 
         类型：`String`
 
-        值：根据需要指定日志消息的模式；例如，
+        值：根据需要指定日志消息的模式;例如，
 
         `{0,date,dd.MM.yyyy HH:mm:ss.SSS} *{4}* [{2}] {3} {5}`
 
@@ -433,9 +433,9 @@ DEBUG 3 WebApp Panel: WebApp successfully deployed
    >指示何时创建新文件（以及根据名称模式重命名现有文件）。
    >
    >* 可使用数字指定大小限制。 如果未指定大小指示器，则将其视为字节数，或者您可以添加其中一个大小指示器 —  `KB`， `MB`，或 `GB` （忽略大小写）。
-   >* 时间/日期计划可以指定为 `java.util.SimpleDateFormat` 模式。 它定义了在其后旋转文件的时段。 另外，附加在旋转文件上的后缀（用于识别）。
+   >* 可将时间/日期计划指定为 `java.util.SimpleDateFormat` 模式。 它定义文件旋转的时间段。 此外，附加到旋转文件的后缀（用于标识）。
    >
-   >默认值为 &quot;.&quot;yyyy-mm-dd （适用于每日日志循环）。
+   >默认值为“。”yyyy-MM-dd（用于每日日志轮换）。
    >
    >例如，在2010年1月20日午夜（或此日期之后的第一个日志消息显示精确），.。。/logs/error.log 被重命名为.。/logs/error.log.2010-01-20. 1月21日的日志记录将输出到（新的和空的）。。/logs/error.log，直到它在下一天发生更改时才滚动。
    >
@@ -483,7 +483,7 @@ Felix控制台还在以下位置提供有关Sling日志支持的信息： `../sy
 
 #### Web控制台中的OSGi审核记录 {#osgi-audit-records-from-the-web-console}
 
-OSGi事件还会生成审核记录，这些记录可在以下位置查看： **配置状态** 制表符 — > **日志文件** AEM选项卡：
+OSGi事件还会生成审核记录，这些记录可在以下位置查看： **配置状态** 选项卡> **日志文件** AEM选项卡：
 
 ![screen_shot_2012-02-13at50346pm](assets/screen_shot_2012-02-13at50346pm.png)
 
@@ -923,9 +923,9 @@ Percentage of the requests served within a certain time (ms)
 
    现在，您可以选择其他选项。
 
-### 使用(J)VisualVM监控性能 {#monitoring-performance-using-j-visualvm}
+### 使用（J） VisualVM 监测性能 {#monitoring-performance-using-j-visualvm}
 
-对于JDK 6-8，使用工具命令 `visualvm` 可用。 安装JDK后，可以执行以下操作：
+对于 JDK 6-8，工具命令 `visualvm` 可用。 安装JDK后，可以执行以下操作：
 
 1. 启动AEM实例。
 
@@ -1037,9 +1037,9 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 
 #### 资源的平均大小是多少？ {#what-is-the-average-size-of-the-assets}
 
-要确定 `/var/dam` 文件夹：
+确定文件夹的总大小 `/var/dam` ：
 
-1. 使用WebDAV将存储库映射到本地文件系统。
+1. 使用 WebDAV 将存储库映射到本地文件系统。
 
 1. 使用命令行：
 
@@ -1098,9 +1098,9 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 >
 有关更多信息，另请参阅以下文章：
 >
-* [线程转储](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17452.html?lang=zh-Hans)
-* [分析内存问题](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17482.html?lang=zh-Hans)
-* [使用内置探查器进行分析](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17499.html?lang=zh-Hans)
+* [线程转储](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17452.html?lang=en)
+* [分析内存问题](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17482.html?lang=en)
+* [使用内置探查器进行分析](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17499.html?lang=en)
 * [分析缓慢进程和受阻进程](https://helpx.adobe.com/experience-manager/kb/AnalyzeSlowAndBlockedProcesses.html)
 >
 
@@ -1125,7 +1125,7 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 * JVM设置用于 [启动AEM](/help/sites-deploying/deploy.md#getting-started)
 * 知识库：
 
-   * [分析内存问题](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17482.html?lang=zh-Hans)
+   * [分析内存问题](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17482.html?lang=en)
 
 ### 磁盘I/O {#disk-i-o}
 
@@ -1134,16 +1134,16 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 * 无论您是否已禁用调试信息收集，都可以在多个位置对其进行配置，其中包括：
 
    * [Apache Sling JSP脚本处理程序](/help/sites-deploying/osgi-configuration-settings.md#apacheslingjspscripthandler)
-   * [Apache Sling JavaScript 处理程序](/help/sites-deploying/osgi-configuration-settings.md#apacheslingjavascripthandler)
-   * [Apache Sling 日志配置](/help/sites-deploying/osgi-configuration-settings.md#apacheslingloggingconfiguration)
-   * [CQ HTML 库管理器](/help/sites-deploying/osgi-configuration-settings.md#daycqhtmllibrarymanager)
+   * [Apache Sling JavaScript处理程序](/help/sites-deploying/osgi-configuration-settings.md#apacheslingjavascripthandler)
+   * [Apache Sling日志记录配置](/help/sites-deploying/osgi-configuration-settings.md#apacheslingloggingconfiguration)
+   * [CQHTML库管理器](/help/sites-deploying/osgi-configuration-settings.md#daycqhtmllibrarymanager)
    * [CQ WCM 调试筛选](/help/sites-deploying/osgi-configuration-settings.md#daycqwcmdebugfilter)
    * [伐木](/help/sites-deploying/monitoring-and-maintaining.md#activating-the-debug-log-level)
 
 * 是否以及如何配置 [ 版本清除](/help/sites-deploying/version-purging.md)
 * 知识库：
 
-   * [打开的文件过多](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17470.html?lang=zh-Hans)
+   * [打开的文件过多](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17470.html?lang=en)
    * [日志占用太多磁盘空间](https://helpx.adobe.com/experience-manager/kb/JournalTooMuchDiskSpace.html)
 
 ### 性能定期下降 {#regular-performance-degradation}
@@ -1159,7 +1159,7 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 
 Java™虚拟机(JVM)在调试方面已得到改进(特别是自Java™ 7以来)。 因此，指定合理的固定JVM大小并使用默认值通常是合适的。
 
-如果缺省设置不合适，那么建立一种监测和评估GC性能的方法就十分重要。 请在尝试调整JVM之前执行此操作。 此过程可能涉及监测因素，包括栈大小、算法等。
+如果默认设置不合适，则必须建立一种方法来监测和评估 GC 的性能。 在尝试调整 JVM 之前执行此操作。 此过程可能涉及监视因素，包括堆大小、算法和其他方面。
 
 一些常见选项包括：
 

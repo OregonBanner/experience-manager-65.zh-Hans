@@ -10,10 +10,10 @@ topic-tags: site-features
 content-type: reference
 discoiquuid: fabaa3e8-1657-4ed4-abb2-990117bec39c
 exl-id: 8f11f5de-f5af-4ce7-a448-2b4299de2930
-source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
 source-wordcount: '352'
-ht-degree: 41%
+ht-degree: 32%
 
 ---
 
@@ -33,14 +33,14 @@ ht-degree: 41%
 
 ## 跨国和多语言站点 {#multinational-and-multilingual-sites}
 
-通过结合使用多站点管理器和翻译工作流，您可以高效地为跨国和多语言站点创建内容。使用一种语言为特定国家/地区创建主站点，然后将该内容用作其他站点的基础，并在需要时使用翻译：
+通过结合使用多站点管理器和翻译工作流，您可以高效地为跨国和多语言站点创建内容。 使用一种语言为特定国家/地区创建主站点，然后将该内容用作其他站点的基础，并在需要时使用翻译：
 
 * 将主站点[翻译](/help/sites-administering/translation.md)成其他语言。
 
 * 使用[多站点管理器](/help/sites-administering/msm.md)可以：
 
    * 重用主站点的内容和翻译，为其他国家/地区和文化创建站点。
-   * 确保将多站点管理器的使用限制为使用一种语言的内容，例如，英语母版 — >国家/地区站点的英语分支，法语母版 — >国家/地区站点的法语分支。
+   * 确保将多站点管理器的使用限制为使用一种语言的内容，例如，英语母版>国家/地区站点的英语分支，法语母版>国家/地区站点的法语分支。
    * 必要时，分离活动副本的元素以添加本地化详细信息。
 
 下图说明了主要概念的相交部分（但未显示涉及的所有级别/元素）：
@@ -60,9 +60,9 @@ ht-degree: 41%
 >
 >对于所有用例，建议阅读以下最佳实践：
 >
->* [MSM 的最佳实践](/help/sites-administering/msm-best-practices.md)；特别是：
+>* [MSM的最佳实践](/help/sites-administering/msm-best-practices.md)；特别是：
 >
 >   * [创建站点](/help/sites-administering/msm-best-practices.md#create-site)
->   * [MSM 和多语言网站](/help/sites-administering/msm-best-practices.md#msm-and-multilingual-websites)
+>   * [MSM和多语言网站](/help/sites-administering/msm-best-practices.md#msm-and-multilingual-websites)
 >
 >* [翻译的最佳实践](/help/sites-administering/tc-bp.md)

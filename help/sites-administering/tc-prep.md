@@ -4,10 +4,10 @@ description: 了解如何准备内容以在Adobe Experience Manager中进行翻�
 contentOwner: Guillaume Carlino
 feature: Language Copy
 exl-id: 81978733-89a6-4436-bcf1-4bde962ed54f
-source-git-commit: 7d46ba0eaa73d9f7a67034ba81d7fa379aa0112c
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '684'
-ht-degree: 54%
+source-wordcount: '669'
+ht-degree: 44%
 
 ---
 
@@ -45,7 +45,7 @@ ht-degree: 54%
 
 创建语言根作为标识了内容语言的语言副本的根页。创建语言根后，您可以创建包含语言副本的翻译项目。
 
-要创建语言根，您需要创建一个页面并使用 ISO 语言代码作为名称属性的值。语言代码必须采用下列格式之一：
+要创建语言根，您需要创建一个页面并使用ISO语言代码作为Name属性的值。 语言代码必须采用下列格式之一：
 
 * `<language-code>`支持的语言代码是由ISO-639-1定义的两字母代码，例如， `en`.
 
@@ -56,20 +56,20 @@ ht-degree: 54%
 以下过程使用触控优化的UI创建网站的语言副本。 有关使用经典UI的说明，请参阅 [使用经典UI创建语言根](/help/sites-administering/tc-lroot-classic.md).
 
 1. 导航到站点。
-1. 单击或点按要为其创建语言副本的站点。
+1. 单击要为其创建语言副本的站点。
 
-   例如，要创建Geometrixx Outdoors站点的语言副本，您可以单击或点按Geometrixx Outdoors站点。
+   例如，要创建Geometrixx Outdoors站点的语言副本，您可以单击Geometrixx Outdoors站点。
 
-1. 单击或点按创建，然后单击或点按创建页面。
+1. 单击创建，然后单击创建页面。
 
    ![chlimage_1-21](assets/chlimage_1-21a.png)
 
-1. 选择页面模板，然后单击或点按下一步。
+1. 选择页面模板，然后单击“下一步”。
 1. 在“名称”字段中，键入国家/地区代码，格式为 `<language-code>` 或 `<language-code>_<country-code>`例如， `en`， `en_US`， `en_us`， `en_GB`， `en_gb`. 为页面键入标题。
 
    ![chlimage_1-22](assets/chlimage_1-22a.png)
 
-1. 单击或点按创建。在确认对话框中，单击或点按&#x200B;**完成**&#x200B;以返回 Sites 控制台，或者单击或点按&#x200B;**打开**&#x200B;打开语言副本。
+1. 单击“创建”。 在确认对话框中，单击 **完成** 以返回站点控制台，或者 **打开** 以打开语言副本。
 
 ## 查看语言根的状态 {#seeing-the-status-of-language-roots}
 
@@ -79,8 +79,8 @@ ht-degree: 54%
 
 以下过程使用触控优化UI打开页面的“引用”面板。
 
-1. 在站点控制台上，选择站点的页面，然后单击或点按 **引用**.
+1. 在站点控制台上，选择站点的页面，然后单击 **引用**.
 
    ![chlimage_1-24](assets/chlimage_1-24a.png)
 
-1. 在引用面板中，单击或点按 **语言副本**. 语言副本面板显示网站的语言副本。
+1. 在引用面板中，单击 **语言副本**. 语言副本面板显示网站的语言副本。

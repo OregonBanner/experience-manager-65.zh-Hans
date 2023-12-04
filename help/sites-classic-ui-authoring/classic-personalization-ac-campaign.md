@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
 exl-id: a4717cb8-b70c-4150-b816-35e9b871e792
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1163'
+source-wordcount: '1185'
 ht-degree: 0%
 
 ---
@@ -81,7 +81,7 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >确保点按/单击 **确定** 或 **应用** 添加云服务之后。 这将启用 **Adobe Campaign** 选项卡以正常工作。
+   >请务必单击 **确定** 或 **应用** 添加云服务之后。 这将启用 **Adobe Campaign** 选项卡以正常工作。
 
 1. 如果要应用默认模板以外的特定电子邮件投放模板(来自Adobe Campaign) **邮件** 模板，选择 **页面属性** 再来一次。 在 **Adobe Campaign** 选项卡，在相关的Adobe Campaign实例中输入电子邮件投放模板的内部名称。
 

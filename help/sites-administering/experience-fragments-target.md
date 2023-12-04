@@ -7,10 +7,10 @@ topic-tags: integration
 content-type: reference
 docset: aem65
 exl-id: f2921349-de8f-4bc1-afa2-aeace99cfc5c
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1539'
-ht-degree: 43%
+source-wordcount: '1513'
+ht-degree: 41%
 
 ---
 
@@ -20,12 +20,12 @@ ht-degree: 43%
 >
 >此页面上的某些功能需要应用AEM 6.5.3.0（或更高版本）。
 >
->6.5.3.0:
+>6.5.3.0：
 >
 >* **Externalizer域** 现在可以选中。
 >  **注意：** 外部化器域仅与发送到Target的体验片段的内容相关，与查看选件内容等元数据无关。
 >
->6.5.2.0:
+>6.5.2.0：
 >
 >* 体验片段可以导出到：
 >
@@ -152,19 +152,19 @@ AEM Experience Fragments可以导出到Adobe Target中的默认工作区，也�
    >
    >它必须是体验片段 Web 变体。
 
-1. 点按/单击&#x200B;**导出到 Adobe Target**。
+1. 单击 **导出到Adobe Target**.
 
    >[!NOTE]
    >
    >如果已导出体验片段，请选择&#x200B;**在 Adobe Target 中更新**。
 
-1. 根据需要点按/单击&#x200B;**导出而不发布**&#x200B;或&#x200B;**发布**。
+1. 单击 **导出而不发布** 或 **Publish** 根据需要。
 
    >[!NOTE]
    >
    >选择 **Publish** 立即发布体验片段并将其发送到Target。
 
-1. 在“确认”对话框中，点按/单击&#x200B;**确定**。
+1. 单击 **确定** 在确认对话框中。
 
    您的体验片段现在应在Target中。
 

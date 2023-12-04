@@ -12,9 +12,9 @@ topic-tags: operations
 discoiquuid: 669ede46-ea55-444b-a23f-23a86e5aff8e
 role: Developer
 exl-id: e6887e45-a472-41d4-9620-c56fd5b72b4c
-source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '4143'
+source-wordcount: '4102'
 ht-degree: 0%
 
 ---
@@ -81,7 +81,7 @@ Forms服务将表单渲染为HTML，以响应来自Web浏览器的HTTP请求。 
 
 ## 正在运行脚本 {#running-scripts}
 
-表单作者指定脚本是在服务器上还是客户端上执行。 Forms服务会创建一个分布式事件处理环境，用于执行可通过使用 `runAt` 属性。 有关此属性或在表单设计中创建脚本的信息，请参阅 [Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63_cn)
+表单作者指定脚本是在服务器上还是客户端上执行。 Forms服务会创建一个分布式事件处理环境，用于执行可通过使用 `runAt` 属性。 有关此属性或在表单设计中创建脚本的信息，请参阅 [Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63)
 
 Forms服务可以在渲染表单时执行脚本。 因此，您可以通过连接到数据库或客户端上可能没有的Web服务来预填充包含数据的表单。 您还可以设置按钮的 `Click` 在服务器上运行的事件，以便客户端将数据往返到服务器。 这允许客户端在用户与表单交互时运行可能需要服务器资源的脚本，例如企业数据库。 对于HTML表单，formcalc脚本只能在服务器上执行。 因此，您必须将这些脚本标记为在 `server` 或 `both`.
 
@@ -99,7 +99,7 @@ form：ready事件形式的表单脚本在表单的初始渲染期间只执行�
 
 您可以在提交表单之前调用自定义脚本。 此功能在所有可用的浏览器上运行。 但是，它只能在用户呈现具有它的HTML表单时使用 `Output Type` 属性设置为 `Form Body`. 当 `Output Type` 是 `Full HTML`. 有关配置此功能的步骤，请参阅管理帮助中的配置表单。
 
-必须先定义在提交表单之前调用的回调函数，该函数的名称为 `_user_onsubmit`. 假定函数不会引发任何异常，或者如果引发异常，将忽略该异常。 建议将JavaScript函数放置在html的head部分中；但是，您可以在脚本标记(包括 `xfasubset.js`.
+首先，定义在提交表单之前调用的回调函数，该函数的名称为 `_user_onsubmit`. 假定函数不会引发任何异常，或者如果引发异常，将忽略该异常。 建议将JavaScript函数放置在html的head部分中；但是，您可以在脚本标记(包括 `xfasubset.js`.
 
 当表单服务器呈现包含下拉列表的XDP时，除了创建下拉列表之外，还会创建两个隐藏的文本字段。 这些文本字段存储下拉列表的数据（一个字段存储选项的显示名称，另一个字段存储选项的值）。 因此，每次用户提交表单时，都会提交下拉列表的整个数据。 假设您不希望每次都提交那么多的数据，则可以编写自定义脚本来禁用它。 例如：下拉列表的名称为 `drpOrderedByStateProv` 并将其包装在子表单标题下。 HTML输入元素的名称将 `header[0].drpOrderedByStateProv[0]`. 存储和提交下拉列表数据的隐藏字段的名称具有以下名称： `header[0].drpOrderedByStateProv_DISPLAYITEMS_[0] header[0].drpOrderedByStateProv_VALUEITEMS_[0]`
 
@@ -123,11 +123,11 @@ var __CUSTOM_SCRIPTS_VERSION = 1; //enabling the feature
 
 在创建要呈现为HTML的表单设计时，必须将脚本限制为JavaScript语言脚本的XFA子集。
 
-在客户端上运行或在客户端和服务器上运行的脚本必须写入到XFA子集中。 在服务器上运行的脚本可以使用完整的XFA脚本模型，也可以使用FormCalc。 有关使用JavaScript的信息，请参见 [Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63_cn).
+在客户端上运行或在客户端和服务器上运行的脚本必须写入到XFA子集中。 在服务器上运行的脚本可以使用完整的XFA脚本模型，也可以使用FormCalc。 有关使用JavaScript的信息，请参见 [Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63).
 
 在客户端上运行脚本时，只有正在显示的当前面板可以使用脚本；例如，当显示面板B时，您无法针对面板A中的字段编写脚本。 在服务器上运行脚本时，可以访问所有面板。
 
-在客户端上运行的脚本中使用脚本对象模型(SOM)表达式时，也必须小心。 在客户端上运行的脚本仅支持SOM表达式的简化子集。
+在客户端上运行的脚本中使用脚本对象模型(SOM)表达式时要小心。 在客户端上运行的脚本仅支持SOM表达式的简化子集。
 
 ## 事件计时 {#event-timing}
 
@@ -140,11 +140,11 @@ XFA子集定义映射到HTML事件的XFA事件。 计算事件和验证事件的
 * 如果空测试产生错误，并且您退出字段时未指定值，则会显示一个消息框，您将在单击“确定”后重新定位到该字段。
 * 如果空测试生成警告，并且您退出字段时未指定值，则系统将提示您单击“确定”或“取消”，从而使您可以选择继续操作而不指定值，或者返回字段输入值。
 
-有关null测试的详细信息，请参见 [Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63_cn).
+有关null测试的详细信息，请参见 [Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63).
 
 ## 表单按钮 {#form-buttons}
 
-单击提交按钮会将表单数据发送到Forms服务，并显示表单处理过程的结束。 此 `preSubmit` 事件可以设置为在客户端或服务器上运行。 此 `preSubmit` 如果配置为在客户端运行，则事件在提交表单之前运行。 否则， `preSubmit` 事件在提交表单期间在服务器上运行。 欲知关于 `preSubmit` 事件，请参见 [Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63_cn).
+单击提交按钮会将表单数据发送到Forms服务，并显示表单处理过程的结束。 此 `preSubmit` 事件可以设置为在客户端或服务器上运行。 此 `preSubmit` 如果配置为在客户端运行，则事件在提交表单之前运行。 否则， `preSubmit` 事件在提交表单期间在服务器上运行。 欲知关于 `preSubmit` 事件，请参见 [Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63).
 
 如果按钮没有与其关联的客户端脚本，则会将数据提交到服务器，在服务器上执行计算，并重新生成HTML表单。 如果按钮包含客户端脚本，则不会将数据发送到服务器，并且客户端脚本将在Web浏览器中执行。
 
@@ -236,7 +236,7 @@ XFA子集定义映射到HTML事件的XFA事件。 计算事件和验证事件的
 
 **呈现HTML表单**
 
-要呈现HTML表单，必须指定在Designer中创建并保存为XDP文件的表单设计。 还必须选择HTML转换类型。 例如，您可以指定用于呈现Internet Explorer 5.0或更高版本的动态HTML的HTML转换类型。
+要呈现HTML表单，请指定在Designer中创建并保存为XDP文件的表单设计。 选择HTML转换类型。 例如，您可以指定用于呈现Internet Explorer 5.0或更高版本的动态HTML的HTML转换类型。
 
 呈现HTML表单还需要值，例如呈现其他表单类型所需的URI值。
 

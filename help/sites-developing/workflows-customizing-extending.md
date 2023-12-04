@@ -10,9 +10,9 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: f23408c3-6b37-4047-9cce-0cab97bb6c5c
 exl-id: 9e205912-50a6-414a-b8d4-a0865269d0e0
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '3589'
+source-wordcount: '3499'
 ht-degree: 2%
 
 ---
@@ -119,7 +119,7 @@ ht-degree: 2%
 >
 >* 步骤的“编辑”对话框将标题和描述存储在以下位置：>
 >* `./jcr:title`
->* `./jcr:description` 个位置
+>* `./jcr:description` 位置
 >
 >  当“编辑”对话框使用 `/libs/cq/flow/components/step/step` 组件实现。
 >
@@ -190,9 +190,9 @@ ht-degree: 2%
 
 1. 添加 `String` 属性到 `cq:formParameters` 节点。 组件超类型确定属性的名称：
 
-   * 流程步骤: `PROCESS`
-   * 参与者步骤: `PARTICIPANT`
-   * 动态参与者步骤: `DYNAMIC_PARTICIPANT`
+   * 流程步骤： `PROCESS`
+   * 参与者步骤： `PARTICIPANT`
+   * 动态参与者步骤： `DYNAMIC_PARTICIPANT`
 
 1. 指定属性的值：
 
@@ -242,7 +242,7 @@ ht-degree: 2%
 * 名称：`PROCESS_AUTO_ADVANCE`
 
    * 类型：`Boolean`
-   * 价值:
+   * 值：
 
       * 当设置为 `true` 工作流将运行此步骤并继续 — 这是默认设置，也是推荐的
       * 时间 `false`，工作流将运行并停止；这需要额外的处理，因此 `true` 推荐
@@ -1042,4 +1042,4 @@ private List<String> getPaths(String path, ResourceCollection rcCollection) {
 >* `/libs/wcm/workflow/components/autoassign`
 >* `/libs/cq/projects`
 >
->  您不得修改中的任何内容 `/libs`，只需将它们用作示例。 如果要使用任何现有步骤，请将其复制到 `/apps` 并在那里修改它们。
+>  请勿在中编辑任何内容 `/libs`，只需将它们用作示例。 如果要使用任何现有步骤，请将其复制到 `/apps` 并在那里编辑它们。

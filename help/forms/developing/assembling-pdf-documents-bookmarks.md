@@ -12,9 +12,9 @@ topic-tags: operations
 discoiquuid: 9f4711a8-033c-4051-ab41-65a26838899b
 role: Developer
 exl-id: 2b938410-f51b-420b-b5d4-2ed13ec29c5a
-source-git-commit: 10227bcfcfd5a9b0f126fee74dce6ec7842f5e95
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '2558'
+source-wordcount: '2519'
 ht-degree: 0%
 
 ---
@@ -152,7 +152,7 @@ ht-degree: 0%
 
 **将PDF文档和书签XML文档添加到地图收藏集**
 
-您必须将已添加书签的PDF文档以及书签XML文档都添加到映射集合中。 因此，映射集合对象包含两个元素：PDF文档和书签XML文档。
+将添加书签的PDF文档以及书签XML文档添加到映射集合中。 因此，映射集合对象包含两个元素：PDF文档和书签XML文档。
 
 **设置运行时选项**
 
@@ -164,7 +164,7 @@ ht-degree: 0%
 
 **保存包含书签的PDF文档**
 
-您必须从返回的映射对象中提取结果，并保存相应的PDF文档。 （请参阅中的“提取结果”） [以编程方式组合PDF文档](/help/forms/developing/programmatically-assembling-pdf-documents.md).)
+从返回的映射对象中提取结果并保存相应的PDF文档。 （请参阅中的“提取结果”） [以编程方式组合PDF文档](/help/forms/developing/programmatically-assembling-pdf-documents.md).)
 
 **另请参阅**
 

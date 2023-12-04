@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
 exl-id: f244cfb5-5550-4f20-92f0-bb296e2bf76e
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '5483'
-ht-degree: 1%
+source-wordcount: '5425'
+ht-degree: 0%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 Adobe Dynamic Media Classic是一个托管解决方案，用于管理、增强、发布富媒体资产，并将其交付给Web、移动设备、电子邮件和连接到Internet的显示和打印。
 
-要使用Dynamic Media Classic，您必须配置云配置，以便Dynamic Media Classic和Adobe Experience Manager资源可以相互交互。 本文档介绍如何配置Experience Manager和Dynamic Media Classic。
+要使用Dynamic Media Classic，您必须配置云配置，以便Dynamic Media Classic和Adobe Experience Manager Assets可以相互交互。 本文档介绍如何配置Experience Manager和Dynamic Media Classic。
 
 有关在页面上使用所有Dynamic Media Classic组件以及使用视频的信息，请参阅 [使用Dynamic Media Classic](../assets/scene7.md).
 
@@ -377,17 +377,17 @@ Adobe建议通过让根文件夹仅指向子文件夹，而不是指向整个公
 
 >[!NOTE]
 >
->从Experience Manager Assets自动上传到Dynamic Media Classic的最大文件大小为500 MB。
+从Experience Manager Assets自动上传到Dynamic Media Classic的最大文件大小为500 MB。
 
 **要从Experience Manager Assets自动上传，请执行以下操作：**
 
 1. 选择Experience Manager图标并导航到 **[!UICONTROL 部署]** > **[!UICONTROL Cloud Service]**.
 1. 在Dynamic Media标题下的可用配置下，选择 **[!UICONTROL dms7 (Dynamic Media]**)。
-1. 选择 **[!UICONTROL 高级]** 选项卡，选择 **[!UICONTROL 启用自动上传]** 复选框，然后选择 **[!UICONTROL 确定]**. 您必须配置DAM资源工作流以包括上传到Dynamic Media Classic。
+1. 选择 **[!UICONTROL 高级]** 选项卡，选择 **[!UICONTROL 启用自动上传]** 复选框，然后选择 **[!UICONTROL 确定]**. 配置DAM资源工作流以包括上传至Dynamic Media Classic。
 
    >[!NOTE]
    >
-   >请参阅 [配置推送到Dynamic Media Classic的资源状态（已发布/未发布）](#configuring-the-state-published-unpublished-of-assets-pushed-to-scene) 有关以未发布状态将资产推送到Dynamic Media Classic的信息。
+   请参阅 [配置推送到Dynamic Media Classic的资源状态（已发布/未发布）](#configuring-the-state-published-unpublished-of-assets-pushed-to-scene) 有关以未发布状态将资产推送到Dynamic Media Classic的信息。
 
    ![screen_shot_2018-03-15at52501pm](assets/screen_shot_2018-03-15at52501pm.jpg)
 
@@ -398,8 +398,8 @@ Adobe建议通过让根文件夹仅指向子文件夹，而不是指向整个公
 
    >[!NOTE]
    >
-   >* 在自动化后添加资源时，如果它们未放置在CQ目标文件夹中，则不会上传到Dynamic Media Classic。
-   >* Experience Manager在将所有元数据上传到Dynamic Media Classic之前将其嵌入为XMP，因此元数据节点上的所有属性在Dynamic Media Classic as XMP中均可用。
+   * 在自动化后添加资源时，如果它们未放置在CQ目标文件夹中，则不会上传到Dynamic Media Classic。
+   * Experience Manager在将所有元数据上传到Dynamic Media Classic之前将其嵌入为XMP，因此元数据节点上的所有属性在Dynamic Media Classic as XMP中均可用。
 
 ### 配置推送到Dynamic Media Classic的资源状态（已发布/未发布） {#configuring-the-state-published-unpublished-of-assets-pushed-to-scene}
 
@@ -424,7 +424,7 @@ Dynamic Media Classic资源仍可通过安全预览使用。 仅当在Experience
 
 >[!NOTE]
 >
->如果您的安装环境是UNIX® 64位操作系统，请参见 [https://helpx.adobe.com/experience-manager/kb/enable-xmp-write-back-64-bit-redhat.html](https://helpx.adobe.com/experience-manager/kb/enable-xmp-write-back-64-bit-redhat.html) 关于您必须设置的其他配置选项。
+如果您的安装环境是UNIX® 64位操作系统，请参见 [https://helpx.adobe.com/experience-manager/kb/enable-xmp-write-back-64-bit-redhat.html](https://helpx.adobe.com/experience-manager/kb/enable-xmp-write-back-64-bit-redhat.html) 关于您必须设置的其他配置选项。
 
 #### 推送处于未发布状态的资产的已知限制  {#known-limitations-for-pushing-assets-in-unpublished-state}
 
@@ -435,13 +435,13 @@ Dynamic Media Classic资源仍可通过安全预览使用。 仅当在Experience
 
 >[!NOTE]
 >
->如果您希望立即发布资产，最佳做法是保留 **[!UICONTROL 启用安全预览]** 设置为 **[!UICONTROL 立即]** 并使用 **[!UICONTROL 启用自动上传]** 功能。
+如果您希望立即发布资产，最佳做法是保留 **[!UICONTROL 启用安全预览]** 设置为 **[!UICONTROL 立即]** 并使用 **[!UICONTROL 启用自动上传]** 功能。
 
 ### 将推送到Dynamic Media Classic的资源状态设置为未发布 {#setting-the-state-of-assets-pushed-to-scene-as-unpublished}
 
 >[!NOTE]
 >
->如果用户在Experience Manager中发布资源，则会自动将S7资源触发到生产/实时资源（资源不再处于安全预览/取消发布状态）。
+如果用户在Experience Manager中发布资源，则会自动将S7资源触发到生产/实时资源（资源不再处于安全预览/取消发布状态）。
 
 **要将推送到Dynamic Media Classic的资源状态设置为未发布，请执行以下操作：**
 
@@ -459,7 +459,7 @@ Dynamic Media Classic资源仍可通过安全预览使用。 仅当在Experience
 
 启用安全预览意味着您的资产将推送到未发布的安全预览服务器。
 
-要查看 **[!UICONTROL 安全预览]** 启用，在Experience Manager中导航到页面上的Dynamic Media Classic组件。 选择&#x200B;**[!UICONTROL 编辑]**。资产的URL中列出了安全预览服务器。 在Experience Manager中发布后，文件引用中的服务器域将从预览URL更新为生产URL。
+要查看 **[!UICONTROL 安全预览]** 启用，在Experience Manager中导航到页面上的Dynamic Media Classic组件。 选择 **[!UICONTROL 编辑]**. 资产的URL中列出了安全预览服务器。 在Experience Manager中发布后，文件引用中的服务器域将从预览URL更新为生产URL。
 
 ### 为WCM启用Dynamic Media Classic {#enabling-scene-for-wcm}
 
@@ -513,7 +513,7 @@ Dynamic Media Classic资源仍可通过安全预览使用。 仅当在Experience
 
    >[!NOTE]
    >
-   >如果只有一个配置，请选择 **[!UICONTROL 默认配置]** 复选框不起作用。
+   如果只有一个配置，请选择 **[!UICONTROL 默认配置]** 复选框不起作用。
 
 ### 配置临时文件夹 {#configuring-the-ad-hoc-folder}
 
@@ -564,17 +564,17 @@ Dynamic Media Classic资源仍可通过安全预览使用。 仅当在Experience
 1. 在“CRXDE Lite”页面的右侧，选择 **[!UICONTROL 属性]** 选项卡。
 1. 在中指定Dynamic Media Classic上载作业参数 **[!UICONTROL jobParam]** 值字段。
 
-   例如：`psprocess="rasterize"&psresolution=120`。
+   例如， `psprocess="rasterize"&psresolution=120` .
 
    请参阅 [Adobe Dynamic Media Classic Image Production System API](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/c-overview.html) 有关可以使用的更多上载作业参数。
 
    >[!NOTE]
    >
-   >如果要上传PSD文件，并且希望使用图层提取将它们作为模板处理，请在 **[!UICONTROL jobParam]** 值字段：
+   如果要上传PSD文件，并且希望使用图层提取将它们作为模板处理，请在 **[!UICONTROL jobParam]** 值字段：
    >
-   >`process=MaintainLayers&layerNaming=AppendName&createTemplate=true`
+   `process=MaintainLayers&layerNaming=AppendName&createTemplate=true`
    >
-   >确保PSD文件具有“图层”。 如果它严格是一个图像或带有蒙版的图像，则它作为图像处理，因为没有要处理的图层。
+   确保PSD文件具有“图层”。 如果它严格是一个图像或带有蒙版的图像，则它作为图像处理，因为没有要处理的图层。
 
 1. 在“CRXDE Lite”页面的左上角，选择 **[!UICONTROL 全部保存]**.
 
@@ -616,6 +616,6 @@ Dynamic Media Classic资源仍可通过安全预览使用。 仅当在Experience
 
 >[!CAUTION]
 >
->从现有Dynamic Media Classic公司帐户导入资源可能需要很长时间才能在Experience Manager中显示。 确保在Dynamic Media Classic中指定了没有太多资源的文件夹。 例如，根文件夹通常包含太多资产。
+从现有Dynamic Media Classic公司帐户导入资源可能需要很长时间才能在Experience Manager中显示。 确保在Dynamic Media Classic中指定了没有太多资源的文件夹。 例如，根文件夹通常包含太多资产。
 >
->如果要测试集成，请将根文件夹仅指向子文件夹，而不是整个公司。
+如果要测试集成，请将根文件夹仅指向子文件夹，而不是整个公司。

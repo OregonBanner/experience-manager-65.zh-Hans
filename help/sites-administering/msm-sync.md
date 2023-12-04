@@ -12,10 +12,10 @@ discoiquuid: 6bcf0fcc-481a-4283-b30d-80b517701280
 docset: aem65
 feature: Multi Site Manager
 exl-id: ac24b8b4-b3ed-47fa-9a73-03f0c9e68ac8
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '2694'
-ht-degree: 36%
+source-wordcount: '2672'
+ht-degree: 27%
 
 ---
 
@@ -48,11 +48,11 @@ ht-degree: 36%
 
 >[!NOTE]
 >
->使用修改触发器可能会影响性能。请参阅 [MSM 最佳实践](/help/sites-administering/msm-best-practices.md#onmodify)以了解更多信息。
+>使用“修改”触发器可能会影响性能。 请参阅 [MSM 最佳实践](/help/sites-administering/msm-best-practices.md#onmodify)以了解更多信息。
 
 ### 已安装的转出配置 {#installed-rollout-configurations}
 
-下表列出了随AEM一起安装的转出配置。 该表包含每个转出配置的触发器和同步操作。如果安装的转出配置操作不符合您的要求，您可以 [创建转出配置](#creating-a-rollout-configuration).
+下表列出了随AEM一起安装的转出配置。 该表包含每个转出配置的触发器和同步操作。 如果安装的转出配置操作不符合您的要求，您可以 [创建转出配置](#creating-a-rollout-configuration).
 
 <table>
  <tbody>
@@ -64,7 +64,7 @@ ht-degree: 36%
   </tr>
   <tr>
    <td>标准转出配置</td>
-   <td>标准转出配置，允许在触发转出时启动转出流程，并执行以下操作：创建、更新、删除内容和对子节点进行排序。</td>
+   <td>标准转出配置，允许在触发转出时启动转出流程，并执行以下操作: 创建、更新、删除内容和排序子节点。</td>
    <td>转出</td>
    <td>contentupdate<br /> contentCopy<br /> contentDelete<br /> referencesupdate<br /> 产品更新<br /> orderChildren</td>
   </tr>
@@ -118,7 +118,7 @@ ht-degree: 36%
   </tr>
   <tr>
    <td>旧版(5.6.0)目录转出配置</td>
-   <td>已弃用。请使用 Catalog Generator 代替 MSM 进行目录转出。</td>
+   <td>已弃用。 使用目录生成器而不是MSM进行目录转出。</td>
    <td>转出</td>
    <td>editProperties</td>
   </tr>
@@ -143,7 +143,7 @@ ht-degree: 36%
   </tr>
   <tr>
    <td>contentDelete</td>
-   <td><p>删除源上不存在的Live Copy节点。 <a href="#excluding-properties-and-node-types-from-synchronization">配置 CQ MSM 内容删除操作服务</a>，以指定要排除的节点类型、段落项和页面属性。 </p> </td>
+   <td><p>删除源上不存在的Live Copy节点。 <a href="#excluding-properties-and-node-types-from-synchronization">配置CQ MSM内容删除操作服务</a> 指定要排除的节点类型、段落项和页面属性。 </p> </td>
    <td> </td>
   </tr>
   <tr>
@@ -172,7 +172,7 @@ ht-degree: 36%
   </tr>
   <tr>
    <td>referencesupdate</td>
-   <td><p>在Live Copy上，此同步操作会更新引用，例如链接。<br /> 它会搜索Live Copy页面中指向Blueprint内资源的路径。 找到后，它会更新路径以指向Live Copy中的相关资源（而不是Blueprint）。 具有 Blueprint 外部目标的引用不会发生更改。</p> <p><a href="#excluding-properties-and-node-types-from-synchronization">配置 CQ MSM 引用更新操作服务</a>，以指定要排除的节点类型、段落项和页面属性。 </p> </td>
+   <td><p>在Live Copy上，此同步操作会更新引用，例如链接。<br /> 它会搜索Live Copy页面中指向Blueprint内资源的路径。 找到后，它会更新路径以指向Live Copy中的相关资源（而不是Blueprint）。 具有Blueprint外部目标的引用不会发生更改。</p> <p><a href="#excluding-properties-and-node-types-from-synchronization">配置CQ MSM引用更新操作服务</a> 指定要排除的节点类型、段落项和页面属性。 </p> </td>
    <td> </td>
   </tr>
   <tr>
@@ -226,7 +226,7 @@ ht-degree: 36%
   </tr>
   <tr>
    <td>PageMoveAction</td>
-   <td><p>当页面在Blueprint中移动时将应用PageMoveAction。</p> <p>该操作会将（相关的）LiveCopy页面从移动前的位置复制到移动后的位置，而不是移动页面。</p> <p>PageMoveAction不会更改位于移动前位置的LiveCopy页面。 因此，对于连续RolloutConfigurations，它具有不带Blueprint的LiveRelationship状态。</p> <p><a href="#excluding-properties-and-node-types-from-synchronization">配置 CQ MSM 页面移动操作服务</a>，以指定要排除的节点类型、段落项和页面属性。 </p> <p>此操作必须是转出配置中包含的唯一同步操作。</p> </td>
+   <td><p>当页面在Blueprint中移动时将应用PageMoveAction。</p> <p>该操作会将（相关的）LiveCopy页面从移动前的位置复制到移动后的位置，而不是移动页面。</p> <p>PageMoveAction不会更改位于移动前位置的LiveCopy页面。 因此，对于连续RolloutConfigurations，它具有不带Blueprint的LiveRelationship状态。</p> <p><a href="#excluding-properties-and-node-types-from-synchronization">配置CQ MSM页面移动操作服务</a> 指定要排除的节点类型、段落项和页面属性。 </p> <p>此操作必须是转出配置中包含的唯一同步操作。</p> </td>
    <td><p>prop_referenceUpdate： （布尔值）设置为true可更新引用。 默认值为true。</p> <p> </p> </td>
   </tr>
   <tr>
@@ -261,7 +261,7 @@ ht-degree: 36%
 您可以 [创建转出配置](/help/sites-developing/extending-msm.md#creating-a-new-rollout-configuration) 当安装的转出配置不符合您的应用程序要求时：
 
 * [创建转出配置](/help/sites-developing/extending-msm.md#create-the-rollout-configuration)
-* [将同步操作添加到转出配置中](/help/sites-developing/extending-msm.md#add-synchronization-actions-to-the-rollout-configuration).
+* [将同步操作添加到转出配置](/help/sites-developing/extending-msm.md#add-synchronization-actions-to-the-rollout-configuration).
 
 然后，在 Blueprint 或 Live Copy 页面上设置转出配置时，您就可以使用新的转出配置。
 
@@ -291,15 +291,15 @@ ht-degree: 36%
   </tr>
   <tr>
    <td><p>排除的节点类型</p> <p>cq.wcm.msm.action.excludednodetypes</p> </td>
-   <td>匹配要从同步操作中排除的节点类型的正则表达式.</td>
+   <td>匹配要从同步操作中排除的节点类型的正则表达式。</td>
   </tr>
   <tr>
    <td><p>排除的段落项</p> <p>cq.wcm.msm.action.excludedparagraphitems</p> </td>
-   <td>匹配要从同步操作中排除的段落项的正则表达式.</td>
+   <td>匹配要从同步操作中排除的段落项的正则表达式。</td>
   </tr>
   <tr>
    <td><p>排除的页面属性</p> <p>cq.wcm.msm.action.excludedprops</p> </td>
-   <td>匹配要从同步操作中排除的页面属性的正则表达式.</td>
+   <td>匹配要从同步操作中排除的页面属性的正则表达式。</td>
   </tr>
   <tr>
    <td><p>忽略的 Mixin 节点类型</p> <p>cq.wcm.msm.action.ignoredMixin</p> </td>
@@ -322,7 +322,7 @@ ht-degree: 36%
 
 默认情况下，在转出时排除（即不更新）与以下正则表达式匹配的属性：
 
-![CQ MSM 内容更新操作](assets/chlimage_1.png)
+![CQ MSM内容更新操作](assets/chlimage_1.png)
 
 您可以根据需要更改定义排除列表的表达式。
 
@@ -394,7 +394,7 @@ MSM允许您指定通常使用的转出配置集，并且在需要时，您可�
 
    ![选定的转出配置](assets/chlimage_1-2.png)
 
-1. 单击或点按&#x200B;**保存**。
+1. 单击&#x200B;**保存**。
 
 ### 为 Blueprint 页面设置转出配置 {#setting-the-rollout-configuration-for-a-blueprint-page}
 
@@ -417,7 +417,7 @@ Blueprint页面的子页面继承配置。 在配置要使用的转出配置时�
 
 使用任一选项配置服务 [Web控制台](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) 或 [存储库节点](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository).
 
-* 在 Web 控制台中，要配置的属性名称是默认转出配置。
+* 在Web控制台中，要配置的属性名称是默认转出配置。
 * 使用存储库节点，要配置的属性的名称是 `liverelationshipmgr.relationsconfig.default`。
 
 将此属性值设置为要用作系统默认值的转出配置的路径。默认值为 `/libs/msm/wcm/rolloutconfigs/default`，这是&#x200B;**标准转出配置**。

@@ -6,10 +6,10 @@ feature: Search, Adobe Stock
 role: User, Admin
 exl-id: 8ec597df-bb64-4768-bf9c-e8cca4fea25b
 hide: true
-source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '2483'
-ht-degree: 7%
+source-wordcount: '2446'
+ht-degree: 3%
 
 ---
 
@@ -243,8 +243,8 @@ IMS 配置包括两个步骤：
 以下是用户搜索和许可Adobe Stock资源所需的权限：
 
 * 配置路径： `/conf/global/settings/stock`
-* 特权: `jcr:read`
-* 权限类型: `Allow`
+* 权限： `jcr:read`
+* 权限类型： `Allow`
 
 您可以创建用户组或向现有用户组分配权限。 可以从以下位置分配权限 [!DNL Experience Manager Assets] 界面或从 [!DNL User Admin] 控制台。
 
@@ -257,10 +257,10 @@ IMS 配置包括两个步骤：
 1. 在左侧面板中搜索用户组并新增 **[!UICONTROL 访问控制条目(ACE)]** 用于Adobe Stock。
 
    * 配置路径： `/conf/global/settings/stock`
-   * 特权: `jcr:read`
-   * 权限类型: `Allow`
+   * 权限： `jcr:read`
+   * 权限类型： `Allow`
 
-   单击&#x200B;**[!UICONTROL 添加]**。
+   单击 **[!UICONTROL 添加]**.
 
    ![user-permissions](assets/aem-stock-user-permissions.png)
 
@@ -327,7 +327,7 @@ IMS 配置包括两个步骤：
 
 ![搜索 [!DNL Adobe Stock] 资源并从筛选结果 [!DNL Adobe Experience Manager] 工作区](assets/adobe-stock-search-results-workspace.png)
 
-**A.**[!DNL Adobe Stock] 搜索与提供 ID 的资产类似的资产。**B.** 搜索与您选择的形状或方向匹配的资产。**C.** 搜索一种或多种受支持的资产类型 **D.** 打开或折叠过滤器窗格 **E.** 在 中授权并保存选定的资产 [!DNL Experience Manager]**F.**[!DNL Experience Manager] 在 中保存带水印的资产 **G.**[!DNL Adobe Stock] 在 网站上浏览与选定资产类似的资产 **H.**[!DNL Adobe Stock] 在 网站上查看选定资产 **I.** 搜索结果中的选定资产数 **J.** 在卡片视图和列表视图之间切换
+**答：** 搜索与以下资产类似的资产 [!DNL Adobe Stock] 提供了ID。 **B.** 搜索与您选择的形状或方向匹配的资产。**C.** 搜索一种或多种支持的资源类型 **D.** 打开或折叠筛选器窗格 **E.** 许可并保存所选资产于 [!DNL Experience Manager] **F.** 将资源保存在 [!DNL Experience Manager] 带水印 **G.** 浏览资源 [!DNL Adobe Stock] 与所选资产类似的网站 **H.** 查看选定的资源于 [!DNL Adobe Stock] 网站 **I.** 从搜索结果中选择的资源数 **J.** 在卡片视图和列表视图之间切换
 
 ### 查找资源 {#find-assets}
 
@@ -389,7 +389,7 @@ IMS 配置包括两个步骤：
 >
 >* [有关使用的视频教程 [!DNL Adobe Stock] 具有的资产 [!DNL Experience Manager Assets]](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/creative-workflows/adobe-stock.html)
 >* [[!DNL Adobe Stock] 企业计划帮助](https://helpx.adobe.com/enterprise/using/adobe-stock-enterprise.html)
->* [[!DNL Adobe Stock] 常见问题](https://helpx.adobe.com/stock/faq.html)
+>* [[!DNL Adobe Stock] 常见问题解答](https://helpx.adobe.com/stock/faq.html)
 
 
 <!--old content

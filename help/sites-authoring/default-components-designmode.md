@@ -2,10 +2,10 @@
 title: 在设计模式下配置默认组件
 description: 在设计模式下配置Adobe Experience Manager组件。
 exl-id: 5e232886-75c1-4f0f-b359-4739ae035fd3
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '914'
-ht-degree: 12%
+source-wordcount: '905'
+ht-degree: 10%
 
 ---
 
@@ -56,11 +56,11 @@ ht-degree: 12%
 
    ![screen_shot_2018-03-22at103113](assets/screen_shot_2018-03-22at103113.png)
 
-1. 点按或单击组件。 选中后，该组件将具有蓝色边框。
+1. 单击组件。 选中后，组件具有蓝色边框。
 
    ![screen_shot_2018-03-22at103204](assets/screen_shot_2018-03-22at103204.png)
 
-1. 单击或点按 **父级** 图标。
+1. 单击 **父级** 图标。
 
    ![父项](do-not-localize/screen_shot_2018-03-22at103204.png)
 
@@ -109,7 +109,7 @@ ht-degree: 12%
 
    ![screen_shot_2018-03-22at103113-1](assets/screen_shot_2018-03-22at103113-1.png)
 
-1. 点按或单击具有蓝色边框的组件。 在此示例中，选择了主页图像组件。
+1. 单击带有蓝色边框的组件。 在此示例中，选择了主页图像组件。
 
    ![screen_shot_2018-03-22at103434](assets/screen_shot_2018-03-22at103434.png)
 
@@ -133,7 +133,7 @@ ht-degree: 12%
 
    **功能**
 
-   **功能**&#x200B;选项卡让您启用或禁用组件的其他功能。例如，对于图像组件，您可以定义图像的方向、可用的裁切选项以及是否可以上传图像。
+   此 **功能** 选项卡可让您启用或禁用组件的其他功能。 例如，对于图像组件，您可以定义图像的方向、可用的裁切选项以及是否可以上传图像。
 
    **样式**
 
@@ -153,4 +153,4 @@ ht-degree: 12%
 
    ![移动](do-not-localize/screen_shot_2018-03-22at103816.png)
 
-1. 单击或点按 **完成** 图标以保存并关闭对话框。
+1. 单击 **完成** 图标以保存并关闭对话框。

@@ -5,10 +5,10 @@ topic-tags: site-features
 content-type: reference
 feature: Language Copy
 exl-id: 2011a976-d506-4c0b-9980-b8837bdcf5ad
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '686'
-ht-degree: 27%
+source-wordcount: '669'
+ht-degree: 26%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 27%
 
 添加了用于提高处理翻译项目的工作效率的选项，如自动提升和删除翻译启动项，以及计划翻译项目的定期执行。
 
-1. 在您的翻译项目中，单击或点按底部的省略号 **翻译摘要** 磁贴。
+1. 在您的翻译项目中，单击底部的省略号 **翻译摘要** 磁贴。
 
    ![screen_shot_2018-04-19at222622](assets/screen_shot_2018-04-19at222622.jpg)
 
@@ -40,7 +40,7 @@ ht-degree: 27%
 
 可以在翻译项目中配置多个目标语言，以减少创建的翻译项目总数。
 
-1. 在您的翻译项目中，单击或点按 **翻译摘要** 磁贴。
+1. 在您的翻译项目中，单击 **翻译摘要** 磁贴。
 
    ![screen_shot_2018-04-19at222622](assets/screen_shot_2018-04-19at222622.jpg)
 
@@ -110,11 +110,11 @@ AEM 会更新已配置的 TMS 的翻译记忆中现有字符串的翻译。
 
    ![screen_shot_2018-04-23at130646](assets/screen_shot_2018-04-23at130646.jpg)
 
-1. 单击或点按 **查看设置**.
+1. 单击 **查看设置**.
 
    ![screen_shot_2018-04-23at130844](assets/screen_shot_2018-04-23at130844.jpg)
 
-1. Check **已翻译** 下的复选框 **翻译** 然后点按/单击 **更新**.
+1. Check **已翻译** 下的复选框 **翻译** 并单击 **更新**.
 
    ![screen_shot_2018-04-23at130955](assets/screen_shot_2018-04-23at130955.jpg)
 

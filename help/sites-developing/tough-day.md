@@ -4,10 +4,10 @@ description: Tough Day测试模拟了在所有操作同时进行的最坏情况�
 topic-tags: testing
 content-type: reference
 exl-id: ceb9671c-57f9-4d81-94c0-0dbccd4d90a2
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1822'
-ht-degree: 2%
+source-wordcount: '1824'
+ht-degree: 1%
 
 ---
 
@@ -70,7 +70,7 @@ java -jar toughday2.jar --help_full
    <td><strong>示例</strong></td>
   </tr>
   <tr>
-   <td>--帮助</td>
+   <td> — 帮助</td>
    <td>打印全局信息，例如：可用的操作、预定义的套件、运行模式和全局参数。</td>
    <td> </td>
   </tr>
@@ -238,7 +238,7 @@ tests:
   - add : CreatePageTreeTest
 ```
 
-还可以使用重新配置给定套件中的现有测试。 `config`* *参数。 您还必须指定套件名称和测试的实际名称（而不是测试类名称）。 您可以在以下位置找到测试名称 `name` Test类的属性。 有关如何查找测试属性的详细信息，请参阅 [更改测试属性](/help/sites-developing/tough-day.md#changing-the-test-properties) 部分。
+还可以使用重新配置给定套件中的现有测试。 `config`* *参数。 还应指定测试套件名称和实际名称（而不是测试类名称）。 您可以在以下位置找到测试名称 `name` Test类的属性。 有关如何查找测试属性的详细信息，请参阅 [更改测试属性](/help/sites-developing/tough-day.md#changing-the-test-properties) 部分。
 
 在以下示例中，的默认资产标题 `CreatePageTreeTest` (已命名 `UploadAsset`)被更改为“NewAsset”。
 
@@ -260,7 +260,7 @@ tests:
       title : NewAsset
 ```
 
-此外，您还可以通过使用，将测试从默认配置中删除预定义套件或发布者的测试 `exclude` 参数。 您还必须指定套件名称和测试的实际名称（而不是测试C） `lass` 名称)。 您可以在以下位置找到测试名称 `name` 测试类的属性。 在以下示例中， `CreatePageTreeTest` (已命名 `UploadAsset`)从toughday套件中删除测试。
+此外，您还可以通过使用，将测试从默认配置中删除预定义套件或发布者的测试 `exclude` 参数。 还应指定测试套件名称和实际名称（不是测试C） `lass` 名称)。 您可以在以下位置找到测试名称 `name` 测试类的属性。 在以下示例中， `CreatePageTreeTest` (已命名 `UploadAsset`)从toughday套件中删除测试。
 
 通过使用命令行参数：
 
@@ -353,14 +353,14 @@ java -jar toughday2.jar --host=localhost --suite=toughday --add CreatePageTreeTe
 | 时间戳 | 上次完成的测试运行的时间戳。 |
 | 已通过 | 成功运行的次数。 |
 | 失败 | 失败的运行数。 |
-| 最小&#42; | 测试执行的最短持续时间。 |
+| 最小值&#42; | 测试执行的最短持续时间。 |
 | Max&#42; | 测试执行的最长持续时间。 |
-| 中等&#42; | 计算的所有测试执行的中位持续时间。 |
-| 平均&#42; | 计算的所有测试执行的平均持续时间。 |
+| 中间值&#42; | 计算的所有测试执行的中位持续时间。 |
+| Average&#42; | 计算的所有测试执行的平均持续时间。 |
 | 标准开发&#42; | 标准偏差。 |
 | 90p&#42; | 百分之90。 |
 | 99p&#42; | 99%。 |
-| 99.9p&#42; | 99.9%。 |
+| 99.9便士&#42; | 99.9%。 |
 | 实际吞吐量&#42; | 运行次数除以经过的执行时间。 |
 
 这些量度是在发布者的帮助下编写的，发布者可以使用 `add` 参数（与添加测试类似）。 目前，有两个选项：

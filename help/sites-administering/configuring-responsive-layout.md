@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 10940000-808a-48ae-8e46-61eccef71eab
 legacypath: /content/docs/en/aem/6-2/administer/operations/page-authoring/configuring-responsive-layouting
 exl-id: 61152b2d-4c0b-4cfd-9669-cf03d32cb7c7
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1283'
-ht-degree: 5%
+source-wordcount: '1275'
+ht-degree: 4%
 
 ---
 
@@ -63,7 +63,7 @@ AEM 使用一组机制为页面实现响应式布局：
 
 >[!NOTE]
 >
->在开箱即用的安装中，已为以下对象配置了响应式布局 [We.Retail引用站点](/help/sites-developing/we-retail.md). 你还是必须的 [激活布局容器组件](#enable-the-layout-container-component-for-page) 用于其他页面。
+>在开箱即用的安装中，已为以下对象配置了响应式布局 [We.Retail引用站点](/help/sites-developing/we-retail.md). [激活布局容器组件](#enable-the-layout-container-component-for-page) 用于其他页面。
 
 ## 配置响应式模拟器 {#configuring-the-responsive-emulator}
 
@@ -87,7 +87,7 @@ AEM 使用一组机制为页面实现响应式布局：
 
 ### 配置断点 {#configure-the-breakpoints}
 
-[断点](/help/sites-authoring/responsive-layout.md#selecting-a-device-to-emulate):
+[断点](/help/sites-authoring/responsive-layout.md#selecting-a-device-to-emulate)：
 
 * 在响应式设计中使用。
 * 可以定义：
@@ -140,8 +140,8 @@ AEM 使用一组机制为页面实现响应式布局：
 
    * 名称：`<descriptive name>`
    * 类型：`nt:unstructured`
-   * 标题: `String` * `<descriptive title seen in Emulator>`*
-   * 宽度: `Decimal` * `<value of breakpoint>`*
+   * 标题： `String` * `<descriptive title seen in Emulator>`*
+   * 宽度： `Decimal` * `<value of breakpoint>`*
 
 #### 使用XML配置断点 {#configuring-breakpoints-using-xml}
 
@@ -185,7 +185,7 @@ AEM 使用一组机制为页面实现响应式布局：
 
 以下两个示例说明了定义：
 
-* **HTL:**
+* **HTL：**
 
   ```xml
   <sly data-sly-resource="${'par' @ resourceType='wcm/foundation/components/responsivegrid'}/>
@@ -241,11 +241,11 @@ AEM使用LESS来生成必要的CSS部分，这些项目需要包含在您的项�
 
 例如：
 
-* 之前:
+* 之前：
 
    * `width=100px`
 
-* 之后:
+* 之后：
 
    * `max-width=100px`
 

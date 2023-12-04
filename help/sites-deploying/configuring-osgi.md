@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: d701e4ba-417f-4b57-b103-27fd25290736
 feature: Configuring
 exl-id: 5ecd09a3-c4be-4361-9816-03106435346f
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1971'
+source-wordcount: '1954'
 ht-degree: 0%
 
 ---
@@ -84,7 +84,7 @@ OSGi ”*提供标准化的基元，允许使用小型、可重用和协作组�
 
 1. 访问 **配置** Web控制台的选项卡，方法是：
 
-   * 通过上的链接打开Web控制台 **工具 — >操作** 菜单。 登录到控制台后，您可以使用以下下拉菜单：
+   * 通过上的链接打开Web控制台 **“工具”>“操作”** 菜单。 登录到控制台后，您可以使用以下下拉菜单：
 
      **OSGi >**
 
@@ -176,7 +176,7 @@ Web控制台不显示存储库中已保存更改的位置，但可以轻松地�
 
 >[!NOTE]
 >
->另请阅读 [如何仅为特定实例定义基于存储库的配置](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17500.html?lang=zh-Hans).
+>另请阅读 [如何仅为特定实例定义基于存储库的配置](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17500.html?lang=en).
 
 ### 向存储库添加新配置 {#adding-a-new-configuration-to-the-repository}
 
@@ -197,7 +197,7 @@ Web控制台不显示存储库中已保存更改的位置，但可以轻松地�
    * `config`  — 适用于所有运行模式
    * `config.author`  — 对于创作环境
    * `config.publish`  — 对于发布环境
-   * `config.<run-mode>` - 酌情
+   * `config.<run-mode>`  — 视情况而定
 
 1. 是 **配置** 或 **工厂配置** 是否必需？
 1. 要配置的单个参数，包括必须重新创建的任何现有参数定义。

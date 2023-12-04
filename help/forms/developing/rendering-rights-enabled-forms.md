@@ -12,9 +12,9 @@ topic-tags: operations
 discoiquuid: d4c2b2f0-613a-409d-b39b-8e37fdb96eea
 role: Developer
 exl-id: 012a3a9f-542c-4ed1-a092-572bfccbdf21
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1455'
+source-wordcount: '1447'
 ht-degree: 0%
 
 ---
@@ -57,7 +57,7 @@ Forms服务可以呈现已应用了使用权限的表单。 使用权限与Acrob
 
 **设置使用权限运行时选项**
 
-设置使用权限运行时选项以呈现启用权限的表单。 您还必须指定用于向表单应用使用权限的凭据的别名。 指定别名值后，指定应用于表单的每个使用权限。
+设置使用权限运行时选项以呈现启用权限的表单。 指定用于向表单应用使用权限的凭据的别名。 指定别名值后，指定应用于表单的每个使用权限。
 
 **呈现启用权限的表单**
 

@@ -7,10 +7,10 @@ content-type: reference
 topic-tags: spa
 docset: aem65
 exl-id: ca4c3161-90a8-4c02-8554-125eac62dff7
-source-git-commit: 2810e34f642f4643fa4dc24b31a57a68e9194e39
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '190'
-ht-degree: 4%
+source-wordcount: '183'
+ht-degree: 1%
 
 ---
 
@@ -20,7 +20,7 @@ Adobe Experience Platform Launch是在单页应用程序(SPA)中实施Analytics�
 
 >[!NOTE]
 >
->对于需要基于SPA框架的客户端渲染(例如React或Angular)的项目，建议使用SPA编辑器。
+>SPA编辑器是推荐的解决方案，适用于需要基于SPA框架的客户端渲染(例如React或Angular)的项目。
 
 ## 教程 {#tutorial}
 
@@ -28,6 +28,6 @@ Adobe Experience Platform Launch是在单页应用程序(SPA)中实施Analytics�
 
 >[!NOTE]
 >
->创建引用的知识库是为了启用Adobe Experience Platform Launch与不使用Adobe Experience Manager SPA编辑器的SPA的集成。 这些方法还应该允许Adobe Experience Platform Launch集成与为使用SPA编辑器构建的SPA共存。
+>创建引用的知识库是为了启用将Adobe Experience Platform Launch与不使用Adobe Experience Manager SPA编辑器的SPA集成。 这些方法还应该允许Adobe Experience Platform Launch集成与为使用SPA编辑器而构建的SPA共存。
 >
->Redux与JavaScript SPA库结合使用的问题尚未得到充分探讨。 SPA Editor的未来版本计划支持Redux。
+>Redux与JavaScript SPA库一起使用的功能尚未得到充分探讨。 SPA编辑器的未来版本中计划支持Redux。

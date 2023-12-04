@@ -3,10 +3,10 @@ title: 配置富文本编辑器插件
 description: 了解如何配置Adobe Experience Manager富文本编辑器插件以启用各个功能。
 contentOwner: AG
 exl-id: 6bfd6caa-a68a-40ba-9826-4ba02cd1dbfb
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '4395'
-ht-degree: 4%
+source-wordcount: '4391'
+ht-degree: 2%
 
 ---
 
@@ -302,7 +302,7 @@ pass-as-Microsoft-Word (`paste-wordhtml`)模式可进行进一步配置，以便
 1. 将属性文本添加到同一节点。 值是作者在选择样式时看到的样式名称。
    * 名称： `text`
 *类型： `String`
-   * 价值: `Japanese word-wrap`
+   * 值： `Japanese word-wrap`
 
 1. 创建样式表并指定其路径。 请参阅 [指定样式表的位置](#locationofstylesheet). 将以下内容添加到样式表中。 根据需要更改背景颜色。
 
@@ -351,10 +351,10 @@ pass-as-Microsoft-Word (`paste-wordhtml`)模式可进行进一步配置，以便
 >
 如果未进一步配置此插件，则会启用以下默认格式：
 >
-* 段落 ( `<p>`)
-* 标题 1 ( `<h1>`)
-* 标题 2 ( `<h2>`)
-* 标题 3 ( `<h3>`)
+* 段落( `<p>`)
+* 标题1 ( `<h1>`)
+* 标题2 ( `<h2>`)
+* 标题3 ( `<h3>`)
 >
 
 >[!CAUTION]
@@ -587,7 +587,7 @@ pass-as-Microsoft-Word (`paste-wordhtml`)模式可进行进一步配置，以便
 >
 RTE拼写检查器可按需使用。 当您开始键入文本时，它不会自动运行。 要运行拼写检查器，请单击 [!UICONTROL 拼写检查程序] 工具栏中。 RTE检查单词的拼写并突出显示拼写错误的单词。
 >
-如果合并拼写检查器建议的任何更改，则文本的状态将发生更改并且拼写错误的单词不再突出显示。 要运行拼写检查器，请再次点按/单击拼写检查器按钮。
+如果合并拼写检查器建议的任何更改，则文本的状态将发生更改并且拼写错误的单词不再突出显示。 要运行拼写检查器，请再次单击“拼写检查器”按钮。
 
 ## 配置撤消和重做操作的历史记录大小 {#undohistory}
 

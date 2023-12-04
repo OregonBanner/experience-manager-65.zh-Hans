@@ -1,17 +1,13 @@
 ---
 title: 空间和实体
-seo-title: Developing AEM Mobile Content Services
 description: 此页用作开发AEM Mobile Content Services的登陆页。
-seo-description: This page serves a landing page for developing AEM Mobile Content Services.
-uuid: eab5a61b-a9e8-4863-90a3-df1f18510cd8
 contentOwner: Jyotika Syal
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
-discoiquuid: ef568577-c74e-4fc2-b66e-eedac2948310
 exl-id: 44591900-b01b-4a33-9910-839564477e7d
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1191'
+source-wordcount: '1206'
 ht-degree: 1%
 
 ---
@@ -56,7 +52,7 @@ ht-degree: 1%
 
 ## 管理空间 {#managing-a-space}
 
-创建空间后，单击左侧的以管理列表中的空间。
+创建空间后，单击左侧以管理列表中的空间。
 
 您可以查看空间的属性，删除空间，或将空间及其内容发布到AEM发布实例。
 
@@ -158,13 +154,13 @@ ht-degree: 1%
 
 ### 创建实体 {#creating-an-entity}
 
-1. 打开共享空间控制台，然后单击共享空间的标题。
+1. 打开空间控制台，然后单击空间的标题。
 
    （可选）您可以通过单击列表中的文件夹标题来导航到该文件夹。
 
    ![chlimage_1-92](assets/chlimage_1-92.png)
 
-1. 选择图元的模型。 这是要创建的实体类型。 单击“下一个”。
+1. 选择图元的模型。 这是要创建的实体类型。 单击“下一步”。
 
    ![chlimage_1-93](assets/chlimage_1-93.png)
 
@@ -244,6 +240,6 @@ ht-degree: 1%
 
    ![chlimage_1-105](assets/chlimage_1-105.png)
 
-   **或者**,
+   **或**，
 
    单击 **快速发布** 以发布该特定实体。

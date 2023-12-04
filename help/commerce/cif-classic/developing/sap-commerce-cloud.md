@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: platform
 exl-id: b3de1a4a-f334-44bd-addc-463433204c99
-source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '2288'
+source-wordcount: '2303'
 ht-degree: 0%
 
 ---
@@ -495,7 +495,7 @@ public class AxisFilter implements VariantFilter {
 >
 >您可以实施送货选择器；例如：
 >
->`yourProject/commerce/components/shippingpicker`:
+>`yourProject/commerce/components/shippingpicker`：
 >
 >* 本质上，这可以是 `foundation/components/form/radio`，但回调到 `CommerceSession` 对于：
 >
@@ -562,16 +562,16 @@ public class AxisFilter implements VariantFilter {
 
 AEM前端可以位于现有hybris实施的前面。 此外，还可以在现有AEM安装中添加一个hybris引擎。 要实现此目的，系统必须能够正常处理任一系统中的现有用户：
 
-* AEM -> hybris
+* AEM >hybris
 
    * 登录到hybris时，如果AEM用户不存在：
 
       * 使用加密随机密码创建hybris用户
       * 将hybris用户名存储在AEM用户的用户目录中
 
-   * 请参阅: `com.adobe.cq.commerce.hybris.impl.HybrisSessionImpl#login()`
+   * 请参阅： `com.adobe.cq.commerce.hybris.impl.HybrisSessionImpl#login()`
 
-* hybris -> AEM
+* hybris > AEM
 
    * 在登录到AEM时，如果系统可以识别用户：
 
@@ -580,7 +580,7 @@ AEM前端可以位于现有hybris实施的前面。 此外，还可以在现有A
 
    * 上述算法在Sling中实现 `AuthenticationInfoPostProcessor`
 
-      * 请参阅: `com.adobe.cq.commerce.hybris.impl.user.LazyUserImporter.java`
+      * 请参阅： `com.adobe.cq.commerce.hybris.impl.user.LazyUserImporter.java`
 
 ### 自定义导入流程 {#customizing-the-import-process}
 

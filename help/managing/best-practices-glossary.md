@@ -7,9 +7,9 @@ topic-tags: managing-checklist
 content-type: reference
 docset: aem65
 exl-id: 9672f7a4-82b7-4175-874d-181846115442
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '6945'
+source-wordcount: '6922'
 ht-degree: 0%
 
 ---
@@ -553,7 +553,7 @@ Adobe支持门户使实施合作伙伴和客户能够在支持门户中将AEM实
 
 ### 历史绩效和历史绩效KPI {#historical-performance-and-historical-performance-kpis}
 
-您必须从旧版系统中收集并记录性能统计信息和性能KPI。 然后，可将这些指标用作参考点并用于基准测试新解决方案。
+从旧系统收集并记录性能统计信息和性能KPI。 然后，可将这些指标用作参考点并用于基准测试新解决方案。
 
 ### 确定关键解决方案/功能 {#identify-critical-key-solutions-functionalities}
 
@@ -1060,7 +1060,7 @@ Recommendations与软件和硬件架构的安全性相关。
 概要介绍以下项目的安全设置：
 
 * 应用程序
-* 架构
+* 体系结构
 * 基础结构
 
 ### 列出和评估的安全问题 {#security-issues-listed-and-assessed}

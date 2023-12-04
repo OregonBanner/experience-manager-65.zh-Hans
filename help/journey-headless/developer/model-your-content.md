@@ -2,10 +2,10 @@
 title: 如何为您的内容建模
 description: 在 AEM Headless 开发人员历程的这一部分中，了解如何使用内容建模与内容片段模型和内容片段对 AEM Headless 交付进行内容建模。
 exl-id: f75b433f-5a81-4259-a9f5-b58954b87970
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1810'
-ht-degree: 80%
+source-wordcount: '1795'
+ht-degree: 78%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 80%
 
 ## 迄今为止的故事 {#story-so-far}
 
-一开始， [了解CMS Headless开发](learn-about.md) 涵盖了Headless内容投放以及应当使用它的原因。 之后，[AEM Headless 快速入门](getting-started.md)描述了您自己的项目上下文中的 AEM Headless。
+一开始， [了解CMS Headless开发](learn-about.md) 涵盖了Headless内容投放以及应当使用它的原因。 则 [AEM Headless快速入门](getting-started.md) 在您自己的项目上下文中描述了AEM Headless。
 
 在 AEM Headless 历程的上一个文档[首次 AEM Headless 使用体验的路径](path-to-first-experience.md)中，您已了解实施第一个项目所需的步骤。阅读本文档后，您应：
 
@@ -158,7 +158,7 @@ AEM 使用内容片段提供以 Headless 方式将内容交付到应用程序所
 内容片段模型描述了一个实体。
 
 >[!NOTE]
->您必须在配置浏览器中启用内容片段功能，才能创建模型。
+>在配置浏览器中启用内容片段功能，以便您可以创建模型。
 
 >[!TIP]
 >
@@ -202,7 +202,7 @@ AEM 提供了以下数据类型以供您用来进行内容建模：
 这种类型的引用用于创建嵌套内容，引入对内容进行建模所需的关系。
 数据类型可配置为允许片段作者执行以下操作：
    * 直接编辑引用的片段。
-   * 根据相应的模型创建内容片段.
+   * 根据相应的模型创建内容片段。
 
 ### 创建内容片段模型 {#creating-content-fragment-models}
 
@@ -276,5 +276,5 @@ tbc...
    * [管理内容片段](/help/assets/content-fragments/content-fragments-managing.md)  — 创建和创作内容片段；此页将引导您进入其他详细部分。
 * [AEM GraphQL架构](access-your-content.md) - GraphQL如何实现模型。
 * [示例内容片段结构](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#content-fragment-structure-graphql)
-* [AEM Headless 快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html) – 一个简短的视频教程系列，概述了如何使用 AEM 的 Headless 功能，包括内容建模和 GraphQL。
+* [AEM Headless 快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html) - 一个简短的视频教程系列，概述了如何使用 AEM 的 Headless 功能，包括内容建模和 GraphQL。
    * [GraphQL 建模基础知识](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/video-series/modeling-basics.html?lang=zh-Hans) – 了解如何在 Adobe Experience Manager (AEM) 中定义和使用内容片段，以便与 GraphQL 一起使用。

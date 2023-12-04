@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: development-tools
 content-type: reference
 exl-id: efbba312-9fc8-4670-b8f1-d2a86162d075
-source-git-commit: 69a249e63e2e6b96ba08f9846baa3e91d42b865f
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '2709'
+source-wordcount: '2687'
 ht-degree: 1%
 
 ---
@@ -313,7 +313,7 @@ vlt [options] <command> [arg1 [arg2 [arg3] ..]]
 | 命令 | 缩写命令 | 描述 |
 | `export` |  | 从JCR存储库（电子仓库文件系统）导出到本地文件系统，而不使用控制文件。 |
 | `import` |  | 将本地文件系统导入到JCR存储库（保险库文件系统）。 |
-| `checkout` | `co` | 签出Vault文件系统。 将此用于本地文件系统的初始JCR存储库。 （注意：您必须首先在subversion中签出存储库。） |
+| `checkout` | `co` | 签出Vault文件系统。 将此用于本地文件系统的初始JCR存储库。 （注意：请先在subversion中签出存储库。） |
 | `analyze` |  | 分析包。 |
 | `status` | `st` | 打印工作副本文件和目录的状态。 |
 | `update` | `up` | 将更改从存储库导入工作副本。 |
@@ -772,7 +772,7 @@ VLT使用的状态代码包括：
 * 已修改“M”
 * 已替换“R”
 * &#39;？&#39; 项目不受版本控制
-* &#39;!&#39; 缺少项目（由非svn命令删除）或不完整
+* &#39;！&#39; 缺少项目（由非svn命令删除）或不完整
 * &#39;~&#39;版本化项被其他类型的项阻塞
 
 ## 设置FileVault同步 {#setting-up-filevault-sync}

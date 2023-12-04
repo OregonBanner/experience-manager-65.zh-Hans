@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 exl-id: b5f2be67-c93c-4dbc-acc0-3edd8f1a282f
-source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '540'
-ht-degree: 3%
+source-wordcount: '538'
+ht-degree: 0%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 3%
 
 1. 使用We.Retail示例内容启动Adobe Experience Manager (AEM)，并打开 [组件控制台](/help/sites-authoring/default-components-console.md).
 
-   **全局导航 — >工具 — >组件**
+   **全局导航>工具>组件**
 
 1. 在组件控制台中打开边栏，您可以筛选特定组件组。 核心组件可在以下位置找到：
 
@@ -83,6 +83,6 @@ ht-degree: 3%
 
 ## 更多信息 {#further-information}
 
-有关核心组件的更多信息，请参阅创作文档 [核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) 有关核心组件和开发人员文档的功能概述 [开发核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/overview.html?lang=zh-Hans) 获取技术概述。
+有关核心组件的更多信息，请参阅创作文档 [核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) 有关核心组件和开发人员文档的功能概述 [开发核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/overview.html?lang=en) 获取技术概述。
 
 此外，您可能希望进一步调查 [可编辑的模板](/help/sites-developing/we-retail-editable-templates.md). 请参阅创作文档 [创建页面模板](/help/sites-authoring/templates.md) 或开发人员文档页面 [模板 — 可编辑](/help/sites-developing/page-templates-editable.md) 有关可编辑模板的完整详细信息。

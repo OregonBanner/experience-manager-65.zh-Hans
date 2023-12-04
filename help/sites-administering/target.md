@@ -10,10 +10,10 @@ topic-tags: integration
 content-type: reference
 discoiquuid: 454854f8-6053-406c-888d-f427777bf570
 exl-id: 2b17d8cd-a43c-4d54-b990-a6f0cb1db22b
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '600'
-ht-degree: 66%
+source-wordcount: '567'
+ht-degree: 65%
 
 ---
 
@@ -53,11 +53,11 @@ ht-degree: 66%
 
 >[!CAUTION]
 >
->您必须确保发布实例中的活动设置节点 **cq:ActivitySettings** 安全，以使其不可由普通用户访问。该活动设置节点应当只能由负责将活动同步到 Adobe Target 的服务访问。
+>确保发布实例中的活动设置节点 **cq:ActivitySettings** 安全，以使其不可由普通用户访问。该活动设置节点应当只能由负责将活动同步到 Adobe Target 的服务访问。
 >
 >请参阅[与 Adobe Target 集成的先决条件](/help/sites-administering/target-requirements.md#securing-the-activity-settings-node)，以了解详细信息。
 
-在集成完成后，您可以[创作目标内容](/help/sites-authoring/content-targeting-touch.md)来将访客数据发送到 Adobe Target。请注意，页面组件需要特定代码才能启用内容定位。（请参阅[针对目标内容进行开发](/help/sites-developing/target.md)。））
+在集成完成后，您可以[创作目标内容](/help/sites-authoring/content-targeting-touch.md)来将访客数据发送到 Adobe Target。请注意，页面组件需要特定代码才能启用内容定位。(请参阅 [针对目标内容进行开发](/help/sites-developing/target.md).)
 
 >[!NOTE]
 >

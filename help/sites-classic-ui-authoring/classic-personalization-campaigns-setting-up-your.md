@@ -7,9 +7,9 @@ topic-tags: personalization
 content-type: reference
 docset: aem65
 exl-id: 1b607a52-f065-4e35-8215-d54df7c8403d
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '2223'
+source-wordcount: '2194'
 ht-degree: 0%
 
 ---
@@ -117,12 +117,12 @@ ht-degree: 0%
 
 现在您已经为体验创建了基本框架，接下来需要根据体验类型继续执行以下操作：
 
-* [Teaser](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#teasers):
+* [Teaser](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#teasers)：
 
    * [将Teaser页面连接到访客区段。](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#applyingasegmenttoyourteaser)
    * [为您的Teaser创建接触点](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#creatingatouchpointforyourteaser) （将Teaser添加到内容页面）。
 
-* [新闻稿](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#newsletters):
+* [新闻稿](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#newsletters)：
 
    * [向新闻稿添加内容。](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#addingcontenttonewsletters)
    * [将新闻稿个性化。](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#personalizingnewsletters)

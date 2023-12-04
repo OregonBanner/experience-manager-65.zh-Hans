@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: components
 exl-id: a8d50c09-72d0-406e-874e-50a985227a56
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '2319'
-ht-degree: 1%
+source-wordcount: '2320'
+ht-degree: 0%
 
 ---
 
@@ -139,8 +139,8 @@ AEM提供了一个控制台，用于管理组件UI中使用的文本的各种翻
    ![chlimage_1-209](assets/chlimage_1-209.png)
 
 1. 在“添加字符串”对话框的“字符串”框中，键入英文字符串。 在“注释”框中，根据需要键入翻译器的翻译提示。
-1. 单击确定。
-1. 单击保存。
+1. 单击“确定”。
+1. 单击“保存”。
 
    ![chlimage_1-210](assets/chlimage_1-210.png)
 
@@ -153,18 +153,18 @@ AEM提供了一个控制台，用于管理组件UI中使用的文本的各种翻
    ![chlimage_1-211](assets/chlimage_1-211.png)
 
 1. 修改字符串或注释，然后单击“确定”。
-1. 单击保存。
+1. 单击“保存”。
 
    ![chlimage_1-212](assets/chlimage_1-212.png)
 
 使用以下过程可从词典中删除字符串。
 
 1. 在“词典”下拉菜单中，选择要从中删除字符串的词典。
-1. 单击删除。
+1. 单击“删除”。
 
    ![chlimage_1-213](assets/chlimage_1-213.png)
 
-1. 单击保存。
+1. 单击“保存”。
 
    ![chlimage_1-214](assets/chlimage_1-214.png)
 

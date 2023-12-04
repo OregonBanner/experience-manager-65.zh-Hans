@@ -4,10 +4,10 @@ description: 了解变体如何允许您为片段创作内容，然后根据用�
 feature: Content Fragments
 role: User
 exl-id: 50982ede-7ccf-45b2-b0dd-a49d23e0f971
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '2388'
-ht-degree: 62%
+source-wordcount: '2309'
+ht-degree: 60%
 
 ---
 
@@ -75,7 +75,7 @@ ht-degree: 62%
 
 ### 全屏编辑器 {#full-screen-editor}
 
-编辑多行文本字段时，可以打开全屏编辑器；点按或单击实际文本，然后选择以下操作图标：
+编辑多行文本字段时，可以打开全屏编辑器；单击实际文本，然后选择以下操作图标：
 
 ![全屏编辑器图标](assets/cfm-variations-03.png)
 

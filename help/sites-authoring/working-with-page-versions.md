@@ -2,10 +2,10 @@
 title: 使用内容页面版本
 description: 在Adobe Experience Manager中创建、比较和恢复页面版本。
 exl-id: cb7a9da2-7112-4ef0-b1cf-211a7df93625
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1501'
-ht-degree: 66%
+source-wordcount: '1510'
+ht-degree: 65%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 66%
 1. 导航以显示要为其创建版本的页面。
 1. 在[选择模式](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)中选择页面。
 1. 打开 **时间线** 列。
-1. 单击/点按评论字段旁边的箭头以显示以下选项：
+1. 单击评论字段旁边的箭头以显示以下选项：
 
    ![时间轴 — 另存为版本](assets/screen-shot_2019-03-05at112335.png)
 
@@ -210,7 +210,7 @@ ht-degree: 66%
 
    ![在模式选择中选择“时间扭曲”](assets/wwpv-01.png)
 
-1. 在对话框中，设置目标日期和时间，然后单击或点按 **设置日期**. 如果不选择时间，则当前时间将被用作默认值。
+1. 在对话框中，设置目标日期和时间，然后单击 **设置日期**. 如果不选择时间，则当前时间将被用作默认值。
 
    ![设置日期](assets/wwpv-02.png)
 

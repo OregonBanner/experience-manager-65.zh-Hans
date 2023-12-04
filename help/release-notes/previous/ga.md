@@ -2,10 +2,10 @@
 title: 的常规发行说明 [!DNL Adobe Experience Manager] 6.5
 description: '"[!DNL Adobe Experience Manager] 6.5版本说明概述了版本信息、新增功能、安装方法和详细的更改列表。”'
 exl-id: b3d4a527-44ca-4eb6-b393-f3e8117cf1a6
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '4676'
-ht-degree: 6%
+source-wordcount: '4484'
+ht-degree: 2%
 
 ---
 
@@ -102,7 +102,7 @@ ht-degree: 6%
 
 * 快速入门分发使用Eclipse Jetty 9.4.15作为Servlet引擎(AEM 6.4随9.3.22提供)。
 
-### [!DNL Experience Manager] Sites {#experience-manager-sites}
+### [!DNL Experience Manager] 站点 {#experience-manager-sites}
 
 #### 受管的单页应用程序 {#managed-single-page-apps}
 
@@ -325,7 +325,7 @@ AEM 6.5引入了以下功能和增强功能，以提高AEM用户、DAM角色以�
 
 请阅读以了解 [!DNL Experience Manager] 6.5版，您可以使用该版本以最好地支持您的content velocity用例。
 
-##### Adobe Asset Link {#aal}
+##### Adobe资源链接 {#aal}
 
 [!DNL Adobe Asset Link] 在内容创建过程中加强创意人员与营销人员之间的协作。 创意人员可以访问中存储的内容 [!DNL Experience Manager Assets]，而不离开他们最熟悉的应用程序。 创意人员可以使用中的应用程序内面板无缝浏览、搜索、签出和签入资源 [!DNL Adobe Photoshop]， [!DNL Adobe Illustrator]、和 [!DNL Adobe InDesign] 应用程序。
 
@@ -428,7 +428,7 @@ AEM 6.5 Forms引入了几项新增功能和增强功能。 这些亮点包括：
 
 请参阅 [AEM 6.5 Forms中的新增功能和增强功能摘要](/help/forms/using/whats-new.md) 有关新增功能和改进功能的信息和文档资源。
 
-### 使用以客户为中心的开发 {#leverage-customer-focused-development}
+### 使用以客户为中心的开发 {#use-customer-focused-development}
 
 Adobe使用以客户为中心的开发模型，允许客户在规范、开发和测试过程中参与开发流程的所有阶段。 在此过程中，我们感谢所有参与的客户和合作伙伴。
 
@@ -438,7 +438,7 @@ Adobe已制定程序和流程，以便能够收集、优先处理和跟踪以客
 
 ## 属于发行版的文件列表 {#list-of-files-that-are-part-of-the-release}
 
-**Foundation**
+**基础**
 
 * 独立快速入门： `cq-quickstart-6.5.0.jar`.
 * 应用程序服务器快速启动： `cq-quickstart-6.5.0.war`.
@@ -448,7 +448,7 @@ Adobe已制定程序和流程，以便能够收集、优先处理和跟踪以客
 * Brackets代码编辑器的扩展([阅读更多信息并下载](/help/sites-developing/aem-brackets.md))
 * Maven/Gradle依赖项([下载链接](https://repo1.maven.org/maven2/com/adobe/aem/uber-jar/6.5.0/))
 
-**Sites**
+**站点**
 
 * 核心组件([GitHub项目](https://github.com/adobe/aem-core-wcm-components))
 * We.Retail参考实施([了解更多](/help/sites-developing/we-retail.md))
@@ -468,7 +468,7 @@ Adobe已制定程序和流程，以便能够收集、优先处理和跟踪以客
 
 * AEM现代化工具套件，例如，对话框转换工具。 ([GitHub项目](https://github.com/adobe/aem-modernize-tools))
 
-**资源**
+**资产**
 
 * 用于添加增强型PDF光栅器的包([了解更多](/help/assets/aem-pdf-rasterizer.md))
 * 用于添加扩展RAW映像支持的包([了解更多](/help/assets/camera-raw.md))

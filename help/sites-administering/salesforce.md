@@ -7,9 +7,9 @@ topic-tags: integration
 content-type: reference
 docset: aem65
 exl-id: 0f3aaa0a-ccfb-4162-97a6-ee5485595d28
-source-git-commit: c7c32130a3257c14c98b52f9db31d80587d7993a
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1553'
+source-wordcount: '1530'
 ht-degree: 0%
 
 ---
@@ -107,7 +107,7 @@ AEM与Salesforce之间的双向可扩展集成可实现：
 
    ![chlimage_1-76](assets/chlimage_1-76.png)
 
-1. 选择要创建为潜在客户的AEM用户，作为 **有效负荷** （主页 — >用户）。 请确保选择用户的配置文件节点，因为它包含如下信息 **givenName**、和  **familyName**，映射到Salesforce潜在客户的 **名字** 和 **姓氏** 字段。
+1. 选择要创建为潜在客户的AEM用户，作为 **有效负荷** （主页>用户）。 请确保选择用户的配置文件节点，因为它包含如下信息 **givenName**、和  **familyName**，映射到Salesforce潜在客户的 **名字** 和 **姓氏** 字段。
 
    ![chlimage_1-77](assets/chlimage_1-77.png)
 
@@ -115,7 +115,7 @@ AEM与Salesforce之间的双向可扩展集成可实现：
    >
    >在开始此工作流之前，AEM中的潜在客户节点在发布到Salesforce之前必须填写某些必填字段。 这些是 **givenName**， **familyName**， **公司**、和 **电子邮件**. 要查看AEM用户与Salesforce潜在客户之间的完整映射列表，请参阅 [在AEM用户和Salesforce潜在客户之间映射配置。](#mapping-configuration-between-aem-user-and-salesforce-lead)
 
-1. 单击&#x200B;**确定**。用户信息将导出到salesforce.com。 您可以在salesforce.com中进行验证。
+1. 单击 **确定**. 用户信息将导出到salesforce.com。 您可以在salesforce.com中进行验证。
 
    >[!NOTE]
    >
@@ -127,7 +127,7 @@ AEM与Salesforce之间的双向可扩展集成可实现：
 
 要配置Salesforce.com导出工作流，请执行以下操作：
 
-1. 导航至 `http://localhost:4502/cf#/etc/workflow/models/salesforce-com-export.html.`
+1. 导航到 `http://localhost:4502/cf#/etc/workflow/models/salesforce-com-export.html.`
 
    ![chlimage_1-16](assets/chlimage_1-16.jpeg)
 

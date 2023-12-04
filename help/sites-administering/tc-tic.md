@@ -4,16 +4,16 @@ description: 了解如何在Adobe Experience Manager中配置翻译集成框架�
 contentOwner: Guillaume Carlino
 feature: Language Copy
 exl-id: 7562754b-d9fd-441b-8ae5-c7eebe458cef
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1571'
-ht-degree: 45%
+source-wordcount: '1497'
+ht-degree: 41%
 
 ---
 
 # 配置翻译集成框架{#configuring-the-translation-integration-framework}
 
-翻译集成框架与第三方翻译服务集成，以编排 AEM 内容的译文。
+翻译集成框架与第三方翻译服务集成，以编排AEM内容的翻译。
 
 * 连接到您的翻译服务提供商。
 * 创建翻译集成框架配置。
@@ -23,7 +23,8 @@ ht-degree: 45%
 
 ## 连接到翻译服务提供商 {#connecting-to-a-translation-service-provider}
 
-创建用于将 AEM 连接到您的翻译服务提供商的云配置。默认情况下，AEM 具有连接到 Microsoft Translator 的功能。以下翻译供应商为翻译项目提供新API的实施。 用于了解有关集成的更多信息的链接：
+创建用于将 AEM 连接到您的翻译服务提供商的云配置。默认情况下，AEM具有连接到Microsoft Translator的功能。
+以下翻译供应商为翻译项目提供新API的实施。 用于了解有关集成的更多信息的链接：
 
 * [Translations.com](https://exchange.adobe.com/experiencecloud.details.90104.globallink-connect-plus-for-aem.html)（Adobe Exchange 首选合作伙伴）
 * [Clay Tablet Technologies](https://exchange.adobe.com/experiencecloud.details.90064.clay-tablet-translation-for-experience-manager.html)
@@ -57,9 +58,9 @@ ht-degree: 45%
 
 创建翻译集成框架配置以指定如何翻译您的内容。该配置包括以下信息：
 
-* 要使用哪个翻译服务提供商。
-* 要执行人工翻译还是机器翻译.
-* 是否翻译与页面或资源关联的其他内容，如标记.
+* 要使用的翻译服务提供商。
+* 要执行人工翻译还是机器翻译。
+* 是否翻译与页面或资产关联的其他内容，如标记。
 
 创建框架配置后，请将云配置与要根据该配置翻译的页面关联。开始翻译过程后，将根据关联的框架配置执行翻译工作流。
 
@@ -179,14 +180,14 @@ ht-degree: 45%
  </tbody>
 </table>
 
-1. 单击或点按侧栏中的“工具”>“操作”>“云”>“Cloud Service”。
+1. 单击侧栏中的“工具”>“操作”>“云”>“Cloud Service”。
 1. 在翻译集成区域，是否已创建任何配置决定了将显示哪个链接：
 
-   * 如果尚未创建配置，请单击或点按立即配置。
-   * 如果配置已存在，请单击或点按显示配置，然后单击或点按可用配置旁边显示的+链接。
+   * 如果尚未创建任何配置，请单击“立即配置”。
+   * 如果配置已经存在，请单击“显示配置”，然后单击“可用配置”旁边显示的+链接。
 
-1. 键入配置的名称，然后单击或点按创建。
-1. 在站点、社区和资产选项卡上配置属性，然后单击或点按确定。
+1. 键入配置的名称，然后单击“创建”。
+1. 在“站点”、“社区”和“资产”选项卡上配置属性，然后单击“确定”。
 
 ## 配置页面以供翻译 {#configuring-pages-for-translation}
 
@@ -207,16 +208,16 @@ ht-degree: 45%
 
 将页面与您用于翻译该页面和后代页面的翻译提供商关联。
 
-1. 在站点控制台中，选择要配置的页面，然后单击或点按查看属性。
-1. 单击或点按编辑，然后单击或点按Cloud Service选项卡。
-1. 单击或点按添加配置>翻译集成。
-1. 选择要使用的翻译提供商，然后单击或点按完成。
+1. 在站点控制台中，选择要配置的页面，然后单击查看属性。
+1. 单击“编辑” ，然后单击“Cloud Service”选项卡。
+1. 单击添加配置>翻译集成。
+1. 选择要使用的翻译提供商，然后单击完成。
 
 ### 将页面与翻译集成框架关联 {#associating-pages-with-a-translation-integration-framework}
 
 将页面与定义您要如何为该页面和后代页面执行翻译的翻译集成框架关联。
 
-1. 在站点控制台中，选择要配置的页面，然后单击或点按查看属性。
-1. 单击或点按编辑，然后单击或点按Cloud Service选项卡。
-1. 单击或点按添加配置>翻译集成。
-1. 选择要使用的翻译集成框架，然后单击或点按完成。
+1. 在站点控制台中，选择要配置的页面，然后单击查看属性。
+1. 单击“编辑” ，然后单击“Cloud Service”选项卡。
+1. 单击添加配置>翻译集成。
+1. 选择要使用的翻译集成框架，然后单击完成。

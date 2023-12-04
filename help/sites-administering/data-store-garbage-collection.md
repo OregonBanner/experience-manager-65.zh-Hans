@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 5b1e46c5-7e56-433e-b62e-2a76ea7be0fd
 docset: aem65
 exl-id: 0dc4a8ce-5b0e-4bc9-a6f5-df2a67149e22
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1884'
+source-wordcount: '1890'
 ht-degree: 0%
 
 ---
@@ -109,12 +109,12 @@ AEM将存储库用作多个内部活动和内部管理活动的存储空间：
 
 在运行数据存储垃圾收集之前，您应该检查当时是否没有运行任何备份。
 
-1. 打开操作功能板的方法有： **导航** -> **工具** -> **操作** -> **维护**.
-1. 单击或点按 **每周维护时段**.
+1. 打开操作功能板的方法有： **导航** > **工具** > **操作** > **维护**.
+1. 单击 **每周维护时段**.
 
    ![chlimage_1-64](assets/chlimage_1-64.png)
 
-1. 选择 **数据存储垃圾收集** 任务，然后单击或点按 **运行** 图标。
+1. 选择 **数据存储垃圾收集** 任务，然后单击 **运行** 图标。
 
    ![chlimage_1-65](assets/chlimage_1-65.png)
 

@@ -2,7 +2,7 @@
 title: 注册为用户
 seo-title: Registering as a User
 description: 了解如何使用从Document Security用户那里收到的受策略保护的文档，即使您是该用户组织的外部人员。
-seo-description: Learn how you can use policy-protected documents that you receive from an document security user, even if you are external to the user’s organization.
+seo-description: Learn how you can use policy-protected documents that you receive from an document security user, even if you are external to the user's organization.
 uuid: 4648b358-f545-434f-a3b2-2937e961dc64
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 content-type: reference
@@ -10,10 +10,10 @@ geptopics: SG_AEMFORMS/categories/working_with_document_security
 discoiquuid: 26e11ef4-9f8f-4b0b-b035-a498fd7d65ef
 feature: Document Security
 exl-id: 320d8fa4-e200-4993-b018-a9718cddc5c1
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '699'
-ht-degree: 6%
+source-wordcount: '695'
+ht-degree: 3%
 
 ---
 
@@ -41,18 +41,18 @@ ht-degree: 6%
 如果您是受邀用户，并且从document security收到了电子邮件注册消息，则可以使用消息中的URL打开在线注册页面进行注册。 在注册之后，您将收到有关激活帐户的第二个通知。
 
 1. 打开Document Security注册电子邮件。 邮件包含的URL是Document Security中指向“外部用户注册”页面的链接。
-1. 单击 URL 或者复制并将其粘贴到浏览器中。此时将显示“外部用户注册”页面。
+1. 单击URL，或复制该URL并将其粘贴到浏览器中。 此时将显示“外部用户注册”页面。
 1. 在相应的框中键入您的姓名、电话号码、地址、组织和密码，然后在“确认密码”框中重新键入您的密码。 您的密码可以是任意八个字符的组合。
-1. 单击保存。此时会显示一条感谢消息，通知您检查电子邮件中的激活电子邮件消息。 您现在必须激活帐户才能完成注册过程。
+1. 单击“保存”。 此时会显示一条感谢消息，通知您检查电子邮件中的激活电子邮件消息。 现在激活您的帐户以完成注册过程。
 
 ## 激活您受邀的用户帐户 {#activate-your-invited-user-account}
 
-注册后，Document Security会向您发送一封激活电子邮件。 您必须使用邮件中的URL激活您的帐户。 然后，您可以登录到Document Security以使用您有权访问的受策略保护的文档。 根据管理员为外部用户启用的功能，您可能具有创建策略、将策略应用到文档以及将其他外部用户添加到策略的权限。
+注册后，Document Security会向您发送一封激活电子邮件。 使用邮件中的URL激活您的帐户。 然后，您可以登录到Document Security以使用您有权访问的受策略保护的文档。 根据管理员为外部用户启用的功能，您可能具有创建策略、将策略应用到文档以及将其他外部用户添加到策略的权限。
 
 在管理员停用或删除帐户之前，该帐户保持活动状态。
 
 1. 打开Document Security注册确认电子邮件。
-1. 单击邮件中显示的 URL。此时将显示Document Security激活页面。
+1. 单击消息中显示的URL。 此时将显示Document Security激活页面。
 1. 单击“Here（此处）”以转到登录页面。
 1. 在用户名框中，键入您在Document Security下注册的电子邮件地址。 此电子邮件地址是您的默认Document Security用户名。
 1. 在“密码”框中，键入注册时创建的密码，然后单击“登录”。

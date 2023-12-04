@@ -9,10 +9,10 @@ content-type: reference
 topic-tags: site-features
 discoiquuid: e3ccddb6-be5e-4e5f-a017-0eed263555ce
 exl-id: 1772368a-f5c9-440c-a92a-0f1d34cc4bf8
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1304'
-ht-degree: 87%
+source-wordcount: '1293'
+ht-degree: 84%
 
 ---
 
@@ -80,7 +80,7 @@ ht-degree: 87%
 
    ![作者的样式系统](assets/style-system-author.png)
 
-1. 点按或单击&#x200B;**列表**&#x200B;组件工具栏上的&#x200B;**样式**&#x200B;按钮以打开样式菜单，然后更改该组件的外观。
+1. 单击 **样式** 工具栏上的按钮 **列表** 组件打开样式菜单并更改组件的外观。
 
    ![选择样式](assets/style-system-author2.png)
 
@@ -90,7 +90,7 @@ ht-degree: 87%
 
 ### 作为模板作者 {#as-a-template-author}
 
-1. 编辑 WKND 的英语母版主页 `http://<host>:<port>/sites.html/content/wknd/language-masters/en` 时，通过&#x200B;**页面信息 > 编辑模板**&#x200B;来编辑该页面的模板。
+1. 编辑WKND的英语母版主页时 `http://<host>:<port>/sites.html/content/wknd/language-masters/en`，通过编辑页面的模板 **“页面信息”>“编辑模板”**.
 
    ![编辑模板](assets/style-system-edit-template.png)
 

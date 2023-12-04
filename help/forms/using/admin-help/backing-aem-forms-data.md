@@ -6,9 +6,9 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: 536615a4-ab42-4b72-83b1-fad110b011ee
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1533'
+source-wordcount: '1515'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ GDS位置必须备份的频率取决于AEM Forms的使用方式以及可用的�
 
 ## 备份数据库、 GDS 、 AEM存储库和内容存储根目录 {#back-up-the-database-gds-aem-repository-and-content-storage-root-directories}
 
-必须将AEM Forms置于安全备份（快照）模式或滚动备份（连续覆盖）模式。 在将AEM Forms设置为进入任一备份模式之前，请确保满足以下条件：
+将AEM Forms置于安全备份（快照）模式或滚动备份（连续覆盖）模式。 在将AEM Forms设置为进入任一备份模式之前，请确保满足以下条件：
 
 * 验证系统版本并记录自上次执行完整系统映像备份以来应用的修补程序或更新。
 * 如果使用的是滚动模式或快照模式备份，请确保为数据库配置了正确的日志设置，以允许对数据库进行热备份。 (请参阅 [AEM Forms数据库](/help/forms/using/admin-help/files-back-recover.md#aem-forms-database).)
