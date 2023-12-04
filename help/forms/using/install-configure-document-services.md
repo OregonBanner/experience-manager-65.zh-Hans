@@ -4,9 +4,9 @@ description: 安装AEM Forms文档服务以创建、汇编、分发、存档PDF�
 topic-tags: installing
 role: Admin
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
-source-git-commit: 03ed3606e89d87bf2f95b56a1eeb6b7dc4bec13a
+source-git-commit: 2ad9cea10bcd152f4d2d874553bdbd3133dbe847
 workflow-type: tm+mt
-source-wordcount: '5521'
+source-wordcount: '5499'
 ht-degree: 1%
 
 ---
@@ -30,7 +30,7 @@ AEM Forms提供一套OSGi服务来完成不同的文档级别操作，例如，�
 
 * **输出服务：** 使您能够创建不同格式的文档，包括PDF、激光打印机格式和标签打印机格式。 激光打印机格式为PostScript和打印机控制语言(PCL)。 有关更多信息，请参阅 [输出服务](/help/forms/using/output-service.md).
 
-* **PDF Generator服务：** PDF Generator服务提供将本机文件格式转换为PDF的API。 它还会将PDF转换为其他文件格式并优化PDF文档的大小。 有关更多信息，请参阅 [PDF Generator服务](aem-document-services-programmatically.md#pdfgeneratorservice).
+* **PDF Generator服务：** PDF Generator服务提供用于将本机文件格式转换为PDF的API。 它还会将PDF转换为其他文件格式并优化PDF文档的大小。 有关更多信息，请参阅 [PDF Generator服务](aem-document-services-programmatically.md#pdfgeneratorservice).
 
 * **Reader扩展服务：** 通过扩展Adobe Reader的功能（赋予额外的使用权限），您的组织可以轻松共享交互式PDF文档。 该服务激活在使用Adobe Reader打开PDF文档时不可用的功能，例如向文档添加注释、填写表单和保存文档。 有关更多信息，请参阅 [Reader扩展服务](/help/forms/using/overview-aem-document-services.md#reader-extension-service).
 
@@ -669,10 +669,6 @@ Assembler服务依赖于Reader扩展服务、签名服务、Forms服务和输出
 
 +++
 
-+++Microsoft Office 2019未在Microsoft Windows Server 2019上运行
-
-* 确保您与AEM服务器没有任何活动的远程连接。
-
 +++HTML到PDF的转换问题
 
 * 确保在Fonts配置UI中添加了PDF Generator目录。
@@ -791,7 +787,9 @@ Assembler服务依赖于Reader扩展服务、签名服务、Forms服务和输出
 
 *来自主转换器的错误消息： ALC-PDG-015-003 — 系统无法打开输入文件。 再次提交文件或联系系统管理员。*
 
-要解决这些问题，请参阅 [无法在Windows Server上将Word或Excel文件转换为PDF](/help/forms/using/disable-uac-for-pdfgconfiguration.md).
+要解决此问题，请参阅 [无法在Windows Server上将Word或Excel文件转换为PDF](/help/forms/using/disable-uac-for-pdfgconfiguration.md).
+
++++
 
 +++ 无法在Windows Server 2019上将Excel文件转换为PDF
 
@@ -800,14 +798,17 @@ Assembler服务依赖于Reader扩展服务、签名服务、Forms服务和输出
 * 使用PDF Generator服务时，Windows计算机不应与AEM服务器（Windows RDP会话）有任何活动的远程连接。
 * 默认打印机必须设置为Adobe PDF。
 
->[!NOTE]
-* 对于Apple macOS和Ubuntu操作系统，您无需配置上述设置。
+  >[!NOTE]
+  * 对于Apple macOS和Ubuntu操作系统，您无需配置上述设置。
+
++++
 
 +++ 无法将XPS文件转换为PDF
 
 要解决此问题， [在Windows上创建特定于功能的注册表项](https://helpx.adobe.com/in/acrobat/kb/unable-convert-xps-to-pdfs.html).
 
 +++
+
 
 ## 后续步骤 {#next-steps}
 
