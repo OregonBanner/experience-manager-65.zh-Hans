@@ -8,9 +8,9 @@ uuid: 60f142aa-81ca-4333-8614-85a01e23e917
 products: SG_EXPERIENCEMANAGER/6.3/FORMS
 discoiquuid: 982eddba-2350-40e7-8a42-db02d28cf133
 exl-id: 0202ca65-21ef-4477-b704-7b52314a7d7b
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '1124'
+source-wordcount: '1115'
 ht-degree: 0%
 
 ---
@@ -45,12 +45,12 @@ ht-degree: 0%
 
    [http://localhost:4502/editor.html/content/forms/af/change-billing-shipping-address.html](http://localhost:4502/editor.html/content/forms/af/change-billing-shipping-address.html)
 
-1. 点按 **[!UICONTROL 客户ID]** 字段，然后点击 **[!UICONTROL 编辑规则]** 图标。 将打开“规则编辑器”窗口。
-1. 点按 **[!UICONTROL +创建]** 图标以添加规则。 该操作将打开可视编辑器。
+1. 选择 **[!UICONTROL 客户ID]** 字段并选择 **[!UICONTROL 编辑规则]** 图标。 将打开“规则编辑器”窗口。
+1. 选择 **[!UICONTROL +创建]** 图标以添加规则。 该操作将打开可视编辑器。
 
    在可视编辑器中， **[!UICONTROL 时间]** 语句默认处于选中状态。 此外，表单对象(在本例中， **[!UICONTROL 客户ID]**)，从中启动规则编辑器，并在 **[!UICONTROL 时间]** 语句。
 
-1. 点按 **[!UICONTROL 选择状态]** 下拉并选择 **[!UICONTROL 已更改]**.
+1. 选择 **[!UICONTROL 选择状态]** 下拉并选择 **[!UICONTROL 已更改]**.
 
    ![whencustomeridischanged](assets/whencustomeridischanged.png)
 
@@ -64,7 +64,7 @@ ht-degree: 0%
 
    ![dropobjectstooutputfield-retrievedata](assets/dropobjectstooutputfield-retrievedata.png)
 
-   点按 **[!UICONTROL 完成]** 以保存规则。 在规则编辑器窗口中，点按 **[!UICONTROL 关闭]**.
+   选择 **[!UICONTROL 完成]** 以保存规则。 在规则编辑器窗口中，选择 **[!UICONTROL 关闭]**.
 
 1. 预览自适应表单。 在中输入ID **[!UICONTROL 客户ID]** 字段。 该表单现在可以从数据库中检索客户详细信息。
 
@@ -74,8 +74,8 @@ ht-degree: 0%
 
 从数据库中检索到客户详细信息后，您可以更新送货地址、省/市和邮政编码。 以下过程调用表单数据模型服务将客户信息更新到数据库：
 
-1. 选择 **[!UICONTROL 提交]** 字段，然后点击 **[!UICONTROL 编辑规则]** 图标。 将打开“规则编辑器”窗口。
-1. 选择 **[!UICONTROL 提交 — 单击]** 规则，然后点击 **[!UICONTROL 编辑]** 图标。 此时会显示用于编辑“提交”规则的选项。
+1. 选择 **[!UICONTROL 提交]** 字段并选择 **[!UICONTROL 编辑规则]** 图标。 将打开“规则编辑器”窗口。
+1. 选择 **[!UICONTROL 提交 — 单击]** 规则并选择 **[!UICONTROL 编辑]** 图标。 此时会显示用于编辑“提交”规则的选项。
 
    ![submit规则](assets/submit-rule.png)
 
@@ -83,7 +83,7 @@ ht-degree: 0%
 
    ![已单击submit](assets/submit-is-clicked.png)
 
-1. 在 **[!UICONTROL 则]** 选项，点按 **[!UICONTROL +添加语句]** 选项。 选择 **[!UICONTROL 调用服务]** 从 **[!UICONTROL 选择操作]** 下拉菜单。
+1. 在 **[!UICONTROL 则]** 选项，选择 **[!UICONTROL +添加语句]** 选项。 选择 **[!UICONTROL 调用服务]** 从 **[!UICONTROL 选择操作]** 下拉菜单。
 1. 选择 **[!UICONTROL 更新送货地址]** 来自的服务 **[!UICONTROL 选择]** 下拉菜单。
 
    ![update-shipping-address](assets/update-shipping-address.png)
@@ -97,7 +97,7 @@ ht-degree: 0%
    >请勿拖放 **[!UICONTROL 名称]** 和 **[!UICONTROL 客户ID]** 字段到对应的tablename.property（例如，customerdetails.name）。 它有助于避免错误地更新客户的名称和ID。
 
 1. 拖放 **[!UICONTROL 客户ID]** 中的字段 [!UICONTROL 表单对象] 选项卡中的标识字段 **[!UICONTROL 输入]** 盒子。 不带前缀表名的字段（例如，此使用案例中的customerdetails）用作更新服务的搜索参数。 此 **[!UICONTROL id]** 字段在此使用案例中唯一标识  **customerdetails**  表格。
-1. 点按 **[!UICONTROL 完成]** 以保存规则。 在规则编辑器窗口中，点按 **[!UICONTROL 关闭]**.
+1. 选择 **[!UICONTROL 完成]** 以保存规则。 在规则编辑器窗口中，选择 **[!UICONTROL 关闭]**.
 1. 预览自适应表单。 检索客户的详细信息，更新送货地址，并提交表单。 再次检索同一客户的详细信息时，将显示更新的送货地址。
 
 ## 步骤3：（额外部分）使用代码编辑器运行验证并显示错误消息 {#step-bonus-section-use-the-code-editor-to-run-validations-and-display-error-messages}
@@ -108,12 +108,12 @@ ht-degree: 0%
 
 以下过程说明如何创建规则，以在表单中输入的客户ID在数据库中不存在时显示错误消息。 规则还会聚焦并重置 **[!UICONTROL 客户ID]** 字段。 规则使用 [表单数据模型服务的dataIntegrationUtils API](/help/forms/using/invoke-form-data-model-services.md) 检查客户ID是否存在于数据库中。
 
-1. 点按 **[!UICONTROL 客户ID]** 字段，然后点击 `Edit Rules` 图标。 此 [!UICONTROL 规则编辑器] 窗口打开。
-1. 点按 **[!UICONTROL +创建]** 图标以添加规则。 该操作将打开可视编辑器。
+1. 选择 **[!UICONTROL 客户ID]** 字段并选择 `Edit Rules` 图标。 此 [!UICONTROL 规则编辑器] 窗口打开。
+1. 选择 **[!UICONTROL +创建]** 图标以添加规则。 该操作将打开可视编辑器。
 
    在可视编辑器中， **[!UICONTROL 时间]** 语句默认处于选中状态。 此外，表单对象(在本例中， **[!UICONTROL 客户ID]**)，从中启动规则编辑器，并在 **[!UICONTROL 时间]** 语句。
 
-1. 点按 **[!UICONTROL 选择状态]** 下拉并选择 **[!UICONTROL 已更改]**.
+1. 选择 **[!UICONTROL 选择状态]** 下拉并选择 **[!UICONTROL 已更改]**.
 
    ![whencustomeridischanged](assets/whencustomeridischanged.png)
 

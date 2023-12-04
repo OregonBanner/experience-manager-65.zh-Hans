@@ -10,9 +10,9 @@ role: User, Admin
 mini-toc-levels: 4
 exl-id: badd0f5c-2eb7-430d-ad77-fa79c4ff025a
 feature: Configuration,Scene7 Mode
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '6489'
+source-wordcount: '6508'
 ht-degree: 3%
 
 ---
@@ -41,7 +41,7 @@ ht-degree: 3%
 >* [智能图像处理](/help/assets/imaging-faq.md)
 >* [缓存失效](/help/assets/invalidate-cdn-cache-dynamic-media.md)
 >* [热链接保护](/help/assets/hotlink-protection.md)
->* [HTTP/2 内容交付](/help/assets/http2.md)
+>* [HTTP/2内容交付](/help/assets/http2.md)
 >* CDN级别的URL重定向
 >* Akamai ChinaCDN（用于在中国实现最佳交付）
 
@@ -142,7 +142,7 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 
    * **[!UICONTROL 同步所有内容]** - <!-- NEW OPTION, CQDOC-15371, Added March 4, 2020-->默认选中。 如果您要在同步到Dynamic Media的过程中有选择地包含或排除资源，请取消选择此选项。 取消选择此选项可从以下两种Dynamic Media同步模式中进行选择：
 
-   * **[!UICONTROL Dynamic Media 同步模式]**
+   * **[!UICONTROL Dynamic Media同步模式]**
       * **[!UICONTROL 默认启用]**  — 默认情况下，该配置将应用于所有文件夹，除非您专门将文件夹标记为排除。 <!-- you can then deselect the folders that you do not want the configuration applied to.-->
       * **[!UICONTROL 默认禁用]**  — 除非您明确将选定的文件夹标记为同步到Dynamic Media，否则该配置不会应用于任何文件夹。
 要将选定的文件夹标记为同步到Dynamic Media，请选择一个资源文件夹，然后在工具栏上选择 **[!UICONTROL 属性]**. 在 **[!UICONTROL 详细信息]** 选项卡，在 **[!UICONTROL Dynamic Media同步模式]** 从以下三个选项中进行选择。 完成后，选择 **[!UICONTROL 保存]**. *请记住：如果选择，则以下三个选项不可用&#x200B;**[!UICONTROL 同步所有内容]**更早。* 另请参阅 [在Dynamic Media中使用文件夹级别的选择性发布](/help/assets/selective-publishing.md).
@@ -388,7 +388,7 @@ Dynamic Media中的密码过期时间设置为自当前系统日期起100年。
 
    * 双击 **[!UICONTROL 已启用]** 字段。 默认情况下，将启用所有资源mime类型(设置为 **[!UICONTROL true]**)，这意味着资产将同步到Dynamic Media以供处理。 如果要从处理中排除此资源mime类型，请将此设置更改为 **[!UICONTROL false]**.
 
-   * 双击 **[!UICONTROL jobParam]** 以打开其关联的文本字段。 请参阅 [支持的Mime类型](/help/assets/assets-formats.md#supported-mime-types) 以获取可用于给定mime类型的允许处理参数值列表。
+   * 双选 **[!UICONTROL jobParam]** 以打开其关联的文本字段。 请参阅 [支持的Mime类型](/help/assets/assets-formats.md#supported-mime-types) 以获取可用于给定mime类型的允许处理参数值列表。
 
 1. 执行下列操作之一：
 
@@ -698,7 +698,7 @@ Scene7上传连接设置将Experience Manager资源同步到Dynamic Media Classi
 
 **要更新Dynamic Media Classic上传连接，请执行以下操作：**
 
-1. 导航至 `https://<server>/system/console/configMgr/com.day.cq.dam.scene7.impl.Scene7UploadServiceImpl`
+1. 导航到 `https://<server>/system/console/configMgr/com.day.cq.dam.scene7.impl.Scene7UploadServiceImpl`
 1. 在 **[!UICONTROL 连接数]** 字段和/或 **[!UICONTROL 活动作业超时]** 字段，根据需要更改数字。
 
    此 **[!UICONTROL 连接数]** 设置可控制Experience Manager到Dynamic Media上传时允许的最大HTTP连接数；通常，预先定义的十个连接值便已足够。

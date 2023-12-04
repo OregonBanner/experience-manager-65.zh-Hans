@@ -10,10 +10,10 @@ discoiquuid: dfc473eb-6091-4f5d-a5a0-789972c513a9
 docset: aem65
 role: Admin
 exl-id: 19b5765e-50bc-4fed-8af5-f6bb464516c8
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '1879'
-ht-degree: 9%
+source-wordcount: '1848'
+ht-degree: 4%
 
 ---
 
@@ -112,12 +112,12 @@ AEM Forms附加组件包是部署在AEM上的应用程序。 您只需要至少�
 AEM Forms附加组件包是部署在AEM上的应用程序。 该资源包中包含AEM Forms数据捕获和其他功能。 执行以下步骤以安装附加组件包：
 
 1. 打开 [Software Distribution](https://experience.adobe.com/downloads)。您需要 Adobe ID 才能登录 Software Distribution。
-1. 点按标题菜单中的 **[!UICONTROL Adobe Experience Manager]**。
+1. 选择 **[!UICONTROL Adobe Experience Manager]** 在标题菜单中可用。
 1. 在 **[!UICONTROL 过滤器]** 部分：
    1. 选择 **[!UICONTROL Forms]** 从 **[!UICONTROL 解决方案]** 下拉列表。
    2. 选择包的版本和类型。 您也可以使用 **[!UICONTROL 搜索下载]** 用于筛选结果的选项。
-1. 点按适用于您的操作系统的包名称，然后选择 **[!UICONTROL 接受EULA条款]**，然后点击 **[!UICONTROL 下载]**.
-1. 打开[包管理器](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html)，并单击&#x200B;**[!UICONTROL 上传包]**&#x200B;以上传包。
+1. 选择适用于您的操作系统的包名称，然后选择 **[!UICONTROL 接受EULA条款]**，并选择 **[!UICONTROL 下载]**.
+1. 打开 [包管理器](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html)  并单击 **[!UICONTROL 上传包]** 以上传包。
 1. 选择包并单击 **[!UICONTROL 安装]**.
 
    您还可以通过中列出的直接链接下载包 [AEM Forms版本](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) 文章。
@@ -177,9 +177,9 @@ AEM Forms具有一些强制和可选配置。 强制配置包括配置BouncyCast
 
 ### 可选安装后配置 {#optional-post-installation-configurations}
 
-#### 配置 Dispatcher {#configure-dispatcher}
+#### 配置Dispatch {#configure-dispatcher}
 
-Dispatcher 是 Adobe Experience Manager 的缓存和/或负载平衡工具，可与企业级 Web 服务器结合使用。如果您使用 [Dispatcher](https://helpx.adobe.com/cn/experience-manager/dispatcher/using/dispatcher-configuration.html)，然后为AEM Forms执行以下配置：
+Dispatcher是Adobe Experience Manager的缓存和/或负载平衡工具，可与企业级Web服务器结合使用。 如果您使用 [Dispatcher](https://helpx.adobe.com/cn/experience-manager/dispatcher/using/dispatcher-configuration.html)，然后为AEM Forms执行以下配置：
 
 1. 配置AEM Forms的访问权限：
 
@@ -225,7 +225,7 @@ Adobe Sign支持自适应表单的电子签名工作流程。 电子签名改进
 
 #### 配置Adobe Analytics {#configure-adobe-analytics}
 
-AEM Forms与Adobe Analytics集成，允许您捕获和跟踪已发布表单和文档的性能指标。 分析这些指标的目的在于，根据有关使表单或文档更有用所需的更改的数据做出明智的决策。
+AEM Forms与Adobe Analytics集成，允许您捕获和跟踪已发布表单和文档的性能指标。 分析这些量度背后的目的是，根据有关提高表单或文档可用性的更改数据做出明智的决策。
 
 要将Adobe Analytics与AEM Forms结合使用，请参阅 [配置分析和报表](/help/forms/using/configure-analytics-forms-documents.md).
 

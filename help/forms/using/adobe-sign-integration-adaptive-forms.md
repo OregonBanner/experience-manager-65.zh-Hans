@@ -10,10 +10,10 @@ discoiquuid: 1f28b257-5419-4a21-a54a-b20bf35530ac
 docset: aem65
 feature: Adaptive Forms, Acrobat Sign
 exl-id: 52146038-1582-41b8-aee0-215d04bb91d7
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '2073'
-ht-degree: 21%
+source-wordcount: '1981'
+ht-degree: 17%
 
 ---
 
@@ -53,9 +53,9 @@ ht-degree: 21%
 满足前提条件后，执行以下步骤以配置 [!DNL Adobe Sign] 使用AEM [!DNL Forms] 在创作实例上：
 
 1. 在AEM上 [!DNL Forms] 创作实例，导航到 **工具** ![锤子](assets/hammer.png) > **[!UICONTROL 常规]** > **[!UICONTROL 配置浏览器]**.
-1. 在 **[!UICONTROL 配置浏览器]** 页面，点按 **[!UICONTROL 创建]**.
+1. 在 **[!UICONTROL 配置浏览器]** 页面，选择 **[!UICONTROL 创建]**.
    * 请参阅 [配置浏览器](/help/sites-administering/configurations.md) 文档，以了解更多信息。
-1. 在 **[!UICONTROL 创建配置]** 对话框，请指定 **[!UICONTROL 标题]** 对于配置，启用 **[!UICONTROL 云配置]**，然后点击 **[!UICONTROL 创建]**. 它会创建一个配置容器。
+1. 在 **[!UICONTROL 创建配置]** 对话框，请指定 **[!UICONTROL 标题]** 对于配置，启用 **[!UICONTROL 云配置]**，并选择 **[!UICONTROL 创建]**. 它会创建一个配置容器。
 1. 导航到 **工具** ![锤子](assets/hammer.png) > **[!UICONTROL Cloud Service]** > **[!UICONTROL Adobe Sign]** 并选择您在上一步中创建的配置容器。
 
    >[!NOTE]
@@ -66,8 +66,8 @@ ht-degree: 21%
    >
    确保“Cloud Service配置”页面的URL开头为 **HTTPS**. 如果不能， [启用SSL](/help/sites-administering/ssl-by-default.md) 适用于AEM的 [!DNL Forms] 服务器。
 
-1. 在配置页面上，点击 **[!UICONTROL 创建]** 创建 [!DNL Adobe Sign] AEM中的配置 [!DNL Forms].
-1. 在 **[!UICONTROL 常规]** 选项卡 **[!UICONTROL 创建Adobe Sign配置]** 页面，指定 **[!UICONTROL 名称]** 有关配置，请点击 **[!UICONTROL 下一个]**. 您可以选择指定标题并浏览以选择配置的缩略图。
+1. 在配置页面上，选择 **[!UICONTROL 创建]** 创建 [!DNL Adobe Sign] AEM中的配置 [!DNL Forms].
+1. 在 **[!UICONTROL 常规]** 选项卡 **[!UICONTROL 创建Adobe Sign配置]** 页面，指定 **[!UICONTROL 名称]** 对于配置，然后选择 **[!UICONTROL 下一个]**. 您可以选择指定标题并浏览以选择配置的缩略图。
 
 1. 将当前浏览器窗口中的 URL 复制到记事本。需要配置 [!DNL Adobe Sign] 应用程序与AEM[!DNL Forms].
 
@@ -92,7 +92,7 @@ ht-degree: 21%
 1. 配置 [!DNL Adobe Sign] 应用程序的 OAuth 设置：
 
    1. 打开浏览器窗口并登录到 [!DNL Adobe Sign] 开发人员帐户。
-   1. 选择为AEM配置的应用程序 [!DNL Forms]，然后点击 **[!UICONTROL 为应用程序配置OAuth]**.
+   1. 选择为AEM配置的应用程序 [!DNL Forms]，并选择 **[!UICONTROL 为应用程序配置OAuth]**.
    1. 复制 **[!UICONTROL 客户端ID]** 和 **[!UICONTROL 客户端密码]** 记事本。
    1. 在 **[!UICONTROL 重定向URL]** 框中，添加在上一步中复制的HTTPS URL。
    1. 为启用以下OAuth设置 [!DNL Adobe Sign] 应用程序并单击 **[!UICONTROL 保存]**.
@@ -128,15 +128,15 @@ ht-degree: 21%
 
 1. 选择 **[!UICONTROL 另为附件启用Adobe Sign]** 用于将附加到自适应表单的文件追加到相应表单的选项 [!DNL Adobe Sign] 文档已发送供签名。
 
-1. 点按 **[!UICONTROL 连接到Adobe Sign]**. 在系统提示输入凭据时，提供在创建 [!DNL Adobe Sign] 应用程序时所用帐户的用户名和密码。
+1. 选择 **[!UICONTROL 连接到Adobe Sign]**. 在系统提示输入凭据时，提供创建时使用的帐户的用户名和密码 [!DNL Adobe Sign] 应用程序。
 
-1. 点按 **[!UICONTROL 创建]** 创建 [!DNL Adobe Sign] 配置。
+1. 选择 **[!UICONTROL 创建]** 创建 [!DNL Adobe Sign] 配置。
 
 1. 打开AEM Web控制台。 URL为 `https://'[server]:[port]'/system/console/configMgr`
 1. 打开 **[!UICONTROL Forms通用配置服务].**
 1. 在 **[!UICONTROL 允许]** 字段， **选择** 所有用户 — 所有用户（匿名或已登录）都可以预览附件、验证和签署表单，然后单击 **[!UICONTROL 保存].** 创作实例配置为使用 [!DNL Adobe Sign].
 1. 发布配置。
-1. 使用 [复制](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/replication.html?lang=zh-Hans) 以在相应的发布实例上创建相同的配置。
+1. 使用 [复制](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/replication.html) 以在相应的发布实例上创建相同的配置。
 
 现在， [!DNL Adobe Sign] 与AEM集成 [!DNL Forms] 并准备用于自适应表单。 至 [在自适应表单中使用Adobe Sign服务](../../forms/using/working-with-adobe-sign.md#configure-adobe-sign-for-an-adaptive-form)，指定上文在自适应表单属性中创建的配置容器。
 
@@ -164,11 +164,11 @@ ht-degree: 21%
 #### 为您的AEM实例创建重定向URL
 
 1. 在您的AEM Forms实例上，导航到 **[!UICONTROL 工具]** ![锤子](assets/hammer.png) > **[!UICONTROL 常规]** > **[!UICONTROL 配置浏览器]**.
-1. 在 **[!UICONTROL 配置浏览器]** 页面，点按 **[!UICONTROL 创建]**.
-1. 在 **[!UICONTROL 创建配置]** 对话框，请指定 **[!UICONTROL 标题]** 对于配置，启用 **[!UICONTROL 云配置]**，然后点击 **[!UICONTROL 创建]**. 它会创建一个配置容器。 请确保容器/文件夹名称不包含任何空格。
+1. 在 **[!UICONTROL 配置浏览器]** 页面，选择 **[!UICONTROL 创建]**.
+1. 在 **[!UICONTROL 创建配置]** 对话框，请指定 **[!UICONTROL 标题]** 对于配置，启用 **[!UICONTROL 云配置]**，并选择 **[!UICONTROL 创建]**. 它会创建一个配置容器。 请确保容器/文件夹名称不包含任何空格。
 
 1. 导航到 **[!UICONTROL 工具]** ![锤子](assets/hammer.png) > **[!UICONTROL Cloud Service]** > **[!UICONTROL Adobe Acrobat Sign]** ，然后打开您在上一步中创建的配置容器。 在创建自适应表单时，请在 **[!UICONTROL 配置容器]** 字段。
-1. 在配置页面上，点击 **[!UICONTROL 创建]** 创建 [!DNL Adobe Acrobat Sign] AEM Forms配置。
+1. 在配置页面上，选择 **[!UICONTROL 创建]** 创建 [!DNL Adobe Acrobat Sign] AEM Forms配置。
 1. 将当前浏览器窗口的URL从URL复制到记事本。 此URL称为 `re-direct URL`. 在下一部分中，您共享 `re-direct URL` 和 `Scopes` 包含Adobe Sign团队和请求凭据（客户端ID和客户端密钥）。
 
 >[!NOTE]
@@ -200,7 +200,7 @@ Adobe Acrobat Sign政府解决方案团队要求 `re-direct URL` 以及要为您
 
 1. 打开 `re-direct URL` 在浏览器中。 您创建并记下了 `re-direct URL` 在 [在您的AEM实例上创建重定向URL](#create-redirect-url) 部分。
 
-1. 在 **[!UICONTROL 常规]** 选项卡 **[!UICONTROL 创建Adobe Sign配置]** 页面，指定 **[!UICONTROL 名称]** 对于配置，然后点击 **[!UICONTROL 下一个]**. 您可以选择指定 **[!UICONTROL 标题]** 并浏览以选择 **[!UICONTROL 缩略图]** 用于配置。 单击&#x200B;**[!UICONTROL 下一步]**。
+1. 在 **[!UICONTROL 常规]** 选项卡 **[!UICONTROL 创建Adobe Sign配置]** 页面，指定 **[!UICONTROL 名称]** 对于配置，并选择 **[!UICONTROL 下一个]**. 您可以选择指定 **[!UICONTROL 标题]** 并浏览以选择 **[!UICONTROL 缩略图]** 用于配置。 单击&#x200B;**[!UICONTROL 下一步]**。
 
 1. 在 **[!UICONTROL 设置]** 选项卡 **[!UICONTROL 创建Adobe Sign配置]** 页面，用于 **[!UICONTROL 选择解决方案]** 选项，选择 [!DNL Adobe Acrobat Sign Solutions for Government].
 
@@ -214,26 +214,26 @@ Adobe Acrobat Sign政府解决方案团队要求 `re-direct URL` 以及要为您
 
 1. 选择 **[!UICONTROL 为附件启用Adobe Acrobat Sign]** 用于将附加到自适应表单的文件追加到相应表单的选项 [!DNL Adobe Acrobat Sign] 文档已发送供签名。
 
-1. 点按 **[!UICONTROL 连接到Adobe Sign]**. 在系统提示输入凭据时，提供在创建 [!DNL Adobe Acrobat Sign] 应用程序时所用帐户的用户名和密码。当要求确认访问时 `Adobe Acrobat Sign for Government Solutions` 和，单击 **[!UICONTROL 允许访问]**. 如果凭据正确，并且您允许 [!DNL AEM Forms] 访问您的 [!DNL Adobe Acrobat Sign] 开发人员帐户，系统会显示一条与以下内容类似的成功消息。
+1. 选择 **[!UICONTROL 连接到Adobe Sign]**. 在系统提示输入凭据时，提供在创建 [!DNL Adobe Acrobat Sign] 应用程序时所用帐户的用户名和密码。当要求确认访问时 `Adobe Acrobat Sign for Government Solutions` 和，单击 **[!UICONTROL 允许访问]**. 如果凭据正确，并且您允许 [!DNL AEM Forms] 访问您的 [!DNL Adobe Acrobat Sign] 开发人员帐户，系统会显示一条与以下内容类似的成功消息。
 
    ![Adobe Acrobat Sign云配置成功](/help/forms/using/assets/adobe-sign-cloud-configuration-success.png)
 
    在系统提示输入凭据时，提供在创建 [!DNL Adobe Acrobat Sign] 应用程序时所用帐户的用户名和密码。当要求确认访问时 `your account`，然后单击 **[!UICONTROL 允许访问]**.
 
-1. 点按 **[!UICONTROL 创建]** 以创建配置。
+1. 选择 **[!UICONTROL 创建]** 以创建配置。
 1. 打开AEM Web控制台。 URL为 `https://'[server]:[port]'/system/console/configMgr`
 1. 打开 **[!UICONTROL Forms通用配置服务].**
 1. 在 **[!UICONTROL 允许]** 字段， **选择** 所有用户 — 所有用户（匿名或已登录）都可以预览附件、验证和签署表单，然后单击 **[!UICONTROL 保存].** 创作实例配置为使用 [!DNL Adobe Sign].
 
 1. 发布配置。
-1. 使用 [复制](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/replication.html?lang=zh-Hans) 以在相应的发布实例上创建相同的配置。
+1. 使用 [复制](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/replication.html) 以在相应的发布实例上创建相同的配置。
 
-现在，您可以 [在自适应表单中使用添加Adobe Acrobat Sign字段](working-with-adobe-sign.md) 或 [AEM Workflow](/help/forms/using/aem-forms-workflow-step-reference.md#sign-document-step-sign-document-step). 确保将用于Cloud Service配置的配置容器添加到启用的所有自适应Forms [!DNL Adobe Acrobat Sign]. 您可以在自适应表单的属性中指定配置容器。
+现在，您可以 [在自适应表单中使用添加Adobe Acrobat Sign字段](working-with-adobe-sign.md) 或 [AEM Workflow](/help/forms/using/aem-forms-workflow-step-reference.md#sign-document-step-sign-document-step). 确保将用于Cloud Service配置的配置容器添加到启用的所有自适应Forms [!DNL Adobe Acrobat Sign]. 您可以从自适应表单的属性中指定配置容器。
 
 
 ## 配置 [!DNL Adobe Sign] 用于同步签名状态的计划程序 {#configure-adobe-sign-scheduler-to-sync-the-signing-status}
 
-An [!DNL Adobe Sign] 仅在所有签名者完成签名过程后提交启用的自适应表单。 默认情况下， [!DNL Adobe Sign] 计划程序服务被安排在每24小时检查（轮询）签名者响应。 您可以为您的环境更改此默认间隔。执行以下步骤以更改默认间隔：
+An [!DNL Adobe Sign] 仅在所有签名者完成签名过程后提交启用的自适应表单。 默认情况下， [!DNL Adobe Sign] 计划程序服务被安排在每24小时检查（轮询）签名者响应。 您可以更改环境的默认间隔。 执行以下步骤以更改默认间隔：
 
 1. 登录到AEM [!DNL Forms] 具有管理员凭据的服务器，并导航到 **工具** > **[!UICONTROL 操作]** > **[!UICONTROL Web控制台]**.
 

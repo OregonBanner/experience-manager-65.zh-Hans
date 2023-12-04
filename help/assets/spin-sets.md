@@ -11,9 +11,9 @@ docset: aem65
 feature: Spin Sets,Asset Management
 role: User, Admin
 exl-id: 758ad754-15de-4e72-9b7d-ab49c51d7d4f
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '1975'
+source-wordcount: '2004'
 ht-degree: 8%
 
 ---
@@ -149,9 +149,9 @@ ht-degree: 8%
 
    * 在旋转集编辑器页面的左上角附近，选择 **[!UICONTROL 添加资源]**.
 
-   * 在“旋转集编辑器”页面中间附近，选择 **[!UICONTROL 点按以打开资产选择器]**.
+   * 在“旋转集编辑器”页面中间附近，选择 **[!UICONTROL 选择以打开资产选择器]**.
 
-   点按以选择要包含在旋转集中的资产。 选定资产上有一个复选标记图标。完成后，在页面的右上角附近，选择 **[!UICONTROL 选择]**.
+   选择以选择要包含在旋转集中的资产。 选定资产上有一个复选标记图标。完成后，在页面的右上角附近，选择 **[!UICONTROL 选择]**.
 
    借助资产选择器，您可以通过键入关键字并点按&#x200B;**[!UICONTROL 返回]**&#x200B;来搜索资产。您还可以应用过滤器来优化搜索结果。您可以按路径、收藏集、文件类型和标记进行过滤。选择过滤器，然后选择 **[!UICONTROL 筛选]** 图标。 点按“视图”图标并选择&#x200B;**[!UICONTROL 列视图]**、**[!UICONTROL 卡片视图]**&#x200B;或&#x200B;**[!UICONTROL 列表视图]**&#x200B;可更改视图。
 

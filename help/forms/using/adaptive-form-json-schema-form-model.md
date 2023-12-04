@@ -5,10 +5,10 @@ feature: Adaptive Forms
 role: User, Developer
 level: Beginner, Intermediate
 exl-id: 1b402aef-a319-4d32-8ada-cadc86f5c872
-source-git-commit: d0768679182567cc7cd618adaa78b6518f902f7c
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '1861'
-ht-degree: 8%
+source-wordcount: '1844'
+ht-degree: 7%
 
 ---
 
@@ -98,7 +98,7 @@ JSON元素与自适应表单组件的映射如下所示：
   </tr>
   <tr>
    <td>布尔属性<br /> </td>
-   <td>开关<br /> </td>
+   <td>切换<br /> </td>
   </tr>
   <tr>
    <td>对象属性<br /> </td>
@@ -736,7 +736,7 @@ JavaScript是自适应表单的表达式语言。 所有表达式都是有效的
 
 1. 转到Experience ManagerWeb控制台，网址为 `https://server:host/system/console/configMgr`.
 1. 定位 **[!UICONTROL 自适应表单和互动通信Web渠道配置]**.
-1. 点按以在编辑模式下打开配置。
+1. 选择以在编辑模式下打开配置。
 1. 选择 **[!UICONTROL 生成符合架构的数据]** 复选框。
 1. 保存设置。
 

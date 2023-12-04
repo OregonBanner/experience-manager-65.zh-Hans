@@ -10,16 +10,16 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
 discoiquuid: f6440a36-719a-4f89-b7db-1af918a3469a
 exl-id: 9333705b-9944-4a74-a30f-7d9ec85fd824
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '886'
-ht-degree: 2%
+source-wordcount: '890'
+ht-degree: 1%
 
 ---
 
 # 品牌化自定义 {#branding-customization}
 
-您可以自定义应用程序图标、应用程序名称、启动图像和登录页面，以便为AEM Forms应用程序提供独特的组织特定外观。 例如，您可以将图像更改为使用您组织的徽标。 AEM Forms应用程序支持以下自定义设置：
+您可以自定义应用程序图标、应用程序名称、启动图像和登录页面，以便为AEM Forms应用程序提供独特的组织特定外观。 例如，您可以更改图像以使用您组织的徽标。 AEM Forms应用程序支持以下自定义设置：
 
 * 自定义应用程序图标和启动图像
 * 自定义应用程序名称
@@ -32,24 +32,24 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->对于所有图标和图像，请使用非交错式PNG格式。
+>对于所有图标和图像，请使用非隔行PNG格式。
 
 ### 自定义图标和启动图像 {#to-customize-icon-and-launch-images}
 
-#### 对于iOS {#for-ios}
+#### 适用于iOS的 {#for-ios}
 
 1. 打开 `Capture.xcodeproj` Xcode中的项目。
-1. (***用于自定义图标***)在Capture的导航视图中，导航到 **[!UICONTROL 捕获>捕获>支持文件> Capture-info.plist]**. 单击图标文件旁边的下拉菜单。 指定图标文件(.png)的名称，并将文件上传到 **[!UICONTROL 捕获>捕获>资源>图标]**. 当前支持的维度为：29x29、50x50、58x58、72x72、100x100和144x144。
-1. (***用于自定义启动图像***)确保图像的文件名是：
+1. (***用于自定义的图标***)在Capture的导航视图中，导航到 **[!UICONTROL 捕获>捕获>支持文件> Capture-info.plist]**. 单击图标文件旁边的下拉菜单。 指定图标文件(.png)的名称，然后将该文件上传到 **[!UICONTROL 捕获>捕获>资源>图标]**. 当前支持的维度为：29x29、50x50、58x58、72x72、100x100和144x144。
+1. (***用于自定义启动图像***)确保映像的文件名是：
 
-   * 对于纵向： `Default-Portrait~ipad.png` 和 `Default-Portrait@2x~ipad.png`
+   * 纵向： `Default-Portrait~ipad.png` 和 `Default-Portrait@2x~ipad.png`
    * 对于横向： `Default-Landscape~ipad.png` 和 `Default-Landscape@2x~ipad.png`
 
-   将它们上载到捕获项目以替换项目中的现有文件。
+   将它们上载到Capture项目以替换项目中的现有文件。
 
    >[!NOTE]
    >
-   >确保图像的名称和分辨率与您在项目中替换的图像匹配。
+   >确保图像的名称和分辨率与您在项目中替换的图像相匹配。
 
 1. 在iOS设备或iOS模拟器上构建并运行AEM Forms应用程序。
 
@@ -69,7 +69,7 @@ ht-degree: 2%
 
    >[!NOTE]
    >
-   >确保图像的名称和分辨率与您在项目中替换的图像匹配。
+   >确保图像的名称和分辨率与您在项目中替换的图像相匹配。
 
 1. 重新构建AEM Forms应用程序。
 
@@ -85,13 +85,13 @@ ht-degree: 2%
 
    >[!NOTE]
    >
-   >确保图像的名称和分辨率与您在项目中替换的图像匹配。
+   >确保图像的名称和分辨率与您在项目中替换的图像相匹配。
 
 1. 重新构建AEM Forms应用程序。
 
 ## 自定义应用程序名称 {#customize-the-app-name}
 
-### 对于iOS {#for-ios-1}
+### 适用于iOS的 {#for-ios-1}
 
 1. 打开 `Capture.xcodeproj` Xcode中的项目。
 1. 在Capture的导航视图中，导航到 **[!UICONTROL 捕获>捕获>支持文件> InfoPlist.strings]**.
@@ -126,11 +126,11 @@ ht-degree: 2%
 
 ## 在登录页面上自定义图像 {#customizing-images-on-the-login-page}
 
-AEM Forms应用程序的登录页面具有徽标和背景图像。 徽标位于登录对话框上方，背景图像位于登录对话框下方。 执行以下步骤以自定义登录页面上的默认图像：
+AEM Forms应用程序的登录页面具有徽标和背景图像。 徽标位于登录对话框的上方，背景图像位于登录对话框的下方。 执行以下步骤以自定义登录页面上的默认映像：
 
 **开始之前**
 
-确保您具有以下图像：
+确保您拥有以下图像：
 
 <table>
  <tbody>
@@ -156,8 +156,8 @@ AEM Forms应用程序的登录页面具有徽标和背景图像。 徽标位于�
 
 1. 打开 `Capture.xcodeproj` Xcode中的项目。
 
-1. 导航到 `www/wsmobile/images`文件夹。
-1. 要更改徽标，请替换默认 `LC-logo.png` 包含自定义的文件 `LC-logo.png` 文件。
+1. 导航至 `www/wsmobile/images`文件夹。
+1. 要更改徽标，请替换默认值 `LC-logo.png` 包含自定义的文件 `LC-logo.png` 文件。
 1. 要更改背景，请替换默认背景 `Landing_bg.jpeg` 包含自定义的文件 `Landing_bg.jpeg`文件。
 1. 在iOS设备或iOS模拟器上构建并运行AEM Forms应用程序。
 
@@ -165,8 +165,8 @@ AEM Forms应用程序的登录页面具有徽标和背景图像。 徽标位于�
 
 1. 在Eclipse中打开Android项目。
 
-1. 导航到 `assets/www/wsmobile/images`文件夹。
-1. 要更改徽标，请替换默认 `LC-logo.png` 包含自定义的文件 `LC-logo.png` 文件。
+1. 导航至 `assets/www/wsmobile/images`文件夹。
+1. 要更改徽标，请替换默认值 `LC-logo.png` 包含自定义的文件 `LC-logo.png` 文件。
 1. 要更改背景，请替换默认背景 `Landing_bg.jpeg` 包含自定义的文件 `Landing_bg.jpeg`文件。
 1. 在Android设备上构建和运行AEM Forms应用程序。
 
@@ -174,18 +174,18 @@ AEM Forms应用程序的登录页面具有徽标和背景图像。 徽标位于�
 
 1. 打开 `MWSWindows.sln` Visual Studio中的项目。
 
-1. 导航到 `MWSWindows\www\wsmobile\images`文件夹。
-1. 要更改徽标，请替换默认 `LC-logo.png` 包含自定义的文件 `LC-logo.png` 文件。
+1. 导航至 `MWSWindows\www\wsmobile\images`文件夹。
+1. 要更改徽标，请替换默认值 `LC-logo.png` 包含自定义的文件 `LC-logo.png` 文件。
 1. 要更改背景，请替换默认背景 `Landing_bg.jpeg` 包含自定义的文件 `Landing_bg.jpeg`文件。
-1. 在Windows设备上构建和运行AEM Forms应用程序。
+1. 在Windows设备上构建并运行AEM Forms应用程序。
 
 ## 在应用程序菜单中自定义徽标 {#customizing_images_on_the_login_page-1}
 
-登录AEM Forms应用程序并点击菜单按钮后，您可以看到菜单上方的徽标。 执行以下步骤以自定义默认徽标：
+登录AEM Forms应用程序并选择菜单按钮后，您可以看到菜单上方的徽标。 执行以下步骤以自定义默认徽标：
 
 **开始之前**
 
-确保您具有以下图像：
+确保您拥有以下图像：
 
 <table>
  <tbody>
@@ -206,7 +206,7 @@ AEM Forms应用程序的登录页面具有徽标和背景图像。 徽标位于�
 
 1. 打开 `Capture.xcodeproj` Xcode中的项目。
 
-1. 导航到 `www/wsmobile/images`文件夹。
+1. 导航至 `www/wsmobile/images`文件夹。
 1. 要更改徽标，请替换默认值 `aem_icon.png` 包含自定义的文件 `aem_icon.png` 文件。
 1. 在iOS设备或iOS模拟器上构建并运行AEM Forms应用程序。
 
@@ -214,7 +214,7 @@ AEM Forms应用程序的登录页面具有徽标和背景图像。 徽标位于�
 
 1. 在Eclipse中打开Android项目。
 
-1. 导航到 `assets/www/wsmobile/images`文件夹。
+1. 导航至 `assets/www/wsmobile/images`文件夹。
 1. 要更改徽标，请替换默认值 `aem_icon.png` 包含自定义的文件 `aem_icon.png` 文件。
 1. 在Android设备上构建和运行AEM Forms应用程序。
 
@@ -222,6 +222,6 @@ AEM Forms应用程序的登录页面具有徽标和背景图像。 徽标位于�
 
 1. 打开 `MWSWindows.sln` Visual Studio中的项目。
 
-1. 导航到 `MWSWindows\www\wsmobile\images`文件夹。
+1. 导航至 `MWSWindows\www\wsmobile\images`文件夹。
 1. 要更改徽标，请替换默认值 `aem_icon.png` 包含自定义的文件 `aem_icon.png` 文件。
-1. 在Windows设备上构建和运行AEM Forms应用程序。
+1. 在Windows设备上构建并运行AEM Forms应用程序。

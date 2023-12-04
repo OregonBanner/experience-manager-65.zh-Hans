@@ -7,9 +7,9 @@ feature: Asset Management,Search
 mini-toc-levels: 4
 exl-id: 158607e6-b4e9-4a3f-b023-4023d60c97d2
 hide: true
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '10067'
+source-wordcount: '10038'
 ht-degree: 3%
 
 ---
@@ -655,7 +655,7 @@ CUG是限制对资源的访问权限的额外方法。 您还可以配置文件�
 
 快速操作图标一次可用于单个资源。 根据您的设备，执行以下操作以显示快速操作图标：
 
-* 触控设备：触控并按住。 例如，在iPad上，您可以点按并按住资产，以便显示快速操作。
+* 触控设备：触控并按住。 例如，在iPad上，您可以选择并按住资产，以便显示快速操作。
 * 非触控设备：悬停指针。 例如，在桌面设备上，如果将指针悬停在资产缩略图上，则会显示快速操作栏。
 
 ### 导航并选择资源 {#navigating-and-selecting-assets}

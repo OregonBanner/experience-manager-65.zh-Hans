@@ -11,7 +11,7 @@ discoiquuid: 69210727-dde3-495a-87b7-2e8173e6b664
 docset: aem65
 role: Admin
 exl-id: b5f6a54e-92d1-4631-a1d1-184f37d174b6
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
 source-wordcount: '2509'
 ht-degree: 0%
@@ -40,9 +40,9 @@ ht-degree: 0%
 要下载Forms和文档资源，请执行以下操作：
 
 1. 登录到AEM Forms实例。
-1. 点按Experience Manager ![adobeexperiencemanager](assets/adobeexperiencemanager.png) 图标>导航 ![指南针](assets/compass.png) 图标> Forms > Forms和文档。
-1. 选择表单资产并点按 **下载** 图标。
-1. 在下载资产中，选择以下选项之一，然后点按 **下载**.
+1. 选择Experience Manager ![adobeexperiencemanager](assets/adobeexperiencemanager.png) 图标>导航 ![指南针](assets/compass.png) 图标> Forms > Forms和文档。
+1. 选择表单资源并选择 **下载** 图标。
+1. 在下载资产中，选择以下选项之一，然后选择 **下载**.
 
    * **下载为CRX包：** 使用选项可下载所有选定的资源和相关依赖项，并将其从AEM Forms实例移动到另一个实例。 它将所有资源和文件夹下载为crx包。 任何表单资源，包括在AEM中创作的表单（自适应表单、交互式通信和自适应表单片段）、表单集、表单模板、PDF文档和资源（XSD、XFS、图像），都可以从AEM Forms UI中作为包下载。
 将资源下载为包的优势在于，它还可以下载选定要下载的资源已使用的资源。 例如，如果您有一个自适应表单，该表单使用表单模板、XSD和图像。 当您选择此自适应表单并将其下载为包时，下载的包中还包含表单模板、XSD和图像。 与资源关联的所有元数据属性（包括自定义属性）也会下载。
@@ -63,11 +63,11 @@ ht-degree: 0%
 >[!VIDEO](https://vimeo.com/)
 
 1. 登录到AEM Forms实例。
-1. 点按Experience Manager ![adobeexperiencemanager](assets/adobeexperiencemanager.png) 图标>导航 ![指南针](assets/compass.png) 图标>Forms>Forms和文档。
-1. 点按 **创建** >**文件上传**. 此时会显示上传表单或资源包对话框。
-1. 在对话框中，浏览并选择要导入的软件包或存档。 您还可以选择PDF文档、XSD、图像、样式表和XDP表单。 点按 **打开**. 您选择的文件夹或文件名不得包含任何特殊字符。
+1. 选择Experience Manager ![adobeexperiencemanager](assets/adobeexperiencemanager.png) 图标>导航 ![指南针](assets/compass.png) 图标>Forms>Forms和文档。
+1. 选择 **创建** >**文件上传**. 此时会显示上传表单或资源包对话框。
+1. 在对话框中，浏览并选择要导入的软件包或存档。 您还可以选择PDF文档、XSD、图像、样式表和XDP表单。 选择 **打开**. 您选择的文件夹或文件名不得包含任何特殊字符。
 
-   在对话框中，验证要上传的资源的详细信息，然后点击 **上传**.
+   在对话框中，验证要上传的资源的详细信息，然后选择 **上传**.
 
    如果上传现有的表单资源，则会更新该资源。
 
@@ -86,8 +86,8 @@ ht-degree: 0%
 要下载主题，请执行以下操作：
 
 1. 登录到AEM Forms实例。
-1. 点按Experience Manager ![adobeexperiencemanager](assets/adobeexperiencemanager.png) 图标>导航 ![指南针](assets/compass.png) 图标>Forms>主题。
-1. 选择主题并点按 **下载**. 主题将下载为存档（.zip文件）。
+1. 选择Experience Manager ![adobeexperiencemanager](assets/adobeexperiencemanager.png) 图标>导航 ![指南针](assets/compass.png) 图标>Forms>主题。
+1. 选择主题并选择 **下载**. 主题将下载为存档（.zip文件）。
 
 ### 上传主题 {#uploading-a-theme}
 
@@ -101,7 +101,7 @@ ht-degree: 0%
 上传的主题可在主题页面中找到。
 
 1. 登录到AEM Forms实例。
-1. 点按Experience Manager ![adobeexperiencemanager](assets/adobeexperiencemanager.png) 图标>导航 ![指南针](assets/compass.png) 图标>Forms>主题。
+1. 选择Experience Manager ![adobeexperiencemanager](assets/adobeexperiencemanager.png) 图标>导航 ![指南针](assets/compass.png) 图标>Forms>主题。
 1. 单击 **创建** > **文件上传**. 在“文件上传”提示符下，浏览并选择计算机上的主题包，然后单击 **上传**. 主题已上传。
 
 ## 在通信管理中导入和导出资源 {#import-and-export-assets-in-correspondence-management}
@@ -110,15 +110,15 @@ ht-degree: 0%
 
 ### 导出文档片段、信件和/或数据字典 {#export-document-fragments-letters-and-or-data-dictionaries}
 
-1. 在信件、文档片段或数据字典页面中，点按并选择要导出到单个包的资产，然后点按队列以供下载。 资源已排队准备导出。
+1. 在信件、文档片段或数据字典页面中，选择要导出到单个包的资产，然后选择“排队等待下载”。 资源已排队准备导出。
 1. 根据需要，重复上述步骤以添加字母、文档片段和数据字典。
-1. 点按 **下载**.
+1. 选择 **下载**.
 1. 通信管理会显示“下载资产”对话框，其中包含导出列表中的资产列表。
 
    ![导出](assets/export.png)
 
-1. 要查看导出的依赖项，请点按“解析”。 或者跳到下一步。 即使不点击“解析”，依赖关系仍会导出。
-1. 要下载.cmp文件，请点击 **确定**.
+1. 要查看导出的依赖关系，请选择“解决”。 或者跳到下一步。 即使不选择“解析”，依赖关系仍被导出。
+1. 要下载.cmp文件，请选择 **确定**.
 1. 通信管理会将.cmp文件下载到您的计算机。
 
    .cmp文件包含导出的资产。 您可以与其他人共享.cmp文件。 其他用户可以在其他服务器中导入.cmp文件，以获取新服务器中的所有资源。
@@ -132,9 +132,9 @@ ht-degree: 0%
 要将所有相应的管理资产和相关依赖项下载为包，请完成以下步骤：
 
 1. 以表单用户身份登录AEM Forms服务器。
-1. 点按 **Adobe Experience Manager** 在全局导航栏中。
-1. 点按工具( ![工具](assets/tools.png))，然后点击 **Forms**.
-1. 点按 **导出相应的管理资源**.
+1. 选择 **Adobe Experience Manager** 在全局导航栏中。
+1. 选择工具( ![工具](assets/tools.png))，然后选择 **Forms**.
+1. 选择 **导出相应的管理资源**.
 
    ![publish-cmp-assets-1](assets/publish-cmp-assets-1.png)
 
@@ -142,7 +142,7 @@ ht-degree: 0%
 
    ![export-last-run-details](assets/export-last-run-details.png)
 
-1. 点按 **导出** 然后，在确认消息中，点击 **确定**.
+1. 选择 **导出** 然后，在确认消息中，选择 **确定**.
 
    批处理完成后，将更新上次运行详细信息和下载包的链接。 这包括管理员登录信息以及批处理是否成功运行的信息。 资产将导出到资源包，并显示“下载导出的资源包”链接。
 
@@ -150,7 +150,7 @@ ht-degree: 0%
    >
    >导出所有资产流程一旦启动便无法取消。 此外，在导出所有操作的过程中，请勿创建、删除、修改或发布任何资产，也不要启动发布所有资产流程。a
 
-1. 点按 **下载导出的包** 用于下载包文件的链接。
+1. 选择 **下载导出的包** 用于下载包文件的链接。
 
    要将包中的资产添加到通信管理的另一个实例， [将资源包导入到AEM Forms实例](../../forms/using/import-export-forms-templates.md#p-upload-forms-documents-assets-p).
 
@@ -162,8 +162,8 @@ ht-degree: 0%
 >
 >在导入旧的通信管理资产以进行迁移时，请使用管理员帐户登录。 有关迁移旧通信管理资产的更多信息，请参阅 [将相应的管理资源迁移到AEM 6.1表单](/help/forms/using/migration-utility.md).
 
-1. 在数据字典、字母或文档片段页面上，点按 **“创建”>“文件上传”** 并选择.cmp文件。
-1. 通信管理会显示“导入资源”对话框，其中包含已导入的资源的列表。 点按 **导入**.
+1. 在数据字典、字母或文档片段页面上，选择 **“创建”>“文件上传”** 并选择.cmp文件。
+1. 通信管理会显示“导入资源”对话框，其中包含已导入的资源的列表。 选择 **导入**.
 
    导入资产后，资产的以下属性将更新，而其他属性将保持不变：
 
@@ -183,7 +183,7 @@ ht-degree: 0%
 1. 指定包的名称、版本和组。 单击&#x200B;**[!UICONTROL 确定]**。
 1. 单击 **[!UICONTROL 编辑]** 然后打开 **[!UICONTROL 过滤器]** 选项卡。 单击 **[!UICONTROL 添加筛选器]**. 指定工作流应用程序的路径。 例如，/etc/fd/dashboard/startpoints/homemortgage。 单击 **[!UICONTROL 添加规则]**.
 
-1. 打开&#x200B;**[!UICONTROL 高级]**&#x200B;选项卡。选择 **[!UICONTROL 合并]** 或 **[!UICONTROL 覆盖]** 在ACL处理字段中。 单击&#x200B;**[!UICONTROL 保存]**。
+1. 打开 **[!UICONTROL 高级]** 选项卡。 选择 **[!UICONTROL 合并]** 或 **[!UICONTROL 覆盖]** 在ACL处理字段中。 单击&#x200B;**[!UICONTROL 保存]**。
 1. 单击 **[!UICONTROL 生成]** 以创建包。
 
    生成包后，您可以下载包并将其导入其他服务器。 工作流应用程序会出现在上传包的服务器上。
@@ -202,7 +202,7 @@ AEM Forms用户界面使用文件夹来排列资源。 这些文件夹用于排�
 
 1. 登录到AEM Forms用户界面，网址为 `https://<server>:<port>/aem/forms.html`.
 1. 导航到要创建文件夹的位置。
-1. 点按创建>文件夹。
+1. 选择“创建”>“文件夹”。
 1. 输入以下详细信息：
 
    * **标题：** 文件夹的显示名称
@@ -216,7 +216,7 @@ AEM Forms用户界面使用文件夹来排列资源。 这些文件夹用于排�
 
    如果存在具有指定名称的文件夹，则提交会失败并出现错误。 您可以通过将鼠标悬停在错误上来查看错误消息 ![aem6forms_error_alert](assets/aem6forms_error_alert.png) 显示在“名称”字段旁边的图标。
 
-   您可以点按新创建的文件夹，以进入该文件夹，并在该文件夹中创建资产或文件夹。 此外，您还可以选择一个文件夹，并选择将该文件夹排入下载队列、删除或编辑其名称。
+   您可以选择新创建的文件夹进入该文件夹，并在该文件夹中创建资源或文件夹。 此外，您还可以选择一个文件夹，并选择将该文件夹排入下载队列、删除或编辑其名称。
 
    ![editdeletedownloadafolder](assets/editdeletedownloadafolder.png)
 
@@ -227,19 +227,19 @@ AEM Forms用户界面使用文件夹来排列资源。 这些文件夹用于排�
 完成以下步骤以创建资产和信件的副本：
 
 1. 在相关的资产或信件页面中，选择一个或多个资产/信件。 UI会显示复制图标。
-1. 点按复制。UI将显示“粘贴”图标。 在粘贴之前，您还可以选择在文件夹内进行导航/导航。 不同的文件夹可以包含具有相同名称的资源。 有关文件夹的详细信息，请参阅 [文件夹和组织资源](#folders-and-organizing-assets).
-1. 点按粘贴。 将显示“粘贴”对话框。 系统会自动为资产/信函的新副本生成名称和标题，但您可以编辑资产/信函的标题和名称。
+1. 选择复制。 UI将显示“粘贴”图标。 在粘贴之前，您还可以选择在文件夹内进行导航/导航。 不同的文件夹可以包含具有相同名称的资源。 有关文件夹的详细信息，请参阅 [文件夹和组织资源](#folders-and-organizing-assets).
+1. 选择“粘贴”。 将显示“粘贴”对话框。 系统会自动为资产/信函的新副本生成名称和标题，但您可以编辑资产/信函的标题和名称。
 
    如果您将资产/信件复制并粘贴到同一位置，则会将后缀“ — CopyXX”添加到资产/信件的现有名称中。 如果复制的资产/信件不存在标题，则自动生成的标题字段将保持空白。
 
 1. 如有必要，请编辑要用于保存资产/信件副本的标题和名称。
-1. 点按粘贴。 将创建复制资产的新副本。
+1. 选择“粘贴”。 将创建复制资产的新副本。
 
 ## 搜索 {#search-forms}
 
-通过AEM Forms UI，您可以搜索内容。 使用顶部栏，您可以点按搜索 **[A]** 在内容中搜索资源和文档。
+通过AEM Forms UI，您可以搜索内容。 使用顶部栏，您可以选择“搜索” **[A]** 在内容中搜索资源和文档。
 
-搜索资源时，AEM Forms会显示侧面板。 您也可以点按 ![assets-browser-content-only](assets/assets-browser-content-only.png) >筛选器 **[B]** 以调用侧面板。 使用侧面板中的各种过滤器，可以缩小搜索范围。 侧面板还允许您保存搜索。
+搜索资源时，AEM Forms会显示侧面板。 您还可以选择 ![assets-browser-content-only](assets/assets-browser-content-only.png) >筛选器 **[B]** 以调用侧面板。 使用侧面板中的各种过滤器，可以缩小搜索范围。 侧面板还允许您保存搜索。
 
 ![search_topbar](assets/search_topbar.png)
 

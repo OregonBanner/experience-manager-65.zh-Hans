@@ -10,10 +10,10 @@ topic-tags: Adaptive Forms
 docset: aem65
 role: Admin, Developer
 exl-id: ee596672-b0b5-42e9-a139-72f90287bf3b
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '1794'
-ht-degree: 34%
+source-wordcount: '1743'
+ht-degree: 35%
 
 ---
 
@@ -64,9 +64,9 @@ ht-degree: 34%
 
 1. 登录到您的本地 [AEM创作实例](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html?lang=en#author-and-publish-installs).
 
-1. 在 Experience Manager 登录页面上输入您的凭据。登录后，在左上角，点按 **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL 表单]** > **[!UICONTROL 表单和文档]**。
+1. 在 Experience Manager 登录页面上输入您的凭据。登录后，在左上角选择 **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]** > **[!UICONTROL Forms和文档]**.
 
-1. 点按 **[!UICONTROL 创建]**  > **[!UICONTROL 创建自适应Forms]**.
+1. 选择 **[!UICONTROL 创建]**  > **[!UICONTROL 创建自适应Forms]**.
 
 1. 选择自适应Forms核心组件模板并单击 **[!UICONTROL 下一个]**.
 
@@ -78,10 +78,10 @@ ht-degree: 34%
    * **[!UICONTROL 主题客户端库]：** 指定自适应表单的主题。 默认情况下， `adaptiveform.theme.canvas3` 已选择主题。 您也可以从中选择不同的主题 **[!UICONTROL 主题客户端库]** 下拉菜单。
    * **[!UICONTROL 配置容器：]**  定义存储自适应Forms配置文件的位置。 这些配置文件包含与自适应Forms的行为和外观相关的设置和属性。
    * **[!UICONTROL 标记：]** 指定用于唯一标识自适应表单的标记。 标记有助于搜索表单。 要创建标记，请在 **[!UICONTROL 标记]** 盒子。
-1. 点按&#x200B;**[!UICONTROL 创建]**。创建自适应表单，并显示用于打开表单进行编辑的对话框。
+1. 选择&#x200B;**[!UICONTROL 创建]**。创建自适应表单，并显示用于打开表单进行编辑的对话框。
 
 
-1. 点按 **[!UICONTROL 编辑]** 以在新选项卡中打开新创建的表单。 将打开表单进行编辑，并显示模板中的可用内容。 它还会显示用于自定义新创建表单的边栏。
+1. 选择 **[!UICONTROL 编辑]** 以在新选项卡中打开新创建的表单。 将打开表单进行编辑，并显示模板中的可用内容。 它还会显示用于自定义新创建表单的边栏。
 
 
 ## 使用自适应Forms核心组件创建表单
@@ -90,7 +90,7 @@ ht-degree: 34%
 
 ## 配置自适应表单的提交操作 {#configure-submit-action-for-form}
 
-提交操作让您选择通过自适应表单捕获的数据的目标。当用户单击自适应表单上的提交按钮时，将触发此操作。自适应表单包括一些现成的提交操作。 您还可以扩展默认提交操作以创建自己的自定义提交操作。 要为表单配置提交操作，请执行以下操作：
+提交操作让您选择通过自适应表单捕获的数据的目标。当用户单击自适应表单上的提交按钮时，会触发该事件。 自适应表单包括一些现成的提交操作。 您还可以扩展默认提交操作以创建自己的自定义提交操作。 要为表单配置提交操作，请执行以下操作：
 
 1. 打开内容浏览器，然后选择自适应表单的&#x200B;**[!UICONTROL 指南容器]**&#x200B;组件。
 1. 单击指南容器属性![指南属性](/help/forms/using/assets/configure-icon.svg)图标。这将打开“自适应表单容器”对话框。
@@ -123,7 +123,7 @@ ht-degree: 34%
 
 ## 为自适应表单配置架构或表单数据模型 {#configure-schema-or-data-model-for-form}
 
-您可以使用表单数据模型将表单连接到数据源，以根据用户操作发送和接收数据。 您还可以将表单连接到JSON架构，以预定义格式接收提交的数据。 根据要求，将表单连接到JSON架构或表单数据模型：
+您可以使用表单数据模型将表单连接到数据源，以根据用户操作来发送和接收数据。您还可以将表单连接到 JSON 架构，以接收预定义格式的提交数据。根据要求，将表单连接到 JSON 架构或表单数据模型：
 
 * [创建JSON架构并上传到您的环境](/help/forms/using/adaptive-form-json-schema-form-model.md)
 * [创建表单数据模型](/help/forms/using/create-form-data-models.md)
@@ -164,17 +164,17 @@ ht-degree: 34%
 1. 单击指南容器属性![指南属性](/help/forms/using/assets/configure-icon.svg)图标。这将打开“自适应表单容器”对话框。
 1. 单击自适应表单容器属性 ![自适应表单容器属性](/help/forms/using/assets/configure-icon.svg) 图标。 此时将打开用于配置数据模型的自适应表单容器对话框。
    ![单击扳手图标以打开自适应表单容器对话框以配置重定向页面或感谢消息](/help/forms/using/assets/adaptive-forms-container-prefill-service.png)
-1. 选择表单数据模型. 打开 **[!UICONTROL 基本]** 选项卡。 在预填充服务中，选择 **[!UICONTROL 表单数据模型预填充服务]**.
-1. 单击&#x200B;**[!UICONTROL 完成]**。您的自适应表单现在配置为使用表单数据模型预填充。 您现在可以使用 [规则编辑器](rule-editor.md) 创建规则以预填充表单的字段。
+1. 选择表单数据模型。 打开 **[!UICONTROL 基本]** 选项卡。 在预填充服务中，选择 **[!UICONTROL 表单数据模型预填充服务]**.
+1. 单击 **[!UICONTROL 完成]**. 您的自适应表单现在配置为使用表单数据模型预填充。 您现在可以使用 [规则编辑器](rule-editor.md) 创建规则以预填充表单的字段。
 
 <!--
 ## Edit Form Model properties of an Adaptive Form {#edit-form-model}
 
-1. Select the Adaptive Form and tap ![Page information](/help/forms/using/assets/configure-icon.svg) > **[!UICONTROL Open Properties]**. The Form Properties page opens. 
+1. Select the Adaptive Form and select ![Page information](/help/forms/using/assets/configure-icon.svg) > **[!UICONTROL Open Properties]**. The Form Properties page opens. 
 
 1. Go to the **[!UICONTROL Form Model]** tab and choose a form model. If the Adaptive Form is without a form model, you have the freedom to choose either a JSON schema or a form data model. On the other hand, if the Adaptive Form is already based on a form model, you have the option to switch to another form model of the same type. For instance, if the form is using a JSON schema, you can easily switch to another JSON schema, and similarly if the form is using a Form Data Model, you can switch to another Form Data Model. 
 
-1. Tap **[!UICONTROL Save]** to save the properties.
+1. Select **[!UICONTROL Save]** to save the properties.
 -->
 
 ## 后续内容

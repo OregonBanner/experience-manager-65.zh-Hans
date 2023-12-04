@@ -10,7 +10,7 @@ docset: aem65
 feature: Asset Management
 role: User, Admin
 exl-id: 28cf9e39-cab4-4278-b6c9-e84cc31964db
-source-git-commit: 0738f53564cb2e2607d739d97bdd1bb2fc64ac6e
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
 source-wordcount: '11310'
 ht-degree: 2%
@@ -109,7 +109,7 @@ ht-degree: 2%
    * 如果您使用的是第三方Web内容管理系统，则可以将视频链接或嵌入到网页。
 
       * 使用URL集成视频：
-        [将 URL 关联到您的 Web 应用程序](linking-urls-to-yourwebapplication.md).
+        [将URL链接到您的Web应用程序](linking-urls-to-yourwebapplication.md).
 
       * 在网页上使用嵌入代码集成视频：
         [在网页上嵌入视频查看器](embed-code.md).
@@ -415,7 +415,7 @@ VBR编码时间较长，但产生的结果最理想；媒体文件的质量更�
 
 | 视频类型 | 宽x高 | 宽度比例 | 高宽比 |
 |--- |--- |--- |--- |
-| 源 | 1920x1080 | 1 | 1 |
+| 源 | 1920 x 1080 | 1 | 1 |
 | 已编码 | 960 x 540 | 2 | 2 |
 | 已编码 | 640 x 360 | 3 | 3 |
 | 已编码 | 480 x 270 | 4 | 4 |
@@ -496,7 +496,7 @@ DASH(Digital Adaptive Streaming over HTTP)是视频流的国际标准，被广�
 
 一个包含所有内容的表 *已发布* 此外，还会列出视频，以便您可以根据视频总开始次数跟踪网站上最常查看的视频。
 
-点按列表中的视频名称时，会以折线图的形式显示视频的受众维系（流失）报表。 此图表显示在视频播放期间任何给定时间的查看次数。 播放视频时，垂直条与播放器中的时间指示器同步跟踪。 折线图数据中的下降指示受众从无兴趣状态下降的位置。
+在列表中选择视频名称时，会以折线图的形式显示视频的受众维系（流失）报表。 此图表显示在视频播放期间任何给定时间的查看次数。 播放视频时，垂直条与播放器中的时间指示器同步跟踪。 折线图数据中的下降指示受众从无兴趣状态下降的位置。
 
 如果视频是在Adobe Experience Manager Dynamic Media之外进行编码，则表中的受众维系（流失）图表和播放百分比数据将不可用。
 
@@ -508,22 +508,22 @@ DASH(Digital Adaptive Streaming over HTTP)是视频流的国际标准，被广�
 
 默认情况下，首次输入视频报表时，报表显示从当前月份的第一天开始到当前月份日期结束的视频数据。 但是，您可以通过指定自己的日期范围来覆盖默认日期范围。 下次输入视频报表时，将使用指定的日期范围。
 
-为了使视频报表正常工作，会在配置Dynamic MediaCloud Service时自动创建报表包ID。 同时，报表包ID将推送至发布服务器，以便您在预览资产时可用于复制URL功能。 但是，此功能要求已设置发布服务器。 如果发布服务器未设置，您仍可以发布以查看视频报表。 但是，您必须返回到Dynamic Media云配置并点按 **[!UICONTROL 确定]**.
+为了使视频报表正常工作，会在配置Dynamic MediaCloud Service时自动创建报表包ID。 同时，报表包ID将推送至发布服务器，以便您在预览资产时可用于复制URL功能。 但是，此功能要求已设置发布服务器。 如果发布服务器未设置，您仍可以发布以查看视频报表。 但是，您必须返回到Dynamic Media云配置并选择 **[!UICONTROL 确定]**.
 
 **要查看视频报表，请执行以下操作：**
 
-1. 点按Experience Manager左上角的Experience Manager徽标，然后点按左边栏中的 **[!UICONTROL 工具]** （锤子图标）> **[!UICONTROL 资产]** > **[!UICONTROL 视频报表]**.
+1. 在Experience Manager的左上角，选择Experience Manager徽标，然后在左边栏中选择 **[!UICONTROL 工具]** （锤子图标）> **[!UICONTROL 资产]** > **[!UICONTROL 视频报表]**.
 1. 在“视频报表”页面上，执行以下操作之一：
 
-   * 在右上角附近，点按 **刷新视频报表** 图标。
+   * 在右上角附近，选择 **刷新视频报表** 图标。
 仅当报表的结束日期为当天时，才使用刷新。 这样做可确保您看到自上次运行报表以来发生的视频跟踪。
 
-   * 在右上角附近，点按 **日期选取器** 图标。
-指定要获取其视频数据的开始和结束日期范围，然后点按 **[!UICONTROL 运行报告]**.
+   * 在右上角附近，选择 **日期选取器** 图标。
+指定要获取其视频数据的开始和结束日期范围，然后选择 **[!UICONTROL 运行报告]**.
 
    “常用量度”组框标识所有量度的各种聚合度量 *已发布* 您网站上的视频。
 
-1. 在列出了最热门的已发布视频的表中，点按视频名称以播放视频，还可以查看视频的受众维系（流失）报表。
+1. 在列出最热门发布的视频的表中，选择要播放视频的视频名称，还可以查看视频的受众维系（流失）报表。
 
 ### 查看基于您使用Dynamic Media HTML5查看器SDK创建的视频查看器的视频报表 {#viewing-video-reports-based-on-a-video-viewer-that-you-created-using-the-scene-hmtl-viewer-sdk}
 
@@ -542,7 +542,7 @@ DASH(Digital Adaptive Streaming over HTTP)是视频流的国际标准，被广�
 
    此 `config2` 参数可在HTML5查看器中启用跟踪。 它还是一个特定于公司的预设，其中包含用于视频报表的配置信息，以及用于特定于客户的Adobe Analytics配置的配置信息。
 
-   config2 参数的正确值可在&#x200B;**[!UICONTROL 嵌入代码]**&#x200B;和复制 **[!UICONTROL URL]** 函数中找到。在复制 **[!UICONTROL URL]** 命令的 URL 中，要查找的参数为 `&config2=<value>`。该值几乎总是 `companypreset`，但在某些情况下，也可以是 `companypreset-1`、`companypreset-2` 等。
+   config2参数的正确值可在 **[!UICONTROL 嵌入代码]** 在副本中 **[!UICONTROL URL]** 函数。 在副本的URL中 **[!UICONTROL URL]** 命令，要查找的参数为 `&config2=<value>` . 该值几乎总是 `companypreset`，但在某些情况下，也可以是 `companypreset-1`、`companypreset-2` 等。
 
 1. 在自定义视频查看器代码中，通过执行以下操作将AppMeasurementBridge .jsp添加到查看器页面：
 
@@ -594,7 +594,7 @@ DASH(Digital Adaptive Streaming over HTTP)是视频流的国际标准，被广�
 
 ## 关于Dynamic Media中对视频的多字幕和多音频轨道支持{#about-msma}
 
-借助Dynamic Media中的多字幕和多声道功能，您可以轻松地将多个字幕和声道添加到主视频中。 这项功能意味着您的视频可在全球受众中访问。 您可以采用多种语言向全球受众自定义单个已发布的主视频，并遵守适用于不同地理区域的辅助功能准则。 作者还可以在用户界面中通过单个选项卡管理字幕和音轨。
+借助Dynamic Media中的多字幕和多声道功能，您可以轻松地将多个字幕和声道添加到主视频中。 此功能意味着全球观众都能看懂您的视频。只需自定义一个主视频，即可发布到多种语言的全球观众，并遵循不同地区的辅助功能准则。此外，作者从用户界面中的一个选项卡即可管理字幕和音轨。
 
 ![Dynamic Media中的字幕和音轨选项卡，以及显示视频的上传.VTT字幕文件和上传的.MP3音轨文件的表。](assets-dm/msma-subtitle-audiotracks-tab.png)
 
@@ -901,13 +901,13 @@ Dynamic Media将字幕文件转换为JSON（JavaScript对象表示法）格式�
 
 1. 执行下列操作之一：
 
-   * 要获得弹出视频查看器体验，请点按 **[!UICONTROL URL]**. 在“URL”对话框中，选择URL并将其复制到剪贴板，然后将URL粘贴到简单的文本编辑器中。 使用以下语法附加复制的视频的URL：
+   * 要获得弹出式视频查看器体验，请选择 **[!UICONTROL URL]**. 在“URL”对话框中，选择URL并将其复制到剪贴板，然后将URL粘贴到简单的文本编辑器中。 使用以下语法附加复制的视频的URL：
 
      `&caption=<server_path>/is/content/<path_to_caption.vtt_file,1>`
 
      请注意 `,1` 标题路径末尾。 紧跟在 `.vtt` 文件扩展名在路径中，您可以选择启用（打开）或禁用（关闭）视频播放器栏上的隐藏式字幕按钮，方法是将设置为 `,1` 或 `,0`、ID名称和ID名称等。
 
-   * 要获得嵌入的视频查看器体验，请点按 **[!UICONTROL 嵌入代码]**. 在“嵌入代码”对话框中，选择嵌入代码，并将其复制到剪贴板，然后将该代码粘贴到简单的文本编辑器中。 使用以下语法附加复制的嵌入代码：
+   * 要获得嵌入式视频查看器体验，请选择 **[!UICONTROL 嵌入代码]**. 在“嵌入代码”对话框中，选择嵌入代码，并将其复制到剪贴板，然后将该代码粘贴到简单的文本编辑器中。 使用以下语法附加复制的嵌入代码：
 
      `videoViewer.setParam("caption","<path_to_caption.vtt_file,1>");`
 
@@ -971,8 +971,8 @@ Cost-efficient access to rapidly evolving technology.
        <td>
        <ol>
        <li>导航至 <i>已发布 </i>要与上载的章节文件关联的视频资产。 请注意，只有在首次<i>发布</i>资产<i>后</i>，才可复制 URL。请参阅 <a href="/help/assets/publishing-dynamicmedia-assets.md">正在发布资产。</a></li>
-       <li>从下拉菜单中，单击或点按 <strong>查看器</strong>.</li>
-       <li>在左边栏中，点按或单击视频查看器预设名称。 视频预览会在单独的页面中打开。</li>
+       <li>从下拉菜单中，单击 <strong>查看器</strong>.</li>
+       <li>在左边栏中，单击视频查看器预设名称。 视频预览会在单独的页面中打开。</li>
        <li>在左边栏的底部，单击 <strong>URL</strong>.</li>
        <li>在“URL”对话框中，选择URL并将其复制到剪贴板，然后将URL粘贴到简单的文本编辑器中。</li>
        <li>使用以下语法附加复制的视频的URL，以便将其与复制的URL关联到章节文件：<br /> <br /> <code>&navigation=<<i>full_copied_URL_path_to_chapter_file</i>.vtt></code><br /> </li>
@@ -983,8 +983,8 @@ Cost-efficient access to rapidly evolving technology.
        <td>
        <ol>
        <li>导航至 <i>已发布 </i>要与上载的章节文件关联的视频资产。 请注意，只有在首次<i>发布</i>资产<i>后</i>，才可复制 URL。请参阅 <a href="/help/assets/publishing-dynamicmedia-assets.md">正在发布资产。</a></li>
-       <li>从下拉菜单中，单击或点按 <strong>查看器</strong>.</li>
-       <li>在左边栏中，点按或单击视频查看器预设名称。 视频预览会在单独的页面中打开。</li>
+       <li>从下拉菜单中，单击 <strong>查看器</strong>.</li>
+       <li>在左边栏中，单击视频查看器预设名称。 视频预览会在单独的页面中打开。</li>
        <li>在左边栏的底部，单击 <strong>嵌入</strong>.</li>
        <li>在“嵌入代码”对话框中，选择并将整个代码复制到剪贴板，然后将其粘贴到简单的文本编辑器中。</li>
        <li>使用以下语法附加视频的嵌入代码，以便将其与复制的URL关联到章节文件：<br /> <br /> <code>videoViewer.setParam("navigation","&lt;<i>full_copied_URL_path_to_chapter_file</i>.vtt&gt;"</code></li>
@@ -1021,25 +1021,25 @@ Experience Manager中的所有视频都必须具有关联的缩略图；不替�
    * [已将您的视频上传到文件夹](/help/assets/managing-video-assets.md#upload-and-preview-video-assets).
 
 1. 导航到要更改其缩略图图像的已上传视频资产。
-1. 在资源选择模式下，可以从 **[!UICONTROL 列表视图]** 或 **[!UICONTROL 卡片视图]**，点按视频资产。
-1. 在工具栏上，点按 **[!UICONTROL 属性]** 图标（中带有“i”的圆形）。
-1. 在视频的“属性”页面上，点按 **[!UICONTROL 更改缩略图]**.
+1. 在资源选择模式下，可以从 **[!UICONTROL 列表视图]** 或 **[!UICONTROL 卡片视图]**，选择视频资产。
+1. 在工具栏上，选择 **[!UICONTROL 属性]** 图标（中带有“i”的圆形）。
+1. 在视频的“属性”页面上，选择 **[!UICONTROL 更改缩略图]**.
 1. 在“更改缩略图”页面上，执行下列操作之一：
 
    * 要将视频中的帧用作新缩略图，请执行以下操作：
 
-      * 在工具栏上，点按 **[!UICONTROL 从视频中选择帧]**.
-      * 点按“播放”按钮，然后点按要捕获为视频新缩略图的帧上的“暂停”按钮。
+      * 在工具栏上，选择 **[!UICONTROL 从视频中选择帧]**.
+      * 选择“播放”按钮，然后在要捕获为视频新缩略图的帧上选择“暂停”按钮。
 
    * 要将图像资产用作新缩略图，请执行以下操作：
 
-      * 在工具栏上，点按 **[!UICONTROL 从资源中选择缩略图]**.
-      * 点按 **[!UICONTROL 选择缩略图]**.
+      * 在工具栏上，选择 **[!UICONTROL 从资源中选择缩略图]**.
+      * 选择 **[!UICONTROL 选择缩略图]**.
       * 导航到要使用的之前上传和发布的图像资产。 资源会自动调整大小以用作视频的缩略图。
-      * 选择图像资源，然后点按 **[!UICONTROL 选择]**.
+      * 选择图像资源，然后选择 **[!UICONTROL 选择]**.
 
-1. 在更改缩略图页面上，点按 **[!UICONTROL 保存更改]**.
-1. 在视频的“属性”页面的右上角，点按 **[!UICONTROL 保存并关闭]**.
+1. 在更改缩略图页面上，选择 **[!UICONTROL 保存更改]**.
+1. 在视频的“属性”页面的右上角，选择 **[!UICONTROL 保存并关闭]**.
 
 ## 关于Dynamic Media — 混合模式中的视频缩略图 {#about-video-thumbnails-in-dynamic-media-hybrid-mode}
 
@@ -1060,15 +1060,15 @@ Experience Manager中的所有视频都必须具有关联的缩略图；不替�
 **要添加视频缩略图，请执行以下操作：**
 
 1. 导航到要添加视频缩略图的已上传视频资产。
-1. 在资产选择模式下（从“列表视图”或“卡片视图”），点按视频资产。
-1. 在工具栏上，点按 **[!UICONTROL 查看属性]** 图标（中带有“i”的圆形）。
-1. 在视频的“属性”页面上，点按 **[!UICONTROL 更改缩略图]**.
-1. 在更改缩略图页面的工具栏上，点按 **[!UICONTROL 选择框架]**.
+1. 在资源选择模式下（从“列表视图”或“卡片视图”），选择视频资源。
+1. 在工具栏上，选择 **[!UICONTROL 查看属性]** 图标（中带有“i”的圆形）。
+1. 在视频的“属性”页面上，选择 **[!UICONTROL 更改缩略图]**.
+1. 在更改缩略图页面的工具栏上，选择 **[!UICONTROL 选择框架]**.
 
    Dynamic Media会根据您自定义的默认时间间隔或时间间隔，从视频中生成一系列缩略图图像。
 
 1. 预览生成的缩略图，然后选择要添加到视频中的图像。
-1. 点按 **[!UICONTROL 保存更改]**.
+1. 选择 **[!UICONTROL 保存更改]**.
 
    视频的缩略图图像会更新以使用您选择的缩略图。 如果您稍后决定更改缩略图图像，则可以返回到 **[!UICONTROL 更改缩略图]** 页面并选择新页面。
 
@@ -1084,21 +1084,21 @@ Experience Manager中的所有视频都必须具有关联的缩略图；不替�
 
 **要配置生成视频缩略图的默认时间间隔，请执行以下操作：**
 
-1. 在Experience Manager中，点按 **[!UICONTROL 工具]** > **[!UICONTROL 常规]** > **[!UICONTROL CRXDE Lite]**.
+1. 在Experience Manager中，选择 **[!UICONTROL 工具]** > **[!UICONTROL 常规]** > **[!UICONTROL CRXDE Lite]**.
 
 1. 在CRXDE Lite页面的左侧目录面板中，导航到 `o etc/dam/imageserver/configuration/jcr:content/settings.`
 
-   如果目录面板不可见，请点按“主页”选项卡左侧的>>图标。
+   如果目录面板不可见，请选择“主页”选项卡左侧的>>图标。
 
-1. 在右下方面板的属性选项卡中，双击 `thumbnailtime`.
+1. 在右下面板的“属性”选项卡中，双击 `thumbnailtime`.
 1. 在 **[!UICONTROL 编辑缩略图]** 对话框中，使用文本字段以百分比形式输入间隔值。
 
-   * 如果要添加一个或多个间隔值字段，请点击加号(+)图标。 如有必要，请滚动到对话框底部以查看图标。
-   * 如果要从列表中删除间隔值字段，请点击其右侧的减号(-)图标。
-   * 如果要重新排序间隔值，请点按向上箭头图标和向下箭头图标。
+   * 如果要添加一个或多个间隔值字段，请选择加号(+)图标。 如有必要，请滚动到对话框底部以查看图标。
+   * 如果要从列表中删除间隔值字段，请选择其右侧的减号(-)图标。
+   * 如果要重新排序间隔值，请选择向上箭头图标和向下箭头图标。
 
-1. 点按 **[!UICONTROL 确定]** 并返回属性选项卡。
-1. 在“CRXDE Lite”页面的左上角附近，点按 **[!UICONTROL 全部保存]**，然后点按左上角的“返回主页”图标以返回Experience Manager。
+1. 选择 **[!UICONTROL 确定]** 并返回属性选项卡。
+1. 在“CRXDE Lite”页面的左上角附近，选择 **[!UICONTROL 全部保存]**，然后选择左上角的返回主页图标以返回Experience Manager。
 
    请参阅 [添加视频缩略图](#adding-a-video-thumbnail).
 
@@ -1109,12 +1109,12 @@ Experience Manager中的所有视频都必须具有关联的缩略图；不替�
 **要添加自定义视频缩略图，请执行以下操作：**
 
 1. 导航到要添加自定义视频缩略图的已上传视频资产。
-1. 在资产选择模式下（从“列表视图”或“卡片视图”），点按视频资产。
-1. 在工具栏上，点按 **[!UICONTROL 查看属性]** 图标（中带有“i”的圆形）。
-1. 在视频的“属性”页面上，点按 **[!UICONTROL 更改缩略图]**.
-1. 在更改缩略图页面的工具栏上，点按 **[!UICONTROL 上传新的缩略图]**.
-1. 导航到要使用的缩略图图像，选择图像，然后点按 **[!UICONTROL 打开]** 以开始将图像上传到Experience Manager。 上传后，请确保已发布图像。
-1. 成功上传和发布图像后，在更改缩略图页面中，点按 **[!UICONTROL 保存更改]**.
+1. 在资源选择模式下（从“列表视图”或“卡片视图”），选择视频资源。
+1. 在工具栏上，选择 **[!UICONTROL 查看属性]** 图标（中带有“i”的圆形）。
+1. 在视频的“属性”页面上，选择 **[!UICONTROL 更改缩略图]**.
+1. 在更改缩略图页面的工具栏上，选择 **[!UICONTROL 上传新的缩略图]**.
+1. 导航到要使用的缩略图图像，选择它，然后选择 **[!UICONTROL 打开]** 以开始将图像上传到Experience Manager。 上传后，请确保已发布图像。
+1. 成功上传和发布图像后，在更改缩略图页面中，选择 **[!UICONTROL 保存更改]**.
 
    自定义缩略图将会添加到您的视频中。
 
@@ -1432,9 +1432,9 @@ public class DMSampleApiHttpContext extends ServletContextHelper {
 
 | 查询参数 | 描述 |
 | --- | --- |
-| `assetPath` | 强制. 针对以下项创建的视频的路径： `manifestUrl` 生成。 |
-| `manifestType` | 可选. 参数可以是DASH或HLS。 如果未传递，则默认为DASH。 |
-| `onlyIfPublished` | 可选. 如果通过， `manifestUrl` 仅当发布视频时返回。 |
+| `assetPath` | 必填。 针对以下项创建的视频的路径： `manifestUrl` 生成。 |
+| `manifestType` | 可选。 参数可以是DASH或HLS。 如果未传递，则默认为DASH。 |
+| `onlyIfPublished` | 可选。 如果通过， `manifestUrl` 仅当发布视频时返回。 |
 
 在本例中，我们假定进行以下设置：
 

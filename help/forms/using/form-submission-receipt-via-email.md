@@ -10,7 +10,7 @@ topic-tags: publish
 discoiquuid: 574de3d5-69ba-4e2f-a8ab-c59f357e4386
 docset: aem65
 exl-id: bca4044a-18a9-4b97-92de-eff1e9a840f9
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
 source-wordcount: '545'
 ht-degree: 0%
@@ -43,7 +43,7 @@ ht-degree: 0%
 
 1. 在中打开自适应表单 **[!UICONTROL 编辑]** 模式。
 
-1. 在 **[!UICONTROL 内容]** 选项卡，点按 **[!UICONTROL 表单容器]** 并点击 ![配置](assets/configure-icon.svg) 查看自适应表单属性。
+1. 在 **[!UICONTROL 内容]** 选项卡，选择 **[!UICONTROL 表单容器]** 并选择 ![配置](assets/configure-icon.svg) 查看自适应表单属性。
 
 1. 在 **[!UICONTROL 提交]** 部分，选择 **[!UICONTROL 发送电子邮件]** 从 **[!UICONTROL 提交操作]** 下拉列表。
 

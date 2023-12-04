@@ -5,16 +5,16 @@ feature: Adaptive Forms
 role: User, Developer
 level: Beginner
 exl-id: 2c25a8b7-73f7-40fb-a303-9446a708c8eb
-source-git-commit: 654dcb7c9bbb73420df7494b21fddb8cb4fdd39a
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '1936'
-ht-degree: 8%
+source-wordcount: '1923'
+ht-degree: 9%
 
 ---
 
 # 创建自适应表单 {#creating-an-adaptive-form}
 
-<span class="preview"> Adobe建议使用现代化的、可扩展的数据捕获 [核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) 对象 [创建新的自适应Forms](/help/forms/using/create-an-adaptive-form-core-components.md) 或 [将自适应Forms添加到AEM Sites页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). 这些组件在创建自适应Forms方面实现了重大进步，确保了令人印象深刻的用户体验。 本文介绍了使用基础组件创作自适应Forms的旧方法。 </span>
+<span class="preview">Adobe 建议使用现代、可扩展的数据捕获[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html)，以[创建新的自适应表单](/help/forms/using/create-an-adaptive-form-core-components.md)或[将自适应表单添加到 AEM Sites 页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。这些组件代表有关创建自适应表单的重大改进，确保实现令人印象深刻的用户体验。本文介绍了使用基础组件创作自适应表单的旧方法。</span>
 
 | 版本 | 文章链接 |
 | -------- | ---------------------------- |
@@ -29,14 +29,14 @@ ht-degree: 8%
 
 1. 在 Experience Manager 登录页面上输入您的凭据。
 
-   登录后，在左上角，点按 **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL 表单]** > **[!UICONTROL 表单和文档]**。
+   登录后，在左上角选择 **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]** > **[!UICONTROL Forms和文档]**.
 
    >[!NOTE]
    >
    >对于默认安装，登录为 `admin` 密码是 `admin`.
 
-1. 点按 **[!UICONTROL 创建]** 并选择 **[!UICONTROL 自适应表单]**.
-1. 此时会显示一个用于选择模板的选项。 有关模板的详细信息，请参阅 [自适应表单模板](creating-adaptive-form.md#p-adaptive-form-templates-p). 点按模板以将其选定，然后点按下一步。
+1. 选择 **[!UICONTROL 创建]** 并选择 **[!UICONTROL 自适应表单]**.
+1. 此时会显示一个用于选择模板的选项。 有关模板的详细信息，请参阅 [自适应表单模板](creating-adaptive-form.md#p-adaptive-form-templates-p). 选择一个模板以将其选中，然后选择下一步。
 1. 将显示“添加属性”选项。 指定以下属性字段的值。 标题和名称字段是必填字段：
 
    * **[!UICONTROL 标题：]** 指定表单的显示名称。 标题可帮助您在 [!DNL Experience Manager Forms] 用户界面中标识表单。
@@ -53,13 +53,13 @@ ht-degree: 8%
 
    您可以从以下位置配置这些权限： **[!UICONTROL 表单模型]** 选项卡 **[!UICONTROL 添加属性]** 页面。 默认情况下，选定的表单模型为 **[!UICONTROL 无]**.
 
-1. 点按&#x200B;**[!UICONTROL 创建]**。创建自适应表单，并显示用于打开表单进行编辑的对话框。
+1. 选择&#x200B;**[!UICONTROL 创建]**。创建自适应表单，并显示用于打开表单进行编辑的对话框。
 
    指定完所有属性后，单击 **[!UICONTROL 创建]**. 创建自适应表单，并显示用于打开表单进行编辑的对话框。
 
    指定完所有属性后，单击 **[!UICONTROL 创建]**. 创建自适应表单，并显示用于打开表单进行编辑的对话框。
 
-1. 点按 **[!UICONTROL 打开]** 以在新选项卡中打开新创建的表单。 将打开表单进行编辑，并显示模板中的可用内容。 它还显示边栏，可用于根据需要自定义新创建的表单。
+1. 选择 **[!UICONTROL 打开]** 以在新选项卡中打开新创建的表单。 将打开表单进行编辑，并显示模板中的可用内容。 它还显示边栏，可用于根据需要自定义新创建的表单。
 
    根据自适应表单的类型，关联的XFA表单模板、XML架构或JSON架构中存在的表单元素将显示在 **[!UICONTROL 数据模型对象]** 选项卡 **[!UICONTROL 内容浏览器]** 在侧栏中。 您还可以拖放这些元素以构建自适应表单。
 
@@ -79,7 +79,7 @@ ht-degree: 8%
 
    ![create-af-1-1](assets/create-af-1-1.png)
 
-1. 点击以展开 **[!UICONTROL 选择表单数据模型]**. 列出所有可用的表单数据模型。
+1. 选择以展开 **[!UICONTROL 选择表单数据模型]**. 列出所有可用的表单数据模型。
 
    从数据模型中选择。
 
@@ -120,12 +120,12 @@ XML和JSON架构表示组织中的后端系统生成或使用数据的结构。 
 
 执行以下操作以使用XML或JSON架构作为自适应表单的表单模型：
 
-1. 在 **[!UICONTROL 添加属性]** 自适应表单创建页面的步骤，点击 **[!UICONTROL 表单模型]** 选项卡。
+1. 在 **[!UICONTROL 添加属性]** 自适应表单创建步骤，选择页面上的 **[!UICONTROL 表单模型]** 选项卡。
 1. 在表单模型选项卡中，选择 **[!UICONTROL 架构]** 从 **[!UICONTROL 选择自]** 下拉字段。
 
-1. 点按 **[!UICONTROL 选择架构]** 并执行以下操作之一：
+1. 选择 **[!UICONTROL 选择架构]** 并执行以下操作之一：
 
-   * **[!UICONTROL 从磁盘上传]**  — 选择此选项并点按上传架构定义，以浏览并从您的文件系统上传XML架构或JSON架构。 上传的架构文件驻留在表单中，其他自适应表单无法访问。
+   * **[!UICONTROL 从磁盘上传]**  — 选择此选项并选择上载架构定义，从您的文件系统浏览并上载XML架构或JSON架构。 上传的架构文件驻留在表单中，其他自适应表单无法访问。
    * **[!UICONTROL 在存储库中搜索]**  — 选择此选项可从存储库中可用的架构定义文件列表中进行选择。 选择XML或JSON架构文件作为表单模型。 所选架构通过引用与表单相关联，并且可在其他自适应表单中使用。
 
    >[!CAUTION]
@@ -146,7 +146,7 @@ XML和JSON架构表示组织中的后端系统生成或使用数据的结构。 
 
 ## 自适应表单模板 {#adaptive-form-templates}
 
-模板提供基本结构并定义自适应表单的外观（布局和样式）。 它的预格式化的组件包含某些属性和内容结构。<!-- Out of the box, AEM Forms provides some adaptive form templates. To get the complete template package including advanced templates, you need to install the AEM Forms add-on package. For more information, see [Installing AEM Forms add-on package](installing-configuring-aem-forms-osgi.md).-->
+模板提供基本结构并定义自适应表单的外观（布局和样式）。 它具有预先格式化的组件，其中包含某些属性和内容结构。 <!-- Out of the box, AEM Forms provides some adaptive form templates. To get the complete template package including advanced templates, you need to install the AEM Forms add-on package. For more information, see [Installing AEM Forms add-on package](installing-configuring-aem-forms-osgi.md).-->
 
 此外，您可以使用模板编辑器创建自己的模板。 有关使用模板的详细信息，请参阅 [自适应表单模板](template-editor.md).
 
@@ -158,13 +158,13 @@ XML和JSON架构表示组织中的后端系统生成或使用数据的结构。 
 
 创建自适应表单时，不使用表单模型（对表单模型使用“无”选项），或使用表单模型（如表单模板、XML架构或JSON架构或表单数据模型）。 您可以将自适应表单的表单模型从“无”更改为其他表单模型。 对于基于表单模型的自适应表单，您可以为同一表单模型选择其他表单模板、XML架构、JSON架构或表单数据模型。 但是，不能从一个表单模型更改到另一个表单模型。
 
-1. 选择自适应表单并点按 **属性** 图标。
+1. 选择自适应表单并选择 **属性** 图标。
 1. 打开&#x200B;**[!UICONTROL 表单模型]**&#x200B;选项卡并执行下列操作之一。
 
    * 如果自适应表单没有表单模型，您可以选择其他表单模型，并相应地选择表单模板、XML或JSON架构或表单数据模型。
    * 如果自适应表单基于表单模型，则可以为同一表单模型选择其他表单模板、XML或JSON架构或表单数据模型。
 
-1. 点按&#x200B;**[!UICONTROL 保存]**&#x200B;以保存属性。
+1. 选择 **[!UICONTROL 保存]** 以保存属性。
 
 ## 自动保存自适应表单 {#auto-save-an-adaptive-form}
 
@@ -179,9 +179,9 @@ XML和JSON架构表示组织中的后端系统生成或使用数据的结构。 
 
 默认情况下，不启用自动保存选项。 您可以从自适应表单的“自动保存”选项卡中启用自动保存选项。 “自动保存”选项卡还提供了几个其他配置选项。 执行以下步骤以启用和配置自适应表单的自动保存选项：
 
-1. 要访问属性中的自动保存部分，请选择一个组件，然后点按 ![字段级](assets/field-level.png) > **[!UICONTROL 自适应表单容器]**，然后点击 ![cmppr](assets/cmppr.png).
+1. 要访问属性中的自动保存部分，请选择一个组件，然后选择 ![字段级](assets/field-level.png) > **[!UICONTROL 自适应表单容器]**，然后选择 ![cmppr](assets/cmppr.png).
 1. 在 **[!UICONTROL 自动保存]** 部分， **[!UICONTROL 启用]** 自动保存选项。
-1. 在 **[!UICONTROL 自适应表单事件]** 框中，指定1或TRUE将在浏览器中加载表单时自动开始保存表单。 您还可以为事件指定条件表达式，该表达式在触发并返回true时开始保存表单的内容。
+1. 在 **[!UICONTROL 自适应表单事件]** 框中，指定1或TRUE以在浏览器中加载表单时自动开始保存表单。 您还可以为事件指定条件表达式，该表达式在触发并返回true时开始保存表单的内容。
 1. 指定触发器。 根据您的配置触发自动保存。 您的选项包括：
 
    * **[!UICONTROL 基于时间：]** 选择选项，以根据特定时间间隔开始保存内容。

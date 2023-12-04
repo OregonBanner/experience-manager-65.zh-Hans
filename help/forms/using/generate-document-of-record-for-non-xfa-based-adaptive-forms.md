@@ -7,10 +7,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
 feature: Adaptive Forms
 exl-id: 7240897f-6b3a-427a-abc6-66310c2998f3
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '3544'
-ht-degree: 5%
+source-wordcount: '3533'
+ht-degree: 3%
 
 ---
 
@@ -266,7 +266,7 @@ ht-degree: 5%
 
 1. 在AEM创作实例中，单击 **Forms > Forms和文档。**
 1. 选择表单，然后单击 **查看属性**.
-1. 在属性窗口中，点按 **表单模型**.
+1. 在“属性”窗口中，选择 **表单模型**.
 您还可以在创建表单时选择表单模型。
 
    >[!NOTE]
@@ -302,8 +302,8 @@ ht-degree: 5%
 
 要将您在“记录文档”选项卡中输入的品牌信息本地化，您需要确保正确设置浏览器的区域设置。 要自定义记录文档的品牌信息，请完成以下步骤：
 
-1. 在记录文档中选择一个面板（根面板），然后点按 ![配置](assets/configure.png).
-1. 点按 ![多塔布](/help/forms/using/assets/dortab.png). 此时将显示记录文档选项卡。
+1. 在记录文档中选择一个面板（根面板），然后选择 ![配置](assets/configure.png).
+1. 选择 ![多塔布](/help/forms/using/assets/dortab.png). 此时将显示记录文档选项卡。
 1. 选择用于呈现记录文档的默认模板或自定义模板。 如果选择默认模板，则记录文档的缩略图预览将显示在“模板”下拉列表下方。
 
    ![品牌模板](/help/forms/using/assets/brandingtemplate.png)
@@ -328,7 +328,7 @@ ht-degree: 5%
 
    如果您选择的自定义XDP模板包含多个母版页，则这些页的属性将显示在 **[!UICONTROL 内容]** 的部分 **[!UICONTROL 记录文档]** 选项卡。
 
-   ![母版页  属性](assets/master-page-properties.png)
+   ![母版页属性](assets/master-page-properties.png)
 
    母版页属性包括徽标图像、页眉文本、表单标题、免责声明标签和免责声明文本。 您可以将自适应表单或XDP模板属性应用于记录文档。 默认情况下，AEM Forms将模板属性应用于记录文档。 您还可以定义母版页属性的自定义值。 有关如何在记录文档中应用多个母版页的信息，请参阅 [将多个母版页应用于记录文档](#apply-multiple-master-pages-dor).
 
@@ -348,7 +348,7 @@ ht-degree: 5%
    </proto>
    ```
 
-1. 要保存品牌策略更改，请点按完成。
+1. 要保存品牌策略更改，请选择“完成”。
 
 ## 记录文档中面板的表格和列布局 {#table-and-column-layouts-for-panels-in-document-of-record}
 
@@ -409,12 +409,12 @@ ht-degree: 5%
 
 要将分页符应用于记录文档，请执行以下操作：
 
-1. 点按面板并选择 ![配置](/help/forms/using/assets/configure.png)
+1. 选择面板并选择 ![配置](/help/forms/using/assets/configure.png)
 1. 展开 **[!UICONTROL 记录文档]** 以查看属性。
 
-1. 在 **[!UICONTROL 分页]** 部分，点按 ![文件夹](/help/forms/using/assets/folder-icon.png) 在 **[!UICONTROL 地标]** 字段。
-1. 点按 **[!UICONTROL 下一页顶部]** 并点击 **[!UICONTROL 选择]**. 您也可以点按 **[!UICONTROL 页面顶部]**，选择母版页，然后点按 **[!UICONTROL 选择]** 以应用分页符。
-1. 点按![保存](/help/forms/using/assets/save_icon.png)以保存属性。
+1. 在 **[!UICONTROL 分页]** 部分，选择 ![文件夹](/help/forms/using/assets/folder-icon.png) 在 **[!UICONTROL 地标]** 字段。
+1. 选择 **[!UICONTROL 下一页顶部]** 并选择 **[!UICONTROL 选择]**. 您还可以选择 **[!UICONTROL 页面顶部]**，选择母版页，然后选择 **[!UICONTROL 选择]** 以应用分页符。
+1. 选择 ![保存](/help/forms/using/assets/save_icon.png) 以保存属性。
 
 所选面板将移至下一页。
 
@@ -428,13 +428,14 @@ ht-degree: 5%
 
 要将第二个母版页属性应用于面板，而将第三个母版页属性应用于后续面板，请执行以下步骤：
 
-1. 点按面板以应用第二个母版页，然后选择 ![配置](assets/cmppr.png).
-1. 在 **[!UICONTROL 分页]** 部分，点按 ![文件夹](/help/forms/using/assets/folder-icon.png) 在 **[!UICONTROL 地标]** 字段。
-1. 点按 **[!UICONTROL 第页]**，选择第二个母版页并点按 **[!UICONTROL 选择]**.
+1. 选择要应用第二个母版页的面板，然后选择 ![配置](assets/cmppr.png).
+1. 在 **[!UICONTROL 分页]** 部分，选择 ![文件夹](/help/forms/using/assets/folder-icon.png) 在 **[!UICONTROL 地标]** 字段。
+1. 选择 **[!UICONTROL 第页]**，选择第二个母版页并选择 **[!UICONTROL 选择]**.
 AEM Forms将第二个母版页应用于自适应表单中的面板和所有后续面板。
-1. 在 **[!UICONTROL 分页]** 部分，点按 ![文件夹](/help/forms/using/assets/folder-icon.png) 在 **[!UICONTROL 之后]** 字段。
-1. 点按 **[!UICONTROL 转到页面]**，选择第三个母版页并点按 **[!UICONTROL 选择]**.
-1. 点按![保存](/help/forms/using/assets/save_icon.png)以保存属性。AEM Forms将第三个母版页应用于自适应表单中的面板和所有后续面板。
+1. 在 **[!UICONTROL 分页]** 部分，选择 ![文件夹](/help/forms/using/assets/folder-icon.png) 在 **[!UICONTROL 之后]** 字段。
+1. 选择 **[!UICONTROL 转到页面]**，选择第三个母版页并选择 **[!UICONTROL 选择]**.
+1. 选择 ![保存](/help/forms/using/assets/save_icon.png) 以保存属性。
+AEM Forms将第三个母版页应用于自适应表单中的面板和所有后续面板。
 
 
 ## 使用记录文档时的主要注意事项 {#key-considerations-when-working-with-document-of-record}

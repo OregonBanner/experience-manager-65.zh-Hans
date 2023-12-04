@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: integrations
 docset: aem65
 exl-id: be2444df-c772-4a8e-83f9-0f565c15a44e
-source-git-commit: ab3d016c7c9c622be361596137b150d8719630bd
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '1554'
-ht-degree: 2%
+source-wordcount: '1558'
+ht-degree: 0%
 
 ---
 
@@ -50,7 +50,7 @@ AEM Forms与Adobe Experience Cloud解决方案Adobe Target集成，跨多个数�
 1. 指定您的Target帐户详细信息，如客户端代码、电子邮件和密码。
 1. 选择 **Rest** 从API类型下拉列表中。
 
-1. 单击 **连接到Adobe Target** 以便初始化与Target的连接。 如果连接成功，则将显示消息连接成功。单击消息上的&#x200B;**确定**，然后单击对话框上的&#x200B;**确定**。已配置Target帐户。
+1. 单击 **连接到Adobe Target** 以便初始化与Target的连接。 如果连接成功，则将显示消息“连接成功”。 单击 **确定** 在消息上，然后 **确定** 在对话框上。 已配置Target帐户。
 
 1. 创建Target框架（如所述） [添加框架](/help/sites-administering/target.md).
 
@@ -84,9 +84,9 @@ AEM Forms与Adobe Experience Cloud解决方案Adobe Target集成，跨多个数�
 
 AEM允许您创建受众，并将其用于A/B测试。 您在AEM中创建的受众可在AEM Forms中使用。 要在AEM中创建受众，请执行以下操作：
 
-1. 在创作实例中，点按 **Adobe Experience Manager** > **个性化** > **受众**.
+1. 在创作实例中，选择 **Adobe Experience Manager** > **个性化** > **受众**.
 
-1. 在受众页面中，点按 **创建受众>创建目标受众**.
+1. 在受众页面中，选择 **创建受众>创建目标受众**.
 1. 在Adobe Target配置对话框中，选择Target配置，然后单击 **确定**.
 1. 在创建新受众页面中，创建规则。 规则允许您对受众进行分类。 例如，您希望根据操作系统对受众进行分类。 您的受众A来自Windows，受众B来自Linux®。
 

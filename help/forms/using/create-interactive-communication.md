@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
 feature: Interactive Communication
 exl-id: 1f89c3bf-e67e-4d13-9285-3367be1ac8f8
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '6163'
+source-wordcount: '6130'
 ht-degree: 1%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 1%
 ## 创建交互式通信 {#createic}
 
 1. 登录到AEM创作实例并导航到 **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]** > **[!UICONTROL Forms和文档]**.
-1. 点按 **[!UICONTROL 创建]** 并选择 **[!UICONTROL 交互式通信]**. 此时会显示“创建交互式通信”页。
+1. 选择 **[!UICONTROL 创建]** 并选择 **[!UICONTROL 交互式通信]**. 此时会显示“创建交互式通信”页。
 
    ![create-interactive-communication](assets/create-interactive-communication.png)
 
@@ -51,7 +51,7 @@ ht-degree: 1%
    * **[!UICONTROL 发布日期：]** 输入发布交互式通信的日期。
    * **[!UICONTROL 取消发布日期]**：输入取消发布交互式通信的日期。
 
-1. 点按 **[!UICONTROL 下一个]**. 此时会出现用于指定打印和Web渠道详细信息的屏幕。
+1. 选择 **[!UICONTROL 下一个]**. 此时会出现用于指定打印和Web渠道详细信息的屏幕。
 1. 输入以下内容：
 
    * **[!UICONTROL 打印]**：选择此选项可生成交互式通信的打印渠道。
@@ -60,7 +60,7 @@ ht-degree: 1%
    * **[!UICONTROL 交互式通信Web模板]**：浏览并选择Web模板。
    * **[!UICONTROL 主题]** 和 **[!UICONTROL 选择主题]**：浏览并选择主题以设置交互式通信Web渠道的样式。 有关更多信息，请参阅 [AEM Forms中的主题](/help/forms/using/themes.md).
 
-   * **[!UICONTROL 为Web渠道使用“打印为主版”]**：选择此选项可创建与打印渠道同步的Web渠道。 将打印渠道用作Web渠道的主渠道可以确保Web渠道的内容和数据绑定派生自打印渠道，并且当您点按“同步”时，在打印渠道中所做的更改会反映在Web渠道中。 但是，根据需要，作者可以中断Web渠道中特定组件的继承。 有关更多信息，请参阅 [将Web渠道与打印渠道同步](../../forms/using/create-interactive-communication.md#synchronize).
+   * **[!UICONTROL 为Web渠道使用“打印为主版”]**：选择此选项可创建与打印渠道同步的Web渠道。 将打印渠道用作Web渠道的主渠道可以确保Web渠道的内容和数据绑定从打印渠道派生，并且当您选择“同步”时，在打印渠道中所做的更改将反映在Web渠道中。 但是，根据需要，作者可以中断Web渠道中特定组件的继承。 有关更多信息，请参阅 [将Web渠道与打印渠道同步](../../forms/using/create-interactive-communication.md#synchronize).
 如果您选择 **[!UICONTROL 为Web渠道使用“打印为主版”]** 选项，您可以选择以下任意模式来生成Web渠道：
 
       * **[!UICONTROL 自动布局]**：选择此模式可从打印渠道自动为Web渠道生成占位符、内容和数据绑定。
@@ -68,7 +68,7 @@ ht-degree: 1%
 
    有关打印渠道和Web渠道的详细信息，请参阅 [打印渠道和Web渠道](/help/forms/using/web-channel-print-channel.md).
 
-1. 点按&#x200B;**[!UICONTROL 创建]**。此时会创建交互式通信，并出现一个警告框。 点按 **[!UICONTROL 编辑]** 开始构建交互式通信的内容，如中所述 [使用交互式通信创作用户界面添加内容](#step2). 或者，您可以点按 **[!UICONTROL 完成]** 并选择稍后编辑交互式通信。
+1. 选择&#x200B;**[!UICONTROL 创建]**。此时会创建交互式通信，并出现一个警告框。 选择 **[!UICONTROL 编辑]** 开始构建交互式通信的内容，如中所述 [使用交互式通信创作用户界面添加内容](#step2). 或者，您可以选择 **[!UICONTROL 完成]** 并选择稍后编辑交互式通信。
 
 ## 向交互式通信添加内容 {#step2}
 
@@ -76,7 +76,7 @@ ht-degree: 1%
 
 有关交互式通信创作界面的详细信息，请参阅 [交互式通信创作简介](/help/forms/using/introduction-interactive-communication-authoring.md).
 
-1. 点按编辑时会启动交互式通信创作界面，如中所述 [创建交互式通信](#createic). 或者，您可以导航到AEM上现有的交互式通信资产，选择该资产，然后点按 **[!UICONTROL 编辑]** 以启动交互式通信创作界面。
+1. 当您选择编辑时，交互式通信创作界面将启动，如中所述 [创建交互式通信](#createic). 或者，您可以导航到AEM上现有的交互式通信资源，选择该资源，然后选择 **[!UICONTROL 编辑]** 以启动交互式通信创作界面。
 
    默认情况下，将显示交互式通信的打印渠道，除非交互式通信是仅限Web渠道的。 交互式通信的打印渠道显示目标区域，如所选XDP/打印渠道模板中所示。 在这些目标区域和字段中，您可以添加组件或资源。
 
@@ -141,9 +141,9 @@ ht-degree: 1%
 
 ![未绑定的变量](assets/df_unbound_variable_new.png)
 
-点按文档片段，点按 ![configure_icon](assets/configure_icon.png) （配置），然后点击 **[!UICONTROL 属性]** 互动式通信的副手。 此 **[!UICONTROL 变量和数据模型对象]** 部分列出了变量，包括隐藏的变量以及文档片段中使用的数据模型对象。 使用 ![编辑](assets/edit.svg) （编辑）图标来编辑属性。
+选择文档片段，选择 ![configure_icon](assets/configure_icon.png) （配置），然后选择 **[!UICONTROL 属性]** 互动式通信的副手。 此 **[!UICONTROL 变量和数据模型对象]** 部分列出了变量，包括隐藏的变量以及文档片段中使用的数据模型对象。 使用 ![编辑](assets/edit.svg) （编辑）图标来编辑属性。
 
-1. 要设置变量绑定，请点击变量并选择 ![configure_icon](assets/configure_icon.png) （配置），然后在侧栏的“属性”面板中设置绑定属性。
+1. 要设置变量的绑定，请选择一个变量，然后选择 ![configure_icon](assets/configure_icon.png) （配置），然后在侧栏的“属性”面板中设置绑定属性。
 
    * **无**：代理将填充变量的值。
    * **文本片段**：如果选定此选项，您可以浏览并选择其内容在字段中呈现的文本文档片段。 只有这些文本文档片段可以绑定到中没有变量的变量。
@@ -183,9 +183,9 @@ ht-degree: 1%
 
    ![webchannelassets](assets/webchannelassets.png)
 
-   点按文档片段，点按 ![configure_icon](assets/configure_icon.png) （配置），然后点击 **[!UICONTROL 属性]** 互动式通信的副手。 此 **[!UICONTROL 变量和数据模型对象]** 部分列出了变量，包括隐藏的变量以及文档片段中使用的数据模型对象。 使用 ![编辑](assets/edit.svg) （编辑）图标来编辑属性。 此外，对于已经过下列操作的文档片段： [自动生成](#synchronize) 在使用打印渠道的Web渠道中，使用 ![取消继承](assets/cancelinheritance.png) （取消继承）图标将位于每个数据模型对象和变量旁边 [取消继承](#cancelinheritance) 并且能够编辑它们。
+   选择文档片段，选择 ![configure_icon](assets/configure_icon.png) （配置），然后选择 **[!UICONTROL 属性]** 互动式通信的副手。 此 **[!UICONTROL 变量和数据模型对象]** 部分列出了变量，包括隐藏的变量以及文档片段中使用的数据模型对象。 使用 ![编辑](assets/edit.svg) （编辑）图标来编辑属性。 此外，对于已经过下列操作的文档片段： [自动生成](#synchronize) 在使用打印渠道的Web渠道中，使用 ![取消继承](assets/cancelinheritance.png) （取消继承）图标将位于每个数据模型对象和变量旁边 [取消继承](#cancelinheritance) 并且能够编辑它们。
 
-1. 要在选择了Web渠道的情况下在Web渠道中添加其他组件，请点按 **[!UICONTROL 组件]**. 根据需要将组件拖放到交互式通信的Web渠道中，然后继续配置它们。
+1. 要在Web渠道中添加其他组件，且已选择Web渠道，请选择 **[!UICONTROL 组件]**. 根据需要将组件拖放到交互式通信的Web渠道中，然后继续配置它们。
 
    | 组件 | 功能 |
    |---|---|
@@ -207,7 +207,7 @@ ht-degree: 1%
 
 您可以使用 **预览选项** 评估交互式通信的外观。 交互式通信的Web渠道还提供了为各种设备模拟交互式通信体验的选项。 例如，iPhone、iPad和桌面。 您可以同时使用两者 **预览** 和 **模拟器** ![标尺](assets/ruler.png) 用于预览不同屏幕大小设备的Web输出的选项相互结合。 预览中的示例数据由指定的表单数据模型填充。
 
-1. 选择要预览并点按预览（打印或Web）渠道。 此时将出现“交互式通信”。
+1. 选择要预览的（打印或Web）渠道，然后选择预览。 此时将出现“交互式通信”。
 
    >[!NOTE]
    >
@@ -225,7 +225,7 @@ ht-degree: 1%
 
 在打印渠道中，您可以配置附件和库访问权限，以允许Agent在交互通信的Agent UI中管理附件：
 
-1. 在打印渠道中，突出显示文档容器并点按 **属性**.
+1. 在打印渠道中，突出显示文档容器并选择 **属性**.
 
    ![documentcontainerproperties](assets/documentcontainerproperties.png)
 
@@ -238,14 +238,14 @@ ht-degree: 1%
    * **[!UICONTROL 允许库访问]**：选择此选项可在代理UI中启用代理的库访问权限。 如果启用，代理可以在准备交互式通信时从库添加文件。
    * **[!UICONTROL 允许对附件重新排序]**：选择此项可允许代理通过交互式通信对附件重新排序。
    * **[!UICONTROL 允许的最大附件数量]**：指定交互式通信允许的最大附件数。
-   * **[!UICONTROL 要附加的文件]**：点按 **[!UICONTROL 添加]** 和浏览以选择要附加的文件，并指定以下内容：
+   * **[!UICONTROL 要附加的文件]**：选择 **[!UICONTROL 添加]** 和浏览以选择要附加的文件，并指定以下内容：
 
       * **[!UICONTROL 默认将此文件附加到文档]**：如果只有附件不是“必填”，则可以更改此选项。
       * **[!UICONTROL 必需：]** 代理将无法删除代理UI中的附件。
 
    ![附件文件](assets/attachfiles.png)
 
-1. 点按 **[!UICONTROL 完成]**.
+1. 选择&#x200B;**[!UICONTROL 完成]**。
 
 ### XDP/布局字段属性 {#xdplayoutfieldproperties}
 
@@ -274,13 +274,13 @@ ht-degree: 1%
    * **[!UICONTROL 必填]**：选择使该字段对于代理是必填字段。 如果绑定类型是文本片段，则此设置不适用。
    * **[!UICONTROL 允许多行]**：选择此字段可允许多行文本作为字段中的条目。 如果绑定类型是文本片段，则此设置不适用。
 
-1. 点按 ![完成图标](assets/done_icon.png).
+1. 选择 ![完成图标](assets/done_icon.png).
 
 ### 数据显示模式 {#datadisplaypatterns}
 
 通过创作界面，您可以定义在为打印和Web渠道创建交互式通信时可用的字段、变量和表单数据模型元素的数据显示模式。
 
-要配置数据显示模式，请点按元素，选择 ![configure_icon](assets/configure_icon.png) （配置）并设置中的显示模式 **[!UICONTROL 属性]** 面板中。 从中选择任何预定义的选项 **[!UICONTROL 类型]** 下拉列表以查看与选定类型关联的模式。 选择 **[!UICONTROL 自定义]** 从 **[!UICONTROL 类型]** 下拉列表定义列表中不可用的模式。 编辑中的值 **[!UICONTROL 图案]** 字段自动将类型修改为 **[!UICONTROL 自定义]**.
+要配置数据显示模式，请选择元素，然后选择 ![configure_icon](assets/configure_icon.png) （配置）并设置中的显示模式 **[!UICONTROL 属性]** 面板中。 从中选择任何预定义的选项 **[!UICONTROL 类型]** 下拉列表以查看与选定类型关联的模式。 选择 **[!UICONTROL 自定义]** 从 **[!UICONTROL 类型]** 下拉列表定义列表中不可用的模式。 编辑中的值 **[!UICONTROL 图案]** 字段自动将类型修改为 **[!UICONTROL 自定义]**.
 
 要应用显示模式，在“模式”字段中定义的字符数或数字数必须与字段、变量和表单数据模型元素的值中定义的字符数或数字数匹配或超过该字符数或数字数。 有关更多信息，请参阅 [示例](../../forms/using/create-interactive-communication.md#greaternumberofdigits).
 
@@ -308,7 +308,7 @@ ht-degree: 1%
 
 ## 将规则应用于交互式通信组件 {#rules}
 
-要在交互式通信中条件化组件或内容，请点按组件/内容并选择 ![createruleicon](assets/createruleicon.png) （创建规则）以启动规则编辑器。
+要条件化交互式通信中的组件或内容，请选择组件/内容并选择 ![createruleicon](assets/createruleicon.png) （创建规则）以启动规则编辑器。
 
 有关更多信息，请参阅:
 
@@ -332,7 +332,7 @@ ht-degree: 1%
 
 1. 为表的每个单元格指定数据绑定。 要创建可重复的行，请在属于公用集合属性的行中插入表单数据模型属性。
 
-   1. 点按表中的单元格并选择 ![configure_icon](assets/configure_icon.png) （配置）。
+   1. 选择表中的单元格并选择 ![configure_icon](assets/configure_icon.png) （配置）。
 
       “属性”对话框显示在侧栏中。
 
@@ -352,7 +352,7 @@ ht-degree: 1%
 
       * **[!UICONTROL 可由代理编辑]**：选择以允许代理在代理UI中编辑字段中的值。
 
-   1. 点按 ![完成图标](assets/done_icon.png).
+   1. 选择 ![完成图标](assets/done_icon.png).
 
 1. 预览交互式通信以查看使用数据呈现的表。
 
@@ -360,20 +360,20 @@ ht-degree: 1%
 
 ### 仅限Web渠道的表 {#webchanneltables}
 
-点按Web模板中的根面板，然后点按 **+** 以添加 **表** 组件到交互式通信。 在交互式通信中插入包含两行的表。 表的第一行表示表标题。
+选择Web模板中的根面板，然后选择 **+** 以添加 **表** 组件到交互式通信。 在交互式通信中插入包含两行的表。 表的第一行表示表标题。
 
 #### 向表中添加行和列 {#addrowscolumnstable}
 
 **添加或删除列：**
 
-1. 点按表格标题行中的默认文本框以查看组件工具栏。
+1. 选择表格标题行中的默认文本框以查看组件工具栏。
 1. 选择 **添加列** 或 **删除列** 以分别添加或删除表列。
 
 ![component_toolbar_table1](assets/component_toolbar_table1.png)
 
 **添加或删除行：**
 
-1. 点按任意表行以查看组件工具栏。 您还可以使用交互式通信sidekick中的内容浏览器选择表格行。
+1. 选择任意表行以查看组件工具栏。 您还可以使用交互式通信sidekick中的内容浏览器选择表格行。
 1. 选择 **添加行** 或 **删除行** 添加或删除表行。 使用 **上移** 和 **下移** 工具栏中可用的选项来重新排列表中的行。
 
 ![组件工具栏](assets/component_toolbar_table_row_new.png)
@@ -382,23 +382,23 @@ ht-degree: 1%
 
 #### 在表单元格中添加或编辑文本 {#addedittexttable}
 
-1. 在表单元格中选择默认文本框并点按 ![编辑](assets/edit.png) （编辑）。
-1. 在表单元格中键入文本并点击 ![完成图标](assets/done_icon.png) 以保存它。
+1. 在表单元格中选择默认文本框，然后选择 ![编辑](assets/edit.png) （编辑）。
+1. 在表单元格中键入文本并选择 ![完成图标](assets/done_icon.png) 以保存它。
 
 #### 创建表单元格和数据模型对象元素之间的绑定 {#createbindingtablecells}
 
-1. 选择表格行中的默认文本框并点按 ![编辑](assets/edit.png) （编辑）。
-1. 点按数据模型对象下拉列表，然后选择属性。
-1. 点击以保存并创建表单元格和数据模型对象属性之间的绑定。
+1. 选择表格行中的默认文本框并选择 ![编辑](assets/edit.png) （编辑）。
+1. 选择数据模型对象下拉列表，然后选择属性。
+1. 选择以保存表单元格和数据模型对象属性之间并创建绑定。
 
 ![创建数据绑定](assets/create_data_binding_table_new.png)
 
 #### 为表单元格中的文本创建超链接 {#createhyperlinktable}
 
-1. 在表单元格中选择默认文本框并点按 ![编辑](assets/edit.svg) （编辑）。
-1. 选择表格单元格中的文本，然后点按超链接图标。
+1. 在表单元格中选择默认文本框，然后选择 ![编辑](assets/edit.svg) （编辑）。
+1. 选择表格单元格中的文本，然后选择“超链接”图标。
 1. 在中指定URL **路径** 字段。
-1. 点按 ![完成图标](assets/done_icon.png) 以保存超链接属性。
+1. 选择 ![完成图标](assets/done_icon.png) 以保存超链接属性。
 
 ![创建超链接](assets/create_hyperlink_table_new.png)
 
@@ -422,9 +422,9 @@ ht-degree: 1%
 
 要启用排序，请执行以下操作：
 
-1. 选择表并点击 ![configure_icon](assets/configure_icon.png) （配置）。 您也可以使用 **内容** 交互式通信中的浏览器。
+1. 选择表并选择 ![configure_icon](assets/configure_icon.png) （配置）。 您也可以使用 **内容** 交互式通信中的浏览器。
 1. 选择 **启用排序。**
-1. 点按 ![完成图标](assets/done_icon.png) 以保存表属性。 列标题中的排序图标（向上箭头和向下箭头）表示已启用排序。
+1. 选择 ![完成图标](assets/done_icon.png) 以保存表属性。 列标题中的排序图标（向上箭头和向下箭头）表示已启用排序。
 
    ![启用排序](assets/enable_sorting_new-1.png)
 
@@ -454,7 +454,7 @@ ht-degree: 1%
 要访问 **属性** 页面：
 
 1. 登录到AEM创作实例并导航到 **Adobe Experience Manager** > **Forms** > **Forms和文档**.
-1. 选择交互式通信并点按 **属性**.
+1. 选择交互式通信并选择 **属性**.
 1. 选择 **常规** 选项卡以编辑 **标题** 和 **描述** 字段。
 
 ### 添加或删除Web渠道 {#add-or-delete-the-web-channel}
@@ -464,18 +464,18 @@ ht-degree: 1%
 1. 在 **属性** 页面上，选择 **渠道** 选项卡。
 1. 选择 **Web** 复选框，然后选择Web渠道模板。
 1. 选择 **为Web渠道使用“打印为主版”** 启用Web渠道和打印渠道之间的同步。
-1. 点按 **保存并关闭** 以保存更改。
+1. 选择 **保存并关闭** 以保存更改。
 
-   同样，您可以点按 **Web** 上的复选框 **渠道** 选项卡，从交互式通信中删除Web渠道。
+   同样，您也可以选择 **Web** 上的复选框 **渠道** 选项卡，从交互式通信中删除Web渠道。
 
 ## 将按钮组件添加到Web渠道 {#add-button-component-to-the-web-channel}
 
-您可以将按钮作为组件添加到交互式通信的Web渠道中。 使用定义规则 [规则编辑器](../../forms/using/rule-editor.md) 点按按钮可导航到其他交互式通信、自适应表单、其他资产（如图像或文档片段）或外部URL。
+您可以将按钮作为组件添加到交互式通信的Web渠道中。 使用定义规则 [规则编辑器](../../forms/using/rule-editor.md) 能够导航到其他交互式通信、自适应表单、其他资产（如图像或文档片段）或选择按钮时的外部URL。
 
 要添加按钮并对其定义规则，请执行以下操作：
 
-1. 点按Web模板中的根面板，然后点按 **+** 添加 **按钮** 组件到交互式通信。
-1. 点按按钮组件并点按 ![edit-rules](assets/edit-rules.png) 以定义点击按钮的规则。
+1. 选择Web模板中的根面板，然后选择 **+** 添加 **按钮** 组件到交互式通信。
+1. 选择按钮组件并选择 ![edit-rules](assets/edit-rules.png) 以定义有关按钮选择的规则。
 1. 在 **时间** 部分，选择 **已单击** 从按钮下拉列表的状态中。
 1. 在 **则** 部分：
 
@@ -483,11 +483,11 @@ ht-degree: 1%
 
    1. 指定交互式通信、自适应表单、资产或网页的URL。 例如，使用以下格式指定URL以导航到其他交互式通信：https://&lt;server-name>：&lt;port>/editor.html/content/forms/af/&lt;interactive communication=&quot;&quot; name=&quot;&quot;>/channels/&lt;channel name=&quot;&quot; print=&quot;&quot; or=&quot;&quot; web=&quot;&quot;>.html
    1. 指定相应选项以在同一选项卡、新选项卡或新窗口中打开资产。
-   1. 点按 **完成** 然后点击 **关闭** 以保存规则。
+   1. 选择 **完成** 然后选择 **关闭** 以保存规则。
 
    同样，您可以从操作类型下拉列表中选择其他可用选项，例如“调用服务”和“提交表单”。 有关更多信息，请参阅 [规则编辑器](../../forms/using/rule-editor.md).
 
-1. 预览交互式通信并点按按钮以查看交互式通信、自适应表单、资产或步骤4(b)中指定的网页。
+1. 预览交互式通信并选择按钮以查看交互式通信、自适应表单、资产或步骤4(b)中指定的网页。
 
 ## 将面板组件添加到Web渠道 {#add-panel-component-to-the-web-channel}
 
@@ -497,19 +497,19 @@ ht-degree: 1%
 
 1. 插入 **面板** Web Channel中的组件：
 
-   * 点按组件，点按 **+** 并选择 **面板** 组件。
+   * 选择组件，选择 **+** 并选择 **面板** 组件。
 
    * 从 **组件** 浏览器面板，拖放 **面板** 交互通信组件。
 
-   * 点按 **面板** 在 **内容** 浏览器面板并点按 **添加子面板**. 选择 **添加子面板** 选项显示 **添加子面板** 对话框。 输入面板组件的标题以及可选描述和名称。
+   * 选择 **面板** 在 **内容** 浏览器面板并选择 **添加子面板**. 选择 **添加子面板** 选项显示 **添加子面板** 对话框。 输入面板组件的标题以及可选描述和名称。
 
-1. 从点按面板 **内容** 浏览器来对面板执行其他操作，如配置、编辑规则、复制、删除和插入组件。
+1. 从中选择面板 **内容** 浏览器来对面板执行其他操作，如配置、编辑规则、复制、删除和插入组件。
 
    您也可以将面板拖放到 **内容** 浏览器，以反映右侧窗格中交互式通信结构的变化。
 
 ## 将Web渠道与打印渠道同步 {#synchronize}
 
-如果在创建交互式通信时选择“打印为Web渠道的主版”，则Web渠道将与“打印”渠道同步创建，并且Web渠道的内容和数据绑定派生自打印渠道，当您点击“同步”时，在打印渠道中所做的更改可能会反映在Web渠道中。
+如果在创建交互式通信时选择“打印为Web渠道的主版”，则Web渠道将与“打印”渠道同步创建，并且Web渠道的内容和数据绑定派生自打印渠道，当您选择“同步”时，在打印渠道中所做的更改可能会反映在Web渠道中。
 
 但是，根据需要，作者可以中断Web渠道中组件的继承。
 
@@ -540,13 +540,13 @@ ht-degree: 1%
 
 在Web渠道中，组件嵌入到目标区域中。
 
-将鼠标悬停在Web渠道中的相关目标区域或变量上，然后选择 ![取消继承](assets/cancelinheritance.png) （取消继承），然后在“取消继承”对话框中，点按 **[!UICONTROL 是]**.
+将鼠标悬停在Web渠道中的相关目标区域或变量上，然后选择 ![取消继承](assets/cancelinheritance.png) （取消继承），然后在“取消继承”对话框中，选择 **[!UICONTROL 是]**.
 
 将取消目标区域中组件的继承，现在，您可以根据需要编辑它们。
 
 ### 重新启用继承 {#re-enable-inheritance}
 
-在Web渠道中，如果已取消组件的继承，则可以重新启用该继承。 要重新启用继承，请将鼠标悬停在相关目标区域（包括组件）的边界上，然后点按 ![reenableinheritance](assets/reenableinheritance.png).
+在Web渠道中，如果已取消组件的继承，则可以重新启用该继承。 要重新启用继承，请将鼠标悬停在相关目标区域（包括组件）的边界上，然后选择 ![reenableinheritance](assets/reenableinheritance.png).
 
 将显示“还原继承”对话框。
 
@@ -554,17 +554,17 @@ ht-degree: 1%
 
 如有必要，请选择 **[!UICONTROL 在恢复继承后同步页面]**. 选择此选项可同步整个交互式通信。 如果不选择此选项，则在恢复继承时，将仅同步相关的目标区域。
 
-点按 **[!UICONTROL 是]**.
+选择 **[!UICONTROL 是]**.
 
 ### 同步 {#synchronize-1}
 
 如果您使用Print as Master for Web Channel并更改Print channel，则可以同步内容以将新所做的更改引入Web channel。
 
-1. 要将Web渠道与打印渠道同步，请切换到Web渠道并点按更多选项图标。
+1. 要将Web渠道与打印渠道同步，请切换到Web渠道并选择“更多选项”图标。
 
    ![自动同步选项](assets/auto_sync_options_new.png)
 
-1. 点按以下任一项：
+1. 选择下列选项之一：
 
    * **[!UICONTROL 与打印同步]**：仅同步继承未取消的目标区域的内容。
    * **[!UICONTROL 重置]**：将Web渠道内容与打印渠道同步，并放弃对Web渠道所做的所有更改。
@@ -575,7 +575,7 @@ ht-degree: 1%
 
 ![组件工具栏](assets/component_toolbar_inherited_web_new.png)
 
-点按组件以查看以下选项：
+选择组件以查看以下选项：
 
 * **复制：** 复制组件并将其粘贴到交互式通信中的其他位置。
 * **剪切：** 在交互式通信中将组件从一个位置移动到另一个位置。
@@ -593,8 +593,8 @@ ht-degree: 1%
 
 该Web渠道创作界面便于将组件分组到面板中以便能够对这些组件同时执行操作。 此 **内容** 选项卡将分组的组件作为面板的子元素在内容树中列出。
 
-1. 点按组件并选择组( ![组](assets/group.jpg))操作。
-1. 选择多个组件并点按 **对面板中的对象进行分组**.
+1. 选择组件并选择组( ![组](assets/group.jpg))操作。
+1. 选择多个组件并选择 **对面板中的对象进行分组**.
 
    ![组对象](assets/component_toolbar_group_objects_new.png)
 

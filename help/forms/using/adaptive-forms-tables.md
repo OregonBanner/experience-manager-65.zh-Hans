@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
 feature: Adaptive Forms
 exl-id: 1a139530-27bd-44da-8bf4-5b375e75cf32
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '2475'
+source-wordcount: '2459'
 ht-degree: 2%
 
 ---
@@ -77,7 +77,7 @@ AEM Forms在侧栏的组件浏览器中提供了表组件，允许您在自适�
 
 您可以添加表格的说明，以说明屏幕阅读器可以解释和阅读的信息组织方式。 要添加说明，请执行以下操作：
 
-1. 选择表并点击 ![cmppr](assets/cmppr.png) 以在侧栏中查看其属性。
+1. 选择表并选择 ![cmppr](assets/cmppr.png) 以在侧栏中查看其属性。
 1. 在“辅助功能”选项卡中指定摘要。
 1. 单击&#x200B;**完成**。
 
@@ -95,9 +95,9 @@ AEM Forms在侧栏的组件浏览器中提供了表组件，允许您在自适�
 
 要启用排序，请执行以下操作：
 
-1. 选择表并点击 ![configure_icon](assets/configure_icon.png) （配置）。 您也可以使用 **内容** 交互式通信中的浏览器。
+1. 选择表并选择 ![configure_icon](assets/configure_icon.png) （配置）。 您也可以使用 **内容** 交互式通信中的浏览器。
 1. 选择 **启用排序**.
-1. 点按 ![完成图标](assets/done_icon.png) 以保存表属性。 列标题中的排序图标（向上箭头和向下箭头）表示已启用排序。
+1. 选择 ![完成图标](assets/done_icon.png) 以保存表属性。 列标题中的排序图标（向上箭头和向下箭头）表示已启用排序。
 
    ![启用排序](assets/enable_sorting_new.png)
 
@@ -116,7 +116,7 @@ AEM Forms在侧栏的组件浏览器中提供了表组件，允许您在自适�
 
 执行以下步骤可设置表的列宽：
 
-1. 在 **[!UICONTROL 内容]** 选项卡，点按 **[!UICONTROL 表]** 组件并点按配置(![配置](assets/configure-icon.svg))图标。
+1. 在 **[!UICONTROL 内容]** 选项卡，选择 **[!UICONTROL 表]** 组件并选择配置(![配置](assets/configure-icon.svg))图标。
 
 1. 在中输入以逗号分隔的值列表 **[!UICONTROL 列宽]** 字段，用于指定表格中每列的比例宽度。 例如，对于包含3列的表，将2,4，6指定为 **[!UICONTROL 列宽]** 字段导致将第一列的宽度设置为2/12，第二列的宽度设置为4/12，第三列的宽度设置为6/12。 2/12，因为第一列的宽度是表格宽度的六分之一。 同样，4/12将第二列宽设置为表格宽度的三分之一，6/12将第三列宽设置为表格宽度的一半。
 
@@ -124,9 +124,9 @@ AEM Forms在侧栏的组件浏览器中提供了表组件，允许您在自适�
 
 您可以使用页面工具栏中的“样式”模式来定义表的样式。 执行以下步骤以切换到样式模式并编辑表样式
 
-1. 在页面工具栏中的预览之前，点按 ![画布下拉列表](assets/canvas-drop-down.png) > **样式**.
+1. 在页面工具栏中的预览之前，选择 ![画布下拉列表](assets/canvas-drop-down.png) > **样式**.
 
-1. 在侧栏中，选择表格并点按编辑按钮 ![编辑按钮](assets/edit-button.png).
+1. 在侧栏中，选择表格并选择编辑按钮 ![编辑按钮](assets/edit-button.png).
 您可以在侧栏中看到样式属性。
 
 ![表格的样式属性](assets/style-table.png)
@@ -139,7 +139,7 @@ AEM Forms在侧栏的组件浏览器中提供了表组件，允许您在自适�
 
 表为在运行时动态添加或删除行提供开箱即用支持。
 
-1. 选择表格行并点按 ![cmppr](assets/cmppr.png).
+1. 选择表格行并选择 ![cmppr](assets/cmppr.png).
 1. 在重复设置选项卡中，指定最小和最大计数以限制表中的行数。
 1. 单击&#x200B;**完成**。
 

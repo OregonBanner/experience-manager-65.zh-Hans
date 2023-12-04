@@ -5,9 +5,9 @@ topic-tags: interactive-communications
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 feature: Interactive Communication
 exl-id: 4fb82e9b-f870-47db-ac92-2d7510acace8
-source-git-commit: 451fb472e170a79f9854efadf9be1d4fe0628b94
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '2021'
+source-wordcount: '2010'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 0%
 ## 使用代理UI准备交互式通信 {#prepare-interactive-communication-using-the-agent-ui}
 
 1. 选择 **[!UICONTROL Forms]** > **[!UICONTROL Forms和文档]**.
-1. 选择相应的交互式通信并点按 **[!UICONTROL 打开代理UI]**.
+1. 选择相应的交互式通信，然后选择 **[!UICONTROL 打开代理UI]**.
 
    >[!NOTE]
    >
@@ -47,7 +47,7 @@ ht-degree: 0%
 
 1. 在数据选项卡中，根据需要输入变量、表单数据模型属性和打印模板(XDP)字段的数据。 填写所有标有星号(&amp;ast；)的必填字段以启用 **提交** 按钮。
 
-   点按交互式通信预览中的数据字段值，以高亮显示数据选项卡中的相应数据字段，反之亦然。
+   在交互式通信预览中选择数据字段值，以高亮显示数据选项卡中的相应数据字段，反之亦然。
 
 ### 管理内容 {#manage-content}
 
@@ -57,7 +57,7 @@ ht-degree: 0%
 
    ![agentuicontenttab](assets/agentuicontenttab.png)
 
-1. 根据需要在“内容”选项卡中编辑文档片段。 要使焦点位于内容层次结构中的相关片段，您可以点按交互式通信预览中的相关行或段落，或直接点按内容层次结构中的片段。
+1. 根据需要在“内容”选项卡中编辑文档片段。 要使焦点位于内容层次结构中的相关片段，您可以在交互式通信预览中选择相关行或段落，或者直接在内容层次结构中选择片段。
 
    例如，在下图的预览中选择了行为“Make a payment online ... ”（立即在线付款……）的文档片段，并在“Content”（内容）选项卡中选择了相同的文档片段。
 
@@ -65,7 +65,7 @@ ht-degree: 0%
 
    在内容或数据选项卡中，通过点按内容中的突出显示选定的模块( ![highlightselectedmodulesincontentccr](assets/highlightselectedmodulesincontentccr.png))，您可以禁用或启用在预览中点按/选择相关文本、段落或数据字段时转到文档片段的功能。
 
-   在创建交互式通信时可由代理编辑的片段具有编辑选定内容( ![iconeditselectedcontent](assets/iconeditselectedcontent.png))图标。 点按编辑选定内容图标以在编辑模式下启动片段并在其中进行更改。 使用以下选项设置文本格式并管理文本：
+   在创建交互式通信时可由代理编辑的片段具有编辑选定内容( ![iconeditselectedcontent](assets/iconeditselectedcontent.png))图标。 选择编辑选定内容图标以在编辑模式下启动片段并在其中进行更改。 使用以下选项设置文本格式并管理文本：
 
    * [格式化选项](#formattingtext)
 
@@ -89,11 +89,11 @@ ht-degree: 0%
 
 1. 选择 **[!UICONTROL 附件]**. 在创建交互式通信时，代理UI将显示设置的可用附件。
 
-   您可以通过点按视图图标来选择不随交互式通信一起提交附件，也可以点按附件中的十字形图标以将其从交互式通信中删除（如果允许代理删除或隐藏附件）。 对于创建交互式通信时指定为必填的附件，“查看”和“删除”图标处于禁用状态。
+   您可以通过点按视图图标来选择不随交互式通信一起提交附件，也可以选择附件中的十字以从交互式通信中删除它（如果允许代理删除或隐藏附件）。 对于创建交互式通信时指定为必填的附件，“查看”和“删除”图标处于禁用状态。
 
    ![萨根图伊附件](assets/attachmentsagentui.png)
 
-1. 点按库访问权限( ![库访问](assets/libraryaccess.png))图标以访问内容库，并将DAM资产作为附件插入。
+1. 选择库访问权限( ![库访问](assets/libraryaccess.png))图标以访问内容库，并将DAM资产作为附件插入。
 
    >[!NOTE]
    >
@@ -102,7 +102,7 @@ ht-degree: 0%
 1. 如果在创建交互式通信时未锁定附件的顺序，则可以通过选择附件并点按向下和向上箭头来重新排序附件。
 1. 使用Web预览和打印预览功能，查看这两个输出是否符合您的要求。
 
-   如果您认为预览效果令人满意，请点击 **[!UICONTROL 提交]** 将交互式通信提交/发送到发布流程。 或者，要进行更改，请退出预览以返回到进行更改的页面。
+   如果您认为预览效果令人满意，请选择 **[!UICONTROL 提交]** 将交互式通信提交/发送到发布流程。 或者，要进行更改，请退出预览以返回到进行更改的页面。
 
 ## 设置文本格式 {#formattingtext}
 
@@ -122,7 +122,7 @@ ht-degree: 0%
 
 ### 突出显示/强调文本部分 {#highlightemphasize}
 
-要高亮显示\强调可编辑片段中文本的各个部分，请选择该文本，然后点按高亮颜色。
+要高亮显示\强调可编辑片段中的文本部分，请选择该文本，然后选择“高亮显示颜色”。
 
 ![highlighttextagentui](assets/highlighttextagentui.png)
 
@@ -183,22 +183,22 @@ Adobe建议按顺序执行这些指令，以成功地将交互式通信另存为
    SPI允许您使用草稿ID作为唯一标识符将交互式通信的草稿版本保存到数据库中。 这些说明假定您事先知道如何使用Maven项目构建OSGi捆绑包。
 
    有关示例SPI实施，请参阅 [ccrDocumentInstance SPI实施示例](#sample-ccrDocumentInstance-spi).
-1. 打开 `http://<hostname>:<port>/ system/console/bundles` 并点击 **[!UICONTROL 安装/更新]** 上传OSGi捆绑包。 验证已上传文件包的状态是否显示为 **活动**. 如果软件包的状态未显示为，请重新启动服务器 **活动**.
+1. 打开 `http://<hostname>:<port>/ system/console/bundles` 并选择 **[!UICONTROL 安装/更新]** 上传OSGi捆绑包。 验证已上传文件包的状态是否显示为 **活动**. 如果软件包的状态未显示为，请重新启动服务器 **活动**.
 1. 转到 `https://'[server]:[port]'/system/console/configMgr`.
-1. 点按 **[!UICONTROL 创建通信配置]**.
-1. 选择 **[!UICONTROL 使用CCRDocumentInstanceService启用保存]** 并点击 **[!UICONTROL 保存]**.
+1. 选择 **[!UICONTROL 创建通信配置]**.
+1. 选择 **[!UICONTROL 使用CCRDocumentInstanceService启用保存]** 并选择 **[!UICONTROL 保存]**.
 
 ### 将交互式通信另存为草稿 {#save-as-draft-agent-ui}
 
 执行以下步骤，将交互式通信另存为草稿：
 
-1. 在Forms Manager中选择交互式通信并点按 **[!UICONTROL 打开代理UI]**.
+1. 在Forms Manager中选择交互式通信，然后选择 **[!UICONTROL 打开代理UI]**.
 
-1. 在代理UI中进行相应更改，然后点击 **[!UICONTROL 另存为草稿]**.
+1. 在Agent UI中进行相应更改，然后选择 **[!UICONTROL 另存为草稿]**.
 
-1. 在中指定拔模的名称 **[!UICONTROL 名称]** 字段并点按 **[!UICONTROL 完成]**.
+1. 在中指定拔模的名称 **[!UICONTROL 名称]** 字段并选择 **[!UICONTROL 完成]**.
 
-将交互式通信另存为草稿后，点按 **[!UICONTROL 保存更改]** 以保存对草稿所做的任何进一步更改。
+将交互式通信另存为草稿后，选择 **[!UICONTROL 保存更改]** 以保存对草稿所做的任何进一步更改。
 
 ### 检索交互式通信的草稿 {#retrieve-draft}
 

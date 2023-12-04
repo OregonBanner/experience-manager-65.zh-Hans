@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: customization
 docset: aem65
 exl-id: 5cb3ee55-f411-4692-84f7-89bf6ade729d
-source-git-commit: ab3d016c7c9c622be361596137b150d8719630bd
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
 source-wordcount: '521'
 ht-degree: 0%
@@ -30,8 +30,8 @@ ht-degree: 0%
 
 ### 自定义单个字段的布局 {#customize-layout-of-a-single-field}
 
-1. 在中打开表单 **样式** 模式。 要在样式模式下打开表单，请在页面工具栏中，点按 ![画布下拉列表](assets/canvas-drop-down.png) > **样式**.
-1. 在侧栏中，在 **表单对象**，选择字段并点击编辑按钮 ![编辑按钮](assets/edit-button.png).
+1. 在中打开表单 **样式** 模式。 要在样式模式下打开表单，请在页面工具栏中选择 ![画布下拉列表](assets/canvas-drop-down.png) > **样式**.
+1. 在侧栏中，在 **表单对象**，选择字段并选择编辑按钮 ![编辑按钮](assets/edit-button.png).
 1. 选择要自定义的字段的状态，并指定该状态的样式。
 
    ![指定字段的内联样式](assets/edit-error-state.png)
@@ -43,12 +43,12 @@ ht-degree: 0%
 使用主题编辑器创建主题以自定义表单中所有字段的布局。 创建主题后，请执行以下步骤以将其应用于表单：
 
 1. 在编辑模式下打开表单。
-1. 在编辑模式下，选择一个组件，然后点按 ![字段级](assets/field-level.png) > **自适应表单容器**，然后点击 ![cmppr](assets/cmppr.png).
+1. 在编辑模式下，选择一个组件，然后选择 ![字段级](assets/field-level.png) > **自适应表单容器**，然后选择 ![cmppr](assets/cmppr.png).
 1. 在侧栏的自适应表单主题下，选择您使用主题编辑器创建的主题。
 
 ## 创建自定义字段布局 {#create-a-custom-field-layout}
 
-1. 打开 CRXDE Lite。默认URL为https://&#39;[服务器]：[端口]&#39;/crx/de.
+1. 打开CRXDE Lite。 默认URL为https://&#39;[服务器]：[端口]&#39;/crx/de.
 1. 将字段布局从/libs/fd/af/layouts/field节点（例如defaultFieldLayout）复制到/apps节点（例如/apps/af-field-layout）。
 1. 重命名复制的节点和defaultFieldLayout.jsp文件。 例如，errorOnRight.jsp。
 

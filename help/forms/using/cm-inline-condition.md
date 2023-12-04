@@ -11,9 +11,9 @@ discoiquuid: bbaba39b-e15a-4143-b6fc-7789fa2917b4
 docset: aem65
 feature: Correspondence Management
 exl-id: bc5d6c5b-c833-4849-aace-e07f8a522b32
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '1657'
+source-wordcount: '1660'
 ht-degree: 0%
 
 ---
@@ -48,7 +48,7 @@ AEM Forms允许您在文本模块中使用内联条件来自动呈现依赖于�
 >
 >如果您现有的资产包含旧的condition/repeat表达式（早于6.2 SP1 CFP 4），则资产会显示condition和repeat的旧语法。 但是，旧条件/重复项有效。 新旧条件/重复表达式相互兼容，以创建旧条件/重复表达式的嵌套组合。
 
-1. 在相关文本模块中，选择要条件化的文本部分并点按 **条件**.
+1. 在相关的文本模块中，选择要条件化的文本部分并选择 **条件**.
 
    ![1_selecttext](assets/1_selecttext.png)
 
@@ -60,7 +60,7 @@ AEM Forms允许您在文本模块中使用内联条件来自动呈现依赖于�
    >
    >无法保存空的或无效的条件表达式。 内部必须存在有效的条件表达式 `${}` 以保存表达式。
 
-1. 执行以下操作可构建一个条件，用于评估所选/条件化文本是否显示在信件中，然后点按复选标记以保存表达式：
+1. 执行以下操作可构造一个条件，用于评估所选/条件化文本是否显示在信件中，然后选择复选标记以保存表达式：
 
    双击一个DD元素以将其插入到条件中。 在对话框中插入相应的运算符并构造以下条件。
 
@@ -70,7 +70,7 @@ AEM Forms允许您在文本模块中使用内联条件来自动呈现依赖于�
 
    有关创建表达式的详细信息，请参见 **使用表达式生成器创建表达式和远程函数** 在 [表达式生成器](../../forms/using/expression-builder.md). 数据字典中的元素必须支持表达式中指定的值。 有关更多信息，请参阅 [数据字典](../../forms/using/data-dictionary.md).
 
-   插入条件后，您可以将鼠标悬停在条件左侧的句柄上以查看条件。 您可以点按手柄以查看条件的弹出菜单，从中可编辑或删除条件。
+   插入条件后，您可以将鼠标悬停在条件左侧的句柄上以查看条件。 可以选择控制滑块以查看条件的弹出菜单，从中可编辑或删除条件。
 
    ![3_hoverhandle](assets/3_hoverhandle.png) ![4_editconditionremoveconditionpopup](assets/4_editconditionremoveconditionpopup.png)
 
@@ -111,13 +111,13 @@ AEM Forms允许您在文本模块中使用内联条件来自动呈现依赖于�
 
    ![2_selection](assets/2_selection.png)
 
-1. 点按重复。
+1. 选择“重复”。
 
    出现“重复”对话框。
 
    ![3_repeatdialog](assets/3_repeatdialog.png)
 
-1. 选择换行符作为分隔符，并根据需要点按添加条件以创建规则。 也可以使用文本作为分隔符，并指定要用作分隔符的文本字符。
+1. 选择换行符作为分隔符，并根据需要选择添加条件以创建规则。 也可以使用文本作为分隔符，并指定要用作分隔符的文本字符。
 
    此时将显示“创建规则”对话框。
 
@@ -172,7 +172,7 @@ AEM Forms允许您在文本模块中使用内联条件来自动呈现依赖于�
 
    ![2_repeat_selecttext](assets/2_repeat_selecttext.png)
 
-1. 点按 **重复**. 此时将出现“重复”对话框，其中具有空的内联条件。
+1. 选择 **重复**. 此时将出现“重复”对话框，其中具有空的内联条件。
 
    ![3_repeat_dialog](assets/3_repeat_dialog.png)
 
@@ -184,7 +184,7 @@ AEM Forms允许您在文本模块中使用内联条件来自动呈现依赖于�
 
    否则，如果您不需要有选择地呈现信息（此处为事务），请通过在对话框中删除以下内容来保持条件为空： `${}`. 当重复表达式窗口为空（不含$）时，将启用保存重复表达式{} （当不需要重复时）或包含有效的重复条件时。
 
-1. 选择用于设置动态文本格式的分隔符，然后点按复选标记以保存：
+1. 选择用于设置动态文本格式的分隔符，然后选择要保存的复选标记：
 
    * **换行符**：在输出书信中的每个事务条目之后插入换行符。
    * **文本**：在输出字母中的每个交易条目之后插入指定的文本字符。
@@ -193,7 +193,7 @@ AEM Forms允许您在文本模块中使用内联条件来自动呈现依赖于�
 
    ![4_repeat_hoverdetail](assets/4_repeat_hoverdetail.png)
 
-   您可以点按手柄查看重复项的弹出菜单，从中可编辑或删除重复构造。
+   可选取控制滑块以查看重复项的弹出菜单，从中可编辑或删除重复构造。
 
    ![5_repeateditremove](assets/5_repeateditremove.png)
 

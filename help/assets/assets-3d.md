@@ -8,10 +8,10 @@ content-type: reference
 feature: 3D Assets,Asset Management
 role: User, Admin
 exl-id: 01c96f1e-c0e6-497d-bd7a-c0fd547a34da
-source-git-commit: 06a6d4e0ba2aeaefcfb238233dd98e8bbd6731da
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
 source-wordcount: '2354'
-ht-degree: 3%
+ht-degree: 2%
 
 ---
 
@@ -206,7 +206,7 @@ Dynamic Media包含一个Dynamic Media 3D媒体组件，您可以在Adobe Experi
 
 1. 在侧面板中，选择加号图标以打开 **[!UICONTROL 组件]** 列表。
 
-   ![3d-media-component-drag-drop](/help/assets/assets-dm/3d-assets-filter.png)
+   ![3d-media-component-drop](/help/assets/assets-dm/3d-assets-filter.png)
 
 1. 拖动 **[!UICONTROL 3D媒体]** 来自的组件 **[!UICONTROL 组件]** 列出页面上要显示3D查看器的位置。
 

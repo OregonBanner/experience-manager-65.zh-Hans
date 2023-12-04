@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 2d35a2a4-0c8c-4b16-99a6-c6e6d66446dc
 docset: aem65
 exl-id: a7e16555-9bbe-4da2-817c-4495a0193f3f
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '1553'
-ht-degree: 74%
+source-wordcount: '1540'
+ht-degree: 62%
 
 ---
 
@@ -71,7 +71,7 @@ ht-degree: 74%
 
 1. 打开 **站点** 控制台(使用 **站点** 中的选项 [全局导航](/help/sites-authoring/basic-handling.md#global-navigation)) — 当您选择Adobe Experience Manager链接（左上方）时，就会触发（下拉列表）。
 
-1. 通过点按/单击相应的页面，在树中向下导航。页面资源的显示方式取决于您所使用的视图 - [卡片视图、列表视图或列视图](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)：
+1. 通过点按/单击相应的页面，在树中向下导航。 页面资源的显示方式取决于您所使用的视图 —  [卡片、列表或列](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)：
 
    ![screen_shot_2018-03-21at160214](assets/screen_shot_2018-03-21at160214.png)
 
@@ -102,17 +102,17 @@ ht-degree: 74%
 
 1. 列视图：
 
-   * 点按/单击所需资源的缩略图 - 缩略图上将覆盖一个勾号，表示已选择该页面。
+   * 单击所需资源的缩略图 — 缩略图上将覆盖一个勾号，表示已选择该页面。
 
 1. 列表视图：
 
-   * 点按/单击所需资源的缩略图 - 缩略图上将覆盖一个勾号，表示已选择该页面。
+   * 单击所需资源的缩略图 — 缩略图上将覆盖一个勾号，表示已选择该页面。
 
 1. 卡片视图：
 
    * 进入选择模式的方式 [选择所需的资源](/help/sites-authoring/basic-handling.md#viewingandselectingyourresources) 替换为：
 
-      * 移动设备：点按并按住
+      * 移动设备：选择并按住
       * 桌面： [快速操作](/help/sites-authoring/basic-handling.md#quick-actions)  — 勾选图标：
 
    ![screen_shot_2018-03-21at160503](assets/screen_shot_2018-03-21at160503.png)
@@ -158,24 +158,24 @@ ht-degree: 74%
 
    * [编辑页面中现有组件的内容](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste)：
 
-      * 通过点按或单击打开组件工具栏。使用&#x200B;**编辑**（铅笔）图标打开对话框。
-      * 通过点按住或慢速双击打开组件的就地编辑器。此时会显示可用的操作（对于某些组件，该选择将受到限制）。
+      * 通过单击打开组件工具栏。 使用&#x200B;**编辑**（铅笔）图标打开对话框。
+      * 通过按住select键或双击来打开组件的就地编辑器。 此时会显示可用的操作（对于某些组件，该选择将受到限制）。
       * 要查看所有可用的操作，请使用以下图标进入全屏模式：
 
      ![全屏模式](do-not-localize/screen_shot_2018-03-21at160706.png)
 
    * [配置现有组件的属性](/help/sites-authoring/editing-content.md#component-edit-dialog)
 
-      * 通过点按或单击打开组件工具栏。使用&#x200B;**配置**（扳手）图标打开对话框。
+      * 通过单击打开组件工具栏。 使用&#x200B;**配置**（扳手）图标打开对话框。
 
    * 通过以下任一方式[移动组件](/help/sites-authoring/editing-content.md#moving-a-component)：
 
       * 将所需组件拖动到新位置。
-      * 通过点按或单击打开组件工具栏。根据需要依次使用&#x200B;**剪切**&#x200B;和&#x200B;**粘贴**&#x200B;图标。
+      * 通过单击打开组件工具栏。 使用 **剪切** 则 **粘贴** 所需的图标。
 
    * [复制（并粘贴）](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste)组件：
 
-      * 通过点按或单击打开组件工具栏。根据需要依次使用&#x200B;**复制**&#x200B;和&#x200B;**粘贴**&#x200B;图标。
+      * 通过单击打开组件工具栏。 使用 **复制** 则 **粘贴** 图标。
 
    >[!NOTE]
    >
@@ -183,7 +183,7 @@ ht-degree: 74%
 
    * [删除](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste)组件：
 
-      * 通过点按或单击打开组件工具栏，然后使用&#x200B;**删除**&#x200B;图标。
+      * 单击以打开组件工具栏，然后使用 **删除** 图标。
 
    * 向页面[添加注释](/help/sites-authoring/annotations.md#annotations)：
 
@@ -305,7 +305,7 @@ ht-degree: 74%
 
    ![screen-shot_2019-03-05at114412](assets/screen-shot_2019-03-05at114412.png)
 
-1. 点按/单击所需的引用类型，以显示更多详细信息并（视需要）执行进一步操作。
+1. 单击所需的引用类型以显示更多详细信息并（在适当时）采取进一步操作。
 
 ### 创建页面版本 {#creating-a-version-of-your-page}
 
@@ -315,7 +315,7 @@ ht-degree: 74%
 
    ![screen_shot_2018-03-21at161355](assets/screen_shot_2018-03-21at161355.png)
 
-1. 点按/单击“时间轴”列右下方的向上箭头以显示其他按钮，包括 **另存为版本**.
+1. 单击“时间轴”列右下方的向上箭头以显示其他按钮，包括 **另存为版本**.
 
    ![screen-shot_2019-03-05at114600](assets/screen-shot_2019-03-05at114600.png)
 
@@ -331,7 +331,7 @@ ht-degree: 74%
 
    如果页面的某个版本已经保存，则会在“时间轴”中列出该版本。
 
-1. 点按/单击要恢复的版本 - 这将显示其他操作按钮：
+1. 单击要还原的版本 — 这将显示其他操作按钮：
 
    * **恢复到此版本**
 

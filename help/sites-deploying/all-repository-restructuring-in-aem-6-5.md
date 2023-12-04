@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: repo_restructuring
 exl-id: 2d852d9d-9be3-487a-966a-4902bd7df7f9
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '2688'
+source-wordcount: '2694'
 ht-degree: 2%
 
 ---
@@ -49,7 +49,7 @@ ht-degree: 2%
 
 ## 6.5版升级 {#with-upgrade}
 
-### ContextHub 配置 {#contexthub-6.5}
+### ContextHub配置 {#contexthub-6.5}
 
 从AEM 6.4开始，没有默认的ContextHub配置。 因此，在站点的根级别a `cq:contextHubPathproperty` 应设置以指示应使用的配置。
 
@@ -90,7 +90,7 @@ ht-degree: 2%
         </ul> </li>
       </ol> </li>
      <li>在工作流模型编辑器中启用编辑模式，该模式会将工作流模型定义复制到/conf/global/workflow/models。</li>
-     <li>点按“同步”按钮以将更改同步到/var/workflow/models下的“运行时工作流模型”。</li>
+     <li>选择“同步”按钮，将更改同步到/var/workflow/models下的“运行时工作流模型”。</li>
      <li>导出两个工作流模型(/conf/global/workflow/models/&lt;workflow-model&gt;)和运行时工作流模型(/var/workflow/models/&lt;workflow-model&gt;)并集成到AEM项目中。
       <ol>
        <li>例如，导出：
@@ -482,7 +482,7 @@ ht-degree: 2%
    <td>
     <ol>
      <li>从复制自定义配置 <code>/etc/blueprints</code> 到 <code>/apps/msm</code>.</li>
-     <li>删除 <code>/etc/blueprints</code>.</li>
+     <li>移除 <code>/etc/blueprints</code>.</li>
     </ol> </td>
   </tr>
   <tr>
@@ -607,7 +607,7 @@ ht-degree: 2%
     <ol>
      <li>将之前位置中的现有配置迁移到新位置。
       <ul>
-       <li>通过在上的AEM创作UI手动重新创建新的翻译Cloud Service配置 <strong>“工具”&gt;“Cloud Service”&gt;“翻译Cloud Service”</strong>.<br /> 或 </li>
+       <li>通过在上的AEM创作UI手动重新创建新的翻译Cloud Service配置 <strong>“工具”&gt;“Cloud Service”&gt;“翻译Cloud Service”</strong>.<br /> 或者 </li>
        <li>将任何新的翻译Cloud Service配置从上一个位置复制到新位置(<code>/apps</code>， <code>/conf/global</code> 或 <code>/conf/&lt;tenant&gt;</code>)。</li>
       </ul> </li>
      <li>将适用的AEM配置与AEM内容层次结构关联。
@@ -765,7 +765,7 @@ ht-degree: 2%
     <ol>
      <li>将先前位置中的现有配置迁移到新位置。
       <ul>
-       <li>通过，手动创建新的供应商翻译连接器Cloud Service配置 <strong>“工具”&gt;“Cloud Service”&gt;“翻译Cloud Service”中的AEM创作UI</strong>.<br /> 或 </li>
+       <li>通过，手动创建新的供应商翻译连接器Cloud Service配置 <strong>“工具”&gt;“Cloud Service”&gt;“翻译Cloud Service”中的AEM创作UI</strong>.<br /> 或者 </li>
        <li>将任何新的供应商翻译连接器Cloud Service配置从上一个位置复制到新位置(<code>/apps</code>， <code>/conf/global </code>或 <code>/conf/&lt;tenant&gt;</code>)。</li>
       </ul> </li>
      <li>将适用的AEM配置与AEM内容层次结构关联。

@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
 docset: aem65
 exl-id: 6c6fb516-1b11-4da4-b638-4388a070e397
-source-git-commit: 65c5a4442f17e6bc52deaa1588f535a05698083f
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
 source-wordcount: '339'
 ht-degree: 0%
@@ -29,10 +29,10 @@ ht-degree: 0%
 
 ![home-screen-1-1](assets/home-screen-1-1.png)-->
 
-1. **菜单按钮**：点按 **菜单** 按钮以导航到“任务”、“Forms”、“发件箱”和“设置”。 如果您的AEM Forms应用程序已连接到AEM Forms JEE服务器，则可以看到任务选项。 “任务”选项还存储从进程中的任务创建的草稿。 对于AEM Forms OSGi服务器，任务选项是隐藏的。 Outbox在与服务器同步之前存储已保存的表单和草稿。 当应用程序处于以下状态时，发件箱中所有保存的表单和草稿都将上传到AEM Forms服务器 [与服务器同步](../../forms/using/sync-app.md). 有关设置的信息，请参阅 [更新常规设置](../../forms/using/update-general-settings.md).
-1. **任务或表单**：点按列出的要处理的任务或表单。
-1. **水平省略号**：表示操作对表单可用。 点按省略号会显示作者提供的操作和描述。 此 **删除草稿** 和 **完成** 选项在点击省略号时可见。
-1. **“刷新”图标**：点按刷新图标，以便您可以将应用程序与AEM Forms服务器同步。
+1. **菜单按钮**：选择 **菜单** 按钮以导航到“任务”、“Forms”、“发件箱”和“设置”。 如果您的AEM Forms应用程序已连接到AEM Forms JEE服务器，则可以看到任务选项。 “任务”选项还存储从进程中的任务创建的草稿。 对于AEM Forms OSGi服务器，任务选项是隐藏的。 Outbox在与服务器同步之前存储已保存的表单和草稿。 当应用程序处于以下状态时，发件箱中所有保存的表单和草稿都将上传到AEM Forms服务器 [与服务器同步](../../forms/using/sync-app.md). 有关设置的信息，请参阅 [更新常规设置](../../forms/using/update-general-settings.md).
+1. **任务或表单**：选择列出的要处理的任务或表单。
+1. **水平省略号**：表示操作对表单可用。 点按省略号会显示作者提供的操作和描述。 此 **删除草稿** 和 **完成** 选项在选择省略号时可见。
+1. **“刷新”图标**：选择刷新图标，以便您可以将应用程序与AEM Forms服务器同步。
 
 ### 自定义主屏幕 {#customizing-the-home-screen}
 

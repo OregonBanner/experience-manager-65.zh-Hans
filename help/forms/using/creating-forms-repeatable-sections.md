@@ -9,10 +9,10 @@ topic-tags: author
 discoiquuid: 01724ca0-6901-45e7-b045-f44814ed574e
 feature: Adaptive Forms
 exl-id: f2abae0a-f7fd-4a39-bd8c-03492ce06fe9
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '1174'
-ht-degree: 5%
+source-wordcount: '1139'
+ht-degree: 4%
 
 ---
 
@@ -28,7 +28,7 @@ ht-degree: 5%
 
 ## 通过脚本使用实例管理器  {#using-instance-manager-via-scripts-nbsp}
 
-1. 在编辑模式下，选择一个面板，然后点按 ![cmppr](assets/cmppr.png). 在侧栏中的属性下方，启用 **使面板可重复**. 指定以下各项的值： **[!UICONTROL 最大值]** 和 **[!UICONTROL 最小值]** 字段。
+1. 在编辑模式下，选择一个面板，然后选择 ![cmppr](assets/cmppr.png). 在侧栏中的属性下方，启用 **使面板可重复**. 指定以下各项的值： **[!UICONTROL 最大值]** 和 **[!UICONTROL 最小值]** 字段。
 
    “最大值”字段指定面板在页面上可出现的最大次数。 您可以在Maximum Count字段中指定–1 ，以允许该面板无限次显示。
 
@@ -40,7 +40,7 @@ ht-degree: 5%
 
 1. 面板的父项（将重复）应包含添加和删除按钮以管理可重复面板的实例。 执行以下步骤将按钮插入到父代，并在按钮上启用脚本：
 
-   1. 从侧栏中，将按钮组件拖放到面板的父面板。 选择组件并点按 ![edit-rules](assets/edit-rules.png). 该按钮的规则将在规则编辑器中打开。
+   1. 从侧栏中，将按钮组件拖放到面板的父面板。 选择组件并选择 ![edit-rules](assets/edit-rules.png). 该按钮的规则将在规则编辑器中打开。
    1. 在规则编辑器窗口中，单击 **创建**.
 
       选择 **可视编辑器** 表单对象和函数行中的。
@@ -100,8 +100,8 @@ ht-degree: 5%
 
 面板具有各种布局选项。 折叠式设计的布局选项为可重复面板提供开箱即用支持。 对带有可折叠设计选项的布局的可重复面板执行以下步骤：
 
-1. 在要重复的面板的父项上，点按 ![cmppr](assets/cmppr.png). 您可以在侧栏中看到属性。 在 **布局** 下拉列表，选择 **折叠**.
-1. 在要重复的面板上，点按 ![cmppr](assets/cmppr.png). 您可以在侧栏中看到面板属性。 启用 **使面板可重复** 选项卡，并为 **最大值** 和 **最小值** 字段。
+1. 在要重复的面板的父项上，选择 ![cmppr](assets/cmppr.png). 您可以在侧栏中看到属性。 在 **布局** 下拉列表，选择 **折叠**.
+1. 在要重复的面板上，选择 ![cmppr](assets/cmppr.png). 您可以在侧栏中看到面板属性。 启用 **使面板可重复** 选项卡，并为 **最大值** 和 **最小值** 字段。
 
    现在，您可以使用加号(+)并删除( ![delete-panel](assets/delete-panel.png))按钮以添加和删除面板。
 

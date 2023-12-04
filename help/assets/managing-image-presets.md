@@ -13,10 +13,10 @@ legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/image-
 feature: Image Presets
 role: User, Admin
 exl-id: 556b99fe-91c3-441f-ba81-22cb8c10ef7f
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '3837'
-ht-degree: 8%
+source-wordcount: '3794'
+ht-degree: 7%
 
 ---
 
@@ -81,11 +81,11 @@ Adobe Illustrator的文件格式是PDF的变体。 在Experience Manager Assets�
 * Adobe Illustrator文档由具有多层的单个页面组成。 每个图层都提取为Illustrator主资源下的PNG子资源。
 * PDF文档由一个或多个页面组成。 每个页面都提取为主多页PDFPDF文档下的单页文档子资产。
 
-子资源由创建 `Create Sub Asset process` 整体中的组件 `DAM Update Asset` 工作流。 要在工作流中查看此流程组件，请点按 **[!UICONTROL 工具]** > **[!UICONTROL 工作流]** > **[!UICONTROL 模型]** > **[!UICONTROL DAM更新资产]** > **[!UICONTROL 编辑]**.
+子资源由创建 `Create Sub Asset process` 整体中的组件 `DAM Update Asset` 工作流。 要在工作流中查看此流程组件，请选择 **[!UICONTROL 工具]** > **[!UICONTROL 工作流]** > **[!UICONTROL 模型]** > **[!UICONTROL DAM更新资产]** > **[!UICONTROL 编辑]**.
 
 另请参阅 [查看多页文件的页面](/help/assets/managing-linked-subassets.md#view-pages-of-a-multi-page-file).
 
-在打开资产、点按内容菜单并选择 **[!UICONTROL 子资产]** 或 **[!UICONTROL 页面]**. 子资产是真正的资产。 即，PDF页面由提取 `Create Sub Asset` 工作流组件。 然后，它们存储为 `page1.pdf`， `page2.pdf`，以此类推。 存储之后， `DAM Update Asset` 工作流会处理它们。
+在打开资产时，选择内容菜单，然后选择 **[!UICONTROL 子资产]** 或 **[!UICONTROL 页面]**. 子资产是真正的资产。 即，PDF页面由提取 `Create Sub Asset` 工作流组件。 然后，它们存储为 `page1.pdf`， `page2.pdf`，以此类推。 存储之后， `DAM Update Asset` 工作流会处理它们。
 
 要使用Dynamic Media预览和生成AI、EPS或PDF文件的动态演绎版，需要执行以下处理步骤：
 
@@ -106,7 +106,7 @@ Adobe Illustrator的文件格式是PDF的变体。 在Experience Manager Assets�
 
 您访问 `Rasterize PDF/AI Image Preview Rendition` 流程组件选项通过 `DAM Update Asset` 工作流。
 
-点按左上角的Adobe Experience Manager，导航至 **[!UICONTROL 工具]** > **[!UICONTROL 工作流]** > **[!UICONTROL 模型]**. 在工作流模型页面上，选择 **[!UICONTROL DAM更新资产]**，然后单击工具栏上的点按 **[!UICONTROL 编辑]**. 在 [!UICONTROL DAM更新资产] 工作流页面，双击 `Rasterize PDF/AI Image Preview Rendition` 进程组件，打开其“步骤属性”对话框。
+选择左上角的Adobe Experience Manager，导航至 **[!UICONTROL 工具]** > **[!UICONTROL 工作流]** > **[!UICONTROL 模型]**. 在工作流模型页面上，选择 **[!UICONTROL DAM更新资产]**，然后在工具栏上，选择 **[!UICONTROL 编辑]**. 在 [!UICONTROL DAM更新资产] 工作流页面，双击 `Rasterize PDF/AI Image Preview Rendition` 进程组件，打开其“步骤属性”对话框。
 
 #### 栅格化PDF/AI图像预览呈现版本选项 {#rasterize-pdf-ai-image-preview-rendition-options}
 
@@ -208,18 +208,18 @@ Dynamic Media集成使用以下脚本：
 
 **要配置图像缩略图大小，请执行以下操作：**
 
-1. 点按 **[!UICONTROL 工具]** > **[!UICONTROL 工作流]** > **[!UICONTROL 模型]** > **[!UICONTROL DAM更新资产]** > **[!UICONTROL 编辑]**.
-1. 点按 **[!UICONTROL Dynamic Media流程图像资源]** 步骤并点按或单击 **[!UICONTROL 缩略图]** 选项卡。 根据需要更改缩略图大小，然后点按&#x200B;**[!UICONTROL 确定]**。
+1. 选择 **[!UICONTROL 工具]** > **[!UICONTROL 工作流]** > **[!UICONTROL 模型]** > **[!UICONTROL DAM更新资产]** > **[!UICONTROL 编辑]**.
+1. 选择 **[!UICONTROL Dynamic Media流程图像资源]** 步骤并单击 **[!UICONTROL 缩略图]** 选项卡。 根据需要更改缩略图大小，然后选择 **[!UICONTROL 确定]**.
 
    ![6_5_dynamicmediaprocessimageassets-thumbnailstab](assets/6_5_dynamicmediaprocessimageassets-thumbnailstab.png)
 
-1. 点按&#x200B;**[!UICONTROL 流程缩略图]**&#x200B;步骤，然后点按&#x200B;**[!UICONTROL 缩略图]**&#x200B;选项卡。根据需要更改缩略图大小，然后点按&#x200B;**[!UICONTROL 确定]**。
+1. 选择 **[!UICONTROL 进程缩略图]** 步骤，然后选择 **[!UICONTROL 缩略图]** 选项卡。 根据需要更改缩略图大小，然后选择 **[!UICONTROL 确定]**.
 
    >[!NOTE]
    >
    >**[!UICONTROL 流程缩略图]**&#x200B;步骤的缩略图参数中的值必须与 **[!UICONTROL Dynamic Media 流程图像资产]**&#x200B;步骤中的缩略图参数相匹配。
 
-1. 点按 **[!UICONTROL 保存]** 以保存对工作流所做的更改。
+1. 选择 **[!UICONTROL 保存]** 以保存对工作流所做的更改。
 
 ### 增加或减少显示的Dynamic Media图像预设数 {#increasing-or-decreasing-the-number-of-image-presets-that-display}
 
@@ -238,7 +238,7 @@ Dynamic Media集成使用以下脚本：
    ![chlimage_1-495](assets/chlimage_1-495.png)
 
 1. 在limit属性中，将数字更改为所需的数字，例如 `{empty requestPathInfo.selectors[1] ? "20" : requestPathInfo.selectors[1]}`
-1. 点按 **[!UICONTROL 全部保存]**.
+1. 选择 **[!UICONTROL 全部保存]**.
 
 ## 创建Dynamic Media图像预设 {#creating-image-presets}
 
@@ -260,7 +260,7 @@ Dynamic Media集成使用以下脚本：
 
 **要创建Dynamic Media图像预设，请执行以下操作：**
 
-1. 在Experience Manager中，点按Experience Manager徽标以访问全局导航控制台，然后点按 **[!UICONTROL 工具]** > **[!UICONTROL 资产]** > **[!UICONTROL 图像预设]**.
+1. 在Experience Manager中，选择Experience Manager徽标以访问全局导航控制台，然后选择 **[!UICONTROL 工具]** > **[!UICONTROL 资产]** > **[!UICONTROL 图像预设]**.
 1. 单击&#x200B;**[!UICONTROL 创建]**。此 **[!UICONTROL 编辑图像预设]** 窗口打开。
 
    ![chlimage_1-496](assets/chlimage_1-496.png)
@@ -412,7 +412,7 @@ Dynamic Media集成使用以下脚本：
    <td><strong>重新取样模式</strong></td>
    <td>选择 <strong>重新取样模式</strong> 选项。 在缩减图像取样时，以下选项会锐化图像：
     <ul>
-     <li><strong>双线性</strong>  — 最快速的重新取样方法。会出现一些锯齿伪像。</li>
+     <li><strong>双线性</strong>  — 最快速的重新取样方法。 会出现一些锯齿伪像。</li>
      <li><strong>双三次</strong>  — 增加CPU使用率，但生成较锐利的图像，出现的锯齿伪像较少。</li>
      <li><strong>锐化2</strong>  — 可以生成比两次立方稍微锐利的结果，但CPU成本更高。</li>
      <li><strong>两次锐化</strong>  — 选择Photoshop默认重新取样器以减小图像大小，称为 <strong>双三次锐化</strong> 在Adobe Photoshop中。</li>
@@ -492,7 +492,7 @@ Dynamic Media集成使用以下脚本：
 
 ## 编辑图像预设 {#modifying-image-presets}
 
-1. 在Experience Manager中，点按Experience Manager徽标以访问全局导航控制台，然后点按 **[!UICONTROL 工具]** > **[!UICONTROL 资产]** > **[!UICONTROL 图像预设]**.
+1. 在Experience Manager中，选择Experience Manager徽标以访问全局导航控制台，然后选择 **[!UICONTROL 工具]** > **[!UICONTROL 资产]** > **[!UICONTROL 图像预设]**.
 
    ![6_5_imagepreset-editpreset](assets/6_5_imagepreset-editpreset.png)
 
@@ -507,14 +507,14 @@ Dynamic Media集成使用以下脚本：
 
 **要在Dynamic Media — 混合模式下发布图像预设，请执行以下操作：**
 
-1. 在Experience Manager中，点按或单击Experience Manager徽标以访问全局导航控制台，然后点按或单击“工具”图标并导航到 **[!UICONTROL 资产]** > **[!UICONTROL 图像预设]**.
-1. 从图像预设列表中选择图像预设或多个图像预设，然后单击或点按 **[!UICONTROL Publish]**.
+1. 在Experience Manager中，单击Experience Manager徽标以访问全局导航控制台，然后单击工具图标并导航到 **[!UICONTROL 资产]** > **[!UICONTROL 图像预设]**.
+1. 从图像预设列表中选择一个或多个图像预设，然后单击 **[!UICONTROL Publish]**.
 1. 图像预设发布后，状态将从未发布更改为已发布。
 
    ![chlimage_1-81](assets/chlimage_1-505.png)
 
 ## 删除Dynamic Media图像预设 {#deleting-image-presets}
 
-1. 在Experience Manager中，点按或单击Experience Manager徽标以访问全局导航控制台。
-1. 点按 **[!UICONTROL 工具]** 图标，然后导航到 **[!UICONTROL 资产]** > **[!UICONTROL 图像预设]**.
-1. 选择预设，然后单击 **[!UICONTROL 删除]**. Dynamic Media会确认您要删除它。 点按 **[!UICONTROL 删除]** 删除或点按 **[!UICONTROL 取消]** 中止。
+1. 在Experience Manager中，单击Experience Manager徽标以访问全局导航控制台。
+1. 选择 **[!UICONTROL 工具]** 图标，然后导航到 **[!UICONTROL 资产]** > **[!UICONTROL 图像预设]**.
+1. 选择预设，然后单击 **[!UICONTROL 删除]**. Dynamic Media会确认您要删除它。 选择 **[!UICONTROL 删除]** 删除或选择 **[!UICONTROL 取消]** 中止。

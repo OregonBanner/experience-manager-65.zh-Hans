@@ -2,10 +2,10 @@
 title: 用于管理任务的收件箱
 description: 使用Adobe Experience Manager 6.5中的收件箱管理您的任务。
 exl-id: 80b7f179-b011-4f90-b5ab-9ef8a669d271
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '1143'
-ht-degree: 42%
+source-wordcount: '1155'
+ht-degree: 39%
 
 ---
 
@@ -65,7 +65,7 @@ ht-degree: 42%
 
 打开 AEM 通知收件箱：
 
-1. 单击/点按工具栏中的指示器。
+1. 单击工具栏中的指示器。
 
 1. 选择&#x200B;**查看全部**。此 **AEM收件箱** 打开。 收件箱会显示工作流程、项目和任务中的项目。
 1. 默认视图为[列表视图](#inbox-list-view)，但您也可以切换到[日历视图](#inbox-calendar-view)。这是通过视图选择器（工具栏，右上方）完成的。
@@ -138,8 +138,8 @@ Admin Control选项仅对 `administrators` 或 `workflow-administrators` 组。
 
 * **列自定义**：自定义AEM收件箱以更改列的默认标题，对列的位置重新排序，并根据工作流的数据显示其他列。
    * **添加列**：选择要添加到AEM收件箱中的列。
-   * **编辑列**：将鼠标悬停在列标题上并点按 ![编辑](assets/edit.svg) 图标，输入列显示名称。
-   * **删除列**：点按 ![删除](assets/delete_updated.svg) 图标以从AEM收件箱中删除列。
+   * **编辑列**：将鼠标悬停在列标题上并选择 ![编辑](assets/edit.svg) 图标，输入列显示名称。
+   * **删除列**：选择 ![删除](assets/delete_updated.svg) 图标以从AEM收件箱中删除列。
    * **移动列**：拖动 ![移动](assets/move_updated.svg) 图标以将列移动到AEM收件箱中的新位置。
 
   ![admin-control](assets/admin-control-column-customize.png)
@@ -152,7 +152,7 @@ Admin Control选项仅对 `administrators` 或 `workflow-administrators` 组。
 
 * **用户导航**
    * **隐藏导航选项：** 选择此选项可隐藏标题中可用的导航选项。 导航选项包括指向其他解决方案的链接、帮助链接，以及点按Adobe Experience Manager徽标或文本时可用的创作选项。
-* **保存：** 点按/单击此选项以保存设置。
+* **保存：** 单击此选项以保存设置。
 
 ## 对某个项目执行操作 {#taking-action-on-an-item}
 
@@ -167,7 +167,7 @@ Admin Control选项仅对 `administrators` 或 `workflow-administrators` 组。
 
    这些操作适用于该项目，具体包括：
 
-   * **完成**&#x200B;操作；例如，任务或工作流项目。
+   * **完成** 操作；例如，任务或工作流项目。
    * **重新分配**/**委派** 一个项目。
    * **打开** 项目；根据项目类型，此操作可以：
 
@@ -175,9 +175,9 @@ Admin Control选项仅对 `administrators` 或 `workflow-administrators` 组。
       * 打开相应的功能板或向导以执行进一步操作
       * 打开相关文档
 
-   * **回退**&#x200B;到上一步.
-   * 查看工作流程的有效负荷.
-   * 从该项目创建一个项目.
+   * **回退** 到上一步。
+   * 查看工作流的有效负荷。
+   * 从该项创建项目。
 
    >[!NOTE]
    >
@@ -198,7 +198,7 @@ Admin Control选项仅对 `administrators` 或 `workflow-administrators` 组。
    根据是否已打开对话框、向导和文档页面，您可以：
 
    * 确认相应的操作；例如，重新分配。
-   * 取消操作.
+   * 取消操作。
    * 后退箭头；例如，如果操作向导或文档页面已打开，则可以返回收件箱。
 
 ## 创建任务 {#creating-a-task}

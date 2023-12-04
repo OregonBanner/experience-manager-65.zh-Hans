@@ -8,9 +8,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
 discoiquuid: 747d13d3-e7cc-4aa1-bcc8-4b57157e71ed
 exl-id: 6debb1a7-7889-4fdd-87c7-ecb87cc0b1f5
-source-git-commit: 6caf3ef4a00275f0f73be52b6a9ccba77d277f1a
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '313'
+source-wordcount: '309'
 ht-degree: 0%
 
 ---
@@ -49,13 +49,13 @@ ht-degree: 0%
 
 1. 查找
 
-   * &quot;点按.taskContentArea&quot; ： &quot;onTaskClick&quot;，
+   * &quot;select .taskContentArea&quot; ： &quot;onTaskClick&quot;，
 
-     &quot;点按.taskOpenArea&quot; ： &quot;onTaskClick&quot;，
+     &quot;select .taskOpenArea&quot; ： &quot;onTaskClick&quot;，
 
-     &quot;点按.task-content&quot; ： &quot;onTaskClick&quot;，
+     &quot;select .task-content&quot; ： &quot;onTaskClick&quot;，
 
-     &quot;点按.last_empty_div&quot; ： &quot;onTaskClick&quot;，
+     &quot;select .last_empty_div&quot; ： &quot;onTaskClick&quot;，
 
    并将其替换为
 

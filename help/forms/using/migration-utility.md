@@ -9,10 +9,10 @@ content-strategy: max-2018
 docset: aem65
 role: Admin
 exl-id: 0f9aab7d-8e41-449a-804b-7e1bfa90befd
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '1734'
-ht-degree: 2%
+source-wordcount: '1736'
+ht-degree: 1%
 
 ---
 
@@ -35,13 +35,13 @@ ht-degree: 2%
 
 **如果有就地升级**
 
-如果您执行就地升级，则升级的实例已经具有资源和文档。 但是，您必须先安装 [AEMFD兼容包](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=zh-Hans) （包括Correspondence Management兼容包）
+如果您执行就地升级，则升级的实例已经具有资源和文档。 但是，您必须先安装 [AEMFD兼容包](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en) （包括Correspondence Management兼容包）
 
 然后，您必须通过以下方式更新资源和文档 [运行迁移实用程序](#runningmigrationutility).
 
 **如果有异地安装**
 
-如果这是异地（全新）安装，则在您能够使用资源和文档之前，您必须安装 [AEMFD兼容包](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=zh-Hans) （包括Correspondence Management兼容包）。
+如果这是异地（全新）安装，则在您能够使用资源和文档之前，您必须安装 [AEMFD兼容包](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en) （包括Correspondence Management兼容包）。
 
 然后，您必须在新设置中导入资产包（zip或cmp），然后通过以下方式更新资产和文档 [运行迁移实用程序](#runningmigrationutility). Adobe建议仅在运行迁移实用程序后，才在新设置上创建资源。
 
@@ -91,7 +91,7 @@ ht-degree: 2%
 
 1. 执行以下操作以执行迁移：
 
-   * 要迁移 **资产**，点按AEM Forms资产迁移，然后在下一个屏幕中，点按 **开始迁移**. 将迁移以下项：
+   * 要迁移 **资产**，选择AEM Forms Assets迁移，然后在下一个屏幕中选择 **开始迁移**. 将迁移以下项：
 
       * 自适应表单
       * 文档片段
@@ -103,18 +103,18 @@ ht-degree: 2%
    >
    >在资源迁移过程中，您可能会找到警告消息，例如“发现冲突……”。 此类消息指示无法迁移自适应表单中某些组件的规则。 例如，如果组件有一个同时包含规则和脚本的事件，如果规则发生在任何脚本之后，则不会迁移组件的任何规则。 您可以 [通过打开规则编辑器迁移此类规则](#migrate-rules) 在自适应表单创作中。
 
-   * 要迁移自适应表单自定义组件，请点击 **自适应Forms自定义组件迁移** 在自定义组件迁移页面中，点按 **开始迁移**. 将迁移以下项：
+   * 要迁移自适应表单自定义组件，请选择 **自适应Forms自定义组件迁移** 在“自定义组件迁移”页面中，选择 **开始迁移**. 将迁移以下项：
 
       * 为自适应Forms编写的自定义组件
       * 组件叠加（如果有）。
 
-   * 要迁移自适应表单模板，请点击 **自适应Forms模板迁移** 在自定义组件迁移页面中，点按 **开始迁移**. 将迁移以下项：
+   * 要迁移自适应表单模板，请选择 **自适应Forms模板迁移** 在“自定义组件迁移”页面中，选择 **开始迁移**. 将迁移以下项：
 
       * 自适应表单模板创建于 `/apps` 或 `/conf` 使用AEM模板编辑器。
 
    * 迁移AEM Forms Cloud Configuration Services以使用新的上下文感知云服务范例，其中包括支持触摸的UI(在 `/conf`)。 迁移AEM Forms云配置服务时，云服务位于 `/etc` 已移动到 `/conf`. 如果您没有任何依赖于旧版路径的云服务自定义(`/etc`)，Adobe建议您在升级到6.5后运行迁移实用程序；使用云配置触屏UI执行任何进一步的工作。 如果您有任何现有的云服务自定义设置，请继续在升级后的设置中使用经典UI，直到自定义设置更新以与迁移的路径保持一致(`/conf`)，然后运行迁移实用程序。
 
-   要迁移 **AEM Forms云服务**，其中包括以下内容，请点按AEM Forms云配置迁移（云配置迁移独立于AEMFD兼容包）。 点按AEM Forms云配置迁移，然后在配置迁移页面上点按 **开始迁移**：
+   要迁移 **AEM Forms云服务**，其中包括以下内容，请选择AEM Forms云配置迁移（云配置迁移独立于AEMFD兼容包）。 选择AEM Forms云配置迁移，然后在配置迁移页面上选择 **开始迁移**：
 
    * 表单数据模型云服务
 
@@ -152,13 +152,13 @@ ht-degree: 2%
 
 通过在自适应Forms编辑器的规则编辑器中打开这些组件，可以迁移这些组件。
 
-* 要在自定义组件中迁移规则和脚本（如果从6.3升级，则不需要这样做），请点按自适应Forms自定义组件迁移，然后在下一个屏幕中，点按开始迁移。 将迁移以下项：
+* 要在自定义组件中迁移规则和脚本（如果从6.3升级，则不需要），请选择自适应Forms自定义组件迁移，然后在下一个屏幕中，选择开始迁移。 将迁移以下项：
 
    * 使用规则编辑器（6.1 FP1及更高版本）创建的规则和脚本
 
    * 在6.1及更低版本的UI中使用“脚本”选项卡创建的脚本
 
-* 要迁移模板（如果从6.3和6.4升级，则不需要迁移模板），请点按自适应Forms模板迁移，然后在下一个屏幕中，点按开始迁移。 将迁移以下项：
+* 要迁移模板（如果从6.3和6.4升级，则不需要），请选择自适应Forms模板迁移，然后在下一个屏幕中选择开始迁移。 将迁移以下项：
 
    * 旧模板 — 在/apps下使用AEM 6.1 Forms或更低版本创建的自适应表单模板。 这包括模板组件中定义的脚本。
 

@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
 docset: aem65
 exl-id: 82282e2d-63a1-47e9-b2ec-f50a4bd32bd3
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
 source-wordcount: '562'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 ## 在与AEM Forms Workflow Server (JEE上的AEM Forms)同步的表单中添加附件 {#adding-annotations}
 
-通过AEM Forms应用程序，您可以将图像、手写笔记和文本注释附加到与AEM Forms JEE服务器同步的表单中。 如果表单是从AEM Forms Workflow服务器加载的，则附件会添加到表单中。 您可以点按附件按钮 ![attachments-app](assets/attachments-app.png) 一起查看表单中的所有附件。 红色通知指定表单中的附件数量。 如果表单中没有附件，您将看不到红色通知按钮。 如果表单中没有附件，则当您点按附件按钮时 ![附加](assets/attch.png)，您可以选择附加照片或涂鸦。
+通过AEM Forms应用程序，您可以将图像、手写笔记和文本注释附加到与AEM Forms JEE服务器同步的表单中。 如果表单是从AEM Forms Workflow服务器加载的，则附件会添加到表单中。 您可以选择附件按钮 ![attachments-app](assets/attachments-app.png) 一起查看表单中的所有附件。 红色通知指定表单中的附件数量。 如果表单中没有附件，您将看不到红色通知按钮。 如果表单中没有附件，则在选择附件按钮时 ![附加](assets/attch.png)，您可以选择附加照片或涂鸦。
 
 您的选项包括：
 
@@ -34,7 +34,7 @@ ht-degree: 0%
 
 ### “附件”屏幕 {#the-attachments-screen}
 
-要查看某个位置的所有附件，请点按 ![attachments-app](assets/attachments-app.png). 您可以在此处添加、重命名和删除附件。
+要查看某个位置中的所有附件，请选择 ![attachments-app](assets/attachments-app.png). 您可以在此处添加、重命名和删除附件。
 
 ![一个位置中的所有附件](assets/attachments-screen.png)
 
@@ -44,26 +44,26 @@ ht-degree: 0%
 
 您可以使用移动设备的相机或设备中保存的图片在表单中附加图片。
 
-1. 点按附件按钮 ![附加](assets/attch.png) 在窗子的底部。
-1. 点按 **图库** 或 **相机** 在出现的弹出窗口中。
+1. 选择附件按钮 ![附加](assets/attch.png) 在窗子的底部。
+1. 选择 **图库** 或 **相机** 在出现的弹出窗口中。
 1. 根据您选择的选项，执行以下操作：
 
    1. 如果您选择 **相机**.
 
-      拍张照片。 然后点按 **使用** ![use-pic](assets/use-pic.png) 按钮。
+      拍张照片。 然后选择 **使用** ![use-pic](assets/use-pic.png) 按钮。
 
-      或点按 **重拍** ![retake](assets/retake.png) 按钮以重拍照片。
+      或选择 **重拍** ![retake](assets/retake.png) 按钮以重拍照片。
 
    1. 如果您选择 **图库**.
 
-      此时会弹出设备的图像浏览器。 在设备的图片浏览器中，点按要附加的图片。
+      此时会弹出设备的图像浏览器。 在设备的图片浏览器中，选择要附加的图片。
 
 ### 添加注释 {#adding-a-note}
 
 此 **注释** 选项允许您在表单中添加手绘涂鸦和文本附件。
 
-1. 点按附件按钮 ![附加](assets/attch.png) 在窗子的底部。
-1. 点按 **注释** 在出现的弹出窗口中。
+1. 选择附件按钮 ![附加](assets/attch.png) 在窗子的底部。
+1. 选择 **注释** 在出现的弹出窗口中。
 1. 在启动的Notes用户界面中，捕获手绘涂鸦。
 
    ![涂鸦界面](assets/scribble-ui.png)

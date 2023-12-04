@@ -5,10 +5,10 @@ topic-tags: publish, document_services
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
 exl-id: c3e5f8fc-d2b9-4f76-9a3d-4bc5733f5a5c
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '3679'
-ht-degree: 2%
+source-wordcount: '3667'
+ht-degree: 1%
 
 ---
 
@@ -65,8 +65,8 @@ AEM提供了一个直观的用户界面，用于使用提供的工作流步骤�
 
 1. 打开工作流模型控制台。 默认URL为 `https://[server]:[port]/libs/cq/workflow/admin/console/content/models.html/etc/workflow/models`
 1. 选择 **创建**，则 **创建模型**. 此时将显示“添加工作流模型”对话框。
-1. 输入 **标题** 和 **名称** （可选）。 例如，抵押贷款申请。 点按 **完成**.
-1. 选择新创建的工作流模型并点按 **编辑**. 现在，您可以添加工作流步骤来构建业务逻辑。 首次创建工作流模型时，它包含：
+1. 输入 **标题** 和 **名称** （可选）。 例如，抵押贷款申请。 选择&#x200B;**完成**。
+1. 选择新创建的工作流模型并选择 **编辑**. 现在，您可以添加工作流步骤来构建业务逻辑。 首次创建工作流模型时，它包含：
 
    * 步骤：流程开始和流程结束。 这些步骤表示工作流的开始和结束。 这些步骤是必需的，无法编辑或删除。
    * 名为步骤1的参与者步骤示例。 此步骤配置为将工作项分配给管理员用户。 删除此步骤。
@@ -79,7 +79,7 @@ AEM提供了一个直观的用户界面，用于使用提供的工作流步骤�
 
 1. 创建工作流暂存。 一个工作流可以有多个阶段。 这些阶段显示在AEM收件箱中并报告工作流的进度。
 
-   要定义阶段，请点按 ![信息圆](assets/info-circle.png) 图标要打开工作流模型属性，请打开 **暂存** 选项卡，为工作流模型添加阶段，然后点击 **保存并关闭**. 例如，抵押贷款申请，创建阶段：贷款请求、贷款请求状态、要签名的文档、以及签名的贷款文档。
+   要定义阶段，请选择 ![信息圆](assets/info-circle.png) 图标要打开工作流模型属性，请打开 **暂存** 选项卡，为工作流模型添加阶段，然后选择 **保存并关闭**. 例如，抵押贷款申请，创建阶段：贷款请求、贷款请求状态、要签名的文档、以及签名的贷款文档。
 
 1. 拖放 **分配任务** 步骤浏览器到工作流模型。 使其成为模型的第一步。
 
@@ -214,7 +214,7 @@ AEM Forms应用程序与AEM Forms服务器同步，并允许您更改帐户中�
 管理员（fd-administrators组的成员）可以配置网络文件夹，以便当用户在该文件夹中放置文件(如PDF文件)时运行预配置的工作流。 工作流完成后，它可以将结果文件保存到指定的输出文件夹中。 此类文件夹称为 [观察文件夹](../../forms/using/watched-folder-in-aem-forms.md). 执行以下过程配置watched文件夹以启动工作流：
 
 1. 在您的AEM创作实例上，转到 ![tools-1](assets/tools-1.png) > **[!UICONTROL Forms]** > **[!UICONTROL 配置Watched文件夹]**. 将显示已配置的观察文件夹的列表。
-1. 点按 **[!UICONTROL 新建]**. 此时将显示字段列表。 为以下字段指定一个值，为工作流配置Watched文件夹：
+1. 选择 **[!UICONTROL 新建]**. 此时将显示字段列表。 为以下字段指定一个值，为工作流配置Watched文件夹：
 
 <table>
  <tbody>
@@ -245,7 +245,7 @@ AEM Forms应用程序与AEM Forms服务器同步，并允许您更改帐户中�
  </tbody>
 </table>
 
-1. 点按 **高级**. 指定以下字段的值，然后点击 **创建**. Watched文件夹配置为启动工作流。 现在，每当将文件放入Watched文件夹的输入目录中时，都会触发指定的工作流。
+1. 选择 **高级**. 指定以下字段的值，然后点击 **创建**. Watched文件夹配置为启动工作流。 现在，每当将文件放入Watched文件夹的输入目录中时，都会触发指定的工作流。
 
    | 字段 | 描述 |
    |---|---|
@@ -269,7 +269,7 @@ AEM Forms应用程序与AEM Forms服务器同步，并允许您更改帐户中�
 
 ### 清除工作流实例 {#purge-workflow-instances}
 
-最大限度地减少工作流实例的数量可以提高工作流引擎的性能，因此，您可以定期从存储库中清除已完成或正在运行的工作流实例。有关详细信息，请参阅 [定期清除工作流实例](/help/sites-administering/workflows-administering.md#regular) 清除工作流实例。
+最大限度地减少工作流实例的数量可以提高工作流引擎的性能，因此您可以定期从存储库中清除已完成或正在运行的工作流实例。 有关详细信息，请参阅 [定期清除工作流实例](/help/sites-administering/workflows-administering.md#regular) 清除工作流实例。
 
 ## 将敏感数据参数化为工作流变量并存储在外部数据存储中 {#externalize-wf-variables}
 

@@ -1,17 +1,13 @@
 ---
 title: 创建和添加模板和组件
-seo-title: Creating and Adding Templates and Components
 description: 按照本页面了解如何创建模板和组件并将它们添加到应用程序。 该页面使用Geometrixx Unlimited应用程序作为包含示例应用程序模板和页面模板的应用程序。
-seo-description: Follow this page to learn about creating and adding templates and components to your app. The page uses Geometrixx Unlimited App as the app that contains a sample app template and page templates.
-uuid: 3a93017c-8094-413f-a01c-9b72025a2b20
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
-discoiquuid: ec4ada04-e429-4ad4-a060-2dccac847cf0
 exl-id: 5f050baa-fe10-4acc-ad32-de20793edc13
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '1154'
+source-wordcount: '1151'
 ht-degree: 0%
 
 ---
@@ -45,7 +41,7 @@ We.Unlimited应用程序是一个示例模板，展示了可完全配置且可�
 基于应用程序模板创建应用程序的步骤：
 
 1. 导航到AEM Mobile应用程序目录： *&lt;server-url>/aem/apps.html/content/mobileapps*
-1. 选择 **创建** —> **应用程序** 如下所示
+1. 选择 **创建** -> **应用程序** 如下所示
 
 使用此模板创建应用程序后，您可以将文章、横幅和收藏集添加到应用程序。 要重新访问并创建文章、横幅和收藏集，请参阅 [内容管理操作](/help/mobile/mobile-apps-ondemand-manage-content-ondemand.md).
 
@@ -145,7 +141,7 @@ Unlimited文章是一个示例模板，表示典型的AEM Mobile On-Demand文章
 **要编辑现有组件，请执行以下操作：**
 
 1. 选择该页面并确保您位于 **编辑** 模式并选择组件
-1. 点按扳手图标以配置组件
+1. 选择扳手图标以配置组件
 
 >[!NOTE]
 >

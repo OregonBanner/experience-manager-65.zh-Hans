@@ -10,9 +10,9 @@ topic-tags: publish
 discoiquuid: ad71b423-02e1-4476-9c7c-f832cea6b0a6
 docset: aem65
 exl-id: f3f013a7-a399-4178-a901-d4a8c65ddbd3
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '745'
+source-wordcount: '744'
 ht-degree: 0%
 
 ---
@@ -32,16 +32,16 @@ ht-degree: 0%
 执行以下步骤以添加和配置草稿和提交组件：
 
 1. 拖放 **草稿和提交** 页面上组件浏览器中“文档服务”类别下的组件。
-1. 点按组件，然后点按 ![settings_icon](assets/settings_icon.png) 以打开组件的“编辑”对话框。
+1. 选择组件，然后选择 ![settings_icon](assets/settings_icon.png) 以打开组件的“编辑”对话框。
 
    ![草稿和提交组件](assets/drafts-submissions-edit.png)
 
-1. 在“编辑”对话框中，指定以下详细信息并点按 **完成** 以保存设置。
+1. 在“编辑”对话框中，指定以下详细信息并选择 **完成** 以保存设置。
 
 <table>
  <tbody>
   <tr>
-   <th>制表符</th>
+   <th>选项卡</th>
    <th>配置</th>
    <th>描述</th>
   </tr>

@@ -12,10 +12,10 @@ legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/viewer
 feature: Viewer Presets
 role: User, Admin
 exl-id: 0899e497-88e9-4fc3-a6be-b3a149fb5b32
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '4520'
-ht-degree: 8%
+source-wordcount: '4422'
+ht-degree: 7%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 8%
 
 有关创建和自定义自己的HTML5查看器预设的说明，请参阅AdobeDynamic Media *HTML5查看器SDK API文档*. SDK可在嵌入到SDK本身的IS发布服务器上使用。 每个库版本均包含其自身的SDK文档。
 
-路径: `<scene7_domain>/s7sdk/<library_version>/docs/jsdocs/index.html`.\
+路径： `<scene7_domain>/s7sdk/<library_version>/docs/jsdocs/index.html`.\
 例如，3.10 SDK： [https://s7d1.scene7.com/s7sdk/3.10/docs/jsdoc/index.html](https://s7d1.scene7.com/s7sdk/3.10/docs/jsdoc/index.html)
 
 另请参阅 [AdobeDynamic Media查看器参考指南](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources.html).
@@ -81,11 +81,11 @@ Dynamic Media随附的所有现成查看器预设与以下系统完全兼容：
 <table>
  <tbody>
   <tr>
-   <td><strong>轮播集</strong><br /> </td>
+   <td><strong>传送集</strong><br /> </td>
    <td><p>将热点、图像映射（或两者）添加到一系列两个或多个图像中。 客户可以左右平移图像，然后在图像上选择热点以获取更多详细信息或直接从网站的类别、主页或登陆页面购买。</p> </td>
   </tr>
   <tr>
-   <td><strong>尺寸</strong><br /> </td>
+   <td><strong>维度</strong><br /> </td>
    <td><p>显示可让您旋转、平移、缩放或重新居中相机的3D场景。</p> </td>
   </tr>
   <tr>
@@ -174,7 +174,7 @@ Dynamic Media随附的所有现成查看器预设与以下系统完全兼容：
   <tr>
    <td><strong>查看器预设标题</strong></td>
    <td><strong>类型</strong></td>
-   <td><strong>CSS 文件名称</strong><br /> </td>
+   <td><strong>CSS文件名</strong><br /> </td>
   </tr>
   <tr>
    <td>Carousel_Dotted_dark</td>
@@ -354,7 +354,7 @@ Dynamic Media随附的所有现成查看器预设与以下系统完全兼容：
    <td><p>显示或隐藏用户界面</p> </td>
   </tr>
   <tr>
-   <td><p><strong>双击</strong></p> </td>
+   <td><p><strong>双选</strong></p> </td>
    <td><p>不适用</p> </td>
    <td><p>放大或重置</p> </td>
    <td><p>放大或重置</p> </td>
@@ -532,9 +532,9 @@ Experience Manager在查看资源时会显示各种不同的查看器预设 **[!
 
 | **视频子区段** | **子区段时间（以秒为单位）** | **在面板中可见的缩略图** |
 |---|---|---|
-| 1 | 0-10 | 1, 2, 3, 4 |
-| 2 | 10-20 | 4, 5, 6, 7 |
-| 3 | 20-30 | 6, 7, 8, 9 |
+| 1 | 0-10 | 1、2、3、4 |
+| 2 | 10-20 | 4、5、6、7 |
+| 3 | 20-30 | 6、7、8、9 |
 
 视频子区段3的扩展范围不超过为其分配的缩略图。 另请注意，缩略图4、6和7在面板中的可见时间是其他缩略图的两倍。
 

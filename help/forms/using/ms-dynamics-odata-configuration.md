@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
 feature: Form Data Model
 exl-id: 90cc9452-e107-4e57-80a3-f44f0bde132e
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '1230'
+source-wordcount: '1207'
 ht-degree: 1%
 
 ---
@@ -117,8 +117,8 @@ Microsoft Dynamics使用基于声明的身份验证向外部用户提供对Micro
 
 此 **MS Dynamics ODataCloud Service（OData服务）** 配置附带默认OData配置。 要将其配置为与Microsoft Dynamics服务连接，请执行以下操作。
 
-1. 导航到 **[!UICONTROL “工具”>“Cloud Service”>“数据源”]**，然后点按 `global` 配置文件夹。
-1. 选择 **MS Dynamics ODataCloud Service（OData服务）** 配置和点击 **[!UICONTROL 属性]**. 随即会打开云服务配置属性对话框。
+1. 导航到 **[!UICONTROL “工具”>“Cloud Service”>“数据源”]**，然后选择 `global` 配置文件夹。
+1. 选择 **MS Dynamics ODataCloud Service（OData服务）** 配置和选择 **[!UICONTROL 属性]**. 随即会打开云服务配置属性对话框。
 
    在 **身份验证设置** 选项卡：
 

@@ -11,10 +11,10 @@ discoiquuid: e21714ad-d445-4aff-b0db-d577061e0907
 docset: aem65
 feature: Interactive Communication
 exl-id: 0f877a15-a17f-427f-8d89-62ada4d20918
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '2608'
-ht-degree: 2%
+source-wordcount: '2621'
+ht-degree: 1%
 
 ---
 
@@ -28,13 +28,13 @@ ht-degree: 2%
 
 执行以下步骤在交互式通信中添加和配置图表：
 
-1. 点按 **组件** 互动式通信的副手。
+1. 选择 **组件** 互动式通信的副手。
 1. 拖放 **图表** 组件到以下组件之一：
 
    * 打印渠道：目标区域或图像字段
    * Web渠道：面板或目标区域
 
-1. 点按交互式通信编辑器中的图表组件，然后选择 **[!UICONTROL 配置(]** ![configure_icon](assets/configure_icon.png))。
+1. 在交互式通信编辑器中选择图表组件，然后选择 **[!UICONTROL 配置(]** ![configure_icon](assets/configure_icon.png))。
 
    图表属性显示在左窗格中。
 
@@ -47,13 +47,13 @@ ht-degree: 2%
    Web渠道中折线图的基本属性
 
 1. 配置 [图表属性](../../forms/using/chart-component-interactive-communications.md#configure-chart-properties) 基于渠道类型。
-1. （仅限打印渠道）在 **[!UICONTROL 代理设置]**，指定代理是否必须使用此图表。 如果 **[!UICONTROL 代理必须使用此图表]** 如果未选中选项，代理可以点按中图表的眼睛图标 **[!UICONTROL 内容]** 用于显示或隐藏图表的代理UI选项卡。
+1. （仅限打印渠道）在 **[!UICONTROL 代理设置]**，指定代理是否必须使用此图表。 如果 **[!UICONTROL 代理必须使用此图表]** 如果未选中该选项，工程师可以在 **[!UICONTROL 内容]** 用于显示或隐藏图表的代理UI选项卡。
 
    ![chart_agentproperties](assets/chart_agentproperties.png)
 
-1. 点按 ![完成图标](assets/done_icon.png) 以保存图表属性。
+1. 选择 ![完成图标](assets/done_icon.png) 以保存图表属性。
 
-   点按 **[!UICONTROL 预览]** 查看与图表关联的外观和数据。 点按 **[!UICONTROL 编辑]** 以重新配置图表的属性。
+   选择 **[!UICONTROL 预览]** 查看与图表关联的外观和数据。 选择 **[!UICONTROL 编辑]** 以重新配置图表的属性。
 
 ## 配置图表属性 {#configure-chart-properties}
 
@@ -169,7 +169,7 @@ ht-degree: 2%
      <li><strong>“参考点”&gt;“绑定类型”： </strong>可用于象限图的<strong> </strong>指定参考点的绑定类型。 使用静态文本或数据模型对象属性定义参考点的值。</li>
      <li><strong>“参考点”&gt;“X轴”： </strong>可用于象限图（如果选择） <span class="uicontrol">静态</code> 从“绑定类型”下拉列表中指定参照点的X轴值。</li>
      <li><strong>“参考点”&gt;“Y轴”： </strong>可用于象限图（如果选择） <span class="uicontrol">静态</code> 从“绑定类型”下拉列表中指定参照点的Y轴值。</li>
-     <li><strong>参考点&gt;系列的数据模型对象： </strong>如果选取，则可用于多个系列象限图 <span class="uicontrol">数据模型对象</code> 从“绑定类型”下拉列表中。 定义表单数据模型对象属性以确定参考点的系列. </li>
+     <li><strong>参考点&gt;系列的数据模型对象： </strong>如果选取，则可用于多个系列象限图 <span class="uicontrol">数据模型对象</code> 从“绑定类型”下拉列表中。 定义表单数据模型对象属性以标识参考点的系列。 </li>
      <li><strong>参考点&gt;系列的数据模型对象值： </strong>如果选取，则可用于多个系列象限图 <span class="uicontrol">数据模型对象</code> 从“绑定类型”下拉列表中。 使用系列的表单数据模型对象属性以及在此字段中定义的值来标识参考点的系列。</li>
      <li><strong>参考点&gt;参考点的数据模型对象： </strong>可用于象限图（如果选择） <span class="uicontrol">数据模型对象</code> 从“绑定类型”下拉列表中。 定义表单数据模型对象属性，该属性是绘制在X轴和Y轴上的属性的同级。 此外，对于多个系列，定义一个数据模型对象属性，该属性是为系列定义的数据模型对象属性的子实体。</li>
      <li><strong>参考点&gt;参考点的数据模型对象值： </strong>可用于象限图（如果选择） <span class="uicontrol">数据模型对象</code> 从“绑定类型”下拉列表中。 使用参考点的表单数据模型对象属性以及在此字段中定义的值来标识图表的参考点。<br /> <strong>象限标签&gt;左上：</strong> 可用于象限图表，以指定左上象限的名称。</li>

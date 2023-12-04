@@ -4,9 +4,9 @@ description: 了解如何通过自适应表单为We.Finance参考网站的住房
 products: SG_EXPERIENCEMANAGER/6.3/FORMS
 topic-tags: develop, Configuration
 exl-id: 2ac37dc5-d88d-4f98-8576-cd2ca6f0ea3a
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '400'
+source-wordcount: '410'
 ht-degree: 0%
 
 ---
@@ -37,17 +37,17 @@ AEM Forms提供云服务以将Dynamics 365与 [Forms数据集成](/help/forms/us
    `https://[server]:[port]/editor.html/content/we-finance/global/en/loan-landing-page.html`
 
 1. 向下滚动到“住房抵押贷款计算器”。
-1. 突出显示右列的（计算器）面板，然后点按以显示弹出菜单。 在弹出菜单中，点按配置。 此时会显示编辑AEM Forms容器对话框。
+1. 突出显示右列的（计算器）面板，然后选择以显示弹出菜单。 在弹出菜单中，选择“配置”。 此时会显示编辑AEM Forms容器对话框。
 
    ![calculatorconfigurepanel](assets/calculatorconfigurepanel.png)
 
-1. 在编辑AEM Forms容器对话框中，浏览资产路径并选择以下路径中的home-mortgage-calculator ，然后点击 **确认**：
+1. 在编辑AEM Forms容器对话框中，浏览资产路径并选择以下路径的home-mortgage-calculator并选择 **确认**：
 
    formsanddocuments/We.Finance/MS Dynamics/
 
    ![selectassetpath](assets/selectassetpath.png)
 
-1. 点按 **完成**.
+1. 选择&#x200B;**完成**。
 1. 发布已编辑的页面。
 
    >[!NOTE]
@@ -60,7 +60,7 @@ AEM Forms提供云服务以将Dynamics 365与 [Forms数据集成](/help/forms/us
 
       `https://'[server]:[port]'/content/aemforms-refsite-collaterals/we-finance/home-mortgage/ms-dynamics/AEMFormsFSIRefsite_1_0.zip`
 
-   1. 将解决方案包导入Microsoft® Dynamics实例。 在Microsoft® Dynamics实例中，转到 **设置** > **解决方案** 然后点击 **导入**.
+   1. 将解决方案包导入Microsoft® Dynamics实例。 在Microsoft® Dynamics实例中，转到 **设置** > **解决方案** 然后选择 **导入**.
 
 1. 要设置重新网站中使用的用户联系人详细信息，请将Sarah Rose Contact.CSV包导入您的Microsoft® Dynamics实例：
 
@@ -68,4 +68,4 @@ AEM Forms提供云服务以将Dynamics 365与 [Forms数据集成](/help/forms/us
 
       `https://'[server]:[port]'/content/aemforms-refsite-collaterals/we-finance/home-mortgage/ms-dynamics/Sarah%20Rose%20Contact.csv`
 
-   1. 将程序包导入您的Microsoft® Dynamics实例。 在Microsoft® Dynamics实例中，转到 **销售** > **联系人** 然后点击 **导入数据**.
+   1. 将程序包导入您的Microsoft® Dynamics实例。 在Microsoft® Dynamics实例中，转到 **销售** > **联系人** 然后选择 **导入数据**.

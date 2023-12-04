@@ -10,9 +10,9 @@ topic-tags: publish
 discoiquuid: cbf4e35a-7905-44ab-ab68-fb443443f02d
 docset: aem65
 exl-id: beb2b83e-e8db-40bb-915f-cb6ba3140947
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '2228'
+source-wordcount: '2080'
 ht-degree: 1%
 
 ---
@@ -56,8 +56,8 @@ ht-degree: 1%
 执行以下步骤可创建变量：
 
 1. 在AEM实例上，导航到工具 ![工具](/help/forms/using/assets/hammer.png) >工作流>模型。
-1. 点按 **[!UICONTROL 创建]** 并指定工作流模型的标题和可选名称。 选择模型并点按 **[!UICONTROL 编辑]**.
-1. 点按工作流模型Sidekick中可用的变量图标，然后点按 **[!UICONTROL 添加变量]**.
+1. 选择 **[!UICONTROL 创建]** 并指定工作流模型的标题和可选名称。 选择模型并选择 **[!UICONTROL 编辑]**.
+1. 选择工作流模型Sidekick中可用的变量图标，然后选择 **[!UICONTROL 添加变量]**.
 
    ![添加变量](assets/variables_add_variable_new.png)
 
@@ -69,7 +69,7 @@ ht-degree: 1%
    * 表单数据模型 — 指定表单数据模型路径。
    * ArrayList — 指定集合的子类型。
 
-1. 为变量指定可选描述，然后点击 ![完成图标](assets/done_icon.png) 以保存更改。 变量将显示在左侧窗格中可用的列表中。
+1. 为变量指定可选描述，然后选择 ![完成图标](assets/done_icon.png) 以保存更改。 变量将显示在左侧窗格中可用的列表中。
 
 创建变量时，请考虑以下实践：
 
@@ -102,11 +102,11 @@ ht-degree: 1%
 
 执行以下步骤来添加变量之间的映射：
 
-1. 在工作流编辑页面上，点按工作流模型Sidekick中可用的步骤图标。
-1. 拖放 **设置变量** 进入工作流编辑器的步骤，点按该步骤，然后选择 ![configure_icon](assets/configure_icon.png) （配置）。
+1. 在工作流编辑页面上，选择工作流模型Sidekick中可用的步骤图标。
+1. 拖放 **设置变量** 步骤到工作流编辑器，选择该步骤并选择 ![configure_icon](assets/configure_icon.png) （配置）。
 1. 在设置变量对话框中，选择 **[!UICONTROL 映射]** > **[!UICONTROL 添加映射]**.
 1. 在 **映射变量** 部分，选择要存储数据的变量，选择映射模式，然后指定要在变量中存储的值。 映射模式因变量类型而异。
-1. 映射更多变量以生成有意义的表达式。 点按 ![完成图标](assets/done_icon.png) 以保存更改。
+1. 映射更多变量以生成有意义的表达式。 选择 ![完成图标](assets/done_icon.png) 以保存更改。
 
 ### 示例1：查询XML变量以设置字符串变量的值 {#example-query-an-xml-variable-to-set-value-for-a-string-variable}
 
@@ -175,7 +175,7 @@ OR拆分在工作流中创建拆分，之后只有一个分支处于活动状态
 
 >[!VIDEO](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/using/variables_orsplit_example.mp4)
 
-同样，选择外部脚本路径或指定路由表达式的ECMA脚本以计算活动分支。 点按 **[!UICONTROL 重命名分支]** 指定分支的替代名称。
+同样，选择外部脚本路径或指定路由表达式的ECMA脚本以计算活动分支。 选择 **[!UICONTROL 重命名分支]** 指定分支的替代名称。
 
 有关更多示例，请参阅 [创建工作流模型](../../forms/using/aem-forms-workflow.md#create-a-workflow-model).
 
@@ -287,9 +287,9 @@ workflowSession.startWorkflow(model, wfData, metaData);
 
 ## 编辑变量 {#edit-a-variable}
 
-1. 在编辑工作流页面上，点按工作流模型Sidekick中可用的“变量”图标。 左窗格中的变量部分显示所有现有变量。
-1. 点按 ![编辑](assets/edit.png) （编辑）图标（位于要编辑的变量名称旁）。
-1. 编辑变量信息并点按 ![完成图标](assets/done_icon.png) 以保存更改。 您无法编辑 **[!UICONTROL 名称]** 和 **[!UICONTROL 类型]** 变量对应的字段。
+1. 在编辑工作流页面上，选择工作流模型Sidekick中可用的“变量”图标。 左窗格中的变量部分显示所有现有变量。
+1. 选择 ![编辑](assets/edit.png) （编辑）图标（位于要编辑的变量名称旁）。
+1. 编辑变量信息并选择 ![完成图标](assets/done_icon.png) 以保存更改。 您无法编辑 **[!UICONTROL 名称]** 和 **[!UICONTROL 类型]** 变量对应的字段。
 
 ## 删除变量 {#delete-a-variable}
 
@@ -297,9 +297,9 @@ workflowSession.startWorkflow(model, wfData, metaData);
 
 执行以下步骤可删除变量：
 
-1. 在编辑工作流页面上，点按工作流模型Sidekick中可用的“变量”图标。 左窗格中的变量部分显示所有现有变量。
-1. 点按要删除的变量名称旁边的删除图标。
-1. 点按 ![完成图标](assets/done_icon.png) 以确认并删除该变量。
+1. 在编辑工作流页面上，选择工作流模型Sidekick中可用的“变量”图标。 左窗格中的变量部分显示所有现有变量。
+1. 选择要删除的变量名称旁边的删除图标。
+1. 选择 ![完成图标](assets/done_icon.png) 以确认并删除该变量。
 
 ## 引用 {#references}
 

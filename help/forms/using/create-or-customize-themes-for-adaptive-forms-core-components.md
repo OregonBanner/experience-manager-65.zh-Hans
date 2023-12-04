@@ -7,10 +7,10 @@ topic-tags: Adaptive Forms
 docset: aem65
 role: Admin, Developer
 exl-id: 9f9b35a3-0479-4179-9fad-994a482c96b6
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '1971'
-ht-degree: 7%
+source-wordcount: '1933'
+ht-degree: 6%
 
 ---
 
@@ -69,7 +69,7 @@ AEM Forms 6.5为基于核心组件的自适应Forms提供了以下列出的主�
 
 ### 自定义主题的先决条件 {#prerequisites}
 
-* [为您的环境启用自适应表单核心组件.](/help/forms/using/enable-adaptive-forms-core-components.md)
+* [启用自适应Forms核心组件](/help/forms/using/enable-adaptive-forms-core-components.md) 为您的环境而设计。
 
 * 安装最新版本的 [Apache Maven。](https://maven.apache.org/download.cgi) Apache Maven是一种常用于Java™项目的构建自动化工具。 安装最新版本可确保您具有主题自定义所需的依赖项。
 
@@ -145,7 +145,7 @@ AEM Forms 6.5为基于核心组件的自适应Forms提供了以下列出的主�
 
 此 `variable.scss` 文件包含主题的全局变量。 通过更新这些变量，您可以在主题级别进行与样式相关的更改。 要应用主题级别的样式，请执行以下步骤：
 
-1. 打开 `<your-theme-sources>/src/site/_variables.scss` 文件以供编辑。
+1. 打开 `<your-theme-sources>/src/site/_variables.scss` 要编辑的文件。
 1. 更改任何属性的值。 例如，缺省错误颜色为红色。 要将错误颜色从红色更改为蓝色，请将 `$error`变量。 例如：`$error: #196ee5`。
 
    ![示例：错误颜色设置为蓝色](/help/forms/using/assets/theme-level-changes.png)
@@ -187,7 +187,7 @@ AEM Forms 6.5为基于核心组件的自适应Forms提供了以下列出的主�
 要将主题部署到AEM实例，需要将其转换为客户端库。 按照以下步骤将主题转换为客户端库：
 
 1. 打开命令提示符或终端窗口。
-1. 导航到 `<your-theme-sources>` 文件夹。例如，`C:\aem-forms-theme-canvas`
+1. 导航至 `<your-theme-sources>` 文件夹。 例如，`C:\aem-forms-theme-canvas`
 1. 运行以下命令：
 
    ```
@@ -233,7 +233,7 @@ To apply and test the customized theme with an Adaptive Form:
 
 1. Log in to your AEM Forms author instance. 
 
-1. Tap **Adobe Experience Manager** > **Forms** > **Forms & Documents**.
+1. Select **Adobe Experience Manager** > **Forms** > **Forms & Documents**.
 
 1. Click **Create** > **Adaptive Forms**. The wizard for creating Adaptive Form opens.
 
@@ -247,7 +247,7 @@ An Adaptive Form with the selected theme is created.
 
 1. Log in to your AEM Forms author instance. 
 
-1. Tap **Adobe Experience Manager** > **Forms** > **Forms & Documents**.
+1. Select **Adobe Experience Manager** > **Forms** > **Forms & Documents**.
 
 1. Select an Adaptive Form and click Properties. 
 
@@ -283,7 +283,7 @@ The selected theme is applied to the Adaptive Form.
 将主题应用于自适应表单的步骤如下：
 
 1. 登录到本地AEM创作实例。
-1. 在 Experience Manager 登录页面上输入您的凭据。点按 **Adobe Experience Manager** > **Forms** > **Forms和文档**.
+1. 在 Experience Manager 登录页面上输入您的凭据。选择 **Adobe Experience Manager** > **Forms** > **Forms和文档**.
 1. 单击 **创建** > **自适应Forms**.
 1. 选择自适应Forms核心组件模板并单击 **下一个**. 此 **添加属性** 显示
 1. 指定 **名称** 用于您的自适应表单。

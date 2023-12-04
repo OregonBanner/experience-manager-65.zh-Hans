@@ -10,10 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
 discoiquuid: e18aa345-034c-473b-b4c2-01678bb10616
 exl-id: 171754a2-1ba5-42dc-b6d2-3d730807cc31
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '2448'
-ht-degree: 2%
+source-wordcount: '2410'
+ht-degree: 0%
 
 ---
 
@@ -58,9 +58,9 @@ AEM Forms应用程序需要AEM Forms服务器。 用户可以渲染您在AEM For
 1. 在创作实例中，选择一个表单，然后单击 **[!UICONTROL 查看属性]**.
 
 1. 在属性页面中，单击 **[!UICONTROL 高级]**.
-1. 在“高级”下，启用选项： **[!UICONTROL 与AEM Forms应用程序同步]** 并点击 **[!UICONTROL 保存]**.
+1. 在“高级”下，启用选项： **[!UICONTROL 与AEM Forms应用程序同步]** 并选择 **[!UICONTROL 保存]**.
 
-发布表单后，应用程序将与服务器同步并获取表单。 要同步多个表单，请在创作实例中，选择表单管理器中的多个表单并点按 **[!UICONTROL 与AEM Forms应用程序同步]**.
+发布表单后，应用程序将与服务器同步并获取表单。 要同步多个表单，请在创作实例中选择表单管理器中的多个表单，然后选择 **[!UICONTROL 与AEM Forms应用程序同步]**.
 
 ## 移动设备支持 {#mobile-device-support}
 
@@ -183,12 +183,12 @@ AEM Forms应用程序的源代码可从提取 `adobe-lc-mobileworkspace-src.zip`
 要获取AEM Forms应用程序源，请执行以下步骤：
 
 1. 打开 [Software Distribution](https://experience.adobe.com/downloads)。您需要 Adobe ID 才能登录 Software Distribution。
-1. 点按标题菜单中的 **[!UICONTROL Adobe Experience Manager]**。
+1. 选择 **[!UICONTROL Adobe Experience Manager]** 在标题菜单中可用。
 1. 在 **[!UICONTROL 过滤器]** 部分：
    1. 选择 **[!UICONTROL Forms]** 从 **[!UICONTROL 解决方案]** 下拉列表。
    2. 选择包的版本和类型。 您也可以使用 **[!UICONTROL 搜索下载]** 用于筛选结果的选项。
-1. 点按适用于您的操作系统的包名称，然后选择 **[!UICONTROL 接受EULA条款]**，然后点击 **[!UICONTROL 下载]**.
-1. 打开[包管理器](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html)，并单击&#x200B;**[!UICONTROL 上传包]**&#x200B;以上传包。
+1. 选择适用于您的操作系统的包名称，然后选择 **[!UICONTROL 接受EULA条款]**，并选择 **[!UICONTROL 下载]**.
+1. 打开 [包管理器](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html)  并单击 **[!UICONTROL 上传包]** 以上传包。
 1. 选择包并单击 **[!UICONTROL 安装]**.
 
 **适用于iOS的**：

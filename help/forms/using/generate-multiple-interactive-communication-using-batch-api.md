@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: interactive-communication
 feature: Interactive Communication
 exl-id: f65d8eb9-4d2c-4a6e-825f-45bcfaa7ca75
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '2206'
+source-wordcount: '2136'
 ht-degree: 1%
 
 ---
@@ -81,7 +81,7 @@ ht-degree: 1%
 
 1. 创建 [观察文件夹](/help/forms/using/creating-configure-watched-folder.md) 并将其配置为使用批处理API：
    1. 登录到AEM Forms创作实例。
-   1. 导航到 **[!UICONTROL 工具]** > **[!UICONTROL Forms]** > **[!UICONTROL 配置Watched文件夹]**. 点按 **[!UICONTROL 新建]**.
+   1. 导航到 **[!UICONTROL 工具]** > **[!UICONTROL Forms]** > **[!UICONTROL 配置Watched文件夹]**. 选择 **[!UICONTROL 新建]**.
    1. 指定 **[!UICONTROL 名称]** 和物理 **[!UICONTROL 路径]** 文件夹的。 例如：`c:\batchprocessing`。
    1. 选择 **[!UICONTROL 服务]** 中的选项 **[!UICONTROL 处理文件，使用]** 字段。
    1. 选择 **[!UICONTROL com.adobe.fd.ccm.multichannel.batch.impl.service.InteractiveCommunicationBatchServiceImpl]** 中的服务 **[!UICONTROL 服务名称]** 字段。
@@ -97,7 +97,7 @@ ht-degree: 1%
       | batchtype | 字符串 | 将值设置为PRINT、WEB或WEB_AND_PRINT。 缺省值为WEB_AND_PRINT。 |
       | 区域设置 | 字符串 | 指定输出交互式通信的区域设置。 现成服务不使用区域设置选项，但您可以创建自定义服务来生成本地化的交互式通信。 默认值为en_US |
 
-   1. 点按 **[!UICONTROL 创建]** 已创建观察文件夹。
+   1. 选择 **[!UICONTROL 创建]** 已创建观察文件夹。
 1. 使用watched文件夹生成交互式通信：
    1. 打开Watched文件夹 导航到输入文件夹。
    1. 在输入文件夹中创建文件夹，并将JSON文件放在新创建的文件夹中。
@@ -113,9 +113,9 @@ ht-degree: 1%
 
 1. 配置模板的表单数据模型：
    1. 打开与交互式通信模板关联的表单数据模型。
-   1. 选择您的顶级模型对象，然后点按编辑属性。
+   1. 选择顶级模型对象，然后选择编辑属性。
    1. 从编辑属性窗格下的读取服务字段中选择获取或获取服务。
-   1. 点击读取服务参数的铅笔图标以将参数绑定到请求属性并指定绑定值。 它将服务参数绑定到指定的绑定属性或文本值，该属性或文本值作为参数传递给服务，以从数据源获取与指定值关联的详细信息。
+   1. 选择读取服务参数的铅笔图标以将参数绑定到请求属性，并指定绑定值。 它将服务参数绑定到指定的绑定属性或文本值，该属性或文本值作为参数传递给服务，以从数据源获取与指定值关联的详细信息。
 
       <br>
         在此示例中，id参数接受用户配置文件的id属性的值，并将其作为参数传递给读取服务。 它将从指定ID的员工数据模型对象中读取并返回关联属性的值。 因此，如果您在表单的id字段中指定00250，则读取服务将读取具有员工id的员工00250详细信息。
@@ -143,7 +143,7 @@ ht-degree: 1%
 
 1. 创建 [观察文件夹](/help/forms/using/creating-configure-watched-folder.md) 并将其配置为使用批处理API服务：
    1. 登录到AEM Forms创作实例。
-   1. 导航到 **[!UICONTROL 工具]** > **[!UICONTROL Forms]** > **[!UICONTROL 配置Watched文件夹]**. 点按 **[!UICONTROL 新建]**.
+   1. 导航到 **[!UICONTROL 工具]** > **[!UICONTROL Forms]** > **[!UICONTROL 配置Watched文件夹]**. 选择 **[!UICONTROL 新建]**.
    1. 指定 **[!UICONTROL 名称]** 和物理 **[!UICONTROL 路径]** 文件夹的。 例如：`c:\batchprocessing`。
    1. 选择 **[!UICONTROL 服务]** 中的选项 **[!UICONTROL 处理文件，使用]** 字段。
    1. 选择 **[!UICONTROL com.adobe.fd.ccm.multichannel.batch.impl.service.InteractiveCommunicationBatchServiceImpl]** 中的服务 **[!UICONTROL 服务名称]** 字段。
@@ -159,7 +159,7 @@ ht-degree: 1%
       | batchtype | 字符串 | 将值设置为PRINT、WEB或WEB_AND_PRINT。 缺省值为WEB_AND_PRINT。 |
       | 区域设置 | 字符串 | 指定输出交互式通信的区域设置。 现成服务不使用区域设置选项，但您可以创建自定义服务来生成本地化的交互式通信。 缺省值为en_US。 |
 
-   1. 点按 **[!UICONTROL 创建]** 已创建观察文件夹。
+   1. 选择 **[!UICONTROL 创建]** 已创建观察文件夹。
 1. 使用watched文件夹生成交互式通信：
    1. 打开Watched文件夹 导航到输入文件夹。
    1. 在输入文件夹中创建文件夹。 将在步骤2中创建的JSON文件放入新创建的文件夹中。

@@ -9,9 +9,9 @@ docset: aem65
 feature: Interactive Images
 role: User, Admin
 exl-id: 8a609024-e9e6-4805-8306-48d095110eb6
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '4275'
+source-wordcount: '4130'
 ht-degree: 1%
 
 ---
@@ -265,7 +265,7 @@ ht-degree: 1%
 
    * 选择图像以便在“详细信息视图”页面中将其打开。 在工具栏上，选择 **[!UICONTROL 编辑]**.
 
-1. 在页面的左上角附近，选择 **[!UICONTROL 添加热点]** （手指点按图标）以打开热点管理页面。
+1. 在页面的左上角附近，选择 **[!UICONTROL 添加热点]** （手指选择图标）以打开“热点”管理页面。
 1. 在页面的左上角附近，选择 **[!UICONTROL 热点]**.
 
    1. 在“热点管理”页面的左上角附近，选择 **[!UICONTROL 热点]**.

@@ -8,18 +8,18 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 9f400560-8152-4d07-a946-e514e9b9cedf
 role: Admin
 exl-id: fd0e17d7-c3e9-4dec-ad26-ed96a1881f42
-source-git-commit: fb9363a39ffc9d3929a31a3a19a124b806607ef4
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '1005'
-ht-degree: 0%
+source-wordcount: '986'
+ht-degree: 1%
 
 ---
 
 # OSGi上以Forms为中心的工作流 |处理用户数据 {#forms-centric-workflows-on-osgi-handling-user-data}
 
-以Forms为中心的AEM工作流使您能够自动执行以Forms为中心的真实业务流程。 工作流由一系列步骤组成，这些步骤按照关联工作流模型中指定的顺序执行。 每个步骤都会执行特定操作，例如向用户分配任务或发送电子邮件。 工作流可以与存储库中的资产、用户帐户和服务进行交互。 因此，工作流可以协调涉及Experience Manager任何方面的复杂活动。
+以Forms为中心的AEM工作流使您能够自动执行以Forms为中心的实际业务流程。 工作流由一系列步骤组成，这些步骤按照关联工作流模型中指定的顺序执行。 每个步骤都会执行特定操作，例如向用户分配任务或发送电子邮件。 工作流可与存储库中的资产、用户帐户和服务进行交互。 因此，工作流可以协调涉及Experience Manager任何方面的复杂活动。
 
-可以通过以下任意方法触发或启动以表单为中心的工作流：
+可以通过以下任一方法触发或启动以表单为中心的工作流：
 
 * 从AEM收件箱提交应用程序
 * 从AEM提交申请 [!DNL Forms] 应用程序
@@ -31,7 +31,7 @@ ht-degree: 0%
 
 ## 用户数据和数据存储 {#user-data-and-data-stores}
 
-触发工作流时，会自动为工作流实例生成有效负载。 每个工作流实例都分配有一个唯一的实例ID和一个关联的有效负载ID。 有效负载包含与工作流实例关联的用户和表单数据的存储库位置。 此外，工作流实例的草稿和历史数据也存储在AEM存储库中。
+触发工作流时，会自动为工作流实例生成有效负载。 每个工作流实例都分配有一个唯一的实例ID和关联的有效负载ID。 有效负载包含与工作流实例关联的用户和表单数据的存储库位置。 此外，工作流实例的草稿和历史数据也存储在AEM存储库中。
 
 工作流实例的有效负载、草稿和历史记录所在的默认存储库位置如下所示：
 
@@ -58,25 +58,25 @@ ht-degree: 0%
   </tr>
   <tr>
    <td><strong>草稿</strong></td>
-   <td>/var/fd/dashboard/instances/[server_id]/<br /> [日期]/[工作流程实例]/draft/[工作项目]/</td>
-   <td>/etc/fd/dashboard/instances/[server_id]/<br /> [日期]/[工作流程实例]/draft/[工作项目]/</td>
+   <td>/var/fd/dashboard/instances/[server_id]/<br /> [日期]/[工作流实例]/draft/[工作项目]/</td>
+   <td>/etc/fd/dashboard/instances/[server_id]/<br /> [日期]/[工作流实例]/draft/[工作项目]/</td>
   </tr>
   <tr>
    <td><strong>历史</strong></td>
-   <td>/var/fd/dashboard/instances/[server_id]/<br /> [日期]/[workflow_instance]/history/</td>
-   <td>/etc/fd/dashboard/instances/[server_id]/<br /> [日期]/[workflow_instance]/history/</td>
+   <td>/var/fd/dashboard/instances/[server_id]/<br /> [日期]/[工作流实例]/history/</td>
+   <td>/etc/fd/dashboard/instances/[server_id]/<br /> [日期]/[工作流实例]/history/</td>
   </tr>
  </tbody>
 </table>
 
 ## 访问和删除用户数据 {#access-and-delete-user-data}
 
-您可以从存储库中的工作流实例访问和删除用户数据。 要实现此目的，您必须知道与用户关联的工作流实例的实例ID。 您可以使用启动工作流实例的用户的用户名或工作流实例的当前被分配人的用户名来查找工作流实例的实例ID。
+您可以从存储库中的工作流实例访问和删除用户数据。 要实现此目的，您必须知道与用户关联的工作流实例的实例ID。 您可以使用启动工作流实例的用户的用户名或工作流实例的当前任务接受者来查找工作流实例的实例ID。
 
 但是，在下列情形中标识与启动器关联的工作流时，您无法识别或结果可能模棱两可：
 
-* **通过watched文件夹触发的工作流**：如果工作流由观察文件夹触发，则无法使用工作流实例的启动器识别该工作流实例。 在这种情况下，在存储的数据中对用户信息进行编码。
-* **从发布AEM实例启动的工作流**：从AEM发布实例提交自适应表单、交互式通信或信件时，所有工作流实例都使用服务用户创建。 在这些情况下，工作流实例数据中不会捕获登录用户的用户名。
+* **通过观察文件夹触发的工作流**：如果工作流由观察文件夹触发，则无法使用工作流实例的启动器识别该工作流实例。 在此情况下，在存储的数据中对用户信息进行编码。
+* **从发布AEM实例启动的工作流**：在从AEM发布实例提交自适应表单、交互式通信或信件时，所有工作流实例都使用服务用户创建。 在这些情况下，工作流实例数据中不会捕获登录用户的用户名。
 
 ### 访问用户数据 {#access}
 
@@ -96,17 +96,17 @@ ht-degree: 0%
 
    `SELECT &ast; FROM [cq:WorkItem] AS s WHERE ISDESCENDANTNODE([path-to-workflow-instances]) and s.[assignee]='*assignee-id*'`
 
-   查询会返回指定工作流发起人或当前工作流被分配人的所有工作流实例的位置。
+   查询会返回指定工作流发起人或当前工作流任务接受者的所有工作流实例的位置。
 
    例如，以下查询从 `/var/workflow/instances` 工作流发起者为的节点 `srose`.
 
    ![workflow-instance](assets/workflow-instance.png)
 
-1. 转到查询返回的工作流实例路径。 status属性显示工作流实例的当前状态。
+1. 转到查询返回的工作流实例路径。 状态属性显示工作流实例的当前状态。
 
-   ![状态](assets/status.png)
+   ![status](assets/status.png)
 
-1. 在工作流实例节点中，导航到 `data/payload/`. 此 `path` 属性存储工作流实例的有效负荷的路径。 您可以导航到路径，以访问有效负载中存储的数据。
+1. 在工作流实例节点中，导航到 `data/payload/`. 此 `path` 属性存储工作流实例的有效负荷路径。 您可以导航到路径，以访问有效负载中存储的数据。
 
    ![payload-path](assets/payload-path.png)
 
@@ -122,28 +122,28 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >AEM [!DNL Forms] 应用程序还以离线模式存储数据。 工作流实例的数据可能存储在单个设备本地，然后提交到 [!DNL Forms] 应用程序与服务器同步时的服务器。
+   >AEM [!DNL Forms] 应用程序还会以离线模式存储数据。 工作流实例的数据可能本地存储在单个设备上，并被提交到 [!DNL Forms] 应用程序与服务器同步时的服务器。
 
 ### 删除用户数据 {#delete-user-data}
 
 您必须是AEM管理员，才能通过执行以下步骤从工作流实例中删除用户数据：
 
-1. 按照中的说明操作 [访问用户数据](/help/forms/using/forms-workflow-osgi-handling-user-data.md#access) 并注意以下事项：
+1. 请按照 [访问用户数据](/help/forms/using/forms-workflow-osgi-handling-user-data.md#access) 并注意以下事项：
 
    * 与用户关联的工作流实例的路径
    * 工作流实例的状态
-   * 工作流实例的有效负荷的路径
-   * 工作流实例的草稿和历史记录路径
+   * 工作流实例的有效负荷路径
+   * 工作流实例的草稿和历史记录的路径
 
 1. 在中为工作流实例执行此步骤 **正在运行**， **已暂停**，或 **过时** 状态：
 
    1. 转到 `https://'[server]:[port]'/aem/start.html` 并使用管理员凭据登录。
    1. 导航到 **[!UICONTROL “工具”>“工作流”>“实例”]**.
-   1. 为用户选择相关工作流实例并点按 **[!UICONTROL 终止]** 终止正在运行的实例。
+   1. 为用户选择相关工作流实例，然后选择 **[!UICONTROL 终止]** 终止正在运行的实例。
 
       有关使用工作流实例的详细信息，请参阅 [管理工作流实例](/help/sites-administering/workflows-administering.md).
 
-1. 转到 [!DNL CRXDE Lite] 导航到工作流实例的有效负载路径，然后删除 `payload` 节点。
+1. 转到 [!DNL CRXDE Lite] 导航到工作流实例的有效负荷路径，然后删除 `payload` 节点。
 1. 导航到工作流实例的草稿路径，然后删除 `draft` 节点。
 1. 导航到工作流实例的历史记录路径，然后删除 `history` 节点。
 1. 导航到工作流实例的工作流实例路径，然后删除 `[workflow-instance-ID]` 工作流节点。
@@ -153,7 +153,7 @@ ht-degree: 0%
    >删除工作流实例节点将删除所有工作流参与者的工作流实例。
 
 1. 对于为用户标识的所有工作流实例，重复步骤2 - 6。
-1. 识别并删除AEM中的离线草稿和提交数据 [!DNL Forms] 工作流参与者的应用程序发件箱，以避免向服务器提交任何内容。
+1. 识别并删除AEM中的离线草稿和提交数据 [!DNL Forms] 应用工作流程参与者的发件箱，以避免向服务器提交任何内容。
 
 您还可以使用API来访问和删除节点和属性。 有关更多信息，请参阅以下文档。
 

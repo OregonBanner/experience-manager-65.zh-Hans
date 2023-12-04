@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
 feature: Form Data Model
 exl-id: 7a1d9d57-66f4-4f20-91c2-ace5a71a52f2
-source-git-commit: d39b4b1d921fc93a4871b74469953f2dfc5c470b
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '2112'
-ht-degree: 2%
+source-wordcount: '2073'
+ht-degree: 1%
 
 ---
 
@@ -38,7 +38,7 @@ ht-degree: 2%
 可以使用AEM Web Console配置来配置关系数据库。 执行以下操作：
 
 1. 转到位于的AEM Web控制台 `https://server:host/system/console/configMgr`.
-1. 查找 **[!UICONTROL Apache Sling连接池化数据源]** 配置。 点按以在编辑模式下打开配置。
+1. 查找 **[!UICONTROL Apache Sling连接池化数据源]** 配置。 选择以在编辑模式下打开配置。
 1. 在配置对话框中，指定要配置的数据库的详细信息，例如：
 
    * 数据源的名称
@@ -52,7 +52,7 @@ ht-degree: 2%
    >在配置数据源之前，请确保对密码等敏感信息进行加密。 要加密：
    >
    > 1. 转到https://&#39;[服务器]：[端口]&#39;/system/console/crypto.
-   > 1. 在 **[!UICONTROL 纯文本]** 字段，指定要加密的密码或任何字符串，然后点击 **[!UICONTROL Protect]**.
+   > 1. 在 **[!UICONTROL 纯文本]** 字段，指定要加密的密码或任何字符串，然后选择 **[!UICONTROL Protect]**.
    >
    >加密文本将显示在可在配置中指定的受保护文本字段中。
 
@@ -62,7 +62,7 @@ ht-degree: 2%
    * SELECT 1 （MySQL和MS SQL）
    * 从双选件中选择1(Oracle)
 
-1. 点按 **[!UICONTROL 保存]** 以保存配置。
+1. 选择 **[!UICONTROL 保存]** 以保存配置。
 
    >[!NOTE]
    >
@@ -73,7 +73,7 @@ ht-degree: 2%
 您可以使用AEM Web Console中的用户配置文件连接器配置来配置AEM用户配置文件。 执行以下操作：
 
 1. 转到AEM Web控制台，网址为https://&#39;[服务器]：[端口]&#39;system/console/configMgr.
-1. 查找 **[!UICONTROL AEM Forms数据集成 — 用户配置文件连接器配置]** 并点按以在编辑模式下打开配置。
+1. 查找 **[!UICONTROL AEM Forms数据集成 — 用户配置文件连接器配置]** 并选择以在编辑模式下打开配置。
 1. 在“用户配置文件连接器配置”对话框中，可以添加、删除或更新用户配置文件属性。 指定的属性可用于表单数据模型。 使用以下格式指定用户配置文件属性：
 
    `name=[property_name_with_location_in_user_profile],type=[property_type]`
@@ -87,7 +87,7 @@ ht-degree: 2%
    >
    >此 **&#42;** 上例中，表示 `profile/empLocation/` CRXDE结构的AEM用户配置文件中的节点。 这意味着表单数据模型可以访问 `city` 类型的属性 `string` 出现在下的任何节点中 `profile/empLocation/` 节点。 但是，包含指定属性的节点必须遵循一致结构。
 
-1. 点按 **[!UICONTROL 保存]** 以保存配置。
+1. 选择 **[!UICONTROL 保存]** 以保存配置。
 
 ## 为云服务配置配置文件夹 {#cloud-folder}
 
@@ -103,15 +103,15 @@ AEM中的所有云服务配置都整合到中 `/conf` AEM存储库中的文件�
    * 请参阅 [配置浏览器](/help/sites-administering/configurations.md) 文档，以了解更多信息。
 1. 执行以下操作可为云配置启用全局文件夹，或跳过此步骤为云服务配置创建和配置其他文件夹。
 
-   1. 在 **[!UICONTROL 配置浏览器]**，选择 `global` 文件夹并点按 **[!UICONTROL 属性]**.
+   1. 在 **[!UICONTROL 配置浏览器]**，选择 `global` 文件夹并选择 **[!UICONTROL 属性]**.
 
    1. 在 **[!UICONTROL 配置属性]** 对话框，启用 **[!UICONTROL 云配置]**.
 
-   1. 点按 **[!UICONTROL 保存并关闭]** 保存配置并退出对话框。
+   1. 选择 **[!UICONTROL 保存并关闭]** 保存配置并退出对话框。
 
-1. 在 **[!UICONTROL 配置浏览器]**，点按 **[!UICONTROL 创建]**.
+1. 在 **[!UICONTROL 配置浏览器]**，选择 **[!UICONTROL 创建]**.
 1. 在 **[!UICONTROL 创建配置]** 对话框，为文件夹指定标题并启用 **[!UICONTROL 云配置]**.
-1. 点按 **[!UICONTROL 创建]** 以创建为云服务配置启用的文件夹。
+1. 选择 **[!UICONTROL 创建]** 以创建为云服务配置启用的文件夹。
 
 ## 配置RESTful Web服务 {#configure-restful-web-services}
 
@@ -119,11 +119,11 @@ AEM中的所有云服务配置都整合到中 `/conf` AEM存储库中的文件�
 
 执行以下操作以配置RESTful服务：
 
-1. 转到&#x200B;**[!UICONTROL 工具 > Cloud Services > 数据源]**。点按以选择要创建云配置的文件夹。
+1. 转到 **[!UICONTROL “工具”>“Cloud Service”>“数据源”]**. 选择以选择要创建云配置的文件夹。
 
    请参阅 [为云服务配置配置文件夹](../../forms/using/configure-data-sources.md#cloud-folder) 有关为云服务配置创建和配置文件夹的信息。
 
-1. 点按 **[!UICONTROL 创建]** 以打开 **[!UICONTROL 创建数据源配置向导]**. 指定配置的名称和（可选）标题，选择 **[!UICONTROL RESTful服务]** 从 **[!UICONTROL 服务类型]** 下拉列表（可选）浏览并选择配置的缩略图图像，然后点按 **[!UICONTROL 下一个]**.
+1. 选择 **[!UICONTROL 创建]** 以打开 **[!UICONTROL 创建数据源配置向导]**. 指定配置的名称和（可选）标题，选择 **[!UICONTROL RESTful服务]** 从 **[!UICONTROL 服务类型]** 下拉列表（可选）浏览并选择配置的缩略图图像，然后选择 **[!UICONTROL 下一个]**.
 1. 为RESTful服务指定以下详细信息：
 
    * 从Swagger源下拉列表中选择URL或文件，然后相应地指定Swagger定义文件的Swagger URL或者从本地文件系统上传Swagger文件。
@@ -140,7 +140,7 @@ AEM中的所有云服务配置都整合到中 `/conf` AEM存储库中的文件�
 
    如果您选择 **[!UICONTROL 相互认证]** 对于身份验证类型，请参阅 [RESTful和SOAP Web服务的基于证书的双向身份验证](#mutual-authentication).
 
-1. 点按 **[!UICONTROL 创建]** 以创建RESTful服务的云配置。
+1. 选择 **[!UICONTROL 创建]** 以创建RESTful服务的云配置。
 
 ### 表单数据模型HTTP客户端配置可优化性能 {#fdm-http-client-configuration}
 
@@ -149,7 +149,7 @@ AEM中的所有云服务配置都整合到中 `/conf` AEM存储库中的文件�
 
 1. 登录 [!DNL Experience Manager Forms] 以管理员身份创作实例并转到 [!DNL Experience Manager] Web控制台包。 默认URL为 [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr).
 
-1. 点按 **[!UICONTROL REST数据源的表单数据模型Http客户端配置]**.
+1. 选择 **[!UICONTROL REST数据源的表单数据模型Http客户端配置]**.
 
 1. 在 [!UICONTROL REST数据源的表单数据模型Http客户端配置] 对话框：
 
@@ -167,15 +167,15 @@ AEM中的所有云服务配置都整合到中 `/conf` AEM存储库中的文件�
 
 使用对基于SOAP的Web服务进行描述 [Web服务描述语言(WSDL)规范](https://www.w3.org/TR/wsdl). 要在AEM云服务中配置基于SOAP的Web服务，请确保您拥有该Web服务的WSDL URL，并执行以下操作：
 
-1. 转到&#x200B;**[!UICONTROL 工具 > Cloud Services > 数据源]**。点按以选择要创建云配置的文件夹。
+1. 转到 **[!UICONTROL “工具”>“Cloud Service”>“数据源”]**. 选择以选择要创建云配置的文件夹。
 
    请参阅 [为云服务配置配置文件夹](../../forms/using/configure-data-sources.md#cloud-folder) 有关为云服务配置创建和配置文件夹的信息。
 
-1. 点按 **[!UICONTROL 创建]** 以打开 **[!UICONTROL 创建数据源配置向导]**. 指定配置的名称和（可选）标题，选择 **[!UICONTROL SOAP Web服务]** 从 **[!UICONTROL 服务类型]** 下拉列表（可选）浏览并选择配置的缩略图图像，然后点按 **[!UICONTROL 下一个]**.
+1. 选择 **[!UICONTROL 创建]** 以打开 **[!UICONTROL 创建数据源配置向导]**. 指定配置的名称和（可选）标题，选择 **[!UICONTROL SOAP Web服务]** 从 **[!UICONTROL 服务类型]** 下拉列表（可选）浏览并选择配置的缩略图图像，然后选择 **[!UICONTROL 下一个]**.
 1. 为SOAP Web服务指定以下内容：
 
    * Web服务的WSDL URL。
-   * 服务端点. 在此字段中指定一个值以覆盖WSDL中提到的服务端点。
+   * 服务端点。 在此字段中指定一个值以覆盖WSDL中提到的服务端点。
    * 选择身份验证类型 — 无、OAuth2.0([授权码](https://oauth.net/2/grant-types/authorization-code/)， [客户端凭据](https://oauth.net/2/grant-types/client-credentials/))、基本身份验证、自定义身份验证、X509令牌或相互身份验证 — 用于访问SOAP服务，并相应地提供身份验证的详细信息。
 
      如果您选择 **[!UICONTROL X509令牌]** 对于身份验证类型，请配置X509证书。 有关更多信息，请参阅 [设置证书](install-configure-document-services.md#set-up-certificates-for-reader-extension-and-encryption-service).
@@ -183,7 +183,7 @@ AEM中的所有云服务配置都整合到中 `/conf` AEM存储库中的文件�
 
      如果您选择 **[!UICONTROL 相互认证]** 对于身份验证类型，请参阅 [RESTful和SOAP Web服务的基于证书的双向身份验证](#mutual-authentication).
 
-1. 点按 **[!UICONTROL 创建]** 创建SOAP Web服务的云配置。
+1. 选择 **[!UICONTROL 创建]** 创建SOAP Web服务的云配置。
 
 ## 配置OData服务 {#config-odata}
 
@@ -194,11 +194,11 @@ OData服务由其服务根URL标识。 要在AEM云服务中配置OData服务，
 >表单数据模型支持 [OData版本4](https://www.odata.org/documentation/).
 >有关配置Microsoft Dynamics 365的分步指南（在线或内部部署），请参阅 [Microsoft Dynamics OData配置](/help/forms/using/ms-dynamics-odata-configuration.md).
 
-1. 转到&#x200B;**[!UICONTROL 工具 > Cloud Services > 数据源]**。点按以选择要创建云配置的文件夹。
+1. 转到 **[!UICONTROL “工具”>“Cloud Service”>“数据源”]**. 选择以选择要创建云配置的文件夹。
 
    请参阅 [为云服务配置配置文件夹](../../forms/using/configure-data-sources.md#cloud-folder) 有关为云服务配置创建和配置文件夹的信息。
 
-1. 点按 **[!UICONTROL 创建]** 以打开 **[!UICONTROL 创建数据源配置向导]**. 指定配置的名称和（可选）标题，选择 **[!UICONTROL OData服务]** 从 **[!UICONTROL 服务类型]** 下拉列表（可选）浏览并选择配置的缩略图图像，然后点按 **[!UICONTROL 下一个]**.
+1. 选择 **[!UICONTROL 创建]** 以打开 **[!UICONTROL 创建数据源配置向导]**. 指定配置的名称和（可选）标题，选择 **[!UICONTROL OData服务]** 从 **[!UICONTROL 服务类型]** 下拉列表（可选）浏览并选择配置的缩略图图像，然后选择 **[!UICONTROL 下一个]**.
 1. 为OData服务指定以下详细信息：
 
    * 要配置的OData服务的服务根URL。
@@ -206,9 +206,9 @@ OData服务由其服务根URL标识。 要在AEM云服务中配置OData服务，
 
    >[!NOTE]
    >
-   >必须选择OAuth 2.0身份验证类型才能使用OData端点作为服务根连接到Microsoft Dynamics服务。
+   >选择OAuth 2.0身份验证类型以使用OData端点作为服务根连接到Microsoft Dynamics服务。
 
-1. 点按 **创建** 以创建OData服务的云配置。
+1. 选择 **创建** 以创建OData服务的云配置。
 
 ## RESTful和SOAP Web服务的基于证书的双向身份验证 {#mutual-authentication}
 
@@ -216,11 +216,11 @@ OData服务由其服务根URL标识。 要在AEM云服务中配置OData服务，
 
 1. 将私钥（证书）上传到 [!DNL AEM Forms] 服务器。 要上传私钥，请执行以下操作：
    1. 登录 [!DNL AEM Forms] 服务器作为管理员。
-   1. 导航到 **[!UICONTROL 工具]** > **[!UICONTROL 安全性]** > **[!UICONTROL 用户]**. 选择 `fd-cloudservice` 用户和点按 **[!UICONTROL 属性]**.
-   1. 打开 **[!UICONTROL 密钥库]** 选项卡，展开 **[!UICONTROL 从KeyStore文件添加私钥]** 选项，上传KeyStore文件，指定别名、密码，然后点击 **[!UICONTROL 提交]**. 证书已上传。  私钥别名在证书中提及，并在创建证书时设置。
+   1. 导航到 **[!UICONTROL 工具]** > **[!UICONTROL 安全性]** > **[!UICONTROL 用户]**. 选择 `fd-cloudservice` 用户和选择 **[!UICONTROL 属性]**.
+   1. 打开 **[!UICONTROL 密钥库]** 选项卡，展开 **[!UICONTROL 从KeyStore文件添加私钥]** 选项，上传KeyStore文件，指定别名、密码，然后选择 **[!UICONTROL 提交]**. 证书已上传。  私钥别名在证书中提及，并在创建证书时设置。
 1. 将信任证书上载到全局信任存储区。 要上传证书，请执行以下操作：
    1. 导航到 **[!UICONTROL 工具]** > **[!UICONTROL 安全性]** > **[!UICONTROL 信任存储区]**.
-   1. 展开 **[!UICONTROL 从CER文件添加证书]** 选项，点按 **[!UICONTROL 选择证书文件]**，上传证书，然后点击 **[!UICONTROL 提交]**.
+   1. 展开 **[!UICONTROL 从CER文件添加证书]** 选项，选择 **[!UICONTROL 选择证书文件]**，上传证书，然后选择 **[!UICONTROL 提交]**.
 1. 配置 [SOAP](#configure-soap-web-services) 或 [RESTful](#configure-restful-web-services) 将Web服务作为数据源，然后选择 **[!UICONTROL 相互认证]** 作为身份验证类型。 如果为配置多个自签名证书 `fd-cloudservice` 用户，指定证书的密钥别名。
 
 ## 后续步骤 {#next-steps}

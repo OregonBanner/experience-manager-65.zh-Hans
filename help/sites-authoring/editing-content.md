@@ -7,10 +7,10 @@ topic-tags: page-authoring
 content-type: reference
 docset: aem65
 exl-id: d5cf4478-51e4-4ca8-b3f8-6d7caed7d515
-source-git-commit: 474a726058b141985f52a0faec6161a34be1e9dc
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '3016'
-ht-degree: 49%
+source-wordcount: '3015'
+ht-degree: 47%
 
 ---
 
@@ -204,7 +204,7 @@ ht-degree: 49%
 
 1. 确保页面处于&#x200B;[**编辑**&#x200B;模式](/help/sites-authoring/author-environment-tools.md#page-modes)。
 1. 打开[资源浏览器](/help/sites-authoring/author-environment-tools.md#assets-browser)。
-1. 将所需的资源拖动到所需位置。[组件占位符](#component-placeholder)显示组件的位置。
+1. 将所需的资源拖动到所需位置。此 [组件占位符](#component-placeholder) 显示组件的放置位置。
 
    此时会在所需位置创建与该资源类型对应的组件 - 组件包含选定的资源。
 
@@ -342,7 +342,7 @@ ht-degree: 49%
 
 对于特定的组件类型，您可以将资产直接从资产浏览器拖放到组件中来更新内容：
 
-| **资产类型** | **组件类型** |
+| **资源类型** | **组件类型** |
 |---|---|
 | 图像 | 图像 |
 | 文档 | 下载 |
@@ -368,7 +368,7 @@ ht-degree: 49%
 
 要移动段落组件，请执行以下操作：
 
-1. 通过点按住或单击并按住来选择要移动的段落。
+1. 选择段落以按住select或click-and-hold键移动。
 1. 将段落拖到新位置。AEM 指示该段落可以存放的位置。将其放在您想要的位置。
 
    ![移动段落组件](assets/screen_shot_2018-03-22at121821.png)
@@ -387,7 +387,7 @@ ht-degree: 49%
 
    ![表单中的编辑模式](assets/screen_shot_2018-03-22at133756.png)
 
-   单击或点按 **布局** 操作，以便您可以调整组件的布局。
+   单击 **布局** 操作，以便您可以调整组件的布局。
 
    ![组件工具栏](do-not-localize/chlimage_1-21.png)
 

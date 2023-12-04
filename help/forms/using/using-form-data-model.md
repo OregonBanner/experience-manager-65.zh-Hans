@@ -10,9 +10,9 @@ discoiquuid: 87f5f9f5-2d03-4565-830e-eacc3757e542
 docset: aem65
 feature: Form Data Model
 exl-id: 9a73a643-7ad4-49aa-a971-08d52679158d
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '1273'
+source-wordcount: '1268'
 ht-degree: 2%
 
 ---
@@ -51,7 +51,7 @@ AEM Forms数据集成让您可以使用不同的后端数据源创建表单数�
 
    ![create-af-1-1](assets/create-af-1-1.png)
 
-1. 点击以展开 **[!UICONTROL 选择表单数据模型]**. 列出所有可用的表单数据模型。
+1. 选择以展开 **[!UICONTROL 选择表单数据模型]**. 列出所有可用的表单数据模型。
 
    从数据模型中选择。
 
@@ -93,19 +93,19 @@ AEM Forms数据集成让您可以使用不同的后端数据源创建表单数�
 
 ## 使用示例数据预览 {#preview-ic}
 
-利用表单数据模型编辑器，可生成和编辑表单数据模型中数据模型对象的示例数据。 您可以使用此数据预览和测试交互式通信及自适应表单。 在预览之前必须生成示例数据，如中所述 [使用表单数据模型](../../forms/using/work-with-form-data-model.md#sample).
+利用表单数据模型编辑器，可生成和编辑表单数据模型中数据模型对象的示例数据。 您可以使用此数据预览和测试交互式通信及自适应表单。 在预览之前生成示例数据，如中所述 [使用表单数据模型](../../forms/using/work-with-form-data-model.md#sample).
 
 要预览包含示例表单数据模型数据的交互式通信，请执行以下操作：
 
 1. 在AEM创作实例上，导航到 **[!UICONTROL Forms > Forms和文档]**.
-1. 选择交互式通信并点按 **[!UICONTROL 预览]** 在工具栏中选择 **[!UICONTROL Web渠道]**， **[!UICONTROL 打印渠道]**，或 **[!UICONTROL 两个渠道]** 以预览交互式通信。
-1. 在预览中 [*渠道*] 对话框，请确保 **[!UICONTROL 表单数据模型的测试数据]** 已选中并点按 **[!UICONTROL 预览]**.
+1. 选择交互式通信并选择 **[!UICONTROL 预览]** 在工具栏中选择 **[!UICONTROL Web渠道]**， **[!UICONTROL 打印渠道]**，或 **[!UICONTROL 两个渠道]** 以预览交互式通信。
+1. 在预览中 [*渠道*] 对话框，请确保 **[!UICONTROL 表单数据模型的测试数据]** 已选中并选择 **[!UICONTROL 预览]**.
 
 这将打开交互式通信，其中预填了示例数据。
 
 ![Web预览](assets/web-preview.png)
 
-同样，要预览包含示例数据的自适应表单，请在创作模式下打开自适应表单并点按 **[!UICONTROL 预览]**.
+同样，要预览包含示例数据的自适应表单，请在创作模式下打开自适应表单并选择 **[!UICONTROL 预览]**.
 
 ## 使用表单数据模型服务预填充 {#prefill}
 
@@ -135,10 +135,10 @@ AEM Forms提供现成的表单数据模型预填充服务，您可以基于表�
 
 1. 将包含二进制属性的数据模型对象添加到表单数据模型。
 1. 在自适应表单中，拖放 **[!UICONTROL 文件附件]** 组件浏览器中的组件转换为自适应表单。
-1. 点按以选择添加的组件，然后点按 ![settings_icon](assets/settings_icon.png) 以打开组件的属性浏览器。
-1. 在绑定引用字段中，点按 ![foldersearch_18](assets/foldersearch_18.png) 并导航以选择您在表单数据模型中添加的二进制属性。 根据需要配置其他属性。
+1. 选择以选择添加的组件，然后选择 ![settings_icon](assets/settings_icon.png) 以打开组件的属性浏览器。
+1. 在绑定引用字段中，选择 ![foldersearch_18](assets/foldersearch_18.png) 并导航以选择您在表单数据模型中添加的二进制属性。 根据需要配置其他属性。
 
-   点按 ![复选按钮](assets/check-button.png) 以保存属性。 附件字段现在绑定到表单数据模型的二进制属性。
+   选择 ![复选按钮](assets/check-button.png) 以保存属性。 附件字段现在绑定到表单数据模型的二进制属性。
 
 1. 在自适应表单容器属性的提交部分中，启用 **[!UICONTROL 提交表单附件]**. 在提交表单时，它将二进制属性字段中的附件提交到数据源。
 

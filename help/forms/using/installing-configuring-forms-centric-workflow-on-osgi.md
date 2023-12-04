@@ -5,10 +5,10 @@ topic-tags: installing
 docset: aem65
 role: Admin
 exl-id: 4b24a38a-c1f0-4c81-bb3a-39ce2c4892b1
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '1611'
-ht-degree: 6%
+source-wordcount: '1590'
+ht-degree: 3%
 
 ---
 
@@ -16,9 +16,9 @@ ht-degree: 6%
 
 ## 简介 {#introduction}
 
-企业从多个表单、后端系统和其他数据源收集和处理数据。 数据的处理涉及审核和批准程序、重复任务和数据存档。 例如，审阅表单并将其转换为PDF文档。 手工完成重复性任务需要花费大量的时间和资源。
+企业从多个表单、后端系统和其他数据源收集和处理数据。 数据的处理涉及审核和批准程序、重复任务和数据存档。 例如，检查表单并将其转换为 PDF 文档。 手动完成时，重复的任务可能需要花费大量时间和大量资源。
 
-您可以使用 [OSGi上以Forms为中心的工作流](../../forms/using/aem-forms-workflow.md) 快速构建基于表单的自适应工作流。 这些工作流可帮助您自动执行审核和批准工作流、业务流程工作流和其他重复性任务。 这些工作流还有助于处理文档（创建、汇编、分发和存档 PDF 文档、添加数字签名以限制对文档、解码条形码表单等），以及使用表单和 Adobe Sign 的工作流签名文档。
+您可以在 OSGi ](../../forms/using/aem-forms-workflow.md) 上使用 [ 以 Forms 为中心的工作流，以快速版本自适应表单的工作流。这些工作流可帮助您自动执行审核和批准工作流、业务流程工作流和其他重复性任务。 这些工作流还有助于处理文档（创建、汇编、分发和存档 PDF 文档、添加数字签名以限制对文档、解码条形码表单等），以及使用表单和 Adobe Sign 的工作流签名文档。
 
 设置后，可以手动触发这些工作流以完成定义的进程，或在用户提交表单或交互式通信时以编程方式运行。 该功能包含在 AEM Forms 加载项包中。
 
@@ -99,15 +99,15 @@ OSGi上以AEM Forms Forms为中心的工作流在AEM Forms的创作实例上运�
 AEM Forms附加组件包是部署在AEM上的应用程序。 该包中包含有关OSGi和其他功能的以Forms为中心的工作流。 执行以下步骤以安装附加组件包：
 
 1. 打开 [Software Distribution](https://experience.adobe.com/downloads)。您需要 Adobe ID 才能登录 Software Distribution。
-1. 点按标题菜单中的 **[!UICONTROL Adobe Experience Manager]**。
+1. 选择 **[!UICONTROL Adobe Experience Manager]** 在标题菜单中可用。
 1. 在 **[!UICONTROL 过滤器]** 部分：
    1. 选择 **[!UICONTROL Forms]** 从 **[!UICONTROL 解决方案]** 下拉列表。
    2. 选择包的版本和类型。 您也可以使用 **[!UICONTROL 搜索下载]** 用于筛选结果的选项。
-1. 点按适用于您的操作系统的包名称，然后选择 **[!UICONTROL 接受EULA条款]**，然后点击 **[!UICONTROL 下载]**.
-1. 打开[包管理器](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html)，并单击&#x200B;**[!UICONTROL 上传包]**&#x200B;以上传包。
-1. 选择包并单击 **[!UICONTROL 安装]**.
+1. 选择适用于您的操作系统的包名称，然后选择 **[!UICONTROL 接受EULA条款]**，并选择 **[!UICONTROL 下载]**.
+1. 打开 [包管理器](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html)  并单击 **[!UICONTROL 上传包]** 以上传包。
+1. 选择包，然后单击 &quot;安装 ]**&quot;**[!UICONTROL  。
 
-   您还可以通过中列出的直接链接下载包 [AEM Forms版本](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) 文章。
+   您还可以通过 &quot; [ AEM Forms 版本 ](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) &quot; 文章中列出的直接关联下载包。
 
 1. 安装包后，系统会提示您重新启动 AEM 实例。 **不要立即重新启动服务器。**&#x200B;在停止 AEM Forms 服务器之前，请等待 ServiceEvent 注册和 ServiceEvent 取消注册的消息在 AEM 安装目录 ] /crx-quickstart/logs/error.log 文件中 [ 停止显示，并且日志处于稳定状态。
 1. 在所有作者和 Publish 实例上重复步骤1-7。
@@ -142,12 +142,12 @@ AEM Forms具有一些强制和可选配置。 强制配置包括配置BouncyCast
 
 1. 在浏览器窗口中打开AEM Configuration Manager。 默认URL为https://&#39;[服务器]：[端口]&#39;/system/console/configMgr.
 1. 搜索并打开 **反序列化防火墙配置**.
-1. 添加 **sun.util.calendar** 打包到 **允许列表** 字段。 单击保存。
+1. 添加 **sun.util.calendar** 打包到 **允许列表** 字段。 单击“保存”。
 1. 对所有创作实例和发布实例重复步骤1-3。
 
 ### 可选安装后配置 {#optional-post-installation-configurations}
 
-#### 配置 Dispatcher {#configure-dispatcher}
+#### 配置Dispatch {#configure-dispatcher}
 
 Dispatcher是适用于AEM的缓存和负载平衡工具。 AEM Dispatcher还有助于保护AEM服务器免受攻击。 您可以将Dispatcher与企业级Web服务器结合使用来提高AEM实例的安全性。 如果您使用 [Dispatcher](https://helpx.adobe.com/cn/experience-manager/dispatcher/using/dispatcher-configuration.html)，然后为AEM Forms执行以下配置：
 

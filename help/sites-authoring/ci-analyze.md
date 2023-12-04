@@ -11,9 +11,9 @@ topic-tags: site-features
 discoiquuid: 57cd61d5-78f2-4f8c-99ee-75e100c052ef
 docset: aem65
 exl-id: 14484a90-4e44-4c85-9411-b78ed11dc70d
-source-git-commit: 75c6bb87bb06c5ac9378ccebf193b5416c080bb1
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '666'
+source-wordcount: '661'
 ht-degree: 0%
 
 ---
@@ -24,10 +24,10 @@ ht-degree: 0%
 
 ## 为页面打开Analytics和Recommendations {#opening-analytics-and-recommendations-for-a-page}
 
-请按下列步骤查看页面的Analytics和Recommendations：
+使用以下过程可查看页面的Analytics和Recommendations：
 
 1. 导航到要分析的页面。
-1. 在工具栏中，单击或点按 **Analytics和Recommendations**.
+1. 在工具栏中，单击 **Analytics和Recommendations**.
 
    >[!NOTE]
    >
@@ -39,20 +39,20 @@ ht-degree: 0%
 
 更改分析报表的以下与时间相关的方面：
 
-* 要报告的时间段。
+* 要报告的时段。
 * 数据的粒度。
 
-用于更改报表中与时间相关的方面的工具显示在“内容分析”页面的顶部。 ![chlimage_1-126](assets/chlimage_1-126.png)
+用于更改报表中与时间相关的方面的工具显示在内容分析页面的顶部。 ![chlimage_1-126](assets/chlimage_1-126.png)
 
 #### 更改报告周期 {#changing-the-reporting-period-1}
 
-更改“内容分析”页面的报告期，以将您对页面活动的分析集中到特定时段。 在更改报告时段时，报表会自动刷新。 时间框架上的阴影区域表示报告时段。 时间框架上的日期从左到右增加。
+更改内容分析页面的报告时段，将您对页面活动的分析集中到特定时段。 在更改报告时段时，报表会自动刷新。 时间框架上的阴影区域表示报告时段。 时间框架上的日期从左到右增加。
 
 ![chlimage_1-127](assets/chlimage_1-127.png)
 
 要更改内容分析页面的报告时段，请执行以下操作：
 
-1. 如果时间范围未出现在页面顶部，请单击或点按切换时间范围图标。
+1. 如果时间范围未出现在页面顶部，请单击切换时间范围图标。
 
    ![切换时间范围](do-not-localize/chlimage_1-22.png)
 
@@ -64,17 +64,17 @@ ht-degree: 0%
 
 #### 更改报告时段的粒度 {#changing-the-granularity-of-the-reporting-period}
 
-更改每个数据点在报表中跨越的时间。 例如，如果选择“周”粒度，“查看次数”报表上的每个数据点表示一周的查看次数。
+更改每个数据点在报表中跨越的时间。 例如，当选择“周”粒度时，“视图”报表上的每个数据点表示一周的视图数。
 
 ![screen_shot_2017-11-29at141001](assets/screen_shot_2017-11-29at141001.png)
 
-粒度会影响根据时间绘制数据的报表，例如“查看次数”和“页面平均参与分钟数”报表。 粒度还影响时间范围的大小。
+粒度会影响按时间绘制数据的报表，例如“查看次数”和“页面平均参与分钟数”报表。 粒度还影响时间范围的范围。
 
-1. 如果未显示粒度控件，请单击或点按切换粒度图标。
+1. 如果未显示粒度控件，请单击切换粒度图标。
 
    ![chlimage_1-128](assets/chlimage_1-128.png)
 
-1. 单击或点按所需的粒度。 选择后，报表将自动更新以反映粒度。
+1. 单击所需的粒度。 选择后，报表将自动更新以反映粒度。
 
 ### 为SEO Recommendations分配任务 {#assigning-tasks-for-seo-recommendations}
 
@@ -88,9 +88,9 @@ SEO推荐的状态表示任务已创建但尚未完成。
 
 创建任务后，该任务将显示在用户的“任务”列表中。 有关任务的信息，请参阅 [使用任务](/help/sites-authoring/task-content.md).
 
-使用以下过程可为SEO推荐创建任务。
+使用以下过程可为SEO建议创建任务。
 
-1. 单击或点按SEO推荐的信息图标。
+1. 单击SEO推荐的信息图标。
 
    ![“信息”图标](do-not-localize/chlimage_1-23.png)
 
@@ -98,7 +98,7 @@ SEO推荐的状态表示任务已创建但尚未完成。
 
    ![chlimage_1-131](assets/chlimage_1-131.png)
 
-1. 填写显示的表单字段，然后点按创建：
+1. 填写显示的表单字段，然后选择“创建”：
 
    * 项目：选择要创建任务的项目。
    * 名称：标识任务的名称。 默认名称是SEO推荐的标题。
@@ -109,4 +109,4 @@ SEO推荐的状态表示任务已创建但尚未完成。
 
    **注意：** 创建的任务还包括应用SEO推荐的页面的路径。
 
-1. 单击或点按完成以关闭“任务已创建”消息。
+1. 单击完成以关闭“创建的任务”消息。

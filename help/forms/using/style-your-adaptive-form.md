@@ -4,10 +4,10 @@ description: 了解如何创建自定义主题、设置单个组件的样式以�
 topic-tags: introduction
 feature: Adaptive Forms
 exl-id: 7742c3ca-1755-44c5-b70f-61309f09d1b8
-source-git-commit: 99808cb38c5d376ccb7fb550c5212138890cec11
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '2054'
-ht-degree: 10%
+source-wordcount: '1982'
+ht-degree: 8%
 
 ---
 
@@ -53,7 +53,7 @@ ht-degree: 10%
    [http://localhost:4502/editor.html/content/forms/af/shipping-address-add-update-form.html](http://localhost:4502/editor.html/content/forms/af/shipping-address-add-update-form.html)
 
 1. 打开属性 **[!UICONTROL 自适应表单容器]**. 在属性浏览器中，导航到 **[!UICONTROL 基本]** > **[!UICONTROL 自适应表单主题]**. 此 **[!UICONTROL 自适应表单主题]** 字段列出了所有现成的主题和自定义主题。 默认情况下，将应用画布主题。
-1. 从中选择主题 **[!UICONTROL 自适应表单主题]** 字段。 例如， **调查主题**. 点按 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) 以便应用所选主题。
+1. 从中选择主题 **[!UICONTROL 自适应表单主题]** 字段。 例如， **调查主题**. 选择 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) 以便应用所选主题。
 
    ![带有默认主题的自适应表单](assets/default-adaptive-form.png)
 
@@ -75,17 +75,17 @@ ht-degree: 10%
 
       [http://localhost:4502/editor.html/content/forms/af/shipping-address-add-update-form.html](http://localhost:4502/editor.html/content/forms/af/shipping-address-add-update-form.html)
 
-   1. 点按中的徽标图像 [!UICONTROL 标题] 组件和点按 ![cmppr](assets/cmppr.png) **[!UICONTROL 属性]**. 在 [!UICONTROL 图像] 属性，点按X可删除现有的徽标图像。
-   1. 点按 **[!UICONTROL 上传]**，选择logo.png ，然后点按 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) 以保存更改。 图像下载到 [开始之前](/help/forms/using/style-your-adaptive-form.md#before-you-start) 部分。
-   1. 点按标题文本， `We.Retail`，然后点击 ![aem_6_3_edit](assets/aem_6_3_edit.png) **[!UICONTROL 编辑]**. 将标题文本更改为 `we retail`. 仅将粗体格式应用于 `we`在 `we retail`.
+   1. 选择中的徽标图像 [!UICONTROL 标题] 组件和选择 ![cmppr](assets/cmppr.png) **[!UICONTROL 属性]**. 在 [!UICONTROL 图像] 属性，选择X以删除现有的徽标图像。
+   1. 选择 **[!UICONTROL 上传]**，选择logo.png ，然后选择 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) 以保存更改。 图像下载到 [开始之前](/help/forms/using/style-your-adaptive-form.md#before-you-start) 部分。
+   1. 选择标题文本， `We.Retail`，并选择 ![aem_6_3_edit](assets/aem_6_3_edit.png) **[!UICONTROL 编辑]**. 将标题文本更改为 `we retail`. 仅将粗体格式应用于 `we`在 `we retail`.
 
       ![we-retail-logo-text](assets/we-retail-logo-text.png)
 
 1. 移除标题并添加占位符文本：
 
-   1. 点按客户ID字段，然后点按 ![cmppr](assets/cmppr.png) 属性。
+   1. 选择Customer ID字段并选择 ![cmppr](assets/cmppr.png) 属性。
    1. 复制的内容 **[!UICONTROL 标题]** 字段至 **[!UICONTROL 占位符文本]** 字段。
-   1. 删除的内容 **[!UICONTROL 标题]** 字段并点按 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
+   1. 删除的内容 **[!UICONTROL 标题]** 字段并选择 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
    1. 对表单中的所有文本框、数字框和电子邮件字段重复前三个步骤。
 
       ![updated-adaptive-form](assets/updated-adaptive-form.png)
@@ -101,16 +101,16 @@ ht-degree: 10%
 ### 创建主题 {#create-a-theme}
 
 1. 登录到AEM创作实例并导航到 **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]** > **[!UICONTROL 主题]**. 默认URL为 [http://localhost:4502/aem/forms.html/content/dam/formsanddocuments-themes](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments-themes).
-1. 点按 **[!UICONTROL 创建]** 并选择 **[!UICONTROL 主题]**. 此 [!UICONTROL 创建主题] 此时将显示包含创建主题所需字段的页面。 此 **[!UICONTROL 标题]** 和 **[!UICONTROL 名称]** 字段为必填字段：
+1. 选择 **[!UICONTROL 创建]** 并选择 **[!UICONTROL 主题]**. 此 [!UICONTROL 创建主题] 此时将显示包含创建主题所需字段的页面。 此 **[!UICONTROL 标题]** 和 **[!UICONTROL 名称]** 字段为必填字段：
 
    * **标题：** 指定主题的标题。 例如， **全局主题。** 标题可帮助您从主题列表中识别主题。
-   * **名称：** 指定主题的名称。 例如， **全局主题。**&#x200B;在存储库中创建具有指定名称的节点。当您开始键入标题时，将自动生成“名称”字段的值。 您可以更改建议的值。名称字段只能包含字母数字字符、连字符和下划线。所有无效的输入都将替换为连字符。
+   * **名称：** 指定主题的名称。 例如， **全局主题。** 在存储库中创建具有指定名称的节点。 当您开始键入标题时，将自动生成“名称”字段的值。 您可以更改建议的值。名称字段只能包含字母数字字符、连字符和下划线。所有无效的输入都将替换为连字符。
 
-1. 点按&#x200B;**[!UICONTROL 创建]**。将创建一个主题，并出现一个对话框以打开表单进行编辑。 点按 **[!UICONTROL 打开]** 在新选项卡中打开新创建的主题。 主题将在主题编辑器中打开。 对于样式，主题编辑器使用AEM附带的现成自适应表单 [!DNL Forms].
+1. 选择&#x200B;**[!UICONTROL 创建]**。将创建一个主题，并出现一个对话框以打开表单进行编辑。 选择 **[!UICONTROL 打开]** 在新选项卡中打开新创建的主题。 主题将在主题编辑器中打开。 对于样式，主题编辑器使用AEM附带的现成自适应表单 [!DNL Forms].
 
    有关使用主题编辑器UI的信息，请参阅 [关于主题编辑器](/help/forms/using/themes.md#aboutthethemeeditor).
 
-1. 点按 **[!UICONTROL 主题选项]** ![theme-options](assets/theme-options.png) > **[!UICONTROL 配置]**. 在 **[!UICONTROL 预览表单]** 字段中，选择 **shipping-address-add-update-form** 自适应表单，点按 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)，点按 **[!UICONTROL 保存]**. 现在，主题编辑器配置为使用您自己的自适应表单，而不是默认的自适应表单。 点按 **[!UICONTROL 取消]** 以返回到主题编辑器。
+1. 选择 **[!UICONTROL 主题选项]** ![theme-options](assets/theme-options.png) > **[!UICONTROL 配置]**. 在 **[!UICONTROL 预览表单]** 字段中，选择 **shipping-address-add-update-form** 自适应表单，选择 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)，选择 **[!UICONTROL 保存]**. 现在，主题编辑器配置为使用您自己的自适应表单，而不是默认的自适应表单。 选择 **[!UICONTROL 取消]** 以返回到主题编辑器。
 
    ![custom-theme](assets/custom-theme.png)
 
@@ -124,9 +124,9 @@ ht-degree: 10%
 
 页眉和页脚为自适应表单提供一致且独特的外观。 通常，页眉包含组织的徽标和名称，页脚包含版权信息，并且这些信息和信息在组织的多个表单中保持相同。 要设置shipping-address-add-update-form自适应表单的页眉和页脚的样式，请执行以下操作：
 
-1. 导航 **[!UICONTROL 页眉]** > **[!UICONTROL 文本]** 选项。 “选择器”面板位于主题编辑器的左侧。 如果面板不可见，请点按 ![切换侧面板](assets/toggle-side-panel.png) 切换侧面板。
+1. 导航 **[!UICONTROL 页眉]** > **[!UICONTROL 文本]** 选项。 “选择器”面板位于主题编辑器的左侧。 如果该面板不可见，请选择 ![切换侧面板](assets/toggle-side-panel.png) 切换侧面板。
 
-1. 在中设置以下属性 **[!UICONTROL 文本]** 可折叠项和点按 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
+1. 在中设置以下属性 **[!UICONTROL 文本]** 可折叠项和选择 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
 
    | 属性 | 价值 |
    |---|---|
@@ -134,10 +134,10 @@ ht-degree: 10%
    | 字体颜色 | FFFFFF |
    | 字体大小 | 54像素 |
 
-1. 点按 [!UICONTROL 标题] 小工具和点按 **[!UICONTROL 页眉]**. 用于设置标题小组件样式的选项显示在左侧。 展开 **[!UICONTROL Dimension和位置]** 可折叠项，设置 **[!UICONTROL 高度]** 到 `120px`，然后点击 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
+1. 选择 [!UICONTROL 标题] 小工具和选择 **[!UICONTROL 页眉]**. 用于设置标题小组件样式的选项显示在左侧。 展开 **[!UICONTROL Dimension和位置]** 可折叠项，设置 **[!UICONTROL 高度]** 到 `120px`，并选择 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
 1. 展开 **[!UICONTROL 背景]** 标题小部件的折叠面板，设置 **[!UICONTROL 背景颜色]** 到 `F6921E.`
 
-   将鼠标悬停在 **[!UICONTROL 图像和渐变]** > **[!UICONTROL +添加]**，点按 **[!UICONTROL 图像]**. 设置以下属性并点击 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
+   将鼠标悬停在 **[!UICONTROL 图像和渐变]** > **[!UICONTROL +添加]**，选择 **[!UICONTROL 图像]**. 设置以下属性并选择 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
 
    | 属性 | 价值 |
    |---|---|
@@ -145,7 +145,7 @@ ht-degree: 10%
    | 位置 | 右下 |
    | 并排显示 | 不重复 |
 
-1. 在主题编辑器中，点按标题中的徽标，然后点按 **[!UICONTROL 页眉徽标]**. 展开Dimension和位置折叠面板，设置以下属性并点按 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
+1. 在主题编辑器中，选择标题中的徽标，然后选择 **[!UICONTROL 页眉徽标]**. 展开Dimension和位置折叠面板，设置以下属性并选择 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
 
    <table> 
     <tbody> 
@@ -160,27 +160,27 @@ ht-degree: 10%
         <li>上：1.5雷姆</li> 
         <li>底部：-35像素</li> 
         <li>左：1rem<strong><br /> </strong></li> 
-       </ul> <p><strong>提示：</strong> 点按 <img src="assets/link.png"> 链接图标以为每个字段提供不同的值。<br /> </p> </td> 
+       </ul> <p><strong>提示：</strong> 选择 <img src="assets/link.png"> 链接图标以为每个字段提供不同的值。<br /> </p> </td> 
      </tr> 
      <tr> 
       <td>高度</td> 
-      <td>4.75rem</td> 
+      <td>4.75雷姆</td> 
      </tr> 
     </tbody> 
    </table>
 
-1. 点按页脚小组件并点按 **[!UICONTROL 页脚]**. 展开 **[!UICONTROL 背景]** 可折叠项，设置 **[!UICONTROL 背景颜色]** 到 `F6921E`，然后点击 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
+1. 选择页脚小组件并选择 **[!UICONTROL 页脚]**. 展开 **[!UICONTROL 背景]** 可折叠项，设置 **[!UICONTROL 背景颜色]** 到 `F6921E`，并选择 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
 
 ### 设置数据捕获组件的样式，并将背景应用于自适应表单 {#style-the-data-capture-component-and-apply-a-background-to-the-adaptive-form}
 
 您可以在自适应表单中使用多个组件来捕获数据。 例如，文本框和数字框。 您可以为所有数据捕获组件提供相同的样式，或者为每个组件提供单独的样式。 在本教程中，相同的样式将应用于数字框（客户ID、邮政编码）和文本框（客户ID、姓名、送货地址、州、电子邮件）。 设置数据捕获组件的样式：
 
-1. 点按 **[!UICONTROL 客户ID]** 字段，然后点击 **[!UICONTROL 字段小组件]** 选项。 设置以下属性并点击 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
+1. 选择 **[!UICONTROL 客户ID]** 字段并选择 **[!UICONTROL 字段小组件]** 选项。 设置以下属性并选择 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
 
    <table> 
     <tbody> 
      <tr> 
-      <td><b>折叠</b></td> 
+      <td><b>可折叠项</b></td> 
       <td><b>属性</b></td> 
       <td><b>价值</b></td> 
      </tr> 
@@ -231,7 +231,7 @@ ht-degree: 10%
     </tbody> 
     </table>
 
-1. 点按上方空白区域 **[!UICONTROL 客户ID]** 字段并点按 **[!UICONTROL 响应面板容器]**. 设置 **[!UICONTROL 背景]** > **[!UICONTROL 背景颜色]** 到F1F2F2。 点按 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
+1. 选择上方空白区域 **[!UICONTROL 客户ID]** 字段并选择 **[!UICONTROL 响应面板容器]**. 设置 **[!UICONTROL 背景]** > **[!UICONTROL 背景颜色]** 到F1F2F2。 选择 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
 
    ![响应面板容器](do-not-localize/responsive-panel-container.png)
 
@@ -239,12 +239,12 @@ ht-degree: 10%
 
 您可以使用自定义主题将相同的样式应用于自适应表单的所有按钮，并且 [内联样式](/help/forms/using/inline-style-adaptive-forms.md) 将样式应用到特定按钮。 设置按钮样式：
 
-1. 点按 **[!UICONTROL 提交]** 按钮并点按 **[!UICONTROL 按钮]** 选项。 设置以下属性并点击 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
+1. 选择 **[!UICONTROL 提交]** 按钮并选择 **[!UICONTROL 按钮]** 选项。 设置以下属性并选择 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
 
    <table> 
     <tbody> 
      <tr> 
-      <td><b>折叠</b></td> 
+      <td><b>可折叠项</b></td> 
       <td><b>属性</b></td> 
       <td><b>价值</b></td> 
      </tr> 
@@ -300,19 +300,19 @@ ht-degree: 10%
 
    ![style-option](assets/style-option.png)
 
-1. 点按 **[!UICONTROL 附加]** 按钮并点按 ![aem_6_3_edit](assets/aem_6_3_edit.png)图标。 在中设置以下属性 **[!UICONTROL Dimension和位置]** 可折叠项：
+1. 选择 **[!UICONTROL 附加]** 按钮并选择 ![aem_6_3_edit](assets/aem_6_3_edit.png)图标。 在中设置以下属性 **[!UICONTROL Dimension和位置]** 可折叠项：
 
    | 属性 | 价值 |
    |---|---|
    | 浮点数 | 左 |
    | 宽度 | 10% |
 
-1. 点按 **[!UICONTROL 政府批准的地址证明]** 选项，然后点按 ![aem_6_3_edit](assets/aem_6_3_edit.png)图标。 设置以下属性：
+1. 选择 **[!UICONTROL 政府批准的地址证明]** 选项，然后选择 ![aem_6_3_edit](assets/aem_6_3_edit.png)图标。 设置以下属性：
 
    <table> 
     <tbody> 
      <tr> 
-      <td><b>折叠</b></td> 
+      <td><b>可折叠项</b></td> 
       <td><b>属性</b></td> 
       <td><b>价值</b></td> 
      </tr> 
@@ -340,7 +340,7 @@ ht-degree: 10%
       <td>40像素</td> 
      </tr> 
      <tr> 
-      <td>尺寸及位置<br /> </td> 
+      <td>Dimension和位置<br /> </td> 
       <td>边距</td> 
       <td><br /> 
        <ul> 
@@ -397,12 +397,12 @@ ht-degree: 10%
     </tbody> 
    </table>
 
-1. 点按 **[!UICONTROL 提交]** 按钮并点按 ![aem_6_3_edit](assets/aem_6_3_edit.png) 图标。 设置以下属性：
+1. 选择 **[!UICONTROL 提交]** 按钮并选择 ![aem_6_3_edit](assets/aem_6_3_edit.png) 图标。 设置以下属性：
 
    <table> 
     <tbody> 
      <tr> 
-      <td><b>折叠</b></td> 
+      <td><b>可折叠项</b></td> 
       <td><b>属性</b></td> 
       <td><b>价值</b></td> 
      </tr> 

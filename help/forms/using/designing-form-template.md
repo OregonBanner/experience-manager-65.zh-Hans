@@ -7,16 +7,16 @@ topic-tags: hTML5_forms
 docset: aem65
 feature: Mobile Forms
 exl-id: 7c8d501f-c953-495e-8bac-1f66fd99c783
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '485'
-ht-degree: 2%
+source-wordcount: '480'
+ht-degree: 0%
 
 ---
 
 # 为HTML5表单设计表单模板{#designing-form-templates-for-html-forms}
 
-AEM中的HTML5表单组件可以将XFA表单模板渲染为HTML5格式。 窗体设计人员可以使用来设计窗体模板 [Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63_cn) 并使用HTML5呈现版本功能。 这些表单模板及其资源可以驻留在AEM存储库、文件系统中，或通过http公开。 但是，如果您计划使用Forms Manager管理表单，则模板和资源应驻留在AEM存储库中。
+AEM中的HTML5表单组件可以将XFA表单模板渲染为HTML5格式。 窗体设计人员可以使用来设计窗体模板 [Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63) 并使用HTML5呈现版本功能。 这些表单模板及其资源可以驻留在AEM存储库、文件系统中，或通过http公开。 但是，如果您计划使用Forms Manager管理表单，则模板和资源应驻留在AEM存储库中。
 
 虽然HTML5表单在很大程度上与PDF forms的行为相匹配，但两种格式都存在一些不适用于其他格式的特征。 例如，Adobe Reader中对PDF表单应用条形码的方式因移动设备表单而异，表单的数字签名方式也因格式而异。 有关此类变体的更多信息，请参阅 [HTML5表单与PDF forms之间的功能区别](../../forms/using/feature-differentiation-html5-forms-pdf-forms.md).
 
@@ -40,4 +40,4 @@ HTML5表单的主要目标是触摸设备。 因此，在AEM Forms Designer中�
 
 #### 富文本格式 {#rich-text-format}
 
-您可以将文本字段转换为富文本字段。 它向文本字段添加一个格式设置选项列表。 要进行转换，请打开Forms Designer，点击中的文本字段 **[!UICONTROL 设计视图]**. 在 **[!UICONTROL 字段]** 选项卡，选择 **[!UICONTROL 富文本]** 从 **[!UICONTROL 字段格式]** 下拉列表。 现在，当XFA表单呈现为HTML5表单时，该字段呈现为富文本字段。 点按 ![最大化](assets/maximize_icon.svg) 查看其他格式选项。
+您可以将文本字段转换为富文本字段。 它向文本字段添加一个格式设置选项列表。 要进行转换，请打开Forms Designer，选择中的文本字段 **[!UICONTROL 设计视图]**. 在 **[!UICONTROL 字段]** 选项卡，选择 **[!UICONTROL 富文本]** 从 **[!UICONTROL 字段格式]** 下拉列表。 现在，当XFA表单呈现为HTML5表单时，该字段呈现为富文本字段。 选择 ![最大化](assets/maximize_icon.svg) 查看其他格式选项。

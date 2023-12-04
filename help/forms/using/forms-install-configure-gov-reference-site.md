@@ -4,10 +4,10 @@ description: 安装、配置和自定义AEM Forms演示包。
 contentOwner: anujkapo
 docset: aem65
 exl-id: 1fee474e-7da5-4ab2-881a-34b8e055aa29
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '4603'
-ht-degree: 3%
+source-wordcount: '4501'
+ht-degree: 1%
 
 ---
 
@@ -79,12 +79,12 @@ ht-degree: 3%
 ### 来自Software Distribution {#from-software-distribution}
 
 1. 打开 [Software Distribution](https://experience.adobe.com/downloads)。您需要 Adobe ID 才能登录 Software Distribution。
-1. 点按标题菜单中的 **[!UICONTROL Adobe Experience Manager]**。
+1. 选择 **[!UICONTROL Adobe Experience Manager]** 在标题菜单中可用。
 1. 在 **[!UICONTROL 过滤器]** 部分：
    1. 选择 **[!UICONTROL Forms]** 从 **[!UICONTROL 解决方案]** 下拉列表。
    2. 选择包的版本和类型。 您也可以使用 **[!UICONTROL 搜索下载]** 用于筛选结果的选项。
-1. 点按 **we-gov-forms.pkg.all-&lt;version>.zip** 包名称，选择 **[!UICONTROL 接受EULA条款]**，然后点击 **[!UICONTROL 下载]**.
-1. 打开[包管理器](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html)，并单击&#x200B;**[!UICONTROL 上传包]**&#x200B;以上传包。
+1. 选择 **we-gov-forms.pkg.all-&lt;version>.zip** 包名称，选择 **[!UICONTROL 接受EULA条款]**，并选择 **[!UICONTROL 下载]**.
+1. 打开 [包管理器](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html)  并单击 **[!UICONTROL 上传包]** 以上传包。
 1. 选择包并单击 **[!UICONTROL 安装]**.
 
    ![我们管理表单包](assets/wegov_forms_package.jpg)
@@ -168,11 +168,11 @@ ht-degree: 3%
 
 此部分包含有关在AEM实例上配置SSL以便能够配置Adobe Sign云配置的详细信息。
 
-**引用:**
+**引用：**
 
 1. [默认SSL](/help/sites-administering/ssl-by-default.md)
 
-**注释:**
+**注释：**
 
 1. 导航到https://&lt;aemserver>：&lt;port>/aem/inbox ，您可以在此处完成上述参考文档链接中说明的过程。
 1. 此 `we-gov-forms.pkg.all-[version].zip` 该包中包含示例SSL密钥和证书，可通过解压 `we-gov-forms.pkg.all-[version].zip/ssl` 文件夹是包的一部分。
@@ -184,7 +184,7 @@ ht-degree: 3%
    1. “password”的密码值
 1. 私钥是 *localhostprivate.der*.
 1. 证书是 *localhost.crt*.
-1. 单击“下一个”。
+1. 单击“下一步”。
 1. HTTPS主机名应设置为 *localhost*.
 1. 端口应设置为系统已公开的端口。
 
@@ -192,7 +192,7 @@ ht-degree: 3%
 
 此部分包含有关Adobe Sign云配置的详细信息和说明。
 
-**引用:**
+**引用：**
 
 1. [将Adobe Sign与AEM Forms集成](adobe-sign-integration-adaptive-forms.md)
 
@@ -219,7 +219,7 @@ ht-degree: 3%
 
 此部分包含有关MS® Dynamics云配置的详细信息和说明。
 
-**引用:**
+**引用：**
 
 1. [Microsoft](/help/forms/using/ms-dynamics-odata-configuration.md)
 1. [配置Microsoft® Dynamics for AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/adaptive-forms/using-ms-dynamics-with-aem-forms.html)
@@ -330,7 +330,7 @@ ht-degree: 3%
 
    ![Dynamics CRM FDM的属性](assets/aftia-update-data-source.jpg)
 
-1. 选择&#x200B;**保存并关闭**。
+1. 单击 **保存并关闭**.
 
 1. [测试服务](work-with-form-data-model.md#test-data-model-objects-and-services) 以确保它们成功连接到配置的数据源
 
@@ -340,7 +340,7 @@ ht-degree: 3%
 
 此部分包含有关Adobe Analytics Cloud配置的详细信息和说明。
 
-**引用:**
+**引用：**
 
 * [与 Adobe Analytics 集成](../../sites-administering/adobeanalytics.md)
 
@@ -377,9 +377,9 @@ ht-degree: 3%
 1. 在主功能板中选择Adobe Analytics图标。
    ![快速访问](assets/aftia-quick-access.jpg)
 1. 导航到管理员选项卡，然后选择用户管理（旧版）项目
-   ![报表](assets/aftia-reports.jpg)
+   ![报告](assets/aftia-reports.jpg)
 1. 选择 **用户** 选项卡。
-   ![用户管理](assets/aftia-user-management.jpg)
+   ![User Management](assets/aftia-user-management.jpg)
 1. 从用户列表中选择所需的用户。
 1. 滚动到页面底部，用户身份验证信息将显示在页面底部。
    ![管理访问权限](assets/aftia-admin-user-access.jpg)
@@ -480,7 +480,7 @@ AEM Forms Analytics数据在离线时或没有Adobe Analytics Cloud配置的情�
 
 1. 导航到https://&lt;aemserver>：&lt;port> >单击左上方的Adobe Experience Manager >工具>安全> Adobe IMS配置。
 
-1. 单击创建。
+1. 单击“创建”。
 
 1. 执行下图中的操作。
 
@@ -552,7 +552,7 @@ IMS配置完成后，您可以继续查看AEM中的云配置。 如果配置不�
 
 1. 选择要将配置放置到的配置文件夹。
 
-1. 单击创建。
+1. 单击“创建”。
 
 1. 在下面的屏幕快照中输入信息。
 
@@ -566,7 +566,7 @@ IMS配置完成后，您可以继续查看AEM中的云配置。 如果配置不�
 
 1. 主题URL： */content/dam/formsanddocuments-themes/adobe-gov-forms-themes/we-gov-theme*
 
-1. 单击“下一个”。
+1. 单击“下一步”。
 
 1. 对于此配置，我们将两个复选框值留空。
 
@@ -582,7 +582,7 @@ IMS配置完成后，我们可以继续在AEM中创建云配置。
 
 1. 选择要将配置放置到的配置文件夹。
 
-1. 单击创建。
+1. 单击“创建”。
 
 1. 在下面的屏幕快照中输入信息。
 
@@ -596,7 +596,7 @@ IMS配置完成后，我们可以继续在AEM中创建云配置。
 
 1. 主题URL： */content/dam/formsanddocuments-themes/adobe-finance-forms-themes/we-finance-theme*
 
-1. 单击“下一个”。
+1. 单击“下一步”。
 
 1. 对于此配置，我们将两个复选框值留空。
 

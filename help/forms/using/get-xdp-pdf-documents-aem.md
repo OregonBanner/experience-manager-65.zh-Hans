@@ -11,7 +11,7 @@ discoiquuid: 28b9f1d6-6a52-458f-a8ed-a206502eda0d
 docset: aem65
 role: Admin
 exl-id: 9ecdc50a-31e3-46ae-948a-d1f6e6085734
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
 source-wordcount: '671'
 ht-degree: 0%
@@ -38,7 +38,7 @@ ht-degree: 0%
 
 1. 通过访问登录到AEM Forms用户界面 `https://'[server]:[port]'/aem/forms.html`.
 1. 导航到要在其中上传表单的文件夹或包含表单的文件夹。
-1. 在操作工具栏中，点按 **“创建”>“文件上传”**.
+1. 在操作工具栏中，选择 **“创建”>“文件上传”**.
 
    ![创建下的本地存储中的文件选项](assets/step.png)
 

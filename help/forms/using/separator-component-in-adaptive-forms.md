@@ -6,10 +6,10 @@ topic-tags: author
 docset: aem65
 feature: Adaptive Forms
 exl-id: 11cbf865-c8e2-4833-b0b8-a3cb5e42f5cd
-source-git-commit: 99808cb38c5d376ccb7fb550c5212138890cec11
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '367'
-ht-degree: 12%
+source-wordcount: '361'
+ht-degree: 10%
 
 ---
 
@@ -30,7 +30,7 @@ ht-degree: 12%
 
 要指定分隔符组件的属性，请执行以下操作：
 
-1. 选择分隔符组件并点按 ![cmppr](assets/cmppr.png). 这些属性将在侧栏中打开。
+1. 选择分隔符组件并选择 ![cmppr](assets/cmppr.png). 这些属性将在侧栏中打开。
 1. 单击“内联CSS属性”部分中的选项卡，以便指定CSS属性。 例如：a。在字段选项卡中，单击 **添加项目**. 将添加包含两个字段的行。
 1. 在左侧的第一个字段中，指定要应用的CSS3属性。 例如， **边框**. 您还可以通过单击向下箭头按钮选择资产。 下拉列表并非详尽无遗，您可以在此字段中指定任何受支持的CSS3属性名称。
 1. 在相邻的字段中，为指定的CSS3属性指定有效值。 例如， **3-px实心黑**.

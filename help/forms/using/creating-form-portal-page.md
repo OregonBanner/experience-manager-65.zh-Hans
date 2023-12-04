@@ -11,9 +11,9 @@ discoiquuid: 8fff78cb-9ef9-426e-8b30-d70b4f26887f
 docset: aem65
 feature: Forms Portal
 exl-id: 22d7c24e-7a77-4324-afdf-74c1fbf15773
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '1661'
+source-wordcount: '1666'
 ht-degree: 2%
 
 ---
@@ -58,18 +58,18 @@ Forms portal组件类别
 
 “列表”窗格是列出表单的区域。 搜索和列表程序组件提供了各种配置选项，可用于控制“列表”窗格中表单的显示。
 
-要配置列表窗格，请点按搜索和列表程序组件，然后点按 ![settings_icon](assets/settings_icon.png). 此 **[!UICONTROL 编辑组件]** 对话框打开。
+要配置“列表”窗格，请选择“搜索和列表程序”组件，然后选择 ![settings_icon](assets/settings_icon.png). 此 **[!UICONTROL 编辑组件]** 对话框打开。
 
 ![编辑模式下的列表窗格](assets/edit-list.png)
 
 编辑模式下的列表窗格
 
-此 **编辑** 该对话框包含几个选项卡，提供了下表所述的配置选项。 点按 **确定** 以保存配置（完成时）。
+此 **编辑** 该对话框包含几个选项卡，提供了下表所述的配置选项。 选择 **确定** 以保存配置（完成时）。
 
 <table>
  <tbody>
   <tr>
-   <th>制表符</th>
+   <th>选项卡</th>
    <th>配置</th>
    <th>描述</th>
   </tr>
@@ -177,7 +177,7 @@ Forms portal组件类别
 
 配置日期谓词组件：
 
-1. 点按组件，然后点按 ![settings_icon](assets/settings_icon.png). 将打开“编辑”对话框。
+1. 选择组件，然后选择 ![settings_icon](assets/settings_icon.png). 将打开“编辑”对话框。
 1. 指定以下内容：
 
    * **类型：** 唯一可用的选项是 **上次修改日期**
@@ -188,7 +188,7 @@ Forms portal组件类别
    * **结束日期标签：** 结束日期字段的标签或标题
    * **隐藏：** 要强制使用默认日期过滤器来列出表单，请执行以下操作
 
-1. 点按 **确定**
+1. 选择 **确定**
 
 #### 全文谓词 {#full-text-predicate}
 
@@ -196,9 +196,9 @@ Forms portal组件类别
 
 配置全文谓词组件：
 
-1. 点按组件，然后点按 ![settings_icon](assets/settings_icon.png). 将打开“编辑”对话框。
+1. 选择组件，然后选择 ![settings_icon](assets/settings_icon.png). 将打开“编辑”对话框。
 1. 在中指定标题 **主标题** 字段。
-1. 点按 **确定**
+1. 选择 **确定**
 
 #### 属性谓词 {#properties-predicate}
 
@@ -206,15 +206,15 @@ Forms portal组件类别
 
 配置属性谓词组件：
 
-1. 点按组件，然后点按 ![settings_icon](assets/settings_icon.png). 将打开“编辑”对话框。
+1. 选择组件，然后选择 ![settings_icon](assets/settings_icon.png). 将打开“编辑”对话框。
 1. 在“常规”选项卡中，指定搜索标签。 默认值为 **属性**
 
-1. 在选项选项卡中，点按 **添加项目。**
+1. 在选项选项卡中，选择 **添加项目。**
 1. 从下拉列表中选择一个属性，并在下拉列表下方的字段中为其指定搜索标签。
 1. 重复步骤4以添加更多属性。 您还可以指定默认筛选器值，以根据指定的条件列出表单并隐藏属性以供最终用户搜索。 选中属性的“隐藏”复选框，并指定默认筛选值。
 例如，如果要显示标题中包含“Travel”的表单，请选择“标题”属性旁边的“隐藏”。 此外，在默认筛选值文本框中指定Travel。
 
-1. 点按 **确定**
+1. 选择 **确定**
 
 #### 标记谓词 {#tags-predicate}
 
@@ -222,10 +222,10 @@ Forms portal组件类别
 
 配置标记谓词组件：
 
-1. 点按组件，然后点按 ![settings_icon](assets/settings_icon.png). 将打开“编辑”对话框。
-1. 点按“标记”字段旁边的向下箭头按钮。
+1. 选择组件，然后选择 ![settings_icon](assets/settings_icon.png). 将打开“编辑”对话框。
+1. 选择“标记”字段旁边的向下箭头按钮。
 1. 选择相应的标记
-1. 点按 **确定**
+1. 选择 **确定**
 
 选定的标记与用于选择的复选框一起出现在“搜索”窗格中。 用户现在可以根据标记缩小搜索范围。
 

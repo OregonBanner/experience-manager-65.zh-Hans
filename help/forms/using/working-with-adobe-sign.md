@@ -11,10 +11,10 @@ discoiquuid: f79828d8-2230-4477-8ffa-eeb6a0413acd
 docset: aem65
 feature: Adaptive Forms, Acrobat Sign
 exl-id: a8decba9-229d-40a2-992a-3cc8ebefdd6d
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '3936'
-ht-degree: 2%
+source-wordcount: '3875'
+ht-degree: 1%
 
 ---
 
@@ -80,7 +80,7 @@ ht-degree: 2%
 执行以下步骤可创建启用Sign的自适应表单：
 
 1. 导航到 **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]** > **[!UICONTROL Forms和文档]**.
-1. 点按 **[!UICONTROL 创建]** 并选择 **[!UICONTROL 自适应表单]**. 此时将显示模板列表。 选择模板并点按 **[!UICONTROL 下一个]**.
+1. 选择 **[!UICONTROL 创建]** 并选择 **[!UICONTROL 自适应表单]**. 此时将显示模板列表。 选择模板并选择 **[!UICONTROL 下一个]**.
 1. 在 **[!UICONTROL 基本]** 选项卡：
 
    1. 指定 **[!UICONTROL 名称]** 和 **[!UICONTROL 标题]** 用于自适应表单。
@@ -97,14 +97,14 @@ ht-degree: 2%
 
    * 选择 **[!UICONTROL 生成记录文档]** 选项。 如果使用启用了记录文档选项的自适应表单，则发送以供签名的文档显示自适应表单的所有字段。
 
-1. 点按&#x200B;**[!UICONTROL 创建。]** 将创建一个支持签名的自适应表单，该表单可用于添加 [!DNL Adobe Sign] 字段。
+1. 选择 **[!UICONTROL 创建。]** 将创建一个支持签名的自适应表单，该表单可用于添加 [!DNL Adobe Sign] 字段。
 
 #### 编辑以下对象的自适应表单： [!DNL Adobe Sign] {#editafsign}
 
 执行以下步骤以使用 [!DNL Adobe Sign] 在现有自适应表单中：
 
 1. 导航到 **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]** > **[!UICONTROL Forms和文档]**.
-1. 选择自适应表单并点按 **[!UICONTROL 属性]**.
+1. 选择自适应表单并选择 **[!UICONTROL 属性]**.
 1. 在 **[!UICONTROL 基本]** 选项卡，选择 [配置容器](../../forms/using/adobe-sign-integration-adaptive-forms.md#configure-adobe-sign-with-aem-forms) 配置时创建 [!DNL Adobe Sign] 使用AEM [!DNL Forms].
 1. 在 **[!UICONTROL 表单模型]** 选项卡，选择以下选项之一：
 
@@ -112,7 +112,7 @@ ht-degree: 2%
 
    * 选择 **[!UICONTROL 生成记录文档]** 选项。 如果使用启用了记录文档选项的自适应表单，则发送以供签名的文档显示自适应表单的所有字段。
 
-1. 点按 **[!UICONTROL 保存并关闭]**. 自适应表单已启用 [!DNL Adobe Sign].
+1. 选择 **[!UICONTROL 保存并关闭]**. 自适应表单已启用 [!DNL Adobe Sign].
 
 ### 将Adobe Sign字段添加到自适应表单 {#addadobesignfieldstoanadaptiveform}
 
@@ -133,15 +133,15 @@ ht-degree: 2%
    >
    >
 
-1. 选择 **[!UICONTROL Adobe Sign块]** 组件并点按 **编辑** ![aem_6_3_edit](assets/aem_6_3_edit.png) 图标。 它显示用于添加字段和设置字段外观格式的选项。
+1. 选择 **[!UICONTROL Adobe Sign块]** 组件并选择 **编辑** ![aem_6_3_edit](assets/aem_6_3_edit.png) 图标。 它显示用于添加字段和设置字段外观格式的选项。
 
    ![adobe-sign-block-select-fields](assets/adobe-sign-block-select-fields.png)
 
    **答：** 选择并添加 [!DNL Adobe Sign] 字段。 **B.** 展开 [!DNL Adobe Sign] 阻止到全屏视图
 
-1. 点按 **[!UICONTROL Adobe Sign] 字段** ![aem_6_3_adobesign](assets/aem_6_3_adobesign.png) 图标。 它会显示要选择和添加的选项 [!DNL Adobe Sign] 字段。
+1. 选择 **[!UICONTROL Adobe Sign] 字段** ![aem_6_3_adobesign](assets/aem_6_3_adobesign.png) 图标。 它会显示要选择和添加的选项 [!DNL Adobe Sign] 字段。
 
-   展开 **[!UICONTROL 类型]** 用于选择 [!DNL Adobe Sign] 字段，然后点按完成 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) 图标以将所选字段添加至 [!DNL Adobe Sign] 封锁。 此 **[!UICONTROL 类型]** 下拉字段包括签名、签名者信息和数据字段类型。 [!DNL Adobe Sign] 与AEM集成 [!DNL Forms] 中列出的支持字段 [!UICONTROL 类型] 下拉框。 有关 [!DNL Adobe Sign] 字段，请参阅 [Adobe Sign文档](https://helpx.adobe.com/sign/help/field-types.html).
+   展开 **[!UICONTROL 类型]** 用于选择 [!DNL Adobe Sign] 字段并选择完成 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) 图标以将所选字段添加至 [!DNL Adobe Sign] 封锁。 此 **[!UICONTROL 类型]** 下拉字段包括签名、签名者信息和数据字段类型。 [!DNL Adobe Sign] 与AEM集成 [!DNL Forms] 中列出的支持字段 [!UICONTROL 类型] 下拉框。 有关 [!DNL Adobe Sign] 字段，请参阅 [Adobe Sign文档](https://helpx.adobe.com/sign/help/field-types.html).
 
    ![adobe-sign-block-fields-options](assets/adobe-sign-block-fields-options.png)
 
@@ -156,7 +156,7 @@ ht-degree: 2%
 
 开箱即用， [!DNL Adobe Sign] 未为自适应表单启用。 执行以下步骤以启用它：
 
-1. 在内容浏览器中，点按 **[!UICONTROL 表单容器]**，然后点按 **[!UICONTROL 配置]** ![配置](assets/configure.png) 图标。 它可打开属性浏览器并显示自适应表单容器属性。
+1. 在内容浏览器中，选择 **[!UICONTROL 表单容器]**，然后选择 **[!UICONTROL 配置]** ![配置](assets/configure.png) 图标。 它可打开属性浏览器并显示自适应表单容器属性。
 1. 在属性浏览器中，展开 **[!UICONTROL 电子签名]** 折叠面板，然后选择 **[!UICONTROL 启用Adobe Sign]** 选项。 它支持 [!DNL Adobe Sign] 用于自适应表单。
 
 ### 选择 [!DNL Adobe Sign] Cloud Service和签名顺序 {#selectadobesigncloudserviceforanadaptiveform}
@@ -169,7 +169,7 @@ ht-degree: 2%
 
 ![云服务](assets/cloud-service.png)
 
-1. 在内容浏览器中，点按 **[!UICONTROL 表单容器]**，然后点按 **[!UICONTROL 配置]** ![配置](assets/configure.png) 图标。 它可打开属性浏览器并显示自适应表单容器属性。
+1. 在内容浏览器中，选择 **[!UICONTROL 表单容器]**，然后选择 **[!UICONTROL 配置]** ![配置](assets/configure.png) 图标。 它可打开属性浏览器并显示自适应表单容器属性。
 1. 在属性浏览器中，展开 **[!UICONTROL 电子签名]** 折叠面板，然后选择 **[!UICONTROL 启用Adobe Sign]** 选项。 它支持 [!DNL Adobe Sign] 用于自适应表单。
 1. 从已配置的列表中选择云服务 [!DNL Adobe Sign] Cloud Service。
 
@@ -183,23 +183,23 @@ ht-degree: 2%
 
    多个签名者可以同时按顺序签署表单。
 
-1. [将签名者添加到自适应表单](../../forms/using/working-with-adobe-sign.md#addsignerstoanadaptiveform) 然后点击“完成” ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) 图标以保存更改。
+1. [将签名者添加到自适应表单](../../forms/using/working-with-adobe-sign.md#addsignerstoanadaptiveform) 并选择完成 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) 图标以保存更改。
 
 
 ### 将签名者添加到自适应表单 {#addsignerstoanadaptiveform}
 
 自适应表单只能有一个或多个签名者。 添加签名者时，还可以配置签名者的身份验证详细信息。 您还可以选择表单填写者和歌手是否为同一个人。 执行以下步骤以添加并提供有关签名者的各种详细信息：
 
-1. 在内容浏览器中，点按 **[!UICONTROL 表单容器]**，然后点按 **[!UICONTROL 配置]** ![配置](assets/configure.png) 图标。 它会打开具有自适应表单容器属性的属性浏览器。
+1. 在内容浏览器中，选择 **[!UICONTROL 表单容器]**，然后选择 **[!UICONTROL 配置]** ![配置](assets/configure.png) 图标。 它会打开具有自适应表单容器属性的属性浏览器。
 1. 在属性浏览器中，展开 **[!UICONTROL 电子签名]** 折叠面板，然后选择 **[!UICONTROL 启用Adobe Sign]** 选项。 它支持 [!DNL Adobe Sign] 用于自适应表单。
-1. 点按 **[!UICONTROL 添加签名者]** 下 **[!UICONTROL 签名者配置]**. 它会向自适应表单添加签名者。 您可以添加多个 [!DNL Adobe Sign] 自适应表单的签名者。
+1. 选择 **[!UICONTROL 添加签名者]** 下 **[!UICONTROL 签名者配置]**. 它会向自适应表单添加签名者。 您可以添加多个 [!DNL Adobe Sign] 自适应表单的签名者。
    ![phone-details](assets/phone-details.png)
 
 1. 单击 **编辑** ![aem_6_3_edit](assets/aem_6_3_edit.png) 图标以指定有关签名者的以下信息：
 
    * **[!UICONTROL 标题]：** 指定标题以唯一标识签名者。
 
-   * **[!UICONTROL 签名者与填写表单的人员是否为同一人？]：** 选择 **是**，如果表单填写者和第一个签名者是同一个人。 如果选项设置为 **不，** 然后，请勿在自适应表单中使用签名步骤组件。 如果表单包含签名步骤组件，则字段会自动设置为“是”。
+   * **[!UICONTROL 签名者与填写表单的人员是否相同？]：** 选择 **是**，如果表单填写者和第一个签名者是同一个人。 如果选项设置为 **不，** 然后，请勿在自适应表单中使用签名步骤组件。 如果表单包含签名步骤组件，则字段会自动设置为“是”。
 
    * **[!UICONTROL 签名者电子邮件地址]：** 指定签名者的电子邮件地址。 签名者在指定的电子邮件地址上接收要签名的文档/表单。 您可以选择使用表单字段、登录用户的AEM用户配置文件中提供的电子邮件地址，或者手动输入电子邮件地址。 这是强制步骤。 确保第一个签名者或唯一签名者（如果只有一个签名者）的电子邮件地址与 [!DNL Adobe Sign] 用于配置AEM云服务的帐户。
 
@@ -217,7 +217,7 @@ ht-degree: 2%
 
    上图有两个例子 [!DNL Adobe Sign] 块：个人信息和办公室详细信息
 
-   点按完成 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) 图标。 签名者已添加并配置。
+   选择完成 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) 图标。 签名者已添加并配置。
 
 ### 为自适应表单选择提交操作 {#selectsubmitactionforanadaptiveform}
 
@@ -243,15 +243,15 @@ ht-degree: 2%
 
    ![签名块](assets/sign-block-new.png)
 
-1. 选择 **[!UICONTROL Adobe Sign块]** 组件并点按 **编辑** ![aem_6_3_edit](assets/aem_6_3_edit.png) 图标。 它显示用于添加字段和设置字段外观格式的选项。
+1. 选择 **[!UICONTROL Adobe Sign块]** 组件并选择 **编辑** ![aem_6_3_edit](assets/aem_6_3_edit.png) 图标。 它显示用于添加字段和设置字段外观格式的选项。
 
    ![adobe-sign-block-select-fields](assets/adobe-sign-block-select-fields.png)
 
    **答：** 选择并添加 [!DNL Adobe Sign] 字段。 **B.** 展开 [!DNL Adobe Sign] 阻止到全屏视图
 
-1. 点按 **[!UICONTROL Adobe Sign字段]** ![aem_6_3_adobesign](assets/aem_6_3_adobesign.png) 图标。 它会显示要选择和添加的选项 [!DNL Adobe Sign] 字段。
+1. 选择 **[!UICONTROL Adobe Sign字段]** ![aem_6_3_adobesign](assets/aem_6_3_adobesign.png) 图标。 它会显示要选择和添加的选项 [!DNL Adobe Sign] 字段。
 
-   展开 **[!UICONTROL 类型]** 要选择的下拉字段 **[!UICONTROL 数字签名]** 然后点击 **完成** 图标以将所选字段添加至 [!DNL Adobe Sign] 封锁。
+   展开 **[!UICONTROL 类型]** 要选择的下拉字段 **[!UICONTROL 数字签名]** 并选择 **完成** 图标以将所选字段添加至 [!DNL Adobe Sign] 封锁。
 
    ![数字签名](assets/digital_signatures_new.png)
 
@@ -286,7 +286,7 @@ ht-degree: 2%
 执行以下步骤以配置签名步骤组件：
 
 1. 拖放 **[!UICONTROL 签名步骤]** 组件从组件浏览器复制到表单。
-1. 选择新添加的签名步骤组件，然后点按 **配置** ![配置](assets/configure.png) 图标。 它将打开属性浏览器并显示签名步骤属性。 配置以下属性：
+1. 选择新添加的签名步骤组件，然后选择 **配置** ![配置](assets/configure.png) 图标。 它将打开属性浏览器并显示签名步骤属性。 配置以下属性：
 
    * **[!UICONTROL 名称]**：指定组件的名称。
 
@@ -300,7 +300,7 @@ ht-degree: 2%
 
    * **[!UICONTROL CSS类]**：为组件指定CSS类。
 
-   点按完成 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) 图标以保存更改。
+   选择完成 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) 图标以保存更改。
 
    ![签名步骤](assets/signature_step_new.png)
 

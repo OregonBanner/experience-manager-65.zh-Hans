@@ -10,10 +10,10 @@ discoiquuid: 2c971da0-5bd5-40d1-820d-4efc2a44b49d
 docset: aem65
 feature: Adaptive Forms
 exl-id: 5ca850e3-30f0-4384-b615-356dc3c2ad0d
-source-git-commit: e2a3470784beb04c2179958ac6cb98861acfaa71
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '738'
-ht-degree: 8%
+source-wordcount: '740'
+ht-degree: 7%
 
 ---
 
@@ -34,8 +34,8 @@ ht-degree: 8%
 执行以下步骤以在元数据中添加元素：
 
 1. 在编辑模式下打开自适应表单。\
-   要在编辑模式下打开表单，请在表单管理器中，选择您的表单并点按 **打开**.
-1. 在编辑模式下，选择一个组件，然后点按 ![字段级](assets/field-level.png) > **自适应表单容器**，然后点击 ![cmppr](assets/cmppr.png).
+   要在编辑模式下打开表单，请在表单管理器中，选择您的表单并选择 **打开**.
+1. 在编辑模式下，选择一个组件，然后选择 ![字段级](assets/field-level.png) > **自适应表单容器**，然后选择 ![cmppr](assets/cmppr.png).
 1. 在侧栏中，单击 **元数据**.
 1. 在元数据部分中，单击 **添加**.
 1. 使用元数据选项卡的值字段添加脚本。 您添加的脚本从表单上的元素中收集数据，并计算提供给元数据的值。

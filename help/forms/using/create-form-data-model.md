@@ -5,9 +5,9 @@ contentOwner: khsingh
 products: SG_EXPERIENCEMANAGER/6.3/FORMS
 docset: aem65
 exl-id: 40bc5af6-9023-437e-95b0-f85d3df7d8aa
-source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '1528'
+source-wordcount: '1491'
 ht-degree: 1%
 
 ---
@@ -56,14 +56,14 @@ AEM [!DNL Forms] 数据集成模块允许您从不同的后端数据源(如AEM�
    1. 从 `http://www.java2s.com/ref/jar/download-orgosgiservicejdbc100jar-file.html` 下载 [!DNL MySQL] JDBC 驱动程序 OSGi 捆绑包。<!-- This URL is an insecure link but using https is not possible -->
    1. 登录到AEM [!DNL Forms] 以管理员身份创作实例，然后转到AEM Web控制台包。 默认URL为 [https://localhost:4502/system/console/bundles](https://localhost:4502/system/console/bundles).
 
-   1. 点按 **[!UICONTROL 安装/更新]**. An [!UICONTROL 上传/安装包] 出现对话框。
+   1. 选择 **[!UICONTROL 安装/更新]**. An [!UICONTROL 上传/安装包] 出现对话框。
 
-   1. 点按 **[!UICONTROL 选择文件]** 以浏览并选择 [!DNL MySQL] JDBC驱动程序OSGi包。 选择 **[!UICONTROL 开始捆绑包]** 和 **[!UICONTROL 刷新包]**，然后点击 **[!UICONTROL 安装或更新]**. [!DNL Oracle Corporation's]确保 JDBC 驱动程序 [!DNL MySQL] 处于活动状态。已安装驱动程序。
+   1. 选择 **[!UICONTROL 选择文件]** 以浏览并选择 [!DNL MySQL] JDBC驱动程序OSGi包。 选择 **[!UICONTROL 开始捆绑包]** 和 **[!UICONTROL 刷新包]**，并选择 **[!UICONTROL 安装或更新]**. [!DNL Oracle Corporation's]确保 JDBC 驱动程序 [!DNL MySQL] 处于活动状态。已安装驱动程序。
 
 1. 将数据库配置 [!DNL MySQL] 为数据源：
 
    1. 转到 https://localhost:4502/system/console/configMgr ](https://localhost:4502/system/console/configMgr) 上的 [ AEM web 控制台。
-   1. 查找 **Apache Sling 连接池数据** 配置。 点按以在编辑模式下打开配置。
+   1. 查找 **Apache Sling 连接池数据** 配置。 选择以编辑模式打开配置。
    1. 在配置对话框中，指定以下详细信息：
 
       * **数据源名称：** 您可以指定任意名称。 例如，指定 **WeRetailMySQL**.
@@ -87,7 +87,7 @@ AEM [!DNL Forms] 数据集成模块允许您从不同的后端数据源(如AEM�
       * **验证查询：** 指定一个SQL SELECT查询来验证池中的连接。 查询必须至少返回一行。 例如， **选择 &#42; 来自customerdetails**.
       * **事务隔离**：将值设置为 **读取已提交**.
 
-        将其他属性保留为默认值 [值](https://tomcat.apache.org/tomcat-7.0-doc/jdbc-pool.html) 并点击 **[!UICONTROL 保存]**.
+        将其他属性保留为默认值 [值](https://tomcat.apache.org/tomcat-7.0-doc/jdbc-pool.html) 并选择 **[!UICONTROL 保存]**.
 
         将创建类似于以下内容的配置。
 
@@ -100,9 +100,9 @@ AEM [!DNL Forms] 提供直观的用户界面，用于 [创建表单数据模型]
 执行以下操作以创建表单数据模型：
 
 1. 在AEM创作实例中，导航到 **[!UICONTROL Forms]** > **[!UICONTROL 数据集成]**.
-1. 点按 **[!UICONTROL 创建]** > **[!UICONTROL 表单数据模型]**.
-1. 在创建表单数据模型对话框中，指定 **name** 用于表单数据模型。 例如， **customer-shipping-billing-details**. 点按 **[!UICONTROL 下一个]**.
-1. 选择数据源屏幕列出了所有已配置的数据源。 选择 **WeRetailMySQL** 数据源并点按 **[!UICONTROL 创建]**.
+1. 选择 **[!UICONTROL 创建]** > **[!UICONTROL 表单数据模型]**.
+1. 在创建表单数据模型对话框中，指定 **name** 用于表单数据模型。 例如， **customer-shipping-billing-details**. 选择&#x200B;**[!UICONTROL 下一步]**。
+1. 选择数据源屏幕列出了所有已配置的数据源。 选择 **WeRetailMySQL** 数据源并选择 **[!UICONTROL 创建]**.
 
    ![数据源选择](assets/data-source-selection.png)
 
@@ -135,12 +135,12 @@ AEM [!DNL Forms] 提供直观的用户界面，用于 [创建表单数据模型]
       * 状态
       * 邮政编码
 
-   * **服务:**
+   * **服务：**
 
       * get
       * 更新
 
-   点按 **添加选定项** 将选定的数据模型对象和服务添加到表单数据模型。
+   选择 **添加选定项** 将选定的数据模型对象和服务添加到表单数据模型。
 
    ![WeRetail架构](assets/weretail_schema_new.png)
 
@@ -150,8 +150,8 @@ AEM [!DNL Forms] 提供直观的用户界面，用于 [创建表单数据模型]
 
 1. 配置数据模型对象的读取和写入服务。
 
-   1. 选择 **customerdetails** 数据模型对象并点按 **[!UICONTROL 编辑属性]**.
-   1. 选择 **[!UICONTROL get]** 从“读取服务”下拉列表中进行访问。 此 **id** 参数，将自动添加customerdetails数据模型对象中的主键。 点按 ![aem_6_3_edit](assets/aem_6_3_edit.png) 并按照以下方式配置参数。
+   1. 选择 **customerdetails** 数据模型对象并选择 **[!UICONTROL 编辑属性]**.
+   1. 选择 **[!UICONTROL get]** 从“读取服务”下拉列表中进行访问。 此 **id** 参数，将自动添加customerdetails数据模型对象中的主键。 选择 ![aem_6_3_edit](assets/aem_6_3_edit.png) 并按照以下方式配置参数。
 
       ![读取默认值](assets/read-default.png)
 
@@ -163,7 +163,7 @@ AEM [!DNL Forms] 提供直观的用户界面，用于 [创建表单数据模型]
 
       ![id-参数](assets/id-arg.png)
 
-   1. **[!UICONTROL 点按完成]** 以保存数据模型对象属性。然后， **[!UICONTROL 点按保存]** 以保存表单数据模型。
+   1. 选择 **[!UICONTROL 完成]** 以保存数据模型对象属性。 然后，选择 **[!UICONTROL 保存]** 以保存表单数据模型。
 
       此 **[!UICONTROL get]** 和 **[!UICONTROL 更新]** 服务作为数据模型对象的默认服务添加。
 
@@ -171,7 +171,7 @@ AEM [!DNL Forms] 提供直观的用户界面，用于 [创建表单数据模型]
 
 1. 转到 **[!UICONTROL 服务]** 选项卡和配置 **[!UICONTROL get]** 和 **[!UICONTROL 更新]** 服务。
 
-   1. 选择 **[!UICONTROL get]** 服务和点击 **[!UICONTROL 编辑属性]**. 此时将打开属性对话框。
+   1. 选择 **[!UICONTROL get]** 服务和选择 **[!UICONTROL 编辑属性]**. 此时将打开属性对话框。
    1. 在编辑属性对话框中指定以下内容：
 
       * **标题** ：指定服务标题。 例如：检索送货地址。
@@ -186,11 +186,11 @@ AEM [!DNL Forms] 提供直观的用户界面，用于 [创建表单数据模型]
       * **返回数组**：禁用 **返回数组** 选项。
       * **参数**：选择名为的参数 **ID**.
 
-      点按 **[!UICONTROL 完成]**. 用于从MySQL数据库检索客户详细信息的服务已配置。
+      选择 **[!UICONTROL 完成]**. 用于从MySQL数据库检索客户详细信息的服务已配置。
 
       ![shiping-address-retrieval](assets/shiiping-address-retrieval.png)
 
-   1. 选择 **[!UICONTROL 更新]** 服务和点击 **[!UICONTROL 编辑属性]**. 将打开属性对话框。
+   1. 选择 **[!UICONTROL 更新]** 服务和选择 **[!UICONTROL 编辑属性]**. 将打开属性对话框。
 
    1. 在 [!UICONTROL 编辑属性] 对话框：
 
@@ -207,7 +207,7 @@ AEM [!DNL Forms] 提供直观的用户界面，用于 [创建表单数据模型]
 
       * **参数**：选择参数名称 **ID** 和 **customerdetails**.
 
-      点按 **[!UICONTROL 完成]**. 此 **[!UICONTROL 更新]** 服务以更新客户详细信息，请参见 [!DNL MySQL] 数据库已配置。
+      选择 **[!UICONTROL 完成]**. 此 **[!UICONTROL 更新]** 服务以更新客户详细信息，请参见 [!DNL MySQL] 数据库已配置。
 
       ![shiping-address-update](assets/shiiping-address-update.png)
 
@@ -219,9 +219,9 @@ AEM [!DNL Forms] 提供直观的用户界面，用于 [创建表单数据模型]
 
 执行以下操作以运行测试：
 
-1. 转到 **[!UICONTROL 模型]** 选项卡，选择 **customerdetails** 数据模型对象，然后点按 **[!UICONTROL 测试模型对象]**.
+1. 转到 **[!UICONTROL 模型]** 选项卡，选择 **customerdetails** 数据模型对象，并选择 **[!UICONTROL 测试模型对象]**.
 1. 在 [!UICONTROL 测试模型/服务] 窗口，选择 **[!UICONTROL 读取模型对象]** 从 **[!UICONTROL 选择模型/服务]** 下拉菜单。
-1. 在 **customerdetails** 部分，指定值 **id** 已配置中存在的参数 [!DNL MySQL] 数据库和点击 **[!UICONTROL 测试]**.
+1. 在 **customerdetails** 部分，指定值 **id** 已配置中存在的参数 [!DNL MySQL] 数据库和选择 **[!UICONTROL 测试]**.
 
    系统将获取与指定ID关联的客户详细信息，并将其显示在 **[!UICONTROL 输出]** 部分，如下所示。
 

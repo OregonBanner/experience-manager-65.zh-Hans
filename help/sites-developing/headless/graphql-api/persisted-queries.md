@@ -2,10 +2,10 @@
 title: 持久 GraphQL 查询
 description: 了解如何在Adobe Experience Manager中使用持久GraphQL查询优化性能。 持久查询可以由客户端应用程序使用HTTPGET方法请求，响应可以缓存在Dispatcher和CDN层，最终提高客户端应用程序的性能。
 exl-id: d7a1955d-b754-4700-b863-e9f66396cbe1
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '1422'
-ht-degree: 88%
+source-wordcount: '1401'
+ht-degree: 85%
 
 ---
 
@@ -262,7 +262,7 @@ query getAdventuresByActivity($activity: String!) {
 
 ## 正在缓存您的持久查询 {#caching-persisted-queries}
 
-建议使用持久查询，因为可在 [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hans) 和内容交付网络 (CDN) 层缓存此类查询，最终提高发出请求的客户端应用程序的性能。
+建议使用持久查询，因为可在 [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=en) 和内容交付网络 (CDN) 层缓存此类查询，最终提高发出请求的客户端应用程序的性能。
 
 默认情况下，AEM 将根据生存时间 (TTL) 定义使缓存失效。可通过以下参数定义这些 TTL。可通过多种方式访问这些参数，其名称因所使用的机制而异：
 
@@ -350,7 +350,7 @@ curl -u admin:admin -X POST \
 
 ### 使用 OSGi 配置管理缓存 {#cache-osgi-configration}
 
-要全局管理缓存，您可以为[持久查询服务配置](/help/sites-deploying/configuring-osgi.md)**配置 OSGi 设置**。否则，此OSGi配置使用 [发布实例的默认值](#publish-instances).
+要全局管理缓存，您可以 [配置OSGi设置](/help/sites-deploying/configuring-osgi.md) 对于 **持久查询服务配置**. 否则，此OSGi配置使用 [发布实例的默认值](#publish-instances).
 
 >[!NOTE]
 >
@@ -401,8 +401,8 @@ URL 可以划分为以下部分：
 1. 在包定义对话框中，在&#x200B;**常规**&#x200B;下输入&#x200B;**名称**，如“wknd-persistent-queries”。
 1. 输入版本号，如“1.0”。
 1. 在&#x200B;**过滤器**&#x200B;下添加新的&#x200B;**过滤器**。使用路径查找器选择 `persistentQueries` 文件夹。例如，对于 `wknd` 配置完整路径 `/conf/wknd/settings/graphql/persistentQueries`.
-1. 点击&#x200B;**保存**&#x200B;以保存新的包定义并关闭对话框。
-1. 在新创建的包定义中点击&#x200B;**生成**&#x200B;按钮。
+1. 选择 **保存** 以保存新的包定义并关闭对话框。
+1. 选择 **生成** 按钮创建包定义。
 
 生成包后，您可以：
 

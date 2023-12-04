@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 docset: aem65
 exl-id: 601c8d95-0d1a-4945-a522-e85d3e9fc4ae
-source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
 source-wordcount: '292'
 ht-degree: 5%
@@ -81,12 +81,12 @@ Forms Workflow步骤提供详细的日志，可方便地调试与工作流相关
    https://&#39;[服务器]：[端口]&#39;/system/console/configMgr
 
 1. 选择 **[!UICONTROL Sling]** > **[!UICONTROL 日志支持]**.
-1. 点按 **[!UICONTROL 添加新记录器。]**
+1. 选择 **[!UICONTROL 添加新记录器。]**
 1. 选择 **[!UICONTROL 调试]** 作为 **[!UICONTROL 日志级别]**.
 1. 指定日志文件的位置。 日志文件的默认位置为： *logs\error.log*
 1. 将程序包名称指定为 **com.adobe.granite.workflow.core** 在 **[!UICONTROL Logger]** 列。
 
-   执行这些步骤可以存储调试日志 **com.adobe.granite.workflow.core** 包。 点按 **[!UICONTROL +]** 并将以下包名称添加到列表中：
+   执行这些步骤可以存储调试日志 **com.adobe.granite.workflow.core** 包。 选择 **[!UICONTROL +]** 并将以下包名称添加到列表中：
 
    * com.adobe.fd.workflow
    * com.adobe.fd.workspace

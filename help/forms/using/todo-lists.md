@@ -11,9 +11,9 @@ topic-tags: forms-workspace
 discoiquuid: d8546227-d78d-4fe2-a092-222482bb69c9
 docset: aem65
 exl-id: c80bf347-d1ed-488f-a41a-ceb05a6df9e4
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '4031'
+source-wordcount: '4024'
 ht-degree: 0%
 
 ---
@@ -186,7 +186,7 @@ AEM Forms工作区具有以下三种类型的待办事项列表：
 
 ### 保存您的工作而不完成任务 {#save-your-work-without-completing-the-task}
 
-1. 在任意选项卡上，点按 **保存**.
+1. 在任意选项卡上，选择 **保存**.
 
    此时将出现“另存为草稿”对话框。 草稿的默认名称是任务模板中的任务名称。
 
@@ -199,7 +199,7 @@ AEM Forms工作区具有以下三种类型的待办事项列表：
    >
    >有关更多信息，请参阅定期保存草稿，位置如下： [管理首选项](/help/forms/using/getting-started-livecycle-html-workspace.md).
 
-1. 在另存为草稿对话框中，为任务指定唯一名称，然后点击 **确定**.
+1. 在另存为草稿对话框中，为任务指定唯一名称，然后选择 **确定**.
 
    ![saveasdraftdialog_name](assets/saveasdraftdialog_name.png)
 

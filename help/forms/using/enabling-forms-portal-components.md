@@ -1,7 +1,7 @@
 ---
 title: 启用Forms Portal组件
 seo-title: Enabling forms portal components
-description: 现成可用的Forms Portal组件已禁用。 启用Document Services和Document Services谓词组以启用Forms Portal组件。
+description: 现成Forms Portal组件已禁用。 启用Document Services和Document Services谓词组以启用Forms Portal组件。
 seo-description: Out of the box, Forms Portal components are disabled. Enable Document Services and Document Services Predicates groups to enable Forms Portal components.
 uuid: 92d25da6-f1df-4ac0-bf84-2edf9e2722b3
 content-type: reference
@@ -10,10 +10,10 @@ topic-tags: publish
 discoiquuid: 4d318908-c724-4582-a82b-6e9b1c55705b
 feature: Forms Portal
 exl-id: 572194b7-063b-4c38-af43-aba78e9c51c6
-source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '342'
-ht-degree: 3%
+source-wordcount: '332'
+ht-degree: 5%
 
 ---
 
@@ -24,21 +24,21 @@ ht-degree: 3%
 | AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/configure-forms-portal.html) |
 | AEM 6.5 | 本文 |
 
-表单门户组件是现成可用的，无法供使用。 要使组件显示在AEM sidekick的可用组件列表中，请执行以下步骤：
+表单门户组件现成不可用。 要使组件显示在AEM sidekick的可用组件列表中，请执行以下步骤：
 
 1. 登录到网站的创作实例并打开AEM Sites页面。
 
 1. 对于使用静态模板的页面，请执行以下步骤：
 
-   1. 在页眉中，点按 ![画布下拉列表](assets/canvas-drop-down.png) > **设计** 以在“设计”模式下打开页面。
-   1. 点按任意组件（使用蓝色边框），然后点按 ![字段级](assets/field-level.png) 以选择包含当前组件的段落系统。
-   1. 在段落系统中，点按 ![settings_icon](assets/settings_icon.png) 打开段落系统的“编辑”对话框。
-   1. 从列表 **[!UICONTROL 允许的组件]**，启用复选框 **[!UICONTROL 文档服务]** 和 **[!UICONTROL 文档服务谓词]** 组件。 点按 **[!UICONTROL 确定]**.
+   1. 在页眉中，选择 ![画布下拉列表](assets/canvas-drop-down.png) > **设计** 以在设计模式下打开页面。
+   1. 选择任意组件（使用蓝色边框），然后选择 ![字段级](assets/field-level.png) 以选择包含当前组件的段落系统。
+   1. 在段落系统中，选择 ![settings_icon](assets/settings_icon.png) 打开段落系统的“编辑”对话框。
+   1. 从列表 **[!UICONTROL 允许的组件]**，启用复选框 **[!UICONTROL 文档服务]** 和 **[!UICONTROL 文档服务谓词]** 组件。 选择 **[!UICONTROL 确定]**.
 
 1. 对于使用动态模板的页面，请执行以下步骤：
 
-   1. 在页眉中，点按 ![属性](assets/properties.png) > **编辑模板** 以打开页面的模板。
-   1. 点按 **布局容器** 并点按 ![信息源管理](/help/forms/using/assets/feedmanagement.png). 在 **允许的组件** 选项卡，启用 **文档服务和文档服务谓词** 选项，然后点按 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
+   1. 在页眉中，选择 ![属性](assets/properties.png) > **编辑模板** 以打开页面的模板。
+   1. 选择 **布局容器** 并选择 ![信息源管理](/help/forms/using/assets/feedmanagement.png). 在 **允许的组件** 选项卡，启用 **文档服务和文档服务谓词** 选项，然后选择 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
 
 >[!NOTE]
 >
