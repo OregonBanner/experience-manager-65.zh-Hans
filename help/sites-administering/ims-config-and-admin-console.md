@@ -7,10 +7,10 @@ topic-tags: Security
 content-type: reference
 exl-id: 95eae97c-01c2-4f5c-8068-f504eab7c49e
 feature: Security
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8c0c2d89fca7a5ba1a834108ae54fed524b3cbab
 workflow-type: tm+mt
-source-wordcount: '1668'
-ht-degree: 10%
+source-wordcount: '1604'
+ht-degree: 6%
 
 ---
 
@@ -19,10 +19,6 @@ ht-degree: 10%
 >[!NOTE]
 >
 >此功能仅适用于AdobeManaged Services客户。
-
->[!NOTE]
->
->Adobe Experience Manager (AEM)当前不支持将组分配给配置文件。 应改为单独添加用户。
 
 ## 简介 {#introduction}
 
@@ -129,7 +125,7 @@ User Sync是通过AdobeGithub存储库在以下位置分发的：
 >
 >User Sync Tool需要使用描述的过程注册为Adobe I/O客户端UMAPI [此处](https://adobe-apiplatform.github.io/umapi-documentation/en/UM_Authentication.html).
 >
->可以找到Adobe I/O控制台文档 [此处](https://developer.adobe.com/developer-console/文档/指南/).
+>可以找到Adobe I/O控制台文档 [此处](https://developer.adobe.com/developer-console/docs/guides/).
 >
 >
 >此 [!DNL User Management] 本课程介绍用户同步工具使用的API [位置](https://adobe-apiplatform.github.io/umapi-documentation/en/).
@@ -170,7 +166,7 @@ AEM可以继续支持管理员用户在本地登录，因为登录屏幕提供�
 
 ![screen_shot_2018-09-18at121056am](assets/screen_shot_2018-09-18at121056am.png)
 
-#### 基于 IMS 的登录 {#ims-based-login}
+#### 基于IMS的登录 {#ims-based-login}
 
 对于其他用户，只需在实例上配置 IMS 即可使用基于 IMS 的登录。用户第一次单击 **使用Adobe登录** 如下所示：
 
