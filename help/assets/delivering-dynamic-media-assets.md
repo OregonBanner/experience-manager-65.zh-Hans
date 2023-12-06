@@ -1,20 +1,18 @@
 ---
 title: 投放 Dynamic Media 资源
 description: 了解如何将Dynamic Media资源（如视频和图像）交付到您的网页。
-uuid: 23eddf83-34f5-4aae-8b81-d1cd7a098a7e
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
-discoiquuid: e3b44330-d476-49c6-b7ba-079d0d60e500
 docset: aem65
 role: User, Admin
 exl-id: 274af114-845a-46bd-b091-802cf589687a
 feature: Asset Management,Renditions
-source-git-commit: 7f8cfe155af3b8831e746ced89c11c971e429f69
+source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
 workflow-type: tm+mt
-source-wordcount: '319'
-ht-degree: 13%
+source-wordcount: '323'
+ht-degree: 9%
 
 ---
 
@@ -28,7 +26,7 @@ ht-degree: 13%
 * 如果您的网站不在Experience Manager中，您可以选择以下任一选项：
 
    * 将视频或图像嵌入到网站中。
-   * 将 URL 关联到您的 Web 应用程序. 当您希望将视频播放器作为弹出窗口或模式窗口交付时，请使用链接。
+   * 将URL链接到您的Web应用程序。 当您希望将视频播放器作为弹出窗口或模式窗口交付时，请使用链接。
    * 如果您的网站是响应式的，您可以 [传送优化的图像](/help/assets/responsive-site.md).
 
 >[!NOTE]
@@ -42,7 +40,7 @@ ht-degree: 13%
 * [在 Dynamic Media 中激活热链接保护](/help/assets/hotlink-protection.md)
 * [将 URL 关联到您的 Web 应用程序](/help/assets/linking-urls-to-yourwebapplication.md)
 * [为响应式站点传送优化的图像](/help/assets/responsive-site.md)
-* [HTTP2 内容交付](/help/assets/http2.md)
+* [HTTP2内容交付](/help/assets/http2.md)
 * [通过Dynamic Media Classic使CDN缓存失效](/help/assets/invalidate-cdn-cache-dm-classic.md)
 * [使用规则集转换 URL](/help/assets/using-rulesets-to-transform-urls.md)
 

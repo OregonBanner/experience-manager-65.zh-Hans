@@ -1,18 +1,14 @@
 ---
 title: 客户端自定义
-seo-title: Client-side Customization
 description: 在AEM Communities中自定义客户端的行为或外观
-seo-description: Customizing behavior or appearance client-side in AEM Communities
-uuid: 57978c39-9a8a-4098-9001-c8bbe7ee786f
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: 24b6d1d2-c118-4a25-959f-2783961c4ae3
 exl-id: bf34f564-ac93-4c8c-95f7-8690d99d85cb
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
 workflow-type: tm+mt
-source-wordcount: '1232'
+source-wordcount: '1235'
 ht-degree: 0%
 
 ---
@@ -77,7 +73,7 @@ ht-degree: 0%
 </div>
 ```
 
-## 自订属性 {#custom-properties}
+## 自定义属性 {#custom-properties}
 
 在扩展或叠加组件时，可以向修改的对话框添加属性。
 

@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 774c2553-b629-456b-afa7-5713490f4a0a
 role: Admin
 exl-id: 4237085a-d70d-41de-975d-153f58336daa
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
 workflow-type: tm+mt
-source-wordcount: '1912'
+source-wordcount: '1910'
 ht-degree: 0%
 
 ---
@@ -52,7 +52,7 @@ ht-degree: 0%
 
 组的名称由指定站点的名称生成。 [社区站点创建](sites-console.md#step13asitetemplate). 唯一ID可避免同一服务器上名称相似的社区站点和社区组的命名冲突。
 
-例如，如果站点名称为&quot;*参与*&#x200B;对于名为“We.Retail Engage”的网站，创建的用户组之一将是：
+例如，如果站点名称为&quot;*参与*&#x200B;对于标题为“参与”的网站，创建的用户组之一将是：
 
 * 社区 *参与* 成员
 

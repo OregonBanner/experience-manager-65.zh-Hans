@@ -5,7 +5,7 @@ contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 exl-id: 5f050baa-fe10-4acc-ad32-de20793edc13
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
 workflow-type: tm+mt
 source-wordcount: '1151'
 ht-degree: 0%
@@ -41,7 +41,7 @@ We.Unlimited应用程序是一个示例模板，展示了可完全配置且可�
 基于应用程序模板创建应用程序的步骤：
 
 1. 导航到AEM Mobile应用程序目录： *&lt;server-url>/aem/apps.html/content/mobileapps*
-1. 选择 **创建** -> **应用程序** 如下所示
+1. 选择 **创建** > **应用程序** 如下所示
 
 使用此模板创建应用程序后，您可以将文章、横幅和收藏集添加到应用程序。 要重新访问并创建文章、横幅和收藏集，请参阅 [内容管理操作](/help/mobile/mobile-apps-ondemand-manage-content-ondemand.md).
 

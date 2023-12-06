@@ -1,19 +1,17 @@
 ---
 title: 将Dynamic Media Classic功能添加到页面
 description: 如何将Dynamic Media Classic功能和组件添加到Adobe Experience Manager中的页面。
-uuid: aa5a4735-bfec-43b8-aec0-a0c32bff134f
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 content-type: reference
 topic-tags: managing-assets
-discoiquuid: e7b95732-a571-48e8-afad-612059cdbde7
 feature: Dynamic Media Classic
 role: User, Admin
 mini-toc-levels: 3
 exl-id: 815f577d-4774-4830-8baf-0294bd085b83
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
 workflow-type: tm+mt
-source-wordcount: '2845'
+source-wordcount: '2851'
 ht-degree: 0%
 
 ---
@@ -75,7 +73,7 @@ Experience Manager中提供了以下Dynamic Media Classic组件：
 >
 >如果您正在创建和开发自定义查看器并使用“内容查找器”，则必须明确添加 `allowfullscreen` 参数。
 
-### Flash 查看器生命周期终止通知 {#flash-viewers-end-of-life-notice}
+### Flash查看器生命周期终止通知 {#flash-viewers-end-of-life-notice}
 
 自2017年1月31日起，Adobe Dynamic Media Classic停止支持Flash查看器平台。
 

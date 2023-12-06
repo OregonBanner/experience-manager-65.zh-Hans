@@ -1,21 +1,19 @@
 ---
 title: 视频配置文件
 description: Dynamic Media已随附预定义的自适应视频编码配置文件。 此现成配置文件中的设置已经过优化，可为客户提供最佳观看体验。 您还可以在视频中添加智能裁剪。
-uuid: 26a20984-db63-41e9-b16c-6e164b7596a0
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: administering
 content-type: reference
-discoiquuid: 3b8791c8-2c97-42b7-b4a9-e1157ac9ea02
 docset: aem65
 feature: Video Profiles
 role: User, Admin
 mini-toc-levels: 3
 exl-id: b290fac2-7259-45d7-b733-70419d632b07
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
 workflow-type: tm+mt
-source-wordcount: '3732'
-ht-degree: 8%
+source-wordcount: '3770'
+ht-degree: 7%
 
 ---
 
@@ -389,7 +387,8 @@ Dynamic Media已随附预定义的自适应视频编码配置文件（一组适�
 
 1. 选择Experience Manager徽标并导航到 **[!UICONTROL 工具]** > **[!UICONTROL 资产]** > **[!UICONTROL 视频配置文件]**.
 1. 选择要应用于一个或多个文件夹的视频配置文件。
-1. 选择 **[!UICONTROL 将配置文件应用到文件夹]** 并选择一个或多个用于接收新上传资源的文件夹，然后选择 **[!UICONTROL 应用]**. 在&#x200B;**[!UICONTROL 卡片视图]**&#x200B;中，如果文件夹已经分配了配置文件，则文件夹名称的正下方会显示配置文件的名称。您可以 [监控视频配置文件处理作业的进度](#monitoring-the-progress-of-an-encoding-job).
+1. 选择 **[!UICONTROL 将配置文件应用到文件夹]** 并选择一个或多个用于接收新上传资源的文件夹，然后选择 **[!UICONTROL 应用]**. 在中时，如果文件夹已经分配了配置文件，则文件夹名称的正下方会显示配置文件的名称 **[!UICONTROL 卡片视图]**.
+您可以 [监控视频配置文件处理作业的进度](#monitoring-the-progress-of-an-encoding-job).
 
 #### 将视频配置文件从“属性”应用到文件夹 {#applying-video-profiles-to-folders-from-properties}
 

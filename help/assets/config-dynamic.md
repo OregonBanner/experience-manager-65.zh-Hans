@@ -2,21 +2,19 @@
 title: 配置Dynamic Media — 混合模式
 description: 了解如何配置Dynamic Media — 混合模式。
 mini-toc-levels: 3
-uuid: 39ad7d83-d310-4baf-9d85-5532c2f201f3
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
-discoiquuid: 7d8e7273-29f3-4a45-ae94-aad660d2c71d
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/config-dynamic
 role: User, Admin
 exl-id: 5719d32c-4f19-47c1-bea9-8fd0bc8439ed
 feature: Configuration,Hybrid Mode
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
 workflow-type: tm+mt
-source-wordcount: '7791'
-ht-degree: 2%
+source-wordcount: '7684'
+ht-degree: 1%
 
 ---
 
@@ -440,7 +438,7 @@ Replication test to s7delivery:https://replicate-na.assetsadobe.com/is-publish
 02.08.2016 14:37:44 - Transfer failed for ReplicationAction{type=TEST, path[0]='/content/dam', time=1470173864834, userId='admin', revision='null'}. com.adobe.granite.keystore.KeyStoreNotInitialisedException: Uninitialised key store for user dynamic-media-replication
 ```
 
-**解决方案:**
+**解决方案：**
 
 1. 定位至“用户管理”页：
    `localhost:4502/libs/granite/security/content/useradmin.html`
@@ -469,7 +467,7 @@ Replication test to s7delivery:https://replicate-na.assetsadobe.com/is-publish
 01.08.2016 18:42:59 - Error while replicating: com.day.cq.replication.ReplicationException: Transfer failed for ReplicationAction{type=TEST, path[0]='/content/dam', time=1470073379634, userId='admin', revision='null'}. java.io.IOException: Failed to execute request 'https://replicate-eu.assetsadobe2.com:443/is-publish/publish-receiver?Cmd=Test&RootId=rbroughstaging': Server returned status code 401 with message: Authorization required.
 ```
 
-**解决方案:**
+**解决方案：**
 
 1. 在Experience Manager中，导航到 **[!UICONTROL 工具]** > **[!UICONTROL 常规]** > **[!UICONTROL CRXDE Lite]**.
 
@@ -668,8 +666,8 @@ Experience Manager6.4及更高版本将此预设保存在 `/conf/global/settings
 除了复制资产外，还会复制以下非资产：
 
 * Dynamic Media交付配置： `/conf/global/settings/dam/dm/imageserver/jcr:content`
-* 图像预设: `/conf/global/settings/dam/dm/presets/macros`
-* 查看器预设: `/conf/global/settings/dam/dm/presets/viewer`
+* 图像预设： `/conf/global/settings/dam/dm/presets/macros`
+* 查看器预设： `/conf/global/settings/dam/dm/presets/viewer`
 
 这些过滤器为您提供了一种 *排除* 资源复制到该Experience Manager发布节点。
 
@@ -856,7 +854,7 @@ Dynamic Media开箱即用 [启用后](#enabling-dynamic-media). 但是，您可�
    | 属性 | 默认值 | 描述 |
    |---|---|---|
    | 已启用缓存 | 已选中 | 是否已启用响应缓存 |
-   | 缓存根 | cache | 响应缓存文件夹的一个或多个路径。 相对路径针对内部s7映像包文件夹解析。 |
+   | 缓存根 | 缓存 | 响应缓存文件夹的一个或多个路径。 相对路径针对内部s7映像包文件夹解析。 |
    | 缓存最大大小 | 200000000 | 响应缓存的最大大小（字节）。 |
    | 缓存最大条目数 | 100000 | 缓存中允许的最大条目数。 |
 
@@ -882,13 +880,13 @@ Dynamic Media开箱即用 [启用后](#enabling-dynamic-media). 但是，您可�
 
 | 属性 | 默认值 | 描述 |
 | --- | --- | --- |
-| `bkgcolor` | `FFFFFF` | 默认背景颜色. 用于填充不包含实际图像数据的回复图像的任意区域的RGB值。 另请参阅 [BkgColor](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-bkgcolor.html#image-serving-api) 在图像服务API中。 |
-| `defaultpix` | `300,300` | 默认视图大小. 如果请求未使用wid=、hei=或scl=明确指定视图大小，服务器将限制回复图像不超过此宽度和高度。<br>指定为两个整数（0或更大），用逗号分隔。 宽度和高度（像素）。 可以将任一值或两个值都设置为0以使其不受约束。 不适用于嵌套/嵌入的请求。<br>另请参阅 [默认像素](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultpix.html#image-serving-api) 在图像服务API中。<br>但是，通常情况下，您会使用查看器预设或图像预设来交付资产。 默认像素仅适用于未使用查看器预设或图像预设的资产。 |
-| `defaultthumbpix` | `100,100` | 默认缩略图大小. 用于缩略图请求(`req=tmb`)。<br>服务器限制回复图像不超过此宽度和高度。 如果缩略图请求(`req=tmb`)不会显式指定大小，也不会使用显式指定视图大小 `wid=`， `hei=`，或 `scl=`.<br>指定为两个整数（0或更大），用逗号分隔。 宽度和高度（像素）。 可以将任一值或两个值都设置为0以使其不受约束。<br>不适用于嵌套/嵌入的请求。<br>另请参阅 [DefaultThumbPix](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultthumbpix.html#image-serving-api) 在图像服务API中。 |
+| `bkgcolor` | `FFFFFF` | 默认背景颜色。 用于填充不包含实际图像数据的回复图像的任意区域的RGB值。 另请参阅 [BkgColor](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-bkgcolor.html#image-serving-api) 在图像服务API中。 |
+| `defaultpix` | `300,300` | 默认视图大小。 如果请求未使用wid=、hei=或scl=明确指定视图大小，服务器将限制回复图像不超过此宽度和高度。<br>指定为两个整数（0或更大），用逗号分隔。 宽度和高度（像素）。 可以将任一值或两个值都设置为0以使其不受约束。 不适用于嵌套/嵌入的请求。<br>另请参阅 [默认像素](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultpix.html#image-serving-api) 在图像服务API中。<br>但是，通常情况下，您会使用查看器预设或图像预设来交付资产。 默认像素仅适用于未使用查看器预设或图像预设的资产。 |
+| `defaultthumbpix` | `100,100` | 默认缩略图大小。 用于缩略图请求(`req=tmb`)。<br>服务器限制回复图像不超过此宽度和高度。 如果缩略图请求(`req=tmb`)不会显式指定大小，也不会使用显式指定视图大小 `wid=`， `hei=`，或 `scl=`.<br>指定为两个整数（0或更大），用逗号分隔。 宽度和高度（像素）。 可以将任一值或两个值都设置为0以使其不受约束。<br>不适用于嵌套/嵌入的请求。<br>另请参阅 [DefaultThumbPix](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultthumbpix.html#image-serving-api) 在图像服务API中。 |
 | `expiration` | `36000000` | 默认客户端缓存生存时间。 提供特定目录记录中不包含有效catalog：：Expiration值时的默认过期时间间隔。<br>实数，0或更大。 自生成回复数据以来到到期为止的毫秒数。 设置为0将始终使回复图像立即过期，这样可以有效禁用客户端缓存。 默认情况下，此值设置为10小时，这意味着如果发布新图像，则旧图像需要10小时才能离开用户的缓存。 如果您需要提前清除缓存，请联系客户支持。<br>另请参阅 [过期](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-expiration.html) 在图像服务API中。 |
 | `jpegquality` | `80` | 默认JPEG编码属性。 指定JPEG回复图像的默认属性。<br>用逗号分隔的整数和标志。 第一个值在1至100的范围内，用于定义质量。 对于正常行为，第二个值可以为0，或者为1以禁用JPEG编码器采用的RGB色度缩减采样。<br>另请参阅 [Jpeg品质](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-jpegquality.html#image-serving-api) 在图像服务API中。 |
-| `maxpix` | `2000,2000` | 回复图像大小限制. 返回到客户端的最大回复图像宽度和高度。<br>如果请求导致回复图像的宽度或高度大于attribute：：MaxPix，则服务器返回错误。<br>另请参阅 [MaxPix](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-maxpix.html#image-serving-api) 在图像服务API中。 |
-| `resmode` | `SHARP2` | 默认重新取样模式. 指定用于缩放图像数据的默认重新取样和插值属性。<br>使用时间 `resMode=` 未在请求中指定。<br>允许的值包括 `BILIN`， `BICUB`，或 `SHARP2`.<br>枚举。 设置为2 `bilin`， 3表示 `bicub`，或4表示 `sharp2` 插值模式。 使用 `sharp2` 以取得最佳结果。<br>另请参阅 [解析模式](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-is-cat-resmode.html#image-serving-api) 在图像服务API中。 |
+| `maxpix` | `2000,2000` | 回复图像大小限制。 返回到客户端的最大回复图像宽度和高度。<br>如果请求导致回复图像的宽度或高度大于attribute：：MaxPix，则服务器返回错误。<br>另请参阅 [MaxPix](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-maxpix.html#image-serving-api) 在图像服务API中。 |
+| `resmode` | `SHARP2` | 默认重新取样模式。 指定用于缩放图像数据的默认重新取样和插值属性。<br>使用时间 `resMode=` 未在请求中指定。<br>允许的值包括 `BILIN`， `BICUB`，或 `SHARP2`.<br>枚举。 设置为2 `bilin`， 3表示 `bicub`，或4表示 `sharp2` 插值模式。 使用 `sharp2` 以取得最佳结果。<br>另请参阅 [解析模式](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-is-cat-resmode.html#image-serving-api) 在图像服务API中。 |
 | `resolution` | `72` | 默认对象分辨率。 提供特定目录记录中不包含有效catalog：：Resolution值时的默认对象分辨率。<br>实数，大于0。 通常以每英寸像素数表示，但也可以以其他单位表示，例如每米像素数。<br>另请参阅 [分辨率](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-resolution.html#image-serving-api) 在图像服务API中。 |
 | `thumbnailtime` | `1%,11%,21%,31%,41%,51%,61%,71%,81%,91%` | 这些值表示视频播放时间的快照，并传递给 [encoding.com](https://www.encoding.com/). 请参阅 [关于视频缩略图](/help/assets/video.md#about-video-thumbnails-in-dynamic-media-hybrid-mode) 以了解更多信息。 |
 
@@ -1101,7 +1099,7 @@ Adobe的颜色管理使用ICC（国际颜色联盟）配置文件，该格式由
    <td>日本Web Coated (Ad)</td>
   </tr>
   <tr>
-   <td>NewsprintSNAP2007</td>
+   <td>新闻纸快照2007</td>
    <td>CMYK</td>
    <td>美国新闻纸(SNAP 2007)</td>
   </tr>
@@ -1121,12 +1119,12 @@ Adobe的颜色管理使用ICC（国际颜色联盟）配置文件，该格式由
    <td>ProPhotoRGB</td>
   </tr>
   <tr>
-   <td>PS4Default</td>
+   <td>PS4默认</td>
    <td>CMYK</td>
    <td>Photoshop 4默认CMYK</td>
   </tr>
   <tr>
-   <td>PS5Default</td>
+   <td>PS5默认</td>
    <td>CMYK</td>
    <td>Photoshop 5默认CMYK</td>
   </tr>

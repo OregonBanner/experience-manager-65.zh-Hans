@@ -6,10 +6,10 @@ role: Admin, Developer
 feature: Search
 exl-id: acaf46e6-ff70-4825-8922-ce8f82905a92
 hide: true
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
 workflow-type: tm+mt
-source-wordcount: '2416'
-ht-degree: 16%
+source-wordcount: '2411'
+ht-degree: 15%
 
 ---
 
@@ -113,7 +113,7 @@ ht-degree: 16%
 1. 单击 [!DNL Experience Manager] 徽标，然后转到 **[!UICONTROL 工具]** > **[!UICONTROL 常规]** > **[!UICONTROL 搜索Forms]**.
 1. 从 **[!UICONTROL 搜索Forms]** 页面，选择 **[!UICONTROL 资产管理搜索边栏]**，然后单击 **[!UICONTROL 编辑]**.
 1. 在“编 **[!UICONTROL 辑搜索表单]** ”页中，将“选 **[!UICONTROL 项谓词]** ”从“选 **** 择谓词”选项卡拖至主窗格。
-1. 在&#x200B;**[!UICONTROL 设置]**&#x200B;选项卡中，输入属性的标签和名称。例如，要根据资产的格式搜索资产，请为标签指定用户友好名称，例如， **[!UICONTROL 文件类型]**. 在属性字段中指定执行搜索时所依据的属性，例如, `jcr:content/metadata/dc:format.`
+1. 在&#x200B;**[!UICONTROL 设置]**&#x200B;选项卡中，输入属性的标签和名称。例如，要根据资产的格式搜索资产，请为标签指定用户友好名称，例如， **[!UICONTROL 文件类型]**. 在属性字段中指定执行搜索时所依据的属性，例如， `jcr:content/metadata/dc:format.`
 1. 执行下列操作之一：
 
    * 在 **[!UICONTROL 属性名称]** 字段中，提及JSON文件的路径，在该路径中为选项定义节点并指定相应的键值对。
@@ -173,9 +173,9 @@ ht-degree: 16%
 | [!UICONTROL 日期范围] | 搜索谓词，以搜索在指定范围内为日期属性创建的资源。 在“搜索”面板中，您可以使用日期选取器指定开始日期和结束日期。 | <ul><li>标签</li><li>占位符</li><li>属性名称</li><li>范围文本（自）</li><li>范围文本（至）</li><li>描述</li></ul> |
 | [!UICONTROL 日期] | 基于日期属性的基于滑块的资源搜索的搜索谓词。 | <ul><li>标签</li><li>属性名称</li><li>描述</li></ul> |
 | [!UICONTROL 文件大小] | 搜索谓词，以基于资产的大小进行搜索。 它是一个基于silder的谓词，您可以从可配置的节点中选择slider选项。 默认选项在CRXDE存储库的/libs/dam/options/predicates/filesize中定义。 文件大小以字节为单位。 | <ul><li>标签</li><li>属性名称</li><li>路径</li><li>描述</li></ul> |
-| [!UICONTROL 上次修改的资源] | 搜索谓词以搜索最近修改的资源 | <ul><li>属性名称</li><li>属性值</li><li>描述</li></ul> |
-| [!UICONTROL 发布状态] | 搜索谓词，以基于资产的发布状态搜索资产 | <ul><li>标签</li><li>属性名称</li><li>描述</li></ul> |
-| [!UICONTROL 评分] | 搜索谓词，以基于资产的平均评级搜索资产 | <ul><li>标签</li><li>属性名称</li><li>选项路径</li><li>描述</li></ul> |
+| [!UICONTROL 上次修改的资产] | 搜索谓词以搜索最近修改的资源 | <ul><li>属性名称</li><li>属性值</li><li>描述</li></ul> |
+| [!UICONTROL 发布状态] | 搜索谓词，以根据资产的发布状态搜索资产 | <ul><li>标签</li><li>属性名称</li><li>描述</li></ul> |
+| [!UICONTROL 评级] | 搜索谓词，以基于资产的平均评级搜索资产 | <ul><li>标签</li><li>属性名称</li><li>选项路径</li><li>描述</li></ul> |
 | [!UICONTROL 到期状态] | 搜索谓词，以根据资产的到期状态搜索资产 | <ul><li>标签</li><li>属性名称</li><li>描述</li></ul> |
 | [!UICONTROL 隐藏] | 定义隐藏字段属性以搜索资产的搜索谓词 | <ul><li>属性名称</li><li>属性值</li><li>描述</li></ul> |
 
