@@ -5,9 +5,9 @@ contentOwner: khsingh
 products: SG_EXPERIENCEMANAGER/6.3/FORMS
 docset: aem65
 exl-id: 40bc5af6-9023-437e-95b0-f85d3df7d8aa
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: 4158315c28412bb9498c7d49d21b3f4d72681fc6
 workflow-type: tm+mt
-source-wordcount: '1491'
+source-wordcount: '1533'
 ht-degree: 1%
 
 ---
@@ -236,3 +236,8 @@ AEM [!DNL Forms] 提供直观的用户界面，用于 [创建表单数据模型]
    现在，如果您再次测试id 7107215的读取模型服务，它将获取并显示更新的客户详细信息，如下所示。
 
    ![已读取已更新](assets/read-updated.png)
+
+
+>[!NOTE]
+>
+> 您可以使用自适应表单中的表单数据模型创建和使用SharePoint列表配置，以在SharePoint列表中保存数据或生成的记录文档。 请参阅 [将自适应表单连接到Microsoft® SharePoint列表](/help/forms/using/configuring-submit-actions.md#create-a-sharepoint-list-configuration)，以了解详细步骤。
