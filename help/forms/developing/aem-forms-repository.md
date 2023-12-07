@@ -1,19 +1,15 @@
 ---
 title: 使用AEM Forms存储库
-seo-title: Working with AEM Forms Repository
 description: 管理AEM Forms存储库，以使用Java API和Web服务API创建文件夹、写入、列出、读取、更新和搜索资源。 此外，了解如何创建资源关系、锁定和删除资源。
-seo-description: Manage AEM Forms repository to create folders, write, list, read, update resources, and search resources using the Java API and Web Service API. In addition, learn how to create resource relationships, lock and delete resources.
-uuid: 6ead49f9-ca0d-4ee4-86a6-0a9ced6ec4f8
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
-discoiquuid: d2c95881-6c02-4e34-85af-84607df54287
 role: Developer
 exl-id: a07e51ca-fea0-4719-8071-1b7e805de2ae
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '9095'
+source-wordcount: '9036'
 ht-degree: 0%
 
 ---
@@ -58,7 +54,7 @@ AEM Forms存储库中资源的路径为：
 
 使用存储库服务API，您可以完成以下任务：
 
-* 创建文件夹. 请参阅 [创建文件夹](aem-forms-repository.md#creating-folders).
+* 创建文件夹。 请参阅 [创建文件夹](aem-forms-repository.md#creating-folders).
 * 编写资源及其属性。 请参阅 [写入资源](aem-forms-repository.md#writing-resources).
 * 列出给定收藏集中的资源或其他相关资源。 请参阅 [列出资源](aem-forms-repository.md#listing-resources).
 * 读取资源及其属性。 请参阅 [正在读取资源](aem-forms-repository.md#reading-resources).

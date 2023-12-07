@@ -1,17 +1,13 @@
 ---
 title: 使用待办事项列表
-seo-title: Working with To-do lists
 description: 如何打开、处理和完成所需的任务，例如批准或拒绝请求或添加更多信息。
-seo-description: How to open, work on, and complete the tasks as required, such as approving or rejecting a request or adding more information.
-uuid: f9cfad8e-5d0c-4a30-8153-2a03bf7dd986
 contentOwner: robhagat
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
-discoiquuid: d8546227-d78d-4fe2-a092-222482bb69c9
 docset: aem65
 exl-id: c80bf347-d1ed-488f-a41a-ceb05a6df9e4
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '4024'
 ht-degree: 0%

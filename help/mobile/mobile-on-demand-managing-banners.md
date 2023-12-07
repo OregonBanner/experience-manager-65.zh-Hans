@@ -1,16 +1,12 @@
 ---
 title: 管理横幅
-seo-title: Managing Banners
 description: 横幅代表典型的图形促销链接。 关注此页面以了解更多信息。
-seo-description: Banners represent typically graphical promotional links. Follow this page to learn more.
-uuid: 593fe2ef-84df-42e2-8a03-897fb67a896d
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: authoring-on-demand-services-app
-discoiquuid: fb1abaa0-9c02-4f20-aa7c-073def067452
 exl-id: c65a24e6-3041-4774-aeed-8e188ea19b78
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '655'
 ht-degree: 1%

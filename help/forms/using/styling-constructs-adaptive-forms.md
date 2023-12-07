@@ -3,14 +3,13 @@ title: 自适应表单的样式结构
 description: 使用LESS框架自定义自适应表单的外观。
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
-discoiquuid: ed50fa70-a8dd-4cc6-82a9-d59de0fa417d
 docset: aem65
 feature: Adaptive Forms
 exl-id: 691608a6-be82-4d81-b876-427de997e5be
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '2361'
-ht-degree: 6%
+source-wordcount: '2348'
+ht-degree: 5%
 
 ---
 

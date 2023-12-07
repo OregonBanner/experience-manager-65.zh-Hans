@@ -1,20 +1,16 @@
 ---
 title: 与 Adobe Analytics 集成
-seo-title: Integrating with Adobe Analytics
 description: 了解如何将Adobe Experience Manager (AEM)与Adobe Analytics集成。
-seo-description: Learn how to integrate Adobe Experience Manager (AEM) with Adobe Analytics.
-uuid: d8548263-6ac5-45fb-8c70-52ecd4161bbb
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
-discoiquuid: 444c522e-2f33-4f41-846c-8d317e799659
 docset: aem65
 exl-id: 0a87ece4-57ed-4022-a78a-264c1edf4b4e
-source-git-commit: c7c32130a3257c14c98b52f9db31d80587d7993a
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '316'
-ht-degree: 72%
+source-wordcount: '282'
+ht-degree: 58%
 
 ---
 
@@ -41,10 +37,10 @@ ht-degree: 72%
 以下页面可帮助您配置集成：
 
 * [连接到Adobe Analytics并创建框架](/help/sites-administering/adobeanalytics-connect.md)
-* [为 Adobe Analytics 配置链接跟踪](/help/sites-administering/adobeanalytics-link.md)
-* [建立组件数据与 Adobe Analytics 属性的映射](/help/sites-administering/adobeanalytics-mapping.md)
-* [为 Adobe Analytics 配置视频跟踪](/help/sites-administering/adobeanalytics-video.md)
-* [Adobe 分类](/help/sites-administering/adobeanalytics-classifications.md)
+* [为Adobe Analytics配置链接跟踪](/help/sites-administering/adobeanalytics-link.md)
+* [将组件数据映射到Adobe Analytics属性](/help/sites-administering/adobeanalytics-mapping.md)
+* [为Adobe Analytics配置视频跟踪](/help/sites-administering/adobeanalytics-video.md)
+* [Adobe分类](/help/sites-administering/adobeanalytics-classifications.md)
 
 您也可以使用 [选择加入向导](/help/sites-administering/opt-in.md) 以轻松执行集成。
 
@@ -56,7 +52,7 @@ ht-degree: 72%
 
 请参阅：
 
-* [扩展 Adobe Analytics 集成](/help/sites-developing/extending-analytics.md)，了解有关开发用于收集用户数据的组件和自定义 Adobe Analytics 框架的信息。
+* [扩展Adobe Analytics集成](/help/sites-developing/extending-analytics.md) 有关开发用于收集用户数据的组件和自定义Adobe Analytics框架的信息。
 * 知识库文章 [Adobe Analytics 集成 – 解决问题](https://helpx.adobe.com/cn/experience-manager/kb/sitecatalystintegrationtroubleshooting.html)，了解有关排查 Adobe Analytics 集成问题的信息。
 
 >[!NOTE]

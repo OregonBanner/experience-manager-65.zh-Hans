@@ -1,16 +1,12 @@
 ---
 title: 日志文件
-seo-title: Log files
 description: 诸如运行时错误或启动错误等事件将记录到应用程序服务器日志文件中，这些文件可以使用任何文本编辑器打开。
-seo-description: Events such as run-time or startup errors are recorded to the application server log files, which can be  opened using any text editor.
-uuid: 6ed9fdcd-ff02-4b35-893f-09261a6a557a
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/maintaining_aem_forms
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: cf140483-470f-4bff-8870-304207508aab
 exl-id: 23a65be4-3277-4c73-9189-a9b4d7be73cd
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '115'
 ht-degree: 0%

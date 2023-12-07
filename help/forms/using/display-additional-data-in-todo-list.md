@@ -1,19 +1,15 @@
 ---
 title: 在待办事项列表中显示附加数据
-seo-title: Displaying additional data in ToDo list
 description: 如何自定义LiveCycleAEM Forms工作区待办事项列表的显示，以显示默认列表以外的更多信息。
-seo-description: How-to customize the display of the To-do list of LiveCycle AEM Forms workspace to show more information besides the default.
-uuid: 9467c655-dce2-43ce-8e8f-54542fe81279
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
-discoiquuid: fed3b562-bcc2-4fb7-8fd2-35b1ac621e16
 docset: aem65
 exl-id: f8b84f13-02d3-4787-95e1-25fd684e6d3b
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '282'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -139,10 +135,10 @@ ht-degree: 1%
 
 最后，您需要在开发包中为要添加到任务的每个属性包含一个条目。 要创建工作区代码，请参阅构建AEM Forms工作区代码。
 
-1. 复制 `task.html`:
+1. 复制 `task.html`：
 
-   * 从: `/libs/ws/js/runtime/templates/`
-   * 到: `/apps/ws/js/runtime/templates/`
+   * 从： `/libs/ws/js/runtime/templates/`
+   * 至： `/apps/ws/js/runtime/templates/`
 
 1. 添加新信息到 `/apps/ws/js/runtime/templates/task.html`.
 

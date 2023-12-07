@@ -1,18 +1,16 @@
 ---
 title: 用户管理和安全性
 description: 了解AEM中的用户管理和安全性。
-uuid: 4512c0bf-71bf-4f64-99f6-f4fa5a61d572
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: Security
 content-type: reference
-discoiquuid: e72da81b-4085-49b0-86c3-11ad48978a8a
 docset: aem65
 exl-id: 53d8c654-8017-4528-a44e-e362d8b59f82
 feature: Security
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '5401'
+source-wordcount: '5398'
 ht-degree: 1%
 
 ---
@@ -407,7 +405,7 @@ AEM WCM使用访问控制列表(ACL)来组织应用于各种页面的权限。
 
 <!-- ??? in table below. -->
 
-| 制表符 | 描述 |
+| 选项卡 | 描述 |
 |--- |--- |
 | 筛选器框 | 用于筛选列出的用户、组或两者的机制。 请参阅 [筛选用户和组](#filtering-users-and-groups). |
 | 隐藏用户 | 一种切换开关，可隐藏列出的所有用户，仅保留组。 请参阅 [隐藏用户和组](#hiding-users-and-groups). |

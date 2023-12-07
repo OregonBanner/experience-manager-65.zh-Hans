@@ -1,21 +1,17 @@
 ---
 title: 安全核对清单
-seo-title: Security Checklist
 description: 了解配置和部署AEM时的各种安全注意事项。
-seo-description: Learn about the various security considerations when configuring and deploying AEM.
-uuid: 8e293316-4177-4271-87c6-9dc1a2e85a07
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: Security
 content-type: reference
-discoiquuid: de7d7209-c194-4d19-853b-468ebf3fa4b2
 docset: aem65
 exl-id: 314a6409-398c-470b-8799-0c4e6f745141
 feature: Security
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '3004'
-ht-degree: 1%
+source-wordcount: '2959'
+ht-degree: 0%
 
 ---
 
@@ -257,7 +253,7 @@ AEM 6.1附带有助于防御跨站点请求伪造攻击的机制，称为 **CSRF
 
 ### 减少拒绝服务(DoS)攻击 {#mitigate-denial-of-service-dos-attacks}
 
-拒绝服务 (DoS) 攻击是一种试图让计算机资源对其目标用户不可用的攻击。此攻击通常通过使资源过载来实现；例如：
+拒绝服务(DoS)攻击是一种试图使计算机资源对其目标用户不可用的攻击。 此攻击通常通过使资源过载来实现；例如：
 
 * 来自外部源的大量请求。
 * 请求系统无法成功传递的更多信息。

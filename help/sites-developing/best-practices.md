@@ -1,25 +1,23 @@
 ---
 title: 面向AEM开发人员的最佳实践
-description: Adobe 工程和咨询团队开发了一组面向 AEM 开发人员的全面的最佳实践。
-uuid: f962c31f-8140-482f-b189-16376e23bfed
+description: Adobe工程和咨询团队已经为AEM开发人员制定了一组全面的最佳实践。
 contentOwner: Justin Edelson
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
-discoiquuid: 99678c1a-81f3-4fb3-bf73-98f0691c3fb6
 exl-id: 0a478e80-c1b2-46c1-a6be-794d78b85d69
-source-git-commit: a2fd3c0c1892ac648c87ca0dec440e22144c37a2
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '466'
-ht-degree: 13%
+source-wordcount: '445'
+ht-degree: 3%
 
 ---
 
 # 最佳实践{#best-practices}
 
-## 面向开发人员的最佳实践 — 快速入门 {#best-practices-for-developers-getting-started}
+## 开发人员最佳实践 — 快速入门 {#best-practices-for-developers-getting-started}
 
-Adobe 工程和咨询团队开发了一组面向 AEM 开发人员的全面的最佳实践。Adobe开发人员在开发核心AEM产品更新和客户实施客户代码时，应遵守这些最佳实践。
+Adobe工程和咨询团队已经为AEM开发人员制定了一组全面的最佳实践。 Adobe开发人员在开发核心的AEM产品更新和客户实施客户代码时，应遵守这些最佳实践。
 
 在开始AEM开发项目之前，请先查看以下最佳实践：
 
@@ -72,7 +70,7 @@ Adobe 工程和咨询团队开发了一组面向 AEM 开发人员的全面的最
   <tr>
    <td>工作流</td>
    <td><a href="/help/sites-developing/workflows-best-practices.md">开发和扩展工作流</a></td>
-   <td><p>通过工作流，您可以自动化Adobe Experience Manager (AEM)活动，并且可以表示在AEM环境中发生的许多处理，因此强烈建议仔细规划工作流实施。</p> </td>
+   <td><p>借助工作流，您可以自动执行Adobe Experience Manager (AEM)活动，并且可以显示在AEM环境中发生的大量处理，因此强烈建议仔细规划工作流实施。</p> </td>
   </tr>
  </tbody>
 </table>
@@ -90,14 +88,14 @@ Adobe 工程和咨询团队开发了一组面向 AEM 开发人员的全面的最
 
 ## 工具/HTL {#tooling-htl}
 
-HTML模板语言(HTL)是随AEM 6.0引入的新HTML模板系统。它取代了JSP和ESP作为AEM的首选模板系统。
+HTML模板语言(HTL)是随AEM 6.0引入的新HTML模板系统。它取代了JSP和ESP作为AEM首选的模板系统。
 
 |  |  |  |
 |---|---|---|
-| HTL 概述 | [HTL概述和语法](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html) | 本文档介绍了HTL是什么、如何移动到HTL、示例项目、语法、表达式和语句 |
-| 在Java中使用API | [HTL Java Use-API](https://helpx.adobe.com/experience-manager/htl/using/use-api.html) | HTL Java Use-API让HTL文件可以访问自定义Java类中的helper方法。 |
+| HTL 概述 | [HTL概述和语法](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html) | 本文档介绍HTL是什么、如何移动到HTL、示例项目、语法、表达式和语句 |
+| 在Java中使用API | [HTL Java Use-API](https://helpx.adobe.com/experience-manager/htl/using/use-api.html) | HTL Java Use-API让HTL文件可以访问自定义Java类中的Helper方法。 |
 
 >[!NOTE]
 >
->以下多部分教程可能与设置新AEM项目的最佳实践相关，其中详细说明了核心组件、可编辑模板、客户端库和组件开发：
->[《AEM Sites 快速入门》 - WKND 教程](https://helpx.adobe.com/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop.html)
+>以下多部分教程可能与设置新AEM项目的最佳实践相关，其中详细介绍核心组件、可编辑模板、客户端库和组件开发：
+>[AEM Sites快速入门 — WKND教程](https://helpx.adobe.com/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop.html)

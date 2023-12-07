@@ -1,18 +1,14 @@
 ---
 title: WebDAV访问
-seo-title: WebDAV Access
 description: 了解如何使用WebDAV访问AdobeExperience Manager。
-seo-description: Learn about WebDAV access in AEM.
-uuid: b0ecaa5d-5454-42df-8453-404ece734c32
 contentOwner: Chiradeep Majumdar
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: content
 content-type: reference
-discoiquuid: 1eaf7afe-a181-45df-8766-bd564b1ad22a
 exl-id: 891ee66c-e49c-4561-8fef-e6e448a8aa1c
-source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '1101'
+source-wordcount: '1117'
 ht-degree: 0%
 
 ---
@@ -152,7 +148,7 @@ http://localhost:4502/crx/repository/staging
 1. 输入映射详细信息：
 
    * **驱动**：选择任意可用书信
-   * **文件夹**: `http://localhost:4502`
+   * **文件夹**： `http://localhost:4502`
    * Check **使用其他凭据连接**
 
    单击“完成”

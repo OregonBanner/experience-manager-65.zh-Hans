@@ -1,20 +1,16 @@
 ---
 title: 性能准则
-seo-title: Performance Guidelines
 description: 本文提供了有关如何优化AEM部署性能的一般准则。
-seo-description: This article provides general guidelines on how to optimize the performance of your AEM deployment.
-uuid: 38cf8044-9ff9-48df-a843-43f74b0c0133
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: configuring
-discoiquuid: 9ccbc39e-aea7-455e-8639-9193abc1552f
 feature: Configuring
 exl-id: 5a305a5b-0c3d-413b-88c1-1f5abf7e1579
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '2914'
-ht-degree: 6%
+source-wordcount: '2935'
+ht-degree: 4%
 
 ---
 
@@ -375,7 +371,7 @@ AEM部署有三个重要的构建块。 此 **创作实例** 内容作者、编�
 
 **单个产品方案**
 
-AEM Assets:
+AEM Assets：
 
 * 用户交互：浏览资源/搜索资源/下载资源/读取资源元数据/更新资源元数据/上传资源/运行上传资源工作流
 * 执行模式：并发用户，每个用户单次交互
@@ -390,7 +386,7 @@ AEM Sites +资产：
 
 **垂直用例方案**
 
-媒体:
+媒体：
 
 * `Read Article Page (27.4%), Read Page (10.9%), Create Session (2.6%), Activate Content Page (1.7%), Create Content Page (0.4%), Create Paragraph (4.3%), Edit Paragraph (0.9%), Image Component (0.9%), Browse Assets (20%), Read Asset Metadata (8.5%), Download Asset (4.2%), Search Asset (0.2%), Update Asset Metadata (2.4%), Upload Asset (1.2%), Browse Project (4.9%), Read Project (6.6%), Project Add Asset (1.2%), Project Add Site (1.2%), Create Project (0.1%), Author Search (0.4%)`
 * 执行模式：并发用户，每个用户的混合交互
@@ -431,7 +427,7 @@ Adobe建议将TarMK作为客户在所有部署场景中使用的默认持久性�
 
 ### TarMK设置指南 {#tarmk-settings-guideline}
 
-要获得良好的性能，您应该遵循下面提供的设置指南。 有关如何更改设置的说明， [查看此页面](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html?lang=zh-Hans).
+要获得良好的性能，您应该遵循下面提供的设置指南。 有关如何更改设置的说明， [查看此页面](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html?lang=en).
 
 <table>
  <tbody>
@@ -475,7 +471,7 @@ Adobe建议将TarMK作为客户在所有部署场景中使用的默认持久性�
    <td>DAM更新资产工作流</td>
    <td><code>Transient Workflow</code></td>
    <td>已选中</td>
-   <td>此工作流用于管理资产的更新.</td>
+   <td>此工作流用于管理资产的更新。</td>
   </tr>
   <tr>
    <td>DAM元数据写回</td>
@@ -541,7 +537,7 @@ Adobe建议将TarMK作为客户在所有部署场景中使用的默认持久性�
 
 ### MongoMK设置准则 {#mongomk-settings-guidelines}
 
-要获得良好的性能，您应该遵循下面提供的设置指南。 有关如何更改设置的说明， [查看此页面](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html?lang=zh-Hans).
+要获得良好的性能，您应该遵循下面提供的设置指南。 有关如何更改设置的说明， [查看此页面](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html?lang=en).
 
 <table>
  <tbody>

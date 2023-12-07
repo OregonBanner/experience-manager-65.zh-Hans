@@ -1,23 +1,21 @@
 ---
 title: 参与工作流
-description: 工作流通常包括需要人员对页面或资源执行活动的步骤。工作流会选择要执行活动的用户或组，并将工作项分配给该用户或组。
-uuid: 04dcc8f2-dc11-430f-b0ae-47ef2cb069a2
+description: 工作流通常包括需要人员对页面或资源执行活动的步骤。工作流选择用户或组来执行活动，并将工作项分配给该人员或组。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: site-features
-discoiquuid: 1d7a4889-82c5-4096-8567-8f66215a8458
 exl-id: 2f1a3a73-7a20-48c7-8f3e-54252f5fb71c
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '540'
-ht-degree: 50%
+source-wordcount: '541'
+ht-degree: 42%
 
 ---
 
 # 参与工作流{#participating-in-workflows}
 
-工作流通常包括需要人员对页面或资源执行活动的步骤。工作流会选择要执行活动的用户或组，并将工作项分配给该用户或组。
+工作流通常包括需要人员对页面或资源执行活动的步骤。工作流选择用户或组来执行活动，并将工作项分配给该人员或组。
 
 ## 处理您的工作项 {#processing-your-work-items}
 

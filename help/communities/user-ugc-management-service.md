@@ -1,21 +1,17 @@
 ---
 title: AEM Communities中的用户和UGC管理服务
-seo-title: User and UGC Management Service in AEM Communities
 description: 使用API批量删除和批量导出用户生成的内容，并禁用用户帐户。
-seo-description: Use APIs to bulk delete and bulk export user generated content, and disable user account.
-uuid: 91180659-617d-4f6c-9a07-e680770d0d8f
 contentOwner: mgulati
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
-discoiquuid: d305821d-1371-4e4a-8b28-8eee8fafa43b
 docset: aem65
 role: Admin
 exl-id: 526ef0fa-3f20-4de4-8bc5-f435c60df0d0
-source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '590'
-ht-degree: 1%
+source-wordcount: '558'
+ht-degree: 0%
 
 ---
 
@@ -58,8 +54,8 @@ AEM Communities提供现成的API来管理用户配置文件和批量管理用�
 
 例如，要通过http-user请求删除具有可授权ID weston.mccall@dodgit.com的POST的UGC，请使用以下参数：
 
-* 用户 = `weston.mccall@dodgit.com`
-* 操作 = `deleteUgc`
+* 用户= `weston.mccall@dodgit.com`
+* 操作= `deleteUgc`
 
 ### 从Adobe Analytics中删除UGC {#delete-ugc-from-adobe-analytics}
 
@@ -81,8 +77,8 @@ AEM Communities提供现成的API来管理用户配置文件和批量管理用�
 
 例如，删除具有可授权ID的用户的配置文件 `weston.mccall@dodgit.com` 通过httpPOST请求，使用以下参数：
 
-* 用户 = `weston.mccall@dodgit.com`
-* 操作 = `deleteUser`
+* 用户= `weston.mccall@dodgit.com`
+* 操作= `deleteUser`
 
 >[!NOTE]
 >

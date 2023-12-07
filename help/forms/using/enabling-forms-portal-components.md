@@ -1,16 +1,12 @@
 ---
 title: 启用Forms Portal组件
-seo-title: Enabling forms portal components
 description: 现成Forms Portal组件已禁用。 启用Document Services和Document Services谓词组以启用Forms Portal组件。
-seo-description: Out of the box, Forms Portal components are disabled. Enable Document Services and Document Services Predicates groups to enable Forms Portal components.
-uuid: 92d25da6-f1df-4ac0-bf84-2edf9e2722b3
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
-discoiquuid: 4d318908-c724-4582-a82b-6e9b1c55705b
 feature: Forms Portal
 exl-id: 572194b7-063b-4c38-af43-aba78e9c51c6
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '332'
 ht-degree: 5%

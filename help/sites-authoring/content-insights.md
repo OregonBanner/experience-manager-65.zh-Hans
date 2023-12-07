@@ -1,18 +1,14 @@
 ---
 title: 内容分析
-seo-title: Content Insight
 description: 内容分析提供了有关使用网站分析和SEO推荐的页面性能的信息
-seo-description: Content Insight provides information about page performance using web analytics and SEO recommendation
-uuid: 32f5b37c-2a82-462a-9f0a-c19bed46e198
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: site-features
-discoiquuid: 60f980fd-049e-43c1-8b5d-60a8279b357a
 exl-id: 187f3cde-a0db-4c02-9e8b-08272987a67d
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '530'
+source-wordcount: '537'
 ht-degree: 0%
 
 ---

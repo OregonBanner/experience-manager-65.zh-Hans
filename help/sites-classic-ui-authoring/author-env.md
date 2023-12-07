@@ -1,19 +1,15 @@
 ---
 title: 使用创作环境
-seo-title: Working with the Author Environment
 description: 通过创作环境，您可以执行与创作（包括页面创作和管理资产）以及管理在网站上生成和维护内容时所需的任务相关的任务。
-seo-description: The author environment lets you perform tasks related to authoring (including page authoring and managing assets) and administering tasks you need when generating and maintaining the content on your website.
-uuid: ebeaa2c3-05b0-4108-8e84-69b9ba48cfbe
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: introduction
 content-type: reference
-discoiquuid: 8c747892-c5ba-4288-b5e7-75fd40d92f5c
 exl-id: 4486c503-21e6-493a-8994-b0f8cd34c85a
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '248'
-ht-degree: 1%
+source-wordcount: '252'
+ht-degree: 0%
 
 ---
 
@@ -48,7 +44,7 @@ ht-degree: 1%
    * 它专为触控和桌面设备而设计（针对触控而优化）。 不过，所有设备上的外观和感觉都相同 [查看和选择资源](/help/sites-authoring/basic-handling.md) 略有不同（点击次数与点击次数）。
    * 请参阅 [标准创作文档](/help/sites-authoring/author.md) 有关如何使用基于触摸的UI进行创作的更多详细信息。 以下文档侧重于经典UI。
 
-   * 桌面:
+   * 桌面：
 
    ![chlimage_1-150](assets/chlimage_1-150.png)
 

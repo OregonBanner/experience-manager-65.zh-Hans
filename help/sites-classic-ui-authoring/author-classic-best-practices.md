@@ -1,15 +1,11 @@
 ---
 title: 最佳实践
-seo-title: Best Practices
-description: 创作最佳实践描述了如何以尽可能高效和最有效的方式使用AEM。 这一不断增加的主题列表包括AEM中的多个领域。
-seo-description: Authoring best practices describe how to use AEM in the most efficient and most effective way possible. This growing list of topics includes a variety of areas in AEM.
-uuid: d1f58335-0aa6-4b35-bdcd-cf6051bd1439
+description: 创作最佳实践描述了如何以尽可能高效和最有效的方式使用AEM。 此不断增加的主题列表包括AEM中的多个领域。
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
-discoiquuid: a715c372-3d05-4119-9d2b-41bca0b16b19
-source-git-commit: 22cdd6a7b343749b8ce85d8c1b230d094732f44a
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '282'
 ht-degree: 3%
@@ -19,11 +15,11 @@ ht-degree: 3%
 
 # 最佳实践{#best-practices}
 
-创作最佳实践描述了如何以尽可能高效和最有效的方式使用AEM。 这一不断增加的主题列表包括AEM中的多个领域。
+创作最佳实践描述了如何以尽可能高效和最有效的方式使用AEM。 此不断增加的主题列表包括AEM中的多个领域。
 
 以下区域提供了有关最佳实践的文档：
 
-* [Assets](#assets)
+* [资源](#assets)
 * [Sites](#sites)
 * [Forms](#forms)
 
@@ -35,9 +31,9 @@ ht-degree: 3%
 
 下面的表格中介绍了特定文档并将其链接到该文档。
 
-## Assets {#assets}
+## 资源 {#assets}
 
-以下主题介绍了有关资产的最佳实践，包括Dynamic Media功能和Dynamic Media Classic集成：
+以下主题介绍了有关资源的最佳实践，包括Dynamic Media功能和Dynamic Media Classic集成：
 
 <table>
  <tbody>
@@ -54,7 +50,7 @@ ht-degree: 3%
   <tr>
    <td>Dynamic Imaging</td>
    <td><a href="/help/assets/best-practices-for-optimizing-the-quality-of-your-images.md">Dynamic Imaging最佳实践</a></td>
-   <td><p>描述如何在使用Dynamic Media功能或与Dynamic Media Classic集成时锐化图像以获得最佳结果，以及优化图像质量的最佳方法。 </p> </td>
+   <td><p>描述如何在使用Dynamic Media功能或与Dynamic Media Classic集成时锐化图像以获得最佳结果以及优化图像质量的最佳方法。 </p> </td>
   </tr>
   <tr>
    <td>多语言资源</td>
@@ -72,6 +68,6 @@ ht-degree: 3%
 
 ## Forms {#forms}
 
-自适应表单： [使用自适应表单的最佳实践](/help/forms/using/adaptive-forms-best-practices.md)  — 介绍设置、创作和自定义自适应表单的最佳实践。
+自适应表单： [使用自适应表单的最佳实践](/help/forms/using/adaptive-forms-best-practices.md)  — 描述设置、创作和自定义自适应表单的最佳实践。
 
 HTML5表单： [设计HTML5表单的最佳实践](/help/forms/using/best-practices-for-html5-forms.md)  — 介绍处理HTML5表单布局和设计的最佳实践。

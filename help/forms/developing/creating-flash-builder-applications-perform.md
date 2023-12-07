@@ -1,19 +1,15 @@
 ---
 title: 创建使用HTTP令牌执行SSO身份验证的Flash Builder应用程序
-seo-title: Creating Flash Builder applicationsthat perform SSO authentication using HTTP tokens
 description: 使用使用HTTP令牌执行单点登录(SSO)身份验证的Flash Builder创建客户端应用程序。 对用户操作进行一次身份验证，然后使用该身份验证执行多个AEM Forms操作。
-seo-description: Create a client application using Flash Builder that performs single-sign on (SSO) authentication using HTTP tokens. Authenticate a user for an operation once and use that authentication to perform multiple AEM Forms operations.
-uuid: 273db00a-a665-4e52-88fa-4fca06d05f8c
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
-discoiquuid: 0ff30df7-b3ad-4c34-9644-87c689acc294
 role: Developer
 exl-id: 7f1f49e6-028c-47b6-a24d-a83bed40242e
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '1795'
+source-wordcount: '1783'
 ht-degree: 0%
 
 ---

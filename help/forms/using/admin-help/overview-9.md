@@ -1,27 +1,23 @@
 ---
-title: Forms工作流概述
-seo-title: Overview of Forms workflow
+title: Forms工作流程概述
 description: Forms工作流允许用户设计、管理和优化以人为中心的流程。 使用表单工作流，用户还可以管理连接系统和人员的自动化业务流程应用程序。
-seo-description: Forms workflow lets users design, manage, and optimize human-centric processes. Using forms workflow, users can also manage automated business-process applications that connect systems and people.
-uuid: b28ada7c-de75-416a-b2c8-f6494be5330c
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_forms_workflow
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 7d2a9de8-13d1-4981-9ba2-9654127556b8
 exl-id: 68a9d95a-d51c-4a97-ae36-d4cb16c6fac0
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '254'
 ht-degree: 2%
 
 ---
 
-# Forms工作流概述 {#overview-of-forms-workflow}
+# Forms工作流程概述 {#overview-of-forms-workflow}
 
 Forms工作流允许用户设计、管理和优化以人为中心的流程。 使用表单工作流，用户还可以管理连接系统和人员的自动化业务流程应用程序。
 
-在管理控制台中的每个Forms工作流页面上，您可以执行一组不同的任务，如此表中所述。
+在管理控制台中的每个Forms工作流页面上，您可以执行一组不同的任务，如本表中所述。
 
 <table>
  <thead>
@@ -76,7 +72,7 @@ Forms工作流允许用户设计、管理和优化以人为中心的流程。 �
      <li><p>查看所有停止的操作及其错误</p></li>
      <li><p>重试或终止停止的操作</p></li>
     </ul></td>
-   <td><p><a href="/help/forms/using/admin-help/stalled-operations-branches.md#working-with-stalled-operations-and-branches">使用停止的操作和分支</a></p></td>
+   <td><p><a href="/help/forms/using/admin-help/stalled-operations-branches.md#working-with-stalled-operations-and-branches">处理停止的操作和分支</a></p></td>
   </tr>
   <tr>
    <td><p>停止的分支错误</p></td>
@@ -85,21 +81,21 @@ Forms工作流允许用户设计、管理和优化以人为中心的流程。 �
      <li><p>查看所有停止的分支及其错误</p></li>
      <li><p>重试停止的分支</p></li>
     </ul></td>
-   <td><p><a href="/help/forms/using/admin-help/stalled-operations-branches.md#working-with-stalled-operations-and-branches">使用停止的操作和分支</a></p></td>
+   <td><p><a href="/help/forms/using/admin-help/stalled-operations-branches.md#working-with-stalled-operations-and-branches">处理停止的操作和分支</a></p></td>
   </tr>
   <tr>
    <td><p>外出办公</p></td>
    <td>
     <ul>
      <li><p>查看用户的外出信息</p></li>
-     <li><p>更改用户的状态（在办公室内或办公室外）</p></li>
+     <li><p>更改用户的状态（在办公室内或外出）</p></li>
      <li><p>添加外出日期范围 </p></li>
      <li><p>指定用户外出时如何处理任务</p></li>
     </ul></td>
    <td><p><a href="/help/forms/using/admin-help/configuring-out-office-settings.md#configuring-out-of-office-settings">配置“外出”设置</a></p></td>
   </tr>
   <tr>
-   <td><p>商业日历</p></td>
+   <td><p>业务日历</p></td>
    <td>
     <ul>
      <li><p>创建定义工作日和非工作日的业务日历</p></li>

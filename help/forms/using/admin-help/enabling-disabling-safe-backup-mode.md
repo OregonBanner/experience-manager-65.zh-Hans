@@ -1,16 +1,12 @@
 ---
 title: 启用和禁用安全备份模式
-seo-title: Enabling and disabling safe backup mode
 description: 在“备份设置”页上，您可以在安全备份模式下操作AEM表单，以便可靠地备份数据库和全局文档存储(GDS) (GDS)目录。 了解如何启用和禁用安全备份模式。
-seo-description: On the Backup Settings page, you can operate AEM forms in safe backup mode so that you can reliably back up your database and Global Document Storage (GDS) (GDS) directory. Learn how to enable and disable safe backup mode.
-uuid: 2fdeaeaf-e969-40a4-8aee-1f2b627d3942
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 9fda71e4-78a1-4581-9d02-bf06a75c3bcb
 exl-id: f0ab712f-ecd9-4be8-a7a5-fd1a7a8c9a0b
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '196'
 ht-degree: 0%
@@ -25,7 +21,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->设置此选项不会备份您的系统；它可以为您的系统准备备份。
+>设置此选项不会备份您的系统；它准备您的系统以进行备份。
 
 ## 启用安全备份模式 {#enable-safe-backup-mode}
 
@@ -34,7 +30,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->如果系统已经在安全备份模式下运行，则单击“确定”时不会创建新的预留。
+>如果系统已经在安全备份模式下运行，则单击“确定”时不会创建新的保留。
 
 ## 禁用安全备份模式 {#disable-safe-backup-mode}
 

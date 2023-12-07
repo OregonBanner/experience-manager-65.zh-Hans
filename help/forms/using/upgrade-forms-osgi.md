@@ -1,15 +1,13 @@
 ---
 title: 在OSGi上升级到AEM 6.5 Forms
 description: 您可以执行从AEM 6.1 Forms、AEM 6.2 Forms和LiveCycleES4 SP1到AEM 6.3 Forms的直接升级。
-uuid: 1435246a-9215-4d88-b52c-59a5c329bb77
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.3/FORMS
 topic-tags: installing
 geptopics: SG_AEMFORMS/categories/jee
-discoiquuid: e745033f-8015-4fae-9d82-99d35802c0a6
 role: Admin
 exl-id: 1e39455e-f588-42a2-91f5-daefcfed82a0
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '946'
 ht-degree: 1%

@@ -1,25 +1,21 @@
 ---
 title: 监控AEM forms部署
-seo-title: Monitoring AEM forms deployments
 description: 您可以从系统级别和内部级别监控AEM Forms部署。 通过本文档了解有关监控AEM表单部署的更多信息。
-seo-description: You can monitor AEM forms deployments from both a system level and an internal level. Learn more about monitoring AEM forms deployments from this document.
-uuid: 032b7a93-3069-4ad5-a8c6-4c160f290669
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/maintaining_aem_forms
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: b3e7bca0-5aaf-4f28-bddb-fd7e8ed72ee8
 exl-id: 931e8095-5c7c-4c1f-b95b-75ac2827d4f3
-source-git-commit: c47b4dcfd2fbdcb0b98ad815f5b04d8f593e4f64
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '581'
+source-wordcount: '587'
 ht-degree: 0%
 
 ---
 
 # 监控AEM forms部署 {#monitoring-aem-forms-deployments}
 
-您可以从系统级别和内部级别监控AEM Forms部署。 您可以使用HP OpenView、IBM®Tivoli和CA UniCenter等专业管理工具以及一个名为的第三方JMX监视器 *JConsole* 专门监控Java™活动。 实施监控策略可提高AEM Forms部署的可用性、可靠性和性能。
+您可以从系统级别和内部级别监控AEM Forms部署。 您可以使用专业管理工具，如HP OpenView、IBM®Tivoli和CA UniCenter，以及名为的第三方JMX监视器 *JConsole* 专门监控Java™活动。 实施监控策略可提高AEM Forms部署的可用性、可靠性和性能。
 
 <!-- For more information about monitoring AEM forms deployments, see [A technical guide for monitoring AEM forms deployments](https://www.adobe.com/devnet/livecycle/pdfs/lc_monitoring_wp_ue.pdf). This URL is 404. No suitable replacement URL was found after a search. Do not make this link live if it is dead! -->
 
@@ -94,17 +90,17 @@ AEM Forms提供两个注册的MBean，用于提供导航和统计信息。 这�
 
 **最小调用时间：** 自服务器启动以来执行的最短调用的持续时间。
 
-**异常计数：** 导致失败的调用数。
+**例外计数：** 导致失败的调用数。
 
 **异常消息：** 发生的上一个异常的错误消息。
 
 **上次取样日期时间：** 上次调用的日期。
 
-**时间单位：** 默认值为毫秒。
+**时间单位：** 缺省值为毫秒。
 
 要启用JMX监视，应用程序服务器通常需要一些配置。 有关详细信息，请参阅应用程序服务器文档。
 
-### 如何设置开放JMX访问的示例 {#examples-of-how-to-set-up-open-jmx-access}
+### 有关如何设置开放JMX访问的示例 {#examples-of-how-to-set-up-open-jmx-access}
 
 **JBoss® 4.0.3/4.2.0 — 配置JVM启动**
 
@@ -130,12 +126,12 @@ AEM Forms提供两个注册的MBean，用于提供导航和统计信息。 这�
 
 >[!NOTE]
 >
->对于WebLogic，您可以使用remote或IIOP访问MBean。
+>对于WebLogic，您可以使用远程或IIOP访问MBean。
 
 **远程访问MBean**
 
-1. 启动JConsole以创建新连接，然后单击远程选项卡。
-1. 输入主机名和端口（9088，即JVM启动选项期间指定的数字）。
+1. 启动JConsole以建立新连接，然后单击远程选项卡。
+1. 输入主机名和端口（9088，即JVM启动选项期间指定的编号）。
 
 **WebSphere® 6.1 — 配置JVM启动**
 

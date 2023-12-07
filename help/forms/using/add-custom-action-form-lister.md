@@ -1,16 +1,12 @@
 ---
 title: 添加对表单列表程序项的自定义操作
-seo-title: Adding custom action on form lister items
 description: 表单开发人员可以在表单门户页面上向表单列表添加更多操作。 默认情况下，表单列表允许您访问表单、填写并提交表单。
-seo-description: Form developers can add more actions to the listing of forms on the forms portal page. By default, the form listing lets you access the form, fill it, and submit it.
-uuid: 5703ba27-7fb8-482e-b933-a060574165dc
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: customization
-discoiquuid: c34dd4c2-5fff-4355-b86d-cc8a956dd8af
 docset: aem65
 exl-id: 7c2a91c8-9b68-4491-88e2-f7ea68f5a79f
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '264'
 ht-degree: 0%
@@ -50,4 +46,4 @@ ht-degree: 0%
 
 在对模板进行编辑后，示例门户页面包含一个按钮，用于通过电子邮件发送表单的链接，如下所示。
 
-![email](assets/email.png)
+![电子邮件](assets/email.png)

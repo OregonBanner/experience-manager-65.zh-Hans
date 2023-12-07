@@ -1,18 +1,14 @@
 ---
 title: 同步目录
-seo-title: Synchronizing directories
 description: 了解如何使用手动或计划同步将用户管理数据库与对源目录服务器的更改同步。
-seo-description: Learn how to synchronize the User Management database with changes to the source directory servers using manual or scheduled synchronization.
-uuid: 71cbc04d-6172-49b7-a490-ff3233c1b2bb
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/setting_up_and_managing_domains
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 7ec0698a-9e6e-48d4-bba2-5a6eee313900
 exl-id: cb642289-4137-4ba7-8bde-0e458c8c94fe
-source-git-commit: e2a3470784beb04c2179958ac6cb98861acfaa71
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '997'
+source-wordcount: '1003'
 ht-degree: 0%
 
 ---
@@ -93,7 +89,7 @@ cron表达式的使用基于Quartz开源作业调度系统1.4.0版。
 
 * 要关闭自动同步，请选择“发生”并从列表中选择“从不”。
 * （可选）要将用户和组信息推送到Content Services（已弃用），请选择选择此选项以将用户和组推送到“已注册的外部主体存储提供程序”选项。 通过“用户和组”页面添加新用户和组时，此选项也适用。
-* 单击保存。
+* 单击“保存”。
 
 ## 停止当前正在进行的所有目录同步 {#stop-all-directory-synchronizations-currently-in-progress}
 

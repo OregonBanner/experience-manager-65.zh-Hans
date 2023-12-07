@@ -1,19 +1,15 @@
 ---
 title: 配置撤消以进行页面编辑
-seo-title: Configuring Undo for Page Editing
 description: 了解如何为AEM中的页面编辑配置撤消支持。
-seo-description: Learn how to configure Undo support for page editing in AEM.
-uuid: e5a49587-a2a6-41d5-b449-f7a8f7e4cee6
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
-discoiquuid: 3cc7efc5-bcb2-41c9-b78b-308f6b7a298e
 exl-id: 2cf3ac3f-ee17-480d-a32a-c57631502693
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '702'
-ht-degree: 3%
+ht-degree: 2%
 
 ---
 
@@ -49,32 +45,32 @@ ht-degree: 3%
 ( `cq.wcm.undo.enabled`)
 
    * **描述**：确定页面作者是否可以撤消和重做更改。
-   * **默认**: `Selected`
+   * **默认**： `Selected`
    * **类型**：`Boolean`
 
 * **路径**
 ( `cq.wcm.undo.path`)
 
    * **描述**：用于保留二进制还原数据的存储库路径。 当作者更改二进制数据（如图像）时，数据的原始版本将保留在此处。 撤消对二进制数据的更改时，此二进制撤消数据将还原到页面。
-   * **默认**: `/var/undo`
+   * **默认**： `/var/undo`
    * **类型**：`String`
 
   >[!NOTE]
   >
   >默认情况下，只有管理员才能访问 `/var/undo` 节点。 只有在授予作者访问二进制撤消数据的权限后，他们才能对二进制内容执行撤消和重做操作。
 
-* **最小. 有效性**
+* **最低 有效性**
 ( `cq.wcm.undo.validity`)
 
    * **描述**：二进制还原数据存储的最小时间（以小时为单位）。 在此时间段之后，二进制数据可供删除，以节省磁盘空间。
-   * **默认**: `10`
+   * **默认**： `10`
    * **类型**：`Integer`
 
 * **步骤**
 ( `cq.wcm.undo.steps`)
 
    * **描述**：还原历史记录中存储的最大页面操作数。
-   * **默认**: `20`
+   * **默认**： `20`
    * **类型**：`Integer`
 
 * **持久性**
@@ -85,7 +81,7 @@ ht-degree: 3%
       * `CQ.undo.persistence.WindowNamePersistence`：使用window.name属性保留历史记录。
       * `CQ.undo.persistence.CookiePersistance`：保留使用Cookie的历史记录。
 
-   * **默认**: `CQ.undo.persistence.WindowNamePersistence`
+   * **默认**： `CQ.undo.persistence.WindowNamePersistence`
    * **类型**：`String`
 
 * **持久性模式**
@@ -95,7 +91,7 @@ ht-degree: 3%
 
      保留撤消历史记录会使用Web浏览器资源。 如果用户的浏览器对页面编辑的反应较慢，请尝试在页面重新加载时保留撤消历史记录。
 
-   * **默认**: `Selected`
+   * **默认**： `Selected`
    * **类型**：`Boolean`
 
 * **标记模式**
@@ -106,7 +102,7 @@ ht-degree: 3%
       * 闪烁：段落的选择指示器会暂时闪烁。
       * 选择：选定段落。
 
-   * **默认**: `flash`
+   * **默认**： `flash`
    * **类型**：`String`
 
 * **组件良好**

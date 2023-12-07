@@ -1,20 +1,16 @@
 ---
 title: 将自定义属性添加到通信管理资产
-seo-title: Add custom properties to Correspondence Management assets
 description: 了解如何将自定义属性添加到通信管理资产。
-seo-description: Learn how to add custom properties to Correspondence Management assets.
-uuid: 4716e181-d3ea-424b-9544-376cc649bce7
 content-type: reference
 topic-tags: correspondence-management
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 79437b96-7b57-4581-b7e7-fcaedc3d05de
 docset: aem65
 feature: Correspondence Management
 exl-id: ba2e145d-51ee-4844-a9e1-9927971d25a1
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '4428'
-ht-degree: 5%
+source-wordcount: '4431'
+ht-degree: 4%
 
 ---
 
@@ -65,7 +61,7 @@ ht-degree: 5%
 
       ![覆盖节点](assets/cmmetapropertiesoverlaynode.png)
 
-   1. 单击&#x200B;**确定**。文件夹结构将在apps文件夹中创建。
+   1. 单击 **确定**. 文件夹结构将在apps文件夹中创建。
 
    1. 单击&#x200B;**全部保存**。
 
@@ -205,7 +201,7 @@ ht-degree: 5%
 
       **匹配节点类型：** 已选择
 
-   1. 单击&#x200B;**确定**。文件夹结构将在apps文件夹中创建。
+   1. 单击 **确定**. 文件夹结构将在apps文件夹中创建。
 
       ![在CRX中创建的叠加文件夹结构](assets/cmmetadatapropertiesappsfolder.png)
 
@@ -328,13 +324,13 @@ ht-degree: 5%
 
    1. 确保“覆盖节点”对话框具有以下值：
 
-      **路径:** `/libs/fd/cm/ma/gui/content/cmmetadataproperties/properties/letter/items/tabs/items`
+      **路径：** `/libs/fd/cm/ma/gui/content/cmmetadataproperties/properties/letter/items/tabs/items`
 
       **位置：** /apps/
 
       **匹配节点类型：** 已选择
 
-   1. 单击&#x200B;**确定**。将创建文件夹。 单击&#x200B;**全部保存**。
+   1. 单击 **确定**. 将创建文件夹。 单击&#x200B;**全部保存**。
 
 1. 在新创建的项目文件夹中，为资产中的自定义选项卡添加节点（此处为mytab — 此名称未显示在用户界面中），请执行以下步骤：
 
@@ -356,7 +352,7 @@ ht-degree: 5%
            <td><strong>价值</strong></td>
          </tr>
          <tr>
-           <td>path<br /> </td>
+           <td>路径<br /> </td>
            <td>字符串</td>
            <td>fd/cm/ma/gui/content/cmmetadataproperties/commontab<br /> </td>
          </tr>
@@ -420,7 +416,7 @@ ht-degree: 5%
 
       **匹配节点类型：** 已选择
 
-   1. 单击&#x200B;**确定**。文件夹结构将在apps文件夹中创建。
+   1. 单击 **确定**. 文件夹结构将在apps文件夹中创建。
 
       单击&#x200B;**全部保存**。
 
@@ -543,7 +539,7 @@ ht-degree: 5%
    | 片段 | /libs/fd/cm/ma/gui/content/createasset/createfragment/jcr：content/body/items/form/items/fragmentwizard/items/properties/items/properties/items/tabs2/items/tab1/items |
    | 书信 | /libs/fd/cm/ma/gui/content/createasset/createletter/jcr：content/body/items/form/items/letterWizard/items/properties/items/properties/items/letterproperties/items |
 
-1. 单击&#x200B;**确定**。文件夹结构将在apps文件夹中创建。
+1. 单击 **确定**. 文件夹结构将在apps文件夹中创建。
 
 1. 在您创建的覆盖项节点下，创建一个名为col4（或任何其他名称）的节点，然后单击 **全部保存**.
 
@@ -561,7 +557,7 @@ ht-degree: 5%
    <td><strong>价值</strong></td>
   </tr>
   <tr>
-   <td>path</td>
+   <td>路径</td>
    <td>字符串</td>
    <td><p>此路径是指向在中创建的列的指针：</p>
     <ul>
@@ -606,7 +602,7 @@ ht-degree: 5%
 
       **匹配节点类型：** 已选择
 
-   1. 单击&#x200B;**确定**。文件夹结构将在apps文件夹中创建。
+   1. 单击 **确定**. 文件夹结构将在apps文件夹中创建。
 
       单击&#x200B;**全部保存**。
 
@@ -664,7 +660,7 @@ ht-degree: 5%
 
       **匹配节点类型：** 已选择
 
-   1. 单击&#x200B;**确定**。文件夹结构将在apps文件夹中创建。
+   1. 单击 **确定**. 文件夹结构将在apps文件夹中创建。
 
       单击&#x200B;**全部保存**。
 
@@ -803,7 +799,7 @@ ht-degree: 5%
            <td><strong>价值</strong></td>
          </tr>
          <tr>
-           <td>path</td>
+           <td>路径</td>
            <td>字符串</td>
            <td>extendedProperties<br /> </td>
          </tr>
@@ -860,7 +856,7 @@ ht-degree: 5%
 
       **匹配节点类型：** 已选择
 
-   1. 单击&#x200B;**确定**。文件夹结构将在apps文件夹中创建。
+   1. 单击 **确定**. 文件夹结构将在apps文件夹中创建。
 
    1. 单击&#x200B;**全部保存**。
 
@@ -906,7 +902,7 @@ ht-degree: 5%
 
       **匹配节点类型：** 已选择
 
-   1. 单击&#x200B;**确定**。文件夹结构将在apps文件夹中创建。
+   1. 单击 **确定**. 文件夹结构将在apps文件夹中创建。
 
    1. 单击&#x200B;**全部保存**。
 
@@ -944,7 +940,7 @@ ht-degree: 5%
       <td><strong>价值</strong></td>
    </tr>
    <tr>
-      <td>sling:resourceType<br /> </td>
+      <td>sling：resourceType<br /> </td>
       <td>字符串</td>
       <td>fd/cm/ma/gui/components/admin/assetsproperties/custompropertyconfig<br /> </td>
    </tr>

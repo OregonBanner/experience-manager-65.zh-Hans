@@ -1,17 +1,15 @@
 ---
 title: 与Adobe Creative Cloud共享文件夹
 description: 了解如何与Adobe Creative Cloud共享文件夹
-uuid: 4d93df7d-36da-43bb-a069-42993c607b2b
 contentOwner: asgupta
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
-discoiquuid: 7699c08b-a5b8-4f8b-8856-113d09349f49
 docset: aem65
-source-git-commit: d045fc1ac408f992d594a4cb68d1c4eeae2b0de1
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '68'
-ht-degree: 7%
+source-wordcount: '57'
+ht-degree: 1%
 
 ---
 

@@ -1,18 +1,14 @@
 ---
 title: 配置目录
-seo-title: Configuring directories
 description: 了解如何添加、编辑和删除目录以及配置用户管理以使用虚拟列表视图。
-seo-description: Learn how to add, edit and delete directories and configure user management to use virtual list view.
-uuid: 0bf1a8a7-c917-4248-9937-d24e31c5ba17
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/setting_up_and_managing_domains
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 1f15f028-aa81-478e-97eb-f83a4dc0418c
 exl-id: 30edcef2-e8fa-403a-9850-b8dfeeb9ac65
-source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '3226'
+source-wordcount: '3229'
 ht-degree: 0%
 
 ---
@@ -39,7 +35,7 @@ ht-degree: 0%
    如果返回用户，则结果将显示根据属性集分配给每个字段的值。 如果由于服务器名称不存在、授权信息不正确或属性不正确而导致测试失败，则会显示以下错误消息：“指定的搜索条件未返回任何结果”。 要确定失败的根本原因，请查看应用程序服务器日志文件中的异常。 单击“关闭” ，然后单击“下一步”。
 
 1. 选择“组设置”并根据需要配置设置。 (请参阅 [目录设置](configuring-directories.md#directory-settings).)
-1. 要验证基本DN和其他配置的属性是否收集正确的组批次，请单击“测试”。 如果返回组，结果将显示根据属性集分配给每个字段的值。 单击关闭。
+1. 要验证基本DN和其他配置的属性是否收集正确的组批次，请单击“测试”。 如果返回组，结果将显示根据属性集分配给每个字段的值。 单击“关闭”。
 
 ### 添加自定义SPI {#add-a-custom-spi}
 
@@ -59,7 +55,7 @@ ht-degree: 0%
 1. 在管理控制台中，单击设置>用户管理>域管理。
 1. 单击列表中的相应域，然后在出现的页面上，从列表中选择相应的目录。
 1. 根据需要配置目录、用户和组设置。 (请参阅 [目录设置](configuring-directories.md#directory-settings).)
-1. 单击确定。
+1. 单击“确定”。
 
 ## 删除目录 {#delete-a-directory}
 

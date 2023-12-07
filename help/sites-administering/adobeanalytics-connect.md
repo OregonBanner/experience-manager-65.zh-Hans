@@ -1,20 +1,16 @@
 ---
 title: 连接到Adobe Analytics并创建框架
-seo-title: Connecting to Adobe Analytics and Creating Frameworks
 description: 了解如何将AEM连接到SiteCatalyst和创建框架。
-seo-description: Learn about connecting AEM to SiteCatalyst and creating frameworks.
-uuid: 3820dd24-4193-42ea-aef2-4669ebfeaa9d
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
-discoiquuid: 6b545a51-3677-4ea1-ac7e-2d01ba19283e
 docset: aem65
 exl-id: 8262bbf9-a982-479b-a2b5-f8782dd4182d
-source-git-commit: bbd18486a77d7b46454aacff23147b38860bd895
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '1523'
-ht-degree: 7%
+source-wordcount: '1484'
+ht-degree: 1%
 
 ---
 
@@ -79,13 +75,13 @@ Adobe Analytics [数据中心](https://experienceleague.adobe.com/docs/analytics
 1. 要添加数据中心的URL，请按 **数据中心URL** 列表，并在框中键入URL。
 
 1. 要从列表中删除URL，请单击该URL旁边的 — 按钮。
-1. 单击保存。
+1. 单击“保存”。
 
 ## 配置与Adobe Analytics的连接 {#configuring-the-connection-to-adobe-analytics}
 
 >[!CAUTION]
 >
->由于 Adobe Analytics API 中的安全性更改，无法再使用 AEM 中包含的 Activity Map 版本。
+>由于Adobe Analytics API中的安全性更改，无法再使用AEM中包含的Activity Map版本。
 >
 >此 [Adobe Analytics提供的ActivityMap插件](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html) 现在应使用。
 
@@ -93,7 +89,7 @@ Adobe Analytics [数据中心](https://experienceleague.adobe.com/docs/analytics
 
 >[!CAUTION]
 >
->由于 Adobe Analytics API 中的安全性更改，无法再使用 AEM 中包含的 Activity Map 版本。
+>由于Adobe Analytics API中的安全性更改，无法再使用AEM中包含的Activity Map版本。
 >
 >此 [Adobe Analytics提供的ActivityMap插件](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html) 现在应使用。
 
@@ -181,7 +177,7 @@ Adobe Analytics [数据中心](https://experienceleague.adobe.com/docs/analytics
 
 1. 的下拉选择器 **Adobe Analytics** 会附加到可用的选项后。 选择所需的框架配置。
 
-1. 选择 **保存并关闭**.
+1. 选择&#x200B;**保存并关闭**。
 1. 要激活页面和任何连接的配置/文件，请 **[Publish](/help/sites-authoring/publishing-pages.md)** 页面。
 1. 最后一步是在发布实例上访问页面，然后使用搜索关键词（例如，茄子） **Search** 组件。
 1. 然后，您可以使用适当的工具检查对Adobe Analytics进行的调用；例如， [Adobe Experience Cloud调试器](https://experienceleague.adobe.com/docs/experience-platform/debugger/home.html).
@@ -201,7 +197,7 @@ Adobe Analytics [数据中心](https://experienceleague.adobe.com/docs/analytics
 默认为 `6`。
 
 * **获取延迟**：尝试获取已排队报告的间隔毫秒数。
-默认为 `10000`。由于这是以毫秒为单位的，因此它对应于10秒。
+默认为 `10000`. 由于这是以毫秒为单位的，因此它对应于10秒。
 
 * **获取频率**：A `cron` 用于确定提取Analytics报表的频率的表达式。
 默认为 `0 0 0/12 * * ?`；这相当于每小时12次提取。

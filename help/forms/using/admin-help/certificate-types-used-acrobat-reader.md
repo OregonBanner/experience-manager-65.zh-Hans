@@ -1,19 +1,15 @@
 ---
 title: Acrobat Reader DC扩展使用的证书类型
-seo-title: Certificate types used by Acrobat Reader DC extensions
 description: 了解Acrobat Reader DC扩展使用的证书类型。
-seo-description: Learn about the certificate types used by Acrobat Reader DC extensions.
-uuid: 93c02abc-2d5a-44ed-b93c-981afbd0553d
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_acrobat_reader_dc_extensions
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 331b9317-87b5-4a96-a1bc-429675ff90c5
 exl-id: 800bffd5-0cdc-4251-bba4-e350f226f019
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '936'
-ht-degree: 4%
+source-wordcount: '944'
+ht-degree: 2%
 
 ---
 
@@ -30,7 +26,7 @@ ht-degree: 4%
 
 Acrobat Reader DC扩展证书的“友好”名称是一个描述证书属性的字符串，如以下示例所示：
 
-ARE 2D条形码完整生产V6.1 P8 0002054
+是2D条形码完全生产V6.1 P8 0002054
 
 该字符串包含以下元素：
 
@@ -40,9 +36,9 @@ ARE 2D条形码完整生产V6.1 P8 0002054
 
 **使用权限版本：** 描述证书可用于的使用权限算法的版本，例如V6.1。此版本不表示Acrobat或Acrobat Reader DC扩展的版本。
 
-**配置文件代码：** 配置文件代码是完整证书属性的简短描述，例如P8。 有关与每种文件类型关联的配置文件代码的列表，请参阅证书配置文件部分表中配置文件代码列。
+**配置文件代码：** 配置文件代码是对完整证书属性的简短描述，例如P8。 有关与每种文件类型关联的配置文件代码的列表，请参阅证书配置文件部分表中配置文件代码列。
 
-**序列号：** 序列号将分配给Adobe颁发的每个证书，例如0002054。 Adobe企业支持或Adobe企业客户代表可以使用此序列号来跟踪到特定产品订单或OEM关系的证书。
+**序列号：** 序列号将分配给Adobe颁发的每个证书，如0002054。 Adobe企业支持或Adobe企业客户代表可以使用此序列号来跟踪到特定产品订单或OEM关系的证书。
 
 ## 证书配置文件 {#certificate-profiles}
 
@@ -147,19 +143,19 @@ ARE 2D条形码完整生产V6.1 P8 0002054
 
 ## 有效期 {#validity-period}
 
-向客户和开发人员颁发评估证书，以便他们能够评估和开发产品的示例应用程序。 这些证书的有效期为60至90天。 它们会在发布数据后的第二个月结束时过期。
+评估证书将颁发给客户和开发人员，以便他们能够评估和开发产品的示例应用程序。 这些证书的有效期为60至90天。 它们会在发布数据后的第二个月末过期。
 
 合作伙伴集成证书将颁发给Adobe业务合作伙伴，以支持软件开发、集成、原型制作和演示。 这些证书自签发之日起有效期为两年。
 
-Adobe内部使用证书用于Adobe，以支持软件开发、集成、原型制作和演示。 这些证书自签发之日起有效期为两年。
+Adobe内使用Adobe内部使用证书来支持软件开发、集成、原型制作和演示。 这些证书自签发之日起有效期为两年。
 
-生产证书将颁发给购买了Acrobat Reader DC扩展的客户。 这些证书在证书颁发机构(CA)允许的最长有效期内有效，如下所示 *最大值* 在“证书配置文件”表格中。
+生产证书将颁发给购买了Acrobat Reader DC扩展的客户。 这些证书在证书颁发机构(CA)允许的最长有效期内有效，如下所示 *Max* 在证书配置文件表中。
 
 ## Acrobat Reader DC扩展使用权限 {#acrobat-reader-dc-extensions-usage-rights}
 
-在证书查看器中检查Acrobat Reader DC扩展证书时，您可以从详细信息选项卡（如果已配置）中选择使用权限项，以查看证书可以启用的Adobe Reader使用权限的逐项列表。 在特定文档上启用的使用权限可以是证书启用的使用权限的子集。
+在证书查看器中检查Acrobat Reader DC扩展证书时，您可以从详细信息选项卡（如果已配置）中选择使用权限项，以查看证书可以启用的Adobe Reader使用权限的明细列表。 在特定文档上启用的使用权限可以是证书启用的使用权限的子集。
 
-如果在非协作环境中需要在线评论，请联系Adobe支持部门以获取更多信息。 Mode属性与部署类型匹配，可以为 *生产* 或 *评估*.
+如果在非协作环境中需要在线评论，请联系Adobe支持以获取更多信息。 Mode属性与部署类型匹配，并且 *生产* 或 *评估*.
 
 允许的Acrobat Reader DC扩展使用权限由一个或多个特定元素组成。 这些元素以不同的组合使用，以实现各种许可的产品功能。
 
@@ -181,15 +177,15 @@ Adobe内部使用证书用于Adobe，以支持软件开发、集成、原型制�
   </tr>
   <tr>
    <td><p>FormAddDelete</p></td>
-   <td><p>在PDF表单上添加、更改或删除字段和字段属性。</p></td>
+   <td><p>添加、更改或删除PDF表单中的字段和字段属性。</p></td>
   </tr>
   <tr>
    <td><p>SubmitStandalone</p></td>
-   <td><p>当数据不在浏览器会话中运行时，通过电子邮件或脱机将其提交到服务器。</p></td>
+   <td><p>如果数据不在浏览器会话中运行，请通过电子邮件或脱机将其提交到服务器。</p></td>
   </tr>
   <tr>
    <td><p>SpawnTemplate</p></td>
-   <td><p>从同一PDF表单中的模板页面创建页面。</p></td>
+   <td><p>在同一PDF表单中从模板页面创建页面。</p></td>
   </tr>
   <tr>
    <td><p>签名</p></td>
@@ -197,7 +193,7 @@ Adobe内部使用证书用于Adobe，以支持软件开发、集成、原型制�
   </tr>
   <tr>
    <td><p>AnnotModify</p></td>
-   <td><p>创建和修改文档注释（如注释）。</p></td>
+   <td><p>创建和修改文档注释，如注释。</p></td>
   </tr>
   <tr>
    <td><p>AnnotImportExport</p></td>
@@ -205,11 +201,11 @@ Adobe内部使用证书用于Adobe，以支持软件开发、集成、原型制�
   </tr>
   <tr>
    <td><p>条形码纯文本</p></td>
-   <td><p>打印文档，其中表单数据以不需要许可服务器软件解码的未加密表单进行条形码。</p></td>
+   <td><p>打印文档，其中表单数据以非加密形式进行条形码，不需要获得许可的服务器软件解码。</p></td>
   </tr>
   <tr>
    <td><p>AnnotOnline</p></td>
-   <td><p>将注释（例如注释）上载到联机文档审阅和注释服务器或从联机文档审阅和注释服务器下载注释。</p></td>
+   <td><p>将批注（例如批注）上载到联机文档审阅和批注服务器或从联机文档审阅和批注服务器下载批注。</p></td>
   </tr>
   <tr>
    <td><p>FormOnline</p></td>
@@ -224,4 +220,4 @@ Adobe内部使用证书用于Adobe，以支持软件开发、集成、原型制�
 
 >[!NOTE]
 >
->Acrobat Reader DC扩展使用权限只能通过可协同工作的某些组合从Adobe获得许可。 无法单独许可这些功能。 有关可用的使用权限组合的信息，请联系AEM Forms客户代表。
+>Acrobat Reader DC扩展使用权限只能通过某些可一起使用的组合从Adobe进行许可。 无法单独许可这些功能。 有关可用使用权限组合的信息，请联系AEM Forms客户代表。

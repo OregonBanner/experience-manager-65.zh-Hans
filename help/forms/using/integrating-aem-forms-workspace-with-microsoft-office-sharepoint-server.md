@@ -1,25 +1,21 @@
 ---
 title: 将AEM表单工作区与Microsoft Office SharePoint Server集成
-seo-title: Integrating AEM forms workspace with Microsoft Office SharePoint Server
 description: 您可以将AEM表单工作区与Microsoft Office SharePoint Server集成。
-seo-description: You can integrate AEM forms workspace with Microsoft Office SharePoint Server.
-uuid: 69d51bdf-729f-4eea-8fae-1e2b8aacaae6
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: Configuration
-discoiquuid: 8990b422-f4f6-4080-871a-33cdf7ca6455
 docset: aem65
 exl-id: d080932f-d5fb-482d-9329-62da5df10362
-source-git-commit: c4cd9a61a226ace2a72d60b5b7b7432de12cb873
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '542'
+source-wordcount: '551'
 ht-degree: 0%
 
 ---
 
 # 将AEM表单工作区与Microsoft Office SharePoint Server集成{#integrating-aem-forms-workspace-with-microsoft-office-sharepoint-server}
 
-**- 要求**
+**— 要求**
 
 **必备知识**
 在将AEM Forms工作区添加到SharePoint服务器之前，您必须拥有对具有适当权限的SharePoint服务器的访问权限，并且必须知道用于访问工作区的URL。 以下步骤假定您熟悉SharePoint Server。 有关SharePoint服务器中Web部件的详细信息，请参阅Windows SharePoint服务中的Web部件。

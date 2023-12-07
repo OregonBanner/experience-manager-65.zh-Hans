@@ -1,32 +1,28 @@
 ---
 title: 自定义路由操作中使用的图像
-seo-title: Customize images used in route actions
-description: 如何在LiveCycleAEM Forms工作区中自定义路由操作中使用的图像。
-seo-description: How-to customize the images used in route actions in LiveCycle AEM Forms workspace.
-uuid: 42608376-587e-4b57-a9d5-8f9ebd981426
+description: 如何在LiveCycleAEM Forms Workspace中自定义路由操作中使用的图像。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
-discoiquuid: 10158c13-47b4-43e3-ac47-690f3cbab158
 exl-id: 687c6569-7189-4039-9c7a-bc29658a7756
-source-git-commit: 30327950779337ce869b6ca376120bc09826be21
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '307'
-ht-degree: 2%
+source-wordcount: '290'
+ht-degree: 0%
 
 ---
 
 # 自定义路由操作中使用的图像 {#customize-images-used-in-route-actions}
 
-要定制路由操作中使用的图像，请执行中所述的步骤 [自定义的一般步骤](/help/forms/using/generic-steps-html-workspace-customization.md) ，然后执行本文中所述的步骤。
+要定制路由操作中使用的图像，请执行中所述的步骤 [自定义的常规步骤](/help/forms/using/generic-steps-html-workspace-customization.md) ，然后执行本文中所述的步骤。
 
 ## 路由操作的图像 {#images-for-route-actions}
 
-1. 为新的布线操作在CSS中的以下位置添加定义图像的样式：
+1. 在CSS中为新的布线操作添加定义图像的样式：
 
    `/apps/ws/css/newStyle.css`
 
-   例如：添加一个名为的新样式 `myStyle1`如下所示，并上传图像文件 `myStyleIcon1.png` 到 `/apps/ws/image`s文件夹中的IP地址。
+   例如：添加一个名为的新样式 `myStyle1`如下所示，并上传图像文件 `myStyleIcon1.png` 到 `/apps/ws/image`s文件夹中的WebDAV客户端。
 
    >[!NOTE]
    >
@@ -50,7 +46,7 @@ ht-degree: 2%
 
 1. 复制 `/libs/ws/js/runtime/templates/task.html` 到 `/apps/ws/js/runtime/templates/task.html`.
 
-1. 如果CSS样式的名称与来自服务器的路由操作名称相同，请在中修改以下代码 `/apps/ws/js/runtime/templates/task.html`：
+1. 如果CSS样式的名称与来自服务器的路由操作名称相同，请修改以下代码 `/apps/ws/js/runtime/templates/task.html`：
 
    ```jsp
    <%if(routeList == null){%>
@@ -80,7 +76,7 @@ ht-degree: 2%
                <%}%>
    ```
 
-1. 如果CSS样式的名称与来自服务器的路由操作名称不同，请在中修改以下代码 `/apps/ws/js/runtime/templates/task.html`. 它会添加一栈 `if-else` 用于映射样式和路由操作名称的servlet条件。
+1. 如果CSS样式的名称与来自服务器的路由操作名称不同，请修改以下代码 `/apps/ws/js/runtime/templates/task.html`. 它会添加一栈 `if-else` 用于映射带有路由操作名称样式的servlet条件。
 
 ```jsp
 <%if(routeList == null){%>
@@ -120,7 +116,7 @@ To
 
 1. 复制 `/libs/ws/js/runtime/templates/taskdetails.html` 到 `/apps/ws/js/runtime/templates/taskdetails.html`.
 
-1. 如果CSS样式的名称与来自服务器的路由操作名称相同，请在中修改以下代码 `/apps/ws/js/runtime/templates/taskdetails.html`：
+1. 如果CSS样式的名称与来自服务器的路由操作名称相同，请修改以下代码 `/apps/ws/js/runtime/templates/taskdetails.html`：
 
    ```jsp
    <%for (var i = 0; i < availableCommands.directCommands.length; i++) {%>
@@ -140,7 +136,7 @@ To
                        <%}%>
    ```
 
-1. 如果CSS样式的名称与来自服务器的路由操作名称不同，请在中修改以下代码 `/apps/ws/js/runtime/templates/taskdetails.html`. 它添加了一栈 `if-else` 用于映射样式和路由操作名称的servlet条件。
+1. 如果CSS样式的名称与来自服务器的路由操作名称不同，请修改以下代码 `/apps/ws/js/runtime/templates/taskdetails.html`. 它添加了一栈 `if-else` 用于映射带有路由操作名称样式的servlet条件。
 
    ```jsp
    <%for (var i = 0; i < availableCommands.directCommands.length; i++) {%>

@@ -1,18 +1,14 @@
 ---
 title: 配置服务器设置
-seo-title: Configuring Server Settings
 description: “服务器设置”页提供对电子邮件、任务通知和管理员通知设置的访问权限。
-seo-description: The Server Settings page provides access to email, task notification and administrator notification settings.
-uuid: 73b51ac0-56e5-4748-bb33-e3986c69eb2d
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_forms_workflow
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: e047a95e-0acb-438a-8d27-f005c0adc508
 exl-id: 362b7b91-c58b-4e47-a6ef-56a4b54a100c
-source-git-commit: c4cd9a61a226ace2a72d60b5b7b7432de12cb873
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '2623'
+source-wordcount: '2631'
 ht-degree: 0%
 
 ---
@@ -47,7 +43,7 @@ ht-degree: 0%
    >
    >如果您使用的是Microsoft Exchange Server ，且电子邮件地址为无效的电子邮件地址，则Microsoft Exchange Server无法向通讯组列表发送电子邮件。 要解决此问题，请选择 **启用外部通信** 为Microsoft Exchange Server上的每个通讯组列表分别设置选项。
 
-1. 单击保存。
+1. 单击“保存”。
 
 >[!NOTE]
 >
@@ -97,7 +93,7 @@ ht-degree: 0%
 1. 在通知模板框中，键入电子邮件正文的文本。 此字段已预填充默认文本。 有关自定义此字段的详细信息，请参阅 [自定义通知内容](configuring-server-settings.md#customizing-the-content-of-notifications).
 1. 在“邮件格式”列表中，选择发送电子邮件的格式，即HTML或文本。 默认格式为HTML。
 1. 在电子邮件编码列表中，选择要用于电子邮件的编码格式。 默认值为UTF-8，日本以外的大多数用户都将使用该格式。 日本用户可以选择ISO2022-JP。
-1. 单击保存。
+1. 单击“保存”。
 
 ### 为用户或组配置任务分配通知 {#configure-task-assignment-notifications-for-users-or-groups}
 
@@ -111,7 +107,7 @@ ht-degree: 0%
 1. 在通知模板框中，键入电子邮件正文的文本。 此字段已预填充默认文本。 有关自定义此字段的详细信息，请参阅 [自定义通知内容](configuring-server-settings.md#customizing-the-content-of-notifications).
 1. 在“邮件格式”列表中，选择发送电子邮件的格式，即HTML或文本。 默认格式为HTML。
 1. 在电子邮件编码列表中，选择要用于电子邮件的编码格式。 默认值为UTF-8，日本以外的大多数用户都将使用该格式。 日本用户可以选择ISO2022-JP。
-1. 单击保存。
+1. 单击“保存”。
 
 ### 为用户或组配置截止日期通知 {#configure-deadline-notifications-for-users-or-groups}
 
@@ -124,7 +120,7 @@ ht-degree: 0%
 1. 在通知模板框中，键入电子邮件正文的文本。 此字段已预填充默认文本。 有关自定义此字段的详细信息，请参阅 [自定义通知内容](configuring-server-settings.md#customizing-the-content-of-notifications).
 1. 在“邮件格式”列表中，选择发送电子邮件的格式，即HTML或文本。 默认格式为HTML。
 1. 在电子邮件编码列表中，选择要用于电子邮件的编码格式。 默认值为UTF-8，日本以外的大多数用户都将使用该格式。 日本用户可以选择ISO2022-JP。
-1. 单击保存。
+1. 单击“保存”。
 
 ### 隐藏所有电子邮件的“不DELETE”标记 {#hide-the-do-not-delete-tag-for-all-emails}
 
@@ -155,7 +151,7 @@ For details, see [How to hide the 'DO-NOT-DELETE' tag with CSS](https://blogs.ad
 1. 在通知模板框中，键入电子邮件正文的文本。 此字段已预填充默认文本。 有关自定义此字段的详细信息，请参阅 [自定义通知内容](configuring-server-settings.md#customizing-the-content-of-notifications).
 1. 在“邮件格式”列表中，选择发送电子邮件的格式，即HTML或文本。 默认格式为HTML。
 1. 在电子邮件编码列表中，选择要用于电子邮件的编码格式。 默认值为UTF-8，日本以外的多数用户都使用该格式。 日本用户可以选择ISO2022-JP。
-1. 单击保存。
+1. 单击“保存”。
 
 ### 配置停止的操作通知 {#configure-stalled-operation-notifications}
 
@@ -167,7 +163,7 @@ For details, see [How to hide the 'DO-NOT-DELETE' tag with CSS](https://blogs.ad
 1. 在“电子邮件地址”框中，键入要在操作停止时通知的用户地址。 使用格式user@domain.com ，并用逗号分隔每个地址。 通常情况下，此电子邮件地址适用于管理员。
 1. 在“主题”框中，键入电子邮件主题行的文本。 此字段已预填充默认文本。 有关自定义此字段的详细信息，请参阅 [自定义通知内容](configuring-server-settings.md#customizing-the-content-of-notifications)
 1. 在通知模板框中，键入电子邮件正文的文本。 此字段已预填充默认文本。 有关自定义此字段的详细信息，请参阅 [自定义通知内容](configuring-server-settings.md#customizing-the-content-of-notifications).
-1. 单击保存。
+1. 单击“保存”。
 
 ## 自定义通知内容 {#customizing-the-content-of-notifications}
 
@@ -291,4 +287,4 @@ Notification Template区域是一个富文本编辑器，可用于生成电子�
 1. 在服务器主机框中，键入主机Forms服务器的名称或IP地址。 默认值为localhost。
 1. 在“服务器端口”框中，键入Forms服务器使用的端口号。
 1. 在“User Name（用户名）”和“Password（密码）”框中，键入相应的用户ID和密码以访问BAM服务器。 默认的用户名为CognosNowAdmin ，默认密码为manager。
-1. 单击保存。
+1. 单击“保存”。

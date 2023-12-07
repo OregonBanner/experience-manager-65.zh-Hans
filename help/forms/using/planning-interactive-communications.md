@@ -1,15 +1,11 @@
 ---
 title: “教程：规划交互式通信”
-seo-title: Plan your Interactive Communication
 description: 规划交互式通信的剖析
-seo-description: Plan the anatomy for your Interactive Communication
-uuid: 1c2b5c5b-c655-4559-8748-3e0b343779c2
 contentOwner: anujkapo
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 75b2d424-91d3-45b4-a5d7-fb49ab558582
 feature: Interactive Communication
 exl-id: ea0c8971-56f4-4094-87e4-1b222b73951f
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '652'
 ht-degree: 2%
@@ -94,7 +90,7 @@ ht-degree: 2%
      <li>州代码</li>
      <li>连接数</li>
     </ul> </td>
-   <td>--</td>
+   <td>—</td>
   </tr>
   <tr>
    <td>账单摘要</td>
@@ -108,7 +104,7 @@ ht-degree: 2%
      <li>应付金额</li>
      <li>到期日期</li>
     </ul> </td>
-   <td>--</td>
+   <td>—</td>
   </tr>
   <tr>
    <td>费用汇总</td>
@@ -126,7 +122,7 @@ ht-degree: 2%
      <li>应付总额（使用费计算字段）</li>
     </ul> <p>表 — 帐单</p> </td>
    <td>无字段</td>
-   <td>--</td>
+   <td>—</td>
   </tr>
   <tr>
    <td>分项呼叫 — 传出</td>
@@ -140,20 +136,20 @@ ht-degree: 2%
     </ul> </td>
    <td><p>所有值</p> <p>表 — 调用</p> </td>
    <td>无字段</td>
-   <td>--</td>
+   <td>—</td>
   </tr>
   <tr>
    <td>立即付款</td>
-   <td>--</td>
-   <td>--</td>
-   <td>--</td>
+   <td>—</td>
+   <td>—</td>
+   <td>—</td>
    <td>Paynow</td>
   </tr>
   <tr>
    <td>增值服务</td>
-   <td>--</td>
-   <td>--</td>
-   <td>--</td>
+   <td>—</td>
+   <td>—</td>
+   <td>—</td>
    <td>ValueAddedServices</td>
   </tr>
  </tbody>

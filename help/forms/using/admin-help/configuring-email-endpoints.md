@@ -1,16 +1,14 @@
 ---
 title: 配置电子邮件端点
 description: 了解如何配置电子邮件端点。 电子邮件端点使您能够通过向指定的电子邮件帐户发送一个或多个文档来调用服务。
-uuid: d47bb45b-0e0e-43ca-9e25-e347d0e60206
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/managing_endpoints
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: dcf15c42-9ec6-4d1c-ad41-083aa0b8c7ae
 exl-id: 33583a12-4f20-4146-baa4-c9854e454bbf
-source-git-commit: c4cd9a61a226ace2a72d60b5b7b7432de12cb873
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '3775'
+source-wordcount: '3796'
 ht-degree: 0%
 
 ---
@@ -74,7 +72,7 @@ ht-degree: 0%
 
 **重复间隔：** 重复目录轮询的次数。 如果未在端点配置中指定此值，则默认重复间隔为秒。 默认值为 10。此值不能小于10。
 
-**重复计数：** 轮询输入目录的次数。 如果未在终结点配置中指定此值，则使用默认重复计数。 值为–1表示无限扫描目录。 默认值为–1。
+**重复计数：** 轮询输入目录的次数。 如果未在终结点配置中指定此值，则使用默认重复计数。 值为–1表示无限扫描目录。 默认值为 -1。
 
 **作业开始时的延迟：** 作业开始扫描端点之前的延迟的默认值（以秒为单位）。 默认值为 0。
 
@@ -148,7 +146,7 @@ ht-degree: 0%
 
 **Cron表达式：** 如果电子邮件必须使用cron表达式进行计划，请输入cron表达式。
 
-**重复计数：** 电子邮件端点扫描文件夹或目录的次数。 值–1表示无限扫描。 默认值为–1。
+**重复计数：** 电子邮件端点扫描文件夹或目录的次数。 值–1表示无限扫描。 默认值为 -1。
 
 **重复间隔：** 接收者用于检查传入邮件的扫描速率。
 
@@ -268,4 +266,4 @@ ht-degree: 0%
 1. 在mailBody列表中，选择变量并键入 `%BODY%` 在旁边的框中。
 1. 在mailFrom列表中，选择Variable并键入 `%SENDER%` 在旁边的框中。 这会将发件人地址映射到“完成任务”流程数据。
 1. 在结果框中，键入 `results`. 这会导致“完成任务”或“启动进程”返回结果字符串。
-1. 单击添加。
+1. 单击“添加”。

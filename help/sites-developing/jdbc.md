@@ -1,18 +1,14 @@
 ---
 title: 连接到SQL数据库
-seo-title: Connecting to SQL Databases
 description: 访问外部SQL数据库，以便AEM应用程序可以与数据交互
-seo-description: Access an external SQL database to so that your AEM applications can interact with the data
-uuid: 0af0ed08-9487-4c37-87ce-049c9b4c1ea2
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
 content-type: reference
-discoiquuid: 11a11803-bce4-4099-9b50-92327608f37b
 exl-id: 1082b2d7-2d1b-4c8c-a31d-effa403b21b2
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '917'
+source-wordcount: '895'
 ht-degree: 0%
 
 ---

@@ -1,14 +1,10 @@
 ---
 title: 设置Visual Studio项目并构建Windows应用程序
-seo-title: Set up the Visual Studio project and build the Windows app
 description: 了解如何设置Visual Studio项目以构建AEM Forms Windows移动设备应用程序。
-seo-description: Learn how to set up a Visual Studio project to build the AEM Forms Windows mobile device app.
-uuid: 9559e584-2a40-4740-a29a-d7ad66220224
 topic-tags: forms-app
-discoiquuid: c71c2a17-54f9-4c95-a90a-3c89d6d45721
 docset: aem65
 exl-id: ae7340c8-38cc-4b2b-ba17-22011471fd7d
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '896'
 ht-degree: 2%

@@ -1,18 +1,14 @@
 ---
 title: 自定义跟踪表
-seo-title: Customize tracking tables
 description: 如何自定义任务表中用户进程详细信息的显示，该表显示在AEM Forms工作区的“跟踪”选项卡中。
-seo-description: How-to customize the display of the details of user processes in the task table displayed in the tracking tab of AEM Forms workspace.
-uuid: 13d6ebf2-99d5-434f-85f9-b0cba5f5751a
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
-discoiquuid: bb7a6e9f-4f28-4d97-8a0c-949259fd6857
 exl-id: 9ab657cc-fa8e-4168-8a68-e38ac5c51b29
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '330'
-ht-degree: 3%
+ht-degree: 0%
 
 ---
 
@@ -21,12 +17,12 @@ ht-degree: 3%
 AEM Forms工作区中的“跟踪”选项卡用于显示与登录用户有关的进程实例的详细信息。 要查看跟踪表，请先在左窗格中选择进程名称，然后在中间窗格中查看其实例列表。 选择一个进程实例，以在右侧窗格中查看由此实例生成的任务表。 默认情况下，表列显示以下任务属性（任务模型中的相应属性在括号中给出）：
 
 * ID ( `taskId`)
-* 名称 ( `stepName`)
-* 说明 ( `instructions`)
-* 选择的操作 ( `selectedRoute`)
+* 名称( `stepName`)
+* 说明( `instructions`)
+* 选定的操作( `selectedRoute`)
 * 创建时间( `createTime`)
 * 完成时间( `completeTime`)
-* 所有者 ( `currentAssignment.queueOwner`)
+* 所有者( `currentAssignment.queueOwner`)
 
 任务模型中可在任务表中显示的其余属性包括：
 
@@ -78,7 +74,7 @@ AEM Forms工作区中的“跟踪”选项卡用于显示与登录用户有关�
    <td><p>状态</p> </td>
   </tr>
   <tr>
-   <td><p>displayName</p> </td>
+   <td><p>显示名称</p> </td>
    <td><p>outOfOfficeUserId</p> </td>
    <td><p>summaryUrl</p> </td>
   </tr>

@@ -1,34 +1,30 @@
 ---
 title: 正在报告中的自定义报表
-seo-title: Custom Reports in Process Reporting
-description: 您可以创建自定义报表并将这些报表添加到AEM Forms on JEE流程报表UI中。
-seo-description: You can create custom reports and add these reports to the AEM Forms on JEE Process Reporting UI.
-uuid: 81039fe8-d757-4c85-a1eb-88e4e6aa8500
+description: 您可以创建自定义报表并将这些报表添加到AEM Forms on JEE流程报表UI。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: process-reporting
-discoiquuid: 222daab8-4514-44a5-b5c9-c5510809c74e
 docset: aem65
 exl-id: 30720061-d0e5-453b-a334-6a3aa9ca4c87
-source-git-commit: bd33c0884be55b76ef526c8c938236e743dc3dc6
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '953'
-ht-degree: 8%
+source-wordcount: '837'
+ht-degree: 1%
 
 ---
 
 # 正在报告中的自定义报表{#custom-reports-in-process-reporting}
 
-您可以使用QueryBuilder的REST接口或使用QueryBuilder API创建OSGi服务以创建自定义报表。
+您可以使用QueryBuilder的REST接口，或使用QueryBuilder API创建OSGi服务以创建自定义报表。
 
-## 构建自定义报表的一般步骤 {#generic-steps-to-build-a-custom-report}
+## 构建自定义报表的常规步骤 {#generic-steps-to-build-a-custom-report}
 
 在添加任何自定义报表之前，请执行以下模板过程：
 
-1. 自定义报表中使用的数据必须在流程报表中可用。 要确保数据的可用性，请安排cron作业或使用 **[同步](https://helpx.adobe.com/livecycle/help/process-reporting/install-start-process-reporting.html#Process%20Reporting%20Home%20screen)** 流程报表UI中的选项。
+1. 自定义报表中使用的数据必须在流程报表中可用。 要确保数据的可用性，请计划cron作业或使用 **[同步](https://helpx.adobe.com/livecycle/help/process-reporting/install-start-process-reporting.html#Process%20Reporting%20Home%20screen)** 流程报表UI中的选项。
 1. URL请求（封装所需的查询）必须返回相应的查询结果对象。 要创建查询，可以使用REST接口 [Querybuilder](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/search/query-builder-api.html?lang=en) 以使用QueryBuilder API创建OSGi服务。 您可以创建动态或静态查询。
 
-1. 创建自定义用户界面以显示结果。 您可以创建一个独立的用户界面，或将结果与现有的“流程报表”UI集成。
+1. 创建自定义用户界面以显示结果。 您可以创建一个独立的用户界面，或将结果与现有的Process Reporting UI集成。
 
 ## 使用QueryBuilder的REST接口 {#using-the-rest-interface-of-the-querybuilder}
 
@@ -37,15 +33,15 @@ CRX QueryBuilder REST接口通过Java API和REST API公开资产共享查询生�
 1. 浏览到URL `https://'[server]:[port]'/lc/bin/querybuilder.json`
 1. 根据Process Reporting存储节点结构和节点属性创建查询。
 
-   您可以指定可选参数来指定偏移、限制、命中次数和属性。 您可以对静态报告的参数执行硬编码，并从UI中获取动态报告的参数。
+   您可以指定可选参数以指定偏移、限制、点击和属性。 您可以对静态报表的参数执行硬编码，并从UI中获取动态报表的参数。
 
-   要获取所有进程名，查询为：
+   要获取所有进程名称，查询为：
 
    `https://'[server]:[port]'/lc/bin/querybuilder.json?exact=false&p.hits=selective&p.properties=pmProcessTitle&path=%2fcontent%2freporting%2fpm&property=pmNodeType&property.operation=equals&property.value=ProcessType&type=sling%3aFolder`
 
    >[!NOTE]
    >
-   >在每个查询中，path参数指向crx存储位置，并且字符根据URL标准进行转义。
+   >在每个查询中，path参数都指向crx存储位置，并且字符根据URL标准进行转义。
 
 ## 使用查询生成器API创建服务  {#creating-a-service-using-query-builder-api-nbsp}
 
@@ -65,9 +61,9 @@ CRX QueryBuilder REST接口通过Java API和REST API公开资产共享查询生�
     predicateGroup.setAllRequired(true);
    ```
 
-1. 将谓词添加到新创建的predicateGroup。 一些有用的谓词结构包括 [JcrBoolPropertyPredicateEvaluator 5.3版](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hans)， [JcrPropertyPredicateEvaluator 5.3版](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hans)， [RangePropertyPredicateEvaluator （5.3版）](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hans)， [DateRangePredicateEvaluator （5.3版）](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hans)、和 [TypePredicateEvaluator 5.3版](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hans).
+1. 将谓词添加到新创建的predicateGroup。 一些有用的谓词结构包括 [JcrBoolPropertyPredicateEvaluator （5.3版）](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hans)， [JcrPropertyPredicateEvaluator （5.3版）](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hans)， [RangePropertyPredicateEvaluator （5.3版）](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hans)， [DateRangePredicateEvaluator （5.3版）](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hans)、和 [TypePredicateEvaluator （5.3版）](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hans).
 
-   对于静态报表，对谓词进行硬编码；对于动态报表，从请求中获取谓词。
+   对于静态报表，对谓词进行硬编码；对于动态报表，从请求获取谓词。
 
    用于获取进程所有实例的示例代码为：
 
@@ -114,7 +110,7 @@ CRX QueryBuilder REST接口通过Java API和REST API公开资产共享查询生�
            SearchResult searchResult = query.getResult();
    ```
 
-1. 迭代结果，并将结果转换为所需的格式。 以CSV格式发送结果的代码为：
+1. 对结果进行迭代，并将结果转换为所需的格式。 以CSV格式发送结果的代码为：
 
    ```java
    Iterator<Node> iter = searchResult.getNodes();
@@ -142,7 +138,7 @@ CRX QueryBuilder REST接口通过Java API和REST API公开资产共享查询生�
 
 ### 服务示例 {#service-example}
 
-以下服务示例对以下进程中的实例进行计数： **正在运行** 和 **完成** 每个月、季度和年结束时的状态。
+以下服务示例计数处于以下状态的进程的实例 **正在运行** 和 **完成** 每个月、季度和年末的州。
 
 ```java
 package custom.reporting.service;
@@ -424,23 +420,23 @@ public class PeriodicProcessVolume {
 
 ## 创建单独的UI  {#creating-a-separate-ui-nbsp}
 
-创建单独的UI以显示结果的先决条件是 [Sling 5.6.1中的基础知识](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hans)， [创建CRX节点](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hans) 并提供适当的 [访问权限](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hans).
+创建单独的UI以显示结果的先决条件包括 [Sling基础知识（5.6.1版）](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hans)， [创建CRX节点](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hans) 并提供适当的 [访问权限](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hans).
 
-1. 在创建CRX节点 `/apps` 节点和授予适当的访问权限。 (PERM_PROCESS_REPORTING_USER)
+1. 在创建CRX节点 `/apps` 节点并授予适当的访问权限。 (PERM_PROCESS_REPORTING_USER)
 1. 在定义渲染器 `/content` 节点。
-1. 将JSP或HTML文件添加到在步骤1中创建的节点。 您还可以添加CSS文件。
+1. 将JSP或HTML文件添加到步骤1中创建的节点。 您还可以添加CSS文件。
 
    ![包含JSP和CSS文件的示例节点](assets/nodewith_jsp_css_new.png)
 
    包含JSP和CSS文件的示例节点
 
-1. AddJavaScript代码以启动对querybuilder REST API或您服务的Ajax调用。 此外，请添加适当的参数。
+1. 添加JavaScript代码以启动对querybuilder REST API或您的服务的Ajax调用。 另外，添加适当的参数。
 
-1. 向Ajax调用添加适当的成功处理程序以解析和显示结果。 您可以使用多种格式（json/csv/用户定义）来解析结果，并以表格或其他形式显示结果。
+1. 向Ajax调用添加适当的成功处理程序以解析和显示结果。 您可以采用多种格式（json/csv/用户定义）来解析结果，并以表格或其他形式显示结果。
 
 1. （可选）向Ajax调用添加适当的错误处理程序。
 
-同时使用OSGi服务和QueryBuilder API的JSP代码示例是：
+同时使用OSGi服务和QueryBuilder API的JSP代码示例为：
 
 ```html
 <%@taglib prefix="sling" uri="https://sling.apache.org/taglibs/sling/1.0"%>
@@ -632,14 +628,14 @@ response.setCharacterEncoding("utf-8");
 
 ## 在现有的进程报告UI中集成报告UI  {#integrating-report-ui-in-existing-process-reporting-ui-nbsp}
 
-创建单独的UI以显示结果的先决条件是 [Sling基础知识](https://wem.help.adobe.com/enterprise/en_US/10-0/wem/developing/the_basics.html)， [创建CRX节点](/help/sites-developing/developing-with-crxde-lite.md#creating-a-node) 并提供适当的 [访问权限](/help/sites-developing/developing-with-crxde-lite.md#access-control).
+创建单独的UI以显示结果的先决条件包括 [Sling基础知识](https://wem.help.adobe.com/enterprise/en_US/10-0/wem/developing/the_basics.html)， [创建CRX节点](/help/sites-developing/developing-with-crxde-lite.md#creating-a-node) 并提供适当的 [访问权限](/help/sites-developing/developing-with-crxde-lite.md#access-control).
 
 1. 创建单独的UI。
 1. 创建子项 `nt:unstructured` 节点位于 `/content/process-reporting-runtime/custom-reports` 每个可插拔报表的节点。
 
    * **id** — 指定报表的唯一标识号。
-   * **name** — 指定报表的名称。 该名称将显示在UI中。
-   * **链接** — 指定到单独UI渲染器的相对链接。 在第1步中创建该链接。
+   * **name** — 指定报表的名称。 该名称会显示在UI中。
+   * **链接** — 指定到单独UI渲染程序的相对链接。 在第1步中会创建链接。
    * **描述** — 指定报表的一行说明。 您可以将描述字段留空。
    * **图标** — 指定要以图形方式表示报表的图像。 您可以将图标字段留空。
 
@@ -647,7 +643,7 @@ response.setCharacterEncoding("utf-8");
 
    节点的属性
 
-1. 报表UI已集成到流程报表UI。 集成UI后，更新后的UI类似于以下图像：
+1. 报表UI已集成到流程报表UI。 集成UI后，更新的UI类似于以下图像：
 
    ![新添加的自定义报表的用户界面](assets/sampleui_screenshot_new.png)
 
@@ -659,6 +655,6 @@ response.setCharacterEncoding("utf-8");
 
 ## 示例包 {#sample-package}
 
-导入 `sample-report-pkg-1.zip` 将文章中讨论的自定义报表和UI集成到流程管理UI的包。
+导入 `sample-report-pkg-1.zip` 将本文中讨论的自定义报表和UI集成到流程管理UI的包。
 
 [获取文件](assets/sample-report-pkg-1.zip)

@@ -1,16 +1,12 @@
 ---
 title: 手动配置与Adobe Target的集成
-seo-title: Manually Configuring the Integration with Adobe Target
 description: 了解如何手动配置与Adobe Target的集成。
-seo-description: Learn how to manually configure the integration with Adobe Target.
-uuid: 0bb76a65-f981-4cc5-bee8-5feb3297137c
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
-discoiquuid: 20c8eb1d-5847-4902-b7d3-4c3286423b46
 exl-id: 0f710685-dc4f-4333-9847-d002b2637d08
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '2122'
 ht-degree: 28%

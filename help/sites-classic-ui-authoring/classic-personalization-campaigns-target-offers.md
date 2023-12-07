@@ -1,19 +1,15 @@
 ---
 title: Target优惠
-seo-title: Target offers
 description: 在Adobe Experience Manager中创建Target选件，以便在Adobe Target中使用。
-seo-description: Create target offers
-uuid: 88206181-9708-454a-a22a-05e3fc0247c2
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
-discoiquuid: e26bf608-c57c-4346-88fb-32a82cfa82d2
 exl-id: 46c2fbd0-7eff-4a6c-a088-57560ad2c5e4
-source-git-commit: 3400df1ecd545aa0fb0e3fcdcc24f629ce4c99ba
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '102'
-ht-degree: 7%
+source-wordcount: '100'
+ht-degree: 8%
 
 ---
 

@@ -1,18 +1,16 @@
 ---
 title: 全面搜索
-description: 使用完备的搜索功能更快速地查找您的内容.
-uuid: 21605b96-b467-4d01-9a64-9d0648d539f1
+description: 通过全面的搜索更快地找到您的内容。
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: introduction
 content-type: reference
-discoiquuid: 4ec15013-f7ab-44d6-8053-ed28b14f95e2
 docset: aem65
 exl-id: dd65b308-c449-4f64-9f46-0797b922910f
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '508'
-ht-degree: 64%
+source-wordcount: '517'
+ht-degree: 58%
 
 ---
 
@@ -34,7 +32,7 @@ AEM 的创作环境提供了多种内容搜索机制，具体取决于资源类�
 
 * 搜索特定的关键字、路径或标记。
 * 根据特定于资源的条件进行筛选，例如修改日期、页面状态、文件大小等。
-* 定义和使用[保存的搜索](#saved-searches) - 均基于以上条件.
+* 定义和使用 [保存的搜索](#saved-searches)  — 根据上述条件。
 
 >[!NOTE]
 >

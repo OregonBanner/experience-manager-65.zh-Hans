@@ -1,19 +1,15 @@
 ---
 title: 客户的Recommendations用户界面
-seo-title: User Interface Recommendations for Customers
 description: 与经典用户界面和触屏优化用户界面相关的推荐列表。
-seo-description: A list of recommendations related to the classic and touch-optimized user interfaces.
-uuid: 9ec2c9de-a79e-4f2c-a90f-b38ba9553e07
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
-discoiquuid: 8f06d4b6-7d30-4ebc-9c6a-3bb8607a9be8
 docset: aem65
 exl-id: 7b71119a-ff58-47c0-aeef-a705ed8c40e0
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '781'
+source-wordcount: '788'
 ht-degree: 0%
 
 ---
@@ -73,7 +69,7 @@ Adobe建议客户计划在2018/19年度切换到新UI。 这可以在更新6.5�
    <td>
     <ol>
      <li>更新至6.5</li>
-     <li>使用默认UI进行站点管理、资产等。 以此类推。<br /> </li>
+     <li>使用默认UI进行站点管理、资产等。 等等。<br /> </li>
      <li>配置“编辑页面”操作以打开经典UI页面编辑器。 请参阅 <a href="#selecting-your-ui">选择您的UI</a>.</li>
     </ol> <p>然后，在第二阶段：</p>
     <ol>

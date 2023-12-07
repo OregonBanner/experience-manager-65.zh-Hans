@@ -1,32 +1,28 @@
 ---
 title: 自适应表单和HTML5表单的外观框架
-seo-title: Appearance framework for adaptive and HTML5 forms
 description: Mobile Forms将表单模板渲染为HTML5表单。 这些表单使用jQuery、Backbone.js和Underscore.js文件作为外观并启用脚本。
-seo-description: Mobile Forms render Form Templates as HTML5 forms. These forms use jQuery, Backbone.js and Underscore.js files for the appearance and to enable scripting.
-uuid: 183b8d71-44fc-47bf-8cb2-1cf920ffd23a
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: customization
-discoiquuid: 3c2a44a7-24e7-49ee-bf18-eab0e44efa42
 exl-id: 3458471a-9815-463e-8044-68631073863c
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '1170'
+source-wordcount: '1152'
 ht-degree: 2%
 
 ---
 
 # 自适应表单和HTML5表单的外观框架 {#appearance-framework-for-adaptive-and-html-forms}
 
-Forms(自适应表单和HTML5表单)使用 [jQuery](https://jquery.com/)， [Backbone.js](https://backbonejs.org/) 和 [下划线.js](https://underscorejs.org/) 用于外观和脚本的库。 这些表单还使用 [jQuery UI](https://jqueryui.com/) **小组件** 表单中所有交互式元素（如字段和按钮）的架构。 此架构使Form开发人员能够使用Forms中一组丰富的可用jQuery小部件和插件。 在从leadDigits/trailDigits限制或实施图片子句等用户捕获数据时，您还可以实施特定于表单的逻辑。 表单开发人员可以创建和使用自定义外观，以改善数据捕获体验，并使其更易于用户使用。
+Forms(自适应表单和HTML5表单)使用 [jQuery](https://jquery.com/)， [Backbone.js](https://backbonejs.org/) 和 [下划线.js](https://underscorejs.org/) 用于外观和脚本的库。 这些表单还使用 [jQuery UI](https://jqueryui.com/) **小组件** 表单中所有交互元素（如字段和按钮）的架构。 此架构使Form开发人员能够使用Forms中一组丰富的可用jQuery小部件和插件。 在从leadDigits/trailDigits限制或实施picture子句等用户捕获数据时，您还可以实施特定于表单的逻辑。 表单开发人员可以创建和使用自定义外观，以改进数据捕获体验，并使其更便于用户使用。
 
-本文面向对jQuery和jQuery构件具有充分了解的开发人员。 它提供对外观框架的洞察，并使开发人员能够为表单字段创建替代外观。
+本文面向对jQuery和jQuery构件具有充分了解的开发人员。 它提供了外观框架的洞察信息，并使开发人员能够为表单字段创建替代外观。
 
-外观框架依靠各种选项、事件（触发器）和功能来捕获用户与表单的交互，并响应模型更改以通知最终用户。 此外：
+外观框架依赖各种选项、事件（触发器）和函数来捕获用户与表单的交互，并响应模型更改以通知最终用户。 此外：
 
-* 该框架为字段的外观提供了一组选项。 这些选项是键值对，分为两类：通用选项和字段类型特定选项。
+* 该框架为字段的外观提供了一组选项。 这些选项是键值对，分为两个类别：常用选项和特定于字段类型的选项。
 * 作为合同的一部分，外观会触发一系列事件，如进入和退出。
-* 实现一组函数需要外观。 某些函数是通用的，而其他函数则是特定于字段类型函数的。
+* 实现一组函数需要外观。 某些函数是通用的，而其他函数则特定于字段类型函数。
 
 ## 常用选项 {#common-options}
 
@@ -60,15 +56,15 @@ Forms(自适应表单和HTML5表单)使用 [jQuery](https://jquery.com/)， [Bac
   </tr>
   <tr>
    <td>角色</td>
-   <td>元素的角色，例如，标题或表。</td>
+   <td>元素的角色，例如标题或表。</td>
   </tr>
   <tr>
    <td>高度</td>
-   <td>构件高度。 它以像素为单位指定。 </td>
+   <td>小部件的高度。 以像素为单位指定。 </td>
   </tr>
   <tr>
    <td>宽度</td>
-   <td>构件的宽度。 它以像素为单位指定。</td>
+   <td>构件的宽度。 以像素为单位指定。</td>
   </tr>
   <tr>
    <td>访问</td>
@@ -76,7 +72,7 @@ Forms(自适应表单和HTML5表单)使用 [jQuery](https://jquery.com/)， [Bac
   </tr>
   <tr>
    <td>paraStyles</td>
-   <td>小组件的XFA元素的para属性。</td>
+   <td>XFA元素到小组件的para属性。</td>
   </tr>
   <tr>
    <td>目录</td>
@@ -85,27 +81,27 @@ Forms(自适应表单和HTML5表单)使用 [jQuery](https://jquery.com/)， [Bac
  </tbody>
 </table>
 
-除了这些选项外，框架还提供其他选项，这些选项因字段类型而异。 下面列出了特定于字段的选项的详细信息。
+除了这些选项，框架还提供了其他选项，这些选项因字段类型而异。 下面列出了特定于字段的选项的详细信息。
 
 ### 与表单框架的交互 {#interaction-with-forms-framework}
 
-要与表单框架交互，小组件会触发一些事件，以使表单脚本正常工作。 如果构件不引发这些事件，则在该字段的表单中编写的某些脚本将不起作用。
+要与表单框架交互，构件会触发一些事件以使表单脚本正常工作。 如果构件不引发这些事件，则在该字段的表单中编写的某些脚本不起作用。
 
-#### 由小组件触发的事件 {#events-triggered-by-widget}
+#### 构件触发的事件 {#events-triggered-by-widget}
 
 <table>
  <tbody>
   <tr>
-   <th>Event </th>
+   <th>事件 </th>
    <th>描述</th>
   </tr>
   <tr>
    <td>XFA_ENTER_EVENT</td>
-   <td>每当字段成为焦点时，就会触发此事件。 它允许“enter”脚本在字段中运行。 触发事件的语法为<br /> （构件）。_trigger(xfalib.ut.XfaUtil.prototype.XFA_ENTER_EVENT)<br /> </td>
+   <td>每当字段成为焦点时，将触发此事件。 它允许“enter”脚本在字段中运行。 触发事件的语法为<br /> （构件）。_trigger(xfalib.ut.XfaUtil.prototype.XFA_ENTER_EVENT)<br /> </td>
   </tr>
   <tr>
    <td>XFA_EXIT_EVENT</td>
-   <td>当用户离开字段时，将触发此事件。 它允许引擎设置字段的值并运行其“退出”脚本。 触发事件的语法为<br /> （构件）。_trigger(xfalib.ut.XfaUtil.prototype.XFA_EXIT_EVENT)<br /> </td>
+   <td>此事件在用户离开字段时触发。 它允许引擎设置字段的值并运行其“退出”脚本。 触发事件的语法为<br /> （构件）。_trigger(xfalib.ut.XfaUtil.prototype.XFA_EXIT_EVENT)<br /> </td>
   </tr>
   <tr>
    <td>XFA_CHANGE_EVENT</td>
@@ -130,18 +126,18 @@ Forms(自适应表单和HTML5表单)使用 [jQuery](https://jquery.com/)， [Bac
   </tr>
   <tr>
    <td>聚焦：函数()</td>
-   <td>把注意力放在场上。</td>
+   <td>把重点放在现场。</td>
   </tr>
   <tr>
    <td>click： function()</td>
-   <td>将焦点放在字段并调用XFA_CLICK_EVENT。</td>
+   <td>将焦点置于字段并调用XFA_CLICK_EVENT。</td>
   </tr>
   <tr>
-   <td><p>markError：function(errorMessage， errorType)<br /> <br /> <em>错误消息：字符串 </em>表示错误<br /> <em>errorType：字符串("warning"/"error")</em></p> <p><strong>注释</strong>：仅适用于HTML5表单。</p> </td>
+   <td><p>markError：function(errorMessage， errorType)<br /> <br /> <em>错误消息：字符串 </em>表示错误<br /> <em>errorType：字符串("warning"/"error")</em></p> <p><strong>注意</strong>：仅适用于HTML5表单。</p> </td>
    <td>向构件发送错误消息和错误类型。 构件显示错误。</td>
   </tr>
   <tr>
-   <td><p>clearError： function()</p> <p><strong>注释</strong>：仅适用于HTML5表单。</p> </td>
+   <td><p>clearError：函数()</p> <p><strong>注意</strong>：仅适用于HTML5表单。</p> </td>
    <td>如果修复了字段中的错误，则调用。 构件将隐藏错误。</td>
   </tr>
  </tbody>
@@ -149,9 +145,9 @@ Forms(自适应表单和HTML5表单)使用 [jQuery](https://jquery.com/)， [Bac
 
 ## 特定于字段类型的选项 {#options-specific-to-type-of-field}
 
-所有自定义构件都应符合上述规范。 要使用不同字段的功能，构件必须遵循该特定字段的准则。
+所有自定义构件都应符合上述规范。 要使用不同字段的功能，构件必须遵循适用于该特定字段的准则。
 
-### 文本编辑：文本字段 {#textedit-text-field}
+### TextEdit：文本字段 {#textedit-text-field}
 
 <table>
  <tbody>
@@ -168,7 +164,7 @@ Forms(自适应表单和HTML5表单)使用 [jQuery](https://jquery.com/)， [Bac
    <td>可在字段中输入的最大字符数。</td>
   </tr>
   <tr>
-   <td><p>limitLengthToVisibleArea</p> <p><strong>注释</strong>：仅适用于HTML5表单</p> </td>
+   <td><p>limitLengthToVisibleArea</p> <p><strong>注意</strong>：仅适用于HTML5表单</p> </td>
    <td>指定当文本宽度超过小部件的宽度时文本字段的行为。</td>
   </tr>
  </tbody>
@@ -187,11 +183,11 @@ Forms(自适应表单和HTML5表单)使用 [jQuery](https://jquery.com/)， [Bac
    <td>选定值的数组。<br /> </td>
   </tr>
   <tr>
-   <td>项目<br /> </td>
+   <td>个项目<br /> </td>
    <td>要显示为选项的对象的数组。 每个对象包含两个属性 — <br /> 保存：要保存的值，显示：要显示的值。<br /> <br /> </td>
   </tr>
   <tr>
-   <td><p>可编辑</p> <p><strong>注释</strong>：仅适用于HTML5表单。<br /> </p> </td>
+   <td><p>可编辑</p> <p><strong>注意</strong>：仅适用于HTML5表单。<br /> </p> </td>
    <td>如果值为true，则在构件中启用自定义文本输入。<br /> </td>
   </tr>
   <tr>
@@ -214,15 +210,15 @@ Forms(自适应表单和HTML5表单)使用 [jQuery](https://jquery.com/)， [Bac
    <th>描述</th>
   </tr>
   <tr>
-   <td><p>addItem：<em> function(itemValues)<br /> itemValues：包含显示和保存值的对象 <br /> {sDisplayVal： &lt;displayvalue&gt;，sSaveVal： &lt;save value=""&gt;}</em></p> </td>
-   <td>向列表添加项。</td>
+   <td><p>addItem：<em> 函数(itemValues)<br /> itemvalues：包含显示和保存值的对象 <br /> {sDisplayVal： &lt;displayvalue&gt;，sSaveVal： &lt;save value=""&gt;}</em></p> </td>
+   <td>向列表添加项目。</td>
   </tr>
   <tr>
    <td>deleteItem<em>：函数(nIndex)<br /> nIndex：要从列表中删除的项的索引<br /> </em><br /> <br /> </td>
    <td>从列表中删除选项。</td>
   </tr>
   <tr>
-   <td>clearItems：<code> function()</code></td>
+   <td>清除项目：<code> function()</code></td>
    <td>清除列表中的所有选项。</td>
   </tr>
  </tbody>
@@ -233,10 +229,10 @@ Forms(自适应表单和HTML5表单)使用 [jQuery](https://jquery.com/)， [Bac
 | 选项 | 描述 |
 |---|---|
 | 数据类型 | 表示字段的数据类型（整数/小数）的字符串。 |
-| leadDigits | 十进制数中允许的最前导数字数。 |
-| fracDigits | 十进制数中允许的最多小数位数。 |
-| 零 | 字段区域设置中表示零的字符串。 |
-| 十进制 | 字段区域设置中十进制的字符串表示形式。 |
+| leadDigits | 小数位数中允许的前导位数上限。 |
+| fracDigits | 小数位数中允许的最多小数位数。 |
+| 零 | 字段区域设置中零的字符串表示形式。 |
+| 小数 | 字段区域设置中十进制的字符串表示形式。 |
 
 ### CheckButton： RadioButton， CheckBox {#checkbutton-radiobutton-checkbox}
 
@@ -247,8 +243,8 @@ Forms(自适应表单和HTML5表单)使用 [jQuery](https://jquery.com/)， [Bac
    <th>描述</th>
   </tr>
   <tr>
-   <td>values</td>
-   <td><p>值数组（开/关/中性）。</p> <p>它是checkButton的不同状态的值数组。 values[0]是状态为ON时的值，值[1]是状态为OFF时的值，<br /> values[2]是状态为空时的值。 值数组的长度等于状态选项的值。<br /> </p> </td>
+   <td>值</td>
+   <td><p>值数组（开/关/中性）。</p> <p>它是checkButton的不同状态的值数组。 values[0]是状态为ON时的值，values[1]是状态为OFF时的值，<br /> values[2]是状态为NEUTRAL的值。 值数组的长度等于状态选项的值。<br /> </p> </td>
   </tr>
   <tr>
    <td>状态</td>
@@ -265,7 +261,7 @@ Forms(自适应表单和HTML5表单)使用 [jQuery](https://jquery.com/)， [Bac
 
 | 选项 | 描述 |
 |---|---|
-| 天 | 该字段的本地化天数名称。 |
+| 天 | 该字段的本地化日期名称。 |
 | 个月 | 该字段的本地化月份名称。 |
 | 零 | 数字0的本地化文本。 |
-| 清除文本 | 清除按钮的本地化文本。 |
+| 明文 | 清除按钮的本地化文本。 |

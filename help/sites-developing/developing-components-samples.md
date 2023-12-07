@@ -1,20 +1,16 @@
 ---
 title: 开发AEM组件 — 代码示例
-seo-title: Developing AEM Components - Code Samples
 description: 本节提供了有关如何为AEM创建自己的组件的一些示例。
-seo-description: This section provides some examples on how to create your own components for AEM.
-uuid: 764b5dad-d3bb-48c6-9e93-9dc4e3f623db
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: components
 content-type: reference
-discoiquuid: 402c0d6b-2c26-490a-97c5-dfd4dea778e0
 legacypath: /content/docs/en/aem/6-2/develop/components/components-develop
 exl-id: 4059af12-49a7-489c-a2b8-d0481be57cc5
-source-git-commit: 4fa868f3ae4778d3a637e90b91f7c5909fe5f8aa
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '221'
-ht-degree: 4%
+source-wordcount: '203'
+ht-degree: 5%
 
 ---
 
@@ -37,7 +33,6 @@ ht-degree: 4%
 >* a [自动化测试的框架，基于Hobbes.js库](/help/sites-developing/hobbes.md)
 >
 
-
 ## 代码示例 — 如何自定义对话框字段 {#code-sample-how-to-customize-dialog-fields}
 
 GITHUB上的代码
@@ -53,9 +48,9 @@ GITHUB上的代码
 
 ## 相关资源 {#related-resources}
 
-### 将新操作添加到组件工具栏 {#add-new-action-to-a-component-toolbar}
+### 将新的操作添加到组件工具栏 {#add-new-action-to-a-component-toolbar}
 
-可以使用页面编辑器的编辑层向组件工具栏中添加新操作。
+可以使用页面编辑器的编辑层将新操作添加到组件工具栏。
 
 详细信息以及指向代码示例的链接位于 [将新操作添加到组件工具栏](/help/sites-developing/customizing-page-authoring-touch.md#add-new-action-to-a-component-toolbar).
 

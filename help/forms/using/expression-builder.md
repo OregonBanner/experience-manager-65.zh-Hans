@@ -1,26 +1,22 @@
 ---
 title: 表达式生成器中的远程函数
-seo-title: Expression Builder
 description: 通信管理中的表达式生成器允许您创建表达式和远程函数。
-seo-description: Expression Builder in Correspondence Management lets you create expressions and remote functions.
-uuid: 6afb84c0-ad03-4bb1-a154-d46cc47650ae
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: correspondence-management
-discoiquuid: 68e3071e-7ce6-4bdc-8561-14bcaeae2b6c
 docset: aem65
 feature: Correspondence Management
 exl-id: b41af9fe-c698-44b3-9ac6-97d42cdc02d4
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '786'
+source-wordcount: '783'
 ht-degree: 1%
 
 ---
 
 # 表达式生成器中的远程函数{#remote-functions-in-expression-builder}
 
-使用表达式生成器，您可以创建表达式或条件，以对数据字典或最终用户提供的数据值执行计算。 通信管理使用表达式求值结果来选择资源（如文本、图像、列表和条件），并根据需要在通信中插入这些资源。
+使用表达式生成器，您可以创建表达式或条件，以对数据字典或最终用户提供的数据值进行计算。 通信管理使用表达式求值结果来选择资产（例如文本、图像、列表和条件），并根据需要在通信中插入这些资产。
 
 ## 使用表达式生成器创建表达式和远程函数 {#creating-expressions-and-remote-functions-with-expression-builder}
 
@@ -30,19 +26,19 @@ ht-degree: 1%
 
 ### 运算符 {#operators}
 
-表达式生成器的顶部栏中提供了可用于表达式的运算符。
+可在表达式中使用的运算符在表达式生成器的顶栏中可用。
 
 ### 表达式示例 {#exampleexpressions}
 
 以下是一些可在通信管理解决方案中使用的常用JSP EL示例：
 
-* 要添加两个数字： ${number1 + number2}
+* 添加两个数字： ${number1 + number2}
 * 要连接两个字符串： ${str1} ${str2}
 * 要比较两个数字：${age &lt; 18}
 
-欲知更多信息，请参见 [JSP EL规范](https://download.oracle.com/otn-pub/jcp/jsp-2.1-fr-spec-oth-JSpec/jsp-2_1-fr-spec-el.pdf). 客户端表达式管理器不支持JSP EL规范中的某些变量和函数，特别是：
+欲知更多信息，请参见 [JSP EL规范](https://download.oracle.com/otn-pub/jcp/jsp-2.1-fr-spec-oth-JSpec/jsp-2_1-fr-spec-el.pdf). 客户端表达式管理器不支持JSP EL规范中的某些变量和函数，具体为：
 
-* 集合索引和映射键(使用 [] 表示法)不支持在客户端计算的表达式的变量名称。
+* 集合索引和映射键(使用 [] 表示法)不支持在客户端计算的表达式的变量名称中使用。
 * 以下是表达式中使用的参数类型或函数的返回类型：
 
    * java.lang.String
@@ -69,7 +65,7 @@ ht-degree: 1%
 
 ### 远程功能 {#remote-function}
 
-远程函数提供在表达式中使用自定义逻辑的功能。 您可以将自定义逻辑作为Java中的方法写入表达式，并在表达式中使用相同的函数。 可用的远程函数列在表达式编辑器左侧的“远程函数”选项卡下。
+远程函数提供了在表达式中使用自定义逻辑的功能。 您可以编写自定义逻辑，以作为Java中的方法用于表达式中，并且可以在表达式中使用相同的函数。 可用的远程函数列在表达式编辑器左侧的“远程函数”选项卡下。
 
 ![remotefunction](assets/remotefunction.png)
 
@@ -77,13 +73,13 @@ ht-degree: 1%
 
 您可以创建一个自定义捆绑包以导出您自己的远程函数，以便在表达式中使用。 要创建自定义捆绑包以导出您自己的远程函数，请执行以下任务。 它演示了如何编写自定义函数以将其输入字符串转换为大写。
 
-1. 为OSGi服务定义一个接口，该接口包含要导出以供Expression Manager使用的方法。
-1. 在接口A上声明方法，并使用@ServiceMethod注释(com.adobe.exm.expeval.ServiceMethod)对其进行注释。 表达式管理器会忽略任何未注释的方法。 ServiceMethod注释具有以下可选属性，也可以指定这些属性：
+1. 为OSGi服务定义一个接口，该接口包含正导出以供Expression Manager使用的方法。
+1. 在接口A上声明方法，并使用@ServiceMethod注释(com.adobe.exm.expeval.ServiceMethod)对其进行注释。 Expression Manager忽略任何未注释的方法。 ServiceMethod注释具有以下可选属性，也可以指定这些属性：
 
    1. **已启用**：确定是否启用此方法。 表达式管理器会忽略已禁用的方法。
-   1. **familyId**：指定方法的系列（组）。 如果为空，则Expression Manager假定该方法属于默认系列。 从中选择函数时没有家庭注册表（默认家庭除外）。 Expression Manager通过获取由各种捆绑导出的所有函数指定的所有系列ID的并集来动态创建注册表。 请确保此处指定的ID可合理读取，因为它也会显示在表达式创作用户界面中。
-   1. **显示名称**：易于用户识别的函数名称。 此名称用于创作用户界面中的显示目的。 如果为空，则Expression Manager将使用函数的前缀和local-name来构造默认名称。
-   1. **描述**：函数的详细描述。 此描述用于创作用户界面中的显示目的。 如果为空，则Expression Manager将使用函数的前缀和local-name构建默认描述。
+   1. **familyId**：指定方法的系列（组）。 如果为空，则Expression Manager假定该方法属于默认系列。 没有从中选择函数的家族的注册表（默认家族除外）。 Expression Manager通过获取由各种捆绑导出的所有函数指定的所有系列ID的并集来动态创建注册表。 由于他们在此指定的ID也会显示在表达式创作用户界面中，因此请确保该ID可合理读取。
+   1. **显示名称**：人类可读的函数名称。 此名称用于创作用户界面中的显示。 如果为空，则Expression Manager将使用函数的前缀和local-name构造默认名称。
+   1. **描述**：函数的详细描述。 此描述用于创作用户界面中的显示目的。 如果为空，则Expression Manager将使用函数的前缀和local-name构建默认说明。
 
    ```java
    package mergeandfuse.com;
@@ -96,7 +92,7 @@ ht-degree: 1%
    }
    ```
 
-   还可以选择使用@ServiceMethodParameter注释(com.adobe.exm.expeval.ServiceMethodParameter)对方法的参数进行注释。 此注释仅用于指定在创作用户界面中使用的人类可读的名称和方法参数的描述。 确保接口方法的参数和返回值属于以下类型之一：
+   这些方法的参数也可以选择使用@ServiceMethodParameter注释(com.adobe.exm.expeval.ServiceMethodParameter)进行注释。 此注释仅用于指定在创作用户界面中使用的人类可读名称以及方法参数的描述。 确保接口方法的参数和返回值属于以下类型之一：
 
    * java.lang.String
    * java.lang.Character
@@ -119,7 +115,6 @@ ht-degree: 1%
    * java.util.Date
    * java.util.List
 
-
 1. 定义接口的实现，将其配置为OSGI服务，并定义以下服务属性：
 
 ```jsp
@@ -129,7 +124,7 @@ ht-degree: 1%
   @org.apache.felix.scr.annotations.Property(name = "exm.service", boolValue = true)})
 ```
 
-exm.service=true条目指示Expression Manager，该服务包含适合在表达式中使用的远程函数。 此 &lt;service_id> 值必须是有效的Java标识符（字母数字、$、_且不含其他特殊字符）。 以REMOTE_关键字为前缀的值构成表达式内部使用的前缀。 例如，可以在表达式中使用REMOTE_foo：bar()引用带有注释方法bar()和服务属性中服务ID的接口。
+exm.service=true条目指示Expression Manager，该服务包含适合在表达式中使用的远程函数。 此 &lt;service_id> 值必须是有效的Java标识符（字母数字、$、_且不含其他特殊字符）。 此值以REMOTE_关键字为前缀，构成表达式内部使用的前缀。 例如，可以在使用REMOTE_foo：bar()的表达式中引用带有注释方法bar()的接口以及服务属性中的服务ID foo。
 
 ```java
 package mergeandfuse.com;
@@ -157,7 +152,7 @@ public class RemoteFuntionImpl implements RemoteFunction {
 
 以下是要使用的示例存档：
 
-* **GoodFunctions.jar.zip** 是jar文件，其包中包含示例远程函数定义。 下载GoodFunctions.jar.zip文件并将其解压缩以获取jar文件。
+* **GoodFunctions.jar.zip** 是带有包的jar文件，其中包含示例远程函数定义。 下载GoodFunctions.jar.zip文件并将其解压缩以获取jar文件。
 * **GoodFunctions.zip** 是用于定义自定义远程函数并为其创建捆绑包的源代码包。
 
 GoodFunctions.jar.zip

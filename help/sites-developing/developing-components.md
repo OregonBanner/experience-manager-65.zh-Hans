@@ -1,21 +1,17 @@
 ---
 title: 开发AEM组件
-seo-title: Developing AEM Components
 description: AEM组件用于保留、格式化和呈现网页上可用的内容。
-seo-description: AEM components are used to hold, format, and render the content made available on your webpages.
-uuid: 1f39daa6-7277-45a2-adcc-74b58c93b8e4
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: components
 content-type: reference
-discoiquuid: 8cdb6db4-adaa-4eda-af7d-310a0b44b80b
 docset: aem65
 legacypath: /content/docs/en/aem/6-2/develop/components/components-touch-optimized
 exl-id: 573cdc36-e9c3-4803-9c4e-cebd0cf0a56f
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '3447'
-ht-degree: 1%
+source-wordcount: '3246'
+ht-degree: 0%
 
 ---
 
@@ -141,7 +137,7 @@ AEM组件用于保留、格式化和呈现网页上可用的内容。
 
    * 在所有云解决方案中提供一致的UI
    * [AEM触屏优化UI的概念 — Coral UI](/help/sites-developing/touch-ui-concepts.md#coral-ui)
-   * [Coral UI 指南](https://developer.adobe.com/experience-manager/reference-materials/6-5/coral-ui/coralui3/index.html)
+   * [Coral UI指南](https://developer.adobe.com/experience-manager/reference-materials/6-5/coral-ui/coralui3/index.html)
 
 * Granite UI
 
@@ -352,7 +348,7 @@ newComponent (cq:Component)
 
 >[!NOTE]
 >
->使用AEM时，可通过多种方法管理此类服务的配置设置。请参阅 [配置OSGi](/help/sites-deploying/configuring-osgi.md) 以了解更多详细信息和建议的做法。
+>使用AEM时，可通过多种方法管理此类服务的配置设置。 请参阅 [配置OSGi](/help/sites-deploying/configuring-osgi.md) 以了解更多详细信息和建议的做法。
 
 ## 启用组件并将组件添加到段落系统 {#enabling-and-adding-your-component-to-the-paragraph-system}
 
@@ -395,22 +391,22 @@ newComponent (cq:Component)
       * 类型：`String`
       * 值：相关资产所属的组；例如， `media`
 
-   * `assetMimetype`:
+   * `assetMimetype`：
 
       * 类型：`String`
       * 值：相关资产的mime类型；例如， `image/*`
 
-   * `droptarget`:
+   * `droptarget`：
 
       * 类型：`String`
       * 值：放置目标；例如， `image`
 
-   * `resourceType`:
+   * `resourceType`：
 
       * 类型：`String`
       * 值：相关的组件资源；例如， `foundation/components/image`
 
-   * `type`:
+   * `type`：
 
       * 类型：`String`
       * 值：类型，例如， `Images`

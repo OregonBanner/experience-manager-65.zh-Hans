@@ -1,18 +1,14 @@
 ---
 title: 在AEM中使用Sling资源合并器
-seo-title: Using the Sling Resource Merger in AEM
 description: Sling资源合并器提供访问和合并资源的服务
-seo-description: The Sling Resource Merger provides services to access and merge resources
-uuid: 0a28fdc9-caea-490b-8f07-7c4a6b802e09
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
 content-type: reference
-discoiquuid: ec712ba0-0fd6-4bb8-93d6-07d09127df58
 exl-id: 1eed754e-9a7d-4b65-a929-757fc962614d
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '1255'
+source-wordcount: '1247'
 ht-degree: 1%
 
 ---
@@ -200,8 +196,8 @@ Sling资源合并器提供访问和合并资源的服务。 它提供了以下�
    1. 在/apps下创建对应的节点
    1. 创建资产 `sling:hideResource`
 
-      * 类型: `Boolean`
-      * 值: `true`
+      * 类型： `Boolean`
+      * 值： `true`
 
 * **隐藏节点的子节点（同时保留节点的属性）**
 
@@ -210,7 +206,7 @@ Sling资源合并器提供访问和合并资源的服务。 它提供了以下�
    1. 在下创建对应的节点 `/apps`
    1. 创建资产 `sling:hideChildren`：
 
-      * 类型: `String[]`
+      * 类型： `String[]`
       * 值：子节点的列表（如中所定义） `/libs`)以隐藏/忽略
 
       通配符&amp;ast；可用于隐藏/忽略所有子节点。
@@ -226,8 +222,8 @@ Sling资源合并器提供访问和合并资源的服务。 它提供了以下�
 
          这会指定节点(如 `/libs`)，当前节点应位于以下位置之前：
 
-         * 类型: `String`
-         * 值: `<before-SiblingName>`
+         * 类型： `String`
+         * 值： `<before-SiblingName>`
 
 ### 从您的代码调用Sling资源合并器 {#invoking-the-sling-resource-merger-from-your-code}
 
@@ -239,7 +235,7 @@ Sling资源合并器包含两个自定义资源提供程序 — 一个用于叠�
 >
 >这可确保调用Sling资源合并器并返回完全合并的资源（减少需要复制的结构） `/libs`)。
 
-* 叠加:
+* 叠加：
 
    * 用途：根据资源的搜索路径合并资源
    * 装入点： `/mnt/overlay`
@@ -248,7 +244,7 @@ Sling资源合并器包含两个自定义资源提供程序 — 一个用于叠�
 
       * `getResource('/mnt/overlay' + '<relative-path-to-resource>');`
 
-* 替代:
+* 覆盖：
 
    * 用途：根据资源的超级类型合并资源
    * 装入点： `/mnt/overide`
@@ -261,11 +257,11 @@ Sling资源合并器包含两个自定义资源提供程序 — 一个用于叠�
 
 下面介绍一些示例：
 
-* 叠加:
+* 叠加：
 
    * [自定义控制台](/help/sites-developing/customizing-consoles-touch.md)
    * [自定义页面创作](/help/sites-developing/customizing-page-authoring-touch.md)
 
-* 替代:
+* 覆盖：
 
    * [配置页面属性](/help/sites-developing/page-properties-views.md#configuring-your-page-properties)

@@ -1,13 +1,11 @@
 ---
 title: 配置共享队列
-seo-title: Configure shared queues
 description: 了解如何在OSGi上为AEM Forms上的以Forms为中心的工作流使用共享队列。
-seo-description: Learn how to use shared queues for Forms-centric workflows on AEM Forms on OSGi.
 topic-tags: process
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
 exl-id: 72cd0594-8b5e-4d14-bc6f-bca26bae50f2
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '840'
 ht-degree: 1%

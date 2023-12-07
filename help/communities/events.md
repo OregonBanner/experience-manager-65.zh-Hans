@@ -1,31 +1,27 @@
 ---
-title: 适用于Communities组件的OSGi事件
-seo-title: OSGi Events for Communities Components
+title: 适用于社区组件的OSGi事件
 description: 发送可触发异步侦听器的OSGi事件
-seo-description: OSGi events are sent that can trigger asynchronous listeners
-uuid: 317e2add-689d-4c99-ae38-0703b6649cb7
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: 25b7ac08-6cdc-4dd5-a756-d6169b86f9ab
 exl-id: 8049d797-e758-44c2-a89b-51d2b2fca8dc
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '665'
-ht-degree: 4%
+source-wordcount: '592'
+ht-degree: 5%
 
 ---
 
-# 适用于Communities组件的OSGi事件  {#osgi-events-for-communities-components}
+# 适用于社区组件的OSGi事件  {#osgi-events-for-communities-components}
 
 ## 概述 {#overview}
 
-当成员与社区功能交互时，将发送可触发异步侦听器的OSGi事件，例如通知或游戏（评分和标记）。
+当成员与社区功能交互时，会发送可触发异步侦听器的OSGi事件，例如通知或游戏化（评分和徽章）。
 
 组件的 [社交事件](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/scf/core/SocialEvent.html) 实例将事件记录为 `actions` 发生于 `topic`. SocialEvent包括用于返回 `verb` 与操作相关联。 有一个 *n-1* 关系介于 `actions` 和 `verbs`.
 
-对于发行版中交付的社区组件，下表描述了 `verbs` 为每项定义 `topic` 可供使用。
+对于发行版中交付的Communities组件，下表介绍了 `verbs` 为每项定义 `topic` 可供使用。
 
 ## 主题和动词 {#topics-and-verbs}
 
@@ -35,9 +31,9 @@ ht-degree: 4%
 | **动词** | **描述** |
 |---|---|
 | POST | 成员创建日历事件 |
-| 添加 | 成员对日历事件的评论 |
+| 添加 | 日历事件的成员注释 |
 | 更新 | 编辑成员的日历事件或评论 |
-| 删除 | 已删除成员的日历事件或评论 |
+| 删除 | 成员的日历事件或评论已删除 |
 
 [注释组件](essentials-comments.md)
 社交事件 `topic`= com/adobe/cq/social/comment
@@ -45,7 +41,7 @@ ht-degree: 4%
 | **动词** | **描述** |
 |---|---|
 | POST | 成员创建注释 |
-| 添加 | 成员对评论的回复 |
+| 添加 | 成员回复评论 |
 | 更新 | 编辑成员的注释 |
 | 删除 | 已删除成员的评论 |
 
@@ -84,12 +80,12 @@ ht-degree: 4%
 
 | **动词** | **描述** |
 |---|---|
-| POST | 成员创建QnA问题 |
+| POST | 成员创建问题与解答问题 |
 | 添加 | 成员创建问题与解答答案 |
 | 更新 | 编辑成员的问题或答案 |
-| SELECT | 已选择成员的答案 |
+| 选择 | 已选择成员的答案 |
 | 取消选择 | 已取消选择成员的答案 |
-| 删除 | 已删除成员的QnA问题或答案 |
+| 删除 | 已删除成员的问题或答案 |
 
 [审核组件](reviews-basics.md)
 社交事件 `topic`= com/adobe/cq/social/review
@@ -97,7 +93,7 @@ ht-degree: 4%
 | **动词** | **描述** |
 |---|---|
 | POST | 成员创建审核 |
-| 更新 | 编辑成员的审核 |
+| 更新 | 成员的审核已编辑 |
 | 删除 | 已删除成员的审核 |
 
 [评级组件](rating-basics.md)
@@ -105,7 +101,7 @@ ht-degree: 4%
 
 | **动词** | **描述** |
 |---|---|
-| 添加评级 | 成员内容已上调 |
+| 添加评级 | 成员内容已上标 |
 | 删除评级 | 成员内容已降级 |
 
 [投票组件](essentials-voting.md)
@@ -113,7 +109,7 @@ ht-degree: 4%
 
 | **动词** | **描述** |
 |---|---|
-| 添加投票 | 成员内容已投赞成票 |
+| 添加投票 | 成员内容已被投票表决 |
 | 删除投票 | 成员内容已被否决 |
 
 **启用审核的组件**
@@ -123,16 +119,16 @@ ht-degree: 4%
 |---|---|
 | 拒绝 | 成员内容被拒绝 |
 | 标记为不适当 | 成员内容已标记 |
-| 取消标记为不适当 | 成员的内容未标记 |
-| 接受 | 审阅人已批准成员的内容 |
+| 取消标记为不适当 | 成员内容未标记 |
+| ACCEPT | 审查方已批准成员的内容 |
 | 关闭 | 成员关闭评论以进行编辑和回复 |
-| OPEN | 成员重新打开注释 |
+| 打开 | 成员重新打开注释 |
 
 ## 自定义组件的事件 {#events-for-custom-components}
 
 对于自定义组件， [SocialEvent抽象类](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/scf/core/SocialEvent.html) 必须扩展才能将组件的事件记录为 `actions`发生于 `topic`.
 
-自定义事件将覆盖方法 `getVerb()` 以便适当地 `verb`针对每个返回 `action`. 此 `verb` 针对操作返回的可能是常用的(例如 `POST`)或专用于组件的组件(例如 `ADD RATING`)。 有一个 *n-1* 关系介于 `actions`和 `verbs`.
+自定义事件将覆盖方法 `getVerb()` 以便适当地 `verb`针对每个维度返回 `action`. 此 `verb` 针对操作返回的可能是常用的(例如 `POST`)或组件专用的(例如 `ADD RATING`)。 有一个 *n-1* 关系介于 `actions`和 `verbs`.
 
 >[!NOTE]
 >
@@ -142,7 +138,7 @@ ht-degree: 4%
 
 [org.osgi.service.event.Event](https://osgi.org/javadoc/r4v41/org/osgi/service/event/Event.html)；
 [com.adobe.cq.social.scf.core.SocialEvent](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/scf/core/SocialEvent.html)；
-[com.adobe.granite.activitystreams.ObjectTypes](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/activitystreams/ObjectTypes.html)；
+[com.adobe.granite.activitystreams.ObjectType](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/activitystreams/ObjectTypes.html)；
 [com.adobe.granite.activitystreams.Verbs](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/activitystreams/Verbs.html)；
 
 ```java

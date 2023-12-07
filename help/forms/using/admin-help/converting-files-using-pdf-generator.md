@@ -1,17 +1,15 @@
 ---
 title: 使用PDF Generator转换文件
 description: PDF Generator服务将本机文件格式转换为PDF。 它还会将PDF转换为其他文件格式并优化PDF文档的大小。
-uuid: 295afb8f-130a-44f5-b0ab-e4c93c0c9e52
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/working_with_pdf_generator
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 999ae2be-56ba-48c1-861b-8d4c991a0206
 feature: PDF Generator
 exl-id: 0e2c12b5-24c8-4aca-8826-cb661051ce4f
-source-git-commit: 22d9b22a0fc0bc5f753f2e11ca66e2627e1a8405
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '1184'
+source-wordcount: '1173'
 ht-degree: 0%
 
 ---
@@ -38,7 +36,7 @@ ht-degree: 0%
    * 如果要上载设置文件，请在框中键入其路径和名称，或单击“浏览”查找并选择该文件。
 
 1. （可选）在“XMP元数据文件”下，键入XMP文件的路径和名称，或单击“浏览”查找并选择该文件。 XMP文件可用于包含标准元数据信息。 (请参阅 [关于XMP文件](converting-files-using-pdf-generator.md#about-xmp-files).)
-1. 单击创建。创建文件后，将显示指向该文件的链接。 如果在转换过程中出现错误，则会显示警告。 如果正在创建Postscript文件，则警告中还包含指向日志文件的链接。
+1. 单击“创建”。 创建文件后，将显示指向该文件的链接。 如果在转换过程中出现错误，则会显示警告。 如果正在创建Postscript文件，则警告中还包含指向日志文件的链接。
 1. 单击PDF文件的链接。 文件将在Acrobat中打开。
 
 ### 关于XMP文件 {#about-xmp-files}
@@ -98,7 +96,7 @@ Adobe可扩展元数据平台(XMP)为Adobe应用程序提供了一个通用的XM
    * 要使用现有的设置文件，请选择“上载设置文件”，然后单击“浏览”以转到文件位置。
 
 1. 要上传XMP文件，请单击“浏览”并转到文件位置。 XMP文件可用于包含标准元数据信息。 (请参阅 [关于XMP文件](converting-files-using-pdf-generator.md#about-xmp-files).)
-1. 单击创建。创建文件后，将显示指向PDF文件的链接。
+1. 单击“创建”。 创建文件后，将显示指向PDF文件的链接。
 1. 单击该链接可在Acrobat中查看PDF文档。
 
 ## 将PDF文件导出为其他文件格式（仅限Windows） {#export-a-pdf-file-to-another-file-format-windows-only}
@@ -110,7 +108,7 @@ Adobe可扩展元数据平台(XMP)为Adobe应用程序提供了一个通用的XM
 1. 在要列出的Export PDF文件中，选择要将PDF文件导出到的格式。
 1. 在指定超时框中，输入应用程序超时前的等待时间。 默认值为270秒。
 
-   转换文件时显示的转换时间可能大于您在此处指定的值。 “转换时间”包括等待线程或进程所花费的时间、转换文件所花费的时间，以及回退转换器所花费的时间（如果适用）。 次. Specify a Timeout值只是转换文件所用的时间。
+   转换文件时显示的转换时间可能大于您在此处指定的值。 “转换时间”包括等待线程或进程所花费的时间、转换文件所花费的时间，以及回退转换器所花费的时间（如果适用）。 时间。 Specify a Timeout值只是转换文件所用的时间。
 
 1. （可选）在 **指定自定义印前检查配置文件** 选项，单击浏览，然后选择 [自定义印前检查配置文件](https://helpx.adobe.com/acrobat/using/preflight-profiles-acrobat-pro.html). 印前检查配置文件仅在将文档转换为PDF存档(PDF/A)格式时使用。
 1. 单击“导出”。 转换完成后，将显示指向导出文件的链接。
@@ -131,4 +129,4 @@ PDF Generator支持减少PDF文件的大小。
    * 要使用自定义设置，请选择使用自定义设置，指定文件类型设置，然后指定超时值。 默认值为270秒。
    * 要使用现有的设置文件，请选择“上载设置文件”，然后单击“浏览”以转到文件位置。
 
-1. 单击创建。
+1. 单击“创建”。

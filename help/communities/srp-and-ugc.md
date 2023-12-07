@@ -1,18 +1,14 @@
 ---
 title: SRP和UGC Essentials
-seo-title: SRP and UGC Essentials
 description: 存储资源提供程序和用户生成的内容概述
-seo-description: Storage resource provider and user-generated content overview
-uuid: a4ee8725-f554-4fcf-ac1e-34878d6c02f8
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: 0763f236-5648-49e9-8a24-dbc8f4c77ee3
 exl-id: 8279684f-23dd-4234-bf01-fd2ce74bcb4e
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '686'
+source-wordcount: '683'
 ht-degree: 0%
 
 ---
@@ -27,23 +23,23 @@ ht-degree: 0%
 
 ## StorageResourceProvider API {#storageresourceprovider-api}
 
-SocialResourceProvider API (SRP API)是各种Sling资源提供程序API的扩展。 它包括对分页和原子增量的支持（可用于计数和评分）。
+SocialResourceProvider API (SRP API)是各种Sling资源提供程序API的扩展。 它包括支持分页和原子增量（用于计数和评分）。
 
-SCF组件需要查询，因为需要按日期、有用性、票数等排序。 所有SRP选项都有灵活的查询机制，不依赖于分段。
+SCF组件需要查询，因为需要按日期、实用性、票数等排序。 所有SRP选项都有灵活的查询机制，不依赖于分段。
 
 SRP存储位置包含组件路径。 SRP API应始终用于访问UGC，因为根路径取决于所选的SRP选项，如ASRP、MSRP或JSRP。
 
-SRP API不是抽象类，它是一个接口。 不应轻率地实施自定义实施，因为升级到新版本时将错过对内部实施进行未来改进的好处。
+SRP API不是抽象类，它是一个接口。 不应轻率地执行自定义实施，因为升级到新版本时将错过未来对内部实施改进的好处。
 
 使用SRP API的方法是通过提供的实用程序，例如SocialResourceUtilities包中的实用程序。
 
-从AEM 6.0或更低版本升级时，需要迁移所有SRP的UGC（有可用的开源工具）。 参见 [升级到AEM Communities 6.3](upgrade.md).
+从AEM 6.0或更低版本升级时，需要为具有开源工具的所有SRP迁移UGC。 请参阅 [升级到AEM Communities 6.3](upgrade.md).
 
 >[!NOTE]
 >
->过去，用于访问UGC的实用工具在SocialUtils包中找到，但该包不再存在。
+>过去，用于访问UGC的实用程序位于SocialUtils包中，该包不再存在。
 >
->有关替换实用工具，请参阅 [SocialUtils重构](socialutils.md).
+>有关替换实用程序，请参阅 [SocialUtils重构](socialutils.md).
 
 ## 访问UGC的实用程序方法 {#utility-method-to-access-ugc}
 
@@ -74,9 +70,9 @@ protected void doGet(final SlingHttpServletRequest request, final SlingHttpServl
 
 ## 访问ACL的实用程序方法 {#utility-method-to-access-acls}
 
-一些SRP实现（如ASRP和MSRP ）将社区内容存储在不提供ACL验证的数据库中。 影子节点提供本地存储库中可以应用ACL的位置。
+有些SRP实现，如ASRP和MSRP，将社区内容存储在未提供ACL验证的数据库中。 影子节点提供本地存储库中可以应用ACL的位置。
 
-使用SRP API，所有SRP选项在所有CRUD操作之前对阴影位置执行相同的检查。
+使用SRP API，所有SRP选项在所有CRUD操作之前对影子位置执行相同的检查。
 
 要检查ACL，请使用返回适合检查应用于资源UGC的权限的路径的方法。
 
@@ -101,7 +97,7 @@ protected void doGet(final SlingHttpServletRequest request, final SlingHttpServl
 
 ## 与UGC相关的存储位置 {#ugc-related-storage-locations}
 
-以下对存储位置的描述在使用JSRP或MSRP进行开发时可能会有所帮助。 与JSRP一样，当前没有用于访问ASRP中存储的UGC的UI([CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md))和MSRP （MongoDB工具）。
+以下对存储位置的说明在使用JSRP或MSRP进行开发时可能会有所帮助。 与JSRP一样，当前没有用于访问ASRP中存储的UGC的UI([CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md))和MSRP （MongoDB工具）。
 
 **组件位置**
 
@@ -111,24 +107,24 @@ protected void doGet(final SlingHttpServletRequest request, final SlingHttpServl
 
 * 组件路径= `/content/community-components/en/comments/jcr:content/content/includable/comments`
 
-**阴影节点位置**
+**影子节点位置**
 
-创建UGC还会创建 [影子节点](srp.md#about-shadow-nodes-in-jcr) 应用了必要的ACL。 本地存储库中相应影子节点的路径是影子节点根路径前置到组件路径的结果：
+创建UGC还会创建 [影子节点](srp.md#about-shadow-nodes-in-jcr) 应用必要的ACL。 本地存储库中相应影子节点的路径是预置影子节点根路径到组件路径的结果：
 
-* 根路径 = `/content/usergenerated`
-* 评论阴影节点= `/content/usergenerated/content/community-components/en/comments/jcr:content/content/includable/comments`
+* 根路径= `/content/usergenerated`
+* 评论影子节点= `/content/usergenerated/content/community-components/en/comments/jcr:content/content/includable/comments`
 
 **UGC位置**
 
-UGC既不会在这两个位置创建，也只能使用进行访问 [效用法](#utility-method-to-access-ugc) 调用SRP API。
+UGC不会在这两个位置中创建，因此只能使用 [效用法](#utility-method-to-access-ugc) 调用SRP API。
 
-* 根路径 = `/content/usergenerated/asi/srp-choice`
+* 根路径= `/content/usergenerated/asi/srp-choice`
 * JSRP的UGC节点= `/content/usergenerated/asi/jcr/content/community-components/en/comments/jcr:content/content/includable/comments/srzd-let_it_be_`
 
-*注意*，对于JSRP，UGC节点将 *仅限* 在输入它的AEM实例（创作或发布）中存在。 如果在发布实例中输入，则无法从“创作”的“审阅”控制台中进行审阅。
+*注意*，对于JSRP，UGC节点将 *仅限* 出现在输入它的AEM实例上（创作或发布）。 如果在发布实例中输入，则无法从“创作”的审核控制台中进行审核。
 
 ## 相关信息 {#related-information}
 
-* [存储资源提供程序概述](srp.md)  — 简介和存储库使用概述。
+* [存储资源提供程序概述](srp.md)  — 简介和存储库使用情况概述。
 * [使用SRP访问UGC](accessing-ugc-with-srp.md)  — 编码准则。
-* [SocialUtils重构](socialutils.md)  — 将已弃用的实用程序方法映射到当前的SRP实用程序方法。
+* [SocialUtils重构](socialutils.md)  — 将已弃用的实用程序方法映射到当前SRP实用程序方法。

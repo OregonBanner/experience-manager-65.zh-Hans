@@ -1,19 +1,15 @@
 ---
 title: 监视文件夹的备份策略
-seo-title: Backup strategies for watched folders
 description: 本文档介绍了受监视的文件夹如何受不同的备份和恢复方案的影响，这些方案的局限性和结果，以及如何最大限度地减少数据丢失。
-seo-description: This document describes how watched folders are affected by different backup and recovery scenarios, the limitations and outcomes of these scenarios, and how to minimize data loss.
-uuid: c61997b8-6c36-4bd9-90e5-411841a6c176
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 6f775933-e989-4456-ad01-9bdf5dee3dad
 exl-id: 0d36160a-29fa-4cc4-a0ff-fc681d3e040e
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '1089'
-ht-degree: 2%
+source-wordcount: '1080'
+ht-degree: 0%
 
 ---
 
@@ -62,20 +58,20 @@ ht-degree: 2%
    <td><p>文件1、文件2、文件3、文件4</p></td>
    <td><p>文件2、文件3、文件4</p></td>
    <td><p>文件3，文件4</p></td>
-   <td><p>file4</p></td>
+   <td><p>文件4</p></td>
    <td><p>空</p></td>
-   <td><p>file5</p></td>
+   <td><p>文件5</p></td>
    <td><p>空</p></td>
   </tr>
   <tr>
    <td><p>暂存</p></td>
    <td><p>空</p></td>
-   <td><p>file1</p></td>
-   <td><p>file2</p></td>
-   <td><p>file3</p></td>
-   <td><p>file4</p></td>
+   <td><p>文件1</p></td>
+   <td><p>文件2</p></td>
+   <td><p>文件3</p></td>
+   <td><p>文件4</p></td>
    <td><p>空</p></td>
-   <td><p>file5</p></td>
+   <td><p>文件5</p></td>
   </tr>
   <tr>
    <td><p>输出</p></td>
@@ -101,7 +97,7 @@ ht-degree: 2%
    <td><p>保留</p></td>
    <td><p>空</p></td>
    <td><p>空</p></td>
-   <td><p>file1 </p></td>
+   <td><p>文件1 </p></td>
    <td><p>文件1，文件2 </p></td>
    <td><p>文件1，文件2 </p></td>
    <td><p>文件1、文件2、文件4 </p></td>

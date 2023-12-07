@@ -1,18 +1,14 @@
 ---
 title: 导入和导出全局设置
-seo-title: Importing and exporting global settings
 description: 您可以导入和导出搜索模板定义以及工作区的全局设置。
-seo-description: You can import and export search template definitions and global settings for Workspace.
-uuid: 8f1f210d-e850-4b2c-bb5a-942fa8299791
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_workspace
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
-discoiquuid: 72fe5749-2fa2-442f-b679-7889faeafcac
 exl-id: cdb7ff54-7891-45b1-a921-10b01ef5188d
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '1240'
+source-wordcount: '1196'
 ht-degree: 0%
 
 ---

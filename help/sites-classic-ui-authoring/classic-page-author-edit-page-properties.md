@@ -1,17 +1,15 @@
 ---
 title: 编辑页面属性
 description: 页面的属性可能会因页面的性质而异。 例如，某些页面可能已连接到Live Copy，而其他页面未连接到，因此Live Copy信息将根据需要可用。
-uuid: 63d37d1b-52da-489d-b02b-e8b3d17571d1
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
-discoiquuid: 23768c73-ac64-4727-8313-160c8c131b05
 exl-id: 1a77e4cd-bbf8-4d05-bb35-fd43c02eaf30
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '760'
-ht-degree: 22%
+ht-degree: 18%
 
 ---
 
@@ -43,7 +41,7 @@ ht-degree: 22%
    * 使用下拉列表功能，可从现有标记中进行选择。
    * 当您将鼠标悬停在选择框中的标记条目上时，会显示x；这可用于为此页面删除该标记。
 
-* **隐藏导航**
+* **在导航中隐藏**
 
   用于指示页面在页面导航中是显示还是隐藏的切换开关。
 
@@ -63,13 +61,13 @@ ht-degree: 22%
 
   页面的描述、用途或要添加的任何其他详细信息。
 
-* **开始时间**
+* **准时**
 
   激活已发布页面的日期和时间。 发布后，此页面将保持休眠状态，直到指定的时间。
 
   对于要立即发布的页面（正常场景），请将这些字段留空。
 
-* **结束时间**
+* **关闭时间**
 
   将停用已发布页面的时间。
 
@@ -88,7 +86,7 @@ ht-degree: 22%
   >* 必须是唯一的，以便您应当注意该值尚未被其他页面使用。
   >* 不支持正则表达式模式。
 
-* **重定向虚 URL**
+* **重定向虚URL**
 
   指示您是否希望页面使用虚 URL。
 

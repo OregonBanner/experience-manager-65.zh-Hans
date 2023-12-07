@@ -1,17 +1,13 @@
 ---
 title: SharePoint连接器
-seo-title: SharePoint Connector
 description: 适用于Microsoft SharePoint 2010和Microsoft SharePoint 2013的Day JCR连接器版本4.0。
-seo-description: Learn about the Sharepoint Connector in AEM.
-uuid: df650476-4e2a-486f-a007-b5ac437ff99f
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
-discoiquuid: 907316d1-3d23-4c46-bccb-bad6fe1bd1bb
 docset: aem65
 exl-id: 10ea7d2e-6e44-4d5c-a2b2-63c73b18f172
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '1482'
 ht-degree: 0%

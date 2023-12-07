@@ -1,14 +1,12 @@
 ---
 title: 指定要嵌入的字体
 description: 了解如何指定要嵌入自适应表单中的字体。 您可以指定哪些字体嵌入或从未嵌入到Forms服务生成的表单。
-uuid: 97de6f98-ed3b-4a93-854a-193a967b4672
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_forms
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 4c83694c-b00f-40be-9ac4-f5785cd60741
 exl-id: b2cbf5f3-ee13-47bf-bf7f-f6a1884cee66
-source-git-commit: 6caf3ef4a00275f0f73be52b6a9ccba77d277f1a
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '270'
 ht-degree: 0%

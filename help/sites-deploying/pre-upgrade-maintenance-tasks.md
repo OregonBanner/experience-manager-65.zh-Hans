@@ -1,21 +1,17 @@
 ---
 title: 升级前维护任务
-seo-title: Pre-Upgrade Maintenance Tasks
 description: 了解为AEM推荐的升级前任务。
-seo-description: Learn about the pre-upgrade tasks in AEM.
-uuid: 5da1cfc7-8a10-47b1-aafb-2cd112e3f818
 contentOwner: sarchiz
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: upgrading
-discoiquuid: 291c91e5-65ff-473d-ac11-3da480239e76
 docset: aem65
 feature: Upgrading
 exl-id: 37d4aee4-15eb-41ab-ad71-dfbd5c7910f8
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '2029'
-ht-degree: 1%
+source-wordcount: '2014'
+ht-degree: 0%
 
 ---
 

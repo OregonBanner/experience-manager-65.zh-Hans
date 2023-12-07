@@ -1,19 +1,15 @@
 ---
 title: 工作流步骤参考
-seo-title: Workflow Step Reference
 description: 有关Adobe Experience Manager中的工作流，请参阅此步骤参考。
-seo-description: null
-uuid: 88bf6997-73a1-4639-82aa-5dff08d3ef86
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
-discoiquuid: e3afffd0-d90c-4bd0-b814-f7aeac6ceb6d
 docset: aem65
 exl-id: 8de78bde-2fcb-4221-873e-59e347ff2d74
-source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '3250'
+source-wordcount: '3229'
 ht-degree: 2%
 
 ---
@@ -199,7 +195,7 @@ function check(){
 
 * 编辑 **OR拆分属性**：
 
-   * **通用**
+   * **公共**
 
       * 指定拆分名称。
 
@@ -566,7 +562,7 @@ public class InitiatorParticipantChooser implements ParticipantStepChooser {
 
 * [通用](#step-properties-common-tab)
 
-## 流程步骤 {#process-step}
+## 进程步骤 {#process-step}
 
 A **流程步骤** 执行ECMAScript或调用OSGi服务以执行自动处理。
 
@@ -579,7 +575,7 @@ A **流程步骤** 执行ECMAScript或调用OSGi服务以执行自动处理。
 * [通用](#step-properties-common-tab)
 * **进程**
 
-   * **进程**：要执行的进程实施。 使用下拉菜单选择ECMAScript或OSGi服务。 有关信息:
+   * **进程**：要执行的进程实施。 使用下拉菜单选择ECMAScript或OSGi服务。 有关以下内容的信息：
 
       * 标准ECMAScript和OSGi服务，请参见 [用于流程步骤的内置流程](/help/sites-developing/workflows-process-ref.md).
       * 为流程步骤创建ECMAScript，请参见 [使用ECMAScript实施流程步骤](/help/sites-developing/workflows-customizing-extending.md#using-ecmascript).

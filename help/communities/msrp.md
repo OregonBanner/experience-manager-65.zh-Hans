@@ -1,20 +1,16 @@
 ---
 title: MSRP - MongoDB存储资源提供程序
-seo-title: MSRP - MongoDB Storage Resource Provider
 description: 设置AEM Communities以使用关系数据库作为其公用存储
-seo-description: Set up AEM Communities to use a relational database as its common store
-uuid: 9fc06d4f-a60f-4ce3-8586-bcc836aa7de6
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
-discoiquuid: 048f7b30-20c3-4567-bd32-38cf2643cf39
 role: Admin
 exl-id: 799d5ae1-caac-4c92-8835-696ad25de553
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '1190'
-ht-degree: 1%
+source-wordcount: '1142'
+ht-degree: 0%
 
 ---
 
@@ -40,9 +36,9 @@ ht-degree: 1%
    * Solr版本7.0
    * Solr需要Java 1.7或更高版本
    * 无需服务
-   * 运行模式选择：
+   * 运行模式的选择：
       * 独立模式
-      * [SolrCloud模式](solr.md#solrcloud-mode) （建议用于生产环境）
+      * [SolrCloud模式](solr.md#solrcloud-mode) （建议在生产环境中使用）
    * 多语言搜索(MLS)的选择：
       * [安装标准MLS](solr.md#installing-standard-mls)
       * [安装高级MLS](solr.md#installing-advanced-mls)
@@ -53,45 +49,45 @@ ht-degree: 1%
 
 此 [存储配置控制台](srp-config.md) 允许选择默认存储配置，该配置标识要使用的SRP实现。
 
-在作者中，要访问Storage Configuration Console，请执行以下操作：
+在创作时，要访问Storage Configuration控制台，请执行以下操作：
 
 * 在全局导航中，选择 **[!UICONTROL 工具]** > **[!UICONTROL Communities]** > **[!UICONTROL 存储配置]**.
 
 ![msrp](assets/msrp.png)
 
 * 选择 **[!UICONTROL MongoDB存储资源提供程序(MSRP)]**
-* **[!UICONTROL mongoDB 配置]**
+* **[!UICONTROL mongoDB配置]**
 
    * **[!UICONTROL mongoDB URI]**
 
      *默认*： mongodb://localhost/?maxPoolSize=10&amp;waitQueueMultiple=5&amp;readPreference=secondaryPreferred
 
-   * **[!UICONTROL mongoDB 数据库]**
+   * **[!UICONTROL mongoDB数据库]**
 
      *默认*：社区
 
-   * **[!UICONTROL mongoDB UGC 收藏集]**
+   * **[!UICONTROL mongoDB UGC收藏集]**
 
      *默认*：内容
 
-   * **[!UICONTROL mongoDB 附件收藏集]**
+   * **[!UICONTROL mongoDB附件集合]**
 
      *默认*：附件
 
-* **[!UICONTROL Solr配置]**
+* **[!UICONTROL SolrConfiguration]**
 
-   * **[](https://cwiki.apache.org/confluence/display/solr/Using+ZooKeeper+to+Manage+Configuration+Files)Zookeeper 主机**
+   * **[Zookeeper](https://cwiki.apache.org/confluence/display/solr/Using+ZooKeeper+to+Manage+Configuration+Files) 主机**
 
-     在中运行时 [SolrCloud模式](solr.md#solrcloud-mode) 使用外部ZooKeeper，将此值设置为 `HOST:PORT` 对于动物园管理员，例如 *my.server.com:2181*
+     在中运行时 [SolrCloud模式](solr.md#solrcloud-mode) 使用外部ZooKeeper，将此值设置为 `HOST:PORT` ，例如 *my.server.com:2181*
 
      对于ZooKeeper Ensemble，请输入逗号分隔 `HOST:PORT` 值，例如 *host1:2181，host2:2181*
 
-     如果使用内部ZooKeeper在独立模式下运行Solr，则保留为空。
+     如果使用内部ZooKeeper以独立模式运行Solr，则保留为空。
      *默认*： *&lt;blank>*
 
       * **[!UICONTROL Solr URL]**
 用于在独立模式下与Solr通信的URL。
-如果在SolrCloud模式下运行，则保留为空。
+如果以SolrCloud模式运行，则保留为空。
         *默认*： https://127.0.0.1:8983/solr/
 
       * **[!UICONTROL Solr收藏集]**
@@ -102,17 +98,17 @@ Solr收藏集名称。
 
 >[!NOTE]
 >
->mongoDB数据库，默认为名称 `communities`，则不应设置为正在使用的数据库的名称 [节点存储或数据（二进制）存储](../../help/sites-deploying/data-store-config.md). 另请参阅 [AEM 6.5中的存储元素](../../help/sites-deploying/storage-elements-in-aem-6.md).
+>mongoDB数据库，默认名称为 `communities`，则不应设置为用于的数据库的名称 [节点存储或数据（二进制）存储](../../help/sites-deploying/data-store-config.md). 另请参阅 [AEM 6.5中的存储元素](../../help/sites-deploying/storage-elements-in-aem-6.md).
 
 ### MongoDB副本集 {#mongodb-replica-set}
 
-对于生产环境，强烈建议设置一个副本集，这是一个由实施主 — 辅助复制和自动故障切换的MongoDB服务器组成的群集。
+对于生产环境，强烈建议设置一个副本集，即MongoDB服务器群集，用于实施主辅助复制和自动故障切换。
 
 要了解有关副本集的更多信息，请访问MongoDB的 [复制](https://docs.mongodb.org/manual/replication/) 文档。
 
 要使用副本集并了解如何定义应用程序与MongoDB实例之间的连接，请访问MongoDB的 [连接字符串URI格式](https://docs.mongodb.org/manual/reference/connection-string/) 文档。
 
-#### 连接到副本集的Url示例  {#example-url-for-connecting-to-a-replica-set}
+#### 连接到复制副本集的Url示例  {#example-url-for-connecting-to-a-replica-set}
 
 ```shell
 # Example url for:
@@ -126,7 +122,7 @@ mongodb://mongoserver1:<mongoport1>,mongoserver2:<mongoport2>,mongoserver3:<mong
 
 可以使用不同的集合在节点存储(Oak)和公用存储(MSRP)之间共享Solr安装。
 
-如果Oak和MSRP集合都大量使用，则出于性能原因，可以安装第二个Solr。
+如果Oak和MSRP集合都大量使用，则可能出于性能原因而安装第二个Solr。
 
 对于生产环境， [SolrCloud模式](solr.md#solrcloud-mode) 与独立模式（单个本地Solr设置）相比，提高了性能。
 
@@ -150,8 +146,8 @@ MSRP必须标识为所有创作实例和发布实例上的公用存储。
 
 * 从主菜单导航到 **[!UICONTROL 工具]** > **[!UICONTROL 操作]** > **[!UICONTROL 复制]**.
 * 选择 **[!UICONTROL 激活树]**
-* **[!UICONTROL 开始路径]**:
-   * 浏览到 `/etc/socialconfig/srpc/`
+* **[!UICONTROL 起始路径]**：
+   * 浏览至 `/etc/socialconfig/srpc/`
 * 选择 **[!UICONTROL 激活]**
 
 ## 管理用户数据 {#managing-user-data}
@@ -163,15 +159,15 @@ MSRP必须标识为所有创作实例和发布实例上的公用存储。
 
 ## MSRP重新索引工具 {#msrp-reindex-tool}
 
-在安装新配置文件或修复损坏的Solr索引时，有一个HTTP端点用于为MSRP重新索引Solr。
+安装新配置文件或修复损坏的Solr索引时，存在HTTP端点可为MSRP重新索引Solr。
 
-使用此工具，MongoDB是 *truth* 对于MSRP ，只需备份MongoDB。
+使用此工具，MongoDB是 *真相* 对于MSRP ，只需备份MongoDB。
 
 可以重新索引整个UGC树，也可以只重新索引特定的子树，如*path *data参数所指定。
 
-此工具可以从命令行中使用cURL或任何其他HTTP工具运行。
+此工具可以使用cURL或任何其他HTTP工具从命令行运行。
 
-重新索引时，内存和性能之间有一个权衡，该权衡由*batchSize *data参数控制，该参数指定每个批次重新索引的UGC记录数。
+重新索引时，内存和性能之间存在一个权衡，该权衡由*batchSize *data参数控制，该参数指定每个批次重新索引的UGC记录数。
 
 合理的缺省值为5000：
 
@@ -188,7 +184,7 @@ cURL -u *登录* -d *数据* *reindex-url*
 
 *登录* = administrator-id：password例如：admin：admin
 
-*数据* = &quot;batchSize=*大小*&#x200B;路径(&amp;P)*path”*
+*数据* = &quot;batchSize=*大小*&#x200B;路径(&amp;P)=*path”*
 
 *大小* =每个操作要重新索引的UGC条目数
 `/content/usergenerated/asi/mongo/`
@@ -218,7 +214,7 @@ curl -s -u admin:admin -d 'batchSize=10000&path=/content/usergenerated/asi/mongo
 
 ## 疑难解答 {#troubleshooting}
 
-### UGC在MongoDB中不可用 {#ugc-not-visible-in-mongodb}
+### UGC在MongoDB中可见 {#ugc-not-visible-in-mongodb}
 
 通过检查存储选项的配置，确保MSRP已配置为默认提供程序。 默认情况下，存储资源提供程序为JSRP。
 
@@ -227,21 +223,21 @@ curl -s -u admin:admin -d 'batchSize=10000&path=/content/usergenerated/asi/mongo
 * 在JCR中，如果 [/etc/socialconfig](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/)
 
    * 不包含 [srpc](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc) 节点，这意味着存储提供程序是JSRP。
-   * 如果srpc节点存在且包含节点 [默认配置](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc/defaultconfiguration)，defaultconfiguration的属性应将MSRP定义为默认提供程序。
+   * 如果srpc节点存在且包含节点 [默认配置](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc/defaultconfiguration)，默认配置的属性应将MSRP定义为默认提供程序。
 
 ### 升级后UGC消失 {#ugc-disappears-after-upgrade}
 
-如果从现有AEM Communities 6.0站点升级，则必须转换任何预先存在的UGC以符合所需的结构 [SRP](srp.md) 升级到AEM Communities 6.3后的API。
+如果从现有的AEM Communities 6.0站点进行升级，则必须转换任何预先存在的UGC以符合所需的结构 [SRP](srp.md) 升级到AEM Communities 6.3后的API。
 
-GitHub上提供了一个用于此目的的开源工具：
+GitHub上为此提供了一个开源工具：
 
 * [AEM Communities UGC迁移工具](https://github.com/Adobe-Marketing-Cloud/communities-ugc-migration)
 
-可以自定义迁移工具，以便从早期版本的AEM Social Communities导出UGC以导入AEM Communities 6.1或更高版本。
+可以自定义迁移工具，以便将AEM Social早期版本的UGC导出到AEM Communities 6.1或更高版本中。
 
 ### 错误 — 未定义的字段provider_id {#error-undefined-field-provider-id}
 
-如果日志中出现以下错误，则表示Solr架构文件配置不正确。
+如果日志中显示以下错误，则表示Solr架构文件未正确配置。
 
 #### JsonMappingException：未定义的字段provider_id {#jsonmappingexception-undefined-field-provider-id}
 
@@ -256,7 +252,7 @@ at com.adobe.cq.social.scf.core.BaseSocialComponent.toJSONString(BaseSocialCompo
 要解决此错误，请按照 [安装标准MLS](solr.md#installing-standard-mls)，请确保：
 
 * 已将XML配置文件复制到正确的Solr位置。
-* 在新配置文件替换了现有配置文件后，Solr已重新启动。
+* 在新的配置文件替换了现有配置文件之后，Solr已重新启动。
 
 ### 与MongoDB的安全连接失败 {#secure-connection-to-mongodb-fails}
 

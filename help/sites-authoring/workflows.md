@@ -1,14 +1,12 @@
 ---
 title: 使用工作流
 description: 通过Adobe Experience Manager中的工作流，您可以自动执行在页面或资源上执行的一系列步骤。
-uuid: c4442d2a-c6b0-49d4-a1ce-384017c45bf0
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: site-features
-discoiquuid: 7cb99618-d903-4cfb-b0d9-b23d189f6e78
 exl-id: 7383d590-c6b7-440a-a33d-196dce9736ef
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '178'
 ht-degree: 74%

@@ -1,17 +1,13 @@
 ---
 title: 在分配任务步骤中使用自定义电子邮件模板
-seo-title: Use custom email templates in an Assign Task step
 description: 表单工作流电子邮件通知的自定义电子邮件模板
-seo-description: Custom email templates for forms workflow email notifications
-uuid: ba453d54-813f-4a4f-a82e-1a6a28b6939c
 topic-tags: publish
-discoiquuid: 2ad4b7b5-2162-4599-af3f-9476f1256de6
 docset: aem65
 exl-id: d4035c91-ee8d-4f12-bdac-e3912be732d7
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '521'
-ht-degree: 1%
+source-wordcount: '509'
+ht-degree: 0%
 
 ---
 
@@ -43,7 +39,7 @@ AEM Forms开箱即用地提供电子邮件通知模板。 模板提供已分配�
 
    电子邮件通知模板是 [HTML电子邮件](https://en.wikipedia.org/wiki/HTML_email). 您可以使用自定义代码替换现有的html代码以更改模板的外观。
 
-1. 保存文件。现在，自定义模板已可供使用。
+1. 保存文件。 现在，自定义模板已可供使用。
 
 ## 创建电子邮件模板 {#create-an-email-template}
 
@@ -59,7 +55,7 @@ AEM Forms开箱即用地提供电子邮件通知模板。 模板提供已分配�
 
    电子邮件通知模板是 [HTML电子邮件](https://en.wikipedia.org/wiki/HTML_email). 您可以向文件中添加自定义HTML代码以创建模板。
 
-1. 保存文件。该模板可以在“分配任务”步骤中使用。
+1. 保存文件。 该模板可以在“分配任务”步骤中使用。
 
 ## 在“分配任务”步骤中使用电子邮件模板 {#use-an-email-template-in-an-assign-task-step}
 
@@ -71,6 +67,6 @@ AEM Forms开箱即用地提供电子邮件通知模板。 模板提供已分配�
 
 1. 选择新创建的HTML电子邮件模板。
 
-1. 单击确定。模板已更改。
+1. 单击“确定”。 模板已更改。
 
 电子邮件通知还使用 [元数据](../../forms/using/use-metadata-in-email-notifications.md). 例如，到期日期、优先级、工作流名称等。 您还可以配置要使用的模板 [自定义元数据](../../forms/using/use-metadata-in-email-notifications.md#using-custom-metadata-in-an-email-notification).

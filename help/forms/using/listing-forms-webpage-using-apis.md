@@ -1,17 +1,13 @@
 ---
 title: 在使用API的网页上列出表单
-seo-title: Listing forms on a web page using APIs
-description: 以编程方式查询Forms Manager以检索经过筛选的表单列表，并在您自己的网页上显示。
-seo-description: Programmatically query Forms Manager to retrieve a filtered list of forms and display on your own web pages.
-uuid: e51cb2d4-816f-4e6d-a081-51e4999b00ba
+description: 以编程方式查询Forms Manager以检索经过过滤的表单列表，并在您自己的网页上显示。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
-discoiquuid: 515ceaf6-c132-4e1a-b3c6-5d2c1ccffa7c
 exl-id: cfca6656-d2db-476d-a734-7a1d1e44894e
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '693'
+source-wordcount: '692'
 ht-degree: 1%
 
 ---
@@ -20,7 +16,7 @@ ht-degree: 1%
 
 AEM Forms提供了一个基于REST的搜索API，Web开发人员可以使用该API来查询和检索一组符合搜索条件的表单。 您可以使用API根据各种筛选器搜索表单。 响应对象包含表单属性、属性和渲染表单端点。
 
-要使用REST API搜索表单，请向服务器发送GET请求，地址为 `https://'[server]:[port]'/libs/fd/fm/content/manage.json` 查询参数一起使用。
+要使用REST API搜索表单，请向服务器发送一个GET请求，地址为 `https://'[server]:[port]'/libs/fd/fm/content/manage.json` 查询参数对应的章节。
 
 ## 查询参数 {#query-parameters}
 
@@ -38,14 +34,14 @@ AEM Forms提供了一个基于REST的搜索API，Web开发人员可以使用该A
   </tr>
   <tr>
    <td>应用程序路径<br /> </td>
-   <td><p>指定用于搜索表单的应用程序路径。 默认情况下，appPath属性会搜索在根节点级别可用的所有应用程序。<br /> </p> <p>您可以在单个搜索查询中指定多个应用程序路径。 使用管道字符(|)分隔多个路径。 </p> </td>
+   <td><p>指定用于搜索表单的应用程序路径。 默认情况下，appPath属性会搜索根节点级别的所有可用应用程序。<br /> </p> <p>您可以在单个搜索查询中指定多个应用程序路径。 使用管道字符(|)分隔多个路径。 </p> </td>
   </tr>
   <tr>
    <td>剪切点<br /> </td>
-   <td><p>指定要使用资源获取的属性。 可以使用星号(*)一次获取所有属性。 使用管道(|)运算符指定多个属性。 </p> <p>例如， <code>cutPoints=propertyName1|propertyName2|propertyName3</code></p> <p><strong>注意</strong>: </p>
+   <td><p>指定要通过资源获取的属性。 可以使用星号(*)一次获取所有属性。 使用管道(|)运算符指定多个属性。 </p> <p>例如， <code>cutPoints=propertyName1|propertyName2|propertyName3</code></p> <p><strong>注意</strong>： </p>
     <ul>
      <li><em>始终获取ID、路径和名称等属性。 </em></li>
-     <li><em>每个资产都具有一组不同的属性。 formUrl、pdfUrl和guideUrl等属性不依赖于cutpoints属性。 这些属性取决于资产类型，因此会相应提取。 </em></li>
+     <li><em>每个资产都具有一组不同的属性。 formUrl、pdfUrl和guideUrl等属性不依赖于cutpoints属性。 这些属性取决于资源类型并相应地获取。 </em></li>
     </ul> </td>
   </tr>
   <tr>
@@ -53,8 +49,8 @@ AEM Forms提供了一个基于REST的搜索API，Web开发人员可以使用该A
    <td>指定要与搜索结果一起获取的相关资源。 您可以选择以下选项之一来获取相关资源：
     <ul>
      <li><strong>NO_RELATION</strong>：不获取相关资源。</li>
-     <li><strong>立即</strong>：获取与搜索结果直接相关的资产。</li>
-     <li><strong>全部</strong>：获取直接和间接相关的资产。</li>
+     <li><strong>立即</strong>：获取与搜索结果直接相关的资源。</li>
+     <li><strong>所有</strong>：获取直接和间接相关的资产。</li>
     </ul> </td>
   </tr>
   <tr>
@@ -63,7 +59,7 @@ AEM Forms提供了一个基于REST的搜索API，Web开发人员可以使用该A
   </tr>
   <tr>
    <td>offset</td>
-   <td>指定要从头开始跳过的表单数。</td>
+   <td>指定从开始起跳过的表单数。</td>
   </tr>
   <tr>
    <td>returnCount</td>
@@ -71,7 +67,7 @@ AEM Forms提供了一个基于REST的搜索API，Web开发人员可以使用该A
   </tr>
   <tr>
    <td>语句</td>
-   <td><p>指定语句的列表。 查询在JSON格式指定的语句列表中执行。 </p> <p>例如，</p> <p><code class="code">JSONArray statementArray=new JSONArray();
+   <td><p>指定语句列表。 查询在JSON格式指定的语句列表中执行。 </p> <p>例如，</p> <p><code class="code">JSONArray statementArray=new JSONArray();
        JSONObject statement=new JSONObject();
        statement.put("name", "title");
        statement.put("value", "SimpleSurveyAF");
@@ -87,10 +83,10 @@ AEM Forms提供了一个基于REST的搜索API，Web开发人员可以使用该A
        <li>LT — 小于</li>
        <li>GTEQ — 大于或等于</li>
        <li>LTEQ — 小于或等于</li>
-       <li>CONTAINS — 如果B是A的一部分，则A包含B</li>
+       <li>CONTAINS - A包含B（如果B是A的一部分）</li>
        <li>全文 — 全文搜索</li>
        <li>STARTSTWITH — 如果B是A的开头部分，则A以B开头</li>
-       <li>ENDSTWITH — 如果B是A的结束部分，则A以B结束</li>
+       <li>ENDSWITH — 如果B是A的结尾部分，则A以B结尾</li>
        <li>LIKE — 实现LIKE运算符</li>
        <li>AND — 合并多个语句</li>
       </ul> <p><strong>注意：</strong> <em>GT、LT、GTEQ和LTEQ运算符适用于线性类型的属性，如LONG、DOUBLE和DATE。</em></p> </li>
@@ -98,7 +94,7 @@ AEM Forms提供了一个基于REST的搜索API，Web开发人员可以使用该A
   </tr>
   <tr>
    <td>排序<br /> </td>
-   <td><p>指定搜索结果的顺序条件。 标准以JSON格式定义。 您可以对多个字段的搜索结果进行排序。 结果按字段在查询中的显示顺序排序。</p> <p>例如，</p> <p>要检索按标题属性升序排序的查询结果，请添加以下参数： </p> <p><code class="code">JSONArray orderingsArray=new JSONArray();
+   <td><p>指定搜索结果的顺序条件。 标准以JSON格式定义。 您可以对多个字段的搜索结果进行排序。 结果将按字段在查询中的显示顺序排序。</p> <p>例如，</p> <p>要检索按标题属性升序排序的查询结果，请添加以下参数： </p> <p><code class="code">JSONArray orderingsArray=new JSONArray();
        JSONObject orderings=new JSONObject();
        orderings.put("name", "title");
        orderings.put("criteria", "ASC");
@@ -119,7 +115,7 @@ AEM Forms提供了一个基于REST的搜索API，Web开发人员可以使用该A
   </tr>
   <tr>
    <td>资产类型</td>
-   <td>指定要从所有发布的资源中检索的资源类型。 使用管道(|)运算符指定多个资源类型。 有效的资源类型为FORM、PDFFORM、PRINTFORM、RESOURCE和GUIDE。</td>
+   <td>指定要从所有发布的资源中检索的资源类型。 使用管道(|)运算符指定多个资源类型。 有效的资源类型为FORM、PDF表单、PRINTFORM、RESOURCE和GUIDE。</td>
   </tr>
  </tbody>
 </table>

@@ -1,18 +1,14 @@
 ---
 title: 动态填充下拉列表
-seo-title: Dynamically populating drop-down lists
 description: 基于某些逻辑动态填充下拉列表的过程
-seo-description: Procedure to dynamically populate drop-down lists based on some logic
-uuid: b3408aee-ac24-43af-a380-a5892abf0248
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: customization
-discoiquuid: ad6db3fd-0d26-4241-bf73-be74b7f6e509
 docset: aem65
 exl-id: 64b88423-aaae-4258-bf48-73df5c9353ea
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '332'
+source-wordcount: '328'
 ht-degree: 0%
 
 ---

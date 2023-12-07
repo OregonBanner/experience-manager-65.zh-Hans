@@ -1,19 +1,15 @@
 ---
 title: 签名服务Java API快速启动(SOAP)
-seo-title: Signature Service Java API QuickStart(SOAP)
 description: 使用签名服务向PDF文档添加签名字段、检索签名字段名称、修改签名字段、对PDF文档进行数字签名、对基于XFA的表单进行数字签名、验证PDF文档、验证数字签名、验证多个数字签名以及移除数字签名。
-seo-description: Use the Signature service to add a signature field to a PDF document, retrieve signature field names, modify a signature field, digitally sign a PDF document, digitally sign an XFA-based form, certify a PDF document, verify a digital signature, verify multiple digital signatures, and remove a digital signature.
-uuid: ae6adf23-b119-45f6-bd57-73d8d9ca8ecb
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
-discoiquuid: 07fffbd5-5430-4abc-b532-0840ecc7b1b0
 role: Developer
 exl-id: 34069505-a6cf-4540-932b-604f81823178
-source-git-commit: c4cd9a61a226ace2a72d60b5b7b7432de12cb873
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '868'
+source-wordcount: '867'
 ht-degree: 0%
 
 ---

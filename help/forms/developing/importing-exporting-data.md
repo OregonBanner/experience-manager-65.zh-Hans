@@ -1,19 +1,15 @@
 ---
 title: 导入和导出数据
-seo-title: Importing and Exporting Data
 description: 使用表单数据集成服务将数据导入PDF表单，并使用Java API和Web服务API从PDF表单导出数据。
-seo-description: Use the Form Data Integration service to import data into a PDF form and export data from a PDF form using the Java API and Web Service API.
-uuid: 94ccb6f2-6e5f-43ea-a954-9a4402871a17
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
-discoiquuid: 2e783745-c986-45ba-8e65-7437d114ca38
 role: Developer
 exl-id: 96310e0a-8e95-4a55-9508-5298b8d67f83
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '2771'
+source-wordcount: '2754'
 ht-degree: 0%
 
 ---

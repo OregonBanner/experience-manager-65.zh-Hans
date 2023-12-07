@@ -1,16 +1,12 @@
 ---
 title: 动态选择用户或组以执行以AEM Forms为中心的工作流步骤
-seo-title: Dynamically select a user or group for AEM Forms-centric workflow steps
 description: 了解如何在运行时为AEM Forms工作流选择用户或组。
-seo-description: Learn how to select a user or group for an AEM Forms workflow at the runtime.
-uuid: 19dcbda4-61af-40b3-b10b-68a341373410
 content-type: troubleshooting
 topic-tags: publish
-discoiquuid: e6c9f3bb-8f20-4889-86f4-d30578fb1c51
 exl-id: 3c48660e-5e4f-4615-82d4-9f1f285c2a39
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '922'
+source-wordcount: '873'
 ht-degree: 1%
 
 ---
@@ -27,7 +23,7 @@ ht-degree: 1%
 
 ECMAScript是一种脚本语言。 它用于客户端脚本和服务器应用程序。 执行以下步骤，使用ECMAScript动态选择用户或组：
 
-1. 打开 CRXDE Lite。URL为 `https://'[server]:[port]'/crx/de/index.jsp`
+1. 打开CRXDE Lite。 URL为 `https://'[server]:[port]'/crx/de/index.jsp`
 1. 在以下路径创建扩展名为.ecma的文件。 如果路径（节点结构）不存在，请创建路径：
 
    * （分配任务步骤的路径） `/apps/fd/dashboard/scripts/participantChooser`
@@ -47,7 +43,7 @@ ECMAScript是一种脚本语言。 它用于客户端脚本和服务器应用程
       |--- |--- |--- |
       | jcr:title | 字符串 | 指定脚本的名称。 例如，选择最近的字段代理。 此名称显示在分配任务和签名文档步骤中。 |
 
-   1. 单击&#x200B;**全部保存**。该脚本将在AEM Workflow的组件中可供选择。
+   1. 单击 **全部保存**. 该脚本将在AEM Workflow的组件中可供选择。
 
       ![脚本](assets/script.png)
 

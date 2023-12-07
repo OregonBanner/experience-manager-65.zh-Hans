@@ -1,14 +1,12 @@
 ---
 title: 指定输出的文件位置
 description: 了解如何为某些类型的文件（例如，内容根URI、XCI配置文件、缓存和默认值）的输出指定文件位置。
-uuid: 3287274f-85b5-4811-8abb-d347a9b80947
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_output
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 460bbb31-8187-469c-8102-b310093b6c03
 exl-id: 620c69d6-4fe1-46d6-b5d4-3b562142e547
-source-git-commit: e2a3470784beb04c2179958ac6cb98861acfaa71
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '327'
 ht-degree: 1%
@@ -21,7 +19,7 @@ ht-degree: 1%
 
 1. 在管理控制台中，单击“服务”>“输出”。
 1. 在“位置”下，指定相应的选项。
-1. 单击保存。
+1. 单击“保存”。
 
 ## 位置设置 {#locations-settings}
 

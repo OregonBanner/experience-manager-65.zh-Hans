@@ -1,18 +1,14 @@
 ---
 title: 衡量和提高表单的有效性和转换率
-seo-title: Measure and improve effectiveness and conversion of forms
 description: AEM Forms与Adobe Target和Adobe Analytics解决方案集成，可让您测量并提高表单的性能和转化率。
-seo-description: AEM Forms integrates with Adobe Target and Adobe Analytics solutions that lets you measure and improve the performance and conversion rate of your forms.
-uuid: fd2f087c-39f5-457d-8b44-c3ec4400b3fc
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: integrations
-discoiquuid: a128877d-239c-4272-99c2-72d6486d5703
 docset: aem65
 exl-id: 4f45ad22-611b-4b4f-8e89-cb64a122b70a
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '1275'
+source-wordcount: '1273'
 ht-degree: 0%
 
 ---
@@ -59,7 +55,7 @@ AEM Forms集成 [Adobe Marketing Cloud](https://www.adobe.com/marketing-cloud.ht
 
 #### 步骤1：在AEM Forms中配置Analytics和Target  {#step-configure-analytics-and-target-in-aem-forms-br}
 
-**配置 Analytics**
+**配置Analytics**
 
 要深入了解客户与表单的交互，您需要首先在AEM Forms中配置Analytics。 执行以下步骤：
 

@@ -1,16 +1,12 @@
 ---
 title: 与第三方服务集成
-seo-title: Integrating with Third-Party Services
 description: 了解如何将AEM与第三方服务集成。
-seo-description: Learn how to integrate AEM with third party services.
-uuid: bfafd00b-46bc-4af2-b3e8-874afb1ed697
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
-discoiquuid: e0d6478a-4420-46a6-96fe-082a30ee82f0
 exl-id: 50b70e47-a801-4f0a-be92-4427c4b2cad1
-source-git-commit: 2981f11565db957fac323f81014af83cab2c0a12
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '252'
 ht-degree: 6%
@@ -19,14 +15,14 @@ ht-degree: 6%
 
 # 与第三方服务集成{#integrating-with-third-party-services}
 
-借助AEM，您可以立即与以下非Adobe产品集成：
+使用AEM，您可以立即与以下非Adobe产品集成：
 
 * Amazon SNS连接 — Amazon Web服务
 * BrightEdge Content Optimizer — 针对搜索优化了内容
 * ExactTarget — 电子邮件营销
 * facebook Connect — 社交网络
 * 通用Analytics代码片段 — analytics
-* Microsoft® Translator或其他机器翻译提供商
+* Microsoft®翻译人员或其他机器翻译提供商
 * Pushwoosh连接 — 应用程序 — 推送通知
 * Salesforce — 销售和CRM软件
 * twitter — 社交网络
@@ -54,16 +50,16 @@ For information about integrating your AEM site and ExactTarget, see [Integratin
 
 ## 与ExactTarget集成 {#integrating-with-exacttarget}
 
-ExactTarget的电子邮件营销解决方案使各种规模的组织能够设计和提供目标明确、任务关键且完全集成的电子邮件营销活动。
+通过使用ExactTarget的电子邮件营销解决方案，各种规模的组织可以设计和提供具有较高针对性、任务关键型且完全集成的电子邮件营销活动。
 
 有关集成AEM站点和ExactTarget的信息，请参阅 [配置ExactTarget](/help/sites-administering/exacttarget.md).
 
 ## 与Facebook和Twitter集成 {#integrating-with-facebook-and-twitter}
 
-facebook和Twitter是流行的社交网络服务。 AEM与Facebook和Twitter的集成使组织能够在拥有的数字资产上提供Facebook或Twitter登录选项，然后根据用户档案信息对用户体验进行个性化。 营销人员还可以将用户档案信息与来自其他来源（如客户关系管理系统或网站用户档案）的数据相结合，以创建客户的统一视图。
+facebook和Twitter是流行的社交网络服务。 AEM与Facebook和Twitter的集成使组织能够在所拥有的数字资产上提供Facebook或Twitter登录选项，然后根据用户档案信息个性化用户体验。 营销人员还可以将用户档案信息与其他来源（如客户关系管理系统或网站用户档案）的数据相结合，以创建客户的统一视图。
 
-参见 [社交登录](/help/communities/social-login.md) 了解更多信息。
+请参阅 [社交登录](/help/communities/social-login.md) 以了解更多信息。
 
 ## 与其他提供商集成 {#integrating-with-other-providers}
 
-AEM允许您使用连接到其他外部提供程序 [通用Analytics代码片段。](/help/sites-administering/external-providers.md)
+AEM允许您使用连接到其他外部提供程序 [Generic Analytics代码片段。](/help/sites-administering/external-providers.md)

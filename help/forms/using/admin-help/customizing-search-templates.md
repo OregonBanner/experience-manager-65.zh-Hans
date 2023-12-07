@@ -1,16 +1,12 @@
 ---
 title: 自定义搜索模板
-seo-title: Customizing search templates
 description: 您可以从“待办事项”和“跟踪”页面创建要在Workspace中用于搜索进程实例的搜索模板。 您还可以编辑或删除现有搜索模板。
-seo-description: You can create search templates to be used in Workspace to search for instances of processes from the To Do and Tracking pages. You can also edit or delete existing search templates.
-uuid: 2043ba8a-07f0-4054-af3c-f3a14c2183ab
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_workspace
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 6e4b4dfa-3af5-4c21-a2a1-b90ef02d8514
 exl-id: bf69de86-2ca6-4d21-936c-07c1debacfa0
-source-git-commit: c4cd9a61a226ace2a72d60b5b7b7432de12cb873
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '855'
 ht-degree: 0%

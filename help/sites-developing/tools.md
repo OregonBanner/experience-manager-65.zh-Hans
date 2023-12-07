@@ -1,17 +1,15 @@
 ---
 title: 测试和跟踪工具
 description: AEM提供了用于测试组件UI的框架和用于测试和调试组件的机制
-uuid: 12abedb5-4ee7-4389-9340-e628adbbc053
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: testing
 content-type: reference
-discoiquuid: 3cf0fd8d-7fc8-468a-bb1e-1debb68a82a5
 docset: aem65
 exl-id: bb5d1c7c-56ce-4d1e-a3cb-4e74d6922137
-source-git-commit: 78c584db8c35ea809048580fe5b440a0b73c8eea
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '292'
+source-wordcount: '288'
 ht-degree: 1%
 
 ---
@@ -27,7 +25,7 @@ AEM 提供：
 
 以下是两个开源测试工具：
 
-**硒元素**
+**硒**
 
 Selenium用于在浏览器中测试功能，每个活动有一个用户。 它将测试步骤（单击次数）记录为HTML表或Java™类。
 
@@ -35,7 +33,7 @@ Selenium用于在浏览器中测试功能，每个活动有一个用户。 它�
 
 **JMet**
 
-JMeter用于跟踪请求，并可用于功能、性能和压力测试。
+JMeter用于跟踪请求，可用于功能、性能和压力测试。
 
 有关更多信息，请参阅 [https://jmeter.apache.org/](https://jmeter.apache.org/).
 
@@ -47,11 +45,11 @@ JMeter用于跟踪请求，并可用于功能、性能和压力测试。
 
 **Bugzilla**
 
-可以根据自己的要求配置的错误跟踪系统。
+可根据自己的要求配置的错误跟踪系统。
 
 **电子表格**
 
-虽然不是专门用于错误跟踪的工具，但电子表格通常 *mis*&#x200B;用于此目的，因为它们易于理解，并且大多数用户都对其功能具有体验。
+虽然不是专门用于跟踪错误的工具，但电子表格通常 *mis*&#x200B;用于此目的，因为它们易于理解，并且大多数用户都对其功能具有体验。
 
 如果这些电子表格用于跟踪，则：
 
@@ -60,6 +58,6 @@ JMeter用于跟踪请求，并可用于功能、性能和压力测试。
 * 它们必须定期更新。
 * 只应维护一个主副本，每个人都应知道主副本的位置。
 * 它们应可供所有项目成员访问。
-* 如果安全性是一个问题（通常发生在大公司）并且无法进行通用访问，那么只要每个人都知道这些电子表格是副本并且不能更新，就可以分发副本。
+* 如果安全性是一个问题（通常发生在大公司）并且不能进行通用访问，那么只要每个人都知道这些电子表格是副本并且不能更新，就可以分发副本。
 
 同样，还有许多用于跟踪错误和功能要求的专有工具。

@@ -1,19 +1,15 @@
 ---
 title: 调用以人为中心的长期进程
-seo-title: Invoking Human-Centric Long-Lived Processes
 description: 使用基于Web的Java客户端应用程序（使用Invocation API）、ASP.NET应用程序（使用Web服务）和使用Flex（使用Remoting）构建的客户端应用程序，以编程方式调用Workbench中创建的以人为中心的长期进程。
-seo-description: Programmatically invoke human-centric long-lived processes created in Workbench using a Java web-based client application that uses the Invocation API, an ASP.NET application that uses web services, and a client application built with Flex that uses Remoting.
-uuid: 42269d41-a90f-4ea1-aeb9-d61337bcfa54
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
-discoiquuid: 18a320b4-dce6-4c50-8864-644b0b2d6644
 role: Developer
 exl-id: c9ebad8b-b631-492d-99a3-094e892b2ddb
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '3695'
+source-wordcount: '3674'
 ht-degree: 0%
 
 ---
@@ -489,7 +485,7 @@ ASP.NET应用程序执行以下任务：
 1. 在 **模板** 列表，选择 **ASP.NET网站**.
 1. 在 **位置** 框中，为您的项目选择位置。 命名您的项目 *InvokePreLoanProcess*.
 1. 在 **语言** 框中，选择Visual C#
-1. 单击确定。
+1. 单击“确定”。
 
 **添加服务引用：**
 
@@ -545,7 +541,7 @@ ASP.NET应用程序执行以下任务：
    <td><p>指定贷款金额。</p></td>
   </tr>
   <tr>
-   <td><p>Button1</p></td>
+   <td><p>按钮1</p></td>
    <td><p>表示提交应用程序按钮。</p></td>
   </tr>
   <tr>

@@ -1,16 +1,12 @@
 ---
 title: 添加和删除用户名和密码凭据
-seo-title: Adding and removing user name and password credentials
 description: 了解如何添加和删除用户名和密码凭据。
-seo-description: Learn how to add and remove user name and password credentials.
-uuid: f1d083b5-ba48-4b02-b40b-969f03732e36
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/managing_certificates_and_credentials
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 1fd28077-37a4-4cba-bbce-6d5b353f1e7d
 exl-id: 1e2b82d6-ca1f-4421-9a51-ec97fdc315d3
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '150'
 ht-degree: 0%
@@ -19,11 +15,11 @@ ht-degree: 0%
 
 # 添加和删除用户名和密码凭据 {#adding-and-removing-user-name-and-password-credentials}
 
-从“信任存储区管理”页中，可以添加和删除Forms服务在收到具有SOAP级别安全性的请求时使用的用户名和密码凭据。
+在“信任存储区管理”页中，您可以添加和删除Forms服务在收到具有SOAP级别安全性的请求时所使用的用户名和密码凭据。
 
 ## 添加用户名和密码凭据 {#add-a-user-name-and-password-credential}
 
-1. 在管理控制台中，单击 **[!UICONTROL 设置>信任存储区管理>用户和密码凭据]** 然后单击 **[!UICONTROL 添加]**.
+1. 在管理控制台中，单击 **[!UICONTROL “设置”>“信任存储区管理”>“用户和密码凭据”]** 然后单击 **[!UICONTROL 添加]**.
 1. 在 **[!UICONTROL 配置文件名称]** 框中，键入凭据的名称。
 1. 在 **[!UICONTROL 用户名]** 框中，键入唯一的用户名。
 1. 在 **[!UICONTROL 密码]** 框中，键入用户的密码，然后单击 **[!UICONTROL 确定]**.

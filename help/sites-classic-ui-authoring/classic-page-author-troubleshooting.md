@@ -1,17 +1,15 @@
 ---
 title: 解决AEM中有关创作方面的问题
 description: 以下部分涵盖您在使用 AEM 时可能遇到的一些问题，以及有关如何解决这些问题的建议。
-uuid: eb95e5ba-1eed-4ffb-80c1-9b8468820c22
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
-discoiquuid: 9b492b17-9029-46ae-9dc0-bb21e6b484df
 exl-id: 27a6b012-576e-40bc-9b50-c310b3c56c9e
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '429'
-ht-degree: 29%
+ht-degree: 27%
 
 ---
 
@@ -33,7 +31,7 @@ ht-degree: 29%
 
    * 您已经更改了一个页面，并将该页面复制到发布站点，但是 *旧* 发布网站上仍显示该页面的版本。
 
-* **原因**:
+* **原因**：
 
    * 这可能有多种原因，通常是缓存（本地浏览器或Dispatcher），但有时也可能是复制队列问题。
 
@@ -56,21 +54,21 @@ ht-degree: 29%
 
    * 在创作环境中编辑Sidekick页面时，内容不可见。
 
-* **原因**:
+* **原因**：
 
    * 在极少数情况下，您可能会将Sidekick的标头放在当前窗口的范围之外。 这意味着您无法再次调整其位置。
 
-* **解决方案**:
+* **解决方案**：
 
    * 注销当前会话并重新登录。 Sidekick将返回到默认位置。
 
 ## 查找并替换 — 并非所有实例都将被替换 {#find-replace-not-all-instances-are-replaced}
 
-* **问题:**
+* **问题：**
 
    * 使用时 **查找并替换** 选项，可能并非所有的 `find` 替换页面上的术语。
 
-* **原因**:
+* **原因**：
 
    * 的功能 **查找并替换** 取决于内容的保存方式以及是否可搜索内容。 例如，博客文本存储在 `jcr:text` 未配置为要搜索的属性。 查找和替换servlet的默认范围包括以下属性：
 
@@ -79,7 +77,7 @@ ht-degree: 29%
       * `jcr:text`
       * `text`
 
-* **解决方案**:
+* **解决方案**：
 
    * 可以使用配置更改这些定义 **Day CQ WCM查找替换Servlet** 使用 **Web控制台**；例如，
 

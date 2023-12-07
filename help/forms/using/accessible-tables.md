@@ -1,16 +1,12 @@
 ---
 title: 在HTML5表单中创建可访问的复杂表
-seo-title: Create accessible complex tables in HTML5 forms
 description: 了解如何在HTML5表单中创建无障碍的表。
-seo-description: Learn how to create accessible tables in HTML5 forms.
-uuid: e52562d2-4dc3-4359-9dbb-c18614921808
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
-discoiquuid: 3504afe1-abf5-4fbf-a0d2-e093361764bd
 feature: Mobile Forms
 exl-id: 3b8e3323-9ac4-4f5c-8c52-e2186e9169ea
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '271'
 ht-degree: 0%

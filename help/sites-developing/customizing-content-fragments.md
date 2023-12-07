@@ -1,16 +1,14 @@
 ---
 title: 自定义和扩展内容片段
-seo-title: Customizing and Extending Content Fragments
 description: 内容片段扩展了标准资产。 了解如何对其进行自定义。
-seo-description: A content fragment extends a standard asset. Learn how you can customize them.
 topic-tags: extending-aem
 content-type: reference
 docset: aem65
 exl-id: 08c88e70-4df9-4627-8a66-1fabe3aee50b
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '2794'
-ht-degree: 2%
+source-wordcount: '2728'
+ht-degree: 1%
 
 ---
 
@@ -45,7 +43,7 @@ ht-degree: 2%
 >
 >现已弃用内容片段模板。 它们仍可用于创建片段，但建议改用内容片段模型。 不会向片段模板中添加任何新功能，并且会在未来版本中删除这些功能。
 
-* 内容片段模型:
+* 内容片段模型：
 
    * 用于定义包含结构化内容的内容片段。
    * 内容片段模型在创建内容片段时定义其结构。
@@ -146,7 +144,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->**内容片段模型:**
+>**内容片段模型：**
 >
 >使用基于页面上的内容片段模型的内容片段时，会引用模型。 这意味着，如果在您发布页面时模型尚未发布，则会标记该模型，并将模型添加到要与页面一起发布的资源。
 >
@@ -511,7 +509,7 @@ ContentFragment newFragment = tpl.createFragment(parentRsc, "A fragment name", "
 可以使用配置管理器(ConfMgr)定义自动保存时间间隔（以秒为单位）：
 
 * 节点： `<*conf-root*>/settings/dam/cfm/jcr:content`
-* 属性名称: `autoSaveInterval`
+* 属性名称： `autoSaveInterval`
 * 类型：`Long`
 
 * 默认： `600` （10分钟）；此时间定义于 `/libs/settings/dam/cfm/jcr:content`
@@ -519,7 +517,7 @@ ContentFragment newFragment = tpl.createFragment(parentRsc, "A fragment name", "
 如果要将自动保存间隔设置为5分钟，则需要在节点上定义属性；例如：
 
 * 节点： `/conf/global/settings/dam/cfm/jcr:content`
-* 属性名称: `autoSaveInterval`
+* 属性名称： `autoSaveInterval`
 
 * 类型：`Long`
 

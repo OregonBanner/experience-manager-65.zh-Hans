@@ -1,21 +1,17 @@
 ---
 title: 社区功能
-seo-title: Community Functions
 description: 了解如何访问社区功能控制台
-seo-description: Learn how to access the Community Functions console
-uuid: d3d70134-f318-4709-a673-b01a3467d980
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
-discoiquuid: 91833914-b811-4355-a97d-e1a9cb7441f1
 docset: aem65
 role: Admin
 exl-id: 2395c895-c611-43ac-abb6-c2bc4b4a41f4
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '2220'
-ht-degree: 6%
+source-wordcount: '2215'
+ht-degree: 2%
 
 ---
 
@@ -88,7 +84,7 @@ ht-degree: 6%
 
   如果选择，则“活动”页面包括一个选项卡，该选项卡根据当前成员在社区内生成的活动进行筛选。 默认处于选中状态。
 
-* **显示“全部活动”视图**
+* **显示“所有活动”视图**
 
   如果选择，则“活动”页面包括一个选项卡，其中包含当前成员有权访问的社区内生成的所有活动。 默认处于选中状态。
 
@@ -174,7 +170,7 @@ ht-degree: 6%
 
 #### 配置功能详细信息 {#configuration-function-details-2}
 
-![forum-component1](assets/forum-component1.png)
+![论坛 — 组件1](assets/forum-component1.png)
 
 * [标题和URL设置](#title-and-url-settings)
 

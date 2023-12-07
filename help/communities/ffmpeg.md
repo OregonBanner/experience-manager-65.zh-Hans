@@ -1,19 +1,15 @@
 ---
 title: 适用于社区的FFmpeg
-seo-title: FFmpeg for Communities
-description: 如何安装和配置适用于社区的FFmpeg
-seo-description: How to install and configure FFmpeg for Communities
-uuid: ef2f821c-70e9-4889-a8d7-a93b10a1d428
+description: 如何为社区安装和配置FFmpeg
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
-discoiquuid: 739ec991-552b-42cd-85cd-984d1c9fe8fd
 role: Admin
 exl-id: dbe28334-3b38-4362-b4f8-e0630e634503
-source-git-commit: 942db8fe3dad16be53dc6abe0e519d97a659e480
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '269'
+source-wordcount: '251'
 ht-degree: 1%
 
 ---
@@ -22,7 +18,7 @@ ht-degree: 1%
 
 ## 概述 {#overview}
 
-FFmpeg是一种用于转换和流式传输音频和视频的解决方案，在安装后用于正确的转码 [视频资产](../../help/sites-authoring/default-components-foundation.md#video).
+FFmpeg是一种用于转换和流式传输音频和视频的解决方案，安装后用于正确的转码 [视频资产](../../help/sites-authoring/default-components-foundation.md#video).
 
 ## 安装FFmpeg {#installing-ffmpeg}
 
@@ -45,23 +41,23 @@ FFmpeg应安装在托管AEM的服务器上 *作者* 实例。
 
 默认情况下，在安装FFmpeg时，将根据 [!UICONTROL DAM更新资产] 工作流定义。
 
-由于转码占用大量CPU，因此建议修改目标演绎版列表。 在大多数情况下，不需要转码。
+由于转码需要占用大量CPU，因此建议修改目标演绎版列表。 在大多数情况下，不需要转码。
 
-要修改 [!UICONTROL DAM更新资产] 工作流，在本例中，要关闭转码，请执行以下操作：
+要修改 [!UICONTROL DAM更新资产] 工作流，在本例中，要关闭转码：
 
 * 使用管理权限登录创作实例。
 * 在全局导航中，导航到 **[!UICONTROL 工具]** > **[!UICONTROL 工作流]** > **[!UICONTROL 模型]**.
-* 查找 **[!UICONTROL DAM更新资产]**.
+* 定位 **[!UICONTROL DAM更新资产]**.
 * 双击以打开工作流，以便在经典UI中进行编辑。
 
-   结果位置： [http://localhost:4502/cf#/etc/workflow/models/dam/update_asset.html](http://localhost:4502/cf#/etc/workflow/models/dam/update_asset.html)
+  结果位置： [http://localhost:4502/cf#/etc/workflow/models/dam/update_asset.html](http://localhost:4502/cf#/etc/workflow/models/dam/update_asset.html)
 
 * 双击 **[!UICONTROL FFmpeg转码]** 步骤以访问步骤属性对话框。
 * 在 **[!UICONTROL 进程]** 选项卡：
 
-   * **[!UICONTROL arguments]**：清除所有条目以禁用转码默认值： `profile:format_ogg,profile:format_aac,profile:format_flv,profile:format_aac_ie`
+   * **[!UICONTROL 参数]**：清除所有条目以禁用转码默认值： `profile:format_ogg,profile:format_aac,profile:format_flv,profile:format_aac_ie`
 
-   ![configure-ffmpeg](assets/configure-ffmpeg.png)
+  ![configure-ffmpeg](assets/configure-ffmpeg.png)
 
 * 选择 **[!UICONTROL 确定]** 关闭 `Step Properties` 对话框。
 

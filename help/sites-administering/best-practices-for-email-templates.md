@@ -1,18 +1,16 @@
 ---
 title: 电子邮件模板的最佳实践
 description: 查找有关在AEM中创建电子邮件模板的最佳实践。
-uuid: 07417a63-7ca6-484c-b55d-57b319428329
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration, best-practices
 content-type: reference
-discoiquuid: 2418777e-4eb2-4d82-aa9e-8d1b0bf740f3
 docset: aem65
 exl-id: 6666eddc-dc17-4bd4-9d55-e6522f40a680
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '1081'
-ht-degree: 1%
+source-wordcount: '1073'
+ht-degree: 0%
 
 ---
 
@@ -96,7 +94,7 @@ AEM中提供的演示活动遵循所有这些最佳实践。 对于每种最佳�
 
 /libs/mcm/campaign/components/image
 
-| **最佳实践** | **实施** |
+| **最佳实践** | **实现** |
 |---|---|
 | 添加 *alt* 图像的属性 | 此 *alt* 属性已定义为图像组件的必需属性。 |
 | 使用 *jpg* 而不是 *png* 图像格式 | 图像始终由图像组件用作JPG。 |
@@ -126,7 +124,7 @@ AEM中提供的演示活动遵循所有这些最佳实践。 对于每种最佳�
 
 ### 通用 {#generic}
 
-| **最佳实践** | **实施** |
+| **最佳实践** | **实现** |
 |---|---|
 | 使用W3C验证器更正HTML代码。 确保所有打开的标记均已正确关闭。 | 代码已验证。 仅对于XHTML过渡Doctype，缺少的xmlns属性 `<html>` 缺少元素。 |
 | 避免使用JavaScript或Flash — 电子邮件客户端通常不支持这些技术。 | 新闻稿模板中未使用JavaScript或Flash。 |
@@ -152,7 +150,7 @@ AEM提供了多个现成的模板和组件供您创建Campaign新闻稿。 您�
 |---|---|
 | 标题 | /libs/mcm/campaign/components/heading |
 | 图像 | /libs/mcm/campaign/components/image |
-| 文本与个性化 | /libs/mcm/campaign/components/personalization |
+| 文本个性化(&amp;P) | /libs/mcm/campaign/components/personalization |
 | Textimage | /libs/mcm/campaign/components/textimage |
 | 链接 | /libs/mcm/campaign/components/reference |
 | Dynamic Media Classic(以前称为Scene7)图像模板 | /libs/mcm/campaign/s7image |

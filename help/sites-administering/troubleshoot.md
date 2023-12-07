@@ -1,18 +1,16 @@
 ---
 title: Adobe Experience Manager疑难解答
 description: 了解如何对Adobe Experience Manager可能出现的一些问题进行故障诊断。
-uuid: 72379531-915c-45d0-ba70-42b212665272
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
-discoiquuid: 6346cd93-1ca3-4510-9c31-a74c41017ddb
 docset: aem65
 exl-id: d2d351e7-87a5-4895-b4ec-391fb0b66798
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '550'
-ht-degree: 4%
+source-wordcount: '536'
+ht-degree: 2%
 
 ---
 
@@ -88,7 +86,7 @@ ht-degree: 4%
 
    例如，您可以使用 `ps -ef` 或 `jps`.
 
-1. 运行:
+1. 运行：
 
    `jstack <pid>`
 
@@ -100,7 +98,7 @@ ht-degree: 4%
 >
 >`jstack <pid> >> /path/to/logfile.log`
 
-请参阅 [如何从JVM进行线程转储](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17452.html?lang=zh-Hans) 文档以了解更多信息
+请参阅 [如何从JVM进行线程转储](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17452.html?lang=en) 文档以了解更多信息
 
 ### 检查未关闭的JCR会话 {#checking-for-unclosed-jcr-sessions}
 
@@ -118,7 +116,7 @@ OSGi捆绑包的状态还可以提供可能问题的早期指示。
 
 1. 打开 **AEM Web控制台**；例如， `https://localhost:4502/system/console/`.
 1. 选择 **包** 下 **OSGI** 选项卡。
-1. 检查:
+1. 检查：
 
    * 捆绑包的状态。 如果有任何组件处于非活动或未满足状态，请尝试停止并重新启动捆绑包。 如果问题仍然存在，请使用其他方法进行进一步调查。
    * 是否有任何捆绑包缺少依赖项。 单击单个捆绑包名称（它是一个链接），可以查看此类详细信息（以下示例没有任何问题）：

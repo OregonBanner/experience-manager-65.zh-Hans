@@ -1,20 +1,16 @@
 ---
 title: HTML5表单常见问题解答(FAQ)
-seo-title: Frequently asked questions (FAQ) for HTML5 forms
 description: 有关HTML5表单布局、脚本支持和范围的常见问题解答(FAQ)。
-seo-description: Frequently Asked Questions (FAQ) about layout, scripting support, and scope of HTML5 forms.
-uuid: 398e31de-3e46-4288-b3cd-39d51fa17abc
 contentOwner: robhagat
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
-discoiquuid: 4b676e7e-191f-4a19-8b8f-fc3e30244b59
 docset: aem65
 feature: Mobile Forms
 exl-id: 85c9315e-1bc8-44a9-937e-af6fc7cf54d1
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '2003'
+source-wordcount: '2007'
 ht-degree: 0%
 
 ---
@@ -143,7 +139,7 @@ ht-degree: 0%
 
 1. 屏幕阅读器的工具提示和说明的阅读顺序是什么？
 
-   答案:
+   回答：
    * 如果同时存在标题和工具提示，则仅读取标题。 如果标题不可用，则阅读工具提示。 您还可以使用表单设计器指定在XDP中读取的优先级
    * 当您将光标悬停在元素上时，将显示工具提示。 如果工具提示不可用，则会显示语音文本。 如果语音文本不可用，则显示字段名称。
 
@@ -182,7 +178,7 @@ ht-degree: 0%
 
 1. 在用于HTMLForms的JavaScript实施中是否有任何限制？
 
-   答案:
+   回答：
 
    * xfa.connectionSet脚本的支持有限。 对于connectionSet，仅支持在服务器端调用Web服务。 有关详细信息，请参阅 [脚本支持](/help/forms/using/scripting-support.md).
    * 客户端脚本不支持$record和$data。 但是，如果脚本是在formReady、layoutReady块中编写的，则脚本仍然有效，因为这些事件在服务器端运行。
@@ -194,7 +190,7 @@ ht-degree: 0%
 
 1. 是否有任何推荐的命名惯例以及要避免的保留关键字？
 
-   答案:
+   回答：
    * 在AEM Forms Designer中，建议不要以下划线(_)。 要在名称开头使用下划线，请在下划线后添加前缀，_&lt;prefix>&lt;objectname>.
    * 所有HTML5 Forms API都是保留关键词。 对于自定义API/函数，请使用与不同的名称 [HTML5 Forms API](/help/forms/using/scripting-support.md).
 
@@ -208,7 +204,7 @@ ht-degree: 0%
 
    1. 打开CRXde Lite并导航到 `/content/xfaforms/profiles/default` 节点。
    1. 添加属性 `mfDataDependentFloatingField`类型为字符串并将属性的值设置为 `true`.
-   1. 单击&#x200B;**全部保存**。现在，使用更新的渲染配置文件为HTMLForms启用了浮动字段。
+   1. 单击 **全部保存**. 现在，使用更新的渲染配置文件为HTMLForms启用了浮动字段。
 
       >[!NOTE]
       >

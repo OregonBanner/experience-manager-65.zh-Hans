@@ -1,18 +1,14 @@
 ---
 title: 配置身份验证提供程序
-seo-title: Configuring authentication providers
 description: 添加、编辑或删除身份验证提供程序，更改身份验证设置，并阅读有关及时配置用户的内容。
-seo-description: Add, edit, or delete authentication providers, change authentication settings, and read about just-in-time provisioning of users.
-uuid: 90e7690b-1ce0-4604-b58f-6dca4f2372cf
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/setting_up_and_managing_domains
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 31dd8db3-ddac-429e-82f8-8c5dc4ffc186
 exl-id: d72a3977-1423-49e0-899b-234bb76be378
-source-git-commit: c4cd9a61a226ace2a72d60b5b7b7432de12cb873
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '1575'
+source-wordcount: '1578'
 ht-degree: 0%
 
 ---
@@ -37,7 +33,7 @@ ht-degree: 0%
 1. 在管理控制台中，单击设置>用户管理>域管理。
 1. 单击列表中的相应域。
 1. 在出现的页面上，从列表中选择相应的身份验证提供程序，并根据需要进行更改。 (请参阅 [身份验证设置](configuring-authentication-providers.md#authentication-settings).)
-1. 单击确定。
+1. 单击“确定”。
 
 ## 删除身份验证提供程序 {#delete-an-authentication-provider}
 

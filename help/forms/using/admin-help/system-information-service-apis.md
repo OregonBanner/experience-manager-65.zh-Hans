@@ -1,18 +1,14 @@
 ---
 title: 系统信息服务API
-seo-title: System information Service APIs
 description: 本文档提供有关System Information Service提供的API的详细信息。
-seo-description: This document provides detailed information about the APIs provided bythesystem information service.
-uuid: 7f624216-56e6-4d49-b9a1-3c9af045dabe
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/system_information_service
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 79fccce2-d090-4b50-9c58-3f2a00e651b2
 exl-id: 4da96c8f-8bd0-4cad-9087-18e324f084e7
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '335'
+source-wordcount: '325'
 ht-degree: 0%
 
 ---

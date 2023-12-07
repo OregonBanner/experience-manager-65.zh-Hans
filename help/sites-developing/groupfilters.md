@@ -1,20 +1,16 @@
 ---
 title: 创建设备组筛选器
-seo-title: Creating Device Group Filters
 description: 创建设备组筛选器以定义一组设备功能要求
-seo-description: Create a device group filter to define a set of device capability requirements
-uuid: 30c0699d-2388-41b5-a062-f5ea9d6f08bc
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: mobile-web
 content-type: reference
-discoiquuid: 9fef1f91-a222-424a-8e20-3599bedb8b41
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/develop/mobile/groupfilters
 exl-id: 419d2e19-1198-4ab5-9aa0-02ad18fe171d
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '797'
+source-wordcount: '760'
 ht-degree: 0%
 
 ---
@@ -177,13 +173,13 @@ getTitle和getDescription方法返回的字符串值包含在设备组摘要页�
 
 如果您使用Maven构建应用程序，以下POM代码将会很有用。 POM会引用多个必需的插件和依赖项。
 
-**插件:**
+**插件：**
 
 * Apache Maven编译器插件：从源代码中编译Java类。
 * Apache Felix Maven捆绑包插件：创建捆绑包和清单
 * Apache Felix Maven SCR插件：创建组件描述符文件并配置服务组件清单标头。
 
-**依赖项:**
+**依赖关系：**
 
 * `cq-wcm-mobile-api-5.5.2.jar`：提供DeviceGroup和DeviceGroupFilter接口。
 

@@ -1,26 +1,22 @@
 ---
 title: 自适应表单关键词
-seo-title: Adaptive forms keywords
-description: 不能在自适应表单中将这些保留字用作标识符。
-seo-description: You cannnot use these reserved words as identifiers in your adaptive forms.
-uuid: 79e77692-2f0c-493b-8c2c-c408ff3dcece
+description: 在自适应表单中不能使用这些保留字作为标识符。
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
-discoiquuid: 678e9dfc-2c46-430a-8da9-0329dda80090
 feature: Adaptive Forms
 exl-id: 6ef5bd8c-7e7b-4501-a1be-d34fc0dbde84
-source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '265'
-ht-degree: 6%
+source-wordcount: '253'
+ht-degree: 24%
 
 ---
 
 # 自适应表单关键词 {#adaptive-forms-keywords}
 
-<span class="preview"> Adobe建议使用现代化的、可扩展的数据捕获 [核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) 对象 [创建新的自适应Forms](/help/forms/using/create-an-adaptive-form-core-components.md) 或 [将自适应Forms添加到AEM Sites页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). 这些组件在创建自适应Forms方面实现了重大进步，确保了令人印象深刻的用户体验。 本文介绍了使用基础组件创作自适应Forms的旧方法。 </span>
+<span class="preview">Adobe 建议使用现代、可扩展的数据捕获[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html)，以[创建新的自适应表单](/help/forms/using/create-an-adaptive-form-core-components.md)或[将自适应表单添加到 AEM Sites 页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。这些组件代表有关创建自适应表单的重大改进，确保实现令人印象深刻的用户体验。本文介绍了使用基础组件创作自适应表单的旧方法。</span>
 
-自适应表单关键字是预定义的保留标识符，对自适应表单具有特殊含义。 不能将这些关键字用作自适应表单中的标识符。 下表列出了作为自适应表单保留标识符的所有关键字。
+自适应表单关键字是对自适应表单具有特殊意义的预定义保留标识符。 在自适应表单中不能将这些关键字用作标识符。 下表列出了作为自适应表单保留标识符的所有关键字。
 
 <table>
  <tbody>
@@ -32,7 +28,7 @@ ht-degree: 6%
   <tr>
    <td><p>验证</p> </td>
    <td><p>setGuideState</p> </td>
-   <td><p>maxOccurse</p> </td>
+   <td><p>maxOccure</p> </td>
   </tr>
   <tr>
    <td><p>forceElementFocusChange</p> </td>
@@ -55,7 +51,7 @@ ht-degree: 6%
    <td><p>可重复</p> </td>
   </tr>
   <tr>
-   <td><p>calcexp</p> </td>
+   <td><p>calcExp</p> </td>
    <td><p>queueExpression</p> </td>
    <td><p>实例</p> </td>
   </tr>
@@ -66,12 +62,12 @@ ht-degree: 6%
   </tr>
   <tr>
    <td><p>valueCommitScript</p> </td>
-   <td><p>Autosavstart</p> </td>
+   <td><p>autoSaveSt</p> </td>
    <td><p>访问</p> </td>
   </tr>
   <tr>
    <td><p>validateExp</p> </td>
-   <td><p>enableAutosave</p> </td>
+   <td><p>enableAutoSave</p> </td>
    <td><p>getElement</p> </td>
   </tr>
   <tr>
@@ -85,7 +81,7 @@ ht-degree: 6%
    <td><p>setAttribute</p> </td>
   </tr>
   <tr>
-   <td><p>格式化的值</p> </td>
+   <td><p>formattedValue</p> </td>
    <td><p>xdpRef</p> </td>
    <td><p>getGuideProp</p> </td>
   </tr>
@@ -122,7 +118,7 @@ ht-degree: 6%
   <tr>
    <td><p>validatePictureClauseMessage</p> </td>
    <td><p>项目</p> </td>
-   <td><p>非本地化标题</p> </td>
+   <td><p>nonLocalizedTitle</p> </td>
   </tr>
   <tr>
    <td><p>validationState</p> </td>
@@ -165,19 +161,19 @@ ht-degree: 6%
    <td><p>fracDigits</p> </td>
   </tr>
   <tr>
-   <td><p>clickStatus</p> </td>
-   <td><p>removeinstance</p> </td>
+   <td><p>clickStates</p> </td>
+   <td><p>removinstance</p> </td>
    <td><p>maxChars</p> </td>
   </tr>
   <tr>
    <td><p>showAsPopUp</p> </td>
-   <td><p>shortdescription</p> </td>
+   <td><p>shortDescription</p> </td>
    <td><p>execNavigationChangeExpression</p> </td>
   </tr>
   <tr>
    <td><p>多行</p> </td>
-   <td><p>详细描述</p> </td>
-   <td><p>executexpression</p> </td>
+   <td><p>longDescription</p> </td>
+   <td><p>executeExpression</p> </td>
   </tr>
   <tr>
    <td><p>visibleExp</p> </td>
@@ -220,8 +216,8 @@ ht-degree: 6%
    <td><p>sectionName</p> </td>
   </tr>
   <tr>
-   <td><p>submithpassword</p> </td>
-   <td><p>initializationChildren</p> </td>
+   <td><p>submitpassword</p> </td>
+   <td><p>initializechildren</p> </td>
    <td><p>sectionField</p> </td>
   </tr>
   <tr>
@@ -230,7 +226,7 @@ ht-degree: 6%
    <td><p>getSelectedIndex</p> </td>
   </tr>
   <tr>
-   <td><p>repeatablePanelPath</p> </td>
+   <td><p>Repeatepanelpath</p> </td>
    <td><p>getItemIdentifier</p> </td>
    <td><p>mobileLayout</p> </td>
   </tr>

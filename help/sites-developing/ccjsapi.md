@@ -1,19 +1,15 @@
 ---
 title: Client Context JavaScript API
-seo-title: Client Context JavaScript API
 description: 了解Adobe Experience Manager中适用于客户端上下文的JavaScript API。
-seo-description: The JavaScript API for Client Context
-uuid: be58998c-f23e-4768-8394-1f1ad3994c4c
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
-discoiquuid: a6e5810b-dac5-4137-93cf-5d8d53cacc49
 feature: Context Hub
 exl-id: 24bdf9fc-71e6-4b99-9dad-0f41a5e36b98
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '3157'
+source-wordcount: '3106'
 ht-degree: 2%
 
 ---
@@ -204,7 +200,7 @@ JSON对象的容器。 创建此类的实例以创建包含JSON数据的非持�
 
 另请参阅CQ_Analytics.SessionStore以了解继承的方法。
 
-#### 清除() {#clear}
+#### clear() {#clear}
 
 删除会话存储数据并删除所有初始化属性。
 
@@ -613,7 +609,7 @@ CQ_Analytics.SessionStore表示会话存储。 创建此类的实例以创建会
 
 没有返回值。
 
-#### 清除() {#clear-1}
+#### clear() {#clear-1}
 
 从存储中删除所有数据属性。
 
@@ -747,7 +743,7 @@ excluded： （可选）从结果中忽略的属性名称数组。
 
 没有返回值。
 
-#### 重置() {#reset}
+#### reset() {#reset}
 
 恢复数据存储的初始值。 默认实施只是删除所有数据。 触发 `update` 完成时的事件。
 

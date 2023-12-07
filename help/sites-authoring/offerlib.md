@@ -1,17 +1,13 @@
 ---
 title: 创建和管理选件
-seo-title: Creating and Managing Offers
 description: 使用“选件”控制台，可创建您可以在活动体验中使用的选件
-seo-description: Use the Offers console to create offers that you can use in activity experiences
-uuid: be0a53da-a979-4a30-a4bb-7c9ce26ae1a1
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: personalization
-discoiquuid: 81102d77-e856-4c85-b932-f22de8ca6462
 docset: aem65
 exl-id: 34293432-cfdc-466b-96bd-2c43b566a420
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '834'
 ht-degree: 73%

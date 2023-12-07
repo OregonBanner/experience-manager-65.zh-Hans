@@ -1,15 +1,11 @@
 ---
 title: 自定义任务操作
-seo-title: Customizing Task Actions
 description: 您可以自定义任务操作的外观，仅使用图像执行操作，以及自定义路由操作中使用的图像。
-seo-description: You can customize appearance of the task actions, use only images for actions, and customize the images used in route actions.
-uuid: f6aebcd5-beac-41bf-95bf-2c07d36afa8b
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
-discoiquuid: ca3f6025-7e17-4173-8267-e24a338ea4a1
 exl-id: d17863fb-7950-493d-b378-16861c4af176
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '287'
 ht-degree: 0%

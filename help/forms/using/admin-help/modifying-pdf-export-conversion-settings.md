@@ -1,17 +1,13 @@
 ---
 title: 修改PDF导出转换设置
-seo-title: Modifying the PDF Export conversion settings
 description: 了解如何修改PDF导出转换设置。
-seo-description: Learn how to modify the PDF Export conversion settings.
-uuid: 7bade010-f422-4a76-a876-705e3cf346e6
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/working_with_pdf_generator
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 982f7b7e-9ba9-437f-a337-76c355b328ac
 feature: PDF Generator
 exl-id: 48a5d992-4681-41a8-8d1d-4da6767134c2
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '166'
 ht-degree: 0%
@@ -24,9 +20,9 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->修改一种文件格式的“另存为”设置后，从PDF生成器导出相同类型的所有转换时，都将应用该设置。
+>修改一种文件格式的“另存为”设置后，如果从PDF Generator中导出相同类型的所有转换，则会应用该设置。
 
 1. 在Acrobat中打开PDF文件后，选择“文件”>“另存为”。
 1. 在“另存为类型”列表中，选择适当的格式。
-1. 单击“设置”，并根据需要设置文件格式设置。
+1. 单击“设置” ，并根据需要设置文件格式设置。
 1. 单击“确定”，然后单击“保存”以导出PDF文件。

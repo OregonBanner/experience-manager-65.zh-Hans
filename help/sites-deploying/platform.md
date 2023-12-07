@@ -1,19 +1,15 @@
 ---
 title: AEM平台简介
-seo-title: Introduction to the AEM Platform
 description: 本文概述AEM平台及其最重要的组件。
-seo-description: This article provides a general overview of the AEM platform and its most important components.
-uuid: 214d4c49-1f5c-432c-a2c0-c1fbdceee716
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
 content-type: reference
-discoiquuid: fccf9a0f-ebab-45ab-8460-84c86b3c4192
 legacypath: /content/docs/en/aem/6-0/deploy/upgrade/introduction-to-oak
 exl-id: 8ee5f4ff-648d-45ea-a51e-894cd4385e62
-source-git-commit: 2981f11565db957fac323f81014af83cab2c0a12
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '754'
+source-wordcount: '761'
 ht-degree: 0%
 
 ---
@@ -22,13 +18,13 @@ ht-degree: 0%
 
 AEM 6中的AEM平台基于Apache Jackrabbit Oak。
 
-Apache Jackrabbit Oak致力于实施可扩展且性能良好的分层内容存储库，用作现代世界一流的网站和其他要求苛刻的内容应用程序的基础。
+Apache Jackrabbit Oak致力于实施可扩展且性能优异的分层内容存储库，用作现代世界一流的网站和其他要求苛刻的内容应用程序的基础。
 
-它是Jackrabbit 2的后续版本，由AEM 6用作其内容存储库CRX的默认后端。
+它是Jackrabbit 2的后续版本，被AEM 6用作其内容存储库CRX的默认后端。
 
 ## 设计原则和目标 {#design-principles-and-goals}
 
-Oak实施 [JSR-283](https://jcp.org/en/jsr/detail?id=283) (JCR 2.0)规范 其主要设计目标为：
+Oak实施 [JSR-283](https://jcp.org/en/jsr/detail?id=283) (JCR 2.0)规范。 其主要设计目标为：
 
 * 更好地支持大型存储库
 * 多个分布式群集节点以实现高可用性
@@ -41,7 +37,7 @@ Oak实施 [JSR-283](https://jcp.org/en/jsr/detail?id=283) (JCR 2.0)规范 其主
 
 ### 存储 {#storage}
 
-存储层的用途是：
+存储层的目的是：
 
 * 实施树模型
 * 使存储可插拔
@@ -49,7 +45,7 @@ Oak实施 [JSR-283](https://jcp.org/en/jsr/detail?id=283) (JCR 2.0)规范 其主
 
 ### Oak Core {#oak-core}
 
-Oak Core为存储层添加了多个层：
+Oak核心在存储层中添加了多个层：
 
 * 访问级别控制
 * 搜索和编制索引
@@ -68,23 +64,23 @@ Oak JCR的主要目标是将JCR语义转换为树操作。 它还负责：
 
 Oak存储层为内容的实际存储提供了一个抽象层。
 
-目前，AEM6中有两种存储实施可用： **Tar存储** 和 **MongoDB存储**.
+目前，AEM6中提供了两种存储实施： **Tar存储** 和 **MongoDB存储**.
 
 ### Tar存储 {#tar-storage}
 
-Tar存储使用tar文件。 它将内容存储为较大区段中的各种类型的记录。 日志用于跟踪存储库的最新状态。
+Tar存储使用tar文件。 它将内容存储为较大区段中的各种类型的记录。 日记帐用于跟踪存储库的最新状态。
 
 它围绕几个关键设计原则构建：
 
 * **不可变区段**
 
-内容存储在区段中，区段大小最多可达256 KB。 它们不可变，因此可以轻松缓存经常访问的区段，并减少可能损坏存储库的系统错误。
+内容存储在区段中，这些区段最长可达256 KB。 它们不可变，因此可以轻松缓存经常访问的区段，并减少可能损坏存储库的系统错误。
 
-每个区段由唯一标识符(UUID)标识，并包含内容树的连续子集。 此外，区段可以引用其他内容。 每个区段都会保留一个其他引用区段的UUID列表。
+每个区段由唯一标识符(UUID)标识，并包含内容树的连续子集。 此外，区段可以引用其他内容。 每个区段都会保留其他引用区段的UUID列表。
 
 * **地区**
 
-节点及其直接子节点等相关记录存储在同一区段中。 这样，对于每个会话访问多个相关节点的典型客户机，可以快速搜索存储库并避免大多数高速缓存丢失。
+节点及其直接子节点等相关记录存储在同一区段中。 这样，对于每个会话访问多个相关节点的典型客户端，可以快速搜索存储库并避免大多数高速缓存未命中。
 
 * **紧凑性**
 
@@ -92,7 +88,7 @@ Tar存储使用tar文件。 它将内容存储为较大区段中的各种类型�
 
 ### Mongo存储 {#mongo-storage}
 
-MongoDB存储使用MongoDB进行分片和群集。 存储库树保留在一个MongoDB数据库中，其中每个节点都是一个单独的文档。
+MongoDB存储使用MongoDB进行分片和群集。 存储库树保留在一个MongoDB数据库中，其中每个节点是一个单独的文档。
 
 它有几个特点：
 
@@ -106,26 +102,26 @@ MongoDB存储使用MongoDB进行分片和群集。 存储库树保留在一个Mo
 
 * 分支
 
-支持分支，允许客户端暂存多个更改，并在单个合并调用中使这些更改可见。
+支持分支，允许客户端暂存多个更改，并在单个合并调用中使其可见。
 
 * 以前的文档
 
-MongoDB存储会在每次修改时向文档中添加数据。 但是，它仅在明确触发清理时删除数据。 当达到特定阈值时，将移动旧数据。 以前的文档仅包含不可变数据，这意味着它们仅包含已提交和合并的修订。
+MongoDB存储会在每次修改时将数据添加到文档。 但是，它仅在明确触发清理时删除数据。 当满足特定阈值时，将移动旧数据。 以前的文档只包含不可变数据，这意味着它们只包含已提交和合并的修订。
 
 * 群集节点元数据
 
-有关活动和非活动群集节点的数据保留在数据库中，以方便群集操作。
+有关活动和非活动群集节点的数据保存在数据库中，以方便群集操作。
 
 使用MongoDB存储的典型AEM群集设置：
 
 ![chlimage_1-85](assets/chlimage_1-85.png)
 
-## Jackrabbit 2有什么不同？ {#what-is-different-from-jackrabbit}
+## 与Jackrabbit 2有何不同？ {#what-is-different-from-jackrabbit}
 
-由于Oak向后兼容JCR 1.0标准，因此用户级别几乎没有任何变化。 但是，在设置基于Oak的AEM安装时，必须考虑一些显着的差异：
+由于Oak向后兼容JCR 1.0标准，因此用户级别几乎没有任何变化。 但是，在设置基于Oak的AEM安装时，必须考虑一些显着差异：
 
-* Oak不会自动创建索引。 因此，必须在必要时创建自定义索引。
-* 与Jackrabbit 2不同，Jackrabbit 2的会话始终反映存储库的最新状态，而Oak的会话反映从获得会话时起的存储库的稳定视图。 原因在于Oak所基于的MVCC模型。
+* Oak不会自动创建索引。 因此，必要时必须创建自定义索引。
+* 与Jackrabbit 2不同，Oak会话始终反映存储库的最新状态，而Jackrabbit 2则反映从获得会话时起存储库的稳定视图。 原因是Oak所基于的MVCC模型。
 * Oak不支持同名同级(SNS)。
 
 ## 其他平台相关文档 {#other-platform-related-documentation}

@@ -1,16 +1,12 @@
 ---
 title: 在OSGi环境中强化和保护AEM表单
-seo-title: Hardening and Securing AEM forms on OSGi environment
 description: 了解在OSGi服务器上保护AEM Forms安全的建议和最佳实践。
-seo-description: Learn recommendations and best practices for securing AEM Forms on OSGi server.
-uuid: abca7e7c-38c3-44f5-8d8a-4615cfce26c6
 topic-tags: Security
-discoiquuid: b1bd04bf-0d6d-4e6b-8c7c-eafd1a24b5fe
 role: Admin
 exl-id: 5da3cc59-4243-4098-b1e0-438304fcd0c5
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '1440'
+source-wordcount: '1434'
 ht-degree: 0%
 
 ---
@@ -77,7 +73,7 @@ AEM Forms具有高度可自定义性，可以在许多不同的环境中工作�
     </ul> </td> 
   </tr>
   <tr>
-   <td>Forms Portal </td> 
+   <td>Forms门户 </td> 
    <td>
     <ul> 
      <li>/content/forms/portal/</li> 

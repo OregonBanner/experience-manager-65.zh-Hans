@@ -1,15 +1,13 @@
 ---
 title: 配置回退字体
 description: 了解如何为AEM Forms配置后备字体。 可以使用FontManagerResources.properties文件将默认字体手动映射到回退字体。
-uuid: 2745541c-8c6d-4bb4-aa14-ec19afd6bc35
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/working_with_pdf_generator
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: d997a268-a40a-462d-badd-94f0731f7ba4
 feature: PDF Generator
 exl-id: 76dd2b0c-9f16-47bf-a565-99277be750fb
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '264'
 ht-degree: 0%

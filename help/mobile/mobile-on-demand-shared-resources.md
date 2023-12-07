@@ -1,16 +1,12 @@
 ---
 title: 上传共享资源
-seo-title: Uploading Shared Resources
 description: 内容管理操作是构建块，有助于在应用程序中创建和管理内容。 请参阅此页面，了解如何上传共享资源。
-seo-description: Content Management actions are the building blocks that help to create and manage content within an application. Follow this page to learn about uploading shared resources.
-uuid: f3595299-1279-4b94-9a49-9d1893250549
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: authoring-on-demand-services-app
-discoiquuid: 958461b0-4cbb-452b-88ea-9b98ada14750
 exl-id: 4b3acc7c-f1f7-4837-ae3a-9435d6ce1349
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '282'
 ht-degree: 0%

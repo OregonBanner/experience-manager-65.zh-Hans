@@ -1,8 +1,6 @@
 ---
 title: 如何创建自适应表单？
-seo-title: Learn how to create a Core Components based Adaptive Form on AEM 6.5 Forms.
 description: 了解如何使用创建自适应表单 [!DNL Experience Manager Forms]. 自适应Forms是响应式HTML5表单，可简化信息收集和处理。 深入了解如何基于表单数据模型和XML或JSON架构创建自适应表单。
-seo-description: Learn how to create an Adaptive Form using [!DNL Experience Manager Forms]. Adaptive Forms are responsive HTML5 forms that streamline information gathering and processing. Dig deeper on how to create an Adaptive Form based on a Form Data Model and XML or JSON schema.
 Keywords: create adaptive form core component, create core component based adaptive form, creare adaptive form
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 contentOwner: Khushwant Singh
@@ -10,7 +8,7 @@ topic-tags: Adaptive Forms
 docset: aem65
 role: Admin, Developer
 exl-id: ee596672-b0b5-42e9-a139-72f90287bf3b
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '1743'
 ht-degree: 35%

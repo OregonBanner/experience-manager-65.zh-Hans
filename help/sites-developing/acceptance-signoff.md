@@ -1,16 +1,12 @@
 ---
 title: 接受和签核
-seo-title: Acceptance and Sign-off
 description: 验收测试是一种特殊类型的测试，用于验证项目是否符合客户的要求，以及客户是否接受项目
-seo-description: Acceptance Tests are a special category of test used to verify that the project fulfils the customer's requirements and that the customer accepts the project
-uuid: 6bdd2a99-d141-43ef-9102-99e65aba02d3
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: testing
 content-type: reference
-discoiquuid: d8da194f-f161-4ba7-b8cc-c2c282dc9c83
 exl-id: 30ac9a63-f9e6-4075-b67e-4524d11a0e29
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '107'
 ht-degree: 0%
@@ -19,7 +15,7 @@ ht-degree: 0%
 
 # 接受和签核{#acceptance-and-sign-off}
 
-如前所述， [验收测试](/help/sites-developing/planning.md) 是用于验证以下各项的特殊测试类别：
+如前所述， [验收测试](/help/sites-developing/planning.md) 是用于验证以下内容的特殊测试类别：
 
 * 项目满足客户的要求。
 * 客户接受项目。
@@ -30,4 +26,4 @@ ht-degree: 0%
 
 * 尽早定义。
 * 必要时更新。
-* 任何更改必须由双方正式接受和签署（合作伙伴和客户）。
+* 任何更改都必须由双方正式接受并签署（合作伙伴和客户）。

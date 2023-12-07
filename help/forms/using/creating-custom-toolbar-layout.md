@@ -1,16 +1,12 @@
 ---
 title: 创建自定义工具栏布局
-seo-title: Creating custom toolbar layout
 description: 您可以为表单指定工具栏布局。 工具栏布局定义命令和表单上工具栏的布局。
-seo-description: You can specify a toolbar layout for the form. The toolbar layout defines the commands and the layout of the toolbar on the form.
-uuid: 389a715a-4c91-4a63-895d-bb2d0f1054eb
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: customization
-discoiquuid: 0d817a7e-2758-4308-abda-6194716c2d97
 docset: aem65
 exl-id: 44516956-00aa-41d5-a7e9-746c7618e5db
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '523'
 ht-degree: 0%
@@ -92,7 +88,7 @@ CustomToolbarLayoutDemo.zip
 
    customToolbarLayout.css文件的路径
 
-   样本 `customToolbarLayout.jsp`:
+   示例 `customToolbarLayout.jsp`：
 
    ```jsp
    <%@include file="/libs/fd/af/components/guidesglobal.jsp" %>
@@ -110,7 +106,7 @@ CustomToolbarLayoutDemo.zip
    >
    >为布局添加guidetoolbar类。 现成的工具栏样式是根据guidetolbar类定义的。
 
-   样本 `toolBarCommon.jsp`:
+   示例 `toolBarCommon.jsp`：
 
    ```jsp
    <%@taglib prefix="fn" uri="https://java.sun.com/jsp/jstl/functions"%>

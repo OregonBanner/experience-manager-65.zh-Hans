@@ -1,16 +1,12 @@
 ---
 title: 为JEE上的AEM Forms配置安全管理设置
-seo-title: Configuring Secure Administration Settings for AEM Forms on JEE
 description: 了解如何管理用户帐户和服务，这些用户帐户和服务虽然在专用开发环境中是必需的，但在AEM Forms on JEE的生产环境中不是必需的。
-seo-description: Learn how to administer user accounts and services that, although required in a private development environment, are not required in a production environment of AEM Forms on JEE.
-uuid: 04e45d06-f57d-406c-8228-15f483199430
 content-type: reference
 topic-tags: Security
 products: SG_EXPERIENCEMANAGER/6.4
-discoiquuid: d211d8b0-e75f-49c3-808d-5d0e26ad3a6b
 role: Admin
 exl-id: 40bc01b4-a59e-4420-81d6-2887857bddce
-source-git-commit: c4cd9a61a226ace2a72d60b5b7b7432de12cb873
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '847'
 ht-degree: 0%

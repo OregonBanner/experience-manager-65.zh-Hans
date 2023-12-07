@@ -1,19 +1,15 @@
 ---
 title: 配置用于呈现的组件的内容片段
-seo-title: Content Fragments Configuring Components for Rendering
 description: 配置用于呈现的组件的内容片段
-seo-description: Content Fragments Configuring Components for Rendering
-uuid: 3f5aaf36-e6a7-4a3c-b305-e35ebcc98d0d
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
-discoiquuid: 2aef9048-9d6e-4f5d-b443-5e73f8066d76
 docset: aem65
 exl-id: 9ef9ae75-cd8c-4adb-9bcb-e951d200d492
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '461'
-ht-degree: 7%
+source-wordcount: '463'
+ht-degree: 6%
 
 ---
 
@@ -70,7 +66,7 @@ OSGi配置为：
  <tbody>
   <tr>
    <td>标签</td>
-   <td>OSGi 配置<br /> </td>
+   <td>OSGi配置<br /> </td>
    <td>描述</td>
   </tr>
   <tr>
@@ -106,7 +102,7 @@ OSGi配置为：
   </tr>
   <tr>
    <td><code>paragraphRange</code></td>
-   <td><p>一个字符串属性，定义在中要输出的段落范围 <em>单元素渲染模式</em>.</p> <p>格式:</p>
+   <td><p>一个字符串属性，定义在中要输出的段落范围 <em>单元素渲染模式</em>.</p> <p>格式：</p>
     <ul>
      <li><code>1</code> 或 <code>1-3</code> 或 <code>1-3;6;7-8</code> 或 <code>*-3;5-*</code></li>
      <li>仅在以下情况下评估 <code>paragraphScope</code> 设置为 <code>range</code></li>
@@ -114,7 +110,7 @@ OSGi配置为：
   </tr>
   <tr>
    <td><code>paragraphScope</code></td>
-   <td><p>一个字符串属性，定义在中时如何输出段落 <em>单元素渲染模式</em>.</p> <p>值:</p>
+   <td><p>一个字符串属性，定义在中时如何输出段落 <em>单元素渲染模式</em>.</p> <p>值：</p>
     <ul>
      <li><code>all</code> ：渲染所有段落</li>
      <li><code>range</code> ：呈现以下项提供的段落范围： <code>paragraphRange</code></li>

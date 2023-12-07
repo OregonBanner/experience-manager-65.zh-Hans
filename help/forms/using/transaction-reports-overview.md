@@ -1,17 +1,13 @@
 ---
 title: 交易报表概述
-seo-title: Transaction Reports Overview
 description: 记录已提交的所有表单、已渲染的交互式通信、已转换为另一种格式的文档及其他内容的计数
-seo-description: Keep a count of all the forms submitted, interactive communication rendered, Documents converted to one format to another, and more
-uuid: 2c3dc1f3-5bbf-4aab-aa84-7aef5aabadf6
 topic-tags: forms-manager
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: b2c09e6b-a1d8-4b30-af2c-988442a3a986
 docset: aem65
 exl-id: bb812614-f4d8-4f57-bea2-8f7d31457039
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '549'
+source-wordcount: '551'
 ht-degree: 0%
 
 ---

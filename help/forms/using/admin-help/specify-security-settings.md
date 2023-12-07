@@ -1,17 +1,15 @@
 ---
 title: 指定安全设置
 description: 了解如何指定安全设置以保护XML数据文件。 安全设置功能控制XML输入中的外部实体。
-uuid: c86ba195-010d-40d6-9f9d-4cb4c364d104
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_output
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 3c017f9a-aa7f-4d12-ba8b-9fd92c029157
 exl-id: 1f544485-5a01-4a4a-ab0f-dcee67e1a38b
-source-git-commit: 6caf3ef4a00275f0f73be52b6a9ccba77d277f1a
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '89'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
@@ -23,4 +21,4 @@ ht-degree: 2%
 
 1. 在管理控制台中，单击“服务”>“输出”。
 1. 清除“解析外部图元”复选框。
-1. 单击保存。
+1. 单击“保存”。

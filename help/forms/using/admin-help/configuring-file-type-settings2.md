@@ -1,17 +1,13 @@
 ---
 title: 配置文件类型设置
-seo-title: Configuring file type settings
 description: 了解如何配置文件类型设置。
-seo-description: Learn how to configure file type settings.
-uuid: d01f430b-9637-4a5f-b3a7-d5ef3e5ecbc5
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/working_with_pdf_generator
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: adbe8416-c8d7-4581-940b-df62eadf0e26
-source-git-commit: e2a3470784beb04c2179958ac6cb98861acfaa71
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '6163'
+source-wordcount: '6157'
 ht-degree: 0%
 
 ---
@@ -253,7 +249,7 @@ PDF Generator支持减小PDF文件大小的功能。 是否使用所有这些设
 
    * 如有必要，请从 **字体源** 下拉菜单。 此下拉菜单列出了中指定的字体目录。 **主页>设置>核心系统>核心配置**.
    * 从中选择一种或多种字体 **可用字体** 列表并单击 **添加**. 这些字体将添加到 **要取消嵌入的字体** 列表。
-   * 如果要取消嵌入Forms服务器上不存在的某些字体，请在 **添加字体以取消嵌入** 盒子。 单击&#x200B;**添加**。
+   * 如果要取消嵌入Forms服务器上不存在的某些字体，请在 **添加字体以取消嵌入** 盒子。 单击 **添加**.
 
    >[!NOTE]
    >
@@ -412,7 +408,7 @@ NOTE to WRITER: Unfinished sentence above.
 
 **尝试将OpenOffice作为回退转换器**：当选择此选项且使用Microsoft Excel的转换失败或达到指定的超时限制时，PDF Generator将尝试使用OpenOffice进行转换。 如果使用OpenOffice的转换失败或达到指定的超时限制，则会将异常写入日志文件。
 
-**文件扩展名**：指定此应用程序接受的文件类型的文件扩展名（以逗号分隔）。 默认为 `xls,xlsx`。不要在扩展之前添加句点，也不要在扩展之间添加空格。
+**文件扩展名**：指定此应用程序接受的文件类型的文件扩展名（以逗号分隔）。 默认为 `xls,xlsx`. 不要在扩展之前添加句点，也不要在扩展之间添加空格。
 
 **创建符合PDF/A-1a标准的文件**：强制使用PDF/A-1b：2005RGBAdobe PDF设置。
 
@@ -474,7 +470,7 @@ NOTE to WRITER: Unfinished sentence above.
 
 这些选项决定如何转换Microsoft项目文件。 有关访问这些选项的说明，请参阅 [创建或编辑文件类型设置](#create-or-edit-file-type-settings).
 
-1. **[!UICONTROL 文件扩展名：]** 为此应用程序接受的文件类型指定文件扩展名（以逗号分隔）。 默认为 `mpp`。不要在扩展之前添加句点，也不要在扩展之间添加空格。
+1. **[!UICONTROL 文件扩展名：]** 为此应用程序接受的文件类型指定文件扩展名（以逗号分隔）。 默认为 `mpp`. 不要在扩展之前添加句点，也不要在扩展之间添加空格。
 
 1. **[!UICONTROL 转换文档信息]**：从源文件的“属性”对话框添加文档信息，包括标题、主题、作者、关键字、经理、公司、类别和注释。 默认情况下，该选项处于选中状态。
 1. **[!UICONTROL 将源文件附加到Adobe PDF]**：将源文件作为附件添加到PDF文件中。
@@ -487,7 +483,7 @@ NOTE to WRITER: Unfinished sentence above.
 
 **[!UICONTROL 尝试将OpenOffice作为回退转换器]**：当选择此选项且使用Microsoft Word的转换失败或达到指定的超时限制时，PDF Generator将尝试使用OpenOffice进行转换。 如果使用OpenOffice的转换失败或达到指定的超时限制，则会将异常写入日志文件。
 
-**[!UICONTROL 文件扩展名]**：指定此应用程序接受的文件类型的文件扩展名（以逗号分隔）。 默认为 `doc,docx,rtf,txt`。不要在扩展之前添加句点，也不要在扩展之间添加空格。
+**[!UICONTROL 文件扩展名]**：指定此应用程序接受的文件类型的文件扩展名（以逗号分隔）。 默认为 `doc,docx,rtf,txt`. 不要在扩展之前添加句点，也不要在扩展之间添加空格。
 
 **[!UICONTROL 转换文档信息]**：从源文件的“属性”对话框添加文档信息，包括标题、主题、作者、关键字、经理、公司、类别和注释。 默认情况下，该选项处于选中状态。
 
@@ -545,13 +541,13 @@ styleName1=level1[，styleName2=level2...]
 
 这些选项决定如何转换Microsoft Publisher文件。 有关访问这些选项的说明，请参阅 [创建或编辑文件类型设置](#create-or-edit-file-type-settings).
 
-**[!UICONTROL 文件扩展名]**：指定此应用程序接受的文件类型的文件扩展名（以逗号分隔）。 默认为 `pub`。不要在扩展之前添加句点，也不要在扩展之间添加空格。
+**[!UICONTROL 文件扩展名]**：指定此应用程序接受的文件类型的文件扩展名（以逗号分隔）。 默认为 `pub`. 不要在扩展之前添加句点，也不要在扩展之间添加空格。
 
 ## AutoCAD设置（仅限Windows） {#autocad-settings-windows-only}
 
 这些选项决定如何转换AutoCAD文件。 有关访问这些选项的说明，请参阅 [创建或编辑文件类型设置](/help/forms/using/admin-help/configuring-file-type-settings2.md#create-or-edit-file-type-settings).
 
-**[!UICONTROL 文件扩展名]**：指定此应用程序接受的文件类型的文件扩展名（以逗号分隔）。 默认为 `dwg`。不要在扩展之前添加句点，也不要在扩展之间添加空格。
+**[!UICONTROL 文件扩展名]**：指定此应用程序接受的文件类型的文件扩展名（以逗号分隔）。 默认为 `dwg`. 不要在扩展之前添加句点，也不要在扩展之间添加空格。
 
 **[!UICONTROL 转换文档信息]**：从源文件的“属性”对话框添加文档信息，包括标题、主题、作者、关键字、经理、公司、类别和注释。 默认情况下，该选项处于选中状态。
 
@@ -587,7 +583,7 @@ styleName1=level1[，styleName2=level2...]
 
 **试用PDFMaker作为回退转换器**：当选择此选项且使用OpenOffice的转换失败或达到指定的超时限制时，PDF Generator将尝试使用PDFMaker进行转换。 如果使用PDFMaker的转换失败或达到指定的超时限制，则会将异常写入日志文件。
 
-**文件扩展名**：为此应用程序接受的文件类型指定文件扩展名（以逗号分隔）。 默认为 `odt,odp,ods,odg,odf,sxw,sxi,sxd`。不要在扩展之前添加句点，也不要在扩展之间添加空格。
+**文件扩展名**：为此应用程序接受的文件类型指定文件扩展名（以逗号分隔）。 默认为 `odt,odp,ods,odg,odf,sxw,sxi,sxd`. 不要在扩展之前添加句点，也不要在扩展之间添加空格。
 
 **Range**：转换所有页面或指定特定页面或页面范围。 如果未定义页面范围，则会转换所有页面。 要导出一定范围的页面，请使用格式3-6。 要导出单个页面，请使用格式7；9；11。 您可以使用格式（如3-6；8；10；12）导出页面范围和单个页面的组合。
 
@@ -621,7 +617,7 @@ styleName1=level1[，styleName2=level2...]
 * Corel WordPerfect： `wpd`
 * AdobePageMaker： `pmd, pm6, p65, pm`
 * Adobe FrameMaker： `fm`
-* Adobe Photoshop: `psd`
+* Adobe Photoshop： `psd`
 
 可能需要自定义对这些文件类型的支持。 有关详细信息，请参阅中的“添加对其他本机文件格式的支持” [使用AEM表单编程](https://www.adobe.com/go/learn_aemforms_programming_62).
 

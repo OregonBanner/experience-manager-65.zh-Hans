@@ -1,19 +1,15 @@
 ---
 title: 获取JSON格式的页面信息
-seo-title: Obtaining Page Information in JSON Format
 description: 要获取页面信息，请向PageInfo servlet发送请求，以获取JSON格式的页面元数据
-seo-description: To obtain the page information, send a request to the PageInfo servlet to obtain the page metadata in JSON format
-uuid: fb4f56b9-55e2-4622-a0d1-a86d6f2cce86
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: components
 content-type: reference
-discoiquuid: 505bf3e3-ce3c-40aa-9619-e1b9f6634deb
 exl-id: 7c856e87-9f90-435d-aceb-994f10ea6f50
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '943'
-ht-degree: 2%
+source-wordcount: '931'
+ht-degree: 1%
 
 ---
 
@@ -511,7 +507,7 @@ http://localhost:4502/libs/wcm/core/content/pageinfo.json?path=/content/we-retai
    * 类型：`String[]`
    * 值：使用正确格式的工作流包的路径。
 
-1. 单击全部保存。
+1. 单击“全部保存”。
 
 要在项目源中配置服务，请执行以下操作：
 
@@ -539,7 +535,7 @@ http://localhost:4502/libs/wcm/core/content/pageinfo.json?path=/content/we-retai
 
 创建自定义页面信息提供程序服务，以添加应用程序可轻松获取的页面元数据。
 
-1. 实施 `com.day.cq.wcm.api.PageInfoProvider` 接口。
+1. 实施 `com.day.cq.wcm.api.PageInfoProvider` 界面。
 1. 将类捆绑为一个OSGi服务并进行部署。
 1. 在应用程序中创建页面组件。 使用 `foundation/components/page` 作为 `sling:resourceSuperType` 属性。
 

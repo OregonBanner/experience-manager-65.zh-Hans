@@ -1,20 +1,16 @@
 ---
 title: 以编程方式组合PDF文档
-seo-title: Programmatically Assembling PDF Documents
 description: 使用Assembler服务API通过Java API和Web服务API将多个PDF文档组合为单个PDF文档。
-seo-description: Use the Assembler service API to assemble multiple PDF documents into a single PDF document using the Java API and the Web Service API.
-uuid: aa3f8f39-1fbc-48d0-82ff-6caaadf125fc
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/assembling_pdf_documents
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
-discoiquuid: ebe8136b-2a79-4035-b9d5-aa70a5bbd4af
 role: Developer
 exl-id: 7d6fd230-e477-4286-9fb3-18a3474e3e48
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '2123'
+source-wordcount: '2105'
 ht-degree: 0%
 
 ---

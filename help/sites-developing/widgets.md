@@ -1,17 +1,15 @@
 ---
 title: 使用和扩展小组件（经典UI）
 description: Adobe Experience Manager基于Web的界面使用AJAX和其他现代浏览器技术，让作者能够在网页上对WYSIWYG内容进行编辑和格式化
-uuid: eb3da415-cbef-4766-a28e-837e238a4156
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: components
 content-type: reference
-discoiquuid: 7b234f1f-4470-4de1-a3c3-ab19e5e001ad
 docset: aem65
 exl-id: 56a9591c-cd78-42e8-a5d7-6b48581d6af6
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '4925'
+source-wordcount: '4896'
 ht-degree: 0%
 
 ---
@@ -195,7 +193,7 @@ AEM使用 [ExtJS](https://www.sencha.com/) widgets库提供了经过高度完善
 此 **多面板** 对话框的显示方式与 **完整** 对话框，但构建方式有所不同。 其特点是：
 
 * 由节点定义(节点类型= `cq:Dialog`， xtype = ` [tabpanel](/help/sites-developing/xtypes.md#tabpanel)`)。
-* 显示三个选项卡(节点类型= `cq:Panel`)。
+* 显示三个选项卡（节点 type = `cq:Panel` ）。
 * 每个选项卡有两个 textfields （节点 type = `cq:Widget` ，xtype = ` [textfield](/help/sites-developing/xtypes.md#textfield)` ）。
 * 由节点定义：
   `/apps/extjstraining/components/dialogbasics/multipanel`
@@ -497,7 +495,7 @@ RTE插件：
 
 >[!NOTE]
 >
->此示例仅显示了如何实施逻辑的客户端部分：然后在服务器端上显式分析占位符（ *[]* 例如，在组件 JSP 中）。
+>此示例仅说明如何实施逻辑的客户端部分：占位符(*[文本]*)然后必须在服务器端显式解析（例如，在组件JSP中）。
 
 ### 树概述 {#tree-overview}
 

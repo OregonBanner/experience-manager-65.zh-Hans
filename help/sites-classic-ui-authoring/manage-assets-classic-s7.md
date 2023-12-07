@@ -1,17 +1,15 @@
 ---
 title: 将Dynamic Media Classic (Scene7)功能添加到您的页面
 description: Adobe Dynamic Media Classic (Scene7)是一款托管解决方案，用于管理、增强和发布富媒体资产，并将其交付给Web、移动设备、电子邮件和连接到Internet的显示和打印。
-uuid: dc463e2d-a452-490e-88af-f79bdaa3b089
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: authoring
 content-type: reference
-discoiquuid: dc0191d0-f181-4e1e-b3f4-73427aa22073
 docset: aem65
 exl-id: bc9c864b-8bc3-42b4-ba25-6c5108be4f65
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '3532'
+source-wordcount: '3545'
 ht-degree: 0%
 
 ---
@@ -147,7 +145,7 @@ Adobe建议仅从Dynamic Media Classic (Scene7)目标文件夹中的资源将资
 >
 >如果您创建和开发自定义S7查看器并使用内容查找器，则必须明确添加 `allowfullscreen` 参数。
 
-### Flash 查看器生命周期终止通知 {#flash-viewers-end-of-life-notice}
+### Flash查看器生命周期终止通知 {#flash-viewers-end-of-life-notice}
 
 自2017年1月31日起，Adobe Dynamic Media Classic (Scene7)正式终止对Flash查看器平台的支持。
 

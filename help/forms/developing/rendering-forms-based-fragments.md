@@ -1,20 +1,16 @@
 ---
 title: 基于片段渲染Forms
-seo-title: Rendering Forms Based on Fragments
 description: 使用Forms服务呈现基于使用Designer创建的片段的表单。
-seo-description: Use the Forms service to render forms that are based on fragments created using Designer.
-uuid: 9c9a730d-f970-41f8-afed-4e6b6d3d393d
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/rendering_forms
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
-discoiquuid: a65c5303-0ebd-43a9-a777-401042d8fcad
 role: Developer
 exl-id: febf5350-3fc5-48c0-8bc5-198daff15936
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '2199'
+source-wordcount: '2189'
 ht-degree: 0%
 
 ---
@@ -27,7 +23,7 @@ ht-degree: 0%
 
 Forms服务可以渲染基于您使用Designer创建的片段的表单。 A *片段* 是表单的可重用部分，并另存为可插入到多个表单设计中的单独XDP文件。 例如，片段可以包含地址块或法律文本。
 
-使用片段可简化并加速大量表单的创建和维护。 创建表单时，插入对所需片段的引用，片段会显示在表单中。 片段引用包含一个指向物理XDP文件的子表单。 有关基于片段创建表单设计的信息，请参阅 [Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63_cn)
+使用片段可简化并加速大量表单的创建和维护。 创建表单时，插入对所需片段的引用，片段会显示在表单中。 片段引用包含一个指向物理XDP文件的子表单。 有关基于片段创建表单设计的信息，请参阅 [Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63)
 
 片段可以包含多个包在选择子表单集中的子表单。 选择子表单集根据来自数据连接的数据流控制子表单的显示。 可使用条件语句确定集合中的哪个子表单出现在交付的表单中。 例如，集合中的每个子表单可以包含特定地理位置的信息，并且显示的子表单可以根据用户的位置来确定。
 

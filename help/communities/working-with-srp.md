@@ -1,20 +1,16 @@
 ---
 title: SRP — 社区内容存储
-seo-title: SRP - Community Content Storage
-description: 从AEM Communities 6.1开始，用户生成的内容(UGC)存储在由存储资源提供商(SRP)提供的单个公用存储中
-seo-description: As of AEM Communities 6.1, user generated content (UGC) is stored in a single, common store provided by a storage resource provider (SRP)
-uuid: d45e03c4-378b-4510-a6a0-d48c8cb879d9
+description: 从AEM Communities 6.1开始，用户生成的内容(UGC)存储在存储资源提供商(SRP)提供的单个公共存储中
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
-discoiquuid: 6f13b21a-f4ef-4889-9b8e-4da3f846fa35
 docset: aem65
 role: Admin
 exl-id: e29aae44-67be-43d2-8004-c986412d9e63
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '895'
+source-wordcount: '906'
 ht-degree: 0%
 
 ---
@@ -23,39 +19,39 @@ ht-degree: 0%
 
 ## 简介 {#introduction}
 
-从AEM Communities 6.1开始，用户生成的内容(UGC)存储在由存储资源提供程序(SRP)提供的单个公用存储中。 有几种SRP选项可供选择，如ASRP、MSRP和JSRP。
+从AEM Communities 6.1开始，用户生成的内容(UGC)存储在存储资源提供商(SRP)提供的单个公共存储中。 有几种SRP选项可供选择，如ASRP、MSRP和JSRP。
 
-与以前的版本不同，UGC不会跨AEM实例进行反向/正向复制。 相反，SRP让UGC可从所有创作和发布实例中直接访问创建、读取、更新和删除(CRUD)操作，但JSRP除外。
+与以前的版本不同，UGC不会跨AEM实例进行反向/正向复制。 相反，SRP允许直接从所有创作和发布实例中访问UGC以进行创建、读取、更新和删除(CRUD)操作，但JSRP除外。
 
-以下是 [每个SRP选项的特性](#characteristics-of-srp-options)，在选择合适的SRP和时，这对于决策过程至关重要。 [基础部署](/help/communities/topologies.md).
+以下是 [每个SRP选项的特性](#characteristics-of-srp-options)，这是选择合适的SRP和进行决策时所需的关键信息。 [基础部署](/help/communities/topologies.md).
 
 有关使用SRP for UGC的详细信息，请参阅 [存储资源提供程序概述](/help/communities/srp.md).
 
 >[!NOTE]
 >
->SRP仅适用于社区内容。 它不影响网站内容的存储位置([节点存储](/help/sites-deploying/data-store-config.md))，并且不影响在AEM实例之间安全处理用户注册、用户配置文件和用户组(另请参阅 [管理用户数据](#managing-user-data))。
+>SRP仅适用于社区内容。 它不会影响网站内容的存储位置([节点存储](/help/sites-deploying/data-store-config.md))，并且不会影响在AEM实例之间安全处理用户注册、用户配置文件和用户组(另请参阅 [管理用户数据](#managing-user-data))。
 
 >[!CAUTION]
 >
 >自AEM 6.1起， [从不复制UGC](#ugc-never-replicated).
 >
->当部署不包含公用存储时，例如默认存储 [JSRP](/help/communities/topologies.md#jsrp) 拓扑、UGC将仅在输入它的AEM发布或创作实例上可见。 仅当拓扑包含发布群集时，UGC才会在任何发布实例上可见。
+>当部署不包含公用存储（如默认存储）时 [JSRP](/help/communities/topologies.md#jsrp) 拓扑中，UGC仅在输入它的AEM发布或创作实例上可见。 仅当拓扑包含发布群集时，UGC才在任何发布实例上可见。
 
 ## SRP选项的特性 {#characteristics-of-srp-options}
 
 [ASRP -Adobe存储资源提供程序](/help/communities/asrp.md)
 
-利用此选项，UGC将远程保留在由Adobe托管和管理的云服务中。 它需要额外的许可证，并需要与帐户代表合作，为该特定许可证设置帐户。 ASRP要求：
+使用此选项，UGC会远程保留在由Adobe托管和管理的云服务中。 它需要额外的许可证，并且需要与客户代表合作，为该特定许可证设置帐户。 ASRP要求：
 
-* 由Adobe提供和支持的用于存储社区内容的关联云服务。
+* Adobe提供并支持的相关云服务用于存储社区内容。
 * 在特定地区（美国、欧洲、中东和非洲、亚太地区）选择数据中心。
 
-* 所有对UGC的编程访问都必须通过SRP API。
+* 对UGC的所有编程访问都必须通过SRP API。
 
 ASRP适合：
 
 * 对于TarMK发布场。
-* 当无意投资本地存储时。
+* 如果无意投资本地存储，
 
 >[!NOTE]
 >
@@ -67,9 +63,9 @@ ASRP适合：
 
 MSRP要求：
 
-* 本地授权安装MongoDB以存储社区内容。
+* MongoDB的本地许可安装用于存储社区内容。
 * Apache Solr的本地安装。
-* 所有对UGC的编程访问都必须通过SRP API。
+* 对UGC的所有编程访问都必须通过SRP API。
 
 ASRP适合：
 
@@ -83,9 +79,9 @@ ASRP适合：
 
 DSRP要求：
 
-* 本地安装的MySQL用于存储社区内容。
+* 用于存储社区内容的MySQL的本地安装。
 * Apache Solr的本地安装。
-* 所有对UGC的编程访问都必须通过SRP API。
+* 对UGC的所有编程访问都必须通过SRP API。
 
 DSRP适合：
 
@@ -99,7 +95,7 @@ DSRP适合：
 
 JSRP：
 
-* 将社区内容存储在社区内容发布到的AEM创作或发布实例的JCR存储库中。
+* 将社区内容存储在社区内容发布到的AEM创作或发布实例的JCR存储库。
 * 要求通过SRP API访问UGC的所有程序化权限。
 * 如果部署了多个发布实例，则需要发布群集（TarMK场中的发布实例之间没有复制机制）。
 * 审核仅在发布环境中执行（创作和发布之间没有反向/正向复制机制）。
@@ -109,7 +105,7 @@ JSRP：
 
 根据基础部署指定默认存储选项，操作是通过 [存储配置控制台](/help/communities/srp-config.md).
 
-有关每个选项的配置详细信息，请参阅：
+有关每个选项的详细配置信息，请参阅：
 
 * [ASRP -Adobe存储资源提供程序](/help/communities/asrp.md)
 * [MSRP - MongoDB存储资源提供程序](/help/communities/msrp.md)
@@ -122,11 +118,11 @@ JSRP：
 
 ### 从未复制UGC {#ugc-never-replicated}
 
-在创作环境中，作者会创建页面内容并将其复制到发布环境。 当页面包含交互式AEM Communities功能（如评论、评论、论坛、博客或QnA）时，成员在发布实例上的交互（登录网站访客）会导致在发布环境中输入用户生成的内容(UGC)。
+在创作环境中，作者创建页面内容并将其复制到发布环境。 当页面包含交互式AEM Communities功能（如评论、审核、论坛、博客或QnA）时，成员（在网站访客中签名）在发布实例上的交互会导致在发布环境中输入用户生成的内容(UGC)。
 
-以前，此社区内容反向复制到创作实例，并从创作复制到发布实例。 使用反向和正向复制保持AEM实例之间的一致性存在问题。
+以前，此社区内容反向复制到创作实例，并从创作复制到发布实例。 在使用反向和正向复制来维护AEM实例之间的一致性时出现问题。
 
-从AEM Communities 6.1开始，通过为UGC使用共享存储，消除了UGC复制的需要，如上所述。
+从AEM Communities 6.1开始，通过为UGC使用共享存储（如上所述），消除了UGC复制的需要。
 
 在复制站点内容时，从不复制UGC。
 
@@ -134,7 +130,7 @@ JSRP：
 
 社区感兴趣的还有 [*用户*， *用户组*、和 *用户配置文件*](/help/communities/users.md). 当拓扑为时，在发布环境中创建和更新此用户相关数据时，需要使其可用于其他发布实例 [发布场](/help/sites-deploying/recommended-deploys.md#tarmk-farm).
 
-从AEM Communities 6.1开始，使用Sling分发同步用户相关数据，而不是使用复制。 有关详细信息，请访问 [用户同步](/help/communities/sync.md).
+从AEM Communities 6.1开始，使用Sling分发而不是复制来同步用户相关数据。 有关详细信息，请访问 [用户同步](/help/communities/sync.md).
 
 ### 升级到AEM Communities 6.5 {#upgrading-to-aem-communities}
 

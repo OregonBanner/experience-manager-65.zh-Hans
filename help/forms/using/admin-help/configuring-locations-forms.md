@@ -1,17 +1,15 @@
 ---
 title: 为Forms配置位置
 description: 了解如何配置AEM表单的位置。 可以指定属性的文件位置、表单的位置、种子PDF文件和高速缓存位置。
-uuid: ba35888b-492c-4678-890b-160b53e7d659
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_forms
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 3d2b7cfb-228c-4cc2-8fcd-d500f0010010
 exl-id: 0d9eb7fe-28a6-444e-957d-023687158c61
-source-git-commit: e2a3470784beb04c2179958ac6cb98861acfaa71
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '822'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -21,7 +19,7 @@ ht-degree: 1%
 
 1. 在管理控制台中，单击服务> Forms。
 1. 在“位置”下，指定相应的选项。 这些选项如下所述。
-1. 单击保存。
+1. 单击“保存”。
 
 ## 位置设置 {#locations-settings}
 

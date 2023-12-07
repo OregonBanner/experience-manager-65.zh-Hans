@@ -1,18 +1,14 @@
 ---
 title: 新渲染和提交服务
-seo-title: New render and submit service
 description: 在Workbench中定义渲染和提交服务，以根据从中访问XDP的设备将XDP表单渲染为HTML或PDF。
-seo-description: Define render and submit services in Workbench to render XDP form as HTML or PDF depending on the device it is accessed from.
-uuid: 7f8348a1-753c-4dab-87d5-4a4a301198dd
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
-discoiquuid: 6a32d240-c6a6-4937-a31f-7a5ec3c60b1f
 docset: aem65
 exl-id: 46de0101-9607-4429-84c3-7c1f34d2da27
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '901'
+source-wordcount: '891'
 ht-degree: 0%
 
 ---
@@ -65,11 +61,11 @@ public Map<String, Object> renderHTMLForm (TaskContext taskContext, String profi
 
 呈现HTML的新进程与每个呈现进程一样，具有以下I/O参数 — 
 
-输入 - `taskContext`
+输入 —  `taskContext`
 
-输出 - `runtimeMap`
+输出 —  `runtimeMap`
 
-输出 - `outFormDoc`
+输出 —  `outFormDoc`
 
 此方法可模拟以下对象的精确行为： `renderHTMLForm` NewHTMLFormsService的API。 它调用 `generateFormURL` 用于获取表单HTML演绎版URL的API。 然后，它使用以下一个或多个键值填充runtimeMap：
 
@@ -81,11 +77,11 @@ newHTMLFormURL =调用后返回的URL `generateFormURL` API。
 
 提交新HTML表单的此流程适用于以下I/O参数 — 
 
-输入 - `taskContext`
+输入 —  `taskContext`
 
-输出 - `runtimeMap`
+输出 —  `runtimeMap`
 
-输出 - `outputDocument`
+输出 —  `outputDocument`
 
 该流程会设置 `outputDocument`到 `inputDocument`检索自 `taskContext`.
 

@@ -1,19 +1,15 @@
 ---
 title: 在We.Retail中尝试体验片段
-seo-title: Trying out Experience Fragments in We.Retail
 description: 了解如何使用We.Retail在Adobe Experience Manager中试用体验片段。
-seo-description: Trying out Experience Fragments in We.Retail
-uuid: 43a6df77-9dd3-4316-b749-0ef059370f7d
 contentOwner: AEM Docs
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
-discoiquuid: fe44a941-a09b-4421-b766-1d433291f2cc
 exl-id: e17ff611-122a-4d17-97af-071d0234dd16
-source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '242'
-ht-degree: 25%
+ht-degree: 22%
 
 ---
 
@@ -38,7 +34,7 @@ An [体验片段](/help/sites-authoring/experience-fragments.md) 是一个或多
 
 ## 在We.Retail中创建体验片段的位置 {#where-to-create-experience-fragments-in-we-retail}
 
-从全局导航中选择&#x200B;**体验片段**。您在此处配置， [创建](/help/sites-authoring/experience-fragments.md#creating-an-experience-fragment) 和 [编辑](/help/sites-authoring/experience-fragments.md#editing-your-experience-fragment) 您的体验片段和任何相关 [变体](/help/sites-authoring/experience-fragments.md#creating-an-experience-fragment-variation).
+选择 **体验片段** 从全局导航中。 您在此处配置， [创建](/help/sites-authoring/experience-fragments.md#creating-an-experience-fragment) 和 [编辑](/help/sites-authoring/experience-fragments.md#editing-your-experience-fragment) 您的体验片段和任何相关 [变体](/help/sites-authoring/experience-fragments.md#creating-an-experience-fragment-variation).
 
 ## 在We.Retail中的何处使用体验片段 {#where-to-use-experience-fragments-in-we-retail}
 

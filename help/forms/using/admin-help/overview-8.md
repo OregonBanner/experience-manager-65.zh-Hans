@@ -1,25 +1,21 @@
 ---
 title: 输出服务概述
-seo-title: Overview of output service
-description: 通过“输出”，可将XML表单数据与在Designer中创建的表单设计合并，以创建各种格式的文档输出流。
-seo-description: Output lets you merge XML form data with a form design created in Designer to create a document output stream in various formats.
-uuid: 7890b0a6-bae5-4ad5-ae41-503b988ba3da
+description: 输出允许您将XML表单数据与在Designer中创建的表单设计合并，以创建各种格式的文档输出流。
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_output
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 5a96f5ea-6fe3-44b1-b314-14097b9e9c01
 exl-id: e99b72d0-fbd5-4150-a225-1a91ad4c5867
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '265'
+source-wordcount: '260'
 ht-degree: 0%
 
 ---
 
 # 输出服务概述 {#overview-of-output-service}
 
-通过“输出”，可将XML表单数据与在Designer中创建的表单设计合并，以创建各种格式的文档输出流。 输出流可以发送到网络打印机、本地打印机或磁盘文件
+输出允许您将XML表单数据与在Designer中创建的表单设计合并，以创建各种格式的文档输出流。 输出流可以发送到网络打印机、本地打印机或磁盘文件
 
 可以使用管理控制台中的“输出”页管理Output服务。 如果未通过AEM Forms API指定等效设置，则在运行时将使用您配置的设置。 通过AEM Forms SDK完成的配置将覆盖使用管理控制台配置的设置。
 
@@ -28,11 +24,11 @@ ht-degree: 0%
 在管理控制台的“输出”页面上，可以执行多项任务：
 
 * 指定国际化的字符集。 (请参阅 [更改字符集](/help/forms/using/admin-help/change-character-set.md#change-the-character-set).)
-* 指定URL、URI、XCI和文件位置的绝对和相对路径。 (请参阅 [指定输出的文件位置](/help/forms/using/admin-help/specify-file-locations-output.md#specify-file-locations-for-output).)
+* 指定URL、URI、XCI和文件位置的绝对路径和相对路径。 (请参阅 [指定输出的文件位置](/help/forms/using/admin-help/specify-file-locations-output.md#specify-file-locations-for-output).)
 * 配置缓存大小和策略。 (请参阅 [指定高速缓存模式](/help/forms/using/admin-help/configuring-caching-output.md#specifying-the-cache-mode) 和 [配置缓存设置](/help/forms/using/admin-help/configuring-caching-output.md#configuring-cache-settings).)
 * 使字体在应用程序服务器上可用。 (请参阅 [使字体可用](/help/forms/using/admin-help/make-fonts-available.md#make-fonts-available).)
 * 指定要嵌入的字体。 (请参阅 [指定要嵌入的字体](/help/forms/using/admin-help/specify-fonts-embed.md#specify-fonts-to-embed).)
-* 指定XCI配置选项 (请参阅 [指定XCI配置](/help/forms/using/admin-help/specify-xci-configuration-options.md#specify-xci-configuration-options).)
+* 指定XCI配置选项。 (请参阅 [指定XCI配置选项](/help/forms/using/admin-help/specify-xci-configuration-options.md#specify-xci-configuration-options).)
 * 指定安全设置。 (请参阅 [指定安全设置](/help/forms/using/admin-help/specify-security-settings.md#specify-security-settings).)
 
-更改设置后，单击“保存”以将其应用到“输出”。 您不需要重新启动服务器以使更改生效，但在配置缓存设置时，您可能需要重新启动输出服务。
+更改设置后，单击“保存”以将其应用于“输出”。 您不需要重新启动服务器以使更改生效，但在配置缓存设置时，您可能需要重新启动输出服务。

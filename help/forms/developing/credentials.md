@@ -1,19 +1,15 @@
 ---
 title: 使用凭据
-seo-title: Working with Credentials
 description: 使用信任管理器API和Java API将凭据导入AEM Forms。 此外，了解如何使用信任管理器API和Java API删除凭据。
-seo-description: Import credentials into AEM Forms using the Trust Manager API and Java API. In addition, learn how to delete credentials using the Trust Manager API and Java API.
-uuid: b794428f-49bf-4a91-bc5f-d855881f4f38
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
-discoiquuid: bc06d9bd-af6c-47b1-b46f-aab990ef5816
 role: Developer
 exl-id: 1101c85a-6a90-471d-a7be-8d25765e84bf
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '1084'
+source-wordcount: '1077'
 ht-degree: 0%
 
 ---

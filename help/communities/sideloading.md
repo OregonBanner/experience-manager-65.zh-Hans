@@ -1,16 +1,12 @@
 ---
 title: 组件侧载
-seo-title: Component Sideloading
-description: 当网页设计为简单的单页面应用程序时，Communities组件旁载会非常有用，该应用程序会根据网站访客选择的内容动态更改显示的内容
-seo-description: Communities component sideloading is useful when a web page is designed as a simple, single page app that dynamically alters what is displayed depending on what is selected by the site visitor
-uuid: 8c9a5fde-26a3-4610-bc14-f8b665059015
+description: 当网页设计为一个简单的单页面应用程序时，Communities组件旁加载会非常有用，该应用程序会根据网站访客选择的内容动态更改显示的内容
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: a9cb5294-e5ab-445b-b7c2-ffeecda91c50
 exl-id: 960e132c-b370-43d1-bd8f-e7d0ded7c0b3
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '396'
 ht-degree: 0%
@@ -21,11 +17,11 @@ ht-degree: 0%
 
 ## 概述 {#overview}
 
-当网页设计为简单的单页面应用程序时，Communities组件旁载会非常有用，该应用程序会根据网站访客选择的内容动态更改显示的内容。
+当网页设计为一个简单的单页面应用程序时，Communities组件旁加载会非常有用，该应用程序会根据网站访客选择的内容来动态更改显示的内容。
 
-当Communities组件在页面模板中不存在，而是根据网站访客的选择动态添加时，即可实现此目的。
+当页面模板中不存在Communities组件，而是根据网站访客的选择动态添加组件时，即可实现此目的。
 
-由于社交组件框架(SCF)存在轻量级，因此只注册在初始页面加载时存在的SCF组件。 对于要在页面加载后注册的动态添加SCF组件，必须调用SCF来“侧加载”该组件。
+由于社交组件框架(SCF)具有轻量级存在，因此仅注册初始页面加载时存在的SCF组件。 对于要在页面加载后注册的动态添加的SCF组件，必须调用SCF以“侧载”该组件。
 
 当页面设计为侧载Communities组件时，可以缓存整个页面。
 
@@ -46,21 +42,21 @@ ht-degree: 0%
 
 ## 将组件动态添加到DOM {#dynamically-add-component-to-dom}
 
-无论组件是动态包含还是动态加载，都必须首先将其添加到DOM中。
+无论组件是动态包含还是动态加载，都必须首先将其添加到DOM。
 
-添加SCF组件时，最常用的标记是DIV标记，但也可以使用其他标记。 由于SCF仅在最初加载页面时检查DOM，因此在显式调用SCF之前，不会注意到对DOM的此添加。
+添加SCF组件时，最常用的标记是DIV标记，但也可以使用其他标记。 由于SCF仅在最初加载页面时检查DOM，因此，在显式调用SCF之前，不会注意到对DOM的此添加。
 
-无论使用什么标记，元素必须至少符合常规SCF根元素模式，方法是包含这两个属性：
+无论使用什么标记，至少元素都必须通过包含这两个属性来符合正常的SCF根元素模式：
 
 * **data-component-id**
 
-   所添加组件的有效路径。
+  所添加组件的有效路径。
 
 * **data-scf-component**
 
-   组件的resourceType。
+  组件的resourceType。
 
-以下是添加的comments组件示例：
+以下是已添加注释组件的示例：
 
 ```xml
 <div
@@ -83,10 +79,10 @@ ht-degree: 0%
 
 ### 动态加载 {#dynamic-loading}
 
-动态加载提供对SCF组件加载的控制。
+动态加载提供对SCF组件的加载控制。
 
-可以使用以下JavaScript方法指定要加载的特定SCF组件，而不是引导在DOM中找到的所有SCF组件：
+可以使用此JavaScript方法指定要加载的特定SCF组件，而不是引导在DOM中找到的所有SCF组件：
 
 `SCF.addComponent(document.getElementById(*someId*));`
 
-位置 `someId` 是的值 `data-component-id` 属性。
+位置 `someId` 的值为 `data-component-id` 属性。

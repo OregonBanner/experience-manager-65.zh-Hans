@@ -1,18 +1,16 @@
 ---
 title: 数据保护和数据隐私条例 — Adobe Experience Manager准备工作
 description: 了解Adobe Experience Manager对各种数据保护和数据隐私条例的支持。 其中包括欧盟《通用数据保护条例》(GDPR)、《加州消费者隐私法案》以及在实施新的AEM项目时如何实现合规性。
-uuid: 9b0b8101-929c-4232-8c6e-1f9b8b2e0aa2
 contentOwner: AEM Docs
 topic-tags: introduction, grdp
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MANAGING
-discoiquuid: 0bcd7ac4-3071-466d-bd11-701f35ccf5bd
 docset: aem65
 exl-id: 46c1ca14-78f6-4b33-9fdf-1b90a9875f66
-source-git-commit: 10227bcfcfd5a9b0f126fee74dce6ec7842f5e95
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '907'
-ht-degree: 39%
+source-wordcount: '890'
+ht-degree: 37%
 
 ---
 
@@ -110,8 +108,7 @@ Adobe提供了用于处理与访问、删除和选择退出Adobe Experience Mana
 
 ## AEM与Adobe Target和Adobe Analytics的集成 {#aem-integration-with-adobe-target-adobe-analytics}
 
-这些Adobe Experience Manager集成与支持数据保护和隐私（例如，GDPR或CCPA）的服务相集成。 Adobe Target 或 Adobe Analytics 中的任何个人数据都不会存储在与集成相关的 AEM 中。
-
+这些Adobe Experience Manager集成与支持数据保护和隐私（例如，GDPR或CCPA）的服务相集成。 Adobe Target或Adobe Analytics中的任何个人数据都不会存储在与集成相关的AEM中。
 
 有关更多信息，请参阅以下内容：
 
@@ -129,7 +126,7 @@ AEM Communities赋予数据主体数据可移植性、访问权和被遗忘权 [
 
 AEM Forms包括捕获、处理和存储数据以编排业务流程和完成数字交易的组件和工作流。 不同的组件使用不同的数据存储，并允许与自定义数据存储集成。 以下文档介绍了访问和处理用户数据的过程和准则，以支持组件的数据保护和隐私（例如，GDPR或CCPA）工作流。
 
-* [Forms Portal](/help/forms/using/forms-portal-handling-user-data.md)
+* [Forms门户](/help/forms/using/forms-portal-handling-user-data.md)
 * [通信管理](/help/forms/using/correspondence-management-handling-user-data.md)
 * [与Adobe Sign集成](/help/forms/using/integration-adobe-sign-handling-user-data.md)
 * [OSGi上以Forms为中心的工作流](/help/forms/using/forms-workflow-osgi-handling-user-data.md)

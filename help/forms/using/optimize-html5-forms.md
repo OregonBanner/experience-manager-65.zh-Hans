@@ -1,25 +1,21 @@
 ---
 title: 优化HTML5表单
-seo-title: Optimizing HTML5 forms
-description: 可以优化HTML5表单的输出大小。
-seo-description: You can optimize the output size of the HTML5 forms.
-uuid: 959f0b6a-9e4d-478a-afa8-4c39011fdf7a
+description: 您可以优化HTML5表单的输出大小。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
-discoiquuid: bdb9edc2-6a37-4d3f-97d5-0fc5664316be
 feature: Mobile Forms
 exl-id: 14309ebd-8d00-4ca5-b4ab-44d80d97d066
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '283'
+source-wordcount: '285'
 ht-degree: 0%
 
 ---
 
 # 优化HTML5表单 {#optimizing-html-forms}
 
-HTML5表单以HTML5格式呈现表单。 根据窗体大小和窗体中的图像等因素，生成的输出可能会很大。 为了优化数据传输，建议的方法是使用为HTML提供服务的Web服务器来压缩请求响应。 此方法可减少响应大小、网络流量以及在服务器和客户端计算机之间流式传输数据所需的时间。
+HTML5表单以HTML5格式呈现表单。 根据窗体大小和窗体中的图像等因素，生成的输出可能会很大。 为优化数据传输，建议使用提供请求的Web服务器压缩HTML响应。 此方法可减少响应大小、网络流量以及在服务器和客户端计算机之间流式传输数据所需的时间。
 
 本文介绍了使用JBoss为Apache Web Server 2.0 32位启用压缩所需的步骤。
 
@@ -35,7 +31,7 @@ HTML5表单以HTML5格式呈现表单。 根据窗体大小和窗体中的图像
 
 Apache可以使用HTTP或AJP协议与JBoss通信。
 
-1. 取消注释中的以下模块配置 *APACHE_HOME/conf/httpd.conf* 文件。
+1. 在中取消注释以下模块配置 *APACHE_HOME/conf/httpd.conf* 文件。
 
    ```java
    LoadModule proxy_balancer_module modules/mod_proxy.so
@@ -58,12 +54,11 @@ Apache可以使用HTTP或AJP协议与JBoss通信。
 
    >[!NOTE]
    >
-   >使用代理时，需要以下配置更改：
+   >使用代理时，需要进行以下配置更改：
    >
    >* 访问： *https://&lt;server>：&lt;port>/system/console/configMgr*
-   * 编辑Apache Sling引用筛选器的配置
+   * 编辑Apache Sling引用过滤器配置
    * 在允许主机中，添加代理服务器的条目
-
 
 1. 启用压缩。
 

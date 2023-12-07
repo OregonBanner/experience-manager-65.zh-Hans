@@ -1,17 +1,15 @@
 ---
 title: 帮助管理员启动并运行的最佳实践
 description: 查找由Adobe工程和咨询团队编译的最佳实践，帮助管理员启动和运行。
-uuid: 862d4fcf-ca61-4228-9344-b95a49b59b32
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
-discoiquuid: 8f6468a0-7721-454f-9334-c449968b8fe7
 exl-id: 576d87c8-cc96-45a0-b3cf-defb440babbb
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '529'
-ht-degree: 7%
+source-wordcount: '530'
+ht-degree: 6%
 
 ---
 

@@ -1,38 +1,34 @@
 ---
 title: AEM Forms中的占位符文本
-seo-title: Placeholder text in AEM Forms
 description: 占位符文本旨在帮助用户在控件没有值时输入数据。 它可以是示例值，也可以是预期格式的简短说明。
-seo-description: Placeholder text is intended to aid the user with data entry when the control has no value. It could be a sample value or a brief description of the expected format.
-uuid: 69f80722-93db-4932-9016-4b530e183d4e
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
-discoiquuid: f9ff2cc5-3f0a-4b2f-a206-2fe0985646ea
 docset: aem65
 feature: Adaptive Forms
 exl-id: 6b6e27b5-8b4e-489c-9e72-4d256692c1ca
-source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '272'
-ht-degree: 3%
+source-wordcount: '267'
+ht-degree: 19%
 
 ---
 
 # AEM Forms中的占位符文本 {#placeholder-text-in-aem-forms}
 
-<span class="preview"> Adobe建议使用现代化的、可扩展的数据捕获 [核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) 对象 [创建新的自适应Forms](/help/forms/using/create-an-adaptive-form-core-components.md) 或 [将自适应Forms添加到AEM Sites页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). 这些组件在创建自适应Forms方面实现了重大进步，确保了令人印象深刻的用户体验。 本文介绍了使用基础组件创作自适应Forms的旧方法。 </span>
+<span class="preview">Adobe 建议使用现代、可扩展的数据捕获[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html)，以[创建新的自适应表单](/help/forms/using/create-an-adaptive-form-core-components.md)或[将自适应表单添加到 AEM Sites 页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。这些组件代表有关创建自适应表单的重大改进，确保实现令人印象深刻的用户体验。本文介绍了使用基础组件创作自适应表单的旧方法。</span>
 
-占位符文本表示单词或短语。 它旨在帮助用户在控件没有值时输入数据。 占位符文本可以是示例值，也可以是预期格式的简短描述。 占位符文本在用户输入值之前显示，当用户输入或选择值时会被删除。
+占位符文本表示一个单词或短语。 它旨在帮助用户在控件没有值时输入数据。 占位符文本可以是示例值，也可以是预期格式的简短描述。 占位符文本在用户输入值之前显示，当用户输入或选择值时会被删除。
 
 >[!NOTE]
 >
 >占位符文本（如果已指定）必须具有不包含新行字符的值。
 
-![带有和不带有占位符文本的日期组件](assets/dat-picker-place-holder-text.png)
+![带和不带占位符文本的日期组件](assets/dat-picker-place-holder-text.png)
 
-**答：** 带有占位符文本的日期组件 **B.** 没有占位符文本的日期组件
+**答：** 带有占位符文本的日期组件 **B.** 不带占位符文本的日期组件
 
-AEM Forms支持“密码”框、“日期选取器”、“数字”框和文本框字段的占位符文本。\
-本机HTML5日期小部件不支持占位符文本。 要指定占位符文本，请执行以下操作：
+AEM Forms支持密码框、日期选取器、数字框和文本框字段的占位符文本。\
+本地HTML5日期小部件不支持占位符文本。 要指定占位符文本，请执行以下操作：
 
 1. 右键单击支持占位符文本的组件，然后单击 **编辑**. 将出现“编辑组件”对话框。
 

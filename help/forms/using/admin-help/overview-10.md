@@ -1,16 +1,12 @@
 ---
 title: 工作区概述
-seo-title: Overview of Workspace
 description: 工作区允许用户启动、参与和跟踪业务流程。 让我们进一步了解工作区。
-seo-description: The workspace lets users start, participate in, and track business processes. Let us learn more about the workspace.
-uuid: 25374641-a70b-485a-8d34-5d7b156c08e8
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_workspace
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 2d6f90bb-62f7-4805-9250-1b913fe7d2b3
 exl-id: da1224e4-566a-402f-9d8b-27fda5f3101b
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '124'
 ht-degree: 0%

@@ -1,13 +1,12 @@
 ---
 title: Adobe Experience Manager Mobile - GDPR就绪
 description: 了解Adobe Experience Manager如何准备好帮助您履行GDPR合规义务。
-uuid: 817c434f-4b78-40f7-99d6-6efafdedb77e
 contentOwner: trushton
 exl-id: d06e675f-fb61-47da-85de-e0b50dd44153
-source-git-commit: 06a6d4e0ba2aeaefcfb238233dd98e8bbd6731da
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '694'
-ht-degree: 1%
+source-wordcount: '683'
+ht-degree: 0%
 
 ---
 
@@ -37,7 +36,7 @@ Adobe的数字发布产品(在AEM Mobile之前)支持Adobe的GDPR准备工作。
 
 查找客户数据需要以下ID。 收到的任何子集意味着其他ID不适用于此用户。
 
-强制:
+必需：
 
 * 客户的合同ID： *dpsc-contractId*
 
@@ -67,7 +66,7 @@ Adobe具有最少的信息，可直接关联回特定用户。 它使用随机�
 
 **Analytics会跟踪哪些个人数据？**
 
-无。虽然会跟踪数据，但跟踪的数据属于应用程序级别（而非个人数据）。 这包括启动次数、崩溃次数、关闭次数、活动、购买次数或作品集叠加等事件。 不会跟踪地理位置、名称、设备ID或IP地址。
+无。 虽然会跟踪数据，但跟踪的数据属于应用程序级别（而非个人数据）。 这包括启动次数、崩溃次数、关闭次数、活动、购买次数或作品集叠加等事件。 不会跟踪地理位置、名称、设备ID或IP地址。
 
 **最终用户提供了他们的信息，但未找到任何内容。 为什么不呢？**
 

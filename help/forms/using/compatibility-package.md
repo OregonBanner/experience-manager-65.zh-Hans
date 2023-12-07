@@ -1,20 +1,16 @@
 ---
 title: 兼容包
-seo-title: Compatibility Package
 description: 通过在AEM Forms 6.5上安装兼容包，您可以使用AEM Forms 6.4及更早版本中的通信管理资源以及已弃用的自适应表单模板和页面
-seo-description: Installing the Compatibility package on AEM Forms 6.4 lets you use the Correspondence Management assets from AEM Forms 6.4 and deprecated adaptive forms templates and pages
-uuid: b49633d6-2cb3-422c-a314-25f3b8a37b7f
 contentOwner: gtalwar
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: correspondence-management, installing
 geptopics: SG_AEMFORMS/categories/jee
-discoiquuid: 73e8ccc6-f857-493e-b6e3-878f93e2a356
 docset: aem65
 role: Admin
 exl-id: bb16017c-a1bf-40d8-a78d-827c05b7ee2e
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '314'
+source-wordcount: '321'
 ht-degree: 2%
 
 ---

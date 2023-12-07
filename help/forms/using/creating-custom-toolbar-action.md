@@ -1,16 +1,12 @@
 ---
 title: 创建自定义工具栏操作
-seo-title: Creating a custom toolbar action
 description: 表单开发人员可以在AEM Forms中为自适应表单创建自定义工具栏操作。 使用来自作者的自定义操作，可为最终用户提供更多工作流和选项。
-seo-description: Form developers can create custom toolbar actions for adaptive forms in AEM Forms. Using custom actions form authors can provide more workflows and options to their end users.
-uuid: cd785cfb-e1bb-4158-be9b-d99e04eccc02
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: customization
-discoiquuid: 4beca23f-dbb0-4e56-8047-93e4f1775418
 docset: aem65
 exl-id: 17f7f0e1-09d8-45cd-a4f6-0846bdb079b6
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '496'
 ht-degree: 0%
@@ -29,26 +25,26 @@ ht-degree: 0%
 
 ![默认工具栏操作](assets/default_toolbar_actions.png)
 
-除了默认提供的一组操作外，您还可以在工具栏中创建自定义操作。 例如，您可以添加一项操作，以便用户在提交表单之前查看所有自适应表单字段。
+除了默认提供的一组操作外，您还可以在工具栏中创建自定义操作。 例如，您可以添加操作以使用户在提交表单之前查看所有自适应表单字段。
 
 ## 在自适应表单中创建自定义操作的步骤 {#steps}
 
-为了说明自定义工具栏操作的创建，以下步骤指导您创建一个按钮，以便最终用户在提交填写的表单之前查看所有自适应表单字段。
+为了说明自定义工具栏操作的创建，以下步骤将指导您创建按钮，以便最终用户在提交填写的表单之前查看所有自适应表单字段。
 
 1. 自适应表单支持的所有默认操作都存在于 `/libs/fd/af/components/actions` 文件夹。 在CRXDE中，复制 `fileattachmentlisting` 节点来源 `/libs/fd/af/components/actions/fileattachmentlisting` 到 `/apps/customaction`.
 
-1. 将节点复制到 `apps/customaction` 文件夹，将节点名称重命名为 `reviewbeforesubmit`. 此外，更改 `jcr:title` 和 `jcr:description` 节点的属性。
+1. 将节点复制到之后 `apps/customaction` 文件夹，将节点名称重命名为 `reviewbeforesubmit`. 此外，更改 `jcr:title` 和 `jcr:description` 节点的属性。
 
-   此 `jcr:title` 属性包含在工具栏对话框中显示的操作的名称。 此 `jcr:description` 属性包含当用户将指针悬停在操作上时显示的更多信息。
+   此 `jcr:title` 属性包含工具栏对话框中显示的操作的名称。 此 `jcr:description` 属性包含当用户将鼠标指针悬停在操作上时显示的更多信息。
 
    ![用于自定义工具栏的节点层次结构](assets/action3.png)
 
 1. 选择 `cq:template` 中的节点 `reviewbeforesubmit` 节点。 确保 `guideNodeClass` 属性为 `guideButton` 和更改 `jcr:title` 产之权益。
 1. 在中更改type属性 `cq:Template` 节点。 对于当前示例，请将type属性更改为button。
 
-   类型值将作为组件生成的HTML中的CSS类添加。 用户可以使用该CSS类来设置其操作的样式。 为按钮、提交、重置和保存类型值提供了移动设备和桌面设备的默认样式。
+   类型值在为该组件生成的HTML中添加为CSS类。 用户可以使用该CSS类来设置其操作的样式。 为按钮、提交、重置和保存类型值提供了移动设备和桌面设备的默认样式。
 
-1. 从自适应表单编辑工具栏对话框中选择自定义操作。 “审阅”按钮显示在面板的工具栏中。
+1. 从自适应表单编辑工具栏对话框中选择自定义操作。 面板的工具栏中将显示一个“审阅”按钮。
 
    ![自定义操作在工具栏中可用](assets/custom_action_available_in_toolbar.png) ![显示自定义创建的工具栏操作](assets/action7.png)
 

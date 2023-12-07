@@ -1,20 +1,16 @@
 ---
 title: 自定义控制台
-seo-title: Customizing the Consoles
 description: AEM提供了多种机制，使您能够自定义创作实例的控制台
-seo-description: AEM provides various mechanisms to enable you to customize the consoles of your authoring instance
-uuid: 8ecce9ff-5907-41e1-af3b-a8646352d633
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
-discoiquuid: 61a4e196-bd53-4ef0-816b-c14401462457
 docset: aem65
 exl-id: 6e67f2b3-78b9-45f2-b496-61776b9fd9cc
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '670'
-ht-degree: 24%
+source-wordcount: '646'
+ht-degree: 22%
 
 ---
 
@@ -93,7 +89,7 @@ AEM提供了各种机制让您能够自定义控制台(以及 [页面创作功�
 
 ### 将新操作添加到工具栏 {#add-new-action-to-the-toolbar}
 
-1. 您可以构建自己的组件并包含用于自定义操作的相应客户端库。例如， **提升至Twitter** 操作位置：
+1. 您可以构建自己的组件，并为自定义操作包含相应的客户端库。 例如， **提升至Twitter** 操作位置：
 
    `/apps/wcm/core/clientlibs/sites/js/twitter.js`
 
@@ -150,7 +146,7 @@ AEM提供了各种机制让您能够自定义控制台(以及 [页面创作功�
 1. 可选：
 
    * 如果要插入其他数据，则需要编写 [PageInforProvider](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/PageInfoProvider.html) 带有
-     `pageInfoProviderType` 属性.
+     `pageInfoProviderType` 属性。
 
    例如，请参阅下面的附加类/捆绑包（来自GitHub）。
 

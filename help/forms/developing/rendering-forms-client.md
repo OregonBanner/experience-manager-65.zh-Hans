@@ -1,20 +1,16 @@
 ---
 title: 在客户端渲染Forms
-seo-title: Rendering Forms at the Client
 description: 通过使用Forms或Adobe Reader的客户端渲染功能，优化PDF内容的投放，并提高Acrobat服务处理网络负载的能力
-seo-description: Optimize the delivery of PDF content and improve the Forms service’s ability to handle network load by using the client-side rendering capability of Acrobat or Adobe Reader
-uuid: 09bcc23d-28b0-473a-87f1-bc17e87620f4
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/rendering_forms
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
-discoiquuid: 08d36e9f-cafc-478e-9781-8fc29ac6262e
 role: Developer
 exl-id: e485980d-f200-46b7-9284-c9996003aa47
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '1694'
+source-wordcount: '1690'
 ht-degree: 0%
 
 ---
@@ -27,7 +23,7 @@ ht-degree: 0%
 
 您可以优化PDF内容的投放，并通过使用Forms或Acrobat的客户端渲染功能来提高Adobe Reader服务处理网络负载的能力。 此过程称为在客户端渲染表单。 要在客户端呈现表单，客户端设备（通常为Web浏览器）必须使用Acrobat 7.0或Adobe Reader 7.0或更高版本。
 
-由于服务器端脚本执行而对表单进行的更改不会反映在客户端渲染的表单中，除非根子表单包含 `restoreState` 属性设置为 `auto`. 有关此属性的详细信息，请参阅 [Forms Designer。](https://www.adobe.com/go/learn_aemforms_designer_63_cn)
+由于服务器端脚本执行而对表单进行的更改不会反映在客户端渲染的表单中，除非根子表单包含 `restoreState` 属性设置为 `auto`. 有关此属性的详细信息，请参阅 [Forms Designer。](https://www.adobe.com/go/learn_aemforms_designer_63)
 
 >[!NOTE]
 >

@@ -1,24 +1,22 @@
 ---
 title: 创作 — 环境和工具
 description: “网站”控制台允许您管理和导航您的网站。 使用两个窗格，可以扩展网站的结构并对所需元素执行操作。
-uuid: 0a9ce725-042a-4697-81fe-ac86cbab0398
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
-discoiquuid: 67625e62-7035-4eb5-8dd5-6840d775a547
 docset: aem65
 exl-id: 5d7b6b2e-d1d8-4efe-b9ff-c9542b4e67d7
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '898'
-ht-degree: 6%
+source-wordcount: '892'
+ht-degree: 5%
 
 ---
 
 # 创作 — 环境和工具 {#authoring-the-environment-and-tools}
 
-AEM 的创作环境提供了各种可用于组织和编辑内容的机制. 可以从各种控制台和页面编辑器访问提供的工具。
+AEM 的创作环境提供了各种可用于组织和编辑内容的机制。可以从各种控制台和页面编辑器访问提供的工具。
 
 ## 站点管理 {#site-administration}
 
@@ -174,7 +172,7 @@ AEM允许您查看哪些页面已链接到您当前处理的页面。
 
 其他 [可以在网站控制台中查看页面间关系](/help/sites-classic-ui-authoring/author-env-basic-handling.md#page-information-on-the-websites-console).
 
-## 审查日志 {#audit-log}
+## 审核日志 {#audit-log}
 
 此 **审核日志** 可从以下位置访问： **信息** 替他搭便车。 其中列出了在当前页面上执行的最新操作；例如：
 
@@ -206,7 +204,7 @@ Sidekick底部的一行图标用于切换处理页面的模式：
 >还可以使用其他选项：
 >
 >* [基架](/help/sites-classic-ui-authoring/classic-feature-scaffolding.md)
->* [ClientContext](/help/sites-administering/client-context.md)
+>* [客户端上下文](/help/sites-administering/client-context.md)
 >* 网站 — 打开网站控制台。
 >* 重新加载 — 将刷新页面。
 

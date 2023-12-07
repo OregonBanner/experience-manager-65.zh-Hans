@@ -1,19 +1,15 @@
 ---
 title: 自定义欢迎控制台（经典UI）
-seo-title: Customizing the Welcome Console (Classic UI)
-description: “欢迎”控制台提供了指向AEM中的各种控制台和功能的链接列表
-seo-description: The Welcome console provides a list of links to the various consoles and functionality within AEM
-uuid: 4ef20cef-2d7a-417d-b36b-ed4fa56cd511
+description: “欢迎”控制台提供了指向AEM中各种控制台和功能的链接列表
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
-discoiquuid: 2e408acb-3802-4837-8619-688cfc3abfa7
 exl-id: 9e171b62-8efb-4143-a202-ba6555658d4b
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '464'
-ht-degree: 8%
+source-wordcount: '449'
+ht-degree: 6%
 
 ---
 
@@ -23,13 +19,13 @@ ht-degree: 8%
 >
 >本页介绍经典UI。
 >
->参见 [自定义控制台](/help/sites-developing/customizing-consoles-touch.md) 有关标准的触屏UI的详细信息。
+>请参阅 [自定义控制台](/help/sites-developing/customizing-consoles-touch.md) 有关标准的触屏UI的详细信息。
 
 “欢迎”控制台提供了指向AEM中各种控制台和功能的链接列表。
 
 ![cq_welcomescreen](assets/cq_welcomescreen.png)
 
-可以配置可见的链接。 这可以为特定用户和/或组定义。 要执行的操作取决于目标类型（这与其所在的控制台部分相关）：
+可以配置可见的链接。 这可以为特定用户和/或组定义。 要执行的操作取决于目标类型（这与它们所在的控制台部分相关）：
 
 * [主控制台](#links-in-main-console-left-pane)  — 主控制台（左窗格）中的链接
 * [资源、文档和参考、功能](#links-in-sidebar-right-pane)  — 侧栏（右窗格）中的链接
@@ -46,7 +42,7 @@ ht-degree: 8%
 
 * **网站：** `/libs/wcm/core/content/siteadmin`
 
-* **数字资产:** `/libs/wcm/core/content/damadmin`
+* **数字资产：** `/libs/wcm/core/content/damadmin`
 
 * **社区：** `/libs/collab/core/content/admin`
 
@@ -54,7 +50,7 @@ ht-degree: 8%
 
 * **收件箱：** `/libs/cq/workflow/content/inbox`
 
-* **用户:** `/libs/cq/security/content/admin`
+* **用户：** `/libs/cq/security/content/admin`
 
 * **工具：** `/libs/wcm/core/content/misc`
 
@@ -62,9 +58,9 @@ ht-degree: 8%
 
 例如：
 
-* 要限制访问，请执行以下操作 **工具**，删除读取权限
+* 要限制访问 **工具**，删除读取权限
 
-   `/libs/wcm/core/content/misc`
+  `/libs/wcm/core/content/misc`
 
 请参阅 [安全部分](/help/sites-administering/security.md) 有关如何设置所需权限的更多信息。
 
@@ -72,11 +68,11 @@ ht-degree: 8%
 
 ![cq_welcomescreensidebar](assets/cq_welcomescreensidebar.png)
 
-这些链接基于 *和* 对以下路径下的节点的读取访问权限：
+这些链接基于以下项的存在 *和* 对以下路径下的节点的读取访问权限：
 
 `/libs/cq/core/content/welcome`
 
-缺省情况下提供三个部分（稍微间隔开）：
+默认情况下，提供了三个部分（稍微相距）：
 
 <table>
  <tbody>
@@ -101,7 +97,7 @@ ht-degree: 8%
    <td><code>/libs/cq/core/content/welcome/resources/replication</code></td>
   </tr>
   <tr>
-   <td> 报表</td>
+   <td> 报告</td>
    <td><code>/libs/cq/core/content/welcome/resources/reports</code></td>
   </tr>
   <tr>
@@ -153,7 +149,7 @@ ht-degree: 8%
    <td><code>/libs/cq/core/content/welcome/features/config</code></td>
   </tr>
   <tr>
-   <td> Web 控制台状态转储<br /> </td>
+   <td> Web控制台状态转储<br /> </td>
    <td><code>/libs/cq/core/content/welcome/features/statusdump</code></td>
   </tr>
  </tbody>
@@ -163,35 +159,35 @@ ht-degree: 8%
 
 可以通过删除对表示链接的节点的读取访问权限来对特定用户或组隐藏链接。
 
-* 资源 — 删除对以下项的访问：
+* 资源 — 移除对以下项的访问：
 
-   `/libs/cq/core/content/welcome/resources/<link-target>`
+  `/libs/cq/core/content/welcome/resources/<link-target>`
 
-* 文档 — 删除对以下项的访问权限：
+* 文档 — 移除对以下项的访问权限：
 
-   `/libs/cq/core/content/welcome/docs/<link-target>`
+  `/libs/cq/core/content/welcome/docs/<link-target>`
 
 * 功能 — 删除对以下项的访问：
 
-   `/libs/cq/core/content/welcome/features/<link-target>`
+  `/libs/cq/core/content/welcome/features/<link-target>`
 
 例如：
 
-* 要删除指向的链接，请执行以下操作 **报告**，删除读取权限
+* 要删除指向的链接，请执行以下操作 **报表**，删除读取权限
 
-   `/libs/cq/core/content/welcome/resources/reports`
+  `/libs/cq/core/content/welcome/resources/reports`
 
 * 要删除指向的链接，请执行以下操作 **包**，删除读取权限
 
-   `/libs/cq/core/content/welcome/features/packages`
+  `/libs/cq/core/content/welcome/features/packages`
 
 请参阅 [安全部分](/help/sites-administering/security.md) 有关如何设置所需权限的更多信息。
 
 ### 链接选择机制 {#link-selection-mechanism}
 
-In `/libs/cq/core/components/welcome/welcome.jsp` 使用方式为 [ConsoleUtil](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/ConsoleUtil.html)，对具有属性的节点执行查询：
+在 `/libs/cq/core/components/welcome/welcome.jsp` 使用属于 [ConsoleUtil](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/ConsoleUtil.html)，对具有属性的节点执行查询：
 
-* `jcr:mixinTypes` 值为: `cq:Console`
+* `jcr:mixinTypes` 的值是： `cq:Console`
 
 >[!NOTE]
 >
@@ -200,13 +196,12 @@ In `/libs/cq/core/components/welcome/welcome.jsp` 使用方式为 [ConsoleUtil](
 >* `select * from cq:Console`
 >
 
-
-当用户或组对具有mixin的节点没有读取权限时 `cq:Console`，该节点不会被 `ConsoleUtil` 搜索，因此它不会列在控制台上。
+当用户或组对具有mixin的节点没有读取权限时 `cq:Console`，则不会检索该节点 `ConsoleUtil` 搜索，因此它不会列在控制台上。
 
 ### 添加自定义项目 {#adding-a-custom-item}
 
-此 [链路选择机制](#link-selection-mechanism) 用于将您自己的自定义项目添加到链接列表。
+此 [链接选择机制](#link-selection-mechanism) 用于将您自己的自定义项添加到链接列表。
 
 通过添加 `cq:Console` mixin到您的小部件或资源。 这可以通过定义属性来完成：
 
-* `jcr:mixinTypes` 值为: `cq:Console`
+* `jcr:mixinTypes` 的值是： `cq:Console`

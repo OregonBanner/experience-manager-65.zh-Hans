@@ -1,16 +1,12 @@
 ---
 title: 为HTML5表单创建自定义配置文件
-seo-title: Creating a custom profile for HTML5 forms
 description: HTML5表单配置文件是Apache Sling中的资源节点。 它表示HTML5表单渲染服务的自定义版本。
-seo-description: A HTML5 forms profile is a resource node in Apache Sling. It represents a customized version of HTML5 forms Render service.
-uuid: b9938280-a92c-4dde-b465-04372db3ca8d
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
-discoiquuid: 9cd22244-9aa6-4b5f-96cf-c9cb3d6f9c8a
 feature: Mobile Forms
 exl-id: cf86c810-c466-4894-acc2-d4faf49754cc
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '656'
 ht-degree: 0%

@@ -1,14 +1,12 @@
 ---
 title: AEM工作流中的变量
 description: 创建一个变量，为该变量设置值，然后在OR拆分和转到AEM工作流步骤中使用它。
-uuid: cc62ff11-51d4-4db4-9c6d-5dc2caa1da52
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
-discoiquuid: bbb9936e-ecd2-44b3-b4ae-dd62a3160641
 docset: aem65
 exl-id: c8aeceec-860c-49ee-b681-d7107e52020d
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '1941'
 ht-degree: 0%

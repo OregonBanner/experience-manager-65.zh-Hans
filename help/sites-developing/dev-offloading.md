@@ -1,31 +1,27 @@
 ---
 title: 创建和使用卸载作业
-seo-title: Creating and Consuming Jobs for Offloading
-description: Apache Sling Discovery功能提供了一个Java API，使您能够创建JobManager作业和使用这些作业的JobConsumer服务
-seo-description: The Apache Sling Discovery feature provides a Java API that enables you to create JobManager jobs and JobConsumer services that consume them
-uuid: d6a5beb0-0618-4b61-9b52-570862eac920
+description: Apache Sling Discovery功能提供了一个Java API，使您能够创建JobManager作业和使用它们的JobConsumer服务
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
 content-type: reference
-discoiquuid: e7b6b9ee-d807-4eb0-8e96-75ca1e66a4e4
 exl-id: 4e6f452d-0251-46f3-ba29-1bd85cda73a6
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '392'
+source-wordcount: '393'
 ht-degree: 0%
 
 ---
 
 # 创建和使用卸载作业{#creating-and-consuming-jobs-for-offloading}
 
-Apache Sling Discovery功能提供了一个Java API，使您能够创建JobManager作业和使用这些作业的JobConsumer服务。
+Apache Sling Discovery功能提供了一个Java API，使您能够创建使用JobManager作业和作业使用者服务。
 
 有关创建卸载拓扑和配置主题消耗的信息，请参阅 [卸载作业](/help/sites-deploying/offloading.md).
 
 ## 处理作业负载 {#handling-job-payloads}
 
-卸载框架定义了两个用于标识作业有效负载的作业属性。 卸载复制代理使用这些属性来标识要复制到拓扑中实例的资源：
+卸载框架定义了两个用于标识作业有效负载的作业属性。 卸载复制代理使用这些属性来标识要复制到拓扑中的实例的资源：
 
 * `offloading.job.input.payload`：以逗号分隔的内容路径列表。 内容将复制到执行作业的实例。
 * `offloading.job.output.payload`：以逗号分隔的内容路径列表。 作业执行完成后，作业有效负载将复制到创建该作业的实例上的这些路径。
@@ -35,15 +31,15 @@ Apache Sling Discovery功能提供了一个Java API，使您能够创建JobManag
 * `OffloadingJobProperties.INPUT_PAYLOAD.propertyName()`
 * `OffloadingJobProperties.OUTPUT_PAYLOAD.propetyName()`
 
-作业不需要负载。 但是，如果作业需要操作资源并且作业被卸载到未创建该作业的计算机，则有效负载是必需的。
+作业不需要负载。 但是，如果作业需要操作某个资源，并且作业卸载到未创建该作业的计算机，则必须使用有效负载。
 
 ## 创建卸载作业 {#creating-jobs-for-offloading}
 
-创建一个调用JobManager.addJob方法的客户端，以创建自动选择的JobConsumer执行的作业。 提供以下信息以创建作业：
+创建调用JobManager.addJob方法的客户端，以创建自动选择的JobConsumer执行的作业。 提供以下信息以创建作业：
 
 * 主题：作业主题。
 * 名称： （可选）
-* 属性映射：A `Map<String, Object>` 包含任意数量属性的对象，例如输入有效负载路径和输出有效负载路径。 此Map对象可用于执行作业的JobConsumer对象。
+* 属性映射： A `Map<String, Object>` 包含任意数量属性的对象，如输入有效负荷路径和输出有效负荷路径。 此Map对象可用于执行作业的JobConsumer对象。
 
 以下示例服务为给定主题和输入有效负载路径创建作业。
 
@@ -99,11 +95,11 @@ public class JobGeneratorImpl implements JobGenerator  {
 10.06.2013 15:43:33.868 *INFO* [JobHandler: /etc/workflow/instances/2013-06-10/model_1554418768647484:/content/geometrixx/en/company] com.adobe.example.offloading.JobGeneratorImpl Received request to make job for topic com/adobe/example/offloading and payload /content/geometrixx/de/services
 ```
 
-## 发展工作消费者 {#developing-a-job-consumer}
+## 开发工作消费者 {#developing-a-job-consumer}
 
 要使用作业，请开发一个实施 `org.apache.sling.event.jobs.consumer.JobConsumer` 界面。 使用要使用的主题进行标识 `JobConsumer.PROPERTY_TOPICS` 属性。
 
-以下示例JobConsumer实施向 `com/adobe/example/offloading` 主题。 使用者只需将有效负载内容节点的Consumed属性设置为true即可。
+以下示例JobConsumer实施向 `com/adobe/example/offloading` 主题。 使用者只需将有效负荷内容节点的Consumed属性设置为true即可。
 
 ```java
 package com.adobe.example.offloading;
@@ -199,7 +195,7 @@ MyJobConsumer类为/content/geometrixx/de/services的输入有效负载生成以
 </dependency>
 ```
 
-前面的示例还需要以下依赖关系定义：
+以上示例还需要以下依赖关系定义：
 
 ```xml
 <dependency>

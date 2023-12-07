@@ -1,19 +1,15 @@
 ---
 title: 使用PDF/A文档
-seo-title: Working with PDF/A Documents
 description: 使用DocConverter服务确定PDF文档是否为PDF文档，并将PDF文档转换为PDF文档。
-seo-description: Use the  DocConverter service to determine if a PDF document is a PDF/A document and convert PDF documents to PDF/A documents.
-uuid: c258d253-068a-4412-955a-21d8a4792d6f
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
-discoiquuid: 1e6cc554-aef1-463c-906b-634b80a27917
 role: Developer
 exl-id: 966c3554-25df-4467-866e-11c43cc15b58
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '2356'
+source-wordcount: '2331'
 ht-degree: 1%
 
 ---
@@ -33,7 +29,7 @@ DocConverter服务可以将PDF文档转换为PDA/A文档。 您可以使用此�
 
 ## 将文档转换为PDF/A文档 {#converting-documents-to-pdf-a-documents}
 
-您可以使用DocConverter服务将PDF文档转换为PDF/A文档。 由于PDF/A是用于长期保存文档内容的存档格式，因此所有字体都将嵌入，并且文件是未压缩的。 因此，PDF/A 文档通常比标准 PDF 文档大。此外，PDF/A 文档不包含音频和视频内容。在将PDF文档转换为PDF/A文档之前，请确保PDF文档不是PDF/A文档。
+您可以使用DocConverter服务将PDF文档转换为PDF/A文档。 由于PDF/A是用于长期保存文档内容的存档格式，因此所有字体都将嵌入，并且文件是未压缩的。 因此，PDF/A 文档通常比标准 PDF 文档大。此外，PDF/文档不包含音频和视频内容。 在将PDF文档转换为PDF/A文档之前，请确保PDF文档不是PDF/A文档。
 
 PDF/A-1规范包含两个一致性级别，即A和B。两者之间的主要区别在于对逻辑结构（辅助功能）的支持，一致性级别B不需要该支持。无论一致性级别如何，PDF/A-1都指示所有字体都嵌入在生成的PDF/A文档中。 目前，验证（和转换）中仅支持PDF/A-1b。
 

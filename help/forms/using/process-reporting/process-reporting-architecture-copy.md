@@ -1,14 +1,10 @@
 ---
 title: 流程报告的工作方式
-seo-title: How Process Reporting Works
 description: 组成AEM Forms on JEE流程报表的服务描述以及流程报表UI简介
-seo-description: Description of the services that make up the AEM Forms on JEE Process Reporting and an introduction to the Process Reporting UI
-uuid: 4631b734-a679-495c-a708-2348bf22c1f7
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: process-reporting
-discoiquuid: a1af9920-5d2a-462f-bdee-ccec4c047c5b
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '344'
 ht-degree: 0%

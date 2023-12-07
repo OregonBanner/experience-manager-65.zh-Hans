@@ -1,19 +1,15 @@
 ---
 title: AEM Forms中的表单集
-seo-title: Form set in AEM Forms
 description: 本文介绍了表单集，并说明了如何通过将HTML5表单拼合在一起来创建表单集。 本文还介绍如何将xml数据预填充到表单集，以及如何在流程管理中使用表单集。
-seo-description: This article introduces form set and explains how to create form sets by stitching together HTML5 forms. This article also explains how you can prefill xml data to a form set and how you can use form sets in process management.
-uuid: a1a2f267-26a9-4f45-bcfc-dbdedad95973
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
-discoiquuid: 80e3eec4-95e0-4731-a0e5-a617e9bcb069
 docset: aem65
 feature: Mobile Forms
 exl-id: 039afdf3-013b-41b2-8821-664d28617f61
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '2813'
+source-wordcount: '2804'
 ht-degree: 0%
 
 ---
@@ -96,7 +92,7 @@ AEM Forms应用程序也支持表单集，允许字段工作人员离线获取�
 * 预览：预览提供两个选项：作为HTML预览（无数据）和使用示例数据自定义预览。
 * 查看/编辑属性：您可以查看/编辑所选表单集的元数据属性。
 
-![createformset3](assets/createformset3.png)
+![createformatset3](assets/createformset3.png)
 
 ### 编辑表单集 {#edit-a-form-set}
 

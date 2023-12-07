@@ -1,20 +1,16 @@
 ---
 title: 创建呈现Forms的Web应用程序
-seo-title: Creating Web Applications thatRenders Forms
 description: 创建基于Web的应用程序，该应用程序使用Java Servlet调用Forms服务和渲染表单。 Java Servlet用作返回表单的Forms服务与客户端Web浏览器之间的链接。
-seo-description: Create a web-based application that uses Java servlets to invoke the Forms service and render forms. The Java servlet serves as the link between the Forms service that returns a form and a client web browser.
-uuid: 00de10c5-79bd-4d8a-ae18-32f1fd2623bf
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/rendering_forms
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
-discoiquuid: f29b089e-8902-4744-81c5-15ee41ba8069
 role: Developer
 exl-id: 85e00003-8c8b-463a-b728-66af174be295
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '1865'
+source-wordcount: '1832'
 ht-degree: 0%
 
 ---
@@ -47,7 +43,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->有关基于片段创建表单设计的信息，请参阅 [Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63_cn).
+>有关基于片段创建表单设计的信息，请参阅 [Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63).
 
 **示例文件**
 

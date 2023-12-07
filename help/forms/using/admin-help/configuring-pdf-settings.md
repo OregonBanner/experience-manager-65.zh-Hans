@@ -1,17 +1,15 @@
 ---
 title: 配置Adobe PDF设置
 description: 了解如何配置可在“Adobe PDF设置”页面上看到的Adobe PDF设置。 您可以使用任何预定义的PDF设置或创建自己的设置。
-uuid: 980c9d6a-f75e-4e7d-b050-d2d07a10ef33
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/working_with_pdf_generator
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: ab018b6d-0233-4439-bb75-58c5421d769a
 feature: PDF Generator
 exl-id: 1bcb8429-c06e-4bd3-b422-4c512084dd09
-source-git-commit: e2a3470784beb04c2179958ac6cb98861acfaa71
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '7282'
+source-wordcount: '7403'
 ht-degree: 0%
 
 ---

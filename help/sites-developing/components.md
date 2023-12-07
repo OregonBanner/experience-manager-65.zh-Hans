@@ -1,19 +1,15 @@
 ---
 title: 组件概述
-seo-title: Components
 description: 组件是模块化单元，可实施特定功能以在您的网站上展示您的内容
-seo-description: Components are modular units which realize specific functionality to present your content on your website
-uuid: fb39aeb8-8f43-4091-8083-ebfab89e6e63
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: components
 content-type: reference
-discoiquuid: 45efff93-2fe5-4313-83a0-0e23a540da93
 exl-id: 9e30c969-2692-4380-943a-b022ee900ce8
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '589'
-ht-degree: 50%
+source-wordcount: '570'
+ht-degree: 44%
 
 ---
 
@@ -40,7 +36,7 @@ ht-degree: 50%
 * 在本地实例上开发新组件。
 * 将它部署到测试环境。
 * 将它部署到实时创作环境，作者和/或管理员可在该环境中添加和配置内容。
-* 将它部署到实时发布环境，它在该环境中用于为您网站的访客呈现内容。某些组件（例如，Communities）也接受用户的输入。
+* 将其部署到您的实时发布环境，其中使用它们为网站的访客呈现内容。 某些组件（例如，Communities）也接受用户的输入。
 
 每个 AEM 组件：
 
@@ -52,7 +48,7 @@ ht-degree: 50%
 
 AEM随附多种 [开箱即用的组件](/help/sites-authoring/default-components.md) 功能全面，包括：
 
-* 段落系统 ( `parsys`)
+* 段落系统( `parsys`)
 * 页面( `responsivegrid`  — 仅限触控式UI)
 * 文本
 * 图像，带随附文本
@@ -65,7 +61,7 @@ AEM随附多种 [开箱即用的组件](/help/sites-authoring/default-components
 提供了两组Adobe提供的AEM组件：
 
 * [核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
-* [Foundation 组件](/help/sites-authoring/default-components-foundation.md)
+* [基础组件](/help/sites-authoring/default-components-foundation.md)
 
 **核心组件** 随AEM 6.3引入，提供了灵活且丰富的创作功能。 此 [We.Retail引用站点](/help/sites-developing/we-retail.md) 说明了核心组件的使用方式，并体现了当前组件开发的最佳实践。
 

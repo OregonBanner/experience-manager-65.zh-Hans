@@ -1,20 +1,16 @@
 ---
 title: HTML5表单的最佳实践
-seo-title: Best practices for HTML5 forms
 description: 优化基于XFA的HTML5 Forms以获得最佳性能。
-seo-description: Learn how to tune your XFA-based HTML5 Forms for best performance.
-uuid: 3804effd-f1f2-4d7a-8e52-717b5c1c62cf
 contentOwner: khsingh
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 content-type: reference
-discoiquuid: db22f775-fab1-4a78-b334-a9c4fa613e43
 docset: aem65
 feature: Mobile Forms
 exl-id: 62ff6306-9989-43b0-abaf-b0a811f0a6a4
-source-git-commit: c4cd9a61a226ace2a72d60b5b7b7432de12cb873
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '1416'
+source-wordcount: '1402'
 ht-degree: 0%
 
 ---

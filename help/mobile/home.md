@@ -1,21 +1,19 @@
 ---
 title: AEM 6.5 Mobile 用户指南
-seo-title: AEM 6.5 Mobile User Guide
-description: 利用AEM支持为移动应用程序创建和管理内容。 大致了解并了解如何编写、开发和管理On-Demand Services应用程序和Adobe PhoneGap Enterprise。
-seo-description: Describes how to create and manage content for mobile applications.
+description: 从AEM支持中受益，以创建和管理移动应用程序的内容。 了解On-Demand Services App和Adobe PhoneGap Enterprise的简介，并了解如何创作、开发和管理。
 exl-id: 3531d8ea-614d-465a-8b4a-e3e3f3461e94
-source-git-commit: a51a863a4edf7e8b951a8361c5c7f0517b09f12a
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '361'
-ht-degree: 27%
+source-wordcount: '314'
+ht-degree: 17%
 
 ---
 
 # AEM 6.5 Mobile 用户指南
 
-利用AEM支持为移动应用程序创建和管理内容。 大致了解并了解如何编写、开发和管理On-Demand Services应用程序和Adobe PhoneGap Enterprise。
+从AEM支持中受益，以创建和管理移动应用程序的内容。 了解On-Demand Services App和Adobe PhoneGap Enterprise的简介，并了解如何创作、开发和管理。
 
-## 重要AEM文章
+## AEM重要文章
 
 * [AEM快速入门](https://experienceleague.adobe.com/docs/experience-manager-65.html?lang=zh-Hans)
 * [AEM 6.5发行说明](/help/release-notes/home.md)
@@ -30,22 +28,22 @@ ht-degree: 27%
 | [Assets 用户指南](/help/assets/home.md) | 了解如何创建、管理、交付和优化数字资源。 |
 | [Forms用户指南](/help/forms/home.md) | 本指南介绍如何创建、管理、发布和更新数字表单。 |
 | [Communities用户指南](/help/communities/home.md) | 创建在线体验，如论坛、用户组、学习资源和其他社交功能。 |
-| [Administering 指南](/help/sites-administering/home.md) | 了解如何管理AEM |
-| [Authoring 指南](/help/sites-authoring/home.md) | 本指南介绍在AEM中创作的概念。 |
+| [Administering指南](/help/sites-administering/home.md) | 了解如何管理AEM |
+| [Authoring指南](/help/sites-authoring/home.md) | 本指南介绍在AEM中创作的概念。 |
 | [经典UI创作指南](/help/sites-classic-ui-authoring/home.md) | 本指南在经典用户界面中说明在AEM中创作的概念。 |
 | [Screens用户指南](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html) | 了解用于发布动态和交互式数字体验的数字标牌解决方案。 |
 | [Deploying用户指南](/help/sites-deploying/home.md) | 本指南向您介绍AEM的基础知识。 |
-| [开发用户指南](/help/sites-developing/home.md) | 了解如何构建AEM实例。 |
+| [Developing用户指南](/help/sites-developing/home.md) | 了解如何构建AEM实例。 |
 | [Managing用户指南](/help/managing/home.md) | 本指南介绍如何成功管理AEM项目。 |
-| [Commerce 用户指南](/help/commerce/home.md) | 了解AEM上的Commerce集成框架。 |
-| [Mobile用户指南](/help/mobile/home.md) | 本指南介绍如何为移动设备应用程序创建和管理内容。 |
+| [Commerce 用户指南](/help/commerce/home.md) | 了解AEM上的Commerce integration framework。 |
+| [Mobile用户指南](/help/mobile/home.md) | 本指南介绍如何创建和管理移动设备应用程序的内容。 |
 
 ## 重要AEM资源
 
 * [AEM教程](https://helpx.adobe.com/experience-manager/kt/index/aem-6-4-videos.html)
 * [Dispatcher用户指南](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)
 * [HTL用户指南](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)
-* [核心组件用户指南](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)
+* [核心组件用户指南](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
 * [Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html)
 * [GDPR 就绪](/help/managing/data-protection-and-privacy.md)
 * [Experience League](https://guided.adobe.com/?promoid=K42KVXHD&amp;mv=other#solutions/experience-manager)

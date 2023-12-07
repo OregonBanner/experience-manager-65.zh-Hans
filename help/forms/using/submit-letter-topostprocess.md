@@ -1,17 +1,13 @@
 ---
 title: 信件和互动式通信的后处理
-seo-title: Post Processing of Letters
 description: 通信管理中的信件后处理允许您创建AEM和Forms后处理过程（如打印和电子邮件），并将它们与您的信件集成。
-seo-description: Post Processing of Letters in Correspondence Management lets you create AEM and Forms post processes, such as print and email, and integrate them with your letters.
-uuid: 40cb349d-6ba2-4794-9ec6-dcab15c35b8d
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: correspondence-management
-discoiquuid: 9b06c394-8e26-429c-b78f-22afa271aeb3
 docset: aem65
 feature: Correspondence Management
 exl-id: 91ee4422-99c1-4907-a507-5968c6984f28
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '832'
 ht-degree: 0%

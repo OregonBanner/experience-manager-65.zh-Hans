@@ -1,17 +1,14 @@
 ---
 title: 配置提交操作
-seo-title: Configuring the Submit action
 description: Forms允许您配置提交操作以定义提交后处理自适应表单的方式。 您可以使用内置的提交操作或从头开始编写自己的提交操作。
-uuid: 4368d648-88ea-4f84-a051-46296a1a084e
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
-discoiquuid: 9d8d7044-ffce-4ab4-9543-a2d2f9da31e3
 docset: aem65
 feature: Adaptive Forms
 exl-id: 04efb4ad-cff6-4e05-bcd2-98102f052452
-source-git-commit: e19a7e617bdabb678bd804cab3fea228ce19acfa
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '2154'
+source-wordcount: '2134'
 ht-degree: 51%
 
 ---
@@ -54,7 +51,7 @@ ht-degree: 51%
 >[!NOTE]
 >
 >确保 [AEM_Installation_Directory]\crx-quickstart\temp\datamanager\ASM文件夹
->存在. 临时存储附件需要目录。 如果该目录不存在，请创建它。
+>已存在。 临时存储附件需要目录。 如果该目录不存在，请创建它。
 
 >[!CAUTION]
 >
@@ -74,7 +71,7 @@ ht-degree: 51%
 
 ![配置 REST 端点提交操作](assets/action-config.png)
 
-配置 REST 端点提交操作
+配置Rest端点提交操作
 
 >[!NOTE]
 >
@@ -159,14 +156,14 @@ ht-degree: 51%
 
 ## 提交至 Power Automate {#microsoft-power-automate}
 
-您可以配置自适应表单以在提交时运行Microsoft® Power Automate Cloud Flow。 配置的自适应表单将捕获的数据、附件和记录文档发送到 Power Automate Cloud Flow 进行处理。它可帮助您构建自定义数据捕获体验，同时利用 Microsoft® Power Automate 的强大功能围绕捕获的数据构建业务逻辑并自动执行客户工作流。以下几个示例说明了在将自适应表单与 Microsoft® Power Automate 集成后可执行的操作：
+您可以配置自适应表单以在提交时运行 Microsoft® Power Automate Cloud Flow。配置的自适应表单将捕获的数据、附件和记录文档发送到 Power Automate Cloud Flow 进行处理。它可帮助您构建自定义数据捕获体验，同时利用 Microsoft® Power Automate 的强大功能围绕捕获的数据构建业务逻辑并自动执行客户工作流。以下几个示例说明了在将自适应表单与 Microsoft® Power Automate 集成后可执行的操作：
 
 * 在 Power Automate 业务流程中使用自适应表单数据
 * 使用 Power Automate 将捕获的数据发送到 500 多个数据源或任何公开可用的 API
 * 对捕获的数据执行复杂计算
 * 按预定义的计划将自适应表单数据保存到存储系统
 
-自适应Forms编辑器提供 **调用Microsoft® Power Automate流** 提交操作以将自适应表单数据、附件和记录文档发送到Power Automate Cloud Flow。 要使用Submit操作将捕获的数据发送到Microsoft®Power Automate， [将AEM Forms实例与Microsoft®Power Automate连接](/help/forms/using/forms-microsoft-power-automate-integration.md)
+自适应表单编辑器提供&#x200B;**调用 Microsoft® Power Automate Flow** 提交操作，以将自适应表单数据、附件和记录文档发送到 Power Automate Cloud Flow。要使用Submit操作将捕获的数据发送到Microsoft®Power Automate， [将AEM Forms实例与Microsoft®Power Automate连接](/help/forms/using/forms-microsoft-power-automate-integration.md)
 
 在成功配置后，使用[调用 Microsoft® Power Automate 流程](/help/forms/using/forms-microsoft-power-automate-integration.md#use-the-invoke-a-microsoft&reg;-power-automate-flow-submit-action-to-send-data-to-a-power-automate-flow-use-the-invoke-microsoft-power-automate-flow-submit-action)提交操作将数据发送到 Power Automate Flow。
 
@@ -200,7 +197,7 @@ ht-degree: 51%
 
 ### 支持验证表达式中的自定义函数 {#supporting-custom-functions-in-validation-expressions-br}
 
-有时，如果存在复杂的验证规则，则准确的验证脚本驻留在自定义函数中，并且作者从字段验证表达式中调用这些自定义函数。要在执行服务器端验证时使此自定义函数库已知并可用，表单作者可以在自适应表单容器属性的&#x200B;**基本**&#x200B;选项卡下配置 AEM 客户端库的名称，如下所示。
+有时，如果存在复杂的验证规则，则确切的验证脚本将驻留在自定义函数中，作者会从字段验证表达式中调用这些自定义函数。 要在执行服务器端验证时使此自定义函数库已知并可用，表单作者可以在自适应表单容器属性的&#x200B;**基本**&#x200B;选项卡下配置 AEM 客户端库的名称，如下所示。
 
 ![支持验证表达式中的自定义函数](assets/clientlib-cat.png)
 
@@ -210,6 +207,6 @@ ht-degree: 51%
 
 ## 提交操作的错误处理 {#error-handling-on-submit-action}
 
-作为Experience Manager安全和强化指南的一部分，请配置自定义错误页面，如404.jsp和500.jsp。 提交表单时出现404或500错误时，将调用这些处理程序。 在发布节点上触发这些错误代码时，也将调用处理程序。
+作为Experience Manager安全和强化指南的一部分，请配置自定义错误页面，如404.jsp和500.jsp。 提交表单时出现404或500错误时，将调用这些处理程序。 在Publish节点上触发这些错误代码时，也会调用处理程序。
 
 有关更多信息，请参阅 [自定义错误处理程序显示的页面](/help/sites-developing/customizing-errorhandler-pages.md).

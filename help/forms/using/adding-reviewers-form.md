@@ -1,19 +1,15 @@
 ---
 title: 将提交审阅人与表单关联
-seo-title: Associating submission reviewers with a form
 description: 了解如何将提交审阅人与AEM Forms中的表单相关联。 关联的审阅人审阅通过Forms Portal提交的表单。
-seo-description: Learn how to associate submission reviewers with a form in AEM Forms. Associated reviewers review a form submitted via forms portal.
-uuid: 58c8c8fb-9262-4c37-b9b2-e46fe21b77d9
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
-discoiquuid: 71d1aa10-d191-49bc-a50f-1098324f1cfe
 docset: aem65
 feature: Adaptive Forms
 exl-id: 46e7b858-44d1-41c8-9f44-4e959e593dc1
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '549'
-ht-degree: 10%
+source-wordcount: '543'
+ht-degree: 9%
 
 ---
 

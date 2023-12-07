@@ -1,19 +1,15 @@
 ---
 title: 创建和管理策略集
-seo-title: Creating and managing policy sets
 description: 策略集用于分组具有共同业务目的的策略。 您可以在策略集中创建、编辑和删除策略。
-seo-description: Policy sets are used to group policies that have a common business purpose. You can create, edit and delete policies in a policy set.
-uuid: 11faf67c-b9b7-4394-8672-d43cace131ad
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/working_with_document_security
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: a4fb1a11-8fe3-4092-a036-1c079aea1250
 feature: Document Security
 exl-id: 736926af-ae41-4da3-b181-444de72407bd
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '1294'
+source-wordcount: '1297'
 ht-degree: 0%
 
 ---
@@ -85,7 +81,7 @@ ht-degree: 0%
    * 在“显示”列表中，选择每页显示的结果数，然后单击“查找”。
    * 选中要添加的用户和组的复选框，单击“添加”，然后单击“确定”。
 
-1. 单击保存。
+1. 单击“保存”。
 
 您现在可以将策略添加到策略集。 (请参阅 [创建和编辑策略](/help/forms/using/admin-help/creating-policies.md#creating-and-editing-policies).)
 

@@ -1,15 +1,11 @@
 ---
 title: 自定义错误对话框
-seo-title: Customizing error dialogs
 description: 如何自定义LiveCycleAEM Forms工作区的错误对话框以添加其他错误描述。
-seo-description: How-to customize the error dialogs of LiveCycle AEM Forms workspace to add different fault descriptions.
-uuid: 5ed1da68-bd5b-4a36-9a14-9d61733237e6
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
-discoiquuid: f547c0c1-3917-4092-9d63-c1b3aaefcef0
 exl-id: 8d2b07f5-5c4e-4111-8f78-eb1b156221bc
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '151'
 ht-degree: 4%

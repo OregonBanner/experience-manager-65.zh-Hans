@@ -1,25 +1,21 @@
 ---
 title: 下载XFA或PDF表单模板
-seo-title: Download an XFA or a PDF form template
-description: 您可以将表单从存储库导出到本地系统，然后将下载的表单迁移到新存储库。
-seo-description: You can export forms from the repository to the local system and migrate the downloaded forms to new repository.
-uuid: 5f7fbd14-cb9d-4749-8708-7efe49df89d7
+description: 您可以将表单从存储库导出到本地系统，并将下载的表单迁移到新存储库。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-manager
-discoiquuid: 6699e0e7-fd42-41ae-86a2-3b940d905111
 role: Admin
 exl-id: 5b7b9816-38c1-4780-b1fc-8184971f3772
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '313'
+source-wordcount: '311'
 ht-degree: 0%
 
 ---
 
 # 下载XFA或PDF表单模板 {#download-an-xfa-or-a-pdf-form-template}
 
-顾名思义，下载操作允许您将表单从存储库导出到本地系统。 结合上载操作，此操作可帮助您将表单从一个存储库迁移到另一个存储库。
+顾名思义，下载操作允许您将表单从存储库导出到本地系统。 与上传操作结合使用时，此操作可帮助您将表单从一个存储库迁移到另一个存储库。
 
 在AEM Forms中，以下资源类型支持下载操作：
 
@@ -29,7 +25,7 @@ ht-degree: 0%
 
 AEM Forms支持单独下载这些表单类型，或将其下载到包含一个或多个受支持表单的文件夹中。
 
-除了这些资源外，您还可以下载 `Resource` 资源类型（如果文件夹中存在该资源）。 此功能允许您下载XFA表单引用的资源以及表单。
+除了这些资源外，您还可以下载 `Resource` 资源类型（如果文件夹中存在该资源）。 提供此功能是为了让您下载XFA表单以及表单引用的资源。
 
 ## 下载一个或多个表单 {#download-one-or-more-forms}
 
@@ -55,4 +51,4 @@ AEM Forms支持单独下载这些表单类型，或将其下载到包含一个�
 
 * 您可以将ZIP文件上传到同一存储库或其他存储库中的任何其他位置
 * 上传操作期间，将保留文件夹中资产的层次结构
-* 上传时会反映下载前对下载的资产所做的任何元数据更改
+* 下载之前对下载的资产所做的任何元数据更改都会在上传时反映出来

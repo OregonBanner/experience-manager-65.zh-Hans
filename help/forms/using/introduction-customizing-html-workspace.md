@@ -1,19 +1,15 @@
 ---
 title: 自定义AEM表单工作区简介
-seo-title: Introduction to Customizing AEM form workspace
 description: 快速介绍，其中包括概念和技术信息，以自定义用于流程管理的LiveCycleAEM Forms工作区。
-seo-description: A quick introduction, with conceptual and technical information, to customize LiveCycle AEM Forms workspace for process management.
-uuid: 38759071-e6b8-4976-8b06-909ad7a786cd
 contentOwner: robhagat
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
-discoiquuid: 021c6606-8cd3-472c-a80b-b1bcace7e87f
 docset: aem65
 exl-id: b183d42f-343c-4acb-bc73-f80ad72e54df
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '1760'
+source-wordcount: '1752'
 ht-degree: 0%
 
 ---
@@ -53,7 +49,7 @@ AEM Forms工作区支持各种自定义设置，以便更新用户界面的布�
    <th><p>用户界面组件已修改</p> </th>
   </tr>
   <tr>
-   <td><p>#标题</p> </td>
+   <td><p>#header</p> </td>
    <td><p>AEM Forms工作区的标题</p> </td>
   </tr>
   <tr>
@@ -238,7 +234,7 @@ CRX包可以部署在CRX™存储库上。 它位于 `[LC root]\crx-repository\i
 
 可使用下述三个配置文件构建此包。
 
-| **配置文件** | **描述** | **使用** |
+| **个人资料** | **描述** | **使用** |
 |---|---|---|
 | 装运模板 | 此配置文件使用缩小创建尽可能小的CRX包。 此包效率最高。 所有JavaScript™文件都将被组合并缩小为一个JS文件。 | 当JS文件中不需要进一步语义更改时，使用此配置文件。 |
 | 调试配置文件 | 此配置文件创建一个效率适度的CRX包。 包的大小略大于使用Ship profile创建的包。 此包将大多数JavaScript文件合并为一个JS文件。 | 使用此配置文件进行调试。 |

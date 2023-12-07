@@ -5,11 +5,10 @@ contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
-discoiquuid: 11c0aac6-a7f6-4d6b-a080-b04643045a64
 exl-id: ab0d4f2e-f761-4510-ba51-4a2dcea49601
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '1619'
+source-wordcount: '1609'
 ht-degree: 0%
 
 ---
@@ -201,10 +200,10 @@ analytics.sitecatalyst.js文件中的代码(包括Adobe Analytics s_code.js文�
 
 1. 右键单击 `components` 创建文件夹，然后单击“创建”>“创建组件”。 指定以下属性值：
 
-   * 标签: `sitecatalyst`
-   * 标题: `sitecatalyst`
-   * 超级类型: `/libs/cq/analytics/components/sitecatalyst`
-   * 组: `hidden`
+   * 标签： `sitecatalyst`
+   * 标题： `sitecatalyst`
+   * 超级类型： `/libs/cq/analytics/components/sitecatalyst`
+   * 组： `hidden`
 
 1. 反复单击“Next（下一步）” ，直到启用“OK（确定）”按钮，然后单击“OK（确定）”。
 
@@ -284,7 +283,7 @@ AEM会安装以下Adobe Analytics插件，以便默认情况下可以使用：
 
 1. 右键单击您创建的客户端库文件夹，然后单击“创建”>“创建文件”。 对于文件名，请键入js.txt ，然后单击“确定”。
 
-1. 单击全部保存。
+1. 单击“全部保存”。
 
 使用以下过程可获取插件代码，将该代码存储在AEM存储库中，并将它添加到您的客户端库文件夹中。
 
