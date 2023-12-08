@@ -4,9 +4,9 @@ description: 安装AEM Forms文档服务以创建、汇编、分发、存档PDF�
 topic-tags: installing
 role: Admin
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: 6b24067c1808475044a612f21d5d4d2793c13e17
 workflow-type: tm+mt
-source-wordcount: '5499'
+source-wordcount: '5599'
 ht-degree: 1%
 
 ---
@@ -556,6 +556,16 @@ Assembler服务依赖于Reader扩展服务、签名服务、Forms服务和输出
   </tr>
  </tbody>
 </table>
+
+### （仅限Windows）为Microsoft®项目配置注册表项 {#configure-registry-entry-for-microsoft-project}
+
+在您的计算机上安装AEM Forms加载项和Microsoft®项目后，请在64位位置注册Microsoft®项目的条目。 它有助于执行从Project到PDFG的转换测试。 下面是概述注册表输入过程的步骤：
+
+1. 打开Microsoft® Windows注册表编辑器(regedit)，要打开注册表编辑器，请转到“开始”>“运行”，键入regedit，然后单击“确定”。
+1. 导航到 `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Adobe\Acrobat PDFMaker\<version>\Office\SupportedApp`，并创建新的 **二进制值** 注册表并将其重命名为 **项目**.
+1. 将已创建的二进制注册表的数据值修改为01，然后单击“确定”。
+1. 关闭注册表项。
+
 
 ## 已知问题和疑难解答 {#known-issues-and-troubleshooting}
 

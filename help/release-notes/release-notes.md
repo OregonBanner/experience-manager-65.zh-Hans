@@ -3,10 +3,10 @@ title: 的发行说明 [!DNL Adobe Experience Manager] 6.5
 description: 查找版本信息、新增功能、安装操作说明以及的详细更改列表 [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 4
 exl-id: cac14ac1-9cda-46ae-8aa3-94674bb79157
-source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
+source-git-commit: 6b24067c1808475044a612f21d5d4d2793c13e17
 workflow-type: tm+mt
-source-wordcount: '3552'
-ht-degree: 2%
+source-wordcount: '4233'
+ht-degree: 7%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 2%
 | -------- | ---------------------------- |
 | 版本 | 6.5.19.0 <!-- UPDATE FOR EACH NEW RELEASE --> |
 | 类型 | Service Pack版本 |
-| 日期 | 2023年11月30日星期四 <!-- UPDATE FOR EACH NEW RELEASE --> |
+| 日期 | 2023年12月7日星期四 <!-- UPDATE FOR EACH NEW RELEASE --> |
 | 下载 URL | [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.19.0.zip) <!-- UPDATE FOR EACH NEW RELEASE --> |
 
 ## 中包括的内容 [!DNL Experience Manager] 6.5.19.0 {#what-is-included-in-aem-6519}
@@ -38,12 +38,30 @@ ht-degree: 2%
 
 * _REVIEWERS: WHAT ARE THE KEY FEATURES AND ENHANCEMENTS YOU WANT TO HIGHLIGHT IN THIS RELEASE?_ -->
 
-**主要功能和增强功能**
+## 主要功能和增强功能
 
 此版本中的某些主要功能和增强功能包括：
 
 * 允许站点页面编辑器/图像组件用户从远程AssetsCloud Service引用资源。 (SITES-13448和SITES-13433)
 * AEM现在支持服务器端排序，从而加快列表视图中的项目导航速度。 项目节点在显示在界面中之前根据用户选择的列排序。
+
+### [!DNL Forms]
+
+* **新增自适应表单核心组件**：添加了垂直选项卡、条款和条件以及复选框以增强表单的可伸缩性。
+   * **[复选框组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/checkbox.html)**：基于核心组件的自适应表单现在包含复选框组件。通过它，用户可二选一，即选择或取消选择特定选项。它一般显示为一个小框，单击或点按它即可在选中和取消选中两种状态之间切换。复选框是一个常见的表单元素，用于提供是/否或 true/false 选择。
+
+   * **[条款和条件组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/terms-and-conditions.html)**：基于核心组件的自适应表单现在包含条款和条件组件。通过它，表单作者可在表单中引入一个特定的部分，其中为用户展示与使用服务、产品或平台相关的条款、条件或法律协议。此组件旨在通知用户其提交表单即表示同意的规则、法规和义务。
+
+     ![垂直选项卡、条款和条件以及复选框组件](/help/forms/using/assets/forms-components.png)
+
+   * **[垂直选项卡组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/vertical-tabs.html)**：基于核心组件的自适应表单现在可将表单内容整理到选项卡垂直列表中，从而提供结构化的、可导航的布局。在表单中使用垂直选项卡可通过简化导航并改进表单内容的组织而增强整体用户体验，特别是在表单包含多个部分或复杂信息的情况下。
+
+* **[AEM Forms Designer 64位版本](/help/forms/using/installing-configuring-designer.md)**：AEM Forms Designer的64位版本提供了增强的性能、可扩展性和内存管理，可增强您的表单创建体验。 利用 64 位架构，您可以轻松处理更大、更复杂的项目，确保无缝的设计工作流程和优化的效率。利用此最新版本，提升您的表单设计能力并迎接 AEM Forms Designer 的未来。
+
+* **[将自适应Forms连接到Microsoft® SharePoint列表](/help/forms/using/configuring-submit-actions.md#submit-to-microsoft&reg;-sharepoint-list)**：AEM Forms提供了一个OOTB集成，可让您将表单数据直接提交到SharePoint List，从而让您能够使用SharePoint的“列表”功能。 您可以将Microsoft SharePoint列表配置为表单数据模型的数据源，并使用使用表单数据模型提交操作将自适应表单连接到SharePoint列表。
+
+* **[支持为自适应表单片段配置记录文档属性](/help/forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.md)**：您现在可以在自适应表单编辑器中轻松自定义自适应表单片段及其字段。
+
 
 **已弃用功能**
 
@@ -149,9 +167,11 @@ ht-degree: 2%
 
 ### [!DNL Forms]{#forms-6519}
 
-中的修复 [!DNL Experience Manager] Forms在计划的一周后通过单独的附加组件包提供 [!DNL Experience Manager] Service Pack发行日期。 在本例中，AEM 6.5.19.0 Forms附加组件包版本计划于2023年11月30日星期四发布。 发布后，此部分中将添加一系列Forms修复和增强功能。
+#### [!DNL Adaptive Forms]
 
-* 添加访问控制列表 `fd-cloudservice` 用户能够读取或更新下的Microsoft®配置 `cloudconfigs/microsoftoffice`. (FORMS-11142)
+<!-- Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on package one week after the scheduled [!DNL Experience Manager] Service Pack release date. In this case, the AEM 6.5.19.0 Forms add-on package release is scheduled for Thursday, November 30, 2023. A list of Forms fixes and enhancements would be added to this section post the release.-->
+
+<!--* Adding Access Control List for `fd-cloudservice` user to be able to read or update the Microsoft&reg; configurations under `cloudconfigs/microsoftoffice`. (FORMS-11142) -->
 
 <!--LEFT BULLET LIST HERE IN CASE OF REUSE BY FORMS IN THE FUTURE 
 * **Document Services**
@@ -166,6 +186,32 @@ ht-degree: 2%
 <!--### Commerce{#commerce-6519}
 
 * A -->
+
+* 当用户将工具栏添加到自适应表单时，表单容器标签显示异常行为，因为它未更改为作者为Forms选择的首选语言。 (FORMS-11371)
+* 在AEM Forms Workspace中，下拉字段默认选择UI上的第一个选项。 (FORMS-11346)
+* 如果您使用带有五个字符的区域设置，并且小数分隔符未在信件中正确呈现，则AEM中的语言配置不会显示任何效果。 (FORMS-11344)
+* 当用户使用Workbench进程生成XML输出时，某些文件会失败。 (FORMS-11314)
+* 当用户使用英语以外的语言生成记录文档(DOR)预览时，该功能不起作用。 (FORMS-11106)
+* 当用户在基于带有JDK11的Linux的OSGI实例上转换某些带有PDFG的图像文件时，它不会转换。 (FORMS-11105)
+* 用户安装AEM Forms加载项时，它会破坏AEM Sites中的内容树面板。 (FORMS-10912)
+* 当用户使用NVDA屏幕阅读器从日期选取器组件复制日期时，无法正确读取。 (FORMS-10805) 
+* 在Forms规则编辑器中，当数据值类型为布尔值时，用户无法设置单选按钮/复选框的值。 (FORMS-10713)
+* 当用户在自适应表单中添加添加的项目时，它会按相反顺序添加到下拉列表中。 (FORMS-10456)
+* 使用规则编辑器清除下拉列表后，即使已清除第一个提供的值，该值仍会显示。 (FORMS-9963) 
+* 用户无法使用屏幕阅读器（如NVDA）访问表单标题。 (FORMS-8815) 
+* 用户无法使用屏幕阅读器（如NVDA）访问表单中的子标题。 (FORMS-8814) 
+* 在html表单的页面源中，访问键属性为空且不起作用。 (FORMS-5753) 
+* 在关于工作区对话框中，文本“Adobe Experience Manager - Forms”以文本形式显示。 (FORMS-5748)
+
+#### [!DNL Forms Designer]{#forms-designer-6519}
+
+* 当用户尝试通过屏幕阅读器读取非交互式PDF forms时，某些列表项未读取或跳过。 (LC-3921645) 
+* 当用户浏览可编辑字段时，它不会始终遍历到所有PDF表单字段。 (LC-3921631) 
+* 即使在Forms Designer中的标记是正确的，标记在PDF中的排序也会随机更改。 (LC-3921313) 
+* 列表无法在Adobe Acrobat Reader或Adobe Acrobat DC的标记中正确显示。 (LC-3921306)
+* 在Forms Designer中正确分配的标题级别将随机更改为 `<P>` Adobe Acrobat标记之前，填充于页面代码之后。 (LC-3921305) 
+* 在表中，任何对象的ID一经分配便无法修改。 (LC-3921134) 
+* 如果合并的单元格位于表中，则没有可用于在AEM Forms Designer的复杂表中设置范围（行和列）和范围的GUI。 (LC-3919532) 
 
 ### Foundation{#foundation-6519}
 
@@ -418,8 +464,6 @@ UberJar用于 [!DNL Experience Manager] 6.5.19.0可从以下网站获取： [Mav
 
 #### 支持的平台
 
-* WebLogic JEE服务器不支持高于1.8.0_281的JDK版本。 (FORMS-8498、CQDOC-20383)
-* 作为 [!DNL Microsoft® Windows Server 2019] 不支持 [!DNL MySQL 5.7] 和 [!DNL JBoss® EAP 7.1]， [!DNL Microsoft® Windows Server 2019] 不支持的全包安装 [!DNL Experience Manager Forms 6.5.10.0]. (CQDOC-18312)
 * JDK 11.0.20不支持在JEE安装程序上安装AEM Forms。 在JEE安装程序上安装AEM Forms仅支持JDK 11.0.19或更早版本。 (FORMS-10659)
 
 #### 安装
@@ -467,13 +511,10 @@ UberJar用于 [!DNL Experience Manager] 6.5.19.0可从以下网站获取： [Mav
 
 * 发布自适应表单时，其所有依赖项（包括策略）都会重新发布，即使尚未对它们进行任何修改也是如此。 (FORMS-10454)
 * 当用户选择在自适应表单中首次配置字段时，属性浏览器中不显示保存配置的选项。 选择在同一编辑器中配置自适应表单的某些其他字段可解决此问题。
-* 在自适应表单的指南容器中设置重定向URL后，内联签名将停止工作。 (FORMS-10493)要解决此问题，请下载并安装 [适用于6.5.18.0的修补程序](/help/release-notes/aem-forms-hotfix.md).
-* 所有记录文档(DoR)模板均无法发布。 仅发布基于区域设置的英文DoR模板及其关联的基于Forms的DoR模板。 (FORMS-10535)要解决此问题，请下载并安装 [适用于6.5.18.0的修补程序](/help/release-notes/aem-forms-hotfix.md).
+* 当用户执行提交操作时，提交失败并出现错误：
+  ` javax.servlet.ServletException: java.lang.NoSuchMethodError`
+要解决此问题， [重新编译Sling脚本，例如JSP、Java和Sightly](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-16543.html?lang=en#resolution). (FORMS-8542)
 
-
-#### 交互式通信
-
-* 升级到AEM Service Pack 18后，无法在编辑模式下打开包含大型内联图像的交互式通信。 (FORMS-10578)要解决此问题，请安装 [适用于6.5.18.0的修补程序](/help/release-notes/aem-forms-hotfix.md).
 
 ## 包含的OSGi包和内容包{#osgi-bundles-and-content-packages-included}
 

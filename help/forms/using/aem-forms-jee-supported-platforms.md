@@ -7,9 +7,9 @@ geptopics: SG_AEMFORMS/categories/jee
 docset: aem65
 role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
-source-git-commit: 1630805be43ce9bb52a8fe1bbe50b2b934d4922c
+source-git-commit: 6b24067c1808475044a612f21d5d4d2793c13e17
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '3984'
 ht-degree: 0%
 
 ---
@@ -242,12 +242,12 @@ Adobe Experience Manager Forms需要由Java™开发工具包(JDK)分发提供�
    <td><p><strong>支持的修补程序定义</strong></p> </td>
   </tr>
   <tr>
-   <td>oracleWebLogic Server 12.2.1 (12c R2)（已弃用）</td>
+   <td>oracleWebLogic Server 12.2.1 (12c R2)（已弃用） <sup>[9]</sup></td>
    <td>答：支持</td>
    <td>Service Pack和关键更新</td>
   </tr>
   <tr>
-   <td>oracleWebLogic Server 14c </td>
+   <td>oracleWebLogic Server 14c <sup>[9]</sup></td>
    <td>答：支持</td>
    <td>Service Pack和关键更新</td>
   </tr>
@@ -355,6 +355,9 @@ Adobe Experience Manager Forms需要由Java™开发工具包(JDK)分发提供�
 1. JEE上的AEM Forms不支持CentOS上的WebSphere®应用程序服务器。
 1. JEE上的AEM Forms不支持JBoss®基于角色的访问控制(RBAC)。
 1. JEE上的AEM Forms仅支持OracleJava™ SE 11 （64位） SDK (适用于应用程序服务器JBoss® EAP 7.4)。
+1. WebLogic服务器不支持高于1.8.0_281的JDK版本。 (FORMS-8498)
+1. [!DNL Microsoft® Windows Server 2019] 不支持 [!DNL MySQL 5.7] 和 [!DNL JBoss® EAP 7.1]， [!DNL Microsoft® Windows Server 2019] 不支持的全包安装 [!DNL Experience Manager Forms 6.5.10.0 and later]. (CQDOC-18312)
+
 
 此外，在选择用于AdobeJEE部署上的AEM Forms的软件时，请考虑以下几点：
 
@@ -566,7 +569,7 @@ AEM Forms的以下子系统不是 [508](https://www.section508.gov/) 合规：
 - 到JEE服务器上AEM Forms的TCP/IPv4或TCP/IPv6网络连接
 - 必须具有管理权限才能在Windows上安装Workbench。 如果您使用非管理员帐户进行安装，安装程序会提示您输入相应帐户的凭据。
 
-### Designer {#designer}
+### 设计器 {#designer}
 
 - Microsoft® Windows® 2016 Server、Microsoft® Windows® 2019 Server或Microsoft® Windows® 10
 - 1 GHz或更快的处理器，支持PAE、NX和SSE2。
@@ -686,7 +689,7 @@ Acrobat DC产品系列为Acrobat和Reader引入了两个路径，它们是不同
 
 AEM Forms应用程序在以下平台上可用：
 
-| **Platform** | **支持的设备** |
+| **平台** | **支持的设备** |
 | ----------------- | ------------------------------------------------------------------------------------------------------------------- |
 | Apple iOS | Apple iPhone、iPad、iPad Air和运行iOS 15.1及更高版本的iPad mini。 |
 | Google Android™ | Android™ 5.1及更高版本。 AEM Forms应用在7英寸和10英寸的三星Galaxy平板电脑和流行智能手机上获得了认证。 |

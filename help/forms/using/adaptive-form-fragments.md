@@ -6,9 +6,9 @@ topic-tags: author
 docset: aem65
 feature: Adaptive Forms
 exl-id: 2f276e9d-b3c1-48f7-a94a-bdf7eb15a031
-source-git-commit: ab40115c373cc06a7600494288b2670deb914e1a
+source-git-commit: 6b24067c1808475044a612f21d5d4d2793c13e17
 workflow-type: tm+mt
-source-wordcount: '2291'
+source-wordcount: '2359'
 ht-degree: 3%
 
 ---
@@ -22,18 +22,18 @@ ht-degree: 3%
 
 <span class="preview">Adobe 建议使用现代、可扩展的数据捕获[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html)，以[创建新的自适应表单](/help/forms/using/create-an-adaptive-form-core-components.md)或[将自适应表单添加到 AEM Sites 页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。这些组件代表有关创建自适应表单的重大改进，确保实现令人印象深刻的用户体验。本文介绍了使用基础组件创作自适应表单的旧方法。</span>
 
-虽然每个表单都是针对特定目的而设计的，但大多数表单中都有一些常用区段，例如提供个人详细信息点赞名称和地址、系列详细信息、收入详细信息等。 每次创建新表单时，表单开发人员都需要创建这些公共区段。
+虽然每个表单都针对特定目的而设计，但大多数表单中都存在一些通用区段，例如提供个人详细信息，如姓名和地址、家庭详细信息、收入详细信息等。 每次创建新表单时，表单开发人员都需要创建这些常用区段。
 
-自适应表单提供了一种简单的机制，可创建表单区段点赞面板或一次字段的群组，并在自适应表单中重复使用它们。 这些可重用的独立区段称为自适应表单片段。
+自适应表单提供了一种便捷的机制，只需像创建面板或一组字段一样创建表单片段一次，即可在自适应表单中重复使用。 这些可重用的独立区段称为自适应表单片段。
 
 ## 创建片段 {#create-a-fragment}
 
-您可以从头开始创建自适应表单片段，或将现有自适应表单中的面板另存为片段。
+您可以从头开始创建自适应表单片段，或将面板作为片段保存在现有的自适应表单中。
 
 ### 从头开始创建片段 {#create-fragment-from-scratch}
 
-1. 在https://登录AEM Forms创作实例&#x200B;[*主机名*]：[*端口*]/aem/forms.html.
-1. 单击 **创建>自适应表单片段**.
+1. 在 https:// [*hostname*] 处登录 AEM Forms 作者实例： [*端口*] /aem/forms.html。
+1. 按 **一下创建 > 自适应表单片段** 。
 1. 指定片段的标题、名称、描述和标记。
 
    >[!NOTE]
@@ -113,7 +113,7 @@ ht-degree: 3%
 
    面板保存在存储库中的指定位置或默认位置。 在自适应表单中，面板被替换为片段的快照。 如下所示，“常规信息”面板及其子面板“个人信息和地址”将另存为片段。
 
-   要编辑片段，请单击 **[!UICONTROL 编辑资源]** 在面板工具栏中。 片段在编辑模式下的新选项卡或窗口中打开。
+   要编辑片段，请单击 **[!UICONTROL 面板工具栏中的编辑资源]** 。 该片段会在新的选项卡或窗口中以编辑模式打开。
 
    ![编辑片段](assets/edit-fragment.png)
 
@@ -121,14 +121,14 @@ ht-degree: 3%
 
 ### 配置片段外观 {#configure-fragment-appearance}
 
-插入到自适应表单中的任何片段都会显示为一个占位符图像。 占位符在片段中最多显示10个子面板的标题。 您可以将AEM Forms配置为显示完整的片段，而不是占位符图像。
+您在自适应表单中插入的任何片段都显示为占位符图像。 占位符在片段中最多显示十个子面板的标题。 您可以将AEM Forms配置为显示完整的片段，而不是占位符图像。
 
 执行以下步骤以在表单中显示完整的片段：
 
-1. 转到AEM Web控制台配置页面，网址为https：[*主机*]：[*端口*]/system/console/configMgr。
+1. 转到 AEM web 控制台配置页面 https： [*主机*] ： [*端口*] /system/console/configMgr。
 
-1. 搜索并单击 **[!UICONTROL 自适应表单和交互式通信Web渠道配置]** 以在编辑模式下将其打开。
-1. 禁用 **[!UICONTROL 启用占位符代替片段]** 用于显示完整片段而不是占位符图像的复选框。
+1. Search 并单击 **[!UICONTROL 自适应表单并交互式通信 Web 渠道配置]** ，以在编辑模式下打开它。
+1. 禁用 **[!UICONTROL &quot;在替代片段]** 时启用占位符&quot; 复选框可显示完整的片段，而不是占位符图像。
 
 ### 在自适应表单中插入片段 {#insert-a-fragment-in-an-adaptive-form}
 
@@ -164,6 +164,10 @@ ht-degree: 3%
 ### 更改片段 {#change-fragments}
 
 您可以使用替换或更改自适应表单片段 **选择片段资源** 自适应表单片段面板的“编辑组件”对话框中的属性。
+
+### 为自适应表单片段生成记录文档 {#generate-DOR-for-fragments}
+
+记录文档(DOR)帮助您以打印或文档格式保留表单信息。 因此，它可以帮助您以后随时跟踪有关客户的信息，您还可以使用记录文档以PDF格式将表单和内容存档在一起。 [了解如何为自适应表单片段生成记录文档](/help/forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.md).
 
 ### 在自适应表单中多次使用表单片段 {#using-form-fragment-mutiple-times-in-af}
 
@@ -221,7 +225,7 @@ ht-degree: 3%
   </tr>
   <tr>
    <td><p>开始审核/管理审核</p> </td>
-   <td><p>允许启动和管理对所选片段的审核。 有关更多信息，请参阅 <a href="../../forms/using/create-reviews-forms.md" target="_blank">创建和管理审阅</a>.<br /> <br /> </p> </td>
+   <td><p>允许启动和管理选定片段的审核。 有关详细信息，请参阅 <a href="../../forms/using/create-reviews-forms.md" target="_blank"> 创建和管理评论 </a> 。 <br /> <br /> </p> </td>
   </tr>
   <tr>
    <td><p>创建词典</p> </td>
@@ -229,7 +233,7 @@ ht-degree: 3%
   </tr>
   <tr>
    <td><p>发布/取消发布</p> </td>
-   <td><p>发布/取消选定片段。 <br /> <br /> </p> </td>
+   <td><p>发布/取消发布选定的片段。<br /> <br /> </p> </td>
   </tr>
   <tr>
    <td><p>删除</p> </td>
@@ -240,11 +244,11 @@ ht-degree: 3%
 
 ## 本地化包含片段的自适应表单 {#localizing-adaptive-form-containing-fragments}
 
-要本地化包含自适应表单片段的自适应表单，您需要单独本地化片段和表单。 其思想是将片段本地化一次，并在多个自适应表单中重复使用。
+要本地化包含自适应表单片段的自适应表单，您需要单独本地化片段和表单。 其目的是将片段本地化一次并在多个自适应表单中重复使用。
 
 >[!NOTE]
 >
->片段中的本地化键不会出现在自适应表单的XLIFF文件中。
+>片段中的本地化键不会显示在自适应表单的 XLIFF 文件中。
 
 ## 使用片段时要记住的要点 {#key-points-to-remember-when-working-with-fragments}
 
@@ -255,11 +259,11 @@ ht-degree: 3%
 * 自适应表单片段可通过AEM内容查找器中的自适应表单片段选项卡使用。
 * 通过引用插入或在自适应表单中嵌入独立自适应表单片段中的任何表达式、脚本或样式都会保留。
 * 您无法从自适应表单中编辑通过引用插入的自适应表单片段。 要编辑，请编辑独立的自适应表单片段或将片段嵌入自适应表单中。
-* 当您发布自适应表单时，您需要发布自适应表单中按引用插入的独立自适应表单片段。
-* 当您重新发布更新的自适应表单片段时，这些更改会反映在使用该片段的自适应表单的已发布实例中。
+* 发布自适应表单时，您需要发布在自适应表单中通过引用插入的独立自适应表单片段。
+* 重新发布更新的自适应表单片段时，更改会反映在使用片段的自适应表单已发布实例中。
 * 包含验证组件的自适应表单不支持匿名用户。 此外，不 reommended 在自适应表单片段中使用验证组件。
 * （ **仅** Mac）要确保表单片段功能在所有方案中都能正常工作，请将以下条目添加到/private/etc/hosts 文件中：
-  `127.0.0.1 <Host machine>` **主机**：部署AEM Forms的Apple Mac计算机。
+  `127.0.0.1 <Host machine>`**主机计算机** ：部署 AEM Forms 的 Apple Mac 计算机。
 
 ## 引用片段 {#reference-fragments}
 

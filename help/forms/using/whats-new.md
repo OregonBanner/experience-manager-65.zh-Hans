@@ -1,146 +1,194 @@
 ---
 title: 新增功能摘要 | AEM 6.5 Forms
-description: 世界上最高级的数字体验管理解决方案的表单和文档的最新功能和改进。
+description: AEM表单和文档（世界上最高级的数字体验管理解决方案）的最新功能和改进。
 topic-tags: introduction
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
 exl-id: 47b9de1f-b16a-424c-b8b4-e9d7b3dcca86
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 6b24067c1808475044a612f21d5d4d2793c13e17
 workflow-type: tm+mt
-source-wordcount: '1241'
-ht-degree: 1%
+source-wordcount: '546'
+ht-degree: 45%
 
 ---
 
 # 新增功能摘要 | AEM 6.5 Forms{#new-features-summary-aem-forms}
 
-## 交易报告 {#transaction-reports}
-
-| 版本 | 文章链接 |
+| 产品 | Adobe Experience Manager 6.5 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/forms-overview/latest-innovations.html) |
-| AEM 6.5 | 本文 |
+| 版本 | 6.5.19.0 |
+| 类型 | Service Pack版本 |
+| 日期 | 2023年12月08日星期五 |
+
+## Adobe Experience Manager 6.5 Forms Service Pack 19 (6.5.19.0)中包含的内容
+
+Experience Manager6.5.19.0包括自2019年4月首次推出6.5以来发布的新功能、关键客户请求的增强功能、错误修复以及性能、稳定性和安全性改进。 [安装此Service Pack](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/aem-forms-current-service-pack-installation-instructions.html) 在Experience Manager6.5上。
+
+### 新增功能
+
+#### 新增自适应表单核心组件
+
+添加了垂直选项卡、条款和条件以及复选框，以增强表单的可伸缩性。
+
+* **[复选框组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/checkbox.html)**：基于核心组件的自适应表单现在包含复选框组件。通过它，用户可二选一，即选择或取消选择特定选项。它一般显示为一个小框，单击或点按它即可在选中和取消选中两种状态之间切换。复选框是一个常见的表单元素，用于提供是/否或 true/false 选择。
+
+* **[条款和条件组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/terms-and-conditions.html)**：基于核心组件的自适应表单现在包含条款和条件组件。通过它，表单作者可在表单中引入一个特定的部分，其中为用户展示与使用服务、产品或平台相关的条款、条件或法律协议。此组件旨在通知用户其提交表单即表示同意的规则、法规和义务。
+
+  ![垂直选项卡、条款和条件以及复选框组件](/help/forms/using/assets/forms-components.png)
+
+* **[垂直选项卡组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/vertical-tabs.html)**：基于核心组件的自适应表单现在可将表单内容整理到选项卡垂直列表中，从而提供结构化的、可导航的布局。在表单中使用垂直选项卡可通过简化导航并改进表单内容的组织而增强整体用户体验，特别是在表单包含多个部分或复杂信息的情况下。
+
+#### AEM Forms Designer 64位版本
+
+此 [AEM Forms Designer 64位版本](/help/forms/using/installing-configuring-designer.md) 提供增强的性能、可扩展性和内存管理，以增强您的表单创建体验。 利用 64 位架构，您可以轻松处理更大、更复杂的项目，确保无缝的设计工作流程和优化的效率。利用此最新版本，提升您的表单设计能力并迎接 AEM Forms Designer 的未来。
+
+#### 将自适应Forms连接到Microsoft® SharePoint列表
+
+AEM Forms将OOTB集成提供给 [将表单数据直接提交到SharePoint列表](/help/forms/using/configuring-submit-actions.md#submit-to-microsoft&reg;-sharepoint-list))，以便您使用SharePoint的列表功能。 您可以将Microsoft® SharePoint列表配置为表单数据模型的数据源，并使用使用表单数据模型提交操作将自适应表单与SharePoint列表连接起来。
+
+#### 支持为自适应表单片段配置记录文档属性
+
+您现在可以轻松地 [在自适应表单编辑器中自定义您的自适应表单片段及其字段](/help/forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.md).
 
 
-通过事务报表，您可以捕获和跟踪已提交的表单、已处理的文档和已渲染文档的数量。 跟踪这些交易背后的目标是针对产品使用情况做出明智的决策，并重新平衡硬件和软件投资。 事务的一些示例包括：
+## 错误修复
 
-* 提交自适应表单、HTML5表单或表单集
-* 交互式通信的打印或Web版本的演绎版
-* 文档从一种文件格式转换为另一种文件格式
+该版本还包括对20多个客户报告问题的修复。 有关Service Pack中包含的修复的详细列表，请参阅 [发行说明](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html?lang=en#forms-6519)
 
-有关配置和使用事务报表的信息，请参阅 [交易报表概述](../../forms/using/transaction-reports-overview.md).
 
-![示例交易报告](assets/surface_transaction_reporting.png)
+## 安装服务包
 
-## 交互式通信 {#interactive-communications}
+此Service Pack为JEE上的AEM Forms和OSGi上的AEM Forms带来了新功能和错误修复。 与以前的Service Pack相比，安装说明发生了更改。有关安装说明，请参阅 [AEM Forms service pack安装说明](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/aem-forms-current-service-pack-installation-instructions.html?lang=en).
 
-**定义数据显示模式**
 
-交互式通信作者现在可以定义 [数据显示模式](create-interactive-communication.md#datadisplaypatterns) 用于字段、变量和表单数据模型元素。 例如，日期、货币或电话格式。
 
-**使用新类型的图表**
 
-您现在可以添加 [象限图表和带多个系列的图表](../../forms/using/chart-component-interactive-communications.md) 更改为交互式通信。
 
-**对表中的列进行排序**
 
-您现在可以 [对表的列进行排序](../../forms/using/create-interactive-communication.md#sortcolumns) 在交互式通信中。 您可以使用静态文本或数据模型对象来绑定和排序表列。
+<!-- 
+## Transaction Reports {#transaction-reports}
 
-**在Web渠道中使用新组件**
 
-您现在可以将按钮和分隔符组件添加到Web渠道。 有关更多信息，请参阅 [将按钮组件添加到Web渠道](../../forms/using/create-interactive-communication.md#add-button-component-to-the-web-channel) 和 [Web渠道中的分隔符组件](../../forms/using/create-interactive-communication.md#separatorcomponent).
 
-**用于调整组件大小的布局模式**
+Transaction reports lets you capture and track the number of submitted forms, processed documents, and rendered documents. The objective behind tracking these transactions is to make an informed decision about the product usage and rebalancing investments in hardware and software. Some examples of transactions include:
 
-您现在可以切换到 [布局模式](../../forms/using/resize-using-layout-mode.md) 使用WYSIWYG界面在Web渠道中调整组件大小。
+* Submission of an Adaptive Form, an HTML5 Form, or a Form Set
+* Rendition of a print or a web version of an interactive communication
+* Conversion of a document from one file format to another
 
-**可用性改进**
+For information about configuring and using transaction reports, see [Transaction Reports Overview](../../forms/using/transaction-reports-overview.md).
 
-交互式通信作者现在可以在创建通信项时利用各种易于使用的操作。 操作列表包括：
+![A sample transaction report](assets/surface_transaction_reporting.png)
 
-* [在打印和Web渠道中执行撤消 — 重做操作](../../forms/using/create-interactive-communication.md#undoredoactions)
-* [使用@符号在文档片段中添加变量](../../forms/using/texts-interactive-communications.md#searchvariables)
-* [使用@符号在文档片段中添加数据模型元素](../../forms/using/texts-interactive-communications.md#searchdatamodelproperties)
-* [删除或向现有交互式通信添加Web渠道](../../forms/using/create-interactive-communication.md#edit-interactive-communication-properties)
-* [使用拖放操作将数据源元素与字段和变量绑定](../../forms/using/create-interactive-communication.md#binddatasourceelements)
-* [创作交互式通信时突出显示未绑定的字段和变量](../../forms/using/create-interactive-communication.md#distinguishunboundfields)
-* [在Web渠道中对继承的组件执行其他操作，如复制、分组等](../../forms/using/create-interactive-communication.md#componenttoolbar)
+## Interactive Communications {#interactive-communications}
 
-**同步过程的改进**
+**Define data display patterns**
 
-在使用打印渠道自动生成的Web渠道布局中有几项改进。
+Interactive Communication authors can now define [data display patterns](create-interactive-communication.md#datadisplaypatterns) for fields, variables, and form data model elements. For example, date, currency, or phone formats.
 
-![交互式通信图表](assets/interactive-communication-charts.png)
+**Use new types of charts**
 
-## 自适应表单 {#adaptive-forms}
+You can now add [Quadrant charts and charts with multiple series](../../forms/using/chart-component-interactive-communications.md) to Interactive Communications.
 
-### 在自适应Forms中使用Adobe Sign基于云的数字签名 {#use-adobe-sign-s-cloud-based-digital-signatures-in-adaptive-forms}
+**Sort columns in a table**
 
-[基于云的数字签名](https://helpx.adobe.com/sign/kb/digital-certificate-providers.html) 或远程签名是新一代的数字签名，可在桌面、移动设备和Web上使用，并且满足签名者身份验证的最高合规性和保证级别。 您现在可以 [签署自适应表单](../../forms/using/working-with-adobe-sign.md) 使用基于云的数字签名。
+You can now [sort columns of a table](../../forms/using/create-interactive-communication.md#sortcolumns) in the Interactive Communication. You can bind and sort table columns with static text or data model objects.
 
-#### 在AEM Sites单页应用程序中嵌入自适应表单或交互式通信 {#embed-an-adaptive-form-or-interactive-communcation-in-aem-sites-single-page-applications}
+**Use new components in a web channel**
 
-AEM Forms允许您 [无缝嵌入自适应表单](../../forms/using/embed-adaptive-form-aem-sites-spa.md) 或AEM Sites单页应用程序(SPA)中的交互式通信。 嵌入式自适应表单和交互式通信功能完善，用户无需离开页面即可填写并提交表单。 它有助于用户停留在网页上其他元素的上下文中，同时与自适应表单或交互式通信交互。
+You can now add Button and Separator components to the web channel. For more information, see [Add Button component to the web channel](../../forms/using/create-interactive-communication.md#add-button-component-to-the-web-channel) and [Separator component in web channel](../../forms/using/create-interactive-communication.md#separatorcomponent).
 
-#### 对自适应表单表的列进行排序 {#sort-columns-of-adaptive-form-tables}
+**Layout mode to resize components**
 
-您可以 [对自适应表单表的任意列进行排序](../../forms/using/adaptive-forms-tables.md#sortcolumnstable) 按升序或降序排列。 您可以将排序应用于具有静态文本、数据模型对象属性或静态文本和数据模型对象属性组合的表列。
+You can now switch to [Layout mode](../../forms/using/resize-using-layout-mode.md) to resize components in the Web channel using a WYSIWYG interface.
 
-#### 限制自适应Forms模板仅对特定路径可用 {#restrict-the-availability-of-adaptive-forms-templates-to-specific-paths}
+**Usability improvements**
 
-自适应表单添加了对cq：allowedPaths属性的支持。 属性 [限制自适应Forms模板在特定路径上的可用性](creating-adaptive-form.md#adaptive-form-templates).
+Interactive Communication authors can now utilize various easy-to-use operations while creating correspondences. The list of operations includes:
 
-#### 将复选框动态添加到自适应表单 {#add-check-boxes-to-the-adaptive-form-dynamically}
+* [Perform undo-redo actions in print and web channels](../../forms/using/create-interactive-communication.md#undoredoactions)
+* [Add variables in a document fragment using @ symbol](../../forms/using/texts-interactive-communications.md#searchvariables)
+* [Add data model elements in a document fragment using @ symbol](../../forms/using/texts-interactive-communications.md#searchdatamodelproperties)
+* [Delete or add a web channel to an existing Interactive Communication](../../forms/using/create-interactive-communication.md#edit-interactive-communication-properties)
+* [Bind data source elements with fields and variables using drag-and-drop actions](../../forms/using/create-interactive-communication.md#binddatasourceelements)
+* [Highlight unbound fields and variables while authoring Interactive Communication](../../forms/using/create-interactive-communication.md#distinguishunboundfields)
+* [Perform additional actions such as copy, group, or more on inherited components in a web channel](../../forms/using/create-interactive-communication.md#componenttoolbar)
 
-您现在可以将规则定义为 [将复选框动态添加到自适应表单](../../forms/using/rule-editor.md#setpropertyrule) 基于自定义函数、表单对象或对象属性。
+**Improvements in sync process**
 
-## AEM 工作流 {#aem-workflows}
+There are several improvements in the Web channel layout auto-generated using the Print channel.
 
-### 在AEM工作流中使用变量 {#use-variables-in-aem-workflows}
+![Interactive Communications Charts](assets/interactive-communication-charts.png)
 
-通过变量，工作流步骤可在运行时跨工作流步骤保留和传递元数据。 您可以创建不同类型的变量以存储不同类型的数据。 例如，整数、字符串、文档或表单数据模型实例。 通常，当您需要根据其持有的值做出决策时，或者需要存储稍后在流程中需要的信息时，可以使用变量或变量集合。
+## Adaptive Forms {#adaptive-forms}
 
-变量是的扩展 [元数据映射](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html) 之前版本中提供的界面。 它有助于节省开发用于检索和更新元数据值的自定义ECMAScript代码所花费的时间。 继续使用MetaDataMap接口和ECMAScript代码处理元数据。 与MetaDataMap和ECMAScript相比，使用变量具有以下优点：
+### Use Adobe Sign's cloud-based digital signatures in Adaptive Forms {#use-adobe-sign-s-cloud-based-digital-signatures-in-adaptive-forms}
 
-* 在整个工作流中动态存储、更新和使用变量中存储的值，而无需依赖自定义代码
-* 直接检索值并更新已提交表单的表单数据模型和数据文件(XML/JSON )
-* 将完整的文档存储在变量中以执行文档处理
+[Cloud-based digital signatures](https://helpx.adobe.com/sign/kb/digital-certificate-providers.html) or remote signatures are a new generation of digital signatures that work across desktop, mobile, and the web — and meet the highest levels of compliance and assurance for signer authentication. You can now [sign an Adaptive Form](../../forms/using/working-with-adobe-sign.md) with Cloud-based digital signatures.
 
-转到步骤、OR拆分步骤以及所有AEM Forms工作流步骤都支持变量。 您可以使用MetaDataMap界面访问工作流步骤中不支持变量的变量。 有关更多信息，请参阅 [AEM Workflow中的变量](../../forms/using/variable-in-aem-workflows.md).
+#### Embed an Adaptive Form or Interactive Communication in AEM Sites Single Page Applications {#embed-an-adaptive-form-or-interactive-communcation-in-aem-sites-single-page-applications}
 
-![在工作流中设置变量](assets/variable.png)
+AEM Forms lets you [seamlessly embed an Adaptive Form](../../forms/using/embed-adaptive-form-aem-sites-spa.md) or Interactive Communication in an AEM Sites single page application (SPA). The embedded Adaptive Form and Interactive Communication is fully functional and users can fill and submit the form without leaving the page. It helps user remain in context of other elements on the web page and simultaneously interact with the adaptive form or Interactive Communication.
 
-#### 将工作流用于其他自适应Forms  {#use-a-workflow-with-different-adaptive-forms}
+#### Sort columns of Adaptive Form tables {#sort-columns-of-adaptive-form-tables}
 
-您可以 [为分配任务指定自适应表单](../../forms/using/aem-forms-workflow-step-reference.md#assign-task-step) 以及运行时以表单为中心的工作流的记录文档步骤。 它允许工作流使用其他自适应Forms。 您可以在设计工作流时决定选择自适应表单的方法。 自适应表单可以位于绝对路径下、作为有效负荷提交到工作流中，或者位于使用变量计算的路径下。
+You can [sort any column of an Adaptive Form table](../../forms/using/adaptive-forms-tables.md#sortcolumnstable) in an ascending or descending order. You can apply sorting to table columns with static text, data model object properties, or a combination of static text and data model object properties.
 
-#### 使用以表单为中心的工作流步骤的增强日志记录功能 {#use-enhanced-logging-capabilities-of-forms-centric-workflow-steps}
+#### Restrict the availability of Adaptive Forms templates to specific paths {#restrict-the-availability-of-adaptive-forms-templates-to-specific-paths}
 
-以表单为中心的工作流步骤的日志记录功能实现了标准化。 现在，所有以表单为中心的工作流步骤都会生成类似的标准化日志。 这有助于提高调试速度。
+Adaptive forms has added support for the cq:allowedPaths property. The property [restricts availability of Adaptive Forms templates to specific paths](creating-adaptive-form.md#adaptive-form-templates).
 
-## 数据集成 {#data-integration}
+#### Add check boxes to the Adaptive Form dynamically {#add-check-boxes-to-the-adaptive-form-dynamically}
 
-您现在可以：
+You can now define rules to [add checkboxes to the Adaptive Form dynamically](../../forms/using/rule-editor.md#setpropertyrule) based on custom function, a form object, or an object property.
 
-* [验证输入数据](../../forms/using/work-with-form-data-model.md#automated-validation-of-input-data) 基于约束列表。 它有助于确保只向数据源提交有效数据。
-* [覆盖默认端点](../../forms/using/configure-data-sources.md#configure-soap-web-services) 在WSDL（Web服务描述语言）文件中定义。
+## AEM Workflows {#aem-workflows}
 
-* [覆盖默认值](../../forms/using/configure-data-sources.md#configure-restful-web-services) [方案、主机和基本路径](../../forms/using/configure-data-sources.md#configure-restful-web-services) 在Swagger定义文件中定义。
+### Use variables in AEM Workflows {#use-variables-in-aem-workflows}
 
-## 平台和安全更新 {#platform-and-security-updates}
+Variables enable workflow steps to hold and pass metadata across workflow steps at runtime. You can create different types of variables for storing different types of data. For example, integers, strings, documents, or form data model instances. Typically, you use a variable or a collection of variables when you need to make a decision based on the value that it holds or to store information that you need later in a process.
 
-### 主要平台更新 {#major-platform-updates}
+Variables are an extension of [MetaDataMap](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html) interface available in the previous version. It helps save time spent in developing custom ECMAScript code used to retrieve and update metadata values. You continue using MetaDataMap interface and ECMAScript code to manipulate metadata. Some benefits of using variables over MetaDataMap and ECMAScript are:
 
-AEM Forms可以使用受支持的操作系统、应用程序服务器、数据库、数据库驱动程序、JDK、LDAP服务器和电子邮件服务器的任意组合进行设置。 以下为中的主要更改 [支持的平台](../../forms/using/aem-forms-jee-supported-platforms.md)：
+* Dynamically store, update, and use values stored in a variable across the workflow without relying on custom code
+* Retrieve and update values directly to a form data model and data file (XML/JSON ) of a submitted form
+* Store complete documents in a variable to perform document processing
+
+The Go To step, OR Split step, and all AEM Forms workflow steps support variables. You can use MetaDataMap interface to access variables in workflow steps that do not have a native support for variables. For more information, see [Variables in AEM Workflows](../../forms/using/variable-in-aem-workflows.md).
+
+![Setting a variable for in a workflow](assets/variable.png)
+
+#### Use a workflow with different Adaptive Forms  {#use-a-workflow-with-different-adaptive-forms}
+
+You can [specify an Adaptive Form for the assign task](../../forms/using/aem-forms-workflow-step-reference.md#assign-task-step) and document of record step of form-centric workflows on the runtime. It allows a workflow to work with different Adaptive Forms. You can decide the method to select an Adaptive Form while designing the workflow. The Adaptive Form can be located at an absolute path, submitted as payload to the workflow, or available at a path calculated using a variable.
+
+#### Use enhanced logging capabilities of forms-centric workflow steps {#use-enhanced-logging-capabilities-of-forms-centric-workflow-steps}
+
+Logging capabilities of forms-centric workflow steps are standardized. Now, all form-centric workflow steps produce similarly standardized logs. It helps improve debugging speed.
+
+## Data Integration {#data-integration}
+
+You can now:
+
+* [Validate input data](../../forms/using/work-with-form-data-model.md#automated-validation-of-input-data) based on a list of constraints. It helps ensure that only valid data is submitted to data source.
+* [Override default endpoint](../../forms/using/configure-data-sources.md#configure-soap-web-services) defined in a WSDL (Web Services Description Language) file.
+
+* [Override default](../../forms/using/configure-data-sources.md#configure-restful-web-services) [scheme, host, and base path](../../forms/using/configure-data-sources.md#configure-restful-web-services) defined in Swagger definition file.
+
+## Platform and Security updates {#platform-and-security-updates}
+
+### Major platform updates {#major-platform-updates}
+
+AEM Forms can be set up using any combination of supported operating systems, application servers, databases, database drivers, JDK, LDAP servers, and email servers. The following are the major changes in [supported platforms](../../forms/using/aem-forms-jee-supported-platforms.md):
 
 <table>
  <tbody>
   <tr>
-   <td>组件</td>
-   <td>已移除支持</td>
+   <td>Component</td>
+   <td>Support Removed</td>
   </tr>
   <tr>
-   <td>操作系统</td>
+   <td>Operating systems</td>
    <td>
     <ul>
      <li>Microsoft Windows Server 2012 R2</li>
@@ -149,23 +197,23 @@ AEM Forms可以使用受支持的操作系统、应用程序服务器、数据�
     </ul> </td>
   </tr>
   <tr>
-   <td>应用程序服务器<br /> </td>
+   <td>Application servers<br /> </td>
    <td>
     <ul>
-    <li>WebSphere Liberty配置文件</li>
-    <li>oracleWebLogic</li>
+    <li>WebSphere Liberty profile</li>
+    <li>Oracle WebLogic</li>
     </ul> </td>
   </tr>
   <tr>
-   <td>数据库</td>
+   <td>Databases</td>
    <td>
     <ul>
      <li>IBM DB2 <br /> </li>
-     <li>ORACLERAC</li>
+     <li>Oracle RAC</li>
     </ul> </td>
   </tr>
   <tr>
-   <td>LDAP服务器</td>
+   <td>LDAP servers</td>
    <td>
     <ul>
      <li>Microsoft Active Directory 2012</li>
@@ -174,25 +222,25 @@ AEM Forms可以使用受支持的操作系统、应用程序服务器、数据�
     </ul> </td>
   </tr>
   <tr>
-   <td>电子邮件服务器</td>
+   <td>Email servers</td>
    <td>
     <ul>
      <li>IBM Lotus Domino 8.5.0 </li>
     </ul> </td>
   </tr>
   <tr>
-   <td>连接器</td>
+   <td>Connectors</td>
    <td>
     <ul>
-     <li>Microsoft Sharepoint 2013连接器</li>
-     <li>EMC Documentum 7.0连接器</li>
+     <li>Connector for Microsoft Sharepoint 2013</li>
+     <li>Connector for EMC Documentum 7.0</li>
     </ul> </td>
   </tr>
   <tr>
-   <td>AEM Forms应用程序<br /> </td>
+   <td>AEM Forms app<br /> </td>
    <td>
     <ul>
-     <li>Windows 8.1支持</li>
+     <li>Windows 8.1 support</li>
     </ul> </td>
   </tr>
   <tr>
@@ -205,17 +253,19 @@ AEM Forms可以使用受支持的操作系统、应用程序服务器、数据�
  </tbody>
 </table>
 
-&#42; 有关迁移到其他平台的信息，请与Adobe支持部门联系
+&#42; Contact Adobe Support for information on migrating to a different platform
 
-#### 新的基于HTML5的UI {#new-html-based-uis}
+#### New HTML5-based UIs {#new-html-based-uis}
 
-根据AdobeFlash Player的计划生命周期结束以及基于Flash的内容迁移到开放标准的总体方向，AEM 6.5 Forms已在JEE管理控制台上取代了AEM Forms的基于Flash的Health Monitor、Process Management、Reader扩展和类别管理UI，改为基于HTML5的UI。
+In line with planned EOL of Adobe Flash Player and overall direction of migrating Flash-based content to open standards, AEM 6.5 Forms has replaced Flash-based UI of Health Monitor, Process Management, Reader Extension, and Category Management UI of AEM Forms on JEE Administration Console with HTML5-based UI.
 
-#### 安全性改进 {#security-improvements}
+#### Security improvements {#security-improvements}
 
-* JEE管理控制台上的AEM 6.5 Forms UI现在基于Apache Struts 2.5。
-* AEM 6.5 Forms现在使用jQuery到3.2.1和jQuery UI 1.12.1。看， [升级文档](/help/forms/home.md) 以了解更改的影响。
+* AEM 6.5 Forms on JEE administration console UI is now based on Apache Struts 2.5.
+* AEM 6.5 Forms now uses jQuery to 3.2.1 and jQuery UI 1.12.1. See, [upgrade documentation](/help/forms/home.md) for the impact of the change.
 
-#### 辅助功能改进 {#accessibility-improvements}
+#### Accessibility improvements {#accessibility-improvements}
 
-AEM 6.5 Forms改进了AEM Forms Workspace的可访问性。
+AEM 6.5 Forms has improved accessibility of AEM Forms Workspace. 
+!-->
+
