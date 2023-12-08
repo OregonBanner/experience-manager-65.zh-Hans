@@ -3,9 +3,9 @@ title: 的发行说明 [!DNL Adobe Experience Manager] 6.5
 description: 查找版本信息、新增功能、安装操作说明以及的详细更改列表 [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 4
 exl-id: cac14ac1-9cda-46ae-8aa3-94674bb79157
-source-git-commit: 6b24067c1808475044a612f21d5d4d2793c13e17
+source-git-commit: 1c3df6ea88f1dfbab5d9df2dcd4907e72829287a
 workflow-type: tm+mt
-source-wordcount: '4233'
+source-wordcount: '4232'
 ht-degree: 7%
 
 ---
@@ -61,6 +61,8 @@ ht-degree: 7%
 * **[将自适应Forms连接到Microsoft® SharePoint列表](/help/forms/using/configuring-submit-actions.md#submit-to-microsoft&reg;-sharepoint-list)**：AEM Forms提供了一个OOTB集成，可让您将表单数据直接提交到SharePoint List，从而让您能够使用SharePoint的“列表”功能。 您可以将Microsoft SharePoint列表配置为表单数据模型的数据源，并使用使用表单数据模型提交操作将自适应表单连接到SharePoint列表。
 
 * **[支持为自适应表单片段配置记录文档属性](/help/forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.md)**：您现在可以在自适应表单编辑器中轻松自定义自适应表单片段及其字段。
+
+* **64位XMLFM**： XMLFM的64位迭代引入了更高的性能、可扩展性和更精细的内存管理。 它是第一个部署在服务器端的64位本机服务。 XMLFM 64位利用其固有的功能访问比32位对等项大得多的内存资源，从而能够无缝处理更大的渲染工作负载。 这一里程碑不仅实现了性能的飞跃，而且还对AEM Forms服务器中的本机服务框架引入了关键增强功能。 此更新使AEM Forms服务器能够无缝支持任何64位本机服务。
 
 
 **已弃用功能**
@@ -469,23 +471,27 @@ UberJar用于 [!DNL Experience Manager] 6.5.19.0可从以下网站获取： [Mav
 #### 安装
 
 * 在JBoss® 7.1.4平台上，当用户安装Experience Manager6.5.16.0或更高版本的Service Pack时， `adobe-livecycle-jboss.ear` 部署失败。 (CQ-4351522和CQDOC-20159)
-* 升级到Windows Server 2022上的AEM Forms 6.5.18.0 JBoss® Turnkey完整安装程序环境后，使用Java™ 11编译输出客户端应用程序代码时，可能会出现以下编译错误：
 
+<!-- 
+* After upgrading to AEM Forms 6.5.18.0 JBoss&reg; Turnkey full installer environment on Windows Server 2022, when compiling Output client application code using Java&trade; 11, the following compilation error may occur:
+  
   ```
   error: error reading [AEM_Forms_Installation_dir]\sdk\client-libs\common\adobe-output-client.jar; java.net.URISyntaxException: 
   Illegal character in path at index 70: file:/[AEM_Forms_Installation_dir]/sdk/client-libs/common/${clover.jar.name} 1 error
+  
   ```
+  
+  To resolve the issue, perform the following steps:
+    1. Navigate to `[AEM_Forms_Installation_dir]\sdk\client-libs\common\` and unzip `adobe-output-client.jar` to extract the `Manifest.mf` file.
+    1. Update the `Manifest.mf` file by removing the entry `${clover.jar.name}` from the class-path attribute. 
 
-  要解决此问题，请执行以下步骤：
-   1. 导航到 `[AEM_Forms_Installation_dir]\sdk\client-libs\common\` 和unzip `adobe-output-client.jar` 以提取 `Manifest.mf` 文件。
-   1. 更新 `Manifest.mf` 通过删除条目生成文件 `${clover.jar.name}` 从class-path属性中。
+        >[!NOTE]
+        >
+        > You can also use an in-place editing tool, for example, 7-zip, to update the `Manifest.mf` file.  
 
-      >[!NOTE]
-      >
-      > 您还可以使用就地编辑工具（例如7-zip）来更新 `Manifest.mf` 文件。
+    1. Save the updated the `Manifest.mf` in the `adobe-output-client.jar` archive. 
+    1. Save the modified `adobe-output-client.jar` file and rerun the setup. (CQDOC-20878) -->
 
-   1. 保存更新的 `Manifest.mf` 在 `adobe-output-client.jar` 存档。
-   1. 保存修改的内容 `adobe-output-client.jar` 文件并重新运行安装程序。 (CQDOC-20878)
 * 安装AEM Service Pack 6.5.19.0完整安装程序后，EAR部署在使用JBoss® Turnkey的JEE上失败。
 要解决此问题，请找到 `<AEM_Forms_Installation_dir>\jboss\bin\standalone.bat` 文件和更新 `Adobe_Adobe_JAVA_HOME` 到 `Adobe_JAVA_HOME` 所有出现的次数。 (CQDOC-20803)
 
