@@ -9,10 +9,10 @@ breadcrumb-title: Forms 指南
 user-guide-description: 创建、管理、发布和更新数字表单。
 role: User
 feature: Forms Service
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: cf5da092fabbc7834108dc54d65eb97e160984ce
 workflow-type: tm+mt
-source-wordcount: '3911'
-ht-degree: 4%
+source-wordcount: '3752'
+ht-degree: 3%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 4%
    + [发行说明](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html)
    + [新增功能摘要](using/whats-new.md)
    + [常见问题](/help/forms/using/frequently-asked-questions-faq.md)
-   + [已弃用功能](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/deprecated-removed-features.html)
+   + [已弃用的功能](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/deprecated-removed-features.html)
 + 快速入门 {#getting-started}
    + [AEM Forms简介](using/introduction-aem-forms.md)
    + [自适应表单创作简介](using/introduction-forms-authoring.md)
@@ -73,12 +73,12 @@ ht-degree: 4%
       + [在JEE for WebSphere上安装和部署Adobe Experience Manager Forms](https://www.adobe.com/go/learn_aemforms_installWebSphere_65)
       + [在JEE for WebLogic上安装和部署AEM Forms](https://www.adobe.com/go/learn_aemforms_installWebLogic_65)
       + [安装AEM Forms Workbench](using/install-workbench.md)
-      + [安装和配置 Designer](using/installing-configuring-designer.md)
+      + [安装和配置设计器](using/installing-configuring-designer.md)
       + [准备安装AEM Forms（服务器群集）](https://www.adobe.com/go/learn_aemforms_prepareInstallcluster_65)
       + [在JBoss集群上的JEE上配置Adobe Experience Manager Forms](https://www.adobe.com/go/learn_aemforms_clusterJBoss_65)
       + [在WebSphere群集上的JEE上配置Adobe Experience Manager Forms](https://www.adobe.com/go/learn_aemforms_clusterWebSphere_65)
       + [在WebLogic群集上的JEE上配置Adobe Experience Manager Forms](https://www.adobe.com/go/learn_aemforms_clusterWebLogic_65)
-   + 设定 AEM Forms {#configure-aem-forms}
+   + 配置AEM Forms {#configure-aem-forms}
       + [AEM Forms 服务器性能优化](using/performance-tuning-aem-forms.md)
       + [配置自适应表单缓存](using/configure-adaptive-forms-cache.md)
       + [配置AEM DS设置](using/configuring-the-processing-server-url-.md)
@@ -115,7 +115,7 @@ ht-degree: 4%
       + [OSGi上以Forms为中心的工作流](using/forms-workflow-osgi-handling-user-data.md)
       + [Forms用户管理](using/user-management-handling-user-data.md)
       + [Forms JEE工作流](using/forms-workflow-jee-handling-user-data.md)
-      + [Forms Portal](using/forms-portal-handling-user-data.md)
+      + [Forms门户](using/forms-portal-handling-user-data.md)
       + [通信管理](using/correspondence-management-handling-user-data.md)
       + [与Adobe Sign集成](/help/forms/using/integration-adobe-sign-handling-user-data.md)
       + [文档安全](/help/forms/using/document-security-handling-user-data.md)
@@ -358,7 +358,7 @@ ht-degree: 4%
    + [创建或配置观察文件夹](using/creating-configure-watched-folder.md)
    + [在分配任务步骤中使用自定义电子邮件模板](using/use-custom-email-template-assign-task-step.md)
    + [在电子邮件通知中使用元数据](using/use-metadata-in-email-notifications.md)
-+ Forms Portal {#use-forms-portal}
++ Forms门户 {#use-forms-portal}
    + [自定义表单门户组件的模板](using/customizing-templates-forms-portal-components.md)
    + [启用Forms Portal组件](using/enabling-forms-portal-components.md)
    + [创建表单门户页面](using/creating-form-portal-page.md)
@@ -589,7 +589,7 @@ ht-degree: 4%
    + [流程报告疑难解答](/help/forms/using/process-reporting/troubleshooting-process-management.md)
 + 开发人员参考 {#developer-reference}
    + [开发人员基础知识](https://experienceleague.adobe.com/docs/experience-manager-65/developing/home.html)
-   + [HTML 模板语言](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)
+   + [HTML模板语言](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)
    + [用于调试自适应表单的AEM插件](https://adobe-consulting-services.github.io/acs-aem-tools/aem-chrome-plugin/adaptive-form/)
    + [AEM Forms Java API参考](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html)
    + [JEE上的AEM Forms Java API参考](https://helpx.adobe.com/experience-manager/6-5/forms/programlc/javadoc/index.html)
@@ -705,4 +705,5 @@ ht-degree: 4%
    + [在JEE服务器群集中配置AEM Forms并对其进行故障排除](developing/configure-server-cluster.md)
    + [在动态PDF forms中生成和使用哈希](developing/hashing-forms.md)
    + [使用WS-Security标头传递凭据](developing/passing-credentials.md)
+   + [无法使用输出服务、Forms服务或记录文档(DoR)服务](/help/forms/using/connection-issues-with-output-forms-and-document-of-record-dor-services.md)
 
