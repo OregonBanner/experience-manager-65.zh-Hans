@@ -14,7 +14,7 @@ ht-degree: 10%
 
 ---
 
-# 中支持的格式 [!DNL Adobe Experience Manager Assets] {#assets-supported-formats}
+# [!DNL Adobe Experience Manager Assets] 中支持的格式 {#assets-supported-formats}
 
 [!DNL Experience Manager Assets] 支持广泛的文件格式，并且每种功能对于不同的MIME类型都有不同的支持。 要集成 [!DNL Assets] 与其他符合标准的数字资产管理(DAM)解决方案和桌面软件配合使用，请使用Adobe的 [!DNL Extensible Metadata Platform] (XMP)。
 
@@ -26,7 +26,7 @@ ht-degree: 10%
 | &#42; | 支持附加功能 |
 | − | 不适用 |
 
-## 中支持的栅格图像格式 [!DNL Experience Manager] {#supported-raster-image-formats}
+## [!DNL Experience Manager] 中支持的栅格图像格式 {#supported-raster-image-formats}
 
 中支持的栅格图像格式 [!DNL Assets] 为：
 
@@ -67,9 +67,9 @@ ht-degree: 10%
 | DN | ✓ | ✓ | ✓ |  | ✓ | ✓ | − | − |
 | gLB | ✓ | ✓ | ✓ | ✓ | ✓ | − | ✓ | ✓ |
 | gLTF | ✓ | ✓ | ✓ |  | ✓ | − | ✓ | − |
-| 对象 | ✓ | ✓ | ✓ | ✓ | ✓ | − | ✓ | ✓ |
+| OBJ | ✓ | ✓ | ✓ | ✓ | ✓ | − | ✓ | ✓ |
 | STL | ✓ | ✓ | ✓ | ✓ | ✓ | − | ✓ | ✓ |
-| 美元z | ✓ | ✓ | ✓ | ✓ | ✓ | − | − | ✓ |
+| USDz | ✓ | ✓ | ✓ | ✓ | ✓ | − | − | ✓ |
 
 ## 支持的PDF光栅器库 {#supported-pdf-rasterizer-library}
 
@@ -99,7 +99,7 @@ Adobe成像转码库是一种图像处理解决方案，它执行核心图像处
 
 | 格式 | 存储 | [元数据管理](metadata.md) | 全文<br> 提取 | [元数据提取](metadata.md) | 缩略图<br> 生成 | [子资产提取](managing-linked-subassets.md) | [元数据写回](xmp-writeback.md) | [连接的资产](use-assets-across-connected-assets-instances.md) |
 |---|---|---|---|---|---|---|---|---|
-| [人工智能](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ | − | ✓ | ✓ | ✓ | ✓ | − |
+| [AI](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ | − | ✓ | ✓ | ✓ | ✓ | − |
 | DOC | ✓ | ✓ | ✓ | ✓ | − | − | − | ✓ |
 | DOCX | ✓ | ✓ | ✓ | ✓ | − | − | − | ✓ |
 | ODT | ✓ | ✓ | ✓ | − | − | − | − | ✓ |
@@ -175,14 +175,14 @@ Adobe成像转码库是一种图像处理解决方案，它执行核心图像处
 
 CRXDE Lite中提供了支持的MIME类型列表，网址为 `/conf/global/settings/cloudconfigs/dmscene7/jcr:content/mimeTypes`.
 
-| 文件扩展名 | MIME类型/ Internet媒体类型 | 默认jobParam值 | 允许的作业参数值 |
+| 文件扩展名 | MIME类型/ Internet媒体类型 | 默认jobParam值 | 允许的jobParam值 |
 |---|---|---|---|
 | 图像 | image/s7asset | `usmAmount=1.75&usmRadius=0.2`<br>`&usmThreshold=2&usmMonochrome=0&` | 默认jobParam应用于所有图像MIME类型资源。<ul><li>[挖空背景选项](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-knockout-background-options.html)</li><li>[manualCropOptions](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-manual-crop-options.html)</li><li>[autoColorCropOptions](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-auto-color-crop-options.html)</li><li>[autoTransparentCropOptions](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-auto-transparent-crop-options.html)</li><li>[colorManagementOptions](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-color-management-options.html)</li><li>[autoSetcreationOptions](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-auto-set-creation-options.html)</li><li>[电子邮件设置](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/sting-constants/r-email-settings.html)</li><li>[xmpKeywords](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-xmp-keywords.html)</li><li>[unsharpMaskOptions](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-unsharp-mask-options.html)</li></ul> |
 | 3G2 | video/3gpp2 |  | [ExcludeMasterVideoFromAVS](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-exclude-master-video-from-avs.html) |
 | 3GP | video/3gpp |  | [ExcludeMasterVideoFromAVS](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-exclude-master-video-from-avs.html) |
 | AAC | audio/x-aac |  |  |
-| 原子力显微镜 | application/x-font-type1 |  |  |
-| 人工智能 | application/postscript | `aiprocess=Rasterize&airesolution=150`<br>`&aicolorspace=Auto&aialpha=false` | <ul><li>[postScriptOptions](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-post-script-options.html)</li><li> [illustratorOptions](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-illustrator-options.html)</li></ul> |
+| AFM | application/x-font-type1 |  |  |
+| AI | application/postscript | `aiprocess=Rasterize&airesolution=150`<br>`&aicolorspace=Auto&aialpha=false` | <ul><li>[postScriptOptions](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-post-script-options.html)</li><li> [illustratorOptions](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-illustrator-options.html)</li></ul> |
 | AIFF | audio/x-aiff |  |  |
 | AVI | video/x-msvideo |  | [ExcludeMasterVideoFromAVS](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-exclude-master-video-from-avs.html) |
 | BMP | image/bmp |  |  |
@@ -255,7 +255,7 @@ CRXDE Lite中提供了支持的MIME类型列表，网址为 `/conf/global/settin
 
 | 格式 | 上传<br> （输入格式） | 创建<br> 图像<br> 预设<br> （输出格式） | 预览<br> 动态<br> 演绎版 | Deliver<br> 动态<br> 演绎版 | 下载<br> 动态<br> 演绎版 |
 |---|:---:|:---:|:---:|:---:|:---:|
-| [人工智能](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | − | − | − | − |
+| [AI](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | − | − | − | − |
 | [INDD](managing-image-presets.md#indesign-indd-file-format) | ✓ | − | − | − | − |
 | [PDF](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) （请参阅下面的注释） | ✓ | ✓ | ✓ | ✓ | ✓ |
 
